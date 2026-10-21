@@ -1,0 +1,147 @@
+{
+ "component_states": {
+  "ANCHORAGE": {
+   "LOWER_BOUND": 7,
+   "NOT_REQUIRED": 39,
+   "PROVISIONAL": 49
+  },
+  "LAP": {
+   "LOWER_BOUND": 2,
+   "NOT_REQUIRED": 39,
+   "PROVISIONAL": 54
+  },
+  "MAIN_BARS": {
+   "LOWER_BOUND": 38,
+   "PROVISIONAL": 1,
+   "VERIFIED": 56
+  },
+  "OTHER_EXTRA": {
+   "LOWER_BOUND": 2,
+   "NOT_REQUIRED": 93
+  },
+  "STARTER": {
+   "BLOCKED": 5,
+   "LOWER_BOUND": 2,
+   "NOT_REQUIRED": 59,
+   "PROVISIONAL": 29
+  },
+  "TIES": {
+   "BLOCKED": 3,
+   "LOWER_BOUND": 92
+  }
+ },
+ "de_duplicated_kg_in_parts_with_open_flags": 2742.311,
+ "extras_kg_by_floor": {
+  "1F": 0.0,
+  "2F": 0.0,
+  "FOUNDATION": 0.0,
+  "GF": 25.253
+ },
+ "hook_kg_provisional_by_floor": {
+  "1F": 39.182,
+  "2F": 12.666,
+  "FOUNDATION": 32.435,
+  "GF": 66.231
+ },
+ "input_problems": [],
+ "lap_starter_anchorage_kg_by_floor": {
+  "1F": 191.926,
+  "2F": 68.689,
+  "FOUNDATION": 886.43,
+  "GF": 288.899
+ },
+ "lap_starter_status": {
+  "ANCHORAGE:LOWER_BOUND": 10,
+  "ANCHORAGE:PROVISIONAL": 49,
+  "LAP:LOWER_BOUND": 2,
+  "LAP:PROVISIONAL": 54,
+  "STARTER:BLOCKED": 5,
+  "STARTER:LOWER_BOUND": 2,
+  "STARTER:PROVISIONAL": 29
+ },
+ "links_per_level_counts": {
+  "1L": 63,
+  "2L": 13,
+  "3L": 19
+ },
+ "main_bar_coverage": 95,
+ "main_core_kg_by_floor": {
+  "1F": 1140.19,
+  "2F": 397.741,
+  "FOUNDATION": 974.83,
+  "GF": 2031.319
+ },
+ "mass_conservation_checks": {
+  "buckets_equal_total": true,
+  "floors_equal_project": true,
+  "main_and_tie_parts_disjoint": true,
+  "no_duplicate_part": true,
+  "no_duplicate_segment": true,
+  "parts_equal_segments": true,
+  "segments_equal_floors": true
+ },
+ "new_flags": {
+  "STR-COL-024": "END_LEVEL_COUNT_METHOD_REQUIRED",
+  "STR-COL-025": "HOOK_METHOD_REQUIRED",
+  "STR-COL-026": "LAP_METHOD_REQUIRED",
+  "STR-COL-027": "TIE_ZONE_METHOD_REQUIRED"
+ },
+ "occurrence_states": {
+  "REBAR_LOWER_BOUND": 95
+ },
+ "occurrences_in": 95,
+ "open_column_flags": 24,
+ "rate_count_vs_spacing_with_ends": {
+  "levels_rate_count": 1661,
+  "levels_spacing_with_ends": 1756,
+  "quantification": {
+   "alternative": "SPACING_WITH_ENDS = ceil(zone length / spacing) + 1",
+   "alternative_kg": 1400.627,
+   "current": "RATE_COUNT = ceil(rate x zone length)",
+   "current_kg": 1323.36,
+   "quantity_affected_kg": 77.266,
+   "question": "Is the per-metre tie count applied as rate x length, or as a spacing with a tie at both ends?"
+  }
+ },
+ "release_kg": {
+  "blocked": 258.195,
+  "lower_bound": 2506.871,
+  "provisional": 1353.176,
+  "total": 7479.151,
+  "verified": 3360.909
+ },
+ "resolved_by_claim": [
+  "STR-COL-002",
+  "STR-COL-008"
+ ],
+ "schedule_join_all_match": true,
+ "superseded": [
+  "STR-COL-007"
+ ],
+ "terminal_records_out": 95,
+ "tie_band_states": {
+  "EXACT_RULE": 89,
+  "RESOLVED_BY_CLAIM": 6
+ },
+ "tie_core_kg_by_floor": {
+  "1F": 309.207,
+  "2F": 100.279,
+  "FOUNDATION": 309.316,
+  "GF": 604.558
+ },
+ "tie_topology_coverage": 95,
+ "unquantified_blocked_parts": 7,
+ "zone_clear_vs_full": {
+  "clear_hook_kg": 146.841,
+  "clear_levels": 1623,
+  "clear_links": 2481,
+  "clear_rate_count_core_kg": 1288.493,
+  "difference_core_kg": 285.281,
+  "full_hook_kg": 179.341,
+  "full_levels": 1975,
+  "full_links": 3030,
+  "full_rate_count_core_kg": 1573.774,
+  "segments_clear_zone_not_established": 3,
+  "segments_compared": 92
+ }
+}

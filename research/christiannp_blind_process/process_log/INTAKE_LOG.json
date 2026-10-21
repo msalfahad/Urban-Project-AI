@@ -1,0 +1,4 @@
+{
+ "items": [],
+ "rule": "one row per delivered donor file: path, sha256, received_from, received_at; files are stored unchanged"
+}

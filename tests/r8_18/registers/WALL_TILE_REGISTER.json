@@ -1,0 +1,302 @@
+{
+ "SCHEMA": "URBAN_R8_18_WALL_TILE_REGISTER_V1",
+ "row": "WALL_TILE",
+ "unit": "m2",
+ "state": "COMPUTED_SHADOW_WITH_UNRESOLVED",
+ "AUTHORISED_SUBTOTAL_M2": 112.813512,
+ "COMPLETE_M2": null,
+ "complete_row_rule": "COMPLETE is null while ANY contributor is UNRESOLVED (zero materiality tolerance); the authorised subtotal is published with the unresolved list",
+ "per_floor": {
+  "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)": {
+   "AUTHORISED_SUBTOTAL_M2": 112.813512,
+   "rooms": [
+    "SITE-1c4abf65f9b5db1e",
+    "SITE-8c1c7563d5252c50",
+    "SITE-a2b19efc492a6d0b",
+    "SITE-fe8ed5548fb4310e"
+   ]
+  }
+ },
+ "per_room": {
+  "SITE-1c4abf65f9b5db1e": {
+   "zones": [
+    "BATH"
+   ],
+   "class": "WET_SERVICE_ROOM",
+   "height_m": 3.2,
+   "height_authority": "QORTUBA-NEW-WET-SERVICE-FINISH-OWNER-001@v1",
+   "wall_plane_net_m2": 34.24,
+   "opening_rectangles_m2": 1.76,
+   "passage_head_faces_m2": 0.0,
+   "jamb_reveals_m2": 0.0,
+   "head_reveals_m2": 0.0,
+   "reconciliation": "PASS",
+   "authorised_m2": 34.24,
+   "floor": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+   "components_reconcile": true
+  },
+  "SITE-8c1c7563d5252c50": {
+   "zones": [
+    "PAINTRY"
+   ],
+   "class": "SERVICE_ROOM",
+   "height_m": 3.2,
+   "height_authority": "QORTUBA-NEW-WET-SERVICE-FINISH-OWNER-001@v1 (SERVICE_ROOM; PAINTRY via QP-07 = kitchen / preparation zone for the ceramic takeoff)",
+   "wall_plane_net_m2": 31.533512,
+   "opening_rectangles_m2": 8.466488,
+   "passage_head_faces_m2": 0.0,
+   "jamb_reveals_m2": 0.0,
+   "head_reveals_m2": 0.0,
+   "reconciliation": "PASS",
+   "authorised_m2": 31.533512,
+   "floor": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+   "components_reconcile": true
+  },
+  "SITE-a2b19efc492a6d0b": {
+   "zones": [
+    "BATH"
+   ],
+   "class": "WET_SERVICE_ROOM",
+   "height_m": 3.2,
+   "height_authority": "QORTUBA-NEW-WET-SERVICE-FINISH-OWNER-001@v1",
+   "wall_plane_net_m2": 23.84,
+   "opening_rectangles_m2": 1.76,
+   "passage_head_faces_m2": 0.0,
+   "jamb_reveals_m2": 0.0,
+   "head_reveals_m2": 0.0,
+   "reconciliation": "PASS",
+   "authorised_m2": 23.84,
+   "floor": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+   "components_reconcile": true
+  },
+  "SITE-fe8ed5548fb4310e": {
+   "zones": [
+    "BATH"
+   ],
+   "class": "WET_SERVICE_ROOM",
+   "height_m": 3.2,
+   "height_authority": "QORTUBA-NEW-WET-SERVICE-FINISH-OWNER-001@v1",
+   "wall_plane_net_m2": 23.2,
+   "opening_rectangles_m2": 1.76,
+   "passage_head_faces_m2": 0.0,
+   "jamb_reveals_m2": 0.0,
+   "head_reveals_m2": 0.0,
+   "reconciliation": "PASS",
+   "authorised_m2": 23.2,
+   "floor": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+   "components_reconcile": true
+  }
+ },
+ "reconciliation": {
+  "sum_of_rooms_m2": 112.813512,
+  "AUTHORISED_SUBTOTAL_M2": 112.813512,
+  "reconciles": true
+ },
+ "unresolved_contributors": [
+  {
+   "site": "SITE-1c4abf65f9b5db1e",
+   "zones": [
+    "BATH"
+   ],
+   "class": "COLUMN_FACE",
+   "area_m2": 2.08,
+   "why": "no plaster / paint / tile rule for column faces: R-13 is the blockwork SHEET's full-deduction column (R8.17 misread it); owner_rules section E is skirting only"
+  },
+  {
+   "site": "SITE-8c1c7563d5252c50",
+   "zones": [
+    "PAINTRY"
+   ],
+   "class": "COLUMN_FACE",
+   "area_m2": 4.48,
+   "why": "no plaster / paint / tile rule for column faces: R-13 is the blockwork SHEET's full-deduction column (R8.17 misread it); owner_rules section E is skirting only"
+  },
+  {
+   "site": "SITE-a2b19efc492a6d0b",
+   "zones": [
+    "BATH"
+   ],
+   "class": "COLUMN_FACE",
+   "area_m2": 4.48,
+   "why": "no plaster / paint / tile rule for column faces: R-13 is the blockwork SHEET's full-deduction column (R8.17 misread it); owner_rules section E is skirting only"
+  },
+  {
+   "site": "SITE-fe8ed5548fb4310e",
+   "zones": [
+    "BATH"
+   ],
+   "class": "COLUMN_FACE",
+   "area_m2": 3.84,
+   "why": "no plaster / paint / tile rule for column faces: R-13 is the blockwork SHEET's full-deduction column (R8.17 misread it); owner_rules section E is skirting only"
+  }
+ ],
+ "unresolved_area_m2": 14.88,
+ "unresolved_reveals": [],
+ "blocked_rooms": [],
+ "release_blockers": [
+  "4 UNRESOLVED contributors (14.88 m2: column / duct finish authority)",
+  "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+  "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+ ],
+ "final": false,
+ "height": 3.2,
+ "height_authority": {
+  "WET_SERVICE_ROOM|WALL_TILE": "QORTUBA-NEW-WET-SERVICE-FINISH-OWNER-001@v1",
+  "SERVICE_ROOM|WALL_TILE": "QORTUBA-NEW-WET-SERVICE-FINISH-OWNER-001@v1 (SERVICE_ROOM; PAINTRY via QP-07 = kitchen / preparation zone for the ceramic takeoff)"
+ },
+ "WET_WALL_TILE_PREP": {
+  "SCHEMA": "URBAN_R8_18_WET_WALL_TILE_PREP_V1",
+  "row": "WET_WALL_TILE_PREP",
+  "unit": "m2",
+  "state": "COMPUTED_SHADOW_WITH_UNRESOLVED",
+  "AUTHORISED_SUBTOTAL_M2": 112.813512,
+  "COMPLETE_M2": null,
+  "complete_row_rule": "COMPLETE is null while ANY contributor is UNRESOLVED (zero materiality tolerance); the authorised subtotal is published with the unresolved list",
+  "per_floor": {
+   "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)": {
+    "AUTHORISED_SUBTOTAL_M2": 112.813512,
+    "rooms": [
+     "SITE-1c4abf65f9b5db1e",
+     "SITE-8c1c7563d5252c50",
+     "SITE-a2b19efc492a6d0b",
+     "SITE-fe8ed5548fb4310e"
+    ]
+   }
+  },
+  "per_room": {
+   "SITE-1c4abf65f9b5db1e": {
+    "zones": [
+     "BATH"
+    ],
+    "class": "WET_SERVICE_ROOM",
+    "height_m": 3.2,
+    "height_authority": "QORTUBA-NEW-WET-SERVICE-FINISH-OWNER-001@v1",
+    "wall_plane_net_m2": 34.24,
+    "opening_rectangles_m2": 1.76,
+    "passage_head_faces_m2": 0.0,
+    "jamb_reveals_m2": 0.0,
+    "head_reveals_m2": 0.0,
+    "reconciliation": "PASS",
+    "authorised_m2": 34.24,
+    "floor": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+    "components_reconcile": true
+   },
+   "SITE-8c1c7563d5252c50": {
+    "zones": [
+     "PAINTRY"
+    ],
+    "class": "SERVICE_ROOM",
+    "height_m": 3.2,
+    "height_authority": "QORTUBA-NEW-WET-SERVICE-FINISH-OWNER-001@v1 (SERVICE_ROOM; PAINTRY via QP-07 = kitchen / preparation zone for the ceramic takeoff)",
+    "wall_plane_net_m2": 31.533512,
+    "opening_rectangles_m2": 8.466488,
+    "passage_head_faces_m2": 0.0,
+    "jamb_reveals_m2": 0.0,
+    "head_reveals_m2": 0.0,
+    "reconciliation": "PASS",
+    "authorised_m2": 31.533512,
+    "floor": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+    "components_reconcile": true
+   },
+   "SITE-a2b19efc492a6d0b": {
+    "zones": [
+     "BATH"
+    ],
+    "class": "WET_SERVICE_ROOM",
+    "height_m": 3.2,
+    "height_authority": "QORTUBA-NEW-WET-SERVICE-FINISH-OWNER-001@v1",
+    "wall_plane_net_m2": 23.84,
+    "opening_rectangles_m2": 1.76,
+    "passage_head_faces_m2": 0.0,
+    "jamb_reveals_m2": 0.0,
+    "head_reveals_m2": 0.0,
+    "reconciliation": "PASS",
+    "authorised_m2": 23.84,
+    "floor": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+    "components_reconcile": true
+   },
+   "SITE-fe8ed5548fb4310e": {
+    "zones": [
+     "BATH"
+    ],
+    "class": "WET_SERVICE_ROOM",
+    "height_m": 3.2,
+    "height_authority": "QORTUBA-NEW-WET-SERVICE-FINISH-OWNER-001@v1",
+    "wall_plane_net_m2": 23.2,
+    "opening_rectangles_m2": 1.76,
+    "passage_head_faces_m2": 0.0,
+    "jamb_reveals_m2": 0.0,
+    "head_reveals_m2": 0.0,
+    "reconciliation": "PASS",
+    "authorised_m2": 23.2,
+    "floor": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+    "components_reconcile": true
+   }
+  },
+  "reconciliation": {
+   "sum_of_rooms_m2": 112.813512,
+   "AUTHORISED_SUBTOTAL_M2": 112.813512,
+   "reconciles": true
+  },
+  "unresolved_contributors": [
+   {
+    "site": "SITE-1c4abf65f9b5db1e",
+    "zones": [
+     "BATH"
+    ],
+    "class": "COLUMN_FACE",
+    "area_m2": 2.08,
+    "why": "no plaster / paint / tile rule for column faces: R-13 is the blockwork SHEET's full-deduction column (R8.17 misread it); owner_rules section E is skirting only"
+   },
+   {
+    "site": "SITE-8c1c7563d5252c50",
+    "zones": [
+     "PAINTRY"
+    ],
+    "class": "COLUMN_FACE",
+    "area_m2": 4.48,
+    "why": "no plaster / paint / tile rule for column faces: R-13 is the blockwork SHEET's full-deduction column (R8.17 misread it); owner_rules section E is skirting only"
+   },
+   {
+    "site": "SITE-a2b19efc492a6d0b",
+    "zones": [
+     "BATH"
+    ],
+    "class": "COLUMN_FACE",
+    "area_m2": 4.48,
+    "why": "no plaster / paint / tile rule for column faces: R-13 is the blockwork SHEET's full-deduction column (R8.17 misread it); owner_rules section E is skirting only"
+   },
+   {
+    "site": "SITE-fe8ed5548fb4310e",
+    "zones": [
+     "BATH"
+    ],
+    "class": "COLUMN_FACE",
+    "area_m2": 3.84,
+    "why": "no plaster / paint / tile rule for column faces: R-13 is the blockwork SHEET's full-deduction column (R8.17 misread it); owner_rules section E is skirting only"
+   }
+  ],
+  "unresolved_area_m2": 14.88,
+  "unresolved_reveals": [],
+  "blocked_rooms": [],
+  "release_blockers": [
+   "4 UNRESOLVED contributors (14.88 m2: column / duct finish authority)",
+   "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+   "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+  ],
+  "final": false
+ },
+ "prep_equals_tile": true,
+ "prep_why": "the same physical surface set (US-03 preparation under the tile), a separate BOQ item",
+ "reveals": "wet / service reveals are PLASTER_DEFAULT (never tile without explicit authority) - see PLASTER_REGISTER.WET_SERVICE_REVEAL_PLASTER",
+ "height_conflict": [
+  {
+   "trade": "WALL_TILE",
+   "finish_height_m": 3.2,
+   "available_m": 3.15,
+   "state": "POTENTIAL_PHYSICAL_CONFLICT_NOT_PROVEN",
+   "basis": "the owner's DRY rationale (4.00 - 0.60 - 0.15 - 0.10): components not source",
+   "action": "flag only - never clipped"
+  }
+ ]
+}

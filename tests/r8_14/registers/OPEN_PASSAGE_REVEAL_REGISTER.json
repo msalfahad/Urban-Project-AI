@@ -1,0 +1,142 @@
+{
+ "SCHEMA": "URBAN_R8_14_OPEN_PASSAGE_REVEAL_REGISTER_V1",
+ "policy": {
+  "policy_id": "OPENING_REVEAL_POLICY_V1",
+  "surfaces": [
+   "LEFT_JAMB",
+   "RIGHT_JAMB",
+   "TOP_SOFFIT"
+  ],
+  "head": [
+   "WITH_HEAD",
+   "FULL_HEIGHT",
+   "HEAD_NOT_ESTABLISHED"
+  ],
+  "never": [
+   "a soffit and a ceiling over one footprint",
+   "a jamb surface from a topology closure alone",
+   "a jamb counted as room wall face and as reveal",
+   "paint without authority",
+   "a head height transferred from another revision"
+  ],
+  "digest": "722b4170f4c969e4b84f155aa206e891a71b76b9cadf3a2f1b42da823c9d7940"
+ },
+ "hall_lobby": {
+  "passage": "OP-997f14d12b8e9bc1",
+  "head": "WITH_HEAD",
+  "footprint_m2": 0.23928946204185486,
+  "width_m": 1.1964473101380282,
+  "depth_m": 0.19999999999989088,
+  "surfaces": [
+   {
+    "surface": "LEFT_JAMB",
+    "opening": "OP-997f14d12b8e9bc1",
+    "depth_m": 0.19999999999989088,
+    "height_m": 2.2,
+    "area_m2": 0.43999999999975997,
+    "authority": "QORTUBA-NEW-HALL-LOBBY-OPEN-PASSAGE-OWNER-001@v1: H2430 REAL_WALL_END",
+    "finish": "PLASTER",
+    "trade": "PLASTER"
+   },
+   {
+    "surface": "RIGHT_JAMB",
+    "opening": "OP-997f14d12b8e9bc1",
+    "depth_m": 0.19999999999989088,
+    "height_m": 2.2,
+    "area_m2": 0.43999999999975997,
+    "authority": "QORTUBA-NEW-HALL-LOBBY-OPEN-PASSAGE-OWNER-001@v1: H2431 REAL_WALL_END",
+    "finish": "PLASTER",
+    "trade": "PLASTER"
+   },
+   {
+    "surface": "TOP_SOFFIT",
+    "opening": "OP-997f14d12b8e9bc1",
+    "width_m": 1.1964473101380282,
+    "depth_m": 0.19999999999989088,
+    "height_m": 2.2,
+    "area_m2": 0.23928946204185486,
+    "footprint_m2": 0.23928946204185486,
+    "finish": "PLASTER",
+    "trade": "PLASTER",
+    "authority": [
+     "QORTUBA-NEW-OPEN-PASSAGE-REVEALS-PLASTERED-OWNER-001@v1",
+     "QORTUBA-NEW-OPEN-PASSAGE-SOFFIT-NOT-CEILING-OWNER-001@v1",
+     "QORTUBA-NEW-HALL-LOBBY-OPEN-PASSAGE-OWNER-001@v1"
+    ]
+   }
+  ],
+  "missing": [],
+  "ownership": {
+   "CEILING_EXCLUDES_M2": 0.23928946204185486,
+   "CEILING_STATE": "SOFFIT_FOOTPRINT_REMOVED",
+   "ROOM_WALL_FACE_LOSES": {
+    "width_m": 1.1964473101380282,
+    "height_m": 2.2,
+    "per_side_m2": 2.632184082303662,
+    "sides": 2
+   },
+   "PAINT": "NOT_AUTHORISED (a separate trade authority)"
+  },
+  "passage_source": {
+   "passage_id": "OP-997f14d12b8e9bc1",
+   "width_mm": 1196.4473101380281,
+   "thickness_mm": 199.99999999989086,
+   "strip_in_site": "SITE-fdfa89fe0f5809a4",
+   "area_m2": 0.23928946202747506
+  }
+ },
+ "surfaces": [
+  {
+   "surface": "LEFT_JAMB",
+   "area_m2": 0.43999999999975997,
+   "finish": "PLASTER",
+   "trade": "PLASTER"
+  },
+  {
+   "surface": "RIGHT_JAMB",
+   "area_m2": 0.43999999999975997,
+   "finish": "PLASTER",
+   "trade": "PLASTER"
+  },
+  {
+   "surface": "TOP_SOFFIT",
+   "area_m2": 0.23928946204185486,
+   "finish": "PLASTER",
+   "trade": "PLASTER"
+  }
+ ],
+ "paint": "NOT ASSUMED (no paint authority)",
+ "ownership_guard_double_claims": [],
+ "us07_reconciliation": {
+  "US-07 reveal depth": "0.25 m standard",
+  "source wall thickness": 0.19999999999989088,
+  "state": "RECORDED - reconciled when the plaster trade is computed; geometry from source"
+ },
+ "plaster_quantity": "NOT PRODUCED (no plaster face-set row this round; the surfaces are recorded once)",
+ "other_passages": [
+  {
+   "passage": "OP-0165f08fad9e3b42",
+   "width_mm": 1200.0,
+   "site": "SITE-788f30878ba9d2b3",
+   "head": "outside the measured unit"
+  },
+  {
+   "passage": "OP-35e4f04842d93fd7",
+   "width_mm": 1200.0,
+   "site": "SITE-788f30878ba9d2b3",
+   "head": "outside the measured unit"
+  },
+  {
+   "passage": "OP-9e0fd219ca5cd391",
+   "width_mm": 1200.0,
+   "site": "SITE-a6405850100155ac",
+   "head": "NOT ESTABLISHED for this revision"
+  },
+  {
+   "passage": "OP-a136ccb3608d1bff",
+   "width_mm": 900.0,
+   "site": "SITE-788f30878ba9d2b3",
+   "head": "outside the measured unit"
+  }
+ ]
+}

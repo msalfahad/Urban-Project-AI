@@ -1,0 +1,27 @@
+FAMILY,OWNERS,ELEMENTS,OWNED_BY_S3_S7,NO_STAGE
+BEAM,"{""S6.1"": 133}",133,133,0
+BOUNDARY_WALL,"{""none"": 1}",1,0,1
+CANTILEVER_OR_BEARING_WALL,"{""S6.1"": 1, ""none - S7 CLASSIFICATION_BLOCKED"": 8}",9,1,8
+COLUMN,"{""S3.1"": 59}",59,59,0
+DOME,"{""S7 releases the flat panel SP-2F_ROOF_SLAB-04 at that place"": 1, ""none"": 2, ""none - S7 EXCLUDED_SPECIAL_STRUCTURE"": 8}",11,1,10
+DOME_RING_BEAM,"{""S6.1"": 6}",6,6,0
+ELEVATED_SLAB,"{""S7"": 41}",41,41,0
+FOOTING,"{""S4.1"": 25}",25,25,0
+GROUND_BEAM,"{""S5.1"": 59}",59,59,0
+GROUND_SLAB,"{""none"": 22}",22,0,22
+LEAN_BLINDING_CONCRETE,"{""none"": 1}",1,0,1
+LIFT,"{""S4.1"": 1, ""none"": 2}",3,1,2
+LINTEL,"{""none"": 1}",1,0,1
+NECK_PEDESTAL,"{""S3.1"": 36}",36,36,0
+OPENING_TRIM,"{""none - S7 VOID_OR_OPENING"": 3}",3,0,3
+RC_PARAPET,"{""none"": 3}",3,0,3
+STAIR_AND_LANDING,"{""none"": 6, ""none - S7 CLASSIFICATION_BLOCKED"": 1, ""none - S7 EXCLUDED_SPECIAL_STRUCTURE"": 3}",10,0,10
+STRAP_BEAM,"{""S5.1"": 3}",3,3,0
+SUNKEN_SLAB,"{""S7"": 6}",6,6,0
+SWIMMING_POOL,"{""none"": 1}",1,0,1
+WATER_TANK,"{""none"": 1, ""none - S7 CLASSIFICATION_BLOCKED"": 2}",3,0,3
+STAGE S3.1,"columns, all storeys incl. foundation storey (necks)",,7488.205,verified / lower bound / provisional / blocked-modelled are separate states
+STAGE S4.1 (+D1.2),footings,,3629.599506,"D1.2: minimum cover makes the straight run a project-basis value, not a lower bound"
+"STAGE S5.1 (+AD1, D1.1)",ground beams + strap beams,,1436.231679,
+STAGE S6.1 (+D1.1),superstructure beams (simple + continuous),,4014.765449,
+STAGE S7 (+S7A errata),"elevated slabs, 476 candidates",,3802.015365,S7A: not a proven bound; top-extent readings move the top steel 678.987 - 1609.08 kg (sensitivity only)

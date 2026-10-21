@@ -1,0 +1,27 @@
+ID,KIND,SOURCE,REFERENCE,CONTENT,AUTHORITY,USE_IN_S8_2
+SRC-01,DRAWING,ST7757.dxf,9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079,"structural CAD (GBP plan, DET p.7 details)",ISSUED,geometry
+SRC-02,DRAWING,ST7757.pdf,74da1523f05eb3c6a4fe3ddebaef2c3d841891f003efc03bc32a3fb4553337e3,"page 7 vector layers {'0': 24, '1': 589, 'N-ARROW': 2, 'REIN': 5, 'S-BOUN': 62, 'S-COR.ST': 3, 'S-DATE': 7, 'S-DIM.D': 197, 'S-EST': 3, 'S-EXTL.D': 25, 'S-HAT.BAT': 237, 'S-HAT.BW': 6, 'S-HAT.CAN': 9, 'S-HAT.FOM': 18, 'S-HAT.PLANT': 16, 'S-INSU.D': 496, 'S-LEG.TEXT': 599, 'S-NOTE': 147, 'S-OPENING': 2, 'S-PLAH.D': 433, 'S-REIN-SLAB': 3, 'S-REIN.D': 1627, 'S-RIB.REIN': 1, 'S-SECRH.D': 1602, 'S-SHEET.LO': 597, 'S-STAMP': 3, 'S-TEXT-SLAB': 30, 'S-TEXT.D': 529, 'S-VIEWPORT': 1, 'S-XR.RIB': 6, 'SHEET-FR': 1, 'TEXT': 746}",ISSUED,"notes, legend, cross-check"
+SRC-03,DRAWING,P7757.dxf,ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4,architectural GF plan (registered by PS5.1),ISSUED,stated plan dimensions; depth search
+SRC-04,PLAN,GBP,"7C6, 7C5, SWIM 147",S-BW structural and water outlines (bearing wall per the p.7 legend); 'swimming pool' block,CAD_GEOMETRY,"footprint, band, wall runs"
+SRC-05,DETAIL,DET p.7,"1864, 186A",DETAIL OF SWIMMING POOL. (N.I.S),NTS,"topology, stated 20 / 40, bar labels"
+SRC-06,NOTE,"ST7757.pdf p.7 (S-LEG.TEXT, read on the page render)",NOTES,THE BUILDER TO WORK WITH STATED DIMENSIONS NOT TO SCALE DRAWING.,PROJECT_NOTE,only stated dimensions measure; drawn lengths never do
+SRC-07,LEGEND,ST7757.pdf p.7 (S-LEG.TEXT),LEGEND,Bearing wall (B.W),PROJECT_LEGEND,S-BW outlines are bearing walls
+SRC-08,STAMP,ST7757.pdf p.7 (S-NOTE),plot stamp,"file path, layout name DETAILS, plot date",NO_ENGINEERING_CONTENT,none
+DIM-1931,DIMENSION,DET p.7,1931,"'AS PER ARCH' VERTICAL ['WALL_TOP', 'DEEP_BASE_TOP'] (6637.931 drawing units)",REFERENCE_AS_PER_ARCH,none ('AS PER ARCH': the architectural set does not print it)
+DIM-193F,DIMENSION,DET p.7,193F,"'40' VERTICAL ['DEEP_BASE_TOP', 'DEEP_BASE_BOTTOM'] (1495.69 drawing units)",STATED_DIMENSION,thickness
+DIM-194D,DIMENSION,DET p.7,194D,"'20' HORIZONTAL ['DEEP_WALL_OUTER', 'DEEP_WALL_INNER'] (995.69 drawing units)",STATED_DIMENSION,thickness
+DIM-195B,DIMENSION,DET p.7,195B,"'20' HORIZONTAL ['SHALLOW_WALL_INNER', 'SHALLOW_WALL_OUTER'] (995.69 drawing units)",STATED_DIMENSION,thickness
+DIM-1969,DIMENSION,DET p.7,1969,"'AS PER ARCH' HORIZONTAL ['SLOPE_TOP_END', 'SHALLOW_WALL_INNER'] (3982.759 drawing units)",REFERENCE_AS_PER_ARCH,none ('AS PER ARCH': the architectural set does not print it)
+DIM-1977,DIMENSION,DET p.7,1977,"'AS PER ARCH' HORIZONTAL ['SLOPE_TOP_START', 'SLOPE_TOP_END'] (4978.448 drawing units)",REFERENCE_AS_PER_ARCH,none ('AS PER ARCH': the architectural set does not print it)
+DIM-1985,DIMENSION,DET p.7,1985,"'AS PER ARCH' HORIZONTAL ['DEEP_WALL_INNER', 'SLOPE_TOP_START'] (3982.759 drawing units)",REFERENCE_AS_PER_ARCH,none ('AS PER ARCH': the architectural set does not print it)
+DIM-1993,DIMENSION,DET p.7,1993,"'AS PER ARCH' VERTICAL ['SHALLOW_FLOOR_TOP', 'WALL_TOP'] (3318.966 drawing units)",REFERENCE_AS_PER_ARCH,none ('AS PER ARCH': the architectural set does not print it)
+ARCH-350,STATED_PLAN_DIMENSION,P7757.dxf layer 4,350 / 115 / 75 chain,"N-S 350 between ticks [15011.856, 15211.856, 16361.856, 19861.856, 20611.856, 20811.856]",STATED_DIMENSION,corroborates the S-BW outline
+ARCH-OUTLINE,PLAN,P7757.dxf layer 5,arcs + lines,"pool arcs R [1550.0, 1750.0, 2250.0]",ARCHITECTURAL_GEOMETRY,corroborates the water and structural outlines
+ARCH-DEPTH,SEARCH,P7757.dxf all texts,pool / depth / level / section words,"pool labels 2; depth, level or section texts 29",SEARCH_RESULT,no depth exists to measure
+P8-N22,PROJECT_RULE,ST7757.pdf p.8,P8-N22,22. يجب أن لا يقل سمك الغطاء الخرساني عن 2.5 سم في الأعمدة والبلاطات والجسور وعن 7سم في الخرسانة الملاصقة للتربة.,EXACT_RULE,cover (14)
+P8-N13,PROJECT_RULE,ST7757.pdf p.8,P8-N13,13. ... استخدام أسمنت مقاوم للاملاح والكبريتات للخرسانات ... الملاصقة للتربة ...,EXACT_RULE,material (no quantity)
+P8-N16,PROJECT_RULE,ST7757.pdf p.8,P8-N16,16. تنفذ الخرسانة العادية بنسبة 1:3:6 خلط جاهز .,EXACT_RULE,plain-concrete mix (09)
+P7-POOL,PROJECT_RULE,ST7757.pdf p.7,P7-POOL,"DETAIL OF SWIMMING POOL (N.I.S): 7Ø14/m, 7Ø12/m, 6Ø12/m, 12/20cm, Ø12/20cm, Ø10/20cm, 6Ø14/m, 3Ø16, 4Ø16; 5cm screed / 5cm insulation membrane / 10cm plain concrete; AS PER ARCH",CANDIDATE,S1 candidate rule; superseded by the binding (13)
+S1-POOL,CENSUS,S1 POOL_STRUCTURAL_REGISTER,26 rows,pool bar labels with provisional roles,PROVISIONAL,the 26 records bound and terminated (13)
+PRE-S8-POOL,CENSUS,PRE-S8 02,SPC-POOL,SWIMMING_POOL (base + walls),S8 POOL,parent of the population
+UNIT-MASS,METHOD,slab_rebar_qto,D2_OVER_162,Urban project default (R3): kg/m = D^2 / 162,PROJECT_METHOD,kg/m of every family

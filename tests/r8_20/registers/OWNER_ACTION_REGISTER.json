@@ -1,0 +1,65 @@
+{
+ "SCHEMA": "URBAN_OWNER_ACTION_REGISTER_V17",
+ "headline": "ONE RECOMMENDED OWNER ACTION: A CONTROLLED AUTOCAD RE-EXPORT OF THE QORTUBA DWG (CLOSES THE SOURCE ANCHOR; ENABLES CROSS-ROUTE AGREEMENT). NO QUESTION ABOUT THE MEASURED ROWS.",
+ "required_now": [],
+ "recommended_now": [
+  {
+   "id": "QORTUBA_CONTROLLED_REEXPORT",
+   "protocol": {
+    "steps": [
+     "open the authoritative DWG in AutoCAD (record the AutoCAD product, version and build)",
+     "make NO edit, no purge, no audit-fix, no regen-save of the source",
+     "SAVEAS DXF (AutoCAD 2018 DXF, the same format as the current DXF) to a NEW file",
+     "SAVEAS DWG in AutoCAD 2013 format (AC1027) to a NEW file (for the pinned libredwg K1 route)",
+     "close WITHOUT saving the original",
+     "record local timestamps of both exports",
+     "compute SHA-256 of the source DWG (before and after: must be unchanged) and of both exports",
+     "send the four hashes, the AutoCAD build and the two exported files"
+    ],
+    "counts_only_if": [
+     "the source DWG hash equals the anchored DWG hash e4babbc2ded1...",
+     "the source DWG hash is unchanged after the session",
+     "both exports carry the stated format headers ($ACADVER)"
+    ],
+    "then": [
+     "DXF identity: current DXF vs re-exported DXF, entity by entity (this policy)",
+     "cross-route: K1 (pinned libredwg on the AC1027 DWG) vs K2 (ezdxf on the DXF) topology agreement"
+    ],
+    "never": [
+     "an edited or re-saved source",
+     "an export by an unrecorded tool",
+     "a partial match called identity"
+    ]
+   },
+   "closes": [
+    "DWG <-> DXF identity (SOURCE_ANCHOR)",
+    "makes CROSS_ROUTE_AGREEMENT evaluable (K1 on the AC1027 DWG vs K2 on the DXF)"
+   ],
+   "effort": "one AutoCAD session, no editing; send 2 files + 4 hashes + the AutoCAD build"
+  }
+ ],
+ "when_available": [
+  {
+   "id": "UNSEEN_VILLA_FOR_BLIND_VALIDATION",
+   "what": "an unseen Kuwait villa: DWG + the same controlled export, the drawing unit, the plan scope; the QS quantities stay SEALED with the owner (send only their SHA-256) until our freeze is committed"
+  }
+ ],
+ "answered_this_round": [
+  "QORTUBA-NEW-H2430-CLOSURE-REVIEW-OWNER-001@v1",
+  "QORTUBA-NEW-H2431-CLOSURE-REVIEW-OWNER-001@v1",
+  "QORTUBA-NEW-I1471-CLOSURE-REVIEW-OWNER-001@v1",
+  "QORTUBA-NEW-I1471-200MM-WALL-COLUMN-CONCEALMENT-OWNER-001@v1"
+ ],
+ "do_not_ask": [
+  "H2430 / H2431 closure review",
+  "I1471 closure review",
+  "I1471 150 / 200 mm wall geometry",
+  "I1471 200 mm wall rationale",
+  "column finish",
+  "duct finish",
+  "skirting",
+  "sliding glass door",
+  "marble",
+  "wall heights already established"
+ ]
+}

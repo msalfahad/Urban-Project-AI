@@ -1,0 +1,16 @@
+VIEW,LANE,RECORDS,AREA_M2,NOTE
+OLD_S8_1,MEASURED,2,37.858523163397,two marker cells
+OLD_S8_1,BLOCKED,19,129.77058448889,19 faces
+OLD_S8_1,EXCLUDED,1,8.37232788,stair flight SP-GBP-12 (S8 STAIR)
+OLD_S8_1,NOT_REPRESENTED,1,49.074227109791,face RB-b5bf2906b114b4a7 rejected by S1 at the strip gate (line BL033)
+NEW_S8_1A,MEASURED,,37.858523163397,unchanged
+NEW_S8_1A,BLOCKED,,158.830499417136,19 S8.1 faces + recovered candidates
+NEW_S8_1A,EXCLUDED,,28.38663968,"both stair zones, pit opening, pit walls, beam bands"
+NEW_S8_1A,CONFLICTED,,0,the cover record is corrected to unresolved (06)
+NEW_S8_1A,UNCLASSIFIED,,0.000000381545,parts with no determinable identity
+NEW_S8_1A,DRAWN_GROUND_SLAB_DOMAIN,,225.075662642078,all GBP cells inside the building: S8.1 faces + SP-GBP-12 + the recovered face
+GBP_ARRANGEMENT,RECOVERED_THIS_ROUND,1,49.074227,"every face of S1's GBP planar arrangement, by S1's own gate"
+GBP_ARRANGEMENT,S1_PANEL,23,336.253973,"every face of S1's GBP planar arrangement, by S1's own gate"
+GBP_ARRANGEMENT,S1_REJECT_AREA,102,10.92684,"every face of S1's GBP planar arrangement, by S1's own gate"
+GBP_ARRANGEMENT,S1_REJECT_THICKNESS,45,57.235179,"every face of S1's GBP planar arrangement, by S1's own gate"
+GBP_ARRANGEMENT,TOTAL,171,453.490219,sum over all faces

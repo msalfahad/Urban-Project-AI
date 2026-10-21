@@ -1,0 +1,39 @@
+{
+ "SCHEMA": "URBAN_R8_6_FIXTURE_MANIFEST_V1",
+ "rule": "the declared fixture set of the R8.6 tests. Every fixture is untracked project data; a missing fixture skips the test that needs it (stated reason), a fixture whose sha256 differs FAILS (fixture drift is never absorbed). Session uploads are not fixtures.",
+ "fixtures": {
+  "data/runs/cad_convert/QORTUBA_ARCHITECTURAL.json": "7dbafb3ddd59076664f05c2f3c539d3133b295002c90e3f6f26ffd01737d5e36",
+  "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba/PA08_BLIND_CONFIG.json": "04c4838fab1c41ba2769954c4b86fd9408c672c39304071a9aefe41f57002b32"
+ },
+ "frozen_calculation_path": {
+  "research/qs_wall_treatment_01/pa08/qortuba/qs01/takeoff.py": "e6a587dfe4f8a5327faa837ca77a749c086f9e86b36164e685383144d0072b2d",
+  "research/qs_wall_treatment_01/pa08/qortuba/r3/floor_regions.py": "f847ea59c8e24e21812726fb886e8651ce079cb82df6d32f57325eefc970635f",
+  "research/qs_wall_treatment_01/pa08/qortuba/r3/run_r3.py": "f46ae6ae8d566f5d7065e02279a4a58490fae711f6e8feaddc05fa38a9fe0e1a",
+  "research/qs_wall_treatment_01/pa08/qortuba/r2/cells.py": "d08dd3b5d7c439a98dd40337eef5d6c3a910d166b45233b052999a65f7a8732b",
+  "research/qs_wall_treatment_01/pa08/qortuba/boq/owner_rules.py": "618614308f1b737c223f66f37e7e9b4054aa83250f16a53402f67b37b7541dc0",
+  "engine/ingest/pipeline7.py": "ddf03ca77228f34e7146957d7aea5e614f4eebcb06c12853ee1de94bc147f307",
+  "engine/ingest/source_units.py": "295aea39cc22a73e51b42de7624d4bd58c887526e7997f3618d558d6c21a171e",
+  "engine/cad_adapter.py": "4d060a1d0f9c5a6ed19c6f8b7b508fa7a5762aa4dc74684bc3b1ec9cd0a573a3",
+  "engine/source/cad/kernel.py": "0888c5d0ca4f2ccc3371df75ef344bf93604d3666a99f6205bda2e879aa2f99f",
+  "engine/source/cad/libredwg_map.py": "98a3414cc296dfa6196491086f6522ea17f2b6a0f0f212f5b1d4658f9017a44b"
+ },
+ "regression_truth": {
+  "Q-03": 17.8625,
+  "Q-03P": 11.685,
+  "Q-11": 17.8625,
+  "Q-12": 11.685,
+  "Q-13": 108.9625,
+  "Q-14": 138.51
+ },
+ "regression_truth_rule": "written AFTER the calculation path was frozen; it is compared to a computed value and never enters geometry extraction, unit selection, snapping, region selection or method selection",
+ "canonical_rooms_digest": "165a7cd8206ae2a8d3bc872b54ec7213c50cb66500514ce9b3491f750f102630",
+ "refreeze_log": [
+  {
+   "round": "R8.8",
+   "file": "engine/source/cad/kernel.py",
+   "from": "7ae1562686744eed7504db015e57410020dcfc1e26a1b91766555ca1d11eca5b",
+   "to": "0888c5d0ca4f2ccc3371df75ef344bf93604d3666a99f6205bda2e879aa2f99f",
+   "why": "deliberate re-freeze: the kernel now records the SOURCE sub-part (Lineage.sub_part = polyline span index) so canonical part identity no longer depends on realisation order; realised geometry, dispositions and findings are unchanged (R8.6 six rows and canonical rooms digest re-verified by this suite)"
+  }
+ ]
+}

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="420" viewBox="0 0 760 420" font-family="Arial" font-size="11">
+<rect width="760" height="420" fill="#ffffff"/>
+<defs><clipPath id="room"><polygon points="50.0,330.0 610.0,330.0 610.0,50.0 50.0,50.0"/></clipPath></defs>
+<g clip-path="url(#room)">
+<rect x="50.0" y="283.3" width="560.0" height="46.7" fill="#9ecae1" fill-opacity="0.75" stroke="#3182bd" stroke-width="0.8"/>
+<text x="330.0" y="306.7" text-anchor="middle" fill="#08306b">S1 1.00</text>
+<rect x="50.0" y="241.3" width="560.0" height="46.7" fill="#c6dbef" fill-opacity="0.75" stroke="#3182bd" stroke-width="0.8"/>
+<text x="330.0" y="264.7" text-anchor="middle" fill="#08306b">S2 1.00</text>
+<rect x="50.0" y="199.3" width="560.0" height="46.7" fill="#9ecae1" fill-opacity="0.75" stroke="#3182bd" stroke-width="0.8"/>
+<text x="330.0" y="222.7" text-anchor="middle" fill="#08306b">S3 1.00</text>
+<rect x="50.0" y="157.3" width="560.0" height="46.7" fill="#c6dbef" fill-opacity="0.75" stroke="#3182bd" stroke-width="0.8"/>
+<text x="330.0" y="180.7" text-anchor="middle" fill="#08306b">S4 1.00</text>
+<rect x="50.0" y="115.3" width="560.0" height="46.7" fill="#9ecae1" fill-opacity="0.75" stroke="#3182bd" stroke-width="0.8"/>
+<text x="330.0" y="138.7" text-anchor="middle" fill="#08306b">S5 1.00</text>
+<rect x="50.0" y="73.3" width="560.0" height="46.7" fill="#c6dbef" fill-opacity="0.75" stroke="#3182bd" stroke-width="0.8"/>
+<text x="330.0" y="96.7" text-anchor="middle" fill="#08306b">S6 1.00</text>
+<rect x="50.0" y="50.0" width="560.0" height="28.0" fill="#9ecae1" fill-opacity="0.75" stroke="#3182bd" stroke-width="0.8"/>
+<text x="330.0" y="64.0" text-anchor="middle" fill="#08306b">S7 0.60</text>
+</g>
+<polygon points="50.0,330.0 610.0,330.0 610.0,50.0 50.0,50.0" fill="none" stroke="#252525" stroke-width="1.2"/>
+<line x1="50.0" y1="330.0" x2="610.0" y2="330.0" stroke="#e6550d" stroke-width="5" stroke-opacity="0.7"/>
+<text x="330.0" y="350.0" text-anchor="middle" fill="#525252" font-size="10">12.00 m</text>
+<line x1="610.0" y1="330.0" x2="610.0" y2="236.7" stroke="#e6550d" stroke-width="5" stroke-opacity="0.7"/>
+<line x1="610.0" y1="236.7" x2="610.0" y2="143.3" stroke="#31a354" stroke-width="5" stroke-dasharray="4,3"/>
+<text x="610.0" y="182.0" text-anchor="middle" fill="#006d2c">open edge E1 2.00 m</text>
+<line x1="610.0" y1="143.3" x2="610.0" y2="50.0" stroke="#e6550d" stroke-width="5" stroke-opacity="0.7"/>
+<text x="626.0" y="194.0" text-anchor="middle" fill="#525252" font-size="10">6.00 m</text>
+<line x1="610.0" y1="50.0" x2="330.0" y2="50.0" stroke="#e6550d" stroke-width="5" stroke-opacity="0.7"/>
+<line x1="330.0" y1="50.0" x2="283.3" y2="50.0" stroke="#31a354" stroke-width="5" stroke-dasharray="4,3"/>
+<text x="306.7" y="42.0" text-anchor="middle" fill="#006d2c">door D1 1.00 m</text>
+<line x1="283.3" y1="50.0" x2="50.0" y2="50.0" stroke="#e6550d" stroke-width="5" stroke-opacity="0.7"/>
+<text x="330.0" y="38.0" text-anchor="middle" fill="#525252" font-size="10">12.00 m</text>
+<line x1="50.0" y1="50.0" x2="50.0" y2="330.0" stroke="#e6550d" stroke-width="5" stroke-opacity="0.7"/>
+<text x="34.0" y="194.0" text-anchor="middle" fill="#525252" font-size="10">6.00 m</text>
+<circle cx="143.3" cy="283.3" r="5" fill="#756bb1"/>
+<text x="151.3" y="287.3" fill="#54278f">ROOF DRAIN</text>
+<circle cx="516.7" cy="283.3" r="5" fill="#756bb1"/>
+<text x="524.7" y="287.3" fill="#54278f">ROOF DRAIN</text>
+<text x="50" y="398" fill="#252525">WP-F: ALONG_X, 7 strips (last 0.60 m), band 0.30 m, pieces [1.10, 2.00, 7.42, 7.44, 7.44, 8.00] m</text>
+<text x="50" y="412" fill="#252525">A 72.00 m2, upturn 6.60 m2, B 90.18 m2, consumed 92.14 m2, 10 roll(s); orange = upturn band, green = doorway / open edge</text>
+</svg>

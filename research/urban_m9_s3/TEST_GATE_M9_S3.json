@@ -1,0 +1,49 @@
+{
+ "schema": "URBAN_TEST_GATE_V1",
+ "commit": "40d1239 (S3: engine, tools and tests; route G engine unchanged)",
+ "junit": "junit_m9s3.xml (tests, 10 m 36 s) + junit_m9s3_agents.xml (agents, 0.8 s), merged; not committed",
+ "total": 8309,
+ "counts": {
+  "CODE_FAILURE": 0,
+  "EXECUTED_PASSED": 7695,
+  "EXPECTED_FAILURE": 100,
+  "MANDATORY_BLOCKED_BY_MISSING_DATA": 376,
+  "SKIPPED_OTHER": 2,
+  "SKIPPED_PREREQUISITE_UNAVAILABLE": 136
+ },
+ "complete_project_regression_gate": "INCOMPLETE",
+ "gate_reasons": [
+  "376 mandatory regression tests blocked by missing data",
+  "136 tests skipped for an unavailable prerequisite",
+  "108 locked prerequisites missing {'BENCHMARK': 14, 'DERIVED': 87, 'SOURCE': 7}"
+ ],
+ "locked_prerequisites": {
+  "entries": 113,
+  "lock": "research/environment_recovery/INPUTS.lock.proposed.json",
+  "missing": 108,
+  "missing_by_store": {
+   "BENCHMARK": 14,
+   "DERIVED": 87,
+   "SOURCE": 7
+  }
+ },
+ "code_failure_tests": [],
+ "code_failure_reasons": {},
+ "blocked_by_missing_path": {
+  "(generated prerequisite: run workbook_boq first)": 1,
+  "(a private path outside the repository)": 1,
+  "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01": 373,
+  "data/runs/7757": 1
+ },
+ "vs_S2": {
+  "CODE_FAILURE": "0 -> 0",
+  "EXECUTED_PASSED": "7671 -> 7695 (+24: tests/m9_s3)",
+  "EXPECTED_FAILURE": "100 -> 100",
+  "MANDATORY_BLOCKED_BY_MISSING_DATA": "376 -> 376",
+  "SKIPPED_OTHER": "2 -> 2",
+  "SKIPPED_PREREQUISITE_UNAVAILABLE": "136 -> 136"
+ },
+ "rule": "only EXECUTED_PASSED proves anything; a prerequisite skip is not a pass; the gate is COMPLETE only with no blocked, skipped-for-prerequisite or failed test and every locked prerequisite present",
+ "note": "reduced from research/environment_recovery/classify_test_run.py output (test ids of blocked / skipped tests and skip texts left out); a private local path outside the repository is named generically",
+ "run": "the pytest.ini testpaths (tests, agents, engine) in two sessions run one after the other, never at once"
+}

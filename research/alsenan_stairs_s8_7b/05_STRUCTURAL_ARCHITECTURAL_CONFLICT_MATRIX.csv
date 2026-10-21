@@ -1,0 +1,16 @@
+ID,ITEM,VALUES_BY_SOURCE,STATUS,NOTE
+CM-01,A1 GF -> 1F total risers,"{""ARCH-GF"": 25, ""GFRS"": 28, ""OWNER"": 28, ""SECTION A-A"": 27}",SOURCE_CONFLICT,"three drawings, three counts; the owner's 28 is the structural sheet's"
+CM-02,A1 risers before the half-landing,"{""ARCH-GF"": 14, ""GFRS"": 16, ""SECTION A-A"": 15}",SOURCE_CONFLICT,16 / 14 / 15
+CM-03,A1 upper flight risers,"{""ARCH-GF"": 11, ""GFRS"": 12, ""SECTION A-A"": 12}",SOURCE_CONFLICT,12 on the structural sheet and the section; 11 on the architectural plan
+CM-04,A1 half-landing level,"{""ARCH-GF implied"": 3.52, ""OWNER-28 implied"": 3.571429, ""SECTION A-A implied"": 3.5, ""SECTION A-A printed"": 3.5}",SOURCE_CONFLICT,only the section's own 27 reaches the printed +3.50 with uniform risers
+CM-05,"A1 foot of the lower flight (first riser face, y)","{""ARCH-GF"": 16761.856, ""GBP"": 16761.856, ""GFRS"": 16161.856}",SOURCE_CONFLICT,600 mm apart: two goings
+CM-06,A1 last riser face of the upper flight (y),"{""ARCH-GF"": 16411.856, ""B20 north face"": 16311.856, ""GFRS"": 16111.856}",SOURCE_CONFLICT,the structural sheet's last riser lies inside B20
+CM-07,A1 winder turn,"{""ARCH-GF"": ""3 radial + 1 closing"", ""GFRS"": ""3 radial + 1 closing""}",SOURCE_VERIFIED,both draw the same four-riser turn
+CM-08,A2 1F -> 2F total risers,"{""ARCH-1F"": 27, ""ARCH-2F"": 24, ""FFRS"": 24, ""OWNER"": 27, ""SECTION A-A"": 25}",SOURCE_CONFLICT,the owner's 27 is the architectural 1F plan's
+CM-09,A2 winder turn,"{""ARCH-1F"": ""3 radial + 1 closing"", ""ARCH-2F"": ""0 radial + 1 closing"", ""FFRS"": ""0 radial + 1 closing""}",SOURCE_CONFLICT,only the architectural 1F plan draws winders; the structural sheet draws the quarter flat
+CM-10,A2 risers before the half-landing,"{""ARCH-1F"": 16, ""FFRS"": 13, ""SECTION A-A"": 13}",SOURCE_CONFLICT,13 / 16 / 13
+CM-11,A2 upper flight risers,"{""ARCH-1F"": 11, ""FFRS"": 11, ""SECTION A-A"": 12}",SOURCE_CONFLICT,11 on every plan; 12 on the section (which would end inside B23)
+CM-12,A2 half-landing level,"{""FFRS implied"": 7.775, ""OWNER-27 implied"": 7.988889, ""SECTION A-A scaled"": 7.687, ""printed"": null}",SOURCE_CONFLICT,no level printed; 302 mm between the owner's arrangement and the section
+CM-13,C round stair total risers,"{""ARCH-1F"": 28, ""ARCH-GF (second view)"": 27, ""GFRS"": 28}",SOURCE_VERIFIED,the two primary views agree; the GF plan's second view draws one riser fewer in the short flight
+CM-14,waist thickness,"{""p.16"": ""THICK (no value)"", ""plans"": ""'16' zone tags""}",BLOCKED_UNQUANTIFIED,not established; engineer
+CM-15,finish build-ups,"{""floors"": ""not printed"", ""p.16"": ""50 mm head / foot offsets (typical, meaning not stated)"", ""section A-A"": ""finish line drawn ~51 mm (indicative)"", ""stair"": ""30 mm owner (bedding not stated)""}",BLOCKED_UNQUANTIFIED,first / last concrete risers stay a function of the build-ups (07)

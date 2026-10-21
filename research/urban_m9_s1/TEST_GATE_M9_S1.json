@@ -1,0 +1,65 @@
+{
+ "blocked_by_missing_path": {
+  "(a private path outside the repository)": 1,
+  "(generated prerequisite: run workbook_boq first)": 1,
+  "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01": 373,
+  "data/runs/7757": 1
+ },
+ "code_failure_reasons": {},
+ "code_failure_tests": [],
+ "commit": "6c1deb4 (S1 7a18b39 + workbook boundary fix; route G engine unchanged since 8177ccf)",
+ "complete_project_regression_gate": "INCOMPLETE",
+ "counts": {
+  "CODE_FAILURE": 0,
+  "EXECUTED_PASSED": 7610,
+  "EXPECTED_FAILURE": 100,
+  "MANDATORY_BLOCKED_BY_MISSING_DATA": 376,
+  "SKIPPED_OTHER": 2,
+  "SKIPPED_PREREQUISITE_UNAVAILABLE": 136
+ },
+ "first_run": {
+  "cause": "engine/boq_room_workbook.py (outside engine/source) imported engine.source.boq_line; the R8 boundary tests forbid any engine module outside engine/source from importing it",
+  "code_failure_tests": [
+   "tests.r8_1.test_r8_1_boundaries::test_nothing_outside_tests_imports_engine_source_yet",
+   "tests.r8_2.test_r8_2_paths_and_pins::test_no_production_module_consumes_the_source_engine_yet"
+  ],
+  "commit": "7a18b39",
+  "counts": {
+   "CODE_FAILURE": 2,
+   "EXECUTED_PASSED": 7608,
+   "EXPECTED_FAILURE": 100,
+   "MANDATORY_BLOCKED_BY_MISSING_DATA": 376,
+   "SKIPPED_OTHER": 2,
+   "SKIPPED_PREREQUISITE_UNAVAILABLE": 136
+  },
+  "fix": "6c1deb4: the workbook takes item labels from the canonical lines it is given; no engine.source import",
+  "raw_pytest": "346 failed, 7608 passed, 138 skipped, 100 xfailed, 32 errors in 661.8 s"
+ },
+ "gate_reasons": [
+  "376 mandatory regression tests blocked by missing data",
+  "136 tests skipped for an unavailable prerequisite",
+  "108 locked prerequisites missing {'BENCHMARK': 14, 'DERIVED': 87, 'SOURCE': 7}"
+ ],
+ "junit": "junit_m9s1_r2.xml (not committed)",
+ "locked_prerequisites": {
+  "entries": 113,
+  "lock": "research/environment_recovery/INPUTS.lock.proposed.json",
+  "missing": 108,
+  "missing_by_store": {
+   "BENCHMARK": 14,
+   "DERIVED": 87,
+   "SOURCE": 7
+  }
+ },
+ "note": "reduced from research/environment_recovery/classify_test_run.py output (test ids of blocked / skipped tests and skip texts left out); a private local path outside the repository is named generically",
+ "raw_pytest": "344 failed, 7610 passed, 138 skipped, 100 xfailed, 32 errors in 654.5 s (junit: 8224 tests)",
+ "rule": "only EXECUTED_PASSED proves anything; a prerequisite skip is not a pass; the gate is COMPLETE only with no blocked, skipped-for-prerequisite or failed test and every locked prerequisite present",
+ "schema": "URBAN_TEST_GATE_V1",
+ "total": 8224,
+ "vs_M8": {
+  "CODE_FAILURE": "0 -> 0",
+  "EXECUTED_PASSED": "7512 -> 7610 (+98: tests/m9_foundation)",
+  "MANDATORY_BLOCKED_BY_MISSING_DATA": "376 -> 376",
+  "SKIPPED_PREREQUISITE_UNAVAILABLE": "136 -> 136"
+ }
+}

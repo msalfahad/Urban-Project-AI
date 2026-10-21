@@ -1,0 +1,347 @@
+{
+ "SCHEMA": "URBAN_R8_12_Q14_STATUS_V1",
+ "row": "Q-14",
+ "state": "COMPUTED_SHADOW",
+ "value": 141.0263,
+ "blocker_classes": [],
+ "blockers": [],
+ "sites_used": [
+  {
+   "site": "SITE-1c4abf65f9b5db1e",
+   "zones": [
+    "BATH"
+   ],
+   "area_m2": 8.5525,
+   "decision": "SINGLE_SEMANTIC_ZONE"
+  },
+  {
+   "site": "SITE-5f1762f1a93b91ca",
+   "zones": [
+    "BED.ROOM"
+   ],
+   "area_m2": 19.2725,
+   "decision": "SINGLE_SEMANTIC_ZONE"
+  },
+  {
+   "site": "SITE-621f9bce1e5ec52a",
+   "zones": [
+    "HALL",
+    "whgm"
+   ],
+   "area_m2": 42.799289,
+   "decision": "SEMANTIC_SUBDIVISION_NOT_REQUIRED_FOR_TRADE"
+  },
+  {
+   "site": "SITE-8c1c7563d5252c50",
+   "zones": [
+    "PAINTRY"
+   ],
+   "area_m2": 11.685,
+   "decision": "SINGLE_SEMANTIC_ZONE"
+  },
+  {
+   "site": "SITE-a2b19efc492a6d0b",
+   "zones": [
+    "BATH"
+   ],
+   "area_m2": 5.1,
+   "decision": "SINGLE_SEMANTIC_ZONE"
+  },
+  {
+   "site": "SITE-a6405850100155ac",
+   "zones": [
+    "DRESS",
+    "M.B.ROOM"
+   ],
+   "area_m2": 33.2,
+   "decision": "SEMANTIC_SUBDIVISION_NOT_REQUIRED_FOR_TRADE"
+  },
+  {
+   "site": "SITE-daca396d6d730e60",
+   "zones": [
+    "BED.ROOM"
+   ],
+   "area_m2": 16.327,
+   "decision": "SINGLE_SEMANTIC_ZONE"
+  },
+  {
+   "site": "SITE-fe8ed5548fb4310e",
+   "zones": [
+    "BATH"
+   ],
+   "area_m2": 4.09,
+   "decision": "SINGLE_SEMANTIC_ZONE"
+  }
+ ],
+ "trade_authority": {
+  "rule": "QORTUBA-Q14-CEILING-TREATMENT@v1",
+  "authority": "OWNER_CLAIM",
+  "refs": [
+   "QORTUBA-Q14-CEILING-FOOTPRINT-OWNER-001"
+  ],
+  "row_treatment": "CEILING_BY_AREA",
+  "semantic_class_rule": null
+ },
+ "footprint_authority": {
+  "treatment": "FOOTPRINT_INCLUDED",
+  "policy": "QORTUBA-CEILING-OBJECT-FOOTPRINT@v1"
+ },
+ "release_blockers": [
+  "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+  "PASSAGE_SOFFIT_ALLOCATION: the OP-OWNER-HALL-LOBBY strip (0.2393 m2) lies inside the ceiling footprint but its top is a soffit at 2.2 m (owner): ceiling vs reveal allocation rule required",
+  "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+ ],
+ "r8_10": {
+  "state": "BLOCKED_MULTIPLE: BLOCKED_PHYSICAL, BLOCKED_ROLE",
+  "value": null,
+  "blocker_classes": [
+   "PHYSICAL_TOPOLOGY",
+   "ROLE_AUTHORITY"
+  ]
+ },
+ "old_revision": {
+  "state": "BLOCKED_OWNER_FACT",
+  "value": null
+ },
+ "final": false,
+ "run_input_digest": "12547d2d834b6ca4898be83877540a9869bcdacbf663123f9aa91fc189485616",
+ "row_input_digest": "a002c699a233b390b8d570c91b9621890784c8f486c1f1b603852a5d0567c10a",
+ "r8_11": {
+  "state": "BLOCKED_ENGINE_LIMITATION",
+  "value": null,
+  "blocker_classes": [
+   "ENGINE_LIMITATION"
+  ]
+ },
+ "rebuild": {
+  "physical_site_ids": [
+   "SITE-1c4abf65f9b5db1e",
+   "SITE-5f1762f1a93b91ca",
+   "SITE-621f9bce1e5ec52a",
+   "SITE-8c1c7563d5252c50",
+   "SITE-a2b19efc492a6d0b",
+   "SITE-a6405850100155ac",
+   "SITE-daca396d6d730e60",
+   "SITE-fe8ed5548fb4310e"
+  ],
+  "wall_bands": [
+   "WB-003de0bbd8ac8fb7",
+   "WB-04c5f7ad7eefd33a",
+   "WB-07772c3bae70b9d2",
+   "WB-0e397c7d26933e82",
+   "WB-1567bb474e02284f",
+   "WB-1567bb474e02284f",
+   "WB-15be5ce1c34a2873",
+   "WB-1e48b902ef5e317f",
+   "WB-26c22b6b7db1c393",
+   "WB-2eaf560d0ffa9ed0",
+   "WB-2ef2c74bf60c48a0",
+   "WB-348b2a042f8dbd42",
+   "WB-3654d592eda4476f",
+   "WB-37282fdfc4aec2b3",
+   "WB-37282fdfc4aec2b3",
+   "WB-3ec48d66e4ae938a",
+   "WB-5027ea5843e36ae8",
+   "WB-545a50f20a1c97a0",
+   "WB-5807171034af7fb1",
+   "WB-60fc64ce1230b3ba",
+   "WB-7136e1c6741b6985",
+   "WB-7b3ad095cb4bcecb",
+   "WB-87c8552f83e32a2d",
+   "WB-903a11c420cfc393",
+   "WB-a1d57b5cbebeadc8",
+   "WB-a5ba73aea84116cd",
+   "WB-b71a34e13da43ab4",
+   "WB-b98f5ef4b983f03c",
+   "WB-c0b70306b128d173",
+   "WB-c1d6accfada738cf",
+   "WB-c21a42c500636d5e",
+   "WB-c285e436ecdbf42c",
+   "WB-c2c9b76062ebaac8",
+   "WB-c957c88f82988939",
+   "WB-ce5da0a04fd55c86",
+   "WB-d9e43c661abd72ca",
+   "WB-daab0cfad91a81bc",
+   "WB-e00510a0d58838b1",
+   "WB-f002b0911be00cd8",
+   "WB-f6ace28ab76f5ec1",
+   "WB-fb59fd8ea0ae205c"
+  ],
+  "topology_closures_applied": [
+   "TC-502c8a0e35d1d748",
+   "TC-9f4609652793df15"
+  ],
+  "opening_closures": [
+   "CLOSURE|GLAZED|QORTUBA_REV_NEW|H533||SEGMENT|0|F1",
+   "CLOSURE|GLAZED|QORTUBA_REV_NEW|H533||SEGMENT|0|F2",
+   "CLOSURE|GLAZED|QORTUBA_REV_NEW|H542||SEGMENT|0|F1",
+   "CLOSURE|GLAZED|QORTUBA_REV_NEW|H542||SEGMENT|0|F2",
+   "CLOSURE|I1443|A",
+   "CLOSURE|I1443|B",
+   "CLOSURE|I1471|A",
+   "CLOSURE|I1561|A",
+   "CLOSURE|I1561|B",
+   "CLOSURE|I1988|A",
+   "CLOSURE|I1988|B",
+   "CLOSURE|I2044|A",
+   "CLOSURE|I2044|B",
+   "CLOSURE|I677|A",
+   "CLOSURE|I841|A",
+   "CLOSURE|I841|B"
+  ],
+  "threshold_sites": [
+   {
+    "threshold": "THRESHOLD-cf12fcdfd3e6a4a6",
+    "site": "SITE-1cc94d2ca98f6229",
+    "opening": "I2044",
+    "area_m2": 0.12,
+    "sides": [
+     "SITE-621f9bce1e5ec52a",
+     "SITE-a2b19efc492a6d0b"
+    ],
+    "allocation": "TRADE_RULE_REQUIRED"
+   },
+   {
+    "threshold": "THRESHOLD-bfcea08375237224",
+    "site": "SITE-2bf3db64b092ac64",
+    "opening": "I677",
+    "area_m2": 0.15,
+    "sides": [
+     "SITE-621f9bce1e5ec52a",
+     "SITE-788f30878ba9d2b3"
+    ],
+    "allocation": "TRADE_RULE_REQUIRED"
+   },
+   {
+    "threshold": "THRESHOLD-28f50f8dc18c1e90",
+    "site": "SITE-5b8e4f9259cdb19c",
+    "opening": "I1561",
+    "area_m2": 0.12,
+    "sides": [
+     "SITE-621f9bce1e5ec52a",
+     "SITE-fe8ed5548fb4310e"
+    ],
+    "allocation": "TRADE_RULE_REQUIRED"
+   },
+   {
+    "threshold": "THRESHOLD-c82365dd41b94abe",
+    "site": "SITE-9f4d8d389cb86869",
+    "opening": "I1988",
+    "area_m2": 0.15,
+    "sides": [
+     "SITE-621f9bce1e5ec52a",
+     "SITE-daca396d6d730e60"
+    ],
+    "allocation": "TRADE_RULE_REQUIRED"
+   },
+   {
+    "threshold": "THRESHOLD-04910e5deeeed2fc",
+    "site": "SITE-bd2b680527d056fa",
+    "opening": "I841",
+    "area_m2": 0.15,
+    "sides": [
+     "SITE-5f1762f1a93b91ca",
+     "SITE-621f9bce1e5ec52a"
+    ],
+    "allocation": "TRADE_RULE_REQUIRED"
+   },
+   {
+    "threshold": "THRESHOLD-f9846605acbce828",
+    "site": "SITE-e639327cc873867d",
+    "opening": "I1443",
+    "area_m2": 0.12,
+    "sides": [
+     "SITE-1c4abf65f9b5db1e",
+     "SITE-a6405850100155ac"
+    ],
+    "allocation": "TRADE_RULE_REQUIRED"
+   }
+  ],
+  "open_passage_sites": [
+   {
+    "passage": "OP-46ccf3d3e3fe033c",
+    "width_mm": 1196.4,
+    "area_m2": 0.2393,
+    "allocation": "NOT_ALLOCATED"
+   },
+   {
+    "passage": "OP-f4493d47a122d06a",
+    "width_mm": 1200.0,
+    "area_m2": 0.18,
+    "allocation": "NOT_ALLOCATED"
+   }
+  ],
+  "trade_authority": {
+   "rule": "QORTUBA-Q14-CEILING-TREATMENT@v1",
+   "authority": "OWNER_CLAIM",
+   "refs": [
+    "QORTUBA-Q14-CEILING-FOOTPRINT-OWNER-001"
+   ],
+   "row_treatment": "CEILING_BY_AREA",
+   "semantic_class_rule": null
+  },
+  "footprint_authority": {
+   "treatment": "FOOTPRINT_INCLUDED",
+   "policy": "QORTUBA-CEILING-OBJECT-FOOTPRINT@v1"
+  },
+  "claims_applied": [
+   "QORTUBA-NEW-DIM-LINES-7116-7119-ARE-WALLS-OWNER-001@v1",
+   "QORTUBA-Q14-CEILING-FOOTPRINT-OWNER-001"
+  ],
+  "source_anchor": {
+   "revision": "QORTUBA_REV_NEW",
+   "dxf_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+   "dwg_identity": "NOT_ESTABLISHED"
+  }
+ },
+ "owner_facts": {
+  "corroborating": [
+   "QORTUBA-NEW-HALL-LOBBY-OPEN-PASSAGE-OWNER-001@v1"
+  ],
+  "applied_to_row": [],
+  "applied_to_release": [
+   "QORTUBA-NEW-HALL-LOBBY-OPEN-PASSAGE-OWNER-001@v1"
+  ]
+ },
+ "digests": {
+  "TOPOLOGY_RUN_INPUT_DIGEST": "12547d2d834b6ca4898be83877540a9869bcdacbf663123f9aa91fc189485616",
+  "ROW_AUTHORITY_DIGEST": {
+   "layer": "ROW_AUTHORITY_DIGEST",
+   "topology": "12547d2d834b6ca4898be83877540a9869bcdacbf663123f9aa91fc189485616",
+   "row": "Q-14",
+   "method": "TS01 + trade layer (lab rows)",
+   "trade_rules": [
+    "QORTUBA-Q14-CEILING-TREATMENT@v1"
+   ],
+   "semantic_class_rules": [],
+   "footprint_policies": [
+    "QORTUBA-CEILING-OBJECT-FOOTPRINT@v1:CEILING:FOOTPRINT_INCLUDED"
+   ],
+   "row_claims": [
+    "QORTUBA-NEW-DIM-LINES-7116-7119-ARE-WALLS-OWNER-001@v1",
+    "QORTUBA-Q14-CEILING-FOOTPRINT-OWNER-001"
+   ],
+   "owner_facts_applied": [],
+   "digest": "6e5078917ba67549a1b2c3b9c0553c02a7ad2ab97cbb56306b5deaa6cca0f54c"
+  },
+  "RELEASE_INPUT_DIGEST": {
+   "layer": "RELEASE_INPUT_DIGEST",
+   "row": "6e5078917ba67549a1b2c3b9c0553c02a7ad2ab97cbb56306b5deaa6cca0f54c",
+   "source_anchor_state": "DWG_DXF_IDENTITY_NOT_ESTABLISHED",
+   "reviews": [
+    "TC-502c8a0e35d1d748:CORROBORATED_BY_OWNER(QORTUBA-NEW-HALL-LOBBY-OPEN-PASSAGE-OWNER-001@v1)",
+    "TC-9f4609652793df15:CORROBORATED_BY_OWNER(QORTUBA-NEW-HALL-LOBBY-OPEN-PASSAGE-OWNER-001@v1)"
+   ],
+   "release_policy": "SHADOW_ONLY_NO_RELEASE_GATE",
+   "release_blockers": [
+    "PASSAGE_SOFFIT_ALLOCATION: the OP-OWNER-HALL-LOBBY strip (0.2393 m2) lies inside the ceiling footprint but its top is a soffit at 2.2 m (owner): ceiling vs reveal allocation rule required",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed",
+    "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED"
+   ],
+   "owner_facts_applied": [
+    "QORTUBA-NEW-HALL-LOBBY-OPEN-PASSAGE-OWNER-001@v1"
+   ],
+   "digest": "a058828919c32211e77b9df79b81e844d3c18a6179b8772c7880b06409dd2eef"
+  }
+ }
+}

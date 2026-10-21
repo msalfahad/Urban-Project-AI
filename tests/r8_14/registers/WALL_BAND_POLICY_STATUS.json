@@ -1,0 +1,344 @@
+{
+ "SCHEMA": "URBAN_R8_14_WALL_BAND_POLICY_STATUS_V1",
+ "policy": {
+  "policy_id": "WALL_BAND_POLICY_V5",
+  "model": [
+   "FACE_CHAIN (strict contiguity, typed nodes, supporting-line identity)",
+   "LOCAL BAND SPAN (local mutual nearest per elementary interval)",
+   "WALL_BAND_ASSEMBLY (spans + obstacle overlaps + nodes of one chain pair) with ASSEMBLY_STRUCTURAL_SUPPORT on the local run",
+   "OPEN_PASSAGE between two STRUCTURAL sides"
+  ],
+  "support": [
+   "SELF_SUPPORTED",
+   "INHERITED_SUPPORT",
+   "UNSUPPORTED"
+  ],
+  "unsupported_reasons": [
+   "NOT_ELONGATED_LOCAL_RUN",
+   "ELONGATION_BOUNDARY_CASE"
+  ],
+  "band_authority": [
+   "PHYSICAL_WALL_BAND_ESTABLISHED",
+   "WALL_BAND_GEOMETRIC_CANDIDATE"
+  ],
+  "params": {
+   "chain_join": "collinear within eps_n both ways; end points coincident within eps_n (touching); same occurrence path; TOPOLOGY_BOUNDARY on both sides; NO opening / glazing segment end within eps_r of the joint (OPENING_BREAK). A gap of any size, including inside the 50 mm review band, is never joined",
+   "duplicate": "collinear fragments overlapping by more than eps_n are ONE chain with a DUPLICATE interval; a span over a duplicate interval is AMBIGUOUS",
+   "parallel": "|cross(u_a, u_b)| x overlap <= eps_r",
+   "overlap_min": "eps_r",
+   "separation_min": "eps_r",
+   "elongation_ratio": 1.0,
+   "elongation_basis": "V4: the LOCAL RUN (contiguous locally mutual nearest interval incl. its spans, obstacle overlaps and nodes); never the raw chain overlap (V3-D2), never a single span",
+   "structural_support": "SELF_SUPPORTED: run length > elongation_ratio x separation. INHERITED_SUPPORT: a shorter run of the SAME chain pair and side joined to a self-supported run across gaps each filled by a full-width closed loop of a support role (every corner of the gap strip, inset by eps_r, inside the loop). Never inherited from a group's total length; an UNSUPPORTED run is recorded, never a band",
+   "support_loop_roles": [
+    "TOPOLOGY_BOUNDARY",
+    "STRUCTURAL_OBSTACLE"
+   ],
+   "elongation_tie": "V5: elongated only when length - elongation_ratio x separation > eps_r (raw overlap pre-check and local run alike); within eps_r of equality -> NOT elongated (ELONGATION_BOUNDARY_CASE, fail closed)",
+   "physical_authority": "V5: a band with a face on an ISOLATED CLOSED LOOP (closed single-entity loop touching no admitted segment of another entity, within eps_n) is a GEOMETRIC_BAND_CANDIDATE unless that entity carries positive physical authority (a part-scoped owner role claim); candidates carry no ends, closures, passages or paired-face corroboration",
+   "chain_identity": "entities + parameter interval along the canonical direction (V3, kept wherever it is unique so a nudged face and an equivalent re-segmentation keep their id); chains of the SAME entities and extent (parallel sides of one closed polyline) are told apart by their SUPPORTING LINE (canonical direction + signed offset). The sub-part index is provenance only (a re-segmentation renumbers it); -0.0 -> 0.0",
+   "band_identity": "the two chain ids + the run interval in the frame of the lower chain id",
+   "id_collision": "colliding chains are recorded and excluded from pairing (fail closed)",
+   "passage_target_roles": [
+    "TOPOLOGY_BOUNDARY",
+    "STRUCTURAL_OBSTACLE",
+    "an ESTABLISHED band end"
+   ],
+   "local_mutual_nearest": "evaluated at the middle of every elementary interval (breakpoints: projections of all parallel overlapping chains of both chains, both sides)",
+   "one_side_margin": "eps_r",
+   "nearest_tie": "eps_r (a tie between two chains is never paired)",
+   "strip": "a label anywhere in the RAW strip of the chain pair (the whole chain overlap) rejects the pair - local pairing must never turn an unlabelled slice of a room into a band; labels or arcs in the local strip reject the run; crossings subdivide it",
+   "id_coordinate_decimals": 6,
+   "canonical_direction_guard": 1e-09,
+   "eps_n_default_ratio_of_eps_r": 0.001,
+   "full_width_margin_in_eps_r": 2.0,
+   "numeric_guards": {
+    "ray_parallel": 1e-15,
+    "segment_length_floor": 1e-12,
+    "clip_parameter": 1e-12
+   },
+   "pair_search": "exhaustive over admitted faces (no direction buckets, no neighbourhood window)",
+   "review_band": "role_authority.NEAR_MISS_REVIEW_BAND_MM / unit - cap grading only, never a join"
+  },
+  "interval_classes": [
+   "WALL_BAND_SPAN",
+   "OBSTACLE_OVERLAP",
+   "CROSSING_WALL_NODE",
+   "ENCLOSED_NODE",
+   "AMBIGUOUS_CENTRELINE",
+   "AMBIGUOUS_DUPLICATE",
+   "AMBIGUOUS_PAIRED_BOTH_SIDES"
+  ],
+  "chain_nodes": [
+   "CONTINUOUS_JOIN",
+   "BRANCH_NODE",
+   "CROSSING_NODE",
+   "OPENING_BREAK",
+   "DUPLICATE_OVERLAP"
+  ],
+  "ends": [
+   "JUNCTION_OR_CONTINUATION",
+   "RECEIVING_FACE_JUNCTION",
+   "OPENING_JAMB",
+   "CAPPED",
+   "ALIGNED_FREE_END"
+  ],
+  "caps": [
+   "WALL_END_CAP_PROVEN",
+   "WALL_END_CAP_CANDIDATE",
+   "NOT_WALL_CAP",
+   "UNRESOLVED"
+  ],
+  "never": [
+   "thickness",
+   "area",
+   "nearest parallel pair alone",
+   "coordinates alone",
+   "material identity",
+   "a join across any gap",
+   "the 50 mm review band as continuity",
+   "whole-face disqualification by geometry outside the local interval",
+   "elongation on the raw chain overlap",
+   "support inherited from a group's total length",
+   "an id from entities + extent alone",
+   "a passage to a non-structural line",
+   "binary floating-point equality as an elongation decision",
+   "physical authority from band geometry alone"
+  ],
+  "history": [
+   "V1 (R8.11 freeze 5895981): whole-face pairing",
+   "V2 (R8.11 amendment A1): RECEIVING_FACE_JUNCTION",
+   "V3 (R8.12): face chains + local spans + assemblies + OPENING_JAMB; A1 kept",
+   "V4 (R8.13): D1 supporting-line chain identity + chain-id band identity + fail-closed collisions; D2 structural support on the LOCAL run (inherited only across a full-width structural loop); structural passage targets",
+   "V5 (R8.14): O2 elongation tie against eps_r (fail closed); O1 geometric band candidate for isolated closed loops without positive physical authority"
+  ],
+  "means": "TOPOLOGY_OBSTACLE_GEOMETRY, not MASONRY_CONFIRMED",
+  "digest": "d1ff58e755bb88f4bbb7a9813427b7ac6f054ece851df7d9a048866641f3e6d3"
+ },
+ "closure_policy": {
+  "policy_id": "TOPOLOGY_CLOSURE_POLICY_V1",
+  "rule": "WALL_END_CLOSURE_V1",
+  "material": "NONE: never wall length, area or finish",
+  "geometry": "the segment between the two face end points of an aligned free end (source coordinates of the faces; never a cap's coordinates; never a moved end point)",
+  "authorised_for_shadow_requires": [
+   "established band",
+   "aligned free end",
+   "drawn cap corroboration",
+   "label partition unchanged",
+   "separated pieces are pure band interiors (band faces, closures, cross edges parallel to the closure)",
+   "area balance"
+  ],
+  "release_levels": [
+   "TOPOLOGY_CLOSURE_CANDIDATE",
+   "DIAGNOSTIC_PASS",
+   "REVIEWED",
+   "AUTHORISED_FOR_SHADOW",
+   "AUTHORISED_FOR_RELEASE",
+   "TOPOLOGY_CLOSURE_UNRESOLVED"
+  ],
+  "never": [
+   "distance alone (a near-miss < 50 mm never joins anything)",
+   "a closure between two labelled rooms without stronger authority",
+   "an opening width change",
+   "a source edit"
+  ],
+  "digest": "46742c570b4d8a036fd6b7446f28055bfd4e1adbff51966e800e5986ca99ccb2"
+ },
+ "version": "V5",
+ "supersedes": {
+  "wall_band_policy": {
+   "id": "WALL_BAND_POLICY_V4",
+   "digest": "8ed1a5cff22b8057457b05622a3f3f25ee14add57eb3c1ae9b88af35f25741fc"
+  },
+  "freeze": "tests/r8_13/registers/R8_13_V4_FREEZE.json"
+ },
+ "freeze": {
+  "SCHEMA": "URBAN_R8_14_V5_FREEZE_V1",
+  "recommendation_written_first": {
+   "file": "research/external_engine_lab/r8_14_recommendation.json",
+   "sha256": "e229ee56d4436c335324dc1dfea7015eb71678a05e4975085039cf4993963864",
+   "committed_in": "926eb243dda5c0af559244f298a17683061fa67a"
+  },
+  "frozen_commit": "926eb243dda5c0af559244f298a17683061fa67a",
+  "wall_band_policy": {
+   "id": "WALL_BAND_POLICY_V5",
+   "digest": "d1ff58e755bb88f4bbb7a9813427b7ac6f054ece851df7d9a048866641f3e6d3"
+  },
+  "closure_policy": {
+   "id": "TOPOLOGY_CLOSURE_POLICY_V1",
+   "digest": "46742c570b4d8a036fd6b7446f28055bfd4e1adbff51966e800e5986ca99ccb2",
+   "changed": false
+  },
+  "supersedes": {
+   "wall_band_policy": {
+    "id": "WALL_BAND_POLICY_V4",
+    "digest": "8ed1a5cff22b8057457b05622a3f3f25ee14add57eb3c1ae9b88af35f25741fc"
+   },
+   "freeze": "tests/r8_13/registers/R8_13_V4_FREEZE.json"
+  },
+  "engine_file_sha256": {
+   "engine/source/wall_bands.py": "1e8e8a592df961f5943f956466bbf326841d9dba0ca62d2b9191af48d34ce511",
+   "engine/source/topology_closures.py": "ccb2e52c16c592272ee3d717bba6954f3267f759bb5bf4746c8c269fc2a2cd66",
+   "engine/source/room_topology.py": "cf4da710d09cd029aecac8a847874640945329f35df575d192be23eaf19d51af"
+  },
+  "synthetic_test_sha256": {
+   "tests/r8_14/test_r8_14_wall_band_v5.py": "dd6d18bf890666b64fdfed8ed141292c7d0b4fdfd1fd215b9241cc4110188ace",
+   "tests/r8_13/test_r8_13_wall_band_v4.py": "2d013dc590b9a081da881db0e012e4899141e5a8f7a39217d31c227d4b2aa6ed",
+   "tests/r8_12/test_r8_12_fragment_bands.py": "be24a5db551eece31429662d1bf58c87569c155f7e14d15ad9ce9281f13d8cea",
+   "tests/r8_11/test_r8_11_wall_bands.py": "248e92c87d3c4068a7b665ac706296f1236b4a8bcc4b427ac741b9b320513cfa",
+   "tests/r8_11/test_r8_11_amendment_a1.py": "fc10129a0bad33d40836d62e0f2bf3ea28927e392e77c1ebffa132578442bf2b",
+   "tests/r8_11/test_r8_11_second_family.py": "1c4711d8629a7d121f361ba464b0b08d617f7b5600f4d10438950b648e3b7d2d"
+  },
+  "synthetic_test_digest": "12b073db86ca04bbccdbcb5a7a86d5642822c26643cbb6a7093433874c2743a6",
+  "v5_synthetic_tests": [
+   "test_square_run_equal_to_its_separation_is_not_elongated_and_says_why",
+   "test_a_run_within_tolerance_either_side_of_equality_is_the_same_boundary_case",
+   "test_a_run_longer_by_a_clear_margin_is_a_band_and_a_shorter_one_is_not_elongated",
+   "test_float_noise_cannot_flip_the_decision",
+   "test_legitimate_long_bands_are_untouched",
+   "test_an_isolated_nested_rectangle_is_a_geometric_candidate_never_physical_authority",
+   "test_a_loop_connected_to_the_wall_network_is_not_isolated_and_isolation_fails_closed",
+   "test_the_same_geometry_inside_a_detail_block_occurrence_never_becomes_physical_authority",
+   "test_a_shaft_like_obstacle_with_positive_authority_is_physical",
+   "test_furniture_and_window_frame_rectangles_make_no_band",
+   "test_h2430_class_h2431_class_and_h1316_class_regressions",
+   "test_v3_d2_false_band_and_v4_chain_id_collision_regressions",
+   "test_everything_above_is_order_independent",
+   "test_v5_policy_record"
+  ],
+  "v5_synthetic_test_count": 14,
+  "superseded_frozen_tests": {
+   "tests/r8_13/test_r8_13_wall_band_v4.py": {
+    "previous_sha256": "5a8cd84e11dd99527d606586d69b066819ce7ce5a5ede01c4a7c0f50fa60a3f5",
+    "r8_14_sha256": "2d013dc590b9a081da881db0e012e4899141e5a8f7a39217d31c227d4b2aa6ed",
+    "change": "policy-version assertion only (WALL_BAND_POLICY_V4 -> V5; for the V4 test also the history length 4 -> 5): no behaviour expectation edited"
+   },
+   "tests/r8_12/test_r8_12_fragment_bands.py": {
+    "previous_sha256": "ef8d669b9f68e40e6ceb62814aea0a6f151152434540247bf4341306b30aeace",
+    "r8_14_sha256": "be24a5db551eece31429662d1bf58c87569c155f7e14d15ad9ce9281f13d8cea",
+    "change": "policy-version assertion only (WALL_BAND_POLICY_V4 -> V5; for the V4 test also the history length 4 -> 5): no behaviour expectation edited"
+   },
+   "tests/r8_11/test_r8_11_amendment_a1.py": {
+    "previous_sha256": "27ff7ffea16b8d2b1b7a1e8934ea7b077b5a7827044f53272fb6217e852d46a8",
+    "r8_14_sha256": "fc10129a0bad33d40836d62e0f2bf3ea28927e392e77c1ebffa132578442bf2b",
+    "change": "policy-version assertion only (WALL_BAND_POLICY_V4 -> V5; for the V4 test also the history length 4 -> 5): no behaviour expectation edited"
+   }
+  },
+  "qortuba_before_freeze": {
+   "new_revision_v5_runs": 0,
+   "v5_qortuba_outputs_inspected": 0,
+   "v4_inspection_for_root_cause": "V4 (R8.13) runs of the recorded observations only: the H2060 / H2061 ring (contacts, layers, roles, the containing site) and the threshold doors - never a V5 candidate",
+   "pass_fail_regressions_run_against_v5": "the pre-existing R8.8-R8.13 suites, incl. an OLD-revision real-fixture order-independence test; pass / fail only"
+  },
+  "owner_facts_available_to_v5": false,
+  "timestamp_metadata": {
+   "frozen_at_utc": "2026-10-01T22:17:03+00:00",
+   "in_digest": false
+  },
+  "order": [
+   "recommendation",
+   "V5 design",
+   "synthetic fixtures",
+   "freeze policy + digest",
+   "commit",
+   "THEN the blind Qortuba run",
+   "THEN thresholds / soffit / skirting and the rows"
+  ],
+  "rule": "no post-result edit inside WALL_BAND_POLICY_V5; a defect found after the blind run is the next round"
+ },
+ "lab_reproduces_blind": {
+  "closures": true,
+  "topology_digest": true
+ },
+ "v4_to_v5": {
+  "NEW_K2": {
+   "v4_counts": {
+    "chains": 149,
+    "assemblies": 55,
+    "established": 48,
+    "spans": 63,
+    "closures": 2,
+    "authorised": 2,
+    "passages": 5
+   },
+   "v5_counts": {
+    "chains": 149,
+    "assemblies": 55,
+    "established": 44,
+    "spans": 63,
+    "closures": 2,
+    "authorised": 2,
+    "passages": 5
+   },
+   "v4_digest": "fb2d46ed2f49e42f2060872c517ec368b5cf8c814019d36fd17679cdcd71683a",
+   "v5_digest": "4bd11660f9b6679007584a104aa28b59b2d4440d88bfcf99055b6eab89d74927"
+  },
+  "OLD_K1": {
+   "v4_counts": {
+    "chains": 153,
+    "assemblies": 56,
+    "established": 50,
+    "spans": 65,
+    "closures": 0,
+    "authorised": 0,
+    "passages": 5
+   },
+   "v5_counts": {
+    "chains": 153,
+    "assemblies": 56,
+    "established": 46,
+    "spans": 65,
+    "closures": 0,
+    "authorised": 0,
+    "passages": 5
+   },
+   "v4_digest": "7692ec68c53eb7849ff8427282656e8561441c54bbf97d18b216ff1cae4ce636",
+   "v5_digest": "76fa537f8827c8f203852122fc063dad74f325f5424f8eeda6a75f39edd47288"
+  }
+ },
+ "h2430_h2431": [
+  {
+   "closure_id": "TC-1013dbb787e56f65",
+   "release": "AUTHORISED_FOR_SHADOW",
+   "geometry": [
+    109773.7561,
+    15029.7196,
+    109773.7561,
+    15049.7196
+   ],
+   "evidence": [
+    "471",
+    "477",
+    "2430"
+   ],
+   "separated_m2": [
+    0.3813
+   ]
+  },
+  {
+   "closure_id": "TC-5f9f2014f83ab0d4",
+   "release": "AUTHORISED_FOR_SHADOW",
+   "geometry": [
+    109893.4009,
+    15029.7196,
+    109893.4009,
+    15049.7196
+   ],
+   "evidence": [
+    "2296",
+    "2297",
+    "2431"
+   ],
+   "separated_m2": [
+    0.6494
+   ]
+  }
+ ],
+ "h1316": "NOT_WALL_CAP (no closure carries 1316)",
+ "hall_m2": 42.7993,
+ "labelled_sites_unchanged_vs_v4": true,
+ "determinism": {
+  "seed_5": true,
+  "seed_17": true
+ }
+}

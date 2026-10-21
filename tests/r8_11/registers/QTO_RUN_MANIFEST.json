@@ -1,0 +1,317 @@
+{
+ "SCHEMA": "URBAN_R8_11_QTO_RUN_MANIFEST_REGISTER_V1",
+ "NEW_K2": {
+  "schema": "URBAN_QTO_RUN_MANIFEST_V1",
+  "source_revision_id": "QORTUBA_REV_NEW",
+  "source_anchor_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+  "region_id": "RC:MODEL_SPACE:4267:540:1649",
+  "frame_id": "MF:RC:MODEL_SPACE:4267:540:1649",
+  "unit_claim_id": "QORTUBA-NEW-REVISION-NATIVE-UNIT-OWNER-001",
+  "unit_native_to_mm": 10.0,
+  "canonical_input_digest": "6938d104ab6f5f82aa9bf94b45a3317e9416ba338f5d0eed0bc027fed54fbc97",
+  "claims_offered": [
+   {
+    "claim": "QORTUBA-NEW-DIM-LINES-7116-7119-ARE-WALLS-OWNER-001@v1",
+    "kind": "PART_ROLE"
+   },
+   {
+    "claim": "QORTUBA-NEW-XREFS-NONCONTRIBUTING-TO-PLAN-VARIANT-4-OWNER-001@v1",
+    "kind": "XREF_NONCONTRIBUTING_TO_SELECTED_REGION"
+   }
+  ],
+  "claims_applied": [
+   {
+    "claim": "QORTUBA-NEW-DIM-LINES-7116-7119-ARE-WALLS-OWNER-001@v1",
+    "applied_parts": [
+     "QORTUBA_REV_NEW|H7116||SEGMENT|0",
+     "QORTUBA_REV_NEW|H7117||SEGMENT|0",
+     "QORTUBA_REV_NEW|H7118||SEGMENT|0",
+     "QORTUBA_REV_NEW|H7119||SEGMENT|0"
+    ],
+    "outcome": "APPLIES",
+    "per_part": [
+     {
+      "part": "QORTUBA_REV_NEW|H7116||SEGMENT|0",
+      "state": "APPLIES"
+     },
+     {
+      "part": "QORTUBA_REV_NEW|H7117||SEGMENT|0",
+      "state": "APPLIES"
+     },
+     {
+      "part": "QORTUBA_REV_NEW|H7118||SEGMENT|0",
+      "state": "APPLIES"
+     },
+     {
+      "part": "QORTUBA_REV_NEW|H7119||SEGMENT|0",
+      "state": "APPLIES"
+     }
+    ]
+   },
+   {
+    "claim": "QORTUBA-NEW-XREFS-NONCONTRIBUTING-TO-PLAN-VARIANT-4-OWNER-001@v1",
+    "occurrences": [
+     "D2:16783",
+     "D2:17716"
+    ],
+    "outcome": "APPLIES"
+   }
+  ],
+  "claims_rejected": [],
+  "evidence_version": "acad34705bbf2373331aa28cd594276d22f2b89ab4213974b64b3ac1bb19e2ac",
+  "policies": {
+   "geometry_role": [
+    "GEOMETRY_ROLE_EVIDENCE_POLICY_V2",
+    "c122a27415ce7c53ee931d0fff8e478710ed20ed9f6751aa9c9a0efe5fc33bdd"
+   ],
+   "role_authority": [
+    "ROLE_AUTHORITY_POLICY_V2",
+    "4de1dfa1bd3042ab1f6ef6c4ea83f410c6607c0e9dc9dd5db11faf93aea02db4"
+   ],
+   "text_role": [
+    "TEXT_ROLE_POLICY_V2",
+    "ea4f321dfbf29c60ed2b2a0a737d9fc375695c04155813c7fc624a992ab51f5d"
+   ],
+   "semantic_zone": [
+    "SEMANTIC_ZONE_POLICY_V1",
+    "ID_ONLY (no policy record)"
+   ],
+   "topology_tolerance": [
+    "TOPOLOGY_TOLERANCE_POLICY_V1",
+    "263d2adf1d1770e1db963ac9bfde852dcedbdbd77e0040730322848c49acb450"
+   ],
+   "crosscheck": [
+    "TOPOLOGY_CROSSCHECK_GEOS_V2",
+    "ID_ONLY (check-only; never a value)"
+   ],
+   "owner_claim_binding": [
+    "OWNER_CLAIM_BINDING_POLICY_V1",
+    "9831241693481379bfb2a4d64529b3b9da3d760ccbf3f3b34f23d8030936e96d"
+   ],
+   "trade_treatment": [
+    "TRADE_TREATMENT_POLICY_V2",
+    "1205edc8604324b6a5822bb0597e75f5f2068068f8d35f4861958b98b9eb3ff0"
+   ],
+   "wall_band": [
+    "WALL_BAND_POLICY_V2",
+    "93809f32b7ba416336d25924b84c4ad0f65cc6b3c08bf019241c372da3a8a9a5"
+   ],
+   "topology_closure": [
+    "TOPOLOGY_CLOSURE_POLICY_V1",
+    "46742c570b4d8a036fd6b7446f28055bfd4e1adbff51966e800e5986ca99ccb2"
+   ],
+   "near_miss_review_band_mm": [
+    50.0,
+    "REVIEW_ONLY"
+   ]
+  },
+  "method": {
+   "id": "TS01_CERTIFIED_ROOM_TOPOLOGY",
+   "contract_version": "1",
+   "closure_policy": "TOPOLOGY_CLOSURE_POLICY_V1"
+  },
+  "decoder_route": "K2",
+  "kernel_versions": {
+   "ezdxf": "1.4.4",
+   "shapely": "2.1.2"
+  },
+  "run_id": "RUN-645dff01bd022185",
+  "RUN_INPUT_DIGEST": "645dff01bd02218557203c6e1d5d5d999e1b3ca7abdc091e0b4a36bf0bf1ec68",
+  "code_commit": "ee0bdb6",
+  "CODE_BOUND_DIGEST": "0c8e1cadd50e34fc041e8939628f3407191370d6298c832ac0376e9bf0c4dcb0",
+  "metadata": {
+   "lab": "research/external_engine_lab/r8_11_qortuba.py",
+   "geos_loaded": "3.13.1"
+  },
+  "not_in_digest": [
+   "code_commit",
+   "timestamp",
+   "run_id",
+   "metadata"
+  ]
+ },
+ "OLD_K1": {
+  "schema": "URBAN_QTO_RUN_MANIFEST_V1",
+  "source_revision_id": "QORTUBA_REV_OLD",
+  "source_anchor_sha256": "2ec3a9c8b66eb2e129275b87010f4a8d79d7e5bdcc31c1897c14fd7e5647d355",
+  "region_id": "RC:MODEL_SPACE:4267:540:1649",
+  "frame_id": "MF:RC:MODEL_SPACE:4267:540:1649",
+  "unit_claim_id": "QORTUBA-NATIVE-UNIT-OWNER-001",
+  "unit_native_to_mm": 10.0,
+  "canonical_input_digest": "e14e080350a33f68af24b95272d6e06d1305b30150b424e8ee9f26472e33e725",
+  "claims_offered": [
+   {
+    "claim": "QORTUBA-NEW-DIM-LINES-7116-7119-ARE-WALLS-OWNER-001@v1",
+    "kind": "PART_ROLE"
+   },
+   {
+    "claim": "QORTUBA-NEW-XREFS-NONCONTRIBUTING-TO-PLAN-VARIANT-4-OWNER-001@v1",
+    "kind": "XREF_NONCONTRIBUTING_TO_SELECTED_REGION"
+   }
+  ],
+  "claims_applied": [],
+  "claims_rejected": [
+   {
+    "claim": "QORTUBA-NEW-DIM-LINES-7116-7119-ARE-WALLS-OWNER-001@v1",
+    "applied_parts": [],
+    "outcome": "SOURCE_SCOPE_MISMATCH",
+    "per_part": [
+     {
+      "part": "QORTUBA_REV_NEW|H7116||SEGMENT|0",
+      "state": "SOURCE_SCOPE_MISMATCH"
+     },
+     {
+      "part": "QORTUBA_REV_NEW|H7117||SEGMENT|0",
+      "state": "SOURCE_SCOPE_MISMATCH"
+     },
+     {
+      "part": "QORTUBA_REV_NEW|H7118||SEGMENT|0",
+      "state": "SOURCE_SCOPE_MISMATCH"
+     },
+     {
+      "part": "QORTUBA_REV_NEW|H7119||SEGMENT|0",
+      "state": "SOURCE_SCOPE_MISMATCH"
+     }
+    ]
+   },
+   {
+    "claim": "QORTUBA-NEW-XREFS-NONCONTRIBUTING-TO-PLAN-VARIANT-4-OWNER-001@v1",
+    "occurrences": [],
+    "outcome": "NOT_APPLIED"
+   }
+  ],
+  "evidence_version": "acad34705bbf2373331aa28cd594276d22f2b89ab4213974b64b3ac1bb19e2ac",
+  "policies": {
+   "geometry_role": [
+    "GEOMETRY_ROLE_EVIDENCE_POLICY_V2",
+    "c122a27415ce7c53ee931d0fff8e478710ed20ed9f6751aa9c9a0efe5fc33bdd"
+   ],
+   "role_authority": [
+    "ROLE_AUTHORITY_POLICY_V2",
+    "4de1dfa1bd3042ab1f6ef6c4ea83f410c6607c0e9dc9dd5db11faf93aea02db4"
+   ],
+   "text_role": [
+    "TEXT_ROLE_POLICY_V2",
+    "ea4f321dfbf29c60ed2b2a0a737d9fc375695c04155813c7fc624a992ab51f5d"
+   ],
+   "semantic_zone": [
+    "SEMANTIC_ZONE_POLICY_V1",
+    "ID_ONLY (no policy record)"
+   ],
+   "topology_tolerance": [
+    "TOPOLOGY_TOLERANCE_POLICY_V1",
+    "263d2adf1d1770e1db963ac9bfde852dcedbdbd77e0040730322848c49acb450"
+   ],
+   "crosscheck": [
+    "TOPOLOGY_CROSSCHECK_GEOS_V2",
+    "ID_ONLY (check-only; never a value)"
+   ],
+   "owner_claim_binding": [
+    "OWNER_CLAIM_BINDING_POLICY_V1",
+    "9831241693481379bfb2a4d64529b3b9da3d760ccbf3f3b34f23d8030936e96d"
+   ],
+   "trade_treatment": [
+    "TRADE_TREATMENT_POLICY_V2",
+    "1205edc8604324b6a5822bb0597e75f5f2068068f8d35f4861958b98b9eb3ff0"
+   ],
+   "wall_band": [
+    "WALL_BAND_POLICY_V2",
+    "93809f32b7ba416336d25924b84c4ad0f65cc6b3c08bf019241c372da3a8a9a5"
+   ],
+   "topology_closure": [
+    "TOPOLOGY_CLOSURE_POLICY_V1",
+    "46742c570b4d8a036fd6b7446f28055bfd4e1adbff51966e800e5986ca99ccb2"
+   ],
+   "near_miss_review_band_mm": [
+    50.0,
+    "REVIEW_ONLY"
+   ]
+  },
+  "method": {
+   "id": "TS01_CERTIFIED_ROOM_TOPOLOGY",
+   "contract_version": "1",
+   "closure_policy": "TOPOLOGY_CLOSURE_POLICY_V1"
+  },
+  "decoder_route": "K1",
+  "kernel_versions": {
+   "ezdxf": "1.4.4",
+   "shapely": "2.1.2"
+  },
+  "run_id": "RUN-893f114fbc734748",
+  "RUN_INPUT_DIGEST": "893f114fbc7347481067da03f45af61505172ad5cec3f9979b3e1d0106a1230f",
+  "code_commit": "ee0bdb6",
+  "CODE_BOUND_DIGEST": "91ae9cf38e2cdbe394d1ea350d8e1a7c440b3cd41ac46b2e57999584c531f3da",
+  "metadata": {
+   "lab": "research/external_engine_lab/r8_11_qortuba.py",
+   "geos_loaded": "3.13.1"
+  },
+  "not_in_digest": [
+   "code_commit",
+   "timestamp",
+   "run_id",
+   "metadata"
+  ]
+ },
+ "NEW_K2_WITHOUT_CLOSURES": {
+  "run_id": "RUN-91f217a8df1a20c1",
+  "RUN_INPUT_DIGEST": "91f217a8df1a20c14a879fe0b41357d7b6b2fa7fd35316e1ef80b6501cc7e244"
+ },
+ "rule": "same inputs + same claims + same policies => same RUN_INPUT_DIGEST; the code commit is provenance (CODE_BOUND_DIGEST), never part of the input digest",
+ "determinism_shuffled_source_order": {
+  "RUN_INPUT_DIGEST": "645dff01bd02218557203c6e1d5d5d999e1b3ca7abdc091e0b4a36bf0bf1ec68",
+  "closures": [
+   [
+    "TC-aea10821cffe20ff",
+    "AUTHORISED_FOR_SHADOW"
+   ],
+   [
+    "TC-afadb7261888249e",
+    "DIAGNOSTIC_PASS"
+   ],
+   [
+    "TC-bf49f65df1238aa5",
+    "DIAGNOSTIC_PASS"
+   ]
+  ],
+  "bands": [
+   "WB-03e3abac62c69e25",
+   "WB-104bcfdbc4fad197",
+   "WB-1229f9a7541c596f",
+   "WB-18a41b53f8d9eaea",
+   "WB-25b061fabe95986e",
+   "WB-298800ce16db4b79",
+   "WB-2caa4cfe910bf3f1",
+   "WB-2d42c333f6f2df73",
+   "WB-3ca48d80cd981b4f",
+   "WB-3f0c2b19ab151915",
+   "WB-4527d3a2609c5c42",
+   "WB-55c29f71d76c8db7",
+   "WB-69d17535068ea469",
+   "WB-7a6402794280e0e9",
+   "WB-7d515124fe87e3a5",
+   "WB-80eaceb8664dcd82",
+   "WB-82fa01a38ddcb8ec",
+   "WB-8645c0f3b6a8e8ba",
+   "WB-90760545934a90a7",
+   "WB-908be65a229afc8d",
+   "WB-97e74e1ca5e1cef7",
+   "WB-9e1dcdcb55044c92",
+   "WB-a0f614bd5f5a02d4",
+   "WB-a2df6911004beaa3",
+   "WB-a3160ea99beb3e6b",
+   "WB-b0e2774b18433212",
+   "WB-b1fe3d69cf126ddb",
+   "WB-cb65fe1a8f201b2f",
+   "WB-d5c66eb15b9d1d88",
+   "WB-e2e2ebcb3719cd3e",
+   "WB-efec5c14f5c79ab7",
+   "WB-fa3143c0ea1ff5a1",
+   "WB-fb7691e979c5f56e"
+  ],
+  "hall_m2": 43.180638,
+  "same_digest": true,
+  "same_closures": true,
+  "same_bands": true,
+  "same_hall_area": true
+ }
+}

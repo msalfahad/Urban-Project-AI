@@ -1,0 +1,23 @@
+item,reading,value,unit,status,source (handles / line ids; local coordinates in m from anchor N or P),rule,verdict proposal
+GF facade run released,engine ARCH_TAKEOFF_V2.12,98.886694,m,PROVISIONAL (machine only),L-05b442c4e19068c7513a,UP-FACADE-001 draft,engine wrong on the passage under Q-67 A (-7.000 m)
+GF facade run geometric,Q-67 A (condition met),105.886694,m,CALCULATED,98.886694 - 1.200 (mouth OP-007) - 1.200 (boundary face OP-001) + 4.700 (annex face) + 4.700 (house face),Q-67 A; UP-WALL-GEOM-001,HAND_RIGHT
+GF facade run geometric,Q-67 B,98.886694,m,CALCULATED,as released,Q-67 B,shown for comparison only (owner chose A conditionally; condition met)
+GF facade run billable,Q-64 B with the returns in a reveal line,105.786694,m,NOT YET APPLICABLE,geometric - 0.100; applies once a reveal / external-strip line measures the two returns,Q-64 B,-
+GF facade run billable today,Q-64 B condition not met,105.886694,m,CALCULATED,returns kept in the facade run (no reveal line measures them),Q-64 B; UP-QTY-STATUS-001,-
+notch return 1,column 2F87 side,0.050,m,CAD geometry,N (0 0) to (0 +0.050),Q-64 B,-
+notch wall face,wall line 274 inside the pocket,0.080,m,CAD geometry,(0 +0.050) to (-0.080 +0.050); equal to the closing chord,Q-64 B,kept in both runs
+notch return 2,end of outer frame line 280 (layer W),0.050,m,CAD geometry,(-0.080 +0.050) to (-0.080 0),Q-64 B,-
+notch returns total,walked 0.180 - straight 0.080,0.100,m,CAD geometry,v0 + v2,Q-64 B,-
+glazing recess depth,frame line 280 to outer face line 96 (layer 5),0.080,m,CAD geometry,x -0.080 vs 0; south end line 95,-,VERIFIED (T-016b / T-014 reading)
+reveal line holding the returns,V2.12 GF ARCH.WINDOW_REVEAL (11 lines),not measured,-,NONE,L-03f77cbce60e895f0fbf L-9dbfbc56b8bb00fd553f L-f9f3d2f148120fbf6fcc L-af6f40543312cc4e3a48 L-2cc168826b1b90b6e642 L-96db0cdf81b962e5e017 L-ce37e6afb20dd5651cf6 L-87b9ef735cbe2f99877e L-a3d22686697ece9b59a6 L-b5f53dd9f9ba6e4e7df0 L-efea2091fba0488281c7 (all straight windows 6.70-31.43 m away; BLOCKED_RFI),UP-REVEAL-001,0.100 m NOT deducted
+curved GF pool glazing opening record,V2.12,none,-,MISSING in released method (T-077 piece not wired),outline walks 6.994659 m of frame as role WINDOW,-,known gap
+passage mouth closure,GF plan DXF all layers,0,entities,DRAWN,local y 4.700 between columns 2FB0 / 2FAD; scan sheet 03 agrees,Q-67 A condition,open (no door / glazing / gate)
+passage far end,GF plan DXF,0.200,m,DRAWN,boundary wall lines 105 / 106 (86 doubles 105) full width; no opening,Q-67 A condition,closed by boundary wall
+passage space,GF plan,5.640,m2,CALCULATED,1.200 x 4.700; level +0.15 (text 407),-,-
+passage slab band 0-1300,GF roof slab sheet,1.560,m2,DRAWN,panel; bars 4ED 4EE 4EF; 5 T10/m 4F0 4F1; slab edge 2AD at the boundary inner face; 1F roof hatch D1F covers 1.5600,-,exposed GF roof over it
+passage slab band 1300-1500,GF roof slab sheet,0.240,m2,DRAWN,beam B5 lines 27C / 281 (label 498); 1F wall above,-,-
+passage slab band 1500-4500,GF roof slab sheet,3.600,m2,DRAWN,panel; bars 514-516; 5 T10/m 518; 6 T10/m 517; T 16 tag; S-HAT.BAT hatch 280 over 2.7547; 1F bathroom floor hatch 1256 over 2.9400,-,-
+passage slab band 4500-4700,GF roof slab sheet,0.240,m2,DRAWN,beam B1 lines 2AE / 2AF (label 476) at the mouth,-,-
+passage roofed total,slab sheet registered 30 / 30 columns,5.640,m2,CALCULATED,under 1F 4.080 + under exposed GF roof 1.560,Q-67 A; Q-68,T-121 CONFIRMED (4.084 + 1.556); T-109 open-to-sky 1.56 CONTRADICTED
+passage soffit beam sides,B5 two faces + B1 inner face,not measured,m2,HELD,beam depths from the beam register (T-110),Q-68,-
+engine passage spaces,V2.12 GF-RF002DC + GF-R7B7A5D,5.160,m2,ENGINE,3.600 (local 1500-4500) + 1.560 (0-1300); strips 1300-1500 and 4500-4700 (0.480) in no space,-,cause not traced

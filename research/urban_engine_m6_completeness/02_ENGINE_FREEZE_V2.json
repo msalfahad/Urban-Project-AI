@@ -1,0 +1,151 @@
+{
+ "stage": "M6_ENGINE_FREEZE_V2",
+ "policy": "CONCRETE_COMPLETENESS_V2",
+ "supersedes": "CONCRETE_COMPLETENESS_V1 (engine commit 090a470, 00_ENGINE_FREEZE.json); V1 and its blind run (blind/, 01_BLIND_RUN_FREEZE.json) stay frozen and are never overwritten",
+ "files_sha256": {
+  "engine/source/concrete_completeness.py": "f2d98de76349e90aaf49daff6cff7162ed549aeda99c65addf03cbb1957b7062",
+  "tools/synthetic_villa_m6.py": "2de34f95359b915a76c21581b8bc9344b3375f65599a619dd20a9c47fa147d31",
+  "tools/m6_evaluate.py": "f81f01438f986504aca253b13d3e475be7dd375b772147f158bfdd1554f30503",
+  "tools/m6_completeness_report.py": "1939b368bce04e30d109de7200f019842a0f2bd131839acff709eb41f526be07",
+  "tools/urban_boq_m2.py": "36d3520bf9b3c8c99506469aafef4f84aa11b1e6771c209b8f0e4b226b68ad94",
+  "research/urban_engine_m6_completeness/reconcile.py": "88060d80694741ca4f306991ec85e893bb9de5177ee2e2ae92a8810fb024800b"
+ },
+ "weaknesses": {
+  "W1_UNBOUND_MARK_CONSUMED_BY_PROXIMITY": "a mark the route saw and could not bind (AMBIGUOUS / TAG_UNBOUND) was consumed by any unmarked held member within 1 m (an unresolved band): now only a member carrying the same mark consumes it; otherwise LABEL_NOT_CONSUMED / LABEL_MEMBER_CONFLICT with the route state; such a mark still counts as placed for the schedule",
+  "W2_HATCHES_TREATED_AS_ANNOTATION": "fills on a layer whose name says hatch were dropped as annotation, and a fill inside any solid member counted as that member's: now fills are read on any layer except text / dimension / frame / grid / rebar ones; only the plan's column fill (pattern or layer found inside columns) is a member's own fill; any other fill on measured members is HATCH_ON_MEASURED_MEMBER (legend swatch names it when drawn; else candidates); a fill bounded by another unexplained group is that group's fill; a fill over the whole plan is SITE_FILL (LOW)",
+  "W3_FOOTING_EXPLAINS_ITS_CONTENT": "a footing footprint explained everything drawn inside it (pit walls, a fill): now only footing / column layers",
+  "W4_PIT_SHAPE_UNNAMED": "walls round a pit-sized area on a substructure plan had no family prior: a ring (or a closed outline whose inner faces stop at columns) enclosing 1-9 m2 inside the building votes LIFT and WATER_TANK (+2 each) beside the layer / note votes"
+ },
+ "discovery": "W1-W4 were found after the V1 blind run was frozen and reconciled (13 of 32 completeness cases missed): each miss was traced on the drawing itself (CB10 / B7 route states, the S-HAT.BAT fills on beam bands and panels, the lift-pit walls and fill inside footing FF); no external quantity, no element id, no coordinate and no layer name of ST7757 is in the engine",
+ "development_seeds": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16
+ ],
+ "development_options": [
+  "mixed defects (odd seeds)",
+  "hard distractors",
+  "development vocabulary",
+  "V1 cases only, and with the V2 cases (generate(..., m6v2=True))"
+ ],
+ "development_results": {
+  "V2_engine_V1_cases": {
+   "drawings": 16,
+   "crashed": [],
+   "elements": 153,
+   "detected": 153,
+   "recall": 1.0,
+   "family_of_detected": {
+    "NA": 33,
+    "RIGHT": 114,
+    "UNKNOWN": 4,
+    "WRONG": 2
+   },
+   "family_of_detected_best_match": {
+    "NA": 33,
+    "RIGHT": 110,
+    "UNKNOWN": 5,
+    "WRONG": 5
+   },
+   "false_findings": 0,
+   "false_findings_by_kind": {},
+   "recall_by_kind_v2_cases": {}
+  },
+  "V2_engine_with_V2_cases": {
+   "drawings": 16,
+   "crashed": [],
+   "elements": 183,
+   "detected": 183,
+   "recall": 1.0,
+   "family_of_detected": {
+    "NA": 33,
+    "RIGHT": 127,
+    "UNKNOWN": 19,
+    "WRONG": 4
+   },
+   "family_of_detected_best_match": {
+    "NA": 33,
+    "RIGHT": 123,
+    "UNKNOWN": 22,
+    "WRONG": 5
+   },
+   "false_findings": 0,
+   "false_findings_by_kind": {},
+   "recall_by_kind_v2_cases": {
+    "HATCHED_BEAM": {
+     "n": 10,
+     "detected": 10,
+     "recall": 1.0
+    },
+    "HATCHED_PANEL": {
+     "n": 8,
+     "detected": 8,
+     "recall": 1.0
+    },
+    "PIT_IN_FOOTING": {
+     "n": 12,
+     "detected": 12,
+     "recall": 1.0
+    }
+   }
+  },
+  "V1_engine_with_V2_cases": {
+   "drawings": 16,
+   "crashed": [],
+   "elements": 183,
+   "detected": 159,
+   "recall": 0.8689,
+   "family_of_detected": {
+    "NA": 33,
+    "RIGHT": 113,
+    "UNKNOWN": 6,
+    "WRONG": 7
+   },
+   "family_of_detected_best_match": {
+    "NA": 33,
+    "RIGHT": 110,
+    "UNKNOWN": 8,
+    "WRONG": 8
+   },
+   "false_findings": 2,
+   "false_findings_by_kind": {
+    "DRAWN_NOT_MEASURED": 2
+   },
+   "recall_by_kind_v2_cases": {
+    "HATCHED_BEAM": {
+     "n": 10,
+     "detected": 0,
+     "recall": 0.0
+    },
+    "HATCHED_PANEL": {
+     "n": 8,
+     "detected": 2,
+     "recall": 0.25
+    },
+    "PIT_IN_FOOTING": {
+     "n": 12,
+     "detected": 4,
+     "recall": 0.333
+    }
+   }
+  }
+ },
+ "generator_change": "V2 cases come from a separate random stream after every V1 element: with m6v2=False a drawing's entities and truth are those of the V1 generator (checked on dev seeds 1-16)",
+ "evaluator_change": "family_of_detected_best_match added (family of the finding whose box best overlaps the element; a plot-wide box hits every element); the original family score is kept",
+ "heldout_rule": "held-out V2 seeds 201-240 were never generated before this freeze; they are run once on this frozen engine (development and held-out vocabulary) and reported as they come out; the V1 held-out seeds 101-140 are re-run as a regression check",
+ "post_discovery_rule": "the ST7757 V2 run (post_discovery_v2/, 03_V2_RUN_FREEZE.json) is POST-DISCOVERY: it shows what V2 reports on the drawing whose misses motivated it and is never presented as blind validation; the reconciliation matcher M2 was written before that run was frozen and is applied to V1 and V2 alike",
+ "known_context": "V2 was written knowing the V1 reconciliation (which elements were missed and why); the rules are generic (no project mark, coordinate, layer list or quantity) and validated on held-out synthetic villas"
+}

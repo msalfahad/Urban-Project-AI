@@ -1,0 +1,14 @@
+CONFLICT_ID,STAGE,ITEM_ID,TERMINAL_STATE,SOURCE_A,SOURCE_A_VALUE,SOURCE_B,SOURCE_B_VALUE,AFFECTED,NEW_EVIDENCE_THIS_ROUND,QUESTION
+PEC-01,S4,S4-09,PENDING_ENGINEER_CLARIFICATION,plan footing tag F,F (90x80x30),plan / schedule F10,F10 (280x140x50),3 footing components (F|F10),none,Which type is the footing tagged F / F10?
+PEC-02,S5,S5-11,SOURCE_CONFLICT,SBT row 1FBB,"SB2 80x50, 10Ø18 / 10Ø18",SBT row 2ABA,"SB2 100x50, 20Ø18 top / 10Ø16 bottom",SB2 strap (all components),only 2ABA is inside the issued schedule sheet (PDF p.10); 1FBB lies below the sheet frame 1B2D in model space; the plan strap is drawn 987 mm wide,"Confirm that the issued-sheet row (100x50, 20Ø18 / 10Ø16) governs SB2 (yes / no)."
+PEC-03,S5,S5-07,SOURCE_CONFLICT,P7757 annex level +0.30,D <= 0.30 m,p.13 exterior GB section,three bar levels (needs more depth),7 annex exterior GB components,none (architectural DXF has level marks only),What is the exterior ground-beam depth under the +0.30 annex?
+PEC-04,S5,S5-16,SOURCE_CONFLICT,drawn GB band end,band end,support face plane,face,6 GB occurrences (Q3B),none,Measure GB bars to the support face where the drawn band disagrees?
+PEC-05,S6,S6-17,SOURCE_CONFLICT,plan band (BM-1F_ROOF-B6-BL014-6C5),drawn width 200 mm,schedule width,250 mm,BM-1F_ROOF-B6-BL014-6C5,none,Which width governs B6?
+PEC-06,S6,S6-17,SOURCE_CONFLICT,plan band (BM-GF_ROOF-B21-BL001-468),drawn width 400 mm,schedule width,450 mm,BM-GF_ROOF-B21-BL001-468,none,Which width governs B21?
+PEC-07,S6,S6-17,SOURCE_CONFLICT,plan band (BM-GF_ROOF-B29-BL039-465),drawn width 200 mm,schedule width,250 mm,BM-GF_ROOF-B29-BL039-465,none,Which width governs B29?
+PEC-08,S6,S6-17,SOURCE_CONFLICT,plan band (CBO-FFRS-CB10-BL001),"drawn width [200.0, 200.0] mm",schedule width,250 mm,CBO-FFRS-CB10-BL001,none,Which width governs CB10?
+PEC-09,S6,S6-17,SOURCE_CONFLICT,plan band (CBO-GFRS-CB2-BL038),"drawn width [250.0, 250.0] mm",schedule width,200 mm,CBO-GFRS-CB2-BL038,none,Which width governs CB2?
+PEC-10,S6,S6-18,SOURCE_CONFLICT,plan,"plan c/c [2.724, 3.75] m",C-BEAM schedule,"schedule [3.3, 3.7] m",CBO-GFRS-CB4-BL016,none,Which span data governs CB4?
+PEC-11,S6,S6-18,SOURCE_CONFLICT,plan,"plan c/c [2.85, 4.2] m",C-BEAM schedule,"schedule [2.5, 4.5] m",CBO-GFRS-CB5-BL008,none,Which span data governs CB5?
+PEC-12,S6,S6-18,SOURCE_CONFLICT,plan,2 bound plan spans,C-BEAM schedule,3 schedule spans,CBO-GFRS-CB8-BL024,none,Which span data governs CB8?
+PEC-13,S6,S6-19,SOURCE_CONFLICT,C-BEAM CB3 frame,"middle span part of CB3 (MID1 edited, MID2 blank)",plan tag 1827,middle span 'B3 WITH STAIR',CBO-GFRS-CB3-BL022,"the p.16 stair-beam callouts equal B3, not CB3 - consistent with tag B3, but no source voids the CB3 frame","Is the CB3 middle span a B3 stair beam, and what are CB3's MID bars?"

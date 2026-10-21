@@ -1,0 +1,264 @@
+{
+ "SCHEMA": "URBAN_R8_10_DECISION_REGISTER_V1",
+ "recommendation_before_coding": {
+  "1_biggest_remaining_blocker": "objects and drafting inside two rooms, not semantics: the Hall / Lobby passage wall-end caps drawn on DIM (H2430 exact, H2431 9.2 mm short) and the unresolved SF3 / FIRNTUR objects for the floor trade",
+  "2_narrow_claims_and_full_rebuild": "YES, plus binding to source identity (handle + anchor + fingerprint) and an evidence-version digest on every result",
+  "3_block_only_when_material_to_the_trade": "YES, decided by the deterministic consequence check plus a named trade authority; with no authority the default stays BLOCKED",
+  "4_safer_alternative": "TRADE TREATMENT ASSIGNMENT (treatment per zone per trade from an authority record; equivalence is derived, never declared) plus an object-footprint policy per trade",
+  "5_disagreements": [
+   "§11 premise: a WALL-layer stub with a 1.2 m open passage separates DRESS from M.B.ROOM (R8.9 was wrong); the conclusion (one physical site) survives",
+   "§13: a valid owner rule exists (QP-14 + QP-07), not only the historical BOQ",
+   "§14: the Q-13 blocker for M.B.ROOM + DRESS is the floor-under-objects rule, not the zone boundary",
+   "§21: admitting a false single line is the dangerous direction; a dimension entity on a wall's ends is NOT contrary evidence (tested on real walls)"
+  ],
+  "6_resolved_without_mohammad": [
+   "xref occurrences re-verified from the DXF (exactly 16783 / 17716)",
+   "the wall stub + passage between DRESS and M.B.ROOM",
+   "trade treatment from QP-07 / QP-14 and the Q-14 claim",
+   "FIRNTUR / SF3 non-materiality for Q-14",
+   "the SF3 duplicate pair"
+  ],
+  "7_new_owner_input_unavoidable": "NO for R8.10 (the one prepared floor question would not release Q-13 alone)",
+  "8_found_and_not_identified": [
+   "the DIM-layer wall-end caps at the Hall / Lobby passage and the 9.2 mm near miss that leaked a wall core silently",
+   "the owner rule store as trade authority",
+   "open-passage strips vs door thresholds treated differently",
+   "the passage head soffit as a cross-trade overlap",
+   "QP-17 was authored on the old revision"
+  ],
+  "9_next_round": "R8.11: reviewed near-miss / cap closures as derived closures (like door closures), a wall-band model for NETWORK candidates, object-footprint authority per trade, and the DWG <-> DXF anchor transfer of the claims - still no migration"
+ },
+ "decisions": [
+  {
+   "id": "R810-D01",
+   "decision": "owner answers enter as versioned claims bound to source identity (engine/source/owner_claims.py); evidence version 2"
+  },
+  {
+   "id": "R810-D02",
+   "decision": "xref completeness has four states; no IGNORE_XREF"
+  },
+  {
+   "id": "R810-D03",
+   "decision": "no generic wall-end-cap admission: a corridor and a wall band look alike without size; the cap stays a role conflict until claimed"
+  },
+  {
+   "id": "R810-D04",
+   "decision": "NEAR_MISS_BOUNDARY_GAP: a review-only 50 mm band; withholds, never joins"
+  },
+  {
+   "id": "R810-D05",
+   "decision": "NETWORK: established / candidate / conflict (self-dimensioned line)"
+  },
+  {
+   "id": "R810-D06",
+   "decision": "building assembly V2; text role V2 (repeated family use)"
+  },
+  {
+   "id": "R810-D07",
+   "decision": "trade treatment assignment from authority records; object materiality per trade; duplicates recorded, never deleted"
+  },
+  {
+   "id": "R810-D08",
+   "decision": "no row is FINAL; source anchor (DWG <-> DXF) stays a migration blocker"
+  }
+ ],
+ "findings": [
+  "H2430 / H2431: the Hall / Lobby passage wall-end caps on DIM; wall-core pockets 0.3813 m2 (H2430) + [0.6493] m2 (H2431, through a 9.2 mm slit) inside the HALL's 43.83 m2",
+  "near-miss gaps into an unlabelled cavity were silent (now NEAR_MISS_BOUNDARY_GAP)",
+  "H1316: a WALL cap 1.4 mm short at both ends",
+  "R8.9 wording: no wall between DRESS and M.B.ROOM (wrong)"
+ ],
+ "gates": {
+  "MIGRATION_PLANNING_READY": "YES",
+  "MIGRATION_EXECUTION_READY": "NO",
+  "PRODUCTION_MIGRATION": "NO",
+  "TS01": "SHADOW",
+  "QS01": "LEGACY_RESEARCH_ONLY",
+  "R9_RULES_AS_DATA": "NOT_STARTED",
+  "NEW_DWG_SOURCE_IDENTITY": "NOT_ESTABLISHED",
+  "P7757_TS01_CERTIFICATE": "UNIT_UNRESOLVED"
+ },
+ "answers": {
+  "1_dim_wall_claims_part_scoped": "YES: QORTUBA-NEW-DIM-LINES-7116-7119-ARE-WALLS-OWNER-001 names exactly ['7116', '7117', '7118', '7119'] by part key + fingerprint",
+  "2_source_dim_layer_preserved": "YES: 7116=DIM, 7117=DIM, 7118=DIM, 7119=DIM",
+  "3_other_dim_entity_became_wall": "NO: 0 other DIM parts admitted ({'DIMENSION_GRAPHICS': 5})",
+  "4_xref_answer_scoped_to_plan_variant_4": "YES: claim scope = revision + DXF anchor + region RC:MODEL_SPACE:4267:540:1649 + frame; occurrences 16783 / 17716 bound by their source facts",
+  "5_owner_claim_edited_a_quantity": "NO (quantity_edits_by_claims = 0)",
+  "6_physical_sites_after_rebuild": [
+   {
+    "zones": [
+     "HALL"
+    ],
+    "area_m2": 43.83,
+    "status": "REVIEW_REQUIRED"
+   },
+   {
+    "zones": [
+     "M.B.ROOM",
+     "DRESS"
+    ],
+    "area_m2": 33.2,
+    "status": "REVIEW_REQUIRED"
+   },
+   {
+    "zones": [
+     "BED.ROOM"
+    ],
+    "area_m2": 19.2725,
+    "status": "CERTIFIED"
+   },
+   {
+    "zones": [
+     "BED.ROOM"
+    ],
+    "area_m2": 16.327,
+    "status": "CERTIFIED"
+   },
+   {
+    "zones": [
+     "PAINTRY"
+    ],
+    "area_m2": 11.685,
+    "status": "CERTIFIED"
+   },
+   {
+    "zones": [
+     "BATH"
+    ],
+    "area_m2": 8.5525,
+    "status": "CERTIFIED"
+   },
+   {
+    "zones": [
+     "BATH"
+    ],
+    "area_m2": 5.1,
+    "status": "CERTIFIED"
+   },
+   {
+    "zones": [
+     "BATH"
+    ],
+    "area_m2": 4.09,
+    "status": "CERTIFIED"
+   }
+  ],
+  "7_bath_bed_hall_separated": "YES: HALL 43.83; core/threshold 0.12; BED.ROOM 19.2725; core/threshold 0.2175; BATH 5.1",
+  "8_mb_room_dress": "ONE_PHYSICAL_SPACE_MULTIPLE_SEMANTIC_ZONES_UNRESOLVED: one physical site (33.2 m2) joined through a 1200 mm open passage in a WALL-layer stub",
+  "9_q13_combined_footprint": "NOT YET: same treatment (PORCELAIN, QP-14) and no finish boundary, but the FIRNTUR wardrobes are material to the floor trade (no object-footprint authority)",
+  "10_q14_combined_footprint": "YES: SEMANTIC_SUBDIVISION_NOT_REQUIRED_FOR_TRADE and FIRNTUR non-material (Q-14 claim); the site is used whole in Q-14",
+  "11_trade_authority": {
+   "floor": [
+    "research/qs_wall_treatment_01/pa08/qortuba/boq/owner_rules.py: US-01 WET_SERVICE_ROOM_CERAMIC",
+    "research/qs_wall_treatment_01/pa08/qortuba/boq/owner_rules.py: QP-07 QORTUBA_CERAMIC_SERVICE_ROOMS = BATH x3 + PAINTRY",
+    "research/qs_wall_treatment_01/pa08/qortuba/boq/owner_rules.py: QP-14 QORTUBA_DRY_FLOOR_FINISH = PORCELAIN"
+   ],
+   "ceiling": [
+    "QORTUBA-Q14-CEILING-FOOTPRINT-OWNER-001"
+   ]
+  },
+  "12_rows_computed_shadow": {
+   "Q-03": 17.7425,
+   "Q-03P": 11.685,
+   "Q-11": 17.7425,
+   "Q-12": 11.685
+  },
+  "13_exact_blockers": {
+   "Q-13": {
+    "state": "BLOCKED_MULTIPLE: BLOCKED_PHYSICAL, BLOCKED_ROLE, BLOCKED_TRADE_RULE",
+    "by_site": [
+     {
+      "zones": [
+       "HALL",
+       "whgm"
+      ],
+      "classes": [
+       "PHYSICAL_TOPOLOGY",
+       "ROLE_AUTHORITY",
+       "TRADE_RULE"
+      ],
+      "issues": [
+       "NEAR_MISS_BOUNDARY_GAP",
+       "ROLE_CONFLICT_SEPARATOR",
+       "TOPOLOGY_ROLE_UNRESOLVED",
+       "OBJECT_FOOTPRINT_POLICY_UNRESOLVED"
+      ]
+     },
+     {
+      "zones": [
+       "DRESS",
+       "M.B.ROOM"
+      ],
+      "classes": [
+       "ROLE_AUTHORITY",
+       "TRADE_RULE"
+      ],
+      "issues": [
+       "TOPOLOGY_ROLE_UNRESOLVED",
+       "OBJECT_FOOTPRINT_POLICY_UNRESOLVED"
+      ]
+     }
+    ]
+   },
+   "Q-14": {
+    "state": "BLOCKED_MULTIPLE: BLOCKED_PHYSICAL, BLOCKED_ROLE",
+    "by_site": [
+     {
+      "zones": [
+       "HALL",
+       "whgm"
+      ],
+      "classes": [
+       "PHYSICAL_TOPOLOGY",
+       "ROLE_AUTHORITY"
+      ],
+      "issues": [
+       "NEAR_MISS_BOUNDARY_GAP",
+       "ROLE_CONFLICT_SEPARATOR"
+      ]
+     }
+    ]
+   }
+  },
+  "14_threshold_strip_separate": "YES: {'ROOM_FOOTPRINT_m2': 17.7425, 'THRESHOLD_FOOTPRINT_m2': 0.36, 'POSSIBLE_FINISH_FOOTPRINT_m2': 18.1025, 'legacy_qs01_wet_floor_m2': 17.8625, 'legacy_minus_room_m2': 0.12, 'reading': 'three wet-room door strips of 0.12 m2 exist; the legacy QS01 wet floor exceeds the TS01 room footprint by exactly ONE of them: the legacy method absorbed one strip into a room. TS01 keeps all three separate (allocation TRADE_RULE_REQUIRED); no strip is moved to match a total', 'thresholds': [{'threshold': 'THRESHOLD-8639087a5492f6c5', 'site': 'SITE-04cdde7c375a2ff7', 'opening': 'I1443', 'area_m2': 0.12, 'sides': ['SITE-8e1f0b3a736abb02', 'SITE-9cd4555183e82aa2'], 'allocation': 'TRADE_RULE_REQUIRED'}, {'threshold': 'THRESHOLD-8732ee1c2cb4f9da', 'site': 'SITE-8bd86fd47559dcf6', 'opening': 'I1561', 'area_m2': 0.12, 'sides': ['SITE-50b24a2e0df863f2', 'SITE-56af91bb145d30cc'], 'allocation': 'TRADE_RULE_REQUIRED'}, {'threshold': 'THRESHOLD-aa3fea7d5ebcdca0', 'site': 'SITE-ee74da53975a6dc5', 'opening': 'I2044', 'area_m2': 0.12, 'sides': ['SITE-56af91bb145d30cc', 'SITE-dd2d6c85412cee23'], 'allocation': 'TRADE_RULE_REQUIRED'}]}",
+  "15_firntur_needed_a_final_role": "NO for Q-14 (non-material); for Q-13 its role OR a floor object-footprint rule is needed",
+  "16_sf3_needed_a_final_role": "NO for Q-14; for Q-13 yes (HALL), together with the floor rule - and the HALL is blocked by the caps anyway",
+  "17_sf3_duplicate_explicit": [
+   {
+    "state": "DUPLICATE_SOURCE_OCCURRENCE",
+    "occurrences": [
+     "700047",
+     "700051"
+    ],
+    "block": "MY BLOCKS$0$SF3",
+    "children": 27,
+    "geometry_digest": "75b86ff66e5532994543488de71410621593912e8ba4b75883fb48b5957b6182",
+    "kept": "ALL (never deleted)",
+    "area_topology": "coincident geometry adds no face: no area effect",
+    "count_trades": "COUNT_RULE_REQUIRED"
+   }
+  ],
+  "18_network_survived": {
+   "NETWORK alone": "NOT sufficient against A / B / C on single-line drawings: recorded as NETWORK_BOUNDARY_CANDIDATE (residual risk, stated)",
+   "corroborated": "NETWORK_BOUNDARY_ESTABLISHED when it separates two different label occurrences or a reviewed claim names it",
+   "contrary": "NETWORK_ROLE_CONFLICT for a self-dimensioned line (its own length printed at its middle)",
+   "next": "a wall-band model (paired faces, measured thickness population of THIS drawing) is the missing authority to make CANDIDATE blocking without false positives (R8.11)"
+  },
+  "19_building_assembly_survived": "NO as written in R8.9 (a detail callout or a one-room block passed); V2 requires closed boundary children + a nested door or two different room labels; no real result changed",
+  "20_text_tag_survived": "NO as written (a lone 'BATHROOM DETAIL' tag was established); V2 requires repeated family use and rejects drafting-document words; PAINTRY kept; ROOF tag now a candidate",
+  "21_new_source_mistake_or_silent_path": [
+   "H2430 / H2431: the Hall / Lobby passage wall-end caps on DIM; wall-core pockets 0.3813 m2 (H2430) + [0.6493] m2 (H2431, through a 9.2 mm slit) inside the HALL's 43.83 m2",
+   "near-miss gaps into an unlabelled cavity were silent (now NEAR_MISS_BOUNDARY_GAP)",
+   "H1316: a WALL cap 1.4 mm short at both ends",
+   "R8.9 wording: no wall between DRESS and M.B.ROOM (wrong)"
+  ],
+  "22_new_owner_input_needed": "NO",
+  "23_next_round": "R8.11: reviewed near-miss / cap closures as derived closures (like door closures), a wall-band model for NETWORK candidates, object-footprint authority per trade, and the DWG <-> DXF anchor transfer of the claims - still no migration",
+  "24_disagree_with_chatgpt": [
+   "§11 premise: a WALL-layer stub with a 1.2 m open passage separates DRESS from M.B.ROOM (R8.9 was wrong); the conclusion (one physical site) survives",
+   "§13: a valid owner rule exists (QP-14 + QP-07), not only the historical BOQ",
+   "§14: the Q-13 blocker for M.B.ROOM + DRESS is the floor-under-objects rule, not the zone boundary",
+   "§21: admitting a false single line is the dangerous direction; a dimension entity on a wall's ends is NOT contrary evidence (tested on real walls)"
+  ]
+ }
+}

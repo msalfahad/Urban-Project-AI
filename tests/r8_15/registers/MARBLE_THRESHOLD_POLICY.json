@@ -1,0 +1,36 @@
+{
+ "SCHEMA": "URBAN_R8_15_MARBLE_THRESHOLD_POLICY_V1",
+ "policy": {
+  "policy_id": "MARBLE_THRESHOLD_POLICY_V1",
+  "trade": "MARBLE_THRESHOLD",
+  "authority_order": [
+   "EXPLICIT_PROJECT_FACT",
+   "URBAN_METHOD_RULE"
+  ],
+  "rule_states": [
+   "RULE_APPLIES",
+   "RULE_NOT_APPLICABLE",
+   "ROOM_TYPE_UNRESOLVED"
+  ],
+  "record_states": [
+   "MARBLE_COMPUTED",
+   "MARBLE_BLOCKED_GEOMETRY"
+  ],
+  "geometry": "the threshold OPENING_SITE only: width = face-closure length, depth = face separation, area = site area",
+  "rise": "vertical attribute only",
+  "never": [
+   "marble from text alone",
+   "dimensions from a photograph",
+   "a rise as a plan depth",
+   "a universal horizontal depth",
+   "a half-tile contribution inside a marble strip",
+   "a waterproofing / slope / drainage inference",
+   "a price"
+  ],
+  "digest": "0fe064c4475baa632f894e574e302926c2c502f1de1e9741de1355e509e93c5f"
+ },
+ "door_transition": "DOOR_TRANSITION_POLICY_V1 (unchanged: MARBLE state already in V1)",
+ "strip_audit": "STRIP_ALLOCATION_AUDIT_V2",
+ "rule": "URBAN-WET-SERVICE-MARBLE-THRESHOLD@v1",
+ "explicit_fact": "QORTUBA-NEW-MAIN-ENTRANCE-MARBLE-OWNER-001@v1"
+}

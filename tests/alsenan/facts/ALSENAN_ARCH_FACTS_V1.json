@@ -1,0 +1,36 @@
+{
+ "schema": "URBAN_ARCH_FACTS_V1",
+ "project_id": "ALSENAN_DEV_VILLA",
+ "prepared": "T-035 worker, 2026-10-19, from the Drive folder 'Alsenan chalet project' (read-only; nothing copied)",
+ "rules": ["UP-HGT-001", "UP-MAS-HEIGHT-001", "UP-CER-009"],
+ "note": "Only values PRINTED on the drawings may be entered here, each with its authority. None of the heights the method needs is printed on the available drawings, so wall_heights and height_components are deliberately empty: every PLASTER / PAINT line keeps its UP-CER-009 hold. No typical value, no freelancer value, no owner value has been entered.",
+ "wall_heights": {},
+ "height_components": {},
+ "not_printed": {
+  "searched": [
+   "P7757_DXF_COMPRESSED.zip / P7757.dxf (sha256 ab54dd55...31cc4): ground, first and second floor plans, south-east and north-west elevations; every TEXT, MTEXT, ATTRIB and DIMENSION, nested blocks included",
+   "ST7757 dxf.dxf (sha256 9f9d1179...38079): foundation, ground beams, column and axis plans, ground / first / second floor roof slabs, sections A-A to D-D, beam and column schedules, pool and dome details",
+   "the architectural DWF (title ends 2026-05-06T113026.059.dwf): text strings only (viewing format, cross-check only), which add sections A-A and B-B, the north-east / south-west elevations and the area plans",
+   "sanitary-7757.pdf: drainage plans, no heights",
+   "the architectural PDF (37.5 MB, 12 image pages): not readable, above the connector's 10 MB limit"
+  ],
+  "printed_levels_m": {
+   "GF": ["+0.15", "+0.30", "+1.00"],
+   "1F": ["+5.50", "+4.30 (roof over part of the ground floor)"],
+   "2F": ["+9.70"],
+   "ROOF": ["+13.90 (sections A-A and B-B, DWF only)"]
+  },
+  "missing": {
+   "GF": {"PLASTER": ["soffit_zone_m", "floor_buildup_m"], "PAINT": ["soffit_zone_m", "ceiling_zone_m", "floor_buildup_m"]},
+   "1F": {"PLASTER": ["soffit_zone_m", "floor_buildup_m"], "PAINT": ["soffit_zone_m", "ceiling_zone_m", "floor_buildup_m"]},
+   "2F": {"PLASTER": ["soffit_zone_m", "floor_buildup_m", "a level interval (the plans print no level above +9.70)"], "PAINT": ["soffit_zone_m", "ceiling_zone_m", "floor_buildup_m", "a level interval (the plans print no level above +9.70)"]}
+  },
+  "why_not_used": {
+   "floor-to-floor intervals (4.50, 4.20, ...)": "a level interval alone is never a wall height (UP-HGT-001, WALL_HEIGHT_AUTHORITY_POLICY_V1)",
+   "beam depths 0.40-0.75 m (structural beam schedule)": "a beam depth is not the soffit zone of a room (plaster runs to the slab soffit, UP-HGT-001); which walls sit under which beam is not in the plan (UP-MAS-HEIGHT-001)",
+   "5 cm screed, 5 cm insulation membrane, 10 cm plain concrete (structural sheet)": "printed on the swimming-pool detail only, not a room floor build-up",
+   "T=10cm (ground beams plan)": "a ground-floor slab-on-grade note; it is neither a suspended-slab soffit nor a floor build-up",
+   "slab thickness": "drawn in the structural sections but never dimensioned or noted; a value scaled from the drawing is not a printed dimension"
+  }
+ }
+}

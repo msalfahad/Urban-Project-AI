@@ -1,0 +1,85 @@
+{
+ "table": [
+  [
+   100,
+   10,
+   200
+  ],
+  [
+   125,
+   10,
+   200
+  ],
+  [
+   150,
+   10,
+   200
+  ],
+  [
+   175,
+   12,
+   200
+  ],
+  [
+   200,
+   12,
+   200
+  ],
+  [
+   250,
+   12,
+   200
+  ],
+  [
+   300,
+   12,
+   200
+  ]
+ ],
+ "notes_claim": "P15-TEMPERATURE-NOTES",
+ "lap_rule": "40 x Ø (note 1)",
+ "floors": [
+  {
+   "floor": "GF",
+   "thickness_mm": 160,
+   "thickness_source": "slab-sheet thickness tag (DXF)",
+   "exact_row": false,
+   "state": "SOURCE_RULE_NOT_EXACT_MATCH",
+   "bracket": "between 150 (Y10@200) and 175 (Y12@200)",
+   "bracket_consistent": false,
+   "candidate_panels": 61,
+   "candidate_panel_area_m2_upper_bound": 519.106,
+   "region_rule": "top of slab in mid-span where no top bars (p.15 detail) + 2000 mm across beams parallel to the main bars (note 2)",
+   "quantity": "BLOCKED (no rounding to a neighbouring row)"
+  },
+  {
+   "floor": "1F",
+   "thickness_mm": 160,
+   "thickness_source": "slab-sheet thickness tag (DXF)",
+   "exact_row": false,
+   "state": "SOURCE_RULE_NOT_EXACT_MATCH",
+   "bracket": "between 150 (Y10@200) and 175 (Y12@200)",
+   "bracket_consistent": false,
+   "candidate_panels": 35,
+   "candidate_panel_area_m2_upper_bound": 296.144,
+   "region_rule": "top of slab in mid-span where no top bars (p.15 detail) + 2000 mm across beams parallel to the main bars (note 2)",
+   "quantity": "BLOCKED (no rounding to a neighbouring row)"
+  },
+  {
+   "floor": "2F",
+   "thickness_mm": 180,
+   "thickness_source": "slab-sheet thickness tag (DXF)",
+   "exact_row": false,
+   "state": "SOURCE_RULE_NOT_EXACT_MATCH",
+   "bracket": "between 175 (Y12@200) and 200 (Y12@200)",
+   "bracket_consistent": true,
+   "candidate_panels": 10,
+   "candidate_panel_area_m2_upper_bound": 62.5,
+   "region_rule": "top of slab in mid-span where no top bars (p.15 detail) + 2000 mm across beams parallel to the main bars (note 2)",
+   "quantity": "BLOCKED (no rounding to a neighbouring row)"
+  }
+ ],
+ "slab_thickness_default_claim": "P8-N18-SLAB-THICKNESS (160 mm)",
+ "SCHEMA": "URBAN_ALSENAN_TEMPERATURE_V1",
+ "claim_state": "CROSS_VERIFIED_SOURCE"
+}

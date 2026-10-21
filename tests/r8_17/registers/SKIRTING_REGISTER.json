@@ -1,0 +1,261 @@
+{
+ "SCHEMA": "URBAN_R8_17_SKIRTING_REGISTER_V1",
+ "row": "SKIRTING (hidden skirting, QP-06)",
+ "unit": "lm",
+ "state": "COMPUTED_SHADOW",
+ "SKIRTING_LM": 94.13682,
+ "reproduces_blind": {
+  "payable": true,
+  "per_site": true,
+  "topology_digest": true
+ },
+ "per_room": {
+  "SITE-5f1762f1a93b91ca": {
+   "zones": [
+    "BED.ROOM"
+   ],
+   "state": "COMPUTED",
+   "payable_lm": 22.9,
+   "components_lm": {
+    "AUTHORISED_OBSTACLE_FACE": 5.0,
+    "COLUMN_FACE": 0.8,
+    "REAL_WALL_FACE": 15.894641,
+    "WINDOW_ABOVE_FLOOR": 1.205359
+   },
+   "excluded_lm": {
+    "DOOR_PRESENT": 1.0
+   },
+   "withheld": [],
+   "jambs": [],
+   "opening_side_annotations": [],
+   "conservation": {
+    "boundary": 23.9,
+    "consumed_by_physical_jambs": 0.0,
+    "classified": 23.9,
+    "class_sum": 23.9,
+    "residual": 0.0,
+    "reconciles": true
+   }
+  },
+  "SITE-77a2130eb275604c": {
+   "zones": [
+    "HALL",
+    "whgm"
+   ],
+   "state": "COMPUTED",
+   "payable_lm": 26.157105,
+   "components_lm": {
+    "COLUMN_FACE": 0.65,
+    "PHYSICAL_OPENING_JAMB": 0.4,
+    "REAL_WALL_FACE": 22.760661,
+    "WINDOW_ABOVE_FLOOR": 2.346444
+   },
+   "excluded_lm": {
+    "DOOR_PRESENT": 5.6,
+    "SLIDING_GLAZED_DOOR_TO_FLOOR": 2.75
+   },
+   "withheld": [],
+   "jambs": [
+    {
+     "opening": "OP-997f14d12b8e9bc1",
+     "kind": "DOORLESS",
+     "side": "LEFT",
+     "source": "BANDEND|WB-0644b40d07c861d6|1",
+     "end_kind": "ALIGNED_FREE_END",
+     "physical": true,
+     "length_lm": 0.2,
+     "counted_lm": 0.2,
+     "why": null
+    },
+    {
+     "opening": "OP-997f14d12b8e9bc1",
+     "kind": "DOORLESS",
+     "side": "RIGHT",
+     "source": "BANDEND|WB-6c882c7cafa843e5|0",
+     "end_kind": "ALIGNED_FREE_END",
+     "physical": true,
+     "length_lm": 0.2,
+     "counted_lm": 0.2,
+     "why": null
+    }
+   ],
+   "opening_side_annotations": [],
+   "conservation": {
+    "boundary": 34.507105,
+    "consumed_by_physical_jambs": 0.4,
+    "classified": 34.107105,
+    "class_sum": 34.107105,
+    "residual": 0.0,
+    "reconciles": true
+   }
+  },
+  "SITE-a6405850100155ac": {
+   "zones": [
+    "DRESS",
+    "M.B.ROOM"
+   ],
+   "state": "COMPUTED",
+   "payable_lm": 29.5,
+   "components_lm": {
+    "COLUMN_FACE": 1.2,
+    "PHYSICAL_OPENING_JAMB": 0.15,
+    "REAL_WALL_FACE": 23.952485,
+    "WINDOW_ABOVE_FLOOR": 4.197515
+   },
+   "excluded_lm": {
+    "DOOR_PRESENT": 1.8
+   },
+   "withheld": [],
+   "jambs": [
+    {
+     "opening": "OP-9e0fd219ca5cd391",
+     "kind": "DOORLESS",
+     "side": "LEFT",
+     "source": "BANDEND|WB-8549cc78e5a3af40|0",
+     "end_kind": "CAPPED",
+     "physical": true,
+     "length_lm": 0.15,
+     "counted_lm": 0.15,
+     "why": null
+    }
+   ],
+   "opening_side_annotations": [
+    {
+     "opening": "OP-9e0fd219ca5cd391",
+     "side": "RIGHT",
+     "source": "QORTUBA_REV_NEW|H518||SEGMENT|0",
+     "end_kind": "CONTINUOUS_WALL_FACE",
+     "overlap_lm": 0.15,
+     "consumed_lm": 0.0
+    }
+   ],
+   "conservation": {
+    "boundary": 31.3,
+    "consumed_by_physical_jambs": 0.15,
+    "classified": 31.15,
+    "class_sum": 31.15,
+    "residual": 0.0,
+    "reconciles": true
+   }
+  },
+  "SITE-daca396d6d730e60": {
+   "zones": [
+    "BED.ROOM"
+   ],
+   "state": "COMPUTED",
+   "payable_lm": 15.579714,
+   "components_lm": {
+    "COLUMN_FACE": 0.8,
+    "REAL_WALL_FACE": 13.437427,
+    "WINDOW_ABOVE_FLOOR": 1.342287
+   },
+   "excluded_lm": {
+    "DOOR_PRESENT": 1.0
+   },
+   "withheld": [],
+   "jambs": [],
+   "opening_side_annotations": [],
+   "conservation": {
+    "boundary": 16.579714,
+    "consumed_by_physical_jambs": 0.0,
+    "classified": 16.579714,
+    "class_sum": 16.579714,
+    "residual": 0.0,
+    "reconciles": true
+   }
+  },
+  "SITE-1c4abf65f9b5db1e": {
+   "zones": [
+    "BATH"
+   ],
+   "state": "NO_SKIRTING_FULL_WALL_TILE",
+   "payable_lm": 0.0,
+   "components_lm": null,
+   "excluded_lm": null,
+   "withheld": null,
+   "jambs": null,
+   "opening_side_annotations": null,
+   "conservation": null
+  },
+  "SITE-8c1c7563d5252c50": {
+   "zones": [
+    "PAINTRY"
+   ],
+   "state": "NO_SKIRTING_FULL_WALL_TILE",
+   "payable_lm": 0.0,
+   "components_lm": null,
+   "excluded_lm": null,
+   "withheld": null,
+   "jambs": null,
+   "opening_side_annotations": null,
+   "conservation": null
+  },
+  "SITE-a2b19efc492a6d0b": {
+   "zones": [
+    "BATH"
+   ],
+   "state": "NO_SKIRTING_FULL_WALL_TILE",
+   "payable_lm": 0.0,
+   "components_lm": null,
+   "excluded_lm": null,
+   "withheld": null,
+   "jambs": null,
+   "opening_side_annotations": null,
+   "conservation": null
+  },
+  "SITE-fe8ed5548fb4310e": {
+   "zones": [
+    "BATH"
+   ],
+   "state": "NO_SKIRTING_FULL_WALL_TILE",
+   "payable_lm": 0.0,
+   "components_lm": null,
+   "excluded_lm": null,
+   "withheld": null,
+   "jambs": null,
+   "opening_side_annotations": null,
+   "conservation": null
+  }
+ },
+ "breakdown_lm": {
+  "real_walls": 76.045214,
+  "columns": 3.45,
+  "duct": 5.0,
+  "normal_window_continuity": 9.091605,
+  "doorless_jambs": 0.55,
+  "other": 0.0
+ },
+ "excluded_lm": {
+  "DOOR_PRESENT": 9.4,
+  "SLIDING_GLAZED_DOOR_TO_FLOOR": 2.75,
+  "TOPOLOGY_CLOSURE": 0.0,
+  "FULL_HEIGHT_GLAZED_OPENING": 0.0,
+  "DOOR_JAMB": 0.0,
+  "DOORLESS_JAMB_NOT_COUNTED": 0.0
+ },
+ "withheld": [],
+ "withheld_lm": 0.0,
+ "conservation_all_sites": true,
+ "method": "QORTUBA-NEW-SKIRTING-METHOD@v3",
+ "policy": [
+  "WALL_CONTACT_PATH_POLICY_V4",
+  "0426020a17326bfed5d4f3e92e5b4b738cee9908844f5dcb6a26fa2760b72d8a"
+ ],
+ "reconciliation_vs_r8_16": {
+  "R8.16_SKIRTING_LM": 93.98682,
+  "+ V3-O1 continuous face restored": 0.15,
+  "R8.16 withheld 2.75 lm -> excluded (not payable)": 0.0,
+  "= R8.17": 94.13682,
+  "reconciles": true,
+  "is_target": false
+ },
+ "known_defects_open": [],
+ "release_blockers": [
+  "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+  "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+ ],
+ "never": [
+  "93.98682 / 94.13682 / 96.73682 / 96.88682 / 84.795214 / 76.389 / 9.091605 / 0.15 / 2.75 as a target",
+  "a room polygon perimeter"
+ ]
+}

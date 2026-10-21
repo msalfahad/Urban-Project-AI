@@ -1,0 +1,52 @@
+{
+ "corrected_authority": {
+  "authority": "PROJECT_DRAWING",
+  "comparison_flags": [
+   "OQ-11 (V3C donor audit, 'F3 is tagged twice on the foundation plan; the [reference] has one')"
+  ],
+  "corroboration_only": [
+   "R9.1 08_FOOTING_OCCURRENCE_CROSSWALK FO10 / FO11 (donor crosswalk)"
+  ],
+  "decision": "F3 = 2 occurrences, SOURCE_VERIFIED",
+  "drawing": {
+   "file": "ST7757.dxf",
+   "sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "sheet": "FOUNDATION PLAN (PDF p.2)"
+  },
+  "evidence": [
+   {
+    "drawn_cm": [
+     160.0,
+     140.0
+    ],
+    "outline": "166C:F>v",
+    "schedule_cm": [
+     160.0,
+     140.0
+    ],
+    "sizes_match": true,
+    "tag": "168E",
+    "tag_text": "C3/F3"
+   },
+   {
+    "drawn_cm": [
+     160.0,
+     140.0
+    ],
+    "outline": "166B:F>v",
+    "schedule_cm": [
+     160.0,
+     140.0
+    ],
+    "sizes_match": true,
+    "tag": "168F",
+    "tag_text": "C3/F3"
+   }
+  ]
+ },
+ "finding": "the S4 decision is drawing-based, but its 'project_source' sentence also cites the R9.1 donor crosswalk (08 FO10 / FO11) next to the drawing handles; a donor crosswalk is corroboration, never the authority. The per-part S4 provenance cites drawing handles only.",
+ "quantity_changed": false,
+ "s4_freeze_changed": false,
+ "s4_record": "research/alsenan_footing_rebar_s4/F3_AUTHORITY_DECISION.json (frozen; not edited)",
+ "s4_record_sha256": "d348943964c4c85ac953283bda156b9818c52c626bf99c5d91c1d17129c0ef2d"
+}

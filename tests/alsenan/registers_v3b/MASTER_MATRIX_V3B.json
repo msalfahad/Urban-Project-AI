@@ -1,0 +1,1357 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_V3B_MASTER_MATRIX_V1",
+ "rows": [
+  {
+   "trade": "CONCRETE",
+   "item": "Plain concrete (blinding)",
+   "item_ar": "خرسانة عادية",
+   "unit": "m3",
+   "technical": {
+    "GF": 28.8276,
+    "1F": 0.0,
+    "2F_ROOF": 0.0,
+    "OTHER_EXTERNAL": 0.7955,
+    "total": 29.6231
+   },
+   "commercial": {
+    "GF": 28.8276,
+    "1F": 0,
+    "2F_ROOF": 0,
+    "OTHER_EXTERNAL": 0.7955,
+    "total": 29.6231,
+    "provisional_part": 0,
+    "budget": 0,
+    "incl_budget": 29.6231,
+    "procurement_eligible": 29.6231,
+    "low": 29.6231,
+    "high": 29.6231,
+    "pending": 0
+   }
+  },
+  {
+   "trade": "CONCRETE",
+   "item": "Reinforced concrete",
+   "item_ar": "خرسانة مسلحة",
+   "unit": "m3",
+   "technical": {
+    "GF": 174.2463,
+    "1F": 54.532,
+    "2F_ROOF": 19.386,
+    "OTHER_EXTERNAL": 5.053,
+    "total": 253.2173
+   },
+   "commercial": {
+    "GF": 224.4337,
+    "1F": 59.545,
+    "2F_ROOF": 21.7375,
+    "OTHER_EXTERNAL": 10.3414,
+    "total": 316.0576,
+    "provisional_part": 62.8403,
+    "budget": 7.9495,
+    "incl_budget": 324.0071,
+    "procurement_eligible": 253.2173,
+    "low": 310.38084,
+    "high": 342.2873,
+    "pending": 1
+   }
+  },
+  {
+   "trade": "REBAR",
+   "item": "Bar sets / members not computable",
+   "item_ar": "تسليح غير قابل للحساب",
+   "unit": "kg",
+   "technical": {
+    "GF": 0.0,
+    "1F": 0.0,
+    "2F_ROOF": 0.0,
+    "OTHER_EXTERNAL": 0.0,
+    "total": 0.0
+   },
+   "commercial": {
+    "GF": 0,
+    "1F": 0,
+    "2F_ROOF": 0,
+    "OTHER_EXTERNAL": 0,
+    "total": 0,
+    "provisional_part": 0,
+    "budget": 0,
+    "incl_budget": 0,
+    "procurement_eligible": 0,
+    "low": 0,
+    "high": 0,
+    "pending": 1
+   }
+  },
+  {
+   "trade": "REBAR",
+   "item": "Rebar - net design weight (straight + hooks)",
+   "item_ar": "التسليح - الوزن الصافي",
+   "unit": "kg",
+   "technical": {
+    "GF": 11122.611755,
+    "1F": 5939.042163,
+    "2F_ROOF": 3003.973962,
+    "OTHER_EXTERNAL": 585.738272,
+    "total": 20651.366152
+   },
+   "commercial": {
+    "GF": 15613.550847,
+    "1F": 6250.805146,
+    "2F_ROOF": 3234.599195,
+    "OTHER_EXTERNAL": 1141.388398,
+    "total": 26240.343586,
+    "provisional_part": 22795.052114,
+    "budget": 319.11342,
+    "incl_budget": 26559.457006,
+    "procurement_eligible": 3445.291472,
+    "low": 25436.171284,
+    "high": 27063.784943,
+    "pending": 0
+   }
+  },
+  {
+   "trade": "REBAR",
+   "item": "Rebar - purchased from 12 m stock (commercial population)",
+   "item_ar": "حديد التوريد",
+   "unit": "kg",
+   "technical": {
+    "GF": 0.0,
+    "1F": 0.0,
+    "2F_ROOF": 0.0,
+    "OTHER_EXTERNAL": 0.0,
+    "total": 0.0
+   },
+   "commercial": {
+    "GF": 27537.481,
+    "1F": 0,
+    "2F_ROOF": 0,
+    "OTHER_EXTERNAL": 0,
+    "total": 27537.481,
+    "provisional_part": 27537.481,
+    "budget": 0,
+    "incl_budget": 27537.481,
+    "procurement_eligible": 0,
+    "low": 26711.35657,
+    "high": 28914.35505,
+    "pending": 0
+   }
+  },
+  {
+   "trade": "REBAR",
+   "item": "Rebar - purchased from 12 m stock (technical population)",
+   "item_ar": "حديد التوريد",
+   "unit": "kg",
+   "technical": {
+    "GF": 15323.555,
+    "1F": 0.0,
+    "2F_ROOF": 0.0,
+    "OTHER_EXTERNAL": 0.0,
+    "total": 15323.555
+   },
+   "commercial": {
+    "GF": 15323.555,
+    "1F": 0,
+    "2F_ROOF": 0,
+    "OTHER_EXTERNAL": 0,
+    "total": 15323.555,
+    "provisional_part": 0,
+    "budget": 0,
+    "incl_budget": 15323.555,
+    "procurement_eligible": 15323.555,
+    "low": 15323.555,
+    "high": 15323.555,
+    "pending": 0
+   }
+  },
+  {
+   "trade": "BLOCKWORK",
+   "item": "Blockwork 150 mm",
+   "item_ar": "طابوق 150 mm",
+   "unit": "m2",
+   "technical": {
+    "GF": 111.956,
+    "1F": 138.926,
+    "2F_ROOF": 33.06,
+    "OTHER_EXTERNAL": 0.0,
+    "total": 283.942
+   },
+   "commercial": {
+    "GF": 111.956,
+    "1F": 138.926,
+    "2F_ROOF": 33.06,
+    "OTHER_EXTERNAL": 0,
+    "total": 283.942,
+    "provisional_part": 0,
+    "budget": 0,
+    "incl_budget": 283.942,
+    "procurement_eligible": 283.942,
+    "low": 283.942,
+    "high": 283.942,
+    "pending": 0
+   }
+  },
+  {
+   "trade": "BLOCKWORK",
+   "item": "Blockwork 200 mm",
+   "item_ar": "طابوق 200 mm",
+   "unit": "m2",
+   "technical": {
+    "GF": 144.049,
+    "1F": 106.378,
+    "2F_ROOF": 75.885,
+    "OTHER_EXTERNAL": 0.0,
+    "total": 326.312
+   },
+   "commercial": {
+    "GF": 144.049,
+    "1F": 106.378,
+    "2F_ROOF": 75.885,
+    "OTHER_EXTERNAL": 0,
+    "total": 326.312,
+    "provisional_part": 0,
+    "budget": 0,
+    "incl_budget": 326.312,
+    "procurement_eligible": 326.312,
+    "low": 326.312,
+    "high": 326.312,
+    "pending": 0
+   }
+  },
+  {
+   "trade": "BLOCKWORK",
+   "item": "Blockwork OVER OPENINGS",
+   "item_ar": "طابوق OVER OPENINGS",
+   "unit": "m2",
+   "technical": {
+    "GF": 17.00698,
+    "1F": 0.0,
+    "2F_ROOF": 0.0,
+    "OTHER_EXTERNAL": 0.0,
+    "total": 17.00698
+   },
+   "commercial": {
+    "GF": 115.058167,
+    "1F": 0,
+    "2F_ROOF": 0,
+    "OTHER_EXTERNAL": 0,
+    "total": 115.058167,
+    "provisional_part": 115.058167,
+    "budget": 0,
+    "incl_budget": 115.058167,
+    "procurement_eligible": 0,
+    "low": 79.06018,
+    "high": 151.34972,
+    "pending": 0
+   }
+  },
+  {
+   "trade": "BLOCKWORK",
+   "item": "Boundary wall blockwork",
+   "item_ar": "طابوق السور",
+   "unit": "m2",
+   "technical": {
+    "GF": 0.0,
+    "1F": 0.0,
+    "2F_ROOF": 0.0,
+    "OTHER_EXTERNAL": 0.0,
+    "total": 0.0
+   },
+   "commercial": {
+    "GF": 0,
+    "1F": 0,
+    "2F_ROOF": 0,
+    "OTHER_EXTERNAL": 156.5085,
+    "total": 156.5085,
+    "provisional_part": 156.5085,
+    "budget": 0,
+    "incl_budget": 156.5085,
+    "procurement_eligible": 0,
+    "low": 116.785,
+    "high": 156.5085,
+    "pending": 0
+   }
+  },
+  {
+   "trade": "BLOCKWORK",
+   "item": "Parapet blockwork",
+   "item_ar": "طابوق الدروة",
+   "unit": "m2",
+   "technical": {
+    "GF": 0.0,
+    "1F": 0.0,
+    "2F_ROOF": 75.763,
+    "OTHER_EXTERNAL": 0.0,
+    "total": 75.763
+   },
+   "commercial": {
+    "GF": 0,
+    "1F": 0,
+    "2F_ROOF": 75.763,
+    "OTHER_EXTERNAL": 0,
+    "total": 75.763,
+    "provisional_part": 0,
+    "budget": 0,
+    "incl_budget": 75.763,
+    "procurement_eligible": 75.763,
+    "low": 75.763,
+    "high": 75.763,
+    "pending": 0
+   }
+  },
+  {
+   "trade": "PLASTER_PAINT",
+   "item": "Angle beads",
+   "item_ar": "زوايا",
+   "unit": "lm",
+   "technical": {
+    "GF": 50.915578,
+    "1F": 30.204,
+    "2F_ROOF": 3.8,
+    "OTHER_EXTERNAL": 0.0,
+    "total": 84.919578
+   },
+   "commercial": {
+    "GF": 136.189417,
+    "1F": 125.527774,
+    "2F_ROOF": 41.272,
+    "OTHER_EXTERNAL": 0,
+    "total": 302.989191,
+    "provisional_part": 302.989191,
+    "budget": 0,
+    "incl_budget": 302.989191,
+    "procurement_eligible": 0,
+    "low": 259.375269,
+    "high": 346.603114,
+    "pending": 0
+   }
+  },
+  {
+   "trade": "PLASTER_PAINT",
+   "item": "Boundary wall plaster",
+   "item_ar": "لياسة السور",
+   "unit": "m2",
+   "technical": {
+    "GF": 0.0,
+    "1F": 0.0,
+    "2F_ROOF": 0.0,
+    "OTHER_EXTERNAL": 0.0,
+    "total": 0.0
+   },
+   "commercial": {
+    "GF": 0,
+    "1F": 0,
+    "2F_ROOF": 0,
+    "OTHER_EXTERNAL": 313.018,
+    "total": 313.018,
+    "provisional_part": 313.018,
+    "budget": 0,
+    "incl_budget": 313.018,
+    "procurement_eligible": 0,
+    "low": 234.7635,
+    "high": 313.018,
+    "pending": 0
+   }
+  },
+  {
+   "trade": "PLASTER_PAINT",
+   "item": "External Sigma finish (final)",
+   "item_ar": "سيجما",
+   "unit": "m2",
+   "technical": {
+    "GF": 0.0,
+    "1F": 0.0,
+    "2F_ROOF": 0.0,
+    "OTHER_EXTERNAL": 0.0,
+    "total": 0.0
+   },
+   "commercial": {
+    "GF": 560.445,
+    "1F": 288.729,
+    "2F_ROOF": 122.116,
+    "OTHER_EXTERNAL": 0,
+    "total": 971.29,
+    "provisional_part": 971.29,
+    "budget": 0,
+    "incl_budget": 971.29,
+    "procurement_eligible": 0,
+    "low": 874.161,
+    "high": 1068.419,
+    "pending": 0
+   }
+  },
+  {
+   "trade": "PLASTER_PAINT",
+   "item": "External rough plaster",
+   "item_ar": "مساح خشن خارجي",
+   "unit": "m2",
+   "technical": {
+    "GF": 0.0,
+    "1F": 0.0,
+    "2F_ROOF": 0.0,
+    "OTHER_EXTERNAL": 0.0,
+    "total": 0.0
+   },
+   "commercial": {
+    "GF": 560.445,
+    "1F": 288.729,
+    "2F_ROOF": 122.116,
+    "OTHER_EXTERNAL": 0,
+    "total": 971.29,
+    "provisional_part": 971.29,
+    "budget": 0,
+    "incl_budget": 971.29,
+    "procurement_eligible": 0,
+    "low": 874.161,
+    "high": 1068.419,
+    "pending": 0
+   }
+  },
+  {
+   "trade": "PLASTER_PAINT",
+   "item": "External smooth plaster",
+   "item_ar": "مساح ناعم خارجي",
+   "unit": "m2",
+   "technical": {
+    "GF": 0.0,
+    "1F": 0.0,
+    "2F_ROOF": 0.0,
+    "OTHER_EXTERNAL": 0.0,
+    "total": 0.0
+   },
+   "commercial": {
+    "GF": 560.445,
+    "1F": 288.729,
+    "2F_ROOF": 122.116,
+    "OTHER_EXTERNAL": 0,
+    "total": 971.29,
+    "provisional_part": 971.29,
+    "budget": 0,
+    "incl_budget": 971.29,
+    "procurement_eligible": 0,
+    "low": 874.161,
+    "high": 1068.419,
+    "pending": 0
+   }
+  },
+  {
+   "trade": "PLASTER_PAINT",
+   "item": "External spatter dash",
+   "item_ar": "طرطشة خارجية",
+   "unit": "m2",
+   "technical": {
+    "GF": 0.0,
+    "1F": 0.0,
+    "2F_ROOF": 0.0,
+    "OTHER_EXTERNAL": 0.0,
+    "total": 0.0
+   },
+   "commercial": {
+    "GF": 560.445,
+    "1F": 288.729,
+    "2F_ROOF": 122.116,
+    "OTHER_EXTERNAL": 0,
+    "total": 971.29,
+    "provisional_part": 971.29,
+    "budget": 0,
+    "incl_budget": 971.29,
+    "procurement_eligible": 0,
+    "low": 874.161,
+    "high": 1068.419,
+    "pending": 0
+   }
+  },
+  {
+   "trade": "PLASTER_PAINT",
+   "item": "Internal paint (net)",
+   "item_ar": "دهان داخلي",
+   "unit": "m2",
+   "technical": {
+    "GF": 0.0,
+    "1F": 0.0,
+    "2F_ROOF": 0.0,
+    "OTHER_EXTERNAL": 0.0,
+    "total": 0.0
+   },
+   "commercial": {
+    "GF": 553.665765,
+    "1F": 533.79457,
+    "2F_ROOF": 111.77,
+    "OTHER_EXTERNAL": 0,
+    "total": 1199.230335,
+    "provisional_part": 1199.230335,
+    "budget": 0,
+    "incl_budget": 1199.230335,
+    "procurement_eligible": 232.908,
+    "low": 1187.210335,
+    "high": 1286.812774,
+    "pending": 0
+   }
+  },
+  {
+   "trade": "PLASTER_PAINT",
+   "item": "Parapet plaster",
+   "item_ar": "لياسة الدروة",
+   "unit": "m2",
+   "technical": {
+    "GF": 0.0,
+    "1F": 0.0,
+    "2F_ROOF": 181.8312,
+    "OTHER_EXTERNAL": 0.0,
+    "total": 181.8312
+   },
+   "commercial": {
+    "GF": 0,
+    "1F": 0,
+    "2F_ROOF": 181.8312,
+    "OTHER_EXTERNAL": 0,
+    "total": 181.8312,
+    "provisional_part": 0,
+    "budget": 0,
+    "incl_budget": 181.8312,
+    "procurement_eligible": 181.8312,
+    "low": 181.8312,
+    "high": 181.8312,
+    "pending": 0
+   }
+  },
+  {
+   "trade": "PLASTER_PAINT",
+   "item": "Rough plaster",
+   "item_ar": "مساح خشن",
+   "unit": "m2",
+   "technical": {
+    "GF": 0.0,
+    "1F": 0.0,
+    "2F_ROOF": 0.0,
+    "OTHER_EXTERNAL": 0.0,
+    "total": 0.0
+   },
+   "commercial": {
+    "GF": 658.547,
+    "1F": 571.313,
+    "2F_ROOF": 137.705,
+    "OTHER_EXTERNAL": 0,
+    "total": 1367.565,
+    "provisional_part": 1367.565,
+    "budget": 0,
+    "incl_budget": 1367.565,
+    "procurement_eligible": 704.28,
+    "low": 1340.23,
+    "high": 1398.279,
+    "pending": 0
+   }
+  },
+  {
+   "trade": "PLASTER_PAINT",
+   "item": "Smooth plaster",
+   "item_ar": "مساح ناعم",
+   "unit": "m2",
+   "technical": {
+    "GF": 0.0,
+    "1F": 0.0,
+    "2F_ROOF": 0.0,
+    "OTHER_EXTERNAL": 0.0,
+    "total": 0.0
+   },
+   "commercial": {
+    "GF": 658.547,
+    "1F": 571.313,
+    "2F_ROOF": 137.705,
+    "OTHER_EXTERNAL": 0,
+    "total": 1367.565,
+    "provisional_part": 1367.565,
+    "budget": 0,
+    "incl_budget": 1367.565,
+    "procurement_eligible": 704.28,
+    "low": 1340.23,
+    "high": 1398.279,
+    "pending": 0
+   }
+  },
+  {
+   "trade": "PLASTER_PAINT",
+   "item": "Spatter dash (internal)",
+   "item_ar": "طرطشة",
+   "unit": "m2",
+   "technical": {
+    "GF": 0.0,
+    "1F": 0.0,
+    "2F_ROOF": 0.0,
+    "OTHER_EXTERNAL": 0.0,
+    "total": 0.0
+   },
+   "commercial": {
+    "GF": 658.547,
+    "1F": 571.313,
+    "2F_ROOF": 137.705,
+    "OTHER_EXTERNAL": 0,
+    "total": 1367.565,
+    "provisional_part": 1367.565,
+    "budget": 0,
+    "incl_budget": 1367.565,
+    "procurement_eligible": 704.28,
+    "low": 1340.23,
+    "high": 1398.279,
+    "pending": 0
+   }
+  },
+  {
+   "trade": "FLOORING",
+   "item": "Door thresholds",
+   "item_ar": "عتبات",
+   "unit": "m2",
+   "technical": {
+    "GF": 0.52,
+    "1F": 0.0,
+    "2F_ROOF": 0.0,
+    "OTHER_EXTERNAL": 0.0,
+    "total": 0.52
+   },
+   "commercial": {
+    "GF": 0.52,
+    "1F": 0,
+    "2F_ROOF": 0,
+    "OTHER_EXTERNAL": 0,
+    "total": 0.52,
+    "provisional_part": 0,
+    "budget": 0,
+    "incl_budget": 0.52,
+    "procurement_eligible": 0.52,
+    "low": 0.52,
+    "high": 0.52,
+    "pending": 0
+   }
+  },
+  {
+   "trade": "FLOORING",
+   "item": "Floor finish",
+   "item_ar": "أرضيات",
+   "unit": "m2",
+   "technical": {
+    "GF": 240.995,
+    "1F": 162.729,
+    "2F_ROOF": 43.5,
+    "OTHER_EXTERNAL": 0.0,
+    "total": 447.224
+   },
+   "commercial": {
+    "GF": 240.995,
+    "1F": 162.729,
+    "2F_ROOF": 43.5,
+    "OTHER_EXTERNAL": 0,
+    "total": 447.224,
+    "provisional_part": 0,
+    "budget": 0,
+    "incl_budget": 447.224,
+    "procurement_eligible": 447.224,
+    "low": 447.224,
+    "high": 447.224,
+    "pending": 0
+   }
+  },
+  {
+   "trade": "FLOORING",
+   "item": "Skirting",
+   "item_ar": "نعلات",
+   "unit": "lm",
+   "technical": {
+    "GF": 134.518,
+    "1F": 144.882,
+    "2F_ROOF": 32.9,
+    "OTHER_EXTERNAL": 0.0,
+    "total": 312.3
+   },
+   "commercial": {
+    "GF": 134.518,
+    "1F": 144.882,
+    "2F_ROOF": 32.9,
+    "OTHER_EXTERNAL": 0,
+    "total": 312.3,
+    "provisional_part": 0,
+    "budget": 0,
+    "incl_budget": 312.3,
+    "procurement_eligible": 312.3,
+    "low": 312.3,
+    "high": 312.3,
+    "pending": 0
+   }
+  },
+  {
+   "trade": "CEILINGS",
+   "item": "Ceiling area",
+   "item_ar": "مساحة الأسقف",
+   "unit": "m2",
+   "technical": {
+    "GF": 224.99,
+    "1F": 178.734,
+    "2F_ROOF": 43.5,
+    "OTHER_EXTERNAL": 0.0,
+    "total": 447.224
+   },
+   "commercial": {
+    "GF": 224.99,
+    "1F": 178.734,
+    "2F_ROOF": 43.5,
+    "OTHER_EXTERNAL": 0,
+    "total": 447.224,
+    "provisional_part": 0,
+    "budget": 0,
+    "incl_budget": 447.224,
+    "procurement_eligible": 447.224,
+    "low": 447.224,
+    "high": 447.224,
+    "pending": 0
+   }
+  },
+  {
+   "trade": "CEILINGS",
+   "item": "Cornice (review)",
+   "item_ar": "كرانيش",
+   "unit": "lm",
+   "technical": {
+    "GF": 0.0,
+    "1F": 0.0,
+    "2F_ROOF": 0.0,
+    "OTHER_EXTERNAL": 0.0,
+    "total": 0.0
+   },
+   "commercial": {
+    "GF": 0,
+    "1F": 0,
+    "2F_ROOF": 0,
+    "OTHER_EXTERNAL": 0,
+    "total": 0,
+    "provisional_part": 0,
+    "budget": 0,
+    "incl_budget": 0,
+    "procurement_eligible": 0,
+    "low": 0,
+    "high": 0,
+    "pending": 0
+   }
+  },
+  {
+   "trade": "WALL_TILE_WATERPROOFING",
+   "item": "Foundation waterproofing / membrane",
+   "item_ar": "عزل الأساسات",
+   "unit": "m2",
+   "technical": {
+    "GF": 450.029,
+    "1F": 0.0,
+    "2F_ROOF": 0.0,
+    "OTHER_EXTERNAL": 0.0,
+    "total": 450.029
+   },
+   "commercial": {
+    "GF": 670.627,
+    "1F": 0,
+    "2F_ROOF": 0,
+    "OTHER_EXTERNAL": 0,
+    "total": 670.627,
+    "provisional_part": 220.598,
+    "budget": 0,
+    "incl_budget": 670.627,
+    "procurement_eligible": 450.029,
+    "low": 648.5672,
+    "high": 736.8064,
+    "pending": 0
+   }
+  },
+  {
+   "trade": "WALL_TILE_WATERPROOFING",
+   "item": "Pool waterproofing / finish",
+   "item_ar": "المسبح",
+   "unit": "m2",
+   "technical": {
+    "GF": 0.0,
+    "1F": 0.0,
+    "2F_ROOF": 0.0,
+    "OTHER_EXTERNAL": 39.22,
+    "total": 39.22
+   },
+   "commercial": {
+    "GF": 0,
+    "1F": 0,
+    "2F_ROOF": 0,
+    "OTHER_EXTERNAL": 39.22,
+    "total": 39.22,
+    "provisional_part": 0,
+    "budget": 0,
+    "incl_budget": 39.22,
+    "procurement_eligible": 39.22,
+    "low": 39.22,
+    "high": 39.22,
+    "pending": 0
+   }
+  },
+  {
+   "trade": "WALL_TILE_WATERPROOFING",
+   "item": "Roof waterproofing",
+   "item_ar": "عزل الأسطح",
+   "unit": "m2",
+   "technical": {
+    "GF": 0.0,
+    "1F": 0.0,
+    "2F_ROOF": 364.031,
+    "OTHER_EXTERNAL": 0.0,
+    "total": 364.031
+   },
+   "commercial": {
+    "GF": 0,
+    "1F": 0,
+    "2F_ROOF": 364.031,
+    "OTHER_EXTERNAL": 0,
+    "total": 364.031,
+    "provisional_part": 0,
+    "budget": 0,
+    "incl_budget": 364.031,
+    "procurement_eligible": 364.031,
+    "low": 364.031,
+    "high": 364.031,
+    "pending": 0
+   }
+  },
+  {
+   "trade": "WALL_TILE_WATERPROOFING",
+   "item": "Spatter dash (tiled faces)",
+   "item_ar": "طرطشة",
+   "unit": "m2",
+   "technical": {
+    "GF": 0.0,
+    "1F": 26.36,
+    "2F_ROOF": 0.0,
+    "OTHER_EXTERNAL": 0.0,
+    "total": 26.36
+   },
+   "commercial": {
+    "GF": 209.762,
+    "1F": 130.157,
+    "2F_ROOF": 29.204,
+    "OTHER_EXTERNAL": 0,
+    "total": 369.123,
+    "provisional_part": 342.763,
+    "budget": 0,
+    "incl_budget": 369.123,
+    "procurement_eligible": 318.189,
+    "low": 362.575,
+    "high": 372.71,
+    "pending": 0
+   }
+  },
+  {
+   "trade": "WALL_TILE_WATERPROOFING",
+   "item": "Tile preparation",
+   "item_ar": "تجهيز",
+   "unit": "m2",
+   "technical": {
+    "GF": 0.0,
+    "1F": 26.36,
+    "2F_ROOF": 0.0,
+    "OTHER_EXTERNAL": 0.0,
+    "total": 26.36
+   },
+   "commercial": {
+    "GF": 209.762,
+    "1F": 130.157,
+    "2F_ROOF": 29.204,
+    "OTHER_EXTERNAL": 0,
+    "total": 369.123,
+    "provisional_part": 342.763,
+    "budget": 0,
+    "incl_budget": 369.123,
+    "procurement_eligible": 318.189,
+    "low": 362.575,
+    "high": 372.71,
+    "pending": 0
+   }
+  },
+  {
+   "trade": "WALL_TILE_WATERPROOFING",
+   "item": "WP floor",
+   "item_ar": "عزل أرضية",
+   "unit": "m2",
+   "technical": {
+    "GF": 29.210513,
+    "1F": 23.476,
+    "2F_ROOF": 5.55,
+    "OTHER_EXTERNAL": 0.0,
+    "total": 58.236513
+   },
+   "commercial": {
+    "GF": 29.210513,
+    "1F": 23.476,
+    "2F_ROOF": 5.55,
+    "OTHER_EXTERNAL": 0,
+    "total": 58.236513,
+    "provisional_part": 0,
+    "budget": 0,
+    "incl_budget": 58.236513,
+    "procurement_eligible": 58.236513,
+    "low": 58.236513,
+    "high": 58.236513,
+    "pending": 0
+   }
+  },
+  {
+   "trade": "WALL_TILE_WATERPROOFING",
+   "item": "WP upturn area",
+   "item_ar": "مساحة القلبة",
+   "unit": "m2",
+   "technical": {
+    "GF": 7.788582,
+    "1F": 5.376,
+    "2F_ROOF": 1.245,
+    "OTHER_EXTERNAL": 0.0,
+    "total": 14.409582
+   },
+   "commercial": {
+    "GF": 7.788582,
+    "1F": 5.376,
+    "2F_ROOF": 1.245,
+    "OTHER_EXTERNAL": 0,
+    "total": 14.409582,
+    "provisional_part": 0,
+    "budget": 0,
+    "incl_budget": 14.409582,
+    "procurement_eligible": 14.409582,
+    "low": 14.409582,
+    "high": 14.409582,
+    "pending": 0
+   }
+  },
+  {
+   "trade": "WALL_TILE_WATERPROOFING",
+   "item": "WP upturn length",
+   "item_ar": "طول القلبة",
+   "unit": "lm",
+   "technical": {
+    "GF": 51.923877,
+    "1F": 35.84,
+    "2F_ROOF": 8.3,
+    "OTHER_EXTERNAL": 0.0,
+    "total": 96.063877
+   },
+   "commercial": {
+    "GF": 51.923877,
+    "1F": 35.84,
+    "2F_ROOF": 8.3,
+    "OTHER_EXTERNAL": 0,
+    "total": 96.063877,
+    "provisional_part": 0,
+    "budget": 0,
+    "incl_budget": 96.063877,
+    "procurement_eligible": 96.063877,
+    "low": 96.063877,
+    "high": 96.063877,
+    "pending": 0
+   }
+  },
+  {
+   "trade": "WALL_TILE_WATERPROOFING",
+   "item": "Wall tile (net)",
+   "item_ar": "سيراميك جدران",
+   "unit": "m2",
+   "technical": {
+    "GF": 0.0,
+    "1F": 26.36,
+    "2F_ROOF": 0.0,
+    "OTHER_EXTERNAL": 0.0,
+    "total": 26.36
+   },
+   "commercial": {
+    "GF": 209.762,
+    "1F": 130.157,
+    "2F_ROOF": 29.204,
+    "OTHER_EXTERNAL": 0,
+    "total": 369.123,
+    "provisional_part": 342.763,
+    "budget": 0,
+    "incl_budget": 369.123,
+    "procurement_eligible": 318.189,
+    "low": 362.575,
+    "high": 372.71,
+    "pending": 0
+   }
+  },
+  {
+   "trade": "ALUMINIUM_OPENINGS",
+   "item": "Curved glazing area",
+   "item_ar": "مساحة الزجاج المنحني",
+   "unit": "m2",
+   "technical": {
+    "GF": 28.9175,
+    "1F": 0.0,
+    "2F_ROOF": 0.0,
+    "OTHER_EXTERNAL": 0.0,
+    "total": 28.9175
+   },
+   "commercial": {
+    "GF": 28.9175,
+    "1F": 0,
+    "2F_ROOF": 0,
+    "OTHER_EXTERNAL": 0,
+    "total": 28.9175,
+    "provisional_part": 0,
+    "budget": 0,
+    "incl_budget": 28.9175,
+    "procurement_eligible": 28.9175,
+    "low": 28.9175,
+    "high": 28.9175,
+    "pending": 0
+   }
+  },
+  {
+   "trade": "ALUMINIUM_OPENINGS",
+   "item": "Curved glazing length",
+   "item_ar": "طول الزجاج المنحني",
+   "unit": "lm",
+   "technical": {
+    "GF": 6.725,
+    "1F": 0.0,
+    "2F_ROOF": 0.0,
+    "OTHER_EXTERNAL": 0.0,
+    "total": 6.725
+   },
+   "commercial": {
+    "GF": 6.725,
+    "1F": 0,
+    "2F_ROOF": 0,
+    "OTHER_EXTERNAL": 0,
+    "total": 6.725,
+    "provisional_part": 0,
+    "budget": 0,
+    "incl_budget": 6.725,
+    "procurement_eligible": 6.725,
+    "low": 6.725,
+    "high": 6.725,
+    "pending": 0
+   }
+  },
+  {
+   "trade": "ALUMINIUM_OPENINGS",
+   "item": "Doors double leaf",
+   "item_ar": "أبواب ضلفتين",
+   "unit": "m2",
+   "technical": {
+    "GF": 0.0,
+    "1F": 0.0,
+    "2F_ROOF": 0.0,
+    "OTHER_EXTERNAL": 0.0,
+    "total": 0.0
+   },
+   "commercial": {
+    "GF": 4.474,
+    "1F": 0,
+    "2F_ROOF": 0,
+    "OTHER_EXTERNAL": 0,
+    "total": 4.474,
+    "provisional_part": 4.474,
+    "budget": 0,
+    "incl_budget": 4.474,
+    "procurement_eligible": 0,
+    "low": 3.878,
+    "high": 5.45,
+    "pending": 0
+   }
+  },
+  {
+   "trade": "ALUMINIUM_OPENINGS",
+   "item": "Doors double leaf",
+   "item_ar": "أبواب ضلفتين",
+   "unit": "nr",
+   "technical": {
+    "GF": 1.0,
+    "1F": 0.0,
+    "2F_ROOF": 0.0,
+    "OTHER_EXTERNAL": 0.0,
+    "total": 1.0
+   },
+   "commercial": {
+    "GF": 1.0,
+    "1F": 0,
+    "2F_ROOF": 0,
+    "OTHER_EXTERNAL": 0,
+    "total": 1.0,
+    "provisional_part": 0,
+    "budget": 0,
+    "incl_budget": 1.0,
+    "procurement_eligible": 1.0,
+    "low": 1.0,
+    "high": 1.0,
+    "pending": 0
+   }
+  },
+  {
+   "trade": "ALUMINIUM_OPENINGS",
+   "item": "Doors single leaf",
+   "item_ar": "أبواب",
+   "unit": "m2",
+   "technical": {
+    "GF": 13.035,
+    "1F": 8.468,
+    "2F_ROOF": 0.0,
+    "OTHER_EXTERNAL": 0.0,
+    "total": 21.503
+   },
+   "commercial": {
+    "GF": 25.311,
+    "1F": 18.4341,
+    "2F_ROOF": 5.7321,
+    "OTHER_EXTERNAL": 0,
+    "total": 49.4772,
+    "provisional_part": 49.4772,
+    "budget": 0,
+    "incl_budget": 49.4772,
+    "procurement_eligible": 0,
+    "low": 49.1577,
+    "high": 50.4194,
+    "pending": 0
+   }
+  },
+  {
+   "trade": "ALUMINIUM_OPENINGS",
+   "item": "Doors single leaf",
+   "item_ar": "أبواب",
+   "unit": "nr",
+   "technical": {
+    "GF": 13.0,
+    "1F": 10.0,
+    "2F_ROOF": 3.0,
+    "OTHER_EXTERNAL": 0.0,
+    "total": 26.0
+   },
+   "commercial": {
+    "GF": 13.0,
+    "1F": 10.0,
+    "2F_ROOF": 3.0,
+    "OTHER_EXTERNAL": 0,
+    "total": 26.0,
+    "provisional_part": 0,
+    "budget": 0,
+    "incl_budget": 26.0,
+    "procurement_eligible": 26.0,
+    "low": 26.0,
+    "high": 26.0,
+    "pending": 0
+   }
+  },
+  {
+   "trade": "ALUMINIUM_OPENINGS",
+   "item": "Opening widths",
+   "item_ar": "عروض الفتحات",
+   "unit": "lm",
+   "technical": {
+    "GF": 35.767,
+    "1F": 22.306,
+    "2F_ROOF": 7.7,
+    "OTHER_EXTERNAL": 0.0,
+    "total": 65.773
+   },
+   "commercial": {
+    "GF": 35.767,
+    "1F": 22.306,
+    "2F_ROOF": 7.7,
+    "OTHER_EXTERNAL": 0,
+    "total": 65.773,
+    "provisional_part": 0,
+    "budget": 0,
+    "incl_budget": 65.773,
+    "procurement_eligible": 65.773,
+    "low": 65.773,
+    "high": 65.773,
+    "pending": 0
+   }
+  },
+  {
+   "trade": "ALUMINIUM_OPENINGS",
+   "item": "Salon glazing",
+   "item_ar": "زجاج الصالون",
+   "unit": "m2",
+   "technical": {
+    "GF": 23.104,
+    "1F": 0.0,
+    "2F_ROOF": 0.0,
+    "OTHER_EXTERNAL": 0.0,
+    "total": 23.104
+   },
+   "commercial": {
+    "GF": 23.104,
+    "1F": 0,
+    "2F_ROOF": 0,
+    "OTHER_EXTERNAL": 0,
+    "total": 23.104,
+    "provisional_part": 0,
+    "budget": 0,
+    "incl_budget": 23.104,
+    "procurement_eligible": 23.104,
+    "low": 23.104,
+    "high": 23.104,
+    "pending": 0
+   }
+  },
+  {
+   "trade": "ALUMINIUM_OPENINGS",
+   "item": "Window sill length",
+   "item_ar": "جلسات",
+   "unit": "lm",
+   "technical": {
+    "GF": 21.142,
+    "1F": 14.756,
+    "2F_ROOF": 5.0,
+    "OTHER_EXTERNAL": 0.0,
+    "total": 40.898
+   },
+   "commercial": {
+    "GF": 21.142,
+    "1F": 14.756,
+    "2F_ROOF": 5.0,
+    "OTHER_EXTERNAL": 0,
+    "total": 40.898,
+    "provisional_part": 0,
+    "budget": 0,
+    "incl_budget": 40.898,
+    "procurement_eligible": 40.898,
+    "low": 40.898,
+    "high": 40.898,
+    "pending": 0
+   }
+  },
+  {
+   "trade": "ALUMINIUM_OPENINGS",
+   "item": "Windows / glazed openings",
+   "item_ar": "نوافذ",
+   "unit": "m2",
+   "technical": {
+    "GF": 23.1118,
+    "1F": 0.3565,
+    "2F_ROOF": 0.0,
+    "OTHER_EXTERNAL": 0.0,
+    "total": 23.4683
+   },
+   "commercial": {
+    "GF": 0,
+    "1F": 0,
+    "2F_ROOF": 0,
+    "OTHER_EXTERNAL": 0,
+    "total": 0,
+    "provisional_part": 0,
+    "budget": 89.9799,
+    "incl_budget": 89.9799,
+    "procurement_eligible": 0,
+    "low": 54.6038,
+    "high": 136.4286,
+    "pending": 0
+   }
+  },
+  {
+   "trade": "ALUMINIUM_OPENINGS",
+   "item": "Windows / glazed openings",
+   "item_ar": "نوافذ",
+   "unit": "nr",
+   "technical": {
+    "GF": 16.0,
+    "1F": 12.0,
+    "2F_ROOF": 5.0,
+    "OTHER_EXTERNAL": 0.0,
+    "total": 33.0
+   },
+   "commercial": {
+    "GF": 16.0,
+    "1F": 12.0,
+    "2F_ROOF": 5.0,
+    "OTHER_EXTERNAL": 0,
+    "total": 33.0,
+    "provisional_part": 0,
+    "budget": 0,
+    "incl_budget": 33.0,
+    "procurement_eligible": 33.0,
+    "low": 33.0,
+    "high": 33.0,
+    "pending": 0
+   }
+  },
+  {
+   "trade": "STAIRS_RAILINGS",
+   "item": "Gallery railing",
+   "item_ar": "درابزين",
+   "unit": "lm",
+   "technical": {
+    "GF": 0.0,
+    "1F": 14.29,
+    "2F_ROOF": 0.0,
+    "OTHER_EXTERNAL": 0.0,
+    "total": 14.29
+   },
+   "commercial": {
+    "GF": 0,
+    "1F": 14.29,
+    "2F_ROOF": 0,
+    "OTHER_EXTERNAL": 0,
+    "total": 14.29,
+    "provisional_part": 0,
+    "budget": 0,
+    "incl_budget": 14.29,
+    "procurement_eligible": 14.29,
+    "low": 14.29,
+    "high": 14.29,
+    "pending": 0
+   }
+  },
+  {
+   "trade": "STAIRS_RAILINGS",
+   "item": "Stair nosing",
+   "item_ar": "حافة",
+   "unit": "lm",
+   "technical": {
+    "GF": 0.0,
+    "1F": 0.0,
+    "2F_ROOF": 0.0,
+    "OTHER_EXTERNAL": 0.0,
+    "total": 0.0
+   },
+   "commercial": {
+    "GF": 55.2,
+    "1F": 0,
+    "2F_ROOF": 0,
+    "OTHER_EXTERNAL": 0,
+    "total": 55.2,
+    "provisional_part": 55.2,
+    "budget": 0,
+    "incl_budget": 55.2,
+    "procurement_eligible": 0,
+    "low": 52.44,
+    "high": 63.48,
+    "pending": 0
+   }
+  },
+  {
+   "trade": "STAIRS_RAILINGS",
+   "item": "Stair risers",
+   "item_ar": "قوائم",
+   "unit": "m2",
+   "technical": {
+    "GF": 0.0,
+    "1F": 0.0,
+    "2F_ROOF": 0.0,
+    "OTHER_EXTERNAL": 0.0,
+    "total": 0.0
+   },
+   "commercial": {
+    "GF": 10.005,
+    "1F": 0,
+    "2F_ROOF": 0,
+    "OTHER_EXTERNAL": 0,
+    "total": 10.005,
+    "provisional_part": 10.005,
+    "budget": 0,
+    "incl_budget": 10.005,
+    "procurement_eligible": 0,
+    "low": 9.70485,
+    "high": 10.30515,
+    "pending": 0
+   }
+  }
+ ],
+ "release_label": "V3b FULL-BOQ CANDIDATE (not FINAL)",
+ "rule": "block A takes technical classes only; block B adds labelled provisional classes (budget estimates beside, never inside); one unit per row; alternatives / components / superseded lines never summed"
+}

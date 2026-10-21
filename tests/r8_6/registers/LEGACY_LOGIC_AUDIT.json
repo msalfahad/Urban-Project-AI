@@ -1,0 +1,136 @@
+{
+ "SCHEMA": "URBAN_R8_6_LEGACY_LOGIC_AUDIT_V1",
+ "classes": [
+  "GENERIC_URBAN_METHOD",
+  "PROJECT_ADAPTER_FACT",
+  "LEGACY_PROJECT_LOGIC",
+  "BENCHMARK_ONLY"
+ ],
+ "searched_for": [
+  "project name checks",
+  "hardcoded coordinates",
+  "room ids",
+  "manual totals",
+  "project-specific constants",
+  "special-case dimensions",
+  "benchmark-derived values"
+ ],
+ "search_result": {
+  "hardcoded_coordinates": 0,
+  "hardcoded_room_ids": 0,
+  "manual_totals_in_value_path": 0,
+  "benchmark_imports": 0
+ },
+ "dependencies": [
+  {
+   "dependency": "pipeline7 ingest (bands, faces, sites, grids, planar faces)",
+   "where": "engine/ingest/pipeline7.py",
+   "class": "GENERIC_URBAN_METHOD",
+   "evidence": "engine package with no-project-constant tests (PA05-PA07)",
+   "rows_affected": "ALL"
+  },
+  {
+   "dependency": "unit selection: INSUNITS first, accepted SOURCE_ESTABLISHED",
+   "where": "engine/ingest/source_units.py",
+   "class": "LEGACY_PROJECT_LOGIC",
+   "evidence": "legacy active-path policy, not project-specific: INSUNITS 5 -> cm accepted although the method's own secondary check failed (modal wall pair 714.5 mm, outside 50-600 mm). For this Qortuba source the value it uses (10.0) now equals the owner-confirmed unit, so it no longer changes a value here - but the migration must take the unit from the owner claim, never from INSUNITS (abort METHOD_UNIT_DIFFERS_FROM_CONFIRMED_UNIT)",
+   "rows_affected": "ALL"
+  },
+  {
+   "dependency": "method thresholds in millimetres (snap 2 mm, shaft 600 mm, terrace 3.0 m2, guard 0.9 m2, raster cell)",
+   "where": "r3/floor_regions.py, qs01/takeoff.py",
+   "class": "GENERIC_URBAN_METHOD",
+   "evidence": "generic heuristics, but they make the method NOT scale-invariant: the unit decides which cells are rooms",
+   "rows_affected": "ALL"
+  },
+  {
+   "dependency": "cell classes, stair / roof tokens incl. Arabic 'سطح'",
+   "where": "r2/cells.py",
+   "class": "GENERIC_URBAN_METHOD",
+   "evidence": "generic vocabulary; located in a project folder, needs promotion",
+   "rows_affected": "ALL"
+  },
+  {
+   "dependency": "room inventory: layer names 'STAIR' and 'lift' exclude a cell from the apartment",
+   "where": "qs01/takeoff.py",
+   "class": "PROJECT_ADAPTER_FACT",
+   "evidence": "exact layer names of this drawing; must become adapter facts, not method code",
+   "rows_affected": "ALL"
+  },
+  {
+   "dependency": "room inventory: labelled cell = apartment room; unlabelled cell with an apartment door = room",
+   "where": "qs01/takeoff.py",
+   "class": "GENERIC_URBAN_METHOD",
+   "evidence": "generic rule; depends on labels (canonical) and door sites",
+   "rows_affected": "ALL"
+  },
+  {
+   "dependency": "wet classes BATHROOM, WC, KITCHEN, LAUNDRY, WASHROOM",
+   "where": "qs01/takeoff.py, r2/cells.py",
+   "class": "GENERIC_URBAN_METHOD",
+   "evidence": "generic semantic classes",
+   "rows_affected": "Q-03, Q-11, Q-13"
+  },
+  {
+   "dependency": "STOREY constant 'SECOND_FLOOR (title block ...)'",
+   "where": "qs01/takeoff.py",
+   "class": "PROJECT_ADAPTER_FACT",
+   "evidence": "label only, never enters a value; it is the designation still PENDING_REVIEW",
+   "rows_affected": "ALL (metadata)"
+  },
+  {
+   "dependency": "CERAMIC_ROOM_NAMES = ('BATH', 'PAINTRY')",
+   "where": "boq/owner_rules.py",
+   "class": "PROJECT_ADAPTER_FACT",
+   "evidence": "owner-approved project rule QP-07 (the pantry is a ceramic service room), keyed on the drawing's spelling 'PAINTRY'; it decides membership of Q-03P, Q-12 and Q-13",
+   "rows_affected": "Q-03P, Q-12, Q-13"
+  },
+  {
+   "dependency": "Q-03 / Q-11 rooms=['BATH','BATH','BATH'] and 'the three bathroom floor polygons'",
+   "where": "boq/owner_rules.py",
+   "class": "LEGACY_PROJECT_LOGIC",
+   "evidence": "hardcoded room list and wording; does not enter the value (the value sums the WET floors), but would be wrong metadata if the room set changed. Replace by computed membership before migration",
+   "rows_affected": "Q-03, Q-11"
+  },
+  {
+   "dependency": "Q-14 extra CEILING_PERIMETER_NOT_A_PAYABLE_ITEM_LM = 153.125",
+   "where": "boq/owner_rules.py",
+   "class": "LEGACY_PROJECT_LOGIC",
+   "evidence": "hardcoded number in row metadata; not in the value",
+   "rows_affected": "Q-14"
+  },
+  {
+   "dependency": "ceiling area = floor region; VOID / STAIR_OPENING / SHAFT / OPEN_TO_ABOVE all False",
+   "where": "qs01/takeoff.py",
+   "class": "LEGACY_PROJECT_LOGIC",
+   "evidence": "asserted, not tested: the conditions are constants. Q-14 rests on it (owner action CONFIRM_Q14_CEILING_HAS_NO_VOID_OR_OPENING)",
+   "rows_affected": "Q-14"
+  },
+  {
+   "dependency": "row expressions for the six rows (sum of floor polygons by class)",
+   "where": "boq/owner_rules.py",
+   "class": "GENERIC_URBAN_METHOD",
+   "evidence": "proven by ablation to need only the floors (all other inputs passed empty)",
+   "rows_affected": "ALL"
+  },
+  {
+   "dependency": "benchmark / pricing / contractor registers",
+   "where": "boq/benchmark_seal.py, pricing/*",
+   "class": "BENCHMARK_ONLY",
+   "evidence": "not in the import closure of the six rows (verified)",
+   "rows_affected": "NONE"
+  }
+ ],
+ "by_class": {
+  "GENERIC_URBAN_METHOD": 6,
+  "LEGACY_PROJECT_LOGIC": 4,
+  "PROJECT_ADAPTER_FACT": 3,
+  "BENCHMARK_ONLY": 1
+ },
+ "legacy_logic_in_value_path": [
+  "unit selection: INSUNITS first, accepted SOURCE_ESTABLISHED",
+  "ceiling area = floor region; VOID / STAIR_OPENING / SHAFT / OPEN_TO_ABOVE all False"
+ ],
+ "verdict": "the six values are produced by generic method code plus two project adapter facts (layer names, QP-07 membership); two LEGACY items sit in the value path - the INSUNITS unit policy (its value now coincides with the owner-confirmed 10.0 mm, guarded by an abort condition) and the untested ceiling conditions (Q-14 only) - and two LEGACY items are metadata only. The method itself lives in a project research folder and is NOT_MIGRATED",
+ "unused": 1
+}

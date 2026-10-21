@@ -1,0 +1,389 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_A2_PLAN_REGION_REGISTER_V1",
+ "sheets": [
+  {
+   "discipline": "ARCHITECTURAL",
+   "sheet": "ARCH-S01",
+   "frame_handle": "132",
+   "bounds": [
+    -388976.0,
+    -811916.0,
+    -348662.0,
+    -783886.0
+   ],
+   "titles": [
+    "NORTH WEST ELEVATION"
+   ],
+   "floor": "NORTH_WEST_ELEVATION",
+   "view": "ELEVATION",
+   "structural_role": null
+  },
+  {
+   "discipline": "ARCHITECTURAL",
+   "sheet": "ARCH-S02",
+   "frame_handle": "131",
+   "bounds": [
+    -299271.0,
+    -811916.0,
+    -258956.0,
+    -783886.0
+   ],
+   "titles": [
+    "SOUTH EAST ELEVATION"
+   ],
+   "floor": "SOUTH_EAST_ELEVATION",
+   "view": "ELEVATION",
+   "structural_role": null
+  },
+  {
+   "discipline": "ARCHITECTURAL",
+   "sheet": "ARCH-S03",
+   "frame_handle": "130",
+   "bounds": [
+    -254418.0,
+    -811916.0,
+    -214104.0,
+    -783886.0
+   ],
+   "titles": [
+    "2nd.FLOOR PLAN 1:100"
+   ],
+   "floor": "2F",
+   "view": "PLAN",
+   "structural_role": null
+  },
+  {
+   "discipline": "ARCHITECTURAL",
+   "sheet": "ARCH-S04",
+   "frame_handle": "129",
+   "bounds": [
+    -209565.0,
+    -811916.0,
+    -169251.0,
+    -783886.0
+   ],
+   "titles": [
+    "1st.FLOOR PLAN 1:100"
+   ],
+   "floor": "1F",
+   "view": "PLAN",
+   "structural_role": null
+  },
+  {
+   "discipline": "ARCHITECTURAL",
+   "sheet": "ARCH-S05",
+   "frame_handle": "125",
+   "bounds": [
+    -164713.0,
+    -811916.0,
+    -124398.0,
+    -783886.0
+   ],
+   "titles": [
+    "GROUND FLOOR PLAN 1:100"
+   ],
+   "floor": "GF",
+   "view": "PLAN",
+   "structural_role": null
+  },
+  {
+   "discipline": "STRUCTURAL",
+   "sheet": "STRU-S01",
+   "frame_handle": "6957",
+   "bounds": [
+    94532.0,
+    -7596.0,
+    129727.0,
+    20434.0
+   ],
+   "titles": [
+    "Schedule of Simple Beams"
+   ],
+   "floor": null,
+   "view": null,
+   "structural_role": "SIMPLE_BEAMS"
+  },
+  {
+   "discipline": "STRUCTURAL",
+   "sheet": "STRU-S02",
+   "frame_handle": "6956",
+   "bounds": [
+    137729.0,
+    -7596.0,
+    172924.0,
+    20434.0
+   ],
+   "titles": [
+    "Schedule  of  Footings",
+    "Schedule  of Columns",
+    "DETAILS OF COLUMN REINFORCEMENT."
+   ],
+   "floor": null,
+   "view": null,
+   "structural_role": "SCHEDULES"
+  },
+  {
+   "discipline": "STRUCTURAL",
+   "sheet": "STRU-S03",
+   "frame_handle": "183",
+   "bounds": [
+    -75968.0,
+    29036.0,
+    -40773.0,
+    57066.0
+   ],
+   "titles": [
+    "DETAIL OF DOME",
+    "DETAIL OF SWIMMING POOL."
+   ],
+   "floor": null,
+   "view": null,
+   "structural_role": "POOL_DOME"
+  },
+  {
+   "discipline": "STRUCTURAL",
+   "sheet": "STRU-S04",
+   "frame_handle": "182",
+   "bounds": [
+    -37243.0,
+    29036.0,
+    -2049.0,
+    57066.0
+   ],
+   "titles": [
+    "SECOND FLOOR ROOF SLAB.",
+    "CHECK  ARCHITECTURAL DETAIL OF"
+   ],
+   "floor": null,
+   "view": null,
+   "structural_role": "2F_ROOF_SLAB"
+  },
+  {
+   "discipline": "STRUCTURAL",
+   "sheet": "STRU-S05",
+   "frame_handle": "181",
+   "bounds": [
+    1481.0,
+    29036.0,
+    36675.0,
+    57066.0
+   ],
+   "titles": [
+    "FIRST FLOOR ROOF SLAB.",
+    "SECTION B-B",
+    "SEE DETAIL",
+    "SEE DETAIL",
+    "SEE DETAIL",
+    "SEE DETAIL",
+    "SEE DETAIL",
+    "SEE DETAIL",
+    "SEE DETAIL",
+    "SEE DETAIL",
+    "CHECK  ARCHITECTURAL DETAIL OF"
+   ],
+   "floor": null,
+   "view": null,
+   "structural_role": "1F_ROOF_SLAB"
+  },
+  {
+   "discipline": "STRUCTURAL",
+   "sheet": "STRU-S06",
+   "frame_handle": "180",
+   "bounds": [
+    40205.0,
+    29036.0,
+    75400.0,
+    57066.0
+   ],
+   "titles": [
+    "GROUND FLOOR ROOF SLAB.",
+    "SECTION A-A",
+    "SECTION C-C",
+    "SECTION D-D",
+    "CHECK  ARCHITECTURAL DETAIL OF"
+   ],
+   "floor": null,
+   "view": null,
+   "structural_role": "GF_ROOF_SLAB"
+  },
+  {
+   "discipline": "STRUCTURAL",
+   "sheet": "STRU-S07",
+   "frame_handle": "179",
+   "bounds": [
+    78930.0,
+    29036.0,
+    114124.0,
+    57066.0
+   ],
+   "titles": [
+    "GROUND BEAMS PLAN"
+   ],
+   "floor": null,
+   "view": null,
+   "structural_role": "GROUND_BEAMS"
+  },
+  {
+   "discipline": "STRUCTURAL",
+   "sheet": "STRU-S08",
+   "frame_handle": "178",
+   "bounds": [
+    117654.0,
+    29036.0,
+    152849.0,
+    57066.0
+   ],
+   "titles": [
+    "FOUNDATION PLAN."
+   ],
+   "floor": null,
+   "view": null,
+   "structural_role": "FOUNDATION"
+  },
+  {
+   "discipline": "STRUCTURAL",
+   "sheet": "STRU-S09",
+   "frame_handle": "176",
+   "bounds": [
+    156379.0,
+    29036.0,
+    191573.0,
+    57066.0
+   ],
+   "titles": [
+    "COLUMN & AXIS PLAN."
+   ],
+   "floor": null,
+   "view": null,
+   "structural_role": "COLUMN_AXIS"
+  }
+ ],
+ "plan_regions": {
+  "GF": {
+   "sheet": "ARCH-S05",
+   "titles": [
+    "GROUND FLOOR PLAN 1:100"
+   ],
+   "frame_bounds": [
+    -164713.0,
+    -811916.0,
+    -124398.0,
+    -783886.0
+   ],
+   "inferred_frames": [
+    {
+     "bounds": [
+      -164712.801,
+      -811916.464,
+      -124398.491,
+      -783886.131
+     ],
+     "aspect": 1.4382,
+     "content_share": 1.0,
+     "parts": 4
+    }
+   ]
+  },
+  "1F": {
+   "sheet": "ARCH-S04",
+   "titles": [
+    "1st.FLOOR PLAN 1:100"
+   ],
+   "frame_bounds": [
+    -209565.0,
+    -811916.0,
+    -169251.0,
+    -783886.0
+   ],
+   "inferred_frames": [
+    {
+     "bounds": [
+      -209565.456,
+      -811916.464,
+      -169251.146,
+      -783886.131
+     ],
+     "aspect": 1.4382,
+     "content_share": 1.0,
+     "parts": 4
+    }
+   ]
+  },
+  "2F": {
+   "sheet": "ARCH-S03",
+   "titles": [
+    "2nd.FLOOR PLAN 1:100"
+   ],
+   "frame_bounds": [
+    -254418.0,
+    -811916.0,
+    -214104.0,
+    -783886.0
+   ],
+   "inferred_frames": [
+    {
+     "bounds": [
+      -254418.111,
+      -811916.464,
+      -214103.801,
+      -783886.131
+     ],
+     "aspect": 1.4382,
+     "content_share": 1.0,
+     "parts": 4
+    }
+   ]
+  }
+ },
+ "leakage": {
+  "state": "NO_LEAKAGE",
+  "shared_parts": 0,
+  "parts_per_region": {
+   "GF": 2531,
+   "1F": 2067,
+   "2F": 1601
+  },
+  "rule": "each plan region is its own sheet-frame interior; a part belongs to at most one region"
+ },
+ "pdf_sheets": {
+  "P7757_Architectural_Plan_Pages_01-06.pdf": [
+   "AREA PLANS - GROUND FLOOR + 1st FLOOR (municipal area calculation)",
+   "AREA PLAN - 2nd FLOOR + TOTAL FLOORS AREA",
+   "GROUND FLOOR PLAN 1:100",
+   "1st FLOOR PLAN 1:100",
+   "2nd FLOOR PLAN 1:100",
+   "SOUTH EAST ELEVATION 1:100"
+  ],
+  "P7757_Architectural_Plan_Pages_07-12.pdf": [
+   "SOUTH WEST ELEVATION 1:100",
+   "NORTH WEST ELEVATION 1:100",
+   "NORTH EAST ELEVATION 1:100",
+   "SECTION 1:100",
+   "SECTION 1:100",
+   "FENCE ELEVATION + FENCE SECTION"
+  ],
+  "ST7757.pdf": [
+   "COLUMN & AXIS PLAN",
+   "FOUNDATION PLAN",
+   "GROUND BEAMS PLAN",
+   "GROUND FLOOR ROOF SLAB",
+   "FIRST FLOOR ROOF SLAB",
+   "SECOND FLOOR ROOF SLAB",
+   "DETAIL OF SWIMMING POOL + DETAIL OF DOME",
+   "RECOMMENDATIONS (raster image)",
+   "SCHEDULES (columns, footings)",
+   "SCHEDULE OF SIMPLE BEAMS",
+   "SCHEDULE OF CONTINUOUS BEAMS (2 SPAN) x2",
+   "SCHEDULE OF CONTINUOUS BEAMS (THREE SPAN)",
+   "TYPICAL DETAILS (footing, lintel, ground beams)",
+   "TYPICAL DETAILS (parapet, lift pit, boundary wall)",
+   "TYPICAL DETAILS (twisted columns, slab on beams, planted column)",
+   "TYPICAL DETAILS (stairs)"
+  ],
+  "sanitary-7757.pdf": [
+   "SANITARY SHEET 1",
+   "SANITARY SHEET 2",
+   "SANITARY SHEET 3"
+  ]
+ }
+}

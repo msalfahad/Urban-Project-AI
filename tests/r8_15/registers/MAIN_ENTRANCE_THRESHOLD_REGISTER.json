@@ -1,0 +1,41 @@
+{
+ "SCHEMA": "URBAN_R8_15_MAIN_ENTRANCE_THRESHOLD_REGISTER_V1",
+ "fact": "QORTUBA-NEW-MAIN-ENTRANCE-MARBLE-OWNER-001@v1",
+ "door_occurrence": "I677",
+ "threshold": "THRESHOLD-bfcea08375237224",
+ "marble": {
+  "threshold": "THRESHOLD-bfcea08375237224",
+  "state": "MARBLE_COMPUTED",
+  "trade": "MARBLE_THRESHOLD",
+  "authority_kind": "EXPLICIT_PROJECT_FACT",
+  "authority": "QORTUBA-NEW-MAIN-ENTRANCE-MARBLE-OWNER-001@v1",
+  "corroborating_rule": null,
+  "clear_width_mm": 1000.0,
+  "clear_width_basis": "face-closure length = the doorway opening between the jamb caps (source)",
+  "depth_mm": 150.0,
+  "depth_basis": "separation of the two face closures = wall thickness at the doorway (source)",
+  "plan_area_m2": 0.15,
+  "length_lm": 1.0,
+  "width_x_depth_m2": 0.15,
+  "vertical_rise_mm": "NOT_STATED",
+  "rise_is": "VERTICAL elevation above the adjoining finished floor (never a plan dimension)",
+  "function": null,
+  "water_containment": false,
+  "counted_once": true,
+  "never": [
+   "a price or rate",
+   "a volume",
+   "a waterproofing / slope / drain change"
+  ]
+ },
+ "r8_14": {
+  "allocation": "SPLIT_AT_DOOR_PLANE",
+  "porcelain_m2_then": 0.075,
+  "now": "superseded by the explicit fact"
+ },
+ "floor_interfaces": "apartment porcelain ends at the apartment-side marble edge; the common-area finish begins after the opposite edge",
+ "q13_porcelain_from_threshold_m2": 0.0,
+ "rise": "NOT_STATED (the Urban 20 mm rule does not apply to the entrance)",
+ "water_containment": "NOT CLAIMED",
+ "photo": "type only, never dimensions"
+}

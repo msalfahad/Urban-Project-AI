@@ -1,0 +1,341 @@
+{
+ "row": "Q-13",
+ "STATE": "COMPUTED_SHADOW",
+ "VALUE": 111.5988,
+ "unit": "m2",
+ "final": false,
+ "TOPOLOGY_POLICY": "WALL_BAND_POLICY_V4 (8ed1a5cff22b8057) + TOPOLOGY_CLOSURE_POLICY_V1",
+ "RUN_DIGEST": "fb2d46ed2f49e42f2060872c517ec368b5cf8c814019d36fd17679cdcd71683a",
+ "ROW_AUTHORITY_DIGEST": "ec194278f6914072ae5efaa4b1d3adaacfcec221ab630fd2af585ef7f306ceb1",
+ "RELEASE_INPUT_DIGEST": "dfb6a931dc705f7a71f8f0310d7d7d4c7454d0e0a856ae0f7c13a01f239982cc",
+ "PHYSICAL_SITES": [
+  {
+   "site": "SITE-5f1762f1a93b91ca",
+   "zones": [
+    "BED.ROOM"
+   ],
+   "area_m2": 19.2725
+  },
+  {
+   "site": "SITE-a6405850100155ac",
+   "zones": [
+    "DRESS",
+    "M.B.ROOM"
+   ],
+   "area_m2": 33.2
+  },
+  {
+   "site": "SITE-daca396d6d730e60",
+   "zones": [
+    "BED.ROOM"
+   ],
+   "area_m2": 16.327
+  },
+  {
+   "site": "SITE-fdfa89fe0f5809a4",
+   "zones": [
+    "HALL",
+    "whgm"
+   ],
+   "area_m2": 42.799289
+  }
+ ],
+ "SEMANTIC_CLASSES": [
+  "DRY_INTERNAL_ROOM"
+ ],
+ "TRADE_RULES": [
+  "QORTUBA-FLOOR-TREATMENT@v3",
+  "QORTUBA-SPACE-CLASS@v2"
+ ],
+ "OBJECT_FOOTPRINT_POLICY": [
+  "QORTUBA-NEW-FLOOR-OBJECT-FOOTPRINT-OWNER-001@v1:FLOOR_FINISH:FOOTPRINT_INCLUDED"
+ ],
+ "THRESHOLD_PASSAGE_TREATMENT": {
+  "policy": "STRIP_ALLOCATION_AUDIT_V1",
+  "blocking": [],
+  "release": [
+   "THRESHOLD-cf12fcdfd3e6a4a6",
+   "THRESHOLD-bfcea08375237224",
+   "THRESHOLD-28f50f8dc18c1e90",
+   "THRESHOLD-c82365dd41b94abe",
+   "THRESHOLD-04910e5deeeed2fc",
+   "THRESHOLD-f9846605acbce828"
+  ],
+  "included": [
+   "OP-997f14d12b8e9bc1",
+   "OP-9e0fd219ca5cd391"
+  ],
+  "excluded_area_m2": 0.81,
+  "included_area_m2": 0.419289,
+  "audit": [
+   {
+    "strip": "THRESHOLD-cf12fcdfd3e6a4a6",
+    "kind": "THRESHOLD",
+    "location": "SEPARATE_SITE",
+    "area_m2": 0.12,
+    "sides": {
+     "SITE-a2b19efc492a6d0b": "CERAMIC_WET_FLOOR",
+     "SITE-fdfa89fe0f5809a4": "PORCELAIN_DRY_FLOOR"
+    },
+    "state": "EXCLUDED_SEPARATE_SITE",
+    "in_row_total": false,
+    "why": "the strip is its own site; no allocation authority assigns it to a room"
+   },
+   {
+    "strip": "THRESHOLD-bfcea08375237224",
+    "kind": "THRESHOLD",
+    "location": "SEPARATE_SITE",
+    "area_m2": 0.15,
+    "sides": {
+     "SITE-788f30878ba9d2b3": null,
+     "SITE-fdfa89fe0f5809a4": "PORCELAIN_DRY_FLOOR"
+    },
+    "state": "EXCLUDED_SEPARATE_SITE",
+    "in_row_total": false,
+    "why": "the strip is its own site; no allocation authority assigns it to a room"
+   },
+   {
+    "strip": "THRESHOLD-28f50f8dc18c1e90",
+    "kind": "THRESHOLD",
+    "location": "SEPARATE_SITE",
+    "area_m2": 0.12,
+    "sides": {
+     "SITE-fdfa89fe0f5809a4": "PORCELAIN_DRY_FLOOR",
+     "SITE-fe8ed5548fb4310e": "CERAMIC_WET_FLOOR"
+    },
+    "state": "EXCLUDED_SEPARATE_SITE",
+    "in_row_total": false,
+    "why": "the strip is its own site; no allocation authority assigns it to a room"
+   },
+   {
+    "strip": "THRESHOLD-c82365dd41b94abe",
+    "kind": "THRESHOLD",
+    "location": "SEPARATE_SITE",
+    "area_m2": 0.15,
+    "sides": {
+     "SITE-daca396d6d730e60": "PORCELAIN_DRY_FLOOR",
+     "SITE-fdfa89fe0f5809a4": "PORCELAIN_DRY_FLOOR"
+    },
+    "state": "EXCLUDED_SEPARATE_SITE",
+    "in_row_total": false,
+    "why": "the strip is its own site; no allocation authority assigns it to a room"
+   },
+   {
+    "strip": "THRESHOLD-04910e5deeeed2fc",
+    "kind": "THRESHOLD",
+    "location": "SEPARATE_SITE",
+    "area_m2": 0.15,
+    "sides": {
+     "SITE-5f1762f1a93b91ca": "PORCELAIN_DRY_FLOOR",
+     "SITE-fdfa89fe0f5809a4": "PORCELAIN_DRY_FLOOR"
+    },
+    "state": "EXCLUDED_SEPARATE_SITE",
+    "in_row_total": false,
+    "why": "the strip is its own site; no allocation authority assigns it to a room"
+   },
+   {
+    "strip": "THRESHOLD-f9846605acbce828",
+    "kind": "THRESHOLD",
+    "location": "SEPARATE_SITE",
+    "area_m2": 0.12,
+    "sides": {
+     "SITE-1c4abf65f9b5db1e": "CERAMIC_WET_FLOOR",
+     "SITE-a6405850100155ac": "PORCELAIN_DRY_FLOOR"
+    },
+    "state": "EXCLUDED_SEPARATE_SITE",
+    "in_row_total": false,
+    "why": "the strip is its own site; no allocation authority assigns it to a room"
+   },
+   {
+    "strip": "OP-997f14d12b8e9bc1",
+    "kind": "OPEN_PASSAGE",
+    "location": "INSIDE_SITE",
+    "area_m2": 0.239289,
+    "sides": {
+     "SITE-fdfa89fe0f5809a4": "PORCELAIN_DRY_FLOOR"
+    },
+    "state": "INCLUDED_IN_SITE_SAME_TREATMENT",
+    "in_row_total": true,
+    "why": "inside the measured site and every side carries the row's treatment"
+   },
+   {
+    "strip": "OP-9e0fd219ca5cd391",
+    "kind": "OPEN_PASSAGE",
+    "location": "INSIDE_SITE",
+    "area_m2": 0.18,
+    "sides": {
+     "SITE-a6405850100155ac": "PORCELAIN_DRY_FLOOR"
+    },
+    "state": "INCLUDED_IN_SITE_SAME_TREATMENT",
+    "in_row_total": true,
+    "why": "inside the measured site and every side carries the row's treatment"
+   }
+  ]
+ },
+ "OWNER_FACTS_CLAIMS": {
+  "row_claims": [
+   "QORTUBA-NEW-DIM-LINES-7116-7119-ARE-WALLS-OWNER-001@v1"
+  ],
+  "facts_applied_to_row": [
+   "QORTUBA-NEW-FLOOR-OBJECT-FOOTPRINT-OWNER-001@v1"
+  ],
+  "facts_applied_at_release": [],
+  "fact_outcomes": {
+   "QORTUBA-NEW-FLOOR-OBJECT-FOOTPRINT-OWNER-001@v1": "APPLIED",
+   "QORTUBA-NEW-DRY-ROOM-FINISH-OWNER-001@v1": "OFFERED",
+   "QORTUBA-NEW-WET-SERVICE-FINISH-OWNER-001@v1": "REJECTED_SCOPE",
+   "QORTUBA-NEW-HALL-LOBBY-OPEN-PASSAGE-OWNER-001@v1": "CORROBORATING_ONLY"
+  }
+ },
+ "SOURCE_ANCHOR": {
+  "revision": "QORTUBA_REV_NEW",
+  "dxf_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+  "dwg_identity": "NOT_ESTABLISHED"
+ },
+ "RELEASE_BLOCKERS": [
+  "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+  "STRIP_ALLOCATION: 6 door-threshold strip(s) (0.81 m2) are separate sites outside this row; no allocation authority assigns them",
+  "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+ ],
+ "blockers": [],
+ "blocker_classes": [],
+ "SCHEMA": "URBAN_R8_13_Q13_STATUS_V1",
+ "without_the_floor_fact": {
+  "state": "BLOCKED_MULTIPLE: BLOCKED_ROLE, BLOCKED_TRADE_RULE",
+  "blocker_classes": [
+   "ROLE_AUTHORITY",
+   "TRADE_RULE"
+  ]
+ },
+ "r8_12": {
+  "state": "BLOCKED_MULTIPLE: BLOCKED_ROLE, BLOCKED_TRADE_RULE",
+  "value": null,
+  "blocker_classes": [
+   "ROLE_AUTHORITY",
+   "TRADE_RULE"
+  ]
+ },
+ "object_footprints": {
+  "policy": "QORTUBA-NEW-FLOOR-OBJECT-FOOTPRINT-OWNER-001@v1",
+  "treatment": "FOOTPRINT_INCLUDED",
+  "implicit_objects": {
+   "SITE-a6405850100155ac": {
+    "FURNITURE": 170
+   },
+   "SITE-fdfa89fe0f5809a4": {
+    "FURNITURE": 74
+   }
+  },
+  "roles": "SF3 / FIRNTUR / joinery stay ROLE_UNRESOLVED; ROLE_UNRESOLVED_BUT_NON_MATERIAL_TO_TRADE for Q-13"
+ },
+ "strips": {
+  "thresholds_excluded": [
+   {
+    "strip": "THRESHOLD-cf12fcdfd3e6a4a6",
+    "kind": "THRESHOLD",
+    "location": "SEPARATE_SITE",
+    "area_m2": 0.12,
+    "sides": {
+     "SITE-a2b19efc492a6d0b": "CERAMIC_WET_FLOOR",
+     "SITE-fdfa89fe0f5809a4": "PORCELAIN_DRY_FLOOR"
+    },
+    "state": "EXCLUDED_SEPARATE_SITE",
+    "in_row_total": false,
+    "why": "the strip is its own site; no allocation authority assigns it to a room"
+   },
+   {
+    "strip": "THRESHOLD-bfcea08375237224",
+    "kind": "THRESHOLD",
+    "location": "SEPARATE_SITE",
+    "area_m2": 0.15,
+    "sides": {
+     "SITE-788f30878ba9d2b3": null,
+     "SITE-fdfa89fe0f5809a4": "PORCELAIN_DRY_FLOOR"
+    },
+    "state": "EXCLUDED_SEPARATE_SITE",
+    "in_row_total": false,
+    "why": "the strip is its own site; no allocation authority assigns it to a room"
+   },
+   {
+    "strip": "THRESHOLD-28f50f8dc18c1e90",
+    "kind": "THRESHOLD",
+    "location": "SEPARATE_SITE",
+    "area_m2": 0.12,
+    "sides": {
+     "SITE-fdfa89fe0f5809a4": "PORCELAIN_DRY_FLOOR",
+     "SITE-fe8ed5548fb4310e": "CERAMIC_WET_FLOOR"
+    },
+    "state": "EXCLUDED_SEPARATE_SITE",
+    "in_row_total": false,
+    "why": "the strip is its own site; no allocation authority assigns it to a room"
+   },
+   {
+    "strip": "THRESHOLD-c82365dd41b94abe",
+    "kind": "THRESHOLD",
+    "location": "SEPARATE_SITE",
+    "area_m2": 0.15,
+    "sides": {
+     "SITE-daca396d6d730e60": "PORCELAIN_DRY_FLOOR",
+     "SITE-fdfa89fe0f5809a4": "PORCELAIN_DRY_FLOOR"
+    },
+    "state": "EXCLUDED_SEPARATE_SITE",
+    "in_row_total": false,
+    "why": "the strip is its own site; no allocation authority assigns it to a room"
+   },
+   {
+    "strip": "THRESHOLD-04910e5deeeed2fc",
+    "kind": "THRESHOLD",
+    "location": "SEPARATE_SITE",
+    "area_m2": 0.15,
+    "sides": {
+     "SITE-5f1762f1a93b91ca": "PORCELAIN_DRY_FLOOR",
+     "SITE-fdfa89fe0f5809a4": "PORCELAIN_DRY_FLOOR"
+    },
+    "state": "EXCLUDED_SEPARATE_SITE",
+    "in_row_total": false,
+    "why": "the strip is its own site; no allocation authority assigns it to a room"
+   },
+   {
+    "strip": "THRESHOLD-f9846605acbce828",
+    "kind": "THRESHOLD",
+    "location": "SEPARATE_SITE",
+    "area_m2": 0.12,
+    "sides": {
+     "SITE-1c4abf65f9b5db1e": "CERAMIC_WET_FLOOR",
+     "SITE-a6405850100155ac": "PORCELAIN_DRY_FLOOR"
+    },
+    "state": "EXCLUDED_SEPARATE_SITE",
+    "in_row_total": false,
+    "why": "the strip is its own site; no allocation authority assigns it to a room"
+   }
+  ],
+  "passages_included": [
+   {
+    "strip": "OP-997f14d12b8e9bc1",
+    "kind": "OPEN_PASSAGE",
+    "location": "INSIDE_SITE",
+    "area_m2": 0.239289,
+    "sides": {
+     "SITE-fdfa89fe0f5809a4": "PORCELAIN_DRY_FLOOR"
+    },
+    "state": "INCLUDED_IN_SITE_SAME_TREATMENT",
+    "in_row_total": true,
+    "why": "inside the measured site and every side carries the row's treatment"
+   },
+   {
+    "strip": "OP-9e0fd219ca5cd391",
+    "kind": "OPEN_PASSAGE",
+    "location": "INSIDE_SITE",
+    "area_m2": 0.18,
+    "sides": {
+     "SITE-a6405850100155ac": "PORCELAIN_DRY_FLOOR"
+    },
+    "state": "INCLUDED_IN_SITE_SAME_TREATMENT",
+    "in_row_total": true,
+    "why": "inside the measured site and every side carries the row's treatment"
+   }
+  ],
+  "blocking": []
+ },
+ "historical_matching": "NONE"
+}

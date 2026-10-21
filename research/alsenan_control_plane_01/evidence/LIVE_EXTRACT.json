@@ -1,0 +1,3849 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_CONTROL_PLANE_LIVE_EXTRACT_V1",
+ "semantic": [
+  {
+   "room": "GF-R01",
+   "site": "SITE-0bb9132c5c034229",
+   "ts01_semantic_state": "UNLABELLED",
+   "zones": []
+  },
+  {
+   "room": "GF-R02",
+   "site": "SITE-0e9a7a85e795446f",
+   "ts01_semantic_state": "ONE_PHYSICAL_SPACE_ONE_SEMANTIC_ZONE",
+   "zones": [
+    {
+     "label_values": [
+      "MOSLy",
+      "Wash"
+     ],
+     "state": "ESTABLISHED",
+     "authority": "ONE_LABEL_OCCURRENCE"
+    }
+   ]
+  },
+  {
+   "room": "GF-R03",
+   "site": "SITE-5191e28052b00088",
+   "ts01_semantic_state": "ONE_PHYSICAL_SPACE_ONE_SEMANTIC_ZONE",
+   "zones": [
+    {
+     "label_values": [
+      "M—HAe",
+      "W.C"
+     ],
+     "state": "ESTABLISHED",
+     "authority": "ONE_LABEL_OCCURRENCE"
+    }
+   ]
+  },
+  {
+   "room": "GF-Z04",
+   "site": "SITE-67547ed37daadb5a",
+   "ts01_semantic_state": "ONE_PHYSICAL_SPACE_MULTIPLE_SEMANTIC_ZONES_UNRESOLVED",
+   "zones": [
+    {
+     "label_values": [
+      "PANTRY",
+      "VHEZ—"
+     ],
+     "state": "UNRESOLVED",
+     "authority": "MULTI_SEMANTIC_PHYSICAL_SPACE"
+    },
+    {
+     "label_values": [
+      "RaL‘n",
+      "SALOON"
+     ],
+     "state": "UNRESOLVED",
+     "authority": "MULTI_SEMANTIC_PHYSICAL_SPACE"
+    },
+    {
+     "label_values": [
+      "ASVQBaL",
+      "RECEPTION"
+     ],
+     "state": "UNRESOLVED",
+     "authority": "MULTI_SEMANTIC_PHYSICAL_SPACE"
+    },
+    {
+     "label_values": [
+      "DINING",
+      "“Ia²"
+     ],
+     "state": "UNRESOLVED",
+     "authority": "MULTI_SEMANTIC_PHYSICAL_SPACE"
+    },
+    {
+     "label_values": [
+      "MOSLy",
+      "Wash"
+     ],
+     "state": "UNRESOLVED",
+     "authority": "MULTI_SEMANTIC_PHYSICAL_SPACE"
+    },
+    {
+     "label_values": [
+      "GARDEN",
+      "H™ZQy"
+     ],
+     "state": "UNRESOLVED",
+     "authority": "MULTI_SEMANTIC_PHYSICAL_SPACE"
+    }
+   ]
+  },
+  {
+   "room": "GF-R05",
+   "site": "SITE-714889aea3e329c7",
+   "ts01_semantic_state": "UNLABELLED",
+   "zones": []
+  },
+  {
+   "room": "GF-Z06",
+   "site": "SITE-810cacd9be443703",
+   "ts01_semantic_state": "ONE_PHYSICAL_SPACE_MULTIPLE_SEMANTIC_ZONES_UNRESOLVED",
+   "zones": [
+    {
+     "label_values": [
+      "DEWANEYA",
+      "™Z‘aNZy"
+     ],
+     "state": "UNRESOLVED",
+     "authority": "MULTI_SEMANTIC_PHYSICAL_SPACE"
+    },
+    {
+     "label_values": [
+      "MOSLy",
+      "Wash"
+     ],
+     "state": "UNRESOLVED",
+     "authority": "MULTI_SEMANTIC_PHYSICAL_SPACE"
+    }
+   ]
+  },
+  {
+   "room": "GF-R07",
+   "site": "SITE-88d9dbffd47c417a",
+   "ts01_semantic_state": "ONE_PHYSICAL_SPACE_ONE_SEMANTIC_ZONE",
+   "zones": [
+    {
+     "label_values": [
+      "KITCHEN",
+      "M“B¢"
+     ],
+     "state": "ESTABLISHED",
+     "authority": "ONE_LABEL_OCCURRENCE"
+    }
+   ]
+  },
+  {
+   "room": "GF-T08",
+   "site": "SITE-92d772778d0e5bef",
+   "ts01_semantic_state": null,
+   "zones": []
+  },
+  {
+   "room": "GF-R09",
+   "site": "SITE-9810548752edbe40",
+   "ts01_semantic_state": "ONE_PHYSICAL_SPACE_ONE_SEMANTIC_ZONE",
+   "zones": [
+    {
+     "label_values": [
+      "M—HAe",
+      "W.C"
+     ],
+     "state": "ESTABLISHED",
+     "authority": "ONE_LABEL_OCCURRENCE"
+    }
+   ]
+  },
+  {
+   "room": "GF-R10",
+   "site": "SITE-9b585230d0877a35",
+   "ts01_semantic_state": "ONE_PHYSICAL_SPACE_ONE_SEMANTIC_ZONE",
+   "zones": [
+    {
+     "label_values": [
+      "M—HAe",
+      "W.C"
+     ],
+     "state": "ESTABLISHED",
+     "authority": "ONE_LABEL_OCCURRENCE"
+    }
+   ]
+  },
+  {
+   "room": "GF-T11",
+   "site": "SITE-a797936abec0d1a7",
+   "ts01_semantic_state": null,
+   "zones": []
+  },
+  {
+   "room": "GF-R12",
+   "site": "SITE-b2553428a3dc90a0",
+   "ts01_semantic_state": "UNLABELLED",
+   "zones": []
+  },
+  {
+   "room": "GF-R13",
+   "site": "SITE-ce2d2c3a4b7da280",
+   "ts01_semantic_state": "ONE_PHYSICAL_SPACE_ONE_SEMANTIC_ZONE",
+   "zones": [
+    {
+     "label_values": [
+      "M—HAe",
+      "W.C"
+     ],
+     "state": "ESTABLISHED",
+     "authority": "ONE_LABEL_OCCURRENCE"
+    }
+   ]
+  },
+  {
+   "room": "GF-R14",
+   "site": "SITE-dda89794d15dfb61",
+   "ts01_semantic_state": "ONE_PHYSICAL_SPACE_ONE_SEMANTIC_ZONE",
+   "zones": [
+    {
+     "label_values": [
+      "MASTER BED ROOM",
+      "O—FtN‘²—XZS‚Zt"
+     ],
+     "state": "ESTABLISHED",
+     "authority": "ONE_LABEL_OCCURRENCE"
+    }
+   ]
+  },
+  {
+   "room": "GF-R15",
+   "site": "SITE-eac7a1be6566b2d0",
+   "ts01_semantic_state": "ONE_PHYSICAL_SPACE_ONE_SEMANTIC_ZONE",
+   "zones": [
+    {
+     "label_values": [
+      "M—HAe",
+      "W.C"
+     ],
+     "state": "ESTABLISHED",
+     "authority": "ONE_LABEL_OCCURRENCE"
+    }
+   ]
+  },
+  {
+   "room": "1F-R01",
+   "site": "SITE-16f76cd141ed8273",
+   "ts01_semantic_state": "ONE_PHYSICAL_SPACE_ONE_SEMANTIC_ZONE",
+   "zones": [
+    {
+     "label_values": [
+      "BATH",
+      "HMam"
+     ],
+     "state": "ESTABLISHED",
+     "authority": "ONE_LABEL_OCCURRENCE"
+    }
+   ]
+  },
+  {
+   "room": "1F-R02",
+   "site": "SITE-195dbe4bca9e732e",
+   "ts01_semantic_state": "UNLABELLED",
+   "zones": []
+  },
+  {
+   "room": "1F-R03",
+   "site": "SITE-22b96446836c3d8d",
+   "ts01_semantic_state": "ONE_PHYSICAL_SPACE_ONE_SEMANTIC_ZONE",
+   "zones": [
+    {
+     "label_values": [
+      "MASTER BED ROOM",
+      "O—FtN‘²—XZS‚Zt"
+     ],
+     "state": "ESTABLISHED",
+     "authority": "ONE_LABEL_OCCURRENCE"
+    }
+   ]
+  },
+  {
+   "room": "1F-R04",
+   "site": "SITE-2f6cf2b5bebbd966",
+   "ts01_semantic_state": "ONE_PHYSICAL_SPACE_ONE_SEMANTIC_ZONE",
+   "zones": [
+    {
+     "label_values": [
+      "BATH",
+      "HMam"
+     ],
+     "state": "ESTABLISHED",
+     "authority": "ONE_LABEL_OCCURRENCE"
+    }
+   ]
+  },
+  {
+   "room": "1F-R05",
+   "site": "SITE-3cde308552cf977c",
+   "ts01_semantic_state": "ONE_PHYSICAL_SPACE_ONE_SEMANTIC_ZONE",
+   "zones": [
+    {
+     "label_values": [
+      "MASTER BED ROOM",
+      "O—FtN‘²—XZS‚Zt"
+     ],
+     "state": "ESTABLISHED",
+     "authority": "ONE_LABEL_OCCURRENCE"
+    }
+   ]
+  },
+  {
+   "room": "1F-Z06",
+   "site": "SITE-60a08def069f0e48",
+   "ts01_semantic_state": "ONE_PHYSICAL_SPACE_MULTIPLE_SEMANTIC_ZONES_UNRESOLVED",
+   "zones": [
+    {
+     "label_values": [
+      "MN‘—",
+      "VOID"
+     ],
+     "state": "UNRESOLVED",
+     "authority": "MULTI_SEMANTIC_PHYSICAL_SPACE"
+    },
+    {
+     "label_values": [
+      "LIVING AREA",
+      "MPZDy"
+     ],
+     "state": "UNRESOLVED",
+     "authority": "MULTI_SEMANTIC_PHYSICAL_SPACE"
+    }
+   ]
+  },
+  {
+   "room": "1F-R07",
+   "site": "SITE-69e2d39bee49fa7e",
+   "ts01_semantic_state": "ONE_PHYSICAL_SPACE_ONE_SEMANTIC_ZONE",
+   "zones": [
+    {
+     "label_values": [
+      "LAUNDRY",
+      "OSZl"
+     ],
+     "state": "ESTABLISHED",
+     "authority": "ONE_LABEL_OCCURRENCE"
+    }
+   ]
+  },
+  {
+   "room": "1F-R08",
+   "site": "SITE-aa3f3d9cc41ec54a",
+   "ts01_semantic_state": "UNLABELLED",
+   "zones": []
+  },
+  {
+   "room": "1F-R09",
+   "site": "SITE-c46cb88cea7decbb",
+   "ts01_semantic_state": "ONE_PHYSICAL_SPACE_ONE_SEMANTIC_ZONE",
+   "zones": [
+    {
+     "label_values": [
+      "MASTER BED ROOM",
+      "O—FtN‘²—XZS‚Zt"
+     ],
+     "state": "ESTABLISHED",
+     "authority": "ONE_LABEL_OCCURRENCE"
+    }
+   ]
+  },
+  {
+   "room": "1F-R10",
+   "site": "SITE-cdc894c0f0fd69c9",
+   "ts01_semantic_state": "ONE_PHYSICAL_SPACE_ONE_SEMANTIC_ZONE",
+   "zones": [
+    {
+     "label_values": [
+      "BATH",
+      "HMam"
+     ],
+     "state": "ESTABLISHED",
+     "authority": "ONE_LABEL_OCCURRENCE"
+    }
+   ]
+  },
+  {
+   "room": "1F-R11",
+   "site": "SITE-da154e7546d18013",
+   "ts01_semantic_state": "ONE_PHYSICAL_SPACE_ONE_SEMANTIC_ZONE",
+   "zones": [
+    {
+     "label_values": [
+      "MASTER BED ROOM",
+      "O—FtN‘²—XZS‚Zt"
+     ],
+     "state": "ESTABLISHED",
+     "authority": "ONE_LABEL_OCCURRENCE"
+    }
+   ]
+  },
+  {
+   "room": "2F-R01",
+   "site": "SITE-22c718c6fc156ebe",
+   "ts01_semantic_state": "UNLABELLED",
+   "zones": []
+  },
+  {
+   "room": "2F-R02",
+   "site": "SITE-2e3bac611a8fb491",
+   "ts01_semantic_state": "ONE_PHYSICAL_SPACE_ONE_SEMANTIC_ZONE",
+   "zones": [
+    {
+     "label_values": [
+      "MAID R.",
+      "O—F_yGa™M_y"
+     ],
+     "state": "ESTABLISHED",
+     "authority": "ONE_LABEL_OCCURRENCE"
+    }
+   ]
+  },
+  {
+   "room": "2F-R03",
+   "site": "SITE-ae46ec7518ab613e",
+   "ts01_semantic_state": "ONE_PHYSICAL_SPACE_ONE_SEMANTIC_ZONE",
+   "zones": [
+    {
+     "label_values": [
+      "M—HAe",
+      "W.C"
+     ],
+     "state": "ESTABLISHED",
+     "authority": "ONE_LABEL_OCCURRENCE"
+    }
+   ]
+  },
+  {
+   "room": "2F-R04",
+   "site": "SITE-fd5fd08ac9eb9313",
+   "ts01_semantic_state": "UNLABELLED",
+   "zones": []
+  }
+ ],
+ "wet_labels": [
+  {
+   "floor": "GF",
+   "text": "تحضير",
+   "key": "ALSENAN_P7757_DXF|H379|376|TEXT|0",
+   "xy": [
+    -146057.8,
+    -802513.3
+   ],
+   "site": "SITE-67547ed37daadb5a",
+   "room": "GF-Z04",
+   "located": "IN_ROOM_ROW",
+   "text_role": "ROOM_LABEL_ESTABLISHED",
+   "rule": "TR-03"
+  },
+  {
+   "floor": "GF",
+   "text": "PANTRY",
+   "key": "ALSENAN_P7757_DXF|H381|376|TEXT|0",
+   "xy": [
+    -147082.9,
+    -802921.3
+   ],
+   "site": "SITE-67547ed37daadb5a",
+   "room": "GF-Z04",
+   "located": "IN_ROOM_ROW",
+   "text_role": "ROOM_LABEL_ESTABLISHED",
+   "rule": "TR-03"
+  },
+  {
+   "floor": "GF",
+   "text": "حمام سباحة",
+   "key": "ALSENAN_P7757_DXF|H399|396|TEXT|0",
+   "xy": [
+    -129805.9,
+    -793606.3
+   ],
+   "site": null,
+   "room": null,
+   "located": "NO_SITE",
+   "text_role": "ROOM_LABEL_ESTABLISHED",
+   "rule": "TR-04"
+  },
+  {
+   "floor": "GF",
+   "text": "W.C",
+   "key": "ALSENAN_P7757_DXF|H459|456|TEXT|0",
+   "xy": [
+    -151626.1,
+    -804536.8
+   ],
+   "site": "SITE-9b585230d0877a35",
+   "room": "GF-R10",
+   "located": "IN_ROOM_ROW",
+   "text_role": "ROOM_LABEL_ESTABLISHED",
+   "rule": "TR-04"
+  },
+  {
+   "floor": "GF",
+   "text": "مرحاض",
+   "key": "ALSENAN_P7757_DXF|H460|456|TEXT|0",
+   "xy": [
+    -151051.8,
+    -804295.5
+   ],
+   "site": "SITE-9b585230d0877a35",
+   "room": "GF-R10",
+   "located": "IN_ROOM_ROW",
+   "text_role": "ROOM_LABEL_ESTABLISHED",
+   "rule": "TR-04"
+  },
+  {
+   "floor": "GF",
+   "text": "Wash",
+   "key": "ALSENAN_P7757_DXF|H500|496|TEXT|0",
+   "xy": [
+    -156626.4,
+    -801801.4
+   ],
+   "site": "SITE-810cacd9be443703",
+   "room": "GF-Z06",
+   "located": "IN_ROOM_ROW",
+   "text_role": "ROOM_LABEL_ESTABLISHED",
+   "rule": "TR-03"
+  },
+  {
+   "floor": "GF",
+   "text": "مغسلة",
+   "key": "ALSENAN_P7757_DXF|H501|496|TEXT|0",
+   "xy": [
+    -154949.7,
+    -801580.0
+   ],
+   "site": "SITE-0e9a7a85e795446f",
+   "room": "GF-R02",
+   "located": "IN_ROOM_ROW",
+   "text_role": "ROOM_LABEL_ESTABLISHED",
+   "rule": "TR-03"
+  },
+  {
+   "floor": "GF",
+   "text": "W.C",
+   "key": "ALSENAN_P7757_DXF|H459|503|TEXT|0",
+   "xy": [
+    -155307.6,
+    -804151.7
+   ],
+   "site": "SITE-eac7a1be6566b2d0",
+   "room": "GF-R15",
+   "located": "IN_ROOM_ROW",
+   "text_role": "ROOM_LABEL_ESTABLISHED",
+   "rule": "TR-04"
+  },
+  {
+   "floor": "GF",
+   "text": "مرحاض",
+   "key": "ALSENAN_P7757_DXF|H460|503|TEXT|0",
+   "xy": [
+    -154733.3,
+    -803910.3
+   ],
+   "site": "SITE-eac7a1be6566b2d0",
+   "room": "GF-R15",
+   "located": "IN_ROOM_ROW",
+   "text_role": "ROOM_LABEL_ESTABLISHED",
+   "rule": "TR-04"
+  },
+  {
+   "floor": "GF",
+   "text": "KITCHEN",
+   "key": "ALSENAN_P7757_DXF|H634|630|TEXT|0",
+   "xy": [
+    -151238.0,
+    -802612.3
+   ],
+   "site": "SITE-88d9dbffd47c417a",
+   "room": "GF-R07",
+   "located": "IN_ROOM_ROW",
+   "text_role": "ROOM_LABEL_ESTABLISHED",
+   "rule": "TR-03"
+  },
+  {
+   "floor": "GF",
+   "text": "مطبخ",
+   "key": "ALSENAN_P7757_DXF|H635|630|TEXT|0",
+   "xy": [
+    -150480.1,
+    -802248.8
+   ],
+   "site": "SITE-88d9dbffd47c417a",
+   "room": "GF-R07",
+   "located": "IN_ROOM_ROW",
+   "text_role": "ROOM_LABEL_ESTABLISHED",
+   "rule": "TR-03"
+  },
+  {
+   "floor": "GF",
+   "text": "Wash",
+   "key": "ALSENAN_P7757_DXF|H500|709|TEXT|0",
+   "xy": [
+    -140275.8,
+    -795137.3
+   ],
+   "site": "SITE-67547ed37daadb5a",
+   "room": "GF-Z04",
+   "located": "IN_ROOM_ROW",
+   "text_role": "ROOM_LABEL_ESTABLISHED",
+   "rule": "TR-03"
+  },
+  {
+   "floor": "GF",
+   "text": "مغسلة",
+   "key": "ALSENAN_P7757_DXF|H501|709|TEXT|0",
+   "xy": [
+    -138934.4,
+    -794960.1
+   ],
+   "site": "SITE-67547ed37daadb5a",
+   "room": "GF-Z04",
+   "located": "IN_ROOM_ROW",
+   "text_role": "ROOM_LABEL_ESTABLISHED",
+   "rule": "TR-03"
+  },
+  {
+   "floor": "GF",
+   "text": "W.C",
+   "key": "ALSENAN_P7757_DXF|H459|730|TEXT|0",
+   "xy": [
+    -141731.6,
+    -793100.1
+   ],
+   "site": "SITE-ce2d2c3a4b7da280",
+   "room": "GF-R13",
+   "located": "IN_ROOM_ROW",
+   "text_role": "ROOM_LABEL_ESTABLISHED",
+   "rule": "TR-04"
+  },
+  {
+   "floor": "GF",
+   "text": "مرحاض",
+   "key": "ALSENAN_P7757_DXF|H460|730|TEXT|0",
+   "xy": [
+    -141157.3,
+    -792858.8
+   ],
+   "site": "SITE-ce2d2c3a4b7da280",
+   "room": "GF-R13",
+   "located": "IN_ROOM_ROW",
+   "text_role": "ROOM_LABEL_ESTABLISHED",
+   "rule": "TR-04"
+  },
+  {
+   "floor": "GF",
+   "text": "BATH",
+   "key": "ALSENAN_P7757_DXF|H749||TEXT|0",
+   "xy": [
+    -137466.5,
+    -793273.4
+   ],
+   "site": "SITE-714889aea3e329c7",
+   "room": "GF-R05",
+   "located": "IN_ROOM_ROW",
+   "text_role": "ROOM_LABEL_CANDIDATE",
+   "rule": "TR-10"
+  },
+  {
+   "floor": "GF",
+   "text": "حمام",
+   "key": "ALSENAN_P7757_DXF|H750||TEXT|0",
+   "xy": [
+    -136676.3,
+    -792852.1
+   ],
+   "site": "SITE-714889aea3e329c7",
+   "room": "GF-R05",
+   "located": "IN_ROOM_ROW",
+   "text_role": "UNKNOWN_TEXT_ROLE",
+   "rule": "TR-99"
+  },
+  {
+   "floor": "GF",
+   "text": "W.C",
+   "key": "ALSENAN_P7757_DXF|H459|802|TEXT|0",
+   "xy": [
+    -139636.3,
+    -792833.9
+   ],
+   "site": "SITE-5191e28052b00088",
+   "room": "GF-R03",
+   "located": "IN_ROOM_ROW",
+   "text_role": "ROOM_LABEL_ESTABLISHED",
+   "rule": "TR-04"
+  },
+  {
+   "floor": "GF",
+   "text": "مرحاض",
+   "key": "ALSENAN_P7757_DXF|H460|802|TEXT|0",
+   "xy": [
+    -138918.4,
+    -792532.3
+   ],
+   "site": "SITE-5191e28052b00088",
+   "room": "GF-R03",
+   "located": "IN_ROOM_ROW",
+   "text_role": "ROOM_LABEL_ESTABLISHED",
+   "rule": "TR-04"
+  },
+  {
+   "floor": "GF",
+   "text": "W.C",
+   "key": "ALSENAN_P7757_DXF|H459|803|TEXT|0",
+   "xy": [
+    -140447.1,
+    -793637.6
+   ],
+   "site": "SITE-9810548752edbe40",
+   "room": "GF-R09",
+   "located": "IN_ROOM_ROW",
+   "text_role": "ROOM_LABEL_ESTABLISHED",
+   "rule": "TR-04"
+  },
+  {
+   "floor": "GF",
+   "text": "مرحاض",
+   "key": "ALSENAN_P7757_DXF|H460|803|TEXT|0",
+   "xy": [
+    -139729.2,
+    -793336.0
+   ],
+   "site": "SITE-9810548752edbe40",
+   "room": "GF-R09",
+   "located": "IN_ROOM_ROW",
+   "text_role": "ROOM_LABEL_ESTABLISHED",
+   "rule": "TR-04"
+  },
+  {
+   "floor": "1F",
+   "text": "LAUNDRY",
+   "key": "ALSENAN_P7757_DXF|H3040|3037|TEXT|0",
+   "xy": [
+    -186559.2,
+    -793770.7
+   ],
+   "site": "SITE-69e2d39bee49fa7e",
+   "room": "1F-R07",
+   "located": "IN_ROOM_ROW",
+   "text_role": "ROOM_LABEL_ESTABLISHED",
+   "rule": "TR-03"
+  },
+  {
+   "floor": "1F",
+   "text": "غسيل",
+   "key": "ALSENAN_P7757_DXF|H3041|3037|TEXT|0",
+   "xy": [
+    -185588.4,
+    -793338.7
+   ],
+   "site": "SITE-69e2d39bee49fa7e",
+   "room": "1F-R07",
+   "located": "IN_ROOM_ROW",
+   "text_role": "ROOM_LABEL_ESTABLISHED",
+   "rule": "TR-03"
+  },
+  {
+   "floor": "1F",
+   "text": "BATH",
+   "key": "ALSENAN_P7757_DXF|H3077|3073|TEXT|0",
+   "xy": [
+    -182911.1,
+    -793247.6
+   ],
+   "site": "SITE-cdc894c0f0fd69c9",
+   "room": "1F-R10",
+   "located": "IN_ROOM_ROW",
+   "text_role": "ROOM_LABEL_ESTABLISHED",
+   "rule": "TR-03"
+  },
+  {
+   "floor": "1F",
+   "text": "حمام",
+   "key": "ALSENAN_P7757_DXF|H3078|3073|TEXT|0",
+   "xy": [
+    -182118.4,
+    -792826.3
+   ],
+   "site": "SITE-cdc894c0f0fd69c9",
+   "room": "1F-R10",
+   "located": "IN_ROOM_ROW",
+   "text_role": "ROOM_LABEL_ESTABLISHED",
+   "rule": "TR-03"
+  },
+  {
+   "floor": "1F",
+   "text": "BATH",
+   "key": "ALSENAN_P7757_DXF|H3077|3089|TEXT|0",
+   "xy": [
+    -176538.1,
+    -797286.5
+   ],
+   "site": "SITE-2f6cf2b5bebbd966",
+   "room": "1F-R04",
+   "located": "IN_ROOM_ROW",
+   "text_role": "ROOM_LABEL_ESTABLISHED",
+   "rule": "TR-03"
+  },
+  {
+   "floor": "1F",
+   "text": "حمام",
+   "key": "ALSENAN_P7757_DXF|H3078|3089|TEXT|0",
+   "xy": [
+    -175745.5,
+    -796865.3
+   ],
+   "site": "SITE-2f6cf2b5bebbd966",
+   "room": "1F-R04",
+   "located": "IN_ROOM_ROW",
+   "text_role": "ROOM_LABEL_ESTABLISHED",
+   "rule": "TR-03"
+  },
+  {
+   "floor": "1F",
+   "text": "W.C",
+   "key": "ALSENAN_P7757_DXF|H459|3097|TEXT|0",
+   "xy": [
+    -184822.1,
+    -793185.5
+   ],
+   "site": null,
+   "room": null,
+   "located": "NO_SITE",
+   "text_role": "ROOM_LABEL_ESTABLISHED",
+   "rule": "TR-04"
+  },
+  {
+   "floor": "1F",
+   "text": "مرحاض",
+   "key": "ALSENAN_P7757_DXF|H460|3097|TEXT|0",
+   "xy": [
+    -184104.2,
+    -792883.9
+   ],
+   "site": null,
+   "room": null,
+   "located": "NO_SITE",
+   "text_role": "ROOM_LABEL_ESTABLISHED",
+   "rule": "TR-04"
+  },
+  {
+   "floor": "1F",
+   "text": "BATH",
+   "key": "ALSENAN_P7757_DXF|H3077|3116|TEXT|0",
+   "xy": [
+    -191319.5,
+    -802628.2
+   ],
+   "site": null,
+   "room": null,
+   "located": "NO_SITE",
+   "text_role": "ROOM_LABEL_ESTABLISHED",
+   "rule": "TR-03"
+  },
+  {
+   "floor": "1F",
+   "text": "حمام",
+   "key": "ALSENAN_P7757_DXF|H3078|3116|TEXT|0",
+   "xy": [
+    -190526.9,
+    -802206.9
+   ],
+   "site": null,
+   "room": null,
+   "located": "NO_SITE",
+   "text_role": "ROOM_LABEL_ESTABLISHED",
+   "rule": "TR-03"
+  },
+  {
+   "floor": "1F",
+   "text": "BATH",
+   "key": "ALSENAN_P7757_DXF|H3077|3119|TEXT|0",
+   "xy": [
+    -193587.4,
+    -802628.2
+   ],
+   "site": "SITE-16f76cd141ed8273",
+   "room": "1F-R01",
+   "located": "IN_ROOM_ROW",
+   "text_role": "ROOM_LABEL_ESTABLISHED",
+   "rule": "TR-03"
+  },
+  {
+   "floor": "1F",
+   "text": "حمام",
+   "key": "ALSENAN_P7757_DXF|H3078|3119|TEXT|0",
+   "xy": [
+    -192794.8,
+    -802206.9
+   ],
+   "site": "SITE-16f76cd141ed8273",
+   "room": "1F-R01",
+   "located": "IN_ROOM_ROW",
+   "text_role": "ROOM_LABEL_ESTABLISHED",
+   "rule": "TR-03"
+  },
+  {
+   "floor": "2F",
+   "text": "W.C",
+   "key": "ALSENAN_P7757_DXF|H459|4790|TEXT|0",
+   "xy": [
+    -231267.7,
+    -793700.2
+   ],
+   "site": "SITE-ae46ec7518ab613e",
+   "room": "2F-R03",
+   "located": "IN_ROOM_ROW",
+   "text_role": "ROOM_LABEL_ESTABLISHED",
+   "rule": "TR-04"
+  },
+  {
+   "floor": "2F",
+   "text": "مرحاض",
+   "key": "ALSENAN_P7757_DXF|H460|4790|TEXT|0",
+   "xy": [
+    -230549.8,
+    -793398.5
+   ],
+   "site": "SITE-ae46ec7518ab613e",
+   "room": "2F-R03",
+   "located": "IN_ROOM_ROW",
+   "text_role": "ROOM_LABEL_ESTABLISHED",
+   "rule": "TR-04"
+  }
+ ],
+ "wall_ledger": {
+  "GF": {
+   "established_centreline_m_by_width_mm": {
+    "150": 26.094,
+    "200": 38.861,
+    "920": 14.035
+   },
+   "ambiguous_centreline_m_by_width_mm": {
+    "150": 0.894,
+    "200": 29.768,
+    "400": 1.4
+   },
+   "band_counts": {
+    "WALL_BAND_ESTABLISHED": 55,
+    "WALL_BAND_AMBIGUOUS": 9
+   },
+   "admitted_boundary_m_by_role": {
+    "GLAZING_BOUNDARY": 116.355,
+    "STRUCTURAL_OBSTACLE": 70.033,
+    "TOPOLOGY_BOUNDARY": 312.048
+   },
+   "admitted_not_in_any_band_m_by_role": {
+    "GLAZING_BOUNDARY": 116.355,
+    "STRUCTURAL_OBSTACLE": 70.033,
+    "TOPOLOGY_BOUNDARY": 112.747
+   },
+   "unsupported_runs": 0,
+   "blockwork_rows_m": {
+    "150|COMPUTED": 26.094,
+    "200|BLOCKED": 2.65,
+    "200|COMPUTED": 36.211,
+    "920|EXCLUDED": 14.035
+   }
+  },
+  "1F": {
+   "established_centreline_m_by_width_mm": {
+    "150": 42.713,
+    "200": 28.881,
+    "920": 14.035
+   },
+   "ambiguous_centreline_m_by_width_mm": {
+    "200": 14.568
+   },
+   "band_counts": {
+    "WALL_BAND_ESTABLISHED": 50,
+    "WALL_BAND_AMBIGUOUS": 4
+   },
+   "admitted_boundary_m_by_role": {
+    "GLAZING_BOUNDARY": 73.926,
+    "STRUCTURAL_OBSTACLE": 47.599,
+    "TOPOLOGY_BOUNDARY": 264.356
+   },
+   "admitted_not_in_any_band_m_by_role": {
+    "GLAZING_BOUNDARY": 73.926,
+    "STRUCTURAL_OBSTACLE": 47.599,
+    "TOPOLOGY_BOUNDARY": 50.765
+   },
+   "unsupported_runs": 0,
+   "blockwork_rows_m": {
+    "150|BLOCKED": 1.436,
+    "150|COMPUTED": 33.337,
+    "150|PARTIAL": 7.941,
+    "200|COMPUTED": 28.881,
+    "920|EXCLUDED": 14.035
+   }
+  },
+  "2F": {
+   "established_centreline_m_by_width_mm": {
+    "150": 8.7,
+    "200": 21.998,
+    "920": 14.035
+   },
+   "ambiguous_centreline_m_by_width_mm": {},
+   "band_counts": {
+    "WALL_BAND_ESTABLISHED": 19
+   },
+   "admitted_boundary_m_by_role": {
+    "GLAZING_BOUNDARY": 23.12,
+    "STRUCTURAL_OBSTACLE": 106.403,
+    "TOPOLOGY_BOUNDARY": 120.575
+   },
+   "admitted_not_in_any_band_m_by_role": {
+    "GLAZING_BOUNDARY": 23.12,
+    "STRUCTURAL_OBSTACLE": 106.403,
+    "TOPOLOGY_BOUNDARY": 24.309
+   },
+   "unsupported_runs": 1,
+   "blockwork_rows_m": {
+    "150|COMPUTED": 8.7,
+    "200|COMPUTED": 21.998,
+    "920|EXCLUDED": 14.035
+   }
+  }
+ },
+ "columns": [
+  {
+   "floor": "1F",
+   "tag": "H2125",
+   "type": "C",
+   "state": "NOT_IN_STOREY",
+   "B_cm": null,
+   "concrete_m3": null,
+   "rebar_net_kg": 0.0
+  },
+  {
+   "floor": "1F",
+   "tag": "H4100",
+   "type": "C",
+   "state": "NOT_IN_STOREY",
+   "B_cm": null,
+   "concrete_m3": null,
+   "rebar_net_kg": 0.0
+  },
+  {
+   "floor": "1F",
+   "tag": "H4102",
+   "type": "C3",
+   "state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "B_cm": 20.0,
+   "concrete_m3": null,
+   "rebar_net_kg": 52.148
+  },
+  {
+   "floor": "1F",
+   "tag": "H4104",
+   "type": "C",
+   "state": "NOT_IN_STOREY",
+   "B_cm": null,
+   "concrete_m3": null,
+   "rebar_net_kg": 0.0
+  },
+  {
+   "floor": "1F",
+   "tag": "H4106",
+   "type": "C3",
+   "state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "B_cm": 20.0,
+   "concrete_m3": null,
+   "rebar_net_kg": 52.148
+  },
+  {
+   "floor": "1F",
+   "tag": "H4108",
+   "type": "C",
+   "state": "NOT_IN_STOREY",
+   "B_cm": null,
+   "concrete_m3": null,
+   "rebar_net_kg": 0.0
+  },
+  {
+   "floor": "1F",
+   "tag": "H4110",
+   "type": "C3",
+   "state": "BLOCKED_UPPER_MEMBER_UNBOUND",
+   "B_cm": 20.0,
+   "concrete_m3": null,
+   "rebar_net_kg": 52.148
+  },
+  {
+   "floor": "1F",
+   "tag": "H4112",
+   "type": "C5",
+   "state": "BLOCKED_UPPER_MEMBER_UNBOUND",
+   "B_cm": 20.0,
+   "concrete_m3": null,
+   "rebar_net_kg": 65.422
+  },
+  {
+   "floor": "1F",
+   "tag": "H4114",
+   "type": "C11",
+   "state": "NOT_IN_STOREY",
+   "B_cm": null,
+   "concrete_m3": null,
+   "rebar_net_kg": 0.0
+  },
+  {
+   "floor": "1F",
+   "tag": "H4116",
+   "type": "C6",
+   "state": "PROVEN",
+   "B_cm": 20.0,
+   "concrete_m3": 0.444,
+   "rebar_net_kg": 67.476
+  },
+  {
+   "floor": "1F",
+   "tag": "H4118",
+   "type": "C11",
+   "state": "NOT_IN_STOREY",
+   "B_cm": null,
+   "concrete_m3": null,
+   "rebar_net_kg": 0.0
+  },
+  {
+   "floor": "1F",
+   "tag": "H4120",
+   "type": "C3",
+   "state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "B_cm": 20.0,
+   "concrete_m3": null,
+   "rebar_net_kg": 52.148
+  },
+  {
+   "floor": "1F",
+   "tag": "H4122",
+   "type": "C8",
+   "state": "PROVEN",
+   "B_cm": 20.0,
+   "concrete_m3": 0.621,
+   "rebar_net_kg": 100.187
+  },
+  {
+   "floor": "1F",
+   "tag": "H4124",
+   "type": "C5",
+   "state": "PROVEN",
+   "B_cm": 20.0,
+   "concrete_m3": 0.345,
+   "rebar_net_kg": 65.422
+  },
+  {
+   "floor": "1F",
+   "tag": "H4185",
+   "type": "C10",
+   "state": "NOT_IN_STOREY",
+   "B_cm": null,
+   "concrete_m3": null,
+   "rebar_net_kg": 0.0
+  },
+  {
+   "floor": "1F",
+   "tag": "H4187",
+   "type": "C",
+   "state": "NOT_IN_STOREY",
+   "B_cm": null,
+   "concrete_m3": null,
+   "rebar_net_kg": 0.0
+  },
+  {
+   "floor": "1F",
+   "tag": "H4189",
+   "type": "C7",
+   "state": "PROVEN",
+   "B_cm": 20.0,
+   "concrete_m3": 0.552,
+   "rebar_net_kg": 84.859
+  },
+  {
+   "floor": "1F",
+   "tag": "H4191",
+   "type": "C3",
+   "state": "PROVEN",
+   "B_cm": 20.0,
+   "concrete_m3": 0.38,
+   "rebar_net_kg": 52.148
+  },
+  {
+   "floor": "1F",
+   "tag": "H4193",
+   "type": "C2",
+   "state": "PROVEN",
+   "B_cm": 20.0,
+   "concrete_m3": 0.37,
+   "rebar_net_kg": 65.422
+  },
+  {
+   "floor": "1F",
+   "tag": "H4195",
+   "type": "C2",
+   "state": "PROVEN",
+   "B_cm": 20.0,
+   "concrete_m3": 0.37,
+   "rebar_net_kg": 65.422
+  },
+  {
+   "floor": "1F",
+   "tag": "H4197",
+   "type": "C4",
+   "state": "PROVEN",
+   "B_cm": 20.0,
+   "concrete_m3": 0.37,
+   "rebar_net_kg": 65.422
+  },
+  {
+   "floor": "1F",
+   "tag": "H4199",
+   "type": "C4",
+   "state": "BLOCKED_TAG_NOT_BOUND",
+   "B_cm": 20.0,
+   "concrete_m3": null,
+   "rebar_net_kg": 65.422
+  },
+  {
+   "floor": "1F",
+   "tag": "H4201",
+   "type": "C5",
+   "state": "PROVEN",
+   "B_cm": 20.0,
+   "concrete_m3": 0.37,
+   "rebar_net_kg": 65.422
+  },
+  {
+   "floor": "1F",
+   "tag": "H4203",
+   "type": "C9",
+   "state": "PROVEN",
+   "B_cm": 20.0,
+   "concrete_m3": 0.621,
+   "rebar_net_kg": 100.187
+  },
+  {
+   "floor": "1F",
+   "tag": "H4205",
+   "type": "C8",
+   "state": "PROVEN_UNBOUND_DOMINATED",
+   "B_cm": 20.0,
+   "concrete_m3": 0.621,
+   "rebar_net_kg": 100.187
+  },
+  {
+   "floor": "1F",
+   "tag": "H4207",
+   "type": "C3",
+   "state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "B_cm": 20.0,
+   "concrete_m3": null,
+   "rebar_net_kg": 52.148
+  },
+  {
+   "floor": "1F",
+   "tag": "H4209",
+   "type": "CN",
+   "state": "NOT_IN_STOREY",
+   "B_cm": null,
+   "concrete_m3": null,
+   "rebar_net_kg": 0.0
+  },
+  {
+   "floor": "1F",
+   "tag": "H4211",
+   "type": "CN",
+   "state": "NOT_IN_STOREY",
+   "B_cm": null,
+   "concrete_m3": null,
+   "rebar_net_kg": 0.0
+  },
+  {
+   "floor": "1F",
+   "tag": "H4213",
+   "type": "C9",
+   "state": "PROVEN",
+   "B_cm": 20.0,
+   "concrete_m3": 0.621,
+   "rebar_net_kg": 100.187
+  },
+  {
+   "floor": "1F",
+   "tag": "H4215",
+   "type": "C2",
+   "state": "PROVEN",
+   "B_cm": 20.0,
+   "concrete_m3": 0.38,
+   "rebar_net_kg": 65.422
+  },
+  {
+   "floor": "1F",
+   "tag": "H4217",
+   "type": "C1",
+   "state": "PROVEN",
+   "B_cm": 20.0,
+   "concrete_m3": 0.345,
+   "rebar_net_kg": 52.148
+  },
+  {
+   "floor": "1F",
+   "tag": "H4219",
+   "type": "C2",
+   "state": "PROVEN",
+   "B_cm": 20.0,
+   "concrete_m3": 0.345,
+   "rebar_net_kg": 65.422
+  },
+  {
+   "floor": "1F",
+   "tag": "H6070",
+   "type": "CN",
+   "state": "NOT_IN_STOREY",
+   "B_cm": null,
+   "concrete_m3": null,
+   "rebar_net_kg": 0.0
+  },
+  {
+   "floor": "1F",
+   "tag": "H6096",
+   "type": "CN",
+   "state": "NOT_IN_STOREY",
+   "B_cm": null,
+   "concrete_m3": null,
+   "rebar_net_kg": 0.0
+  },
+  {
+   "floor": "1F",
+   "tag": "H6098",
+   "type": "CN",
+   "state": "NOT_IN_STOREY",
+   "B_cm": null,
+   "concrete_m3": null,
+   "rebar_net_kg": 0.0
+  },
+  {
+   "floor": "2F",
+   "tag": "H2125",
+   "type": "C",
+   "state": "NOT_IN_STOREY",
+   "B_cm": null,
+   "concrete_m3": null,
+   "rebar_net_kg": 0.0
+  },
+  {
+   "floor": "2F",
+   "tag": "H4100",
+   "type": "C",
+   "state": "NOT_IN_STOREY",
+   "B_cm": null,
+   "concrete_m3": null,
+   "rebar_net_kg": 0.0
+  },
+  {
+   "floor": "2F",
+   "tag": "H4102",
+   "type": "C3",
+   "state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "B_cm": 20.0,
+   "concrete_m3": null,
+   "rebar_net_kg": 52.148
+  },
+  {
+   "floor": "2F",
+   "tag": "H4104",
+   "type": "C",
+   "state": "NOT_IN_STOREY",
+   "B_cm": null,
+   "concrete_m3": null,
+   "rebar_net_kg": 0.0
+  },
+  {
+   "floor": "2F",
+   "tag": "H4106",
+   "type": "C3",
+   "state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "B_cm": 20.0,
+   "concrete_m3": null,
+   "rebar_net_kg": 52.148
+  },
+  {
+   "floor": "2F",
+   "tag": "H4108",
+   "type": "C",
+   "state": "NOT_IN_STOREY",
+   "B_cm": null,
+   "concrete_m3": null,
+   "rebar_net_kg": 0.0
+  },
+  {
+   "floor": "2F",
+   "tag": "H4110",
+   "type": "C3",
+   "state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "B_cm": 20.0,
+   "concrete_m3": null,
+   "rebar_net_kg": 52.148
+  },
+  {
+   "floor": "2F",
+   "tag": "H4112",
+   "type": "C5",
+   "state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "B_cm": 20.0,
+   "concrete_m3": null,
+   "rebar_net_kg": 52.148
+  },
+  {
+   "floor": "2F",
+   "tag": "H4114",
+   "type": "C11",
+   "state": "NOT_IN_STOREY",
+   "B_cm": null,
+   "concrete_m3": null,
+   "rebar_net_kg": 0.0
+  },
+  {
+   "floor": "2F",
+   "tag": "H4116",
+   "type": "C6",
+   "state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "B_cm": 20.0,
+   "concrete_m3": null,
+   "rebar_net_kg": 65.422
+  },
+  {
+   "floor": "2F",
+   "tag": "H4118",
+   "type": "C11",
+   "state": "NOT_IN_STOREY",
+   "B_cm": null,
+   "concrete_m3": null,
+   "rebar_net_kg": 0.0
+  },
+  {
+   "floor": "2F",
+   "tag": "H4120",
+   "type": "C3",
+   "state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "B_cm": 20.0,
+   "concrete_m3": null,
+   "rebar_net_kg": 52.148
+  },
+  {
+   "floor": "2F",
+   "tag": "H4122",
+   "type": "C8",
+   "state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "B_cm": 20.0,
+   "concrete_m3": null,
+   "rebar_net_kg": 82.805
+  },
+  {
+   "floor": "2F",
+   "tag": "H4124",
+   "type": "C5",
+   "state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "B_cm": 20.0,
+   "concrete_m3": null,
+   "rebar_net_kg": 52.148
+  },
+  {
+   "floor": "2F",
+   "tag": "H4185",
+   "type": "C10",
+   "state": "NOT_IN_STOREY",
+   "B_cm": null,
+   "concrete_m3": null,
+   "rebar_net_kg": 0.0
+  },
+  {
+   "floor": "2F",
+   "tag": "H4187",
+   "type": "C",
+   "state": "NOT_IN_STOREY",
+   "B_cm": null,
+   "concrete_m3": null,
+   "rebar_net_kg": 0.0
+  },
+  {
+   "floor": "2F",
+   "tag": "H4189",
+   "type": "C7",
+   "state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "B_cm": 20.0,
+   "concrete_m3": null,
+   "rebar_net_kg": 67.476
+  },
+  {
+   "floor": "2F",
+   "tag": "H4191",
+   "type": "C3",
+   "state": "PROVEN",
+   "B_cm": 20.0,
+   "concrete_m3": 0.3,
+   "rebar_net_kg": 52.148
+  },
+  {
+   "floor": "2F",
+   "tag": "H4193",
+   "type": "C2",
+   "state": "PROVEN",
+   "B_cm": 20.0,
+   "concrete_m3": 0.3,
+   "rebar_net_kg": 52.148
+  },
+  {
+   "floor": "2F",
+   "tag": "H4195",
+   "type": "C2",
+   "state": "PROVEN",
+   "B_cm": 20.0,
+   "concrete_m3": 0.345,
+   "rebar_net_kg": 52.148
+  },
+  {
+   "floor": "2F",
+   "tag": "H4197",
+   "type": "C4",
+   "state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "B_cm": 20.0,
+   "concrete_m3": null,
+   "rebar_net_kg": 52.148
+  },
+  {
+   "floor": "2F",
+   "tag": "H4199",
+   "type": "C4",
+   "state": "BLOCKED_TAG_NOT_BOUND",
+   "B_cm": 20.0,
+   "concrete_m3": null,
+   "rebar_net_kg": 52.148
+  },
+  {
+   "floor": "2F",
+   "tag": "H4201",
+   "type": "C5",
+   "state": "PROVEN",
+   "B_cm": 20.0,
+   "concrete_m3": 0.345,
+   "rebar_net_kg": 52.148
+  },
+  {
+   "floor": "2F",
+   "tag": "H4203",
+   "type": "C9",
+   "state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "B_cm": 20.0,
+   "concrete_m3": null,
+   "rebar_net_kg": 82.805
+  },
+  {
+   "floor": "2F",
+   "tag": "H4205",
+   "type": "C8",
+   "state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "B_cm": 20.0,
+   "concrete_m3": null,
+   "rebar_net_kg": 82.805
+  },
+  {
+   "floor": "2F",
+   "tag": "H4207",
+   "type": "C3",
+   "state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "B_cm": 20.0,
+   "concrete_m3": null,
+   "rebar_net_kg": 52.148
+  },
+  {
+   "floor": "2F",
+   "tag": "H4209",
+   "type": "CN",
+   "state": "NOT_IN_STOREY",
+   "B_cm": null,
+   "concrete_m3": null,
+   "rebar_net_kg": 0.0
+  },
+  {
+   "floor": "2F",
+   "tag": "H4211",
+   "type": "CN",
+   "state": "NOT_IN_STOREY",
+   "B_cm": null,
+   "concrete_m3": null,
+   "rebar_net_kg": 0.0
+  },
+  {
+   "floor": "2F",
+   "tag": "H4213",
+   "type": "C9",
+   "state": "PROVEN",
+   "B_cm": 20.0,
+   "concrete_m3": 0.532,
+   "rebar_net_kg": 82.805
+  },
+  {
+   "floor": "2F",
+   "tag": "H4215",
+   "type": "C2",
+   "state": "PROVEN",
+   "B_cm": 20.0,
+   "concrete_m3": 0.38,
+   "rebar_net_kg": 52.148
+  },
+  {
+   "floor": "2F",
+   "tag": "H4217",
+   "type": "C1",
+   "state": "PROVEN",
+   "B_cm": 20.0,
+   "concrete_m3": 0.38,
+   "rebar_net_kg": 52.148
+  },
+  {
+   "floor": "2F",
+   "tag": "H4219",
+   "type": "C2",
+   "state": "PROVEN",
+   "B_cm": 20.0,
+   "concrete_m3": 0.38,
+   "rebar_net_kg": 52.148
+  },
+  {
+   "floor": "2F",
+   "tag": "H6070",
+   "type": "CN",
+   "state": "NOT_IN_STOREY",
+   "B_cm": null,
+   "concrete_m3": null,
+   "rebar_net_kg": 0.0
+  },
+  {
+   "floor": "2F",
+   "tag": "H6096",
+   "type": "CN",
+   "state": "NOT_IN_STOREY",
+   "B_cm": null,
+   "concrete_m3": null,
+   "rebar_net_kg": 0.0
+  },
+  {
+   "floor": "2F",
+   "tag": "H6098",
+   "type": "CN",
+   "state": "NOT_IN_STOREY",
+   "B_cm": null,
+   "concrete_m3": null,
+   "rebar_net_kg": 0.0
+  },
+  {
+   "floor": "GF",
+   "tag": "H2125",
+   "type": "C",
+   "state": "PROVEN",
+   "B_cm": 20.0,
+   "concrete_m3": 0.375,
+   "rebar_net_kg": 69.689
+  },
+  {
+   "floor": "GF",
+   "tag": "H4100",
+   "type": "C",
+   "state": "PROVEN",
+   "B_cm": 20.0,
+   "concrete_m3": 0.41,
+   "rebar_net_kg": 69.689
+  },
+  {
+   "floor": "GF",
+   "tag": "H4102",
+   "type": "C3",
+   "state": "PROVEN",
+   "B_cm": 25.0,
+   "concrete_m3": 0.46875,
+   "rebar_net_kg": 70.756
+  },
+  {
+   "floor": "GF",
+   "tag": "H4104",
+   "type": "C",
+   "state": "PROVEN",
+   "B_cm": 20.0,
+   "concrete_m3": 0.375,
+   "rebar_net_kg": 69.689
+  },
+  {
+   "floor": "GF",
+   "tag": "H4106",
+   "type": "C3",
+   "state": "PROVEN",
+   "B_cm": 25.0,
+   "concrete_m3": 0.46875,
+   "rebar_net_kg": 70.756
+  },
+  {
+   "floor": "GF",
+   "tag": "H4108",
+   "type": "C",
+   "state": "SLAB_SOFFIT",
+   "B_cm": 20.0,
+   "concrete_m3": 0.434,
+   "rebar_net_kg": 69.689
+  },
+  {
+   "floor": "GF",
+   "tag": "H4110",
+   "type": "C3",
+   "state": "PROVEN",
+   "B_cm": 25.0,
+   "concrete_m3": 0.5,
+   "rebar_net_kg": 70.756
+  },
+  {
+   "floor": "GF",
+   "tag": "H4112",
+   "type": "C5",
+   "state": "PROVEN",
+   "B_cm": 25.0,
+   "concrete_m3": 0.5625,
+   "rebar_net_kg": 87.111
+  },
+  {
+   "floor": "GF",
+   "tag": "H4114",
+   "type": "C11",
+   "state": "PROVEN",
+   "B_cm": 25.0,
+   "concrete_m3": 1.00375,
+   "rebar_net_kg": 126.223
+  },
+  {
+   "floor": "GF",
+   "tag": "H4116",
+   "type": "C6",
+   "state": "PROVEN",
+   "B_cm": 25.0,
+   "concrete_m3": 0.65625,
+   "rebar_net_kg": 89.244
+  },
+  {
+   "floor": "GF",
+   "tag": "H4118",
+   "type": "C11",
+   "state": "PROVEN",
+   "B_cm": 25.0,
+   "concrete_m3": 1.00375,
+   "rebar_net_kg": 126.223
+  },
+  {
+   "floor": "GF",
+   "tag": "H4120",
+   "type": "C3",
+   "state": "PROVEN",
+   "B_cm": 25.0,
+   "concrete_m3": 0.46875,
+   "rebar_net_kg": 70.756
+  },
+  {
+   "floor": "GF",
+   "tag": "H4122",
+   "type": "C8",
+   "state": "BLOCKED_UPPER_MEMBER_UNBOUND",
+   "B_cm": 25.0,
+   "concrete_m3": null,
+   "rebar_net_kg": 107.733
+  },
+  {
+   "floor": "GF",
+   "tag": "H4124",
+   "type": "C5",
+   "state": "BLOCKED_UPPER_MEMBER_UNBOUND",
+   "B_cm": 25.0,
+   "concrete_m3": null,
+   "rebar_net_kg": 87.111
+  },
+  {
+   "floor": "GF",
+   "tag": "H4185",
+   "type": "C10",
+   "state": "PROVEN",
+   "B_cm": 25.0,
+   "concrete_m3": 0.63875,
+   "rebar_net_kg": 89.244
+  },
+  {
+   "floor": "GF",
+   "tag": "H4187",
+   "type": "C",
+   "state": "PROVEN",
+   "B_cm": 20.0,
+   "concrete_m3": 0.375,
+   "rebar_net_kg": 69.689
+  },
+  {
+   "floor": "GF",
+   "tag": "H4189",
+   "type": "C7",
+   "state": "PROVEN",
+   "B_cm": 25.0,
+   "concrete_m3": 0.75,
+   "rebar_net_kg": 105.6
+  },
+  {
+   "floor": "GF",
+   "tag": "H4191",
+   "type": "C3",
+   "state": "PROVEN",
+   "B_cm": 25.0,
+   "concrete_m3": 0.5125,
+   "rebar_net_kg": 70.756
+  },
+  {
+   "floor": "GF",
+   "tag": "H4193",
+   "type": "C2",
+   "state": "PROVEN",
+   "B_cm": 20.0,
+   "concrete_m3": 0.41,
+   "rebar_net_kg": 69.689
+  },
+  {
+   "floor": "GF",
+   "tag": "H4195",
+   "type": "C2",
+   "state": "PROVEN",
+   "B_cm": 20.0,
+   "concrete_m3": 0.41,
+   "rebar_net_kg": 69.689
+  },
+  {
+   "floor": "GF",
+   "tag": "H4197",
+   "type": "C4",
+   "state": "PROVEN",
+   "B_cm": 25.0,
+   "concrete_m3": 0.46875,
+   "rebar_net_kg": 70.756
+  },
+  {
+   "floor": "GF",
+   "tag": "H4199",
+   "type": "C4",
+   "state": "BLOCKED_TAG_NOT_BOUND",
+   "B_cm": 25.0,
+   "concrete_m3": null,
+   "rebar_net_kg": 70.756
+  },
+  {
+   "floor": "GF",
+   "tag": "H4201",
+   "type": "C5",
+   "state": "PROVEN",
+   "B_cm": 25.0,
+   "concrete_m3": 0.5625,
+   "rebar_net_kg": 87.111
+  },
+  {
+   "floor": "GF",
+   "tag": "H4203",
+   "type": "C9",
+   "state": "BLOCKED_SEVERAL_OUTLINES_ON_STOREY_SHEET",
+   "B_cm": 25.0,
+   "concrete_m3": null,
+   "rebar_net_kg": 124.089
+  },
+  {
+   "floor": "GF",
+   "tag": "H4205",
+   "type": "C8",
+   "state": "BLOCKED_SEVERAL_OUTLINES_ON_STOREY_SHEET",
+   "B_cm": 25.0,
+   "concrete_m3": null,
+   "rebar_net_kg": 107.733
+  },
+  {
+   "floor": "GF",
+   "tag": "H4207",
+   "type": "C3",
+   "state": "PROVEN",
+   "B_cm": 25.0,
+   "concrete_m3": 0.46875,
+   "rebar_net_kg": 70.756
+  },
+  {
+   "floor": "GF",
+   "tag": "H4209",
+   "type": "CN",
+   "state": "NOT_IN_STOREY",
+   "B_cm": null,
+   "concrete_m3": null,
+   "rebar_net_kg": 0.0
+  },
+  {
+   "floor": "GF",
+   "tag": "H4211",
+   "type": "CN",
+   "state": "NOT_IN_STOREY",
+   "B_cm": null,
+   "concrete_m3": null,
+   "rebar_net_kg": 0.0
+  },
+  {
+   "floor": "GF",
+   "tag": "H4213",
+   "type": "C9",
+   "state": "PROVEN",
+   "B_cm": 25.0,
+   "concrete_m3": 0.9375,
+   "rebar_net_kg": 124.089
+  },
+  {
+   "floor": "GF",
+   "tag": "H4215",
+   "type": "C2",
+   "state": "PROVEN",
+   "B_cm": 20.0,
+   "concrete_m3": 0.41,
+   "rebar_net_kg": 69.689
+  },
+  {
+   "floor": "GF",
+   "tag": "H4217",
+   "type": "C1",
+   "state": "PROVEN",
+   "B_cm": 20.0,
+   "concrete_m3": 0.375,
+   "rebar_net_kg": 69.689
+  },
+  {
+   "floor": "GF",
+   "tag": "H4219",
+   "type": "C2",
+   "state": "PROVEN",
+   "B_cm": 20.0,
+   "concrete_m3": 0.375,
+   "rebar_net_kg": 69.689
+  },
+  {
+   "floor": "GF",
+   "tag": "H6070",
+   "type": "CN",
+   "state": "NOT_IN_STOREY",
+   "B_cm": null,
+   "concrete_m3": null,
+   "rebar_net_kg": 0.0
+  },
+  {
+   "floor": "GF",
+   "tag": "H6096",
+   "type": "CN",
+   "state": "NOT_IN_STOREY",
+   "B_cm": null,
+   "concrete_m3": null,
+   "rebar_net_kg": 0.0
+  },
+  {
+   "floor": "GF",
+   "tag": "H6098",
+   "type": "CN",
+   "state": "NOT_IN_STOREY",
+   "B_cm": null,
+   "concrete_m3": null,
+   "rebar_net_kg": 0.0
+  }
+ ],
+ "ground": {
+  "zones": [
+   {
+    "id": "ZONE-1",
+    "state": "CLOSED_V3A",
+    "slab_m2": 70.40589
+   },
+   {
+    "id": "ZONE-2",
+    "state": "CLOSED_CROSS_LAYER",
+    "outer_m2": 60.557,
+    "slab_m2": 44.983,
+    "pieces": 7,
+    "t_m": 0.1,
+    "volume_m3": 4.4983,
+    "mesh_kg": 277.672,
+    "rule": "paired 300 mm bands (layers 1 + 2) + single lines as barriers; slab = outer - beams / columns / barriers, strips narrower than 450 mm effective width excluded"
+   }
+  ],
+  "footprints": [
+   {
+    "id": "FP-1",
+    "area_m2": 227.719,
+    "bounds": [
+     92817,
+     35948,
+     112189,
+     49998
+    ]
+   },
+   {
+    "id": "FP-2",
+    "area_m2": 60.557,
+    "bounds": [
+     80817,
+     36298,
+     91619,
+     45549
+    ]
+   }
+  ],
+  "v3a_zones": [
+   {
+    "id": "ZONE-1",
+    "label": "ALSENAN_ST7757_DXF|H5782|5776|TEXT|0",
+    "thickness_text": "T=10cm",
+    "mesh_text": "5%%c10/m E.W.",
+    "outer_area_m2": 103.442579,
+    "slab_area_m2": 70.40589,
+    "level": null
+   },
+   {
+    "id": "ZONE-2",
+    "label": "ALSENAN_ST7757_DXF|H5782|5789|TEXT|0",
+    "state": "BLOCKED_ZONE_NOT_CLOSED"
+   }
+  ]
+ },
+ "openings": [
+  {
+   "floor": "GF",
+   "id": "GF-D-641",
+   "kind": "DOUBLE_LEAF_DOOR",
+   "width_m": 2.0,
+   "wall_t_m": 0.2,
+   "height_m": null,
+   "height_state": "BLOCKED_OPENING_HEIGHT (no door schedule / elevation value)",
+   "status": "COMPUTED",
+   "rule": "DOOR_IN_WALL_GAP_V1"
+  },
+  {
+   "floor": "GF",
+   "id": "GF-D-E820",
+   "kind": "DOOR",
+   "width_m": 0.8,
+   "wall_t_m": 0.15,
+   "height_m": null,
+   "height_state": "BLOCKED_OPENING_HEIGHT (no door schedule / elevation value)",
+   "status": "COMPUTED",
+   "rule": "FROZEN_DOOR_CLOSURE"
+  },
+  {
+   "floor": "GF",
+   "id": "GF-D-I1023",
+   "kind": "DOOR",
+   "width_m": null,
+   "wall_t_m": null,
+   "height_m": null,
+   "height_state": null,
+   "status": "BLOCKED",
+   "rule": null
+  },
+  {
+   "floor": "GF",
+   "id": "GF-D-I350",
+   "kind": "DOOR",
+   "width_m": 1.0,
+   "wall_t_m": 0.2,
+   "height_m": null,
+   "height_state": "BLOCKED_OPENING_HEIGHT (no door schedule / elevation value)",
+   "status": "COMPUTED",
+   "rule": "FROZEN_DOOR_CLOSURE"
+  },
+  {
+   "floor": "GF",
+   "id": "GF-D-I402",
+   "kind": "DOOR",
+   "width_m": 1.0,
+   "wall_t_m": 0.2,
+   "height_m": null,
+   "height_state": "BLOCKED_OPENING_HEIGHT (no door schedule / elevation value)",
+   "status": "COMPUTED",
+   "rule": "FROZEN_DOOR_CLOSURE"
+  },
+  {
+   "floor": "GF",
+   "id": "GF-D-I414",
+   "kind": "DOOR",
+   "width_m": 0.8,
+   "wall_t_m": 0.15,
+   "height_m": null,
+   "height_state": "BLOCKED_OPENING_HEIGHT (no door schedule / elevation value)",
+   "status": "COMPUTED",
+   "rule": "FROZEN_DOOR_CLOSURE"
+  },
+  {
+   "floor": "GF",
+   "id": "GF-D-I437",
+   "kind": "DOOR",
+   "width_m": 0.9,
+   "wall_t_m": 0.2,
+   "height_m": null,
+   "height_state": "BLOCKED_OPENING_HEIGHT (no door schedule / elevation value)",
+   "status": "COMPUTED",
+   "rule": "FROZEN_DOOR_CLOSURE"
+  },
+  {
+   "floor": "GF",
+   "id": "GF-D-I495",
+   "kind": "DOOR",
+   "width_m": 0.8,
+   "wall_t_m": 0.15,
+   "height_m": null,
+   "height_state": "BLOCKED_OPENING_HEIGHT (no door schedule / elevation value)",
+   "status": "COMPUTED",
+   "rule": "FROZEN_DOOR_CLOSURE"
+  },
+  {
+   "floor": "GF",
+   "id": "GF-D-I711",
+   "kind": "DOOR",
+   "width_m": 1.0,
+   "wall_t_m": 0.2,
+   "height_m": null,
+   "height_state": "BLOCKED_OPENING_HEIGHT (no door schedule / elevation value)",
+   "status": "COMPUTED",
+   "rule": "FROZEN_DOOR_CLOSURE"
+  },
+  {
+   "floor": "GF",
+   "id": "GF-D-I754",
+   "kind": "DOOR",
+   "width_m": 1.0,
+   "wall_t_m": 0.15,
+   "height_m": null,
+   "height_state": "BLOCKED_OPENING_HEIGHT (no door schedule / elevation value)",
+   "status": "COMPUTED",
+   "rule": "FROZEN_DOOR_CLOSURE"
+  },
+  {
+   "floor": "GF",
+   "id": "GF-D-I800",
+   "kind": "DOOR",
+   "width_m": 0.828,
+   "wall_t_m": 0.15,
+   "height_m": null,
+   "height_state": "BLOCKED_OPENING_HEIGHT (no door schedule / elevation value)",
+   "status": "COMPUTED",
+   "rule": "FROZEN_DOOR_CLOSURE"
+  },
+  {
+   "floor": "GF",
+   "id": "GF-D-I801",
+   "kind": "DOOR",
+   "width_m": 0.8,
+   "wall_t_m": 0.15,
+   "height_m": null,
+   "height_state": "BLOCKED_OPENING_HEIGHT (no door schedule / elevation value)",
+   "status": "COMPUTED",
+   "rule": "FROZEN_DOOR_CLOSURE"
+  },
+  {
+   "floor": "GF",
+   "id": "GF-D-I825",
+   "kind": "DOOR",
+   "width_m": 0.797,
+   "wall_t_m": 0.15,
+   "height_m": null,
+   "height_state": "BLOCKED_OPENING_HEIGHT (no door schedule / elevation value)",
+   "status": "COMPUTED",
+   "rule": "FROZEN_DOOR_CLOSURE"
+  },
+  {
+   "floor": "GF",
+   "id": "GF-D-I830",
+   "kind": "DOOR",
+   "width_m": 1.0,
+   "wall_t_m": 0.2,
+   "height_m": null,
+   "height_state": "BLOCKED_OPENING_HEIGHT (no door schedule / elevation value)",
+   "status": "COMPUTED",
+   "rule": "FROZEN_DOOR_CLOSURE"
+  },
+  {
+   "floor": "GF",
+   "id": "GF-W01",
+   "kind": "WINDOW",
+   "width_m": 0.9,
+   "wall_t_m": 0.2,
+   "height_m": null,
+   "height_state": "BLOCKED_OPENING_HEIGHT (no head / sill printed)",
+   "status": "COMPUTED",
+   "rule": null
+  },
+  {
+   "floor": "GF",
+   "id": "GF-W02",
+   "kind": "WINDOW",
+   "width_m": 1.5,
+   "wall_t_m": 0.2,
+   "height_m": null,
+   "height_state": "BLOCKED_OPENING_HEIGHT (no head / sill printed)",
+   "status": "COMPUTED",
+   "rule": null
+  },
+  {
+   "floor": "GF",
+   "id": "GF-W03",
+   "kind": "WINDOW",
+   "width_m": 1.0,
+   "wall_t_m": 0.2,
+   "height_m": null,
+   "height_state": "BLOCKED_OPENING_HEIGHT (no head / sill printed)",
+   "status": "COMPUTED",
+   "rule": null
+  },
+  {
+   "floor": "GF",
+   "id": "GF-W04",
+   "kind": "WINDOW",
+   "width_m": 1.0,
+   "wall_t_m": 0.2,
+   "height_m": null,
+   "height_state": "BLOCKED_OPENING_HEIGHT (no head / sill printed)",
+   "status": "COMPUTED",
+   "rule": null
+  },
+  {
+   "floor": "GF",
+   "id": "GF-W05",
+   "kind": "WINDOW",
+   "width_m": 0.9,
+   "wall_t_m": 0.2,
+   "height_m": null,
+   "height_state": "BLOCKED_OPENING_HEIGHT (no head / sill printed)",
+   "status": "COMPUTED",
+   "rule": null
+  },
+  {
+   "floor": "GF",
+   "id": "GF-W06",
+   "kind": "WINDOW",
+   "width_m": 0.6,
+   "wall_t_m": 0.2,
+   "height_m": null,
+   "height_state": "BLOCKED_OPENING_HEIGHT (no head / sill printed)",
+   "status": "COMPUTED",
+   "rule": null
+  },
+  {
+   "floor": "GF",
+   "id": "GF-W07",
+   "kind": "WINDOW",
+   "width_m": 0.6,
+   "wall_t_m": 0.2,
+   "height_m": null,
+   "height_state": "BLOCKED_OPENING_HEIGHT (no head / sill printed)",
+   "status": "COMPUTED",
+   "rule": null
+  },
+  {
+   "floor": "GF",
+   "id": "GF-W08",
+   "kind": "WINDOW",
+   "width_m": 0.6,
+   "wall_t_m": 0.2,
+   "height_m": null,
+   "height_state": "BLOCKED_OPENING_HEIGHT (no head / sill printed)",
+   "status": "COMPUTED",
+   "rule": null
+  },
+  {
+   "floor": "GF",
+   "id": "GF-W09",
+   "kind": "WINDOW",
+   "width_m": 6.332,
+   "wall_t_m": 0.2,
+   "height_m": null,
+   "height_state": "BLOCKED_OPENING_HEIGHT (no head / sill printed)",
+   "status": "COMPUTED",
+   "rule": null
+  },
+  {
+   "floor": "GF",
+   "id": "GF-W10",
+   "kind": "WINDOW",
+   "width_m": 1.2,
+   "wall_t_m": 0.2,
+   "height_m": null,
+   "height_state": "BLOCKED_OPENING_HEIGHT (no head / sill printed)",
+   "status": "COMPUTED",
+   "rule": null
+  },
+  {
+   "floor": "GF",
+   "id": "GF-W11",
+   "kind": "WINDOW",
+   "width_m": 1.0,
+   "wall_t_m": 0.2,
+   "height_m": null,
+   "height_state": "BLOCKED_OPENING_HEIGHT (no head / sill printed)",
+   "status": "COMPUTED",
+   "rule": null
+  },
+  {
+   "floor": "GF",
+   "id": "GF-W12",
+   "kind": "WINDOW",
+   "width_m": 1.5,
+   "wall_t_m": 0.2,
+   "height_m": null,
+   "height_state": "BLOCKED_OPENING_HEIGHT (no head / sill printed)",
+   "status": "COMPUTED",
+   "rule": null
+  },
+  {
+   "floor": "GF",
+   "id": "GF-W13",
+   "kind": "WINDOW",
+   "width_m": 1.0,
+   "wall_t_m": 0.2,
+   "height_m": null,
+   "height_state": "BLOCKED_OPENING_HEIGHT (no head / sill printed)",
+   "status": "COMPUTED",
+   "rule": null
+  },
+  {
+   "floor": "GF",
+   "id": "GF-W14",
+   "kind": "WINDOW",
+   "width_m": 1.0,
+   "wall_t_m": 0.15,
+   "height_m": null,
+   "height_state": "BLOCKED_OPENING_HEIGHT (no head / sill printed)",
+   "status": "COMPUTED",
+   "rule": null
+  },
+  {
+   "floor": "GF",
+   "id": "GF-W15",
+   "kind": "WINDOW",
+   "width_m": 1.955,
+   "wall_t_m": 0.2,
+   "height_m": null,
+   "height_state": "BLOCKED_OPENING_HEIGHT (no head / sill printed)",
+   "status": "COMPUTED",
+   "rule": null
+  },
+  {
+   "floor": "GF",
+   "id": "GF-W16",
+   "kind": "WINDOW",
+   "width_m": 1.955,
+   "wall_t_m": 0.2,
+   "height_m": null,
+   "height_state": "BLOCKED_OPENING_HEIGHT (no head / sill printed)",
+   "status": "COMPUTED",
+   "rule": null
+  },
+  {
+   "floor": "1F",
+   "id": "1F-D-I3054",
+   "kind": "DOOR",
+   "width_m": 0.8,
+   "wall_t_m": 0.15,
+   "height_m": null,
+   "height_state": "BLOCKED_OPENING_HEIGHT (no door schedule / elevation value)",
+   "status": "COMPUTED",
+   "rule": "FROZEN_DOOR_CLOSURE"
+  },
+  {
+   "floor": "1F",
+   "id": "1F-D-I3055",
+   "kind": "DOOR",
+   "width_m": 0.9,
+   "wall_t_m": 0.15,
+   "height_m": null,
+   "height_state": "BLOCKED_OPENING_HEIGHT (no door schedule / elevation value)",
+   "status": "COMPUTED",
+   "rule": "NEAR_COLLINEAR_RAY_HIT_V1"
+  },
+  {
+   "floor": "1F",
+   "id": "1F-D-I3090",
+   "kind": "DOOR",
+   "width_m": 0.8,
+   "wall_t_m": 0.15,
+   "height_m": null,
+   "height_state": "BLOCKED_OPENING_HEIGHT (no door schedule / elevation value)",
+   "status": "COMPUTED",
+   "rule": "FROZEN_DOOR_CLOSURE"
+  },
+  {
+   "floor": "1F",
+   "id": "1F-D-I3096",
+   "kind": "DOOR",
+   "width_m": 0.9,
+   "wall_t_m": 0.15,
+   "height_m": null,
+   "height_state": "BLOCKED_OPENING_HEIGHT (no door schedule / elevation value)",
+   "status": "COMPUTED",
+   "rule": "FROZEN_DOOR_CLOSURE"
+  },
+  {
+   "floor": "1F",
+   "id": "1F-D-I3098",
+   "kind": "DOOR",
+   "width_m": 0.9,
+   "wall_t_m": 0.2,
+   "height_m": null,
+   "height_state": "BLOCKED_OPENING_HEIGHT (no door schedule / elevation value)",
+   "status": "COMPUTED",
+   "rule": "FROZEN_DOOR_CLOSURE"
+  },
+  {
+   "floor": "1F",
+   "id": "1F-D-I3115",
+   "kind": "DOOR",
+   "width_m": 0.8,
+   "wall_t_m": 0.15,
+   "height_m": null,
+   "height_state": "BLOCKED_OPENING_HEIGHT (no door schedule / elevation value)",
+   "status": "COMPUTED",
+   "rule": "FROZEN_DOOR_CLOSURE"
+  },
+  {
+   "floor": "1F",
+   "id": "1F-D-I3118",
+   "kind": "DOOR",
+   "width_m": 0.8,
+   "wall_t_m": 0.15,
+   "height_m": null,
+   "height_state": "BLOCKED_OPENING_HEIGHT (no door schedule / elevation value)",
+   "status": "COMPUTED",
+   "rule": "FROZEN_DOOR_CLOSURE"
+  },
+  {
+   "floor": "1F",
+   "id": "1F-D-I3121",
+   "kind": "DOOR",
+   "width_m": 1.0,
+   "wall_t_m": 0.15,
+   "height_m": null,
+   "height_state": "BLOCKED_OPENING_HEIGHT (no door schedule / elevation value)",
+   "status": "COMPUTED",
+   "rule": "FROZEN_DOOR_CLOSURE"
+  },
+  {
+   "floor": "1F",
+   "id": "1F-D-I3122",
+   "kind": "DOOR",
+   "width_m": 1.0,
+   "wall_t_m": 0.15,
+   "height_m": null,
+   "height_state": "BLOCKED_OPENING_HEIGHT (no door schedule / elevation value)",
+   "status": "COMPUTED",
+   "rule": "FROZEN_DOOR_CLOSURE"
+  },
+  {
+   "floor": "1F",
+   "id": "1F-D-I4532",
+   "kind": "DOOR",
+   "width_m": 0.8,
+   "wall_t_m": 0.15,
+   "height_m": null,
+   "height_state": "BLOCKED_OPENING_HEIGHT (no door schedule / elevation value)",
+   "status": "COMPUTED",
+   "rule": "FROZEN_DOOR_CLOSURE"
+  },
+  {
+   "floor": "1F",
+   "id": "1F-W01",
+   "kind": "WINDOW",
+   "width_m": 0.6,
+   "wall_t_m": 0.2,
+   "height_m": null,
+   "height_state": "BLOCKED_OPENING_HEIGHT (no head / sill printed)",
+   "status": "COMPUTED",
+   "rule": null
+  },
+  {
+   "floor": "1F",
+   "id": "1F-W02",
+   "kind": "WINDOW",
+   "width_m": 1.552,
+   "wall_t_m": 0.2,
+   "height_m": null,
+   "height_state": "BLOCKED_OPENING_HEIGHT (no head / sill printed)",
+   "status": "COMPUTED",
+   "rule": null
+  },
+  {
+   "floor": "1F",
+   "id": "1F-W03",
+   "kind": "WINDOW",
+   "width_m": 1.0,
+   "wall_t_m": 0.2,
+   "height_m": null,
+   "height_state": "BLOCKED_OPENING_HEIGHT (no head / sill printed)",
+   "status": "COMPUTED",
+   "rule": null
+  },
+  {
+   "floor": "1F",
+   "id": "1F-W04",
+   "kind": "WINDOW",
+   "width_m": 1.0,
+   "wall_t_m": 0.15,
+   "height_m": null,
+   "height_state": "BLOCKED_OPENING_HEIGHT (no head / sill printed)",
+   "status": "COMPUTED",
+   "rule": null
+  },
+  {
+   "floor": "1F",
+   "id": "1F-W05",
+   "kind": "WINDOW",
+   "width_m": 1.0,
+   "wall_t_m": 0.2,
+   "height_m": null,
+   "height_state": "BLOCKED_OPENING_HEIGHT (no head / sill printed)",
+   "status": "COMPUTED",
+   "rule": null
+  },
+  {
+   "floor": "1F",
+   "id": "1F-W06",
+   "kind": "WINDOW",
+   "width_m": 0.6,
+   "wall_t_m": 0.2,
+   "height_m": null,
+   "height_state": "BLOCKED_OPENING_HEIGHT (no head / sill printed)",
+   "status": "COMPUTED",
+   "rule": null
+  },
+  {
+   "floor": "1F",
+   "id": "1F-W07",
+   "kind": "WINDOW",
+   "width_m": 0.6,
+   "wall_t_m": 0.2,
+   "height_m": null,
+   "height_state": "BLOCKED_OPENING_HEIGHT (no head / sill printed)",
+   "status": "COMPUTED",
+   "rule": null
+  },
+  {
+   "floor": "1F",
+   "id": "1F-W08",
+   "kind": "WINDOW",
+   "width_m": 1.552,
+   "wall_t_m": 0.2,
+   "height_m": null,
+   "height_state": "BLOCKED_OPENING_HEIGHT (no head / sill printed)",
+   "status": "COMPUTED",
+   "rule": null
+  },
+  {
+   "floor": "1F",
+   "id": "1F-W09",
+   "kind": "WINDOW",
+   "width_m": 1.552,
+   "wall_t_m": 0.2,
+   "height_m": null,
+   "height_state": "BLOCKED_OPENING_HEIGHT (no head / sill printed)",
+   "status": "COMPUTED",
+   "rule": null
+  },
+  {
+   "floor": "1F",
+   "id": "1F-W10",
+   "kind": "WINDOW",
+   "width_m": 0.5,
+   "wall_t_m": 0.2,
+   "height_m": null,
+   "height_state": "BLOCKED_OPENING_HEIGHT (no head / sill printed)",
+   "status": "COMPUTED",
+   "rule": null
+  },
+  {
+   "floor": "1F",
+   "id": "1F-W11",
+   "kind": "WINDOW",
+   "width_m": 1.2,
+   "wall_t_m": 0.2,
+   "height_m": null,
+   "height_state": "BLOCKED_OPENING_HEIGHT (no head / sill printed)",
+   "status": "COMPUTED",
+   "rule": null
+  },
+  {
+   "floor": "1F",
+   "id": "1F-W12",
+   "kind": "WINDOW",
+   "width_m": 2.45,
+   "wall_t_m": 0.2,
+   "height_m": null,
+   "height_state": "BLOCKED_OPENING_HEIGHT (no head / sill printed)",
+   "status": "COMPUTED",
+   "rule": null
+  },
+  {
+   "floor": "2F",
+   "id": "2F-D-I4794",
+   "kind": "DOOR",
+   "width_m": 1.0,
+   "wall_t_m": 0.15,
+   "height_m": null,
+   "height_state": "BLOCKED_OPENING_HEIGHT (no door schedule / elevation value)",
+   "status": "COMPUTED",
+   "rule": "FROZEN_DOOR_CLOSURE"
+  },
+  {
+   "floor": "2F",
+   "id": "2F-D-I4795",
+   "kind": "DOOR",
+   "width_m": 0.8,
+   "wall_t_m": 0.15,
+   "height_m": null,
+   "height_state": "BLOCKED_OPENING_HEIGHT (no door schedule / elevation value)",
+   "status": "COMPUTED",
+   "rule": "FROZEN_DOOR_CLOSURE"
+  },
+  {
+   "floor": "2F",
+   "id": "2F-D-I4802",
+   "kind": "DOOR",
+   "width_m": 0.9,
+   "wall_t_m": 0.2,
+   "height_m": null,
+   "height_state": "BLOCKED_OPENING_HEIGHT (no door schedule / elevation value)",
+   "status": "COMPUTED",
+   "rule": "FROZEN_DOOR_CLOSURE"
+  },
+  {
+   "floor": "2F",
+   "id": "2F-W01",
+   "kind": "WINDOW",
+   "width_m": 1.0,
+   "wall_t_m": 0.2,
+   "height_m": null,
+   "height_state": "BLOCKED_OPENING_HEIGHT (no head / sill printed)",
+   "status": "COMPUTED",
+   "rule": null
+  },
+  {
+   "floor": "2F",
+   "id": "2F-W02",
+   "kind": "WINDOW",
+   "width_m": 1.0,
+   "wall_t_m": 0.2,
+   "height_m": null,
+   "height_state": "BLOCKED_OPENING_HEIGHT (no head / sill printed)",
+   "status": "COMPUTED",
+   "rule": null
+  },
+  {
+   "floor": "2F",
+   "id": "2F-W03",
+   "kind": "WINDOW",
+   "width_m": 0.6,
+   "wall_t_m": 0.2,
+   "height_m": null,
+   "height_state": "BLOCKED_OPENING_HEIGHT (no head / sill printed)",
+   "status": "COMPUTED",
+   "rule": null
+  },
+  {
+   "floor": "2F",
+   "id": "2F-W04",
+   "kind": "WINDOW",
+   "width_m": 1.2,
+   "wall_t_m": 0.2,
+   "height_m": null,
+   "height_state": "BLOCKED_OPENING_HEIGHT (no head / sill printed)",
+   "status": "COMPUTED",
+   "rule": null
+  },
+  {
+   "floor": "2F",
+   "id": "2F-W05",
+   "kind": "WINDOW",
+   "width_m": 1.2,
+   "wall_t_m": 0.2,
+   "height_m": null,
+   "height_state": "BLOCKED_OPENING_HEIGHT (no head / sill printed)",
+   "status": "COMPUTED",
+   "rule": null
+  }
+ ],
+ "beam_occurrences": [
+  {
+   "floor": "GF",
+   "type": "B16",
+   "tag": "H1139",
+   "state": "MEASURED",
+   "B_cm": 30.0,
+   "D_cm": 75.0,
+   "support_centreline_m": 4.1,
+   "clear_m": 3.35
+  },
+  {
+   "floor": "GF",
+   "type": "B13",
+   "tag": "H1127",
+   "state": "MEASURED",
+   "B_cm": 25.0,
+   "D_cm": 75.0,
+   "support_centreline_m": 5.717,
+   "clear_m": 5.462
+  },
+  {
+   "floor": "GF",
+   "type": "B11",
+   "tag": "H1092",
+   "state": "MEASURED",
+   "B_cm": 20.0,
+   "D_cm": 75.0,
+   "support_centreline_m": 4.828,
+   "clear_m": 4.575
+  },
+  {
+   "floor": "GF",
+   "type": "B1",
+   "tag": "H1093",
+   "state": "MEASURED",
+   "B_cm": 20.0,
+   "D_cm": 40.0,
+   "support_centreline_m": 1.67,
+   "clear_m": 1.47
+  },
+  {
+   "floor": "GF",
+   "type": "B4",
+   "tag": "H1094",
+   "state": "MEASURED",
+   "B_cm": 20.0,
+   "D_cm": 50.0,
+   "support_centreline_m": 4.0,
+   "clear_m": 3.75
+  },
+  {
+   "floor": "GF",
+   "type": "B7",
+   "tag": "H1234",
+   "state": "MEASURED",
+   "B_cm": 20.0,
+   "D_cm": 75.0,
+   "support_centreline_m": 1.975,
+   "clear_m": 1.7
+  },
+  {
+   "floor": "GF",
+   "type": "B20",
+   "tag": "H1110",
+   "state": "MEASURED",
+   "B_cm": 40.0,
+   "D_cm": 75.0,
+   "support_centreline_m": 3.8,
+   "clear_m": 3.575
+  },
+  {
+   "floor": "GF",
+   "type": "B3",
+   "tag": "H1122",
+   "state": "MEASURED",
+   "B_cm": 20.0,
+   "D_cm": 40.0,
+   "support_centreline_m": 3.65,
+   "clear_m": 3.3
+  },
+  {
+   "floor": "GF",
+   "type": "B1",
+   "tag": "H1126",
+   "state": "MEASURED",
+   "B_cm": 20.0,
+   "D_cm": 40.0,
+   "support_centreline_m": 2.797,
+   "clear_m": 2.569
+  },
+  {
+   "floor": "GF",
+   "type": "B4",
+   "tag": "H1243",
+   "state": "MEASURED",
+   "B_cm": 20.0,
+   "D_cm": 50.0,
+   "support_centreline_m": 3.957,
+   "clear_m": 3.429
+  },
+  {
+   "floor": "GF",
+   "type": "B8",
+   "tag": "H1138",
+   "state": "MEASURED",
+   "B_cm": 20.0,
+   "D_cm": 75.0,
+   "support_centreline_m": 3.995,
+   "clear_m": 3.52
+  },
+  {
+   "floor": "GF",
+   "type": "B1",
+   "tag": "H1294",
+   "state": "MEASURED",
+   "B_cm": 20.0,
+   "D_cm": 40.0,
+   "support_centreline_m": 1.45,
+   "clear_m": 1.2
+  },
+  {
+   "floor": "GF",
+   "type": "CA",
+   "tag": "H1694",
+   "state": "TAG_INSIDE_SUPPORT",
+   "B_cm": 30.0,
+   "D_cm": 50.0,
+   "support_centreline_m": null,
+   "clear_m": null
+  },
+  {
+   "floor": "GF",
+   "type": "B1",
+   "tag": "H1697",
+   "state": "MEASURED",
+   "B_cm": 20.0,
+   "D_cm": 40.0,
+   "support_centreline_m": null,
+   "clear_m": 1.147
+  },
+  {
+   "floor": "GF",
+   "type": "CB8",
+   "tag": "H1695",
+   "state": "SPAN_COUNT_MISMATCH",
+   "B_cm": 30,
+   "D_cm": 75,
+   "support_centreline_m": 13.495,
+   "clear_m": 12.995
+  },
+  {
+   "floor": "GF",
+   "type": "CB7",
+   "tag": "H1145",
+   "state": "MEASURED",
+   "B_cm": 20,
+   "D_cm": 75,
+   "support_centreline_m": 12.0,
+   "clear_m": 11.6
+  },
+  {
+   "floor": "GF",
+   "type": "B24",
+   "tag": "H6170",
+   "state": "MEASURED",
+   "B_cm": 50.0,
+   "D_cm": 75.0,
+   "support_centreline_m": 4.05,
+   "clear_m": 3.8
+  },
+  {
+   "floor": "GF",
+   "type": "B3",
+   "tag": "H1719",
+   "state": "MEASURED",
+   "B_cm": 20.0,
+   "D_cm": 40.0,
+   "support_centreline_m": 2.7,
+   "clear_m": 2.5
+  },
+  {
+   "floor": "GF",
+   "type": "B5",
+   "tag": "H1176",
+   "state": "MEASURED",
+   "B_cm": 20.0,
+   "D_cm": 50.0,
+   "support_centreline_m": 4.301,
+   "clear_m": 3.617
+  },
+  {
+   "floor": "GF",
+   "type": "B4",
+   "tag": "H1175",
+   "state": "MEASURED",
+   "B_cm": 20.0,
+   "D_cm": 50.0,
+   "support_centreline_m": 3.774,
+   "clear_m": 2.964
+  },
+  {
+   "floor": "GF",
+   "type": "B3",
+   "tag": "H6183",
+   "state": "BAND_TYPE_CONFLICT",
+   "B_cm": 20.0,
+   "D_cm": 40.0,
+   "support_centreline_m": null,
+   "clear_m": null
+  },
+  {
+   "floor": "GF",
+   "type": "CB3",
+   "tag": "H1171",
+   "state": "BAND_TYPE_CONFLICT",
+   "B_cm": 20,
+   "D_cm": 75,
+   "support_centreline_m": null,
+   "clear_m": null
+  },
+  {
+   "floor": "GF",
+   "type": "B2",
+   "tag": "H1170",
+   "state": "MEASURED",
+   "B_cm": 20.0,
+   "D_cm": 40.0,
+   "support_centreline_m": 3.2,
+   "clear_m": 2.7
+  },
+  {
+   "floor": "GF",
+   "type": "CB4",
+   "tag": "H1116",
+   "state": "MEASURED",
+   "B_cm": 20,
+   "D_cm": 50,
+   "support_centreline_m": null,
+   "clear_m": 5.71
+  },
+  {
+   "floor": "GF",
+   "type": "B22",
+   "tag": "H1174",
+   "state": "MEASURED",
+   "B_cm": 50.0,
+   "D_cm": 75.0,
+   "support_centreline_m": 8.05,
+   "clear_m": 7.8
+  },
+  {
+   "floor": "GF",
+   "type": "B14",
+   "tag": "H1119",
+   "state": "MEASURED",
+   "B_cm": 20.0,
+   "D_cm": 75.0,
+   "support_centreline_m": 2.025,
+   "clear_m": 1.8
+  },
+  {
+   "floor": "GF",
+   "type": "B1",
+   "tag": "H1095",
+   "state": "MEASURED",
+   "B_cm": 20.0,
+   "D_cm": 40.0,
+   "support_centreline_m": 1.975,
+   "clear_m": 1.75
+  },
+  {
+   "floor": "GF",
+   "type": "B1",
+   "tag": "H1207",
+   "state": "MEASURED",
+   "B_cm": 20.0,
+   "D_cm": 40.0,
+   "support_centreline_m": 1.45,
+   "clear_m": 0.7
+  },
+  {
+   "floor": "GF",
+   "type": "B3",
+   "tag": "H1096",
+   "state": "MEASURED",
+   "B_cm": 20.0,
+   "D_cm": 40.0,
+   "support_centreline_m": 3.325,
+   "clear_m": 2.95
+  },
+  {
+   "floor": "GF",
+   "type": "B2",
+   "tag": "H1097",
+   "state": "MEASURED",
+   "B_cm": 20.0,
+   "D_cm": 40.0,
+   "support_centreline_m": 3.2,
+   "clear_m": 2.7
+  },
+  {
+   "floor": "GF",
+   "type": "B7",
+   "tag": "H1206",
+   "state": "MEASURED",
+   "B_cm": 20.0,
+   "D_cm": 75.0,
+   "support_centreline_m": 1.7,
+   "clear_m": 1.2
+  },
+  {
+   "floor": "GF",
+   "type": "B1",
+   "tag": "H1118",
+   "state": "MEASURED",
+   "B_cm": 20.0,
+   "D_cm": 40.0,
+   "support_centreline_m": 2.0,
+   "clear_m": 1.8
+  },
+  {
+   "floor": "GF",
+   "type": "CB1",
+   "tag": "H1249",
+   "state": "MEASURED",
+   "B_cm": 35,
+   "D_cm": 75,
+   "support_centreline_m": 13.05,
+   "clear_m": 12.1
+  },
+  {
+   "floor": "GF",
+   "type": "B1",
+   "tag": "H1142",
+   "state": "MEASURED",
+   "B_cm": 20.0,
+   "D_cm": 40.0,
+   "support_centreline_m": 1.875,
+   "clear_m": 1.625
+  },
+  {
+   "floor": "GF",
+   "type": "B1",
+   "tag": "H1143",
+   "state": "MEASURED",
+   "B_cm": 20.0,
+   "D_cm": 40.0,
+   "support_centreline_m": null,
+   "clear_m": 1.826
+  },
+  {
+   "floor": "GF",
+   "type": "CB6",
+   "tag": "H1148",
+   "state": "SPAN_COUNT_MISMATCH",
+   "B_cm": 20,
+   "D_cm": 75,
+   "support_centreline_m": 10.575,
+   "clear_m": 10.1
+  },
+  {
+   "floor": "GF",
+   "type": "B9",
+   "tag": "H1469",
+   "state": "MEASURED",
+   "B_cm": 20.0,
+   "D_cm": 75.0,
+   "support_centreline_m": 6.4,
+   "clear_m": 6.0
+  },
+  {
+   "floor": "GF",
+   "type": "B4",
+   "tag": "H1288",
+   "state": "MEASURED",
+   "B_cm": 20.0,
+   "D_cm": 50.0,
+   "support_centreline_m": 4.7,
+   "clear_m": 4.5
+  },
+  {
+   "floor": "GF",
+   "type": "CB5",
+   "tag": "H1140",
+   "state": "SPAN_COUNT_MISMATCH",
+   "B_cm": 20,
+   "D_cm": 40,
+   "support_centreline_m": null,
+   "clear_m": 2.45
+  },
+  {
+   "floor": "GF",
+   "type": "B1",
+   "tag": "H1144",
+   "state": "MEASURED",
+   "B_cm": 20.0,
+   "D_cm": 40.0,
+   "support_centreline_m": 1.65,
+   "clear_m": 1.3
+  },
+  {
+   "floor": "GF",
+   "type": "B2",
+   "tag": "H1157",
+   "state": "MEASURED",
+   "B_cm": 20.0,
+   "D_cm": 40.0,
+   "support_centreline_m": 2.8,
+   "clear_m": 2.6
+  },
+  {
+   "floor": "GF",
+   "type": "B28",
+   "tag": "H1132",
+   "state": "MEASURED",
+   "B_cm": 25.0,
+   "D_cm": 75.0,
+   "support_centreline_m": 1.48,
+   "clear_m": 0.805
+  },
+  {
+   "floor": "GF",
+   "type": "B1",
+   "tag": "H1072",
+   "state": "MEASURED",
+   "B_cm": 20.0,
+   "D_cm": 40.0,
+   "support_centreline_m": null,
+   "clear_m": 1.15
+  },
+  {
+   "floor": "GF",
+   "type": "B17",
+   "tag": "H1074",
+   "state": "MEASURED",
+   "B_cm": 45.0,
+   "D_cm": 75.0,
+   "support_centreline_m": 5.775,
+   "clear_m": 5.475
+  },
+  {
+   "floor": "GF",
+   "type": "B4",
+   "tag": "H1131",
+   "state": "MEASURED",
+   "B_cm": 20.0,
+   "D_cm": 50.0,
+   "support_centreline_m": 2.305,
+   "clear_m": 1.98
+  },
+  {
+   "floor": "GF",
+   "type": "B27",
+   "tag": "H1330",
+   "state": "MEASURED",
+   "B_cm": 90.0,
+   "D_cm": 85.0,
+   "support_centreline_m": null,
+   "clear_m": 3.66
+  },
+  {
+   "floor": "GF",
+   "type": "B26",
+   "tag": "H1228",
+   "state": "MEASURED",
+   "B_cm": 65.0,
+   "D_cm": 85.0,
+   "support_centreline_m": 5.916,
+   "clear_m": 5.477
+  },
+  {
+   "floor": "1F",
+   "type": "B3",
+   "tag": "H1721",
+   "state": "MEASURED",
+   "B_cm": 20.0,
+   "D_cm": 40.0,
+   "support_centreline_m": 2.7,
+   "clear_m": 2.5
+  },
+  {
+   "floor": "1F",
+   "type": "CB9",
+   "tag": "H1734",
+   "state": "MEASURED",
+   "B_cm": 20,
+   "D_cm": 50,
+   "support_centreline_m": 11.82,
+   "clear_m": 11.095
+  },
+  {
+   "floor": "1F",
+   "type": "B4",
+   "tag": "H1809",
+   "state": "MEASURED",
+   "B_cm": 20.0,
+   "D_cm": 50.0,
+   "support_centreline_m": 4.262,
+   "clear_m": 4.062
+  },
+  {
+   "floor": "1F",
+   "type": "CB11",
+   "tag": "H1754",
+   "state": "MEASURED",
+   "B_cm": 30,
+   "D_cm": 75,
+   "support_centreline_m": 14.658,
+   "clear_m": 13.958
+  },
+  {
+   "floor": "1F",
+   "type": "B7",
+   "tag": "H1740",
+   "state": "MEASURED",
+   "B_cm": 20.0,
+   "D_cm": 75.0,
+   "support_centreline_m": 2.025,
+   "clear_m": 1.8
+  },
+  {
+   "floor": "1F",
+   "type": "B1",
+   "tag": "H1742",
+   "state": "MEASURED",
+   "B_cm": 20.0,
+   "D_cm": 40.0,
+   "support_centreline_m": 1.45,
+   "clear_m": 0.7
+  },
+  {
+   "floor": "1F",
+   "type": "B2",
+   "tag": "H1737",
+   "state": "MEASURED",
+   "B_cm": 20.0,
+   "D_cm": 40.0,
+   "support_centreline_m": 3.35,
+   "clear_m": 3.0
+  },
+  {
+   "floor": "1F",
+   "type": "B18",
+   "tag": "H1773",
+   "state": "MEASURED",
+   "B_cm": 35.0,
+   "D_cm": 75.0,
+   "support_centreline_m": 6.95,
+   "clear_m": 6.3
+  },
+  {
+   "floor": "1F",
+   "type": "B1",
+   "tag": "H1744",
+   "state": "MEASURED",
+   "B_cm": 20.0,
+   "D_cm": 40.0,
+   "support_centreline_m": null,
+   "clear_m": 1.62
+  },
+  {
+   "floor": "1F",
+   "type": "B2",
+   "tag": "H1738",
+   "state": "MEASURED",
+   "B_cm": 20.0,
+   "D_cm": 40.0,
+   "support_centreline_m": 3.2,
+   "clear_m": 2.7
+  },
+  {
+   "floor": "1F",
+   "type": "B7",
+   "tag": "H1741",
+   "state": "MEASURED",
+   "B_cm": 20.0,
+   "D_cm": 75.0,
+   "support_centreline_m": 1.7,
+   "clear_m": 1.2
+  },
+  {
+   "floor": "1F",
+   "type": "B1",
+   "tag": "H1739",
+   "state": "MEASURED",
+   "B_cm": 20.0,
+   "D_cm": 40.0,
+   "support_centreline_m": 2.0,
+   "clear_m": 1.8
+  },
+  {
+   "floor": "1F",
+   "type": "CB12",
+   "tag": "H1758",
+   "state": "SPAN_COUNT_MISMATCH",
+   "B_cm": 25,
+   "D_cm": 75,
+   "support_centreline_m": null,
+   "clear_m": 5.275
+  },
+  {
+   "floor": "1F",
+   "type": "B2",
+   "tag": "H1722",
+   "state": "MEASURED",
+   "B_cm": 20.0,
+   "D_cm": 40.0,
+   "support_centreline_m": 3.2,
+   "clear_m": 2.7
+  },
+  {
+   "floor": "1F",
+   "type": "B23",
+   "tag": "H1867",
+   "state": "MEASURED",
+   "B_cm": 45.0,
+   "D_cm": 75.0,
+   "support_centreline_m": 3.8,
+   "clear_m": 3.575
+  },
+  {
+   "floor": "1F",
+   "type": "CB13",
+   "tag": "H1898",
+   "state": "MEASURED",
+   "B_cm": 30,
+   "D_cm": 50,
+   "support_centreline_m": 7.175,
+   "clear_m": 6.15
+  },
+  {
+   "floor": "1F",
+   "type": "B19",
+   "tag": "H1743",
+   "state": "MEASURED",
+   "B_cm": 40.0,
+   "D_cm": 75.0,
+   "support_centreline_m": 3.198,
+   "clear_m": 2.972
+  },
+  {
+   "floor": "1F",
+   "type": "B4",
+   "tag": "H1717",
+   "state": "MEASURED",
+   "B_cm": 20.0,
+   "D_cm": 50.0,
+   "support_centreline_m": 4.325,
+   "clear_m": 4.1
+  },
+  {
+   "floor": "1F",
+   "type": "B6",
+   "tag": "H1725",
+   "state": "MEASURED",
+   "B_cm": 25.0,
+   "D_cm": 50.0,
+   "support_centreline_m": null,
+   "clear_m": 4.1
+  },
+  {
+   "floor": "1F",
+   "type": "B4",
+   "tag": "H1753",
+   "state": "MEASURED",
+   "B_cm": 20.0,
+   "D_cm": 50.0,
+   "support_centreline_m": 4.625,
+   "clear_m": 4.3
+  },
+  {
+   "floor": "1F",
+   "type": "B25",
+   "tag": "H1745",
+   "state": "MEASURED",
+   "B_cm": 55.0,
+   "D_cm": 75.0,
+   "support_centreline_m": 7.26,
+   "clear_m": 6.909
+  },
+  {
+   "floor": "1F",
+   "type": "B11",
+   "tag": "H1752",
+   "state": "MEASURED",
+   "B_cm": 20.0,
+   "D_cm": 75.0,
+   "support_centreline_m": 5.198,
+   "clear_m": 4.748
+  },
+  {
+   "floor": "1F",
+   "type": "B5",
+   "tag": "H1732",
+   "state": "MEASURED",
+   "B_cm": 20.0,
+   "D_cm": 50.0,
+   "support_centreline_m": 4.125,
+   "clear_m": 3.525
+  },
+  {
+   "floor": "1F",
+   "type": "B6",
+   "tag": "H1748",
+   "state": "MEASURED",
+   "B_cm": 25.0,
+   "D_cm": 50.0,
+   "support_centreline_m": 4.975,
+   "clear_m": 4.372
+  },
+  {
+   "floor": "1F",
+   "type": "B6",
+   "tag": "H1751",
+   "state": "MEASURED",
+   "B_cm": 25.0,
+   "D_cm": 50.0,
+   "support_centreline_m": 4.772,
+   "clear_m": 4.372
+  },
+  {
+   "floor": "1F",
+   "type": "B6",
+   "tag": "H1900",
+   "state": "MEASURED",
+   "B_cm": 25.0,
+   "D_cm": 50.0,
+   "support_centreline_m": null,
+   "clear_m": 4.1
+  },
+  {
+   "floor": "1F",
+   "type": "B5",
+   "tag": "H1772",
+   "state": "MEASURED",
+   "B_cm": 20.0,
+   "D_cm": 50.0,
+   "support_centreline_m": 5.125,
+   "clear_m": 4.625
+  },
+  {
+   "floor": "2F",
+   "type": "B3",
+   "tag": "H1908",
+   "state": "MEASURED",
+   "B_cm": 20.0,
+   "D_cm": 40.0,
+   "support_centreline_m": 2.675,
+   "clear_m": 2.45
+  },
+  {
+   "floor": "2F",
+   "type": "B3",
+   "tag": "H1949",
+   "state": "MEASURED",
+   "B_cm": 20.0,
+   "D_cm": 40.0,
+   "support_centreline_m": 2.7,
+   "clear_m": 2.5
+  },
+  {
+   "floor": "2F",
+   "type": "B8",
+   "tag": "H1950",
+   "state": "MEASURED",
+   "B_cm": 20.0,
+   "D_cm": 75.0,
+   "support_centreline_m": 3.87,
+   "clear_m": 3.67
+  },
+  {
+   "floor": "2F",
+   "type": "B2",
+   "tag": "H1936",
+   "state": "MEASURED",
+   "B_cm": 20.0,
+   "D_cm": 40.0,
+   "support_centreline_m": null,
+   "clear_m": 2.5
+  },
+  {
+   "floor": "2F",
+   "type": "B1",
+   "tag": "H1935",
+   "state": "MEASURED",
+   "B_cm": 20.0,
+   "D_cm": 40.0,
+   "support_centreline_m": 2.0,
+   "clear_m": 1.8
+  },
+  {
+   "floor": "2F",
+   "type": "B2",
+   "tag": "H1934",
+   "state": "MEASURED",
+   "B_cm": 20.0,
+   "D_cm": 40.0,
+   "support_centreline_m": 3.2,
+   "clear_m": 3.0
+  },
+  {
+   "floor": "2F",
+   "type": "B15",
+   "tag": "H1961",
+   "state": "MEASURED",
+   "B_cm": 20.0,
+   "D_cm": 120.0,
+   "support_centreline_m": 3.2,
+   "clear_m": 2.7
+  },
+  {
+   "floor": "2F",
+   "type": "B2",
+   "tag": "H1930",
+   "state": "MEASURED",
+   "B_cm": 20.0,
+   "D_cm": 40.0,
+   "support_centreline_m": 2.0,
+   "clear_m": 1.8
+  },
+  {
+   "floor": "2F",
+   "type": "B2",
+   "tag": "H1909",
+   "state": "MEASURED",
+   "B_cm": 20.0,
+   "D_cm": 40.0,
+   "support_centreline_m": 3.2,
+   "clear_m": 3.0
+  },
+  {
+   "floor": "2F",
+   "type": "B1",
+   "tag": "H1931",
+   "state": "MEASURED",
+   "B_cm": 20.0,
+   "D_cm": 40.0,
+   "support_centreline_m": 1.6,
+   "clear_m": 1.0
+  },
+  {
+   "floor": "2F",
+   "type": "B3",
+   "tag": "H1947",
+   "state": "MEASURED",
+   "B_cm": 20.0,
+   "D_cm": 40.0,
+   "support_centreline_m": 3.35,
+   "clear_m": 3.0
+  },
+  {
+   "floor": "2F",
+   "type": "B7",
+   "tag": "H1953",
+   "state": "MEASURED",
+   "B_cm": 20.0,
+   "D_cm": 75.0,
+   "support_centreline_m": 4.718,
+   "clear_m": 4.418
+  },
+  {
+   "floor": "2F",
+   "type": "B3",
+   "tag": "H1948",
+   "state": "MEASURED",
+   "B_cm": 20.0,
+   "D_cm": 40.0,
+   "support_centreline_m": 3.2,
+   "clear_m": 2.7
+  },
+  {
+   "floor": "2F",
+   "type": "B1",
+   "tag": "H1932",
+   "state": "MEASURED",
+   "B_cm": 20.0,
+   "D_cm": 40.0,
+   "support_centreline_m": 1.7,
+   "clear_m": 1.2
+  },
+  {
+   "floor": "2F",
+   "type": "B1",
+   "tag": "H1933",
+   "state": "MEASURED",
+   "B_cm": 20.0,
+   "D_cm": 40.0,
+   "support_centreline_m": 2.0,
+   "clear_m": 1.8
+  }
+ ],
+ "footings": [
+  {
+   "type": "F",
+   "mark": "H4261",
+   "status": "BLOCKED",
+   "L_m": 0.9,
+   "W_m": 0.8,
+   "H_m": 0.3,
+   "qty_m3": null
+  },
+  {
+   "type": "FN",
+   "mark": "H4333",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "L_m": 1.0,
+   "W_m": 1.0,
+   "H_m": 0.3,
+   "qty_m3": 0.3
+  },
+  {
+   "type": "FN",
+   "mark": "H4341",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "L_m": 1.0,
+   "W_m": 1.0,
+   "H_m": 0.3,
+   "qty_m3": 0.3
+  },
+  {
+   "type": "F5",
+   "mark": "H5743",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "L_m": 2.4,
+   "W_m": 2.1,
+   "H_m": 0.4,
+   "qty_m3": 2.016
+  },
+  {
+   "type": "F4",
+   "mark": "H5745",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "L_m": 2.2,
+   "W_m": 2.0,
+   "H_m": 0.4,
+   "qty_m3": 1.76
+  },
+  {
+   "type": "F4",
+   "mark": "H5746",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "L_m": 2.2,
+   "W_m": 2.0,
+   "H_m": 0.4,
+   "qty_m3": 1.76
+  },
+  {
+   "type": "F5",
+   "mark": "H5747",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "L_m": 2.4,
+   "W_m": 2.1,
+   "H_m": 0.4,
+   "qty_m3": 2.016
+  },
+  {
+   "type": "F2",
+   "mark": "H5748",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "L_m": 1.9,
+   "W_m": 1.7,
+   "H_m": 0.35,
+   "qty_m3": 1.1305
+  },
+  {
+   "type": "F2",
+   "mark": "H5749",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "L_m": 1.9,
+   "W_m": 1.7,
+   "H_m": 0.35,
+   "qty_m3": 1.1305
+  },
+  {
+   "type": "FF",
+   "mark": "H5750",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "L_m": 4.6,
+   "W_m": 4.5,
+   "H_m": 0.55,
+   "qty_m3": 11.385
+  },
+  {
+   "type": "F9",
+   "mark": "H5751",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "L_m": 3.4,
+   "W_m": 2.7,
+   "H_m": 0.55,
+   "qty_m3": 5.049
+  },
+  {
+   "type": "F",
+   "mark": "H5757",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "L_m": 0.9,
+   "W_m": 0.8,
+   "H_m": 0.3,
+   "qty_m3": 0.216
+  },
+  {
+   "type": "F",
+   "mark": "H5757",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "L_m": 0.9,
+   "W_m": 0.8,
+   "H_m": 0.3,
+   "qty_m3": 0.216
+  },
+  {
+   "type": "F",
+   "mark": "H5757",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "L_m": 0.9,
+   "W_m": 0.8,
+   "H_m": 0.3,
+   "qty_m3": 0.216
+  },
+  {
+   "type": "F",
+   "mark": "H5757",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "L_m": 0.9,
+   "W_m": 0.8,
+   "H_m": 0.3,
+   "qty_m3": 0.216
+  },
+  {
+   "type": "F14",
+   "mark": "H5763",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "L_m": 3.8,
+   "W_m": 3.3,
+   "H_m": 0.5,
+   "qty_m3": 6.27
+  },
+  {
+   "type": "F11",
+   "mark": "H5767",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "L_m": 3.5,
+   "W_m": 1.5,
+   "H_m": 0.5,
+   "qty_m3": 2.625
+  },
+  {
+   "type": "FN",
+   "mark": "H5770",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "L_m": 1.0,
+   "W_m": 1.0,
+   "H_m": 0.3,
+   "qty_m3": 0.3
+  },
+  {
+   "type": "F10",
+   "mark": "H5771",
+   "status": "BLOCKED",
+   "L_m": 2.8,
+   "W_m": 1.4,
+   "H_m": 0.5,
+   "qty_m3": null
+  },
+  {
+   "type": "F6",
+   "mark": "H5773",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "L_m": 2.6,
+   "W_m": 2.2,
+   "H_m": 0.5,
+   "qty_m3": 2.86
+  },
+  {
+   "type": "F3",
+   "mark": "H5774",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "L_m": 1.6,
+   "W_m": 1.4,
+   "H_m": 0.3,
+   "qty_m3": 0.672
+  },
+  {
+   "type": "F3",
+   "mark": "H5775",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "L_m": 1.6,
+   "W_m": 1.4,
+   "H_m": 0.3,
+   "qty_m3": 0.672
+  },
+  {
+   "type": "FN",
+   "mark": "H6160",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "L_m": 1.0,
+   "W_m": 1.0,
+   "H_m": 0.3,
+   "qty_m3": 0.3
+  },
+  {
+   "type": "F12",
+   "mark": "H6874",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "L_m": 4.4,
+   "W_m": 3.2,
+   "H_m": 0.7,
+   "qty_m3": 9.856
+  },
+  {
+   "type": "F13",
+   "mark": "H6876",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "L_m": 4.3,
+   "W_m": 2.4,
+   "H_m": 0.5,
+   "qty_m3": 5.16
+  },
+  {
+   "type": "F8",
+   "mark": "H6949",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "L_m": 4.0,
+   "W_m": 3.6,
+   "H_m": 0.5,
+   "qty_m3": 7.2
+  },
+  {
+   "type": "F15",
+   "mark": "H6953",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "L_m": 1.8,
+   "W_m": 1.0,
+   "H_m": 0.4,
+   "qty_m3": 0.72
+  }
+ ],
+ "straps": [
+  {
+   "type": "SB2",
+   "mark": "H6935",
+   "state": "MEASURED_WITH_WIDTH_DEVIATION",
+   "B_cm": 100.0,
+   "D_cm": 50.0,
+   "length_m": 2.294,
+   "status": "COMPUTED_SHADOW_COMPLETE"
+  },
+  {
+   "type": "SB1",
+   "mark": "H6946",
+   "state": "MEASURED",
+   "B_cm": 70.0,
+   "D_cm": 50.0,
+   "length_m": 4.551,
+   "status": "COMPUTED_SHADOW_COMPLETE"
+  },
+  {
+   "type": "SB3",
+   "mark": "H6952",
+   "state": "MEASURED",
+   "B_cm": 50.0,
+   "D_cm": 40.0,
+   "length_m": 3.259,
+   "status": "COMPUTED_SHADOW_COMPLETE"
+  }
+ ]
+}

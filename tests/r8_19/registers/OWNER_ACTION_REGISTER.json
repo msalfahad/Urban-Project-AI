@@ -1,0 +1,31 @@
+{
+ "SCHEMA": "URBAN_OWNER_ACTION_REGISTER_V16",
+ "headline": "NO OWNER ACTION REQUIRED. NO NEW MATERIAL QUESTION AFTER SOURCE / RULE EXHAUSTION.",
+ "required_now": [],
+ "optional_for_release_only": [
+  {
+   "id": "CLOSURE_HUMAN_REVIEW",
+   "what": "review the prepared I1471 / H2430 / H2431 packets (CLOSURE_RELEASE_STATUS.review_packets) and accept or reject each",
+   "blocks": "REVIEWED_FOR_RELEASE_CANDIDATE only (shadow rows do not need it); never self-approved"
+  }
+ ],
+ "answered_this_round": [
+  "URBAN-EXPOSED-COLUMN-FINISH-METHOD@v1",
+  "URBAN-EXPOSED-INTERIOR-DUCT-FINISH-METHOD@v1",
+  "QORTUBA-NEW-BED-ROOM-DUCT-FINISH-OWNER-001@v1"
+ ],
+ "do_not_ask": [
+  "column finish",
+  "duct finish",
+  "column skirting",
+  "duct skirting",
+  "dry height 3.15 m",
+  "wet tile 3.20 m",
+  "default reveal plaster",
+  "porcelain reveal explicit-only",
+  "sliding-door classification",
+  "window skirting",
+  "marble",
+  "passage heads"
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "SCHEMA": "URBAN_R8_15_PASSAGE_HEAD_REGISTER_V1",
+ "passages": [
+  {
+   "passage": "OP-0165f08fad9e3b42",
+   "width_mm": 1200.0,
+   "thickness_mm": 100.0,
+   "site": "SITE-788f30878ba9d2b3",
+   "head": null,
+   "authority": "NOT_ESTABLISHED",
+   "ceiling": "outside the measured unit"
+  },
+  {
+   "passage": "OP-35e4f04842d93fd7",
+   "width_mm": 1200.0,
+   "thickness_mm": 100.0,
+   "site": "SITE-788f30878ba9d2b3",
+   "head": null,
+   "authority": "NOT_ESTABLISHED",
+   "ceiling": "outside the measured unit"
+  },
+  {
+   "passage": "OP-997f14d12b8e9bc1",
+   "width_mm": 1196.45,
+   "thickness_mm": 200.0,
+   "site": "SITE-fdfa89fe0f5809a4",
+   "head": "WITH_HEAD",
+   "authority": "QORTUBA-NEW-OPEN-PASSAGE-SOFFIT-NOT-CEILING-OWNER-001@v1",
+   "ceiling": "SOFFIT_EXCLUDED_FROM_CEILING"
+  },
+  {
+   "passage": "OP-9e0fd219ca5cd391",
+   "width_mm": 1200.0,
+   "thickness_mm": 150.0,
+   "site": "SITE-a6405850100155ac",
+   "head": "FULL_HEIGHT",
+   "authority": "QORTUBA-NEW-MB-DRESS-PASSAGE-FULL-HEIGHT-OWNER-001@v1",
+   "ceiling": "CEILING_CONTINUES"
+  },
+  {
+   "passage": "OP-a136ccb3608d1bff",
+   "width_mm": 900.0,
+   "thickness_mm": 150.0,
+   "site": "SITE-788f30878ba9d2b3",
+   "head": null,
+   "authority": "NOT_ESTABLISHED",
+   "ceiling": "outside the measured unit"
+  }
+ ],
+ "qp18": "NOT used: it is old-revision and states the opposite for both passages",
+ "two_conditions_coexist": "Hall / Lobby WITH_HEAD (soffit out) and M.B.ROOM / DRESS FULL_HEIGHT (ceiling continues) in one Q-14 row",
+ "ownership_guard": "PASS"
+}

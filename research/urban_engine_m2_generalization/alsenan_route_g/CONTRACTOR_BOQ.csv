@@ -1,0 +1,25 @@
+ITEM,SECTION,FAMILY,DESCRIPTION,UNIT,VERIFIED,PROVISIONAL_LOW,PROVISIONAL_BASE,PROVISIONAL_HIGH,PLANNING_LOW,PLANNING_BASE,PLANNING_HIGH,N_VERIFIED,N_PROVISIONAL,N_UNRESOLVED,UNRESOLVED_EXPOSURE_LOW,UNRESOLVED_EXPOSURE_HIGH,EVIDENCE
+A.01,A CONCRETE,FOOTINGS,Reinforced concrete in isolated / combined footings,m3,0.0,50.036,50.036,50.036,50.036,50.036,50.036,0,22,4,,,
+A.02,A CONCRETE,GROUND_BEAMS,Reinforced concrete in ground beams and strap beams,m3,0.0,26.935876124,27.364933861,27.364933861,26.935876124,27.364933861,27.364933861,0,58,1,,,
+A.03,A CONCRETE,COLUMNS,Reinforced concrete in columns and foundation necks,m3,0.0,41.166,41.166,41.166,41.166,41.166,41.166,0,74,35,,,
+A.04,A CONCRETE,BEAMS,Reinforced concrete in suspended beams,m3,0.0,61.919652599,62.563340176,78.415222404,61.919652599,62.563340176,78.415222404,0,113,16,4.165820697,8.906549349,
+A.05,A CONCRETE,SLABS,Reinforced concrete in suspended slabs,m3,0.0,60.100530765,60.100530765,60.100530765,60.100530765,60.100530765,60.100530765,0,70,0,,,
+A.06,A CONCRETE,GROUND_SLAB,Reinforced concrete in slab on grade,m3,0.0,22.204017325,22.204017325,22.204017325,22.204017325,22.204017325,22.204017325,0,22,0,,,
+B.01,B REINFORCEMENT,ALL,"High-yield bar reinforcement, 8 mm",kg,0.0,1985.718589973,2123.590994931,2240.299278065,1985.718589973,2123.590994931,2240.299278065,,,,,,
+B.02,B REINFORCEMENT,ALL,"High-yield bar reinforcement, 10 mm",kg,0.0,3894.323693841,3912.788096772,4192.659737776,3894.323693841,3912.788096772,4192.659737776,,,,,,
+B.03,B REINFORCEMENT,ALL,"High-yield bar reinforcement, 12 mm",kg,0.0,1013.917913078,1156.949024189,1336.395823365,1013.917913078,1156.949024189,1336.395823365,,,,,,
+B.04,B REINFORCEMENT,ALL,"High-yield bar reinforcement, 14 mm",kg,0.0,2211.26572388,2351.720291781,2561.65405906,2211.26572388,2351.720291781,2561.65405906,,,,,,
+B.05,B REINFORCEMENT,ALL,"High-yield bar reinforcement, 16 mm",kg,0.0,6191.303432561,6692.968617747,7016.437986636,6191.303432561,6692.968617747,7016.437986636,,,,,,
+B.06,B REINFORCEMENT,ALL,"High-yield bar reinforcement, 18 mm",kg,0.0,2621.643630583,3502.923630583,3723.243630583,2621.643630583,3502.923630583,3723.243630583,,,,,,
+B.UN,B REINFORCEMENT,ALL,Reinforcement with no bar model (unresolved; not in any total),kg,,,,,,,,,,0,,,
+C.01,C NOT DETECTED (COVERAGE RISK),CANTILEVER_PORTIONS,"CANTILEVER_PORTIONS: no label found on the drawing, and the generic engine cannot detect this family - confirm it is absent before using the totals",-,,,,,,,,,,,,,NO_LABEL_FOUND
+C.02,C NOT DETECTED (COVERAGE RISK),COLUMN_NECKS,"COLUMN_NECKS: no label found on the drawing, and the generic engine cannot detect this family - confirm it is absent before using the totals",-,,,,,,,,,,,,,NO_LABEL_FOUND
+C.03,C NOT DETECTED (COVERAGE RISK),DOMES,"DOMES: drawing evidence, not quantified - 1 labels (DOME) on SH01; the generic engine has no detector for this family - not in any total",-,,,,,,,,,,,,,LABELS_FOUND
+C.04,C NOT DETECTED (COVERAGE RISK),LIFT,"LIFT: no label found on the drawing, and the generic engine cannot detect this family - confirm it is absent before using the totals",-,,,,,,,,,,,,,NO_LABEL_FOUND
+C.05,C NOT DETECTED (COVERAGE RISK),LINTELS,"LINTELS: no label found on the drawing, and the generic engine cannot detect this family - confirm it is absent before using the totals",-,,,,,,,,,,,,,NO_LABEL_FOUND
+C.06,C NOT DETECTED (COVERAGE RISK),PARAPETS,"PARAPETS: drawing evidence, not quantified - 3 labels (PARAPET) on SH02, SH04, SH06; the generic engine has no detector for this family - not in any total",-,,,,,,,,,,,,,LABELS_FOUND
+C.07,C NOT DETECTED (COVERAGE RISK),PLAIN_CONCRETE,"PLAIN_CONCRETE: drawing evidence, not quantified - 1 labels (PLAIN CONCRETE) on SH01; the generic engine has no detector for this family - not in any total",-,,,,,,,,,,,,,LABELS_FOUND
+C.08,C NOT DETECTED (COVERAGE RISK),POOL,"POOL: drawing evidence, not quantified - 2 labels (POOL, SWIMMING) on SH01, SH08; the generic engine has no detector for this family - not in any total",-,,,,,,,,,,,,,LABELS_FOUND
+C.09,C NOT DETECTED (COVERAGE RISK),STAIRS,"STAIRS: drawing evidence, not quantified - 3 labels (STAIR) on SH04, SH06; the generic engine has no detector for this family - not in any total",-,,,,,,,,,,,,,LABELS_FOUND
+C.10,C NOT DETECTED (COVERAGE RISK),WALLS,"WALLS: no label found on the drawing, and the generic engine cannot detect this family - confirm it is absent before using the totals",-,,,,,,,,,,,,,NO_LABEL_FOUND
+C.11,C NOT DETECTED (COVERAGE RISK),WATER_TANK,"WATER_TANK: drawing evidence, not quantified - 1 labels (TANK, WATER TANK) on SH02; the generic engine has no detector for this family - not in any total",-,,,,,,,,,,,,,LABELS_FOUND

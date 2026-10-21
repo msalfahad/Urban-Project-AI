@@ -1,0 +1,307 @@
+{
+ "SCHEMA": "URBAN_R8_11_OWNER_PHYSICAL_FACT_REGISTER_V1",
+ "file": "data/registry/OWNER_PHYSICAL_FACTS.json",
+ "file_sha256": "da0fa4d99f05a22f68c8a9a783a559fe0a380ff3e846c4a67d14fd9d03685cdb",
+ "facts": [
+  {
+   "fact_id": "QORTUBA-NEW-HALL-LOBBY-OPEN-PASSAGE-OWNER-001",
+   "version": 1,
+   "kind": "OPEN_PASSAGE_CONSTRUCTION",
+   "authority": [
+    "PROJECT_OWNER"
+   ],
+   "received": "R8.11 owner clarification (after the R8.11 package)",
+   "scope": {
+    "project": "QORTUBA",
+    "source_revision_id": "QORTUBA_REV_NEW",
+    "source_anchor_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+    "region_id": "RC:MODEL_SPACE:4267:540:1649",
+    "frame_id": "MF:RC:MODEL_SPACE:4267:540:1649",
+    "plan": "PLAN_VARIANT_4_SELECTED"
+   },
+   "parts": [
+    {
+     "handle": "2430",
+     "key": "QORTUBA_REV_NEW|H2430||SEGMENT|0",
+     "source_layer": "DIM",
+     "fingerprint": "1e94ff4d6ef24b976f4b875ef34d8240976dc7bfbc5596ba77a847ba6aaffcf6",
+     "physical_reading": "REAL_WALL_END",
+     "note": "west jamb end face (block + plaster); the line meets both face end points exactly"
+    },
+    {
+     "handle": "2431",
+     "key": "QORTUBA_REV_NEW|H2431||SEGMENT|0",
+     "source_layer": "DIM",
+     "fingerprint": "a357b9794ace11fbb972f27afc425c00f0692b6290410f892df55fa0ccee728c",
+     "physical_reading": "REAL_WALL_END",
+     "note": "east jamb end face (block + plaster); its 9.2 mm shortfall is a DRAFTING discontinuity, not an opening through the wall"
+    },
+    {
+     "handle": "470",
+     "key": "QORTUBA_REV_NEW|H470||SEGMENT|0",
+     "source_layer": "WALL",
+     "fingerprint": "bb31314dbc35a6a84a8a97e0b8bc3521870a517a2ce14d23567222c0eba565c5",
+     "physical_reading": "REAL_WALL_FACE",
+     "note": "west jamb wall, lower face (fragment 1 of 2)"
+    },
+    {
+     "handle": "471",
+     "key": "QORTUBA_REV_NEW|H471||SEGMENT|0",
+     "source_layer": "WALL",
+     "fingerprint": "0ab57d3c7edc482dfb443d09876e2bd4c1e7305ef31cc2e0099052ff7d93edb8",
+     "physical_reading": "REAL_WALL_FACE",
+     "note": "west jamb wall, lower face (fragment 2 of 2)"
+    },
+    {
+     "handle": "477",
+     "key": "QORTUBA_REV_NEW|H477||SEGMENT|0",
+     "source_layer": "WALL",
+     "fingerprint": "f65061ce9947bde1e92c383444f28f091cb3857c0ab3f569ee873d83c825981e",
+     "physical_reading": "REAL_WALL_FACE",
+     "note": "west jamb wall, upper face"
+    },
+    {
+     "handle": "2296",
+     "key": "QORTUBA_REV_NEW|H2296||SEGMENT|0",
+     "source_layer": "WALL",
+     "fingerprint": "61dc4b90297516bd325e8a7eebfb05554c17e646bb47e2bf86272d27767b0639",
+     "physical_reading": "REAL_WALL_FACE",
+     "note": "east jamb wall, lower face"
+    },
+    {
+     "handle": "2297",
+     "key": "QORTUBA_REV_NEW|H2297||SEGMENT|0",
+     "source_layer": "WALL",
+     "fingerprint": "33b551abdc38fdfe8c383a771af4dc3f2e7381fef8f6e8478077a8456bf33b0e",
+     "physical_reading": "REAL_WALL_FACE",
+     "note": "east jamb wall, upper face"
+    }
+   ],
+   "statement": {
+    "passage": "the Hall / Lobby connection is a REAL OPEN PASSAGE: no door, no blockwork across the opening",
+    "approx_clear_width_m": 1.0,
+    "approx_width_meaning": "design meaning only - never a calibration target; the deterministic width is measured from source geometry",
+    "clear_height_m": 2.2,
+    "head": "BLOCK / PLASTERED HEAD at 2.20 m clear height",
+    "sides": "BLOCK + PLASTER jambs / wall ends on both sides",
+    "wall_end_lines": "the geometry around H2430 / H2431, including the wall-end lines, is REAL wall / block construction",
+    "gap": "the ~9.2 mm H2431 disconnect is not an intended secondary opening",
+    "closure": "a derived topology-only closure may bridge the drafting discontinuity if the generic wall-band evidence establishes it; it carries ZERO material"
+   },
+   "used_for_in_r8_11": [
+    "REVIEW of the H2431 topology closure (east-jamb continuity)",
+    "CLASSIFICATION of the H2430 blocker (physical role resolved, engine representation pending)",
+    "ATTRIBUTES of the Hall / Lobby OPEN_PASSAGE_SITE record"
+   ],
+   "not_applied_in_r8_11": [
+    "a part-role claim admitting H2430 as boundary (deferred: E-R8.12-01 first, blind; the part-scoped claim is the fallback)"
+   ],
+   "never": [
+    "a wall or block quantity across the opening",
+    "material on a topology closure",
+    "a width, area or quantity (the width is measured from source)",
+    "a source edit or new entity",
+    "transfer to another revision, region or to the DWG",
+    "a generic rule change"
+   ]
+  }
+ ],
+ "binding": {
+  "NEW_K2": [
+   {
+    "fact": "QORTUBA-NEW-HALL-LOBBY-OPEN-PASSAGE-OWNER-001@v1",
+    "state": "APPLIES",
+    "parts": [
+     {
+      "handle": "2430",
+      "state": "APPLIES",
+      "physical_reading": "REAL_WALL_END"
+     },
+     {
+      "handle": "2431",
+      "state": "APPLIES",
+      "physical_reading": "REAL_WALL_END"
+     },
+     {
+      "handle": "470",
+      "state": "APPLIES",
+      "physical_reading": "REAL_WALL_FACE"
+     },
+     {
+      "handle": "471",
+      "state": "APPLIES",
+      "physical_reading": "REAL_WALL_FACE"
+     },
+     {
+      "handle": "477",
+      "state": "APPLIES",
+      "physical_reading": "REAL_WALL_FACE"
+     },
+     {
+      "handle": "2296",
+      "state": "APPLIES",
+      "physical_reading": "REAL_WALL_FACE"
+     },
+     {
+      "handle": "2297",
+      "state": "APPLIES",
+      "physical_reading": "REAL_WALL_FACE"
+     }
+    ]
+   }
+  ],
+  "OLD_K1": [
+   {
+    "fact": "QORTUBA-NEW-HALL-LOBBY-OPEN-PASSAGE-OWNER-001@v1",
+    "state": "SOURCE_SCOPE_MISMATCH",
+    "parts": []
+   }
+  ]
+ },
+ "changed": [
+  "closure review record (TC review state)",
+  "H2430 blocker class: ROLE_AUTHORITY -> ENGINE_LIMITATION",
+  "the OP-OWNER-HALL-LOBBY passage record and its trade-surface notes",
+  "a Q-14 release note (passage soffit allocation)",
+  "row_input_digest (the fact is row authority)"
+ ],
+ "unchanged": {
+  "RUN_INPUT_DIGEST": "645dff01bd02218557203c6e1d5d5d999e1b3ca7abdc091e0b4a36bf0bf1ec68",
+  "RUN_INPUT_DIGEST_same_as_before_the_fact": true,
+  "wall_band_policy": "WALL_BAND_POLICY_V2",
+  "closure_policy": "TOPOLOGY_CLOSURE_POLICY_V1",
+  "sites_and_areas": "unchanged (the fact enters no TS01 input)",
+  "rows": {
+   "Q-03": [
+    "COMPUTED_SHADOW",
+    17.7425
+   ],
+   "Q-03P": [
+    "COMPUTED_SHADOW",
+    11.685
+   ],
+   "Q-11": [
+    "COMPUTED_SHADOW",
+    17.7425
+   ],
+   "Q-12": [
+    "COMPUTED_SHADOW",
+    11.685
+   ],
+   "Q-13": [
+    "BLOCKED_MULTIPLE: BLOCKED_ENGINE_LIMITATION, BLOCKED_ROLE, BLOCKED_TRADE_RULE",
+    null
+   ],
+   "Q-14": [
+    "BLOCKED_ENGINE_LIMITATION",
+    null
+   ]
+  }
+ },
+ "owner_passage": {
+  "passage_id": "OP-OWNER-HALL-LOBBY",
+  "kind": "OPEN_PASSAGE_SITE",
+  "record_origin": "OWNER_DECLARED (geometry measured from source)",
+  "engine_detection": "NOT_DETECTED: the west jamb (H470 + H471 / H477) is no established wall band under WALL_BAND_POLICY_V2 (fragmented face; E-R8.12-01)",
+  "owner_fact": "QORTUBA-NEW-HALL-LOBBY-OPEN-PASSAGE-OWNER-001@v1",
+  "owner_fact_state": "APPLIES",
+  "clear_width_mm_measured": 1196.45,
+  "owner_approx_clear_width_m": 1.0,
+  "width_discrepancy_mm": 196.4,
+  "width_note": "deterministic width = measured face-to-face distance; the owner's ~1.00 m is design meaning. The 196 mm difference exceeds any drafting / plaster tolerance and matches the old revision's QP-17 1.200 m: recorded for review before any skirting / reveal quantity, not a value change",
+  "wall_thickness_mm": 200.0,
+  "strip_polygon": [
+   [
+    109773.7561,
+    15029.7196
+   ],
+   [
+    109893.4009,
+    15029.7196
+   ],
+   [
+    109893.4009,
+    15049.7196
+   ],
+   [
+    109773.7561,
+    15049.7196
+   ]
+  ],
+  "strip_footprint_m2_geometry": 0.2393,
+  "clear_height_m": 2.2,
+  "door": "NONE",
+  "side_construction": "BLOCK + PLASTER",
+  "head": "BLOCK / PLASTERED HEAD at 2.20 m clear height",
+  "physically_connected": true,
+  "strip_in_site": "SITE-6d1ce80253b53f83",
+  "trade_allocation": "NOT_ALLOCATED",
+  "topology": {
+   "west_end": "OPEN into the H2430 wall core (the core stays in the HALL until the band is established or a claim applies)",
+   "east_end": "closed by TC-aea10821cffe20ff (zero material)",
+   "across_the_opening": "NOTHING: no closure, no wall, no block crosses the passage"
+  },
+  "trade_surfaces_record_only": {
+   "floor_strip": {
+    "plan": "strip_polygon",
+    "now": "inside site SITE-6d1ce80253b53f83 (HALL floor footprint)"
+   },
+   "left_reveal_west_jamb": {
+    "plan_segment": [
+     [
+      109773.7561,
+      15029.7196
+     ],
+     [
+      109773.7561,
+      15049.7196
+     ]
+    ],
+    "source": "H2430 (DIM layer, owner: real wall end) = H471 / H477 end points",
+    "height_m": 2.2,
+    "material": "BLOCK + PLASTER (owner)"
+   },
+   "right_reveal_east_jamb": {
+    "plan_segment": [
+     [
+      109893.4009,
+      15029.7196
+     ],
+     [
+      109893.4009,
+      15049.7196
+     ]
+    ],
+    "source": "H2296 / H2297 start points (H2431 is 9.2 mm short and is not used)",
+    "height_m": 2.2,
+    "material": "BLOCK + PLASTER (owner)",
+    "same_plan_segment_as": "TC-aea10821cffe20ff",
+    "two_records_rule": "the closure (material NONE) and this reveal (real material) share one plan segment: quantity may only ever come from the reveal record"
+   },
+   "top_reveal_soffit": {
+    "plan": "strip_polygon",
+    "level_m": 2.2,
+    "material": "BLOCK / PLASTERED HEAD (owner)"
+   },
+   "wall_faces_around": {
+    "west": [
+     "H471",
+     "H477",
+     "(H470)"
+    ],
+    "east": [
+     "H2296",
+     "H2297"
+    ],
+    "above_head": "wall face between 2.20 m and the wall height on both room sides"
+   }
+  },
+  "double_count_guard": [
+   "wall plaster / paint: the jamb end faces and the soffit are REVEAL surfaces, never also room wall perimeter; the room-side wall faces lose the opening (width x 2.20 m), not more",
+   "floor finish: the strip is one floor region; it is never also a threshold and never moved into a room to match a total",
+   "ceiling (Q-14): the strip lies inside the HALL footprint, so the owner's Q-14 claim (ceiling = floor footprint) counts it; its top is a soffit at 2.20 m - the reveal trade must not count it again unless an allocation rule removes it from the ceiling",
+   "opening / reveal quantities: computed once, from the reveal records, never from the topology closure"
+  ],
+  "material_on_any_closure": "NONE"
+ }
+}

@@ -1,0 +1,30 @@
+{
+ "baseline": "6b2b41b",
+ "code": {
+  "engine/source/ground_beam_network.py": "c400fbc1197f0aa76f6a90ecde928e923ba747dc4edec0ab456775c9d8f7587d",
+  "engine/source/ground_system_provenance.py": "d6a17f393036537a91aea0eba01bb03953c4efa83d57186d192ed71feef919c5",
+  "research/pre_s5_ground_system_readiness/build_pre_s5.py": "be9ba980ac7b878729ba8ea94968d99610899a86d70fe218bf612a9f8a7aac23"
+ },
+ "drawing_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+ "engine_stamp": "6b2b41b+code:9b2e5732c1c2bb3a",
+ "inputs": {
+  "research/alsenan_footing_rebar_s4/F3_AUTHORITY_DECISION.json": "d348943964c4c85ac953283bda156b9818c52c626bf99c5d91c1d17129c0ef2d",
+  "research/alsenan_rebar_source_exhaustion_04/registers/GROUND_BEAM_REBAR_V4.json": "7268929d2bb292517562633c51c66bb295b9fadc975db50e6b89b139af9c48cc",
+  "research/alsenan_rebar_source_exhaustion_04/registers/PROJECT_REBAR_RULE_REGISTER.json": "5536777ab000e65bd8bb61fabae04f0a09cfe58e75e9547c65c1b04e8633d6b8",
+  "research/alsenan_rebar_source_exhaustion_04/registers/VISUAL_SOURCE_CLAIM_REGISTER.json": "de12e1d73eeb57017d6af600d11becef521e573e150c9c5e715d34d4db02668d",
+  "research/alsenan_structural_census_s1/BEAM_DEFINITION_REGISTER.json": "6b490b8a17aab326a3233d7090c219d35f61e60c83ee290391cfa0f0a69df249",
+  "research/alsenan_structural_census_s1/BEAM_OCCURRENCE_REGISTER.json": "4af4ca569a3cda4c7fb7c30729db818e27f9727b6fe061aaa1436b9e3a5f4bc0",
+  "research/alsenan_structural_census_s1/FOOTING_OCCURRENCE_REGISTER.json": "96341bd2c7bc159f695c3a552e1df3763db6baf693cca9b2bedaf1b031106ea8",
+  "tests/alsenan/registers_v3/GROUND_STRUCTURE_REGISTER.json": "c3e87460a6924115144f4de5f8038cd32ced10e302e9035c34e433093a2f2f01"
+ },
+ "outputs": {
+  "01_GROUND_BEAM_GEOMETRY_CHANGELOG.csv": "0c35dd87f8fb0c252e6db9dd66a2a4052799e093166649cf6aacd83a68b026ca",
+  "02_GROUND_BEAM_NETWORK_SUMMARY.json": "4ab558a7e69ca4f9838f801f5b1738720bce3268f0931ee094089231dd86266c",
+  "03_STRAP_OCCURRENCE_REGISTER.csv": "6f4d6f13f91f6abb6e4a1a348e6de2f6028bdd3ccb9ef13ba71b818d68d70dc0",
+  "04_GROUND_BEAM_DETAIL_APPLICABILITY.csv": "e0b8ff291a0d6cdc2dd54cc6418ce45140f78e690a152bd621728bbe87440244",
+  "05_STRAP_REBAR_SOURCE_REGISTER.csv": "892f0447002c56da5e58b441317b6e85ec1e1c8cdeea37c8f9b8149047b7bf8d",
+  "06_GROUND_SYSTEM_REBAR_READINESS_MATRIX.csv": "047ab9e7db19b23a8ed0319f190f73ee968956c9452655ca7921434d99aa8438",
+  "F3_PROVENANCE_CHECK.json": "b7f64d54721745170c95f1e9b6e7da57c2edac8f22666dbed2f802f776f683b6",
+  "S5_PROVENANCE_TEMPLATES.json": "5b4028a24397de30416ba98c50cc6265b354e48fbf88bf311e04846e3ec86451"
+ }
+}

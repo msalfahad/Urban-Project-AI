@@ -1,0 +1,34 @@
+FAMILY,SEARCH_EN,SEARCH_AR,DXF_TEXT_HITS,HITS_BY_SHEET,SAMPLE_HANDLES,SAMPLE_TEXTS,PDF_RULES,CENSUS_OCCURRENCES,STATE
+LEAN_BLINDING_CONCRETE,PLAIN\s+CONC|LEAN|BLINDING,"[""خرسانة عادية"", ""نظافة""]",1,"{""DET"": 1}","[""1877""]","[""10cm PLAIN CONCRETE.""]","[""P8-N05"", ""P8-N06"", ""P8-N16"", ""P7-POOL""]",1,PRESENT
+ISOLATED_FOOTING,"^F\d{0,2}$|C\d{0,2}/F\d{0,2}|FN$",[],45,"{""FP"": 26, ""GBP"": 3, ""SCHEDULES_AND_NOTES"": 16}","[""7EC"", ""7F4"", ""808"", ""10A5"", ""10ED"", ""10F5""]","[""C/F"", ""C11/F11"", ""C2/F2"", ""C3/F3"", ""C4/F4"", ""C5/F5""]","[""P9-SOIL"", ""P13-FOOTING-TYP""]",19,PRESENT
+COMBINED_FOOTING,COMBINED,[],0,{},[],[],"[""P13-FOOTING-TYP""]",6,PRESENT
+STRIP_FOOTING,STRIP\s+F|WALL\s+FOOT,[],0,{},[],[],[],0,ABSENT_IN_ISSUED_DOCUMENTS
+RAFT_OR_PILE,\bRAFT\b|\bPILE\b|MAT\s+FOUND,"[""لبشة"", ""خوازيق""]",0,{},[],[],[],0,ABSENT_IN_ISSUED_DOCUMENTS
+NECK_PEDESTAL,\bNECK\b|PEDESTAL,"[""رقبة"", ""رقاب""]",0,{},[],[],"[""P13-FOOTING-DEEP""]",36,PRESENT
+STARTER_DOWEL,STARTER|DOWEL,"[""اشاير"", ""أشاير""]",0,{},[],[],"[""P8-N09"", ""P13-FOOTING-TYP""]",0,COMPONENT_FAMILY (S3.1 STARTER on 36 foundation-storey columns; footing BOXED bars semantics blocked)
+STRAP_BEAM,^S\.?B\d$,[],7,"{""FP"": 3, ""SCHEDULES_AND_NOTES"": 4}","[""1B12:sb2>v"", ""1B1D:SB1>v"", ""1B28"", ""1FB1"", ""1FBC"", ""2ABB""]","[""S.B1"", ""S.B2"", ""S.B3"", ""SB1"", ""SB2"", ""SB3""]",[],3,PRESENT
+GROUND_BEAM,GROUND\s+BEAM|^G\.?B\d*$,"[""الشيناجات"", ""الشناجات""]",3,"{""CAP"": 1, ""GBP"": 2}","[""B8"", ""B9:GBP>v"", ""B9:GBP>v""]","[""? وجوب صب الشناجات الخارجية جهة الجار ز "", ""GROUND BEAMS PLAN"", ""الشيناجات""]","[""P13-GB-GT5"", ""P13-GB-LT5"", ""P13-GB-LT2_5"", ""P13-GB-EXT"", ""P1-NOTE-B""]",59,PRESENT
+GROUND_SLAB,GROUND\s+SLAB|E\.W\.|S\.O\.G,"[""بلاطة ارضية""]",2,"{""GBP"": 2}","[""1690:TT1>v"", ""169D:TT1>v""]","[""5%%c10/m E.W.""]","[""P3-GROUND-SLAB""]",1,PRESENT
+COLUMN,"^C\d{0,2}$|^CN$","[""الاعمدة""]",101,"{""CAP"": 36, ""FP"": 18, ""GBP"": 33, ""GFRS"": 1, ""SCHEDULES_AND_NOTES"": 13}","[""7F:CAP>v"", ""1DD"", ""1E1"", ""1E5"", ""1E9"", ""1F6""]","[""C"", ""C1"", ""C10"", ""C11"", ""C2"", ""C3""]","[""P9-COL-TIES"", ""P9-COL-TMIN""]",59,PRESENT
+SPECIAL_COLUMN,^T\.C$|^P\.C\b|^D\.C$,[],6,"{""FFRS"": 1, ""GFRS"": 5}","[""31F"", ""324"", ""38A"", ""544"", ""548"", ""77C""]","[""D.C"", ""P.C 20x50"", ""P.C 20x70"", ""T.C""]","[""P15-TWISTED"", ""P15-PLANTED"", ""P3-LEGEND""]",6,PRESENT_AS_COMPONENT (6 labels on S3.1-owned column occurrences)
+STRUCTURAL_WALL,R\.?C\.?\s*WALL|STRUCTURAL\s+WALL|^B\.W$,"[""حائط خرساني"", ""جدار خرساني""]",1,"{""SCHEDULES_AND_NOTES"": 1}","[""1FA6""]","[""B.W""]","[""P8-N20"", ""P3-LEGEND""]",9,CANDIDATE_ONLY (B.W schedule row + legend hatch; no wall tagged on a plan)
+RETAINING_WALL,RETAIN,"[""ساند""]",0,{},[],[],[],0,ABSENT_IN_ISSUED_DOCUMENTS
+SHEAR_OR_CORE_WALL,SHEAR\s+WALL|CORE\s+WALL,[],0,{},[],[],[],0,ABSENT_IN_ISSUED_DOCUMENTS
+BEAM,"^B\d{1,2}$|^CB\d{1,2}$|^CA$",[],162,"{""FFRS"": 38, ""GFRS"": 66, ""SCHEDULES_AND_NOTES"": 43, ""SFRS"": 15}","[""42A"", ""42B"", ""430"", ""432"", ""444"", ""445""]","[""B1"", ""B10"", ""B11"", ""B12"", ""B13"", ""B14""]","[""P11-12-CB-TYPICAL"", ""P10-SBT-REMARKS""]",133,PRESENT
+ELEVATED_SLAB,^T\s?\d{2}$|SLAB,"[""سقف""]",6,"{""FFRS"": 2, ""GFRS"": 2, ""SFRS"": 2}","[""98:GFRS>v"", ""98:GFRS>v"", ""A0:FFRS>v"", ""A0:FFRS>v"", ""A8:SFRS>v"", ""A8:SFRS>v""]","[""FIRST FLOOR ROOF SLAB."", ""GROUND FLOOR ROOF SLAB."", ""SECOND FLOOR ROOF SLAB."", ""سقف الدور الارضي"", ""سقف الدور الاول"", ""سقف الدور الثاني""]","[""P8-N18"", ""P1-NOTE-A"", ""P4-6-NOTE-2""]",41,PRESENT
+SUNKEN_SLAB_OR_STEP,SUNKEN|STEP,"[""هابط""]",0,{},[],[],"[""P3-LEGEND""]",6,PRESENT
+CANTILEVER_OR_BALCONY,CANTILEVER|BALCON,"[""كابولي"", ""بلكون"", ""البروزات""]",0,{},[],[],"[""P3-LEGEND""]",9,PRESENT
+STAIR_AND_LANDING,STAIR|LANDING,"[""درج"", ""سلم""]",3,"{""FFRS"": 1, ""GFRS"": 2}","[""6B6"", ""6B8"", ""1826""]","[""(With Stair)""]","[""P16-STAIR""]",5,PRESENT
+LIFT_PIT_AND_WALLS,\bLIFT\b|ELEVATOR|^FF$,"[""مصعد"", ""مصعددد""]",3,"{""FP"": 1, ""SCHEDULES_AND_NOTES"": 2}","[""1676"", ""1C64"", ""2B1F""]","[""FF"", ""قاعددة مصعددد""]","[""P14-LIFT"", ""P8-N19""]",3,PRESENT
+WATER_TANK,WATER\s+TANK|\bTANK\b,"[""خزان""]",1,"{""SFRS"": 1}","[""1A85""]","[""WATER TANK PLACE""]",[],1,PRESENT
+SWIMMING_POOL,SWIMMING|POOL,"[""حمام سباحة"", ""مسبح""]",3,"{""DET"": 1, ""GBP"": 2}","[""147:SWIM>v"", ""147:SWIM>v"", ""1864""]","[""%%uDETAIL OF SWIMMING POOL."", ""swimming pool"", ""حمام سباحة""]","[""P7-POOL""]",1,PRESENT
+DOME_OR_SPECIAL_ROOF,\bDOME\b,"[""قبة""]",1,"{""DET"": 1}","[""1A18""]","[""%%uDETAIL OF DOME""]","[""P7-DOME""]",3,PRESENT
+RC_PARAPET,PARAPET,"[""الدروة""]",6,"{""FFRS"": 2, ""GFRS"": 2, ""SFRS"": 2}","[""D3"", ""D5"", ""DD"", ""DF"", ""E6"", ""E8""]","[""? ? علي المقاول مطابقة تفاصيل الدروة و ا"", ""PARAPET, BEFORE CASTING""]","[""P4-6-NOTE-1"", ""P14-PARAPETS""]",3,PRESENT
+UPSTAND_OR_KERB,UPSTAND|\bKERB\b|\bCURB\b,[],0,{},[],[],[],0,ABSENT_IN_ISSUED_DOCUMENTS
+EQUIPMENT_BASE_OR_PLINTH,EQUIP|PLINTH|MACHINE\s+BASE,"[""قاعدة معدات""]",0,{},[],[],[],0,ABSENT_IN_ISSUED_DOCUMENTS
+OPENING_TRIM,\bVOID\b|OPENING|OPEN\s+TO\s+BELOW,"[""منور"", ""فتحة""]",4,"{""GFRS"": 4}","[""2D3:void>v"", ""2D3:void>v"", ""2ED:void>v"", ""2ED:void>v""]","[""VOID"", ""منور""]","[""P8-N04"", ""P16-BEAM-OPENING""]",3,PRESENT
+LINTEL,LINTEL,"[""عتب""]",0,{},[],[],"[""P13-LINTEL""]",1,PRESENT
+BOUNDARY_WALL,BOUNDARY|FENCE,"[""سور""]",0,{},[],[],"[""P14-BOUNDARY""]",1,PRESENT
+RIBBED_OR_HORDI_SLAB,\bRIBS?\b|HORDI,"[""هوردي""]",0,{},[],[],"[""P16-RIBS""]",0,TYPICAL_DETAIL_ONLY_NO_OCCURRENCE (1 typical record)
+FOAM_CONCRETE,FOAM,"[""فوم""]",0,{},[],[],"[""P3-LEGEND""]",0,LEGEND_ONLY (non-structural fill; no occurrence)
+STRUCTURAL_STEEL,\bHEA\b|\bHEB\b|\bIPE\b|\bUPN\b|STEEL\s+(BEAM|COL|SECTION),[],0,{},[],[],[],0,ABSENT_IN_ISSUED_DOCUMENTS

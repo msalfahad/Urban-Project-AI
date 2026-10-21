@@ -1,0 +1,49 @@
+{
+ "SCHEMA": "URBAN_R8_20_MCP_DONOR_REVIEW_V1",
+ "lock": "research/external_engine_lab/DONORS.lock",
+ "policy": "MCPs / public repos are DONORS, ORACLES, BENCHMARKS and RESEARCH ROUTES - never live production quantity engines; nothing under engine/ imports them",
+ "donors": {
+  "U-C4N/Autocad-MCP": {
+   "incorporated": [
+    "OCS arbitrary-axis -> engine/source/cad/kernel_ocs.py (CLEAN_REIMPLEMENTED, R8.1)",
+    "snapshot / topology / MINSERT / XREF rules (CLEAN_REIMPLEMENTED)"
+   ],
+   "remaining": {
+    "labels.plain (literal text decoding)": "COPY_ADAPTED when the document / PDF lane needs it (still PLANNED, licence notice kept)"
+   },
+   "rejected": "unit_of mm default, silent OCS identity, P&ID network as wall topology"
+  },
+  "Kentucky-ai/opentakeoff": {
+   "incorporated": [],
+   "remaining": {
+    "scale-confirmed gating, schedule scan without silent row drop, mixed-scale BLOCK": "CLEAN_REIMPLEMENT in the PDF lane",
+    "detectRooms / One-Click": "BENCHMARKED only"
+   },
+   "status": "DEFERRED to the PDF lane"
+  },
+  "beiming183-cloud/AutoCAD-MCP": {
+   "incorporated": [
+    "representation digest pattern -> run_manifest / digests",
+    "revision anchors -> canonical_input",
+    "field-level readback diff -> SOURCE_EXPORT_IDENTITY_POLICY_V1 (CLEAN_REIMPLEMENTED, R8.20)"
+   ],
+   "remaining": {
+    "native readback oracle": "DEFERRED (route B only)"
+   }
+  },
+  "Slacker-LLC/autocad-mcp": {
+   "incorporated": [],
+   "remaining": {
+    "COM handle readback": "DEFERRED (route B lab oracle)"
+   }
+  },
+  "puran-water/autocad-mcp": {
+   "incorporated": [],
+   "remaining": {
+    "whole server": "BENCHMARK_REFERENCE only"
+   }
+  }
+ },
+ "duplicating_full_engines": false,
+ "why": "only mechanisms are taken (clean reimplementation, tested); no external engine runs in the measurement path"
+}

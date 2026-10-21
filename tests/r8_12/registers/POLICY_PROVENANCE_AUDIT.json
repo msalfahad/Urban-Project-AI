@@ -1,0 +1,61 @@
+{
+ "SCHEMA": "URBAN_R8_12_POLICY_PROVENANCE_AUDIT_V1",
+ "wall_bands": {
+  "policy": "WALL_BAND_POLICY_V3",
+  "params_in_policy_record": {
+   "chain_join": "collinear within eps_n both ways; end points coincident within eps_n (touching); same occurrence path; TOPOLOGY_BOUNDARY on both sides; NO opening / glazing segment end within eps_r of the joint (OPENING_BREAK). A gap of any size, including inside the 50 mm review band, is never joined",
+   "duplicate": "collinear fragments overlapping by more than eps_n are ONE chain with a DUPLICATE interval; a span over a duplicate interval is AMBIGUOUS",
+   "parallel": "|cross(u_a, u_b)| x overlap <= eps_r",
+   "overlap_min": "eps_r",
+   "separation_min": "eps_r",
+   "elongation_ratio": 1.0,
+   "elongation_basis": "the raw overlap of the two CHAINS (never a sub-interval)",
+   "local_mutual_nearest": "evaluated at the middle of every elementary interval (breakpoints: projections of all parallel overlapping chains of both chains, both sides)",
+   "one_side_margin": "eps_r",
+   "nearest_tie": "eps_r (a tie between two chains is never paired)",
+   "strip": "a label anywhere in the RAW strip of the chain pair (the whole chain overlap) rejects the pair - local pairing must never turn an unlabelled slice of a room into a band; labels or arcs in the local strip reject the run; crossings subdivide it",
+   "id_coordinate_decimals": 6,
+   "canonical_direction_guard": 1e-09,
+   "eps_n_default_ratio_of_eps_r": 0.001,
+   "full_width_margin_in_eps_r": 2.0,
+   "numeric_guards": {
+    "ray_parallel": 1e-15,
+    "segment_length_floor": 1e-12,
+    "clip_parameter": 1e-12
+   },
+   "pair_search": "exhaustive over admitted faces (no direction buckets, no neighbourhood window)",
+   "review_band": "role_authority.NEAR_MISS_REVIEW_BAND_MM / unit - cap grading only, never a join"
+  },
+  "removed_hidden_constants_from_V2": [
+   "direction buckets of 2e-3 rad and their +-1 neighbourhood (replaced by exhaustive parallel search)",
+   "ray / clip numeric guards 1e-15, 1e-12 (now PARAMS.numeric_guards)",
+   "id rounding 6 (now PARAMS.id_coordinate_decimals)"
+  ],
+  "integer_literals_outside_params": [
+   0.0,
+   1.0,
+   2,
+   3,
+   4,
+   8,
+   16
+  ],
+  "why_allowed": "tuple indices, halving (midpoints), the 16-character id length, record truncation (8), a closed loop needs >= 3 segments - none tunes discovery",
+  "derived_from_other_policies": [
+   "eps_r / eps_n: TOPOLOGY_TOLERANCE_POLICY_V1",
+   "review band: ROLE_AUTHORITY near-miss band"
+  ]
+ },
+ "topology_closures": {
+  "policy": "TOPOLOGY_CLOSURE_POLICY_V1",
+  "digest": "46742c570b4d8a036fd6b7446f28055bfd4e1adbff51966e800e5986ca99ccb2",
+  "found": [
+   "closure id rounds face end points to 9 decimals (identity only, not discovery)",
+   "area balance bound eps_r x perimeter (stated in the policy text)"
+  ],
+  "action": "R8.13: put the id rounding into the closure policy record with a version bump (no behaviour change)"
+ },
+ "room_topology": {
+  "band_review": "role_authority.NEAR_MISS_REVIEW_BAND_MM / unit (recorded in the run manifest policies)"
+ }
+}

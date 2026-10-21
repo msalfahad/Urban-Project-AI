@@ -1,0 +1,60 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_POST_FREEZE_REBAR_COMPARISON_R4",
+ "frozen_index_sha256": "1aada8c2dc29a4319f862f1423a9a41fc05288cd776ed93ef11b4f6b92a1bc5e",
+ "verified_register_hashes": {
+  "VISUAL_SOURCE_CLAIM_REGISTER": "de12e1d73eeb57017d6af600d11becef521e573e150c9c5e715d34d4db02668d",
+  "PROJECT_REBAR_RULE_REGISTER": "5536777ab000e65bd8bb61fabae04f0a09cfe58e75e9547c65c1b04e8633d6b8",
+  "GROUND_BEAM_REBAR_V4": "7268929d2bb292517562633c51c66bb295b9fadc975db50e6b89b139af9c48cc",
+  "TEMPERATURE_REBAR_RULE_REGISTER": "e5f417c9e82c9be326241d4c106e467be92736694c40d37d8b1a13c7e51bd14f",
+  "SLAB_DETAIL_RULE_REGISTER": "2bccc83f3525b552477a8816791258f67bd85bbd053df20271854c1197630262",
+  "LIFT_REBAR_SOURCE_REGISTER": "867cb44ad239f18c6e79d5da800436be3f58accdf3ca74efe424960ad87a14e4",
+  "CARRIED_POPULATION_REAUDIT": "f1b13c07c2a6ecadfb48c308c6dfc5b0c69d0947a222996c6240afdfb5513647",
+  "CB_OCCURRENCE_CANDIDATE_REGISTER": "ef90da995a132946227c74d7deea02efd24afb90f73fb3e234ffe508e6d262c0",
+  "D5_COLUMN_SOURCE_RECONCILIATION": "caaca389713554fff3847e91860ba9bc19da6c47be3f0a85e41efb619e44d7d9",
+  "GROUND_SLAB_SCOPE_REGISTER_V2": "561fd5f41f8245684dda74d5739ca94c6247225d5bf6c3e168eaedd7a1c8a82c",
+  "ENGINEERING_QUESTION_TRIAGE_REGISTER": "2f00bce845c2c3a71e0bec04aa71c6b5e9df53d8a4183e51351bb2cc7fc00a5f",
+  "PROJECT_REBAR_STATUS": "b3bfc5f71f4cf687648b3905c177b20c088be15b0a13892f6af47075cd979157",
+  "KNOWN_COMPONENTS_BBS_REGISTER": "b331ccc40a2f40a82ae6c14dcdae4a8fb9765eefe484e429a2ae2a2a9af606f0",
+  "REBAR_ACCURACY_SCORECARD_V2": "6d32d86be409168bf424c84872b93247d91558252f84d971c5480d54b3e8fa1e",
+  "REBAR_POPULATION_REGISTER_V4": "c1dafb557c612c4ac3062ed2c988afa6bfa2b03bef6cb4a630911593f64bc752",
+  "REBAR_GATE_TRANSITIONS_R4": "bdba6d43d055af274afc826bfd291fcd4f098cf8a37bfd1a2b42df4fae52ac56"
+ },
+ "benchmark": {
+  "item": "REBAR / ALL",
+  "qty_t": 44.19,
+  "class": "WEAK_HUMAN_REFERENCE (round-1 register)",
+  "use": "FINDING_ONLY - never a target"
+ },
+ "project_status": "LOWER_BOUND_ONLY",
+ "PROJECT_REBAR_FINAL_ESTABLISHED": false,
+ "round3_t": {
+  "verified_complete": 0.049,
+  "verified_lower_bound": 21.146,
+  "provisional": 6.959,
+  "budget": 0.319,
+  "blocked_audit_never_released": 2.88,
+  "verified_complete_plus_lower_bound": 21.195,
+  "plus_provisional_and_budget": 28.473,
+  "verified_vs_benchmark_pct": -52.0,
+  "verified_plus_provisional_vs_benchmark_pct": -35.6
+ },
+ "round4_t": {
+  "verified_complete": 0.049,
+  "verified_lower_bound": 20.366,
+  "provisional": 7.156,
+  "budget": 0.0,
+  "blocked_audit_never_released": 2.487,
+  "verified_complete_plus_lower_bound": 20.415,
+  "plus_provisional_and_budget": 27.571,
+  "verified_vs_benchmark_pct": -53.8,
+  "verified_plus_provisional_vs_benchmark_pct": -37.6
+ },
+ "known_components_bbs_t": {
+  "KNOWN_COMPONENTS_NET_KG": 20.415,
+  "KNOWN_COMPONENTS_BBS_USED_KG": 20.931,
+  "KNOWN_COMPONENTS_BBS_PURCHASED_KG": 21.424,
+  "KNOWN_COMPONENTS_BBS_WASTE_KG": 0.493
+ },
+ "reading": "the gap to the benchmark is the BLOCKED populations (temperature steel, anchorage / hooks, boundary wall, stair, lift tie beams, planted columns, parapets, ground slab, D5 / CB occurrences) plus the provisional share; it is never closed by tuning",
+ "rule": "run after the freeze; INDEX hashes verified first"
+}

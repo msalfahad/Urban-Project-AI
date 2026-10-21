@@ -1,0 +1,71 @@
+{
+ "baseline": "12cabc3",
+ "code": {
+  "engine/source/delta_release.py": "7b0f72a6f5138b3e0f8515c80a42a38a2cfc035c8fb4c138aa64a4fd5c9708b9",
+  "engine/source/legacy_text.py": "2508b0f6c3c7bad751edb40009f009ef0ee24beb8c5c3516a0e5e400aa102f6a",
+  "engine/source/region_recovery.py": "7281c55a24ba3fbbc4d7b8a1a1ceb3249da7b4bb829af5915ee6dbd98c862dc9",
+  "research/alsenan_ground_slab_s8_1a/build_s8_1a.py": "fd89c5e6c65ba644117556b5a8af51439060dd0ce899a11054a39802140d3dfd",
+  "research/external_engine_lab/alsenan_structural_s1.py": "e3ecd25490cd433540e317454ffdbaadf17c19799f49eb1df9afcb928aa494cb",
+  "research/source_recovery_delta/vector_pdf.py": "5f79e57915514c8b2eb621800efd0265e315856e853a08f38224df7a6bd610d9"
+ },
+ "date": "2026-10-08",
+ "drawing_sha256": {
+  "P7757.dxf": "ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4",
+  "ST7757.dxf": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+  "ST7757.pdf": "74da1523f05eb3c6a4fe3ddebaef2c3d841891f003efc03bc32a3fb4553337e3"
+ },
+ "engine_commit_stamp": "12cabc3+code:61ea98bdbd1d467f",
+ "frozen_baselines": {
+  "AD1": "e2497cc75181393000187b7e657fa8485a4c0f365b4614bed983d0bc6c0ca5b4",
+  "D1.1": "3ecb642e2141f5a9af11453870696b104a11cfb519d65a9e3f505cbff7c73a74",
+  "D1.2": "f256d6a25edf93029c6ba1c8cf9bc336790fd8d9cf7a5045e8395942986a9554",
+  "PRE-S7": "fb3a1c62a8e525b663853d03d43e067f1839026aea149399491bd4cf98f0ad09",
+  "PRE-S7.1": "3a67a8641ce4ea836334e02532af82b9a3bb01be8efdba4f093eee44d92c1ef6",
+  "PRE-S8": "1c8daf59926540941efbf5f749e8e175fe64b7efeb6d7acff0bfbefbb034849d",
+  "S4": "0d63015a19953f295e331aab2d7e49e8facb277e1465fbdd1b6b5a40d1a2362b",
+  "S4.1": "468e90d9657548a7e9124b67ce0a55b63560f030e2f98b414c46ad4e970e030b",
+  "S5": "ff488a92f3eaff80e84fca2d7e0b8e36cc40ddb84232cd315acfd1ce50b4b3d8",
+  "S5.1": "595d64b1bf5c8e0ef7b5bebfaf3ea4063dd884356390c84b4c8aac77cddb5a88",
+  "S6": "c29a28bc66334d5294d71b0d5feb0dd5eae36baf91a04ef6e0105b2ca43be63e",
+  "S6.1": "c4744888ed2207ebff47c0a895e706d7e381b5f905b694eb92e3d1cdc411c0b2",
+  "S7": "b23f97b6db334e641c38c498bf23b46236d68f4fcc26a6eafde1f3bfc156d175",
+  "S7A": "5b256cef99dc57934c76249c28814d5ce07c74caf308aabdbf90e0e8f0adcee1",
+  "S8.1": "e99d83a750b64541f5b3174b853d24209f30e46574fafafe56cfa3fd0d88e354"
+ },
+ "inputs": {
+  "research/alsenan_ground_slab_s8_1/01_GROUND_SLAB_POPULATION_AND_ZONE_REGISTER.csv": "bdd9459281f41bd4bb3db352b28e22b1481d9ef8a054dcf8ecd369af4a371abf",
+  "research/alsenan_ground_slab_s8_1/02_SOURCE_RULE_REGISTER.csv": "cfdffd61264c36e410318e4b202df6c116ae1c12728fb7cb2b35786354b8735c",
+  "research/alsenan_ground_slab_s8_1/03_CONCRETE_QTO.csv": "8dfd8f88f1b717d6fb45725ce25f3d578607412131fbacb12f882e2a6e70c587",
+  "research/alsenan_ground_slab_s8_1/06_BLOCKED_UNRESOLVED_COMPONENTS.csv": "c24905a6db652ee7d9509a9001b9e1fa3c8e95bb6d3825213512916892921208",
+  "research/alsenan_ground_slab_s8_1/10_S8_1_SUMMARY.json": "5d2a100254cd7ae43bfb9c6bfc91300f24b4c619c43995c10cc610e998bad0fd",
+  "research/alsenan_structural_census_s1/BEAM_OCCURRENCE_REGISTER.json": "4af4ca569a3cda4c7fb7c30729db818e27f9727b6fe061aaa1436b9e3a5f4bc0",
+  "research/alsenan_structural_census_s1/FOOTING_OCCURRENCE_REGISTER.json": "96341bd2c7bc159f695c3a552e1df3763db6baf693cca9b2bedaf1b031106ea8",
+  "research/alsenan_structural_census_s1/SLAB_PANEL_REGISTER.json": "ea0cbe1b5e8d6f6b94eae60fd5c55a708886095a0cda3101d0acbe06229c9c4c",
+  "research/alsenan_structural_census_s1/STRUCTURAL_LEVEL_REGISTER.json": "53d54f501f0fcab6f3825d16a4c1a939c9fc5e094d410eb8e9f3875f6fc3ca6b",
+  "research/alsenan_structural_census_s1/STRUCTURAL_PROJECT_RULE_REGISTER.json": "3268bce3ef31c21ee93b0d7f9ab9b50195e0d0ae659699422c6927abcdf528d2",
+  "research/pre_s5_1_source_resolution/INDEX.json": "f865d2a5140b296d93c9f338bfbc0e9a5ca886b804b1772e842107bf9ecd5d2d",
+  "research/pre_s5_1_source_resolution/PRE_S5_1_SUMMARY.json": "a424687a0fcd6efb26246a76efffa2bc3cde18cd511b53ccbe699bca983ca020",
+  "research/pre_s8_structural_completeness/02_STRUCTURAL_ELEMENT_CENSUS.csv": "a24db6efc7855c2a1f2eaff5e9739397b03f3f62d79ffaa7376a8609ead51e12",
+  "tests/alsenan/registers/FLOOR_PLAN_REGISTER.json": "9576d1f823b82d4abec7afa7f9a27e39d8810f8c98c24f5270c973774e071b09"
+ },
+ "outputs": {
+  "00_README.md": "3acdbacdc9b5c148a59b88b6de0d1a27f27b1829b324b4740eeafc6b4fb1f360",
+  "01_RECOVERED_LIFT_PIT_REGION.csv": "0f052fa943b41a81faf8868b130a2b61471215f078d1a3d538ffc49a85b0de36",
+  "02_POPULATION_OWNERSHIP_DELTA.csv": "1467207db9b1d9713a9eba0e79828a1ab0d7627c08f577b6e5a372cc77d0bd7b",
+  "03_TT1_ANNOTATION_SCOPE_AUDIT.csv": "625cc21df13aeacd53a8691eeccc2160f556984d4123dcf5284fb6120a0c3241",
+  "04_TT1_INTERPRETATION_REGISTER.csv": "999c3f64fc35e55b378db31e4049ab5a4f5fc390d0a18956deefb0a8d26e000a",
+  "05_COVER_APPLICABILITY_AUDIT.csv": "05c44dcfe675a8ce5b4ba19908fc415394dca44544b445e12d175d5bbcd8d799",
+  "06_S8_1_CORRECTION_LAYER.csv": "eea3aee8f476c31586bcb51c1e4caac5f317c7c73c5e2f9dbc629f5ccf6f143f",
+  "07_UNQUANTIFIED_AREA_ACCOUNTING.csv": "6acfaf9258d8fc82649f3983064483ab2d3d853d35c1488981ca5a02d1df93de",
+  "08_CONFLICT_AND_QUESTION_REGISTER.csv": "e39603dfeb2284dd9f330df1f8e7c92c39961e08768a4ce971d480fb09540d37",
+  "09_CONSERVATION_CHECKS.csv": "974c27616996a41bd51df70a17637e34f2853aa50ce4c8f36f3f702329b0c018",
+  "10_POPULATION_RECONCILIATION.csv": "c392815ebd2246f669c984450113a393fb6004d92b086ca95a49500267997438",
+  "11_FROZEN_MANIFEST_CHECKS.csv": "e629c619901485ab9b5be141bebf1024e3379346f234830aafa9414b5afd1154",
+  "12_PROVENANCE.jsonl": "f6b6a71c7d188b133de1100260f1f9da7304acc455629d3a756677279750d743",
+  "13_S8_1A_SUMMARY.json": "473dde61c94ed28553766691f19d7a767150f8d1407878d3ef50f53ccdc67ef4"
+ },
+ "references_read": [],
+ "round": "S8_1A",
+ "rule": "S8.1A recovers population, scope and cover authority only; no steel or concrete is released and no S8.1 file changes",
+ "state": "FROZEN_NO_QUANTITY_RELEASED"
+}

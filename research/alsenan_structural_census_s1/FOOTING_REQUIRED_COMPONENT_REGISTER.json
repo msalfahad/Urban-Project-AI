@@ -1,0 +1,1178 @@
+{
+ "frozen_before_benchmark": true,
+ "policy": {
+  "cb_states": [
+   "MATCH_CONFIRMED",
+   "SPAN_LENGTH_CONFLICT",
+   "SPAN_COUNT_CONFLICT",
+   "TAG_WITH_NO_MEMBER",
+   "MEMBER_WITH_NO_TAG",
+   "BLOCKED"
+  ],
+  "policy_id": "STRUCTURAL_CENSUS_V1",
+  "precedence": [
+   "LOCAL_PANEL_NOTE",
+   "FLOOR_SPECIFIC_NOTE",
+   "PROJECT_DEFAULT"
+  ],
+  "principles": [
+   "plan decides occurrence; schedule only defines",
+   "no default overrides a local note",
+   "a value is never rounded into a table row it does not match",
+   "every plan object ends in one terminal state"
+  ],
+  "rule_states": [
+   "EXACT_RULE",
+   "RULE_NOT_EXACT_MATCH",
+   "BLOCKED_METHOD"
+  ],
+  "terminal_states": [
+   "COUNTED_AND_DEFINED",
+   "COUNTED_DEFINITION_PARTIAL",
+   "COUNTED_BLOCKED",
+   "NOT_IN_SCOPE"
+  ]
+ },
+ "register": "FOOTING_REQUIRED_COMPONENT_REGISTER",
+ "round": "S1",
+ "rows": [
+  {
+   "component": "BOTTOM_SHORT",
+   "component_id": "FCOMP-F-BOTTOM_SHORT",
+   "definition": {
+    "component": "BOTTOM_SHORT",
+    "count": 8,
+    "count_mode": "ABSOLUTE_COUNT",
+    "dia_mm": 12,
+    "layer": "SINGLE"
+   },
+   "footing_type": "F",
+   "plan_occurrences": 4,
+   "required": true,
+   "rule": "schedule row",
+   "state": "DEFINED"
+  },
+  {
+   "component": "BOTTOM_LONG",
+   "component_id": "FCOMP-F-BOTTOM_LONG",
+   "definition": {
+    "component": "BOTTOM_LONG",
+    "count": 7,
+    "count_mode": "ABSOLUTE_COUNT",
+    "dia_mm": 12,
+    "layer": "SINGLE"
+   },
+   "footing_type": "F",
+   "plan_occurrences": 4,
+   "required": true,
+   "rule": "schedule row",
+   "state": "DEFINED"
+  },
+  {
+   "BOXED_RAW": "3+4",
+   "BOXED_REQUIRED": true,
+   "BOXED_SEMANTICS": "BLOCKED",
+   "component": "BOXED",
+   "component_id": "FCOMP-F-BOXED",
+   "footing_type": "F",
+   "plan_occurrences": 4,
+   "rule": "P13-FOOTING-TYP",
+   "state": "BLOCKED"
+  },
+  {
+   "component": "COLUMN_STARTERS",
+   "component_id": "FCOMP-F-STARTERS",
+   "definition": {
+    "bars": "= column bars of each supported column (FOUNDATION band)",
+    "foot_min_cm": 30,
+    "projection": "40D (CANDIDATE)"
+   },
+   "footing_type": "F",
+   "plan_occurrences": 4,
+   "required": true,
+   "rule": "P13-FOOTING-TYP (40D projection, foot >= 30 cm)",
+   "state": "DEFINED_BY_RULE_CANDIDATE"
+  },
+  {
+   "component": "BOTTOM_SHORT",
+   "component_id": "FCOMP-F2-BOTTOM_SHORT",
+   "definition": {
+    "component": "BOTTOM_SHORT",
+    "count": 13,
+    "count_mode": "ABSOLUTE_COUNT",
+    "dia_mm": 12,
+    "layer": "SINGLE"
+   },
+   "footing_type": "F2",
+   "plan_occurrences": 2,
+   "required": true,
+   "rule": "schedule row",
+   "state": "DEFINED"
+  },
+  {
+   "component": "BOTTOM_LONG",
+   "component_id": "FCOMP-F2-BOTTOM_LONG",
+   "definition": {
+    "component": "BOTTOM_LONG",
+    "count": 13,
+    "count_mode": "ABSOLUTE_COUNT",
+    "dia_mm": 12,
+    "layer": "SINGLE"
+   },
+   "footing_type": "F2",
+   "plan_occurrences": 2,
+   "required": true,
+   "rule": "schedule row",
+   "state": "DEFINED"
+  },
+  {
+   "BOXED_RAW": "3+4",
+   "BOXED_REQUIRED": true,
+   "BOXED_SEMANTICS": "BLOCKED",
+   "component": "BOXED",
+   "component_id": "FCOMP-F2-BOXED",
+   "footing_type": "F2",
+   "plan_occurrences": 2,
+   "rule": "P13-FOOTING-TYP",
+   "state": "BLOCKED"
+  },
+  {
+   "component": "COLUMN_STARTERS",
+   "component_id": "FCOMP-F2-STARTERS",
+   "definition": {
+    "bars": "= column bars of each supported column (FOUNDATION band)",
+    "foot_min_cm": 30,
+    "projection": "40D (CANDIDATE)"
+   },
+   "footing_type": "F2",
+   "plan_occurrences": 2,
+   "required": true,
+   "rule": "P13-FOOTING-TYP (40D projection, foot >= 30 cm)",
+   "state": "DEFINED_BY_RULE_CANDIDATE"
+  },
+  {
+   "component": "BOTTOM_SHORT",
+   "component_id": "FCOMP-F3-BOTTOM_SHORT",
+   "definition": {
+    "component": "BOTTOM_SHORT",
+    "count": 8,
+    "count_mode": "ABSOLUTE_COUNT",
+    "dia_mm": 12,
+    "layer": "SINGLE"
+   },
+   "footing_type": "F3",
+   "plan_occurrences": 2,
+   "required": true,
+   "rule": "schedule row",
+   "state": "DEFINED"
+  },
+  {
+   "component": "BOTTOM_LONG",
+   "component_id": "FCOMP-F3-BOTTOM_LONG",
+   "definition": {
+    "component": "BOTTOM_LONG",
+    "count": 8,
+    "count_mode": "ABSOLUTE_COUNT",
+    "dia_mm": 12,
+    "layer": "SINGLE"
+   },
+   "footing_type": "F3",
+   "plan_occurrences": 2,
+   "required": true,
+   "rule": "schedule row",
+   "state": "DEFINED"
+  },
+  {
+   "BOXED_RAW": "3+4",
+   "BOXED_REQUIRED": true,
+   "BOXED_SEMANTICS": "BLOCKED",
+   "component": "BOXED",
+   "component_id": "FCOMP-F3-BOXED",
+   "footing_type": "F3",
+   "plan_occurrences": 2,
+   "rule": "P13-FOOTING-TYP",
+   "state": "BLOCKED"
+  },
+  {
+   "component": "COLUMN_STARTERS",
+   "component_id": "FCOMP-F3-STARTERS",
+   "definition": {
+    "bars": "= column bars of each supported column (FOUNDATION band)",
+    "foot_min_cm": 30,
+    "projection": "40D (CANDIDATE)"
+   },
+   "footing_type": "F3",
+   "plan_occurrences": 2,
+   "required": true,
+   "rule": "P13-FOOTING-TYP (40D projection, foot >= 30 cm)",
+   "state": "DEFINED_BY_RULE_CANDIDATE"
+  },
+  {
+   "component": "BOTTOM_SHORT",
+   "component_id": "FCOMP-F4-BOTTOM_SHORT",
+   "definition": {
+    "component": "BOTTOM_SHORT",
+    "count": 18,
+    "count_mode": "ABSOLUTE_COUNT",
+    "dia_mm": 12,
+    "layer": "SINGLE"
+   },
+   "footing_type": "F4",
+   "plan_occurrences": 2,
+   "required": true,
+   "rule": "schedule row",
+   "state": "DEFINED"
+  },
+  {
+   "component": "BOTTOM_LONG",
+   "component_id": "FCOMP-F4-BOTTOM_LONG",
+   "definition": {
+    "component": "BOTTOM_LONG",
+    "count": 17,
+    "count_mode": "ABSOLUTE_COUNT",
+    "dia_mm": 12,
+    "layer": "SINGLE"
+   },
+   "footing_type": "F4",
+   "plan_occurrences": 2,
+   "required": true,
+   "rule": "schedule row",
+   "state": "DEFINED"
+  },
+  {
+   "BOXED_RAW": "3+4",
+   "BOXED_REQUIRED": true,
+   "BOXED_SEMANTICS": "BLOCKED",
+   "component": "BOXED",
+   "component_id": "FCOMP-F4-BOXED",
+   "footing_type": "F4",
+   "plan_occurrences": 2,
+   "rule": "P13-FOOTING-TYP",
+   "state": "BLOCKED"
+  },
+  {
+   "component": "COLUMN_STARTERS",
+   "component_id": "FCOMP-F4-STARTERS",
+   "definition": {
+    "bars": "= column bars of each supported column (FOUNDATION band)",
+    "foot_min_cm": 30,
+    "projection": "40D (CANDIDATE)"
+   },
+   "footing_type": "F4",
+   "plan_occurrences": 2,
+   "required": true,
+   "rule": "P13-FOOTING-TYP (40D projection, foot >= 30 cm)",
+   "state": "DEFINED_BY_RULE_CANDIDATE"
+  },
+  {
+   "component": "BOTTOM_SHORT",
+   "component_id": "FCOMP-F5-BOTTOM_SHORT",
+   "definition": {
+    "component": "BOTTOM_SHORT",
+    "count": 22,
+    "count_mode": "ABSOLUTE_COUNT",
+    "dia_mm": 12,
+    "layer": "SINGLE"
+   },
+   "footing_type": "F5",
+   "plan_occurrences": 2,
+   "required": true,
+   "rule": "schedule row",
+   "state": "DEFINED"
+  },
+  {
+   "component": "BOTTOM_LONG",
+   "component_id": "FCOMP-F5-BOTTOM_LONG",
+   "definition": {
+    "component": "BOTTOM_LONG",
+    "count": 20,
+    "count_mode": "ABSOLUTE_COUNT",
+    "dia_mm": 12,
+    "layer": "SINGLE"
+   },
+   "footing_type": "F5",
+   "plan_occurrences": 2,
+   "required": true,
+   "rule": "schedule row",
+   "state": "DEFINED"
+  },
+  {
+   "BOXED_RAW": "3+4",
+   "BOXED_REQUIRED": true,
+   "BOXED_SEMANTICS": "BLOCKED",
+   "component": "BOXED",
+   "component_id": "FCOMP-F5-BOXED",
+   "footing_type": "F5",
+   "plan_occurrences": 2,
+   "rule": "P13-FOOTING-TYP",
+   "state": "BLOCKED"
+  },
+  {
+   "component": "COLUMN_STARTERS",
+   "component_id": "FCOMP-F5-STARTERS",
+   "definition": {
+    "bars": "= column bars of each supported column (FOUNDATION band)",
+    "foot_min_cm": 30,
+    "projection": "40D (CANDIDATE)"
+   },
+   "footing_type": "F5",
+   "plan_occurrences": 2,
+   "required": true,
+   "rule": "P13-FOOTING-TYP (40D projection, foot >= 30 cm)",
+   "state": "DEFINED_BY_RULE_CANDIDATE"
+  },
+  {
+   "component": "BOTTOM_SHORT",
+   "component_id": "FCOMP-F6-BOTTOM_SHORT",
+   "definition": {
+    "component": "BOTTOM_SHORT",
+    "count": 24,
+    "count_mode": "ABSOLUTE_COUNT",
+    "dia_mm": 12,
+    "layer": "SINGLE"
+   },
+   "footing_type": "F6",
+   "plan_occurrences": 1,
+   "required": true,
+   "rule": "schedule row",
+   "state": "DEFINED"
+  },
+  {
+   "component": "BOTTOM_LONG",
+   "component_id": "FCOMP-F6-BOTTOM_LONG",
+   "definition": {
+    "component": "BOTTOM_LONG",
+    "count": 22,
+    "count_mode": "ABSOLUTE_COUNT",
+    "dia_mm": 12,
+    "layer": "SINGLE"
+   },
+   "footing_type": "F6",
+   "plan_occurrences": 1,
+   "required": true,
+   "rule": "schedule row",
+   "state": "DEFINED"
+  },
+  {
+   "BOXED_RAW": "3+5",
+   "BOXED_REQUIRED": true,
+   "BOXED_SEMANTICS": "BLOCKED",
+   "component": "BOXED",
+   "component_id": "FCOMP-F6-BOXED",
+   "footing_type": "F6",
+   "plan_occurrences": 1,
+   "rule": "P13-FOOTING-TYP",
+   "state": "BLOCKED"
+  },
+  {
+   "component": "COLUMN_STARTERS",
+   "component_id": "FCOMP-F6-STARTERS",
+   "definition": {
+    "bars": "= column bars of each supported column (FOUNDATION band)",
+    "foot_min_cm": 30,
+    "projection": "40D (CANDIDATE)"
+   },
+   "footing_type": "F6",
+   "plan_occurrences": 1,
+   "required": true,
+   "rule": "P13-FOOTING-TYP (40D projection, foot >= 30 cm)",
+   "state": "DEFINED_BY_RULE_CANDIDATE"
+  },
+  {
+   "component": "BOTTOM_SHORT",
+   "component_id": "FCOMP-F7-BOTTOM_SHORT",
+   "definition": {
+    "component": "BOTTOM_SHORT",
+    "count": 24,
+    "count_mode": "ABSOLUTE_COUNT",
+    "dia_mm": 14,
+    "layer": "SINGLE"
+   },
+   "footing_type": "F7",
+   "plan_occurrences": 0,
+   "required": true,
+   "rule": "schedule row",
+   "state": "DEFINED"
+  },
+  {
+   "component": "BOTTOM_LONG",
+   "component_id": "FCOMP-F7-BOTTOM_LONG",
+   "definition": {
+    "component": "BOTTOM_LONG",
+    "count": 21,
+    "count_mode": "ABSOLUTE_COUNT",
+    "dia_mm": 14,
+    "layer": "SINGLE"
+   },
+   "footing_type": "F7",
+   "plan_occurrences": 0,
+   "required": true,
+   "rule": "schedule row",
+   "state": "DEFINED"
+  },
+  {
+   "BOXED_RAW": "3+6",
+   "BOXED_REQUIRED": true,
+   "BOXED_SEMANTICS": "BLOCKED",
+   "component": "BOXED",
+   "component_id": "FCOMP-F7-BOXED",
+   "footing_type": "F7",
+   "plan_occurrences": 0,
+   "rule": "P13-FOOTING-TYP",
+   "state": "BLOCKED"
+  },
+  {
+   "component": "COLUMN_STARTERS",
+   "component_id": "FCOMP-F7-STARTERS",
+   "definition": {
+    "bars": "= column bars of each supported column (FOUNDATION band)",
+    "foot_min_cm": 30,
+    "projection": "40D (CANDIDATE)"
+   },
+   "footing_type": "F7",
+   "plan_occurrences": 0,
+   "required": false,
+   "rule": "P13-FOOTING-TYP (40D projection, foot >= 30 cm)",
+   "state": "DEFINED_BY_RULE_CANDIDATE"
+  },
+  {
+   "component": "TOP_short",
+   "component_id": "FCOMP-F8-TOP_short",
+   "definition": {
+    "component": "TOP_short",
+    "count": 6,
+    "count_mode": "BARS_PER_METRE",
+    "dia_mm": 14,
+    "layer": "TOP"
+   },
+   "footing_type": "F8",
+   "plan_occurrences": 1,
+   "required": true,
+   "rule": "schedule row",
+   "state": "DEFINED"
+  },
+  {
+   "component": "TOP_long",
+   "component_id": "FCOMP-F8-TOP_long",
+   "definition": {
+    "component": "TOP_long",
+    "count": 6,
+    "count_mode": "BARS_PER_METRE",
+    "dia_mm": 14,
+    "layer": "TOP"
+   },
+   "footing_type": "F8",
+   "plan_occurrences": 1,
+   "required": true,
+   "rule": "schedule row",
+   "state": "DEFINED"
+  },
+  {
+   "component": "BOTTOM_short",
+   "component_id": "FCOMP-F8-BOTTOM_short",
+   "definition": {
+    "component": "BOTTOM_short",
+    "count": 9,
+    "count_mode": "BARS_PER_METRE",
+    "dia_mm": 14,
+    "layer": "BOTTOM"
+   },
+   "footing_type": "F8",
+   "plan_occurrences": 1,
+   "required": true,
+   "rule": "schedule row",
+   "state": "DEFINED"
+  },
+  {
+   "component": "BOTTOM_long",
+   "component_id": "FCOMP-F8-BOTTOM_long",
+   "definition": {
+    "component": "BOTTOM_long",
+    "count": 9,
+    "count_mode": "BARS_PER_METRE",
+    "dia_mm": 14,
+    "layer": "BOTTOM"
+   },
+   "footing_type": "F8",
+   "plan_occurrences": 1,
+   "required": true,
+   "rule": "schedule row",
+   "state": "DEFINED"
+  },
+  {
+   "component": "COLUMN_STARTERS",
+   "component_id": "FCOMP-F8-STARTERS",
+   "definition": {
+    "bars": "= column bars of each supported column (FOUNDATION band)",
+    "foot_min_cm": 30,
+    "projection": "40D (CANDIDATE)"
+   },
+   "footing_type": "F8",
+   "plan_occurrences": 1,
+   "required": true,
+   "rule": "P13-FOOTING-TYP (40D projection, foot >= 30 cm)",
+   "state": "DEFINED_BY_RULE_CANDIDATE"
+  },
+  {
+   "component": "BOTTOM_SHORT",
+   "component_id": "FCOMP-F9-BOTTOM_SHORT",
+   "definition": {
+    "component": "BOTTOM_SHORT",
+    "count": 28,
+    "count_mode": "ABSOLUTE_COUNT",
+    "dia_mm": 14,
+    "layer": "SINGLE"
+   },
+   "footing_type": "F9",
+   "plan_occurrences": 1,
+   "required": true,
+   "rule": "schedule row",
+   "state": "DEFINED"
+  },
+  {
+   "component": "BOTTOM_LONG",
+   "component_id": "FCOMP-F9-BOTTOM_LONG",
+   "definition": {
+    "component": "BOTTOM_LONG",
+    "count": 24,
+    "count_mode": "ABSOLUTE_COUNT",
+    "dia_mm": 14,
+    "layer": "SINGLE"
+   },
+   "footing_type": "F9",
+   "plan_occurrences": 1,
+   "required": true,
+   "rule": "schedule row",
+   "state": "DEFINED"
+  },
+  {
+   "BOXED_RAW": "3+8",
+   "BOXED_REQUIRED": true,
+   "BOXED_SEMANTICS": "BLOCKED",
+   "component": "BOXED",
+   "component_id": "FCOMP-F9-BOXED",
+   "footing_type": "F9",
+   "plan_occurrences": 1,
+   "rule": "P13-FOOTING-TYP",
+   "state": "BLOCKED"
+  },
+  {
+   "component": "COLUMN_STARTERS",
+   "component_id": "FCOMP-F9-STARTERS",
+   "definition": {
+    "bars": "= column bars of each supported column (FOUNDATION band)",
+    "foot_min_cm": 30,
+    "projection": "40D (CANDIDATE)"
+   },
+   "footing_type": "F9",
+   "plan_occurrences": 1,
+   "required": true,
+   "rule": "P13-FOOTING-TYP (40D projection, foot >= 30 cm)",
+   "state": "DEFINED_BY_RULE_CANDIDATE"
+  },
+  {
+   "component": "BOTTOM_SHORT",
+   "component_id": "FCOMP-F10-BOTTOM_SHORT",
+   "definition": {
+    "component": "BOTTOM_SHORT",
+    "count": 20,
+    "count_mode": "ABSOLUTE_COUNT",
+    "dia_mm": 14,
+    "layer": "SINGLE"
+   },
+   "footing_type": "F10",
+   "plan_occurrences": 0,
+   "required": true,
+   "rule": "schedule row",
+   "state": "DEFINED"
+  },
+  {
+   "component": "BOTTOM_LONG",
+   "component_id": "FCOMP-F10-BOTTOM_LONG",
+   "definition": {
+    "component": "BOTTOM_LONG",
+    "count": 10,
+    "count_mode": "ABSOLUTE_COUNT",
+    "dia_mm": 14,
+    "layer": "SINGLE"
+   },
+   "footing_type": "F10",
+   "plan_occurrences": 0,
+   "required": true,
+   "rule": "schedule row",
+   "state": "DEFINED"
+  },
+  {
+   "BOXED_RAW": "3+5",
+   "BOXED_REQUIRED": true,
+   "BOXED_SEMANTICS": "BLOCKED",
+   "component": "BOXED",
+   "component_id": "FCOMP-F10-BOXED",
+   "footing_type": "F10",
+   "plan_occurrences": 0,
+   "rule": "P13-FOOTING-TYP",
+   "state": "BLOCKED"
+  },
+  {
+   "component": "COLUMN_STARTERS",
+   "component_id": "FCOMP-F10-STARTERS",
+   "definition": {
+    "bars": "= column bars of each supported column (FOUNDATION band)",
+    "foot_min_cm": 30,
+    "projection": "40D (CANDIDATE)"
+   },
+   "footing_type": "F10",
+   "plan_occurrences": 0,
+   "required": false,
+   "rule": "P13-FOOTING-TYP (40D projection, foot >= 30 cm)",
+   "state": "DEFINED_BY_RULE_CANDIDATE"
+  },
+  {
+   "component": "BOTTOM_SHORT",
+   "component_id": "FCOMP-F11-BOTTOM_SHORT",
+   "definition": {
+    "component": "BOTTOM_SHORT",
+    "count": 32,
+    "count_mode": "ABSOLUTE_COUNT",
+    "dia_mm": 14,
+    "layer": "SINGLE"
+   },
+   "footing_type": "F11",
+   "plan_occurrences": 1,
+   "required": true,
+   "rule": "schedule row",
+   "state": "DEFINED"
+  },
+  {
+   "component": "BOTTOM_LONG",
+   "component_id": "FCOMP-F11-BOTTOM_LONG",
+   "definition": {
+    "component": "BOTTOM_LONG",
+    "count": 14,
+    "count_mode": "ABSOLUTE_COUNT",
+    "dia_mm": 14,
+    "layer": "SINGLE"
+   },
+   "footing_type": "F11",
+   "plan_occurrences": 1,
+   "required": true,
+   "rule": "schedule row",
+   "state": "DEFINED"
+  },
+  {
+   "BOXED_RAW": "3+8",
+   "BOXED_REQUIRED": true,
+   "BOXED_SEMANTICS": "BLOCKED",
+   "component": "BOXED",
+   "component_id": "FCOMP-F11-BOXED",
+   "footing_type": "F11",
+   "plan_occurrences": 1,
+   "rule": "P13-FOOTING-TYP",
+   "state": "BLOCKED"
+  },
+  {
+   "component": "COLUMN_STARTERS",
+   "component_id": "FCOMP-F11-STARTERS",
+   "definition": {
+    "bars": "= column bars of each supported column (FOUNDATION band)",
+    "foot_min_cm": 30,
+    "projection": "40D (CANDIDATE)"
+   },
+   "footing_type": "F11",
+   "plan_occurrences": 1,
+   "required": true,
+   "rule": "P13-FOOTING-TYP (40D projection, foot >= 30 cm)",
+   "state": "DEFINED_BY_RULE_CANDIDATE"
+  },
+  {
+   "component": "TOP_short",
+   "component_id": "FCOMP-F12-TOP_short",
+   "definition": {
+    "component": "TOP_short",
+    "count": 10,
+    "count_mode": "BARS_PER_METRE",
+    "dia_mm": 14,
+    "layer": "TOP"
+   },
+   "footing_type": "F12",
+   "plan_occurrences": 1,
+   "required": true,
+   "rule": "schedule row",
+   "state": "DEFINED"
+  },
+  {
+   "component": "TOP_long",
+   "component_id": "FCOMP-F12-TOP_long",
+   "definition": {
+    "component": "TOP_long",
+    "count": 10,
+    "count_mode": "BARS_PER_METRE",
+    "dia_mm": 14,
+    "layer": "TOP"
+   },
+   "footing_type": "F12",
+   "plan_occurrences": 1,
+   "required": true,
+   "rule": "schedule row",
+   "state": "DEFINED"
+  },
+  {
+   "component": "BOTTOM_short",
+   "component_id": "FCOMP-F12-BOTTOM_short",
+   "definition": {
+    "component": "BOTTOM_short",
+    "count": 9,
+    "count_mode": "BARS_PER_METRE",
+    "dia_mm": 16,
+    "layer": "BOTTOM"
+   },
+   "footing_type": "F12",
+   "plan_occurrences": 1,
+   "required": true,
+   "rule": "schedule row",
+   "state": "DEFINED"
+  },
+  {
+   "component": "BOTTOM_long",
+   "component_id": "FCOMP-F12-BOTTOM_long",
+   "definition": {
+    "component": "BOTTOM_long",
+    "count": 9,
+    "count_mode": "BARS_PER_METRE",
+    "dia_mm": 16,
+    "layer": "BOTTOM"
+   },
+   "footing_type": "F12",
+   "plan_occurrences": 1,
+   "required": true,
+   "rule": "schedule row",
+   "state": "DEFINED"
+  },
+  {
+   "component": "COLUMN_STARTERS",
+   "component_id": "FCOMP-F12-STARTERS",
+   "definition": {
+    "bars": "= column bars of each supported column (FOUNDATION band)",
+    "foot_min_cm": 30,
+    "projection": "40D (CANDIDATE)"
+   },
+   "footing_type": "F12",
+   "plan_occurrences": 1,
+   "required": true,
+   "rule": "P13-FOOTING-TYP (40D projection, foot >= 30 cm)",
+   "state": "DEFINED_BY_RULE_CANDIDATE"
+  },
+  {
+   "component": "TOP_short",
+   "component_id": "FCOMP-F13-TOP_short",
+   "definition": {
+    "component": "TOP_short",
+    "count": 7,
+    "count_mode": "BARS_PER_METRE",
+    "dia_mm": 14,
+    "layer": "TOP"
+   },
+   "footing_type": "F13",
+   "plan_occurrences": 1,
+   "required": true,
+   "rule": "schedule row",
+   "state": "DEFINED"
+  },
+  {
+   "component": "TOP_long",
+   "component_id": "FCOMP-F13-TOP_long",
+   "definition": {
+    "component": "TOP_long",
+    "count": 7,
+    "count_mode": "BARS_PER_METRE",
+    "dia_mm": 14,
+    "layer": "TOP"
+   },
+   "footing_type": "F13",
+   "plan_occurrences": 1,
+   "required": true,
+   "rule": "schedule row",
+   "state": "DEFINED"
+  },
+  {
+   "component": "BOTTOM_short",
+   "component_id": "FCOMP-F13-BOTTOM_short",
+   "definition": {
+    "component": "BOTTOM_short",
+    "count": 8,
+    "count_mode": "BARS_PER_METRE",
+    "dia_mm": 16,
+    "layer": "BOTTOM"
+   },
+   "footing_type": "F13",
+   "plan_occurrences": 1,
+   "required": true,
+   "rule": "schedule row",
+   "state": "DEFINED"
+  },
+  {
+   "component": "BOTTOM_long",
+   "component_id": "FCOMP-F13-BOTTOM_long",
+   "definition": {
+    "component": "BOTTOM_long",
+    "count": 8,
+    "count_mode": "BARS_PER_METRE",
+    "dia_mm": 16,
+    "layer": "BOTTOM"
+   },
+   "footing_type": "F13",
+   "plan_occurrences": 1,
+   "required": true,
+   "rule": "schedule row",
+   "state": "DEFINED"
+  },
+  {
+   "component": "COLUMN_STARTERS",
+   "component_id": "FCOMP-F13-STARTERS",
+   "definition": {
+    "bars": "= column bars of each supported column (FOUNDATION band)",
+    "foot_min_cm": 30,
+    "projection": "40D (CANDIDATE)"
+   },
+   "footing_type": "F13",
+   "plan_occurrences": 1,
+   "required": true,
+   "rule": "P13-FOOTING-TYP (40D projection, foot >= 30 cm)",
+   "state": "DEFINED_BY_RULE_CANDIDATE"
+  },
+  {
+   "component": "TOP_short",
+   "component_id": "FCOMP-F14-TOP_short",
+   "definition": {
+    "component": "TOP_short",
+    "count": 6,
+    "count_mode": "BARS_PER_METRE",
+    "dia_mm": 14,
+    "layer": "TOP"
+   },
+   "footing_type": "F14",
+   "plan_occurrences": 1,
+   "required": true,
+   "rule": "schedule row",
+   "state": "DEFINED"
+  },
+  {
+   "component": "TOP_long",
+   "component_id": "FCOMP-F14-TOP_long",
+   "definition": {
+    "component": "TOP_long",
+    "count": 6,
+    "count_mode": "BARS_PER_METRE",
+    "dia_mm": 14,
+    "layer": "TOP"
+   },
+   "footing_type": "F14",
+   "plan_occurrences": 1,
+   "required": true,
+   "rule": "schedule row",
+   "state": "DEFINED"
+  },
+  {
+   "component": "BOTTOM_short",
+   "component_id": "FCOMP-F14-BOTTOM_short",
+   "definition": {
+    "component": "BOTTOM_short",
+    "count": 9,
+    "count_mode": "BARS_PER_METRE",
+    "dia_mm": 14,
+    "layer": "BOTTOM"
+   },
+   "footing_type": "F14",
+   "plan_occurrences": 1,
+   "required": true,
+   "rule": "schedule row",
+   "state": "DEFINED"
+  },
+  {
+   "component": "BOTTOM_long",
+   "component_id": "FCOMP-F14-BOTTOM_long",
+   "definition": {
+    "component": "BOTTOM_long",
+    "count": 9,
+    "count_mode": "BARS_PER_METRE",
+    "dia_mm": 14,
+    "layer": "BOTTOM"
+   },
+   "footing_type": "F14",
+   "plan_occurrences": 1,
+   "required": true,
+   "rule": "schedule row",
+   "state": "DEFINED"
+  },
+  {
+   "component": "COLUMN_STARTERS",
+   "component_id": "FCOMP-F14-STARTERS",
+   "definition": {
+    "bars": "= column bars of each supported column (FOUNDATION band)",
+    "foot_min_cm": 30,
+    "projection": "40D (CANDIDATE)"
+   },
+   "footing_type": "F14",
+   "plan_occurrences": 1,
+   "required": true,
+   "rule": "P13-FOOTING-TYP (40D projection, foot >= 30 cm)",
+   "state": "DEFINED_BY_RULE_CANDIDATE"
+  },
+  {
+   "component": "BOTTOM_SHORT",
+   "component_id": "FCOMP-F15-BOTTOM_SHORT",
+   "definition": {
+    "component": "BOTTOM_SHORT",
+    "count": 15,
+    "count_mode": "ABSOLUTE_COUNT",
+    "dia_mm": 12,
+    "layer": "SINGLE"
+   },
+   "footing_type": "F15",
+   "plan_occurrences": 1,
+   "required": true,
+   "rule": "schedule row",
+   "state": "DEFINED"
+  },
+  {
+   "component": "BOTTOM_LONG",
+   "component_id": "FCOMP-F15-BOTTOM_LONG",
+   "definition": {
+    "component": "BOTTOM_LONG",
+    "count": 8,
+    "count_mode": "ABSOLUTE_COUNT",
+    "dia_mm": 12,
+    "layer": "SINGLE"
+   },
+   "footing_type": "F15",
+   "plan_occurrences": 1,
+   "required": true,
+   "rule": "schedule row",
+   "state": "DEFINED"
+  },
+  {
+   "BOXED_RAW": "3+4",
+   "BOXED_REQUIRED": true,
+   "BOXED_SEMANTICS": "BLOCKED",
+   "component": "BOXED",
+   "component_id": "FCOMP-F15-BOXED",
+   "footing_type": "F15",
+   "plan_occurrences": 1,
+   "rule": "P13-FOOTING-TYP",
+   "state": "BLOCKED"
+  },
+  {
+   "component": "COLUMN_STARTERS",
+   "component_id": "FCOMP-F15-STARTERS",
+   "definition": {
+    "bars": "= column bars of each supported column (FOUNDATION band)",
+    "foot_min_cm": 30,
+    "projection": "40D (CANDIDATE)"
+   },
+   "footing_type": "F15",
+   "plan_occurrences": 1,
+   "required": true,
+   "rule": "P13-FOOTING-TYP (40D projection, foot >= 30 cm)",
+   "state": "DEFINED_BY_RULE_CANDIDATE"
+  },
+  {
+   "component": "TOP_short",
+   "component_id": "FCOMP-FF-TOP_short",
+   "definition": {
+    "component": "TOP_short",
+    "count": 6,
+    "count_mode": "BARS_PER_METRE",
+    "dia_mm": 14,
+    "layer": "TOP"
+   },
+   "footing_type": "FF",
+   "plan_occurrences": 1,
+   "required": true,
+   "rule": "schedule row",
+   "state": "DEFINED"
+  },
+  {
+   "component": "TOP_long",
+   "component_id": "FCOMP-FF-TOP_long",
+   "definition": {
+    "component": "TOP_long",
+    "count": 6,
+    "count_mode": "BARS_PER_METRE",
+    "dia_mm": 14,
+    "layer": "TOP"
+   },
+   "footing_type": "FF",
+   "plan_occurrences": 1,
+   "required": true,
+   "rule": "schedule row",
+   "state": "DEFINED"
+  },
+  {
+   "component": "BOTTOM_short",
+   "component_id": "FCOMP-FF-BOTTOM_short",
+   "definition": {
+    "component": "BOTTOM_short",
+    "count": 9,
+    "count_mode": "BARS_PER_METRE",
+    "dia_mm": 14,
+    "layer": "BOTTOM"
+   },
+   "footing_type": "FF",
+   "plan_occurrences": 1,
+   "required": true,
+   "rule": "schedule row",
+   "state": "DEFINED"
+  },
+  {
+   "component": "BOTTOM_long",
+   "component_id": "FCOMP-FF-BOTTOM_long",
+   "definition": {
+    "component": "BOTTOM_long",
+    "count": 9,
+    "count_mode": "BARS_PER_METRE",
+    "dia_mm": 14,
+    "layer": "BOTTOM"
+   },
+   "footing_type": "FF",
+   "plan_occurrences": 1,
+   "required": true,
+   "rule": "schedule row",
+   "state": "DEFINED"
+  },
+  {
+   "component": "COLUMN_STARTERS",
+   "component_id": "FCOMP-FF-STARTERS",
+   "definition": {
+    "bars": "= column bars of each supported column (FOUNDATION band)",
+    "foot_min_cm": 30,
+    "projection": "40D (CANDIDATE)"
+   },
+   "footing_type": "FF",
+   "plan_occurrences": 1,
+   "required": true,
+   "rule": "P13-FOOTING-TYP (40D projection, foot >= 30 cm)",
+   "state": "DEFINED_BY_RULE_CANDIDATE"
+  },
+  {
+   "component": "LIFT_PIT_WALLS",
+   "component_id": "FCOMP-FF-LIFT_PIT_WALLS",
+   "definition": {
+    "bars": [
+     "6Ø12/m",
+     "6Ø16/m"
+    ],
+    "pit_depth": "BLOCKED (manufacturer)",
+    "wall_mm": 200
+   },
+   "footing_type": "FF",
+   "plan_occurrences": 1,
+   "required": true,
+   "rule": "P14-LIFT",
+   "state": "BLOCKED"
+  },
+  {
+   "component": "BOTTOM_SHORT",
+   "component_id": "FCOMP-FN-BOTTOM_SHORT",
+   "definition": {
+    "component": "BOTTOM_SHORT",
+    "count": 8,
+    "count_mode": "ABSOLUTE_COUNT",
+    "dia_mm": 12,
+    "layer": "SINGLE"
+   },
+   "footing_type": "FN",
+   "plan_occurrences": 4,
+   "required": true,
+   "rule": "schedule row",
+   "state": "DEFINED"
+  },
+  {
+   "component": "BOTTOM_LONG",
+   "component_id": "FCOMP-FN-BOTTOM_LONG",
+   "definition": {
+    "component": "BOTTOM_LONG",
+    "count": 8,
+    "count_mode": "ABSOLUTE_COUNT",
+    "dia_mm": 12,
+    "layer": "SINGLE"
+   },
+   "footing_type": "FN",
+   "plan_occurrences": 4,
+   "required": true,
+   "rule": "schedule row",
+   "state": "DEFINED"
+  },
+  {
+   "BOXED_RAW": null,
+   "BOXED_REQUIRED": false,
+   "BOXED_SEMANTICS": "NOT_PRINTED",
+   "component": "BOXED",
+   "component_id": "FCOMP-FN-BOXED",
+   "footing_type": "FN",
+   "plan_occurrences": 4,
+   "rule": "P13-FOOTING-TYP",
+   "state": "NOT_REQUIRED_BY_SOURCE"
+  },
+  {
+   "component": "COLUMN_STARTERS",
+   "component_id": "FCOMP-FN-STARTERS",
+   "definition": {
+    "bars": "= column bars of each supported column (FOUNDATION band)",
+    "foot_min_cm": 30,
+    "projection": "40D (CANDIDATE)"
+   },
+   "footing_type": "FN",
+   "plan_occurrences": 4,
+   "required": true,
+   "rule": "P13-FOOTING-TYP (40D projection, foot >= 30 cm)",
+   "state": "DEFINED_BY_RULE_CANDIDATE"
+  },
+  {
+   "component": "LOWER_GROUND_BEAM",
+   "component_id": "FCOMP-ALL-DEEP_LOWER_GB",
+   "condition": "(upper GB level - footing level) > 2.5 m",
+   "footing_type": "ALL",
+   "founding_level": "BLOCKED",
+   "required": "UNRESOLVED",
+   "rule": "P13-FOOTING-DEEP",
+   "state": "BLOCKED"
+  },
+  {
+   "component": "NECK_COLUMN_CN",
+   "component_id": "FCOMP-CN-NECK",
+   "definition": "see COLUMN_DEFINITION_REGISTER CDEF-CN-FOUNDATION",
+   "footing_type": "CN",
+   "required": true,
+   "rule": "CN schedule row (FOUNDATION band only)",
+   "state": "DEFINED"
+  }
+ ],
+ "source": {
+  "drawing": "ST7757.dxf",
+  "dxf_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+  "pdf": "ST7757.pdf",
+  "pdf_sha256": "74da1523f05eb3c6a4fe3ddebaef2c3d841891f003efc03bc32a3fb4553337e3"
+ },
+ "summary": {
+  "boxed_required_types": [
+   "F",
+   "F2",
+   "F3",
+   "F4",
+   "F5",
+   "F6",
+   "F7",
+   "F9",
+   "F10",
+   "F11",
+   "F15"
+  ],
+  "by_state": {
+   "BLOCKED": 13,
+   "DEFINED": 45,
+   "DEFINED_BY_RULE_CANDIDATE": 17,
+   "NOT_REQUIRED_BY_SOURCE": 1
+  },
+  "components": 76
+ }
+}

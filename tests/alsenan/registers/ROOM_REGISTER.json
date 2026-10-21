@@ -1,0 +1,631 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_ROOM_REGISTER_V1",
+ "rooms": [
+  {
+   "floor": "GF",
+   "occurrence": "376",
+   "label_en": "PANTRY",
+   "label_ar": "UNDECODED_LEGACY_CODEPAGE",
+   "class_candidate": "SERVICE_CANDIDATE",
+   "site": null,
+   "area_m2": null,
+   "status": "BLOCKED",
+   "blocker": "NO_CERTIFIED_ROOM_SITE: TS01 certified 0 room sites on this floor"
+  },
+  {
+   "floor": "GF",
+   "occurrence": "383",
+   "label_en": "SALOON",
+   "label_ar": "UNDECODED_LEGACY_CODEPAGE",
+   "class_candidate": "DRY_OR_UNCLASSIFIED",
+   "site": null,
+   "area_m2": null,
+   "status": "BLOCKED",
+   "blocker": "NO_CERTIFIED_ROOM_SITE: TS01 certified 0 room sites on this floor"
+  },
+  {
+   "floor": "GF",
+   "occurrence": "389",
+   "label_en": "RECEPTION",
+   "label_ar": "UNDECODED_LEGACY_CODEPAGE",
+   "class_candidate": "DRY_OR_UNCLASSIFIED",
+   "site": null,
+   "area_m2": null,
+   "status": "BLOCKED",
+   "blocker": "NO_CERTIFIED_ROOM_SITE: TS01 certified 0 room sites on this floor"
+  },
+  {
+   "floor": "GF",
+   "occurrence": "396",
+   "label_en": "swimming pool",
+   "label_ar": "UNDECODED_LEGACY_CODEPAGE",
+   "class_candidate": "EXTERNAL_WET_CANDIDATE",
+   "site": null,
+   "area_m2": null,
+   "status": "BLOCKED",
+   "blocker": "NO_CERTIFIED_ROOM_SITE: TS01 certified 0 room sites on this floor"
+  },
+  {
+   "floor": "GF",
+   "occurrence": "403",
+   "label_en": "COURT",
+   "label_ar": "UNDECODED_LEGACY_CODEPAGE",
+   "class_candidate": "EXTERNAL_CANDIDATE",
+   "site": null,
+   "area_m2": null,
+   "status": "BLOCKED",
+   "blocker": "NO_CERTIFIED_ROOM_SITE: TS01 certified 0 room sites on this floor"
+  },
+  {
+   "floor": "GF",
+   "occurrence": "431",
+   "label_en": "DEWANEYA",
+   "label_ar": "UNDECODED_LEGACY_CODEPAGE",
+   "class_candidate": "DRY_OR_UNCLASSIFIED",
+   "site": null,
+   "area_m2": null,
+   "status": "BLOCKED",
+   "blocker": "NO_CERTIFIED_ROOM_SITE: TS01 certified 0 room sites on this floor"
+  },
+  {
+   "floor": "GF",
+   "occurrence": "456",
+   "label_en": "W.C",
+   "label_ar": "UNDECODED_LEGACY_CODEPAGE",
+   "class_candidate": "WET_CANDIDATE",
+   "site": null,
+   "area_m2": null,
+   "status": "BLOCKED",
+   "blocker": "NO_CERTIFIED_ROOM_SITE: TS01 certified 0 room sites on this floor"
+  },
+  {
+   "floor": "GF",
+   "occurrence": "496",
+   "label_en": "Wash",
+   "label_ar": "UNDECODED_LEGACY_CODEPAGE",
+   "class_candidate": "WET_CANDIDATE",
+   "site": null,
+   "area_m2": null,
+   "status": "BLOCKED",
+   "blocker": "NO_CERTIFIED_ROOM_SITE: TS01 certified 0 room sites on this floor"
+  },
+  {
+   "floor": "GF",
+   "occurrence": "503",
+   "label_en": "W.C",
+   "label_ar": "UNDECODED_LEGACY_CODEPAGE",
+   "class_candidate": "WET_CANDIDATE",
+   "site": null,
+   "area_m2": null,
+   "status": "BLOCKED",
+   "blocker": "NO_CERTIFIED_ROOM_SITE: TS01 certified 0 room sites on this floor"
+  },
+  {
+   "floor": "GF",
+   "occurrence": "630",
+   "label_en": "KITCHEN",
+   "label_ar": "UNDECODED_LEGACY_CODEPAGE",
+   "class_candidate": "WET_CANDIDATE",
+   "site": null,
+   "area_m2": null,
+   "status": "BLOCKED",
+   "blocker": "NO_CERTIFIED_ROOM_SITE: TS01 certified 0 room sites on this floor"
+  },
+  {
+   "floor": "GF",
+   "occurrence": "673",
+   "label_en": "DINING",
+   "label_ar": "UNDECODED_LEGACY_CODEPAGE",
+   "class_candidate": "DRY_OR_UNCLASSIFIED",
+   "site": null,
+   "area_m2": null,
+   "status": "BLOCKED",
+   "blocker": "NO_CERTIFIED_ROOM_SITE: TS01 certified 0 room sites on this floor"
+  },
+  {
+   "floor": "GF",
+   "occurrence": "709",
+   "label_en": "Wash",
+   "label_ar": "UNDECODED_LEGACY_CODEPAGE",
+   "class_candidate": "WET_CANDIDATE",
+   "site": null,
+   "area_m2": null,
+   "status": "BLOCKED",
+   "blocker": "NO_CERTIFIED_ROOM_SITE: TS01 certified 0 room sites on this floor"
+  },
+  {
+   "floor": "GF",
+   "occurrence": "717",
+   "label_en": "DRIVER",
+   "label_ar": "UNDECODED_LEGACY_CODEPAGE",
+   "class_candidate": "DRY_OR_UNCLASSIFIED",
+   "site": null,
+   "area_m2": null,
+   "status": "BLOCKED",
+   "blocker": "NO_CERTIFIED_ROOM_SITE: TS01 certified 0 room sites on this floor"
+  },
+  {
+   "floor": "GF",
+   "occurrence": "729",
+   "label_en": "COURT",
+   "label_ar": "UNDECODED_LEGACY_CODEPAGE",
+   "class_candidate": "EXTERNAL_CANDIDATE",
+   "site": null,
+   "area_m2": null,
+   "status": "BLOCKED",
+   "blocker": "NO_CERTIFIED_ROOM_SITE: TS01 certified 0 room sites on this floor"
+  },
+  {
+   "floor": "GF",
+   "occurrence": "730",
+   "label_en": "W.C",
+   "label_ar": "UNDECODED_LEGACY_CODEPAGE",
+   "class_candidate": "WET_CANDIDATE",
+   "site": null,
+   "area_m2": null,
+   "status": "BLOCKED",
+   "blocker": "NO_CERTIFIED_ROOM_SITE: TS01 certified 0 room sites on this floor"
+  },
+  {
+   "floor": "GF",
+   "occurrence": "771",
+   "label_en": "MASTER BED ROOM",
+   "label_ar": "UNDECODED_LEGACY_CODEPAGE",
+   "class_candidate": "DRY_OR_UNCLASSIFIED",
+   "site": null,
+   "area_m2": null,
+   "status": "BLOCKED",
+   "blocker": "NO_CERTIFIED_ROOM_SITE: TS01 certified 0 room sites on this floor"
+  },
+  {
+   "floor": "GF",
+   "occurrence": "785",
+   "label_en": "GARDEN",
+   "label_ar": "UNDECODED_LEGACY_CODEPAGE",
+   "class_candidate": "EXTERNAL_CANDIDATE",
+   "site": null,
+   "area_m2": null,
+   "status": "BLOCKED",
+   "blocker": "NO_CERTIFIED_ROOM_SITE: TS01 certified 0 room sites on this floor"
+  },
+  {
+   "floor": "GF",
+   "occurrence": "802",
+   "label_en": "W.C",
+   "label_ar": "UNDECODED_LEGACY_CODEPAGE",
+   "class_candidate": "WET_CANDIDATE",
+   "site": null,
+   "area_m2": null,
+   "status": "BLOCKED",
+   "blocker": "NO_CERTIFIED_ROOM_SITE: TS01 certified 0 room sites on this floor"
+  },
+  {
+   "floor": "GF",
+   "occurrence": "803",
+   "label_en": "W.C",
+   "label_ar": "UNDECODED_LEGACY_CODEPAGE",
+   "class_candidate": "WET_CANDIDATE",
+   "site": null,
+   "area_m2": null,
+   "status": "BLOCKED",
+   "blocker": "NO_CERTIFIED_ROOM_SITE: TS01 certified 0 room sites on this floor"
+  },
+  {
+   "floor": "GF",
+   "occurrence": "E749",
+   "label_en": "BATH",
+   "label_ar": null,
+   "class_candidate": "WET_CANDIDATE",
+   "site": null,
+   "area_m2": null,
+   "status": "BLOCKED",
+   "blocker": "NO_CERTIFIED_ROOM_SITE: TS01 certified 0 room sites on this floor"
+  },
+  {
+   "floor": "1F",
+   "occurrence": "2938",
+   "label_en": "VOID",
+   "label_ar": "UNDECODED_LEGACY_CODEPAGE",
+   "class_candidate": "VOID_CANDIDATE",
+   "site": null,
+   "area_m2": null,
+   "status": "BLOCKED",
+   "blocker": "NO_CERTIFIED_ROOM_SITE: TS01 certified 0 room sites on this floor"
+  },
+  {
+   "floor": "1F",
+   "occurrence": "2945",
+   "label_en": "ROOF",
+   "label_ar": "UNDECODED_LEGACY_CODEPAGE",
+   "class_candidate": "ROOF_CANDIDATE",
+   "site": null,
+   "area_m2": null,
+   "status": "BLOCKED",
+   "blocker": "NO_CERTIFIED_ROOM_SITE: TS01 certified 0 room sites on this floor"
+  },
+  {
+   "floor": "1F",
+   "occurrence": "2951",
+   "label_en": "LIVING AREA",
+   "label_ar": "UNDECODED_LEGACY_CODEPAGE",
+   "class_candidate": "DRY_OR_UNCLASSIFIED",
+   "site": null,
+   "area_m2": null,
+   "status": "BLOCKED",
+   "blocker": "NO_CERTIFIED_ROOM_SITE: TS01 certified 0 room sites on this floor"
+  },
+  {
+   "floor": "1F",
+   "occurrence": "2957",
+   "label_en": "ROOF",
+   "label_ar": "UNDECODED_LEGACY_CODEPAGE",
+   "class_candidate": "ROOF_CANDIDATE",
+   "site": null,
+   "area_m2": null,
+   "status": "BLOCKED",
+   "blocker": "NO_CERTIFIED_ROOM_SITE: TS01 certified 0 room sites on this floor"
+  },
+  {
+   "floor": "1F",
+   "occurrence": "2958",
+   "label_en": "MASTER BED ROOM",
+   "label_ar": "UNDECODED_LEGACY_CODEPAGE",
+   "class_candidate": "DRY_OR_UNCLASSIFIED",
+   "site": null,
+   "area_m2": null,
+   "status": "BLOCKED",
+   "blocker": "NO_CERTIFIED_ROOM_SITE: TS01 certified 0 room sites on this floor"
+  },
+  {
+   "floor": "1F",
+   "occurrence": "3007",
+   "label_en": "VOID",
+   "label_ar": "UNDECODED_LEGACY_CODEPAGE",
+   "class_candidate": "VOID_CANDIDATE",
+   "site": null,
+   "area_m2": null,
+   "status": "BLOCKED",
+   "blocker": "NO_CERTIFIED_ROOM_SITE: TS01 certified 0 room sites on this floor"
+  },
+  {
+   "floor": "1F",
+   "occurrence": "3037",
+   "label_en": "LAUNDRY",
+   "label_ar": "UNDECODED_LEGACY_CODEPAGE",
+   "class_candidate": "WET_CANDIDATE",
+   "site": null,
+   "area_m2": null,
+   "status": "BLOCKED",
+   "blocker": "NO_CERTIFIED_ROOM_SITE: TS01 certified 0 room sites on this floor"
+  },
+  {
+   "floor": "1F",
+   "occurrence": "3072",
+   "label_en": "MASTER BED ROOM",
+   "label_ar": "UNDECODED_LEGACY_CODEPAGE",
+   "class_candidate": "DRY_OR_UNCLASSIFIED",
+   "site": null,
+   "area_m2": null,
+   "status": "BLOCKED",
+   "blocker": "NO_CERTIFIED_ROOM_SITE: TS01 certified 0 room sites on this floor"
+  },
+  {
+   "floor": "1F",
+   "occurrence": "3073",
+   "label_en": "BATH",
+   "label_ar": "UNDECODED_LEGACY_CODEPAGE",
+   "class_candidate": "WET_CANDIDATE",
+   "site": null,
+   "area_m2": null,
+   "status": "BLOCKED",
+   "blocker": "NO_CERTIFIED_ROOM_SITE: TS01 certified 0 room sites on this floor"
+  },
+  {
+   "floor": "1F",
+   "occurrence": "3080",
+   "label_en": "MASTER BED ROOM",
+   "label_ar": "UNDECODED_LEGACY_CODEPAGE",
+   "class_candidate": "DRY_OR_UNCLASSIFIED",
+   "site": null,
+   "area_m2": null,
+   "status": "BLOCKED",
+   "blocker": "NO_CERTIFIED_ROOM_SITE: TS01 certified 0 room sites on this floor"
+  },
+  {
+   "floor": "1F",
+   "occurrence": "3089",
+   "label_en": "BATH",
+   "label_ar": "UNDECODED_LEGACY_CODEPAGE",
+   "class_candidate": "WET_CANDIDATE",
+   "site": null,
+   "area_m2": null,
+   "status": "BLOCKED",
+   "blocker": "NO_CERTIFIED_ROOM_SITE: TS01 certified 0 room sites on this floor"
+  },
+  {
+   "floor": "1F",
+   "occurrence": "3097",
+   "label_en": "W.C",
+   "label_ar": "UNDECODED_LEGACY_CODEPAGE",
+   "class_candidate": "WET_CANDIDATE",
+   "site": null,
+   "area_m2": null,
+   "status": "BLOCKED",
+   "blocker": "NO_CERTIFIED_ROOM_SITE: TS01 certified 0 room sites on this floor"
+  },
+  {
+   "floor": "1F",
+   "occurrence": "3116",
+   "label_en": "BATH",
+   "label_ar": "UNDECODED_LEGACY_CODEPAGE",
+   "class_candidate": "WET_CANDIDATE",
+   "site": null,
+   "area_m2": null,
+   "status": "BLOCKED",
+   "blocker": "NO_CERTIFIED_ROOM_SITE: TS01 certified 0 room sites on this floor"
+  },
+  {
+   "floor": "1F",
+   "occurrence": "3119",
+   "label_en": "BATH",
+   "label_ar": "UNDECODED_LEGACY_CODEPAGE",
+   "class_candidate": "WET_CANDIDATE",
+   "site": null,
+   "area_m2": null,
+   "status": "BLOCKED",
+   "blocker": "NO_CERTIFIED_ROOM_SITE: TS01 certified 0 room sites on this floor"
+  },
+  {
+   "floor": "1F",
+   "occurrence": "3120",
+   "label_en": "MASTER BED ROOM",
+   "label_ar": "UNDECODED_LEGACY_CODEPAGE",
+   "class_candidate": "DRY_OR_UNCLASSIFIED",
+   "site": null,
+   "area_m2": null,
+   "status": "BLOCKED",
+   "blocker": "NO_CERTIFIED_ROOM_SITE: TS01 certified 0 room sites on this floor"
+  },
+  {
+   "floor": "2F",
+   "occurrence": "4778",
+   "label_en": "ROOF",
+   "label_ar": "UNDECODED_LEGACY_CODEPAGE",
+   "class_candidate": "ROOF_CANDIDATE",
+   "site": null,
+   "area_m2": null,
+   "status": "BLOCKED",
+   "blocker": "NO_CERTIFIED_ROOM_SITE: TS01 certified 0 room sites on this floor"
+  },
+  {
+   "floor": "2F",
+   "occurrence": "4790",
+   "label_en": "W.C",
+   "label_ar": "UNDECODED_LEGACY_CODEPAGE",
+   "class_candidate": "WET_CANDIDATE",
+   "site": null,
+   "area_m2": null,
+   "status": "BLOCKED",
+   "blocker": "NO_CERTIFIED_ROOM_SITE: TS01 certified 0 room sites on this floor"
+  },
+  {
+   "floor": "2F",
+   "occurrence": "4796",
+   "label_en": "MAID R.",
+   "label_ar": "UNDECODED_LEGACY_CODEPAGE",
+   "class_candidate": "DRY_OR_UNCLASSIFIED",
+   "site": null,
+   "area_m2": null,
+   "status": "BLOCKED",
+   "blocker": "NO_CERTIFIED_ROOM_SITE: TS01 certified 0 room sites on this floor"
+  },
+  {
+   "floor": "2F",
+   "occurrence": "4803",
+   "label_en": "ROOF",
+   "label_ar": "UNDECODED_LEGACY_CODEPAGE",
+   "class_candidate": "ROOF_CANDIDATE",
+   "site": null,
+   "area_m2": null,
+   "status": "BLOCKED",
+   "blocker": "NO_CERTIFIED_ROOM_SITE: TS01 certified 0 room sites on this floor"
+  }
+ ],
+ "topology_runs": {
+  "GF": {
+   "state": "BUILT",
+   "validation_state": "COMPLETE",
+   "sites": 60,
+   "by_status": {
+    "REVIEW_REQUIRED": 60
+   },
+   "certified_room_sites": 0,
+   "issues": {
+    "NEAR_MISS_BOUNDARY_GAP": 2,
+    "TOPOLOGY_ROLE_UNRESOLVED": 33,
+    "UNKNOWN_OBJECT_IN_SITE": 27,
+    "UNREALISED_ENTITY_LAYER_UNKNOWN": 60
+   },
+   "largest_site": {
+    "area_m2_provisional": 0.138,
+    "labels": 0,
+    "issues": [
+     "TOPOLOGY_ROLE_UNRESOLVED",
+     "UNREALISED_ENTITY_LAYER_UNKNOWN"
+    ]
+   },
+   "labelled_sites": 0,
+   "wall_bands": {},
+   "closures": 0,
+   "passages": 0,
+   "roles": {
+    "ANNOTATION_GRAPHICS": 24,
+    "STRUCTURAL_OBSTACLE": 150,
+    "UNKNOWN_PHYSICAL": 2357
+   },
+   "result_digest": "e2e6fe878ba6bbb056980fdba51c94df77b9b09906814044ec24fb09596d1c74",
+   "unit_basis": 9.99999999999726e-07
+  },
+  "1F": {
+   "state": "BUILT",
+   "validation_state": "COMPLETE",
+   "sites": 40,
+   "by_status": {
+    "REVIEW_REQUIRED": 40
+   },
+   "certified_room_sites": 0,
+   "issues": {
+    "NEAR_MISS_BOUNDARY_GAP": 7,
+    "TOPOLOGY_ROLE_UNRESOLVED": 21,
+    "UNKNOWN_OBJECT_IN_SITE": 19,
+    "UNREALISED_ENTITY_LAYER_UNKNOWN": 40
+   },
+   "largest_site": {
+    "area_m2_provisional": 0.125,
+    "labels": 0,
+    "issues": [
+     "NEAR_MISS_BOUNDARY_GAP",
+     "TOPOLOGY_ROLE_UNRESOLVED",
+     "UNREALISED_ENTITY_LAYER_UNKNOWN"
+    ]
+   },
+   "labelled_sites": 0,
+   "wall_bands": {},
+   "closures": 0,
+   "passages": 0,
+   "roles": {
+    "ANNOTATION_GRAPHICS": 24,
+    "STRUCTURAL_OBSTACLE": 100,
+    "UNKNOWN_PHYSICAL": 1943
+   },
+   "result_digest": "f41ab3fbdd9cd60aec38448832f67d277305eb0e9ece4dbbce7881de40776f1c",
+   "unit_basis": 9.99999999999726e-07
+  },
+  "2F": {
+   "state": "BUILT",
+   "validation_state": "COMPLETE",
+   "sites": 18,
+   "by_status": {
+    "REVIEW_REQUIRED": 18
+   },
+   "certified_room_sites": 0,
+   "issues": {
+    "TOPOLOGY_ROLE_UNRESOLVED": 4,
+    "UNKNOWN_OBJECT_IN_SITE": 14,
+    "UNREALISED_ENTITY_LAYER_UNKNOWN": 18
+   },
+   "largest_site": {
+    "area_m2_provisional": 0.07,
+    "labels": 0,
+    "issues": [
+     "TOPOLOGY_ROLE_UNRESOLVED",
+     "UNREALISED_ENTITY_LAYER_UNKNOWN"
+    ]
+   },
+   "labelled_sites": 0,
+   "wall_bands": {},
+   "closures": 0,
+   "passages": 0,
+   "roles": {
+    "ANNOTATION_GRAPHICS": 24,
+    "STRUCTURAL_OBSTACLE": 85,
+    "UNKNOWN_PHYSICAL": 1492
+   },
+   "result_digest": "e2893555c78ff45380c50cd0629e79f24d6802e977f4a368e10793e2842c556e",
+   "unit_basis": 9.99999999999726e-07
+  }
+ },
+ "diagnostic_hypothesis_run": {
+  "floor": "GF",
+  "hypothesis": [
+   [
+    "1",
+    "TOPOLOGY_BOUNDARY"
+   ],
+   [
+    "S-COL.BON",
+    "STRUCTURAL_OBSTACLE"
+   ],
+   [
+    "D",
+    "OPENING_SYMBOL"
+   ],
+   [
+    "TOI",
+    "SANITARY_FIXTURE"
+   ]
+  ],
+  "result": {
+   "state": "BUILT",
+   "validation_state": "COMPLETE",
+   "sites": 125,
+   "by_status": {
+    "REVIEW_REQUIRED": 125
+   },
+   "certified_room_sites": 0,
+   "issues": {
+    "MULTIPLE_SEMANTIC_LABELS": 1,
+    "NEAR_MISS_BOUNDARY_GAP": 6,
+    "ROLE_CONFLICT_SEPARATOR": 2,
+    "TEXT_ROLE_UNRESOLVED_IN_SITE": 1,
+    "TOLERANCE_SENSITIVE": 4,
+    "TOPOLOGY_ROLE_UNRESOLVED": 14,
+    "UNKNOWN_OBJECT_IN_SITE": 13,
+    "UNREALISED_ENTITY_LAYER_UNKNOWN": 125,
+    "ZERO_WIDTH_SLIVER": 2
+   },
+   "largest_site": {
+    "area_m2_provisional": 1088.949,
+    "labels": 15,
+    "issues": [
+     "MULTIPLE_SEMANTIC_LABELS",
+     "NEAR_MISS_BOUNDARY_GAP",
+     "TEXT_ROLE_UNRESOLVED_IN_SITE",
+     "TOPOLOGY_ROLE_UNRESOLVED",
+     "UNREALISED_ENTITY_LAYER_UNKNOWN"
+    ]
+   },
+   "labelled_sites": 1,
+   "wall_bands": {
+    "WALL_BAND_AMBIGUOUS": 9
+   },
+   "closures": 0,
+   "passages": 0,
+   "roles": {
+    "ANNOTATION_GRAPHICS": 24,
+    "OPENING_SYMBOL": 232,
+    "SANITARY_FIXTURE": 215,
+    "STRUCTURAL_OBSTACLE": 150,
+    "TOPOLOGY_BOUNDARY": 233,
+    "UNKNOWN_PHYSICAL": 1677
+   },
+   "result_digest": "29f96cca36bfee33edf3a3879361f4a6d5aeb12a35eed98204992230135eebfe",
+   "unit_basis": 9.99999999999726e-07
+  },
+  "status": "DIAGNOSTIC_ONLY - no quantity, no BOQ value",
+  "why_shown": "the layer roles are NOT established; this run shows that even the obvious hypothesis (layer 1 = wall faces) does not close the rooms"
+ },
+ "layer_census": {
+  "1": 1398,
+  "2": 253,
+  "4": 7,
+  "5": 4440,
+  "CC": 6,
+  "D": 487,
+  "LEVEL": 145,
+  "S-COL.BON": 335,
+  "ST": 32,
+  "TEXT": 120,
+  "TOI": 215,
+  "W": 2446
+ },
+ "fixture_blocks": {
+  "GF": {
+   "WASH2": 215
+  },
+  "1F": {},
+  "2F": {}
+ },
+ "state": "NO_ROOM_CERTIFIED",
+ "why": "G-01 / G-03 (see QA_RECONCILIATION.weaknesses)"
+}

@@ -1,0 +1,74 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_BLOCKWORK_V1",
+ "wall_bands": {
+  "GF": {},
+  "1F": {},
+  "2F": {}
+ },
+ "rows": [
+  {
+   "item": "A-BLK-01-GF",
+   "discipline": "ARCHITECTURAL",
+   "trade": "BLOCKWORK",
+   "floor": "GF",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "طابوق (حسب السماكة)",
+   "en": "Blockwork by wall-band thickness",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S05 (GROUND FLOOR PLAN 1:100)",
+   "rule": "wall bands by thickness (never 'paired lines = wall')",
+   "blockers": [
+    "ROOM_TOPOLOGY_NOT_CERTIFIED: TS01 built 60 sites on GF, 0 certified (largest 0.138 m2; UNREALISED_ENTITY_LAYER_UNKNOWN x60, TOPOLOGY_ROLE_UNRESOLVED x33, UNKNOWN_OBJECT_IN_SITE x27)",
+    "LAYER_ROLE_AUTHORITY_MISSING: numeric / single-letter layers carry no role (layer 1 = walls AND sheet frames; W = plot boundary) - OQ-A1",
+    "WALL_BAND_THICKNESS_NOT_ESTABLISHED: 0 bands, 0 ESTABLISHED",
+    "HEIGHT_NOT_ESTABLISHED: sections exist only as raster (PDF 07-12 pp. 4-5); vector elevations give finished-floor marks only; no slab / finish build-up; 3.15 / 3.20 never reused - OQ-S1",
+    "OPENING_ROLE_NOT_ADMITTED: 13 door-signature candidates on GF (block arcs on layer D; no DOOR role, no reviewed claim); no door / window schedule - OQ-A2"
+   ]
+  },
+  {
+   "item": "A-BLK-01-1F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "BLOCKWORK",
+   "floor": "1F",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "طابوق (حسب السماكة)",
+   "en": "Blockwork by wall-band thickness",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S04 (1st.FLOOR PLAN 1:100)",
+   "rule": "wall bands by thickness (never 'paired lines = wall')",
+   "blockers": [
+    "ROOM_TOPOLOGY_NOT_CERTIFIED: TS01 built 40 sites on 1F, 0 certified (largest 0.125 m2; UNREALISED_ENTITY_LAYER_UNKNOWN x40, TOPOLOGY_ROLE_UNRESOLVED x21, UNKNOWN_OBJECT_IN_SITE x19)",
+    "LAYER_ROLE_AUTHORITY_MISSING: numeric / single-letter layers carry no role (layer 1 = walls AND sheet frames; W = plot boundary) - OQ-A1",
+    "WALL_BAND_THICKNESS_NOT_ESTABLISHED: 0 bands, 0 ESTABLISHED",
+    "HEIGHT_NOT_ESTABLISHED: sections exist only as raster (PDF 07-12 pp. 4-5); vector elevations give finished-floor marks only; no slab / finish build-up; 3.15 / 3.20 never reused - OQ-S1",
+    "OPENING_ROLE_NOT_ADMITTED: 10 door-signature candidates on 1F (block arcs on layer D; no DOOR role, no reviewed claim); no door / window schedule - OQ-A2"
+   ]
+  },
+  {
+   "item": "A-BLK-01-2F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "BLOCKWORK",
+   "floor": "2F",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "طابوق (حسب السماكة)",
+   "en": "Blockwork by wall-band thickness",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S03 (2nd.FLOOR PLAN 1:100)",
+   "rule": "wall bands by thickness (never 'paired lines = wall')",
+   "blockers": [
+    "ROOM_TOPOLOGY_NOT_CERTIFIED: TS01 built 18 sites on 2F, 0 certified (largest 0.07 m2; UNREALISED_ENTITY_LAYER_UNKNOWN x18, UNKNOWN_OBJECT_IN_SITE x14, TOPOLOGY_ROLE_UNRESOLVED x4)",
+    "LAYER_ROLE_AUTHORITY_MISSING: numeric / single-letter layers carry no role (layer 1 = walls AND sheet frames; W = plot boundary) - OQ-A1",
+    "WALL_BAND_THICKNESS_NOT_ESTABLISHED: 0 bands, 0 ESTABLISHED",
+    "HEIGHT_NOT_ESTABLISHED: sections exist only as raster (PDF 07-12 pp. 4-5); vector elevations give finished-floor marks only; no slab / finish build-up; 3.15 / 3.20 never reused - OQ-S1",
+    "OPENING_ROLE_NOT_ADMITTED: 3 door-signature candidates on 2F (block arcs on layer D; no DOOR role, no reviewed claim); no door / window schedule - OQ-A2"
+   ]
+  }
+ ],
+ "rule": "blockwork from wall bands by thickness; 'paired lines = wall' is not a rule"
+}

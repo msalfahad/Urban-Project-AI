@@ -1,0 +1,159 @@
+{
+ "profile": "ST7757_M3",
+ "confirmed_by": "values typed from the printed drawings (the person-confirmed project profile of the generic route); M3 adds two printed foundation values transcribed from the drawing set (the PDF general notes have no text layer, so they are typed here, not read by the engine)",
+ "drawing_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+ "manual_inputs": 11,
+ "conventions": [
+  {
+   "id": "STOREY_HEIGHT_GF",
+   "title": "Storey height GF (floor to floor)",
+   "kind": "number",
+   "unit": "m",
+   "base": 4.5,
+   "low": 4.5,
+   "high": 4.5,
+   "provenance": "PRINTED_VALUE",
+   "source": "P7757 architectural section VE-AA-09 (printed floor-to-floor)",
+   "rationale": "Typed from the printed section."
+  },
+  {
+   "id": "STOREY_HEIGHT_1F",
+   "title": "Storey height 1F (floor to floor)",
+   "kind": "number",
+   "unit": "m",
+   "base": 4.2,
+   "low": 4.2,
+   "high": 4.2,
+   "provenance": "PRINTED_VALUE",
+   "source": "P7757 architectural section VE-AA-09 (printed floor-to-floor)",
+   "rationale": "Typed from the printed section."
+  },
+  {
+   "id": "STOREY_HEIGHT_2F",
+   "title": "Storey height 2F (floor to floor)",
+   "kind": "number",
+   "unit": "m",
+   "base": 4.2,
+   "low": 4.2,
+   "high": 4.2,
+   "provenance": "PRINTED_VALUE",
+   "source": "P7757 architectural section VE-AA-09 (printed floor-to-floor)",
+   "rationale": "Typed from the printed section."
+  },
+  {
+   "id": "GB_TYPICAL_SECTIONS",
+   "title": "Typical ground-beam sections by span (ST7757 p.13 titles)",
+   "kind": "choice",
+   "options": [
+    "P13_EXCLUSIVE_BANDS"
+   ],
+   "base": "P13_EXCLUSIVE_BANDS",
+   "classes": [
+    {
+     "max_span_m": 2.5,
+     "W": 0.3,
+     "H": 0.3
+    },
+    {
+     "max_span_m": 5.0,
+     "W": 0.3,
+     "H": 0.4
+    },
+    {
+     "max_span_m": null,
+     "W": 0.3,
+     "H": 0.6
+    }
+   ],
+   "provenance": "READING_OF_PRINTED_VALUE",
+   "source": "ST7757.pdf p.13 typical ground-beam titles '< 2.5 m (30x30)', '< 5 m (30x40)', '> 5 m (30x60)' (vector glyphs; typed)",
+   "rationale": "Read as exclusive span bands; exterior beams 'FOLLOW ARCH.' are not separated by the generic route (a known limit)."
+  },
+  {
+   "id": "FOUNDING_DEPTH_M",
+   "title": "Founding level below plot level (footing underside)",
+   "kind": "number",
+   "unit": "m",
+   "base": 1.5,
+   "low": 1.5,
+   "high": 2.0,
+   "provenance": "PRINTED_MINIMUM",
+   "source": "ST7757 general note (PDF, transcribed): excavation not less than 1.50 m below plot level",
+   "rationale": "The printed minimum is the base and the low end; 2.00 m is a planning upper bound, not printed (RFI)."
+  },
+  {
+   "id": "NECK_TOP_LEVEL_M",
+   "title": "Top of the foundation necks (GF level above plot level)",
+   "kind": "number",
+   "unit": "m",
+   "base": 1.0,
+   "low": 1.0,
+   "high": 1.0,
+   "provenance": "PRINTED_VALUE",
+   "source": "GF level +1.00 printed on the architectural section P7757 VE-AA-09 (the lift stops GF +1.00, 1F +5.50)",
+   "rationale": "The neck runs from its footing top to the GF level, where the GF column starts (its height is GF +1.00 to 1F +5.50 = 4.50)."
+  },
+  {
+   "id": "GF_FLOOR_LEVEL_M",
+   "title": "Ground-floor level above plot level",
+   "kind": "number",
+   "unit": "m",
+   "base": 1.0,
+   "low": 1.0,
+   "high": 1.0,
+   "provenance": "PRINTED_VALUE",
+   "source": "GF level +1.00 printed on the architectural section P7757 VE-AA-09 and on the ground-beam plan (+1.00)",
+   "rationale": "The top of the exterior ground-beam detail is the ground-floor slab level."
+  },
+  {
+   "id": "OUTER_GROUND_LEVEL_M",
+   "title": "Outer ground level beside the building",
+   "kind": "number",
+   "unit": "m",
+   "base": 0.0,
+   "low": 0.0,
+   "high": 0.15,
+   "provenance": "PRINTED_VALUE",
+   "source": "levels printed outside the building on the ground-beam plan (SH08): +-0.00 and +0.15",
+   "rationale": "The exterior detail runs down to the outer normal ground level; the plan prints +-0.00 and +0.15 outside the building, which set the range."
+  },
+  {
+   "id": "GB_EXTERIOR_DETAIL",
+   "title": "Printed exterior ground-beam detail",
+   "kind": "choice",
+   "options": [
+    "P13_EXTERIOR_WALLS"
+   ],
+   "base": "P13_EXTERIOR_WALLS",
+   "W": 0.3,
+   "provenance": "READING_OF_PRINTED_VALUE",
+   "source": "ST7757 PDF p.13 'Ground Beams. for exterior walls' (labels 'Ground Floor slab level' and 'Outer Normal ground level'); bars from the detail-evidence document",
+   "rationale": "The exterior detail spans from the ground-floor slab level to the outer ground level; width as the typical sections (30 cm)."
+  },
+  {
+   "id": "BLINDING_THICKNESS_M",
+   "title": "Blinding (plain concrete) thickness",
+   "kind": "number",
+   "unit": "m",
+   "base": 0.1,
+   "low": 0.1,
+   "high": 0.1,
+   "provenance": "READING_OF_PRINTED_VALUE",
+   "source": "ST7757 PDF p.13 typical isolated-footing detail and ground-beam details: '10cm Plain con.' - read by OCR (notes P13N01, P13N02 in evidence/DETAIL_EVIDENCE.json), not glyph-checked and not reviewed; the frozen M1 replay held footing blinding UNRESOLVED for want of this value",
+   "rationale": "Both typical details print a 10 cm plain-concrete layer; to be confirmed by a person (RFI M3-RFI-06)."
+  },
+  {
+   "id": "BLINDING_UNDER",
+   "title": "Members that sit on blinding",
+   "kind": "choice",
+   "options": [
+    "FOOTINGS_ONLY",
+    "FOOTINGS_AND_GROUND_BEAMS"
+   ],
+   "base": "FOOTINGS_AND_GROUND_BEAMS",
+   "provenance": "READING_OF_PRINTED_VALUE",
+   "source": "ST7757 PDF p.13: the plain-concrete layer is drawn in the footing detail and in the ground-beam details",
+   "rationale": "Both typical details show the layer."
+  }
+ ]
+}

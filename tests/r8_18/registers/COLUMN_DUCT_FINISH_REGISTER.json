@@ -1,0 +1,121 @@
+{
+ "SCHEMA": "URBAN_R8_18_COLUMN_DUCT_FINISH_REGISTER_V1",
+ "method": {
+  "column_faces": {
+   "PLASTER": "UNRESOLVED",
+   "PAINT": "UNRESOLVED",
+   "WALL_TILE": "UNRESOLVED",
+   "WET_WALL_TILE_PREP": "UNRESOLVED"
+  },
+  "obstacle_faces": {
+   "PLASTER": "UNRESOLVED",
+   "PAINT": "UNRESOLVED",
+   "WALL_TILE": "UNRESOLVED",
+   "WET_WALL_TILE_PREP": "UNRESOLVED"
+  },
+  "why": {
+   "COLUMN_FACE": "no plaster / paint / tile rule for column faces: R-13 is the blockwork SHEET's full-deduction column (R8.17 misread it); owner_rules section E is skirting only",
+   "OBSTACLE_FACE": "the duct exists (owner fact) but no finish is stated for its faces; skirting eligibility is not a finish"
+  }
+ },
+ "columns": [
+  {
+   "site": "SITE-5f1762f1a93b91ca",
+   "zones": [
+    "BED.ROOM"
+   ],
+   "class": "COLUMN_FACE",
+   "area_m2": 2.52,
+   "why": "no plaster / paint / tile rule for column faces: R-13 is the blockwork SHEET's full-deduction column (R8.17 misread it); owner_rules section E is skirting only"
+  },
+  {
+   "site": "SITE-77a2130eb275604c",
+   "zones": [
+    "HALL",
+    "whgm"
+   ],
+   "class": "COLUMN_FACE",
+   "area_m2": 2.0475,
+   "why": "no plaster / paint / tile rule for column faces: R-13 is the blockwork SHEET's full-deduction column (R8.17 misread it); owner_rules section E is skirting only"
+  },
+  {
+   "site": "SITE-a6405850100155ac",
+   "zones": [
+    "DRESS",
+    "M.B.ROOM"
+   ],
+   "class": "COLUMN_FACE",
+   "area_m2": 3.78,
+   "why": "no plaster / paint / tile rule for column faces: R-13 is the blockwork SHEET's full-deduction column (R8.17 misread it); owner_rules section E is skirting only"
+  },
+  {
+   "site": "SITE-daca396d6d730e60",
+   "zones": [
+    "BED.ROOM"
+   ],
+   "class": "COLUMN_FACE",
+   "area_m2": 2.52,
+   "why": "no plaster / paint / tile rule for column faces: R-13 is the blockwork SHEET's full-deduction column (R8.17 misread it); owner_rules section E is skirting only"
+  },
+  {
+   "site": "SITE-1c4abf65f9b5db1e",
+   "zones": [
+    "BATH"
+   ],
+   "class": "COLUMN_FACE",
+   "area_m2": 2.08,
+   "why": "no plaster / paint / tile rule for column faces: R-13 is the blockwork SHEET's full-deduction column (R8.17 misread it); owner_rules section E is skirting only"
+  },
+  {
+   "site": "SITE-8c1c7563d5252c50",
+   "zones": [
+    "PAINTRY"
+   ],
+   "class": "COLUMN_FACE",
+   "area_m2": 4.48,
+   "why": "no plaster / paint / tile rule for column faces: R-13 is the blockwork SHEET's full-deduction column (R8.17 misread it); owner_rules section E is skirting only"
+  },
+  {
+   "site": "SITE-a2b19efc492a6d0b",
+   "zones": [
+    "BATH"
+   ],
+   "class": "COLUMN_FACE",
+   "area_m2": 4.48,
+   "why": "no plaster / paint / tile rule for column faces: R-13 is the blockwork SHEET's full-deduction column (R8.17 misread it); owner_rules section E is skirting only"
+  },
+  {
+   "site": "SITE-fe8ed5548fb4310e",
+   "zones": [
+    "BATH"
+   ],
+   "class": "COLUMN_FACE",
+   "area_m2": 3.84,
+   "why": "no plaster / paint / tile rule for column faces: R-13 is the blockwork SHEET's full-deduction column (R8.17 misread it); owner_rules section E is skirting only"
+  }
+ ],
+ "duct_faces": [
+  {
+   "site": "SITE-5f1762f1a93b91ca",
+   "zones": [
+    "BED.ROOM"
+   ],
+   "class": "OBSTACLE_FACE",
+   "area_m2": 15.75,
+   "why": "the duct exists (owner fact) but no finish is stated for its faces; skirting eligibility is not a finish"
+  }
+ ],
+ "column_area_m2": {
+  "dry": 10.8675,
+  "wet_service": 14.88
+ },
+ "duct_area_m2": 15.75,
+ "r8_17_misreading": {
+  "disclosed": true,
+  "what": "column / duct finish: R-13 ('the owner chose the full column') is about the full vs half deduction COLUMN of the historical blockwork SHEET - not structural columns. R8.17 cited it as column-face finish authority: a misreading (no value was published on it). The only column rule is owner_rules section E (skirting: 'a column is not an opening'). No rule states plaster / paint / tile on column faces or on the duct",
+  "effect": "no R8.17 value was published on it (PLASTER / PAINT were BLOCKED; WALL_TILE unpublished); corrected here: column faces UNRESOLVED in every trade"
+ },
+ "owner_question": "QORTUBA_NEW_COLUMN_FACE_FINISH",
+ "duct_note": "the duct is on the owner's do-not-ask list for R8.18 and no finish for its faces is stated in any rule or fact: reported UNRESOLVED, not asked again",
+ "rule": "never excluded silently, never finished by assumption: listed, with areas, as UNRESOLVED contributors"
+}

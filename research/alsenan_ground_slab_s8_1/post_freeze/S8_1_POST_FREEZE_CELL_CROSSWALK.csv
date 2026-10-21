@@ -1,0 +1,48 @@
+S8_1_ROW_ID,S8_1_ROW_KIND,S8_1_STATE,S8_1_ZONE_ID,S8_1_AREA_M2,S8_1_CONCRETE_M3,S8_1_KG,OLD_URBAN_CELLS,OLD_URBAN_AREA_M2,OLD_URBAN_PART,OLD_URBAN_ZONE,CHRISTIANNP_FACES,CHRISTIANNP_SLAB_M2,CLASS_IF_A_REFERENCE_QUANTIFIES_IT,NOTE
+SP-GBP-01,SHEET_RECORD_OUTSIDE_POPULATION,NOT_A_GROUND_SLAB_CELL (outside the building / court; not in the PRE-S8 census),,160.243677104,,,[],,[],[],[],,,NOT_A_GROUND_SLAB_CELL (outside the building / court; not in the PRE-S8 census)
+SP-GBP-02,FACE,BLOCKED_NO_SOURCE_THICKNESS_OR_MESH,,10.90622631,,,"[""FP1-C106807_47795:X""]",10.7626,"[""EXTENSION""]",[],"[""F014""]",10.8999,ZONE_EXTENT_SCOPE,"no marker in this cell: S8.1 holds it BLOCKED (unknown, not zero)"
+SP-GBP-03,FACE,BLOCKED_NO_SOURCE_THICKNESS_OR_MESH,,1.704030661,,,"[""FP1-C101862_49002:X""]",1.6567,"[""EXTENSION""]",[],"[""F110""]",1.704,ZONE_EXTENT_SCOPE,"no marker in this cell: S8.1 holds it BLOCKED (unknown, not zero)"
+SP-GBP-04,FACE,BLOCKED_NO_SOURCE_THICKNESS_OR_MESH,,2.0625,,,"[""FP1-C99443_48723:X""]",2.0567,"[""EXTENSION""]",[],"[""F028""]",2.0625,ZONE_EXTENT_SCOPE,"no marker in this cell: S8.1 holds it BLOCKED (unknown, not zero)"
+SP-GBP-05,FACE,BLOCKED_NO_SOURCE_THICKNESS_OR_MESH,,3.834377142,,,"[""FP1-C102989_48417:X"", ""FP1-C104062_48671:X""]",3.5891,"[""EXTENSION""]",[],"[""F022""]",3.6038,ZONE_EXTENT_SCOPE,"no marker in this cell: S8.1 holds it BLOCKED (unknown, not zero)"
+SP-GBP-06,FACE,BLOCKED_NO_SOURCE_THICKNESS_OR_MESH,,3.255,,,"[""FP1-C103968_46573:X""]",3.2477,"[""EXTENSION""]",[],"[""F124""]",3.255,ZONE_EXTENT_SCOPE,"no marker in this cell: S8.1 holds it BLOCKED (unknown, not zero)"
+SP-GBP-07,FACE,BLOCKED_NO_SOURCE_THICKNESS_OR_MESH,,2.050377575,,,"[""FP1-C108563_44764:X""]",2.0466,"[""EXTENSION""]",[],"[""F007""]",2.0718,ZONE_EXTENT_SCOPE,"no marker in this cell: S8.1 holds it BLOCKED (unknown, not zero)"
+SP-GBP-08,FACE,MEASURED_ONCE_IN_ZONE,GS-ZONE-1690,14.893125,1.4893125,91.93287037,"[""FP1-C105243_43724:R""]",14.7729,"[""RELEASED_ZONE_PART""]","[""ZONE-1 (V3a)""]","[""F005""]",14.8931,MARKER_CELL_GEOMETRY,marker cell: equal scope
+SP-GBP-09,FACE,BLOCKED_NO_SOURCE_THICKNESS_OR_MESH,,4.18,,,"[""FP1-C95274_43121:R""]",4.1082,"[""RELEASED_ZONE_PART""]","[""ZONE-1 (V3a)""]","[""F019""]",4.18,ZONE_EXTENT_SCOPE,"no marker in this cell: S8.1 holds it BLOCKED (unknown, not zero)"
+SP-GBP-10,FACE,BLOCKED_NO_SOURCE_THICKNESS_OR_MESH,,2.6825,,,"[""FP2-C85947_40016:R""]",2.6562,"[""RELEASED_ZONE_PART""]","[""ZONE-2 (V3b)""]","[""F017""]",2.6825,ZONE_EXTENT_SCOPE,"no marker in this cell: S8.1 holds it BLOCKED (unknown, not zero)"
+SP-GBP-11,FACE,BLOCKED_NO_SOURCE_THICKNESS_OR_MESH,,14.893125,,,"[""FP1-C105255_39922:R""]",14.7709,"[""RELEASED_ZONE_PART""]","[""ZONE-1 (V3a)""]","[""F077""]",14.7204,ZONE_EXTENT_SCOPE,"no marker in this cell: S8.1 holds it BLOCKED (unknown, not zero)"
+SP-GBP-12,SHEET_RECORD_OUTSIDE_POPULATION,"OTHER_OWNER (S8 STAIR, parent SPC-STAIR-SP-GBP-12)",,8.37232788,,,"[""FP1-C101329_39533:R""]",8.3401,"[""RELEASED_ZONE_PART""]","[""ZONE-1 (V3a)""]","[""F130""]",8.3723,OTHER_OWNER_CELL,"OTHER_OWNER (S8 STAIR, parent SPC-STAIR-SP-GBP-12)"
+SP-GBP-13,FACE,BLOCKED_NO_SOURCE_THICKNESS_OR_MESH,,24.505,,,"[""FP1-C109773_41038:X""]",24.3953,"[""EXTENSION""]",[],"[""F100""]",24.505,ZONE_EXTENT_SCOPE,"no marker in this cell: S8.1 holds it BLOCKED (unknown, not zero)"
+SP-GBP-14,FACE,MEASURED_ONCE_IN_ZONE,GS-ZONE-169D,22.965398163,2.296539816,141.761717058,"[""FP2-C83002_39670:R""]",22.9301,"[""RELEASED_ZONE_PART""]","[""ZONE-2 (V3b)""]","[""F043""]",22.965,MARKER_CELL_GEOMETRY,marker cell: equal scope
+SP-GBP-15,FACE,BLOCKED_NO_SOURCE_THICKNESS_OR_MESH,,6.88,,,"[""FP2-C87768_38799:R""]",6.8658,"[""RELEASED_ZONE_PART""]","[""ZONE-2 (V3b)""]","[""F099""]",6.88,ZONE_EXTENT_SCOPE,"no marker in this cell: S8.1 holds it BLOCKED (unknown, not zero)"
+SP-GBP-16,FACE,BLOCKED_NO_SOURCE_THICKNESS_OR_MESH,,11.61,,,"[""FP1-C94480_38779:X""]",11.4665,"[""EXTENSION""]",[],"[""F002""]",11.61,ZONE_EXTENT_SCOPE,"no marker in this cell: S8.1 holds it BLOCKED (unknown, not zero)"
+SP-GBP-17,FACE,BLOCKED_NO_SOURCE_THICKNESS_OR_MESH,,14.5257996,,,"[""FP1-C97826_38800:R""]",14.3908,"[""RELEASED_ZONE_PART""]","[""ZONE-1 (V3a)""]","[""F055""]",14.5258,ZONE_EXTENT_SCOPE,"no marker in this cell: S8.1 holds it BLOCKED (unknown, not zero)"
+SP-GBP-18,FACE,BLOCKED_NO_SOURCE_THICKNESS_OR_MESH,,6.86,,,"[""FP2-C90093_39548:R""]",6.8495,"[""RELEASED_ZONE_PART""]","[""ZONE-2 (V3b)""]","[""F047""]",6.86,ZONE_EXTENT_SCOPE,"no marker in this cell: S8.1 holds it BLOCKED (unknown, not zero)"
+SP-GBP-19,FACE,BLOCKED_NO_SOURCE_THICKNESS_OR_MESH,,3.1175,,,"[""FP2-C85943_37723:R""]",3.1103,"[""RELEASED_ZONE_PART""]","[""ZONE-2 (V3b)""]","[""F070""]",3.1175,ZONE_EXTENT_SCOPE,"no marker in this cell: S8.1 holds it BLOCKED (unknown, not zero)"
+SP-GBP-20,FACE,BLOCKED_NO_SOURCE_THICKNESS_OR_MESH,,1.44,,,"[""FP2-C89468_37248:R""]",1.4352,"[""RELEASED_ZONE_PART""]","[""ZONE-2 (V3b)""]","[""F113""]",1.44,ZONE_EXTENT_SCOPE,"no marker in this cell: S8.1 holds it BLOCKED (unknown, not zero)"
+SP-GBP-21,FACE,BLOCKED_NO_SOURCE_THICKNESS_OR_MESH,,1.14,,,"[""FP2-C90843_37248:R""]",1.1357,"[""RELEASED_ZONE_PART""]","[""ZONE-2 (V3b)""]","[""F090""]",1.14,ZONE_EXTENT_SCOPE,"no marker in this cell: S8.1 holds it BLOCKED (unknown, not zero)"
+SP-GBP-22,FACE,BLOCKED_NO_SOURCE_THICKNESS_OR_MESH,,8.124,,,"[""FP1-C103193_37244:R""]",7.9815,"[""RELEASED_ZONE_PART""]","[""ZONE-1 (V3a)""]","[""F037""]",8.124,ZONE_EXTENT_SCOPE,"no marker in this cell: S8.1 holds it BLOCKED (unknown, not zero)"
+SP-GBP-23,FACE,BLOCKED_NO_SOURCE_THICKNESS_OR_MESH,,6.0001482,,,"[""FP1-C109378_37253:R""]",5.9279,"[""RELEASED_ZONE_PART""]","[""ZONE-1 (V3a)""]","[""F114""]",6,ZONE_EXTENT_SCOPE,"no marker in this cell: S8.1 holds it BLOCKED (unknown, not zero)"
+,NO_S8_1_RECORD,,,,,,"[""FP1-C99368_44772:X""]",42.5596,"[""EXTENSION""]",,,,POPULATION_GAP,lift-pit core cell (contains S-BW 7BE; old Urban counted the pit as slab)
+,NO_S8_1_RECORD,,,,,,"[""FP1-C100461_49470:X""]",0.0313,"[""EXTENSION""]",,,,POPULATION_GAP,sliver / beam-band remnant
+,NO_S8_1_RECORD,,,,,,"[""FP1-C100769_46437:X""]",0.024,"[""EXTENSION""]",,,,POPULATION_GAP,sliver / beam-band remnant
+,NO_S8_1_RECORD,,,,,,"[""FP1-C102547_48392:X""]",0.0443,"[""EXTENSION""]",,,,POPULATION_GAP,sliver / beam-band remnant
+,NO_S8_1_RECORD,,,,,,"[""FP1-C103104_47834:X""]",0.1537,"[""EXTENSION""]",,,,POPULATION_GAP,sliver / beam-band remnant
+,NO_S8_1_RECORD,,,,,,"[""FP1-C108346_45596:X""]",0.0312,"[""EXTENSION""]",,,,POPULATION_GAP,sliver / beam-band remnant
+,NO_S8_1_RECORD,,,,,,"[""FP1-C110037_49765:X""]",0.0487,"[""EXTENSION""]",,,,POPULATION_GAP,sliver / beam-band remnant
+,NO_S8_1_RECORD,,,,,,"[""FP1-C111387_44098:X""]",0.2977,"[""EXTENSION""]",,,,POPULATION_GAP,sliver / beam-band remnant
+,NO_S8_1_RECORD,,,,,,,,,,"[""F003""]",0.0867,POPULATION_GAP,christiannp BEAM_INTERIOR face
+,NO_S8_1_RECORD,,,,,,,,,,"[""F010""]",0.0366,POPULATION_GAP,christiannp BEAM_INTERIOR face
+,NO_S8_1_RECORD,,,,,,,,,,"[""F011""]",0.0659,POPULATION_GAP,christiannp BEAM_INTERIOR face
+,NO_S8_1_RECORD,,,,,,,,,,"[""F030""]",0.36,POPULATION_GAP,christiannp SLAB face
+,NO_S8_1_RECORD,,,,,,,,,,"[""F051""]",0.14,POPULATION_GAP,christiannp SLAB face
+,NO_S8_1_RECORD,,,,,,,,,,"[""F059""]",11.9237,POPULATION_GAP,christiannp SLAB face
+,NO_S8_1_RECORD,,,,,,,,,,"[""F071""]",2.7212,POPULATION_GAP,christiannp SLAB face
+,NO_S8_1_RECORD,,,,,,,,,,"[""F074""]",11.52,POPULATION_GAP,christiannp SLAB face
+,NO_S8_1_RECORD,,,,,,,,,,"[""F076""]",0,POPULATION_GAP,christiannp OPENING face PIT_7BE
+,NO_S8_1_RECORD,,,,,,,,,,"[""F093""]",2.2534,POPULATION_GAP,christiannp SLAB face
+,NO_S8_1_RECORD,,,,,,,,,,"[""F096""]",0.0452,POPULATION_GAP,christiannp BEAM_INTERIOR face
+,NO_S8_1_RECORD,,,,,,,,,,"[""F107""]",0.36,POPULATION_GAP,christiannp SLAB face
+,NO_S8_1_RECORD,,,,,,,,,,"[""F109""]",10.9742,POPULATION_GAP,christiannp SLAB face
+,NO_S8_1_RECORD,,,,,,,,,,"[""F122""]",0.24,POPULATION_GAP,christiannp SLAB face
+,NO_S8_1_RECORD,,,,,,,,,,"[""F127""]",0.1556,POPULATION_GAP,christiannp SLAB face
+,NO_S8_1_RECORD,,,,,,,,,,"[""F135""]",1.1875,POPULATION_GAP,christiannp SLAB face

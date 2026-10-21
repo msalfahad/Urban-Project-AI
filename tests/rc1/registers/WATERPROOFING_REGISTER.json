@@ -1,0 +1,99 @@
+{
+ "SCHEMA": "URBAN_QORTUBA_RC1_WATERPROOFING_REGISTER_V1",
+ "items": {
+  "WPF-01": {
+   "qty": 29.4275,
+   "unit": "m2",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "room_breakdown": [
+    {
+     "key": "SITE-1c4abf65f9b5db1e",
+     "label": "BATH (1) [1c4abf65]",
+     "qty": 8.5525,
+     "kind": "ROOM",
+     "authority": "US-14 bathroom"
+    },
+    {
+     "key": "SITE-8c1c7563d5252c50",
+     "label": "PAINTRY",
+     "qty": 11.685,
+     "kind": "ROOM",
+     "authority": "US-14 pantry / preparation kitchen + QP-13 (PAINTRY, GROSS perimeter)"
+    },
+    {
+     "key": "SITE-a2b19efc492a6d0b",
+     "label": "BATH (2) [a2b19efc]",
+     "qty": 5.1,
+     "kind": "ROOM",
+     "authority": "US-14 bathroom"
+    },
+    {
+     "key": "SITE-fe8ed5548fb4310e",
+     "label": "BATH (3) [fe8ed554]",
+     "qty": 4.09,
+     "kind": "ROOM",
+     "authority": "US-14 bathroom"
+    }
+   ],
+   "rules": [
+    "US-04",
+    "US-05",
+    "US-14",
+    "QP-13"
+   ],
+   "blockers": [
+    "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "notes": [],
+   "evidence": "r8_19.waterproofing.totals.WATERPROOFING_FLOOR_M2"
+  },
+  "WPU-01": {
+   "qty": 44.2,
+   "unit": "lm",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "room_breakdown": [
+    {
+     "key": "SITE-1c4abf65f9b5db1e",
+     "label": "BATH (1) [1c4abf65]",
+     "qty": 11.9,
+     "kind": "ROOM",
+     "authority": "US-14 bathroom"
+    },
+    {
+     "key": "SITE-8c1c7563d5252c50",
+     "label": "PAINTRY",
+     "qty": 13.9,
+     "kind": "ROOM",
+     "authority": "US-14 pantry / preparation kitchen + QP-13 (PAINTRY, GROSS perimeter)"
+    },
+    {
+     "key": "SITE-a2b19efc492a6d0b",
+     "label": "BATH (2) [a2b19efc]",
+     "qty": 9.4,
+     "kind": "ROOM",
+     "authority": "US-14 bathroom"
+    },
+    {
+     "key": "SITE-fe8ed5548fb4310e",
+     "label": "BATH (3) [fe8ed554]",
+     "qty": 9.0,
+     "kind": "ROOM",
+     "authority": "US-14 bathroom"
+    }
+   ],
+   "rules": [
+    "US-04",
+    "US-05",
+    "US-14",
+    "QP-13"
+   ],
+   "blockers": [
+    "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "notes": [],
+   "evidence": "r8_19.waterproofing.totals.WATERPROOFING_UPTURN_LM"
+  }
+ }
+}

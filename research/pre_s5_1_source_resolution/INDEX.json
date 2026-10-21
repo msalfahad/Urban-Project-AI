@@ -1,0 +1,49 @@
+{
+ "baseline": "0a23c06",
+ "code": {
+  "engine/source/ground_beam_network.py": "c400fbc1197f0aa76f6a90ecde928e923ba747dc4edec0ab456775c9d8f7587d",
+  "engine/source/ground_system_provenance.py": "d6a17f393036537a91aea0eba01bb03953c4efa83d57186d192ed71feef919c5",
+  "engine/source/ground_system_resolution.py": "911413953dec58ae377d8f5fabab4606146079cd74feeaa269743097c369ffa2",
+  "engine/source/rebar_provenance.py": "8336f53f2882d751a1e7676336f2be8c4884d4c75f4e8175fd2dea56ba2387ca",
+  "research/pre_s5_1_source_resolution/build_pre_s5_1.py": "3445b07bd167598aa46469bd2feb40779752305de557b7a42a7d9b248959db95",
+  "research/pre_s5_1_source_resolution/write_docs.py": "f287d2b6b59a13a51839478c217a7085d5c56c0687eb1d1d8e17bf72db39a8fb",
+  "research/pre_s5_ground_system_readiness/build_pre_s5.py": "be9ba980ac7b878729ba8ea94968d99610899a86d70fe218bf612a9f8a7aac23"
+ },
+ "drawings": {
+  "P7757.dxf": "ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4",
+  "ST7757.dxf": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079"
+ },
+ "engine_stamp": "0a23c06+code:0ab3811e6fc95369",
+ "inputs": {
+  "research/alsenan_rebar_source_exhaustion_04/registers/PROJECT_REBAR_RULE_REGISTER.json": "5536777ab000e65bd8bb61fabae04f0a09cfe58e75e9547c65c1b04e8633d6b8",
+  "research/alsenan_rebar_source_exhaustion_04/registers/VISUAL_SOURCE_CLAIM_REGISTER.json": "de12e1d73eeb57017d6af600d11becef521e573e150c9c5e715d34d4db02668d",
+  "research/alsenan_structural_census_s1/BEAM_OCCURRENCE_REGISTER.json": "4af4ca569a3cda4c7fb7c30729db818e27f9727b6fe061aaa1436b9e3a5f4bc0",
+  "research/alsenan_structural_census_s1/COLUMN_VERTICAL_CHAIN_REGISTER.json": "0397e1981a5a439ade43edc39b1902cdc192571e5273f6302c9c363f20ca6e1d",
+  "research/alsenan_structural_census_s1/FOOTING_OCCURRENCE_REGISTER.json": "96341bd2c7bc159f695c3a552e1df3763db6baf693cca9b2bedaf1b031106ea8",
+  "research/alsenan_structural_census_s1/SLAB_PANEL_REGISTER.json": "ea0cbe1b5e8d6f6b94eae60fd5c55a708886095a0cda3101d0acbe06229c9c4c",
+  "research/alsenan_structural_census_s1/STRUCTURAL_LEVEL_REGISTER.json": "53d54f501f0fcab6f3825d16a4c1a939c9fc5e094d410eb8e9f3875f6fc3ca6b",
+  "research/alsenan_structural_census_s1/STRUCTURAL_PROJECT_RULE_REGISTER.json": "3268bce3ef31c21ee93b0d7f9ab9b50195e0d0ae659699422c6927abcdf528d2",
+  "research/pre_s5_ground_system_readiness/04_GROUND_BEAM_DETAIL_APPLICABILITY.csv": "e0b8ff291a0d6cdc2dd54cc6418ce45140f78e690a152bd621728bbe87440244",
+  "research/pre_s5_ground_system_readiness/06_GROUND_SYSTEM_REBAR_READINESS_MATRIX.csv": "047ab9e7db19b23a8ed0319f190f73ee968956c9452655ca7921434d99aa8438",
+  "tests/alsenan/registers/FLOOR_PLAN_REGISTER.json": "9576d1f823b82d4abec7afa7f9a27e39d8810f8c98c24f5270c973774e071b09",
+  "tests/alsenan/registers_a3/PDF_VERTICAL_EVIDENCE_REGISTER.json": "35a3464f7e322b7e014b5003f0910a70cf8d94814d0ae93bf827e20930151fcb",
+  "tests/alsenan/registers_v3/GROUND_STRUCTURE_REGISTER.json": "c3e87460a6924115144f4de5f8038cd32ced10e302e9035c34e433093a2f2f01"
+ },
+ "outputs": {
+  "00_README.md": "f163ce4d74193805c126729cb4abf62ebcfc0fae75fe457f891f09b6f79b31c0",
+  "01_PROVENANCE_CONTRACT_UPDATE.md": "4b2b1420c86a25eeab08b8ec913077fc9116e55a952da7ab4f9692277300e0c6",
+  "02_GROUND_BEAM_ARCH_WALL_OVERLAY.csv": "45a30eaa3a8c0767098254afcf09ac239c2404adeaa04f83393be39deb1d26e1",
+  "03_EXTERIOR_AUTHORITY_REGISTER.csv": "eea3b3f8b35482803057a56df64f65aea52657a68fa87383db3a109c88a1b881",
+  "04_FOLLOW_ARCH_DEPTH_REGISTER.csv": "e69fc7d034b401be6225b01c5a5a1c759d135ee45ad8fcdaffbcbd24e1edae17",
+  "05_LENGTH_BASIS_ANALYSIS.csv": "2b32379c54788a22a45f0fe73d620efb1305aa6a90a0d25ea93a5329cefc2d18",
+  "06_CONCENTRATED_LOAD_REGISTER.csv": "6b74ca3ba9ebb2dd3d93ce3c066f94b338f6d531c11dacf1ebc539e4eb6a69f7",
+  "07_DETAIL_PRECEDENCE_ANALYSIS.md": "2781da3485335d8f90583438b0670c7c2052e85bd6c4e983b3c6235c4994f384",
+  "08_SB2_SOURCE_CONFLICT.md": "859cfefc7e31d56c74d959456fef2a3522c17792a20bafb1603db6e2e9ece2ab",
+  "09_GROUND_BEAM_FREE_END_REGISTER.csv": "bf521460815c69580c97383bad28ce29ffe8f013be87a09235098477da6bf955",
+  "10_GROUND_SYSTEM_REBAR_READINESS_MATRIX.csv": "fa2caff3318aa1c92d63f9fc849158ed2cd7e5a157bc1fe0bf44c1281b9df812",
+  "11_ENGINEERING_QUESTIONS_FINAL.md": "02b1fa55e43f34ee302ef30a1c99a30ce53a88796e49b241ba123763c1f216c9",
+  "12_S5_GO_NO_GO.md": "631b04efac18ae87c5176ecb42255f394050d7a72878bd8744c6f9b931e197a1",
+  "PRE_S5_1_SUMMARY.json": "a424687a0fcd6efb26246a76efffa2bc3cde18cd511b53ccbe699bca983ca020",
+  "S5_1_PROVENANCE_TEMPLATES.json": "57ffffbe7ec3bedca7929a5c08dd6e235462a8df84440ef21d7c946a653d8777"
+ }
+}

@@ -1,0 +1,129 @@
+{
+ "SCHEMA": "URBAN_R8_12_OWNER_FACT_COMPARISON_V1",
+ "fact": "QORTUBA-NEW-HALL-LOBBY-OPEN-PASSAGE-OWNER-001@v1",
+ "policy": {
+  "policy_id": "OWNER_PHYSICAL_FACT_POLICY_V1",
+  "outcomes": [
+   "OFFERED",
+   "APPLIED",
+   "CORROBORATING_ONLY",
+   "REJECTED_SCOPE",
+   "STALE",
+   "CONFLICT"
+  ],
+  "domains": [
+   "TOPOLOGY_ROLE",
+   "TOPOLOGY_CLOSURE_REVIEW",
+   "BLOCKER_CLASSIFICATION",
+   "PASSAGE_ATTRIBUTES"
+  ],
+  "kind_domains": {
+   "OPEN_PASSAGE_CONSTRUCTION": [
+    "TOPOLOGY_CLOSURE_REVIEW",
+    "BLOCKER_CLASSIFICATION",
+    "PASSAGE_ATTRIBUTES"
+   ]
+  },
+  "matrix": {
+   "ENGINE_ESTABLISHED_OWNER_AGREES": "CORROBORATING_ONLY",
+   "ENGINE_ESTABLISHED_OWNER_DISAGREES": "CONFLICT",
+   "ENGINE_UNRESOLVED_OWNER_ESTABLISHES": "MAY_APPLY_AS_OWNER_ROLE_AUTHORITY",
+   "ENGINE_DISAGREES_OWNER_ESTABLISHES": "CONFLICT"
+  },
+  "binding": "revision + anchor + region + frame + every bound part's fingerprint (all or nothing)",
+  "never": [
+   "edits a source record",
+   "creates geometry",
+   "carries a quantity",
+   "overwrites contradictory geometry (CONFLICT -> review)",
+   "enters a domain not allowed by its kind",
+   "is project logic in code"
+  ],
+  "digest": "817f9216590803903f0cb8bea210d12755fc43d6ff36811de9bf701bc9870187"
+ },
+ "order": "the blind record (BLIND_QORTUBA_RESULT.json, committed first) was compared afterwards",
+ "binding": {
+  "NEW_K2": "APPLIES",
+  "OLD_K1": "REJECTED_SCOPE"
+ },
+ "per_part": [
+  {
+   "part": "2430",
+   "owner_reading": "REAL_WALL_END",
+   "engine_state": "ESTABLISHED",
+   "engine_reading": "REAL_WALL_END",
+   "matrix": "ENGINE_ESTABLISHED_OWNER_AGREES"
+  },
+  {
+   "part": "2431",
+   "owner_reading": "REAL_WALL_END",
+   "engine_state": "ESTABLISHED",
+   "engine_reading": "REAL_WALL_END",
+   "matrix": "ENGINE_ESTABLISHED_OWNER_AGREES"
+  },
+  {
+   "part": "470",
+   "owner_reading": "REAL_WALL_FACE",
+   "engine_state": "ESTABLISHED",
+   "engine_reading": "REAL_WALL_FACE",
+   "matrix": "ENGINE_ESTABLISHED_OWNER_AGREES"
+  },
+  {
+   "part": "471",
+   "owner_reading": "REAL_WALL_FACE",
+   "engine_state": "ESTABLISHED",
+   "engine_reading": "REAL_WALL_FACE",
+   "matrix": "ENGINE_ESTABLISHED_OWNER_AGREES"
+  },
+  {
+   "part": "477",
+   "owner_reading": "REAL_WALL_FACE",
+   "engine_state": "ESTABLISHED",
+   "engine_reading": "REAL_WALL_FACE",
+   "matrix": "ENGINE_ESTABLISHED_OWNER_AGREES"
+  },
+  {
+   "part": "2296",
+   "owner_reading": "REAL_WALL_FACE",
+   "engine_state": "ESTABLISHED",
+   "engine_reading": "REAL_WALL_FACE",
+   "matrix": "ENGINE_ESTABLISHED_OWNER_AGREES"
+  },
+  {
+   "part": "2297",
+   "owner_reading": "REAL_WALL_FACE",
+   "engine_state": "ESTABLISHED",
+   "engine_reading": "REAL_WALL_FACE",
+   "matrix": "ENGINE_ESTABLISHED_OWNER_AGREES"
+  }
+ ],
+ "domains": {
+  "TOPOLOGY_ROLE": {
+   "outcome": "OFFERED",
+   "note": "never applied: no part-scoped owner role claim was needed (the engine established every bound part)"
+  },
+  "TOPOLOGY_CLOSURE_REVIEW": {
+   "outcome": "CORROBORATING_ONLY",
+   "note": "both closures are ENGINE authorised; the owner reading agrees"
+  },
+  "BLOCKER_CLASSIFICATION": {
+   "outcome": "CORROBORATING_ONLY",
+   "note": "no H2430 blocker remains to classify"
+  },
+  "PASSAGE_ATTRIBUTES": {
+   "outcome": "APPLIED",
+   "note": "door NONE, head 2.20 m, block + plaster sides: attributes of the ENGINE detected passage (release layer)"
+  }
+ },
+ "matrix_states": {
+  "ENGINE_ESTABLISHED_OWNER_AGREES": 7
+ },
+ "fallback_owner_role_claim_required": false,
+ "fallback_not_computed": "the engine established H2430 itself: no OWNER_ROLE_AUTHORITY path was needed or run",
+ "matrix_definition": {
+  "ENGINE_ESTABLISHED_OWNER_AGREES": "CORROBORATING_ONLY",
+  "ENGINE_ESTABLISHED_OWNER_DISAGREES": "CONFLICT",
+  "ENGINE_UNRESOLVED_OWNER_ESTABLISHES": "MAY_APPLY_AS_OWNER_ROLE_AUTHORITY",
+  "ENGINE_DISAGREES_OWNER_ESTABLISHES": "CONFLICT"
+ }
+}

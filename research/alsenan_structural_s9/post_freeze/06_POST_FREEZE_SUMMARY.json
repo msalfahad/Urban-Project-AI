@@ -1,0 +1,91 @@
+{
+ "concrete_classes": {
+  "AUTHORITY": 7,
+  "AUTHORITY + METHOD": 3,
+  "AUTHORITY + SCOPE": 1,
+  "METHOD": 1,
+  "METHOD + AUTHORITY": 1,
+  "METHOD + SCOPE": 6,
+  "MISSED_OBJECT": 1,
+  "NO_DIFFERENCE": 2,
+  "SCOPE": 1
+ },
+ "concrete_groups": 23,
+ "findings": [
+  "F-01 MISSED_OBJECT",
+  "F-02 AUTHORITY",
+  "F-03 NOT_DECOMPOSABLE",
+  "F-04 METHOD"
+ ],
+ "footing_difference_m3": -0.042,
+ "frozen_manifest_sha256": "0a7d69920aa1000d1d8b81fba268c1660a1b12bd70d571a9cc8f378d9c5f565f",
+ "other_frozen_manifests_verified": 29,
+ "pre_s8_missed_objects": [
+  "CANTILEVER_OR_BEARING_WALL_BAND"
+ ],
+ "rebar_classes": {
+  "AUTHORITY": 2,
+  "METHOD": 3,
+  "NOT_DECOMPOSABLE": 1,
+  "NO_DIFFERENCE": 1,
+  "SCOPE": 3,
+  "SCOPE + AUTHORITY": 1,
+  "SCOPE + METHOD": 1
+ },
+ "rebar_groups": 12,
+ "release_delta": {
+  "concrete_m3": 0.0,
+  "kg": 0.0
+ },
+ "round": "S9_POST_FREEZE",
+ "rule": "comparison only, after the freeze: S9 is not tuned, nothing is released and no frozen quantity changes; a finding that needs a change goes to a separately approved correction layer",
+ "s9_released": {
+  "concrete_m3": 158.070256,
+  "reinforcement_kg": 18845.961347
+ },
+ "slab_area_reconciliation": [
+  {
+   "BEAM_FOOTPRINTS_CLEAR_M2": 56.24,
+   "COLUMN_FOOTPRINTS_M2": 4.5,
+   "EXPLAINED_M2": 304.266,
+   "NOTE": "beam footprints use the clear length where held (curved bands carry none). V3b states one net plate and no breakdown, so the residual is not decomposable: a negative residual means V3b nets out more than S9 hands to other owners (the stair zones are the likely part), a positive one is plate S9 does not place",
+   "OF_WHICH_STAIR_ZONES_M2": 37.54,
+   "RESIDUAL_IF_V3B_NETS_THE_STAIR_ZONES_M2": 10.062,
+   "RESIDUAL_M2": -27.478,
+   "S9_OTHER_OWNER_PANELS_M2": 37.54,
+   "S9_RELEASED_PANELS_M2": 205.986,
+   "STOREY": "GF",
+   "V3B_NET_PLATE_M2": 276.788
+  },
+  {
+   "BEAM_FOOTPRINTS_CLEAR_M2": 33.908,
+   "COLUMN_FOOTPRINTS_M2": 2.44,
+   "EXPLAINED_M2": 196.671,
+   "NOTE": "beam footprints use the clear length where held (curved bands carry none). V3b states one net plate and no breakdown, so the residual is not decomposable: a negative residual means V3b nets out more than S9 hands to other owners (the stair zones are the likely part), a positive one is plate S9 does not place",
+   "OF_WHICH_STAIR_ZONES_M2": 10.415,
+   "RESIDUAL_IF_V3B_NETS_THE_STAIR_ZONES_M2": -16.505,
+   "RESIDUAL_M2": -26.92,
+   "S9_OTHER_OWNER_PANELS_M2": 40.693,
+   "S9_RELEASED_PANELS_M2": 119.63,
+   "STOREY": "1F",
+   "V3B_NET_PLATE_M2": 169.751
+  },
+  {
+   "BEAM_FOOTPRINTS_CLEAR_M2": 7.468,
+   "COLUMN_FOOTPRINTS_M2": 0.94,
+   "EXPLAINED_M2": 53.293,
+   "NOTE": "beam footprints use the clear length where held (curved bands carry none). V3b states one net plate and no breakdown, so the residual is not decomposable: a negative residual means V3b nets out more than S9 hands to other owners (the stair zones are the likely part), a positive one is plate S9 does not place",
+   "OF_WHICH_STAIR_ZONES_M2": 0.0,
+   "RESIDUAL_IF_V3B_NETS_THE_STAIR_ZONES_M2": 2.185,
+   "RESIDUAL_M2": 2.185,
+   "S9_OTHER_OWNER_PANELS_M2": 13.635,
+   "S9_RELEASED_PANELS_M2": 31.25,
+   "STOREY": "2F",
+   "V3B_NET_PLATE_M2": 55.478
+  }
+ ],
+ "v3b_technical": {
+  "concrete_m3": 282.84,
+  "reinforcement_kg": 20651.367
+ }
+}

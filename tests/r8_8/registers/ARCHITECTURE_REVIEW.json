@@ -1,0 +1,130 @@
+{
+ "SCHEMA": "URBAN_R8_8_ARCHITECTURE_REVIEW_V1",
+ "recommendation": "VECTOR AUTHORITY + INDEPENDENT VECTOR CROSS-CHECK + RASTER QA ONLY (a hybrid, option D, with TS01 as the single authority). Do NOT build the room topology on wall_solid / free_space. Reuse their principles, not their code path.",
+ "questions": {
+  "1_wall_solid_free_space_as_foundation": {
+   "answer": "NO",
+   "why": [
+    "axis-aligned only: WallPolygon rings are built from H/V face pairs; skew and curved walls do not exist for it",
+    "it needs MATERIAL pairing (two faces, thickness >= 40 mm, length >= 50 mm): a single-line partition, a glazing line or a column outline is not an obstacle, so room topology would inherit material semantics (TOPOLOGY_OBSTACLE != MATERIAL_WALL is violated)",
+    "NODE_SNAP_GRID_MM = 0.05 is a grid snap chosen from one project's outcome (AR-00: 49 -> 46 components); a grid has a cliff at every grid line, so two points 1 ULP apart can be split by any grid size (demonstrated: tests/r8_8/test_r8_8_architecture.py grid-phase test)",
+    "the envelope is derived from the wall solid itself: inside / outside is assumed, not evidenced",
+    "lineage is recovered after the union by geometric touching (intersects, exterior intersection length > 1 mm): a proximity rule, not a proof; boundary source identity per room is lost",
+    "space roles come from size thresholds (700 mm, 1.2 m2, 3.0 m2, aspect 6)",
+    "portal barriers need a host wall band: an opening in a single-line wall cannot close"
+   ]
+  },
+  "2_safer_than_raster": {
+   "answer": "the vector route is safer than raster, YES; wall_solid / free_space is NOT safer than TS01",
+   "why": "a 50 mm cell cannot resolve a <= 1 mm decision, 4-connectivity depends on the cell phase, arcs are sampled every 50 mm and areas are quantised; wall_solid removes those but adds its own grid cliff and material coupling"
+  },
+  "3_reusable": [
+   "FREE = ENVELOPE - OBSTACLES as a DOWNSTREAM trade operation (clear internal area against double-line wall solids), after topology, not as topology",
+   "assert_non_overlapping as an invariant (TS01 faces partition the plane by construction; kept as a test)",
+   "MAX_DEFENSIBLE_SNAP_MM = 1.0: the same principle as eps_r (authored precision)",
+   "snap_tolerance.py's measured noise-vs-gap separation: adopted as topology_policy.separation (measured per drawing, never a chosen number)",
+   "GEOS as the declared kernel: used as the independent cross-check"
+  ],
+  "4_project_or_material_specific": [
+   "engine/wall_solid.py: NODE_SNAP_GRID_MM",
+   "engine/wall_solid.py: MIN_WALL_LENGTH_MM / MIN_WALL_THICKNESS_MM",
+   "engine/free_space.py: MIN_HABITABLE_MM / MIN_ROOM_AREA_M2 / MAX_SHAFT_AREA_M2 / CAVITY_ASPECT",
+   "engine/ingest/planar_faces.py: CELL_MM / MIN_FACE_CELLS / SAMPLE_MM",
+   "research/.../r3/floor_regions.py: SNAP_MM / AREA_AGREEMENT_SHARE",
+   "research/.../qs01/takeoff.py: stair / lift by layer count; min bbox side <= 600; area >= 3.0"
+  ],
+  "5_choice": "D (hybrid) in this form: TS01 = authority (own exact noding, arcs, source identity, two-build certificate); GEOS node + polygonize = independent cross-check that can only withhold a site; raster = QA / localisation only. Not A (material-coupled, axis-only, grid cliff), not C (resolution), not plain B (TS01 already is the principled module; GEOS cannot be the authority because it has no exact arc, keeps no source identity through noding and offers node equivalence only as a grid)",
+  "6_why_this_architecture": [
+   "authority needs exact arcs: GEOS would need flattening (forbidden)",
+   "authority needs source identity through noding: GEOS output would need a nearest-geometry identity (forbidden without a proof rule)",
+   "authority needs node equivalence by DISTANCE with a certificate: GEOS offers only a precision grid, whose cliffs are not aligned with the noise / authored bands",
+   "an independent kernel still catches TS01 defects: three were found in R8.8 by real data (F-R88-08..10); the cross-check now reproduces every straight-edged site with area AND boundary provenance: {'OLD_K1': {'AGREES': 75, 'DISAGREES': 0, 'NOT_APPLICABLE_CURVE': 0}, 'OLD_K2': {'AGREES': 75, 'DISAGREES': 0, 'NOT_APPLICABLE_CURVE': 0}, 'NEW_K2': {'AGREES': 67, 'DISAGREES': 0, 'NOT_APPLICABLE_CURVE': 0}}"
+  ],
+  "7_problems_not_identified_by_the_prompt": "see findings F-R88-19 .. F-R88-28 in R8_8_DECISION_REGISTER"
+ },
+ "sections": {
+  "reuse_or_not": "NOT as the spine; principles reused (Q3)",
+  "raster": "QA / localisation / independent cross-check only; never an authority for topology or area",
+  "vector_area_vs_arrangement": "area is computed from the certified site cycle itself (exact chord polygon + circular segments, holes subtracted); there is no rectangle decomposition in TS01; any decomposition is presentation only",
+  "tolerance_architecture": {
+   "classes": {
+    "NUMERIC_FLOAT_EQUIVALENCE": "two numbers are the same value written twice (route / representation noise). V1: eps_n = 2**-30 x max|coord| (relative, unit-free)",
+    "TOPOLOGY_NODE_EQUIVALENCE": "two curve ends are one topological node. V1: eps_n for the build, eps_r for the certificate build; never a grid; a decision between them -> TOLERANCE_SENSITIVE",
+    "MATERIAL_PAIRING_TOLERANCE": "two lines are faces of one wall / material. NOT USED by TS01 (wall_solid only)",
+    "REGION_INTERSECTION_TOLERANCE": "a record is inside / outside a region. eps_n only (RM-EXACT-1)",
+    "MEASUREMENT_COMPARISON_TOLERANCE": "two measured values agree. Site area bound = eps_r x perimeter; never used to change a value; cross-route equality of rows is exact"
+   },
+   "rule": "one class, one tolerance, one stated basis; no universal snap; no grid snap as an authority"
+  },
+  "H584": {
+   "route_difference": "4.366e-11 units = 3 ULP at |coord| 112440",
+   "measured_end_point_distances_by_decade": {
+    "1e-12": 16,
+    "1e-11": 40,
+    "1e-10": 2,
+    "1e-9": 5,
+    "1e0": 57
+   },
+   "sensitivity_sites_K1_K2_agree": {
+    "1 ULP": [
+     58,
+     59,
+     false
+    ],
+    "16 ULP": [
+     68,
+     68,
+     true
+    ],
+    "1024 ULP": [
+     75,
+     75,
+     true
+    ],
+    "65536 ULP": [
+     75,
+     75,
+     true
+    ],
+    "4194304 ULP": [
+     75,
+     75,
+     true
+    ],
+    "V1 eps_n": [
+     75,
+     75,
+     true
+    ]
+   },
+   "geos_exact": {
+    "faces": 61,
+    "largest_face_m2": 280.1868,
+    "TS01_sites": 75,
+    "why": "exact GEOS noding keeps end points 1e-12..1e-9 apart as distinct nodes: rooms leak into each other; a node equivalence is required"
+   },
+   "decision": "keep V1 (eps_n = 2**-30 x max|coord| = 1.0e-04 units = 7.2e+06 ULP). Observed route noise reaches 1e-9 units (~70 ULP): 16 ULP still loses 7 sites, 1 ULP splits the routes. A ULP-count policy would need calibration on observed noise; V1 sits about five decades above the noise and three below eps_r. No V2 is introduced; instead the separation is MEASURED per drawing (topology_policy.separation): {\"OLD_K1\": {\"end_to_curve_decisions\": 816, \"noise\": 816, \"ambiguous\": 0, \"near_eps_n\": 0, \"noise_margin\": 1024.0, \"separated\": true}, \"OLD_K2\": {\"end_to_curve_decisions\": 816, \"noise\": 816, \"ambiguous\": 0, \"near_eps_n\": 0, \"noise_margin\": 1024.0, \"separated\": true}, \"NEW_K2\": {\"end_to_curve_decisions\": 777, \"noise\": 777, \"ambiguous\": 0, \"near_eps_n\": 0, \"noise_margin\": 1024.0, \"separated\": true}}",
+   "authored_gaps_mm": {
+    "0.5": "AMBIGUOUS -> TOLERANCE_SENSITIVE (REVIEW) / SITE_ONLY_IN_AUTHORED_BUILD",
+    "1.0": "AMBIGUOUS (closed end: the eps_r build merges d <= eps_r) -> REVIEW",
+    "2.0": "AUTHORED: a real gap; the spaces connect (MULTIPLE_SEMANTIC_LABELS or the room is open)",
+    "5.0": "AUTHORED: as 2.0",
+    "tests": "tests/r8_8/test_r8_8_architecture.py (synthetic, mm units)"
+   }
+  },
+  "role_admission": "positive admission before topology (geometry_role, GR-01..GR-16, GR-99); only TOPOLOGY_BOUNDARY / STRUCTURAL_OBSTACLE / GLAZING_BOUNDARY / OPENING_BOUNDARY bound a site; UNKNOWN_* and BOUNDARY_CURVE_UNSUPPORTED block the sites they touch; MATERIAL identity is not consulted",
+  "flow": [
+   "CANONICAL_MEASUREMENT_INPUT: canonical_input.validate (TS01 contract)",
+   "GEOMETRY_ROLE_ADMISSION: geometry_role.admit",
+   "TOPOLOGY_OBSTACLE_SET: admitted boundary roles + closures from proven openings",
+   "VECTOR_FREE_SPACE: bounded faces of the exact arrangement of the obstacle set",
+   "SPACE_GEOMETRY_CANDIDATES: sites + two-build certificate + GEOS cross-check",
+   "SEMANTIC_LABEL_ASSIGNMENT: label occurrences; two or more -> MULTIPLE_SEMANTIC_LABELS",
+   "unknown geometry at any step -> REVIEW / BLOCK"
+  ],
+  "curves": "SEGMENT / ARC / CIRCLE exact in TS01; ELLIPTICAL_ARC on a boundary role -> BOUNDARY_CURVE_UNSUPPORTED (blocks); splines etc. are unrealised -> accounted; the cross-check marks arc-bounded sites NOT_APPLICABLE_CURVE (never flattened); nothing pre-empts R11",
+  "provenance_after_geos": "GEOS output is compared and discarded; it never acquires a source identity. Proof rule used by the cross-check: every boundary piece of the GEOS face must be contained (both ends within 2 x eps_n) in at least one straight admitted source item; its identities = ALL items containing it (never the nearest); the union must equal the TS01 site's boundary + hole ids (less two-sided stubs)",
+  "legacy_project_logic": "STAIR / lift by layer count, 600 mm, 3 m2, BATH / PAINTRY, SNAP_MM 2, H/V-only arrangement: QS01 and r3 (lab, legacy) only. engine/source holds generic tokens (exact-token lexicon) and no size threshold; enforced by test_no_legacy_project_rule_reaches_the_generic_topology",
+  "anything_else": "an obstacle INTERIOR (the core between two faces of a double-line wall) is today an UNLABELLED_SITE: R8.9 should classify it by role evidence (both sides bounded by the same wall's faces), not by a thickness threshold (F-R88-26)"
+ }
+}

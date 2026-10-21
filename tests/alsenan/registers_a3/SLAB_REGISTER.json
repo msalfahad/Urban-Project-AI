@@ -1,0 +1,42 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_A3_SLABS_V1",
+ "slabs": {
+  "GF_ROOF_SLAB": {
+   "thickness_marks_cm": {
+    "16": 4
+   },
+   "void_labels": 2,
+   "as_per_schedule_notes": 4,
+   "opening_layer_segments": 20,
+   "area_m2": null,
+   "volume_m3": null,
+   "blocker": "SLAB_OUTLINE_NOT_ESTABLISHED: no closed slab-edge outline with role authority; voids / openings and the beam overlap are not resolved",
+   "thickness_state": "PRINTED"
+  },
+  "1F_ROOF_SLAB": {
+   "thickness_marks_cm": {
+    "16": 2
+   },
+   "void_labels": 0,
+   "as_per_schedule_notes": 0,
+   "opening_layer_segments": 48,
+   "area_m2": null,
+   "volume_m3": null,
+   "blocker": "SLAB_OUTLINE_NOT_ESTABLISHED: no closed slab-edge outline with role authority; voids / openings and the beam overlap are not resolved",
+   "thickness_state": "PRINTED"
+  },
+  "2F_ROOF_SLAB": {
+   "thickness_marks_cm": {
+    "18": 2
+   },
+   "void_labels": 0,
+   "as_per_schedule_notes": 0,
+   "opening_layer_segments": 0,
+   "area_m2": null,
+   "volume_m3": null,
+   "blocker": "SLAB_OUTLINE_NOT_ESTABLISHED: no closed slab-edge outline with role authority; voids / openings and the beam overlap are not resolved",
+   "thickness_state": "PRINTED"
+  }
+ },
+ "double_count_rule": "beam concrete below the slab only; slab area net of voids"
+}

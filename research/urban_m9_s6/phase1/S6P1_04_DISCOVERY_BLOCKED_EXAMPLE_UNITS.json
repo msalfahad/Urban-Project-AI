@@ -1,0 +1,172 @@
+{
+ "documents": [
+  {
+   "bytes": 37522,
+   "file": "plan.dxf",
+   "format": "DXF",
+   "header": {
+    "DIMLFAC": 1.0,
+    "INSUNITS": 0,
+    "MEASUREMENT": 1,
+    "dxf_version": "AC1032"
+   },
+   "parse_status": "PARSED",
+   "sha256": "b2671893cfd9d78ad810fb000a8a025a074fc0187803ee4d75d1392041dc1ef4"
+  }
+ ],
+ "gates": {
+  "architectural_boq_may_run": false,
+  "blocked_items": 1,
+  "exit_code": 2,
+  "fatal": 0,
+  "review_required": 0,
+  "rule": "FATAL anywhere, or a BLOCKED_ITEM in stages 0-5, stops the run (no BOQ is published; exit 2); a BLOCKED_ITEM in a later stage blocks the items it names; REVIEW_REQUIRED and WARNING findings travel with the BOQ as flags",
+  "stopping": [
+   "4_units:UNITS_NOT_DECLARED"
+  ],
+  "warnings": 1
+ },
+ "method": "ARCH_TAKEOFF_V2",
+ "policy": "DRAWING_DISCOVERY_V1",
+ "reviewer_inputs": {
+  "accepted_missing_xrefs": [],
+  "regions": [],
+  "units": null
+ },
+ "schema": "URBAN_DRAWING_DISCOVERY_V1",
+ "stages": {
+  "0_intake": {
+   "dxf_version": "AC1032",
+   "findings": [],
+   "state": "PASSED"
+  },
+  "10_boq_readiness": {
+   "findings": [],
+   "state": "NOT_RUN"
+  },
+  "1_inventory": {
+   "census": {
+    "hatches_below_first_level": 0,
+    "hidden_layers": [],
+    "kinds": {
+     "ARC": 6,
+     "HATCH": 3,
+     "INSERT": 6,
+     "LINE": 128,
+     "LWPOLYLINE": 5,
+     "TEXT": 18
+    },
+    "layouts": [
+     {
+      "entities_by_type": {
+       "HATCH": 3,
+       "INSERT": 6,
+       "LINE": 122,
+       "LWPOLYLINE": 5,
+       "TEXT": 18
+      },
+      "kind": "MODEL",
+      "name": "Model",
+      "viewports": 0
+     },
+     {
+      "entities_by_type": {},
+      "kind": "PAPER",
+      "name": "Layout1",
+      "viewports": 0
+     }
+    ],
+    "max_insert_depth": 1,
+    "minserts": 0,
+    "xrefs": []
+   },
+   "entity_support": {
+    "ARC": "READ",
+    "HATCH": "READ_ONE_BLOCK_LEVEL",
+    "INSERT": "READ_NESTED",
+    "LINE": "READ",
+    "LWPOLYLINE": "READ",
+    "TEXT": "READ"
+   },
+   "findings": [
+    {
+     "code": "ENTITY_KIND_NOT_MEASURED",
+     "evidence": {
+      "count": 3,
+      "kind": "HATCH",
+      "support": "READ_ONE_BLOCK_LEVEL"
+     },
+     "level": "WARNING",
+     "message": "3 HATCH: READ_ONE_BLOCK_LEVEL"
+    }
+   ],
+   "k2": {
+    "dispositions": {
+     "CARRIED": 21,
+     "REALISED": 145
+    },
+    "missing_top_level": [],
+    "top_level": 154,
+    "visits": 166
+   },
+   "state": "PROVISIONAL"
+  },
+  "2_sheets": {
+   "findings": [],
+   "state": "NOT_RUN"
+  },
+  "3_identity": {
+   "findings": [],
+   "state": "NOT_RUN"
+  },
+  "4_units": {
+   "declared_unit_m": null,
+   "findings": [
+    {
+     "code": "UNITS_NOT_DECLARED",
+     "evidence": {
+      "member_fit": {
+       "cm": 0,
+       "in": 0,
+       "m": 0,
+       "mm": 3
+      }
+     },
+     "level": "BLOCKED_ITEM",
+     "message": "$INSUNITS declares no unit; the drawn geometry suggests 0.001 m per unit - a reviewer must confirm it (--units mm|cm|m|in) before anything is measured"
+    }
+   ],
+   "inferred_unit_m": 0.001,
+   "insunits": 0,
+   "k2_findings": {},
+   "member_fit": {
+    "cm": 0,
+    "in": 0,
+    "m": 0,
+    "mm": 3
+   },
+   "state": "BLOCKED",
+   "unit_m_used": null
+  },
+  "5_floors": {
+   "findings": [],
+   "state": "NOT_RUN"
+  },
+  "6_geometry_readiness": {
+   "findings": [],
+   "state": "NOT_RUN"
+  },
+  "7_vertical_model": {
+   "findings": [],
+   "state": "NOT_RUN"
+  },
+  "8_features": {
+   "findings": [],
+   "state": "NOT_RUN"
+  },
+  "9_finish_zones": {
+   "findings": [],
+   "state": "NOT_RUN"
+  }
+ }
+}

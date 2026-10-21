@@ -1,0 +1,69 @@
+{
+ "added_blocked_families": {
+  "DOME-A": [
+   "UNLABELLED_JUNCTION_BAR"
+  ],
+  "DOME-B": [
+   "UNLABELLED_JUNCTION_BAR"
+  ]
+ },
+ "corrects": "S8.3 (frozen, unchanged)",
+ "cuts": [
+  {
+   "by_row": [
+    3,
+    2,
+    2,
+    3
+   ],
+   "cut": "1A0A",
+   "labelled": 10
+  },
+  {
+   "by_row": [
+    3,
+    2,
+    2,
+    3
+   ],
+   "cut": "1A07",
+   "labelled": 10
+  }
+ ],
+ "date": "2026-10-09",
+ "errata": [
+  "S8.3-E01",
+  "S8.3-E02",
+  "S8.3-E03"
+ ],
+ "frozen_manifest_sha256": "92bfe9c0b2b7fea189bb37759f93759ea4a6cf5108738af1390468bda6ee92da",
+ "layer": "S8_3_ERRATA",
+ "mirror_census": {
+  "architectural_mirrored_inserts": 13,
+  "architectural_mirrored_near_domes": 0,
+  "architectural_non_plus_z": 0,
+  "structural_mirrored_inserts": 0,
+  "structural_non_plus_z": 0
+ },
+ "post_freeze_comparison_affected": false,
+ "references_read": [],
+ "released_unchanged": {
+  "concrete_items": [
+   "CQ-DOME-A-SHELL",
+   "CQ-DOME-B-SHELL"
+  ],
+  "concrete_m3": 5.081361321,
+  "lane": "PROJECT_BASIS_QTO",
+  "reinforcement_items": [
+   "RQ-DOME-A-SHELL_MERIDIONAL",
+   "RQ-DOME-A-SHELL_HOOP",
+   "RQ-DOME-B-SHELL_MERIDIONAL",
+   "RQ-DOME-B-SHELL_HOOP"
+  ],
+  "reinforcement_kg": 602.111303562
+ },
+ "small_bar_touches_shell_bar_leg": [
+  true,
+  true
+ ]
+}

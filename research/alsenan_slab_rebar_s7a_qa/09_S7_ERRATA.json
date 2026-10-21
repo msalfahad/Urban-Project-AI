@@ -1,0 +1,40 @@
+{
+ "applies_to": "research/alsenan_slab_rebar_s7 (frozen; not edited)",
+ "baseline": "aeb8798",
+ "date": "2026-10-08",
+ "id": "S7A-E01",
+ "kg_change": 0.0,
+ "replacement_wording": "PROJECT_BASIS_QTO: rate density over the frozen PRE-S7.1 local bar strips under the recorded interpretation (AD2-D06 / S7-AC01 / S7-AC02); every blocked portion is excluded (not zero); not a proven bound of the physical steel in either direction; not a bar-by-bar BBS",
+ "round": "S7A_QA",
+ "rule": "S7 stays frozen and byte-identical; this dated record supersedes the wording only. A future release that changes a quantity needs its own correction layer, evidence and version.",
+ "s7_files_edited": false,
+ "s7_total_kg": 3802.015364542223,
+ "s7_total_unchanged": true,
+ "where": {
+  "00_README.md": "no lower-bound claim",
+  "01_S7_RELEASE_ITEMS.csv QUANTITY_AUTHORITY": {
+   "first": "S7-0001",
+   "last": "S7-0476",
+   "rows": 476
+  },
+  "post_freeze": [
+   {
+    "file": "research/alsenan_slab_rebar_s7/post_freeze/S7_POST_FREEZE_COMPARISON.md",
+    "line": 9,
+    "wording": "That is the restricted lower bound of 476 items"
+   },
+   {
+    "file": "research/alsenan_slab_rebar_s7/post_freeze/S7_POST_FREEZE_COMPARISON.md",
+    "line": 57,
+    "wording": "against a restricted lower-bound QTO"
+   }
+  ]
+ },
+ "why": [
+  "the one-third top extent is not established by the source (01_TOP_EXTENT_INTERPRETATIONS.csv): over the same released strip ends the top extension ranges 678.986577661 to 1609.080578267 kg across the readings, against S7's 1357.973155322 kg - several readings give LESS steel than S7, so S7 is not below the physical steel by construction",
+  "the continuity of many strip ends is inferred, not established (08_END_CONDITION_AUDIT.csv)",
+  "the equivalent (unrounded) count and the nominal D^2/162 unit mass are QTO conventions, not physical bar counts or rolled masses",
+  "excluding every blocked portion makes S7 a RESTRICTED quantity of the released items, not a proven bound of the whole physical slab steel"
+ ],
+ "withdrawn_wording": "a lower bound of the physical steel (every blocked portion is excluded, not zero)"
+}

@@ -1,0 +1,25 @@
+{
+ "note": "nothing is promoted automatically; a lesson becomes GENERIC_CANDIDATE only via rule_promotion.propose() after a consultant answer, and GENERIC_APPROVED only after review",
+ "project_id": "ALSENAN-ST7757",
+ "proposable_lessons": [
+  {
+   "flag_id": "STR-BEA-001",
+   "flag_key": "1ec82c958b0067f8",
+   "lesson": "Length basis for length-banded typical details (c/c vs clear).",
+   "state": "PROJECT_ONLY"
+  },
+  {
+   "flag_id": "STR-COL-002",
+   "flag_key": "2e23673c1966908b",
+   "lesson": "Per-metre transverse counts on multi-tie arrangements: the consultant's reading may become a generic convention after review.",
+   "state": "PROJECT_ONLY"
+  },
+  {
+   "flag_id": "STR-COL-008",
+   "flag_key": "647c4db1d77bc7d9",
+   "lesson": "At an exact band limit that no printed band includes, the consultant's answer may be proposed as a generic boundary convention (review required).",
+   "state": "PROJECT_ONLY"
+  }
+ ],
+ "registry": []
+}

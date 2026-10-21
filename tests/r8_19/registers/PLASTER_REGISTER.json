@@ -1,0 +1,245 @@
+{
+ "SCHEMA": "URBAN_R8_19_PLASTER_REGISTER_V1",
+ "floor": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+ "DRY_WALL_PLASTER": {
+  "state": "COMPUTED_SHADOW_COMPLETE",
+  "trade": "PLASTER",
+  "room_classes": [
+   "DRY_INTERNAL_ROOM"
+  ],
+  "unit": "m2",
+  "AUTHORISED_SUBTOTAL_M2": 307.361518,
+  "COMPLETE_M2": 307.361518,
+  "FINAL": null,
+  "per_floor": {
+   "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)": {
+    "COMPLETE_M2": 307.361518,
+    "rooms": [
+     "SITE-5f1762f1a93b91ca",
+     "SITE-77a2130eb275604c",
+     "SITE-a6405850100155ac",
+     "SITE-daca396d6d730e60"
+    ]
+   }
+  },
+  "per_room": {
+   "SITE-5f1762f1a93b91ca": {
+    "zones": [
+     "BED.ROOM"
+    ],
+    "class": "DRY_INTERNAL_ROOM",
+    "height_m": 3.15,
+    "height_authority": "QORTUBA-NEW-DRY-WALL-FINISH-HEIGHT-OWNER-001@v1",
+    "wall_plane_m2": 53.006962,
+    "column_face_m2": 2.52,
+    "obstacle_face_m2": 15.75,
+    "jamb_reveals_m2": 0.75,
+    "head_reveals_m2": 0.30134,
+    "total_m2": 72.328302,
+    "surfaces": 22,
+    "floor": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)"
+   },
+   "SITE-77a2130eb275604c": {
+    "zones": [
+     "HALL",
+     "whgm"
+    ],
+    "class": "DRY_INTERNAL_ROOM",
+    "height_m": 3.15,
+    "height_authority": "QORTUBA-NEW-DRY-WALL-FINISH-HEIGHT-OWNER-001@v1",
+    "wall_plane_m2": 85.773468,
+    "column_face_m2": 2.0475,
+    "obstacle_face_m2": 0.0,
+    "jamb_reveals_m2": 4.93,
+    "head_reveals_m2": 1.5159,
+    "total_m2": 94.266868,
+    "surfaces": 61,
+    "floor": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)"
+   },
+   "SITE-a6405850100155ac": {
+    "zones": [
+     "DRESS",
+     "M.B.ROOM"
+    ],
+    "class": "DRY_INTERNAL_ROOM",
+    "height_m": 3.15,
+    "height_authority": "QORTUBA-NEW-DRY-WALL-FINISH-HEIGHT-OWNER-001@v1",
+    "wall_plane_m2": 84.086227,
+    "column_face_m2": 3.78,
+    "obstacle_face_m2": 0.0,
+    "jamb_reveals_m2": 2.6325,
+    "head_reveals_m2": 1.169379,
+    "total_m2": 91.668106,
+    "surfaces": 37,
+    "floor": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)"
+   },
+   "SITE-daca396d6d730e60": {
+    "zones": [
+     "BED.ROOM"
+    ],
+    "class": "DRY_INTERNAL_ROOM",
+    "height_m": 3.15,
+    "height_authority": "QORTUBA-NEW-DRY-WALL-FINISH-HEIGHT-OWNER-001@v1",
+    "wall_plane_m2": 45.49267,
+    "column_face_m2": 2.52,
+    "obstacle_face_m2": 0.0,
+    "jamb_reveals_m2": 0.75,
+    "head_reveals_m2": 0.335572,
+    "total_m2": 49.098242,
+    "surfaces": 16,
+    "floor": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)"
+   }
+  },
+  "reconciliation": {
+   "sum_of_rooms_m2": 307.361518,
+   "row_m2": 307.361518,
+   "reconciles": true
+  },
+  "surfaces": 136,
+  "surface_ids_sha256": "f2afe8464c2d9d08714d317afa81acf3d4775184943ff9a63aa5241ffcb9b7b8",
+  "by_kind_m2": {
+   "WALL_PLANE": 268.359327,
+   "OBJECT_FACE": 26.6175,
+   "REVEAL": 12.384691
+  },
+  "unresolved_contributors": [],
+  "blocked_rooms": [],
+  "release_blockers": [
+   "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+   "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+  ],
+  "height_m": 3.15,
+  "height_authority": "QORTUBA-NEW-DRY-WALL-FINISH-HEIGHT-OWNER-001@v1"
+ },
+ "WET_SERVICE_REVEAL_PLASTER": {
+  "state": "COMPUTED_SHADOW_COMPLETE",
+  "trade": "PLASTER",
+  "room_classes": [
+   "SERVICE_ROOM",
+   "WET_SERVICE_ROOM"
+  ],
+  "unit": "m2",
+  "AUTHORISED_SUBTOTAL_M2": 1.510248,
+  "COMPLETE_M2": 1.510248,
+  "FINAL": null,
+  "per_floor": {
+   "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)": {
+    "COMPLETE_M2": 1.510248,
+    "rooms": [
+     "SITE-1c4abf65f9b5db1e",
+     "SITE-8c1c7563d5252c50",
+     "SITE-a2b19efc492a6d0b",
+     "SITE-fe8ed5548fb4310e"
+    ]
+   }
+  },
+  "per_room": {
+   "SITE-1c4abf65f9b5db1e": {
+    "zones": [
+     "BATH"
+    ],
+    "class": "WET_SERVICE_ROOM",
+    "height_m": null,
+    "height_authority": null,
+    "wall_plane_m2": 0.0,
+    "column_face_m2": 0.0,
+    "obstacle_face_m2": 0.0,
+    "jamb_reveals_m2": 0.0,
+    "head_reveals_m2": 0.0,
+    "total_m2": 0.0,
+    "surfaces": 0,
+    "floor": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)"
+   },
+   "SITE-8c1c7563d5252c50": {
+    "zones": [
+     "PAINTRY"
+    ],
+    "class": "SERVICE_ROOM",
+    "height_m": null,
+    "height_authority": null,
+    "wall_plane_m2": 0.0,
+    "column_face_m2": 0.0,
+    "obstacle_face_m2": 0.0,
+    "jamb_reveals_m2": 0.97,
+    "head_reveals_m2": 0.540248,
+    "total_m2": 1.510248,
+    "surfaces": 6,
+    "floor": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)"
+   },
+   "SITE-a2b19efc492a6d0b": {
+    "zones": [
+     "BATH"
+    ],
+    "class": "WET_SERVICE_ROOM",
+    "height_m": null,
+    "height_authority": null,
+    "wall_plane_m2": 0.0,
+    "column_face_m2": 0.0,
+    "obstacle_face_m2": 0.0,
+    "jamb_reveals_m2": 0.0,
+    "head_reveals_m2": 0.0,
+    "total_m2": 0.0,
+    "surfaces": 0,
+    "floor": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)"
+   },
+   "SITE-fe8ed5548fb4310e": {
+    "zones": [
+     "BATH"
+    ],
+    "class": "WET_SERVICE_ROOM",
+    "height_m": null,
+    "height_authority": null,
+    "wall_plane_m2": 0.0,
+    "column_face_m2": 0.0,
+    "obstacle_face_m2": 0.0,
+    "jamb_reveals_m2": 0.0,
+    "head_reveals_m2": 0.0,
+    "total_m2": 0.0,
+    "surfaces": 0,
+    "floor": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)"
+   }
+  },
+  "reconciliation": {
+   "sum_of_rooms_m2": 1.510248,
+   "row_m2": 1.510248,
+   "reconciles": true
+  },
+  "surfaces": 6,
+  "surface_ids_sha256": "751cc40d208316f1b28e0115ba71668c2e9121e37a3a3e0efe3f92b431fe0763",
+  "by_kind_m2": {
+   "WALL_PLANE": 0.0,
+   "OBJECT_FACE": 0.0,
+   "REVEAL": 1.510248
+  },
+  "unresolved_contributors": [],
+  "blocked_rooms": [],
+  "release_blockers": [
+   "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+   "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+  ],
+  "why_separate": "PLASTER_DEFAULT reveals owned by wet / service rooms (never tile, never paint)"
+ },
+ "PLASTER_ALL_SURFACES_M2": 308.871766,
+ "plaster_all_note": "computed by the trade layer from the surface records of both plaster rows (the BOQ layer never adds rows)",
+ "excluded": [
+  "wet wall-tile surfaces",
+  "topology closures (zero area)",
+  "unproven reveals (none remain)",
+  "hidden / embedded object faces"
+ ],
+ "after_rebuild_vs_r8_18": {
+  "rule": "the R8.18 diagnostic unresolved areas (dry columns 10.8675, wet columns 14.88, duct 15.75 m2), the R8.18 subtotals and any historical / manual total were never inputs or targets; the rows were rebuilt from surface records. The comparison below is computed AFTER the rebuild only",
+  "is_target": false,
+  "r8_18_dry_authorised": 280.744014,
+  "r8_18_wet_reveal_plaster": 1.400248,
+  "r8_19_dry_complete": 307.361518,
+  "r8_19_wet_reveal_plaster": 1.510248,
+  "difference_dry_m2": 26.617504,
+  "explained_by": [
+   "dry column faces",
+   "duct faces"
+  ],
+  "difference_wet_reveal_m2": 0.11,
+  "wet_reveal_explained_by": "the PAINTRY south sliding-door jamb, now physically established (band end), 0.11 m2"
+ }
+}

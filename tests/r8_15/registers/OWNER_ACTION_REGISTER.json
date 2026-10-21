@@ -1,0 +1,50 @@
+{
+ "SCHEMA": "URBAN_OWNER_ACTION_REGISTER_V12",
+ "headline": "NO OWNER ACTION REQUIRED.",
+ "required_now": [],
+ "answered_this_round": [
+  {
+   "fact": "QORTUBA-NEW-BED-ROOM-DUCT-OWNER-001@v1",
+   "kind": "BUILT_OBSTACLE"
+  },
+  {
+   "fact": "QORTUBA-NEW-MB-DRESS-PASSAGE-FULL-HEIGHT-OWNER-001@v1",
+   "kind": "PASSAGE_HEAD_CONDITION"
+  },
+  {
+   "fact": "QORTUBA-NEW-MAIN-ENTRANCE-MARBLE-OWNER-001@v1",
+   "kind": "THRESHOLD_FINISH_CONSTRUCTION"
+  },
+  {
+   "rule": "URBAN-WET-SERVICE-MARBLE-THRESHOLD@v1",
+   "kind": "URBAN_OWNER_METHOD_RULE"
+  }
+ ],
+ "why_none": "every row - the six area rows, the skirting row and the marble threshold row - computes in SHADOW; what remains are release items carried as explicit blockers with counterfactual values",
+ "prepared_for_release_stage_not_asked": [
+  {
+   "id": "QORTUBA_SKIRTING_JAMB_RETURNS",
+   "only_if": "release of the skirting row is requested",
+   "question": "Hidden skirting at door and open-passage jambs: does it stop at the room face (as the opening-width deduction implies) or return into the jamb up to the door frame?",
+   "effect_lm": 1.75,
+   "current": "NO_RETURN (rule-store method; no rule adds a return)"
+  }
+ ],
+ "do_not_ask": [
+  "duct identity",
+  "M.B.ROOM / DRESS head",
+  "main entrance marble",
+  "wet / service marble threshold",
+  "20 mm rise",
+  "the selected plan",
+  "the unit",
+  "7116-7119",
+  "H2430 / H2431",
+  "Hall / Lobby geometry and height",
+  "floor under wardrobes",
+  "the 3.20 m height",
+  "basic skirting",
+  "window deduction (QP-09 closed it)",
+  "any expected quantity"
+ ]
+}

@@ -1,0 +1,16 @@
+ITEM,S8_7_VALUE,S8_7A_VALUE,S8_7_LANE,AGREES,METHOD,CORRECTION_ID,QUANTITY_CHANGE
+A1-L1 concrete,0.2304,0.2304,PROJECT_BASIS_QTO,True,outline rebuilt from the drawn lines x 160 (zone tag),,
+A2-T1 concrete,0.0192,0.0192,PROJECT_BASIS_QTO,True,outline rebuilt from the drawn lines x 160 (zone tag),,
+C-T1 concrete,0.266982788,0.266982788,PROJECT_BASIS_QTO,True,outline rebuilt from the drawn lines x 160 (zone tag),,
+A1-L1 LANDING_BOTTOM_LONGITUDINAL Ø16,18.204444444,18.204444444,PROJECT_BASIS_QTO,True,8 /m x plate area x 1.580246914,,
+A1-L1 LANDING_BOTTOM_TRANSVERSE Ø16,18.204444444,18.204444444,PROJECT_BASIS_QTO,True,8 /m x plate area x 1.580246914,,
+A2-T1 LANDING_BOTTOM_LONGITUDINAL Ø16,1.517037037,1.517037037,PROJECT_BASIS_QTO,True,8 /m x plate area x 1.580246914,,
+C-T1 LANDING_BOTTOM_LONGITUDINAL Ø16,21.094936336,21.094936336,PROJECT_BASIS_QTO,True,8 /m x plate area x 1.580246914,,
+released concrete total,0.516582788,0.516582788,,True,sum,,
+released Ø16 total,59.020862261,59.020862261,,True,sum,,
+A1-L1 level,S8.7 state DERIVED_FROM_PRINTED (+3.50),SOURCE_CONFLICT (+3.50 section vs +3.571 / +3.520 under uniform risers),,,correction layer (S8.7 unchanged),CR-01,none: the plate volume does not depend on its level
+A1-F2 outline,"S8.7 polygon to y 16112 (12 risers), 0.24 m2 over head beam B20",any future release must stop at the beam face (y 16312) or at the last architectural riser (y 16412),,,correction layer (S8.7 unchanged),CR-02,none now (A1-F2 is not released); a latent double count with S6 B20 is recorded
+A2-T1 arrival strip,released 0.0192 m3 / 1.517037037 kg on the plans' 11-riser A2-F2,"kept: a 12th riser (section A-A) would fall inside head beam B23, so the plans' arrangement is the physically consistent one",,,correction layer (S8.7 unchanged),CR-03,none
+'T 16' tags,S8.7: zone tag used for the landings,"the tags sit in the winder quarter (main) and on the straight flight (light well): a zone thickness, not landing-specific; the waist stays a sensitivity",,,correction layer (S8.7 unchanged),CR-04,none
+C-F1 outline,0.345 m2 over beam CA (BL015),latent double count with S6 CA if the flight is ever released; CA's level against the flight is still a question,,,correction layer (S8.7 unchanged),CR-05,none now
+double counting of the releases,three plates + 59.020862261 kg,"no overlap with S6 beams, S7 panels or S7 top extensions (rebuilt)",,,correction layer (S8.7 unchanged),CR-06,none

@@ -1,0 +1,2602 @@
+{
+ "definitions": [
+  {
+   "element": "FOOTING",
+   "type": "F",
+   "fields": {
+    "short_bars": "8 Ø 12",
+    "long_bars": "7 Ø 12"
+   },
+   "bars": {
+    "long_bars": [
+     {
+      "count": 7,
+      "dia_mm": 12,
+      "per_m": false
+     }
+    ],
+    "short_bars": [
+     {
+      "count": 8,
+      "dia_mm": 12,
+      "per_m": false
+     }
+    ]
+   },
+   "definition": "COMPUTED_SHADOW_COMPLETE",
+   "weight_kg": null,
+   "weight_state": "BLOCKED",
+   "weight_missing": [
+    "cutting length",
+    "cover",
+    "hooks / bends",
+    "laps / anchorage"
+   ],
+   "never": "kg/m3",
+   "boxed": null
+  },
+  {
+   "element": "FOOTING",
+   "type": "F2",
+   "fields": {
+    "short_bars": "13 Ø 12",
+    "long_bars": "13 Ø 12"
+   },
+   "bars": {
+    "long_bars": [
+     {
+      "count": 13,
+      "dia_mm": 12,
+      "per_m": false
+     }
+    ],
+    "short_bars": [
+     {
+      "count": 13,
+      "dia_mm": 12,
+      "per_m": false
+     }
+    ]
+   },
+   "definition": "COMPUTED_SHADOW_COMPLETE",
+   "weight_kg": null,
+   "weight_state": "BLOCKED",
+   "weight_missing": [
+    "cutting length",
+    "cover",
+    "hooks / bends",
+    "laps / anchorage"
+   ],
+   "never": "kg/m3",
+   "boxed": null
+  },
+  {
+   "element": "FOOTING",
+   "type": "F3",
+   "fields": {
+    "short_bars": "8 Ø 12",
+    "long_bars": "8 Ø 12"
+   },
+   "bars": {
+    "long_bars": [
+     {
+      "count": 8,
+      "dia_mm": 12,
+      "per_m": false
+     }
+    ],
+    "short_bars": [
+     {
+      "count": 8,
+      "dia_mm": 12,
+      "per_m": false
+     }
+    ]
+   },
+   "definition": "COMPUTED_SHADOW_COMPLETE",
+   "weight_kg": null,
+   "weight_state": "BLOCKED",
+   "weight_missing": [
+    "cutting length",
+    "cover",
+    "hooks / bends",
+    "laps / anchorage"
+   ],
+   "never": "kg/m3",
+   "boxed": null
+  },
+  {
+   "element": "FOOTING",
+   "type": "F4",
+   "fields": {
+    "short_bars": "18 Ø 12",
+    "long_bars": "17 Ø 12"
+   },
+   "bars": {
+    "long_bars": [
+     {
+      "count": 17,
+      "dia_mm": 12,
+      "per_m": false
+     }
+    ],
+    "short_bars": [
+     {
+      "count": 18,
+      "dia_mm": 12,
+      "per_m": false
+     }
+    ]
+   },
+   "definition": "COMPUTED_SHADOW_COMPLETE",
+   "weight_kg": null,
+   "weight_state": "BLOCKED",
+   "weight_missing": [
+    "cutting length",
+    "cover",
+    "hooks / bends",
+    "laps / anchorage"
+   ],
+   "never": "kg/m3",
+   "boxed": null
+  },
+  {
+   "element": "FOOTING",
+   "type": "F5",
+   "fields": {
+    "short_bars": "22 Ø 12",
+    "long_bars": "20 Ø 12"
+   },
+   "bars": {
+    "long_bars": [
+     {
+      "count": 20,
+      "dia_mm": 12,
+      "per_m": false
+     }
+    ],
+    "short_bars": [
+     {
+      "count": 22,
+      "dia_mm": 12,
+      "per_m": false
+     }
+    ]
+   },
+   "definition": "COMPUTED_SHADOW_COMPLETE",
+   "weight_kg": null,
+   "weight_state": "BLOCKED",
+   "weight_missing": [
+    "cutting length",
+    "cover",
+    "hooks / bends",
+    "laps / anchorage"
+   ],
+   "never": "kg/m3",
+   "boxed": null
+  },
+  {
+   "element": "FOOTING",
+   "type": "F6",
+   "fields": {
+    "short_bars": "24 Ø 12",
+    "long_bars": "22 Ø 12"
+   },
+   "bars": {
+    "long_bars": [
+     {
+      "count": 22,
+      "dia_mm": 12,
+      "per_m": false
+     }
+    ],
+    "short_bars": [
+     {
+      "count": 24,
+      "dia_mm": 12,
+      "per_m": false
+     }
+    ]
+   },
+   "definition": "COMPUTED_SHADOW_COMPLETE",
+   "weight_kg": null,
+   "weight_state": "BLOCKED",
+   "weight_missing": [
+    "cutting length",
+    "cover",
+    "hooks / bends",
+    "laps / anchorage"
+   ],
+   "never": "kg/m3",
+   "boxed": null
+  },
+  {
+   "element": "FOOTING",
+   "type": "F7",
+   "fields": {
+    "short_bars": "24 Ø 14",
+    "long_bars": "21 Ø 14"
+   },
+   "bars": {
+    "long_bars": [
+     {
+      "count": 21,
+      "dia_mm": 14,
+      "per_m": false
+     }
+    ],
+    "short_bars": [
+     {
+      "count": 24,
+      "dia_mm": 14,
+      "per_m": false
+     }
+    ]
+   },
+   "definition": "COMPUTED_SHADOW_COMPLETE",
+   "weight_kg": null,
+   "weight_state": "BLOCKED",
+   "weight_missing": [
+    "cutting length",
+    "cover",
+    "hooks / bends",
+    "laps / anchorage"
+   ],
+   "never": "kg/m3",
+   "boxed": null
+  },
+  {
+   "element": "FOOTING",
+   "type": "F8",
+   "fields": {
+    "short_bars": "6 Ø 14/m",
+    "long_bars": "6 Ø 14/m"
+   },
+   "bars": {
+    "long_bars": [
+     {
+      "count": 6,
+      "dia_mm": 14,
+      "per_m": true
+     }
+    ],
+    "short_bars": [
+     {
+      "count": 6,
+      "dia_mm": 14,
+      "per_m": true
+     }
+    ]
+   },
+   "definition": "COMPUTED_SHADOW_COMPLETE",
+   "weight_kg": null,
+   "weight_state": "BLOCKED",
+   "weight_missing": [
+    "cutting length",
+    "cover",
+    "hooks / bends",
+    "laps / anchorage"
+   ],
+   "never": "kg/m3",
+   "boxed": [
+    "9 Ø 14/m"
+   ]
+  },
+  {
+   "element": "FOOTING",
+   "type": "F9",
+   "fields": {
+    "short_bars": "28 Ø 14",
+    "long_bars": "24 Ø 14"
+   },
+   "bars": {
+    "long_bars": [
+     {
+      "count": 24,
+      "dia_mm": 14,
+      "per_m": false
+     }
+    ],
+    "short_bars": [
+     {
+      "count": 28,
+      "dia_mm": 14,
+      "per_m": false
+     }
+    ]
+   },
+   "definition": "COMPUTED_SHADOW_COMPLETE",
+   "weight_kg": null,
+   "weight_state": "BLOCKED",
+   "weight_missing": [
+    "cutting length",
+    "cover",
+    "hooks / bends",
+    "laps / anchorage"
+   ],
+   "never": "kg/m3",
+   "boxed": null
+  },
+  {
+   "element": "FOOTING",
+   "type": "F10",
+   "fields": {
+    "short_bars": "20 Ø 14",
+    "long_bars": "10 Ø 14"
+   },
+   "bars": {
+    "long_bars": [
+     {
+      "count": 10,
+      "dia_mm": 14,
+      "per_m": false
+     }
+    ],
+    "short_bars": [
+     {
+      "count": 20,
+      "dia_mm": 14,
+      "per_m": false
+     }
+    ]
+   },
+   "definition": "COMPUTED_SHADOW_COMPLETE",
+   "weight_kg": null,
+   "weight_state": "BLOCKED",
+   "weight_missing": [
+    "cutting length",
+    "cover",
+    "hooks / bends",
+    "laps / anchorage"
+   ],
+   "never": "kg/m3",
+   "boxed": null
+  },
+  {
+   "element": "FOOTING",
+   "type": "F11",
+   "fields": {
+    "short_bars": "32 Ø 14",
+    "long_bars": "14 Ø 14"
+   },
+   "bars": {
+    "long_bars": [
+     {
+      "count": 14,
+      "dia_mm": 14,
+      "per_m": false
+     }
+    ],
+    "short_bars": [
+     {
+      "count": 32,
+      "dia_mm": 14,
+      "per_m": false
+     }
+    ]
+   },
+   "definition": "COMPUTED_SHADOW_COMPLETE",
+   "weight_kg": null,
+   "weight_state": "BLOCKED",
+   "weight_missing": [
+    "cutting length",
+    "cover",
+    "hooks / bends",
+    "laps / anchorage"
+   ],
+   "never": "kg/m3",
+   "boxed": null
+  },
+  {
+   "element": "FOOTING",
+   "type": "F12",
+   "fields": {
+    "short_bars": "10 Ø 14/m",
+    "long_bars": "10 Ø 14/m"
+   },
+   "bars": {
+    "long_bars": [
+     {
+      "count": 10,
+      "dia_mm": 14,
+      "per_m": true
+     }
+    ],
+    "short_bars": [
+     {
+      "count": 10,
+      "dia_mm": 14,
+      "per_m": true
+     }
+    ]
+   },
+   "definition": "COMPUTED_SHADOW_COMPLETE",
+   "weight_kg": null,
+   "weight_state": "BLOCKED",
+   "weight_missing": [
+    "cutting length",
+    "cover",
+    "hooks / bends",
+    "laps / anchorage"
+   ],
+   "never": "kg/m3",
+   "boxed": [
+    "9 Ø 16/m"
+   ]
+  },
+  {
+   "element": "FOOTING",
+   "type": "F13",
+   "fields": {
+    "short_bars": "7 Ø 14/m",
+    "long_bars": "7 Ø 14/m"
+   },
+   "bars": {
+    "long_bars": [
+     {
+      "count": 7,
+      "dia_mm": 14,
+      "per_m": true
+     }
+    ],
+    "short_bars": [
+     {
+      "count": 7,
+      "dia_mm": 14,
+      "per_m": true
+     }
+    ]
+   },
+   "definition": "COMPUTED_SHADOW_COMPLETE",
+   "weight_kg": null,
+   "weight_state": "BLOCKED",
+   "weight_missing": [
+    "cutting length",
+    "cover",
+    "hooks / bends",
+    "laps / anchorage"
+   ],
+   "never": "kg/m3",
+   "boxed": [
+    "8 Ø 16/m"
+   ]
+  },
+  {
+   "element": "FOOTING",
+   "type": "F14",
+   "fields": {
+    "short_bars": "6 Ø 14/m",
+    "long_bars": "6 Ø 14/m"
+   },
+   "bars": {
+    "long_bars": [
+     {
+      "count": 6,
+      "dia_mm": 14,
+      "per_m": true
+     }
+    ],
+    "short_bars": [
+     {
+      "count": 6,
+      "dia_mm": 14,
+      "per_m": true
+     }
+    ]
+   },
+   "definition": "COMPUTED_SHADOW_COMPLETE",
+   "weight_kg": null,
+   "weight_state": "BLOCKED",
+   "weight_missing": [
+    "cutting length",
+    "cover",
+    "hooks / bends",
+    "laps / anchorage"
+   ],
+   "never": "kg/m3",
+   "boxed": [
+    "9 Ø 14/m"
+   ]
+  },
+  {
+   "element": "FOOTING",
+   "type": "F15",
+   "fields": {
+    "short_bars": "15 Ø 12",
+    "long_bars": "8 Ø 12"
+   },
+   "bars": {
+    "long_bars": [
+     {
+      "count": 8,
+      "dia_mm": 12,
+      "per_m": false
+     }
+    ],
+    "short_bars": [
+     {
+      "count": 15,
+      "dia_mm": 12,
+      "per_m": false
+     }
+    ]
+   },
+   "definition": "COMPUTED_SHADOW_COMPLETE",
+   "weight_kg": null,
+   "weight_state": "BLOCKED",
+   "weight_missing": [
+    "cutting length",
+    "cover",
+    "hooks / bends",
+    "laps / anchorage"
+   ],
+   "never": "kg/m3",
+   "boxed": null
+  },
+  {
+   "element": "FOOTING",
+   "type": "FF",
+   "fields": {
+    "short_bars": "6 9 Ø Ø 14/m 14/m",
+    "long_bars": "6 9 Ø Ø 14/m 14/m"
+   },
+   "bars": {},
+   "definition": "BLOCKED",
+   "weight_kg": null,
+   "weight_state": "BLOCKED",
+   "weight_missing": [
+    "cutting length",
+    "cover",
+    "hooks / bends",
+    "laps / anchorage"
+   ],
+   "never": "kg/m3",
+   "boxed": null
+  },
+  {
+   "element": "FOOTING",
+   "type": "FN",
+   "fields": {
+    "short_bars": "8 Ø 12",
+    "long_bars": "8 Ø 12"
+   },
+   "bars": {
+    "long_bars": [
+     {
+      "count": 8,
+      "dia_mm": 12,
+      "per_m": false
+     }
+    ],
+    "short_bars": [
+     {
+      "count": 8,
+      "dia_mm": 12,
+      "per_m": false
+     }
+    ]
+   },
+   "definition": "COMPUTED_SHADOW_COMPLETE",
+   "weight_kg": null,
+   "weight_state": "BLOCKED",
+   "weight_missing": [
+    "cutting length",
+    "cover",
+    "hooks / bends",
+    "laps / anchorage"
+   ],
+   "never": "kg/m3",
+   "boxed": null
+  },
+  {
+   "element": "COLUMN",
+   "type": "C",
+   "fields": {
+    "FOUNDATION": "8 Ø 16",
+    "GROUND FLOOR": "8 Ø 16"
+   },
+   "bars": {
+    "FOUNDATION": [
+     {
+      "count": 8,
+      "dia_mm": 16,
+      "per_m": false
+     }
+    ],
+    "GROUND FLOOR": [
+     {
+      "count": 8,
+      "dia_mm": 16,
+      "per_m": false
+     }
+    ]
+   },
+   "definition": "COMPUTED_SHADOW_COMPLETE",
+   "weight_kg": null,
+   "weight_state": "BLOCKED",
+   "weight_missing": [
+    "cutting length",
+    "cover",
+    "hooks / bends",
+    "laps / anchorage"
+   ],
+   "never": "kg/m3"
+  },
+  {
+   "element": "COLUMN",
+   "type": "C1",
+   "fields": {
+    "FOUNDATION": "8 Ø 16",
+    "GROUND FLOOR": "8 Ø 16",
+    "1ST FLOOR": "6 Ø 16",
+    "2ND FLOOR & TOP": "6 Ø 16"
+   },
+   "bars": {
+    "1ST FLOOR": [
+     {
+      "count": 6,
+      "dia_mm": 16,
+      "per_m": false
+     }
+    ],
+    "2ND FLOOR & TOP": [
+     {
+      "count": 6,
+      "dia_mm": 16,
+      "per_m": false
+     }
+    ],
+    "FOUNDATION": [
+     {
+      "count": 8,
+      "dia_mm": 16,
+      "per_m": false
+     }
+    ],
+    "GROUND FLOOR": [
+     {
+      "count": 8,
+      "dia_mm": 16,
+      "per_m": false
+     }
+    ]
+   },
+   "definition": "COMPUTED_SHADOW_COMPLETE",
+   "weight_kg": null,
+   "weight_state": "BLOCKED",
+   "weight_missing": [
+    "cutting length",
+    "cover",
+    "hooks / bends",
+    "laps / anchorage"
+   ],
+   "never": "kg/m3"
+  },
+  {
+   "element": "COLUMN",
+   "type": "C2",
+   "fields": {
+    "FOUNDATION": "8 Ø 16",
+    "GROUND FLOOR": "8 Ø 16",
+    "1ST FLOOR": "8 Ø 16",
+    "2ND FLOOR & TOP": "6 Ø 16"
+   },
+   "bars": {
+    "1ST FLOOR": [
+     {
+      "count": 8,
+      "dia_mm": 16,
+      "per_m": false
+     }
+    ],
+    "2ND FLOOR & TOP": [
+     {
+      "count": 6,
+      "dia_mm": 16,
+      "per_m": false
+     }
+    ],
+    "FOUNDATION": [
+     {
+      "count": 8,
+      "dia_mm": 16,
+      "per_m": false
+     }
+    ],
+    "GROUND FLOOR": [
+     {
+      "count": 8,
+      "dia_mm": 16,
+      "per_m": false
+     }
+    ]
+   },
+   "definition": "COMPUTED_SHADOW_COMPLETE",
+   "weight_kg": null,
+   "weight_state": "BLOCKED",
+   "weight_missing": [
+    "cutting length",
+    "cover",
+    "hooks / bends",
+    "laps / anchorage"
+   ],
+   "never": "kg/m3"
+  },
+  {
+   "element": "COLUMN",
+   "type": "C3",
+   "fields": {
+    "FOUNDATION": "8 Ø 16",
+    "GROUND FLOOR": "8 Ø 16",
+    "1ST FLOOR": "6 Ø 16",
+    "2ND FLOOR & TOP": "6 Ø 16"
+   },
+   "bars": {
+    "1ST FLOOR": [
+     {
+      "count": 6,
+      "dia_mm": 16,
+      "per_m": false
+     }
+    ],
+    "2ND FLOOR & TOP": [
+     {
+      "count": 6,
+      "dia_mm": 16,
+      "per_m": false
+     }
+    ],
+    "FOUNDATION": [
+     {
+      "count": 8,
+      "dia_mm": 16,
+      "per_m": false
+     }
+    ],
+    "GROUND FLOOR": [
+     {
+      "count": 8,
+      "dia_mm": 16,
+      "per_m": false
+     }
+    ]
+   },
+   "definition": "COMPUTED_SHADOW_COMPLETE",
+   "weight_kg": null,
+   "weight_state": "BLOCKED",
+   "weight_missing": [
+    "cutting length",
+    "cover",
+    "hooks / bends",
+    "laps / anchorage"
+   ],
+   "never": "kg/m3"
+  },
+  {
+   "element": "COLUMN",
+   "type": "C4",
+   "fields": {
+    "FOUNDATION": "8 Ø 16",
+    "GROUND FLOOR": "8 Ø 16",
+    "1ST FLOOR": "8 Ø 16",
+    "2ND FLOOR & TOP": "6 Ø 16"
+   },
+   "bars": {
+    "1ST FLOOR": [
+     {
+      "count": 8,
+      "dia_mm": 16,
+      "per_m": false
+     }
+    ],
+    "2ND FLOOR & TOP": [
+     {
+      "count": 6,
+      "dia_mm": 16,
+      "per_m": false
+     }
+    ],
+    "FOUNDATION": [
+     {
+      "count": 8,
+      "dia_mm": 16,
+      "per_m": false
+     }
+    ],
+    "GROUND FLOOR": [
+     {
+      "count": 8,
+      "dia_mm": 16,
+      "per_m": false
+     }
+    ]
+   },
+   "definition": "COMPUTED_SHADOW_COMPLETE",
+   "weight_kg": null,
+   "weight_state": "BLOCKED",
+   "weight_missing": [
+    "cutting length",
+    "cover",
+    "hooks / bends",
+    "laps / anchorage"
+   ],
+   "never": "kg/m3"
+  },
+  {
+   "element": "COLUMN",
+   "type": "C5",
+   "fields": {
+    "FOUNDATION": "10 Ø 16",
+    "GROUND FLOOR": "10 Ø 16",
+    "1ST FLOOR": "8 Ø 16",
+    "2ND FLOOR & TOP": "6 Ø 16"
+   },
+   "bars": {
+    "1ST FLOOR": [
+     {
+      "count": 8,
+      "dia_mm": 16,
+      "per_m": false
+     }
+    ],
+    "2ND FLOOR & TOP": [
+     {
+      "count": 6,
+      "dia_mm": 16,
+      "per_m": false
+     }
+    ],
+    "FOUNDATION": [
+     {
+      "count": 10,
+      "dia_mm": 16,
+      "per_m": false
+     }
+    ],
+    "GROUND FLOOR": [
+     {
+      "count": 10,
+      "dia_mm": 16,
+      "per_m": false
+     }
+    ]
+   },
+   "definition": "COMPUTED_SHADOW_COMPLETE",
+   "weight_kg": null,
+   "weight_state": "BLOCKED",
+   "weight_missing": [
+    "cutting length",
+    "cover",
+    "hooks / bends",
+    "laps / anchorage"
+   ],
+   "never": "kg/m3"
+  },
+  {
+   "element": "COLUMN",
+   "type": "C6",
+   "fields": {
+    "FOUNDATION": "10 Ø 16",
+    "GROUND FLOOR": "10 Ø 16",
+    "1ST FLOOR": "8 Ø 16",
+    "2ND FLOOR & TOP": "8 Ø 16"
+   },
+   "bars": {
+    "1ST FLOOR": [
+     {
+      "count": 8,
+      "dia_mm": 16,
+      "per_m": false
+     }
+    ],
+    "2ND FLOOR & TOP": [
+     {
+      "count": 8,
+      "dia_mm": 16,
+      "per_m": false
+     }
+    ],
+    "FOUNDATION": [
+     {
+      "count": 10,
+      "dia_mm": 16,
+      "per_m": false
+     }
+    ],
+    "GROUND FLOOR": [
+     {
+      "count": 10,
+      "dia_mm": 16,
+      "per_m": false
+     }
+    ]
+   },
+   "definition": "COMPUTED_SHADOW_COMPLETE",
+   "weight_kg": null,
+   "weight_state": "BLOCKED",
+   "weight_missing": [
+    "cutting length",
+    "cover",
+    "hooks / bends",
+    "laps / anchorage"
+   ],
+   "never": "kg/m3"
+  },
+  {
+   "element": "COLUMN",
+   "type": "C7",
+   "fields": {
+    "FOUNDATION": "12 Ø 16",
+    "GROUND FLOOR": "12 Ø 16",
+    "1ST FLOOR": "10 Ø 16",
+    "2ND FLOOR & TOP": "8 Ø 16"
+   },
+   "bars": {
+    "1ST FLOOR": [
+     {
+      "count": 10,
+      "dia_mm": 16,
+      "per_m": false
+     }
+    ],
+    "2ND FLOOR & TOP": [
+     {
+      "count": 8,
+      "dia_mm": 16,
+      "per_m": false
+     }
+    ],
+    "FOUNDATION": [
+     {
+      "count": 12,
+      "dia_mm": 16,
+      "per_m": false
+     }
+    ],
+    "GROUND FLOOR": [
+     {
+      "count": 12,
+      "dia_mm": 16,
+      "per_m": false
+     }
+    ]
+   },
+   "definition": "COMPUTED_SHADOW_COMPLETE",
+   "weight_kg": null,
+   "weight_state": "BLOCKED",
+   "weight_missing": [
+    "cutting length",
+    "cover",
+    "hooks / bends",
+    "laps / anchorage"
+   ],
+   "never": "kg/m3"
+  },
+  {
+   "element": "COLUMN",
+   "type": "C8",
+   "fields": {
+    "FOUNDATION": "12 Ø 16",
+    "GROUND FLOOR": "12 Ø 16",
+    "1ST FLOOR": "12 Ø 16",
+    "2ND FLOOR & TOP": "10 Ø 16"
+   },
+   "bars": {
+    "1ST FLOOR": [
+     {
+      "count": 12,
+      "dia_mm": 16,
+      "per_m": false
+     }
+    ],
+    "2ND FLOOR & TOP": [
+     {
+      "count": 10,
+      "dia_mm": 16,
+      "per_m": false
+     }
+    ],
+    "FOUNDATION": [
+     {
+      "count": 12,
+      "dia_mm": 16,
+      "per_m": false
+     }
+    ],
+    "GROUND FLOOR": [
+     {
+      "count": 12,
+      "dia_mm": 16,
+      "per_m": false
+     }
+    ]
+   },
+   "definition": "COMPUTED_SHADOW_COMPLETE",
+   "weight_kg": null,
+   "weight_state": "BLOCKED",
+   "weight_missing": [
+    "cutting length",
+    "cover",
+    "hooks / bends",
+    "laps / anchorage"
+   ],
+   "never": "kg/m3"
+  },
+  {
+   "element": "COLUMN",
+   "type": "C9",
+   "fields": {
+    "FOUNDATION": "14 Ø 16",
+    "GROUND FLOOR": "14 Ø 16",
+    "1ST FLOOR": "12 Ø 16",
+    "2ND FLOOR & TOP": "10 Ø 16"
+   },
+   "bars": {
+    "1ST FLOOR": [
+     {
+      "count": 12,
+      "dia_mm": 16,
+      "per_m": false
+     }
+    ],
+    "2ND FLOOR & TOP": [
+     {
+      "count": 10,
+      "dia_mm": 16,
+      "per_m": false
+     }
+    ],
+    "FOUNDATION": [
+     {
+      "count": 14,
+      "dia_mm": 16,
+      "per_m": false
+     }
+    ],
+    "GROUND FLOOR": [
+     {
+      "count": 14,
+      "dia_mm": 16,
+      "per_m": false
+     }
+    ]
+   },
+   "definition": "COMPUTED_SHADOW_COMPLETE",
+   "weight_kg": null,
+   "weight_state": "BLOCKED",
+   "weight_missing": [
+    "cutting length",
+    "cover",
+    "hooks / bends",
+    "laps / anchorage"
+   ],
+   "never": "kg/m3"
+  },
+  {
+   "element": "COLUMN",
+   "type": "C10",
+   "fields": {
+    "FOUNDATION": "10 Ø 16",
+    "GROUND FLOOR": "10 Ø 16"
+   },
+   "bars": {
+    "FOUNDATION": [
+     {
+      "count": 10,
+      "dia_mm": 16,
+      "per_m": false
+     }
+    ],
+    "GROUND FLOOR": [
+     {
+      "count": 10,
+      "dia_mm": 16,
+      "per_m": false
+     }
+    ]
+   },
+   "definition": "COMPUTED_SHADOW_COMPLETE",
+   "weight_kg": null,
+   "weight_state": "BLOCKED",
+   "weight_missing": [
+    "cutting length",
+    "cover",
+    "hooks / bends",
+    "laps / anchorage"
+   ],
+   "never": "kg/m3"
+  },
+  {
+   "element": "COLUMN",
+   "type": "C11",
+   "fields": {
+    "FOUNDATION": "14 Ø 16",
+    "GROUND FLOOR": "14 Ø 16"
+   },
+   "bars": {
+    "FOUNDATION": [
+     {
+      "count": 14,
+      "dia_mm": 16,
+      "per_m": false
+     }
+    ],
+    "GROUND FLOOR": [
+     {
+      "count": 14,
+      "dia_mm": 16,
+      "per_m": false
+     }
+    ]
+   },
+   "definition": "COMPUTED_SHADOW_COMPLETE",
+   "weight_kg": null,
+   "weight_state": "BLOCKED",
+   "weight_missing": [
+    "cutting length",
+    "cover",
+    "hooks / bends",
+    "laps / anchorage"
+   ],
+   "never": "kg/m3"
+  },
+  {
+   "element": "COLUMN",
+   "type": "CN",
+   "fields": {
+    "FOUNDATION": "4 Ø 14"
+   },
+   "bars": {
+    "FOUNDATION": [
+     {
+      "count": 4,
+      "dia_mm": 14,
+      "per_m": false
+     }
+    ]
+   },
+   "definition": "COMPUTED_SHADOW_COMPLETE",
+   "weight_kg": null,
+   "weight_state": "BLOCKED",
+   "weight_missing": [
+    "cutting length",
+    "cover",
+    "hooks / bends",
+    "laps / anchorage"
+   ],
+   "never": "kg/m3"
+  },
+  {
+   "element": "BEAM",
+   "type": "B1",
+   "fields": {
+    "bottom": "2 Ø 14",
+    "top": "2 Ø 12",
+    "stirrups": "6 Ø 8"
+   },
+   "bars": {
+    "bottom": [
+     {
+      "count": 2,
+      "dia_mm": 14,
+      "per_m": false
+     }
+    ],
+    "stirrups": [
+     {
+      "count": 6,
+      "dia_mm": 8,
+      "per_m": false
+     }
+    ],
+    "top": [
+     {
+      "count": 2,
+      "dia_mm": 12,
+      "per_m": false
+     }
+    ]
+   },
+   "definition": "COMPUTED_SHADOW_COMPLETE",
+   "weight_kg": null,
+   "weight_state": "BLOCKED",
+   "weight_missing": [
+    "cutting length",
+    "cover",
+    "hooks / bends",
+    "laps / anchorage"
+   ],
+   "never": "kg/m3"
+  },
+  {
+   "element": "BEAM",
+   "type": "B2",
+   "fields": {
+    "bottom": "3 Ø 16",
+    "top": "2 Ø 12",
+    "stirrups": "6 Ø 8"
+   },
+   "bars": {
+    "bottom": [
+     {
+      "count": 3,
+      "dia_mm": 16,
+      "per_m": false
+     }
+    ],
+    "stirrups": [
+     {
+      "count": 6,
+      "dia_mm": 8,
+      "per_m": false
+     }
+    ],
+    "top": [
+     {
+      "count": 2,
+      "dia_mm": 12,
+      "per_m": false
+     }
+    ]
+   },
+   "definition": "COMPUTED_SHADOW_COMPLETE",
+   "weight_kg": null,
+   "weight_state": "BLOCKED",
+   "weight_missing": [
+    "cutting length",
+    "cover",
+    "hooks / bends",
+    "laps / anchorage"
+   ],
+   "never": "kg/m3"
+  },
+  {
+   "element": "BEAM",
+   "type": "B3",
+   "fields": {
+    "bottom": "4 Ø 16",
+    "top": "2 Ø 12",
+    "stirrups": "6 Ø 8"
+   },
+   "bars": {
+    "bottom": [
+     {
+      "count": 4,
+      "dia_mm": 16,
+      "per_m": false
+     }
+    ],
+    "stirrups": [
+     {
+      "count": 6,
+      "dia_mm": 8,
+      "per_m": false
+     }
+    ],
+    "top": [
+     {
+      "count": 2,
+      "dia_mm": 12,
+      "per_m": false
+     }
+    ]
+   },
+   "definition": "COMPUTED_SHADOW_COMPLETE",
+   "weight_kg": null,
+   "weight_state": "BLOCKED",
+   "weight_missing": [
+    "cutting length",
+    "cover",
+    "hooks / bends",
+    "laps / anchorage"
+   ],
+   "never": "kg/m3"
+  },
+  {
+   "element": "BEAM",
+   "type": "B4",
+   "fields": {
+    "bottom": "4 Ø 16",
+    "top": "2 Ø 12",
+    "stirrups": "6 Ø 8"
+   },
+   "bars": {
+    "bottom": [
+     {
+      "count": 4,
+      "dia_mm": 16,
+      "per_m": false
+     }
+    ],
+    "stirrups": [
+     {
+      "count": 6,
+      "dia_mm": 8,
+      "per_m": false
+     }
+    ],
+    "top": [
+     {
+      "count": 2,
+      "dia_mm": 12,
+      "per_m": false
+     }
+    ]
+   },
+   "definition": "COMPUTED_SHADOW_COMPLETE",
+   "weight_kg": null,
+   "weight_state": "BLOCKED",
+   "weight_missing": [
+    "cutting length",
+    "cover",
+    "hooks / bends",
+    "laps / anchorage"
+   ],
+   "never": "kg/m3"
+  },
+  {
+   "element": "BEAM",
+   "type": "B5",
+   "fields": {
+    "bottom": "4 Ø 18",
+    "top": "2 Ø 12",
+    "stirrups": "6 Ø 8"
+   },
+   "bars": {
+    "bottom": [
+     {
+      "count": 4,
+      "dia_mm": 18,
+      "per_m": false
+     }
+    ],
+    "stirrups": [
+     {
+      "count": 6,
+      "dia_mm": 8,
+      "per_m": false
+     }
+    ],
+    "top": [
+     {
+      "count": 2,
+      "dia_mm": 12,
+      "per_m": false
+     }
+    ]
+   },
+   "definition": "COMPUTED_SHADOW_COMPLETE",
+   "weight_kg": null,
+   "weight_state": "BLOCKED",
+   "weight_missing": [
+    "cutting length",
+    "cover",
+    "hooks / bends",
+    "laps / anchorage"
+   ],
+   "never": "kg/m3"
+  },
+  {
+   "element": "BEAM",
+   "type": "B6",
+   "fields": {
+    "bottom": "5 Ø 18",
+    "top": "2 Ø 12",
+    "stirrups": "6 Ø 8"
+   },
+   "bars": {
+    "bottom": [
+     {
+      "count": 5,
+      "dia_mm": 18,
+      "per_m": false
+     }
+    ],
+    "stirrups": [
+     {
+      "count": 6,
+      "dia_mm": 8,
+      "per_m": false
+     }
+    ],
+    "top": [
+     {
+      "count": 2,
+      "dia_mm": 12,
+      "per_m": false
+     }
+    ]
+   },
+   "definition": "COMPUTED_SHADOW_COMPLETE",
+   "weight_kg": null,
+   "weight_state": "BLOCKED",
+   "weight_missing": [
+    "cutting length",
+    "cover",
+    "hooks / bends",
+    "laps / anchorage"
+   ],
+   "never": "kg/m3"
+  },
+  {
+   "element": "BEAM",
+   "type": "B7",
+   "fields": {
+    "bottom": "3 Ø 16",
+    "top": "2 Ø 12",
+    "stirrups": "6 Ø 8"
+   },
+   "bars": {
+    "bottom": [
+     {
+      "count": 3,
+      "dia_mm": 16,
+      "per_m": false
+     }
+    ],
+    "stirrups": [
+     {
+      "count": 6,
+      "dia_mm": 8,
+      "per_m": false
+     }
+    ],
+    "top": [
+     {
+      "count": 2,
+      "dia_mm": 12,
+      "per_m": false
+     }
+    ]
+   },
+   "definition": "COMPUTED_SHADOW_COMPLETE",
+   "weight_kg": null,
+   "weight_state": "BLOCKED",
+   "weight_missing": [
+    "cutting length",
+    "cover",
+    "hooks / bends",
+    "laps / anchorage"
+   ],
+   "never": "kg/m3"
+  },
+  {
+   "element": "BEAM",
+   "type": "B8",
+   "fields": {
+    "bottom": "4 Ø 16",
+    "top": "2 Ø 12",
+    "stirrups": "6 Ø 8"
+   },
+   "bars": {
+    "bottom": [
+     {
+      "count": 4,
+      "dia_mm": 16,
+      "per_m": false
+     }
+    ],
+    "stirrups": [
+     {
+      "count": 6,
+      "dia_mm": 8,
+      "per_m": false
+     }
+    ],
+    "top": [
+     {
+      "count": 2,
+      "dia_mm": 12,
+      "per_m": false
+     }
+    ]
+   },
+   "definition": "COMPUTED_SHADOW_COMPLETE",
+   "weight_kg": null,
+   "weight_state": "BLOCKED",
+   "weight_missing": [
+    "cutting length",
+    "cover",
+    "hooks / bends",
+    "laps / anchorage"
+   ],
+   "never": "kg/m3"
+  },
+  {
+   "element": "BEAM",
+   "type": "B9",
+   "fields": {
+    "bottom": "4 Ø 18",
+    "top": "2 Ø 12",
+    "stirrups": "6 Ø 8"
+   },
+   "bars": {
+    "bottom": [
+     {
+      "count": 4,
+      "dia_mm": 18,
+      "per_m": false
+     }
+    ],
+    "stirrups": [
+     {
+      "count": 6,
+      "dia_mm": 8,
+      "per_m": false
+     }
+    ],
+    "top": [
+     {
+      "count": 2,
+      "dia_mm": 12,
+      "per_m": false
+     }
+    ]
+   },
+   "definition": "COMPUTED_SHADOW_COMPLETE",
+   "weight_kg": null,
+   "weight_state": "BLOCKED",
+   "weight_missing": [
+    "cutting length",
+    "cover",
+    "hooks / bends",
+    "laps / anchorage"
+   ],
+   "never": "kg/m3"
+  },
+  {
+   "element": "BEAM",
+   "type": "B10",
+   "fields": {
+    "bottom": "5 Ø 18",
+    "top": "2 Ø 12",
+    "stirrups": "6 Ø 8"
+   },
+   "bars": {
+    "bottom": [
+     {
+      "count": 5,
+      "dia_mm": 18,
+      "per_m": false
+     }
+    ],
+    "stirrups": [
+     {
+      "count": 6,
+      "dia_mm": 8,
+      "per_m": false
+     }
+    ],
+    "top": [
+     {
+      "count": 2,
+      "dia_mm": 12,
+      "per_m": false
+     }
+    ]
+   },
+   "definition": "COMPUTED_SHADOW_COMPLETE",
+   "weight_kg": null,
+   "weight_state": "BLOCKED",
+   "weight_missing": [
+    "cutting length",
+    "cover",
+    "hooks / bends",
+    "laps / anchorage"
+   ],
+   "never": "kg/m3"
+  },
+  {
+   "element": "BEAM",
+   "type": "B11",
+   "fields": {
+    "bottom": "6 Ø 18",
+    "top": "2 Ø 12",
+    "stirrups": "6 Ø 8"
+   },
+   "bars": {
+    "bottom": [
+     {
+      "count": 6,
+      "dia_mm": 18,
+      "per_m": false
+     }
+    ],
+    "stirrups": [
+     {
+      "count": 6,
+      "dia_mm": 8,
+      "per_m": false
+     }
+    ],
+    "top": [
+     {
+      "count": 2,
+      "dia_mm": 12,
+      "per_m": false
+     }
+    ]
+   },
+   "definition": "COMPUTED_SHADOW_COMPLETE",
+   "weight_kg": null,
+   "weight_state": "BLOCKED",
+   "weight_missing": [
+    "cutting length",
+    "cover",
+    "hooks / bends",
+    "laps / anchorage"
+   ],
+   "never": "kg/m3"
+  },
+  {
+   "element": "BEAM",
+   "type": "B12",
+   "fields": {
+    "bottom": "6 Ø 18",
+    "top": "2 Ø 14",
+    "stirrups": "6 Ø 8"
+   },
+   "bars": {
+    "bottom": [
+     {
+      "count": 6,
+      "dia_mm": 18,
+      "per_m": false
+     }
+    ],
+    "stirrups": [
+     {
+      "count": 6,
+      "dia_mm": 8,
+      "per_m": false
+     }
+    ],
+    "top": [
+     {
+      "count": 2,
+      "dia_mm": 14,
+      "per_m": false
+     }
+    ]
+   },
+   "definition": "COMPUTED_SHADOW_COMPLETE",
+   "weight_kg": null,
+   "weight_state": "BLOCKED",
+   "weight_missing": [
+    "cutting length",
+    "cover",
+    "hooks / bends",
+    "laps / anchorage"
+   ],
+   "never": "kg/m3"
+  },
+  {
+   "element": "BEAM",
+   "type": "B13",
+   "fields": {
+    "bottom": "7 Ø 18",
+    "top": "2 Ø 14",
+    "stirrups": "7 Ø 8"
+   },
+   "bars": {
+    "bottom": [
+     {
+      "count": 7,
+      "dia_mm": 18,
+      "per_m": false
+     }
+    ],
+    "stirrups": [
+     {
+      "count": 7,
+      "dia_mm": 8,
+      "per_m": false
+     }
+    ],
+    "top": [
+     {
+      "count": 2,
+      "dia_mm": 14,
+      "per_m": false
+     }
+    ]
+   },
+   "definition": "COMPUTED_SHADOW_COMPLETE",
+   "weight_kg": null,
+   "weight_state": "BLOCKED",
+   "weight_missing": [
+    "cutting length",
+    "cover",
+    "hooks / bends",
+    "laps / anchorage"
+   ],
+   "never": "kg/m3"
+  },
+  {
+   "element": "BEAM",
+   "type": "B14",
+   "fields": {
+    "bottom": "4 Ø 18",
+    "top": "2 Ø 12",
+    "stirrups": "7 Ø 8"
+   },
+   "bars": {
+    "bottom": [
+     {
+      "count": 4,
+      "dia_mm": 18,
+      "per_m": false
+     }
+    ],
+    "stirrups": [
+     {
+      "count": 7,
+      "dia_mm": 8,
+      "per_m": false
+     }
+    ],
+    "top": [
+     {
+      "count": 2,
+      "dia_mm": 12,
+      "per_m": false
+     }
+    ]
+   },
+   "definition": "COMPUTED_SHADOW_COMPLETE",
+   "weight_kg": null,
+   "weight_state": "BLOCKED",
+   "weight_missing": [
+    "cutting length",
+    "cover",
+    "hooks / bends",
+    "laps / anchorage"
+   ],
+   "never": "kg/m3"
+  },
+  {
+   "element": "BEAM",
+   "type": "B15",
+   "fields": {
+    "bottom": "4 Ø 16",
+    "top": "6 Ø 18",
+    "stirrups": "10 Ø 8"
+   },
+   "bars": {
+    "bottom": [
+     {
+      "count": 4,
+      "dia_mm": 16,
+      "per_m": false
+     }
+    ],
+    "stirrups": [
+     {
+      "count": 10,
+      "dia_mm": 8,
+      "per_m": false
+     }
+    ],
+    "top": [
+     {
+      "count": 6,
+      "dia_mm": 18,
+      "per_m": false
+     }
+    ]
+   },
+   "definition": "COMPUTED_SHADOW_COMPLETE",
+   "weight_kg": null,
+   "weight_state": "BLOCKED",
+   "weight_missing": [
+    "cutting length",
+    "cover",
+    "hooks / bends",
+    "laps / anchorage"
+   ],
+   "never": "kg/m3"
+  },
+  {
+   "element": "BEAM",
+   "type": "B16",
+   "fields": {
+    "bottom": "5 Ø 18",
+    "top": "3 Ø 14",
+    "stirrups": "10 Ø 10"
+   },
+   "bars": {
+    "bottom": [
+     {
+      "count": 5,
+      "dia_mm": 18,
+      "per_m": false
+     }
+    ],
+    "stirrups": [
+     {
+      "count": 10,
+      "dia_mm": 10,
+      "per_m": false
+     }
+    ],
+    "top": [
+     {
+      "count": 3,
+      "dia_mm": 14,
+      "per_m": false
+     }
+    ]
+   },
+   "definition": "COMPUTED_SHADOW_COMPLETE",
+   "weight_kg": null,
+   "weight_state": "BLOCKED",
+   "weight_missing": [
+    "cutting length",
+    "cover",
+    "hooks / bends",
+    "laps / anchorage"
+   ],
+   "never": "kg/m3"
+  },
+  {
+   "element": "BEAM",
+   "type": "B17",
+   "fields": {
+    "bottom": "10 Ø 18",
+    "top": "4 Ø 14",
+    "stirrups": "6 Ø 8"
+   },
+   "bars": {
+    "bottom": [
+     {
+      "count": 10,
+      "dia_mm": 18,
+      "per_m": false
+     }
+    ],
+    "stirrups": [
+     {
+      "count": 6,
+      "dia_mm": 8,
+      "per_m": false
+     }
+    ],
+    "top": [
+     {
+      "count": 4,
+      "dia_mm": 14,
+      "per_m": false
+     }
+    ]
+   },
+   "definition": "COMPUTED_SHADOW_COMPLETE",
+   "weight_kg": null,
+   "weight_state": "BLOCKED",
+   "weight_missing": [
+    "cutting length",
+    "cover",
+    "hooks / bends",
+    "laps / anchorage"
+   ],
+   "never": "kg/m3"
+  },
+  {
+   "element": "BEAM",
+   "type": "B18",
+   "fields": {
+    "bottom": "10 Ø 18",
+    "top": "3 Ø 14",
+    "stirrups": "5 Ø 8"
+   },
+   "bars": {
+    "bottom": [
+     {
+      "count": 10,
+      "dia_mm": 18,
+      "per_m": false
+     }
+    ],
+    "stirrups": [
+     {
+      "count": 5,
+      "dia_mm": 8,
+      "per_m": false
+     }
+    ],
+    "top": [
+     {
+      "count": 3,
+      "dia_mm": 14,
+      "per_m": false
+     }
+    ]
+   },
+   "definition": "COMPUTED_SHADOW_COMPLETE",
+   "weight_kg": null,
+   "weight_state": "BLOCKED",
+   "weight_missing": [
+    "cutting length",
+    "cover",
+    "hooks / bends",
+    "laps / anchorage"
+   ],
+   "never": "kg/m3"
+  },
+  {
+   "element": "BEAM",
+   "type": "B19",
+   "fields": {
+    "bottom": "11 Ø 18",
+    "top": "4 Ø 14",
+    "stirrups": "10 Ø 10"
+   },
+   "bars": {
+    "bottom": [
+     {
+      "count": 11,
+      "dia_mm": 18,
+      "per_m": false
+     }
+    ],
+    "stirrups": [
+     {
+      "count": 10,
+      "dia_mm": 10,
+      "per_m": false
+     }
+    ],
+    "top": [
+     {
+      "count": 4,
+      "dia_mm": 14,
+      "per_m": false
+     }
+    ]
+   },
+   "definition": "COMPUTED_SHADOW_COMPLETE",
+   "weight_kg": null,
+   "weight_state": "BLOCKED",
+   "weight_missing": [
+    "cutting length",
+    "cover",
+    "hooks / bends",
+    "laps / anchorage"
+   ],
+   "never": "kg/m3"
+  },
+  {
+   "element": "BEAM",
+   "type": "B20",
+   "fields": {
+    "bottom": "11 Ø 18",
+    "top": "11 Ø 18",
+    "stirrups": "10 Ø 8"
+   },
+   "bars": {
+    "bottom": [
+     {
+      "count": 11,
+      "dia_mm": 18,
+      "per_m": false
+     }
+    ],
+    "stirrups": [
+     {
+      "count": 10,
+      "dia_mm": 8,
+      "per_m": false
+     }
+    ],
+    "top": [
+     {
+      "count": 11,
+      "dia_mm": 18,
+      "per_m": false
+     }
+    ]
+   },
+   "definition": "COMPUTED_SHADOW_COMPLETE",
+   "weight_kg": null,
+   "weight_state": "BLOCKED",
+   "weight_missing": [
+    "cutting length",
+    "cover",
+    "hooks / bends",
+    "laps / anchorage"
+   ],
+   "never": "kg/m3"
+  },
+  {
+   "element": "BEAM",
+   "type": "B21",
+   "fields": {
+    "bottom": "12 Ø 18",
+    "top": "4 Ø 14",
+    "stirrups": "10 Ø 10"
+   },
+   "bars": {
+    "bottom": [
+     {
+      "count": 12,
+      "dia_mm": 18,
+      "per_m": false
+     }
+    ],
+    "stirrups": [
+     {
+      "count": 10,
+      "dia_mm": 10,
+      "per_m": false
+     }
+    ],
+    "top": [
+     {
+      "count": 4,
+      "dia_mm": 14,
+      "per_m": false
+     }
+    ]
+   },
+   "definition": "COMPUTED_SHADOW_COMPLETE",
+   "weight_kg": null,
+   "weight_state": "BLOCKED",
+   "weight_missing": [
+    "cutting length",
+    "cover",
+    "hooks / bends",
+    "laps / anchorage"
+   ],
+   "never": "kg/m3"
+  },
+  {
+   "element": "BEAM",
+   "type": "B22",
+   "fields": {
+    "bottom": "14 Ø 18",
+    "top": "5 Ø 14",
+    "stirrups": "5 Ø 8"
+   },
+   "bars": {
+    "bottom": [
+     {
+      "count": 14,
+      "dia_mm": 18,
+      "per_m": false
+     }
+    ],
+    "stirrups": [
+     {
+      "count": 5,
+      "dia_mm": 8,
+      "per_m": false
+     }
+    ],
+    "top": [
+     {
+      "count": 5,
+      "dia_mm": 14,
+      "per_m": false
+     }
+    ]
+   },
+   "definition": "COMPUTED_SHADOW_COMPLETE",
+   "weight_kg": null,
+   "weight_state": "BLOCKED",
+   "weight_missing": [
+    "cutting length",
+    "cover",
+    "hooks / bends",
+    "laps / anchorage"
+   ],
+   "never": "kg/m3"
+  },
+  {
+   "element": "BEAM",
+   "type": "B23",
+   "fields": {
+    "bottom": "11 Ø 18",
+    "top": "11 Ø 18",
+    "stirrups": "10 Ø 8"
+   },
+   "bars": {
+    "bottom": [
+     {
+      "count": 11,
+      "dia_mm": 18,
+      "per_m": false
+     }
+    ],
+    "stirrups": [
+     {
+      "count": 10,
+      "dia_mm": 8,
+      "per_m": false
+     }
+    ],
+    "top": [
+     {
+      "count": 11,
+      "dia_mm": 18,
+      "per_m": false
+     }
+    ]
+   },
+   "definition": "COMPUTED_SHADOW_COMPLETE",
+   "weight_kg": null,
+   "weight_state": "BLOCKED",
+   "weight_missing": [
+    "cutting length",
+    "cover",
+    "hooks / bends",
+    "laps / anchorage"
+   ],
+   "never": "kg/m3"
+  },
+  {
+   "element": "BEAM",
+   "type": "B24",
+   "fields": {
+    "bottom": "5 Ø 16",
+    "top": "10 Ø 18",
+    "stirrups": "5 Ø 8"
+   },
+   "bars": {
+    "bottom": [
+     {
+      "count": 5,
+      "dia_mm": 16,
+      "per_m": false
+     }
+    ],
+    "stirrups": [
+     {
+      "count": 5,
+      "dia_mm": 8,
+      "per_m": false
+     }
+    ],
+    "top": [
+     {
+      "count": 10,
+      "dia_mm": 18,
+      "per_m": false
+     }
+    ]
+   },
+   "definition": "COMPUTED_SHADOW_COMPLETE",
+   "weight_kg": null,
+   "weight_state": "BLOCKED",
+   "weight_missing": [
+    "cutting length",
+    "cover",
+    "hooks / bends",
+    "laps / anchorage"
+   ],
+   "never": "kg/m3"
+  },
+  {
+   "element": "BEAM",
+   "type": "B25",
+   "fields": {
+    "bottom": "15 Ø 18",
+    "top": "5 Ø 14",
+    "stirrups": "6 Ø 8"
+   },
+   "bars": {
+    "bottom": [
+     {
+      "count": 15,
+      "dia_mm": 18,
+      "per_m": false
+     }
+    ],
+    "stirrups": [
+     {
+      "count": 6,
+      "dia_mm": 8,
+      "per_m": false
+     }
+    ],
+    "top": [
+     {
+      "count": 5,
+      "dia_mm": 14,
+      "per_m": false
+     }
+    ]
+   },
+   "definition": "COMPUTED_SHADOW_COMPLETE",
+   "weight_kg": null,
+   "weight_state": "BLOCKED",
+   "weight_missing": [
+    "cutting length",
+    "cover",
+    "hooks / bends",
+    "laps / anchorage"
+   ],
+   "never": "kg/m3"
+  },
+  {
+   "element": "BEAM",
+   "type": "B26",
+   "fields": {
+    "bottom": "19 Ø 18",
+    "top": "6 Ø 14",
+    "stirrups": "10 Ø 10"
+   },
+   "bars": {
+    "bottom": [
+     {
+      "count": 19,
+      "dia_mm": 18,
+      "per_m": false
+     }
+    ],
+    "stirrups": [
+     {
+      "count": 10,
+      "dia_mm": 10,
+      "per_m": false
+     }
+    ],
+    "top": [
+     {
+      "count": 6,
+      "dia_mm": 14,
+      "per_m": false
+     }
+    ]
+   },
+   "definition": "COMPUTED_SHADOW_COMPLETE",
+   "weight_kg": null,
+   "weight_state": "BLOCKED",
+   "weight_missing": [
+    "cutting length",
+    "cover",
+    "hooks / bends",
+    "laps / anchorage"
+   ],
+   "never": "kg/m3"
+  },
+  {
+   "element": "BEAM",
+   "type": "B27",
+   "fields": {
+    "bottom": "22 Ø 20",
+    "top": "9 Ø 16",
+    "stirrups": "10 Ø 10"
+   },
+   "bars": {
+    "bottom": [
+     {
+      "count": 22,
+      "dia_mm": 20,
+      "per_m": false
+     }
+    ],
+    "stirrups": [
+     {
+      "count": 10,
+      "dia_mm": 10,
+      "per_m": false
+     }
+    ],
+    "top": [
+     {
+      "count": 9,
+      "dia_mm": 16,
+      "per_m": false
+     }
+    ]
+   },
+   "definition": "COMPUTED_SHADOW_COMPLETE",
+   "weight_kg": null,
+   "weight_state": "BLOCKED",
+   "weight_missing": [
+    "cutting length",
+    "cover",
+    "hooks / bends",
+    "laps / anchorage"
+   ],
+   "never": "kg/m3"
+  },
+  {
+   "element": "BEAM",
+   "type": "B28",
+   "fields": {
+    "bottom": "3 Ø 16",
+    "top": "2 Ø 14",
+    "stirrups": "10 Ø 10"
+   },
+   "bars": {
+    "bottom": [
+     {
+      "count": 3,
+      "dia_mm": 16,
+      "per_m": false
+     }
+    ],
+    "stirrups": [
+     {
+      "count": 10,
+      "dia_mm": 10,
+      "per_m": false
+     }
+    ],
+    "top": [
+     {
+      "count": 2,
+      "dia_mm": 14,
+      "per_m": false
+     }
+    ]
+   },
+   "definition": "COMPUTED_SHADOW_COMPLETE",
+   "weight_kg": null,
+   "weight_state": "BLOCKED",
+   "weight_missing": [
+    "cutting length",
+    "cover",
+    "hooks / bends",
+    "laps / anchorage"
+   ],
+   "never": "kg/m3"
+  },
+  {
+   "element": "BEAM",
+   "type": "B29",
+   "fields": {
+    "bottom": "7 Ø 18",
+    "top": "2 Ø 14",
+    "stirrups": "5 Ø 8"
+   },
+   "bars": {
+    "bottom": [
+     {
+      "count": 7,
+      "dia_mm": 18,
+      "per_m": false
+     }
+    ],
+    "stirrups": [
+     {
+      "count": 5,
+      "dia_mm": 8,
+      "per_m": false
+     }
+    ],
+    "top": [
+     {
+      "count": 2,
+      "dia_mm": 14,
+      "per_m": false
+     }
+    ]
+   },
+   "definition": "COMPUTED_SHADOW_COMPLETE",
+   "weight_kg": null,
+   "weight_state": "BLOCKED",
+   "weight_missing": [
+    "cutting length",
+    "cover",
+    "hooks / bends",
+    "laps / anchorage"
+   ],
+   "never": "kg/m3"
+  },
+  {
+   "element": "BEAM",
+   "type": "B.W",
+   "fields": {
+    "bottom": "4 Ø 16",
+    "top": "2 Ø 14",
+    "stirrups": "7 Ø 8"
+   },
+   "bars": {
+    "bottom": [
+     {
+      "count": 4,
+      "dia_mm": 16,
+      "per_m": false
+     }
+    ],
+    "stirrups": [
+     {
+      "count": 7,
+      "dia_mm": 8,
+      "per_m": false
+     }
+    ],
+    "top": [
+     {
+      "count": 2,
+      "dia_mm": 14,
+      "per_m": false
+     }
+    ]
+   },
+   "definition": "COMPUTED_SHADOW_COMPLETE",
+   "weight_kg": null,
+   "weight_state": "BLOCKED",
+   "weight_missing": [
+    "cutting length",
+    "cover",
+    "hooks / bends",
+    "laps / anchorage"
+   ],
+   "never": "kg/m3"
+  },
+  {
+   "element": "BEAM",
+   "type": "CA",
+   "fields": {
+    "bottom": "5 Ø 18",
+    "top": "5 Ø 18",
+    "stirrups": "8 Ø 8"
+   },
+   "bars": {
+    "bottom": [
+     {
+      "count": 5,
+      "dia_mm": 18,
+      "per_m": false
+     }
+    ],
+    "stirrups": [
+     {
+      "count": 8,
+      "dia_mm": 8,
+      "per_m": false
+     }
+    ],
+    "top": [
+     {
+      "count": 5,
+      "dia_mm": 18,
+      "per_m": false
+     }
+    ]
+   },
+   "definition": "COMPUTED_SHADOW_COMPLETE",
+   "weight_kg": null,
+   "weight_state": "BLOCKED",
+   "weight_missing": [
+    "cutting length",
+    "cover",
+    "hooks / bends",
+    "laps / anchorage"
+   ],
+   "never": "kg/m3"
+  },
+  {
+   "element": "STRAP",
+   "type": "SB1",
+   "fields": {
+    "bottom": "7 Ø 16",
+    "top": "13 Ø 18",
+    "stirrups": "8 Ø 8"
+   },
+   "bars": {
+    "bottom": [
+     {
+      "count": 7,
+      "dia_mm": 16,
+      "per_m": false
+     }
+    ],
+    "stirrups": [
+     {
+      "count": 8,
+      "dia_mm": 8,
+      "per_m": false
+     }
+    ],
+    "top": [
+     {
+      "count": 13,
+      "dia_mm": 18,
+      "per_m": false
+     }
+    ]
+   },
+   "definition": "COMPUTED_SHADOW_COMPLETE",
+   "weight_kg": null,
+   "weight_state": "BLOCKED",
+   "weight_missing": [
+    "cutting length",
+    "cover",
+    "hooks / bends",
+    "laps / anchorage"
+   ],
+   "never": "kg/m3"
+  },
+  {
+   "element": "STRAP",
+   "type": "SB2",
+   "fields": {
+    "bottom": "10 Ø 16",
+    "top": "20 Ø 18",
+    "stirrups": "10 Ø 8"
+   },
+   "bars": {
+    "bottom": [
+     {
+      "count": 10,
+      "dia_mm": 16,
+      "per_m": false
+     }
+    ],
+    "stirrups": [
+     {
+      "count": 10,
+      "dia_mm": 8,
+      "per_m": false
+     }
+    ],
+    "top": [
+     {
+      "count": 20,
+      "dia_mm": 18,
+      "per_m": false
+     }
+    ]
+   },
+   "definition": "COMPUTED_SHADOW_COMPLETE",
+   "weight_kg": null,
+   "weight_state": "BLOCKED",
+   "weight_missing": [
+    "cutting length",
+    "cover",
+    "hooks / bends",
+    "laps / anchorage"
+   ],
+   "never": "kg/m3"
+  },
+  {
+   "element": "STRAP",
+   "type": "SB3",
+   "fields": {
+    "bottom": "5 Ø 16",
+    "top": "5 Ø 18",
+    "stirrups": "7 Ø 8"
+   },
+   "bars": {
+    "bottom": [
+     {
+      "count": 5,
+      "dia_mm": 16,
+      "per_m": false
+     }
+    ],
+    "stirrups": [
+     {
+      "count": 7,
+      "dia_mm": 8,
+      "per_m": false
+     }
+    ],
+    "top": [
+     {
+      "count": 5,
+      "dia_mm": 18,
+      "per_m": false
+     }
+    ]
+   },
+   "definition": "COMPUTED_SHADOW_COMPLETE",
+   "weight_kg": null,
+   "weight_state": "BLOCKED",
+   "weight_missing": [
+    "cutting length",
+    "cover",
+    "hooks / bends",
+    "laps / anchorage"
+   ],
+   "never": "kg/m3"
+  }
+ ],
+ "continuous_beams": "bar layout is in the PDF schedule drawings; not transcribed bar by bar -> definition PARTIAL, weight BLOCKED",
+ "tonnage_kg": null,
+ "never": "kg/m3",
+ "SCHEMA": "URBAN_ALSENAN_A3_REBAR_V1"
+}

@@ -1,0 +1,6552 @@
+{
+ "frozen_before_benchmark": true,
+ "policy": {
+  "cb_states": [
+   "MATCH_CONFIRMED",
+   "SPAN_LENGTH_CONFLICT",
+   "SPAN_COUNT_CONFLICT",
+   "TAG_WITH_NO_MEMBER",
+   "MEMBER_WITH_NO_TAG",
+   "BLOCKED"
+  ],
+  "policy_id": "STRUCTURAL_CENSUS_V1",
+  "precedence": [
+   "LOCAL_PANEL_NOTE",
+   "FLOOR_SPECIFIC_NOTE",
+   "PROJECT_DEFAULT"
+  ],
+  "principles": [
+   "plan decides occurrence; schedule only defines",
+   "no default overrides a local note",
+   "a value is never rounded into a table row it does not match",
+   "every plan object ends in one terminal state"
+  ],
+  "rule_states": [
+   "EXACT_RULE",
+   "RULE_NOT_EXACT_MATCH",
+   "BLOCKED_METHOD"
+  ],
+  "terminal_states": [
+   "COUNTED_AND_DEFINED",
+   "COUNTED_DEFINITION_PARTIAL",
+   "COUNTED_BLOCKED",
+   "NOT_IN_SCOPE"
+  ]
+ },
+ "register": "COLUMN_OCCURRENCE_REGISTER",
+ "round": "S1",
+ "rows": [
+  {
+   "chain_id": "COLPOS-X15-Y01-31408-7462",
+   "column_id": "COL-C10-X15-Y01-FOUNDATION",
+   "column_type": "C10",
+   "continues_above": true,
+   "continues_from_below": false,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    70.0,
+    30.0
+   ],
+   "drawn_vs_schedule": "MATCH",
+   "floor": "FOUNDATION",
+   "grid": {
+    "X": "X15",
+    "Y": "Y01"
+   },
+   "longitudinal_bars": {
+    "count": 10,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "10",
+     "16"
+    ],
+    "tags": [
+     "FOU.R",
+     "FOU.D"
+    ]
+   },
+   "min_thickness_check": null,
+   "orientation": "X",
+   "plan_centre_mm": [
+    31407.9,
+    7461.8
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "10E8",
+     "88D",
+     "255"
+    ],
+    "sheets": [
+     "FP",
+     "CAP",
+     "GBP"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    30.0,
+    70.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_50_LT_L_LT_80",
+    "state": "EXACT_RULE"
+   },
+   "type_above": "C10",
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": null,
+   "type_inheritance": null
+  },
+  {
+   "chain_id": "COLPOS-X15-Y01-31408-7462",
+   "column_id": "COL-C10-X15-Y01-GF",
+   "column_type": "C10",
+   "continues_above": false,
+   "continues_from_below": true,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    70.0,
+    25.0
+   ],
+   "drawn_vs_schedule": "MATCH",
+   "floor": "GF",
+   "grid": {
+    "X": "X15",
+    "Y": "Y01"
+   },
+   "longitudinal_bars": {
+    "count": 10,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "10",
+     "16"
+    ],
+    "tags": [
+     "GR.R",
+     "GR.D"
+    ]
+   },
+   "min_thickness_check": {
+    "candidates": [
+     25
+    ],
+    "state": "PASS",
+    "t_min_cm": 25
+   },
+   "orientation": "X",
+   "plan_centre_mm": [
+    31407.9,
+    7436.8
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "371"
+    ],
+    "sheets": [
+     "GFRS"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    25.0,
+    70.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_50_LT_L_LT_80",
+    "state": "EXACT_RULE"
+   },
+   "type_above": null,
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": "C10",
+   "type_inheritance": "AXIS_PLAN_TAG_INHERITED_UP_THE_CHAIN"
+  },
+  {
+   "chain_id": "COLPOS-X01-Y01-2138-7462",
+   "column_id": "COL-C-X01-Y01-FOUNDATION",
+   "column_type": "C",
+   "continues_above": true,
+   "continues_from_below": false,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    50.0,
+    30.0
+   ],
+   "drawn_vs_schedule": "MATCH",
+   "floor": "FOUNDATION",
+   "grid": {
+    "X": "X01",
+    "Y": "Y01"
+   },
+   "longitudinal_bars": {
+    "count": 8,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "8",
+     "16"
+    ],
+    "tags": [
+     "FOU.R",
+     "FOU.D"
+    ]
+   },
+   "min_thickness_check": null,
+   "orientation": "X",
+   "plan_centre_mm": [
+    2137.9,
+    7461.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "10AB",
+     "849",
+     "207"
+    ],
+    "sheets": [
+     "FP",
+     "CAP",
+     "GBP"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    30.0,
+    50.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_L_LE_50",
+    "state": "EXACT_RULE"
+   },
+   "type_above": "C",
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": null,
+   "type_inheritance": null
+  },
+  {
+   "chain_id": "COLPOS-X01-Y01-2138-7462",
+   "column_id": "COL-C-X01-Y01-GF",
+   "column_type": "C",
+   "continues_above": false,
+   "continues_from_below": true,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    40.0,
+    20.0
+   ],
+   "drawn_vs_schedule": "MISMATCH",
+   "floor": "GF",
+   "grid": {
+    "X": "X01",
+    "Y": "Y01"
+   },
+   "longitudinal_bars": {
+    "count": 8,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "8",
+     "16"
+    ],
+    "tags": [
+     "GR.R",
+     "GR.D"
+    ]
+   },
+   "min_thickness_check": {
+    "candidates": [
+     25
+    ],
+    "state": "BELOW_MINIMUM",
+    "t_min_cm": 25
+   },
+   "orientation": "X",
+   "plan_centre_mm": [
+    2087.9,
+    7411.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "34D"
+    ],
+    "sheets": [
+     "GFRS"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    20.0,
+    50.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_L_LE_50",
+    "state": "EXACT_RULE"
+   },
+   "type_above": null,
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": "C",
+   "type_inheritance": "AXIS_PLAN_TAG_INHERITED_UP_THE_CHAIN"
+  },
+  {
+   "chain_id": "COLPOS-X04-Y01-7988-7462",
+   "column_id": "COL-C3-X04-Y01-FOUNDATION",
+   "column_type": "C3",
+   "continues_above": true,
+   "continues_from_below": false,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    50.0,
+    30.0
+   ],
+   "drawn_vs_schedule": "MATCH",
+   "floor": "FOUNDATION",
+   "grid": {
+    "X": "X04",
+    "Y": "Y01"
+   },
+   "longitudinal_bars": {
+    "count": 8,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "8",
+     "16"
+    ],
+    "tags": [
+     "FOU.R",
+     "FOU.D"
+    ]
+   },
+   "min_thickness_check": null,
+   "orientation": "X",
+   "plan_centre_mm": [
+    7987.9,
+    7461.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "10AE",
+     "84C",
+     "20B"
+    ],
+    "sheets": [
+     "FP",
+     "CAP",
+     "GBP"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    30.0,
+    50.0
+   ],
+   "status": "SOURCE_CONFLICT",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_L_LE_50",
+    "state": "EXACT_RULE"
+   },
+   "type_above": "C3",
+   "type_authority": "TAG_CONFLICT",
+   "type_below": null,
+   "type_inheritance": null
+  },
+  {
+   "chain_id": "COLPOS-X04-Y01-7988-7462",
+   "column_id": "COL-C3-X04-Y01-GF",
+   "column_type": "C3",
+   "continues_above": false,
+   "continues_from_below": true,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    40.0,
+    20.0
+   ],
+   "drawn_vs_schedule": "MISMATCH",
+   "floor": "GF",
+   "grid": {
+    "X": "X04",
+    "Y": "Y01"
+   },
+   "longitudinal_bars": {
+    "count": 8,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "8",
+     "16"
+    ],
+    "tags": [
+     "GR.R",
+     "GR.D"
+    ]
+   },
+   "min_thickness_check": {
+    "candidates": [
+     25
+    ],
+    "state": "PASS",
+    "t_min_cm": 25
+   },
+   "orientation": "X",
+   "plan_centre_mm": [
+    7937.9,
+    7411.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "350"
+    ],
+    "sheets": [
+     "GFRS"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    25.0,
+    50.0
+   ],
+   "status": "SOURCE_CONFLICT",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_L_LE_50",
+    "state": "EXACT_RULE"
+   },
+   "type_above": null,
+   "type_authority": "TAG_CONFLICT",
+   "type_below": "C3",
+   "type_inheritance": null
+  },
+  {
+   "chain_id": "COLPOS-X06-Y01-14088-7462",
+   "column_id": "COL-C-X06-Y01-FOUNDATION",
+   "column_type": "C",
+   "continues_above": true,
+   "continues_from_below": false,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    50.0,
+    30.0
+   ],
+   "drawn_vs_schedule": "MATCH",
+   "floor": "FOUNDATION",
+   "grid": {
+    "X": "X06",
+    "Y": "Y01"
+   },
+   "longitudinal_bars": {
+    "count": 8,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "8",
+     "16"
+    ],
+    "tags": [
+     "FOU.R",
+     "FOU.D"
+    ]
+   },
+   "min_thickness_check": null,
+   "orientation": "X",
+   "plan_centre_mm": [
+    14137.9,
+    7461.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "10B7",
+     "85B",
+     "218"
+    ],
+    "sheets": [
+     "FP",
+     "CAP",
+     "GBP"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    30.0,
+    50.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_L_LE_50",
+    "state": "EXACT_RULE"
+   },
+   "type_above": "C",
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": null,
+   "type_inheritance": null
+  },
+  {
+   "chain_id": "COLPOS-X06-Y01-14088-7462",
+   "column_id": "COL-C-X06-Y01-GF",
+   "column_type": "C",
+   "continues_above": false,
+   "continues_from_below": true,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    40.0,
+    20.0
+   ],
+   "drawn_vs_schedule": "MISMATCH",
+   "floor": "GF",
+   "grid": {
+    "X": "X06",
+    "Y": "Y01"
+   },
+   "longitudinal_bars": {
+    "count": 8,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "8",
+     "16"
+    ],
+    "tags": [
+     "GR.R",
+     "GR.D"
+    ]
+   },
+   "min_thickness_check": {
+    "candidates": [
+     25
+    ],
+    "state": "BELOW_MINIMUM",
+    "t_min_cm": 25
+   },
+   "orientation": "X",
+   "plan_centre_mm": [
+    14087.9,
+    7411.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "359"
+    ],
+    "sheets": [
+     "GFRS"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    20.0,
+    50.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_L_LE_50",
+    "state": "EXACT_RULE"
+   },
+   "type_above": null,
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": "C",
+   "type_inheritance": "AXIS_PLAN_TAG_INHERITED_UP_THE_CHAIN"
+  },
+  {
+   "chain_id": "COLPOS-X?-Y01-17913-7462",
+   "column_id": "COL-C11-X?-Y01@17913-7462-FOUNDATION",
+   "column_type": "C11",
+   "continues_above": true,
+   "continues_from_below": false,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    110.0,
+    30.0
+   ],
+   "drawn_vs_schedule": "MATCH",
+   "floor": "FOUNDATION",
+   "grid": {
+    "X": null,
+    "Y": "Y01"
+   },
+   "longitudinal_bars": {
+    "count": 14,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "14",
+     "16"
+    ],
+    "tags": [
+     "FOU.R",
+     "FOU.D"
+    ]
+   },
+   "min_thickness_check": null,
+   "orientation": "X",
+   "plan_centre_mm": [
+    17912.9,
+    7461.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "10DD",
+     "883",
+     "249"
+    ],
+    "sheets": [
+     "FP",
+     "CAP",
+     "GBP"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    30.0,
+    110.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_80_LT_L_LT_120",
+    "state": "EXACT_RULE"
+   },
+   "type_above": "C11",
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": null,
+   "type_inheritance": null
+  },
+  {
+   "chain_id": "COLPOS-X?-Y01-17913-7462",
+   "column_id": "COL-C11-X?-Y01@17913-7462-GF",
+   "column_type": "C11",
+   "continues_above": false,
+   "continues_from_below": true,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    110.0,
+    25.0
+   ],
+   "drawn_vs_schedule": "MATCH",
+   "floor": "GF",
+   "grid": {
+    "X": null,
+    "Y": "Y01"
+   },
+   "longitudinal_bars": {
+    "count": 14,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "14",
+     "16"
+    ],
+    "tags": [
+     "GR.R",
+     "GR.D"
+    ]
+   },
+   "min_thickness_check": {
+    "candidates": [
+     25
+    ],
+    "state": "PASS",
+    "t_min_cm": 25
+   },
+   "orientation": "X",
+   "plan_centre_mm": [
+    17912.9,
+    7436.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "37D"
+    ],
+    "sheets": [
+     "GFRS"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    25.0,
+    110.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_80_LT_L_LT_120",
+    "state": "EXACT_RULE"
+   },
+   "type_above": null,
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": "C11",
+   "type_inheritance": "AXIS_PLAN_TAG_INHERITED_UP_THE_CHAIN"
+  },
+  {
+   "chain_id": "COLPOS-X12-Y01-24458-7462",
+   "column_id": "COL-C3-X12-Y01-FOUNDATION",
+   "column_type": "C3",
+   "continues_above": true,
+   "continues_from_below": false,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    50.0,
+    30.0
+   ],
+   "drawn_vs_schedule": "MATCH",
+   "floor": "FOUNDATION",
+   "grid": {
+    "X": "X12",
+    "Y": "Y01"
+   },
+   "longitudinal_bars": {
+    "count": 8,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "8",
+     "16"
+    ],
+    "tags": [
+     "FOU.R",
+     "FOU.D"
+    ]
+   },
+   "min_thickness_check": null,
+   "orientation": "X",
+   "plan_centre_mm": [
+    24457.9,
+    7461.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "10E4",
+     "88A",
+     "251"
+    ],
+    "sheets": [
+     "FP",
+     "CAP",
+     "GBP"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    30.0,
+    50.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_L_LE_50",
+    "state": "EXACT_RULE"
+   },
+   "type_above": "C3",
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": null,
+   "type_inheritance": null
+  },
+  {
+   "chain_id": "COLPOS-X12-Y01-24458-7462",
+   "column_id": "COL-C3-X12-Y01-GF",
+   "column_type": "C3",
+   "continues_above": false,
+   "continues_from_below": true,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    50.0,
+    25.0
+   ],
+   "drawn_vs_schedule": "MATCH",
+   "floor": "GF",
+   "grid": {
+    "X": "X12",
+    "Y": "Y01"
+   },
+   "longitudinal_bars": {
+    "count": 8,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "8",
+     "16"
+    ],
+    "tags": [
+     "GR.R",
+     "GR.D"
+    ]
+   },
+   "min_thickness_check": {
+    "candidates": [
+     25
+    ],
+    "state": "PASS",
+    "t_min_cm": 25
+   },
+   "orientation": "X",
+   "plan_centre_mm": [
+    24457.9,
+    7436.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "383"
+    ],
+    "sheets": [
+     "GFRS"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    25.0,
+    50.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_L_LE_50",
+    "state": "EXACT_RULE"
+   },
+   "type_above": null,
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": "C3",
+   "type_inheritance": "AXIS_PLAN_TAG_INHERITED_UP_THE_CHAIN"
+  },
+  {
+   "chain_id": "COLPOS-X16-Y01-33108-7562",
+   "column_id": "COL-C-X16-Y01-FOUNDATION",
+   "column_type": "C",
+   "continues_above": true,
+   "continues_from_below": false,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    30.0,
+    50.0
+   ],
+   "drawn_vs_schedule": "MATCH",
+   "floor": "FOUNDATION",
+   "grid": {
+    "X": "X16",
+    "Y": "Y01"
+   },
+   "longitudinal_bars": {
+    "count": 8,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "8",
+     "16"
+    ],
+    "tags": [
+     "FOU.R",
+     "FOU.D"
+    ]
+   },
+   "min_thickness_check": null,
+   "orientation": "Y",
+   "plan_centre_mm": [
+    33107.9,
+    7561.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "10A4",
+     "840",
+     "200"
+    ],
+    "sheets": [
+     "FP",
+     "CAP",
+     "GBP"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    30.0,
+    50.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_L_LE_50",
+    "state": "EXACT_RULE"
+   },
+   "type_above": "C",
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": null,
+   "type_inheritance": null
+  },
+  {
+   "chain_id": "COLPOS-X16-Y01-33108-7562",
+   "column_id": "COL-C-X16-Y01-GF",
+   "column_type": "C",
+   "continues_above": false,
+   "continues_from_below": true,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    20.0,
+    40.0
+   ],
+   "drawn_vs_schedule": "MISMATCH",
+   "floor": "GF",
+   "grid": {
+    "X": "X16",
+    "Y": "Y01"
+   },
+   "longitudinal_bars": {
+    "count": 8,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "8",
+     "16"
+    ],
+    "tags": [
+     "GR.R",
+     "GR.D"
+    ]
+   },
+   "min_thickness_check": {
+    "candidates": [
+     25
+    ],
+    "state": "BELOW_MINIMUM",
+    "t_min_cm": 25
+   },
+   "orientation": "Y",
+   "plan_centre_mm": [
+    33157.9,
+    7511.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "347"
+    ],
+    "sheets": [
+     "GFRS"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    20.0,
+    50.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_L_LE_50",
+    "state": "EXACT_RULE"
+   },
+   "type_above": null,
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": "C",
+   "type_inheritance": "AXIS_PLAN_TAG_INHERITED_UP_THE_CHAIN"
+  },
+  {
+   "chain_id": "COLPOS-X08-Y02-16850-8912",
+   "column_id": "COL-P.C-X08-Y02-1F",
+   "column_type": "P.C",
+   "continues_above": false,
+   "continues_from_below": false,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    70.0,
+    20.0
+   ],
+   "drawn_vs_schedule": "MATCH",
+   "floor": "1F",
+   "grid": {
+    "X": "X08",
+    "Y": "Y02"
+   },
+   "longitudinal_bars": {
+    "count": 10,
+    "dia_mm": 16,
+    "text_handle": "543"
+   },
+   "min_thickness_check": {
+    "candidates": [
+     20
+    ],
+    "state": "PASS",
+    "t_min_cm": 20
+   },
+   "orientation": "X",
+   "plan_centre_mm": [
+    16849.6,
+    8911.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "66A"
+    ],
+    "sheets": [
+     "FFRS"
+    ]
+   },
+   "planted_on": "GF_ROOF_SLAB",
+   "schedule_section_cm": [
+    20,
+    70
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_50_LT_L_LT_80",
+    "state": "EXACT_RULE"
+   },
+   "type_above": null,
+   "type_authority": "PLAN_LABEL",
+   "type_below": null,
+   "type_inheritance": null
+  },
+  {
+   "chain_id": "COLPOS-X12-Y02-24308-8912",
+   "column_id": "COL-C8-X12-Y02-FOUNDATION",
+   "column_type": "C8",
+   "continues_above": true,
+   "continues_from_below": false,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    80.0,
+    30.0
+   ],
+   "drawn_vs_schedule": "MISMATCH",
+   "floor": "FOUNDATION",
+   "grid": {
+    "X": "X12",
+    "Y": "Y02"
+   },
+   "longitudinal_bars": {
+    "count": 12,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "12",
+     "16"
+    ],
+    "tags": [
+     "FOU.R",
+     "FOU.D"
+    ]
+   },
+   "min_thickness_check": null,
+   "orientation": "X",
+   "plan_centre_mm": [
+    24307.9,
+    8911.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "10E0",
+     "886",
+     "24D"
+    ],
+    "sheets": [
+     "FP",
+     "CAP",
+     "GBP"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    30.0,
+    90.0
+   ],
+   "status": "SOURCE_CONFLICT",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_80_LT_L_LT_120",
+    "state": "EXACT_RULE"
+   },
+   "type_above": "C8",
+   "type_authority": "TAG_CONFLICT",
+   "type_below": null,
+   "type_inheritance": null
+  },
+  {
+   "chain_id": "COLPOS-X12-Y02-24308-8912",
+   "column_id": "COL-C8-X12-Y02-GF",
+   "column_type": "C8",
+   "continues_above": true,
+   "continues_from_below": true,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    80.0,
+    25.0
+   ],
+   "drawn_vs_schedule": "MISMATCH",
+   "floor": "GF",
+   "grid": {
+    "X": "X12",
+    "Y": "Y02"
+   },
+   "longitudinal_bars": {
+    "count": 12,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "12",
+     "16"
+    ],
+    "tags": [
+     "GR.R",
+     "GR.D"
+    ]
+   },
+   "min_thickness_check": {
+    "candidates": [
+     25
+    ],
+    "state": "PASS",
+    "t_min_cm": 25
+   },
+   "orientation": "X",
+   "plan_centre_mm": [
+    24307.9,
+    8936.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "380"
+    ],
+    "sheets": [
+     "GFRS"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    25.0,
+    90.0
+   ],
+   "status": "SOURCE_CONFLICT",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_80_LT_L_LT_120",
+    "state": "EXACT_RULE"
+   },
+   "type_above": "C8",
+   "type_authority": "TAG_CONFLICT",
+   "type_below": "C8",
+   "type_inheritance": null
+  },
+  {
+   "chain_id": "COLPOS-X12-Y02-24308-8912",
+   "column_id": "COL-C8-X12-Y02-1F",
+   "column_type": "C8",
+   "continues_above": false,
+   "continues_from_below": true,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    80.0,
+    25.0
+   ],
+   "drawn_vs_schedule": "MISMATCH",
+   "floor": "1F",
+   "grid": {
+    "X": "X12",
+    "Y": "Y02"
+   },
+   "longitudinal_bars": {
+    "count": 12,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "12",
+     "16"
+    ],
+    "tags": [
+     "1ST.R",
+     "1ST.D"
+    ]
+   },
+   "min_thickness_check": {
+    "candidates": [
+     20
+    ],
+    "state": "PASS",
+    "t_min_cm": 20
+   },
+   "orientation": "X",
+   "plan_centre_mm": [
+    24307.9,
+    8936.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "69A"
+    ],
+    "sheets": [
+     "FFRS"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    20.0,
+    90.0
+   ],
+   "status": "SOURCE_CONFLICT",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_80_LT_L_LT_120",
+    "state": "EXACT_RULE"
+   },
+   "type_above": null,
+   "type_authority": "TAG_CONFLICT",
+   "type_below": "C8",
+   "type_inheritance": null
+  },
+  {
+   "chain_id": "COLPOS-X15-Y02-31508-8912",
+   "column_id": "COL-P.C-X15-Y02-1F",
+   "column_type": "P.C",
+   "continues_above": false,
+   "continues_from_below": false,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    50.0,
+    20.0
+   ],
+   "drawn_vs_schedule": "MATCH",
+   "floor": "1F",
+   "grid": {
+    "X": "X15",
+    "Y": "Y02"
+   },
+   "longitudinal_bars": {
+    "count": 8,
+    "dia_mm": 16,
+    "text_handle": "547"
+   },
+   "min_thickness_check": {
+    "candidates": [
+     20
+    ],
+    "state": "PASS",
+    "t_min_cm": 20
+   },
+   "orientation": "X",
+   "plan_centre_mm": [
+    31507.9,
+    8911.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "69D"
+    ],
+    "sheets": [
+     "FFRS"
+    ]
+   },
+   "planted_on": "GF_ROOF_SLAB",
+   "schedule_section_cm": [
+    20,
+    50
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_L_LE_50",
+    "state": "EXACT_RULE"
+   },
+   "type_above": null,
+   "type_authority": "PLAN_LABEL",
+   "type_below": null,
+   "type_inheritance": null
+  },
+  {
+   "chain_id": "COLPOS-X14-Y02-27658-8962",
+   "column_id": "COL-C5-X14-Y02-FOUNDATION",
+   "column_type": "C5",
+   "continues_above": true,
+   "continues_from_below": false,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    60.0,
+    30.0
+   ],
+   "drawn_vs_schedule": "MATCH",
+   "floor": "FOUNDATION",
+   "grid": {
+    "X": "X14",
+    "Y": "Y02"
+   },
+   "longitudinal_bars": {
+    "count": 10,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "10",
+     "16"
+    ],
+    "tags": [
+     "FOU.R",
+     "FOU.D"
+    ]
+   },
+   "min_thickness_check": null,
+   "orientation": "X",
+   "plan_centre_mm": [
+    27657.9,
+    8961.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "10D3",
+     "878",
+     "23C"
+    ],
+    "sheets": [
+     "FP",
+     "CAP",
+     "GBP"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    30.0,
+    60.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_50_LT_L_LT_80",
+    "state": "EXACT_RULE"
+   },
+   "type_above": "C5",
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": null,
+   "type_inheritance": null
+  },
+  {
+   "chain_id": "COLPOS-X14-Y02-27658-8962",
+   "column_id": "COL-C5-X14-Y02-GF",
+   "column_type": "C5",
+   "continues_above": true,
+   "continues_from_below": true,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    60.0,
+    25.0
+   ],
+   "drawn_vs_schedule": "MATCH",
+   "floor": "GF",
+   "grid": {
+    "X": "X14",
+    "Y": "Y02"
+   },
+   "longitudinal_bars": {
+    "count": 10,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "10",
+     "16"
+    ],
+    "tags": [
+     "GR.R",
+     "GR.D"
+    ]
+   },
+   "min_thickness_check": {
+    "candidates": [
+     25
+    ],
+    "state": "PASS",
+    "t_min_cm": 25
+   },
+   "orientation": "X",
+   "plan_centre_mm": [
+    27657.9,
+    8936.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "374"
+    ],
+    "sheets": [
+     "GFRS"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    25.0,
+    60.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_50_LT_L_LT_80",
+    "state": "EXACT_RULE"
+   },
+   "type_above": "C5",
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": "C5",
+   "type_inheritance": "AXIS_PLAN_TAG_INHERITED_UP_THE_CHAIN"
+  },
+  {
+   "chain_id": "COLPOS-X14-Y02-27658-8962",
+   "column_id": "COL-C5-X14-Y02-1F",
+   "column_type": "C5",
+   "continues_above": false,
+   "continues_from_below": true,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    60.0,
+    25.0
+   ],
+   "drawn_vs_schedule": "MISMATCH",
+   "floor": "1F",
+   "grid": {
+    "X": "X14",
+    "Y": "Y02"
+   },
+   "longitudinal_bars": {
+    "count": 8,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "8",
+     "16"
+    ],
+    "tags": [
+     "1ST.R",
+     "1ST.D"
+    ]
+   },
+   "min_thickness_check": {
+    "candidates": [
+     20
+    ],
+    "state": "PASS",
+    "t_min_cm": 20
+   },
+   "orientation": "X",
+   "plan_centre_mm": [
+    27657.9,
+    8936.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "694"
+    ],
+    "sheets": [
+     "FFRS"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    20.0,
+    50.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_L_LE_50",
+    "state": "EXACT_RULE"
+   },
+   "type_above": null,
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": "C5",
+   "type_inheritance": "AXIS_PLAN_TAG_INHERITED_UP_THE_CHAIN"
+  },
+  {
+   "chain_id": "COLPOS-X05-Y02-12538-9062",
+   "column_id": "COL-C3-X05-Y02-FOUNDATION",
+   "column_type": "C3",
+   "continues_above": true,
+   "continues_from_below": false,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    30.0,
+    50.0
+   ],
+   "drawn_vs_schedule": "MATCH",
+   "floor": "FOUNDATION",
+   "grid": {
+    "X": "X05",
+    "Y": "Y02"
+   },
+   "longitudinal_bars": {
+    "count": 8,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "8",
+     "16"
+    ],
+    "tags": [
+     "FOU.R",
+     "FOU.D"
+    ]
+   },
+   "min_thickness_check": null,
+   "orientation": "Y",
+   "plan_centre_mm": [
+    12537.9,
+    9061.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "10C5",
+     "868",
+     "22C"
+    ],
+    "sheets": [
+     "FP",
+     "CAP",
+     "GBP"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    30.0,
+    50.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_L_LE_50",
+    "state": "EXACT_RULE"
+   },
+   "type_above": "C3",
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": null,
+   "type_inheritance": null
+  },
+  {
+   "chain_id": "COLPOS-X05-Y02-12538-9062",
+   "column_id": "COL-C3-X05-Y02-GF",
+   "column_type": "C3",
+   "continues_above": true,
+   "continues_from_below": true,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    25.0,
+    50.0
+   ],
+   "drawn_vs_schedule": "MATCH",
+   "floor": "GF",
+   "grid": {
+    "X": "X05",
+    "Y": "Y02"
+   },
+   "longitudinal_bars": {
+    "count": 8,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "8",
+     "16"
+    ],
+    "tags": [
+     "GR.R",
+     "GR.D"
+    ]
+   },
+   "min_thickness_check": {
+    "candidates": [
+     25
+    ],
+    "state": "PASS",
+    "t_min_cm": 25
+   },
+   "orientation": "Y",
+   "plan_centre_mm": [
+    12562.9,
+    9061.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "365"
+    ],
+    "sheets": [
+     "GFRS"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    25.0,
+    50.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_L_LE_50",
+    "state": "EXACT_RULE"
+   },
+   "type_above": "C3",
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": "C3",
+   "type_inheritance": "AXIS_PLAN_TAG_INHERITED_UP_THE_CHAIN"
+  },
+  {
+   "chain_id": "COLPOS-X05-Y02-12538-9062",
+   "column_id": "COL-C3-X05-Y02-1F",
+   "column_type": "C3",
+   "continues_above": false,
+   "continues_from_below": true,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    20.0,
+    50.0
+   ],
+   "drawn_vs_schedule": "MATCH",
+   "floor": "1F",
+   "grid": {
+    "X": "X05",
+    "Y": "Y02"
+   },
+   "longitudinal_bars": {
+    "count": 6,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "6",
+     "16"
+    ],
+    "tags": [
+     "1ST.R",
+     "1ST.D"
+    ]
+   },
+   "min_thickness_check": {
+    "candidates": [
+     20
+    ],
+    "state": "PASS",
+    "t_min_cm": 20
+   },
+   "orientation": "Y",
+   "plan_centre_mm": [
+    12587.9,
+    9061.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "68B"
+    ],
+    "sheets": [
+     "FFRS"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    20.0,
+    50.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_L_LE_50",
+    "state": "EXACT_RULE"
+   },
+   "type_above": null,
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": "C3",
+   "type_inheritance": "AXIS_PLAN_TAG_INHERITED_UP_THE_CHAIN"
+  },
+  {
+   "chain_id": "COLPOS-X16-Y03-33108-11312",
+   "column_id": "COL-CN-X16-Y03-FOUNDATION",
+   "column_type": "CN",
+   "continues_above": false,
+   "continues_from_below": false,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    30.0,
+    30.0
+   ],
+   "drawn_vs_schedule": "MATCH",
+   "floor": "FOUNDATION",
+   "grid": {
+    "X": "X16",
+    "Y": "Y03"
+   },
+   "longitudinal_bars": {
+    "count": 4,
+    "dia_mm": 14
+   },
+   "min_thickness_check": null,
+   "orientation": "X",
+   "plan_centre_mm": [
+    33107.9,
+    11311.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "10FE",
+     "895",
+     "809"
+    ],
+    "sheets": [
+     "FP",
+     "CAP",
+     "GBP"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    30.0,
+    30.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_L_LE_50",
+    "state": "EXACT_RULE"
+   },
+   "type_above": null,
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": null,
+   "type_inheritance": null
+  },
+  {
+   "chain_id": "COLPOS-X05-Y04-12538-11912",
+   "column_id": "COL-C5-X05-Y04-FOUNDATION",
+   "column_type": "C5",
+   "continues_above": true,
+   "continues_from_below": false,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    30.0,
+    60.0
+   ],
+   "drawn_vs_schedule": "MATCH",
+   "floor": "FOUNDATION",
+   "grid": {
+    "X": "X05",
+    "Y": "Y04"
+   },
+   "longitudinal_bars": {
+    "count": 10,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "10",
+     "16"
+    ],
+    "tags": [
+     "FOU.R",
+     "FOU.D"
+    ]
+   },
+   "min_thickness_check": null,
+   "orientation": "Y",
+   "plan_centre_mm": [
+    12537.9,
+    11911.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "10BD",
+     "862",
+     "223"
+    ],
+    "sheets": [
+     "FP",
+     "CAP",
+     "GBP"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    30.0,
+    60.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_50_LT_L_LT_80",
+    "state": "EXACT_RULE"
+   },
+   "type_above": "C5",
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": null,
+   "type_inheritance": null
+  },
+  {
+   "chain_id": "COLPOS-X05-Y04-12538-11912",
+   "column_id": "COL-C5-X05-Y04-GF",
+   "column_type": "C5",
+   "continues_above": true,
+   "continues_from_below": true,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    25.0,
+    60.0
+   ],
+   "drawn_vs_schedule": "MATCH",
+   "floor": "GF",
+   "grid": {
+    "X": "X05",
+    "Y": "Y04"
+   },
+   "longitudinal_bars": {
+    "count": 10,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "10",
+     "16"
+    ],
+    "tags": [
+     "GR.R",
+     "GR.D"
+    ]
+   },
+   "min_thickness_check": {
+    "candidates": [
+     25
+    ],
+    "state": "PASS",
+    "t_min_cm": 25
+   },
+   "orientation": "Y",
+   "plan_centre_mm": [
+    12562.9,
+    11911.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "35F"
+    ],
+    "sheets": [
+     "GFRS"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    25.0,
+    60.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_50_LT_L_LT_80",
+    "state": "EXACT_RULE"
+   },
+   "type_above": "C5",
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": "C5",
+   "type_inheritance": "AXIS_PLAN_TAG_INHERITED_UP_THE_CHAIN"
+  },
+  {
+   "chain_id": "COLPOS-X05-Y04-12538-11912",
+   "column_id": "COL-C5-X05-Y04-1F",
+   "column_type": "C5",
+   "continues_above": false,
+   "continues_from_below": true,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    20.0,
+    60.0
+   ],
+   "drawn_vs_schedule": "MISMATCH",
+   "floor": "1F",
+   "grid": {
+    "X": "X05",
+    "Y": "Y04"
+   },
+   "longitudinal_bars": {
+    "count": 8,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "8",
+     "16"
+    ],
+    "tags": [
+     "1ST.R",
+     "1ST.D"
+    ]
+   },
+   "min_thickness_check": {
+    "candidates": [
+     20
+    ],
+    "state": "PASS",
+    "t_min_cm": 20
+   },
+   "orientation": "Y",
+   "plan_centre_mm": [
+    12587.9,
+    11911.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "685"
+    ],
+    "sheets": [
+     "FFRS"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    20.0,
+    50.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_L_LE_50",
+    "state": "EXACT_RULE"
+   },
+   "type_above": null,
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": "C5",
+   "type_inheritance": "AXIS_PLAN_TAG_INHERITED_UP_THE_CHAIN"
+  },
+  {
+   "chain_id": "COLPOS-X03-Y04-6338-12062",
+   "column_id": "COL-C3-X03-Y04-FOUNDATION",
+   "column_type": "C3",
+   "continues_above": true,
+   "continues_from_below": false,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    50.0,
+    30.0
+   ],
+   "drawn_vs_schedule": "MATCH",
+   "floor": "FOUNDATION",
+   "grid": {
+    "X": "X03",
+    "Y": "Y04"
+   },
+   "longitudinal_bars": {
+    "count": 8,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "8",
+     "16"
+    ],
+    "tags": [
+     "FOU.R",
+     "FOU.D"
+    ]
+   },
+   "min_thickness_check": null,
+   "orientation": "X",
+   "plan_centre_mm": [
+    6337.9,
+    12061.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "10B1",
+     "853",
+     "211"
+    ],
+    "sheets": [
+     "FP",
+     "CAP",
+     "GBP"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    30.0,
+    50.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_L_LE_50",
+    "state": "EXACT_RULE"
+   },
+   "type_above": "C3",
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": null,
+   "type_inheritance": null
+  },
+  {
+   "chain_id": "COLPOS-X03-Y04-6338-12062",
+   "column_id": "COL-C3-X03-Y04-GF",
+   "column_type": "C3",
+   "continues_above": false,
+   "continues_from_below": true,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    50.0,
+    25.0
+   ],
+   "drawn_vs_schedule": "MATCH",
+   "floor": "GF",
+   "grid": {
+    "X": "X03",
+    "Y": "Y04"
+   },
+   "longitudinal_bars": {
+    "count": 8,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "8",
+     "16"
+    ],
+    "tags": [
+     "GR.R",
+     "GR.D"
+    ]
+   },
+   "min_thickness_check": {
+    "candidates": [
+     25
+    ],
+    "state": "PASS",
+    "t_min_cm": 25
+   },
+   "orientation": "X",
+   "plan_centre_mm": [
+    6337.9,
+    12086.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "353"
+    ],
+    "sheets": [
+     "GFRS"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    25.0,
+    50.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_L_LE_50",
+    "state": "EXACT_RULE"
+   },
+   "type_above": null,
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": "C3",
+   "type_inheritance": "AXIS_PLAN_TAG_INHERITED_UP_THE_CHAIN"
+  },
+  {
+   "chain_id": "COLPOS-X06-Y04-14438-12062",
+   "column_id": "COL-C11-X06-Y04-FOUNDATION",
+   "column_type": "C11",
+   "continues_above": true,
+   "continues_from_below": false,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    110.0,
+    30.0
+   ],
+   "drawn_vs_schedule": "MATCH",
+   "floor": "FOUNDATION",
+   "grid": {
+    "X": "X06",
+    "Y": "Y04"
+   },
+   "longitudinal_bars": {
+    "count": 14,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "14",
+     "16"
+    ],
+    "tags": [
+     "FOU.R",
+     "FOU.D"
+    ]
+   },
+   "min_thickness_check": null,
+   "orientation": "X",
+   "plan_centre_mm": [
+    14437.9,
+    12061.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "10BA",
+     "85E",
+     "220"
+    ],
+    "sheets": [
+     "FP",
+     "CAP",
+     "GBP"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    30.0,
+    110.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_80_LT_L_LT_120",
+    "state": "EXACT_RULE"
+   },
+   "type_above": "C11",
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": null,
+   "type_inheritance": null
+  },
+  {
+   "chain_id": "COLPOS-X06-Y04-14438-12062",
+   "column_id": "COL-C11-X06-Y04-GF",
+   "column_type": "C11",
+   "continues_above": false,
+   "continues_from_below": true,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    110.0,
+    25.0
+   ],
+   "drawn_vs_schedule": "MATCH",
+   "floor": "GF",
+   "grid": {
+    "X": "X06",
+    "Y": "Y04"
+   },
+   "longitudinal_bars": {
+    "count": 14,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "14",
+     "16"
+    ],
+    "tags": [
+     "GR.R",
+     "GR.D"
+    ]
+   },
+   "min_thickness_check": {
+    "candidates": [
+     25
+    ],
+    "state": "PASS",
+    "t_min_cm": 25
+   },
+   "orientation": "X",
+   "plan_centre_mm": [
+    14437.9,
+    12086.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "35C"
+    ],
+    "sheets": [
+     "GFRS"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    25.0,
+    110.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_80_LT_L_LT_120",
+    "state": "EXACT_RULE"
+   },
+   "type_above": null,
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": "C11",
+   "type_inheritance": "AXIS_PLAN_TAG_INHERITED_UP_THE_CHAIN"
+  },
+  {
+   "chain_id": "COLPOS-X08-Y04-17038-12362",
+   "column_id": "COL-C6-X08-Y04-FOUNDATION",
+   "column_type": "C6",
+   "continues_above": true,
+   "continues_from_below": false,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    30.0,
+    70.0
+   ],
+   "drawn_vs_schedule": "MATCH",
+   "floor": "FOUNDATION",
+   "grid": {
+    "X": "X08",
+    "Y": "Y04"
+   },
+   "longitudinal_bars": {
+    "count": 10,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "10",
+     "16"
+    ],
+    "tags": [
+     "FOU.R",
+     "FOU.D"
+    ]
+   },
+   "min_thickness_check": null,
+   "orientation": "Y",
+   "plan_centre_mm": [
+    17037.9,
+    12361.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "10C2",
+     "865",
+     "228"
+    ],
+    "sheets": [
+     "FP",
+     "CAP",
+     "GBP"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    30.0,
+    70.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_50_LT_L_LT_80",
+    "state": "EXACT_RULE"
+   },
+   "type_above": "C6",
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": null,
+   "type_inheritance": null
+  },
+  {
+   "chain_id": "COLPOS-X08-Y04-17038-12362",
+   "column_id": "COL-C6-X08-Y04-GF",
+   "column_type": "C6",
+   "continues_above": true,
+   "continues_from_below": true,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    25.0,
+    70.0
+   ],
+   "drawn_vs_schedule": "MATCH",
+   "floor": "GF",
+   "grid": {
+    "X": "X08",
+    "Y": "Y04"
+   },
+   "longitudinal_bars": {
+    "count": 10,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "10",
+     "16"
+    ],
+    "tags": [
+     "GR.R",
+     "GR.D"
+    ]
+   },
+   "min_thickness_check": {
+    "candidates": [
+     25
+    ],
+    "state": "PASS",
+    "t_min_cm": 25
+   },
+   "orientation": "Y",
+   "plan_centre_mm": [
+    17012.9,
+    12361.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "362"
+    ],
+    "sheets": [
+     "GFRS"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    25.0,
+    70.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_50_LT_L_LT_80",
+    "state": "EXACT_RULE"
+   },
+   "type_above": "C6",
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": "C6",
+   "type_inheritance": "AXIS_PLAN_TAG_INHERITED_UP_THE_CHAIN"
+  },
+  {
+   "chain_id": "COLPOS-X08-Y04-17038-12362",
+   "column_id": "COL-C6-X08-Y04-1F",
+   "column_type": "C6",
+   "continues_above": false,
+   "continues_from_below": true,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    25.0,
+    70.0
+   ],
+   "drawn_vs_schedule": "MISMATCH",
+   "floor": "1F",
+   "grid": {
+    "X": "X08",
+    "Y": "Y04"
+   },
+   "longitudinal_bars": {
+    "count": 8,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "8",
+     "16"
+    ],
+    "tags": [
+     "1ST.R",
+     "1ST.D"
+    ]
+   },
+   "min_thickness_check": {
+    "candidates": [
+     20
+    ],
+    "state": "PASS",
+    "t_min_cm": 20
+   },
+   "orientation": "Y",
+   "plan_centre_mm": [
+    17012.9,
+    12361.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "688"
+    ],
+    "sheets": [
+     "FFRS"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    20.0,
+    60.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_50_LT_L_LT_80",
+    "state": "EXACT_RULE"
+   },
+   "type_above": null,
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": "C6",
+   "type_inheritance": "AXIS_PLAN_TAG_INHERITED_UP_THE_CHAIN"
+  },
+  {
+   "chain_id": "COLPOS-X?-Y?-24058-12787",
+   "column_id": "COL-CN-X?-Y?@24058-12787-FOUNDATION",
+   "column_type": "CN",
+   "continues_above": false,
+   "continues_from_below": false,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    30.0,
+    30.0
+   ],
+   "drawn_vs_schedule": "MATCH",
+   "floor": "FOUNDATION",
+   "grid": {
+    "X": null,
+    "Y": null
+   },
+   "longitudinal_bars": {
+    "count": 4,
+    "dia_mm": 14
+   },
+   "min_thickness_check": null,
+   "orientation": "X",
+   "plan_centre_mm": [
+    24057.9,
+    12786.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "10F6",
+     "892",
+     "7F5"
+    ],
+    "sheets": [
+     "FP",
+     "CAP",
+     "GBP"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    30.0,
+    30.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_L_LE_50",
+    "state": "EXACT_RULE"
+   },
+   "type_above": null,
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": null,
+   "type_inheritance": null
+  },
+  {
+   "chain_id": "COLPOS-X?-Y?-28583-12787",
+   "column_id": "COL-CN-X?-Y?@28583-12787-FOUNDATION",
+   "column_type": "CN",
+   "continues_above": false,
+   "continues_from_below": false,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    30.0,
+    30.0
+   ],
+   "drawn_vs_schedule": "MATCH",
+   "floor": "FOUNDATION",
+   "grid": {
+    "X": null,
+    "Y": null
+   },
+   "longitudinal_bars": {
+    "count": 4,
+    "dia_mm": 14
+   },
+   "min_thickness_check": null,
+   "orientation": "X",
+   "plan_centre_mm": [
+    28582.9,
+    12786.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "10EE",
+     "88F",
+     "7ED"
+    ],
+    "sheets": [
+     "FP",
+     "CAP",
+     "GBP"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    30.0,
+    30.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_L_LE_50",
+    "state": "EXACT_RULE"
+   },
+   "type_above": null,
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": null,
+   "type_inheritance": null
+  },
+  {
+   "chain_id": "COLPOS-X01-Y05-2038-13762",
+   "column_id": "COL-C-X01-Y05-FOUNDATION",
+   "column_type": "C",
+   "continues_above": true,
+   "continues_from_below": false,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    30.0,
+    50.0
+   ],
+   "drawn_vs_schedule": "MATCH",
+   "floor": "FOUNDATION",
+   "grid": {
+    "X": "X01",
+    "Y": "Y05"
+   },
+   "longitudinal_bars": {
+    "count": 8,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "8",
+     "16"
+    ],
+    "tags": [
+     "FOU.R",
+     "FOU.D"
+    ]
+   },
+   "min_thickness_check": null,
+   "orientation": "Y",
+   "plan_centre_mm": [
+    2037.9,
+    13761.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "10A8",
+     "844",
+     "204"
+    ],
+    "sheets": [
+     "FP",
+     "CAP",
+     "GBP"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    30.0,
+    50.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_L_LE_50",
+    "state": "EXACT_RULE"
+   },
+   "type_above": "C",
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": null,
+   "type_inheritance": null
+  },
+  {
+   "chain_id": "COLPOS-X01-Y05-2038-13762",
+   "column_id": "COL-C-X01-Y05-GF",
+   "column_type": "C",
+   "continues_above": false,
+   "continues_from_below": true,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    20.0,
+    40.0
+   ],
+   "drawn_vs_schedule": "MISMATCH",
+   "floor": "GF",
+   "grid": {
+    "X": "X01",
+    "Y": "Y05"
+   },
+   "longitudinal_bars": {
+    "count": 8,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "8",
+     "16"
+    ],
+    "tags": [
+     "GR.R",
+     "GR.D"
+    ]
+   },
+   "min_thickness_check": {
+    "candidates": [
+     25
+    ],
+    "state": "BELOW_MINIMUM",
+    "t_min_cm": 25
+   },
+   "orientation": "Y",
+   "plan_centre_mm": [
+    1987.9,
+    13811.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "34A"
+    ],
+    "sheets": [
+     "GFRS"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    20.0,
+    50.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_L_LE_50",
+    "state": "EXACT_RULE"
+   },
+   "type_above": null,
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": "C",
+   "type_inheritance": "AXIS_PLAN_TAG_INHERITED_UP_THE_CHAIN"
+  },
+  {
+   "chain_id": "COLPOS-X02-Y05-4738-13862",
+   "column_id": "COL-C-X02-Y05-FOUNDATION",
+   "column_type": "C",
+   "continues_above": true,
+   "continues_from_below": false,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    50.0,
+    30.0
+   ],
+   "drawn_vs_schedule": "MATCH",
+   "floor": "FOUNDATION",
+   "grid": {
+    "X": "X02",
+    "Y": "Y05"
+   },
+   "longitudinal_bars": {
+    "count": 8,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "8",
+     "16"
+    ],
+    "tags": [
+     "FOU.R",
+     "FOU.D"
+    ]
+   },
+   "min_thickness_check": null,
+   "orientation": "X",
+   "plan_centre_mm": [
+    4737.9,
+    13861.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "10B4",
+     "856",
+     "214"
+    ],
+    "sheets": [
+     "FP",
+     "CAP",
+     "GBP"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    30.0,
+    50.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_L_LE_50",
+    "state": "EXACT_RULE"
+   },
+   "type_above": "C",
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": null,
+   "type_inheritance": null
+  },
+  {
+   "chain_id": "COLPOS-X02-Y05-4738-13862",
+   "column_id": "COL-C-X02-Y05-GF",
+   "column_type": "C",
+   "continues_above": false,
+   "continues_from_below": true,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    40.0,
+    20.0
+   ],
+   "drawn_vs_schedule": "MISMATCH",
+   "floor": "GF",
+   "grid": {
+    "X": "X02",
+    "Y": "Y05"
+   },
+   "longitudinal_bars": {
+    "count": 8,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "8",
+     "16"
+    ],
+    "tags": [
+     "GR.R",
+     "GR.D"
+    ]
+   },
+   "min_thickness_check": {
+    "candidates": [
+     25
+    ],
+    "state": "BELOW_MINIMUM",
+    "t_min_cm": 25
+   },
+   "orientation": "X",
+   "plan_centre_mm": [
+    4787.9,
+    13911.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "356"
+    ],
+    "sheets": [
+     "GFRS"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    20.0,
+    50.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_L_LE_50",
+    "state": "EXACT_RULE"
+   },
+   "type_above": null,
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": "C",
+   "type_inheritance": "AXIS_PLAN_TAG_INHERITED_UP_THE_CHAIN"
+  },
+  {
+   "chain_id": "COLPOS-X16-Y06-33108-14962",
+   "column_id": "COL-C3-X16-Y06-FOUNDATION",
+   "column_type": "C3",
+   "continues_above": true,
+   "continues_from_below": false,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    30.0,
+    50.0
+   ],
+   "drawn_vs_schedule": "MATCH",
+   "floor": "FOUNDATION",
+   "grid": {
+    "X": "X16",
+    "Y": "Y06"
+   },
+   "longitudinal_bars": {
+    "count": 8,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "8",
+     "16"
+    ],
+    "tags": [
+     "FOU.R",
+     "FOU.D"
+    ]
+   },
+   "min_thickness_check": null,
+   "orientation": "Y",
+   "plan_centre_mm": [
+    33107.9,
+    14961.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "10A0",
+     "83C",
+     "1FC"
+    ],
+    "sheets": [
+     "FP",
+     "CAP",
+     "GBP"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    30.0,
+    50.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_L_LE_50",
+    "state": "EXACT_RULE"
+   },
+   "type_above": "C3",
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": null,
+   "type_inheritance": null
+  },
+  {
+   "chain_id": "COLPOS-X16-Y06-33108-14962",
+   "column_id": "COL-C3-X16-Y06-GF",
+   "column_type": "C3",
+   "continues_above": false,
+   "continues_from_below": true,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    20.0,
+    50.0
+   ],
+   "drawn_vs_schedule": "MISMATCH",
+   "floor": "GF",
+   "grid": {
+    "X": "X16",
+    "Y": "Y06"
+   },
+   "longitudinal_bars": {
+    "count": 8,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "8",
+     "16"
+    ],
+    "tags": [
+     "GR.R",
+     "GR.D"
+    ]
+   },
+   "min_thickness_check": {
+    "candidates": [
+     25
+    ],
+    "state": "PASS",
+    "t_min_cm": 25
+   },
+   "orientation": "Y",
+   "plan_centre_mm": [
+    33157.9,
+    14961.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "344"
+    ],
+    "sheets": [
+     "GFRS"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    25.0,
+    50.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_L_LE_50",
+    "state": "EXACT_RULE"
+   },
+   "type_above": null,
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": "C3",
+   "type_inheritance": "AXIS_PLAN_TAG_INHERITED_UP_THE_CHAIN"
+  },
+  {
+   "chain_id": "COLPOS-X15-Y06-31508-15062",
+   "column_id": "COL-C8-X15-Y06-FOUNDATION",
+   "column_type": "C8",
+   "continues_above": true,
+   "continues_from_below": false,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    90.0,
+    30.0
+   ],
+   "drawn_vs_schedule": "MATCH",
+   "floor": "FOUNDATION",
+   "grid": {
+    "X": "X15",
+    "Y": "Y06"
+   },
+   "longitudinal_bars": {
+    "count": 12,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "12",
+     "16"
+    ],
+    "tags": [
+     "FOU.R",
+     "FOU.D"
+    ]
+   },
+   "min_thickness_check": null,
+   "orientation": "X",
+   "plan_centre_mm": [
+    31507.9,
+    15061.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "10D0",
+     "873",
+     "238"
+    ],
+    "sheets": [
+     "FP",
+     "CAP",
+     "GBP"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    30.0,
+    90.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_80_LT_L_LT_120",
+    "state": "EXACT_RULE"
+   },
+   "type_above": "C8",
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": null,
+   "type_inheritance": null
+  },
+  {
+   "chain_id": "COLPOS-X15-Y06-31508-15062",
+   "column_id": "COL-C8-X15-Y06-GF",
+   "column_type": "C8",
+   "continues_above": true,
+   "continues_from_below": true,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    90.0,
+    25.0
+   ],
+   "drawn_vs_schedule": "MATCH",
+   "floor": "GF",
+   "grid": {
+    "X": "X15",
+    "Y": "Y06"
+   },
+   "longitudinal_bars": {
+    "count": 12,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "12",
+     "16"
+    ],
+    "tags": [
+     "GR.R",
+     "GR.D"
+    ]
+   },
+   "min_thickness_check": {
+    "candidates": [
+     25
+    ],
+    "state": "PASS",
+    "t_min_cm": 25
+   },
+   "orientation": "X",
+   "plan_centre_mm": [
+    31507.9,
+    15086.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "36E"
+    ],
+    "sheets": [
+     "GFRS"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    25.0,
+    90.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_80_LT_L_LT_120",
+    "state": "EXACT_RULE"
+   },
+   "type_above": "C8",
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": "C8",
+   "type_inheritance": "AXIS_PLAN_TAG_INHERITED_UP_THE_CHAIN"
+  },
+  {
+   "chain_id": "COLPOS-X15-Y06-31508-15062",
+   "column_id": "COL-C8-X15-Y06-1F",
+   "column_type": "C8",
+   "continues_above": false,
+   "continues_from_below": true,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    20.0,
+    90.0
+   ],
+   "drawn_vs_schedule": "MATCH",
+   "floor": "1F",
+   "grid": {
+    "X": "X15",
+    "Y": "Y06"
+   },
+   "longitudinal_bars": {
+    "count": 12,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "12",
+     "16"
+    ],
+    "tags": [
+     "1ST.R",
+     "1ST.D"
+    ]
+   },
+   "min_thickness_check": {
+    "candidates": [
+     20
+    ],
+    "state": "PASS",
+    "t_min_cm": 20
+   },
+   "orientation": "Y",
+   "plan_centre_mm": [
+    31657.9,
+    15086.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "664"
+    ],
+    "sheets": [
+     "FFRS"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    20.0,
+    90.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_80_LT_L_LT_120",
+    "state": "EXACT_RULE"
+   },
+   "type_above": null,
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": "C8",
+   "type_inheritance": "AXIS_PLAN_TAG_INHERITED_UP_THE_CHAIN"
+  },
+  {
+   "chain_id": "COLPOS-X09-Y07-19688-15662",
+   "column_id": "COL-C2-X09-Y07-FOUNDATION",
+   "column_type": "C2",
+   "continues_above": true,
+   "continues_from_below": false,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    20.0,
+    50.0
+   ],
+   "drawn_vs_schedule": "MISMATCH",
+   "floor": "FOUNDATION",
+   "grid": {
+    "X": "X09",
+    "Y": "Y07"
+   },
+   "longitudinal_bars": {
+    "count": 8,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "8",
+     "16"
+    ],
+    "tags": [
+     "FOU.R",
+     "FOU.D"
+    ]
+   },
+   "min_thickness_check": null,
+   "orientation": "Y",
+   "plan_centre_mm": [
+    19687.9,
+    15661.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "1096",
+     "834",
+     "1F2"
+    ],
+    "sheets": [
+     "FP",
+     "CAP",
+     "GBP"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    30.0,
+    50.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_L_LE_50",
+    "state": "EXACT_RULE"
+   },
+   "type_above": "C2",
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": null,
+   "type_inheritance": null
+  },
+  {
+   "chain_id": "COLPOS-X09-Y07-19688-15662",
+   "column_id": "COL-C2-X09-Y07-GF",
+   "column_type": "C2",
+   "continues_above": true,
+   "continues_from_below": true,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    20.0,
+    50.0
+   ],
+   "drawn_vs_schedule": "MATCH",
+   "floor": "GF",
+   "grid": {
+    "X": "X09",
+    "Y": "Y07"
+   },
+   "longitudinal_bars": {
+    "count": 8,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "8",
+     "16"
+    ],
+    "tags": [
+     "GR.R",
+     "GR.D"
+    ]
+   },
+   "min_thickness_check": {
+    "candidates": [
+     25
+    ],
+    "state": "BELOW_MINIMUM",
+    "t_min_cm": 25
+   },
+   "orientation": "Y",
+   "plan_centre_mm": [
+    19687.9,
+    15661.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "33E"
+    ],
+    "sheets": [
+     "GFRS"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    20.0,
+    50.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_L_LE_50",
+    "state": "EXACT_RULE"
+   },
+   "type_above": "C2",
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": "C2",
+   "type_inheritance": "AXIS_PLAN_TAG_INHERITED_UP_THE_CHAIN"
+  },
+  {
+   "chain_id": "COLPOS-X09-Y07-19688-15662",
+   "column_id": "COL-C2-X09-Y07-1F",
+   "column_type": "C2",
+   "continues_above": true,
+   "continues_from_below": true,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    20.0,
+    50.0
+   ],
+   "drawn_vs_schedule": "MATCH",
+   "floor": "1F",
+   "grid": {
+    "X": "X09",
+    "Y": "Y07"
+   },
+   "longitudinal_bars": {
+    "count": 8,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "8",
+     "16"
+    ],
+    "tags": [
+     "1ST.R",
+     "1ST.D"
+    ]
+   },
+   "min_thickness_check": {
+    "candidates": [
+     20
+    ],
+    "state": "PASS",
+    "t_min_cm": 20
+   },
+   "orientation": "Y",
+   "plan_centre_mm": [
+    19687.9,
+    15661.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "67F"
+    ],
+    "sheets": [
+     "FFRS"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    20.0,
+    50.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_L_LE_50",
+    "state": "EXACT_RULE"
+   },
+   "type_above": "C2",
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": "C2",
+   "type_inheritance": "AXIS_PLAN_TAG_INHERITED_UP_THE_CHAIN"
+  },
+  {
+   "chain_id": "COLPOS-X09-Y07-19688-15662",
+   "column_id": "COL-C2-X09-Y07-2F",
+   "column_type": "C2",
+   "continues_above": false,
+   "continues_from_below": true,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    20.0,
+    50.0
+   ],
+   "drawn_vs_schedule": "MATCH",
+   "floor": "2F",
+   "grid": {
+    "X": "X09",
+    "Y": "Y07"
+   },
+   "longitudinal_bars": {
+    "count": 6,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "6",
+     "16"
+    ],
+    "tags": [
+     "2ND.R",
+     "2ND.D"
+    ]
+   },
+   "min_thickness_check": {
+    "candidates": [
+     20
+    ],
+    "state": "PASS",
+    "t_min_cm": 20
+   },
+   "orientation": "Y",
+   "plan_centre_mm": [
+    19687.9,
+    15661.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "41E"
+    ],
+    "sheets": [
+     "SFRS"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    20.0,
+    50.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_L_LE_50",
+    "state": "EXACT_RULE"
+   },
+   "type_above": null,
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": "C2",
+   "type_inheritance": "AXIS_PLAN_TAG_INHERITED_UP_THE_CHAIN"
+  },
+  {
+   "chain_id": "COLPOS-X15-Y?-31208-15726",
+   "column_id": "COL-CN-X15-Y?@31208-15726-FOUNDATION",
+   "column_type": "CN",
+   "continues_above": false,
+   "continues_from_below": false,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    30.0,
+    30.0
+   ],
+   "drawn_vs_schedule": "MATCH",
+   "floor": "FOUNDATION",
+   "grid": {
+    "X": "X15",
+    "Y": null
+   },
+   "longitudinal_bars": {
+    "count": 4,
+    "dia_mm": 14
+   },
+   "min_thickness_check": null,
+   "orientation": "X",
+   "plan_centre_mm": [
+    31207.9,
+    15725.8
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "17C5",
+     "17CC",
+     "17BD"
+    ],
+    "sheets": [
+     "FP",
+     "CAP",
+     "GBP"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    30.0,
+    30.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_L_LE_50",
+    "state": "EXACT_RULE"
+   },
+   "type_above": null,
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": null,
+   "type_inheritance": null
+  },
+  {
+   "chain_id": "COLPOS-X10-Y07-21713-15912",
+   "column_id": "COL-C9-X10-Y07-FOUNDATION",
+   "column_type": "C9",
+   "continues_above": true,
+   "continues_from_below": false,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    25.0,
+    100.0
+   ],
+   "drawn_vs_schedule": "MISMATCH",
+   "floor": "FOUNDATION",
+   "grid": {
+    "X": "X10",
+    "Y": "Y07"
+   },
+   "longitudinal_bars": {
+    "count": 14,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "14",
+     "16"
+    ],
+    "tags": [
+     "FOU.R",
+     "FOU.D"
+    ]
+   },
+   "min_thickness_check": null,
+   "orientation": "Y",
+   "plan_centre_mm": [
+    21712.9,
+    15911.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "1090",
+     "82E",
+     "1EC"
+    ],
+    "sheets": [
+     "FP",
+     "CAP",
+     "GBP"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    30.0,
+    100.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_80_LT_L_LT_120",
+    "state": "EXACT_RULE"
+   },
+   "type_above": "C9",
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": null,
+   "type_inheritance": null
+  },
+  {
+   "chain_id": "COLPOS-X10-Y07-21713-15912",
+   "column_id": "COL-C9-X10-Y07-GF",
+   "column_type": "C9",
+   "continues_above": true,
+   "continues_from_below": true,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    25.0,
+    100.0
+   ],
+   "drawn_vs_schedule": "MATCH",
+   "floor": "GF",
+   "grid": {
+    "X": "X10",
+    "Y": "Y07"
+   },
+   "longitudinal_bars": {
+    "count": 14,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "14",
+     "16"
+    ],
+    "tags": [
+     "GR.R",
+     "GR.D"
+    ]
+   },
+   "min_thickness_check": {
+    "candidates": [
+     25
+    ],
+    "state": "PASS",
+    "t_min_cm": 25
+   },
+   "orientation": "Y",
+   "plan_centre_mm": [
+    21712.9,
+    15911.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "338"
+    ],
+    "sheets": [
+     "GFRS"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    25.0,
+    100.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_80_LT_L_LT_120",
+    "state": "EXACT_RULE"
+   },
+   "type_above": "C9",
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": "C9",
+   "type_inheritance": "AXIS_PLAN_TAG_INHERITED_UP_THE_CHAIN"
+  },
+  {
+   "chain_id": "COLPOS-X10-Y07-21713-15912",
+   "column_id": "COL-C9-X10-Y07-1F",
+   "column_type": "C9",
+   "continues_above": true,
+   "continues_from_below": true,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    25.0,
+    100.0
+   ],
+   "drawn_vs_schedule": "MISMATCH",
+   "floor": "1F",
+   "grid": {
+    "X": "X10",
+    "Y": "Y07"
+   },
+   "longitudinal_bars": {
+    "count": 12,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "12",
+     "16"
+    ],
+    "tags": [
+     "1ST.R",
+     "1ST.D"
+    ]
+   },
+   "min_thickness_check": {
+    "candidates": [
+     20
+    ],
+    "state": "PASS",
+    "t_min_cm": 20
+   },
+   "orientation": "Y",
+   "plan_centre_mm": [
+    21712.9,
+    15911.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "679"
+    ],
+    "sheets": [
+     "FFRS"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    20.0,
+    90.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_80_LT_L_LT_120",
+    "state": "EXACT_RULE"
+   },
+   "type_above": "C9",
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": "C9",
+   "type_inheritance": "AXIS_PLAN_TAG_INHERITED_UP_THE_CHAIN"
+  },
+  {
+   "chain_id": "COLPOS-X10-Y07-21713-15912",
+   "column_id": "COL-C9-X10-Y07-2F",
+   "column_type": "C9",
+   "continues_above": false,
+   "continues_from_below": true,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    20.0,
+    70.0
+   ],
+   "drawn_vs_schedule": "MATCH",
+   "floor": "2F",
+   "grid": {
+    "X": "X10",
+    "Y": "Y07"
+   },
+   "longitudinal_bars": {
+    "count": 10,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "10",
+     "16"
+    ],
+    "tags": [
+     "2ND.R",
+     "2ND.D"
+    ]
+   },
+   "min_thickness_check": {
+    "candidates": [
+     20
+    ],
+    "state": "PASS",
+    "t_min_cm": 20
+   },
+   "orientation": "Y",
+   "plan_centre_mm": [
+    21687.9,
+    15761.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "418"
+    ],
+    "sheets": [
+     "SFRS"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    20.0,
+    70.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_50_LT_L_LT_80",
+    "state": "EXACT_RULE"
+   },
+   "type_above": null,
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": "C9",
+   "type_inheritance": "AXIS_PLAN_TAG_INHERITED_UP_THE_CHAIN"
+  },
+  {
+   "chain_id": "COLPOS-X?-Y?-24888-15994",
+   "column_id": "COL-P.C-X?-Y?@24888-15994-2F",
+   "column_type": "P.C",
+   "continues_above": false,
+   "continues_from_below": false,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    20.0,
+    40.0
+   ],
+   "drawn_vs_schedule": "MISMATCH",
+   "floor": "2F",
+   "grid": {
+    "X": null,
+    "Y": null
+   },
+   "longitudinal_bars": {
+    "count": 8,
+    "dia_mm": 16,
+    "text_handle": "77D"
+   },
+   "min_thickness_check": {
+    "candidates": [
+     20
+    ],
+    "state": "PASS",
+    "t_min_cm": 20
+   },
+   "orientation": "Y",
+   "plan_centre_mm": [
+    24887.9,
+    15993.6
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "778"
+    ],
+    "sheets": [
+     "SFRS"
+    ]
+   },
+   "planted_on": "1F_ROOF_SLAB",
+   "schedule_section_cm": [
+    20,
+    50
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_L_LE_50",
+    "state": "EXACT_RULE"
+   },
+   "type_above": null,
+   "type_authority": "PLAN_LABEL",
+   "type_below": null,
+   "type_inheritance": null
+  },
+  {
+   "chain_id": "COLPOS-X07-Y?-15888-16162",
+   "column_id": "COL-C7-X07-Y?@15888-16162-FOUNDATION",
+   "column_type": "C7",
+   "continues_above": true,
+   "continues_from_below": false,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    80.0,
+    30.0
+   ],
+   "drawn_vs_schedule": "MATCH",
+   "floor": "FOUNDATION",
+   "grid": {
+    "X": "X07",
+    "Y": null
+   },
+   "longitudinal_bars": {
+    "count": 12,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "12",
+     "16"
+    ],
+    "tags": [
+     "FOU.R",
+     "FOU.D"
+    ]
+   },
+   "min_thickness_check": null,
+   "orientation": "X",
+   "plan_centre_mm": [
+    15887.9,
+    16161.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "10C8",
+     "86C",
+     "230"
+    ],
+    "sheets": [
+     "FP",
+     "CAP",
+     "GBP"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    30.0,
+    80.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": null,
+    "state": "BOUNDARY_GAP"
+   },
+   "type_above": "C7",
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": null,
+   "type_inheritance": null
+  },
+  {
+   "chain_id": "COLPOS-X07-Y?-15888-16162",
+   "column_id": "COL-C7-X07-Y?@15888-16162-GF",
+   "column_type": "C7",
+   "continues_above": true,
+   "continues_from_below": true,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    80.0,
+    25.0
+   ],
+   "drawn_vs_schedule": "MATCH",
+   "floor": "GF",
+   "grid": {
+    "X": "X07",
+    "Y": null
+   },
+   "longitudinal_bars": {
+    "count": 12,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "12",
+     "16"
+    ],
+    "tags": [
+     "GR.R",
+     "GR.D"
+    ]
+   },
+   "min_thickness_check": {
+    "candidates": [
+     25
+    ],
+    "state": "PASS",
+    "t_min_cm": 25
+   },
+   "orientation": "X",
+   "plan_centre_mm": [
+    15887.9,
+    16186.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "368"
+    ],
+    "sheets": [
+     "GFRS"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    25.0,
+    80.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": null,
+    "state": "BOUNDARY_GAP"
+   },
+   "type_above": "C7",
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": "C7",
+   "type_inheritance": "AXIS_PLAN_TAG_INHERITED_UP_THE_CHAIN"
+  },
+  {
+   "chain_id": "COLPOS-X07-Y?-15888-16162",
+   "column_id": "COL-C7-X07-Y?@15888-16162-1F",
+   "column_type": "C7",
+   "continues_above": false,
+   "continues_from_below": true,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    80.0,
+    25.0
+   ],
+   "drawn_vs_schedule": "MISMATCH",
+   "floor": "1F",
+   "grid": {
+    "X": "X07",
+    "Y": null
+   },
+   "longitudinal_bars": {
+    "count": 10,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "10",
+     "16"
+    ],
+    "tags": [
+     "1ST.R",
+     "1ST.D"
+    ]
+   },
+   "min_thickness_check": {
+    "candidates": [
+     20
+    ],
+    "state": "PASS",
+    "t_min_cm": 20
+   },
+   "orientation": "X",
+   "plan_centre_mm": [
+    15887.9,
+    16186.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "68E"
+    ],
+    "sheets": [
+     "FFRS"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    20.0,
+    80.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": null,
+    "state": "BOUNDARY_GAP"
+   },
+   "type_above": null,
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": "C7",
+   "type_inheritance": "AXIS_PLAN_TAG_INHERITED_UP_THE_CHAIN"
+  },
+  {
+   "chain_id": "COLPOS-X13-Y08-27308-16612",
+   "column_id": "COL-C9-X13-Y08-FOUNDATION",
+   "column_type": "C9",
+   "continues_above": true,
+   "continues_from_below": false,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    100.0,
+    30.0
+   ],
+   "drawn_vs_schedule": "MATCH",
+   "floor": "FOUNDATION",
+   "grid": {
+    "X": "X13",
+    "Y": "Y08"
+   },
+   "longitudinal_bars": {
+    "count": 14,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "14",
+     "16"
+    ],
+    "tags": [
+     "FOU.R",
+     "FOU.D"
+    ]
+   },
+   "min_thickness_check": null,
+   "orientation": "X",
+   "plan_centre_mm": [
+    27307.9,
+    16611.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "10DA",
+     "880",
+     "245"
+    ],
+    "sheets": [
+     "FP",
+     "CAP",
+     "GBP"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    30.0,
+    100.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_80_LT_L_LT_120",
+    "state": "EXACT_RULE"
+   },
+   "type_above": "C9",
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": null,
+   "type_inheritance": null
+  },
+  {
+   "chain_id": "COLPOS-X13-Y08-27308-16612",
+   "column_id": "COL-C9-X13-Y08-GF",
+   "column_type": "C9",
+   "continues_above": true,
+   "continues_from_below": true,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    100.0,
+    25.0
+   ],
+   "drawn_vs_schedule": "MATCH",
+   "floor": "GF",
+   "grid": {
+    "X": "X13",
+    "Y": "Y08"
+   },
+   "longitudinal_bars": {
+    "count": 14,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "14",
+     "16"
+    ],
+    "tags": [
+     "GR.R",
+     "GR.D"
+    ]
+   },
+   "min_thickness_check": {
+    "candidates": [
+     25
+    ],
+    "state": "PASS",
+    "t_min_cm": 25
+   },
+   "orientation": "X",
+   "plan_centre_mm": [
+    27307.9,
+    16586.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "37A"
+    ],
+    "sheets": [
+     "GFRS"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    25.0,
+    100.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_80_LT_L_LT_120",
+    "state": "EXACT_RULE"
+   },
+   "type_above": "C9",
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": "C9",
+   "type_inheritance": "AXIS_PLAN_TAG_INHERITED_UP_THE_CHAIN"
+  },
+  {
+   "chain_id": "COLPOS-X13-Y08-27308-16612",
+   "column_id": "COL-C9-X13-Y08-1F",
+   "column_type": "C9",
+   "continues_above": false,
+   "continues_from_below": true,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    20.0,
+    100.0
+   ],
+   "drawn_vs_schedule": "MISMATCH",
+   "floor": "1F",
+   "grid": {
+    "X": "X13",
+    "Y": "Y08"
+   },
+   "longitudinal_bars": {
+    "count": 12,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "12",
+     "16"
+    ],
+    "tags": [
+     "1ST.R",
+     "1ST.D"
+    ]
+   },
+   "min_thickness_check": {
+    "candidates": [
+     20
+    ],
+    "state": "PASS",
+    "t_min_cm": 20
+   },
+   "orientation": "Y",
+   "plan_centre_mm": [
+    27307.9,
+    16586.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "667"
+    ],
+    "sheets": [
+     "FFRS"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    20.0,
+    90.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_80_LT_L_LT_120",
+    "state": "EXACT_RULE"
+   },
+   "type_above": null,
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": "C9",
+   "type_inheritance": "AXIS_PLAN_TAG_INHERITED_UP_THE_CHAIN"
+  },
+  {
+   "chain_id": "COLPOS-X08-Y09-17038-17362",
+   "column_id": "COL-C3-X08-Y09-FOUNDATION",
+   "column_type": "C3",
+   "continues_above": true,
+   "continues_from_below": false,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    30.0,
+    50.0
+   ],
+   "drawn_vs_schedule": "MATCH",
+   "floor": "FOUNDATION",
+   "grid": {
+    "X": "X08",
+    "Y": "Y09"
+   },
+   "longitudinal_bars": {
+    "count": 8,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "8",
+     "16"
+    ],
+    "tags": [
+     "FOU.R",
+     "FOU.D"
+    ]
+   },
+   "min_thickness_check": null,
+   "orientation": "Y",
+   "plan_centre_mm": [
+    17037.9,
+    17361.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "10CC",
+     "870",
+     "234"
+    ],
+    "sheets": [
+     "FP",
+     "CAP",
+     "GBP"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    30.0,
+    50.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_L_LE_50",
+    "state": "EXACT_RULE"
+   },
+   "type_above": "C3",
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": null,
+   "type_inheritance": null
+  },
+  {
+   "chain_id": "COLPOS-X08-Y09-17038-17362",
+   "column_id": "COL-C3-X08-Y09-GF",
+   "column_type": "C3",
+   "continues_above": true,
+   "continues_from_below": true,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    25.0,
+    50.0
+   ],
+   "drawn_vs_schedule": "MATCH",
+   "floor": "GF",
+   "grid": {
+    "X": "X08",
+    "Y": "Y09"
+   },
+   "longitudinal_bars": {
+    "count": 8,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "8",
+     "16"
+    ],
+    "tags": [
+     "GR.R",
+     "GR.D"
+    ]
+   },
+   "min_thickness_check": {
+    "candidates": [
+     25
+    ],
+    "state": "PASS",
+    "t_min_cm": 25
+   },
+   "orientation": "Y",
+   "plan_centre_mm": [
+    17012.9,
+    17361.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "36B"
+    ],
+    "sheets": [
+     "GFRS"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    25.0,
+    50.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_L_LE_50",
+    "state": "EXACT_RULE"
+   },
+   "type_above": "C3",
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": "C3",
+   "type_inheritance": "AXIS_PLAN_TAG_INHERITED_UP_THE_CHAIN"
+  },
+  {
+   "chain_id": "COLPOS-X08-Y09-17038-17362",
+   "column_id": "COL-C3-X08-Y09-1F",
+   "column_type": "C3",
+   "continues_above": true,
+   "continues_from_below": true,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    25.0,
+    50.0
+   ],
+   "drawn_vs_schedule": "MISMATCH",
+   "floor": "1F",
+   "grid": {
+    "X": "X08",
+    "Y": "Y09"
+   },
+   "longitudinal_bars": {
+    "count": 6,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "6",
+     "16"
+    ],
+    "tags": [
+     "1ST.R",
+     "1ST.D"
+    ]
+   },
+   "min_thickness_check": {
+    "candidates": [
+     20
+    ],
+    "state": "PASS",
+    "t_min_cm": 20
+   },
+   "orientation": "Y",
+   "plan_centre_mm": [
+    17012.9,
+    17361.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "691"
+    ],
+    "sheets": [
+     "FFRS"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    20.0,
+    50.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_L_LE_50",
+    "state": "EXACT_RULE"
+   },
+   "type_above": "C3",
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": "C3",
+   "type_inheritance": "AXIS_PLAN_TAG_INHERITED_UP_THE_CHAIN"
+  },
+  {
+   "chain_id": "COLPOS-X08-Y09-17038-17362",
+   "column_id": "COL-C3-X08-Y09-2F",
+   "column_type": "C3",
+   "continues_above": false,
+   "continues_from_below": true,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    25.0,
+    50.0
+   ],
+   "drawn_vs_schedule": "MISMATCH",
+   "floor": "2F",
+   "grid": {
+    "X": "X08",
+    "Y": "Y09"
+   },
+   "longitudinal_bars": {
+    "count": 6,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "6",
+     "16"
+    ],
+    "tags": [
+     "2ND.R",
+     "2ND.D"
+    ]
+   },
+   "min_thickness_check": {
+    "candidates": [
+     20
+    ],
+    "state": "PASS",
+    "t_min_cm": 20
+   },
+   "orientation": "Y",
+   "plan_centre_mm": [
+    17012.9,
+    17361.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "424"
+    ],
+    "sheets": [
+     "SFRS"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    20.0,
+    50.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_L_LE_50",
+    "state": "EXACT_RULE"
+   },
+   "type_above": null,
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": "C3",
+   "type_inheritance": "AXIS_PLAN_TAG_INHERITED_UP_THE_CHAIN"
+  },
+  {
+   "chain_id": "COLPOS-X09-Y09-19688-17362",
+   "column_id": "COL-C1-X09-Y09-FOUNDATION",
+   "column_type": "C1",
+   "continues_above": true,
+   "continues_from_below": false,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    20.0,
+    50.0
+   ],
+   "drawn_vs_schedule": "MISMATCH",
+   "floor": "FOUNDATION",
+   "grid": {
+    "X": "X09",
+    "Y": "Y09"
+   },
+   "longitudinal_bars": {
+    "count": 8,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "8",
+     "16"
+    ],
+    "tags": [
+     "FOU.R",
+     "FOU.D"
+    ]
+   },
+   "min_thickness_check": null,
+   "orientation": "Y",
+   "plan_centre_mm": [
+    19687.9,
+    17361.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "1099",
+     "837",
+     "1F5"
+    ],
+    "sheets": [
+     "FP",
+     "CAP",
+     "GBP"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    30.0,
+    50.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_L_LE_50",
+    "state": "EXACT_RULE"
+   },
+   "type_above": "C1",
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": null,
+   "type_inheritance": null
+  },
+  {
+   "chain_id": "COLPOS-X09-Y09-19688-17362",
+   "column_id": "COL-C1-X09-Y09-GF",
+   "column_type": "C1",
+   "continues_above": true,
+   "continues_from_below": true,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    20.0,
+    50.0
+   ],
+   "drawn_vs_schedule": "MATCH",
+   "floor": "GF",
+   "grid": {
+    "X": "X09",
+    "Y": "Y09"
+   },
+   "longitudinal_bars": {
+    "count": 8,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "8",
+     "16"
+    ],
+    "tags": [
+     "GR.R",
+     "GR.D"
+    ]
+   },
+   "min_thickness_check": {
+    "candidates": [
+     25
+    ],
+    "state": "BELOW_MINIMUM",
+    "t_min_cm": 25
+   },
+   "orientation": "Y",
+   "plan_centre_mm": [
+    19687.9,
+    17361.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "341"
+    ],
+    "sheets": [
+     "GFRS"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    20.0,
+    50.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_L_LE_50",
+    "state": "EXACT_RULE"
+   },
+   "type_above": "C1",
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": "C1",
+   "type_inheritance": "AXIS_PLAN_TAG_INHERITED_UP_THE_CHAIN"
+  },
+  {
+   "chain_id": "COLPOS-X09-Y09-19688-17362",
+   "column_id": "COL-C1-X09-Y09-1F",
+   "column_type": "C1",
+   "continues_above": true,
+   "continues_from_below": true,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    20.0,
+    50.0
+   ],
+   "drawn_vs_schedule": "MATCH",
+   "floor": "1F",
+   "grid": {
+    "X": "X09",
+    "Y": "Y09"
+   },
+   "longitudinal_bars": {
+    "count": 6,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "6",
+     "16"
+    ],
+    "tags": [
+     "1ST.R",
+     "1ST.D"
+    ]
+   },
+   "min_thickness_check": {
+    "candidates": [
+     20
+    ],
+    "state": "PASS",
+    "t_min_cm": 20
+   },
+   "orientation": "Y",
+   "plan_centre_mm": [
+    19687.9,
+    17361.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "682"
+    ],
+    "sheets": [
+     "FFRS"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    20.0,
+    50.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_L_LE_50",
+    "state": "EXACT_RULE"
+   },
+   "type_above": "C1",
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": "C1",
+   "type_inheritance": "AXIS_PLAN_TAG_INHERITED_UP_THE_CHAIN"
+  },
+  {
+   "chain_id": "COLPOS-X09-Y09-19688-17362",
+   "column_id": "COL-C1-X09-Y09-2F",
+   "column_type": "C1",
+   "continues_above": false,
+   "continues_from_below": true,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    20.0,
+    50.0
+   ],
+   "drawn_vs_schedule": "MATCH",
+   "floor": "2F",
+   "grid": {
+    "X": "X09",
+    "Y": "Y09"
+   },
+   "longitudinal_bars": {
+    "count": 6,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "6",
+     "16"
+    ],
+    "tags": [
+     "2ND.R",
+     "2ND.D"
+    ]
+   },
+   "min_thickness_check": {
+    "candidates": [
+     20
+    ],
+    "state": "PASS",
+    "t_min_cm": 20
+   },
+   "orientation": "Y",
+   "plan_centre_mm": [
+    19687.9,
+    17361.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "421"
+    ],
+    "sheets": [
+     "SFRS"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    20.0,
+    50.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_L_LE_50",
+    "state": "EXACT_RULE"
+   },
+   "type_above": null,
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": "C1",
+   "type_inheritance": "AXIS_PLAN_TAG_INHERITED_UP_THE_CHAIN"
+  },
+  {
+   "chain_id": "COLPOS-X10-Y09-21688-17362",
+   "column_id": "COL-C2-X10-Y09-FOUNDATION",
+   "column_type": "C2",
+   "continues_above": true,
+   "continues_from_below": false,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    20.0,
+    50.0
+   ],
+   "drawn_vs_schedule": "MISMATCH",
+   "floor": "FOUNDATION",
+   "grid": {
+    "X": "X10",
+    "Y": "Y09"
+   },
+   "longitudinal_bars": {
+    "count": 8,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "8",
+     "16"
+    ],
+    "tags": [
+     "FOU.R",
+     "FOU.D"
+    ]
+   },
+   "min_thickness_check": null,
+   "orientation": "Y",
+   "plan_centre_mm": [
+    21687.9,
+    17361.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "1093",
+     "831",
+     "1EF"
+    ],
+    "sheets": [
+     "FP",
+     "CAP",
+     "GBP"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    30.0,
+    50.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_L_LE_50",
+    "state": "EXACT_RULE"
+   },
+   "type_above": "C2",
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": null,
+   "type_inheritance": null
+  },
+  {
+   "chain_id": "COLPOS-X10-Y09-21688-17362",
+   "column_id": "COL-C2-X10-Y09-GF",
+   "column_type": "C2",
+   "continues_above": true,
+   "continues_from_below": true,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    20.0,
+    50.0
+   ],
+   "drawn_vs_schedule": "MATCH",
+   "floor": "GF",
+   "grid": {
+    "X": "X10",
+    "Y": "Y09"
+   },
+   "longitudinal_bars": {
+    "count": 8,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "8",
+     "16"
+    ],
+    "tags": [
+     "GR.R",
+     "GR.D"
+    ]
+   },
+   "min_thickness_check": {
+    "candidates": [
+     25
+    ],
+    "state": "BELOW_MINIMUM",
+    "t_min_cm": 25
+   },
+   "orientation": "Y",
+   "plan_centre_mm": [
+    21687.9,
+    17361.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "33B"
+    ],
+    "sheets": [
+     "GFRS"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    20.0,
+    50.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_L_LE_50",
+    "state": "EXACT_RULE"
+   },
+   "type_above": "C2",
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": "C2",
+   "type_inheritance": "AXIS_PLAN_TAG_INHERITED_UP_THE_CHAIN"
+  },
+  {
+   "chain_id": "COLPOS-X10-Y09-21688-17362",
+   "column_id": "COL-C2-X10-Y09-1F",
+   "column_type": "C2",
+   "continues_above": true,
+   "continues_from_below": true,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    20.0,
+    50.0
+   ],
+   "drawn_vs_schedule": "MATCH",
+   "floor": "1F",
+   "grid": {
+    "X": "X10",
+    "Y": "Y09"
+   },
+   "longitudinal_bars": {
+    "count": 8,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "8",
+     "16"
+    ],
+    "tags": [
+     "1ST.R",
+     "1ST.D"
+    ]
+   },
+   "min_thickness_check": {
+    "candidates": [
+     20
+    ],
+    "state": "PASS",
+    "t_min_cm": 20
+   },
+   "orientation": "Y",
+   "plan_centre_mm": [
+    21687.9,
+    17361.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "67C"
+    ],
+    "sheets": [
+     "FFRS"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    20.0,
+    50.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_L_LE_50",
+    "state": "EXACT_RULE"
+   },
+   "type_above": "C2",
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": "C2",
+   "type_inheritance": "AXIS_PLAN_TAG_INHERITED_UP_THE_CHAIN"
+  },
+  {
+   "chain_id": "COLPOS-X10-Y09-21688-17362",
+   "column_id": "COL-C2-X10-Y09-2F",
+   "column_type": "C2",
+   "continues_above": false,
+   "continues_from_below": true,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    20.0,
+    50.0
+   ],
+   "drawn_vs_schedule": "MATCH",
+   "floor": "2F",
+   "grid": {
+    "X": "X10",
+    "Y": "Y09"
+   },
+   "longitudinal_bars": {
+    "count": 6,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "6",
+     "16"
+    ],
+    "tags": [
+     "2ND.R",
+     "2ND.D"
+    ]
+   },
+   "min_thickness_check": {
+    "candidates": [
+     20
+    ],
+    "state": "PASS",
+    "t_min_cm": 20
+   },
+   "orientation": "Y",
+   "plan_centre_mm": [
+    21687.9,
+    17361.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "41B"
+    ],
+    "sheets": [
+     "SFRS"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    20.0,
+    50.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_L_LE_50",
+    "state": "EXACT_RULE"
+   },
+   "type_above": null,
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": "C2",
+   "type_inheritance": "AXIS_PLAN_TAG_INHERITED_UP_THE_CHAIN"
+  },
+  {
+   "chain_id": "COLPOS-X?-Y?-29108-18112",
+   "column_id": "COL-CN-X?-Y?@29108-18112-FOUNDATION",
+   "column_type": "CN",
+   "continues_above": false,
+   "continues_from_below": false,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    30.0,
+    30.0
+   ],
+   "drawn_vs_schedule": "MATCH",
+   "floor": "FOUNDATION",
+   "grid": {
+    "X": null,
+    "Y": null
+   },
+   "longitudinal_bars": {
+    "count": 4,
+    "dia_mm": 14
+   },
+   "min_thickness_check": null,
+   "orientation": "X",
+   "plan_centre_mm": [
+    29107.9,
+    18111.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "180A",
+     "17BA"
+    ],
+    "sheets": [
+     "FP",
+     "GBP"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    30.0,
+    30.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_L_LE_50",
+    "state": "EXACT_RULE"
+   },
+   "type_above": null,
+   "type_authority": "FOUNDATION_PLAN_TAG",
+   "type_below": null,
+   "type_inheritance": null
+  },
+  {
+   "chain_id": "COLPOS-X?-Y10-31108-20498",
+   "column_id": "COL-CN-X?-Y10@31108-20498-FOUNDATION",
+   "column_type": "CN",
+   "continues_above": false,
+   "continues_from_below": false,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    30.0,
+    30.0
+   ],
+   "drawn_vs_schedule": "MATCH",
+   "floor": "FOUNDATION",
+   "grid": {
+    "X": null,
+    "Y": "Y10"
+   },
+   "longitudinal_bars": {
+    "count": 4,
+    "dia_mm": 14
+   },
+   "min_thickness_check": null,
+   "orientation": "X",
+   "plan_centre_mm": [
+    31107.9,
+    20497.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "17C8",
+     "17CF",
+     "17C0"
+    ],
+    "sheets": [
+     "FP",
+     "CAP",
+     "GBP"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    30.0,
+    30.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_L_LE_50",
+    "state": "EXACT_RULE"
+   },
+   "type_above": null,
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": null,
+   "type_inheritance": null
+  },
+  {
+   "chain_id": "COLPOS-X08-Y10-17038-20562",
+   "column_id": "COL-C2-X08-Y10-FOUNDATION",
+   "column_type": "C2",
+   "continues_above": true,
+   "continues_from_below": false,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    30.0,
+    50.0
+   ],
+   "drawn_vs_schedule": "MATCH",
+   "floor": "FOUNDATION",
+   "grid": {
+    "X": "X08",
+    "Y": "Y10"
+   },
+   "longitudinal_bars": {
+    "count": 8,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "8",
+     "16"
+    ],
+    "tags": [
+     "FOU.R",
+     "FOU.D"
+    ]
+   },
+   "min_thickness_check": null,
+   "orientation": "Y",
+   "plan_centre_mm": [
+    17037.9,
+    20561.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "1084",
+     "817",
+     "1DC"
+    ],
+    "sheets": [
+     "FP",
+     "CAP",
+     "GBP"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    30.0,
+    50.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_L_LE_50",
+    "state": "EXACT_RULE"
+   },
+   "type_above": "C2",
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": null,
+   "type_inheritance": null
+  },
+  {
+   "chain_id": "COLPOS-X08-Y10-17038-20562",
+   "column_id": "COL-C2-X08-Y10-GF",
+   "column_type": "C2",
+   "continues_above": true,
+   "continues_from_below": true,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    20.0,
+    50.0
+   ],
+   "drawn_vs_schedule": "MATCH",
+   "floor": "GF",
+   "grid": {
+    "X": "X08",
+    "Y": "Y10"
+   },
+   "longitudinal_bars": {
+    "count": 8,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "8",
+     "16"
+    ],
+    "tags": [
+     "GR.R",
+     "GR.D"
+    ]
+   },
+   "min_thickness_check": {
+    "candidates": [
+     25
+    ],
+    "state": "BELOW_MINIMUM",
+    "t_min_cm": 25
+   },
+   "orientation": "Y",
+   "plan_centre_mm": [
+    16987.9,
+    20561.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "32C"
+    ],
+    "sheets": [
+     "GFRS"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    20.0,
+    50.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_L_LE_50",
+    "state": "EXACT_RULE"
+   },
+   "type_above": "C2",
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": "C2",
+   "type_inheritance": "AXIS_PLAN_TAG_INHERITED_UP_THE_CHAIN"
+  },
+  {
+   "chain_id": "COLPOS-X08-Y10-17038-20562",
+   "column_id": "COL-C2-X08-Y10-1F",
+   "column_type": "C2",
+   "continues_above": true,
+   "continues_from_below": true,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    20.0,
+    50.0
+   ],
+   "drawn_vs_schedule": "MATCH",
+   "floor": "1F",
+   "grid": {
+    "X": "X08",
+    "Y": "Y10"
+   },
+   "longitudinal_bars": {
+    "count": 8,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "8",
+     "16"
+    ],
+    "tags": [
+     "1ST.R",
+     "1ST.D"
+    ]
+   },
+   "min_thickness_check": {
+    "candidates": [
+     20
+    ],
+    "state": "PASS",
+    "t_min_cm": 20
+   },
+   "orientation": "Y",
+   "plan_centre_mm": [
+    16987.9,
+    20561.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "66D"
+    ],
+    "sheets": [
+     "FFRS"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    20.0,
+    50.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_L_LE_50",
+    "state": "EXACT_RULE"
+   },
+   "type_above": "C2",
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": "C2",
+   "type_inheritance": "AXIS_PLAN_TAG_INHERITED_UP_THE_CHAIN"
+  },
+  {
+   "chain_id": "COLPOS-X08-Y10-17038-20562",
+   "column_id": "COL-C2-X08-Y10-2F",
+   "column_type": "C2",
+   "continues_above": false,
+   "continues_from_below": true,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    20.0,
+    50.0
+   ],
+   "drawn_vs_schedule": "MATCH",
+   "floor": "2F",
+   "grid": {
+    "X": "X08",
+    "Y": "Y10"
+   },
+   "longitudinal_bars": {
+    "count": 6,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "6",
+     "16"
+    ],
+    "tags": [
+     "2ND.R",
+     "2ND.D"
+    ]
+   },
+   "min_thickness_check": {
+    "candidates": [
+     20
+    ],
+    "state": "PASS",
+    "t_min_cm": 20
+   },
+   "orientation": "Y",
+   "plan_centre_mm": [
+    16987.9,
+    20561.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "40F"
+    ],
+    "sheets": [
+     "SFRS"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    20.0,
+    50.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_L_LE_50",
+    "state": "EXACT_RULE"
+   },
+   "type_above": null,
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": "C2",
+   "type_inheritance": "AXIS_PLAN_TAG_INHERITED_UP_THE_CHAIN"
+  },
+  {
+   "chain_id": "COLPOS-X09-Y10-19738-20562",
+   "column_id": "COL-C2-X09-Y10-FOUNDATION",
+   "column_type": "C2",
+   "continues_above": true,
+   "continues_from_below": false,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    30.0,
+    50.0
+   ],
+   "drawn_vs_schedule": "MATCH",
+   "floor": "FOUNDATION",
+   "grid": {
+    "X": "X09",
+    "Y": "Y10"
+   },
+   "longitudinal_bars": {
+    "count": 8,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "8",
+     "16"
+    ],
+    "tags": [
+     "FOU.R",
+     "FOU.D"
+    ]
+   },
+   "min_thickness_check": null,
+   "orientation": "Y",
+   "plan_centre_mm": [
+    19737.9,
+    20561.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "1087",
+     "821",
+     "1E0"
+    ],
+    "sheets": [
+     "FP",
+     "CAP",
+     "GBP"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    30.0,
+    50.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_L_LE_50",
+    "state": "EXACT_RULE"
+   },
+   "type_above": "C2",
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": null,
+   "type_inheritance": null
+  },
+  {
+   "chain_id": "COLPOS-X09-Y10-19738-20562",
+   "column_id": "COL-C2-X09-Y10-GF",
+   "column_type": "C2",
+   "continues_above": true,
+   "continues_from_below": true,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    20.0,
+    50.0
+   ],
+   "drawn_vs_schedule": "MATCH",
+   "floor": "GF",
+   "grid": {
+    "X": "X09",
+    "Y": "Y10"
+   },
+   "longitudinal_bars": {
+    "count": 8,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "8",
+     "16"
+    ],
+    "tags": [
+     "GR.R",
+     "GR.D"
+    ]
+   },
+   "min_thickness_check": {
+    "candidates": [
+     25
+    ],
+    "state": "BELOW_MINIMUM",
+    "t_min_cm": 25
+   },
+   "orientation": "Y",
+   "plan_centre_mm": [
+    19687.9,
+    20561.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "32F"
+    ],
+    "sheets": [
+     "GFRS"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    20.0,
+    50.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_L_LE_50",
+    "state": "EXACT_RULE"
+   },
+   "type_above": "C2",
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": "C2",
+   "type_inheritance": "AXIS_PLAN_TAG_INHERITED_UP_THE_CHAIN"
+  },
+  {
+   "chain_id": "COLPOS-X09-Y10-19738-20562",
+   "column_id": "COL-C2-X09-Y10-1F",
+   "column_type": "C2",
+   "continues_above": true,
+   "continues_from_below": true,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    20.0,
+    50.0
+   ],
+   "drawn_vs_schedule": "MATCH",
+   "floor": "1F",
+   "grid": {
+    "X": "X09",
+    "Y": "Y10"
+   },
+   "longitudinal_bars": {
+    "count": 8,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "8",
+     "16"
+    ],
+    "tags": [
+     "1ST.R",
+     "1ST.D"
+    ]
+   },
+   "min_thickness_check": {
+    "candidates": [
+     20
+    ],
+    "state": "PASS",
+    "t_min_cm": 20
+   },
+   "orientation": "Y",
+   "plan_centre_mm": [
+    19687.9,
+    20561.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "670"
+    ],
+    "sheets": [
+     "FFRS"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    20.0,
+    50.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_L_LE_50",
+    "state": "EXACT_RULE"
+   },
+   "type_above": "C2",
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": "C2",
+   "type_inheritance": "AXIS_PLAN_TAG_INHERITED_UP_THE_CHAIN"
+  },
+  {
+   "chain_id": "COLPOS-X09-Y10-19738-20562",
+   "column_id": "COL-C2-X09-Y10-2F",
+   "column_type": "C2",
+   "continues_above": false,
+   "continues_from_below": true,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    20.0,
+    50.0
+   ],
+   "drawn_vs_schedule": "MATCH",
+   "floor": "2F",
+   "grid": {
+    "X": "X09",
+    "Y": "Y10"
+   },
+   "longitudinal_bars": {
+    "count": 6,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "6",
+     "16"
+    ],
+    "tags": [
+     "2ND.R",
+     "2ND.D"
+    ]
+   },
+   "min_thickness_check": {
+    "candidates": [
+     20
+    ],
+    "state": "PASS",
+    "t_min_cm": 20
+   },
+   "orientation": "Y",
+   "plan_centre_mm": [
+    19687.9,
+    20561.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "412"
+    ],
+    "sheets": [
+     "SFRS"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    20.0,
+    50.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_L_LE_50",
+    "state": "EXACT_RULE"
+   },
+   "type_above": null,
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": "C2",
+   "type_inheritance": "AXIS_PLAN_TAG_INHERITED_UP_THE_CHAIN"
+  },
+  {
+   "chain_id": "COLPOS-X11-Y10-23558-20662",
+   "column_id": "COL-C5-X11-Y10-FOUNDATION",
+   "column_type": "C5",
+   "continues_above": true,
+   "continues_from_below": false,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    60.0,
+    30.0
+   ],
+   "drawn_vs_schedule": "MATCH",
+   "floor": "FOUNDATION",
+   "grid": {
+    "X": "X11",
+    "Y": "Y10"
+   },
+   "longitudinal_bars": {
+    "count": 10,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "10",
+     "16"
+    ],
+    "tags": [
+     "FOU.R",
+     "FOU.D"
+    ]
+   },
+   "min_thickness_check": null,
+   "orientation": "X",
+   "plan_centre_mm": [
+    23557.9,
+    20661.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "108A",
+     "826",
+     "1E4"
+    ],
+    "sheets": [
+     "FP",
+     "CAP",
+     "GBP"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    30.0,
+    60.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_50_LT_L_LT_80",
+    "state": "EXACT_RULE"
+   },
+   "type_above": "C5",
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": null,
+   "type_inheritance": null
+  },
+  {
+   "chain_id": "COLPOS-X11-Y10-23558-20662",
+   "column_id": "COL-C5-X11-Y10-GF",
+   "column_type": "C5",
+   "continues_above": true,
+   "continues_from_below": true,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    60.0,
+    25.0
+   ],
+   "drawn_vs_schedule": "MATCH",
+   "floor": "GF",
+   "grid": {
+    "X": "X11",
+    "Y": "Y10"
+   },
+   "longitudinal_bars": {
+    "count": 10,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "10",
+     "16"
+    ],
+    "tags": [
+     "GR.R",
+     "GR.D"
+    ]
+   },
+   "min_thickness_check": {
+    "candidates": [
+     25
+    ],
+    "state": "PASS",
+    "t_min_cm": 25
+   },
+   "orientation": "X",
+   "plan_centre_mm": [
+    23557.9,
+    20686.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "332"
+    ],
+    "sheets": [
+     "GFRS"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    25.0,
+    60.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_50_LT_L_LT_80",
+    "state": "EXACT_RULE"
+   },
+   "type_above": "C5",
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": "C5",
+   "type_inheritance": "AXIS_PLAN_TAG_INHERITED_UP_THE_CHAIN"
+  },
+  {
+   "chain_id": "COLPOS-X11-Y10-23558-20662",
+   "column_id": "COL-C5-X11-Y10-1F",
+   "column_type": "C5",
+   "continues_above": true,
+   "continues_from_below": true,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    60.0,
+    25.0
+   ],
+   "drawn_vs_schedule": "MISMATCH",
+   "floor": "1F",
+   "grid": {
+    "X": "X11",
+    "Y": "Y10"
+   },
+   "longitudinal_bars": {
+    "count": 8,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "8",
+     "16"
+    ],
+    "tags": [
+     "1ST.R",
+     "1ST.D"
+    ]
+   },
+   "min_thickness_check": {
+    "candidates": [
+     20
+    ],
+    "state": "PASS",
+    "t_min_cm": 20
+   },
+   "orientation": "X",
+   "plan_centre_mm": [
+    23557.9,
+    20686.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "673"
+    ],
+    "sheets": [
+     "FFRS"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    20.0,
+    50.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_L_LE_50",
+    "state": "EXACT_RULE"
+   },
+   "type_above": "C5",
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": "C5",
+   "type_inheritance": "AXIS_PLAN_TAG_INHERITED_UP_THE_CHAIN"
+  },
+  {
+   "chain_id": "COLPOS-X11-Y10-23558-20662",
+   "column_id": "COL-C5-X11-Y10-2F",
+   "column_type": "C5",
+   "continues_above": false,
+   "continues_from_below": true,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    60.0,
+    20.0
+   ],
+   "drawn_vs_schedule": "MISMATCH",
+   "floor": "2F",
+   "grid": {
+    "X": "X11",
+    "Y": "Y10"
+   },
+   "longitudinal_bars": {
+    "count": 6,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "6",
+     "16"
+    ],
+    "tags": [
+     "2ND.R",
+     "2ND.D"
+    ]
+   },
+   "min_thickness_check": {
+    "candidates": [
+     20
+    ],
+    "state": "PASS",
+    "t_min_cm": 20
+   },
+   "orientation": "X",
+   "plan_centre_mm": [
+    23557.9,
+    20711.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "415"
+    ],
+    "sheets": [
+     "SFRS"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    20.0,
+    50.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_L_LE_50",
+    "state": "EXACT_RULE"
+   },
+   "type_above": null,
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": "C5",
+   "type_inheritance": "AXIS_PLAN_TAG_INHERITED_UP_THE_CHAIN"
+  },
+  {
+   "chain_id": "COLPOS-X13-Y10-27458-20662",
+   "column_id": "COL-C4-X13-Y10-FOUNDATION",
+   "column_type": "C4",
+   "continues_above": true,
+   "continues_from_below": false,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    50.0,
+    30.0
+   ],
+   "drawn_vs_schedule": "MATCH",
+   "floor": "FOUNDATION",
+   "grid": {
+    "X": "X13",
+    "Y": "Y10"
+   },
+   "longitudinal_bars": {
+    "count": 8,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "8",
+     "16"
+    ],
+    "tags": [
+     "FOU.R",
+     "FOU.D"
+    ]
+   },
+   "min_thickness_check": null,
+   "orientation": "X",
+   "plan_centre_mm": [
+    27457.9,
+    20661.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "10D7",
+     "87C",
+     "241"
+    ],
+    "sheets": [
+     "FP",
+     "CAP",
+     "GBP"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    30.0,
+    50.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_L_LE_50",
+    "state": "EXACT_RULE"
+   },
+   "type_above": "C4",
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": null,
+   "type_inheritance": null
+  },
+  {
+   "chain_id": "COLPOS-X13-Y10-27458-20662",
+   "column_id": "COL-C4-X13-Y10-GF",
+   "column_type": "C4",
+   "continues_above": true,
+   "continues_from_below": true,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    50.0,
+    25.0
+   ],
+   "drawn_vs_schedule": "MATCH",
+   "floor": "GF",
+   "grid": {
+    "X": "X13",
+    "Y": "Y10"
+   },
+   "longitudinal_bars": {
+    "count": 8,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "8",
+     "16"
+    ],
+    "tags": [
+     "GR.R",
+     "GR.D"
+    ]
+   },
+   "min_thickness_check": {
+    "candidates": [
+     25
+    ],
+    "state": "PASS",
+    "t_min_cm": 25
+   },
+   "orientation": "X",
+   "plan_centre_mm": [
+    27457.9,
+    20686.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "377"
+    ],
+    "sheets": [
+     "GFRS"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    25.0,
+    50.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_L_LE_50",
+    "state": "EXACT_RULE"
+   },
+   "type_above": "C4",
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": "C4",
+   "type_inheritance": "AXIS_PLAN_TAG_INHERITED_UP_THE_CHAIN"
+  },
+  {
+   "chain_id": "COLPOS-X13-Y10-27458-20662",
+   "column_id": "COL-C4-X13-Y10-1F",
+   "column_type": "C4",
+   "continues_above": false,
+   "continues_from_below": true,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    50.0,
+    25.0
+   ],
+   "drawn_vs_schedule": "MISMATCH",
+   "floor": "1F",
+   "grid": {
+    "X": "X13",
+    "Y": "Y10"
+   },
+   "longitudinal_bars": {
+    "count": 8,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "8",
+     "16"
+    ],
+    "tags": [
+     "1ST.R",
+     "1ST.D"
+    ]
+   },
+   "min_thickness_check": {
+    "candidates": [
+     20
+    ],
+    "state": "PASS",
+    "t_min_cm": 20
+   },
+   "orientation": "X",
+   "plan_centre_mm": [
+    27457.9,
+    20686.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "697"
+    ],
+    "sheets": [
+     "FFRS"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    20.0,
+    50.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_L_LE_50",
+    "state": "EXACT_RULE"
+   },
+   "type_above": null,
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": "C4",
+   "type_inheritance": "AXIS_PLAN_TAG_INHERITED_UP_THE_CHAIN"
+  },
+  {
+   "chain_id": "COLPOS-X15-Y10-31508-20687",
+   "column_id": "COL-C4-X15-Y10-FOUNDATION",
+   "column_type": "C4",
+   "continues_above": true,
+   "continues_from_below": false,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    50.0,
+    25.0
+   ],
+   "drawn_vs_schedule": "MISMATCH",
+   "floor": "FOUNDATION",
+   "grid": {
+    "X": "X15",
+    "Y": "Y10"
+   },
+   "longitudinal_bars": {
+    "count": 8,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "8",
+     "16"
+    ],
+    "tags": [
+     "FOU.R",
+     "FOU.D"
+    ]
+   },
+   "min_thickness_check": null,
+   "orientation": "X",
+   "plan_centre_mm": [
+    31507.9,
+    20686.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "108D",
+     "82A",
+     "1E8"
+    ],
+    "sheets": [
+     "FP",
+     "CAP",
+     "GBP"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    30.0,
+    50.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_L_LE_50",
+    "state": "EXACT_RULE"
+   },
+   "type_above": "C4",
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": null,
+   "type_inheritance": null
+  },
+  {
+   "chain_id": "COLPOS-X15-Y10-31508-20687",
+   "column_id": "COL-C4-X15-Y10-GF",
+   "column_type": "C4",
+   "continues_above": true,
+   "continues_from_below": true,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    50.0,
+    25.0
+   ],
+   "drawn_vs_schedule": "MATCH",
+   "floor": "GF",
+   "grid": {
+    "X": "X15",
+    "Y": "Y10"
+   },
+   "longitudinal_bars": {
+    "count": 8,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "8",
+     "16"
+    ],
+    "tags": [
+     "GR.R",
+     "GR.D"
+    ]
+   },
+   "min_thickness_check": {
+    "candidates": [
+     25
+    ],
+    "state": "PASS",
+    "t_min_cm": 25
+   },
+   "orientation": "X",
+   "plan_centre_mm": [
+    31507.9,
+    20686.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "335"
+    ],
+    "sheets": [
+     "GFRS"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    25.0,
+    50.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_L_LE_50",
+    "state": "EXACT_RULE"
+   },
+   "type_above": "C4",
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": "C4",
+   "type_inheritance": "AXIS_PLAN_TAG_INHERITED_UP_THE_CHAIN"
+  },
+  {
+   "chain_id": "COLPOS-X15-Y10-31508-20687",
+   "column_id": "COL-C4-X15-Y10-1F",
+   "column_type": "C4",
+   "continues_above": false,
+   "continues_from_below": true,
+   "definition_state": "FULL",
+   "drawn_section_cm": [
+    50.0,
+    25.0
+   ],
+   "drawn_vs_schedule": "MISMATCH",
+   "floor": "1F",
+   "grid": {
+    "X": "X15",
+    "Y": "Y10"
+   },
+   "longitudinal_bars": {
+    "count": 8,
+    "dia_mm": 16,
+    "grammar": "COUNT_DIA",
+    "interpretation_state": "TOKENS_PARSED",
+    "per_m": false,
+    "raw": [
+     "8",
+     "16"
+    ],
+    "tags": [
+     "1ST.R",
+     "1ST.D"
+    ]
+   },
+   "min_thickness_check": {
+    "candidates": [
+     20
+    ],
+    "state": "PASS",
+    "t_min_cm": 20
+   },
+   "orientation": "X",
+   "plan_centre_mm": [
+    31507.9,
+    20686.9
+   ],
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "handles": [
+     "676"
+    ],
+    "sheets": [
+     "FFRS"
+    ]
+   },
+   "planted_on": null,
+   "schedule_section_cm": [
+    20.0,
+    50.0
+   ],
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "tie_rule": "6Ø8/m (p.9 general note)",
+   "tie_topology_band": {
+    "band": "TIE_L_LE_50",
+    "state": "EXACT_RULE"
+   },
+   "type_above": null,
+   "type_authority": "AXIS_PLAN_TAG",
+   "type_below": "C4",
+   "type_inheritance": "AXIS_PLAN_TAG_INHERITED_UP_THE_CHAIN"
+  }
+ ],
+ "source": {
+  "drawing": "ST7757.dxf",
+  "dxf_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+  "pdf": "ST7757.pdf",
+  "pdf_sha256": "74da1523f05eb3c6a4fe3ddebaef2c3d841891f003efc03bc32a3fb4553337e3"
+ },
+ "summary": {
+  "by_floor": {
+   "1F": 20,
+   "2F": 9,
+   "FOUNDATION": 36,
+   "GF": 30
+  },
+  "by_status": {
+   "COUNTED": 90,
+   "SOURCE_CONFLICT": 5
+  },
+  "by_terminal_state": {
+   "COUNTED_AND_DEFINED": 90,
+   "COUNTED_DEFINITION_PARTIAL": 5
+  },
+  "drawn_vs_schedule_mismatch_by_floor": {
+   "1F": 11,
+   "2F": 3,
+   "FOUNDATION": 6,
+   "GF": 8
+  },
+  "duplicate_column_ids": [],
+  "occurrences": 95,
+  "physical_positions": 39,
+  "schedule_rows_create_no_occurrence": true
+ }
+}

@@ -1,0 +1,157 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_A3_FLOOR_CEILING_V1",
+ "rooms": [
+  {
+   "floor": "GF",
+   "room": "W.C",
+   "site": "SITE-5191e28052b00088",
+   "status": "BLOCKED",
+   "floor_area_m2": null,
+   "area_uncertainty_m2": null,
+   "base_ceiling_area_m2": null,
+   "blocker": "GEOS_CROSSCHECK_DISAGREES"
+  },
+  {
+   "floor": "GF",
+   "room": "DEWANEYA / Wash",
+   "site": "SITE-810cacd9be443703",
+   "status": "BLOCKED",
+   "floor_area_m2": null,
+   "area_uncertainty_m2": null,
+   "base_ceiling_area_m2": null,
+   "blocker": "LABEL_OCCURRENCE_SPLIT; MULTIPLE_SEMANTIC_LABELS"
+  },
+  {
+   "floor": "GF",
+   "room": "KITCHEN",
+   "site": "SITE-88d9dbffd47c417a",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "floor_area_m2": 9.63,
+   "area_uncertainty_m2": 0.0145,
+   "base_ceiling_area_m2": 9.63,
+   "blocker": null
+  },
+  {
+   "floor": "GF",
+   "room": "W.C",
+   "site": "SITE-9810548752edbe40",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "floor_area_m2": 2.675221,
+   "area_uncertainty_m2": 0.007414,
+   "base_ceiling_area_m2": 2.675221,
+   "blocker": null
+  },
+  {
+   "floor": "GF",
+   "room": "W.C",
+   "site": "SITE-9b585230d0877a35",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "floor_area_m2": 1.95,
+   "area_uncertainty_m2": 0.0056,
+   "base_ceiling_area_m2": 1.95,
+   "blocker": null
+  },
+  {
+   "floor": "GF",
+   "room": "W.C",
+   "site": "SITE-ce2d2c3a4b7da280",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "floor_area_m2": 2.3625,
+   "area_uncertainty_m2": 0.0062,
+   "base_ceiling_area_m2": 2.3625,
+   "blocker": null
+  },
+  {
+   "floor": "GF",
+   "room": "(label not decoded)",
+   "site": "SITE-dd6245b163cafde0",
+   "status": "BLOCKED",
+   "floor_area_m2": null,
+   "area_uncertainty_m2": null,
+   "base_ceiling_area_m2": null,
+   "blocker": "LABEL_OCCURRENCE_SPLIT"
+  },
+  {
+   "floor": "GF",
+   "room": "MASTER BED ROOM",
+   "site": "SITE-dda89794d15dfb61",
+   "status": "BLOCKED",
+   "floor_area_m2": null,
+   "area_uncertainty_m2": null,
+   "base_ceiling_area_m2": null,
+   "blocker": "TOPOLOGY_ROLE_UNRESOLVED"
+  },
+  {
+   "floor": "GF",
+   "room": "W.C",
+   "site": "SITE-eac7a1be6566b2d0",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "floor_area_m2": 3.375,
+   "area_uncertainty_m2": 0.0075,
+   "base_ceiling_area_m2": 3.375,
+   "blocker": null
+  },
+  {
+   "floor": "1F",
+   "room": "BATH",
+   "site": "SITE-16f76cd141ed8273",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "floor_area_m2": 5.0225,
+   "area_uncertainty_m2": 0.009,
+   "base_ceiling_area_m2": 5.0225,
+   "blocker": null
+  },
+  {
+   "floor": "1F",
+   "room": "BATH",
+   "site": "SITE-2f6cf2b5bebbd966",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "floor_area_m2": 4.725,
+   "area_uncertainty_m2": 0.0087,
+   "base_ceiling_area_m2": 4.725,
+   "blocker": null
+  },
+  {
+   "floor": "1F",
+   "room": "MASTER BED ROOM",
+   "site": "SITE-3cde308552cf977c",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "floor_area_m2": 16.34,
+   "area_uncertainty_m2": 0.0162,
+   "base_ceiling_area_m2": 16.34,
+   "blocker": null
+  },
+  {
+   "floor": "1F",
+   "room": "MASTER BED ROOM / MASTER BED ROOM",
+   "site": "SITE-87d911399edea4c0",
+   "status": "BLOCKED",
+   "floor_area_m2": null,
+   "area_uncertainty_m2": null,
+   "base_ceiling_area_m2": null,
+   "blocker": "MULTIPLE_SEMANTIC_LABELS"
+  },
+  {
+   "floor": "1F",
+   "room": "VOID / LAUNDRY / MASTER BED ROOM",
+   "site": "SITE-8bddd8c3b8b698ad",
+   "status": "BLOCKED",
+   "floor_area_m2": null,
+   "area_uncertainty_m2": null,
+   "base_ceiling_area_m2": null,
+   "blocker": "MULTIPLE_SEMANTIC_LABELS; NEAR_MISS_BOUNDARY_GAP; OPENING_CLOSURE_UNRESOLVED; TEXT_ROLE_UNRESOLVED_IN_SITE; TOPOLOGY_ROLE_UNRESOLVED"
+  },
+  {
+   "floor": "1F",
+   "room": "BATH",
+   "site": "SITE-cdc894c0f0fd69c9",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "floor_area_m2": 3.5775,
+   "area_uncertainty_m2": 0.0076,
+   "base_ceiling_area_m2": 3.5775,
+   "blocker": null
+  }
+ ],
+ "physical_vs_material": "FLOOR AREA = COMPUTED (certified rooms); FLOOR / CEILING MATERIAL = BLOCKED (no finish schedule)",
+ "false_ceiling": "BLOCKED: no false-ceiling level in the source"
+}

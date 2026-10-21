@@ -1,0 +1,6 @@
+sheet,storey,section,state,reason,span,printed_w,printed_d,unit_m,length_m,m3,basis_or_why,crossed (span:width_m:marks:route_state),upstand_listed_m3
+SH04,1F,B-B,RELEASED,,BAND0031.1,45.0,75.0,0.01,3.0,1.0125,= schedule row B23 0.45 x 0.75 m,BAND0013:0.2::UNBOUND; BAND0019:0.25:B6:BOUND; BAND0031.1:0.45:B23:UNBOUND,0.12
+SH06,GF,A-A,RELEASED,,BAND0043.1,40.0,75.0,0.01,3.0,0.9,= schedule row B20 0.4 x 0.75 m,BAND0031:0.2::UNBOUND; BAND0043.1:0.4:B20:UNBOUND,0.12
+SH06,GF,C-C,HELD,SECTION_UNSUPPORTED,,,,,,,outline is not one rectilinear profile,BAND0041.2:0.35:CB1:BOUND,
+SH06,GF,D-D,HELD,CUT_AMBIGUOUS,,,,,,,3 lines here read as cut lines of this letter,BAND0041.2:0.35:CB1:; BAND0041.2:0.35:CB1:; BAND0046.2:0.5:B24:,
+SH08,GROUND,C-C,HELD,CUT_AMBIGUOUS,,,,,,,10 lines here read as cut lines of this letter; no SECTION title of this letter on this sheet either,BAND0035:0.3::; BAND0035:0.3::; BAND0016:0.3::; BAND0004.1:0.3::; BAND0012.1:0.3::; BAND0035:0.3::; BAND0016:0.3::; BAND0043:0.3::; BAND0013.2:0.3::; BAND0015:0.3::; BAND0015:0.3::; BAND0043:0.3::; BAND0015:0.3::; BAND0035:0.3::,

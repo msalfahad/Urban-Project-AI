@@ -1,0 +1,1512 @@
+{
+ "column_to_footing": {
+  "COLPOS-X01-Y01-2138-7462": [
+   "FT:1669:F>v"
+  ],
+  "COLPOS-X01-Y05-2038-13762": [
+   "FT:1668:F>v"
+  ],
+  "COLPOS-X02-Y05-4738-13862": [
+   "FT:1667:F>v"
+  ],
+  "COLPOS-X03-Y04-6338-12062": [
+   "FT:166B:F>v"
+  ],
+  "COLPOS-X04-Y01-7988-7462": [
+   "FT:1B2A"
+  ],
+  "COLPOS-X05-Y02-12538-9062": [
+   "FT:166C:F>v"
+  ],
+  "COLPOS-X05-Y04-12538-11912": [
+   "FT:1ADB"
+  ],
+  "COLPOS-X06-Y01-14088-7462": [
+   "FT:166A:F>v"
+  ],
+  "COLPOS-X06-Y04-14438-12062": [
+   "FT:1ADB"
+  ],
+  "COLPOS-X07-Y?-15888-16162": [
+   "FT:1ABF"
+  ],
+  "COLPOS-X08-Y04-17038-12362": [
+   "FT:1B19"
+  ],
+  "COLPOS-X08-Y09-17038-17362": [
+   "FT:1ABF"
+  ],
+  "COLPOS-X08-Y10-17038-20562": [
+   "FT:165C:F>v"
+  ],
+  "COLPOS-X09-Y07-19688-15662": [
+   "FT:1B2B"
+  ],
+  "COLPOS-X09-Y09-19688-17362": [
+   "FT:1B2B"
+  ],
+  "COLPOS-X09-Y10-19738-20562": [
+   "FT:1663:F>v"
+  ],
+  "COLPOS-X10-Y07-21713-15912": [
+   "FT:1B2B"
+  ],
+  "COLPOS-X10-Y09-21688-17362": [
+   "FT:1B2B"
+  ],
+  "COLPOS-X11-Y10-23558-20662": [
+   "FT:1664:F>v"
+  ],
+  "COLPOS-X12-Y01-24458-7462": [
+   "FT:1B1A"
+  ],
+  "COLPOS-X12-Y02-24308-8912": [
+   "FT:1B1A"
+  ],
+  "COLPOS-X13-Y08-27308-16612": [
+   "FT:180F"
+  ],
+  "COLPOS-X13-Y10-27458-20662": [
+   "FT:1665:F>v"
+  ],
+  "COLPOS-X14-Y02-27658-8962": [
+   "FT:166D:F>v"
+  ],
+  "COLPOS-X15-Y01-31408-7462": [
+   "FT:1B1B"
+  ],
+  "COLPOS-X15-Y06-31508-15062": [
+   "FT:1B24"
+  ],
+  "COLPOS-X15-Y10-31508-20687": [
+   "FT:1666:F>v"
+  ],
+  "COLPOS-X15-Y?-31208-15726": [
+   "FT:1B24"
+  ],
+  "COLPOS-X16-Y01-33108-7562": [
+   "FT:1B1B"
+  ],
+  "COLPOS-X16-Y03-33108-11312": [
+   "FT:RB-93c296ab668f4cce"
+  ],
+  "COLPOS-X16-Y06-33108-14962": [
+   "FT:1B24"
+  ],
+  "COLPOS-X?-Y01-17913-7462": [
+   "FT:1B07"
+  ],
+  "COLPOS-X?-Y10-31108-20498": [
+   "FT:1666:F>v"
+  ],
+  "COLPOS-X?-Y?-24058-12787": [
+   "FT:RB-d03ae1c0114c9c48"
+  ],
+  "COLPOS-X?-Y?-28583-12787": [
+   "FT:RB-4f1fedf6f22d413e"
+  ],
+  "COLPOS-X?-Y?-29108-18112": [
+   "FT:180C"
+  ]
+ },
+ "frozen_before_benchmark": true,
+ "mismatches": [
+  {
+   "footings": [
+    "FT:180F",
+    "FT:180C"
+   ],
+   "kind": "FOOTING_OUTLINES_OVERLAP",
+   "overlap_m2": 0.14
+  },
+  {
+   "candidate_types": [
+    "F",
+    "F10"
+   ],
+   "footing": "FTG-CONFLICT_F_F10-30008-7312",
+   "kind": "CONFLICTING_TAG"
+  }
+ ],
+ "policy": {
+  "cb_states": [
+   "MATCH_CONFIRMED",
+   "SPAN_LENGTH_CONFLICT",
+   "SPAN_COUNT_CONFLICT",
+   "TAG_WITH_NO_MEMBER",
+   "MEMBER_WITH_NO_TAG",
+   "BLOCKED"
+  ],
+  "policy_id": "STRUCTURAL_CENSUS_V1",
+  "precedence": [
+   "LOCAL_PANEL_NOTE",
+   "FLOOR_SPECIFIC_NOTE",
+   "PROJECT_DEFAULT"
+  ],
+  "principles": [
+   "plan decides occurrence; schedule only defines",
+   "no default overrides a local note",
+   "a value is never rounded into a table row it does not match",
+   "every plan object ends in one terminal state"
+  ],
+  "rule_states": [
+   "EXACT_RULE",
+   "RULE_NOT_EXACT_MATCH",
+   "BLOCKED_METHOD"
+  ],
+  "terminal_states": [
+   "COUNTED_AND_DEFINED",
+   "COUNTED_DEFINITION_PARTIAL",
+   "COUNTED_BLOCKED",
+   "NOT_IN_SCOPE"
+  ]
+ },
+ "register": "FOOTING_OCCURRENCE_REGISTER",
+ "round": "S1",
+ "rows": [
+  {
+   "candidate_types": null,
+   "competing_tags": [],
+   "definition_element": "FOOTING",
+   "footing_id": "FTG-F-1888-7312",
+   "issues": [],
+   "outline": {
+    "bbox": [
+     1887.9,
+     7311.9,
+     2787.9,
+     8111.9
+    ],
+    "closed_in_source": true,
+    "geometry": "BLOCK_F_INSERT",
+    "handle": "1669:F>v",
+    "note": null,
+    "via": "1669:F"
+   },
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "pdf_page": 2,
+    "sheet": "FP"
+   },
+   "sizes": {
+    "drawn_L_cm": 90.0,
+    "drawn_W_cm": 80.0,
+    "match": true,
+    "schedule_L_cm": 90.0,
+    "schedule_W_cm": 80.0
+   },
+   "supported_column_types": [
+    "C"
+   ],
+   "supported_columns": [
+    "COLPOS-X01-Y01-2138-7462"
+   ],
+   "tag": {
+    "handle": "1680:CF>v",
+    "position_mm": [
+     2349.665,
+     7700.148
+    ],
+    "text": "C/F"
+   },
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "type": "F"
+  },
+  {
+   "candidate_types": null,
+   "competing_tags": [],
+   "definition_element": "FOOTING",
+   "footing_id": "FTG-F15-7088-7312",
+   "issues": [],
+   "outline": {
+    "bbox": [
+     7087.9,
+     7311.9,
+     8887.9,
+     8311.9
+    ],
+    "closed_in_source": true,
+    "geometry": "POLYLINE",
+    "handle": "1B2A",
+    "note": null,
+    "via": null
+   },
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "pdf_page": 2,
+    "sheet": "FP"
+   },
+   "sizes": {
+    "drawn_L_cm": 180.0,
+    "drawn_W_cm": 100.0,
+    "match": true,
+    "schedule_L_cm": 180.0,
+    "schedule_W_cm": 100.0
+   },
+   "supported_column_types": [
+    "C3"
+   ],
+   "supported_columns": [
+    "COLPOS-X04-Y01-7988-7462"
+   ],
+   "tag": {
+    "handle": "1B29",
+    "position_mm": [
+     8092.608,
+     7940.338
+    ],
+    "text": "F15"
+   },
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "type": "F15"
+  },
+  {
+   "candidate_types": null,
+   "competing_tags": [],
+   "definition_element": "FOOTING",
+   "footing_id": "FTG-F-13638-7312",
+   "issues": [],
+   "outline": {
+    "bbox": [
+     13637.9,
+     7311.9,
+     14537.9,
+     8111.9
+    ],
+    "closed_in_source": true,
+    "geometry": "BLOCK_F_INSERT",
+    "handle": "166A:F>v",
+    "note": null,
+    "via": "166A:F"
+   },
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "pdf_page": 2,
+    "sheet": "FP"
+   },
+   "sizes": {
+    "drawn_L_cm": 90.0,
+    "drawn_W_cm": 80.0,
+    "match": true,
+    "schedule_L_cm": 90.0,
+    "schedule_W_cm": 80.0
+   },
+   "supported_column_types": [
+    "C"
+   ],
+   "supported_columns": [
+    "COLPOS-X06-Y01-14088-7462"
+   ],
+   "tag": {
+    "handle": "1682:CF>v",
+    "position_mm": [
+     13635.314,
+     7718.942
+    ],
+    "text": "C/F"
+   },
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "type": "F"
+  },
+  {
+   "candidate_types": null,
+   "competing_tags": [],
+   "definition_element": "FOOTING",
+   "footing_id": "FTG-F11-16163-7312",
+   "issues": [],
+   "outline": {
+    "bbox": [
+     16162.9,
+     7311.9,
+     19662.9,
+     8811.9
+    ],
+    "closed_in_source": false,
+    "geometry": "POLYLINE",
+    "handle": "1B07",
+    "note": "open outline - gap where a strap beam enters; ring = bbox",
+    "via": null
+   },
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "pdf_page": 2,
+    "sheet": "FP"
+   },
+   "sizes": {
+    "drawn_L_cm": 350.0,
+    "drawn_W_cm": 150.0,
+    "match": true,
+    "schedule_L_cm": 350.0,
+    "schedule_W_cm": 150.0
+   },
+   "supported_column_types": [
+    "C11"
+   ],
+   "supported_columns": [
+    "COLPOS-X?-Y01-17913-7462"
+   ],
+   "tag": {
+    "handle": "1684:F11>v",
+    "position_mm": [
+     15368.126,
+     8010.04
+    ],
+    "text": "C11/F11"
+   },
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "type": "F11"
+  },
+  {
+   "candidate_types": null,
+   "competing_tags": [],
+   "definition_element": "FOOTING_2_LAYER",
+   "footing_id": "FTG-F14-22408-7312",
+   "issues": [],
+   "outline": {
+    "bbox": [
+     22407.9,
+     7311.9,
+     26207.9,
+     10611.9
+    ],
+    "closed_in_source": true,
+    "geometry": "POLYLINE",
+    "handle": "1B1A",
+    "note": null,
+    "via": null
+   },
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "pdf_page": 2,
+    "sheet": "FP"
+   },
+   "sizes": {
+    "drawn_L_cm": 380.0,
+    "drawn_W_cm": 330.0,
+    "match": true,
+    "schedule_L_cm": 380.0,
+    "schedule_W_cm": 330.0
+   },
+   "supported_column_types": [
+    "C3",
+    "C8"
+   ],
+   "supported_columns": [
+    "COLPOS-X12-Y01-24458-7462",
+    "COLPOS-X12-Y02-24308-8912"
+   ],
+   "tag": {
+    "handle": "1683",
+    "position_mm": [
+     25152.526,
+     9256.313
+    ],
+    "text": "F14"
+   },
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "type": "F14"
+  },
+  {
+   "candidate_types": [
+    "F",
+    "F10"
+   ],
+   "competing_tags": [
+    {
+     "handle": "168B",
+     "position_mm": [
+      30188.104,
+      7893.749
+     ],
+     "text": "F10"
+    }
+   ],
+   "definition_element": null,
+   "footing_id": "FTG-CONFLICT_F_F10-30008-7312",
+   "issues": [
+    "SOURCE_CONFLICT_COMPETING_TAGS_ON_ONE_OUTLINE"
+   ],
+   "outline": {
+    "bbox": [
+     30007.9,
+     7311.9,
+     33257.9,
+     8711.9
+    ],
+    "closed_in_source": false,
+    "geometry": "POLYLINE",
+    "handle": "1B1B",
+    "note": "open outline - gap where a strap beam enters; ring = bbox",
+    "via": null
+   },
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "pdf_page": 2,
+    "sheet": "FP"
+   },
+   "sizes": null,
+   "supported_column_types": [
+    "C",
+    "C10"
+   ],
+   "supported_columns": [
+    "COLPOS-X15-Y01-31408-7462",
+    "COLPOS-X16-Y01-33108-7562"
+   ],
+   "tag": {
+    "handle": "10A5",
+    "position_mm": [
+     32605.502,
+     7824.994
+    ],
+    "text": "F"
+   },
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL",
+   "type": null
+  },
+  {
+   "candidate_types": null,
+   "competing_tags": [],
+   "definition_element": "FOOTING",
+   "footing_id": "FTG-F5-26458-7912",
+   "issues": [],
+   "outline": {
+    "bbox": [
+     26457.9,
+     7911.9,
+     28857.9,
+     10011.9
+    ],
+    "closed_in_source": true,
+    "geometry": "BLOCK_F_INSERT",
+    "handle": "166D:F>v",
+    "note": null,
+    "via": "166D:F"
+   },
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "pdf_page": 2,
+    "sheet": "FP"
+   },
+   "sizes": {
+    "drawn_L_cm": 240.0,
+    "drawn_W_cm": 210.0,
+    "match": true,
+    "schedule_L_cm": 240.0,
+    "schedule_W_cm": 210.0
+   },
+   "supported_column_types": [
+    "C5"
+   ],
+   "supported_columns": [
+    "COLPOS-X14-Y02-27658-8962"
+   ],
+   "tag": {
+    "handle": "166F",
+    "position_mm": [
+     26818.124,
+     9402.205
+    ],
+    "text": "C5/F5"
+   },
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "type": "F5"
+  },
+  {
+   "candidate_types": null,
+   "competing_tags": [],
+   "definition_element": "FOOTING",
+   "footing_id": "FTG-F3-11838-8262",
+   "issues": [],
+   "outline": {
+    "bbox": [
+     11837.9,
+     8261.9,
+     13237.9,
+     9861.9
+    ],
+    "closed_in_source": true,
+    "geometry": "BLOCK_F_INSERT",
+    "handle": "166C:F>v",
+    "note": null,
+    "via": "166C:F"
+   },
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "pdf_page": 2,
+    "sheet": "FP"
+   },
+   "sizes": {
+    "drawn_L_cm": 160.0,
+    "drawn_W_cm": 140.0,
+    "match": true,
+    "schedule_L_cm": 160.0,
+    "schedule_W_cm": 140.0
+   },
+   "supported_column_types": [
+    "C3"
+   ],
+   "supported_columns": [
+    "COLPOS-X05-Y02-12538-9062"
+   ],
+   "tag": {
+    "handle": "168E",
+    "position_mm": [
+     11900.945,
+     9453.949
+    ],
+    "text": "C3/F3"
+   },
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "type": "F3"
+  },
+  {
+   "candidate_types": null,
+   "competing_tags": [],
+   "definition_element": "FOOTING_2_LAYER",
+   "footing_id": "FTG-F13-11188-10712",
+   "issues": [],
+   "outline": {
+    "bbox": [
+     11187.7,
+     10711.9,
+     15487.7,
+     13111.9
+    ],
+    "closed_in_source": true,
+    "geometry": "POLYLINE",
+    "handle": "1ADB",
+    "note": null,
+    "via": null
+   },
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "pdf_page": 2,
+    "sheet": "FP"
+   },
+   "sizes": {
+    "drawn_L_cm": 430.0,
+    "drawn_W_cm": 240.0,
+    "match": true,
+    "schedule_L_cm": 430.0,
+    "schedule_W_cm": 240.0
+   },
+   "supported_column_types": [
+    "C11",
+    "C5"
+   ],
+   "supported_columns": [
+    "COLPOS-X05-Y04-12538-11912",
+    "COLPOS-X06-Y04-14438-12062"
+   ],
+   "tag": {
+    "handle": "1ADC",
+    "position_mm": [
+     12841.31,
+     12399.163
+    ],
+    "text": "F13"
+   },
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "type": "F13"
+  },
+  {
+   "candidate_types": null,
+   "competing_tags": [],
+   "definition_element": "FOOTING",
+   "footing_id": "FTG-FN-32258-10812",
+   "issues": [],
+   "outline": {
+    "bbox": [
+     32257.9,
+     10811.9,
+     33257.9,
+     11811.9
+    ],
+    "closed_in_source": true,
+    "geometry": "FOUR_LINES",
+    "handle": "1100+1101+1102+1103",
+    "note": null,
+    "via": null
+   },
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "pdf_page": 2,
+    "sheet": "FP"
+   },
+   "sizes": {
+    "drawn_L_cm": 100.0,
+    "drawn_W_cm": 100.0,
+    "match": true,
+    "schedule_L_cm": 100.0,
+    "schedule_W_cm": 100.0
+   },
+   "supported_column_types": [
+    "CN"
+   ],
+   "supported_columns": [
+    "COLPOS-X16-Y03-33108-11312"
+   ],
+   "tag": {
+    "handle": "168A",
+    "position_mm": [
+     32306.469,
+     10936.207
+    ],
+    "text": "FN"
+   },
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "type": "FN"
+  },
+  {
+   "candidate_types": null,
+   "competing_tags": [],
+   "definition_element": "FOOTING",
+   "footing_id": "FTG-F6-15938-11062",
+   "issues": [],
+   "outline": {
+    "bbox": [
+     15937.9,
+     11061.9,
+     18137.9,
+     13661.9
+    ],
+    "closed_in_source": false,
+    "geometry": "POLYLINE",
+    "handle": "1B19",
+    "note": "open outline - gap where a strap beam enters; ring = bbox",
+    "via": null
+   },
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "pdf_page": 2,
+    "sheet": "FP"
+   },
+   "sizes": {
+    "drawn_L_cm": 260.0,
+    "drawn_W_cm": 220.0,
+    "match": true,
+    "schedule_L_cm": 260.0,
+    "schedule_W_cm": 220.0
+   },
+   "supported_column_types": [
+    "C6"
+   ],
+   "supported_columns": [
+    "COLPOS-X08-Y04-17038-12362"
+   ],
+   "tag": {
+    "handle": "168D",
+    "position_mm": [
+     16348.113,
+     13091.503
+    ],
+    "text": "C6/F6"
+   },
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "type": "F6"
+  },
+  {
+   "candidate_types": null,
+   "competing_tags": [],
+   "definition_element": "FOOTING",
+   "footing_id": "FTG-F3-5538-11362",
+   "issues": [],
+   "outline": {
+    "bbox": [
+     5537.9,
+     11361.9,
+     7137.9,
+     12761.9
+    ],
+    "closed_in_source": true,
+    "geometry": "BLOCK_F_INSERT",
+    "handle": "166B:F>v",
+    "note": null,
+    "via": "166B:F"
+   },
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "pdf_page": 2,
+    "sheet": "FP"
+   },
+   "sizes": {
+    "drawn_L_cm": 160.0,
+    "drawn_W_cm": 140.0,
+    "match": true,
+    "schedule_L_cm": 160.0,
+    "schedule_W_cm": 140.0
+   },
+   "supported_column_types": [
+    "C3"
+   ],
+   "supported_columns": [
+    "COLPOS-X03-Y04-6338-12062"
+   ],
+   "tag": {
+    "handle": "168F",
+    "position_mm": [
+     5629.602,
+     12336.04
+    ],
+    "text": "C3/F3"
+   },
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "type": "F3"
+  },
+  {
+   "candidate_types": null,
+   "competing_tags": [],
+   "definition_element": "FOOTING",
+   "footing_id": "FTG-FN-23558-12287",
+   "issues": [],
+   "outline": {
+    "bbox": [
+     23557.9,
+     12286.9,
+     24557.9,
+     13286.9
+    ],
+    "closed_in_source": true,
+    "geometry": "FOUR_LINES",
+    "handle": "10F8+10F9+10FA+10FB",
+    "note": null,
+    "via": null
+   },
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "pdf_page": 2,
+    "sheet": "FP"
+   },
+   "sizes": {
+    "drawn_L_cm": 100.0,
+    "drawn_W_cm": 100.0,
+    "match": true,
+    "schedule_L_cm": 100.0,
+    "schedule_W_cm": 100.0
+   },
+   "supported_column_types": [
+    "CN"
+   ],
+   "supported_columns": [
+    "COLPOS-X?-Y?-24058-12787"
+   ],
+   "tag": {
+    "handle": "10F5",
+    "position_mm": [
+     23235.681,
+     13594.1
+    ],
+    "text": "CN/FN"
+   },
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "type": "FN"
+  },
+  {
+   "candidate_types": null,
+   "competing_tags": [],
+   "definition_element": "FOOTING",
+   "footing_id": "FTG-FN-28083-12287",
+   "issues": [],
+   "outline": {
+    "bbox": [
+     28082.9,
+     12286.9,
+     29082.9,
+     13286.9
+    ],
+    "closed_in_source": true,
+    "geometry": "FOUR_LINES",
+    "handle": "10F0+10F1+10F2+10F3",
+    "note": null,
+    "via": null
+   },
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "pdf_page": 2,
+    "sheet": "FP"
+   },
+   "sizes": {
+    "drawn_L_cm": 100.0,
+    "drawn_W_cm": 100.0,
+    "match": true,
+    "schedule_L_cm": 100.0,
+    "schedule_W_cm": 100.0
+   },
+   "supported_column_types": [
+    "CN"
+   ],
+   "supported_columns": [
+    "COLPOS-X?-Y?-28583-12787"
+   ],
+   "tag": {
+    "handle": "10ED",
+    "position_mm": [
+     28468.642,
+     12301.804
+    ],
+    "text": "CN/FN"
+   },
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "type": "FN"
+  },
+  {
+   "candidate_types": null,
+   "competing_tags": [],
+   "definition_element": "FOOTING_2_LAYER",
+   "footing_id": "FTG-F8-29258-13262",
+   "issues": [],
+   "outline": {
+    "bbox": [
+     29257.9,
+     13261.9,
+     33257.9,
+     16861.9
+    ],
+    "closed_in_source": true,
+    "geometry": "POLYLINE",
+    "handle": "1B24",
+    "note": null,
+    "via": null
+   },
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "pdf_page": 2,
+    "sheet": "FP"
+   },
+   "sizes": {
+    "drawn_L_cm": 400.0,
+    "drawn_W_cm": 360.0,
+    "match": true,
+    "schedule_L_cm": 400.0,
+    "schedule_W_cm": 360.0
+   },
+   "supported_column_types": [
+    "C3",
+    "C8",
+    "CN"
+   ],
+   "supported_columns": [
+    "COLPOS-X16-Y06-33108-14962",
+    "COLPOS-X15-Y06-31508-15062",
+    "COLPOS-X15-Y?-31208-15726"
+   ],
+   "tag": {
+    "handle": "1B25",
+    "position_mm": [
+     29738.536,
+     14375.493
+    ],
+    "text": "F8"
+   },
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "type": "F8"
+  },
+  {
+   "candidate_types": null,
+   "competing_tags": [],
+   "definition_element": "FOOTING",
+   "footing_id": "FTG-F-1888-13312",
+   "issues": [],
+   "outline": {
+    "bbox": [
+     1887.9,
+     13311.9,
+     2687.9,
+     14211.9
+    ],
+    "closed_in_source": true,
+    "geometry": "BLOCK_F_INSERT",
+    "handle": "1668:F>v",
+    "note": null,
+    "via": "1668:F"
+   },
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "pdf_page": 2,
+    "sheet": "FP"
+   },
+   "sizes": {
+    "drawn_L_cm": 90.0,
+    "drawn_W_cm": 80.0,
+    "match": true,
+    "schedule_L_cm": 90.0,
+    "schedule_W_cm": 80.0
+   },
+   "supported_column_types": [
+    "C"
+   ],
+   "supported_columns": [
+    "COLPOS-X01-Y05-2038-13762"
+   ],
+   "tag": {
+    "handle": "167F:CF>v",
+    "position_mm": [
+     2244.136,
+     13555.676
+    ],
+    "text": "C/F"
+   },
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "type": "F"
+  },
+  {
+   "candidate_types": null,
+   "competing_tags": [],
+   "definition_element": "FOOTING",
+   "footing_id": "FTG-F-4288-13462",
+   "issues": [],
+   "outline": {
+    "bbox": [
+     4287.9,
+     13461.9,
+     5187.9,
+     14261.9
+    ],
+    "closed_in_source": true,
+    "geometry": "BLOCK_F_INSERT",
+    "handle": "1667:F>v",
+    "note": null,
+    "via": "1667:F"
+   },
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "pdf_page": 2,
+    "sheet": "FP"
+   },
+   "sizes": {
+    "drawn_L_cm": 90.0,
+    "drawn_W_cm": 80.0,
+    "match": true,
+    "schedule_L_cm": 90.0,
+    "schedule_W_cm": 80.0
+   },
+   "supported_column_types": [
+    "C"
+   ],
+   "supported_columns": [
+    "COLPOS-X02-Y05-4738-13862"
+   ],
+   "tag": {
+    "handle": "1678:CF>v",
+    "position_mm": [
+     4430.372,
+     14389.673
+    ],
+    "text": "C/F"
+   },
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "type": "F"
+  },
+  {
+   "candidate_types": null,
+   "competing_tags": [],
+   "definition_element": "FOOTING_2_LAYER",
+   "footing_id": "FTG-FF-18688-14112",
+   "issues": [],
+   "outline": {
+    "bbox": [
+     18687.7,
+     14112.0,
+     23287.7,
+     18612.0
+    ],
+    "closed_in_source": true,
+    "geometry": "POLYLINE",
+    "handle": "1B2B",
+    "note": null,
+    "via": null
+   },
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "pdf_page": 2,
+    "sheet": "FP"
+   },
+   "sizes": {
+    "drawn_L_cm": 460.0,
+    "drawn_W_cm": 450.0,
+    "match": true,
+    "schedule_L_cm": 460.0,
+    "schedule_W_cm": 450.0
+   },
+   "supported_column_types": [
+    "C1",
+    "C2",
+    "C9"
+   ],
+   "supported_columns": [
+    "COLPOS-X09-Y07-19688-15662",
+    "COLPOS-X10-Y07-21713-15912",
+    "COLPOS-X09-Y09-19688-17362",
+    "COLPOS-X10-Y09-21688-17362"
+   ],
+   "tag": {
+    "handle": "1676",
+    "position_mm": [
+     20430.324,
+     16386.642
+    ],
+    "text": "FF"
+   },
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "type": "FF"
+  },
+  {
+   "candidate_types": null,
+   "competing_tags": [],
+   "definition_element": "FOOTING_2_LAYER",
+   "footing_id": "FTG-F12-13688-14562",
+   "issues": [],
+   "outline": {
+    "bbox": [
+     13687.9,
+     14561.9,
+     18087.9,
+     17761.9
+    ],
+    "closed_in_source": true,
+    "geometry": "POLYLINE",
+    "handle": "1ABF",
+    "note": null,
+    "via": null
+   },
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "pdf_page": 2,
+    "sheet": "FP"
+   },
+   "sizes": {
+    "drawn_L_cm": 440.0,
+    "drawn_W_cm": 320.0,
+    "match": true,
+    "schedule_L_cm": 440.0,
+    "schedule_W_cm": 320.0
+   },
+   "supported_column_types": [
+    "C3",
+    "C7"
+   ],
+   "supported_columns": [
+    "COLPOS-X07-Y?-15888-16162",
+    "COLPOS-X08-Y09-17038-17362"
+   ],
+   "tag": {
+    "handle": "1ADA",
+    "position_mm": [
+     15069.588,
+     16732.235
+    ],
+    "text": "F12"
+   },
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "type": "F12"
+  },
+  {
+   "candidate_types": null,
+   "competing_tags": [],
+   "definition_element": "FOOTING",
+   "footing_id": "FTG-F9-25608-15262",
+   "issues": [],
+   "outline": {
+    "bbox": [
+     25607.9,
+     15261.9,
+     29007.9,
+     17961.9
+    ],
+    "closed_in_source": true,
+    "geometry": "POLYLINE",
+    "handle": "180F",
+    "note": null,
+    "via": null
+   },
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "pdf_page": 2,
+    "sheet": "FP"
+   },
+   "sizes": {
+    "drawn_L_cm": 340.0,
+    "drawn_W_cm": 270.0,
+    "match": true,
+    "schedule_L_cm": 340.0,
+    "schedule_W_cm": 270.0
+   },
+   "supported_column_types": [
+    "C9"
+   ],
+   "supported_columns": [
+    "COLPOS-X13-Y08-27308-16612"
+   ],
+   "tag": {
+    "handle": "1677",
+    "position_mm": [
+     26575.471,
+     17222.512
+    ],
+    "text": "C9/F9"
+   },
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "type": "F9"
+  },
+  {
+   "candidate_types": null,
+   "competing_tags": [],
+   "definition_element": "FOOTING",
+   "footing_id": "FTG-FN-28608-17612",
+   "issues": [],
+   "outline": {
+    "bbox": [
+     28607.9,
+     17611.9,
+     29607.9,
+     18611.9
+    ],
+    "closed_in_source": true,
+    "geometry": "POLYLINE",
+    "handle": "180C",
+    "note": null,
+    "via": null
+   },
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "pdf_page": 2,
+    "sheet": "FP"
+   },
+   "sizes": {
+    "drawn_L_cm": 100.0,
+    "drawn_W_cm": 100.0,
+    "match": true,
+    "schedule_L_cm": 100.0,
+    "schedule_W_cm": 100.0
+   },
+   "supported_column_types": [
+    "CN"
+   ],
+   "supported_columns": [
+    "COLPOS-X?-Y?-29108-18112"
+   ],
+   "tag": {
+    "handle": "1810",
+    "position_mm": [
+     29192.895,
+     18273.018
+    ],
+    "text": "CN/FN"
+   },
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "type": "FN"
+  },
+  {
+   "candidate_types": null,
+   "competing_tags": [],
+   "definition_element": "FOOTING",
+   "footing_id": "FTG-F2-16188-19612",
+   "issues": [],
+   "outline": {
+    "bbox": [
+     16187.9,
+     19611.9,
+     17887.9,
+     21511.9
+    ],
+    "closed_in_source": true,
+    "geometry": "BLOCK_F_INSERT",
+    "handle": "165C:F>v",
+    "note": null,
+    "via": "165C:F"
+   },
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "pdf_page": 2,
+    "sheet": "FP"
+   },
+   "sizes": {
+    "drawn_L_cm": 190.0,
+    "drawn_W_cm": 170.0,
+    "match": true,
+    "schedule_L_cm": 190.0,
+    "schedule_W_cm": 170.0
+   },
+   "supported_column_types": [
+    "C2"
+   ],
+   "supported_columns": [
+    "COLPOS-X08-Y10-17038-20562"
+   ],
+   "tag": {
+    "handle": "1675",
+    "position_mm": [
+     16220.677,
+     21076.129
+    ],
+    "text": "C2/F2"
+   },
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "type": "F2"
+  },
+  {
+   "candidate_types": null,
+   "competing_tags": [],
+   "definition_element": "FOOTING",
+   "footing_id": "FTG-F2-18888-19612",
+   "issues": [],
+   "outline": {
+    "bbox": [
+     18887.9,
+     19611.9,
+     20587.9,
+     21511.9
+    ],
+    "closed_in_source": true,
+    "geometry": "BLOCK_F_INSERT",
+    "handle": "1663:F>v",
+    "note": null,
+    "via": "1663:F"
+   },
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "pdf_page": 2,
+    "sheet": "FP"
+   },
+   "sizes": {
+    "drawn_L_cm": 190.0,
+    "drawn_W_cm": 170.0,
+    "match": true,
+    "schedule_L_cm": 190.0,
+    "schedule_W_cm": 170.0
+   },
+   "supported_column_types": [
+    "C2"
+   ],
+   "supported_columns": [
+    "COLPOS-X09-Y10-19738-20562"
+   ],
+   "tag": {
+    "handle": "1674",
+    "position_mm": [
+     18955.471,
+     21049.163
+    ],
+    "text": "C2/F2"
+   },
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "type": "F2"
+  },
+  {
+   "candidate_types": null,
+   "competing_tags": [],
+   "definition_element": "FOOTING",
+   "footing_id": "FTG-F5-22358-19612",
+   "issues": [],
+   "outline": {
+    "bbox": [
+     22357.9,
+     19611.9,
+     24757.9,
+     21711.9
+    ],
+    "closed_in_source": true,
+    "geometry": "BLOCK_F_INSERT",
+    "handle": "1664:F>v",
+    "note": null,
+    "via": "1664:F"
+   },
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "pdf_page": 2,
+    "sheet": "FP"
+   },
+   "sizes": {
+    "drawn_L_cm": 240.0,
+    "drawn_W_cm": 210.0,
+    "match": true,
+    "schedule_L_cm": 240.0,
+    "schedule_W_cm": 210.0
+   },
+   "supported_column_types": [
+    "C5"
+   ],
+   "supported_columns": [
+    "COLPOS-X11-Y10-23558-20662"
+   ],
+   "tag": {
+    "handle": "1673",
+    "position_mm": [
+     22824.982,
+     21144.847
+    ],
+    "text": "C5/F5"
+   },
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "type": "F5"
+  },
+  {
+   "candidate_types": null,
+   "competing_tags": [],
+   "definition_element": "FOOTING",
+   "footing_id": "FTG-F4-26358-19662",
+   "issues": [],
+   "outline": {
+    "bbox": [
+     26357.9,
+     19661.9,
+     28557.9,
+     21661.9
+    ],
+    "closed_in_source": true,
+    "geometry": "BLOCK_F_INSERT",
+    "handle": "1665:F>v",
+    "note": null,
+    "via": "1665:F"
+   },
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "pdf_page": 2,
+    "sheet": "FP"
+   },
+   "sizes": {
+    "drawn_L_cm": 220.0,
+    "drawn_W_cm": 200.0,
+    "match": true,
+    "schedule_L_cm": 220.0,
+    "schedule_W_cm": 200.0
+   },
+   "supported_column_types": [
+    "C4"
+   ],
+   "supported_columns": [
+    "COLPOS-X13-Y10-27458-20662"
+   ],
+   "tag": {
+    "handle": "1672",
+    "position_mm": [
+     26686.078,
+     21153.297
+    ],
+    "text": "C4/F4"
+   },
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "type": "F4"
+  },
+  {
+   "candidate_types": null,
+   "competing_tags": [],
+   "definition_element": "FOOTING",
+   "footing_id": "FTG-F4-30408-19687",
+   "issues": [],
+   "outline": {
+    "bbox": [
+     30407.9,
+     19686.9,
+     32607.9,
+     21686.9
+    ],
+    "closed_in_source": true,
+    "geometry": "BLOCK_F_INSERT",
+    "handle": "1666:F>v",
+    "note": null,
+    "via": "1666:F"
+   },
+   "plan_source": {
+    "drawing": "ST7757.dxf",
+    "pdf_page": 2,
+    "sheet": "FP"
+   },
+   "sizes": {
+    "drawn_L_cm": 220.0,
+    "drawn_W_cm": 200.0,
+    "match": true,
+    "schedule_L_cm": 220.0,
+    "schedule_W_cm": 200.0
+   },
+   "supported_column_types": [
+    "C4",
+    "CN"
+   ],
+   "supported_columns": [
+    "COLPOS-X?-Y10-31108-20498",
+    "COLPOS-X15-Y10-31508-20687"
+   ],
+   "tag": {
+    "handle": "1671",
+    "position_mm": [
+     30688.071,
+     21072.694
+    ],
+    "text": "C4/F4"
+   },
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "type": "F4"
+  }
+ ],
+ "source": {
+  "drawing": "ST7757.dxf",
+  "dxf_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+  "pdf": "ST7757.pdf",
+  "pdf_sha256": "74da1523f05eb3c6a4fe3ddebaef2c3d841891f003efc03bc32a3fb4553337e3"
+ },
+ "summary": {
+  "by_terminal_state": {
+   "COUNTED_AND_DEFINED": 25,
+   "COUNTED_DEFINITION_PARTIAL": 1
+  },
+  "by_type": {
+   "CONFLICT(F/F10)": 1,
+   "F": 4,
+   "F11": 1,
+   "F12": 1,
+   "F13": 1,
+   "F14": 1,
+   "F15": 1,
+   "F2": 2,
+   "F3": 2,
+   "F4": 2,
+   "F5": 2,
+   "F6": 1,
+   "F8": 1,
+   "F9": 1,
+   "FF": 1,
+   "FN": 4
+  },
+  "combined_footings_with_several_columns": {
+   "FTG-CONFLICT_F_F10-30008-7312": [
+    "C",
+    "C10"
+   ],
+   "FTG-F12-13688-14562": [
+    "C3",
+    "C7"
+   ],
+   "FTG-F13-11188-10712": [
+    "C11",
+    "C5"
+   ],
+   "FTG-F14-22408-7312": [
+    "C3",
+    "C8"
+   ],
+   "FTG-F4-30408-19687": [
+    "C4",
+    "CN"
+   ],
+   "FTG-F8-29258-13262": [
+    "C3",
+    "C8",
+    "CN"
+   ],
+   "FTG-FF-18688-14112": [
+    "C1",
+    "C2",
+    "C9"
+   ]
+  },
+  "foundation_column_positions": 36,
+  "mismatch_counts": {
+   "CONFLICTING_TAG": 1,
+   "FOOTING_OUTLINES_OVERLAP": 1
+  },
+  "outlines": 26,
+  "tag_only": 0
+ }
+}

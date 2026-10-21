@@ -1,0 +1,63 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_SANITARY_EVIDENCE_V1",
+ "file": "sanitary-7757.pdf",
+ "sha256": "116736870983e63a9bf80e778fe2fc098e333148cce5337190a1ac3398d82596",
+ "pages": [
+  {
+   "page": 1,
+   "size_pt": [
+    1191.0,
+    842.0
+   ],
+   "size_mm": [
+    420.2,
+    297.0
+   ],
+   "images": 0,
+   "image_px": [],
+   "vector_paths": 20354,
+   "text_chars": 0,
+   "text": "",
+   "lane": "VECTOR"
+  },
+  {
+   "page": 2,
+   "size_pt": [
+    1191.0,
+    842.0
+   ],
+   "size_mm": [
+    420.2,
+    297.0
+   ],
+   "images": 0,
+   "image_px": [],
+   "vector_paths": 17981,
+   "text_chars": 0,
+   "text": "",
+   "lane": "VECTOR"
+  },
+  {
+   "page": 3,
+   "size_pt": [
+    1191.0,
+    842.0
+   ],
+   "size_mm": [
+    420.2,
+    297.0
+   ],
+   "images": 0,
+   "image_px": [],
+   "vector_paths": 13342,
+   "text_chars": 0,
+   "text": "",
+   "lane": "VECTOR"
+  }
+ ],
+ "text_layer": false,
+ "role": "SUPPORTING_EVIDENCE_ONLY",
+ "alignment_to_architecture": "NOT_EVALUATED (no PDF-to-CAD transform authority; no text layer)",
+ "wet_room_corroboration": "NONE USED: the sheet changes no geometry and no wet identity",
+ "plumbing_cost": "OUT OF SCOPE"
+}

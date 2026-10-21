@@ -1,0 +1,270 @@
+{
+ "baseline": "818321e",
+ "bearing_deficits": [
+  "LT-OP-1F-017",
+  "LT-OP-GF-005",
+  "LT-OP-GF-021",
+  "LT-OP-GF-029"
+ ],
+ "conservation": {
+  "C01": "PASS",
+  "C02": "PASS",
+  "C03": "PASS",
+  "C04": "PASS",
+  "C05": "PASS",
+  "C06": "PASS",
+  "C07": "PASS",
+  "C08": "PASS",
+  "C09": "PASS",
+  "C10": "PASS",
+  "C11": "PASS",
+  "C12": "PASS",
+  "C13": "PASS",
+  "C14": "PASS",
+  "C15": "PASS",
+  "C16": "PASS",
+  "C17": "PASS",
+  "C18": "PASS"
+ },
+ "date": "2026-10-09",
+ "decisions": {
+  "BLOCKED_SUPPORT_IDENTITY": 52,
+  "OPENING_NOT_REQUIRING_SEPARATE_LINTEL": 8,
+  "SCHEDULE_BOUND_LINTEL": 14
+ },
+ "elevation_bound": [
+  "OP-1F-024",
+  "OP-1F-025",
+  "OP-1F-026"
+ ],
+ "elevations": {
+  "83": {
+   "facing": null,
+   "floors_readable": [
+    "2F"
+   ],
+   "mirror": null,
+   "openings_bound_by_width": 0,
+   "registered": false
+  },
+  "84": {
+   "facing": "+x",
+   "floors_readable": [
+    "GF",
+    "1F",
+    "2F"
+   ],
+   "mirror": 1,
+   "openings_bound_by_width": 3,
+   "registered": true
+  }
+ },
+ "engine_commit": "818321e+code:6629546ee8609d25",
+ "frozen_baselines": {
+  "AD1": "e2497cc75181393000187b7e657fa8485a4c0f365b4614bed983d0bc6c0ca5b4",
+  "D1.1": "3ecb642e2141f5a9af11453870696b104a11cfb519d65a9e3f505cbff7c73a74",
+  "D1.2": "f256d6a25edf93029c6ba1c8cf9bc336790fd8d9cf7a5045e8395942986a9554",
+  "PRE-S7": "fb3a1c62a8e525b663853d03d43e067f1839026aea149399491bd4cf98f0ad09",
+  "PRE-S7.1": "3a67a8641ce4ea836334e02532af82b9a3bb01be8efdba4f093eee44d92c1ef6",
+  "PRE-S8": "1c8daf59926540941efbf5f749e8e175fe64b7efeb6d7acff0bfbefbb034849d",
+  "S4": "0d63015a19953f295e331aab2d7e49e8facb277e1465fbdd1b6b5a40d1a2362b",
+  "S4.1": "468e90d9657548a7e9124b67ce0a55b63560f030e2f98b414c46ad4e970e030b",
+  "S5": "ff488a92f3eaff80e84fca2d7e0b8e36cc40ddb84232cd315acfd1ce50b4b3d8",
+  "S5.1": "595d64b1bf5c8e0ef7b5bebfaf3ea4063dd884356390c84b4c8aac77cddb5a88",
+  "S6": "c29a28bc66334d5294d71b0d5feb0dd5eae36baf91a04ef6e0105b2ca43be63e",
+  "S6.1": "c4744888ed2207ebff47c0a895e706d7e381b5f905b694eb92e3d1cdc411c0b2",
+  "S7": "b23f97b6db334e641c38c498bf23b46236d68f4fcc26a6eafde1f3bfc156d175",
+  "S7A": "5b256cef99dc57934c76249c28814d5ce07c74caf308aabdbf90e0e8f0adcee1",
+  "S8.1": "e99d83a750b64541f5b3174b853d24209f30e46574fafafe56cfa3fd0d88e354",
+  "S8.1A": "890c1c42f03715b6b26d88744852fe388ca419fd7c6e3f0214e137dc5c1a473e",
+  "S8.2": "749affe72ec80083715f01b790b96bb5fca31685a93f952369ec7d4469f3494d",
+  "S8.2A": "76fda44b41695a2a79c7e030388ba2282a93f09552bcd67e06c32aee09551f9d",
+  "S8.3": "92bfe9c0b2b7fea189bb37759f93759ea4a6cf5108738af1390468bda6ee92da",
+  "S8.3A": "cf83c809495496f421f2c85d46c4f497757a66dbbea607a77208555695e73505",
+  "S8.4": "45fd614f0c22adceec27ac0657ae1135f59f4c40dde811c56c2d7121527d85f1",
+  "S8.5": "522287d416f30d3eb0499017ea1a32c87bf530ca6bd6de5356fb5ed1e0e662fa"
+ },
+ "openings": {
+  "boundary_wall": 1,
+  "by_floor_type": {
+   "1F": {
+    "1_INTERNAL_DOOR": 10,
+    "4_5_GLAZED_WINDOW_OR_FULL_HEIGHT_UNRESOLVED": 11,
+    "5_FULL_HEIGHT_GLAZED_OPENING": 2,
+    "6_SERVICE_SHAFT_OPENING": 1,
+    "7_OPEN_ARCHWAY_OR_PASSAGE": 2
+   },
+   "1F_ROOF_SLAB": {
+    "8_STRUCTURAL_SLAB_OPENING": 2
+   },
+   "2F": {
+    "1_INTERNAL_DOOR": 2,
+    "3_EXTERNAL_DOOR": 1,
+    "4_5_GLAZED_WINDOW_OR_FULL_HEIGHT_UNRESOLVED": 4,
+    "6_SERVICE_SHAFT_OPENING": 1
+   },
+   "GF": {
+    "1_INTERNAL_DOOR": 8,
+    "2_MAIN_ENTRANCE_DOOR": 1,
+    "3_EXTERNAL_DOOR": 6,
+    "4_5_GLAZED_WINDOW_OR_FULL_HEIGHT_UNRESOLVED": 12,
+    "6_SERVICE_SHAFT_OPENING": 1,
+    "7_OPEN_ARCHWAY_OR_PASSAGE": 4
+   },
+   "GF_ROOF_SLAB": {
+    "8_STRUCTURAL_SLAB_OPENING": 5
+   },
+   "GROUND_SLAB_SOG": {
+    "8_STRUCTURAL_SLAB_OPENING": 1
+   }
+  },
+  "rejected_candidates": 3,
+  "slab": 8,
+  "wall_openings": 65
+ },
+ "policy": "S8_6_LINTELS_V1",
+ "questions": [
+  "Q-ABOVE",
+  "Q-BEAM-HEAD-DETAIL",
+  "Q-BEARING",
+  "Q-BOUNDARY",
+  "Q-BOUNDARY-GATE",
+  "Q-COVER",
+  "Q-CURVED",
+  "Q-END-DETAIL",
+  "Q-GF-MB-WALL",
+  "Q-GLAZING-FUNCTION",
+  "Q-HEAD-GENERAL",
+  "Q-HEAD-UNDER-BEAM",
+  "Q-LIFT",
+  "Q-N04",
+  "Q-PARTIAL-BEAM",
+  "Q-SCHEDULE-GAPS",
+  "Q-SCREEN",
+  "Q-STIRRUPS"
+ ],
+ "r5_double_counts": {
+  "OP-GF-003": [
+   "GF-D-I350",
+   "GF-W03"
+  ],
+  "OP-GF-007": [
+   "GF-D-I437",
+   "GF-W01"
+  ],
+  "OP-GF-010": [
+   "GF-D-I402",
+   "GF-W13"
+  ],
+  "OP-GF-019": [
+   "GF-D-I1023",
+   "GF-W05"
+  ]
+ },
+ "r5_missed": [
+  "OP-1F-004",
+  "OP-1F-015",
+  "OP-1F-021",
+  "OP-1F-023",
+  "OP-GF-006",
+  "OP-GF-011",
+  "OP-GF-012",
+  "OP-GF-020",
+  "OP-GF-030"
+ ],
+ "references_read": [],
+ "register_indexes": {
+  "S1": {
+   "index_sha256": "bff6694f05762498c897e2e8da95f70747af133ba652eb47470a03241aa7cc51",
+   "registers_verified": 21
+  },
+  "S2": {
+   "index_sha256": "a966dec798dfc4dbb1beaf16ed8a52d41d90eaad0a072c38d56b4dc53f395b01",
+   "registers_verified": 12
+  },
+  "S3": {
+   "index_sha256": "50fd1ec80048424df7feddd7477a1473db1d9bf7fabf152fd6a837e3366f98cb",
+   "registers_verified": 11
+  },
+  "S3.1": {
+   "index_sha256": "8a771cb688b04128c351aab7880afd5dc353c4df98e3f62910fcd18c06763661",
+   "registers_verified": 12
+  }
+ },
+ "released": {
+  "concrete_m3": 0.745261681,
+  "concrete_m3_by_floor": {
+   "1F": 0.303292802,
+   "2F": 0.0,
+   "GF": 0.441968879
+  },
+  "kg": 96.427279858,
+  "kg_by_diameter": {
+   "10": 22.500069159,
+   "12": 40.044544033,
+   "14": 10.404938272,
+   "8": 23.477728395
+  },
+  "kg_by_floor_and_diameter": {
+   "1F": {
+    "10": 9.765135871,
+    "12": 17.706240098,
+    "14": 4.960493827,
+    "8": 9.799111111
+   },
+   "2F": {},
+   "GF": {
+    "10": 12.734933288,
+    "12": 22.338303934,
+    "14": 5.444444444,
+    "8": 13.678617284
+   }
+  },
+  "lintels": [
+   "LT-OP-GF-005",
+   "LT-OP-GF-008",
+   "LT-OP-GF-013",
+   "LT-OP-GF-014",
+   "LT-OP-GF-018",
+   "LT-OP-GF-021",
+   "LT-OP-GF-028",
+   "LT-OP-GF-029",
+   "LT-OP-1F-003",
+   "LT-OP-1F-014",
+   "LT-OP-1F-017",
+   "LT-OP-1F-018",
+   "LT-OP-1F-020",
+   "LT-OP-1F-021"
+  ]
+ },
+ "round": "S8_6",
+ "s8_3_errata_sha256": {
+  "00_ERRATA_README.md": "3fb030efd570782c783e9c784ffe46604444e5bea70f3981dbb5b7512c634b8a",
+  "01_S8_3_ERRATA.csv": "221eeb55b63b2a6621c501cf59045f6b0c00fcb5a6d1da0bd97bb68f857d15e2",
+  "02_ERRATA_SUMMARY.json": "e743aca0105fe7306b0f51ac8fa63191e18c7002491bf2e5cddaa9b6589d7744"
+ },
+ "schedule_gaps_cm": [
+  [
+   100,
+   101
+  ],
+  [
+   200,
+   201
+  ],
+  [
+   300,
+   301
+  ],
+  [
+   500,
+   501
+  ]
+ ],
+ "sensitivity_not_released": {
+  "kg": 522.09111712,
+  "lintels": 50,
+  "m3": 4.231716541
+ },
+ "unit_mass": "kg/m = d^2 / 162"
+}

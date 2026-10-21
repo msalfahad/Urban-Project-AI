@@ -1,0 +1,89 @@
+{
+ "dataset": "CHRISTIANNP_FORENSIC_RERUN_2026_10_07",
+ "drawings_match_urban": {
+  "P7757.dxf": true,
+  "ST7757.dxf": true
+ },
+ "files_read": {
+  "04_plan_regions/PLAN_REGION_REGISTER.csv": "f23abe9e4f9e3ff2cf92616b8d66ac84397a0fef5a400738d43d6770df08c3f4",
+  "05_footings/FOOTING_OCCURRENCES.csv": "382450dac76195a8e0ac1868916dfa36c8bf3c86ebf2c1b99d3924685af4477e",
+  "05_footings/FOOTING_REJECTED_MATCHES.csv": "2c68d8b6341400d2d5499763986ab3a5b53f1642f693cac7d646be51f8751444",
+  "06_ground_beams/GROUND_BEAM_BANDS.csv": "66a95f9b9644f665e2097e96abc32686c7b33febaf5ab68bbac901129b82ef5a",
+  "06_ground_beams/GROUND_BEAM_EDGES.csv": "8938faf5b19da8f7cd560e7f942ba6d6e41d012e930c57c389a02b775de59c7d",
+  "06_ground_beams/GROUND_BEAM_PAIR_CANDIDATES.csv": "15de3f11be80ff8fb2a82dfb4f1893dd57c8b3be4a46f75796c694c6a2e786bb",
+  "06_ground_beams/GROUND_BEAM_STRIPS.csv": "90906e71b1c3be1b46f6bf9a7ca5a5e8987e351cf7ff2c4a7ec797c72d7e4f64",
+  "06_ground_beams/GROUND_BEAM_SUMMARY.json": "ac25d588f82485085a5d896ad33bac0db06f699c4451fd29fd965aa0a85ebf66",
+  "06_ground_beams/STRAP_BEAM_STRIPS.csv": "910451d1b415051af3dc30b76e2a7566b83fc5eb65972c236db71a7063e9e1fb",
+  "07_columns/COLUMN_OCCURRENCE_MATRIX.csv": "103dd9a1544cf8eefd1bf199b87f2362df960c72a94f0e87a28087fb1c8526da",
+  "08_beams/BEAM_BINDINGS.csv": "82e8281847bbd4c9b0065ff63cfdad9853bf2757dcba81987d915cfef7c6738c",
+  "08_beams/BEAM_BINDING_CANDIDATES.csv": "710350fafb36e95456ef34d1970ebe62c305487e5bac78ef16d9acb78a5b1f60",
+  "08_beams/BEAM_RULE_TESTS_R1_R5.csv": "c8019430cefaa2d4663aceab9b2d501b0f4854a124fa9f60893a4bb5abdebb50",
+  "08_beams/BEAM_STRIPS.csv": "45f5951f2af4101f0a331fde8810baddde5e62920eea79901f7ca2b363cacae8",
+  "08_beams/BEAM_TAGS.csv": "36218b77ac2ce7b04161fe62ce8db7f7b5a46b07dede6bd79f781937edb383d1",
+  "09_slabs/FFRS/FFRS_SLAB_INPUTS_AND_VECTOR.json": "c1fae845f4c5d14e6a3881247848b0fee19a2d45b500fd7b5a416ff1f96a0957",
+  "09_slabs/FFRS/FFRS_VECTOR_FACES.csv": "cc1612182657b22a0993a8137d2c2a36c6aa53a95e9ba46daadcbcef7bee5b2e",
+  "09_slabs/GBP/GBP_SLAB_INPUTS_AND_VECTOR.json": "995e814f997efd520f4c8e89d83283bd7ae720ecb0cccf883b533e68b1eff277",
+  "09_slabs/GBP/GBP_SLAB_RASTER_CONVERGENCE.csv": "892b16d1a6298145b9c43f3caf0bd006db2d00cf805f8c7efa199616c8a218ce",
+  "09_slabs/GBP/GBP_VECTOR_FACES.csv": "d0f03d6f84bc81eed21be6216bee91eb32d18350c6dbc1b7d5430b296afb3e9f",
+  "09_slabs/GFRS/GFRS_SLAB_INPUTS_AND_VECTOR.json": "8a78e99c9b2af7430cd16a24b399f0f3b95b81539ca40f533182b6e90635c9c8",
+  "09_slabs/GFRS/GFRS_VECTOR_FACES.csv": "252c5aa7a87aad85c783e2291bbc8e5ca3789ec194dd8ea4d883e66920771f21",
+  "09_slabs/SFRS/SFRS_SLAB_INPUTS_AND_VECTOR.json": "8308f912c43dbe301dbdeb3329f71cbc97cda987129f445a34c26578ad6a4b1b",
+  "09_slabs/SFRS/SFRS_VECTOR_FACES.csv": "bd01e35f077f2d29e9943fc3f005e5989f2c486b9598732103d52c91a019cefc",
+  "10_walls/WALL_METRE_CLASSIFICATION.csv": "9aca9e2a1c29a5a9ab224b74ed4e25df9c32ebf0cccb5524ca481c4aa9c09f4a",
+  "10_walls/WALL_PAIRS_ACCEPTED.csv": "c1ab465800078749d65e6a6122face8ded7394d96b16c40ffeb745ba3a7887f6",
+  "10_walls/WALL_PAIRS_REJECTED.csv": "1bff0e233f5f18327db26b53b864e6f49750544b4080806fe545f191239ecf6b",
+  "11_openings/SLAB_OPENING_REGISTER.csv": "f4a4d67a5cbb379fa1bcd701f40feb82b02d264e52ded00c94134472efc3102f",
+  "13_rebar/REBAR_EVIDENCE.csv": "5a56ed585b03f86490c28f15481f8697a662b8fe43838b475f74bdc9d6386ae6",
+  "14_assumptions/MANUAL_DECISIONS.csv": "c6fcb45e71a3a978199d0646f790f862bfd7a9e376b72ab82c649f3443ea5630",
+  "16_final/QUANTITY_SUMMARY.csv": "a7ea7201484cc595b5c4ccf61986a920a9d890d591ae3c7cb095c0d129cbdece"
+ },
+ "frozen_at_utc": "2026-10-07T17:04:17.450073+00:00",
+ "manifest_sha256": "af2d3441cf2d464e5fb31c8651a540abf22ff5dc55f9d34786f9506038197bf2",
+ "source_integrity": {
+  "DBMOD_after": {
+   "P7757.dxf": 21,
+   "ST7757.dxf": 53
+  },
+  "DBMOD_before": {
+   "P7757.dxf": 21,
+   "ST7757.dxf": 53
+  },
+  "files": [
+   {
+    "UNCHANGED": true,
+    "mtime_after": "2026-10-01T06:27:47.857953+00:00",
+    "mtime_before": "2026-10-01T06:27:47.857953+00:00",
+    "path": "C:\\AutoCAD-MCP-Test\\P7757.dxf",
+    "sha256_after": "ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4",
+    "sha256_before": "ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4",
+    "size_after": 17227946,
+    "size_before": 17227946
+   },
+   {
+    "UNCHANGED": true,
+    "mtime_after": "2026-10-01T06:28:25.265791+00:00",
+    "mtime_before": "2026-10-01T06:28:25.265791+00:00",
+    "path": "C:\\AutoCAD-MCP-Test\\ST7757.dxf",
+    "sha256_after": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+    "sha256_before": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+    "size_after": 3153037,
+    "size_before": 3153037
+   },
+   {
+    "UNCHANGED": true,
+    "mtime_after": "2026-06-18T18:09:50.285362+00:00",
+    "mtime_before": "2026-06-18T18:09:50.285362+00:00",
+    "path": "C:\\Users\\Msalf\\OneDrive\\Desktop\\Urban Project\\Rashed Alsenan\\Plans\\ST7757.dwg",
+    "sha256_after": "3f7a556c69786834c16c355504437b5abcd1f5aa3a9625b33a2c5b14213f0227",
+    "sha256_before": "3f7a556c69786834c16c355504437b5abcd1f5aa3a9625b33a2c5b14213f0227",
+    "size_after": 491151,
+    "size_before": 491151
+   }
+  ],
+  "model_entities_after": {
+   "P7757.dxf": 5966,
+   "ST7757.dxf": 4473
+  }
+ },
+ "zip_sha256": "fcaff77001a470bb2187e086f42b6cdbc435f8b5ea02126c9cb7aea67bce7b80"
+}

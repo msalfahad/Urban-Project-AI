@@ -1,0 +1,6 @@
+CHECK_ID,CHECK,RESULT,COUNT,DETAIL
+BO-01,"every released slab-panel edge S1 marks as beam-supported lies on a drawn member face (beam edge line or arc, or a column outline where the beam frames into a column), so the panel stops at the face",PASS,243,"243 of 243 edges on a drawn face: {""BEAM_EDGE_LINE"": 217, ""COLUMN_OUTLINE"": 26}"
+BO-02,"no released slab panel overlaps a drawn column outline (the column owns its footprint over the storey, S9-MC1)",PASS,0,0 m2
+BO-03,"every beam length is a clear length (never longer than its centre-to-centre length), so beams stop at column and supporting-beam faces",PASS,143,
+BO-04,"beam-to-beam corners with no column: both beams stop at faces, so the corner square is in neither (an undercount, never a double count)",INFO,10,10 corner ends; at most 0.4539 m3 unowned under the larger reading
+BO-05,neither reading counts slab concrete twice: TOTAL_DEPTH gives the beam B x H (the slab zone above it included); BELOW_SLAB gives B x (H + t); the panels never hold the strip over a beam (BO-01),PASS,116,identity checked per beam: BELOW_SLAB - TOTAL_DEPTH = B x t x L

@@ -1,0 +1,449 @@
+{
+ "SCHEMA": "URBAN_QORTUBA_RC1_ROOM_QUANTITY_MATRIX_V1",
+ "policy": "ROOM_QUANTITY_MATRIX_V1",
+ "columns": [
+  "FLR-01",
+  "FLR-02",
+  "FLR-03",
+  "MRB-01",
+  "MRB-02",
+  "CLG-01",
+  "PLS-01",
+  "PLS-02",
+  "PNT-01",
+  "WTL-01",
+  "WTP-01",
+  "SKT-01",
+  "HPR-01",
+  "WPF-01",
+  "WPU-01"
+ ],
+ "rows": [
+  {
+   "key": "SITE-1c4abf65f9b5db1e",
+   "kind": "ROOM",
+   "display": "BATH (1) [1c4abf65]",
+   "cells": {
+    "FLR-01": null,
+    "FLR-02": 8.5525,
+    "FLR-03": null,
+    "MRB-01": null,
+    "MRB-02": null,
+    "CLG-01": 8.5525,
+    "PLS-01": null,
+    "PLS-02": null,
+    "PNT-01": null,
+    "WTL-01": 36.32,
+    "WTP-01": 36.32,
+    "SKT-01": 0.0,
+    "HPR-01": 0.0,
+    "WPF-01": 8.5525,
+    "WPU-01": 11.9
+   }
+  },
+  {
+   "key": "SITE-a2b19efc492a6d0b",
+   "kind": "ROOM",
+   "display": "BATH (2) [a2b19efc]",
+   "cells": {
+    "FLR-01": null,
+    "FLR-02": 5.1,
+    "FLR-03": null,
+    "MRB-01": null,
+    "MRB-02": null,
+    "CLG-01": 5.1,
+    "PLS-01": null,
+    "PLS-02": null,
+    "PNT-01": null,
+    "WTL-01": 28.32,
+    "WTP-01": 28.32,
+    "SKT-01": 0.0,
+    "HPR-01": 0.0,
+    "WPF-01": 5.1,
+    "WPU-01": 9.4
+   }
+  },
+  {
+   "key": "SITE-fe8ed5548fb4310e",
+   "kind": "ROOM",
+   "display": "BATH (3) [fe8ed554]",
+   "cells": {
+    "FLR-01": null,
+    "FLR-02": 4.09,
+    "FLR-03": null,
+    "MRB-01": null,
+    "MRB-02": null,
+    "CLG-01": 4.09,
+    "PLS-01": null,
+    "PLS-02": null,
+    "PNT-01": null,
+    "WTL-01": 27.04,
+    "WTP-01": 27.04,
+    "SKT-01": 0.0,
+    "HPR-01": 0.0,
+    "WPF-01": 4.09,
+    "WPU-01": 9.0
+   }
+  },
+  {
+   "key": "SITE-5f1762f1a93b91ca",
+   "kind": "ROOM",
+   "display": "BED.ROOM (1) [5f1762f1]",
+   "cells": {
+    "FLR-01": 19.2725,
+    "FLR-02": null,
+    "FLR-03": null,
+    "MRB-01": null,
+    "MRB-02": null,
+    "CLG-01": 19.2725,
+    "PLS-01": 72.328302,
+    "PLS-02": null,
+    "PNT-01": 72.328302,
+    "WTL-01": null,
+    "WTP-01": null,
+    "SKT-01": 22.9,
+    "HPR-01": 22.9,
+    "WPF-01": null,
+    "WPU-01": null
+   }
+  },
+  {
+   "key": "SITE-daca396d6d730e60",
+   "kind": "ROOM",
+   "display": "BED.ROOM (2) [daca396d]",
+   "cells": {
+    "FLR-01": 16.327,
+    "FLR-02": null,
+    "FLR-03": null,
+    "MRB-01": null,
+    "MRB-02": null,
+    "CLG-01": 16.327,
+    "PLS-01": 49.098242,
+    "PLS-02": null,
+    "PNT-01": 49.098242,
+    "WTL-01": null,
+    "WTP-01": null,
+    "SKT-01": 15.579714,
+    "HPR-01": 15.579714,
+    "WPF-01": null,
+    "WPU-01": null
+   }
+  },
+  {
+   "key": "SITE-a6405850100155ac",
+   "kind": "ROOM",
+   "display": "DRESS / M.B.ROOM",
+   "cells": {
+    "FLR-01": 33.2,
+    "FLR-02": null,
+    "FLR-03": null,
+    "MRB-01": null,
+    "MRB-02": null,
+    "CLG-01": 33.2,
+    "PLS-01": 91.668106,
+    "PLS-02": null,
+    "PNT-01": 91.668106,
+    "WTL-01": null,
+    "WTP-01": null,
+    "SKT-01": 29.5,
+    "HPR-01": 29.5,
+    "WPF-01": null,
+    "WPU-01": null
+   }
+  },
+  {
+   "key": "SITE-77a2130eb275604c",
+   "kind": "ROOM",
+   "display": "HALL / whgm",
+   "cells": {
+    "FLR-01": 42.649289,
+    "FLR-02": null,
+    "FLR-03": null,
+    "MRB-01": null,
+    "MRB-02": null,
+    "CLG-01": 42.41,
+    "PLS-01": 94.266868,
+    "PLS-02": null,
+    "PNT-01": 94.266868,
+    "WTL-01": null,
+    "WTP-01": null,
+    "SKT-01": 26.157105,
+    "HPR-01": 26.157105,
+    "WPF-01": null,
+    "WPU-01": null
+   }
+  },
+  {
+   "key": "SITE-8c1c7563d5252c50",
+   "kind": "ROOM",
+   "display": "PAINTRY",
+   "cells": {
+    "FLR-01": null,
+    "FLR-02": null,
+    "FLR-03": 11.685,
+    "MRB-01": null,
+    "MRB-02": null,
+    "CLG-01": 11.685,
+    "PLS-01": null,
+    "PLS-02": 1.510248,
+    "PNT-01": null,
+    "WTL-01": 36.013512,
+    "WTP-01": 36.013512,
+    "SKT-01": 0.0,
+    "HPR-01": 0.0,
+    "WPF-01": 11.685,
+    "WPU-01": 13.9
+   }
+  },
+  {
+   "key": "THRESHOLD-04910e5deeeed2fc",
+   "kind": "STRIP",
+   "display": "DOOR STRIP I841 (BED.ROOM (1) [5f1762f1] / HALL / whgm)",
+   "cells": {
+    "FLR-01": 0.15,
+    "FLR-02": null,
+    "FLR-03": null,
+    "MRB-01": null,
+    "MRB-02": null,
+    "CLG-01": null,
+    "PLS-01": null,
+    "PLS-02": null,
+    "PNT-01": null,
+    "WTL-01": null,
+    "WTP-01": null,
+    "SKT-01": null,
+    "HPR-01": null,
+    "WPF-01": null,
+    "WPU-01": null
+   }
+  },
+  {
+   "key": "THRESHOLD-28f50f8dc18c1e90",
+   "kind": "STRIP",
+   "display": "DOOR STRIP I1561 (HALL / whgm / BATH (3) [fe8ed554])",
+   "cells": {
+    "FLR-01": null,
+    "FLR-02": null,
+    "FLR-03": null,
+    "MRB-01": 0.12,
+    "MRB-02": 0.8,
+    "CLG-01": null,
+    "PLS-01": null,
+    "PLS-02": null,
+    "PNT-01": null,
+    "WTL-01": null,
+    "WTP-01": null,
+    "SKT-01": null,
+    "HPR-01": null,
+    "WPF-01": null,
+    "WPU-01": null
+   }
+  },
+  {
+   "key": "THRESHOLD-bfcea08375237224",
+   "kind": "STRIP",
+   "display": "DOOR STRIP I677 (HALL / whgm / OUTSIDE UNIT)",
+   "cells": {
+    "FLR-01": null,
+    "FLR-02": null,
+    "FLR-03": null,
+    "MRB-01": 0.15,
+    "MRB-02": 1.0,
+    "CLG-01": null,
+    "PLS-01": null,
+    "PLS-02": null,
+    "PNT-01": null,
+    "WTL-01": null,
+    "WTP-01": null,
+    "SKT-01": null,
+    "HPR-01": null,
+    "WPF-01": null,
+    "WPU-01": null
+   }
+  },
+  {
+   "key": "THRESHOLD-c82365dd41b94abe",
+   "kind": "STRIP",
+   "display": "DOOR STRIP I1988 (HALL / whgm / BED.ROOM (2) [daca396d])",
+   "cells": {
+    "FLR-01": 0.15,
+    "FLR-02": null,
+    "FLR-03": null,
+    "MRB-01": null,
+    "MRB-02": null,
+    "CLG-01": null,
+    "PLS-01": null,
+    "PLS-02": null,
+    "PNT-01": null,
+    "WTL-01": null,
+    "WTP-01": null,
+    "SKT-01": null,
+    "HPR-01": null,
+    "WPF-01": null,
+    "WPU-01": null
+   }
+  },
+  {
+   "key": "THRESHOLD-cf12fcdfd3e6a4a6",
+   "kind": "STRIP",
+   "display": "DOOR STRIP I2044 (HALL / whgm / BATH (2) [a2b19efc])",
+   "cells": {
+    "FLR-01": null,
+    "FLR-02": null,
+    "FLR-03": null,
+    "MRB-01": 0.12,
+    "MRB-02": 0.8,
+    "CLG-01": null,
+    "PLS-01": null,
+    "PLS-02": null,
+    "PNT-01": null,
+    "WTL-01": null,
+    "WTP-01": null,
+    "SKT-01": null,
+    "HPR-01": null,
+    "WPF-01": null,
+    "WPU-01": null
+   }
+  },
+  {
+   "key": "THRESHOLD-d4633eabc844b274",
+   "kind": "STRIP",
+   "display": "DOOR STRIP I1471 (HALL / whgm / DRESS / M.B.ROOM)",
+   "cells": {
+    "FLR-01": 0.15,
+    "FLR-02": null,
+    "FLR-03": null,
+    "MRB-01": null,
+    "MRB-02": null,
+    "CLG-01": null,
+    "PLS-01": null,
+    "PLS-02": null,
+    "PNT-01": null,
+    "WTL-01": null,
+    "WTP-01": null,
+    "SKT-01": null,
+    "HPR-01": null,
+    "WPF-01": null,
+    "WPU-01": null
+   }
+  },
+  {
+   "key": "THRESHOLD-f9846605acbce828",
+   "kind": "STRIP",
+   "display": "DOOR STRIP I1443 (BATH (1) [1c4abf65] / DRESS / M.B.ROOM)",
+   "cells": {
+    "FLR-01": null,
+    "FLR-02": null,
+    "FLR-03": null,
+    "MRB-01": 0.12,
+    "MRB-02": 0.8,
+    "CLG-01": null,
+    "PLS-01": null,
+    "PLS-02": null,
+    "PNT-01": null,
+    "WTL-01": null,
+    "WTP-01": null,
+    "SKT-01": null,
+    "HPR-01": null,
+    "WPF-01": null,
+    "WPU-01": null
+   }
+  }
+ ],
+ "reconciliation": {
+  "FLR-01": {
+   "column_sum": 111.89878900000002,
+   "item_qty": 111.8988,
+   "additive": true,
+   "reconciles": true
+  },
+  "FLR-02": {
+   "column_sum": 17.7425,
+   "item_qty": 17.7425,
+   "additive": true,
+   "reconciles": true
+  },
+  "FLR-03": {
+   "column_sum": 11.685,
+   "item_qty": 11.685,
+   "additive": true,
+   "reconciles": true
+  },
+  "MRB-01": {
+   "column_sum": 0.51,
+   "item_qty": 0.51,
+   "additive": true,
+   "reconciles": true
+  },
+  "MRB-02": {
+   "column_sum": 3.4000000000000004,
+   "item_qty": 3.4,
+   "additive": true,
+   "reconciles": true
+  },
+  "CLG-01": {
+   "column_sum": 140.637,
+   "item_qty": 140.637,
+   "additive": true,
+   "reconciles": true
+  },
+  "PLS-01": {
+   "column_sum": 307.361518,
+   "item_qty": 307.361518,
+   "additive": true,
+   "reconciles": true
+  },
+  "PLS-02": {
+   "column_sum": 1.510248,
+   "item_qty": 1.510248,
+   "additive": true,
+   "reconciles": true
+  },
+  "PNT-01": {
+   "column_sum": 307.361518,
+   "item_qty": 307.361518,
+   "additive": true,
+   "reconciles": true
+  },
+  "WTL-01": {
+   "column_sum": 127.693512,
+   "item_qty": 127.693512,
+   "additive": true,
+   "reconciles": true
+  },
+  "WTP-01": {
+   "column_sum": 127.693512,
+   "item_qty": 127.693512,
+   "additive": true,
+   "reconciles": true
+  },
+  "SKT-01": {
+   "column_sum": 94.136819,
+   "item_qty": 94.13682,
+   "additive": true,
+   "reconciles": true
+  },
+  "HPR-01": {
+   "column_sum": 94.136819,
+   "item_qty": 94.13682,
+   "additive": true,
+   "reconciles": true
+  },
+  "WPF-01": {
+   "column_sum": 29.427500000000002,
+   "item_qty": 29.4275,
+   "additive": true,
+   "reconciles": true
+  },
+  "WPU-01": {
+   "column_sum": 44.2,
+   "item_qty": 44.2,
+   "additive": true,
+   "reconciles": true
+  }
+ },
+ "not_reconciled": [],
+ "unplaced": [],
+ "state": "PASS",
+ "view_only": true
+}

@@ -1,0 +1,39 @@
+{
+ "SCHEMA": "URBAN_OWNER_ACTION_REGISTER_V14",
+ "headline": "NO OWNER ACTION REQUIRED FOR THE SHADOW ROWS. TWO NEW QUESTIONS FOR THE WALL-FINISH TRADES.",
+ "required_now": [],
+ "needed_for_wall_finish_rows": [
+  {
+   "id": "QORTUBA_NEW_DRY_ROOM_WALL_FINISH_HEIGHT",
+   "blocks": "PLASTER and PAINT (every dry room)",
+   "question": "For the current selected Qortuba plan, up to what height are the dry rooms (bedrooms, M.B.ROOM / DRESS, HALL / LOBBY) plastered and painted - 3.00 m as in the old drawing's rule (QP-03 / QP-04), or 3.20 m like the new wet-room tile, or another height?",
+   "why_new": "QP-03 / QP-04 were set on the OLD revision; for the new revision the owner raised the wet / service tile height to 3.20 m and stated no plaster / paint height. Source exhausted (no section, elevation or height text in the DXF)",
+   "current": "BLOCKED (no area published); counterfactual at QP-03 3.00 m recorded, never published"
+  },
+  {
+   "id": "QORTUBA_NEW_WET_ROOM_REVEAL_FINISH",
+   "blocks": "the wet / service reveal surfaces only",
+   "question": "Inside the bathrooms and the PAINTRY, are the door / sliding-door / window reveals (the sides and top of each opening) tiled with the wall tile, or plastered?",
+   "why_new": "no rule states it: US-07 covers plaster / paint reveals, US-01 the wall faces",
+   "current": "reveal surfaces recorded with areas, trade NOT_ESTABLISHED, not in WALL_TILE"
+  }
+ ],
+ "answered_this_round": [
+  {
+   "fact": "QORTUBA-NEW-HALL-PAINTRY-SLIDING-GLASS-DOOR-OWNER-001@v1",
+   "kind": "OPENING_CONSTRUCTION"
+  }
+ ],
+ "do_not_ask": [
+  "HALL / PAINTRY glass",
+  "normal windows",
+  "door jamb skirting",
+  "doorless-opening jamb skirting",
+  "duct",
+  "marble",
+  "Hall / Lobby passage",
+  "M.B.ROOM / DRESS passage",
+  "selected plan",
+  "any expected quantity"
+ ]
+}

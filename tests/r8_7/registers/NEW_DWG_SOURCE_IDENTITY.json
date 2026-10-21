@@ -1,0 +1,105 @@
+{
+ "SCHEMA": "URBAN_R8_7_NEW_DWG_SOURCE_IDENTITY_V1",
+ "candidate_dwg": {
+  "sha256": "e4babbc2ded14d8b01d64fbfd4b373e6a09ba60c4490a56e6305a82c9e47171f",
+  "bytes": 35110771,
+  "store": "data/inputs/by_sha256/e4babbc2ded14d8b01d64fbfd4b373e6a09ba60c4490a56e6305a82c9e47171f.dwg",
+  "transport": "1fd0405d-qurtoba_villah.zip (sha256 45532010...); one entry, 35,110,771 bytes",
+  "identified_by": "SHA-256 of the extracted bytes (file names ignored)"
+ },
+ "compared_with_dxf": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+ "decoder": {
+  "binary_matches_pin": true,
+  "binary_sha256": "fe49cf28f5ee5cd84cbb7b9c7ae0475586cedbfcb1a9ca9bc2cab8c72e094c47",
+  "version": "0.13.3",
+  "command": [
+   "dwgread",
+   "-v3",
+   "-O",
+   "JSON",
+   "-o",
+   "<out>",
+   "<dwg>"
+  ],
+  "exit_code": 1,
+  "json_written": false
+ },
+ "decoder_report": {
+  "errors": [
+   "Failed to decode file: data/inputs/by_sha256/e4babbc2ded14d8b01d64fbfd4b373e6a09ba60c4490a56e6305a82c9e47171f.dwg 0x940",
+   "Failed to read compressed AcDbObjects section",
+   "Failed to read compressed Classes section",
+   "Failed to read compressed Header section",
+   "Failed to read uncompressed AppInfo section",
+   "Failed to read uncompressed AuxHeader section",
+   "Invalid num_segidx",
+   "Some section size or address out of bounds",
+   "Template section not found",
+   "read_R2004_section_info out of range"
+  ],
+  "critical_flags": [
+   "SECTIONNOTFOUND INVALIDDWG "
+  ],
+  "sections_failed": [
+   "AcDbObjects",
+   "AppInfo",
+   "AuxHeader",
+   "Classes",
+   "Header"
+  ]
+ },
+ "required_comparisons": [
+  "HEADER: FINGERPRINTGUID / VERSIONGUID / HANDSEED / INSUNITS",
+  "CLASSES",
+  "OBJECTS: entity handles, census, block records, INSERT lineage, four plans, title 0x1AC, selected plan geometry, wall edits"
+ ],
+ "required_comparisons_possible": false,
+ "partial_evidence_read": {
+  "file_version": {
+   "dwg": "AC1032",
+   "dxf": "AC1032",
+   "equal": true
+  },
+  "LASTSAVEDBY": {
+   "dwg_summary_info": "Msalf",
+   "dxf": "Msalf",
+   "equal": true
+  },
+  "TDCREATE": {
+   "dwg_summary_info_julian": 2460087.2710185186,
+   "dxf_TDUCREATE": 2460087.271018519,
+   "equal": true
+  },
+  "TDINDWG": {
+   "dwg_summary_info_days": 56.67957175925926,
+   "dxf_days": 56.6810185185,
+   "dxf_minus_dwg_seconds": 125.0
+  },
+  "TDUPDATE": {
+   "dwg_summary_info_julian_local": 2461170.817465278,
+   "dxf_local": 2461315.403958333
+  },
+  "last_saved_by_application": {
+   "saved_at": "2026-05-09T19:37:09",
+   "saved_by": "Msalf",
+   "product": "AutoCAD 2023",
+   "build": "T.53.0.0",
+   "registry_version": "24.2",
+   "trusted_dwg": "This file is a Trusted DWG last saved by an Autodesk application or Autodesk licensed application."
+  }
+ },
+ "partial_evidence_reading": "consistent with the DWG being the DXF's source (same lineage creation time, same user, the DXF's editing time = the DWG's + ~2 min, the DXF written after the DWG's last AutoCAD 2023 save), but these fields cannot exclude an edit made during that session: they do not decide identity",
+ "verdict": "NOT_ESTABLISHED",
+ "why": "the pinned decoder could not read the DWG's Header, Classes and AcDbObjects sections (Failed to decode file: data/inputs/by_sha256/e4babbc2ded14d8b01d64fbfd4b373e6a09ba60c4490a56e6305a82c9e47171f.dwg 0x940; Failed to read compressed AcDbObjects section; Failed to read compressed Classes section; Failed to read compressed Header section); FINGERPRINTGUID, VERSIONGUID, HANDSEED, INSUNITS, entity handles, census, block records, INSERT lineage, the four plans, title 0x1AC and the selected plan geometry cannot be compared",
+ "consequences": {
+  "source_anchor": "UNCHANGED: QORTUBA_REV_NEW stays anchored to DXF df0e1d69 (pending)",
+  "owner_claims": "NOT re-anchored (v1 claims stay ACTIVE, pending-anchor, SHADOW only)",
+  "SUPPLY_QORTUBA_NEW_REVISION_DWG": "FILE_RECEIVED (the owner's part is done); identity not established",
+  "parser_independence": "unaffected: CONVERTER_UNKNOWN, nothing qualified"
+ },
+ "to_establish": [
+  "a DWG decoder that reads AutoCAD 2018-format (AC1032) object sections, pinned and recorded (a newer LibreDWG build or the ODA File Converter); the environment currently denies github.com and ftp.gnu.org, so none can be installed here",
+  "then run the full comparison and re-anchor only on SAME_EXACT_SOURCE_REVISION"
+ ],
+ "decision_rules": "The candidate DWG is decoded with the PINNED LibreDWG dwgread (binary hash checked). Every comparison the decode\nallows is recorded; the verdict follows fixed rules and is never forced:"
+}

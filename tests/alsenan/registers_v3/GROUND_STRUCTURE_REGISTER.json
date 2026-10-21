@@ -1,0 +1,1111 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_V3_GROUND_V1",
+ "ground": {
+  "bands": 43,
+  "columns_on_sheet": 36,
+  "zones": [
+   {
+    "id": "ZONE-1",
+    "label": "ALSENAN_ST7757_DXF|H5782|5776|TEXT|0",
+    "thickness_text": "T=10cm",
+    "mesh_text": "5%%c10/m E.W.",
+    "outer_area_m2": 103.442579,
+    "slab_area_m2": 70.40589,
+    "level": null
+   },
+   {
+    "id": "ZONE-2",
+    "label": "ALSENAN_ST7757_DXF|H5782|5789|TEXT|0",
+    "state": "BLOCKED_ZONE_NOT_CLOSED"
+   }
+  ],
+  "spans": [
+   {
+    "band": "H2000+H252",
+    "length_m": 3.375,
+    "exterior": true,
+    "id": "GB-022"
+   },
+   {
+    "band": "H2000+H252",
+    "length_m": 6.245,
+    "exterior": true,
+    "id": "GB-021"
+   },
+   {
+    "band": "H2000+H252",
+    "length_m": 6.65,
+    "exterior": true,
+    "id": "GB-020"
+   },
+   {
+    "band": "H2000+H252",
+    "length_m": 1.4,
+    "exterior": true,
+    "id": "GB-023"
+   },
+   {
+    "band": "H1987+H368",
+    "length_m": 6.22,
+    "exterior": true,
+    "id": "GB-003"
+   },
+   {
+    "band": "H1987+H368",
+    "length_m": 3.6,
+    "exterior": false,
+    "id": "GB-004"
+   },
+   {
+    "band": "H1987+H368",
+    "length_m": 3.35,
+    "exterior": false,
+    "id": "GB-005"
+   },
+   {
+    "band": "H1995+H265",
+    "length_m": 2.7,
+    "exterior": true,
+    "id": "GB-012"
+   },
+   {
+    "band": "H1995+H265",
+    "length_m": 9.5,
+    "exterior": true,
+    "id": "GB-011"
+   },
+   {
+    "band": "H1999+H388",
+    "length_m": 3.27,
+    "exterior": false,
+    "id": "GB-018"
+   },
+   {
+    "band": "H1999+H388",
+    "length_m": 3.05,
+    "exterior": false,
+    "id": "GB-019"
+   },
+   {
+    "band": "H1999+H388",
+    "length_m": 5.15,
+    "exterior": true,
+    "id": "GB-017"
+   },
+   {
+    "band": "H2004+H248",
+    "length_m": 5.53,
+    "exterior": false,
+    "id": "GB-028"
+   },
+   {
+    "band": "H2004+H248",
+    "length_m": 4.3,
+    "exterior": false,
+    "id": "GB-029"
+   },
+   {
+    "band": "H2016+H253",
+    "length_m": 3.85,
+    "exterior": true,
+    "id": "GB-042"
+   },
+   {
+    "band": "H2016+H253",
+    "length_m": 3.25,
+    "exterior": true,
+    "id": "GB-043"
+   },
+   {
+    "band": "H1997+H375",
+    "length_m": 5.37,
+    "exterior": true,
+    "id": "GB-014"
+   },
+   {
+    "band": "H1997+H375",
+    "length_m": 1.886669,
+    "exterior": true,
+    "id": "GB-015"
+   },
+   {
+    "band": "H2023+H2024",
+    "length_m": 3.525,
+    "exterior": true,
+    "id": "GB-049"
+   },
+   {
+    "band": "H2023+H2024",
+    "length_m": 3.525,
+    "exterior": true,
+    "id": "GB-050"
+   },
+   {
+    "band": "H2012+H2013",
+    "length_m": 3.525,
+    "exterior": true,
+    "id": "GB-037"
+   },
+   {
+    "band": "H2012+H2013",
+    "length_m": 3.525,
+    "exterior": true,
+    "id": "GB-038"
+   },
+   {
+    "band": "H2017+H2018",
+    "length_m": 6.72,
+    "exterior": true,
+    "id": "GB-044"
+   },
+   {
+    "band": "H2005+H310",
+    "length_m": 6.4,
+    "exterior": false,
+    "id": "GB-030"
+   },
+   {
+    "band": "H2002+H317",
+    "length_m": 5.9,
+    "exterior": false,
+    "id": "GB-026"
+   },
+   {
+    "band": "H2006+H318",
+    "length_m": 5.1,
+    "exterior": false,
+    "id": "GB-031"
+   },
+   {
+    "band": "H1993+H266",
+    "length_m": 4.6,
+    "exterior": true,
+    "id": "GB-008"
+   },
+   {
+    "band": "H2001+H267",
+    "length_m": 2.3,
+    "exterior": false,
+    "id": "GB-024"
+   },
+   {
+    "band": "H2001+H267",
+    "length_m": 1.5,
+    "exterior": false,
+    "id": "GB-025"
+   },
+   {
+    "band": "H2007+H320",
+    "length_m": 4.3,
+    "exterior": false,
+    "id": "GB-032"
+   },
+   {
+    "band": "H2003+H319",
+    "length_m": 4.3,
+    "exterior": false,
+    "id": "GB-027"
+   },
+   {
+    "band": "H2020+H381",
+    "length_m": 4.272293,
+    "exterior": false,
+    "id": "GB-046"
+   },
+   {
+    "band": "H2025+H2026",
+    "length_m": 4.225,
+    "exterior": false,
+    "id": "GB-051"
+   },
+   {
+    "band": "H2011+H376",
+    "length_m": 3.8,
+    "exterior": true,
+    "id": "GB-036"
+   },
+   {
+    "band": "H2022+H374",
+    "length_m": 3.75,
+    "exterior": true,
+    "id": "GB-048"
+   },
+   {
+    "band": "H2014+H373",
+    "length_m": 3.75,
+    "exterior": true,
+    "id": "GB-039"
+   },
+   {
+    "band": "H2019+H380",
+    "length_m": 3.227707,
+    "exterior": true,
+    "id": "GB-045"
+   },
+   {
+    "band": "H2015+H276",
+    "length_m": 0.3,
+    "exterior": false,
+    "id": "GB-041"
+   },
+   {
+    "band": "H2015+H276",
+    "length_m": 2.625,
+    "exterior": true,
+    "id": "GB-040"
+   },
+   {
+    "band": "H311+H312",
+    "length_m": 2.45,
+    "exterior": false,
+    "id": "GB-053"
+   },
+   {
+    "band": "H1994+H325",
+    "length_m": 0.4,
+    "exterior": true,
+    "id": "GB-010"
+   },
+   {
+    "band": "H1994+H325",
+    "length_m": 2.3,
+    "exterior": true,
+    "id": "GB-009"
+   },
+   {
+    "band": "H350+H351",
+    "length_m": 3.0,
+    "exterior": false,
+    "id": "GB-054"
+   },
+   {
+    "band": "H1992+H349",
+    "length_m": 2.9,
+    "exterior": false,
+    "id": "GB-007"
+   },
+   {
+    "band": "H382+H383",
+    "length_m": 2.466843,
+    "exterior": false,
+    "id": "GB-055"
+   },
+   {
+    "band": "H2008+H322",
+    "length_m": 2.45,
+    "exterior": false,
+    "id": "GB-033"
+   },
+   {
+    "band": "H1996+H348",
+    "length_m": 2.4,
+    "exterior": true,
+    "id": "GB-013"
+   },
+   {
+    "band": "H6157+H6158",
+    "length_m": 2.1,
+    "exterior": false,
+    "id": "GB-058"
+   },
+   {
+    "band": "H386+H387",
+    "length_m": 2.073244,
+    "exterior": false,
+    "id": "GB-057"
+   },
+   {
+    "band": "H2009+H316",
+    "length_m": 1.45,
+    "exterior": false,
+    "id": "GB-034"
+   },
+   {
+    "band": "H1991+H389",
+    "length_m": 0.85,
+    "exterior": true,
+    "id": "GB-006"
+   },
+   {
+    "band": "H6161+H6162",
+    "length_m": 1.3,
+    "exterior": false,
+    "id": "GB-059"
+   },
+   {
+    "band": "H2047+H367",
+    "length_m": 1.25,
+    "exterior": false,
+    "id": "GB-052"
+   },
+   {
+    "band": "H2021+H379",
+    "length_m": 1.2,
+    "exterior": false,
+    "id": "GB-047"
+   },
+   {
+    "band": "H2010+H321",
+    "length_m": 1.2,
+    "exterior": false,
+    "id": "GB-035"
+   },
+   {
+    "band": "H384+H385",
+    "length_m": 0.788981,
+    "exterior": false,
+    "id": "GB-056"
+   },
+   {
+    "band": "H1998+H263",
+    "length_m": 0.363932,
+    "exterior": false,
+    "id": "GB-016"
+   },
+   {
+    "band": "ARC:H313+H314",
+    "length_m": 1.806416,
+    "exterior": false,
+    "id": "GB-001"
+   },
+   {
+    "band": "ARC:H343+H344",
+    "length_m": 6.179941,
+    "exterior": true,
+    "id": "GB-002"
+   }
+  ],
+  "source": "ST7757 GROUND BEAMS PLAN (layer 1 double lines, 300 mm), p.13 typical ground-beam sections"
+ },
+ "items": {
+  "beams": [
+   {
+    "id": "GB-022",
+    "kind": "EXTERIOR",
+    "length_m": 3.375,
+    "B_m": 0.3,
+    "D_m": null,
+    "volume_m3": null,
+    "status": "BLOCKED",
+    "why": "FOLLOW ARCH. (outer normal ground level to GF slab level) - not printed",
+    "formula": "3.375 x 0.30 x D(follow arch.)"
+   },
+   {
+    "id": "GB-021",
+    "kind": "EXTERIOR",
+    "length_m": 6.245,
+    "B_m": 0.3,
+    "D_m": null,
+    "volume_m3": null,
+    "status": "BLOCKED",
+    "why": "FOLLOW ARCH. (outer normal ground level to GF slab level) - not printed",
+    "formula": "6.245 x 0.30 x D(follow arch.)"
+   },
+   {
+    "id": "GB-020",
+    "kind": "EXTERIOR",
+    "length_m": 6.65,
+    "B_m": 0.3,
+    "D_m": null,
+    "volume_m3": null,
+    "status": "BLOCKED",
+    "why": "FOLLOW ARCH. (outer normal ground level to GF slab level) - not printed",
+    "formula": "6.650 x 0.30 x D(follow arch.)"
+   },
+   {
+    "id": "GB-023",
+    "kind": "EXTERIOR",
+    "length_m": 1.4,
+    "B_m": 0.3,
+    "D_m": null,
+    "volume_m3": null,
+    "status": "BLOCKED",
+    "why": "FOLLOW ARCH. (outer normal ground level to GF slab level) - not printed",
+    "formula": "1.400 x 0.30 x D(follow arch.)"
+   },
+   {
+    "id": "GB-003",
+    "kind": "EXTERIOR",
+    "length_m": 6.22,
+    "B_m": 0.3,
+    "D_m": null,
+    "volume_m3": null,
+    "status": "BLOCKED",
+    "why": "FOLLOW ARCH. (outer normal ground level to GF slab level) - not printed",
+    "formula": "6.220 x 0.30 x D(follow arch.)"
+   },
+   {
+    "id": "GB-004",
+    "kind": "INTERIOR",
+    "length_m": 3.6,
+    "B_m": 0.3,
+    "D_m": 0.4,
+    "volume_m3": 0.432,
+    "status": "COMPUTED",
+    "section_rule": "p.13 typical ground beam: length 3.60 m -> 30x40",
+    "formula": "3.600 x 0.30 x 0.40 = 0.432 m3",
+    "blinding_m3": 0.18,
+    "wp_sides_m2": 2.88
+   },
+   {
+    "id": "GB-005",
+    "kind": "INTERIOR",
+    "length_m": 3.35,
+    "B_m": 0.3,
+    "D_m": 0.4,
+    "volume_m3": 0.402,
+    "status": "COMPUTED",
+    "section_rule": "p.13 typical ground beam: length 3.35 m -> 30x40",
+    "formula": "3.350 x 0.30 x 0.40 = 0.402 m3",
+    "blinding_m3": 0.1675,
+    "wp_sides_m2": 2.68
+   },
+   {
+    "id": "GB-012",
+    "kind": "EXTERIOR",
+    "length_m": 2.7,
+    "B_m": 0.3,
+    "D_m": null,
+    "volume_m3": null,
+    "status": "BLOCKED",
+    "why": "FOLLOW ARCH. (outer normal ground level to GF slab level) - not printed",
+    "formula": "2.700 x 0.30 x D(follow arch.)"
+   },
+   {
+    "id": "GB-011",
+    "kind": "EXTERIOR",
+    "length_m": 9.5,
+    "B_m": 0.3,
+    "D_m": null,
+    "volume_m3": null,
+    "status": "BLOCKED",
+    "why": "FOLLOW ARCH. (outer normal ground level to GF slab level) - not printed",
+    "formula": "9.500 x 0.30 x D(follow arch.)"
+   },
+   {
+    "id": "GB-018",
+    "kind": "INTERIOR",
+    "length_m": 3.27,
+    "B_m": 0.3,
+    "D_m": 0.4,
+    "volume_m3": 0.3924,
+    "status": "COMPUTED",
+    "section_rule": "p.13 typical ground beam: length 3.27 m -> 30x40",
+    "formula": "3.270 x 0.30 x 0.40 = 0.392 m3",
+    "blinding_m3": 0.1635,
+    "wp_sides_m2": 2.616
+   },
+   {
+    "id": "GB-019",
+    "kind": "INTERIOR",
+    "length_m": 3.05,
+    "B_m": 0.3,
+    "D_m": 0.4,
+    "volume_m3": 0.366,
+    "status": "COMPUTED",
+    "section_rule": "p.13 typical ground beam: length 3.05 m -> 30x40",
+    "formula": "3.050 x 0.30 x 0.40 = 0.366 m3",
+    "blinding_m3": 0.1525,
+    "wp_sides_m2": 2.44
+   },
+   {
+    "id": "GB-017",
+    "kind": "EXTERIOR",
+    "length_m": 5.15,
+    "B_m": 0.3,
+    "D_m": null,
+    "volume_m3": null,
+    "status": "BLOCKED",
+    "why": "FOLLOW ARCH. (outer normal ground level to GF slab level) - not printed",
+    "formula": "5.150 x 0.30 x D(follow arch.)"
+   },
+   {
+    "id": "GB-028",
+    "kind": "INTERIOR",
+    "length_m": 5.53,
+    "B_m": 0.3,
+    "D_m": 0.6,
+    "volume_m3": 0.9954,
+    "status": "COMPUTED",
+    "section_rule": "p.13 typical ground beam: length 5.53 m -> 30x60",
+    "formula": "5.530 x 0.30 x 0.60 = 0.995 m3",
+    "blinding_m3": 0.2765,
+    "wp_sides_m2": 6.636
+   },
+   {
+    "id": "GB-029",
+    "kind": "INTERIOR",
+    "length_m": 4.3,
+    "B_m": 0.3,
+    "D_m": 0.4,
+    "volume_m3": 0.516,
+    "status": "COMPUTED",
+    "section_rule": "p.13 typical ground beam: length 4.30 m -> 30x40",
+    "formula": "4.300 x 0.30 x 0.40 = 0.516 m3",
+    "blinding_m3": 0.215,
+    "wp_sides_m2": 3.44
+   },
+   {
+    "id": "GB-042",
+    "kind": "EXTERIOR",
+    "length_m": 3.85,
+    "B_m": 0.3,
+    "D_m": null,
+    "volume_m3": null,
+    "status": "BLOCKED",
+    "why": "FOLLOW ARCH. (outer normal ground level to GF slab level) - not printed",
+    "formula": "3.850 x 0.30 x D(follow arch.)"
+   },
+   {
+    "id": "GB-043",
+    "kind": "EXTERIOR",
+    "length_m": 3.25,
+    "B_m": 0.3,
+    "D_m": null,
+    "volume_m3": null,
+    "status": "BLOCKED",
+    "why": "FOLLOW ARCH. (outer normal ground level to GF slab level) - not printed",
+    "formula": "3.250 x 0.30 x D(follow arch.)"
+   },
+   {
+    "id": "GB-014",
+    "kind": "EXTERIOR",
+    "length_m": 5.37,
+    "B_m": 0.3,
+    "D_m": null,
+    "volume_m3": null,
+    "status": "BLOCKED",
+    "why": "FOLLOW ARCH. (outer normal ground level to GF slab level) - not printed",
+    "formula": "5.370 x 0.30 x D(follow arch.)"
+   },
+   {
+    "id": "GB-015",
+    "kind": "EXTERIOR",
+    "length_m": 1.886669,
+    "B_m": 0.3,
+    "D_m": null,
+    "volume_m3": null,
+    "status": "BLOCKED",
+    "why": "FOLLOW ARCH. (outer normal ground level to GF slab level) - not printed",
+    "formula": "1.887 x 0.30 x D(follow arch.)"
+   },
+   {
+    "id": "GB-049",
+    "kind": "EXTERIOR",
+    "length_m": 3.525,
+    "B_m": 0.3,
+    "D_m": null,
+    "volume_m3": null,
+    "status": "BLOCKED",
+    "why": "FOLLOW ARCH. (outer normal ground level to GF slab level) - not printed",
+    "formula": "3.525 x 0.30 x D(follow arch.)"
+   },
+   {
+    "id": "GB-050",
+    "kind": "EXTERIOR",
+    "length_m": 3.525,
+    "B_m": 0.3,
+    "D_m": null,
+    "volume_m3": null,
+    "status": "BLOCKED",
+    "why": "FOLLOW ARCH. (outer normal ground level to GF slab level) - not printed",
+    "formula": "3.525 x 0.30 x D(follow arch.)"
+   },
+   {
+    "id": "GB-037",
+    "kind": "EXTERIOR",
+    "length_m": 3.525,
+    "B_m": 0.3,
+    "D_m": null,
+    "volume_m3": null,
+    "status": "BLOCKED",
+    "why": "FOLLOW ARCH. (outer normal ground level to GF slab level) - not printed",
+    "formula": "3.525 x 0.30 x D(follow arch.)"
+   },
+   {
+    "id": "GB-038",
+    "kind": "EXTERIOR",
+    "length_m": 3.525,
+    "B_m": 0.3,
+    "D_m": null,
+    "volume_m3": null,
+    "status": "BLOCKED",
+    "why": "FOLLOW ARCH. (outer normal ground level to GF slab level) - not printed",
+    "formula": "3.525 x 0.30 x D(follow arch.)"
+   },
+   {
+    "id": "GB-044",
+    "kind": "EXTERIOR",
+    "length_m": 6.72,
+    "B_m": 0.3,
+    "D_m": null,
+    "volume_m3": null,
+    "status": "BLOCKED",
+    "why": "FOLLOW ARCH. (outer normal ground level to GF slab level) - not printed",
+    "formula": "6.720 x 0.30 x D(follow arch.)"
+   },
+   {
+    "id": "GB-030",
+    "kind": "INTERIOR",
+    "length_m": 6.4,
+    "B_m": 0.3,
+    "D_m": 0.6,
+    "volume_m3": 1.152,
+    "status": "COMPUTED",
+    "section_rule": "p.13 typical ground beam: length 6.40 m -> 30x60",
+    "formula": "6.400 x 0.30 x 0.60 = 1.152 m3",
+    "blinding_m3": 0.32,
+    "wp_sides_m2": 7.68
+   },
+   {
+    "id": "GB-026",
+    "kind": "INTERIOR",
+    "length_m": 5.9,
+    "B_m": 0.3,
+    "D_m": 0.6,
+    "volume_m3": 1.062,
+    "status": "COMPUTED",
+    "section_rule": "p.13 typical ground beam: length 5.90 m -> 30x60",
+    "formula": "5.900 x 0.30 x 0.60 = 1.062 m3",
+    "blinding_m3": 0.295,
+    "wp_sides_m2": 7.08
+   },
+   {
+    "id": "GB-031",
+    "kind": "INTERIOR",
+    "length_m": 5.1,
+    "B_m": 0.3,
+    "D_m": 0.6,
+    "volume_m3": 0.918,
+    "status": "COMPUTED",
+    "section_rule": "p.13 typical ground beam: length 5.10 m -> 30x60",
+    "formula": "5.100 x 0.30 x 0.60 = 0.918 m3",
+    "blinding_m3": 0.255,
+    "wp_sides_m2": 6.12
+   },
+   {
+    "id": "GB-008",
+    "kind": "EXTERIOR",
+    "length_m": 4.6,
+    "B_m": 0.3,
+    "D_m": null,
+    "volume_m3": null,
+    "status": "BLOCKED",
+    "why": "FOLLOW ARCH. (outer normal ground level to GF slab level) - not printed",
+    "formula": "4.600 x 0.30 x D(follow arch.)"
+   },
+   {
+    "id": "GB-024",
+    "kind": "INTERIOR",
+    "length_m": 2.3,
+    "B_m": 0.3,
+    "D_m": 0.3,
+    "volume_m3": 0.207,
+    "status": "COMPUTED",
+    "section_rule": "p.13 typical ground beam: length 2.30 m -> 30x30",
+    "formula": "2.300 x 0.30 x 0.30 = 0.207 m3",
+    "blinding_m3": 0.115,
+    "wp_sides_m2": 1.38
+   },
+   {
+    "id": "GB-025",
+    "kind": "INTERIOR",
+    "length_m": 1.5,
+    "B_m": 0.3,
+    "D_m": 0.3,
+    "volume_m3": 0.135,
+    "status": "COMPUTED",
+    "section_rule": "p.13 typical ground beam: length 1.50 m -> 30x30",
+    "formula": "1.500 x 0.30 x 0.30 = 0.135 m3",
+    "blinding_m3": 0.075,
+    "wp_sides_m2": 0.9
+   },
+   {
+    "id": "GB-032",
+    "kind": "INTERIOR",
+    "length_m": 4.3,
+    "B_m": 0.3,
+    "D_m": 0.4,
+    "volume_m3": 0.516,
+    "status": "COMPUTED",
+    "section_rule": "p.13 typical ground beam: length 4.30 m -> 30x40",
+    "formula": "4.300 x 0.30 x 0.40 = 0.516 m3",
+    "blinding_m3": 0.215,
+    "wp_sides_m2": 3.44
+   },
+   {
+    "id": "GB-027",
+    "kind": "INTERIOR",
+    "length_m": 4.3,
+    "B_m": 0.3,
+    "D_m": 0.4,
+    "volume_m3": 0.516,
+    "status": "COMPUTED",
+    "section_rule": "p.13 typical ground beam: length 4.30 m -> 30x40",
+    "formula": "4.300 x 0.30 x 0.40 = 0.516 m3",
+    "blinding_m3": 0.215,
+    "wp_sides_m2": 3.44
+   },
+   {
+    "id": "GB-046",
+    "kind": "INTERIOR",
+    "length_m": 4.272293,
+    "B_m": 0.3,
+    "D_m": 0.4,
+    "volume_m3": 0.512675,
+    "status": "COMPUTED",
+    "section_rule": "p.13 typical ground beam: length 4.27 m -> 30x40",
+    "formula": "4.272 x 0.30 x 0.40 = 0.513 m3",
+    "blinding_m3": 0.213615,
+    "wp_sides_m2": 3.417834
+   },
+   {
+    "id": "GB-051",
+    "kind": "INTERIOR",
+    "length_m": 4.225,
+    "B_m": 0.3,
+    "D_m": 0.4,
+    "volume_m3": 0.507,
+    "status": "COMPUTED",
+    "section_rule": "p.13 typical ground beam: length 4.22 m -> 30x40",
+    "formula": "4.225 x 0.30 x 0.40 = 0.507 m3",
+    "blinding_m3": 0.21125,
+    "wp_sides_m2": 3.38
+   },
+   {
+    "id": "GB-036",
+    "kind": "EXTERIOR",
+    "length_m": 3.8,
+    "B_m": 0.3,
+    "D_m": null,
+    "volume_m3": null,
+    "status": "BLOCKED",
+    "why": "FOLLOW ARCH. (outer normal ground level to GF slab level) - not printed",
+    "formula": "3.800 x 0.30 x D(follow arch.)"
+   },
+   {
+    "id": "GB-048",
+    "kind": "EXTERIOR",
+    "length_m": 3.75,
+    "B_m": 0.3,
+    "D_m": null,
+    "volume_m3": null,
+    "status": "BLOCKED",
+    "why": "FOLLOW ARCH. (outer normal ground level to GF slab level) - not printed",
+    "formula": "3.750 x 0.30 x D(follow arch.)"
+   },
+   {
+    "id": "GB-039",
+    "kind": "EXTERIOR",
+    "length_m": 3.75,
+    "B_m": 0.3,
+    "D_m": null,
+    "volume_m3": null,
+    "status": "BLOCKED",
+    "why": "FOLLOW ARCH. (outer normal ground level to GF slab level) - not printed",
+    "formula": "3.750 x 0.30 x D(follow arch.)"
+   },
+   {
+    "id": "GB-045",
+    "kind": "EXTERIOR",
+    "length_m": 3.227707,
+    "B_m": 0.3,
+    "D_m": null,
+    "volume_m3": null,
+    "status": "BLOCKED",
+    "why": "FOLLOW ARCH. (outer normal ground level to GF slab level) - not printed",
+    "formula": "3.228 x 0.30 x D(follow arch.)"
+   },
+   {
+    "id": "GB-041",
+    "kind": "INTERIOR",
+    "length_m": 0.3,
+    "B_m": 0.3,
+    "D_m": 0.3,
+    "volume_m3": 0.027,
+    "status": "COMPUTED",
+    "section_rule": "p.13 typical ground beam: length 0.30 m -> 30x30",
+    "formula": "0.300 x 0.30 x 0.30 = 0.027 m3",
+    "blinding_m3": 0.015,
+    "wp_sides_m2": 0.18
+   },
+   {
+    "id": "GB-040",
+    "kind": "EXTERIOR",
+    "length_m": 2.625,
+    "B_m": 0.3,
+    "D_m": null,
+    "volume_m3": null,
+    "status": "BLOCKED",
+    "why": "FOLLOW ARCH. (outer normal ground level to GF slab level) - not printed",
+    "formula": "2.625 x 0.30 x D(follow arch.)"
+   },
+   {
+    "id": "GB-053",
+    "kind": "INTERIOR",
+    "length_m": 2.45,
+    "B_m": 0.3,
+    "D_m": 0.3,
+    "volume_m3": 0.2205,
+    "status": "COMPUTED",
+    "section_rule": "p.13 typical ground beam: length 2.45 m -> 30x30",
+    "formula": "2.450 x 0.30 x 0.30 = 0.221 m3",
+    "blinding_m3": 0.1225,
+    "wp_sides_m2": 1.47
+   },
+   {
+    "id": "GB-010",
+    "kind": "EXTERIOR",
+    "length_m": 0.4,
+    "B_m": 0.3,
+    "D_m": null,
+    "volume_m3": null,
+    "status": "BLOCKED",
+    "why": "FOLLOW ARCH. (outer normal ground level to GF slab level) - not printed",
+    "formula": "0.400 x 0.30 x D(follow arch.)"
+   },
+   {
+    "id": "GB-009",
+    "kind": "EXTERIOR",
+    "length_m": 2.3,
+    "B_m": 0.3,
+    "D_m": null,
+    "volume_m3": null,
+    "status": "BLOCKED",
+    "why": "FOLLOW ARCH. (outer normal ground level to GF slab level) - not printed",
+    "formula": "2.300 x 0.30 x D(follow arch.)"
+   },
+   {
+    "id": "GB-054",
+    "kind": "INTERIOR",
+    "length_m": 3.0,
+    "B_m": 0.3,
+    "D_m": 0.4,
+    "volume_m3": 0.36,
+    "status": "COMPUTED",
+    "section_rule": "p.13 typical ground beam: length 3.00 m -> 30x40",
+    "formula": "3.000 x 0.30 x 0.40 = 0.360 m3",
+    "blinding_m3": 0.15,
+    "wp_sides_m2": 2.4
+   },
+   {
+    "id": "GB-007",
+    "kind": "INTERIOR",
+    "length_m": 2.9,
+    "B_m": 0.3,
+    "D_m": 0.4,
+    "volume_m3": 0.348,
+    "status": "COMPUTED",
+    "section_rule": "p.13 typical ground beam: length 2.90 m -> 30x40",
+    "formula": "2.900 x 0.30 x 0.40 = 0.348 m3",
+    "blinding_m3": 0.145,
+    "wp_sides_m2": 2.32
+   },
+   {
+    "id": "GB-055",
+    "kind": "INTERIOR",
+    "length_m": 2.466843,
+    "B_m": 0.3,
+    "D_m": 0.3,
+    "volume_m3": 0.222016,
+    "status": "COMPUTED",
+    "section_rule": "p.13 typical ground beam: length 2.47 m -> 30x30",
+    "formula": "2.467 x 0.30 x 0.30 = 0.222 m3",
+    "blinding_m3": 0.123342,
+    "wp_sides_m2": 1.480106
+   },
+   {
+    "id": "GB-033",
+    "kind": "INTERIOR",
+    "length_m": 2.45,
+    "B_m": 0.3,
+    "D_m": 0.3,
+    "volume_m3": 0.2205,
+    "status": "COMPUTED",
+    "section_rule": "p.13 typical ground beam: length 2.45 m -> 30x30",
+    "formula": "2.450 x 0.30 x 0.30 = 0.221 m3",
+    "blinding_m3": 0.1225,
+    "wp_sides_m2": 1.47
+   },
+   {
+    "id": "GB-013",
+    "kind": "EXTERIOR",
+    "length_m": 2.4,
+    "B_m": 0.3,
+    "D_m": null,
+    "volume_m3": null,
+    "status": "BLOCKED",
+    "why": "FOLLOW ARCH. (outer normal ground level to GF slab level) - not printed",
+    "formula": "2.400 x 0.30 x D(follow arch.)"
+   },
+   {
+    "id": "GB-058",
+    "kind": "INTERIOR",
+    "length_m": 2.1,
+    "B_m": 0.3,
+    "D_m": 0.3,
+    "volume_m3": 0.189,
+    "status": "COMPUTED",
+    "section_rule": "p.13 typical ground beam: length 2.10 m -> 30x30",
+    "formula": "2.100 x 0.30 x 0.30 = 0.189 m3",
+    "blinding_m3": 0.105,
+    "wp_sides_m2": 1.26
+   },
+   {
+    "id": "GB-057",
+    "kind": "INTERIOR",
+    "length_m": 2.073244,
+    "B_m": 0.3,
+    "D_m": 0.3,
+    "volume_m3": 0.186592,
+    "status": "COMPUTED",
+    "section_rule": "p.13 typical ground beam: length 2.07 m -> 30x30",
+    "formula": "2.073 x 0.30 x 0.30 = 0.187 m3",
+    "blinding_m3": 0.103662,
+    "wp_sides_m2": 1.243946
+   },
+   {
+    "id": "GB-034",
+    "kind": "INTERIOR",
+    "length_m": 1.45,
+    "B_m": 0.3,
+    "D_m": 0.3,
+    "volume_m3": 0.1305,
+    "status": "COMPUTED",
+    "section_rule": "p.13 typical ground beam: length 1.45 m -> 30x30",
+    "formula": "1.450 x 0.30 x 0.30 = 0.131 m3",
+    "blinding_m3": 0.0725,
+    "wp_sides_m2": 0.87
+   },
+   {
+    "id": "GB-006",
+    "kind": "EXTERIOR",
+    "length_m": 0.85,
+    "B_m": 0.3,
+    "D_m": null,
+    "volume_m3": null,
+    "status": "BLOCKED",
+    "why": "FOLLOW ARCH. (outer normal ground level to GF slab level) - not printed",
+    "formula": "0.850 x 0.30 x D(follow arch.)"
+   },
+   {
+    "id": "GB-059",
+    "kind": "INTERIOR",
+    "length_m": 1.3,
+    "B_m": 0.3,
+    "D_m": 0.3,
+    "volume_m3": 0.117,
+    "status": "COMPUTED",
+    "section_rule": "p.13 typical ground beam: length 1.30 m -> 30x30",
+    "formula": "1.300 x 0.30 x 0.30 = 0.117 m3",
+    "blinding_m3": 0.065,
+    "wp_sides_m2": 0.78
+   },
+   {
+    "id": "GB-052",
+    "kind": "INTERIOR",
+    "length_m": 1.25,
+    "B_m": 0.3,
+    "D_m": 0.3,
+    "volume_m3": 0.1125,
+    "status": "COMPUTED",
+    "section_rule": "p.13 typical ground beam: length 1.25 m -> 30x30",
+    "formula": "1.250 x 0.30 x 0.30 = 0.112 m3",
+    "blinding_m3": 0.0625,
+    "wp_sides_m2": 0.75
+   },
+   {
+    "id": "GB-047",
+    "kind": "INTERIOR",
+    "length_m": 1.2,
+    "B_m": 0.3,
+    "D_m": 0.3,
+    "volume_m3": 0.108,
+    "status": "COMPUTED",
+    "section_rule": "p.13 typical ground beam: length 1.20 m -> 30x30",
+    "formula": "1.200 x 0.30 x 0.30 = 0.108 m3",
+    "blinding_m3": 0.06,
+    "wp_sides_m2": 0.72
+   },
+   {
+    "id": "GB-035",
+    "kind": "INTERIOR",
+    "length_m": 1.2,
+    "B_m": 0.3,
+    "D_m": 0.3,
+    "volume_m3": 0.108,
+    "status": "COMPUTED",
+    "section_rule": "p.13 typical ground beam: length 1.20 m -> 30x30",
+    "formula": "1.200 x 0.30 x 0.30 = 0.108 m3",
+    "blinding_m3": 0.06,
+    "wp_sides_m2": 0.72
+   },
+   {
+    "id": "GB-056",
+    "kind": "INTERIOR",
+    "length_m": 0.788981,
+    "B_m": 0.3,
+    "D_m": 0.3,
+    "volume_m3": 0.071008,
+    "status": "COMPUTED",
+    "section_rule": "p.13 typical ground beam: length 0.79 m -> 30x30",
+    "formula": "0.789 x 0.30 x 0.30 = 0.071 m3",
+    "blinding_m3": 0.039449,
+    "wp_sides_m2": 0.473389
+   },
+   {
+    "id": "GB-016",
+    "kind": "INTERIOR",
+    "length_m": 0.363932,
+    "B_m": 0.3,
+    "D_m": 0.3,
+    "volume_m3": 0.032754,
+    "status": "COMPUTED",
+    "section_rule": "p.13 typical ground beam: length 0.36 m -> 30x30",
+    "formula": "0.364 x 0.30 x 0.30 = 0.033 m3",
+    "blinding_m3": 0.018197,
+    "wp_sides_m2": 0.218359
+   },
+   {
+    "id": "GB-001",
+    "kind": "INTERIOR",
+    "length_m": 1.806416,
+    "B_m": 0.3,
+    "D_m": 0.3,
+    "volume_m3": 0.162577,
+    "status": "COMPUTED",
+    "section_rule": "p.13 typical ground beam: length 1.81 m -> 30x30",
+    "formula": "1.806 x 0.30 x 0.30 = 0.163 m3",
+    "blinding_m3": 0.090321,
+    "wp_sides_m2": 1.08385
+   },
+   {
+    "id": "GB-002",
+    "kind": "EXTERIOR",
+    "length_m": 6.179941,
+    "B_m": 0.3,
+    "D_m": null,
+    "volume_m3": null,
+    "status": "BLOCKED",
+    "why": "FOLLOW ARCH. (outer normal ground level to GF slab level) - not printed",
+    "formula": "6.180 x 0.30 x D(follow arch.)"
+   }
+  ],
+  "slabs": [
+   {
+    "id": "ZONE-1",
+    "area_m2": 70.40589,
+    "thickness_m": 0.1,
+    "volume_m3": 7.040589,
+    "status": "COMPUTED",
+    "formula": "70.406 m2 (zone 103.443 - beam bands / columns) x 0.10",
+    "source": "'T=10cm' + '5%%c10/m E.W.' printed in the zone"
+   },
+   {
+    "id": "ZONE-2",
+    "status": "BLOCKED",
+    "why": "BLOCKED_ZONE_NOT_CLOSED"
+   }
+  ]
+ }
+}

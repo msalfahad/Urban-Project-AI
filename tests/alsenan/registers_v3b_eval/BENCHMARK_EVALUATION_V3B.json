@@ -1,0 +1,194 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_V3B_BENCHMARK_EVALUATION_V1",
+ "run": "AFTER_FREEZE",
+ "evaluation_only": true,
+ "unit_policy": "URBAN_BOQ_UNIT_CONTROL_V1",
+ "v3b_freeze_sha256": "5ead4786c9239f080f206cc1b5d1efa1d06084011cc9d22423ad33967a6ff7bb",
+ "b1_register_sha256": "959a8eeb67e3129a3ead75851ef17651dcd005acfc6d6b34add936477fabe613",
+ "rows": [
+  {
+   "benchmark": "FLOOR / ALL",
+   "benchmark_qty": 409.58,
+   "benchmark_unit": "m²",
+   "benchmark_unit_source": "STATED",
+   "v3b_items": [
+    "Floor finish"
+   ],
+   "v3b_technical": 447.224,
+   "v3b_commercial": 447.224,
+   "unit": "m²",
+   "diff_technical_pct": 9.2,
+   "diff_commercial_pct": 9.2,
+   "unit_check": "SAME_UNIT"
+  },
+  {
+   "benchmark": "SKIRTING / ALL",
+   "benchmark_qty": 282.85,
+   "benchmark_unit": "lm",
+   "benchmark_unit_source": "STATED",
+   "v3b_items": [
+    "Skirting"
+   ],
+   "v3b_technical": 312.3,
+   "v3b_commercial": 312.3,
+   "unit": "lm",
+   "diff_technical_pct": 10.4,
+   "diff_commercial_pct": 10.4,
+   "unit_check": "SAME_UNIT"
+  },
+  {
+   "benchmark": "WALL_TILE / WET_ROOMS",
+   "benchmark_qty": 433.83,
+   "benchmark_unit": "m²",
+   "benchmark_unit_source": "STATED",
+   "v3b_items": [
+    "Wall tile (net)"
+   ],
+   "v3b_technical": 26.36,
+   "v3b_commercial": 369.123,
+   "unit": "m²",
+   "diff_technical_pct": -93.9,
+   "diff_commercial_pct": -14.9,
+   "unit_check": "SAME_UNIT"
+  },
+  {
+   "benchmark": "WATERPROOFING / WET_ROOM:FLOOR",
+   "benchmark_qty": 72.01,
+   "benchmark_unit": "m²",
+   "benchmark_unit_source": "STATED",
+   "v3b_items": [
+    "WP floor"
+   ],
+   "v3b_technical": 58.237,
+   "v3b_commercial": 58.237,
+   "unit": "m²",
+   "diff_technical_pct": -19.1,
+   "diff_commercial_pct": -19.1,
+   "unit_check": "SAME_UNIT"
+  },
+  {
+   "benchmark": "WATERPROOFING / ROOF:FLOOR",
+   "benchmark_qty": 285.0,
+   "benchmark_unit": "m²",
+   "benchmark_unit_source": "STATED",
+   "v3b_items": [
+    "Roof waterproofing"
+   ],
+   "v3b_technical": 364.031,
+   "v3b_commercial": 364.031,
+   "unit": "m²",
+   "diff_technical_pct": 27.7,
+   "diff_commercial_pct": 27.7,
+   "unit_check": "SAME_UNIT"
+  },
+  {
+   "benchmark": "RAILING / INTERNAL",
+   "benchmark_qty": 18.95,
+   "benchmark_unit": "lm",
+   "benchmark_unit_source": "STATED",
+   "v3b_items": [
+    "Gallery railing"
+   ],
+   "v3b_technical": 14.29,
+   "v3b_commercial": 14.29,
+   "unit": "lm",
+   "diff_technical_pct": -24.6,
+   "diff_commercial_pct": -24.6,
+   "unit_check": "SAME_UNIT"
+  },
+  {
+   "benchmark": "BLOCKWORK / ALL",
+   "benchmark_qty": 1260.6895,
+   "benchmark_unit": "m²",
+   "benchmark_unit_source": "STATED",
+   "v3b_items": [
+    "Blockwork 200 mm",
+    "Blockwork 150 mm",
+    "Blockwork OVER OPENINGS",
+    "Parapet blockwork"
+   ],
+   "v3b_technical": 703.024,
+   "v3b_commercial": 801.075,
+   "unit": "m²",
+   "diff_technical_pct": -44.2,
+   "diff_commercial_pct": -36.5,
+   "unit_check": "SAME_UNIT"
+  },
+  {
+   "benchmark": "PAINT / INTERNAL_WALL",
+   "benchmark_qty": 1191.1275,
+   "benchmark_unit": "m²",
+   "benchmark_unit_source": "INFERRED_FROM_TRADE (B1 unit cell blank)",
+   "v3b_items": [
+    "Internal paint (net)"
+   ],
+   "v3b_technical": 0.0,
+   "v3b_commercial": 1199.23,
+   "unit": "m²",
+   "diff_technical_pct": -100.0,
+   "diff_commercial_pct": 0.7,
+   "unit_check": "SAME_UNIT"
+  },
+  {
+   "benchmark": "PLASTER / INTERNAL_WALL",
+   "benchmark_qty": 1151.1375,
+   "benchmark_unit": "m²",
+   "benchmark_unit_source": "INFERRED_FROM_TRADE (B1 unit cell blank)",
+   "v3b_items": [
+    "Rough plaster"
+   ],
+   "v3b_technical": 0.0,
+   "v3b_commercial": 1367.565,
+   "unit": "m²",
+   "diff_technical_pct": -100.0,
+   "diff_commercial_pct": 18.8,
+   "unit_check": "SAME_UNIT"
+  },
+  {
+   "benchmark": "BLINDING / PLAIN",
+   "benchmark_qty": 47.05500000000001,
+   "benchmark_unit": "m³",
+   "benchmark_unit_source": "STATED",
+   "v3b_items": [
+    "Plain concrete (blinding)"
+   ],
+   "v3b_technical": 29.623,
+   "v3b_commercial": 29.623,
+   "unit": "m³",
+   "diff_technical_pct": -37.0,
+   "diff_commercial_pct": -37.0,
+   "unit_check": "SAME_UNIT"
+  },
+  {
+   "benchmark": "OTHER_CONCRETE / ALL_REINFORCED",
+   "benchmark_qty": 352.436075,
+   "benchmark_unit": "m³",
+   "benchmark_unit_source": "STATED",
+   "v3b_items": [
+    "Reinforced concrete"
+   ],
+   "v3b_technical": 253.217,
+   "v3b_commercial": 316.058,
+   "unit": "m³",
+   "diff_technical_pct": -28.2,
+   "diff_commercial_pct": -10.3,
+   "unit_check": "SAME_UNIT"
+  },
+  {
+   "benchmark": "REBAR / ALL",
+   "benchmark_qty": 44.19,
+   "benchmark_unit": "t",
+   "benchmark_unit_source": "STATED",
+   "v3b_items": [
+    "Rebar - net design weight (straight + hooks)"
+   ],
+   "v3b_technical": 20.651,
+   "v3b_commercial": 26.24,
+   "unit": "t",
+   "diff_technical_pct": -53.3,
+   "diff_commercial_pct": -40.6,
+   "unit_check": "SAME_UNIT"
+  }
+ ],
+ "rule": "units normalised first; no benchmark value chose or changed any V3b quantity; differences are findings, never targets (44.19 t is not a target)"
+}

@@ -1,0 +1,1227 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_A3_COLUMNS_V1",
+ "marks": {
+  "C": 5,
+  "C1": 1,
+  "C2": 4,
+  "C3": 6,
+  "C4": 2,
+  "C5": 3,
+  "C6": 1,
+  "C7": 1,
+  "C8": 2,
+  "C9": 2,
+  "C10": 1,
+  "C11": 2,
+  "CN": 5
+ },
+ "occurrences": [
+  {
+   "key": "ALSENAN_ST7757_DXF|H2125||TEXT|0",
+   "type": "C",
+   "value": "C"
+  },
+  {
+   "key": "ALSENAN_ST7757_DXF|H4100||TEXT|0",
+   "type": "C",
+   "value": "C"
+  },
+  {
+   "key": "ALSENAN_ST7757_DXF|H4102||TEXT|0",
+   "type": "C3",
+   "value": "C3"
+  },
+  {
+   "key": "ALSENAN_ST7757_DXF|H4104||TEXT|0",
+   "type": "C",
+   "value": "C"
+  },
+  {
+   "key": "ALSENAN_ST7757_DXF|H4106||TEXT|0",
+   "type": "C3",
+   "value": "C3"
+  },
+  {
+   "key": "ALSENAN_ST7757_DXF|H4108||TEXT|0",
+   "type": "C",
+   "value": "C"
+  },
+  {
+   "key": "ALSENAN_ST7757_DXF|H4110||TEXT|0",
+   "type": "C3",
+   "value": "C3"
+  },
+  {
+   "key": "ALSENAN_ST7757_DXF|H4112||TEXT|0",
+   "type": "C5",
+   "value": "C5"
+  },
+  {
+   "key": "ALSENAN_ST7757_DXF|H4114||TEXT|0",
+   "type": "C11",
+   "value": "C11"
+  },
+  {
+   "key": "ALSENAN_ST7757_DXF|H4116||TEXT|0",
+   "type": "C6",
+   "value": "C6"
+  },
+  {
+   "key": "ALSENAN_ST7757_DXF|H4118||TEXT|0",
+   "type": "C11",
+   "value": "C11"
+  },
+  {
+   "key": "ALSENAN_ST7757_DXF|H4120||TEXT|0",
+   "type": "C3",
+   "value": "C3"
+  },
+  {
+   "key": "ALSENAN_ST7757_DXF|H4122||TEXT|0",
+   "type": "C8",
+   "value": "C8"
+  },
+  {
+   "key": "ALSENAN_ST7757_DXF|H4124||TEXT|0",
+   "type": "C5",
+   "value": "C5"
+  },
+  {
+   "key": "ALSENAN_ST7757_DXF|H4185||TEXT|0",
+   "type": "C10",
+   "value": "C10"
+  },
+  {
+   "key": "ALSENAN_ST7757_DXF|H4187||TEXT|0",
+   "type": "C",
+   "value": "C"
+  },
+  {
+   "key": "ALSENAN_ST7757_DXF|H4189||TEXT|0",
+   "type": "C7",
+   "value": "C7"
+  },
+  {
+   "key": "ALSENAN_ST7757_DXF|H4191||TEXT|0",
+   "type": "C3",
+   "value": "C3"
+  },
+  {
+   "key": "ALSENAN_ST7757_DXF|H4193||TEXT|0",
+   "type": "C2",
+   "value": "C2"
+  },
+  {
+   "key": "ALSENAN_ST7757_DXF|H4195||TEXT|0",
+   "type": "C2",
+   "value": "C2"
+  },
+  {
+   "key": "ALSENAN_ST7757_DXF|H4197||TEXT|0",
+   "type": "C4",
+   "value": "C4"
+  },
+  {
+   "key": "ALSENAN_ST7757_DXF|H4199||TEXT|0",
+   "type": "C4",
+   "value": "C4"
+  },
+  {
+   "key": "ALSENAN_ST7757_DXF|H4201||TEXT|0",
+   "type": "C5",
+   "value": "C5"
+  },
+  {
+   "key": "ALSENAN_ST7757_DXF|H4203||TEXT|0",
+   "type": "C9",
+   "value": "C9"
+  },
+  {
+   "key": "ALSENAN_ST7757_DXF|H4205||TEXT|0",
+   "type": "C8",
+   "value": "C8"
+  },
+  {
+   "key": "ALSENAN_ST7757_DXF|H4207||TEXT|0",
+   "type": "C3",
+   "value": "C3"
+  },
+  {
+   "key": "ALSENAN_ST7757_DXF|H4209||TEXT|0",
+   "type": "CN",
+   "value": "CN"
+  },
+  {
+   "key": "ALSENAN_ST7757_DXF|H4211||TEXT|0",
+   "type": "CN",
+   "value": "CN"
+  },
+  {
+   "key": "ALSENAN_ST7757_DXF|H4213||TEXT|0",
+   "type": "C9",
+   "value": "C9"
+  },
+  {
+   "key": "ALSENAN_ST7757_DXF|H4215||TEXT|0",
+   "type": "C2",
+   "value": "C2"
+  },
+  {
+   "key": "ALSENAN_ST7757_DXF|H4217||TEXT|0",
+   "type": "C1",
+   "value": "C1"
+  },
+  {
+   "key": "ALSENAN_ST7757_DXF|H4219||TEXT|0",
+   "type": "C2",
+   "value": "C2"
+  },
+  {
+   "key": "ALSENAN_ST7757_DXF|H6070||TEXT|0",
+   "type": "CN",
+   "value": "CN"
+  },
+  {
+   "key": "ALSENAN_ST7757_DXF|H6096||TEXT|0",
+   "type": "CN",
+   "value": "CN"
+  },
+  {
+   "key": "ALSENAN_ST7757_DXF|H6098||TEXT|0",
+   "type": "CN",
+   "value": "CN"
+  }
+ ],
+ "storeys": {
+  "FOUNDATION": {
+   "rows": [
+    {
+     "type": "C",
+     "count": 5,
+     "B_cm": 30.0,
+     "D_cm": 50.0,
+     "reinf": "8 Ø 16",
+     "plan_area_each_m2": 0.15,
+     "plan_area_total_m2": 0.75,
+     "status": "COMPUTED_SHADOW_COMPLETE"
+    },
+    {
+     "type": "C1",
+     "count": 1,
+     "B_cm": 30.0,
+     "D_cm": 50.0,
+     "reinf": "8 Ø 16",
+     "plan_area_each_m2": 0.15,
+     "plan_area_total_m2": 0.15,
+     "status": "COMPUTED_SHADOW_COMPLETE"
+    },
+    {
+     "type": "C2",
+     "count": 4,
+     "B_cm": 30.0,
+     "D_cm": 50.0,
+     "reinf": "8 Ø 16",
+     "plan_area_each_m2": 0.15,
+     "plan_area_total_m2": 0.6,
+     "status": "COMPUTED_SHADOW_COMPLETE"
+    },
+    {
+     "type": "C3",
+     "count": 6,
+     "B_cm": 30.0,
+     "D_cm": 50.0,
+     "reinf": "8 Ø 16",
+     "plan_area_each_m2": 0.15,
+     "plan_area_total_m2": 0.9,
+     "status": "COMPUTED_SHADOW_COMPLETE"
+    },
+    {
+     "type": "C4",
+     "count": 2,
+     "B_cm": 30.0,
+     "D_cm": 50.0,
+     "reinf": "8 Ø 16",
+     "plan_area_each_m2": 0.15,
+     "plan_area_total_m2": 0.3,
+     "status": "COMPUTED_SHADOW_COMPLETE"
+    },
+    {
+     "type": "C5",
+     "count": 3,
+     "B_cm": 30.0,
+     "D_cm": 60.0,
+     "reinf": "10 Ø 16",
+     "plan_area_each_m2": 0.18,
+     "plan_area_total_m2": 0.54,
+     "status": "COMPUTED_SHADOW_COMPLETE"
+    },
+    {
+     "type": "C6",
+     "count": 1,
+     "B_cm": 30.0,
+     "D_cm": 70.0,
+     "reinf": "10 Ø 16",
+     "plan_area_each_m2": 0.21,
+     "plan_area_total_m2": 0.21,
+     "status": "COMPUTED_SHADOW_COMPLETE"
+    },
+    {
+     "type": "C7",
+     "count": 1,
+     "B_cm": 30.0,
+     "D_cm": 80.0,
+     "reinf": "12 Ø 16",
+     "plan_area_each_m2": 0.24,
+     "plan_area_total_m2": 0.24,
+     "status": "COMPUTED_SHADOW_COMPLETE"
+    },
+    {
+     "type": "C8",
+     "count": 2,
+     "B_cm": 30.0,
+     "D_cm": 90.0,
+     "reinf": "12 Ø 16",
+     "plan_area_each_m2": 0.27,
+     "plan_area_total_m2": 0.54,
+     "status": "COMPUTED_SHADOW_COMPLETE"
+    },
+    {
+     "type": "C9",
+     "count": 2,
+     "B_cm": 30.0,
+     "D_cm": 100.0,
+     "reinf": "14 Ø 16",
+     "plan_area_each_m2": 0.3,
+     "plan_area_total_m2": 0.6,
+     "status": "COMPUTED_SHADOW_COMPLETE"
+    },
+    {
+     "type": "C10",
+     "count": 1,
+     "B_cm": 30.0,
+     "D_cm": 70.0,
+     "reinf": "10 Ø 16",
+     "plan_area_each_m2": 0.21,
+     "plan_area_total_m2": 0.21,
+     "status": "COMPUTED_SHADOW_COMPLETE"
+    },
+    {
+     "type": "C11",
+     "count": 2,
+     "B_cm": 30.0,
+     "D_cm": 110.0,
+     "reinf": "14 Ø 16",
+     "plan_area_each_m2": 0.33,
+     "plan_area_total_m2": 0.66,
+     "status": "COMPUTED_SHADOW_COMPLETE"
+    },
+    {
+     "type": "CN",
+     "count": 5,
+     "B_cm": 30.0,
+     "D_cm": 30.0,
+     "reinf": "4 Ø 14",
+     "plan_area_each_m2": 0.09,
+     "plan_area_total_m2": 0.45,
+     "status": "COMPUTED_SHADOW_COMPLETE"
+    }
+   ],
+   "columns_with_section": 35,
+   "plan_area_m2": 6.15,
+   "corroboration": {
+    "drawn": {
+     "20x50": 3,
+     "25x50": 1,
+     "25x100": 1,
+     "30x30": 5,
+     "30x50": 14,
+     "30x60": 3,
+     "30x70": 2,
+     "30x80": 2,
+     "30x90": 1,
+     "30x100": 1,
+     "30x110": 2
+    },
+    "expected_from_marks": {
+     "30.0x30.0": 5,
+     "30.0x50.0": 18,
+     "30.0x60.0": 3,
+     "30.0x70.0": 2,
+     "30.0x80.0": 1,
+     "30.0x90.0": 2,
+     "30.0x100.0": 2,
+     "30.0x110.0": 2
+    },
+    "drawn_count": 35,
+    "expected_count": 35,
+    "state": "DIFFERS"
+   }
+  },
+  "GROUND FLOOR": {
+   "rows": [
+    {
+     "type": "C",
+     "count": 5,
+     "B_cm": 20.0,
+     "D_cm": 50.0,
+     "reinf": "8 Ø 16",
+     "plan_area_each_m2": 0.1,
+     "plan_area_total_m2": 0.5,
+     "status": "COMPUTED_SHADOW_COMPLETE"
+    },
+    {
+     "type": "C1",
+     "count": 1,
+     "B_cm": 20.0,
+     "D_cm": 50.0,
+     "reinf": "8 Ø 16",
+     "plan_area_each_m2": 0.1,
+     "plan_area_total_m2": 0.1,
+     "status": "COMPUTED_SHADOW_COMPLETE"
+    },
+    {
+     "type": "C2",
+     "count": 4,
+     "B_cm": 20.0,
+     "D_cm": 50.0,
+     "reinf": "8 Ø 16",
+     "plan_area_each_m2": 0.1,
+     "plan_area_total_m2": 0.4,
+     "status": "COMPUTED_SHADOW_COMPLETE"
+    },
+    {
+     "type": "C3",
+     "count": 6,
+     "B_cm": 25.0,
+     "D_cm": 50.0,
+     "reinf": "8 Ø 16",
+     "plan_area_each_m2": 0.125,
+     "plan_area_total_m2": 0.75,
+     "status": "COMPUTED_SHADOW_COMPLETE"
+    },
+    {
+     "type": "C4",
+     "count": 2,
+     "B_cm": 25.0,
+     "D_cm": 50.0,
+     "reinf": "8 Ø 16",
+     "plan_area_each_m2": 0.125,
+     "plan_area_total_m2": 0.25,
+     "status": "COMPUTED_SHADOW_COMPLETE"
+    },
+    {
+     "type": "C5",
+     "count": 3,
+     "B_cm": 25.0,
+     "D_cm": 60.0,
+     "reinf": "10 Ø 16",
+     "plan_area_each_m2": 0.15,
+     "plan_area_total_m2": 0.45,
+     "status": "COMPUTED_SHADOW_COMPLETE"
+    },
+    {
+     "type": "C6",
+     "count": 1,
+     "B_cm": 25.0,
+     "D_cm": 70.0,
+     "reinf": "10 Ø 16",
+     "plan_area_each_m2": 0.175,
+     "plan_area_total_m2": 0.175,
+     "status": "COMPUTED_SHADOW_COMPLETE"
+    },
+    {
+     "type": "C7",
+     "count": 1,
+     "B_cm": 25.0,
+     "D_cm": 80.0,
+     "reinf": "12 Ø 16",
+     "plan_area_each_m2": 0.2,
+     "plan_area_total_m2": 0.2,
+     "status": "COMPUTED_SHADOW_COMPLETE"
+    },
+    {
+     "type": "C8",
+     "count": 2,
+     "B_cm": 25.0,
+     "D_cm": 90.0,
+     "reinf": "12 Ø 16",
+     "plan_area_each_m2": 0.225,
+     "plan_area_total_m2": 0.45,
+     "status": "COMPUTED_SHADOW_COMPLETE"
+    },
+    {
+     "type": "C9",
+     "count": 2,
+     "B_cm": 25.0,
+     "D_cm": 100.0,
+     "reinf": "14 Ø 16",
+     "plan_area_each_m2": 0.25,
+     "plan_area_total_m2": 0.5,
+     "status": "COMPUTED_SHADOW_COMPLETE"
+    },
+    {
+     "type": "C10",
+     "count": 1,
+     "B_cm": 25.0,
+     "D_cm": 70.0,
+     "reinf": "10 Ø 16",
+     "plan_area_each_m2": 0.175,
+     "plan_area_total_m2": 0.175,
+     "status": "COMPUTED_SHADOW_COMPLETE"
+    },
+    {
+     "type": "C11",
+     "count": 2,
+     "B_cm": 25.0,
+     "D_cm": 110.0,
+     "reinf": "14 Ø 16",
+     "plan_area_each_m2": 0.275,
+     "plan_area_total_m2": 0.55,
+     "status": "COMPUTED_SHADOW_COMPLETE"
+    },
+    {
+     "type": "CN",
+     "count": 5,
+     "B_cm": null,
+     "D_cm": null,
+     "reinf": null,
+     "plan_area_each_m2": null,
+     "plan_area_total_m2": null,
+     "status": "SECTION_NOT_SCHEDULED_FOR_STOREY"
+    }
+   ],
+   "columns_with_section": 30,
+   "plan_area_m2": 4.5,
+   "corroboration": {
+    "drawn": {
+     "20x40": 6,
+     "20x50": 7,
+     "20x70": 1,
+     "20x90": 1,
+     "20x100": 1,
+     "25x50": 6,
+     "25x60": 3,
+     "25x70": 2,
+     "25x80": 2,
+     "25x90": 1,
+     "25x100": 2,
+     "25x110": 2
+    },
+    "expected_from_marks": {
+     "20.0x50.0": 10,
+     "25.0x50.0": 8,
+     "25.0x60.0": 3,
+     "25.0x70.0": 2,
+     "25.0x80.0": 1,
+     "25.0x90.0": 2,
+     "25.0x100.0": 2,
+     "25.0x110.0": 2
+    },
+    "drawn_count": 34,
+    "expected_count": 30,
+    "state": "DIFFERS"
+   }
+  },
+  "1ST FLOOR": {
+   "rows": [
+    {
+     "type": "C",
+     "count": 5,
+     "B_cm": null,
+     "D_cm": null,
+     "reinf": null,
+     "plan_area_each_m2": null,
+     "plan_area_total_m2": null,
+     "status": "SECTION_NOT_SCHEDULED_FOR_STOREY"
+    },
+    {
+     "type": "C1",
+     "count": 1,
+     "B_cm": 20.0,
+     "D_cm": 50.0,
+     "reinf": "6 Ø 16",
+     "plan_area_each_m2": 0.1,
+     "plan_area_total_m2": 0.1,
+     "status": "COMPUTED_SHADOW_COMPLETE"
+    },
+    {
+     "type": "C2",
+     "count": 4,
+     "B_cm": 20.0,
+     "D_cm": 50.0,
+     "reinf": "8 Ø 16",
+     "plan_area_each_m2": 0.1,
+     "plan_area_total_m2": 0.4,
+     "status": "COMPUTED_SHADOW_COMPLETE"
+    },
+    {
+     "type": "C3",
+     "count": 6,
+     "B_cm": 20.0,
+     "D_cm": 50.0,
+     "reinf": "6 Ø 16",
+     "plan_area_each_m2": 0.1,
+     "plan_area_total_m2": 0.6,
+     "status": "COMPUTED_SHADOW_COMPLETE"
+    },
+    {
+     "type": "C4",
+     "count": 2,
+     "B_cm": 20.0,
+     "D_cm": 50.0,
+     "reinf": "8 Ø 16",
+     "plan_area_each_m2": 0.1,
+     "plan_area_total_m2": 0.2,
+     "status": "COMPUTED_SHADOW_COMPLETE"
+    },
+    {
+     "type": "C5",
+     "count": 3,
+     "B_cm": 20.0,
+     "D_cm": 50.0,
+     "reinf": "8 Ø 16",
+     "plan_area_each_m2": 0.1,
+     "plan_area_total_m2": 0.3,
+     "status": "COMPUTED_SHADOW_COMPLETE"
+    },
+    {
+     "type": "C6",
+     "count": 1,
+     "B_cm": 20.0,
+     "D_cm": 60.0,
+     "reinf": "8 Ø 16",
+     "plan_area_each_m2": 0.12,
+     "plan_area_total_m2": 0.12,
+     "status": "COMPUTED_SHADOW_COMPLETE"
+    },
+    {
+     "type": "C7",
+     "count": 1,
+     "B_cm": 20.0,
+     "D_cm": 80.0,
+     "reinf": "10 Ø 16",
+     "plan_area_each_m2": 0.16,
+     "plan_area_total_m2": 0.16,
+     "status": "COMPUTED_SHADOW_COMPLETE"
+    },
+    {
+     "type": "C8",
+     "count": 2,
+     "B_cm": 20.0,
+     "D_cm": 90.0,
+     "reinf": "12 Ø 16",
+     "plan_area_each_m2": 0.18,
+     "plan_area_total_m2": 0.36,
+     "status": "COMPUTED_SHADOW_COMPLETE"
+    },
+    {
+     "type": "C9",
+     "count": 2,
+     "B_cm": 20.0,
+     "D_cm": 90.0,
+     "reinf": "12 Ø 16",
+     "plan_area_each_m2": 0.18,
+     "plan_area_total_m2": 0.36,
+     "status": "COMPUTED_SHADOW_COMPLETE"
+    },
+    {
+     "type": "C10",
+     "count": 1,
+     "B_cm": null,
+     "D_cm": null,
+     "reinf": null,
+     "plan_area_each_m2": null,
+     "plan_area_total_m2": null,
+     "status": "SECTION_NOT_SCHEDULED_FOR_STOREY"
+    },
+    {
+     "type": "C11",
+     "count": 2,
+     "B_cm": null,
+     "D_cm": null,
+     "reinf": null,
+     "plan_area_each_m2": null,
+     "plan_area_total_m2": null,
+     "status": "SECTION_NOT_SCHEDULED_FOR_STOREY"
+    },
+    {
+     "type": "CN",
+     "count": 5,
+     "B_cm": null,
+     "D_cm": null,
+     "reinf": null,
+     "plan_area_each_m2": null,
+     "plan_area_total_m2": null,
+     "status": "SECTION_NOT_SCHEDULED_FOR_STOREY"
+    }
+   ],
+   "columns_with_section": 22,
+   "plan_area_m2": 2.6,
+   "corroboration": {
+    "drawn": {
+     "20x40": 1,
+     "20x50": 7,
+     "20x60": 1,
+     "20x70": 1,
+     "20x90": 1,
+     "20x100": 1,
+     "25x50": 3,
+     "25x60": 2,
+     "25x70": 1,
+     "25x80": 2,
+     "25x100": 1
+    },
+    "expected_from_marks": {
+     "20.0x50.0": 16,
+     "20.0x60.0": 1,
+     "20.0x80.0": 1,
+     "20.0x90.0": 4
+    },
+    "drawn_count": 21,
+    "expected_count": 22,
+    "state": "DIFFERS"
+   }
+  },
+  "2ND FLOOR & TOP": {
+   "rows": [
+    {
+     "type": "C",
+     "count": 5,
+     "B_cm": null,
+     "D_cm": null,
+     "reinf": null,
+     "plan_area_each_m2": null,
+     "plan_area_total_m2": null,
+     "status": "SECTION_NOT_SCHEDULED_FOR_STOREY"
+    },
+    {
+     "type": "C1",
+     "count": 1,
+     "B_cm": 20.0,
+     "D_cm": 50.0,
+     "reinf": "6 Ø 16",
+     "plan_area_each_m2": 0.1,
+     "plan_area_total_m2": 0.1,
+     "status": "COMPUTED_SHADOW_COMPLETE"
+    },
+    {
+     "type": "C2",
+     "count": 4,
+     "B_cm": 20.0,
+     "D_cm": 50.0,
+     "reinf": "6 Ø 16",
+     "plan_area_each_m2": 0.1,
+     "plan_area_total_m2": 0.4,
+     "status": "COMPUTED_SHADOW_COMPLETE"
+    },
+    {
+     "type": "C3",
+     "count": 6,
+     "B_cm": 20.0,
+     "D_cm": 50.0,
+     "reinf": "6 Ø 16",
+     "plan_area_each_m2": 0.1,
+     "plan_area_total_m2": 0.6,
+     "status": "COMPUTED_SHADOW_COMPLETE"
+    },
+    {
+     "type": "C4",
+     "count": 2,
+     "B_cm": 20.0,
+     "D_cm": 50.0,
+     "reinf": "6 Ø 16",
+     "plan_area_each_m2": 0.1,
+     "plan_area_total_m2": 0.2,
+     "status": "COMPUTED_SHADOW_COMPLETE"
+    },
+    {
+     "type": "C5",
+     "count": 3,
+     "B_cm": 20.0,
+     "D_cm": 50.0,
+     "reinf": "6 Ø 16",
+     "plan_area_each_m2": 0.1,
+     "plan_area_total_m2": 0.3,
+     "status": "COMPUTED_SHADOW_COMPLETE"
+    },
+    {
+     "type": "C6",
+     "count": 1,
+     "B_cm": 20.0,
+     "D_cm": 50.0,
+     "reinf": "8 Ø 16",
+     "plan_area_each_m2": 0.1,
+     "plan_area_total_m2": 0.1,
+     "status": "COMPUTED_SHADOW_COMPLETE"
+    },
+    {
+     "type": "C7",
+     "count": 1,
+     "B_cm": 20.0,
+     "D_cm": 60.0,
+     "reinf": "8 Ø 16",
+     "plan_area_each_m2": 0.12,
+     "plan_area_total_m2": 0.12,
+     "status": "COMPUTED_SHADOW_COMPLETE"
+    },
+    {
+     "type": "C8",
+     "count": 2,
+     "B_cm": 20.0,
+     "D_cm": 70.0,
+     "reinf": "10 Ø 16",
+     "plan_area_each_m2": 0.14,
+     "plan_area_total_m2": 0.28,
+     "status": "COMPUTED_SHADOW_COMPLETE"
+    },
+    {
+     "type": "C9",
+     "count": 2,
+     "B_cm": 20.0,
+     "D_cm": 70.0,
+     "reinf": "10 Ø 16",
+     "plan_area_each_m2": 0.14,
+     "plan_area_total_m2": 0.28,
+     "status": "COMPUTED_SHADOW_COMPLETE"
+    },
+    {
+     "type": "C10",
+     "count": 1,
+     "B_cm": null,
+     "D_cm": null,
+     "reinf": null,
+     "plan_area_each_m2": null,
+     "plan_area_total_m2": null,
+     "status": "SECTION_NOT_SCHEDULED_FOR_STOREY"
+    },
+    {
+     "type": "C11",
+     "count": 2,
+     "B_cm": null,
+     "D_cm": null,
+     "reinf": null,
+     "plan_area_each_m2": null,
+     "plan_area_total_m2": null,
+     "status": "SECTION_NOT_SCHEDULED_FOR_STOREY"
+    },
+    {
+     "type": "CN",
+     "count": 5,
+     "B_cm": null,
+     "D_cm": null,
+     "reinf": null,
+     "plan_area_each_m2": null,
+     "plan_area_total_m2": null,
+     "status": "SECTION_NOT_SCHEDULED_FOR_STOREY"
+    }
+   ],
+   "columns_with_section": 22,
+   "plan_area_m2": 2.38,
+   "corroboration": {
+    "drawn": {
+     "20x40": 1,
+     "20x50": 5,
+     "20x60": 1,
+     "20x70": 1,
+     "25x50": 1
+    },
+    "expected_from_marks": {
+     "20.0x50.0": 17,
+     "20.0x60.0": 1,
+     "20.0x70.0": 4
+    },
+    "drawn_count": 9,
+    "expected_count": 22,
+    "state": "DIFFERS"
+   }
+  }
+ },
+ "bands": [
+  "FOUNDATION",
+  "GROUND FLOOR",
+  "1ST FLOOR",
+  "2ND FLOOR & TOP"
+ ],
+ "printed_size_labels": {
+  "printed": {
+   "20x50": 3,
+   "25x100": 1,
+   "30x30": 5,
+   "30x50": 15,
+   "30x60": 3,
+   "30x70": 2,
+   "30x80": 2,
+   "30x90": 1,
+   "30x100": 1,
+   "30x110": 2
+  },
+  "printed_count": 35,
+  "by_band": {
+   "FOUNDATION": {
+    "deviation_count": 5,
+    "differences": {
+     "20x50": 3,
+     "25x100": 1,
+     "30x50": -3,
+     "30x80": 1,
+     "30x90": -1,
+     "30x100": -1
+    }
+   },
+   "GROUND FLOOR": {
+    "deviation_count": 31,
+    "differences": {
+     "20x50": -7,
+     "25.0x50.0": -8,
+     "25.0x60.0": -3,
+     "25.0x70.0": -2,
+     "25.0x80.0": -1,
+     "25.0x90.0": -2,
+     "25x100": -1,
+     "25.0x110.0": -2,
+     "30x30": 5,
+     "30x50": 15,
+     "30x60": 3,
+     "30x70": 2,
+     "30x80": 2,
+     "30x90": 1,
+     "30x100": 1,
+     "30x110": 2
+    }
+   },
+   "1ST FLOOR": {
+    "deviation_count": 32,
+    "differences": {
+     "20x50": -13,
+     "20.0x60.0": -1,
+     "20.0x80.0": -1,
+     "20.0x90.0": -4,
+     "25x100": 1,
+     "30x30": 5,
+     "30x50": 15,
+     "30x60": 3,
+     "30x70": 2,
+     "30x80": 2,
+     "30x90": 1,
+     "30x100": 1,
+     "30x110": 2
+    }
+   },
+   "2ND FLOOR & TOP": {
+    "deviation_count": 32,
+    "differences": {
+     "20x50": -14,
+     "20.0x60.0": -1,
+     "20.0x70.0": -4,
+     "25x100": 1,
+     "30x30": 5,
+     "30x50": 15,
+     "30x60": 3,
+     "30x70": 2,
+     "30x80": 2,
+     "30x90": 1,
+     "30x100": 1,
+     "30x110": 2
+    }
+   }
+  },
+  "closest_band": "FOUNDATION",
+  "use": "aggregate check only: a printed size overrides nothing unless bound to one occurrence"
+ },
+ "library": {
+  "C": {
+   "FOUNDATION": {
+    "B_cm": 30.0,
+    "D_cm": 50.0,
+    "reinf": "8 Ø 16"
+   },
+   "GROUND FLOOR": {
+    "B_cm": 20.0,
+    "D_cm": 50.0,
+    "reinf": "8 Ø 16"
+   },
+   "1ST FLOOR": {
+    "B_cm": null,
+    "D_cm": null,
+    "reinf": null
+   },
+   "2ND FLOOR & TOP": {
+    "B_cm": null,
+    "D_cm": null,
+    "reinf": null
+   }
+  },
+  "C1": {
+   "FOUNDATION": {
+    "B_cm": 30.0,
+    "D_cm": 50.0,
+    "reinf": "8 Ø 16"
+   },
+   "GROUND FLOOR": {
+    "B_cm": 20.0,
+    "D_cm": 50.0,
+    "reinf": "8 Ø 16"
+   },
+   "1ST FLOOR": {
+    "B_cm": 20.0,
+    "D_cm": 50.0,
+    "reinf": "6 Ø 16"
+   },
+   "2ND FLOOR & TOP": {
+    "B_cm": 20.0,
+    "D_cm": 50.0,
+    "reinf": "6 Ø 16"
+   }
+  },
+  "C2": {
+   "FOUNDATION": {
+    "B_cm": 30.0,
+    "D_cm": 50.0,
+    "reinf": "8 Ø 16"
+   },
+   "GROUND FLOOR": {
+    "B_cm": 20.0,
+    "D_cm": 50.0,
+    "reinf": "8 Ø 16"
+   },
+   "1ST FLOOR": {
+    "B_cm": 20.0,
+    "D_cm": 50.0,
+    "reinf": "8 Ø 16"
+   },
+   "2ND FLOOR & TOP": {
+    "B_cm": 20.0,
+    "D_cm": 50.0,
+    "reinf": "6 Ø 16"
+   }
+  },
+  "C3": {
+   "FOUNDATION": {
+    "B_cm": 30.0,
+    "D_cm": 50.0,
+    "reinf": "8 Ø 16"
+   },
+   "GROUND FLOOR": {
+    "B_cm": 25.0,
+    "D_cm": 50.0,
+    "reinf": "8 Ø 16"
+   },
+   "1ST FLOOR": {
+    "B_cm": 20.0,
+    "D_cm": 50.0,
+    "reinf": "6 Ø 16"
+   },
+   "2ND FLOOR & TOP": {
+    "B_cm": 20.0,
+    "D_cm": 50.0,
+    "reinf": "6 Ø 16"
+   }
+  },
+  "C4": {
+   "FOUNDATION": {
+    "B_cm": 30.0,
+    "D_cm": 50.0,
+    "reinf": "8 Ø 16"
+   },
+   "GROUND FLOOR": {
+    "B_cm": 25.0,
+    "D_cm": 50.0,
+    "reinf": "8 Ø 16"
+   },
+   "1ST FLOOR": {
+    "B_cm": 20.0,
+    "D_cm": 50.0,
+    "reinf": "8 Ø 16"
+   },
+   "2ND FLOOR & TOP": {
+    "B_cm": 20.0,
+    "D_cm": 50.0,
+    "reinf": "6 Ø 16"
+   }
+  },
+  "C5": {
+   "FOUNDATION": {
+    "B_cm": 30.0,
+    "D_cm": 60.0,
+    "reinf": "10 Ø 16"
+   },
+   "GROUND FLOOR": {
+    "B_cm": 25.0,
+    "D_cm": 60.0,
+    "reinf": "10 Ø 16"
+   },
+   "1ST FLOOR": {
+    "B_cm": 20.0,
+    "D_cm": 50.0,
+    "reinf": "8 Ø 16"
+   },
+   "2ND FLOOR & TOP": {
+    "B_cm": 20.0,
+    "D_cm": 50.0,
+    "reinf": "6 Ø 16"
+   }
+  },
+  "C6": {
+   "FOUNDATION": {
+    "B_cm": 30.0,
+    "D_cm": 70.0,
+    "reinf": "10 Ø 16"
+   },
+   "GROUND FLOOR": {
+    "B_cm": 25.0,
+    "D_cm": 70.0,
+    "reinf": "10 Ø 16"
+   },
+   "1ST FLOOR": {
+    "B_cm": 20.0,
+    "D_cm": 60.0,
+    "reinf": "8 Ø 16"
+   },
+   "2ND FLOOR & TOP": {
+    "B_cm": 20.0,
+    "D_cm": 50.0,
+    "reinf": "8 Ø 16"
+   }
+  },
+  "C7": {
+   "FOUNDATION": {
+    "B_cm": 30.0,
+    "D_cm": 80.0,
+    "reinf": "12 Ø 16"
+   },
+   "GROUND FLOOR": {
+    "B_cm": 25.0,
+    "D_cm": 80.0,
+    "reinf": "12 Ø 16"
+   },
+   "1ST FLOOR": {
+    "B_cm": 20.0,
+    "D_cm": 80.0,
+    "reinf": "10 Ø 16"
+   },
+   "2ND FLOOR & TOP": {
+    "B_cm": 20.0,
+    "D_cm": 60.0,
+    "reinf": "8 Ø 16"
+   }
+  },
+  "C8": {
+   "FOUNDATION": {
+    "B_cm": 30.0,
+    "D_cm": 90.0,
+    "reinf": "12 Ø 16"
+   },
+   "GROUND FLOOR": {
+    "B_cm": 25.0,
+    "D_cm": 90.0,
+    "reinf": "12 Ø 16"
+   },
+   "1ST FLOOR": {
+    "B_cm": 20.0,
+    "D_cm": 90.0,
+    "reinf": "12 Ø 16"
+   },
+   "2ND FLOOR & TOP": {
+    "B_cm": 20.0,
+    "D_cm": 70.0,
+    "reinf": "10 Ø 16"
+   }
+  },
+  "C9": {
+   "FOUNDATION": {
+    "B_cm": 30.0,
+    "D_cm": 100.0,
+    "reinf": "14 Ø 16"
+   },
+   "GROUND FLOOR": {
+    "B_cm": 25.0,
+    "D_cm": 100.0,
+    "reinf": "14 Ø 16"
+   },
+   "1ST FLOOR": {
+    "B_cm": 20.0,
+    "D_cm": 90.0,
+    "reinf": "12 Ø 16"
+   },
+   "2ND FLOOR & TOP": {
+    "B_cm": 20.0,
+    "D_cm": 70.0,
+    "reinf": "10 Ø 16"
+   }
+  },
+  "C10": {
+   "FOUNDATION": {
+    "B_cm": 30.0,
+    "D_cm": 70.0,
+    "reinf": "10 Ø 16"
+   },
+   "GROUND FLOOR": {
+    "B_cm": 25.0,
+    "D_cm": 70.0,
+    "reinf": "10 Ø 16"
+   },
+   "1ST FLOOR": {
+    "B_cm": null,
+    "D_cm": null,
+    "reinf": null
+   },
+   "2ND FLOOR & TOP": {
+    "B_cm": null,
+    "D_cm": null,
+    "reinf": null
+   }
+  },
+  "C11": {
+   "FOUNDATION": {
+    "B_cm": 30.0,
+    "D_cm": 110.0,
+    "reinf": "14 Ø 16"
+   },
+   "GROUND FLOOR": {
+    "B_cm": 25.0,
+    "D_cm": 110.0,
+    "reinf": "14 Ø 16"
+   },
+   "1ST FLOOR": {
+    "B_cm": null,
+    "D_cm": null,
+    "reinf": null
+   },
+   "2ND FLOOR & TOP": {
+    "B_cm": null,
+    "D_cm": null,
+    "reinf": null
+   }
+  },
+  "CN": {
+   "FOUNDATION": {
+    "B_cm": 30.0,
+    "D_cm": 30.0,
+    "reinf": "4 Ø 14"
+   },
+   "GROUND FLOOR": {
+    "B_cm": null,
+    "D_cm": null,
+    "reinf": null
+   },
+   "1ST FLOOR": {
+    "B_cm": null,
+    "D_cm": null,
+    "reinf": null
+   },
+   "2ND FLOOR & TOP": {
+    "B_cm": null,
+    "D_cm": null,
+    "reinf": null
+   }
+  }
+ },
+ "height": "BLOCKED_HEIGHT: no structural level, slab-soffit or joint level is given in the structural source; architectural floor-to-floor is NOT a column concrete height",
+ "schedule_state": "ITEMS_UNPLACED",
+ "sheet_for_band": {
+  "FOUNDATION": "COLUMN_AXIS",
+  "GROUND FLOOR": "GF_ROOF_SLAB",
+  "1ST FLOOR": "1F_ROOF_SLAB",
+  "2ND FLOOR & TOP": "2F_ROOF_SLAB"
+ }
+}

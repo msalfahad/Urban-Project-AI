@@ -1,0 +1,70 @@
+{
+ "class_counts_chris": {
+  "COVER_CONVENTION": 40,
+  "MISSING_COMPONENT": 12,
+  "SAME": 39,
+  "SOURCE_CONFLICT": 2
+ },
+ "class_counts_old_urban": {
+  "ASSUMED_COMPONENT": 2,
+  "MISSING_COMPONENT": 9,
+  "SAME": 78,
+  "SCOPE_DIFFERENCE": 1,
+  "SOURCE_CONFLICT": 3
+ },
+ "freeze_manifest_verified": true,
+ "frozen_engine_stamp": "e3633af+code:0d11810b780ae8f8",
+ "references": {
+  "christiannp": {
+   "file": "CHRISTIANNP_FORENSIC_RERUN_2026_10_07/13_rebar/REBAR_EVIDENCE.csv",
+   "sha256": "5a56ed585b03f86490c28f15481f8697a662b8fe43838b475f74bdc9d6386ae6"
+  },
+  "freelancer_lineage_sha256": "8e525d73f2b2240c7f8bee196e95f4998f3c7f4459f29841bffffccc154b8ffa",
+  "old_urban": {
+   "R3": "1e6160f6bdd294eebf9bea89b75e8ae66f5c9289e88e5792035053c233328afd",
+   "R4": "c1dafb557c612c4ac3062ed2c988afa6bfa2b03bef6cb4a630911593f64bc752"
+  },
+  "oracles_sha256": "b0c378224eb44a30703da67eea318956be188048b90c50f5b5bca7fe9251f304"
+ },
+ "rule": "comparison only; S4 is not tuned. A correction needs a new issue, new source evidence, a new regression and a new version.",
+ "totals": {
+  "CHRIS_DECOMPOSITION_KG": {
+   "count_convention": 57.42370370370365,
+   "cover_convention": 176.3930795925926,
+   "residual_rounding": -0.006296296294749482
+  },
+  "CHRIS_FOOTING_KG": 3863.410000000001,
+  "CHRIS_MINUS_S4": 233.8104870000011,
+  "FREELANCER_CLASS": "SCOPE_DIFFERENCE + INCOMPLETE_REFERENCE (one hard-typed lump for footings + straps + perimeter beam; no component or diameter split) - no difference or percentage reported",
+  "FREELANCER_FOUNDATIONS_STEEL_T": 5.8,
+  "FREELANCER_SCOPE": [
+   "all footings (per-type counts)",
+   "STRAP_BEAM STB1",
+   "STRAP_BEAM STB2",
+   "STRAP_BEAM STB3",
+   "PERIMETER_GROUND_BEAM \u0627\u0644\u0634\u0646\u0627\u062c \u0627\u0644\u0645\u062d\u064a\u0637"
+  ],
+  "OLD_URBAN_R3_PROVISIONAL_KG": 149.451357,
+  "OLD_URBAN_R3_PROVISIONAL_SPLIT_KG": {
+   "edge_bar_convention": 93.893826,
+   "perimeter_closure_legs": 55.557531
+  },
+  "OLD_URBAN_R3_VERIFIED_KG": 3629.5995129999997,
+  "OLD_URBAN_R4_FOOTING_POPULATIONS": {
+   "audit_kg": 72.093827,
+   "lower_bound_kg": 3603.4306149999998,
+   "provisional_kg": 191.48592700000003,
+   "verified_complete_kg": 48.924444
+  },
+  "S4_BEST_MINUS_KNOWN_KG": 93.89382033333322,
+  "S4_KNOWN_KG": 3629.599513,
+  "S4_REMEASURED_WITH_CHRIS_CONVENTIONS_KG": 3863.416296296296,
+  "UC4N": {
+   "answer": "INCOMPLETE",
+   "net_rebar_t": 22.619,
+   "oracle": "UC4N",
+   "state": "KNOWN_INCOMPLETE"
+  },
+  "UC4N_CLASS": "INCOMPLETE_REFERENCE (project net rebar only, KNOWN_INCOMPLETE; no footing split)"
+ }
+}

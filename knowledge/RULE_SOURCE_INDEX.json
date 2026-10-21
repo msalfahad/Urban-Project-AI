@@ -1,0 +1,1135 @@
+{
+ "counts": {
+  "data/registry/OWNER_FINISH_FACTS.json": 3,
+  "data/registry/OWNER_METHOD_FACTS.json": 12,
+  "data/registry/OWNER_PHYSICAL_FACTS.json": 6,
+  "data/registry/OWNER_RULE_REQUESTS.json": 10,
+  "data/registry/URBAN_OWNER_METHOD_RULES.json": 7,
+  "data/registry/{P}_PROJECT_RULES.json": 3,
+  "engine/profiles/URBAN_M*_GENERIC_CONVENTIONS_V*.json": 8,
+  "engine/source/arch_rooms.py LEXICON": 1,
+  "engine/source/door_model.py": 1,
+  "research/*/ (phase reports)": 21,
+  "rules/methods/URBAN_METHOD_REGISTER_V1.json": 9,
+  "rules/methods/URBAN_METHOD_REGISTER_V3.json": 8,
+  "rules/owner_decisions/URBAN_RULES_1.5.0.json": 10,
+  "rules/owner_library/URBAN_PROJECTS_RULE_LIBRARY_1.4.0.json": 44
+ },
+ "generated_by": "tools/kb_index.py",
+ "question_crosswalk": [
+  {
+   "answered_by": "UP-THR-001",
+   "category_now": "A_ESTABLISHED",
+   "earlier_ids": "Q-S6-1 / O4 / OD-8",
+   "topic": "doorway strip finish"
+  },
+  {
+   "answered_by": "UP-FIN-WALL-001",
+   "category_now": "A_ESTABLISHED",
+   "earlier_ids": "Q7 / O5 / S6R-B4 / OD-9",
+   "topic": "wet-room wall tile height and the band above it"
+  },
+  {
+   "answered_by": "UP-WET-001",
+   "category_now": "A_ESTABLISHED",
+   "earlier_ids": "ORR-008",
+   "topic": "which rooms are wet and take full wall ceramic"
+  },
+  {
+   "answered_by": "UP-FIN-WALL-001 (full height = clear height)",
+   "category_now": "A_ESTABLISHED",
+   "earlier_ids": "ORR-005",
+   "topic": "pantry wall tile height"
+  },
+  {
+   "answered_by": "UP-WET-001",
+   "category_now": "A_ESTABLISHED",
+   "earlier_ids": "SE-07 / OD-12",
+   "topic": "kitchen waterproofing"
+  },
+  {
+   "answered_by": "URBAN-REVEAL-FINISH-METHOD (plaster default) + UP-FIN-PLASTER-001",
+   "category_now": "A_ESTABLISHED",
+   "earlier_ids": "SE-01 .. SE-03 / OD-11 (finish part)",
+   "topic": "reveal finish"
+  },
+  {
+   "answered_by": "window schedule / frame position",
+   "category_now": "B_MISSING_DRAWING_EVIDENCE",
+   "earlier_ids": "SE-01 .. SE-03 / OD-11 (depth part)",
+   "topic": "reveal depth"
+  },
+  {
+   "answered_by": "UP-DOOR-HGT-001 (ASSUMED fallback)",
+   "category_now": "A_ESTABLISHED",
+   "earlier_ids": "DR-07",
+   "topic": "door heights"
+  },
+  {
+   "answered_by": "UP-DOOR-CLS-004",
+   "category_now": "B_MISSING_DRAWING_EVIDENCE",
+   "earlier_ids": "DR-01 / OD-5",
+   "topic": "main entrance"
+  },
+  {
+   "answered_by": "UP-DOOR-OPEN-002 (schedule)",
+   "category_now": "B_MISSING_DRAWING_EVIDENCE",
+   "earlier_ids": "DR-02 / OD-2",
+   "topic": "0.9 m / 1.0 m door width"
+  },
+  {
+   "answered_by": "UP-SPACE-001 / UP-SPACE-002 (project decision binding)",
+   "category_now": "B_MISSING_DRAWING_EVIDENCE",
+   "earlier_ids": "DR-03 / OD-3",
+   "topic": "small unlabelled space next to the kitchen"
+  },
+  {
+   "answered_by": "UP-DOOR-CLS-001 (schedule)",
+   "category_now": "B_MISSING_DRAWING_EVIDENCE",
+   "earlier_ids": "DR-05 / OD-13",
+   "topic": "provisional doors"
+  },
+  {
+   "answered_by": "UP-DOOR-CLS-005",
+   "category_now": "B_MISSING_DRAWING_EVIDENCE",
+   "earlier_ids": "DR-06 / OD-4",
+   "topic": "lift candidates"
+  },
+  {
+   "answered_by": "UP-SKIRT-001 (window schedule)",
+   "category_now": "B_MISSING_DRAWING_EVIDENCE",
+   "earlier_ids": "BA-11 / BA-12 / OD-1",
+   "topic": "sill window or floor-level glazing"
+  },
+  {
+   "answered_by": "URBAN-WALL-FINISH-HEIGHT-METHOD",
+   "category_now": "B_MISSING_DRAWING_EVIDENCE",
+   "earlier_ids": "OD-6 / O8",
+   "topic": "heights for Mode A"
+  },
+  {
+   "answered_by": "UP-GEN-003 (door closure / glazing positions)",
+   "category_now": "B_MISSING_DRAWING_EVIDENCE",
+   "earlier_ids": "OD-7 / F-26",
+   "topic": "deduction of openings that close a face without a gap"
+  },
+  {
+   "answered_by": "OQ-03",
+   "category_now": "D_MISSING_OWNER_POLICY",
+   "earlier_ids": "Q-S6-4 / O6 / OD-10",
+   "topic": "stair-hall finishes"
+  },
+  {
+   "answered_by": "OQ-04",
+   "category_now": "D_MISSING_OWNER_POLICY",
+   "earlier_ids": "Q1 / O7",
+   "topic": "exterior scope"
+  },
+  {
+   "answered_by": "UP-STAIR-010 / UP-STAIR-011",
+   "category_now": "A_ESTABLISHED",
+   "earlier_ids": "ORR-007",
+   "topic": "stair skirting along the zigzag or the rake"
+  },
+  {
+   "answered_by": "UP-ELEV-005",
+   "category_now": "A_ESTABLISHED",
+   "earlier_ids": "ORR-000",
+   "topic": "elevator threshold depth"
+  },
+  {
+   "answered_by": "UP-DOOR-CLS-001 / -002 / -005",
+   "category_now": "A_ESTABLISHED",
+   "earlier_ids": "door classes (re-stated 2026-10-14)",
+   "topic": "internal PVC / external aluminium / lift excluded"
+  }
+ ],
+ "registry": "knowledge/URBAN_ENGINEERING_KNOWLEDGE_1.0.0.json",
+ "schema": "URBAN_RULE_SOURCE_INDEX_V1",
+ "sources": [
+  {
+   "kind": "OWNER_RULE_LIBRARY",
+   "read_by": [
+    "engine/source/rule_store.py (M9 V1 .. V2.3)"
+   ],
+   "records": [
+    {
+     "id": "UP-PANTRY-001",
+     "scope": "PANTRY",
+     "status": "OWNER_APPROVED",
+     "title": "An American pantry is a functional zone, never forced into a closed room",
+     "trade": "ARCHITECTURAL_FINISHES",
+     "version": "1.0.0"
+    },
+    {
+     "id": "UP-PANTRY-002",
+     "scope": "PANTRY",
+     "status": "OWNER_APPROVED",
+     "title": "An open edge tiles nothing",
+     "trade": "WALL_TILE",
+     "version": "1.0.0"
+    },
+    {
+     "id": "UP-PANTRY-003",
+     "scope": "PANTRY",
+     "status": "OWNER_APPROVED",
+     "title": "An American pantry receives full-wall tile on its applicable walls",
+     "trade": "WALL_TILE",
+     "version": "1.0.0"
+    },
+    {
+     "id": "UP-PANTRY-004",
+     "scope": "PANTRY",
+     "status": "OWNER_APPROVED",
+     "title": "Wall tile height is never assumed",
+     "trade": "WALL_TILE",
+     "version": "1.0.0"
+    },
+    {
+     "id": "UP-STAIR-001",
+     "scope": "STAIR",
+     "status": "OWNER_APPROVED",
+     "title": "Kuwait villa and chalet stairs are marble unless the project says otherwise",
+     "trade": "MARBLE",
+     "version": "1.0.0"
+    },
+    {
+     "id": "UP-STAIR-002",
+     "scope": "STAIR",
+     "status": "OWNER_APPROVED",
+     "title": "Stair geometry comes from the drawing, never from typical values",
+     "trade": "MARBLE",
+     "version": "1.0.0"
+    },
+    {
+     "id": "UP-STAIR-003",
+     "scope": "STAIR",
+     "status": "OWNER_APPROVED",
+     "title": "The visible marble riser is the step rise less the tread build-up",
+     "trade": "MARBLE",
+     "version": "1.0.0"
+    },
+    {
+     "id": "UP-STAIR-004",
+     "scope": "STAIR",
+     "status": "OWNER_APPROVED",
+     "title": "Stair units stay apart, and a measurement basis is not a pricing basis",
+     "trade": "MARBLE",
+     "version": "1.0.0"
+    },
+    {
+     "id": "UP-STAIR-005",
+     "scope": "STAIR",
+     "status": "OWNER_APPROVED",
+     "title": "A stair landing is marble, and is never also porcelain floor",
+     "trade": "MARBLE",
+     "version": "1.0.0"
+    },
+    {
+     "id": "UP-ELEV-001",
+     "scope": "ELEVATOR",
+     "status": "OWNER_APPROVED",
+     "title": "Every elevator landing station is a separate measurable occurrence",
+     "trade": "MARBLE",
+     "version": "1.0.0"
+    },
+    {
+     "id": "UP-ELEV-002",
+     "scope": "ELEVATOR",
+     "status": "OWNER_APPROVED",
+     "title": "Marble surrounds the outer landing door on three sides, 0.50 m by default",
+     "trade": "MARBLE",
+     "version": "1.0.0"
+    },
+    {
+     "id": "UP-ELEV-003",
+     "scope": "ELEVATOR",
+     "status": "OWNER_APPROVED",
+     "title": "The elevator surround is an area, and its polygon is built before it is measured",
+     "trade": "MARBLE",
+     "version": "1.0.0"
+    },
+    {
+     "id": "UP-ELEV-004",
+     "scope": "ELEVATOR",
+     "status": "OWNER_APPROVED",
+     "title": "A typical station may stand for many only once equivalence is verified",
+     "trade": "MARBLE",
+     "version": "1.0.0"
+    },
+    {
+     "id": "UP-ELEV-005",
+     "scope": "ELEVATOR",
+     "status": "OWNER_APPROVED",
+     "title": "The elevator threshold is marble, measured separately, with a fallback size",
+     "trade": "MARBLE",
+     "version": "1.1.0"
+    },
+    {
+     "id": "UP-STAIR-006",
+     "scope": "STAIR",
+     "status": "OWNER_APPROVED",
+     "title": "Stair tread marble is 30 mm thick",
+     "trade": "MARBLE",
+     "version": "1.0.0"
+    },
+    {
+     "id": "UP-STAIR-007",
+     "scope": "STAIR",
+     "status": "OWNER_APPROVED",
+     "title": "Stair landing marble is 20 mm thick",
+     "trade": "MARBLE",
+     "version": "1.0.0"
+    },
+    {
+     "id": "UP-STAIR-008",
+     "scope": "STAIR",
+     "status": "OWNER_APPROVED",
+     "title": "Marble steps are commercially measured by linear metre of step width",
+     "trade": "MARBLE",
+     "version": "1.0.0"
+    },
+    {
+     "id": "UP-VOCAB-001",
+     "scope": "STAIR",
+     "status": "OWNER_APPROVED",
+     "title": "نايم is the stair tread",
+     "trade": "MARBLE",
+     "version": "1.0.0"
+    },
+    {
+     "id": "UP-VOCAB-002",
+     "scope": "STAIR",
+     "status": "OWNER_APPROVED",
+     "title": "قائم is the stair riser",
+     "trade": "MARBLE",
+     "version": "1.0.0"
+    },
+    {
+     "id": "UP-VOCAB-003",
+     "scope": "STAIR",
+     "status": "OWNER_APPROVED",
+     "title": "استراحة is the stair landing",
+     "trade": "MARBLE",
+     "version": "1.0.0"
+    },
+    {
+     "id": "UP-VOCAB-004",
+     "scope": "STAIR",
+     "status": "OWNER_APPROVED",
+     "title": "وزرة or نعلة الدرج is the stair skirting",
+     "trade": "MARBLE",
+     "version": "1.1.0"
+    },
+    {
+     "id": "UP-STAIR-009",
+     "scope": "STAIR",
+     "status": "OWNER_APPROVED",
+     "title": "A typical finished rise is a sanity range, never a measurement",
+     "trade": "MARBLE",
+     "version": "1.0.0"
+    },
+    {
+     "id": "UP-GEN-001",
+     "scope": "ALL",
+     "status": "OWNER_APPROVED",
+     "title": "Geometry and commercial pricing are separate",
+     "trade": "ALL",
+     "version": "1.0.0"
+    },
+    {
+     "id": "UP-GEN-002",
+     "scope": "ALL",
+     "status": "OWNER_APPROVED",
+     "title": "Four quantities, and they are never one number",
+     "trade": "ALL",
+     "version": "1.0.0"
+    },
+    {
+     "id": "UP-GEN-003",
+     "scope": "ALL",
+     "status": "OWNER_APPROVED",
+     "title": "Openings are deducted where applicable",
+     "trade": "ALL",
+     "version": "1.0.0"
+    },
+    {
+     "id": "UP-GEN-004",
+     "scope": "ALL",
+     "status": "OWNER_APPROVED",
+     "title": "A contractor rule never alters physical geometry",
+     "trade": "ALL",
+     "version": "1.0.0"
+    },
+    {
+     "id": "UP-CER-001",
+     "scope": "FLOOR",
+     "status": "OWNER_APPROVED",
+     "title": "Dry floor ceramic is measured in square metres",
+     "trade": "CERAMIC",
+     "version": "1.0.0"
+    },
+    {
+     "id": "UP-CER-002",
+     "scope": "SKIRTING",
+     "status": "OWNER_APPROVED",
+     "title": "Normal dry skirting (نعلة) is measured in linear metres",
+     "trade": "CERAMIC",
+     "version": "1.0.0"
+    },
+    {
+     "id": "UP-CER-003",
+     "scope": "SKIRTING",
+     "status": "OWNER_APPROVED",
+     "title": "Door openings are deducted from skirting",
+     "trade": "CERAMIC",
+     "version": "1.0.0"
+    },
+    {
+     "id": "UP-CER-004",
+     "scope": "SKIRTING",
+     "status": "OWNER_APPROVED",
+     "title": "A wet room with full wall ceramic receives no normal floor skirting",
+     "trade": "CERAMIC",
+     "version": "1.0.0"
+    },
+    {
+     "id": "UP-CER-005",
+     "scope": "WALL",
+     "status": "OWNER_APPROVED",
+     "title": "Wall ceramic is the eligible wall area less openings",
+     "trade": "CERAMIC",
+     "version": "1.0.0"
+    },
+    {
+     "id": "UP-CER-006",
+     "scope": "EDGE",
+     "status": "OWNER_APPROVED",
+     "title": "A 45-degree ceramic edge is the exposed edge in lm",
+     "trade": "CERAMIC",
+     "version": "1.0.0"
+    },
+    {
+     "id": "UP-CER-007",
+     "scope": "EDGE",
+     "status": "OWNER_APPROVED",
+     "title": "A steel edge profile is a separate alternative to the 45-degree edge",
+     "trade": "CERAMIC",
+     "version": "1.0.0"
+    },
+    {
+     "id": "UP-CER-008",
+     "scope": "FLOOR",
+     "status": "OWNER_APPROVED",
+     "title": "A floor drain (صفاية) is counted, not measured",
+     "trade": "CERAMIC",
+     "version": "1.0.0"
+    },
+    {
+     "id": "UP-VOCAB-005",
+     "scope": "STAIR",
+     "status": "OWNER_APPROVED",
+     "title": "توشيح / تواشيح is the stair skirting",
+     "trade": "MARBLE",
+     "version": "1.0.0"
+    },
+    {
+     "id": "UP-STAIR-010",
+     "scope": "STAIR",
+     "status": "OWNER_APPROVED",
+     "title": "A zigzag توشيح is measured along its zigzag",
+     "trade": "MARBLE",
+     "version": "1.0.0"
+    },
+    {
+     "id": "UP-STAIR-011",
+     "scope": "STAIR",
+     "status": "OWNER_APPROVED",
+     "title": "A sloped توشيح is measured along its slope",
+     "trade": "MARBLE",
+     "version": "1.0.0"
+    },
+    {
+     "id": "UP-STAIR-012",
+     "scope": "RAILING",
+     "status": "OWNER_APPROVED",
+     "title": "A railing follows the open edge and nothing else",
+     "trade": "STAIR",
+     "version": "1.0.0"
+    },
+    {
+     "id": "UP-WP-001",
+     "scope": "FLOOR",
+     "status": "OWNER_APPROVED",
+     "title": "Wet-room floor waterproofing is measured in m2",
+     "trade": "WATERPROOFING",
+     "version": "1.0.0"
+    },
+    {
+     "id": "UP-WP-002",
+     "scope": "WALL",
+     "status": "OWNER_APPROVED",
+     "title": "The waterproofing wall upturn is 0.15 m",
+     "trade": "WATERPROOFING",
+     "version": "1.0.0"
+    },
+    {
+     "id": "UP-WP-003",
+     "scope": "FLOOR",
+     "status": "OWNER_APPROVED",
+     "title": "The membrane continues through the doorway",
+     "trade": "WATERPROOFING",
+     "version": "1.0.0"
+    },
+    {
+     "id": "UP-WP-004",
+     "scope": "SHOWER",
+     "status": "OWNER_APPROVED",
+     "title": "A shower takes the same floor and upturn rule",
+     "trade": "WATERPROOFING",
+     "version": "1.0.0"
+    },
+    {
+     "id": "UP-QA-001",
+     "scope": "QUALITY_ASSURANCE",
+     "status": "OWNER_APPROVED",
+     "title": "A benchmark may not anchor a geometry interpretation",
+     "trade": "ALL",
+     "version": "1.0.0"
+    },
+    {
+     "id": "UP-QA-002",
+     "scope": "QUALITY_ASSURANCE",
+     "status": "OWNER_APPROVED",
+     "title": "A blind visual pass receives the drawing and nothing that carries the answer",
+     "trade": "ALL",
+     "version": "1.0.0"
+    }
+   ],
+   "source": "rules/owner_library/URBAN_PROJECTS_RULE_LIBRARY_1.4.0.json"
+  },
+  {
+   "kind": "OWNER_DECISION_OVERLAY",
+   "read_by": [
+    "engine/source/rule_store.py (M9 V1 .. V2.3)"
+   ],
+   "records": [
+    {
+     "id": "UP-STAIR-012",
+     "status": "OWNER_APPROVED",
+     "supersedes": "UP-STAIR-012@1.0.0",
+     "title": "An open-edge guardrail is measured along its actual installed sloping path",
+     "version": "2.0.0"
+    },
+    {
+     "id": "UP-STAIR-013",
+     "status": "OWNER_APPROVED",
+     "supersedes": null,
+     "title": "A wall-mounted handrail is measured only where shown, specified or owner-confirmed",
+     "version": "1.0.0"
+    },
+    {
+     "id": "UP-WP-002",
+     "status": "OWNER_APPROVED",
+     "supersedes": "UP-WP-002@1.0.0",
+     "title": "The wet-room membrane turns up 0.20 m around the whole boundary, doorway included",
+     "version": "2.0.0"
+    },
+    {
+     "id": "UP-WP-003",
+     "status": "OWNER_APPROVED",
+     "supersedes": "UP-WP-003@1.0.0",
+     "title": "The floor membrane continues through the doorway; the doorway floor piece and the doorway upturn are never counted twice",
+     "version": "1.1.0"
+    },
+    {
+     "id": "UP-GEN-003",
+     "status": "OWNER_APPROVED",
+     "supersedes": "UP-GEN-003@1.0.0",
+     "title": "Openings are deducted per trade from one table; the waterproofing upturn is not deducted",
+     "version": "1.1.0"
+    },
+    {
+     "id": "UP-CER-009",
+     "status": "OWNER_APPROVED",
+     "supersedes": null,
+     "title": "Wall ceramic / porcelain height is derived per face from the drawings, never a universal constant",
+     "version": "1.0.0"
+    },
+    {
+     "id": "UP-WP-005",
+     "status": "OWNER_APPROVED",
+     "supersedes": null,
+     "title": "Membrane material is calculated from the roll layout with a minimum 0.10 m overlap, never a flat waste rate",
+     "version": "1.0.0"
+    },
+    {
+     "id": "UP-CER-010",
+     "status": "OWNER_APPROVED",
+     "supersedes": null,
+     "title": "Tile cutting waste comes from the room's layout for the selected size; alternatives are recommendations only",
+     "version": "1.0.0"
+    },
+    {
+     "id": "UP-WP-004",
+     "status": "PROPOSED",
+     "supersedes": "UP-WP-004@1.0.0",
+     "title": "A shower takes the wet-room floor and the UP-WP-002 v2 upturn; higher tanking is separate",
+     "version": "1.1.0"
+    },
+    {
+     "id": "UP-STAIR-014",
+     "status": "PROPOSED",
+     "supersedes": null,
+     "title": "Railing posts, balusters and glass panels are measured only when defined",
+     "version": "1.0.0"
+    }
+   ],
+   "source": "rules/owner_decisions/URBAN_RULES_1.5.0.json"
+  },
+  {
+   "kind": "URBAN_METHOD_REGISTER",
+   "read_by": [
+    "engine/source/urban_methods*.py (earlier routes); not by the M9 arch route"
+   ],
+   "records": [
+    {
+     "id": "URBAN-BEAM-TYPE-FROM-SCHEDULE-LENGTH-FROM-PLAN@v1",
+     "title": "beam type from the bound plan tag, section from its own schedule namespace, length from the bound plan band (four bases stored apart)"
+    },
+    {
+     "id": "URBAN-COLUMN-HEIGHT-TO-CONTROLLING-MEMBER@v1",
+     "title": "column concrete height = structural storey interval - depth of the deepest member framing into THAT column (slab thickness when none); never a global depth"
+    },
+    {
+     "id": "URBAN-FLOOR-FINISH-BEFORE-CABINETRY-METHOD@v1",
+     "title": "the floor finish is laid before fixed cabinetry / wardrobes / joinery and continues under them"
+    },
+    {
+     "id": "URBAN-NON-OVERLAPPING-SLAB-BEAM-MODEL@v1",
+     "title": "slab = net plate x t; downstand = clear length x B x (D - t); joint = column area x (D_ctrl - t); gross beam view reported separately"
+    },
+    {
+     "id": "URBAN-PAINT-TO-FINISHED-CEILING@v1",
+     "title": "paint runs to the finished ceiling, taken as the controlling soffit minus a ceiling allowance unless a ceiling level is in the source; concealed plaster in dry "
+    },
+    {
+     "id": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1",
+     "title": "internal plaster covers the full masonry face to the structural termination, above a false ceiling included"
+    },
+    {
+     "id": "URBAN-ROOF-WATERPROOF-UPTURN-200@v1",
+     "title": "roof membrane upturn 0.20 m at every roof-region edge; wet-room upturn stays 0.15 m; laps are a separate procurement factor"
+    },
+    {
+     "id": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1",
+     "title": "wet / service rooms: visible wall tile to the finished ceiling"
+    },
+    {
+     "id": "URBAN_CURVED_ALUMINIUM_INNER_FACE_METHOD@v1",
+     "title": "curved aluminium / glazing is measured commercially on the inner (smallest-radius) arc; inner, centre, outer and chord are always published"
+    }
+   ],
+   "source": "rules/methods/URBAN_METHOD_REGISTER_V1.json"
+  },
+  {
+   "kind": "URBAN_METHOD_REGISTER",
+   "read_by": [
+    "engine/source/urban_methods*.py (earlier routes); not by the M9 arch route"
+   ],
+   "records": [
+    {
+     "id": "URBAN-CEILING-QUANTITY-WITHOUT-MATERIAL@v1",
+     "title": "physical / visible ceiling area is calculated independently; no ceiling is assumed gypsum unless a source / project fact / versioned ceiling-finish method autho"
+    },
+    {
+     "id": "URBAN-DRY-FLOOR-PORCELAIN-DEFAULT@v1",
+     "title": "dry internal floors: porcelain unless the project specification overrides"
+    },
+    {
+     "id": "URBAN-FINISH-EXTRAS-SEPARATE-ITEMS@v1",
+     "title": "gypsum / decor area (m2), cornice (lm), cove light / cove profile (lm), plaster corner beads / profiles (lm), spatter dash (m2), door reveals (m2), window revea"
+    },
+    {
+     "id": "URBAN-FINISH-QUANTITY-INDEPENDENT-OF-MATERIAL@v1",
+     "title": "a defensible measured geometry (floor, ceiling, wall face, skirting path ...) is released even when the finish material is not source-proven; MEASURED GEOMETRY "
+    },
+    {
+     "id": "URBAN-NO-SKIRTING-FULL-TILE-WET@v1",
+     "title": "no normal skirting in wet / service rooms with full-height wall tile"
+    },
+    {
+     "id": "URBAN-REBAR-NET-AND-PROCUREMENT@v1",
+     "title": "rebar weight = sum(count x length x kg/m) per bar set; NET_DESIGN_WEIGHT uses only bars the source / detail supports (cover and laps from the structural notes);"
+    },
+    {
+     "id": "URBAN-RESIDENTIAL-FLOOR-BUILDUP-FALLBACK@v1",
+     "title": "residential floor build-up (screed + finish) = 0.10 m when neither the source / detail nor a project owner fact establishes it; labelled URBAN_FALLBACK, never S"
+    },
+    {
+     "id": "URBAN-WET-FLOOR-TILED@v1",
+     "title": "wet / service room floors: tiled finish (tile type by specification)"
+    }
+   ],
+   "source": "rules/methods/URBAN_METHOD_REGISTER_V3.json"
+  },
+  {
+   "kind": "URBAN_OWNER_METHOD_RULES",
+   "read_by": [
+    "research/external_engine_lab (R8.x lab engines) and their tests; not by the M9 arch route before ARCH_TAKEOFF_V2.3"
+   ],
+   "records": [
+    {
+     "applies_to": "every Urban project unless a project specification explicitly overrides it",
+     "digest": "90eea2e22a9db4ca",
+     "id": "URBAN-WET-SERVICE-MARBLE-THRESHOLD",
+     "version": 1
+    },
+    {
+     "applies_to": "every Urban project unless a project specification explicitly overrides it",
+     "digest": "9e1a6490190e8ef5",
+     "id": "URBAN-SKIRTING-OPENING-METHOD",
+     "version": 1
+    },
+    {
+     "applies_to": "every Urban project",
+     "digest": "e46f03b0fe7c14cc",
+     "id": "URBAN-WALL-FINISH-HEIGHT-METHOD",
+     "version": 1
+    },
+    {
+     "applies_to": "every Urban project unless a project instruction states the reveal finish",
+     "digest": "85128f1aab829cbe",
+     "id": "URBAN-REVEAL-FINISH-METHOD",
+     "version": 1
+    },
+    {
+     "applies_to": "every Urban project unless a project specification states the column finish",
+     "digest": "c55e374fd0786c33",
+     "id": "URBAN-EXPOSED-COLUMN-FINISH-METHOD",
+     "version": 1
+    },
+    {
+     "applies_to": "every Urban project: exposed interior duct / boxed-out faces where the surrounding DRY room treatment applies",
+     "digest": "769aeee5efe08054",
+     "id": "URBAN-EXPOSED-INTERIOR-DUCT-FINISH-METHOD",
+     "version": 1
+    },
+    {
+     "applies_to": "every Urban project unless a project specification explicitly overrides it",
+     "digest": "6c4ba104530c6953",
+     "id": "URBAN-FLOOR-FINISH-BEFORE-CABINETRY-METHOD",
+     "version": 1
+    }
+   ],
+   "source": "data/registry/URBAN_OWNER_METHOD_RULES.json"
+  },
+  {
+   "kind": "OWNER_PROJECT_FACTS (one other project, revision-scoped)",
+   "read_by": [
+    "research/external_engine_lab only"
+   ],
+   "records": [
+    {
+     "digest": "cffa1e6b5a86a62f",
+     "kind": "THRESHOLD_ALLOCATION",
+     "pointer": "data/registry/OWNER_METHOD_FACTS.json#/facts/0",
+     "statement": "FLOOR FINISH CONTINUES THROUGH DOORWAYS FOR ALL ROOMS; there is no unmeasured threshold void",
+     "transfer": "FORBIDDEN (project / revision scoped)"
+    },
+    {
+     "digest": "73045d23756a88da",
+     "kind": "THRESHOLD_ALLOCATION",
+     "pointer": "data/registry/OWNER_METHOD_FACTS.json#/facts/1",
+     "statement": "DRY <-> BATHROOM / WET-SERVICE: the floor finish changes at the MIDDLE OF THE DOORWAY / DOOR PLANE",
+     "transfer": "FORBIDDEN (project / revision scoped)"
+    },
+    {
+     "digest": "fa0f686417ebb144",
+     "kind": "THRESHOLD_ALLOCATION",
+     "pointer": "data/registry/OWNER_METHOD_FACTS.json#/facts/2",
+     "statement": "a marble threshold / برطاش is installed for the door width only in SOME cases; it is OPTIONAL and never the {Q} default",
+     "transfer": "FORBIDDEN (project / revision scoped)"
+    },
+    {
+     "digest": "2f404bfb3bc4b2f7",
+     "kind": "OPENING_REVEAL",
+     "pointer": "data/registry/OWNER_METHOD_FACTS.json#/facts/3",
+     "statement": "the Hall / Lobby open passage is PLASTERED on the left jamb, the right jamb and the TOP / SOFFIT",
+     "transfer": "FORBIDDEN (project / revision scoped)"
+    },
+    {
+     "digest": "f74cbc607fe43f43",
+     "kind": "OPENING_REVEAL",
+     "pointer": "data/registry/OWNER_METHOD_FACTS.json#/facts/4",
+     "statement": "the horizontal underside of the Hall / Lobby passage head is an OPENING SOFFIT / REVEAL surface, NOT the normal room ceiling",
+     "transfer": "FORBIDDEN (project / revision scoped)"
+    },
+    {
+     "digest": "ca98371b69d83430",
+     "kind": "SKIRTING_PATH",
+     "pointer": "data/registry/OWNER_METHOD_FACTS.json#/facts/5",
+     "statement": "for dry / internal rooms whose floor is tiled, SKIRTING RUNS AROUND ALL WALLS (lm)",
+     "transfer": "FORBIDDEN (project / revision scoped)"
+    },
+    {
+     "digest": "37e175993965d521",
+     "kind": "SKIRTING_PATH",
+     "pointer": "data/registry/OWNER_METHOD_FACTS.json#/facts/6",
+     "statement": "NO SKIRTING in bathrooms, the kitchen, the ironing room and the washing / laundry room: they carry wall ceramic / porcelain",
+     "transfer": "FORBIDDEN (project / revision scoped)"
+    },
+    {
+     "digest": "4aafd4bb0bbf7393",
+     "kind": "WINDOW_FLOOR_CONTACT",
+     "pointer": "data/registry/OWNER_METHOD_FACTS.json#/facts/7",
+     "statement": "for the CURRENT selected {Q} plan, NORMAL WINDOWS START APPROXIMATELY 1.00 m ABOVE FINISHED FLOOR: there is real wall between the finished floor and the sill",
+     "transfer": "FORBIDDEN (project / revision scoped)"
+    },
+    {
+     "digest": "31af2621745f315b",
+     "kind": "SKIRTING_PATH",
+     "pointer": "data/registry/OWNER_METHOD_FACTS.json#/facts/8",
+     "statement": "SKIRTING CONTINUES UNDER THE ENTIRE WIDTH OF A NORMAL WINDOW (wall below at floor); do NOT deduct a normal window width because the plan cut shows an opening",
+     "transfer": "FORBIDDEN (project / revision scoped)"
+    },
+    {
+     "digest": "04dc43033a9bb55e",
+     "kind": "WINDOW_FLOOR_CONTACT",
+     "pointer": "data/registry/OWNER_METHOD_FACTS.json#/facts/9",
+     "statement": "for the CURRENT selected {Q} plan, NORMAL WINDOWS START APPROXIMATELY 1.00 m ABOVE FINISHED FLOOR: there is real wall between the finished floor and the sill",
+     "transfer": "FORBIDDEN (project / revision scoped)"
+    },
+    {
+     "digest": "1afb457cf43a5492",
+     "kind": "WALL_FINISH_HEIGHT",
+     "pointer": "data/registry/OWNER_METHOD_FACTS.json#/facts/10",
+     "statement": "for the CURRENT selected {Q} scope, DRY INTERNAL WALL PLASTER and PAINT run to 3.15 m",
+     "transfer": "FORBIDDEN (project / revision scoped)"
+    },
+    {
+     "digest": "461309f0bfd1a4ed",
+     "kind": "FINISH_SCOPE",
+     "pointer": "data/registry/OWNER_METHOD_FACTS.json#/facts/11",
+     "statement": "the current exposed BED.ROOM duct (H2060 / H2061) receives SKIRTING, PLASTER and PAINT on its exposed room-facing faces",
+     "transfer": "FORBIDDEN (project / revision scoped)"
+    }
+   ],
+   "source": "data/registry/OWNER_METHOD_FACTS.json"
+  },
+  {
+   "kind": "OWNER_PROJECT_FACTS (one other project, revision-scoped)",
+   "read_by": [
+    "research/external_engine_lab only"
+   ],
+   "records": [
+    {
+     "digest": "e16ce50d9b1bb059",
+     "kind": "TRADE_OBJECT_FOOTPRINT",
+     "pointer": "data/registry/OWNER_FINISH_FACTS.json#/facts/0",
+     "statement": "PORCELAIN FLOOR IS MEASURED OVER THE WHOLE ROOM FLOOR AREA",
+     "transfer": "FORBIDDEN (project / revision scoped)"
+    },
+    {
+     "digest": "53fb112f983a1f95",
+     "kind": "MEASUREMENT_UNIT",
+     "pointer": "data/registry/OWNER_FINISH_FACTS.json#/facts/1",
+     "statement": "dry / internal rooms carry FLOOR (m2) + SKIRTING (lm)",
+     "transfer": "FORBIDDEN (project / revision scoped)"
+    },
+    {
+     "digest": "17fdb1754d86ea85",
+     "kind": "FINISH_SCOPE",
+     "pointer": "data/registry/OWNER_FINISH_FACTS.json#/facts/2",
+     "statement": "bathrooms, ironing rooms, washing / laundry rooms and the kitchen: FLOOR ceramic / porcelain AND WALL ceramic / porcelain to 3.20 m",
+     "transfer": "FORBIDDEN (project / revision scoped)"
+    }
+   ],
+   "source": "data/registry/OWNER_FINISH_FACTS.json"
+  },
+  {
+   "kind": "OWNER_PROJECT_FACTS (one other project, revision-scoped)",
+   "read_by": [
+    "research/external_engine_lab only"
+   ],
+   "records": [
+    {
+     "digest": "8736b8686d6b2c24",
+     "kind": "OPEN_PASSAGE_CONSTRUCTION",
+     "pointer": "data/registry/OWNER_PHYSICAL_FACTS.json#/facts/0",
+     "statement": "",
+     "transfer": "PROJECT_SCOPED"
+    },
+    {
+     "digest": "6c255be3b498c290",
+     "kind": "BUILT_OBSTACLE",
+     "pointer": "data/registry/OWNER_PHYSICAL_FACTS.json#/facts/1",
+     "statement": "the 2.10 x 0.40 m rectangle in the BED.ROOM is a REAL DUCT",
+     "transfer": "FORBIDDEN (project / revision scoped)"
+    },
+    {
+     "digest": "2423e5c825c884d1",
+     "kind": "PASSAGE_HEAD_CONDITION",
+     "pointer": "data/registry/OWNER_PHYSICAL_FACTS.json#/facts/2",
+     "statement": "the ~1.20 m passage between M.B.ROOM and DRESS is FULL HEIGHT: no head, no soffit",
+     "transfer": "FORBIDDEN (project / revision scoped)"
+    },
+    {
+     "digest": "af4b3d5da8680465",
+     "kind": "THRESHOLD_FINISH_CONSTRUCTION",
+     "pointer": "data/registry/OWNER_PHYSICAL_FACTS.json#/facts/3",
+     "statement": "MAIN APARTMENT ENTRANCE: an explicit MARBLE THRESHOLD / برطاش is installed; the threshold is part of the apartment scope",
+     "transfer": "FORBIDDEN (project / revision scoped)"
+    },
+    {
+     "digest": "49d4d7befdb2da11",
+     "kind": "OPENING_CONSTRUCTION",
+     "pointer": "data/registry/OWNER_PHYSICAL_FACTS.json#/facts/4",
+     "statement": "the ~2.75 m internal glazed opening between HALL and PAINTRY is A SLIDING GLASS DOOR that reaches the FINISHED FLOOR",
+     "transfer": "FORBIDDEN (project / revision scoped)"
+    },
+    {
+     "digest": "6e42b2b9267b469f",
+     "kind": "PHYSICAL_CONSTRUCTION_RATIONALE",
+     "pointer": "data/registry/OWNER_PHYSICAL_FACTS.json#/facts/5",
+     "statement": "the LEFT wall at I1471 is intentionally ~200 mm thick: it is thickened / aligned to conceal the structural column; the other wall is ~150 mm; the 50 mm stagger is intentional construction geometry",
+     "transfer": "FORBIDDEN (project / revision scoped)"
+    }
+   ],
+   "source": "data/registry/OWNER_PHYSICAL_FACTS.json"
+  },
+  {
+   "kind": "OWNER_QUESTIONS (earlier route)",
+   "read_by": [
+    "tools/a18_input_set.py"
+   ],
+   "records": [
+    {
+     "id": "ORR-001",
+     "state": "open",
+     "subject": "QS Rule Pack — Finishes V1, CERAMIC section"
+    },
+    {
+     "id": "ORR-002",
+     "state": "open",
+     "subject": "QS Rule Pack — Finishes V1, STAIRS section"
+    },
+    {
+     "id": "ORR-003",
+     "state": "open",
+     "subject": "QS Rule Pack — Finishes V1, WATERPROOFING section"
+    },
+    {
+     "id": "ORR-004",
+     "state": "open",
+     "subject": "{P} pantry — the applicable tiled walls"
+    },
+    {
+     "id": "ORR-005",
+     "state": "open",
+     "subject": "{P} pantry — the wall tile height"
+    },
+    {
+     "id": "ORR-006",
+     "state": "open",
+     "subject": "{P} stairs — the step rise"
+    },
+    {
+     "id": "ORR-007",
+     "state": "open",
+     "subject": "Stair skirting measurement convention"
+    },
+    {
+     "id": "ORR-008",
+     "state": "open",
+     "subject": "Wet rooms of {P}"
+    },
+    {
+     "id": "ORR-009",
+     "state": "open",
+     "subject": "Ground floor open zone — the pool's curved intrusion"
+    },
+    {
+     "id": "ORR-000",
+     "state": "answered",
+     "subject": "the elevator threshold depth"
+    }
+   ],
+   "source": "data/registry/OWNER_RULE_REQUESTS.json"
+  },
+  {
+   "kind": "PROJECT_RULES (the reference project)",
+   "read_by": [
+    "tools/run_round6e.py",
+    "tools/a18_input_set.py"
+   ],
+   "records": [
+    {
+     "entries": 4,
+     "pointer": "data/registry/{P}_PROJECT_RULES.json#/elevator"
+    },
+    {
+     "entries": 9,
+     "pointer": "data/registry/{P}_PROJECT_RULES.json#/pantry"
+    },
+    {
+     "entries": 8,
+     "pointer": "data/registry/{P}_PROJECT_RULES.json#/stair"
+    }
+   ],
+   "source": "data/registry/{P}_PROJECT_RULES.json"
+  },
+  {
+   "kind": "ENGINE_CONSTANT",
+   "read_by": [
+    "M9 V2.1 .. V2.3"
+   ],
+   "records": [
+    {
+     "id": "OWNER_DOOR_CLASSES_2026_10_13",
+     "note": "owner door rules recorded as a code constant only (not a rule-store file); now UP-DOOR-CLS-001 .. -006"
+    }
+   ],
+   "source": "engine/source/door_model.py"
+  },
+  {
+   "kind": "ENGINE_CONSTANT",
+   "read_by": [
+    "M9 V1 .. V2.3"
+   ],
+   "records": [
+    {
+     "id": "room kinds",
+     "note": "BATHROOM and LAUNDRY are WET; KITCHEN, PANTRY and IRONING are SERVICE (dry finish path) - the owner wet-area scope (UP-WET-001) is applied by ARCH_TAKEOFF_V2.3 only"
+    }
+   ],
+   "source": "engine/source/arch_rooms.py LEXICON"
+  },
+  {
+   "kind": "STRUCTURAL_CONVENTIONS",
+   "read_by": [
+    "route G / M2 .. M8 structural routes"
+   ],
+   "records": [
+    {
+     "id": "URBAN_M2_GENERIC_CONVENTIONS_V1.json"
+    },
+    {
+     "id": "URBAN_M3_GENERIC_CONVENTIONS_V2.json"
+    },
+    {
+     "id": "URBAN_M4_GENERIC_CONVENTIONS_V3.json"
+    },
+    {
+     "id": "URBAN_M5_GENERIC_CONVENTIONS_V4.json"
+    },
+    {
+     "id": "URBAN_M7_GENERIC_CONVENTIONS_V5.json"
+    },
+    {
+     "id": "URBAN_M8_GENERIC_CONVENTIONS_V6.json"
+    },
+    {
+     "id": "URBAN_ROUGH_REBAR_PROFILE_V1.json"
+    },
+    {
+     "id": "URBAN_STANDARD_CANDIDATES_V1.json"
+    }
+   ],
+   "source": "engine/profiles/URBAN_M*_GENERIC_CONVENTIONS_V*.json"
+  },
+  {
+   "kind": "QUESTION_LISTS_IN_DOCUMENTS",
+   "read_by": [
+    "people only (no code reads them)"
+   ],
+   "records": [
+    {
+     "id": "Q-S6-1 / O4 / OD-8",
+     "topic": "doorway strip finish"
+    },
+    {
+     "id": "Q7 / O5 / S6R-B4 / OD-9",
+     "topic": "wet-room wall tile height and the band above it"
+    },
+    {
+     "id": "ORR-008",
+     "topic": "which rooms are wet and take full wall ceramic"
+    },
+    {
+     "id": "ORR-005",
+     "topic": "pantry wall tile height"
+    },
+    {
+     "id": "SE-07 / OD-12",
+     "topic": "kitchen waterproofing"
+    },
+    {
+     "id": "SE-01 .. SE-03 / OD-11 (finish part)",
+     "topic": "reveal finish"
+    },
+    {
+     "id": "SE-01 .. SE-03 / OD-11 (depth part)",
+     "topic": "reveal depth"
+    },
+    {
+     "id": "DR-07",
+     "topic": "door heights"
+    },
+    {
+     "id": "DR-01 / OD-5",
+     "topic": "main entrance"
+    },
+    {
+     "id": "DR-02 / OD-2",
+     "topic": "0.9 m / 1.0 m door width"
+    },
+    {
+     "id": "DR-03 / OD-3",
+     "topic": "small unlabelled space next to the kitchen"
+    },
+    {
+     "id": "DR-05 / OD-13",
+     "topic": "provisional doors"
+    },
+    {
+     "id": "DR-06 / OD-4",
+     "topic": "lift candidates"
+    },
+    {
+     "id": "BA-11 / BA-12 / OD-1",
+     "topic": "sill window or floor-level glazing"
+    },
+    {
+     "id": "OD-6 / O8",
+     "topic": "heights for Mode A"
+    },
+    {
+     "id": "OD-7 / F-26",
+     "topic": "deduction of openings that close a face without a gap"
+    },
+    {
+     "id": "Q-S6-4 / O6 / OD-10",
+     "topic": "stair-hall finishes"
+    },
+    {
+     "id": "Q1 / O7",
+     "topic": "exterior scope"
+    },
+    {
+     "id": "ORR-007",
+     "topic": "stair skirting along the zigzag or the rake"
+    },
+    {
+     "id": "ORR-000",
+     "topic": "elevator threshold depth"
+    },
+    {
+     "id": "door classes (re-stated 2026-10-14)",
+     "topic": "internal PVC / external aluminium / lift excluded"
+    }
+   ],
+   "source": "research/*/ (phase reports)"
+  }
+ ]
+}

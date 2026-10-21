@@ -1,0 +1,294 @@
+{
+ "baseline": "0cda418",
+ "concrete_m3_by_waist": {
+  "A-28": {
+   "150": {
+    "gross": 2.364489907,
+    "net": 2.304529177,
+    "upper": 2.576593778
+   },
+   "160": {
+    "gross": 2.471685068,
+    "net": 2.408718028,
+    "upper": 2.681392672
+   },
+   "175": {
+    "gross": 2.632477808,
+    "net": 2.565001304,
+    "upper": 2.838591012
+   },
+   "200": {
+    "gross": 2.900465709,
+    "net": 2.825473431,
+    "upper": 3.100588246
+   }
+  },
+  "A-28-M": {
+   "150": {
+    "gross": 2.288480349,
+    "net": 2.282217168,
+    "upper": 2.50058422
+   },
+   "160": {
+    "gross": 2.392536778,
+    "net": 2.385989981,
+    "upper": 2.602244382
+   },
+   "175": {
+    "gross": 2.548621419,
+    "net": 2.541649198,
+    "upper": 2.754734623
+   },
+   "200": {
+    "gross": 2.808762489,
+    "net": 2.801081228,
+    "upper": 3.008885026
+   }
+  },
+  "B-27-P": {
+   "150": {
+    "gross": 2.31453912,
+    "net": 2.253650043,
+    "upper": 2.533317564
+   },
+   "160": {
+    "gross": 2.418536173,
+    "net": 2.354615603,
+    "upper": 2.634750858
+   },
+   "175": {
+    "gross": 2.574531752,
+    "net": 2.506063942,
+    "upper": 2.786900798
+   },
+   "200": {
+    "gross": 2.834524382,
+    "net": 2.758477839,
+    "upper": 3.04048403
+   }
+  },
+  "B-27-S": {
+   "150": {
+    "gross": 2.242101742,
+    "net": 2.181212664,
+    "upper": 2.55805895
+   },
+   "160": {
+    "gross": 2.343269636,
+    "net": 2.279349066,
+    "upper": 2.655373991
+   },
+   "175": {
+    "gross": 2.495021477,
+    "net": 2.426553667,
+    "upper": 2.801346553
+   },
+   "200": {
+    "gross": 2.747941211,
+    "net": 2.671894668,
+    "upper": 3.044634155
+   }
+  },
+  "B-27-SM": {
+   "150": {
+    "gross": 2.165440847,
+    "net": 2.159067623,
+    "upper": 2.481398055
+   },
+   "160": {
+    "gross": 2.263498014,
+    "net": 2.256838799,
+    "upper": 2.575602369
+   },
+   "175": {
+    "gross": 2.410583766,
+    "net": 2.403495563,
+    "upper": 2.716908842
+   },
+   "200": {
+    "gross": 2.655726684,
+    "net": 2.647923501,
+    "upper": 2.952419628
+   }
+  },
+  "B-27-U": {
+   "150": {
+    "gross": 2.31453912,
+    "net": 2.308165897,
+    "upper": 2.533317564
+   },
+   "160": {
+    "gross": 2.418536173,
+    "net": 2.411876957,
+    "upper": 2.634750858
+   },
+   "175": {
+    "gross": 2.574531752,
+    "net": 2.567443549,
+    "upper": 2.786900798
+   },
+   "200": {
+    "gross": 2.834524382,
+    "net": 2.8267212,
+    "upper": 3.04048403
+   }
+  },
+  "REF-25": {
+   "150": {
+    "gross": 2.215233015,
+    "net": 2.208609755,
+    "upper": 2.448724949
+   },
+   "160": {
+    "gross": 2.312905215,
+    "net": 2.305990406,
+    "upper": 2.54344237
+   },
+   "175": {
+    "gross": 2.459413518,
+    "net": 2.452061383,
+    "upper": 2.685518504
+   },
+   "200": {
+    "gross": 2.703594021,
+    "net": 2.695513012,
+    "upper": 2.922312059
+   }
+  }
+ },
+ "conservation": {
+  "C01": "PASS",
+  "C02": "PASS",
+  "C03": "PASS",
+  "C04": "PASS",
+  "C05": "PASS",
+  "C06": "PASS",
+  "C07": "PASS",
+  "C08": "PASS",
+  "C09": "PASS",
+  "C10": "PASS",
+  "C11": "PASS",
+  "C12": "PASS",
+  "C13": "PASS",
+  "C14": "PASS",
+  "C15": "PASS"
+ },
+ "date": "2026-10-10",
+ "engine_commit": "0cda418+code:260bce58181472df",
+ "frozen_baselines": {
+  "AD1": "e2497cc75181393000187b7e657fa8485a4c0f365b4614bed983d0bc6c0ca5b4",
+  "D1.1": "3ecb642e2141f5a9af11453870696b104a11cfb519d65a9e3f505cbff7c73a74",
+  "D1.2": "f256d6a25edf93029c6ba1c8cf9bc336790fd8d9cf7a5045e8395942986a9554",
+  "PRE-S7": "fb3a1c62a8e525b663853d03d43e067f1839026aea149399491bd4cf98f0ad09",
+  "PRE-S7.1": "3a67a8641ce4ea836334e02532af82b9a3bb01be8efdba4f093eee44d92c1ef6",
+  "PRE-S8": "1c8daf59926540941efbf5f749e8e175fe64b7efeb6d7acff0bfbefbb034849d",
+  "S4": "0d63015a19953f295e331aab2d7e49e8facb277e1465fbdd1b6b5a40d1a2362b",
+  "S4.1": "468e90d9657548a7e9124b67ce0a55b63560f030e2f98b414c46ad4e970e030b",
+  "S5": "ff488a92f3eaff80e84fca2d7e0b8e36cc40ddb84232cd315acfd1ce50b4b3d8",
+  "S5.1": "595d64b1bf5c8e0ef7b5bebfaf3ea4063dd884356390c84b4c8aac77cddb5a88",
+  "S6": "c29a28bc66334d5294d71b0d5feb0dd5eae36baf91a04ef6e0105b2ca43be63e",
+  "S6.1": "c4744888ed2207ebff47c0a895e706d7e381b5f905b694eb92e3d1cdc411c0b2",
+  "S7": "b23f97b6db334e641c38c498bf23b46236d68f4fcc26a6eafde1f3bfc156d175",
+  "S7A": "5b256cef99dc57934c76249c28814d5ce07c74caf308aabdbf90e0e8f0adcee1",
+  "S8.1": "e99d83a750b64541f5b3174b853d24209f30e46574fafafe56cfa3fd0d88e354",
+  "S8.1A": "890c1c42f03715b6b26d88744852fe388ca419fd7c6e3f0214e137dc5c1a473e",
+  "S8.2": "749affe72ec80083715f01b790b96bb5fca31685a93f952369ec7d4469f3494d",
+  "S8.2A": "76fda44b41695a2a79c7e030388ba2282a93f09552bcd67e06c32aee09551f9d",
+  "S8.3": "92bfe9c0b2b7fea189bb37759f93759ea4a6cf5108738af1390468bda6ee92da",
+  "S8.3A": "cf83c809495496f421f2c85d46c4f497757a66dbbea607a77208555695e73505",
+  "S8.4": "45fd614f0c22adceec27ac0657ae1135f59f4c40dde811c56c2d7121527d85f1",
+  "S8.5": "522287d416f30d3eb0499017ea1a32c87bf530ca6bd6de5356fb5ed1e0e662fa",
+  "S8.6": "9861d791de738722ce53907894c1ff7691923c007411021eb092a2c58616ba9e",
+  "S8.6A": "fe59a4b11a7bd86d7fbb3addf6e7138925d2214256fbb8e4e0673af2b3e5abb8",
+  "S8.7": "ee523cc9d23ed1ecd15f6092fc00abb736ede09bc6e89eb2c81bf75da5c89779",
+  "S8.7A": "cb10bef01070a7968a99a7a5510fe8a96588c4b3853461b5fcb3315798cf1e0a",
+  "S8.7B": "f291af32d52feb520523aec96d7cf2974526723e43e3a7f383fc854bf700c506",
+  "S8.8": "fd1655dc3f60dde6ec1fc54495087de44e2ed25d5724ff8648a9f0729bb57cdb"
+ },
+ "frozen_release_unchanged": {
+  "concrete_m3": 0.516582788,
+  "kg": 59.020862261
+ },
+ "most_consistent_gf_1f": {
+  "minimum_change_resolution": "B-27-SM (plan turn 3 -> 4 radial winders; upper goings 272.7 mm) or B20 lowered under the top tread",
+  "remaining": [
+   "last upper riser 200 mm inside B20",
+   "turn of 5 risers (4 radial): both plans draw 4 (3 radial)",
+   "upper flight of 12: the architectural GF plan draws 11",
+   "walking-line going in the turn 218.5 mm (5 treads on the drawn quarter): short; acceptability to be confirmed"
+  ],
+  "scenario": "B-27-S",
+  "why": "27 equal risers of 166.667 mm reach the printed +3.50; its foot is the architectural / ground-beam / section foot; its upper flight is the structural sheet's and the section's"
+ },
+ "policy": "S8_7C_STAIR_DESIGN_RESOLUTION_STUDY_V1",
+ "references_read": [],
+ "release_delta": {
+  "concrete_m3": 0.0,
+  "kg": 0.0
+ },
+ "rfi": [
+  "P1 architect",
+  "P1 engineer",
+  "P1 engineer",
+  "P2 owner",
+  "P2 architect / engineer",
+  "P2 engineer",
+  "P3 architect",
+  "P3 engineer"
+ ],
+ "round": "S8_7C",
+ "rule": "a design comparison, not approval to change the drawings; nothing approved, selected or released",
+ "scenario_conflicts": {
+  "A-28": [
+   "landing 3.571 vs printed +3.50 (71.4 mm)",
+   "last upper riser 200 mm inside B20",
+   "foot y 16161.9 = structural sheet only; architectural, ground-beam plan and section A-A put it 600 mm north",
+   "upper flight of 12: the architectural GF plan draws 11"
+  ],
+  "A-28-M": [
+   "landing 3.571 vs printed +3.50 (71.4 mm)",
+   "foot y 16161.9 = structural sheet only; architectural, ground-beam plan and section A-A put it 600 mm north",
+   "upper flight of 12: the architectural GF plan draws 11"
+  ],
+  "B-27-P": [
+   "last upper riser 200 mm inside B20",
+   "foot y 16461.9 is drawn by no plan",
+   "upper flight of 12: the architectural GF plan draws 11"
+  ],
+  "B-27-S": [
+   "last upper riser 200 mm inside B20",
+   "turn of 5 risers (4 radial): both plans draw 4 (3 radial)",
+   "upper flight of 12: the architectural GF plan draws 11",
+   "walking-line going in the turn 218.5 mm (5 treads on the drawn quarter): short; acceptability to be confirmed"
+  ],
+  "B-27-SM": [
+   "turn of 5 risers (4 radial): both plans draw 4 (3 radial)",
+   "upper flight of 12: the architectural GF plan draws 11",
+   "walking-line going in the turn 218.5 mm (5 treads on the drawn quarter): short; acceptability to be confirmed"
+  ],
+  "B-27-U": [
+   "landing 3.667 vs printed +3.50 (166.7 mm)",
+   "foot y 16161.9 = structural sheet only; architectural, ground-beam plan and section A-A put it 600 mm north",
+   "upper flight of 11: the structural sheet and section A-A draw 12"
+  ],
+  "REF-25": [
+   "landing 3.52 vs printed +3.50 (20 mm)",
+   "upper flight of 11: the structural sheet and section A-A draw 12"
+  ]
+ },
+ "scenario_status": {
+  "A-28": "CONFLICTING",
+  "A-28-M": "CONFLICTING (landing) even with the modification",
+  "B-27-P": "CONFLICTING",
+  "B-27-S": "CONFLICTING",
+  "B-27-SM": "GEOMETRICALLY_POSSIBLE_ONLY_WITH_MODIFICATIONS (unverified)",
+  "B-27-U": "CONFLICTING",
+  "REF-25": "REFERENCE_ONLY"
+ },
+ "study_over": [
+  "research/alsenan_stairs_s8_7",
+  "research/alsenan_stairs_s8_7a",
+  "research/alsenan_stairs_s8_7b"
+ ],
+ "unit_mass": "kg/m = d^2 / 162"
+}

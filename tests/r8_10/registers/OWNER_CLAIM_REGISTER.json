@@ -1,0 +1,168 @@
+{
+ "SCHEMA": "URBAN_R8_10_OWNER_CLAIM_REGISTER_V1",
+ "evidence_file": "data/registry/OWNER_SOURCE_CLAIMS.json",
+ "evidence_file_sha256": "a1d997df263f349033b70b18b7c94683a873221a130dfc8d2c049cc2b8fdac7d",
+ "evidence_version": 2,
+ "previous_evidence_version": {
+  "version": 1,
+  "file": "data/registry/OWNER_PROJECT_CLAIMS.json",
+  "sha256": "994c8bf1bb2114d8c5e65b8208dffd90708e265431ea240e180b1002ff12ae25",
+  "relation": "UNCHANGED_AND_STILL_ACTIVE (this file adds claims; it supersedes nothing)"
+ },
+ "binding_policy": {
+  "policy_id": "OWNER_CLAIM_BINDING_POLICY_V1",
+  "binding": [
+   "revision id + anchor sha256",
+   "region id + frame id",
+   "part key + fingerprint",
+   "occurrence handle + source facts"
+  ],
+  "never": [
+   "coordinates alone",
+   "layer-wide inference from part claims",
+   "transfer to another revision, anchor, plan, region or project",
+   "editing a record (layer, geometry, handle, identity)",
+   "a quantity"
+  ],
+  "part_states": [
+   "APPLIES",
+   "PART_NOT_IN_SOURCE",
+   "STALE_PART_FINGERPRINT",
+   "SOURCE_SCOPE_MISMATCH",
+   "REGION_SCOPE_MISMATCH",
+   "PLAN_SCOPE_MISMATCH",
+   "CLAIM_NOT_REVIEWED",
+   "CLAIM_NOT_ACTIVE"
+  ],
+  "xref_states": [
+   "XREF_PRESENT_AND_ADMITTED",
+   "XREF_MISSING_BUT_PROVEN_OUTSIDE_REGION",
+   "XREF_MISSING_OWNER_CONFIRMED_NONCONTRIBUTING",
+   "XREF_MISSING_POTENTIALLY_CONTRIBUTING"
+  ],
+  "xref_states_that_continue": [
+   "XREF_MISSING_BUT_PROVEN_OUTSIDE_REGION",
+   "XREF_MISSING_OWNER_CONFIRMED_NONCONTRIBUTING",
+   "XREF_PRESENT_AND_ADMITTED"
+  ],
+  "digest": "9831241693481379bfb2a4d64529b3b9da3d760ccbf3f3b34f23d8030936e96d"
+ },
+ "claims": [
+  {
+   "claim_id": "QORTUBA-NEW-DIM-LINES-7116-7119-ARE-WALLS-OWNER-001",
+   "version": 1,
+   "kind": "PART_ROLE",
+   "authority": [
+    "PROJECT_OWNER",
+    "SOURCE_STRUCTURE_CORROBORATION"
+   ],
+   "scope": {
+    "project": "QORTUBA",
+    "revision_id": "QORTUBA_REV_NEW",
+    "source_anchor_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+    "plan": "PLAN_VARIANT_4_SELECTED",
+    "region_id": "RC:MODEL_SPACE:4267:540:1649",
+    "frame_id": "MF:RC:MODEL_SPACE:4267:540:1649"
+   },
+   "review_state": "REVIEWED",
+   "status": "ACTIVE"
+  },
+  {
+   "claim_id": "QORTUBA-NEW-XREFS-NONCONTRIBUTING-TO-PLAN-VARIANT-4-OWNER-001",
+   "version": 1,
+   "kind": "XREF_NONCONTRIBUTING_TO_SELECTED_REGION",
+   "authority": [
+    "PROJECT_OWNER"
+   ],
+   "scope": {
+    "project": "QORTUBA",
+    "revision_id": "QORTUBA_REV_NEW",
+    "source_anchor_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+    "plan": "PLAN_VARIANT_4_SELECTED",
+    "region_id": "RC:MODEL_SPACE:4267:540:1649",
+    "frame_id": "MF:RC:MODEL_SPACE:4267:540:1649"
+   },
+   "review_state": "REVIEWED",
+   "status": "ACTIVE"
+  }
+ ],
+ "flow": [
+  "OWNER ANSWER (R8.10 brief)",
+  "VERSIONED CLAIM (data/registry/OWNER_SOURCE_CLAIMS.json)",
+  "NEW EVIDENCE VERSION (2)",
+  "CANONICAL INPUT (unchanged records)",
+  "ROLE ADMISSION (part claims)",
+  "TS01",
+  "SEMANTIC ZONES",
+  "TRADE REGIONS",
+  "SHADOW QUANTITIES",
+  "QA"
+ ],
+ "run_evidence_versions": {
+  "NEW_K2_without_claims": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "NEW_K2_evidence_v2": "acad34705bbf2373331aa28cd594276d22f2b89ab4213974b64b3ac1bb19e2ac",
+  "OLD_K1_with_claims_offered": "acad34705bbf2373331aa28cd594276d22f2b89ab4213974b64b3ac1bb19e2ac"
+ },
+ "application": {
+  "NEW_K2": [
+   {
+    "claim_id": "QORTUBA-NEW-DIM-LINES-7116-7119-ARE-WALLS-OWNER-001",
+    "version": 1,
+    "scope_state": "APPLIES",
+    "state": "APPLIES",
+    "parts": [
+     {
+      "part": "QORTUBA_REV_NEW|H7116||SEGMENT|0",
+      "state": "APPLIES"
+     },
+     {
+      "part": "QORTUBA_REV_NEW|H7117||SEGMENT|0",
+      "state": "APPLIES"
+     },
+     {
+      "part": "QORTUBA_REV_NEW|H7118||SEGMENT|0",
+      "state": "APPLIES"
+     },
+     {
+      "part": "QORTUBA_REV_NEW|H7119||SEGMENT|0",
+      "state": "APPLIES"
+     }
+    ],
+    "applied_parts": [
+     "QORTUBA_REV_NEW|H7116||SEGMENT|0",
+     "QORTUBA_REV_NEW|H7117||SEGMENT|0",
+     "QORTUBA_REV_NEW|H7118||SEGMENT|0",
+     "QORTUBA_REV_NEW|H7119||SEGMENT|0"
+    ]
+   }
+  ],
+  "OLD_K1": [
+   {
+    "claim_id": "QORTUBA-NEW-DIM-LINES-7116-7119-ARE-WALLS-OWNER-001",
+    "version": 1,
+    "scope_state": "SOURCE_SCOPE_MISMATCH",
+    "state": "SOURCE_SCOPE_MISMATCH",
+    "parts": [
+     {
+      "part": "QORTUBA_REV_NEW|H7116||SEGMENT|0",
+      "state": "SOURCE_SCOPE_MISMATCH"
+     },
+     {
+      "part": "QORTUBA_REV_NEW|H7117||SEGMENT|0",
+      "state": "SOURCE_SCOPE_MISMATCH"
+     },
+     {
+      "part": "QORTUBA_REV_NEW|H7118||SEGMENT|0",
+      "state": "SOURCE_SCOPE_MISMATCH"
+     },
+     {
+      "part": "QORTUBA_REV_NEW|H7119||SEGMENT|0",
+      "state": "SOURCE_SCOPE_MISMATCH"
+     }
+    ],
+    "applied_parts": []
+   }
+  ]
+ },
+ "quantity_edits_by_claims": 0
+}

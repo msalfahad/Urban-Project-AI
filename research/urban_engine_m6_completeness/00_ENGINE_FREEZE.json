@@ -1,0 +1,37 @@
+{
+ "stage": "M6_ENGINE_FREEZE",
+ "policy": "CONCRETE_COMPLETENESS_V1",
+ "files_sha256": {
+  "engine/source/concrete_completeness.py": "347bc84486d29fc8fdf9b476160145a40cc9230286e0493fb61ccf97cc12a15b",
+  "tools/synthetic_villa_m6.py": "989a3a6abd66c8ff3ca2d44147c9e1c591eb1d3201a9926df2b4764272714bc8",
+  "tools/m6_evaluate.py": "9901faafa34ed75e355d7ab29341e9c815812c02ab084e268b5fb08a685aef49",
+  "tools/m6_completeness_report.py": "1939b368bce04e30d109de7200f019842a0f2bd131839acff709eb41f526be07",
+  "tools/urban_boq_m2.py": "36d3520bf9b3c8c99506469aafef4f84aa11b1e6771c209b8f0e4b226b68ad94"
+ },
+ "development_seeds": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16
+ ],
+ "development_options": [
+  "mixed defects (odd seeds)",
+  "hard distractors",
+  "development vocabulary"
+ ],
+ "heldout_rule": "held-out seeds (>= 101) and the held-out vocabulary were never generated before this freeze; they are run once on the frozen engine and reported as they come out",
+ "blind_rule": "the ST7757 run happens after this freeze and is frozen before any external (freelancer / MCP) record is opened; development read the drawing only, never an external quantity",
+ "known_context": "the M1-M5 history of this repository (including the M5 reconciliation findings) was known while the detectors were written; the detectors are generic (no project mark, coordinate, layer list or quantity) and are validated on held-out synthetic villas"
+}

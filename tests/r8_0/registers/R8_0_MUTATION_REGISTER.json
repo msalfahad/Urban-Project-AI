@@ -1,0 +1,785 @@
+{
+  "SCHEMA": "R8_0_MUTATION_REGISTER_V1",
+  "frozen": "2026-09-30",
+  "rule": "RUNS_NOW mutations are applied to the test-side reference realiser (or to the static checker) and the fixture must detect them; PENDING_CONTRACT mutations call the future R8 module and are strict-xfail TARGET_NOT_IMPLEMENTED until it exists",
+  "mutations": [
+    {
+      "id": "MT-01",
+      "mutation": "skip base point in K1",
+      "target": "F01",
+      "must_produce": "kernel reconciliation BLOCK",
+      "new_in_r8_0": false,
+      "execution": [
+        "RUNS_NOW_SENSITIVITY"
+      ],
+      "tests": [
+        "test_r8_0_mutations.py::test_MT01_skip_base_point_is_detected[F01_BASE_POINT_MIRRORED]",
+        "test_r8_0_mutations.py::test_MT01_skip_base_point_is_detected[F01_BASE_POINT_NESTED]",
+        "test_r8_0_mutations.py::test_MT01_skip_base_point_is_detected[F01_BASE_POINT_PLAIN]",
+        "test_r8_0_mutations.py::test_MT01_skip_base_point_is_detected[F01_BASE_POINT_ROTATED]",
+        "test_r8_0_mutations.py::test_MT01_skip_base_point_is_detected[F01_BASE_POINT_SCALED]"
+      ],
+      "note": null
+    },
+    {
+      "id": "MT-02",
+      "mutation": "apply mirror as 180° rotation",
+      "target": "F02",
+      "must_produce": "DISCRETE det_sign BLOCK",
+      "new_in_r8_0": false,
+      "execution": [
+        "RUNS_NOW_SENSITIVITY"
+      ],
+      "tests": [
+        "test_r8_0_digests.py::test_case_B_same_source_broken_kernel",
+        "test_r8_0_mutations.py::test_MT02_control_not_falsely_flagged[F02_ROTATION_ONLY_CONTROL]",
+        "test_r8_0_mutations.py::test_MT02_control_not_falsely_flagged[F02_SCALED_HALF_TURN_CONTROL]",
+        "test_r8_0_mutations.py::test_MT02_control_not_falsely_flagged[F03_OCS_POS_Z_CONTROL]",
+        "test_r8_0_mutations.py::test_MT02_control_not_falsely_flagged[F05_DOUBLE_REFLECTION_CANCELS]",
+        "test_r8_0_mutations.py::test_MT02_is_exactly_what_the_current_engine_does[F02_MIRROR_X]",
+        "test_r8_0_mutations.py::test_MT02_is_exactly_what_the_current_engine_does[F02_MIRROR_Y]",
+        "test_r8_0_mutations.py::test_MT02_is_exactly_what_the_current_engine_does[F02_NEG_SCALE_X]",
+        "test_r8_0_mutations.py::test_MT02_is_exactly_what_the_current_engine_does[F02_NEG_SCALE_Y]",
+        "test_r8_0_mutations.py::test_MT02_is_exactly_what_the_current_engine_does[F02_ROTATION_ONLY_CONTROL]",
+        "test_r8_0_mutations.py::test_MT02_is_exactly_what_the_current_engine_does[F02_ROTATION_REFLECTION]",
+        "test_r8_0_mutations.py::test_MT02_is_exactly_what_the_current_engine_does[F02_SCALED_HALF_TURN_CONTROL]",
+        "test_r8_0_mutations.py::test_MT02_is_exactly_what_the_current_engine_does[F03_OCS_POS_Z_CONTROL]",
+        "test_r8_0_mutations.py::test_MT02_is_exactly_what_the_current_engine_does[F05_DOUBLE_REFLECTION_CANCELS]",
+        "test_r8_0_mutations.py::test_MT02_is_exactly_what_the_current_engine_does[F05_NESTED_BLOCK_MIRROR]",
+        "test_r8_0_mutations.py::test_MT02_is_exactly_what_the_current_engine_does[F05_NESTED_ROTATION_REFLECTION]",
+        "test_r8_0_mutations.py::test_MT02_mirror_as_rotation_is_detected[F02_MIRROR_X]",
+        "test_r8_0_mutations.py::test_MT02_mirror_as_rotation_is_detected[F02_MIRROR_Y]",
+        "test_r8_0_mutations.py::test_MT02_mirror_as_rotation_is_detected[F02_NEG_SCALE_X]",
+        "test_r8_0_mutations.py::test_MT02_mirror_as_rotation_is_detected[F02_NEG_SCALE_Y]",
+        "test_r8_0_mutations.py::test_MT02_mirror_as_rotation_is_detected[F02_ROTATION_REFLECTION]",
+        "test_r8_0_mutations.py::test_MT02_mirror_as_rotation_is_detected[F03_OCS_NEG_Z_ENTITIES]",
+        "test_r8_0_mutations.py::test_MT02_mirror_as_rotation_is_detected[F03_OCS_NEG_Z_INSERT]",
+        "test_r8_0_mutations.py::test_MT02_mirror_as_rotation_is_detected[F05_NESTED_BLOCK_MIRROR]",
+        "test_r8_0_mutations.py::test_MT02_mirror_as_rotation_is_detected[F05_NESTED_ROTATION_REFLECTION]"
+      ],
+      "note": "the production defect IS this mutation: current cad_adapter ARC output equals the MT-02 mutant point for point"
+    },
+    {
+      "id": "MT-03",
+      "mutation": "drop OCS",
+      "target": "F03",
+      "must_produce": "REALISED_GEOMETRY BLOCK",
+      "new_in_r8_0": false,
+      "execution": [
+        "RUNS_NOW_SENSITIVITY"
+      ],
+      "tests": [
+        "test_r8_0_mutations.py::test_MT03_control_not_falsely_flagged",
+        "test_r8_0_mutations.py::test_MT03_drop_ocs_is_detected[F03_OCS_NEG_Z_ENTITIES]",
+        "test_r8_0_mutations.py::test_MT03_drop_ocs_is_detected[F03_OCS_NEG_Z_INSERT]"
+      ],
+      "note": null
+    },
+    {
+      "id": "MT-04",
+      "mutation": "compare raw arc angles instead of realised points",
+      "target": "F02 equivalent-representation pair",
+      "must_produce": "false BLOCK appears ⇒ proves realised comparison is required",
+      "new_in_r8_0": false,
+      "execution": [
+        "RUNS_NOW_SENSITIVITY"
+      ],
+      "tests": [
+        "test_r8_0_mutations.py::test_MT04_raw_parameter_comparison_gives_a_false_block"
+      ],
+      "note": null
+    },
+    {
+      "id": "MT-05",
+      "mutation": "remove one entity from route B",
+      "target": "any",
+      "must_produce": "PRESENCE BLOCK",
+      "new_in_r8_0": false,
+      "execution": [
+        "PENDING_CONTRACT",
+        "RUNS_NOW_SENSITIVITY"
+      ],
+      "tests": [
+        "test_r8_0_mutations.py::test_MT05_removed_entity_changes_both_digests",
+        "test_r8_0_pending_contracts.py::test_contract[MT-05]"
+      ],
+      "note": null
+    },
+    {
+      "id": "MT-06",
+      "mutation": "perturb one top-level LINE by 1 mm in route B",
+      "target": "any",
+      "must_produce": "SOURCE-scope SOURCE_DECODE_CONFLICT",
+      "new_in_r8_0": false,
+      "execution": [
+        "PENDING_CONTRACT",
+        "RUNS_NOW_SENSITIVITY"
+      ],
+      "tests": [
+        "test_r8_0_mutations.py::test_MT06_one_mm_perturbation_changes_both_digests",
+        "test_r8_0_pending_contracts.py::test_contract[MT-06]"
+      ],
+      "note": null
+    },
+    {
+      "id": "MT-07",
+      "mutation": "change INSUNITS only",
+      "target": "F17",
+      "must_produce": "frame CONFLICT/PROVISIONAL; never a 25.4× quantity",
+      "new_in_r8_0": false,
+      "execution": [
+        "PENDING_CONTRACT"
+      ],
+      "tests": [
+        "test_r8_0_pending_contracts.py::test_contract[MT-07]"
+      ],
+      "note": null
+    },
+    {
+      "id": "MT-08",
+      "mutation": "agent sets frame status VERIFIED",
+      "target": "F16",
+      "must_produce": "rejected",
+      "new_in_r8_0": false,
+      "execution": [
+        "PENDING_CONTRACT"
+      ],
+      "tests": [
+        "test_r8_0_pending_contracts.py::test_contract[MT-08]"
+      ],
+      "note": null
+    },
+    {
+      "id": "MT-09",
+      "mutation": "PREVIEW row enters a subtotal",
+      "target": "F17",
+      "must_produce": "publication-contract violation caught; subtotal null",
+      "new_in_r8_0": false,
+      "execution": [
+        "PENDING_CONTRACT"
+      ],
+      "tests": [
+        "test_r8_0_pending_contracts.py::test_contract[MT-09]"
+      ],
+      "note": null
+    },
+    {
+      "id": "MT-10",
+      "mutation": "construct a CLAIM from an A2 challenge record",
+      "target": "synthetic",
+      "must_produce": "constructor refuses (producer not allowed)",
+      "new_in_r8_0": false,
+      "execution": [
+        "PENDING_CONTRACT"
+      ],
+      "tests": [
+        "test_r8_0_pending_contracts.py::test_contract[MT-10]"
+      ],
+      "note": null
+    },
+    {
+      "id": "MT-11",
+      "mutation": "WALL_MATERIAL claim with evidence_kind SOURCE_GEOMETRY_MEASURED (thickness)",
+      "target": "synthetic two_walls_of_one_thickness_and_two_materials",
+      "must_produce": "inadmissible",
+      "new_in_r8_0": false,
+      "execution": [
+        "PENDING_CONTRACT"
+      ],
+      "tests": [
+        "test_r8_0_pending_contracts.py::test_contract[MT-11]"
+      ],
+      "note": null
+    },
+    {
+      "id": "MT-12",
+      "mutation": "PROJECT_SCOPE answered by URBAN_STANDARD",
+      "target": "synthetic",
+      "must_produce": "inadmissible in both modes",
+      "new_in_r8_0": false,
+      "execution": [
+        "PENDING_CONTRACT"
+      ],
+      "tests": [
+        "test_r8_0_pending_contracts.py::test_contract[MT-12a]",
+        "test_r8_0_pending_contracts.py::test_contract[MT-12b]"
+      ],
+      "note": null
+    },
+    {
+      "id": "MT-13",
+      "mutation": "standard answers where a scoped source claim exists",
+      "target": "synthetic",
+      "must_produce": "standard superseded; source value used",
+      "new_in_r8_0": false,
+      "execution": [
+        "PENDING_CONTRACT"
+      ],
+      "tests": [
+        "test_r8_0_pending_contracts.py::test_contract[MT-13]"
+      ],
+      "note": null
+    },
+    {
+      "id": "MT-14",
+      "mutation": "delta whose defect class is absent from the census",
+      "target": "regression harness",
+      "must_produce": "round fails",
+      "new_in_r8_0": false,
+      "execution": [
+        "PENDING_CONTRACT"
+      ],
+      "tests": [
+        "test_r8_0_pending_contracts.py::test_contract[MT-14]"
+      ],
+      "note": null
+    },
+    {
+      "id": "MT-15",
+      "mutation": "delta explained only by an area change",
+      "target": "regression harness",
+      "must_produce": "explained=false",
+      "new_in_r8_0": false,
+      "execution": [
+        "PENDING_CONTRACT"
+      ],
+      "tests": [
+        "test_r8_0_pending_contracts.py::test_contract[MT-15]"
+      ],
+      "note": null
+    },
+    {
+      "id": "MT-16",
+      "mutation": "delta classifier given a benchmark path",
+      "target": "regression harness",
+      "must_produce": "input contract refuses; VALIDATION_INVALID",
+      "new_in_r8_0": false,
+      "execution": [
+        "PENDING_CONTRACT"
+      ],
+      "tests": [
+        "test_r8_0_pending_contracts.py::test_contract[MT-16]"
+      ],
+      "note": null
+    },
+    {
+      "id": "MT-17",
+      "mutation": "edit a frozen tolerance after the census freeze",
+      "target": "regression harness",
+      "must_produce": "frozen-parameter hash mismatch fails the run",
+      "new_in_r8_0": false,
+      "execution": [
+        "PENDING_CONTRACT"
+      ],
+      "tests": [
+        "test_r8_0_pending_contracts.py::test_contract[MT-17]"
+      ],
+      "note": null
+    },
+    {
+      "id": "MT-18",
+      "mutation": "fact kind with no policy",
+      "target": "synthetic",
+      "must_produce": "NOT_ESTABLISHABLE",
+      "new_in_r8_0": false,
+      "execution": [
+        "PENDING_CONTRACT"
+      ],
+      "tests": [
+        "test_r8_0_pending_contracts.py::test_contract[MT-18]"
+      ],
+      "note": null
+    },
+    {
+      "id": "MT-19",
+      "mutation": "evidence kind not listed in a policy",
+      "target": "synthetic",
+      "must_produce": "inadmissible",
+      "new_in_r8_0": false,
+      "execution": [
+        "PENDING_CONTRACT"
+      ],
+      "tests": [
+        "test_r8_0_pending_contracts.py::test_contract[MT-19]"
+      ],
+      "note": null
+    },
+    {
+      "id": "MT-20",
+      "mutation": "same-tier conflicting WINDOW_HEIGHT claims",
+      "target": "synthetic",
+      "must_produce": "CONFLICT; no value",
+      "new_in_r8_0": false,
+      "execution": [
+        "PENDING_CONTRACT"
+      ],
+      "tests": [
+        "test_r8_0_pending_contracts.py::test_contract[MT-20]"
+      ],
+      "note": null
+    },
+    {
+      "id": "MT-21",
+      "mutation": "DOOR_WIDTH LEAF compared with STRUCTURAL_OPENING",
+      "target": "synthetic",
+      "must_produce": "no comparison performed (different basis)",
+      "new_in_r8_0": false,
+      "execution": [
+        "PENDING_CONTRACT"
+      ],
+      "tests": [
+        "test_r8_0_pending_contracts.py::test_contract[MT-21]"
+      ],
+      "note": null
+    },
+    {
+      "id": "MT-22",
+      "mutation": "R7-mode run with US-19 removed from STANDARDS_IN_EFFECT",
+      "target": "Al Rashed",
+      "must_produce": "exactly 7 window heights become questions",
+      "new_in_r8_0": false,
+      "execution": [
+        "PENDING_CONTRACT"
+      ],
+      "tests": [
+        "test_r8_0_pending_contracts.py::test_contract[MT-22]"
+      ],
+      "note": null
+    },
+    {
+      "id": "MT-23",
+      "mutation": "region transform sets its own native_unit_to_mm",
+      "target": "F26",
+      "must_produce": "rejected (U-1)",
+      "new_in_r8_0": false,
+      "execution": [
+        "PENDING_CONTRACT"
+      ],
+      "tests": [
+        "test_r8_0_pending_contracts.py::test_contract[MT-23]"
+      ],
+      "note": null
+    },
+    {
+      "id": "MT-24",
+      "mutation": "F26 detail given real_per_presented = 1",
+      "target": "F26",
+      "must_produce": "region CONFLICT from its own dimensions",
+      "new_in_r8_0": false,
+      "execution": [
+        "PENDING_CONTRACT"
+      ],
+      "tests": [
+        "test_r8_0_pending_contracts.py::test_contract[MT-24]"
+      ],
+      "note": null
+    },
+    {
+      "id": "MT-25",
+      "mutation": "F27 enlargement accepted without evidence",
+      "target": "F27",
+      "must_produce": "BLOCKED",
+      "new_in_r8_0": false,
+      "execution": [
+        "PENDING_CONTRACT"
+      ],
+      "tests": [
+        "test_r8_0_pending_contracts.py::test_contract[MT-25]"
+      ],
+      "note": null
+    },
+    {
+      "id": "MT-26",
+      "mutation": "paper-space viewport used as a measurement frame",
+      "target": "F15",
+      "must_produce": "refused; measure in model frame",
+      "new_in_r8_0": false,
+      "execution": [
+        "PENDING_CONTRACT"
+      ],
+      "tests": [
+        "test_r8_0_pending_contracts.py::test_contract[MT-26]"
+      ],
+      "note": null
+    },
+    {
+      "id": "MT-27",
+      "mutation": "auto dimensions counted as independent of the geometry they measure",
+      "target": "F28",
+      "must_produce": "independent set size unchanged",
+      "new_in_r8_0": false,
+      "execution": [
+        "PENDING_CONTRACT"
+      ],
+      "tests": [
+        "test_r8_0_pending_contracts.py::test_contract[MT-27]"
+      ],
+      "note": null
+    },
+    {
+      "id": "MT-28",
+      "mutation": "two dimstyles counted as two families",
+      "target": "F28",
+      "must_produce": "counted once",
+      "new_in_r8_0": false,
+      "execution": [
+        "PENDING_CONTRACT"
+      ],
+      "tests": [
+        "test_r8_0_pending_contracts.py::test_contract[MT-28]"
+      ],
+      "note": null
+    },
+    {
+      "id": "MT-29",
+      "mutation": "issued PDF plot counted as independent confirmation of DWG geometry",
+      "target": "synthetic plot pair",
+      "must_produce": "rejected (shared SOURCE_PRIMITIVE via PLOT_TRANSFORM)",
+      "new_in_r8_0": false,
+      "execution": [
+        "PENDING_CONTRACT"
+      ],
+      "tests": [
+        "test_r8_0_pending_contracts.py::test_contract[MT-29]"
+      ],
+      "note": null
+    },
+    {
+      "id": "MT-30",
+      "mutation": "raster render of a vector page counted as second evidence",
+      "target": "F18",
+      "must_produce": "one evidence",
+      "new_in_r8_0": false,
+      "execution": [
+        "PENDING_CONTRACT"
+      ],
+      "tests": [
+        "test_r8_0_pending_contracts.py::test_contract[MT-30]"
+      ],
+      "note": null
+    },
+    {
+      "id": "MT-31",
+      "mutation": "two runs of one model on one crop counted as independent transcriptions",
+      "target": "F31",
+      "must_produce": "one TRANSCRIPTION instance; no promotion",
+      "new_in_r8_0": false,
+      "execution": [
+        "PENDING_CONTRACT"
+      ],
+      "tests": [
+        "test_r8_0_pending_contracts.py::test_contract[MT-31]"
+      ],
+      "note": null
+    },
+    {
+      "id": "MT-32",
+      "mutation": "plausibility counted toward VERIFIED",
+      "target": "F17",
+      "must_produce": "rejected",
+      "new_in_r8_0": false,
+      "execution": [
+        "PENDING_CONTRACT"
+      ],
+      "tests": [
+        "test_r8_0_pending_contracts.py::test_contract[MT-32]"
+      ],
+      "note": null
+    },
+    {
+      "id": "MT-33",
+      "mutation": "Al Rashed frame evidence evaluated",
+      "target": "Al Rashed",
+      "must_produce": "PROVISIONAL; independent set = 1",
+      "new_in_r8_0": false,
+      "execution": [
+        "PENDING_CONTRACT"
+      ],
+      "tests": [
+        "test_r8_0_pending_contracts.py::test_contract[MT-33]"
+      ],
+      "note": null
+    },
+    {
+      "id": "MT-34",
+      "mutation": "F21 applied to a wall with unknown WALL_ROLE",
+      "target": "F21",
+      "must_produce": "claim does not apply; membership question raised",
+      "new_in_r8_0": false,
+      "execution": [
+        "PENDING_CONTRACT"
+      ],
+      "tests": [
+        "test_r8_0_pending_contracts.py::test_contract[MT-34]"
+      ],
+      "note": null
+    },
+    {
+      "id": "MT-35",
+      "mutation": "PROJECT_WIDE submitted as an Urban standard selector",
+      "target": "F24",
+      "must_produce": "inadmissible selector for tier",
+      "new_in_r8_0": false,
+      "execution": [
+        "PENDING_CONTRACT"
+      ],
+      "tests": [
+        "test_r8_0_pending_contracts.py::test_contract[MT-35]"
+      ],
+      "note": null
+    },
+    {
+      "id": "MT-36",
+      "mutation": "same-tier overlapping selectors with different values",
+      "target": "synthetic",
+      "must_produce": "CONFLICT on intersection only; remainder answered",
+      "new_in_r8_0": false,
+      "execution": [
+        "PENDING_CONTRACT"
+      ],
+      "tests": [
+        "test_r8_0_pending_contracts.py::test_contract[MT-36a]",
+        "test_r8_0_pending_contracts.py::test_contract[MT-36b]"
+      ],
+      "note": null
+    },
+    {
+      "id": "MT-37",
+      "mutation": "narrower same-tier claim overrides broader without EXCEPT",
+      "target": "synthetic",
+      "must_produce": "rejected",
+      "new_in_r8_0": false,
+      "execution": [
+        "PENDING_CONTRACT"
+      ],
+      "tests": [
+        "test_r8_0_pending_contracts.py::test_contract[MT-37]"
+      ],
+      "note": null
+    },
+    {
+      "id": "MT-38",
+      "mutation": "claim forced to carry FLOOR×LAYER×THICKNESS keys it does not state",
+      "target": "F24",
+      "must_produce": "schema rejects fabricated scope",
+      "new_in_r8_0": false,
+      "execution": [
+        "PENDING_CONTRACT"
+      ],
+      "tests": [
+        "test_r8_0_pending_contracts.py::test_contract[MT-38]"
+      ],
+      "note": null
+    },
+    {
+      "id": "MT-39",
+      "mutation": "model transcription supplies parsed_value",
+      "target": "F31",
+      "must_produce": "rejected; code parses literal_text",
+      "new_in_r8_0": false,
+      "execution": [
+        "PENDING_CONTRACT"
+      ],
+      "tests": [
+        "test_r8_0_pending_contracts.py::test_contract[MT-39]"
+      ],
+      "note": null
+    },
+    {
+      "id": "MT-40",
+      "mutation": "single model transcription promoted without corroboration",
+      "target": "F32",
+      "must_produce": "stays CANDIDATE",
+      "new_in_r8_0": false,
+      "execution": [
+        "PENDING_CONTRACT"
+      ],
+      "tests": [
+        "test_r8_0_pending_contracts.py::test_contract[MT-40]"
+      ],
+      "note": null
+    },
+    {
+      "id": "MT-41",
+      "mutation": "AI inference used as SOURCE room identity",
+      "target": "F33",
+      "must_produce": "rejected (S-1)",
+      "new_in_r8_0": false,
+      "execution": [
+        "PENDING_CONTRACT"
+      ],
+      "tests": [
+        "test_r8_0_pending_contracts.py::test_contract[MT-41]"
+      ],
+      "note": null
+    },
+    {
+      "id": "MT-42",
+      "mutation": "policy file lists AI_INFERENCE with role SOURCE",
+      "target": "synthetic",
+      "must_produce": "policy load fails",
+      "new_in_r8_0": false,
+      "execution": [
+        "PENDING_CONTRACT"
+      ],
+      "tests": [
+        "test_r8_0_pending_contracts.py::test_contract[MT-42]"
+      ],
+      "note": null
+    },
+    {
+      "id": "MT-43",
+      "mutation": "transcription crop does not contain the cited entity/bbox",
+      "target": "F31",
+      "must_produce": "rejected",
+      "new_in_r8_0": false,
+      "execution": [
+        "PENDING_CONTRACT"
+      ],
+      "tests": [
+        "test_r8_0_pending_contracts.py::test_contract[MT-43]"
+      ],
+      "note": null
+    },
+    {
+      "id": "MT-44",
+      "mutation": "PDF observation used for FINAL while VECTOR_PDF_PROFILE unimplemented",
+      "target": "F18",
+      "must_produce": "PREVIEW",
+      "new_in_r8_0": false,
+      "execution": [
+        "PENDING_CONTRACT"
+      ],
+      "tests": [
+        "test_r8_0_pending_contracts.py::test_contract[MT-44]"
+      ],
+      "note": null
+    },
+    {
+      "id": "MT-45",
+      "mutation": "raster quantity whose 2-px bound exceeds item tolerance",
+      "target": "F30 variant",
+      "must_produce": "PREVIEW",
+      "new_in_r8_0": false,
+      "execution": [
+        "PENDING_CONTRACT"
+      ],
+      "tests": [
+        "test_r8_0_pending_contracts.py::test_contract[MT-45]"
+      ],
+      "note": null
+    },
+    {
+      "id": "MT-46",
+      "mutation": "CAD source failing V-CAD-1",
+      "target": "F01 with MT-01",
+      "must_produce": "PREVIEW (same as previous rule)",
+      "new_in_r8_0": false,
+      "execution": [
+        "PENDING_CONTRACT"
+      ],
+      "tests": [
+        "test_r8_0_pending_contracts.py::test_contract[MT-46]"
+      ],
+      "note": null
+    },
+    {
+      "id": "MT-47",
+      "mutation": "R8 module imports a library missing from the dependency register",
+      "target": "static",
+      "must_produce": "test fails",
+      "new_in_r8_0": false,
+      "execution": [
+        "RUNS_NOW_STATIC"
+      ],
+      "tests": [
+        "test_r8_0_import_boundaries.py::test_B5_B6_engine_source_dependencies_registered",
+        "test_r8_0_import_boundaries.py::test_MT47_unregistered_library_is_caught"
+      ],
+      "note": null
+    },
+    {
+      "id": "MT-48",
+      "mutation": "R8 module imports scipy",
+      "target": "static",
+      "must_produce": "test fails",
+      "new_in_r8_0": false,
+      "execution": [
+        "RUNS_NOW_STATIC"
+      ],
+      "tests": [
+        "test_r8_0_import_boundaries.py::test_B5_B6_engine_source_dependencies_registered",
+        "test_r8_0_import_boundaries.py::test_MT48_scipy_is_caught"
+      ],
+      "note": null
+    },
+    {
+      "id": "MT-49",
+      "mutation": "flip bulge / sweep keyed on extrusion only, not on the composed determinant",
+      "target": "F02 bulge cases",
+      "must_produce": "detected on every negative-scale mirror",
+      "new_in_r8_0": true,
+      "execution": [
+        "RUNS_NOW_SENSITIVITY"
+      ],
+      "tests": [
+        "test_r8_0_mutations.py::test_MT49_bulge_flip_keyed_on_extrusion_only_is_detected[F02_MIRROR_X]",
+        "test_r8_0_mutations.py::test_MT49_bulge_flip_keyed_on_extrusion_only_is_detected[F02_MIRROR_Y]",
+        "test_r8_0_mutations.py::test_MT49_bulge_flip_keyed_on_extrusion_only_is_detected[F02_NEG_SCALE_X]",
+        "test_r8_0_mutations.py::test_MT49_bulge_flip_keyed_on_extrusion_only_is_detected[F02_NEG_SCALE_Y]",
+        "test_r8_0_mutations.py::test_MT49_bulge_flip_keyed_on_extrusion_only_is_detected[F02_ROTATION_REFLECTION]",
+        "test_r8_0_mutations.py::test_MT49_bulge_flip_keyed_on_extrusion_only_is_detected[F03_OCS_NEG_Z_INSERT]",
+        "test_r8_0_mutations.py::test_MT49_bulge_flip_keyed_on_extrusion_only_is_detected[F05_NESTED_BLOCK_MIRROR]",
+        "test_r8_0_mutations.py::test_MT49_bulge_flip_keyed_on_extrusion_only_is_detected[F05_NESTED_ROTATION_REFLECTION]",
+        "test_r8_0_mutations.py::test_MT49_entity_level_ocs_still_correct"
+      ],
+      "note": null
+    },
+    {
+      "id": "MT-50",
+      "mutation": "accept SOURCE_REPRESENTATION_DIGEST as proof of physical geometry",
+      "target": "digest CASE B",
+      "must_produce": "the representation digest cannot see a kernel break",
+      "new_in_r8_0": true,
+      "execution": [
+        "RUNS_NOW_SENSITIVITY"
+      ],
+      "tests": [
+        "test_r8_0_digests.py::test_case_B_same_source_broken_kernel",
+        "test_r8_0_mutations.py::test_MT50_representation_digest_cannot_prove_geometry"
+      ],
+      "note": null
+    },
+    {
+      "id": "MT-51",
+      "mutation": "substitute an inferred unit for a disagreeing INSUNITS (U-C4N takeoff.unit_of)",
+      "target": "UNIT_CONTEXT",
+      "must_produce": "CONFLICT; inferred unit not applied; FINAL blocked",
+      "new_in_r8_0": true,
+      "execution": [
+        "PENDING_CONTRACT"
+      ],
+      "tests": [
+        "test_r8_0_pending_contracts.py::test_contract[MT-51]"
+      ],
+      "note": null
+    }
+  ],
+  "supporting_sensitivity_mutations": [
+    {
+      "id": "S-01",
+      "mutation": "MINSERT_FIRST_CELL_ONLY",
+      "detected_by": "F06 (all variants)"
+    },
+    {
+      "id": "S-02",
+      "mutation": "UNREADABLE_FRAME_AS_WCS (U-C4N ocs.py fail-open)",
+      "detected_by": "F34 unreadable variants"
+    },
+    {
+      "id": "S-03",
+      "mutation": "IGNORE_XREF",
+      "detected_by": "F08 (all variants)"
+    }
+  ]
+}

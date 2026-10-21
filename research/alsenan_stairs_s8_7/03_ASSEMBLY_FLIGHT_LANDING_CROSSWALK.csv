@@ -1,0 +1,36 @@
+SOURCE_RECORD,SOURCE,S1_AREA_M2,ELEMENT,RELATION,AREA_M2,NOTE
+SP-GF_ROOF_SLAB-03,S1 SLAB_PANEL_REGISTER / PRE-S8 STAIR_AND_LANDING face,10.415,A1-F1,PART_OF_ZONE,3.755,
+SP-GF_ROOF_SLAB-03,S1 SLAB_PANEL_REGISTER / PRE-S8 STAIR_AND_LANDING face,10.415,A1-F2,PART_OF_ZONE,3.72,
+SP-GF_ROOF_SLAB-03,S1 SLAB_PANEL_REGISTER / PRE-S8 STAIR_AND_LANDING face,10.415,A1-L1,PART_OF_ZONE,1.44,
+SP-GF_ROOF_SLAB-03,S1 SLAB_PANEL_REGISTER / PRE-S8 STAIR_AND_LANDING face,10.415,A1-W1,PART_OF_ZONE,1.5,
+SP-1F_ROOF_SLAB-01,S1 SLAB_PANEL_REGISTER / PRE-S8 STAIR_AND_LANDING face,10.415,A2-F1,PART_OF_ZONE,3.755,
+SP-1F_ROOF_SLAB-01,S1 SLAB_PANEL_REGISTER / PRE-S8 STAIR_AND_LANDING face,10.415,A2-F2,PART_OF_ZONE,3.6,
+SP-1F_ROOF_SLAB-01,S1 SLAB_PANEL_REGISTER / PRE-S8 STAIR_AND_LANDING face,10.415,A2-L1,PART_OF_ZONE,1.44,
+SP-1F_ROOF_SLAB-01,S1 SLAB_PANEL_REGISTER / PRE-S8 STAIR_AND_LANDING face,10.415,A2-T1,PART_OF_ZONE,0.12,
+SP-1F_ROOF_SLAB-01,S1 SLAB_PANEL_REGISTER / PRE-S8 STAIR_AND_LANDING face,10.415,A2-W1,PART_OF_ZONE,1.5,
+SP-GF_ROOF_SLAB-21,S1 SLAB_PANEL_REGISTER / PRE-S8 STAIR_AND_LANDING face,20.1465,C-F1,PART_OF_ZONE,5.140595495,
+SP-GF_ROOF_SLAB-21,S1 SLAB_PANEL_REGISTER,20.1465,LIGHT_WELL_VOID,VOID_OPEN_TO_BELOW,15.005904505,"X lines 2D1 / 2D2 / 54B / 54C and 'VOID' (2D3): no slab, no stair; nothing is measured"
+SP-GF_ROOF_SLAB-28,S1 SLAB_PANEL_REGISTER / PRE-S8 STAIR_AND_LANDING face,6.978642425,C-F1,PART_OF_ZONE,2.517499551,
+SP-GF_ROOF_SLAB-28,S1 SLAB_PANEL_REGISTER / PRE-S8 STAIR_AND_LANDING face,6.978642425,C-F2,PART_OF_ZONE,1.44,
+SP-GF_ROOF_SLAB-28,S1 SLAB_PANEL_REGISTER / PRE-S8 STAIR_AND_LANDING face,6.978642425,C-L1,PART_OF_ZONE,1.3525,
+SP-GF_ROOF_SLAB-28,S1 SLAB_PANEL_REGISTER / PRE-S8 STAIR_AND_LANDING face,6.978642425,C-T1,PART_OF_ZONE,1.668642425,
+SP-GBP-12,S1 / S8.1 (excluded 8.37232788 m2),8.37232788,C-F1,REPEATED_VIEW (ground plan of the same flight: 9 of its 12 radial risers at identical coordinates),4.526467258,remainder is GF hall floor (04)
+S8.1A-RG-02,S8.1A recovered stair bay (11.52 m2),11.52,B-F1 + A1-F1 (repeated view) + floors,GROUND_VIEW_OF_THE_MAIN_STAIR_BAY,11.52,not a second staircase: partition in 04
+SP-GBP-01,"S1 / S8.1 (outside the building, excluded)",,D-F1,CONTAINS (omitted stair),3.22,S1 counted 9 tread lines in SP-GBP-01 without a stair record
+SO-FFRS-01,S8.6 slab-opening census,,ST-A A2,OPENING,,"S1 slab panel SP-1F_ROOF_SLAB-01 (STAIR_FLIGHT_ZONE, 10.415 m2); the stair opening of the 1F roof slab over the 1F -> 2F run"
+SO-FFRS-06,S8.6 slab-opening census,,NOT_STAIR (lift shaft void),OPENING,,"S1 slab panel SP-1F_ROOF_SLAB-06 (OPEN_TO_BELOW, 3.24 m2); same shaft one storey up"
+SO-GBP-12,S8.6 slab-opening census,,ST-C (repeated view) + GF hall floor,OPENING,,"S1 slab panel SP-GBP-12 (STAIR_FLIGHT_ZONE, 8.372 m2); ground view of the light-well flight start"
+SO-GFRS-03,S8.6 slab-opening census,,ST-A A1,OPENING,,"S1 slab panel SP-GF_ROOF_SLAB-03 (STAIR_FLIGHT_ZONE, 10.415 m2); the stair opening of the GF roof slab over the GF -> 1F run"
+SO-GFRS-09,S8.6 slab-opening census,,NOT_STAIR (void at x 31209 - 32908),OPENING,,"S1 slab panel SP-GF_ROOF_SLAB-09 (OPEN_TO_BELOW, 3.686 m2); no tread drawn in or near it"
+SO-GFRS-13,S8.6 slab-opening census,,NOT_STAIR (lift shaft void),OPENING,,"S1 slab panel SP-GF_ROOF_SLAB-13 (OPEN_TO_BELOW, 3.24 m2); beside the main stair bay, x 19788 - 21588"
+SO-GFRS-21,S8.6 slab-opening census,,ST-C + LIGHT_WELL_VOID,OPENING,,"S1 slab panel SP-GF_ROOF_SLAB-21 (STAIR_IN_VOID_ZONE, 20.146 m2); the light well open to below and the curved flight band"
+SO-GFRS-28,S8.6 slab-opening census,,ST-C,OPENING,,"S1 slab panel SP-GF_ROOF_SLAB-28 (STAIR_FLIGHT_ZONE, 6.979 m2); straight end, corner landing, short flight and top arrival"
+BM-GF_ROOF-B3-BL033-6B7,S6 occurrence ('With Stair' tag),,A1-L1 / A1-W1 north support,SUPPORT (S6 owns; not re-added),,
+BM-1F_ROOF-B3-BL023-6B9,S6 occurrence ('With Stair' tag),,A2-L1 / A2-W1 north support,SUPPORT (S6 owns; not re-added),,
+CBO-GFRS-CB3-BL022,S6 occurrence ('With Stair' tag),,C-F1 / C-L1 south support (span 24308 - 27658),SUPPORT (S6 owns; not re-added),,
+BM-GF_ROOF-CA-BL015-69E,S6 occurrence (beam CA),,crosses C-F1 (plan overlap 0.345 m2; level not stated),SUPPORT (S6 owns; not re-added),,
+SPC-STAIR-SP-GF_ROOF_SLAB-03,S1 SPECIAL_STRUCTURAL_OCCURRENCE / PRE-S8 ELEMENT,,ST-A,ONE OF 2 RECORDS OF ONE STAIR,,five PRE-S8 stair zones = two staircases
+SPC-STAIR-SP-1F_ROOF_SLAB-01,S1 SPECIAL_STRUCTURAL_OCCURRENCE / PRE-S8 ELEMENT,,ST-A,ONE OF 2 RECORDS OF ONE STAIR,,five PRE-S8 stair zones = two staircases
+SPC-STAIR-SP-GF_ROOF_SLAB-21,S1 SPECIAL_STRUCTURAL_OCCURRENCE / PRE-S8 ELEMENT,,ST-C,ONE OF 3 RECORDS OF ONE STAIR,,five PRE-S8 stair zones = two staircases
+SPC-STAIR-SP-GF_ROOF_SLAB-28,S1 SPECIAL_STRUCTURAL_OCCURRENCE / PRE-S8 ELEMENT,,ST-C,ONE OF 3 RECORDS OF ONE STAIR,,five PRE-S8 stair zones = two staircases
+SPC-STAIR-SP-GBP-12,S1 SPECIAL_STRUCTURAL_OCCURRENCE / PRE-S8 ELEMENT,,ST-C,ONE OF 3 RECORDS OF ONE STAIR,,five PRE-S8 stair zones = two staircases

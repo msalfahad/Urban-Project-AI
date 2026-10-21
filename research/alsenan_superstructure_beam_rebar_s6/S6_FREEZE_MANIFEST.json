@@ -1,0 +1,47 @@
+{
+ "baseline": "d39f5f6",
+ "code": {
+  "engine/source/accurate_boq_rebar.py": "0f919bed502dab3b232a75f913ec7832dd530d4607e9bfacce6c9592b0bcdacb",
+  "engine/source/rebar_model.py": "5a67349f8feeffe18096534a16556f1967b66f4e3e4ce50e995c5df57bc5838c",
+  "engine/source/rebar_provenance.py": "8336f53f2882d751a1e7676336f2be8c4884d4c75f4e8175fd2dea56ba2387ca",
+  "engine/source/rebar_unit_mass.py": "81d63a85da8e64600d0c49a6662bcc49655f46dc71603654b3e1438c5b146eb8",
+  "engine/source/superstructure_beam_rebar.py": "2c19e66b30e2c160f53d5609c7f3481a44b163fc9056f8d17543a87c75f3000d",
+  "research/alsenan_superstructure_beam_rebar_s6/build_superstructure_beam_rebar_s6.py": "51d221a7a325b9a1be028b6ed84fed4e1ba4eb684ff4f76d898917329587d463"
+ },
+ "engine_commit_stamp": "d39f5f6+code:add76dd5f5e9c59a",
+ "inputs": {
+  "research/pre_s6_superstructure_beam_readiness/01_BEAM_OCCURRENCE_CONSERVATION.csv": "0f431ea3f2afbecaf3457c366a03a27bb40a0ec9b7053095bb89311e962e08af",
+  "research/pre_s6_superstructure_beam_readiness/05_CB_SPAN_SEQUENCE.csv": "696c07fac33374d7d3de6e62f2d0cdcba9a48682839174730be83f95df969a7b",
+  "research/pre_s6_superstructure_beam_readiness/06_BEAM_BAR_RUN_READINESS.csv": "3541482d9e318f1126ae00cf52883a2108ffeca398939418a8c59a7cea2f6af5",
+  "research/pre_s6_superstructure_beam_readiness/07_BEAM_SIDE_REBAR_READINESS.csv": "f3fedff4058915dd4488a268cbf1766c3cd9ee4a593811c2aa20d6586f2c526b",
+  "research/pre_s6_superstructure_beam_readiness/08_BEAM_OPENING_OCCURRENCES.csv": "8b80913d950449a9bd55d3c54d4a6b90ea1da1584b81231feca18c3437965e6c",
+  "research/pre_s6_superstructure_beam_readiness/09_BEAM_TOKEN_CORPUS.csv": "08b24935b270f9635967e7d6d86c8aec57e0d50a891b83e4f7a3ba41a3784cca",
+  "research/pre_s6_superstructure_beam_readiness/10_SUPERSTRUCTURE_BEAM_REBAR_READINESS.csv": "de686e6c488bdad573ec43f7a9c2856d2f37acd57c76bbc40fd44c094f473397",
+  "research/pre_s6_superstructure_beam_readiness/INDEX.json": "ecdd0188612b21c3ba9c1560e50be971206464bb5309b503f04a5a05abb3238f",
+  "research/pre_s6_superstructure_beam_readiness/PRE_S6_SUMMARY.json": "f4c1d4c1b5b0a9a2017c8db749abcc969b54e1ec1db103618afccff531ee2c50",
+  "research/pre_s6_superstructure_beam_readiness/S6_PROVENANCE_TEMPLATES.json": "c42bb7e84a79196db0bf569b5ddbccad3bf5f9c42d2067c4d0ad6711f1ebaec5"
+ },
+ "outputs": {
+  "CONTINUOUS_BEAM_REBAR_SUMMARY.csv": "ac6defc21ff5499b8f8722b6bdb293179bd20f217d6b94768e2b0a94202b73ba",
+  "README.md": "cbb590665393a80d9fc9bd322cadae3292974cd644c2c3853fb84e4dc603b343",
+  "S6_1_RELEASE_CANDIDATES.csv": "458c338ad90a49a43b70bc7feea364e53824a668aa97a0f82e65f47dc8d6b663",
+  "SIMPLE_BEAM_REBAR_SUMMARY.csv": "7fe9e0ee7e2c6e18425f3fc242b3774c5fc5454e570c3cfe301b7206b61c4ade",
+  "SUPERSTRUCTURE_BEAM_BAR_RUNS.csv": "f3eb17d94f35a9a29b97e9a30ff56d33b7b1393688ad5f4c7466884b1cfbc48c",
+  "SUPERSTRUCTURE_BEAM_BBS_NET.csv": "f3adbd0881a522733e8916df5ce37a61424bc3739d4fe533074c0152ffaa282d",
+  "SUPERSTRUCTURE_BEAM_COMPONENTS.csv": "e7699a9c83a0798a33395c9c87fd451e6cef0c76d729a096f81354c2ced8e824",
+  "SUPERSTRUCTURE_BEAM_ENGINEERING_FLAGS.csv": "fb88a4224897b6728f21fbae1db631ce475f59badf2e392b9b48cc131afa7b27",
+  "SUPERSTRUCTURE_BEAM_ENGINEERING_QUESTIONS.csv": "cef8f9bf8c7fb200213d561cacdf1f9d1068ff869506e85facaec5cfc29f11cb",
+  "SUPERSTRUCTURE_BEAM_OBJECT_CONSERVATION.csv": "e6d9173de9a28f9a494241a65f199bc32ac2df3be6008b99f550160da7618835",
+  "SUPERSTRUCTURE_BEAM_OCCURRENCES.csv": "613fa422d310192c7729dc073ffbd23016d1346969567b6a94b1e64720181690",
+  "SUPERSTRUCTURE_BEAM_OCCURRENCE_REGISTER.json": "8fd2b09278a3b311510a69b158c712f84f1c328952c273481f22eda2a0a0e068",
+  "SUPERSTRUCTURE_BEAM_PROVENANCE.jsonl": "da938c5dcc1022b5a6101e5435a7fd42364ef818a23dd6b1442219d4f5b08e38",
+  "SUPERSTRUCTURE_BEAM_RELEASE_SUMMARY.json": "0bf203514cbc22938413f905a93b609c8e817cb2fbbbc1a14c0be2b5f0910fdd",
+  "SUPERSTRUCTURE_BEAM_STIRRUP_COUNTS.csv": "4fe37062c47f35c615f7c160e9149cae1edcf15ea7c5821376576112868300f3",
+  "SUPERSTRUCTURE_BEAM_TOKEN_TERMINALS.csv": "6365aa978461f591d8c2c192fc688fef8dfacce9f631259dc4d26f71c0d6e2db",
+  "SUPERSTRUCTURE_BEAM_UNRESOLVED.csv": "0acc23508db29954a95740c16a04c2ca8806eb820290c9467eb661894c145dd7"
+ },
+ "references_read_before_freeze": [],
+ "round": "S6",
+ "rule": "the post-freeze comparison script refuses to run unless every hash above still matches; a correction found by the comparison needs a new issue, new evidence, a new regression and a new version - never an edit of these outputs and never a tuning to a reference",
+ "state": "FROZEN_BEFORE_REFERENCE_COMPARISON"
+}

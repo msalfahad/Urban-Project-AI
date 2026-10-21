@@ -1,0 +1,1052 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_A2_OPENING_REGISTER_V1",
+ "doors": [
+  {
+   "floor": "GF",
+   "occurrence": "E820",
+   "basis": "INFERRED_DOOR_MOTIF",
+   "block_name_corroboration": null,
+   "leaf_width_mm": 690.0,
+   "closure_width_mm": 800.0,
+   "state": "CLOSED",
+   "why": null,
+   "sites": [
+    "SITE-714889aea3e329c7"
+   ],
+   "rooms": [
+    ""
+   ],
+   "height": "BLOCKED_HEIGHT (no door schedule; section shows no printed door head)",
+   "material": "BLOCKED_MATERIAL (no door schedule)"
+  },
+  {
+   "floor": "GF",
+   "occurrence": "I1023",
+   "basis": "INFERRED_DOOR_MOTIF",
+   "block_name_corroboration": "D120",
+   "leaf_width_mm": 890.0,
+   "closure_width_mm": null,
+   "state": "OPENING_CLOSURE_UNRESOLVED",
+   "why": "no leaf hypothesis lands on admitted walls at both ends",
+   "sites": [],
+   "rooms": [],
+   "height": "BLOCKED_HEIGHT (no door schedule; section shows no printed door head)",
+   "material": "BLOCKED_MATERIAL (no door schedule)"
+  },
+  {
+   "floor": "GF",
+   "occurrence": "I350",
+   "basis": "INFERRED_DOOR_MOTIF",
+   "block_name_corroboration": "D120",
+   "leaf_width_mm": 890.0,
+   "closure_width_mm": 1000.0,
+   "state": "CLOSED",
+   "why": null,
+   "sites": [
+    "SITE-810cacd9be443703"
+   ],
+   "rooms": [
+    "DEWANEYA / Wash"
+   ],
+   "height": "BLOCKED_HEIGHT (no door schedule; section shows no printed door head)",
+   "material": "BLOCKED_MATERIAL (no door schedule)"
+  },
+  {
+   "floor": "GF",
+   "occurrence": "I402",
+   "basis": "INFERRED_DOOR_MOTIF",
+   "block_name_corroboration": "D120",
+   "leaf_width_mm": 890.0,
+   "closure_width_mm": 1000.0,
+   "state": "CLOSED",
+   "why": null,
+   "sites": [
+    "SITE-88d9dbffd47c417a"
+   ],
+   "rooms": [
+    "KITCHEN"
+   ],
+   "height": "BLOCKED_HEIGHT (no door schedule; section shows no printed door head)",
+   "material": "BLOCKED_MATERIAL (no door schedule)"
+  },
+  {
+   "floor": "GF",
+   "occurrence": "I414",
+   "basis": "INFERRED_DOOR_MOTIF",
+   "block_name_corroboration": "D315",
+   "leaf_width_mm": 690.0,
+   "closure_width_mm": 800.0,
+   "state": "CLOSED",
+   "why": null,
+   "sites": [
+    "SITE-9b585230d0877a35"
+   ],
+   "rooms": [
+    "W.C"
+   ],
+   "height": "BLOCKED_HEIGHT (no door schedule; section shows no printed door head)",
+   "material": "BLOCKED_MATERIAL (no door schedule)"
+  },
+  {
+   "floor": "GF",
+   "occurrence": "I437",
+   "basis": "INFERRED_DOOR_MOTIF",
+   "block_name_corroboration": "d220",
+   "leaf_width_mm": 790.0,
+   "closure_width_mm": 900.0,
+   "state": "CLOSED",
+   "why": null,
+   "sites": [],
+   "rooms": [],
+   "height": "BLOCKED_HEIGHT (no door schedule; section shows no printed door head)",
+   "material": "BLOCKED_MATERIAL (no door schedule)"
+  },
+  {
+   "floor": "GF",
+   "occurrence": "I495",
+   "basis": "INFERRED_DOOR_MOTIF",
+   "block_name_corroboration": "D315",
+   "leaf_width_mm": 690.0,
+   "closure_width_mm": 800.0,
+   "state": "CLOSED",
+   "why": null,
+   "sites": [
+    "SITE-dd6245b163cafde0",
+    "SITE-eac7a1be6566b2d0"
+   ],
+   "rooms": [
+    "",
+    "W.C"
+   ],
+   "height": "BLOCKED_HEIGHT (no door schedule; section shows no printed door head)",
+   "material": "BLOCKED_MATERIAL (no door schedule)"
+  },
+  {
+   "floor": "GF",
+   "occurrence": "I711",
+   "basis": "INFERRED_DOOR_MOTIF",
+   "block_name_corroboration": "D120",
+   "leaf_width_mm": 890.0,
+   "closure_width_mm": 1000.0,
+   "state": "CLOSED",
+   "why": null,
+   "sites": [],
+   "rooms": [],
+   "height": "BLOCKED_HEIGHT (no door schedule; section shows no printed door head)",
+   "material": "BLOCKED_MATERIAL (no door schedule)"
+  },
+  {
+   "floor": "GF",
+   "occurrence": "I754",
+   "basis": "INFERRED_DOOR_MOTIF",
+   "block_name_corroboration": "D115",
+   "leaf_width_mm": 890.0,
+   "closure_width_mm": null,
+   "state": "OPENING_CLOSURE_UNRESOLVED",
+   "why": "no leaf hypothesis lands on admitted walls at both ends",
+   "sites": [],
+   "rooms": [],
+   "height": "BLOCKED_HEIGHT (no door schedule; section shows no printed door head)",
+   "material": "BLOCKED_MATERIAL (no door schedule)"
+  },
+  {
+   "floor": "GF",
+   "occurrence": "I800",
+   "basis": "INFERRED_DOOR_MOTIF",
+   "block_name_corroboration": "D315",
+   "leaf_width_mm": 690.0,
+   "closure_width_mm": 827.6,
+   "state": "CLOSED",
+   "why": null,
+   "sites": [
+    "SITE-5191e28052b00088"
+   ],
+   "rooms": [
+    "W.C"
+   ],
+   "height": "BLOCKED_HEIGHT (no door schedule; section shows no printed door head)",
+   "material": "BLOCKED_MATERIAL (no door schedule)"
+  },
+  {
+   "floor": "GF",
+   "occurrence": "I801",
+   "basis": "INFERRED_DOOR_MOTIF",
+   "block_name_corroboration": "D315",
+   "leaf_width_mm": 690.0,
+   "closure_width_mm": 800.0,
+   "state": "CLOSED",
+   "why": null,
+   "sites": [
+    "SITE-9810548752edbe40"
+   ],
+   "rooms": [
+    "W.C"
+   ],
+   "height": "BLOCKED_HEIGHT (no door schedule; section shows no printed door head)",
+   "material": "BLOCKED_MATERIAL (no door schedule)"
+  },
+  {
+   "floor": "GF",
+   "occurrence": "I825",
+   "basis": "INFERRED_DOOR_MOTIF",
+   "block_name_corroboration": "D315",
+   "leaf_width_mm": 690.0,
+   "closure_width_mm": 797.0,
+   "state": "CLOSED",
+   "why": null,
+   "sites": [
+    "SITE-ce2d2c3a4b7da280"
+   ],
+   "rooms": [
+    "W.C"
+   ],
+   "height": "BLOCKED_HEIGHT (no door schedule; section shows no printed door head)",
+   "material": "BLOCKED_MATERIAL (no door schedule)"
+  },
+  {
+   "floor": "GF",
+   "occurrence": "I830",
+   "basis": "INFERRED_DOOR_MOTIF",
+   "block_name_corroboration": "D120",
+   "leaf_width_mm": 890.0,
+   "closure_width_mm": 1000.0,
+   "state": "CLOSED",
+   "why": null,
+   "sites": [],
+   "rooms": [],
+   "height": "BLOCKED_HEIGHT (no door schedule; section shows no printed door head)",
+   "material": "BLOCKED_MATERIAL (no door schedule)"
+  },
+  {
+   "floor": "1F",
+   "occurrence": "I3054",
+   "basis": "INFERRED_DOOR_MOTIF",
+   "block_name_corroboration": "D315",
+   "leaf_width_mm": 690.0,
+   "closure_width_mm": 800.0,
+   "state": "CLOSED",
+   "why": null,
+   "sites": [
+    "SITE-cdc894c0f0fd69c9",
+    "SITE-fc4ad3741a3997f7"
+   ],
+   "rooms": [
+    "BATH",
+    ""
+   ],
+   "height": "BLOCKED_HEIGHT (no door schedule; section shows no printed door head)",
+   "material": "BLOCKED_MATERIAL (no door schedule)"
+  },
+  {
+   "floor": "1F",
+   "occurrence": "I3055",
+   "basis": "INFERRED_DOOR_MOTIF",
+   "block_name_corroboration": "D215",
+   "leaf_width_mm": 790.0,
+   "closure_width_mm": null,
+   "state": "OPENING_CLOSURE_UNRESOLVED",
+   "why": "no leaf hypothesis lands on admitted walls at both ends",
+   "sites": [],
+   "rooms": [],
+   "height": "BLOCKED_HEIGHT (no door schedule; section shows no printed door head)",
+   "material": "BLOCKED_MATERIAL (no door schedule)"
+  },
+  {
+   "floor": "1F",
+   "occurrence": "I3090",
+   "basis": "INFERRED_DOOR_MOTIF",
+   "block_name_corroboration": "D315",
+   "leaf_width_mm": 690.0,
+   "closure_width_mm": 800.0,
+   "state": "CLOSED",
+   "why": null,
+   "sites": [
+    "SITE-2f6cf2b5bebbd966"
+   ],
+   "rooms": [
+    "BATH"
+   ],
+   "height": "BLOCKED_HEIGHT (no door schedule; section shows no printed door head)",
+   "material": "BLOCKED_MATERIAL (no door schedule)"
+  },
+  {
+   "floor": "1F",
+   "occurrence": "I3096",
+   "basis": "INFERRED_DOOR_MOTIF",
+   "block_name_corroboration": "D215",
+   "leaf_width_mm": 790.0,
+   "closure_width_mm": 900.0,
+   "state": "CLOSED",
+   "why": null,
+   "sites": [
+    "SITE-3cde308552cf977c"
+   ],
+   "rooms": [
+    "MASTER BED ROOM"
+   ],
+   "height": "BLOCKED_HEIGHT (no door schedule; section shows no printed door head)",
+   "material": "BLOCKED_MATERIAL (no door schedule)"
+  },
+  {
+   "floor": "1F",
+   "occurrence": "I3098",
+   "basis": "INFERRED_DOOR_MOTIF",
+   "block_name_corroboration": "d220",
+   "leaf_width_mm": 790.0,
+   "closure_width_mm": 900.0,
+   "state": "CLOSED",
+   "why": null,
+   "sites": [],
+   "rooms": [],
+   "height": "BLOCKED_HEIGHT (no door schedule; section shows no printed door head)",
+   "material": "BLOCKED_MATERIAL (no door schedule)"
+  },
+  {
+   "floor": "1F",
+   "occurrence": "I3115",
+   "basis": "INFERRED_DOOR_MOTIF",
+   "block_name_corroboration": "D315",
+   "leaf_width_mm": 690.0,
+   "closure_width_mm": 800.0,
+   "state": "CLOSED",
+   "why": null,
+   "sites": [
+    "SITE-16f76cd141ed8273",
+    "SITE-87d911399edea4c0"
+   ],
+   "rooms": [
+    "BATH",
+    "MASTER BED ROOM / MASTER BED ROOM"
+   ],
+   "height": "BLOCKED_HEIGHT (no door schedule; section shows no printed door head)",
+   "material": "BLOCKED_MATERIAL (no door schedule)"
+  },
+  {
+   "floor": "1F",
+   "occurrence": "I3118",
+   "basis": "INFERRED_DOOR_MOTIF",
+   "block_name_corroboration": "D315",
+   "leaf_width_mm": 690.0,
+   "closure_width_mm": 800.0,
+   "state": "CLOSED",
+   "why": null,
+   "sites": [
+    "SITE-87d911399edea4c0"
+   ],
+   "rooms": [
+    "MASTER BED ROOM / MASTER BED ROOM"
+   ],
+   "height": "BLOCKED_HEIGHT (no door schedule; section shows no printed door head)",
+   "material": "BLOCKED_MATERIAL (no door schedule)"
+  },
+  {
+   "floor": "1F",
+   "occurrence": "I3121",
+   "basis": "INFERRED_DOOR_MOTIF",
+   "block_name_corroboration": "D115",
+   "leaf_width_mm": 890.0,
+   "closure_width_mm": 1000.0,
+   "state": "CLOSED",
+   "why": null,
+   "sites": [
+    "SITE-87d911399edea4c0"
+   ],
+   "rooms": [
+    "MASTER BED ROOM / MASTER BED ROOM"
+   ],
+   "height": "BLOCKED_HEIGHT (no door schedule; section shows no printed door head)",
+   "material": "BLOCKED_MATERIAL (no door schedule)"
+  },
+  {
+   "floor": "1F",
+   "occurrence": "I3122",
+   "basis": "INFERRED_DOOR_MOTIF",
+   "block_name_corroboration": "D115",
+   "leaf_width_mm": 890.0,
+   "closure_width_mm": 1000.0,
+   "state": "CLOSED",
+   "why": null,
+   "sites": [
+    "SITE-87d911399edea4c0"
+   ],
+   "rooms": [
+    "MASTER BED ROOM / MASTER BED ROOM"
+   ],
+   "height": "BLOCKED_HEIGHT (no door schedule; section shows no printed door head)",
+   "material": "BLOCKED_MATERIAL (no door schedule)"
+  },
+  {
+   "floor": "1F",
+   "occurrence": "I4532",
+   "basis": "INFERRED_DOOR_MOTIF",
+   "block_name_corroboration": "D315",
+   "leaf_width_mm": 690.0,
+   "closure_width_mm": 800.0,
+   "state": "CLOSED",
+   "why": null,
+   "sites": [],
+   "rooms": [],
+   "height": "BLOCKED_HEIGHT (no door schedule; section shows no printed door head)",
+   "material": "BLOCKED_MATERIAL (no door schedule)"
+  },
+  {
+   "floor": "2F",
+   "occurrence": "I4794",
+   "basis": "INFERRED_DOOR_MOTIF",
+   "block_name_corroboration": "D115",
+   "leaf_width_mm": 890.0,
+   "closure_width_mm": 1000.0,
+   "state": "CLOSED",
+   "why": null,
+   "sites": [
+    "SITE-fc3aaade70a89c79"
+   ],
+   "rooms": [
+    ""
+   ],
+   "height": "BLOCKED_HEIGHT (no door schedule; section shows no printed door head)",
+   "material": "BLOCKED_MATERIAL (no door schedule)"
+  },
+  {
+   "floor": "2F",
+   "occurrence": "I4795",
+   "basis": "INFERRED_DOOR_MOTIF",
+   "block_name_corroboration": "D315",
+   "leaf_width_mm": 690.0,
+   "closure_width_mm": 800.0,
+   "state": "CLOSED",
+   "why": null,
+   "sites": [
+    "SITE-47c1846e082a69b3",
+    "SITE-ae46ec7518ab613e"
+   ],
+   "rooms": [
+    "",
+    ""
+   ],
+   "height": "BLOCKED_HEIGHT (no door schedule; section shows no printed door head)",
+   "material": "BLOCKED_MATERIAL (no door schedule)"
+  },
+  {
+   "floor": "2F",
+   "occurrence": "I4802",
+   "basis": "INFERRED_DOOR_MOTIF",
+   "block_name_corroboration": "d220",
+   "leaf_width_mm": 790.0,
+   "closure_width_mm": 900.0,
+   "state": "CLOSED",
+   "why": null,
+   "sites": [
+    "SITE-47c1846e082a69b3",
+    "SITE-fc3aaade70a89c79"
+   ],
+   "rooms": [
+    "",
+    ""
+   ],
+   "height": "BLOCKED_HEIGHT (no door schedule; section shows no printed door head)",
+   "material": "BLOCKED_MATERIAL (no door schedule)"
+  }
+ ],
+ "windows": [
+  {
+   "floor": "GF",
+   "window": "GF-W01",
+   "width_mm": 900.0,
+   "wall_thickness_mm": 200.0,
+   "parts": 2,
+   "host_sites": [],
+   "host_rooms": [],
+   "existence": "GLAZING_IN_WALL_GAP (entity_role_inference)",
+   "height": "BLOCKED_HEIGHT (no sill / head printed for this opening)",
+   "material": "BLOCKED_MATERIAL (no window schedule)"
+  },
+  {
+   "floor": "GF",
+   "window": "GF-W02",
+   "width_mm": 1500.0,
+   "wall_thickness_mm": 200.0,
+   "parts": 11,
+   "host_sites": [
+    "SITE-0f16e5f864f6d2ba",
+    "SITE-27346366566c3bad",
+    "SITE-88d9dbffd47c417a",
+    "SITE-99c2230fb46f80cb",
+    "SITE-abd5c3c3a7cec405",
+    "SITE-b34378da15c94b14"
+   ],
+   "host_rooms": [
+    "KITCHEN"
+   ],
+   "existence": "GLAZING_IN_WALL_GAP (entity_role_inference)",
+   "height": "BLOCKED_HEIGHT (no sill / head printed for this opening)",
+   "material": "BLOCKED_MATERIAL (no window schedule)"
+  },
+  {
+   "floor": "GF",
+   "window": "GF-W03",
+   "width_mm": 1000.0,
+   "wall_thickness_mm": 200.0,
+   "parts": 2,
+   "host_sites": [],
+   "host_rooms": [],
+   "existence": "GLAZING_IN_WALL_GAP (entity_role_inference)",
+   "height": "BLOCKED_HEIGHT (no sill / head printed for this opening)",
+   "material": "BLOCKED_MATERIAL (no window schedule)"
+  },
+  {
+   "floor": "GF",
+   "window": "GF-W04",
+   "width_mm": 1000.0,
+   "wall_thickness_mm": 200.0,
+   "parts": 4,
+   "host_sites": [
+    "SITE-0bb9132c5c034229",
+    "SITE-1b51ee0227cd05f7",
+    "SITE-c37ebd4d4eb93ca8",
+    "SITE-e9f0b96e25e06e27"
+   ],
+   "host_rooms": [],
+   "existence": "GLAZING_IN_WALL_GAP (entity_role_inference)",
+   "height": "BLOCKED_HEIGHT (no sill / head printed for this opening)",
+   "material": "BLOCKED_MATERIAL (no window schedule)"
+  },
+  {
+   "floor": "GF",
+   "window": "GF-W05",
+   "width_mm": 900.0,
+   "wall_thickness_mm": 200.0,
+   "parts": 2,
+   "host_sites": [],
+   "host_rooms": [],
+   "existence": "GLAZING_IN_WALL_GAP (entity_role_inference)",
+   "height": "BLOCKED_HEIGHT (no sill / head printed for this opening)",
+   "material": "BLOCKED_MATERIAL (no window schedule)"
+  },
+  {
+   "floor": "GF",
+   "window": "GF-W06",
+   "width_mm": 600.0,
+   "wall_thickness_mm": 200.0,
+   "parts": 11,
+   "host_sites": [
+    "SITE-1df4f656d3ceb9d8",
+    "SITE-b387c6c71ba7b033",
+    "SITE-bd6bfe5db7e89ba5",
+    "SITE-ce2d2c3a4b7da280",
+    "SITE-ece5073967f40719",
+    "SITE-f5cc021d27d2e314"
+   ],
+   "host_rooms": [
+    "W.C"
+   ],
+   "existence": "GLAZING_IN_WALL_GAP (entity_role_inference)",
+   "height": "BLOCKED_HEIGHT (no sill / head printed for this opening)",
+   "material": "BLOCKED_MATERIAL (no window schedule)"
+  },
+  {
+   "floor": "GF",
+   "window": "GF-W07",
+   "width_mm": 600.0,
+   "wall_thickness_mm": 200.0,
+   "parts": 11,
+   "host_sites": [
+    "SITE-216947b37a1e90bb",
+    "SITE-3403d4b4d220eea6",
+    "SITE-34f586f4582e7048",
+    "SITE-5191e28052b00088",
+    "SITE-c1c7e5cb6d0c8ec1",
+    "SITE-fc62e8b1fc167be7"
+   ],
+   "host_rooms": [
+    "W.C"
+   ],
+   "existence": "GLAZING_IN_WALL_GAP (entity_role_inference)",
+   "height": "BLOCKED_HEIGHT (no sill / head printed for this opening)",
+   "material": "BLOCKED_MATERIAL (no window schedule)"
+  },
+  {
+   "floor": "GF",
+   "window": "GF-W08",
+   "width_mm": 600.0,
+   "wall_thickness_mm": 200.0,
+   "parts": 11,
+   "host_sites": [
+    "SITE-42a3c9afc2819e42",
+    "SITE-6e7b13cb97d5f2fc",
+    "SITE-714889aea3e329c7",
+    "SITE-8090e7d508e20fb1",
+    "SITE-9d5b673cba6164e1",
+    "SITE-b7a7b2540f2c91e9"
+   ],
+   "host_rooms": [],
+   "existence": "GLAZING_IN_WALL_GAP (entity_role_inference)",
+   "height": "BLOCKED_HEIGHT (no sill / head printed for this opening)",
+   "material": "BLOCKED_MATERIAL (no window schedule)"
+  },
+  {
+   "floor": "GF",
+   "window": "GF-W09",
+   "width_mm": 6331.6,
+   "wall_thickness_mm": 200.0,
+   "parts": 11,
+   "host_sites": [
+    "SITE-3eae180adccb4bd2",
+    "SITE-99305f2c0da1bc54",
+    "SITE-9c2c5bf236040c63",
+    "SITE-b784d8277cf2aa3a",
+    "SITE-bb8ba1039f577d30"
+   ],
+   "host_rooms": [],
+   "existence": "GLAZING_IN_WALL_GAP (entity_role_inference)",
+   "height": "BLOCKED_HEIGHT (no sill / head printed for this opening)",
+   "material": "BLOCKED_MATERIAL (no window schedule)"
+  },
+  {
+   "floor": "GF",
+   "window": "GF-W10",
+   "width_mm": 1200.0,
+   "wall_thickness_mm": 200.0,
+   "parts": 4,
+   "host_sites": [
+    "SITE-17ddc536bba1fcb5",
+    "SITE-c3b56648872f8912",
+    "SITE-df0b06053a1fe360"
+   ],
+   "host_rooms": [],
+   "existence": "GLAZING_IN_WALL_GAP (entity_role_inference)",
+   "height": "BLOCKED_HEIGHT (no sill / head printed for this opening)",
+   "material": "BLOCKED_MATERIAL (no window schedule)"
+  },
+  {
+   "floor": "GF",
+   "window": "GF-W11",
+   "width_mm": 1000.0,
+   "wall_thickness_mm": 200.0,
+   "parts": 11,
+   "host_sites": [
+    "SITE-21fda2ec4a39558f",
+    "SITE-424d569ab14ec5fd",
+    "SITE-756e006cfa39227b",
+    "SITE-782cf11c69f8d060",
+    "SITE-9a3590f4d0ca7db7"
+   ],
+   "host_rooms": [],
+   "existence": "GLAZING_IN_WALL_GAP (entity_role_inference)",
+   "height": "BLOCKED_HEIGHT (no sill / head printed for this opening)",
+   "material": "BLOCKED_MATERIAL (no window schedule)"
+  },
+  {
+   "floor": "GF",
+   "window": "GF-W12",
+   "width_mm": 1500.0,
+   "wall_thickness_mm": 200.0,
+   "parts": 11,
+   "host_sites": [
+    "SITE-36ec89510a0b819a",
+    "SITE-541d11db02f8dfbe",
+    "SITE-6fc36ca2275a9e07",
+    "SITE-db58453f35a71b2d",
+    "SITE-f827488842220469"
+   ],
+   "host_rooms": [],
+   "existence": "GLAZING_IN_WALL_GAP (entity_role_inference)",
+   "height": "BLOCKED_HEIGHT (no sill / head printed for this opening)",
+   "material": "BLOCKED_MATERIAL (no window schedule)"
+  },
+  {
+   "floor": "GF",
+   "window": "GF-W13",
+   "width_mm": 1000.0,
+   "wall_thickness_mm": 200.0,
+   "parts": 2,
+   "host_sites": [],
+   "host_rooms": [],
+   "existence": "GLAZING_IN_WALL_GAP (entity_role_inference)",
+   "height": "BLOCKED_HEIGHT (no sill / head printed for this opening)",
+   "material": "BLOCKED_MATERIAL (no window schedule)"
+  },
+  {
+   "floor": "GF",
+   "window": "GF-W14",
+   "width_mm": 1000.0,
+   "wall_thickness_mm": 150.0,
+   "parts": 4,
+   "host_sites": [
+    "SITE-013c8e3ceb8f664c",
+    "SITE-810cacd9be443703",
+    "SITE-c6ad1d286f392cb9",
+    "SITE-dd6245b163cafde0"
+   ],
+   "host_rooms": [
+    "DEWANEYA / Wash"
+   ],
+   "existence": "GLAZING_IN_WALL_GAP (entity_role_inference)",
+   "height": "BLOCKED_HEIGHT (no sill / head printed for this opening)",
+   "material": "BLOCKED_MATERIAL (no window schedule)"
+  },
+  {
+   "floor": "GF",
+   "window": "GF-W15",
+   "width_mm": 1954.9,
+   "wall_thickness_mm": 200.0,
+   "parts": 4,
+   "host_sites": [
+    "SITE-00d6c09bbc2becc3",
+    "SITE-53cbed92360d03b5",
+    "SITE-55729a7462413d02",
+    "SITE-810cacd9be443703"
+   ],
+   "host_rooms": [
+    "DEWANEYA / Wash"
+   ],
+   "existence": "GLAZING_IN_WALL_GAP (entity_role_inference)",
+   "height": "BLOCKED_HEIGHT (no sill / head printed for this opening)",
+   "material": "BLOCKED_MATERIAL (no window schedule)"
+  },
+  {
+   "floor": "GF",
+   "window": "GF-W16",
+   "width_mm": 1954.9,
+   "wall_thickness_mm": 200.0,
+   "parts": 4,
+   "host_sites": [
+    "SITE-1acc2c06b280425f",
+    "SITE-5172fbe900ab5078",
+    "SITE-810cacd9be443703",
+    "SITE-8f18aeace4b67be1"
+   ],
+   "host_rooms": [
+    "DEWANEYA / Wash"
+   ],
+   "existence": "GLAZING_IN_WALL_GAP (entity_role_inference)",
+   "height": "BLOCKED_HEIGHT (no sill / head printed for this opening)",
+   "material": "BLOCKED_MATERIAL (no window schedule)"
+  },
+  {
+   "floor": "1F",
+   "window": "1F-W01",
+   "width_mm": 600.0,
+   "wall_thickness_mm": 200.0,
+   "parts": 11,
+   "host_sites": [
+    "SITE-1680dcf3721930be",
+    "SITE-16f76cd141ed8273",
+    "SITE-27322a8c6a64dbf3",
+    "SITE-28c15610a545119a",
+    "SITE-6efab850b94f4108",
+    "SITE-baf8769ecbdbd180"
+   ],
+   "host_rooms": [
+    "BATH"
+   ],
+   "existence": "GLAZING_IN_WALL_GAP (entity_role_inference)",
+   "height": "BLOCKED_HEIGHT (no sill / head printed for this opening)",
+   "material": "BLOCKED_MATERIAL (no window schedule)"
+  },
+  {
+   "floor": "1F",
+   "window": "1F-W02",
+   "width_mm": 1552.3,
+   "wall_thickness_mm": 200.0,
+   "parts": 11,
+   "host_sites": [
+    "SITE-15af1cdbe2228ae3",
+    "SITE-67b5240b33ef2df1",
+    "SITE-7bb6e76a44ccc937",
+    "SITE-87d911399edea4c0",
+    "SITE-9ea388b201e984de",
+    "SITE-ec385482682582ae"
+   ],
+   "host_rooms": [
+    "MASTER BED ROOM / MASTER BED ROOM"
+   ],
+   "existence": "GLAZING_IN_WALL_GAP (entity_role_inference)",
+   "height": "BLOCKED_HEIGHT (no sill / head printed for this opening)",
+   "material": "BLOCKED_MATERIAL (no window schedule)"
+  },
+  {
+   "floor": "1F",
+   "window": "1F-W03",
+   "width_mm": 1000.0,
+   "wall_thickness_mm": 200.0,
+   "parts": 4,
+   "host_sites": [
+    "SITE-195dbe4bca9e732e",
+    "SITE-7a070000cd858433",
+    "SITE-86e93126fdb43f2b",
+    "SITE-d8ebd1055df5adc7"
+   ],
+   "host_rooms": [],
+   "existence": "GLAZING_IN_WALL_GAP (entity_role_inference)",
+   "height": "BLOCKED_HEIGHT (no sill / head printed for this opening)",
+   "material": "BLOCKED_MATERIAL (no window schedule)"
+  },
+  {
+   "floor": "1F",
+   "window": "1F-W04",
+   "width_mm": 1000.0,
+   "wall_thickness_mm": 150.0,
+   "parts": 4,
+   "host_sites": [
+    "SITE-3cde308552cf977c",
+    "SITE-530347cdb82d2549",
+    "SITE-99f4e4ce0cc9fa3c",
+    "SITE-fc4ad3741a3997f7"
+   ],
+   "host_rooms": [
+    "MASTER BED ROOM"
+   ],
+   "existence": "GLAZING_IN_WALL_GAP (entity_role_inference)",
+   "height": "BLOCKED_HEIGHT (no sill / head printed for this opening)",
+   "material": "BLOCKED_MATERIAL (no window schedule)"
+  },
+  {
+   "floor": "1F",
+   "window": "1F-W05",
+   "width_mm": 1000.0,
+   "wall_thickness_mm": 200.0,
+   "parts": 11,
+   "host_sites": [
+    "SITE-23d1f056aa3eee32",
+    "SITE-5c42e5f68acb57a0",
+    "SITE-7a450d11a115f25d",
+    "SITE-bb64243f6618a746",
+    "SITE-d26f30a45f4a773d"
+   ],
+   "host_rooms": [],
+   "existence": "GLAZING_IN_WALL_GAP (entity_role_inference)",
+   "height": "BLOCKED_HEIGHT (no sill / head printed for this opening)",
+   "material": "BLOCKED_MATERIAL (no window schedule)"
+  },
+  {
+   "floor": "1F",
+   "window": "1F-W06",
+   "width_mm": 600.0,
+   "wall_thickness_mm": 200.0,
+   "parts": 11,
+   "host_sites": [
+    "SITE-0abc9bb4896b7404",
+    "SITE-4b3a429b0f6f900e",
+    "SITE-8bedd87cd08df9d1",
+    "SITE-e9a632cf407f7cf6",
+    "SITE-fad9bd015b11ffe1"
+   ],
+   "host_rooms": [],
+   "existence": "GLAZING_IN_WALL_GAP (entity_role_inference)",
+   "height": "BLOCKED_HEIGHT (no sill / head printed for this opening)",
+   "material": "BLOCKED_MATERIAL (no window schedule)"
+  },
+  {
+   "floor": "1F",
+   "window": "1F-W07",
+   "width_mm": 600.0,
+   "wall_thickness_mm": 200.0,
+   "parts": 11,
+   "host_sites": [
+    "SITE-6fc6387f2b05ffa9",
+    "SITE-b6cb824ab4eac6fb",
+    "SITE-c0dc2f2882ccdddb",
+    "SITE-cdc894c0f0fd69c9",
+    "SITE-e2920ab954ad7737",
+    "SITE-fa65bbb87c13c6cd"
+   ],
+   "host_rooms": [
+    "BATH"
+   ],
+   "existence": "GLAZING_IN_WALL_GAP (entity_role_inference)",
+   "height": "BLOCKED_HEIGHT (no sill / head printed for this opening)",
+   "material": "BLOCKED_MATERIAL (no window schedule)"
+  },
+  {
+   "floor": "1F",
+   "window": "1F-W08",
+   "width_mm": 1552.3,
+   "wall_thickness_mm": 200.0,
+   "parts": 11,
+   "host_sites": [
+    "SITE-359639e7f6bf7a33",
+    "SITE-435ce9ad4c9270be",
+    "SITE-bb295c64d3066dba",
+    "SITE-e78aa649c2b76fd7",
+    "SITE-f43550435b059688"
+   ],
+   "host_rooms": [],
+   "existence": "GLAZING_IN_WALL_GAP (entity_role_inference)",
+   "height": "BLOCKED_HEIGHT (no sill / head printed for this opening)",
+   "material": "BLOCKED_MATERIAL (no window schedule)"
+  },
+  {
+   "floor": "1F",
+   "window": "1F-W09",
+   "width_mm": 1552.3,
+   "wall_thickness_mm": 200.0,
+   "parts": 11,
+   "host_sites": [
+    "SITE-02e618f6458dff81",
+    "SITE-28fcf3dd7a47375a",
+    "SITE-3637349660cd8b19",
+    "SITE-b82a4071532463bf",
+    "SITE-c18c2885673de8fd"
+   ],
+   "host_rooms": [],
+   "existence": "GLAZING_IN_WALL_GAP (entity_role_inference)",
+   "height": "BLOCKED_HEIGHT (no sill / head printed for this opening)",
+   "material": "BLOCKED_MATERIAL (no window schedule)"
+  },
+  {
+   "floor": "1F",
+   "window": "1F-W10",
+   "width_mm": 500.0,
+   "wall_thickness_mm": 200.0,
+   "parts": 12,
+   "host_sites": [
+    "SITE-056857dc6ca72ce8",
+    "SITE-1a19646e729878cf",
+    "SITE-1c0db07b3e045a47",
+    "SITE-23a19cd1b9967fe6",
+    "SITE-2f6cf2b5bebbd966",
+    "SITE-419eaf6ff471d839",
+    "SITE-93b26d31e5dd03e4",
+    "SITE-9dd4733ea723ffb5",
+    "SITE-f27d83ccea1dfac9"
+   ],
+   "host_rooms": [
+    "BATH"
+   ],
+   "existence": "GLAZING_IN_WALL_GAP (entity_role_inference)",
+   "height": "BLOCKED_HEIGHT (no sill / head printed for this opening)",
+   "material": "BLOCKED_MATERIAL (no window schedule)"
+  },
+  {
+   "floor": "1F",
+   "window": "1F-W11",
+   "width_mm": 1200.0,
+   "wall_thickness_mm": 200.0,
+   "parts": 4,
+   "host_sites": [
+    "SITE-4a0c1825863be60e",
+    "SITE-9a652f4d3c9612b7",
+    "SITE-f3d2787baa8499de"
+   ],
+   "host_rooms": [],
+   "existence": "GLAZING_IN_WALL_GAP (entity_role_inference)",
+   "height": "BLOCKED_HEIGHT (no sill / head printed for this opening)",
+   "material": "BLOCKED_MATERIAL (no window schedule)"
+  },
+  {
+   "floor": "1F",
+   "window": "1F-W12",
+   "width_mm": 2449.8,
+   "wall_thickness_mm": 200.0,
+   "parts": 4,
+   "host_sites": [
+    "SITE-5707ed99eddd9d3c",
+    "SITE-6c6c043b3b590c4b",
+    "SITE-87d911399edea4c0",
+    "SITE-c990dafb69743619"
+   ],
+   "host_rooms": [
+    "MASTER BED ROOM / MASTER BED ROOM"
+   ],
+   "existence": "GLAZING_IN_WALL_GAP (entity_role_inference)",
+   "height": "BLOCKED_HEIGHT (no sill / head printed for this opening)",
+   "material": "BLOCKED_MATERIAL (no window schedule)"
+  },
+  {
+   "floor": "2F",
+   "window": "2F-W01",
+   "width_mm": 1000.0,
+   "wall_thickness_mm": 200.0,
+   "parts": 4,
+   "host_sites": [
+    "SITE-3c014062649f8b68",
+    "SITE-50babc5fc724fc07",
+    "SITE-73e232b05b067315",
+    "SITE-fc3aaade70a89c79",
+    "SITE-fd5fd08ac9eb9313"
+   ],
+   "host_rooms": [],
+   "existence": "GLAZING_IN_WALL_GAP (entity_role_inference)",
+   "height": "BLOCKED_HEIGHT (no sill / head printed for this opening)",
+   "material": "BLOCKED_MATERIAL (no window schedule)"
+  },
+  {
+   "floor": "2F",
+   "window": "2F-W02",
+   "width_mm": 1000.0,
+   "wall_thickness_mm": 200.0,
+   "parts": 11,
+   "host_sites": [
+    "SITE-06e40616cbb8a775",
+    "SITE-250e67cdad4fd201",
+    "SITE-459b2b093132b93f",
+    "SITE-4d34e3cd7dd3193c",
+    "SITE-e9f7576eb88caf57",
+    "SITE-fc3aaade70a89c79"
+   ],
+   "host_rooms": [],
+   "existence": "GLAZING_IN_WALL_GAP (entity_role_inference)",
+   "height": "BLOCKED_HEIGHT (no sill / head printed for this opening)",
+   "material": "BLOCKED_MATERIAL (no window schedule)"
+  },
+  {
+   "floor": "2F",
+   "window": "2F-W03",
+   "width_mm": 600.0,
+   "wall_thickness_mm": 200.0,
+   "parts": 11,
+   "host_sites": [
+    "SITE-188cf37a3919c0f3",
+    "SITE-28cbc51877eaa295",
+    "SITE-3b4aa55ce4083ed3",
+    "SITE-ae46ec7518ab613e",
+    "SITE-e1471a06625dc25b",
+    "SITE-f1054fcdb6682310"
+   ],
+   "host_rooms": [],
+   "existence": "GLAZING_IN_WALL_GAP (entity_role_inference)",
+   "height": "BLOCKED_HEIGHT (no sill / head printed for this opening)",
+   "material": "BLOCKED_MATERIAL (no window schedule)"
+  },
+  {
+   "floor": "2F",
+   "window": "2F-W04",
+   "width_mm": 1200.0,
+   "wall_thickness_mm": 200.0,
+   "parts": 12,
+   "host_sites": [
+    "SITE-0715f4586f73b11d",
+    "SITE-144b5e3e10e157b0",
+    "SITE-28d5a43bf5ae9d9d",
+    "SITE-47c1846e082a69b3",
+    "SITE-a939c8936681aaa2",
+    "SITE-b5310ad326224990",
+    "SITE-d013902dbda86139"
+   ],
+   "host_rooms": [],
+   "existence": "GLAZING_IN_WALL_GAP (entity_role_inference)",
+   "height": "BLOCKED_HEIGHT (no sill / head printed for this opening)",
+   "material": "BLOCKED_MATERIAL (no window schedule)"
+  },
+  {
+   "floor": "2F",
+   "window": "2F-W05",
+   "width_mm": 1200.0,
+   "wall_thickness_mm": 200.0,
+   "parts": 4,
+   "host_sites": [
+    "SITE-41bb9640c13a6e89",
+    "SITE-50ff37b6c2383423",
+    "SITE-726750676972a1be",
+    "SITE-fc3aaade70a89c79"
+   ],
+   "host_rooms": [],
+   "existence": "GLAZING_IN_WALL_GAP (entity_role_inference)",
+   "height": "BLOCKED_HEIGHT (no sill / head printed for this opening)",
+   "material": "BLOCKED_MATERIAL (no window schedule)"
+  }
+ ],
+ "gap_infill": [],
+ "rule": "door = wall gap + door-symbol motif (swing + leaf + hinge on a wall face) + frozen closure; window = glazing lines inside a wall gap; existence, geometry, height and material are separate fields"
+}

@@ -1,0 +1,252 @@
+{
+ "SCHEMA": "URBAN_OWNER_SOURCE_CLAIMS_V1",
+ "evidence_version": 2,
+ "previous_evidence_version": {
+  "version": 1,
+  "file": "data/registry/OWNER_PROJECT_CLAIMS.json",
+  "sha256": "994c8bf1bb2114d8c5e65b8208dffd90708e265431ea240e180b1002ff12ae25",
+  "relation": "UNCHANGED_AND_STILL_ACTIVE (this file adds claims; it supersedes nothing)"
+ },
+ "binding_policy": {
+  "policy_id": "OWNER_CLAIM_BINDING_POLICY_V1",
+  "binding": [
+   "revision id + anchor sha256",
+   "region id + frame id",
+   "part key + fingerprint",
+   "occurrence handle + source facts"
+  ],
+  "never": [
+   "coordinates alone",
+   "layer-wide inference from part claims",
+   "transfer to another revision, anchor, plan, region or project",
+   "editing a record (layer, geometry, handle, identity)",
+   "a quantity"
+  ],
+  "part_states": [
+   "APPLIES",
+   "PART_NOT_IN_SOURCE",
+   "STALE_PART_FINGERPRINT",
+   "SOURCE_SCOPE_MISMATCH",
+   "REGION_SCOPE_MISMATCH",
+   "PLAN_SCOPE_MISMATCH",
+   "CLAIM_NOT_REVIEWED",
+   "CLAIM_NOT_ACTIVE"
+  ],
+  "xref_states": [
+   "XREF_PRESENT_AND_ADMITTED",
+   "XREF_MISSING_BUT_PROVEN_OUTSIDE_REGION",
+   "XREF_MISSING_OWNER_CONFIRMED_NONCONTRIBUTING",
+   "XREF_MISSING_POTENTIALLY_CONTRIBUTING"
+  ],
+  "xref_states_that_continue": [
+   "XREF_MISSING_BUT_PROVEN_OUTSIDE_REGION",
+   "XREF_MISSING_OWNER_CONFIRMED_NONCONTRIBUTING",
+   "XREF_PRESENT_AND_ADMITTED"
+  ],
+  "digest": "9831241693481379bfb2a4d64529b3b9da3d760ccbf3f3b34f23d8030936e96d"
+ },
+ "claims": [
+  {
+   "claim_id": "QORTUBA-NEW-DIM-LINES-7116-7119-ARE-WALLS-OWNER-001",
+   "version": 1,
+   "kind": "PART_ROLE",
+   "role": "TOPOLOGY_BOUNDARY",
+   "authority": [
+    "PROJECT_OWNER",
+    "SOURCE_STRUCTURE_CORROBORATION"
+   ],
+   "review_state": "REVIEWED",
+   "status": "ACTIVE",
+   "supersedes": null,
+   "scope": {
+    "project": "QORTUBA",
+    "revision_id": "QORTUBA_REV_NEW",
+    "source_anchor_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+    "plan": "PLAN_VARIANT_4_SELECTED",
+    "region_id": "RC:MODEL_SPACE:4267:540:1649",
+    "frame_id": "MF:RC:MODEL_SPACE:4267:540:1649"
+   },
+   "parts": [
+    {
+     "key": "QORTUBA_REV_NEW|H7116||SEGMENT|0",
+     "handle": "7116",
+     "source_layer": "DIM",
+     "kind": "SEGMENT",
+     "fingerprint": "148844bb755346e56c809c20f580e5e5219f5001e49f3475580be382d523c18d",
+     "geometry": [
+      109623.081745,
+      14949.719614,
+      109623.081745,
+      15029.719614
+     ],
+     "old_revision_wall_face_on_same_line": "H467"
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H7117||SEGMENT|0",
+     "handle": "7117",
+     "source_layer": "DIM",
+     "kind": "SEGMENT",
+     "fingerprint": "9642e28fe85d9d331f115f9ec0066755284f4bce3fc421634f247af430900f47",
+     "geometry": [
+      109608.081745,
+      14949.719614,
+      109608.081745,
+      15029.719614
+     ],
+     "old_revision_wall_face_on_same_line": "H465"
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H7118||SEGMENT|0",
+     "handle": "7118",
+     "source_layer": "DIM",
+     "kind": "SEGMENT",
+     "fingerprint": "13d94958e5fc2993a266188cd6154ab9ac16852f07483011ceec56fce451429d",
+     "geometry": [
+      109928.081745,
+      14909.719614,
+      109928.081745,
+      15029.719614
+     ],
+     "old_revision_wall_face_on_same_line": "H817"
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H7119||SEGMENT|0",
+     "handle": "7119",
+     "source_layer": "DIM",
+     "kind": "SEGMENT",
+     "fingerprint": "548423f8771adf2349ef46fdf5df1fd1520f15f25e6b3c7346b8f645fdee5cfe",
+     "geometry": [
+      109943.081745,
+      14894.719614,
+      109943.081745,
+      15029.719614
+     ],
+     "old_revision_wall_face_on_same_line": "H513"
+    }
+   ],
+   "owner_statement": "7116, 7117, 7118 and 7119 ARE REAL WALL LINES: drawn on the DIM layer, their physical role is WALL",
+   "owner_clarification": {
+    "7116": "the wall around the 7116 side is the BATHROOM wall",
+    "7119": "the wall around the 7119 side is the ROOM wall"
+   },
+   "corroboration": "each line lies exactly on a face of a wall the previous revision drew on the WALL layer (H467 / H465 / H817 / H513), as two 150 mm face pairs (R8.9 F-R89-02)",
+   "changes": "role authority of exactly these four source parts",
+   "never_changes": [
+    "source layer (stays DIM)",
+    "geometry / coordinates",
+    "handle",
+    "source identity",
+    "any other DIM entity",
+    "any quantity"
+   ],
+   "never_transfers_to": [
+    "another plan variant (PLAN_VARIANT_1..3)",
+    "another floor or sheet",
+    "facade / detail sheets",
+    "another source revision or anchor (including the candidate DWG e4babbc2...: identity NOT_ESTABLISHED)",
+    "another project",
+    "an Urban company rule"
+   ],
+   "author": "Mohammad",
+   "author_role": "PROJECT_OWNER",
+   "channel": "R8.10 brief §3 (answer to the R8.9 owner review CONFIRM_QORTUBA_NEW_DIM_LINES_ARE_WALLS)",
+   "timestamp": "2026-10-01"
+  },
+  {
+   "claim_id": "QORTUBA-NEW-XREFS-NONCONTRIBUTING-TO-PLAN-VARIANT-4-OWNER-001",
+   "version": 1,
+   "kind": "XREF_NONCONTRIBUTING_TO_SELECTED_REGION",
+   "authority": [
+    "PROJECT_OWNER"
+   ],
+   "review_state": "REVIEWED",
+   "status": "ACTIVE",
+   "supersedes": null,
+   "scope": {
+    "project": "QORTUBA",
+    "revision_id": "QORTUBA_REV_NEW",
+    "source_anchor_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+    "plan": "PLAN_VARIANT_4_SELECTED",
+    "region_id": "RC:MODEL_SPACE:4267:540:1649",
+    "frame_id": "MF:RC:MODEL_SPACE:4267:540:1649"
+   },
+   "occurrences": [
+    {
+     "handle": "16783",
+     "facts": {
+      "handle": "16783",
+      "hex_handle": "418F",
+      "xref_name": "block",
+      "xref_path": "..\\Autocad blocks\\block.dwg",
+      "flags": 36,
+      "container": "LAYOUT:Model",
+      "insert": [
+       0.0,
+       0.0
+      ],
+      "scale": [
+       2.54,
+       2.54
+      ],
+      "layer": "DIM"
+     },
+     "fingerprint": "1351cf8fda950f9ec32bc380373c134ac2693ff51e37aba57ff4bd865a21dc48"
+    },
+    {
+     "handle": "17716",
+     "facts": {
+      "handle": "17716",
+      "hex_handle": "4534",
+      "xref_name": "بلوكات وتفاصيل واجهات جامده",
+      "xref_path": "..\\Autocad blocks\\بلوكات وتفاصيل واجهات جامده.dwg",
+      "flags": 36,
+      "container": "LAYOUT:Model",
+      "insert": [
+       0.0,
+       0.0
+      ],
+      "scale": [
+       0.1,
+       0.1
+      ],
+      "layer": "DIM"
+     },
+     "fingerprint": "a775ea0c9e804dfe28268871f68c5f3821a767f2ca6377449d1b820953756992"
+    }
+   ],
+   "verification": {
+    "xref_definitions_in_file": [
+     "block",
+     "بلوكات وتفاصيل واجهات جامده"
+    ],
+    "xref_occurrences_in_file": [
+     "16783",
+     "17716"
+    ],
+    "all_claimed": true,
+    "read_from": "the DXF itself (df0e1d690285...), every layout and block"
+   },
+   "owner_statement": "the external attached drawings / referenced block files that are not part of the selected bottom-most plan are not part of this BOQ scope; they may be ignored for this selected measurement region only",
+   "meaning": "these exact unresolved external-reference occurrences contribute no physical geometry to PLAN_VARIANT_4_SELECTED / the selected region; NOT 'xrefs are irrelevant everywhere'",
+   "changes": "source-completeness authority of exactly these occurrences, in this region",
+   "never_changes": [
+    "the xref records (kept in provenance)",
+    "any other unresolved / custom / proxy entity",
+    "the source-complete state of the file as a whole",
+    "any quantity"
+   ],
+   "never_transfers_to": [
+    "another plan variant (PLAN_VARIANT_1..3)",
+    "another floor or sheet",
+    "facade / detail sheets",
+    "another source revision or anchor (including the candidate DWG e4babbc2...: identity NOT_ESTABLISHED)",
+    "another project",
+    "an Urban company rule"
+   ],
+   "author": "Mohammad",
+   "author_role": "PROJECT_OWNER",
+   "channel": "R8.10 brief §1-§2 (answer to CONFIRM_QORTUBA_NEW_ATTACHED_XREFS_OUTSIDE_PLAN)",
+   "timestamp": "2026-10-01"
+  }
+ ]
+}

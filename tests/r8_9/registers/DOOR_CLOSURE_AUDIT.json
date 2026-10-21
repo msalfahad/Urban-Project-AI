@@ -1,0 +1,662 @@
+{
+ "SCHEMA": "URBAN_R8_9_DOOR_CLOSURE_AUDIT_V1",
+ "policy_ratio": 0.25,
+ "runs": {
+  "OLD_K1": {
+   "I1028": {
+    "radius": 88.23529411765071,
+    "policy_ratio": 0.25,
+    "hypotheses": [
+     {
+      "forward_hit": null,
+      "backward_hit": null,
+      "ratio_needed": null,
+      "within_policy": false
+     },
+     {
+      "forward_hit": {
+       "distance": 5.882352944216109,
+       "source": "QORTUBA_REV_OLD|H1030||SEGMENT|0"
+      },
+      "backward_hit": {
+       "distance": 5.882352938890108,
+       "source": "QORTUBA_REV_OLD|H1029||SEGMENT|0"
+      },
+      "ratio_needed": 0.06666666670111314,
+      "within_policy": true
+     }
+    ],
+    "accepted_ratio_needed": 0.06666666670111314,
+    "rejected_ratio_needed": null,
+    "decision": "CLOSED"
+   },
+   "I1443": {
+    "radius": 70.58823529412071,
+    "policy_ratio": 0.25,
+    "hypotheses": [
+     {
+      "forward_hit": null,
+      "backward_hit": null,
+      "ratio_needed": null,
+      "within_policy": false
+     },
+     {
+      "forward_hit": {
+       "distance": 4.705882354768619,
+       "source": "QORTUBA_REV_OLD|H1444||SEGMENT|0"
+      },
+      "backward_hit": {
+       "distance": 4.705882351110631,
+       "source": "QORTUBA_REV_OLD|H1442||SEGMENT|0"
+      },
+      "ratio_needed": 0.06666666669255254,
+      "within_policy": true
+     }
+    ],
+    "accepted_ratio_needed": 0.06666666669255254,
+    "rejected_ratio_needed": null,
+    "decision": "CLOSED"
+   },
+   "I1471": {
+    "radius": 88.23529411765071,
+    "policy_ratio": 0.25,
+    "hypotheses": [
+     {
+      "forward_hit": null,
+      "backward_hit": null,
+      "ratio_needed": null,
+      "within_policy": false
+     },
+     {
+      "forward_hit": {
+       "distance": 5.882352943459409,
+       "source": "QORTUBA_REV_OLD|H1473||SEGMENT|0"
+      },
+      "backward_hit": {
+       "distance": 5.8823529396468075,
+       "source": "QORTUBA_REV_OLD|H1472||SEGMENT|0"
+      },
+      "ratio_needed": 0.06666666669253721,
+      "within_policy": true
+     }
+    ],
+    "accepted_ratio_needed": 0.06666666669253721,
+    "rejected_ratio_needed": null,
+    "decision": "CLOSED"
+   },
+   "I1561": {
+    "radius": 70.58823529412071,
+    "policy_ratio": 0.25,
+    "hypotheses": [
+     {
+      "forward_hit": null,
+      "backward_hit": null,
+      "ratio_needed": null,
+      "within_policy": false
+     },
+     {
+      "forward_hit": {
+       "distance": 4.705882354772257,
+       "source": "QORTUBA_REV_OLD|H1562||SEGMENT|0"
+      },
+      "backward_hit": {
+       "distance": 4.705882351110631,
+       "source": "QORTUBA_REV_OLD|H1560||SEGMENT|0"
+      },
+      "ratio_needed": 0.06666666669260408,
+      "within_policy": true
+     }
+    ],
+    "accepted_ratio_needed": 0.06666666669260408,
+    "rejected_ratio_needed": null,
+    "decision": "CLOSED"
+   },
+   "I1988": {
+    "radius": 88.23529411765071,
+    "policy_ratio": 0.25,
+    "hypotheses": [
+     {
+      "forward_hit": null,
+      "backward_hit": null,
+      "ratio_needed": null,
+      "within_policy": false
+     },
+     {
+      "forward_hit": {
+       "distance": 5.882352943459409,
+       "source": "QORTUBA_REV_OLD|H1990||SEGMENT|0"
+      },
+      "backward_hit": {
+       "distance": 5.8823529396468075,
+       "source": "QORTUBA_REV_OLD|H1989||SEGMENT|0"
+      },
+      "ratio_needed": 0.06666666669253721,
+      "within_policy": true
+     }
+    ],
+    "accepted_ratio_needed": 0.06666666669253721,
+    "rejected_ratio_needed": null,
+    "decision": "CLOSED"
+   },
+   "I2044": {
+    "radius": 70.58823529412071,
+    "policy_ratio": 0.25,
+    "hypotheses": [
+     {
+      "forward_hit": null,
+      "backward_hit": null,
+      "ratio_needed": null,
+      "within_policy": false
+     },
+     {
+      "forward_hit": {
+       "distance": 4.705882354772257,
+       "source": "QORTUBA_REV_OLD|H2045||SEGMENT|0"
+      },
+      "backward_hit": {
+       "distance": 4.705882351110631,
+       "source": "QORTUBA_REV_OLD|H2043||SEGMENT|0"
+      },
+      "ratio_needed": 0.06666666669260408,
+      "within_policy": true
+     }
+    ],
+    "accepted_ratio_needed": 0.06666666669260408,
+    "rejected_ratio_needed": null,
+    "decision": "CLOSED"
+   },
+   "I677": {
+    "radius": 88.23529411765071,
+    "policy_ratio": 0.25,
+    "hypotheses": [
+     {
+      "forward_hit": null,
+      "backward_hit": null,
+      "ratio_needed": null,
+      "within_policy": false
+     },
+     {
+      "forward_hit": {
+       "distance": 5.882352943459409,
+       "source": "QORTUBA_REV_OLD|H1273||SEGMENT|0"
+      },
+      "backward_hit": {
+       "distance": 5.8823529396468075,
+       "source": "QORTUBA_REV_OLD|H1007||SEGMENT|0"
+      },
+      "ratio_needed": 0.06666666669253721,
+      "within_policy": true
+     }
+    ],
+    "accepted_ratio_needed": 0.06666666669253721,
+    "rejected_ratio_needed": null,
+    "decision": "CLOSED"
+   },
+   "I841": {
+    "radius": 88.23529411765071,
+    "policy_ratio": 0.25,
+    "hypotheses": [
+     {
+      "forward_hit": null,
+      "backward_hit": null,
+      "ratio_needed": null,
+      "within_policy": false
+     },
+     {
+      "forward_hit": {
+       "distance": 5.882352943459409,
+       "source": "QORTUBA_REV_OLD|H843||SEGMENT|0"
+      },
+      "backward_hit": {
+       "distance": 5.8823529396468075,
+       "source": "QORTUBA_REV_OLD|H842||SEGMENT|0"
+      },
+      "ratio_needed": 0.06666666669253721,
+      "within_policy": true
+     }
+    ],
+    "accepted_ratio_needed": 0.06666666669253721,
+    "rejected_ratio_needed": null,
+    "decision": "CLOSED"
+   }
+  },
+  "OLD_K2": {
+   "I1028": {
+    "radius": 88.23529411765078,
+    "policy_ratio": 0.25,
+    "hypotheses": [
+     {
+      "forward_hit": null,
+      "backward_hit": null,
+      "ratio_needed": null,
+      "within_policy": false
+     },
+     {
+      "forward_hit": {
+       "distance": 5.882352944230661,
+       "source": "QORTUBA_REV_OLD|H1030||SEGMENT|0"
+      },
+      "backward_hit": {
+       "distance": 5.882352938919212,
+       "source": "QORTUBA_REV_OLD|H1029||SEGMENT|0"
+      },
+      "ratio_needed": 0.06666666670127801,
+      "within_policy": true
+     }
+    ],
+    "accepted_ratio_needed": 0.06666666670127801,
+    "rejected_ratio_needed": null,
+    "decision": "CLOSED"
+   },
+   "I1443": {
+    "radius": 70.58823529412064,
+    "policy_ratio": 0.25,
+    "hypotheses": [
+     {
+      "forward_hit": null,
+      "backward_hit": null,
+      "ratio_needed": null,
+      "within_policy": false
+     },
+     {
+      "forward_hit": {
+       "distance": 4.705882354770438,
+       "source": "QORTUBA_REV_OLD|H1444||SEGMENT|0"
+      },
+      "backward_hit": {
+       "distance": 4.705882351110631,
+       "source": "QORTUBA_REV_OLD|H1442||SEGMENT|0"
+      },
+      "ratio_needed": 0.06666666669257838,
+      "within_policy": true
+     }
+    ],
+    "accepted_ratio_needed": 0.06666666669257838,
+    "rejected_ratio_needed": null,
+    "decision": "CLOSED"
+   },
+   "I1471": {
+    "radius": 88.23529411765078,
+    "policy_ratio": 0.25,
+    "hypotheses": [
+     {
+      "forward_hit": null,
+      "backward_hit": null,
+      "ratio_needed": null,
+      "within_policy": false
+     },
+     {
+      "forward_hit": {
+       "distance": 5.8823529434303055,
+       "source": "QORTUBA_REV_OLD|H1473||SEGMENT|0"
+      },
+      "backward_hit": {
+       "distance": 5.882352939617704,
+       "source": "QORTUBA_REV_OLD|H1472||SEGMENT|0"
+      },
+      "ratio_needed": 0.06666666669220732,
+      "within_policy": true
+     }
+    ],
+    "accepted_ratio_needed": 0.06666666669220732,
+    "rejected_ratio_needed": null,
+    "decision": "CLOSED"
+   },
+   "I1561": {
+    "radius": 70.58823529412064,
+    "policy_ratio": 0.25,
+    "hypotheses": [
+     {
+      "forward_hit": null,
+      "backward_hit": null,
+      "ratio_needed": null,
+      "within_policy": false
+     },
+     {
+      "forward_hit": {
+       "distance": 4.705882354770438,
+       "source": "QORTUBA_REV_OLD|H1562||SEGMENT|0"
+      },
+      "backward_hit": {
+       "distance": 4.705882351110631,
+       "source": "QORTUBA_REV_OLD|H1560||SEGMENT|0"
+      },
+      "ratio_needed": 0.06666666669257838,
+      "within_policy": true
+     }
+    ],
+    "accepted_ratio_needed": 0.06666666669257838,
+    "rejected_ratio_needed": null,
+    "decision": "CLOSED"
+   },
+   "I1988": {
+    "radius": 88.23529411765078,
+    "policy_ratio": 0.25,
+    "hypotheses": [
+     {
+      "forward_hit": null,
+      "backward_hit": null,
+      "ratio_needed": null,
+      "within_policy": false
+     },
+     {
+      "forward_hit": {
+       "distance": 5.8823529434303055,
+       "source": "QORTUBA_REV_OLD|H1990||SEGMENT|0"
+      },
+      "backward_hit": {
+       "distance": 5.882352939617704,
+       "source": "QORTUBA_REV_OLD|H1989||SEGMENT|0"
+      },
+      "ratio_needed": 0.06666666669220732,
+      "within_policy": true
+     }
+    ],
+    "accepted_ratio_needed": 0.06666666669220732,
+    "rejected_ratio_needed": null,
+    "decision": "CLOSED"
+   },
+   "I2044": {
+    "radius": 70.58823529412064,
+    "policy_ratio": 0.25,
+    "hypotheses": [
+     {
+      "forward_hit": null,
+      "backward_hit": null,
+      "ratio_needed": null,
+      "within_policy": false
+     },
+     {
+      "forward_hit": {
+       "distance": 4.705882354770438,
+       "source": "QORTUBA_REV_OLD|H2045||SEGMENT|0"
+      },
+      "backward_hit": {
+       "distance": 4.705882351110631,
+       "source": "QORTUBA_REV_OLD|H2043||SEGMENT|0"
+      },
+      "ratio_needed": 0.06666666669257838,
+      "within_policy": true
+     }
+    ],
+    "accepted_ratio_needed": 0.06666666669257838,
+    "rejected_ratio_needed": null,
+    "decision": "CLOSED"
+   },
+   "I677": {
+    "radius": 88.23529411765078,
+    "policy_ratio": 0.25,
+    "hypotheses": [
+     {
+      "forward_hit": null,
+      "backward_hit": null,
+      "ratio_needed": null,
+      "within_policy": false
+     },
+     {
+      "forward_hit": {
+       "distance": 5.8823529434303055,
+       "source": "QORTUBA_REV_OLD|H1273||SEGMENT|0"
+      },
+      "backward_hit": {
+       "distance": 5.882352939617704,
+       "source": "QORTUBA_REV_OLD|H1007||SEGMENT|0"
+      },
+      "ratio_needed": 0.06666666669220732,
+      "within_policy": true
+     }
+    ],
+    "accepted_ratio_needed": 0.06666666669220732,
+    "rejected_ratio_needed": null,
+    "decision": "CLOSED"
+   },
+   "I841": {
+    "radius": 88.23529411765077,
+    "policy_ratio": 0.25,
+    "hypotheses": [
+     {
+      "forward_hit": null,
+      "backward_hit": null,
+      "ratio_needed": null,
+      "within_policy": false
+     },
+     {
+      "forward_hit": {
+       "distance": 5.8823529434303055,
+       "source": "QORTUBA_REV_OLD|H843||SEGMENT|0"
+      },
+      "backward_hit": {
+       "distance": 5.882352939617704,
+       "source": "QORTUBA_REV_OLD|H842||SEGMENT|0"
+      },
+      "ratio_needed": 0.06666666669220733,
+      "within_policy": true
+     }
+    ],
+    "accepted_ratio_needed": 0.06666666669220733,
+    "rejected_ratio_needed": null,
+    "decision": "CLOSED"
+   }
+  },
+  "NEW_K2": {
+   "I1028": {
+    "radius": 88.23529411765078,
+    "policy_ratio": 0.25,
+    "hypotheses": [
+     {
+      "forward_hit": null,
+      "backward_hit": null,
+      "ratio_needed": null,
+      "within_policy": false
+     },
+     {
+      "forward_hit": {
+       "distance": 5.882352944230661,
+       "source": "QORTUBA_REV_NEW|H1030||SEGMENT|0"
+      },
+      "backward_hit": {
+       "distance": 5.882352938919212,
+       "source": "QORTUBA_REV_NEW|H1029||SEGMENT|0"
+      },
+      "ratio_needed": 0.06666666670127801,
+      "within_policy": true
+     }
+    ],
+    "accepted_ratio_needed": 0.06666666670127801,
+    "rejected_ratio_needed": null,
+    "decision": "CLOSED"
+   },
+   "I1443": {
+    "radius": 70.58823529412064,
+    "policy_ratio": 0.25,
+    "hypotheses": [
+     {
+      "forward_hit": null,
+      "backward_hit": null,
+      "ratio_needed": null,
+      "within_policy": false
+     },
+     {
+      "forward_hit": {
+       "distance": 4.705882354770438,
+       "source": "QORTUBA_REV_NEW|H1444||SEGMENT|0"
+      },
+      "backward_hit": {
+       "distance": 4.705882351110631,
+       "source": "QORTUBA_REV_NEW|H1442||SEGMENT|0"
+      },
+      "ratio_needed": 0.06666666669257838,
+      "within_policy": true
+     }
+    ],
+    "accepted_ratio_needed": 0.06666666669257838,
+    "rejected_ratio_needed": null,
+    "decision": "CLOSED"
+   },
+   "I1471": {
+    "radius": 88.23529411765078,
+    "policy_ratio": 0.25,
+    "hypotheses": [
+     {
+      "forward_hit": null,
+      "backward_hit": null,
+      "ratio_needed": null,
+      "within_policy": false
+     },
+     {
+      "forward_hit": {
+       "distance": 5.8823529434303055,
+       "source": "QORTUBA_REV_NEW|H1473||SEGMENT|0"
+      },
+      "backward_hit": {
+       "distance": 5.882352939617704,
+       "source": "QORTUBA_REV_NEW|H1472||SEGMENT|0"
+      },
+      "ratio_needed": 0.06666666669220732,
+      "within_policy": true
+     }
+    ],
+    "accepted_ratio_needed": 0.06666666669220732,
+    "rejected_ratio_needed": null,
+    "decision": "CLOSED"
+   },
+   "I1561": {
+    "radius": 70.58823529412064,
+    "policy_ratio": 0.25,
+    "hypotheses": [
+     {
+      "forward_hit": null,
+      "backward_hit": null,
+      "ratio_needed": null,
+      "within_policy": false
+     },
+     {
+      "forward_hit": {
+       "distance": 4.705882354770438,
+       "source": "QORTUBA_REV_NEW|H1562||SEGMENT|0"
+      },
+      "backward_hit": {
+       "distance": 4.705882351110631,
+       "source": "QORTUBA_REV_NEW|H1560||SEGMENT|0"
+      },
+      "ratio_needed": 0.06666666669257838,
+      "within_policy": true
+     }
+    ],
+    "accepted_ratio_needed": 0.06666666669257838,
+    "rejected_ratio_needed": null,
+    "decision": "CLOSED"
+   },
+   "I1988": {
+    "radius": 88.23529411765078,
+    "policy_ratio": 0.25,
+    "hypotheses": [
+     {
+      "forward_hit": null,
+      "backward_hit": null,
+      "ratio_needed": null,
+      "within_policy": false
+     },
+     {
+      "forward_hit": {
+       "distance": 5.8823529434303055,
+       "source": "QORTUBA_REV_NEW|H1990||SEGMENT|0"
+      },
+      "backward_hit": {
+       "distance": 5.882352939617704,
+       "source": "QORTUBA_REV_NEW|H1989||SEGMENT|0"
+      },
+      "ratio_needed": 0.06666666669220732,
+      "within_policy": true
+     }
+    ],
+    "accepted_ratio_needed": 0.06666666669220732,
+    "rejected_ratio_needed": null,
+    "decision": "CLOSED"
+   },
+   "I2044": {
+    "radius": 70.58823529412064,
+    "policy_ratio": 0.25,
+    "hypotheses": [
+     {
+      "forward_hit": null,
+      "backward_hit": null,
+      "ratio_needed": null,
+      "within_policy": false
+     },
+     {
+      "forward_hit": null,
+      "backward_hit": {
+       "distance": 4.705882351110631,
+       "source": "QORTUBA_REV_NEW|H2043||SEGMENT|0"
+      },
+      "ratio_needed": null,
+      "within_policy": false
+     }
+    ],
+    "accepted_ratio_needed": null,
+    "rejected_ratio_needed": null,
+    "decision": "OPENING_CLOSURE_UNRESOLVED"
+   },
+   "I677": {
+    "radius": 88.23529411765078,
+    "policy_ratio": 0.25,
+    "hypotheses": [
+     {
+      "forward_hit": null,
+      "backward_hit": null,
+      "ratio_needed": null,
+      "within_policy": false
+     },
+     {
+      "forward_hit": {
+       "distance": 5.882352943532169,
+       "source": "QORTUBA_REV_NEW|H1273||SEGMENT|0"
+      },
+      "backward_hit": {
+       "distance": 5.882352939617704,
+       "source": "QORTUBA_REV_NEW|H1007||SEGMENT|0"
+      },
+      "ratio_needed": 0.06666666669336177,
+      "within_policy": true
+     }
+    ],
+    "accepted_ratio_needed": 0.06666666669336177,
+    "rejected_ratio_needed": null,
+    "decision": "CLOSED"
+   },
+   "I841": {
+    "radius": 88.23529411765077,
+    "policy_ratio": 0.25,
+    "hypotheses": [
+     {
+      "forward_hit": null,
+      "backward_hit": null,
+      "ratio_needed": null,
+      "within_policy": false
+     },
+     {
+      "forward_hit": {
+       "distance": 5.8823529434303055,
+       "source": "QORTUBA_REV_NEW|H843||SEGMENT|0"
+      },
+      "backward_hit": {
+       "distance": 5.882352939719567,
+       "source": "QORTUBA_REV_NEW|H842||SEGMENT|0"
+      },
+      "ratio_needed": 0.06666666669220733,
+      "within_policy": true
+     }
+    ],
+    "accepted_ratio_needed": 0.06666666669220733,
+    "rejected_ratio_needed": null,
+    "decision": "CLOSED"
+   }
+  }
+ },
+ "accepted_ratios_needed": [
+  0.066667
+ ],
+ "rejected_hypotheses_that_would_close_within_a_full_radius": 0,
+ "verdict": "NEEDS_MORE_EVIDENCE: on this drawing family every accepted closure needs 1/15 of the leaf radius (the door block's own frame inset) and no rejected hypothesis closes even at a full radius, so the 0.25 ratio decides nothing here; it is not shown OVERBROAD, not shown generic. Recommendation: derive the reach from the door symbol's own geometry (its frame / jamb parts) on a second family"
+}

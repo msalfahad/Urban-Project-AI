@@ -1,0 +1,427 @@
+{
+ "m3_families": {
+  "CONCRETE|BEAMS": {
+   "PROVISIONAL_LOW": 69.3763,
+   "PROVISIONAL_BASE": 70.02,
+   "PROVISIONAL_HIGH": 87.4508,
+   "N_PROVISIONAL": 122,
+   "N_UNRESOLVED": 14,
+   "UNRESOLVED_EXPOSURE_LOW": 3.4758,
+   "UNRESOLVED_EXPOSURE_HIGH": 7.8716
+  },
+  "CONCRETE|COLUMNS": {
+   "PROVISIONAL_LOW": 46.1415,
+   "PROVISIONAL_BASE": 46.1415,
+   "PROVISIONAL_HIGH": 48.8115,
+   "N_PROVISIONAL": 89,
+   "N_UNRESOLVED": 13,
+   "UNRESOLVED_EXPOSURE_LOW": 1.539,
+   "UNRESOLVED_EXPOSURE_HIGH": 5.508
+  },
+  "CONCRETE|FOOTINGS": {
+   "PROVISIONAL_LOW": 64.52,
+   "PROVISIONAL_BASE": 66.264,
+   "PROVISIONAL_HIGH": 66.264,
+   "N_PROVISIONAL": 26,
+   "N_UNRESOLVED": 0,
+   "UNRESOLVED_EXPOSURE_LOW": null,
+   "UNRESOLVED_EXPOSURE_HIGH": null
+  },
+  "CONCRETE|GROUND_BEAMS": {
+   "PROVISIONAL_LOW": 30.4905,
+   "PROVISIONAL_BASE": 41.0452,
+   "PROVISIONAL_HIGH": 43.4712,
+   "N_PROVISIONAL": 61,
+   "N_UNRESOLVED": 0,
+   "UNRESOLVED_EXPOSURE_LOW": null,
+   "UNRESOLVED_EXPOSURE_HIGH": null
+  },
+  "CONCRETE|GROUND_SLAB": {
+   "PROVISIONAL_LOW": 16.7783,
+   "PROVISIONAL_BASE": 16.7783,
+   "PROVISIONAL_HIGH": 16.7783,
+   "N_PROVISIONAL": 22,
+   "N_UNRESOLVED": 2,
+   "UNRESOLVED_EXPOSURE_LOW": 5.7447,
+   "UNRESOLVED_EXPOSURE_HIGH": 5.7447
+  },
+  "CONCRETE|PLAIN_CONCRETE": {
+   "PROVISIONAL_LOW": 23.2148,
+   "PROVISIONAL_BASE": 26.4121,
+   "PROVISIONAL_HIGH": 29.6613,
+   "N_PROVISIONAL": 2,
+   "N_UNRESOLVED": 0,
+   "UNRESOLVED_EXPOSURE_LOW": null,
+   "UNRESOLVED_EXPOSURE_HIGH": null
+  },
+  "CONCRETE|SLABS": {
+   "PROVISIONAL_LOW": 61.6745,
+   "PROVISIONAL_BASE": 61.6745,
+   "PROVISIONAL_HIGH": 61.6745,
+   "N_PROVISIONAL": 75,
+   "N_UNRESOLVED": 1,
+   "UNRESOLVED_EXPOSURE_LOW": 2.7403,
+   "UNRESOLVED_EXPOSURE_HIGH": 2.7403
+  },
+  "REINFORCEMENT|BEAMS": {
+   "PROVISIONAL_LOW": 5761.9084,
+   "PROVISIONAL_BASE": 7563.5677,
+   "PROVISIONAL_HIGH": 8022.3187,
+   "N_PROVISIONAL": 291,
+   "N_UNRESOLVED": 0,
+   "UNRESOLVED_EXPOSURE_LOW": null,
+   "UNRESOLVED_EXPOSURE_HIGH": null
+  },
+  "REINFORCEMENT|COLUMNS": {
+   "PROVISIONAL_LOW": 6388.6136,
+   "PROVISIONAL_BASE": 6651.0389,
+   "PROVISIONAL_HIGH": 7215.5776,
+   "N_PROVISIONAL": 178,
+   "N_UNRESOLVED": 0,
+   "UNRESOLVED_EXPOSURE_LOW": null,
+   "UNRESOLVED_EXPOSURE_HIGH": null
+  },
+  "REINFORCEMENT|FOOTINGS": {
+   "PROVISIONAL_LOW": 3672.153,
+   "PROVISIONAL_BASE": 3735.9074,
+   "PROVISIONAL_HIGH": 4207.5361,
+   "N_PROVISIONAL": 27,
+   "N_UNRESOLVED": 0,
+   "UNRESOLVED_EXPOSURE_LOW": null,
+   "UNRESOLVED_EXPOSURE_HIGH": null
+  },
+  "REINFORCEMENT|GROUND_BEAMS": {
+   "PROVISIONAL_LOW": 3791.5814,
+   "PROVISIONAL_BASE": 4917.5511,
+   "PROVISIONAL_HIGH": 5398.1611,
+   "N_PROVISIONAL": 179,
+   "N_UNRESOLVED": 28,
+   "UNRESOLVED_EXPOSURE_LOW": null,
+   "UNRESOLVED_EXPOSURE_HIGH": null
+  },
+  "REINFORCEMENT|GROUND_SLAB": {
+   "PROVISIONAL_LOW": 1035.6999,
+   "PROVISIONAL_BASE": 1035.6999,
+   "PROVISIONAL_HIGH": 1035.6999,
+   "N_PROVISIONAL": 22,
+   "N_UNRESOLVED": 0,
+   "UNRESOLVED_EXPOSURE_LOW": null,
+   "UNRESOLVED_EXPOSURE_HIGH": null
+  },
+  "REINFORCEMENT|SLABS": {
+   "PROVISIONAL_LOW": 2584.3513,
+   "PROVISIONAL_BASE": 2584.3513,
+   "PROVISIONAL_HIGH": 2918.0339,
+   "N_PROVISIONAL": 72,
+   "N_UNRESOLVED": 0,
+   "UNRESOLVED_EXPOSURE_LOW": null,
+   "UNRESOLVED_EXPOSURE_HIGH": null
+  }
+ },
+ "m3_rebar_states": {
+  "EXPLICIT_NONE": 15,
+  "MISSING_DATA": 82,
+  "OUTSIDE_SCOPE": 1,
+  "PARTIAL_MISSING": 28,
+  "PROVISIONAL_MODEL": 315
+ },
+ "m4_rebar_states": {
+  "MISSING_DATA": 114,
+  "OUTSIDE_SCOPE": 1,
+  "PROVISIONAL_MODEL": 312,
+  "EXPLICIT_NONE": 15,
+  "PARTIAL_MISSING": 55
+ },
+ "m4_missing_register_rows": 169,
+ "m4_missing_by_existence": {
+  "MEASURED": 83,
+  "SECTION_UNRESOLVED": 40,
+  "NEED_UNRESOLVED": 46
+ },
+ "m4_missing_by_previous_state": {
+  "MISSING_DATA>MISSING_DATA": 58,
+  "PROVISIONAL_MODEL>MISSING_DATA": 10,
+  "MISSING_DATA>PARTIAL_MISSING": 24,
+  "PARTIAL_MISSING>PARTIAL_MISSING": 28,
+  "PROVISIONAL_MODEL>PARTIAL_MISSING": 3,
+  "ABSENT>MISSING_DATA": 46
+ },
+ "m4_unresolved_concrete": {
+  "BEAMS": 24,
+  "LINTELS": 46,
+  "SLABS": 1,
+  "GROUND_SLAB": 2,
+  "COLUMNS": 13
+ },
+ "m4_unresolved_concrete_classes": {
+  "SOURCE_AMBIGUITY": 12,
+  "NEED_UNRESOLVED": 46,
+  "MISSING_LABEL": 13,
+  "NOT_SLAB": 2,
+  "MISSING_SOURCE": 13
+ },
+ "cb_lines": {
+  "MATCH_FORWARD": 7,
+  "AMBIGUOUS_DIRECTION": 2,
+  "MATCH_REVERSED": 1,
+  "MATCH_SYMMETRIC": 1,
+  "SPAN_COUNT_CONFLICT": 1
+ },
+ "gb_exterior_cases": {
+  "GB_EXTERIOR_LEVEL_CONFLICT": 13,
+  "GB_EXTERIOR_DEPTH": 8,
+  "GB_TITLES_AND_LENGTH_BASIS": 3
+ },
+ "gb_arch_classes": {
+  "EXTERIOR_WALL": 23,
+  "PERIMETER_NO_WALL": 1
+ },
+ "slab_thickness_basis": {
+  "PROJECT_DEFAULT": 70,
+  "PRINTED_IN_PANEL": 7,
+  "SHEET_UNIFORM": 22
+ },
+ "lintels": {
+  "UNRESOLVED": 46,
+  "PROVISIONAL": 10,
+  "REPORTED": 1
+ },
+ "ocr_review": {
+  "AGREES": 14,
+  "REJECTED_STAYS": 1
+ },
+ "independent_checks": {
+  "PASS": 33
+ },
+ "summary": {
+  "totals": {
+   "CONCRETE": {
+    "VERIFIED": 0.0,
+    "PROVISIONAL_LOW": 305.6355484388944,
+    "PROVISIONAL_BASE": 312.0463546363227,
+    "PROVISIONAL_HIGH": 331.9661778099958,
+    "PLANNING_LOW": 305.6355484388944,
+    "PLANNING_BASE": 312.0463546363227,
+    "PLANNING_HIGH": 331.9661778099958,
+    "N_VERIFIED": 0,
+    "N_PROVISIONAL": 397,
+    "N_UNRESOLVED": 86,
+    "UNRESOLVED_EXPOSURE_LOW": 17.70966209689911,
+    "UNRESOLVED_EXPOSURE_HIGH": 30.742343412832614,
+    "N_UNRESOLVED_WITH_EXPOSURE": 83
+   },
+   "REINFORCEMENT": {
+    "VERIFIED": 0.0,
+    "PROVISIONAL_LOW": 24109.05227617298,
+    "PROVISIONAL_BASE": 27167.884152691142,
+    "PROVISIONAL_HIGH": 29384.144014822377,
+    "PLANNING_LOW": 24109.05227617298,
+    "PLANNING_BASE": 27167.884152691142,
+    "PLANNING_HIGH": 29384.144014822377,
+    "N_VERIFIED": 0,
+    "N_PROVISIONAL": 838,
+    "N_UNRESOLVED": 61,
+    "UNRESOLVED_EXPOSURE_LOW": 29.537280716067567,
+    "UNRESOLVED_EXPOSURE_HIGH": 30.438021456808308,
+    "N_UNRESOLVED_WITH_EXPOSURE": 2
+   }
+  },
+  "rebar_completeness": {
+   "EXPLICIT_NONE": 15,
+   "MISSING_DATA": 114,
+   "OUTSIDE_SCOPE": 1,
+   "PARTIAL_MISSING": 55,
+   "PROVISIONAL_MODEL": 312
+  },
+  "missing_steel_components": 169,
+  "continuous_beam_lines": {
+   "AMBIGUOUS_DIRECTION": 2,
+   "MATCH_FORWARD": 7,
+   "MATCH_REVERSED": 1,
+   "MATCH_SYMMETRIC": 1,
+   "SPAN_COUNT_CONFLICT": 1
+  },
+  "ocr_review": {
+   "AGREES": 14,
+   "REJECTED_STAYS": 1
+  },
+  "architectural_evidence": {
+   "registration": {
+    "state": "REGISTERED",
+    "landed": 28,
+    "n_arch": 30,
+    "share": 0.933,
+    "votes": 10,
+    "runner_up": 2,
+    "arch_sheet": "SH05",
+    "arch_columns": 30,
+    "struct_columns": 62
+   },
+   "ground_beam_classes": {
+    "EXTERIOR_WALL": 23,
+    "INTERIOR_WALL": 17,
+    "NOT_PERIMETER": 17,
+    "PERIMETER_NO_WALL": 1
+   }
+  }
+ },
+ "m3_seconds": {
+  "intake": 1.289,
+  "detect": 0.918,
+  "items": 0.043
+ },
+ "m4_seconds": 5.481,
+ "heldout": {
+  "clean_M3": {
+   "drawings": 40,
+   "end_to_end_success": 40,
+   "failures": [],
+   "mean_abs_error": {
+    "BEAMS_TOTAL_DEPTH": 0.002213,
+    "COLUMNS": 0.0,
+    "FOOTINGS": 0.0,
+    "SLABS": 0.0
+   },
+   "max_abs_error": {
+    "BEAMS_TOTAL_DEPTH": 0.088523,
+    "COLUMNS": 0,
+    "FOOTINGS": 0,
+    "SLABS": 0
+   },
+   "unlabelled_spans": {
+    "spans": 0,
+    "outcomes": {},
+    "precision": null,
+    "recall": null,
+    "never_wrong_or_covered": null,
+    "cb_spans": {},
+    "simple_beam_spans": {}
+   },
+   "cb_concrete_mae": null,
+   "beams_truth_in_base_plus_exposure": {
+    "drawings": 39,
+    "of": 40,
+    "mean_width_pct": 2.941
+   },
+   "unresolved_items": 82,
+   "mean_seconds": 0.124
+  },
+  "clean_M4": {
+   "drawings": 40,
+   "end_to_end_success": 40,
+   "failures": [],
+   "mean_abs_error": {
+    "BEAMS_TOTAL_DEPTH": 0.061341,
+    "COLUMNS": 0.0,
+    "FOOTINGS": 0.0,
+    "SLABS": 0.0
+   },
+   "max_abs_error": {
+    "BEAMS_TOTAL_DEPTH": 0.141216,
+    "COLUMNS": 0,
+    "FOOTINGS": 0,
+    "SLABS": 0
+   },
+   "unlabelled_spans": {
+    "spans": 0,
+    "outcomes": {},
+    "precision": null,
+    "recall": null,
+    "never_wrong_or_covered": null,
+    "cb_spans": {},
+    "simple_beam_spans": {}
+   },
+   "cb_concrete_mae": null,
+   "beams_truth_in_base_plus_exposure": {
+    "drawings": 39,
+    "of": 40,
+    "mean_width_pct": 9.406
+   },
+   "unresolved_items": 162,
+   "mean_seconds": 0.125
+  },
+  "m4_M3": {
+   "drawings": 40,
+   "end_to_end_success": 40,
+   "failures": [],
+   "mean_abs_error": {
+    "BEAMS_TOTAL_DEPTH": 0.01224,
+    "COLUMNS": 0.0,
+    "FOOTINGS": 0.0,
+    "SLABS": 0.0
+   },
+   "max_abs_error": {
+    "BEAMS_TOTAL_DEPTH": 0.086069,
+    "COLUMNS": 0,
+    "FOOTINGS": 0,
+    "SLABS": 0
+   },
+   "unlabelled_spans": {
+    "spans": 240,
+    "outcomes": {
+     "CORRECT": 168,
+     "WRONG_SECTION": 72
+    },
+    "precision": 0.7,
+    "recall": 0.7,
+    "never_wrong_or_covered": 0.7,
+    "cb_spans": {
+     "CORRECT": 128
+    },
+    "simple_beam_spans": {
+     "CORRECT": 40,
+     "WRONG_SECTION": 72
+    }
+   },
+   "cb_concrete_mae": 0.168165,
+   "beams_truth_in_base_plus_exposure": {
+    "drawings": 13,
+    "of": 40,
+    "mean_width_pct": 3.446
+   },
+   "unresolved_items": 82,
+   "mean_seconds": 0.13
+  },
+  "m4_M4": {
+   "drawings": 40,
+   "end_to_end_success": 40,
+   "failures": [],
+   "mean_abs_error": {
+    "BEAMS_TOTAL_DEPTH": 0.090812,
+    "COLUMNS": 0.0,
+    "FOOTINGS": 0.0,
+    "SLABS": 0.0
+   },
+   "max_abs_error": {
+    "BEAMS_TOTAL_DEPTH": 0.180377,
+    "COLUMNS": 0,
+    "FOOTINGS": 0,
+    "SLABS": 0
+   },
+   "unlabelled_spans": {
+    "spans": 240,
+    "outcomes": {
+     "CORRECT": 128,
+     "UNRESOLVED_COVERS": 112
+    },
+    "precision": 1.0,
+    "recall": 0.5333,
+    "never_wrong_or_covered": 1.0,
+    "cb_spans": {
+     "CORRECT": 128
+    },
+    "simple_beam_spans": {
+     "UNRESOLVED_COVERS": 112
+    }
+   },
+   "cb_concrete_mae": 0.0,
+   "beams_truth_in_base_plus_exposure": {
+    "drawings": 39,
+    "of": 40,
+    "mean_width_pct": 13.217
+   },
+   "unresolved_items": 402,
+   "mean_seconds": 0.131
+  }
+ }
+}

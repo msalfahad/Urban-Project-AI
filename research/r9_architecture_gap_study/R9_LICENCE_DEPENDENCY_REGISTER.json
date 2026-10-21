@@ -1,0 +1,108 @@
+{
+ "basis": "pack + Urban HEAD code + local donors at DONORS.lock commits (U-C4N cdb10638, OpenTakeoff e6d2251c) + RoomGraph / aec-qto / Rebar-Takeoff verified at pinned commits (LICENSE, README, docs, manifests read; no code copied) + christiannp forensic package",
+ "pack": "Urban_BOQ_Research_Pack_2026-10-07.zip",
+ "pack_claim_only": {
+  "Clipper2": "BSL-1.0 (pack claim)",
+  "ConMCP": "MIT (pack claim)",
+  "FreeCAD-Reinforcement": "LGPL-2+ (pack claim)",
+  "IfcOpenShell / ifc5d / ifcopenshell-mcp": "LGPL-3+ (pack claim)",
+  "Manifold / build123d / CadQuery / OR-Tools": "Apache-2.0 (pack claim)",
+  "Plansight": "MIT code, AGPL-dependency caution (pack claim)",
+  "PyMuPDF": "AGPL-3.0 or commercial (pack claim; consistent with the package metadata installed here)",
+  "cad-ai-agent": "Apache-2.0 (pack claim)",
+  "pypdfium2 / pdfplumber / PDF.js / PaddleOCR / Tesseract": "permissive (pack claim)",
+  "tianzheng-dwg-parse": "MIT (pack claim)"
+ },
+ "pack_sha256": "166a7341ebd9dc2d258d1c97e422ec67880782d86303c89cf76111d82d9e5331",
+ "pack_status": "DELIVERED and read in full (23 files)",
+ "urban_runtime_imports": {
+  "LibreDWG dwgread": "GPL-3.0, external binary producing JSON (not linked)",
+  "PIL (Pillow)": "HPND (permissive)",
+  "ezdxf": "MIT; K2 route (engine/source/cad/kernel_ezdxf.py)",
+  "numpy": "BSD-3-Clause",
+  "openpyxl": "MIT; workbook IO",
+  "pymupdf (fitz)": "AGPL-3.0 or commercial - 6 production engine/ modules; NOT in DONORS.lock / THIRD_PARTY_PROVENANCE; requirements.txt only as an optional comment -> R9-LIC-01",
+  "scipy": "BSD-3-Clause (research / tests)",
+  "shapely": "BSD-3-Clause; ~45 engine/ modules + 2 declared engine/source exceptions",
+  "tesseract": "Apache-2.0, optional external binary"
+ },
+ "v1_commit": "a75b845",
+ "verified_donors": {
+  "AEC_QTO": {
+   "commit": "82c1001658b2310c576c7fc39d721695e4382f2f",
+   "commit_date": "2026-08-09",
+   "features_confirmed": [
+    "IFC element -> cost-code CLASSIFICATION (not measurement)",
+    "TOML [meta] + [[rule]] mappings, no Python per standard",
+    "specificity with integer priority override",
+    "quantity names in preference order; no-quantity status, never dropped",
+    "mapping lint: qto validate",
+    "golden CSV per standard (tests/golden)",
+    "meta.status draft/reviewed/deprecated + declared gaps"
+   ],
+   "licence_file": "MIT (Copyright (c) 2026 Nguyen Thu Thuy)",
+   "licence_verified": true,
+   "limitations_confirmed": [
+    "all shipped mappings status=draft",
+    "IFC only",
+    "reads authored Qto_* quantities; no geometry kernel"
+   ],
+   "pack_says": "MIT",
+   "repo": "aec-platform/qto",
+   "runtime_dependencies": "ifc-spf>=0.1 (same author; its licence NOT verified here)"
+  },
+  "REBAR_TAKEOFF": {
+   "commit": "54641dd850291a9a8d8aac6119562a8a5f2099f7",
+   "commit_date": "2026-09-09",
+   "features_confirmed": [
+    "scans placed TEXT / MTEXT / INSERT / ATTRIB",
+    "layer discovery by name keywords + label content",
+    "label grammar: '16[16/20', '16O16/20', '%%c', '2x19[10/10', 'L=400', 'BOY=400', 'UZUNLUK=400' (Turkish practice)",
+    "quantity/diameter label matched to the NEARBY length label",
+    "unit mass from diameter and 7850 kg/m3",
+    "unresolved rows stay out of the total and are listed",
+    "match-rate vs included-in-totals metrics"
+   ],
+   "licence_file": "MIT (Copyright (c) 2026 Tolga Ileri)",
+   "licence_verified": true,
+   "limitations_confirmed": [
+    "self-described APPROXIMATE",
+    "not a geometric rebar verifier",
+    "hooks / laps only if in the labels",
+    "range labels low confidence",
+    "grammar is Turkish-convention, not the ST7757 ('5O10/m', '8 O 12', schedule ATTRIB) convention"
+   ],
+   "pack_says": "MIT (re-verify at commit)",
+   "repo": "tolga-ileri/Rebar-Takeoff",
+   "runtime_dependencies": "ezdxf, scipy, openpyxl, pandas; UI nicegui, pywebview; build pyinstaller, pillow; DWG needs ODA File Converter (not redistributable)"
+  },
+  "ROOMGRAPH": {
+   "commit": "772f0954a33d7930c5a9c5e3a48335831cc06ba7",
+   "commit_date": "2026-08-10",
+   "features_confirmed": [
+    "vector-PDF content-stream reader (own lexer)",
+    "scale: dimension strings > title block > door widths, with confidence; --scale exact",
+    "line clustering -> face pairing 60-420 mm",
+    "corner repair: bridged length becomes a bridged opening (provenance kept)",
+    "planar arrangement: split at crossings / T, half-edge minimal cycles",
+    "symbol library (doors, windows, curtain wall, stairs, sanitary ...)",
+    "room adjacency + walkability graph",
+    "--strict fails on uncertainty",
+    "printed room area vs measured (> 3 % warns); scale bar / dimension chain / door schedule as independent witnesses"
+   ],
+   "licence_file": "MIT (Copyright (c) 2026 Nguyen Thu Thuy)",
+   "licence_verified": true,
+   "limitations_confirmed": [
+    "scans out of scope",
+    "single-line walls unsupported",
+    "walls > 420 mm unsupported",
+    "CURVED WALLS UNSUPPORTED (clustered as short lines, do not pair)",
+    "door drawn over a continuous wall not found; accidental drafting gap reported as an opening",
+    "scale inferred; error enters areas squared"
+   ],
+   "pack_says": "MIT",
+   "repo": "aec-platform/roomgraph",
+   "runtime_dependencies": "none (stdlib only)"
+  }
+ }
+}

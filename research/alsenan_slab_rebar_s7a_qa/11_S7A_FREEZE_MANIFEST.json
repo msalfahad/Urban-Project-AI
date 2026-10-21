@@ -1,0 +1,54 @@
+{
+ "baseline": "aeb8798",
+ "code": {
+  "engine/source/delta_release.py": "7b0f72a6f5138b3e0f8515c80a42a38a2cfc035c8fb4c138aa64a4fd5c9708b9",
+  "engine/source/legacy_text.py": "2508b0f6c3c7bad751edb40009f009ef0ee24beb8c5c3516a0e5e400aa102f6a",
+  "research/alsenan_slab_rebar_s7a_qa/build_s7a_qa.py": "1e2dddad84c6b43a001159fa5b8398a9988f09de01b55ae02cc35122894d278a",
+  "research/source_recovery_delta/vector_pdf.py": "5f79e57915514c8b2eb621800efd0265e315856e853a08f38224df7a6bd610d9"
+ },
+ "date": "2026-10-08",
+ "drawing_sha256": {
+  "ST7757.dxf": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+  "ST7757.pdf": "74da1523f05eb3c6a4fe3ddebaef2c3d841891f003efc03bc32a3fb4553337e3"
+ },
+ "engine_commit_stamp": "aeb8798+code:56d0c2921b8d86c7",
+ "frozen_baselines": {
+  "PRE-S7": "fb3a1c62a8e525b663853d03d43e067f1839026aea149399491bd4cf98f0ad09",
+  "PRE-S7.1": "3a67a8641ce4ea836334e02532af82b9a3bb01be8efdba4f093eee44d92c1ef6",
+  "S7": "b23f97b6db334e641c38c498bf23b46236d68f4fcc26a6eafde1f3bfc156d175"
+ },
+ "inputs": {
+  "research/alsenan_slab_rebar_pre_s7/01_SLAB_PANEL_CENSUS.csv": "d72756283423595e03971d607d0c863b2336287084b3f0bb2f6dfd8daf650665",
+  "research/alsenan_slab_rebar_pre_s7/05_SUPPORT_REGISTER.csv": "03fe5e2cb59157f6f4be29b3b78b929705fee61cf81b34845c929dceaea190ff",
+  "research/alsenan_slab_rebar_pre_s7/PRE_S7_FREEZE_MANIFEST.json": "fb3a1c62a8e525b663853d03d43e067f1839026aea149399491bd4cf98f0ad09",
+  "research/alsenan_slab_rebar_pre_s7/source_search_inputs/PRE_S7_VISUAL_READING.json": "66f581ec8c701d9e1f305afe59fcb9bcd5fc84ca26f7729169522c62e5a82ade",
+  "research/alsenan_slab_rebar_pre_s7_1/05_TOP_RULE_IDENTITY.csv": "459df74ac06dc7a9c9c3f19416be63e96b211335c244229bdc044d3bffe5b990",
+  "research/alsenan_slab_rebar_pre_s7_1/07_LOCAL_BAR_STRIPS.csv": "1492677cca3ae65fe7f19820762b3d6ae6931bb2f5f86825a8604bc817814c8c",
+  "research/alsenan_slab_rebar_pre_s7_1/09_REMAINING_CONFLICTS.csv": "0c0b39f01488ca22256206bfbaf6266dd084fd4efe45417940c51b80f14613e4",
+  "research/alsenan_slab_rebar_pre_s7_1/PRE_S7_1_FREEZE_MANIFEST.json": "3a67a8641ce4ea836334e02532af82b9a3bb01be8efdba4f093eee44d92c1ef6",
+  "research/alsenan_slab_rebar_s7/01_S7_RELEASE_ITEMS.csv": "7a4b5d0c9a3e2ab8fb3c2ec1f809fa39269dd30462fdd1c1166a0f4419a9905f",
+  "research/alsenan_slab_rebar_s7/02_S7_BLOCKED_ITEMS.csv": "6e610438d55df3194e46412d2703484ee13ac4c030583d1f9dfb189353abd744",
+  "research/alsenan_slab_rebar_s7/04_S7_BAR_RUNS.csv": "a9f3cf455f349cc6618e40743d9102d26c306a6724da2a7aad3beb8034dcc468",
+  "research/alsenan_slab_rebar_s7/09_S7_PROJECT_SUMMARY.json": "6cb75650d35fd82ab27f10bef636d8879199ca0808dd54cc2af1d35860e69b44",
+  "research/alsenan_slab_rebar_s7/12_S7_FREEZE_MANIFEST.json": "b23f97b6db334e641c38c498bf23b46236d68f4fcc26a6eafde1f3bfc156d175",
+  "research/alsenan_structural_census_s1/STRUCTURAL_PROJECT_RULE_REGISTER.json": "3268bce3ef31c21ee93b0d7f9ab9b50195e0d0ae659699422c6927abcdf528d2"
+ },
+ "outputs": {
+  "00_README.md": "b908d6db5ae93e184f3c8f95ba5d60d1fb218ab494cf4afe57910ed9ad303b6d",
+  "01_TOP_EXTENT_INTERPRETATIONS.csv": "7e326ea0f1403ab806ad7c8cace304f9e80579f8d96d1f3dcc111e5388ff67da",
+  "02_SOURCE_EVIDENCE.json": "c47619a83e33a3676f2f77ac6605419b3d00f260b7dad4c264c6d7160e4bc0f6",
+  "03_BAR_FAMILY_IDENTITY_QA.csv": "cc03bfa623ae38a2f72170d5fe6e5a9b3675e8a40c1957c62e49869dcf95470e",
+  "04_TOP_SENSITIVITY_SCENARIOS.csv": "f8f1386e035e38ac90de5ddebeb73b23a0857903bf4c7dc35ac6b4be518b9841",
+  "05_TOP_SENSITIVITY_BY_END_CLASS.csv": "decb142f012fce133d7e15752e3b7124fecc54a062a71a6545e397c6df9954bc",
+  "06_TOP_SENSITIVITY_BY_STRIP_END.csv": "b8f3131d9697baad1e1d1155b7d61b76bc1dc4bcc359a918dde3db196e3493dd",
+  "07_BOTTOM_RULE_SUPPORT_TYPE_TABLE.csv": "04ff1c7ebf50255079be8df6ae2e8aded112e5105c7e11e0c4026b2d779055fb",
+  "08_END_CONDITION_AUDIT.csv": "4e6966a90b5cb3ce037bd5ff3637ace355bbbf100c0e2ebc226d8ccd5141eaeb",
+  "09_S7_ERRATA.json": "45aad38cfd9b49c554590a74ea30e609115cf317c17756035b65babf8b84f929",
+  "10_S7A_SUMMARY.json": "54feb74415b6351ea19213d37b444e2c9650e973888162891671e059434b3638"
+ },
+ "references_read": [],
+ "round": "S7A_QA",
+ "rule": "S7A changes no S7 file and no S7 quantity; scenario figures are sensitivity only; a quantity change needs a new dated correction layer with its own evidence",
+ "s7_total_kg": "3802.015364542",
+ "state": "FROZEN_QA_LAYER_NO_RELEASE"
+}

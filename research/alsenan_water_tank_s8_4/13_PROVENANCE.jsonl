@@ -1,0 +1,74 @@
+{"file": "ST7757.dxf", "handles": [], "output": "01_SOURCE_REGISTER.csv", "page": "1-7", "record": "SRC-01"}
+{"file": "ST7757.pdf", "handles": [], "output": "01_SOURCE_REGISTER.csv", "page": "1-15", "record": "SRC-02"}
+{"file": "P7757.dxf", "handles": [], "output": "01_SOURCE_REGISTER.csv", "page": "all", "record": "SRC-03"}
+{"file": "P7757_ARCH_PDF_SET_01-12 ARCH_PART_1_PAGES_01-06", "handles": [], "output": "01_SOURCE_REGISTER.csv", "page": "1-6", "record": "SRC-04"}
+{"file": "P7757_ARCH_PDF_SET_01-12 ARCH_PART_2_PAGES_07-12", "handles": [], "output": "01_SOURCE_REGISTER.csv", "page": "1-6", "record": "SRC-05"}
+{"file": "ST7757 p.6 SFRS", "handles": ["1A85"], "output": "01_SOURCE_REGISTER.csv", "page": 6, "record": "A-01"}
+{"file": "ST7757 p.6 SFRS", "handles": ["1A83", "1A84"], "output": "01_SOURCE_REGISTER.csv", "page": 6, "record": "A-02"}
+{"file": "ST7757 p.6 SFRS", "handles": ["1A81"], "output": "01_SOURCE_REGISTER.csv", "page": 6, "record": "A-03"}
+{"file": "ST7757 p.6 SFRS", "handles": ["7B1", "7B3", "7B4"], "output": "01_SOURCE_REGISTER.csv", "page": 6, "record": "A-T-01"}
+{"file": "ST7757 p.6 SFRS", "handles": ["1A7B", "1A7D", "1A7E"], "output": "01_SOURCE_REGISTER.csv", "page": 6, "record": "A-T-02"}
+{"file": "ST7757 p.6 SFRS", "handles": ["7A7", "7AF", "7A5", "7A6"], "output": "01_SOURCE_REGISTER.csv", "page": 6, "record": "A-C-7A7"}
+{"file": "ST7757 p.6 SFRS", "handles": ["7A8", "7B0", "7A4"], "output": "01_SOURCE_REGISTER.csv", "page": 6, "record": "A-C-7A8"}
+{"file": "ST7757 p.6 SFRS", "handles": ["798", "1A7F", "799", "79A"], "output": "01_SOURCE_REGISTER.csv", "page": 6, "record": "A-C-798"}
+{"file": "ST7757 p.6 SFRS", "handles": ["796", "1A80", "797"], "output": "01_SOURCE_REGISTER.csv", "page": 6, "record": "A-C-796"}
+{"file": "ST7757 p.6 SFRS", "handles": ["EA", "EC", "EB"], "output": "01_SOURCE_REGISTER.csv", "page": 6, "record": "A-N2"}
+{"file": "ST7757 p.6 SFRS", "handles": ["774", "78D", "79B", "79C", "79D", "79E", "7A9"], "output": "01_SOURCE_REGISTER.csv", "page": 6, "record": "A-BEAMS"}
+{"file": "ST7757 p.1 CAP", "handles": ["1176", "1182", "1150", "12AC"], "output": "01_SOURCE_REGISTER.csv", "page": 1, "record": "A-AXES"}
+{"file": "ST7757 p.8", "handles": [], "output": "01_SOURCE_REGISTER.csv", "page": 8, "record": "RULE-P8-N18"}
+{"file": "ST7757 p.1", "handles": ["7D"], "output": "01_SOURCE_REGISTER.csv", "page": 1, "record": "RULE-P1-NOTE-A"}
+{"file": "ST7757 p.8", "handles": [], "output": "01_SOURCE_REGISTER.csv", "page": 8, "record": "RULE-P8-N22"}
+{"file": "ST7757 p.8", "handles": [], "output": "01_SOURCE_REGISTER.csv", "page": 8, "record": "RULE-P8-N09"}
+{"file": "ST7757 p.15", "handles": [], "output": "01_SOURCE_REGISTER.csv", "page": 15, "record": "RULE-P15-SLAB-ON-BEAMS"}
+{"file": "ST7757 p.15", "handles": [], "output": "01_SOURCE_REGISTER.csv", "page": 15, "record": "RULE-P15-TEMP-TABLE"}
+{"file": "ST7757 p.15", "handles": [], "output": "01_SOURCE_REGISTER.csv", "page": 15, "record": "RULE-P15-TEMP-NOTES"}
+{"file": "ST7757.pdf", "handles": [], "output": "01_SOURCE_REGISTER.csv", "page": 6, "record": "VR-S8.4-01"}
+{"file": "ST7757.pdf", "handles": [], "output": "01_SOURCE_REGISTER.csv", "page": 6, "record": "VR-S8.4-02"}
+{"file": "ST7757.pdf", "handles": [], "output": "01_SOURCE_REGISTER.csv", "page": "8-15", "record": "VR-S8.4-03"}
+{"file": "P7757_ARCH_PDF_SET_01-12 ARCH_PART_2_PAGES_07-12", "handles": [], "output": "01_SOURCE_REGISTER.csv", "page": 4, "record": "VR-S8.4-04"}
+{"file": "P7757_ARCH_PDF_SET_01-12 ARCH_PART_2_PAGES_07-12", "handles": [], "output": "01_SOURCE_REGISTER.csv", "page": 5, "record": "VR-S8.4-05"}
+{"file": "P7757_ARCH_PDF_SET_01-12 parts 1-2", "handles": [], "output": "01_SOURCE_REGISTER.csv", "page": "06 / 07-09", "record": "VR-S8.4-06"}
+{"file": "P7757_ARCH_PDF_SET_01-12 parts 1-2", "handles": [], "output": "01_SOURCE_REGISTER.csv", "page": "01-12", "record": "VR-S8.4-07"}
+{"file": "research/alsenan_structural_census_s1/SLAB_PANEL_REGISTER.json", "handles": [], "output": "01_SOURCE_REGISTER.csv", "page": "", "record": "REG-S1_PANELS"}
+{"file": "research/alsenan_structural_census_s1/SPECIAL_STRUCTURAL_OCCURRENCE_REGISTER.json", "handles": [], "output": "01_SOURCE_REGISTER.csv", "page": "", "record": "REG-S1_SPECIAL"}
+{"file": "research/alsenan_structural_census_s1/SLAB_REBAR_SOURCE_REGISTER.json", "handles": [], "output": "01_SOURCE_REGISTER.csv", "page": "", "record": "REG-S1_SLAB_REBAR"}
+{"file": "research/alsenan_structural_census_s1/STRUCTURAL_PROJECT_RULE_REGISTER.json", "handles": [], "output": "01_SOURCE_REGISTER.csv", "page": "", "record": "REG-S1_RULES"}
+{"file": "research/alsenan_slab_rebar_pre_s7/04_COMPONENT_READINESS.csv", "handles": [], "output": "01_SOURCE_REGISTER.csv", "page": "", "record": "REG-PRE7_COMPONENTS"}
+{"file": "research/alsenan_slab_rebar_pre_s7/02_THICKNESS_REGISTER.csv", "handles": [], "output": "01_SOURCE_REGISTER.csv", "page": "", "record": "REG-PRE7_THICKNESS"}
+{"file": "research/alsenan_slab_rebar_pre_s7/11_SOURCE_CONFLICTS.csv", "handles": [], "output": "01_SOURCE_REGISTER.csv", "page": "", "record": "REG-PRE7_CONFLICTS"}
+{"file": "research/alsenan_slab_rebar_pre_s7/15_ENGINEER_QUESTIONS.csv", "handles": [], "output": "01_SOURCE_REGISTER.csv", "page": "", "record": "REG-PRE7_QUESTIONS"}
+{"file": "research/alsenan_slab_rebar_pre_s7_1/02_OWNERSHIP_TRANSFERS.csv", "handles": [], "output": "01_SOURCE_REGISTER.csv", "page": "", "record": "REG-PRE71_TRANSFERS"}
+{"file": "research/alsenan_slab_rebar_pre_s7_1/01_AD2_DECISIONS.json", "handles": [], "output": "01_SOURCE_REGISTER.csv", "page": "", "record": "REG-PRE71_AD2"}
+{"file": "research/alsenan_superstructure_beam_rebar_s6/SUPERSTRUCTURE_BEAM_OCCURRENCES.csv", "handles": [], "output": "01_SOURCE_REGISTER.csv", "page": "", "record": "REG-S6_OCC"}
+{"file": "research/alsenan_slab_rebar_s7/01_S7_RELEASE_ITEMS.csv", "handles": [], "output": "01_SOURCE_REGISTER.csv", "page": "", "record": "REG-S7_ITEMS"}
+{"file": "research/alsenan_slab_rebar_s7/02_S7_BLOCKED_ITEMS.csv", "handles": [], "output": "01_SOURCE_REGISTER.csv", "page": "", "record": "REG-S7_BLOCKED"}
+{"file": "research/alsenan_slab_rebar_s7/04_S7_BAR_RUNS.csv", "handles": [], "output": "01_SOURCE_REGISTER.csv", "page": "", "record": "REG-S7_RUNS"}
+{"file": "research/alsenan_slab_rebar_s7/05_S7_PANEL_SUMMARY.csv", "handles": [], "output": "01_SOURCE_REGISTER.csv", "page": "", "record": "REG-S7_PANELS"}
+{"file": "research/alsenan_slab_rebar_s7/06_S7_SUPPORT_SUMMARY.csv", "handles": [], "output": "01_SOURCE_REGISTER.csv", "page": "", "record": "REG-S7_SUPPORTS"}
+{"file": "research/alsenan_slab_rebar_s7/09_S7_PROJECT_SUMMARY.json", "handles": [], "output": "01_SOURCE_REGISTER.csv", "page": "", "record": "REG-S7_SUMMARY"}
+{"file": "research/alsenan_slab_rebar_s7a_qa/08_END_CONDITION_AUDIT.csv", "handles": [], "output": "01_SOURCE_REGISTER.csv", "page": "", "record": "REG-S7A_ENDS"}
+{"file": "research/alsenan_dome_ring_s8_3/15_S8_3_SUMMARY.json", "handles": [], "output": "01_SOURCE_REGISTER.csv", "page": "", "record": "REG-S83_SUMMARY"}
+{"file": "research/alsenan_dome_mesh_s8_3a/07_FROZEN_VERIFICATION.json", "handles": [], "output": "01_SOURCE_REGISTER.csv", "page": "", "record": "REG-S83A_VERIFY"}
+{"file": "tests/alsenan/registers/SOURCE_MANIFEST.json", "handles": [], "output": "01_SOURCE_REGISTER.csv", "page": "", "record": "REG-SOURCE_MANIFEST"}
+{"file": "research/alsenan_slab_rebar_pre_s7_1/01_AD2_DECISIONS.json", "handles": [], "output": "01_SOURCE_REGISTER.csv", "page": "", "record": "AD2-D08"}
+{"file": "research/alsenan_slab_rebar_pre_s7_1/01_AD2_DECISIONS.json", "handles": [], "output": "01_SOURCE_REGISTER.csv", "page": "", "record": "AD2-D11"}
+{"drawing_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079", "handles": ["1|38E", "1|3A1", "1|3AD", "1|773", "S-COL.BON|40F", "S-COL.BON|412", "S-COL.BON|421", "S-COL.BON|424"], "output": "02_POPULATION_AND_OWNERSHIP.csv", "record": "P-01"}
+{"drawing_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079", "handles": ["1|38E", "1|39C", "1|39D", "1|39F", "S-COL.BON|412"], "output": "02_POPULATION_AND_OWNERSHIP.csv", "record": "P-02"}
+{"drawing_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079", "handles": ["1A85", "1A83", "1A84", "1A81"], "output": "02_POPULATION_AND_OWNERSHIP.csv", "record": "P-ZONE"}
+{"drawing_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079", "output": "04_CONCRETE_QTO.csv", "panel": "SP-2F_ROOF_SLAB-01", "record": "S8.4-C-01"}
+{"drawing_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079", "output": "04_CONCRETE_QTO.csv", "panel": "SP-2F_ROOF_SLAB-02", "record": "S8.4-C-02"}
+{"callout": "7A7", "drawing_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079", "graphic": ["7A5", "7A6"], "output": "05_REINFORCEMENT_QTO.csv", "pre_s7_component": "CMP-0235", "qualifier": "7AF", "record": "S8.4-R-01-X-B"}
+{"callout": "7A7", "drawing_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079", "graphic": ["7A5", "7A6"], "output": "05_REINFORCEMENT_QTO.csv", "pre_s7_component": "CMP-0236", "qualifier": "7AF", "record": "S8.4-R-01-X-T"}
+{"callout": "7A8", "drawing_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079", "graphic": ["7A4"], "output": "05_REINFORCEMENT_QTO.csv", "pre_s7_component": "CMP-0237", "qualifier": "7B0", "record": "S8.4-R-01-Y-B"}
+{"callout": "7A8", "drawing_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079", "graphic": ["7A4"], "output": "05_REINFORCEMENT_QTO.csv", "pre_s7_component": "CMP-0238", "qualifier": "7B0", "record": "S8.4-R-01-Y-T"}
+{"callout": "798", "drawing_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079", "graphic": ["799", "79A"], "output": "05_REINFORCEMENT_QTO.csv", "pre_s7_component": "CMP-0241", "qualifier": "1A7F", "record": "S8.4-R-02-X-B"}
+{"callout": "798", "drawing_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079", "graphic": ["799", "79A"], "output": "05_REINFORCEMENT_QTO.csv", "pre_s7_component": "CMP-0242", "qualifier": "1A7F", "record": "S8.4-R-02-X-T"}
+{"callout": "796", "drawing_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079", "graphic": ["797"], "output": "05_REINFORCEMENT_QTO.csv", "pre_s7_component": "CMP-0243", "qualifier": "1A80", "record": "S8.4-R-02-Y-B"}
+{"callout": "796", "drawing_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079", "graphic": ["797"], "output": "05_REINFORCEMENT_QTO.csv", "pre_s7_component": "CMP-0244", "qualifier": "1A80", "record": "S8.4-R-02-Y-T"}
+{"box_px": [915, 411, 1551, 900], "dpi": 150, "file": "ST7757.pdf", "kept_in_git": false, "output": "01_SOURCE_REGISTER.csv", "page": 6, "record": "VR-S8.4-01"}
+{"box_px": [2133, 349, 2420, 1256], "dpi": 150, "file": "ST7757.pdf", "kept_in_git": false, "output": "01_SOURCE_REGISTER.csv", "page": 6, "record": "VR-S8.4-02"}
+{"box_px": null, "dpi": 45, "file": "ST7757.pdf", "kept_in_git": false, "output": "01_SOURCE_REGISTER.csv", "page": "8-15", "record": "VR-S8.4-03"}
+{"box_px": [793, 305, 1158, 386], "dpi": 110, "file": "P7757_ARCH_PDF_SET_01-12 ARCH_PART_2_PAGES_07-12", "kept_in_git": false, "output": "01_SOURCE_REGISTER.csv", "page": 4, "record": "VR-S8.4-04"}
+{"box_px": null, "dpi": 110, "file": "P7757_ARCH_PDF_SET_01-12 ARCH_PART_2_PAGES_07-12", "kept_in_git": false, "output": "01_SOURCE_REGISTER.csv", "page": 5, "record": "VR-S8.4-05"}
+{"box_px": null, "dpi": 90, "file": "P7757_ARCH_PDF_SET_01-12 parts 1-2", "kept_in_git": false, "output": "01_SOURCE_REGISTER.csv", "page": "06 / 07-09", "record": "VR-S8.4-06"}
+{"box_px": null, "dpi": 40, "file": "P7757_ARCH_PDF_SET_01-12 parts 1-2", "kept_in_git": false, "output": "01_SOURCE_REGISTER.csv", "page": "01-12", "record": "VR-S8.4-07"}

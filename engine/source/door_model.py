@@ -1,0 +1,836 @@
+"""DOOR MODEL (M9 Phase 2A P2-03 / P2-04, ARCH_TAKEOFF_V2.1 only) - every drawn door swing belongs to exactly one
+physical door element; each element carries its state, its typed evidence, three separate widths, its height and
+area (or why not), the spaces it joins and its BOQ class. Opt-in: V1 and V2 never call this module.
+
+Owner door rules of 2026-10-13 (DOOR_RULE_ID; recorded in the run, not a rule-store file, so the rule-set digest of
+V1 / V2 runs is unchanged):
+    DOOR.INTERNAL.PVC          every confirmed ordinary internal door (both sides are inside the building)
+    DOOR.EXTERNAL.ALUMINIUM    every confirmed ordinary external door: exterior adjacency is evidence-based (an
+                               exterior space on one side, or the facade: nothing drawn beyond that side); never the
+                               swing direction or a layer name
+    DOOR.MAIN_ENTRANCE         one main entrance door, measured on its own; candidates are detected and reconciled:
+                               zero or several left -> a REVIEW finding, never an assumed one. Never also counted as
+                               PVC or aluminium; material NOT_ESTABLISHED unless a source gives it
+    LIFT_SYSTEM / LIFT_DOOR    a door (or an opening) to a lift space: outside the ordinary door BOQ (EXCLUDED)
+    one physical double-leaf door is ONE element (leaf count recorded), never two door items.
+
+States (round 2, Q2; owner decision D4):
+    CONFIRMED    a band opening (jamb to jamb) serves the swing(s) - evidence kind BAND_OPENING, or DIMENSION /
+                 SCHEDULE / DECISION evidence; the only state that reaches released BOQ totals
+    PROVISIONAL  the swing closes a wall-to-wall gap with no band opening (closure only): width = the closure,
+                 range [swing radius, closure]; shown in the separate provisional section, never in released totals.
+                 The nib cases (wall pieces under 100 mm) stay here: no nib rule (P2-13 needs its own review)
+    UNRESOLVED   the swing closes no gap: no width; an engineering finding
+Widths (owner requirement 2), each with its own source; no field is filled from another's source:
+    structural_opening_width_m   jamb to jamb (band opening) or wall to wall (the leaf closure)
+    frame_width_m                the door block's frame span across the opening (NOT_DRAWN when the block draws none)
+    nominal_leaf_width_m         per leaf: the swing radius (evidence only: never a BOQ width)
+Height: only from a source (facts opening_heights, keyed by class or DOOR, with its authority); else BLOCKED with the
+missing source named. An explicitly authorised project fallback (facts opening_heights DOOR_ASSUMED) is labelled
+ASSUMED and kept out of confirmed areas. Area = width x height only when both are established.
+
+    elements(S, rooms, ents, unit_m, floor, ...)   -> {elements, swings, conservation, findings}
+    classify / main_entrance(...)                  the class of each element and the main-entrance reconciliation
+    boq_lines(ctx, model)                          released lines only (CONFIRMED, class established)
+    schedule_rows(model)                           the door schedule (every element, every field)
+Project-agnostic; stdlib + engine.source.boq_line / member_detection / arch_rooms.
+"""
+
+from __future__ import annotations
+
+import hashlib
+import math
+import re
+from collections import Counter
+
+from engine.source import arch_rooms as AR
+from engine.source import boq_line as BL
+from engine.source import member_detection as MD
+
+POLICY_ID = "DOOR_MODEL_V1"
+DOOR_RULE_ID = "OWNER_DOOR_CLASSES_2026_10_13"
+CONFIRMED, PROVISIONAL, UNRESOLVED = "CONFIRMED", "PROVISIONAL", "UNRESOLVED"
+CONFIRMING_KINDS = ("BAND_OPENING", "DIMENSION", "SCHEDULE", "DECISION")
+PVC, ALU, MAIN, LIFT = "DOOR.INTERNAL.PVC", "DOOR.EXTERNAL.ALUMINIUM", "DOOR.MAIN_ENTRANCE", "LIFT_SYSTEM/LIFT_DOOR"
+CLASS_UNRESOLVED = "CLASS_UNRESOLVED"
+RELEASED_CLASSES = (PVC, ALU, MAIN)
+# Phase 2B-0 (ARCH_TAKEOFF_V2.2, guards=True only): a door whose class needs a reviewer (a side space that may be
+# exterior, or a shaft), and an opening into a stacked-shaft footprint (a possible lift landing, never confirmed)
+CLASS_REVIEW = "CLASS_REVIEW"
+LIFT_CANDIDATE = "LIFT_ENTRANCE_CANDIDATE"
+FRAME_DISAGREE_MM = 2.0
+PAIR_TOL = 0.02                          # an exploded double leaf: r1 + r2 = hinge span within 2 %
+PROBE_M = (0.25, 0.5, 1.0)               # side probes beyond the wall faces
+ENTRANCE_RE = re.compile(r"(?i)(MAIN\s*(DOOR|ENTRANCE)|ENTRANCE|ENTRY|FOYER|LOBBY|مدخل)")
+LIFT_RE = re.compile(r"(?i)((^|[^A-Z])LIFT|ELEVATOR|مصعد)")
+ENTRANCE_TEXT_REACH_M = 3.0
+ENTRANCE_SPACES = ("CORRIDOR", "RECEPTION", "MAJLIS", "LIVING")    # a plausible entrance (weak evidence only)
+SIDE_CLASSES_THIN = ("DOORWAY", "WALL", "SLIVER")
+
+
+def _mm(v_du, unit_m):
+    return v_du * unit_m * 1000.0
+
+
+def stable_id(floor, centre_du, width_du, unit_m, origin=(0.0, 0.0)):
+    """unit- and translation-stable: floor, centre relative to the plan origin and width, in whole mm (a quarter-mm
+    shift keeps drafted half-mm values off the rounding boundary)."""
+    cx, cy = (_mm(centre_du[0] - origin[0], unit_m), _mm(centre_du[1] - origin[1], unit_m))
+    w = _mm(width_du, unit_m) if width_du is not None else -1.0
+    key = f"{floor}|{round(cx + 0.25)}|{round(cy + 0.25)}|{round(w + 0.25)}"
+    return f"DOOR-{floor}-{hashlib.sha256(key.encode('utf-8')).hexdigest()[:8]}"
+
+
+def _ev(eid, kind, **kw):
+    return dict({"id": eid, "kind": kind}, **kw)
+
+
+def _closure_geom(S, occ):
+    for r in S.get("repairs") or ():
+        if r.get("kind") == "DOOR_CLOSURE" and r.get("id") == f"CLOSURE|{occ}|A":
+            return tuple(r["a"]), tuple(r["b"])
+    return None
+
+
+SYMBOL_REACH = 1.5                       # ARCH_TAKEOFF_V2.7: a door symbol's own linework lies within 1.5 x the leaf
+SYMBOL_REACH_PAD_M = 0.30                # radius + 0.30 m of its hinge
+
+
+def symbol_prefix(sw, ents, unit_m):
+    """ARCH_TAKEOFF_V2.7: the block-instance path prefix of the door symbol that holds this swing - the innermost
+    occurrence on the swing's path whose own linework all lies within SYMBOL_REACH x radius + SYMBOL_REACH_PAD_M of
+    the hinge (a door block, even nested inside plan blocks); None when every occurrence is wider (a door drawn
+    exploded inside a plan block, or loose in model space)."""
+    path = list(sw.get("path") or ())
+    reach = SYMBOL_REACH * sw["radius"] + SYMBOL_REACH_PAD_M / unit_m
+    for k in range(len(path), 0, -1):
+        pre = path[:k]
+        segs = [x for x in ents.get("segments") or () if list(x.get("path") or ())[:k] == pre]
+        if segs and all(math.dist(p, sw["hinge"]) <= reach for x in segs for p in (x["a"], x["b"])):
+            return pre
+    return None
+
+
+def _frame_span(occ, swings, ents, u, n, o_lo, o_hi, unit_m, symbol_scope=False):
+    """the door block's own lines (same insert occurrence) lying in the wall strip, projected on the wall axis, every
+    leaf line of the insert excluded: their span is the frame width. None when the block draws no such line.
+    symbol_scope (ARCH_TAKEOFF_V2.7 only): the occurrence is the door symbol's own (symbol_prefix), not the outermost
+    insert of the swing's path - a plan nested in blocks no longer pools every door's lines into one frame."""
+    if symbol_scope:
+        pre = symbol_prefix(swings[occ], ents, unit_m) if occ in swings else None
+        if pre is None:
+            return None
+        k = len(pre)
+        leaves = [sw for sw in swings.values() if list(sw.get("path") or ())[:k] == pre]
+        mine = [x for x in ents.get("segments") or () if list(x.get("path") or ())[:k] == pre]
+    else:
+        insert = occ.split("|")[0]
+        leaves = [sw for k, sw in swings.items() if k.split("|")[0] == insert]
+        mine = [x for x in ents.get("segments") or () if (x.get("path") or [None])[0] == insert]
+    tol = 0.02 / unit_m
+    xs = []
+    for s in mine:
+        L = math.dist(s["a"], s["b"])
+        if any(min(math.dist(s["a"], sw["hinge"]), math.dist(s["b"], sw["hinge"])) <= tol * 5 and
+               abs(L - sw["radius"]) <= 0.15 * sw["radius"] for sw in leaves):
+            continue                                     # a leaf
+        if all(o_lo - tol <= p[0] * n[0] + p[1] * n[1] <= o_hi + tol for p in (s["a"], s["b"])):
+            xs += [p[0] * u[0] + p[1] * u[1] for p in (s["a"], s["b"])]
+    return (max(xs) - min(xs)) if len(xs) >= 2 and max(xs) - min(xs) > tol else None
+
+
+def _face_at(p, faces):
+    for f in faces:
+        if MD.point_in_poly(p[0], p[1], f["polygon"]) and not any(MD.point_in_poly(p[0], p[1], h)
+                                                                   for h in f.get("hole_polygons") or ()):
+            return f
+    return None
+
+
+def _ray_free(p, d, segments, reach):
+    """True when a ray from p along d meets no wall-role segment within reach (the facade side)."""
+    q = (p[0] + d[0] * reach, p[1] + d[1] * reach)
+    for s in segments:
+        a, b = s["a"], s["b"]
+        d1 = (q[0] - p[0]) * (a[1] - p[1]) - (q[1] - p[1]) * (a[0] - p[0])
+        d2 = (q[0] - p[0]) * (b[1] - p[1]) - (q[1] - p[1]) * (b[0] - p[0])
+        d3 = (b[0] - a[0]) * (p[1] - a[1]) - (b[1] - a[1]) * (p[0] - a[0])
+        d4 = (b[0] - a[0]) * (q[1] - a[1]) - (b[1] - a[1]) * (q[0] - a[0])
+        if d1 * d2 <= 0 and d3 * d4 <= 0:
+            return False
+    return True
+
+
+def _kind_of(face):
+    kinds = {AR.LEX[c][2] for c in face.get("codes") or () if c in AR.LEX}
+    return kinds
+
+
+def _side(c, n, sign, half_t, S, wall_segs, unit_m, reach):
+    """what lies on one side of a door: {kind: SPACE | EXTERIOR_SPACE | LIFT | FACADE | UNKNOWN, face_id, codes}."""
+    faces = S.get("faces") or []
+    for d in PROBE_M:
+        k = half_t + d / unit_m
+        p = (c[0] + sign * n[0] * k, c[1] + sign * n[1] * k)
+        f = _face_at(p, faces)
+        if f is None:
+            if _ray_free(p, (sign * n[0], sign * n[1]), wall_segs, reach):
+                return {"kind": "FACADE", "face_id": None, "codes": [], "evidence": "nothing drawn beyond this side"}
+            continue
+        if f["class"] in SIDE_CLASSES_THIN:
+            continue
+        codes = f.get("codes") or []
+        if "LIFT" in codes:
+            return {"kind": "LIFT", "face_id": f["face_id"], "codes": codes, "evidence": "a LIFT space"}
+        if AR.EXTERIOR in _kind_of(f) and len(_kind_of(f)) == 1:
+            return {"kind": "EXTERIOR_SPACE", "face_id": f["face_id"], "codes": codes,
+                    "evidence": "an exterior space (" + "+".join(codes) + ")"}
+        return {"kind": "SPACE", "face_id": f["face_id"], "codes": codes, "evidence": "a space inside the plan"}
+    return {"kind": "UNKNOWN", "face_id": None, "codes": [], "evidence": "no space and no facade found on this side"}
+
+
+def _height(cls, facts, opening_id=None, floor=None):
+    # ARCH_TAKEOFF_V2.8 (UP-HGT-001): the door's own height from the drawing's evidence, keyed by floor | opening (only
+    # V2.8 hands this key in; every earlier method's facts never carry it)
+    by_op = (facts or {}).get("opening_heights_by_opening") or {}
+    if opening_id is not None and f"{floor}|{opening_id}" in by_op:
+        return dict(by_op[f"{floor}|{opening_id}"])
+    oh = (facts or {}).get("opening_heights") or {}
+    for key in ([cls] if cls else []) + ["DOOR"]:
+        if oh.get(key):
+            return {"value_m": oh[key]["value_m"], "state": "SOURCE", "source": f"facts opening_heights.{key}",
+                    "authority": oh[key]["authority"]}
+    if oh.get("DOOR_ASSUMED"):
+        return {"value_m": oh["DOOR_ASSUMED"]["value_m"], "state": "ASSUMED",
+                "source": "facts opening_heights.DOOR_ASSUMED (explicitly authorised project fallback)",
+                "authority": oh["DOOR_ASSUMED"]["authority"]}
+    # ARCH_TAKEOFF_V2.3 (UP-DOOR-HGT-001): the owner reference height of the class, after the project fallback
+    if cls and oh.get(cls + "_ASSUMED"):
+        return {"value_m": oh[cls + "_ASSUMED"]["value_m"], "state": "ASSUMED",
+                "source": f"owner reference height {cls} (UP-DOOR-HGT-001: HEIGHT_ASSUMED)",
+                "authority": oh[cls + "_ASSUMED"]["authority"]}
+    return {"value_m": None, "state": "BLOCKED",
+            "source": "MISSING SOURCE: no door schedule, elevation, section or facts opening_heights gives the height"}
+
+
+def elements(S, rooms, ents, unit_m, floor, *, wall_layers=(), origin=(0.0, 0.0), facts=None,
+             promote_by_dimension=False, dimensions=(), decisions=None, symbol_scope=False):
+    """the door elements of one floor from the V2.1 spaces result S (arch_rooms.spaces) and its rooms."""
+    swings = S.get("doors") or {}
+    status = S.get("door_status") or {}
+    ops = {o["opening_id"]: o for o in S.get("openings") or ()}
+    room_of_face = {r["face_id"]: r for r in rooms}
+    wall_l = set(wall_layers)
+    wall_segs = [s for s in ents.get("segments") or () if s["layer"] in wall_l]
+    xs = [p[i] for s in ents.get("segments") or () for p in (s["a"], s["b"]) for i in (0, 1)]
+    reach = (max(xs) - min(xs)) * 2 if xs else 1e9
+    out, findings, used = [], [], Counter()
+
+    def add(el):
+        for occ in el["swings"]:
+            used[occ] += 1
+        out.append(el)
+
+    # 1. band openings served by swings: CONFIRMED (one element per opening; two leaves = one double door)
+    for o in S.get("openings") or ():
+        leaves = o.get("door_leaves") or ([o["door_symbol"]] if o.get("door_symbol") else [])
+        if o.get("kind") != "DOOR" or not leaves:
+            continue
+        u, n = o["u"], o["n"]
+        c = o["centre"]
+        frame = None
+        for occ in leaves:
+            f = _frame_span(occ, swings, ents, u, n, o["o0"], o["o1"], unit_m,
+                            **({"symbol_scope": True} if symbol_scope else {})) if occ in swings else None
+            frame = f if f is not None and (frame is None or f > frame) else frame
+        if symbol_scope:                                 # ARCH_TAKEOFF_V2.7: the V2.6 reading, kept for the log
+            frame26 = None
+            for occ in leaves:
+                f = _frame_span(occ, swings, ents, u, n, o["o0"], o["o1"], unit_m) if occ in swings else None
+                frame26 = f if f is not None and (frame26 is None or f > frame26) else frame26
+        el = {"floor": floor, "opening_id": o["opening_id"], "swings": list(leaves), "leaf_count": len(leaves),
+              "state": CONFIRMED, "centre": list(c), "u": list(u), "n": list(n), "wall_t_m": o["wall_t_m"],
+              "structural_opening_width_m": o["width_m"],
+              "structural_opening_source": "JAMB_SPAN (the door symbol's jamb lines; the rest of the wall gap proven wall "
+                                           "on both faces - ARCH_TAKEOFF_V2.7)"
+              if (o.get("opening_v27") or {}).get("decision") == "NARROWED_TO_JAMB_SPAN" else
+              "BAND_OPENING (jamb to jamb)",
+              "frame_width_m": frame * unit_m if frame is not None else None,
+              "frame_source": "door block frame span" if frame is not None else "NOT_DRAWN",
+              "nominal_leaf_width_m": [swings[x]["radius"] * unit_m for x in leaves if x in swings],
+              "evidence": [_ev(f"EV-{o['opening_id']}-BAND", "BAND_OPENING", opening_id=o["opening_id"],
+                               jambs=[o["start_jamb"], o["end_jamb"]], width_m=o["width_m"])]
+              + [_ev(f"EV-{x.split('|')[-1]}-SWING", "SWING", occ=x, radius_m=swings[x]["radius"] * unit_m)
+                 for x in leaves if x in swings]}
+        if o.get("door_fit_review"):                     # ARCH_TAKEOFF_V2.6: the swing fits only the review limits
+            el["fit_review"] = o["door_fit_review"]
+        if symbol_scope and frame26 != frame:
+            el["frame_scope_v27"] = _frame_change(frame26, frame, unit_m)
+        el["history"] = [{"from": None, "to": CONFIRMED, "evidence": el["evidence"][0]["id"]}]
+        add(el)
+    # 2. swings closed by their leaf with no band opening: PROVISIONAL (an exploded pair is one element)
+    closed = [occ for occ in sorted(swings) if used[occ] == 0 and (status.get(occ) or {}).get("state") == "CLOSED"]
+    paired = set()
+    for i, a in enumerate(closed):
+        for b in closed[i + 1:]:
+            if a in paired or b in paired:
+                continue
+            sa, sb = swings[a], swings[b]
+            span = math.dist(sa["hinge"], sb["hinge"])
+            rr = sa["radius"] + sb["radius"]
+            if abs(span - rr) <= PAIR_TOL * rr:
+                paired |= {a, b}
+                g = _closure_geom(S, a) or (tuple(sa["hinge"]), tuple(sb["hinge"]))
+                add(_provisional(floor, [a, b], swings, status, g, span, ents, unit_m,
+                                 extra=[_ev(f"EV-{a.split('|')[-1]}-PAIR", "EXPLODED_PAIR", hinge_span_m=span * unit_m,
+                                            leaves_m=[sa["radius"] * unit_m, sb["radius"] * unit_m])],
+                                 symbol_scope=symbol_scope))
+            elif span <= 1.3 * rr:
+                findings.append({"level": "REVIEW", "code": "DOUBLE_LEAF_UNCERTAIN", "floor": floor,
+                                 "swings": [a, b], "message": f"two leaf-closed swings {span * unit_m:.3f} m apart "
+                                 f"(leaves {rr * unit_m:.3f} m): not a pair within 2 %; kept as two elements"})
+    for occ in closed:
+        if occ in paired:
+            continue
+        st = status[occ]
+        g = _closure_geom(S, occ)
+        add(_provisional(floor, [occ], swings, status, g, st.get("width"), ents, unit_m, symbol_scope=symbol_scope))
+    # 3. swings closing no gap: UNRESOLVED
+    for occ in sorted(swings):
+        if used[occ]:
+            continue
+        sw = swings[occ]
+        el = {"floor": floor, "opening_id": None, "swings": [occ], "leaf_count": 1, "state": UNRESOLVED,
+              "centre": list(sw["hinge"]), "u": None, "n": None, "wall_t_m": None,
+              "structural_opening_width_m": None, "structural_opening_source": "BLOCKED: the swing closes no gap",
+              "frame_width_m": None, "frame_source": "NOT_ESTABLISHED",
+              "nominal_leaf_width_m": [sw["radius"] * unit_m],
+              "evidence": [_ev(f"EV-{occ.split('|')[-1]}-SWING", "SWING", occ=occ, radius_m=sw["radius"] * unit_m,
+                               closure_state=(status.get(occ) or {}).get("state"),
+                               why=(status.get(occ) or {}).get("why"))]}
+        el["history"] = [{"from": None, "to": UNRESOLVED, "evidence": el["evidence"][0]["id"]}]
+        add(el)
+        findings.append({"level": "ENGINEERING", "code": "DOOR_SWING_UNRESOLVED", "floor": floor, "swing": occ,
+                         "message": "a door swing closes no wall gap: no door width; the door is not in any total"})
+    # ids, sides, frame check, dimension evidence, decisions
+    for el in out:
+        w = el["structural_opening_width_m"]
+        el["element_id"] = stable_id(floor, el["centre"], w / unit_m if w is not None else None, unit_m, origin)
+    seen = Counter(el["element_id"] for el in out)
+    for el in out:
+        if seen[el["element_id"]] > 1:
+            el["element_id"] += "-" + el["swings"][0].split("|")[-1]
+    for el in out:
+        _sides(el, S, wall_segs, unit_m, reach, room_of_face)
+        fw, w = el["frame_width_m"], el["structural_opening_width_m"]
+        if fw is not None and w is not None and abs(fw - w) * 1000.0 > FRAME_DISAGREE_MM:
+            findings.append({"level": "REVIEW", "code": "DOOR_CLOSURE_FRAME_DISAGREE", "floor": floor,
+                             "element_id": el["element_id"], "opening_m": round(w, 4), "frame_m": round(fw, 4),
+                             "message": f"structural opening {w * 1000:.0f} mm vs frame span {fw * 1000:.0f} mm"})
+        for dm in dimensions or ():
+            if dm.get("element_id") == el["element_id"]:
+                el["evidence"].append(_ev(f"EV-{el['element_id']}-DIM", "DIMENSION", **{k: v for k, v in dm.items()
+                                                                                       if k != "element_id"}))
+                if promote_by_dimension and el["state"] == PROVISIONAL and dm.get("agrees"):
+                    _transition(el, CONFIRMED, el["evidence"][-1]["id"])
+        dec = (decisions or {}).get(el["element_id"])
+        if dec:
+            el["evidence"].append(_ev(f"EV-{el['element_id']}-DEC", "DECISION", **dec))
+            if dec.get("state") in (CONFIRMED, PROVISIONAL, UNRESOLVED) and dec["state"] != el["state"]:
+                _transition(el, dec["state"], el["evidence"][-1]["id"])
+    return {"elements": out, "findings": findings,
+            "conservation": conservation(swings, out, floor)}
+
+
+def _provisional(floor, occs, swings, status, g, width_du, ents, unit_m, extra=(), symbol_scope=False):
+    sw0 = swings[occs[0]]
+    if g is not None:
+        a, b = g
+        L = math.dist(a, b) or 1.0
+        u = ((b[0] - a[0]) / L, (b[1] - a[1]) / L)
+        n = (-u[1], u[0])
+        c = ((a[0] + b[0]) / 2, (a[1] + b[1]) / 2)
+    else:
+        u = n = None
+        c = tuple(sw0["hinge"])
+    radii = [swings[x]["radius"] * unit_m for x in occs]
+    w = width_du * unit_m if width_du is not None else None
+    st = status.get(occs[0]) or {}
+    el = {"floor": floor, "opening_id": None, "swings": list(occs), "leaf_count": len(occs), "state": PROVISIONAL,
+          "centre": list(c), "u": list(u) if u else None, "n": list(n) if n else None, "wall_t_m": None,
+          "structural_opening_width_m": w,
+          "structural_opening_source": "CLOSURE (wall to wall along the closed leaf)" if w is not None else "BLOCKED",
+          "width_range_m": [round(sum(radii), 6), round(w, 6)] if w is not None else None,
+          "frame_width_m": None, "frame_source": "NOT_DRAWN",
+          "nominal_leaf_width_m": radii,
+          "evidence": [_ev(f"EV-{occs[0].split('|')[-1]}-CLOSURE", "CLOSURE", closure_a=st.get("closure_a"),
+                           closure_b=st.get("closure_b"), hits=st.get("hits"), width_m=w)] + list(extra) +
+                      [_ev(f"EV-{x.split('|')[-1]}-SWING", "SWING", occ=x, radius_m=swings[x]["radius"] * unit_m)
+                       for x in occs],
+          "uncertainty": "no band opening: the jambs are not proven (wall pieces too short for a wall band, or no "
+                         "jamb drawn); width between the swing radius and the wall-to-wall closure"}
+    if u:
+        ins = occs[0]
+        strip = sorted((c[0] * n[0] + c[1] * n[1] - 0.15 / unit_m, c[0] * n[0] + c[1] * n[1] + 0.15 / unit_m))
+        f = _frame_span(ins, swings, ents, u, n, *strip, unit_m, **({"symbol_scope": True} if symbol_scope else {}))
+        if f is not None:
+            el["frame_width_m"], el["frame_source"] = f * unit_m, "door block frame span"
+        if symbol_scope:                                 # ARCH_TAKEOFF_V2.7: the V2.6 reading, kept for the log
+            f26 = _frame_span(ins, swings, ents, u, n, *strip, unit_m)
+            if f26 != f:
+                el["frame_scope_v27"] = _frame_change(f26, f, unit_m)
+    el["history"] = [{"from": None, "to": PROVISIONAL, "evidence": el["evidence"][0]["id"]}]
+    return el
+
+
+def _frame_change(f26, f27, unit_m):
+    """ARCH_TAKEOFF_V2.7: a door frame read from the door symbol's own insert where the V2.6 reading (the outermost
+    insert of the swing's path) differs."""
+    return {"v26_frame_m": None if f26 is None else round(f26 * unit_m, 6),
+            "frame_m": None if f27 is None else round(f27 * unit_m, 6),
+            "basis": "the door symbol's own insert (symbol_prefix), not the group or plan block around it"}
+
+
+def _transition(el, to, evidence_id):
+    ev = next((e for e in el["evidence"] if e["id"] == evidence_id), None)
+    if to == CONFIRMED and (ev is None or ev["kind"] not in CONFIRMING_KINDS):
+        raise ValueError(f"{el['element_id']}: CONFIRMED needs evidence of kind {CONFIRMING_KINDS}")
+    el["history"].append({"from": el["state"], "to": to, "evidence": evidence_id})
+    el["state"] = to
+
+
+def attach_dimensions(els, door_evidence, *, promote=False):
+    """DIMENSION evidence on door elements (read-only unless promote: a provisional door whose closure a usable
+    dimension confirms within 5 mm becomes CONFIRMED - off in the V2.1 run, an owner decision is pending)."""
+    by = {}
+    for d in door_evidence:
+        by.setdefault(d["element_id"], []).append(d)
+    for el in els:
+        for d in by.get(el["element_id"], ()):
+            el["evidence"].append(_ev(f"EV-{el['element_id']}-DIM-{d['handle']}", "DIMENSION",
+                                      **{k: v for k, v in d.items() if k != "element_id"}))
+            if promote and el["state"] == PROVISIONAL and d.get("agrees"):
+                _transition(el, CONFIRMED, el["evidence"][-1]["id"])
+    return els
+
+
+def confirming_evidence(el):
+    return [e for e in el["evidence"] if e["kind"] in CONFIRMING_KINDS]
+
+
+def _sides(el, S, wall_segs, unit_m, reach, room_of_face):
+    if el["n"] is None:
+        el["sides"] = [{"kind": "UNKNOWN", "face_id": None, "codes": [], "evidence": "no door axis"}] * 2
+    else:
+        half = (el["wall_t_m"] or 0.2) / 2.0 / unit_m
+        el["sides"] = [_side(el["centre"], el["n"], sg, half, S, wall_segs, unit_m, reach) for sg in (1, -1)]
+    for sd in el["sides"]:
+        r = room_of_face.get(sd["face_id"])
+        sd["room_id"] = r["room_id"] if r else None
+        sd["room_name"] = r["name_en"] if r else None
+    el["from_room"], el["to_room"] = (el["sides"][0].get("room_id"), el["sides"][1].get("room_id"))
+
+
+def conservation(swings, els, floor):
+    """drawn swings = the leaves of CONFIRMED + PROVISIONAL + UNRESOLVED elements; no swing in two elements."""
+    c = Counter(occ for el in els for occ in el["swings"])
+    twice = sorted(k for k, v in c.items() if v > 1)
+    missing = sorted(set(swings) - set(c))
+    extra = sorted(set(c) - set(swings))
+    by = Counter(el["state"] for el in els)
+    leaves = Counter()
+    for el in els:
+        leaves[el["state"]] += el["leaf_count"]
+    return {"floor": floor, "swings": len(swings), "elements": dict(by), "leaves": dict(leaves),
+            "ok": not twice and not missing and not extra and sum(leaves.values()) == len(swings),
+            "in_two_elements": twice, "without_element": missing, "unknown_swings": extra}
+
+
+def classify(el, ents=None, unit_m=1.0, *, guards=False, external_faces=None, decided_exterior=None):
+    """the BOQ class from the sides (typed evidence), the lift words of the door block, never a layer name alone.
+    guards (ARCH_TAKEOFF_V2.2, F-20): a door into a shaft, or a PVC door whose side space may be exterior (an
+    unlabelled space with a doorless opening to the facade: external_faces), is a CLASS_REVIEW, never released.
+    decided_exterior (ARCH_TAKEOFF_V2.3, UP-SPACE-002): {face_id: project decision} - a side space a bound project
+    decision makes exterior is typed EXTERIOR_SPACE, with the decision as its evidence."""
+    for sd in el["sides"] if decided_exterior else ():
+        d = decided_exterior.get(sd.get("face_id"))
+        if d is not None and sd["kind"] == "SPACE":
+            sd.update(kind="EXTERIOR_SPACE", evidence=f"project decision {d['id']} ({d.get('rule_id')}): "
+                                                      f"{d.get('statement', '')}")
+    _classify(el)
+    if guards and el["class"] not in (LIFT,):
+        shaft = [s for s in el["sides"] if s["kind"] == "SPACE" and "SHAFT" in (s.get("codes") or ())]
+        ext = [s for s in el["sides"] if s["kind"] == "SPACE" and s.get("face_id") in (external_faces or {})]
+        if shaft:
+            el["class"], el["class_evidence"] = CLASS_REVIEW, (
+                "a door into a shaft space (a lift landing or a service shaft door): not an ordinary door until a "
+                "reviewer names it")
+        elif el["class"] == PVC and ext:
+            el["class"], el["class_evidence"] = CLASS_REVIEW, (
+                "possibly external: the space on one side has no room word and a doorless opening to the facade (" +
+                ", ".join(external_faces[s["face_id"]] for s in ext) + ") - internal PVC or external aluminium is "
+                "the reviewer's call")
+    return el
+
+
+def _classify(el):
+    kinds = [s["kind"] for s in el["sides"]]
+    insert = (el["swings"][0].split("|")[0] if el["swings"] else "")
+    if "LIFT" in kinds or (insert and LIFT_RE.search(insert)):
+        el["class"], el["class_evidence"] = LIFT, "a lift space on one side" if "LIFT" in kinds else \
+            "the door block is a lift door"
+        return el
+    outside = [k for k in kinds if k in ("FACADE", "EXTERIOR_SPACE")]
+    inside = [k for k in kinds if k == "SPACE"]
+    if len(inside) == 2:
+        el["class"], el["class_evidence"] = PVC, "spaces inside the plan on both sides"
+    elif len(inside) == 1 and len(outside) == 1:
+        el["class"] = ALU
+        el["class_evidence"] = "exterior adjacency: " + next(s["evidence"] for s in el["sides"]
+                                                             if s["kind"] in ("FACADE", "EXTERIOR_SPACE"))
+    else:
+        el["class"], el["class_evidence"] = CLASS_UNRESOLVED, "sides " + " / ".join(kinds)
+    return el
+
+
+def main_entrance(els, faces_texts, texts, unit_m, *, entrance_floor, not_entrance_codes=()):
+    """the main-entrance reconciliation over every external door of the entrance floor: STRONG candidates carry an
+    entrance word in the space they open into or a word within 3 m; exactly one STRONG -> it is the main entrance;
+    otherwise a REVIEW finding names the candidates and none is assumed. -> (main element or None, findings,
+    candidates). not_entrance_codes (ARCH_TAKEOFF_V2.3): a door whose exterior side is a space of one of these codes
+    (a balcony, a roof) is never a main-entrance candidate."""
+    reach = ENTRANCE_TEXT_REACH_M / unit_m
+    cands = []
+    for el in els:
+        if el.get("class") != ALU or el["floor"] != entrance_floor:
+            continue
+        if not_entrance_codes and any(sd["kind"] == "EXTERIOR_SPACE" and set(sd.get("codes") or ()) &
+                                      set(not_entrance_codes) for sd in el["sides"]):
+            continue
+        ev = []
+        for sd in el["sides"]:
+            for t in faces_texts.get(sd.get("face_id"), ()):
+                if ENTRANCE_RE.search(t["value"] or ""):
+                    ev.append({"kind": "ENTRANCE_WORD_IN_SPACE", "text_id": t["id"], "text": t["value"]})
+        for t in texts:
+            if ENTRANCE_RE.search(t.get("value") or "") and math.dist((t["x"], t["y"]), el["centre"]) <= reach:
+                ev.append({"kind": "ENTRANCE_WORD_NEAR", "text_id": t["id"], "text": t["value"]})
+        weak = el["leaf_count"] > 1 or any(c in ENTRANCE_SPACES for sd in el["sides"] for c in sd.get("codes") or ())
+        if not ev and not weak:
+            continue
+        cands.append({"element_id": el["element_id"], "strong": bool(ev), "evidence": ev,
+                      "weak_evidence": "double leaf or opens into a hall / reception / majlis / living space"
+                      if weak else None, "leaf_count": el["leaf_count"], "width_m": el["structural_opening_width_m"]})
+    strong = [c for c in cands if c["strong"]]
+    findings = []
+    main = None
+    if len(strong) == 1:
+        main = next(el for el in els if el["element_id"] == strong[0]["element_id"])
+    else:
+        findings.append({"level": "REVIEW", "code": "MAIN_ENTRANCE_UNRESOLVED" if not strong else
+                         "MAIN_ENTRANCE_AMBIGUOUS", "floor": entrance_floor,
+                         "candidates": [c["element_id"] for c in (strong or cands)],
+                         "message": (f"{len(strong)} external doors carry entrance evidence" if strong else
+                                     f"no external door of {entrance_floor} carries entrance evidence "
+                                     f"({len(cands)} plausible candidate(s) withheld from released totals)") +
+                                    ": the main entrance is not assumed; a reviewer names it"})
+    return main, findings, cands
+
+
+def finalise(els, *, main, unresolved_main_candidates, facts, guards=False):
+    """BOQ class, height, area and the released flag of each element. guards (ARCH_TAKEOFF_V2.2, F-18): a confirmed
+    door whose structural opening and frame span disagree (> FRAME_DISAGREE_MM) is held (not released) until a
+    schedule, a dimension or the owner settles the width."""
+    cand = set(unresolved_main_candidates)
+    for el in els:
+        if main is not None and el["element_id"] == main["element_id"]:
+            el["boq_class"] = MAIN
+            el["material"] = ((facts or {}).get("door_materials") or {}).get(MAIN) or "NOT_ESTABLISHED"
+        elif el["element_id"] in cand:
+            el["boq_class"] = "MAIN_ENTRANCE_CANDIDATE"
+            el["material"] = "NOT_ESTABLISHED"
+        else:
+            el["boq_class"] = el.get("class")
+            el["material"] = {PVC: "PVC (owner door rule)", ALU: "ALUMINIUM (owner door rule)"}.get(el["boq_class"],
+                                                                                                "NOT_APPLICABLE")
+        if el["boq_class"] == LIFT:               # lift doors are not measured as ordinary doors (owner rule)
+            el.update(height={"value_m": None, "state": "NOT_APPLICABLE",
+                              "source": "LIFT_SYSTEM / LIFT_DOOR: outside the ordinary door BOQ (not measured)"},
+                      height_m=None, area_m2=None, area_state="NOT_APPLICABLE: lift door (not measured)",
+                      released=False, section="LIFT_EXCLUDED")
+            continue
+        h = _height(el["boq_class"] if el["boq_class"] in RELEASED_CLASSES else None, facts, el.get("opening_id"),
+                    el.get("floor"))
+        el["height"] = h
+        w = el["structural_opening_width_m"]
+        el["height_m"] = h["value_m"]
+        if w is not None and h["value_m"] is not None:
+            el["area_m2"] = round(w * h["value_m"], 6)
+            el["area_state"] = "ASSUMED" if h["state"] == "ASSUMED" else "MEASURED_WIDTH_x_SOURCE_HEIGHT"
+        else:
+            el["area_m2"] = None
+            el["area_state"] = "BLOCKED: " + ("width not established" if w is None else h["source"])
+        el["released"] = el["state"] == CONFIRMED and el["boq_class"] in RELEASED_CLASSES
+        if el.get("fit_review") and el["released"]:      # ARCH_TAKEOFF_V2.6 (arch_rooms.match_swings_review)
+            el["released"] = False
+            el["hold"] = (f"SYMBOL_FIT_REVIEW: {el['fit_review']} - the band opening is measured; the door symbol "
+                          "fits it only within the review limits, held until a schedule, a dimension or the owner "
+                          "settles it")
+        if guards and el["released"]:
+            fw = el["frame_width_m"]
+            if fw is not None and w is not None and abs(fw - w) * 1000.0 > FRAME_DISAGREE_MM:
+                el["released"] = False
+                el["hold"] = (f"WIDTH_REVIEW: structural opening {w * 1000:.0f} mm against a frame span "
+                              f"{fw * 1000:.0f} mm - held until a schedule, a dimension or the owner settles it")
+        el["section"] = ("RELEASED" if el["released"] else "LIFT_EXCLUDED" if el["boq_class"] == LIFT else
+                         "PROVISIONAL_NOT_RELEASED")
+    return els
+
+
+def floor_model(S, rooms, ents, unit_m, floor, *, wall_layers=(), origin=(0.0, 0.0), facts=None, guards=False,
+                decided_exterior=None, **kw):
+    m = elements(S, rooms, ents, unit_m, floor, wall_layers=wall_layers, origin=origin, facts=facts, **kw)
+    ext = possibly_external_faces(S, rooms) if guards else {}
+    if decided_exterior:
+        # ARCH_TAKEOFF_V2.3 (UP-SPACE-002): a decided space is no longer "possibly" exterior; only a decision that
+        # makes it EXTERIOR retypes the door's side (an INTERIOR decision leaves an ordinary internal door)
+        settled = {k for k, d in decided_exterior.items()
+                   if (d.get("set") or {}).get("interior_status") in ("INTERIOR", "EXTERIOR")}
+        ext = {k: v for k, v in ext.items() if k not in settled}
+    exterior = {k: d for k, d in (decided_exterior or {}).items()
+                if (d.get("set") or {}).get("interior_status") == "EXTERIOR"}
+    for el in m["elements"]:
+        if decided_exterior:
+            classify(el, ents, unit_m, guards=True, external_faces=ext, decided_exterior=exterior or None)
+        elif guards:
+            classify(el, ents, unit_m, guards=True, external_faces=ext)
+        else:
+            classify(el, ents, unit_m)
+    m["lift_openings"] = lift_openings(S, rooms, ents, unit_m, floor, wall_layers=wall_layers)
+    if guards:
+        m["lift_candidates"] = lift_candidates(S, rooms, ents, unit_m, floor, wall_layers=wall_layers,
+                                               confirmed={o["opening_id"] for o in m["lift_openings"]})
+    return m
+
+
+def possibly_external_faces(S, rooms):
+    """ARCH_TAKEOFF_V2.2 (F-20): the unlabelled spaces with a doorless opening to the facade (a passage no other space
+    lists, not an open passage inside one floor) -> {face_id: evidence}."""
+    by_op = S.get("openings_by_id") or {}
+    listed = Counter(pid for r in rooms for pid in r.get("passages") or ())
+    out = {}
+    for r in rooms:
+        if r.get("class") != "UNLABELLED":
+            continue
+        ext = [pid for pid in r.get("passages") or () if listed[pid] == 1 and not by_op.get(pid, {}).get(
+            "inside_one_floor")]
+        if ext:
+            out[r["face_id"]] = (f"{r['room_id']}: doorless opening(s) " + ", ".join(
+                f"{p} {by_op.get(p, {}).get('width_m', 0.0):.2f} m" for p in ext) + " to the facade")
+    return out
+
+
+def lift_candidates(S, rooms, ents, unit_m, floor, *, wall_layers=(), confirmed=()):
+    """ARCH_TAKEOFF_V2.2 (F-22): band openings without a door symbol that open into a SHAFT space (a stacked-footprint
+    shaft or a shaft word): possible lift landings. Never confirmed here: a lift word, a lift schedule or the owner
+    confirms one; until then it is neither an ordinary passage nor an excluded lift door (REVIEW)."""
+    wall_segs = [s for s in ents.get("segments") or () if s["layer"] in set(wall_layers)]
+    xs = [p[i] for s in ents.get("segments") or () for p in (s["a"], s["b"]) for i in (0, 1)]
+    reach = (max(xs) - min(xs)) * 2 if xs else 1e9
+    faces = {f["face_id"]: f for f in S.get("faces") or ()}
+    out = []
+    for o in S.get("openings") or ():
+        if o.get("kind") == "DOOR" or o["opening_id"] in confirmed:
+            continue
+        half = o["wall_t_m"] / 2.0 / unit_m
+        sides = [_side(o["centre"], o["n"], sg, half, S, wall_segs, unit_m, reach) for sg in (1, -1)]
+        shaft = [sd for sd in sides if sd["kind"] == "SPACE" and "SHAFT" in (sd.get("codes") or ())]
+        if not shaft:
+            continue
+        f = faces.get(shaft[0]["face_id"]) or {}
+        marks = o.get("marks") or {}
+        out.append({"floor": floor, "opening_id": o["opening_id"], "kind": o["kind"], "width_m": o["width_m"],
+                    "class": LIFT_CANDIDATE, "section": "REVIEW", "sides": [sd["kind"] for sd in sides],
+                    "shaft_face_id": f.get("face_id"), "shaft_label_source": f.get("label_source"),
+                    "head_lines": marks.get("head_lines"),
+                    "evidence": "an opening into a shaft space (" + (f.get("issue") or "a shaft word") +
+                                f"); {marks.get('head_lines') or 0} head line(s) drawn: a possible lift landing"})
+    return out
+
+
+def lift_openings(S, rooms, ents, unit_m, floor, *, wall_layers=()):
+    """band openings without a door symbol that open into a lift space: lift entrances (LIFT_SYSTEM / LIFT_DOOR),
+    outside the ordinary opening lines too."""
+    wall_segs = [s for s in ents.get("segments") or () if s["layer"] in set(wall_layers)]
+    xs = [p[i] for s in ents.get("segments") or () for p in (s["a"], s["b"]) for i in (0, 1)]
+    reach = (max(xs) - min(xs)) * 2 if xs else 1e9
+    out = []
+    for o in S.get("openings") or ():
+        if o.get("kind") == "DOOR":
+            continue
+        half = o["wall_t_m"] / 2.0 / unit_m
+        sides = [_side(o["centre"], o["n"], sg, half, S, wall_segs, unit_m, reach) for sg in (1, -1)]
+        if any(sd["kind"] == "LIFT" for sd in sides):
+            out.append({"floor": floor, "opening_id": o["opening_id"], "kind": o["kind"], "width_m": o["width_m"],
+                        "class": LIFT, "section": "LIFT_EXCLUDED",
+                        "evidence": "a lift space on one side", "sides": [sd["kind"] for sd in sides]})
+    return out
+
+
+def building_model(floors, texts_of, faces_texts_of, unit_m, *, entrance_floor, facts=None, guards=False,
+                   not_entrance_codes=()):
+    """floors: [(floor, floor_model)] -> the door model of the drawing (the main entrance is reconciled once).
+    guards (ARCH_TAKEOFF_V2.2): the release guards of finalise, one finding for every withheld element (F-19) and the
+    lift-entrance candidates (F-22). not_entrance_codes (ARCH_TAKEOFF_V2.3): see main_entrance."""
+    els = [el for _f, m in floors for el in m["elements"]]
+    findings = [f for _f, m in floors for f in m["findings"]]
+    main, mf, cands = main_entrance(els, faces_texts_of.get(entrance_floor, {}), texts_of.get(entrance_floor, ()),
+                                    unit_m, entrance_floor=entrance_floor, not_entrance_codes=not_entrance_codes)
+    unresolved = [c["element_id"] for c in cands if (c["strong"] or not any(x["strong"] for x in cands))] \
+        if main is None else []
+    if guards:
+        finalise(els, main=main, unresolved_main_candidates=unresolved, facts=facts, guards=True)
+    else:
+        finalise(els, main=main, unresolved_main_candidates=unresolved, facts=facts)
+    findings += mf
+    for el in els:
+        if el["state"] == CONFIRMED and el["boq_class"] in RELEASED_CLASSES and el["height"]["state"] == "BLOCKED":
+            findings.append({"level": "MISSING_SOURCE", "code": "DOOR_HEIGHT_MISSING", "floor": el["floor"],
+                             "element_id": el["element_id"], "message": el["height"]["source"]})
+    cons = [m["conservation"] for _f, m in floors]
+    out = {"policy": POLICY_ID, "rule_id": DOOR_RULE_ID, "elements": els, "findings": findings,
+           "lift_openings": [x for _f, m in floors for x in m.get("lift_openings") or ()],
+           "conservation": cons, "conservation_ok": all(c["ok"] for c in cons),
+           "main_entrance": {"element_id": main["element_id"] if main else None, "candidates": cands,
+                             "state": "IDENTIFIED" if main else "REVIEW"},
+           "summary": summary(els)}
+    if guards:
+        out["lift_candidates"] = [x for _f, m in floors for x in m.get("lift_candidates") or ()]
+        findings += withheld_findings(els, out["lift_candidates"])
+        named = {f.get("element_id") for f in findings} | {c for f in findings for c in f.get("candidates") or ()}
+        out["withheld_without_finding"] = sorted(el["element_id"] for el in els if not el["released"] and
+                                                 el["section"] != "LIFT_EXCLUDED" and el["element_id"] not in named)
+        out["summary"]["held"] = sum(1 for el in els if el.get("hold"))
+        out["summary"]["class_review"] = sum(1 for el in els if el.get("class") == CLASS_REVIEW)
+        out["summary"]["lift_candidates"] = len(out["lift_candidates"])
+    return out
+
+
+def withheld_findings(els, lift_cands):
+    """ARCH_TAKEOFF_V2.2 (F-19): one finding per door element kept out of the released totals (the main-entrance
+    candidates are named by MAIN_ENTRANCE_UNRESOLVED) and per lift-entrance candidate."""
+    out = []
+    for el in els:
+        if el["released"] or el["section"] == "LIFT_EXCLUDED" or el.get("boq_class") == "MAIN_ENTRANCE_CANDIDATE":
+            continue
+        w = el["structural_opening_width_m"]
+        ws = f"{w:.2f} m" if w is not None else "no width"
+        if el.get("fit_review"):
+            code, msg = "DOOR_SYMBOL_FIT_REVIEW", el.get("hold") or el["fit_review"]
+        elif el.get("hold"):
+            code, msg = "DOOR_HELD_WIDTH_REVIEW", el["hold"]
+        elif el.get("class") == CLASS_REVIEW:
+            code, msg = "DOOR_CLASS_REVIEW", el["class_evidence"]
+        elif el.get("class") == CLASS_UNRESOLVED and el["state"] == CONFIRMED:
+            code, msg = "DOOR_CLASS_UNRESOLVED", ("a confirmed door whose class (internal / external) is not "
+                                                  "established: " + (el.get("class_evidence") or ""))
+        elif el["state"] == PROVISIONAL:
+            code, msg = "DOOR_PROVISIONAL", ("a provisional door (closed by its leaf, no band opening): it needs an "
+                                             "independent opening and two typed sides, never a dimension alone")
+        else:
+            code, msg = "DOOR_UNRESOLVED", "a door swing with no established opening"
+        out.append({"level": "REVIEW", "code": code, "floor": el["floor"], "element_id": el["element_id"],
+                    "message": f"{ws}: {msg} - withheld from every released total"})
+    for c in lift_cands:
+        out.append({"level": "REVIEW", "code": "LIFT_ENTRANCE_CANDIDATE", "floor": c["floor"],
+                    "opening_id": c["opening_id"], "message": f"{c['opening_id']} {c['width_m']:.2f} m: "
+                    f"{c['evidence']} - not an ordinary passage and not a confirmed lift door until reviewed"})
+    return out
+
+
+def summary(els):
+    rel = [el for el in els if el["released"]]
+    out = {"released": {}, "provisional_not_released": 0, "lift_excluded": 0, "unresolved": 0}
+    for cls in RELEASED_CLASSES:
+        sel = [el for el in rel if el["boq_class"] == cls]
+        areas = [el["area_m2"] for el in sel if el["area_m2"] is not None and el["area_state"] != "ASSUMED"]
+        out["released"][cls] = {"count": len(sel), "leaves": sum(el["leaf_count"] for el in sel),
+                                "width_m": round(sum(el["structural_opening_width_m"] for el in sel), 6),
+                                "area_m2_confirmed": round(sum(areas), 6) if len(areas) == len(sel) and sel else None,
+                                "height_blocked": sum(1 for el in sel if el["height"]["state"] == "BLOCKED")}
+    out["provisional_not_released"] = sum(1 for el in els if el["section"] == "PROVISIONAL_NOT_RELEASED")
+    out["lift_excluded"] = sum(1 for el in els if el["section"] == "LIFT_EXCLUDED")
+    out["unresolved"] = sum(1 for el in els if el["state"] == UNRESOLVED)
+    out["by_state"] = dict(Counter(el["state"] for el in els))
+    return out
+
+
+def boq_lines(ctx, model, *, rule_set=None, rule_set_digest=None):
+    """one line per RELEASED door element (count 1); width / height / area and their sources in the inputs; a BLOCKED
+    height leaves the count and the width, never an invented height."""
+    lines = []
+    for el in model["elements"]:
+        if not el["released"]:
+            continue
+        h = el["height"]
+        notes = [f"height {h['state']}: {h['source']}"]
+        if el["leaf_count"] > 1:
+            notes.append(f"one door assembly with {el['leaf_count']} leaves")
+        if el["boq_class"] == MAIN and el["material"] == "NOT_ESTABLISHED":
+            notes.append("MAIN_ENTRANCE material NOT_ESTABLISHED (project-specific)")
+        lines.append(BL.make_line(
+            project_id=ctx["project_id"], revision_set_sha256=ctx["revision_set_sha256"], item_code=el["boq_class"],
+            unit="pcs", evidence_state="SOURCE_DERIVED", measured_net=1, element_id=el["element_id"],
+            floor=el["floor"], room_id=el["from_room"] or el["to_room"], physical_element=el["element_id"],
+            formula="one door assembly (confirmed band opening); width jamb to jamb",
+            inputs={"width_m": round(el["structural_opening_width_m"], 6), "height_m": h["value_m"],
+                    "height_state": h["state"], "height_source": h["source"], "area_m2": el["area_m2"],
+                    "area_state": el["area_state"], "leaf_count": el["leaf_count"],
+                    "from_room": el["from_room"], "to_room": el["to_room"],
+                    "frame_width_m": el["frame_width_m"], "material": el["material"]},
+            documents=ctx["documents"], geometry_source="CAD_VECTOR", geometry_confidence="EXACT_FACE",
+            rule_id=DOOR_RULE_ID, rule_version="1", rule_set=rule_set, rule_set_digest=rule_set_digest,
+            material_state="PROJECT_OWNER_FACT" if el["boq_class"] in (PVC, ALU) else "BY_SPEC",
+            notes="; ".join(notes)))
+    return lines
+
+
+SCHEDULE_COLUMNS = ("section", "element_id", "floor", "state", "boq_class", "leaf_count", "from_room", "to_room",
+                    "structural_opening_width_m", "structural_opening_source", "frame_width_m", "frame_source",
+                    "nominal_leaf_width_m", "width_range_m", "height_m", "height_state", "height_source", "area_m2",
+                    "area_state", "material", "class_evidence", "evidence_kinds", "swings", "opening_id")
+
+
+def schedule_rows(model):
+    rows = []
+    order = {"RELEASED": 0, "PROVISIONAL_NOT_RELEASED": 1, "LIFT_EXCLUDED": 2}
+    for el in sorted(model["elements"], key=lambda e: (order[e["section"]], e["floor"], e["element_id"])):
+        rows.append({"section": el["section"], "element_id": el["element_id"], "floor": el["floor"],
+                     "state": el["state"], "boq_class": el["boq_class"], "leaf_count": el["leaf_count"],
+                     "from_room": el["from_room"], "to_room": el["to_room"],
+                     "structural_opening_width_m": _r(el["structural_opening_width_m"]),
+                     "structural_opening_source": el["structural_opening_source"],
+                     "frame_width_m": _r(el["frame_width_m"]), "frame_source": el["frame_source"],
+                     "nominal_leaf_width_m": [_r(x) for x in el["nominal_leaf_width_m"]],
+                     "width_range_m": el.get("width_range_m"), "height_m": el["height_m"],
+                     "height_state": el["height"]["state"], "height_source": el["height"]["source"],
+                     "area_m2": el["area_m2"], "area_state": el["area_state"], "material": el["material"],
+                     "class_evidence": el.get("class_evidence"),
+                     "evidence_kinds": sorted({e["kind"] for e in el["evidence"]}),
+                     "swings": [s.split("|")[-1] for s in el["swings"]], "opening_id": el["opening_id"]})
+    return rows
+
+
+def _r(v):
+    return None if v is None else round(v, 4)
+
+
+def policy_record():
+    return {"policy": POLICY_ID, "rule_id": DOOR_RULE_ID, "classes": [PVC, ALU, MAIN, LIFT],
+            "states": [CONFIRMED, PROVISIONAL, UNRESOLVED], "confirming_evidence": list(CONFIRMING_KINDS),
+            "frame_disagree_mm": FRAME_DISAGREE_MM, "pair_tol": PAIR_TOL,
+            "never": ["a swing radius used as a BOQ width", "a provisional or lift door in a released total",
+                      "a height invented (BLOCKED unless a source or an authorised ASSUMED fallback gives it)",
+                      "a main entrance assumed when zero or several candidates remain",
+                      "a main entrance also counted as PVC or aluminium", "the nib rule (P2-13, not reviewed)",
+                      "external by swing direction or layer name"]}

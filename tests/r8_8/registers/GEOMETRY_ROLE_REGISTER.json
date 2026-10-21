@@ -1,0 +1,1711 @@
+{
+ "SCHEMA": "URBAN_R8_8_GEOMETRY_ROLE_REGISTER_V1",
+ "policy": {
+  "id": "GEOMETRY_ROLE_EVIDENCE_POLICY_V1",
+  "rules": [
+   {
+    "id": "GR-01",
+    "role": "SHEET_FRAME",
+    "strength": "STRUCTURAL",
+    "requires": "INSTANCE_CONTEXT=SHEET_FRAME_OCCURRENCE (the region's own frame occurrence, by block identity)"
+   },
+   {
+    "id": "GR-02",
+    "role": "OPENING_SYMBOL",
+    "strength": "STRUCTURAL",
+    "requires": "INSTANCE_CONTEXT=SYMBOL_OCCURRENCE + BLOCK_DEFINITION=DOOR_SIGNATURE + LAYER_ROLE=DOOR on the occurrence (or BLOCK_NAME_ROLE=DOOR)"
+   },
+   {
+    "id": "GR-03",
+    "role": "FURNITURE",
+    "strength": "STRUCTURAL",
+    "requires": "INSTANCE_CONTEXT=SYMBOL_OCCURRENCE + BLOCK_DEFINITION=NO_BOUNDARY_LAYER + (LAYER_ROLE=FURNITURE or BLOCK_NAME_ROLE=FURNITURE)"
+   },
+   {
+    "id": "GR-04",
+    "role": "SANITARY_FIXTURE",
+    "strength": "STRUCTURAL",
+    "requires": "INSTANCE_CONTEXT=SYMBOL_OCCURRENCE + BLOCK_DEFINITION=NO_BOUNDARY_LAYER + (LAYER_ROLE=FIXTURE or BLOCK_NAME_ROLE=SANITARY)"
+   },
+   {
+    "id": "GR-05",
+    "role": "TOPOLOGY_BOUNDARY",
+    "strength": "CORROBORATED",
+    "requires": "LAYER_ROLE=WALL + INSTANCE_CONTEXT=MODEL_SPACE + ENTITY_TYPE in {LINE, LWPOLYLINE, ARC, CIRCLE}"
+   },
+   {
+    "id": "GR-06",
+    "role": "STRUCTURAL_OBSTACLE",
+    "strength": "CORROBORATED",
+    "requires": "LAYER_ROLE=COLUMN + INSTANCE_CONTEXT=MODEL_SPACE + ENTITY_TYPE in {LINE, LWPOLYLINE, ARC, CIRCLE}"
+   },
+   {
+    "id": "GR-07",
+    "role": "GLAZING_BOUNDARY",
+    "strength": "CORROBORATED",
+    "requires": "LAYER_ROLE=GLAZING + INSTANCE_CONTEXT=MODEL_SPACE + ENTITY_TYPE in {LINE, LWPOLYLINE, ARC}"
+   },
+   {
+    "id": "GR-08",
+    "role": "BOUNDARY_CURVE_UNSUPPORTED",
+    "strength": "CORROBORATED",
+    "requires": "LAYER_ROLE in {WALL, COLUMN, GLAZING} + ENTITY_TYPE=ELLIPSE (or an elliptical realisation)"
+   },
+   {
+    "id": "GR-09",
+    "role": "FURNITURE",
+    "strength": "CORROBORATED",
+    "requires": "LAYER_ROLE=FURNITURE + INSTANCE_CONTEXT=MODEL_SPACE"
+   },
+   {
+    "id": "GR-10",
+    "role": "SANITARY_FIXTURE",
+    "strength": "CORROBORATED",
+    "requires": "LAYER_ROLE=FIXTURE + INSTANCE_CONTEXT=MODEL_SPACE"
+   },
+   {
+    "id": "GR-11",
+    "role": "STAIR_GEOMETRY",
+    "strength": "CORROBORATED",
+    "requires": "LAYER_ROLE=STAIR + INSTANCE_CONTEXT=MODEL_SPACE"
+   },
+   {
+    "id": "GR-12",
+    "role": "LIFT_GEOMETRY",
+    "strength": "CORROBORATED",
+    "requires": "LAYER_ROLE=LIFT + INSTANCE_CONTEXT=MODEL_SPACE"
+   },
+   {
+    "id": "GR-13",
+    "role": "DIMENSION_GRAPHICS",
+    "strength": "CORROBORATED",
+    "requires": "LAYER_ROLE=DIMENSION (any context)"
+   },
+   {
+    "id": "GR-14",
+    "role": "ANNOTATION_GRAPHICS",
+    "strength": "CORROBORATED",
+    "requires": "LAYER_ROLE=ANNOTATION (any context)"
+   },
+   {
+    "id": "GR-15",
+    "role": "SHEET_FRAME",
+    "strength": "CORROBORATED",
+    "requires": "LAYER_ROLE=SHEET_FRAME + INSTANCE_CONTEXT=MODEL_SPACE"
+   },
+   {
+    "id": "GR-16",
+    "role": "PRESENTATION_OVERHEAD",
+    "strength": "CORROBORATED",
+    "requires": "LAYER_ROLE in {HIDDEN_LINE, NON_PLOT}"
+   },
+   {
+    "id": "GR-99",
+    "role": "UNKNOWN_PHYSICAL",
+    "strength": "NONE",
+    "requires": "no rule above holds: unknown physical geometry (blocks every site it touches)"
+   }
+  ],
+  "layer_lexicon": {
+   "WALL": [
+    "WALL",
+    "WALLS",
+    "MUR"
+   ],
+   "COLUMN": [
+    "COL",
+    "COLS",
+    "COLUMN",
+    "COLUMNS"
+   ],
+   "GLAZING": [
+    "WINDOW",
+    "WINDOWS",
+    "WIN",
+    "GLAZ",
+    "GLAZING",
+    "GLASS",
+    "CURTAINWALL"
+   ],
+   "DOOR": [
+    "DOOR",
+    "DOORS"
+   ],
+   "FURNITURE": [
+    "FURN",
+    "FURNI",
+    "FURNITURE"
+   ],
+   "FIXTURE": [
+    "FIXTURE",
+    "FIXTURES",
+    "SANITARY",
+    "PLUMBING",
+    "PLUMB"
+   ],
+   "STAIR": [
+    "STAIR",
+    "STAIRS",
+    "STAIRCASE"
+   ],
+   "LIFT": [
+    "LIFT",
+    "LIFTS",
+    "ELEVATOR",
+    "ELEV"
+   ],
+   "DIMENSION": [
+    "DIM",
+    "DIMS",
+    "DIMENSION",
+    "DIMENSIONS"
+   ],
+   "ANNOTATION": [
+    "TEXT",
+    "TEXTS",
+    "NOTE",
+    "NOTES",
+    "ANNO",
+    "ANNOTATION",
+    "ARROW",
+    "LEADER",
+    "TAG",
+    "LABEL",
+    "SYMB"
+   ],
+   "SHEET_FRAME": [
+    "FRAME",
+    "BORDER",
+    "TITLE",
+    "TITLEBLOCK",
+    "SHEET"
+   ],
+   "HIDDEN_LINE": [
+    "HIDDEN",
+    "OVERHEAD",
+    "ABOVE"
+   ],
+   "NON_PLOT": [
+    "DEFPOINTS"
+   ]
+  },
+  "block_lexicon": {
+   "FURNITURE": [
+    "BED",
+    "SOFA",
+    "COUCH",
+    "CHAIR",
+    "ARMCHAIR",
+    "TABLE",
+    "DESK",
+    "WARDROBE",
+    "CABINET",
+    "BENCH",
+    "DRESSER",
+    "NIGHTSTAND",
+    "BOOKCASE",
+    "SHELF",
+    "SHELVES",
+    "TV",
+    "RUG",
+    "CARPET",
+    "PLANT"
+   ],
+   "SANITARY": [
+    "WC",
+    "TOILET",
+    "BASIN",
+    "WASHBASIN",
+    "SINK",
+    "LAVATORY",
+    "SHOWER",
+    "BATHTUB",
+    "TUB",
+    "BIDET",
+    "URINAL"
+   ],
+   "DOOR": [
+    "DOOR",
+    "DOORS"
+   ]
+  },
+  "admitted_to_room_topology": [
+   "TOPOLOGY_BOUNDARY",
+   "STRUCTURAL_OBSTACLE",
+   "GLAZING_BOUNDARY",
+   "OPENING_BOUNDARY"
+  ],
+  "excluded": [
+   "OPENING_SYMBOL",
+   "FURNITURE",
+   "SANITARY_FIXTURE",
+   "STAIR_GEOMETRY",
+   "LIFT_GEOMETRY",
+   "ANNOTATION_GRAPHICS",
+   "DIMENSION_GRAPHICS",
+   "SHEET_FRAME",
+   "TITLE_BLOCK",
+   "PRESENTATION_OVERHEAD"
+  ],
+  "blocking": [
+   "UNKNOWN_PHYSICAL",
+   "UNKNOWN_PRESENTATION",
+   "BOUNDARY_CURVE_UNSUPPORTED"
+  ],
+  "never_alone": [
+   "layer name",
+   "block name",
+   "visual guess",
+   "geometry size",
+   "name substring"
+  ],
+  "digest": "bd0ddd959d4d9e911c9c66a3f23aaf57c8fb417fd521b3b49d4314bfc9056830"
+ },
+ "runs": {
+  "OLD_K1": {
+   "counts": [
+    {
+     "role": "ANNOTATION_GRAPHICS",
+     "rule": "GR-14",
+     "strength": "CORROBORATED",
+     "parts": 5
+    },
+    {
+     "role": "DIMENSION_GRAPHICS",
+     "rule": "GR-13",
+     "strength": "CORROBORATED",
+     "parts": 3
+    },
+    {
+     "role": "FURNITURE",
+     "rule": "GR-03",
+     "strength": "STRUCTURAL",
+     "parts": 66
+    },
+    {
+     "role": "FURNITURE",
+     "rule": "GR-09",
+     "strength": "CORROBORATED",
+     "parts": 8
+    },
+    {
+     "role": "GLAZING_BOUNDARY",
+     "rule": "GR-07",
+     "strength": "CORROBORATED",
+     "parts": 26
+    },
+    {
+     "role": "LIFT_GEOMETRY",
+     "rule": "GR-12",
+     "strength": "CORROBORATED",
+     "parts": 5
+    },
+    {
+     "role": "OPENING_SYMBOL",
+     "rule": "GR-02",
+     "strength": "STRUCTURAL",
+     "parts": 120
+    },
+    {
+     "role": "PRESENTATION_OVERHEAD",
+     "rule": "GR-16",
+     "strength": "CORROBORATED",
+     "parts": 2
+    },
+    {
+     "role": "SANITARY_FIXTURE",
+     "rule": "GR-10",
+     "strength": "CORROBORATED",
+     "parts": 6
+    },
+    {
+     "role": "SHEET_FRAME",
+     "rule": "GR-01",
+     "strength": "STRUCTURAL",
+     "parts": 21
+    },
+    {
+     "role": "SHEET_FRAME",
+     "rule": "GR-15",
+     "strength": "CORROBORATED",
+     "parts": 16
+    },
+    {
+     "role": "STAIR_GEOMETRY",
+     "rule": "GR-11",
+     "strength": "CORROBORATED",
+     "parts": 28
+    },
+    {
+     "role": "STRUCTURAL_OBSTACLE",
+     "rule": "GR-06",
+     "strength": "CORROBORATED",
+     "parts": 40
+    },
+    {
+     "role": "TOPOLOGY_BOUNDARY",
+     "rule": "GR-05",
+     "strength": "CORROBORATED",
+     "parts": 159
+    },
+    {
+     "role": "UNKNOWN_PHYSICAL",
+     "rule": "GR-99",
+     "strength": "NONE",
+     "parts": 613
+    }
+   ],
+   "unknown_by_layer": {
+    "0": {
+     "parts": 6,
+     "contexts": {
+      "MODEL_SPACE": 6
+     },
+     "sites_blocked": [
+      "SITE-1e8835fb33cb1a98"
+     ]
+    },
+    "BB": {
+     "parts": 1,
+     "contexts": {
+      "MODEL_SPACE": 1
+     },
+     "sites_blocked": []
+    },
+    "BOUNDRY W": {
+     "parts": 4,
+     "contexts": {
+      "MODEL_SPACE": 4
+     },
+     "sites_blocked": []
+    },
+    "DOOR": {
+     "parts": 8,
+     "contexts": {
+      "MODEL_SPACE": 8
+     },
+     "sites_blocked": []
+    },
+    "FIRNTUR": {
+     "parts": 16,
+     "contexts": {
+      "MODEL_SPACE": 16
+     },
+     "sites_blocked": [
+      "SITE-1f92c3df00523855",
+      "SITE-5613caf47fb31d11",
+      "SITE-56af91bb145d30cc",
+      "SITE-8e1f0b3a736abb02"
+     ]
+    },
+    "Layer4": {
+     "parts": 3,
+     "contexts": {
+      "MODEL_SPACE": 3
+     },
+     "sites_blocked": []
+    },
+    "OFFICE NAME": {
+     "parts": 571,
+     "contexts": {
+      "MODEL_SPACE": 568,
+      "SYMBOL_OCCURRENCE": 3
+     },
+     "sites_blocked": []
+    },
+    "RCC": {
+     "parts": 4,
+     "contexts": {
+      "MODEL_SPACE": 4
+     },
+     "sites_blocked": [
+      "SITE-1e8835fb33cb1a98"
+     ]
+    }
+   },
+   "doors": {
+    "I1028": {
+     "swing": "QORTUBA_REV_OLD|H684|1028|ELLIPTICAL_ARC|0",
+     "radius": 88.23529411765071
+    },
+    "I1443": {
+     "swing": "QORTUBA_REV_OLD|H684|1443|ELLIPTICAL_ARC|0",
+     "radius": 70.58823529412071
+    },
+    "I1471": {
+     "swing": "QORTUBA_REV_OLD|H684|1471|ELLIPTICAL_ARC|0",
+     "radius": 88.23529411765071
+    },
+    "I1561": {
+     "swing": "QORTUBA_REV_OLD|H684|1561|ELLIPTICAL_ARC|0",
+     "radius": 70.58823529412071
+    },
+    "I1988": {
+     "swing": "QORTUBA_REV_OLD|H684|1988|ELLIPTICAL_ARC|0",
+     "radius": 88.23529411765071
+    },
+    "I2044": {
+     "swing": "QORTUBA_REV_OLD|H684|2044|ELLIPTICAL_ARC|0",
+     "radius": 70.58823529412071
+    },
+    "I677": {
+     "swing": "QORTUBA_REV_OLD|H684|677|ELLIPTICAL_ARC|0",
+     "radius": 88.23529411765071
+    },
+    "I841": {
+     "swing": "QORTUBA_REV_OLD|H684|841|ELLIPTICAL_ARC|0",
+     "radius": 88.23529411765071
+    }
+   },
+   "openings": {
+    "I1028": {
+     "state": "CLOSED",
+     "closure_a": "CLOSURE|I1028|A",
+     "hits": [
+      "QORTUBA_REV_OLD|H1029||SEGMENT|0",
+      "QORTUBA_REV_OLD|H1030||SEGMENT|0"
+     ],
+     "reach": [
+      5.882352939,
+      5.882352944
+     ],
+     "width": 100.0000000007567,
+     "closure_b": "CLOSURE|I1028|B"
+    },
+    "I1443": {
+     "state": "CLOSED",
+     "closure_a": "CLOSURE|I1443|A",
+     "hits": [
+      "QORTUBA_REV_OLD|H1442||SEGMENT|0",
+      "QORTUBA_REV_OLD|H1444||SEGMENT|0"
+     ],
+     "reach": [
+      4.705882351,
+      4.705882355
+     ],
+     "width": 80.0,
+     "closure_b": "CLOSURE|I1443|B"
+    },
+    "I1471": {
+     "state": "CLOSED",
+     "closure_a": "CLOSURE|I1471|A",
+     "hits": [
+      "QORTUBA_REV_OLD|H1472||SEGMENT|0",
+      "QORTUBA_REV_OLD|H1473||SEGMENT|0"
+     ],
+     "reach": [
+      5.88235294,
+      5.882352943
+     ],
+     "width": 100.0000000007567,
+     "closure_b": null
+    },
+    "I1561": {
+     "state": "CLOSED",
+     "closure_a": "CLOSURE|I1561|A",
+     "hits": [
+      "QORTUBA_REV_OLD|H1560||SEGMENT|0",
+      "QORTUBA_REV_OLD|H1562||SEGMENT|0"
+     ],
+     "reach": [
+      4.705882351,
+      4.705882355
+     ],
+     "width": 80.00000000000364,
+     "closure_b": "CLOSURE|I1561|B"
+    },
+    "I1988": {
+     "state": "CLOSED",
+     "closure_a": "CLOSURE|I1988|A",
+     "hits": [
+      "QORTUBA_REV_OLD|H1989||SEGMENT|0",
+      "QORTUBA_REV_OLD|H1990||SEGMENT|0"
+     ],
+     "reach": [
+      5.88235294,
+      5.882352943
+     ],
+     "width": 100.0000000007567,
+     "closure_b": "CLOSURE|I1988|B"
+    },
+    "I2044": {
+     "state": "CLOSED",
+     "closure_a": "CLOSURE|I2044|A",
+     "hits": [
+      "QORTUBA_REV_OLD|H2043||SEGMENT|0",
+      "QORTUBA_REV_OLD|H2045||SEGMENT|0"
+     ],
+     "reach": [
+      4.705882351,
+      4.705882355
+     ],
+     "width": 80.00000000000364,
+     "closure_b": "CLOSURE|I2044|B"
+    },
+    "I677": {
+     "state": "CLOSED",
+     "closure_a": "CLOSURE|I677|A",
+     "hits": [
+      "QORTUBA_REV_OLD|H1007||SEGMENT|0",
+      "QORTUBA_REV_OLD|H1273||SEGMENT|0"
+     ],
+     "reach": [
+      5.88235294,
+      5.882352943
+     ],
+     "width": 100.0000000007567,
+     "closure_b": "CLOSURE|I677|B"
+    },
+    "I841": {
+     "state": "CLOSED",
+     "closure_a": "CLOSURE|I841|A",
+     "hits": [
+      "QORTUBA_REV_OLD|H842||SEGMENT|0",
+      "QORTUBA_REV_OLD|H843||SEGMENT|0"
+     ],
+     "reach": [
+      5.88235294,
+      5.882352943
+     ],
+     "width": 100.0000000007567,
+     "closure_b": "CLOSURE|I841|B"
+    }
+   },
+   "glazing": {
+    "QORTUBA_REV_OLD|H1018||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 0
+    },
+    "QORTUBA_REV_OLD|H1019||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 0
+    },
+    "QORTUBA_REV_OLD|H1020||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 0
+    },
+    "QORTUBA_REV_OLD|H1021||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 0
+    },
+    "QORTUBA_REV_OLD|H1024||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 0
+    },
+    "QORTUBA_REV_OLD|H1025||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 0
+    },
+    "QORTUBA_REV_OLD|H1026||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 0
+    },
+    "QORTUBA_REV_OLD|H1027||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 0
+    },
+    "QORTUBA_REV_OLD|H1317||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 0
+    },
+    "QORTUBA_REV_OLD|H1318||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 0
+    },
+    "QORTUBA_REV_OLD|H1319||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 0
+    },
+    "QORTUBA_REV_OLD|H1320||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 0
+    },
+    "QORTUBA_REV_OLD|H1323||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 1
+    },
+    "QORTUBA_REV_OLD|H1324||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 1
+    },
+    "QORTUBA_REV_OLD|H1325||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 1
+    },
+    "QORTUBA_REV_OLD|H1326||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 1
+    },
+    "QORTUBA_REV_OLD|H1340||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 0
+    },
+    "QORTUBA_REV_OLD|H1341||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 0
+    },
+    "QORTUBA_REV_OLD|H1342||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 0
+    },
+    "QORTUBA_REV_OLD|H1343||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 0
+    },
+    "QORTUBA_REV_OLD|H1516||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 1
+    },
+    "QORTUBA_REV_OLD|H1517||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 1
+    },
+    "QORTUBA_REV_OLD|H1518||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 1
+    },
+    "QORTUBA_REV_OLD|H1519||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 1
+    },
+    "QORTUBA_REV_OLD|H533||SEGMENT|0": {
+     "state": "CLOSED",
+     "opening": "GLAZED|QORTUBA_REV_OLD|H533||SEGMENT|0"
+    },
+    "QORTUBA_REV_OLD|H542||SEGMENT|0": {
+     "state": "CLOSED",
+     "opening": "GLAZED|QORTUBA_REV_OLD|H542||SEGMENT|0"
+    }
+   }
+  },
+  "OLD_K2": {
+   "counts": [
+    {
+     "role": "ANNOTATION_GRAPHICS",
+     "rule": "GR-14",
+     "strength": "CORROBORATED",
+     "parts": 5
+    },
+    {
+     "role": "DIMENSION_GRAPHICS",
+     "rule": "GR-13",
+     "strength": "CORROBORATED",
+     "parts": 3
+    },
+    {
+     "role": "FURNITURE",
+     "rule": "GR-03",
+     "strength": "STRUCTURAL",
+     "parts": 66
+    },
+    {
+     "role": "FURNITURE",
+     "rule": "GR-09",
+     "strength": "CORROBORATED",
+     "parts": 8
+    },
+    {
+     "role": "GLAZING_BOUNDARY",
+     "rule": "GR-07",
+     "strength": "CORROBORATED",
+     "parts": 26
+    },
+    {
+     "role": "LIFT_GEOMETRY",
+     "rule": "GR-12",
+     "strength": "CORROBORATED",
+     "parts": 5
+    },
+    {
+     "role": "OPENING_SYMBOL",
+     "rule": "GR-02",
+     "strength": "STRUCTURAL",
+     "parts": 120
+    },
+    {
+     "role": "PRESENTATION_OVERHEAD",
+     "rule": "GR-16",
+     "strength": "CORROBORATED",
+     "parts": 2
+    },
+    {
+     "role": "SANITARY_FIXTURE",
+     "rule": "GR-10",
+     "strength": "CORROBORATED",
+     "parts": 6
+    },
+    {
+     "role": "SHEET_FRAME",
+     "rule": "GR-01",
+     "strength": "STRUCTURAL",
+     "parts": 21
+    },
+    {
+     "role": "SHEET_FRAME",
+     "rule": "GR-15",
+     "strength": "CORROBORATED",
+     "parts": 16
+    },
+    {
+     "role": "STAIR_GEOMETRY",
+     "rule": "GR-11",
+     "strength": "CORROBORATED",
+     "parts": 28
+    },
+    {
+     "role": "STRUCTURAL_OBSTACLE",
+     "rule": "GR-06",
+     "strength": "CORROBORATED",
+     "parts": 40
+    },
+    {
+     "role": "TOPOLOGY_BOUNDARY",
+     "rule": "GR-05",
+     "strength": "CORROBORATED",
+     "parts": 159
+    },
+    {
+     "role": "UNKNOWN_PHYSICAL",
+     "rule": "GR-99",
+     "strength": "NONE",
+     "parts": 613
+    }
+   ],
+   "unknown_by_layer": {
+    "0": {
+     "parts": 6,
+     "contexts": {
+      "MODEL_SPACE": 6
+     },
+     "sites_blocked": [
+      "SITE-1e8835fb33cb1a98"
+     ]
+    },
+    "BB": {
+     "parts": 1,
+     "contexts": {
+      "MODEL_SPACE": 1
+     },
+     "sites_blocked": []
+    },
+    "BOUNDRY W": {
+     "parts": 4,
+     "contexts": {
+      "MODEL_SPACE": 4
+     },
+     "sites_blocked": []
+    },
+    "DOOR": {
+     "parts": 8,
+     "contexts": {
+      "MODEL_SPACE": 8
+     },
+     "sites_blocked": []
+    },
+    "FIRNTUR": {
+     "parts": 16,
+     "contexts": {
+      "MODEL_SPACE": 16
+     },
+     "sites_blocked": [
+      "SITE-1f92c3df00523855",
+      "SITE-5613caf47fb31d11",
+      "SITE-56af91bb145d30cc",
+      "SITE-8e1f0b3a736abb02"
+     ]
+    },
+    "Layer4": {
+     "parts": 3,
+     "contexts": {
+      "MODEL_SPACE": 3
+     },
+     "sites_blocked": []
+    },
+    "OFFICE NAME": {
+     "parts": 571,
+     "contexts": {
+      "MODEL_SPACE": 568,
+      "SYMBOL_OCCURRENCE": 3
+     },
+     "sites_blocked": []
+    },
+    "RCC": {
+     "parts": 4,
+     "contexts": {
+      "MODEL_SPACE": 4
+     },
+     "sites_blocked": [
+      "SITE-1e8835fb33cb1a98"
+     ]
+    }
+   },
+   "doors": {
+    "I1028": {
+     "swing": "QORTUBA_REV_OLD|H684|1028|ELLIPTICAL_ARC|0",
+     "radius": 88.23529411765078
+    },
+    "I1443": {
+     "swing": "QORTUBA_REV_OLD|H684|1443|ELLIPTICAL_ARC|0",
+     "radius": 70.58823529412064
+    },
+    "I1471": {
+     "swing": "QORTUBA_REV_OLD|H684|1471|ELLIPTICAL_ARC|0",
+     "radius": 88.23529411765078
+    },
+    "I1561": {
+     "swing": "QORTUBA_REV_OLD|H684|1561|ELLIPTICAL_ARC|0",
+     "radius": 70.58823529412064
+    },
+    "I1988": {
+     "swing": "QORTUBA_REV_OLD|H684|1988|ELLIPTICAL_ARC|0",
+     "radius": 88.23529411765078
+    },
+    "I2044": {
+     "swing": "QORTUBA_REV_OLD|H684|2044|ELLIPTICAL_ARC|0",
+     "radius": 70.58823529412064
+    },
+    "I677": {
+     "swing": "QORTUBA_REV_OLD|H684|677|ELLIPTICAL_ARC|0",
+     "radius": 88.23529411765078
+    },
+    "I841": {
+     "swing": "QORTUBA_REV_OLD|H684|841|ELLIPTICAL_ARC|0",
+     "radius": 88.23529411765077
+    }
+   },
+   "openings": {
+    "I1028": {
+     "state": "CLOSED",
+     "closure_a": "CLOSURE|I1028|A",
+     "hits": [
+      "QORTUBA_REV_OLD|H1029||SEGMENT|0",
+      "QORTUBA_REV_OLD|H1030||SEGMENT|0"
+     ],
+     "reach": [
+      5.882352939,
+      5.882352944
+     ],
+     "width": 100.00000000080036,
+     "closure_b": "CLOSURE|I1028|B"
+    },
+    "I1443": {
+     "state": "CLOSED",
+     "closure_a": "CLOSURE|I1443|A",
+     "hits": [
+      "QORTUBA_REV_OLD|H1442||SEGMENT|0",
+      "QORTUBA_REV_OLD|H1444||SEGMENT|0"
+     ],
+     "reach": [
+      4.705882351,
+      4.705882355
+     ],
+     "width": 80.0,
+     "closure_b": "CLOSURE|I1443|B"
+    },
+    "I1471": {
+     "state": "CLOSED",
+     "closure_a": "CLOSURE|I1471|A",
+     "hits": [
+      "QORTUBA_REV_OLD|H1472||SEGMENT|0",
+      "QORTUBA_REV_OLD|H1473||SEGMENT|0"
+     ],
+     "reach": [
+      5.88235294,
+      5.882352943
+     ],
+     "width": 100.00000000069849,
+     "closure_b": null
+    },
+    "I1561": {
+     "state": "CLOSED",
+     "closure_a": "CLOSURE|I1561|A",
+     "hits": [
+      "QORTUBA_REV_OLD|H1560||SEGMENT|0",
+      "QORTUBA_REV_OLD|H1562||SEGMENT|0"
+     ],
+     "reach": [
+      4.705882351,
+      4.705882355
+     ],
+     "width": 80.0,
+     "closure_b": "CLOSURE|I1561|B"
+    },
+    "I1988": {
+     "state": "CLOSED",
+     "closure_a": "CLOSURE|I1988|A",
+     "hits": [
+      "QORTUBA_REV_OLD|H1989||SEGMENT|0",
+      "QORTUBA_REV_OLD|H1990||SEGMENT|0"
+     ],
+     "reach": [
+      5.88235294,
+      5.882352943
+     ],
+     "width": 100.00000000069849,
+     "closure_b": "CLOSURE|I1988|B"
+    },
+    "I2044": {
+     "state": "CLOSED",
+     "closure_a": "CLOSURE|I2044|A",
+     "hits": [
+      "QORTUBA_REV_OLD|H2043||SEGMENT|0",
+      "QORTUBA_REV_OLD|H2045||SEGMENT|0"
+     ],
+     "reach": [
+      4.705882351,
+      4.705882355
+     ],
+     "width": 80.0,
+     "closure_b": "CLOSURE|I2044|B"
+    },
+    "I677": {
+     "state": "CLOSED",
+     "closure_a": "CLOSURE|I677|A",
+     "hits": [
+      "QORTUBA_REV_OLD|H1007||SEGMENT|0",
+      "QORTUBA_REV_OLD|H1273||SEGMENT|0"
+     ],
+     "reach": [
+      5.88235294,
+      5.882352943
+     ],
+     "width": 100.00000000069849,
+     "closure_b": "CLOSURE|I677|B"
+    },
+    "I841": {
+     "state": "CLOSED",
+     "closure_a": "CLOSURE|I841|A",
+     "hits": [
+      "QORTUBA_REV_OLD|H842||SEGMENT|0",
+      "QORTUBA_REV_OLD|H843||SEGMENT|0"
+     ],
+     "reach": [
+      5.88235294,
+      5.882352943
+     ],
+     "width": 100.00000000069849,
+     "closure_b": "CLOSURE|I841|B"
+    }
+   },
+   "glazing": {
+    "QORTUBA_REV_OLD|H1018||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 0
+    },
+    "QORTUBA_REV_OLD|H1019||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 0
+    },
+    "QORTUBA_REV_OLD|H1020||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 0
+    },
+    "QORTUBA_REV_OLD|H1021||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 0
+    },
+    "QORTUBA_REV_OLD|H1024||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 0
+    },
+    "QORTUBA_REV_OLD|H1025||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 0
+    },
+    "QORTUBA_REV_OLD|H1026||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 0
+    },
+    "QORTUBA_REV_OLD|H1027||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 0
+    },
+    "QORTUBA_REV_OLD|H1317||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 0
+    },
+    "QORTUBA_REV_OLD|H1318||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 0
+    },
+    "QORTUBA_REV_OLD|H1319||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 0
+    },
+    "QORTUBA_REV_OLD|H1320||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 0
+    },
+    "QORTUBA_REV_OLD|H1323||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 1
+    },
+    "QORTUBA_REV_OLD|H1324||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 1
+    },
+    "QORTUBA_REV_OLD|H1325||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 1
+    },
+    "QORTUBA_REV_OLD|H1326||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 1
+    },
+    "QORTUBA_REV_OLD|H1340||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 0
+    },
+    "QORTUBA_REV_OLD|H1341||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 0
+    },
+    "QORTUBA_REV_OLD|H1342||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 0
+    },
+    "QORTUBA_REV_OLD|H1343||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 0
+    },
+    "QORTUBA_REV_OLD|H1516||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 1
+    },
+    "QORTUBA_REV_OLD|H1517||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 1
+    },
+    "QORTUBA_REV_OLD|H1518||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 1
+    },
+    "QORTUBA_REV_OLD|H1519||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 1
+    },
+    "QORTUBA_REV_OLD|H533||SEGMENT|0": {
+     "state": "CLOSED",
+     "opening": "GLAZED|QORTUBA_REV_OLD|H533||SEGMENT|0"
+    },
+    "QORTUBA_REV_OLD|H542||SEGMENT|0": {
+     "state": "CLOSED",
+     "opening": "GLAZED|QORTUBA_REV_OLD|H542||SEGMENT|0"
+    }
+   }
+  },
+  "NEW_K2": {
+   "counts": [
+    {
+     "role": "ANNOTATION_GRAPHICS",
+     "rule": "GR-14",
+     "strength": "CORROBORATED",
+     "parts": 5
+    },
+    {
+     "role": "DIMENSION_GRAPHICS",
+     "rule": "GR-13",
+     "strength": "CORROBORATED",
+     "parts": 9
+    },
+    {
+     "role": "FURNITURE",
+     "rule": "GR-03",
+     "strength": "STRUCTURAL",
+     "parts": 237
+    },
+    {
+     "role": "FURNITURE",
+     "rule": "GR-09",
+     "strength": "CORROBORATED",
+     "parts": 8
+    },
+    {
+     "role": "GLAZING_BOUNDARY",
+     "rule": "GR-07",
+     "strength": "CORROBORATED",
+     "parts": 26
+    },
+    {
+     "role": "LIFT_GEOMETRY",
+     "rule": "GR-12",
+     "strength": "CORROBORATED",
+     "parts": 5
+    },
+    {
+     "role": "OPENING_SYMBOL",
+     "rule": "GR-02",
+     "strength": "STRUCTURAL",
+     "parts": 120
+    },
+    {
+     "role": "PRESENTATION_OVERHEAD",
+     "rule": "GR-16",
+     "strength": "CORROBORATED",
+     "parts": 2
+    },
+    {
+     "role": "SANITARY_FIXTURE",
+     "rule": "GR-10",
+     "strength": "CORROBORATED",
+     "parts": 6
+    },
+    {
+     "role": "SHEET_FRAME",
+     "rule": "GR-01",
+     "strength": "STRUCTURAL",
+     "parts": 21
+    },
+    {
+     "role": "SHEET_FRAME",
+     "rule": "GR-15",
+     "strength": "CORROBORATED",
+     "parts": 16
+    },
+    {
+     "role": "STAIR_GEOMETRY",
+     "rule": "GR-11",
+     "strength": "CORROBORATED",
+     "parts": 28
+    },
+    {
+     "role": "STRUCTURAL_OBSTACLE",
+     "rule": "GR-06",
+     "strength": "CORROBORATED",
+     "parts": 40
+    },
+    {
+     "role": "TOPOLOGY_BOUNDARY",
+     "rule": "GR-05",
+     "strength": "CORROBORATED",
+     "parts": 152
+    },
+    {
+     "role": "UNKNOWN_PHYSICAL",
+     "rule": "GR-99",
+     "strength": "NONE",
+     "parts": 688
+    }
+   ],
+   "unknown_by_layer": {
+    "0": {
+     "parts": 6,
+     "contexts": {
+      "MODEL_SPACE": 6
+     },
+     "sites_blocked": [
+      "SITE-788f30878ba9d2b3"
+     ]
+    },
+    "BB": {
+     "parts": 1,
+     "contexts": {
+      "MODEL_SPACE": 1
+     },
+     "sites_blocked": []
+    },
+    "BOUNDRY W": {
+     "parts": 4,
+     "contexts": {
+      "MODEL_SPACE": 4
+     },
+     "sites_blocked": []
+    },
+    "DOOR": {
+     "parts": 8,
+     "contexts": {
+      "MODEL_SPACE": 8
+     },
+     "sites_blocked": []
+    },
+    "FIRNTUR": {
+     "parts": 10,
+     "contexts": {
+      "MODEL_SPACE": 10
+     },
+     "sites_blocked": [
+      "SITE-a6405850100155ac",
+      "SITE-c016d9fe4a46e164",
+      "SITE-eaae022599294151"
+     ]
+    },
+    "Layer4": {
+     "parts": 3,
+     "contexts": {
+      "MODEL_SPACE": 3
+     },
+     "sites_blocked": []
+    },
+    "MY BLOCKS$0$PM": {
+     "parts": 81,
+     "contexts": {
+      "SYMBOL_OCCURRENCE": 81
+     },
+     "sites_blocked": [
+      "SITE-3a6f70f44b93c7b5",
+      "SITE-4e2a2a3375396340"
+     ]
+    },
+    "OFFICE NAME": {
+     "parts": 571,
+     "contexts": {
+      "MODEL_SPACE": 568,
+      "SYMBOL_OCCURRENCE": 3
+     },
+     "sites_blocked": []
+    },
+    "RCC": {
+     "parts": 4,
+     "contexts": {
+      "MODEL_SPACE": 4
+     },
+     "sites_blocked": [
+      "SITE-788f30878ba9d2b3"
+     ]
+    }
+   },
+   "doors": {
+    "I1028": {
+     "swing": "QORTUBA_REV_NEW|H684|1028|ELLIPTICAL_ARC|0",
+     "radius": 88.23529411765078
+    },
+    "I1443": {
+     "swing": "QORTUBA_REV_NEW|H684|1443|ELLIPTICAL_ARC|0",
+     "radius": 70.58823529412064
+    },
+    "I1471": {
+     "swing": "QORTUBA_REV_NEW|H684|1471|ELLIPTICAL_ARC|0",
+     "radius": 88.23529411765078
+    },
+    "I1561": {
+     "swing": "QORTUBA_REV_NEW|H684|1561|ELLIPTICAL_ARC|0",
+     "radius": 70.58823529412064
+    },
+    "I1988": {
+     "swing": "QORTUBA_REV_NEW|H684|1988|ELLIPTICAL_ARC|0",
+     "radius": 88.23529411765078
+    },
+    "I2044": {
+     "swing": "QORTUBA_REV_NEW|H684|2044|ELLIPTICAL_ARC|0",
+     "radius": 70.58823529412064
+    },
+    "I677": {
+     "swing": "QORTUBA_REV_NEW|H684|677|ELLIPTICAL_ARC|0",
+     "radius": 88.23529411765078
+    },
+    "I841": {
+     "swing": "QORTUBA_REV_NEW|H684|841|ELLIPTICAL_ARC|0",
+     "radius": 88.23529411765077
+    }
+   },
+   "openings": {
+    "I1028": {
+     "state": "CLOSED",
+     "closure_a": "CLOSURE|I1028|A",
+     "hits": [
+      "QORTUBA_REV_NEW|H1029||SEGMENT|0",
+      "QORTUBA_REV_NEW|H1030||SEGMENT|0"
+     ],
+     "reach": [
+      5.882352939,
+      5.882352944
+     ],
+     "width": 100.00000000080036,
+     "closure_b": "CLOSURE|I1028|B"
+    },
+    "I1443": {
+     "state": "CLOSED",
+     "closure_a": "CLOSURE|I1443|A",
+     "hits": [
+      "QORTUBA_REV_NEW|H1442||SEGMENT|0",
+      "QORTUBA_REV_NEW|H1444||SEGMENT|0"
+     ],
+     "reach": [
+      4.705882351,
+      4.705882355
+     ],
+     "width": 80.0,
+     "closure_b": "CLOSURE|I1443|B"
+    },
+    "I1471": {
+     "state": "CLOSED",
+     "closure_a": "CLOSURE|I1471|A",
+     "hits": [
+      "QORTUBA_REV_NEW|H1472||SEGMENT|0",
+      "QORTUBA_REV_NEW|H1473||SEGMENT|0"
+     ],
+     "reach": [
+      5.88235294,
+      5.882352943
+     ],
+     "width": 100.00000000069849,
+     "closure_b": null
+    },
+    "I1561": {
+     "state": "CLOSED",
+     "closure_a": "CLOSURE|I1561|A",
+     "hits": [
+      "QORTUBA_REV_NEW|H1560||SEGMENT|0",
+      "QORTUBA_REV_NEW|H1562||SEGMENT|0"
+     ],
+     "reach": [
+      4.705882351,
+      4.705882355
+     ],
+     "width": 80.0,
+     "closure_b": "CLOSURE|I1561|B"
+    },
+    "I1988": {
+     "state": "CLOSED",
+     "closure_a": "CLOSURE|I1988|A",
+     "hits": [
+      "QORTUBA_REV_NEW|H1989||SEGMENT|0",
+      "QORTUBA_REV_NEW|H1990||SEGMENT|0"
+     ],
+     "reach": [
+      5.88235294,
+      5.882352943
+     ],
+     "width": 100.00000000069849,
+     "closure_b": "CLOSURE|I1988|B"
+    },
+    "I2044": {
+     "state": "CLOSED",
+     "closure_a": "CLOSURE|I2044|A",
+     "hits": [
+      "QORTUBA_REV_NEW|H2043||SEGMENT|0",
+      "QORTUBA_REV_NEW|H2045||SEGMENT|0"
+     ],
+     "reach": [
+      4.705882351,
+      4.705882355
+     ],
+     "width": 80.0,
+     "closure_b": "CLOSURE|I2044|B"
+    },
+    "I677": {
+     "state": "CLOSED",
+     "closure_a": "CLOSURE|I677|A",
+     "hits": [
+      "QORTUBA_REV_NEW|H1007||SEGMENT|0",
+      "QORTUBA_REV_NEW|H1273||SEGMENT|0"
+     ],
+     "reach": [
+      5.88235294,
+      5.882352944
+     ],
+     "width": 100.00000000080036,
+     "closure_b": "CLOSURE|I677|B"
+    },
+    "I841": {
+     "state": "CLOSED",
+     "closure_a": "CLOSURE|I841|A",
+     "hits": [
+      "QORTUBA_REV_NEW|H842||SEGMENT|0",
+      "QORTUBA_REV_NEW|H843||SEGMENT|0"
+     ],
+     "reach": [
+      5.88235294,
+      5.882352943
+     ],
+     "width": 100.00000000080036,
+     "closure_b": "CLOSURE|I841|B"
+    }
+   },
+   "glazing": {
+    "QORTUBA_REV_NEW|H1018||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 0
+    },
+    "QORTUBA_REV_NEW|H1019||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 0
+    },
+    "QORTUBA_REV_NEW|H1020||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 0
+    },
+    "QORTUBA_REV_NEW|H1021||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 0
+    },
+    "QORTUBA_REV_NEW|H1024||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 0
+    },
+    "QORTUBA_REV_NEW|H1025||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 0
+    },
+    "QORTUBA_REV_NEW|H1026||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 0
+    },
+    "QORTUBA_REV_NEW|H1027||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 0
+    },
+    "QORTUBA_REV_NEW|H1317||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 0
+    },
+    "QORTUBA_REV_NEW|H1318||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 0
+    },
+    "QORTUBA_REV_NEW|H1319||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 0
+    },
+    "QORTUBA_REV_NEW|H1320||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 0
+    },
+    "QORTUBA_REV_NEW|H1323||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 1
+    },
+    "QORTUBA_REV_NEW|H1324||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 1
+    },
+    "QORTUBA_REV_NEW|H1325||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 1
+    },
+    "QORTUBA_REV_NEW|H1326||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 1
+    },
+    "QORTUBA_REV_NEW|H1340||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 0
+    },
+    "QORTUBA_REV_NEW|H1341||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 0
+    },
+    "QORTUBA_REV_NEW|H1342||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 0
+    },
+    "QORTUBA_REV_NEW|H1343||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 0
+    },
+    "QORTUBA_REV_NEW|H1516||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 1
+    },
+    "QORTUBA_REV_NEW|H1517||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 1
+    },
+    "QORTUBA_REV_NEW|H1518||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 1
+    },
+    "QORTUBA_REV_NEW|H1519||SEGMENT|0": {
+     "state": "NO_ALIGNED_FACE_PAIR",
+     "faces_found": 1
+    },
+    "QORTUBA_REV_NEW|H533||SEGMENT|0": {
+     "state": "CLOSED",
+     "opening": "GLAZED|QORTUBA_REV_NEW|H533||SEGMENT|0"
+    },
+    "QORTUBA_REV_NEW|H542||SEGMENT|0": {
+     "state": "CLOSED",
+     "opening": "GLAZED|QORTUBA_REV_NEW|H542||SEGMENT|0"
+    }
+   }
+  }
+ },
+ "new_revision_bound_xref_audit": [
+  {
+   "insert_occurrence": "700045",
+   "block_name": "MY BLOCKS$0$BED 3",
+   "sites_touched_stamps": {
+    "SITE-a6405850100155ac": [
+     [
+      "M.B.ROOM"
+     ],
+     [
+      "DRESS"
+     ]
+    ],
+    "SITE-c016d9fe4a46e164": []
+   },
+   "block_record": "385128",
+   "layers": [
+    "MY BLOCKS$0$FIRNTUR"
+   ],
+   "parts": 171,
+   "kinds": {
+    "SEGMENT": 167,
+    "ARC": 4
+   },
+   "role": "FURNITURE",
+   "rule": "GR-03",
+   "strength": "STRUCTURAL",
+   "evidence": {
+    "LAYER_ROLE": null,
+    "layer": "MY BLOCKS$0$FIRNTUR",
+    "INSTANCE_CONTEXT": "SYMBOL_OCCURRENCE",
+    "BLOCK_NAME_ROLE": "FURNITURE",
+    "ENTITY_TYPE": "LINE",
+    "BLOCK_DEFINITION": {
+     "NO_BOUNDARY_LAYER": true,
+     "DOOR_SIGNATURE": false
+    }
+   },
+   "sites_touched": [
+    "SITE-a6405850100155ac",
+    "SITE-c016d9fe4a46e164"
+   ],
+   "proven_furniture_without_benchmark": true,
+   "why": "a symbol occurrence (bound xref block), no wall/column/glazing layer in its definition, and the block-name token 'BED' (furniture lexicon): GR-03 structural evidence"
+  },
+  {
+   "insert_occurrence": "700047",
+   "block_name": "MY BLOCKS$0$SF3",
+   "sites_touched_stamps": {
+    "SITE-3a6f70f44b93c7b5": [],
+    "SITE-4e2a2a3375396340": [
+     [
+      "BED.ROOM"
+     ],
+     [
+      "BATH"
+     ],
+     [
+      "HALL",
+      "whgm"
+     ]
+    ]
+   },
+   "block_record": "612081",
+   "layers": [
+    "MY BLOCKS$0$PM"
+   ],
+   "parts": 27,
+   "kinds": {
+    "SEGMENT": 15,
+    "ARC": 12
+   },
+   "role": "UNKNOWN_PHYSICAL",
+   "rule": "GR-99",
+   "strength": "NONE",
+   "evidence": {
+    "LAYER_ROLE": null,
+    "layer": "MY BLOCKS$0$PM",
+    "INSTANCE_CONTEXT": "SYMBOL_OCCURRENCE",
+    "BLOCK_NAME_ROLE": null,
+    "ENTITY_TYPE": "LINE",
+    "BLOCK_DEFINITION": {
+     "NO_BOUNDARY_LAYER": true,
+     "DOOR_SIGNATURE": false
+    }
+   },
+   "sites_touched": [
+    "SITE-3a6f70f44b93c7b5",
+    "SITE-4e2a2a3375396340"
+   ],
+   "proven_furniture_without_benchmark": false,
+   "why": "a symbol occurrence with no boundary layer, but neither its layer ('PM') nor its block name ('SF3') carries a furniture / fixture token: no rule establishes a role -> UNKNOWN_PHYSICAL; the site it stands in is REVIEW_REQUIRED, never measured"
+  },
+  {
+   "insert_occurrence": "700051",
+   "block_name": "MY BLOCKS$0$SF3",
+   "sites_touched_stamps": {
+    "SITE-3a6f70f44b93c7b5": [],
+    "SITE-4e2a2a3375396340": [
+     [
+      "BED.ROOM"
+     ],
+     [
+      "BATH"
+     ],
+     [
+      "HALL",
+      "whgm"
+     ]
+    ]
+   },
+   "block_record": "612081",
+   "layers": [
+    "MY BLOCKS$0$PM"
+   ],
+   "parts": 27,
+   "kinds": {
+    "SEGMENT": 15,
+    "ARC": 12
+   },
+   "role": "UNKNOWN_PHYSICAL",
+   "rule": "GR-99",
+   "strength": "NONE",
+   "evidence": {
+    "LAYER_ROLE": null,
+    "layer": "MY BLOCKS$0$PM",
+    "INSTANCE_CONTEXT": "SYMBOL_OCCURRENCE",
+    "BLOCK_NAME_ROLE": null,
+    "ENTITY_TYPE": "LINE",
+    "BLOCK_DEFINITION": {
+     "NO_BOUNDARY_LAYER": true,
+     "DOOR_SIGNATURE": false
+    }
+   },
+   "sites_touched": [
+    "SITE-3a6f70f44b93c7b5",
+    "SITE-4e2a2a3375396340"
+   ],
+   "proven_furniture_without_benchmark": false,
+   "why": "a symbol occurrence with no boundary layer, but neither its layer ('PM') nor its block name ('SF3') carries a furniture / fixture token: no rule establishes a role -> UNKNOWN_PHYSICAL; the site it stands in is REVIEW_REQUIRED, never measured"
+  },
+  {
+   "insert_occurrence": "700052",
+   "block_name": "MY BLOCKS$0$SF3",
+   "sites_touched_stamps": {
+    "SITE-4e2a2a3375396340": [
+     [
+      "BED.ROOM"
+     ],
+     [
+      "BATH"
+     ],
+     [
+      "HALL",
+      "whgm"
+     ]
+    ]
+   },
+   "block_record": "612081",
+   "layers": [
+    "MY BLOCKS$0$PM"
+   ],
+   "parts": 27,
+   "kinds": {
+    "SEGMENT": 15,
+    "ARC": 12
+   },
+   "role": "UNKNOWN_PHYSICAL",
+   "rule": "GR-99",
+   "strength": "NONE",
+   "evidence": {
+    "LAYER_ROLE": null,
+    "layer": "MY BLOCKS$0$PM",
+    "INSTANCE_CONTEXT": "SYMBOL_OCCURRENCE",
+    "BLOCK_NAME_ROLE": null,
+    "ENTITY_TYPE": "LINE",
+    "BLOCK_DEFINITION": {
+     "NO_BOUNDARY_LAYER": true,
+     "DOOR_SIGNATURE": false
+    }
+   },
+   "sites_touched": [
+    "SITE-4e2a2a3375396340"
+   ],
+   "proven_furniture_without_benchmark": false,
+   "why": "a symbol occurrence with no boundary layer, but neither its layer ('PM') nor its block name ('SF3') carries a furniture / fixture token: no rule establishes a role -> UNKNOWN_PHYSICAL; the site it stands in is REVIEW_REQUIRED, never measured"
+  }
+ ]
+}

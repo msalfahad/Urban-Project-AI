@@ -1,0 +1,392 @@
+{
+ "frozen_before_benchmark": true,
+ "policy": {
+  "cb_states": [
+   "MATCH_CONFIRMED",
+   "SPAN_LENGTH_CONFLICT",
+   "SPAN_COUNT_CONFLICT",
+   "TAG_WITH_NO_MEMBER",
+   "MEMBER_WITH_NO_TAG",
+   "BLOCKED"
+  ],
+  "policy_id": "STRUCTURAL_CENSUS_V1",
+  "precedence": [
+   "LOCAL_PANEL_NOTE",
+   "FLOOR_SPECIFIC_NOTE",
+   "PROJECT_DEFAULT"
+  ],
+  "principles": [
+   "plan decides occurrence; schedule only defines",
+   "no default overrides a local note",
+   "a value is never rounded into a table row it does not match",
+   "every plan object ends in one terminal state"
+  ],
+  "rule_states": [
+   "EXACT_RULE",
+   "RULE_NOT_EXACT_MATCH",
+   "BLOCKED_METHOD"
+  ],
+  "terminal_states": [
+   "COUNTED_AND_DEFINED",
+   "COUNTED_DEFINITION_PARTIAL",
+   "COUNTED_BLOCKED",
+   "NOT_IN_SCOPE"
+  ]
+ },
+ "register": "STRUCTURAL_REVIEW_QUEUE",
+ "round": "S1",
+ "rows": [
+  {
+   "area": "COLUMN_TIES",
+   "evidence": "p.9 'ST. OF COLUMN- 6Ø8/m' (DXF 1BAA) + detail sketches 1BAB / 1BBA+1BBF / 1BB6+1BD3+1BDA",
+   "impact": "every column tie count (bands 2 and 3 double / triple)",
+   "item": "6Ø8/m semantics",
+   "priority_group": 1,
+   "question": "6Ø8/m: is the count per metre a count of tie SETS (all closed ties of the band at one level) or of single closed ties?",
+   "rank": 1
+  },
+  {
+   "area": "COLUMN_TIES",
+   "evidence": "3 occurrences on the boundary: ['COL-C7-X07-Y?@15888-16162-FOUNDATION', 'COL-C7-X07-Y?@15888-16162-GF', 'COL-C7-X07-Y?@15888-16162-1F']",
+   "impact": "C7 tie topology",
+   "item": "L = 80 cm boundary",
+   "priority_group": 2,
+   "question": "L = 80 cm (C7 30x80) sits on the printed limit of both bands (50<L<80, 80<L<120): band 2 (2 ties) or band 3 (3 ties)?",
+   "rank": 2
+  },
+  {
+   "area": "COLUMNS",
+   "evidence": "10 occurrences: ['C', 'C1', 'C2']",
+   "impact": "information only; no quantity change unless the section changes",
+   "item": "GF columns below Tmin",
+   "priority_group": 3,
+   "question": "GF storey is 4.50 m -> Tmin 25 cm (p.9); these columns are 20 cm in the schedule. Accept the schedule (engineer's design) or flag to the engineer?",
+   "rank": 3
+  },
+  {
+   "area": "COLUMNS",
+   "evidence": {
+    "CAP": "C3",
+    "CAP_size_label": "30X50",
+    "FP": "C3",
+    "GBP": "C"
+   },
+   "impact": "type of the whole chain",
+   "item": "tag conflict COLPOS-X04-Y01-7988-7462",
+   "priority_group": 4,
+   "question": "Which tag is right for this column position?",
+   "rank": 4
+  },
+  {
+   "area": "COLUMNS",
+   "evidence": {
+    "CAP": "C8",
+    "CAP_size_label": "30X80",
+    "FP": "C8",
+    "GBP": "C7"
+   },
+   "impact": "type of the whole chain",
+   "item": "tag conflict COLPOS-X12-Y02-24308-8912",
+   "priority_group": 4,
+   "question": "Which tag is right for this column position?",
+   "rank": 5
+  },
+  {
+   "area": "COLUMNS",
+   "evidence": {
+    "1F": 11,
+    "2F": 3,
+    "FOUNDATION": 6,
+    "GF": 8
+   },
+   "impact": "section per storey",
+   "item": "drawn section vs schedule",
+   "priority_group": 5,
+   "question": "Plan outline size differs from the schedule band for these occurrences (e.g. lift columns 20X50 / 25X100 on the axis plan vs 30 cm in the schedule). Schedule governs?",
+   "rank": 6
+  },
+  {
+   "area": "FOOTINGS",
+   "evidence": {
+    "candidates": [
+     "F",
+     "F10"
+    ],
+    "outline_bbox": [
+     30007.9,
+     7311.9,
+     33257.9,
+     8711.9
+    ]
+   },
+   "impact": "one combined footing",
+   "item": "FTG-CONFLICT_F_F10-30008-7312",
+   "priority_group": 6,
+   "question": "One outline carries tags F and F10 (and holds C + C10). Which footing is it, or is it two footings drawn as one outline?",
+   "rank": 7
+  },
+  {
+   "area": "FOOTINGS",
+   "evidence": {
+    "F": "3+4",
+    "F10": "3+5",
+    "F11": "3+8",
+    "F15": "3+4",
+    "F2": "3+4",
+    "F3": "3+4",
+    "F4": "3+4",
+    "F5": "3+4",
+    "F6": "3+5",
+    "F7": "3+6",
+    "F9": "3+8",
+    "FN": ""
+   },
+   "impact": "every single-layer footing",
+   "item": "BOXED '3+4'",
+   "priority_group": 7,
+   "question": "What does the BOXED value '3+4' (single-layer footings) mean - box/cage bars (3 one way + 4 the other) or starters?",
+   "rank": 8
+  },
+  {
+   "area": "STRAPS",
+   "evidence": [
+    "2ABA",
+    "1FBB"
+   ],
+   "impact": "SB2 section and bars",
+   "item": "SB2",
+   "priority_group": 8,
+   "question": "SB2 appears twice in the schedule (100x50 and 80x50). Drawn width on FP is ~987 mm (favours 100). Which row governs?",
+   "rank": 9
+  },
+  {
+   "area": "CONTINUOUS_BEAMS",
+   "evidence": {
+    "extension_check": null,
+    "plan_spans_cc_m": [
+     2.724,
+     3.75
+    ],
+    "schedule_spans_m": [
+     3.3,
+     3.7
+    ]
+   },
+   "impact": "CB occurrence",
+   "item": "CBO-GFRS-CB4-BL016",
+   "priority_group": 9,
+   "question": "Schedule spans vs plan spans disagree - which plan members form this CB?",
+   "rank": 10
+  },
+  {
+   "area": "CONTINUOUS_BEAMS",
+   "evidence": {
+    "extension_check": null,
+    "plan_spans_cc_m": [
+     2.85
+    ],
+    "schedule_spans_m": [
+     2.5,
+     4.5
+    ]
+   },
+   "impact": "CB occurrence",
+   "item": "CBO-GFRS-CB5-BL008",
+   "priority_group": 9,
+   "question": "Schedule spans vs plan spans disagree - which plan members form this CB?",
+   "rank": 11
+  },
+  {
+   "area": "CONTINUOUS_BEAMS",
+   "evidence": {
+    "extension_check": null,
+    "plan_spans_cc_m": [
+     4.2
+    ],
+    "schedule_spans_m": [
+     2.5,
+     4.5
+    ]
+   },
+   "impact": "CB occurrence",
+   "item": "CBO-GFRS-CB5-BL017",
+   "priority_group": 9,
+   "question": "Schedule spans vs plan spans disagree - which plan members form this CB?",
+   "rank": 12
+  },
+  {
+   "area": "CONTINUOUS_BEAMS",
+   "evidence": {
+    "extension_check": {
+     "extended_spans_cc_m": [
+      3.825,
+      6.545,
+      6.95
+     ],
+     "state_if_extended": "MATCH_CONFIRMED",
+     "with_adjacent_untagged_spans": [
+      3.825
+     ]
+    },
+    "plan_spans_cc_m": [
+     6.545,
+     6.95
+    ],
+    "schedule_spans_m": [
+     3.7,
+     6.4,
+     6.8
+    ]
+   },
+   "impact": "CB occurrence",
+   "item": "CBO-GFRS-CB8-BL024",
+   "priority_group": 9,
+   "question": "Schedule spans vs plan spans disagree - which plan members form this CB?",
+   "rank": 13
+  },
+  {
+   "area": "BEAMS",
+   "evidence": [
+    "BM-GF_ROOF-B1-UNBOUND-45D",
+    "BM-GF_ROOF-B8-UNBOUND-472",
+    "BM-1F_ROOF-B6-UNBOUND-76C",
+    "BM-1F_ROOF-B6-UNBOUND-6D7",
+    "BM-1F_ROOF-B6-UNBOUND-6BD",
+    "BM-1F_ROOF-B6-UNBOUND-6D4"
+   ],
+   "impact": "simple-beam occurrences",
+   "item": "ambiguous beam tags",
+   "priority_group": 10,
+   "question": "These tags sit between two parallel beams at similar distance. Which beam does each tag name?",
+   "rank": 14
+  },
+  {
+   "area": "BEAMS",
+   "evidence": [
+    "BM-GF_ROOF-CB3-BL022-494",
+    "BM-GF_ROOF-B3-BL022-1827"
+   ],
+   "impact": "stair beam / CB3",
+   "item": "B3 (With Stair) vs CB3",
+   "priority_group": 11,
+   "question": "One span carries both 'B3 (With Stair)' and 'CB3'. Is B3 a separate stair beam beside CB3, or the same member?",
+   "rank": 15
+  },
+  {
+   "area": "BEAMS",
+   "evidence": [
+    "BM-GF_ROOF-UNTAGGED-BL021-12388",
+    "BM-GF_ROOF-UNTAGGED-BL021-15888",
+    "BM-GF_ROOF-UNTAGGED-BL029-16412",
+    "BM-GF_ROOF-UNTAGGED-BL031-16567",
+    "BM-GF_ROOF-UNTAGGED-BL046-31108",
+    "BM-1F_ROOF-UNTAGGED-BL002-8912",
+    "BM-1F_ROOF-UNTAGGED-BL005-9062",
+    "BM-1F_ROOF-UNTAGGED-BL005-11912",
+    "BM-1F_ROOF-UNTAGGED-BL010-12388",
+    "BM-1F_ROOF-UNTAGGED-BL010-15888",
+    "BM-1F_ROOF-UNTAGGED-BL012-12638",
+    "BM-1F_ROOF-UNTAGGED-BL013-12638",
+    "BM-1F_ROOF-UNTAGGED-BL018-16004",
+    "BM-1F_ROOF-UNTAGGED-BL020-16087",
+    "BM-1F_ROOF-UNTAGGED-BL021-16482",
+    "BM-1F_ROOF-UNTAGGED-BL030-26861",
+    "BM-1F_ROOF-UNTAGGED-BL031-26861",
+    "BM-1F_ROOF-UNTAGGED-BL033-30758",
+    "BM-2F_ROOF-UNTAGGED-BL005-14112"
+   ],
+   "impact": "simple-beam population",
+   "item": "untagged beam members",
+   "priority_group": 12,
+   "question": "Members drawn as beams with no tag - which type are they (or are they drop / edge details)?",
+   "rank": 16
+  },
+  {
+   "area": "GROUND_BEAMS",
+   "evidence": [
+    "BM-GROUND_BEAMS-GB-BL002-2038",
+    "BM-GROUND_BEAMS-GB-BL005-14438",
+    "BM-GROUND_BEAMS-GB-BL008-9062",
+    "BM-GROUND_BEAMS-GB-BL011-12362",
+    "BM-GROUND_BEAMS-GB-BL020-9788",
+    "BM-GROUND_BEAMS-GB-BL027-17038",
+    "BM-GROUND_BEAMS-GB-BL028-17038",
+    "BM-GROUND_BEAMS-GB-BL036-27612",
+    "BM-GROUND_BEAMS-GB-BL037-28583"
+   ],
+   "impact": "GB section",
+   "item": "GB category length basis",
+   "priority_group": 13,
+   "question": "GB category (<2.5 / <5 / >5 m): measured centre-to-centre of supports or clear span? These spans change category between the two.",
+   "rank": 17
+  },
+  {
+   "area": "SLABS",
+   "evidence": "P15-TEMP-TABLE",
+   "impact": "temperature steel",
+   "item": "temperature steel 160 / 180 mm",
+   "priority_group": 14,
+   "question": "The p.15 temperature table has rows 150 and 175 only. For 160 mm and 180 mm slabs: which row (no interpolation is done)?",
+   "rank": 18
+  },
+  {
+   "area": "STAIRS",
+   "evidence": [
+    "SP-GF_ROOF_SLAB-21"
+   ],
+   "impact": "stair concrete / stair bars",
+   "item": "stair inside a void",
+   "priority_group": 15,
+   "question": "These faces are drawn as open-to-below (X lines) but hold stair treads and a bar text (8Ø16/m). Is this the main stair well (stair slab + landings), and which stair detail applies?",
+   "rank": 19
+  },
+  {
+   "area": "SLABS",
+   "evidence": "P4-6-NOTE-2 vs P15-SLAB-ON-BEAMS",
+   "impact": "slab top steel",
+   "item": "top steel over beams",
+   "priority_group": 15,
+   "question": "Plan note (pp.4-6): 5Ø10/m over beams for 1/3 span, vs p.15: top bars 0.25L / 0.30L. Is the plan note a minimum where no top bar is drawn, or an override?",
+   "rank": 20
+  },
+  {
+   "area": "LEVELS",
+   "evidence": "STRUCTURAL_LEVEL_REGISTER",
+   "impact": "foundation-storey column length",
+   "item": "founding level / column heights",
+   "priority_group": 16,
+   "question": "Founding level is not printed (>= 1.5 m excavation). Confirm footing founding level and floor build-up, needed for column bar lengths next round.",
+   "rank": 21
+  },
+  {
+   "area": "POOL",
+   "evidence": "p.7 detail",
+   "impact": "pool occurrence geometry",
+   "item": "pool dimensions",
+   "priority_group": 17,
+   "question": "Pool lengths / depths are 'AS PER ARCH'. Provide the architectural pool plan and section.",
+   "rank": 22
+  }
+ ],
+ "source": {
+  "drawing": "ST7757.dxf",
+  "dxf_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+  "pdf": "ST7757.pdf",
+  "pdf_sha256": "74da1523f05eb3c6a4fe3ddebaef2c3d841891f003efc03bc32a3fb4553337e3"
+ },
+ "summary": {
+  "items": 22,
+  "top_10": [
+   "1. COLUMN_TIES: 6Ø8/m semantics",
+   "2. COLUMN_TIES: L = 80 cm boundary",
+   "3. COLUMNS: GF columns below Tmin",
+   "4. COLUMNS: tag conflict COLPOS-X04-Y01-7988-7462",
+   "5. COLUMNS: tag conflict COLPOS-X12-Y02-24308-8912",
+   "6. COLUMNS: drawn section vs schedule",
+   "7. FOOTINGS: FTG-CONFLICT_F_F10-30008-7312",
+   "8. FOOTINGS: BOXED '3+4'",
+   "9. STRAPS: SB2",
+   "10. CONTINUOUS_BEAMS: CBO-GFRS-CB4-BL016"
+  ]
+ }
+}

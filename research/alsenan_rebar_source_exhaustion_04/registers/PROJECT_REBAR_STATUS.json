@@ -1,0 +1,46 @@
+{
+ "PROJECT_REBAR_STATUS": "LOWER_BOUND_ONLY",
+ "PROJECT_REBAR_FINAL_ESTABLISHED": false,
+ "PROJECT_REBAR_PROCUREMENT_READY": false,
+ "required_populations": 354,
+ "verified_complete_populations": 4,
+ "population_completeness_pct": 1.129944,
+ "blocked_required_components": 123,
+ "source_conflicts": 3,
+ "checks_pass": true,
+ "reasons_not_final": [
+  "350 of 354 required populations are not VERIFIED_COMPLETE",
+  "123 required components BLOCKED",
+  "3 source conflicts open"
+ ],
+ "single_total_allowed": false,
+ "rule": "FINAL_ESTABLISHED = 100 % required populations terminal AND VERIFIED_COMPLETE / NOT_REQUIRED AND no source conflict AND no blocked required component AND mass + provenance pass",
+ "SCHEMA": "URBAN_ALSENAN_PROJECT_REBAR_STATUS_V1",
+ "trade_totals": {
+  "verified_complete_kg": 48.924444,
+  "lower_bound_kg": 20366.248789,
+  "provisional_kg": 7155.522484,
+  "budget_kg": 0.0,
+  "audit_kg": 2487.032762,
+  "populations_by_state": {
+   "BLOCKED": 42,
+   "VERIFIED_COMPLETE": 4,
+   "VERIFIED_PARTIAL_LOWER_BOUND": 289,
+   "PROVISIONAL": 19,
+   "NOT_IN_SCOPE": 48
+  },
+  "project_final_rebar_total": "NOT YET ESTABLISHED"
+ },
+ "known_components_bbs": {
+  "KNOWN_COMPONENTS_NET_KG": 20415.173233,
+  "KNOWN_COMPONENTS_BBS_USED_KG": 20931.075945,
+  "KNOWN_COMPONENTS_BBS_PURCHASED_KG": 21424.296296,
+  "KNOWN_COMPONENTS_BBS_WASTE_KG": 493.220352,
+  "KNOWN_COMPONENTS_BBS_WASTE_PCT": 2.302154,
+  "PROJECT_REBAR_FINAL_ESTABLISHED": false,
+  "PROJECT_REBAR_PROCUREMENT_READY": false,
+  "is_project_procurement_quantity": false,
+  "label": "audit BBS of the known components only - NOT the villa's reinforcement procurement requirement (project status LOWER_BOUND_ONLY)"
+ },
+ "invariants_pass": true
+}

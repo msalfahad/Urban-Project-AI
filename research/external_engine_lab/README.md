@@ -1,0 +1,227 @@
+# External engine lab (research only)
+
+This folder may hold donor clones, comparison scripts, native AutoCAD experiments,
+external MCP tests, benchmark adapters and experimental outputs.
+
+- `DONORS.lock` pins every donor at the commit reviewed (2026-09-30), with licence, purpose and status.
+- `THIRD_PARTY_PROVENANCE.json` holds the prepared provenance rows for the only two approved COPY_ADAPT items.
+- `donors/` and `outputs/` are gitignored. No donor source is committed here.
+
+**Production boundary:** nothing under `engine/` may import this folder, an MCP server, a donor engine or live AutoCAD COM. The rule is enforced by `tests/r8_0/test_r8_0_import_boundaries.py`. The lab talks to production only through files, and a lab result can only ever become an OBSERVATION, TRANSCRIPTION, GEOMETRY_CANDIDATE or QA_FINDING. It never becomes a FINAL quantity.
+
+## R8.1 additions
+
+- **MINSERT oracle.** `minsert_reflection_oracle.py` produces `MINSERT_REFLECTION_ORACLE.dxf`, `.json` and `.md`. It is the one-time native AutoCAD check for a MINSERT placed under a reflecting parent. Status: `MINSERT_REFLECTION_ORACLE_CONFLICT`; the analysis favours the hand truth.
+- **Real-drawing characterisation.** `r8_1_real_drawing_characterisation.py DECODE.json ...` runs a read-only pass over a real decode:
+  - production D1 → K1 against `cad_adapter`;
+  - field audit;
+  - mirrored-arc comparison;
+  - dynamic-block counts.
+
+  Its output goes to `outputs/`, which is gitignored. No count it prints may become a production target.
+
+## R8.2 additions
+
+- **`r8_2_shadow_impact.py`: the shadow bridge.** It runs the real downstream code for each active path:
+  - Qortuba QS01;
+  - P7757 PA07;
+  - the Al Rashed project reader.
+
+  Each run is repeated once per defect, with that single defect corrected (K1 is the corrector). The diffs are written to `outputs/`. `cad_adapter.normalize` is patched in-process only; nothing published changes.
+- **`r8_2_k2_real_attempts.py`** tries K2 on the real sources through `dwg2dxf` plus ezdxf, and records the exact failures and hashes. No DXF is repaired.
+- **`r8_2_path_and_independence.py`** holds the ACTIVE_PATH_MAP and DECODER_INDEPENDENCE_MATRIX as data. `verify()` checks the map against the runners' imports; this check is pinned by `tests/r8_2/test_r8_2_paths_and_pins.py`.
+
+## R8.3 — pinned re-decode, unit context, measurement frame (SHADOW)
+
+- `r8_3_pinned_redecode.py` — re-decodes every original DWG present with the REGISTERED dwgread
+  (sha256 fe49cf28…) into `data/runs/pinned_redecode/` (historical JSON untouched); compares bytes, UTF-8
+  normalisation, SRD, census, handle representation, references; records the text-decoding delta row by row and
+  the `PINNED_LIBREDWG_DWGREAD_JSON_HANDLE_REPRESENTATION_DEFECT` (reproduction count, collisions, affected references).
+- `r8_3_real_status.py` — evidence (engine/source/cad/unit_evidence.py) → UNIT_CONTEXT / region / MEASUREMENT_FRAME /
+  CAD_PROFILE (engine/source/frame.py, cad_profile.py) for the three real sources; column Question A. No quantity is
+  read; nothing is published.
+- Neither file is imported by `engine/`.
+
+## R8.4 (shadow)
+
+| script | writes | purpose |
+|---|---|---|
+| `r8_4_qualification.py` | `outputs/r8_4/DECODER_QUALIFICATION_*.json`, `INDEPENDENT_RECONCILIATION_RESULTS.json` | target feature profiles, handle representation, qualification register (P7757 BLOCKED_EXTERNAL_INPUT), DXF search with writer provenance |
+| `r8_4_regions.py` | `outputs/r8_4/REFERENCE_REGION_REGISTER.json` | deterministic region candidates, active-path view roles, pending adapter designations (none accepted) |
+| `r8_4_shadow_diff.py` | `outputs/r8_4/SHADOW_ROW_DIFF.json`, `REAL_PROJECT_R8_4_STATUS.json` | row-by-row current vs canonical (frame V2, CAD profile V2), status only, no value recomputed |
+| `r8_4_package.py` | `data/reports/URBAN_QTO_R8_4_QUALIFICATION_SHADOW/` + zip | review package from the outputs, registers and the final suite's junit |
+
+Run order: qualification → regions → shadow_diff → (final suite) → package. No script writes to a published, approved or frozen artefact.
+
+## R8.5 (shadow)
+
+| script | writes (outputs/r8_5/) | purpose |
+|---|---|---|
+| `r8_5_source_exceptions.py` | `SOURCE_EXCEPTION_REGISTER.json` | every unrealised object per row region, positive-evidence states, explicit layer relevance |
+| `r8_5_qualification.py` | `CAPABILITY_SIGNATURE_REGISTER.json`, `DECODER_QUALIFICATION_V2.json`, `INDEPENDENT_RECONCILIATION_RESULTS.json` | target signatures, V2 records, DXF search |
+| `r8_5_value_shadow.py` | `SHADOW_VALUE_DIFF.json`, `CANONICAL_SHADOW_QUANTITIES.json`, `REAL_PROJECT_R8_5_STATUS.json` | canonical remeasurement (Qortuba), canonical status (P7757), native cross-check (Al Rashed) |
+| `r8_5_package.py` | `data/reports/URBAN_QTO_R8_5_VALUE_SHADOW/` + zip | review package from the outputs and the final suite's junit |
+
+### R8.5 follow-up (no independent DXF required)
+
+| script | writes (tests/r8_5/registers/) | purpose |
+|---|---|---|
+| `r8_5_export_intake.py` | `R8_INDEPENDENT_EXPORT_INTAKE.json` | admission + measured verification of supplied DXFs (the two ezdxf DXFs: DIAGNOSTIC_NONQUALIFYING_CONVERSION) |
+| `r8_5_adapter_defect.py` | `R8_ADAPTER_DEFECT_CLOSED_FLAG.json` | active-path defect report (project reader closed bit); reported, not fixed |
+| `r8_5_migration_round1_scope.py` | `R8_MIGRATION_ROUND1_SCOPE.json` | scope of the design-only migration round 1 (`docs/R8_MIGRATION_ROUND1_DESIGN.md`) |
+
+## R8.6 (pre-migration proof; shadow / design)
+
+| script | writes | purpose |
+|---|---|---|
+| `r8_6_canonical_rebuild.py` | `tests/r8_6/registers/QORTUBA_ROUND1_PROOF.json` | the six round-1 rows rebuilt by the active method from canonical inputs only; method-input contract ablations |
+| `r8_6_pre_migration.py` | `tests/r8_6/registers/*.json` | owner actions, dependency graph, blocker register, legacy audit, round-1 signatures, parser plan, defect, transaction, decisions |
+| `r8_6_upload_drift.py` | `outputs/r8_6/UPLOAD_DRIFT_STATUS.json` | stored villa inventory vs the session upload folder (status step, never a test) |
+| `r8_6_package.py` | `data/reports/URBAN_QTO_R8_6_PRE_MIGRATION_PROOF/` + zip | review package from the registers and the final suite's junit |
+
+## R8.6A (DXF intake, source fidelity, parser independence; shadow)
+
+External DXFs are read from the hash-addressed store `data/inputs/by_sha256/<sha256>.dxf` (untracked; declared in
+`tests/r8_6a/FIXTURE_MANIFEST.json`). Run the scripts outside any test session (the determinism guard forbids
+test-time writes). `<work>` holds the K2 pickles, indexes and D1 decodes the intake reads.
+
+| script | writes | purpose |
+|---|---|---|
+| `r8_6a_reconcile.py` | `<work>/*_reconcile.json` | D1/K1 vs DXF/K2 diagnostic reconciliation (REAL tolerance, handle + instance path, no nearest-neighbour) |
+| `r8_6a_intake.py` | `tests/r8_6a/registers/{DXF_INTAKE,DXF_PROVENANCE,SOURCE_FIDELITY,QORTUBA_ROUND1_DXF,P7757_DXF}*.json` | hash identification, streaming header/census/handle scan, writer vs decoder vs LASTSAVEDBY, revision identity, editing-time evidence, admission V2, scoped signature states, plan variants |
+| `r8_6a_registers.py` | `tests/r8_6a/registers/{OWNER_ACTION_REGISTER,R8_6A_DECISION_REGISTER}.json` | owner actions V3 (FILE_RECEIVED vs INDEPENDENT_PROVENANCE_ESTABLISHED), decisions, contract review, findings, gates |
+| `r8_6a_owner_images.py` | the two owner-review PNGs | Qortuba SECOND FLOOR PLAN variants (DXF as stored) and the Q-14 ten-space ceiling question |
+| `r8_6a_package.py` | `data/reports/URBAN_QTO_R8_6A_DXF_INTAKE/` + zip | review package from the registers, the images and the final suite's junit |
+
+## R8.7 (canonical measurement input, Qortuba new revision; shadow)
+
+The contract lives in `engine/source` (`canonical_input.py`, `canonical_build.py`, `owner_scope.py`); the lab only
+bridges it to the legacy QS01 method. Owner decisions are scoped claims in `data/registry/OWNER_PROJECT_CLAIMS.json`.
+
+| script | writes | purpose |
+|---|---|---|
+| `r8_7_canonical.py` | `<work>/*_k2.pkl` (`build-k2`) | QS01 contract, strict / lenient bridge, isolated stub-decode runner, revision inputs, scoped units |
+| `r8_7_proof.py` | `tests/r8_7/registers/{QS01_METHOD_INPUT_CONTRACT,FAIL_CLOSED_ABLATION_RESULTS,QORTUBA_REVISION_DELTA,Q14_SCOPED_CEILING_RULE,REGION_CLASSIFICATION_NEW_REVISION}.json` | ablations, OLD_K1 / OLD_K2 / NEW_K2 runs, parser-culprit bisection, cause attribution, scoped Q-14, region classes |
+| `r8_7_registers.py` | `tests/r8_7/registers/{QORTUBA_SOURCE_REVISION_REGISTER,OWNER_ACTION_REGISTER,OWNER_PROJECT_CLAIMS,CANONICAL_MEASUREMENT_INPUT_SCHEMA,R8_7_DECISION_REGISTER}.json` | revisions, owner actions V4, claim scope checks, schema, decisions / gates / findings |
+| `r8_7_dwg_anchor.py` | `tests/r8_7/registers/NEW_DWG_SOURCE_IDENTITY.json` | candidate original DWG vs the new-revision DXF with the pinned decoder; verdict by fixed rules, never forced |
+| `r8_7_package.py` | `data/reports/URBAN_QTO_R8_7_CANONICAL_INPUT/` + zip | review package from the registers and the final suite's junit |
+| `r8_8_topology.py` | `tests/r8_8/registers/{OLD_QORTUBA_CROSS_ROUTE,NEW_QORTUBA_TOPOLOGY,QORTUBA_SIX_ROW_STATUS,ELLIPSE_EXCLUSION_AUDIT,GEOMETRY_ROLE_REGISTER,VISIBILITY_AUTHORITY_REGISTER,REGION_MEMBERSHIP_POLICY,SITES_*,TOPOLOGY_CROSSCHECK,TOLERANCE_ARCHITECTURE}.json` | TS01 certified topology on old K1 / old K2 / new K2, cross-route control, six-row status, GEOS cross-check, tolerance inventory + H584 ULP study (project semantics live here only) |
+| `r8_8_registers.py` | `tests/r8_8/registers/{OWNER_ACTION_REGISTER,ENGINEERING_ACTION_REGISTER,SOURCE_SUBPART_IDENTITY_SCHEMA,R8_8_DECISION_REGISTER,ARCHITECTURE_REVIEW}.json` | owner actions V5 (owner-doable only), engineering actions, decisions / findings / gates / answers, architecture review |
+| `r8_8_package.py` | `data/reports/URBAN_QTO_R8_8_TOPOLOGY_STABILITY/` + zip | review package (18 md + 16 json + 2 site overlays) |
+| `r8_9_evidence.py` | (library) | ACIS / ASM SAB and spline placement extents for unrealised entities (positive evidence only) |
+| `r8_9_qortuba.py` | `tests/r8_9/registers/{EFFECTIVE_LAYER_REGISTER,ROLE_AUTHORITY_POLICY,SOURCE_LAYER_ROLE_CLAIMS,BLOCK_OCCURRENCE_CONTEXT_REGISTER,UNREALISED_ENTITY_REGISTER,TEXT_ROLE_REGISTER,SEMANTIC_ZONE_REGISTER,THRESHOLD_SITE_REGISTER,DOOR_CLOSURE_AUDIT,TOPOLOGY_CROSSCHECK_V2,QORTUBA_R8_9_STATUS}.json` | R8.9 rerun of old / new Qortuba, FIRNTUR / SF3 / DIM-separator investigations, sandboxed hypotheses (never released) |
+| `r8_9_p7757.py` | `tests/r8_9/registers/P7757_R8_9_SHADOW.json` | P7757 second-family shadow; unit never assumed |
+| `r8_9_registers.py` | `tests/r8_9/registers/{OWNER_ACTION_REGISTER,ENGINEERING_ACTION_REGISTER,R8_9_DECISION_REGISTER}.json` | owner actions V6, engineering actions, decisions / findings / gates / answers 1-27 |
+| `r8_9_package.py` | `data/reports/URBAN_QTO_R8_9_ROLE_AND_SEMANTIC_ZONES/` + zip | review package (19 md + 16 json + owner review picture) |
+| `r8_10_claims.py` | `data/registry/OWNER_SOURCE_CLAIMS.json` | the two Qortuba owner answers as source-identity-bound claims (evidence version 2); xref facts read from the DXF |
+| `r8_10_qortuba.py` | `tests/r8_10/registers/{OWNER_CLAIM_REGISTER,XREF_SCOPE_CLAIMS,DIM_WALL_CLAIMS,TRADE_SEMANTIC_EQUIVALENCE,UNRESOLVED_ROLE_MATERIALITY,DUPLICATE_OCCURRENCE_REGISTER,THRESHOLD_SITE_REGISTER,ROLE_AUTHORITY_ADVERSARIAL,BUILDING_ASSEMBLY_ADVERSARIAL,TEXT_TAG_ADVERSARIAL,QORTUBA_R8_10_STATUS}.json` | rebuild from the claims, trade treatment from the owner rule store, six rows with blocker classes |
+| `r8_10_p7757.py` | `tests/r8_10/registers/P7757_R8_10_SHADOW.json` | second family: attacks the generic assumptions; unit never assumed |
+| `r8_10_registers.py` | `tests/r8_10/registers/{OWNER_ACTION_REGISTER,R8_10_DECISION_REGISTER}.json` | owner actions V7, recommendation, decisions, gates, answers 1-24 |
+| `r8_10_package.py` | `data/reports/URBAN_QTO_R8_10_OWNER_CLAIMS_AND_TRADE_EQUIVALENCE/` + zip | review package (18 md + 15 json + picture) |
+| `r8_11_qortuba.py` | `tests/r8_11/registers/{WALL_BAND_REGISTER,TOPOLOGY_CLOSURE_REGISTER,NEAR_MISS_REGISTER,OPEN_PASSAGE_SITE_REGISTER,THRESHOLD_SITE_REGISTER,OBJECT_FOOTPRINT_POLICY,SEMANTIC_CLASS_REGISTER,QTO_RUN_MANIFEST,Q13_STATUS,Q14_STATUS,QORTUBA_R8_11_STATUS}.json` | rebuild with wall bands + zero-material closures, blind cap analysis (H2430 / H2431 / H1316), passages, footprint policies, six rows with provenance and run manifest |
+| `r8_11_registers.py` | `tests/r8_11/registers/{OWNER_ACTION_REGISTER,ENGINEERING_ACTION_REGISTER,R8_11_DECISION_REGISTER}.json` | owner actions V8, engineering actions, recommendation, decisions, gates, answers 1-30 |
+| `r8_11_owner_facts.py` | `data/registry/OWNER_PHYSICAL_FACTS.json` | owner clarification (Hall / Lobby open passage) as a part-bound physical fact; binding; owner-declared OPEN_PASSAGE_SITE with measured geometry |
+| `r8_11_package.py` | `data/reports/URBAN_QTO_R8_11_WALL_BANDS_AND_RUN_MANIFEST/` + zip | review package (19 md + 15 json + picture) |
+
+| `r8_12_blind.py` | `tests/r8_12/registers/BLIND_QORTUBA_RESULT.json` | the BLIND run of the frozen WALL_BAND_POLICY_V3 (no owner fact, no expected value) |
+| `r8_12_qortuba.py` | `tests/r8_12/registers/{FRAGMENT_FACE_POLICY,FACE_CHAIN_REGISTER,BAND_SPAN_REGISTER,WALL_BAND_ASSEMBLY_REGISTER,TOPOLOGY_CLOSURE_REGISTER,OWNER_FACT_COMPARISON,Q14_STATUS,Q13_STATUS,DIGEST_HIERARCHY,POLICY_PROVENANCE_AUDIT,QORTUBA_R8_12_STATUS}.json` | six rows after the blind run, owner fact compared afterwards, Q-13 sole-blocker counterfactual, digest hierarchy, policy audit |
+| `r8_12_registers.py` | `tests/r8_12/registers/{OWNER_ACTION_REGISTER,ENGINEERING_ACTION_REGISTER,R8_12_DECISION_REGISTER}.json` | owner actions V9 (one question), engineering actions, recommendation + answers 1-29 |
+| `r8_12_package.py` | `data/reports/URBAN_QTO_R8_12_FRAGMENT_AWARE_WALL_BANDS/` + zip | review package (19 md + 16 json) |
+| `r8_13_recommendation.json` | - | the R8.13 recommendation, written before any V4 code and committed with the V4 freeze |
+| `r8_13_blind.py` | `tests/r8_13/registers/BLIND_QORTUBA_V4_RESULT.json` | the BLIND run of the frozen WALL_BAND_POLICY_V4 (no owner / floor / finish fact, no expected value) |
+| `r8_13_qortuba.py` | (built by `r8_13_registers.py`) | after the blind run: band diff V3 -> V4, owner finish facts in the trade layer only, Q-13 rebuild with the strip audit, Q-14 regression, digests, closure release evaluation, determinism |
+| `r8_13_registers.py` | `tests/r8_13/registers/{OWNER_ACTION_REGISTER,OWNER_FINISH_FACT_REGISTER,TRADE_OBJECT_FOOTPRINT_POLICY,SEMANTIC_SPACE_CLASS_REGISTER,WALL_BAND_V4_POLICY,V3_DEFECT_RESOLUTION,BLIND_COMPARISON,Q13_STATUS,Q14_STATUS,QORTUBA_R8_13_STATUS,DIGEST_HIERARCHY,SOURCE_ANCHOR_STATUS,CLOSURE_RELEASE_MODEL,WET_SERVICE_FINISH_SCOPE,SKIRTING_METHOD_FACT,ENGINEERING_ACTION_REGISTER,R8_13_DECISION_REGISTER}.json` | every R8.13 register (answers 1-31) |
+| `r8_13_package.py` | `data/reports/URBAN_QTO_R8_13_V4_AND_FLOOR_AUTHORITY/` + zip | review package (21 md + 16 json + 4 supporting) |
+| `r8_14_recommendation.json` | - | the R8.14 recommendation, written before any R8.14 code and committed with the V5 freeze |
+| `r8_14_blind.py` | `tests/r8_14/registers/BLIND_QORTUBA_V5_RESULT.json` | the BLIND run of the frozen WALL_BAND_POLICY_V5 (no owner fact, no expected value) |
+| `r8_14_qortuba.py` | (built by `r8_14_registers.py`) | after the blind run: door-threshold allocations (door_transition), Hall / Lobby soffit out of the ceiling (opening_reveals), V4-O1 obstacle audit, skirting readiness (wall_contact_path), six-row rebuild, digests, source anchor, closure release |
+| `r8_14_registers.py` | `tests/r8_14/registers/{OWNER_ACTION_REGISTER,OWNER_METHOD_FACT_REGISTER,DOOR_THRESHOLD_REGISTER,DOOR_TRANSITION_POLICY,MARBLE_THRESHOLD_EVIDENCE,OPEN_PASSAGE_REVEAL_REGISTER,SOFFIT_ALLOCATION_POLICY,SKIRTING_METHOD_POLICY,SKIRTING_READINESS,V4_O1_REGISTER,V4_O2_REGISTER,WALL_BAND_POLICY_STATUS,SOURCE_ANCHOR_STATUS,CLOSURE_RELEASE_STATUS,Q13_STATUS,Q14_STATUS,QORTUBA_R8_14_STATUS,DIGEST_HIERARCHY,R8_14_DECISION_REGISTER}.json` | every R8.14 register (answers 1-36) |
+| `r8_14_package.py` | `data/reports/URBAN_QTO_R8_14_THRESHOLD_SOFFIT_SKIRTING_RELEASE/` + zip | review package (22 md + 20 json + 2 supporting) |
+| `r8_15_recommendation.json` | - | the R8.15 recommendation, written before any R8.15 code |
+| `r8_15_owner_facts.py` | `data/registry/OWNER_PHYSICAL_FACTS.json` + `data/registry/URBAN_OWNER_METHOD_RULES.json` | the duct / M.B.ROOM-DRESS full-height / entrance marble physical facts (part-bound) and URBAN-WET-SERVICE-MARBLE-THRESHOLD@v1 |
+| `r8_15_skirting_blind.py` | `tests/r8_15/registers/BLIND_QORTUBA_SKIRTING_RESULT.json` | the BLIND run of the frozen WALL_CONTACT_PATH_POLICY_V2 + QORTUBA-NEW-SKIRTING-METHOD@v1 |
+| `r8_15_qortuba.py` | (built by `r8_15_registers.py`) | after the blind run: duct obstacle authority, marble thresholds, passage heads, six rows, skirting row, reveals, doors without a threshold site |
+| `r8_15_registers.py` | `tests/r8_15/registers/*.json` | every R8.15 register (answers 1-34) |
+| `r8_15_package.py` | `data/reports/URBAN_QTO_R8_15_DUCT_MARBLE_SKIRTING/` + zip | review package (20 md + 19 json + 3 supporting) |
+| `r8_16_recommendation.json` | - | the R8.16 recommendation, written before any R8.16 code |
+| `r8_16_blind.py` | `tests/r8_16/registers/{CLOSURE_BLIND_RESULT,SKIRTING_BLIND_RESULT}.json` | the BLIND run of the frozen DOOR_OPENING_CLOSURE_POLICY_V2 + WALL_CONTACT_PATH_POLICY_V3 / QORTUBA-NEW-SKIRTING-METHOD@v2 |
+| `r8_16_qortuba.py` | (built by `r8_16_registers.py`) | after the blind run: the R8.15 assembly on the closure-V2 topology, the V3 skirting row (must equal the blind record), V3-O1, I1471 audit, door reveals |
+| `r8_16_registers.py` | `tests/r8_16/registers/*.json` | every R8.16 register (answers 1-36) |
+| `r8_16_package.py` | `data/reports/URBAN_QTO_R8_16_OPENINGS_SKIRTING_CLOSURE/` + zip | review package (24 md + 22 json + 2 supporting) |
+| `r8_17_recommendation.json` | - | the R8.17 recommendation, written before any R8.17 code |
+| `r8_17_owner_facts.py` | `data/registry/OWNER_PHYSICAL_FACTS.json` + `data/registry/OWNER_METHOD_FACTS.json` | the HALL / PAINTRY sliding glass door (H533 / H542) and the window sill fact v2 |
+| `r8_17_blind.py` | `tests/r8_17/registers/SKIRTING_V4_BLIND_RESULT.json` | the BLIND run of the frozen WALL_CONTACT_PATH_POLICY_V4 + QORTUBA-NEW-SKIRTING-METHOD@v3 |
+| `r8_17_wall_blind.py` | `tests/r8_17/registers/WALL_FACE_BLIND_RESULT.json` | the BLIND run of the frozen WALL_FACE_SURFACE_POLICY_V1 + QORTUBA-NEW-WALL-FACE-METHOD@v1 |
+| `r8_17_qortuba.py` | (built by `r8_17_registers.py`) | after the blind runs: the R8.16 assembly, the V4 skirting row (must equal the blind record), the wall-face rebuild (WF-L1 / WF-L2 wiring corrected, disclosed), WF-O1 check |
+| `r8_17_registers.py` | `tests/r8_17/registers/*.json` | every R8.17 register (answers 1-42) |
+| `r8_17_package.py` | `data/reports/URBAN_QTO_R8_17_SKIRTING_V4_WALL_FACES/` + zip | review package (24 md + 23 json + 3 supporting) |
+| `r8_18_recommendation.json` | - | the R8.18 recommendation, written before any R8.18 code |
+| `r8_18_owner_facts.py` | `data/registry/OWNER_METHOD_FACTS.json` + `data/registry/URBAN_OWNER_METHOD_RULES.json` | the Qortuba dry plaster / paint 3.15 m fact, URBAN-WALL-FINISH-HEIGHT-METHOD and URBAN-REVEAL-FINISH-METHOD |
+| `r8_18_blind.py` | `tests/r8_18/registers/WALL_FACE_V2_BLIND_RESULT.json` | the BLIND run of the frozen wall-face V2 / wall-height / reveal-finish / waterproofing policies + QORTUBA-NEW-WALL-FACE-METHOD@v2 |
+| `r8_18_qortuba.py` | (built by `r8_18_registers.py`) | after the blind run: the R8.17 assembly, the frozen run recomputed (must equal the blind record), the rebuild with the disclosed WF2-L1 correction |
+| `r8_18_registers.py` | `tests/r8_18/registers/*.json` | every R8.18 register (answers 1-43) |
+| `r8_18_package.py` | `data/reports/URBAN_QTO_R8_18_WALL_FACE_V2_FINISHES_WATERPROOFING/` + zip | review package (25 md + 28 json) |
+| `r8_19_recommendation.json` | - | the R8.19 recommendation, written before any R8.19 code |
+| `r8_19_owner_facts.py` | `data/registry/URBAN_OWNER_METHOD_RULES.json` + `data/registry/OWNER_METHOD_FACTS.json` | the exposed column / duct Urban rules and the Qortuba BED.ROOM duct finish fact |
+| `r8_19_freeze.py` | `tests/r8_19/registers/R8_19_FREEZE.json` | the freeze record (policies, hashes, QORTUBA-NEW-WALL-FACE-METHOD@v3) before the blind run |
+| `r8_19_blind.py` | `tests/r8_19/registers/R8_19_BLIND_RESULT.json` | the BLIND run of the frozen exposed-object finish + reveal physicality policies over the R8.18 surface model |
+| `r8_19_qortuba.py` | (built by `r8_19_registers.py`) | after the blind run: the frozen run recomputed (must equal the blind record), the rebuild with WF3-L1 / WF3-L2 disclosed, plane and skirting checks |
+| `r8_19_registers.py` | `tests/r8_19/registers/*.json` | every R8.19 register (answers 1-42), BOQ shadow report, closure review packets |
+| `r8_19_package.py` | `data/reports/URBAN_QTO_R8_19_COLUMN_DUCT_FINISH_BOQ_RELEASE/` + zip | review package (25 md + 25 json + 2 supporting) |
+| `r8_20_recommendation.json` | - | the R8.20 recommendation, written before any R8.20 code |
+| `r8_20_owner_facts.py` | `data/registry/OWNER_PHYSICAL_FACTS.json` + `data/registry/OWNER_CLOSURE_REVIEWS.json` | the I1471 column-concealment rationale (no domain) and the owner closure reviews (bound to the R8.19 packet digests) |
+| `r8_20_qortuba.py` | (built by `r8_20_registers.py`) | the R8.19 rebuild recomputed (quantity regression), I1471 geometry evidence, closure review / release evaluation |
+| `r8_20_registers.py` | `tests/r8_20/registers/*.json` | every R8.20 register (answers 1-31), corrected BOQ shadow report, XLSX readback status, plans, gates |
+| `r8_20_package.py` | `data/reports/URBAN_QTO_R8_20_HUMAN_REVIEW_BOQ_EXPORT_SOURCE_ANCHOR/` + zip | review package (18 md + 19 json + the shadow BOQ xlsx, validated) |
+| `rc1_recommendation.json` | - | the Qortuba RC1 recommendation, written before any RC1 code |
+| `rc1_qortuba.py` | (built by `rc1_registers.py`) | RC1 layout of the R8.20 build: room register, floor / ceiling breakdowns, canonical BOQ + aliases, opening register, footprint authority, identity / reconciliation audits |
+| `rc1_registers.py` | `tests/rc1/registers/*.json` | the RC1 registers (answers 1-60 except the suite), the owner workbook model and its readback status, freeze, blind-villa intake + validation plan |
+| `rc1_package.py` | `data/reports/URBAN_QTO_QORTUBA_ARCHITECTURAL_RC1/` + zip | owner package (26 md + registers + TEST_RESULTS + `URBAN_QTO_QORTUBA_ARCHITECTURAL_RC1.xlsx`) |
+| `rc1_final_recommendation.json` | - | the RC1 finalization recommendation, written before code |
+| `rc1_final_owner_facts.py` | `data/registry/URBAN_OWNER_METHOD_RULES.json` + `data/registry/OWNER_OBJECT_FACTS.json` | the floor-before-cabinetry Urban method and the PAINTRY counter identity fact (fingerprint-bound) |
+| `rc1_final_package.py` | `data/reports/URBAN_QTO_QORTUBA_ARCHITECTURAL_RC1_FINAL/` + zip | final package (17 md + 13 json + workbook; freeze re-validated) |
+| `alsenan_phase_a_recommendation.json` | - | Alsenan P7757 + ST7757 Phase A recommendation (answers 1-24), committed before code |
+| `alsenan_phase_a.py` | (built by `alsenan_registers.py`) | Phase A adapter (facts only: hashes, frames, titles, tags, schedule grids) + the audited build through the generic engines |
+| `alsenan_registers.py` | `tests/alsenan/registers/*.json` | the 19 Phase A registers, the 13-column BOQ, the XLSX view (readback) and the freeze |
+| `alsenan_package.py` | `data/reports/URBAN_QTO_ALSENAN_P7757_ST7757_PHASE_A/` + zip | Phase A package (26 md + 19 json + xlsx; XLSX rebuilt from the registers and matched to the freeze) |
+| `alsenan_phase_a2_recommendation.json` | - | Alsenan Phase A2 recommendation (answers 1-14), committed before code |
+| `alsenan_phase_a2.py` | (built by `alsenan_a2_registers.py`) | Phase A2 adapter: CAD tables, RTEXT placement, two-pass entity-role inference, topology, vertical evidence, footing completion |
+| `alsenan_a2_registers.py` | `tests/alsenan/registers_a2/*.json` | the Phase A2 registers, classed BOQ rows, XLSX view (readback) and freeze |
+| `alsenan_a2_qortuba_regression.py` | `tests/alsenan/registers_a2/QORTUBA_REGRESSION.json` | rebuilt Qortuba RC1 registers vs the frozen ones |
+| `alsenan_a2_package.py` | `data/reports/URBAN_QTO_ALSENAN_P7757_ST7757_PHASE_A2/` + zip | Phase A2 package (28 md + json + xlsx) |
+| `alsenan_phase_a3_recommendation.json` | - | Alsenan Phase A3 recommendation (answers 1-16, F / F10 / FN forensics), committed before code |
+| `alsenan_phase_a3.py` | (built by `alsenan_a3_registers.py`) | Phase A3 adapter: schedule-driven footings / straps / columns / beams / slabs / rebar definitions, owner facts, salon binding, curved glazing, double-height zone, joinery, unlabelled sites |
+| `alsenan_a3_registers.py` | `tests/alsenan/registers_a3/*.json` | the Phase A3 registers, classed BOQ rows, manual-QS views, XLSX (readback) and freeze |
+| `alsenan_a3_qortuba_regression.py` | `tests/alsenan/registers_a3/QORTUBA_REGRESSION.json` | rebuilt Qortuba RC1 registers vs the frozen ones |
+| `alsenan_a3_package.py` | `data/reports/URBAN_QTO_ALSENAN_P7757_ST7757_PHASE_A3/` + zip | Phase A3 package (30 md + json + xlsx) |
+| `alsenan_phase_b1_recommendation.json` | - | Alsenan Phase B1 recommendation (answers 1-15, tolerances), committed before comparison code |
+| `alsenan_b1_benchmark.py` | (used by `alsenan_phase_b1.py`) | hash-pinned benchmark readers: raw rows, normalised model, web-app PDF rows |
+| `alsenan_phase_b1.py` | `tests/alsenan/registers_b1/*.json` | Phase B1 comparison: comparability gate, differences, manual-BOQ QA, web mapping, backlog, freeze, XLSX |
+| `alsenan_b1_package.py` | `data/reports/URBAN_QTO_ALSENAN_PHASE_B1_COMPARISON/` + zip | Phase B1 package (31 md + 16 json + xlsx) |
+| `alsenan_phase_b2a_recommendation.json` | - | Alsenan Phase B2A recommendation (answers 1-16), committed before B2A code |
+| `alsenan_phase_b2a.py` | (used by `alsenan_b2a_registers.py`) | Phase B2A adapter: beam binding, column intervals, slabs, concrete model, openings, curved, MBR, Reception, wall heights, waterproofing, review image |
+| `alsenan_b2a_registers.py` | `tests/alsenan/registers_b2a/*.json` | Phase B2A registers, A3 -> B2A delta, A3 preservation, QA gates, freeze, XLSX |
+| `alsenan_b2a_evaluation.py` | `tests/alsenan/registers_b2a_eval/BENCHMARK_EVALUATION.json` | benchmark evaluation after the B2A freeze (reads frozen files only) |
+| `alsenan_b2a_package.py` | `data/reports/URBAN_QTO_ALSENAN_PHASE_B2A_OWNER_METHODS/` + zip | Phase B2A package (21 md + 14 json + xlsx + review image) |
+| `alsenan_phase_b2a1_recommendation.json` | - | Phase B2A.1 recommendation (answers 1-6: stair count defect, riser / tread model, curved names, freeze packaging), committed before code |
+| `alsenan_b2a_registers.py` (B2A.1) | `tests/alsenan/registers_b2a1/*.json` | Phase B2A.1 registers (STAIR_CONCRETE_V2 evidence, explicit curved bases) + ALSENAN_PHASE_B2A1_REGISTER_FREEZE pinning the B2A freeze by digest |
+| `alsenan_b2a1_regression.py` | `tests/alsenan/registers_b2a1/ALSENAN_REGRESSION.json` | B2A.1 vs frozen B2A: numeric / state leaves must be unchanged; schema / terminology / provenance only |
+| `alsenan_b2a1_package.py` | `data/reports/URBAN_QTO_ALSENAN_PHASE_B2A1_GENERIC_QA_PATCH/` + zip | self-contained package: ALSENAN_PHASE_B2A1_FREEZE.json, parent freeze, all registers, regressions, engine sources, junit, stdlib verify.py |
+| `reporting_v2_recommendation.json` | - | Reporting V2 recommendation (answers 1-10), committed before code |
+| `reporting_v2_qs_addendum_recommendation.json` | - | Reporting V2 QS reconciliation addendum recommendation (formula policy, 08 sheet), committed before the addendum code |
+| `alsenan_final_boq_v3_recommendation.md` / `.json` | - | Alsenan final BOQ + Reporting V3 recommendation (blocker classes A-G, new source evidence, scope check, work order), committed before code |
+| `reporting_v2_alsenan.py` | (used by `reporting_v2_build.py`) | Reporting V2 adapter: frozen A3 + B2A.1 registers -> REPORTING_MODEL_V2 (maps, never measures) |
+| `reporting_v2_qortuba.py` | (used by `reporting_v2_build.py`) | Reporting V2 adapter: frozen Qortuba RC1 registers -> REPORTING_MODEL_V2 |
+| `reporting_v2_build.py` | `data/reports/URBAN_QTO_REPORTING_V2/` + `REPORTING_V2.zip`; records in `tests/reporting_v2/frozen/` | XLSX + PDF report, readback QA, regression, freeze (generic code in `engine/reporting_v2/`) |
+| `alsenan_v3.py` (+ `alsenan_v3_layers.py`, `alsenan_v3_structure.py`, `alsenan_v3_geom.py`, `cad_text_styles.py`) | `tests/alsenan/registers_v3/*.json` (17 registers, built twice, byte-identical) | Alsenan V3a final BOQ: A2 -> V3 topology (opening completion, bilingual labels) -> A3 -> B2A -> rooms / voids / finishes / ground / rebar net + procurement / openings / blockwork / parapets / substructure |
+| `alsenan_v3_registers.py` | (used by `alsenan_v3.py`) | BOQ lines, MASTER_MATRIX (like items only), completeness, blockers, batched owner questions, QA, freeze |
+| `alsenan_v3_evaluation.py` | `tests/alsenan/registers_v3_eval/BENCHMARK_EVALUATION_V3.json` | benchmark evaluation after the V3a freeze (frozen B1 register only; evaluation only) |
+| `alsenan_v3_qortuba_shadow.py` | `tests/alsenan/registers_v3_eval/QORTUBA_V3_SHADOW.json` | Qortuba RC1_REFERENCE shadow of the V3 topology engines (never applied to Qortuba) |
+| `reporting_v3_build.py` | `data/reports/URBAN_QTO_ALSENAN_FINAL_BOQ/` + zip (not committed) | 11 trade / master / reconciliation workbooks + completeness xlsx, final report + technical audit PDFs, readback + LibreOffice recalc, freeze (generic code in `engine/reporting_v3/`) |
+| `engine/reporting_v3/units.py` (unit addendum) | `tests/alsenan/registers_v3_eval/UNIT_REGISTER.json` | final-BOQ display units (m³, t, m², lm, No.), rebar bases never summed, UNIT_CONTROL gate (`tests/alsenan/test_v3_unit_control.py`); reporting only, registers unchanged |
+| `alsenan_v3b.py` (+ `alsenan_v3b_raster.py`, `_openings`, `_struct`, `_rebar`, `_finish`, `_dual`, `_lines`) | `tests/alsenan/registers_v3b/*.json` (19 registers, built twice from 17efc83, byte-identical) | Alsenan V3b FULL-BOQ CANDIDATE: V3a build -> calibrated raster lane, slab binding, domes, residue, exterior GB / necks / F-F10 (provisional), zone 2, blinding (both methods), pool, boundary wall, stairs, courtyard, rebar inventory + code-method hooks + BBS on 12 m stock, NET finishes + reveals + sequences + beads, facades, dual measurement; two-layer release lines |
+| `alsenan_v3b_registers.py` | (used by `alsenan_v3b.py`) | BOQ_LINES_V3B, MASTER_MATRIX_V3B (A technical / B commercial), coverage, technical / commercial / waste / rebar population + coverage / blocker resolution / expected scope / dual / owner method / supersession registers, QA, freeze |
+| `alsenan_v3b_evaluation.py` | `tests/alsenan/registers_v3b_eval/BENCHMARK_EVALUATION_V3B.json`, `MISMATCH_REGISTER.json` | post-freeze comparison (frozen B1 register only), pre-declared mismatch classification; evaluation only |
+| `reporting_v3b_build.py` | `data/reports/URBAN_QTO_ALSENAN_V3B_FULL_BOQ_CANDIDATE/` + zip (not committed) | 00-10 workbooks (05_FLOORING with a per-room sheet), URBAN_BOQ_COMMERCIAL_REPORT.pdf + URBAN_QTO_TECHNICAL_AUDIT.pdf, readback + LibreOffice recalc (generic code in `engine/reporting_v3/workbooks_v3b.py`) |
+
+`<work>` must hold `old_k2.pkl` (K2 on LibreDWG's DXF of the old DWG) and `new_k2.pkl` (K2 on the hash-addressed new DXF).

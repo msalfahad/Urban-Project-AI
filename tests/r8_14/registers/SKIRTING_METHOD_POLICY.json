@@ -1,0 +1,91 @@
+{
+ "SCHEMA": "URBAN_R8_14_SKIRTING_METHOD_POLICY_V1",
+ "policy": {
+  "policy_id": "WALL_CONTACT_PATH_POLICY_V1",
+  "classes": [
+   "REAL_WALL_FACE",
+   "DOOR_OPENING",
+   "GLAZED_OPENING",
+   "TOPOLOGY_CLOSURE",
+   "UNPROVEN_OBSTACLE",
+   "OTHER"
+  ],
+  "on_path": [
+   "REAL_WALL_FACE"
+  ],
+  "never": [
+   "a room polygon perimeter",
+   "skirting across a door or an open passage",
+   "skirting on a topology closure",
+   "a furniture / wardrobe deduction",
+   "skirting in a full-wall-tile room",
+   "a published quantity without a frozen, blind-tested policy"
+  ],
+  "digest": "b4f0d2d94976d232a2d83d21c38402e0488592394e25e39ee68852d43266b8af"
+ },
+ "facts": {
+  "QORTUBA-NEW-DRY-ROOM-SKIRTING-ALL-REAL-WALLS-OWNER-001": {
+   "statement": {
+    "text": "for dry / internal rooms whose floor is tiled, SKIRTING RUNS AROUND ALL WALLS (lm)",
+    "not_deducted_for": [
+     "built-in wardrobes",
+     "fixed joinery",
+     "loose furniture"
+    ],
+    "stops_at": [
+     "door openings",
+     "open passages",
+     "physical gaps where no wall exists"
+    ],
+    "never": [
+     "a room polygon perimeter",
+     "a topology closure",
+     "a synthetic segment across an opening"
+    ]
+   },
+   "relations": [
+    {
+     "rule": "QP-08 QORTUBA_FIXED_CABINET_DEDUCTION",
+     "relation": "MORE_SPECIFIC",
+     "why": "states the positive path; the no-deduction rule is the same"
+    },
+    {
+     "rule": "QORTUBA-NEW-DRY-ROOM-FINISH-OWNER-001@v1",
+     "relation": "MORE_SPECIFIC",
+     "why": "from 'floor has skirting (lm)' to the exact path"
+    }
+   ]
+  },
+  "QORTUBA-NEW-NO-SKIRTING-FULL-WALL-TILE-ROOMS-OWNER-001": {
+   "statement": {
+    "text": "NO SKIRTING in bathrooms, the kitchen, the ironing room and the washing / laundry room: they carry wall ceramic / porcelain",
+    "rooms": [
+     "BATHROOM",
+     "KITCHEN",
+     "IRONING_ROOM",
+     "WASHING_LAUNDRY_ROOM"
+    ],
+    "paintry": "SERVICE_ROOM (QP-07 kitchen / preparation zone, full wall tile): no skirting"
+   },
+   "relations": [
+    {
+     "rule": "US-02 NO_SKIRTING_IN_A_FULLY_CERAMIC_ROOM",
+     "relation": "CORROBORATING",
+     "why": "same rule"
+    }
+   ]
+  }
+ },
+ "vs_QP_08": "REFINES (MORE_SPECIFIC) - the no-deduction rule is unchanged; the path and stops are stated",
+ "vs_US_02": "CORROBORATING",
+ "rooms_with_skirting": "DRY_INTERNAL_ROOM with a tiled floor (Q-13 sites)",
+ "rooms_without": [
+  "BATHROOM",
+  "KITCHEN",
+  "IRONING_ROOM",
+  "WASHING_LAUNDRY_ROOM",
+  "PAINTRY (SERVICE_ROOM, QP-07)"
+ ],
+ "behind_wardrobes": "YES (wardrobes / joinery / furniture are not site boundaries)",
+ "across_doors_passages": "NO (DOOR_OPENING stops; TOPOLOGY_CLOSURE contributes zero; no synthetic segment)"
+}

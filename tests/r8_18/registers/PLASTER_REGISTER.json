@@ -1,0 +1,220 @@
+{
+ "SCHEMA": "URBAN_R8_18_PLASTER_REGISTER_V1",
+ "row": "PLASTER",
+ "unit": "m2",
+ "state": "COMPUTED_SHADOW_WITH_UNRESOLVED",
+ "AUTHORISED_SUBTOTAL_M2": 280.744014,
+ "COMPLETE_M2": null,
+ "complete_row_rule": "COMPLETE is null while ANY contributor is UNRESOLVED (zero materiality tolerance); the authorised subtotal is published with the unresolved list",
+ "per_floor": {
+  "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)": {
+   "AUTHORISED_SUBTOTAL_M2": 280.744014,
+   "rooms": [
+    "SITE-5f1762f1a93b91ca",
+    "SITE-77a2130eb275604c",
+    "SITE-a6405850100155ac",
+    "SITE-daca396d6d730e60"
+   ]
+  }
+ },
+ "per_room": {
+  "SITE-5f1762f1a93b91ca": {
+   "zones": [
+    "BED.ROOM"
+   ],
+   "class": "DRY_INTERNAL_ROOM",
+   "height_m": 3.15,
+   "height_authority": "QORTUBA-NEW-DRY-WALL-FINISH-HEIGHT-OWNER-001@v1",
+   "wall_plane_net_m2": 53.006961,
+   "opening_rectangles_m2": 4.008039,
+   "passage_head_faces_m2": 0.0,
+   "jamb_reveals_m2": 0.75,
+   "head_reveals_m2": 0.30134,
+   "reconciliation": "PASS",
+   "authorised_m2": 54.058301,
+   "floor": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+   "components_reconcile": true
+  },
+  "SITE-77a2130eb275604c": {
+   "zones": [
+    "HALL",
+    "whgm"
+   ],
+   "class": "DRY_INTERNAL_ROOM",
+   "height_m": 3.15,
+   "height_authority": "QORTUBA-NEW-DRY-WALL-FINISH-HEIGHT-OWNER-001@v1",
+   "wall_plane_net_m2": 85.773465,
+   "opening_rectangles_m2": 21.889666,
+   "passage_head_faces_m2": 2.27325,
+   "jamb_reveals_m2": 4.93,
+   "head_reveals_m2": 1.5159,
+   "reconciliation": "PASS",
+   "authorised_m2": 92.219365,
+   "floor": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+   "components_reconcile": true
+  },
+  "SITE-a6405850100155ac": {
+   "zones": [
+    "DRESS",
+    "M.B.ROOM"
+   ],
+   "class": "DRY_INTERNAL_ROOM",
+   "height_m": 3.15,
+   "height_authority": "QORTUBA-NEW-DRY-WALL-FINISH-HEIGHT-OWNER-001@v1",
+   "wall_plane_net_m2": 84.086228,
+   "opening_rectangles_m2": 10.256273,
+   "passage_head_faces_m2": 0.0,
+   "jamb_reveals_m2": 2.6325,
+   "head_reveals_m2": 1.169379,
+   "reconciliation": "PASS",
+   "authorised_m2": 87.888107,
+   "floor": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+   "components_reconcile": true
+  },
+  "SITE-daca396d6d730e60": {
+   "zones": [
+    "BED.ROOM"
+   ],
+   "class": "DRY_INTERNAL_ROOM",
+   "height_m": 3.15,
+   "height_authority": "QORTUBA-NEW-DRY-WALL-FINISH-HEIGHT-OWNER-001@v1",
+   "wall_plane_net_m2": 45.492669,
+   "opening_rectangles_m2": 4.213431,
+   "passage_head_faces_m2": 0.0,
+   "jamb_reveals_m2": 0.75,
+   "head_reveals_m2": 0.335572,
+   "reconciliation": "PASS",
+   "authorised_m2": 46.578241,
+   "floor": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+   "components_reconcile": true
+  }
+ },
+ "reconciliation": {
+  "sum_of_rooms_m2": 280.744014,
+  "AUTHORISED_SUBTOTAL_M2": 280.744014,
+  "reconciles": true
+ },
+ "unresolved_contributors": [
+  {
+   "site": "SITE-5f1762f1a93b91ca",
+   "zones": [
+    "BED.ROOM"
+   ],
+   "class": "COLUMN_FACE",
+   "area_m2": 2.52,
+   "why": "no plaster / paint / tile rule for column faces: R-13 is the blockwork SHEET's full-deduction column (R8.17 misread it); owner_rules section E is skirting only"
+  },
+  {
+   "site": "SITE-5f1762f1a93b91ca",
+   "zones": [
+    "BED.ROOM"
+   ],
+   "class": "OBSTACLE_FACE",
+   "area_m2": 15.75,
+   "why": "the duct exists (owner fact) but no finish is stated for its faces; skirting eligibility is not a finish"
+  },
+  {
+   "site": "SITE-77a2130eb275604c",
+   "zones": [
+    "HALL",
+    "whgm"
+   ],
+   "class": "COLUMN_FACE",
+   "area_m2": 2.0475,
+   "why": "no plaster / paint / tile rule for column faces: R-13 is the blockwork SHEET's full-deduction column (R8.17 misread it); owner_rules section E is skirting only"
+  },
+  {
+   "site": "SITE-a6405850100155ac",
+   "zones": [
+    "DRESS",
+    "M.B.ROOM"
+   ],
+   "class": "COLUMN_FACE",
+   "area_m2": 3.78,
+   "why": "no plaster / paint / tile rule for column faces: R-13 is the blockwork SHEET's full-deduction column (R8.17 misread it); owner_rules section E is skirting only"
+  },
+  {
+   "site": "SITE-daca396d6d730e60",
+   "zones": [
+    "BED.ROOM"
+   ],
+   "class": "COLUMN_FACE",
+   "area_m2": 2.52,
+   "why": "no plaster / paint / tile rule for column faces: R-13 is the blockwork SHEET's full-deduction column (R8.17 misread it); owner_rules section E is skirting only"
+  }
+ ],
+ "unresolved_area_m2": 26.6175,
+ "unresolved_reveals": [],
+ "blocked_rooms": [],
+ "release_blockers": [
+  "5 UNRESOLVED contributors (26.6175 m2: column / duct finish authority)",
+  "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+  "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+ ],
+ "final": false,
+ "row_id": "DRY_WALL_PLASTER",
+ "height": 3.15,
+ "height_authority": "QORTUBA-NEW-DRY-WALL-FINISH-HEIGHT-OWNER-001@v1",
+ "WET_SERVICE_REVEAL_PLASTER": {
+  "unit": "m2",
+  "AUTHORISED_M2": 1.400248,
+  "reveals": [
+   {
+    "opening": "GLAZED|QORTUBA_REV_NEW|H533||SEGMENT|0",
+    "surface": "LEFT_JAMB",
+    "owner_zones": [
+     "PAINTRY"
+    ],
+    "area_m2": 0.11
+   },
+   {
+    "opening": "GLAZED|QORTUBA_REV_NEW|H533||SEGMENT|0",
+    "surface": "TOP_REVEAL",
+    "owner_zones": [
+     "PAINTRY"
+    ],
+    "area_m2": 0.1375
+   },
+   {
+    "opening": "QORTUBA_REV_NEW|H1342||SEGMENT",
+    "surface": "LEFT_JAMB",
+    "owner_zones": [
+     "PAINTRY"
+    ],
+    "area_m2": 0.375
+   },
+   {
+    "opening": "QORTUBA_REV_NEW|H1342||SEGMENT",
+    "surface": "RIGHT_JAMB",
+    "owner_zones": [
+     "PAINTRY"
+    ],
+    "area_m2": 0.375
+   },
+   {
+    "opening": "QORTUBA_REV_NEW|H1342||SEGMENT",
+    "surface": "TOP_REVEAL",
+    "owner_zones": [
+     "PAINTRY"
+    ],
+    "area_m2": 0.402748
+   }
+  ],
+  "unresolved_reveals": [
+   {
+    "opening": "GLAZED|QORTUBA_REV_NEW|H533||SEGMENT|0",
+    "surface": "RIGHT_JAMB",
+    "owner_zones": [
+     "PAINTRY"
+    ],
+    "depth_basis": "SOURCE: aluminium track lines (the bound glazing parts) inside the wall; NO reveal face drawn on this side (wall cavity)"
+   }
+  ],
+  "why_separate": "reveals owned by a wet / service room are PLASTER_DEFAULT (owner rule), never tile and never paint; kept apart from DRY_WALL_PLASTER and from WALL_TILE",
+  "blind": 1.510248
+ },
+ "kept_separate_from": [
+  "WET_WALL_TILE_PREP",
+  "WALL_TILE"
+ ]
+}

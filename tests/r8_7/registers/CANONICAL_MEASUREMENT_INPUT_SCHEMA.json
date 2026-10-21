@@ -1,0 +1,127 @@
+{
+ "SCHEMA": "URBAN_CANONICAL_MEASUREMENT_INPUT_V1",
+ "input": {
+  "revision": "SourceRevision (revision_id, anchor_kind EXACT_SOURCE | DERIVED_PENDING_SOURCE, anchor_sha256, drawing_lineage, status)",
+  "region_id": "the selected measurement region",
+  "frame_id": "measurement frame id",
+  "unit_native_to_mm": "from an owner / project claim scoped to this revision",
+  "unit_claim_id": "that claim"
+ },
+ "identity": "revision_id | H<source handle> | insert handles joined by '/' | part kind | part index; None when any component is missing (never a partial key); coordinates are verification only",
+ "lineage_step": "insert_handle + block_record_handle (+ block_name, presentation only)",
+ "visibility_states": [
+  "VISIBLE",
+  "HIDDEN_SOURCE",
+  "HIDDEN_DYNAMIC_STATE",
+  "VISIBILITY_UNRESOLVED"
+ ],
+ "region_membership": [
+  "SELECTED_MEASUREMENT_REGION",
+  "REVIEW_REQUIRED",
+  "OUTSIDE_SELECTED_MEASUREMENT_REGION"
+ ],
+ "records": {
+  "parts": [
+   "block_identity",
+   "curve_kind",
+   "geometry",
+   "instance_path",
+   "layer",
+   "part_index",
+   "source_handle",
+   "source_part_id",
+   "source_revision_id",
+   "visibility"
+  ],
+  "texts": [
+   "block_identity",
+   "instance_path",
+   "layer",
+   "source_handle",
+   "source_revision_id",
+   "text_height",
+   "text_identity",
+   "text_value",
+   "visibility",
+   "world_placement"
+  ],
+  "dimensions": [
+   "block_identity",
+   "definition_points",
+   "dimension_identity",
+   "dimension_type",
+   "dimlfac",
+   "instance_path",
+   "layer",
+   "measurement",
+   "placed_points",
+   "source_handle",
+   "source_revision_id",
+   "user_text",
+   "visibility"
+  ]
+ },
+ "outcomes": [
+  "COMPLETE",
+  "METHOD_INPUT_INCOMPLETE",
+  "SOURCE_REVISION_MISMATCH",
+  "REGION_NOT_SELECTED"
+ ],
+ "rule": "a method declares its fields; any declared field absent, duplicated, cross-revision or unresolved -> no quantity; nothing is substituted",
+ "qs01_contract": {
+  "method_id": "QS01_METHOD_A_ARRANGEMENT_OF_BOUNDARY_LINES+OWNER_RULES_V1_FLOOR_ROWS",
+  "version": "1",
+  "input_fields": [
+   "revision",
+   "region_id",
+   "frame_id",
+   "unit_native_to_mm",
+   "unit_claim_id"
+  ],
+  "part_fields": [
+   "source_revision_id",
+   "source_handle",
+   "instance_path",
+   "block_identity",
+   "source_part_id",
+   "part_index",
+   "layer",
+   "visibility",
+   "curve_kind",
+   "geometry"
+  ],
+  "text_fields": [
+   "source_revision_id",
+   "text_identity",
+   "source_handle",
+   "instance_path",
+   "block_identity",
+   "text_value",
+   "world_placement",
+   "visibility"
+  ],
+  "dimension_fields": [
+   "source_revision_id",
+   "dimension_identity",
+   "source_handle",
+   "instance_path",
+   "placed_points",
+   "measurement",
+   "user_text",
+   "dimlfac",
+   "dimension_type",
+   "visibility"
+  ],
+  "accepted_part_kinds": [
+   "SEGMENT",
+   "ARC",
+   "CIRCLE"
+  ],
+  "declared_exclusions": {
+   "ELLIPTICAL_ARC": "the method's input has no elliptical primitive; the active reading never carried one (R8.6: canonical input equal to the active reading without them)"
+  },
+  "visibility_relevant": true,
+  "region_review_blocks": true,
+  "evidence": {}
+ }
+}

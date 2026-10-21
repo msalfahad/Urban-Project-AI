@@ -1,0 +1,311 @@
+{
+ "SCHEMA": "URBAN_R8_6A_QORTUBA_ROUND1_DXF_V1",
+ "INDEPENDENT_QORTUBA_RECONCILIATION": "BLOCKED_EXTERNAL_PROVENANCE",
+ "also_blocked_by": "SOURCE_REVISION_MISMATCH: the DXF is an export of a later revision of the drawing, not of 2ec3a9c8b66eb2e129275b87010f4a8d79d7e5bdcc31c1897c14fd7e5647d355",
+ "round1_counts_from_committed_register": {
+  "required_count": 10,
+  "round1_observations": 108,
+  "round1_occurrences": 141,
+  "occurrences_inside_block_instances": 40,
+  "net_reflected_occurrences": 25
+ },
+ "signatures": {
+  "signature_states": {
+   "KIND=LINE|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "EXERCISED_NONPASS"
+   },
+   "KIND=LWPOLYLINE_STRAIGHT|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "EXERCISED_NONPASS"
+   },
+   "KIND=LWPOLYLINE_BULGE|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "EXERCISED_AND_PASS"
+   },
+   "KIND=LINE|CHAIN=TRANSLATION+UNIFORM_SCALE|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "EXERCISED_AND_PASS"
+   },
+   "KIND=LINE|CHAIN=ROTATION+TRANSLATION+UNIFORM_SCALE|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "EXERCISED_AND_PASS"
+   },
+   "KIND=LINE|CHAIN=REFLECTION+TRANSLATION+UNIFORM_SCALE|NET=NET_REFLECTED|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "EXERCISED_AND_PASS"
+   },
+   "KIND=LINE|CHAIN=REFLECTION+ROTATION+TRANSLATION+UNIFORM_SCALE|NET=NET_REFLECTED|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "EXERCISED_AND_PASS"
+   },
+   "KIND=LINE|CHAIN=ROTATION+TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "EXERCISED_AND_PASS"
+   },
+   "KIND=LINE|CHAIN=REFLECTION+ROTATION+TRANSLATION|NET=NET_REFLECTED|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "EXERCISED_AND_PASS"
+   },
+   "KIND=LINE|CHAIN=TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "state": "PROVENANCE_NOT_INDEPENDENT",
+    "diagnostic": "EXERCISED_AND_PASS"
+   }
+  },
+  "signature_detail": {
+   "KIND=LINE|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 91,
+    "compared": 91,
+    "pass": 77,
+    "nonpass_by_status": {
+     "BLOCK": 4,
+     "UNMATCHED_A": 10
+    },
+    "examples_nonpass": [
+     [
+      "D1:447",
+      [],
+      "BLOCK"
+     ],
+     [
+      "D1:465",
+      [],
+      "UNMATCHED_A"
+     ],
+     [
+      "D1:467",
+      [],
+      "UNMATCHED_A"
+     ],
+     [
+      "D1:471",
+      [],
+      "BLOCK"
+     ],
+     [
+      "D1:477",
+      [],
+      "BLOCK"
+     ]
+    ]
+   },
+   "KIND=LWPOLYLINE_STRAIGHT|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 9,
+    "compared": 9,
+    "pass": 8,
+    "nonpass_by_status": {
+     "BLOCK": 1
+    },
+    "examples_nonpass": [
+     [
+      "D1:2060",
+      [],
+      "BLOCK"
+     ]
+    ]
+   },
+   "KIND=LWPOLYLINE_BULGE|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 1,
+    "compared": 1,
+    "pass": 1,
+    "nonpass_by_status": {},
+    "examples_nonpass": []
+   },
+   "KIND=LINE|CHAIN=TRANSLATION+UNIFORM_SCALE|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 5,
+    "compared": 5,
+    "pass": 5,
+    "nonpass_by_status": {},
+    "examples_nonpass": []
+   },
+   "KIND=LINE|CHAIN=ROTATION+TRANSLATION+UNIFORM_SCALE|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 5,
+    "compared": 5,
+    "pass": 5,
+    "nonpass_by_status": {},
+    "examples_nonpass": []
+   },
+   "KIND=LINE|CHAIN=REFLECTION+TRANSLATION+UNIFORM_SCALE|NET=NET_REFLECTED|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 7,
+    "compared": 7,
+    "pass": 7,
+    "nonpass_by_status": {},
+    "examples_nonpass": []
+   },
+   "KIND=LINE|CHAIN=REFLECTION+ROTATION+TRANSLATION+UNIFORM_SCALE|NET=NET_REFLECTED|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 14,
+    "compared": 14,
+    "pass": 14,
+    "nonpass_by_status": {},
+    "examples_nonpass": []
+   },
+   "KIND=LINE|CHAIN=ROTATION+TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 3,
+    "compared": 3,
+    "pass": 3,
+    "nonpass_by_status": {},
+    "examples_nonpass": []
+   },
+   "KIND=LINE|CHAIN=REFLECTION+ROTATION+TRANSLATION|NET=NET_REFLECTED|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 4,
+    "compared": 4,
+    "pass": 4,
+    "nonpass_by_status": {},
+    "examples_nonpass": []
+   },
+   "KIND=LINE|CHAIN=TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12": {
+    "source_occurrences": 2,
+    "compared": 2,
+    "pass": 2,
+    "nonpass_by_status": {},
+    "examples_nonpass": []
+   }
+  },
+  "summary": {
+   "verdict": "SOURCE_DECODE_CONFLICT",
+   "field_class": "GEOMETRY",
+   "scope": "SOURCE",
+   "correlated_by": "BLOCK_RECORD_HANDLE",
+   "correlation_bases": {
+    "SOURCE_HANDLE": 552
+   },
+   "lineage_bases": {
+    "SOURCE_HANDLE": 38
+   },
+   "lineage_outcomes": {
+    "PASS": 38,
+    "UNMATCHED_INSERT_LINEAGE": 8361
+   },
+   "tolerance": {
+    "name": "REAL",
+    "position_pass": 2.555455345288919e-08,
+    "position_warn": 2.4955618606337098e-05,
+    "basis": "1024*eps*M with M=112390; text step 16 digits"
+   },
+   "counts": {
+    "PASS": 1112,
+    "BLOCK": 9870,
+    "UNMATCHED_A": 15,
+    "UNMATCHED_B": 260
+   },
+   "non_pass_by_field": {
+    "POSITION": 21,
+    "PRESENCE": 275,
+    "VISIBILITY": 1488,
+    "BLOCK_LINEAGE": 8361
+   }
+  }
+ },
+ "plan_variants": {
+  "variants": [
+   {
+    "label_handle": "1AC",
+    "label_position": [
+     111191.2667127231,
+     13808.66260397077
+    ],
+    "entities": 522,
+    "handle_range": [
+     "7F",
+     "AAE94"
+    ],
+    "newest_handle": "AAE94",
+    "differs_from_bottom_most_on_type_layer_keys": 0,
+    "variant_id": "PLAN_VARIANT_4_SELECTED_CANDIDATE",
+    "position_rank_from_top": 4
+   },
+   {
+    "label_handle": "1359",
+    "label_position": [
+     111015.4947391197,
+     18101.40310054201
+    ],
+    "entities": 521,
+    "handle_range": [
+     "1258",
+     "3F06"
+    ],
+    "newest_handle": "3F06",
+    "differs_from_bottom_most_on_type_layer_keys": 5,
+    "variant_id": "PLAN_VARIANT_3",
+    "position_rank_from_top": 3
+   },
+   {
+    "label_handle": "250C",
+    "label_position": [
+     111095.4947391197,
+     21918.11946085623
+    ],
+    "entities": 518,
+    "handle_range": [
+     "240B",
+     "3FFD"
+    ],
+    "newest_handle": "3FFD",
+    "differs_from_bottom_most_on_type_layer_keys": 7,
+    "variant_id": "PLAN_VARIANT_2",
+    "position_rank_from_top": 2
+   },
+   {
+    "label_handle": "3690",
+    "label_position": [
+     111110.9586807394,
+     25644.83177317117
+    ],
+    "entities": 528,
+    "handle_range": [
+     "358F",
+     "3890"
+    ],
+    "newest_handle": "3890",
+    "differs_from_bottom_most_on_type_layer_keys": 5,
+    "variant_id": "PLAN_VARIANT_1",
+    "position_rank_from_top": 1
+   }
+  ],
+  "bottom_most_label_handle": "1AC",
+  "variant_with_newest_edit": "1AC",
+  "bottom_most_is_the_most_recently_edited": true,
+  "creation_order_by_label_handle": [
+   "1AC",
+   "1359",
+   "250C",
+   "3690"
+  ],
+  "outside_the_four_plans": {
+   "HATCH": 392,
+   "NO_POSITION": 148,
+   "INSERT": 11,
+   "LINE": 51,
+   "DIMENSION": 3,
+   "CIRCLE": 5,
+   "VIEWPORT": 2
+  },
+  "tracked_dwg_region": {
+   "region_id": "RC:MODEL_SPACE:4267:540:1649",
+   "bounds": [
+    108396.02006539538,
+    13717.799586433912,
+    112409.74661105567,
+    16486.762836288166
+   ],
+   "contains_label_handle": "1AC"
+  },
+  "note": "'last' is ambiguous: by creation order the top-most copy (label 3690) is the newest COPY; by edit history the bottom-most plan carries the newest edits. Both readings are recorded; the owner review decides"
+ },
+ "revision_evidence": {
+  "source_entities_missing_from_dxf": 21,
+  "entities_added_inside_region": 19,
+  "added_by_type_layer": {
+   "LINE/WALL": 2,
+   "DIMENSION/DIM": 7,
+   "LINE/DIM": 6,
+   "INSERT/DIM": 4
+  },
+  "added_handle_range": [
+   "8F8",
+   "AAE94"
+  ]
+ },
+ "qualified": 0
+}

@@ -1,0 +1,92 @@
+test,python_3_11_17_suite,python_3_13_16_suite,python_3_13_16_isolated
+tests/ad1_authority_decisions/test_ad1_package.py::test_rebuild_is_byte_identical,PASSED,PASSED,
+tests/control_plane/test_control_plane_r1.py::test_registers_rebuild_identically_from_committed_evidence,PASSED,not run (module not collected),
+tests/structural_census/test_census_s1.py::test_rebuild_matches_frozen_registers,PASSED,FAILED,ENV_MISSING_MODULE: scipy
+tests/structural_census/test_multi_engine_s3_1.py::<skipped>,SKIPPED (inputs absent),SKIPPED (inputs absent),
+tests/coverage_recovery_engine/test_coverage_round.py::<skipped>,SKIPPED (inputs absent),SKIPPED (inputs absent),
+tests/d1_1_stirrup_authority_audit/test_d1_1_package.py::test_rebuild_is_byte_identical,PASSED,FAILED,BYTES_DIFFER (float last digit): first differing file 06_CORRECTED_RELEASE_SUMMARY.json
+tests/d1_2_footing_cover_audit/test_d1_2_package.py::test_rebuild_is_byte_identical,PASSED,FAILED,BYTES_DIFFER (float last digit): first differing file 05_CORRECTED_RELEASE_SUMMARY.json
+tests/dome_mesh_s8_3a/test_s8_3a_package.py::test_rebuild_is_byte_identical,PASSED,PASSED,
+tests/dome_ring_s8_3/test_s8_3_errata.py::test_rebuild_is_byte_identical,PASSED,PASSED,
+tests/dome_ring_s8_3/test_s8_3_package.py::test_rebuild_is_byte_identical,PASSED,FAILED,BYTES_DIFFER (float last digit): conservation-check cell + manifest
+tests/dome_ring_s8_3/test_s8_3_post_freeze.py::test_rerun_is_identical_and_leaves_the_freeze_alone,PASSED,PASSED,
+tests/footing_rebar_s4/test_s4_package.py::test_rebuild_is_byte_identical,PASSED,FAILED,BYTES_DIFFER (float last digit): first differing file FOOTING_REBAR_OCCURRENCE_REGISTER.json
+tests/footing_rebar_s4_1/test_s4_1_package.py::test_rebuild_is_byte_identical,PASSED,FAILED,BYTES_DIFFER (float last digit): first differing file S4_1_RELEASE_SUMMARY.json
+tests/ground_slab_s8_1/test_s8_1_package.py::test_rebuild_is_byte_identical,PASSED,FAILED,PASSED (whole-suite failure was a cascade of in-place rewrites)
+tests/ground_slab_s8_1/test_s8_1_post_freeze.py::test_<F>tiannp_rerun_when_supplied,PASSED,PASSED,
+tests/ground_slab_s8_1a/test_s8_1a_package.py::test_rebuild_is_byte_identical,PASSED,FAILED,ENV_MISSING_MODULE: scipy
+tests/ground_system_rebar_s5/test_s5_package.py::test_rebuild_is_byte_identical,PASSED,FAILED,BYTES_DIFFER (float last digit): first differing file GROUND_SYSTEM_REBAR_RELEASE_SUMMARY.json
+tests/ground_system_rebar_s5_1/test_s5_1_package.py::test_rebuild_is_byte_identical,PASSED,FAILED,BYTES_DIFFER (float last digit): first differing file S5_1_RELEASE_SUMMARY.json
+tests/lift_s8_8/test_s8_8_package.py::test_rebuild_byte_identical,PASSED,FAILED,PASSED (whole-suite failure was a cascade of in-place rewrites)
+tests/lift_s8_8/test_s8_8_post_freeze.py::test_rerun_identical,PASSED,PASSED,
+tests/lintels_s8_6/test_s8_6_package.py::test_rebuild_byte_identical,PASSED,FAILED,PASSED (whole-suite failure was a cascade of in-place rewrites)
+tests/lintels_s8_6/test_s8_6_post_freeze.py::test_rerun_identical,PASSED,PASSED,
+tests/lintels_s8_6a/test_s8_6a_package.py::test_rebuild_byte_identical,PASSED,FAILED,PASSED (whole-suite failure was a cascade of in-place rewrites)
+tests/m1_usable_boq/test_m1_package.py::test_rebuild_is_byte_identical,PASSED,FAILED,PASSED (whole-suite failure was a cascade of in-place rewrites)
+tests/m1_usable_boq/test_m1_post_freeze.py::test_rerun_is_identical_and_leaves_m1_untouched,PASSED,FAILED,PASSED (whole-suite failure was a cascade of in-place rewrites)
+tests/m6_completeness/test_cc_package.py::test_both_runs_rebuild_byte_for_byte_from_the_frozen_engines,PASSED,PASSED,
+tests/m6_completeness/test_cc_package.py::test_reconciliation_rebuilds_from_the_frozen_runs,PASSED,PASSED,
+tests/m7_reliability/test_m7_package.py::test_live_rebuild_of_the_st7757_records,PASSED,PASSED,
+tests/m7_reliability/test_m7_package.py::test_the_csv_registers_rebuild_from_the_records,PASSED,PASSED,
+tests/m7_reliability/test_m7_package.py::test_the_visual_qa_pdf_rebuilds_from_the_records,PASSED,FAILED,ENV_MISSING_MODULE: matplotlib
+tests/m8_full_scope/test_m8_package.py::test_the_csv_deliverables_rebuild_from_the_records,PASSED,PASSED,
+tests/m9_foundation/test_m9_s1_package.py::test_examples_rebuild_byte_for_byte,PASSED,PASSED,
+tests/m9_foundation/test_m9_wrapper_and_census.py::test_route_g_outputs_are_byte_identical,PASSED,PASSED,
+tests/pre_s4_footing_readiness/test_pre_s4_package.py::test_rebuild_byte_for_byte,PASSED,PASSED,
+tests/pre_s4_footing_readiness/test_pre_s4_package.py::test_token_parity_decisions_rerun_live,PASSED,PASSED,
+tests/pre_s5_1_source_resolution/test_pre_s5_1_package.py::test_rebuild_is_byte_identical,PASSED,FAILED,ENV_MISSING_MODULE: pymupdf
+tests/pre_s5_ground_system/test_pre_s5_package.py::test_rebuild_is_byte_identical,PASSED,FAILED,ENV_MISSING_MODULE: pymupdf
+tests/pre_s6_superstructure_beam/test_pre_s6_package.py::test_rebuild_is_byte_identical,PASSED,FAILED,ENV_MISSING_MODULE: scipy
+tests/pre_s8_census/test_pre_s8.py::test_rebuild_is_byte_identical,PASSED,FAILED,PASSED (whole-suite failure was a cascade of in-place rewrites)
+tests/r8_10/test_r8_10_claims.py::test_owner_claim_enters_a_new_evidence_version_and_triggers_a_rebuild,PASSED,PASSED,
+tests/r8_17/test_r8_17_<Q>_real.py::test_the_blind_vs_rebuild_differences_are_only_the_two_disclosed_wiring_causes,PASSED,PASSED,
+tests/r8_18/test_r8_18_<Q>_real.py::test_wf2_l1_is_the_only_blind_vs_rebuild_difference,PASSED,PASSED,
+tests/r8_19/test_r8_19_<Q>_real.py::test_wf3_l1_and_wf3_l2_are_the_only_blind_vs_rebuild_differences,PASSED,PASSED,
+tests/r9_1_<F>_post_freeze/test_r9_1_package.py::<skipped>,SKIPPED (inputs absent),SKIPPED (inputs absent),
+tests/r9_1_<F>_post_freeze/test_r9_1_package.py::test_rebar_parser_columns_rerun_live,PASSED,PASSED,
+tests/rc1/test_rc1_<Q>_real.py::test_workbook_view_validates_and_rebuilds_byte_identical,PASSED,PASSED,
+tests/rc1/test_rc1_synthetic.py::test_exactly_one_additive_sheet_and_byte_identical_rebuild,PASSED,PASSED,
+tests/s7a_qa/test_s7a_qa.py::test_rebuild_is_byte_identical,PASSED,FAILED,PASSED (whole-suite failure was a cascade of in-place rewrites)
+tests/slab_rebar_pre_s7/test_pre_s7_package.py::test_rebuild_is_byte_identical,PASSED,FAILED,PASSED (whole-suite failure was a cascade of in-place rewrites)
+tests/slab_rebar_pre_s7_1/test_pre_s7_1_package.py::test_rebuild_is_byte_identical,PASSED,FAILED,PASSED (whole-suite failure was a cascade of in-place rewrites)
+tests/slab_rebar_s7/test_s7_package.py::test_rebuild_is_byte_identical,PASSED,FAILED,PASSED (whole-suite failure was a cascade of in-place rewrites)
+tests/source_recovery_delta/test_source_recovery_delta.py::test_rebuild_is_byte_identical,PASSED,FAILED,PASSED (whole-suite failure was a cascade of in-place rewrites)
+tests/special_columns_s8_5/test_s8_5_package.py::test_rebuild_is_byte_identical,PASSED,FAILED,PASSED (whole-suite failure was a cascade of in-place rewrites)
+tests/special_columns_s8_5/test_s8_5_post_freeze.py::test_rerun_is_identical_and_leaves_the_freeze_alone,PASSED,PASSED,
+tests/stairs_s8_7/test_s8_7_package.py::test_rebuild_byte_identical,PASSED,FAILED,PASSED (whole-suite failure was a cascade of in-place rewrites)
+tests/stairs_s8_7/test_s8_7_post_freeze.py::test_rerun_identical,PASSED,PASSED,
+tests/stairs_s8_7a/test_s8_7a_package.py::test_rebuild_byte_identical,PASSED,FAILED,PASSED (whole-suite failure was a cascade of in-place rewrites)
+tests/stairs_s8_7a/test_s8_7a_post_freeze.py::test_rerun_identical,PASSED,PASSED,
+tests/stairs_s8_7b/test_s8_7b_package.py::test_rebuild_byte_identical,PASSED,FAILED,PASSED (whole-suite failure was a cascade of in-place rewrites)
+tests/stairs_s8_7b/test_s8_7b_post_freeze.py::test_rerun_identical,PASSED,PASSED,
+tests/stairs_s8_7c/test_s8_7c_package.py::test_rebuild_byte_identical,PASSED,FAILED,BYTES_DIFFER (float last digit): first differing file 10_CONSERVATION_CHECKS.csv
+tests/stairs_s8_7c/test_s8_7c_post_freeze.py::test_rerun_identical,PASSED,PASSED,
+tests/structural_s9/test_s9_package.py::test_rebuild_byte_identical,PASSED,FAILED,PASSED (whole-suite failure was a cascade of in-place rewrites)
+tests/structural_s9/test_s9_post_freeze.py::test_rerun_identical,PASSED,FAILED,PASSED (whole-suite failure was a cascade of in-place rewrites)
+tests/structural_s9a/test_s9a_package.py::test_rebuild_byte_identical,PASSED,FAILED,PASSED (whole-suite failure was a cascade of in-place rewrites)
+tests/structural_s9a/test_s9a_post_freeze.py::test_hygiene_no_benchmark_figure_and_rerun_identical,PASSED,FAILED,PASSED (whole-suite failure was a cascade of in-place rewrites)
+tests/superstructure_beam_rebar_s6/test_s6_package.py::test_rebuild_is_byte_identical,PASSED,FAILED,BYTES_DIFFER (float last digit): first differing file SUPERSTRUCTURE_BEAM_BAR_RUNS.csv
+tests/superstructure_beam_rebar_s6_1/test_s6_1_package.py::test_rebuild_is_byte_identical,PASSED,FAILED,BYTES_DIFFER (float last digit): first differing file S6_1_RELEASE_SUMMARY.json
+tests/swimming_pool_s8_2/test_s8_2_package.py::test_rebuild_is_byte_identical,PASSED,FAILED,PASSED (whole-suite failure was a cascade of in-place rewrites)
+tests/swimming_pool_s8_2a/test_s8_2a_package.py::test_rebuild_is_byte_identical,PASSED,FAILED,PASSED (whole-suite failure was a cascade of in-place rewrites)
+tests/test_pa09_<R>_regression_r7.py::<skipped>,SKIPPED (inputs absent),not run (module not collected),
+tests/test_qs_core_generalization.py::test_running_the_same_plan_twice_gives_byte_identical_registers,PASSED,PASSED,
+tests/test_qs_core_identity.py::test_an_identical_rerun_produces_identical_identity,PASSED,PASSED,
+tests/water_tank_s8_4/test_s8_4_package.py::test_rebuild_is_byte_identical,PASSED,FAILED,PASSED (whole-suite failure was a cascade of in-place rewrites)
+tests/water_tank_s8_4/test_s8_4_post_freeze.py::test_identical_rerun,PASSED,PASSED,
+tests/control_plane/test_control_plane_r1.py::<module>,collected without error,COLLECTION_ERROR (missing module),
+tests/control_plane/test_control_plane_r2_gates.py::<module>,collected without error,COLLECTION_ERROR (missing module),
+tests/test_glyph_text.py::<module>,collected without error,COLLECTION_ERROR (missing module),
+tests/test_pa07_spaces.py::<module>,collected without error,COLLECTION_ERROR (missing module),
+tests/test_pa07r1_guards.py::<module>,collected without error,COLLECTION_ERROR (missing module),
+tests/test_pa07r2_guards.py::<module>,collected without error,COLLECTION_ERROR (missing module),
+tests/test_pa07r3_partitions.py::<module>,collected without error,COLLECTION_ERROR (missing module),
+tests/test_pa08_<Q>_qs01.py::<module>,collected without error,COLLECTION_ERROR (missing module),
+tests/test_pa08_<Q>_r2.py::<module>,collected without error,COLLECTION_ERROR (missing module),
+tests/test_pa08_<Q>_r3.py::<module>,collected without error,COLLECTION_ERROR (missing module),
+tests/test_pa09_<R>_detailed.py::<module>,collected without error,COLLECTION_ERROR (missing module),
+tests/test_pa09_<R>_quantities.py::<module>,collected without error,COLLECTION_ERROR (missing module),
+tests/test_pa09_<R>_regression_r7.py::<module>,collected without error,COLLECTION_ERROR (missing module),
+tests/test_se_elevation_source_audit.py::<module>,collected without error,COLLECTION_ERROR (missing module),
+tests/test_source_provenance.py::<module>,collected without error,COLLECTION_ERROR (missing module),
+tests/test_source_representation_gate.py::<module>,collected without error,COLLECTION_ERROR (missing module),

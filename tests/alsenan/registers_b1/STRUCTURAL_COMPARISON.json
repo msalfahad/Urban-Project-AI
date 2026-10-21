@@ -1,0 +1,1737 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_B1_STRUCTURAL_COMPARISON_V1",
+ "columns": {
+  "neck_counts": [
+   {
+    "type": "C",
+    "urban_marks": 5,
+    "manual_necks": 5.0,
+    "class": "MATCH_WITHIN_TOLERANCE",
+    "row": "CMP-051",
+    "printed_corroboration": null
+   },
+   {
+    "type": "C1",
+    "urban_marks": 1,
+    "manual_necks": 1.0,
+    "class": "MATCH_WITHIN_TOLERANCE",
+    "row": "CMP-052",
+    "printed_corroboration": null
+   },
+   {
+    "type": "C2",
+    "urban_marks": 4,
+    "manual_necks": 4.0,
+    "class": "MATCH_WITHIN_TOLERANCE",
+    "row": "CMP-053",
+    "printed_corroboration": null
+   },
+   {
+    "type": "C3",
+    "urban_marks": 6,
+    "manual_necks": 5.0,
+    "class": "UNRESOLVED_REQUIRES_REVIEW",
+    "row": "CMP-054",
+    "printed_corroboration": null
+   },
+   {
+    "type": "C4",
+    "urban_marks": 2,
+    "manual_necks": 2.0,
+    "class": "MATCH_WITHIN_TOLERANCE",
+    "row": "CMP-055",
+    "printed_corroboration": null
+   },
+   {
+    "type": "C5",
+    "urban_marks": 3,
+    "manual_necks": 3.0,
+    "class": "MATCH_WITHIN_TOLERANCE",
+    "row": "CMP-056",
+    "printed_corroboration": 3
+   },
+   {
+    "type": "C6",
+    "urban_marks": 1,
+    "manual_necks": 1.0,
+    "class": "MATCH_WITHIN_TOLERANCE",
+    "row": "CMP-057",
+    "printed_corroboration": null
+   },
+   {
+    "type": "C7",
+    "urban_marks": 1,
+    "manual_necks": 1.0,
+    "class": "MATCH_WITHIN_TOLERANCE",
+    "row": "CMP-058",
+    "printed_corroboration": 2
+   },
+   {
+    "type": "C8",
+    "urban_marks": 2,
+    "manual_necks": 2.0,
+    "class": "MATCH_WITHIN_TOLERANCE",
+    "row": "CMP-059",
+    "printed_corroboration": 1
+   },
+   {
+    "type": "C9",
+    "urban_marks": 2,
+    "manual_necks": 2.0,
+    "class": "MATCH_WITHIN_TOLERANCE",
+    "row": "CMP-060",
+    "printed_corroboration": 1
+   },
+   {
+    "type": "CN",
+    "urban_marks": 5,
+    "manual_necks": 6.0,
+    "class": "BENCHMARK_POSSIBLE_ERROR",
+    "row": "CMP-061",
+    "printed_corroboration": 5
+   },
+   {
+    "type": "C10",
+    "urban_marks": 1,
+    "manual_necks": 1.0,
+    "class": "MATCH_WITHIN_TOLERANCE",
+    "row": "CMP-062",
+    "printed_corroboration": null
+   },
+   {
+    "type": "C11",
+    "urban_marks": 2,
+    "manual_necks": 1.0,
+    "class": "BENCHMARK_POSSIBLE_ERROR",
+    "row": "CMP-063",
+    "printed_corroboration": 2
+   }
+  ],
+  "sections": [
+   {
+    "storey": "FOUNDATION",
+    "type": "C",
+    "manual_m": [
+     0.3,
+     0.5
+    ],
+    "schedule_m": [
+     0.3,
+     0.5
+    ],
+    "equal": true,
+    "manual_height_m": 1.5,
+    "manual_count": 5.0
+   },
+   {
+    "storey": "FOUNDATION",
+    "type": "C1",
+    "manual_m": [
+     0.3,
+     0.5
+    ],
+    "schedule_m": [
+     0.3,
+     0.5
+    ],
+    "equal": true,
+    "manual_height_m": 1.5,
+    "manual_count": 1.0
+   },
+   {
+    "storey": "FOUNDATION",
+    "type": "C10",
+    "manual_m": [
+     0.3,
+     0.7
+    ],
+    "schedule_m": [
+     0.3,
+     0.7
+    ],
+    "equal": true,
+    "manual_height_m": 1.5,
+    "manual_count": 1.0
+   },
+   {
+    "storey": "FOUNDATION",
+    "type": "C11",
+    "manual_m": [
+     0.4,
+     1.1
+    ],
+    "schedule_m": [
+     0.3,
+     1.1
+    ],
+    "equal": false,
+    "manual_height_m": 1.5,
+    "manual_count": 1.0
+   },
+   {
+    "storey": "FOUNDATION",
+    "type": "C2",
+    "manual_m": [
+     0.3,
+     0.5
+    ],
+    "schedule_m": [
+     0.3,
+     0.5
+    ],
+    "equal": true,
+    "manual_height_m": 1.5,
+    "manual_count": 4.0
+   },
+   {
+    "storey": "FOUNDATION",
+    "type": "C3",
+    "manual_m": [
+     0.3,
+     0.5
+    ],
+    "schedule_m": [
+     0.3,
+     0.5
+    ],
+    "equal": true,
+    "manual_height_m": 1.5,
+    "manual_count": 5.0
+   },
+   {
+    "storey": "FOUNDATION",
+    "type": "C4",
+    "manual_m": [
+     0.3,
+     0.5
+    ],
+    "schedule_m": [
+     0.3,
+     0.5
+    ],
+    "equal": true,
+    "manual_height_m": 1.5,
+    "manual_count": 2.0
+   },
+   {
+    "storey": "FOUNDATION",
+    "type": "C5",
+    "manual_m": [
+     0.3,
+     0.6
+    ],
+    "schedule_m": [
+     0.3,
+     0.6
+    ],
+    "equal": true,
+    "manual_height_m": 1.5,
+    "manual_count": 3.0
+   },
+   {
+    "storey": "FOUNDATION",
+    "type": "C6",
+    "manual_m": [
+     0.3,
+     0.7
+    ],
+    "schedule_m": [
+     0.3,
+     0.7
+    ],
+    "equal": true,
+    "manual_height_m": 1.5,
+    "manual_count": 1.0
+   },
+   {
+    "storey": "FOUNDATION",
+    "type": "C7",
+    "manual_m": [
+     0.3,
+     0.8
+    ],
+    "schedule_m": [
+     0.3,
+     0.8
+    ],
+    "equal": true,
+    "manual_height_m": 1.5,
+    "manual_count": 1.0
+   },
+   {
+    "storey": "FOUNDATION",
+    "type": "C8",
+    "manual_m": [
+     0.3,
+     0.9
+    ],
+    "schedule_m": [
+     0.3,
+     0.9
+    ],
+    "equal": true,
+    "manual_height_m": 1.5,
+    "manual_count": 2.0
+   },
+   {
+    "storey": "FOUNDATION",
+    "type": "C9",
+    "manual_m": [
+     0.3,
+     1.0
+    ],
+    "schedule_m": [
+     0.3,
+     1.0
+    ],
+    "equal": true,
+    "manual_height_m": 1.5,
+    "manual_count": 2.0
+   },
+   {
+    "storey": "FOUNDATION",
+    "type": "CN",
+    "manual_m": [
+     0.3,
+     0.3
+    ],
+    "schedule_m": [
+     0.3,
+     0.3
+    ],
+    "equal": true,
+    "manual_height_m": 1.5,
+    "manual_count": 6.0
+   },
+   {
+    "storey": "GF",
+    "type": "C",
+    "manual_m": [
+     0.2,
+     0.5
+    ],
+    "schedule_m": [
+     0.2,
+     0.5
+    ],
+    "equal": true,
+    "manual_height_m": 3.75,
+    "manual_count": 5.0
+   },
+   {
+    "storey": "GF",
+    "type": "C1",
+    "manual_m": [
+     0.2,
+     0.5
+    ],
+    "schedule_m": [
+     0.2,
+     0.5
+    ],
+    "equal": true,
+    "manual_height_m": 3.75,
+    "manual_count": 2.0
+   },
+   {
+    "storey": "GF",
+    "type": "C10",
+    "manual_m": [
+     0.25,
+     0.7
+    ],
+    "schedule_m": [
+     0.25,
+     0.7
+    ],
+    "equal": true,
+    "manual_height_m": 3.75,
+    "manual_count": 1.0
+   },
+   {
+    "storey": "GF",
+    "type": "C11",
+    "manual_m": [
+     0.25,
+     1.1
+    ],
+    "schedule_m": [
+     0.25,
+     1.1
+    ],
+    "equal": true,
+    "manual_height_m": 3.75,
+    "manual_count": 1.0
+   },
+   {
+    "storey": "GF",
+    "type": "C2",
+    "manual_m": [
+     0.2,
+     0.5
+    ],
+    "schedule_m": [
+     0.2,
+     0.5
+    ],
+    "equal": true,
+    "manual_height_m": 3.75,
+    "manual_count": 6.0
+   },
+   {
+    "storey": "GF",
+    "type": "C3",
+    "manual_m": [
+     0.25,
+     0.5
+    ],
+    "schedule_m": [
+     0.25,
+     0.5
+    ],
+    "equal": true,
+    "manual_height_m": 3.75,
+    "manual_count": 5.0
+   },
+   {
+    "storey": "GF",
+    "type": "C4",
+    "manual_m": [
+     0.25,
+     0.5
+    ],
+    "schedule_m": [
+     0.25,
+     0.5
+    ],
+    "equal": true,
+    "manual_height_m": 3.75,
+    "manual_count": 2.0
+   },
+   {
+    "storey": "GF",
+    "type": "C5",
+    "manual_m": [
+     0.25,
+     0.6
+    ],
+    "schedule_m": [
+     0.25,
+     0.6
+    ],
+    "equal": true,
+    "manual_height_m": 3.75,
+    "manual_count": 3.0
+   },
+   {
+    "storey": "GF",
+    "type": "C6",
+    "manual_m": [
+     0.25,
+     0.7
+    ],
+    "schedule_m": [
+     0.25,
+     0.7
+    ],
+    "equal": true,
+    "manual_height_m": 3.75,
+    "manual_count": 1.0
+   },
+   {
+    "storey": "GF",
+    "type": "C7",
+    "manual_m": [
+     0.25,
+     0.8
+    ],
+    "schedule_m": [
+     0.25,
+     0.8
+    ],
+    "equal": true,
+    "manual_height_m": 3.75,
+    "manual_count": 1.0
+   },
+   {
+    "storey": "GF",
+    "type": "C8",
+    "manual_m": [
+     0.25,
+     0.9
+    ],
+    "schedule_m": [
+     0.25,
+     0.9
+    ],
+    "equal": true,
+    "manual_height_m": 3.75,
+    "manual_count": 2.0
+   },
+   {
+    "storey": "GF",
+    "type": "C9",
+    "manual_m": [
+     0.25,
+     1.0
+    ],
+    "schedule_m": [
+     0.25,
+     1.0
+    ],
+    "equal": true,
+    "manual_height_m": 3.75,
+    "manual_count": 3.0
+   },
+   {
+    "storey": "1F",
+    "type": "C1",
+    "manual_m": [
+     0.2,
+     0.5
+    ],
+    "schedule_m": [
+     0.2,
+     0.5
+    ],
+    "equal": true,
+    "manual_height_m": 3.45,
+    "manual_count": 1.0
+   },
+   {
+    "storey": "1F",
+    "type": "C2",
+    "manual_m": [
+     0.2,
+     0.5
+    ],
+    "schedule_m": [
+     0.2,
+     0.5
+    ],
+    "equal": true,
+    "manual_height_m": 3.45,
+    "manual_count": 4.0
+   },
+   {
+    "storey": "1F",
+    "type": "C3",
+    "manual_m": [
+     0.2,
+     0.5
+    ],
+    "schedule_m": [
+     0.2,
+     0.5
+    ],
+    "equal": true,
+    "manual_height_m": 3.45,
+    "manual_count": 3.0
+   },
+   {
+    "storey": "1F",
+    "type": "C4",
+    "manual_m": [
+     0.2,
+     0.5
+    ],
+    "schedule_m": [
+     0.2,
+     0.5
+    ],
+    "equal": true,
+    "manual_height_m": 3.45,
+    "manual_count": 2.0
+   },
+   {
+    "storey": "1F",
+    "type": "C5",
+    "manual_m": [
+     0.2,
+     0.5
+    ],
+    "schedule_m": [
+     0.2,
+     0.5
+    ],
+    "equal": true,
+    "manual_height_m": 3.45,
+    "manual_count": 3.0
+   },
+   {
+    "storey": "1F",
+    "type": "C7",
+    "manual_m": [
+     0.2,
+     0.8
+    ],
+    "schedule_m": [
+     0.2,
+     0.8
+    ],
+    "equal": true,
+    "manual_height_m": 3.45,
+    "manual_count": 2.0
+   },
+   {
+    "storey": "1F",
+    "type": "C8",
+    "manual_m": [
+     0.2,
+     0.9
+    ],
+    "schedule_m": [
+     0.2,
+     0.9
+    ],
+    "equal": true,
+    "manual_height_m": 3.45,
+    "manual_count": 1.0
+   },
+   {
+    "storey": "1F",
+    "type": "C9",
+    "manual_m": [
+     0.2,
+     1.0
+    ],
+    "schedule_m": [
+     0.2,
+     0.9
+    ],
+    "equal": false,
+    "manual_height_m": 3.45,
+    "manual_count": 1.0
+   },
+   {
+    "storey": "1F",
+    "type": "PC1",
+    "manual_m": [
+     0.2,
+     0.5
+    ],
+    "schedule_cm": null,
+    "state": "TYPE_NOT_IN_SCHEDULE",
+    "manual_height_m": 3.45,
+    "manual_count": 1.0
+   },
+   {
+    "storey": "1F",
+    "type": "PC2",
+    "manual_m": [
+     0.2,
+     0.7
+    ],
+    "schedule_cm": null,
+    "state": "TYPE_NOT_IN_SCHEDULE",
+    "manual_height_m": 3.45,
+    "manual_count": 1.0
+   },
+   {
+    "storey": "ROOF",
+    "type": "C1",
+    "manual_m": [
+     0.2,
+     0.5
+    ],
+    "schedule_m": [
+     0.2,
+     0.5
+    ],
+    "equal": true,
+    "manual_height_m": 3.45,
+    "manual_count": 1.0
+   },
+   {
+    "storey": "ROOF",
+    "type": "C2",
+    "manual_m": [
+     0.2,
+     0.5
+    ],
+    "schedule_m": [
+     0.2,
+     0.5
+    ],
+    "equal": true,
+    "manual_height_m": 3.45,
+    "manual_count": 4.0
+   },
+   {
+    "storey": "ROOF",
+    "type": "C3",
+    "manual_m": [
+     0.2,
+     0.5
+    ],
+    "schedule_m": [
+     0.2,
+     0.5
+    ],
+    "equal": true,
+    "manual_height_m": 3.45,
+    "manual_count": 1.0
+   },
+   {
+    "storey": "ROOF",
+    "type": "C5",
+    "manual_m": [
+     0.2,
+     0.5
+    ],
+    "schedule_m": [
+     0.2,
+     0.5
+    ],
+    "equal": true,
+    "manual_height_m": 3.45,
+    "manual_count": 1.0
+   },
+   {
+    "storey": "ROOF",
+    "type": "C9",
+    "manual_m": [
+     0.2,
+     0.9
+    ],
+    "schedule_m": [
+     0.2,
+     0.7
+    ],
+    "equal": false,
+    "manual_height_m": 3.45,
+    "manual_count": 1.0
+   },
+   {
+    "storey": "ROOF",
+    "type": "PC",
+    "manual_m": [
+     0.2,
+     0.5
+    ],
+    "schedule_cm": null,
+    "state": "TYPE_NOT_IN_SCHEDULE",
+    "manual_height_m": 3.45,
+    "manual_count": 1.0
+   }
+  ],
+  "height_method": {
+   "neck_height_m": [
+    1.5
+   ],
+   "storeys": {
+    "GF": {
+     "manual_heights_m": [
+      3.75
+     ],
+     "floor_to_floor_m": 4.5,
+     "floor_to_floor_minus_manual_m": [
+      0.75
+     ]
+    },
+    "1F": {
+     "manual_heights_m": [
+      3.45
+     ],
+     "floor_to_floor_m": 4.2,
+     "floor_to_floor_minus_manual_m": [
+      0.75
+     ]
+    },
+    "ROOF": {
+     "manual_heights_m": [
+      3.45
+     ],
+     "floor_to_floor_m": 4.2,
+     "floor_to_floor_minus_manual_m": [
+      0.75
+     ]
+    }
+   },
+   "inferred": "column height = floor-to-floor minus 0.75 m (the depth of the 75 cm main beams), i.e. to the beam soffit; neck height 1.5 m is not in the source",
+   "classes": {
+    "necks": "MANUAL_ASSUMPTION_NOT_IN_SOURCE",
+    "storeys": "MANUAL_METHOD_DIFFERENCE"
+   }
+  },
+  "storey_counts": [
+   {
+    "storey": "GF",
+    "urban_drawn_outlines": 34,
+    "urban_schedule_expectation": 30,
+    "manual_count": 32.0,
+    "row": "CMP-067"
+   },
+   {
+    "storey": "1F",
+    "urban_drawn_outlines": 21,
+    "urban_schedule_expectation": 22,
+    "manual_count": 19.0,
+    "row": "CMP-068"
+   },
+   {
+    "storey": "ROOF",
+    "urban_drawn_outlines": 9,
+    "urban_schedule_expectation": 22,
+    "manual_count": 9.0,
+    "row": "CMP-069"
+   }
+  ],
+  "manual_volumes_m3": {
+   "FOUNDATION": 8.805,
+   "GF": 17.4375,
+   "1F": 7.728,
+   "ROOF": 3.381
+  }
+ },
+ "beams": {
+  "continuous": [
+   {
+    "type": "CB1",
+    "manual_label": "BCB1",
+    "floor": "GF",
+    "manual_length_m": 13.0,
+    "urban_schedule_length_m": 13.2,
+    "pct": 1.5385,
+    "section_equal": true,
+    "row": "CMP-071",
+    "urban_marks_per_sheet": {
+     "GF_ROOF_SLAB": 2,
+     "1F_ROOF_SLAB": 0,
+     "2F_ROOF_SLAB": 0,
+     "GROUND_BEAMS": 0
+    }
+   },
+   {
+    "type": "CB2",
+    "manual_label": "BCB2",
+    "floor": "GF",
+    "manual_length_m": 7.9,
+    "urban_schedule_length_m": 8.0,
+    "pct": 1.2658,
+    "section_equal": true,
+    "row": "CMP-072",
+    "urban_marks_per_sheet": {
+     "GF_ROOF_SLAB": 2,
+     "1F_ROOF_SLAB": 0,
+     "2F_ROOF_SLAB": 0,
+     "GROUND_BEAMS": 0
+    }
+   },
+   {
+    "type": "CB3",
+    "manual_label": "BCB3",
+    "floor": "GF",
+    "manual_length_m": 10.22,
+    "urban_schedule_length_m": 10.5,
+    "pct": 2.7397,
+    "section_equal": true,
+    "row": "CMP-073",
+    "urban_marks_per_sheet": {
+     "GF_ROOF_SLAB": 3,
+     "1F_ROOF_SLAB": 0,
+     "2F_ROOF_SLAB": 0,
+     "GROUND_BEAMS": 0
+    }
+   },
+   {
+    "type": "CB8",
+    "manual_label": "BCB8",
+    "floor": "GF",
+    "manual_length_m": 17.9,
+    "urban_schedule_length_m": 16.9,
+    "pct": -5.5866,
+    "section_equal": true,
+    "row": "CMP-074",
+    "urban_marks_per_sheet": {
+     "GF_ROOF_SLAB": 2,
+     "1F_ROOF_SLAB": 0,
+     "2F_ROOF_SLAB": 0,
+     "GROUND_BEAMS": 0
+    }
+   },
+   {
+    "type": "CB7",
+    "manual_label": "BCB7",
+    "floor": "GF",
+    "manual_length_m": 12.0,
+    "urban_schedule_length_m": 12.1,
+    "pct": 0.8333,
+    "section_equal": true,
+    "row": "CMP-075",
+    "urban_marks_per_sheet": {
+     "GF_ROOF_SLAB": 2,
+     "1F_ROOF_SLAB": 0,
+     "2F_ROOF_SLAB": 0,
+     "GROUND_BEAMS": 0
+    }
+   },
+   {
+    "type": "CB4",
+    "manual_label": "BCB4",
+    "floor": "GF",
+    "manual_length_m": 6.55,
+    "urban_schedule_length_m": 7.0,
+    "pct": 6.8702,
+    "section_equal": true,
+    "row": "CMP-076",
+    "urban_marks_per_sheet": {
+     "GF_ROOF_SLAB": 2,
+     "1F_ROOF_SLAB": 0,
+     "2F_ROOF_SLAB": 0,
+     "GROUND_BEAMS": 0
+    }
+   },
+   {
+    "type": "CB5",
+    "manual_label": "BCB5",
+    "floor": "GF",
+    "manual_length_m": 7.1,
+    "urban_schedule_length_m": 7.0,
+    "pct": -1.4085,
+    "section_equal": true,
+    "row": "CMP-077",
+    "urban_marks_per_sheet": {
+     "GF_ROOF_SLAB": 2,
+     "1F_ROOF_SLAB": 0,
+     "2F_ROOF_SLAB": 0,
+     "GROUND_BEAMS": 0
+    }
+   },
+   {
+    "type": "CB6",
+    "manual_label": "BCB6",
+    "floor": "GF",
+    "manual_length_m": 10.6,
+    "urban_schedule_length_m": 10.7,
+    "pct": 0.9434,
+    "section_equal": true,
+    "row": "CMP-078",
+    "urban_marks_per_sheet": {
+     "GF_ROOF_SLAB": 2,
+     "1F_ROOF_SLAB": 0,
+     "2F_ROOF_SLAB": 0,
+     "GROUND_BEAMS": 0
+    }
+   },
+   {
+    "type": "CB9",
+    "manual_label": "GCB9",
+    "floor": "1F",
+    "manual_length_m": 12.17,
+    "urban_schedule_length_m": 11.8,
+    "pct": -3.0403,
+    "section_equal": true,
+    "row": "CMP-079",
+    "urban_marks_per_sheet": {
+     "GF_ROOF_SLAB": 0,
+     "1F_ROOF_SLAB": 3,
+     "2F_ROOF_SLAB": 0,
+     "GROUND_BEAMS": 0
+    }
+   },
+   {
+    "type": "CB11",
+    "manual_label": "GCB11",
+    "floor": "1F",
+    "manual_length_m": 14.65,
+    "urban_schedule_length_m": 14.0,
+    "pct": -4.4369,
+    "section_equal": true,
+    "row": "CMP-080",
+    "urban_marks_per_sheet": {
+     "GF_ROOF_SLAB": 0,
+     "1F_ROOF_SLAB": 3,
+     "2F_ROOF_SLAB": 0,
+     "GROUND_BEAMS": 0
+    }
+   },
+   {
+    "type": "CB12",
+    "manual_label": "GCB12",
+    "floor": "1F",
+    "manual_length_m": 13.0,
+    "urban_schedule_length_m": 11.6,
+    "pct": -10.7692,
+    "section_equal": true,
+    "row": "CMP-081",
+    "urban_marks_per_sheet": {
+     "GF_ROOF_SLAB": 0,
+     "1F_ROOF_SLAB": 2,
+     "2F_ROOF_SLAB": 0,
+     "GROUND_BEAMS": 0
+    }
+   },
+   {
+    "type": "CB10",
+    "manual_label": "GCB10",
+    "floor": "1F",
+    "manual_length_m": 7.0,
+    "urban_schedule_length_m": 7.1,
+    "pct": 1.4286,
+    "section_equal": true,
+    "row": "CMP-082",
+    "urban_marks_per_sheet": {
+     "GF_ROOF_SLAB": 0,
+     "1F_ROOF_SLAB": 2,
+     "2F_ROOF_SLAB": 0,
+     "GROUND_BEAMS": 0
+    }
+   },
+   {
+    "type": "CB13",
+    "manual_label": "GCB13",
+    "floor": "1F",
+    "manual_length_m": 7.0,
+    "urban_schedule_length_m": 7.3,
+    "pct": 4.2857,
+    "section_equal": true,
+    "row": "CMP-083",
+    "urban_marks_per_sheet": {
+     "GF_ROOF_SLAB": 0,
+     "1F_ROOF_SLAB": 2,
+     "2F_ROOF_SLAB": 0,
+     "GROUND_BEAMS": 0
+    }
+   }
+  ],
+  "simple": [
+   {
+    "floor": "1F",
+    "type": "B1",
+    "manual_rows": 2,
+    "manual_occurrences": 2.0,
+    "manual_length_m": 5.6,
+    "manual_m3": 0.448,
+    "section_equal_schedule": true,
+    "urban_marks_on_sheet": 3,
+    "urban_length_m": null,
+    "ids": [
+     "RC:كمرات:59",
+     "RC:كمرات:60"
+    ]
+   },
+   {
+    "floor": "1F",
+    "type": "B11",
+    "manual_rows": 1,
+    "manual_occurrences": 1.0,
+    "manual_length_m": 4.7,
+    "manual_m3": 0.705,
+    "section_equal_schedule": true,
+    "urban_marks_on_sheet": 1,
+    "urban_length_m": null,
+    "ids": [
+     "RC:كمرات:71"
+    ]
+   },
+   {
+    "floor": "1F",
+    "type": "B18",
+    "manual_rows": 1,
+    "manual_occurrences": 1.0,
+    "manual_length_m": 6.3,
+    "manual_m3": 1.65375,
+    "section_equal_schedule": true,
+    "urban_marks_on_sheet": 1,
+    "urban_length_m": null,
+    "ids": [
+     "RC:كمرات:70"
+    ]
+   },
+   {
+    "floor": "1F",
+    "type": "B2",
+    "manual_rows": 3,
+    "manual_occurrences": 3.0,
+    "manual_length_m": 10.5,
+    "manual_m3": 0.84,
+    "section_equal_schedule": true,
+    "urban_marks_on_sheet": 3,
+    "urban_length_m": null,
+    "ids": [
+     "RC:كمرات:61",
+     "RC:كمرات:62",
+     "RC:كمرات:63"
+    ]
+   },
+   {
+    "floor": "1F",
+    "type": "B23",
+    "manual_rows": 1,
+    "manual_occurrences": 1.0,
+    "manual_length_m": 7.1,
+    "manual_m3": 2.39625,
+    "section_equal_schedule": true,
+    "urban_marks_on_sheet": 1,
+    "urban_length_m": null,
+    "ids": [
+     "RC:كمرات:72"
+    ]
+   },
+   {
+    "floor": "1F",
+    "type": "B3",
+    "manual_rows": 1,
+    "manual_occurrences": 1.0,
+    "manual_length_m": 2.5,
+    "manual_m3": 0.2,
+    "section_equal_schedule": true,
+    "urban_marks_on_sheet": 1,
+    "urban_length_m": null,
+    "ids": [
+     "RC:كمرات:64"
+    ]
+   },
+   {
+    "floor": "1F",
+    "type": "B4",
+    "manual_rows": 2,
+    "manual_occurrences": 2.0,
+    "manual_length_m": 8.9,
+    "manual_m3": 0.89,
+    "section_equal_schedule": true,
+    "urban_marks_on_sheet": 5,
+    "urban_length_m": null,
+    "ids": [
+     "RC:كمرات:65",
+     "RC:كمرات:66"
+    ]
+   },
+   {
+    "floor": "1F",
+    "type": "B6",
+    "manual_rows": 1,
+    "manual_occurrences": 1.0,
+    "manual_length_m": 4.37,
+    "manual_m3": 0.54625,
+    "section_equal_schedule": true,
+    "urban_marks_on_sheet": 5,
+    "urban_length_m": null,
+    "ids": [
+     "RC:كمرات:69"
+    ]
+   },
+   {
+    "floor": "1F",
+    "type": "B7",
+    "manual_rows": 2,
+    "manual_occurrences": 2.0,
+    "manual_length_m": 4.0,
+    "manual_m3": 0.6,
+    "section_equal_schedule": true,
+    "urban_marks_on_sheet": 2,
+    "urban_length_m": null,
+    "ids": [
+     "RC:كمرات:67",
+     "RC:كمرات:68"
+    ]
+   },
+   {
+    "floor": "GF",
+    "type": "B1",
+    "manual_rows": 4,
+    "manual_occurrences": 4.0,
+    "manual_length_m": 14.15,
+    "manual_m3": 1.132,
+    "section_equal_schedule": true,
+    "urban_marks_on_sheet": 12,
+    "urban_length_m": null,
+    "ids": [
+     "RC:كمرات:13",
+     "RC:كمرات:14",
+     "RC:كمرات:15",
+     "RC:كمرات:16"
+    ]
+   },
+   {
+    "floor": "GF",
+    "type": "B11",
+    "manual_rows": 1,
+    "manual_occurrences": 1.0,
+    "manual_length_m": 4.55,
+    "manual_m3": 0.6825,
+    "section_equal_schedule": true,
+    "urban_marks_on_sheet": 1,
+    "urban_length_m": null,
+    "ids": [
+     "RC:كمرات:33"
+    ]
+   },
+   {
+    "floor": "GF",
+    "type": "B13",
+    "manual_rows": 1,
+    "manual_occurrences": 1.0,
+    "manual_length_m": 5.5,
+    "manual_m3": 1.03125,
+    "section_equal_schedule": true,
+    "urban_marks_on_sheet": 1,
+    "urban_length_m": null,
+    "ids": [
+     "RC:كمرات:26"
+    ]
+   },
+   {
+    "floor": "GF",
+    "type": "B14",
+    "manual_rows": 1,
+    "manual_occurrences": 1.0,
+    "manual_length_m": 1.8,
+    "manual_m3": 0.27,
+    "section_equal_schedule": true,
+    "urban_marks_on_sheet": 1,
+    "urban_length_m": null,
+    "ids": [
+     "RC:كمرات:23"
+    ]
+   },
+   {
+    "floor": "GF",
+    "type": "B16",
+    "manual_rows": 1,
+    "manual_occurrences": 1.0,
+    "manual_length_m": 3.85,
+    "manual_m3": 0.86625,
+    "section_equal_schedule": true,
+    "urban_marks_on_sheet": 1,
+    "urban_length_m": null,
+    "ids": [
+     "RC:كمرات:32"
+    ]
+   },
+   {
+    "floor": "GF",
+    "type": "B17",
+    "manual_rows": 1,
+    "manual_occurrences": 1.0,
+    "manual_length_m": 5.4,
+    "manual_m3": 1.8225,
+    "section_equal_schedule": true,
+    "urban_marks_on_sheet": 1,
+    "urban_length_m": null,
+    "ids": [
+     "RC:كمرات:24"
+    ]
+   },
+   {
+    "floor": "GF",
+    "type": "B2",
+    "manual_rows": 3,
+    "manual_occurrences": 3.0,
+    "manual_length_m": 10.65,
+    "manual_m3": 0.852,
+    "section_equal_schedule": true,
+    "urban_marks_on_sheet": 3,
+    "urban_length_m": null,
+    "ids": [
+     "RC:كمرات:34",
+     "RC:كمرات:35",
+     "RC:كمرات:36"
+    ]
+   },
+   {
+    "floor": "GF",
+    "type": "B20",
+    "manual_rows": 1,
+    "manual_occurrences": 1.0,
+    "manual_length_m": 7.2,
+    "manual_m3": 2.16,
+    "section_equal_schedule": true,
+    "urban_marks_on_sheet": 1,
+    "urban_length_m": null,
+    "ids": [
+     "RC:كمرات:22"
+    ]
+   },
+   {
+    "floor": "GF",
+    "type": "B21",
+    "manual_rows": 1,
+    "manual_occurrences": 1.0,
+    "manual_length_m": 7.8,
+    "manual_m3": 2.6325,
+    "section_equal_schedule": true,
+    "urban_marks_on_sheet": 1,
+    "urban_length_m": null,
+    "ids": [
+     "RC:كمرات:37"
+    ]
+   },
+   {
+    "floor": "GF",
+    "type": "B22",
+    "manual_rows": 1,
+    "manual_occurrences": 1.0,
+    "manual_length_m": 7.8,
+    "manual_m3": 2.925,
+    "section_equal_schedule": true,
+    "urban_marks_on_sheet": 1,
+    "urban_length_m": null,
+    "ids": [
+     "RC:كمرات:38"
+    ]
+   },
+   {
+    "floor": "GF",
+    "type": "B24",
+    "manual_rows": 1,
+    "manual_occurrences": 1.0,
+    "manual_length_m": 5.75,
+    "manual_m3": 2.15625,
+    "section_equal_schedule": true,
+    "urban_marks_on_sheet": 1,
+    "urban_length_m": null,
+    "ids": [
+     "RC:كمرات:12"
+    ]
+   },
+   {
+    "floor": "GF",
+    "type": "B26",
+    "manual_rows": 1,
+    "manual_occurrences": 1.0,
+    "manual_length_m": 8.0,
+    "manual_m3": 4.42,
+    "section_equal_schedule": true,
+    "urban_marks_on_sheet": 1,
+    "urban_length_m": null,
+    "ids": [
+     "RC:كمرات:30"
+    ]
+   },
+   {
+    "floor": "GF",
+    "type": "B29",
+    "manual_rows": 1,
+    "manual_occurrences": 1.0,
+    "manual_length_m": 6.75,
+    "manual_m3": 1.265625,
+    "section_equal_schedule": true,
+    "urban_marks_on_sheet": 1,
+    "urban_length_m": null,
+    "ids": [
+     "RC:كمرات:28"
+    ]
+   },
+   {
+    "floor": "GF",
+    "type": "B3",
+    "manual_rows": 2,
+    "manual_occurrences": 2.0,
+    "manual_length_m": 8.8,
+    "manual_m3": 0.704,
+    "section_equal_schedule": true,
+    "urban_marks_on_sheet": 4,
+    "urban_length_m": null,
+    "ids": [
+     "RC:كمرات:11",
+     "RC:كمرات:27"
+    ]
+   },
+   {
+    "floor": "GF",
+    "type": "B4",
+    "manual_rows": 5,
+    "manual_occurrences": 5.0,
+    "manual_length_m": 21.45,
+    "manual_m3": 2.145,
+    "section_equal_schedule": true,
+    "urban_marks_on_sheet": 6,
+    "urban_length_m": null,
+    "ids": [
+     "RC:كمرات:17",
+     "RC:كمرات:18",
+     "RC:كمرات:19",
+     "RC:كمرات:20",
+     "RC:كمرات:21"
+    ]
+   },
+   {
+    "floor": "GF",
+    "type": "B5",
+    "manual_rows": 1,
+    "manual_occurrences": 1.0,
+    "manual_length_m": 3.7,
+    "manual_m3": 0.37,
+    "section_equal_schedule": true,
+    "urban_marks_on_sheet": 1,
+    "urban_length_m": null,
+    "ids": [
+     "RC:كمرات:29"
+    ]
+   },
+   {
+    "floor": "GF",
+    "type": "B7",
+    "manual_rows": 2,
+    "manual_occurrences": 2.0,
+    "manual_length_m": 10.48,
+    "manual_m3": 1.572,
+    "section_equal_schedule": true,
+    "urban_marks_on_sheet": 7,
+    "urban_length_m": null,
+    "ids": [
+     "RC:كمرات:25",
+     "RC:كمرات:40"
+    ]
+   },
+   {
+    "floor": "GF",
+    "type": "B8",
+    "manual_rows": 1,
+    "manual_occurrences": 1.0,
+    "manual_length_m": 3.5,
+    "manual_m3": 0.525,
+    "section_equal_schedule": true,
+    "urban_marks_on_sheet": 1,
+    "urban_length_m": null,
+    "ids": [
+     "RC:كمرات:31"
+    ]
+   },
+   {
+    "floor": "GF",
+    "type": "B9",
+    "manual_rows": 1,
+    "manual_occurrences": 1.0,
+    "manual_length_m": 6.5,
+    "manual_m3": 0.975,
+    "section_equal_schedule": true,
+    "urban_marks_on_sheet": 1,
+    "urban_length_m": null,
+    "ids": [
+     "RC:كمرات:39"
+    ]
+   },
+   {
+    "floor": "ROOF",
+    "type": "B1",
+    "manual_rows": 2,
+    "manual_occurrences": 3.0,
+    "manual_length_m": 9.0,
+    "manual_m3": 0.72,
+    "section_equal_schedule": true,
+    "urban_marks_on_sheet": 4,
+    "urban_length_m": null,
+    "ids": [
+     "RC:كمرات:92",
+     "RC:كمرات:93"
+    ]
+   },
+   {
+    "floor": "ROOF",
+    "type": "B15",
+    "manual_rows": 1,
+    "manual_occurrences": 1.0,
+    "manual_length_m": 6.8,
+    "manual_m3": 1.632,
+    "section_equal_schedule": true,
+    "urban_marks_on_sheet": 1,
+    "urban_length_m": null,
+    "ids": [
+     "RC:كمرات:95"
+    ]
+   },
+   {
+    "floor": "ROOF",
+    "type": "B2",
+    "manual_rows": 3,
+    "manual_occurrences": 5.0,
+    "manual_length_m": 12.8,
+    "manual_m3": 1.024,
+    "section_equal_schedule": true,
+    "urban_marks_on_sheet": 4,
+    "urban_length_m": null,
+    "ids": [
+     "RC:كمرات:86",
+     "RC:كمرات:87",
+     "RC:كمرات:88"
+    ]
+   },
+   {
+    "floor": "ROOF",
+    "type": "B3",
+    "manual_rows": 2,
+    "manual_occurrences": 4.0,
+    "manual_length_m": 11.0,
+    "manual_m3": 0.88,
+    "section_equal_schedule": true,
+    "urban_marks_on_sheet": 4,
+    "urban_length_m": null,
+    "ids": [
+     "RC:كمرات:89",
+     "RC:كمرات:90"
+    ]
+   },
+   {
+    "floor": "ROOF",
+    "type": "B7",
+    "manual_rows": 1,
+    "manual_occurrences": 1.0,
+    "manual_length_m": 6.6,
+    "manual_m3": 0.99,
+    "section_equal_schedule": true,
+    "urban_marks_on_sheet": 1,
+    "urban_length_m": null,
+    "ids": [
+     "RC:كمرات:94"
+    ]
+   },
+   {
+    "floor": "ROOF",
+    "type": "B8",
+    "manual_rows": 1,
+    "manual_occurrences": 1.0,
+    "manual_length_m": 5.4,
+    "manual_m3": 0.81,
+    "section_equal_schedule": true,
+    "urban_marks_on_sheet": 1,
+    "urban_length_m": null,
+    "ids": [
+     "RC:كمرات:91"
+    ]
+   }
+  ],
+  "manual_m3_by_floor": {
+   "1F": 17.155,
+   "GF": 42.882875,
+   "ROOF": 6.056
+  },
+  "method": {
+   "length_basis": "one length per occurrence row read from the plan (continuous beams within -6.4 % .. +12.1 % of the schedule spans), not the printed spans",
+   "depth": "full schedule D (slab thickness not deducted)",
+   "counts": "a manual row is a length run, not a plan mark - counts are not comparable"
+  }
+ },
+ "slabs": [
+  {
+   "floor": "GF",
+   "urban_thickness_cm": [
+    16
+   ],
+   "manual_thickness_cm": [
+    16
+   ],
+   "manual_area_m2": 207.0,
+   "manual_m3": 33.12,
+   "manual_deductions": [
+    {
+     "each_m3": null,
+     "count": null,
+     "formula": null
+    }
+   ],
+   "urban_void_labels": 2
+  },
+  {
+   "floor": "1F",
+   "urban_thickness_cm": [
+    16
+   ],
+   "manual_thickness_cm": [
+    16
+   ],
+   "manual_area_m2": 120.0,
+   "manual_m3": 19.2,
+   "manual_deductions": [
+    {
+     "each_m3": 0.081,
+     "count": 0.0,
+     "formula": "=0.4*0.15*1.35"
+    }
+   ],
+   "urban_void_labels": 0
+  },
+  {
+   "floor": "ROOF",
+   "urban_thickness_cm": [
+    18
+   ],
+   "manual_thickness_cm": [
+    16,
+    18
+   ],
+   "manual_area_m2": 45.19,
+   "manual_m3": 7.4974,
+   "manual_deductions": [
+    {
+     "each_m3": null,
+     "count": null,
+     "formula": null
+    },
+    {
+     "each_m3": null,
+     "count": null,
+     "formula": null
+    }
+   ],
+   "urban_void_labels": 0
+  }
+ ],
+ "rebar": {
+  "groups": [
+   {
+    "group": "اجمالى القواعد",
+    "group_en": "total footings",
+    "concrete_m3": 77.6305,
+    "rebar_t": 5.8,
+    "kg_per_m3": 74.712903,
+    "rebar_cell_formula": null
+   },
+   {
+    "group": "اجمالي الشناجات والارضيه",
+    "group_en": "total ground beams and ground slab",
+    "concrete_m3": 75.09,
+    "rebar_t": 9.75,
+    "kg_per_m3": 129.844187,
+    "rebar_cell_formula": null
+   },
+   {
+    "group": "اجمالى الحوائط والأعمدة",
+    "group_en": "total walls and columns",
+    "concrete_m3": 39.7515,
+    "rebar_t": 7.95,
+    "kg_per_m3": 199.992453,
+    "rebar_cell_formula": null
+   },
+   {
+    "group": "الجسور",
+    "group_en": "beams",
+    "concrete_m3": 65.965875,
+    "rebar_t": 9.89,
+    "kg_per_m3": 149.926003,
+    "rebar_cell_formula": null
+   },
+   {
+    "group": "البلاطات",
+    "group_en": "slabs",
+    "concrete_m3": 59.8174,
+    "rebar_t": 5.4,
+    "kg_per_m3": 90.274736,
+    "rebar_cell_formula": null
+   },
+   {
+    "group": "الدرج+القبه",
+    "group_en": "stairs + dome",
+    "concrete_m3": 21.8328,
+    "rebar_t": 3.9,
+    "kg_per_m3": 178.630318,
+    "rebar_cell_formula": null
+   },
+   {
+    "group": "حمام السباجة",
+    "group_en": "swimming pool",
+    "concrete_m3": 12.348,
+    "rebar_t": 1.5,
+    "kg_per_m3": 121.477162,
+    "rebar_cell_formula": null
+   }
+  ],
+  "total_t": 44.19,
+  "all_typed_constants": true,
+  "kg_per_m3_range": [
+   74.712903,
+   199.992453
+  ],
+  "method_class": "MANUAL_ESTIMATE_METHOD",
+  "deterministic": false,
+  "rule": "never gold for Urban's deterministic rebar engine"
+ },
+ "rows": [
+  "CMP-001",
+  "CMP-002",
+  "CMP-003",
+  "CMP-004",
+  "CMP-005",
+  "CMP-006",
+  "CMP-007",
+  "CMP-008",
+  "CMP-009",
+  "CMP-010",
+  "CMP-011",
+  "CMP-012",
+  "CMP-013",
+  "CMP-014",
+  "CMP-015",
+  "CMP-016",
+  "CMP-017",
+  "CMP-018",
+  "CMP-019",
+  "CMP-020",
+  "CMP-021",
+  "CMP-022",
+  "CMP-023",
+  "CMP-024",
+  "CMP-025",
+  "CMP-026",
+  "CMP-027",
+  "CMP-028",
+  "CMP-029",
+  "CMP-030",
+  "CMP-031",
+  "CMP-032",
+  "CMP-033",
+  "CMP-034",
+  "CMP-035",
+  "CMP-036",
+  "CMP-037",
+  "CMP-038",
+  "CMP-039",
+  "CMP-040",
+  "CMP-041",
+  "CMP-042",
+  "CMP-043",
+  "CMP-044",
+  "CMP-045",
+  "CMP-046",
+  "CMP-047",
+  "CMP-048",
+  "CMP-049",
+  "CMP-050",
+  "CMP-051",
+  "CMP-052",
+  "CMP-053",
+  "CMP-054",
+  "CMP-055",
+  "CMP-056",
+  "CMP-057",
+  "CMP-058",
+  "CMP-059",
+  "CMP-060",
+  "CMP-061",
+  "CMP-062",
+  "CMP-063",
+  "CMP-064",
+  "CMP-065",
+  "CMP-066",
+  "CMP-067",
+  "CMP-068",
+  "CMP-069",
+  "CMP-070",
+  "CMP-071",
+  "CMP-072",
+  "CMP-073",
+  "CMP-074",
+  "CMP-075",
+  "CMP-076",
+  "CMP-077",
+  "CMP-078",
+  "CMP-079",
+  "CMP-080",
+  "CMP-081",
+  "CMP-082",
+  "CMP-083",
+  "CMP-084",
+  "CMP-085",
+  "CMP-086",
+  "CMP-087",
+  "CMP-088",
+  "CMP-089",
+  "CMP-090",
+  "CMP-091",
+  "CMP-092",
+  "CMP-093",
+  "CMP-094"
+ ]
+}

@@ -1,0 +1,240 @@
+{
+ "SCHEMA": "URBAN_LEGACY_CAD_MIGRATION_V1",
+ "guard_module": "engine/legacy_cad_guard.py",
+ "rows": [
+  {
+   "entry_point": "tools/align_sanitary.py",
+   "kind": "USER_CLI",
+   "reaches": "MODULE_LEVEL",
+   "chain": [
+    "tools/align_sanitary.py",
+    "engine/cad_adapter.py"
+   ],
+   "guarded": true,
+   "behaviour": "refuses (exit 2) without --allow-legacy-cad-adapter / URBAN_ALLOW_LEGACY_CAD_ADAPTER=1"
+  },
+  {
+   "entry_point": "tools/export_round5_benchmark.py",
+   "kind": "USER_CLI",
+   "reaches": "MODULE_LEVEL",
+   "chain": [
+    "tools/export_round5_benchmark.py",
+    "engine/cad_adapter.py"
+   ],
+   "guarded": true,
+   "behaviour": "refuses (exit 2) without --allow-legacy-cad-adapter / URBAN_ALLOW_LEGACY_CAD_ADAPTER=1"
+  },
+  {
+   "entry_point": "tools/export_round6b.py",
+   "kind": "USER_CLI",
+   "reaches": "MODULE_LEVEL",
+   "chain": [
+    "tools/export_round6b.py",
+    "engine/cad_adapter.py"
+   ],
+   "guarded": true,
+   "behaviour": "refuses (exit 2) without --allow-legacy-cad-adapter / URBAN_ALLOW_LEGACY_CAD_ADAPTER=1"
+  },
+  {
+   "entry_point": "tools/export_round6c.py",
+   "kind": "USER_CLI",
+   "reaches": "MODULE_LEVEL",
+   "chain": [
+    "tools/export_round6c.py",
+    "engine/cad_adapter.py"
+   ],
+   "guarded": true,
+   "behaviour": "refuses (exit 2) without --allow-legacy-cad-adapter / URBAN_ALLOW_LEGACY_CAD_ADAPTER=1"
+  },
+  {
+   "entry_point": "tools/export_round6d.py",
+   "kind": "USER_CLI",
+   "reaches": "MODULE_LEVEL",
+   "chain": [
+    "tools/export_round6d.py",
+    "engine/cad_adapter.py"
+   ],
+   "guarded": true,
+   "behaviour": "refuses (exit 2) without --allow-legacy-cad-adapter / URBAN_ALLOW_LEGACY_CAD_ADAPTER=1"
+  },
+  {
+   "entry_point": "tools/export_round6e.py",
+   "kind": "USER_CLI",
+   "reaches": "MODULE_LEVEL",
+   "chain": [
+    "tools/export_round6e.py",
+    "tools/run_round6e.py",
+    "engine/cad_adapter.py"
+   ],
+   "guarded": true,
+   "behaviour": "refuses (exit 2) without --allow-legacy-cad-adapter / URBAN_ALLOW_LEGACY_CAD_ADAPTER=1"
+  },
+  {
+   "entry_point": "tools/run_cad_pipeline.py",
+   "kind": "USER_CLI",
+   "reaches": "MODULE_LEVEL",
+   "chain": [
+    "tools/run_cad_pipeline.py",
+    "engine/cad_adapter.py"
+   ],
+   "guarded": true,
+   "behaviour": "refuses (exit 2) without --allow-legacy-cad-adapter / URBAN_ALLOW_LEGACY_CAD_ADAPTER=1"
+  },
+  {
+   "entry_point": "tools/run_e1.py",
+   "kind": "USER_CLI",
+   "reaches": "MODULE_LEVEL",
+   "chain": [
+    "tools/run_e1.py",
+    "engine/cad_adapter.py"
+   ],
+   "guarded": true,
+   "behaviour": "refuses (exit 2) without --allow-legacy-cad-adapter / URBAN_ALLOW_LEGACY_CAD_ADAPTER=1"
+  },
+  {
+   "entry_point": "tools/run_e1_1.py",
+   "kind": "USER_CLI",
+   "reaches": "MODULE_LEVEL",
+   "chain": [
+    "tools/run_e1_1.py",
+    "engine/cad_adapter.py"
+   ],
+   "guarded": true,
+   "behaviour": "refuses (exit 2) without --allow-legacy-cad-adapter / URBAN_ALLOW_LEGACY_CAD_ADAPTER=1"
+  },
+  {
+   "entry_point": "tools/run_e1_2.py",
+   "kind": "USER_CLI",
+   "reaches": "MODULE_LEVEL",
+   "chain": [
+    "tools/run_e1_2.py",
+    "engine/cad_adapter.py"
+   ],
+   "guarded": true,
+   "behaviour": "refuses (exit 2) without --allow-legacy-cad-adapter / URBAN_ALLOW_LEGACY_CAD_ADAPTER=1"
+  },
+  {
+   "entry_point": "tools/run_e1_3.py",
+   "kind": "USER_CLI",
+   "reaches": "MODULE_LEVEL",
+   "chain": [
+    "tools/run_e1_3.py",
+    "tools/run_e1_2.py",
+    "engine/cad_adapter.py"
+   ],
+   "guarded": true,
+   "behaviour": "refuses (exit 2) without --allow-legacy-cad-adapter / URBAN_ALLOW_LEGACY_CAD_ADAPTER=1"
+  },
+  {
+   "entry_point": "tools/run_e1_4.py",
+   "kind": "USER_CLI",
+   "reaches": "MODULE_LEVEL",
+   "chain": [
+    "tools/run_e1_4.py",
+    "tools/run_e1_2.py",
+    "engine/cad_adapter.py"
+   ],
+   "guarded": true,
+   "behaviour": "refuses (exit 2) without --allow-legacy-cad-adapter / URBAN_ALLOW_LEGACY_CAD_ADAPTER=1"
+  },
+  {
+   "entry_point": "tools/run_round6c.py",
+   "kind": "USER_CLI",
+   "reaches": "MODULE_LEVEL",
+   "chain": [
+    "tools/run_round6c.py",
+    "engine/cad_adapter.py"
+   ],
+   "guarded": true,
+   "behaviour": "refuses (exit 2) without --allow-legacy-cad-adapter / URBAN_ALLOW_LEGACY_CAD_ADAPTER=1"
+  },
+  {
+   "entry_point": "tools/run_round6d.py",
+   "kind": "USER_CLI",
+   "reaches": "MODULE_LEVEL",
+   "chain": [
+    "tools/run_round6d.py",
+    "engine/cad_adapter.py"
+   ],
+   "guarded": true,
+   "behaviour": "refuses (exit 2) without --allow-legacy-cad-adapter / URBAN_ALLOW_LEGACY_CAD_ADAPTER=1"
+  },
+  {
+   "entry_point": "tools/run_round6e.py",
+   "kind": "USER_CLI",
+   "reaches": "MODULE_LEVEL",
+   "chain": [
+    "tools/run_round6e.py",
+    "engine/cad_adapter.py"
+   ],
+   "guarded": true,
+   "behaviour": "refuses (exit 2) without --allow-legacy-cad-adapter / URBAN_ALLOW_LEGACY_CAD_ADAPTER=1"
+  },
+  {
+   "entry_point": "tools/run_supervised_benchmark.py",
+   "kind": "USER_CLI",
+   "reaches": "MODULE_LEVEL",
+   "chain": [
+    "tools/run_supervised_benchmark.py",
+    "engine/cad_adapter.py"
+   ],
+   "guarded": true,
+   "behaviour": "refuses (exit 2) without --allow-legacy-cad-adapter / URBAN_ALLOW_LEGACY_CAD_ADAPTER=1"
+  },
+  {
+   "entry_point": "tools/scan_vertical_evidence.py",
+   "kind": "USER_CLI",
+   "reaches": "LAZY",
+   "chain": [
+    "tools/scan_vertical_evidence.py",
+    "engine/cad_adapter.py"
+   ],
+   "guarded": true,
+   "behaviour": "refuses (exit 2) without --allow-legacy-cad-adapter / URBAN_ALLOW_LEGACY_CAD_ADAPTER=1"
+  },
+  {
+   "entry_point": "engine.ingest.harness",
+   "kind": "LIBRARY",
+   "reaches": "MODULE_LEVEL",
+   "chain": [
+    "engine/ingest/harness.py",
+    "engine/cad_adapter.py"
+   ],
+   "guarded": false,
+   "behaviour": "imported by research PA05/PA07/PA08 runners and their tests; not a user command - left unguarded so historical reproductions keep working; any new CLI over it must call the guard"
+  },
+  {
+   "entry_point": "engine.freeze_manifest",
+   "kind": "LIBRARY_LAZY",
+   "reaches": "LAZY",
+   "chain": [
+    "engine/freeze_manifest.py",
+    "engine/cad_adapter.py"
+   ],
+   "guarded": false,
+   "behaviour": "function-level import used to hash historical freezes; no measurement"
+  },
+  {
+   "entry_point": "RC1 Qortuba (rc1_qortuba)",
+   "kind": "REFERENCE_UNCHANGED",
+   "reaches": "MODULE_LEVEL",
+   "chain": [
+    "research/external_engine_lab/rc1_qortuba.py",
+    "research/external_engine_lab/r8_20_qortuba.py",
+    "research/external_engine_lab/r8_19_registers.py",
+    "research/external_engine_lab/r8_18_registers.py",
+    "research/external_engine_lab/r8_18_qortuba.py",
+    "research/external_engine_lab/r8_18_blind.py",
+    "research/external_engine_lab/r8_14_qortuba.py",
+    "research/external_engine_lab/r8_8_topology.py",
+    "research/external_engine_lab/r8_7_canonical.py",
+    "engine/cad_adapter.py"
+   ],
+   "guarded": false,
+   "behaviour": "RC1_REFERENCE is never patched: it imports cad_adapter dataclasses via r8_7_canonical but measures through K1 / K2; Qortuba outputs are regression-tested unchanged"
+  }
+ ],
+ "user_cli_total": 17,
+ "user_cli_guarded": 17,
+ "rule": "a user-facing command that can reach the legacy adapter refuses without an explicit opt-in; historical code is not deleted"
+}

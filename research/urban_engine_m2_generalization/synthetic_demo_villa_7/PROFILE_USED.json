@@ -1,0 +1,31 @@
+{
+ "profile": "SYNTHETIC_7",
+ "confirmed_by": "synthetic generator (printed levels)",
+ "manual_inputs": 2,
+ "conventions": [
+  {
+   "id": "STOREY_HEIGHT_GF",
+   "title": "Storey height GF",
+   "kind": "number",
+   "unit": "m",
+   "base": 4.0,
+   "low": 4.0,
+   "high": 4.0,
+   "provenance": "PRINTED_VALUE",
+   "source": "synthetic section",
+   "rationale": "printed floor to floor"
+  },
+  {
+   "id": "STOREY_HEIGHT_1F",
+   "title": "Storey height 1F",
+   "kind": "number",
+   "unit": "m",
+   "base": 3.6,
+   "low": 3.6,
+   "high": 3.6,
+   "provenance": "PRINTED_VALUE",
+   "source": "synthetic section",
+   "rationale": "printed floor to floor"
+  }
+ ]
+}

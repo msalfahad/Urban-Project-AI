@@ -1,0 +1,25 @@
+{
+ "SCHEMA": "URBAN_OWNER_UNIT_CLAIMS_V1",
+ "policy": "URBAN_FRAME_RELEASE_V3 (H3): a HUMAN_CONFIRMATION is versioned evidence for one exact source hash and coordinate space. It is added BESIDE the source declaration evidence (INSUNITS), never in place of it, and is never applied to another source or project. A correction is a new claim that supersedes this one; nothing is erased.",
+ "claims": [
+  {
+   "evidence_id": "QORTUBA-NATIVE-UNIT-OWNER-001",
+   "version": 1,
+   "project": "QORTUBA",
+   "source_sha256": "2ec3a9c8b66eb2e129275b87010f4a8d79d7e5bdcc31c1897c14fd7e5647d355",
+   "coordinate_space_id": "MODEL_SPACE",
+   "claim_scope": ["MODEL_SPACE"],
+   "question": "NATIVE_UNIT",
+   "unit": "cm",
+   "native_to_mm": 10.0,
+   "statement": "1 drawing unit = 1 centimetre",
+   "author": "Mohammad",
+   "author_role": "PROJECT_OWNER",
+   "timestamp": "2026-10-01",
+   "channel": "explicit owner message in the R8.6 working session (OWNER INPUT UPDATE - QORTUBA)",
+   "supersedes": null,
+   "source_declaration_kept": "MODEL_SPACE:INSUNITS:LIBREDWG (UNIT_HEADER_DECLARATION, 10.0 mm per unit)",
+   "not_transferable_to": ["P7757", "ALRASHED", "any other project or source hash"]
+  }
+ ]
+}

@@ -1,0 +1,186 @@
+{
+ "adapter": null,
+ "as_of": "2026-10-10",
+ "concrete_rc": {
+  "N_PROVISIONAL": 359,
+  "N_UNRESOLVED": 56,
+  "N_UNRESOLVED_WITH_EXPOSURE": 16,
+  "N_VERIFIED": 0,
+  "PLANNING_BASE": 263.43482212766685,
+  "PLANNING_HIGH": 279.2867043558011,
+  "PLANNING_LOW": 262.3620768137709,
+  "PROVISIONAL_BASE": 263.43482212766685,
+  "PROVISIONAL_HIGH": 279.2867043558011,
+  "PROVISIONAL_LOW": 262.3620768137709,
+  "UNRESOLVED_EXPOSURE_HIGH": 8.90654934948322,
+  "UNRESOLVED_EXPOSURE_LOW": 4.165820697259745,
+  "VERIFIED": 0.0
+ },
+ "conventions": {
+  "digest": "739a2e7cfb6d3ec00d05d48531de14a13f881c0006f9c25964954cb9777923e5",
+  "n": 24,
+  "overrides": {},
+  "set": "URBAN_M2_GENERIC_CONVENTIONS_V1+ST7757_PROFILE_V1"
+ },
+ "coverage_risk_by_kind": {
+  "BAND_MULTIPLE_MARKS": 1,
+  "BAND_UNBOUND": 15,
+  "FAMILY_NOT_QUANTIFIED": 6,
+  "FOOTING_NO_OUTLINE": 4,
+  "MARK_AMBIGUOUS": 4,
+  "MARK_TAG_UNBOUND": 7,
+  "OPENING_DEDUCTED": 5,
+  "SCHEDULE_DUPLICATE_MARK": 1,
+  "SCHEDULE_ROW_NOT_FOUND_ON_PLAN": 39,
+  "SLAB_OPEN_BOUNDARY_FACE": 1,
+  "SLAB_UNENCLOSED_BAND_SIDE": 2
+ },
+ "exceptions_by_kind": {
+  "COVERAGE_RISK:BAND_MULTIPLE_MARKS": 1,
+  "COVERAGE_RISK:BAND_UNBOUND": 15,
+  "COVERAGE_RISK:FAMILY_NOT_QUANTIFIED": 6,
+  "COVERAGE_RISK:FOOTING_NO_OUTLINE": 4,
+  "COVERAGE_RISK:MARK_AMBIGUOUS": 4,
+  "COVERAGE_RISK:MARK_TAG_UNBOUND": 7,
+  "COVERAGE_RISK:OPENING_DEDUCTED": 5,
+  "COVERAGE_RISK:SCHEDULE_DUPLICATE_MARK": 1,
+  "COVERAGE_RISK:SCHEDULE_ROW_NOT_FOUND_ON_PLAN": 39,
+  "COVERAGE_RISK:SLAB_OPEN_BOUNDARY_FACE": 1,
+  "COVERAGE_RISK:SLAB_UNENCLOSED_BAND_SIDE": 2,
+  "LOW_CONFIDENCE_PROVISIONAL": 158,
+  "UNRESOLVED": 56
+ },
+ "frozen_manifests_verified": [],
+ "inputs": [
+  {
+   "bytes": 3153037,
+   "file": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079.dxf",
+   "kind": "DXF",
+   "sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079"
+  }
+ ],
+ "n_exceptions": 299,
+ "n_items": 952,
+ "not_detected_families": {
+  "CANTILEVER_PORTIONS": "NO_LABEL_FOUND",
+  "COLUMN_NECKS": "NO_LABEL_FOUND",
+  "DOMES": "LABELS_FOUND",
+  "LIFT": "NO_LABEL_FOUND",
+  "LINTELS": "NO_LABEL_FOUND",
+  "PARAPETS": "LABELS_FOUND",
+  "PLAIN_CONCRETE": "LABELS_FOUND",
+  "POOL": "LABELS_FOUND",
+  "STAIRS": "LABELS_FOUND",
+  "WALLS": "NO_LABEL_FOUND",
+  "WATER_TANK": "LABELS_FOUND"
+ },
+ "plain_concrete": {},
+ "policy": "URBAN_BOQ_M2",
+ "project": "ST7757 villa (structural set)",
+ "rebar_completeness": {
+  "MISSING_DATA": 161,
+  "PROVISIONAL_MODEL": 254
+ },
+ "route": "G_GENERIC_ENGINE",
+ "rule": "planning = verified + provisional base; low / high sum each item's own low / high; unresolved items and not-detected families are never added; a new project is never VERIFIED",
+ "sheets": [
+  {
+   "role": "DETAIL",
+   "sheet_id": "SH01",
+   "storey": "ALL"
+  },
+  {
+   "role": "SLAB_PLAN",
+   "sheet_id": "SH02",
+   "storey": "2F"
+  },
+  {
+   "role": "SCHEDULE",
+   "sheet_id": "SH03",
+   "storey": "ALL"
+  },
+  {
+   "role": "SLAB_PLAN",
+   "sheet_id": "SH04",
+   "storey": "1F"
+  },
+  {
+   "role": "SCHEDULE",
+   "sheet_id": "SH05",
+   "storey": "ALL"
+  },
+  {
+   "role": "SLAB_PLAN",
+   "sheet_id": "SH06",
+   "storey": "GF"
+  },
+  {
+   "role": "SCHEDULE",
+   "sheet_id": "SH07",
+   "storey": "ALL"
+  },
+  {
+   "role": "GROUND_BEAM_PLAN",
+   "sheet_id": "SH08",
+   "storey": "GROUND"
+  },
+  {
+   "role": "SCHEDULE",
+   "sheet_id": "SH09",
+   "storey": "ALL"
+  },
+  {
+   "role": "FOUNDATION_PLAN",
+   "sheet_id": "SH10",
+   "storey": "FOUNDATION"
+  },
+  {
+   "role": "SCHEDULE",
+   "sheet_id": "SH11",
+   "storey": "ALL"
+  },
+  {
+   "role": "COLUMN_PLAN",
+   "sheet_id": "SH12",
+   "storey": "ALL"
+  }
+ ],
+ "steel_t": {
+  "PLANNING_BASE": 19.74094065600207,
+  "PLANNING_HIGH": 21.070690515484298,
+  "PLANNING_LOW": 17.918172983916598,
+  "VERIFIED": 0.0
+ },
+ "totals": {
+  "CONCRETE": {
+   "N_PROVISIONAL": 359,
+   "N_UNRESOLVED": 56,
+   "N_UNRESOLVED_WITH_EXPOSURE": 16,
+   "N_VERIFIED": 0,
+   "PLANNING_BASE": 263.43482212766685,
+   "PLANNING_HIGH": 279.2867043558011,
+   "PLANNING_LOW": 262.3620768137709,
+   "PROVISIONAL_BASE": 263.43482212766685,
+   "PROVISIONAL_HIGH": 279.2867043558011,
+   "PROVISIONAL_LOW": 262.3620768137709,
+   "UNRESOLVED_EXPOSURE_HIGH": 8.90654934948322,
+   "UNRESOLVED_EXPOSURE_LOW": 4.165820697259745,
+   "VERIFIED": 0.0
+  },
+  "REINFORCEMENT": {
+   "N_PROVISIONAL": 537,
+   "N_UNRESOLVED": 0,
+   "N_UNRESOLVED_WITH_EXPOSURE": 0,
+   "N_VERIFIED": 0,
+   "PLANNING_BASE": 19740.94065600207,
+   "PLANNING_HIGH": 21070.690515484297,
+   "PLANNING_LOW": 17918.172983916596,
+   "PROVISIONAL_BASE": 19740.94065600207,
+   "PROVISIONAL_HIGH": 21070.690515484297,
+   "PROVISIONAL_LOW": 17918.172983916596,
+   "UNRESOLVED_EXPOSURE_HIGH": null,
+   "UNRESOLVED_EXPOSURE_LOW": null,
+   "VERIFIED": 0.0
+  }
+ }
+}

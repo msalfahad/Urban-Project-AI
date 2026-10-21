@@ -1,0 +1,48 @@
+# Interpreter: Python 3.11 (see .python-version). The frozen research builders are byte-reproducible on 3.11 only:
+# from 3.12 `sum()` is compensated and some rebuild tests differ by one ulp (T-002a, T-020).
+#   uv venv -p python3.11 .venv && uv pip install -p .venv/bin/python -r requirements.txt
+#   or: python3.11 -m venv .venv && .venv/bin/python -m pip install -r requirements.txt
+#
+# Every third-party package that tracked code under engine/, tools/, tests/, agents/, documents/, social/ and the
+# research builders the tests re-run imports at module level (T-021, AST scan of `git ls-files '*.py'`).
+# Exact pins = research/environment_recovery/requirements-lock.proposed.txt, the versions that reproduced every frozen
+# Alsenan stage; fixed versions keep frozen outputs byte-identical.
+
+# Test runner
+pytest==9.1.1
+pip                     # tools/freeze_verify.py runs `python -m pip freeze --all` (uv venvs ship without pip)
+
+# Geometry and CAD
+shapely==2.2.0          # GEOS: the geometry kernel. This project does NOT own one -- noding, union, difference,
+                        # polygonization, validity, containment and overlap are library operations
+                        # (engine/wall_solid.py, engine/free_space.py).
+ezdxf==1.4.4            # DXF reading (engine, tools, tests, research builders)
+numpy==2.4.6
+scipy==1.17.1
+
+# PDF and images
+pymupdf==1.28.2         # imported as `pymupdf` / `fitz`: PDF vectors and page rendering (engine, tools, tests).
+                        # LICENCE NOTE (lead): PyMuPDF is AGPL-3.0 / commercial; docs/agents/PLAN_READER.md avoids it.
+                        # Listed because current code imports it; not removed here.
+pypdf==6.19.0
+pillow==12.3.0          # PIL
+matplotlib==3.11.2      # research builders' figures, re-run by tests
+
+# Workbooks and documents
+openpyxl==3.1.5         # reading / writing .xlsx takeoff and BOQ workbooks
+Jinja2==3.1.6           # documents/ and social/ (brings markupsafe)
+python-barcode==0.16.1  # Code 128 reference barcode on the letterhead
+
+# Claude API client: agents/base.py and tools import it; tests use a stub model (no key, no network)
+anthropic==1.12.1
+
+# Pinned transitive packages (from the lock; not imported directly)
+cffi==2.1.1
+cryptography==50.0.2
+fonttools==4.66.1
+
+# Optional, imported lazily inside one function, only for live use (not needed for tests):
+#   firebase-admin>=7   # engine/pm_sync.py, tools/connect_firestore.py, tools/firestore_sandbox.py
+#   playwright>=1.40    # printing documents to PDF with Chromium (documents/render.py, engine/reporting_v2|v3/pdf.py,
+#                       # social/render.py)
+#   xlrd                # legacy .xls benchmark readers under research/qs_wall_treatment_01, research/external_engine_lab

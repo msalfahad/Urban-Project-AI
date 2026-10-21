@@ -1,0 +1,259 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_B1_BENCHMARK_SOURCE_MANIFEST_V1",
+ "reader_policy": {
+  "id": "ALSENAN_B1_BENCHMARK_READER_V1",
+  "origin": "BENCHMARK",
+  "files": {
+   "FIN": "de448191fb9d0ababd33298289047c610366aba23912499c280146100be1151a",
+   "BLK": "873308bb6a3c99fd49332d6db881c41f51c94412a1caed986fe5d4a25179175d",
+   "PNT": "d1b459e531d78767041fe43a1ffa2f4560ad99939793044bfcbd1dbd13fa68f1",
+   "RC": "ae608411ed5b9e64811a15c353adbdd017fa3e51abfdffcf0aa1454b85d1957c",
+   "ALU": "7826608fc716ca0cdcd587aaf5ff9dd003d6968d6f77bca3289819844b2703e4",
+   "PLS": "bf6e3123b988534dafcc488978eb8371e4f07a5f52857d01eb472db1aed22121",
+   "WEB": "e92938e9b8df6f336a3b74ccf7962d1245f2e46e6d3645a71e95be6800ebc3bb"
+  },
+  "rules": [
+   "hash before read",
+   "every non-empty row kept raw (cell refs, Arabic, values, formulas)",
+   "header rows set section / floor context",
+   "total rows kept and marked, never mixed with details",
+   "no benchmark value changed; original description and unit kept"
+  ],
+  "digest": "96ad817593c1ded7cbd4e324fcc8e01cccd7d3e3c3350239ecdca6d69b67b31f"
+ },
+ "files": [
+  {
+   "key": "FIN",
+   "filename": "d901e652-____________________________1.xlsx",
+   "type": "xlsx",
+   "size_bytes": 23654476,
+   "sha256": "de448191fb9d0ababd33298289047c610366aba23912499c280146100be1151a",
+   "hash_verified": true,
+   "kind": "FREELANCER_MANUAL_QS",
+   "family": "FINISHES",
+   "title_en": "floors, waterproofing, gypsum decor and railing",
+   "language": "Arabic (labels), English (codes)",
+   "discipline": "ARCHITECTURAL",
+   "sheets_or_pages": [
+    {
+     "sheet": "الغلاف",
+     "max_row": 42,
+     "max_column": 10
+    },
+    {
+     "sheet": "العازل",
+     "max_row": 205,
+     "max_column": 14
+    },
+    {
+     "sheet": "رخام+حوش",
+     "max_row": 200,
+     "max_column": 14
+    },
+    {
+     "sheet": "ديكور",
+     "max_row": 228,
+     "max_column": 14
+    },
+    {
+     "sheet": "سيراميك",
+     "max_row": 226,
+     "max_column": 14
+    }
+   ],
+   "formulas": "LIVE (xlsx)"
+  },
+  {
+   "key": "BLK",
+   "filename": "5aab715f-_______.xlsx",
+   "type": "xlsx",
+   "size_bytes": 6164004,
+   "sha256": "873308bb6a3c99fd49332d6db881c41f51c94412a1caed986fe5d4a25179175d",
+   "hash_verified": true,
+   "kind": "FREELANCER_MANUAL_QS",
+   "family": "BLOCKWORK",
+   "title_en": "blockwork",
+   "language": "Arabic (labels), English (codes)",
+   "discipline": "ARCHITECTURAL",
+   "sheets_or_pages": [
+    {
+     "sheet": "الغلاف",
+     "max_row": 21,
+     "max_column": 9
+    },
+    {
+     "sheet": "الكميات",
+     "max_row": 230,
+     "max_column": 15
+    }
+   ],
+   "formulas": "LIVE (xlsx)"
+  },
+  {
+   "key": "PNT",
+   "filename": "e1c1f202-_____.xls",
+   "type": "xls",
+   "size_bytes": 106496,
+   "sha256": "d1b459e531d78767041fe43a1ffa2f4560ad99939793044bfcbd1dbd13fa68f1",
+   "hash_verified": true,
+   "kind": "FREELANCER_MANUAL_QS",
+   "family": "PAINT",
+   "title_en": "paint",
+   "language": "Arabic (labels), English (codes)",
+   "discipline": "ARCHITECTURAL",
+   "sheets_or_pages": [
+    {
+     "sheet": "البيــــــــــــان",
+     "max_row": 75,
+     "max_column": 86
+    },
+    {
+     "sheet": "فاتورة كبــــــيرة",
+     "max_row": 39,
+     "max_column": 9
+    },
+    {
+     "sheet": "الفاتورة",
+     "max_row": 22,
+     "max_column": 9
+    }
+   ],
+   "formulas": "VALUES_ONLY (BIFF xls)"
+  },
+  {
+   "key": "RC",
+   "filename": "d025d9f0-_________________1.xlsx",
+   "type": "xlsx",
+   "size_bytes": 49706,
+   "sha256": "ae608411ed5b9e64811a15c353adbdd017fa3e51abfdffcf0aa1454b85d1957c",
+   "hash_verified": true,
+   "kind": "FREELANCER_MANUAL_QS",
+   "family": "CONCRETE",
+   "title_en": "reinforced concrete",
+   "language": "Arabic (labels), English (codes)",
+   "discipline": "STRUCTURAL",
+   "sheets_or_pages": [
+    {
+     "sheet": "ورقة1",
+     "max_row": 36,
+     "max_column": 10
+    },
+    {
+     "sheet": "القواعد",
+     "max_row": 36,
+     "max_column": 9
+    },
+    {
+     "sheet": "الشناجات",
+     "max_row": 19,
+     "max_column": 9
+    },
+    {
+     "sheet": "الحوائط + الأعمدة",
+     "max_row": 83,
+     "max_column": 9
+    },
+    {
+     "sheet": "كمرات",
+     "max_row": 161,
+     "max_column": 9
+    },
+    {
+     "sheet": "بلاطات ",
+     "max_row": 27,
+     "max_column": 11
+    },
+    {
+     "sheet": "السلم",
+     "max_row": 49,
+     "max_column": 9
+    },
+    {
+     "sheet": "حمام السباحة",
+     "max_row": 37,
+     "max_column": 9
+    }
+   ],
+   "formulas": "LIVE (xlsx)"
+  },
+  {
+   "key": "ALU",
+   "filename": "64f4b7fc-__________.xlsx",
+   "type": "xlsx",
+   "size_bytes": 6152749,
+   "sha256": "7826608fc716ca0cdcd587aaf5ff9dd003d6968d6f77bca3289819844b2703e4",
+   "hash_verified": true,
+   "kind": "FREELANCER_MANUAL_QS",
+   "family": "ALUMINIUM",
+   "title_en": "aluminium",
+   "language": "Arabic (labels), English (codes)",
+   "discipline": "ARCHITECTURAL",
+   "sheets_or_pages": [
+    {
+     "sheet": "الغلاف",
+     "max_row": 27,
+     "max_column": 9
+    },
+    {
+     "sheet": "الكميات",
+     "max_row": 59,
+     "max_column": 15
+    }
+   ],
+   "formulas": "LIVE (xlsx)"
+  },
+  {
+   "key": "PLS",
+   "filename": "563d9805-______________________.xls",
+   "type": "xls",
+   "size_bytes": 117248,
+   "sha256": "bf6e3123b988534dafcc488978eb8371e4f07a5f52857d01eb472db1aed22121",
+   "hash_verified": true,
+   "kind": "FREELANCER_MANUAL_QS",
+   "family": "PLASTER",
+   "title_en": "internal and external plaster",
+   "language": "Arabic (labels), English (codes)",
+   "discipline": "ARCHITECTURAL",
+   "sheets_or_pages": [
+    {
+     "sheet": "البيــــــــــــان",
+     "max_row": 97,
+     "max_column": 86
+    },
+    {
+     "sheet": "فاتورة كبــــــيرة",
+     "max_row": 39,
+     "max_column": 9
+    },
+    {
+     "sheet": "الفاتورة",
+     "max_row": 31,
+     "max_column": 9
+    }
+   ],
+   "formulas": "VALUES_ONLY (BIFF xls)"
+  },
+  {
+   "key": "WEB",
+   "filename": "01e19893-Alsenan_Chalet_by_category.pdf",
+   "type": "pdf",
+   "size_bytes": 119969,
+   "sha256": "e92938e9b8df6f336a3b74ccf7962d1245f2e46e6d3645a71e95be6800ebc3bb",
+   "hash_verified": true,
+   "kind": "WEB_APP_COMMERCIAL_REPORT",
+   "family": "WEB_APP",
+   "title_en": "Alsenan Chalet - Cost By Category",
+   "language": "Arabic (labels), English (codes)",
+   "discipline": "COMMERCIAL",
+   "sheets_or_pages": {
+    "pages": 8
+   },
+   "formulas": "TEXT LAYER (pdf)"
+  }
+ ],
+ "immutability": "files are read from a read-only pinned copy; every run re-hashes and fails closed on mismatch; the binaries are not committed",
+ "not_used": [
+  "the older web-app PDF 737b63b5 (different hash)",
+  "any other upload"
+ ]
+}

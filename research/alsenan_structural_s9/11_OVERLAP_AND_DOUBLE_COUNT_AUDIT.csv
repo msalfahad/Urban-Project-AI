@@ -1,0 +1,17 @@
+CHECK_ID,SUBJECT,FAMILIES,RULE,EVIDENCE,RESULT
+O-01,footing outlines F9 / FN overlap 0.14 m2,FOOTINGS,max shared prism (plan x shallower depth) deducted from FN once,"{""FTG-FN-28608-17612"": [{""depth_m"": 0.3, ""max_m3"": 0.042, ""plan_m2"": 0.14, ""with"": ""FTG-F9-25608-15262""}]}",PASS
+O-02,lift footing FF vs the lift family (S8.8),FOOTINGS / LIFT,FF counted once in the footing family; S8.8's LIFT-01-FTG and PIT-BASE are references,FF lane RELEASED_S9_DELTA 11.385 m3,PASS
+O-03,slab plates vs beams,SLABS / BEAMS,S1 panels lie between the drawn beam / column faces; beams are measured full depth between faces (conditional),convention S9-MC1,PASS
+O-04,columns vs beams and slabs (joints),COLUMNS / BEAMS / SLABS,the column owns its footprint over the full storey (the joint); beams stop at the column face; panels exclude column outlines,S9-MC1,PASS
+O-05,ground beams vs footings,GROUND_BEAMS / FOOTINGS,no shared volume: founding <= -1.50 and footing depth <= 0.70 put the footing top <= -0.80; the beam top is the GF slab (+1.00 less build-up) and its depth <= 1.00,levels,PASS
+O-06,ground beams vs the ground slab,GROUND_BEAMS / GROUND_SLAB,S8.1 cells are the faces between the ground-beam bands,S8.1 03 PLAN_AUTHORITY,PASS
+O-07,water-tank roof panels,WATER_TANK_ROOF / SLABS,SP-2F_ROOF_SLAB-01 / -02 owned by S8.4; never in the slab release,"['SP-2F_ROOF_SLAB-01', 'SP-2F_ROOF_SLAB-02'] in slab release: False",PASS
+O-08,dome zones and ring bands,DOMES / SLABS / BEAMS,DOME_ZONE panels and the eight ring bands (S8.3-T01..T08) belong to S8.3,transfers 8,PASS
+O-09,stair zones,STAIRS / SLABS / BEAMS,STAIR_FLIGHT / STAIR_IN_VOID panels belong to S8.7; the B20 / B23 overlap zones are beam concrete (S8.7 / S8.7B NET excludes them),S8.7 / S8.7B,PASS
+O-10,lintels vs beams,LINTELS / BEAMS,S8.6A re-owned the one shared corner (LT-OP-1F-017 / -018),"[{""corrected_owner"": ""LT-OP-1F-018"", ""frozen_owner"": ""LT-OP-1F-017"", ""m3"": 0.0045, ""pair"": [""LT-OP-1F-017"", ""LT-OP-1F-018""]}]",PASS
+O-11,special columns,COLUMNS / BEAMS,"S8.5 adds no concrete and no bars: the turned, dead and planted columns are S1 / S2 column occurrences; their extra bars are S3.1 (TC 2 x 12.642 kg) and S6.1 (PC-548 12.010 kg)","{""TC-31F-05"": 12.642, ""TC-324-05"": 12.642}",PASS
+O-12,slab bars next to the S8 families,SLABS / S8,"S7 keeps the tank-adjacent (20.087 kg), dome-adjacent (43.113 kg) and stair-adjacent (71.895 kg) bars; the S8 stages never re-count them",S7 excluded S8 items 47,PASS
+O-13,footing mats vs column starters,FOOTINGS / COLUMNS,"different bars (S4 mats, S3.1 starters); the FF starters 85.271 kg are S3.1 PROVISIONAL (not released)",S8.8 OV-10 / OV-11,PASS
+O-14,lift pit walls vs columns / ground beams / ground slab,LIFT,S8.8 OV-01..OV-07 pass; walls stay blocked,S8.8 11,PASS
+O-15,superseded figures never added,LINTELS / GROUND_BEAMS / BEAMS / COLUMNS,"S8.6 -> S8.6A, S5.1 / S6.1 link paths -> D1.1, AD1 bars, S3 -> S3.1 -> S9-C01: one authoritative value each (04)",04,PASS
+O-16,a component in two families,ALL,every concrete component id has exactly one owner,0 ids with two owners,PASS

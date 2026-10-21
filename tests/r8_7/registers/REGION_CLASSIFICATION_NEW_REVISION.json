@@ -1,0 +1,58 @@
+{
+ "SCHEMA": "URBAN_R8_7_REGION_CLASSIFICATION_V1",
+ "revision": "QORTUBA_REV_NEW",
+ "dxf_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+ "frames": {
+  "PLAN_VARIANT_4_SELECTED": {
+   "frame_occurrence": "156",
+   "extent": [
+    108360.1146563,
+    13671.64751193179,
+    112440.1146563,
+    16521.64751193179
+   ]
+  },
+  "PLAN_VARIANT_3": {
+   "frame_occurrence": "4713",
+   "extent": [
+    108184.3426826965,
+    17964.38800850303,
+    112264.3426826965,
+    20814.38800850303
+   ]
+  },
+  "PLAN_VARIANT_2": {
+   "frame_occurrence": "9244",
+   "extent": [
+    108264.3426826965,
+    21781.10436881724,
+    112344.3426826965,
+    24631.10436881724
+   ]
+  },
+  "PLAN_VARIANT_1": {
+   "frame_occurrence": "13728",
+   "extent": [
+    108279.8066243163,
+    25507.8166811322,
+    112359.8066243163,
+    28357.8166811322
+   ]
+  }
+ },
+ "counts": {
+  "ALTERNATE_PLAN_VARIANT:dimensions": 300,
+  "ALTERNATE_PLAN_VARIANT:parts": 3358,
+  "ALTERNATE_PLAN_VARIANT:texts": 183,
+  "ANNOTATION:dimensions": 1325,
+  "ANNOTATION:texts": 897,
+  "BLOCK_SAMPLE:parts": 725348,
+  "OUTSIDE_SELECTED_MEASUREMENT_REGION:parts": 56,
+  "SELECTED_MEASUREMENT_REGION:dimensions": 102,
+  "SELECTED_MEASUREMENT_REGION:parts": 1363,
+  "SELECTED_MEASUREMENT_REGION:texts": 61
+ },
+ "occurrences_split_by_the_selected_frame": [],
+ "DETAIL": "no record is classified DETAIL: the file carries no evidence (title or detail marker) that identifies a detail drawing; such content falls under OUTSIDE / BLOCK_SAMPLE / ANNOTATION",
+ "rule": "only SELECTED_MEASUREMENT_REGION enters the selected apartment takeoff; nothing is deleted"
+}

@@ -1,0 +1,20 @@
+flag_id,occurrence_id,mark,flag,effect_on_release
+FLAG-001,FOCC-1666,F4,SEVERAL_COLUMNS C4/CN,NONE (comparison / information)
+FLAG-002,FOCC-166B,F3,"REFERENCE_COUNT_DISAGREEMENT OQ-11 (external reference only; project drawing establishes this occurrence) - comparison flag, not a release condition",NONE (comparison / information)
+FLAG-003,FOCC-166C,F3,"REFERENCE_COUNT_DISAGREEMENT OQ-11 (external reference only; project drawing establishes this occurrence) - comparison flag, not a release condition",NONE (comparison / information)
+FLAG-004,FOCC-180C,FN,OUTLINE_OVERLAP_0.14_M2 (S1 FOOTING_OUTLINES_OVERLAP 180F / 180C) - no rebar effect,NONE (comparison / information)
+FLAG-005,FOCC-180F,F9,OUTLINE_OVERLAP_0.14_M2 (S1 FOOTING_OUTLINES_OVERLAP 180F / 180C) - no rebar effect,NONE (comparison / information)
+FLAG-006,FOCC-1ABF,F12,SEVERAL_COLUMNS C3/C7,NONE (comparison / information)
+FLAG-007,FOCC-1ADB,F13,SEVERAL_COLUMNS C11/C5,NONE (comparison / information)
+FLAG-008,FOCC-1B1A,F14,SEVERAL_COLUMNS C3/C8,NONE (comparison / information)
+FLAG-009,FOCC-1B1B,F|F10,SEVERAL_COLUMNS C/C10,NONE (comparison / information)
+FLAG-010,FOCC-1B1B,F|F10,"SOURCE_CONFLICT F/F10: hypotheses {2 x F, F10, drawn outline}; none enters the accurate BOQ",BLOCKS_OCCURRENCE
+FLAG-011,FOCC-1B24,F8,SEVERAL_COLUMNS C3/C8/CN,NONE (comparison / information)
+FLAG-012,FOCC-1B2B,FF,SEVERAL_COLUMNS C1/C2/C9,NONE (comparison / information)
+FLAG-013,,F8,OQ-4 open (donor audit): do two-layer footings carry boxed bars? The schedule BOXED column holds TOP/BOT labels for this row (pre-S4 03) -> BOXED NOT_APPLICABLE,NONE until answered
+FLAG-014,,F12,OQ-4 open (donor audit): do two-layer footings carry boxed bars? The schedule BOXED column holds TOP/BOT labels for this row (pre-S4 03) -> BOXED NOT_APPLICABLE,NONE until answered
+FLAG-015,,F13,OQ-4 open (donor audit): do two-layer footings carry boxed bars? The schedule BOXED column holds TOP/BOT labels for this row (pre-S4 03) -> BOXED NOT_APPLICABLE,NONE until answered
+FLAG-016,,F14,OQ-4 open (donor audit): do two-layer footings carry boxed bars? The schedule BOXED column holds TOP/BOT labels for this row (pre-S4 03) -> BOXED NOT_APPLICABLE,NONE until answered
+FLAG-017,,FF,OQ-4 open (donor audit): do two-layer footings carry boxed bars? The schedule BOXED column holds TOP/BOT labels for this row (pre-S4 03) -> BOXED NOT_APPLICABLE,NONE until answered
+FLAG-018,,F10,schedule row with no own plan occurrence (DEFINED_CONFLICT_CANDIDATE_ONLY) - no rebar is created from a schedule row,NONE
+FLAG-019,,F7,schedule row with no own plan occurrence (SCHEDULE_ROW_WITHOUT_PLAN_OCCURRENCE) - no rebar is created from a schedule row,NONE

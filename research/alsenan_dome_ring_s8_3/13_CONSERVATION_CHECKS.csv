@@ -1,0 +1,15 @@
+CHECK_ID,CHECK,RESULT,DETAIL
+A-01,every frozen stage verifies and none is written,PASS,18 manifests
+A-02,two structural domes and one architectural-only dome; every repeat maps to one of them and is not counted,PASS,"Counter({'VISUAL_RECORD': 5, 'ARCH_ELEVATION_VIEW': 4, 'PHYSICAL_DOME': 2, 'REPEATED_OUTLINE': 2, 'ARCH_PLAN_OUTLINE': 2, 'PHYSICAL_DOME_ARCH_ONLY': 1, 'TYPICAL_DETAIL': 1})"
+A-03,"eight drawn ring segments = the eight S6 arcs BA001-BA008, one each; S1's lengths agree with the exact ones",PASS,"{""DOME-A-BA001"": [1.2939, 1.2939], ""DOME-A-BA002"": [1.5171, 1.5171], ""DOME-A-BA003"": [1.5171, 1.5171], ""DOME-A-BA004"": [1.2939, 1.2939], ""DOME-B-BA005"": [1.6205, 1.6205], ""DOME-B-BA006"": [1.7343, 1.7343], ""DOME-B-BA007"": [1.7343, 1.7343], ""DOME-B-BA008"": [1.6205, 1.6205]}"
+A-04,"per dome the segments do not overlap, every segment end lies on a framing face (each gap is a junction), and a repeated outline is covered once",PASS,"{""DOME-A"": 0.021986, ""DOME-B"": 0.021986}"
+A-05,each ring annulus is partitioned once: inside the bay (ring) + inside the framing (beam) = annulus,PASS,
+A-06,the S6 -> S8.3 transfer moves no quantity,PASS,"{""frozen_known_carried"": true, ""baseline_plus_delta_is_new"": true, ""no_negative_delta"": true}"
+A-07,S7's dome-adjacent top-support steel reconciles by role and stays in S7; no S7 item on a dome-zone face,PASS,43.113236 kg over 180 strip ends
+A-08,the closed-form shell volume equals a numerical solid of revolution,PASS,2.540680661 vs 2.540680669
+A-09,"the shell profile is established: circular, centred on the axis, concentric surfaces; the architecture draws circular profiles too",PASS,"{""state"": ""SPHERICAL_ABOUT_AXIS"", ""centre"": [23667.787117293537, 2364.8640395105185], ""R"": 11191.816293659662, ""max_residual"": 7.275957614183426e-12, ""centre_on_axis"": ""True""}"
+A-10,only released lanes carry a quantity; every blocked or conflicting row carries none,PASS,
+A-11,every bar notation on the detail is parsed and bound to exactly one family; repeats on the second cut collapse into the first,PASS,"{""SHELL_MERIDIONAL"": 1, ""SHELL_HOOP"": 1, ""RING_TOP"": 1, ""RING_BOTTOM"": 1, ""RING_SIDE"": 1, ""RING_LINKS"": 2, ""SHELL_ANCHORAGE"": 1}"
+A-12,sensitivity never enters a total,PASS,19 cases
+A-13,"no client drawing, scan or crop in the package",PASS,[]
+A-14,"the tower dome is neither counted as structural nor quantified, and S7's slab there is unchanged",PASS,['SP-2F_ROOF_SLAB-04']

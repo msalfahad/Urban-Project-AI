@@ -1,0 +1,115 @@
+{
+ "method": "STAIR_FLIGHT_ONCE_V1",
+ "unit_m": 0.001,
+ "plans": [
+  {
+   "floor": "GF",
+   "level_m": 0.0,
+   "flights": 6,
+   "level_marks": 24,
+   "alignment": null,
+   "slab_above": {
+    "state": "DRAWN",
+    "stair_panel_lines": 6,
+    "opening_lines": 17,
+    "with_stair_tags": 2,
+    "source": "structural 'GROUND FLOOR ROOF SLAB' plan: 6 stair-panel lines, 2 '(With Stair)' tags, 17 slab-opening lines"
+   }
+  },
+  {
+   "floor": "1F",
+   "level_m": 5.5,
+   "flights": 6,
+   "level_marks": 10,
+   "alignment": {
+    "votes": 15,
+    "of": 20,
+    "dx_m": -44.8527,
+    "dy_m": 0.0
+   },
+   "slab_above": {
+    "state": "DRAWN",
+    "stair_panel_lines": 6,
+    "opening_lines": 48,
+    "with_stair_tags": 1,
+    "source": "structural 'FIRST FLOOR ROOF SLAB' plan: 6 stair-panel lines, 1 '(With Stair)' tags, 48 slab-opening lines"
+   }
+  },
+  {
+   "floor": "2F",
+   "level_m": 9.7,
+   "flights": 2,
+   "level_marks": 7,
+   "alignment": {
+    "votes": 7,
+    "of": 11,
+    "dx_m": -44.8527,
+    "dy_m": 0.0
+   },
+   "slab_above": {
+    "state": "NONE_DRAWN",
+    "stair_panel_lines": 0,
+    "opening_lines": 0,
+    "with_stair_tags": 0,
+    "source": "structural 'SECOND FLOOR ROOF SLAB' plan: 0 stair-panel lines, 0 '(With Stair)' tags, 0 slab-opening lines"
+   }
+  }
+ ],
+ "totals": {
+  "before": {
+   "tread_m2": 27.324413,
+   "step_lm": 91.0279
+  },
+  "after_counted": {
+   "tread_m2": 20.424413,
+   "step_lm": 68.0279
+  },
+  "seen_above_removed": {
+   "tread_m2": 3.45,
+   "step_lm": 11.5
+  },
+  "held_high": {
+   "tread_m2": 3.45,
+   "step_lm": 11.5
+  },
+  "exposure_unchanged": {
+   "tread_m2": 8.924413,
+   "step_lm": 29.8964
+  },
+  "after_range_tread_m2": [
+   20.424413,
+   23.874413
+  ],
+  "conservation_tread_m2": -0.0,
+  "after_range_step_lm": [
+   68.0279,
+   79.5279
+  ],
+  "conservation_step_lm": 0.0
+ },
+ "section_check": [
+  {
+   "storey": "GF",
+   "section_risers": 27,
+   "plan_riser_lines_of_own_flights": 12,
+   "difference": 15,
+   "flights": [
+    "SITE-3759f2457b22cb4a:F1",
+    "SITE-3759f2457b22cb4a:F2"
+   ],
+   "note": "listed only (owner Q-46 A: the section counts the steps; tread polygons stay the plan's)"
+  },
+  {
+   "storey": "1F",
+   "section_risers": 25,
+   "plan_riser_lines_of_own_flights": 23,
+   "difference": 2,
+   "flights": [
+    "SITE-a95bf979baf4cfae:F2",
+    "SITE-a95bf979baf4cfae:F3"
+   ],
+   "note": "listed only (owner Q-46 A: the section counts the steps; tread polygons stay the plan's)"
+  }
+ ],
+ "warnings": []
+}

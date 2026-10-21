@@ -1,0 +1,2838 @@
+{
+ "seeds": [
+  301,
+  302,
+  303,
+  304,
+  305,
+  306,
+  307,
+  308,
+  309,
+  310,
+  311,
+  312,
+  313,
+  314,
+  315,
+  316,
+  317,
+  318,
+  319,
+  320
+ ],
+ "defects": true,
+ "per_drawing": [
+  {
+   "seed": 301,
+   "variant": {
+    "units": "mm",
+    "lang": "EN",
+    "tags": {
+     "ftg": [
+      "MARK",
+      "WIDTH",
+      "LENGTH",
+      "DEPTH",
+      "SH-N",
+      "SH-DIA",
+      "LO-N",
+      "LO-DIA"
+     ],
+     "col": "TYPE",
+     "beam": [
+      "TYPE",
+      "WIDTH",
+      "DEPTH",
+      "BOT-N",
+      "BOT-DIA",
+      "TOP-N",
+      "TOP-DIA",
+      "LINK-N",
+      "LINK-DIA"
+     ],
+     "unit": "mm"
+    },
+    "curved": false,
+    "untagged_span": true,
+    "width_conflict": false,
+    "missing_type": false,
+    "opening": true,
+    "defects": true
+   },
+   "defects_applied": {
+    "TAG_PUSHED": 62,
+    "END_OVERSHOOT": 72,
+    "END_GAP": 90,
+    "BROKEN_FACE": 43,
+    "MTEXT_TAG": 30,
+    "DUPLICATE_LINE": 15,
+    "GRID_AXIS": 18,
+    "DIMENSION": 8
+   },
+   "ok": true,
+   "seconds": 0.483,
+   "quantities": {
+    "FOOTINGS": {
+     "engine": 20.16,
+     "truth": 20.16,
+     "error": 0.0
+    },
+    "COLUMNS": {
+     "engine": 20.9,
+     "truth": 20.9,
+     "error": 0.0
+    },
+    "BEAMS_TOTAL_DEPTH": {
+     "engine": 28.7495,
+     "truth": 28.7495,
+     "error": 0.0
+    },
+    "BEAMS_BELOW_SLAB": {
+     "engine": 37.8107,
+     "truth": 37.8107,
+     "error": -0.0
+    },
+    "SLABS": {
+     "engine": 66.4932,
+     "truth": 66.4932,
+     "error": 0.0
+    },
+    "STEEL_FOOTINGS": {
+     "engine": 530.666667,
+     "truth": 530.666667,
+     "error": 0.0
+    },
+    "STEEL_COLUMNS_MAIN": {
+     "engine": 2326.123457,
+     "truth": 2326.123457,
+     "error": 0.0
+    },
+    "STEEL_BEAMS": {
+     "engine": 2928.006472,
+     "truth": 2928.006353,
+     "error": 0.0
+    }
+   },
+   "detect_footings": {
+    "true": 20,
+    "pred": 20,
+    "matched": 20,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   "detect_beams": {
+    "true": 62,
+    "pred": 62,
+    "matched": 62,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   "slab_area": {
+    "truth_m2": 415.583,
+    "engine_panel_m2": 415.583,
+    "risk_m2": 0,
+    "missing_m2": 0.0,
+    "silent_missing_m2": 0.0,
+    "loss_reported": true
+   },
+   "detect_panels": {
+    "true": 22,
+    "pred": 22,
+    "matched": 22,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   "categories": {
+    "PROVISIONAL": 390
+   },
+   "coverage_risk": 6,
+   "coverage_risk_kinds": {
+    "OPENING_DEDUCTED": 2,
+    "SCHEDULE_ROW_NOT_FOUND_ON_PLAN": 4
+   },
+   "rebar_register": {
+    "MEASURED": 0,
+    "PROVISIONAL_MODEL": 122,
+    "MISSING_DATA": 22,
+    "EXPLICIT_NONE": 0,
+    "OUTSIDE_SCOPE": 0
+   },
+   "manual_inputs": 2
+  },
+  {
+   "seed": 302,
+   "variant": {
+    "units": "m",
+    "lang": "AR",
+    "tags": {
+     "ftg": [
+      "FO-TY",
+      "W",
+      "H",
+      "DEPHT",
+      "SH-B",
+      "SH-D",
+      "LO-B",
+      "LO-D"
+     ],
+     "col": "COL-T",
+     "beam": [
+      "BEAM",
+      "W",
+      "H",
+      "BOT-B",
+      "BOT-D",
+      "TOP-B",
+      "TOP-D",
+      "STI-B",
+      "D"
+     ],
+     "unit": "cm"
+    },
+    "curved": true,
+    "untagged_span": true,
+    "width_conflict": false,
+    "missing_type": false,
+    "opening": true,
+    "defects": true
+   },
+   "defects_applied": {
+    "TAG_PUSHED": 44,
+    "END_GAP": 59,
+    "DUPLICATE_LINE": 15,
+    "MTEXT_TAG": 20,
+    "END_OVERSHOOT": 64,
+    "BROKEN_FACE": 33,
+    "GRID_AXIS": 16,
+    "DIMENSION": 8
+   },
+   "ok": true,
+   "seconds": 0.199,
+   "quantities": {
+    "FOOTINGS": {
+     "engine": 14.688,
+     "truth": 14.688,
+     "error": 0.0
+    },
+    "COLUMNS": {
+     "engine": 12.844,
+     "truth": 12.844,
+     "error": 0.0
+    },
+    "BEAMS_TOTAL_DEPTH": {
+     "engine": 18.688319,
+     "truth": 18.688319,
+     "error": 0.0
+    },
+    "BEAMS_BELOW_SLAB": {
+     "engine": 25.11978,
+     "truth": 25.11978,
+     "error": 0.0
+    },
+    "SLABS": {
+     "engine": 44.3528,
+     "truth": 44.3528,
+     "error": -0.0
+    },
+    "STEEL_FOOTINGS": {
+     "engine": 389.066667,
+     "truth": 389.066667,
+     "error": 0.0
+    },
+    "STEEL_COLUMNS_MAIN": {
+     "engine": 1511.980247,
+     "truth": 1511.980247,
+     "error": 0.0
+    },
+    "STEEL_BEAMS": {
+     "engine": 2169.487106,
+     "truth": 2169.487014,
+     "error": 0.0
+    }
+   },
+   "detect_footings": {
+    "true": 15,
+    "pred": 15,
+    "matched": 15,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   "detect_beams": {
+    "true": 46,
+    "pred": 46,
+    "matched": 46,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   "slab_area": {
+    "truth_m2": 277.205,
+    "engine_panel_m2": 277.205,
+    "risk_m2": 0,
+    "missing_m2": 0.0,
+    "silent_missing_m2": 0.0,
+    "loss_reported": true
+   },
+   "detect_panels": {
+    "true": 14,
+    "pred": 14,
+    "matched": 14,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   "categories": {
+    "PROVISIONAL": 288
+   },
+   "coverage_risk": 6,
+   "coverage_risk_kinds": {
+    "OPENING_DEDUCTED": 2,
+    "SCHEDULE_ROW_NOT_FOUND_ON_PLAN": 4
+   },
+   "rebar_register": {
+    "MEASURED": 0,
+    "PROVISIONAL_MODEL": 91,
+    "MISSING_DATA": 14,
+    "EXPLICIT_NONE": 0,
+    "OUTSIDE_SCOPE": 0
+   },
+   "manual_inputs": 2
+  },
+  {
+   "seed": 303,
+   "variant": {
+    "units": "mm",
+    "lang": "EN",
+    "tags": {
+     "ftg": [
+      "MARK",
+      "WIDTH",
+      "LENGTH",
+      "DEPTH",
+      "SH-N",
+      "SH-DIA",
+      "LO-N",
+      "LO-DIA"
+     ],
+     "col": "TYPE",
+     "beam": [
+      "TYPE",
+      "WIDTH",
+      "DEPTH",
+      "BOT-N",
+      "BOT-DIA",
+      "TOP-N",
+      "TOP-DIA",
+      "LINK-N",
+      "LINK-DIA"
+     ],
+     "unit": "mm"
+    },
+    "curved": false,
+    "untagged_span": true,
+    "width_conflict": true,
+    "missing_type": true,
+    "opening": true,
+    "defects": true
+   },
+   "defects_applied": {
+    "TAG_PUSHED": 24,
+    "END_GAP": 34,
+    "BROKEN_FACE": 24,
+    "MTEXT_TAG": 11,
+    "END_OVERSHOOT": 29,
+    "DUPLICATE_LINE": 6,
+    "GRID_AXIS": 12,
+    "DIMENSION": 4
+   },
+   "ok": true,
+   "seconds": 0.112,
+   "quantities": {
+    "FOOTINGS": {
+     "engine": 16.76,
+     "truth": 16.76,
+     "error": -0.0
+    },
+    "COLUMNS": {
+     "engine": 7.068,
+     "truth": 7.068,
+     "error": 0.0
+    },
+    "BEAMS_TOTAL_DEPTH": {
+     "engine": 10.668,
+     "truth": 10.668,
+     "error": 0.0
+    },
+    "BEAMS_BELOW_SLAB": {
+     "engine": 14.3256,
+     "truth": 14.3256,
+     "error": 0.0
+    },
+    "SLABS": {
+     "engine": 21.1632,
+     "truth": 21.1632,
+     "error": -0.0
+    },
+    "STEEL_FOOTINGS": {
+     "engine": 378.311111,
+     "truth": 378.311111,
+     "error": 0.0
+    },
+    "STEEL_COLUMNS_MAIN": {
+     "engine": 901.37284,
+     "truth": 901.37284,
+     "error": -0.0
+    },
+    "STEEL_BEAMS": {
+     "engine": 1228.852314,
+     "truth": 1228.852263,
+     "error": 0.0
+    }
+   },
+   "detect_footings": {
+    "true": 9,
+    "pred": 9,
+    "matched": 9,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   "detect_beams": {
+    "true": 24,
+    "pred": 24,
+    "matched": 24,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   "slab_area": {
+    "truth_m2": 132.27,
+    "engine_panel_m2": 132.27,
+    "risk_m2": 0,
+    "missing_m2": 0.0,
+    "silent_missing_m2": 0.0,
+    "loss_reported": true
+   },
+   "detect_panels": {
+    "true": 6,
+    "pred": 6,
+    "matched": 6,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   "categories": {
+    "PROVISIONAL": 156
+   },
+   "coverage_risk": 6,
+   "coverage_risk_kinds": {
+    "OPENING_DEDUCTED": 2,
+    "SCHEDULE_ROW_NOT_FOUND_ON_PLAN": 4
+   },
+   "rebar_register": {
+    "MEASURED": 0,
+    "PROVISIONAL_MODEL": 51,
+    "MISSING_DATA": 6,
+    "EXPLICIT_NONE": 0,
+    "OUTSIDE_SCOPE": 0
+   },
+   "manual_inputs": 2
+  },
+  {
+   "seed": 304,
+   "variant": {
+    "units": "mm",
+    "lang": "EN",
+    "tags": {
+     "ftg": [
+      "FO-TY",
+      "W",
+      "H",
+      "DEPHT",
+      "SH-B",
+      "SH-D",
+      "LO-B",
+      "LO-D"
+     ],
+     "col": "COL-T",
+     "beam": [
+      "BEAM",
+      "W",
+      "H",
+      "BOT-B",
+      "BOT-D",
+      "TOP-B",
+      "TOP-D",
+      "STI-B",
+      "D"
+     ],
+     "unit": "cm"
+    },
+    "curved": true,
+    "untagged_span": true,
+    "width_conflict": false,
+    "missing_type": false,
+    "opening": true,
+    "defects": true
+   },
+   "defects_applied": {
+    "TAG_PUSHED": 34,
+    "END_GAP": 47,
+    "DUPLICATE_LINE": 10,
+    "BROKEN_FACE": 27,
+    "END_OVERSHOOT": 39,
+    "MTEXT_TAG": 19,
+    "GRID_AXIS": 14,
+    "DIMENSION": 6
+   },
+   "ok": true,
+   "seconds": 0.143,
+   "quantities": {
+    "FOOTINGS": {
+     "engine": 13.905,
+     "truth": 13.905,
+     "error": 0.0
+    },
+    "COLUMNS": {
+     "engine": 9.804,
+     "truth": 9.804,
+     "error": 0.0
+    },
+    "BEAMS_TOTAL_DEPTH": {
+     "engine": 16.044319,
+     "truth": 16.044319,
+     "error": 0.0
+    },
+    "BEAMS_BELOW_SLAB": {
+     "engine": 21.10618,
+     "truth": 21.10618,
+     "error": -0.0
+    },
+    "SLABS": {
+     "engine": 30.1994,
+     "truth": 30.1994,
+     "error": -0.0
+    },
+    "STEEL_FOOTINGS": {
+     "engine": 357.866667,
+     "truth": 357.866667,
+     "error": 0.0
+    },
+    "STEEL_COLUMNS_MAIN": {
+     "engine": 1221.214815,
+     "truth": 1221.214815,
+     "error": 0.0
+    },
+    "STEEL_BEAMS": {
+     "engine": 1636.715525,
+     "truth": 1636.715457,
+     "error": 0.0
+    }
+   },
+   "detect_footings": {
+    "true": 12,
+    "pred": 12,
+    "matched": 12,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   "detect_beams": {
+    "true": 36,
+    "pred": 36,
+    "matched": 36,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   "slab_area": {
+    "truth_m2": 188.746,
+    "engine_panel_m2": 188.746,
+    "risk_m2": 0,
+    "missing_m2": 0.0,
+    "silent_missing_m2": 0.0,
+    "loss_reported": true
+   },
+   "detect_panels": {
+    "true": 10,
+    "pred": 10,
+    "matched": 10,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   "categories": {
+    "PROVISIONAL": 226
+   },
+   "coverage_risk": 6,
+   "coverage_risk_kinds": {
+    "OPENING_DEDUCTED": 2,
+    "SCHEDULE_ROW_NOT_FOUND_ON_PLAN": 4
+   },
+   "rebar_register": {
+    "MEASURED": 0,
+    "PROVISIONAL_MODEL": 72,
+    "MISSING_DATA": 10,
+    "EXPLICIT_NONE": 0,
+    "OUTSIDE_SCOPE": 0
+   },
+   "manual_inputs": 2
+  },
+  {
+   "seed": 305,
+   "variant": {
+    "units": "mm",
+    "lang": "AR",
+    "tags": {
+     "ftg": [
+      "MARK",
+      "WIDTH",
+      "LENGTH",
+      "DEPTH",
+      "SH-N",
+      "SH-DIA",
+      "LO-N",
+      "LO-DIA"
+     ],
+     "col": "TYPE",
+     "beam": [
+      "TYPE",
+      "WIDTH",
+      "DEPTH",
+      "BOT-N",
+      "BOT-DIA",
+      "TOP-N",
+      "TOP-DIA",
+      "LINK-N",
+      "LINK-DIA"
+     ],
+     "unit": "mm"
+    },
+    "curved": false,
+    "untagged_span": true,
+    "width_conflict": false,
+    "missing_type": false,
+    "opening": true,
+    "defects": true
+   },
+   "defects_applied": {
+    "TAG_PUSHED": 48,
+    "END_GAP": 62,
+    "END_OVERSHOOT": 70,
+    "DUPLICATE_LINE": 14,
+    "MTEXT_TAG": 23,
+    "BROKEN_FACE": 31,
+    "GRID_AXIS": 16,
+    "DIMENSION": 6
+   },
+   "ok": true,
+   "seconds": 0.219,
+   "quantities": {
+    "FOOTINGS": {
+     "engine": 11.628,
+     "truth": 11.628,
+     "error": -0.0
+    },
+    "COLUMNS": {
+     "engine": 14.896,
+     "truth": 14.896,
+     "error": 0.0
+    },
+    "BEAMS_TOTAL_DEPTH": {
+     "engine": 18.154,
+     "truth": 18.154,
+     "error": -0.0
+    },
+    "BEAMS_BELOW_SLAB": {
+     "engine": 24.4324,
+     "truth": 24.4324,
+     "error": -0.0
+    },
+    "SLABS": {
+     "engine": 47.5672,
+     "truth": 47.5672,
+     "error": 0.0
+    },
+    "STEEL_FOOTINGS": {
+     "engine": 334.222222,
+     "truth": 334.222222,
+     "error": 0.0
+    },
+    "STEEL_COLUMNS_MAIN": {
+     "engine": 1860.898765,
+     "truth": 1860.898765,
+     "error": 0.0
+    },
+    "STEEL_BEAMS": {
+     "engine": 2162.377934,
+     "truth": 2162.377844,
+     "error": 0.0
+    }
+   },
+   "detect_footings": {
+    "true": 16,
+    "pred": 16,
+    "matched": 16,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   "detect_beams": {
+    "true": 48,
+    "pred": 48,
+    "matched": 48,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   "slab_area": {
+    "truth_m2": 297.295,
+    "engine_panel_m2": 297.295,
+    "risk_m2": 0,
+    "missing_m2": 0.0,
+    "silent_missing_m2": 0.0,
+    "loss_reported": true
+   },
+   "detect_panels": {
+    "true": 16,
+    "pred": 16,
+    "matched": 16,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   "categories": {
+    "PROVISIONAL": 304
+   },
+   "coverage_risk": 6,
+   "coverage_risk_kinds": {
+    "OPENING_DEDUCTED": 2,
+    "SCHEDULE_ROW_NOT_FOUND_ON_PLAN": 4
+   },
+   "rebar_register": {
+    "MEASURED": 0,
+    "PROVISIONAL_MODEL": 96,
+    "MISSING_DATA": 16,
+    "EXPLICIT_NONE": 0,
+    "OUTSIDE_SCOPE": 0
+   },
+   "manual_inputs": 2
+  },
+  {
+   "seed": 306,
+   "variant": {
+    "units": "mm",
+    "lang": "EN",
+    "tags": {
+     "ftg": [
+      "FO-TY",
+      "W",
+      "H",
+      "DEPHT",
+      "SH-B",
+      "SH-D",
+      "LO-B",
+      "LO-D"
+     ],
+     "col": "COL-T",
+     "beam": [
+      "BEAM",
+      "W",
+      "H",
+      "BOT-B",
+      "BOT-D",
+      "TOP-B",
+      "TOP-D",
+      "STI-B",
+      "D"
+     ],
+     "unit": "cm"
+    },
+    "curved": true,
+    "untagged_span": true,
+    "width_conflict": true,
+    "missing_type": false,
+    "opening": true,
+    "defects": true
+   },
+   "defects_applied": {
+    "TAG_PUSHED": 62,
+    "END_GAP": 94,
+    "BROKEN_FACE": 49,
+    "END_OVERSHOOT": 84,
+    "DUPLICATE_LINE": 28,
+    "MTEXT_TAG": 29,
+    "GRID_AXIS": 18,
+    "DIMENSION": 8
+   },
+   "ok": true,
+   "seconds": 0.242,
+   "quantities": {
+    "FOOTINGS": {
+     "engine": 20.16,
+     "truth": 20.16,
+     "error": 0.0
+    },
+    "COLUMNS": {
+     "engine": 17.48,
+     "truth": 17.48,
+     "error": 0.0
+    },
+    "BEAMS_TOTAL_DEPTH": {
+     "engine": 26.396319,
+     "truth": 26.396319,
+     "error": 0.0
+    },
+    "BEAMS_BELOW_SLAB": {
+     "engine": 35.41658,
+     "truth": 35.41658,
+     "error": 0.0
+    },
+    "SLABS": {
+     "engine": 72.9624,
+     "truth": 72.9624,
+     "error": -0.0
+    },
+    "STEEL_FOOTINGS": {
+     "engine": 530.666667,
+     "truth": 530.666667,
+     "error": 0.0
+    },
+    "STEEL_COLUMNS_MAIN": {
+     "engine": 2035.358025,
+     "truth": 2035.358025,
+     "error": 0.0
+    },
+    "STEEL_BEAMS": {
+     "engine": 3050.900517,
+     "truth": 3050.900388,
+     "error": 0.0
+    }
+   },
+   "detect_footings": {
+    "true": 20,
+    "pred": 20,
+    "matched": 20,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   "detect_beams": {
+    "true": 64,
+    "pred": 64,
+    "matched": 64,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   "slab_area": {
+    "truth_m2": 456.015,
+    "engine_panel_m2": 456.015,
+    "risk_m2": 0,
+    "missing_m2": 0.0,
+    "silent_missing_m2": 0.0,
+    "loss_reported": true
+   },
+   "detect_panels": {
+    "true": 22,
+    "pred": 22,
+    "matched": 22,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   "categories": {
+    "PROVISIONAL": 398
+   },
+   "coverage_risk": 6,
+   "coverage_risk_kinds": {
+    "OPENING_DEDUCTED": 2,
+    "SCHEDULE_ROW_NOT_FOUND_ON_PLAN": 4
+   },
+   "rebar_register": {
+    "MEASURED": 0,
+    "PROVISIONAL_MODEL": 124,
+    "MISSING_DATA": 22,
+    "EXPLICIT_NONE": 0,
+    "OUTSIDE_SCOPE": 0
+   },
+   "manual_inputs": 2
+  },
+  {
+   "seed": 307,
+   "variant": {
+    "units": "m",
+    "lang": "EN",
+    "tags": {
+     "ftg": [
+      "MARK",
+      "WIDTH",
+      "LENGTH",
+      "DEPTH",
+      "SH-N",
+      "SH-DIA",
+      "LO-N",
+      "LO-DIA"
+     ],
+     "col": "TYPE",
+     "beam": [
+      "TYPE",
+      "WIDTH",
+      "DEPTH",
+      "BOT-N",
+      "BOT-DIA",
+      "TOP-N",
+      "TOP-DIA",
+      "LINK-N",
+      "LINK-DIA"
+     ],
+     "unit": "mm"
+    },
+    "curved": false,
+    "untagged_span": true,
+    "width_conflict": false,
+    "missing_type": true,
+    "opening": true,
+    "defects": true
+   },
+   "defects_applied": {
+    "TAG_PUSHED": 48,
+    "END_OVERSHOOT": 68,
+    "BROKEN_FACE": 39,
+    "END_GAP": 61,
+    "MTEXT_TAG": 25,
+    "DUPLICATE_LINE": 16,
+    "GRID_AXIS": 16,
+    "DIMENSION": 6
+   },
+   "ok": true,
+   "seconds": 0.209,
+   "quantities": {
+    "FOOTINGS": {
+     "engine": 29.12,
+     "truth": 29.12,
+     "error": -0.0
+    },
+    "COLUMNS": {
+     "engine": 14.592,
+     "truth": 14.592,
+     "error": -0.0
+    },
+    "BEAMS_TOTAL_DEPTH": {
+     "engine": 19.595,
+     "truth": 19.595,
+     "error": 0.0
+    },
+    "BEAMS_BELOW_SLAB": {
+     "engine": 25.2166,
+     "truth": 25.2166,
+     "error": 0.0
+    },
+    "SLABS": {
+     "engine": 50.6072,
+     "truth": 50.6072,
+     "error": -0.0
+    },
+    "STEEL_FOOTINGS": {
+     "engine": 662.044444,
+     "truth": 662.044444,
+     "error": 0.0
+    },
+    "STEEL_COLUMNS_MAIN": {
+     "engine": 1628.28642,
+     "truth": 1628.28642,
+     "error": 0.0
+    },
+    "STEEL_BEAMS": {
+     "engine": 1770.211641,
+     "truth": 1770.211571,
+     "error": 0.0
+    }
+   },
+   "detect_footings": {
+    "true": 16,
+    "pred": 16,
+    "matched": 16,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   "detect_beams": {
+    "true": 36,
+    "pred": 36,
+    "matched": 36,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   "slab_area": {
+    "truth_m2": 316.295,
+    "engine_panel_m2": 316.295,
+    "risk_m2": 0,
+    "missing_m2": 0.0,
+    "silent_missing_m2": 0.0,
+    "loss_reported": true
+   },
+   "detect_panels": {
+    "true": 16,
+    "pred": 16,
+    "matched": 16,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   "categories": {
+    "PROVISIONAL": 256,
+    "UNRESOLVED": 12
+   },
+   "coverage_risk": 30,
+   "coverage_risk_kinds": {
+    "BAND_UNBOUND": 12,
+    "MARK_TYPE_NOT_IN_SCHEDULE": 12,
+    "OPENING_DEDUCTED": 2,
+    "SCHEDULE_ROW_NOT_FOUND_ON_PLAN": 4
+   },
+   "rebar_register": {
+    "MEASURED": 0,
+    "PROVISIONAL_MODEL": 84,
+    "MISSING_DATA": 28,
+    "EXPLICIT_NONE": 0,
+    "OUTSIDE_SCOPE": 0
+   },
+   "manual_inputs": 2
+  },
+  {
+   "seed": 308,
+   "variant": {
+    "units": "mm",
+    "lang": "AR",
+    "tags": {
+     "ftg": [
+      "FO-TY",
+      "W",
+      "H",
+      "DEPHT",
+      "SH-B",
+      "SH-D",
+      "LO-B",
+      "LO-D"
+     ],
+     "col": "COL-T",
+     "beam": [
+      "BEAM",
+      "W",
+      "H",
+      "BOT-B",
+      "BOT-D",
+      "TOP-B",
+      "TOP-D",
+      "STI-B",
+      "D"
+     ],
+     "unit": "cm"
+    },
+    "curved": true,
+    "untagged_span": true,
+    "width_conflict": false,
+    "missing_type": false,
+    "opening": true,
+    "defects": true
+   },
+   "defects_applied": {
+    "TAG_PUSHED": 34,
+    "END_GAP": 47,
+    "BROKEN_FACE": 31,
+    "END_OVERSHOOT": 43,
+    "DUPLICATE_LINE": 9,
+    "MTEXT_TAG": 12,
+    "GRID_AXIS": 14,
+    "DIMENSION": 6
+   },
+   "ok": true,
+   "seconds": 0.146,
+   "quantities": {
+    "FOOTINGS": {
+     "engine": 13.905,
+     "truth": 13.905,
+     "error": -0.0
+    },
+    "COLUMNS": {
+     "engine": 12.312,
+     "truth": 12.312,
+     "error": -0.0
+    },
+    "BEAMS_TOTAL_DEPTH": {
+     "engine": 13.664319,
+     "truth": 13.664319,
+     "error": 0.0
+    },
+    "BEAMS_BELOW_SLAB": {
+     "engine": 18.39978,
+     "truth": 18.39978,
+     "error": 0.0
+    },
+    "SLABS": {
+     "engine": 29.28,
+     "truth": 29.28,
+     "error": -0.0
+    },
+    "STEEL_FOOTINGS": {
+     "engine": 357.866667,
+     "truth": 357.866667,
+     "error": 0.0
+    },
+    "STEEL_COLUMNS_MAIN": {
+     "engine": 1395.674074,
+     "truth": 1395.674074,
+     "error": 0.0
+    },
+    "STEEL_BEAMS": {
+     "engine": 1607.383118,
+     "truth": 1607.38305,
+     "error": 0.0
+    }
+   },
+   "detect_footings": {
+    "true": 12,
+    "pred": 12,
+    "matched": 12,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   "detect_beams": {
+    "true": 36,
+    "pred": 36,
+    "matched": 36,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   "slab_area": {
+    "truth_m2": 183.0,
+    "engine_panel_m2": 183.0,
+    "risk_m2": 0,
+    "missing_m2": 0.0,
+    "silent_missing_m2": 0.0,
+    "loss_reported": true
+   },
+   "detect_panels": {
+    "true": 10,
+    "pred": 10,
+    "matched": 10,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   "categories": {
+    "PROVISIONAL": 226
+   },
+   "coverage_risk": 6,
+   "coverage_risk_kinds": {
+    "OPENING_DEDUCTED": 2,
+    "SCHEDULE_ROW_NOT_FOUND_ON_PLAN": 4
+   },
+   "rebar_register": {
+    "MEASURED": 0,
+    "PROVISIONAL_MODEL": 72,
+    "MISSING_DATA": 10,
+    "EXPLICIT_NONE": 0,
+    "OUTSIDE_SCOPE": 0
+   },
+   "manual_inputs": 2
+  },
+  {
+   "seed": 309,
+   "variant": {
+    "units": "mm",
+    "lang": "EN",
+    "tags": {
+     "ftg": [
+      "MARK",
+      "WIDTH",
+      "LENGTH",
+      "DEPTH",
+      "SH-N",
+      "SH-DIA",
+      "LO-N",
+      "LO-DIA"
+     ],
+     "col": "TYPE",
+     "beam": [
+      "TYPE",
+      "WIDTH",
+      "DEPTH",
+      "BOT-N",
+      "BOT-DIA",
+      "TOP-N",
+      "TOP-DIA",
+      "LINK-N",
+      "LINK-DIA"
+     ],
+     "unit": "mm"
+    },
+    "curved": false,
+    "untagged_span": true,
+    "width_conflict": true,
+    "missing_type": false,
+    "opening": true,
+    "defects": true
+   },
+   "defects_applied": {
+    "TAG_PUSHED": 24,
+    "END_OVERSHOOT": 37,
+    "END_GAP": 24,
+    "BROKEN_FACE": 15,
+    "DUPLICATE_LINE": 6,
+    "MTEXT_TAG": 11,
+    "GRID_AXIS": 12,
+    "DIMENSION": 4
+   },
+   "ok": true,
+   "seconds": 0.144,
+   "quantities": {
+    "FOOTINGS": {
+     "engine": 13.304,
+     "truth": 13.304,
+     "error": -0.0
+    },
+    "COLUMNS": {
+     "engine": 6.992,
+     "truth": 6.992,
+     "error": 0.0
+    },
+    "BEAMS_TOTAL_DEPTH": {
+     "engine": 8.148,
+     "truth": 8.148,
+     "error": 0.0
+    },
+    "BEAMS_BELOW_SLAB": {
+     "engine": 10.9416,
+     "truth": 10.9416,
+     "error": 0.0
+    },
+    "SLABS": {
+     "engine": 13.048,
+     "truth": 13.048,
+     "error": -0.0
+    },
+    "STEEL_FOOTINGS": {
+     "engine": 306.844444,
+     "truth": 306.844444,
+     "error": -0.0
+    },
+    "STEEL_COLUMNS_MAIN": {
+     "engine": 930.449383,
+     "truth": 930.449383,
+     "error": -0.0
+    },
+    "STEEL_BEAMS": {
+     "engine": 985.479246,
+     "truth": 985.479206,
+     "error": 0.0
+    }
+   },
+   "detect_footings": {
+    "true": 9,
+    "pred": 9,
+    "matched": 9,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   "detect_beams": {
+    "true": 24,
+    "pred": 24,
+    "matched": 24,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   "slab_area": {
+    "truth_m2": 81.55,
+    "engine_panel_m2": 81.55,
+    "risk_m2": 0,
+    "missing_m2": 0.0,
+    "silent_missing_m2": 0.0,
+    "loss_reported": true
+   },
+   "detect_panels": {
+    "true": 6,
+    "pred": 6,
+    "matched": 6,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   "categories": {
+    "PROVISIONAL": 156
+   },
+   "coverage_risk": 6,
+   "coverage_risk_kinds": {
+    "OPENING_DEDUCTED": 2,
+    "SCHEDULE_ROW_NOT_FOUND_ON_PLAN": 4
+   },
+   "rebar_register": {
+    "MEASURED": 0,
+    "PROVISIONAL_MODEL": 51,
+    "MISSING_DATA": 6,
+    "EXPLICIT_NONE": 0,
+    "OUTSIDE_SCOPE": 0
+   },
+   "manual_inputs": 2
+  },
+  {
+   "seed": 310,
+   "variant": {
+    "units": "mm",
+    "lang": "EN",
+    "tags": {
+     "ftg": [
+      "FO-TY",
+      "W",
+      "H",
+      "DEPHT",
+      "SH-B",
+      "SH-D",
+      "LO-B",
+      "LO-D"
+     ],
+     "col": "COL-T",
+     "beam": [
+      "BEAM",
+      "W",
+      "H",
+      "BOT-B",
+      "BOT-D",
+      "TOP-B",
+      "TOP-D",
+      "STI-B",
+      "D"
+     ],
+     "unit": "cm"
+    },
+    "curved": true,
+    "untagged_span": true,
+    "width_conflict": false,
+    "missing_type": false,
+    "opening": true,
+    "defects": true
+   },
+   "defects_applied": {
+    "TAG_PUSHED": 24,
+    "END_GAP": 35,
+    "BROKEN_FACE": 19,
+    "END_OVERSHOOT": 30,
+    "MTEXT_TAG": 11,
+    "DUPLICATE_LINE": 9,
+    "GRID_AXIS": 12,
+    "DIMENSION": 4
+   },
+   "ok": true,
+   "seconds": 0.142,
+   "quantities": {
+    "FOOTINGS": {
+     "engine": 6.6915,
+     "truth": 6.6915,
+     "error": 0.0
+    },
+    "COLUMNS": {
+     "engine": 8.436,
+     "truth": 8.436,
+     "error": 0.0
+    },
+    "BEAMS_TOTAL_DEPTH": {
+     "engine": 16.418319,
+     "truth": 16.418319,
+     "error": 0.0
+    },
+    "BEAMS_BELOW_SLAB": {
+     "engine": 20.92018,
+     "truth": 20.92018,
+     "error": 0.0
+    },
+    "SLABS": {
+     "engine": 18.5996,
+     "truth": 18.5996,
+     "error": -0.0
+    },
+    "STEEL_FOOTINGS": {
+     "engine": 191.288889,
+     "truth": 191.288889,
+     "error": 0.0
+    },
+    "STEEL_COLUMNS_MAIN": {
+     "engine": 930.449383,
+     "truth": 930.449383,
+     "error": -0.0
+    },
+    "STEEL_BEAMS": {
+     "engine": 1286.344511,
+     "truth": 1286.344459,
+     "error": 0.0
+    }
+   },
+   "detect_footings": {
+    "true": 9,
+    "pred": 9,
+    "matched": 9,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   "detect_beams": {
+    "true": 26,
+    "pred": 26,
+    "matched": 26,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   "slab_area": {
+    "truth_m2": 116.248,
+    "engine_panel_m2": 116.247,
+    "risk_m2": 0,
+    "missing_m2": 0.0,
+    "silent_missing_m2": 0.0,
+    "loss_reported": true
+   },
+   "detect_panels": {
+    "true": 6,
+    "pred": 6,
+    "matched": 6,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   "categories": {
+    "PROVISIONAL": 164
+   },
+   "coverage_risk": 6,
+   "coverage_risk_kinds": {
+    "OPENING_DEDUCTED": 2,
+    "SCHEDULE_ROW_NOT_FOUND_ON_PLAN": 4
+   },
+   "rebar_register": {
+    "MEASURED": 0,
+    "PROVISIONAL_MODEL": 53,
+    "MISSING_DATA": 6,
+    "EXPLICIT_NONE": 0,
+    "OUTSIDE_SCOPE": 0
+   },
+   "manual_inputs": 2
+  },
+  {
+   "seed": 311,
+   "variant": {
+    "units": "mm",
+    "lang": "AR",
+    "tags": {
+     "ftg": [
+      "MARK",
+      "WIDTH",
+      "LENGTH",
+      "DEPTH",
+      "SH-N",
+      "SH-DIA",
+      "LO-N",
+      "LO-DIA"
+     ],
+     "col": "TYPE",
+     "beam": [
+      "TYPE",
+      "WIDTH",
+      "DEPTH",
+      "BOT-N",
+      "BOT-DIA",
+      "TOP-N",
+      "TOP-DIA",
+      "LINK-N",
+      "LINK-DIA"
+     ],
+     "unit": "mm"
+    },
+    "curved": false,
+    "untagged_span": true,
+    "width_conflict": false,
+    "missing_type": true,
+    "opening": true,
+    "defects": true
+   },
+   "defects_applied": {
+    "TAG_PUSHED": 34,
+    "END_OVERSHOOT": 45,
+    "END_GAP": 48,
+    "BROKEN_FACE": 29,
+    "MTEXT_TAG": 16,
+    "DUPLICATE_LINE": 9,
+    "GRID_AXIS": 14,
+    "DIMENSION": 6
+   },
+   "ok": true,
+   "seconds": 0.184,
+   "quantities": {
+    "FOOTINGS": {
+     "engine": 12.096,
+     "truth": 12.096,
+     "error": 0.0
+    },
+    "COLUMNS": {
+     "engine": 9.12,
+     "truth": 9.12,
+     "error": 0.0
+    },
+    "BEAMS_TOTAL_DEPTH": {
+     "engine": 14.378,
+     "truth": 14.378,
+     "error": 0.0
+    },
+    "BEAMS_BELOW_SLAB": {
+     "engine": 19.274,
+     "truth": 19.274,
+     "error": 0.0
+    },
+    "SLABS": {
+     "engine": 33.1632,
+     "truth": 33.1632,
+     "error": -0.0
+    },
+    "STEEL_FOOTINGS": {
+     "engine": 318.4,
+     "truth": 318.4,
+     "error": -0.0
+    },
+    "STEEL_COLUMNS_MAIN": {
+     "engine": 1221.214815,
+     "truth": 1221.214815,
+     "error": 0.0
+    },
+    "STEEL_BEAMS": {
+     "engine": 1662.466944,
+     "truth": 1662.466875,
+     "error": 0.0
+    }
+   },
+   "detect_footings": {
+    "true": 12,
+    "pred": 12,
+    "matched": 12,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   "detect_beams": {
+    "true": 34,
+    "pred": 34,
+    "matched": 34,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   "slab_area": {
+    "truth_m2": 207.27,
+    "engine_panel_m2": 207.27,
+    "risk_m2": 0,
+    "missing_m2": 0.0,
+    "silent_missing_m2": 0.0,
+    "loss_reported": true
+   },
+   "detect_panels": {
+    "true": 10,
+    "pred": 10,
+    "matched": 10,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   "categories": {
+    "PROVISIONAL": 218
+   },
+   "coverage_risk": 6,
+   "coverage_risk_kinds": {
+    "OPENING_DEDUCTED": 2,
+    "SCHEDULE_ROW_NOT_FOUND_ON_PLAN": 4
+   },
+   "rebar_register": {
+    "MEASURED": 0,
+    "PROVISIONAL_MODEL": 70,
+    "MISSING_DATA": 10,
+    "EXPLICIT_NONE": 0,
+    "OUTSIDE_SCOPE": 0
+   },
+   "manual_inputs": 2
+  },
+  {
+   "seed": 312,
+   "variant": {
+    "units": "m",
+    "lang": "EN",
+    "tags": {
+     "ftg": [
+      "FO-TY",
+      "W",
+      "H",
+      "DEPHT",
+      "SH-B",
+      "SH-D",
+      "LO-B",
+      "LO-D"
+     ],
+     "col": "COL-T",
+     "beam": [
+      "BEAM",
+      "W",
+      "H",
+      "BOT-B",
+      "BOT-D",
+      "TOP-B",
+      "TOP-D",
+      "STI-B",
+      "D"
+     ],
+     "unit": "cm"
+    },
+    "curved": true,
+    "untagged_span": true,
+    "width_conflict": true,
+    "missing_type": false,
+    "opening": true,
+    "defects": true
+   },
+   "defects_applied": {
+    "TAG_PUSHED": 48,
+    "END_GAP": 74,
+    "MTEXT_TAG": 19,
+    "BROKEN_FACE": 42,
+    "END_OVERSHOOT": 60,
+    "DUPLICATE_LINE": 15,
+    "GRID_AXIS": 16,
+    "DIMENSION": 6
+   },
+   "ok": true,
+   "seconds": 0.196,
+   "quantities": {
+    "FOOTINGS": {
+     "engine": 11.628,
+     "truth": 11.628,
+     "error": 0.0
+    },
+    "COLUMNS": {
+     "engine": 10.336,
+     "truth": 10.336,
+     "error": 0.0
+    },
+    "BEAMS_TOTAL_DEPTH": {
+     "engine": 19.024319,
+     "truth": 19.024319,
+     "error": 0.0
+    },
+    "BEAMS_BELOW_SLAB": {
+     "engine": 25.58698,
+     "truth": 25.58698,
+     "error": 0.0
+    },
+    "SLABS": {
+     "engine": 47.2592,
+     "truth": 47.2592,
+     "error": 0.0
+    },
+    "STEEL_FOOTINGS": {
+     "engine": 334.222222,
+     "truth": 334.222222,
+     "error": 0.0
+    },
+    "STEEL_COLUMNS_MAIN": {
+     "engine": 1395.674074,
+     "truth": 1395.674074,
+     "error": 0.0
+    },
+    "STEEL_BEAMS": {
+     "engine": 2238.56477,
+     "truth": 2238.564676,
+     "error": 0.0
+    }
+   },
+   "detect_footings": {
+    "true": 16,
+    "pred": 16,
+    "matched": 16,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   "detect_beams": {
+    "true": 50,
+    "pred": 50,
+    "matched": 50,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   "slab_area": {
+    "truth_m2": 295.37,
+    "engine_panel_m2": 295.37,
+    "risk_m2": 0,
+    "missing_m2": 0.0,
+    "silent_missing_m2": 0.0,
+    "loss_reported": true
+   },
+   "detect_panels": {
+    "true": 16,
+    "pred": 16,
+    "matched": 16,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   "categories": {
+    "PROVISIONAL": 312
+   },
+   "coverage_risk": 6,
+   "coverage_risk_kinds": {
+    "OPENING_DEDUCTED": 2,
+    "SCHEDULE_ROW_NOT_FOUND_ON_PLAN": 4
+   },
+   "rebar_register": {
+    "MEASURED": 0,
+    "PROVISIONAL_MODEL": 98,
+    "MISSING_DATA": 16,
+    "EXPLICIT_NONE": 0,
+    "OUTSIDE_SCOPE": 0
+   },
+   "manual_inputs": 2
+  },
+  {
+   "seed": 313,
+   "variant": {
+    "units": "mm",
+    "lang": "EN",
+    "tags": {
+     "ftg": [
+      "MARK",
+      "WIDTH",
+      "LENGTH",
+      "DEPTH",
+      "SH-N",
+      "SH-DIA",
+      "LO-N",
+      "LO-DIA"
+     ],
+     "col": "TYPE",
+     "beam": [
+      "TYPE",
+      "WIDTH",
+      "DEPTH",
+      "BOT-N",
+      "BOT-DIA",
+      "TOP-N",
+      "TOP-DIA",
+      "LINK-N",
+      "LINK-DIA"
+     ],
+     "unit": "mm"
+    },
+    "curved": false,
+    "untagged_span": true,
+    "width_conflict": false,
+    "missing_type": false,
+    "opening": true,
+    "defects": true
+   },
+   "defects_applied": {
+    "TAG_PUSHED": 48,
+    "END_OVERSHOOT": 78,
+    "END_GAP": 60,
+    "BROKEN_FACE": 36,
+    "MTEXT_TAG": 22,
+    "DUPLICATE_LINE": 14,
+    "GRID_AXIS": 16,
+    "DIMENSION": 6
+   },
+   "ok": true,
+   "seconds": 0.245,
+   "quantities": {
+    "FOOTINGS": {
+     "engine": 24.62,
+     "truth": 24.62,
+     "error": 0.0
+    },
+    "COLUMNS": {
+     "engine": 16.416,
+     "truth": 16.416,
+     "error": -0.0
+    },
+    "BEAMS_TOTAL_DEPTH": {
+     "engine": 16.112,
+     "truth": 16.112,
+     "error": 0.0
+    },
+    "BEAMS_BELOW_SLAB": {
+     "engine": 21.712,
+     "truth": 21.712,
+     "error": 0.0
+    },
+    "SLABS": {
+     "engine": 37.7144,
+     "truth": 37.7144,
+     "error": -0.0
+    },
+    "STEEL_FOOTINGS": {
+     "engine": 571.733333,
+     "truth": 571.733333,
+     "error": 0.0
+    },
+    "STEEL_COLUMNS_MAIN": {
+     "engine": 1860.898765,
+     "truth": 1860.898765,
+     "error": 0.0
+    },
+    "STEEL_BEAMS": {
+     "engine": 1970.033977,
+     "truth": 1970.033897,
+     "error": 0.0
+    }
+   },
+   "detect_footings": {
+    "true": 16,
+    "pred": 16,
+    "matched": 16,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   "detect_beams": {
+    "true": 48,
+    "pred": 48,
+    "matched": 48,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   "slab_area": {
+    "truth_m2": 235.715,
+    "engine_panel_m2": 235.715,
+    "risk_m2": 0,
+    "missing_m2": 0.0,
+    "silent_missing_m2": 0.0,
+    "loss_reported": true
+   },
+   "detect_panels": {
+    "true": 16,
+    "pred": 16,
+    "matched": 16,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   "categories": {
+    "PROVISIONAL": 304
+   },
+   "coverage_risk": 6,
+   "coverage_risk_kinds": {
+    "OPENING_DEDUCTED": 2,
+    "SCHEDULE_ROW_NOT_FOUND_ON_PLAN": 4
+   },
+   "rebar_register": {
+    "MEASURED": 0,
+    "PROVISIONAL_MODEL": 96,
+    "MISSING_DATA": 16,
+    "EXPLICIT_NONE": 0,
+    "OUTSIDE_SCOPE": 0
+   },
+   "manual_inputs": 2
+  },
+  {
+   "seed": 314,
+   "variant": {
+    "units": "mm",
+    "lang": "AR",
+    "tags": {
+     "ftg": [
+      "FO-TY",
+      "W",
+      "H",
+      "DEPHT",
+      "SH-B",
+      "SH-D",
+      "LO-B",
+      "LO-D"
+     ],
+     "col": "COL-T",
+     "beam": [
+      "BEAM",
+      "W",
+      "H",
+      "BOT-B",
+      "BOT-D",
+      "TOP-B",
+      "TOP-D",
+      "STI-B",
+      "D"
+     ],
+     "unit": "cm"
+    },
+    "curved": true,
+    "untagged_span": true,
+    "width_conflict": false,
+    "missing_type": false,
+    "opening": true,
+    "defects": true
+   },
+   "defects_applied": {
+    "TAG_PUSHED": 34,
+    "END_OVERSHOOT": 41,
+    "END_GAP": 51,
+    "BROKEN_FACE": 24,
+    "DUPLICATE_LINE": 8,
+    "MTEXT_TAG": 20,
+    "GRID_AXIS": 14,
+    "DIMENSION": 6
+   },
+   "ok": true,
+   "seconds": 0.158,
+   "quantities": {
+    "FOOTINGS": {
+     "engine": 8.721,
+     "truth": 8.721,
+     "error": 0.0
+    },
+    "COLUMNS": {
+     "engine": 12.312,
+     "truth": 12.312,
+     "error": -0.0
+    },
+    "BEAMS_TOTAL_DEPTH": {
+     "engine": 11.188319,
+     "truth": 11.188319,
+     "error": 0.0
+    },
+    "BEAMS_BELOW_SLAB": {
+     "engine": 15.06938,
+     "truth": 15.06938,
+     "error": 0.0
+    },
+    "SLABS": {
+     "engine": 20.9304,
+     "truth": 20.9304,
+     "error": 0.0
+    },
+    "STEEL_FOOTINGS": {
+     "engine": 250.666667,
+     "truth": 250.666667,
+     "error": 0.0
+    },
+    "STEEL_COLUMNS_MAIN": {
+     "engine": 1395.674074,
+     "truth": 1395.674074,
+     "error": 0.0
+    },
+    "STEEL_BEAMS": {
+     "engine": 1367.030244,
+     "truth": 1367.030188,
+     "error": 0.0
+    }
+   },
+   "detect_footings": {
+    "true": 12,
+    "pred": 12,
+    "matched": 12,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   "detect_beams": {
+    "true": 36,
+    "pred": 36,
+    "matched": 36,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   "slab_area": {
+    "truth_m2": 130.815,
+    "engine_panel_m2": 130.815,
+    "risk_m2": 0,
+    "missing_m2": 0.0,
+    "silent_missing_m2": 0.0,
+    "loss_reported": true
+   },
+   "detect_panels": {
+    "true": 10,
+    "pred": 10,
+    "matched": 10,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   "categories": {
+    "PROVISIONAL": 226
+   },
+   "coverage_risk": 6,
+   "coverage_risk_kinds": {
+    "OPENING_DEDUCTED": 2,
+    "SCHEDULE_ROW_NOT_FOUND_ON_PLAN": 4
+   },
+   "rebar_register": {
+    "MEASURED": 0,
+    "PROVISIONAL_MODEL": 72,
+    "MISSING_DATA": 10,
+    "EXPLICIT_NONE": 0,
+    "OUTSIDE_SCOPE": 0
+   },
+   "manual_inputs": 2
+  },
+  {
+   "seed": 315,
+   "variant": {
+    "units": "mm",
+    "lang": "EN",
+    "tags": {
+     "ftg": [
+      "MARK",
+      "WIDTH",
+      "LENGTH",
+      "DEPTH",
+      "SH-N",
+      "SH-DIA",
+      "LO-N",
+      "LO-DIA"
+     ],
+     "col": "TYPE",
+     "beam": [
+      "TYPE",
+      "WIDTH",
+      "DEPTH",
+      "BOT-N",
+      "BOT-DIA",
+      "TOP-N",
+      "TOP-DIA",
+      "LINK-N",
+      "LINK-DIA"
+     ],
+     "unit": "mm"
+    },
+    "curved": false,
+    "untagged_span": true,
+    "width_conflict": true,
+    "missing_type": true,
+    "opening": true,
+    "defects": true
+   },
+   "defects_applied": {
+    "TAG_PUSHED": 62,
+    "END_GAP": 93,
+    "DUPLICATE_LINE": 21,
+    "END_OVERSHOOT": 81,
+    "MTEXT_TAG": 25,
+    "BROKEN_FACE": 51,
+    "GRID_AXIS": 18,
+    "DIMENSION": 8
+   },
+   "ok": true,
+   "seconds": 0.276,
+   "quantities": {
+    "FOOTINGS": {
+     "engine": 23.175,
+     "truth": 23.175,
+     "error": 0.0
+    },
+    "COLUMNS": {
+     "engine": 17.48,
+     "truth": 17.48,
+     "error": 0.0
+    },
+    "BEAMS_TOTAL_DEPTH": {
+     "engine": 20.88,
+     "truth": 20.88,
+     "error": 0.0
+    },
+    "BEAMS_BELOW_SLAB": {
+     "engine": 28.0736,
+     "truth": 28.0736,
+     "error": 0.0
+    },
+    "SLABS": {
+     "engine": 50.2528,
+     "truth": 50.2528,
+     "error": -0.0
+    },
+    "STEEL_FOOTINGS": {
+     "engine": 596.444444,
+     "truth": 596.444444,
+     "error": 0.0
+    },
+    "STEEL_COLUMNS_MAIN": {
+     "engine": 2035.358025,
+     "truth": 2035.358025,
+     "error": 0.0
+    },
+    "STEEL_BEAMS": {
+     "engine": 2537.179371,
+     "truth": 2537.179268,
+     "error": 0.0
+    }
+   },
+   "detect_footings": {
+    "true": 20,
+    "pred": 20,
+    "matched": 20,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   "detect_beams": {
+    "true": 62,
+    "pred": 62,
+    "matched": 62,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   "slab_area": {
+    "truth_m2": 314.08,
+    "engine_panel_m2": 314.08,
+    "risk_m2": 0,
+    "missing_m2": 0.0,
+    "silent_missing_m2": 0.0,
+    "loss_reported": true
+   },
+   "detect_panels": {
+    "true": 22,
+    "pred": 22,
+    "matched": 22,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   "categories": {
+    "PROVISIONAL": 390
+   },
+   "coverage_risk": 6,
+   "coverage_risk_kinds": {
+    "OPENING_DEDUCTED": 2,
+    "SCHEDULE_ROW_NOT_FOUND_ON_PLAN": 4
+   },
+   "rebar_register": {
+    "MEASURED": 0,
+    "PROVISIONAL_MODEL": 122,
+    "MISSING_DATA": 22,
+    "EXPLICIT_NONE": 0,
+    "OUTSIDE_SCOPE": 0
+   },
+   "manual_inputs": 2
+  },
+  {
+   "seed": 316,
+   "variant": {
+    "units": "mm",
+    "lang": "EN",
+    "tags": {
+     "ftg": [
+      "FO-TY",
+      "W",
+      "H",
+      "DEPHT",
+      "SH-B",
+      "SH-D",
+      "LO-B",
+      "LO-D"
+     ],
+     "col": "COL-T",
+     "beam": [
+      "BEAM",
+      "W",
+      "H",
+      "BOT-B",
+      "BOT-D",
+      "TOP-B",
+      "TOP-D",
+      "STI-B",
+      "D"
+     ],
+     "unit": "cm"
+    },
+    "curved": true,
+    "untagged_span": true,
+    "width_conflict": false,
+    "missing_type": false,
+    "opening": true,
+    "defects": true
+   },
+   "defects_applied": {
+    "TAG_PUSHED": 24,
+    "END_OVERSHOOT": 36,
+    "BROKEN_FACE": 21,
+    "DUPLICATE_LINE": 11,
+    "MTEXT_TAG": 10,
+    "END_GAP": 27,
+    "GRID_AXIS": 12,
+    "DIMENSION": 4
+   },
+   "ok": true,
+   "seconds": 0.145,
+   "quantities": {
+    "FOOTINGS": {
+     "engine": 6.39,
+     "truth": 6.39,
+     "error": -0.0
+    },
+    "COLUMNS": {
+     "engine": 8.398,
+     "truth": 8.398,
+     "error": -0.0
+    },
+    "BEAMS_TOTAL_DEPTH": {
+     "engine": 10.626319,
+     "truth": 10.626319,
+     "error": -0.0
+    },
+    "BEAMS_BELOW_SLAB": {
+     "engine": 14.24818,
+     "truth": 14.24818,
+     "error": -0.0
+    },
+    "SLABS": {
+     "engine": 21.972,
+     "truth": 21.972,
+     "error": -0.0
+    },
+    "STEEL_FOOTINGS": {
+     "engine": 184.711111,
+     "truth": 184.711111,
+     "error": -0.0
+    },
+    "STEEL_COLUMNS_MAIN": {
+     "engine": 1046.755556,
+     "truth": 1046.755556,
+     "error": 0.0
+    },
+    "STEEL_BEAMS": {
+     "engine": 1215.322376,
+     "truth": 1215.322324,
+     "error": 0.0
+    }
+   },
+   "detect_footings": {
+    "true": 9,
+    "pred": 9,
+    "matched": 9,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   "detect_beams": {
+    "true": 26,
+    "pred": 26,
+    "matched": 26,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   "slab_area": {
+    "truth_m2": 137.325,
+    "engine_panel_m2": 137.325,
+    "risk_m2": 0,
+    "missing_m2": 0.0,
+    "silent_missing_m2": 0.0,
+    "loss_reported": true
+   },
+   "detect_panels": {
+    "true": 6,
+    "pred": 6,
+    "matched": 6,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   "categories": {
+    "PROVISIONAL": 164
+   },
+   "coverage_risk": 6,
+   "coverage_risk_kinds": {
+    "OPENING_DEDUCTED": 2,
+    "SCHEDULE_ROW_NOT_FOUND_ON_PLAN": 4
+   },
+   "rebar_register": {
+    "MEASURED": 0,
+    "PROVISIONAL_MODEL": 53,
+    "MISSING_DATA": 6,
+    "EXPLICIT_NONE": 0,
+    "OUTSIDE_SCOPE": 0
+   },
+   "manual_inputs": 2
+  },
+  {
+   "seed": 317,
+   "variant": {
+    "units": "m",
+    "lang": "AR",
+    "tags": {
+     "ftg": [
+      "MARK",
+      "WIDTH",
+      "LENGTH",
+      "DEPTH",
+      "SH-N",
+      "SH-DIA",
+      "LO-N",
+      "LO-DIA"
+     ],
+     "col": "TYPE",
+     "beam": [
+      "TYPE",
+      "WIDTH",
+      "DEPTH",
+      "BOT-N",
+      "BOT-DIA",
+      "TOP-N",
+      "TOP-DIA",
+      "LINK-N",
+      "LINK-DIA"
+     ],
+     "unit": "mm"
+    },
+    "curved": false,
+    "untagged_span": true,
+    "width_conflict": false,
+    "missing_type": false,
+    "opening": true,
+    "defects": true
+   },
+   "defects_applied": {
+    "TAG_PUSHED": 44,
+    "BROKEN_FACE": 35,
+    "DUPLICATE_LINE": 11,
+    "END_OVERSHOOT": 71,
+    "END_GAP": 49,
+    "MTEXT_TAG": 20,
+    "GRID_AXIS": 16,
+    "DIMENSION": 8
+   },
+   "ok": true,
+   "seconds": 0.192,
+   "quantities": {
+    "FOOTINGS": {
+     "engine": 23.7425,
+     "truth": 23.7425,
+     "error": -0.0
+    },
+    "COLUMNS": {
+     "engine": 13.452,
+     "truth": 13.452,
+     "error": -0.0
+    },
+    "BEAMS_TOTAL_DEPTH": {
+     "engine": 22.133,
+     "truth": 22.133,
+     "error": -0.0
+    },
+    "BEAMS_BELOW_SLAB": {
+     "engine": 29.0002,
+     "truth": 29.0002,
+     "error": -0.0
+    },
+    "SLABS": {
+     "engine": 39.0156,
+     "truth": 39.0156,
+     "error": -0.0
+    },
+    "STEEL_FOOTINGS": {
+     "engine": 547.555556,
+     "truth": 547.555556,
+     "error": 0.0
+    },
+    "STEEL_COLUMNS_MAIN": {
+     "engine": 1511.980247,
+     "truth": 1511.980247,
+     "error": 0.0
+    },
+    "STEEL_BEAMS": {
+     "engine": 2059.607304,
+     "truth": 2059.607221,
+     "error": 0.0
+    }
+   },
+   "detect_footings": {
+    "true": 15,
+    "pred": 15,
+    "matched": 15,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   "detect_beams": {
+    "true": 44,
+    "pred": 44,
+    "matched": 44,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   "slab_area": {
+    "truth_m2": 243.848,
+    "engine_panel_m2": 243.847,
+    "risk_m2": 0,
+    "missing_m2": 0.0,
+    "silent_missing_m2": 0.0,
+    "loss_reported": true
+   },
+   "detect_panels": {
+    "true": 14,
+    "pred": 14,
+    "matched": 14,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   "categories": {
+    "PROVISIONAL": 280
+   },
+   "coverage_risk": 6,
+   "coverage_risk_kinds": {
+    "OPENING_DEDUCTED": 2,
+    "SCHEDULE_ROW_NOT_FOUND_ON_PLAN": 4
+   },
+   "rebar_register": {
+    "MEASURED": 0,
+    "PROVISIONAL_MODEL": 89,
+    "MISSING_DATA": 14,
+    "EXPLICIT_NONE": 0,
+    "OUTSIDE_SCOPE": 0
+   },
+   "manual_inputs": 2
+  },
+  {
+   "seed": 318,
+   "variant": {
+    "units": "mm",
+    "lang": "EN",
+    "tags": {
+     "ftg": [
+      "FO-TY",
+      "W",
+      "H",
+      "DEPHT",
+      "SH-B",
+      "SH-D",
+      "LO-B",
+      "LO-D"
+     ],
+     "col": "COL-T",
+     "beam": [
+      "BEAM",
+      "W",
+      "H",
+      "BOT-B",
+      "BOT-D",
+      "TOP-B",
+      "TOP-D",
+      "STI-B",
+      "D"
+     ],
+     "unit": "cm"
+    },
+    "curved": true,
+    "untagged_span": true,
+    "width_conflict": true,
+    "missing_type": false,
+    "opening": true,
+    "defects": true
+   },
+   "defects_applied": {
+    "TAG_PUSHED": 24,
+    "END_GAP": 34,
+    "BROKEN_FACE": 22,
+    "MTEXT_TAG": 14,
+    "END_OVERSHOOT": 38,
+    "DUPLICATE_LINE": 6,
+    "GRID_AXIS": 12,
+    "DIMENSION": 4
+   },
+   "ok": true,
+   "seconds": 0.124,
+   "quantities": {
+    "FOOTINGS": {
+     "engine": 13.304,
+     "truth": 13.304,
+     "error": -0.0
+    },
+    "COLUMNS": {
+     "engine": 9.12,
+     "truth": 9.12,
+     "error": -0.0
+    },
+    "BEAMS_TOTAL_DEPTH": {
+     "engine": 9.840319,
+     "truth": 9.840319,
+     "error": 0.0
+    },
+    "BEAMS_BELOW_SLAB": {
+     "engine": 13.19978,
+     "truth": 13.19978,
+     "error": 0.0
+    },
+    "SLABS": {
+     "engine": 17.8864,
+     "truth": 17.8864,
+     "error": -0.0
+    },
+    "STEEL_FOOTINGS": {
+     "engine": 306.844444,
+     "truth": 306.844444,
+     "error": -0.0
+    },
+    "STEEL_COLUMNS_MAIN": {
+     "engine": 1046.755556,
+     "truth": 1046.755556,
+     "error": 0.0
+    },
+    "STEEL_BEAMS": {
+     "engine": 1141.000843,
+     "truth": 1141.000795,
+     "error": 0.0
+    }
+   },
+   "detect_footings": {
+    "true": 9,
+    "pred": 9,
+    "matched": 9,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   "detect_beams": {
+    "true": 26,
+    "pred": 26,
+    "matched": 26,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   "slab_area": {
+    "truth_m2": 111.79,
+    "engine_panel_m2": 111.79,
+    "risk_m2": 0,
+    "missing_m2": 0.0,
+    "silent_missing_m2": 0.0,
+    "loss_reported": true
+   },
+   "detect_panels": {
+    "true": 6,
+    "pred": 6,
+    "matched": 6,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   "categories": {
+    "PROVISIONAL": 164
+   },
+   "coverage_risk": 6,
+   "coverage_risk_kinds": {
+    "OPENING_DEDUCTED": 2,
+    "SCHEDULE_ROW_NOT_FOUND_ON_PLAN": 4
+   },
+   "rebar_register": {
+    "MEASURED": 0,
+    "PROVISIONAL_MODEL": 53,
+    "MISSING_DATA": 6,
+    "EXPLICIT_NONE": 0,
+    "OUTSIDE_SCOPE": 0
+   },
+   "manual_inputs": 2
+  },
+  {
+   "seed": 319,
+   "variant": {
+    "units": "mm",
+    "lang": "EN",
+    "tags": {
+     "ftg": [
+      "MARK",
+      "WIDTH",
+      "LENGTH",
+      "DEPTH",
+      "SH-N",
+      "SH-DIA",
+      "LO-N",
+      "LO-DIA"
+     ],
+     "col": "TYPE",
+     "beam": [
+      "TYPE",
+      "WIDTH",
+      "DEPTH",
+      "BOT-N",
+      "BOT-DIA",
+      "TOP-N",
+      "TOP-DIA",
+      "LINK-N",
+      "LINK-DIA"
+     ],
+     "unit": "mm"
+    },
+    "curved": false,
+    "untagged_span": true,
+    "width_conflict": false,
+    "missing_type": true,
+    "opening": true,
+    "defects": true
+   },
+   "defects_applied": {
+    "TAG_PUSHED": 34,
+    "END_OVERSHOOT": 37,
+    "BROKEN_FACE": 29,
+    "END_GAP": 43,
+    "DUPLICATE_LINE": 7,
+    "MTEXT_TAG": 17,
+    "GRID_AXIS": 14,
+    "DIMENSION": 6
+   },
+   "ok": true,
+   "seconds": 0.118,
+   "quantities": {
+    "FOOTINGS": {
+     "engine": 12.096,
+     "truth": 12.096,
+     "error": 0.0
+    },
+    "COLUMNS": {
+     "engine": 9.804,
+     "truth": 9.804,
+     "error": 0.0
+    },
+    "BEAMS_TOTAL_DEPTH": {
+     "engine": 13.7525,
+     "truth": 13.7525,
+     "error": 0.0
+    },
+    "BEAMS_BELOW_SLAB": {
+     "engine": 17.6585,
+     "truth": 17.6585,
+     "error": 0.0
+    },
+    "SLABS": {
+     "engine": 32.5304,
+     "truth": 32.5304,
+     "error": -0.0
+    },
+    "STEEL_FOOTINGS": {
+     "engine": 318.4,
+     "truth": 318.4,
+     "error": -0.0
+    },
+    "STEEL_COLUMNS_MAIN": {
+     "engine": 1221.214815,
+     "truth": 1221.214815,
+     "error": 0.0
+    },
+    "STEEL_BEAMS": {
+     "engine": 1212.426991,
+     "truth": 1212.426942,
+     "error": 0.0
+    }
+   },
+   "detect_footings": {
+    "true": 12,
+    "pred": 12,
+    "matched": 12,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   "detect_beams": {
+    "true": 24,
+    "pred": 24,
+    "matched": 24,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   "slab_area": {
+    "truth_m2": 203.315,
+    "engine_panel_m2": 203.315,
+    "risk_m2": 0,
+    "missing_m2": 0.0,
+    "silent_missing_m2": 0.0,
+    "loss_reported": true
+   },
+   "detect_panels": {
+    "true": 10,
+    "pred": 10,
+    "matched": 10,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   "categories": {
+    "PROVISIONAL": 178,
+    "UNRESOLVED": 10
+   },
+   "coverage_risk": 26,
+   "coverage_risk_kinds": {
+    "BAND_UNBOUND": 10,
+    "MARK_TYPE_NOT_IN_SCHEDULE": 10,
+    "OPENING_DEDUCTED": 2,
+    "SCHEDULE_ROW_NOT_FOUND_ON_PLAN": 4
+   },
+   "rebar_register": {
+    "MEASURED": 0,
+    "PROVISIONAL_MODEL": 60,
+    "MISSING_DATA": 20,
+    "EXPLICIT_NONE": 0,
+    "OUTSIDE_SCOPE": 0
+   },
+   "manual_inputs": 2
+  },
+  {
+   "seed": 320,
+   "variant": {
+    "units": "mm",
+    "lang": "AR",
+    "tags": {
+     "ftg": [
+      "FO-TY",
+      "W",
+      "H",
+      "DEPHT",
+      "SH-B",
+      "SH-D",
+      "LO-B",
+      "LO-D"
+     ],
+     "col": "COL-T",
+     "beam": [
+      "BEAM",
+      "W",
+      "H",
+      "BOT-B",
+      "BOT-D",
+      "TOP-B",
+      "TOP-D",
+      "STI-B",
+      "D"
+     ],
+     "unit": "cm"
+    },
+    "curved": true,
+    "untagged_span": true,
+    "width_conflict": false,
+    "missing_type": false,
+    "opening": true,
+    "defects": true
+   },
+   "defects_applied": {
+    "TAG_PUSHED": 62,
+    "END_GAP": 80,
+    "DUPLICATE_LINE": 21,
+    "END_OVERSHOOT": 95,
+    "BROKEN_FACE": 45,
+    "MTEXT_TAG": 33,
+    "GRID_AXIS": 18,
+    "DIMENSION": 8
+   },
+   "ok": true,
+   "seconds": 0.253,
+   "quantities": {
+    "FOOTINGS": {
+     "engine": 27.76,
+     "truth": 27.76,
+     "error": -0.0
+    },
+    "COLUMNS": {
+     "engine": 16.34,
+     "truth": 16.34,
+     "error": 0.0
+    },
+    "BEAMS_TOTAL_DEPTH": {
+     "engine": 31.753319,
+     "truth": 31.753319,
+     "error": 0.0
+    },
+    "BEAMS_BELOW_SLAB": {
+     "engine": 41.27318,
+     "truth": 41.27318,
+     "error": 0.0
+    },
+    "SLABS": {
+     "engine": 60.4596,
+     "truth": 60.4596,
+     "error": 0.0
+    },
+    "STEEL_FOOTINGS": {
+     "engine": 648.888889,
+     "truth": 648.888889,
+     "error": 0.0
+    },
+    "STEEL_COLUMNS_MAIN": {
+     "engine": 2035.358025,
+     "truth": 2035.358025,
+     "error": 0.0
+    },
+    "STEEL_BEAMS": {
+     "engine": 2913.7002,
+     "truth": 2913.700083,
+     "error": 0.0
+    }
+   },
+   "detect_footings": {
+    "true": 20,
+    "pred": 20,
+    "matched": 20,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   "detect_beams": {
+    "true": 64,
+    "pred": 64,
+    "matched": 64,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   "slab_area": {
+    "truth_m2": 377.873,
+    "engine_panel_m2": 377.873,
+    "risk_m2": 0,
+    "missing_m2": 0.0,
+    "silent_missing_m2": 0.0,
+    "loss_reported": true
+   },
+   "detect_panels": {
+    "true": 22,
+    "pred": 22,
+    "matched": 22,
+    "recall": 1.0,
+    "precision": 1.0
+   },
+   "categories": {
+    "PROVISIONAL": 398
+   },
+   "coverage_risk": 6,
+   "coverage_risk_kinds": {
+    "OPENING_DEDUCTED": 2,
+    "SCHEDULE_ROW_NOT_FOUND_ON_PLAN": 4
+   },
+   "rebar_register": {
+    "MEASURED": 0,
+    "PROVISIONAL_MODEL": 124,
+    "MISSING_DATA": 22,
+    "EXPLICIT_NONE": 0,
+    "OUTSIDE_SCOPE": 0
+   },
+   "manual_inputs": 2
+  }
+ ],
+ "summary": {
+  "drawings": 20,
+  "end_to_end_success": 20,
+  "failures": [],
+  "mean_abs_error": {
+   "BEAMS_BELOW_SLAB": 0.0,
+   "BEAMS_TOTAL_DEPTH": 0.0,
+   "COLUMNS": 0.0,
+   "FOOTINGS": 0.0,
+   "SLABS": 0.0,
+   "STEEL_BEAMS": 0.0,
+   "STEEL_COLUMNS_MAIN": 0.0,
+   "STEEL_FOOTINGS": 0.0
+  },
+  "max_abs_error": {
+   "BEAMS_BELOW_SLAB": 0.0,
+   "BEAMS_TOTAL_DEPTH": 0.0,
+   "COLUMNS": 0.0,
+   "FOOTINGS": 0.0,
+   "SLABS": 0.0,
+   "STEEL_BEAMS": 0.0,
+   "STEEL_COLUMNS_MAIN": 0.0,
+   "STEEL_FOOTINGS": 0.0
+  },
+  "within_5pct": {
+   "BEAMS_BELOW_SLAB": 20,
+   "BEAMS_TOTAL_DEPTH": 20,
+   "COLUMNS": 20,
+   "FOOTINGS": 20,
+   "SLABS": 20,
+   "STEEL_BEAMS": 20,
+   "STEEL_COLUMNS_MAIN": 20,
+   "STEEL_FOOTINGS": 20
+  },
+  "detect_footings": {
+   "recall": 1.0,
+   "precision": 1.0,
+   "matched": 279,
+   "true": 279,
+   "pred": 279
+  },
+  "detect_beams": {
+   "recall": 1.0,
+   "precision": 1.0,
+   "matched": 816,
+   "true": 816,
+   "pred": 816
+  },
+  "detect_panels": {
+   "recall": 1.0,
+   "precision": 1.0,
+   "matched": 260,
+   "true": 260,
+   "pred": 260
+  },
+  "slab_area": {
+   "truth_m2": 4721.608,
+   "engine_panel_m2": 4721.606,
+   "risk_m2": 0,
+   "missing_m2": 0.0,
+   "silent_missing_m2": 0.0
+  },
+  "slab_loss_unreported_drawings": 0,
+  "mean_seconds": 0.197
+ }
+}

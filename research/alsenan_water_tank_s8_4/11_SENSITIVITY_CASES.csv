@@ -1,0 +1,5 @@
+CASE_ID,LANE,CASE,KG,DELTA_KG,BASIS
+SA-01,SENSITIVITY_ONLY,bottom bars run face to face with no stop zone (the typical curtailment does not govern the (T&B) slab),374.246666667,13.038101852,released + every bottom stop zone
+SA-02,SENSITIVITY_ONLY,stop zones only at the resolved continuous support (BL003 between the two panels); unresolved ends run through,368.476759259,7.268194444,released + unresolved-end stop zones
+SA-03,SENSITIVITY_ONLY,"plan note 2 also applies on the tank side (5Ø10/m, 1/3 local span from each beam face), additive to the (T&B) top layer",416.39375,55.185185185,released + note-2 tank-side lengths
+SA-04,SENSITIVITY_ONLY,"whole bars: each family's equivalent count rounded up, at its mean run, full length (a fabrication view, not a BBS)",380.74787873,19.539313915,ceil(count) x mean run

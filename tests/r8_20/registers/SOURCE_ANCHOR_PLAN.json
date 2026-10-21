@@ -1,0 +1,79 @@
+{
+ "SCHEMA": "URBAN_R8_20_SOURCE_ANCHOR_PLAN_V1",
+ "policy": {
+  "policy_id": "SOURCE_EXPORT_IDENTITY_POLICY_V1",
+  "identity": "handle + instance path; equal layer, entity type and geometry within tolerance; both directions",
+  "protocol": {
+   "steps": [
+    "open the authoritative DWG in AutoCAD (record the AutoCAD product, version and build)",
+    "make NO edit, no purge, no audit-fix, no regen-save of the source",
+    "SAVEAS DXF (AutoCAD 2018 DXF, the same format as the current DXF) to a NEW file",
+    "SAVEAS DWG in AutoCAD 2013 format (AC1027) to a NEW file (for the pinned libredwg K1 route)",
+    "close WITHOUT saving the original",
+    "record local timestamps of both exports",
+    "compute SHA-256 of the source DWG (before and after: must be unchanged) and of both exports",
+    "send the four hashes, the AutoCAD build and the two exported files"
+   ],
+   "counts_only_if": [
+    "the source DWG hash equals the anchored DWG hash e4babbc2ded1...",
+    "the source DWG hash is unchanged after the session",
+    "both exports carry the stated format headers ($ACADVER)"
+   ],
+   "then": [
+    "DXF identity: current DXF vs re-exported DXF, entity by entity (this policy)",
+    "cross-route: K1 (pinned libredwg on the AC1027 DWG) vs K2 (ezdxf on the DXF) topology agreement"
+   ],
+   "never": [
+    "an edited or re-saved source",
+    "an export by an unrecorded tool",
+    "a partial match called identity"
+   ]
+  },
+  "never": [
+   "'mostly identical'",
+   "identity by entity counts or bounding boxes",
+   "a hash of a re-saved source"
+  ],
+  "digest": "0ac5015164a851ff746f9ed78c37f26acce0a9c73ba54eebc8729c2953082958"
+ },
+ "routes": {
+  "A": {
+   "what": "owner-controlled AutoCAD re-export (DXF + AC1027 DWG, no edits, hashes)",
+   "closes": [
+    "SOURCE_ANCHOR",
+    "enables CROSS_ROUTE_AGREEMENT"
+   ],
+   "risk": "trusts AutoCAD as the reference reader (the owner's own authoring tool)",
+   "cost": "one session",
+   "verdict": "BEST"
+  },
+  "B": {
+   "what": "native AutoCAD readback oracle via a pinned / reviewed MCP or COM lab route",
+   "closes": [
+    "field-level readback of the DWG"
+   ],
+   "risk": "a live tool in the loop; lab oracle only, never a quantity authority",
+   "verdict": "LATER (only if A is impossible)"
+  },
+  "C": {
+   "what": "another reproducibly built DWG decoder for AC1032",
+   "closes": [
+    "SOURCE_ANCHOR (if it decodes)"
+   ],
+   "risk": "unknown coverage; build provenance work",
+   "verdict": "NOT NOW"
+  },
+  "D": {
+   "what": "A + B",
+   "verdict": "only if A shows differences"
+  }
+ },
+ "recommended": "A",
+ "tool_ready": "engine/source/source_anchor.py (SOURCE_EXPORT_IDENTITY_POLICY_V1), tested",
+ "after_ingest": [
+  "compare(current DXF, re-exported DXF)",
+  "K1 on the AC1027 DWG vs K2 on the DXF: topology, closures H2430 / H2431 / I1471",
+  "re-evaluate CLOSURE_RELEASE_MODEL_V1"
+ ],
+ "downloads": "NONE"
+}

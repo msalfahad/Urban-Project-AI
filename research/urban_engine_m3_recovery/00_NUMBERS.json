@@ -1,0 +1,57 @@
+{
+ "m2_seconds": {
+  "intake": 1.237,
+  "detect": 0.771,
+  "items": 0.032
+ },
+ "m2_rebar_states": {
+  "MISSING_DATA": 161,
+  "PROVISIONAL_MODEL": 254
+ },
+ "m3_rebar_states": {
+  "MISSING_DATA": 82,
+  "OUTSIDE_SCOPE": 1,
+  "PROVISIONAL_MODEL": 315,
+  "EXPLICIT_NONE": 15,
+  "PARTIAL_MISSING": 28
+ },
+ "missing_steel_components": 110,
+ "rebar_totals": {
+  "PROVISIONAL_MODEL": 315,
+  "MISSING_DATA": 82,
+  "PARTIAL_MISSING": 28,
+  "EXPLICIT_NONE": 15,
+  "OUTSIDE_SCOPE": 1
+ },
+ "classes": {
+  "": 19,
+  "Provisional assumption": 6,
+  "Corrected omission": 17,
+  "Source interpretation": 6,
+  "Remaining source ambiguity": 5,
+  "Remaining extraction failure": 26
+ },
+ "evidence_records": {
+  "OCR_UNREVIEWED": 14,
+  "OCR_REJECTED_UNPARSED": 1
+ },
+ "evidence_details": [
+  "DET-P13C12",
+  "DET-P13C16",
+  "DET-P13C18",
+  "DET-P13C19"
+ ],
+ "coverage_states": {
+  "PLAIN_CONCRETE": "QUANTIFIED",
+  "COLUMN_NECKS": "PARTLY_QUANTIFIED",
+  "CANTILEVER_PORTIONS": "COUNTED_IN_PARENT",
+  "LINTELS": "DETECTED_NOT_QUANTIFIED",
+  "LIFT": "NO_EVIDENCE_FOUND",
+  "POOL": "DETECTED_NOT_QUANTIFIED",
+  "STAIRS": "DETECTED_NOT_QUANTIFIED",
+  "DOMES": "DETECTED_NOT_QUANTIFIED",
+  "WATER_TANK": "DETECTED_NOT_QUANTIFIED",
+  "PARAPETS": "DETECTED_NOT_QUANTIFIED",
+  "WALLS": "NO_EVIDENCE_FOUND"
+ }
+}

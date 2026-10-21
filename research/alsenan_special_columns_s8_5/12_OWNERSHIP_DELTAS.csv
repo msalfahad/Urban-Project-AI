@@ -1,0 +1,34 @@
+DELTA_ID,DATE,FROZEN_STAGE,COMPONENT_ID,S8_5_COMPONENT,OLD_OWNER,OLD_STATE,OLD_KG,NEW_OWNER,NEW_STATE,KG_MOVED,WHY
+OD-01,2026-10-09,S3.1,"[""S3.1:COL-C8-X15-Y06-GF|EXTRA:TURN_EXTRA_BARS""]",TC-31F-05,S3.1,LOWER_BOUND,12.642,S3.1,LOWER_BOUND,0,CONFIRMED where it is: 4 x (1000 + 1000) mm x 16^2/162 = 12.641975 kg; S3.1 12.642 kg (equal)
+OD-02,2026-10-09,S3.1,"[""S3.1:COL-C9-X13-Y08-GF|EXTRA:TURN_EXTRA_BARS""]",TC-324-05,S3.1,LOWER_BOUND,12.642,S3.1,LOWER_BOUND,0,CONFIRMED where it is: 4 x (1000 + 1000) mm x 16^2/162 = 12.641975 kg; S3.1 12.642 kg (equal)
+OD-03,2026-10-09,S6.1,"[""S6.1:S6.1-D1324""]",PC-548-08,S6.1,LOWER_BOUND,12.009877,S6.1,LOWER_BOUND,0,CONFIRMED where it is: S6.1 basis 4 x (2 x 850 + 200) mm x 16^2/162 = 12.009877 kg; S6.1 12.009877 kg (equal); the drawn footprint spans 212.9 mm along B26 (88.51 deg): SA-548-EXTRA-B26
+OD-04,2026-10-09,S3.1,"[""S3.1:COL-C8-X15-Y06-GF|SECTION_TRANSITION""]",TC-31F-04,S3.1,BLOCKED,,S3.1 (ordinary continuity),BLOCKED_UNQUANTIFIED,0,stays blocked with its frozen owner
+OD-05,2026-10-09,none,none,TC-31F-06,none,UNOWNED,,S8.5,BLOCKED_UNQUANTIFIED,0,stays blocked with its frozen owner
+OD-06,2026-10-09,S3.1,"[""S3.1:COL-C8-X15-Y06-GF|EXTRA:TURN_SPIRAL""]",TC-31F-10,S3.1,BLOCKED,,S8.5 (custody),BLOCKED_UNQUANTIFIED,0,custody of a blocked role: the single owner of a future release
+OD-07,2026-10-09,S3.1,"[""S3.1:COL-C9-X13-Y08-GF|SECTION_TRANSITION""]",TC-324-04,S3.1,BLOCKED,,S3.1 (ordinary continuity),BLOCKED_UNQUANTIFIED,0,stays blocked with its frozen owner
+OD-08,2026-10-09,none,none,TC-324-06,none,UNOWNED,,S8.5,BLOCKED_UNQUANTIFIED,0,stays blocked with its frozen owner
+OD-09,2026-10-09,S3.1,"[""S3.1:COL-C9-X13-Y08-GF|EXTRA:TURN_SPIRAL""]",TC-324-10,S3.1,BLOCKED,,S8.5 (custody),BLOCKED_UNQUANTIFIED,0,custody of a blocked role: the single owner of a future release
+OD-10,2026-10-09,none,none,DC-03,none,UNOWNED,,S8.5 (custody),BLOCKED_UNQUANTIFIED,0,custody of a blocked role: the single owner of a future release
+OD-11,2026-10-09,none,none,DC-04,none,UNOWNED,,S8.5 (custody),BLOCKED_UNQUANTIFIED,0,custody of a blocked role: the single owner of a future release
+OD-12,2026-10-09,none,none,PC-544-05,none,UNOWNED,,S8.5 (custody),BLOCKED_UNQUANTIFIED,0,custody of a blocked role: the single owner of a future release
+OD-13,2026-10-09,none,none,PC-544-06,none,UNOWNED,,S8.5 (custody),BLOCKED_UNQUANTIFIED,0,custody of a blocked role: the single owner of a future release
+OD-14,2026-10-09,none,none,PC-544-07,none,UNOWNED,,S8.5 (custody),BLOCKED_UNQUANTIFIED,0,custody of a blocked role: the single owner of a future release
+OD-15,2026-10-09,none,none,PC-544-08,none,UNOWNED,,S8.5 (custody),BLOCKED_UNQUANTIFIED,0,custody of a blocked role: the single owner of a future release
+OD-16,2026-10-09,none,none,PC-544-09,none,UNOWNED,,S8.5 (custody),BLOCKED_UNQUANTIFIED,0,custody of a blocked role: the single owner of a future release
+OD-17,2026-10-09,none,none,PC-544-10,none,UNOWNED,,S8.5 (custody),BLOCKED_UNQUANTIFIED,0,custody of a blocked role: the single owner of a future release
+OD-18,2026-10-09,none,none,PC-548-05,none,UNOWNED,,S8.5 (custody),BLOCKED_UNQUANTIFIED,0,custody of a blocked role: the single owner of a future release
+OD-19,2026-10-09,none,none,PC-548-06,none,UNOWNED,,S8.5 (custody),BLOCKED_UNQUANTIFIED,0,custody of a blocked role: the single owner of a future release
+OD-20,2026-10-09,none,none,PC-548-07,none,UNOWNED,,S8.5 (custody),BLOCKED_UNQUANTIFIED,0,custody of a blocked role: the single owner of a future release
+OD-21,2026-10-09,S6.1,"[""S6.1:S6.1-D1325"", ""S6.1:S6.1-D1326"", ""S6.1:S6.1-D1327""]",PC-548-09,S6.1,BLOCKED,,S6.1,BLOCKED_UNQUANTIFIED,0,stays blocked with its frozen owner
+OD-22,2026-10-09,none,none,PC-77C-05,none,UNOWNED,,S8.5 (custody),BLOCKED_UNQUANTIFIED,0,custody of a blocked role: the single owner of a future release
+OD-23,2026-10-09,none,none,PC-77C-06,none,UNOWNED,,S8.5 (custody),BLOCKED_UNQUANTIFIED,0,custody of a blocked role: the single owner of a future release
+OD-24,2026-10-09,none,none,PC-77C-07,none,UNOWNED,,S8.5 (custody),BLOCKED_UNQUANTIFIED,0,custody of a blocked role: the single owner of a future release
+OD-25,2026-10-09,none,none,PC-77C-08,none,UNOWNED,,S8.5 (custody),BLOCKED_UNQUANTIFIED,0,custody of a blocked role: the single owner of a future release
+OD-26,2026-10-09,none,none,PC-77C-09,none,UNOWNED,,S8.5 (custody),BLOCKED_UNQUANTIFIED,0,custody of a blocked role: the single owner of a future release
+OD-27,2026-10-09,none,none,PC-77C-10,none,UNOWNED,,S8.5 (custody),BLOCKED_UNQUANTIFIED,0,custody of a blocked role: the single owner of a future release
+OD-28,2026-10-09,PRE-S8,PRE-S8 02 census SPC-TURN_COLUMN-GFRS-31F,,PRE-S8 claim: none (no S3-S7 stage),CENSUS,,"S8.5 rows TC-31F-04, TC-31F-05, TC-31F-06, TC-31F-07, TC-31F-10",SUPERSEDED_CLAIM,0,"PRE-S8 stays frozen; its ownership claim is replaced by the S8.5 role-by-role audit, no quantity"
+OD-29,2026-10-09,PRE-S8,PRE-S8 02 census SPC-TURN_COLUMN-GFRS-324,,PRE-S8 claim: none (no S3-S7 stage),CENSUS,,"S8.5 rows TC-324-04, TC-324-05, TC-324-06, TC-324-07, TC-324-10",SUPERSEDED_CLAIM,0,"PRE-S8 stays frozen; its ownership claim is replaced by the S8.5 role-by-role audit, no quantity"
+OD-30,2026-10-09,PRE-S8,PRE-S8 02 census SPC-DEAD_COLUMN-GFRS-38A,,PRE-S8 claim: none (no S3-S7 stage),CENSUS,,"S8.5 rows DC-03, DC-04",SUPERSEDED_CLAIM,0,"PRE-S8 stays frozen; its ownership claim is replaced by the S8.5 role-by-role audit, no quantity"
+OD-31,2026-10-09,PRE-S8,PRE-S8 02 census SPC-PLANTED_COLUMN-GFRS-544,,PRE-S8 claim: S6.1 carrying-beam extra (planted_column_extra delta) / column not in S3.1,CENSUS,,"S8.5 rows PC-544-05, PC-544-06, PC-544-07, PC-544-08, PC-544-09, PC-544-10",SUPERSEDED_CLAIM,0,"PRE-S8 stays frozen; its ownership claim is replaced by the S8.5 role-by-role audit, no quantity"
+OD-32,2026-10-09,PRE-S8,PRE-S8 02 census SPC-PLANTED_COLUMN-GFRS-548,,PRE-S8 claim: S6.1 carrying-beam extra (planted_column_extra delta) / column not in S3.1,CENSUS,,"S8.5 rows PC-548-05, PC-548-06, PC-548-07, PC-548-08, PC-548-09, PC-548-10",SUPERSEDED_CLAIM,0,"PRE-S8 stays frozen; its ownership claim is replaced by the S8.5 role-by-role audit, no quantity"
+OD-33,2026-10-09,PRE-S8,PRE-S8 02 census SPC-PLANTED_COLUMN-FFRS-77C,,PRE-S8 claim: S6.1 carrying-beam extra (planted_column_extra delta) / column not in S3.1,CENSUS,,"S8.5 rows PC-77C-05, PC-77C-06, PC-77C-07, PC-77C-08, PC-77C-09, PC-77C-10",SUPERSEDED_CLAIM,0,"PRE-S8 stays frozen; its ownership claim is replaced by the S8.5 role-by-role audit, no quantity"

@@ -1,0 +1,12 @@
+SECTION,SET,ENGINE,INJECTED,DETECTED,FALSE_FINDINGS,FALSE_BY_KIND,DESIGN_VOID_FLAGS,FAMILY_RIGHT,FAMILY_WRONG,FAMILY_UNKNOWN,FAMILY_NA,DETAIL
+SYNTHETIC_HELDOUT,"held-out seeds 301-340, development vocabulary (M6 config A2)",V4,479,478,5,"{""DRAWN_NOT_MEASURED"": 4, ""REGION_EXCLUDED"": 1}",3,341,16,34,88,
+SYNTHETIC_HELDOUT,"held-out seeds 301-340, development vocabulary (M6 config A2)",V5,479,479,1,"{""SLAB_COVERAGE_LOW"": 1}",5,350,12,30,87,
+SYNTHETIC_HELDOUT,"held-out seeds 301-340, held-out vocabulary, hard (M6 config B2)",V4,479,478,8,"{""COLUMN_ITEM_WITHOUT_PRESENCE"": 1, ""COLUMN_PRESENCE_NOT_ITEMIZED"": 1, ""DRAWN_NOT_MEASURED"": 5, ""REGION_EXCLUDED"": 1}",3,326,21,44,88,
+SYNTHETIC_HELDOUT,"held-out seeds 301-340, held-out vocabulary, hard (M6 config B2)",V5,479,479,1,"{""SLAB_COVERAGE_LOW"": 1}",4,335,19,38,87,
+ST7757_FINDINGS,ST7757 (post-discovery),V4,,93,,,,,,,,"findings HIGH 36, MEDIUM 56, LOW 1"
+ST7757_FINDINGS,ST7757 (post-discovery),V5,,90,,,,,,,,"findings HIGH 34, MEDIUM 55, LOW 1"
+ST7757_FINDING_DELTA,V5_ONLY,,,,,COLUMN_ITEM_WITHOUT_PRESENCE,,,,,,"MEDIUM SH02 COLUMNS: column item P-C:COL:SH12:C3@243004,52949|2F (PROVISIONAL, 0.420 m3) on 2F; the 2F plan shows no column outline within 3 m"
+ST7757_FINDING_DELTA,V4_ONLY,,,,,COLUMN_ITEM_WITHOUT_PRESENCE,,,,,,"MEDIUM SH02 COLUMNS: column item P-C:COL:SH12:C3@167036,38502|2F (PROVISIONAL, 0.420 m3) on 2F; the 2F plan shows no column outline within 3 m"
+ST7757_FINDING_DELTA,V4_ONLY,,,,,DRAWN_NOT_MEASURED,,,,,,"MEDIUM SH04 UNKNOWN: layer 1: 2 entities (0 lines, 2 arcs, 0 circles, 0 hatches), 2.17 m; shape CURVED; inside_building; marks near: B6"
+ST7757_FINDING_DELTA,V5_ONLY,,,,,DRAWN_NOT_MEASURED,,,,,,"MEDIUM SH04 UNKNOWN: layer 1: 4 entities (1 lines, 3 arcs, 0 circles, 0 hatches), 2.63 m; shape CURVED; inside_building; marks near: B6"
+ST7757_FINDING_DELTA,V4_ONLY,,,,,MEMBER_OUTLINE_SUSPECT,,,,,,"MEDIUM SH10 COLUMNS: column COL:SH10:C1@137485,46080 bound to an outline 1.80 x 1.80 m, more than twice every section its schedule prints"

@@ -1,0 +1,36 @@
+{
+ "concrete_by_class": {
+  "AGREES_WITHIN_M1_RANGE": 8,
+  "DOUBLE_COUNTING": 2,
+  "GEOMETRY_EXTRACTION_ERROR": 2,
+  "MEASUREMENT_CONVENTION": 15,
+  "MISSING_COMPONENT": 16,
+  "SCOPE": 9,
+  "UNRESOLVED": 21,
+  "UNSUPPORTED_ASSUMPTION": 7
+ },
+ "concrete_comparisons": 80,
+ "external_figures_written": false,
+ "freeze_commit": "bc28327",
+ "m1_outputs_unchanged": true,
+ "missing_reinforcement_candidates": 89,
+ "round": "M1 post-freeze",
+ "rule": "no external estimate is used to tune M1; positions and classes only",
+ "sources": [
+  "research/alsenan_multi_engine_comparison/MULTI_ENGINE_CONCRETE_COMPARISON.json",
+  "research/alsenan_multi_engine_comparison/MULTI_ENGINE_REBAR_COMPARISON.json",
+  "research/R9_1_CHRIS_POST_FREEZE/15_QUANTITY_RECONCILIATION_UPDATED.csv",
+  "research/alsenan_structural_s9/03_REINFORCEMENT_BOQ_RECONCILIATION.csv"
+ ],
+ "steel_by_class": {
+  "AGREES_WITHIN_M1_RANGE": 0,
+  "DOUBLE_COUNTING": 0,
+  "GEOMETRY_EXTRACTION_ERROR": 0,
+  "MEASUREMENT_CONVENTION": 2,
+  "MISSING_COMPONENT": 5,
+  "SCOPE": 0,
+  "UNRESOLVED": 2,
+  "UNSUPPORTED_ASSUMPTION": 0
+ },
+ "steel_comparisons": 9
+}

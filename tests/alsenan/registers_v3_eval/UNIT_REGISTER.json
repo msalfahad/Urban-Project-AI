@@ -1,0 +1,528 @@
+{
+ "SCHEMA": "URBAN_BOQ_UNIT_REGISTER_V1",
+ "policy": "URBAN_BOQ_UNIT_CONTROL_V1",
+ "engine_to_display": [
+  {
+   "ENGINE_UNIT": "m3",
+   "DISPLAY_UNIT": "m³",
+   "FACTOR": 1.0,
+   "DISPLAY_DECIMALS": 3,
+   "ROLE": "volume"
+  },
+  {
+   "ENGINE_UNIT": "m2",
+   "DISPLAY_UNIT": "m²",
+   "FACTOR": 1.0,
+   "DISPLAY_DECIMALS": 2,
+   "ROLE": "area"
+  },
+  {
+   "ENGINE_UNIT": "lm",
+   "DISPLAY_UNIT": "lm",
+   "FACTOR": 1.0,
+   "DISPLAY_DECIMALS": 2,
+   "ROLE": "length"
+  },
+  {
+   "ENGINE_UNIT": "nr",
+   "DISPLAY_UNIT": "No.",
+   "FACTOR": 1.0,
+   "DISPLAY_DECIMALS": 0,
+   "ROLE": "count"
+  },
+  {
+   "ENGINE_UNIT": "kg",
+   "DISPLAY_UNIT": "t",
+   "FACTOR": 0.001,
+   "DISPLAY_DECIMALS": 3,
+   "ROLE": "weight"
+  },
+  {
+   "ENGINE_UNIT": "m",
+   "DISPLAY_UNIT": "m",
+   "FACTOR": 1.0,
+   "DISPLAY_DECIMALS": 3,
+   "ROLE": "dimension"
+  }
+ ],
+ "convention": [
+  {
+   "ITEM": "CONCRETE / RC / BLINDING",
+   "OFFICIAL_UNIT": "m³",
+   "STATUS": "IN USE"
+  },
+  {
+   "ITEM": "REINFORCEMENT / REBAR",
+   "OFFICIAL_UNIT": "t",
+   "STATUS": "IN USE"
+  },
+  {
+   "ITEM": "BLOCKWORK",
+   "OFFICIAL_UNIT": "m²",
+   "STATUS": "IN USE"
+  },
+  {
+   "ITEM": "PLASTER",
+   "OFFICIAL_UNIT": "m²",
+   "STATUS": "IN USE"
+  },
+  {
+   "ITEM": "PAINT",
+   "OFFICIAL_UNIT": "m²",
+   "STATUS": "IN USE"
+  },
+  {
+   "ITEM": "FLOOR PORCELAIN / CERAMIC",
+   "OFFICIAL_UNIT": "m²",
+   "STATUS": "IN USE"
+  },
+  {
+   "ITEM": "CEILINGS",
+   "OFFICIAL_UNIT": "m²",
+   "STATUS": "IN USE"
+  },
+  {
+   "ITEM": "WALL TILE",
+   "OFFICIAL_UNIT": "m²",
+   "STATUS": "IN USE"
+  },
+  {
+   "ITEM": "WATERPROOFING MEMBRANE",
+   "OFFICIAL_UNIT": "m²",
+   "STATUS": "IN USE"
+  },
+  {
+   "ITEM": "WATERPROOFING UPTURN PATH",
+   "OFFICIAL_UNIT": "lm",
+   "STATUS": "NOT PUBLISHED SEPARATELY - the upturn is inside the membrane m² (floor + path x upturn height); a separate lm row needs the engine to publish the path length as its own line"
+  },
+  {
+   "ITEM": "ALUMINIUM / GLASS AREA",
+   "OFFICIAL_UNIT": "m²",
+   "STATUS": "IN USE"
+  },
+  {
+   "ITEM": "CURVED GLAZING LENGTH ONLY",
+   "OFFICIAL_UNIT": "lm",
+   "STATUS": "IN USE"
+  },
+  {
+   "ITEM": "DOORS / WINDOWS COUNTS",
+   "OFFICIAL_UNIT": "No.",
+   "STATUS": "IN USE"
+  },
+  {
+   "ITEM": "MARBLE TREAD / RISER / LANDING",
+   "OFFICIAL_UNIT": "m²",
+   "STATUS": "IN USE"
+  },
+  {
+   "ITEM": "NOSING",
+   "OFFICIAL_UNIT": "lm",
+   "STATUS": "IN USE"
+  },
+  {
+   "ITEM": "SKIRTING",
+   "OFFICIAL_UNIT": "lm",
+   "STATUS": "IN USE"
+  },
+  {
+   "ITEM": "HANDRAIL / RAILING",
+   "OFFICIAL_UNIT": "lm",
+   "STATUS": "IN USE"
+  }
+ ],
+ "rows": [
+  {
+   "ITEM": "CONCRETE / Plain concrete (blinding)",
+   "ENGINE_UNIT": "m3",
+   "DISPLAY_UNIT": "m³",
+   "CONVERSION": "x 1 (label only)",
+   "FACTOR": 1.0,
+   "DISPLAY_DECIMALS": 3,
+   "BASIS": "as measured",
+   "STATUS": "CONVERTED_FOR_DISPLAY"
+  },
+  {
+   "ITEM": "CONCRETE / Reinforced concrete",
+   "ENGINE_UNIT": "m3",
+   "DISPLAY_UNIT": "m³",
+   "CONVERSION": "x 1 (label only)",
+   "FACTOR": 1.0,
+   "DISPLAY_DECIMALS": 3,
+   "BASIS": "as measured",
+   "STATUS": "CONVERTED_FOR_DISPLAY"
+  },
+  {
+   "ITEM": "REBAR / Bar sets / members not computable",
+   "ENGINE_UNIT": "kg",
+   "DISPLAY_UNIT": "t",
+   "CONVERSION": "/ 1,000 (kg -> t)",
+   "FACTOR": 0.001,
+   "DISPLAY_DECIMALS": 3,
+   "BASIS": "NOT COMPUTABLE - no quantity",
+   "STATUS": "CONVERTED_FOR_DISPLAY"
+  },
+  {
+   "ITEM": "REBAR / Net design weight (complete sets)",
+   "ENGINE_UNIT": "kg",
+   "DISPLAY_UNIT": "t",
+   "CONVERSION": "/ 1,000 (kg -> t)",
+   "FACTOR": 0.001,
+   "DISPLAY_DECIMALS": 3,
+   "BASIS": "ALTERNATIVE BASIS - net design weight; reference only, never added",
+   "STATUS": "CONVERTED_FOR_DISPLAY"
+  },
+  {
+   "ITEM": "REBAR / Procurement weight incl. laps (complete sets)",
+   "ENGINE_UNIT": "kg",
+   "DISPLAY_UNIT": "t",
+   "CONVERSION": "/ 1,000 (kg -> t)",
+   "FACTOR": 0.001,
+   "DISPLAY_DECIMALS": 3,
+   "BASIS": "OFFICIAL BASIS - procurement incl. laps, complete bar sets",
+   "STATUS": "CONVERTED_FOR_DISPLAY"
+  },
+  {
+   "ITEM": "REBAR / Straight weight - sets with hooks not detailed",
+   "ENGINE_UNIT": "kg",
+   "DISPLAY_UNIT": "t",
+   "CONVERSION": "/ 1,000 (kg -> t)",
+   "FACTOR": 0.001,
+   "DISPLAY_DECIMALS": 3,
+   "BASIS": "PARTIAL SETS - straight bar awaiting hook / bend detail; separate subtotal, never added",
+   "STATUS": "CONVERTED_FOR_DISPLAY"
+  },
+  {
+   "ITEM": "REBAR / TOTAL PROJECT REBAR",
+   "ENGINE_UNIT": "kg",
+   "DISPLAY_UNIT": "t",
+   "CONVERSION": "/ 1,000 (kg -> t)",
+   "FACTOR": 0.001,
+   "DISPLAY_DECIMALS": 3,
+   "BASIS": "PARTIAL: official basis = procurement, complete sets 6.891 t (computed subtotal); partial sets 6.602 t straight bar awaiting hook / bend detail (separate subtotal); net / procurement / partial are never summed",
+   "STATUS": "NOT_SUMMED (bases differ)"
+  },
+  {
+   "ITEM": "BLOCKWORK / Blockwork 150 mm",
+   "ENGINE_UNIT": "m2",
+   "DISPLAY_UNIT": "m²",
+   "CONVERSION": "x 1 (label only)",
+   "FACTOR": 1.0,
+   "DISPLAY_DECIMALS": 2,
+   "BASIS": "as measured",
+   "STATUS": "CONVERTED_FOR_DISPLAY"
+  },
+  {
+   "ITEM": "BLOCKWORK / Blockwork 200 mm",
+   "ENGINE_UNIT": "m2",
+   "DISPLAY_UNIT": "m²",
+   "CONVERSION": "x 1 (label only)",
+   "FACTOR": 1.0,
+   "DISPLAY_DECIMALS": 2,
+   "BASIS": "as measured",
+   "STATUS": "CONVERTED_FOR_DISPLAY"
+  },
+  {
+   "ITEM": "BLOCKWORK / Blockwork OVER OPENINGS",
+   "ENGINE_UNIT": "m2",
+   "DISPLAY_UNIT": "m²",
+   "CONVERSION": "x 1 (label only)",
+   "FACTOR": 1.0,
+   "DISPLAY_DECIMALS": 2,
+   "BASIS": "as measured",
+   "STATUS": "CONVERTED_FOR_DISPLAY"
+  },
+  {
+   "ITEM": "BLOCKWORK / Boundary wall blockwork",
+   "ENGINE_UNIT": "m2",
+   "DISPLAY_UNIT": "m²",
+   "CONVERSION": "x 1 (label only)",
+   "FACTOR": 1.0,
+   "DISPLAY_DECIMALS": 2,
+   "BASIS": "as measured",
+   "STATUS": "CONVERTED_FOR_DISPLAY"
+  },
+  {
+   "ITEM": "BLOCKWORK / Parapet blockwork",
+   "ENGINE_UNIT": "m2",
+   "DISPLAY_UNIT": "m²",
+   "CONVERSION": "x 1 (label only)",
+   "FACTOR": 1.0,
+   "DISPLAY_DECIMALS": 2,
+   "BASIS": "as measured",
+   "STATUS": "CONVERTED_FOR_DISPLAY"
+  },
+  {
+   "ITEM": "PLASTER_PAINT / External plaster / paint",
+   "ENGINE_UNIT": "m2",
+   "DISPLAY_UNIT": "m²",
+   "CONVERSION": "x 1 (label only)",
+   "FACTOR": 1.0,
+   "DISPLAY_DECIMALS": 2,
+   "BASIS": "as measured",
+   "STATUS": "CONVERTED_FOR_DISPLAY"
+  },
+  {
+   "ITEM": "PLASTER_PAINT / Extras (review)",
+   "ENGINE_UNIT": "lm",
+   "DISPLAY_UNIT": "lm",
+   "CONVERSION": "none",
+   "FACTOR": 1.0,
+   "DISPLAY_DECIMALS": 2,
+   "BASIS": "as measured",
+   "STATUS": "CONVERTED_FOR_DISPLAY"
+  },
+  {
+   "ITEM": "PLASTER_PAINT / Extras (review)",
+   "ENGINE_UNIT": "m2",
+   "DISPLAY_UNIT": "m²",
+   "CONVERSION": "x 1 (label only)",
+   "FACTOR": 1.0,
+   "DISPLAY_DECIMALS": 2,
+   "BASIS": "as measured",
+   "STATUS": "CONVERTED_FOR_DISPLAY"
+  },
+  {
+   "ITEM": "PLASTER_PAINT / Internal paint",
+   "ENGINE_UNIT": "m2",
+   "DISPLAY_UNIT": "m²",
+   "CONVERSION": "x 1 (label only)",
+   "FACTOR": 1.0,
+   "DISPLAY_DECIMALS": 2,
+   "BASIS": "as measured",
+   "STATUS": "CONVERTED_FOR_DISPLAY"
+  },
+  {
+   "ITEM": "PLASTER_PAINT / Internal plaster",
+   "ENGINE_UNIT": "m2",
+   "DISPLAY_UNIT": "m²",
+   "CONVERSION": "x 1 (label only)",
+   "FACTOR": 1.0,
+   "DISPLAY_DECIMALS": 2,
+   "BASIS": "as measured",
+   "STATUS": "CONVERTED_FOR_DISPLAY"
+  },
+  {
+   "ITEM": "FLOORING_PORCELAIN / Door thresholds",
+   "ENGINE_UNIT": "m2",
+   "DISPLAY_UNIT": "m²",
+   "CONVERSION": "x 1 (label only)",
+   "FACTOR": 1.0,
+   "DISPLAY_DECIMALS": 2,
+   "BASIS": "as measured",
+   "STATUS": "CONVERTED_FOR_DISPLAY"
+  },
+  {
+   "ITEM": "FLOORING_PORCELAIN / Floor finish",
+   "ENGINE_UNIT": "m2",
+   "DISPLAY_UNIT": "m²",
+   "CONVERSION": "x 1 (label only)",
+   "FACTOR": 1.0,
+   "DISPLAY_DECIMALS": 2,
+   "BASIS": "as measured",
+   "STATUS": "CONVERTED_FOR_DISPLAY"
+  },
+  {
+   "ITEM": "FLOORING_PORCELAIN / Skirting",
+   "ENGINE_UNIT": "lm",
+   "DISPLAY_UNIT": "lm",
+   "CONVERSION": "none",
+   "FACTOR": 1.0,
+   "DISPLAY_DECIMALS": 2,
+   "BASIS": "as measured",
+   "STATUS": "CONVERTED_FOR_DISPLAY"
+  },
+  {
+   "ITEM": "CEILINGS / Ceiling area",
+   "ENGINE_UNIT": "m2",
+   "DISPLAY_UNIT": "m²",
+   "CONVERSION": "x 1 (label only)",
+   "FACTOR": 1.0,
+   "DISPLAY_DECIMALS": 2,
+   "BASIS": "as measured",
+   "STATUS": "CONVERTED_FOR_DISPLAY"
+  },
+  {
+   "ITEM": "CEILINGS / Cornice (review)",
+   "ENGINE_UNIT": "lm",
+   "DISPLAY_UNIT": "lm",
+   "CONVERSION": "none",
+   "FACTOR": 1.0,
+   "DISPLAY_DECIMALS": 2,
+   "BASIS": "as measured",
+   "STATUS": "CONVERTED_FOR_DISPLAY"
+  },
+  {
+   "ITEM": "WALL_TILE_WATERPROOFING / Foundation waterproofing / membrane",
+   "ENGINE_UNIT": "m2",
+   "DISPLAY_UNIT": "m²",
+   "CONVERSION": "x 1 (label only)",
+   "FACTOR": 1.0,
+   "DISPLAY_DECIMALS": 2,
+   "BASIS": "as measured",
+   "STATUS": "CONVERTED_FOR_DISPLAY"
+  },
+  {
+   "ITEM": "WALL_TILE_WATERPROOFING / Roof waterproofing",
+   "ENGINE_UNIT": "m2",
+   "DISPLAY_UNIT": "m²",
+   "CONVERSION": "x 1 (label only)",
+   "FACTOR": 1.0,
+   "DISPLAY_DECIMALS": 2,
+   "BASIS": "as measured",
+   "STATUS": "CONVERTED_FOR_DISPLAY"
+  },
+  {
+   "ITEM": "WALL_TILE_WATERPROOFING / Wall tile",
+   "ENGINE_UNIT": "m2",
+   "DISPLAY_UNIT": "m²",
+   "CONVERSION": "x 1 (label only)",
+   "FACTOR": 1.0,
+   "DISPLAY_DECIMALS": 2,
+   "BASIS": "as measured",
+   "STATUS": "CONVERTED_FOR_DISPLAY"
+  },
+  {
+   "ITEM": "WALL_TILE_WATERPROOFING / Wet-room waterproofing",
+   "ENGINE_UNIT": "m2",
+   "DISPLAY_UNIT": "m²",
+   "CONVERSION": "x 1 (label only)",
+   "FACTOR": 1.0,
+   "DISPLAY_DECIMALS": 2,
+   "BASIS": "as measured",
+   "STATUS": "CONVERTED_FOR_DISPLAY"
+  },
+  {
+   "ITEM": "ALUMINIUM_OPENINGS / Curved glazing area",
+   "ENGINE_UNIT": "m2",
+   "DISPLAY_UNIT": "m²",
+   "CONVERSION": "x 1 (label only)",
+   "FACTOR": 1.0,
+   "DISPLAY_DECIMALS": 2,
+   "BASIS": "as measured",
+   "STATUS": "CONVERTED_FOR_DISPLAY"
+  },
+  {
+   "ITEM": "ALUMINIUM_OPENINGS / Curved glazing length",
+   "ENGINE_UNIT": "lm",
+   "DISPLAY_UNIT": "lm",
+   "CONVERSION": "none",
+   "FACTOR": 1.0,
+   "DISPLAY_DECIMALS": 2,
+   "BASIS": "as measured",
+   "STATUS": "CONVERTED_FOR_DISPLAY"
+  },
+  {
+   "ITEM": "ALUMINIUM_OPENINGS / Doors double leaf",
+   "ENGINE_UNIT": "m2",
+   "DISPLAY_UNIT": "m²",
+   "CONVERSION": "x 1 (label only)",
+   "FACTOR": 1.0,
+   "DISPLAY_DECIMALS": 2,
+   "BASIS": "as measured",
+   "STATUS": "CONVERTED_FOR_DISPLAY"
+  },
+  {
+   "ITEM": "ALUMINIUM_OPENINGS / Doors double leaf",
+   "ENGINE_UNIT": "nr",
+   "DISPLAY_UNIT": "No.",
+   "CONVERSION": "x 1 (label only)",
+   "FACTOR": 1.0,
+   "DISPLAY_DECIMALS": 0,
+   "BASIS": "as measured",
+   "STATUS": "CONVERTED_FOR_DISPLAY"
+  },
+  {
+   "ITEM": "ALUMINIUM_OPENINGS / Doors single leaf",
+   "ENGINE_UNIT": "m2",
+   "DISPLAY_UNIT": "m²",
+   "CONVERSION": "x 1 (label only)",
+   "FACTOR": 1.0,
+   "DISPLAY_DECIMALS": 2,
+   "BASIS": "as measured",
+   "STATUS": "CONVERTED_FOR_DISPLAY"
+  },
+  {
+   "ITEM": "ALUMINIUM_OPENINGS / Doors single leaf",
+   "ENGINE_UNIT": "nr",
+   "DISPLAY_UNIT": "No.",
+   "CONVERSION": "x 1 (label only)",
+   "FACTOR": 1.0,
+   "DISPLAY_DECIMALS": 0,
+   "BASIS": "as measured",
+   "STATUS": "CONVERTED_FOR_DISPLAY"
+  },
+  {
+   "ITEM": "ALUMINIUM_OPENINGS / Opening widths",
+   "ENGINE_UNIT": "lm",
+   "DISPLAY_UNIT": "lm",
+   "CONVERSION": "none",
+   "FACTOR": 1.0,
+   "DISPLAY_DECIMALS": 2,
+   "BASIS": "as measured",
+   "STATUS": "CONVERTED_FOR_DISPLAY"
+  },
+  {
+   "ITEM": "ALUMINIUM_OPENINGS / Salon glazing",
+   "ENGINE_UNIT": "m2",
+   "DISPLAY_UNIT": "m²",
+   "CONVERSION": "x 1 (label only)",
+   "FACTOR": 1.0,
+   "DISPLAY_DECIMALS": 2,
+   "BASIS": "as measured",
+   "STATUS": "CONVERTED_FOR_DISPLAY"
+  },
+  {
+   "ITEM": "ALUMINIUM_OPENINGS / Windows / glazed openings",
+   "ENGINE_UNIT": "m2",
+   "DISPLAY_UNIT": "m²",
+   "CONVERSION": "x 1 (label only)",
+   "FACTOR": 1.0,
+   "DISPLAY_DECIMALS": 2,
+   "BASIS": "as measured",
+   "STATUS": "CONVERTED_FOR_DISPLAY"
+  },
+  {
+   "ITEM": "ALUMINIUM_OPENINGS / Windows / glazed openings",
+   "ENGINE_UNIT": "nr",
+   "DISPLAY_UNIT": "No.",
+   "CONVERSION": "x 1 (label only)",
+   "FACTOR": 1.0,
+   "DISPLAY_DECIMALS": 0,
+   "BASIS": "as measured",
+   "STATUS": "CONVERTED_FOR_DISPLAY"
+  },
+  {
+   "ITEM": "STAIRS_RAILINGS / Gallery railing",
+   "ENGINE_UNIT": "lm",
+   "DISPLAY_UNIT": "lm",
+   "CONVERSION": "none",
+   "FACTOR": 1.0,
+   "DISPLAY_DECIMALS": 2,
+   "BASIS": "as measured",
+   "STATUS": "CONVERTED_FOR_DISPLAY"
+  },
+  {
+   "ITEM": "STAIRS_RAILINGS / (line-level only)",
+   "ENGINE_UNIT": "m",
+   "DISPLAY_UNIT": "m",
+   "CONVERSION": "none",
+   "FACTOR": 1.0,
+   "DISPLAY_DECIMALS": 3,
+   "BASIS": "-",
+   "STATUS": "DIMENSION_ONLY (never a BOQ total)"
+  },
+  {
+   "ITEM": "STAIRS_RAILINGS / (line-level only)",
+   "ENGINE_UNIT": "m2",
+   "DISPLAY_UNIT": "m²",
+   "CONVERSION": "none",
+   "FACTOR": 1.0,
+   "DISPLAY_DECIMALS": 3,
+   "BASIS": "-",
+   "STATUS": "LINE_LEVEL_ONLY"
+  }
+ ],
+ "rule": "reporting unit change only: display = engine x factor, no rounding before display; engine registers keep kg / m3 / m2 / nr; unlike units and unlike bases are never added"
+}

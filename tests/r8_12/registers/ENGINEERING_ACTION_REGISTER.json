@@ -1,0 +1,46 @@
+{
+ "SCHEMA": "URBAN_ENGINEERING_ACTION_REGISTER_R8_12_V1",
+ "actions": [
+  {
+   "id": "E-R8.13-01",
+   "title": "V3-D1 chain-id collision",
+   "priority": 1,
+   "what": "parallel sides of ONE closed polyline with the same extent get the same chain id (H2060 / H2061): add the supporting-line offset or the sub-part set to the chain id; version bump; synthetic test first",
+   "impact_now": "only the already-ambiguous H2060 / H2061 rectangles; no closure, no row"
+  },
+  {
+   "id": "E-R8.13-02",
+   "title": "V3-D2 elongation on the local run",
+   "priority": 2,
+   "what": "test elongation on the contiguous LOCAL RUN (spans + overlaps + nodes), not the raw chain overlap: removes the 1.80 m pseudo-band (574 / 584, 150 mm local run) and its false 6.0 m passage",
+   "impact_now": "outside the apartment; no closure, no row"
+  },
+  {
+   "id": "E-R8.13-03",
+   "title": "source anchor",
+   "priority": 1,
+   "what": "DWG e4babbc2... <-> DXF df0e1d69... identity: the release blocker on every new-revision row"
+  },
+  {
+   "id": "E-R8.13-04",
+   "title": "REVIEWED closure release level as a signed record",
+   "priority": 3
+  },
+  {
+   "id": "E-R8.13-05",
+   "title": "closure-id rounding into the closure policy record (version bump)",
+   "priority": 4
+  },
+  {
+   "id": "E-R8.13-06",
+   "title": "owner physical facts + row / release digests into the engine row manifest",
+   "priority": 3,
+   "what": "the generic model exists (engine/source/owner_facts.py, run_manifest digest layers); the row computation itself is still lab code"
+  },
+  {
+   "id": "E-R8.13-07",
+   "title": "passage soffit vs ceiling allocation rule",
+   "priority": 5
+  }
+ ]
+}

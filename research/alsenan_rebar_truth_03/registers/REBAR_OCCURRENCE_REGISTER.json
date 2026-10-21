@@ -1,0 +1,6894 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_REBAR_OCCURRENCE_V3",
+ "trade_totals": {
+  "verified_complete_kg": 48.924444,
+  "lower_bound_kg": 21146.187125,
+  "provisional_kg": 6959.124046,
+  "budget_kg": 319.11342,
+  "audit_kg": 2880.047732,
+  "populations_by_state": {
+   "BLOCKED": 45,
+   "VERIFIED_COMPLETE": 4,
+   "VERIFIED_PARTIAL_LOWER_BOUND": 150,
+   "PROVISIONAL": 8,
+   "NOT_IN_SCOPE": 31,
+   "BUDGET": 1
+  },
+  "project_final_rebar_total": "NOT YET ESTABLISHED"
+ },
+ "by_element_type": {
+  "FOOTING": {
+   "verified_complete_kg": 48.924444,
+   "lower_bound_kg": 838.168889,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 72.093827,
+   "populations": 22.0,
+   "state:BLOCKED": 2.0,
+   "state:VERIFIED_COMPLETE": 4.0,
+   "state:VERIFIED_PARTIAL_LOWER_BOUND": 16.0
+  },
+  "FOOTING_LIFT": {
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 720.239506,
+   "provisional_kg": 76.899753,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "populations": 1.0,
+   "state:VERIFIED_PARTIAL_LOWER_BOUND": 1.0
+  },
+  "FOOTING_2_LAYER": {
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 2022.266667,
+   "provisional_kg": 72.551605,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "populations": 4.0,
+   "state:VERIFIED_PARTIAL_LOWER_BOUND": 4.0
+  },
+  "STRAP_BEAM": {
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 69.611956,
+   "provisional_kg": 201.588569,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "populations": 3.0,
+   "state:BLOCKED": 1.0,
+   "state:PROVISIONAL": 1.0,
+   "state:VERIFIED_PARTIAL_LOWER_BOUND": 1.0
+  },
+  "BEAM": {
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 3844.745332,
+   "provisional_kg": 427.748974,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "populations": 78.0,
+   "state:VERIFIED_PARTIAL_LOWER_BOUND": 68.0,
+   "state:BLOCKED": 10.0
+  },
+  "CONTINUOUS_BEAM": {
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 675.160494,
+   "provisional_kg": 553.693663,
+   "budget_kg": 0.0,
+   "audit_kg": 999.303105,
+   "populations": 11.0,
+   "state:VERIFIED_PARTIAL_LOWER_BOUND": 5.0,
+   "state:BLOCKED": 5.0,
+   "state:PROVISIONAL": 1.0
+  },
+  "COLUMN": {
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 3481.639506,
+   "provisional_kg": 115.059845,
+   "budget_kg": 0.0,
+   "audit_kg": 1808.650799,
+   "populations": 105.0,
+   "state:VERIFIED_PARTIAL_LOWER_BOUND": 48.0,
+   "state:BLOCKED": 26.0,
+   "state:NOT_IN_SCOPE": 31.0
+  },
+  "SLAB": {
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 5018.987351,
+   "provisional_kg": 196.318826,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "populations": 3.0,
+   "state:VERIFIED_PARTIAL_LOWER_BOUND": 3.0
+  },
+  "GROUND_SLAB": {
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 712.277099,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "populations": 2.0,
+   "state:PROVISIONAL": 2.0
+  },
+  "STAIR": {
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "populations": 1.0,
+   "state:BLOCKED": 1.0
+  },
+  "GROUND": {
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 1252.923424,
+   "provisional_kg": 182.979135,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "populations": 1.0,
+   "state:VERIFIED_PARTIAL_LOWER_BOUND": 1.0
+  },
+  "LINTELS": {
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 582.478815,
+   "provisional_kg": 44.424732,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "populations": 1.0,
+   "state:VERIFIED_PARTIAL_LOWER_BOUND": 1.0
+  },
+  "GROUND_BEAM_EXT": {
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 2793.705959,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "populations": 1.0,
+   "state:PROVISIONAL": 1.0
+  },
+  "DOME": {
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 2054.226914,
+   "provisional_kg": 24.887154,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "populations": 1.0,
+   "state:VERIFIED_PARTIAL_LOWER_BOUND": 1.0
+  },
+  "POOL": {
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 585.738272,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "populations": 1.0,
+   "state:VERIFIED_PARTIAL_LOWER_BOUND": 1.0
+  },
+  "BEAM_RESIDUE": {
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 319.11342,
+   "audit_kg": 0.0,
+   "populations": 1.0,
+   "state:BUDGET": 1.0
+  },
+  "BOUNDARY_WALL": {
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 555.650126,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "populations": 1.0,
+   "state:PROVISIONAL": 1.0
+  },
+  "FOOTING_F_F10": {
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 62.671605,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "populations": 1.0,
+   "state:PROVISIONAL": 1.0
+  },
+  "COLUMN_STARTERS": {
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 938.667,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "populations": 1.0,
+   "state:PROVISIONAL": 1.0
+  }
+ },
+ "rows": [
+  {
+   "pop_id": "POP:FOOTING:F#1",
+   "element_type": "FOOTING",
+   "occurrence_id": "FOOTING:F#1",
+   "level": "FOUNDATION",
+   "occurrence_state": "BLOCKED",
+   "occurrence_why": "REBAR_BLOCKED_CONCRETE_NOT_ESTABLISHED (footing concrete BLOCKED)",
+   "release_state": "BLOCKED",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 9.422222,
+   "missing_components": [
+    "POP:FOOTING:F#1|BOXED"
+   ],
+   "component_states": {
+    "COMPLETE": 2,
+    "BLOCKED": 1
+   },
+   "source": {
+    "plan_mark": "ALSENAN_ST7757_DXF|H4261||TEXT|0",
+    "status": "BLOCKED"
+   }
+  },
+  {
+   "pop_id": "POP:FOOTING:FN#2",
+   "element_type": "FOOTING",
+   "occurrence_id": "FOOTING:FN#2",
+   "level": "FOUNDATION",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_COMPLETE",
+   "verified_complete_kg": 12.231111,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [],
+   "component_states": {
+    "COMPLETE": 2,
+    "NOT_REQUIRED": 1
+   },
+   "source": {
+    "plan_mark": "ALSENAN_ST7757_DXF|H4333||TEXT|0",
+    "status": "COMPUTED_SHADOW_COMPLETE"
+   }
+  },
+  {
+   "pop_id": "POP:FOOTING:FN#3",
+   "element_type": "FOOTING",
+   "occurrence_id": "FOOTING:FN#3",
+   "level": "FOUNDATION",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_COMPLETE",
+   "verified_complete_kg": 12.231111,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [],
+   "component_states": {
+    "COMPLETE": 2,
+    "NOT_REQUIRED": 1
+   },
+   "source": {
+    "plan_mark": "ALSENAN_ST7757_DXF|H4341||TEXT|0",
+    "status": "COMPUTED_SHADOW_COMPLETE"
+   }
+  },
+  {
+   "pop_id": "POP:FOOTING:F5#4",
+   "element_type": "FOOTING",
+   "occurrence_id": "FOOTING:F5#4",
+   "level": "FOUNDATION",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 78.506667,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:FOOTING:F5#4|BOXED"
+   ],
+   "component_states": {
+    "COMPLETE": 2,
+    "BLOCKED": 1
+   },
+   "source": {
+    "plan_mark": "ALSENAN_ST7757_DXF|H5743||TEXT|0",
+    "status": "COMPUTED_SHADOW_COMPLETE"
+   }
+  },
+  {
+   "pop_id": "POP:FOOTING:F4#5",
+   "element_type": "FOOTING",
+   "occurrence_id": "FOOTING:F4#5",
+   "level": "FOUNDATION",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 60.888889,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:FOOTING:F4#5|BOXED"
+   ],
+   "component_states": {
+    "COMPLETE": 2,
+    "BLOCKED": 1
+   },
+   "source": {
+    "plan_mark": "ALSENAN_ST7757_DXF|H5745||TEXT|0",
+    "status": "COMPUTED_SHADOW_COMPLETE"
+   }
+  },
+  {
+   "pop_id": "POP:FOOTING:F4#6",
+   "element_type": "FOOTING",
+   "occurrence_id": "FOOTING:F4#6",
+   "level": "FOUNDATION",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 60.888889,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:FOOTING:F4#6|BOXED"
+   ],
+   "component_states": {
+    "COMPLETE": 2,
+    "BLOCKED": 1
+   },
+   "source": {
+    "plan_mark": "ALSENAN_ST7757_DXF|H5746||TEXT|0",
+    "status": "COMPUTED_SHADOW_COMPLETE"
+   }
+  },
+  {
+   "pop_id": "POP:FOOTING:F5#7",
+   "element_type": "FOOTING",
+   "occurrence_id": "FOOTING:F5#7",
+   "level": "FOUNDATION",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 78.506667,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:FOOTING:F5#7|BOXED"
+   ],
+   "component_states": {
+    "COMPLETE": 2,
+    "BLOCKED": 1
+   },
+   "source": {
+    "plan_mark": "ALSENAN_ST7757_DXF|H5747||TEXT|0",
+    "status": "COMPUTED_SHADOW_COMPLETE"
+   }
+  },
+  {
+   "pop_id": "POP:FOOTING:F2#8",
+   "element_type": "FOOTING",
+   "occurrence_id": "FOOTING:F2#8",
+   "level": "FOUNDATION",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 38.364444,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:FOOTING:F2#8|BOXED"
+   ],
+   "component_states": {
+    "COMPLETE": 2,
+    "BLOCKED": 1
+   },
+   "source": {
+    "plan_mark": "ALSENAN_ST7757_DXF|H5748||TEXT|0",
+    "status": "COMPUTED_SHADOW_COMPLETE"
+   }
+  },
+  {
+   "pop_id": "POP:FOOTING:F2#9",
+   "element_type": "FOOTING",
+   "occurrence_id": "FOOTING:F2#9",
+   "level": "FOUNDATION",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 38.364444,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:FOOTING:F2#9|BOXED"
+   ],
+   "component_states": {
+    "COMPLETE": 2,
+    "BLOCKED": 1
+   },
+   "source": {
+    "plan_mark": "ALSENAN_ST7757_DXF|H5749||TEXT|0",
+    "status": "COMPUTED_SHADOW_COMPLETE"
+   }
+  },
+  {
+   "pop_id": "POP:FOOTING:FF#10",
+   "element_type": "FOOTING_LIFT",
+   "occurrence_id": "FOOTING:FF#10",
+   "level": "FOUNDATION",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 720.239506,
+   "provisional_kg": 76.899753,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:FOOTING:FF#10|TOP_SHORT",
+    "POP:FOOTING:FF#10|TOP_LONG",
+    "POP:FOOTING:FF#10|BOTTOM_SHORT",
+    "POP:FOOTING:FF#10|BOTTOM_LONG",
+    "POP:FOOTING:FF#10|TOP_LEGS",
+    "POP:FOOTING:FF#10|LIFT_PIT_WALLS",
+    "POP:FOOTING:FF#10|PIT_WALL_BASE_BARS_2D16"
+   ],
+   "component_states": {
+    "PARTIAL": 4,
+    "PROVISIONAL": 1,
+    "BLOCKED": 2
+   },
+   "source": {
+    "plan_mark": "ALSENAN_ST7757_DXF|H5750||TEXT|0",
+    "status": "COMPUTED_SHADOW_COMPLETE"
+   }
+  },
+  {
+   "pop_id": "POP:FOOTING:F9#11",
+   "element_type": "FOOTING",
+   "occurrence_id": "FOOTING:F9#11",
+   "level": "FOUNDATION",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 181.384691,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:FOOTING:F9#11|BOXED"
+   ],
+   "component_states": {
+    "COMPLETE": 2,
+    "BLOCKED": 1
+   },
+   "source": {
+    "plan_mark": "ALSENAN_ST7757_DXF|H5751||TEXT|0",
+    "status": "COMPUTED_SHADOW_COMPLETE"
+   }
+  },
+  {
+   "pop_id": "POP:FOOTING:F#12",
+   "element_type": "FOOTING",
+   "occurrence_id": "FOOTING:F#12",
+   "level": "FOUNDATION",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 9.422222,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:FOOTING:F#12|BOXED"
+   ],
+   "component_states": {
+    "COMPLETE": 2,
+    "BLOCKED": 1
+   },
+   "source": {
+    "plan_mark": "ALSENAN_ST7757_DXF|H5757|5752|TEXT|0",
+    "status": "COMPUTED_SHADOW_COMPLETE"
+   }
+  },
+  {
+   "pop_id": "POP:FOOTING:F#13",
+   "element_type": "FOOTING",
+   "occurrence_id": "FOOTING:F#13",
+   "level": "FOUNDATION",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 9.422222,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:FOOTING:F#13|BOXED"
+   ],
+   "component_states": {
+    "COMPLETE": 2,
+    "BLOCKED": 1
+   },
+   "source": {
+    "plan_mark": "ALSENAN_ST7757_DXF|H5757|5759|TEXT|0",
+    "status": "COMPUTED_SHADOW_COMPLETE"
+   }
+  },
+  {
+   "pop_id": "POP:FOOTING:F#14",
+   "element_type": "FOOTING",
+   "occurrence_id": "FOOTING:F#14",
+   "level": "FOUNDATION",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 9.422222,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:FOOTING:F#14|BOXED"
+   ],
+   "component_states": {
+    "COMPLETE": 2,
+    "BLOCKED": 1
+   },
+   "source": {
+    "plan_mark": "ALSENAN_ST7757_DXF|H5757|5760|TEXT|0",
+    "status": "COMPUTED_SHADOW_COMPLETE"
+   }
+  },
+  {
+   "pop_id": "POP:FOOTING:F#15",
+   "element_type": "FOOTING",
+   "occurrence_id": "FOOTING:F#15",
+   "level": "FOUNDATION",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 9.422222,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:FOOTING:F#15|BOXED"
+   ],
+   "component_states": {
+    "COMPLETE": 2,
+    "BLOCKED": 1
+   },
+   "source": {
+    "plan_mark": "ALSENAN_ST7757_DXF|H5757|5762|TEXT|0",
+    "status": "COMPUTED_SHADOW_COMPLETE"
+   }
+  },
+  {
+   "pop_id": "POP:FOOTING:F14#16",
+   "element_type": "FOOTING_2_LAYER",
+   "occurrence_id": "FOOTING:F14#16",
+   "level": "FOUNDATION",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 422.827654,
+   "provisional_kg": 16.502716,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:FOOTING:F14#16|TOP_SHORT",
+    "POP:FOOTING:F14#16|TOP_LONG",
+    "POP:FOOTING:F14#16|BOTTOM_SHORT",
+    "POP:FOOTING:F14#16|BOTTOM_LONG",
+    "POP:FOOTING:F14#16|TOP_END_DETAIL"
+   ],
+   "component_states": {
+    "PARTIAL": 4,
+    "BLOCKED": 1
+   },
+   "source": {
+    "plan_mark": "ALSENAN_ST7757_DXF|H5763||TEXT|0",
+    "status": "COMPUTED_SHADOW_COMPLETE"
+   }
+  },
+  {
+   "pop_id": "POP:FOOTING:F11#17",
+   "element_type": "FOOTING",
+   "occurrence_id": "FOOTING:F11#17",
+   "level": "FOUNDATION",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 109.56642,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:FOOTING:F11#17|BOXED"
+   ],
+   "component_states": {
+    "COMPLETE": 2,
+    "BLOCKED": 1
+   },
+   "source": {
+    "plan_mark": "ALSENAN_ST7757_DXF|H5767|5764|TEXT|0",
+    "status": "COMPUTED_SHADOW_COMPLETE"
+   }
+  },
+  {
+   "pop_id": "POP:FOOTING:FN#18",
+   "element_type": "FOOTING",
+   "occurrence_id": "FOOTING:FN#18",
+   "level": "FOUNDATION",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_COMPLETE",
+   "verified_complete_kg": 12.231111,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [],
+   "component_states": {
+    "COMPLETE": 2,
+    "NOT_REQUIRED": 1
+   },
+   "source": {
+    "plan_mark": "ALSENAN_ST7757_DXF|H5770||TEXT|0",
+    "status": "COMPUTED_SHADOW_COMPLETE"
+   }
+  },
+  {
+   "pop_id": "POP:FOOTING:F10#19",
+   "element_type": "FOOTING",
+   "occurrence_id": "FOOTING:F10#19",
+   "level": "FOUNDATION",
+   "occurrence_state": "BLOCKED",
+   "occurrence_why": "REBAR_BLOCKED_CONCRETE_NOT_ESTABLISHED (footing concrete BLOCKED)",
+   "release_state": "BLOCKED",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 62.671605,
+   "missing_components": [
+    "POP:FOOTING:F10#19|BOXED"
+   ],
+   "component_states": {
+    "COMPLETE": 2,
+    "BLOCKED": 1
+   },
+   "source": {
+    "plan_mark": "ALSENAN_ST7757_DXF|H5771||TEXT|0",
+    "status": "BLOCKED"
+   }
+  },
+  {
+   "pop_id": "POP:FOOTING:F6#20",
+   "element_type": "FOOTING",
+   "occurrence_id": "FOOTING:F6#20",
+   "level": "FOUNDATION",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 92.053333,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:FOOTING:F6#20|BOXED"
+   ],
+   "component_states": {
+    "COMPLETE": 2,
+    "BLOCKED": 1
+   },
+   "source": {
+    "plan_mark": "ALSENAN_ST7757_DXF|H5773||TEXT|0",
+    "status": "COMPUTED_SHADOW_COMPLETE"
+   }
+  },
+  {
+   "pop_id": "POP:FOOTING:F3#21",
+   "element_type": "FOOTING",
+   "occurrence_id": "FOOTING:F3#21",
+   "level": "FOUNDATION",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 19.342222,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:FOOTING:F3#21|BOXED"
+   ],
+   "component_states": {
+    "COMPLETE": 2,
+    "BLOCKED": 1
+   },
+   "source": {
+    "plan_mark": "ALSENAN_ST7757_DXF|H5774||TEXT|0",
+    "status": "COMPUTED_SHADOW_COMPLETE"
+   }
+  },
+  {
+   "pop_id": "POP:FOOTING:F3#22",
+   "element_type": "FOOTING",
+   "occurrence_id": "FOOTING:F3#22",
+   "level": "FOUNDATION",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 19.342222,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:FOOTING:F3#22|BOXED"
+   ],
+   "component_states": {
+    "COMPLETE": 2,
+    "BLOCKED": 1
+   },
+   "source": {
+    "plan_mark": "ALSENAN_ST7757_DXF|H5775||TEXT|0",
+    "status": "COMPUTED_SHADOW_COMPLETE"
+   }
+  },
+  {
+   "pop_id": "POP:FOOTING:FN#23",
+   "element_type": "FOOTING",
+   "occurrence_id": "FOOTING:FN#23",
+   "level": "FOUNDATION",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_COMPLETE",
+   "verified_complete_kg": 12.231111,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [],
+   "component_states": {
+    "COMPLETE": 2,
+    "NOT_REQUIRED": 1
+   },
+   "source": {
+    "plan_mark": "ALSENAN_ST7757_DXF|H6160||TEXT|0",
+    "status": "COMPUTED_SHADOW_COMPLETE"
+   }
+  },
+  {
+   "pop_id": "POP:FOOTING:F12#24",
+   "element_type": "FOOTING_2_LAYER",
+   "occurrence_id": "FOOTING:F12#24",
+   "level": "FOUNDATION",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 696.05037,
+   "provisional_kg": 20.423704,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:FOOTING:F12#24|TOP_SHORT",
+    "POP:FOOTING:F12#24|TOP_LONG",
+    "POP:FOOTING:F12#24|BOTTOM_SHORT",
+    "POP:FOOTING:F12#24|BOTTOM_LONG",
+    "POP:FOOTING:F12#24|TOP_END_DETAIL"
+   ],
+   "component_states": {
+    "PARTIAL": 4,
+    "BLOCKED": 1
+   },
+   "source": {
+    "plan_mark": "ALSENAN_ST7757_DXF|H6874||TEXT|0",
+    "status": "COMPUTED_SHADOW_COMPLETE"
+   }
+  },
+  {
+   "pop_id": "POP:FOOTING:F13#25",
+   "element_type": "FOOTING_2_LAYER",
+   "occurrence_id": "FOOTING:F13#25",
+   "level": "FOUNDATION",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 408.887901,
+   "provisional_kg": 17.912593,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:FOOTING:F13#25|TOP_SHORT",
+    "POP:FOOTING:F13#25|TOP_LONG",
+    "POP:FOOTING:F13#25|BOTTOM_SHORT",
+    "POP:FOOTING:F13#25|BOTTOM_LONG",
+    "POP:FOOTING:F13#25|TOP_END_DETAIL"
+   ],
+   "component_states": {
+    "PARTIAL": 4,
+    "BLOCKED": 1
+   },
+   "source": {
+    "plan_mark": "ALSENAN_ST7757_DXF|H6876||TEXT|0",
+    "status": "COMPUTED_SHADOW_COMPLETE"
+   }
+  },
+  {
+   "pop_id": "POP:FOOTING:F8#26",
+   "element_type": "FOOTING_2_LAYER",
+   "occurrence_id": "FOOTING:F8#26",
+   "level": "FOUNDATION",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 494.500741,
+   "provisional_kg": 17.712593,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:FOOTING:F8#26|TOP_SHORT",
+    "POP:FOOTING:F8#26|TOP_LONG",
+    "POP:FOOTING:F8#26|BOTTOM_SHORT",
+    "POP:FOOTING:F8#26|BOTTOM_LONG",
+    "POP:FOOTING:F8#26|TOP_END_DETAIL"
+   ],
+   "component_states": {
+    "PARTIAL": 4,
+    "BLOCKED": 1
+   },
+   "source": {
+    "plan_mark": "ALSENAN_ST7757_DXF|H6949||TEXT|0",
+    "status": "COMPUTED_SHADOW_COMPLETE"
+   }
+  },
+  {
+   "pop_id": "POP:FOOTING:F15#27",
+   "element_type": "FOOTING",
+   "occurrence_id": "FOOTING:F15#27",
+   "level": "FOUNDATION",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 23.271111,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:FOOTING:F15#27|BOXED"
+   ],
+   "component_states": {
+    "COMPLETE": 2,
+    "BLOCKED": 1
+   },
+   "source": {
+    "plan_mark": "ALSENAN_ST7757_DXF|H6953||TEXT|0",
+    "status": "COMPUTED_SHADOW_COMPLETE"
+   }
+  },
+  {
+   "pop_id": "POP:STRAP:SB2:H6935",
+   "element_type": "STRAP_BEAM",
+   "occurrence_id": "STRAP:SB2:H6935",
+   "level": "FOUNDATION",
+   "occurrence_state": "BLOCKED",
+   "occurrence_why": "SOURCE_CONFLICT_DUPLICATE_SCHEDULE_KEY",
+   "release_state": "BLOCKED",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:STRAP:SB2:H6935|ALL"
+   ],
+   "component_states": {
+    "BLOCKED": 1
+   },
+   "source": {}
+  },
+  {
+   "pop_id": "POP:STRAP:SB1:H6946",
+   "element_type": "STRAP_BEAM",
+   "occurrence_id": "STRAP:SB1:H6946",
+   "level": "FOUNDATION",
+   "occurrence_state": "PROVISIONAL",
+   "occurrence_why": "clear length measured to the face of a footing outline whose size is a SOURCE_CONFLICT (F / F10)",
+   "release_state": "PROVISIONAL",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 199.237971,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:STRAP:SB1:H6946|BOTTOM",
+    "POP:STRAP:SB1:H6946|TOP",
+    "POP:STRAP:SB1:H6946|STIRRUPS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "NOT_REQUIRED": 1
+   },
+   "source": {
+    "plan_mark": "ALSENAN_ST7757_DXF|H6946|6941|TEXT|0",
+    "length_m": 4.551032
+   }
+  },
+  {
+   "pop_id": "POP:STRAP:SB3:H6952",
+   "element_type": "STRAP_BEAM",
+   "occurrence_id": "STRAP:SB3:H6952",
+   "level": "FOUNDATION",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 69.611956,
+   "provisional_kg": 2.350598,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:STRAP:SB3:H6952|BOTTOM",
+    "POP:STRAP:SB3:H6952|TOP",
+    "POP:STRAP:SB3:H6952|STIRRUPS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "NOT_REQUIRED": 1
+   },
+   "source": {
+    "plan_mark": "ALSENAN_ST7757_DXF|H6952||TEXT|0",
+    "length_m": 3.259261
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:GF:B16:H1139",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:GF:B16:H1139",
+   "level": "GF",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 85.535802,
+   "provisional_kg": 15.884784,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:GF:B16:H1139|BOTTOM",
+    "POP:BEAM:GF:B16:H1139|TOP",
+    "POP:BEAM:GF:B16:H1139|STIRRUPS",
+    "POP:BEAM:GF:B16:H1139|SIDE_BARS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "BLOCKED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1139||TEXT|0"
+    ],
+    "Ls_m": 4.1,
+    "Lc_m": 3.35
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:GF:B13:H1127",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:GF:B13:H1127",
+   "level": "GF",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 117.414265,
+   "provisional_kg": 8.006937,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:GF:B13:H1127|BOTTOM",
+    "POP:BEAM:GF:B13:H1127|TOP",
+    "POP:BEAM:GF:B13:H1127|STIRRUPS",
+    "POP:BEAM:GF:B13:H1127|SIDE_BARS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "BLOCKED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1127||TEXT|0"
+    ],
+    "Ls_m": 5.717233,
+    "Lc_m": 5.461771
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:GF:B11:H1092",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:GF:B11:H1092",
+   "level": "GF",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 81.839401,
+   "provisional_kg": 6.402049,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:GF:B11:H1092|BOTTOM",
+    "POP:BEAM:GF:B11:H1092|TOP",
+    "POP:BEAM:GF:B11:H1092|STIRRUPS",
+    "POP:BEAM:GF:B11:H1092|SIDE_BARS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "BLOCKED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1092||TEXT|0"
+    ],
+    "Ls_m": 4.827813,
+    "Lc_m": 4.575082
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:GF:B1:H1093",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:GF:B1:H1093",
+   "level": "GF",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 9.725926,
+   "provisional_kg": 2.009869,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:GF:B1:H1093|BOTTOM",
+    "POP:BEAM:GF:B1:H1093|TOP",
+    "POP:BEAM:GF:B1:H1093|STIRRUPS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "NOT_REQUIRED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1093||TEXT|0"
+    ],
+    "Ls_m": 1.67,
+    "Lc_m": 1.47
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:GF:B4:H1094",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:GF:B4:H1094",
+   "level": "GF",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 41.274074,
+   "provisional_kg": 4.359487,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:GF:B4:H1094|BOTTOM",
+    "POP:BEAM:GF:B4:H1094|TOP",
+    "POP:BEAM:GF:B4:H1094|STIRRUPS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "NOT_REQUIRED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1094||TEXT|0"
+    ],
+    "Ls_m": 4.0,
+    "Lc_m": 3.75
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:GF:B7:H1234",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:GF:B7:H1234",
+   "level": "GF",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 18.469136,
+   "provisional_kg": 3.394558,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:GF:B7:H1234|BOTTOM",
+    "POP:BEAM:GF:B7:H1234|TOP",
+    "POP:BEAM:GF:B7:H1234|STIRRUPS",
+    "POP:BEAM:GF:B7:H1234|SIDE_BARS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "BLOCKED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1234||TEXT|0"
+    ],
+    "Ls_m": 1.975,
+    "Lc_m": 1.7
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:GF:B20:H1110",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:GF:B20:H1110",
+   "level": "GF",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 187.166667,
+   "provisional_kg": 13.598242,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:GF:B20:H1110|BOTTOM",
+    "POP:BEAM:GF:B20:H1110|TOP",
+    "POP:BEAM:GF:B20:H1110|STIRRUPS",
+    "POP:BEAM:GF:B20:H1110|SIDE_BARS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "BLOCKED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1110|1107|TEXT|0"
+    ],
+    "Ls_m": 3.8,
+    "Lc_m": 3.575
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:GF:B3:H1122",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:GF:B3:H1122",
+   "level": "GF",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 34.62716,
+   "provisional_kg": 4.857761,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:GF:B3:H1122|BOTTOM",
+    "POP:BEAM:GF:B3:H1122|TOP",
+    "POP:BEAM:GF:B3:H1122|STIRRUPS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "NOT_REQUIRED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1122||TEXT|0"
+    ],
+    "Ls_m": 3.65,
+    "Lc_m": 3.3
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:GF:B1:H1126",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:GF:B1:H1126",
+   "level": "GF",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 17.106359,
+   "provisional_kg": 2.668981,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:GF:B1:H1126|BOTTOM",
+    "POP:BEAM:GF:B1:H1126|TOP",
+    "POP:BEAM:GF:B1:H1126|STIRRUPS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "NOT_REQUIRED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1126||TEXT|0"
+    ],
+    "Ls_m": 2.797187,
+    "Lc_m": 2.569456
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:GF:B4:H1243",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:GF:B4:H1243",
+   "level": "GF",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 37.728425,
+   "provisional_kg": 6.452847,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:GF:B4:H1243|BOTTOM",
+    "POP:BEAM:GF:B4:H1243|TOP",
+    "POP:BEAM:GF:B4:H1243|STIRRUPS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "NOT_REQUIRED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1243||TEXT|0"
+    ],
+    "Ls_m": 3.956897,
+    "Lc_m": 3.429272
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:GF:B8:H1138",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:GF:B8:H1138",
+   "level": "GF",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 43.284097,
+   "provisional_kg": 6.30171,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:GF:B8:H1138|BOTTOM",
+    "POP:BEAM:GF:B8:H1138|TOP",
+    "POP:BEAM:GF:B8:H1138|STIRRUPS",
+    "POP:BEAM:GF:B8:H1138|SIDE_BARS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "BLOCKED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1138||TEXT|0"
+    ],
+    "Ls_m": 3.99514,
+    "Lc_m": 3.52014
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:GF:B1:H1294",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:GF:B1:H1294",
+   "level": "GF",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 8.197531,
+   "provisional_kg": 2.142215,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:GF:B1:H1294|BOTTOM",
+    "POP:BEAM:GF:B1:H1294|TOP",
+    "POP:BEAM:GF:B1:H1294|STIRRUPS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "NOT_REQUIRED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1294||TEXT|0"
+    ],
+    "Ls_m": 1.45,
+    "Lc_m": 1.2
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:GF:CA:H1694",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:GF:CA:H1694",
+   "level": "GF",
+   "occurrence_state": "BLOCKED",
+   "occurrence_why": "REBAR_BLOCKED_OCCURRENCE_NOT_MEASURED (TAG_INSIDE_SUPPORT)",
+   "release_state": "BLOCKED",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:GF:CA:H1694|ALL"
+   ],
+   "component_states": {
+    "BLOCKED": 1
+   },
+   "source": {}
+  },
+  {
+   "pop_id": "POP:BEAM:GF:B1:H1697",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:GF:B1:H1697",
+   "level": "GF",
+   "occurrence_state": "BLOCKED",
+   "occurrence_why": "REBAR_BLOCKED_LENGTH_MISSING",
+   "release_state": "BLOCKED",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:GF:B1:H1697|ALL"
+   ],
+   "component_states": {
+    "BLOCKED": 1
+   },
+   "source": {}
+  },
+  {
+   "pop_id": "POP:BEAM:GF:B24:H6170",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:GF:B24:H6170",
+   "level": "GF",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 123.288889,
+   "provisional_kg": 9.434552,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:GF:B24:H6170|BOTTOM",
+    "POP:BEAM:GF:B24:H6170|TOP",
+    "POP:BEAM:GF:B24:H6170|STIRRUPS",
+    "POP:BEAM:GF:B24:H6170|SIDE_BARS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "BLOCKED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H6170|6164|TEXT|0"
+    ],
+    "Ls_m": 4.05,
+    "Lc_m": 3.8
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:GF:B3:H1719",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:GF:B3:H1719",
+   "level": "GF",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 26.17284,
+   "provisional_kg": 3.255296,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:GF:B3:H1719|BOTTOM",
+    "POP:BEAM:GF:B3:H1719|TOP",
+    "POP:BEAM:GF:B3:H1719|STIRRUPS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "NOT_REQUIRED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1719||TEXT|0"
+    ],
+    "Ls_m": 2.7,
+    "Lc_m": 2.5
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:GF:B5:H1176",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:GF:B5:H1176",
+   "level": "GF",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 45.795461,
+   "provisional_kg": 8.948082,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:GF:B5:H1176|BOTTOM",
+    "POP:BEAM:GF:B5:H1176|TOP",
+    "POP:BEAM:GF:B5:H1176|STIRRUPS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "NOT_REQUIRED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1176||TEXT|0"
+    ],
+    "Ls_m": 4.301248,
+    "Lc_m": 3.61696
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:GF:B4:H1175",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:GF:B4:H1175",
+   "level": "GF",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 32.54184,
+   "provisional_kg": 8.501371,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:GF:B4:H1175|BOTTOM",
+    "POP:BEAM:GF:B4:H1175|TOP",
+    "POP:BEAM:GF:B4:H1175|STIRRUPS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "NOT_REQUIRED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1175||TEXT|0"
+    ],
+    "Ls_m": 3.773752,
+    "Lc_m": 2.964465
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:GF:B3:H6183",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:GF:B3:H6183",
+   "level": "GF",
+   "occurrence_state": "BLOCKED",
+   "occurrence_why": "REBAR_BLOCKED_OCCURRENCE_NOT_MEASURED (BAND_TYPE_CONFLICT)",
+   "release_state": "BLOCKED",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:GF:B3:H6183|ALL"
+   ],
+   "component_states": {
+    "BLOCKED": 1
+   },
+   "source": {}
+  },
+  {
+   "pop_id": "POP:BEAM:GF:B2:H1170",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:GF:B2:H1170",
+   "level": "GF",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 24.316049,
+   "provisional_kg": 5.049862,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:GF:B2:H1170|BOTTOM",
+    "POP:BEAM:GF:B2:H1170|TOP",
+    "POP:BEAM:GF:B2:H1170|STIRRUPS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "NOT_REQUIRED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1170||TEXT|0"
+    ],
+    "Ls_m": 3.2,
+    "Lc_m": 2.7
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:GF:B22:H1174",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:GF:B22:H1174",
+   "level": "GF",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 301.022222,
+   "provisional_kg": 12.522191,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:GF:B22:H1174|BOTTOM",
+    "POP:BEAM:GF:B22:H1174|TOP",
+    "POP:BEAM:GF:B22:H1174|STIRRUPS",
+    "POP:BEAM:GF:B22:H1174|SIDE_BARS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "BLOCKED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1174||TEXT|0"
+    ],
+    "Ls_m": 8.05,
+    "Lc_m": 7.8
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:GF:B14:H1119",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:GF:B14:H1119",
+   "level": "GF",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 26.330864,
+   "provisional_kg": 3.957026,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:GF:B14:H1119|BOTTOM",
+    "POP:BEAM:GF:B14:H1119|TOP",
+    "POP:BEAM:GF:B14:H1119|STIRRUPS",
+    "POP:BEAM:GF:B14:H1119|SIDE_BARS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "BLOCKED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1119||TEXT|0"
+    ],
+    "Ls_m": 2.025,
+    "Lc_m": 1.8
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:GF:B1:H1095",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:GF:B1:H1095",
+   "level": "GF",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 11.691358,
+   "provisional_kg": 2.269867,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:GF:B1:H1095|BOTTOM",
+    "POP:BEAM:GF:B1:H1095|TOP",
+    "POP:BEAM:GF:B1:H1095|STIRRUPS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "NOT_REQUIRED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1095||TEXT|0"
+    ],
+    "Ls_m": 1.975,
+    "Lc_m": 1.75
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:GF:B1:H1207",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:GF:B1:H1207",
+   "level": "GF",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 4.91358,
+   "provisional_kg": 4.00839,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:GF:B1:H1207|BOTTOM",
+    "POP:BEAM:GF:B1:H1207|TOP",
+    "POP:BEAM:GF:B1:H1207|STIRRUPS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "NOT_REQUIRED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1207||TEXT|0"
+    ],
+    "Ls_m": 1.45,
+    "Lc_m": 0.7
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:GF:B3:H1096",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:GF:B3:H1096",
+   "level": "GF",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 31.002469,
+   "provisional_kg": 4.90517,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:GF:B3:H1096|BOTTOM",
+    "POP:BEAM:GF:B3:H1096|TOP",
+    "POP:BEAM:GF:B3:H1096|STIRRUPS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "NOT_REQUIRED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1096||TEXT|0"
+    ],
+    "Ls_m": 3.325,
+    "Lc_m": 2.95
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:GF:B2:H1097",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:GF:B2:H1097",
+   "level": "GF",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 24.316049,
+   "provisional_kg": 5.049862,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:GF:B2:H1097|BOTTOM",
+    "POP:BEAM:GF:B2:H1097|TOP",
+    "POP:BEAM:GF:B2:H1097|STIRRUPS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "NOT_REQUIRED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1097||TEXT|0"
+    ],
+    "Ls_m": 3.2,
+    "Lc_m": 2.7
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:GF:B7:H1206",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:GF:B7:H1206",
+   "level": "GF",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 13.195062,
+   "provisional_kg": 4.628635,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:GF:B7:H1206|BOTTOM",
+    "POP:BEAM:GF:B7:H1206|TOP",
+    "POP:BEAM:GF:B7:H1206|STIRRUPS",
+    "POP:BEAM:GF:B7:H1206|SIDE_BARS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "BLOCKED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1206||TEXT|0"
+    ],
+    "Ls_m": 1.7,
+    "Lc_m": 1.2
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:GF:B1:H1118",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:GF:B1:H1118",
+   "level": "GF",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 11.901235,
+   "provisional_kg": 2.164929,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:GF:B1:H1118|BOTTOM",
+    "POP:BEAM:GF:B1:H1118|TOP",
+    "POP:BEAM:GF:B1:H1118|STIRRUPS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "NOT_REQUIRED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1118||TEXT|0"
+    ],
+    "Ls_m": 2.0,
+    "Lc_m": 1.8
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:GF:B1:H1142",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:GF:B1:H1142",
+   "level": "GF",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 10.771605,
+   "provisional_kg": 2.297275,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:GF:B1:H1142|BOTTOM",
+    "POP:BEAM:GF:B1:H1142|TOP",
+    "POP:BEAM:GF:B1:H1142|STIRRUPS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "NOT_REQUIRED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1142||TEXT|0"
+    ],
+    "Ls_m": 1.875,
+    "Lc_m": 1.625
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:GF:B1:H1143",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:GF:B1:H1143",
+   "level": "GF",
+   "occurrence_state": "BLOCKED",
+   "occurrence_why": "REBAR_BLOCKED_LENGTH_MISSING",
+   "release_state": "BLOCKED",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:GF:B1:H1143|ALL"
+   ],
+   "component_states": {
+    "BLOCKED": 1
+   },
+   "source": {}
+  },
+  {
+   "pop_id": "POP:BEAM:GF:B9:H1469",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:GF:B9:H1469",
+   "level": "GF",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 82.844444,
+   "provisional_kg": 7.451329,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:GF:B9:H1469|BOTTOM",
+    "POP:BEAM:GF:B9:H1469|TOP",
+    "POP:BEAM:GF:B9:H1469|STIRRUPS",
+    "POP:BEAM:GF:B9:H1469|SIDE_BARS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "BLOCKED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1469||TEXT|0"
+    ],
+    "Ls_m": 6.4,
+    "Lc_m": 6.0
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:GF:B4:H1288",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:GF:B4:H1288",
+   "level": "GF",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 49.244444,
+   "provisional_kg": 4.264669,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:GF:B4:H1288|BOTTOM",
+    "POP:BEAM:GF:B4:H1288|TOP",
+    "POP:BEAM:GF:B4:H1288|STIRRUPS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "NOT_REQUIRED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1288||TEXT|0"
+    ],
+    "Ls_m": 4.7,
+    "Lc_m": 4.5
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:GF:B1:H1144",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:GF:B1:H1144",
+   "level": "GF",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 8.617284,
+   "provisional_kg": 2.561968,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:GF:B1:H1144|BOTTOM",
+    "POP:BEAM:GF:B1:H1144|TOP",
+    "POP:BEAM:GF:B1:H1144|STIRRUPS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "NOT_REQUIRED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1144||TEXT|0"
+    ],
+    "Ls_m": 1.65,
+    "Lc_m": 1.3
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:GF:B2:H1157",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:GF:B2:H1157",
+   "level": "GF",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 23.269136,
+   "provisional_kg": 3.016777,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:GF:B2:H1157|BOTTOM",
+    "POP:BEAM:GF:B2:H1157|TOP",
+    "POP:BEAM:GF:B2:H1157|STIRRUPS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "NOT_REQUIRED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1157||TEXT|0"
+    ],
+    "Ls_m": 2.8,
+    "Lc_m": 2.6
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:GF:B28:H1132",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:GF:B28:H1132",
+   "level": "GF",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 15.763195,
+   "provisional_kg": 7.227222,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:GF:B28:H1132|BOTTOM",
+    "POP:BEAM:GF:B28:H1132|TOP",
+    "POP:BEAM:GF:B28:H1132|STIRRUPS",
+    "POP:BEAM:GF:B28:H1132|SIDE_BARS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "BLOCKED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1132||TEXT|0"
+    ],
+    "Ls_m": 1.47986,
+    "Lc_m": 0.80486
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:GF:B1:H1072",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:GF:B1:H1072",
+   "level": "GF",
+   "occurrence_state": "BLOCKED",
+   "occurrence_why": "REBAR_BLOCKED_LENGTH_MISSING",
+   "release_state": "BLOCKED",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:GF:B1:H1072|ALL"
+   ],
+   "component_states": {
+    "BLOCKED": 1
+   },
+   "source": {}
+  },
+  {
+   "pop_id": "POP:BEAM:GF:B17:H1074",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:GF:B17:H1074",
+   "level": "GF",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 164.677778,
+   "provisional_kg": 10.95701,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:GF:B17:H1074|BOTTOM",
+    "POP:BEAM:GF:B17:H1074|TOP",
+    "POP:BEAM:GF:B17:H1074|STIRRUPS",
+    "POP:BEAM:GF:B17:H1074|SIDE_BARS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "BLOCKED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1074||TEXT|0"
+    ],
+    "Ls_m": 5.775,
+    "Lc_m": 5.475
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:GF:B4:H1131",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:GF:B4:H1131",
+   "level": "GF",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 21.723311,
+   "provisional_kg": 4.114064,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:GF:B4:H1131|BOTTOM",
+    "POP:BEAM:GF:B4:H1131|TOP",
+    "POP:BEAM:GF:B4:H1131|STIRRUPS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "NOT_REQUIRED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1131||TEXT|0"
+    ],
+    "Ls_m": 2.30486,
+    "Lc_m": 1.97986
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:GF:B27:H1330",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:GF:B27:H1330",
+   "level": "GF",
+   "occurrence_state": "BLOCKED",
+   "occurrence_why": "REBAR_BLOCKED_LENGTH_MISSING",
+   "release_state": "BLOCKED",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:GF:B27:H1330|ALL"
+   ],
+   "component_states": {
+    "BLOCKED": 1
+   },
+   "source": {}
+  },
+  {
+   "pop_id": "POP:BEAM:GF:B26:H1228",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:GF:B26:H1228",
+   "level": "GF",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 342.939767,
+   "provisional_kg": 28.809007,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:GF:B26:H1228|BOTTOM",
+    "POP:BEAM:GF:B26:H1228|TOP",
+    "POP:BEAM:GF:B26:H1228|STIRRUPS",
+    "POP:BEAM:GF:B26:H1228|SIDE_BARS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "BLOCKED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1228||TEXT|0"
+    ],
+    "Ls_m": 5.916471,
+    "Lc_m": 5.476847
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:1F:B3:H1721",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:1F:B3:H1721",
+   "level": "1F",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 26.17284,
+   "provisional_kg": 3.255296,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:1F:B3:H1721|BOTTOM",
+    "POP:BEAM:1F:B3:H1721|TOP",
+    "POP:BEAM:1F:B3:H1721|STIRRUPS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "NOT_REQUIRED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1721||TEXT|0"
+    ],
+    "Ls_m": 2.7,
+    "Lc_m": 2.5
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:1F:B4:H1809",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:1F:B4:H1809",
+   "level": "1F",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 44.746858,
+   "provisional_kg": 4.109609,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:1F:B4:H1809|BOTTOM",
+    "POP:BEAM:1F:B4:H1809|TOP",
+    "POP:BEAM:1F:B4:H1809|STIRRUPS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "NOT_REQUIRED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1809||TEXT|0"
+    ],
+    "Ls_m": 4.261731,
+    "Lc_m": 4.061731
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:1F:B7:H1740",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:1F:B7:H1740",
+   "level": "1F",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 19.120988,
+   "provisional_kg": 3.068632,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:1F:B7:H1740|BOTTOM",
+    "POP:BEAM:1F:B7:H1740|TOP",
+    "POP:BEAM:1F:B7:H1740|STIRRUPS",
+    "POP:BEAM:1F:B7:H1740|SIDE_BARS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "BLOCKED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1740||TEXT|0"
+    ],
+    "Ls_m": 2.025,
+    "Lc_m": 1.8
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:1F:B1:H1742",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:1F:B1:H1742",
+   "level": "1F",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 4.91358,
+   "provisional_kg": 4.00839,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:1F:B1:H1742|BOTTOM",
+    "POP:BEAM:1F:B1:H1742|TOP",
+    "POP:BEAM:1F:B1:H1742|STIRRUPS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "NOT_REQUIRED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1742||TEXT|0"
+    ],
+    "Ls_m": 1.45,
+    "Lc_m": 0.7
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:1F:B2:H1737",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:1F:B2:H1737",
+   "level": "1F",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 26.666667,
+   "provisional_kg": 4.149615,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:1F:B2:H1737|BOTTOM",
+    "POP:BEAM:1F:B2:H1737|TOP",
+    "POP:BEAM:1F:B2:H1737|STIRRUPS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "NOT_REQUIRED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1737||TEXT|0"
+    ],
+    "Ls_m": 3.35,
+    "Lc_m": 3.0
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:1F:B18:H1773",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:1F:B18:H1773",
+   "level": "1F",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 174.150617,
+   "provisional_kg": 18.707875,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:1F:B18:H1773|BOTTOM",
+    "POP:BEAM:1F:B18:H1773|TOP",
+    "POP:BEAM:1F:B18:H1773|STIRRUPS",
+    "POP:BEAM:1F:B18:H1773|SIDE_BARS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "BLOCKED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1773||TEXT|0"
+    ],
+    "Ls_m": 6.95,
+    "Lc_m": 6.3
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:1F:B1:H1744",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:1F:B1:H1744",
+   "level": "1F",
+   "occurrence_state": "BLOCKED",
+   "occurrence_why": "REBAR_BLOCKED_LENGTH_MISSING",
+   "release_state": "BLOCKED",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:1F:B1:H1744|ALL"
+   ],
+   "component_states": {
+    "BLOCKED": 1
+   },
+   "source": {}
+  },
+  {
+   "pop_id": "POP:BEAM:1F:B2:H1738",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:1F:B2:H1738",
+   "level": "1F",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 24.316049,
+   "provisional_kg": 5.049862,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:1F:B2:H1738|BOTTOM",
+    "POP:BEAM:1F:B2:H1738|TOP",
+    "POP:BEAM:1F:B2:H1738|STIRRUPS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "NOT_REQUIRED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1738||TEXT|0"
+    ],
+    "Ls_m": 3.2,
+    "Lc_m": 2.7
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:1F:B7:H1741",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:1F:B7:H1741",
+   "level": "1F",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 13.195062,
+   "provisional_kg": 4.628635,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:1F:B7:H1741|BOTTOM",
+    "POP:BEAM:1F:B7:H1741|TOP",
+    "POP:BEAM:1F:B7:H1741|STIRRUPS",
+    "POP:BEAM:1F:B7:H1741|SIDE_BARS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "BLOCKED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1741||TEXT|0"
+    ],
+    "Ls_m": 1.7,
+    "Lc_m": 1.2
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:1F:B1:H1739",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:1F:B1:H1739",
+   "level": "1F",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 11.901235,
+   "provisional_kg": 2.164929,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:1F:B1:H1739|BOTTOM",
+    "POP:BEAM:1F:B1:H1739|TOP",
+    "POP:BEAM:1F:B1:H1739|STIRRUPS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "NOT_REQUIRED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1739||TEXT|0"
+    ],
+    "Ls_m": 2.0,
+    "Lc_m": 1.8
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:1F:B2:H1722",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:1F:B2:H1722",
+   "level": "1F",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 24.316049,
+   "provisional_kg": 5.049862,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:1F:B2:H1722|BOTTOM",
+    "POP:BEAM:1F:B2:H1722|TOP",
+    "POP:BEAM:1F:B2:H1722|STIRRUPS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "NOT_REQUIRED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1722||TEXT|0"
+    ],
+    "Ls_m": 3.2,
+    "Lc_m": 2.7
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:1F:B23:H1867",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:1F:B23:H1867",
+   "level": "1F",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 188.588889,
+   "provisional_kg": 13.637749,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:1F:B23:H1867|BOTTOM",
+    "POP:BEAM:1F:B23:H1867|TOP",
+    "POP:BEAM:1F:B23:H1867|STIRRUPS",
+    "POP:BEAM:1F:B23:H1867|SIDE_BARS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "BLOCKED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1867||TEXT|0"
+    ],
+    "Ls_m": 3.8,
+    "Lc_m": 3.575
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:1F:B19:H1743",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:1F:B19:H1743",
+   "level": "1F",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 118.644709,
+   "provisional_kg": 11.355974,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:1F:B19:H1743|BOTTOM",
+    "POP:BEAM:1F:B19:H1743|TOP",
+    "POP:BEAM:1F:B19:H1743|STIRRUPS",
+    "POP:BEAM:1F:B19:H1743|SIDE_BARS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "BLOCKED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1743||TEXT|0"
+    ],
+    "Ls_m": 3.198229,
+    "Lc_m": 2.971583
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:1F:B4:H1717",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:1F:B4:H1717",
+   "level": "1F",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 45.05679,
+   "provisional_kg": 4.312078,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:1F:B4:H1717|BOTTOM",
+    "POP:BEAM:1F:B4:H1717|TOP",
+    "POP:BEAM:1F:B4:H1717|STIRRUPS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "NOT_REQUIRED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1717||TEXT|0"
+    ],
+    "Ls_m": 4.325,
+    "Lc_m": 4.1
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:1F:B6:H1725",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:1F:B6:H1725",
+   "level": "1F",
+   "occurrence_state": "BLOCKED",
+   "occurrence_why": "REBAR_BLOCKED_LENGTH_MISSING",
+   "release_state": "BLOCKED",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:1F:B6:H1725|ALL"
+   ],
+   "component_states": {
+    "BLOCKED": 1
+   },
+   "source": {}
+  },
+  {
+   "pop_id": "POP:BEAM:1F:B4:H1753",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:1F:B4:H1753",
+   "level": "1F",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 47.150617,
+   "provisional_kg": 5.199485,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:1F:B4:H1753|BOTTOM",
+    "POP:BEAM:1F:B4:H1753|TOP",
+    "POP:BEAM:1F:B4:H1753|STIRRUPS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "NOT_REQUIRED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1753||TEXT|0"
+    ],
+    "Ls_m": 4.625,
+    "Lc_m": 4.3
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:1F:B25:H1745",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:1F:B25:H1745",
+   "level": "1F",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 288.876232,
+   "provisional_kg": 16.951966,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:1F:B25:H1745|BOTTOM",
+    "POP:BEAM:1F:B25:H1745|TOP",
+    "POP:BEAM:1F:B25:H1745|STIRRUPS",
+    "POP:BEAM:1F:B25:H1745|SIDE_BARS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "BLOCKED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1745||TEXT|0"
+    ],
+    "Ls_m": 7.260153,
+    "Lc_m": 6.90869
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:1F:B11:H1752",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:1F:B11:H1752",
+   "level": "1F",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 84.890911,
+   "provisional_kg": 9.197507,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:1F:B11:H1752|BOTTOM",
+    "POP:BEAM:1F:B11:H1752|TOP",
+    "POP:BEAM:1F:B11:H1752|STIRRUPS",
+    "POP:BEAM:1F:B11:H1752|SIDE_BARS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "BLOCKED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1752||TEXT|0"
+    ],
+    "Ls_m": 5.197817,
+    "Lc_m": 4.747817
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:1F:B5:H1732",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:1F:B5:H1732",
+   "level": "1F",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 44.896296,
+   "provisional_kg": 8.123932,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:1F:B5:H1732|BOTTOM",
+    "POP:BEAM:1F:B5:H1732|TOP",
+    "POP:BEAM:1F:B5:H1732|STIRRUPS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "NOT_REQUIRED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1732||TEXT|0"
+    ],
+    "Ls_m": 4.125,
+    "Lc_m": 3.525
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:1F:B6:H1748",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:1F:B6:H1748",
+   "level": "1F",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 65.361266,
+   "provisional_kg": 9.781841,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:1F:B6:H1748|BOTTOM",
+    "POP:BEAM:1F:B6:H1748|TOP",
+    "POP:BEAM:1F:B6:H1748|STIRRUPS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "NOT_REQUIRED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1748||TEXT|0"
+    ],
+    "Ls_m": 4.974794,
+    "Lc_m": 4.372183
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:1F:B6:H1751",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:1F:B6:H1751",
+   "level": "1F",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 65.361266,
+   "provisional_kg": 7.395533,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:1F:B6:H1751|BOTTOM",
+    "POP:BEAM:1F:B6:H1751|TOP",
+    "POP:BEAM:1F:B6:H1751|STIRRUPS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "NOT_REQUIRED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1751||TEXT|0"
+    ],
+    "Ls_m": 4.772183,
+    "Lc_m": 4.372183
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:1F:B6:H1900",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:1F:B6:H1900",
+   "level": "1F",
+   "occurrence_state": "BLOCKED",
+   "occurrence_why": "REBAR_BLOCKED_LENGTH_MISSING",
+   "release_state": "BLOCKED",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:1F:B6:H1900|ALL"
+   ],
+   "component_states": {
+    "BLOCKED": 1
+   },
+   "source": {}
+  },
+  {
+   "pop_id": "POP:BEAM:1F:B5:H1772",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:1F:B5:H1772",
+   "level": "1F",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 58.496296,
+   "provisional_kg": 7.611335,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:1F:B5:H1772|BOTTOM",
+    "POP:BEAM:1F:B5:H1772|TOP",
+    "POP:BEAM:1F:B5:H1772|STIRRUPS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "NOT_REQUIRED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1772||TEXT|0"
+    ],
+    "Ls_m": 5.125,
+    "Lc_m": 4.625
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:2F:B3:H1908",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:2F:B3:H1908",
+   "level": "2F",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 25.767901,
+   "provisional_kg": 3.457765,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:2F:B3:H1908|BOTTOM",
+    "POP:BEAM:2F:B3:H1908|TOP",
+    "POP:BEAM:2F:B3:H1908|STIRRUPS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "NOT_REQUIRED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1908||TEXT|0"
+    ],
+    "Ls_m": 2.675,
+    "Lc_m": 2.45
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:2F:B3:H1949",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:2F:B3:H1949",
+   "level": "2F",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 26.17284,
+   "provisional_kg": 3.255296,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:2F:B3:H1949|BOTTOM",
+    "POP:BEAM:2F:B3:H1949|TOP",
+    "POP:BEAM:2F:B3:H1949|STIRRUPS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "NOT_REQUIRED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1949||TEXT|0"
+    ],
+    "Ls_m": 2.7,
+    "Lc_m": 2.5
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:2F:B8:H1950",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:2F:B8:H1950",
+   "level": "2F",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 45.169383,
+   "provisional_kg": 4.15208,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:2F:B8:H1950|BOTTOM",
+    "POP:BEAM:2F:B8:H1950|TOP",
+    "POP:BEAM:2F:B8:H1950|STIRRUPS",
+    "POP:BEAM:2F:B8:H1950|SIDE_BARS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "BLOCKED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1950||TEXT|0"
+    ],
+    "Ls_m": 3.87,
+    "Lc_m": 3.67
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:2F:B2:H1936",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:2F:B2:H1936",
+   "level": "2F",
+   "occurrence_state": "BLOCKED",
+   "occurrence_why": "REBAR_BLOCKED_LENGTH_MISSING",
+   "release_state": "BLOCKED",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:2F:B2:H1936|ALL"
+   ],
+   "component_states": {
+    "BLOCKED": 1
+   },
+   "source": {}
+  },
+  {
+   "pop_id": "POP:BEAM:2F:B1:H1935",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:2F:B1:H1935",
+   "level": "2F",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 11.901235,
+   "provisional_kg": 2.164929,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:2F:B1:H1935|BOTTOM",
+    "POP:BEAM:2F:B1:H1935|TOP",
+    "POP:BEAM:2F:B1:H1935|STIRRUPS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "NOT_REQUIRED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1935||TEXT|0"
+    ],
+    "Ls_m": 2.0,
+    "Lc_m": 1.8
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:2F:B2:H1934",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:2F:B2:H1934",
+   "level": "2F",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 26.666667,
+   "provisional_kg": 3.171837,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:2F:B2:H1934|BOTTOM",
+    "POP:BEAM:2F:B2:H1934|TOP",
+    "POP:BEAM:2F:B2:H1934|STIRRUPS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "NOT_REQUIRED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1934||TEXT|0"
+    ],
+    "Ls_m": 3.2,
+    "Lc_m": 3.0
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:2F:B15:H1961",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:2F:B15:H1961",
+   "level": "2F",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 77.2,
+   "provisional_kg": 12.358496,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:2F:B15:H1961|BOTTOM",
+    "POP:BEAM:2F:B15:H1961|TOP",
+    "POP:BEAM:2F:B15:H1961|STIRRUPS",
+    "POP:BEAM:2F:B15:H1961|SIDE_BARS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "BLOCKED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1961||TEXT|0"
+    ],
+    "Ls_m": 3.2,
+    "Lc_m": 2.7
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:2F:B2:H1930",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:2F:B2:H1930",
+   "level": "2F",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 16.079012,
+   "provisional_kg": 2.629126,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:2F:B2:H1930|BOTTOM",
+    "POP:BEAM:2F:B2:H1930|TOP",
+    "POP:BEAM:2F:B2:H1930|STIRRUPS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "NOT_REQUIRED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1930||TEXT|0"
+    ],
+    "Ls_m": 2.0,
+    "Lc_m": 1.8
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:2F:B2:H1909",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:2F:B2:H1909",
+   "level": "2F",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 26.666667,
+   "provisional_kg": 3.171837,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:2F:B2:H1909|BOTTOM",
+    "POP:BEAM:2F:B2:H1909|TOP",
+    "POP:BEAM:2F:B2:H1909|STIRRUPS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "NOT_REQUIRED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1909||TEXT|0"
+    ],
+    "Ls_m": 3.2,
+    "Lc_m": 3.0
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:2F:B1:H1931",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:2F:B1:H1931",
+   "level": "2F",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 6.567901,
+   "provisional_kg": 3.456291,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:2F:B1:H1931|BOTTOM",
+    "POP:BEAM:2F:B1:H1931|TOP",
+    "POP:BEAM:2F:B1:H1931|STIRRUPS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "NOT_REQUIRED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1931||TEXT|0"
+    ],
+    "Ls_m": 1.6,
+    "Lc_m": 1.0
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:2F:B3:H1947",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:2F:B3:H1947",
+   "level": "2F",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 31.407407,
+   "provisional_kg": 4.702701,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:2F:B3:H1947|BOTTOM",
+    "POP:BEAM:2F:B3:H1947|TOP",
+    "POP:BEAM:2F:B3:H1947|STIRRUPS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "NOT_REQUIRED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1947||TEXT|0"
+    ],
+    "Ls_m": 3.35,
+    "Lc_m": 3.0
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:2F:B7:H1953",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:2F:B7:H1953",
+   "level": "2F",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 46.933895,
+   "provisional_kg": 4.798003,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:2F:B7:H1953|BOTTOM",
+    "POP:BEAM:2F:B7:H1953|TOP",
+    "POP:BEAM:2F:B7:H1953|STIRRUPS",
+    "POP:BEAM:2F:B7:H1953|SIDE_BARS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "BLOCKED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1953||TEXT|0"
+    ],
+    "Ls_m": 4.718268,
+    "Lc_m": 4.418268
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:2F:B3:H1948",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:2F:B3:H1948",
+   "level": "2F",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 28.582716,
+   "provisional_kg": 5.839986,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:2F:B3:H1948|BOTTOM",
+    "POP:BEAM:2F:B3:H1948|TOP",
+    "POP:BEAM:2F:B3:H1948|STIRRUPS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "NOT_REQUIRED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1948||TEXT|0"
+    ],
+    "Ls_m": 3.2,
+    "Lc_m": 2.7
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:2F:B1:H1932",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:2F:B1:H1932",
+   "level": "2F",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 8.197531,
+   "provisional_kg": 3.191598,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:2F:B1:H1932|BOTTOM",
+    "POP:BEAM:2F:B1:H1932|TOP",
+    "POP:BEAM:2F:B1:H1932|STIRRUPS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "NOT_REQUIRED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1932||TEXT|0"
+    ],
+    "Ls_m": 1.7,
+    "Lc_m": 1.2
+   }
+  },
+  {
+   "pop_id": "POP:BEAM:2F:B1:H1933",
+   "element_type": "BEAM",
+   "occurrence_id": "BEAM:2F:B1:H1933",
+   "level": "2F",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 11.901235,
+   "provisional_kg": 2.164929,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:BEAM:2F:B1:H1933|BOTTOM",
+    "POP:BEAM:2F:B1:H1933|TOP",
+    "POP:BEAM:2F:B1:H1933|STIRRUPS"
+   ],
+   "component_states": {
+    "PARTIAL": 3,
+    "NOT_REQUIRED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1933||TEXT|0"
+    ],
+    "Ls_m": 2.0,
+    "Lc_m": 1.8
+   }
+  },
+  {
+   "pop_id": "POP:CB:GF:CB1:H1249",
+   "element_type": "CONTINUOUS_BEAM",
+   "occurrence_id": "CB:GF:CB1:H1249",
+   "level": "GF",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": "plan centreline 13.050 m vs schedule spans 13.20 m (<= 5 %)",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 196.160494,
+   "provisional_kg": 143.692553,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:CB:GF:CB1:H1249|BOTTOM|1|2719",
+    "POP:CB:GF:CB1:H1249|BOTTOM|2|2751",
+    "POP:CB:GF:CB1:H1249|CONTINUOUS_TOP|2|2752",
+    "POP:CB:GF:CB1:H1249|SUPPORT_TOP|S1|2763",
+    "POP:CB:GF:CB1:H1249|CONTINUOUS_TOP|1|2764",
+    "POP:CB:GF:CB1:H1249|STIRRUPS|S1",
+    "POP:CB:GF:CB1:H1249|STIRRUPS|S2",
+    "POP:CB:GF:CB1:H1249|SIDE_BARS"
+   ],
+   "component_states": {
+    "PARTIAL": 4,
+    "PROVISIONAL": 3,
+    "BLOCKED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1249||TEXT|0",
+     "ALSENAN_ST7757_DXF|H1250||TEXT|0"
+    ],
+    "plan_state": "MEASURED",
+    "lengths": {
+     "PLAN_DRAWN_EXTENT": 13.0,
+     "CLEAR_FACE_TO_FACE_LENGTH": 12.1,
+     "SUPPORT_CENTRELINE_LENGTH": 13.05,
+     "SCHEDULE_SPAN_LENGTH": 13.2
+    }
+   }
+  },
+  {
+   "pop_id": "POP:CB:GF:CB3:H1171",
+   "element_type": "CONTINUOUS_BEAM",
+   "occurrence_id": "CB:GF:CB3:H1171",
+   "level": "GF",
+   "occurrence_state": "BLOCKED",
+   "occurrence_why": "REBAR_BLOCKED_OCCURRENCE_CONFLICT (BAND_TYPE_CONFLICT: None)",
+   "release_state": "BLOCKED",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 138.708942,
+   "missing_components": [
+    "POP:CB:GF:CB3:H1171|CONTINUOUS_TOP|3|203C",
+    "POP:CB:GF:CB3:H1171|BOTTOM|3|203D",
+    "POP:CB:GF:CB3:H1171|SUPPORT_TOP|S2|203E",
+    "POP:CB:GF:CB3:H1171|BOTTOM|1|2059",
+    "POP:CB:GF:CB3:H1171|CONTINUOUS_TOP|1|2196",
+    "POP:CB:GF:CB3:H1171|BOTTOM|2|219B",
+    "POP:CB:GF:CB3:H1171|SUPPORT_TOP|S1|219C",
+    "POP:CB:GF:CB3:H1171|STIRRUPS|S1",
+    "POP:CB:GF:CB3:H1171|STIRRUPS|S2",
+    "POP:CB:GF:CB3:H1171|STIRRUPS|S3",
+    "POP:CB:GF:CB3:H1171|SIDE_BARS"
+   ],
+   "component_states": {
+    "PROVISIONAL": 3,
+    "PARTIAL": 6,
+    "BLOCKED": 2
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1171||TEXT|0",
+     "ALSENAN_ST7757_DXF|H1172||TEXT|0",
+     "ALSENAN_ST7757_DXF|H1173||TEXT|0"
+    ],
+    "plan_state": "BAND_TYPE_CONFLICT",
+    "lengths": {}
+   }
+  },
+  {
+   "pop_id": "POP:CB:GF:CB4:H1116",
+   "element_type": "CONTINUOUS_BEAM",
+   "occurrence_id": "CB:GF:CB4:H1116",
+   "level": "GF",
+   "occurrence_state": "PROVISIONAL",
+   "occurrence_why": "plan length does not confirm the schedule spans (centreline None, clear 5.709877, schedule 7.00)",
+   "release_state": "PROVISIONAL",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 85.175737,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:CB:GF:CB4:H1116|BOTTOM|1|28E7",
+    "POP:CB:GF:CB4:H1116|BOTTOM|2|2906",
+    "POP:CB:GF:CB4:H1116|CONTINUOUS_TOP|2|2907",
+    "POP:CB:GF:CB4:H1116|SUPPORT_TOP|S1|290A",
+    "POP:CB:GF:CB4:H1116|CONTINUOUS_TOP|1|290B",
+    "POP:CB:GF:CB4:H1116|STIRRUPS|S1",
+    "POP:CB:GF:CB4:H1116|STIRRUPS|S2"
+   ],
+   "component_states": {
+    "PARTIAL": 4,
+    "PROVISIONAL": 3,
+    "NOT_REQUIRED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1116||TEXT|0",
+     "ALSENAN_ST7757_DXF|H1115||TEXT|0"
+    ],
+    "plan_state": "MEASURED",
+    "lengths": {
+     "PLAN_DRAWN_EXTENT": 6.274383,
+     "CLEAR_FACE_TO_FACE_LENGTH": 5.709877,
+     "SUPPORT_CENTRELINE_LENGTH": null,
+     "SCHEDULE_SPAN_LENGTH": 7.0
+    }
+   }
+  },
+  {
+   "pop_id": "POP:CB:GF:CB5:H1140",
+   "element_type": "CONTINUOUS_BEAM",
+   "occurrence_id": "CB:GF:CB5:H1140",
+   "level": "GF",
+   "occurrence_state": "BLOCKED",
+   "occurrence_why": "REBAR_BLOCKED_OCCURRENCE_CONFLICT (SPAN_COUNT_MISMATCH: 1 tag(s) / 2 span(s))",
+   "release_state": "BLOCKED",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 89.268692,
+   "missing_components": [
+    "POP:CB:GF:CB5:H1140|BOTTOM|1|2953",
+    "POP:CB:GF:CB5:H1140|BOTTOM|2|2972",
+    "POP:CB:GF:CB5:H1140|CONTINUOUS_TOP|2|2973",
+    "POP:CB:GF:CB5:H1140|SUPPORT_TOP|S1|2976",
+    "POP:CB:GF:CB5:H1140|CONTINUOUS_TOP|1|2977",
+    "POP:CB:GF:CB5:H1140|STIRRUPS|S1",
+    "POP:CB:GF:CB5:H1140|STIRRUPS|S2"
+   ],
+   "component_states": {
+    "PARTIAL": 4,
+    "PROVISIONAL": 3,
+    "NOT_REQUIRED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1140||TEXT|0"
+    ],
+    "plan_state": "SPAN_COUNT_MISMATCH",
+    "lengths": {
+     "PLAN_DRAWN_EXTENT": 3.08898,
+     "CLEAR_FACE_TO_FACE_LENGTH": 2.449774,
+     "SUPPORT_CENTRELINE_LENGTH": null,
+     "SCHEDULE_SPAN_LENGTH": 7.0
+    }
+   }
+  },
+  {
+   "pop_id": "POP:CB:GF:CB6:H1148",
+   "element_type": "CONTINUOUS_BEAM",
+   "occurrence_id": "CB:GF:CB6:H1148",
+   "level": "GF",
+   "occurrence_state": "BLOCKED",
+   "occurrence_why": "REBAR_BLOCKED_OCCURRENCE_CONFLICT (SPAN_COUNT_MISMATCH: 2 tag(s) / 2 span(s))",
+   "release_state": "BLOCKED",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 165.703829,
+   "missing_components": [
+    "POP:CB:GF:CB6:H1148|BOTTOM|1|29B5",
+    "POP:CB:GF:CB6:H1148|BOTTOM|2|29D4",
+    "POP:CB:GF:CB6:H1148|CONTINUOUS_TOP|2|29D5",
+    "POP:CB:GF:CB6:H1148|SUPPORT_TOP|S1|29D8",
+    "POP:CB:GF:CB6:H1148|CONTINUOUS_TOP|1|29D9",
+    "POP:CB:GF:CB6:H1148|STIRRUPS|S1",
+    "POP:CB:GF:CB6:H1148|STIRRUPS|S2",
+    "POP:CB:GF:CB6:H1148|SIDE_BARS"
+   ],
+   "component_states": {
+    "PARTIAL": 4,
+    "PROVISIONAL": 3,
+    "BLOCKED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1148||TEXT|0",
+     "ALSENAN_ST7757_DXF|H1147||TEXT|0"
+    ],
+    "plan_state": "SPAN_COUNT_MISMATCH",
+    "lengths": {
+     "PLAN_DRAWN_EXTENT": 10.6,
+     "CLEAR_FACE_TO_FACE_LENGTH": 10.1,
+     "SUPPORT_CENTRELINE_LENGTH": 10.575,
+     "SCHEDULE_SPAN_LENGTH": 10.7
+    }
+   }
+  },
+  {
+   "pop_id": "POP:CB:GF:CB7:H1145",
+   "element_type": "CONTINUOUS_BEAM",
+   "occurrence_id": "CB:GF:CB7:H1145",
+   "level": "GF",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": "plan centreline 12.000 m vs schedule spans 12.10 m (<= 5 %)",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 111.091358,
+   "provisional_kg": 71.9898,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:CB:GF:CB7:H1145|BOTTOM|1|2049",
+    "POP:CB:GF:CB7:H1145|BOTTOM|2|2092",
+    "POP:CB:GF:CB7:H1145|CONTINUOUS_TOP|2|2093",
+    "POP:CB:GF:CB7:H1145|SUPPORT_TOP|S1|20A4",
+    "POP:CB:GF:CB7:H1145|CONTINUOUS_TOP|1|20A5",
+    "POP:CB:GF:CB7:H1145|STIRRUPS|S1",
+    "POP:CB:GF:CB7:H1145|STIRRUPS|S2",
+    "POP:CB:GF:CB7:H1145|SIDE_BARS"
+   ],
+   "component_states": {
+    "PARTIAL": 4,
+    "PROVISIONAL": 3,
+    "BLOCKED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1145||TEXT|0",
+     "ALSENAN_ST7757_DXF|H1146||TEXT|0"
+    ],
+    "plan_state": "MEASURED",
+    "lengths": {
+     "PLAN_DRAWN_EXTENT": 11.8,
+     "CLEAR_FACE_TO_FACE_LENGTH": 11.6,
+     "SUPPORT_CENTRELINE_LENGTH": 12.0,
+     "SCHEDULE_SPAN_LENGTH": 12.1
+    }
+   }
+  },
+  {
+   "pop_id": "POP:CB:GF:CB8:H1695",
+   "element_type": "CONTINUOUS_BEAM",
+   "occurrence_id": "CB:GF:CB8:H1695",
+   "level": "GF",
+   "occurrence_state": "BLOCKED",
+   "occurrence_why": "REBAR_BLOCKED_OCCURRENCE_CONFLICT (SPAN_COUNT_MISMATCH: 2 tag(s) / 3 span(s))",
+   "release_state": "BLOCKED",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 376.101331,
+   "missing_components": [
+    "POP:CB:GF:CB8:H1695|CONTINUOUS_TOP|3|24FD",
+    "POP:CB:GF:CB8:H1695|BOTTOM|3|24FE",
+    "POP:CB:GF:CB8:H1695|SUPPORT_TOP|S2|24FF",
+    "POP:CB:GF:CB8:H1695|BOTTOM|1|2503",
+    "POP:CB:GF:CB8:H1695|SPAN_TOP|1|2514",
+    "POP:CB:GF:CB8:H1695|BOTTOM|2|2518",
+    "POP:CB:GF:CB8:H1695|CONTINUOUS_TOP|2|2519",
+    "POP:CB:GF:CB8:H1695|SUPPORT_TOP|S1|251A",
+    "POP:CB:GF:CB8:H1695|STIRRUPS|S1",
+    "POP:CB:GF:CB8:H1695|STIRRUPS|S2",
+    "POP:CB:GF:CB8:H1695|STIRRUPS|S3",
+    "POP:CB:GF:CB8:H1695|SIDE_BARS"
+   ],
+   "component_states": {
+    "PROVISIONAL": 4,
+    "PARTIAL": 6,
+    "BLOCKED": 2
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1695||TEXT|0",
+     "ALSENAN_ST7757_DXF|H1696||TEXT|0"
+    ],
+    "plan_state": "SPAN_COUNT_MISMATCH",
+    "lengths": {
+     "PLAN_DRAWN_EXTENT": 12.7326,
+     "CLEAR_FACE_TO_FACE_LENGTH": 12.995,
+     "SUPPORT_CENTRELINE_LENGTH": 13.495,
+     "SCHEDULE_SPAN_LENGTH": 16.9
+    }
+   }
+  },
+  {
+   "pop_id": "POP:CB:1F:CB9:H1734",
+   "element_type": "CONTINUOUS_BEAM",
+   "occurrence_id": "CB:1F:CB9:H1734",
+   "level": "1F",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": "plan centreline 11.820 m vs schedule spans 11.80 m (<= 5 %)",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 89.419753,
+   "provisional_kg": 72.551171,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:CB:1F:CB9:H1734|CONTINUOUS_TOP|3|25A4",
+    "POP:CB:1F:CB9:H1734|BOTTOM|3|25A5",
+    "POP:CB:1F:CB9:H1734|SUPPORT_TOP|S2|25A6",
+    "POP:CB:1F:CB9:H1734|BOTTOM|1|25AA",
+    "POP:CB:1F:CB9:H1734|CONTINUOUS_TOP|1|25BB",
+    "POP:CB:1F:CB9:H1734|BOTTOM|2|25BF",
+    "POP:CB:1F:CB9:H1734|CONTINUOUS_TOP|2|25C0",
+    "POP:CB:1F:CB9:H1734|SUPPORT_TOP|S1|25C1",
+    "POP:CB:1F:CB9:H1734|STIRRUPS|S1",
+    "POP:CB:1F:CB9:H1734|STIRRUPS|S2",
+    "POP:CB:1F:CB9:H1734|STIRRUPS|S3"
+   ],
+   "component_states": {
+    "PROVISIONAL": 5,
+    "PARTIAL": 6,
+    "NOT_REQUIRED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1734||TEXT|0",
+     "ALSENAN_ST7757_DXF|H1735||TEXT|0",
+     "ALSENAN_ST7757_DXF|H1736||TEXT|0"
+    ],
+    "plan_state": "MEASURED",
+    "lengths": {
+     "PLAN_DRAWN_EXTENT": 11.97,
+     "CLEAR_FACE_TO_FACE_LENGTH": 11.095,
+     "SUPPORT_CENTRELINE_LENGTH": 11.82,
+     "SCHEDULE_SPAN_LENGTH": 11.8
+    }
+   }
+  },
+  {
+   "pop_id": "POP:CB:1F:CB11:H1754",
+   "element_type": "CONTINUOUS_BEAM",
+   "occurrence_id": "CB:1F:CB11:H1754",
+   "level": "1F",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": "plan centreline 14.658 m vs schedule spans 14.00 m (<= 5 %)",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 199.37284,
+   "provisional_kg": 119.615578,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:CB:1F:CB11:H1754|CONTINUOUS_TOP|3|2649",
+    "POP:CB:1F:CB11:H1754|BOTTOM|3|264A",
+    "POP:CB:1F:CB11:H1754|SUPPORT_TOP|S2|264B",
+    "POP:CB:1F:CB11:H1754|BOTTOM|1|264F",
+    "POP:CB:1F:CB11:H1754|CONTINUOUS_TOP|1|2660",
+    "POP:CB:1F:CB11:H1754|BOTTOM|2|2664",
+    "POP:CB:1F:CB11:H1754|CONTINUOUS_TOP|2|2665",
+    "POP:CB:1F:CB11:H1754|SUPPORT_TOP|S1|2666",
+    "POP:CB:1F:CB11:H1754|STIRRUPS|S1",
+    "POP:CB:1F:CB11:H1754|STIRRUPS|S2",
+    "POP:CB:1F:CB11:H1754|STIRRUPS|S3",
+    "POP:CB:1F:CB11:H1754|SIDE_BARS"
+   ],
+   "component_states": {
+    "PROVISIONAL": 5,
+    "PARTIAL": 6,
+    "BLOCKED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1754||TEXT|0",
+     "ALSENAN_ST7757_DXF|H1755||TEXT|0",
+     "ALSENAN_ST7757_DXF|H1756||TEXT|0"
+    ],
+    "plan_state": "MEASURED",
+    "lengths": {
+     "PLAN_DRAWN_EXTENT": 14.32,
+     "CLEAR_FACE_TO_FACE_LENGTH": 13.958269,
+     "SUPPORT_CENTRELINE_LENGTH": 14.658269,
+     "SCHEDULE_SPAN_LENGTH": 14.0
+    }
+   }
+  },
+  {
+   "pop_id": "POP:CB:1F:CB12:H1758",
+   "element_type": "CONTINUOUS_BEAM",
+   "occurrence_id": "CB:1F:CB12:H1758",
+   "level": "1F",
+   "occurrence_state": "BLOCKED",
+   "occurrence_why": "REBAR_BLOCKED_OCCURRENCE_CONFLICT (SPAN_COUNT_MISMATCH: 1 tag(s) / 2 span(s))",
+   "release_state": "BLOCKED",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 229.520311,
+   "missing_components": [
+    "POP:CB:1F:CB12:H1758|BOTTOM|1|2410",
+    "POP:CB:1F:CB12:H1758|BOTTOM|2|242F",
+    "POP:CB:1F:CB12:H1758|CONTINUOUS_TOP|2|2430",
+    "POP:CB:1F:CB12:H1758|SUPPORT_TOP|S1|2433",
+    "POP:CB:1F:CB12:H1758|CONTINUOUS_TOP|1|2434",
+    "POP:CB:1F:CB12:H1758|STIRRUPS|S1",
+    "POP:CB:1F:CB12:H1758|STIRRUPS|S2",
+    "POP:CB:1F:CB12:H1758|SIDE_BARS"
+   ],
+   "component_states": {
+    "PARTIAL": 4,
+    "PROVISIONAL": 3,
+    "BLOCKED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1758||TEXT|0"
+    ],
+    "plan_state": "SPAN_COUNT_MISMATCH",
+    "lengths": {
+     "PLAN_DRAWN_EXTENT": 5.925,
+     "CLEAR_FACE_TO_FACE_LENGTH": 5.275,
+     "SUPPORT_CENTRELINE_LENGTH": null,
+     "SCHEDULE_SPAN_LENGTH": 11.6
+    }
+   }
+  },
+  {
+   "pop_id": "POP:CB:1F:CB13:H1898",
+   "element_type": "CONTINUOUS_BEAM",
+   "occurrence_id": "CB:1F:CB13:H1898",
+   "level": "1F",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": "plan centreline 7.175 m vs schedule spans 7.30 m (<= 5 %)",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 79.116049,
+   "provisional_kg": 60.668825,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:CB:1F:CB13:H1898|BOTTOM|1|2489",
+    "POP:CB:1F:CB13:H1898|BOTTOM|2|24A8",
+    "POP:CB:1F:CB13:H1898|CONTINUOUS_TOP|2|24A9",
+    "POP:CB:1F:CB13:H1898|SUPPORT_TOP|S1|24AC",
+    "POP:CB:1F:CB13:H1898|CONTINUOUS_TOP|1|24AD",
+    "POP:CB:1F:CB13:H1898|STIRRUPS|S1",
+    "POP:CB:1F:CB13:H1898|STIRRUPS|S2"
+   ],
+   "component_states": {
+    "PARTIAL": 4,
+    "PROVISIONAL": 3,
+    "NOT_REQUIRED": 1
+   },
+   "source": {
+    "plan_tags": [
+     "ALSENAN_ST7757_DXF|H1898||TEXT|0",
+     "ALSENAN_ST7757_DXF|H1899||TEXT|0"
+    ],
+    "plan_state": "MEASURED",
+    "lengths": {
+     "PLAN_DRAWN_EXTENT": 6.85,
+     "CLEAR_FACE_TO_FACE_LENGTH": 6.15,
+     "SUPPORT_CENTRELINE_LENGTH": 7.175,
+     "SCHEDULE_SPAN_LENGTH": 7.3
+    }
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:GF:C:H2125",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:GF:C:H2125",
+   "level": "GF",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 67.792593,
+   "provisional_kg": 2.334796,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:COLUMN:GF:C:H2125|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H2125||TEXT|0",
+    "state": "PROVEN",
+    "volume_m3": 0.375
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:GF:C:H4100",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:GF:C:H4100",
+   "level": "GF",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 68.740741,
+   "provisional_kg": 2.489856,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:COLUMN:GF:C:H4100|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4100||TEXT|0",
+    "state": "PROVEN",
+    "volume_m3": 0.41
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:GF:C3:H4102",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:GF:C3:H4102",
+   "level": "GF",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 68.701235,
+   "provisional_kg": 2.374302,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:COLUMN:GF:C3:H4102|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4102||TEXT|0",
+    "state": "PROVEN",
+    "volume_m3": 0.46875
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:GF:C:H4104",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:GF:C:H4104",
+   "level": "GF",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 67.792593,
+   "provisional_kg": 2.334796,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:COLUMN:GF:C:H4104|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4104||TEXT|0",
+    "state": "PROVEN",
+    "volume_m3": 0.375
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:GF:C3:H4106",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:GF:C3:H4106",
+   "level": "GF",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 68.701235,
+   "provisional_kg": 2.374302,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:COLUMN:GF:C3:H4106|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4106||TEXT|0",
+    "state": "PROVEN",
+    "volume_m3": 0.46875
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:GF:C:H4108",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:GF:C:H4108",
+   "level": "GF",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 69.688889,
+   "provisional_kg": 2.644916,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:COLUMN:GF:C:H4108|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4108||TEXT|0",
+    "state": "SLAB_SOFFIT",
+    "volume_m3": 0.434
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:GF:C3:H4110",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:GF:C3:H4110",
+   "level": "GF",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 69.214815,
+   "provisional_kg": 2.451832,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:COLUMN:GF:C3:H4110|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4110||TEXT|0",
+    "state": "PROVEN",
+    "volume_m3": 0.5
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:GF:C5:H4112",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:GF:C5:H4112",
+   "level": "GF",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 84.740741,
+   "provisional_kg": 2.453314,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:COLUMN:GF:C5:H4112|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4112||TEXT|0",
+    "state": "PROVEN",
+    "volume_m3": 0.5625
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:GF:C11:H4114",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:GF:C11:H4114",
+   "level": "GF",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 121.283951,
+   "provisional_kg": 2.770846,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:COLUMN:GF:C11:H4114|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4114||TEXT|0",
+    "state": "PROVEN",
+    "volume_m3": 1.00375
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:GF:C6:H4116",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:GF:C6:H4116",
+   "level": "GF",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 86.558025,
+   "provisional_kg": 2.532327,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:COLUMN:GF:C6:H4116|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4116||TEXT|0",
+    "state": "PROVEN",
+    "volume_m3": 0.65625
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:GF:C11:H4118",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:GF:C11:H4118",
+   "level": "GF",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 121.283951,
+   "provisional_kg": 2.770846,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:COLUMN:GF:C11:H4118|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4118||TEXT|0",
+    "state": "PROVEN",
+    "volume_m3": 1.00375
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:GF:C3:H4120",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:GF:C3:H4120",
+   "level": "GF",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 68.701235,
+   "provisional_kg": 2.374302,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:COLUMN:GF:C3:H4120|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4120||TEXT|0",
+    "state": "PROVEN",
+    "volume_m3": 0.46875
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:GF:C8:H4122",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:GF:C8:H4122",
+   "level": "GF",
+   "occurrence_state": "BLOCKED",
+   "occurrence_why": "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED (BLOCKED_UPPER_MEMBER_UNBOUND)",
+   "release_state": "BLOCKED",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 110.733805,
+   "missing_components": [
+    "POP:COLUMN:GF:C8:H4122|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4122||TEXT|0",
+    "state": "BLOCKED_UPPER_MEMBER_UNBOUND",
+    "volume_m3": null
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:GF:C5:H4124",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:GF:C5:H4124",
+   "level": "GF",
+   "occurrence_state": "BLOCKED",
+   "occurrence_why": "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED (BLOCKED_UPPER_MEMBER_UNBOUND)",
+   "release_state": "BLOCKED",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 89.874546,
+   "missing_components": [
+    "POP:COLUMN:GF:C5:H4124|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4124||TEXT|0",
+    "state": "BLOCKED_UPPER_MEMBER_UNBOUND",
+    "volume_m3": null
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:GF:C10:H4185",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:GF:C10:H4185",
+   "level": "GF",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 85.88642,
+   "provisional_kg": 2.454797,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:COLUMN:GF:C10:H4185|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4185||TEXT|0",
+    "state": "PROVEN",
+    "volume_m3": 0.63875
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:GF:C:H4187",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:GF:C:H4187",
+   "level": "GF",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 67.792593,
+   "provisional_kg": 2.334796,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:COLUMN:GF:C:H4187|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4187||TEXT|0",
+    "state": "PROVEN",
+    "volume_m3": 0.375
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:GF:C7:H4189",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:GF:C7:H4189",
+   "level": "GF",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 102.597531,
+   "provisional_kg": 2.611339,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:COLUMN:GF:C7:H4189|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4189||TEXT|0",
+    "state": "PROVEN",
+    "volume_m3": 0.75
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:GF:C3:H4191",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:GF:C3:H4191",
+   "level": "GF",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 69.728395,
+   "provisional_kg": 2.529362,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:COLUMN:GF:C3:H4191|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4191||TEXT|0",
+    "state": "PROVEN",
+    "volume_m3": 0.5125
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:GF:C2:H4193",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:GF:C2:H4193",
+   "level": "GF",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 68.740741,
+   "provisional_kg": 2.489856,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:COLUMN:GF:C2:H4193|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4193||TEXT|0",
+    "state": "PROVEN",
+    "volume_m3": 0.41
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:GF:C2:H4195",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:GF:C2:H4195",
+   "level": "GF",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 68.740741,
+   "provisional_kg": 2.489856,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:COLUMN:GF:C2:H4195|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4195||TEXT|0",
+    "state": "PROVEN",
+    "volume_m3": 0.41
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:GF:C4:H4197",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:GF:C4:H4197",
+   "level": "GF",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 68.701235,
+   "provisional_kg": 2.374302,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:COLUMN:GF:C4:H4197|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4197||TEXT|0",
+    "state": "PROVEN",
+    "volume_m3": 0.46875
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:GF:C4:H4199",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:GF:C4:H4199",
+   "level": "GF",
+   "occurrence_state": "BLOCKED",
+   "occurrence_why": "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED (BLOCKED_TAG_NOT_BOUND)",
+   "release_state": "BLOCKED",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 73.439978,
+   "missing_components": [
+    "POP:COLUMN:GF:C4:H4199|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4199||TEXT|0",
+    "state": "BLOCKED_TAG_NOT_BOUND",
+    "volume_m3": null
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:GF:C5:H4201",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:GF:C5:H4201",
+   "level": "GF",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 84.740741,
+   "provisional_kg": 2.453314,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:COLUMN:GF:C5:H4201|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4201||TEXT|0",
+    "state": "PROVEN",
+    "volume_m3": 0.5625
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:GF:C9:H4203",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:GF:C9:H4203",
+   "level": "GF",
+   "occurrence_state": "BLOCKED",
+   "occurrence_why": "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED (BLOCKED_SEVERAL_OUTLINES_ON_STOREY_SHEET)",
+   "release_state": "BLOCKED",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 127.168373,
+   "missing_components": [
+    "POP:COLUMN:GF:C9:H4203|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4203||TEXT|0",
+    "state": "BLOCKED_SEVERAL_OUTLINES_ON_STOREY_SHEET",
+    "volume_m3": null
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:GF:C8:H4205",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:GF:C8:H4205",
+   "level": "GF",
+   "occurrence_state": "BLOCKED",
+   "occurrence_why": "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED (BLOCKED_SEVERAL_OUTLINES_ON_STOREY_SHEET)",
+   "release_state": "BLOCKED",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 110.733805,
+   "missing_components": [
+    "POP:COLUMN:GF:C8:H4205|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4205||TEXT|0",
+    "state": "BLOCKED_SEVERAL_OUTLINES_ON_STOREY_SHEET",
+    "volume_m3": null
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:GF:C3:H4207",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:GF:C3:H4207",
+   "level": "GF",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 68.701235,
+   "provisional_kg": 2.374302,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:COLUMN:GF:C3:H4207|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4207||TEXT|0",
+    "state": "PROVEN",
+    "volume_m3": 0.46875
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:GF:CN:H4209",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:GF:CN:H4209",
+   "level": "GF",
+   "occurrence_state": "NOT_REQUIRED",
+   "occurrence_why": "NOT_IN_STOREY",
+   "release_state": "NOT_IN_SCOPE",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [],
+   "component_states": {
+    "NOT_REQUIRED": 1
+   },
+   "source": {}
+  },
+  {
+   "pop_id": "POP:COLUMN:GF:CN:H4211",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:GF:CN:H4211",
+   "level": "GF",
+   "occurrence_state": "NOT_REQUIRED",
+   "occurrence_why": "NOT_IN_STOREY",
+   "release_state": "NOT_IN_SCOPE",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [],
+   "component_states": {
+    "NOT_REQUIRED": 1
+   },
+   "source": {}
+  },
+  {
+   "pop_id": "POP:COLUMN:GF:C9:H4213",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:GF:C9:H4213",
+   "level": "GF",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 120.454321,
+   "provisional_kg": 2.769364,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:COLUMN:GF:C9:H4213|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4213||TEXT|0",
+    "state": "PROVEN",
+    "volume_m3": 0.9375
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:GF:C2:H4215",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:GF:C2:H4215",
+   "level": "GF",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 68.740741,
+   "provisional_kg": 2.489856,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:COLUMN:GF:C2:H4215|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4215||TEXT|0",
+    "state": "PROVEN",
+    "volume_m3": 0.41
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:GF:C1:H4217",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:GF:C1:H4217",
+   "level": "GF",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 67.792593,
+   "provisional_kg": 2.334796,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:COLUMN:GF:C1:H4217|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4217||TEXT|0",
+    "state": "PROVEN",
+    "volume_m3": 0.375
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:GF:C2:H4219",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:GF:C2:H4219",
+   "level": "GF",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 67.792593,
+   "provisional_kg": 2.334796,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:COLUMN:GF:C2:H4219|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4219||TEXT|0",
+    "state": "PROVEN",
+    "volume_m3": 0.375
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:GF:CN:H6070",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:GF:CN:H6070",
+   "level": "GF",
+   "occurrence_state": "NOT_REQUIRED",
+   "occurrence_why": "NOT_IN_STOREY",
+   "release_state": "NOT_IN_SCOPE",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [],
+   "component_states": {
+    "NOT_REQUIRED": 1
+   },
+   "source": {}
+  },
+  {
+   "pop_id": "POP:COLUMN:GF:CN:H6096",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:GF:CN:H6096",
+   "level": "GF",
+   "occurrence_state": "NOT_REQUIRED",
+   "occurrence_why": "NOT_IN_STOREY",
+   "release_state": "NOT_IN_SCOPE",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [],
+   "component_states": {
+    "NOT_REQUIRED": 1
+   },
+   "source": {}
+  },
+  {
+   "pop_id": "POP:COLUMN:GF:CN:H6098",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:GF:CN:H6098",
+   "level": "GF",
+   "occurrence_state": "NOT_REQUIRED",
+   "occurrence_why": "NOT_IN_STOREY",
+   "release_state": "NOT_IN_SCOPE",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [],
+   "component_states": {
+    "NOT_REQUIRED": 1
+   },
+   "source": {}
+  },
+  {
+   "pop_id": "POP:COLUMN:1F:C:H2125",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:1F:C:H2125",
+   "level": "1F",
+   "occurrence_state": "NOT_REQUIRED",
+   "occurrence_why": "NOT_IN_STOREY",
+   "release_state": "NOT_IN_SCOPE",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [],
+   "component_states": {
+    "NOT_REQUIRED": 1
+   },
+   "source": {}
+  },
+  {
+   "pop_id": "POP:COLUMN:1F:C:H4100",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:1F:C:H4100",
+   "level": "1F",
+   "occurrence_state": "NOT_REQUIRED",
+   "occurrence_why": "NOT_IN_STOREY",
+   "release_state": "NOT_IN_SCOPE",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [],
+   "component_states": {
+    "NOT_REQUIRED": 1
+   },
+   "source": {}
+  },
+  {
+   "pop_id": "POP:COLUMN:1F:C3:H4102",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:1F:C3:H4102",
+   "level": "1F",
+   "occurrence_state": "BLOCKED",
+   "occurrence_why": "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED (NOT_DRAWN_ON_STOREY_SHEET)",
+   "release_state": "BLOCKED",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 54.715534,
+   "missing_components": [
+    "POP:COLUMN:1F:C3:H4102|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4102||TEXT|0",
+    "state": "NOT_DRAWN_ON_STOREY_SHEET",
+    "volume_m3": null
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:1F:C:H4104",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:1F:C:H4104",
+   "level": "1F",
+   "occurrence_state": "NOT_REQUIRED",
+   "occurrence_why": "NOT_IN_STOREY",
+   "release_state": "NOT_IN_SCOPE",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [],
+   "component_states": {
+    "NOT_REQUIRED": 1
+   },
+   "source": {}
+  },
+  {
+   "pop_id": "POP:COLUMN:1F:C3:H4106",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:1F:C3:H4106",
+   "level": "1F",
+   "occurrence_state": "BLOCKED",
+   "occurrence_why": "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED (NOT_DRAWN_ON_STOREY_SHEET)",
+   "release_state": "BLOCKED",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 54.715534,
+   "missing_components": [
+    "POP:COLUMN:1F:C3:H4106|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4106||TEXT|0",
+    "state": "NOT_DRAWN_ON_STOREY_SHEET",
+    "volume_m3": null
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:1F:C:H4108",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:1F:C:H4108",
+   "level": "1F",
+   "occurrence_state": "NOT_REQUIRED",
+   "occurrence_why": "NOT_IN_STOREY",
+   "release_state": "NOT_IN_SCOPE",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [],
+   "component_states": {
+    "NOT_REQUIRED": 1
+   },
+   "source": {}
+  },
+  {
+   "pop_id": "POP:COLUMN:1F:C3:H4110",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:1F:C3:H4110",
+   "level": "1F",
+   "occurrence_state": "BLOCKED",
+   "occurrence_why": "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED (BLOCKED_UPPER_MEMBER_UNBOUND)",
+   "release_state": "BLOCKED",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 54.715534,
+   "missing_components": [
+    "POP:COLUMN:1F:C3:H4110|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4110||TEXT|0",
+    "state": "BLOCKED_UPPER_MEMBER_UNBOUND",
+    "volume_m3": null
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:1F:C5:H4112",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:1F:C5:H4112",
+   "level": "1F",
+   "occurrence_state": "BLOCKED",
+   "occurrence_why": "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED (BLOCKED_UPPER_MEMBER_UNBOUND)",
+   "release_state": "BLOCKED",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 67.989608,
+   "missing_components": [
+    "POP:COLUMN:1F:C5:H4112|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4112||TEXT|0",
+    "state": "BLOCKED_UPPER_MEMBER_UNBOUND",
+    "volume_m3": null
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:1F:C11:H4114",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:1F:C11:H4114",
+   "level": "1F",
+   "occurrence_state": "NOT_REQUIRED",
+   "occurrence_why": "NOT_IN_STOREY",
+   "release_state": "NOT_IN_SCOPE",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [],
+   "component_states": {
+    "NOT_REQUIRED": 1
+   },
+   "source": {}
+  },
+  {
+   "pop_id": "POP:COLUMN:1F:C6:H4116",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:1F:C6:H4116",
+   "level": "1F",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 65.817284,
+   "provisional_kg": 2.413808,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:COLUMN:1F:C6:H4116|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4116||TEXT|0",
+    "state": "PROVEN",
+    "volume_m3": 0.444
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:1F:C11:H4118",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:1F:C11:H4118",
+   "level": "1F",
+   "occurrence_state": "NOT_REQUIRED",
+   "occurrence_why": "NOT_IN_STOREY",
+   "release_state": "NOT_IN_SCOPE",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [],
+   "component_states": {
+    "NOT_REQUIRED": 1
+   },
+   "source": {}
+  },
+  {
+   "pop_id": "POP:COLUMN:1F:C3:H4120",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:1F:C3:H4120",
+   "level": "1F",
+   "occurrence_state": "BLOCKED",
+   "occurrence_why": "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED (NOT_DRAWN_ON_STOREY_SHEET)",
+   "release_state": "BLOCKED",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 54.715534,
+   "missing_components": [
+    "POP:COLUMN:1F:C3:H4120|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4120||TEXT|0",
+    "state": "NOT_DRAWN_ON_STOREY_SHEET",
+    "volume_m3": null
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:1F:C8:H4122",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:1F:C8:H4122",
+   "level": "1F",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 96.237037,
+   "provisional_kg": 2.495785,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:COLUMN:1F:C8:H4122|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4122||TEXT|0",
+    "state": "PROVEN",
+    "volume_m3": 0.621
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:1F:C5:H4124",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:1F:C5:H4124",
+   "level": "1F",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 63.051852,
+   "provisional_kg": 2.179736,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:COLUMN:1F:C5:H4124|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4124||TEXT|0",
+    "state": "PROVEN",
+    "volume_m3": 0.345
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:1F:C10:H4185",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:1F:C10:H4185",
+   "level": "1F",
+   "occurrence_state": "NOT_REQUIRED",
+   "occurrence_why": "NOT_IN_STOREY",
+   "release_state": "NOT_IN_SCOPE",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [],
+   "component_states": {
+    "NOT_REQUIRED": 1
+   },
+   "source": {}
+  },
+  {
+   "pop_id": "POP:COLUMN:1F:C:H4187",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:1F:C:H4187",
+   "level": "1F",
+   "occurrence_state": "NOT_REQUIRED",
+   "occurrence_why": "NOT_IN_STOREY",
+   "release_state": "NOT_IN_SCOPE",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [],
+   "component_states": {
+    "NOT_REQUIRED": 1
+   },
+   "source": {}
+  },
+  {
+   "pop_id": "POP:COLUMN:1F:C7:H4189",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:1F:C7:H4189",
+   "level": "1F",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 81.303704,
+   "provisional_kg": 2.416773,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:COLUMN:1F:C7:H4189|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4189||TEXT|0",
+    "state": "PROVEN",
+    "volume_m3": 0.552
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:1F:C3:H4191",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:1F:C3:H4191",
+   "level": "1F",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 50.725926,
+   "provisional_kg": 2.334796,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:COLUMN:1F:C3:H4191|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4191||TEXT|0",
+    "state": "PROVEN",
+    "volume_m3": 0.38
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:1F:C2:H4193",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:1F:C2:H4193",
+   "level": "1F",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 64.0,
+   "provisional_kg": 2.334796,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:COLUMN:1F:C2:H4193|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4193||TEXT|0",
+    "state": "PROVEN",
+    "volume_m3": 0.37
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:1F:C2:H4195",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:1F:C2:H4195",
+   "level": "1F",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 64.0,
+   "provisional_kg": 2.334796,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:COLUMN:1F:C2:H4195|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4195||TEXT|0",
+    "state": "PROVEN",
+    "volume_m3": 0.37
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:1F:C4:H4197",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:1F:C4:H4197",
+   "level": "1F",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 64.0,
+   "provisional_kg": 2.334796,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:COLUMN:1F:C4:H4197|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4197||TEXT|0",
+    "state": "PROVEN",
+    "volume_m3": 0.37
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:1F:C4:H4199",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:1F:C4:H4199",
+   "level": "1F",
+   "occurrence_state": "BLOCKED",
+   "occurrence_why": "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED (BLOCKED_TAG_NOT_BOUND)",
+   "release_state": "BLOCKED",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 67.989608,
+   "missing_components": [
+    "POP:COLUMN:1F:C4:H4199|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4199||TEXT|0",
+    "state": "BLOCKED_TAG_NOT_BOUND",
+    "volume_m3": null
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:1F:C5:H4201",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:1F:C5:H4201",
+   "level": "1F",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 64.0,
+   "provisional_kg": 2.334796,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:COLUMN:1F:C5:H4201|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4201||TEXT|0",
+    "state": "PROVEN",
+    "volume_m3": 0.37
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:1F:C9:H4203",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:1F:C9:H4203",
+   "level": "1F",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 96.237037,
+   "provisional_kg": 2.495785,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:COLUMN:1F:C9:H4203|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4203||TEXT|0",
+    "state": "PROVEN",
+    "volume_m3": 0.621
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:1F:C8:H4205",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:1F:C8:H4205",
+   "level": "1F",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 96.237037,
+   "provisional_kg": 2.495785,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:COLUMN:1F:C8:H4205|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4205||TEXT|0",
+    "state": "PROVEN_UNBOUND_DOMINATED",
+    "volume_m3": 0.621
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:1F:C3:H4207",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:1F:C3:H4207",
+   "level": "1F",
+   "occurrence_state": "BLOCKED",
+   "occurrence_why": "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED (NOT_DRAWN_ON_STOREY_SHEET)",
+   "release_state": "BLOCKED",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 54.715534,
+   "missing_components": [
+    "POP:COLUMN:1F:C3:H4207|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4207||TEXT|0",
+    "state": "NOT_DRAWN_ON_STOREY_SHEET",
+    "volume_m3": null
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:1F:CN:H4209",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:1F:CN:H4209",
+   "level": "1F",
+   "occurrence_state": "NOT_REQUIRED",
+   "occurrence_why": "NOT_IN_STOREY",
+   "release_state": "NOT_IN_SCOPE",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [],
+   "component_states": {
+    "NOT_REQUIRED": 1
+   },
+   "source": {}
+  },
+  {
+   "pop_id": "POP:COLUMN:1F:CN:H4211",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:1F:CN:H4211",
+   "level": "1F",
+   "occurrence_state": "NOT_REQUIRED",
+   "occurrence_why": "NOT_IN_STOREY",
+   "release_state": "NOT_IN_SCOPE",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [],
+   "component_states": {
+    "NOT_REQUIRED": 1
+   },
+   "source": {}
+  },
+  {
+   "pop_id": "POP:COLUMN:1F:C9:H4213",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:1F:C9:H4213",
+   "level": "1F",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 96.237037,
+   "provisional_kg": 2.495785,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:COLUMN:1F:C9:H4213|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4213||TEXT|0",
+    "state": "PROVEN",
+    "volume_m3": 0.621
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:1F:C2:H4215",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:1F:C2:H4215",
+   "level": "1F",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 64.0,
+   "provisional_kg": 2.334796,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:COLUMN:1F:C2:H4215|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4215||TEXT|0",
+    "state": "PROVEN",
+    "volume_m3": 0.38
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:1F:C1:H4217",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:1F:C1:H4217",
+   "level": "1F",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 49.777778,
+   "provisional_kg": 2.179736,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:COLUMN:1F:C1:H4217|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4217||TEXT|0",
+    "state": "PROVEN",
+    "volume_m3": 0.345
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:1F:C2:H4219",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:1F:C2:H4219",
+   "level": "1F",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 63.051852,
+   "provisional_kg": 2.179736,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:COLUMN:1F:C2:H4219|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4219||TEXT|0",
+    "state": "PROVEN",
+    "volume_m3": 0.345
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:1F:CN:H6070",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:1F:CN:H6070",
+   "level": "1F",
+   "occurrence_state": "NOT_REQUIRED",
+   "occurrence_why": "NOT_IN_STOREY",
+   "release_state": "NOT_IN_SCOPE",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [],
+   "component_states": {
+    "NOT_REQUIRED": 1
+   },
+   "source": {}
+  },
+  {
+   "pop_id": "POP:COLUMN:1F:CN:H6096",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:1F:CN:H6096",
+   "level": "1F",
+   "occurrence_state": "NOT_REQUIRED",
+   "occurrence_why": "NOT_IN_STOREY",
+   "release_state": "NOT_IN_SCOPE",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [],
+   "component_states": {
+    "NOT_REQUIRED": 1
+   },
+   "source": {}
+  },
+  {
+   "pop_id": "POP:COLUMN:1F:CN:H6098",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:1F:CN:H6098",
+   "level": "1F",
+   "occurrence_state": "NOT_REQUIRED",
+   "occurrence_why": "NOT_IN_STOREY",
+   "release_state": "NOT_IN_SCOPE",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [],
+   "component_states": {
+    "NOT_REQUIRED": 1
+   },
+   "source": {}
+  },
+  {
+   "pop_id": "POP:COLUMN:2F:C:H2125",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:2F:C:H2125",
+   "level": "2F",
+   "occurrence_state": "NOT_REQUIRED",
+   "occurrence_why": "NOT_IN_STOREY",
+   "release_state": "NOT_IN_SCOPE",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [],
+   "component_states": {
+    "NOT_REQUIRED": 1
+   },
+   "source": {}
+  },
+  {
+   "pop_id": "POP:COLUMN:2F:C:H4100",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:2F:C:H4100",
+   "level": "2F",
+   "occurrence_state": "NOT_REQUIRED",
+   "occurrence_why": "NOT_IN_STOREY",
+   "release_state": "NOT_IN_SCOPE",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [],
+   "component_states": {
+    "NOT_REQUIRED": 1
+   },
+   "source": {}
+  },
+  {
+   "pop_id": "POP:COLUMN:2F:C3:H4102",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:2F:C3:H4102",
+   "level": "2F",
+   "occurrence_state": "BLOCKED",
+   "occurrence_why": "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED (NOT_DRAWN_ON_STOREY_SHEET)",
+   "release_state": "BLOCKED",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 54.715534,
+   "missing_components": [
+    "POP:COLUMN:2F:C3:H4102|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4102||TEXT|0",
+    "state": "NOT_DRAWN_ON_STOREY_SHEET",
+    "volume_m3": null
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:2F:C:H4104",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:2F:C:H4104",
+   "level": "2F",
+   "occurrence_state": "NOT_REQUIRED",
+   "occurrence_why": "NOT_IN_STOREY",
+   "release_state": "NOT_IN_SCOPE",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [],
+   "component_states": {
+    "NOT_REQUIRED": 1
+   },
+   "source": {}
+  },
+  {
+   "pop_id": "POP:COLUMN:2F:C3:H4106",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:2F:C3:H4106",
+   "level": "2F",
+   "occurrence_state": "BLOCKED",
+   "occurrence_why": "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED (NOT_DRAWN_ON_STOREY_SHEET)",
+   "release_state": "BLOCKED",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 54.715534,
+   "missing_components": [
+    "POP:COLUMN:2F:C3:H4106|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4106||TEXT|0",
+    "state": "NOT_DRAWN_ON_STOREY_SHEET",
+    "volume_m3": null
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:2F:C:H4108",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:2F:C:H4108",
+   "level": "2F",
+   "occurrence_state": "NOT_REQUIRED",
+   "occurrence_why": "NOT_IN_STOREY",
+   "release_state": "NOT_IN_SCOPE",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [],
+   "component_states": {
+    "NOT_REQUIRED": 1
+   },
+   "source": {}
+  },
+  {
+   "pop_id": "POP:COLUMN:2F:C3:H4110",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:2F:C3:H4110",
+   "level": "2F",
+   "occurrence_state": "BLOCKED",
+   "occurrence_why": "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED (NOT_DRAWN_ON_STOREY_SHEET)",
+   "release_state": "BLOCKED",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 54.715534,
+   "missing_components": [
+    "POP:COLUMN:2F:C3:H4110|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4110||TEXT|0",
+    "state": "NOT_DRAWN_ON_STOREY_SHEET",
+    "volume_m3": null
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:2F:C5:H4112",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:2F:C5:H4112",
+   "level": "2F",
+   "occurrence_state": "BLOCKED",
+   "occurrence_why": "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED (NOT_DRAWN_ON_STOREY_SHEET)",
+   "release_state": "BLOCKED",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 54.715534,
+   "missing_components": [
+    "POP:COLUMN:2F:C5:H4112|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4112||TEXT|0",
+    "state": "NOT_DRAWN_ON_STOREY_SHEET",
+    "volume_m3": null
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:2F:C11:H4114",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:2F:C11:H4114",
+   "level": "2F",
+   "occurrence_state": "NOT_REQUIRED",
+   "occurrence_why": "NOT_IN_STOREY",
+   "release_state": "NOT_IN_SCOPE",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [],
+   "component_states": {
+    "NOT_REQUIRED": 1
+   },
+   "source": {}
+  },
+  {
+   "pop_id": "POP:COLUMN:2F:C6:H4116",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:2F:C6:H4116",
+   "level": "2F",
+   "occurrence_state": "BLOCKED",
+   "occurrence_why": "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED (NOT_DRAWN_ON_STOREY_SHEET)",
+   "release_state": "BLOCKED",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 67.989608,
+   "missing_components": [
+    "POP:COLUMN:2F:C6:H4116|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4116||TEXT|0",
+    "state": "NOT_DRAWN_ON_STOREY_SHEET",
+    "volume_m3": null
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:2F:C11:H4118",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:2F:C11:H4118",
+   "level": "2F",
+   "occurrence_state": "NOT_REQUIRED",
+   "occurrence_why": "NOT_IN_STOREY",
+   "release_state": "NOT_IN_SCOPE",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [],
+   "component_states": {
+    "NOT_REQUIRED": 1
+   },
+   "source": {}
+  },
+  {
+   "pop_id": "POP:COLUMN:2F:C3:H4120",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:2F:C3:H4120",
+   "level": "2F",
+   "occurrence_state": "BLOCKED",
+   "occurrence_why": "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED (NOT_DRAWN_ON_STOREY_SHEET)",
+   "release_state": "BLOCKED",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 54.715534,
+   "missing_components": [
+    "POP:COLUMN:2F:C3:H4120|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4120||TEXT|0",
+    "state": "NOT_DRAWN_ON_STOREY_SHEET",
+    "volume_m3": null
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:2F:C8:H4122",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:2F:C8:H4122",
+   "level": "2F",
+   "occurrence_state": "BLOCKED",
+   "occurrence_why": "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED (NOT_DRAWN_ON_STOREY_SHEET)",
+   "release_state": "BLOCKED",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 85.530349,
+   "missing_components": [
+    "POP:COLUMN:2F:C8:H4122|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4122||TEXT|0",
+    "state": "NOT_DRAWN_ON_STOREY_SHEET",
+    "volume_m3": null
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:2F:C5:H4124",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:2F:C5:H4124",
+   "level": "2F",
+   "occurrence_state": "BLOCKED",
+   "occurrence_why": "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED (NOT_DRAWN_ON_STOREY_SHEET)",
+   "release_state": "BLOCKED",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 54.715534,
+   "missing_components": [
+    "POP:COLUMN:2F:C5:H4124|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4124||TEXT|0",
+    "state": "NOT_DRAWN_ON_STOREY_SHEET",
+    "volume_m3": null
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:2F:C10:H4185",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:2F:C10:H4185",
+   "level": "2F",
+   "occurrence_state": "NOT_REQUIRED",
+   "occurrence_why": "NOT_IN_STOREY",
+   "release_state": "NOT_IN_SCOPE",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [],
+   "component_states": {
+    "NOT_REQUIRED": 1
+   },
+   "source": {}
+  },
+  {
+   "pop_id": "POP:COLUMN:2F:C:H4187",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:2F:C:H4187",
+   "level": "2F",
+   "occurrence_state": "NOT_REQUIRED",
+   "occurrence_why": "NOT_IN_STOREY",
+   "release_state": "NOT_IN_SCOPE",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [],
+   "component_states": {
+    "NOT_REQUIRED": 1
+   },
+   "source": {}
+  },
+  {
+   "pop_id": "POP:COLUMN:2F:C7:H4189",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:2F:C7:H4189",
+   "level": "2F",
+   "occurrence_state": "BLOCKED",
+   "occurrence_why": "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED (NOT_DRAWN_ON_STOREY_SHEET)",
+   "release_state": "BLOCKED",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 70.122942,
+   "missing_components": [
+    "POP:COLUMN:2F:C7:H4189|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4189||TEXT|0",
+    "state": "NOT_DRAWN_ON_STOREY_SHEET",
+    "volume_m3": null
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:2F:C3:H4191",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:2F:C3:H4191",
+   "level": "2F",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 48.355556,
+   "provisional_kg": 1.947145,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:COLUMN:2F:C3:H4191|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4191||TEXT|0",
+    "state": "PROVEN",
+    "volume_m3": 0.3
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:2F:C2:H4193",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:2F:C2:H4193",
+   "level": "2F",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 48.355556,
+   "provisional_kg": 1.947145,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:COLUMN:2F:C2:H4193|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4193||TEXT|0",
+    "state": "PROVEN",
+    "volume_m3": 0.3
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:2F:C2:H4195",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:2F:C2:H4195",
+   "level": "2F",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 49.777778,
+   "provisional_kg": 2.179736,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:COLUMN:2F:C2:H4195|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4195||TEXT|0",
+    "state": "PROVEN",
+    "volume_m3": 0.345
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:2F:C4:H4197",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:2F:C4:H4197",
+   "level": "2F",
+   "occurrence_state": "BLOCKED",
+   "occurrence_why": "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED (NOT_DRAWN_ON_STOREY_SHEET)",
+   "release_state": "BLOCKED",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 54.715534,
+   "missing_components": [
+    "POP:COLUMN:2F:C4:H4197|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4197||TEXT|0",
+    "state": "NOT_DRAWN_ON_STOREY_SHEET",
+    "volume_m3": null
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:2F:C4:H4199",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:2F:C4:H4199",
+   "level": "2F",
+   "occurrence_state": "BLOCKED",
+   "occurrence_why": "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED (BLOCKED_TAG_NOT_BOUND)",
+   "release_state": "BLOCKED",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 54.715534,
+   "missing_components": [
+    "POP:COLUMN:2F:C4:H4199|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4199||TEXT|0",
+    "state": "BLOCKED_TAG_NOT_BOUND",
+    "volume_m3": null
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:2F:C5:H4201",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:2F:C5:H4201",
+   "level": "2F",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 49.777778,
+   "provisional_kg": 2.179736,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:COLUMN:2F:C5:H4201|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4201||TEXT|0",
+    "state": "PROVEN",
+    "volume_m3": 0.345
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:2F:C9:H4203",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:2F:C9:H4203",
+   "level": "2F",
+   "occurrence_state": "BLOCKED",
+   "occurrence_why": "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED (NOT_DRAWN_ON_STOREY_SHEET)",
+   "release_state": "BLOCKED",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 85.530349,
+   "missing_components": [
+    "POP:COLUMN:2F:C9:H4203|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4203||TEXT|0",
+    "state": "NOT_DRAWN_ON_STOREY_SHEET",
+    "volume_m3": null
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:2F:C8:H4205",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:2F:C8:H4205",
+   "level": "2F",
+   "occurrence_state": "BLOCKED",
+   "occurrence_why": "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED (NOT_DRAWN_ON_STOREY_SHEET)",
+   "release_state": "BLOCKED",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 85.530349,
+   "missing_components": [
+    "POP:COLUMN:2F:C8:H4205|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4205||TEXT|0",
+    "state": "NOT_DRAWN_ON_STOREY_SHEET",
+    "volume_m3": null
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:2F:C3:H4207",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:2F:C3:H4207",
+   "level": "2F",
+   "occurrence_state": "BLOCKED",
+   "occurrence_why": "REBAR_BLOCKED_OCCURRENCE_NOT_ESTABLISHED (NOT_DRAWN_ON_STOREY_SHEET)",
+   "release_state": "BLOCKED",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 54.715534,
+   "missing_components": [
+    "POP:COLUMN:2F:C3:H4207|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4207||TEXT|0",
+    "state": "NOT_DRAWN_ON_STOREY_SHEET",
+    "volume_m3": null
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:2F:CN:H4209",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:2F:CN:H4209",
+   "level": "2F",
+   "occurrence_state": "NOT_REQUIRED",
+   "occurrence_why": "NOT_IN_STOREY",
+   "release_state": "NOT_IN_SCOPE",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [],
+   "component_states": {
+    "NOT_REQUIRED": 1
+   },
+   "source": {}
+  },
+  {
+   "pop_id": "POP:COLUMN:2F:CN:H4211",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:2F:CN:H4211",
+   "level": "2F",
+   "occurrence_state": "NOT_REQUIRED",
+   "occurrence_why": "NOT_IN_STOREY",
+   "release_state": "NOT_IN_SCOPE",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [],
+   "component_states": {
+    "NOT_REQUIRED": 1
+   },
+   "source": {}
+  },
+  {
+   "pop_id": "POP:COLUMN:2F:C9:H4213",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:2F:C9:H4213",
+   "level": "2F",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 80.908642,
+   "provisional_kg": 2.492821,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:COLUMN:2F:C9:H4213|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4213||TEXT|0",
+    "state": "PROVEN",
+    "volume_m3": 0.532
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:2F:C2:H4215",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:2F:C2:H4215",
+   "level": "2F",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 50.725926,
+   "provisional_kg": 2.334796,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:COLUMN:2F:C2:H4215|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4215||TEXT|0",
+    "state": "PROVEN",
+    "volume_m3": 0.38
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:2F:C1:H4217",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:2F:C1:H4217",
+   "level": "2F",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 50.725926,
+   "provisional_kg": 2.334796,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:COLUMN:2F:C1:H4217|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4217||TEXT|0",
+    "state": "PROVEN",
+    "volume_m3": 0.38
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:2F:C2:H4219",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:2F:C2:H4219",
+   "level": "2F",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": null,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 50.725926,
+   "provisional_kg": 2.334796,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:COLUMN:2F:C2:H4219|TIES"
+   ],
+   "component_states": {
+    "COMPLETE": 1,
+    "PARTIAL": 1
+   },
+   "source": {
+    "plan_tag": "ALSENAN_ST7757_DXF|H4219||TEXT|0",
+    "state": "PROVEN",
+    "volume_m3": 0.38
+   }
+  },
+  {
+   "pop_id": "POP:COLUMN:2F:CN:H6070",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:2F:CN:H6070",
+   "level": "2F",
+   "occurrence_state": "NOT_REQUIRED",
+   "occurrence_why": "NOT_IN_STOREY",
+   "release_state": "NOT_IN_SCOPE",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [],
+   "component_states": {
+    "NOT_REQUIRED": 1
+   },
+   "source": {}
+  },
+  {
+   "pop_id": "POP:COLUMN:2F:CN:H6096",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:2F:CN:H6096",
+   "level": "2F",
+   "occurrence_state": "NOT_REQUIRED",
+   "occurrence_why": "NOT_IN_STOREY",
+   "release_state": "NOT_IN_SCOPE",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [],
+   "component_states": {
+    "NOT_REQUIRED": 1
+   },
+   "source": {}
+  },
+  {
+   "pop_id": "POP:COLUMN:2F:CN:H6098",
+   "element_type": "COLUMN",
+   "occurrence_id": "COLUMN:2F:CN:H6098",
+   "level": "2F",
+   "occurrence_state": "NOT_REQUIRED",
+   "occurrence_why": "NOT_IN_STOREY",
+   "release_state": "NOT_IN_SCOPE",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [],
+   "component_states": {
+    "NOT_REQUIRED": 1
+   },
+   "source": {}
+  },
+  {
+   "pop_id": "POP:SLAB:GF",
+   "element_type": "SLAB",
+   "occurrence_id": "SLAB:GF",
+   "level": "GF",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": "slab panel coverage (every panel annotated) is not proven - the slab population stays a lower bound",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 2903.503232,
+   "provisional_kg": 73.879683,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:SLAB:GF|490",
+    "POP:SLAB:GF|4A2",
+    "POP:SLAB:GF|4DE",
+    "POP:SLAB:GF|4EC",
+    "POP:SLAB:GF|4F0",
+    "POP:SLAB:GF|4F5",
+    "POP:SLAB:GF|4FD",
+    "POP:SLAB:GF|502",
+    "POP:SLAB:GF|507",
+    "POP:SLAB:GF|50C",
+    "POP:SLAB:GF|512",
+    "POP:SLAB:GF|517",
+    "POP:SLAB:GF|519",
+    "POP:SLAB:GF|51B",
+    "POP:SLAB:GF|526",
+    "POP:SLAB:GF|528",
+    "POP:SLAB:GF|530",
+    "POP:SLAB:GF|533",
+    "POP:SLAB:GF|552",
+    "POP:SLAB:GF|5BC"
+   ],
+   "component_states": {
+    "COMPLETE": 42,
+    "PARTIAL": 20,
+    "NOT_REQUIRED": 1
+   },
+   "source": {}
+  },
+  {
+   "pop_id": "POP:SLAB:1F",
+   "element_type": "SLAB",
+   "occurrence_id": "SLAB:1F",
+   "level": "1F",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": "slab panel coverage (every panel annotated) is not proven - the slab population stays a lower bound",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 1426.390291,
+   "provisional_kg": 14.401667,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:SLAB:1F|6F7",
+    "POP:SLAB:1F|73A",
+    "POP:SLAB:1F|73C",
+    "POP:SLAB:1F|748"
+   ],
+   "component_states": {
+    "COMPLETE": 31,
+    "PARTIAL": 4,
+    "NOT_REQUIRED": 9
+   },
+   "source": {}
+  },
+  {
+   "pop_id": "POP:SLAB:2F",
+   "element_type": "SLAB",
+   "occurrence_id": "SLAB:2F",
+   "level": "2F",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": "slab panel coverage (every panel annotated) is not proven - the slab population stays a lower bound",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 689.093827,
+   "provisional_kg": 108.037477,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:SLAB:2F|783",
+    "POP:SLAB:2F|784",
+    "POP:SLAB:2F|788",
+    "POP:SLAB:2F|789",
+    "POP:SLAB:2F|791",
+    "POP:SLAB:2F|793",
+    "POP:SLAB:2F|798",
+    "POP:SLAB:2F|798|T&B_TOP",
+    "POP:SLAB:2F|79F",
+    "POP:SLAB:2F|7A2",
+    "POP:SLAB:2F|7A8",
+    "POP:SLAB:2F|7A8|T&B_TOP",
+    "POP:SLAB:2F|7B8",
+    "POP:SLAB:2F|7B9"
+   ],
+   "component_states": {
+    "PARTIAL": 12,
+    "COMPLETE": 6,
+    "PROVISIONAL": 2
+   },
+   "source": {}
+  },
+  {
+   "pop_id": "POP:GROUND_SLAB:ZONE-1",
+   "element_type": "GROUND_SLAB",
+   "occurrence_id": "GROUND_SLAB:ZONE-1",
+   "level": "GF",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": "AMBIGUOUS_NESTED_CANDIDATES",
+   "release_state": "PROVISIONAL",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 434.604259,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:GROUND_SLAB:ZONE-1|MESH_X",
+    "POP:GROUND_SLAB:ZONE-1|MESH_Y",
+    "POP:GROUND_SLAB:ZONE-1|SCOPE_REMAINDER"
+   ],
+   "component_states": {
+    "PROVISIONAL": 2,
+    "BLOCKED": 1
+   },
+   "source": {}
+  },
+  {
+   "pop_id": "POP:GROUND_SLAB:ZONE-2",
+   "element_type": "GROUND_SLAB",
+   "occurrence_id": "GROUND_SLAB:ZONE-2",
+   "level": "GF",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": "ESTABLISHED_SOLE_CANDIDATE",
+   "release_state": "PROVISIONAL",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 277.67284,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:GROUND_SLAB:ZONE-2|MESH_X",
+    "POP:GROUND_SLAB:ZONE-2|MESH_Y"
+   ],
+   "component_states": {
+    "PROVISIONAL": 2
+   },
+   "source": {}
+  },
+  {
+   "pop_id": "POP:STAIRS:GF-1F+1F-2F",
+   "element_type": "STAIR",
+   "occurrence_id": "STAIRS:GF-1F+1F-2F",
+   "level": "GF",
+   "occurrence_state": "BLOCKED",
+   "occurrence_why": "BLOCKED_DETAIL_APPLICABILITY",
+   "release_state": "BLOCKED",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:STAIRS:GF-1F+1F-2F|ALL"
+   ],
+   "component_states": {
+    "BLOCKED": 1
+   },
+   "source": {}
+  },
+  {
+   "pop_id": "POP:CARRIED:GROUND",
+   "element_type": "GROUND",
+   "occurrence_id": "CARRIED:GROUND",
+   "level": "ALL",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": "CARRIED_FROM_V3B_NOT_REAUDITED_R3",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 1252.923424,
+   "provisional_kg": 182.979135,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:CARRIED:GROUND|0000|GB-004 top",
+    "POP:CARRIED:GROUND|0001|GB-004 bottom",
+    "POP:CARRIED:GROUND|0002|GB-004 bottom",
+    "POP:CARRIED:GROUND|0003|GB-004 stirrups",
+    "POP:CARRIED:GROUND|0004|GB-005 top",
+    "POP:CARRIED:GROUND|0005|GB-005 bottom",
+    "POP:CARRIED:GROUND|0006|GB-005 bottom",
+    "POP:CARRIED:GROUND|0007|GB-005 stirrups",
+    "POP:CARRIED:GROUND|0008|GB-018 top",
+    "POP:CARRIED:GROUND|0009|GB-018 bottom",
+    "POP:CARRIED:GROUND|0010|GB-018 bottom",
+    "POP:CARRIED:GROUND|0011|GB-018 stirrups",
+    "POP:CARRIED:GROUND|0012|GB-019 top",
+    "POP:CARRIED:GROUND|0013|GB-019 bottom",
+    "POP:CARRIED:GROUND|0014|GB-019 bottom",
+    "POP:CARRIED:GROUND|0015|GB-019 stirrups",
+    "POP:CARRIED:GROUND|0016|GB-028 top",
+    "POP:CARRIED:GROUND|0017|GB-028 bottom",
+    "POP:CARRIED:GROUND|0018|GB-028 bottom",
+    "POP:CARRIED:GROUND|0019|GB-028 stirrups",
+    "POP:CARRIED:GROUND|0020|GB-029 top",
+    "POP:CARRIED:GROUND|0021|GB-029 bottom",
+    "POP:CARRIED:GROUND|0022|GB-029 bottom",
+    "POP:CARRIED:GROUND|0023|GB-029 stirrups",
+    "POP:CARRIED:GROUND|0024|GB-030 top",
+    "POP:CARRIED:GROUND|0025|GB-030 bottom",
+    "POP:CARRIED:GROUND|0026|GB-030 bottom",
+    "POP:CARRIED:GROUND|0027|GB-030 stirrups",
+    "POP:CARRIED:GROUND|0028|GB-026 top",
+    "POP:CARRIED:GROUND|0029|GB-026 bottom",
+    "POP:CARRIED:GROUND|0030|GB-026 bottom",
+    "POP:CARRIED:GROUND|0031|GB-026 stirrups",
+    "POP:CARRIED:GROUND|0032|GB-031 top",
+    "POP:CARRIED:GROUND|0033|GB-031 bottom",
+    "POP:CARRIED:GROUND|0034|GB-031 bottom",
+    "POP:CARRIED:GROUND|0035|GB-031 stirrups",
+    "POP:CARRIED:GROUND|0036|GB-024 top",
+    "POP:CARRIED:GROUND|0037|GB-024 bottom",
+    "POP:CARRIED:GROUND|0038|GB-024 bottom",
+    "POP:CARRIED:GROUND|0039|GB-024 stirrups",
+    "POP:CARRIED:GROUND|0040|GB-025 top",
+    "POP:CARRIED:GROUND|0041|GB-025 bottom",
+    "POP:CARRIED:GROUND|0042|GB-025 bottom",
+    "POP:CARRIED:GROUND|0043|GB-025 stirrups",
+    "POP:CARRIED:GROUND|0044|GB-032 top",
+    "POP:CARRIED:GROUND|0045|GB-032 bottom",
+    "POP:CARRIED:GROUND|0046|GB-032 bottom",
+    "POP:CARRIED:GROUND|0047|GB-032 stirrups",
+    "POP:CARRIED:GROUND|0048|GB-027 top",
+    "POP:CARRIED:GROUND|0049|GB-027 bottom",
+    "POP:CARRIED:GROUND|0050|GB-027 bottom",
+    "POP:CARRIED:GROUND|0051|GB-027 stirrups",
+    "POP:CARRIED:GROUND|0052|GB-046 top",
+    "POP:CARRIED:GROUND|0053|GB-046 bottom",
+    "POP:CARRIED:GROUND|0054|GB-046 bottom",
+    "POP:CARRIED:GROUND|0055|GB-046 stirrups",
+    "POP:CARRIED:GROUND|0056|GB-051 top",
+    "POP:CARRIED:GROUND|0057|GB-051 bottom",
+    "POP:CARRIED:GROUND|0058|GB-051 bottom",
+    "POP:CARRIED:GROUND|0059|GB-051 stirrups",
+    "POP:CARRIED:GROUND|0060|GB-041 top",
+    "POP:CARRIED:GROUND|0061|GB-041 bottom",
+    "POP:CARRIED:GROUND|0062|GB-041 bottom",
+    "POP:CARRIED:GROUND|0063|GB-041 stirrups",
+    "POP:CARRIED:GROUND|0064|GB-053 top",
+    "POP:CARRIED:GROUND|0065|GB-053 bottom",
+    "POP:CARRIED:GROUND|0066|GB-053 bottom",
+    "POP:CARRIED:GROUND|0067|GB-053 stirrups",
+    "POP:CARRIED:GROUND|0068|GB-054 top",
+    "POP:CARRIED:GROUND|0069|GB-054 bottom",
+    "POP:CARRIED:GROUND|0070|GB-054 bottom",
+    "POP:CARRIED:GROUND|0071|GB-054 stirrups",
+    "POP:CARRIED:GROUND|0072|GB-007 top",
+    "POP:CARRIED:GROUND|0073|GB-007 bottom",
+    "POP:CARRIED:GROUND|0074|GB-007 bottom",
+    "POP:CARRIED:GROUND|0075|GB-007 stirrups",
+    "POP:CARRIED:GROUND|0076|GB-055 top",
+    "POP:CARRIED:GROUND|0077|GB-055 bottom",
+    "POP:CARRIED:GROUND|0078|GB-055 bottom",
+    "POP:CARRIED:GROUND|0079|GB-055 stirrups",
+    "POP:CARRIED:GROUND|0080|GB-033 top",
+    "POP:CARRIED:GROUND|0081|GB-033 bottom",
+    "POP:CARRIED:GROUND|0082|GB-033 bottom",
+    "POP:CARRIED:GROUND|0083|GB-033 stirrups",
+    "POP:CARRIED:GROUND|0084|GB-058 top",
+    "POP:CARRIED:GROUND|0085|GB-058 bottom",
+    "POP:CARRIED:GROUND|0086|GB-058 bottom",
+    "POP:CARRIED:GROUND|0087|GB-058 stirrups",
+    "POP:CARRIED:GROUND|0088|GB-057 top",
+    "POP:CARRIED:GROUND|0089|GB-057 bottom",
+    "POP:CARRIED:GROUND|0090|GB-057 bottom",
+    "POP:CARRIED:GROUND|0091|GB-057 stirrups",
+    "POP:CARRIED:GROUND|0092|GB-034 top",
+    "POP:CARRIED:GROUND|0093|GB-034 bottom",
+    "POP:CARRIED:GROUND|0094|GB-034 bottom",
+    "POP:CARRIED:GROUND|0095|GB-034 stirrups",
+    "POP:CARRIED:GROUND|0096|GB-059 top",
+    "POP:CARRIED:GROUND|0097|GB-059 bottom",
+    "POP:CARRIED:GROUND|0098|GB-059 bottom",
+    "POP:CARRIED:GROUND|0099|GB-059 stirrups",
+    "POP:CARRIED:GROUND|0100|GB-052 top",
+    "POP:CARRIED:GROUND|0101|GB-052 bottom",
+    "POP:CARRIED:GROUND|0102|GB-052 bottom",
+    "POP:CARRIED:GROUND|0103|GB-052 stirrups",
+    "POP:CARRIED:GROUND|0104|GB-047 top",
+    "POP:CARRIED:GROUND|0105|GB-047 bottom",
+    "POP:CARRIED:GROUND|0106|GB-047 bottom",
+    "POP:CARRIED:GROUND|0107|GB-047 stirrups",
+    "POP:CARRIED:GROUND|0108|GB-035 top",
+    "POP:CARRIED:GROUND|0109|GB-035 bottom",
+    "POP:CARRIED:GROUND|0110|GB-035 bottom",
+    "POP:CARRIED:GROUND|0111|GB-035 stirrups",
+    "POP:CARRIED:GROUND|0112|GB-056 top",
+    "POP:CARRIED:GROUND|0113|GB-056 bottom",
+    "POP:CARRIED:GROUND|0114|GB-056 bottom",
+    "POP:CARRIED:GROUND|0115|GB-056 stirrups",
+    "POP:CARRIED:GROUND|0116|GB-016 top",
+    "POP:CARRIED:GROUND|0117|GB-016 bottom",
+    "POP:CARRIED:GROUND|0118|GB-016 bottom",
+    "POP:CARRIED:GROUND|0119|GB-016 stirrups",
+    "POP:CARRIED:GROUND|0120|GB-001 top",
+    "POP:CARRIED:GROUND|0121|GB-001 bottom",
+    "POP:CARRIED:GROUND|0122|GB-001 bottom",
+    "POP:CARRIED:GROUND|0123|GB-001 stirrups"
+   ],
+   "component_states": {
+    "PARTIAL": 124
+   },
+   "source": {}
+  },
+  {
+   "pop_id": "POP:CARRIED:LINTELS",
+   "element_type": "LINTELS",
+   "occurrence_id": "CARRIED:LINTELS",
+   "level": "ALL",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": "CARRIED_FROM_V3B_NOT_REAUDITED_R3",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 582.478815,
+   "provisional_kg": 44.424732,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:CARRIED:LINTELS|0002|GF-D-641 stirrups",
+    "POP:CARRIED:LINTELS|0005|GF-D-E820 stirrups",
+    "POP:CARRIED:LINTELS|0006|GF-D-I1023 lintel bars",
+    "POP:CARRIED:LINTELS|0009|GF-D-I350 stirrups",
+    "POP:CARRIED:LINTELS|0012|GF-D-I402 stirrups",
+    "POP:CARRIED:LINTELS|0015|GF-D-I414 stirrups",
+    "POP:CARRIED:LINTELS|0018|GF-D-I437 stirrups",
+    "POP:CARRIED:LINTELS|0021|GF-D-I495 stirrups",
+    "POP:CARRIED:LINTELS|0024|GF-D-I711 stirrups",
+    "POP:CARRIED:LINTELS|0027|GF-D-I754 stirrups",
+    "POP:CARRIED:LINTELS|0030|GF-D-I800 stirrups",
+    "POP:CARRIED:LINTELS|0033|GF-D-I801 stirrups",
+    "POP:CARRIED:LINTELS|0036|GF-D-I825 stirrups",
+    "POP:CARRIED:LINTELS|0039|GF-D-I830 stirrups",
+    "POP:CARRIED:LINTELS|0042|GF-W01 stirrups",
+    "POP:CARRIED:LINTELS|0045|GF-W02 stirrups",
+    "POP:CARRIED:LINTELS|0048|GF-W03 stirrups",
+    "POP:CARRIED:LINTELS|0051|GF-W04 stirrups",
+    "POP:CARRIED:LINTELS|0054|GF-W05 stirrups",
+    "POP:CARRIED:LINTELS|0057|GF-W06 stirrups",
+    "POP:CARRIED:LINTELS|0060|GF-W07 stirrups",
+    "POP:CARRIED:LINTELS|0063|GF-W08 stirrups",
+    "POP:CARRIED:LINTELS|0066|GF-W09 stirrups",
+    "POP:CARRIED:LINTELS|0069|GF-W10 stirrups",
+    "POP:CARRIED:LINTELS|0072|GF-W11 stirrups",
+    "POP:CARRIED:LINTELS|0075|GF-W12 stirrups",
+    "POP:CARRIED:LINTELS|0078|GF-W13 stirrups",
+    "POP:CARRIED:LINTELS|0081|GF-W14 stirrups",
+    "POP:CARRIED:LINTELS|0084|GF-W15 stirrups",
+    "POP:CARRIED:LINTELS|0087|GF-W16 stirrups",
+    "POP:CARRIED:LINTELS|0090|1F-D-I3054 stirrups",
+    "POP:CARRIED:LINTELS|0093|1F-D-I3055 stirrups",
+    "POP:CARRIED:LINTELS|0096|1F-D-I3090 stirrups",
+    "POP:CARRIED:LINTELS|0099|1F-D-I3096 stirrups",
+    "POP:CARRIED:LINTELS|0102|1F-D-I3098 stirrups",
+    "POP:CARRIED:LINTELS|0105|1F-D-I3115 stirrups",
+    "POP:CARRIED:LINTELS|0108|1F-D-I3118 stirrups",
+    "POP:CARRIED:LINTELS|0111|1F-D-I3121 stirrups",
+    "POP:CARRIED:LINTELS|0114|1F-D-I3122 stirrups",
+    "POP:CARRIED:LINTELS|0117|1F-D-I4532 stirrups",
+    "POP:CARRIED:LINTELS|0120|1F-W01 stirrups",
+    "POP:CARRIED:LINTELS|0123|1F-W02 stirrups",
+    "POP:CARRIED:LINTELS|0126|1F-W03 stirrups",
+    "POP:CARRIED:LINTELS|0129|1F-W04 stirrups",
+    "POP:CARRIED:LINTELS|0132|1F-W05 stirrups",
+    "POP:CARRIED:LINTELS|0135|1F-W06 stirrups",
+    "POP:CARRIED:LINTELS|0138|1F-W07 stirrups",
+    "POP:CARRIED:LINTELS|0141|1F-W08 stirrups",
+    "POP:CARRIED:LINTELS|0144|1F-W09 stirrups",
+    "POP:CARRIED:LINTELS|0147|1F-W10 stirrups",
+    "POP:CARRIED:LINTELS|0150|1F-W11 stirrups",
+    "POP:CARRIED:LINTELS|0153|1F-W12 stirrups",
+    "POP:CARRIED:LINTELS|0156|2F-D-I4794 stirrups",
+    "POP:CARRIED:LINTELS|0159|2F-D-I4795 stirrups",
+    "POP:CARRIED:LINTELS|0162|2F-D-I4802 stirrups",
+    "POP:CARRIED:LINTELS|0165|2F-W01 stirrups",
+    "POP:CARRIED:LINTELS|0168|2F-W02 stirrups",
+    "POP:CARRIED:LINTELS|0171|2F-W03 stirrups",
+    "POP:CARRIED:LINTELS|0174|2F-W04 stirrups",
+    "POP:CARRIED:LINTELS|0177|2F-W05 stirrups"
+   ],
+   "component_states": {
+    "COMPLETE": 118,
+    "PARTIAL": 59,
+    "BLOCKED": 1
+   },
+   "source": {}
+  },
+  {
+   "pop_id": "POP:CARRIED:GROUND_BEAM_EXT",
+   "element_type": "GROUND_BEAM_EXT",
+   "occurrence_id": "CARRIED:GROUND_BEAM_EXT",
+   "level": "ALL",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": "CARRIED_FROM_V3B_NOT_REAUDITED_R3",
+   "release_state": "PROVISIONAL",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 2793.705959,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:CARRIED:GROUND_BEAM_EXT|0000|GB-022 top 3Ø16",
+    "POP:CARRIED:GROUND_BEAM_EXT|0001|GB-022 bottom 6Ø16",
+    "POP:CARRIED:GROUND_BEAM_EXT|0002|GB-022 side 2Ø12 @30",
+    "POP:CARRIED:GROUND_BEAM_EXT|0003|GB-022 links Ø8/15",
+    "POP:CARRIED:GROUND_BEAM_EXT|0004|GB-021 top 3Ø16",
+    "POP:CARRIED:GROUND_BEAM_EXT|0005|GB-021 bottom 6Ø16",
+    "POP:CARRIED:GROUND_BEAM_EXT|0006|GB-021 side 2Ø12 @30",
+    "POP:CARRIED:GROUND_BEAM_EXT|0007|GB-021 links Ø8/15",
+    "POP:CARRIED:GROUND_BEAM_EXT|0008|GB-020 top 3Ø16",
+    "POP:CARRIED:GROUND_BEAM_EXT|0009|GB-020 bottom 6Ø16",
+    "POP:CARRIED:GROUND_BEAM_EXT|0010|GB-020 side 2Ø12 @30",
+    "POP:CARRIED:GROUND_BEAM_EXT|0011|GB-020 links Ø8/15",
+    "POP:CARRIED:GROUND_BEAM_EXT|0012|GB-023 top 3Ø16",
+    "POP:CARRIED:GROUND_BEAM_EXT|0013|GB-023 bottom 6Ø16",
+    "POP:CARRIED:GROUND_BEAM_EXT|0014|GB-023 side 2Ø12 @30",
+    "POP:CARRIED:GROUND_BEAM_EXT|0015|GB-023 links Ø8/15",
+    "POP:CARRIED:GROUND_BEAM_EXT|0016|GB-003 top 3Ø16",
+    "POP:CARRIED:GROUND_BEAM_EXT|0017|GB-003 bottom 6Ø16",
+    "POP:CARRIED:GROUND_BEAM_EXT|0018|GB-003 side 2Ø12 @30",
+    "POP:CARRIED:GROUND_BEAM_EXT|0019|GB-003 links Ø8/15",
+    "POP:CARRIED:GROUND_BEAM_EXT|0020|GB-012 top 3Ø16",
+    "POP:CARRIED:GROUND_BEAM_EXT|0021|GB-012 bottom 6Ø16",
+    "POP:CARRIED:GROUND_BEAM_EXT|0022|GB-012 side 2Ø12 @30",
+    "POP:CARRIED:GROUND_BEAM_EXT|0023|GB-012 links Ø8/15",
+    "POP:CARRIED:GROUND_BEAM_EXT|0024|GB-011 top 3Ø16",
+    "POP:CARRIED:GROUND_BEAM_EXT|0025|GB-011 bottom 6Ø16",
+    "POP:CARRIED:GROUND_BEAM_EXT|0026|GB-011 side 2Ø12 @30",
+    "POP:CARRIED:GROUND_BEAM_EXT|0027|GB-011 links Ø8/15",
+    "POP:CARRIED:GROUND_BEAM_EXT|0028|GB-017 top 3Ø16",
+    "POP:CARRIED:GROUND_BEAM_EXT|0029|GB-017 bottom 6Ø16",
+    "POP:CARRIED:GROUND_BEAM_EXT|0030|GB-017 side 2Ø12 @30",
+    "POP:CARRIED:GROUND_BEAM_EXT|0031|GB-017 links Ø8/15",
+    "POP:CARRIED:GROUND_BEAM_EXT|0032|GB-042 top 3Ø16",
+    "POP:CARRIED:GROUND_BEAM_EXT|0033|GB-042 bottom 6Ø16",
+    "POP:CARRIED:GROUND_BEAM_EXT|0034|GB-042 side 2Ø12 @30",
+    "POP:CARRIED:GROUND_BEAM_EXT|0035|GB-042 links Ø8/15",
+    "POP:CARRIED:GROUND_BEAM_EXT|0036|GB-043 top 3Ø16",
+    "POP:CARRIED:GROUND_BEAM_EXT|0037|GB-043 bottom 6Ø16",
+    "POP:CARRIED:GROUND_BEAM_EXT|0038|GB-043 side 2Ø12 @30",
+    "POP:CARRIED:GROUND_BEAM_EXT|0039|GB-043 links Ø8/15",
+    "POP:CARRIED:GROUND_BEAM_EXT|0040|GB-014 top 3Ø16",
+    "POP:CARRIED:GROUND_BEAM_EXT|0041|GB-014 bottom 6Ø16",
+    "POP:CARRIED:GROUND_BEAM_EXT|0042|GB-014 side 2Ø12 @30",
+    "POP:CARRIED:GROUND_BEAM_EXT|0043|GB-014 links Ø8/15",
+    "POP:CARRIED:GROUND_BEAM_EXT|0044|GB-015 top 3Ø16",
+    "POP:CARRIED:GROUND_BEAM_EXT|0045|GB-015 bottom 6Ø16",
+    "POP:CARRIED:GROUND_BEAM_EXT|0046|GB-015 side 2Ø12 @30",
+    "POP:CARRIED:GROUND_BEAM_EXT|0047|GB-015 links Ø8/15",
+    "POP:CARRIED:GROUND_BEAM_EXT|0048|GB-049 top 3Ø16",
+    "POP:CARRIED:GROUND_BEAM_EXT|0049|GB-049 bottom 6Ø16",
+    "POP:CARRIED:GROUND_BEAM_EXT|0050|GB-049 side 2Ø12 @30",
+    "POP:CARRIED:GROUND_BEAM_EXT|0051|GB-049 links Ø8/15",
+    "POP:CARRIED:GROUND_BEAM_EXT|0052|GB-050 top 3Ø16",
+    "POP:CARRIED:GROUND_BEAM_EXT|0053|GB-050 bottom 6Ø16",
+    "POP:CARRIED:GROUND_BEAM_EXT|0054|GB-050 side 2Ø12 @30",
+    "POP:CARRIED:GROUND_BEAM_EXT|0055|GB-050 links Ø8/15",
+    "POP:CARRIED:GROUND_BEAM_EXT|0056|GB-037 top 3Ø16",
+    "POP:CARRIED:GROUND_BEAM_EXT|0057|GB-037 bottom 6Ø16",
+    "POP:CARRIED:GROUND_BEAM_EXT|0058|GB-037 side 2Ø12 @30",
+    "POP:CARRIED:GROUND_BEAM_EXT|0059|GB-037 links Ø8/15",
+    "POP:CARRIED:GROUND_BEAM_EXT|0060|GB-038 top 3Ø16",
+    "POP:CARRIED:GROUND_BEAM_EXT|0061|GB-038 bottom 6Ø16",
+    "POP:CARRIED:GROUND_BEAM_EXT|0062|GB-038 side 2Ø12 @30",
+    "POP:CARRIED:GROUND_BEAM_EXT|0063|GB-038 links Ø8/15",
+    "POP:CARRIED:GROUND_BEAM_EXT|0064|GB-044 top 3Ø16",
+    "POP:CARRIED:GROUND_BEAM_EXT|0065|GB-044 bottom 6Ø16",
+    "POP:CARRIED:GROUND_BEAM_EXT|0066|GB-044 side 2Ø12 @30",
+    "POP:CARRIED:GROUND_BEAM_EXT|0067|GB-044 links Ø8/15",
+    "POP:CARRIED:GROUND_BEAM_EXT|0068|GB-008 top 3Ø16",
+    "POP:CARRIED:GROUND_BEAM_EXT|0069|GB-008 bottom 6Ø16",
+    "POP:CARRIED:GROUND_BEAM_EXT|0070|GB-008 side 2Ø12 @30",
+    "POP:CARRIED:GROUND_BEAM_EXT|0071|GB-008 links Ø8/15",
+    "POP:CARRIED:GROUND_BEAM_EXT|0072|GB-036 top 3Ø16",
+    "POP:CARRIED:GROUND_BEAM_EXT|0073|GB-036 bottom 6Ø16",
+    "POP:CARRIED:GROUND_BEAM_EXT|0074|GB-036 side 2Ø12 @30",
+    "POP:CARRIED:GROUND_BEAM_EXT|0075|GB-036 links Ø8/15",
+    "POP:CARRIED:GROUND_BEAM_EXT|0076|GB-048 top 3Ø16",
+    "POP:CARRIED:GROUND_BEAM_EXT|0077|GB-048 bottom 6Ø16",
+    "POP:CARRIED:GROUND_BEAM_EXT|0078|GB-048 side 2Ø12 @30",
+    "POP:CARRIED:GROUND_BEAM_EXT|0079|GB-048 links Ø8/15",
+    "POP:CARRIED:GROUND_BEAM_EXT|0080|GB-039 top 3Ø16",
+    "POP:CARRIED:GROUND_BEAM_EXT|0081|GB-039 bottom 6Ø16",
+    "POP:CARRIED:GROUND_BEAM_EXT|0082|GB-039 side 2Ø12 @30",
+    "POP:CARRIED:GROUND_BEAM_EXT|0083|GB-039 links Ø8/15",
+    "POP:CARRIED:GROUND_BEAM_EXT|0084|GB-045 top 3Ø16",
+    "POP:CARRIED:GROUND_BEAM_EXT|0085|GB-045 bottom 6Ø16",
+    "POP:CARRIED:GROUND_BEAM_EXT|0086|GB-045 side 2Ø12 @30",
+    "POP:CARRIED:GROUND_BEAM_EXT|0087|GB-045 links Ø8/15",
+    "POP:CARRIED:GROUND_BEAM_EXT|0088|GB-040 top 3Ø16",
+    "POP:CARRIED:GROUND_BEAM_EXT|0089|GB-040 bottom 6Ø16",
+    "POP:CARRIED:GROUND_BEAM_EXT|0090|GB-040 side 2Ø12 @30",
+    "POP:CARRIED:GROUND_BEAM_EXT|0091|GB-040 links Ø8/15",
+    "POP:CARRIED:GROUND_BEAM_EXT|0092|GB-010 top 3Ø16",
+    "POP:CARRIED:GROUND_BEAM_EXT|0093|GB-010 bottom 6Ø16",
+    "POP:CARRIED:GROUND_BEAM_EXT|0094|GB-010 side 2Ø12 @30",
+    "POP:CARRIED:GROUND_BEAM_EXT|0095|GB-010 links Ø8/15",
+    "POP:CARRIED:GROUND_BEAM_EXT|0096|GB-009 top 3Ø16",
+    "POP:CARRIED:GROUND_BEAM_EXT|0097|GB-009 bottom 6Ø16",
+    "POP:CARRIED:GROUND_BEAM_EXT|0098|GB-009 side 2Ø12 @30",
+    "POP:CARRIED:GROUND_BEAM_EXT|0099|GB-009 links Ø8/15",
+    "POP:CARRIED:GROUND_BEAM_EXT|0100|GB-013 top 3Ø16",
+    "POP:CARRIED:GROUND_BEAM_EXT|0101|GB-013 bottom 6Ø16",
+    "POP:CARRIED:GROUND_BEAM_EXT|0102|GB-013 side 2Ø12 @30",
+    "POP:CARRIED:GROUND_BEAM_EXT|0103|GB-013 links Ø8/15",
+    "POP:CARRIED:GROUND_BEAM_EXT|0104|GB-006 top 3Ø16",
+    "POP:CARRIED:GROUND_BEAM_EXT|0105|GB-006 bottom 6Ø16",
+    "POP:CARRIED:GROUND_BEAM_EXT|0106|GB-006 side 2Ø12 @30",
+    "POP:CARRIED:GROUND_BEAM_EXT|0107|GB-006 links Ø8/15",
+    "POP:CARRIED:GROUND_BEAM_EXT|0108|GB-002 top 3Ø16",
+    "POP:CARRIED:GROUND_BEAM_EXT|0109|GB-002 bottom 6Ø16",
+    "POP:CARRIED:GROUND_BEAM_EXT|0110|GB-002 side 2Ø12 @30",
+    "POP:CARRIED:GROUND_BEAM_EXT|0111|GB-002 links Ø8/15"
+   ],
+   "component_states": {
+    "PROVISIONAL": 112
+   },
+   "source": {}
+  },
+  {
+   "pop_id": "POP:CARRIED:DOME",
+   "element_type": "DOME",
+   "occurrence_id": "CARRIED:DOME",
+   "level": "ALL",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": "CARRIED_FROM_V3B_NOT_REAUDITED_R3",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 2054.226914,
+   "provisional_kg": 24.887154,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:CARRIED:DOME|0003|DOME-TERRACE-12EB links 8Ø8/m",
+    "POP:CARRIED:DOME|0009|DOME-TOWER-1300 links 8Ø8/m",
+    "POP:CARRIED:DOME|0015|DOME-TERRACE-2F33 links 8Ø8/m"
+   ],
+   "component_states": {
+    "COMPLETE": 15,
+    "PARTIAL": 3
+   },
+   "source": {}
+  },
+  {
+   "pop_id": "POP:CARRIED:POOL",
+   "element_type": "POOL",
+   "occurrence_id": "CARRIED:POOL",
+   "level": "ALL",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": "CARRIED_FROM_V3B_NOT_REAUDITED_R3",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 585.738272,
+   "provisional_kg": 0.0,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [],
+   "component_states": {
+    "COMPLETE": 5
+   },
+   "source": {}
+  },
+  {
+   "pop_id": "POP:CARRIED:BEAM_RESIDUE",
+   "element_type": "BEAM_RESIDUE",
+   "occurrence_id": "CARRIED:BEAM_RESIDUE",
+   "level": "ALL",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": "CARRIED_FROM_V3B_NOT_REAUDITED_R3",
+   "release_state": "BUDGET",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "budget_kg": 319.11342,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:CARRIED:BEAM_RESIDUE|0000|B1:ALSENAN_ST7757_DXF|H1117||TEXT|0",
+    "POP:CARRIED:BEAM_RESIDUE|0001|B7:ALSENAN_ST7757_DXF|H1134||TEXT|0",
+    "POP:CARRIED:BEAM_RESIDUE|0002|B7:ALSENAN_ST7757_DXF|H1135||TEXT|0",
+    "POP:CARRIED:BEAM_RESIDUE|0003|B7:ALSENAN_ST7757_DXF|H1136||TEXT|0",
+    "POP:CARRIED:BEAM_RESIDUE|0004|B7:ALSENAN_ST7757_DXF|H1137||TEXT|0",
+    "POP:CARRIED:BEAM_RESIDUE|0005|B7:ALSENAN_ST7757_DXF|H1154|1149|TEXT|0",
+    "POP:CARRIED:BEAM_RESIDUE|0006|B4:ALSENAN_ST7757_DXF|H1184|1179|TEXT|0",
+    "POP:CARRIED:BEAM_RESIDUE|0007|B6:ALSENAN_ST7757_DXF|H1733||TEXT|0",
+    "POP:CARRIED:BEAM_RESIDUE|0008|B4:ALSENAN_ST7757_DXF|H6184||TEXT|0",
+    "POP:CARRIED:BEAM_RESIDUE|0009|B4:ALSENAN_ST7757_DXF|H6185||TEXT|0"
+   ],
+   "component_states": {
+    "PROVISIONAL": 10
+   },
+   "source": {}
+  },
+  {
+   "pop_id": "POP:CARRIED:BOUNDARY_WALL",
+   "element_type": "BOUNDARY_WALL",
+   "occurrence_id": "CARRIED:BOUNDARY_WALL",
+   "level": "ALL",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": "CARRIED_FROM_V3B_NOT_REAUDITED_R3",
+   "release_state": "PROVISIONAL",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 555.650126,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:CARRIED:BOUNDARY_WALL|0000|B.W bottom 4Ø16",
+    "POP:CARRIED:BOUNDARY_WALL|0001|B.W top 2Ø14",
+    "POP:CARRIED:BOUNDARY_WALL|0002|B.W links 7Ø8/m"
+   ],
+   "component_states": {
+    "PROVISIONAL": 3
+   },
+   "source": {}
+  },
+  {
+   "pop_id": "POP:CARRIED:FOOTING_F_F10",
+   "element_type": "FOOTING_F_F10",
+   "occurrence_id": "CARRIED:FOOTING_F_F10",
+   "level": "ALL",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": "CARRIED_FROM_V3B_NOT_REAUDITED_R3",
+   "release_state": "PROVISIONAL",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 62.671605,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:CARRIED:FOOTING_F_F10|0000|F10 long 10Ø14 (selected basis)",
+    "POP:CARRIED:FOOTING_F_F10|0001|F10 short 20Ø14 (selected basis)"
+   ],
+   "component_states": {
+    "PROVISIONAL": 2
+   },
+   "source": {}
+  },
+  {
+   "pop_id": "POP:CARRIED:COLUMN_STARTERS",
+   "element_type": "COLUMN_STARTERS",
+   "occurrence_id": "CARRIED:COLUMN_STARTERS",
+   "level": "ALL",
+   "occurrence_state": "ESTABLISHED",
+   "occurrence_why": "CARRIED_FROM_V3B_NOT_REAUDITED_R3",
+   "release_state": "PROVISIONAL",
+   "verified_complete_kg": 0.0,
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 938.667,
+   "budget_kg": 0.0,
+   "audit_kg": 0.0,
+   "missing_components": [
+    "POP:CARRIED:COLUMN_STARTERS|0000|necks / starters (all footings)"
+   ],
+   "component_states": {
+    "PROVISIONAL": 1
+   },
+   "source": {}
+  }
+ ],
+ "rc_occurrences": 239,
+ "rule": "every reinforced-concrete occurrence has at least one population record; one release state each"
+}

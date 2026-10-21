@@ -1,0 +1,188 @@
+{
+ "bar_runs": {
+  "dot_rows": 16,
+  "drawn_runs": 6,
+  "duplicates_collapsed": 1,
+  "end_marks": 1,
+  "shapes": {
+   "COMPOUND": 2,
+   "CRANKED": 4
+  },
+  "sub_detail_shapes": 10
+ },
+ "baseline": "763a00e",
+ "build_up": {
+  "PL-BUILDUP-INSULATION_MEMBRANE": {
+   "boq_family": "WATERPROOFING_OR_INSULATION",
+   "lane": "BLOCKED_UNQUANTIFIED",
+   "wording": "5cm INSULATION MEMBRANE."
+  },
+  "PL-BUILDUP-PLAIN_CONCRETE": {
+   "boq_family": "PLAIN_CONCRETE",
+   "lane": "BLOCKED_UNQUANTIFIED",
+   "wording": "10cm PLAIN CONCRETE."
+  },
+  "PL-BUILDUP-SCREED": {
+   "boq_family": "SCREED",
+   "lane": "BLOCKED_UNQUANTIFIED",
+   "wording": "5cm SECREED."
+  }
+ },
+ "build_up_order_from_concrete": [
+  "SCREED",
+  "INSULATION_MEMBRANE",
+  "PLAIN_CONCRETE"
+ ],
+ "concrete": {
+  "blocked_rows": 7,
+  "released_m3": 0.0,
+  "total_m3": null
+ },
+ "conflicts": [
+  "CF-S8.2-1869",
+  "CF-S8.2-18A8",
+  "CF-S8.2-18DD",
+  "CF-S8.2-BLINDING",
+  "CF-S8.2-COUNT-DEEP_BASE-BOTTOM",
+  "CF-S8.2-COUNT-SHALLOW_BASE-BOTTOM",
+  "CF-S8.2-COUNT-SHALLOW_BASE-TOP",
+  "CF-S8.2-COUNT-SLOPE-BOTTOM",
+  "CF-S8.2-COUNT-SLOPE-TOP",
+  "CF-S8.2-M1",
+  "CF-S8.2-NTS-SCALE",
+  "CF-S8.2-R1",
+  "CF-S8.2-ROW-BF-18AD",
+  "CF-S8.2-ROW-BF-18D3",
+  "CF-S8.2-S1-ROLES",
+  "CF-S8.2-SHALLOW-THICKNESS",
+  "CF-S8.2-TRANSVERSE-LAYERS"
+ ],
+ "conservation": {
+  "C-01": "PASS",
+  "C-02": "PASS",
+  "C-03": "PASS",
+  "C-04": "PASS",
+  "C-05": "PASS",
+  "C-06": "PASS",
+  "C-07": "PASS",
+  "C-08": "PASS",
+  "C-09": "PASS",
+  "C-10": "PASS",
+  "C-11": "PASS",
+  "C-12": "PASS",
+  "C-13": "PASS",
+  "C-14": "PASS",
+  "C-15": "PASS",
+  "C-16": "PASS"
+ },
+ "cover": {
+  "CHALLENGE_ONLY": 1,
+  "COVER_APPLICABILITY_UNRESOLVED": 2,
+  "NTS_NOT_A_MEASUREMENT": 1,
+  "UNKNOWN_EXPOSURE_CONDITION": 1
+ },
+ "date": "2026-10-09",
+ "depths": {
+  "deep_end": null,
+  "shallow_end": null,
+  "state": "NOT_ESTABLISHED ('AS PER ARCH'; the architectural set prints none)",
+  "wall_heights": null,
+  "zone_lengths": null
+ },
+ "engine_commit": "763a00e+code:d16a9a8bc2c0445a",
+ "frozen_baselines": {
+  "AD1": "e2497cc75181393000187b7e657fa8485a4c0f365b4614bed983d0bc6c0ca5b4",
+  "D1.1": "3ecb642e2141f5a9af11453870696b104a11cfb519d65a9e3f505cbff7c73a74",
+  "D1.2": "f256d6a25edf93029c6ba1c8cf9bc336790fd8d9cf7a5045e8395942986a9554",
+  "PRE-S7": "fb3a1c62a8e525b663853d03d43e067f1839026aea149399491bd4cf98f0ad09",
+  "PRE-S7.1": "3a67a8641ce4ea836334e02532af82b9a3bb01be8efdba4f093eee44d92c1ef6",
+  "PRE-S8": "1c8daf59926540941efbf5f749e8e175fe64b7efeb6d7acff0bfbefbb034849d",
+  "S4": "0d63015a19953f295e331aab2d7e49e8facb277e1465fbdd1b6b5a40d1a2362b",
+  "S4.1": "468e90d9657548a7e9124b67ce0a55b63560f030e2f98b414c46ad4e970e030b",
+  "S5": "ff488a92f3eaff80e84fca2d7e0b8e36cc40ddb84232cd315acfd1ce50b4b3d8",
+  "S5.1": "595d64b1bf5c8e0ef7b5bebfaf3ea4063dd884356390c84b4c8aac77cddb5a88",
+  "S6": "c29a28bc66334d5294d71b0d5feb0dd5eae36baf91a04ef6e0105b2ca43be63e",
+  "S6.1": "c4744888ed2207ebff47c0a895e706d7e381b5f905b694eb92e3d1cdc411c0b2",
+  "S7": "b23f97b6db334e641c38c498bf23b46236d68f4fcc26a6eafde1f3bfc156d175",
+  "S7A": "5b256cef99dc57934c76249c28814d5ce07c74caf308aabdbf90e0e8f0adcee1",
+  "S8.1": "e99d83a750b64541f5b3174b853d24209f30e46574fafafe56cfa3fd0d88e354",
+  "S8.1A": "890c1c42f03715b6b26d88744852fe388ca419fd7c6e3f0214e137dc5c1a473e"
+ },
+ "interfaces": {
+  "BASE_ONLY": 3,
+  "SINGLE_BENT_BAR": 5,
+  "UNRESOLVED": 6
+ },
+ "perimeter_m": {
+  "outer": 12.497787143782134,
+  "water": 11.069468613064197
+ },
+ "plan_m2": {
+  "structural_footprint": 10.935563750809475,
+  "wall_band": 2.3567255756848677,
+  "wall_runs": {
+   "PL-WALL-RUN-E": 0.7,
+   "PL-WALL-RUN-N": 0.31,
+   "PL-WALL-RUN-S": 0.3100000000000596,
+   "PL-WALL-RUN-W": 1.0367255756845697
+  },
+  "water": 8.578838175124607
+ },
+ "policy": "S8_2_POOL_SOURCE_CONTROLLED_QTO_V1",
+ "questions": [
+  "Q-S8.2-01",
+  "Q-S8.2-02",
+  "Q-S8.2-03",
+  "Q-S8.2-04",
+  "Q-S8.2-05",
+  "Q-S8.2-06",
+  "Q-S8.2-07",
+  "Q-S8.2-08",
+  "Q-S8.2-09",
+  "Q-S8.2-10",
+  "Q-S8.2-11"
+ ],
+ "records_26": {
+  "FAMILY_PRIMARY_LABEL": 17,
+  "SAME_FAMILY_SECOND_LABEL (counted once)": 1,
+  "SECOND_VIEW_DIAMETER_CONFLICT": 1,
+  "SECOND_VIEW_OF_FAMILY": 5,
+  "SECOND_VIEW_TOPOLOGY_DIFFERS": 1,
+  "SUB_DETAIL_BINDING_AMBIGUOUS": 1
+ },
+ "references_read": [],
+ "reinforcement": {
+  "base_families": 11,
+  "diameters_mm": [
+   10.0,
+   12.0,
+   14.0,
+   16.0
+  ],
+  "equivalent_length_m": null,
+  "families": 21,
+  "lanes": {
+   "BLOCKED_UNQUANTIFIED": 16,
+   "SOURCE_CONFLICT": 5
+  },
+  "physical_bbs": "UNRESOLVED",
+  "released_kg": 0.0,
+  "total_kg": null,
+  "wall_families": 10
+ },
+ "round": "S8_2",
+ "stated": {
+  "deep_base_thickness_mm": 400,
+  "dimensions": {
+   "1931": "AS PER ARCH",
+   "193F": "40",
+   "194D": "20",
+   "195B": "20",
+   "1969": "AS PER ARCH",
+   "1977": "AS PER ARCH",
+   "1985": "AS PER ARCH",
+   "1993": "AS PER ARCH"
+  },
+  "wall_thickness_mm": 200
+ }
+}

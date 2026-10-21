@@ -1,0 +1,19 @@
+# Remaining uncertainties (deliverable 11)
+
+What the proof library does not prove, stated so that nobody reads more into a PASS than it holds. The owner decisions
+that are open are in OWNER_DECISIONS_OPEN.md.
+
+| # | Uncertainty | Why it remains | Consequence | What would close it |
+|---|---|---|---|---|
+| U-01 | Proven geometry is rectilinear | the reference calculator handles rectilinear areas only (its slab decomposition); the engine also lays splayed and angled rooms | an angled wet room's layout is ENGINE_TESTED_ONLY | a non-rectilinear proof case with a hand calculation (a 45-degree corner) and a reference extension |
+| U-02 | No proof case has an obstruction (a column or a boxed shaft) inside a wet area | not in the program's case list | the hole rings' closed band loops and their corners are engine-tested only | a WP case with an internal column |
+| U-03 | The band lane choice (the shortest lane that finishes a run, else the longest) is the construction method of the sheets; the reference and the engine both follow it | the program's sheets needed one stated method; a global optimum over every lane assignment was not searched | a cleverer assignment could save a few centimetres of band in a multi-run area; never a roll in the proof cases | an exhaustive lane-assignment search in the reference for small cases |
+| U-04 | The roll-remainder option of the band planner fills the largest open remainder first; it is a rule, not a search over every split | kept simple and deterministic | the per-area roll count is proven minimal by the exact packing for the pieces the planner cut, not for every possible band split | a split search bounded by the number of open remainders |
+| U-05 | The exact packing stops after 200,000 nodes | a deterministic limit | on a very large project `packing.proven` can be false (reported, never silent); the count is then the best found | none needed unless a project reports `proven: false` |
+| U-06 | Laps are counted, not oriented | no drain or fall plan is read (UP-WP-LAY-001 `not_validated`) | the shingle order towards the drains is unchecked | a fall / drainage plan source |
+| U-07 | The wall depth at a door is read from the drawing; the proofs assume 0.20 m | the scenario gave none | the continuation piece scales with the depth (w x t) | none - project data |
+| U-08 | Door feasibility rests on engine values (0.10 m pier, 3.00 m reach) and an inferred structure (MASONRY_INDICATED) | owner decision N-2; no structural drawing is read | every enlargement needs the structural engineer; no structural feasibility is claimed | the structural plan bound to the doors (recommendation R-1) |
+| U-09 | On the villa and the reference plan no BOQ line is INDEPENDENTLY_VERIFIED | no independent per-line values exist for them; the method proofs do not count as line verification | their lines are ENGINE_TESTED_ONLY / PROVISIONAL / BLOCKED | an independent take-off of selected rooms supplied as `--independent-checks` (recommendation R-2) |
+| U-10 | The proof drawing route is exercised on one plan type (PD-1: bathrooms and a corridor) | built for the scope test and the 3x4 reproduction | roofs, balconies, kitchens and L-rooms are proven on synthetic geometry, not drawn plans | more proof drawings (an exterior plan) |
+| U-11 | The reference calculator was itself corrected twice during the work (H-04, H-05) | it is new code | its arithmetic could still share an error with a hand calculation; both were written by the same author | a second, independent reviewer re-deriving two sheets (WP-B and WP-E) by hand |
+| U-12 | The full test suite is not green | git-ignored datasets missing in this environment (the baseline failures of earlier phases) | see REGRESSION_AND_FROZEN_INTEGRITY.md: no new failure | the private datasets in CI |

@@ -1,0 +1,179 @@
+[
+ {
+  "blocks_inserted": {
+   "BEAM_ROW": 2,
+   "COLBLK_C2": 18,
+   "COLBLK_C5": 18,
+   "COL_ROW": 2,
+   "FTG_ROW": 2
+  },
+  "dxf_version": "AC1032",
+  "file": "villa_7.dxf",
+  "frames": [],
+  "insunits": 6,
+  "layers": [
+   {
+    "by_type": {
+     "MTEXT": 19,
+     "TEXT": 57
+    },
+    "closed_curved_outlines": 0,
+    "closed_rectangles": 0,
+    "layer": "ANNO",
+    "n_entities": 76,
+    "role_guess": "TEXT",
+    "texts": 76
+   },
+   {
+    "by_type": {
+     "LINE": 113
+    },
+    "closed_curved_outlines": 0,
+    "closed_rectangles": 0,
+    "layer": "BEAM EDGE",
+    "n_entities": 113,
+    "role_guess": "BEAM",
+    "texts": 0
+   },
+   {
+    "by_type": {
+     "LWPOLYLINE": 4
+    },
+    "closed_curved_outlines": 0,
+    "closed_rectangles": 4,
+    "layer": "BORDER",
+    "n_entities": 4,
+    "role_guess": "FRAME",
+    "texts": 0
+   },
+   {
+    "by_type": {
+     "HATCH": 24,
+     "INSERT": 36
+    },
+    "closed_curved_outlines": 0,
+    "closed_rectangles": 0,
+    "layer": "COLUMNS",
+    "n_entities": 60,
+    "role_guess": "COLUMN",
+    "texts": 0
+   },
+   {
+    "by_type": {
+     "LINE": 24,
+     "LWPOLYLINE": 6
+    },
+    "closed_curved_outlines": 0,
+    "closed_rectangles": 6,
+    "layer": "FOUNDATION",
+    "n_entities": 30,
+    "role_guess": "FOOTING",
+    "texts": 0
+   },
+   {
+    "by_type": {
+     "DIMENSION": 6
+    },
+    "closed_curved_outlines": 0,
+    "closed_rectangles": 0,
+    "layer": "S-DIM",
+    "n_entities": 6,
+    "role_guess": "DIMENSION",
+    "texts": 0
+   },
+   {
+    "by_type": {
+     "CIRCLE": 14,
+     "LINE": 14,
+     "TEXT": 14
+    },
+    "closed_curved_outlines": 0,
+    "closed_rectangles": 0,
+    "layer": "S-GRID",
+    "n_entities": 42,
+    "role_guess": "GRID",
+    "texts": 14
+   },
+   {
+    "by_type": {
+     "INSERT": 6
+    },
+    "closed_curved_outlines": 0,
+    "closed_rectangles": 0,
+    "layer": "SCHEDULE",
+    "n_entities": 6,
+    "role_guess": "UNKNOWN",
+    "texts": 52
+   },
+   {
+    "by_type": {
+     "LINE": 4
+    },
+    "closed_curved_outlines": 0,
+    "closed_rectangles": 0,
+    "layer": "VOIDS",
+    "n_entities": 4,
+    "role_guess": "UNKNOWN",
+    "texts": 0
+   }
+  ],
+  "n_entities": 341,
+  "n_layers": 9,
+  "n_texts": 142,
+  "policy": "DRAWING_INVENTORY_V1",
+  "sha256": "31badacacc08aefb21934a35cf08fb49f8975db3fa6565c4bfc5492947ecef01",
+  "tag_families": [
+   {
+    "count": 34,
+    "distinct": 3,
+    "examples": [
+     "B1",
+     "B2",
+     "B5"
+    ],
+    "family_guess": "BEAMS",
+    "frames": {
+     "OUTSIDE_FRAMES": 34
+    },
+    "layers": {
+     "ANNO": 32,
+     "SCHEDULE": 2
+    },
+    "prefix": "B"
+   },
+   {
+    "count": 26,
+    "distinct": 2,
+    "examples": [
+     "C2",
+     "C5"
+    ],
+    "family_guess": "COLUMNS",
+    "frames": {
+     "OUTSIDE_FRAMES": 26
+    },
+    "layers": {
+     "ANNO": 24,
+     "SCHEDULE": 2
+    },
+    "prefix": "C"
+   },
+   {
+    "count": 2,
+    "distinct": 2,
+    "examples": [
+     "F1",
+     "F4"
+    ],
+    "family_guess": "FOOTINGS",
+    "frames": {
+     "OUTSIDE_FRAMES": 2
+    },
+    "layers": {
+     "SCHEDULE": 2
+    },
+    "prefix": "F"
+   }
+  ]
+ }
+]

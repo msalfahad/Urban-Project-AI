@@ -1,0 +1,90 @@
+[
+ {
+  "class": "SOURCE_FACT",
+  "count": 255,
+  "fact": "plan type marks (column / footing / beam tags)",
+  "registers": [
+   "COLUMN_VERTICAL_CHAIN_REGISTER",
+   "FOOTING_OCCURRENCE_REGISTER",
+   "BEAM_OCCURRENCE_REGISTER"
+  ]
+ },
+ {
+  "class": "SOURCE_FACT",
+  "count": 122,
+  "fact": "schedule rows (column, footing, beam, CB)",
+  "registers": [
+   "COLUMN_DEFINITION_REGISTER",
+   "FOOTING_DEFINITION_REGISTER",
+   "BEAM_DEFINITION_REGISTER"
+  ]
+ },
+ {
+  "class": "SOURCE_FACT",
+  "count": 155,
+  "fact": "slab bar texts, T marks, detail texts",
+  "registers": [
+   "SLAB_REBAR_SOURCE_REGISTER",
+   "POOL_STRUCTURAL_REGISTER"
+  ]
+ },
+ {
+  "class": "DERIVED_GEOMETRY",
+  "count": 95,
+  "fact": "column outlines, vertical chains, drawn sections",
+  "registers": [
+   "COLUMN_OCCURRENCE_REGISTER",
+   "COLUMN_VERTICAL_CHAIN_REGISTER"
+  ]
+ },
+ {
+  "class": "DERIVED_GEOMETRY",
+  "count": 211,
+  "fact": "beam spans, supports, centreline / clear lengths",
+  "registers": [
+   "BEAM_OCCURRENCE_REGISTER"
+  ]
+ },
+ {
+  "class": "DERIVED_GEOMETRY",
+  "count": 91,
+  "fact": "slab panel polygons, Lx / Ly, edge continuity",
+  "registers": [
+   "SLAB_PANEL_REGISTER"
+  ]
+ },
+ {
+  "class": "DERIVED_GEOMETRY",
+  "count": 3,
+  "fact": "tie-band topology read from the detail geometry",
+  "registers": [
+   "COLUMN_TIE_TOPOLOGY_RULES"
+  ]
+ },
+ {
+  "class": "PROJECT_RULE",
+  "count": 61,
+  "fact": "project general notes / typical-detail rules",
+  "registers": [
+   "STRUCTURAL_PROJECT_RULE_REGISTER"
+  ]
+ },
+ {
+  "class": "ENGINEERING_METHOD",
+  "count": 0,
+  "fact": "engineering methods (tie zone, side bars, stairs ...)",
+  "note": "none approved yet - each open method is an engineering flag"
+ },
+ {
+  "class": "PROJECT_HUMAN_CLAIM",
+  "count": 0,
+  "fact": "project human claims",
+  "note": "none received yet (claim store empty)"
+ },
+ {
+  "class": "GENERIC_ENGINE_RULE",
+  "count": null,
+  "fact": "census + review engine logic",
+  "note": "engine/source/structural_census.py, structural_authority.py, flag_detectors.py ..."
+ }
+]

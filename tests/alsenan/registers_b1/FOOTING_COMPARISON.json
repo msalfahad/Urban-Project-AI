@@ -1,0 +1,435 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_B1_FOOTING_COMPARISON_V1",
+ "types": [
+  {
+   "type": "F",
+   "urban_tags": 5,
+   "urban_computed": 4,
+   "urban_conflict": 1,
+   "manual_count": 4.0,
+   "difference": 1.0,
+   "source_status": "PARTIAL",
+   "count_class": "SOURCE_GAP",
+   "urban_m3": 0.864,
+   "manual_m3": 0.864,
+   "schedule_each_m3": 0.216,
+   "manual_each_m3": 0.216,
+   "manual_dims_equal_schedule": true,
+   "count_row": "CMP-001",
+   "volume_row": "CMP-002",
+   "manual_rows": [
+    "RC:القواعد:13"
+   ]
+  },
+  {
+   "type": "F2",
+   "urban_tags": 2,
+   "urban_computed": 2,
+   "urban_conflict": 0,
+   "manual_count": 2.0,
+   "difference": 0.0,
+   "source_status": "COMPUTED_SHADOW_COMPLETE",
+   "count_class": "MATCH_WITHIN_TOLERANCE",
+   "urban_m3": 2.261,
+   "manual_m3": 2.261,
+   "schedule_each_m3": 1.1305,
+   "manual_each_m3": 1.1305,
+   "manual_dims_equal_schedule": true,
+   "count_row": "CMP-003",
+   "volume_row": "CMP-004",
+   "manual_rows": [
+    "RC:القواعد:14"
+   ]
+  },
+  {
+   "type": "F3",
+   "urban_tags": 2,
+   "urban_computed": 2,
+   "urban_conflict": 0,
+   "manual_count": 1.0,
+   "difference": 1.0,
+   "source_status": "COMPUTED_SHADOW_COMPLETE",
+   "count_class": "BENCHMARK_POSSIBLE_ERROR",
+   "urban_m3": 1.344,
+   "manual_m3": 0.672,
+   "schedule_each_m3": 0.672,
+   "manual_each_m3": 0.672,
+   "manual_dims_equal_schedule": true,
+   "count_row": "CMP-005",
+   "volume_row": "CMP-006",
+   "manual_rows": [
+    "RC:القواعد:15"
+   ]
+  },
+  {
+   "type": "F4",
+   "urban_tags": 2,
+   "urban_computed": 2,
+   "urban_conflict": 0,
+   "manual_count": 2.0,
+   "difference": 0.0,
+   "source_status": "COMPUTED_SHADOW_COMPLETE",
+   "count_class": "MATCH_WITHIN_TOLERANCE",
+   "urban_m3": 3.52,
+   "manual_m3": 3.52,
+   "schedule_each_m3": 1.76,
+   "manual_each_m3": 1.76,
+   "manual_dims_equal_schedule": true,
+   "count_row": "CMP-007",
+   "volume_row": "CMP-008",
+   "manual_rows": [
+    "RC:القواعد:16"
+   ]
+  },
+  {
+   "type": "F5",
+   "urban_tags": 2,
+   "urban_computed": 2,
+   "urban_conflict": 0,
+   "manual_count": 2.0,
+   "difference": 0.0,
+   "source_status": "COMPUTED_SHADOW_COMPLETE",
+   "count_class": "MATCH_WITHIN_TOLERANCE",
+   "urban_m3": 4.032,
+   "manual_m3": 4.032,
+   "schedule_each_m3": 2.016,
+   "manual_each_m3": 2.016,
+   "manual_dims_equal_schedule": true,
+   "count_row": "CMP-009",
+   "volume_row": "CMP-010",
+   "manual_rows": [
+    "RC:القواعد:17"
+   ]
+  },
+  {
+   "type": "F6",
+   "urban_tags": 1,
+   "urban_computed": 1,
+   "urban_conflict": 0,
+   "manual_count": 1.0,
+   "difference": 0.0,
+   "source_status": "COMPUTED_SHADOW_COMPLETE",
+   "count_class": "MATCH_WITHIN_TOLERANCE",
+   "urban_m3": 2.86,
+   "manual_m3": 2.86,
+   "schedule_each_m3": 2.86,
+   "manual_each_m3": 2.86,
+   "manual_dims_equal_schedule": true,
+   "count_row": "CMP-011",
+   "volume_row": "CMP-012",
+   "manual_rows": [
+    "RC:القواعد:18"
+   ]
+  },
+  {
+   "type": "F7",
+   "urban_tags": 0,
+   "urban_computed": 0,
+   "urban_conflict": 0,
+   "manual_count": 0,
+   "difference": 0,
+   "source_status": "NOT_TAGGED_ON_PLAN",
+   "count_class": "MATCH_WITHIN_TOLERANCE",
+   "urban_m3": 0.0,
+   "manual_m3": 0.0,
+   "schedule_each_m3": 3.75,
+   "manual_each_m3": null,
+   "manual_dims_equal_schedule": null,
+   "count_row": "CMP-013",
+   "volume_row": "CMP-014",
+   "manual_rows": []
+  },
+  {
+   "type": "F8",
+   "urban_tags": 1,
+   "urban_computed": 1,
+   "urban_conflict": 0,
+   "manual_count": 1.0,
+   "difference": 0.0,
+   "source_status": "COMPUTED_SHADOW_COMPLETE",
+   "count_class": "MATCH_WITHIN_TOLERANCE",
+   "urban_m3": 7.2,
+   "manual_m3": 7.2,
+   "schedule_each_m3": 7.2,
+   "manual_each_m3": 7.2,
+   "manual_dims_equal_schedule": true,
+   "count_row": "CMP-015",
+   "volume_row": "CMP-016",
+   "manual_rows": [
+    "RC:القواعد:19"
+   ]
+  },
+  {
+   "type": "F9",
+   "urban_tags": 1,
+   "urban_computed": 1,
+   "urban_conflict": 0,
+   "manual_count": 1.0,
+   "difference": 0.0,
+   "source_status": "COMPUTED_SHADOW_COMPLETE",
+   "count_class": "MATCH_WITHIN_TOLERANCE",
+   "urban_m3": 5.049,
+   "manual_m3": 5.049,
+   "schedule_each_m3": 5.049,
+   "manual_each_m3": 5.049,
+   "manual_dims_equal_schedule": true,
+   "count_row": "CMP-017",
+   "volume_row": "CMP-018",
+   "manual_rows": [
+    "RC:القواعد:20"
+   ]
+  },
+  {
+   "type": "FF",
+   "urban_tags": 1,
+   "urban_computed": 1,
+   "urban_conflict": 0,
+   "manual_count": 1.0,
+   "difference": 0.0,
+   "source_status": "COMPUTED_SHADOW_COMPLETE",
+   "count_class": "MATCH_WITHIN_TOLERANCE",
+   "urban_m3": 11.385,
+   "manual_m3": 11.385,
+   "schedule_each_m3": 11.385,
+   "manual_each_m3": 11.385,
+   "manual_dims_equal_schedule": true,
+   "count_row": "CMP-019",
+   "volume_row": "CMP-020",
+   "manual_rows": [
+    "RC:القواعد:27"
+   ]
+  },
+  {
+   "type": "FN",
+   "urban_tags": 4,
+   "urban_computed": 4,
+   "urban_conflict": 0,
+   "manual_count": 4.0,
+   "difference": 0.0,
+   "source_status": "COMPUTED_SHADOW_COMPLETE",
+   "count_class": "MATCH_WITHIN_TOLERANCE",
+   "urban_m3": 1.2,
+   "manual_m3": 1.2,
+   "schedule_each_m3": 0.3,
+   "manual_each_m3": 0.3,
+   "manual_dims_equal_schedule": true,
+   "count_row": "CMP-021",
+   "volume_row": "CMP-022",
+   "manual_rows": [
+    "RC:القواعد:28"
+   ]
+  },
+  {
+   "type": "F10",
+   "urban_tags": 1,
+   "urban_computed": 0,
+   "urban_conflict": 1,
+   "manual_count": 1.0,
+   "difference": 0.0,
+   "source_status": "BLOCKED",
+   "count_class": "MATCH_WITHIN_TOLERANCE",
+   "urban_m3": null,
+   "manual_m3": 1.96,
+   "schedule_each_m3": 1.96,
+   "manual_each_m3": 1.96,
+   "manual_dims_equal_schedule": true,
+   "count_row": "CMP-023",
+   "volume_row": "CMP-024",
+   "manual_rows": [
+    "RC:القواعد:21"
+   ]
+  },
+  {
+   "type": "F11",
+   "urban_tags": 1,
+   "urban_computed": 1,
+   "urban_conflict": 0,
+   "manual_count": 1.0,
+   "difference": 0.0,
+   "source_status": "COMPUTED_SHADOW_COMPLETE",
+   "count_class": "MATCH_WITHIN_TOLERANCE",
+   "urban_m3": 2.625,
+   "manual_m3": 2.625,
+   "schedule_each_m3": 2.625,
+   "manual_each_m3": 2.625,
+   "manual_dims_equal_schedule": true,
+   "count_row": "CMP-025",
+   "volume_row": "CMP-026",
+   "manual_rows": [
+    "RC:القواعد:22"
+   ]
+  },
+  {
+   "type": "F12",
+   "urban_tags": 1,
+   "urban_computed": 1,
+   "urban_conflict": 0,
+   "manual_count": 1.0,
+   "difference": 0.0,
+   "source_status": "COMPUTED_SHADOW_COMPLETE",
+   "count_class": "MATCH_WITHIN_TOLERANCE",
+   "urban_m3": 9.856,
+   "manual_m3": 9.856,
+   "schedule_each_m3": 9.856,
+   "manual_each_m3": 9.856,
+   "manual_dims_equal_schedule": true,
+   "count_row": "CMP-027",
+   "volume_row": "CMP-028",
+   "manual_rows": [
+    "RC:القواعد:23"
+   ]
+  },
+  {
+   "type": "F13",
+   "urban_tags": 1,
+   "urban_computed": 1,
+   "urban_conflict": 0,
+   "manual_count": 1.0,
+   "difference": 0.0,
+   "source_status": "COMPUTED_SHADOW_COMPLETE",
+   "count_class": "MATCH_WITHIN_TOLERANCE",
+   "urban_m3": 5.16,
+   "manual_m3": 5.16,
+   "schedule_each_m3": 5.16,
+   "manual_each_m3": 5.16,
+   "manual_dims_equal_schedule": true,
+   "count_row": "CMP-029",
+   "volume_row": "CMP-030",
+   "manual_rows": [
+    "RC:القواعد:24"
+   ]
+  },
+  {
+   "type": "F14",
+   "urban_tags": 1,
+   "urban_computed": 1,
+   "urban_conflict": 0,
+   "manual_count": 1.0,
+   "difference": 0.0,
+   "source_status": "COMPUTED_SHADOW_COMPLETE",
+   "count_class": "MATCH_WITHIN_TOLERANCE",
+   "urban_m3": 6.27,
+   "manual_m3": 6.27,
+   "schedule_each_m3": 6.27,
+   "manual_each_m3": 6.27,
+   "manual_dims_equal_schedule": true,
+   "count_row": "CMP-031",
+   "volume_row": "CMP-032",
+   "manual_rows": [
+    "RC:القواعد:25"
+   ]
+  },
+  {
+   "type": "F15",
+   "urban_tags": 1,
+   "urban_computed": 1,
+   "urban_conflict": 0,
+   "manual_count": 1.0,
+   "difference": 0.0,
+   "source_status": "COMPUTED_SHADOW_COMPLETE",
+   "count_class": "MATCH_WITHIN_TOLERANCE",
+   "urban_m3": 0.72,
+   "manual_m3": 0.72,
+   "schedule_each_m3": 0.72,
+   "manual_each_m3": 0.72,
+   "manual_dims_equal_schedule": true,
+   "count_row": "CMP-033",
+   "volume_row": "CMP-034",
+   "manual_rows": [
+    "RC:القواعد:26"
+   ]
+  }
+ ],
+ "like_for_like": [
+  "CMP-035",
+  "CMP-036"
+ ],
+ "all_reported": "CMP-037",
+ "urban_total_m3": 64.346,
+ "manual_total_m3": 65.634,
+ "like_for_like_m3": {
+  "urban": 62.138,
+  "manual": 62.138
+ },
+ "straps": [
+  {
+   "type": "SB1",
+   "B_cm": 70.0,
+   "D_cm": 50.0,
+   "manual_dims_m": [
+    0.5,
+    0.7,
+    4.55
+   ],
+   "section_equal": true,
+   "urban_length_m": 4.551032,
+   "manual_length_m": 4.55,
+   "urban_m3": 1.592861,
+   "manual_m3": 1.5924999999999998,
+   "support_outline_conflicts": [
+    "RING:ALSENAN_ST7757_DXF|H6939|"
+   ],
+   "length_row": "CMP-038",
+   "volume_row": "CMP-039",
+   "manual_method": "length x B x D, length rounded to 0.05 m"
+  },
+  {
+   "type": "SB2",
+   "B_cm": 100.0,
+   "D_cm": 50.0,
+   "manual_dims_m": [
+    0.5,
+    1.0,
+    2.3
+   ],
+   "section_equal": true,
+   "urban_length_m": 2.294052,
+   "manual_length_m": 2.3,
+   "urban_m3": 1.147026,
+   "manual_m3": 1.15,
+   "support_outline_conflicts": [],
+   "length_row": "CMP-040",
+   "volume_row": "CMP-041",
+   "manual_method": "length x B x D, length rounded to 0.05 m"
+  },
+  {
+   "type": "SB3",
+   "B_cm": 50.0,
+   "D_cm": 40.0,
+   "manual_dims_m": [
+    0.4,
+    0.5,
+    3.25
+   ],
+   "section_equal": true,
+   "urban_length_m": 3.259261,
+   "manual_length_m": 3.25,
+   "urban_m3": 0.651852,
+   "manual_m3": 0.65,
+   "support_outline_conflicts": [],
+   "length_row": "CMP-042",
+   "volume_row": "CMP-043",
+   "manual_method": "length x B x D, length rounded to 0.05 m"
+  }
+ ],
+ "foundation": {
+  "decomposition": [
+   "CMP-044",
+   "CMP-045",
+   "CMP-046",
+   "CMP-047",
+   "CMP-048",
+   "CMP-049",
+   "CMP-050"
+  ],
+  "manual_footing_sheet_total_m3": 77.6305,
+  "manual_footing_sheet_includes": [
+   "footings",
+   "strap beams",
+   "perimeter strap"
+  ],
+  "urban_deterministic_m3": 67.737739,
+  "manual_like_for_like_m3": 69.0265,
+  "note": "Urban footings + straps is compared only against manual footings + straps; blinding, perimeter strap, ground slab, ground beams, necks and elevator walls are separate scopes"
+ }
+}

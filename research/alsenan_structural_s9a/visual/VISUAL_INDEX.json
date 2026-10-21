@@ -1,0 +1,277 @@
+{
+ "figures": [
+  {
+   "figure": "F01",
+   "file": "01_COVERAGE_DASHBOARD.svg",
+   "labels": [
+    "SOURCE-DERIVED"
+   ],
+   "sources": [
+    "S9 01 / 02 / 14",
+    "S9A 01, 10"
+   ],
+   "title": "1  Structural quantity coverage"
+  },
+  {
+   "figure": "F02-FDN",
+   "file": "02_LOCATION_MAP_FOUNDATION.svg",
+   "labels": [
+    "SOURCE-DERIVED"
+   ],
+   "sources": [
+    "ST7757.dxf FP / GBP",
+    "S1 footing and column registers",
+    "S9 02"
+   ],
+   "title": "2  Foundation: footings, necks and the lift pit"
+  },
+  {
+   "figure": "F02-GFRS",
+   "file": "02_LOCATION_MAP_GF_ROOF.svg",
+   "labels": [
+    "SOURCE-DERIVED"
+   ],
+   "sources": [
+    "ST7757.dxf",
+    "S1 slab, column, beam registers",
+    "S9 02",
+    "S9A 03, 05, 09"
+   ],
+   "title": "2  GF roof slab: what is released, conditional or blocked"
+  },
+  {
+   "figure": "F02-FFRS",
+   "file": "02_LOCATION_MAP_1F_ROOF.svg",
+   "labels": [
+    "SOURCE-DERIVED"
+   ],
+   "sources": [
+    "ST7757.dxf",
+    "S1 slab, column, beam registers",
+    "S9 02",
+    "S9A 03, 05, 09"
+   ],
+   "title": "2  1F roof slab: what is released, conditional or blocked"
+  },
+  {
+   "figure": "F02-SFRS",
+   "file": "02_LOCATION_MAP_2F_ROOF.svg",
+   "labels": [
+    "SOURCE-DERIVED"
+   ],
+   "sources": [
+    "ST7757.dxf",
+    "S1 slab, column, beam registers",
+    "S9 02",
+    "S9A 03, 05, 09"
+   ],
+   "title": "2  2F roof slab: what is released, conditional or blocked"
+  },
+  {
+   "figure": "F03A",
+   "file": "03_BANDS_ON_PLAN.svg",
+   "labels": [
+    "SOURCE-DERIVED"
+   ],
+   "sources": [
+    "ST7757.dxf",
+    "S9A 03 / 04"
+   ],
+   "title": "3  The eight cantilever bands on the slab plans"
+  },
+  {
+   "figure": "F03B",
+   "file": "03_BAND_DETAILS.svg",
+   "labels": [
+    "SOURCE-DERIVED"
+   ],
+   "sources": [
+    "ST7757.dxf",
+    "S1 slab register",
+    "S9A 03 / 04"
+   ],
+   "title": "3  Each band at its drawn position"
+  },
+  {
+   "figure": "F03C",
+   "file": "03_BAND_HATCH_SPACING.svg",
+   "labels": [
+    "SOURCE-DERIVED"
+   ],
+   "sources": [
+    "ST7757.pdf p.4 - 6",
+    "ST7757.dxf",
+    "S9A 03 / 04"
+   ],
+   "title": "3  Which legend symbol each band's hatch matches"
+  },
+  {
+   "figure": "F04A",
+   "file": "04_BEAM_CONVENTIONS.svg",
+   "labels": [
+    "SCHEMATIC",
+    "CONDITIONAL"
+   ],
+   "sources": [
+    "S1 beam schedule",
+    "PRE-S7 thickness",
+    "S9A 05"
+   ],
+   "title": "4  The two readings of the beam schedule depth H"
+  },
+  {
+   "figure": "F04B",
+   "file": "04_BEAM_CONVENTION_TOTALS.svg",
+   "labels": [
+    "CONDITIONAL"
+   ],
+   "sources": [
+    "S9A 05 / 06"
+   ],
+   "title": "4  Beam concrete under each reading, by storey"
+  },
+  {
+   "figure": "F05A",
+   "file": "05_SLAB_BEAM_OVERLAP.svg",
+   "labels": [
+    "SCHEMATIC"
+   ],
+   "sources": [
+    "S9A 07",
+    "S1 slab register"
+   ],
+   "title": "5  Slab, beam and column overlaps: gross to net"
+  },
+  {
+   "figure": "F05B",
+   "file": "05_PANEL_FACE_EXAMPLE.svg",
+   "labels": [
+    "SOURCE-DERIVED"
+   ],
+   "sources": [
+    "ST7757.dxf",
+    "S1 slab register",
+    "S9A 07"
+   ],
+   "title": "5  One released panel: its edges are the drawn beam faces"
+  },
+  {
+   "figure": "F06A",
+   "file": "06_COLUMN_SCHEDULE_VS_PLAN.svg",
+   "labels": [
+    "SOURCE-DERIVED",
+    "SCHEMATIC"
+   ],
+   "sources": [
+    "S1 column registers",
+    "ST7757.dxf",
+    "S9A 09"
+   ],
+   "title": "6  The 28 columns whose drawn section differs from the schedule"
+  },
+  {
+   "figure": "F06B",
+   "file": "06_GROUND_BEAM_LENGTH_CLASSES.svg",
+   "labels": [
+    "SOURCE-DERIVED",
+    "CONDITIONAL"
+   ],
+   "sources": [
+    "S5 occurrence lengths",
+    "p.13 titles",
+    "S9A 08"
+   ],
+   "title": "6  Ground beams: which length picks the section?"
+  },
+  {
+   "figure": "F07",
+   "file": "07_LIFT_AND_FOOTING_OWNERSHIP.svg",
+   "labels": [
+    "SOURCE-DERIVED",
+    "SCHEMATIC"
+   ],
+   "sources": [
+    "ST7757.dxf FP / GBP",
+    "S1 footing and column registers",
+    "S9 02",
+    "S8.8 C-01"
+   ],
+   "title": "7  Lift pit and footing: one owner per element"
+  },
+  {
+   "figure": "F08A",
+   "file": "08_RELEASED_CONCRETE.svg",
+   "labels": [
+    "SOURCE-DERIVED"
+   ],
+   "sources": [
+    "S9 14",
+    "S9A 01 / 11"
+   ],
+   "title": "8  Released concrete by family"
+  },
+  {
+   "figure": "F08B",
+   "file": "08_RELEASED_REINFORCEMENT.svg",
+   "labels": [
+    "SOURCE-DERIVED"
+   ],
+   "sources": [
+    "S9 14",
+    "S9A 01 / 11"
+   ],
+   "title": "8  Released reinforcement by family"
+  },
+  {
+   "figure": "F08C",
+   "file": "08_CONDITIONAL_CONCRETE.svg",
+   "labels": [
+    "CONDITIONAL"
+   ],
+   "sources": [
+    "S9A 13 / 14",
+    "S9 02"
+   ],
+   "title": "8  Concrete waiting on an answer"
+  },
+  {
+   "figure": "F09",
+   "file": "09_BLOCKED_AND_MISSING.svg",
+   "labels": [
+    "SOURCE-DERIVED"
+   ],
+   "sources": [
+    "S9 01 / 02",
+    "S9A 10"
+   ],
+   "title": "9  What is not released, by family"
+  },
+  {
+   "figure": "F10",
+   "file": "10_RFI_UNLOCK_RANKING.svg",
+   "labels": [
+    "CONDITIONAL"
+   ],
+   "sources": [
+    "S9A 13 / 14"
+   ],
+   "title": "10  Which engineer answers unlock the most"
+  }
+ ],
+ "labels": {
+  "CONDITIONAL": "holds only under an unconfirmed reading; never released, never in a total",
+  "SCHEMATIC": "explains a rule or a reading; not a drawn position",
+  "SOURCE-DERIVED": "drawn where the source puts it: DXF entities, S1 polygons, register coordinates"
+ },
+ "lane_groups": {
+  "BLOCKED_UNQUANTIFIED": "BLK",
+  "CONDITIONAL_NOT_RELEASED": "COND",
+  "EXCLUDED_OWNED_BY_OTHER_FAMILY": "OWN",
+  "INDICATIVE_ONLY_NOT_RELEASED": "COND",
+  "NOT_APPLICABLE": "OWN",
+  "NOT_IN_SOURCE": "BLK",
+  "RELEASED_FROZEN_STAGE": "REL",
+  "RELEASED_S9_DELTA": "REL",
+  "SOURCE_CONFLICT": "CONF"
+ }
+}

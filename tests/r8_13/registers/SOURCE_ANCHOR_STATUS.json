@@ -1,0 +1,16 @@
+{
+ "SCHEMA": "URBAN_R8_13_SOURCE_ANCHOR_STATUS_V1",
+ "state": "NOT_ESTABLISHED",
+ "dxf_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+ "dwg_candidate_sha256": "e4babbc2ded14d8b01d64fbfd4b373e6a09ba60c4490a56e6305a82c9e47171f",
+ "decoders_found_locally": {
+  "dwg2dxf": null,
+  "dwgread": null,
+  "ODAFileConverter": null,
+  "TeighaFileConverter": null
+ },
+ "ezdxf": "1.4.4",
+ "why": "no local DWG decoder (libredwg dwg2dxf / dwgread, ODA / Teigha converter) is installed; ezdxf reads DXF only. No unpinned software was downloaded. V4 and Q-13 did not wait on this",
+ "effect": "SOURCE_ANCHOR stays a release blocker on every new-revision row",
+ "next": "R8.14: a pinned, hash-locked decoder (libredwg release tarball + sha256 in DONORS.lock) and a DWG -> DXF entity-level reconciliation of the measured region"
+}

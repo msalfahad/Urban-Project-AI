@@ -1,0 +1,3971 @@
+{
+ "rate_count_vs_spacing_with_ends": {
+  "levels_rate_count": 1661,
+  "levels_spacing_with_ends": 1756,
+  "quantification": {
+   "alternative": "SPACING_WITH_ENDS = ceil(zone length / spacing) + 1",
+   "alternative_kg": 1402.322,
+   "current": "RATE_COUNT = ceil(rate x zone length)",
+   "current_kg": 1324.963,
+   "quantity_affected_kg": 77.36,
+   "question": "Is the per-metre tie count applied as rate x length, or as a spacing with a tie at both ends?",
+   "resolved_by_policy": {
+    "authority": "URBAN_OWNER_RULE (S3.1 §22B: an explicit '/m' count is a rate per metre)",
+    "method": "RATE_COUNT",
+    "notation": "RATE_PER_M"
+   }
+  }
+ },
+ "rows": [
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 5.404,
+    "hook_kg": 0.593,
+    "levels": 10,
+    "links": 10,
+    "perimeter_lb_kg": 5.404,
+    "zone_mm": 1600.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 5.945,
+    "hook_kg": 0.652,
+    "levels": 11,
+    "links": 11,
+    "perimeter_lb_kg": 5.945,
+    "zone_mm": 1600.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 7.566,
+    "hook_kg": 0.83,
+    "levels": 14,
+    "links": 14,
+    "perimeter_lb_kg": 7.566,
+    "zone_mm": 2200.0
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 8.107,
+    "hook_kg": 0.889,
+    "levels": 15,
+    "links": 15,
+    "perimeter_lb_kg": 8.107,
+    "zone_mm": 2200.0
+   },
+   "drawn_section_mm": null,
+   "floor": "FOUNDATION",
+   "lap_kg_alternative": 14.159,
+   "lap_kg_current": 8.091,
+   "occurrence_id": "COL-C-X01-Y01-FOUNDATION",
+   "ties_kg_drawn_section": null,
+   "type": "C"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 5.404,
+    "hook_kg": 0.593,
+    "levels": 10,
+    "links": 10,
+    "perimeter_lb_kg": 5.404,
+    "zone_mm": 1600.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 5.945,
+    "hook_kg": 0.652,
+    "levels": 11,
+    "links": 11,
+    "perimeter_lb_kg": 5.945,
+    "zone_mm": 1600.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 7.566,
+    "hook_kg": 0.83,
+    "levels": 14,
+    "links": 14,
+    "perimeter_lb_kg": 7.566,
+    "zone_mm": 2200.0
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 8.107,
+    "hook_kg": 0.889,
+    "levels": 15,
+    "links": 15,
+    "perimeter_lb_kg": 8.107,
+    "zone_mm": 2200.0
+   },
+   "drawn_section_mm": null,
+   "floor": "FOUNDATION",
+   "lap_kg_alternative": 14.159,
+   "lap_kg_current": 8.091,
+   "occurrence_id": "COL-C-X01-Y05-FOUNDATION",
+   "ties_kg_drawn_section": null,
+   "type": "C"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 5.945,
+    "hook_kg": 0.652,
+    "levels": 11,
+    "links": 11,
+    "perimeter_lb_kg": 5.945,
+    "zone_mm": 1800.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 6.485,
+    "hook_kg": 0.711,
+    "levels": 12,
+    "links": 12,
+    "perimeter_lb_kg": 6.485,
+    "zone_mm": 1800.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 7.566,
+    "hook_kg": 0.83,
+    "levels": 14,
+    "links": 14,
+    "perimeter_lb_kg": 7.566,
+    "zone_mm": 2200.0
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 8.107,
+    "hook_kg": 0.889,
+    "levels": 15,
+    "links": 15,
+    "perimeter_lb_kg": 8.107,
+    "zone_mm": 2200.0
+   },
+   "drawn_section_mm": null,
+   "floor": "FOUNDATION",
+   "lap_kg_alternative": 14.159,
+   "lap_kg_current": 8.091,
+   "occurrence_id": "COL-C-X02-Y05-FOUNDATION",
+   "ties_kg_drawn_section": null,
+   "type": "C"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 5.945,
+    "hook_kg": 0.652,
+    "levels": 11,
+    "links": 11,
+    "perimeter_lb_kg": 5.945,
+    "zone_mm": 1800.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 6.485,
+    "hook_kg": 0.711,
+    "levels": 12,
+    "links": 12,
+    "perimeter_lb_kg": 6.485,
+    "zone_mm": 1800.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 7.566,
+    "hook_kg": 0.83,
+    "levels": 14,
+    "links": 14,
+    "perimeter_lb_kg": 7.566,
+    "zone_mm": 2200.0
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 8.107,
+    "hook_kg": 0.889,
+    "levels": 15,
+    "links": 15,
+    "perimeter_lb_kg": 8.107,
+    "zone_mm": 2200.0
+   },
+   "drawn_section_mm": null,
+   "floor": "FOUNDATION",
+   "lap_kg_alternative": 14.159,
+   "lap_kg_current": 8.091,
+   "occurrence_id": "COL-C-X06-Y01-FOUNDATION",
+   "ties_kg_drawn_section": null,
+   "type": "C"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 5.404,
+    "hook_kg": 0.593,
+    "levels": 10,
+    "links": 10,
+    "perimeter_lb_kg": 5.404,
+    "zone_mm": 1600.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 5.945,
+    "hook_kg": 0.652,
+    "levels": 11,
+    "links": 11,
+    "perimeter_lb_kg": 5.945,
+    "zone_mm": 1600.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 6.485,
+    "hook_kg": 0.711,
+    "levels": 12,
+    "links": 12,
+    "perimeter_lb_kg": 6.485,
+    "zone_mm": 2000.0
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 7.026,
+    "hook_kg": 0.77,
+    "levels": 13,
+    "links": 13,
+    "perimeter_lb_kg": 7.026,
+    "zone_mm": 2000.0
+   },
+   "drawn_section_mm": null,
+   "floor": "FOUNDATION",
+   "lap_kg_alternative": 14.159,
+   "lap_kg_current": 8.091,
+   "occurrence_id": "COL-C-X16-Y01-FOUNDATION",
+   "ties_kg_drawn_section": null,
+   "type": "C"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 5.404,
+    "hook_kg": 0.593,
+    "levels": 10,
+    "links": 10,
+    "perimeter_lb_kg": 5.404,
+    "zone_mm": 1550.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 5.945,
+    "hook_kg": 0.652,
+    "levels": 11,
+    "links": 11,
+    "perimeter_lb_kg": 5.945,
+    "zone_mm": 1550.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 6.485,
+    "hook_kg": 0.711,
+    "levels": 12,
+    "links": 12,
+    "perimeter_lb_kg": 6.485,
+    "zone_mm": 1950.0
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 7.026,
+    "hook_kg": 0.77,
+    "levels": 13,
+    "links": 13,
+    "perimeter_lb_kg": 7.026,
+    "zone_mm": 1950.0
+   },
+   "drawn_section_mm": [
+    200,
+    500
+   ],
+   "floor": "FOUNDATION",
+   "lap_kg_alternative": 14.159,
+   "lap_kg_current": 8.091,
+   "occurrence_id": "COL-C1-X09-Y09-FOUNDATION",
+   "ties_kg_drawn_section": 5.207,
+   "type": "C1"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 10.375,
+    "hook_kg": 1.067,
+    "levels": 9,
+    "links": 18,
+    "perimeter_lb_kg": 6.286,
+    "zone_mm": 1400.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 11.528,
+    "hook_kg": 1.185,
+    "levels": 10,
+    "links": 20,
+    "perimeter_lb_kg": 6.985,
+    "zone_mm": 1400.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 13.833,
+    "hook_kg": 1.422,
+    "levels": 12,
+    "links": 24,
+    "perimeter_lb_kg": 8.382,
+    "zone_mm": 2000.0
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 14.986,
+    "hook_kg": 1.541,
+    "levels": 13,
+    "links": 26,
+    "perimeter_lb_kg": 9.08,
+    "zone_mm": 2000.0
+   },
+   "drawn_section_mm": null,
+   "floor": "FOUNDATION",
+   "lap_kg_alternative": 17.699,
+   "lap_kg_current": 10.114,
+   "occurrence_id": "COL-C10-X15-Y01-FOUNDATION",
+   "ties_kg_drawn_section": null,
+   "type": "C10"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 22.392,
+    "hook_kg": 1.778,
+    "levels": 10,
+    "links": 30,
+    "perimeter_lb_kg": 10.145,
+    "zone_mm": 1600.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 24.631,
+    "hook_kg": 1.956,
+    "levels": 11,
+    "links": 33,
+    "perimeter_lb_kg": 11.16,
+    "zone_mm": 1600.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 26.871,
+    "hook_kg": 2.133,
+    "levels": 12,
+    "links": 36,
+    "perimeter_lb_kg": 12.174,
+    "zone_mm": 2000.0
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 29.11,
+    "hook_kg": 2.311,
+    "levels": 13,
+    "links": 39,
+    "perimeter_lb_kg": 13.189,
+    "zone_mm": 2000.0
+   },
+   "drawn_section_mm": null,
+   "floor": "FOUNDATION",
+   "lap_kg_alternative": 24.778,
+   "lap_kg_current": 14.159,
+   "occurrence_id": "COL-C11-X06-Y04-FOUNDATION",
+   "ties_kg_drawn_section": null,
+   "type": "C11"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 20.153,
+    "hook_kg": 1.6,
+    "levels": 9,
+    "links": 27,
+    "perimeter_lb_kg": 9.131,
+    "zone_mm": 1400.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 22.392,
+    "hook_kg": 1.778,
+    "levels": 10,
+    "links": 30,
+    "perimeter_lb_kg": 10.145,
+    "zone_mm": 1400.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 26.871,
+    "hook_kg": 2.133,
+    "levels": 12,
+    "links": 36,
+    "perimeter_lb_kg": 12.174,
+    "zone_mm": 2000.0
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 29.11,
+    "hook_kg": 2.311,
+    "levels": 13,
+    "links": 39,
+    "perimeter_lb_kg": 13.189,
+    "zone_mm": 2000.0
+   },
+   "drawn_section_mm": null,
+   "floor": "FOUNDATION",
+   "lap_kg_alternative": 24.778,
+   "lap_kg_current": 14.159,
+   "occurrence_id": "COL-C11-X?-Y01@17913-7462-FOUNDATION",
+   "ties_kg_drawn_section": null,
+   "type": "C11"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 5.945,
+    "hook_kg": 0.652,
+    "levels": 11,
+    "links": 11,
+    "perimeter_lb_kg": 5.945,
+    "zone_mm": 1750.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 6.485,
+    "hook_kg": 0.711,
+    "levels": 12,
+    "links": 12,
+    "perimeter_lb_kg": 6.485,
+    "zone_mm": 1750.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 7.026,
+    "hook_kg": 0.77,
+    "levels": 13,
+    "links": 13,
+    "perimeter_lb_kg": 7.026,
+    "zone_mm": 2150.0
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 7.566,
+    "hook_kg": 0.83,
+    "levels": 14,
+    "links": 14,
+    "perimeter_lb_kg": 7.566,
+    "zone_mm": 2150.0
+   },
+   "drawn_section_mm": null,
+   "floor": "FOUNDATION",
+   "lap_kg_alternative": 14.159,
+   "lap_kg_current": 8.091,
+   "occurrence_id": "COL-C2-X08-Y10-FOUNDATION",
+   "ties_kg_drawn_section": null,
+   "type": "C2"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 5.404,
+    "hook_kg": 0.593,
+    "levels": 10,
+    "links": 10,
+    "perimeter_lb_kg": 5.404,
+    "zone_mm": 1550.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 5.945,
+    "hook_kg": 0.652,
+    "levels": 11,
+    "links": 11,
+    "perimeter_lb_kg": 5.945,
+    "zone_mm": 1550.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 6.485,
+    "hook_kg": 0.711,
+    "levels": 12,
+    "links": 12,
+    "perimeter_lb_kg": 6.485,
+    "zone_mm": 1950.0
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 7.026,
+    "hook_kg": 0.77,
+    "levels": 13,
+    "links": 13,
+    "perimeter_lb_kg": 7.026,
+    "zone_mm": 1950.0
+   },
+   "drawn_section_mm": [
+    200,
+    500
+   ],
+   "floor": "FOUNDATION",
+   "lap_kg_alternative": 14.159,
+   "lap_kg_current": 8.091,
+   "occurrence_id": "COL-C2-X09-Y07-FOUNDATION",
+   "ties_kg_drawn_section": 5.207,
+   "type": "C2"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 5.945,
+    "hook_kg": 0.652,
+    "levels": 11,
+    "links": 11,
+    "perimeter_lb_kg": 5.945,
+    "zone_mm": 1750.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 6.485,
+    "hook_kg": 0.711,
+    "levels": 12,
+    "links": 12,
+    "perimeter_lb_kg": 6.485,
+    "zone_mm": 1750.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 7.026,
+    "hook_kg": 0.77,
+    "levels": 13,
+    "links": 13,
+    "perimeter_lb_kg": 7.026,
+    "zone_mm": 2150.0
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 7.566,
+    "hook_kg": 0.83,
+    "levels": 14,
+    "links": 14,
+    "perimeter_lb_kg": 7.566,
+    "zone_mm": 2150.0
+   },
+   "drawn_section_mm": null,
+   "floor": "FOUNDATION",
+   "lap_kg_alternative": 14.159,
+   "lap_kg_current": 8.091,
+   "occurrence_id": "COL-C2-X09-Y10-FOUNDATION",
+   "ties_kg_drawn_section": null,
+   "type": "C2"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 5.404,
+    "hook_kg": 0.593,
+    "levels": 10,
+    "links": 10,
+    "perimeter_lb_kg": 5.404,
+    "zone_mm": 1550.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 5.945,
+    "hook_kg": 0.652,
+    "levels": 11,
+    "links": 11,
+    "perimeter_lb_kg": 5.945,
+    "zone_mm": 1550.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 6.485,
+    "hook_kg": 0.711,
+    "levels": 12,
+    "links": 12,
+    "perimeter_lb_kg": 6.485,
+    "zone_mm": 1950.0
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 7.026,
+    "hook_kg": 0.77,
+    "levels": 13,
+    "links": 13,
+    "perimeter_lb_kg": 7.026,
+    "zone_mm": 1950.0
+   },
+   "drawn_section_mm": [
+    200,
+    500
+   ],
+   "floor": "FOUNDATION",
+   "lap_kg_alternative": 14.159,
+   "lap_kg_current": 8.091,
+   "occurrence_id": "COL-C2-X10-Y09-FOUNDATION",
+   "ties_kg_drawn_section": 5.207,
+   "type": "C2"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 5.404,
+    "hook_kg": 0.593,
+    "levels": 10,
+    "links": 10,
+    "perimeter_lb_kg": 5.404,
+    "zone_mm": 1600.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 5.945,
+    "hook_kg": 0.652,
+    "levels": 11,
+    "links": 11,
+    "perimeter_lb_kg": 5.945,
+    "zone_mm": 1600.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 7.566,
+    "hook_kg": 0.83,
+    "levels": 14,
+    "links": 14,
+    "perimeter_lb_kg": 7.566,
+    "zone_mm": 2200.0
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 8.107,
+    "hook_kg": 0.889,
+    "levels": 15,
+    "links": 15,
+    "perimeter_lb_kg": 8.107,
+    "zone_mm": 2200.0
+   },
+   "drawn_section_mm": null,
+   "floor": "FOUNDATION",
+   "lap_kg_alternative": 14.159,
+   "lap_kg_current": 8.091,
+   "occurrence_id": "COL-C3-X03-Y04-FOUNDATION",
+   "ties_kg_drawn_section": null,
+   "type": "C3"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 4.864,
+    "hook_kg": 0.533,
+    "levels": 9,
+    "links": 9,
+    "perimeter_lb_kg": 4.864,
+    "zone_mm": 1500.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 5.404,
+    "hook_kg": 0.593,
+    "levels": 10,
+    "links": 10,
+    "perimeter_lb_kg": 5.404,
+    "zone_mm": 1500.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 7.026,
+    "hook_kg": 0.77,
+    "levels": 13,
+    "links": 13,
+    "perimeter_lb_kg": 7.026,
+    "zone_mm": 2100.0
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 7.566,
+    "hook_kg": 0.83,
+    "levels": 14,
+    "links": 14,
+    "perimeter_lb_kg": 7.566,
+    "zone_mm": 2100.0
+   },
+   "drawn_section_mm": null,
+   "floor": "FOUNDATION",
+   "lap_kg_alternative": 14.159,
+   "lap_kg_current": 8.091,
+   "occurrence_id": "COL-C3-X04-Y01-FOUNDATION",
+   "ties_kg_drawn_section": null,
+   "type": "C3"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 5.945,
+    "hook_kg": 0.652,
+    "levels": 11,
+    "links": 11,
+    "perimeter_lb_kg": 5.945,
+    "zone_mm": 1800.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 6.485,
+    "hook_kg": 0.711,
+    "levels": 12,
+    "links": 12,
+    "perimeter_lb_kg": 6.485,
+    "zone_mm": 1800.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 7.566,
+    "hook_kg": 0.83,
+    "levels": 14,
+    "links": 14,
+    "perimeter_lb_kg": 7.566,
+    "zone_mm": 2200.0
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 8.107,
+    "hook_kg": 0.889,
+    "levels": 15,
+    "links": 15,
+    "perimeter_lb_kg": 8.107,
+    "zone_mm": 2200.0
+   },
+   "drawn_section_mm": null,
+   "floor": "FOUNDATION",
+   "lap_kg_alternative": 14.159,
+   "lap_kg_current": 8.091,
+   "occurrence_id": "COL-C3-X05-Y02-FOUNDATION",
+   "ties_kg_drawn_section": null,
+   "type": "C3"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 4.324,
+    "hook_kg": 0.474,
+    "levels": 8,
+    "links": 8,
+    "perimeter_lb_kg": 4.324,
+    "zone_mm": 1200.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 4.864,
+    "hook_kg": 0.533,
+    "levels": 9,
+    "links": 9,
+    "perimeter_lb_kg": 4.864,
+    "zone_mm": 1200.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 5.945,
+    "hook_kg": 0.652,
+    "levels": 11,
+    "links": 11,
+    "perimeter_lb_kg": 5.945,
+    "zone_mm": 1800.0
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 6.485,
+    "hook_kg": 0.711,
+    "levels": 12,
+    "links": 12,
+    "perimeter_lb_kg": 6.485,
+    "zone_mm": 1800.0
+   },
+   "drawn_section_mm": null,
+   "floor": "FOUNDATION",
+   "lap_kg_alternative": 14.159,
+   "lap_kg_current": 8.091,
+   "occurrence_id": "COL-C3-X08-Y09-FOUNDATION",
+   "ties_kg_drawn_section": null,
+   "type": "C3"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 4.864,
+    "hook_kg": 0.533,
+    "levels": 9,
+    "links": 9,
+    "perimeter_lb_kg": 4.864,
+    "zone_mm": 1400.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 5.404,
+    "hook_kg": 0.593,
+    "levels": 10,
+    "links": 10,
+    "perimeter_lb_kg": 5.404,
+    "zone_mm": 1400.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 6.485,
+    "hook_kg": 0.711,
+    "levels": 12,
+    "links": 12,
+    "perimeter_lb_kg": 6.485,
+    "zone_mm": 2000.0
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 7.026,
+    "hook_kg": 0.77,
+    "levels": 13,
+    "links": 13,
+    "perimeter_lb_kg": 7.026,
+    "zone_mm": 2000.0
+   },
+   "drawn_section_mm": null,
+   "floor": "FOUNDATION",
+   "lap_kg_alternative": 14.159,
+   "lap_kg_current": 8.091,
+   "occurrence_id": "COL-C3-X12-Y01-FOUNDATION",
+   "ties_kg_drawn_section": null,
+   "type": "C3"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 5.404,
+    "hook_kg": 0.593,
+    "levels": 10,
+    "links": 10,
+    "perimeter_lb_kg": 5.404,
+    "zone_mm": 1600.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 5.945,
+    "hook_kg": 0.652,
+    "levels": 11,
+    "links": 11,
+    "perimeter_lb_kg": 5.945,
+    "zone_mm": 1600.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 6.485,
+    "hook_kg": 0.711,
+    "levels": 12,
+    "links": 12,
+    "perimeter_lb_kg": 6.485,
+    "zone_mm": 2000.0
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 7.026,
+    "hook_kg": 0.77,
+    "levels": 13,
+    "links": 13,
+    "perimeter_lb_kg": 7.026,
+    "zone_mm": 2000.0
+   },
+   "drawn_section_mm": null,
+   "floor": "FOUNDATION",
+   "lap_kg_alternative": 14.159,
+   "lap_kg_current": 8.091,
+   "occurrence_id": "COL-C3-X16-Y06-FOUNDATION",
+   "ties_kg_drawn_section": null,
+   "type": "C3"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 5.945,
+    "hook_kg": 0.652,
+    "levels": 11,
+    "links": 11,
+    "perimeter_lb_kg": 5.945,
+    "zone_mm": 1700.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 6.485,
+    "hook_kg": 0.711,
+    "levels": 12,
+    "links": 12,
+    "perimeter_lb_kg": 6.485,
+    "zone_mm": 1700.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 7.026,
+    "hook_kg": 0.77,
+    "levels": 13,
+    "links": 13,
+    "perimeter_lb_kg": 7.026,
+    "zone_mm": 2100.0
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 7.566,
+    "hook_kg": 0.83,
+    "levels": 14,
+    "links": 14,
+    "perimeter_lb_kg": 7.566,
+    "zone_mm": 2100.0
+   },
+   "drawn_section_mm": null,
+   "floor": "FOUNDATION",
+   "lap_kg_alternative": 14.159,
+   "lap_kg_current": 8.091,
+   "occurrence_id": "COL-C4-X13-Y10-FOUNDATION",
+   "ties_kg_drawn_section": null,
+   "type": "C4"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 5.945,
+    "hook_kg": 0.652,
+    "levels": 11,
+    "links": 11,
+    "perimeter_lb_kg": 5.945,
+    "zone_mm": 1700.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 6.485,
+    "hook_kg": 0.711,
+    "levels": 12,
+    "links": 12,
+    "perimeter_lb_kg": 6.485,
+    "zone_mm": 1700.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 7.026,
+    "hook_kg": 0.77,
+    "levels": 13,
+    "links": 13,
+    "perimeter_lb_kg": 7.026,
+    "zone_mm": 2100.0
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 7.566,
+    "hook_kg": 0.83,
+    "levels": 14,
+    "links": 14,
+    "perimeter_lb_kg": 7.566,
+    "zone_mm": 2100.0
+   },
+   "drawn_section_mm": [
+    250,
+    500
+   ],
+   "floor": "FOUNDATION",
+   "lap_kg_alternative": 14.159,
+   "lap_kg_current": 8.091,
+   "occurrence_id": "COL-C4-X15-Y10-FOUNDATION",
+   "ties_kg_drawn_section": 6.162,
+   "type": "C4"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 9.308,
+    "hook_kg": 1.067,
+    "levels": 9,
+    "links": 18,
+    "perimeter_lb_kg": 5.575,
+    "zone_mm": 1400.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 10.343,
+    "hook_kg": 1.185,
+    "levels": 10,
+    "links": 20,
+    "perimeter_lb_kg": 6.195,
+    "zone_mm": 1400.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 12.411,
+    "hook_kg": 1.422,
+    "levels": 12,
+    "links": 24,
+    "perimeter_lb_kg": 7.433,
+    "zone_mm": 2000.0
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 13.446,
+    "hook_kg": 1.541,
+    "levels": 13,
+    "links": 26,
+    "perimeter_lb_kg": 8.053,
+    "zone_mm": 2000.0
+   },
+   "drawn_section_mm": null,
+   "floor": "FOUNDATION",
+   "lap_kg_alternative": 17.699,
+   "lap_kg_current": 10.114,
+   "occurrence_id": "COL-C5-X05-Y04-FOUNDATION",
+   "ties_kg_drawn_section": null,
+   "type": "C5"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 11.377,
+    "hook_kg": 1.304,
+    "levels": 11,
+    "links": 22,
+    "perimeter_lb_kg": 6.814,
+    "zone_mm": 1700.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 12.411,
+    "hook_kg": 1.422,
+    "levels": 12,
+    "links": 24,
+    "perimeter_lb_kg": 7.433,
+    "zone_mm": 1700.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 13.446,
+    "hook_kg": 1.541,
+    "levels": 13,
+    "links": 26,
+    "perimeter_lb_kg": 8.053,
+    "zone_mm": 2100.0
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 14.48,
+    "hook_kg": 1.659,
+    "levels": 14,
+    "links": 28,
+    "perimeter_lb_kg": 8.672,
+    "zone_mm": 2100.0
+   },
+   "drawn_section_mm": null,
+   "floor": "FOUNDATION",
+   "lap_kg_alternative": 17.699,
+   "lap_kg_current": 10.114,
+   "occurrence_id": "COL-C5-X11-Y10-FOUNDATION",
+   "ties_kg_drawn_section": null,
+   "type": "C5"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 9.308,
+    "hook_kg": 1.067,
+    "levels": 9,
+    "links": 18,
+    "perimeter_lb_kg": 5.575,
+    "zone_mm": 1500.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 10.343,
+    "hook_kg": 1.185,
+    "levels": 10,
+    "links": 20,
+    "perimeter_lb_kg": 6.195,
+    "zone_mm": 1500.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 13.446,
+    "hook_kg": 1.541,
+    "levels": 13,
+    "links": 26,
+    "perimeter_lb_kg": 8.053,
+    "zone_mm": 2100.0
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 14.48,
+    "hook_kg": 1.659,
+    "levels": 14,
+    "links": 28,
+    "perimeter_lb_kg": 8.672,
+    "zone_mm": 2100.0
+   },
+   "drawn_section_mm": null,
+   "floor": "FOUNDATION",
+   "lap_kg_alternative": 17.699,
+   "lap_kg_current": 10.114,
+   "occurrence_id": "COL-C5-X14-Y02-FOUNDATION",
+   "ties_kg_drawn_section": null,
+   "type": "C5"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 10.375,
+    "hook_kg": 1.067,
+    "levels": 9,
+    "links": 18,
+    "perimeter_lb_kg": 6.286,
+    "zone_mm": 1400.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 11.528,
+    "hook_kg": 1.185,
+    "levels": 10,
+    "links": 20,
+    "perimeter_lb_kg": 6.985,
+    "zone_mm": 1400.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 13.833,
+    "hook_kg": 1.422,
+    "levels": 12,
+    "links": 24,
+    "perimeter_lb_kg": 8.382,
+    "zone_mm": 2000.0
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 14.986,
+    "hook_kg": 1.541,
+    "levels": 13,
+    "links": 26,
+    "perimeter_lb_kg": 9.08,
+    "zone_mm": 2000.0
+   },
+   "drawn_section_mm": null,
+   "floor": "FOUNDATION",
+   "lap_kg_alternative": 17.699,
+   "lap_kg_current": 10.114,
+   "occurrence_id": "COL-C6-X08-Y04-FOUNDATION",
+   "ties_kg_drawn_section": null,
+   "type": "C6"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 14.865,
+    "hook_kg": 1.6,
+    "levels": 9,
+    "links": 27,
+    "perimeter_lb_kg": 6.997,
+    "zone_mm": 1400.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 16.517,
+    "hook_kg": 1.778,
+    "levels": 10,
+    "links": 30,
+    "perimeter_lb_kg": 7.775,
+    "zone_mm": 1400.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 18.168,
+    "hook_kg": 1.956,
+    "levels": 11,
+    "links": 33,
+    "perimeter_lb_kg": 8.552,
+    "zone_mm": 1800.0
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 19.82,
+    "hook_kg": 2.133,
+    "levels": 12,
+    "links": 36,
+    "perimeter_lb_kg": 9.33,
+    "zone_mm": 1800.0
+   },
+   "drawn_section_mm": null,
+   "floor": "FOUNDATION",
+   "lap_kg_alternative": 21.239,
+   "lap_kg_current": 12.136,
+   "occurrence_id": "COL-C7-X07-Y?@15888-16162-FOUNDATION",
+   "ties_kg_drawn_section": null,
+   "type": "C7"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 16.517,
+    "hook_kg": 1.778,
+    "levels": 10,
+    "links": 30,
+    "perimeter_lb_kg": 7.775,
+    "zone_mm": 1600.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 18.168,
+    "hook_kg": 1.956,
+    "levels": 11,
+    "links": 33,
+    "perimeter_lb_kg": 8.552,
+    "zone_mm": 1600.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 19.82,
+    "hook_kg": 2.133,
+    "levels": 12,
+    "links": 36,
+    "perimeter_lb_kg": 9.33,
+    "zone_mm": 2000.0
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 21.472,
+    "hook_kg": 2.311,
+    "levels": 13,
+    "links": 39,
+    "perimeter_lb_kg": 10.107,
+    "zone_mm": 2000.0
+   },
+   "drawn_section_mm": [
+    300,
+    800
+   ],
+   "floor": "FOUNDATION",
+   "lap_kg_alternative": 21.239,
+   "lap_kg_current": 12.136,
+   "occurrence_id": "COL-C8-X12-Y02-FOUNDATION",
+   "ties_kg_drawn_section": 18.295,
+   "type": "C7"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 17.939,
+    "hook_kg": 1.778,
+    "levels": 10,
+    "links": 30,
+    "perimeter_lb_kg": 8.565,
+    "zone_mm": 1600.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 19.733,
+    "hook_kg": 1.956,
+    "levels": 11,
+    "links": 33,
+    "perimeter_lb_kg": 9.421,
+    "zone_mm": 1600.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 21.527,
+    "hook_kg": 2.133,
+    "levels": 12,
+    "links": 36,
+    "perimeter_lb_kg": 10.278,
+    "zone_mm": 2000.0
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 23.321,
+    "hook_kg": 2.311,
+    "levels": 13,
+    "links": 39,
+    "perimeter_lb_kg": 11.134,
+    "zone_mm": 2000.0
+   },
+   "drawn_section_mm": null,
+   "floor": "FOUNDATION",
+   "lap_kg_alternative": 21.239,
+   "lap_kg_current": 12.136,
+   "occurrence_id": "COL-C8-X15-Y06-FOUNDATION",
+   "ties_kg_drawn_section": null,
+   "type": "C8"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": null,
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": null,
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 24.974,
+    "hook_kg": 2.133,
+    "levels": 12,
+    "links": 36,
+    "perimeter_lb_kg": 11.226,
+    "zone_mm": 1950.0
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 27.055,
+    "hook_kg": 2.311,
+    "levels": 13,
+    "links": 39,
+    "perimeter_lb_kg": 12.162,
+    "zone_mm": 1950.0
+   },
+   "drawn_section_mm": [
+    250,
+    1000
+   ],
+   "floor": "FOUNDATION",
+   "lap_kg_alternative": 24.778,
+   "lap_kg_current": 14.159,
+   "occurrence_id": "COL-C9-X10-Y07-FOUNDATION",
+   "ties_kg_drawn_section": 25.685,
+   "type": "C9"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 18.731,
+    "hook_kg": 1.6,
+    "levels": 9,
+    "links": 27,
+    "perimeter_lb_kg": 8.42,
+    "zone_mm": 1350.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 20.812,
+    "hook_kg": 1.778,
+    "levels": 10,
+    "links": 30,
+    "perimeter_lb_kg": 9.355,
+    "zone_mm": 1350.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 24.974,
+    "hook_kg": 2.133,
+    "levels": 12,
+    "links": 36,
+    "perimeter_lb_kg": 11.226,
+    "zone_mm": 1950.0
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 27.055,
+    "hook_kg": 2.311,
+    "levels": 13,
+    "links": 39,
+    "perimeter_lb_kg": 12.162,
+    "zone_mm": 1950.0
+   },
+   "drawn_section_mm": null,
+   "floor": "FOUNDATION",
+   "lap_kg_alternative": 24.778,
+   "lap_kg_current": 14.159,
+   "occurrence_id": "COL-C9-X13-Y08-FOUNDATION",
+   "ties_kg_drawn_section": null,
+   "type": "C9"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": null,
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": null,
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 4.589,
+    "hook_kg": 0.711,
+    "levels": 12,
+    "links": 12,
+    "perimeter_lb_kg": 4.589,
+    "zone_mm": 2000.0
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 4.971,
+    "hook_kg": 0.77,
+    "levels": 13,
+    "links": 13,
+    "perimeter_lb_kg": 4.971,
+    "zone_mm": 2000.0
+   },
+   "drawn_section_mm": null,
+   "floor": "FOUNDATION",
+   "lap_kg_alternative": 4.743,
+   "lap_kg_current": 2.71,
+   "occurrence_id": "COL-CN-X15-Y?@31208-15726-FOUNDATION",
+   "ties_kg_drawn_section": null,
+   "type": "CN"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 3.442,
+    "hook_kg": 0.533,
+    "levels": 9,
+    "links": 9,
+    "perimeter_lb_kg": 3.442,
+    "zone_mm": 1400.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 3.824,
+    "hook_kg": 0.593,
+    "levels": 10,
+    "links": 10,
+    "perimeter_lb_kg": 3.824,
+    "zone_mm": 1400.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 4.207,
+    "hook_kg": 0.652,
+    "levels": 11,
+    "links": 11,
+    "perimeter_lb_kg": 4.207,
+    "zone_mm": 1800.0
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 4.589,
+    "hook_kg": 0.711,
+    "levels": 12,
+    "links": 12,
+    "perimeter_lb_kg": 4.589,
+    "zone_mm": 1800.0
+   },
+   "drawn_section_mm": null,
+   "floor": "FOUNDATION",
+   "lap_kg_alternative": 4.743,
+   "lap_kg_current": 2.71,
+   "occurrence_id": "COL-CN-X16-Y03-FOUNDATION",
+   "ties_kg_drawn_section": null,
+   "type": "CN"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 4.207,
+    "hook_kg": 0.652,
+    "levels": 11,
+    "links": 11,
+    "perimeter_lb_kg": 4.207,
+    "zone_mm": 1700.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 4.589,
+    "hook_kg": 0.711,
+    "levels": 12,
+    "links": 12,
+    "perimeter_lb_kg": 4.589,
+    "zone_mm": 1700.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 4.971,
+    "hook_kg": 0.77,
+    "levels": 13,
+    "links": 13,
+    "perimeter_lb_kg": 4.971,
+    "zone_mm": 2100.0
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 5.354,
+    "hook_kg": 0.83,
+    "levels": 14,
+    "links": 14,
+    "perimeter_lb_kg": 5.354,
+    "zone_mm": 2100.0
+   },
+   "drawn_section_mm": null,
+   "floor": "FOUNDATION",
+   "lap_kg_alternative": 4.743,
+   "lap_kg_current": 2.71,
+   "occurrence_id": "COL-CN-X?-Y10@31108-20498-FOUNDATION",
+   "ties_kg_drawn_section": null,
+   "type": "CN"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 3.442,
+    "hook_kg": 0.533,
+    "levels": 9,
+    "links": 9,
+    "perimeter_lb_kg": 3.442,
+    "zone_mm": 1400.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 3.824,
+    "hook_kg": 0.593,
+    "levels": 10,
+    "links": 10,
+    "perimeter_lb_kg": 3.824,
+    "zone_mm": 1400.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 4.207,
+    "hook_kg": 0.652,
+    "levels": 11,
+    "links": 11,
+    "perimeter_lb_kg": 4.207,
+    "zone_mm": 1800.0
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 4.589,
+    "hook_kg": 0.711,
+    "levels": 12,
+    "links": 12,
+    "perimeter_lb_kg": 4.589,
+    "zone_mm": 1800.0
+   },
+   "drawn_section_mm": null,
+   "floor": "FOUNDATION",
+   "lap_kg_alternative": 4.743,
+   "lap_kg_current": 2.71,
+   "occurrence_id": "COL-CN-X?-Y?@24058-12787-FOUNDATION",
+   "ties_kg_drawn_section": null,
+   "type": "CN"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 3.442,
+    "hook_kg": 0.533,
+    "levels": 9,
+    "links": 9,
+    "perimeter_lb_kg": 3.442,
+    "zone_mm": 1400.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 3.824,
+    "hook_kg": 0.593,
+    "levels": 10,
+    "links": 10,
+    "perimeter_lb_kg": 3.824,
+    "zone_mm": 1400.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 4.207,
+    "hook_kg": 0.652,
+    "levels": 11,
+    "links": 11,
+    "perimeter_lb_kg": 4.207,
+    "zone_mm": 1800.0
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 4.589,
+    "hook_kg": 0.711,
+    "levels": 12,
+    "links": 12,
+    "perimeter_lb_kg": 4.589,
+    "zone_mm": 1800.0
+   },
+   "drawn_section_mm": null,
+   "floor": "FOUNDATION",
+   "lap_kg_alternative": 4.743,
+   "lap_kg_current": 2.71,
+   "occurrence_id": "COL-CN-X?-Y?@28583-12787-FOUNDATION",
+   "ties_kg_drawn_section": null,
+   "type": "CN"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": null,
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": null,
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 5.354,
+    "hook_kg": 0.83,
+    "levels": 14,
+    "links": 14,
+    "perimeter_lb_kg": 5.354,
+    "zone_mm": 2200.0
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 5.736,
+    "hook_kg": 0.889,
+    "levels": 15,
+    "links": 15,
+    "perimeter_lb_kg": 5.736,
+    "zone_mm": 2200.0
+   },
+   "drawn_section_mm": null,
+   "floor": "FOUNDATION",
+   "lap_kg_alternative": 4.743,
+   "lap_kg_current": 2.71,
+   "occurrence_id": "COL-CN-X?-Y?@29108-18112-FOUNDATION",
+   "ties_kg_drawn_section": null,
+   "type": "CN"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 10.613,
+    "hook_kg": 1.363,
+    "levels": 23,
+    "links": 23,
+    "perimeter_lb_kg": 10.613,
+    "zone_mm": 3750.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 11.074,
+    "hook_kg": 1.422,
+    "levels": 24,
+    "links": 24,
+    "perimeter_lb_kg": 11.074,
+    "zone_mm": 3750.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 12.459,
+    "hook_kg": 1.6,
+    "levels": 27,
+    "links": 27,
+    "perimeter_lb_kg": 12.459,
+    "zone_mm": 4500
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 12.92,
+    "hook_kg": 1.659,
+    "levels": 28,
+    "links": 28,
+    "perimeter_lb_kg": 12.92,
+    "zone_mm": 4500
+   },
+   "drawn_section_mm": [
+    200,
+    400
+   ],
+   "floor": "GF",
+   "lap_kg_alternative": 14.159,
+   "lap_kg_current": 8.091,
+   "occurrence_id": "COL-C-X01-Y01-GF",
+   "ties_kg_drawn_section": 10.159,
+   "type": "C"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 10.613,
+    "hook_kg": 1.363,
+    "levels": 23,
+    "links": 23,
+    "perimeter_lb_kg": 10.613,
+    "zone_mm": 3750.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 11.074,
+    "hook_kg": 1.422,
+    "levels": 24,
+    "links": 24,
+    "perimeter_lb_kg": 11.074,
+    "zone_mm": 3750.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 12.459,
+    "hook_kg": 1.6,
+    "levels": 27,
+    "links": 27,
+    "perimeter_lb_kg": 12.459,
+    "zone_mm": 4500
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 12.92,
+    "hook_kg": 1.659,
+    "levels": 28,
+    "links": 28,
+    "perimeter_lb_kg": 12.92,
+    "zone_mm": 4500
+   },
+   "drawn_section_mm": [
+    200,
+    400
+   ],
+   "floor": "GF",
+   "lap_kg_alternative": 14.159,
+   "lap_kg_current": 8.091,
+   "occurrence_id": "COL-C-X01-Y05-GF",
+   "ties_kg_drawn_section": 10.159,
+   "type": "C"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 11.536,
+    "hook_kg": 1.481,
+    "levels": 25,
+    "links": 25,
+    "perimeter_lb_kg": 11.536,
+    "zone_mm": 4100.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 11.997,
+    "hook_kg": 1.541,
+    "levels": 26,
+    "links": 26,
+    "perimeter_lb_kg": 11.997,
+    "zone_mm": 4100.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 12.459,
+    "hook_kg": 1.6,
+    "levels": 27,
+    "links": 27,
+    "perimeter_lb_kg": 12.459,
+    "zone_mm": 4500
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 12.92,
+    "hook_kg": 1.659,
+    "levels": 28,
+    "links": 28,
+    "perimeter_lb_kg": 12.92,
+    "zone_mm": 4500
+   },
+   "drawn_section_mm": [
+    200,
+    400
+   ],
+   "floor": "GF",
+   "lap_kg_alternative": 14.159,
+   "lap_kg_current": 8.091,
+   "occurrence_id": "COL-C-X02-Y05-GF",
+   "ties_kg_drawn_section": 11.042,
+   "type": "C"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 10.613,
+    "hook_kg": 1.363,
+    "levels": 23,
+    "links": 23,
+    "perimeter_lb_kg": 10.613,
+    "zone_mm": 3750.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 11.074,
+    "hook_kg": 1.422,
+    "levels": 24,
+    "links": 24,
+    "perimeter_lb_kg": 11.074,
+    "zone_mm": 3750.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 12.459,
+    "hook_kg": 1.6,
+    "levels": 27,
+    "links": 27,
+    "perimeter_lb_kg": 12.459,
+    "zone_mm": 4500
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 12.92,
+    "hook_kg": 1.659,
+    "levels": 28,
+    "links": 28,
+    "perimeter_lb_kg": 12.92,
+    "zone_mm": 4500
+   },
+   "drawn_section_mm": [
+    200,
+    400
+   ],
+   "floor": "GF",
+   "lap_kg_alternative": 14.159,
+   "lap_kg_current": 8.091,
+   "occurrence_id": "COL-C-X06-Y01-GF",
+   "ties_kg_drawn_section": 10.159,
+   "type": "C"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 10.613,
+    "hook_kg": 1.363,
+    "levels": 23,
+    "links": 23,
+    "perimeter_lb_kg": 10.613,
+    "zone_mm": 3750.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 11.074,
+    "hook_kg": 1.422,
+    "levels": 24,
+    "links": 24,
+    "perimeter_lb_kg": 11.074,
+    "zone_mm": 3750.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 12.459,
+    "hook_kg": 1.6,
+    "levels": 27,
+    "links": 27,
+    "perimeter_lb_kg": 12.459,
+    "zone_mm": 4500
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 12.92,
+    "hook_kg": 1.659,
+    "levels": 28,
+    "links": 28,
+    "perimeter_lb_kg": 12.92,
+    "zone_mm": 4500
+   },
+   "drawn_section_mm": [
+    200,
+    400
+   ],
+   "floor": "GF",
+   "lap_kg_alternative": 14.159,
+   "lap_kg_current": 8.091,
+   "occurrence_id": "COL-C-X16-Y01-GF",
+   "ties_kg_drawn_section": 10.159,
+   "type": "C"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 10.613,
+    "hook_kg": 1.363,
+    "levels": 23,
+    "links": 23,
+    "perimeter_lb_kg": 10.613,
+    "zone_mm": 3750.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 11.074,
+    "hook_kg": 1.422,
+    "levels": 24,
+    "links": 24,
+    "perimeter_lb_kg": 11.074,
+    "zone_mm": 3750.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 12.459,
+    "hook_kg": 1.6,
+    "levels": 27,
+    "links": 27,
+    "perimeter_lb_kg": 12.459,
+    "zone_mm": 4500
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 12.92,
+    "hook_kg": 1.659,
+    "levels": 28,
+    "links": 28,
+    "perimeter_lb_kg": 12.92,
+    "zone_mm": 4500
+   },
+   "drawn_section_mm": null,
+   "floor": "GF",
+   "lap_kg_alternative": 14.159,
+   "lap_kg_current": 8.091,
+   "occurrence_id": "COL-C1-X09-Y09-GF",
+   "ties_kg_drawn_section": null,
+   "type": "C1"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 23.623,
+    "hook_kg": 2.607,
+    "levels": 22,
+    "links": 44,
+    "perimeter_lb_kg": 14.497,
+    "zone_mm": 3650.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 24.697,
+    "hook_kg": 2.726,
+    "levels": 23,
+    "links": 46,
+    "perimeter_lb_kg": 15.156,
+    "zone_mm": 3650.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 28.992,
+    "hook_kg": 3.2,
+    "levels": 27,
+    "links": 54,
+    "perimeter_lb_kg": 17.792,
+    "zone_mm": 4500
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 30.066,
+    "hook_kg": 3.319,
+    "levels": 28,
+    "links": 56,
+    "perimeter_lb_kg": 18.451,
+    "zone_mm": 4500
+   },
+   "drawn_section_mm": null,
+   "floor": "GF",
+   "lap_kg_alternative": 17.699,
+   "lap_kg_current": 10.114,
+   "occurrence_id": "COL-C10-X15-Y01-GF",
+   "ties_kg_drawn_section": null,
+   "type": "C10"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 46.655,
+    "hook_kg": 3.911,
+    "levels": 22,
+    "links": 66,
+    "perimeter_lb_kg": 21.45,
+    "zone_mm": 3650.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 48.776,
+    "hook_kg": 4.089,
+    "levels": 23,
+    "links": 69,
+    "perimeter_lb_kg": 22.425,
+    "zone_mm": 3650.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 57.259,
+    "hook_kg": 4.8,
+    "levels": 27,
+    "links": 81,
+    "perimeter_lb_kg": 26.325,
+    "zone_mm": 4500
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 59.379,
+    "hook_kg": 4.978,
+    "levels": 28,
+    "links": 84,
+    "perimeter_lb_kg": 27.3,
+    "zone_mm": 4500
+   },
+   "drawn_section_mm": null,
+   "floor": "GF",
+   "lap_kg_alternative": 24.778,
+   "lap_kg_current": 14.159,
+   "occurrence_id": "COL-C11-X06-Y04-GF",
+   "ties_kg_drawn_section": null,
+   "type": "C11"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 48.776,
+    "hook_kg": 4.089,
+    "levels": 23,
+    "links": 69,
+    "perimeter_lb_kg": 22.425,
+    "zone_mm": 3750.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 50.897,
+    "hook_kg": 4.267,
+    "levels": 24,
+    "links": 72,
+    "perimeter_lb_kg": 23.4,
+    "zone_mm": 3750.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 57.259,
+    "hook_kg": 4.8,
+    "levels": 27,
+    "links": 81,
+    "perimeter_lb_kg": 26.325,
+    "zone_mm": 4500
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 59.379,
+    "hook_kg": 4.978,
+    "levels": 28,
+    "links": 84,
+    "perimeter_lb_kg": 27.3,
+    "zone_mm": 4500
+   },
+   "drawn_section_mm": null,
+   "floor": "GF",
+   "lap_kg_alternative": 24.778,
+   "lap_kg_current": 14.159,
+   "occurrence_id": "COL-C11-X?-Y01@17913-7462-GF",
+   "ties_kg_drawn_section": null,
+   "type": "C11"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 11.536,
+    "hook_kg": 1.481,
+    "levels": 25,
+    "links": 25,
+    "perimeter_lb_kg": 11.536,
+    "zone_mm": 4100.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 11.997,
+    "hook_kg": 1.541,
+    "levels": 26,
+    "links": 26,
+    "perimeter_lb_kg": 11.997,
+    "zone_mm": 4100.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 12.459,
+    "hook_kg": 1.6,
+    "levels": 27,
+    "links": 27,
+    "perimeter_lb_kg": 12.459,
+    "zone_mm": 4500
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 12.92,
+    "hook_kg": 1.659,
+    "levels": 28,
+    "links": 28,
+    "perimeter_lb_kg": 12.92,
+    "zone_mm": 4500
+   },
+   "drawn_section_mm": null,
+   "floor": "GF",
+   "lap_kg_alternative": 14.159,
+   "lap_kg_current": 8.091,
+   "occurrence_id": "COL-C2-X08-Y10-GF",
+   "ties_kg_drawn_section": null,
+   "type": "C2"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 10.613,
+    "hook_kg": 1.363,
+    "levels": 23,
+    "links": 23,
+    "perimeter_lb_kg": 10.613,
+    "zone_mm": 3750.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 11.074,
+    "hook_kg": 1.422,
+    "levels": 24,
+    "links": 24,
+    "perimeter_lb_kg": 11.074,
+    "zone_mm": 3750.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 12.459,
+    "hook_kg": 1.6,
+    "levels": 27,
+    "links": 27,
+    "perimeter_lb_kg": 12.459,
+    "zone_mm": 4500
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 12.92,
+    "hook_kg": 1.659,
+    "levels": 28,
+    "links": 28,
+    "perimeter_lb_kg": 12.92,
+    "zone_mm": 4500
+   },
+   "drawn_section_mm": null,
+   "floor": "GF",
+   "lap_kg_alternative": 14.159,
+   "lap_kg_current": 8.091,
+   "occurrence_id": "COL-C2-X09-Y07-GF",
+   "ties_kg_drawn_section": null,
+   "type": "C2"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 11.074,
+    "hook_kg": 1.422,
+    "levels": 24,
+    "links": 24,
+    "perimeter_lb_kg": 11.074,
+    "zone_mm": 4000.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 11.536,
+    "hook_kg": 1.481,
+    "levels": 25,
+    "links": 25,
+    "perimeter_lb_kg": 11.536,
+    "zone_mm": 4000.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 12.459,
+    "hook_kg": 1.6,
+    "levels": 27,
+    "links": 27,
+    "perimeter_lb_kg": 12.459,
+    "zone_mm": 4500
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 12.92,
+    "hook_kg": 1.659,
+    "levels": 28,
+    "links": 28,
+    "perimeter_lb_kg": 12.92,
+    "zone_mm": 4500
+   },
+   "drawn_section_mm": null,
+   "floor": "GF",
+   "lap_kg_alternative": 14.159,
+   "lap_kg_current": 8.091,
+   "occurrence_id": "COL-C2-X09-Y10-GF",
+   "ties_kg_drawn_section": null,
+   "type": "C2"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 11.536,
+    "hook_kg": 1.481,
+    "levels": 25,
+    "links": 25,
+    "perimeter_lb_kg": 11.536,
+    "zone_mm": 4100.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 11.997,
+    "hook_kg": 1.541,
+    "levels": 26,
+    "links": 26,
+    "perimeter_lb_kg": 11.997,
+    "zone_mm": 4100.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 12.459,
+    "hook_kg": 1.6,
+    "levels": 27,
+    "links": 27,
+    "perimeter_lb_kg": 12.459,
+    "zone_mm": 4500
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 12.92,
+    "hook_kg": 1.659,
+    "levels": 28,
+    "links": 28,
+    "perimeter_lb_kg": 12.92,
+    "zone_mm": 4500
+   },
+   "drawn_section_mm": null,
+   "floor": "GF",
+   "lap_kg_alternative": 14.159,
+   "lap_kg_current": 8.091,
+   "occurrence_id": "COL-C2-X10-Y09-GF",
+   "ties_kg_drawn_section": null,
+   "type": "C2"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 11.522,
+    "hook_kg": 1.363,
+    "levels": 23,
+    "links": 23,
+    "perimeter_lb_kg": 11.522,
+    "zone_mm": 3750.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 12.023,
+    "hook_kg": 1.422,
+    "levels": 24,
+    "links": 24,
+    "perimeter_lb_kg": 12.023,
+    "zone_mm": 3750.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 13.525,
+    "hook_kg": 1.6,
+    "levels": 27,
+    "links": 27,
+    "perimeter_lb_kg": 13.525,
+    "zone_mm": 4500
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 14.026,
+    "hook_kg": 1.659,
+    "levels": 28,
+    "links": 28,
+    "perimeter_lb_kg": 14.026,
+    "zone_mm": 4500
+   },
+   "drawn_section_mm": null,
+   "floor": "GF",
+   "lap_kg_alternative": 14.159,
+   "lap_kg_current": 8.091,
+   "occurrence_id": "COL-C3-X03-Y04-GF",
+   "ties_kg_drawn_section": null,
+   "type": "C3"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 11.522,
+    "hook_kg": 1.363,
+    "levels": 23,
+    "links": 23,
+    "perimeter_lb_kg": 11.522,
+    "zone_mm": 3750.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 12.023,
+    "hook_kg": 1.422,
+    "levels": 24,
+    "links": 24,
+    "perimeter_lb_kg": 12.023,
+    "zone_mm": 3750.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 13.525,
+    "hook_kg": 1.6,
+    "levels": 27,
+    "links": 27,
+    "perimeter_lb_kg": 13.525,
+    "zone_mm": 4500
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 14.026,
+    "hook_kg": 1.659,
+    "levels": 28,
+    "links": 28,
+    "perimeter_lb_kg": 14.026,
+    "zone_mm": 4500
+   },
+   "drawn_section_mm": [
+    200,
+    400
+   ],
+   "floor": "GF",
+   "lap_kg_alternative": 14.159,
+   "lap_kg_current": 8.091,
+   "occurrence_id": "COL-C3-X04-Y01-GF",
+   "ties_kg_drawn_section": 10.159,
+   "type": "C3"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 12.023,
+    "hook_kg": 1.422,
+    "levels": 24,
+    "links": 24,
+    "perimeter_lb_kg": 12.023,
+    "zone_mm": 4000.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 12.523,
+    "hook_kg": 1.481,
+    "levels": 25,
+    "links": 25,
+    "perimeter_lb_kg": 12.523,
+    "zone_mm": 4000.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 13.525,
+    "hook_kg": 1.6,
+    "levels": 27,
+    "links": 27,
+    "perimeter_lb_kg": 13.525,
+    "zone_mm": 4500
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 14.026,
+    "hook_kg": 1.659,
+    "levels": 28,
+    "links": 28,
+    "perimeter_lb_kg": 14.026,
+    "zone_mm": 4500
+   },
+   "drawn_section_mm": null,
+   "floor": "GF",
+   "lap_kg_alternative": 14.159,
+   "lap_kg_current": 8.091,
+   "occurrence_id": "COL-C3-X05-Y02-GF",
+   "ties_kg_drawn_section": null,
+   "type": "C3"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 10.019,
+    "hook_kg": 1.185,
+    "levels": 20,
+    "links": 20,
+    "perimeter_lb_kg": 10.019,
+    "zone_mm": 3300.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 10.52,
+    "hook_kg": 1.244,
+    "levels": 21,
+    "links": 21,
+    "perimeter_lb_kg": 10.52,
+    "zone_mm": 3300.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 13.525,
+    "hook_kg": 1.6,
+    "levels": 27,
+    "links": 27,
+    "perimeter_lb_kg": 13.525,
+    "zone_mm": 4500
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 14.026,
+    "hook_kg": 1.659,
+    "levels": 28,
+    "links": 28,
+    "perimeter_lb_kg": 14.026,
+    "zone_mm": 4500
+   },
+   "drawn_section_mm": null,
+   "floor": "GF",
+   "lap_kg_alternative": 14.159,
+   "lap_kg_current": 8.091,
+   "occurrence_id": "COL-C3-X08-Y09-GF",
+   "ties_kg_drawn_section": null,
+   "type": "C3"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 11.522,
+    "hook_kg": 1.363,
+    "levels": 23,
+    "links": 23,
+    "perimeter_lb_kg": 11.522,
+    "zone_mm": 3750.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 12.023,
+    "hook_kg": 1.422,
+    "levels": 24,
+    "links": 24,
+    "perimeter_lb_kg": 12.023,
+    "zone_mm": 3750.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 13.525,
+    "hook_kg": 1.6,
+    "levels": 27,
+    "links": 27,
+    "perimeter_lb_kg": 13.525,
+    "zone_mm": 4500
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 14.026,
+    "hook_kg": 1.659,
+    "levels": 28,
+    "links": 28,
+    "perimeter_lb_kg": 14.026,
+    "zone_mm": 4500
+   },
+   "drawn_section_mm": null,
+   "floor": "GF",
+   "lap_kg_alternative": 14.159,
+   "lap_kg_current": 8.091,
+   "occurrence_id": "COL-C3-X12-Y01-GF",
+   "ties_kg_drawn_section": null,
+   "type": "C3"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 11.522,
+    "hook_kg": 1.363,
+    "levels": 23,
+    "links": 23,
+    "perimeter_lb_kg": 11.522,
+    "zone_mm": 3750.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 12.023,
+    "hook_kg": 1.422,
+    "levels": 24,
+    "links": 24,
+    "perimeter_lb_kg": 12.023,
+    "zone_mm": 3750.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 13.525,
+    "hook_kg": 1.6,
+    "levels": 27,
+    "links": 27,
+    "perimeter_lb_kg": 13.525,
+    "zone_mm": 4500
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 14.026,
+    "hook_kg": 1.659,
+    "levels": 28,
+    "links": 28,
+    "perimeter_lb_kg": 14.026,
+    "zone_mm": 4500
+   },
+   "drawn_section_mm": [
+    200,
+    500
+   ],
+   "floor": "GF",
+   "lap_kg_alternative": 14.159,
+   "lap_kg_current": 8.091,
+   "occurrence_id": "COL-C3-X16-Y06-GF",
+   "ties_kg_drawn_section": 11.976,
+   "type": "C3"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 11.522,
+    "hook_kg": 1.363,
+    "levels": 23,
+    "links": 23,
+    "perimeter_lb_kg": 11.522,
+    "zone_mm": 3750.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 12.023,
+    "hook_kg": 1.422,
+    "levels": 24,
+    "links": 24,
+    "perimeter_lb_kg": 12.023,
+    "zone_mm": 3750.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 13.525,
+    "hook_kg": 1.6,
+    "levels": 27,
+    "links": 27,
+    "perimeter_lb_kg": 13.525,
+    "zone_mm": 4500
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 14.026,
+    "hook_kg": 1.659,
+    "levels": 28,
+    "links": 28,
+    "perimeter_lb_kg": 14.026,
+    "zone_mm": 4500
+   },
+   "drawn_section_mm": null,
+   "floor": "GF",
+   "lap_kg_alternative": 14.159,
+   "lap_kg_current": 8.091,
+   "occurrence_id": "COL-C4-X13-Y10-GF",
+   "ties_kg_drawn_section": null,
+   "type": "C4"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 11.522,
+    "hook_kg": 1.363,
+    "levels": 23,
+    "links": 23,
+    "perimeter_lb_kg": 11.522,
+    "zone_mm": 3750.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 12.023,
+    "hook_kg": 1.422,
+    "levels": 24,
+    "links": 24,
+    "perimeter_lb_kg": 12.023,
+    "zone_mm": 3750.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 13.525,
+    "hook_kg": 1.6,
+    "levels": 27,
+    "links": 27,
+    "perimeter_lb_kg": 13.525,
+    "zone_mm": 4500
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 14.026,
+    "hook_kg": 1.659,
+    "levels": 28,
+    "links": 28,
+    "perimeter_lb_kg": 14.026,
+    "zone_mm": 4500
+   },
+   "drawn_section_mm": null,
+   "floor": "GF",
+   "lap_kg_alternative": 14.159,
+   "lap_kg_current": 8.091,
+   "occurrence_id": "COL-C4-X15-Y10-GF",
+   "ties_kg_drawn_section": null,
+   "type": "C4"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 21.971,
+    "hook_kg": 2.726,
+    "levels": 23,
+    "links": 46,
+    "perimeter_lb_kg": 13.339,
+    "zone_mm": 3750.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 22.926,
+    "hook_kg": 2.844,
+    "levels": 24,
+    "links": 48,
+    "perimeter_lb_kg": 13.919,
+    "zone_mm": 3750.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 25.792,
+    "hook_kg": 3.2,
+    "levels": 27,
+    "links": 54,
+    "perimeter_lb_kg": 15.659,
+    "zone_mm": 4500
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 26.747,
+    "hook_kg": 3.319,
+    "levels": 28,
+    "links": 56,
+    "perimeter_lb_kg": 16.239,
+    "zone_mm": 4500
+   },
+   "drawn_section_mm": null,
+   "floor": "GF",
+   "lap_kg_alternative": 17.699,
+   "lap_kg_current": 10.114,
+   "occurrence_id": "COL-C5-X05-Y04-GF",
+   "ties_kg_drawn_section": null,
+   "type": "C5"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 22.926,
+    "hook_kg": 2.844,
+    "levels": 24,
+    "links": 48,
+    "perimeter_lb_kg": 13.919,
+    "zone_mm": 4000.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 23.881,
+    "hook_kg": 2.963,
+    "levels": 25,
+    "links": 50,
+    "perimeter_lb_kg": 14.499,
+    "zone_mm": 4000.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 25.792,
+    "hook_kg": 3.2,
+    "levels": 27,
+    "links": 54,
+    "perimeter_lb_kg": 15.659,
+    "zone_mm": 4500
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 26.747,
+    "hook_kg": 3.319,
+    "levels": 28,
+    "links": 56,
+    "perimeter_lb_kg": 16.239,
+    "zone_mm": 4500
+   },
+   "drawn_section_mm": null,
+   "floor": "GF",
+   "lap_kg_alternative": 17.699,
+   "lap_kg_current": 10.114,
+   "occurrence_id": "COL-C5-X11-Y10-GF",
+   "ties_kg_drawn_section": null,
+   "type": "C5"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 21.971,
+    "hook_kg": 2.726,
+    "levels": 23,
+    "links": 46,
+    "perimeter_lb_kg": 13.339,
+    "zone_mm": 3750.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 22.926,
+    "hook_kg": 2.844,
+    "levels": 24,
+    "links": 48,
+    "perimeter_lb_kg": 13.919,
+    "zone_mm": 3750.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 25.792,
+    "hook_kg": 3.2,
+    "levels": 27,
+    "links": 54,
+    "perimeter_lb_kg": 15.659,
+    "zone_mm": 4500
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 26.747,
+    "hook_kg": 3.319,
+    "levels": 28,
+    "links": 56,
+    "perimeter_lb_kg": 16.239,
+    "zone_mm": 4500
+   },
+   "drawn_section_mm": null,
+   "floor": "GF",
+   "lap_kg_alternative": 17.699,
+   "lap_kg_current": 10.114,
+   "occurrence_id": "COL-C5-X14-Y02-GF",
+   "ties_kg_drawn_section": null,
+   "type": "C5"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 25.771,
+    "hook_kg": 2.844,
+    "levels": 24,
+    "links": 48,
+    "perimeter_lb_kg": 15.815,
+    "zone_mm": 4000.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 26.844,
+    "hook_kg": 2.963,
+    "levels": 25,
+    "links": 50,
+    "perimeter_lb_kg": 16.474,
+    "zone_mm": 4000.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 28.992,
+    "hook_kg": 3.2,
+    "levels": 27,
+    "links": 54,
+    "perimeter_lb_kg": 17.792,
+    "zone_mm": 4500
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 30.066,
+    "hook_kg": 3.319,
+    "levels": 28,
+    "links": 56,
+    "perimeter_lb_kg": 18.451,
+    "zone_mm": 4500
+   },
+   "drawn_section_mm": null,
+   "floor": "GF",
+   "lap_kg_alternative": 17.699,
+   "lap_kg_current": 10.114,
+   "occurrence_id": "COL-C6-X08-Y04-GF",
+   "ties_kg_drawn_section": null,
+   "type": "C6"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 30.663,
+    "hook_kg": 3.556,
+    "levels": 20,
+    "links": 60,
+    "perimeter_lb_kg": 14.76,
+    "zone_mm": 3300.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 32.196,
+    "hook_kg": 3.733,
+    "levels": 21,
+    "links": 63,
+    "perimeter_lb_kg": 15.497,
+    "zone_mm": 3300.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 41.395,
+    "hook_kg": 4.8,
+    "levels": 27,
+    "links": 81,
+    "perimeter_lb_kg": 19.925,
+    "zone_mm": 4500
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 42.928,
+    "hook_kg": 4.978,
+    "levels": 28,
+    "links": 84,
+    "perimeter_lb_kg": 20.663,
+    "zone_mm": 4500
+   },
+   "drawn_section_mm": null,
+   "floor": "GF",
+   "lap_kg_alternative": 21.239,
+   "lap_kg_current": 12.136,
+   "occurrence_id": "COL-C7-X07-Y?@15888-16162-GF",
+   "ties_kg_drawn_section": null,
+   "type": "C7"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 35.263,
+    "hook_kg": 4.089,
+    "levels": 23,
+    "links": 69,
+    "perimeter_lb_kg": 16.973,
+    "zone_mm": 3750.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 36.796,
+    "hook_kg": 4.267,
+    "levels": 24,
+    "links": 72,
+    "perimeter_lb_kg": 17.711,
+    "zone_mm": 3750.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 41.395,
+    "hook_kg": 4.8,
+    "levels": 27,
+    "links": 81,
+    "perimeter_lb_kg": 19.925,
+    "zone_mm": 4500
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 42.928,
+    "hook_kg": 4.978,
+    "levels": 28,
+    "links": 84,
+    "perimeter_lb_kg": 20.663,
+    "zone_mm": 4500
+   },
+   "drawn_section_mm": [
+    250,
+    800
+   ],
+   "floor": "GF",
+   "lap_kg_alternative": 21.239,
+   "lap_kg_current": 12.136,
+   "occurrence_id": "COL-C8-X12-Y02-GF",
+   "ties_kg_drawn_section": 39.351,
+   "type": "C7"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 36.858,
+    "hook_kg": 3.911,
+    "levels": 22,
+    "links": 66,
+    "perimeter_lb_kg": 17.974,
+    "zone_mm": 3650.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 38.534,
+    "hook_kg": 4.089,
+    "levels": 23,
+    "links": 69,
+    "perimeter_lb_kg": 18.791,
+    "zone_mm": 3650.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 45.235,
+    "hook_kg": 4.8,
+    "levels": 27,
+    "links": 81,
+    "perimeter_lb_kg": 22.059,
+    "zone_mm": 4500
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 46.911,
+    "hook_kg": 4.978,
+    "levels": 28,
+    "links": 84,
+    "perimeter_lb_kg": 22.876,
+    "zone_mm": 4500
+   },
+   "drawn_section_mm": null,
+   "floor": "GF",
+   "lap_kg_alternative": 21.239,
+   "lap_kg_current": 12.136,
+   "occurrence_id": "COL-C8-X15-Y06-GF",
+   "ties_kg_drawn_section": null,
+   "type": "C8"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 45.141,
+    "hook_kg": 4.089,
+    "levels": 23,
+    "links": 69,
+    "perimeter_lb_kg": 20.608,
+    "zone_mm": 3750.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 47.104,
+    "hook_kg": 4.267,
+    "levels": 24,
+    "links": 72,
+    "perimeter_lb_kg": 21.504,
+    "zone_mm": 3750.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 52.992,
+    "hook_kg": 4.8,
+    "levels": 27,
+    "links": 81,
+    "perimeter_lb_kg": 24.192,
+    "zone_mm": 4500
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 54.955,
+    "hook_kg": 4.978,
+    "levels": 28,
+    "links": 84,
+    "perimeter_lb_kg": 25.088,
+    "zone_mm": 4500
+   },
+   "drawn_section_mm": null,
+   "floor": "GF",
+   "lap_kg_alternative": 24.778,
+   "lap_kg_current": 14.159,
+   "occurrence_id": "COL-C9-X10-Y07-GF",
+   "ties_kg_drawn_section": null,
+   "type": "C9"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 45.141,
+    "hook_kg": 4.089,
+    "levels": 23,
+    "links": 69,
+    "perimeter_lb_kg": 20.608,
+    "zone_mm": 3750.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 47.104,
+    "hook_kg": 4.267,
+    "levels": 24,
+    "links": 72,
+    "perimeter_lb_kg": 21.504,
+    "zone_mm": 3750.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 52.992,
+    "hook_kg": 4.8,
+    "levels": 27,
+    "links": 81,
+    "perimeter_lb_kg": 24.192,
+    "zone_mm": 4500
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 54.955,
+    "hook_kg": 4.978,
+    "levels": 28,
+    "links": 84,
+    "perimeter_lb_kg": 25.088,
+    "zone_mm": 4500
+   },
+   "drawn_section_mm": null,
+   "floor": "GF",
+   "lap_kg_alternative": 24.778,
+   "lap_kg_current": 14.159,
+   "occurrence_id": "COL-C9-X13-Y08-GF",
+   "ties_kg_drawn_section": null,
+   "type": "C9"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 9.69,
+    "hook_kg": 1.244,
+    "levels": 21,
+    "links": 21,
+    "perimeter_lb_kg": 9.69,
+    "zone_mm": 3450.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 10.152,
+    "hook_kg": 1.304,
+    "levels": 22,
+    "links": 22,
+    "perimeter_lb_kg": 10.152,
+    "zone_mm": 3450.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 11.997,
+    "hook_kg": 1.541,
+    "levels": 26,
+    "links": 26,
+    "perimeter_lb_kg": 11.997,
+    "zone_mm": 4200
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 12.459,
+    "hook_kg": 1.6,
+    "levels": 27,
+    "links": 27,
+    "perimeter_lb_kg": 12.459,
+    "zone_mm": 4200
+   },
+   "drawn_section_mm": null,
+   "floor": "1F",
+   "lap_kg_alternative": 10.619,
+   "lap_kg_current": 6.068,
+   "occurrence_id": "COL-C1-X09-Y09-1F",
+   "ties_kg_drawn_section": null,
+   "type": "C1"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 10.613,
+    "hook_kg": 1.363,
+    "levels": 23,
+    "links": 23,
+    "perimeter_lb_kg": 10.613,
+    "zone_mm": 3800.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 11.074,
+    "hook_kg": 1.422,
+    "levels": 24,
+    "links": 24,
+    "perimeter_lb_kg": 11.074,
+    "zone_mm": 3800.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 11.997,
+    "hook_kg": 1.541,
+    "levels": 26,
+    "links": 26,
+    "perimeter_lb_kg": 11.997,
+    "zone_mm": 4200
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 12.459,
+    "hook_kg": 1.6,
+    "levels": 27,
+    "links": 27,
+    "perimeter_lb_kg": 12.459,
+    "zone_mm": 4200
+   },
+   "drawn_section_mm": null,
+   "floor": "1F",
+   "lap_kg_alternative": 14.159,
+   "lap_kg_current": 8.091,
+   "occurrence_id": "COL-C2-X08-Y10-1F",
+   "ties_kg_drawn_section": null,
+   "type": "C2"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 9.69,
+    "hook_kg": 1.244,
+    "levels": 21,
+    "links": 21,
+    "perimeter_lb_kg": 9.69,
+    "zone_mm": 3450.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 10.152,
+    "hook_kg": 1.304,
+    "levels": 22,
+    "links": 22,
+    "perimeter_lb_kg": 10.152,
+    "zone_mm": 3450.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 11.997,
+    "hook_kg": 1.541,
+    "levels": 26,
+    "links": 26,
+    "perimeter_lb_kg": 11.997,
+    "zone_mm": 4200
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 12.459,
+    "hook_kg": 1.6,
+    "levels": 27,
+    "links": 27,
+    "perimeter_lb_kg": 12.459,
+    "zone_mm": 4200
+   },
+   "drawn_section_mm": null,
+   "floor": "1F",
+   "lap_kg_alternative": 14.159,
+   "lap_kg_current": 8.091,
+   "occurrence_id": "COL-C2-X09-Y07-1F",
+   "ties_kg_drawn_section": null,
+   "type": "C2"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 10.613,
+    "hook_kg": 1.363,
+    "levels": 23,
+    "links": 23,
+    "perimeter_lb_kg": 10.613,
+    "zone_mm": 3700.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 11.074,
+    "hook_kg": 1.422,
+    "levels": 24,
+    "links": 24,
+    "perimeter_lb_kg": 11.074,
+    "zone_mm": 3700.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 11.997,
+    "hook_kg": 1.541,
+    "levels": 26,
+    "links": 26,
+    "perimeter_lb_kg": 11.997,
+    "zone_mm": 4200
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 12.459,
+    "hook_kg": 1.6,
+    "levels": 27,
+    "links": 27,
+    "perimeter_lb_kg": 12.459,
+    "zone_mm": 4200
+   },
+   "drawn_section_mm": null,
+   "floor": "1F",
+   "lap_kg_alternative": 14.159,
+   "lap_kg_current": 8.091,
+   "occurrence_id": "COL-C2-X09-Y10-1F",
+   "ties_kg_drawn_section": null,
+   "type": "C2"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 10.613,
+    "hook_kg": 1.363,
+    "levels": 23,
+    "links": 23,
+    "perimeter_lb_kg": 10.613,
+    "zone_mm": 3800.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 11.074,
+    "hook_kg": 1.422,
+    "levels": 24,
+    "links": 24,
+    "perimeter_lb_kg": 11.074,
+    "zone_mm": 3800.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 11.997,
+    "hook_kg": 1.541,
+    "levels": 26,
+    "links": 26,
+    "perimeter_lb_kg": 11.997,
+    "zone_mm": 4200
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 12.459,
+    "hook_kg": 1.6,
+    "levels": 27,
+    "links": 27,
+    "perimeter_lb_kg": 12.459,
+    "zone_mm": 4200
+   },
+   "drawn_section_mm": null,
+   "floor": "1F",
+   "lap_kg_alternative": 14.159,
+   "lap_kg_current": 8.091,
+   "occurrence_id": "COL-C2-X10-Y09-1F",
+   "ties_kg_drawn_section": null,
+   "type": "C2"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 8.306,
+    "hook_kg": 1.067,
+    "levels": 18,
+    "links": 18,
+    "perimeter_lb_kg": 8.306,
+    "zone_mm": 3000.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 8.767,
+    "hook_kg": 1.126,
+    "levels": 19,
+    "links": 19,
+    "perimeter_lb_kg": 8.767,
+    "zone_mm": 3000.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 11.997,
+    "hook_kg": 1.541,
+    "levels": 26,
+    "links": 26,
+    "perimeter_lb_kg": 11.997,
+    "zone_mm": 4200
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 12.459,
+    "hook_kg": 1.6,
+    "levels": 27,
+    "links": 27,
+    "perimeter_lb_kg": 12.459,
+    "zone_mm": 4200
+   },
+   "drawn_section_mm": null,
+   "floor": "1F",
+   "lap_kg_alternative": 10.619,
+   "lap_kg_current": 6.068,
+   "occurrence_id": "COL-C3-X05-Y02-1F",
+   "ties_kg_drawn_section": null,
+   "type": "C3"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 8.306,
+    "hook_kg": 1.067,
+    "levels": 18,
+    "links": 18,
+    "perimeter_lb_kg": 8.306,
+    "zone_mm": 3000.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 8.767,
+    "hook_kg": 1.126,
+    "levels": 19,
+    "links": 19,
+    "perimeter_lb_kg": 8.767,
+    "zone_mm": 3000.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 11.997,
+    "hook_kg": 1.541,
+    "levels": 26,
+    "links": 26,
+    "perimeter_lb_kg": 11.997,
+    "zone_mm": 4200
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 12.459,
+    "hook_kg": 1.6,
+    "levels": 27,
+    "links": 27,
+    "perimeter_lb_kg": 12.459,
+    "zone_mm": 4200
+   },
+   "drawn_section_mm": [
+    250,
+    500
+   ],
+   "floor": "1F",
+   "lap_kg_alternative": 10.619,
+   "lap_kg_current": 6.068,
+   "occurrence_id": "COL-C3-X08-Y09-1F",
+   "ties_kg_drawn_section": 10.084,
+   "type": "C3"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 10.613,
+    "hook_kg": 1.363,
+    "levels": 23,
+    "links": 23,
+    "perimeter_lb_kg": 10.613,
+    "zone_mm": 3700.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 11.074,
+    "hook_kg": 1.422,
+    "levels": 24,
+    "links": 24,
+    "perimeter_lb_kg": 11.074,
+    "zone_mm": 3700.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 11.997,
+    "hook_kg": 1.541,
+    "levels": 26,
+    "links": 26,
+    "perimeter_lb_kg": 11.997,
+    "zone_mm": 4200
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 12.459,
+    "hook_kg": 1.6,
+    "levels": 27,
+    "links": 27,
+    "perimeter_lb_kg": 12.459,
+    "zone_mm": 4200
+   },
+   "drawn_section_mm": [
+    250,
+    500
+   ],
+   "floor": "1F",
+   "lap_kg_alternative": 14.159,
+   "lap_kg_current": 8.091,
+   "occurrence_id": "COL-C4-X13-Y10-1F",
+   "ties_kg_drawn_section": 12.885,
+   "type": "C4"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 9.69,
+    "hook_kg": 1.244,
+    "levels": 21,
+    "links": 21,
+    "perimeter_lb_kg": 9.69,
+    "zone_mm": 3450.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 10.152,
+    "hook_kg": 1.304,
+    "levels": 22,
+    "links": 22,
+    "perimeter_lb_kg": 10.152,
+    "zone_mm": 3450.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 11.997,
+    "hook_kg": 1.541,
+    "levels": 26,
+    "links": 26,
+    "perimeter_lb_kg": 11.997,
+    "zone_mm": 4200
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 12.459,
+    "hook_kg": 1.6,
+    "levels": 27,
+    "links": 27,
+    "perimeter_lb_kg": 12.459,
+    "zone_mm": 4200
+   },
+   "drawn_section_mm": [
+    250,
+    500
+   ],
+   "floor": "1F",
+   "lap_kg_alternative": 14.159,
+   "lap_kg_current": 8.091,
+   "occurrence_id": "COL-C4-X15-Y10-1F",
+   "ties_kg_drawn_section": 11.764,
+   "type": "C4"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 8.306,
+    "hook_kg": 1.067,
+    "levels": 18,
+    "links": 18,
+    "perimeter_lb_kg": 8.306,
+    "zone_mm": 3000.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 8.767,
+    "hook_kg": 1.126,
+    "levels": 19,
+    "links": 19,
+    "perimeter_lb_kg": 8.767,
+    "zone_mm": 3000.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 11.997,
+    "hook_kg": 1.541,
+    "levels": 26,
+    "links": 26,
+    "perimeter_lb_kg": 11.997,
+    "zone_mm": 4200
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 12.459,
+    "hook_kg": 1.6,
+    "levels": 27,
+    "links": 27,
+    "perimeter_lb_kg": 12.459,
+    "zone_mm": 4200
+   },
+   "drawn_section_mm": [
+    200,
+    600
+   ],
+   "floor": "1F",
+   "lap_kg_alternative": 14.159,
+   "lap_kg_current": 8.091,
+   "occurrence_id": "COL-C5-X05-Y04-1F",
+   "ties_kg_drawn_section": 16.678,
+   "type": "C5"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 10.613,
+    "hook_kg": 1.363,
+    "levels": 23,
+    "links": 23,
+    "perimeter_lb_kg": 10.613,
+    "zone_mm": 3700.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 11.074,
+    "hook_kg": 1.422,
+    "levels": 24,
+    "links": 24,
+    "perimeter_lb_kg": 11.074,
+    "zone_mm": 3700.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 11.997,
+    "hook_kg": 1.541,
+    "levels": 26,
+    "links": 26,
+    "perimeter_lb_kg": 11.997,
+    "zone_mm": 4200
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 12.459,
+    "hook_kg": 1.6,
+    "levels": 27,
+    "links": 27,
+    "perimeter_lb_kg": 12.459,
+    "zone_mm": 4200
+   },
+   "drawn_section_mm": [
+    250,
+    600
+   ],
+   "floor": "1F",
+   "lap_kg_alternative": 14.159,
+   "lap_kg_current": 8.091,
+   "occurrence_id": "COL-C5-X11-Y10-1F",
+   "ties_kg_drawn_section": 23.128,
+   "type": "C5"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 9.69,
+    "hook_kg": 1.244,
+    "levels": 21,
+    "links": 21,
+    "perimeter_lb_kg": 9.69,
+    "zone_mm": 3450.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 10.152,
+    "hook_kg": 1.304,
+    "levels": 22,
+    "links": 22,
+    "perimeter_lb_kg": 10.152,
+    "zone_mm": 3450.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 11.997,
+    "hook_kg": 1.541,
+    "levels": 26,
+    "links": 26,
+    "perimeter_lb_kg": 11.997,
+    "zone_mm": 4200
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 12.459,
+    "hook_kg": 1.6,
+    "levels": 27,
+    "links": 27,
+    "perimeter_lb_kg": 12.459,
+    "zone_mm": 4200
+   },
+   "drawn_section_mm": [
+    250,
+    600
+   ],
+   "floor": "1F",
+   "lap_kg_alternative": 14.159,
+   "lap_kg_current": 8.091,
+   "occurrence_id": "COL-C5-X14-Y02-1F",
+   "ties_kg_drawn_section": 21.117,
+   "type": "C5"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 18.585,
+    "hook_kg": 2.726,
+    "levels": 23,
+    "links": 46,
+    "perimeter_lb_kg": 12.43,
+    "zone_mm": 3700.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 19.393,
+    "hook_kg": 2.844,
+    "levels": 24,
+    "links": 48,
+    "perimeter_lb_kg": 12.971,
+    "zone_mm": 3700.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 21.009,
+    "hook_kg": 3.081,
+    "levels": 26,
+    "links": 52,
+    "perimeter_lb_kg": 14.052,
+    "zone_mm": 4200
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 21.817,
+    "hook_kg": 3.2,
+    "levels": 27,
+    "links": 54,
+    "perimeter_lb_kg": 14.592,
+    "zone_mm": 4200
+   },
+   "drawn_section_mm": [
+    250,
+    700
+   ],
+   "floor": "1F",
+   "lap_kg_alternative": 14.159,
+   "lap_kg_current": 8.091,
+   "occurrence_id": "COL-C6-X08-Y04-1F",
+   "ties_kg_drawn_section": 25.551,
+   "type": "C6"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 22.4,
+    "hook_kg": 3.2,
+    "levels": 18,
+    "links": 54,
+    "perimeter_lb_kg": 12.572,
+    "zone_mm": 3000.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 23.644,
+    "hook_kg": 3.378,
+    "levels": 19,
+    "links": 57,
+    "perimeter_lb_kg": 13.271,
+    "zone_mm": 3000.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 32.356,
+    "hook_kg": 4.622,
+    "levels": 26,
+    "links": 78,
+    "perimeter_lb_kg": 18.16,
+    "zone_mm": 4200
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 33.6,
+    "hook_kg": 4.8,
+    "levels": 27,
+    "links": 81,
+    "perimeter_lb_kg": 18.859,
+    "zone_mm": 4200
+   },
+   "drawn_section_mm": [
+    250,
+    800
+   ],
+   "floor": "1F",
+   "lap_kg_alternative": 17.699,
+   "lap_kg_current": 10.114,
+   "occurrence_id": "COL-C7-X07-Y?@15888-16162-1F",
+   "ties_kg_drawn_section": 27.733,
+   "type": "C7"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 26.133,
+    "hook_kg": 3.733,
+    "levels": 21,
+    "links": 63,
+    "perimeter_lb_kg": 14.668,
+    "zone_mm": 3450.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 27.378,
+    "hook_kg": 3.911,
+    "levels": 22,
+    "links": 66,
+    "perimeter_lb_kg": 15.366,
+    "zone_mm": 3450.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 32.356,
+    "hook_kg": 4.622,
+    "levels": 26,
+    "links": 78,
+    "perimeter_lb_kg": 18.16,
+    "zone_mm": 4200
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 33.6,
+    "hook_kg": 4.8,
+    "levels": 27,
+    "links": 81,
+    "perimeter_lb_kg": 18.859,
+    "zone_mm": 4200
+   },
+   "drawn_section_mm": [
+    250,
+    800
+   ],
+   "floor": "1F",
+   "lap_kg_alternative": 17.699,
+   "lap_kg_current": 10.114,
+   "occurrence_id": "COL-C8-X12-Y02-1F",
+   "ties_kg_drawn_section": 32.356,
+   "type": "C7"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 28.023,
+    "hook_kg": 3.2,
+    "levels": 18,
+    "links": 54,
+    "perimeter_lb_kg": 13.995,
+    "zone_mm": 3000.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 29.58,
+    "hook_kg": 3.378,
+    "levels": 19,
+    "links": 57,
+    "perimeter_lb_kg": 14.772,
+    "zone_mm": 3000.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 40.478,
+    "hook_kg": 4.622,
+    "levels": 26,
+    "links": 78,
+    "perimeter_lb_kg": 20.215,
+    "zone_mm": 4200
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 42.035,
+    "hook_kg": 4.8,
+    "levels": 27,
+    "links": 81,
+    "perimeter_lb_kg": 20.992,
+    "zone_mm": 4200
+   },
+   "drawn_section_mm": null,
+   "floor": "1F",
+   "lap_kg_alternative": 21.239,
+   "lap_kg_current": 12.136,
+   "occurrence_id": "COL-C8-X15-Y06-1F",
+   "ties_kg_drawn_section": null,
+   "type": "C8"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 32.694,
+    "hook_kg": 3.733,
+    "levels": 21,
+    "links": 63,
+    "perimeter_lb_kg": 16.327,
+    "zone_mm": 3450.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 34.251,
+    "hook_kg": 3.911,
+    "levels": 22,
+    "links": 66,
+    "perimeter_lb_kg": 17.105,
+    "zone_mm": 3450.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 40.478,
+    "hook_kg": 4.622,
+    "levels": 26,
+    "links": 78,
+    "perimeter_lb_kg": 20.215,
+    "zone_mm": 4200
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 42.035,
+    "hook_kg": 4.8,
+    "levels": 27,
+    "links": 81,
+    "perimeter_lb_kg": 20.992,
+    "zone_mm": 4200
+   },
+   "drawn_section_mm": [
+    250,
+    1000
+   ],
+   "floor": "1F",
+   "lap_kg_alternative": 21.239,
+   "lap_kg_current": 12.136,
+   "occurrence_id": "COL-C9-X10-Y07-1F",
+   "ties_kg_drawn_section": 41.903,
+   "type": "C9"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 35.808,
+    "hook_kg": 4.089,
+    "levels": 23,
+    "links": 69,
+    "perimeter_lb_kg": 17.882,
+    "zone_mm": 3700.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 37.365,
+    "hook_kg": 4.267,
+    "levels": 24,
+    "links": 72,
+    "perimeter_lb_kg": 18.66,
+    "zone_mm": 3700.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 40.478,
+    "hook_kg": 4.622,
+    "levels": 26,
+    "links": 78,
+    "perimeter_lb_kg": 20.215,
+    "zone_mm": 4200
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 42.035,
+    "hook_kg": 4.8,
+    "levels": 27,
+    "links": 81,
+    "perimeter_lb_kg": 20.992,
+    "zone_mm": 4200
+   },
+   "drawn_section_mm": [
+    200,
+    1000
+   ],
+   "floor": "1F",
+   "lap_kg_alternative": 21.239,
+   "lap_kg_current": 12.136,
+   "occurrence_id": "COL-C9-X13-Y08-1F",
+   "ties_kg_drawn_section": 43.168,
+   "type": "C9"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 20.89,
+    "hook_kg": 2.489,
+    "levels": 21,
+    "links": 42,
+    "perimeter_lb_kg": 13.009,
+    "zone_mm": 3450.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 21.885,
+    "hook_kg": 2.607,
+    "levels": 22,
+    "links": 44,
+    "perimeter_lb_kg": 13.628,
+    "zone_mm": 3450.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 25.864,
+    "hook_kg": 3.081,
+    "levels": 26,
+    "links": 52,
+    "perimeter_lb_kg": 16.106,
+    "zone_mm": 4200
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 26.859,
+    "hook_kg": 3.2,
+    "levels": 27,
+    "links": 54,
+    "perimeter_lb_kg": 16.725,
+    "zone_mm": 4200
+   },
+   "drawn_section_mm": null,
+   "floor": "1F",
+   "lap_kg_alternative": 35.398,
+   "lap_kg_current": 20.227,
+   "occurrence_id": "COL-P.C-X08-Y02-1F",
+   "ties_kg_drawn_section": null,
+   "type": "P.C"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 8.306,
+    "hook_kg": 1.067,
+    "levels": 18,
+    "links": 18,
+    "perimeter_lb_kg": 8.306,
+    "zone_mm": 3000.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 8.767,
+    "hook_kg": 1.126,
+    "levels": 19,
+    "links": 19,
+    "perimeter_lb_kg": 8.767,
+    "zone_mm": 3000.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 11.997,
+    "hook_kg": 1.541,
+    "levels": 26,
+    "links": 26,
+    "perimeter_lb_kg": 11.997,
+    "zone_mm": 4200
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 12.459,
+    "hook_kg": 1.6,
+    "levels": 27,
+    "links": 27,
+    "perimeter_lb_kg": 12.459,
+    "zone_mm": 4200
+   },
+   "drawn_section_mm": null,
+   "floor": "1F",
+   "lap_kg_alternative": 28.318,
+   "lap_kg_current": 16.182,
+   "occurrence_id": "COL-P.C-X15-Y02-1F",
+   "ties_kg_drawn_section": null,
+   "type": "P.C"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 10.613,
+    "hook_kg": 1.363,
+    "levels": 23,
+    "links": 23,
+    "perimeter_lb_kg": 10.613,
+    "zone_mm": 3800.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 11.074,
+    "hook_kg": 1.422,
+    "levels": 24,
+    "links": 24,
+    "perimeter_lb_kg": 11.074,
+    "zone_mm": 3800.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 11.997,
+    "hook_kg": 1.541,
+    "levels": 26,
+    "links": 26,
+    "perimeter_lb_kg": 11.997,
+    "zone_mm": 4200
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 12.459,
+    "hook_kg": 1.6,
+    "levels": 27,
+    "links": 27,
+    "perimeter_lb_kg": 12.459,
+    "zone_mm": 4200
+   },
+   "drawn_section_mm": null,
+   "floor": "2F",
+   "lap_kg_alternative": 10.619,
+   "lap_kg_current": 6.068,
+   "occurrence_id": "COL-C1-X09-Y09-2F",
+   "ties_kg_drawn_section": null,
+   "type": "C1"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 8.306,
+    "hook_kg": 1.067,
+    "levels": 18,
+    "links": 18,
+    "perimeter_lb_kg": 8.306,
+    "zone_mm": 3000.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 8.767,
+    "hook_kg": 1.126,
+    "levels": 19,
+    "links": 19,
+    "perimeter_lb_kg": 8.767,
+    "zone_mm": 3000.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 11.997,
+    "hook_kg": 1.541,
+    "levels": 26,
+    "links": 26,
+    "perimeter_lb_kg": 11.997,
+    "zone_mm": 4200
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 12.459,
+    "hook_kg": 1.6,
+    "levels": 27,
+    "links": 27,
+    "perimeter_lb_kg": 12.459,
+    "zone_mm": 4200
+   },
+   "drawn_section_mm": null,
+   "floor": "2F",
+   "lap_kg_alternative": 10.619,
+   "lap_kg_current": 6.068,
+   "occurrence_id": "COL-C2-X08-Y10-2F",
+   "ties_kg_drawn_section": null,
+   "type": "C2"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 10.613,
+    "hook_kg": 1.363,
+    "levels": 23,
+    "links": 23,
+    "perimeter_lb_kg": 10.613,
+    "zone_mm": 3800.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 11.074,
+    "hook_kg": 1.422,
+    "levels": 24,
+    "links": 24,
+    "perimeter_lb_kg": 11.074,
+    "zone_mm": 3800.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 11.997,
+    "hook_kg": 1.541,
+    "levels": 26,
+    "links": 26,
+    "perimeter_lb_kg": 11.997,
+    "zone_mm": 4200
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 12.459,
+    "hook_kg": 1.6,
+    "levels": 27,
+    "links": 27,
+    "perimeter_lb_kg": 12.459,
+    "zone_mm": 4200
+   },
+   "drawn_section_mm": null,
+   "floor": "2F",
+   "lap_kg_alternative": 10.619,
+   "lap_kg_current": 6.068,
+   "occurrence_id": "COL-C2-X09-Y07-2F",
+   "ties_kg_drawn_section": null,
+   "type": "C2"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 9.69,
+    "hook_kg": 1.244,
+    "levels": 21,
+    "links": 21,
+    "perimeter_lb_kg": 9.69,
+    "zone_mm": 3450.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 10.152,
+    "hook_kg": 1.304,
+    "levels": 22,
+    "links": 22,
+    "perimeter_lb_kg": 10.152,
+    "zone_mm": 3450.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 11.997,
+    "hook_kg": 1.541,
+    "levels": 26,
+    "links": 26,
+    "perimeter_lb_kg": 11.997,
+    "zone_mm": 4200
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 12.459,
+    "hook_kg": 1.6,
+    "levels": 27,
+    "links": 27,
+    "perimeter_lb_kg": 12.459,
+    "zone_mm": 4200
+   },
+   "drawn_section_mm": null,
+   "floor": "2F",
+   "lap_kg_alternative": 10.619,
+   "lap_kg_current": 6.068,
+   "occurrence_id": "COL-C2-X09-Y10-2F",
+   "ties_kg_drawn_section": null,
+   "type": "C2"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 10.613,
+    "hook_kg": 1.363,
+    "levels": 23,
+    "links": 23,
+    "perimeter_lb_kg": 10.613,
+    "zone_mm": 3800.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 11.074,
+    "hook_kg": 1.422,
+    "levels": 24,
+    "links": 24,
+    "perimeter_lb_kg": 11.074,
+    "zone_mm": 3800.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 11.997,
+    "hook_kg": 1.541,
+    "levels": 26,
+    "links": 26,
+    "perimeter_lb_kg": 11.997,
+    "zone_mm": 4200
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 12.459,
+    "hook_kg": 1.6,
+    "levels": 27,
+    "links": 27,
+    "perimeter_lb_kg": 12.459,
+    "zone_mm": 4200
+   },
+   "drawn_section_mm": null,
+   "floor": "2F",
+   "lap_kg_alternative": 10.619,
+   "lap_kg_current": 6.068,
+   "occurrence_id": "COL-C2-X10-Y09-2F",
+   "ties_kg_drawn_section": null,
+   "type": "C2"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 8.306,
+    "hook_kg": 1.067,
+    "levels": 18,
+    "links": 18,
+    "perimeter_lb_kg": 8.306,
+    "zone_mm": 3000.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 8.767,
+    "hook_kg": 1.126,
+    "levels": 19,
+    "links": 19,
+    "perimeter_lb_kg": 8.767,
+    "zone_mm": 3000.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 11.997,
+    "hook_kg": 1.541,
+    "levels": 26,
+    "links": 26,
+    "perimeter_lb_kg": 11.997,
+    "zone_mm": 4200
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 12.459,
+    "hook_kg": 1.6,
+    "levels": 27,
+    "links": 27,
+    "perimeter_lb_kg": 12.459,
+    "zone_mm": 4200
+   },
+   "drawn_section_mm": [
+    250,
+    500
+   ],
+   "floor": "2F",
+   "lap_kg_alternative": 10.619,
+   "lap_kg_current": 6.068,
+   "occurrence_id": "COL-C3-X08-Y09-2F",
+   "ties_kg_drawn_section": 10.084,
+   "type": "C3"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 9.69,
+    "hook_kg": 1.244,
+    "levels": 21,
+    "links": 21,
+    "perimeter_lb_kg": 9.69,
+    "zone_mm": 3450.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 10.152,
+    "hook_kg": 1.304,
+    "levels": 22,
+    "links": 22,
+    "perimeter_lb_kg": 10.152,
+    "zone_mm": 3450.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 11.997,
+    "hook_kg": 1.541,
+    "levels": 26,
+    "links": 26,
+    "perimeter_lb_kg": 11.997,
+    "zone_mm": 4200
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 12.459,
+    "hook_kg": 1.6,
+    "levels": 27,
+    "links": 27,
+    "perimeter_lb_kg": 12.459,
+    "zone_mm": 4200
+   },
+   "drawn_section_mm": [
+    200,
+    600
+   ],
+   "floor": "2F",
+   "lap_kg_alternative": 10.619,
+   "lap_kg_current": 6.068,
+   "occurrence_id": "COL-C5-X11-Y10-2F",
+   "ties_kg_drawn_section": 16.593,
+   "type": "C5"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 22.88,
+    "hook_kg": 2.726,
+    "levels": 23,
+    "links": 46,
+    "perimeter_lb_kg": 14.248,
+    "zone_mm": 3800.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 23.874,
+    "hook_kg": 2.844,
+    "levels": 24,
+    "links": 48,
+    "perimeter_lb_kg": 14.867,
+    "zone_mm": 3800.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 25.864,
+    "hook_kg": 3.081,
+    "levels": 26,
+    "links": 52,
+    "perimeter_lb_kg": 16.106,
+    "zone_mm": 4200
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 26.859,
+    "hook_kg": 3.2,
+    "levels": 27,
+    "links": 54,
+    "perimeter_lb_kg": 16.725,
+    "zone_mm": 4200
+   },
+   "drawn_section_mm": null,
+   "floor": "2F",
+   "lap_kg_alternative": 17.699,
+   "lap_kg_current": 10.114,
+   "occurrence_id": "COL-C9-X10-Y07-2F",
+   "ties_kg_drawn_section": null,
+   "type": "C9"
+  },
+  {
+   "CLEAR_COLUMN_ZONE|RATE_COUNT": {
+    "core_kg": 9.69,
+    "hook_kg": 1.244,
+    "levels": 21,
+    "links": 21,
+    "perimeter_lb_kg": 9.69,
+    "zone_mm": 3450.0
+   },
+   "CLEAR_COLUMN_ZONE|SPACING_WITH_ENDS": {
+    "core_kg": 10.152,
+    "hook_kg": 1.304,
+    "levels": 22,
+    "links": 22,
+    "perimeter_lb_kg": 10.152,
+    "zone_mm": 3450.0
+   },
+   "FULL_STOREY|RATE_COUNT": {
+    "core_kg": 11.997,
+    "hook_kg": 1.541,
+    "levels": 26,
+    "links": 26,
+    "perimeter_lb_kg": 11.997,
+    "zone_mm": 4200
+   },
+   "FULL_STOREY|SPACING_WITH_ENDS": {
+    "core_kg": 12.459,
+    "hook_kg": 1.6,
+    "levels": 27,
+    "links": 27,
+    "perimeter_lb_kg": 12.459,
+    "zone_mm": 4200
+   },
+   "drawn_section_mm": [
+    200,
+    400
+   ],
+   "floor": "2F",
+   "lap_kg_alternative": 28.318,
+   "lap_kg_current": 16.182,
+   "occurrence_id": "COL-P.C-X?-Y?@24888-15994-2F",
+   "ties_kg_drawn_section": 9.275,
+   "type": "P.C"
+  }
+ ],
+ "zone_clear_vs_full": {
+  "clear_hook_kg": 147.024,
+  "clear_levels": 1623,
+  "clear_links": 2481,
+  "clear_rate_count_core_kg": 1290.048,
+  "difference_core_kg": 285.622,
+  "full_hook_kg": 179.557,
+  "full_levels": 1975,
+  "full_links": 3030,
+  "full_rate_count_core_kg": 1575.67,
+  "segments_clear_zone_not_established": 3,
+  "segments_compared": 92
+ }
+}

@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="785" viewBox="0 0 800 785" font-family="Arial, Helvetica, sans-serif" font-size="11">
+<rect width="800" height="785" fill="#ffffff"/>
+<defs><pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="6" stroke="#b91c1c" stroke-width="1"/></pattern><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f2937"/></marker></defs>
+<text x="20.0" y="26.0" fill="#1f2937" font-size="15" text-anchor="start" font-weight="bold">Main stair GF -&gt; 1F in plan: the structural sheet's 28 risers against section A-A's 27</text>
+<text x="20.0" y="45.0" fill="#4b5563" font-size="11" text-anchor="start" font-weight="normal">Schematic drawn from the ST7757 / P7757 coordinates (1 mm = 0.1 px). Not a drawing; nothing here is approved.</text>
+<text x="20.0" y="78.0" fill="#c2410c" font-size="13" text-anchor="start" font-weight="bold">A: 28 risers, as on the structural sheet</text>
+<rect x="58.8" y="108.8" width="250.0" height="486.2" fill="#f9fafb" fill-opacity="1.0" stroke="#9ca3af" stroke-width="0.8"/>
+<rect x="178.8" y="228.8" width="10.0" height="310.0" fill="#9ca3af" fill-opacity="1.0" stroke="none" stroke-width="1.0"/>
+<rect x="43.8" y="538.8" width="280.0" height="40.0" fill="url(#hatch)" fill-opacity="1.0" stroke="#b91c1c" stroke-width="1.0"/>
+<text x="331.8" y="555.8" fill="#b91c1c" font-size="11" text-anchor="start" font-weight="bold">B20</text>
+<text x="331.8" y="570.8" fill="#b91c1c" font-size="9" text-anchor="start" font-weight="normal">1F floor</text>
+<rect x="188.8" y="108.8" width="120.0" height="120.0" fill="#fff7ed" fill-opacity="1.0" stroke="#9ca3af" stroke-width="0.8"/>
+<text x="248.8" y="155.0" fill="#c2410c" font-size="11" text-anchor="middle" font-weight="bold">landing</text>
+<text x="248.8" y="175.0" fill="#c2410c" font-size="13" text-anchor="middle" font-weight="bold">+3.571</text>
+<text x="248.8" y="194.0" fill="#b91c1c" font-size="10" text-anchor="middle" font-weight="bold">71.4 mm above</text>
+<text x="248.8" y="209.0" fill="#b91c1c" font-size="10" text-anchor="middle" font-weight="bold">the printed +3.50</text>
+<line x1="58.8" y1="553.8" x2="173.8" y2="553.8" stroke="#c2410c" stroke-width="1.4"/>
+<line x1="58.8" y1="523.8" x2="173.8" y2="523.8" stroke="#c2410c" stroke-width="1.4"/>
+<line x1="58.8" y1="493.8" x2="173.8" y2="493.8" stroke="#c2410c" stroke-width="1.4"/>
+<line x1="58.8" y1="463.8" x2="173.8" y2="463.8" stroke="#c2410c" stroke-width="1.4"/>
+<line x1="58.8" y1="433.8" x2="173.8" y2="433.8" stroke="#c2410c" stroke-width="1.4"/>
+<line x1="58.8" y1="403.8" x2="173.8" y2="403.8" stroke="#c2410c" stroke-width="1.4"/>
+<line x1="58.8" y1="373.8" x2="173.8" y2="373.8" stroke="#c2410c" stroke-width="1.4"/>
+<line x1="58.8" y1="343.8" x2="173.8" y2="343.8" stroke="#c2410c" stroke-width="1.4"/>
+<line x1="58.8" y1="313.8" x2="173.8" y2="313.8" stroke="#c2410c" stroke-width="1.4"/>
+<line x1="58.8" y1="283.8" x2="173.8" y2="283.8" stroke="#c2410c" stroke-width="1.4"/>
+<line x1="58.8" y1="253.8" x2="173.8" y2="253.8" stroke="#c2410c" stroke-width="1.4"/>
+<line x1="58.8" y1="223.8" x2="173.8" y2="223.8" stroke="#c2410c" stroke-width="1.4"/>
+<text x="54.8" y="557.8" fill="#c2410c" font-size="10" text-anchor="end" font-weight="bold">1</text>
+<text x="54.8" y="227.8" fill="#c2410c" font-size="10" text-anchor="end" font-weight="bold">12</text>
+<line x1="118.8" y1="538.8" x2="118.8" y2="238.8" stroke="#1f2937" stroke-width="1.0" marker-end="url(#arrow)"/>
+<text x="126.0" y="503.8" fill="#1f2937" font-size="9" text-anchor="start" font-weight="bold">UP</text>
+<text x="64.8" y="570.8" fill="#c2410c" font-size="10" text-anchor="start" font-weight="normal">foot y 16162</text>
+<line x1="175.8" y1="219.2" x2="60.8" y2="168.1" stroke="#c2410c" stroke-width="1.4"/>
+<line x1="177.3" y1="220.3" x2="65.9" y2="108.8" stroke="#c2410c" stroke-width="1.4"/>
+<line x1="178.4" y1="221.8" x2="128.1" y2="108.8" stroke="#c2410c" stroke-width="1.4"/>
+<line x1="188.8" y1="223.8" x2="188.8" y2="108.8" stroke="#c2410c" stroke-width="1.4"/>
+<text x="185.8" y="120.8" fill="#c2410c" font-size="10" text-anchor="end" font-weight="bold">16</text>
+<line x1="193.8" y1="228.8" x2="308.8" y2="228.8" stroke="#c2410c" stroke-width="1.4"/>
+<line x1="193.8" y1="258.8" x2="308.8" y2="258.8" stroke="#c2410c" stroke-width="1.4"/>
+<line x1="193.8" y1="288.8" x2="308.8" y2="288.8" stroke="#c2410c" stroke-width="1.4"/>
+<line x1="193.8" y1="318.8" x2="308.8" y2="318.8" stroke="#c2410c" stroke-width="1.4"/>
+<line x1="193.8" y1="348.8" x2="308.8" y2="348.8" stroke="#c2410c" stroke-width="1.4"/>
+<line x1="193.8" y1="378.8" x2="308.8" y2="378.8" stroke="#c2410c" stroke-width="1.4"/>
+<line x1="193.8" y1="408.8" x2="308.8" y2="408.8" stroke="#c2410c" stroke-width="1.4"/>
+<line x1="193.8" y1="438.8" x2="308.8" y2="438.8" stroke="#c2410c" stroke-width="1.4"/>
+<line x1="193.8" y1="468.8" x2="308.8" y2="468.8" stroke="#c2410c" stroke-width="1.4"/>
+<line x1="193.8" y1="498.8" x2="308.8" y2="498.8" stroke="#c2410c" stroke-width="1.4"/>
+<line x1="193.8" y1="528.8" x2="308.8" y2="528.8" stroke="#c2410c" stroke-width="1.4"/>
+<line x1="193.8" y1="558.8" x2="308.8" y2="558.8" stroke="#b91c1c" stroke-width="3.0"/>
+<text x="312.8" y="232.8" fill="#c2410c" font-size="10" text-anchor="start" font-weight="bold">17</text>
+<text x="312.8" y="562.8" fill="#b91c1c" font-size="10" text-anchor="start" font-weight="bold">28</text>
+<line x1="248.8" y1="243.8" x2="248.8" y2="513.8" stroke="#1f2937" stroke-width="1.0" marker-end="url(#arrow)"/>
+<text x="40.0" y="618.0" fill="#1f2937" font-size="11" text-anchor="start" font-weight="bold">28 risers of 160.714 mm</text>
+<text x="40.0" y="635.0" fill="#1f2937" font-size="11" text-anchor="start" font-weight="normal">12 + 4 (turn) + landing + 12</text>
+<text x="40.0" y="652.0" fill="#c2410c" font-size="11" text-anchor="start" font-weight="normal">turn: 3 radial + closing riser, as drawn</text>
+<text x="40.0" y="669.0" fill="#b91c1c" font-size="11" text-anchor="start" font-weight="bold">riser 28 is 200 mm inside B20</text>
+<text x="40.0" y="686.0" fill="#4b5563" font-size="11" text-anchor="start" font-weight="normal">(12 risers x 300 = 3300 mm; only 3100 mm to B20)</text>
+<text x="40.0" y="703.0" fill="#4b5563" font-size="11" text-anchor="start" font-weight="normal">foot 600 mm south of the architectural plan,</text>
+<text x="40.0" y="720.0" fill="#4b5563" font-size="11" text-anchor="start" font-weight="normal">the ground-beam plan and section A-A</text>
+<text x="420.0" y="78.0" fill="#1d4ed8" font-size="13" text-anchor="start" font-weight="bold">B: 27 risers, as in section A-A</text>
+<rect x="458.8" y="108.8" width="250.0" height="486.2" fill="#f9fafb" fill-opacity="1.0" stroke="#9ca3af" stroke-width="0.8"/>
+<rect x="578.8" y="228.8" width="10.0" height="310.0" fill="#9ca3af" fill-opacity="1.0" stroke="none" stroke-width="1.0"/>
+<rect x="443.8" y="538.8" width="280.0" height="40.0" fill="url(#hatch)" fill-opacity="1.0" stroke="#b91c1c" stroke-width="1.0"/>
+<text x="731.8" y="555.8" fill="#b91c1c" font-size="11" text-anchor="start" font-weight="bold">B20</text>
+<text x="731.8" y="570.8" fill="#b91c1c" font-size="9" text-anchor="start" font-weight="normal">1F floor</text>
+<rect x="588.8" y="108.8" width="120.0" height="120.0" fill="#eff6ff" fill-opacity="1.0" stroke="#9ca3af" stroke-width="0.8"/>
+<text x="648.8" y="155.0" fill="#1d4ed8" font-size="11" text-anchor="middle" font-weight="bold">landing</text>
+<text x="648.8" y="175.0" fill="#1d4ed8" font-size="13" text-anchor="middle" font-weight="bold">+3.500</text>
+<text x="648.8" y="194.0" fill="#1f2937" font-size="10" text-anchor="middle" font-weight="normal">= the printed</text>
+<text x="648.8" y="209.0" fill="#1f2937" font-size="10" text-anchor="middle" font-weight="normal">+3.50</text>
+<line x1="458.8" y1="493.8" x2="573.8" y2="493.8" stroke="#1d4ed8" stroke-width="1.4"/>
+<line x1="458.8" y1="463.8" x2="573.8" y2="463.8" stroke="#1d4ed8" stroke-width="1.4"/>
+<line x1="458.8" y1="433.8" x2="573.8" y2="433.8" stroke="#1d4ed8" stroke-width="1.4"/>
+<line x1="458.8" y1="403.8" x2="573.8" y2="403.8" stroke="#1d4ed8" stroke-width="1.4"/>
+<line x1="458.8" y1="373.8" x2="573.8" y2="373.8" stroke="#1d4ed8" stroke-width="1.4"/>
+<line x1="458.8" y1="343.8" x2="573.8" y2="343.8" stroke="#1d4ed8" stroke-width="1.4"/>
+<line x1="458.8" y1="313.8" x2="573.8" y2="313.8" stroke="#1d4ed8" stroke-width="1.4"/>
+<line x1="458.8" y1="283.8" x2="573.8" y2="283.8" stroke="#1d4ed8" stroke-width="1.4"/>
+<line x1="458.8" y1="253.8" x2="573.8" y2="253.8" stroke="#1d4ed8" stroke-width="1.4"/>
+<line x1="458.8" y1="223.8" x2="573.8" y2="223.8" stroke="#1d4ed8" stroke-width="1.4"/>
+<text x="454.8" y="497.8" fill="#1d4ed8" font-size="10" text-anchor="end" font-weight="bold">1</text>
+<text x="454.8" y="227.8" fill="#1d4ed8" font-size="10" text-anchor="end" font-weight="bold">10</text>
+<line x1="518.8" y1="478.8" x2="518.8" y2="238.8" stroke="#1f2937" stroke-width="1.0" marker-end="url(#arrow)"/>
+<text x="526.0" y="443.8" fill="#1f2937" font-size="9" text-anchor="start" font-weight="bold">UP</text>
+<text x="464.8" y="510.8" fill="#1d4ed8" font-size="10" text-anchor="start" font-weight="normal">foot y 16762</text>
+<line x1="577.5" y1="220.1" x2="458.8" y2="181.6" stroke="#1d4ed8" stroke-width="1.4" stroke-dasharray="5,3"/>
+<line x1="577.5" y1="220.1" x2="458.8" y2="133.9" stroke="#1d4ed8" stroke-width="1.4" stroke-dasharray="5,3"/>
+<line x1="577.5" y1="220.1" x2="496.6" y2="108.8" stroke="#1d4ed8" stroke-width="1.4" stroke-dasharray="5,3"/>
+<line x1="577.5" y1="220.1" x2="541.3" y2="108.8" stroke="#1d4ed8" stroke-width="1.4" stroke-dasharray="5,3"/>
+<line x1="588.8" y1="223.8" x2="588.8" y2="108.8" stroke="#1d4ed8" stroke-width="1.4"/>
+<text x="585.8" y="120.8" fill="#1d4ed8" font-size="10" text-anchor="end" font-weight="bold">15</text>
+<line x1="593.8" y1="228.8" x2="708.8" y2="228.8" stroke="#1d4ed8" stroke-width="1.4"/>
+<line x1="593.8" y1="258.8" x2="708.8" y2="258.8" stroke="#1d4ed8" stroke-width="1.4"/>
+<line x1="593.8" y1="288.8" x2="708.8" y2="288.8" stroke="#1d4ed8" stroke-width="1.4"/>
+<line x1="593.8" y1="318.8" x2="708.8" y2="318.8" stroke="#1d4ed8" stroke-width="1.4"/>
+<line x1="593.8" y1="348.8" x2="708.8" y2="348.8" stroke="#1d4ed8" stroke-width="1.4"/>
+<line x1="593.8" y1="378.8" x2="708.8" y2="378.8" stroke="#1d4ed8" stroke-width="1.4"/>
+<line x1="593.8" y1="408.8" x2="708.8" y2="408.8" stroke="#1d4ed8" stroke-width="1.4"/>
+<line x1="593.8" y1="438.8" x2="708.8" y2="438.8" stroke="#1d4ed8" stroke-width="1.4"/>
+<line x1="593.8" y1="468.8" x2="708.8" y2="468.8" stroke="#1d4ed8" stroke-width="1.4"/>
+<line x1="593.8" y1="498.8" x2="708.8" y2="498.8" stroke="#1d4ed8" stroke-width="1.4"/>
+<line x1="593.8" y1="528.8" x2="708.8" y2="528.8" stroke="#1d4ed8" stroke-width="1.4"/>
+<line x1="593.8" y1="558.8" x2="708.8" y2="558.8" stroke="#b91c1c" stroke-width="3.0"/>
+<text x="712.8" y="232.8" fill="#1d4ed8" font-size="10" text-anchor="start" font-weight="bold">16</text>
+<text x="712.8" y="562.8" fill="#b91c1c" font-size="10" text-anchor="start" font-weight="bold">27</text>
+<line x1="648.8" y1="243.8" x2="648.8" y2="513.8" stroke="#1f2937" stroke-width="1.0" marker-end="url(#arrow)"/>
+<text x="440.0" y="618.0" fill="#1f2937" font-size="11" text-anchor="start" font-weight="bold">27 risers of 166.667 mm</text>
+<text x="440.0" y="635.0" fill="#1f2937" font-size="11" text-anchor="start" font-weight="normal">10 + 5 (turn) + landing + 12</text>
+<text x="440.0" y="652.0" fill="#1d4ed8" font-size="11" text-anchor="start" font-weight="normal">turn: 4 radial + closing riser, PROPOSED (plans draw 3)</text>
+<text x="440.0" y="669.0" fill="#b91c1c" font-size="11" text-anchor="start" font-weight="bold">riser 27 is 200 mm inside B20</text>
+<text x="440.0" y="686.0" fill="#4b5563" font-size="11" text-anchor="start" font-weight="normal">(12 risers x 300 = 3300 mm; only 3100 mm to B20)</text>
+<text x="440.0" y="703.0" fill="#4b5563" font-size="11" text-anchor="start" font-weight="normal">removing one riser does not clear B20:</text>
+<text x="440.0" y="720.0" fill="#4b5563" font-size="11" text-anchor="start" font-weight="normal">the upper flight is unchanged</text>
+<line x1="20.0" y1="745.0" x2="44.0" y2="745.0" stroke="#1f2937" stroke-width="1.4"/>
+<text x="50.0" y="749.0" fill="#4b5563" font-size="10" text-anchor="start" font-weight="normal">drawn riser line</text>
+<line x1="160.0" y1="745.0" x2="184.0" y2="745.0" stroke="#1f2937" stroke-width="1.4" stroke-dasharray="5,3"/>
+<text x="190.0" y="749.0" fill="#4b5563" font-size="10" text-anchor="start" font-weight="normal">proposed, not drawn</text>
+<line x1="320.0" y1="745.0" x2="344.0" y2="745.0" stroke="#b91c1c" stroke-width="3.0"/>
+<text x="350.0" y="749.0" fill="#4b5563" font-size="10" text-anchor="start" font-weight="normal">riser inside the B20 band</text>
+<rect x="500.0" y="738.0" width="24.0" height="14.0" fill="url(#hatch)" fill-opacity="1.0" stroke="#b91c1c" stroke-width="1.0"/>
+<text x="530.0" y="749.0" fill="#4b5563" font-size="10" text-anchor="start" font-weight="normal">B20 40 x 75 under the 1F floor (above this plan)</text>
+<text x="20.0" y="770.0" fill="#4b5563" font-size="10" text-anchor="start" font-weight="normal">Lower flight: west column, walking north. Upper flight: east column, walking south. Numbers are riser numbers from the GF.</text>
+</svg>

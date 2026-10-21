@@ -1,0 +1,70 @@
+{
+ "SCHEMA": "URBAN_BLIND_VILLA_INTAKE_SCHEMA_V1",
+ "files": [
+  {
+   "role": "ORIGINAL_DWG",
+   "required": true
+  },
+  {
+   "role": "CONTROLLED_DXF",
+   "required": "preferred",
+   "protocol": "AutoCAD SAVEAS DXF 2018, no edits"
+  },
+  {
+   "role": "CONTROLLED_DWG_AC1027",
+   "required": "preferred",
+   "protocol": "SAVEAS AutoCAD 2013"
+  },
+  {
+   "role": "ARCHITECTURAL_PDF",
+   "required": true
+  },
+  {
+   "role": "SECTIONS",
+   "required": true
+  },
+  {
+   "role": "ELEVATIONS",
+   "required": true
+  },
+  {
+   "role": "DOOR_SCHEDULE",
+   "required": "if it exists"
+  },
+  {
+   "role": "WINDOW_SCHEDULE",
+   "required": "if it exists"
+  },
+  {
+   "role": "FINISH_SCHEDULE",
+   "required": "if it exists"
+  },
+  {
+   "role": "GENERAL_NOTES",
+   "required": true
+  },
+  {
+   "role": "STRUCTURAL_PACKAGE",
+   "required": "later"
+  }
+ ],
+ "per_file_record": [
+  "file name",
+  "sha256",
+  "role",
+  "revision / date",
+  "who exported it",
+  "AutoCAD build"
+ ],
+ "owner_statements_needed_before_run": [
+  "drawing unit (or confirm $INSUNITS)",
+  "which plan / floor is in scope",
+  "project wall finish heights if not drawn (asked only if absent)"
+ ],
+ "never_before_freeze": [
+  "expected quantities",
+  "a QS BOQ",
+  "any target total"
+ ],
+ "admission": "intake -> hash -> admission class -> unit / frame / region records -> engine + method FROZEN and committed -> blind run -> result committed -> THEN the sealed gold is opened"
+}

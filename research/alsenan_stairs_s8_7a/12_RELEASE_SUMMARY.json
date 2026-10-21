@@ -1,0 +1,195 @@
+{
+ "baseline": "15730e0",
+ "can_be_released_now": [
+  "the three S8.7 plates and their 8Ø16/m bars (already released, reproduced)"
+ ],
+ "cannot_be_released": [
+  "every flight and winder turn (riser counts in conflict, waist not established)",
+  "every scenario quantity (OWNER_SCENARIO)",
+  "typical-only p.16 bar families",
+  "anchorage, laps and bends",
+  "the unlevelled landings (A2-L1, C-L1)"
+ ],
+ "conservation": {
+  "C01": "PASS",
+  "C02": "PASS",
+  "C03": "PASS",
+  "C04": "PASS",
+  "C05": "PASS",
+  "C06": "PASS",
+  "C07": "PASS",
+  "C08": "PASS",
+  "C09": "PASS",
+  "C10": "PASS"
+ },
+ "corrects": "research/alsenan_stairs_s8_7 (frozen; unchanged)",
+ "counts": {
+  "A1:ARCHITECTURAL GF plan": 25,
+  "A1:OWNER SCENARIO A": 28,
+  "A1:OWNER SCENARIO B": 29,
+  "A1:STRUCTURAL GF roof sheet (GFRS)": 28,
+  "A1:counts in the owner range (150 - 160 mm)": [
+   29,
+   30
+  ],
+  "A2:ARCHITECTURAL 1F plan": 27,
+  "A2:ARCHITECTURAL 2F plan (repeated view)": 24,
+  "A2:OWNER SCENARIO A": 27,
+  "A2:OWNER SCENARIO B": 26,
+  "A2:STRUCTURAL 1F roof sheet (FFRS)": 24,
+  "A2:counts in the owner range (150 - 160 mm)": [
+   27,
+   28
+  ],
+  "B:ARCH-GF": 4,
+  "B:GBP": 4,
+  "C:ARCH-1F": 28,
+  "C:ARCH-GF": 27,
+  "C:GFRS": 28,
+  "D:ARCH-GF": 5,
+  "D:GBP": 5
+ },
+ "date": "2026-10-10",
+ "engine_commit": "15730e0+code:fc5d044f8894710b",
+ "frozen_baselines": {
+  "AD1": "e2497cc75181393000187b7e657fa8485a4c0f365b4614bed983d0bc6c0ca5b4",
+  "D1.1": "3ecb642e2141f5a9af11453870696b104a11cfb519d65a9e3f505cbff7c73a74",
+  "D1.2": "f256d6a25edf93029c6ba1c8cf9bc336790fd8d9cf7a5045e8395942986a9554",
+  "PRE-S7": "fb3a1c62a8e525b663853d03d43e067f1839026aea149399491bd4cf98f0ad09",
+  "PRE-S7.1": "3a67a8641ce4ea836334e02532af82b9a3bb01be8efdba4f093eee44d92c1ef6",
+  "PRE-S8": "1c8daf59926540941efbf5f749e8e175fe64b7efeb6d7acff0bfbefbb034849d",
+  "S4": "0d63015a19953f295e331aab2d7e49e8facb277e1465fbdd1b6b5a40d1a2362b",
+  "S4.1": "468e90d9657548a7e9124b67ce0a55b63560f030e2f98b414c46ad4e970e030b",
+  "S5": "ff488a92f3eaff80e84fca2d7e0b8e36cc40ddb84232cd315acfd1ce50b4b3d8",
+  "S5.1": "595d64b1bf5c8e0ef7b5bebfaf3ea4063dd884356390c84b4c8aac77cddb5a88",
+  "S6": "c29a28bc66334d5294d71b0d5feb0dd5eae36baf91a04ef6e0105b2ca43be63e",
+  "S6.1": "c4744888ed2207ebff47c0a895e706d7e381b5f905b694eb92e3d1cdc411c0b2",
+  "S7": "b23f97b6db334e641c38c498bf23b46236d68f4fcc26a6eafde1f3bfc156d175",
+  "S7A": "5b256cef99dc57934c76249c28814d5ce07c74caf308aabdbf90e0e8f0adcee1",
+  "S8.1": "e99d83a750b64541f5b3174b853d24209f30e46574fafafe56cfa3fd0d88e354",
+  "S8.1A": "890c1c42f03715b6b26d88744852fe388ca419fd7c6e3f0214e137dc5c1a473e",
+  "S8.2": "749affe72ec80083715f01b790b96bb5fca31685a93f952369ec7d4469f3494d",
+  "S8.2A": "76fda44b41695a2a79c7e030388ba2282a93f09552bcd67e06c32aee09551f9d",
+  "S8.3": "92bfe9c0b2b7fea189bb37759f93759ea4a6cf5108738af1390468bda6ee92da",
+  "S8.3A": "cf83c809495496f421f2c85d46c4f497757a66dbbea607a77208555695e73505",
+  "S8.4": "45fd614f0c22adceec27ac0657ae1135f59f4c40dde811c56c2d7121527d85f1",
+  "S8.5": "522287d416f30d3eb0499017ea1a32c87bf530ca6bd6de5356fb5ed1e0e662fa",
+  "S8.6": "9861d791de738722ce53907894c1ff7691923c007411021eb092a2c58616ba9e",
+  "S8.6A": "fe59a4b11a7bd86d7fbb3addf6e7138925d2214256fbb8e4e0673af2b3e5abb8",
+  "S8.7": "ee523cc9d23ed1ecd15f6092fc00abb736ede09bc6e89eb2c81bf75da5c89779",
+  "S8.8": "fd1655dc3f60dde6ec1fc54495087de44e2ed25d5724ff8648a9f0729bb57cdb"
+ },
+ "owner_images": [
+  "IMG-1",
+  "IMG-2",
+  "IMG-3",
+  "IMG-4",
+  "IMG-5",
+  "IMG-6",
+  "IMG-7"
+ ],
+ "owner_scenario_b": "not drawn anywhere (29 / 26): no per-flight geometry",
+ "policy": "S8_7A_STAIR_RISER_AUDIT_V1",
+ "proposed_for_confirmation": {
+  "A1": {
+   "basis": "owner scenario A = the structural GF roof sheet's complete arrangement (12 / 4 / 12); the architectural GF plan draws 25",
+   "riser_mm": 160.714286,
+   "risers": 28,
+   "state": "SOURCE_CONFLICT"
+  },
+  "A2": {
+   "basis": "owner scenario A = the architectural 1F plan's complete arrangement (12 / 4 / 11); the structural 1F roof sheet and the 2F plan draw 24",
+   "riser_mm": 155.555556,
+   "risers": 27,
+   "state": "SOURCE_CONFLICT"
+  },
+  "B": {
+   "riser_mm": 175.0,
+   "risers": 4,
+   "state": "SOURCE_VERIFIED"
+  },
+  "C": {
+   "basis": "both primary views",
+   "riser_mm": 160.714286,
+   "risers": 28,
+   "state": "SOURCE_VERIFIED"
+  },
+  "D": {
+   "riser_mm": 170.0,
+   "risers": 5,
+   "state": "SOURCE_VERIFIED"
+  }
+ },
+ "questions": [
+  "Q-ST7A-01",
+  "Q-ST7A-02",
+  "Q-ST7A-03",
+  "Q-ST7A-04",
+  "Q-ST7A-05",
+  "Q-ST7A-06",
+  "Q-ST7A-07",
+  "Q-ST7A-08",
+  "Q-ST7A-09",
+  "Q-ST7A-10",
+  "Q-ST7A-11"
+ ],
+ "references_read": [],
+ "register_indexes": {
+  "S1": {
+   "index_sha256": "bff6694f05762498c897e2e8da95f70747af133ba652eb47470a03241aa7cc51",
+   "registers_verified": 21
+  },
+  "S2": {
+   "index_sha256": "a966dec798dfc4dbb1beaf16ed8a52d41d90eaad0a072c38d56b4dc53f395b01",
+   "registers_verified": 12
+  },
+  "S3": {
+   "index_sha256": "50fd1ec80048424df7feddd7477a1473db1d9bf7fabf152fd6a837e3366f98cb",
+   "registers_verified": 11
+  },
+  "S3.1": {
+   "index_sha256": "8a771cb688b04128c351aab7880afd5dc353c4df98e3f62910fcd18c06763661",
+   "registers_verified": 12
+  }
+ },
+ "released": {
+  "awaiting": "owner approval before any production BOQ change",
+  "concrete_m3": 0.516582788,
+  "kg": 59.020862261,
+  "new_release_by_s8_7a": {
+   "concrete_m3": 0.0,
+   "kg": 0.0
+  },
+  "production": "unchanged (S8.7)"
+ },
+ "round": "S8_7A",
+ "s8_3_errata_sha256": {
+  "00_ERRATA_README.md": "3fb030efd570782c783e9c784ffe46604444e5bea70f3981dbb5b7512c634b8a",
+  "01_S8_3_ERRATA.csv": "221eeb55b63b2a6621c501cf59045f6b0c00fcb5a6d1da0bd97bb68f857d15e2",
+  "02_ERRATA_SUMMARY.json": "e743aca0105fe7306b0f51ac8fa63191e18c7002491bf2e5cddaa9b6589d7744"
+ },
+ "scenario_totals_never_released": {
+  "concrete_m3": {
+   "A1-ARCH_GF-25": 2.328898513,
+   "A1-OWNER_A-28": 2.485060643,
+   "A2-FFRS-24": 2.532258354,
+   "A2-OWNER_A-27": 2.585191353,
+   "C-DRAWN-28": 2.689263858
+  },
+  "main_bar_kg_flights": {
+   "A1-ARCH_GF-25": 100.841777837,
+   "A1-OWNER_A-28": 113.586749386,
+   "A2-FFRS-24": 110.645598351,
+   "A2-OWNER_A-27": 107.657387203,
+   "C-DRAWN-28": 20.652136252
+  },
+  "whole_stair_incl_s8_7_plates_m3": {
+   "A1-ARCH_GF-25": 2.559298513,
+   "A1-OWNER_A-28": 2.715460643,
+   "A2-FFRS-24": 2.551458354,
+   "A2-OWNER_A-27": 2.604391353,
+   "C-DRAWN-28": 2.956246646
+  }
+ },
+ "unit_mass": "kg/m = d^2 / 162"
+}

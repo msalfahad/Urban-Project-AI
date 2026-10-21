@@ -1,0 +1,84 @@
+{
+ "SCHEMA": "URBAN_R8_13_CLOSURE_RELEASE_MODEL_V1",
+ "policy": {
+  "policy_id": "CLOSURE_RELEASE_MODEL_V1",
+  "levels": [
+   "CANDIDATE",
+   "DIAGNOSTIC_PASS",
+   "AUTHORISED_FOR_SHADOW",
+   "REVIEWED_FOR_RELEASE_CANDIDATE"
+  ],
+  "reviewed_requires": [
+   "POLICY_FROZEN",
+   "CROSS_ROUTE_AGREEMENT",
+   "OWNER_OR_SOURCE_CORROBORATION",
+   "SOURCE_ANCHOR",
+   "HUMAN_REVIEW"
+  ],
+  "never": [
+   "a release",
+   "a level inferred from a missing condition",
+   "an owner fact as topology authority",
+   "a review record without the closure digest"
+  ],
+  "digest": "8f64ecc50048796da79a6d7cd5ecfb36bd3d46896ed61ab2b57a72bcf3e29f51"
+ },
+ "closures": {
+  "TC-1013dbb787e56f65": {
+   "level": "AUTHORISED_FOR_SHADOW",
+   "missing_for_reviewed": [
+    "CROSS_ROUTE_AGREEMENT",
+    "SOURCE_ANCHOR",
+    "HUMAN_REVIEW"
+   ],
+   "evidence": {
+    "POLICY_FROZEN": true,
+    "CROSS_ROUTE_AGREEMENT": null,
+    "OWNER_OR_SOURCE_CORROBORATION": true,
+    "SOURCE_ANCHOR": false,
+    "HUMAN_REVIEW": null
+   },
+   "releases_anything": false,
+   "evidence_parts": [
+    "471",
+    "477",
+    "2430"
+   ],
+   "geometry": [
+    109773.7561,
+    15029.7196,
+    109773.7561,
+    15049.7196
+   ]
+  },
+  "TC-5f9f2014f83ab0d4": {
+   "level": "AUTHORISED_FOR_SHADOW",
+   "missing_for_reviewed": [
+    "CROSS_ROUTE_AGREEMENT",
+    "SOURCE_ANCHOR",
+    "HUMAN_REVIEW"
+   ],
+   "evidence": {
+    "POLICY_FROZEN": true,
+    "CROSS_ROUTE_AGREEMENT": null,
+    "OWNER_OR_SOURCE_CORROBORATION": true,
+    "SOURCE_ANCHOR": false,
+    "HUMAN_REVIEW": null
+   },
+   "releases_anything": false,
+   "evidence_parts": [
+    "2296",
+    "2297",
+    "2431"
+   ],
+   "geometry": [
+    109893.4009,
+    15029.7196,
+    109893.4009,
+    15049.7196
+   ]
+  }
+ },
+ "cross_route_note": "the new revision exists only as a DXF (one decode route, K2 / ezdxf); a second independent route needs the DWG anchor or a pinned second DXF reader",
+ "released": []
+}

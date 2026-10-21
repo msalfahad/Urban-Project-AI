@@ -1,0 +1,10 @@
+{
+ "SCHEMA": "URBAN_R8_17_SECOND_PROJECT_REGRESSION_V1",
+ "state": "NOT_RUN",
+ "candidates": {
+  "P7757": "UNIT_UNRESOLVED (R8.9 / R8.10: no eps_r, so no certified topology and no sites; adopting the candidate mm unit would itself be a calibration)",
+  "Al Rashed": "physical values not computable (R8.5: IMAGE / OLE content, unmapped regions)"
+ },
+ "substitute": "the generic synthetic families (R8.13 V3-D2, R8.11 H1316, R8.16 offset door / passages, R8.17 glazed door) run through V4 and the wall-face engine in the frozen tests",
+ "next": "a second project with a resolved unit and certified topology (R8.18)"
+}

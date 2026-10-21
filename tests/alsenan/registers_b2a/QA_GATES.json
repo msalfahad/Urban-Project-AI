@@ -1,0 +1,18 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_B2A_QA_GATES_V1",
+ "gates": {
+  "silent_opening_promotions": 0,
+  "unknown_published_as_window": 0,
+  "b1_cb1_collisions": 0,
+  "section_from_other_namespace": 0,
+  "nearest_beam_guesses": 0,
+  "slab_target_fitting": 0,
+  "unsupported_heights": 0,
+  "stair_guessed_volume": 0,
+  "hidden_item_omission": 0,
+  "benchmark_constants_in_engine": 0,
+  "qortuba_project_patch": 0
+ },
+ "state": "PASS",
+ "note": "a WINDOW function is never assigned (WINDOW_CANDIDATE / DOOR / UNKNOWN only); the benchmark-literal gate reads the frozen B1 values only to prove their absence"
+}

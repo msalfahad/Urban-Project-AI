@@ -1,0 +1,213 @@
+{
+ "_note": "Fill every null; confirm every guess. A null leaves that part UNRESOLVED, it is never defaulted.",
+ "drawing_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+ "families": {
+  "COLUMNS": {
+   "layers": [
+    "S-COL.BON"
+   ],
+   "layers_state": "UNCONFIRMED_GUESS",
+   "schedule": {},
+   "schedule_source": null,
+   "sheets": [],
+   "size_tol_mm": 10,
+   "tag_regex": "^(C)\\d+[A-Z]?$"
+  },
+  "FOOTINGS": {
+   "layers": [
+    "S-FOOTINGS"
+   ],
+   "layers_state": "UNCONFIRMED_GUESS",
+   "schedule": {},
+   "schedule_source": null,
+   "sheets": [],
+   "size_tol_mm": 10,
+   "tag_regex": "^(F)\\d+[A-Z]?$"
+  }
+ },
+ "profile": "NEW_PROJECT_PROFILE_UNCONFIRMED",
+ "sheets": [
+  {
+   "box": [
+    -75967.728,
+    29036.099,
+    -40773.418,
+    57066.432
+   ],
+   "sheet_id": "FR01",
+   "storey": null,
+   "storey_height_m": null,
+   "storey_height_source": null,
+   "title_guess": [
+    "%%uDETAIL OF SWIMMING POOL.",
+    "%%uDETAIL OF DOME"
+   ]
+  },
+  {
+   "box": [
+    -37243.322,
+    29036.099,
+    -2049.012,
+    57066.432
+   ],
+   "sheet_id": "FR02",
+   "storey": null,
+   "storey_height_m": null,
+   "storey_height_source": null,
+   "title_guess": [
+    "CHECK  ARCHITECTURAL DETAIL OF"
+   ]
+  },
+  {
+   "box": [
+    -1120.11,
+    -14447.747,
+    20097.096,
+    20052.253
+   ],
+   "sheet_id": "FR03",
+   "storey": null,
+   "storey_height_m": null,
+   "storey_height_source": null,
+   "title_guess": [
+    "SCHEDULE OF CONTINUES BEAMS (2 SPAN)"
+   ]
+  },
+  {
+   "box": [
+    1481.084,
+    29036.099,
+    36675.395,
+    57066.432
+   ],
+   "sheet_id": "FR04",
+   "storey": null,
+   "storey_height_m": null,
+   "storey_height_source": null,
+   "title_guess": [
+    "CHECK  ARCHITECTURAL DETAIL OF",
+    "%%USECTION B-B",
+    "SEE DETAIL"
+   ]
+  },
+  {
+   "box": [
+    20636.976,
+    -9116.872,
+    41854.182,
+    20052.253
+   ],
+   "sheet_id": "FR05",
+   "storey": null,
+   "storey_height_m": null,
+   "storey_height_source": null,
+   "title_guess": [
+    "SCHEDULE OF CONTINUES BEAMS (2 SPAN)"
+   ]
+  },
+  {
+   "box": [
+    40205.49,
+    29036.099,
+    75399.801,
+    57066.432
+   ],
+   "sheet_id": "FR06",
+   "storey": null,
+   "storey_height_m": null,
+   "storey_height_source": null,
+   "title_guess": [
+    "CHECK  ARCHITECTURAL DETAIL OF",
+    "%%USECTION A-A",
+    "%%USECTION C-C"
+   ]
+  },
+  {
+   "box": [
+    58870.655,
+    -9116.872,
+    85556.404,
+    20052.253
+   ],
+   "sheet_id": "FR07",
+   "storey": null,
+   "storey_height_m": null,
+   "storey_height_source": null,
+   "title_guess": [
+    "SCHEDULE OF CONTINUES BEAMS (THREE SPAN)"
+   ]
+  },
+  {
+   "box": [
+    78929.897,
+    29036.099,
+    114124.207,
+    57066.432
+   ],
+   "sheet_id": "FR08",
+   "storey": null,
+   "storey_height_m": null,
+   "storey_height_source": null,
+   "title_guess": []
+  },
+  {
+   "box": [
+    94532.33,
+    -7596.093,
+    129726.641,
+    20434.239
+   ],
+   "sheet_id": "FR09",
+   "storey": null,
+   "storey_height_m": null,
+   "storey_height_source": null,
+   "title_guess": [
+    "Schedule of Simple Beams"
+   ]
+  },
+  {
+   "box": [
+    117654.303,
+    29036.099,
+    152848.613,
+    57066.432
+   ],
+   "sheet_id": "FR10",
+   "storey": null,
+   "storey_height_m": null,
+   "storey_height_source": null,
+   "title_guess": []
+  },
+  {
+   "box": [
+    137729.301,
+    -7596.093,
+    172923.612,
+    20434.239
+   ],
+   "sheet_id": "FR11",
+   "storey": null,
+   "storey_height_m": null,
+   "storey_height_source": null,
+   "title_guess": [
+    "%%UDETAILS OF COLUMN REINFORCEMENT.",
+    "*  H  =  HIEGHT OF FLOOR",
+    "Schedule  of  Footings"
+   ]
+  },
+  {
+   "box": [
+    156378.709,
+    29036.099,
+    191573.019,
+    57066.432
+   ],
+   "sheet_id": "FR12",
+   "storey": null,
+   "storey_height_m": null,
+   "storey_height_source": null,
+   "title_guess": []
+  }
+ ],
+ "units_to_mm": null
+}

@@ -1,0 +1,276 @@
+case,quantity,expected,V2.5,V2.5 result,V2.4,V2.4 result
+WP-A,A_net_m2,4.0,4.0,PASS,4.0,PASS
+WP-A,perimeter_m,8.0,8.0,PASS,8.0,PASS
+WP-A,eligible_m,8.0,8.0,PASS,8.0,PASS
+WP-A,upturn_m2,1.6,1.6,PASS,1.6,PASS
+WP-A,doorway_continuation_m2,0.0,0,PASS,0,PASS
+WP-A,proven_subtotal_m2,5.6,5.6,PASS,5.6,PASS
+WP-A,direction,ALONG_X,ALONG_X,PASS,ALONG_X,PASS
+WP-A,floor_strips,3,3,PASS,3,PASS
+WP-A,last_strip_w_m,0.2,0.2,PASS,0.2,PASS
+WP-A,band_pieces_m,"[1.5, 1.5, 1.5, 2.0, 2.0]","[1.5, 1.5, 1.5, 2.0, 2.0]",PASS,"[1.3, 1.6, 1.6, 2.0, 2.0]",FAIL
+WP-A,band_joints,5,5,PASS,5,PASS
+WP-A,laps_m2,1.35,1.35,PASS,1.35,PASS
+WP-A,B_m2,6.95,6.95,PASS,6.95,PASS
+WP-A,consumed_m2,7.5,7.5,PASS,7.6,FAIL
+WP-A,waste_m2,0.55,0.55,PASS,0.65,FAIL
+WP-A,rolls,1,1,PASS,1,PASS
+WP-A,cuts_m,"[2.0, 2.0, 2.0, 1.5]","[2.0, 2.0, 2.0, 1.5]",PASS,"[2.0, 2.0, 2.0, 1.6]",FAIL
+WP-A,untouched_m2,2.5,2.5,PASS,2.4,FAIL
+WP-A,doorway_transition,,,PASS,,PASS
+WP-A,corners_internal,4,4,PASS,4,PASS
+WP-A,corners_external,0,0,PASS,0,PASS
+WP-A,corner_state,WITHHELD,WITHHELD,PASS,WITHHELD,PASS
+WP-A,penetrations,NOT_SHOWN,NOT_SHOWN,PASS,NOT_SHOWN,PASS
+WP-A,final_material_state,PROVISIONAL_DETAILS_OPEN,PROVISIONAL_DETAILS_OPEN,PASS,,FAIL
+WP-B,A_net_m2,12.0,12.0,PASS,12.0,PASS
+WP-B,perimeter_m,14.0,14.0,PASS,14.0,PASS
+WP-B,eligible_m,13.0,13.0,PASS,13.0,PASS
+WP-B,upturn_m2,2.6,2.6,PASS,2.6,PASS
+WP-B,doorway_continuation_m2,0.2,0.2,PASS,0.2,PASS
+WP-B,proven_subtotal_m2,14.8,14.8,PASS,14.8,PASS
+WP-B,direction,ALONG_Y,ALONG_Y,PASS,ALONG_Y,PASS
+WP-B,floor_strips,5,5,PASS,5,PASS
+WP-B,last_strip_w_m,0.4,0.4,PASS,0.4,PASS
+WP-B,band_pieces_m,"[2.0, 2.8, 2.8, 2.8, 3.0]","[2.0, 2.8, 2.8, 2.8, 3.0]",PASS,"[2.0, 2.6, 2.9, 2.9, 3.0]",FAIL
+WP-B,band_joints,4,4,PASS,4,PASS
+WP-B,laps_m2,2.72,2.72,PASS,2.72,PASS
+WP-B,B_m2,17.52,17.52,PASS,17.52,PASS
+WP-B,consumed_m2,17.8,17.8,PASS,17.9,FAIL
+WP-B,waste_m2,0.28,0.28,PASS,0.38,FAIL
+WP-B,rolls,2,2,PASS,2,PASS
+WP-B,cuts_m,"[3.0, 3.0, 3.0, 3.0, 3.0, 2.8]","[3.0, 3.0, 3.0, 3.0, 3.0, 2.8]",PASS,"[3.0, 3.0, 3.0, 3.0, 3.0, 2.9]",FAIL
+WP-B,untouched_m2,2.2,2.2,PASS,2.1,FAIL
+WP-B,alt_rolls,2,2,PASS,3,FAIL
+WP-B,alt_seams,9,9,PASS,7,FAIL
+WP-B,alt_consumed_m2,18.4,18.4,PASS,18.24,FAIL
+WP-B,doorway_transition,UNRESOLVED,UNRESOLVED,PASS,UNRESOLVED,PASS
+WP-B,transition_range_m2,"[0.0, 0.2]","[0.0, 0.2]",PASS,"[0.0, 0.2]",PASS
+WP-B,rolls_if_threshold_upturned,2,2,PASS,,FAIL
+WP-B,corners_internal,4,4,PASS,4,PASS
+WP-B,corners_external,0,0,PASS,0,PASS
+WP-B,corner_state,WITHHELD,WITHHELD,PASS,WITHHELD,PASS
+WP-B,penetrations,NOT_SHOWN,NOT_SHOWN,PASS,NOT_SHOWN,PASS
+WP-B,final_material_state,PROVISIONAL_DETAILS_OPEN,PROVISIONAL_DETAILS_OPEN,PASS,,FAIL
+WP-S,A_net_m2,11.2,11.2,PASS,11.2,PASS
+WP-S,perimeter_m,13.6,13.6,PASS,13.6,PASS
+WP-S,eligible_m,13.6,13.6,PASS,13.6,PASS
+WP-S,upturn_m2,2.72,2.72,PASS,2.72,PASS
+WP-S,doorway_continuation_m2,0.0,0,PASS,0,PASS
+WP-S,proven_subtotal_m2,13.92,13.92,PASS,13.92,PASS
+WP-S,direction,ALONG_X,ALONG_X,PASS,ALONG_X,PASS
+WP-S,floor_strips,3,3,PASS,3,PASS
+WP-S,last_strip_w_m,1.0,1.0,PASS,1.0,PASS
+WP-S,band_pieces_m,"[4.62, 4.64, 4.64]","[4.62, 4.64, 4.64]",PASS,"[4.42, 4.74, 4.74]",FAIL
+WP-S,band_joints,3,3,PASS,3,PASS
+WP-S,laps_m2,2.25,2.25,PASS,2.25,PASS
+WP-S,B_m2,16.17,16.17,PASS,16.17,PASS
+WP-S,consumed_m2,16.64,16.64,PASS,16.74,FAIL
+WP-S,waste_m2,0.47,0.47,PASS,0.57,FAIL
+WP-S,rolls,2,2,PASS,2,PASS
+WP-S,cuts_m,"[4.64, 4.0, 4.0, 4.0]","[4.64, 4.0, 4.0, 4.0]",PASS,"[4.74, 4.0, 4.0, 4.0]",FAIL
+WP-S,untouched_m2,3.36,3.36,PASS,3.26,FAIL
+WP-S,doorway_transition,,,PASS,,PASS
+WP-S,corners_internal,4,4,PASS,4,PASS
+WP-S,corners_external,0,0,PASS,0,PASS
+WP-S,corner_state,WITHHELD,WITHHELD,PASS,WITHHELD,PASS
+WP-S,penetrations,NOT_SHOWN,NOT_SHOWN,PASS,NOT_SHOWN,PASS
+WP-S,final_material_state,PROVISIONAL_DETAILS_OPEN,PROVISIONAL_DETAILS_OPEN,PASS,,FAIL
+WP-C,A_net_m2,12.0,12.0,PASS,12.0,PASS
+WP-C,perimeter_m,14.0,14.0,PASS,14.0,PASS
+WP-C,eligible_m,13.0,13.0,PASS,13.0,PASS
+WP-C,upturn_m2,2.6,2.6,PASS,2.6,PASS
+WP-C,doorway_continuation_m2,0.2,0.2,PASS,0.2,PASS
+WP-C,proven_subtotal_m2,14.8,14.8,PASS,14.8,PASS
+WP-C,direction,ALONG_Y,ALONG_Y,PASS,ALONG_Y,PASS
+WP-C,floor_strips,5,5,PASS,5,PASS
+WP-C,last_strip_w_m,0.4,0.4,PASS,0.4,PASS
+WP-C,band_pieces_m,"[2.0, 2.8, 2.8, 2.8, 3.0]","[2.0, 2.8, 2.8, 2.8, 3.0]",PASS,"[2.0, 2.6, 2.9, 2.9, 3.0]",FAIL
+WP-C,band_joints,4,4,PASS,4,PASS
+WP-C,laps_m2,2.72,2.72,PASS,2.72,PASS
+WP-C,B_m2,17.52,17.52,PASS,17.52,PASS
+WP-C,consumed_m2,17.8,17.8,PASS,17.9,FAIL
+WP-C,waste_m2,0.28,0.28,PASS,0.38,FAIL
+WP-C,rolls,2,2,PASS,2,PASS
+WP-C,cuts_m,"[3.0, 3.0, 3.0, 3.0, 3.0, 2.8]","[3.0, 3.0, 3.0, 3.0, 3.0, 2.8]",PASS,"[3.0, 3.0, 3.0, 3.0, 3.0, 2.9]",FAIL
+WP-C,doorway_transition,UNRESOLVED,UNRESOLVED,PASS,UNRESOLVED,PASS
+WP-C,transition_range_m2,"[0.0, 0.2]","[0.0, 0.2]",PASS,"[0.0, 0.2]",PASS
+WP-C,corners_internal,4,4,PASS,4,PASS
+WP-C,corners_external,0,0,PASS,0,PASS
+WP-C,corner_state,WITHHELD,WITHHELD,PASS,WITHHELD,PASS
+WP-C,penetrations,COUNTED,COUNTED,PASS,COUNTED,PASS
+WP-C,penetration_count,1,1,PASS,1,PASS
+WP-C,penetration_treatment,WITHHELD,WITHHELD,PASS,WITHHELD,PASS
+WP-C,final_material_state,PROVISIONAL_DETAILS_OPEN,PROVISIONAL_DETAILS_OPEN,PASS,,FAIL
+WP-CX,A_net_m2,12.0,12.0,PASS,12.0,PASS
+WP-CX,eligible_m,13.0,13.0,PASS,13.0,PASS
+WP-CX,upturn_m2,2.6,2.6,PASS,2.6,PASS
+WP-CX,doorway_continuation_m2,0.2,0.2,PASS,0.2,PASS
+WP-CX,proven_subtotal_m2,14.8,14.8,PASS,14.8,PASS
+WP-CX,direction,ALONG_X,ALONG_X,PASS,ALONG_Y,FAIL
+WP-CX,floor_strips,4,4,PASS,5,FAIL
+WP-CX,last_strip_w_m,0.3,0.3,PASS,0.4,FAIL
+WP-CX,band_pieces_m,"[0.5, 2.0, 2.0, 2.0, 3.0, 4.0]","[0.5, 2.0, 2.0, 2.0, 3.0, 4.0]",PASS,"[2.0, 2.6, 2.9, 2.9, 3.0]",FAIL
+WP-CX,band_joints,5,5,PASS,4,FAIL
+WP-CX,laps_m2,2.75,2.75,PASS,2.72,FAIL
+WP-CX,detailing_m2,0.25,0.25,PASS,0.0,FAIL
+WP-CX,B_m2,17.8,17.8,PASS,17.52,FAIL
+WP-CX,consumed_m2,18.5,18.5,PASS,17.9,FAIL
+WP-CX,waste_m2,0.7,0.7,PASS,0.38,FAIL
+WP-CX,rolls,2,2,PASS,2,PASS
+WP-CX,cuts_m,"[4.0, 4.0, 4.0, 4.0, 2.0, 0.5]","[4.0, 4.0, 4.0, 4.0, 2.0, 0.5]",PASS,"[3.0, 3.0, 3.0, 3.0, 3.0, 2.9]",FAIL
+WP-CX,alt_rolls,2,2,PASS,3,FAIL
+WP-CX,alt_seams,9,9,PASS,7,FAIL
+WP-CX,alt_consumed_m2,18.17,18.17,PASS,18.24,FAIL
+WP-CX,penetrations,COUNTED,COUNTED,PASS,COUNTED,PASS
+WP-CX,penetration_count,1,1,PASS,1,PASS
+WP-CX,penetration_treatment,BY_DETAIL,BY_DETAIL,PASS,BY_DETAIL,PASS
+WP-CX,doorway_transition,UNRESOLVED,UNRESOLVED,PASS,UNRESOLVED,PASS
+WP-CX,final_material_state,PROVISIONAL_DETAILS_OPEN,PROVISIONAL_DETAILS_OPEN,PASS,,FAIL
+WP-BX,A_net_m2,12.0,12.0,PASS,12.0,PASS
+WP-BX,eligible_m,13.0,13.0,PASS,13.0,PASS
+WP-BX,upturn_m2,2.6,2.6,PASS,2.6,PASS
+WP-BX,transition_m2,0.2,0.2,PASS,0.2,PASS
+WP-BX,doorway_transition,RESOLVED_BY_DETAIL,RESOLVED_BY_DETAIL,PASS,RESOLVED_BY_DETAIL,PASS
+WP-BX,direction,ALONG_Y,ALONG_Y,PASS,ALONG_Y,PASS
+WP-BX,band_pieces_m,"[2.0, 3.0, 3.16, 3.17, 3.17]","[2.0, 3.0, 3.16, 3.17, 3.17]",PASS,"[1.0, 1.92, 2.0, 3.0, 3.24, 3.24]",FAIL
+WP-BX,band_joints,5,5,PASS,4,FAIL
+WP-BX,laps_m2,2.85,2.85,PASS,2.82,FAIL
+WP-BX,B_m2,17.85,17.85,PASS,17.82,FAIL
+WP-BX,consumed_m2,18.17,18.17,PASS,18.24,FAIL
+WP-BX,waste_m2,0.32,0.32,PASS,0.42,FAIL
+WP-BX,rolls,2,2,PASS,2,PASS
+WP-LX,A_net_m2,12.0,12.0,PASS,12.0,PASS
+WP-LX,eligible_m,13.0,13.0,PASS,13.0,PASS
+WP-LX,upturn_m2,2.6,2.6,PASS,2.6,PASS
+WP-LX,doorway_continuation_m2,0.2,0.2,PASS,0.2,PASS
+WP-LX,direction,ALONG_X,ALONG_X,PASS,ALONG_X,PASS
+WP-LX,floor_strips,4,4,PASS,4,PASS
+WP-LX,last_strip_w_m,0.45,0.45,PASS,0.45,PASS
+WP-LX,band_pieces_m,"[3.0, 5.15, 5.15]","[3.0, 5.15, 5.15]",PASS,"[3.0, 5.0, 5.3]",FAIL
+WP-LX,band_joints,2,2,PASS,2,PASS
+WP-LX,laps_m2,4.005,4.005,PASS,4.005,PASS
+WP-LX,B_m2,18.805,18.805,PASS,18.805,PASS
+WP-LX,consumed_m2,21.15,21.15,PASS,21.3,FAIL
+WP-LX,waste_m2,2.345,2.345,PASS,2.495,FAIL
+WP-LX,rolls,3,3,PASS,3,PASS
+WP-LX,cuts_m,"[5.15, 4.0, 4.0, 4.0, 4.0]","[5.15, 4.0, 4.0, 4.0, 4.0]",PASS,"[5.3, 4.0, 4.0, 4.0, 4.0]",FAIL
+WP-LX,alt_rolls,3,3,PASS,3,PASS
+WP-LX,alt_seams,6,6,PASS,6,PASS
+WP-LX,alt_consumed_m2,20.65,20.65,PASS,20.8,FAIL
+WP-D,A_net_m2,8.0,8.0,PASS,8.0,PASS
+WP-D,perimeter_m,12.0,12.0,PASS,12.0,PASS
+WP-D,eligible_m,11.1,11.1,PASS,11.1,PASS
+WP-D,upturn_m2,2.22,2.22,PASS,2.22,PASS
+WP-D,doorway_continuation_m2,0.18,0.18,PASS,0.18,PASS
+WP-D,proven_subtotal_m2,10.4,10.4,PASS,10.4,PASS
+WP-D,direction,ALONG_X,ALONG_X,PASS,ALONG_X,PASS
+WP-D,floor_strips,4,4,PASS,4,PASS
+WP-D,last_strip_w_m,0.3,0.3,PASS,0.3,PASS
+WP-D,band_pieces_m,"[1.1, 2.0, 2.8, 2.8, 2.8]","[1.1, 2.0, 2.8, 2.8, 2.8]",PASS,"[1.1, 2.0, 2.6, 2.9, 2.9]",FAIL
+WP-D,band_joints,4,4,PASS,4,PASS
+WP-D,laps_m2,2.12,2.12,PASS,2.12,PASS
+WP-D,B_m2,12.52,12.52,PASS,12.52,PASS
+WP-D,consumed_m2,13.8,13.8,PASS,13.9,FAIL
+WP-D,waste_m2,1.28,1.28,PASS,1.38,FAIL
+WP-D,rolls,2,2,PASS,2,PASS
+WP-D,cuts_m,"[3.0, 3.0, 3.0, 2.8, 2.0]","[3.0, 3.0, 3.0, 2.8, 2.0]",PASS,"[3.0, 3.0, 3.0, 2.9, 2.0]",FAIL
+WP-D,doorway_transition,UNRESOLVED,UNRESOLVED,PASS,UNRESOLVED,PASS
+WP-D,transition_range_m2,"[0.0, 0.18]","[0.0, 0.18]",PASS,"[0.0, 0.18]",PASS
+WP-D,corners_internal,5,5,PASS,5,PASS
+WP-D,corners_external,1,1,PASS,1,PASS
+WP-D,corner_state,WITHHELD,WITHHELD,PASS,WITHHELD,PASS
+WP-D,penetrations,NOT_SHOWN,NOT_SHOWN,PASS,NOT_SHOWN,PASS
+WP-D,final_material_state,PROVISIONAL_DETAILS_OPEN,PROVISIONAL_DETAILS_OPEN,PASS,,FAIL
+WP-E,A_net_m2,10.8,10.8,PASS,10.8,PASS
+WP-E,perimeter_m,13.2,13.2,PASS,13.2,PASS
+WP-E,eligible_m,11.5,11.5,PASS,11.5,PASS
+WP-E,upturn_m2,2.3,2.3,PASS,2.3,PASS
+WP-E,doorway_continuation_m2,0.34,0.34,PASS,0.34,PASS
+WP-E,proven_subtotal_m2,13.44,13.44,PASS,13.44,PASS
+WP-E,direction,ALONG_Y,ALONG_Y,PASS,ALONG_Y,PASS
+WP-E,floor_strips,4,4,PASS,4,PASS
+WP-E,last_strip_w_m,0.9,0.9,PASS,0.9,PASS
+WP-E,band_pieces_m,"[0.52, 0.9, 3.1, 3.64, 3.64]","[0.52, 0.9, 3.1, 3.64, 3.64]",PASS,"[0.32, 0.9, 3.1, 3.74, 3.74]",FAIL
+WP-E,band_joints,3,3,PASS,3,PASS
+WP-E,laps_m2,2.31,2.31,PASS,2.31,PASS
+WP-E,B_m2,15.75,15.75,PASS,15.75,PASS
+WP-E,consumed_m2,16.54,16.54,PASS,16.64,FAIL
+WP-E,waste_m2,0.79,0.79,PASS,0.89,FAIL
+WP-E,rolls,2,2,PASS,2,PASS
+WP-E,cuts_m,"[3.64, 3.0, 3.0, 3.0, 3.0, 0.9]","[3.64, 3.0, 3.0, 3.0, 3.0, 0.9]",PASS,"[3.74, 3.0, 3.0, 3.0, 3.0, 0.9]",FAIL
+WP-E,alt_rolls,2,2,PASS,2,PASS
+WP-E,alt_seams,7,7,PASS,7,PASS
+WP-E,alt_consumed_m2,16.54,16.54,PASS,16.64,FAIL
+WP-E,doorway_transition,UNRESOLVED,UNRESOLVED,PASS,UNRESOLVED,PASS
+WP-E,transition_range_m2,"[0.0, 0.34]","[0.0, 0.34]",PASS,"[0.0, 0.34]",PASS
+WP-E,corners_internal,4,4,PASS,4,PASS
+WP-E,corners_external,0,0,PASS,0,PASS
+WP-E,corner_state,WITHHELD,WITHHELD,PASS,WITHHELD,PASS
+WP-E,penetrations,COUNTED,COUNTED,PASS,COUNTED,PASS
+WP-E,penetration_count,1,1,PASS,1,PASS
+WP-E,penetration_treatment,WITHHELD,WITHHELD,PASS,WITHHELD,PASS
+WP-E,final_material_state,PROVISIONAL_DETAILS_OPEN,PROVISIONAL_DETAILS_OPEN,PASS,,FAIL
+WP-F,A_net_m2,72.0,72.0,PASS,72.0,PASS
+WP-F,perimeter_m,36.0,36.0,PASS,36.0,PASS
+WP-F,eligible_m,33.0,33.0,PASS,33.0,PASS
+WP-F,upturn_m2,6.6,6.6,PASS,6.6,PASS
+WP-F,doorway_continuation_m2,0.2,0.2,PASS,0.2,PASS
+WP-F,proven_subtotal_m2,78.8,78.8,PASS,78.8,PASS
+WP-F,direction,ALONG_X,ALONG_X,PASS,ALONG_X,PASS
+WP-F,floor_strips,7,7,PASS,7,PASS
+WP-F,last_strip_w_m,0.6,0.6,PASS,0.6,PASS
+WP-F,band_pieces_m,"[1.1, 2.0, 7.42, 7.44, 7.44, 8.0]","[1.1, 2.0, 7.42, 7.44, 7.44, 8.0]",PASS,"[1.1, 2.0, 7.22, 7.54, 7.54, 8.0]",FAIL
+WP-F,band_joints,4,4,PASS,4,PASS
+WP-F,laps_m2,11.38,11.38,PASS,11.38,PASS
+WP-F,B_m2,90.18,90.18,PASS,90.18,PASS
+WP-F,consumed_m2,92.14,92.14,PASS,92.24,FAIL
+WP-F,waste_m2,1.96,1.96,PASS,2.06,FAIL
+WP-F,rolls,10,10,PASS,10,PASS
+WP-F,doorway_transition,UNRESOLVED,UNRESOLVED,PASS,UNRESOLVED,PASS
+WP-F,transition_range_m2,"[0.0, 0.2]","[0.0, 0.2]",PASS,"[0.0, 0.2]",PASS
+WP-F,termination_unresolved_m,3.0,3.0,PASS,3.0,PASS
+WP-F,corners_internal,4,4,PASS,4,PASS
+WP-F,corners_external,0,0,PASS,0,PASS
+WP-F,corner_state,WITHHELD,WITHHELD,PASS,WITHHELD,PASS
+WP-F,penetrations,COUNTED,COUNTED,PASS,COUNTED,PASS
+WP-F,penetration_count,2,2,PASS,2,PASS
+WP-F,penetration_treatment,WITHHELD,WITHHELD,PASS,WITHHELD,PASS
+WP-F,final_material_state,PROVISIONAL_DETAILS_OPEN,PROVISIONAL_DETAILS_OPEN,PASS,,FAIL
+WP-G,A_net_m2,6.0,6.0,PASS,6.0,PASS
+WP-G,perimeter_m,11.0,11.0,PASS,11.0,PASS
+WP-G,eligible_m,9.2,9.2,PASS,9.2,PASS
+WP-G,upturn_m2,1.84,1.84,PASS,1.84,PASS
+WP-G,doorway_continuation_m2,0.36,0.36,PASS,0.36,PASS
+WP-G,proven_subtotal_m2,8.2,8.2,PASS,8.2,PASS
+WP-G,direction,ALONG_X,ALONG_X,PASS,ALONG_X,PASS
+WP-G,floor_strips,2,2,PASS,2,PASS
+WP-G,last_strip_w_m,0.6,0.6,PASS,0.6,PASS
+WP-G,band_pieces_m,"[2.2, 2.42, 2.44, 2.44]","[2.2, 2.42, 2.44, 2.44]",PASS,"[2.2, 2.22, 2.54, 2.54]",FAIL
+WP-G,band_joints,3,3,PASS,3,PASS
+WP-G,laps_m2,1.59,1.59,PASS,1.59,PASS
+WP-G,B_m2,9.79,9.79,PASS,9.79,PASS
+WP-G,consumed_m2,10.44,10.44,PASS,10.54,FAIL
+WP-G,waste_m2,0.65,0.65,PASS,0.75,FAIL
+WP-G,rolls,2,2,PASS,2,PASS
+WP-G,doorway_transition,UNRESOLVED,UNRESOLVED,PASS,UNRESOLVED,PASS
+WP-G,transition_range_m2,"[0.0, 0.36]","[0.0, 0.36]",PASS,"[0.0, 0.36]",PASS
+WP-G,corners_internal,4,4,PASS,4,PASS
+WP-G,corners_external,0,0,PASS,0,PASS
+WP-G,corner_state,WITHHELD,WITHHELD,PASS,WITHHELD,PASS
+WP-G,penetrations,NOT_SHOWN,NOT_SHOWN,PASS,NOT_SHOWN,PASS
+WP-G,final_material_state,PROVISIONAL_DETAILS_OPEN,PROVISIONAL_DETAILS_OPEN,PASS,,FAIL
+WP-W,A_net_m2,1.8,1.8,PASS,1.8,PASS
+WP-W,eligible_m,4.6,4.6,PASS,4.6,PASS
+WP-W,upturn_m2,0.92,0.92,PASS,0.92,PASS
+WP-W,doorway_continuation_m2,0.16,0.16,PASS,0.16,PASS
+WP-W,direction,ALONG_Y,ALONG_Y,PASS,ALONG_Y,PASS
+WP-W,floor_strips,2,2,PASS,2,PASS
+WP-W,band_pieces_m,"[0.4, 1.5, 1.5, 1.5]","[0.4, 1.5, 1.5, 1.5]",PASS,"[0.4, 1.3, 1.6, 1.6]",FAIL
+WP-W,band_joints,3,3,PASS,3,PASS
+WP-W,laps_m2,0.75,0.75,PASS,0.75,PASS
+WP-W,B_m2,3.63,3.63,PASS,3.63,PASS
+WP-W,consumed_m2,3.9,3.9,PASS,4.0,FAIL
+WP-W,waste_m2,0.27,0.27,PASS,0.37,FAIL
+WP-W,rolls,1,1,PASS,1,PASS
+WP-W,cuts_m,"[1.5, 1.2, 1.2]","[1.5, 1.2, 1.2]",PASS,"[1.6, 1.2, 1.2]",FAIL

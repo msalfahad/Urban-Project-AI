@@ -1,0 +1,11 @@
+NOTATION_ID,HANDLES,RAW,DIAMETER_MM,COUNT,SPACING_MM,RATE_PER_M,ROLE,DIRECTION,LAYERS_DRAWN,FAMILY,BOUND_BY,NOTE
+N-1A0E,"[""1A0E"", ""1A0C""]",%%C12MM/15cm,12,,150,,SHELL_MERIDIONAL,RADIAL (meridian),1,SHELL_MERIDIONAL,leader tip at r 10841.8 on the meridional_bar_line,one mesh drawn near the intrados; S1 read 'two layers' from the two labels (CF-S8.3-07)
+N-1A15,"[""1A15"", ""1A13""]",%%C12MM/15cm,12,,150,,SHELL_HOOP,CIRCUMFERENTIAL,1,SHELL_HOOP,leader tip at r 10903.4 on the hoop_bar_dots,one mesh drawn near the intrados; S1 read 'two layers' from the two labels (CF-S8.3-07)
+N-1A47,"[""1A47"", ""1A68""]",3%%c16,16,3,,,RING_TOP,LONGITUDINAL (along the ring),,RING_TOP,labels on both cuts of the one ring section (left and right): one family,explicit count per section
+N-1A4B,"[""1A4B"", ""1A6C""]",3%%c18,18,3,,,RING_BOTTOM,LONGITUDINAL (along the ring),,RING_BOTTOM,labels on both cuts of the one ring section (left and right): one family,explicit count per section
+N-1A37,"[""1A37"", ""1A66""]",2%%c14/20cm,14,2,200,,RING_SIDE,LONGITUDINAL (along the ring),,RING_SIDE,labels on both cuts of the one ring section (left and right): one family,two per face drawn at 20 cm in a depth that is 'AS PER ARCH': the number of rows depends on the depth
+N-1A29,"[""1A29"", ""1A58""]",8%%c8/m,8,,,8,RING_LINKS,TRANSVERSE (closed link round the section),,RING_LINKS,labels on both cuts of the one ring section (left and right): one family,8 per metre of ring
+N-1A09,"[""1A09""]","(drawn bar, no text)",12,,,,SHELL_BAR_INTO_RING,"meridian continuing down each ring cut to its bottom, then a short hook inward",1,SHELL_ANCHORAGE,the meridional bar line itself,"anchorage length is graphic only (N.I.S, depth 'AS PER ARCH')"
+N-1A0B,"[""1A0B""]","(drawn link, no text)",8,,,,RING_LINK_SHAPE,closed rectangle inside the ring cut,,RING_LINKS,drawn inside the left ring cut,its size follows the ring depth
+N-RING-DOTS,"[""1A0A"", ""1A07""]","bar dots in the two cuts: [11, 11]",,,,,GRAPHIC_ONLY,,,RING_TOP / RING_BOTTOM / RING_SIDE,drawing,"the left cut draws all 3 + 3 + 2 x 2; the right cut draws a part of them: graphic completeness, not another family"
+N-HOOP-DOTS,"[""*U295""]",62 dots on r [10872] (detail units),,,,,GRAPHIC_ONLY,,,SHELL_HOOP,drawing,"drawn about every 100 mm: graphic, never a count"

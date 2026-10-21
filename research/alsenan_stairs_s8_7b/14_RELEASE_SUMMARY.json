@@ -1,0 +1,286 @@
+{
+ "answers": {
+  "A1_28_B20": {
+   "clearance_mm": -200.0,
+   "last_riser_y": 16111.856,
+   "state": "PROVISIONAL_SCENARIO_WITH_CONFLICT"
+  },
+  "A1_28_landing": {
+   "difference_mm": 71.428571,
+   "implied_m": 3.571428571,
+   "printed_m": 3.5,
+   "reachable_with_uniform_risers": false,
+   "state": "PROVISIONAL_SCENARIO_WITH_CONFLICT",
+   "uniform_counts_reaching_3_50": [
+    27,
+    36
+   ]
+  },
+  "A2_27_B23": {
+   "clearance_mm": 100.0,
+   "state": "CLEAR"
+  },
+  "A2_27_winders": {
+   "drawn_by": "architectural 1F plan only",
+   "state": "PROVISIONAL_SCENARIO_WITH_CONFLICT",
+   "structural_1F_roof_sheet": "flat quarter"
+  },
+  "C_28": {
+   "landing": "not printed (+4.696 implied)",
+   "second_view": "architectural GF plan draws 27 (one fewer in the short flight)",
+   "state": "INDEPENDENTLY_DRAWN_ON_TWO_PRIMARY_VIEWS; not owner-approved",
+   "supported_by": [
+    "GF roof sheet",
+    "architectural 1F plan"
+   ]
+  },
+  "finish_30mm": "changes no finished level or finished riser; it lowers every concrete tread by the full tread build-up and makes the first / last concrete risers h + f_b - s / h - f_t + s; with the floor build-up equal to the stair build-up every concrete riser equals h",
+  "landing_levels": {
+   "A1": "PRINTED +3.50 (section A-A '320' from +0.30; measured +3.505)",
+   "A2": "NOT PRINTED (+7.989 under 27; section A-A scales +7.687)",
+   "C": "NOT PRINTED (+4.696 under 28)"
+  },
+  "section_a_a": {
+   "1F_2F": "13 + 12 = 25 risers of 168 mm, landing about +7.69",
+   "GF_1F": "15 + 12 = 27 risers of 166.667 mm, landing +3.50"
+  }
+ },
+ "baseline": "303df68",
+ "blocked_reinforcement": [
+  "6Ø14/m",
+  "6Ø12/m",
+  "Ø12/20cm",
+  "Ø8/15",
+  "1Ø12",
+  "6Ø16/m",
+  "2Ø12 / 4Ø16 (20 x 40)",
+  "3Ø14 / 4Ø16 / 2Ø14/30 / Ø8/15",
+  "anchorage / development / laps / bends"
+ ],
+ "concrete_sensitivity_m3_by_waist": {
+  "ALL": {
+   "150": {
+    "gross": 8.405797758,
+    "net": 8.165813286,
+    "upper": 10.307621809
+   },
+   "160": {
+    "gross": 8.795688524,
+    "net": 8.544411606,
+    "upper": 10.692569303
+   },
+   "175": {
+    "gross": 9.38052467,
+    "net": 9.11230909,
+    "upper": 11.269990543
+   },
+   "200": {
+    "gross": 10.355251583,
+    "net": 10.058804897,
+    "upper": 12.232359279
+   }
+  },
+  "main stair 1F -> 2F (OWNER-27)": {
+   "150": {
+    "gross": 2.455729525,
+    "net": 2.398146945,
+    "upper": 2.678464013
+   },
+   "160": {
+    "gross": 2.572492976,
+    "net": 2.512601189,
+    "upper": 2.792972689
+   },
+   "175": {
+    "gross": 2.74763815,
+    "net": 2.684282556,
+    "upper": 2.964735702
+   },
+   "200": {
+    "gross": 3.039546774,
+    "net": 2.970418167,
+    "upper": 3.25100739
+   }
+  },
+  "main stair GF -> 1F (OWNER-28)": {
+   "150": {
+    "gross": 2.364489795,
+    "net": 2.304529063,
+    "upper": 2.57659368
+   },
+   "160": {
+    "gross": 2.471684948,
+    "net": 2.408717906,
+    "upper": 2.681392574
+   },
+   "175": {
+    "gross": 2.632477677,
+    "net": 2.565001171,
+    "upper": 2.838590914
+   },
+   "200": {
+    "gross": 2.90046556,
+    "net": 2.82547328,
+    "upper": 3.100588148
+   }
+  },
+  "round (light-well) stair GF -> 1F (drawn 28)": {
+   "150": {
+    "gross": 2.438634872,
+    "net": 2.342316404,
+    "upper": 2.580564116
+   },
+   "160": {
+    "gross": 2.55344413,
+    "net": 2.452758003,
+    "upper": 2.70180404
+   },
+   "175": {
+    "gross": 2.725658016,
+    "net": 2.618420402,
+    "upper": 2.883663927
+   },
+   "200": {
+    "gross": 3.012681161,
+    "net": 2.894524402,
+    "upper": 3.186763741
+   }
+  },
+  "steps on grade": {
+   "150": {
+    "gross": 1.146943566,
+    "net": 1.120820874,
+    "upper": 2.472
+   },
+   "160": {
+    "gross": 1.19806647,
+    "net": 1.170334508,
+    "upper": 2.5164
+   },
+   "175": {
+    "gross": 1.274750827,
+    "net": 1.244604961,
+    "upper": 2.583
+   },
+   "200": {
+    "gross": 1.402558088,
+    "net": 1.368389048,
+    "upper": 2.694
+   }
+  }
+ },
+ "conservation": {
+  "C01": "PASS",
+  "C02": "PASS",
+  "C03": "PASS",
+  "C04": "PASS",
+  "C05": "PASS",
+  "C06": "PASS",
+  "C07": "PASS",
+  "C08": "PASS",
+  "C09": "PASS",
+  "C10": "PASS",
+  "C11": "PASS",
+  "C12": "PASS",
+  "C13": "PASS",
+  "C14": "PASS",
+  "C15": "PASS",
+  "C16": "PASS"
+ },
+ "date": "2026-10-10",
+ "engine_commit": "303df68+code:f766bafc50a50887",
+ "frozen_baselines": {
+  "AD1": "e2497cc75181393000187b7e657fa8485a4c0f365b4614bed983d0bc6c0ca5b4",
+  "D1.1": "3ecb642e2141f5a9af11453870696b104a11cfb519d65a9e3f505cbff7c73a74",
+  "D1.2": "f256d6a25edf93029c6ba1c8cf9bc336790fd8d9cf7a5045e8395942986a9554",
+  "PRE-S7": "fb3a1c62a8e525b663853d03d43e067f1839026aea149399491bd4cf98f0ad09",
+  "PRE-S7.1": "3a67a8641ce4ea836334e02532af82b9a3bb01be8efdba4f093eee44d92c1ef6",
+  "PRE-S8": "1c8daf59926540941efbf5f749e8e175fe64b7efeb6d7acff0bfbefbb034849d",
+  "S4": "0d63015a19953f295e331aab2d7e49e8facb277e1465fbdd1b6b5a40d1a2362b",
+  "S4.1": "468e90d9657548a7e9124b67ce0a55b63560f030e2f98b414c46ad4e970e030b",
+  "S5": "ff488a92f3eaff80e84fca2d7e0b8e36cc40ddb84232cd315acfd1ce50b4b3d8",
+  "S5.1": "595d64b1bf5c8e0ef7b5bebfaf3ea4063dd884356390c84b4c8aac77cddb5a88",
+  "S6": "c29a28bc66334d5294d71b0d5feb0dd5eae36baf91a04ef6e0105b2ca43be63e",
+  "S6.1": "c4744888ed2207ebff47c0a895e706d7e381b5f905b694eb92e3d1cdc411c0b2",
+  "S7": "b23f97b6db334e641c38c498bf23b46236d68f4fcc26a6eafde1f3bfc156d175",
+  "S7A": "5b256cef99dc57934c76249c28814d5ce07c74caf308aabdbf90e0e8f0adcee1",
+  "S8.1": "e99d83a750b64541f5b3174b853d24209f30e46574fafafe56cfa3fd0d88e354",
+  "S8.1A": "890c1c42f03715b6b26d88744852fe388ca419fd7c6e3f0214e137dc5c1a473e",
+  "S8.2": "749affe72ec80083715f01b790b96bb5fca31685a93f952369ec7d4469f3494d",
+  "S8.2A": "76fda44b41695a2a79c7e030388ba2282a93f09552bcd67e06c32aee09551f9d",
+  "S8.3": "92bfe9c0b2b7fea189bb37759f93759ea4a6cf5108738af1390468bda6ee92da",
+  "S8.3A": "cf83c809495496f421f2c85d46c4f497757a66dbbea607a77208555695e73505",
+  "S8.4": "45fd614f0c22adceec27ac0657ae1135f59f4c40dde811c56c2d7121527d85f1",
+  "S8.5": "522287d416f30d3eb0499017ea1a32c87bf530ca6bd6de5356fb5ed1e0e662fa",
+  "S8.6": "9861d791de738722ce53907894c1ff7691923c007411021eb092a2c58616ba9e",
+  "S8.6A": "fe59a4b11a7bd86d7fbb3addf6e7138925d2214256fbb8e4e0673af2b3e5abb8",
+  "S8.7": "ee523cc9d23ed1ecd15f6092fc00abb736ede09bc6e89eb2c81bf75da5c89779",
+  "S8.7A": "cb10bef01070a7968a99a7a5510fe8a96588c4b3853461b5fcb3315798cf1e0a",
+  "S8.8": "fd1655dc3f60dde6ec1fc54495087de44e2ed25d5724ff8648a9f0729bb57cdb"
+ },
+ "frozen_release_unchanged": {
+  "concrete_m3": 0.516582788,
+  "kg": 59.020862261
+ },
+ "layer_over": [
+  "research/alsenan_stairs_s8_7 (frozen; unchanged)",
+  "research/alsenan_stairs_s8_7a (frozen; unchanged)"
+ ],
+ "main_bar_sensitivity_kg_8d16": 290.514843601,
+ "owner_scenario": {
+  "A1_risers": 28,
+  "A2_risers": 27,
+  "bedding": "NOT_STATED",
+  "stair_finish_mm": 30.0,
+  "state": "PROVISIONAL_OWNER_SCENARIO",
+  "waist": "UNKNOWN (REQUIRES_ENGINEER_CONFIRMATION)"
+ },
+ "policy": "S8_7B_OWNER_SCENARIO_ENGINEERING_RECONCILIATION_V1",
+ "questions": [
+  "Q-ST7B-01",
+  "Q-ST7B-02",
+  "Q-ST7B-03",
+  "Q-ST7B-04",
+  "Q-ST7B-05",
+  "Q-ST7B-06",
+  "Q-ST7B-07",
+  "Q-ST7B-08",
+  "Q-ST7B-09",
+  "Q-ST7B-10",
+  "Q-ST7B-11",
+  "Q-ST7B-12",
+  "Q-ST7B-13",
+  "Q-ST7B-14"
+ ],
+ "references_read": [],
+ "register_indexes": {
+  "S1": {
+   "index_sha256": "bff6694f05762498c897e2e8da95f70747af133ba652eb47470a03241aa7cc51",
+   "registers_verified": 21
+  },
+  "S2": {
+   "index_sha256": "a966dec798dfc4dbb1beaf16ed8a52d41d90eaad0a072c38d56b4dc53f395b01",
+   "registers_verified": 12
+  },
+  "S3": {
+   "index_sha256": "50fd1ec80048424df7feddd7477a1473db1d9bf7fabf152fd6a837e3366f98cb",
+   "registers_verified": 11
+  },
+  "S3.1": {
+   "index_sha256": "8a771cb688b04128c351aab7880afd5dc353c4df98e3f62910fcd18c06763661",
+   "registers_verified": 12
+  }
+ },
+ "release_delta": {
+  "concrete_m3": 0.0,
+  "kg": 0.0
+ },
+ "round": "S8_7B",
+ "rule": "a provisional owner scenario evaluated against the drawings; nothing approved, selected or released",
+ "s8_3_errata_sha256": {
+  "00_ERRATA_README.md": "3fb030efd570782c783e9c784ffe46604444e5bea70f3981dbb5b7512c634b8a",
+  "01_S8_3_ERRATA.csv": "221eeb55b63b2a6621c501cf59045f6b0c00fcb5a6d1da0bd97bb68f857d15e2",
+  "02_ERRATA_SUMMARY.json": "e743aca0105fe7306b0f51ac8fa63191e18c7002491bf2e5cddaa9b6589d7744"
+ },
+ "unit_mass": "kg/m = d^2 / 162"
+}

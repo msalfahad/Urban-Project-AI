@@ -1,0 +1,839 @@
+{
+ "bands": [
+  {
+   "band": "S9A-CP-01",
+   "beam_occurrence": {
+    "id": "BM-GF_ROOF-CA-BL015-69E",
+    "line": "BL015",
+    "orientation": 90.0,
+    "shared_along_mm": 1150,
+    "stations": [
+     8936.9,
+     10211.9
+    ],
+    "tagged": true,
+    "width_mm": 300.0
+   },
+   "boundary_objects": [
+    [
+     "54E",
+     [
+      "LWPOLYLINE",
+      "1"
+     ]
+    ]
+   ],
+   "handle": "54D",
+   "nearby_texts": [
+    {
+     "d_mm": 460,
+     "layer": "S-TEXT",
+     "text": "CA"
+    },
+    {
+     "d_mm": 880,
+     "layer": "S-TEXT",
+     "text": "B3"
+    },
+    {
+     "d_mm": 1463,
+     "layer": "S-TEXT-SLAB",
+     "text": "(With Stair)"
+    },
+    {
+     "d_mm": 1662,
+     "layer": "S-TEXT",
+     "text": "CB3"
+    },
+    {
+     "d_mm": 2074,
+     "layer": "S-TEXT-SLAB",
+     "text": "5%%c10/m"
+    }
+   ],
+   "pdf_box_pt": [
+    714.15,
+    528.81,
+    722.65,
+    561.41
+   ],
+   "pdf_measure": {
+    "lines": 2,
+    "pad_pt": 0.2,
+    "spacing_model_mm": 98.78
+   }
+  },
+  {
+   "band": "S9A-CP-02",
+   "beam_occurrence": {
+    "id": "SPAN:GFRS:BL010:12087-12712",
+    "line": "BL010",
+    "shared_along_mm": 500,
+    "stations": [
+     12087.0,
+     12712.0
+    ],
+    "tagged": false,
+    "width_mm": 200.0
+   },
+   "boundary_objects": [
+    [
+     "484",
+     [
+      "LINE",
+      "1"
+     ]
+    ],
+    [
+     "2B2",
+     [
+      "LINE",
+      "1"
+     ]
+    ],
+    [
+     "353",
+     [
+      "LWPOLYLINE",
+      "S-COL.BON"
+     ]
+    ],
+    [
+     "2B3",
+     [
+      "LINE",
+      "1"
+     ]
+    ]
+   ],
+   "handle": "2B1",
+   "nearby_texts": [
+    {
+     "d_mm": 1188,
+     "layer": "S-TEXT-SLAB",
+     "text": "3%%c16/Top"
+    },
+    {
+     "d_mm": 1531,
+     "layer": "S-TEXT-SLAB",
+     "text": "7%%C10/m"
+    }
+   ],
+   "pdf_box_pt": [
+    196.26,
+    457.94,
+    201.93,
+    472.12
+   ],
+   "pdf_measure": {
+    "lines": 3,
+    "pad_pt": 0.5,
+    "spacing_model_mm": 98.78
+   }
+  },
+  {
+   "band": "S9A-CP-03",
+   "beam_occurrence": {
+    "id": "SPAN:GFRS:BL020:12388-15888",
+    "line": "BL020",
+    "shared_along_mm": 3000,
+    "stations": [
+     12388.0,
+     15888.0
+    ],
+    "tagged": false,
+    "width_mm": 400.0
+   },
+   "boundary_objects": [
+    [
+     "2C6",
+     [
+      "LINE",
+      "1"
+     ]
+    ],
+    [
+     "2B5",
+     [
+      "LINE",
+      "1"
+     ]
+    ],
+    [
+     "458",
+     [
+      "LINE",
+      "1"
+     ]
+    ],
+    [
+     "486",
+     [
+      "LINE",
+      "S-REIN-SLAB"
+     ]
+    ],
+    [
+     "368",
+     [
+      "LWPOLYLINE",
+      "S-COL.BON"
+     ]
+    ]
+   ],
+   "handle": "2B4",
+   "nearby_texts": [
+    {
+     "d_mm": 839,
+     "layer": "S-SEC-TEXT",
+     "text": "A"
+    },
+    {
+     "d_mm": 1006,
+     "layer": "S-SEC-TEXT",
+     "text": "A"
+    },
+    {
+     "d_mm": 2671,
+     "layer": "S-TEXT",
+     "text": "B1"
+    }
+   ],
+   "pdf_box_pt": [
+    377.67,
+    355.9,
+    462.71,
+    367.24
+   ],
+   "pdf_measure": {
+    "lines": 3,
+    "pad_pt": 0.2,
+    "spacing_model_mm": 98.78
+   }
+  },
+  {
+   "band": "S9A-CP-04",
+   "beam_occurrence": {
+    "id": "SPAN:GFRS:BL043:31508-33083",
+    "line": "BL043",
+    "shared_along_mm": 1325,
+    "stations": [
+     31508.0,
+     33083.0
+    ],
+    "tagged": false,
+    "width_mm": 500.0
+   },
+   "boundary_objects": [
+    [
+     "274",
+     [
+      "LINE",
+      "1"
+     ]
+    ],
+    [
+     "335",
+     [
+      "LWPOLYLINE",
+      "S-COL.BON"
+     ]
+    ],
+    [
+     "439",
+     [
+      "LINE",
+      "S-REIN-SLAB"
+     ]
+    ],
+    [
+     "277",
+     [
+      "LINE",
+      "1"
+     ]
+    ],
+    [
+     "2A8",
+     [
+      "LINE",
+      "1"
+     ]
+    ]
+   ],
+   "handle": "273",
+   "nearby_texts": [
+    {
+     "d_mm": 946,
+     "layer": "S-TEXT-SLAB",
+     "text": "5%%c10/m"
+    },
+    {
+     "d_mm": 1165,
+     "layer": "S-SEC-TEXT",
+     "text": "D"
+    },
+    {
+     "d_mm": 1168,
+     "layer": "S-TEXT",
+     "text": "B7"
+    },
+    {
+     "d_mm": 1347,
+     "layer": "S-TEXT-SLAB",
+     "text": "5%%C10"
+    },
+    {
+     "d_mm": 1553,
+     "layer": "S-TEXT",
+     "text": "B7"
+    },
+    {
+     "d_mm": 1756,
+     "layer": "S-SEC-TEXT",
+     "text": "D"
+    }
+   ],
+   "pdf_box_pt": [
+    923.91,
+    228.34,
+    966.43,
+    242.51
+   ],
+   "pdf_measure": {
+    "lines": 3,
+    "pad_pt": 0.2,
+    "spacing_model_mm": 100.28
+   }
+  },
+  {
+   "band": "S9A-CP-05",
+   "beam_occurrence": {
+    "id": "SPAN:FFRS:BL009:12388-15888",
+    "line": "BL009",
+    "shared_along_mm": 3000,
+    "stations": [
+     12388.0,
+     15888.0
+    ],
+    "tagged": false,
+    "width_mm": 450.0
+   },
+   "boundary_objects": [
+    [
+     "68E",
+     [
+      "LWPOLYLINE",
+      "S-COL.BON"
+     ]
+    ],
+    [
+     "5E1",
+     [
+      "LINE",
+      "1"
+     ]
+    ],
+    [
+     "5E7",
+     [
+      "LINE",
+      "1"
+     ]
+    ],
+    [
+     "5E4",
+     [
+      "LINE",
+      "1"
+     ]
+    ],
+    [
+     "6E1",
+     [
+      "LINE",
+      "S-REIN-SLAB"
+     ]
+    ]
+   ],
+   "handle": "5E0",
+   "nearby_texts": [
+    {
+     "d_mm": 624,
+     "layer": "S-TEXT-SLAB",
+     "text": "5%%c10/m"
+    },
+    {
+     "d_mm": 1050,
+     "layer": "S-TEXT",
+     "text": "B6"
+    },
+    {
+     "d_mm": 1194,
+     "layer": "S-SEC-TEXT",
+     "text": "B"
+    },
+    {
+     "d_mm": 1299,
+     "layer": "S-TEXT-SLAB",
+     "text": "5%%C10"
+    },
+    {
+     "d_mm": 2306,
+     "layer": "S-TEXT-SLAB",
+     "text": "SEE DETAIL"
+    },
+    {
+     "d_mm": 2803,
+     "layer": "S-TEXT",
+     "text": "B4"
+    }
+   ],
+   "pdf_box_pt": [
+    377.67,
+    355.9,
+    462.71,
+    368.65
+   ],
+   "pdf_measure": {
+    "lines": 3,
+    "pad_pt": 0.2,
+    "spacing_model_mm": 100.28
+   }
+  },
+  {
+   "band": "S9A-CP-06",
+   "beam_occurrence": {
+    "id": "SPAN:SFRS:BL001:14112-15994",
+    "line": "BL001",
+    "shared_along_mm": 1682,
+    "stations": [
+     14112.0,
+     15994.0
+    ],
+    "tagged": false,
+    "width_mm": 200.0
+   },
+   "boundary_objects": [
+    [
+     "778",
+     [
+      "LWPOLYLINE",
+      "S-COL.BON"
+     ]
+    ],
+    [
+     "39B",
+     [
+      "LINE",
+      "1"
+     ]
+    ],
+    [
+     "392",
+     [
+      "LINE",
+      "1"
+     ]
+    ],
+    [
+     "39A",
+     [
+      "LINE",
+      "1"
+     ]
+    ]
+   ],
+   "handle": "391",
+   "nearby_texts": [
+    {
+     "d_mm": 1202,
+     "layer": "S-TEXT-SLAB",
+     "text": "5%%C18/Top"
+    }
+   ],
+   "pdf_box_pt": [
+    726.34,
+    370.59,
+    732.0,
+    421.09
+   ],
+   "pdf_measure": {
+    "lines": 2,
+    "pad_pt": 0.2,
+    "spacing_model_mm": 101.78
+   }
+  },
+  {
+   "band": "S9A-CP-07",
+   "beam_occurrence": {
+    "id": "SPAN:SFRS:BL004:14112-17362",
+    "line": "BL004",
+    "shared_along_mm": 3000,
+    "stations": [
+     14112.0,
+     17362.0
+    ],
+    "tagged": false,
+    "width_mm": 200.0
+   },
+   "boundary_objects": [
+    [
+     "424",
+     [
+      "LWPOLYLINE",
+      "S-COL.BON"
+     ]
+    ],
+    [
+     "397",
+     [
+      "LINE",
+      "1"
+     ]
+    ],
+    [
+     "392",
+     [
+      "LINE",
+      "1"
+     ]
+    ],
+    [
+     "3AD",
+     [
+      "LINE",
+      "1"
+     ]
+    ]
+   ],
+   "handle": "390",
+   "nearby_texts": [
+    {
+     "d_mm": 792,
+     "layer": "S-TEXT-SLAB",
+     "text": "5%%c10/m"
+    },
+    {
+     "d_mm": 1526,
+     "layer": "S-TEXT-SLAB",
+     "text": "6%%c10/m"
+    },
+    {
+     "d_mm": 1624,
+     "layer": "S-TEXT",
+     "text": "B2"
+    },
+    {
+     "d_mm": 2122,
+     "layer": "S-TEXT",
+     "text": "B3"
+    },
+    {
+     "d_mm": 2922,
+     "layer": "S-TEXT",
+     "text": "B15"
+    },
+    {
+     "d_mm": 3002,
+     "layer": "S-TEXT-SLAB",
+     "text": "6%%c14/m"
+    }
+   ],
+   "pdf_box_pt": [
+    502.4,
+    333.22,
+    508.07,
+    421.09
+   ],
+   "pdf_measure": {
+    "lines": 2,
+    "pad_pt": 0.2,
+    "spacing_model_mm": 98.78
+   }
+  },
+  {
+   "band": "S9A-CP-08",
+   "beam_occurrence": {
+    "id": "SPAN:SFRS:BL007:23558-24888",
+    "line": "BL007",
+    "shared_along_mm": 1030,
+    "stations": [
+     23558.0,
+     24888.0
+    ],
+    "tagged": false,
+    "width_mm": 200.0
+   },
+   "boundary_objects": [
+    [
+     "38D",
+     [
+      "LINE",
+      "1"
+     ]
+    ],
+    [
+     "415",
+     [
+      "LWPOLYLINE",
+      "S-COL.BON"
+     ]
+    ],
+    [
+     "38E",
+     [
+      "LINE",
+      "1"
+     ]
+    ],
+    [
+     "39A",
+     [
+      "LINE",
+      "1"
+     ]
+    ]
+   ],
+   "handle": "38C",
+   "nearby_texts": [
+    {
+     "d_mm": 941,
+     "layer": "S-TEXT-SLAB",
+     "text": "4%%C16/Top"
+    },
+    {
+     "d_mm": 1642,
+     "layer": "S-TEXT-SLAB",
+     "text": "7%%C10/m"
+    }
+   ],
+   "pdf_box_pt": [
+    699.97,
+    228.34,
+    732.0,
+    234.01
+   ],
+   "pdf_measure": {
+    "lines": 2,
+    "pad_pt": 0.2,
+    "spacing_model_mm": 98.78
+   }
+  }
+ ],
+ "dense_100mm": 8,
+ "dense_area_m2": 4.947346,
+ "legend_by_page": {
+  "p4:BEARING_WALL": {
+   "box_pt": [
+    1049.24,
+    275.2,
+    1070.48,
+    289.36
+   ],
+   "lines": 6,
+   "spacing_model_mm": 86.81
+  },
+  "p4:CANTILEVER_PORTION": {
+   "box_pt": [
+    1049.24,
+    228.16,
+    1070.48,
+    242.32
+   ],
+   "lines": 8,
+   "spacing_model_mm": 98.78
+  },
+  "p4:SUNKEN_SLAB": {
+   "box_pt": [
+    1049.24,
+    251.32,
+    1070.48,
+    265.48
+   ],
+   "lines": 3,
+   "spacing_model_mm": 249.95
+  },
+  "p5:BEARING_WALL": {
+   "box_pt": [
+    1049.24,
+    275.2,
+    1070.48,
+    289.36
+   ],
+   "lines": 6,
+   "spacing_model_mm": 86.81
+  },
+  "p5:CANTILEVER_PORTION": {
+   "box_pt": [
+    1049.24,
+    228.16,
+    1070.48,
+    242.32
+   ],
+   "lines": 8,
+   "spacing_model_mm": 98.78
+  },
+  "p5:SUNKEN_SLAB": {
+   "box_pt": [
+    1049.24,
+    251.32,
+    1070.48,
+    265.48
+   ],
+   "lines": 3,
+   "spacing_model_mm": 249.95
+  },
+  "p6:BEARING_WALL": {
+   "box_pt": [
+    1049.24,
+    275.2,
+    1070.48,
+    289.36
+   ],
+   "lines": 6,
+   "spacing_model_mm": 86.81
+  },
+  "p6:CANTILEVER_PORTION": {
+   "box_pt": [
+    1049.24,
+    228.16,
+    1070.48,
+    242.32
+   ],
+   "lines": 8,
+   "spacing_model_mm": 98.78
+  },
+  "p6:SUNKEN_SLAB": {
+   "box_pt": [
+    1049.24,
+    251.32,
+    1070.48,
+    265.48
+   ],
+   "lines": 3,
+   "spacing_model_mm": 249.95
+  }
+ },
+ "legend_reference_spacing_mm": {
+  "BEARING_WALL": 86.81,
+  "CANTILEVER_PORTION": 98.78,
+  "SUNKEN_SLAB": 249.95
+ },
+ "population": [
+  {
+   "area_m2": 5.400000000000179,
+   "handle": "5BF",
+   "line_spacing_mm": 250.0,
+   "pattern": "ANSI31",
+   "pattern_scale": 2000.0,
+   "sheet": "FFRS"
+  },
+  {
+   "area_m2": 1.3499999999996573,
+   "handle": "5E0",
+   "line_spacing_mm": 100.0,
+   "pattern": "ANSI31",
+   "pattern_scale": 800.0,
+   "sheet": "FFRS"
+  },
+  {
+   "area_m2": 0.7499999999998808,
+   "handle": "273",
+   "line_spacing_mm": 100.0,
+   "pattern": "ANSI31",
+   "pattern_scale": 800.0,
+   "sheet": "GFRS"
+  },
+  {
+   "area_m2": 3.3249999999995232,
+   "handle": "275",
+   "line_spacing_mm": 250.0,
+   "pattern": "ANSI31",
+   "pattern_scale": 2000.0,
+   "sheet": "GFRS"
+  },
+  {
+   "area_m2": 2.572500000000447,
+   "handle": "276",
+   "line_spacing_mm": 250.0,
+   "pattern": "ANSI31",
+   "pattern_scale": 2000.0,
+   "sheet": "GFRS"
+  },
+  {
+   "area_m2": 7.234353840713382,
+   "handle": "280",
+   "line_spacing_mm": 250.0,
+   "pattern": "ANSI31",
+   "pattern_scale": 2000.0,
+   "sheet": "GFRS"
+  },
+  {
+   "area_m2": 2.0804243579695374,
+   "handle": "287",
+   "line_spacing_mm": 250.0,
+   "pattern": "ANSI31",
+   "pattern_scale": 2000.0,
+   "sheet": "GFRS"
+  },
+  {
+   "area_m2": 3.9879358690206113,
+   "handle": "298",
+   "line_spacing_mm": 250.0,
+   "pattern": "ANSI31",
+   "pattern_scale": 2000.0,
+   "sheet": "GFRS"
+  },
+  {
+   "area_m2": 0.09999999999996274,
+   "handle": "2B1",
+   "line_spacing_mm": 100.0,
+   "pattern": "ANSI31",
+   "pattern_scale": 800.0,
+   "sheet": "GFRS"
+  },
+  {
+   "area_m2": 1.2000000000000297,
+   "handle": "2B4",
+   "line_spacing_mm": 100.0,
+   "pattern": "ANSI31",
+   "pattern_scale": 800.0,
+   "sheet": "GFRS"
+  },
+  {
+   "area_m2": 0.34499999999989567,
+   "handle": "54D",
+   "line_spacing_mm": 100.0,
+   "pattern": "ANSI31",
+   "pattern_scale": 800.0,
+   "sheet": "GFRS"
+  },
+  {
+   "area_m2": 0.226,
+   "handle": "38C",
+   "line_spacing_mm": 100.0,
+   "pattern": "ANSI31",
+   "pattern_scale": 800.0,
+   "sheet": "SFRS"
+  },
+  {
+   "area_m2": 0.62,
+   "handle": "390",
+   "line_spacing_mm": 100.0,
+   "pattern": "ANSI31",
+   "pattern_scale": 800.0,
+   "sheet": "SFRS"
+  },
+  {
+   "area_m2": 0.3563464991032779,
+   "handle": "391",
+   "line_spacing_mm": 100.0,
+   "pattern": "ANSI31",
+   "pattern_scale": 800.0,
+   "sheet": "SFRS"
+  }
+ ],
+ "rule": "a band is classified only by the legend symbol its own plotted hatch matches (nearest within 6 %); thickness is never inferred from the legend",
+ "sunken_250mm": 6
+}

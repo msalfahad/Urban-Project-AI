@@ -1,0 +1,5 @@
+CASE_ID,ITEM,BASIS,VALUE,UNIT,LANE,IN_OFFICIAL_TOTAL,NOTE
+SA-01,walls if the floor were flat at the drawn depth everywhere,wall band x 1.15 (wall top to inner floor),2.710234412,m3,SENSITIVITY_ONLY,False,the structural detail draws a deep / slope / shallow floor (CF-S8.2A-01)
+SA-02,"wall portion above the deck, if the RC wall reaches +0.30",wall band x 0.15,0.353508836,m3,SENSITIVITY_ONLY,False,the RC top is not stated (CF-S8.2A-04)
+SA-03,walls per 0.10 m of uniform height,wall band x 0.10,0.235672558,m3/0.1 m,SENSITIVITY_ONLY,False,
+SA-04,base at the stated 40 cm under the whole footprint,footprint x 0.40,4.3742255,m3,SENSITIVITY_ONLY,False,40 cm is dimensioned on the deep base only (S8.2 SEN-02)

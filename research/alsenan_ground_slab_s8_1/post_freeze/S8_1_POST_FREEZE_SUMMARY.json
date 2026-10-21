@@ -1,0 +1,495 @@
+{
+ "christiannp": {
+  "faces_without_s8_1_record": 112,
+  "gross_m2": 284.0109,
+  "kg": 1343.72,
+  "openings_m2": 3.24,
+  "slab_faces_without_s8_1_record": 11,
+  "slab_m2": 217.6826
+ },
+ "classes": [
+  "MARKER_CELL_GEOMETRY",
+  "ZONE_EXTENT_SCOPE",
+  "OTHER_OWNER_CELL",
+  "POPULATION_GAP",
+  "ZONE_POLYGON_RESIDUAL",
+  "COUNT_CONVENTION",
+  "GROSS_AREA_UNSEPARATED",
+  "SCOPE_UNSEPARATED",
+  "REFERENCE_ROUNDING",
+  "SANITY_RATIO",
+  "UNKNOWN"
+ ],
+ "equal_scope": [
+  {
+   "CHRISTIANNP_AREA_M2": 14.8931,
+   "CHRISTIANNP_FACE": [
+    "F005"
+   ],
+   "CHRISTIANNP_MINUS_S8_1_M2": -2.4999999999053557e-05,
+   "CLASS": "MARKER_CELL_GEOMETRY",
+   "OLD_URBAN_AREA_M2": 14.7729,
+   "OLD_URBAN_CELL": [
+    "FP1-C105243_43724:R"
+   ],
+   "OLD_URBAN_KG_AREA_X_RATE": 91.19074074074074,
+   "OLD_URBAN_MINUS_S8_1_M2": -0.12022499999999958,
+   "RATE_ALL": "5Ø10/m E.W., one mesh",
+   "S8_1_AREA_M2": 14.893125,
+   "S8_1_CONCRETE_M3": 1.4893125,
+   "S8_1_KG": 91.93287037037,
+   "S8_1_ROW_ID": "SP-GBP-08",
+   "THICKNESS_ALL_MM": 100,
+   "ZONE_ID": "GS-ZONE-1690"
+  },
+  {
+   "CHRISTIANNP_AREA_M2": 22.965,
+   "CHRISTIANNP_FACE": [
+    "F043"
+   ],
+   "CHRISTIANNP_MINUS_S8_1_M2": -0.00039816339700138315,
+   "CLASS": "MARKER_CELL_GEOMETRY",
+   "OLD_URBAN_AREA_M2": 22.9301,
+   "OLD_URBAN_CELL": [
+    "FP2-C83002_39670:R"
+   ],
+   "OLD_URBAN_KG_AREA_X_RATE": 141.54382716049383,
+   "OLD_URBAN_MINUS_S8_1_M2": -0.03529816339700176,
+   "RATE_ALL": "5Ø10/m E.W., one mesh",
+   "S8_1_AREA_M2": 22.965398163397,
+   "S8_1_CONCRETE_M3": 2.29653981634,
+   "S8_1_KG": 141.761717058008,
+   "S8_1_ROW_ID": "SP-GBP-14",
+   "THICKNESS_ALL_MM": 100,
+   "ZONE_ID": "GS-ZONE-169D"
+  }
+ ],
+ "findings": [
+  {
+   "EFFECT_ON_S8_1": "none on the two-zone quantities (no TT1 marker there); the blocked register under-states the unquantified ground slab",
+   "EVIDENCE": "old Urban cell ['FP1-C99368_44772:X'] 42.5596 m2; christiannp 11 slab faces 41.8356 m2 + pit opening 3.24 m2",
+   "ID": "S8.1-PF-01",
+   "KIND": "POPULATION_GAP",
+   "NEXT": "new issue: face the GBP core with the S-BW pit lines as barriers, register the cells as BLOCKED (no thickness / mesh) and the pit as an opening; new regression; new version",
+   "WHAT": "a region round lift pit 7BE has no S1 / PRE-S8 / S8.1 ground-slab face, so S8.1 neither measures nor blocks it"
+  },
+  {
+   "EFFECT_ON_S8_1": "none; the 19 other cells stay BLOCKED",
+   "EVIDENCE": "no printed zone boundary, hatch extent or note ties TT1 to more than the cell that holds it (S8.1 02 rules / 06 blocked)",
+   "ID": "S8.1-PF-02",
+   "KIND": "ZONE_EXTENT_INTERPRETATION",
+   "NEXT": "owner / engineer question: does 'T=10cm 5Ø10/m E.W.' apply to the whole ground slab? An answer is new source evidence for a new version",
+   "WHAT": "old Urban extended each TT1 marker to a multi-cell zone (V3a ZONE-1: 7 cells; V3b ZONE-2: the whole FP-2 footprint, 7 cells); christiannp and the freelancer apply T=10cm to every cell"
+  },
+  {
+   "EFFECT_ON_S8_1": "none; PRE-S8 gives the cell to the S8 stair family, S8.1 never measures it",
+   "EVIDENCE": "['FP1-C101329_39533:R'] 8.3401 m2 / christiannp ['F130'] 8.3723 m2",
+   "ID": "S8.1-PF-03",
+   "KIND": "OWNERSHIP_OVERLAP",
+   "NEXT": "keep it with the stair family; no ground-slab item there",
+   "WHAT": "old Urban (V3a ZONE-1) and christiannp both counted stair-flight cell SP-GBP-12 as ground slab"
+  },
+  {
+   "EFFECT_ON_S8_1": "none (S8.1 never adds +1)",
+   "EVIDENCE": "+8.414 kg over area x rate",
+   "ID": "S8.1-PF-04",
+   "KIND": "COUNT_CONVENTION",
+   "NEXT": "none",
+   "WHAT": "V3b ZONE-2 uses n = floor(sqrt(A)/0.2) + 1 equivalent square bars per direction"
+  }
+ ],
+ "frame_origin": [
+  78929.89653886131,
+  29036.09943562183
+ ],
+ "freeze_commit": "201f4415c989fbd08062ba4e2d306f831d326627",
+ "freeze_manifest_sha256": "e99d83a750b64541f5b3174b853d24209f30e46574fafafe56cfa3fd0d88e354",
+ "freeze_manifest_verified": true,
+ "frozen_engine_stamp": "73f62c3+code:16df2247dc793719",
+ "old_urban": {
+  "cr_best_m2": 217.01160000000002,
+  "cr_released_m2": 115.2751,
+  "v3b_count_convention_kg": 8.414330489696567,
+  "v3b_lap_kg_not_compared": 26.790124,
+  "zone_area_m2": {
+   "ZONE-1": 70.40589,
+   "ZONE-2": 44.983
+  },
+  "zone_cells": {
+   "ZONE-1": [
+    "SP-GBP-09",
+    "SP-GBP-17",
+    "SP-GBP-12",
+    "SP-GBP-22",
+    "SP-GBP-08",
+    "SP-GBP-11",
+    "SP-GBP-23"
+   ],
+   "ZONE-2": [
+    "SP-GBP-14",
+    "SP-GBP-19",
+    "SP-GBP-10",
+    "SP-GBP-15",
+    "SP-GBP-20",
+    "SP-GBP-18",
+    "SP-GBP-21"
+   ]
+  }
+ },
+ "reference_totals": [
+  {
+   "CLASSES": {
+    "MARKER_CELL_GEOMETRY": -0.015552316339699957,
+    "OTHER_OWNER_CELL": 0.83401,
+    "REFERENCE_ROUNDING": 0.0004900000000009896,
+    "ZONE_EXTENT_SCOPE": 6.923200000000001
+   },
+   "CLASSES_CLOSE": true,
+   "DIFF": 7.74214768366025,
+   "EQUAL_SCOPE_DIFF": -0.015552316339749517,
+   "MATCHING": "CELL",
+   "MEASUREMENT_ORIGIN": "OLD_URBAN_CALCULATED (cell = footprint - 300 mm bands - columns - single lines)",
+   "NOTE": "14 cells",
+   "QUANTITY": "CONCRETE_M3",
+   "REFERENCE": "OLD_URBAN_CR_LOWER_BOUND",
+   "REFERENCE_ON_S8_1_SCOPE": 3.7703000000000007,
+   "REFERENCE_SCOPE": "cells inside the V3a / V3b T= zones (RELEASED_ZONE_PART) x 0.10",
+   "REFERENCE_VALUE": 11.528,
+   "S8_1_MEASUREMENT_ORIGIN": "SOURCE_VERIFIED_CURRENT_MEASUREMENT",
+   "S8_1_VALUE": 3.78585231633975
+  },
+  {
+   "CLASSES": {
+    "MARKER_CELL_GEOMETRY": -0.015552316339699957,
+    "OTHER_OWNER_CELL": 0.83401,
+    "POPULATION_GAP": 4.255960000000001,
+    "REFERENCE_ROUNDING": -0.0001600000000010482,
+    "ZONE_EXTENT_SCOPE": 12.84089
+   },
+   "CLASSES_CLOSE": true,
+   "DIFF": 17.91514768366025,
+   "EQUAL_SCOPE_DIFF": -0.015552316339749517,
+   "MATCHING": "CELL",
+   "MEASUREMENT_ORIGIN": "OLD_URBAN_CALCULATED (cell = footprint - 300 mm bands - columns - single lines)",
+   "NOTE": "23 cells",
+   "QUANTITY": "CONCRETE_M3",
+   "REFERENCE": "OLD_URBAN_CR_BEST",
+   "REFERENCE_ON_S8_1_SCOPE": 3.7703000000000007,
+   "REFERENCE_SCOPE": "every cell between ground beams >= 450 mm effective width x 0.10 (T=10cm applied to all)",
+   "REFERENCE_VALUE": 21.701,
+   "S8_1_MEASUREMENT_ORIGIN": "SOURCE_VERIFIED_CURRENT_MEASUREMENT",
+   "S8_1_VALUE": 3.78585231633975
+  },
+  {
+   "CLASSES": {
+    "MARKER_CELL_GEOMETRY": -0.9600195271419726,
+    "OTHER_OWNER_CELL": 51.4820987654321,
+    "REFERENCE_ROUNDING": 2.3456789222109364e-07,
+    "ZONE_EXTENT_SCOPE": 427.3580246913581,
+    "ZONE_POLYGON_RESIDUAL": 0.7024074074074612
+   },
+   "CLASSES_CLOSE": true,
+   "DIFF": 478.58251157162067,
+   "EQUAL_SCOPE_DIFF": -0.9600195271447376,
+   "MATCHING": "ZONE_VIA_CR_CELL_SPLIT",
+   "MEASUREMENT_ORIGIN": "OLD_URBAN_CALCULATED (zone area x 5 m/m2 each way, PROVISIONAL)",
+   "NOTE": "ZONE-1 70.40589 m2 (AMBIGUOUS_NESTED_CANDIDATES); ZONE-2 44.98300 m2 (ESTABLISHED_SOLE_CANDIDATE)",
+   "QUANTITY": "REBAR_KG",
+   "REFERENCE": "OLD_URBAN_R4",
+   "REFERENCE_ON_S8_1_SCOPE": 232.73456790123458,
+   "REFERENCE_SCOPE": "ZONE-1 (V3a closed zone round marker 1690) + ZONE-2 (V3b closed footprint round marker 169D)",
+   "REFERENCE_VALUE": 712.277099,
+   "S8_1_MEASUREMENT_ORIGIN": "SOURCE_VERIFIED_CURRENT_MEASUREMENT",
+   "S8_1_VALUE": 233.69458742837932
+  },
+  {
+   "CLASSES": {
+    "MARKER_CELL_GEOMETRY": -0.9600195271419726,
+    "OTHER_OWNER_CELL": 51.4820987654321,
+    "REFERENCE_ROUNDING": 2.3456789222109364e-07,
+    "ZONE_EXTENT_SCOPE": 427.3580246913581,
+    "ZONE_POLYGON_RESIDUAL": 0.7024074074074612
+   },
+   "CLASSES_CLOSE": true,
+   "DIFF": 478.58251157162067,
+   "EQUAL_SCOPE_DIFF": -0.9600195271447376,
+   "MATCHING": "ZONE_VIA_CR_CELL_SPLIT",
+   "MEASUREMENT_ORIGIN": "OLD_URBAN_CALCULATED (zone area x 5 m/m2 each way, PROVISIONAL)",
+   "NOTE": "ZONE-1 70.40589 m2 (AMBIGUOUS_NESTED_CANDIDATES); ZONE-2 44.98300 m2 (ESTABLISHED_SOLE_CANDIDATE)",
+   "QUANTITY": "REBAR_KG",
+   "REFERENCE": "OLD_URBAN_R3",
+   "REFERENCE_ON_S8_1_SCOPE": 232.73456790123458,
+   "REFERENCE_SCOPE": "ZONE-1 (V3a closed zone round marker 1690) + ZONE-2 (V3b closed footprint round marker 169D)",
+   "REFERENCE_VALUE": 712.277099,
+   "S8_1_MEASUREMENT_ORIGIN": "SOURCE_VERIFIED_CURRENT_MEASUREMENT",
+   "S8_1_VALUE": 233.69458742837932
+  },
+  {
+   "CLASSES": {
+    "COUNT_CONVENTION": 8.414330489696567,
+    "MARKER_CELL_GEOMETRY": -0.9600195271419726,
+    "OTHER_OWNER_CELL": 51.4820987654321,
+    "REFERENCE_ROUNDING": 1.214007284033869e-06,
+    "ZONE_EXTENT_SCOPE": 427.3580246913581,
+    "ZONE_POLYGON_RESIDUAL": 0.7024049382716299
+   },
+   "CLASSES_CLOSE": true,
+   "DIFF": 486.99684057162074,
+   "EQUAL_SCOPE_DIFF": -0.9600195271447376,
+   "MATCHING": "ZONE_VIA_CR_CELL_SPLIT",
+   "MEASUREMENT_ORIGIN": "OLD_V3B_CALCULATED (ZONE-2: n = floor(sqrt(A)/0.2) + 1 equivalent square bars; ZONE-1 area x 5)",
+   "NOTE": "population row GROUND_SLAB = 286.087 kg (ZONE-2 only); procurement laps 26.790 kg not in net, not compared",
+   "QUANTITY": "REBAR_KG",
+   "REFERENCE": "OLD_URBAN_V3B",
+   "REFERENCE_ON_S8_1_SCOPE": 232.73456790123458,
+   "REFERENCE_SCOPE": "ZONE-1 mesh X/Y (GROUND population) + ZONE-2 mesh X/Y (GROUND_SLAB population)",
+   "REFERENCE_VALUE": 720.6914280000001,
+   "S8_1_MEASUREMENT_ORIGIN": "SOURCE_VERIFIED_CURRENT_MEASUREMENT",
+   "S8_1_VALUE": 233.69458742837932
+  },
+  {
+   "CLASSES": {
+    "MARKER_CELL_GEOMETRY": -0.015552316339699957,
+    "OTHER_OWNER_CELL": 0.83401,
+    "REFERENCE_ROUNDING": 0.00011103999999839687,
+    "ZONE_EXTENT_SCOPE": 6.923200000000001,
+    "ZONE_POLYGON_RESIDUAL": 0.011378960000000405
+   },
+   "CLASSES_CLOSE": true,
+   "DIFF": 7.7531476836602495,
+   "EQUAL_SCOPE_DIFF": -0.015552316339749517,
+   "MATCHING": "ZONE_VIA_CR_CELL_SPLIT",
+   "MEASUREMENT_ORIGIN": "OLD_V3B_CALCULATED (zones minus beam bands / columns x 0.10, LOWER_BOUND)",
+   "NOTE": "",
+   "QUANTITY": "CONCRETE_M3",
+   "REFERENCE": "OLD_URBAN_V3B",
+   "REFERENCE_ON_S8_1_SCOPE": 3.7703000000000007,
+   "REFERENCE_SCOPE": "C-GSLAB-ZONE-1 + C-GSLAB-ZONE-2",
+   "REFERENCE_VALUE": 11.539,
+   "S8_1_MEASUREMENT_ORIGIN": "SOURCE_VERIFIED_CURRENT_MEASUREMENT",
+   "S8_1_VALUE": 3.78585231633975
+  },
+  {
+   "CLASSES": {
+    "MARKER_CELL_GEOMETRY": -4.231633970022131e-05,
+    "OTHER_OWNER_CELL": 0.8372299999999999,
+    "POPULATION_GAP": 4.207,
+    "ZONE_EXTENT_SCOPE": 12.93822
+   },
+   "CLASSES_CLOSE": true,
+   "DIFF": 17.982407683660252,
+   "EQUAL_SCOPE_DIFF": -4.2316339750048115e-05,
+   "MATCHING": "CELL",
+   "MEASUREMENT_ORIGIN": "DONOR_CALCULATED (vector planar faces, sampled apportioning; T=10cm applied to all faces)",
+   "NOTE": "37 faces with slab area; openings 3.24 m2 (PIT_7BE)",
+   "QUANTITY": "CONCRETE_M3",
+   "REFERENCE": "CHRISTIANNP_FORENSIC",
+   "REFERENCE_ON_S8_1_SCOPE": 3.78581,
+   "REFERENCE_SCOPE": "every vector slab face between ground beams, net of beams / columns / lift pit",
+   "REFERENCE_VALUE": 21.76826,
+   "S8_1_MEASUREMENT_ORIGIN": "SOURCE_VERIFIED_CURRENT_MEASUREMENT",
+   "S8_1_VALUE": 3.78585231633975
+  },
+  {
+   "CLASSES": {
+    "MARKER_CELL_GEOMETRY": -0.0026121197345815622,
+    "OTHER_OWNER_CELL": 51.68086419753086,
+    "POPULATION_GAP": 259.69135802469134,
+    "REFERENCE_ROUNDING": 0.000246913580213004,
+    "ZONE_EXTENT_SCOPE": 798.6555555555555
+   },
+   "CLASSES_CLOSE": true,
+   "DIFF": 1110.0254125716208,
+   "EQUAL_SCOPE_DIFF": -0.002612119737335661,
+   "MATCHING": "CELL",
+   "MEASUREMENT_ORIGIN": "DONOR_CALCULATED (5 m/m2 x area each way, single mesh, laps / cover excluded)",
+   "NOTE": "SLAB_BOTTOM_X 671.86 kg (5 m/m2 x 217.68 m2); SLAB_BOTTOM_Y 671.86 kg (5 m/m2 x 217.68 m2)",
+   "QUANTITY": "REBAR_KG",
+   "REFERENCE": "CHRISTIANNP_FORENSIC",
+   "REFERENCE_ON_S8_1_SCOPE": 233.691975308642,
+   "REFERENCE_SCOPE": "same faces as its concrete",
+   "REFERENCE_VALUE": 1343.72,
+   "S8_1_MEASUREMENT_ORIGIN": "SOURCE_VERIFIED_CURRENT_MEASUREMENT",
+   "S8_1_VALUE": 233.69458742837932
+  },
+  {
+   "CLASSES": {
+    "GROSS_AREA_UNSEPARATED": 12.787089234771239,
+    "ZONE_EXTENT_SCOPE": 12.977058448889009
+   },
+   "CLASSES_CLOSE": true,
+   "DIFF": 25.76414768366025,
+   "EQUAL_SCOPE_DIFF": null,
+   "MATCHING": "CATEGORY",
+   "MEASUREMENT_ORIGIN": "REFERENCE_QS (one gross ground-slab area x thickness)",
+   "NOTE": "ZONE_EXTENT_SCOPE attributes S8.1's 19 blocked faces at the reference's own 0.10 m; the rest of the gross area (beam / column footprints, the stair cell, the unfaced lift-pit core) is one row and not separable",
+   "QUANTITY": "CONCRETE_M3",
+   "REFERENCE": "FREELANCER",
+   "REFERENCE_ON_S8_1_SCOPE": null,
+   "REFERENCE_SCOPE": "one row: 295.5 m2 x 0.1 m (gross outline, beams not deducted)",
+   "REFERENCE_VALUE": 29.55,
+   "S8_1_MEASUREMENT_ORIGIN": "SOURCE_VERIFIED_CURRENT_MEASUREMENT",
+   "S8_1_VALUE": 3.78585231633975
+  },
+  {
+   "CLASSES": {},
+   "CLASSES_CLOSE": true,
+   "DIFF": null,
+   "EQUAL_SCOPE_DIFF": null,
+   "MATCHING": "NOT_COMPARABLE",
+   "MEASUREMENT_ORIGIN": "REFERENCE_QS",
+   "NOTE": "9.75 t over 75.09 m3: no ground-slab steel line",
+   "QUANTITY": "REBAR_KG",
+   "REFERENCE": "FREELANCER",
+   "REFERENCE_ON_S8_1_SCOPE": null,
+   "REFERENCE_SCOPE": "one steel lump for ground beams + ground slab + boundary ground beam",
+   "REFERENCE_VALUE": null,
+   "S8_1_MEASUREMENT_ORIGIN": "SOURCE_VERIFIED_CURRENT_MEASUREMENT",
+   "S8_1_VALUE": 233.69458742837932
+  },
+  {
+   "CLASSES": {
+    "SCOPE_UNSEPARATED": 28.39714768366025
+   },
+   "CLASSES_CLOSE": true,
+   "DIFF": 28.39714768366025,
+   "EQUAL_SCOPE_DIFF": null,
+   "MATCHING": "CATEGORY",
+   "MEASUREMENT_ORIGIN": "ORACLE_CALCULATED",
+   "NOTE": "no cell list behind the figure",
+   "QUANTITY": "CONCRETE_M3",
+   "REFERENCE": "UC4N",
+   "REFERENCE_ON_S8_1_SCOPE": null,
+   "REFERENCE_SCOPE": "one ground-slab figure, extent not itemised",
+   "REFERENCE_VALUE": 32.183,
+   "S8_1_MEASUREMENT_ORIGIN": "SOURCE_VERIFIED_CURRENT_MEASUREMENT",
+   "S8_1_VALUE": 3.78585231633975
+  },
+  {
+   "CLASSES": {
+    "SCOPE_UNSEPARATED": 28.618147683660254
+   },
+   "CLASSES_CLOSE": true,
+   "DIFF": 28.618147683660254,
+   "EQUAL_SCOPE_DIFF": null,
+   "MATCHING": "CATEGORY",
+   "MEASUREMENT_ORIGIN": "DONOR_CALCULATED (original run)",
+   "NOTE": "no cell list behind the figure",
+   "QUANTITY": "CONCRETE_M3",
+   "REFERENCE": "CHRISTIANNP_ORIGINAL",
+   "REFERENCE_ON_S8_1_SCOPE": null,
+   "REFERENCE_SCOPE": "one ground-slab figure, extent not itemised",
+   "REFERENCE_VALUE": 32.404,
+   "S8_1_MEASUREMENT_ORIGIN": "SOURCE_VERIFIED_CURRENT_MEASUREMENT",
+   "S8_1_VALUE": 3.78585231633975
+  },
+  {
+   "CLASSES": {},
+   "CLASSES_CLOSE": true,
+   "DIFF": null,
+   "EQUAL_SCOPE_DIFF": null,
+   "MATCHING": "NOT_COMPARABLE",
+   "MEASUREMENT_ORIGIN": "ORACLE_CALCULATED",
+   "NOTE": "no ground-slab steel figure",
+   "QUANTITY": "REBAR_KG",
+   "REFERENCE": "UC4N",
+   "REFERENCE_ON_S8_1_SCOPE": null,
+   "REFERENCE_SCOPE": "project net rebar total only",
+   "REFERENCE_VALUE": null,
+   "S8_1_MEASUREMENT_ORIGIN": "SOURCE_VERIFIED_CURRENT_MEASUREMENT",
+   "S8_1_VALUE": 233.69458742837932
+  },
+  {
+   "CLASSES": {
+    "SANITY_RATIO": 258.46621369578816
+   },
+   "CLASSES_CLOSE": true,
+   "DIFF": 258.46621369578816,
+   "EQUAL_SCOPE_DIFF": null,
+   "MATCHING": "SANITY_ONLY",
+   "MEASUREMENT_ORIGIN": "SANITY_HEURISTIC",
+   "NOTE": "S8.1 intensity 61.728 kg/m3 = 2 x 5 x 0.617 kg/m / 0.10 m; the 130 ratio is a category ratio over ground beams and slab together; never promoted",
+   "QUANTITY": "REBAR_KG",
+   "REFERENCE": "ROUGH_130_KG_PER_M3",
+   "REFERENCE_ON_S8_1_SCOPE": null,
+   "REFERENCE_SCOPE": "S8.1 concrete x the GROUND_BEAMS_AND_GROUND_SLAB ratio (SANITY_CHECK_ONLY)",
+   "REFERENCE_VALUE": 492.1608011241675,
+   "S8_1_MEASUREMENT_ORIGIN": "SOURCE_VERIFIED_CURRENT_MEASUREMENT",
+   "S8_1_VALUE": 233.69458742837932
+  }
+ ],
+ "references": {
+  "CHRISTIANNP_FORENSIC": {
+   "path": "CHRISTIANNP_FORENSIC_RERUN (external, read-only)",
+   "sha256": {
+    "GBP_SLAB_INPUTS_AND_VECTOR.json": "995e814f997efd520f4c8e89d83283bd7ae720ecb0cccf883b533e68b1eff277",
+    "GBP_VECTOR_FACES.csv": "d0f03d6f84bc81eed21be6216bee91eb32d18350c6dbc1b7d5430b296afb3e9f",
+    "REBAR_EVIDENCE.csv": "5a56ed585b03f86490c28f15481f8697a662b8fe43838b475f74bdc9d6386ae6"
+   }
+  },
+  "FREELANCER": {
+   "path": "research/alsenan_multi_engine_comparison/FREELANCER_CATEGORY_LINEAGE.json",
+   "sha256": "8e525d73f2b2240c7f8bee196e95f4998f3c7f4459f29841bffffccc154b8ffa",
+   "workbook_sha256": "ae608411ed5b9e64811a15c353adbdd017fa3e51abfdffcf0aa1454b85d1957c"
+  },
+  "MULTI_ENGINE_CONCRETE": {
+   "path": "research/alsenan_multi_engine_comparison/MULTI_ENGINE_CONCRETE_COMPARISON.json",
+   "sha256": "782b1515cec1f7b48deb633ba52d81723b79412bf1133e04b566e4d6a80edaf3"
+  },
+  "MULTI_ENGINE_REBAR": {
+   "path": "research/alsenan_multi_engine_comparison/MULTI_ENGINE_REBAR_COMPARISON.json",
+   "sha256": "b0c378224eb44a30703da67eea318956be188048b90c50f5b5bca7fe9251f304"
+  },
+  "OLD_URBAN_CR": {
+   "dashboard": "research/coverage_recovery_round/QUANTITY_COVERAGE_DASHBOARD.json",
+   "dashboard_sha256": "818f4b8643e7b456cb13814cd49583ca650560a78da3bda92f200da1d605e174",
+   "path": "research/coverage_recovery_round/GROUND_SLAB_CELL_EXTRACT.json",
+   "sha256": "e14b6e0ce67640ece4912cd2ec7dae4b2da9a3f51d1ec4f4603b8ce5627e79b5"
+  },
+  "OLD_URBAN_R3": {
+   "path": "research/alsenan_rebar_truth_03/registers/SLAB_REBAR_AUDIT.json",
+   "sha256": "846a81bfef909380f0d9513c2f3f98a0d25643b7b82159763b5f899c625a125e"
+  },
+  "OLD_URBAN_R4": {
+   "path": "research/alsenan_rebar_source_exhaustion_04/registers/REBAR_POPULATION_REGISTER_V4.json",
+   "sha256": "c1dafb557c612c4ac3062ed2c988afa6bfa2b03bef6cb4a630911593f64bc752"
+  },
+  "OLD_URBAN_V3B": {
+   "path": "tests/alsenan/registers_v3b/REBAR_POPULATION_REGISTER.json",
+   "sha256": "3b78cede49df58a97c4ce9abc7d4c2ea22c803c6800e7af9922949ec56068f74",
+   "structure": "tests/alsenan/registers_v3b/STRUCTURE_V3B_REGISTER.json",
+   "structure_sha256": "de08383a6e4fdd5a13852c1d0d122a257b2d5da81bc9b22ca67289239d709817"
+  },
+  "ROUGH_PROFILE": {
+   "path": "engine/profiles/URBAN_ROUGH_REBAR_PROFILE_V1.json",
+   "sha256": "60c04b3676cd126e3ddb01e1b9aa241773a012ed401180538896af6e3b4b669f"
+  }
+ },
+ "rough": {
+  "promoted": false,
+  "ratio_kg_per_m3": 130,
+  "reference_kg_on_s8_1_scope": 492.1608011241675,
+  "use": "SANITY_CHECK_ONLY"
+ },
+ "round": "S8_1_POST_FREEZE",
+ "rule": "comparison only: nothing here changes an S8.1 quantity; a correction needs a new issue, new source evidence, a new regression and a new version",
+ "s8_1": {
+  "blocked_area_m2": 129.77058448889008,
+  "concrete_m3": 3.78585231633975,
+  "frozen_origin_text": [
+   "S8.1 source-traced measurement (no earlier register line is used)"
+  ],
+  "included_area_m2": 37.85852316339751,
+  "kg_per_m2": 6.172839506172839,
+  "kg_per_m3": 61.728395061728314,
+  "marker_cells": [
+   "SP-GBP-08",
+   "SP-GBP-14"
+  ],
+  "measurement_origin": "SOURCE_VERIFIED_CURRENT_MEASUREMENT",
+  "total_kg": 233.69458742837932
+ },
+ "s8_1_outputs_written": false,
+ "tuned": false,
+ "unknown_rows": []
+}

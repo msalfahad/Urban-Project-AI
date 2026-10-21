@@ -1,0 +1,14 @@
+ID,STAGE,RECORD,OLD_STATE,NEW_OWNER,NOTE
+OWN-S1-BEAM,S1,BM-ALL-LINTEL-POPULATION,COUNTED_BLOCKED,S8.6,population blocked in S1 ('occurrences come from the architectural openings'): S8.6 supplies it
+OWN-S1-SPECIAL,S1,SPC-LINTELS,BLOCKED,S8.6,same population
+OWN-S1-DEF,S1,BDEF-LINTEL / P13-LINTEL,DEFINED_BY_TYPICAL_DETAIL,S8.6 binds,"the definition is read, never re-owned"
+OWN-S2,S2,BM-ALL-LINTEL-POPULATION CONCRETE/MAIN_BARS/SIDE_BARS,"[""BLOCKED""]",S8.6,"S2 holds the lintel population's concrete and bars BLOCKED with no quantity; read: id, component, release state only"
+OWN-S6,S6,RULE:P13-LINTEL,OUT_OF_SCOPE_FAMILY (not a simple / continuous beam occurrence),S8.6,S6 leaves the lintel family out of scope; no S6 beam kg moves
+OWN-S6-BEAMS,S6 / S6.1,beams over openings,S6 occurrences,S6 / S6.1 (unchanged),"50 openings have an S1 beam band over them in plan: no lintel is released there, so no RC member is counted twice"
+OWN-S3.1,S3.1,columns at jambs,S3.1 columns,S3.1 (unchanged),released lintels stop at column faces (FRAME supports); no column concrete or bar is re-counted
+OWN-S5,S5,ground beams,S5,S5 (unchanged),GF openings sit above the GF slab; no interface
+OWN-S7,S7,slabs and slab openings,S7 / S1 panels,S7 / stairs family (unchanged),8 slab openings are census rows (type 8) with no lintel
+OWN-PRE-S8,PRE-S8,SPC-LINTELS,none (no S3-S7 stage) -> S8 LINTEL,S8.6,whitelisted columns only; missing: opening register binding (architectural)
+OWN-ARCH-BOQ,architectural BOQ (future),"door / window supply, blockwork, plaster, paint, ceramic",not measured,architectural engines,09 publishes link ids only; the lintel's structural quantity is never a door / window item
+OWN-LIFT,lift family (future),OP-GF-023;OP-1F-012;OP-2F-005,S1 SPC-LIFT_PIT / LIFT_TIE_BEAM BLOCKED,lift family,landing openings blocked here
+OWN-BOUNDARY,boundary wall family (future),OP-GF-B01,P14-BOUNDARY,boundary wall family,gate in the compound wall

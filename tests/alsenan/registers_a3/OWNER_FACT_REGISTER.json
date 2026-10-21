@@ -1,0 +1,78 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_A3_OWNER_FACTS_V1",
+ "facts": [
+  {
+   "id": "OF-A3-SALON-MATERIAL",
+   "authority": "OWNER_FACT",
+   "scope": {
+    "floor": "GF",
+    "label": "SALOON",
+    "element": "sea-view opening"
+   },
+   "fact": {
+    "material": "ALUMINIUM_GLASS"
+   },
+   "statement": "SALON sea-view opening is aluminium + glass"
+  },
+  {
+   "id": "OF-A3-SALON-HEIGHT",
+   "authority": "PROJECT_OWNER_DERIVED_DIMENSION",
+   "scope": {
+    "floor": "GF",
+    "label": "SALOON",
+    "element": "sea-view opening"
+   },
+   "fact": {
+    "finished_aluminium_height_m": 3.65
+   },
+   "derivation": {
+    "floor_to_floor_m": 4.5,
+    "minus_beam_depth_approx_m": 0.6,
+    "minus_ceiling_allowance_m": 0.15,
+    "minus_floor_build_up_allowance_m": "<= 0.10",
+    "result_m": "approximately 3.65"
+   },
+   "not": [
+    "a source-measured height",
+    "a wall / ceiling / blockwork / dry-wall height",
+    "a height for any other opening (master-bedroom glazing included)",
+    "a beam depth (the 0.60 m inside the derivation is an allowance, not a beam fact)"
+   ],
+   "precedence": "an explicit SOURCE opening height, if one is found later, outranks this value; both are kept"
+  },
+  {
+   "id": "OF-A3-RECEPTION-DOUBLE-HEIGHT",
+   "authority": "OWNER_FACT",
+   "scope": {
+    "floor": "GF",
+    "label": "RECEPTION"
+   },
+   "fact": {
+    "zone": "DOUBLE_HEIGHT",
+    "with": [
+     "stair volume",
+     "open vertical volume (munawwar)"
+    ]
+   },
+   "statement": "RECEPTION is double height, with the stair and the open vertical volume"
+  },
+  {
+   "id": "OF-A3-MASTER-BED-GLAZING",
+   "authority": "OWNER_FACT",
+   "scope": {
+    "label": "MASTER BED ROOM",
+    "side": "pool"
+   },
+   "fact": {
+    "material": "ALUMINIUM_GLAZING",
+    "form": "CURVED"
+   },
+   "statement": "MASTER BEDROOM has curved aluminium glass facing the pool",
+   "not": [
+    "the salon width",
+    "the salon height"
+   ]
+  }
+ ],
+ "rule": "project-scoped; each fact names its authority; none is globalised; a source dimension outranks an owner-derived one"
+}

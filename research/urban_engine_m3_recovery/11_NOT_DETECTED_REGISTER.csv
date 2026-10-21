@@ -1,0 +1,12 @@
+FAMILY,STATE,QUANTIFIED_IN,EVIDENCE,REASON,NEEDED,RISK_RECORDS
+PLAIN_CONCRETE,QUANTIFIED,PLAIN_CONCRETE,1 labels (PLAIN CONCRETE) on SH01,"blinding under the measured footings (and beams, when BLINDING_UNDER says so)",,0
+COLUMN_NECKS,PARTLY_QUANTIFIED,COLUMNS / FOUNDATION,36 necks over footings (8 unresolved),"necks from the foundation-plan columns, height from the printed levels","the printed founding depth and neck top level (profile FOUNDING_DEPTH_M, NECK_TOP_LEVEL_M)",8
+CANTILEVER_PORTIONS,COUNTED_IN_PARENT,BEAMS / SLABS,1 plan marks bound through their schedule table's family,measured inside the beam and slab families; no separate cantilever line,,0
+LINTELS,DETECTED_NOT_QUANTIFIED,,5 lintel captions in the detail evidence,"drawn or labelled, no generic measurement",the opening widths of the architectural drawings (route G reads the structural DXF only); the lintel schedule is by opening width,0
+LIFT,NO_EVIDENCE_FOUND,,,"no label, zone or caption found - not proof of absence: confirm absent before using the totals","the lift pit / shaft section (wall thickness, pit depth); no generic lift detector",0
+POOL,DETECTED_NOT_QUANTIFIED,,"2 labels (POOL, SWIMMING) on SH01, SH08","drawn or labelled, no generic measurement","the pool section and shell details (wall / floor thickness, depth); the pool shell is not a beam / slab network on the plans",0
+STAIRS,DETECTED_NOT_QUANTIFIED,,"3 labels (STAIR) on SH04, SH06; 2 stair zones (25.50 m2) found by their tread lines and excluded from the slabs","drawn or labelled, no generic measurement","the stair section (waist, risers / goings, landing levels); the zones are found and excluded from the slabs",2
+DOMES,DETECTED_NOT_QUANTIFIED,,"1 labels (DOME) on SH01; 11 curved bands (6 bound, measured as beams)","drawn or labelled, no generic measurement","the dome section (shell thickness, rise); ring beams are measured as beam bands when bound",0
+WATER_TANK,DETECTED_NOT_QUANTIFIED,,"1 labels (TANK, WATER TANK) on SH02","drawn or labelled, no generic measurement",the tank details (wall / base / cover thickness),0
+PARAPETS,DETECTED_NOT_QUANTIFIED,,"3 labels (PARAPET) on SH02, SH04, SH06","drawn or labelled, no generic measurement","the parapet section (height, thickness) and its length on the roof plan",0
+WALLS,NO_EVIDENCE_FOUND,,,"no label, zone or caption found - not proof of absence: confirm absent before using the totals",the wall schedule or sections (boundary / retaining / shear walls),0

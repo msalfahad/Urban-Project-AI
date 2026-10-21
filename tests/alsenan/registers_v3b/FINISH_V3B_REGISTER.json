@@ -1,0 +1,4170 @@
+{
+ "SCHEMA": "URBAN_FINISH_V3B_V1",
+ "rooms": [
+  {
+   "room": "GF-R02",
+   "floor": "GF",
+   "name": "مغسلة",
+   "room_class": "WET",
+   "wet": true,
+   "plaster_h_m": 4.34,
+   "paint_h_m": 3.5,
+   "tile_h_m": 3.5,
+   "openings": [
+    {
+     "id": "GF-D-I495",
+     "width_on_face_m": 0.8,
+     "height_m": 2.137,
+     "sill_m": 0.0,
+     "kind": "DOOR",
+     "class": "PROVISIONAL_SOURCE_DERIVED"
+    },
+    {
+     "id": "GF-W14",
+     "width_on_face_m": 1.0,
+     "height_m": 2.607,
+     "sill_m": 0.369,
+     "kind": "WINDOW",
+     "class": "BUDGET_ESTIMATE"
+    }
+   ],
+   "openings_unmatched": [],
+   "reveals": {
+    "DOOR_REVEAL": 0.381,
+    "WINDOW_REVEAL": 0.466,
+    "WINDOW_SILL_LM": 1.0
+   },
+   "net": {
+    "PLASTER": {
+     "gross": 29.839,
+     "openings": 4.317,
+     "reveals": 0.0,
+     "net": 25.522,
+     "net_low": 25.157,
+     "net_high": 27.256
+    },
+    "PAINT": null,
+    "TILE": {
+     "gross": 25.2,
+     "openings": 4.317,
+     "reveals": 0.847,
+     "net": 21.73,
+     "net_low": 21.365,
+     "net_high": 23.464
+    }
+   },
+   "sequence": {
+    "SPATTER_DASH_WET": 21.73,
+    "TILE_PREP": 21.73,
+    "WALL_TILE_NET": 21.73,
+    "GENERAL_PLASTER": 0.0,
+    "HIDDEN_ABOVE_TILE": 4.638534,
+    "method": "WET_ROOM_SPATTER_ONLY_BEFORE_TILE"
+   },
+   "provisional": true,
+   "wall_state": "COMPUTED",
+   "faces_blocked_length_m": 0.0,
+   "paint_blocked_length_m": 0.0
+  },
+  {
+   "room": "GF-R03",
+   "floor": "GF",
+   "name": "W.C",
+   "room_class": "WET",
+   "wet": true,
+   "plaster_h_m": 4.34,
+   "paint_h_m": 3.5,
+   "tile_h_m": 3.5,
+   "openings": [
+    {
+     "id": "GF-D-I800",
+     "width_on_face_m": 0.828,
+     "height_m": 2.209,
+     "sill_m": 0.0,
+     "kind": "DOOR",
+     "class": "PROVISIONAL_SOURCE_DERIVED"
+    },
+    {
+     "id": "GF-W07",
+     "width_on_face_m": 0.6,
+     "height_m": 0.729,
+     "sill_m": 1.04,
+     "kind": "WINDOW",
+     "class": "BUDGET_ESTIMATE"
+    }
+   ],
+   "openings_unmatched": [],
+   "reveals": {
+    "DOOR_REVEAL": 0.393,
+    "WINDOW_REVEAL": 0.206,
+    "WINDOW_SILL_LM": 0.6
+   },
+   "net": {
+    "PLASTER": {
+     "gross": 29.197,
+     "openings": 2.266,
+     "reveals": 0.0,
+     "net": 26.932,
+     "net_low": 26.085,
+     "net_high": 27.147
+    },
+    "PAINT": null,
+    "TILE": {
+     "gross": 23.834,
+     "openings": 2.266,
+     "reveals": 0.599,
+     "net": 22.168,
+     "net_low": 21.322,
+     "net_high": 22.384
+    }
+   },
+   "sequence": {
+    "SPATTER_DASH_WET": 22.167991,
+    "TILE_PREP": 22.167991,
+    "WALL_TILE_NET": 22.167991,
+    "GENERAL_PLASTER": 0.0,
+    "HIDDEN_ABOVE_TILE": 5.362814,
+    "method": "WET_ROOM_SPATTER_ONLY_BEFORE_TILE"
+   },
+   "provisional": true,
+   "wall_state": "COMPUTED",
+   "faces_blocked_length_m": 0.0,
+   "paint_blocked_length_m": 0.0
+  },
+  {
+   "room": "GF-Z04",
+   "floor": "GF",
+   "name": "PANTRY / SALOON / RECEPTION / Wash / DINING / GARDEN",
+   "room_class": "DRY",
+   "wet": false,
+   "plaster_h_m": 4.34,
+   "paint_h_m": null,
+   "tile_h_m": null,
+   "openings": [
+    {
+     "id": "GF-D-641",
+     "width_on_face_m": 2.0,
+     "height_m": 2.237,
+     "sill_m": 0.0,
+     "kind": "DOUBLE_LEAF_DOOR",
+     "class": "PROVISIONAL_GEOMETRIC_INFERENCE"
+    },
+    {
+     "id": "GF-D-I711",
+     "width_on_face_m": 1.0,
+     "height_m": 2.607,
+     "sill_m": 0.0,
+     "kind": "DOOR",
+     "class": "RASTER_DERIVED"
+    },
+    {
+     "id": "GF-D-I754",
+     "width_on_face_m": 1.0,
+     "height_m": 2.607,
+     "sill_m": 0.0,
+     "kind": "DOOR",
+     "class": "RASTER_DERIVED"
+    },
+    {
+     "id": "GF-D-I800",
+     "width_on_face_m": 0.828,
+     "height_m": 2.209,
+     "sill_m": 0.0,
+     "kind": "DOOR",
+     "class": "PROVISIONAL_SOURCE_DERIVED"
+    },
+    {
+     "id": "GF-D-I801",
+     "width_on_face_m": 0.8,
+     "height_m": 2.137,
+     "sill_m": 0.0,
+     "kind": "DOOR",
+     "class": "PROVISIONAL_SOURCE_DERIVED"
+    },
+    {
+     "id": "GF-D-I825",
+     "width_on_face_m": 0.797,
+     "height_m": 2.137,
+     "sill_m": 0.0,
+     "kind": "DOOR",
+     "class": "PROVISIONAL_SOURCE_DERIVED"
+    },
+    {
+     "id": "GF-D-I830",
+     "width_on_face_m": 1.0,
+     "height_m": 2.607,
+     "sill_m": 0.0,
+     "kind": "DOOR",
+     "class": "RASTER_DERIVED"
+    },
+    {
+     "id": "GF-W04",
+     "width_on_face_m": 1.0,
+     "height_m": 2.607,
+     "sill_m": 0.369,
+     "kind": "WINDOW",
+     "class": "BUDGET_ESTIMATE"
+    },
+    {
+     "id": "GF-W09",
+     "width_on_face_m": 6.332,
+     "height_m": 3.65,
+     "sill_m": 0.0,
+     "kind": "WINDOW",
+     "class": "RASTER_DERIVED"
+    },
+    {
+     "id": "GF-W11",
+     "width_on_face_m": 1.0,
+     "height_m": 2.607,
+     "sill_m": 0.369,
+     "kind": "WINDOW",
+     "class": "BUDGET_ESTIMATE"
+    },
+    {
+     "id": "GF-W12",
+     "width_on_face_m": 1.5,
+     "height_m": 2.854,
+     "sill_m": 1.249,
+     "kind": "WINDOW",
+     "class": "BUDGET_ESTIMATE"
+    }
+   ],
+   "openings_unmatched": [],
+   "reveals": {
+    "DOOR_REVEAL": 3.511,
+    "WINDOW_REVEAL": 3.327,
+    "WINDOW_SILL_LM": 9.832
+   },
+   "net": {
+    "PLASTER": {
+     "gross": 463.255,
+     "openings": 50.142,
+     "reveals": 6.837,
+     "net": 419.95,
+     "net_low": 417.724,
+     "net_high": 425.779
+    },
+    "PAINT": null,
+    "TILE": null
+   },
+   "sequence": {
+    "SPATTER_DASH_INTERNAL": 419.950414,
+    "ROUGH_PLASTER_INTERNAL": 419.950414,
+    "SMOOTH_PLASTER_INTERNAL": 419.950414,
+    "PAINT_INTERNAL_NET": null,
+    "method": "DRY_INTERNAL_SPATTER_ROUGH_SMOOTH"
+   },
+   "provisional": true,
+   "wall_state": "COMPUTED",
+   "faces_blocked_length_m": 0.0,
+   "paint_blocked_length_m": 112.303302
+  },
+  {
+   "room": "GF-R05",
+   "floor": "GF",
+   "name": "BATH",
+   "room_class": "WET",
+   "wet": true,
+   "plaster_h_m": 4.34,
+   "paint_h_m": 3.75,
+   "tile_h_m": 3.75,
+   "openings": [
+    {
+     "id": "GF-D-E820",
+     "width_on_face_m": 0.8,
+     "height_m": 2.137,
+     "sill_m": 0.0,
+     "kind": "DOOR",
+     "class": "PROVISIONAL_SOURCE_DERIVED"
+    },
+    {
+     "id": "GF-W08",
+     "width_on_face_m": 0.6,
+     "height_m": 0.729,
+     "sill_m": 1.04,
+     "kind": "WINDOW",
+     "class": "BUDGET_ESTIMATE"
+    }
+   ],
+   "openings_unmatched": [],
+   "reveals": {
+    "DOOR_REVEAL": 0.381,
+    "WINDOW_REVEAL": 0.206,
+    "WINDOW_SILL_LM": 0.6
+   },
+   "net": {
+    "PLASTER": {
+     "gross": 32.546,
+     "openings": 2.147,
+     "reveals": 0.0,
+     "net": 30.399,
+     "net_low": 29.497,
+     "net_high": 30.572
+    },
+    "PAINT": null,
+    "TILE": {
+     "gross": 28.592,
+     "openings": 2.147,
+     "reveals": 0.586,
+     "net": 27.032,
+     "net_low": 26.13,
+     "net_high": 27.205
+    }
+   },
+   "sequence": {
+    "SPATTER_DASH_WET": 27.031845,
+    "TILE_PREP": 27.031845,
+    "WALL_TILE_NET": 27.031845,
+    "GENERAL_PLASTER": 0.0,
+    "HIDDEN_ABOVE_TILE": 3.953361,
+    "method": "WET_ROOM_SPATTER_ONLY_BEFORE_TILE"
+   },
+   "provisional": true,
+   "wall_state": "COMPUTED",
+   "faces_blocked_length_m": 0.0,
+   "paint_blocked_length_m": 0.0
+  },
+  {
+   "room": "GF-Z06",
+   "floor": "GF",
+   "name": "DEWANEYA / Wash",
+   "room_class": "DRY",
+   "wet": false,
+   "plaster_h_m": 4.34,
+   "paint_h_m": 3.5,
+   "tile_h_m": null,
+   "openings": [
+    {
+     "id": "GF-D-I350",
+     "width_on_face_m": 1.0,
+     "height_m": 2.607,
+     "sill_m": 0.0,
+     "kind": "DOOR",
+     "class": "RASTER_DERIVED"
+    },
+    {
+     "id": "GF-W14",
+     "width_on_face_m": 1.0,
+     "height_m": 2.607,
+     "sill_m": 0.369,
+     "kind": "WINDOW",
+     "class": "BUDGET_ESTIMATE"
+    },
+    {
+     "id": "GF-W15",
+     "width_on_face_m": 1.955,
+     "height_m": 2.063,
+     "sill_m": 0.0,
+     "kind": "WINDOW",
+     "class": "BUDGET_ESTIMATE"
+    },
+    {
+     "id": "GF-W16",
+     "width_on_face_m": 1.955,
+     "height_m": 2.063,
+     "sill_m": 0.0,
+     "kind": "WINDOW",
+     "class": "BUDGET_ESTIMATE"
+    }
+   ],
+   "openings_unmatched": [],
+   "reveals": {
+    "DOOR_REVEAL": 0.621,
+    "WINDOW_REVEAL": 1.682,
+    "WINDOW_SILL_LM": 4.91
+   },
+   "net": {
+    "PLASTER": {
+     "gross": 78.762,
+     "openings": 13.28,
+     "reveals": 2.304,
+     "net": 67.785,
+     "net_low": 58.598,
+     "net_high": 75.77
+    },
+    "PAINT": {
+     "gross": 70.446,
+     "openings": 13.28,
+     "reveals": 2.304,
+     "net": 59.469,
+     "net_low": 53.566,
+     "net_high": 67.454
+    },
+    "TILE": null
+   },
+   "sequence": {
+    "SPATTER_DASH_INTERNAL": 67.785236,
+    "ROUGH_PLASTER_INTERNAL": 67.785236,
+    "SMOOTH_PLASTER_INTERNAL": 67.785236,
+    "PAINT_INTERNAL_NET": 59.469282,
+    "method": "DRY_INTERNAL_SPATTER_ROUGH_SMOOTH"
+   },
+   "provisional": true,
+   "wall_state": "COMPUTED",
+   "faces_blocked_length_m": 0.0,
+   "paint_blocked_length_m": 0.0
+  },
+  {
+   "room": "GF-R07",
+   "floor": "GF",
+   "name": "KITCHEN",
+   "room_class": "SERVICE",
+   "wet": true,
+   "plaster_h_m": 4.34,
+   "paint_h_m": 3.5,
+   "tile_h_m": 3.5,
+   "openings": [
+    {
+     "id": "GF-D-I402",
+     "width_on_face_m": 1.0,
+     "height_m": 2.607,
+     "sill_m": 0.0,
+     "kind": "DOOR",
+     "class": "RASTER_DERIVED"
+    },
+    {
+     "id": "GF-W02",
+     "width_on_face_m": 1.5,
+     "height_m": 2.854,
+     "sill_m": 1.249,
+     "kind": "WINDOW",
+     "class": "BUDGET_ESTIMATE"
+    }
+   ],
+   "openings_unmatched": [],
+   "reveals": {
+    "DOOR_REVEAL": 0.621,
+    "WINDOW_REVEAL": 0.721,
+    "WINDOW_SILL_LM": 1.5
+   },
+   "net": {
+    "PLASTER": {
+     "gross": 59.883,
+     "openings": 6.888,
+     "reveals": 0.0,
+     "net": 52.995,
+     "net_low": 52.605,
+     "net_high": 54.631
+    },
+    "PAINT": null,
+    "TILE": {
+     "gross": 50.75,
+     "openings": 5.983,
+     "reveals": 1.342,
+     "net": 46.109,
+     "net_low": 46.074,
+     "net_high": 46.84
+    }
+   },
+   "sequence": {
+    "SPATTER_DASH_WET": 46.1087,
+    "TILE_PREP": 46.1087,
+    "WALL_TILE_NET": 46.1087,
+    "GENERAL_PLASTER": 0.0,
+    "HIDDEN_ABOVE_TILE": 9.133,
+    "method": "WET_ROOM_SPATTER_ONLY_BEFORE_TILE"
+   },
+   "provisional": true,
+   "wall_state": "COMPUTED",
+   "faces_blocked_length_m": 0.0,
+   "paint_blocked_length_m": 0.0
+  },
+  {
+   "room": "GF-R09",
+   "floor": "GF",
+   "name": "W.C",
+   "room_class": "WET",
+   "wet": true,
+   "plaster_h_m": 4.1,
+   "paint_h_m": 3.85,
+   "tile_h_m": 3.85,
+   "openings": [
+    {
+     "id": "GF-D-I801",
+     "width_on_face_m": 0.8,
+     "height_m": 2.137,
+     "sill_m": 0.0,
+     "kind": "DOOR",
+     "class": "PROVISIONAL_SOURCE_DERIVED"
+    }
+   ],
+   "openings_unmatched": [],
+   "reveals": {
+    "DOOR_REVEAL": 0.381,
+    "WINDOW_REVEAL": 0.0
+   },
+   "net": {
+    "PLASTER": {
+     "gross": 31.912,
+     "openings": 1.71,
+     "reveals": 0.0,
+     "net": 30.203,
+     "net_low": 30.087,
+     "net_high": 30.219
+    },
+    "PAINT": null,
+    "TILE": {
+     "gross": 28.544,
+     "openings": 1.71,
+     "reveals": 0.381,
+     "net": 27.215,
+     "net_low": 27.1,
+     "net_high": 27.232
+    }
+   },
+   "sequence": {
+    "SPATTER_DASH_WET": 27.214995,
+    "TILE_PREP": 27.214995,
+    "WALL_TILE_NET": 27.214995,
+    "GENERAL_PLASTER": 0.0,
+    "HIDDEN_ABOVE_TILE": 3.368124,
+    "method": "WET_ROOM_SPATTER_ONLY_BEFORE_TILE"
+   },
+   "provisional": true,
+   "wall_state": "COMPUTED",
+   "faces_blocked_length_m": 0.0,
+   "paint_blocked_length_m": 0.0
+  },
+  {
+   "room": "GF-R10",
+   "floor": "GF",
+   "name": "W.C",
+   "room_class": "WET",
+   "wet": true,
+   "plaster_h_m": 4.34,
+   "paint_h_m": 3.5,
+   "tile_h_m": 3.5,
+   "openings": [
+    {
+     "id": "GF-D-I414",
+     "width_on_face_m": 0.8,
+     "height_m": 2.137,
+     "sill_m": 0.0,
+     "kind": "DOOR",
+     "class": "PROVISIONAL_SOURCE_DERIVED"
+    }
+   ],
+   "openings_unmatched": [],
+   "reveals": {
+    "DOOR_REVEAL": 0.381,
+    "WINDOW_REVEAL": 0.0
+   },
+   "net": {
+    "PLASTER": {
+     "gross": 23.419,
+     "openings": 1.71,
+     "reveals": 0.0,
+     "net": 21.709,
+     "net_low": 21.594,
+     "net_high": 21.726
+    },
+    "PAINT": null,
+    "TILE": {
+     "gross": 19.6,
+     "openings": 1.71,
+     "reveals": 0.381,
+     "net": 18.271,
+     "net_low": 18.156,
+     "net_high": 18.288
+    }
+   },
+   "sequence": {
+    "SPATTER_DASH_WET": 18.27095,
+    "TILE_PREP": 18.27095,
+    "WALL_TILE_NET": 18.27095,
+    "GENERAL_PLASTER": 0.0,
+    "HIDDEN_ABOVE_TILE": 3.819,
+    "method": "WET_ROOM_SPATTER_ONLY_BEFORE_TILE"
+   },
+   "provisional": true,
+   "wall_state": "COMPUTED",
+   "faces_blocked_length_m": 0.0,
+   "paint_blocked_length_m": 0.0
+  },
+  {
+   "room": "GF-R12",
+   "floor": "GF",
+   "name": "UNKNOWN",
+   "room_class": "UNKNOWN",
+   "wet": false,
+   "plaster_h_m": 4.1,
+   "paint_h_m": null,
+   "tile_h_m": null,
+   "openings": [
+    {
+     "id": "GF-D-I711",
+     "width_on_face_m": 1.0,
+     "height_m": 2.607,
+     "sill_m": 0.0,
+     "kind": "DOOR",
+     "class": "RASTER_DERIVED"
+    },
+    {
+     "id": "GF-D-I825",
+     "width_on_face_m": 0.797,
+     "height_m": 2.137,
+     "sill_m": 0.0,
+     "kind": "DOOR",
+     "class": "PROVISIONAL_SOURCE_DERIVED"
+    },
+    {
+     "id": "GF-W05",
+     "width_on_face_m": 0.9,
+     "height_m": 0.938,
+     "sill_m": 0.071,
+     "kind": "WINDOW",
+     "class": "BUDGET_ESTIMATE"
+    },
+    {
+     "id": "GF-W10",
+     "width_on_face_m": 1.2,
+     "height_m": 2.338,
+     "sill_m": 0.729,
+     "kind": "WINDOW",
+     "class": "BUDGET_ESTIMATE"
+    }
+   ],
+   "openings_unmatched": [],
+   "reveals": {
+    "DOOR_REVEAL": 1.002,
+    "WINDOW_REVEAL": 0.865,
+    "WINDOW_SILL_LM": 2.1
+   },
+   "net": {
+    "PLASTER": {
+     "gross": 91.659,
+     "openings": 7.96,
+     "reveals": 1.867,
+     "net": 85.566,
+     "net_low": 83.008,
+     "net_high": 88.146
+    },
+    "PAINT": null,
+    "TILE": null
+   },
+   "sequence": {
+    "SPATTER_DASH_INTERNAL": 85.566122,
+    "ROUGH_PLASTER_INTERNAL": 85.566122,
+    "SMOOTH_PLASTER_INTERNAL": 85.566122,
+    "PAINT_INTERNAL_NET": null,
+    "method": "DRY_INTERNAL_SPATTER_ROUGH_SMOOTH"
+   },
+   "provisional": true,
+   "wall_state": "COMPUTED",
+   "faces_blocked_length_m": 0.0,
+   "paint_blocked_length_m": 22.196874
+  },
+  {
+   "room": "GF-R13",
+   "floor": "GF",
+   "name": "W.C",
+   "room_class": "WET",
+   "wet": true,
+   "plaster_h_m": 4.34,
+   "paint_h_m": 3.85,
+   "tile_h_m": 3.85,
+   "openings": [
+    {
+     "id": "GF-D-I825",
+     "width_on_face_m": 0.797,
+     "height_m": 2.137,
+     "sill_m": 0.0,
+     "kind": "DOOR",
+     "class": "PROVISIONAL_SOURCE_DERIVED"
+    },
+    {
+     "id": "GF-W06",
+     "width_on_face_m": 0.6,
+     "height_m": 0.729,
+     "sill_m": 1.04,
+     "kind": "WINDOW",
+     "class": "BUDGET_ESTIMATE"
+    }
+   ],
+   "openings_unmatched": [],
+   "reveals": {
+    "DOOR_REVEAL": 0.38,
+    "WINDOW_REVEAL": 0.206,
+    "WINDOW_SILL_LM": 0.6
+   },
+   "net": {
+    "PLASTER": {
+     "gross": 26.488,
+     "openings": 2.141,
+     "reveals": 0.0,
+     "net": 24.347,
+     "net_low": 23.446,
+     "net_high": 24.52
+    },
+    "PAINT": null,
+    "TILE": {
+     "gross": 23.87,
+     "openings": 2.141,
+     "reveals": 0.586,
+     "net": 22.316,
+     "net_low": 21.414,
+     "net_high": 22.488
+    }
+   },
+   "sequence": {
+    "SPATTER_DASH_WET": 22.315536,
+    "TILE_PREP": 22.315536,
+    "WALL_TILE_NET": 22.315536,
+    "GENERAL_PLASTER": 0.0,
+    "HIDDEN_ABOVE_TILE": 2.618,
+    "method": "WET_ROOM_SPATTER_ONLY_BEFORE_TILE"
+   },
+   "provisional": true,
+   "wall_state": "COMPUTED",
+   "faces_blocked_length_m": 0.0,
+   "paint_blocked_length_m": 0.0
+  },
+  {
+   "room": "GF-R14",
+   "floor": "GF",
+   "name": "MASTER BED ROOM",
+   "room_class": "DRY",
+   "wet": false,
+   "plaster_h_m": 4.34,
+   "paint_h_m": 3.5,
+   "tile_h_m": null,
+   "openings": [
+    {
+     "id": "GF-D-E820",
+     "width_on_face_m": 0.8,
+     "height_m": 2.137,
+     "sill_m": 0.0,
+     "kind": "DOOR",
+     "class": "PROVISIONAL_SOURCE_DERIVED"
+    },
+    {
+     "id": "GF-D-I754",
+     "width_on_face_m": 1.0,
+     "height_m": 2.607,
+     "sill_m": 0.0,
+     "kind": "DOOR",
+     "class": "RASTER_DERIVED"
+    }
+   ],
+   "openings_unmatched": [],
+   "reveals": {
+    "DOOR_REVEAL": 0.847,
+    "WINDOW_REVEAL": 0.0
+   },
+   "net": {
+    "PLASTER": {
+     "gross": 88.716,
+     "openings": 4.317,
+     "reveals": 0.847,
+     "net": 85.246,
+     "net_low": 85.096,
+     "net_high": 85.298
+    },
+    "PAINT": {
+     "gross": 75.365,
+     "openings": 4.317,
+     "reveals": 0.847,
+     "net": 71.895,
+     "net_low": 71.745,
+     "net_high": 71.947
+    },
+    "TILE": null
+   },
+   "sequence": {
+    "SPATTER_DASH_INTERNAL": 85.246425,
+    "ROUGH_PLASTER_INTERNAL": 85.246425,
+    "SMOOTH_PLASTER_INTERNAL": 85.246425,
+    "PAINT_INTERNAL_NET": 71.894811,
+    "method": "DRY_INTERNAL_SPATTER_ROUGH_SMOOTH"
+   },
+   "provisional": true,
+   "wall_state": "COMPUTED",
+   "faces_blocked_length_m": 0.0,
+   "paint_blocked_length_m": 0.0
+  },
+  {
+   "room": "GF-R15",
+   "floor": "GF",
+   "name": "W.C",
+   "room_class": "WET",
+   "wet": true,
+   "plaster_h_m": 4.34,
+   "paint_h_m": 3.5,
+   "tile_h_m": 3.5,
+   "openings": [
+    {
+     "id": "GF-D-I495",
+     "width_on_face_m": 0.8,
+     "height_m": 2.137,
+     "sill_m": 0.0,
+     "kind": "DOOR",
+     "class": "PROVISIONAL_SOURCE_DERIVED"
+    }
+   ],
+   "openings_unmatched": [],
+   "reveals": {
+    "DOOR_REVEAL": 0.381,
+    "WINDOW_REVEAL": 0.0
+   },
+   "net": {
+    "PLASTER": {
+     "gross": 30.883,
+     "openings": 1.71,
+     "reveals": 0.0,
+     "net": 29.173,
+     "net_low": 29.058,
+     "net_high": 29.19
+    },
+    "PAINT": null,
+    "TILE": {
+     "gross": 26.25,
+     "openings": 1.71,
+     "reveals": 0.381,
+     "net": 24.921,
+     "net_low": 24.806,
+     "net_high": 24.938
+    }
+   },
+   "sequence": {
+    "SPATTER_DASH_WET": 24.92095,
+    "TILE_PREP": 24.92095,
+    "WALL_TILE_NET": 24.92095,
+    "GENERAL_PLASTER": 0.0,
+    "HIDDEN_ABOVE_TILE": 4.633017,
+    "method": "WET_ROOM_SPATTER_ONLY_BEFORE_TILE"
+   },
+   "provisional": true,
+   "wall_state": "COMPUTED",
+   "faces_blocked_length_m": 0.0,
+   "paint_blocked_length_m": 0.0
+  },
+  {
+   "room": "1F-R01",
+   "floor": "1F",
+   "name": "BATH",
+   "room_class": "WET",
+   "wet": true,
+   "plaster_h_m": 3.7,
+   "paint_h_m": 3.45,
+   "tile_h_m": 3.45,
+   "openings": [
+    {
+     "id": "1F-D-I3115",
+     "width_on_face_m": 0.8,
+     "height_m": 2.117,
+     "sill_m": 0.0,
+     "kind": "DOOR",
+     "class": "RASTER_DERIVED"
+    },
+    {
+     "id": "1F-W01",
+     "width_on_face_m": 0.6,
+     "height_m": 2.097,
+     "sill_m": 0.113,
+     "kind": "WINDOW",
+     "class": "BUDGET_ESTIMATE"
+    }
+   ],
+   "openings_unmatched": [],
+   "reveals": {
+    "DOOR_REVEAL": 0.378,
+    "WINDOW_REVEAL": 0.479,
+    "WINDOW_SILL_LM": 0.6
+   },
+   "net": {
+    "PLASTER": {
+     "gross": 23.023,
+     "openings": 2.952,
+     "reveals": 0.0,
+     "net": 20.071,
+     "net_low": 19.172,
+     "net_high": 20.071
+    },
+    "PAINT": null,
+    "TILE": {
+     "gross": 31.05,
+     "openings": 2.952,
+     "reveals": 0.857,
+     "net": 28.955,
+     "net_low": 28.206,
+     "net_high": 28.955
+    }
+   },
+   "sequence": {
+    "SPATTER_DASH_WET": 28.95515,
+    "TILE_PREP": 28.95515,
+    "WALL_TILE_NET": 28.95515,
+    "GENERAL_PLASTER": 0.0,
+    "HIDDEN_ABOVE_TILE": -8.02697,
+    "method": "WET_ROOM_SPATTER_ONLY_BEFORE_TILE"
+   },
+   "provisional": true,
+   "wall_state": "PARTIAL",
+   "faces_blocked_length_m": 3.107666,
+   "paint_blocked_length_m": 0.0
+  },
+  {
+   "room": "1F-R03",
+   "floor": "1F",
+   "name": "MASTER BED ROOM",
+   "room_class": "DRY",
+   "wet": false,
+   "plaster_h_m": 4.04,
+   "paint_h_m": 3.2,
+   "tile_h_m": null,
+   "openings": [
+    {
+     "id": "1F-D-I3055",
+     "width_on_face_m": 0.9,
+     "height_m": 2.123,
+     "sill_m": 0.0,
+     "kind": "DOOR",
+     "class": "PROVISIONAL_SOURCE_DERIVED"
+    },
+    {
+     "id": "1F-D-I3090",
+     "width_on_face_m": 0.8,
+     "height_m": 2.117,
+     "sill_m": 0.0,
+     "kind": "DOOR",
+     "class": "RASTER_DERIVED"
+    }
+   ],
+   "openings_unmatched": [],
+   "reveals": {
+    "DOOR_REVEAL": 0.763,
+    "WINDOW_REVEAL": 0.0
+   },
+   "net": {
+    "PLASTER": {
+     "gross": 77.05,
+     "openings": 3.604,
+     "reveals": 0.763,
+     "net": 74.209,
+     "net_low": 74.204,
+     "net_high": 74.209
+    },
+    "PAINT": {
+     "gross": 70.879,
+     "openings": 3.604,
+     "reveals": 0.763,
+     "net": 68.038,
+     "net_low": 68.033,
+     "net_high": 68.038
+    },
+    "TILE": null
+   },
+   "sequence": {
+    "SPATTER_DASH_INTERNAL": 74.208953,
+    "ROUGH_PLASTER_INTERNAL": 74.208953,
+    "SMOOTH_PLASTER_INTERNAL": 74.208953,
+    "PAINT_INTERNAL_NET": 68.037863,
+    "method": "DRY_INTERNAL_SPATTER_ROUGH_SMOOTH"
+   },
+   "provisional": true,
+   "wall_state": "PARTIAL",
+   "faces_blocked_length_m": 2.264517,
+   "paint_blocked_length_m": 0.0
+  },
+  {
+   "room": "1F-R04",
+   "floor": "1F",
+   "name": "BATH",
+   "room_class": "WET",
+   "wet": true,
+   "plaster_h_m": 3.45,
+   "paint_h_m": 3.2,
+   "tile_h_m": 3.2,
+   "openings": [
+    {
+     "id": "1F-D-I3090",
+     "width_on_face_m": 0.8,
+     "height_m": 2.117,
+     "sill_m": 0.0,
+     "kind": "DOOR",
+     "class": "RASTER_DERIVED"
+    },
+    {
+     "id": "1F-W10",
+     "width_on_face_m": 0.5,
+     "height_m": 0.713,
+     "sill_m": 1.687,
+     "kind": "WINDOW",
+     "class": "RASTER_DERIVED"
+    }
+   ],
+   "openings_unmatched": [],
+   "reveals": {
+    "DOOR_REVEAL": 0.378,
+    "WINDOW_REVEAL": 0.193,
+    "WINDOW_SILL_LM": 0.5
+   },
+   "net": {
+    "PLASTER": {
+     "gross": 22.932,
+     "openings": 2.05,
+     "reveals": 0.0,
+     "net": 20.882,
+     "net_low": 20.876,
+     "net_high": 20.925
+    },
+    "PAINT": null,
+    "TILE": {
+     "gross": 27.84,
+     "openings": 2.05,
+     "reveals": 0.57,
+     "net": 26.36,
+     "net_low": 26.354,
+     "net_high": 26.403
+    }
+   },
+   "sequence": {
+    "SPATTER_DASH_WET": 26.36005,
+    "TILE_PREP": 26.36005,
+    "WALL_TILE_NET": 26.36005,
+    "GENERAL_PLASTER": 0.0,
+    "HIDDEN_ABOVE_TILE": -4.907648,
+    "method": "WET_ROOM_SPATTER_ONLY_BEFORE_TILE"
+   },
+   "provisional": false,
+   "wall_state": "PARTIAL",
+   "faces_blocked_length_m": 2.664517,
+   "paint_blocked_length_m": 0.0
+  },
+  {
+   "room": "1F-R05",
+   "floor": "1F",
+   "name": "MASTER BED ROOM",
+   "room_class": "DRY",
+   "wet": false,
+   "plaster_h_m": 4.04,
+   "paint_h_m": 3.2,
+   "tile_h_m": null,
+   "openings": [
+    {
+     "id": "1F-D-I3096",
+     "width_on_face_m": 0.9,
+     "height_m": 2.123,
+     "sill_m": 0.0,
+     "kind": "DOOR",
+     "class": "PROVISIONAL_SOURCE_DERIVED"
+    },
+    {
+     "id": "1F-W04",
+     "width_on_face_m": 1.0,
+     "height_m": 1.35,
+     "sill_m": 0.0,
+     "kind": "WINDOW",
+     "class": "BUDGET_ESTIMATE"
+    }
+   ],
+   "openings_unmatched": [],
+   "reveals": {
+    "DOOR_REVEAL": 0.386,
+    "WINDOW_REVEAL": 0.277,
+    "WINDOW_SILL_LM": 1.0
+   },
+   "net": {
+    "PLASTER": {
+     "gross": 63.976,
+     "openings": 3.261,
+     "reveals": 0.663,
+     "net": 61.379,
+     "net_low": 60.612,
+     "net_high": 62.146
+    },
+    "PAINT": {
+     "gross": 51.84,
+     "openings": 3.261,
+     "reveals": 0.663,
+     "net": 49.243,
+     "net_low": 48.476,
+     "net_high": 50.01
+    },
+    "TILE": null
+   },
+   "sequence": {
+    "SPATTER_DASH_INTERNAL": 61.378731,
+    "ROUGH_PLASTER_INTERNAL": 61.378731,
+    "SMOOTH_PLASTER_INTERNAL": 61.378731,
+    "PAINT_INTERNAL_NET": 49.24275,
+    "method": "DRY_INTERNAL_SPATTER_ROUGH_SMOOTH"
+   },
+   "provisional": true,
+   "wall_state": "COMPUTED",
+   "faces_blocked_length_m": 0.0,
+   "paint_blocked_length_m": 0.0
+  },
+  {
+   "room": "1F-Z06",
+   "floor": "1F",
+   "name": "VOID / LIVING AREA",
+   "room_class": "DRY",
+   "wet": false,
+   "plaster_h_m": 3.45,
+   "paint_h_m": null,
+   "tile_h_m": null,
+   "openings": [
+    {
+     "id": "1F-D-I3055",
+     "width_on_face_m": 0.9,
+     "height_m": 2.123,
+     "sill_m": 0.0,
+     "kind": "DOOR",
+     "class": "PROVISIONAL_SOURCE_DERIVED"
+    },
+    {
+     "id": "1F-D-I3090",
+     "width_on_face_m": 0.8,
+     "height_m": 2.117,
+     "sill_m": 0.0,
+     "kind": "DOOR",
+     "class": "RASTER_DERIVED"
+    },
+    {
+     "id": "1F-D-I3096",
+     "width_on_face_m": 0.9,
+     "height_m": 2.123,
+     "sill_m": 0.0,
+     "kind": "DOOR",
+     "class": "PROVISIONAL_SOURCE_DERIVED"
+    },
+    {
+     "id": "1F-D-I3098",
+     "width_on_face_m": 0.9,
+     "height_m": 2.123,
+     "sill_m": 0.0,
+     "kind": "DOOR",
+     "class": "PROVISIONAL_SOURCE_DERIVED"
+    },
+    {
+     "id": "1F-D-I3121",
+     "width_on_face_m": 1.0,
+     "height_m": 2.117,
+     "sill_m": 0.0,
+     "kind": "DOOR",
+     "class": "PROVISIONAL_SOURCE_DERIVED"
+    },
+    {
+     "id": "1F-D-I3122",
+     "width_on_face_m": 1.0,
+     "height_m": 2.117,
+     "sill_m": 0.0,
+     "kind": "DOOR",
+     "class": "PROVISIONAL_SOURCE_DERIVED"
+    },
+    {
+     "id": "1F-D-I4532",
+     "width_on_face_m": 0.8,
+     "height_m": 2.117,
+     "sill_m": 0.0,
+     "kind": "DOOR",
+     "class": "RASTER_DERIVED"
+    },
+    {
+     "id": "1F-W03",
+     "width_on_face_m": 1.0,
+     "height_m": 1.35,
+     "sill_m": 0.0,
+     "kind": "WINDOW",
+     "class": "BUDGET_ESTIMATE"
+    },
+    {
+     "id": "1F-W04",
+     "width_on_face_m": 0.15,
+     "height_m": 1.35,
+     "sill_m": 0.0,
+     "kind": "WINDOW",
+     "class": "BUDGET_ESTIMATE"
+    },
+    {
+     "id": "1F-W05",
+     "width_on_face_m": 1.0,
+     "height_m": 1.35,
+     "sill_m": 0.0,
+     "kind": "WINDOW",
+     "class": "BUDGET_ESTIMATE"
+    },
+    {
+     "id": "1F-W08",
+     "width_on_face_m": 1.552,
+     "height_m": 2.097,
+     "sill_m": 0.0,
+     "kind": "WINDOW",
+     "class": "BUDGET_ESTIMATE"
+    },
+    {
+     "id": "1F-W09",
+     "width_on_face_m": 1.552,
+     "height_m": 2.097,
+     "sill_m": 0.0,
+     "kind": "WINDOW",
+     "class": "BUDGET_ESTIMATE"
+    },
+    {
+     "id": "1F-W11",
+     "width_on_face_m": 1.2,
+     "height_m": 2.363,
+     "sill_m": 0.715,
+     "kind": "WINDOW",
+     "class": "PROVISIONAL_SOURCE_DERIVED"
+    }
+   ],
+   "openings_unmatched": [],
+   "reveals": {
+    "DOOR_REVEAL": 2.827,
+    "WINDOW_REVEAL": 2.696,
+    "WINDOW_SILL_LM": 6.454
+   },
+   "net": {
+    "PLASTER": {
+     "gross": 329.407,
+     "openings": 25.6,
+     "reveals": 5.522,
+     "net": 309.329,
+     "net_low": 303.47,
+     "net_high": 315.82
+    },
+    "PAINT": null,
+    "TILE": null
+   },
+   "sequence": {
+    "SPATTER_DASH_INTERNAL": 309.3286,
+    "ROUGH_PLASTER_INTERNAL": 309.3286,
+    "SMOOTH_PLASTER_INTERNAL": 309.3286,
+    "PAINT_INTERNAL_NET": null,
+    "method": "DRY_INTERNAL_SPATTER_ROUGH_SMOOTH"
+   },
+   "provisional": true,
+   "wall_state": "PARTIAL",
+   "faces_blocked_length_m": 11.954404,
+   "paint_blocked_length_m": 98.777515
+  },
+  {
+   "room": "1F-R07",
+   "floor": "1F",
+   "name": "LAUNDRY",
+   "room_class": "SERVICE",
+   "wet": true,
+   "plaster_h_m": 3.8,
+   "paint_h_m": 3.2,
+   "tile_h_m": 3.2,
+   "openings": [
+    {
+     "id": "1F-D-I3098",
+     "width_on_face_m": 0.9,
+     "height_m": 2.123,
+     "sill_m": 0.0,
+     "kind": "DOOR",
+     "class": "PROVISIONAL_SOURCE_DERIVED"
+    },
+    {
+     "id": "1F-D-I4532",
+     "width_on_face_m": 0.8,
+     "height_m": 2.117,
+     "sill_m": 0.0,
+     "kind": "DOOR",
+     "class": "RASTER_DERIVED"
+    },
+    {
+     "id": "1F-W06",
+     "width_on_face_m": 0.6,
+     "height_m": 2.097,
+     "sill_m": 0.113,
+     "kind": "WINDOW",
+     "class": "BUDGET_ESTIMATE"
+    }
+   ],
+   "openings_unmatched": [],
+   "reveals": {
+    "DOOR_REVEAL": 0.892,
+    "WINDOW_REVEAL": 0.479,
+    "WINDOW_SILL_LM": 0.6
+   },
+   "net": {
+    "PLASTER": {
+     "gross": 64.635,
+     "openings": 4.862,
+     "reveals": 0.0,
+     "net": 59.773,
+     "net_low": 58.814,
+     "net_high": 59.773
+    },
+    "PAINT": null,
+    "TILE": {
+     "gross": 54.208,
+     "openings": 4.862,
+     "reveals": 1.372,
+     "net": 50.717,
+     "net_low": 50.118,
+     "net_high": 50.717
+    }
+   },
+   "sequence": {
+    "SPATTER_DASH_WET": 50.71705,
+    "TILE_PREP": 50.71705,
+    "WALL_TILE_NET": 50.71705,
+    "GENERAL_PLASTER": 0.0,
+    "HIDDEN_ABOVE_TILE": 10.427446,
+    "method": "WET_ROOM_SPATTER_ONLY_BEFORE_TILE"
+   },
+   "provisional": true,
+   "wall_state": "COMPUTED",
+   "faces_blocked_length_m": 0.0,
+   "paint_blocked_length_m": 0.0
+  },
+  {
+   "room": "1F-R08",
+   "floor": "1F",
+   "name": "UNKNOWN",
+   "room_class": "UNKNOWN",
+   "wet": false,
+   "plaster_h_m": 4.04,
+   "paint_h_m": 3.45,
+   "tile_h_m": null,
+   "openings": [
+    {
+     "id": "1F-D-I3054",
+     "width_on_face_m": 0.8,
+     "height_m": 2.117,
+     "sill_m": 0.0,
+     "kind": "DOOR",
+     "class": "RASTER_DERIVED"
+    },
+    {
+     "id": "1F-W04",
+     "width_on_face_m": 1.0,
+     "height_m": 1.35,
+     "sill_m": 0.0,
+     "kind": "WINDOW",
+     "class": "BUDGET_ESTIMATE"
+    }
+   ],
+   "openings_unmatched": [],
+   "reveals": {
+    "DOOR_REVEAL": 0.378,
+    "WINDOW_REVEAL": 0.277,
+    "WINDOW_SILL_LM": 1.0
+   },
+   "net": {
+    "PLASTER": {
+     "gross": 26.72,
+     "openings": 3.044,
+     "reveals": 0.655,
+     "net": 24.331,
+     "net_low": 23.56,
+     "net_high": 25.098
+    },
+    "PAINT": {
+     "gross": 23.805,
+     "openings": 3.044,
+     "reveals": 0.655,
+     "net": 21.416,
+     "net_low": 20.645,
+     "net_high": 22.183
+    },
+    "TILE": null
+   },
+   "sequence": {
+    "SPATTER_DASH_INTERNAL": 24.33145,
+    "ROUGH_PLASTER_INTERNAL": 24.33145,
+    "SMOOTH_PLASTER_INTERNAL": 24.33145,
+    "PAINT_INTERNAL_NET": 21.41645,
+    "method": "DRY_INTERNAL_SPATTER_ROUGH_SMOOTH"
+   },
+   "provisional": true,
+   "wall_state": "COMPUTED",
+   "faces_blocked_length_m": 0.0,
+   "paint_blocked_length_m": 0.0
+  },
+  {
+   "room": "1F-R09",
+   "floor": "1F",
+   "name": "MASTER BED ROOM",
+   "room_class": "DRY",
+   "wet": false,
+   "plaster_h_m": 3.7,
+   "paint_h_m": 3.2,
+   "tile_h_m": null,
+   "openings": [
+    {
+     "id": "1F-D-I3118",
+     "width_on_face_m": 0.8,
+     "height_m": 2.117,
+     "sill_m": 0.0,
+     "kind": "DOOR",
+     "class": "RASTER_DERIVED"
+    },
+    {
+     "id": "1F-D-I3122",
+     "width_on_face_m": 1.0,
+     "height_m": 2.117,
+     "sill_m": 0.0,
+     "kind": "DOOR",
+     "class": "PROVISIONAL_SOURCE_DERIVED"
+    },
+    {
+     "id": "1F-W02",
+     "width_on_face_m": 1.552,
+     "height_m": 2.097,
+     "sill_m": 0.0,
+     "kind": "WINDOW",
+     "class": "BUDGET_ESTIMATE"
+    }
+   ],
+   "openings_unmatched": [],
+   "reveals": {
+    "DOOR_REVEAL": 0.77,
+    "WINDOW_REVEAL": 0.575,
+    "WINDOW_SILL_LM": 1.552
+   },
+   "net": {
+    "PLASTER": {
+     "gross": 65.117,
+     "openings": 7.065,
+     "reveals": 1.345,
+     "net": 59.396,
+     "net_low": 56.903,
+     "net_high": 61.817
+    },
+    "PAINT": {
+     "gross": 55.68,
+     "openings": 7.065,
+     "reveals": 1.345,
+     "net": 49.96,
+     "net_low": 48.243,
+     "net_high": 52.381
+    },
+    "TILE": null
+   },
+   "sequence": {
+    "SPATTER_DASH_INTERNAL": 59.396057,
+    "ROUGH_PLASTER_INTERNAL": 59.396057,
+    "SMOOTH_PLASTER_INTERNAL": 59.396057,
+    "PAINT_INTERNAL_NET": 49.959556,
+    "method": "DRY_INTERNAL_SPATTER_ROUGH_SMOOTH"
+   },
+   "provisional": true,
+   "wall_state": "COMPUTED",
+   "faces_blocked_length_m": 0.0,
+   "paint_blocked_length_m": 0.0
+  },
+  {
+   "room": "1F-R10",
+   "floor": "1F",
+   "name": "BATH",
+   "room_class": "WET",
+   "wet": true,
+   "plaster_h_m": 4.04,
+   "paint_h_m": 3.45,
+   "tile_h_m": 3.45,
+   "openings": [
+    {
+     "id": "1F-D-I3054",
+     "width_on_face_m": 0.8,
+     "height_m": 2.117,
+     "sill_m": 0.0,
+     "kind": "DOOR",
+     "class": "RASTER_DERIVED"
+    },
+    {
+     "id": "1F-W07",
+     "width_on_face_m": 0.6,
+     "height_m": 2.097,
+     "sill_m": 0.113,
+     "kind": "WINDOW",
+     "class": "BUDGET_ESTIMATE"
+    }
+   ],
+   "openings_unmatched": [],
+   "reveals": {
+    "DOOR_REVEAL": 0.378,
+    "WINDOW_REVEAL": 0.479,
+    "WINDOW_SILL_LM": 0.6
+   },
+   "net": {
+    "PLASTER": {
+     "gross": 30.177,
+     "openings": 2.952,
+     "reveals": 0.0,
+     "net": 27.225,
+     "net_low": 26.122,
+     "net_high": 27.225
+    },
+    "PAINT": null,
+    "TILE": {
+     "gross": 26.22,
+     "openings": 2.952,
+     "reveals": 0.857,
+     "net": 24.125,
+     "net_low": 23.376,
+     "net_high": 24.125
+    }
+   },
+   "sequence": {
+    "SPATTER_DASH_WET": 24.12515,
+    "TILE_PREP": 24.12515,
+    "WALL_TILE_NET": 24.12515,
+    "GENERAL_PLASTER": 0.0,
+    "HIDDEN_ABOVE_TILE": 3.957,
+    "method": "WET_ROOM_SPATTER_ONLY_BEFORE_TILE"
+   },
+   "provisional": true,
+   "wall_state": "COMPUTED",
+   "faces_blocked_length_m": 0.0,
+   "paint_blocked_length_m": 0.0
+  },
+  {
+   "room": "1F-R11",
+   "floor": "1F",
+   "name": "MASTER BED ROOM",
+   "room_class": "DRY",
+   "wet": false,
+   "plaster_h_m": 3.45,
+   "paint_h_m": 3.2,
+   "tile_h_m": null,
+   "openings": [
+    {
+     "id": "1F-D-I3115",
+     "width_on_face_m": 0.8,
+     "height_m": 2.117,
+     "sill_m": 0.0,
+     "kind": "DOOR",
+     "class": "RASTER_DERIVED"
+    },
+    {
+     "id": "1F-D-I3121",
+     "width_on_face_m": 1.0,
+     "height_m": 2.117,
+     "sill_m": 0.0,
+     "kind": "DOOR",
+     "class": "PROVISIONAL_SOURCE_DERIVED"
+    },
+    {
+     "id": "1F-W12",
+     "width_on_face_m": 2.45,
+     "height_m": 2.097,
+     "sill_m": 0.0,
+     "kind": "WINDOW",
+     "class": "BUDGET_ESTIMATE"
+    }
+   ],
+   "openings_unmatched": [],
+   "reveals": {
+    "DOOR_REVEAL": 0.77,
+    "WINDOW_REVEAL": 0.664,
+    "WINDOW_SILL_LM": 2.45
+   },
+   "net": {
+    "PLASTER": {
+     "gross": 50.182,
+     "openings": 8.948,
+     "reveals": 1.434,
+     "net": 42.669,
+     "net_low": 39.35,
+     "net_high": 46.491
+    },
+    "PAINT": {
+     "gross": 56.64,
+     "openings": 8.948,
+     "reveals": 1.434,
+     "net": 49.127,
+     "net_low": 46.42,
+     "net_high": 52.948
+    },
+    "TILE": null
+   },
+   "sequence": {
+    "SPATTER_DASH_INTERNAL": 42.669199,
+    "ROUGH_PLASTER_INTERNAL": 42.669199,
+    "SMOOTH_PLASTER_INTERNAL": 42.669199,
+    "PAINT_INTERNAL_NET": 49.126701,
+    "method": "DRY_INTERNAL_SPATTER_ROUGH_SMOOTH"
+   },
+   "provisional": true,
+   "wall_state": "PARTIAL",
+   "faces_blocked_length_m": 4.2,
+   "paint_blocked_length_m": 0.0
+  },
+  {
+   "room": "2F-R01",
+   "floor": "2F",
+   "name": "UNKNOWN",
+   "room_class": "UNKNOWN",
+   "wet": false,
+   "plaster_h_m": 3.8,
+   "paint_h_m": 2.75,
+   "tile_h_m": null,
+   "openings": [
+    {
+     "id": "2F-D-I4794",
+     "width_on_face_m": 1.0,
+     "height_m": 2.123,
+     "sill_m": 0.0,
+     "kind": "DOOR",
+     "class": "PROVISIONAL_GEOMETRIC_INFERENCE"
+    },
+    {
+     "id": "2F-D-I4802",
+     "width_on_face_m": 0.9,
+     "height_m": 2.123,
+     "sill_m": 0.0,
+     "kind": "DOOR",
+     "class": "PROVISIONAL_SOURCE_DERIVED"
+    },
+    {
+     "id": "2F-W01",
+     "width_on_face_m": 1.0,
+     "height_m": 0.589,
+     "sill_m": 1.584,
+     "kind": "WINDOW",
+     "class": "PROVISIONAL_SOURCE_DERIVED"
+    },
+    {
+     "id": "2F-W02",
+     "width_on_face_m": 1.0,
+     "height_m": 0.589,
+     "sill_m": 1.584,
+     "kind": "WINDOW",
+     "class": "PROVISIONAL_SOURCE_DERIVED"
+    },
+    {
+     "id": "2F-W05",
+     "width_on_face_m": 1.2,
+     "height_m": 1.433,
+     "sill_m": 1.002,
+     "kind": "WINDOW",
+     "class": "PROVISIONAL_SOURCE_DERIVED"
+    }
+   ],
+   "openings_unmatched": [],
+   "reveals": {
+    "DOOR_REVEAL": 0.908,
+    "WINDOW_REVEAL": 0.842,
+    "WINDOW_SILL_LM": 3.2
+   },
+   "net": {
+    "PLASTER": {
+     "gross": 78.403,
+     "openings": 6.931,
+     "reveals": 1.75,
+     "net": 73.222,
+     "net_low": 73.222,
+     "net_high": 73.222
+    },
+    "PAINT": {
+     "gross": 60.5,
+     "openings": 6.931,
+     "reveals": 1.75,
+     "net": 55.319,
+     "net_low": 55.319,
+     "net_high": 55.319
+    },
+    "TILE": null
+   },
+   "sequence": {
+    "SPATTER_DASH_INTERNAL": 73.221952,
+    "ROUGH_PLASTER_INTERNAL": 73.221952,
+    "SMOOTH_PLASTER_INTERNAL": 73.221952,
+    "PAINT_INTERNAL_NET": 55.31895,
+    "method": "DRY_INTERNAL_SPATTER_ROUGH_SMOOTH"
+   },
+   "provisional": true,
+   "wall_state": "COMPUTED",
+   "faces_blocked_length_m": 0.0,
+   "paint_blocked_length_m": 0.0
+  },
+  {
+   "room": "2F-R02",
+   "floor": "2F",
+   "name": "MAID R.",
+   "room_class": "DRY",
+   "wet": false,
+   "plaster_h_m": 3.8,
+   "paint_h_m": 3.2,
+   "tile_h_m": null,
+   "openings": [
+    {
+     "id": "2F-D-I4795",
+     "width_on_face_m": 0.8,
+     "height_m": 2.123,
+     "sill_m": 0.0,
+     "kind": "DOOR",
+     "class": "PROVISIONAL_GEOMETRIC_INFERENCE"
+    },
+    {
+     "id": "2F-D-I4802",
+     "width_on_face_m": 0.9,
+     "height_m": 2.123,
+     "sill_m": 0.0,
+     "kind": "DOOR",
+     "class": "PROVISIONAL_SOURCE_DERIVED"
+    },
+    {
+     "id": "2F-W04",
+     "width_on_face_m": 1.2,
+     "height_m": 1.433,
+     "sill_m": 1.002,
+     "kind": "WINDOW",
+     "class": "PROVISIONAL_SOURCE_DERIVED"
+    }
+   ],
+   "openings_unmatched": [],
+   "reveals": {
+    "DOOR_REVEAL": 0.893,
+    "WINDOW_REVEAL": 0.407,
+    "WINDOW_SILL_LM": 1.2
+   },
+   "net": {
+    "PLASTER": {
+     "gross": 68.513,
+     "openings": 5.329,
+     "reveals": 1.3,
+     "net": 64.483,
+     "net_low": 64.483,
+     "net_high": 64.483
+    },
+    "PAINT": {
+     "gross": 60.48,
+     "openings": 5.329,
+     "reveals": 1.3,
+     "net": 56.451,
+     "net_low": 56.451,
+     "net_high": 56.451
+    },
+    "TILE": null
+   },
+   "sequence": {
+    "SPATTER_DASH_INTERNAL": 64.48345,
+    "ROUGH_PLASTER_INTERNAL": 64.48345,
+    "SMOOTH_PLASTER_INTERNAL": 64.48345,
+    "PAINT_INTERNAL_NET": 56.45095,
+    "method": "DRY_INTERNAL_SPATTER_ROUGH_SMOOTH"
+   },
+   "provisional": true,
+   "wall_state": "COMPUTED",
+   "faces_blocked_length_m": 0.0,
+   "paint_blocked_length_m": 0.0
+  },
+  {
+   "room": "2F-R03",
+   "floor": "2F",
+   "name": "W.C",
+   "room_class": "WET",
+   "wet": true,
+   "plaster_h_m": 3.8,
+   "paint_h_m": 3.2,
+   "tile_h_m": 3.2,
+   "openings": [
+    {
+     "id": "2F-D-I4795",
+     "width_on_face_m": 0.8,
+     "height_m": 2.123,
+     "sill_m": 0.0,
+     "kind": "DOOR",
+     "class": "PROVISIONAL_GEOMETRIC_INFERENCE"
+    },
+    {
+     "id": "2F-W03",
+     "width_on_face_m": 0.6,
+     "height_m": 1.439,
+     "sill_m": 0.0,
+     "kind": "WINDOW",
+     "class": "BUDGET_ESTIMATE"
+    }
+   ],
+   "openings_unmatched": [],
+   "reveals": {
+    "DOOR_REVEAL": 0.378,
+    "WINDOW_REVEAL": 0.348,
+    "WINDOW_SILL_LM": 0.6
+   },
+   "net": {
+    "PLASTER": {
+     "gross": 36.212,
+     "openings": 2.562,
+     "reveals": 0.0,
+     "net": 33.651,
+     "net_low": 32.416,
+     "net_high": 34.161
+    },
+    "PAINT": null,
+    "TILE": {
+     "gross": 31.04,
+     "openings": 2.562,
+     "reveals": 0.726,
+     "net": 29.204,
+     "net_low": 28.148,
+     "net_high": 29.714
+    }
+   },
+   "sequence": {
+    "SPATTER_DASH_WET": 29.20445,
+    "TILE_PREP": 29.20445,
+    "WALL_TILE_NET": 29.20445,
+    "GENERAL_PLASTER": 0.0,
+    "HIDDEN_ABOVE_TILE": 5.1725,
+    "method": "WET_ROOM_SPATTER_ONLY_BEFORE_TILE"
+   },
+   "provisional": true,
+   "wall_state": "COMPUTED",
+   "faces_blocked_length_m": 0.0,
+   "paint_blocked_length_m": 0.0
+  }
+ ],
+ "beads": [
+  {
+   "host": "GF-D-641",
+   "face": "GF-Z04",
+   "source": "NO_WIDTH_MATCH",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_JAMB",
+   "side": "L",
+   "length_m": 2.237,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-D-641",
+   "face": "GF-Z04",
+   "source": "NO_WIDTH_MATCH",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_JAMB",
+   "side": "R",
+   "length_m": 2.237,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-D-641",
+   "face": "GF-Z04",
+   "source": "NO_WIDTH_MATCH",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_HEAD",
+   "length_m": 2.0,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-D-I711",
+   "face": "GF-Z04",
+   "source": "RASTER_TYPE_MATCH",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_JAMB",
+   "side": "L",
+   "length_m": 2.607,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-D-I711",
+   "face": "GF-Z04",
+   "source": "RASTER_TYPE_MATCH",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_JAMB",
+   "side": "R",
+   "length_m": 2.607,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-D-I711",
+   "face": "GF-Z04",
+   "source": "RASTER_TYPE_MATCH",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_HEAD",
+   "length_m": 1.0,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-D-I754",
+   "face": "GF-Z04",
+   "source": "RASTER_TYPE_MATCH",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_JAMB",
+   "side": "L",
+   "length_m": 2.607,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-D-I754",
+   "face": "GF-Z04",
+   "source": "RASTER_TYPE_MATCH",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_JAMB",
+   "side": "R",
+   "length_m": 2.607,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-D-I754",
+   "face": "GF-Z04",
+   "source": "RASTER_TYPE_MATCH",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_HEAD",
+   "length_m": 1.0,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-D-I800",
+   "face": "GF-Z04",
+   "source": "RASTER_AMBIGUOUS",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_JAMB",
+   "side": "L",
+   "length_m": 2.209,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-D-I800",
+   "face": "GF-Z04",
+   "source": "RASTER_AMBIGUOUS",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_JAMB",
+   "side": "R",
+   "length_m": 2.209,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-D-I800",
+   "face": "GF-Z04",
+   "source": "RASTER_AMBIGUOUS",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_HEAD",
+   "length_m": 0.828,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-D-I801",
+   "face": "GF-Z04",
+   "source": "RASTER_AMBIGUOUS",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_JAMB",
+   "side": "L",
+   "length_m": 2.137,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-D-I801",
+   "face": "GF-Z04",
+   "source": "RASTER_AMBIGUOUS",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_JAMB",
+   "side": "R",
+   "length_m": 2.137,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-D-I801",
+   "face": "GF-Z04",
+   "source": "RASTER_AMBIGUOUS",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_HEAD",
+   "length_m": 0.8,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-D-I825",
+   "face": "GF-Z04",
+   "source": "RASTER_AMBIGUOUS",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_JAMB",
+   "side": "L",
+   "length_m": 2.137,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-D-I825",
+   "face": "GF-Z04",
+   "source": "RASTER_AMBIGUOUS",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_JAMB",
+   "side": "R",
+   "length_m": 2.137,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-D-I825",
+   "face": "GF-Z04",
+   "source": "RASTER_AMBIGUOUS",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_HEAD",
+   "length_m": 0.797,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-D-I830",
+   "face": "GF-Z04",
+   "source": "RASTER_TYPE_MATCH",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_JAMB",
+   "side": "L",
+   "length_m": 2.607,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-D-I830",
+   "face": "GF-Z04",
+   "source": "RASTER_TYPE_MATCH",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_JAMB",
+   "side": "R",
+   "length_m": 2.607,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-D-I830",
+   "face": "GF-Z04",
+   "source": "RASTER_TYPE_MATCH",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_HEAD",
+   "length_m": 1.0,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-W04",
+   "face": "GF-Z04",
+   "source": "RASTER_AMBIGUOUS",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_JAMB",
+   "side": "L",
+   "length_m": 2.607,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-W04",
+   "face": "GF-Z04",
+   "source": "RASTER_AMBIGUOUS",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_JAMB",
+   "side": "R",
+   "length_m": 2.607,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-W04",
+   "face": "GF-Z04",
+   "source": "RASTER_AMBIGUOUS",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_HEAD",
+   "length_m": 1.0,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-W04",
+   "face": "GF-Z04",
+   "source": "RASTER_AMBIGUOUS",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_SILL",
+   "length_m": 1.0,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-W09",
+   "face": "GF-Z04",
+   "source": "PRINTED",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_JAMB",
+   "side": "L",
+   "length_m": 3.65,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-W09",
+   "face": "GF-Z04",
+   "source": "PRINTED",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_JAMB",
+   "side": "R",
+   "length_m": 3.65,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-W09",
+   "face": "GF-Z04",
+   "source": "PRINTED",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_HEAD",
+   "length_m": 6.331578,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-W11",
+   "face": "GF-Z04",
+   "source": "RASTER_AMBIGUOUS",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_JAMB",
+   "side": "L",
+   "length_m": 2.607,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-W11",
+   "face": "GF-Z04",
+   "source": "RASTER_AMBIGUOUS",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_JAMB",
+   "side": "R",
+   "length_m": 2.607,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-W11",
+   "face": "GF-Z04",
+   "source": "RASTER_AMBIGUOUS",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_HEAD",
+   "length_m": 1.0,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-W11",
+   "face": "GF-Z04",
+   "source": "RASTER_AMBIGUOUS",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_SILL",
+   "length_m": 1.0,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-W12",
+   "face": "GF-Z04",
+   "source": "RASTER_AMBIGUOUS",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_JAMB",
+   "side": "L",
+   "length_m": 2.854,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-W12",
+   "face": "GF-Z04",
+   "source": "RASTER_AMBIGUOUS",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_JAMB",
+   "side": "R",
+   "length_m": 2.854,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-W12",
+   "face": "GF-Z04",
+   "source": "RASTER_AMBIGUOUS",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_HEAD",
+   "length_m": 1.5,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-W12",
+   "face": "GF-Z04",
+   "source": "RASTER_AMBIGUOUS",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_SILL",
+   "length_m": 1.5,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-D-I350",
+   "face": "GF-Z06",
+   "source": "RASTER_TYPE_MATCH",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_JAMB",
+   "side": "L",
+   "length_m": 2.607,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-D-I350",
+   "face": "GF-Z06",
+   "source": "RASTER_TYPE_MATCH",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_JAMB",
+   "side": "R",
+   "length_m": 2.607,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-D-I350",
+   "face": "GF-Z06",
+   "source": "RASTER_TYPE_MATCH",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_HEAD",
+   "length_m": 1.0,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-W14",
+   "face": "GF-Z06",
+   "source": "RASTER_AMBIGUOUS",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_JAMB",
+   "side": "L",
+   "length_m": 2.607,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-W14",
+   "face": "GF-Z06",
+   "source": "RASTER_AMBIGUOUS",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_JAMB",
+   "side": "R",
+   "length_m": 2.607,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-W14",
+   "face": "GF-Z06",
+   "source": "RASTER_AMBIGUOUS",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_HEAD",
+   "length_m": 1.0,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-W14",
+   "face": "GF-Z06",
+   "source": "RASTER_AMBIGUOUS",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_SILL",
+   "length_m": 1.0,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-W15",
+   "face": "GF-Z06",
+   "source": "NO_WIDTH_MATCH",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_JAMB",
+   "side": "L",
+   "length_m": 2.063,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-W15",
+   "face": "GF-Z06",
+   "source": "NO_WIDTH_MATCH",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_JAMB",
+   "side": "R",
+   "length_m": 2.063,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-W15",
+   "face": "GF-Z06",
+   "source": "NO_WIDTH_MATCH",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_HEAD",
+   "length_m": 1.95492,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-W16",
+   "face": "GF-Z06",
+   "source": "NO_WIDTH_MATCH",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_JAMB",
+   "side": "L",
+   "length_m": 2.063,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-W16",
+   "face": "GF-Z06",
+   "source": "NO_WIDTH_MATCH",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_JAMB",
+   "side": "R",
+   "length_m": 2.063,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-W16",
+   "face": "GF-Z06",
+   "source": "NO_WIDTH_MATCH",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_HEAD",
+   "length_m": 1.95492,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-D-I711",
+   "face": "GF-R12",
+   "source": "RASTER_TYPE_MATCH",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_JAMB",
+   "side": "L",
+   "length_m": 2.607,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-D-I711",
+   "face": "GF-R12",
+   "source": "RASTER_TYPE_MATCH",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_JAMB",
+   "side": "R",
+   "length_m": 2.607,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-D-I711",
+   "face": "GF-R12",
+   "source": "RASTER_TYPE_MATCH",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_HEAD",
+   "length_m": 1.0,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-D-I825",
+   "face": "GF-R12",
+   "source": "RASTER_AMBIGUOUS",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_JAMB",
+   "side": "L",
+   "length_m": 2.137,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-D-I825",
+   "face": "GF-R12",
+   "source": "RASTER_AMBIGUOUS",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_JAMB",
+   "side": "R",
+   "length_m": 2.137,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-D-I825",
+   "face": "GF-R12",
+   "source": "RASTER_AMBIGUOUS",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_HEAD",
+   "length_m": 0.797,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-W05",
+   "face": "GF-R12",
+   "source": "RASTER_AMBIGUOUS",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_JAMB",
+   "side": "L",
+   "length_m": 0.938,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-W05",
+   "face": "GF-R12",
+   "source": "RASTER_AMBIGUOUS",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_JAMB",
+   "side": "R",
+   "length_m": 0.938,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-W05",
+   "face": "GF-R12",
+   "source": "RASTER_AMBIGUOUS",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_HEAD",
+   "length_m": 0.9,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-W05",
+   "face": "GF-R12",
+   "source": "RASTER_AMBIGUOUS",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_SILL",
+   "length_m": 0.9,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-W10",
+   "face": "GF-R12",
+   "source": "RASTER_AMBIGUOUS",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_JAMB",
+   "side": "L",
+   "length_m": 2.338,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-W10",
+   "face": "GF-R12",
+   "source": "RASTER_AMBIGUOUS",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_JAMB",
+   "side": "R",
+   "length_m": 2.338,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-W10",
+   "face": "GF-R12",
+   "source": "RASTER_AMBIGUOUS",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_HEAD",
+   "length_m": 1.2,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-W10",
+   "face": "GF-R12",
+   "source": "RASTER_AMBIGUOUS",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_SILL",
+   "length_m": 1.2,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-D-E820",
+   "face": "GF-R14",
+   "source": "RASTER_AMBIGUOUS",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_JAMB",
+   "side": "L",
+   "length_m": 2.137,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-D-E820",
+   "face": "GF-R14",
+   "source": "RASTER_AMBIGUOUS",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_JAMB",
+   "side": "R",
+   "length_m": 2.137,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-D-E820",
+   "face": "GF-R14",
+   "source": "RASTER_AMBIGUOUS",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_HEAD",
+   "length_m": 0.8,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-D-I754",
+   "face": "GF-R14",
+   "source": "RASTER_TYPE_MATCH",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_JAMB",
+   "side": "L",
+   "length_m": 2.607,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-D-I754",
+   "face": "GF-R14",
+   "source": "RASTER_TYPE_MATCH",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_JAMB",
+   "side": "R",
+   "length_m": 2.607,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "GF-D-I754",
+   "face": "GF-R14",
+   "source": "RASTER_TYPE_MATCH",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_HEAD",
+   "length_m": 1.0,
+   "status": "MEASURED",
+   "floor": "GF"
+  },
+  {
+   "host": "1F-D-I3055",
+   "face": "1F-R03",
+   "source": "RASTER_TYPE_MATCH_SINGLE",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_JAMB",
+   "side": "L",
+   "length_m": 2.123,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-D-I3055",
+   "face": "1F-R03",
+   "source": "RASTER_TYPE_MATCH_SINGLE",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_JAMB",
+   "side": "R",
+   "length_m": 2.123,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-D-I3055",
+   "face": "1F-R03",
+   "source": "RASTER_TYPE_MATCH_SINGLE",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_HEAD",
+   "length_m": 0.9,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-D-I3090",
+   "face": "1F-R03",
+   "source": "RASTER_TYPE_MATCH",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_JAMB",
+   "side": "L",
+   "length_m": 2.117,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-D-I3090",
+   "face": "1F-R03",
+   "source": "RASTER_TYPE_MATCH",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_JAMB",
+   "side": "R",
+   "length_m": 2.117,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-D-I3090",
+   "face": "1F-R03",
+   "source": "RASTER_TYPE_MATCH",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_HEAD",
+   "length_m": 0.8,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-D-I3096",
+   "face": "1F-R05",
+   "source": "RASTER_TYPE_MATCH_SINGLE",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_JAMB",
+   "side": "L",
+   "length_m": 2.123,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-D-I3096",
+   "face": "1F-R05",
+   "source": "RASTER_TYPE_MATCH_SINGLE",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_JAMB",
+   "side": "R",
+   "length_m": 2.123,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-D-I3096",
+   "face": "1F-R05",
+   "source": "RASTER_TYPE_MATCH_SINGLE",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_HEAD",
+   "length_m": 0.9,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-W04",
+   "face": "1F-R05",
+   "source": "RASTER_AMBIGUOUS",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_JAMB",
+   "side": "L",
+   "length_m": 1.35,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-W04",
+   "face": "1F-R05",
+   "source": "RASTER_AMBIGUOUS",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_JAMB",
+   "side": "R",
+   "length_m": 1.35,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-W04",
+   "face": "1F-R05",
+   "source": "RASTER_AMBIGUOUS",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_HEAD",
+   "length_m": 1.0,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-D-I3055",
+   "face": "1F-Z06",
+   "source": "RASTER_TYPE_MATCH_SINGLE",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_JAMB",
+   "side": "L",
+   "length_m": 2.123,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-D-I3055",
+   "face": "1F-Z06",
+   "source": "RASTER_TYPE_MATCH_SINGLE",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_JAMB",
+   "side": "R",
+   "length_m": 2.123,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-D-I3055",
+   "face": "1F-Z06",
+   "source": "RASTER_TYPE_MATCH_SINGLE",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_HEAD",
+   "length_m": 0.9,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-D-I3090",
+   "face": "1F-Z06",
+   "source": "RASTER_TYPE_MATCH",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_JAMB",
+   "side": "L",
+   "length_m": 2.117,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-D-I3090",
+   "face": "1F-Z06",
+   "source": "RASTER_TYPE_MATCH",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_JAMB",
+   "side": "R",
+   "length_m": 2.117,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-D-I3090",
+   "face": "1F-Z06",
+   "source": "RASTER_TYPE_MATCH",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_HEAD",
+   "length_m": 0.8,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-D-I3096",
+   "face": "1F-Z06",
+   "source": "RASTER_TYPE_MATCH_SINGLE",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_JAMB",
+   "side": "L",
+   "length_m": 2.123,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-D-I3096",
+   "face": "1F-Z06",
+   "source": "RASTER_TYPE_MATCH_SINGLE",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_JAMB",
+   "side": "R",
+   "length_m": 2.123,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-D-I3096",
+   "face": "1F-Z06",
+   "source": "RASTER_TYPE_MATCH_SINGLE",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_HEAD",
+   "length_m": 0.9,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-D-I3098",
+   "face": "1F-Z06",
+   "source": "RASTER_TYPE_MATCH_SINGLE",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_JAMB",
+   "side": "L",
+   "length_m": 2.123,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-D-I3098",
+   "face": "1F-Z06",
+   "source": "RASTER_TYPE_MATCH_SINGLE",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_JAMB",
+   "side": "R",
+   "length_m": 2.123,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-D-I3098",
+   "face": "1F-Z06",
+   "source": "RASTER_TYPE_MATCH_SINGLE",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_HEAD",
+   "length_m": 0.9,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-D-I3121",
+   "face": "1F-Z06",
+   "source": "RASTER_TYPE_MATCH_SINGLE",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_JAMB",
+   "side": "L",
+   "length_m": 2.117,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-D-I3121",
+   "face": "1F-Z06",
+   "source": "RASTER_TYPE_MATCH_SINGLE",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_JAMB",
+   "side": "R",
+   "length_m": 2.117,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-D-I3121",
+   "face": "1F-Z06",
+   "source": "RASTER_TYPE_MATCH_SINGLE",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_HEAD",
+   "length_m": 1.0,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-D-I3122",
+   "face": "1F-Z06",
+   "source": "RASTER_TYPE_MATCH_SINGLE",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_JAMB",
+   "side": "L",
+   "length_m": 2.117,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-D-I3122",
+   "face": "1F-Z06",
+   "source": "RASTER_TYPE_MATCH_SINGLE",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_JAMB",
+   "side": "R",
+   "length_m": 2.117,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-D-I3122",
+   "face": "1F-Z06",
+   "source": "RASTER_TYPE_MATCH_SINGLE",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_HEAD",
+   "length_m": 1.0,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-D-I4532",
+   "face": "1F-Z06",
+   "source": "RASTER_TYPE_MATCH",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_JAMB",
+   "side": "L",
+   "length_m": 2.117,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-D-I4532",
+   "face": "1F-Z06",
+   "source": "RASTER_TYPE_MATCH",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_JAMB",
+   "side": "R",
+   "length_m": 2.117,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-D-I4532",
+   "face": "1F-Z06",
+   "source": "RASTER_TYPE_MATCH",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_HEAD",
+   "length_m": 0.8,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-W03",
+   "face": "1F-Z06",
+   "source": "RASTER_AMBIGUOUS",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_JAMB",
+   "side": "L",
+   "length_m": 1.35,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-W03",
+   "face": "1F-Z06",
+   "source": "RASTER_AMBIGUOUS",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_JAMB",
+   "side": "R",
+   "length_m": 1.35,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-W03",
+   "face": "1F-Z06",
+   "source": "RASTER_AMBIGUOUS",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_HEAD",
+   "length_m": 1.0,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-W04",
+   "face": "1F-Z06",
+   "source": "RASTER_AMBIGUOUS",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_JAMB",
+   "side": "L",
+   "length_m": 1.35,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-W04",
+   "face": "1F-Z06",
+   "source": "RASTER_AMBIGUOUS",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_JAMB",
+   "side": "R",
+   "length_m": 1.35,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-W04",
+   "face": "1F-Z06",
+   "source": "RASTER_AMBIGUOUS",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_HEAD",
+   "length_m": 0.15,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-W05",
+   "face": "1F-Z06",
+   "source": "RASTER_AMBIGUOUS",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_JAMB",
+   "side": "L",
+   "length_m": 1.35,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-W05",
+   "face": "1F-Z06",
+   "source": "RASTER_AMBIGUOUS",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_JAMB",
+   "side": "R",
+   "length_m": 1.35,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-W05",
+   "face": "1F-Z06",
+   "source": "RASTER_AMBIGUOUS",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_HEAD",
+   "length_m": 1.0,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-W08",
+   "face": "1F-Z06",
+   "source": "NO_WIDTH_MATCH",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_JAMB",
+   "side": "L",
+   "length_m": 2.097,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-W08",
+   "face": "1F-Z06",
+   "source": "NO_WIDTH_MATCH",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_JAMB",
+   "side": "R",
+   "length_m": 2.097,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-W08",
+   "face": "1F-Z06",
+   "source": "NO_WIDTH_MATCH",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_HEAD",
+   "length_m": 1.552,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-W09",
+   "face": "1F-Z06",
+   "source": "NO_WIDTH_MATCH",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_JAMB",
+   "side": "L",
+   "length_m": 2.097,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-W09",
+   "face": "1F-Z06",
+   "source": "NO_WIDTH_MATCH",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_JAMB",
+   "side": "R",
+   "length_m": 2.097,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-W09",
+   "face": "1F-Z06",
+   "source": "NO_WIDTH_MATCH",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_HEAD",
+   "length_m": 1.552,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-W11",
+   "face": "1F-Z06",
+   "source": "RASTER_TYPE_MATCH_SINGLE",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_JAMB",
+   "side": "L",
+   "length_m": 2.363,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-W11",
+   "face": "1F-Z06",
+   "source": "RASTER_TYPE_MATCH_SINGLE",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_JAMB",
+   "side": "R",
+   "length_m": 2.363,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-W11",
+   "face": "1F-Z06",
+   "source": "RASTER_TYPE_MATCH_SINGLE",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_HEAD",
+   "length_m": 1.2,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-W11",
+   "face": "1F-Z06",
+   "source": "RASTER_TYPE_MATCH_SINGLE",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_SILL",
+   "length_m": 1.2,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-D-I3054",
+   "face": "1F-R08",
+   "source": "RASTER_TYPE_MATCH",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_JAMB",
+   "side": "L",
+   "length_m": 2.117,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-D-I3054",
+   "face": "1F-R08",
+   "source": "RASTER_TYPE_MATCH",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_JAMB",
+   "side": "R",
+   "length_m": 2.117,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-D-I3054",
+   "face": "1F-R08",
+   "source": "RASTER_TYPE_MATCH",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_HEAD",
+   "length_m": 0.8,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-W04",
+   "face": "1F-R08",
+   "source": "RASTER_AMBIGUOUS",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_JAMB",
+   "side": "L",
+   "length_m": 1.35,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-W04",
+   "face": "1F-R08",
+   "source": "RASTER_AMBIGUOUS",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_JAMB",
+   "side": "R",
+   "length_m": 1.35,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-W04",
+   "face": "1F-R08",
+   "source": "RASTER_AMBIGUOUS",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_HEAD",
+   "length_m": 1.0,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-D-I3118",
+   "face": "1F-R09",
+   "source": "RASTER_TYPE_MATCH",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_JAMB",
+   "side": "L",
+   "length_m": 2.117,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-D-I3118",
+   "face": "1F-R09",
+   "source": "RASTER_TYPE_MATCH",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_JAMB",
+   "side": "R",
+   "length_m": 2.117,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-D-I3118",
+   "face": "1F-R09",
+   "source": "RASTER_TYPE_MATCH",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_HEAD",
+   "length_m": 0.8,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-D-I3122",
+   "face": "1F-R09",
+   "source": "RASTER_TYPE_MATCH_SINGLE",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_JAMB",
+   "side": "L",
+   "length_m": 2.117,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-D-I3122",
+   "face": "1F-R09",
+   "source": "RASTER_TYPE_MATCH_SINGLE",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_JAMB",
+   "side": "R",
+   "length_m": 2.117,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-D-I3122",
+   "face": "1F-R09",
+   "source": "RASTER_TYPE_MATCH_SINGLE",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_HEAD",
+   "length_m": 1.0,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-W02",
+   "face": "1F-R09",
+   "source": "NO_WIDTH_MATCH",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_JAMB",
+   "side": "L",
+   "length_m": 2.097,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-W02",
+   "face": "1F-R09",
+   "source": "NO_WIDTH_MATCH",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_JAMB",
+   "side": "R",
+   "length_m": 2.097,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-W02",
+   "face": "1F-R09",
+   "source": "NO_WIDTH_MATCH",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_HEAD",
+   "length_m": 1.552,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-D-I3115",
+   "face": "1F-R11",
+   "source": "RASTER_TYPE_MATCH",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_JAMB",
+   "side": "L",
+   "length_m": 2.117,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-D-I3115",
+   "face": "1F-R11",
+   "source": "RASTER_TYPE_MATCH",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_JAMB",
+   "side": "R",
+   "length_m": 2.117,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-D-I3115",
+   "face": "1F-R11",
+   "source": "RASTER_TYPE_MATCH",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_HEAD",
+   "length_m": 0.8,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-D-I3121",
+   "face": "1F-R11",
+   "source": "RASTER_TYPE_MATCH_SINGLE",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_JAMB",
+   "side": "L",
+   "length_m": 2.117,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-D-I3121",
+   "face": "1F-R11",
+   "source": "RASTER_TYPE_MATCH_SINGLE",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_JAMB",
+   "side": "R",
+   "length_m": 2.117,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-D-I3121",
+   "face": "1F-R11",
+   "source": "RASTER_TYPE_MATCH_SINGLE",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_HEAD",
+   "length_m": 1.0,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-W12",
+   "face": "1F-R11",
+   "source": "NO_WIDTH_MATCH",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_JAMB",
+   "side": "L",
+   "length_m": 2.097,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-W12",
+   "face": "1F-R11",
+   "source": "NO_WIDTH_MATCH",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_JAMB",
+   "side": "R",
+   "length_m": 2.097,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "1F-W12",
+   "face": "1F-R11",
+   "source": "NO_WIDTH_MATCH",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_HEAD",
+   "length_m": 2.449774,
+   "status": "MEASURED",
+   "floor": "1F"
+  },
+  {
+   "host": "2F-D-I4794",
+   "face": "2F-R01",
+   "source": "NO_WIDTH_MATCH",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_JAMB",
+   "side": "L",
+   "length_m": 2.123,
+   "status": "MEASURED",
+   "floor": "2F"
+  },
+  {
+   "host": "2F-D-I4794",
+   "face": "2F-R01",
+   "source": "NO_WIDTH_MATCH",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_JAMB",
+   "side": "R",
+   "length_m": 2.123,
+   "status": "MEASURED",
+   "floor": "2F"
+  },
+  {
+   "host": "2F-D-I4794",
+   "face": "2F-R01",
+   "source": "NO_WIDTH_MATCH",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_HEAD",
+   "length_m": 1.0,
+   "status": "MEASURED",
+   "floor": "2F"
+  },
+  {
+   "host": "2F-D-I4802",
+   "face": "2F-R01",
+   "source": "RASTER_TYPE_MATCH_SINGLE",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_JAMB",
+   "side": "L",
+   "length_m": 2.123,
+   "status": "MEASURED",
+   "floor": "2F"
+  },
+  {
+   "host": "2F-D-I4802",
+   "face": "2F-R01",
+   "source": "RASTER_TYPE_MATCH_SINGLE",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_JAMB",
+   "side": "R",
+   "length_m": 2.123,
+   "status": "MEASURED",
+   "floor": "2F"
+  },
+  {
+   "host": "2F-D-I4802",
+   "face": "2F-R01",
+   "source": "RASTER_TYPE_MATCH_SINGLE",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_HEAD",
+   "length_m": 0.9,
+   "status": "MEASURED",
+   "floor": "2F"
+  },
+  {
+   "host": "2F-W01",
+   "face": "2F-R01",
+   "source": "RASTER_TYPE_MATCH_SINGLE",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_JAMB",
+   "side": "L",
+   "length_m": 0.589,
+   "status": "MEASURED",
+   "floor": "2F"
+  },
+  {
+   "host": "2F-W01",
+   "face": "2F-R01",
+   "source": "RASTER_TYPE_MATCH_SINGLE",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_JAMB",
+   "side": "R",
+   "length_m": 0.589,
+   "status": "MEASURED",
+   "floor": "2F"
+  },
+  {
+   "host": "2F-W01",
+   "face": "2F-R01",
+   "source": "RASTER_TYPE_MATCH_SINGLE",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_HEAD",
+   "length_m": 1.0,
+   "status": "MEASURED",
+   "floor": "2F"
+  },
+  {
+   "host": "2F-W01",
+   "face": "2F-R01",
+   "source": "RASTER_TYPE_MATCH_SINGLE",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_SILL",
+   "length_m": 1.0,
+   "status": "MEASURED",
+   "floor": "2F"
+  },
+  {
+   "host": "2F-W02",
+   "face": "2F-R01",
+   "source": "RASTER_TYPE_MATCH_SINGLE",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_JAMB",
+   "side": "L",
+   "length_m": 0.589,
+   "status": "MEASURED",
+   "floor": "2F"
+  },
+  {
+   "host": "2F-W02",
+   "face": "2F-R01",
+   "source": "RASTER_TYPE_MATCH_SINGLE",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_JAMB",
+   "side": "R",
+   "length_m": 0.589,
+   "status": "MEASURED",
+   "floor": "2F"
+  },
+  {
+   "host": "2F-W02",
+   "face": "2F-R01",
+   "source": "RASTER_TYPE_MATCH_SINGLE",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_HEAD",
+   "length_m": 1.0,
+   "status": "MEASURED",
+   "floor": "2F"
+  },
+  {
+   "host": "2F-W02",
+   "face": "2F-R01",
+   "source": "RASTER_TYPE_MATCH_SINGLE",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_SILL",
+   "length_m": 1.0,
+   "status": "MEASURED",
+   "floor": "2F"
+  },
+  {
+   "host": "2F-W05",
+   "face": "2F-R01",
+   "source": "RASTER_TYPE_MATCH_SINGLE",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_JAMB",
+   "side": "L",
+   "length_m": 1.433,
+   "status": "MEASURED",
+   "floor": "2F"
+  },
+  {
+   "host": "2F-W05",
+   "face": "2F-R01",
+   "source": "RASTER_TYPE_MATCH_SINGLE",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_JAMB",
+   "side": "R",
+   "length_m": 1.433,
+   "status": "MEASURED",
+   "floor": "2F"
+  },
+  {
+   "host": "2F-W05",
+   "face": "2F-R01",
+   "source": "RASTER_TYPE_MATCH_SINGLE",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_HEAD",
+   "length_m": 1.2,
+   "status": "MEASURED",
+   "floor": "2F"
+  },
+  {
+   "host": "2F-W05",
+   "face": "2F-R01",
+   "source": "RASTER_TYPE_MATCH_SINGLE",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_SILL",
+   "length_m": 1.2,
+   "status": "MEASURED",
+   "floor": "2F"
+  },
+  {
+   "host": "2F-R01-C1",
+   "face": "CORNER",
+   "source": "room polygon projecting corner (V3a)",
+   "finish_population": "PLASTER",
+   "edge_type": "EXTERNAL_CORNER",
+   "length_m": 3.8,
+   "status": "MEASURED",
+   "floor": "2F"
+  },
+  {
+   "host": "2F-D-I4795",
+   "face": "2F-R02",
+   "source": "NO_WIDTH_MATCH",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_JAMB",
+   "side": "L",
+   "length_m": 2.123,
+   "status": "MEASURED",
+   "floor": "2F"
+  },
+  {
+   "host": "2F-D-I4795",
+   "face": "2F-R02",
+   "source": "NO_WIDTH_MATCH",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_JAMB",
+   "side": "R",
+   "length_m": 2.123,
+   "status": "MEASURED",
+   "floor": "2F"
+  },
+  {
+   "host": "2F-D-I4795",
+   "face": "2F-R02",
+   "source": "NO_WIDTH_MATCH",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_HEAD",
+   "length_m": 0.8,
+   "status": "MEASURED",
+   "floor": "2F"
+  },
+  {
+   "host": "2F-D-I4802",
+   "face": "2F-R02",
+   "source": "RASTER_TYPE_MATCH_SINGLE",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_JAMB",
+   "side": "L",
+   "length_m": 2.123,
+   "status": "MEASURED",
+   "floor": "2F"
+  },
+  {
+   "host": "2F-D-I4802",
+   "face": "2F-R02",
+   "source": "RASTER_TYPE_MATCH_SINGLE",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_JAMB",
+   "side": "R",
+   "length_m": 2.123,
+   "status": "MEASURED",
+   "floor": "2F"
+  },
+  {
+   "host": "2F-D-I4802",
+   "face": "2F-R02",
+   "source": "RASTER_TYPE_MATCH_SINGLE",
+   "finish_population": "PLASTER",
+   "edge_type": "DOOR_HEAD",
+   "length_m": 0.9,
+   "status": "MEASURED",
+   "floor": "2F"
+  },
+  {
+   "host": "2F-W04",
+   "face": "2F-R02",
+   "source": "RASTER_TYPE_MATCH_SINGLE",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_JAMB",
+   "side": "L",
+   "length_m": 1.433,
+   "status": "MEASURED",
+   "floor": "2F"
+  },
+  {
+   "host": "2F-W04",
+   "face": "2F-R02",
+   "source": "RASTER_TYPE_MATCH_SINGLE",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_JAMB",
+   "side": "R",
+   "length_m": 1.433,
+   "status": "MEASURED",
+   "floor": "2F"
+  },
+  {
+   "host": "2F-W04",
+   "face": "2F-R02",
+   "source": "RASTER_TYPE_MATCH_SINGLE",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_HEAD",
+   "length_m": 1.2,
+   "status": "MEASURED",
+   "floor": "2F"
+  },
+  {
+   "host": "2F-W04",
+   "face": "2F-R02",
+   "source": "RASTER_TYPE_MATCH_SINGLE",
+   "finish_population": "PLASTER",
+   "edge_type": "WINDOW_SILL",
+   "length_m": 1.2,
+   "status": "MEASURED",
+   "floor": "2F"
+  }
+ ],
+ "bead_total": {
+  "measured_lm": 302.989191,
+  "blocked_segments": 0,
+  "by_edge_type": {
+   "DOOR_HEAD": 28.922,
+   "DOOR_JAMB": 137.826,
+   "EXTERNAL_CORNER": 3.8,
+   "WINDOW_HEAD": 33.697191,
+   "WINDOW_JAMB": 86.544,
+   "WINDOW_SILL": 12.2
+  },
+  "segments": 174
+ },
+ "bead_policy": {
+  "policy_id": "CORNER_BEAD_GEOMETRY_V1",
+  "default_method": {
+   "window_sill": true,
+   "door_head": true,
+   "window_head": true
+  },
+  "rule": "bead on every opening edge of a plastered face (jambs over the plaster interval, head / sill inside it) and on external corners plastered on both faces",
+  "never": [
+   "a bead on a tiled / clad / unplastered face",
+   "a door floor edge",
+   "a guessed opening height"
+  ],
+  "digest": "2e0f66328a06d4ae6fc4e77a68a3f7d4d5b777e74a3560c978f548eb4293b490"
+ },
+ "facades": {
+  "floors": [
+   {
+    "floor": "GF",
+    "outline_perimeter_m": 111.153,
+    "band_m": 5.5,
+    "band_levels": [
+     0.0,
+     5.5
+    ],
+    "gross_m2": 611.34,
+    "external_openings": 17,
+    "openings_m2": 60.291,
+    "external_reveals_m2": 9.396,
+    "net_m2": 560.445,
+    "provisional_openings": 16
+   },
+   {
+    "floor": "1F",
+    "outline_perimeter_m": 73.554,
+    "band_m": 4.2,
+    "band_levels": [
+     5.5,
+     9.7
+    ],
+    "gross_m2": 308.925,
+    "external_openings": 12,
+    "openings_m2": 25.918,
+    "external_reveals_m2": 5.722,
+    "net_m2": 288.729,
+    "provisional_openings": 11
+   },
+   {
+    "floor": "2F",
+    "outline_perimeter_m": 30.0,
+    "band_m": 4.2,
+    "band_levels": [
+     9.7,
+     13.9
+    ],
+    "gross_m2": 126.0,
+    "external_openings": 5,
+    "openings_m2": 5.481,
+    "external_reveals_m2": 1.597,
+    "net_m2": 122.116,
+    "provisional_openings": 5
+   }
+  ],
+  "parapets": [
+   {
+    "region": "2F ROOF (top)",
+    "length_m": 30.671089,
+    "height_m": 0.5,
+    "area_m2": 15.335544,
+    "status": "COMPUTED",
+    "thickness": "BY DETAIL (p.14 parapet detail) - not bound",
+    "formula": "30.671 x 0.50"
+   },
+   {
+    "region": "1F ROOF exposed (not under 2F)",
+    "length_m": 54.030583,
+    "excluded_along_storey_above_m": 18.370697,
+    "height_m": 0.5,
+    "area_m2": 27.015292,
+    "status": "COMPUTED",
+    "thickness": "BY DETAIL (p.14 parapet detail) - not bound",
+    "formula": "54.031 x 0.50"
+   },
+   {
+    "region": "GF ROOF exposed (not under 1F)",
+    "length_m": 66.823823,
+    "excluded_along_storey_above_m": 38.150423,
+    "height_m": 0.5,
+    "area_m2": 33.411912,
+    "status": "COMPUTED",
+    "thickness": "BY DETAIL (p.14 parapet detail) - not bound",
+    "formula": "66.824 x 0.50"
+   }
+  ],
+  "method": "SIGMA_EXTERNAL_SPATTER_ROUGH_SMOOTH_SIGMA",
+  "finish_evidence": "elevations draw rendered plaster faces (no cladding hatch except the stone arch voussoirs)",
+  "rule": "outline = rooms of the floor closed across walls (buffer 250 / -50 mm), courtyard rings > 4 m2 included; band = printed level chain (GF 0.00-5.50 incl. the +1.00 plinth, 1F 5.50-9.70, 2F 9.70-13.90); external reveal depth 0.10 (half a 200 wall)"
+ },
+ "over_openings": {
+  "qty": 115.058167,
+  "low": 79.06018,
+  "high": 151.34972,
+  "technical": 17.00698,
+  "class": "PROVISIONAL_SOURCE_DERIVED",
+  "confidence": "M",
+  "method": "per opening: w x (wall height - head - lintel depth) + w x sill (windows)",
+  "assumption": "wall height = the floor's modal blockwork height; lintel depth by the p.13 schedule",
+  "formula": "59 openings; technical part 17.007 m2 (raster-derived heights)",
+  "details": [
+   {
+    "ref": "GF-D-641",
+    "formula": "2.0 x (4.34 - (0.0 + 2.237) - 0.2)",
+    "qty": 3.806,
+    "status": "BLOCKED"
+   },
+   {
+    "ref": "GF-D-E820",
+    "formula": "0.8 x (4.34 - (0.0 + 2.137) - 0.2)",
+    "qty": 1.6024,
+    "status": "BLOCKED"
+   },
+   {
+    "ref": "GF-D-I350",
+    "formula": "1.0 x (4.34 - (0.0 + 2.607) - 0.2)",
+    "qty": 1.533,
+    "status": "RASTER_DERIVED"
+   },
+   {
+    "ref": "GF-D-I402",
+    "formula": "1.0 x (4.34 - (0.0 + 2.607) - 0.2)",
+    "qty": 1.533,
+    "status": "RASTER_DERIVED"
+   },
+   {
+    "ref": "GF-D-I414",
+    "formula": "0.8 x (4.34 - (0.0 + 2.137) - 0.2)",
+    "qty": 1.6024,
+    "status": "BLOCKED"
+   },
+   {
+    "ref": "GF-D-I437",
+    "formula": "0.9 x (4.34 - (0.0 + 2.117) - 0.2)",
+    "qty": 1.8207,
+    "status": "BLOCKED"
+   },
+   {
+    "ref": "GF-D-I495",
+    "formula": "0.8 x (4.34 - (0.0 + 2.137) - 0.2)",
+    "qty": 1.6024,
+    "status": "BLOCKED"
+   },
+   {
+    "ref": "GF-D-I711",
+    "formula": "1.0 x (4.34 - (0.0 + 2.607) - 0.2)",
+    "qty": 1.533,
+    "status": "RASTER_DERIVED"
+   },
+   {
+    "ref": "GF-D-I754",
+    "formula": "1.0 x (4.34 - (0.0 + 2.607) - 0.2)",
+    "qty": 1.533,
+    "status": "RASTER_DERIVED"
+   },
+   {
+    "ref": "GF-D-I800",
+    "formula": "0.828 x (4.34 - (0.0 + 2.209) - 0.2)",
+    "qty": 1.5989,
+    "status": "BLOCKED"
+   },
+   {
+    "ref": "GF-D-I801",
+    "formula": "0.8 x (4.34 - (0.0 + 2.137) - 0.2)",
+    "qty": 1.6024,
+    "status": "BLOCKED"
+   },
+   {
+    "ref": "GF-D-I825",
+    "formula": "0.797 x (4.34 - (0.0 + 2.137) - 0.2)",
+    "qty": 1.5964,
+    "status": "BLOCKED"
+   },
+   {
+    "ref": "GF-D-I830",
+    "formula": "1.0 x (4.34 - (0.0 + 2.607) - 0.2)",
+    "qty": 1.533,
+    "status": "RASTER_DERIVED"
+   },
+   {
+    "ref": "GF-W01",
+    "formula": "0.9 x (4.34 - (0.071 + 0.938) - 0.2) + 0.9 x 0.071",
+    "qty": 2.8818,
+    "status": "BLOCKED"
+   },
+   {
+    "ref": "GF-W02",
+    "formula": "1.5 x (4.34 - (1.249 + 2.854) - 0.2) + 1.5 x 1.249",
+    "qty": 1.929,
+    "status": "BLOCKED"
+   },
+   {
+    "ref": "GF-W03",
+    "formula": "1.0 x (4.34 - (0.369 + 2.607) - 0.2) + 1.0 x 0.369",
+    "qty": 1.533,
+    "status": "BLOCKED"
+   },
+   {
+    "ref": "GF-W04",
+    "formula": "1.0 x (4.34 - (0.369 + 2.607) - 0.2) + 1.0 x 0.369",
+    "qty": 1.533,
+    "status": "BLOCKED"
+   },
+   {
+    "ref": "GF-W05",
+    "formula": "0.9 x (4.34 - (0.071 + 0.938) - 0.2) + 0.9 x 0.071",
+    "qty": 2.8818,
+    "status": "BLOCKED"
+   },
+   {
+    "ref": "GF-W06",
+    "formula": "0.6 x (4.34 - (1.04 + 0.729) - 0.2) + 0.6 x 1.04",
+    "qty": 2.0466,
+    "status": "BLOCKED"
+   },
+   {
+    "ref": "GF-W07",
+    "formula": "0.6 x (4.34 - (1.04 + 0.729) - 0.2) + 0.6 x 1.04",
+    "qty": 2.0466,
+    "status": "BLOCKED"
+   },
+   {
+    "ref": "GF-W08",
+    "formula": "0.6 x (4.34 - (1.04 + 0.729) - 0.2) + 0.6 x 1.04",
+    "qty": 2.0466,
+    "status": "BLOCKED"
+   },
+   {
+    "ref": "GF-W09",
+    "formula": "6.332 x (4.34 - (0.0 + 3.65) - 0.55) + 6.332 x 0.0",
+    "qty": 0.8865,
+    "status": "RASTER_DERIVED"
+   },
+   {
+    "ref": "GF-W10",
+    "formula": "1.2 x (4.34 - (0.729 + 2.338) - 0.2) + 1.2 x 0.729",
+    "qty": 2.1624,
+    "status": "BLOCKED"
+   },
+   {
+    "ref": "GF-W11",
+    "formula": "1.0 x (4.34 - (0.369 + 2.607) - 0.2) + 1.0 x 0.369",
+    "qty": 1.533,
+    "status": "BLOCKED"
+   },
+   {
+    "ref": "GF-W12",
+    "formula": "1.5 x (4.34 - (1.249 + 2.854) - 0.2) + 1.5 x 1.249",
+    "qty": 1.929,
+    "status": "BLOCKED"
+   },
+   {
+    "ref": "GF-W13",
+    "formula": "1.0 x (4.34 - (0.369 + 2.607) - 0.2) + 1.0 x 0.369",
+    "qty": 1.533,
+    "status": "BLOCKED"
+   },
+   {
+    "ref": "GF-W14",
+    "formula": "1.0 x (4.34 - (0.369 + 2.607) - 0.2) + 1.0 x 0.369",
+    "qty": 1.533,
+    "status": "BLOCKED"
+   },
+   {
+    "ref": "GF-W15",
+    "formula": "1.955 x (4.34 - (0.0 + 2.063) - 0.2) + 1.955 x 0.0",
+    "qty": 4.0605,
+    "status": "BLOCKED"
+   },
+   {
+    "ref": "GF-W16",
+    "formula": "1.955 x (4.34 - (0.0 + 2.063) - 0.2) + 1.955 x 0.0",
+    "qty": 4.0605,
+    "status": "BLOCKED"
+   },
+   {
+    "ref": "1F-D-I3054",
+    "formula": "0.8 x (4.04 - (0.0 + 2.117) - 0.2)",
+    "qty": 1.3784,
+    "status": "RASTER_DERIVED"
+   },
+   {
+    "ref": "1F-D-I3055",
+    "formula": "0.9 x (4.04 - (0.0 + 2.123) - 0.2)",
+    "qty": 1.5453,
+    "status": "BLOCKED"
+   },
+   {
+    "ref": "1F-D-I3090",
+    "formula": "0.8 x (4.04 - (0.0 + 2.117) - 0.2)",
+    "qty": 1.3784,
+    "status": "RASTER_DERIVED"
+   },
+   {
+    "ref": "1F-D-I3096",
+    "formula": "0.9 x (4.04 - (0.0 + 2.123) - 0.2)",
+    "qty": 1.5453,
+    "status": "BLOCKED"
+   },
+   {
+    "ref": "1F-D-I3098",
+    "formula": "0.9 x (4.04 - (0.0 + 2.123) - 0.2)",
+    "qty": 1.5453,
+    "status": "BLOCKED"
+   },
+   {
+    "ref": "1F-D-I3115",
+    "formula": "0.8 x (4.04 - (0.0 + 2.117) - 0.2)",
+    "qty": 1.3784,
+    "status": "RASTER_DERIVED"
+   },
+   {
+    "ref": "1F-D-I3118",
+    "formula": "0.8 x (4.04 - (0.0 + 2.117) - 0.2)",
+    "qty": 1.3784,
+    "status": "RASTER_DERIVED"
+   },
+   {
+    "ref": "1F-D-I3121",
+    "formula": "1.0 x (4.04 - (0.0 + 2.117) - 0.2)",
+    "qty": 1.723,
+    "status": "BLOCKED"
+   },
+   {
+    "ref": "1F-D-I3122",
+    "formula": "1.0 x (4.04 - (0.0 + 2.117) - 0.2)",
+    "qty": 1.723,
+    "status": "BLOCKED"
+   },
+   {
+    "ref": "1F-D-I4532",
+    "formula": "0.8 x (4.04 - (0.0 + 2.117) - 0.2)",
+    "qty": 1.3784,
+    "status": "RASTER_DERIVED"
+   },
+   {
+    "ref": "1F-W01",
+    "formula": "0.6 x (4.04 - (0.113 + 2.097) - 0.2) + 0.6 x 0.113",
+    "qty": 1.0458,
+    "status": "BLOCKED"
+   },
+   {
+    "ref": "1F-W02",
+    "formula": "1.552 x (4.04 - (0.0 + 2.097) - 0.2) + 1.552 x 0.0",
+    "qty": 2.7051,
+    "status": "BLOCKED"
+   },
+   {
+    "ref": "1F-W03",
+    "formula": "1.0 x (4.04 - (0.0 + 1.35) - 0.2) + 1.0 x 0.0",
+    "qty": 2.49,
+    "status": "BLOCKED"
+   },
+   {
+    "ref": "1F-W04",
+    "formula": "1.0 x (4.04 - (0.0 + 1.35) - 0.2) + 1.0 x 0.0",
+    "qty": 2.49,
+    "status": "BLOCKED"
+   },
+   {
+    "ref": "1F-W05",
+    "formula": "1.0 x (4.04 - (0.0 + 1.35) - 0.2) + 1.0 x 0.0",
+    "qty": 2.49,
+    "status": "BLOCKED"
+   },
+   {
+    "ref": "1F-W06",
+    "formula": "0.6 x (4.04 - (0.113 + 2.097) - 0.2) + 0.6 x 0.113",
+    "qty": 1.0458,
+    "status": "BLOCKED"
+   },
+   {
+    "ref": "1F-W07",
+    "formula": "0.6 x (4.04 - (0.113 + 2.097) - 0.2) + 0.6 x 0.113",
+    "qty": 1.0458,
+    "status": "BLOCKED"
+   },
+   {
+    "ref": "1F-W08",
+    "formula": "1.552 x (4.04 - (0.0 + 2.097) - 0.2) + 1.552 x 0.0",
+    "qty": 2.7051,
+    "status": "BLOCKED"
+   },
+   {
+    "ref": "1F-W09",
+    "formula": "1.552 x (4.04 - (0.0 + 2.097) - 0.2) + 1.552 x 0.0",
+    "qty": 2.7051,
+    "status": "BLOCKED"
+   },
+   {
+    "ref": "1F-W10",
+    "formula": "0.5 x (4.04 - (1.687 + 0.713) - 0.2) + 0.5 x 1.687",
+    "qty": 1.5635,
+    "status": "RASTER_DERIVED"
+   },
+   {
+    "ref": "1F-W11",
+    "formula": "1.2 x (4.04 - (0.715 + 2.363) - 0.2) + 1.2 x 0.715",
+    "qty": 1.7724,
+    "status": "BLOCKED"
+   },
+   {
+    "ref": "1F-W12",
+    "formula": "2.45 x (4.04 - (0.0 + 2.097) - 0.3) + 2.45 x 0.0",
+    "qty": 4.0254,
+    "status": "BLOCKED"
+   },
+   {
+    "ref": "2F-D-I4794",
+    "formula": "1.0 x (3.8 - (0.0 + 2.123) - 0.2)",
+    "qty": 1.477,
+    "status": "BLOCKED"
+   },
+   {
+    "ref": "2F-D-I4795",
+    "formula": "0.8 x (3.8 - (0.0 + 2.123) - 0.2)",
+    "qty": 1.1816,
+    "status": "BLOCKED"
+   },
+   {
+    "ref": "2F-D-I4802",
+    "formula": "0.9 x (3.8 - (0.0 + 2.123) - 0.2)",
+    "qty": 1.3293,
+    "status": "BLOCKED"
+   },
+   {
+    "ref": "2F-W01",
+    "formula": "1.0 x (3.8 - (1.584 + 0.589) - 0.2) + 1.0 x 1.584",
+    "qty": 3.011,
+    "status": "BLOCKED"
+   },
+   {
+    "ref": "2F-W02",
+    "formula": "1.0 x (3.8 - (1.584 + 0.589) - 0.2) + 1.0 x 1.584",
+    "qty": 3.011,
+    "status": "BLOCKED"
+   },
+   {
+    "ref": "2F-W03",
+    "formula": "0.6 x (3.8 - (0.0 + 1.439) - 0.2) + 0.6 x 0.0",
+    "qty": 1.2966,
+    "status": "BLOCKED"
+   },
+   {
+    "ref": "2F-W04",
+    "formula": "1.2 x (3.8 - (1.002 + 1.433) - 0.2) + 1.2 x 1.002",
+    "qty": 2.6004,
+    "status": "BLOCKED"
+   },
+   {
+    "ref": "2F-W05",
+    "formula": "1.2 x (3.8 - (1.002 + 1.433) - 0.2) + 1.2 x 1.002",
+    "qty": 2.6004,
+    "status": "BLOCKED"
+   }
+  ]
+ },
+ "paint_blocked": {
+  "GF-Z04": {
+   "net": 350.705695,
+   "low": 350.705695,
+   "high": 390.011849,
+   "method": "blocked pieces at the room's modal known paint height",
+   "assumption": "112.30 m of faces under an unbound band at 3.5 m (range 3.5..3.85)",
+   "formula": "gross 393.062 - openings 49.194 + reveals 6.838"
+  },
+  "GF-R12": {
+   "net": 71.59607,
+   "low": 71.59607,
+   "high": 79.364976,
+   "method": "blocked pieces at the room's modal known paint height",
+   "assumption": "22.20 m of faces under an unbound band at 3.5 m (range 3.5..3.85)",
+   "formula": "gross 77.689 - openings 7.960 + reveals 1.867"
+  },
+  "1F-Z06": {
+   "net": 296.01057,
+   "low": 296.01057,
+   "high": 320.704949,
+   "method": "blocked pieces at the room's modal known paint height",
+   "assumption": "98.78 m of faces under an unbound band at 3.2 m (range 3.2..3.45)",
+   "formula": "gross 316.088 - openings 25.600 + reveals 5.523"
+  }
+ }
+}

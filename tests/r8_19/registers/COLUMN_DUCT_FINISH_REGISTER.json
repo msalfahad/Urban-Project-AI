@@ -1,0 +1,1241 @@
+{
+ "SCHEMA": "URBAN_R8_19_COLUMN_DUCT_FINISH_REGISTER_V1",
+ "policy": "EXPOSED_OBJECT_FINISH_POLICY_V1",
+ "columns": {
+  "per_entity": {
+   "QORTUBA_REV_NEW|H699||SEGMENT": {
+    "segments": 4,
+    "length_m": 1.6,
+    "exposed_m": 0.2,
+    "hidden_m": 1.4,
+    "sites": [
+     "SITE-5f1762f1a93b91ca"
+    ],
+    "state": "PARTIALLY_EXPOSED"
+   },
+   "QORTUBA_REV_NEW|H702||SEGMENT": {
+    "segments": 4,
+    "length_m": 1.6,
+    "exposed_m": 0.0,
+    "hidden_m": 1.6,
+    "sites": [],
+    "state": "HIDDEN"
+   },
+   "QORTUBA_REV_NEW|H704||SEGMENT": {
+    "segments": 4,
+    "length_m": 1.6,
+    "exposed_m": 0.2,
+    "hidden_m": 1.4,
+    "sites": [
+     "SITE-77a2130eb275604c"
+    ],
+    "state": "PARTIALLY_EXPOSED"
+   },
+   "QORTUBA_REV_NEW|H706||SEGMENT": {
+    "segments": 4,
+    "length_m": 1.6,
+    "exposed_m": 0.8,
+    "hidden_m": 0.8,
+    "sites": [
+     "SITE-daca396d6d730e60"
+    ],
+    "state": "PARTIALLY_EXPOSED"
+   },
+   "QORTUBA_REV_NEW|H708||SEGMENT": {
+    "segments": 4,
+    "length_m": 1.6,
+    "exposed_m": 0.6,
+    "hidden_m": 1.0,
+    "sites": [
+     "SITE-5f1762f1a93b91ca"
+    ],
+    "state": "PARTIALLY_EXPOSED"
+   },
+   "QORTUBA_REV_NEW|H712||SEGMENT": {
+    "segments": 4,
+    "length_m": 1.6,
+    "exposed_m": 1.0,
+    "hidden_m": 0.6,
+    "sites": [
+     "SITE-a6405850100155ac"
+    ],
+    "state": "PARTIALLY_EXPOSED"
+   },
+   "QORTUBA_REV_NEW|H714||SEGMENT": {
+    "segments": 4,
+    "length_m": 1.6,
+    "exposed_m": 0.85,
+    "hidden_m": 0.75,
+    "sites": [
+     "SITE-1c4abf65f9b5db1e",
+     "SITE-a6405850100155ac"
+    ],
+    "state": "PARTIALLY_EXPOSED"
+   },
+   "QORTUBA_REV_NEW|H716||SEGMENT": {
+    "segments": 4,
+    "length_m": 1.6,
+    "exposed_m": 0.65,
+    "hidden_m": 0.95,
+    "sites": [
+     "SITE-77a2130eb275604c",
+     "SITE-fe8ed5548fb4310e"
+    ],
+    "state": "PARTIALLY_EXPOSED"
+   },
+   "QORTUBA_REV_NEW|H718||SEGMENT": {
+    "segments": 4,
+    "length_m": 3.2,
+    "exposed_m": 2.8,
+    "hidden_m": 0.4,
+    "sites": [
+     "SITE-8c1c7563d5252c50",
+     "SITE-a2b19efc492a6d0b"
+    ],
+    "state": "PARTIALLY_EXPOSED"
+   },
+   "QORTUBA_REV_NEW|H720||SEGMENT": {
+    "segments": 4,
+    "length_m": 1.6,
+    "exposed_m": 1.0,
+    "hidden_m": 0.6,
+    "sites": [
+     "SITE-fe8ed5548fb4310e"
+    ],
+    "state": "PARTIALLY_EXPOSED"
+   }
+  },
+  "per_segment": {
+   "QORTUBA_REV_NEW|H699||SEGMENT|0": {
+    "object": "QORTUBA_REV_NEW|H699||SEGMENT",
+    "length_m": 0.6,
+    "exposed_m": {},
+    "exposed_total_m": 0.0,
+    "hidden_m": 0.6,
+    "state": "HIDDEN"
+   },
+   "QORTUBA_REV_NEW|H699||SEGMENT|1": {
+    "object": "QORTUBA_REV_NEW|H699||SEGMENT",
+    "length_m": 0.2,
+    "exposed_m": {},
+    "exposed_total_m": 0.0,
+    "hidden_m": 0.2,
+    "state": "HIDDEN"
+   },
+   "QORTUBA_REV_NEW|H699||SEGMENT|2": {
+    "object": "QORTUBA_REV_NEW|H699||SEGMENT",
+    "length_m": 0.6,
+    "exposed_m": {},
+    "exposed_total_m": 0.0,
+    "hidden_m": 0.6,
+    "state": "HIDDEN"
+   },
+   "QORTUBA_REV_NEW|H699||SEGMENT|3": {
+    "object": "QORTUBA_REV_NEW|H699||SEGMENT",
+    "length_m": 0.2,
+    "exposed_m": {
+     "SITE-5f1762f1a93b91ca": 0.2
+    },
+    "exposed_total_m": 0.2,
+    "hidden_m": 0.0,
+    "state": "EXPOSED"
+   },
+   "QORTUBA_REV_NEW|H702||SEGMENT|0": {
+    "object": "QORTUBA_REV_NEW|H702||SEGMENT",
+    "length_m": 0.6,
+    "exposed_m": {},
+    "exposed_total_m": 0.0,
+    "hidden_m": 0.6,
+    "state": "HIDDEN"
+   },
+   "QORTUBA_REV_NEW|H702||SEGMENT|1": {
+    "object": "QORTUBA_REV_NEW|H702||SEGMENT",
+    "length_m": 0.2,
+    "exposed_m": {},
+    "exposed_total_m": 0.0,
+    "hidden_m": 0.2,
+    "state": "HIDDEN"
+   },
+   "QORTUBA_REV_NEW|H702||SEGMENT|2": {
+    "object": "QORTUBA_REV_NEW|H702||SEGMENT",
+    "length_m": 0.6,
+    "exposed_m": {},
+    "exposed_total_m": 0.0,
+    "hidden_m": 0.6,
+    "state": "HIDDEN"
+   },
+   "QORTUBA_REV_NEW|H702||SEGMENT|3": {
+    "object": "QORTUBA_REV_NEW|H702||SEGMENT",
+    "length_m": 0.2,
+    "exposed_m": {},
+    "exposed_total_m": 0.0,
+    "hidden_m": 0.2,
+    "state": "HIDDEN"
+   },
+   "QORTUBA_REV_NEW|H704||SEGMENT|0": {
+    "object": "QORTUBA_REV_NEW|H704||SEGMENT",
+    "length_m": 0.6,
+    "exposed_m": {},
+    "exposed_total_m": 0.0,
+    "hidden_m": 0.6,
+    "state": "HIDDEN"
+   },
+   "QORTUBA_REV_NEW|H704||SEGMENT|1": {
+    "object": "QORTUBA_REV_NEW|H704||SEGMENT",
+    "length_m": 0.2,
+    "exposed_m": {},
+    "exposed_total_m": 0.0,
+    "hidden_m": 0.2,
+    "state": "HIDDEN"
+   },
+   "QORTUBA_REV_NEW|H704||SEGMENT|2": {
+    "object": "QORTUBA_REV_NEW|H704||SEGMENT",
+    "length_m": 0.6,
+    "exposed_m": {},
+    "exposed_total_m": 0.0,
+    "hidden_m": 0.6,
+    "state": "HIDDEN"
+   },
+   "QORTUBA_REV_NEW|H704||SEGMENT|3": {
+    "object": "QORTUBA_REV_NEW|H704||SEGMENT",
+    "length_m": 0.2,
+    "exposed_m": {
+     "SITE-77a2130eb275604c": 0.2
+    },
+    "exposed_total_m": 0.2,
+    "hidden_m": 0.0,
+    "state": "EXPOSED"
+   },
+   "QORTUBA_REV_NEW|H706||SEGMENT|0": {
+    "object": "QORTUBA_REV_NEW|H706||SEGMENT",
+    "length_m": 0.6,
+    "exposed_m": {
+     "SITE-daca396d6d730e60": 0.6
+    },
+    "exposed_total_m": 0.6,
+    "hidden_m": 0.0,
+    "state": "EXPOSED"
+   },
+   "QORTUBA_REV_NEW|H706||SEGMENT|1": {
+    "object": "QORTUBA_REV_NEW|H706||SEGMENT",
+    "length_m": 0.2,
+    "exposed_m": {},
+    "exposed_total_m": 0.0,
+    "hidden_m": 0.2,
+    "state": "HIDDEN"
+   },
+   "QORTUBA_REV_NEW|H706||SEGMENT|2": {
+    "object": "QORTUBA_REV_NEW|H706||SEGMENT",
+    "length_m": 0.6,
+    "exposed_m": {},
+    "exposed_total_m": 0.0,
+    "hidden_m": 0.6,
+    "state": "HIDDEN"
+   },
+   "QORTUBA_REV_NEW|H706||SEGMENT|3": {
+    "object": "QORTUBA_REV_NEW|H706||SEGMENT",
+    "length_m": 0.2,
+    "exposed_m": {
+     "SITE-daca396d6d730e60": 0.2
+    },
+    "exposed_total_m": 0.2,
+    "hidden_m": 0.0,
+    "state": "EXPOSED"
+   },
+   "QORTUBA_REV_NEW|H708||SEGMENT|0": {
+    "object": "QORTUBA_REV_NEW|H708||SEGMENT",
+    "length_m": 0.6,
+    "exposed_m": {
+     "SITE-5f1762f1a93b91ca": 0.6
+    },
+    "exposed_total_m": 0.6,
+    "hidden_m": 0.0,
+    "state": "EXPOSED"
+   },
+   "QORTUBA_REV_NEW|H708||SEGMENT|1": {
+    "object": "QORTUBA_REV_NEW|H708||SEGMENT",
+    "length_m": 0.2,
+    "exposed_m": {},
+    "exposed_total_m": 0.0,
+    "hidden_m": 0.2,
+    "state": "HIDDEN"
+   },
+   "QORTUBA_REV_NEW|H708||SEGMENT|2": {
+    "object": "QORTUBA_REV_NEW|H708||SEGMENT",
+    "length_m": 0.6,
+    "exposed_m": {},
+    "exposed_total_m": 0.0,
+    "hidden_m": 0.6,
+    "state": "HIDDEN"
+   },
+   "QORTUBA_REV_NEW|H708||SEGMENT|3": {
+    "object": "QORTUBA_REV_NEW|H708||SEGMENT",
+    "length_m": 0.2,
+    "exposed_m": {},
+    "exposed_total_m": 0.0,
+    "hidden_m": 0.2,
+    "state": "HIDDEN"
+   },
+   "QORTUBA_REV_NEW|H712||SEGMENT|0": {
+    "object": "QORTUBA_REV_NEW|H712||SEGMENT",
+    "length_m": 0.6,
+    "exposed_m": {},
+    "exposed_total_m": 0.0,
+    "hidden_m": 0.6,
+    "state": "HIDDEN"
+   },
+   "QORTUBA_REV_NEW|H712||SEGMENT|1": {
+    "object": "QORTUBA_REV_NEW|H712||SEGMENT",
+    "length_m": 0.2,
+    "exposed_m": {
+     "SITE-a6405850100155ac": 0.2
+    },
+    "exposed_total_m": 0.2,
+    "hidden_m": 0.0,
+    "state": "EXPOSED"
+   },
+   "QORTUBA_REV_NEW|H712||SEGMENT|2": {
+    "object": "QORTUBA_REV_NEW|H712||SEGMENT",
+    "length_m": 0.6,
+    "exposed_m": {
+     "SITE-a6405850100155ac": 0.6
+    },
+    "exposed_total_m": 0.6,
+    "hidden_m": 0.0,
+    "state": "EXPOSED"
+   },
+   "QORTUBA_REV_NEW|H712||SEGMENT|3": {
+    "object": "QORTUBA_REV_NEW|H712||SEGMENT",
+    "length_m": 0.2,
+    "exposed_m": {
+     "SITE-a6405850100155ac": 0.2
+    },
+    "exposed_total_m": 0.2,
+    "hidden_m": 0.0,
+    "state": "EXPOSED"
+   },
+   "QORTUBA_REV_NEW|H714||SEGMENT|0": {
+    "object": "QORTUBA_REV_NEW|H714||SEGMENT",
+    "length_m": 0.6,
+    "exposed_m": {},
+    "exposed_total_m": 0.0,
+    "hidden_m": 0.6,
+    "state": "HIDDEN"
+   },
+   "QORTUBA_REV_NEW|H714||SEGMENT|1": {
+    "object": "QORTUBA_REV_NEW|H714||SEGMENT",
+    "length_m": 0.2,
+    "exposed_m": {
+     "SITE-a6405850100155ac": 0.2
+    },
+    "exposed_total_m": 0.2,
+    "hidden_m": 0.0,
+    "state": "EXPOSED"
+   },
+   "QORTUBA_REV_NEW|H714||SEGMENT|2": {
+    "object": "QORTUBA_REV_NEW|H714||SEGMENT",
+    "length_m": 0.6,
+    "exposed_m": {
+     "SITE-1c4abf65f9b5db1e": 0.45
+    },
+    "exposed_total_m": 0.45,
+    "hidden_m": 0.15,
+    "state": "PARTIALLY_EXPOSED"
+   },
+   "QORTUBA_REV_NEW|H714||SEGMENT|3": {
+    "object": "QORTUBA_REV_NEW|H714||SEGMENT",
+    "length_m": 0.2,
+    "exposed_m": {
+     "SITE-1c4abf65f9b5db1e": 0.2
+    },
+    "exposed_total_m": 0.2,
+    "hidden_m": 0.0,
+    "state": "EXPOSED"
+   },
+   "QORTUBA_REV_NEW|H716||SEGMENT|0": {
+    "object": "QORTUBA_REV_NEW|H716||SEGMENT",
+    "length_m": 0.6,
+    "exposed_m": {},
+    "exposed_total_m": 0.0,
+    "hidden_m": 0.6,
+    "state": "HIDDEN"
+   },
+   "QORTUBA_REV_NEW|H716||SEGMENT|1": {
+    "object": "QORTUBA_REV_NEW|H716||SEGMENT",
+    "length_m": 0.2,
+    "exposed_m": {},
+    "exposed_total_m": 0.0,
+    "hidden_m": 0.2,
+    "state": "HIDDEN"
+   },
+   "QORTUBA_REV_NEW|H716||SEGMENT|2": {
+    "object": "QORTUBA_REV_NEW|H716||SEGMENT",
+    "length_m": 0.6,
+    "exposed_m": {
+     "SITE-77a2130eb275604c": 0.45
+    },
+    "exposed_total_m": 0.45,
+    "hidden_m": 0.15,
+    "state": "PARTIALLY_EXPOSED"
+   },
+   "QORTUBA_REV_NEW|H716||SEGMENT|3": {
+    "object": "QORTUBA_REV_NEW|H716||SEGMENT",
+    "length_m": 0.2,
+    "exposed_m": {
+     "SITE-fe8ed5548fb4310e": 0.2
+    },
+    "exposed_total_m": 0.2,
+    "hidden_m": 0.0,
+    "state": "EXPOSED"
+   },
+   "QORTUBA_REV_NEW|H718||SEGMENT|0": {
+    "object": "QORTUBA_REV_NEW|H718||SEGMENT",
+    "length_m": 1.4,
+    "exposed_m": {
+     "SITE-8c1c7563d5252c50": 1.4
+    },
+    "exposed_total_m": 1.4,
+    "hidden_m": 0.0,
+    "state": "EXPOSED"
+   },
+   "QORTUBA_REV_NEW|H718||SEGMENT|1": {
+    "object": "QORTUBA_REV_NEW|H718||SEGMENT",
+    "length_m": 0.2,
+    "exposed_m": {},
+    "exposed_total_m": 0.0,
+    "hidden_m": 0.2,
+    "state": "HIDDEN"
+   },
+   "QORTUBA_REV_NEW|H718||SEGMENT|2": {
+    "object": "QORTUBA_REV_NEW|H718||SEGMENT",
+    "length_m": 1.4,
+    "exposed_m": {
+     "SITE-a2b19efc492a6d0b": 1.4
+    },
+    "exposed_total_m": 1.4,
+    "hidden_m": 0.0,
+    "state": "EXPOSED"
+   },
+   "QORTUBA_REV_NEW|H718||SEGMENT|3": {
+    "object": "QORTUBA_REV_NEW|H718||SEGMENT",
+    "length_m": 0.2,
+    "exposed_m": {},
+    "exposed_total_m": 0.0,
+    "hidden_m": 0.2,
+    "state": "HIDDEN"
+   },
+   "QORTUBA_REV_NEW|H720||SEGMENT|0": {
+    "object": "QORTUBA_REV_NEW|H720||SEGMENT",
+    "length_m": 0.6,
+    "exposed_m": {
+     "SITE-fe8ed5548fb4310e": 0.6
+    },
+    "exposed_total_m": 0.6,
+    "hidden_m": 0.0,
+    "state": "EXPOSED"
+   },
+   "QORTUBA_REV_NEW|H720||SEGMENT|1": {
+    "object": "QORTUBA_REV_NEW|H720||SEGMENT",
+    "length_m": 0.2,
+    "exposed_m": {
+     "SITE-fe8ed5548fb4310e": 0.2
+    },
+    "exposed_total_m": 0.2,
+    "hidden_m": 0.0,
+    "state": "EXPOSED"
+   },
+   "QORTUBA_REV_NEW|H720||SEGMENT|2": {
+    "object": "QORTUBA_REV_NEW|H720||SEGMENT",
+    "length_m": 0.6,
+    "exposed_m": {},
+    "exposed_total_m": 0.0,
+    "hidden_m": 0.6,
+    "state": "HIDDEN"
+   },
+   "QORTUBA_REV_NEW|H720||SEGMENT|3": {
+    "object": "QORTUBA_REV_NEW|H720||SEGMENT",
+    "length_m": 0.2,
+    "exposed_m": {
+     "SITE-fe8ed5548fb4310e": 0.2
+    },
+    "exposed_total_m": 0.2,
+    "hidden_m": 0.0,
+    "state": "EXPOSED"
+   }
+  },
+  "exposed_faces": [
+   {
+    "site": "SITE-1c4abf65f9b5db1e",
+    "class": "COLUMN_FACE",
+    "object": "QORTUBA_REV_NEW|H714||SEGMENT",
+    "segment": "QORTUBA_REV_NEW|H714||SEGMENT|2",
+    "length_m": 0.45,
+    "sources": [
+     "QORTUBA_REV_NEW|H714||SEGMENT|2"
+    ],
+    "geom": [
+     [
+      109568.0817,
+      15989.7196
+     ],
+     [
+      109523.0817,
+      15989.7196
+     ]
+    ]
+   },
+   {
+    "site": "SITE-1c4abf65f9b5db1e",
+    "class": "COLUMN_FACE",
+    "object": "QORTUBA_REV_NEW|H714||SEGMENT",
+    "segment": "QORTUBA_REV_NEW|H714||SEGMENT|3",
+    "length_m": 0.2,
+    "sources": [
+     "QORTUBA_REV_NEW|H1675||SEGMENT|0",
+     "QORTUBA_REV_NEW|H714||SEGMENT|3"
+    ],
+    "geom": [
+     [
+      109523.0817,
+      15989.7196
+     ],
+     [
+      109523.0817,
+      16009.7196
+     ]
+    ]
+   },
+   {
+    "site": "SITE-5f1762f1a93b91ca",
+    "class": "COLUMN_FACE",
+    "object": "QORTUBA_REV_NEW|H699||SEGMENT",
+    "segment": "QORTUBA_REV_NEW|H699||SEGMENT|3",
+    "length_m": 0.2,
+    "sources": [
+     "QORTUBA_REV_NEW|H549||SEGMENT|0",
+     "QORTUBA_REV_NEW|H699||SEGMENT|3"
+    ],
+    "geom": [
+     [
+      110218.0817,
+      14509.7196
+     ],
+     [
+      110218.0817,
+      14529.7196
+     ]
+    ]
+   },
+   {
+    "site": "SITE-5f1762f1a93b91ca",
+    "class": "COLUMN_FACE",
+    "object": "QORTUBA_REV_NEW|H708||SEGMENT",
+    "segment": "QORTUBA_REV_NEW|H708||SEGMENT|0",
+    "length_m": 0.6,
+    "sources": [
+     "QORTUBA_REV_NEW|H552||SEGMENT|0",
+     "QORTUBA_REV_NEW|H708||SEGMENT|0"
+    ],
+    "geom": [
+     [
+      109808.0817,
+      14559.7196
+     ],
+     [
+      109808.0817,
+      14619.7196
+     ]
+    ]
+   },
+   {
+    "site": "SITE-77a2130eb275604c",
+    "class": "COLUMN_FACE",
+    "object": "QORTUBA_REV_NEW|H716||SEGMENT",
+    "segment": "QORTUBA_REV_NEW|H716||SEGMENT|2",
+    "length_m": 0.4,
+    "sources": [
+     "QORTUBA_REV_NEW|H525||SEGMENT|0",
+     "QORTUBA_REV_NEW|H716||SEGMENT|2"
+    ],
+    "geom": [
+     [
+      109583.0817,
+      15574.7196
+     ],
+     [
+      109543.0817,
+      15574.7196
+     ]
+    ]
+   },
+   {
+    "site": "SITE-77a2130eb275604c",
+    "class": "COLUMN_FACE",
+    "object": "QORTUBA_REV_NEW|H716||SEGMENT",
+    "segment": "QORTUBA_REV_NEW|H716||SEGMENT|2",
+    "length_m": 0.05,
+    "sources": [
+     "QORTUBA_REV_NEW|H716||SEGMENT|2"
+    ],
+    "geom": [
+     [
+      109543.0817,
+      15574.7196
+     ],
+     [
+      109538.0817,
+      15574.7196
+     ]
+    ]
+   },
+   {
+    "site": "SITE-77a2130eb275604c",
+    "class": "COLUMN_FACE",
+    "object": "QORTUBA_REV_NEW|H704||SEGMENT",
+    "segment": "QORTUBA_REV_NEW|H704||SEGMENT|3",
+    "length_m": 0.2,
+    "sources": [
+     "QORTUBA_REV_NEW|H1271||SEGMENT|0",
+     "QORTUBA_REV_NEW|H704||SEGMENT|3"
+    ],
+    "geom": [
+     [
+      110238.0817,
+      15114.7196
+     ],
+     [
+      110218.0817,
+      15114.7196
+     ]
+    ]
+   },
+   {
+    "site": "SITE-8c1c7563d5252c50",
+    "class": "COLUMN_FACE",
+    "object": "QORTUBA_REV_NEW|H718||SEGMENT",
+    "segment": "QORTUBA_REV_NEW|H718||SEGMENT|0",
+    "length_m": 1.4,
+    "sources": [
+     "QORTUBA_REV_NEW|H477||SEGMENT|0",
+     "QORTUBA_REV_NEW|H718||SEGMENT|0"
+    ],
+    "geom": [
+     [
+      109443.0817,
+      15049.7196
+     ],
+     [
+      109583.0817,
+      15049.7196
+     ]
+    ]
+   },
+   {
+    "site": "SITE-a2b19efc492a6d0b",
+    "class": "COLUMN_FACE",
+    "object": "QORTUBA_REV_NEW|H718||SEGMENT",
+    "segment": "QORTUBA_REV_NEW|H718||SEGMENT|2",
+    "length_m": 1.4,
+    "sources": [
+     "QORTUBA_REV_NEW|H470||SEGMENT|0",
+     "QORTUBA_REV_NEW|H718||SEGMENT|2"
+    ],
+    "geom": [
+     [
+      109443.0817,
+      15029.7196
+     ],
+     [
+      109583.0817,
+      15029.7196
+     ]
+    ]
+   },
+   {
+    "site": "SITE-a6405850100155ac",
+    "class": "COLUMN_FACE",
+    "object": "QORTUBA_REV_NEW|H714||SEGMENT",
+    "segment": "QORTUBA_REV_NEW|H714||SEGMENT|1",
+    "length_m": 0.2,
+    "sources": [
+     "QORTUBA_REV_NEW|H1676||SEGMENT|0",
+     "QORTUBA_REV_NEW|H714||SEGMENT|1"
+    ],
+    "geom": [
+     [
+      109583.0817,
+      15989.7196
+     ],
+     [
+      109583.0817,
+      16009.7196
+     ]
+    ]
+   },
+   {
+    "site": "SITE-a6405850100155ac",
+    "class": "COLUMN_FACE",
+    "object": "QORTUBA_REV_NEW|H712||SEGMENT",
+    "segment": "QORTUBA_REV_NEW|H712||SEGMENT|1",
+    "length_m": 0.2,
+    "sources": [
+     "QORTUBA_REV_NEW|H1678||SEGMENT|0",
+     "QORTUBA_REV_NEW|H712||SEGMENT|1"
+    ],
+    "geom": [
+     [
+      110278.0817,
+      15989.7196
+     ],
+     [
+      110278.0817,
+      16009.7196
+     ]
+    ]
+   },
+   {
+    "site": "SITE-a6405850100155ac",
+    "class": "COLUMN_FACE",
+    "object": "QORTUBA_REV_NEW|H712||SEGMENT",
+    "segment": "QORTUBA_REV_NEW|H712||SEGMENT|2",
+    "length_m": 0.6,
+    "sources": [
+     "QORTUBA_REV_NEW|H516||SEGMENT|0",
+     "QORTUBA_REV_NEW|H712||SEGMENT|2"
+    ],
+    "geom": [
+     [
+      110278.0817,
+      15989.7196
+     ],
+     [
+      110218.0817,
+      15989.7196
+     ]
+    ]
+   },
+   {
+    "site": "SITE-a6405850100155ac",
+    "class": "COLUMN_FACE",
+    "object": "QORTUBA_REV_NEW|H712||SEGMENT",
+    "segment": "QORTUBA_REV_NEW|H712||SEGMENT|3",
+    "length_m": 0.2,
+    "sources": [
+     "QORTUBA_REV_NEW|H1677||SEGMENT|0",
+     "QORTUBA_REV_NEW|H712||SEGMENT|3"
+    ],
+    "geom": [
+     [
+      110218.0817,
+      15989.7196
+     ],
+     [
+      110218.0817,
+      16009.7196
+     ]
+    ]
+   },
+   {
+    "site": "SITE-daca396d6d730e60",
+    "class": "COLUMN_FACE",
+    "object": "QORTUBA_REV_NEW|H706||SEGMENT",
+    "segment": "QORTUBA_REV_NEW|H706||SEGMENT|3",
+    "length_m": 0.2,
+    "sources": [
+     "QORTUBA_REV_NEW|H1671||SEGMENT|0",
+     "QORTUBA_REV_NEW|H706||SEGMENT|3"
+    ],
+    "geom": [
+     [
+      109343.0817,
+      14619.7196
+     ],
+     [
+      109323.0817,
+      14619.7196
+     ]
+    ]
+   },
+   {
+    "site": "SITE-daca396d6d730e60",
+    "class": "COLUMN_FACE",
+    "object": "QORTUBA_REV_NEW|H706||SEGMENT",
+    "segment": "QORTUBA_REV_NEW|H706||SEGMENT|0",
+    "length_m": 0.6,
+    "sources": [
+     "QORTUBA_REV_NEW|H706||SEGMENT|0"
+    ],
+    "geom": [
+     [
+      109343.0817,
+      14619.7196
+     ],
+     [
+      109343.0817,
+      14559.7196
+     ]
+    ]
+   },
+   {
+    "site": "SITE-fe8ed5548fb4310e",
+    "class": "COLUMN_FACE",
+    "object": "QORTUBA_REV_NEW|H716||SEGMENT",
+    "segment": "QORTUBA_REV_NEW|H716||SEGMENT|3",
+    "length_m": 0.2,
+    "sources": [
+     "QORTUBA_REV_NEW|H528||SEGMENT|0",
+     "QORTUBA_REV_NEW|H716||SEGMENT|3"
+    ],
+    "geom": [
+     [
+      109523.0817,
+      15594.7196
+     ],
+     [
+      109523.0817,
+      15574.7196
+     ]
+    ]
+   },
+   {
+    "site": "SITE-fe8ed5548fb4310e",
+    "class": "COLUMN_FACE",
+    "object": "QORTUBA_REV_NEW|H720||SEGMENT",
+    "segment": "QORTUBA_REV_NEW|H720||SEGMENT|3",
+    "length_m": 0.2,
+    "sources": [
+     "QORTUBA_REV_NEW|H1674||SEGMENT|0",
+     "QORTUBA_REV_NEW|H720||SEGMENT|3"
+    ],
+    "geom": [
+     [
+      109343.0817,
+      15634.7196
+     ],
+     [
+      109323.0817,
+      15634.7196
+     ]
+    ]
+   },
+   {
+    "site": "SITE-fe8ed5548fb4310e",
+    "class": "COLUMN_FACE",
+    "object": "QORTUBA_REV_NEW|H720||SEGMENT",
+    "segment": "QORTUBA_REV_NEW|H720||SEGMENT|0",
+    "length_m": 0.6,
+    "sources": [
+     "QORTUBA_REV_NEW|H720||SEGMENT|0"
+    ],
+    "geom": [
+     [
+      109343.0817,
+      15634.7196
+     ],
+     [
+      109343.0817,
+      15574.7196
+     ]
+    ]
+   },
+   {
+    "site": "SITE-fe8ed5548fb4310e",
+    "class": "COLUMN_FACE",
+    "object": "QORTUBA_REV_NEW|H720||SEGMENT",
+    "segment": "QORTUBA_REV_NEW|H720||SEGMENT|1",
+    "length_m": 0.2,
+    "sources": [
+     "QORTUBA_REV_NEW|H1673||SEGMENT|0",
+     "QORTUBA_REV_NEW|H720||SEGMENT|1"
+    ],
+    "geom": [
+     [
+      109343.0817,
+      15574.7196
+     ],
+     [
+      109323.0817,
+      15574.7196
+     ]
+    ]
+   }
+  ],
+  "exposure_state": "PASS",
+  "errors": [],
+  "contribution_m2": {
+   "DRY_WALL_PLASTER": {
+    "SITE-5f1762f1a93b91ca": 2.52,
+    "SITE-77a2130eb275604c": 2.0475,
+    "SITE-a6405850100155ac": 3.78,
+    "SITE-daca396d6d730e60": 2.52,
+    "total_m2": 10.8675
+   },
+   "DRY_WALL_PAINT": {
+    "SITE-5f1762f1a93b91ca": 2.52,
+    "SITE-77a2130eb275604c": 2.0475,
+    "SITE-a6405850100155ac": 3.78,
+    "SITE-daca396d6d730e60": 2.52,
+    "total_m2": 10.8675
+   },
+   "WET_SERVICE_WALL_TILE": {
+    "SITE-1c4abf65f9b5db1e": 2.08,
+    "SITE-8c1c7563d5252c50": 4.48,
+    "SITE-a2b19efc492a6d0b": 4.48,
+    "SITE-fe8ed5548fb4310e": 3.84,
+    "total_m2": 14.88
+   },
+   "WET_WALL_TILE_PREP": {
+    "SITE-1c4abf65f9b5db1e": 2.08,
+    "SITE-8c1c7563d5252c50": 4.48,
+    "SITE-a2b19efc492a6d0b": 4.48,
+    "SITE-fe8ed5548fb4310e": 3.84,
+    "total_m2": 14.88
+   }
+  }
+ },
+ "duct": {
+  "per_entity": {
+   "QORTUBA_REV_NEW|H2060||SEGMENT": {
+    "segments": 4,
+    "length_m": 5.0,
+    "exposed_m": 5.0,
+    "hidden_m": 0.0,
+    "sites": [
+     "SITE-5f1762f1a93b91ca"
+    ],
+    "state": "EXPOSED"
+   },
+   "QORTUBA_REV_NEW|H2061||SEGMENT": {
+    "segments": 4,
+    "length_m": 4.2,
+    "exposed_m": 0.0,
+    "hidden_m": 4.2,
+    "sites": [],
+    "state": "HIDDEN"
+   }
+  },
+  "per_segment": {
+   "QORTUBA_REV_NEW|H2060||SEGMENT|0": {
+    "object": "QORTUBA_REV_NEW|H2060||SEGMENT",
+    "length_m": 0.4,
+    "exposed_m": {
+     "SITE-5f1762f1a93b91ca": 0.4
+    },
+    "exposed_total_m": 0.4,
+    "hidden_m": 0.0,
+    "state": "EXPOSED"
+   },
+   "QORTUBA_REV_NEW|H2060||SEGMENT|1": {
+    "object": "QORTUBA_REV_NEW|H2060||SEGMENT",
+    "length_m": 2.1,
+    "exposed_m": {
+     "SITE-5f1762f1a93b91ca": 2.1
+    },
+    "exposed_total_m": 2.1,
+    "hidden_m": 0.0,
+    "state": "EXPOSED"
+   },
+   "QORTUBA_REV_NEW|H2060||SEGMENT|2": {
+    "object": "QORTUBA_REV_NEW|H2060||SEGMENT",
+    "length_m": 0.4,
+    "exposed_m": {
+     "SITE-5f1762f1a93b91ca": 0.4
+    },
+    "exposed_total_m": 0.4,
+    "hidden_m": 0.0,
+    "state": "EXPOSED"
+   },
+   "QORTUBA_REV_NEW|H2060||SEGMENT|3": {
+    "object": "QORTUBA_REV_NEW|H2060||SEGMENT",
+    "length_m": 2.1,
+    "exposed_m": {
+     "SITE-5f1762f1a93b91ca": 2.1
+    },
+    "exposed_total_m": 2.1,
+    "hidden_m": 0.0,
+    "state": "EXPOSED"
+   },
+   "QORTUBA_REV_NEW|H2061||SEGMENT|0": {
+    "object": "QORTUBA_REV_NEW|H2061||SEGMENT",
+    "length_m": 0.2,
+    "exposed_m": {},
+    "exposed_total_m": 0.0,
+    "hidden_m": 0.2,
+    "state": "HIDDEN"
+   },
+   "QORTUBA_REV_NEW|H2061||SEGMENT|1": {
+    "object": "QORTUBA_REV_NEW|H2061||SEGMENT",
+    "length_m": 1.9,
+    "exposed_m": {},
+    "exposed_total_m": 0.0,
+    "hidden_m": 1.9,
+    "state": "HIDDEN"
+   },
+   "QORTUBA_REV_NEW|H2061||SEGMENT|2": {
+    "object": "QORTUBA_REV_NEW|H2061||SEGMENT",
+    "length_m": 0.2,
+    "exposed_m": {},
+    "exposed_total_m": 0.0,
+    "hidden_m": 0.2,
+    "state": "HIDDEN"
+   },
+   "QORTUBA_REV_NEW|H2061||SEGMENT|3": {
+    "object": "QORTUBA_REV_NEW|H2061||SEGMENT",
+    "length_m": 1.9,
+    "exposed_m": {},
+    "exposed_total_m": 0.0,
+    "hidden_m": 1.9,
+    "state": "HIDDEN"
+   }
+  },
+  "exposed_faces": [
+   {
+    "site": "SITE-5f1762f1a93b91ca",
+    "class": "OBSTACLE_FACE",
+    "object": "QORTUBA_REV_NEW|H2060||SEGMENT",
+    "segment": "QORTUBA_REV_NEW|H2060||SEGMENT|0",
+    "length_m": 0.4,
+    "sources": [
+     "QORTUBA_REV_NEW|H2060||SEGMENT|0"
+    ],
+    "geom": [
+     [
+      109828.1728,
+      14549.7196
+     ],
+     [
+      109828.1728,
+      14589.7196
+     ]
+    ]
+   },
+   {
+    "site": "SITE-5f1762f1a93b91ca",
+    "class": "OBSTACLE_FACE",
+    "object": "QORTUBA_REV_NEW|H2060||SEGMENT",
+    "segment": "QORTUBA_REV_NEW|H2060||SEGMENT|1",
+    "length_m": 2.1,
+    "sources": [
+     "QORTUBA_REV_NEW|H2060||SEGMENT|1"
+    ],
+    "geom": [
+     [
+      109828.1728,
+      14589.7196
+     ],
+     [
+      110038.1728,
+      14589.7196
+     ]
+    ]
+   },
+   {
+    "site": "SITE-5f1762f1a93b91ca",
+    "class": "OBSTACLE_FACE",
+    "object": "QORTUBA_REV_NEW|H2060||SEGMENT",
+    "segment": "QORTUBA_REV_NEW|H2060||SEGMENT|2",
+    "length_m": 0.4,
+    "sources": [
+     "QORTUBA_REV_NEW|H2060||SEGMENT|2"
+    ],
+    "geom": [
+     [
+      110038.1728,
+      14589.7196
+     ],
+     [
+      110038.1728,
+      14549.7196
+     ]
+    ]
+   },
+   {
+    "site": "SITE-5f1762f1a93b91ca",
+    "class": "OBSTACLE_FACE",
+    "object": "QORTUBA_REV_NEW|H2060||SEGMENT",
+    "segment": "QORTUBA_REV_NEW|H2060||SEGMENT|3",
+    "length_m": 2.1,
+    "sources": [
+     "QORTUBA_REV_NEW|H2060||SEGMENT|3"
+    ],
+    "geom": [
+     [
+      110038.1728,
+      14549.7196
+     ],
+     [
+      109828.1728,
+      14549.7196
+     ]
+    ]
+   }
+  ],
+  "exposure_state": "PASS",
+  "errors": [],
+  "contribution_m2": {
+   "DRY_WALL_PLASTER": {
+    "SITE-5f1762f1a93b91ca": 15.75,
+    "total_m2": 15.75
+   },
+   "DRY_WALL_PAINT": {
+    "SITE-5f1762f1a93b91ca": 15.75,
+    "total_m2": 15.75
+   }
+  },
+  "owner_physical_authority": {
+   "QORTUBA_REV_NEW|H2060||SEGMENT": "OWNER_PHYSICAL_OBSTACLE",
+   "QORTUBA_REV_NEW|H2061||SEGMENT": "OWNER_PHYSICAL_OBSTACLE"
+  }
+ },
+ "hidden_faces_excluded": {
+  "column_segments_hidden": [
+   "QORTUBA_REV_NEW|H699||SEGMENT|0",
+   "QORTUBA_REV_NEW|H699||SEGMENT|1",
+   "QORTUBA_REV_NEW|H699||SEGMENT|2",
+   "QORTUBA_REV_NEW|H702||SEGMENT|0",
+   "QORTUBA_REV_NEW|H702||SEGMENT|1",
+   "QORTUBA_REV_NEW|H702||SEGMENT|2",
+   "QORTUBA_REV_NEW|H702||SEGMENT|3",
+   "QORTUBA_REV_NEW|H704||SEGMENT|0",
+   "QORTUBA_REV_NEW|H704||SEGMENT|1",
+   "QORTUBA_REV_NEW|H704||SEGMENT|2",
+   "QORTUBA_REV_NEW|H706||SEGMENT|1",
+   "QORTUBA_REV_NEW|H706||SEGMENT|2",
+   "QORTUBA_REV_NEW|H708||SEGMENT|1",
+   "QORTUBA_REV_NEW|H708||SEGMENT|2",
+   "QORTUBA_REV_NEW|H708||SEGMENT|3",
+   "QORTUBA_REV_NEW|H712||SEGMENT|0",
+   "QORTUBA_REV_NEW|H714||SEGMENT|0",
+   "QORTUBA_REV_NEW|H716||SEGMENT|0",
+   "QORTUBA_REV_NEW|H716||SEGMENT|1",
+   "QORTUBA_REV_NEW|H718||SEGMENT|1",
+   "QORTUBA_REV_NEW|H718||SEGMENT|3",
+   "QORTUBA_REV_NEW|H720||SEGMENT|2"
+  ],
+  "column_segments_partial": {
+   "QORTUBA_REV_NEW|H714||SEGMENT|2": 0.15,
+   "QORTUBA_REV_NEW|H716||SEGMENT|2": 0.15
+  },
+  "duct_segments_hidden": [
+   "QORTUBA_REV_NEW|H2061||SEGMENT|0",
+   "QORTUBA_REV_NEW|H2061||SEGMENT|1",
+   "QORTUBA_REV_NEW|H2061||SEGMENT|2",
+   "QORTUBA_REV_NEW|H2061||SEGMENT|3"
+  ],
+  "finish_on_hidden_m2": 0.0
+ },
+ "skirting_no_duplicate": {
+  "SITE-5f1762f1a93b91ca": {
+   "zones": [
+    "BED.ROOM"
+   ],
+   "state": "COMPUTED",
+   "v4_column_lm": 0.8,
+   "exposed_column_m": 0.8,
+   "v4_duct_lm": 5.0,
+   "exposed_duct_m": 5.0,
+   "skirting_payable_lm": 22.9,
+   "same_faces": true
+  },
+  "SITE-77a2130eb275604c": {
+   "zones": [
+    "HALL",
+    "whgm"
+   ],
+   "state": "COMPUTED",
+   "v4_column_lm": 0.65,
+   "exposed_column_m": 0.65,
+   "v4_duct_lm": 0.0,
+   "exposed_duct_m": 0.0,
+   "skirting_payable_lm": 26.157105,
+   "same_faces": true
+  },
+  "SITE-a6405850100155ac": {
+   "zones": [
+    "DRESS",
+    "M.B.ROOM"
+   ],
+   "state": "COMPUTED",
+   "v4_column_lm": 1.2,
+   "exposed_column_m": 1.2,
+   "v4_duct_lm": 0.0,
+   "exposed_duct_m": 0.0,
+   "skirting_payable_lm": 29.5,
+   "same_faces": true
+  },
+  "SITE-daca396d6d730e60": {
+   "zones": [
+    "BED.ROOM"
+   ],
+   "state": "COMPUTED",
+   "v4_column_lm": 0.8,
+   "exposed_column_m": 0.8,
+   "v4_duct_lm": 0.0,
+   "exposed_duct_m": 0.0,
+   "skirting_payable_lm": 15.579714,
+   "same_faces": true
+  },
+  "SITE-1c4abf65f9b5db1e": {
+   "zones": [
+    "BATH"
+   ],
+   "state": "NO_SKIRTING_FULL_WALL_TILE",
+   "v4_column_lm": 0.0,
+   "exposed_column_m": 0.65,
+   "v4_duct_lm": 0.0,
+   "exposed_duct_m": 0.0,
+   "skirting_payable_lm": 0.0,
+   "same_faces": true
+  },
+  "SITE-8c1c7563d5252c50": {
+   "zones": [
+    "PAINTRY"
+   ],
+   "state": "NO_SKIRTING_FULL_WALL_TILE",
+   "v4_column_lm": 0.0,
+   "exposed_column_m": 1.4,
+   "v4_duct_lm": 0.0,
+   "exposed_duct_m": 0.0,
+   "skirting_payable_lm": 0.0,
+   "same_faces": true
+  },
+  "SITE-a2b19efc492a6d0b": {
+   "zones": [
+    "BATH"
+   ],
+   "state": "NO_SKIRTING_FULL_WALL_TILE",
+   "v4_column_lm": 0.0,
+   "exposed_column_m": 1.4,
+   "v4_duct_lm": 0.0,
+   "exposed_duct_m": 0.0,
+   "skirting_payable_lm": 0.0,
+   "same_faces": true
+  },
+  "SITE-fe8ed5548fb4310e": {
+   "zones": [
+    "BATH"
+   ],
+   "state": "NO_SKIRTING_FULL_WALL_TILE",
+   "v4_column_lm": 0.0,
+   "exposed_column_m": 1.2,
+   "v4_duct_lm": 0.0,
+   "exposed_duct_m": 0.0,
+   "skirting_payable_lm": 0.0,
+   "same_faces": true
+  }
+ },
+ "identity": "COLUMN_FACE / OBSTACLE_FACE classes kept on every surface record (never WALL_FACE)",
+ "unresolved": [],
+ "after_rebuild_vs_r8_18_diagnostic": {
+  "rule": "the R8.18 diagnostic unresolved areas (dry columns 10.8675, wet columns 14.88, duct 15.75 m2), the R8.18 subtotals and any historical / manual total were never inputs or targets; the rows were rebuilt from surface records. The comparison below is computed AFTER the rebuild only",
+  "is_target": false,
+  "r8_18_unresolved": {
+   "dry": 10.8675,
+   "wet_service": 14.88
+  },
+  "r8_18_duct_m2": 15.75,
+  "r8_19_dry_columns_m2": 10.8675,
+  "r8_19_wet_columns_m2": 14.88,
+  "r8_19_duct_m2": 15.75
+ }
+}

@@ -1,0 +1,302 @@
+{
+ "boundary": {
+  "bw_h": 0.6,
+  "bw_w": 0.2,
+  "census_text": "BOUNDARY_WALL typical (conflicts with schedule row B.W 20x60 4\u00d816/2\u00d814)",
+  "col": [
+   0.2,
+   0.3
+  ],
+  "gb_h": 0.4,
+  "gb_w": 0.2,
+  "length_m": 44.07,
+  "missing": "column / pad spacing; which runs are RC",
+  "neighbour_m": 26.4,
+  "note_b": "neighbour-side external ground beams: upper + lower beam over a black-brick wall",
+  "note_b_class": "CANDIDATE",
+  "pad": [
+   1.3,
+   0.8,
+   0.3
+  ],
+  "readiness": "BLOCKED_NEEDS_AUTHORITY",
+  "typical_text": "R.C columns 20x30 4\u00d814; GB 20x40; pads 130x80x30"
+ },
+ "bridge": {
+  "closure": 1.1368683772161603e-13,
+  "end": 316.064973,
+  "start": 352.436075
+ },
+ "checks": 20,
+ "checks_pass": 20,
+ "families": {
+  "BEAMS": {
+   "COND_HIGH": 9.584807,
+   "COND_LOW": 5.062813,
+   "EXCLUDED_M3": 0.281097,
+   "MEAS_BASE": 64.538497,
+   "MEAS_HIGH": 80.785819,
+   "MEAS_LOW": 63.894809,
+   "N_COND": 17,
+   "N_MEAS": 110,
+   "N_UNMEASURABLE": 0
+  },
+  "BLINDING": {
+   "COND_HIGH": 0.0,
+   "COND_LOW": 0.0,
+   "EXCLUDED_M3": 0.0,
+   "MEAS_BASE": 22.155092,
+   "MEAS_HIGH": 22.155092,
+   "MEAS_LOW": 22.155092,
+   "N_COND": 0,
+   "N_MEAS": 2,
+   "N_UNMEASURABLE": 0
+  },
+  "BOUNDARY_WALL": {
+   "COND_HIGH": 5.2884,
+   "COND_LOW": 3.5256,
+   "EXCLUDED_M3": 0.0,
+   "MEAS_BASE": 0.0,
+   "MEAS_HIGH": 0.0,
+   "MEAS_LOW": 0.0,
+   "N_COND": 1,
+   "N_MEAS": 0,
+   "N_UNMEASURABLE": 1
+  },
+  "CANTILEVER_PORTIONS": {
+   "COND_HIGH": 0.67936,
+   "COND_LOW": 0.67936,
+   "EXCLUDED_M3": 0.057015,
+   "MEAS_BASE": 0.0,
+   "MEAS_HIGH": 0.0,
+   "MEAS_LOW": 0.0,
+   "N_COND": 6,
+   "N_MEAS": 0,
+   "N_UNMEASURABLE": 0
+  },
+  "COLUMNS": {
+   "COND_HIGH": 3.483,
+   "COND_LOW": 1.134,
+   "EXCLUDED_M3": 0.0,
+   "MEAS_BASE": 36.714,
+   "MEAS_HIGH": 36.714,
+   "MEAS_LOW": 36.714,
+   "N_COND": 3,
+   "N_MEAS": 64,
+   "N_UNMEASURABLE": 2
+  },
+  "DOMES": {
+   "COND_HIGH": 2.844907,
+   "COND_LOW": 0.0,
+   "EXCLUDED_M3": 0.0,
+   "MEAS_BASE": 6.736353,
+   "MEAS_HIGH": 11.459272,
+   "MEAS_LOW": 6.736353,
+   "N_COND": 1,
+   "N_MEAS": 4,
+   "N_UNMEASURABLE": 2
+  },
+  "FOOTINGS": {
+   "COND_HIGH": 0.0,
+   "COND_LOW": 0.0,
+   "EXCLUDED_M3": 0.0,
+   "MEAS_BASE": 66.264,
+   "MEAS_HIGH": 66.264,
+   "MEAS_LOW": 64.52,
+   "N_COND": 0,
+   "N_MEAS": 26,
+   "N_UNMEASURABLE": 0
+  },
+  "GB_PERIMETER": {
+   "COND_HIGH": 3.168,
+   "COND_LOW": 0.0,
+   "EXCLUDED_M3": 0.0,
+   "MEAS_BASE": 0.0,
+   "MEAS_HIGH": 0.0,
+   "MEAS_LOW": 0.0,
+   "N_COND": 1,
+   "N_MEAS": 0,
+   "N_UNMEASURABLE": 0
+  },
+  "GROUND_BEAMS": {
+   "COND_HIGH": 0.0,
+   "COND_LOW": 0.0,
+   "EXCLUDED_M3": 0.0,
+   "MEAS_BASE": 30.701687,
+   "MEAS_HIGH": 31.583238,
+   "MEAS_LOW": 26.935876,
+   "N_COND": 0,
+   "N_MEAS": 58,
+   "N_UNMEASURABLE": 0
+  },
+  "GROUND_SLAB": {
+   "COND_HIGH": 4.895224,
+   "COND_LOW": 3.743224,
+   "EXCLUDED_M3": 0.0,
+   "MEAS_BASE": 16.754657,
+   "MEAS_HIGH": 16.754657,
+   "MEAS_LOW": 16.754657,
+   "N_COND": 2,
+   "N_MEAS": 22,
+   "N_UNMEASURABLE": 0
+  },
+  "LIFT": {
+   "COND_HIGH": 0.0,
+   "COND_LOW": 0.0,
+   "EXCLUDED_M3": 0.0,
+   "MEAS_BASE": 2.145,
+   "MEAS_HIGH": 2.695,
+   "MEAS_LOW": 2.145,
+   "N_COND": 0,
+   "N_MEAS": 4,
+   "N_UNMEASURABLE": 2
+  },
+  "LINTELS": {
+   "COND_HIGH": 3.415132,
+   "COND_LOW": 0.0,
+   "EXCLUDED_M3": 0.0,
+   "MEAS_BASE": 0.462698,
+   "MEAS_HIGH": 0.493698,
+   "MEAS_LOW": 0.431698,
+   "N_COND": 46,
+   "N_MEAS": 10,
+   "N_UNMEASURABLE": 0
+  },
+  "NECKS": {
+   "COND_HIGH": 2.025,
+   "COND_LOW": 0.405,
+   "EXCLUDED_M3": 0.0,
+   "MEAS_BASE": 10.8555,
+   "MEAS_HIGH": 13.5255,
+   "MEAS_LOW": 10.8555,
+   "N_COND": 7,
+   "N_MEAS": 28,
+   "N_UNMEASURABLE": 1
+  },
+  "PARAPETS": {
+   "COND_HIGH": 0.0,
+   "COND_LOW": 0.0,
+   "EXCLUDED_M3": 0.0,
+   "MEAS_BASE": 0.0,
+   "MEAS_HIGH": 0.0,
+   "MEAS_LOW": 0.0,
+   "N_COND": 0,
+   "N_MEAS": 0,
+   "N_UNMEASURABLE": 3
+  },
+  "POOL": {
+   "COND_HIGH": 0.0,
+   "COND_LOW": 0.0,
+   "EXCLUDED_M3": 0.0,
+   "MEAS_BASE": 7.08446,
+   "MEAS_HIGH": 7.437969,
+   "MEAS_LOW": 6.495279,
+   "N_COND": 0,
+   "N_MEAS": 5,
+   "N_UNMEASURABLE": 0
+  },
+  "POOL_PUMP_ROOM": {
+   "COND_HIGH": 0.0,
+   "COND_LOW": 0.0,
+   "EXCLUDED_M3": 0.0,
+   "MEAS_BASE": 0.0,
+   "MEAS_HIGH": 0.0,
+   "MEAS_LOW": 0.0,
+   "N_COND": 0,
+   "N_MEAS": 0,
+   "N_UNMEASURABLE": 0
+  },
+  "SLABS": {
+   "COND_HIGH": 0.0,
+   "COND_LOW": 0.0,
+   "EXCLUDED_M3": 0.0,
+   "MEAS_BASE": 60.966171,
+   "MEAS_HIGH": 60.966171,
+   "MEAS_LOW": 60.966171,
+   "N_COND": 0,
+   "N_MEAS": 75,
+   "N_UNMEASURABLE": 0
+  },
+  "STAIRS": {
+   "COND_HIGH": 0.0,
+   "COND_LOW": 0.0,
+   "EXCLUDED_M3": 0.0,
+   "MEAS_BASE": 9.060994,
+   "MEAS_HIGH": 12.134982,
+   "MEAS_LOW": 7.561575,
+   "N_COND": 0,
+   "N_MEAS": 15,
+   "N_UNMEASURABLE": 0
+  },
+  "STRAPS": {
+   "COND_HIGH": 0.0,
+   "COND_LOW": 0.0,
+   "EXCLUDED_M3": 0.0,
+   "MEAS_BASE": 3.780954,
+   "MEAS_HIGH": 3.780954,
+   "MEAS_LOW": 3.554647,
+   "N_COND": 0,
+   "N_MEAS": 3,
+   "N_UNMEASURABLE": 0
+  },
+  "WATER_TANK": {
+   "COND_HIGH": 0.0,
+   "COND_LOW": 0.0,
+   "EXCLUDED_M3": 2.4543,
+   "MEAS_BASE": 0.0,
+   "MEAS_HIGH": 0.0,
+   "MEAS_LOW": 0.0,
+   "N_COND": 0,
+   "N_MEAS": 0,
+   "N_UNMEASURABLE": 2
+  }
+ },
+ "freelancer_plain_m3": 47.05500000000001,
+ "freelancer_rc_m3": 352.436075,
+ "freeze": {
+  "CANDIDATE_GEOMETRY_HASH": "2e4a6ec6fa4e6e35c87efb7f",
+  "frozen_fields": [
+   "concrete_items",
+   "conventions",
+   "engine_commit"
+  ],
+  "phase": "CANDIDATE_GEOMETRY_FROZEN",
+  "why": "reconciliation may begin only against a candidate that can no longer move"
+ },
+ "ground_slab": {
+  "beam_strip_m2": 53.632886,
+  "christiannp_area_m2": 324.038,
+  "christiannp_t_m": 0.1,
+  "column_m2": 5.145441,
+  "fl_area_m2": 295.5,
+  "fl_m3": 29.55,
+  "footprint_m2": 285.883097,
+  "measured_m2": 167.5465,
+  "members_inside_m2": 65.044397,
+  "regions_m2": {
+   "BEAM_STRIP": 53.63288617190479,
+   "COLUMN": 5.145441405589892,
+   "GROUND_SLAB": 167.54657297734826,
+   "STAIR_ZONE": 8.372326362229108,
+   "UNRESOLVED": 44.91991622470522
+  },
+  "t_m": 0.1,
+  "unresolved_m2": 53.2922
+ },
+ "m4_plain_m3": 22.155092197591387,
+ "m4_rc_m3": 289.8912624387313,
+ "m4_total_incl_plain_m3": 312.0463546363227,
+ "n_elements": 157,
+ "n_freelancer_rows": 149,
+ "n_urban_items": 537,
+ "phase": "BENCHMARK_RECONCILIATION",
+ "rate_kwd_per_m3": 26.5,
+ "urban_m5": {
+  "COND_HIGH": 35.38383,
+  "COND_LOW": 14.549996,
+  "MEAS_BASE": 316.064973,
+  "MEAS_HIGH": 344.59526,
+  "MEAS_LOW": 307.565567,
+  "N_UNMEASURABLE": 13.0
+ }
+}

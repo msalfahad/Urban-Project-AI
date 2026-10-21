@@ -1,0 +1,875 @@
+{
+ "SCHEMA": "URBAN_R8_9_UNREALISED_ENTITY_REGISTER_V1",
+ "rule": "excluded ONLY on positive evidence (frame / presentation occurrence, own placement, occurrence fully outside); absence of realised same-layer peers proves nothing",
+ "r8_8_disposition_retired": "NOT_IN_ANY_BOUNDED_SITE_BY_LAYER_EVIDENCE",
+ "runs": {
+  "OLD_K1": {
+   "blocking": {},
+   "recorded": {
+    "IN_SHEET_FRAME_OCCURRENCE": 1,
+    "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT": 38
+   }
+  },
+  "OLD_K2": {
+   "blocking": {},
+   "recorded": {
+    "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT": 38
+   }
+  },
+  "NEW_K2": {
+   "blocking": {
+    "REGION_REVIEW_REQUIRED": 2
+   },
+   "recorded": {
+    "OUTSIDE_REGION_BY_OCCURRENCE": 23711,
+    "OUTSIDE_SELECTED_MEASUREMENT_REGION_BY_PLACEMENT": 114,
+    "IN_SHEET_FRAME_OCCURRENCE": 3,
+    "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT": 38
+   }
+  }
+ },
+ "office_name_regions": {
+  "OLD_K1": [
+   {
+    "obs": "D1:251",
+    "extent": [
+     109426.7824586734,
+     13935.884681180105,
+     109432.22230295924,
+     13953.517772237741
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D1:281",
+    "extent": [
+     108656.67559768743,
+     13934.390270763673,
+     108745.83574016346,
+     13957.739243699922
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D1:283",
+    "extent": [
+     108798.63562223403,
+     13940.520209031492,
+     108802.50014853332,
+     13944.280031416252
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D1:284",
+    "extent": [
+     108803.63285451761,
+     13940.520209031492,
+     108812.49937236926,
+     13951.604546163275
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D1:317",
+    "extent": [
+     108927.741736216,
+     13877.877008211857,
+     108945.92642653239,
+     13907.256450697161
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D1:318",
+    "extent": [
+     108949.8780474515,
+     13877.877008211857,
+     108967.55183025775,
+     13899.913850728539
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D1:319",
+    "extent": [
+     108953.48152785486,
+     13881.548308196157,
+     108964.06590379478,
+     13896.242550744224
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D1:320",
+    "extent": [
+     108972.43484008912,
+     13877.877008211857,
+     108989.72431193641,
+     13899.913850728539
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D1:321",
+    "extent": [
+     108993.90651943086,
+     13877.877008211857,
+     109009.57284263981,
+     13899.913850728539
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D1:322",
+    "extent": [
+     109013.75505013426,
+     13877.877008211857,
+     109031.04452198156,
+     13899.913850728539
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D1:326",
+    "extent": [
+     109052.78747964732,
+     13901.912267715088,
+     109057.78804341907,
+     13907.500601188745
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D1:327",
+    "extent": [
+     109061.85721827851,
+     13877.877008211857,
+     109079.14216882043,
+     13899.913850728539
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D1:332",
+    "extent": [
+     109140.23404737713,
+     13877.877008211857,
+     109157.52351922443,
+     13899.913850728539
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D1:334",
+    "extent": [
+     109193.06550096918,
+     13877.877008211857,
+     109210.3504515111,
+     13899.913850728539
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D1:335",
+    "extent": [
+     109215.23346134246,
+     13877.877008211857,
+     109232.64048713015,
+     13899.913850728539
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D1:336",
+    "extent": [
+     109218.72390911082,
+     13889.017504715986,
+     109228.91945278645,
+     13896.242550744224
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D1:337",
+    "extent": [
+     109236.8226946246,
+     13877.877008211857,
+     109254.22972041229,
+     13899.913850728539
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D1:338",
+    "extent": [
+     109240.31314239296,
+     13889.017504715986,
+     109250.50868606858,
+     13896.242550744224
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D1:339",
+    "extent": [
+     109402.84050758526,
+     13877.877008211857,
+     109420.24753337295,
+     13899.913850728539
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D1:340",
+    "extent": [
+     109406.33095535362,
+     13889.017504715986,
+     109416.52649902925,
+     13896.242550744224
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D1:341",
+    "extent": [
+     109385.08986258722,
+     13877.877008211857,
+     109398.92957841477,
+     13899.913850728539
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D1:343",
+    "extent": [
+     109367.06793926517,
+     13877.877008211857,
+     109374.1618674369,
+     13907.256450697161
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D1:344",
+    "extent": [
+     109357.48729312385,
+     13877.877008211857,
+     109364.58122129552,
+     13907.256450697161
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D1:345",
+    "extent": [
+     109376.02012395603,
+     13901.912267715088,
+     109381.02068772778,
+     13907.500601188745
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D1:346",
+    "extent": [
+     109332.17702549801,
+     13877.877008211857,
+     109352.60428329255,
+     13907.256450697161
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D1:347",
+    "extent": [
+     109336.59434087318,
+     13882.117992676489,
+     109348.53510843305,
+     13903.010944927126
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D1:348",
+    "extent": [
+     109258.41644921218,
+     13877.877008211857,
+     109265.54654782702,
+     13899.913850728539
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D1:350",
+    "extent": [
+     109276.8633752417,
+     13877.877008211857,
+     109294.15284708905,
+     13899.913850728539
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D1:351",
+    "extent": [
+     109183.99576233799,
+     13901.912267715088,
+     109188.99632610974,
+     13907.500601188745
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D1:352",
+    "extent": [
+     109267.79815791588,
+     13901.912267715088,
+     109272.79872168764,
+     13907.500601188745
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D1:353",
+    "extent": [
+     109117.55517949373,
+     13877.877008211857,
+     109135.77604025335,
+     13907.256450697161
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D1:366",
+    "extent": [
+     108772.96064827754,
+     13877.876374641564,
+     108790.6344310838,
+     13899.913217158246
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D1:367",
+    "extent": [
+     108776.56412868091,
+     13881.547674625865,
+     108787.14850462083,
+     13896.241917173931
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D1:368",
+    "extent": [
+     108794.55304758658,
+     13877.876374641564,
+     108810.21937079553,
+     13899.913217158246
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D1:372",
+    "extent": [
+     108865.2619176749,
+     13877.840217624638,
+     108882.5513895222,
+     13912.827940457006
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D1:374",
+    "extent": [
+     108845.64080751984,
+     13877.840217624645,
+     108861.30713072879,
+     13899.877060141327
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D1:376",
+    "extent": [
+     108907.81614433526,
+     13877.840217624645,
+     108914.9462429501,
+     13899.877060141327
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D1:412",
+    "extent": [
+     109053.14900929283,
+     13922.398089955139,
+     109061.38436814037,
+     13930.579138882254
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   }
+  ],
+  "OLD_K2": [
+   {
+    "obs": "D2:251",
+    "extent": [
+     109426.7824586734,
+     13935.884681180105,
+     109432.22230295924,
+     13953.517772237741
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D2:281",
+    "extent": [
+     108656.67559768743,
+     13934.390270763673,
+     108745.83574016346,
+     13957.739243699922
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D2:283",
+    "extent": [
+     108798.63562223403,
+     13940.520209031492,
+     108802.50014853332,
+     13944.280031416252
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D2:284",
+    "extent": [
+     108803.63285451761,
+     13940.520209031492,
+     108812.49937236926,
+     13951.604546163275
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D2:317",
+    "extent": [
+     108927.741736216,
+     13877.877008211857,
+     108945.92642653239,
+     13907.256450697161
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D2:318",
+    "extent": [
+     108949.8780474515,
+     13877.877008211857,
+     108967.55183025775,
+     13899.913850728539
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D2:319",
+    "extent": [
+     108953.48152785486,
+     13881.548308196157,
+     108964.06590379478,
+     13896.242550744224
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D2:320",
+    "extent": [
+     108972.43484008912,
+     13877.877008211857,
+     108989.72431193641,
+     13899.913850728539
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D2:321",
+    "extent": [
+     108993.90651943086,
+     13877.877008211857,
+     109009.57284263981,
+     13899.913850728539
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D2:322",
+    "extent": [
+     109013.75505013426,
+     13877.877008211857,
+     109031.04452198156,
+     13899.913850728539
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D2:326",
+    "extent": [
+     109052.78747964732,
+     13901.912267715088,
+     109057.78804341907,
+     13907.500601188745
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D2:327",
+    "extent": [
+     109061.85721827851,
+     13877.877008211857,
+     109079.14216882043,
+     13899.913850728539
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D2:332",
+    "extent": [
+     109140.23404737713,
+     13877.877008211857,
+     109157.52351922443,
+     13899.913850728539
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D2:334",
+    "extent": [
+     109193.06550096918,
+     13877.877008211857,
+     109210.3504515111,
+     13899.913850728539
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D2:335",
+    "extent": [
+     109215.23346134246,
+     13877.877008211857,
+     109232.64048713015,
+     13899.913850728539
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D2:336",
+    "extent": [
+     109218.72390911082,
+     13889.017504715986,
+     109228.91945278645,
+     13896.242550744224
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D2:337",
+    "extent": [
+     109236.8226946246,
+     13877.877008211857,
+     109254.22972041229,
+     13899.913850728539
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D2:338",
+    "extent": [
+     109240.31314239296,
+     13889.017504715986,
+     109250.50868606858,
+     13896.242550744224
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D2:339",
+    "extent": [
+     109402.84050758526,
+     13877.877008211857,
+     109420.24753337295,
+     13899.913850728539
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D2:340",
+    "extent": [
+     109406.33095535362,
+     13889.017504715986,
+     109416.52649902925,
+     13896.242550744224
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D2:341",
+    "extent": [
+     109385.08986258722,
+     13877.877008211857,
+     109398.92957841477,
+     13899.913850728539
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D2:343",
+    "extent": [
+     109367.06793926517,
+     13877.877008211857,
+     109374.1618674369,
+     13907.256450697161
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D2:344",
+    "extent": [
+     109357.48729312385,
+     13877.877008211857,
+     109364.58122129552,
+     13907.256450697161
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D2:345",
+    "extent": [
+     109376.02012395603,
+     13901.912267715088,
+     109381.02068772778,
+     13907.500601188745
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D2:346",
+    "extent": [
+     109332.17702549801,
+     13877.877008211857,
+     109352.60428329255,
+     13907.256450697161
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D2:347",
+    "extent": [
+     109336.59434087318,
+     13882.117992676489,
+     109348.53510843305,
+     13903.010944927126
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D2:348",
+    "extent": [
+     109258.41644921218,
+     13877.877008211857,
+     109265.54654782702,
+     13899.913850728539
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D2:350",
+    "extent": [
+     109276.8633752417,
+     13877.877008211857,
+     109294.15284708905,
+     13899.913850728539
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D2:351",
+    "extent": [
+     109183.99576233799,
+     13901.912267715088,
+     109188.99632610974,
+     13907.500601188745
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D2:352",
+    "extent": [
+     109267.79815791588,
+     13901.912267715088,
+     109272.79872168764,
+     13907.500601188745
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D2:353",
+    "extent": [
+     109117.55517949373,
+     13877.877008211857,
+     109135.77604025335,
+     13907.256450697161
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D2:366",
+    "extent": [
+     108772.96064827754,
+     13877.876374641564,
+     108790.6344310838,
+     13899.913217158246
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D2:367",
+    "extent": [
+     108776.56412868091,
+     13881.547674625865,
+     108787.14850462083,
+     13896.241917173931
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D2:368",
+    "extent": [
+     108794.55304758658,
+     13877.876374641564,
+     108810.21937079553,
+     13899.913217158246
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D2:372",
+    "extent": [
+     108865.2619176749,
+     13877.840217624638,
+     108882.5513895222,
+     13912.827940457006
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D2:374",
+    "extent": [
+     108845.64080751984,
+     13877.840217624645,
+     108861.30713072879,
+     13899.877060141327
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D2:376",
+    "extent": [
+     108907.81614433526,
+     13877.840217624645,
+     108914.9462429501,
+     13899.877060141327
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   },
+   {
+    "obs": "D2:412",
+    "extent": [
+     109053.14900929283,
+     13922.398089955139,
+     109061.38436814037,
+     13930.579138882254
+    ],
+    "basis": "ACIS_SAB_OF_THE_SOURCE_DWG (pinned LibreDWG decode)",
+    "disposition": "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT"
+   }
+  ]
+ },
+ "office_name_regions_new_count": 152,
+ "proof": "ACIS bodies: vertices + B-spline control points through the body transform (convex hull) - all inside the sheet's title / logo strip (y 13878-13958) below every apartment room (y >= 14494); the K1 decode (old DWG) and the new DXF give identical extents for the 37 shared handles"
+}

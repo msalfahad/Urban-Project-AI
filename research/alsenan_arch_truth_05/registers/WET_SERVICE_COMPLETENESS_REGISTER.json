@@ -1,0 +1,517 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_ARCH_R5_WET_SERVICE",
+ "labels": [
+  {
+   "floor": "GF",
+   "occurrence": "376",
+   "label": "PANTRY",
+   "label_ar": "تحضير",
+   "class": "SERVICE",
+   "state": "BOUND",
+   "why": "TR:GF:SITE-67547ed37daadb5a:RB-23b287a0c67d534d (SPLIT_BY_POSITIVE_SOURCE_BOUNDARY + LABEL)",
+   "region": "TR:GF:SITE-67547ed37daadb5a:RB-23b287a0c67d534d",
+   "fixtures_nearby": []
+  },
+  {
+   "floor": "GF",
+   "occurrence": "396",
+   "label": "swimming pool",
+   "label_ar": "حمام سباحة",
+   "class": "EXTERNAL",
+   "state": "NOT_IN_SCOPE",
+   "why": "swimming pool: pool population (structure + finish), not a wet room",
+   "region": "TR:GF:RR:GF:RB-682db83b9b101479:R",
+   "fixtures_nearby": []
+  },
+  {
+   "floor": "GF",
+   "occurrence": "456",
+   "label": "W.C",
+   "label_ar": "مرحاض",
+   "class": "WET",
+   "state": "BOUND",
+   "why": "TR:GF:SITE-9b585230d0877a35:R (SINGLE_CLASS_SPACE)",
+   "region": "TR:GF:SITE-9b585230d0877a35:R",
+   "fixtures_nearby": []
+  },
+  {
+   "floor": "GF",
+   "occurrence": "496",
+   "label": "Wash",
+   "label_ar": "مغسلة",
+   "class": "WET",
+   "state": "BOUND",
+   "why": "TR:GF:SITE-0e9a7a85e795446f:R (SINGLE_CLASS_SPACE (BILINGUAL_TWIN_PLACEMENT))",
+   "region": "TR:GF:SITE-0e9a7a85e795446f:R",
+   "fixtures_nearby": [
+    "463",
+    "494"
+   ]
+  },
+  {
+   "floor": "GF",
+   "occurrence": "503",
+   "label": "W.C",
+   "label_ar": "مرحاض",
+   "class": "WET",
+   "state": "BOUND",
+   "why": "TR:GF:SITE-eac7a1be6566b2d0:R (SINGLE_CLASS_SPACE)",
+   "region": "TR:GF:SITE-eac7a1be6566b2d0:R",
+   "fixtures_nearby": [
+    "463"
+   ]
+  },
+  {
+   "floor": "GF",
+   "occurrence": "630",
+   "label": "KITCHEN",
+   "label_ar": "مطبخ",
+   "class": "SERVICE",
+   "state": "BOUND",
+   "why": "TR:GF:SITE-88d9dbffd47c417a:R (SINGLE_CLASS_SPACE)",
+   "region": "TR:GF:SITE-88d9dbffd47c417a:R",
+   "fixtures_nearby": []
+  },
+  {
+   "floor": "GF",
+   "occurrence": "709",
+   "label": "Wash",
+   "label_ar": "مغسلة",
+   "class": "WET",
+   "state": "BLOCKED",
+   "why": "TR:GF:SITE-67547ed37daadb5a:RB-684fc26661ba7dfc holds wet and dry zones without a source boundary",
+   "region": "TR:GF:SITE-67547ed37daadb5a:RB-684fc26661ba7dfc",
+   "fixtures_nearby": [
+    "704",
+    "705",
+    "827"
+   ]
+  },
+  {
+   "floor": "GF",
+   "occurrence": "730",
+   "label": "W.C",
+   "label_ar": "مرحاض",
+   "class": "WET",
+   "state": "BOUND",
+   "why": "TR:GF:SITE-ce2d2c3a4b7da280:R (SINGLE_CLASS_SPACE)",
+   "region": "TR:GF:SITE-ce2d2c3a4b7da280:R",
+   "fixtures_nearby": [
+    "827"
+   ]
+  },
+  {
+   "floor": "GF",
+   "occurrence": "802",
+   "label": "W.C",
+   "label_ar": "مرحاض",
+   "class": "WET",
+   "state": "BOUND",
+   "why": "TR:GF:SITE-5191e28052b00088:R (SINGLE_CLASS_SPACE)",
+   "region": "TR:GF:SITE-5191e28052b00088:R",
+   "fixtures_nearby": [
+    "704",
+    "705",
+    "827"
+   ]
+  },
+  {
+   "floor": "GF",
+   "occurrence": "803",
+   "label": "W.C",
+   "label_ar": "مرحاض",
+   "class": "WET",
+   "state": "BOUND",
+   "why": "TR:GF:SITE-9810548752edbe40:R (SINGLE_CLASS_SPACE)",
+   "region": "TR:GF:SITE-9810548752edbe40:R",
+   "fixtures_nearby": [
+    "704",
+    "705",
+    "827"
+   ]
+  },
+  {
+   "floor": "GF",
+   "occurrence": "E749",
+   "label": "BATH",
+   "label_ar": null,
+   "class": "WET",
+   "state": "BOUND",
+   "why": "TR:GF:SITE-714889aea3e329c7:R (SINGLE_CLASS_SPACE)",
+   "region": "TR:GF:SITE-714889aea3e329c7:R",
+   "fixtures_nearby": [
+    "704",
+    "705"
+   ]
+  },
+  {
+   "floor": "1F",
+   "occurrence": "3037",
+   "label": "LAUNDRY",
+   "label_ar": "غسيل",
+   "class": "SERVICE",
+   "state": "BOUND",
+   "why": "TR:1F:SITE-69e2d39bee49fa7e:R (SINGLE_CLASS_SPACE)",
+   "region": "TR:1F:SITE-69e2d39bee49fa7e:R",
+   "fixtures_nearby": []
+  },
+  {
+   "floor": "1F",
+   "occurrence": "3073",
+   "label": "BATH",
+   "label_ar": "حمام",
+   "class": "WET",
+   "state": "BOUND",
+   "why": "TR:1F:SITE-cdc894c0f0fd69c9:R (SINGLE_CLASS_SPACE)",
+   "region": "TR:1F:SITE-cdc894c0f0fd69c9:R",
+   "fixtures_nearby": []
+  },
+  {
+   "floor": "1F",
+   "occurrence": "3089",
+   "label": "BATH",
+   "label_ar": "حمام",
+   "class": "WET",
+   "state": "BOUND",
+   "why": "TR:1F:SITE-2f6cf2b5bebbd966:R (SINGLE_CLASS_SPACE)",
+   "region": "TR:1F:SITE-2f6cf2b5bebbd966:R",
+   "fixtures_nearby": []
+  },
+  {
+   "floor": "1F",
+   "occurrence": "3097",
+   "label": "W.C",
+   "label_ar": "مرحاض",
+   "class": "WET",
+   "state": "BLOCKED",
+   "why": "label in plate area that neither Route A nor Route B closes (the room shares an unclosed opening with a neighbour; no wall is invented)",
+   "region": null,
+   "fixtures_nearby": []
+  },
+  {
+   "floor": "1F",
+   "occurrence": "3116",
+   "label": "BATH",
+   "label_ar": "حمام",
+   "class": "WET",
+   "state": "BOUND",
+   "why": "TR:1F:RR:1F:RB-5757373d9f615fe5:R (SINGLE_CLASS_SPACE)",
+   "region": "TR:1F:RR:1F:RB-5757373d9f615fe5:R",
+   "fixtures_nearby": []
+  },
+  {
+   "floor": "1F",
+   "occurrence": "3119",
+   "label": "BATH",
+   "label_ar": "حمام",
+   "class": "WET",
+   "state": "BOUND",
+   "why": "TR:1F:SITE-16f76cd141ed8273:R (SINGLE_CLASS_SPACE)",
+   "region": "TR:1F:SITE-16f76cd141ed8273:R",
+   "fixtures_nearby": []
+  },
+  {
+   "floor": "2F",
+   "occurrence": "4790",
+   "label": "W.C",
+   "label_ar": "مرحاض",
+   "class": "WET",
+   "state": "BOUND",
+   "why": "TR:2F:SITE-ae46ec7518ab613e:R (SINGLE_CLASS_SPACE)",
+   "region": "TR:2F:SITE-ae46ec7518ab613e:R",
+   "fixtures_nearby": []
+  }
+ ],
+ "regions": [
+  {
+   "region": "TR:GF:SITE-0e9a7a85e795446f:R",
+   "floor": "GF",
+   "labels": [
+    "Wash"
+   ],
+   "class": "WET",
+   "floor_area_m2": 3.1325,
+   "perimeter_m": 7.2,
+   "wall_face_m": 5.5,
+   "doors": [
+    "GF-D-I495",
+    "GF-W14"
+   ],
+   "floor_ceramic_eligibility": "ELIGIBLE (URBAN-WET-FLOOR-TILED@v1)",
+   "wall_tile_eligibility": "ELIGIBLE (URBAN-WET-WALL-TILE-FULL-HEIGHT@v1)",
+   "wp_eligibility": "VERIFIED_COMPLETE",
+   "status": "PROVISIONAL"
+  },
+  {
+   "region": "TR:GF:SITE-5191e28052b00088:R",
+   "floor": "GF",
+   "labels": [
+    "W.C"
+   ],
+   "class": "WET",
+   "floor_area_m2": 2.367609,
+   "perimeter_m": 6.809808,
+   "wall_face_m": 5.509808,
+   "doors": [
+    "GF-D-I800",
+    "GF-W07"
+   ],
+   "floor_ceramic_eligibility": "ELIGIBLE (URBAN-WET-FLOOR-TILED@v1)",
+   "wall_tile_eligibility": "ELIGIBLE (URBAN-WET-WALL-TILE-FULL-HEIGHT@v1)",
+   "wp_eligibility": "VERIFIED_COMPLETE",
+   "status": "VERIFIED_COMPLETE"
+  },
+  {
+   "region": "TR:GF:SITE-67547ed37daadb5a:RB-23b287a0c67d534d",
+   "floor": "GF",
+   "labels": [
+    "PANTRY"
+   ],
+   "class": "SERVICE",
+   "floor_area_m2": 9.541909,
+   "perimeter_m": 15.73707,
+   "wall_face_m": 3.54089,
+   "doors": [
+    "GF-D-I830",
+    "GF-W11"
+   ],
+   "floor_ceramic_eligibility": "ELIGIBLE (URBAN-WET-FLOOR-TILED@v1)",
+   "wall_tile_eligibility": "ELIGIBLE (URBAN-WET-WALL-TILE-FULL-HEIGHT@v1)",
+   "wp_eligibility": "PROVISIONAL",
+   "status": "PROVISIONAL"
+  },
+  {
+   "region": "TR:GF:SITE-714889aea3e329c7:R",
+   "floor": "GF",
+   "labels": [
+    "BATH"
+   ],
+   "class": "WET",
+   "floor_area_m2": 3.717683,
+   "perimeter_m": 7.624665,
+   "wall_face_m": 6.324665,
+   "doors": [
+    "GF-D-E820",
+    "GF-W08"
+   ],
+   "floor_ceramic_eligibility": "ELIGIBLE (URBAN-WET-FLOOR-TILED@v1)",
+   "wall_tile_eligibility": "ELIGIBLE (URBAN-WET-WALL-TILE-FULL-HEIGHT@v1)",
+   "wp_eligibility": "VERIFIED_COMPLETE",
+   "status": "VERIFIED_COMPLETE"
+  },
+  {
+   "region": "TR:GF:SITE-88d9dbffd47c417a:R",
+   "floor": "GF",
+   "labels": [
+    "KITCHEN"
+   ],
+   "class": "SERVICE",
+   "floor_area_m2": 9.63,
+   "perimeter_m": 14.5,
+   "wall_face_m": 12.1,
+   "doors": [
+    "GF-D-I402",
+    "GF-W02",
+    "GF-W13"
+   ],
+   "floor_ceramic_eligibility": "ELIGIBLE (URBAN-WET-FLOOR-TILED@v1)",
+   "wall_tile_eligibility": "ELIGIBLE (URBAN-WET-WALL-TILE-FULL-HEIGHT@v1)",
+   "wp_eligibility": "PROVISIONAL",
+   "status": "VERIFIED_COMPLETE"
+  },
+  {
+   "region": "TR:GF:SITE-9810548752edbe40:R",
+   "floor": "GF",
+   "labels": [
+    "W.C"
+   ],
+   "class": "WET",
+   "floor_area_m2": 2.675221,
+   "perimeter_m": 7.414038,
+   "wall_face_m": 6.664038,
+   "doors": [
+    "GF-D-I801"
+   ],
+   "floor_ceramic_eligibility": "ELIGIBLE (URBAN-WET-FLOOR-TILED@v1)",
+   "wall_tile_eligibility": "ELIGIBLE (URBAN-WET-WALL-TILE-FULL-HEIGHT@v1)",
+   "wp_eligibility": "VERIFIED_COMPLETE",
+   "status": "VERIFIED_COMPLETE"
+  },
+  {
+   "region": "TR:GF:SITE-9b585230d0877a35:R",
+   "floor": "GF",
+   "labels": [
+    "W.C"
+   ],
+   "class": "WET",
+   "floor_area_m2": 1.95,
+   "perimeter_m": 5.6,
+   "wall_face_m": 4.85,
+   "doors": [
+    "GF-D-I414"
+   ],
+   "floor_ceramic_eligibility": "ELIGIBLE (URBAN-WET-FLOOR-TILED@v1)",
+   "wall_tile_eligibility": "ELIGIBLE (URBAN-WET-WALL-TILE-FULL-HEIGHT@v1)",
+   "wp_eligibility": "VERIFIED_COMPLETE",
+   "status": "VERIFIED_COMPLETE"
+  },
+  {
+   "region": "TR:GF:SITE-ce2d2c3a4b7da280:R",
+   "floor": "GF",
+   "labels": [
+    "W.C"
+   ],
+   "class": "WET",
+   "floor_area_m2": 2.3625,
+   "perimeter_m": 6.2,
+   "wall_face_m": 4.902961,
+   "doors": [
+    "GF-D-I825",
+    "GF-W06"
+   ],
+   "floor_ceramic_eligibility": "ELIGIBLE (URBAN-WET-FLOOR-TILED@v1)",
+   "wall_tile_eligibility": "ELIGIBLE (URBAN-WET-WALL-TILE-FULL-HEIGHT@v1)",
+   "wp_eligibility": "VERIFIED_COMPLETE",
+   "status": "VERIFIED_COMPLETE"
+  },
+  {
+   "region": "TR:GF:SITE-eac7a1be6566b2d0:R",
+   "floor": "GF",
+   "labels": [
+    "W.C"
+   ],
+   "class": "WET",
+   "floor_area_m2": 3.375,
+   "perimeter_m": 7.5,
+   "wall_face_m": 6.75,
+   "doors": [
+    "GF-D-I495"
+   ],
+   "floor_ceramic_eligibility": "ELIGIBLE (URBAN-WET-FLOOR-TILED@v1)",
+   "wall_tile_eligibility": "ELIGIBLE (URBAN-WET-WALL-TILE-FULL-HEIGHT@v1)",
+   "wp_eligibility": "VERIFIED_COMPLETE",
+   "status": "VERIFIED_COMPLETE"
+  },
+  {
+   "region": "TR:1F:SITE-16f76cd141ed8273:R",
+   "floor": "1F",
+   "labels": [
+    "BATH"
+   ],
+   "class": "WET",
+   "floor_area_m2": 5.0225,
+   "perimeter_m": 9.0,
+   "wall_face_m": 7.7,
+   "doors": [
+    "1F-D-I3115",
+    "1F-W01"
+   ],
+   "floor_ceramic_eligibility": "ELIGIBLE (URBAN-WET-FLOOR-TILED@v1)",
+   "wall_tile_eligibility": "ELIGIBLE (URBAN-WET-WALL-TILE-FULL-HEIGHT@v1)",
+   "wp_eligibility": "VERIFIED_COMPLETE",
+   "status": "VERIFIED_COMPLETE"
+  },
+  {
+   "region": "TR:1F:SITE-2f6cf2b5bebbd966:R",
+   "floor": "1F",
+   "labels": [
+    "BATH"
+   ],
+   "class": "WET",
+   "floor_area_m2": 4.725,
+   "perimeter_m": 8.7,
+   "wall_face_m": 7.532698,
+   "doors": [
+    "1F-D-I3090",
+    "1F-W10"
+   ],
+   "floor_ceramic_eligibility": "ELIGIBLE (URBAN-WET-FLOOR-TILED@v1)",
+   "wall_tile_eligibility": "ELIGIBLE (URBAN-WET-WALL-TILE-FULL-HEIGHT@v1)",
+   "wp_eligibility": "VERIFIED_COMPLETE",
+   "status": "VERIFIED_COMPLETE"
+  },
+  {
+   "region": "TR:1F:SITE-69e2d39bee49fa7e:R",
+   "floor": "1F",
+   "labels": [
+    "LAUNDRY"
+   ],
+   "class": "SERVICE",
+   "floor_area_m2": 10.151,
+   "perimeter_m": 16.94,
+   "wall_face_m": 14.79,
+   "doors": [
+    "1F-D-I3098",
+    "1F-D-I4532",
+    "1F-W06"
+   ],
+   "floor_ceramic_eligibility": "ELIGIBLE (URBAN-WET-FLOOR-TILED@v1)",
+   "wall_tile_eligibility": "ELIGIBLE (URBAN-WET-WALL-TILE-FULL-HEIGHT@v1)",
+   "wp_eligibility": "PROVISIONAL",
+   "status": "VERIFIED_COMPLETE"
+  },
+  {
+   "region": "TR:1F:SITE-cdc894c0f0fd69c9:R",
+   "floor": "1F",
+   "labels": [
+    "BATH"
+   ],
+   "class": "WET",
+   "floor_area_m2": 3.5775,
+   "perimeter_m": 7.6,
+   "wall_face_m": 6.3,
+   "doors": [
+    "1F-D-I3054",
+    "1F-W07"
+   ],
+   "floor_ceramic_eligibility": "ELIGIBLE (URBAN-WET-FLOOR-TILED@v1)",
+   "wall_tile_eligibility": "ELIGIBLE (URBAN-WET-WALL-TILE-FULL-HEIGHT@v1)",
+   "wp_eligibility": "VERIFIED_COMPLETE",
+   "status": "VERIFIED_COMPLETE"
+  },
+  {
+   "region": "TR:1F:RR:1F:RB-5757373d9f615fe5:R",
+   "floor": "1F",
+   "labels": [
+    "BATH"
+   ],
+   "class": "WET",
+   "floor_area_m2": 5.022499,
+   "perimeter_m": 8.999999,
+   "wall_face_m": 7.699999,
+   "doors": [
+    "1F-D-I3118"
+   ],
+   "floor_ceramic_eligibility": "ELIGIBLE (URBAN-WET-FLOOR-TILED@v1)",
+   "wall_tile_eligibility": "ELIGIBLE (URBAN-WET-WALL-TILE-FULL-HEIGHT@v1)",
+   "wp_eligibility": "VERIFIED_COMPLETE",
+   "status": "VERIFIED_COMPLETE"
+  },
+  {
+   "region": "TR:2F:SITE-ae46ec7518ab613e:R",
+   "floor": "2F",
+   "labels": [
+    "W.C"
+   ],
+   "class": "WET",
+   "floor_area_m2": 5.55,
+   "perimeter_m": 9.7,
+   "wall_face_m": 8.4,
+   "doors": [
+    "2F-D-I4795",
+    "2F-W03"
+   ],
+   "floor_ceramic_eligibility": "ELIGIBLE (URBAN-WET-FLOOR-TILED@v1)",
+   "wall_tile_eligibility": "ELIGIBLE (URBAN-WET-WALL-TILE-FULL-HEIGHT@v1)",
+   "wp_eligibility": "VERIFIED_COMPLETE",
+   "status": "VERIFIED_COMPLETE"
+  }
+ ],
+ "counts": {
+  "BOUND": 15,
+  "NOT_IN_SCOPE": 1,
+  "BLOCKED": 2
+ },
+ "unaccounted": [],
+ "rule": "every wet / service source label is BOUND / BLOCKED / NOT_IN_SCOPE / STALE_WITH_EVIDENCE; the sanitary drawing corroborates only (not registered this round)"
+}

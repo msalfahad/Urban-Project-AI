@@ -1,0 +1,769 @@
+{
+ "SCHEMA": "URBAN_R8_9_ROLE_AUTHORITY_POLICY_V1",
+ "role_authority": {
+  "id": "ROLE_AUTHORITY_POLICY_V1",
+  "grades": [
+   "STRUCTURAL",
+   "NETWORK",
+   "STUB",
+   "CANDIDATE"
+  ],
+  "layer_only_exclusion_rules": [
+   "GR-09",
+   "GR-10",
+   "GR-11",
+   "GR-12",
+   "GR-13",
+   "GR-14",
+   "GR-15",
+   "GR-16"
+  ],
+  "consequences": {
+   "unknown geometry, SEPARATES_LABELS or CHANGES_AREA": "TOPOLOGY_ROLE_UNRESOLVED (physical)",
+   "unknown geometry, NONE": "UNKNOWN_OBJECT_IN_SITE (trade only; the physical site stands)",
+   "presentation exclusion (GR-13 .. GR-16) that would SEPARATE or CHANGE a site": "ROLE_CONFLICT_SEPARATOR (physical)",
+   "object exclusion (GR-09 .. GR-12) that would SEPARATE LABELS": "ROLE_CONFLICT_SEPARATOR (physical)",
+   "object exclusion that would only CHANGE AREA": "FIXED_OBJECT_AGAINST_BOUNDARY (trade note)"
+  },
+  "exclusion_candidates": "open curves bridging the admitted network at both ends only",
+  "unconnected": "UNCONNECTED_BOUNDARY_CANDIDATE",
+  "building_assembly_requires": [
+   "boundary-layer children",
+   "one of: nested door occurrence, room-label text child, dimension child, reviewed occurrence claim"
+  ],
+  "never": [
+   "layer name alone (either direction)",
+   "size",
+   "nearest geometry",
+   "a desired quantity"
+  ],
+  "claims": "source-scoped (revision id AND anchor hash); never transferred; change role authority only"
+ },
+ "geometry_role_policy": {
+  "id": "GEOMETRY_ROLE_EVIDENCE_POLICY_V2",
+  "digest": "c122a27415ce7c53ee931d0fff8e478710ed20ed9f6751aa9c9a0efe5fc33bdd"
+ },
+ "grades_per_run": {
+  "OLD_K1": {
+   "NETWORK": 224,
+   "STUB": 1
+  },
+  "OLD_K2": {
+   "NETWORK": 224,
+   "STUB": 1
+  },
+  "NEW_K2": {
+   "NETWORK": 207,
+   "CANDIDATE": 2,
+   "STUB": 9
+  }
+ },
+ "unconnected_candidates": {
+  "OLD_K1": [],
+  "OLD_K2": [],
+  "NEW_K2": [
+   "1316",
+   "2045"
+  ]
+ },
+ "separator_candidates": {
+  "OLD_K1": {
+   "UNKNOWN": 613,
+   "GR-09": 8,
+   "GR-16": 2,
+   "GR-10": 6,
+   "GR-11": 27,
+   "GR-12": 5
+  },
+  "OLD_K2": {
+   "UNKNOWN": 613,
+   "GR-09": 8,
+   "GR-16": 2,
+   "GR-10": 6,
+   "GR-11": 27,
+   "GR-12": 5
+  },
+  "NEW_K2": {
+   "UNKNOWN": 690,
+   "GR-09": 8,
+   "GR-16": 2,
+   "GR-13": 3,
+   "GR-10": 6,
+   "GR-11": 27,
+   "GR-12": 5
+  }
+ },
+ "site_consequences": {
+  "OLD_K1": {
+   "SITE-17b76409ef9ff6cc": {
+    "exclusion": {
+     "effect": "CHANGES_AREA",
+     "sources": [
+      "QORTUBA_REV_OLD|H2062||SEGMENT|0",
+      "QORTUBA_REV_OLD|H2065||SEGMENT|0"
+     ],
+     "origins": [
+      "GR-16"
+     ]
+    }
+   },
+   "SITE-1e8835fb33cb1a98": {
+    "exclusion": {
+     "effect": "CHANGES_AREA",
+     "sources": [
+      "QORTUBA_REV_OLD|H490||SEGMENT|0",
+      "QORTUBA_REV_OLD|H492||SEGMENT|0",
+      "QORTUBA_REV_OLD|H493||SEGMENT|0",
+      "QORTUBA_REV_OLD|H494||SEGMENT|0",
+      "QORTUBA_REV_OLD|H495||SEGMENT|0",
+      "QORTUBA_REV_OLD|H496||SEGMENT|0",
+      "QORTUBA_REV_OLD|H497||SEGMENT|0",
+      "QORTUBA_REV_OLD|H498||SEGMENT|0",
+      "QORTUBA_REV_OLD|H499||SEGMENT|0",
+      "QORTUBA_REV_OLD|H500||SEGMENT|0",
+      "QORTUBA_REV_OLD|H501||SEGMENT|0",
+      "QORTUBA_REV_OLD|H502||SEGMENT|0",
+      "QORTUBA_REV_OLD|H503||SEGMENT|0",
+      "QORTUBA_REV_OLD|H587||SEGMENT|0",
+      "QORTUBA_REV_OLD|H587||SEGMENT|1",
+      "QORTUBA_REV_OLD|H587||SEGMENT|2",
+      "QORTUBA_REV_OLD|H587||SEGMENT|3",
+      "QORTUBA_REV_OLD|H588||SEGMENT|0",
+      "QORTUBA_REV_OLD|H654||SEGMENT|0",
+      "QORTUBA_REV_OLD|H655||SEGMENT|0",
+      "QORTUBA_REV_OLD|H656||SEGMENT|0",
+      "QORTUBA_REV_OLD|H657||SEGMENT|0",
+      "QORTUBA_REV_OLD|H658||SEGMENT|0",
+      "QORTUBA_REV_OLD|H659||SEGMENT|0",
+      "QORTUBA_REV_OLD|H660||SEGMENT|0",
+      "QORTUBA_REV_OLD|H661||SEGMENT|0",
+      "QORTUBA_REV_OLD|H662||SEGMENT|0",
+      "QORTUBA_REV_OLD|H663||SEGMENT|0",
+      "QORTUBA_REV_OLD|H664||SEGMENT|0",
+      "QORTUBA_REV_OLD|H675||SEGMENT|0",
+      "QORTUBA_REV_OLD|H675||SEGMENT|1",
+      "QORTUBA_REV_OLD|H675||SEGMENT|2"
+     ],
+     "origins": [
+      "GR-11",
+      "GR-12"
+     ]
+    },
+    "unknown": {
+     "effect": "CHANGES_AREA",
+     "sources": [
+      "QORTUBA_REV_OLD|H649||SEGMENT|0",
+      "QORTUBA_REV_OLD|H651||SEGMENT|0",
+      "QORTUBA_REV_OLD|H652||SEGMENT|0",
+      "QORTUBA_REV_OLD|H653||SEGMENT|0",
+      "QORTUBA_REV_OLD|H668||SEGMENT|0",
+      "QORTUBA_REV_OLD|H669||SEGMENT|0",
+      "QORTUBA_REV_OLD|H670||SEGMENT|0",
+      "QORTUBA_REV_OLD|H671||SEGMENT|0",
+      "QORTUBA_REV_OLD|H672||SEGMENT|0",
+      "QORTUBA_REV_OLD|H676||SEGMENT|0"
+     ],
+     "origins": [
+      "UNKNOWN"
+     ]
+    }
+   },
+   "SITE-1f92c3df00523855": {
+    "unknown": {
+     "effect": "NONE",
+     "sources": [
+      "QORTUBA_REV_OLD|H1669||SEGMENT|0"
+     ],
+     "origins": [
+      "UNKNOWN"
+     ]
+    }
+   },
+   "SITE-3be7fedfed82facd": {
+    "exclusion": {
+     "effect": "CHANGES_AREA",
+     "sources": [
+      "QORTUBA_REV_OLD|H480||SEGMENT|0"
+     ],
+     "origins": [
+      "GR-10"
+     ]
+    }
+   },
+   "SITE-5613caf47fb31d11": {
+    "unknown": {
+     "effect": "CHANGES_AREA",
+     "sources": [
+      "QORTUBA_REV_OLD|H507||SEGMENT|0",
+      "QORTUBA_REV_OLD|H509||SEGMENT|0",
+      "QORTUBA_REV_OLD|H575||SEGMENT|0",
+      "QORTUBA_REV_OLD|H576||SEGMENT|0"
+     ],
+     "origins": [
+      "UNKNOWN"
+     ]
+    }
+   },
+   "SITE-56af91bb145d30cc": {
+    "exclusion": {
+     "effect": "CHANGES_AREA",
+     "sources": [
+      "QORTUBA_REV_OLD|H1663||ARC|1",
+      "QORTUBA_REV_OLD|H1663||ARC|3",
+      "QORTUBA_REV_OLD|H1663||ARC|5",
+      "QORTUBA_REV_OLD|H1663||ARC|7",
+      "QORTUBA_REV_OLD|H1663||SEGMENT|0",
+      "QORTUBA_REV_OLD|H1663||SEGMENT|2",
+      "QORTUBA_REV_OLD|H1663||SEGMENT|4",
+      "QORTUBA_REV_OLD|H1663||SEGMENT|6"
+     ],
+     "origins": [
+      "GR-09"
+     ]
+    },
+    "unknown": {
+     "effect": "CHANGES_AREA",
+     "sources": [
+      "QORTUBA_REV_OLD|H1587||SEGMENT|0",
+      "QORTUBA_REV_OLD|H1588||SEGMENT|0",
+      "QORTUBA_REV_OLD|H1589||SEGMENT|0",
+      "QORTUBA_REV_OLD|H1590||SEGMENT|0",
+      "QORTUBA_REV_OLD|H511||SEGMENT|0",
+      "QORTUBA_REV_OLD|H524||SEGMENT|0"
+     ],
+     "origins": [
+      "UNKNOWN"
+     ]
+    }
+   },
+   "SITE-8e1f0b3a736abb02": {
+    "unknown": {
+     "effect": "CHANGES_AREA",
+     "sources": [
+      "QORTUBA_REV_OLD|H1445||SEGMENT|0",
+      "QORTUBA_REV_OLD|H1446||SEGMENT|0",
+      "QORTUBA_REV_OLD|H1669||SEGMENT|0",
+      "QORTUBA_REV_OLD|H1670||SEGMENT|0",
+      "QORTUBA_REV_OLD|H514||SEGMENT|0",
+      "QORTUBA_REV_OLD|H517||SEGMENT|0"
+     ],
+     "origins": [
+      "UNKNOWN"
+     ]
+    }
+   },
+   "SITE-b324fca08f742b0d": {
+    "exclusion": {
+     "effect": "CHANGES_AREA",
+     "sources": [
+      "QORTUBA_REV_OLD|H478||SEGMENT|0",
+      "QORTUBA_REV_OLD|H482||SEGMENT|0",
+      "QORTUBA_REV_OLD|H532||SEGMENT|0",
+      "QORTUBA_REV_OLD|H536||SEGMENT|0",
+      "QORTUBA_REV_OLD|H541||SEGMENT|0"
+     ],
+     "origins": [
+      "GR-10"
+     ]
+    }
+   }
+  },
+  "OLD_K2": {
+   "SITE-17b76409ef9ff6cc": {
+    "exclusion": {
+     "effect": "CHANGES_AREA",
+     "sources": [
+      "QORTUBA_REV_OLD|H2062||SEGMENT|0",
+      "QORTUBA_REV_OLD|H2065||SEGMENT|0"
+     ],
+     "origins": [
+      "GR-16"
+     ]
+    }
+   },
+   "SITE-1e8835fb33cb1a98": {
+    "exclusion": {
+     "effect": "CHANGES_AREA",
+     "sources": [
+      "QORTUBA_REV_OLD|H490||SEGMENT|0",
+      "QORTUBA_REV_OLD|H492||SEGMENT|0",
+      "QORTUBA_REV_OLD|H493||SEGMENT|0",
+      "QORTUBA_REV_OLD|H494||SEGMENT|0",
+      "QORTUBA_REV_OLD|H495||SEGMENT|0",
+      "QORTUBA_REV_OLD|H496||SEGMENT|0",
+      "QORTUBA_REV_OLD|H497||SEGMENT|0",
+      "QORTUBA_REV_OLD|H498||SEGMENT|0",
+      "QORTUBA_REV_OLD|H499||SEGMENT|0",
+      "QORTUBA_REV_OLD|H500||SEGMENT|0",
+      "QORTUBA_REV_OLD|H501||SEGMENT|0",
+      "QORTUBA_REV_OLD|H502||SEGMENT|0",
+      "QORTUBA_REV_OLD|H503||SEGMENT|0",
+      "QORTUBA_REV_OLD|H587||SEGMENT|0",
+      "QORTUBA_REV_OLD|H587||SEGMENT|1",
+      "QORTUBA_REV_OLD|H587||SEGMENT|2",
+      "QORTUBA_REV_OLD|H587||SEGMENT|3",
+      "QORTUBA_REV_OLD|H588||SEGMENT|0",
+      "QORTUBA_REV_OLD|H654||SEGMENT|0",
+      "QORTUBA_REV_OLD|H655||SEGMENT|0",
+      "QORTUBA_REV_OLD|H656||SEGMENT|0",
+      "QORTUBA_REV_OLD|H657||SEGMENT|0",
+      "QORTUBA_REV_OLD|H658||SEGMENT|0",
+      "QORTUBA_REV_OLD|H659||SEGMENT|0",
+      "QORTUBA_REV_OLD|H660||SEGMENT|0",
+      "QORTUBA_REV_OLD|H661||SEGMENT|0",
+      "QORTUBA_REV_OLD|H662||SEGMENT|0",
+      "QORTUBA_REV_OLD|H663||SEGMENT|0",
+      "QORTUBA_REV_OLD|H664||SEGMENT|0",
+      "QORTUBA_REV_OLD|H675||SEGMENT|0",
+      "QORTUBA_REV_OLD|H675||SEGMENT|1",
+      "QORTUBA_REV_OLD|H675||SEGMENT|2"
+     ],
+     "origins": [
+      "GR-11",
+      "GR-12"
+     ]
+    },
+    "unknown": {
+     "effect": "CHANGES_AREA",
+     "sources": [
+      "QORTUBA_REV_OLD|H649||SEGMENT|0",
+      "QORTUBA_REV_OLD|H651||SEGMENT|0",
+      "QORTUBA_REV_OLD|H652||SEGMENT|0",
+      "QORTUBA_REV_OLD|H653||SEGMENT|0",
+      "QORTUBA_REV_OLD|H668||SEGMENT|0",
+      "QORTUBA_REV_OLD|H669||SEGMENT|0",
+      "QORTUBA_REV_OLD|H670||SEGMENT|0",
+      "QORTUBA_REV_OLD|H671||SEGMENT|0",
+      "QORTUBA_REV_OLD|H672||SEGMENT|0",
+      "QORTUBA_REV_OLD|H676||SEGMENT|0"
+     ],
+     "origins": [
+      "UNKNOWN"
+     ]
+    }
+   },
+   "SITE-1f92c3df00523855": {
+    "unknown": {
+     "effect": "NONE",
+     "sources": [
+      "QORTUBA_REV_OLD|H1669||SEGMENT|0"
+     ],
+     "origins": [
+      "UNKNOWN"
+     ]
+    }
+   },
+   "SITE-3be7fedfed82facd": {
+    "exclusion": {
+     "effect": "CHANGES_AREA",
+     "sources": [
+      "QORTUBA_REV_OLD|H480||SEGMENT|0"
+     ],
+     "origins": [
+      "GR-10"
+     ]
+    }
+   },
+   "SITE-5613caf47fb31d11": {
+    "unknown": {
+     "effect": "CHANGES_AREA",
+     "sources": [
+      "QORTUBA_REV_OLD|H507||SEGMENT|0",
+      "QORTUBA_REV_OLD|H509||SEGMENT|0",
+      "QORTUBA_REV_OLD|H575||SEGMENT|0",
+      "QORTUBA_REV_OLD|H576||SEGMENT|0"
+     ],
+     "origins": [
+      "UNKNOWN"
+     ]
+    }
+   },
+   "SITE-56af91bb145d30cc": {
+    "exclusion": {
+     "effect": "CHANGES_AREA",
+     "sources": [
+      "QORTUBA_REV_OLD|H1663||ARC|1",
+      "QORTUBA_REV_OLD|H1663||ARC|3",
+      "QORTUBA_REV_OLD|H1663||ARC|5",
+      "QORTUBA_REV_OLD|H1663||ARC|7",
+      "QORTUBA_REV_OLD|H1663||SEGMENT|0",
+      "QORTUBA_REV_OLD|H1663||SEGMENT|2",
+      "QORTUBA_REV_OLD|H1663||SEGMENT|4",
+      "QORTUBA_REV_OLD|H1663||SEGMENT|6"
+     ],
+     "origins": [
+      "GR-09"
+     ]
+    },
+    "unknown": {
+     "effect": "CHANGES_AREA",
+     "sources": [
+      "QORTUBA_REV_OLD|H1587||SEGMENT|0",
+      "QORTUBA_REV_OLD|H1588||SEGMENT|0",
+      "QORTUBA_REV_OLD|H1589||SEGMENT|0",
+      "QORTUBA_REV_OLD|H1590||SEGMENT|0",
+      "QORTUBA_REV_OLD|H511||SEGMENT|0",
+      "QORTUBA_REV_OLD|H524||SEGMENT|0"
+     ],
+     "origins": [
+      "UNKNOWN"
+     ]
+    }
+   },
+   "SITE-8e1f0b3a736abb02": {
+    "unknown": {
+     "effect": "CHANGES_AREA",
+     "sources": [
+      "QORTUBA_REV_OLD|H1445||SEGMENT|0",
+      "QORTUBA_REV_OLD|H1446||SEGMENT|0",
+      "QORTUBA_REV_OLD|H1669||SEGMENT|0",
+      "QORTUBA_REV_OLD|H1670||SEGMENT|0",
+      "QORTUBA_REV_OLD|H514||SEGMENT|0",
+      "QORTUBA_REV_OLD|H517||SEGMENT|0"
+     ],
+     "origins": [
+      "UNKNOWN"
+     ]
+    }
+   },
+   "SITE-b324fca08f742b0d": {
+    "exclusion": {
+     "effect": "CHANGES_AREA",
+     "sources": [
+      "QORTUBA_REV_OLD|H478||SEGMENT|0",
+      "QORTUBA_REV_OLD|H482||SEGMENT|0",
+      "QORTUBA_REV_OLD|H532||SEGMENT|0",
+      "QORTUBA_REV_OLD|H536||SEGMENT|0",
+      "QORTUBA_REV_OLD|H541||SEGMENT|0"
+     ],
+     "origins": [
+      "GR-10"
+     ]
+    }
+   }
+  },
+  "NEW_K2": {
+   "SITE-17f5f8c97fc16343": {
+    "unknown": {
+     "effect": "CHANGES_AREA",
+     "sources": [
+      "QORTUBA_REV_NEW|H1316||SEGMENT|0"
+     ],
+     "origins": [
+      "UNKNOWN"
+     ]
+    }
+   },
+   "SITE-2201f5d1b83158c0": {
+    "exclusion": {
+     "effect": "SEPARATES_LABELS",
+     "sources": [
+      "QORTUBA_REV_NEW|H1663||ARC|1",
+      "QORTUBA_REV_NEW|H1663||ARC|3",
+      "QORTUBA_REV_NEW|H1663||ARC|5",
+      "QORTUBA_REV_NEW|H1663||ARC|7",
+      "QORTUBA_REV_NEW|H1663||SEGMENT|0",
+      "QORTUBA_REV_NEW|H1663||SEGMENT|2",
+      "QORTUBA_REV_NEW|H1663||SEGMENT|4",
+      "QORTUBA_REV_NEW|H1663||SEGMENT|6",
+      "QORTUBA_REV_NEW|H2430||SEGMENT|0",
+      "QORTUBA_REV_NEW|H7118||SEGMENT|0",
+      "QORTUBA_REV_NEW|H7119||SEGMENT|0"
+     ],
+     "origins": [
+      "GR-09",
+      "GR-13"
+     ]
+    },
+    "unknown": {
+     "effect": "CHANGES_AREA",
+     "sources": [
+      "QORTUBA_REV_NEW|H612083|700047|ARC|0",
+      "QORTUBA_REV_NEW|H612083|700051|ARC|0",
+      "QORTUBA_REV_NEW|H612083|700052|ARC|0",
+      "QORTUBA_REV_NEW|H612084|700047|ARC|0",
+      "QORTUBA_REV_NEW|H612084|700051|ARC|0",
+      "QORTUBA_REV_NEW|H612084|700052|ARC|0",
+      "QORTUBA_REV_NEW|H612085|700047|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612085|700051|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612085|700052|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612086|700047|ARC|0",
+      "QORTUBA_REV_NEW|H612086|700051|ARC|0",
+      "QORTUBA_REV_NEW|H612086|700052|ARC|0",
+      "QORTUBA_REV_NEW|H612087|700047|ARC|0",
+      "QORTUBA_REV_NEW|H612087|700051|ARC|0",
+      "QORTUBA_REV_NEW|H612087|700052|ARC|0",
+      "QORTUBA_REV_NEW|H612088|700047|ARC|0",
+      "QORTUBA_REV_NEW|H612088|700051|ARC|0",
+      "QORTUBA_REV_NEW|H612088|700052|ARC|0",
+      "QORTUBA_REV_NEW|H612089|700047|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612089|700051|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612089|700052|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612090|700047|ARC|0",
+      "QORTUBA_REV_NEW|H612090|700051|ARC|0",
+      "QORTUBA_REV_NEW|H612090|700052|ARC|0",
+      "QORTUBA_REV_NEW|H612091|700047|ARC|0",
+      "QORTUBA_REV_NEW|H612091|700051|ARC|0",
+      "QORTUBA_REV_NEW|H612091|700052|ARC|0",
+      "QORTUBA_REV_NEW|H612092|700047|ARC|0",
+      "QORTUBA_REV_NEW|H612092|700051|ARC|0",
+      "QORTUBA_REV_NEW|H612092|700052|ARC|0",
+      "QORTUBA_REV_NEW|H612093|700047|ARC|0",
+      "QORTUBA_REV_NEW|H612093|700051|ARC|0",
+      "QORTUBA_REV_NEW|H612093|700052|ARC|0",
+      "QORTUBA_REV_NEW|H612094|700047|ARC|0",
+      "QORTUBA_REV_NEW|H612094|700051|ARC|0",
+      "QORTUBA_REV_NEW|H612094|700052|ARC|0",
+      "QORTUBA_REV_NEW|H612095|700047|ARC|0",
+      "QORTUBA_REV_NEW|H612095|700051|ARC|0",
+      "QORTUBA_REV_NEW|H612095|700052|ARC|0",
+      "QORTUBA_REV_NEW|H612096|700047|ARC|0",
+      "QORTUBA_REV_NEW|H612096|700051|ARC|0",
+      "QORTUBA_REV_NEW|H612096|700052|ARC|0",
+      "QORTUBA_REV_NEW|H612097|700047|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612097|700051|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612097|700052|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612098|700047|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612098|700051|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612098|700052|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612099|700047|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612099|700051|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612099|700052|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612100|700052|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612101|700047|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612101|700051|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612101|700052|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612102|700047|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612102|700051|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612102|700052|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612103|700047|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612103|700051|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612103|700052|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612104|700047|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612104|700051|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612104|700052|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612105|700047|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612105|700051|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612105|700052|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612106|700047|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612106|700051|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612106|700052|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612107|700047|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612107|700051|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612107|700052|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612108|700047|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612108|700051|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612108|700052|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612109|700047|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612109|700051|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612109|700052|SEGMENT|0"
+     ],
+     "origins": [
+      "UNKNOWN"
+     ]
+    }
+   },
+   "SITE-3a6f70f44b93c7b5": {
+    "unknown": {
+     "effect": "CHANGES_AREA",
+     "sources": [
+      "QORTUBA_REV_NEW|H2045||SEGMENT|0",
+      "QORTUBA_REV_NEW|H612083|700047|ARC|0",
+      "QORTUBA_REV_NEW|H612083|700051|ARC|0",
+      "QORTUBA_REV_NEW|H612083|700052|ARC|0",
+      "QORTUBA_REV_NEW|H612084|700047|ARC|0",
+      "QORTUBA_REV_NEW|H612084|700051|ARC|0",
+      "QORTUBA_REV_NEW|H612084|700052|ARC|0",
+      "QORTUBA_REV_NEW|H612085|700047|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612085|700051|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612085|700052|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612086|700047|ARC|0",
+      "QORTUBA_REV_NEW|H612086|700051|ARC|0",
+      "QORTUBA_REV_NEW|H612087|700047|ARC|0",
+      "QORTUBA_REV_NEW|H612087|700051|ARC|0",
+      "QORTUBA_REV_NEW|H612087|700052|ARC|0",
+      "QORTUBA_REV_NEW|H612088|700047|ARC|0",
+      "QORTUBA_REV_NEW|H612088|700051|ARC|0",
+      "QORTUBA_REV_NEW|H612088|700052|ARC|0",
+      "QORTUBA_REV_NEW|H612089|700047|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612089|700051|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612091|700047|ARC|0",
+      "QORTUBA_REV_NEW|H612091|700051|ARC|0",
+      "QORTUBA_REV_NEW|H612091|700052|ARC|0",
+      "QORTUBA_REV_NEW|H612092|700052|ARC|0",
+      "QORTUBA_REV_NEW|H612093|700052|ARC|0",
+      "QORTUBA_REV_NEW|H612094|700052|ARC|0",
+      "QORTUBA_REV_NEW|H612095|700047|ARC|0",
+      "QORTUBA_REV_NEW|H612095|700051|ARC|0",
+      "QORTUBA_REV_NEW|H612095|700052|ARC|0",
+      "QORTUBA_REV_NEW|H612096|700047|ARC|0",
+      "QORTUBA_REV_NEW|H612096|700051|ARC|0",
+      "QORTUBA_REV_NEW|H612096|700052|ARC|0",
+      "QORTUBA_REV_NEW|H612097|700047|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612097|700051|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612097|700052|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612098|700047|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612098|700051|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612098|700052|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612100|700047|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612100|700051|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612100|700052|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612103|700047|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612103|700051|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612104|700047|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612104|700051|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612104|700052|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612106|700047|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612106|700051|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612108|700047|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612108|700051|SEGMENT|0",
+      "QORTUBA_REV_NEW|H612108|700052|SEGMENT|0"
+     ],
+     "origins": [
+      "UNKNOWN"
+     ]
+    }
+   },
+   "SITE-605a119624a3ea83": {
+    "exclusion": {
+     "effect": "CHANGES_AREA",
+     "sources": [
+      "QORTUBA_REV_NEW|H480||SEGMENT|0"
+     ],
+     "origins": [
+      "GR-10"
+     ]
+    }
+   },
+   "SITE-788f30878ba9d2b3": {
+    "exclusion": {
+     "effect": "CHANGES_AREA",
+     "sources": [
+      "QORTUBA_REV_NEW|H490||SEGMENT|0",
+      "QORTUBA_REV_NEW|H492||SEGMENT|0",
+      "QORTUBA_REV_NEW|H493||SEGMENT|0",
+      "QORTUBA_REV_NEW|H494||SEGMENT|0",
+      "QORTUBA_REV_NEW|H495||SEGMENT|0",
+      "QORTUBA_REV_NEW|H496||SEGMENT|0",
+      "QORTUBA_REV_NEW|H497||SEGMENT|0",
+      "QORTUBA_REV_NEW|H498||SEGMENT|0",
+      "QORTUBA_REV_NEW|H499||SEGMENT|0",
+      "QORTUBA_REV_NEW|H500||SEGMENT|0",
+      "QORTUBA_REV_NEW|H501||SEGMENT|0",
+      "QORTUBA_REV_NEW|H502||SEGMENT|0",
+      "QORTUBA_REV_NEW|H503||SEGMENT|0",
+      "QORTUBA_REV_NEW|H587||SEGMENT|0",
+      "QORTUBA_REV_NEW|H587||SEGMENT|1",
+      "QORTUBA_REV_NEW|H587||SEGMENT|2",
+      "QORTUBA_REV_NEW|H587||SEGMENT|3",
+      "QORTUBA_REV_NEW|H588||SEGMENT|0",
+      "QORTUBA_REV_NEW|H654||SEGMENT|0",
+      "QORTUBA_REV_NEW|H655||SEGMENT|0",
+      "QORTUBA_REV_NEW|H656||SEGMENT|0",
+      "QORTUBA_REV_NEW|H657||SEGMENT|0",
+      "QORTUBA_REV_NEW|H658||SEGMENT|0",
+      "QORTUBA_REV_NEW|H659||SEGMENT|0",
+      "QORTUBA_REV_NEW|H660||SEGMENT|0",
+      "QORTUBA_REV_NEW|H661||SEGMENT|0",
+      "QORTUBA_REV_NEW|H662||SEGMENT|0",
+      "QORTUBA_REV_NEW|H663||SEGMENT|0",
+      "QORTUBA_REV_NEW|H664||SEGMENT|0",
+      "QORTUBA_REV_NEW|H675||SEGMENT|0",
+      "QORTUBA_REV_NEW|H675||SEGMENT|1",
+      "QORTUBA_REV_NEW|H675||SEGMENT|2"
+     ],
+     "origins": [
+      "GR-11",
+      "GR-12"
+     ]
+    },
+    "unknown": {
+     "effect": "CHANGES_AREA",
+     "sources": [
+      "QORTUBA_REV_NEW|H649||SEGMENT|0",
+      "QORTUBA_REV_NEW|H651||SEGMENT|0",
+      "QORTUBA_REV_NEW|H652||SEGMENT|0",
+      "QORTUBA_REV_NEW|H653||SEGMENT|0",
+      "QORTUBA_REV_NEW|H668||SEGMENT|0",
+      "QORTUBA_REV_NEW|H669||SEGMENT|0",
+      "QORTUBA_REV_NEW|H670||SEGMENT|0",
+      "QORTUBA_REV_NEW|H671||SEGMENT|0",
+      "QORTUBA_REV_NEW|H672||SEGMENT|0",
+      "QORTUBA_REV_NEW|H676||SEGMENT|0"
+     ],
+     "origins": [
+      "UNKNOWN"
+     ]
+    }
+   },
+   "SITE-8c1c7563d5252c50": {
+    "exclusion": {
+     "effect": "CHANGES_AREA",
+     "sources": [
+      "QORTUBA_REV_NEW|H478||SEGMENT|0",
+      "QORTUBA_REV_NEW|H482||SEGMENT|0",
+      "QORTUBA_REV_NEW|H532||SEGMENT|0",
+      "QORTUBA_REV_NEW|H536||SEGMENT|0",
+      "QORTUBA_REV_NEW|H541||SEGMENT|0"
+     ],
+     "origins": [
+      "GR-10"
+     ]
+    }
+   },
+   "SITE-a6405850100155ac": {
+    "unknown": {
+     "effect": "CHANGES_AREA",
+     "sources": [
+      "QORTUBA_REV_NEW|H1445||SEGMENT|0",
+      "QORTUBA_REV_NEW|H1446||SEGMENT|0",
+      "QORTUBA_REV_NEW|H1669||SEGMENT|0",
+      "QORTUBA_REV_NEW|H1670||SEGMENT|0",
+      "QORTUBA_REV_NEW|H514||SEGMENT|0",
+      "QORTUBA_REV_NEW|H517||SEGMENT|0"
+     ],
+     "origins": [
+      "UNKNOWN"
+     ]
+    }
+   },
+   "SITE-c016d9fe4a46e164": {
+    "unknown": {
+     "effect": "NONE",
+     "sources": [
+      "QORTUBA_REV_NEW|H1669||SEGMENT|0"
+     ],
+     "origins": [
+      "UNKNOWN"
+     ]
+    }
+   },
+   "SITE-eaae022599294151": {
+    "unknown": {
+     "effect": "CHANGES_AREA",
+     "sources": [
+      "QORTUBA_REV_NEW|H507||SEGMENT|0",
+      "QORTUBA_REV_NEW|H509||SEGMENT|0",
+      "QORTUBA_REV_NEW|H575||SEGMENT|0",
+      "QORTUBA_REV_NEW|H576||SEGMENT|0"
+     ],
+     "origins": [
+      "UNKNOWN"
+     ]
+    }
+   },
+   "SITE-eff54ade32f152fc": {
+    "exclusion": {
+     "effect": "CHANGES_AREA",
+     "sources": [
+      "QORTUBA_REV_NEW|H2062||SEGMENT|0",
+      "QORTUBA_REV_NEW|H2065||SEGMENT|0"
+     ],
+     "origins": [
+      "GR-16"
+     ]
+    }
+   }
+  }
+ }
+}

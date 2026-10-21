@@ -1,0 +1,84 @@
+{
+ "SCHEMA": "URBAN_R8_9_SOURCE_LAYER_ROLE_CLAIMS_V1",
+ "rule": "a claim names ONE source revision and its anchor hash; it never travels to another project or revision without an explicit inheritance; a candidate claim never changes a role; a claim changes role authority only, never geometry",
+ "claims": [
+  {
+   "claim_id": "QORTUBA-NEW-FIRNTUR-MB-JOINERY",
+   "source_revision_id": "QORTUBA_REV_NEW",
+   "source_anchor_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+   "layer": "FIRNTUR",
+   "layer_basis": "EFFECTIVE",
+   "role": "FURNITURE",
+   "evidence": [
+    "rectangle-with-diagonal wardrobe symbols 600 mm deep",
+    "same token hosts proven furniture (MY BLOCKS$0$FIRNTUR / BED 3) in this source"
+   ],
+   "authority": "SOURCE_STRUCTURE",
+   "review_state": "SOURCE_EVIDENCE_CANDIDATE",
+   "scope": "RC:MODEL_SPACE:4267:540:1649",
+   "version": 1,
+   "supersedes": null,
+   "inherits_to": [],
+   "part_keys": [
+    "514",
+    "517",
+    "1445",
+    "1446",
+    "1669",
+    "1670"
+   ],
+   "applied": false
+  },
+  {
+   "claim_id": "QORTUBA-NEW-SF3-FURNITURE",
+   "source_revision_id": "QORTUBA_REV_NEW",
+   "source_anchor_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+   "layer": "MY BLOCKS$0$PM",
+   "layer_basis": "EFFECTIVE",
+   "role": "FURNITURE",
+   "evidence": [
+    "no wall / column / glazing layer in the block (NO_BOUNDARY_LAYER)",
+    "12 arcs + 15 segments: cushion-like rounded outline",
+    "about 2385 x 995 mm (size is NOT evidence on its own)",
+    "the same bound xref library 'MY BLOCKS' holds the proven furniture block BED 3",
+    "two of three occurrences are exact duplicates at the same placement - typical of a copied symbol, meaningless for a building element"
+   ],
+   "authority": "SOURCE_STRUCTURE",
+   "review_state": "SOURCE_EVIDENCE_CANDIDATE",
+   "scope": "RC:MODEL_SPACE:4267:540:1649",
+   "version": 1,
+   "supersedes": null,
+   "inherits_to": [],
+   "part_keys": [],
+   "applied": false
+  },
+  {
+   "claim_id": "QORTUBA-NEW-DIM-LINES-ARE-WALLS",
+   "source_revision_id": "QORTUBA_REV_NEW",
+   "source_anchor_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+   "layer": "DIM",
+   "layer_basis": "EFFECTIVE",
+   "role": "TOPOLOGY_BOUNDARY",
+   "evidence": [
+    "exact geometric identity with the previous revision's WALL lines",
+    "150 mm face pairs",
+    "bridge the wall network at both ends",
+    "door I2044 and its jamb cap remain"
+   ],
+   "authority": "SOURCE_STRUCTURE",
+   "review_state": "SOURCE_EVIDENCE_CANDIDATE",
+   "scope": "RC:MODEL_SPACE:4267:540:1649",
+   "version": 1,
+   "supersedes": null,
+   "inherits_to": [],
+   "part_keys": [
+    "7116",
+    "7117",
+    "7118",
+    "7119"
+   ],
+   "applied": false
+  }
+ ],
+ "firntur_old_revision": "the old revision has its own FIRNTUR parts (same pattern); a claim on the new revision does not apply to it (test_r8_9_role_authority: source scope)"
+}

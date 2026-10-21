@@ -1,0 +1,9 @@
+ID,QUESTION,OBSERVED,CONCLUSION
+SE-01,meridional bars,label 1A0E 'Ø12MM/15cm' points at the drawn bar line (r 10841.8 vs bar r 10841.8),"bars in the vertical planes through the dome axis (radial in plan, curved in section)"
+SE-02,circumferential bars,label 1A15 'Ø12MM/15cm' points at the hoop dots; 62 dots,"horizontal circles at successive heights, cut in the section"
+SE-03,where the 150 mm spacing is stated,"only in the two label texts; no dimension, no reference circle, no 'max' or 'at springing'",the reference location of the meridional spacing is NOT stated
+SE-04,hoop spacing along the meridian,"the dots sit at a constant angular step (2.6424 deg, spread 0.000011) from 9.38 to 170.56 deg","uniform along the arc, i.e. measured along the shell (a vertical spacing would not be uniform in angle); drawn about every 100 mm, not 150: the drawn pitch is graphic"
+SE-05,meridian continuity,"one bar drawn from ring to ring over the crown (arc 9.24 to 170.76 deg, crosses the crown: True), with 4 straight legs and hooks into both ring cuts",continuous springing to springing as drawn
+SE-06,"stops, staggers, splices, density changes","none drawn: no curtailment mark, no lap, no second spacing, no crown ring, cap mesh or trimming bar",the section shows one typical bar of each family
+SE-07,the plan's radial lines,"[20, 20] radial lines per dome on layer S-OPENING, 18 deg apart","a dome / opening symbol, not bars: 20 lines on a 13.6 m circle would be 0.68 m apart, against the 150 mm label"
+SE-08,status of the drawing,"DETAIL OF DOME (N.I.S): one typical section, cut through the axis","a generic reinforcement specification (size, spacing, directions, anchorage into the ring), not a buildable radial-bar layout"

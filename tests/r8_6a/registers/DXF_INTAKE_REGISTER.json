@@ -1,0 +1,556 @@
+{
+ "SCHEMA": "URBAN_R8_6A_DXF_INTAKE_REGISTER_V1",
+ "files": {
+  "QORTUBA": {
+   "dxf_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+   "found_as": [
+    "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315.dxf",
+    "qurtoba villah.dxf"
+   ],
+   "dwg_sha256": "2ec3a9c8b66eb2e129275b87010f4a8d79d7e5bdcc31c1897c14fd7e5647d355",
+   "dwg_found_as": [
+    "b634a91b-qurtoba1.dwg",
+    "dab4c836-qurtoba.dwg"
+   ],
+   "located_by": "SHA-256 search of the session inputs; no path is frozen truth",
+   "role": "ARCHITECTURAL_SOURCE",
+   "transport": "438b9176-qurtoba_villah_lossless.zip (sha256 2abccc6c...) -> 'qurtoba villah.dxf'",
+   "file_size_bytes": 214386861,
+   "header": {
+    "$ACADVER": "AC1032",
+    "$ACADMAINTVER": "228",
+    "$DWGCODEPAGE": "ANSI_1252",
+    "$LASTSAVEDBY": "Msalf",
+    "$EXTMIN": [
+     "-58394.15404959575",
+     "-496391.5055290056",
+     "-487.6800000000005"
+    ],
+    "$EXTMAX": [
+     "11006662.70072802",
+     "874561.7006119976",
+     "40138.16905954928"
+    ],
+    "$TDCREATE": "2460087.396018519",
+    "$TDUCREATE": "2460087.271018519",
+    "$TDUPDATE": "2461315.403958333",
+    "$TDUUPDATE": "2461315.278958333",
+    "$TDINDWG": "56.6810185185",
+    "$HANDSEED": "AC98B",
+    "$MEASUREMENT": "0",
+    "$INSUNITS": "5",
+    "$FINGERPRINTGUID": "{56C3294A-AD56-B943-8009-729EDEC47A7D}",
+    "$VERSIONGUID": "{AC3D20C7-6F67-6F47-8C01-D5F2BA05B718}"
+   },
+   "acadmaintver_group_code": 90,
+   "comments_999": [],
+   "sections": [
+    "HEADER",
+    "CLASSES",
+    "TABLES",
+    "BLOCKS",
+    "ENTITIES",
+    "OBJECTS",
+    "ACDSDATA"
+   ],
+   "crlf": true,
+   "class_count": 256,
+   "custom_classes_of_interest": [
+    "ARC_DIMENSION",
+    "DIMASSOC",
+    "RTEXT",
+    "SORTENTSTABLE",
+    "WIPEOUT"
+   ],
+   "census": {
+    "TABLES:TABLE": 9,
+    "TABLES:VPORT": 1,
+    "TABLES:ENDTAB": 9,
+    "TABLES:LTYPE": 31,
+    "TABLES:LAYER": 687,
+    "TABLES:STYLE": 44,
+    "TABLES:APPID": 50,
+    "TABLES:DIMSTYLE": 19,
+    "TABLES:BLOCK_RECORD": 3158,
+    "TABLES:ENDSEC": 1,
+    "BLOCKS:BLOCK": 3158,
+    "BLOCKS:ENDBLK": 3158,
+    "BLOCKS:TEXT": 679,
+    "BLOCKS:LINE": 359408,
+    "BLOCKS:ELLIPSE": 33198,
+    "BLOCKS:LWPOLYLINE": 31940,
+    "BLOCKS:RTEXT": 1,
+    "BLOCKS:HATCH": 1415,
+    "BLOCKS:CIRCLE": 7729,
+    "BLOCKS:ARC": 161557,
+    "BLOCKS:INSERT": 8099,
+    "BLOCKS:MTEXT": 2087,
+    "BLOCKS:POINT": 27981,
+    "BLOCKS:DIMENSION": 1455,
+    "BLOCKS:SPLINE": 20385,
+    "BLOCKS:POLYLINE": 789,
+    "BLOCKS:VERTEX": 17258,
+    "BLOCKS:SEQEND": 924,
+    "BLOCKS:ATTRIB": 474,
+    "BLOCKS:ARC_DIMENSION": 2,
+    "BLOCKS:LEADER": 332,
+    "BLOCKS:3DFACE": 123,
+    "BLOCKS:SOLID": 326,
+    "BLOCKS:WIPEOUT": 35,
+    "BLOCKS:ATTDEF": 360,
+    "BLOCKS:MLINE": 1,
+    "BLOCKS:ENDSEC": 1,
+    "ENTITIES:MTEXT": 16,
+    "ENTITIES:TEXT": 148,
+    "ENTITIES:LINE": 1048,
+    "ENTITIES:INSERT": 110,
+    "ENTITIES:LWPOLYLINE": 411,
+    "ENTITIES:HATCH": 392,
+    "ENTITIES:REGION": 148,
+    "ENTITIES:SPLINE": 4,
+    "ENTITIES:DIMENSION": 405,
+    "ENTITIES:CIRCLE": 17,
+    "ENTITIES:VIEWPORT": 2,
+    "ENTITIES:ENDSEC": 1,
+    "OBJECTS:DICTIONARY": 1018,
+    "OBJECTS:XRECORD": 15,
+    "OBJECTS:ACDBDICTIONARYWDFLT": 1,
+    "OBJECTS:WIPEOUTVARIABLES": 1,
+    "OBJECTS:SORTENTSTABLE": 147,
+    "OBJECTS:ACAD_EVALUATION_GRAPH": 1,
+    "OBJECTS:ACDB_DYNAMICBLOCKPURGEPREVENTER_VERSION": 1,
+    "OBJECTS:DIMASSOC": 253,
+    "OBJECTS:DBCOLOR": 2,
+    "OBJECTS:ACDBDETAILVIEWSTYLE": 2,
+    "OBJECTS:IMAGEDEF": 3,
+    "OBJECTS:LAYOUT": 2,
+    "OBJECTS:MATERIAL": 3,
+    "OBJECTS:MLEADERSTYLE": 1,
+    "OBJECTS:MLINESTYLE": 3,
+    "OBJECTS:PLOTSETTINGS": 2,
+    "OBJECTS:ACDBPLACEHOLDER": 2,
+    "OBJECTS:SCALE": 34,
+    "OBJECTS:ACDBSECTIONVIEWSTYLE": 2,
+    "OBJECTS:TABLESTYLE": 2,
+    "OBJECTS:VISUALSTYLE": 24,
+    "OBJECTS:DICTIONARYVAR": 6,
+    "OBJECTS:BLOCKVISIBILITYPARAMETER": 1,
+    "OBJECTS:BLOCKVISIBILITYGRIP": 1,
+    "OBJECTS:BLOCKGRIPLOCATIONCOMPONENT": 2,
+    "OBJECTS:ACDB_BLOCKREPRESENTATION_DATA": 3,
+    "OBJECTS:CELLSTYLEMAP": 2,
+    "OBJECTS:ENDSEC": 1
+   },
+   "handles": {
+    "count": 691108,
+    "distinct": 691108,
+    "collisions": 0,
+    "max": "AC98A",
+    "max_bytes": 3
+   },
+   "owner_references": {
+    "distinct": 7666,
+    "unresolved": 0,
+    "unresolved_examples": []
+   },
+   "dwg_header_from_d1": {
+    "FINGERPRINTGUID": "{56C3294A-AD56-B943-8009-729EDEC47A7D}",
+    "VERSIONGUID": "{307AA597-91C4-344B-A3D2-E86FFC09031E}",
+    "INSUNITS": 5,
+    "HANDSEED": [
+     0,
+     2,
+     2126,
+     2126
+    ],
+    "TDINDWG": [
+     56,
+     13303000
+    ],
+    "TDUCREATE": [
+     2460087,
+     23416000
+    ],
+    "TDUUPDATE": [
+     2460780,
+     64662000
+    ],
+    "version": "AC1027",
+    "maint_version": 4
+   },
+   "modified_by_urban": false,
+   "normalised_by_urban": false
+  },
+  "P7757": {
+   "dxf_sha256": "ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4",
+   "found_as": [
+    "ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4.dxf",
+    "ea164694-P7757.dxf"
+   ],
+   "dwg_sha256": "7f61f3acdd62d62dc745f8b522f8136cb41c575df36ec6d9f27c2fe48fea41e3",
+   "dwg_found_as": [
+    "79500133-P7757.dwg",
+    "b5a96463-P77572.dwg"
+   ],
+   "located_by": "SHA-256 search of the session inputs; no path is frozen truth",
+   "role": "ARCHITECTURAL_SOURCE",
+   "transport": null,
+   "file_size_bytes": 17227946,
+   "header": {
+    "$ACADVER": "AC1032",
+    "$ACADMAINTVER": "228",
+    "$DWGCODEPAGE": "ANSI_1252",
+    "$LASTSAVEDBY": "Msalf",
+    "$EXTMIN": [
+     "-388976.0761541397",
+     "-811916.4636842274",
+     "0.0"
+    ],
+    "$EXTMAX": [
+     "-118759.2534263826",
+     "-783886.1313295426",
+     "0.0"
+    ],
+    "$TDCREATE": "2460716.379861112",
+    "$TDUCREATE": "2460716.254871134",
+    "$TDUPDATE": "2461315.394293982",
+    "$TDUUPDATE": "2461315.269293982",
+    "$TDINDWG": "2.7349560648",
+    "$HANDSEED": "13206",
+    "$MEASUREMENT": "1",
+    "$INSUNITS": "4",
+    "$FINGERPRINTGUID": "{E12D90F9-A2A5-4941-895E-5CEAC9199519}",
+    "$VERSIONGUID": "{1A3823AC-6C2E-4A68-85D9-599976ECAB39}"
+   },
+   "acadmaintver_group_code": 90,
+   "comments_999": [],
+   "sections": [
+    "HEADER",
+    "CLASSES",
+    "TABLES",
+    "BLOCKS",
+    "ENTITIES",
+    "OBJECTS",
+    "ACDSDATA"
+   ],
+   "crlf": true,
+   "class_count": 284,
+   "custom_classes_of_interest": [
+    "ARC_DIMENSION",
+    "IMAGE",
+    "RTEXT",
+    "SORTENTSTABLE",
+    "WIPEOUT"
+   ],
+   "census": {
+    "TABLES:TABLE": 9,
+    "TABLES:VPORT": 1,
+    "TABLES:ENDTAB": 9,
+    "TABLES:LTYPE": 5,
+    "TABLES:LAYER": 19,
+    "TABLES:STYLE": 11,
+    "TABLES:APPID": 14,
+    "TABLES:DIMSTYLE": 4,
+    "TABLES:BLOCK_RECORD": 442,
+    "TABLES:ENDSEC": 1,
+    "BLOCKS:BLOCK": 442,
+    "BLOCKS:ENDBLK": 442,
+    "BLOCKS:LWPOLYLINE": 25,
+    "BLOCKS:LINE": 2360,
+    "BLOCKS:TEXT": 68,
+    "BLOCKS:INSERT": 786,
+    "BLOCKS:ARC": 26,
+    "BLOCKS:CIRCLE": 8,
+    "BLOCKS:HATCH": 2,
+    "BLOCKS:MTEXT": 389,
+    "BLOCKS:POINT": 1166,
+    "BLOCKS:ENDSEC": 1,
+    "ENTITIES:LWPOLYLINE": 114,
+    "ENTITIES:LINE": 4988,
+    "ENTITIES:INSERT": 145,
+    "ENTITIES:ARC": 83,
+    "ENTITIES:HATCH": 88,
+    "ENTITIES:TEXT": 109,
+    "ENTITIES:DIMENSION": 388,
+    "ENTITIES:ARC_DIMENSION": 1,
+    "ENTITIES:CIRCLE": 47,
+    "ENTITIES:RTEXT": 3,
+    "ENTITIES:ENDSEC": 1,
+    "OBJECTS:DICTIONARY": 53,
+    "OBJECTS:XRECORD": 19,
+    "OBJECTS:ACDBDICTIONARYWDFLT": 1,
+    "OBJECTS:SORTENTSTABLE": 6,
+    "OBJECTS:ACDBDETAILVIEWSTYLE": 1,
+    "OBJECTS:LAYOUT": 2,
+    "OBJECTS:MATERIAL": 3,
+    "OBJECTS:MLEADERSTYLE": 1,
+    "OBJECTS:MLINESTYLE": 1,
+    "OBJECTS:ACDBPLACEHOLDER": 1,
+    "OBJECTS:SCALE": 33,
+    "OBJECTS:ACDBSECTIONVIEWSTYLE": 1,
+    "OBJECTS:TABLESTYLE": 1,
+    "OBJECTS:VISUALSTYLE": 24,
+    "OBJECTS:DICTIONARYVAR": 10,
+    "OBJECTS:CELLSTYLEMAP": 1,
+    "OBJECTS:ENDSEC": 1
+   },
+   "handles": {
+    "count": 12343,
+    "distinct": 12343,
+    "collisions": 0,
+    "max": "13205",
+    "max_bytes": 3
+   },
+   "owner_references": {
+    "distinct": 631,
+    "unresolved": 0,
+    "unresolved_examples": []
+   },
+   "dwg_header_from_d1": {
+    "FINGERPRINTGUID": "{E12D90F9-A2A5-4941-895E-5CEAC9199519}",
+    "VERSIONGUID": "{1A3823AC-6C2E-4A68-85D9-599976ECAB39}",
+    "INSUNITS": 4,
+    "HANDSEED": [
+     0,
+     3,
+     12765,
+     12765
+    ],
+    "TDINDWG": [
+     2,
+     63479204
+    ],
+    "TDUCREATE": [
+     2460716,
+     22020866
+    ],
+    "TDUUPDATE": [
+     2461167,
+     32346612
+    ],
+    "version": "AC1018",
+    "maint_version": 55
+   },
+   "modified_by_urban": false,
+   "normalised_by_urban": false
+  },
+  "ST7757": {
+   "dxf_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "found_as": [
+    "73f083ce-ST7757.dxf",
+    "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079.dxf"
+   ],
+   "dwg_sha256": "3f7a556c69786834c16c355504437b5abcd1f5aa3a9625b33a2c5b14213f0227",
+   "dwg_found_as": [
+    "1926bdd8-ST77572.dwg",
+    "316e0b96-ST7757.dwg"
+   ],
+   "located_by": "SHA-256 search of the session inputs; no path is frozen truth",
+   "role": "STRUCTURAL_SUPPORTING_EVIDENCE_ONLY",
+   "transport": null,
+   "file_size_bytes": 3153037,
+   "header": {
+    "$ACADVER": "AC1032",
+    "$ACADMAINTVER": "228",
+    "$DWGCODEPAGE": "ANSI_1252",
+    "$LASTSAVEDBY": "Msalf",
+    "$EXTMIN": [
+     "-75967.72789623166",
+     "-14447.74692454538",
+     "0.0"
+    ],
+    "$EXTMAX": [
+     "205657.3546474847",
+     "57066.43175431112",
+     "1.0"
+    ],
+    "$TDCREATE": "2461159.801134260",
+    "$TDUCREATE": "2461159.676143692",
+    "$TDUPDATE": "2461315.394733797",
+    "$TDUUPDATE": "2461315.269733796",
+    "$TDINDWG": "1.1688197685",
+    "$HANDSEED": "2B97",
+    "$MEASUREMENT": "0",
+    "$INSUNITS": "4",
+    "$FINGERPRINTGUID": "{D09FAD02-D4CA-4CFC-9146-C1312B7FAE04}",
+    "$VERSIONGUID": "{F4F815F0-B904-A145-B108-BD1890A55C40}"
+   },
+   "acadmaintver_group_code": 90,
+   "comments_999": [],
+   "sections": [
+    "HEADER",
+    "CLASSES",
+    "TABLES",
+    "BLOCKS",
+    "ENTITIES",
+    "OBJECTS",
+    "ACDSDATA"
+   ],
+   "crlf": true,
+   "class_count": 261,
+   "custom_classes_of_interest": [
+    "ARC_DIMENSION",
+    "RTEXT",
+    "SORTENTSTABLE",
+    "WIPEOUT"
+   ],
+   "census": {
+    "TABLES:TABLE": 9,
+    "TABLES:VPORT": 1,
+    "TABLES:ENDTAB": 9,
+    "TABLES:LTYPE": 6,
+    "TABLES:LAYER": 49,
+    "TABLES:STYLE": 23,
+    "TABLES:APPID": 15,
+    "TABLES:DIMSTYLE": 7,
+    "TABLES:BLOCK_RECORD": 420,
+    "TABLES:ENDSEC": 1,
+    "BLOCKS:BLOCK": 420,
+    "BLOCKS:ENDBLK": 420,
+    "BLOCKS:LINE": 1456,
+    "BLOCKS:TEXT": 74,
+    "BLOCKS:LWPOLYLINE": 12,
+    "BLOCKS:CIRCLE": 4,
+    "BLOCKS:INSERT": 817,
+    "BLOCKS:MTEXT": 377,
+    "BLOCKS:POINT": 1131,
+    "BLOCKS:WIPEOUT": 1,
+    "BLOCKS:HATCH": 2,
+    "BLOCKS:ATTDEF": 92,
+    "BLOCKS:ENDSEC": 1,
+    "ENTITIES:TEXT": 890,
+    "ENTITIES:INSERT": 181,
+    "ENTITIES:LWPOLYLINE": 687,
+    "ENTITIES:RTEXT": 10,
+    "ENTITIES:LINE": 1907,
+    "ENTITIES:ARC": 73,
+    "ENTITIES:HATCH": 236,
+    "ENTITIES:CIRCLE": 38,
+    "ENTITIES:DIMENSION": 377,
+    "ENTITIES:WIPEOUT": 3,
+    "ENTITIES:SOLID": 62,
+    "ENTITIES:POINT": 1,
+    "ENTITIES:MTEXT": 8,
+    "ENTITIES:ATTRIB": 962,
+    "ENTITIES:SEQEND": 77,
+    "ENTITIES:ENDSEC": 1,
+    "OBJECTS:DICTIONARY": 102,
+    "OBJECTS:XRECORD": 32,
+    "OBJECTS:FIELDLIST": 1,
+    "OBJECTS:ACDBDICTIONARYWDFLT": 1,
+    "OBJECTS:WIPEOUTVARIABLES": 1,
+    "OBJECTS:SORTENTSTABLE": 23,
+    "OBJECTS:ACDBASSOCNETWORK": 2,
+    "OBJECTS:ACDBDETAILVIEWSTYLE": 1,
+    "OBJECTS:LAYOUT": 2,
+    "OBJECTS:MATERIAL": 3,
+    "OBJECTS:MLEADERSTYLE": 1,
+    "OBJECTS:MLINESTYLE": 1,
+    "OBJECTS:ACDBPLACEHOLDER": 1,
+    "OBJECTS:SCALE": 33,
+    "OBJECTS:ACDBSECTIONVIEWSTYLE": 1,
+    "OBJECTS:TABLESTYLE": 1,
+    "OBJECTS:VISUALSTYLE": 25,
+    "OBJECTS:DICTIONARYVAR": 9,
+    "OBJECTS:FIELD": 6,
+    "OBJECTS:ACDBASSOCACTION": 1,
+    "OBJECTS:CELLSTYLEMAP": 1,
+    "OBJECTS:ACDBASSOCARRAYACTIONBODY": 1,
+    "OBJECTS:ACDBASSOCDEPENDENCY": 3,
+    "OBJECTS:ACDBASSOCVERTEXACTIONPARAM": 3,
+    "OBJECTS:ACDBASSOCEDGEACTIONPARAM": 1,
+    "OBJECTS:ENDSEC": 1
+   },
+   "handles": {
+    "count": 11104,
+    "distinct": 11104,
+    "collisions": 0,
+    "max": "2B96",
+    "max_bytes": 2
+   },
+   "owner_references": {
+    "distinct": 1138,
+    "unresolved": 0,
+    "unresolved_examples": []
+   },
+   "dwg_header_from_d1": {
+    "FINGERPRINTGUID": "{D09FAD02-D4CA-4CFC-9146-C1312B7FAE04}",
+    "VERSIONGUID": "{F4F815F0-B904-A145-B108-BD1890A55C40}",
+    "INSUNITS": 4,
+    "HANDSEED": [
+     0,
+     2,
+     11115,
+     11115
+    ],
+    "TDINDWG": [
+     1,
+     14576028
+    ],
+    "TDUCREATE": [
+     2461159,
+     58418815
+    ],
+    "TDUUPDATE": [
+     2461167,
+     30034124
+    ],
+    "version": "AC1027"
+   },
+   "modified_by_urban": false,
+   "normalised_by_urban": false
+  }
+ },
+ "identified_by": "SHA-256 of the bytes; file names are ignored",
+ "reference_writer_fingerprints": {
+  "LIBREDWG_0_13_3_DWG2DXF": {
+   "P7757": {
+    "comments_999": [
+     "LibreDWG 0.13.3"
+    ],
+    "acadmaintver_group_code": 70,
+    "header_acadver": "AC1018",
+    "header_acadmaintver": "55",
+    "sections": [
+     "HEADER",
+     "CLASSES",
+     "TABLES",
+     "BLOCKS"
+    ]
+   },
+   "QORTUBA": {
+    "comments_999": [
+     "LibreDWG 0.13.3"
+    ],
+    "acadmaintver_group_code": 70,
+    "header_acadver": "AC1027",
+    "header_acadmaintver": "4",
+    "sections": [
+     "HEADER",
+     "CLASSES",
+     "TABLES",
+     "BLOCKS",
+     "ENTITIES",
+     "OBJECTS",
+     "THUMBNAILIMAGE"
+    ]
+   }
+  }
+ },
+ "history_previous_rejected_conversions": [
+  {
+   "file": "cfff361a-P77573.dxf",
+   "sha256": "3f6839a898abd3977c8a64f14e45d2791eb4733b7519db2906a599d768fa301c",
+   "status": "DIAGNOSTIC_NONQUALIFYING_CONVERSION",
+   "writer_in_file": "ezdxf",
+   "register": "tests/r8_5/registers/R8_INDEPENDENT_EXPORT_INTAKE.json (unchanged)"
+  },
+  {
+   "file": "9ce6e188-ST77573.dxf",
+   "sha256": "7ae8ee8dbed8f25c7886014b144940b45c50744c1e54a7ce248395d06bae4b17",
+   "status": "DIAGNOSTIC_NONQUALIFYING_CONVERSION",
+   "writer_in_file": "ezdxf",
+   "register": "tests/r8_5/registers/R8_INDEPENDENT_EXPORT_INTAKE.json (unchanged)"
+  }
+ ]
+}

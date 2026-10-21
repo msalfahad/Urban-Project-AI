@@ -1,0 +1,459 @@
+OCCURRENCE_ID,FAMILY,COMPONENT,S5_STATE,S5_KG,S5_RUN_M,OLD_URBAN_SPAN,OLD_URBAN_LENGTH_M,OLD_URBAN_VERIFIED_KG,OLD_URBAN_PROVISIONAL_KG,S5_REMEASURED_AT_OLD_LENGTH_KG,OLD_URBAN_CLASS,OLD_URBAN_WHY
+GSO-107-7CE-1,GROUND_BEAM,TOP_MAIN,LOWER_BOUND,1.726,0.364,GB-016,0.364,0.0,1.725,1.725,SAME,"same kg; old Urban held it PROVISIONAL (ambiguous governing detail), S5 releases it as a LOWER_BOUND only because the bars are identical in every candidate"
+GSO-107-7CE-1,GROUND_BEAM,BOTTOM_ROW_1,LOWER_BOUND,1.726,0.364,GB-016,0.364,0.0,1.725,1.725,SAME,"same kg; old Urban held it PROVISIONAL (ambiguous governing detail), S5 releases it as a LOWER_BOUND only because the bars are identical in every candidate"
+GSO-107-7CE-1,GROUND_BEAM,BOTTOM_ROW_2,LOWER_BOUND,1.726,0.364,GB-016,0.364,0.0,1.725,1.725,SAME,"same kg; old Urban held it PROVISIONAL (ambiguous governing detail), S5 releases it as a LOWER_BOUND only because the bars are identical in every candidate"
+GSO-107-7CE-1,GROUND_BEAM,STIRRUP_CORE_PATH,BLOCKED_UNQUANTIFIED,0.0,,GB-016,0.364,0.0,0.0,,SAME,no kg on either side
+GSO-107-7CE-1,GROUND_BEAM,STIRRUP_HOOK_1+2,BLOCKED_UNQUANTIFIED,0.0,,GB-016,0.364,0.0,3.224,,HOOK_MISSING,old Urban added a provisional hook / perimeter allowance; S5 has no hook source (Q6); counts S5 3 / old 3
+GSO-107-7CE-1,GROUND_BEAM,SIDE_REBAR,BLOCKED_UNQUANTIFIED,0.0,,GB-016,0.364,0.0,1.294,,ASSUMED_COMPONENT,old Urban assumed a FOLLOW ARCH. depth for 2Ø12/30cm side bars; S5 keeps them blocked until the depth is source-established (Q2)
+GSO-107-7CE-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_1,BLOCKED_UNQUANTIFIED,0.0,,GB-016,0.364,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-107-7CE-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_2,BLOCKED_UNQUANTIFIED,0.0,,GB-016,0.364,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-109-7CB-1,GROUND_BEAM,TOP_MAIN,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-011,9.5,45.037,0.0,,DETAIL_APPLICABILITY_DIFFERENCE,concentrated load not excluded: S5 keeps the 'without concentrated load' detail blocked; old Urban applied it
+GSO-109-7CB-1,GROUND_BEAM,BOTTOM_ROW_1,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-011,9.5,45.037,0.0,,DETAIL_APPLICABILITY_DIFFERENCE,concentrated load not excluded: S5 keeps the 'without concentrated load' detail blocked; old Urban applied it
+GSO-109-7CB-1,GROUND_BEAM,BOTTOM_ROW_2,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-011,9.5,45.037,0.0,,DETAIL_APPLICABILITY_DIFFERENCE,concentrated load not excluded: S5 keeps the 'without concentrated load' detail blocked; old Urban applied it
+GSO-109-7CB-1,GROUND_BEAM,STIRRUP_CORE_PATH,BLOCKED_UNQUANTIFIED,0.0,,GB-011,9.5,8.091,0.0,,STIRRUP_GEOMETRY_MISSING,old Urban priced the link path (assumed perimeter / legs); S5 keeps the mass blocked (Q6); counts S5 BLOCKED_UNQUANTIFIED / old 64
+GSO-109-7CB-1,GROUND_BEAM,STIRRUP_HOOK_1+2,BLOCKED_UNQUANTIFIED,0.0,,GB-011,9.5,0.0,49.334,,HOOK_MISSING,old Urban added a provisional hook / perimeter allowance; S5 has no hook source (Q6); counts S5 BLOCKED_UNQUANTIFIED / old 64
+GSO-109-7CB-1,GROUND_BEAM,SIDE_REBAR,BLOCKED_UNQUANTIFIED,0.0,,GB-011,9.5,0.0,33.778,,ASSUMED_COMPONENT,old Urban assumed a FOLLOW ARCH. depth for 2Ø12/30cm side bars; S5 keeps them blocked until the depth is source-established (Q2)
+GSO-109-7CB-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_1,BLOCKED_UNQUANTIFIED,0.0,,GB-011,9.5,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-109-7CB-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_2,BLOCKED_UNQUANTIFIED,0.0,,GB-011,9.5,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-109-7CB-2,GROUND_BEAM,TOP_MAIN,LOWER_BOUND,12.8,2.7,GB-012,2.7,12.8,0.0,12.8,SAME,
+GSO-109-7CB-2,GROUND_BEAM,BOTTOM_ROW_1,LOWER_BOUND,12.8,2.7,GB-012,2.7,12.8,0.0,12.8,SAME,
+GSO-109-7CB-2,GROUND_BEAM,BOTTOM_ROW_2,LOWER_BOUND,12.8,2.7,GB-012,2.7,12.8,0.0,12.8,SAME,
+GSO-109-7CB-2,GROUND_BEAM,STIRRUP_CORE_PATH,BLOCKED_UNQUANTIFIED,0.0,,GB-012,2.7,2.276,0.0,,STIRRUP_GEOMETRY_MISSING,old Urban priced the link path (assumed perimeter / legs); S5 keeps the mass blocked (Q6); counts S5 18 / old 18
+GSO-109-7CB-2,GROUND_BEAM,STIRRUP_HOOK_1+2,BLOCKED_UNQUANTIFIED,0.0,,GB-012,2.7,0.0,14.51,,HOOK_MISSING,old Urban added a provisional hook / perimeter allowance; S5 has no hook source (Q6); counts S5 18 / old 18
+GSO-109-7CB-2,GROUND_BEAM,SIDE_REBAR,BLOCKED_UNQUANTIFIED,0.0,,GB-012,2.7,0.0,9.6,,ASSUMED_COMPONENT,old Urban assumed a FOLLOW ARCH. depth for 2Ø12/30cm side bars; S5 keeps them blocked until the depth is source-established (Q2)
+GSO-109-7CB-2,GROUND_BEAM,DEVELOPMENT_SUPPORT_1,BLOCKED_UNQUANTIFIED,0.0,,GB-012,2.7,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-109-7CB-2,GROUND_BEAM,DEVELOPMENT_SUPPORT_2,BLOCKED_UNQUANTIFIED,0.0,,GB-012,2.7,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-10A-7C9-1,GROUND_BEAM,TOP_MAIN,LOWER_BOUND,19.911,4.2,GB-008,4.6,21.807,0.0,21.807,BAR_RUN_CONVENTION,same bars; old length 4.600 m vs S5 BAR_STRAIGHT_RUN_LOWER_BOUND 4.200 m
+GSO-10A-7C9-1,GROUND_BEAM,BOTTOM_ROW_1,LOWER_BOUND,19.911,4.2,GB-008,4.6,21.807,0.0,21.807,BAR_RUN_CONVENTION,same bars; old length 4.600 m vs S5 BAR_STRAIGHT_RUN_LOWER_BOUND 4.200 m
+GSO-10A-7C9-1,GROUND_BEAM,BOTTOM_ROW_2,LOWER_BOUND,19.911,4.2,GB-008,4.6,21.807,0.0,21.807,BAR_RUN_CONVENTION,same bars; old length 4.600 m vs S5 BAR_STRAIGHT_RUN_LOWER_BOUND 4.200 m
+GSO-10A-7C9-1,GROUND_BEAM,STIRRUP_CORE_PATH,BLOCKED_UNQUANTIFIED,0.0,,GB-008,4.6,3.919,0.0,,STIRRUP_GEOMETRY_MISSING,old Urban priced the link path (assumed perimeter / legs); S5 keeps the mass blocked (Q6); counts S5 28 / old 31
+GSO-10A-7C9-1,GROUND_BEAM,STIRRUP_HOOK_1+2,BLOCKED_UNQUANTIFIED,0.0,,GB-008,4.6,0.0,24.352,,HOOK_MISSING,old Urban added a provisional hook / perimeter allowance; S5 has no hook source (Q6); counts S5 28 / old 31
+GSO-10A-7C9-1,GROUND_BEAM,SIDE_REBAR,BLOCKED_UNQUANTIFIED,0.0,,GB-008,4.6,0.0,16.356,,ASSUMED_COMPONENT,old Urban assumed a FOLLOW ARCH. depth for 2Ø12/30cm side bars; S5 keeps them blocked until the depth is source-established (Q2)
+GSO-10A-7C9-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_1,BLOCKED_UNQUANTIFIED,0.0,,GB-008,4.6,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-10A-7C9-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_2,BLOCKED_UNQUANTIFIED,0.0,,GB-008,4.6,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-10B-7D1-1,GROUND_BEAM,TOP_MAIN,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-025,1.5,0.0,7.111,,DETAIL_APPLICABILITY_DIFFERENCE,candidate details differ: S5 chooses none; old Urban picked a primary
+GSO-10B-7D1-1,GROUND_BEAM,BOTTOM_ROW_1,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-025,1.5,0.0,7.111,,DETAIL_APPLICABILITY_DIFFERENCE,candidate details differ: S5 chooses none; old Urban picked a primary
+GSO-10B-7D1-1,GROUND_BEAM,BOTTOM_ROW_2,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-025,1.5,0.0,7.111,,DETAIL_APPLICABILITY_DIFFERENCE,candidate details differ: S5 chooses none; old Urban picked a primary
+GSO-10B-7D1-1,GROUND_BEAM,STIRRUP_CORE_PATH,BLOCKED_UNQUANTIFIED,0.0,,GB-025,1.5,0.0,0.0,,SAME,no kg on either side
+GSO-10B-7D1-1,GROUND_BEAM,STIRRUP_HOOK_1+2,BLOCKED_UNQUANTIFIED,0.0,,GB-025,1.5,0.0,8.865,,HOOK_MISSING,old Urban added a provisional hook / perimeter allowance; S5 has no hook source (Q6); counts S5 BLOCKED_UNQUANTIFIED / old 10
+GSO-10B-7D1-1,GROUND_BEAM,SIDE_REBAR,BLOCKED_UNQUANTIFIED,0.0,,GB-025,1.5,0.0,5.333,,ASSUMED_COMPONENT,old Urban assumed a FOLLOW ARCH. depth for 2Ø12/30cm side bars; S5 keeps them blocked until the depth is source-established (Q2)
+GSO-10B-7D1-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_1,BLOCKED_UNQUANTIFIED,0.0,,GB-025,1.5,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-10B-7D1-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_2,BLOCKED_UNQUANTIFIED,0.0,,GB-025,1.5,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-10B-7D1-2,GROUND_BEAM,TOP_MAIN,LOWER_BOUND,10.904,2.3,GB-024,2.3,0.0,10.904,10.904,SAME,"same kg; old Urban held it PROVISIONAL (ambiguous governing detail), S5 releases it as a LOWER_BOUND only because the bars are identical in every candidate"
+GSO-10B-7D1-2,GROUND_BEAM,BOTTOM_ROW_1,LOWER_BOUND,10.904,2.3,GB-024,2.3,0.0,10.904,10.904,SAME,"same kg; old Urban held it PROVISIONAL (ambiguous governing detail), S5 releases it as a LOWER_BOUND only because the bars are identical in every candidate"
+GSO-10B-7D1-2,GROUND_BEAM,BOTTOM_ROW_2,LOWER_BOUND,10.904,2.3,GB-024,2.3,0.0,10.904,10.904,SAME,"same kg; old Urban held it PROVISIONAL (ambiguous governing detail), S5 releases it as a LOWER_BOUND only because the bars are identical in every candidate"
+GSO-10B-7D1-2,GROUND_BEAM,STIRRUP_CORE_PATH,BLOCKED_UNQUANTIFIED,0.0,,GB-024,2.3,0.0,0.0,,SAME,no kg on either side
+GSO-10B-7D1-2,GROUND_BEAM,STIRRUP_HOOK_1+2,BLOCKED_UNQUANTIFIED,0.0,,GB-024,2.3,0.0,13.701,,HOOK_MISSING,old Urban added a provisional hook / perimeter allowance; S5 has no hook source (Q6); counts S5 16 / old 16
+GSO-10B-7D1-2,GROUND_BEAM,SIDE_REBAR,BLOCKED_UNQUANTIFIED,0.0,,GB-024,2.3,0.0,8.178,,ASSUMED_COMPONENT,old Urban assumed a FOLLOW ARCH. depth for 2Ø12/30cm side bars; S5 keeps them blocked until the depth is source-established (Q2)
+GSO-10B-7D1-2,GROUND_BEAM,DEVELOPMENT_SUPPORT_1,BLOCKED_UNQUANTIFIED,0.0,,GB-024,2.3,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-10B-7D1-2,GROUND_BEAM,DEVELOPMENT_SUPPORT_2,BLOCKED_UNQUANTIFIED,0.0,,GB-024,2.3,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-114-115-7DF-1,GROUND_BEAM,TOP_MAIN,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-040,2.625,12.444,0.0,,DETAIL_APPLICABILITY_DIFFERENCE,candidate details differ: S5 chooses none; old Urban picked a primary
+GSO-114-115-7DF-1,GROUND_BEAM,BOTTOM_ROW_1,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-040,2.625,12.444,0.0,,DETAIL_APPLICABILITY_DIFFERENCE,candidate details differ: S5 chooses none; old Urban picked a primary
+GSO-114-115-7DF-1,GROUND_BEAM,BOTTOM_ROW_2,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-040,2.625,12.444,0.0,,DETAIL_APPLICABILITY_DIFFERENCE,candidate details differ: S5 chooses none; old Urban picked a primary
+GSO-114-115-7DF-1,GROUND_BEAM,STIRRUP_CORE_PATH,BLOCKED_UNQUANTIFIED,0.0,,GB-040,2.625,2.276,0.0,,STIRRUP_GEOMETRY_MISSING,old Urban priced the link path (assumed perimeter / legs); S5 keeps the mass blocked (Q6); counts S5 18 / old 18
+GSO-114-115-7DF-1,GROUND_BEAM,STIRRUP_HOOK_1+2,BLOCKED_UNQUANTIFIED,0.0,,GB-040,2.625,0.0,14.51,,HOOK_MISSING,old Urban added a provisional hook / perimeter allowance; S5 has no hook source (Q6); counts S5 18 / old 18
+GSO-114-115-7DF-1,GROUND_BEAM,SIDE_REBAR,BLOCKED_UNQUANTIFIED,0.0,,GB-040,2.625,0.0,9.333,,ASSUMED_COMPONENT,old Urban assumed a FOLLOW ARCH. depth for 2Ø12/30cm side bars; S5 keeps them blocked until the depth is source-established (Q2)
+GSO-114-115-7DF-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_1,BLOCKED_UNQUANTIFIED,0.0,,GB-040,2.625,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-114-115-7DF-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_2,BLOCKED_UNQUANTIFIED,0.0,,GB-040,2.625,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-114-115-7DF-2,GROUND_BEAM,TOP_MAIN,LOWER_BOUND,6.163,1.3,GB-041,0.3,0.0,1.422,1.422,OCCURRENCE_DIFFERENCE,"PRE-S5 network rebuild changed the member (OLD_BAND_SUBSET ['114', '7DF'] -> ['114', '115', '7DF']); old length 0.300 m vs S5 1.300 m"
+GSO-114-115-7DF-2,GROUND_BEAM,BOTTOM_ROW_1,LOWER_BOUND,6.163,1.3,GB-041,0.3,0.0,1.422,1.422,OCCURRENCE_DIFFERENCE,"PRE-S5 network rebuild changed the member (OLD_BAND_SUBSET ['114', '7DF'] -> ['114', '115', '7DF']); old length 0.300 m vs S5 1.300 m"
+GSO-114-115-7DF-2,GROUND_BEAM,BOTTOM_ROW_2,LOWER_BOUND,6.163,1.3,GB-041,0.3,0.0,1.422,1.422,OCCURRENCE_DIFFERENCE,"PRE-S5 network rebuild changed the member (OLD_BAND_SUBSET ['114', '7DF'] -> ['114', '115', '7DF']); old length 0.300 m vs S5 1.300 m"
+GSO-114-115-7DF-2,GROUND_BEAM,STIRRUP_CORE_PATH,BLOCKED_UNQUANTIFIED,0.0,,GB-041,0.3,0.0,0.0,,SAME,no kg on either side
+GSO-114-115-7DF-2,GROUND_BEAM,STIRRUP_HOOK_1+2,BLOCKED_UNQUANTIFIED,0.0,,GB-041,0.3,0.0,2.418,,HOOK_MISSING,old Urban added a provisional hook / perimeter allowance; S5 has no hook source (Q6); counts S5 9 / old 2
+GSO-114-115-7DF-2,GROUND_BEAM,SIDE_REBAR,BLOCKED_UNQUANTIFIED,0.0,,GB-041,0.3,0.0,1.067,,ASSUMED_COMPONENT,old Urban assumed a FOLLOW ARCH. depth for 2Ø12/30cm side bars; S5 keeps them blocked until the depth is source-established (Q2)
+GSO-114-115-7DF-2,GROUND_BEAM,DEVELOPMENT_SUPPORT_1,BLOCKED_UNQUANTIFIED,0.0,,GB-041,0.3,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-114-115-7DF-2,GROUND_BEAM,DEVELOPMENT_SUPPORT_2,BLOCKED_UNQUANTIFIED,0.0,,GB-041,0.3,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-136-7D5-1,GROUND_BEAM,TOP_MAIN,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-030,6.4,30.341,0.0,,BAR_RUN_CONVENTION,S5 bar run withheld (length geometry conflict); old Urban used its span length
+GSO-136-7D5-1,GROUND_BEAM,BOTTOM_ROW_1,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-030,6.4,30.341,0.0,,BAR_RUN_CONVENTION,S5 bar run withheld (length geometry conflict); old Urban used its span length
+GSO-136-7D5-1,GROUND_BEAM,BOTTOM_ROW_2,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-030,6.4,30.341,0.0,,BAR_RUN_CONVENTION,S5 bar run withheld (length geometry conflict); old Urban used its span length
+GSO-136-7D5-1,GROUND_BEAM,STIRRUP_CORE_PATH,BLOCKED_UNQUANTIFIED,0.0,,GB-030,6.4,5.436,0.0,,STIRRUP_GEOMETRY_MISSING,old Urban priced the link path (assumed perimeter / legs); S5 keeps the mass blocked (Q6); counts S5 BLOCKED_UNQUANTIFIED / old 43
+GSO-136-7D5-1,GROUND_BEAM,STIRRUP_HOOK_1+2,BLOCKED_UNQUANTIFIED,0.0,,GB-030,6.4,0.0,33.436,,HOOK_MISSING,old Urban added a provisional hook / perimeter allowance; S5 has no hook source (Q6); counts S5 BLOCKED_UNQUANTIFIED / old 43
+GSO-136-7D5-1,GROUND_BEAM,SIDE_REBAR,BLOCKED_UNQUANTIFIED,0.0,,GB-030,6.4,0.0,22.756,,ASSUMED_COMPONENT,old Urban assumed a FOLLOW ARCH. depth for 2Ø12/30cm side bars; S5 keeps them blocked until the depth is source-established (Q2)
+GSO-136-7D5-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_1,BLOCKED_UNQUANTIFIED,0.0,,GB-030,6.4,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-136-7D5-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_2,BLOCKED_UNQUANTIFIED,0.0,,GB-030,6.4,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-137-138-1,GROUND_BEAM,TOP_MAIN,LOWER_BOUND,11.615,2.45,GB-053,2.45,0.0,11.615,11.615,SAME,"same kg; old Urban held it PROVISIONAL (ambiguous governing detail), S5 releases it as a LOWER_BOUND only because the bars are identical in every candidate"
+GSO-137-138-1,GROUND_BEAM,BOTTOM_ROW_1,LOWER_BOUND,11.615,2.45,GB-053,2.45,0.0,11.615,11.615,SAME,"same kg; old Urban held it PROVISIONAL (ambiguous governing detail), S5 releases it as a LOWER_BOUND only because the bars are identical in every candidate"
+GSO-137-138-1,GROUND_BEAM,BOTTOM_ROW_2,LOWER_BOUND,11.615,2.45,GB-053,2.45,0.0,11.615,11.615,SAME,"same kg; old Urban held it PROVISIONAL (ambiguous governing detail), S5 releases it as a LOWER_BOUND only because the bars are identical in every candidate"
+GSO-137-138-1,GROUND_BEAM,STIRRUP_CORE_PATH,BLOCKED_UNQUANTIFIED,0.0,,GB-053,2.45,0.0,0.0,,SAME,no kg on either side
+GSO-137-138-1,GROUND_BEAM,STIRRUP_HOOK_1+2,BLOCKED_UNQUANTIFIED,0.0,,GB-053,2.45,0.0,14.507,,HOOK_MISSING,old Urban added a provisional hook / perimeter allowance; S5 has no hook source (Q6); counts S5 17 / old 17
+GSO-137-138-1,GROUND_BEAM,SIDE_REBAR,BLOCKED_UNQUANTIFIED,0.0,,GB-053,2.45,0.0,8.711,,ASSUMED_COMPONENT,old Urban assumed a FOLLOW ARCH. depth for 2Ø12/30cm side bars; S5 keeps them blocked until the depth is source-established (Q2)
+GSO-137-138-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_1,BLOCKED_UNQUANTIFIED,0.0,,GB-053,2.45,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-137-138-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_2,BLOCKED_UNQUANTIFIED,0.0,,GB-053,2.45,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-13C-7D9-1,GROUND_BEAM,TOP_MAIN,LOWER_BOUND,5.263,1.45,GB-034,1.45,5.263,0.0,5.263,SAME,
+GSO-13C-7D9-1,GROUND_BEAM,BOTTOM_ROW_1,LOWER_BOUND,5.263,1.45,GB-034,1.45,5.263,0.0,5.263,SAME,
+GSO-13C-7D9-1,GROUND_BEAM,BOTTOM_ROW_2,LOWER_BOUND,5.263,1.45,GB-034,1.45,5.263,0.0,5.263,SAME,
+GSO-13C-7D9-1,GROUND_BEAM,STIRRUP_CORE_PATH,BLOCKED_UNQUANTIFIED,0.0,,GB-034,1.45,0.0,0.0,,SAME,no kg on either side
+GSO-13C-7D9-1,GROUND_BEAM,STIRRUP_HOOK_1+2,BLOCKED_UNQUANTIFIED,0.0,,GB-034,1.45,0.0,2.781,,HOOK_MISSING,old Urban added a provisional hook / perimeter allowance; S5 has no hook source (Q6); counts S5 BLOCKED_UNQUANTIFIED / old 10
+GSO-13C-7D9-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_1,BLOCKED_UNQUANTIFIED,0.0,,GB-034,1.45,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-13C-7D9-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_2,BLOCKED_UNQUANTIFIED,0.0,,GB-034,1.45,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-13D-7D2-1,GROUND_BEAM,TOP_MAIN,LOWER_BOUND,27.97,5.9,GB-026,5.9,27.97,0.0,27.97,SAME,
+GSO-13D-7D2-1,GROUND_BEAM,BOTTOM_ROW_1,LOWER_BOUND,27.97,5.9,GB-026,5.9,27.97,0.0,27.97,SAME,
+GSO-13D-7D2-1,GROUND_BEAM,BOTTOM_ROW_2,LOWER_BOUND,27.97,5.9,GB-026,5.9,27.97,0.0,27.97,SAME,
+GSO-13D-7D2-1,GROUND_BEAM,STIRRUP_CORE_PATH,BLOCKED_UNQUANTIFIED,0.0,,GB-026,5.9,5.057,0.0,,STIRRUP_GEOMETRY_MISSING,old Urban priced the link path (assumed perimeter / legs); S5 keeps the mass blocked (Q6); counts S5 40 / old 40
+GSO-13D-7D2-1,GROUND_BEAM,STIRRUP_HOOK_1+2,BLOCKED_UNQUANTIFIED,0.0,,GB-026,5.9,0.0,31.165,,HOOK_MISSING,old Urban added a provisional hook / perimeter allowance; S5 has no hook source (Q6); counts S5 40 / old 40
+GSO-13D-7D2-1,GROUND_BEAM,SIDE_REBAR,BLOCKED_UNQUANTIFIED,0.0,,GB-026,5.9,0.0,20.978,,ASSUMED_COMPONENT,old Urban assumed a FOLLOW ARCH. depth for 2Ø12/30cm side bars; S5 keeps them blocked until the depth is source-established (Q2)
+GSO-13D-7D2-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_1,BLOCKED_UNQUANTIFIED,0.0,,GB-026,5.9,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-13D-7D2-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_2,BLOCKED_UNQUANTIFIED,0.0,,GB-026,5.9,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-13E-7D6-1,GROUND_BEAM,TOP_MAIN,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-031,5.1,24.178,0.0,,DETAIL_APPLICABILITY_DIFFERENCE,concentrated load not excluded: S5 keeps the 'without concentrated load' detail blocked; old Urban applied it
+GSO-13E-7D6-1,GROUND_BEAM,BOTTOM_ROW_1,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-031,5.1,24.178,0.0,,DETAIL_APPLICABILITY_DIFFERENCE,concentrated load not excluded: S5 keeps the 'without concentrated load' detail blocked; old Urban applied it
+GSO-13E-7D6-1,GROUND_BEAM,BOTTOM_ROW_2,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-031,5.1,24.178,0.0,,DETAIL_APPLICABILITY_DIFFERENCE,concentrated load not excluded: S5 keeps the 'without concentrated load' detail blocked; old Urban applied it
+GSO-13E-7D6-1,GROUND_BEAM,STIRRUP_CORE_PATH,BLOCKED_UNQUANTIFIED,0.0,,GB-031,5.1,4.298,0.0,,STIRRUP_GEOMETRY_MISSING,old Urban priced the link path (assumed perimeter / legs); S5 keeps the mass blocked (Q6); counts S5 BLOCKED_UNQUANTIFIED / old 34
+GSO-13E-7D6-1,GROUND_BEAM,STIRRUP_HOOK_1+2,BLOCKED_UNQUANTIFIED,0.0,,GB-031,5.1,0.0,26.623,,HOOK_MISSING,old Urban added a provisional hook / perimeter allowance; S5 has no hook source (Q6); counts S5 BLOCKED_UNQUANTIFIED / old 34
+GSO-13E-7D6-1,GROUND_BEAM,SIDE_REBAR,BLOCKED_UNQUANTIFIED,0.0,,GB-031,5.1,0.0,18.133,,ASSUMED_COMPONENT,old Urban assumed a FOLLOW ARCH. depth for 2Ø12/30cm side bars; S5 keeps them blocked until the depth is source-established (Q2)
+GSO-13E-7D6-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_1,BLOCKED_UNQUANTIFIED,0.0,,GB-031,5.1,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-13E-7D6-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_2,BLOCKED_UNQUANTIFIED,0.0,,GB-031,5.1,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-13F-7D3-1,GROUND_BEAM,TOP_MAIN,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-027,4.3,15.607,0.0,,DETAIL_APPLICABILITY_DIFFERENCE,concentrated load not excluded: S5 keeps the 'without concentrated load' detail blocked; old Urban applied it
+GSO-13F-7D3-1,GROUND_BEAM,BOTTOM_ROW_1,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-027,4.3,15.607,0.0,,DETAIL_APPLICABILITY_DIFFERENCE,concentrated load not excluded: S5 keeps the 'without concentrated load' detail blocked; old Urban applied it
+GSO-13F-7D3-1,GROUND_BEAM,BOTTOM_ROW_2,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-027,4.3,15.607,0.0,,DETAIL_APPLICABILITY_DIFFERENCE,concentrated load not excluded: S5 keeps the 'without concentrated load' detail blocked; old Urban applied it
+GSO-13F-7D3-1,GROUND_BEAM,STIRRUP_CORE_PATH,BLOCKED_UNQUANTIFIED,0.0,,GB-027,4.3,9.624,0.0,,STIRRUP_GEOMETRY_MISSING,old Urban priced the link path (assumed perimeter / legs); S5 keeps the mass blocked (Q6); counts S5 BLOCKED_UNQUANTIFIED / old 29
+GSO-13F-7D3-1,GROUND_BEAM,STIRRUP_HOOK_1+2,BLOCKED_UNQUANTIFIED,0.0,,GB-027,4.3,0.0,2.658,,HOOK_MISSING,old Urban added a provisional hook / perimeter allowance; S5 has no hook source (Q6); counts S5 BLOCKED_UNQUANTIFIED / old 29
+GSO-13F-7D3-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_1,BLOCKED_UNQUANTIFIED,0.0,,GB-027,4.3,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-13F-7D3-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_2,BLOCKED_UNQUANTIFIED,0.0,,GB-027,4.3,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-140-7D7-1,GROUND_BEAM,TOP_MAIN,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-032,4.3,15.607,0.0,,DETAIL_APPLICABILITY_DIFFERENCE,concentrated load not excluded: S5 keeps the 'without concentrated load' detail blocked; old Urban applied it
+GSO-140-7D7-1,GROUND_BEAM,BOTTOM_ROW_1,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-032,4.3,15.607,0.0,,DETAIL_APPLICABILITY_DIFFERENCE,concentrated load not excluded: S5 keeps the 'without concentrated load' detail blocked; old Urban applied it
+GSO-140-7D7-1,GROUND_BEAM,BOTTOM_ROW_2,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-032,4.3,15.607,0.0,,DETAIL_APPLICABILITY_DIFFERENCE,concentrated load not excluded: S5 keeps the 'without concentrated load' detail blocked; old Urban applied it
+GSO-140-7D7-1,GROUND_BEAM,STIRRUP_CORE_PATH,BLOCKED_UNQUANTIFIED,0.0,,GB-032,4.3,9.624,0.0,,STIRRUP_GEOMETRY_MISSING,old Urban priced the link path (assumed perimeter / legs); S5 keeps the mass blocked (Q6); counts S5 BLOCKED_UNQUANTIFIED / old 29
+GSO-140-7D7-1,GROUND_BEAM,STIRRUP_HOOK_1+2,BLOCKED_UNQUANTIFIED,0.0,,GB-032,4.3,0.0,2.658,,HOOK_MISSING,old Urban added a provisional hook / perimeter allowance; S5 has no hook source (Q6); counts S5 BLOCKED_UNQUANTIFIED / old 29
+GSO-140-7D7-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_1,BLOCKED_UNQUANTIFIED,0.0,,GB-032,4.3,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-140-7D7-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_2,BLOCKED_UNQUANTIFIED,0.0,,GB-032,4.3,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-141-7DA-1,GROUND_BEAM,TOP_MAIN,LOWER_BOUND,4.356,1.2,GB-035,1.2,4.356,0.0,4.356,SAME,
+GSO-141-7DA-1,GROUND_BEAM,BOTTOM_ROW_1,LOWER_BOUND,4.356,1.2,GB-035,1.2,4.356,0.0,4.356,SAME,
+GSO-141-7DA-1,GROUND_BEAM,BOTTOM_ROW_2,LOWER_BOUND,4.356,1.2,GB-035,1.2,4.356,0.0,4.356,SAME,
+GSO-141-7DA-1,GROUND_BEAM,STIRRUP_CORE_PATH,BLOCKED_UNQUANTIFIED,0.0,,GB-035,1.2,0.0,0.0,,SAME,no kg on either side
+GSO-141-7DA-1,GROUND_BEAM,STIRRUP_HOOK_1+2,BLOCKED_UNQUANTIFIED,0.0,,GB-035,1.2,0.0,2.276,,HOOK_MISSING,old Urban added a provisional hook / perimeter allowance; S5 has no hook source (Q6); counts S5 BLOCKED_UNQUANTIFIED / old 8
+GSO-141-7DA-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_1,BLOCKED_UNQUANTIFIED,0.0,,GB-035,1.2,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-141-7DA-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_2,BLOCKED_UNQUANTIFIED,0.0,,GB-035,1.2,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-142-7D8-1,GROUND_BEAM,TOP_MAIN,LOWER_BOUND,8.893,2.45,GB-033,2.45,8.893,0.0,8.893,SAME,
+GSO-142-7D8-1,GROUND_BEAM,BOTTOM_ROW_1,LOWER_BOUND,8.893,2.45,GB-033,2.45,8.893,0.0,8.893,SAME,
+GSO-142-7D8-1,GROUND_BEAM,BOTTOM_ROW_2,LOWER_BOUND,8.893,2.45,GB-033,2.45,8.893,0.0,8.893,SAME,
+GSO-142-7D8-1,GROUND_BEAM,STIRRUP_CORE_PATH,BLOCKED_UNQUANTIFIED,0.0,,GB-033,2.45,0.0,0.0,,SAME,no kg on either side
+GSO-142-7D8-1,GROUND_BEAM,STIRRUP_HOOK_1+2,BLOCKED_UNQUANTIFIED,0.0,,GB-033,2.45,0.0,4.551,,HOOK_MISSING,old Urban added a provisional hook / perimeter allowance; S5 has no hook source (Q6); counts S5 BLOCKED_UNQUANTIFIED / old 17
+GSO-142-7D8-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_1,BLOCKED_UNQUANTIFIED,0.0,,GB-033,2.45,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-142-7D8-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_2,BLOCKED_UNQUANTIFIED,0.0,,GB-033,2.45,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-145-7CA-1,GROUND_BEAM,TOP_MAIN,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-010,0.4,1.896,0.0,,DETAIL_APPLICABILITY_DIFFERENCE,candidate details differ: S5 chooses none; old Urban picked a primary
+GSO-145-7CA-1,GROUND_BEAM,BOTTOM_ROW_1,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-010,0.4,1.896,0.0,,DETAIL_APPLICABILITY_DIFFERENCE,candidate details differ: S5 chooses none; old Urban picked a primary
+GSO-145-7CA-1,GROUND_BEAM,BOTTOM_ROW_2,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-010,0.4,1.896,0.0,,DETAIL_APPLICABILITY_DIFFERENCE,candidate details differ: S5 chooses none; old Urban picked a primary
+GSO-145-7CA-1,GROUND_BEAM,STIRRUP_CORE_PATH,BLOCKED_UNQUANTIFIED,0.0,,GB-010,0.4,0.379,0.0,,STIRRUP_GEOMETRY_MISSING,old Urban priced the link path (assumed perimeter / legs); S5 keeps the mass blocked (Q6); counts S5 BLOCKED_UNQUANTIFIED / old 3
+GSO-145-7CA-1,GROUND_BEAM,STIRRUP_HOOK_1+2,BLOCKED_UNQUANTIFIED,0.0,,GB-010,0.4,0.0,3.155,,HOOK_MISSING,old Urban added a provisional hook / perimeter allowance; S5 has no hook source (Q6); counts S5 BLOCKED_UNQUANTIFIED / old 3
+GSO-145-7CA-1,GROUND_BEAM,SIDE_REBAR,BLOCKED_UNQUANTIFIED,0.0,,GB-010,0.4,0.0,1.422,,ASSUMED_COMPONENT,old Urban assumed a FOLLOW ARCH. depth for 2Ø12/30cm side bars; S5 keeps them blocked until the depth is source-established (Q2)
+GSO-145-7CA-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_1,BLOCKED_UNQUANTIFIED,0.0,,GB-010,0.4,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-145-7CA-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_2,BLOCKED_UNQUANTIFIED,0.0,,GB-010,0.4,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-145-7CA-2,GROUND_BEAM,TOP_MAIN,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-009,2.3,0.0,8.348,,DETAIL_APPLICABILITY_DIFFERENCE,candidate details differ: S5 chooses none; old Urban picked a primary
+GSO-145-7CA-2,GROUND_BEAM,BOTTOM_ROW_1,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-009,2.3,0.0,8.348,,DETAIL_APPLICABILITY_DIFFERENCE,candidate details differ: S5 chooses none; old Urban picked a primary
+GSO-145-7CA-2,GROUND_BEAM,BOTTOM_ROW_2,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-009,2.3,0.0,8.348,,DETAIL_APPLICABILITY_DIFFERENCE,candidate details differ: S5 chooses none; old Urban picked a primary
+GSO-145-7CA-2,GROUND_BEAM,STIRRUP_CORE_PATH,BLOCKED_UNQUANTIFIED,0.0,,GB-009,2.3,0.0,0.0,,SAME,no kg on either side
+GSO-145-7CA-2,GROUND_BEAM,STIRRUP_HOOK_1+2,BLOCKED_UNQUANTIFIED,0.0,,GB-009,2.3,0.0,4.298,,HOOK_MISSING,old Urban added a provisional hook / perimeter allowance; S5 has no hook source (Q6); counts S5 BLOCKED_UNQUANTIFIED / old 16
+GSO-145-7CA-2,GROUND_BEAM,DEVELOPMENT_SUPPORT_1,BLOCKED_UNQUANTIFIED,0.0,,GB-009,2.3,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-145-7CA-2,GROUND_BEAM,DEVELOPMENT_SUPPORT_2,BLOCKED_UNQUANTIFIED,0.0,,GB-009,2.3,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-15C-7CC-1,GROUND_BEAM,TOP_MAIN,LOWER_BOUND,8.711,2.4,GB-013,2.4,0.0,8.711,8.711,SAME,"same kg; old Urban held it PROVISIONAL (ambiguous governing detail), S5 releases it as a LOWER_BOUND only because the bars are identical in every candidate"
+GSO-15C-7CC-1,GROUND_BEAM,BOTTOM_ROW_1,LOWER_BOUND,8.711,2.4,GB-013,2.4,0.0,8.711,8.711,SAME,"same kg; old Urban held it PROVISIONAL (ambiguous governing detail), S5 releases it as a LOWER_BOUND only because the bars are identical in every candidate"
+GSO-15C-7CC-1,GROUND_BEAM,BOTTOM_ROW_2,LOWER_BOUND,8.711,2.4,GB-013,2.4,0.0,8.711,8.711,SAME,"same kg; old Urban held it PROVISIONAL (ambiguous governing detail), S5 releases it as a LOWER_BOUND only because the bars are identical in every candidate"
+GSO-15C-7CC-1,GROUND_BEAM,STIRRUP_CORE_PATH,BLOCKED_UNQUANTIFIED,0.0,,GB-013,2.4,0.0,0.0,,SAME,no kg on either side
+GSO-15C-7CC-1,GROUND_BEAM,STIRRUP_HOOK_1+2,BLOCKED_UNQUANTIFIED,0.0,,GB-013,2.4,0.0,4.298,,HOOK_MISSING,old Urban added a provisional hook / perimeter allowance; S5 has no hook source (Q6); counts S5 BLOCKED_UNQUANTIFIED / old 16
+GSO-15C-7CC-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_1,BLOCKED_UNQUANTIFIED,0.0,,GB-013,2.4,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-15C-7CC-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_2,BLOCKED_UNQUANTIFIED,0.0,,GB-013,2.4,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-15D-7C8-1,GROUND_BEAM,TOP_MAIN,LOWER_BOUND,6.896,1.9,GB-007,2.9,10.526,0.0,10.526,BAR_RUN_CONVENTION,same bars; old length 2.900 m vs S5 BAR_STRAIGHT_RUN_LOWER_BOUND 1.900 m
+GSO-15D-7C8-1,GROUND_BEAM,BOTTOM_ROW_1,LOWER_BOUND,6.896,1.9,GB-007,2.9,10.526,0.0,10.526,BAR_RUN_CONVENTION,same bars; old length 2.900 m vs S5 BAR_STRAIGHT_RUN_LOWER_BOUND 1.900 m
+GSO-15D-7C8-1,GROUND_BEAM,BOTTOM_ROW_2,LOWER_BOUND,6.896,1.9,GB-007,2.9,10.526,0.0,10.526,BAR_RUN_CONVENTION,same bars; old length 2.900 m vs S5 BAR_STRAIGHT_RUN_LOWER_BOUND 1.900 m
+GSO-15D-7C8-1,GROUND_BEAM,STIRRUP_CORE_PATH,BLOCKED_UNQUANTIFIED,0.0,,GB-007,2.9,6.637,0.0,,STIRRUP_GEOMETRY_MISSING,old Urban priced the link path (assumed perimeter / legs); S5 keeps the mass blocked (Q6); counts S5 BLOCKED_UNQUANTIFIED / old 20
+GSO-15D-7C8-1,GROUND_BEAM,STIRRUP_HOOK_1+2,BLOCKED_UNQUANTIFIED,0.0,,GB-007,2.9,0.0,1.96,,HOOK_MISSING,old Urban added a provisional hook / perimeter allowance; S5 has no hook source (Q6); counts S5 BLOCKED_UNQUANTIFIED / old 20
+GSO-15D-7C8-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_1,BLOCKED_UNQUANTIFIED,0.0,,GB-007,2.9,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-15D-7C8-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_2,BLOCKED_UNQUANTIFIED,0.0,,GB-007,2.9,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-15E-15F-1,GROUND_BEAM,TOP_MAIN,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-054,3.0,10.889,0.0,,DETAIL_APPLICABILITY_DIFFERENCE,concentrated load not excluded: S5 keeps the 'without concentrated load' detail blocked; old Urban applied it
+GSO-15E-15F-1,GROUND_BEAM,BOTTOM_ROW_1,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-054,3.0,10.889,0.0,,DETAIL_APPLICABILITY_DIFFERENCE,concentrated load not excluded: S5 keeps the 'without concentrated load' detail blocked; old Urban applied it
+GSO-15E-15F-1,GROUND_BEAM,BOTTOM_ROW_2,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-054,3.0,10.889,0.0,,DETAIL_APPLICABILITY_DIFFERENCE,concentrated load not excluded: S5 keeps the 'without concentrated load' detail blocked; old Urban applied it
+GSO-15E-15F-1,GROUND_BEAM,STIRRUP_CORE_PATH,BLOCKED_UNQUANTIFIED,0.0,,GB-054,3.0,6.637,0.0,,STIRRUP_GEOMETRY_MISSING,old Urban priced the link path (assumed perimeter / legs); S5 keeps the mass blocked (Q6); counts S5 BLOCKED_UNQUANTIFIED / old 20
+GSO-15E-15F-1,GROUND_BEAM,STIRRUP_HOOK_1+2,BLOCKED_UNQUANTIFIED,0.0,,GB-054,3.0,0.0,1.96,,HOOK_MISSING,old Urban added a provisional hook / perimeter allowance; S5 has no hook source (Q6); counts S5 BLOCKED_UNQUANTIFIED / old 20
+GSO-15E-15F-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_1,BLOCKED_UNQUANTIFIED,0.0,,GB-054,3.0,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-15E-15F-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_2,BLOCKED_UNQUANTIFIED,0.0,,GB-054,3.0,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-16F-7FF-1,GROUND_BEAM,TOP_MAIN,LOWER_BOUND,4.537,1.25,GB-052,1.25,4.537,0.0,4.537,SAME,
+GSO-16F-7FF-1,GROUND_BEAM,BOTTOM_ROW_1,LOWER_BOUND,4.537,1.25,GB-052,1.25,4.537,0.0,4.537,SAME,
+GSO-16F-7FF-1,GROUND_BEAM,BOTTOM_ROW_2,LOWER_BOUND,4.537,1.25,GB-052,1.25,4.537,0.0,4.537,SAME,
+GSO-16F-7FF-1,GROUND_BEAM,STIRRUP_CORE_PATH,BLOCKED_UNQUANTIFIED,0.0,,GB-052,1.25,0.0,0.0,,SAME,no kg on either side
+GSO-16F-7FF-1,GROUND_BEAM,STIRRUP_HOOK_1+2,BLOCKED_UNQUANTIFIED,0.0,,GB-052,1.25,0.0,2.528,,HOOK_MISSING,old Urban added a provisional hook / perimeter allowance; S5 has no hook source (Q6); counts S5 BLOCKED_UNQUANTIFIED / old 9
+GSO-16F-7FF-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_1,BLOCKED_UNQUANTIFIED,0.0,,GB-052,1.25,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-16F-7FF-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_2,BLOCKED_UNQUANTIFIED,0.0,,GB-052,1.25,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-170-7C3-1,GROUND_BEAM,TOP_MAIN,LOWER_BOUND,29.487,6.22,GB-003,6.22,29.487,0.0,29.487,SAME,
+GSO-170-7C3-1,GROUND_BEAM,BOTTOM_ROW_1,LOWER_BOUND,29.487,6.22,GB-003,6.22,29.487,0.0,29.487,SAME,
+GSO-170-7C3-1,GROUND_BEAM,BOTTOM_ROW_2,LOWER_BOUND,29.487,6.22,GB-003,6.22,29.487,0.0,29.487,SAME,
+GSO-170-7C3-1,GROUND_BEAM,STIRRUP_CORE_PATH,BLOCKED_UNQUANTIFIED,0.0,,GB-003,6.22,5.31,0.0,,STIRRUP_GEOMETRY_MISSING,old Urban priced the link path (assumed perimeter / legs); S5 keeps the mass blocked (Q6); counts S5 42 / old 42
+GSO-170-7C3-1,GROUND_BEAM,STIRRUP_HOOK_1+2,BLOCKED_UNQUANTIFIED,0.0,,GB-003,6.22,0.0,32.679,,HOOK_MISSING,old Urban added a provisional hook / perimeter allowance; S5 has no hook source (Q6); counts S5 42 / old 42
+GSO-170-7C3-1,GROUND_BEAM,SIDE_REBAR,BLOCKED_UNQUANTIFIED,0.0,,GB-003,6.22,0.0,22.116,,ASSUMED_COMPONENT,old Urban assumed a FOLLOW ARCH. depth for 2Ø12/30cm side bars; S5 keeps them blocked until the depth is source-established (Q2)
+GSO-170-7C3-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_1,BLOCKED_UNQUANTIFIED,0.0,,GB-003,6.22,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-170-7C3-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_2,BLOCKED_UNQUANTIFIED,0.0,,GB-003,6.22,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-170-7C3-2,GROUND_BEAM,TOP_MAIN,LOWER_BOUND,17.067,3.6,GB-004,3.6,0.0,17.067,17.067,SAME,"same kg; old Urban held it PROVISIONAL (ambiguous governing detail), S5 releases it as a LOWER_BOUND only because the bars are identical in every candidate"
+GSO-170-7C3-2,GROUND_BEAM,BOTTOM_ROW_1,LOWER_BOUND,17.067,3.6,GB-004,3.6,0.0,17.067,17.067,SAME,"same kg; old Urban held it PROVISIONAL (ambiguous governing detail), S5 releases it as a LOWER_BOUND only because the bars are identical in every candidate"
+GSO-170-7C3-2,GROUND_BEAM,BOTTOM_ROW_2,LOWER_BOUND,17.067,3.6,GB-004,3.6,0.0,17.067,17.067,SAME,"same kg; old Urban held it PROVISIONAL (ambiguous governing detail), S5 releases it as a LOWER_BOUND only because the bars are identical in every candidate"
+GSO-170-7C3-2,GROUND_BEAM,STIRRUP_CORE_PATH,BLOCKED_UNQUANTIFIED,0.0,,GB-004,3.6,3.034,0.0,,STIRRUP_GEOMETRY_MISSING,old Urban priced the link path (assumed perimeter / legs); S5 keeps the mass blocked (Q6); counts S5 24 / old 24
+GSO-170-7C3-2,GROUND_BEAM,STIRRUP_HOOK_1+2,BLOCKED_UNQUANTIFIED,0.0,,GB-004,3.6,0.0,19.052,,HOOK_MISSING,old Urban added a provisional hook / perimeter allowance; S5 has no hook source (Q6); counts S5 24 / old 24
+GSO-170-7C3-2,GROUND_BEAM,SIDE_REBAR,BLOCKED_UNQUANTIFIED,0.0,,GB-004,3.6,0.0,12.8,,ASSUMED_COMPONENT,old Urban assumed a FOLLOW ARCH. depth for 2Ø12/30cm side bars; S5 keeps them blocked until the depth is source-established (Q2)
+GSO-170-7C3-2,GROUND_BEAM,DEVELOPMENT_SUPPORT_1,BLOCKED_UNQUANTIFIED,0.0,,GB-004,3.6,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-170-7C3-2,GROUND_BEAM,DEVELOPMENT_SUPPORT_2,BLOCKED_UNQUANTIFIED,0.0,,GB-004,3.6,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-170-7C3-3,GROUND_BEAM,TOP_MAIN,LOWER_BOUND,15.881,3.35,GB-005,3.35,0.0,15.881,15.881,SAME,"same kg; old Urban held it PROVISIONAL (ambiguous governing detail), S5 releases it as a LOWER_BOUND only because the bars are identical in every candidate"
+GSO-170-7C3-3,GROUND_BEAM,BOTTOM_ROW_1,LOWER_BOUND,15.881,3.35,GB-005,3.35,0.0,15.881,15.881,SAME,"same kg; old Urban held it PROVISIONAL (ambiguous governing detail), S5 releases it as a LOWER_BOUND only because the bars are identical in every candidate"
+GSO-170-7C3-3,GROUND_BEAM,BOTTOM_ROW_2,LOWER_BOUND,15.881,3.35,GB-005,3.35,0.0,15.881,15.881,SAME,"same kg; old Urban held it PROVISIONAL (ambiguous governing detail), S5 releases it as a LOWER_BOUND only because the bars are identical in every candidate"
+GSO-170-7C3-3,GROUND_BEAM,STIRRUP_CORE_PATH,BLOCKED_UNQUANTIFIED,0.0,,GB-005,3.35,2.908,0.0,,STIRRUP_GEOMETRY_MISSING,old Urban priced the link path (assumed perimeter / legs); S5 keeps the mass blocked (Q6); counts S5 23 / old 23
+GSO-170-7C3-3,GROUND_BEAM,STIRRUP_HOOK_1+2,BLOCKED_UNQUANTIFIED,0.0,,GB-005,3.35,0.0,18.295,,HOOK_MISSING,old Urban added a provisional hook / perimeter allowance; S5 has no hook source (Q6); counts S5 23 / old 23
+GSO-170-7C3-3,GROUND_BEAM,SIDE_REBAR,BLOCKED_UNQUANTIFIED,0.0,,GB-005,3.35,0.0,11.911,,ASSUMED_COMPONENT,old Urban assumed a FOLLOW ARCH. depth for 2Ø12/30cm side bars; S5 keeps them blocked until the depth is source-established (Q2)
+GSO-170-7C3-3,GROUND_BEAM,DEVELOPMENT_SUPPORT_1,BLOCKED_UNQUANTIFIED,0.0,,GB-005,3.35,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-170-7C3-3,GROUND_BEAM,DEVELOPMENT_SUPPORT_2,BLOCKED_UNQUANTIFIED,0.0,,GB-005,3.35,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-175-7DE-1,GROUND_BEAM,TOP_MAIN,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-039,3.75,0.0,13.611,,DETAIL_APPLICABILITY_DIFFERENCE,concentrated load not excluded: S5 keeps the 'without concentrated load' detail blocked; old Urban applied it
+GSO-175-7DE-1,GROUND_BEAM,BOTTOM_ROW_1,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-039,3.75,0.0,13.611,,DETAIL_APPLICABILITY_DIFFERENCE,concentrated load not excluded: S5 keeps the 'without concentrated load' detail blocked; old Urban applied it
+GSO-175-7DE-1,GROUND_BEAM,BOTTOM_ROW_2,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-039,3.75,0.0,13.611,,DETAIL_APPLICABILITY_DIFFERENCE,concentrated load not excluded: S5 keeps the 'without concentrated load' detail blocked; old Urban applied it
+GSO-175-7DE-1,GROUND_BEAM,STIRRUP_CORE_PATH,BLOCKED_UNQUANTIFIED,0.0,,GB-039,3.75,3.16,0.0,,STIRRUP_GEOMETRY_MISSING,old Urban priced the link path (assumed perimeter / legs); S5 keeps the mass blocked (Q6); counts S5 BLOCKED_UNQUANTIFIED / old 25
+GSO-175-7DE-1,GROUND_BEAM,STIRRUP_HOOK_1+2,BLOCKED_UNQUANTIFIED,0.0,,GB-039,3.75,0.0,7.483,,HOOK_MISSING,old Urban added a provisional hook / perimeter allowance; S5 has no hook source (Q6); counts S5 BLOCKED_UNQUANTIFIED / old 25
+GSO-175-7DE-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_1,BLOCKED_UNQUANTIFIED,0.0,,GB-039,3.75,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-175-7DE-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_2,BLOCKED_UNQUANTIFIED,0.0,,GB-039,3.75,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-176-7E6-1,GROUND_BEAM,TOP_MAIN,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-048,3.75,0.0,13.611,,DETAIL_APPLICABILITY_DIFFERENCE,concentrated load not excluded: S5 keeps the 'without concentrated load' detail blocked; old Urban applied it
+GSO-176-7E6-1,GROUND_BEAM,BOTTOM_ROW_1,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-048,3.75,0.0,13.611,,DETAIL_APPLICABILITY_DIFFERENCE,concentrated load not excluded: S5 keeps the 'without concentrated load' detail blocked; old Urban applied it
+GSO-176-7E6-1,GROUND_BEAM,BOTTOM_ROW_2,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-048,3.75,0.0,13.611,,DETAIL_APPLICABILITY_DIFFERENCE,concentrated load not excluded: S5 keeps the 'without concentrated load' detail blocked; old Urban applied it
+GSO-176-7E6-1,GROUND_BEAM,STIRRUP_CORE_PATH,BLOCKED_UNQUANTIFIED,0.0,,GB-048,3.75,3.16,0.0,,STIRRUP_GEOMETRY_MISSING,old Urban priced the link path (assumed perimeter / legs); S5 keeps the mass blocked (Q6); counts S5 BLOCKED_UNQUANTIFIED / old 25
+GSO-176-7E6-1,GROUND_BEAM,STIRRUP_HOOK_1+2,BLOCKED_UNQUANTIFIED,0.0,,GB-048,3.75,0.0,7.483,,HOOK_MISSING,old Urban added a provisional hook / perimeter allowance; S5 has no hook source (Q6); counts S5 BLOCKED_UNQUANTIFIED / old 25
+GSO-176-7E6-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_1,BLOCKED_UNQUANTIFIED,0.0,,GB-048,3.75,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-176-7E6-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_2,BLOCKED_UNQUANTIFIED,0.0,,GB-048,3.75,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-177-7CD-1,GROUND_BEAM,TOP_MAIN,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-014,5.37,25.458,0.0,,DETAIL_APPLICABILITY_DIFFERENCE,concentrated load not excluded: S5 keeps the 'without concentrated load' detail blocked; old Urban applied it
+GSO-177-7CD-1,GROUND_BEAM,BOTTOM_ROW_1,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-014,5.37,25.458,0.0,,DETAIL_APPLICABILITY_DIFFERENCE,concentrated load not excluded: S5 keeps the 'without concentrated load' detail blocked; old Urban applied it
+GSO-177-7CD-1,GROUND_BEAM,BOTTOM_ROW_2,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-014,5.37,25.458,0.0,,DETAIL_APPLICABILITY_DIFFERENCE,concentrated load not excluded: S5 keeps the 'without concentrated load' detail blocked; old Urban applied it
+GSO-177-7CD-1,GROUND_BEAM,STIRRUP_CORE_PATH,BLOCKED_UNQUANTIFIED,0.0,,GB-014,5.37,4.551,0.0,,STIRRUP_GEOMETRY_MISSING,old Urban priced the link path (assumed perimeter / legs); S5 keeps the mass blocked (Q6); counts S5 BLOCKED_UNQUANTIFIED / old 36
+GSO-177-7CD-1,GROUND_BEAM,STIRRUP_HOOK_1+2,BLOCKED_UNQUANTIFIED,0.0,,GB-014,5.37,0.0,16.443,,HOOK_MISSING,old Urban added a provisional hook / perimeter allowance; S5 has no hook source (Q6); counts S5 BLOCKED_UNQUANTIFIED / old 36
+GSO-177-7CD-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_1,BLOCKED_UNQUANTIFIED,0.0,,GB-014,5.37,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-177-7CD-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_2,BLOCKED_UNQUANTIFIED,0.0,,GB-014,5.37,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-177-7CD-2,GROUND_BEAM,TOP_MAIN,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-015,1.887,0.0,6.848,,BAR_RUN_CONVENTION,S5 bar run withheld (length geometry conflict); old Urban used its span length
+GSO-177-7CD-2,GROUND_BEAM,BOTTOM_ROW_1,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-015,1.887,0.0,6.848,,BAR_RUN_CONVENTION,S5 bar run withheld (length geometry conflict); old Urban used its span length
+GSO-177-7CD-2,GROUND_BEAM,BOTTOM_ROW_2,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-015,1.887,0.0,6.848,,BAR_RUN_CONVENTION,S5 bar run withheld (length geometry conflict); old Urban used its span length
+GSO-177-7CD-2,GROUND_BEAM,STIRRUP_CORE_PATH,BLOCKED_UNQUANTIFIED,0.0,,GB-015,1.887,0.0,0.0,,SAME,no kg on either side
+GSO-177-7CD-2,GROUND_BEAM,STIRRUP_HOOK_1+2,BLOCKED_UNQUANTIFIED,0.0,,GB-015,1.887,0.0,3.54,,HOOK_MISSING,old Urban added a provisional hook / perimeter allowance; S5 has no hook source (Q6); counts S5 BLOCKED_UNQUANTIFIED / old 13
+GSO-177-7CD-2,GROUND_BEAM,DEVELOPMENT_SUPPORT_1,BLOCKED_UNQUANTIFIED,0.0,,GB-015,1.887,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-177-7CD-2,GROUND_BEAM,DEVELOPMENT_SUPPORT_2,BLOCKED_UNQUANTIFIED,0.0,,GB-015,1.887,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-178-7DB-1,GROUND_BEAM,TOP_MAIN,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-036,3.8,18.015,0.0,,DETAIL_APPLICABILITY_DIFFERENCE,candidate details differ: S5 chooses none; old Urban picked a primary
+GSO-178-7DB-1,GROUND_BEAM,BOTTOM_ROW_1,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-036,3.8,18.015,0.0,,DETAIL_APPLICABILITY_DIFFERENCE,candidate details differ: S5 chooses none; old Urban picked a primary
+GSO-178-7DB-1,GROUND_BEAM,BOTTOM_ROW_2,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-036,3.8,18.015,0.0,,DETAIL_APPLICABILITY_DIFFERENCE,candidate details differ: S5 chooses none; old Urban picked a primary
+GSO-178-7DB-1,GROUND_BEAM,STIRRUP_CORE_PATH,BLOCKED_UNQUANTIFIED,0.0,,GB-036,3.8,3.287,0.0,,STIRRUP_GEOMETRY_MISSING,old Urban priced the link path (assumed perimeter / legs); S5 keeps the mass blocked (Q6); counts S5 24 / old 26
+GSO-178-7DB-1,GROUND_BEAM,STIRRUP_HOOK_1+2,BLOCKED_UNQUANTIFIED,0.0,,GB-036,3.8,0.0,20.566,,HOOK_MISSING,old Urban added a provisional hook / perimeter allowance; S5 has no hook source (Q6); counts S5 24 / old 26
+GSO-178-7DB-1,GROUND_BEAM,SIDE_REBAR,BLOCKED_UNQUANTIFIED,0.0,,GB-036,3.8,0.0,13.511,,ASSUMED_COMPONENT,old Urban assumed a FOLLOW ARCH. depth for 2Ø12/30cm side bars; S5 keeps them blocked until the depth is source-established (Q2)
+GSO-178-7DB-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_1,BLOCKED_UNQUANTIFIED,0.0,,GB-036,3.8,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-178-7DB-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_2,BLOCKED_UNQUANTIFIED,0.0,,GB-036,3.8,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-17B-7E5-1,GROUND_BEAM,TOP_MAIN,LOWER_BOUND,3.811,1.05,GB-047,1.2,4.356,0.0,4.356,BAR_RUN_CONVENTION,same bars; old length 1.200 m vs S5 BAR_STRAIGHT_RUN_LOWER_BOUND 1.050 m
+GSO-17B-7E5-1,GROUND_BEAM,BOTTOM_ROW_1,LOWER_BOUND,3.811,1.05,GB-047,1.2,4.356,0.0,4.356,BAR_RUN_CONVENTION,same bars; old length 1.200 m vs S5 BAR_STRAIGHT_RUN_LOWER_BOUND 1.050 m
+GSO-17B-7E5-1,GROUND_BEAM,BOTTOM_ROW_2,LOWER_BOUND,3.811,1.05,GB-047,1.2,4.356,0.0,4.356,BAR_RUN_CONVENTION,same bars; old length 1.200 m vs S5 BAR_STRAIGHT_RUN_LOWER_BOUND 1.050 m
+GSO-17B-7E5-1,GROUND_BEAM,STIRRUP_CORE_PATH,BLOCKED_UNQUANTIFIED,0.0,,GB-047,1.2,0.0,0.0,,SAME,no kg on either side
+GSO-17B-7E5-1,GROUND_BEAM,STIRRUP_HOOK_1+2,BLOCKED_UNQUANTIFIED,0.0,,GB-047,1.2,0.0,2.276,,HOOK_MISSING,old Urban added a provisional hook / perimeter allowance; S5 has no hook source (Q6); counts S5 BLOCKED_UNQUANTIFIED / old 8
+GSO-17B-7E5-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_1,BLOCKED_UNQUANTIFIED,0.0,,GB-047,1.2,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-17B-7E5-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_2,BLOCKED_UNQUANTIFIED,0.0,,GB-047,1.2,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-17C-7E3-1,GROUND_BEAM,TOP_MAIN,LOWER_BOUND,6.998,1.928,GB-045,3.228,0.0,11.715,11.715,BAR_RUN_CONVENTION,same bars; old length 3.228 m vs S5 BAR_STRAIGHT_RUN_LOWER_BOUND 1.928 m
+GSO-17C-7E3-1,GROUND_BEAM,BOTTOM_ROW_1,LOWER_BOUND,6.998,1.928,GB-045,3.228,0.0,11.715,11.715,BAR_RUN_CONVENTION,same bars; old length 3.228 m vs S5 BAR_STRAIGHT_RUN_LOWER_BOUND 1.928 m
+GSO-17C-7E3-1,GROUND_BEAM,BOTTOM_ROW_2,LOWER_BOUND,6.998,1.928,GB-045,3.228,0.0,11.715,11.715,BAR_RUN_CONVENTION,same bars; old length 3.228 m vs S5 BAR_STRAIGHT_RUN_LOWER_BOUND 1.928 m
+GSO-17C-7E3-1,GROUND_BEAM,STIRRUP_CORE_PATH,BLOCKED_UNQUANTIFIED,0.0,,GB-045,3.228,2.781,0.0,,STIRRUP_GEOMETRY_MISSING,old Urban priced the link path (assumed perimeter / legs); S5 keeps the mass blocked (Q6); counts S5 BLOCKED_UNQUANTIFIED / old 22
+GSO-17C-7E3-1,GROUND_BEAM,STIRRUP_HOOK_1+2,BLOCKED_UNQUANTIFIED,0.0,,GB-045,3.228,0.0,6.635,,HOOK_MISSING,old Urban added a provisional hook / perimeter allowance; S5 has no hook source (Q6); counts S5 BLOCKED_UNQUANTIFIED / old 22
+GSO-17C-7E3-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_1,BLOCKED_UNQUANTIFIED,0.0,,GB-045,3.228,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-17C-7E3-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_2,BLOCKED_UNQUANTIFIED,0.0,,GB-045,3.228,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-17D-7E4-1,GROUND_BEAM,TOP_MAIN,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-046,4.272,15.507,0.0,,DETAIL_APPLICABILITY_DIFFERENCE,concentrated load not excluded: S5 keeps the 'without concentrated load' detail blocked; old Urban applied it
+GSO-17D-7E4-1,GROUND_BEAM,BOTTOM_ROW_1,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-046,4.272,15.507,0.0,,DETAIL_APPLICABILITY_DIFFERENCE,concentrated load not excluded: S5 keeps the 'without concentrated load' detail blocked; old Urban applied it
+GSO-17D-7E4-1,GROUND_BEAM,BOTTOM_ROW_2,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-046,4.272,15.507,0.0,,DETAIL_APPLICABILITY_DIFFERENCE,concentrated load not excluded: S5 keeps the 'without concentrated load' detail blocked; old Urban applied it
+GSO-17D-7E4-1,GROUND_BEAM,STIRRUP_CORE_PATH,BLOCKED_UNQUANTIFIED,0.0,,GB-046,4.272,9.624,0.0,,STIRRUP_GEOMETRY_MISSING,old Urban priced the link path (assumed perimeter / legs); S5 keeps the mass blocked (Q6); counts S5 BLOCKED_UNQUANTIFIED / old 29
+GSO-17D-7E4-1,GROUND_BEAM,STIRRUP_HOOK_1+2,BLOCKED_UNQUANTIFIED,0.0,,GB-046,4.272,0.0,2.658,,HOOK_MISSING,old Urban added a provisional hook / perimeter allowance; S5 has no hook source (Q6); counts S5 BLOCKED_UNQUANTIFIED / old 29
+GSO-17D-7E4-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_1,BLOCKED_UNQUANTIFIED,0.0,,GB-046,4.272,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-17D-7E4-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_2,BLOCKED_UNQUANTIFIED,0.0,,GB-046,4.272,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-17E-17F-1,GROUND_BEAM,TOP_MAIN,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-055,2.467,8.954,0.0,,DETAIL_APPLICABILITY_DIFFERENCE,concentrated load not excluded: S5 keeps the 'without concentrated load' detail blocked; old Urban applied it
+GSO-17E-17F-1,GROUND_BEAM,BOTTOM_ROW_1,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-055,2.467,8.954,0.0,,DETAIL_APPLICABILITY_DIFFERENCE,concentrated load not excluded: S5 keeps the 'without concentrated load' detail blocked; old Urban applied it
+GSO-17E-17F-1,GROUND_BEAM,BOTTOM_ROW_2,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-055,2.467,8.954,0.0,,DETAIL_APPLICABILITY_DIFFERENCE,concentrated load not excluded: S5 keeps the 'without concentrated load' detail blocked; old Urban applied it
+GSO-17E-17F-1,GROUND_BEAM,STIRRUP_CORE_PATH,BLOCKED_UNQUANTIFIED,0.0,,GB-055,2.467,0.0,0.0,,SAME,no kg on either side
+GSO-17E-17F-1,GROUND_BEAM,STIRRUP_HOOK_1+2,BLOCKED_UNQUANTIFIED,0.0,,GB-055,2.467,0.0,4.551,,HOOK_MISSING,old Urban added a provisional hook / perimeter allowance; S5 has no hook source (Q6); counts S5 BLOCKED_UNQUANTIFIED / old 17
+GSO-17E-17F-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_1,BLOCKED_UNQUANTIFIED,0.0,,GB-055,2.467,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-17E-17F-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_2,BLOCKED_UNQUANTIFIED,0.0,,GB-055,2.467,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-180-181-1,GROUND_BEAM,TOP_MAIN,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-056,0.789,2.864,0.0,,BAR_RUN_CONVENTION,S5 bar run withheld (length geometry conflict); old Urban used its span length
+GSO-180-181-1,GROUND_BEAM,BOTTOM_ROW_1,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-056,0.789,2.864,0.0,,BAR_RUN_CONVENTION,S5 bar run withheld (length geometry conflict); old Urban used its span length
+GSO-180-181-1,GROUND_BEAM,BOTTOM_ROW_2,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-056,0.789,2.864,0.0,,BAR_RUN_CONVENTION,S5 bar run withheld (length geometry conflict); old Urban used its span length
+GSO-180-181-1,GROUND_BEAM,STIRRUP_CORE_PATH,BLOCKED_UNQUANTIFIED,0.0,,GB-056,0.789,0.0,0.0,,SAME,no kg on either side
+GSO-180-181-1,GROUND_BEAM,STIRRUP_HOOK_1+2,BLOCKED_UNQUANTIFIED,0.0,,GB-056,0.789,0.0,1.77,,HOOK_MISSING,old Urban added a provisional hook / perimeter allowance; S5 has no hook source (Q6); counts S5 BLOCKED_UNQUANTIFIED / old 6
+GSO-180-181-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_1,BLOCKED_UNQUANTIFIED,0.0,,GB-056,0.789,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-180-181-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_2,BLOCKED_UNQUANTIFIED,0.0,,GB-056,0.789,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-180D-180E-1,GROUND_BEAM,TOP_MAIN,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-058,2.1,7.622,0.0,,DETAIL_APPLICABILITY_DIFFERENCE,candidate details differ: S5 chooses none; old Urban picked a primary
+GSO-180D-180E-1,GROUND_BEAM,BOTTOM_ROW_1,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-058,2.1,7.622,0.0,,DETAIL_APPLICABILITY_DIFFERENCE,candidate details differ: S5 chooses none; old Urban picked a primary
+GSO-180D-180E-1,GROUND_BEAM,BOTTOM_ROW_2,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-058,2.1,7.622,0.0,,DETAIL_APPLICABILITY_DIFFERENCE,candidate details differ: S5 chooses none; old Urban picked a primary
+GSO-180D-180E-1,GROUND_BEAM,STIRRUP_CORE_PATH,BLOCKED_UNQUANTIFIED,0.0,,GB-058,2.1,0.0,0.0,,SAME,no kg on either side
+GSO-180D-180E-1,GROUND_BEAM,STIRRUP_HOOK_1+2,BLOCKED_UNQUANTIFIED,0.0,,GB-058,2.1,0.0,3.793,,HOOK_MISSING,old Urban added a provisional hook / perimeter allowance; S5 has no hook source (Q6); counts S5 BLOCKED_UNQUANTIFIED / old 14
+GSO-180D-180E-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_1,BLOCKED_UNQUANTIFIED,0.0,,GB-058,2.1,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-180D-180E-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_2,BLOCKED_UNQUANTIFIED,0.0,,GB-058,2.1,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-1811-1812-1,GROUND_BEAM,TOP_MAIN,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-059,1.3,0.0,6.163,,DETAIL_APPLICABILITY_DIFFERENCE,candidate details differ: S5 chooses none; old Urban picked a primary
+GSO-1811-1812-1,GROUND_BEAM,BOTTOM_ROW_1,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-059,1.3,0.0,6.163,,DETAIL_APPLICABILITY_DIFFERENCE,candidate details differ: S5 chooses none; old Urban picked a primary
+GSO-1811-1812-1,GROUND_BEAM,BOTTOM_ROW_2,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-059,1.3,0.0,6.163,,DETAIL_APPLICABILITY_DIFFERENCE,candidate details differ: S5 chooses none; old Urban picked a primary
+GSO-1811-1812-1,GROUND_BEAM,STIRRUP_CORE_PATH,BLOCKED_UNQUANTIFIED,0.0,,GB-059,1.3,0.0,0.0,,SAME,no kg on either side
+GSO-1811-1812-1,GROUND_BEAM,STIRRUP_HOOK_1+2,BLOCKED_UNQUANTIFIED,0.0,,GB-059,1.3,0.0,8.059,,HOOK_MISSING,old Urban added a provisional hook / perimeter allowance; S5 has no hook source (Q6); counts S5 BLOCKED_UNQUANTIFIED / old 9
+GSO-1811-1812-1,GROUND_BEAM,SIDE_REBAR,BLOCKED_UNQUANTIFIED,0.0,,GB-059,1.3,0.0,4.622,,ASSUMED_COMPONENT,old Urban assumed a FOLLOW ARCH. depth for 2Ø12/30cm side bars; S5 keeps them blocked until the depth is source-established (Q2)
+GSO-1811-1812-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_1,BLOCKED_UNQUANTIFIED,0.0,,GB-059,1.3,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-1811-1812-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_2,BLOCKED_UNQUANTIFIED,0.0,,GB-059,1.3,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-182-183-1,GROUND_BEAM,TOP_MAIN,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-057,2.073,7.525,0.0,,BAR_RUN_CONVENTION,S5 bar run withheld (length geometry conflict); old Urban used its span length
+GSO-182-183-1,GROUND_BEAM,BOTTOM_ROW_1,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-057,2.073,7.525,0.0,,BAR_RUN_CONVENTION,S5 bar run withheld (length geometry conflict); old Urban used its span length
+GSO-182-183-1,GROUND_BEAM,BOTTOM_ROW_2,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-057,2.073,7.525,0.0,,BAR_RUN_CONVENTION,S5 bar run withheld (length geometry conflict); old Urban used its span length
+GSO-182-183-1,GROUND_BEAM,STIRRUP_CORE_PATH,BLOCKED_UNQUANTIFIED,0.0,,GB-057,2.073,0.0,0.0,,SAME,no kg on either side
+GSO-182-183-1,GROUND_BEAM,STIRRUP_HOOK_1+2,BLOCKED_UNQUANTIFIED,0.0,,GB-057,2.073,0.0,3.793,,HOOK_MISSING,old Urban added a provisional hook / perimeter allowance; S5 has no hook source (Q6); counts S5 BLOCKED_UNQUANTIFIED / old 14
+GSO-182-183-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_1,BLOCKED_UNQUANTIFIED,0.0,,GB-057,2.073,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-182-183-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_2,BLOCKED_UNQUANTIFIED,0.0,,GB-057,2.073,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-184-7CF-1,GROUND_BEAM,TOP_MAIN,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-018,3.27,11.869,0.0,,DETAIL_APPLICABILITY_DIFFERENCE,concentrated load not excluded: S5 keeps the 'without concentrated load' detail blocked; old Urban applied it
+GSO-184-7CF-1,GROUND_BEAM,BOTTOM_ROW_1,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-018,3.27,11.869,0.0,,DETAIL_APPLICABILITY_DIFFERENCE,concentrated load not excluded: S5 keeps the 'without concentrated load' detail blocked; old Urban applied it
+GSO-184-7CF-1,GROUND_BEAM,BOTTOM_ROW_2,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-018,3.27,11.869,0.0,,DETAIL_APPLICABILITY_DIFFERENCE,concentrated load not excluded: S5 keeps the 'without concentrated load' detail blocked; old Urban applied it
+GSO-184-7CF-1,GROUND_BEAM,STIRRUP_CORE_PATH,BLOCKED_UNQUANTIFIED,0.0,,GB-018,3.27,7.301,0.0,,STIRRUP_GEOMETRY_MISSING,old Urban priced the link path (assumed perimeter / legs); S5 keeps the mass blocked (Q6); counts S5 BLOCKED_UNQUANTIFIED / old 22
+GSO-184-7CF-1,GROUND_BEAM,STIRRUP_HOOK_1+2,BLOCKED_UNQUANTIFIED,0.0,,GB-018,3.27,0.0,2.115,,HOOK_MISSING,old Urban added a provisional hook / perimeter allowance; S5 has no hook source (Q6); counts S5 BLOCKED_UNQUANTIFIED / old 22
+GSO-184-7CF-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_1,BLOCKED_UNQUANTIFIED,0.0,,GB-018,3.27,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-184-7CF-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_2,BLOCKED_UNQUANTIFIED,0.0,,GB-018,3.27,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-184-7CF-2,GROUND_BEAM,TOP_MAIN,LOWER_BOUND,11.07,3.05,GB-019,3.05,11.07,0.0,11.07,SAME,
+GSO-184-7CF-2,GROUND_BEAM,BOTTOM_ROW_1,LOWER_BOUND,11.07,3.05,GB-019,3.05,11.07,0.0,11.07,SAME,
+GSO-184-7CF-2,GROUND_BEAM,BOTTOM_ROW_2,LOWER_BOUND,11.07,3.05,GB-019,3.05,11.07,0.0,11.07,SAME,
+GSO-184-7CF-2,GROUND_BEAM,STIRRUP_CORE_PATH,BLOCKED_UNQUANTIFIED,0.0,,GB-019,3.05,6.969,0.0,,STIRRUP_GEOMETRY_MISSING,old Urban priced the link path (assumed perimeter / legs); S5 keeps the mass blocked (Q6); counts S5 21 / old 21
+GSO-184-7CF-2,GROUND_BEAM,STIRRUP_HOOK_1+2,BLOCKED_UNQUANTIFIED,0.0,,GB-019,3.05,0.0,2.038,,HOOK_MISSING,old Urban added a provisional hook / perimeter allowance; S5 has no hook source (Q6); counts S5 21 / old 21
+GSO-184-7CF-2,GROUND_BEAM,DEVELOPMENT_SUPPORT_1,BLOCKED_UNQUANTIFIED,0.0,,GB-019,3.05,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-184-7CF-2,GROUND_BEAM,DEVELOPMENT_SUPPORT_2,BLOCKED_UNQUANTIFIED,0.0,,GB-019,3.05,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-184-7CF-3,GROUND_BEAM,TOP_MAIN,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-017,5.15,24.415,0.0,,DETAIL_APPLICABILITY_DIFFERENCE,concentrated load not excluded: S5 keeps the 'without concentrated load' detail blocked; old Urban applied it
+GSO-184-7CF-3,GROUND_BEAM,BOTTOM_ROW_1,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-017,5.15,24.415,0.0,,DETAIL_APPLICABILITY_DIFFERENCE,concentrated load not excluded: S5 keeps the 'without concentrated load' detail blocked; old Urban applied it
+GSO-184-7CF-3,GROUND_BEAM,BOTTOM_ROW_2,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-017,5.15,24.415,0.0,,DETAIL_APPLICABILITY_DIFFERENCE,concentrated load not excluded: S5 keeps the 'without concentrated load' detail blocked; old Urban applied it
+GSO-184-7CF-3,GROUND_BEAM,STIRRUP_CORE_PATH,BLOCKED_UNQUANTIFIED,0.0,,GB-017,5.15,4.425,0.0,,STIRRUP_GEOMETRY_MISSING,old Urban priced the link path (assumed perimeter / legs); S5 keeps the mass blocked (Q6); counts S5 BLOCKED_UNQUANTIFIED / old 35
+GSO-184-7CF-3,GROUND_BEAM,STIRRUP_HOOK_1+2,BLOCKED_UNQUANTIFIED,0.0,,GB-017,5.15,0.0,16.002,,HOOK_MISSING,old Urban added a provisional hook / perimeter allowance; S5 has no hook source (Q6); counts S5 BLOCKED_UNQUANTIFIED / old 35
+GSO-184-7CF-3,GROUND_BEAM,DEVELOPMENT_SUPPORT_1,BLOCKED_UNQUANTIFIED,0.0,,GB-017,5.15,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-184-7CF-3,GROUND_BEAM,DEVELOPMENT_SUPPORT_2,BLOCKED_UNQUANTIFIED,0.0,,GB-017,5.15,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-185-7C7-1,GROUND_BEAM,TOP_MAIN,LOWER_BOUND,4.03,0.85,GB-006,0.85,4.03,0.0,4.03,SAME,
+GSO-185-7C7-1,GROUND_BEAM,BOTTOM_ROW_1,LOWER_BOUND,4.03,0.85,GB-006,0.85,4.03,0.0,4.03,SAME,
+GSO-185-7C7-1,GROUND_BEAM,BOTTOM_ROW_2,LOWER_BOUND,4.03,0.85,GB-006,0.85,4.03,0.0,4.03,SAME,
+GSO-185-7C7-1,GROUND_BEAM,STIRRUP_CORE_PATH,BLOCKED_UNQUANTIFIED,0.0,,GB-006,0.85,0.759,0.0,,STIRRUP_GEOMETRY_MISSING,old Urban priced the link path (assumed perimeter / legs); S5 keeps the mass blocked (Q6); counts S5 6 / old 6
+GSO-185-7C7-1,GROUND_BEAM,STIRRUP_HOOK_1+2,BLOCKED_UNQUANTIFIED,0.0,,GB-006,0.85,0.0,5.426,,HOOK_MISSING,old Urban added a provisional hook / perimeter allowance; S5 has no hook source (Q6); counts S5 6 / old 6
+GSO-185-7C7-1,GROUND_BEAM,SIDE_REBAR,BLOCKED_UNQUANTIFIED,0.0,,GB-006,0.85,0.0,3.022,,ASSUMED_COMPONENT,old Urban assumed a FOLLOW ARCH. depth for 2Ø12/30cm side bars; S5 keeps them blocked until the depth is source-established (Q2)
+GSO-185-7C7-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_1,BLOCKED_UNQUANTIFIED,0.0,,GB-006,0.85,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-185-7C7-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_2,BLOCKED_UNQUANTIFIED,0.0,,GB-006,0.85,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-7D0-FC-1,GROUND_BEAM,TOP_MAIN,LOWER_BOUND,16.0,3.375,GB-022,3.375,16.0,0.0,16.0,SAME,
+GSO-7D0-FC-1,GROUND_BEAM,BOTTOM_ROW_1,LOWER_BOUND,16.0,3.375,GB-022,3.375,16.0,0.0,16.0,SAME,
+GSO-7D0-FC-1,GROUND_BEAM,BOTTOM_ROW_2,LOWER_BOUND,16.0,3.375,GB-022,3.375,16.0,0.0,16.0,SAME,
+GSO-7D0-FC-1,GROUND_BEAM,STIRRUP_CORE_PATH,BLOCKED_UNQUANTIFIED,0.0,,GB-022,3.375,2.908,0.0,,STIRRUP_GEOMETRY_MISSING,old Urban priced the link path (assumed perimeter / legs); S5 keeps the mass blocked (Q6); counts S5 23 / old 23
+GSO-7D0-FC-1,GROUND_BEAM,STIRRUP_HOOK_1+2,BLOCKED_UNQUANTIFIED,0.0,,GB-022,3.375,0.0,18.295,,HOOK_MISSING,old Urban added a provisional hook / perimeter allowance; S5 has no hook source (Q6); counts S5 23 / old 23
+GSO-7D0-FC-1,GROUND_BEAM,SIDE_REBAR,BLOCKED_UNQUANTIFIED,0.0,,GB-022,3.375,0.0,12.0,,ASSUMED_COMPONENT,old Urban assumed a FOLLOW ARCH. depth for 2Ø12/30cm side bars; S5 keeps them blocked until the depth is source-established (Q2)
+GSO-7D0-FC-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_1,BLOCKED_UNQUANTIFIED,0.0,,GB-022,3.375,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-7D0-FC-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_2,BLOCKED_UNQUANTIFIED,0.0,,GB-022,3.375,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-7D0-FC-2,GROUND_BEAM,TOP_MAIN,LOWER_BOUND,29.606,6.245,GB-021,6.245,29.606,0.0,29.606,SAME,
+GSO-7D0-FC-2,GROUND_BEAM,BOTTOM_ROW_1,LOWER_BOUND,29.606,6.245,GB-021,6.245,29.606,0.0,29.606,SAME,
+GSO-7D0-FC-2,GROUND_BEAM,BOTTOM_ROW_2,LOWER_BOUND,29.606,6.245,GB-021,6.245,29.606,0.0,29.606,SAME,
+GSO-7D0-FC-2,GROUND_BEAM,STIRRUP_CORE_PATH,BLOCKED_UNQUANTIFIED,0.0,,GB-021,6.245,5.31,0.0,,STIRRUP_GEOMETRY_MISSING,old Urban priced the link path (assumed perimeter / legs); S5 keeps the mass blocked (Q6); counts S5 42 / old 42
+GSO-7D0-FC-2,GROUND_BEAM,STIRRUP_HOOK_1+2,BLOCKED_UNQUANTIFIED,0.0,,GB-021,6.245,0.0,32.679,,HOOK_MISSING,old Urban added a provisional hook / perimeter allowance; S5 has no hook source (Q6); counts S5 42 / old 42
+GSO-7D0-FC-2,GROUND_BEAM,SIDE_REBAR,BLOCKED_UNQUANTIFIED,0.0,,GB-021,6.245,0.0,22.204,,ASSUMED_COMPONENT,old Urban assumed a FOLLOW ARCH. depth for 2Ø12/30cm side bars; S5 keeps them blocked until the depth is source-established (Q2)
+GSO-7D0-FC-2,GROUND_BEAM,DEVELOPMENT_SUPPORT_1,BLOCKED_UNQUANTIFIED,0.0,,GB-021,6.245,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-7D0-FC-2,GROUND_BEAM,DEVELOPMENT_SUPPORT_2,BLOCKED_UNQUANTIFIED,0.0,,GB-021,6.245,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-7D0-FC-3,GROUND_BEAM,TOP_MAIN,LOWER_BOUND,31.526,6.65,GB-020,6.65,31.526,0.0,31.526,SAME,
+GSO-7D0-FC-3,GROUND_BEAM,BOTTOM_ROW_1,LOWER_BOUND,31.526,6.65,GB-020,6.65,31.526,0.0,31.526,SAME,
+GSO-7D0-FC-3,GROUND_BEAM,BOTTOM_ROW_2,LOWER_BOUND,31.526,6.65,GB-020,6.65,31.526,0.0,31.526,SAME,
+GSO-7D0-FC-3,GROUND_BEAM,STIRRUP_CORE_PATH,BLOCKED_UNQUANTIFIED,0.0,,GB-020,6.65,5.689,0.0,,STIRRUP_GEOMETRY_MISSING,old Urban priced the link path (assumed perimeter / legs); S5 keeps the mass blocked (Q6); counts S5 45 / old 45
+GSO-7D0-FC-3,GROUND_BEAM,STIRRUP_HOOK_1+2,BLOCKED_UNQUANTIFIED,0.0,,GB-020,6.65,0.0,34.95,,HOOK_MISSING,old Urban added a provisional hook / perimeter allowance; S5 has no hook source (Q6); counts S5 45 / old 45
+GSO-7D0-FC-3,GROUND_BEAM,SIDE_REBAR,BLOCKED_UNQUANTIFIED,0.0,,GB-020,6.65,0.0,23.644,,ASSUMED_COMPONENT,old Urban assumed a FOLLOW ARCH. depth for 2Ø12/30cm side bars; S5 keeps them blocked until the depth is source-established (Q2)
+GSO-7D0-FC-3,GROUND_BEAM,DEVELOPMENT_SUPPORT_1,BLOCKED_UNQUANTIFIED,0.0,,GB-020,6.65,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-7D0-FC-3,GROUND_BEAM,DEVELOPMENT_SUPPORT_2,BLOCKED_UNQUANTIFIED,0.0,,GB-020,6.65,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-7D0-FC-4,GROUND_BEAM,TOP_MAIN,LOWER_BOUND,6.637,1.4,GB-023,1.4,6.637,0.0,6.637,SAME,
+GSO-7D0-FC-4,GROUND_BEAM,BOTTOM_ROW_1,LOWER_BOUND,6.637,1.4,GB-023,1.4,6.637,0.0,6.637,SAME,
+GSO-7D0-FC-4,GROUND_BEAM,BOTTOM_ROW_2,LOWER_BOUND,6.637,1.4,GB-023,1.4,6.637,0.0,6.637,SAME,
+GSO-7D0-FC-4,GROUND_BEAM,STIRRUP_CORE_PATH,BLOCKED_UNQUANTIFIED,0.0,,GB-023,1.4,1.264,0.0,,STIRRUP_GEOMETRY_MISSING,old Urban priced the link path (assumed perimeter / legs); S5 keeps the mass blocked (Q6); counts S5 10 / old 10
+GSO-7D0-FC-4,GROUND_BEAM,STIRRUP_HOOK_1+2,BLOCKED_UNQUANTIFIED,0.0,,GB-023,1.4,0.0,8.454,,HOOK_MISSING,old Urban added a provisional hook / perimeter allowance; S5 has no hook source (Q6); counts S5 10 / old 10
+GSO-7D0-FC-4,GROUND_BEAM,SIDE_REBAR,BLOCKED_UNQUANTIFIED,0.0,,GB-023,1.4,0.0,4.978,,ASSUMED_COMPONENT,old Urban assumed a FOLLOW ARCH. depth for 2Ø12/30cm side bars; S5 keeps them blocked until the depth is source-established (Q2)
+GSO-7D0-FC-4,GROUND_BEAM,DEVELOPMENT_SUPPORT_1,BLOCKED_UNQUANTIFIED,0.0,,GB-023,1.4,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-7D0-FC-4,GROUND_BEAM,DEVELOPMENT_SUPPORT_2,BLOCKED_UNQUANTIFIED,0.0,,GB-023,1.4,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-7D4-F8-1,GROUND_BEAM,TOP_MAIN,LOWER_BOUND,26.074,5.5,GB-028,5.53,26.216,0.0,26.216,BAR_RUN_CONVENTION,same bars; old length 5.530 m vs S5 BAR_STRAIGHT_RUN_LOWER_BOUND 5.500 m
+GSO-7D4-F8-1,GROUND_BEAM,BOTTOM_ROW_1,LOWER_BOUND,26.074,5.5,GB-028,5.53,26.216,0.0,26.216,BAR_RUN_CONVENTION,same bars; old length 5.530 m vs S5 BAR_STRAIGHT_RUN_LOWER_BOUND 5.500 m
+GSO-7D4-F8-1,GROUND_BEAM,BOTTOM_ROW_2,LOWER_BOUND,26.074,5.5,GB-028,5.53,26.216,0.0,26.216,BAR_RUN_CONVENTION,same bars; old length 5.530 m vs S5 BAR_STRAIGHT_RUN_LOWER_BOUND 5.500 m
+GSO-7D4-F8-1,GROUND_BEAM,STIRRUP_CORE_PATH,BLOCKED_UNQUANTIFIED,0.0,,GB-028,5.53,4.678,0.0,,STIRRUP_GEOMETRY_MISSING,old Urban priced the link path (assumed perimeter / legs); S5 keeps the mass blocked (Q6); counts S5 37 / old 37
+GSO-7D4-F8-1,GROUND_BEAM,STIRRUP_HOOK_1+2,BLOCKED_UNQUANTIFIED,0.0,,GB-028,5.53,0.0,28.894,,HOOK_MISSING,old Urban added a provisional hook / perimeter allowance; S5 has no hook source (Q6); counts S5 37 / old 37
+GSO-7D4-F8-1,GROUND_BEAM,SIDE_REBAR,BLOCKED_UNQUANTIFIED,0.0,,GB-028,5.53,0.0,19.662,,ASSUMED_COMPONENT,old Urban assumed a FOLLOW ARCH. depth for 2Ø12/30cm side bars; S5 keeps them blocked until the depth is source-established (Q2)
+GSO-7D4-F8-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_1,BLOCKED_UNQUANTIFIED,0.0,,GB-028,5.53,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-7D4-F8-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_2,BLOCKED_UNQUANTIFIED,0.0,,GB-028,5.53,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-7D4-F8-2,GROUND_BEAM,TOP_MAIN,LOWER_BOUND,20.385,4.3,GB-029,4.3,0.0,20.385,20.385,SAME,"same kg; old Urban held it PROVISIONAL (ambiguous governing detail), S5 releases it as a LOWER_BOUND only because the bars are identical in every candidate"
+GSO-7D4-F8-2,GROUND_BEAM,BOTTOM_ROW_1,LOWER_BOUND,20.385,4.3,GB-029,4.3,0.0,20.385,20.385,SAME,"same kg; old Urban held it PROVISIONAL (ambiguous governing detail), S5 releases it as a LOWER_BOUND only because the bars are identical in every candidate"
+GSO-7D4-F8-2,GROUND_BEAM,BOTTOM_ROW_2,LOWER_BOUND,20.385,4.3,GB-029,4.3,0.0,20.385,20.385,SAME,"same kg; old Urban held it PROVISIONAL (ambiguous governing detail), S5 releases it as a LOWER_BOUND only because the bars are identical in every candidate"
+GSO-7D4-F8-2,GROUND_BEAM,STIRRUP_CORE_PATH,BLOCKED_UNQUANTIFIED,0.0,,GB-029,4.3,3.666,0.0,,STIRRUP_GEOMETRY_MISSING,old Urban priced the link path (assumed perimeter / legs); S5 keeps the mass blocked (Q6); counts S5 29 / old 29
+GSO-7D4-F8-2,GROUND_BEAM,STIRRUP_HOOK_1+2,BLOCKED_UNQUANTIFIED,0.0,,GB-029,4.3,0.0,22.838,,HOOK_MISSING,old Urban added a provisional hook / perimeter allowance; S5 has no hook source (Q6); counts S5 29 / old 29
+GSO-7D4-F8-2,GROUND_BEAM,SIDE_REBAR,BLOCKED_UNQUANTIFIED,0.0,,GB-029,4.3,0.0,15.289,,ASSUMED_COMPONENT,old Urban assumed a FOLLOW ARCH. depth for 2Ø12/30cm side bars; S5 keeps them blocked until the depth is source-established (Q2)
+GSO-7D4-F8-2,GROUND_BEAM,DEVELOPMENT_SUPPORT_1,BLOCKED_UNQUANTIFIED,0.0,,GB-029,4.3,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-7D4-F8-2,GROUND_BEAM,DEVELOPMENT_SUPPORT_2,BLOCKED_UNQUANTIFIED,0.0,,GB-029,4.3,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-7DC-7DD-1,GROUND_BEAM,TOP_MAIN,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-037,3.525,0.0,12.794,,DETAIL_APPLICABILITY_DIFFERENCE,concentrated load not excluded: S5 keeps the 'without concentrated load' detail blocked; old Urban applied it
+GSO-7DC-7DD-1,GROUND_BEAM,BOTTOM_ROW_1,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-037,3.525,0.0,12.794,,DETAIL_APPLICABILITY_DIFFERENCE,concentrated load not excluded: S5 keeps the 'without concentrated load' detail blocked; old Urban applied it
+GSO-7DC-7DD-1,GROUND_BEAM,BOTTOM_ROW_2,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-037,3.525,0.0,12.794,,DETAIL_APPLICABILITY_DIFFERENCE,concentrated load not excluded: S5 keeps the 'without concentrated load' detail blocked; old Urban applied it
+GSO-7DC-7DD-1,GROUND_BEAM,STIRRUP_CORE_PATH,BLOCKED_UNQUANTIFIED,0.0,,GB-037,3.525,3.034,0.0,,STIRRUP_GEOMETRY_MISSING,old Urban priced the link path (assumed perimeter / legs); S5 keeps the mass blocked (Q6); counts S5 BLOCKED_UNQUANTIFIED / old 24
+GSO-7DC-7DD-1,GROUND_BEAM,STIRRUP_HOOK_1+2,BLOCKED_UNQUANTIFIED,0.0,,GB-037,3.525,0.0,7.2,,HOOK_MISSING,old Urban added a provisional hook / perimeter allowance; S5 has no hook source (Q6); counts S5 BLOCKED_UNQUANTIFIED / old 24
+GSO-7DC-7DD-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_1,BLOCKED_UNQUANTIFIED,0.0,,GB-037,3.525,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-7DC-7DD-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_2,BLOCKED_UNQUANTIFIED,0.0,,GB-037,3.525,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-7DC-7DD-2,GROUND_BEAM,TOP_MAIN,LOWER_BOUND,12.794,3.525,GB-038,3.525,0.0,12.794,12.794,SAME,"same kg; old Urban held it PROVISIONAL (ambiguous governing detail), S5 releases it as a LOWER_BOUND only because the bars are identical in every candidate"
+GSO-7DC-7DD-2,GROUND_BEAM,BOTTOM_ROW_1,LOWER_BOUND,12.794,3.525,GB-038,3.525,0.0,12.794,12.794,SAME,"same kg; old Urban held it PROVISIONAL (ambiguous governing detail), S5 releases it as a LOWER_BOUND only because the bars are identical in every candidate"
+GSO-7DC-7DD-2,GROUND_BEAM,BOTTOM_ROW_2,LOWER_BOUND,12.794,3.525,GB-038,3.525,0.0,12.794,12.794,SAME,"same kg; old Urban held it PROVISIONAL (ambiguous governing detail), S5 releases it as a LOWER_BOUND only because the bars are identical in every candidate"
+GSO-7DC-7DD-2,GROUND_BEAM,STIRRUP_CORE_PATH,BLOCKED_UNQUANTIFIED,0.0,,GB-038,3.525,3.034,0.0,,STIRRUP_GEOMETRY_MISSING,old Urban priced the link path (assumed perimeter / legs); S5 keeps the mass blocked (Q6); counts S5 24 / old 24
+GSO-7DC-7DD-2,GROUND_BEAM,STIRRUP_HOOK_1+2,BLOCKED_UNQUANTIFIED,0.0,,GB-038,3.525,0.0,7.2,,HOOK_MISSING,old Urban added a provisional hook / perimeter allowance; S5 has no hook source (Q6); counts S5 24 / old 24
+GSO-7DC-7DD-2,GROUND_BEAM,DEVELOPMENT_SUPPORT_1,BLOCKED_UNQUANTIFIED,0.0,,GB-038,3.525,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-7DC-7DD-2,GROUND_BEAM,DEVELOPMENT_SUPPORT_2,BLOCKED_UNQUANTIFIED,0.0,,GB-038,3.525,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-7E0-FD-1,GROUND_BEAM,TOP_MAIN,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-042,3.85,18.252,0.0,,BAR_RUN_CONVENTION,S5 bar run withheld (length geometry conflict); old Urban used its span length
+GSO-7E0-FD-1,GROUND_BEAM,BOTTOM_ROW_1,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-042,3.85,18.252,0.0,,BAR_RUN_CONVENTION,S5 bar run withheld (length geometry conflict); old Urban used its span length
+GSO-7E0-FD-1,GROUND_BEAM,BOTTOM_ROW_2,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-042,3.85,18.252,0.0,,BAR_RUN_CONVENTION,S5 bar run withheld (length geometry conflict); old Urban used its span length
+GSO-7E0-FD-1,GROUND_BEAM,STIRRUP_CORE_PATH,BLOCKED_UNQUANTIFIED,0.0,,GB-042,3.85,3.287,0.0,,STIRRUP_GEOMETRY_MISSING,old Urban priced the link path (assumed perimeter / legs); S5 keeps the mass blocked (Q6); counts S5 BLOCKED_UNQUANTIFIED / old 26
+GSO-7E0-FD-1,GROUND_BEAM,STIRRUP_HOOK_1+2,BLOCKED_UNQUANTIFIED,0.0,,GB-042,3.85,0.0,20.566,,HOOK_MISSING,old Urban added a provisional hook / perimeter allowance; S5 has no hook source (Q6); counts S5 BLOCKED_UNQUANTIFIED / old 26
+GSO-7E0-FD-1,GROUND_BEAM,SIDE_REBAR,BLOCKED_UNQUANTIFIED,0.0,,GB-042,3.85,0.0,13.689,,ASSUMED_COMPONENT,old Urban assumed a FOLLOW ARCH. depth for 2Ø12/30cm side bars; S5 keeps them blocked until the depth is source-established (Q2)
+GSO-7E0-FD-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_1,BLOCKED_UNQUANTIFIED,0.0,,GB-042,3.85,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-7E0-FD-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_2,BLOCKED_UNQUANTIFIED,0.0,,GB-042,3.85,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-7E0-FD-2,GROUND_BEAM,TOP_MAIN,LOWER_BOUND,15.407,3.25,GB-043,3.25,15.407,0.0,15.407,SAME,
+GSO-7E0-FD-2,GROUND_BEAM,BOTTOM_ROW_1,LOWER_BOUND,15.407,3.25,GB-043,3.25,15.407,0.0,15.407,SAME,
+GSO-7E0-FD-2,GROUND_BEAM,BOTTOM_ROW_2,LOWER_BOUND,15.407,3.25,GB-043,3.25,15.407,0.0,15.407,SAME,
+GSO-7E0-FD-2,GROUND_BEAM,STIRRUP_CORE_PATH,BLOCKED_UNQUANTIFIED,0.0,,GB-043,3.25,2.781,0.0,,STIRRUP_GEOMETRY_MISSING,old Urban priced the link path (assumed perimeter / legs); S5 keeps the mass blocked (Q6); counts S5 22 / old 22
+GSO-7E0-FD-2,GROUND_BEAM,STIRRUP_HOOK_1+2,BLOCKED_UNQUANTIFIED,0.0,,GB-043,3.25,0.0,17.538,,HOOK_MISSING,old Urban added a provisional hook / perimeter allowance; S5 has no hook source (Q6); counts S5 22 / old 22
+GSO-7E0-FD-2,GROUND_BEAM,SIDE_REBAR,BLOCKED_UNQUANTIFIED,0.0,,GB-043,3.25,0.0,11.556,,ASSUMED_COMPONENT,old Urban assumed a FOLLOW ARCH. depth for 2Ø12/30cm side bars; S5 keeps them blocked until the depth is source-established (Q2)
+GSO-7E0-FD-2,GROUND_BEAM,DEVELOPMENT_SUPPORT_1,BLOCKED_UNQUANTIFIED,0.0,,GB-043,3.25,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-7E0-FD-2,GROUND_BEAM,DEVELOPMENT_SUPPORT_2,BLOCKED_UNQUANTIFIED,0.0,,GB-043,3.25,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-7E1-7E2-1,GROUND_BEAM,TOP_MAIN,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-044,6.72,31.858,0.0,,DETAIL_APPLICABILITY_DIFFERENCE,concentrated load not excluded: S5 keeps the 'without concentrated load' detail blocked; old Urban applied it
+GSO-7E1-7E2-1,GROUND_BEAM,BOTTOM_ROW_1,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-044,6.72,31.858,0.0,,DETAIL_APPLICABILITY_DIFFERENCE,concentrated load not excluded: S5 keeps the 'without concentrated load' detail blocked; old Urban applied it
+GSO-7E1-7E2-1,GROUND_BEAM,BOTTOM_ROW_2,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-044,6.72,31.858,0.0,,DETAIL_APPLICABILITY_DIFFERENCE,concentrated load not excluded: S5 keeps the 'without concentrated load' detail blocked; old Urban applied it
+GSO-7E1-7E2-1,GROUND_BEAM,STIRRUP_CORE_PATH,BLOCKED_UNQUANTIFIED,0.0,,GB-044,6.72,5.689,0.0,,STIRRUP_GEOMETRY_MISSING,old Urban priced the link path (assumed perimeter / legs); S5 keeps the mass blocked (Q6); counts S5 BLOCKED_UNQUANTIFIED / old 45
+GSO-7E1-7E2-1,GROUND_BEAM,STIRRUP_HOOK_1+2,BLOCKED_UNQUANTIFIED,0.0,,GB-044,6.72,0.0,20.412,,HOOK_MISSING,old Urban added a provisional hook / perimeter allowance; S5 has no hook source (Q6); counts S5 BLOCKED_UNQUANTIFIED / old 45
+GSO-7E1-7E2-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_1,BLOCKED_UNQUANTIFIED,0.0,,GB-044,6.72,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-7E1-7E2-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_2,BLOCKED_UNQUANTIFIED,0.0,,GB-044,6.72,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-7E7-7E8-1,GROUND_BEAM,TOP_MAIN,LOWER_BOUND,12.794,3.525,GB-049,3.525,0.0,12.794,12.794,SAME,"same kg; old Urban held it PROVISIONAL (ambiguous governing detail), S5 releases it as a LOWER_BOUND only because the bars are identical in every candidate"
+GSO-7E7-7E8-1,GROUND_BEAM,BOTTOM_ROW_1,LOWER_BOUND,12.794,3.525,GB-049,3.525,0.0,12.794,12.794,SAME,"same kg; old Urban held it PROVISIONAL (ambiguous governing detail), S5 releases it as a LOWER_BOUND only because the bars are identical in every candidate"
+GSO-7E7-7E8-1,GROUND_BEAM,BOTTOM_ROW_2,LOWER_BOUND,12.794,3.525,GB-049,3.525,0.0,12.794,12.794,SAME,"same kg; old Urban held it PROVISIONAL (ambiguous governing detail), S5 releases it as a LOWER_BOUND only because the bars are identical in every candidate"
+GSO-7E7-7E8-1,GROUND_BEAM,STIRRUP_CORE_PATH,BLOCKED_UNQUANTIFIED,0.0,,GB-049,3.525,3.034,0.0,,STIRRUP_GEOMETRY_MISSING,old Urban priced the link path (assumed perimeter / legs); S5 keeps the mass blocked (Q6); counts S5 24 / old 24
+GSO-7E7-7E8-1,GROUND_BEAM,STIRRUP_HOOK_1+2,BLOCKED_UNQUANTIFIED,0.0,,GB-049,3.525,0.0,7.2,,HOOK_MISSING,old Urban added a provisional hook / perimeter allowance; S5 has no hook source (Q6); counts S5 24 / old 24
+GSO-7E7-7E8-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_1,BLOCKED_UNQUANTIFIED,0.0,,GB-049,3.525,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-7E7-7E8-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_2,BLOCKED_UNQUANTIFIED,0.0,,GB-049,3.525,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-7E7-7E8-2,GROUND_BEAM,TOP_MAIN,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-050,3.525,0.0,12.794,,DETAIL_APPLICABILITY_DIFFERENCE,concentrated load not excluded: S5 keeps the 'without concentrated load' detail blocked; old Urban applied it
+GSO-7E7-7E8-2,GROUND_BEAM,BOTTOM_ROW_1,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-050,3.525,0.0,12.794,,DETAIL_APPLICABILITY_DIFFERENCE,concentrated load not excluded: S5 keeps the 'without concentrated load' detail blocked; old Urban applied it
+GSO-7E7-7E8-2,GROUND_BEAM,BOTTOM_ROW_2,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-050,3.525,0.0,12.794,,DETAIL_APPLICABILITY_DIFFERENCE,concentrated load not excluded: S5 keeps the 'without concentrated load' detail blocked; old Urban applied it
+GSO-7E7-7E8-2,GROUND_BEAM,STIRRUP_CORE_PATH,BLOCKED_UNQUANTIFIED,0.0,,GB-050,3.525,3.034,0.0,,STIRRUP_GEOMETRY_MISSING,old Urban priced the link path (assumed perimeter / legs); S5 keeps the mass blocked (Q6); counts S5 BLOCKED_UNQUANTIFIED / old 24
+GSO-7E7-7E8-2,GROUND_BEAM,STIRRUP_HOOK_1+2,BLOCKED_UNQUANTIFIED,0.0,,GB-050,3.525,0.0,7.2,,HOOK_MISSING,old Urban added a provisional hook / perimeter allowance; S5 has no hook source (Q6); counts S5 BLOCKED_UNQUANTIFIED / old 24
+GSO-7E7-7E8-2,GROUND_BEAM,DEVELOPMENT_SUPPORT_1,BLOCKED_UNQUANTIFIED,0.0,,GB-050,3.525,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-7E7-7E8-2,GROUND_BEAM,DEVELOPMENT_SUPPORT_2,BLOCKED_UNQUANTIFIED,0.0,,GB-050,3.525,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-7E9-7EA-1,GROUND_BEAM,TOP_MAIN,LOWER_BOUND,15.335,4.225,GB-051,4.225,15.335,0.0,15.335,SAME,
+GSO-7E9-7EA-1,GROUND_BEAM,BOTTOM_ROW_1,LOWER_BOUND,15.335,4.225,GB-051,4.225,15.335,0.0,15.335,SAME,
+GSO-7E9-7EA-1,GROUND_BEAM,BOTTOM_ROW_2,LOWER_BOUND,15.335,4.225,GB-051,4.225,15.335,0.0,15.335,SAME,
+GSO-7E9-7EA-1,GROUND_BEAM,STIRRUP_CORE_PATH,BLOCKED_UNQUANTIFIED,0.0,,GB-051,4.225,9.624,0.0,,STIRRUP_GEOMETRY_MISSING,old Urban priced the link path (assumed perimeter / legs); S5 keeps the mass blocked (Q6); counts S5 29 / old 29
+GSO-7E9-7EA-1,GROUND_BEAM,STIRRUP_HOOK_1+2,BLOCKED_UNQUANTIFIED,0.0,,GB-051,4.225,0.0,2.658,,HOOK_MISSING,old Urban added a provisional hook / perimeter allowance; S5 has no hook source (Q6); counts S5 29 / old 29
+GSO-7E9-7EA-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_1,BLOCKED_UNQUANTIFIED,0.0,,GB-051,4.225,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-7E9-7EA-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_2,BLOCKED_UNQUANTIFIED,0.0,,GB-051,4.225,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-A-139-13A-1,GROUND_BEAM,TOP_MAIN,LOWER_BOUND,8.206,1.731,GB-001,1.806,0.0,8.564,8.564,BAR_RUN_CONVENTION,same bars; old length 1.806 m vs S5 BAR_STRAIGHT_RUN_LOWER_BOUND 1.731 m
+GSO-A-139-13A-1,GROUND_BEAM,BOTTOM_ROW_1,LOWER_BOUND,8.206,1.731,GB-001,1.806,0.0,8.564,8.564,BAR_RUN_CONVENTION,same bars; old length 1.806 m vs S5 BAR_STRAIGHT_RUN_LOWER_BOUND 1.731 m
+GSO-A-139-13A-1,GROUND_BEAM,BOTTOM_ROW_2,LOWER_BOUND,8.206,1.731,GB-001,1.806,0.0,8.564,8.564,BAR_RUN_CONVENTION,same bars; old length 1.806 m vs S5 BAR_STRAIGHT_RUN_LOWER_BOUND 1.731 m
+GSO-A-139-13A-1,GROUND_BEAM,STIRRUP_CORE_PATH,BLOCKED_UNQUANTIFIED,0.0,,GB-001,1.806,0.0,0.0,,SAME,no kg on either side
+GSO-A-139-13A-1,GROUND_BEAM,STIRRUP_HOOK_1+2,BLOCKED_UNQUANTIFIED,0.0,,GB-001,1.806,0.0,11.283,,HOOK_MISSING,old Urban added a provisional hook / perimeter allowance; S5 has no hook source (Q6); counts S5 13 / old 13
+GSO-A-139-13A-1,GROUND_BEAM,SIDE_REBAR,BLOCKED_UNQUANTIFIED,0.0,,GB-001,1.806,0.0,6.423,,ASSUMED_COMPONENT,old Urban assumed a FOLLOW ARCH. depth for 2Ø12/30cm side bars; S5 keeps them blocked until the depth is source-established (Q2)
+GSO-A-139-13A-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_1,BLOCKED_UNQUANTIFIED,0.0,,GB-001,1.806,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-A-139-13A-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_2,BLOCKED_UNQUANTIFIED,0.0,,GB-001,1.806,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-A-157-158-1,GROUND_BEAM,TOP_MAIN,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-002,6.18,29.297,0.0,,BAR_RUN_CONVENTION,S5 bar run withheld (length geometry conflict); old Urban used its span length
+GSO-A-157-158-1,GROUND_BEAM,BOTTOM_ROW_1,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-002,6.18,29.297,0.0,,BAR_RUN_CONVENTION,S5 bar run withheld (length geometry conflict); old Urban used its span length
+GSO-A-157-158-1,GROUND_BEAM,BOTTOM_ROW_2,BLOCKED_UNQUANTIFIED,0.0,0.0,GB-002,6.18,29.297,0.0,,BAR_RUN_CONVENTION,S5 bar run withheld (length geometry conflict); old Urban used its span length
+GSO-A-157-158-1,GROUND_BEAM,STIRRUP_CORE_PATH,BLOCKED_UNQUANTIFIED,0.0,,GB-002,6.18,5.31,0.0,,STIRRUP_GEOMETRY_MISSING,old Urban priced the link path (assumed perimeter / legs); S5 keeps the mass blocked (Q6); counts S5 BLOCKED_UNQUANTIFIED / old 42
+GSO-A-157-158-1,GROUND_BEAM,STIRRUP_HOOK_1+2,BLOCKED_UNQUANTIFIED,0.0,,GB-002,6.18,0.0,32.679,,HOOK_MISSING,old Urban added a provisional hook / perimeter allowance; S5 has no hook source (Q6); counts S5 BLOCKED_UNQUANTIFIED / old 42
+GSO-A-157-158-1,GROUND_BEAM,SIDE_REBAR,BLOCKED_UNQUANTIFIED,0.0,,GB-002,6.18,0.0,21.973,,ASSUMED_COMPONENT,old Urban assumed a FOLLOW ARCH. depth for 2Ø12/30cm side bars; S5 keeps them blocked until the depth is source-established (Q2)
+GSO-A-157-158-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_1,BLOCKED_UNQUANTIFIED,0.0,,GB-002,6.18,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+GSO-A-157-158-1,GROUND_BEAM,DEVELOPMENT_SUPPORT_2,BLOCKED_UNQUANTIFIED,0.0,,GB-002,6.18,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+SOCC-1689-1B1C,STRAP_BEAM,TOP_MAIN,LOWER_BOUND,118.3,4.55,STRAP:SB1:H6946,4.551,118.327,0.0,118.327,BAR_RUN_CONVENTION,same bars; old length 4.551 m vs S5 BAR_STRAIGHT_RUN_LOWER_BOUND 4.550 m
+SOCC-1689-1B1C,STRAP_BEAM,BOTTOM_MAIN,LOWER_BOUND,50.331,4.55,STRAP:SB1:H6946,4.551,50.342,0.0,50.342,BAR_RUN_CONVENTION,same bars; old length 4.551 m vs S5 BAR_STRAIGHT_RUN_LOWER_BOUND 4.550 m
+SOCC-1689-1B1C,STRAP_BEAM,STIRRUP_CORE_PATH,BLOCKED_UNQUANTIFIED,0.0,,STRAP:SB1:H6946,4.551,26.896,0.0,,STIRRUP_GEOMETRY_MISSING,old Urban priced the link path (assumed perimeter / legs); S5 keeps the mass blocked (Q6); counts S5 37 / old 37
+SOCC-1689-1B1C,STRAP_BEAM,STIRRUP_HOOK_1+2,BLOCKED_UNQUANTIFIED,0.0,,STRAP:SB1:H6946,4.551,0.0,3.673,,HOOK_MISSING,old Urban added a provisional hook / perimeter allowance; S5 has no hook source (Q6); counts S5 37 / old 37
+SOCC-1689-1B1C,STRAP_BEAM,DEVELOPMENT_FOOTING_1,BLOCKED_UNQUANTIFIED,0.0,,,4.551,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+SOCC-1689-1B1C,STRAP_BEAM,DEVELOPMENT_FOOTING_2,BLOCKED_UNQUANTIFIED,0.0,,,4.551,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+SOCC-1B08-1B09,STRAP_BEAM,TOP_MAIN,BLOCKED_UNQUANTIFIED,0.0,0.0,STRAP:SB2:H6935,,0.0,0.0,,SAME,unquantified on both sides
+SOCC-1B08-1B09,STRAP_BEAM,BOTTOM_MAIN,BLOCKED_UNQUANTIFIED,0.0,0.0,STRAP:SB2:H6935,,0.0,0.0,,SAME,unquantified on both sides
+SOCC-1B08-1B09,STRAP_BEAM,DEVELOPMENT_FOOTING_1,BLOCKED_UNQUANTIFIED,0.0,,,,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+SOCC-1B08-1B09,STRAP_BEAM,DEVELOPMENT_FOOTING_2,BLOCKED_UNQUANTIFIED,0.0,,,,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+SOCC-1B26-1B27,STRAP_BEAM,TOP_MAIN,LOWER_BOUND,28.38,2.838,STRAP:SB3:H6952,3.259,32.593,0.0,32.593,BAR_RUN_CONVENTION,same bars; old length 3.259 m vs S5 BAR_STRAIGHT_RUN_LOWER_BOUND 2.838 m
+SOCC-1B26-1B27,STRAP_BEAM,BOTTOM_MAIN,LOWER_BOUND,22.424,2.838,STRAP:SB3:H6952,3.259,25.752,0.0,25.752,BAR_RUN_CONVENTION,same bars; old length 3.259 m vs S5 BAR_STRAIGHT_RUN_LOWER_BOUND 2.838 m
+SOCC-1B26-1B27,STRAP_BEAM,STIRRUP_CORE_PATH,BLOCKED_UNQUANTIFIED,0.0,,STRAP:SB3:H6952,3.259,11.267,0.0,,STIRRUP_GEOMETRY_MISSING,old Urban priced the link path (assumed perimeter / legs); S5 keeps the mass blocked (Q6); counts S5 20 / old 23
+SOCC-1B26-1B27,STRAP_BEAM,STIRRUP_HOOK_1+2,BLOCKED_UNQUANTIFIED,0.0,,STRAP:SB3:H6952,3.259,0.0,2.351,,HOOK_MISSING,old Urban added a provisional hook / perimeter allowance; S5 has no hook source (Q6); counts S5 20 / old 23
+SOCC-1B26-1B27,STRAP_BEAM,DEVELOPMENT_FOOTING_1,BLOCKED_UNQUANTIFIED,0.0,,,3.259,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)
+SOCC-1B26-1B27,STRAP_BEAM,DEVELOPMENT_FOOTING_2,BLOCKED_UNQUANTIFIED,0.0,,,3.259,0.0,0.0,,DEVELOPMENT_MISSING,development / anchorage unquantified on both sides (Q7)

@@ -1,0 +1,14 @@
+flight,end,partner,overlap_m3,assigned_to,action,reason,hand_check
+MS1-U,"head, 1F floor +5.50",beam B20 40 x 75 + 1F slab,0.03,B20 / 1F slab,DEDUCT from stair steps,Q-62 A: the 12th riser's wedge (tread = the floor) is inside B20 and the slab,1/2 x 0.166667 x 0.30 x 1.20
+MS1-U,"head, 1F floor +5.50",beam B20 (drawn clash),0.057261,B20,HELD (designer RFI B20 / Q-46),"the section's 12-riser flight puts its last 0.20 m of tread 11 and waist inside B20: a drawn clash, not a measurement convention",0.20 x (r/g x 0.10 + t / cos a) x 1.20
+MS2-U,"head, 2F floor +9.70",beam B23 45 x 75 + 2F slab,0.03024,B23 / 2F slab,DEDUCT from stair steps,as MS1-U,1/2 x 0.168000 x 0.30 x 1.20
+MS2-U,"head, 2F floor +9.70",beam B23 (drawn clash),0.057451,B23,HELD (designer RFI B23 / Q-46),as MS1-U,0.20 x (r/g x 0.10 + t / cos a) x 1.20
+MS2-L,"top, flat quarter +7.516",landing MS2-LD (T 16),0.030171,landing MS2-LD,DEDUCT from stair steps,"NEW: both are measured lines of the owner census (5.011); STAIR_CONCRETE_V1 checks arrival wedges only when the next part is a LANDING, and here a TURN_RISER part sits between",1/2 r g w less the 0.008 m sliver below the 0.16 plate
+MS1-L,"top, winder W1",turn (HELD),0.0,-,none now,"the 10th riser's wedge is in the turn's plan area; DRAWN counts 9 straight wedges, so nothing overlaps",
+MS1-T,"top, landing +3.50",landing MS1-LD (T 16),0.029952,landing MS1-LD,none now (turn HELD),the turn's closing riser wedge will overlap the landing when the turn is released,1/2 r g w
+MS1-U / MS2-U / MS2-L / MS1-L,foot,landing / floor below,0.0,-,none,"the flight starts at the plate edge: the volumes touch along the riser line, no 3-D overlap (the soffit knee under each plate edge is in neither line: see knee check)",
+E1,"top, GF floor +1.00",GF floor at the threshold,0.0714,-,"HELD (shown, not deducted)",the GF floor at the porch is on fill with no printed thickness and no measured concrete line: no counted partner volume to assign it to,1/2 x 0.17 x 0.30 x 2.80
+D1,"top, GF hall +1.00",GF hall floor,0.0315,-,"HELD (shown, not deducted)",as E1,1/2 x 0.175 x 0.30 x 1.20
+RS-S,"top, corner landing +4.696",corner landing RS-LD (T 16),0.028928,landing RS-LD,DEDUCT from stair steps,both CALCULATED in this ledger,1/2 r g w less the sliver
+RS-A,"head, 1F +5.50","arrival plate C-T1 (frozen S8.7, T 16)",0.030133,arrival plate,DEDUCT when both lines are wired (lane I),the arrival plate is a released S8.7 line,1/2 r g w
+RS-S,beam CA across the flight,beam CA 30 x 50,0.0,CA,"HELD (level not stated, S8.7c R-10)",intersection unknown until the CA level is stated (0 .. about 0.09 m3),

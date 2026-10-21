@@ -1,0 +1,5 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_TEST_RESULTS_V1",
+ "state": "RECORDED_BY_THE_PACKAGE_STEP",
+ "why": "the one full suite runs from the final commit, after the registers are committed"
+}

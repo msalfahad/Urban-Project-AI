@@ -1,0 +1,23 @@
+{
+ "SCHEMA": "URBAN_OWNER_ACTION_REGISTER_V9",
+ "required_now": [
+  {
+   "action_id": "QORTUBA_FLOOR_UNDER_BUILT_IN_WARDROBES",
+   "question": "Qortuba porcelain floor: is it laid over the whole room, including under the built-in wardrobes in the dressing room and under loose furniture? YES - whole room / NO - the wardrobe footprint is left out / NOT SURE",
+   "why_now": "the sole-blocker counterfactual: with YES every remaining Q-13 blocker clears (COMPUTED_SHADOW); with NO Q-13 stays blocked until the wardrobe footprint is measured",
+   "records_as": "a FLOOR_FINISH TradeObjectFootprintPolicy (never a quantity)"
+  }
+ ],
+ "headline": "ONE OWNER QUESTION",
+ "do_not_ask": [
+  "H2430 / H2431 physical construction",
+  "the Hall / Lobby passage",
+  "the passage width",
+  "the 2.20 m head",
+  "7116-7119",
+  "the Qortuba unit",
+  "the selected plan",
+  "the xref scope",
+  "any expected quantity"
+ ]
+}

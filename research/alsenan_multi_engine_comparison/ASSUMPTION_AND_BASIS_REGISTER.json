@@ -1,0 +1,54 @@
+{
+ "rows": [
+  {
+   "assumption_id": "SOURCE_ROLES",
+   "role": "FREELANCER_QS_REFERENCE",
+   "statement": "Freelancer workbook = FREELANCER_QS_REFERENCE; U-C4N / christiannp = EXTERNAL_ORACLE; neither creates or resolves Urban quantities"
+  },
+  {
+   "assumption_id": "ORACLE_VALUES",
+   "role": "EXTERNAL_ORACLE",
+   "statement": "oracle values are the owner's recorded figures (S3.1 brief §16); no oracle run or handle list is held in the repository"
+  },
+  {
+   "assumption_id": "ORACLE_BASIS",
+   "role": "EXTERNAL_ORACLE",
+   "statement": "oracle 'beam downstands' and 'slabs' are taken on the Urban convention (downstand only / full slab depth) as stated in the brief; oracle column height basis is undeclared"
+  },
+  {
+   "assumption_id": "URBAN_CONCRETE",
+   "role": "PRODUCTION_SOURCE",
+   "statement": "Urban concrete = frozen V3b candidate BOQ lines (not FINAL); COMPUTED -> VERIFIED, PARTIAL -> LOWER_BOUND, owner method -> PROVISIONAL; ground slab zones -> LOWER_BOUND"
+  },
+  {
+   "assumption_id": "URBAN_COLUMN_STEEL",
+   "role": "PRODUCTION_SOURCE",
+   "statement": "column steel = S3.1 (D2/162, transitions blocked); other categories = V3b net design weights (D2/162)"
+  },
+  {
+   "assumption_id": "ROUGH_MAPPING",
+   "role": "URBAN_OWNER_RULE",
+   "statement": "BEAM_COLUMN_JOINT -> WALLS_AND_COLUMNS (column bars and ties run through the joint); LINTEL not mapped -> ROUGH_RATIO_NOT_CONFIGURED; plain concrete excluded"
+  },
+  {
+   "assumption_id": "ROUGH_CALIBRATION",
+   "role": "URBAN_OWNER_RULE",
+   "statement": "the owner ratios were calibrated on the freelancer allocation (beam gross depth, slab between beams); on Urban physical volumes BEAMS read low and SLABS high"
+  },
+  {
+   "assumption_id": "NORMALISATION",
+   "role": "COMPARISON",
+   "statement": "FRAME_<floor> = columns + joints + beams + slabs is allocation-free; BEAMS or SLABS alone are NOT_COMPARABLE across gross / downstand conventions"
+  },
+  {
+   "assumption_id": "NET_SLAB_NORMALISATION",
+   "role": "COMPARISON",
+   "statement": "freelancer slab area + freelancer beam plan area (width x length) approximates a net plate area"
+  },
+  {
+   "assumption_id": "PARAPET_CANDIDATE",
+   "role": "URBAN_OWNER_RULE",
+   "statement": "4 m stiffener spacing is URBAN_STANDARD_CANDIDATE - scenario only, never verified"
+  }
+ ]
+}

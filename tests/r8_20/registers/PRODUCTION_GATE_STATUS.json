@@ -1,0 +1,31 @@
+{
+ "SCHEMA": "URBAN_R8_20_PRODUCTION_GATE_STATUS_V1",
+ "gates": {
+  "source_anchor_strategy": {
+   "state": "PLAN_READY_NOT_EXECUTED",
+   "met": false
+  },
+  "closure_release_model_matured": {
+   "state": "human review recorded; ['H2430', 'H2431', 'I1471'] still miss CROSS_ROUTE_AGREEMENT + SOURCE_ANCHOR",
+   "met": false
+  },
+  "multiple_blind_projects": {
+   "state": "0 clean blind projects",
+   "met": false
+  },
+  "no_silent_critical_errors": {
+   "state": "R8.20 found one (BOQ status mapping, quantity-neutral)",
+   "met": false
+  },
+  "boq_report_stable": {
+   "state": "shadow report + XLSX view validated (PASS / PASS)",
+   "met": true
+  },
+  "human_approval_workflow": {
+   "state": "closure reviews recorded as versioned evidence; no BOQ approval workflow yet",
+   "met": false
+  }
+ },
+ "firestore_approved_writes": "NONE",
+ "production_migration": "NO"
+}

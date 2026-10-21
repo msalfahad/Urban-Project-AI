@@ -1,0 +1,168 @@
+{
+ "baseline": "dc2d778",
+ "code": {
+  "engine/source/delta_release.py": "7b0f72a6f5138b3e0f8515c80a42a38a2cfc035c8fb4c138aa64a4fd5c9708b9",
+  "engine/source/rebar_unit_mass.py": "81d63a85da8e64600d0c49a6662bcc49655f46dc71603654b3e1438c5b146eb8",
+  "engine/source/shaft_geometry.py": "dc8474d47eedb1ad6c1805cdbe5ef3173c1fc5f6f3d5ea2f342782bbf4050672",
+  "research/alsenan_lift_s8_8/build_s8_8.py": "0648e53c5a20fb3e3fd2bd0205763eccd3385a87762532720911a1006f37d444",
+  "research/external_engine_lab/alsenan_structural_s1.py": "e3ecd25490cd433540e317454ffdbaadf17c19799f49eb1df9afcb928aa494cb"
+ },
+ "date": "2026-10-10",
+ "drawing_sha256": {
+  "P7757.dxf": "ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4",
+  "ST7757.dxf": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+  "ST7757.pdf": "74da1523f05eb3c6a4fe3ddebaef2c3d841891f003efc03bc32a3fb4553337e3"
+ },
+ "engine_commit_stamp": "dc2d778+code:9be41378368006b5",
+ "frozen_baselines": {
+  "AD1": "e2497cc75181393000187b7e657fa8485a4c0f365b4614bed983d0bc6c0ca5b4",
+  "D1.1": "3ecb642e2141f5a9af11453870696b104a11cfb519d65a9e3f505cbff7c73a74",
+  "D1.2": "f256d6a25edf93029c6ba1c8cf9bc336790fd8d9cf7a5045e8395942986a9554",
+  "PRE-S7": "fb3a1c62a8e525b663853d03d43e067f1839026aea149399491bd4cf98f0ad09",
+  "PRE-S7.1": "3a67a8641ce4ea836334e02532af82b9a3bb01be8efdba4f093eee44d92c1ef6",
+  "PRE-S8": "1c8daf59926540941efbf5f749e8e175fe64b7efeb6d7acff0bfbefbb034849d",
+  "S4": "0d63015a19953f295e331aab2d7e49e8facb277e1465fbdd1b6b5a40d1a2362b",
+  "S4.1": "468e90d9657548a7e9124b67ce0a55b63560f030e2f98b414c46ad4e970e030b",
+  "S5": "ff488a92f3eaff80e84fca2d7e0b8e36cc40ddb84232cd315acfd1ce50b4b3d8",
+  "S5.1": "595d64b1bf5c8e0ef7b5bebfaf3ea4063dd884356390c84b4c8aac77cddb5a88",
+  "S6": "c29a28bc66334d5294d71b0d5feb0dd5eae36baf91a04ef6e0105b2ca43be63e",
+  "S6.1": "c4744888ed2207ebff47c0a895e706d7e381b5f905b694eb92e3d1cdc411c0b2",
+  "S7": "b23f97b6db334e641c38c498bf23b46236d68f4fcc26a6eafde1f3bfc156d175",
+  "S7A": "5b256cef99dc57934c76249c28814d5ce07c74caf308aabdbf90e0e8f0adcee1",
+  "S8.1": "e99d83a750b64541f5b3174b853d24209f30e46574fafafe56cfa3fd0d88e354",
+  "S8.1A": "890c1c42f03715b6b26d88744852fe388ca419fd7c6e3f0214e137dc5c1a473e",
+  "S8.2": "749affe72ec80083715f01b790b96bb5fca31685a93f952369ec7d4469f3494d",
+  "S8.2A": "76fda44b41695a2a79c7e030388ba2282a93f09552bcd67e06c32aee09551f9d",
+  "S8.3": "92bfe9c0b2b7fea189bb37759f93759ea4a6cf5108738af1390468bda6ee92da",
+  "S8.3A": "cf83c809495496f421f2c85d46c4f497757a66dbbea607a77208555695e73505",
+  "S8.4": "45fd614f0c22adceec27ac0657ae1135f59f4c40dde811c56c2d7121527d85f1",
+  "S8.5": "522287d416f30d3eb0499017ea1a32c87bf530ca6bd6de5356fb5ed1e0e662fa",
+  "S8.6": "9861d791de738722ce53907894c1ff7691923c007411021eb092a2c58616ba9e",
+  "S8.6A": "fe59a4b11a7bd86d7fbb3addf6e7138925d2214256fbb8e4e0673af2b3e5abb8",
+  "S8.7": "ee523cc9d23ed1ecd15f6092fc00abb736ede09bc6e89eb2c81bf75da5c89779"
+ },
+ "inputs": {
+  "research/alsenan_column_rebar_s3/COLUMN_ENGINEERING_FLAGS.json": "41b101291a585a225667058198447e484e12afb22b6f8f7ffc9acbe71797bfc9",
+  "research/alsenan_column_rebar_s3_1/COLUMN_LAP_STARTER_REGISTER.json": "dc4fcb9a54cc0d32f8ff02d2337f6bb1d5146789b3d2ab9237e0d0c6f324e732",
+  "research/alsenan_footing_rebar_s4/FOOTING_REBAR_COMPONENTS.csv": "d646bb1e6c868b9a0c9f9830b435299a99b1d3ecd5b2a5e9c0b8fd7fec9e1148",
+  "research/alsenan_footing_rebar_s4/FOOTING_REBAR_OCCURRENCES.csv": "2d0f8d8ae85247f4caddc86bb2a6f5ef631106c0d5df2729875983b1e854ba4f",
+  "research/alsenan_footing_rebar_s4_1/S4_1_OWNERSHIP_TRANSFERS.csv": "527dd6755a0513057fbef072ffbe8cf31c8ea97f3bae8567ec9f4e431a8fe461",
+  "research/alsenan_footing_rebar_s4_1/S4_1_UNRESOLVED.csv": "bef3aae6b49d19e3b9110f97ddfa44e283f017f31532c40cf2d34ec10df23be0",
+  "research/alsenan_ground_slab_s8_1a/01_RECOVERED_LIFT_PIT_REGION.csv": "0f052fa943b41a81faf8868b130a2b61471215f078d1a3d538ffc49a85b0de36",
+  "research/alsenan_ground_slab_s8_1a/08_CONFLICT_AND_QUESTION_REGISTER.csv": "e39603dfeb2284dd9f330df1f8e7c92c39961e08768a4ce971d480fb09540d37",
+  "research/alsenan_ground_system_rebar_s5/GROUND_SYSTEM_REBAR_OCCURRENCES.csv": "da5296bc21fb8936603fd8a69bb28ff44f2b77149f0105820818dc045b40f37d",
+  "research/alsenan_lintels_s8_6/01_OPENING_CENSUS.csv": "afd7f5ee31d4110affedb1d85fc7d6a4aecad9f528ffd89278c46f543d4c25bc",
+  "research/alsenan_lintels_s8_6/03_ARCH_STRUCTURAL_REGISTRATION.csv": "c940b3aee459ee06381ef033bf8511a2a474b740528846838fb05343ef3b03eb",
+  "research/alsenan_lintels_s8_6/04_OPENING_LINTEL_BINDING_MATRIX.csv": "9d5f8465c96928052be12a0460a8006d78eb48a5a0e613e11f73986487e9e921",
+  "research/alsenan_slab_rebar_s7/05_S7_PANEL_SUMMARY.csv": "0b458cb74ee1494647d688eebdd20e27b97f0131eb6d0b1dbb19871b92066784",
+  "research/alsenan_stairs_s8_7/06_PLAN_AND_INCLINED_GEOMETRY.csv": "9ca9c8724027dd1628bbe660490b094ee92018b04e2dfbc17096860c440ddeb4",
+  "research/alsenan_structural_census_s1/COLUMN_OCCURRENCE_REGISTER.json": "fb3f2d0c45bc1fbee9f04709d9e06040fbeb7eb5e80f8038a76f8840da048f88",
+  "research/alsenan_structural_census_s1/FOOTING_DEFINITION_REGISTER.json": "197e122719ca1e5d68033720c5e9cba333813d67bc9484b74864b29c845b7ae7",
+  "research/alsenan_structural_census_s1/FOOTING_OCCURRENCE_REGISTER.json": "96341bd2c7bc159f695c3a552e1df3763db6baf693cca9b2bedaf1b031106ea8",
+  "research/alsenan_structural_census_s1/SLAB_PANEL_REGISTER.json": "ea0cbe1b5e8d6f6b94eae60fd5c55a708886095a0cda3101d0acbe06229c9c4c",
+  "research/alsenan_structural_census_s1/SPECIAL_STRUCTURAL_OCCURRENCE_REGISTER.json": "870800ec87b1ea39eb95636bfeae124a6e47c1779d926b8427c1e997e85ee8a5",
+  "research/alsenan_structural_census_s1/STRUCTURAL_LEVEL_REGISTER.json": "53d54f501f0fcab6f3825d16a4c1a939c9fc5e094d410eb8e9f3875f6fc3ca6b",
+  "research/alsenan_structural_census_s1/STRUCTURAL_PROJECT_RULE_REGISTER.json": "3268bce3ef31c21ee93b0d7f9ab9b50195e0d0ae659699422c6927abcdf528d2",
+  "research/alsenan_structural_s2/ALSENAN_COMPONENT_RELEASE.json": "b824296984462ac6e5a71d186b956b13e15a08834718e9447a63142ad54f5bfb",
+  "research/alsenan_superstructure_beam_rebar_s6/SUPERSTRUCTURE_BEAM_OCCURRENCES.csv": "613fa422d310192c7729dc073ffbd23016d1346969567b6a94b1e64720181690",
+  "research/pre_s8_structural_completeness/02_STRUCTURAL_ELEMENT_CENSUS.csv": "a24db6efc7855c2a1f2eaff5e9739397b03f3f62d79ffaa7376a8609ead51e12",
+  "research/pre_s8_structural_completeness/07_INTERFACE_DOUBLE_COUNT_AUDIT.csv": "be16d5b59ab6725d6ede336ee60c2212a8351a2d014f8a378336248c9d76aa6b",
+  "research/pre_s8_structural_completeness/10_S8_SOURCE_EXHAUSTION.csv": "265d0b420816eec2bf4687bd194ef01a37fdce0e32b47b89bd10afddd337cb53",
+  "research/pre_s8_structural_completeness/11_S8_READINESS_DECISION.json": "126b559a2c27f02635afbaa3a9c7c0e8d743d7eb011491f016294c36bb6a60ce"
+ },
+ "outputs": {
+  "00_README.md": "78fe25eb36bc46e5d02f385ab011b2377c04deba9626234b882913d9a7585054",
+  "01_SOURCE_CENSUS.csv": "94e684c26051d5b62210ebdc35276995fa6c4ebd53b840226f3ea07b91a026d7",
+  "02_LIFT_POPULATION.csv": "064866d87ec85696b303b6e1530ee83f4e97790760e5fa0dae6e1bc3b469f68b",
+  "03_REPRESENTATION_CROSSWALK.csv": "c007b01956307ec8658576f4eace3d13811dffaa19c1b86b2221458492a59945",
+  "04_FOUNDATION_OWNERSHIP_AUDIT.csv": "6af4d41bc41246af34c9c93ba652fa80d60f19272d744ba69fd249a8cc560138",
+  "05_PIT_FOOTPRINT_AND_DEPTH_EVIDENCE.csv": "ebc4840a3b531d69decae5b50592231ebc19f603d30d428fce2aa29b6f868935",
+  "06_WALL_GEOMETRY_AND_CONCRETE_QTO.csv": "c02fa4459956c27ac5d1a7ddeaf6195add106e7ececed9ec61c78f72f2bb2b8b",
+  "07_REBAR_CALLOUT_REGISTER.csv": "f587f7e0122f19888405ce43e794527d97fcfe811aafd3fa82f92544051a445f",
+  "08_REBAR_QTO.csv": "a77355e72029bc37113996dd5879ba4731d6011046015eca6d8bb3b1632a5859",
+  "09_TIE_BEAM_TRIGGER_AND_OWNERSHIP.csv": "6c8cef60a217d0bdbb26bfb499c10d6ca5b29577c3d2af00a493dcae968fc803",
+  "10_LIFT_OPENING_RECONCILIATION.csv": "61b042ee8027a1ae0c34efb4dd5ef2bfc7e85e24f388af45438041eaf5bb9217",
+  "11_OVERLAP_AND_DOUBLE_COUNT_CHECKS.csv": "5d945f5f5ee4f2cc180f7ae583e4351d1b53a68e24a03907a82cbfd91c1f1df6",
+  "12_OWNERSHIP_AUDIT.csv": "55a754a477f1307be0a2160d8bc483dfb774fc54d61508be673e9eb951fb2693",
+  "13_BLOCKED_AND_CONFLICTS.csv": "624f160e47848cf8a3a6cd0c441521fce92967322e16b8ec402799880937df95",
+  "14_RFI_QUESTIONS.csv": "830433733e0880dc0f564c25fdca2233afc42024c2108b1147c21c2622015562",
+  "15_PROVENANCE.jsonl": "1aa65c0fbba10e9fc1e9ebdbb7e5628b26848d14f8a0025491279cbfebac116a",
+  "16_CONSERVATION_CHECKS.csv": "0922520718695c8de78c9bddca9f7e900937b0b956094704dbc6fe8cb3d36ed3",
+  "17_S8_8_SUMMARY.json": "978ed0fbc8ad53e4d425a3a2dd5b840a8ad389c282cbb96bb2cf85c49067d298"
+ },
+ "pre_s8_columns_read": {
+  "PRE_S8_CENSUS": [
+   "ELEMENT_ID",
+   "ROW_KIND",
+   "PARENT_ELEMENT",
+   "ELEMENT_FAMILY",
+   "FLOOR",
+   "SOURCE_PAGE",
+   "DXF_HANDLES",
+   "PHYSICAL_GEOMETRY",
+   "EXISTING_STAGE_OWNER",
+   "NEW_S8_OWNER",
+   "S8_SCOPE",
+   "SOURCE_AUTHORITY",
+   "MISSING_INFORMATION",
+   "CONFLICT",
+   "QA_STATE"
+  ],
+  "PRE_S8_EXHAUSTION": [
+   "S8_CANDIDATE",
+   "CH_PLAN",
+   "CH_SECTION",
+   "CH_TYPICAL_DETAIL",
+   "CH_NOTES_EN",
+   "CH_ARCHITECTURE",
+   "DIMENSIONED_EVIDENCE",
+   "SCHEMATIC_NTS_EVIDENCE",
+   "MISSING",
+   "READINESS",
+   "RULE"
+  ],
+  "PRE_S8_INTERFACES": [
+   "INTERFACE",
+   "SIDE_A",
+   "SIDE_B",
+   "RISK",
+   "STATE"
+  ]
+ },
+ "pre_s8_readiness_keys_read": [
+  "missing",
+  "readiness",
+  "schematic_nts",
+  "dimensioned"
+ ],
+ "references_read": [],
+ "register_indexes": {
+  "S1": {
+   "index_sha256": "bff6694f05762498c897e2e8da95f70747af133ba652eb47470a03241aa7cc51",
+   "registers_verified": 21
+  },
+  "S2": {
+   "index_sha256": "a966dec798dfc4dbb1beaf16ed8a52d41d90eaad0a072c38d56b4dc53f395b01",
+   "registers_verified": 12
+  },
+  "S3": {
+   "index_sha256": "50fd1ec80048424df7feddd7477a1473db1d9bf7fabf152fd6a837e3366f98cb",
+   "registers_verified": 11
+  },
+  "S3.1": {
+   "index_sha256": "8a771cb688b04128c351aab7880afd5dc353c4df98e3f62910fcd18c06763661",
+   "registers_verified": 12
+  }
+ },
+ "released": {
+  "concrete_m3": 0.0,
+  "kg": 0.0,
+  "kg_by_diameter": {},
+  "kg_by_role": {},
+  "pit_base_m3": 0.0,
+  "pit_wall_m3": 0.0
+ },
+ "round": "S8_8",
+ "rule": "frozen before any earlier Urban, contractor or third-party lift figure is used; the comparison after it explains differences and never changes a frozen quantity",
+ "state": "FROZEN_BEFORE_COMPARISON"
+}

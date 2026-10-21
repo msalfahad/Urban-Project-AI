@@ -1,0 +1,25 @@
+{
+ "source": "Drive 'Alsenan chalet project' / 'sanitary-7757.pdf': 3 drainage plans (GF, 1F, 2F), read visually at 110 and 250 dpi by worker 1, 2026-10-19; matched to the ARCH_TAKEOFF_V2.9 room faces of P7757 by position and room tag. Kinds only (WC, BASIN, SHOWER, FLOOR_DRAIN); no coordinates.",
+ "rooms_read": "every interior space of the three plan frames; a space not listed shows nothing on its drainage plan ([])",
+ "items": {
+  "GF-RDBD4F9": ["BASIN", "BASIN", "FLOOR_DRAIN"],
+  "GF-R8496F0": ["BASIN", "BASIN", "FLOOR_DRAIN"],
+  "GF-RD36087": ["BASIN", "FLOOR_DRAIN"],
+  "GF-RDF7D28": ["WC", "BASIN", "FLOOR_DRAIN"],
+  "GF-RF38DAF": ["WC", "BASIN", "FLOOR_DRAIN"],
+  "GF-RB28769": ["WC", "FLOOR_DRAIN"],
+  "GF-RD6F891": ["WC", "SHOWER", "BASIN", "FLOOR_DRAIN"],
+  "GF-RB62B55": ["WC", "BASIN", "FLOOR_DRAIN"],
+  "GF-RFAD3C4": ["WC", "BASIN", "FLOOR_DRAIN"],
+  "GF-RA3AD49": ["FLOOR_DRAIN"],
+  "GF-RC99C2A": ["FLOOR_DRAIN"],
+  "1F-R26FA0D": ["FLOOR_DRAIN"],
+  "1F-R52AC05": ["WC", "BASIN", "FLOOR_DRAIN"],
+  "1F-RED23B8": ["WC", "SHOWER", "BASIN", "FLOOR_DRAIN"],
+  "1F-R48CDA5": ["WC", "SHOWER", "BASIN", "FLOOR_DRAIN"],
+  "1F-R48AA46": ["WC", "BASIN", "FLOOR_DRAIN"],
+  "1F-R8BDA49": ["WC", "BASIN", "FLOOR_DRAIN"],
+  "2F-RE83BED": ["WC", "BASIN", "SHOWER", "FLOOR_DRAIN"]
+ },
+ "uncertain": "which of the two GF core bathrooms (GF-RB28769, GF-RD6F891) holds the shower tray and which basin sits in GF-RDF7D28 vs GF-RD36087 is read from a 1:100 sheet; every listed bathroom shows at least a WC and a floor drain, so no class depends on that detail. GF-RC99C2A: the pantry floor drain of the open plan."
+}

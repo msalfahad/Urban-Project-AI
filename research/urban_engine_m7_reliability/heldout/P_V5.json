@@ -1,0 +1,666 @@
+{
+ "summary": {
+  "dup_text": {
+   "pass": 10,
+   "fail": 0
+  },
+  "explode": {
+   "pass": 10,
+   "fail": 0
+  },
+  "mirror_x": {
+   "pass": 10,
+   "fail": 0
+  },
+  "noise_layer": {
+   "pass": 10,
+   "fail": 0
+  },
+  "reorder": {
+   "pass": 10,
+   "fail": 0
+  },
+  "rot180": {
+   "pass": 10,
+   "fail": 0
+  },
+  "rot270": {
+   "pass": 10,
+   "fail": 0
+  },
+  "rot90": {
+   "pass": 10,
+   "fail": 0
+  },
+  "translate": {
+   "pass": 10,
+   "fail": 0
+  },
+  "units_m": {
+   "pass": 10,
+   "fail": 0
+  }
+ },
+ "drawings": {
+  "301": {
+   "translate": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot90": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot180": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot270": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "mirror_x": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "reorder": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "explode": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "dup_text": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "noise_layer": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "units_m": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   }
+  },
+  "302": {
+   "translate": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot90": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot180": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot270": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "mirror_x": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "reorder": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "explode": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "dup_text": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "noise_layer": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "units_m": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   }
+  },
+  "303": {
+   "translate": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot90": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot180": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot270": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "mirror_x": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "reorder": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "explode": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "dup_text": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "noise_layer": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "units_m": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   }
+  },
+  "304": {
+   "translate": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot90": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot180": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot270": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "mirror_x": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "reorder": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "explode": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "dup_text": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "noise_layer": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "units_m": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   }
+  },
+  "305": {
+   "translate": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot90": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot180": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot270": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "mirror_x": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "reorder": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "explode": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "dup_text": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "noise_layer": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "units_m": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   }
+  },
+  "306": {
+   "translate": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot90": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot180": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot270": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "mirror_x": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "reorder": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "explode": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "dup_text": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "noise_layer": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "units_m": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   }
+  },
+  "307": {
+   "translate": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot90": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot180": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot270": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "mirror_x": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "reorder": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "explode": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "dup_text": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "noise_layer": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "units_m": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   }
+  },
+  "308": {
+   "translate": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot90": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot180": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot270": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "mirror_x": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "reorder": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "explode": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "dup_text": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "noise_layer": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "units_m": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   }
+  },
+  "309": {
+   "translate": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot90": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot180": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot270": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "mirror_x": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "reorder": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "explode": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "dup_text": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "noise_layer": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "units_m": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   }
+  },
+  "310": {
+   "translate": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot90": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot180": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot270": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "mirror_x": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "reorder": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "explode": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "dup_text": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "noise_layer": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "units_m": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   }
+  }
+ }
+}

@@ -1,0 +1,34 @@
+ID,FACT,VALUE,UNIT,SOURCE,STATUS
+G-GFRS-RADIALS,GF -> 1F drawn winder radials (start / end),"{""2F4"": [[18273.26, 19497.212], [17123.26, 20647.212]], ""2F5"": [[18283.588, 19482.179], [17772.016, 20632.179]], ""2F6"": [[18258.227, 19507.54], [17108.227, 20019.112]]}",mm (sheet-local),ST7757 GFRS handles 2F6 / 2F4 / 2F5,MEASURED_DRAWING_FACT
+G-GFRS-FAN,fan centre of the three radials (least-squares intersection),"[18274.861, 19498.813, 1.64]","mm (x, y, rms miss)",derived from the radials above,MEASURED_DRAWING_FACT
+G-GFRS-45A,structural lower-flight first riser (foot),16161.856,"mm (y, sheet-local)",ST7757 GFRS handle 45A,MEASURED_DRAWING_FACT
+G-GFRS-25E,structural 12th lower riser = turn start,19461.856,"mm (y, sheet-local)",ST7757 GFRS handle 25E,MEASURED_DRAWING_FACT
+G-GFRS-25B,structural first upper riser = landing edge,19411.856,"mm (y, sheet-local)",ST7757 GFRS handle 25B,MEASURED_DRAWING_FACT
+G-GFRS-459,structural 12th upper riser,16111.856,"mm (y, sheet-local)",ST7757 GFRS handle 459,MEASURED_DRAWING_FACT
+G-GFRS-270,structural 11th upper riser,16411.856,"mm (y, sheet-local)",ST7757 GFRS handle 270,MEASURED_DRAWING_FACT
+G-GFRS-458,B20 south face,15911.856,"mm (y, sheet-local)",ST7757 GFRS handle 458,MEASURED_DRAWING_FACT
+G-GFRS-2C6,B20 north face,16311.856,"mm (y, sheet-local)",ST7757 GFRS handle 2C6,MEASURED_DRAWING_FACT
+G-GFRS-279,bay north edge,20611.856,"mm (y, sheet-local)",ST7757 GFRS handle 279,MEASURED_DRAWING_FACT
+G-FFRS-5E4,B23 south face,15861.856,"mm (y, sheet-local)",ST7757 FFRS handle 5E4,MEASURED_DRAWING_FACT
+G-FFRS-5E1,B23 north face,16311.856,"mm (y, sheet-local)",ST7757 FFRS handle 5E1,MEASURED_DRAWING_FACT
+G-FFRS-646,1F -> 2F first riser (foot),16161.856,"mm (y, sheet-local)",ST7757 FFRS handle 646,MEASURED_DRAWING_FACT
+G-FFRS-644,1F -> 2F last upper riser,16411.856,"mm (y, sheet-local)",ST7757 FFRS handle 644,MEASURED_DRAWING_FACT
+G-GBP-7CC,ground-beam north face under the stair,15711.856,"mm (y, sheet-local)",ST7757 GBP handle 7CC,MEASURED_DRAWING_FACT
+G-GBP-112,ground-beam plan lower-flight first riser,16761.856,"mm (y, sheet-local)",ST7757 GBP handle 112,MEASURED_DRAWING_FACT
+G-ARCH-GF-DE,architectural GF lower-flight first riser face (hidden),16761.856,"mm (y, sheet-local)",P7757 ARCH-GF handle DE,MEASURED_DRAWING_FACT
+G-ARCH-GF-497,architectural GF last upper riser,16411.856,"mm (y, sheet-local)",P7757 ARCH-GF handle 497,MEASURED_DRAWING_FACT
+G-ARCH-1F-AC2,architectural 1F lower-flight first riser face,16161.856,"mm (y, sheet-local)",P7757 ARCH-1F handle AC2,MEASURED_DRAWING_FACT
+G-ARCH-1F-ABD,architectural 1F last upper riser,16411.856,"mm (y, sheet-local)",P7757 ARCH-1F handle ABD,MEASURED_DRAWING_FACT
+G-GFRS-36B,column 36B outline (projects into the west flight width),"[16887.904, 17111.856, 17137.904, 17611.856]",mm bbox,ST7757 GFRS S-COL.BON 36B,MEASURED_DRAWING_FACT
+S-01,section A-A landing depth (first upper riser to the north wall face),1195.8,mm,P7757 sections sheet 4 (600 dpi),SCALED_FROM_SECTION (indicative)
+S-02,section A-A GF -> 1F upper-flight run (first to last riser),3299.6,mm,section A-A,SCALED_FROM_SECTION (indicative)
+S-03,"section A-A GF -> 1F arrival riser, in plan coordinates",16112,mm (y),section A-A,SCALED_FROM_SECTION (indicative)
+S-04,"section A-A GF -> 1F lower-flight foot, in plan coordinates",16728,mm (y),section A-A,SCALED_FROM_SECTION (indicative)
+S-05,"section A-A south wall north face (downstand), in plan coordinates",15604,mm (y),section A-A,SCALED_FROM_SECTION (indicative)
+S-06,section A-A GF -> 1F turn: dashed winder tread levels,"[2.671, 2.836, 3.005, 3.171, 3.336]",m,section A-A,SCALED_FROM_SECTION (indicative)
+S-07,section A-A 1F -> 2F turn: dashed winder treads,none (flat quarter),-,section A-A,SCALED_FROM_SECTION (indicative)
+S-08,"section A-A 1F -> 2F foot and arrival, in plan coordinates","[16157.0, 16110.0]",mm (y),section A-A,SCALED_FROM_SECTION (indicative)
+S-09,printed half-landing GF -> 1F,3.5,m,section A-A '320' from +0.30 (S8.7B 13),PRINTED_ON_DRAWING
+S-10,"section A-A riser counts (S8.7B, measured)",GF -> 1F 15 + 12; 1F -> 2F 13 + 12,risers,S8.7B 13 (frozen),FROZEN_RECORD
+B-01,beam sizes B20 / B23 / CA / B3 / CB3,"{""B20"": [400.0, 750.0], ""B23"": [450.0, 750.0], ""B3"": [200.0, 400.0], ""CA"": [300.0, 500.0], ""CB3"": [200.0, 750.0]}","mm (B, H)",S1 BEAM_DEFINITION_REGISTER (schedule),FROZEN_RECORD
+W-01,GF -> 1F drawn turn: radial risers and walking-line going (S8.7B),"{""radial_angles_deg"": [156.018, 135.0, 113.982], ""walking_going_mm"": 273.119}",-,S8.7B 08 / 12 (frozen),FROZEN_RECORD

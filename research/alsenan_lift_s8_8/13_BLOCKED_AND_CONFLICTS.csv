@@ -1,0 +1,25 @@
+ID,ITEM,STATE,WHY,QUESTIONS
+B-01,PIT_DEPTH,BLOCKED_UNQUANTIFIED,As Per Lift Manufactures recommendations,Q-LIFT-01
+B-02,PIT_FLOOR / FF TOP LEVEL,BLOCKED_UNQUANTIFIED,founding level not printed (<= -1.50),Q-LIFT-02
+B-03,PIT_WALL_TOP,BLOCKED_UNQUANTIFIED,floor finish not printed,Q-LIFT-03
+B-04,"PIT_WALL_CONCRETE (S, N, W, E)",BLOCKED_UNQUANTIFIED,height = B-01,Q-LIFT-01
+B-05,6Ø16/m VERTICAL,BLOCKED_UNQUANTIFIED,bar length; per face; W / E applicability,"Q-LIFT-04, Q-LIFT-05"
+B-06,6Ø12/m HORIZONTAL,BLOCKED_UNQUANTIFIED,distribution = wall height; corner joints; W / E,"Q-LIFT-04, Q-LIFT-06"
+B-07,"2 Ø16 WALL BASE (top, bottom)",BLOCKED_UNQUANTIFIED,length along the wall; W / E,Q-LIFT-07
+B-08,2Ø12 WALL TOP,BLOCKED_UNQUANTIFIED,length along the wall; W / E,Q-LIFT-07
+B-09,ANCHORAGE / BENDS / LAPS,BLOCKED_UNQUANTIFIED,not drawn or dimensioned,"Q-LIFT-05, Q-LIFT-06"
+B-10,GF LIFT TIE BEAM,BLOCKED_UNQUANTIFIED,trigger depends on the undefined height measure; section and bars not stated; not drawn,"Q-LIFT-09, Q-LIFT-10"
+B-11,LIFT OVERRUN / HEADROOM,NOT_IN_SOURCE,none labelled or levelled,Q-LIFT-12
+B-12,LANDING-DOOR LINTELS,BLOCKED in S8.6,S8.6 BLOCKED_SUPPORT_IDENTITY (owner S8.6),Q-LIFT-10
+C-01,FOUNDATION-STOREY COLUMN WIDTH AT THE PIT,SOURCE_CONFLICT,"drawn 200 (C2 / C1) / 250 (C9) flush with the 200 walls vs schedule 300 (S3 used it, flag STR-COL-013): the pit-wall cut-outs and the pit clear size follow the drawn plans until resolved",Q-LIFT-08
+C-02,P8-N19 STOREY HEIGHT,UNDEFINED_TERM,"GF triggered floor to floor (4.50 > 4.30), not clear to beam soffit (<= 3.75); clear to slab soffit only if the finish is under 40 mm",Q-LIFT-09
+C-03,PIT DEPTH VS FOUNDING,QUESTION,"the pit floor is the FF top (p.14) and FF is at least 1.5 m below the plot level (p.9): the implied pit is at least about 1.95 m deep, whatever the manufacturer needs",Q-LIFT-02
+C-04,PRE-S8 'shaft outline not drawn',CORRECTED,"the outline is drawn: S-BW FP 10EA / 10EB and GBP 7BE / 7C2, dimensioned 1800 / 200 on all three architectural plans",-
+C-05,S1 / PRE-S8 'lift pit on the FF raft',TERMINOLOGY,"FF is an isolated four-column footing (p.14 'WITH ISOLATED FOOTING'), not a raft; no quantity depends on the word",-
+PRE-S8:FTG-FF-18688-14112,LIFT_FOOTING (lift base FF),COUNTED_OWNED,PRE-S8 missing: founding level; the lift walls on FF are the S8 LIFT element SPC-LIFT_PIT -> S8.8: dimensions VERIFIED (schedule = drawn = S1); founding level stays BLOCKED,-
+PRE-S8:SPC-LIFT_PIT,LIFT_PIT_AND_WALLS,COUNTED_S8_CANDIDATE,"PRE-S8 missing: pit depth ('As Per Lift Manufactures recommendations'), wall plan outline, wall height -> S8.8: outline ESTABLISHED (S-BW + architectural dimensions); pit depth and wall height stay BLOCKED",-
+PRE-S8:SPC-LIFT_TIE_BEAM-GF,LIFT_TIE_BEAM (conditional),COUNTED_S8_CANDIDATE,PRE-S8 missing: storey heights at the lift; tie-beam section -> S8.8: storey heights ESTABLISHED floor to floor (4.50 / 4.20 / 4.20); the note's measure is undefined; the section stays BLOCKED,-
+PRE-S8:PS8-LIFT-WALLS,LIFT_PIT_AND_WALLS (walls 20 cm),NEW_EVIDENCE_LOCATION_BOUND (the S1 LIFT_PIT had no plan location: FF footing + schedule remark bind it),"PRE-S8 missing: shaft plan outline, pit depth, wall height -> S8.8: shaft plan outline ESTABLISHED; pit depth and wall height stay BLOCKED",-
+PRE-S8-IF:WALL -> FOUNDATION,no structural / retaining / shear wall on any plan / boundary-wall pads (p.14) / lift walls on FF,NOT_OWNED,"PRE-S8 risk: lift-wall and boundary-wall starters are owned by no stage -> S8.8: the lift-wall starters are the 6Ø16/m verticals run into the footing: owned by S8.8, BLOCKED (bar length)",-
+PRE-S8-IF:LIFT WALL -> PIT BASE,"S4.1 FF footing mesh (lift base, two layers) / S8 lift walls 20 cm (p.14)",PARTIAL_OWNERSHIP,PRE-S8 risk: S8 must not re-count the FF mesh as a pit slab -> S8.8: no pit slab: the FF mats stay S4's and S8.8 adds no base mesh (OV-10),-
+PRE-S8-READINESS:LIFT_PIT_AND_WALLS,LIFT_PIT_AND_WALLS,BLOCKED_NEEDS_AUTHORITY,"PRE-S8 missing: pit depth, wall height, shaft outline -> S8.8: plan outline established; pit depth, wall height and bar extents stay BLOCKED_NEEDS_AUTHORITY",Q-LIFT-01..07

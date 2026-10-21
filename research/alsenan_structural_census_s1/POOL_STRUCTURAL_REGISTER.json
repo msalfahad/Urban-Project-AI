@@ -1,0 +1,677 @@
+{
+ "det_texts_not_bar_annotations": [
+  {
+   "handle": "1864",
+   "p": [
+    7642.492,
+    11356.318
+   ],
+   "raw": "%%uDETAIL OF SWIMMING POOL."
+  },
+  {
+   "handle": "186A",
+   "p": [
+    13081.232,
+    10873.66
+   ],
+   "raw": "(N.I.S)"
+  },
+  {
+   "handle": "1874",
+   "p": [
+    2760.398,
+    16289.604
+   ],
+   "raw": "5cm SECREED."
+  },
+  {
+   "handle": "1876",
+   "p": [
+    2763.133,
+    15889.586
+   ],
+   "raw": "5cm INSULATION MEMBRANE."
+  },
+  {
+   "handle": "1877",
+   "p": [
+    2736.552,
+    15489.567
+   ],
+   "raw": "10cm PLAIN CONCRETE."
+  },
+  {
+   "handle": "1A18",
+   "p": [
+    21957.942,
+    1740.658
+   ],
+   "raw": "%%uDETAIL OF DOME"
+  },
+  {
+   "handle": "1A19",
+   "p": [
+    25834.153,
+    1258.0
+   ],
+   "raw": "(N.I.S)"
+  }
+ ],
+ "frozen_before_benchmark": true,
+ "policy": {
+  "cb_states": [
+   "MATCH_CONFIRMED",
+   "SPAN_LENGTH_CONFLICT",
+   "SPAN_COUNT_CONFLICT",
+   "TAG_WITH_NO_MEMBER",
+   "MEMBER_WITH_NO_TAG",
+   "BLOCKED"
+  ],
+  "policy_id": "STRUCTURAL_CENSUS_V1",
+  "precedence": [
+   "LOCAL_PANEL_NOTE",
+   "FLOOR_SPECIFIC_NOTE",
+   "PROJECT_DEFAULT"
+  ],
+  "principles": [
+   "plan decides occurrence; schedule only defines",
+   "no default overrides a local note",
+   "a value is never rounded into a table row it does not match",
+   "every plan object ends in one terminal state"
+  ],
+  "rule_states": [
+   "EXACT_RULE",
+   "RULE_NOT_EXACT_MATCH",
+   "BLOCKED_METHOD"
+  ],
+  "terminal_states": [
+   "COUNTED_AND_DEFINED",
+   "COUNTED_DEFINITION_PARTIAL",
+   "COUNTED_BLOCKED",
+   "NOT_IN_SCOPE"
+  ]
+ },
+ "pool": {
+  "build_up_non_structural": [
+   "5cm SECREED",
+   "5cm INSULATION MEMBRANE",
+   "10cm PLAIN CONCRETE"
+  ],
+  "components": [
+   "CORNER_DETAIL_DEEP",
+   "CORNER_DETAIL_SHALLOW",
+   "CORNER_DETAIL_SLOPE",
+   "CORNER_DETAIL_SLOPE_SHALLOW",
+   "DEEP_END_BASE",
+   "DEEP_WALL",
+   "SHALLOW_BASE",
+   "SHALLOW_END_BASE",
+   "SHALLOW_WALL",
+   "SLOPED_BASE"
+  ],
+  "geometry": {
+   "deep_base_thickness_cm": 40,
+   "lengths_and_depths": "AS PER ARCH (BLOCKED)",
+   "wall_thickness_cm": 20
+  },
+  "occurrence": {
+   "curved_ground_beams": [
+    "GB-BA001",
+    "GB-BA002"
+   ],
+   "plan_label": "GBP 'swimming pool' (block SWIM)",
+   "plan_sheet": "GBP"
+  },
+  "pump_room": "NOT_DRAWN (no structural occurrence)",
+  "scale_note": "(N.I.S) = not to scale"
+ },
+ "register": "POOL_STRUCTURAL_REGISTER",
+ "round": "S1",
+ "rows": [
+  {
+   "component": "CORNER_DETAIL_SLOPE",
+   "mapping_channel": "AI visual reading of the p.7 render (CANDIDATE)",
+   "parsed": {
+    "count": 7,
+    "count_mode": "BARS_PER_METRE",
+    "dia_mm": 14,
+    "layer_qualifier": null
+   },
+   "pool_item_id": "POOL-CORNER_DETAIL_SLOPE-1860",
+   "position_mm": [
+    5319.276,
+    12989.035
+   ],
+   "raw": "7%%c14/m",
+   "role": "BASE_TOP_BAR",
+   "source_id": "DETTXT:DET:1860",
+   "status": "PROVISIONAL",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "component": "CORNER_DETAIL_SLOPE",
+   "mapping_channel": "AI visual reading of the p.7 render (CANDIDATE)",
+   "parsed": {
+    "count": 7,
+    "count_mode": "BARS_PER_METRE",
+    "dia_mm": 14,
+    "layer_qualifier": null
+   },
+   "pool_item_id": "POOL-CORNER_DETAIL_SLOPE-1869",
+   "position_mm": [
+    5340.141,
+    12094.25
+   ],
+   "raw": "7%%c14/m",
+   "role": "BASE_BOTTOM_BAR",
+   "source_id": "DETTXT:DET:1869",
+   "status": "PROVISIONAL",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "component": "CORNER_DETAIL_DEEP",
+   "mapping_channel": "AI visual reading of the p.7 render (CANDIDATE)",
+   "parsed": {
+    "count": 7,
+    "count_mode": "BARS_PER_METRE",
+    "dia_mm": 14,
+    "layer_qualifier": null
+   },
+   "pool_item_id": "POOL-CORNER_DETAIL_DEEP-187C",
+   "position_mm": [
+    2024.783,
+    13114.718
+   ],
+   "raw": "7%%C14/m",
+   "role": "WALL_VERTICAL_L_BAR",
+   "source_id": "DETTXT:DET:187C",
+   "status": "PROVISIONAL",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "component": "DEEP_END_BASE",
+   "mapping_channel": "AI visual reading of the p.7 render (CANDIDATE)",
+   "parsed": {
+    "count": 3,
+    "count_mode": "ABSOLUTE_COUNT",
+    "dia_mm": 16,
+    "layer_qualifier": null
+   },
+   "pool_item_id": "POOL-DEEP_END_BASE-1881",
+   "position_mm": [
+    821.104,
+    19091.146
+   ],
+   "raw": "3%%c16",
+   "role": "CORNER_BARS",
+   "source_id": "DETTXT:DET:1881",
+   "status": "PROVISIONAL",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "component": "DEEP_WALL",
+   "mapping_channel": "AI visual reading of the p.7 render (CANDIDATE)",
+   "parsed": {
+    "count": null,
+    "count_mode": "SPACING",
+    "dia_mm": 12,
+    "layer_qualifier": null,
+    "spacing_mm": 200
+   },
+   "pool_item_id": "POOL-DEEP_WALL-188D",
+   "position_mm": [
+    104.693,
+    24163.688
+   ],
+   "raw": "%%c12/20cm",
+   "role": "HORIZONTAL_OUTER_FACE",
+   "source_id": "DETTXT:DET:188D",
+   "status": "PROVISIONAL",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "component": "DEEP_WALL",
+   "mapping_channel": "AI visual reading of the p.7 render (CANDIDATE)",
+   "parsed": {
+    "count": 7,
+    "count_mode": "BARS_PER_METRE",
+    "dia_mm": 14,
+    "layer_qualifier": null
+   },
+   "pool_item_id": "POOL-DEEP_WALL-1893",
+   "position_mm": [
+    260.486,
+    24827.193
+   ],
+   "raw": "7%%C14/m",
+   "role": "VERTICAL_OUTER_FACE",
+   "source_id": "DETTXT:DET:1893",
+   "status": "PROVISIONAL",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "component": "DEEP_WALL",
+   "mapping_channel": "AI visual reading of the p.7 render (CANDIDATE)",
+   "parsed": {
+    "count": 3,
+    "count_mode": "ABSOLUTE_COUNT",
+    "dia_mm": 16,
+    "layer_qualifier": null
+   },
+   "pool_item_id": "POOL-DEEP_WALL-1896",
+   "position_mm": [
+    682.596,
+    26129.138
+   ],
+   "raw": "3%%c16",
+   "role": "TOP_COPING_BARS",
+   "source_id": "DETTXT:DET:1896",
+   "status": "PROVISIONAL",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "component": "CORNER_DETAIL_DEEP",
+   "mapping_channel": "AI visual reading of the p.7 render (CANDIDATE)",
+   "parsed": {
+    "count": 7,
+    "count_mode": "BARS_PER_METRE",
+    "dia_mm": 14,
+    "layer_qualifier": null
+   },
+   "pool_item_id": "POOL-CORNER_DETAIL_DEEP-18A8",
+   "position_mm": [
+    3149.466,
+    13282.715
+   ],
+   "raw": "7%%C14/m",
+   "role": "BASE_L_BAR",
+   "source_id": "DETTXT:DET:18A8",
+   "status": "PROVISIONAL",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "component": "DEEP_END_BASE",
+   "mapping_channel": "AI visual reading of the p.7 render (CANDIDATE)",
+   "parsed": {
+    "count": 7,
+    "count_mode": "BARS_PER_METRE",
+    "dia_mm": 14,
+    "layer_qualifier": null
+   },
+   "pool_item_id": "POOL-DEEP_END_BASE-18AA",
+   "position_mm": [
+    4649.771,
+    16742.246
+   ],
+   "raw": "7%%c14/m",
+   "role": "BOTTOM_BARS",
+   "source_id": "DETTXT:DET:18AA",
+   "status": "PROVISIONAL",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "component": "SLOPED_BASE",
+   "mapping_channel": "AI visual reading of the p.7 render (CANDIDATE)",
+   "parsed": {
+    "count": 6,
+    "count_mode": "BARS_PER_METRE",
+    "dia_mm": 14,
+    "layer_qualifier": null
+   },
+   "pool_item_id": "POOL-SLOPED_BASE-18AD",
+   "position_mm": [
+    8508.988,
+    17315.822
+   ],
+   "raw": "6%%c14/m",
+   "role": "BOTTOM_BARS",
+   "source_id": "DETTXT:DET:18AD",
+   "status": "PROVISIONAL",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "component": "DEEP_END_BASE",
+   "mapping_channel": "AI visual reading of the p.7 render (CANDIDATE)",
+   "parsed": {
+    "count": 7,
+    "count_mode": "BARS_PER_METRE",
+    "dia_mm": 14,
+    "layer_qualifier": null
+   },
+   "pool_item_id": "POOL-DEEP_END_BASE-18B0",
+   "position_mm": [
+    5682.995,
+    20029.157
+   ],
+   "raw": "7%%c14/m",
+   "role": "TOP_BARS",
+   "source_id": "DETTXT:DET:18B0",
+   "status": "PROVISIONAL",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "component": "SLOPED_BASE",
+   "mapping_channel": "AI visual reading of the p.7 render (CANDIDATE)",
+   "parsed": {
+    "count": 6,
+    "count_mode": "BARS_PER_METRE",
+    "dia_mm": 12,
+    "layer_qualifier": null
+   },
+   "pool_item_id": "POOL-SLOPED_BASE-18D3",
+   "position_mm": [
+    7594.767,
+    21392.119
+   ],
+   "raw": "6%%c12/m",
+   "role": "TOP_BARS",
+   "source_id": "DETTXT:DET:18D3",
+   "status": "PROVISIONAL",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "component": "CORNER_DETAIL_SLOPE_SHALLOW",
+   "mapping_channel": "AI visual reading of the p.7 render (CANDIDATE)",
+   "parsed": {
+    "count": 6,
+    "count_mode": "BARS_PER_METRE",
+    "dia_mm": 12,
+    "layer_qualifier": null
+   },
+   "pool_item_id": "POOL-CORNER_DETAIL_SLOPE_SHALLOW-18D7",
+   "position_mm": [
+    12306.194,
+    13759.974
+   ],
+   "raw": "6%%c12/m",
+   "role": "BOTTOM_BAR",
+   "source_id": "DETTXT:DET:18D7",
+   "status": "PROVISIONAL",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "component": "CORNER_DETAIL_SLOPE_SHALLOW",
+   "mapping_channel": "AI visual reading of the p.7 render (CANDIDATE)",
+   "parsed": {
+    "count": 6,
+    "count_mode": "BARS_PER_METRE",
+    "dia_mm": 12,
+    "layer_qualifier": null
+   },
+   "pool_item_id": "POOL-CORNER_DETAIL_SLOPE_SHALLOW-18DB",
+   "position_mm": [
+    12263.461,
+    14274.537
+   ],
+   "raw": "6%%c12/m",
+   "role": "TOP_BAR",
+   "source_id": "DETTXT:DET:18DB",
+   "status": "PROVISIONAL",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "component": "CORNER_DETAIL_SHALLOW",
+   "mapping_channel": "AI visual reading of the p.7 render (CANDIDATE)",
+   "parsed": {
+    "count": 6,
+    "count_mode": "BARS_PER_METRE",
+    "dia_mm": 12,
+    "layer_qualifier": null
+   },
+   "pool_item_id": "POOL-CORNER_DETAIL_SHALLOW-18DD",
+   "position_mm": [
+    14842.332,
+    14593.421
+   ],
+   "raw": "6%%c12/m",
+   "role": "BASE_BAR",
+   "source_id": "DETTXT:DET:18DD",
+   "status": "PROVISIONAL",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "component": "SHALLOW_BASE",
+   "mapping_channel": "AI visual reading of the p.7 render (CANDIDATE)",
+   "parsed": {
+    "count": 6,
+    "count_mode": "BARS_PER_METRE",
+    "dia_mm": 12,
+    "layer_qualifier": null
+   },
+   "pool_item_id": "POOL-SHALLOW_BASE-18F0",
+   "position_mm": [
+    13464.654,
+    20128.755
+   ],
+   "raw": "6%%c12/m",
+   "role": "BOTTOM_BARS",
+   "source_id": "DETTXT:DET:18F0",
+   "status": "PROVISIONAL",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "component": "SHALLOW_BASE",
+   "mapping_channel": "AI visual reading of the p.7 render (CANDIDATE)",
+   "parsed": {
+    "count": 6,
+    "count_mode": "BARS_PER_METRE",
+    "dia_mm": 12,
+    "layer_qualifier": null
+   },
+   "pool_item_id": "POOL-SHALLOW_BASE-18F8",
+   "position_mm": [
+    15360.844,
+    20128.755
+   ],
+   "raw": "6%%c12/m",
+   "role": "BOTTOM_BARS (second label)",
+   "source_id": "DETTXT:DET:18F8",
+   "status": "PROVISIONAL",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "component": "DEEP_WALL",
+   "mapping_channel": "AI visual reading of the p.7 render (CANDIDATE)",
+   "parsed": {
+    "count": null,
+    "count_mode": "SPACING",
+    "dia_mm": 12,
+    "layer_qualifier": null,
+    "spacing_mm": 200
+   },
+   "pool_item_id": "POOL-DEEP_WALL-18FC",
+   "position_mm": [
+    3453.215,
+    23449.77
+   ],
+   "raw": "%%c12/20cm",
+   "role": "HORIZONTAL_INNER_FACE",
+   "source_id": "DETTXT:DET:18FC",
+   "status": "PROVISIONAL",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "component": "DEEP_WALL",
+   "mapping_channel": "AI visual reading of the p.7 render (CANDIDATE)",
+   "parsed": {
+    "count": 7,
+    "count_mode": "BARS_PER_METRE",
+    "dia_mm": 12,
+    "layer_qualifier": null
+   },
+   "pool_item_id": "POOL-DEEP_WALL-1906",
+   "position_mm": [
+    3500.304,
+    25393.963
+   ],
+   "raw": "7%%C12/m",
+   "role": "VERTICAL_INNER_FACE",
+   "source_id": "DETTXT:DET:1906",
+   "status": "PROVISIONAL",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "component": "SHALLOW_BASE",
+   "mapping_channel": "AI visual reading of the p.7 render (CANDIDATE)",
+   "parsed": {
+    "count": 6,
+    "count_mode": "BARS_PER_METRE",
+    "dia_mm": 12,
+    "layer_qualifier": null
+   },
+   "pool_item_id": "POOL-SHALLOW_BASE-1907",
+   "position_mm": [
+    12692.072,
+    23345.837
+   ],
+   "raw": "6%%c12/m",
+   "role": "TOP_BARS",
+   "source_id": "DETTXT:DET:1907",
+   "status": "PROVISIONAL",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "component": "SHALLOW_WALL",
+   "mapping_channel": "AI visual reading of the p.7 render (CANDIDATE)",
+   "parsed": {
+    "count": null,
+    "count_mode": "SPACING",
+    "dia_mm": 10,
+    "layer_qualifier": null,
+    "spacing_mm": 200
+   },
+   "pool_item_id": "POOL-SHALLOW_WALL-191F",
+   "position_mm": [
+    14340.515,
+    24808.722
+   ],
+   "raw": "%%c10/20cm",
+   "role": "HORIZONTAL_INNER_FACE",
+   "source_id": "DETTXT:DET:191F",
+   "status": "PROVISIONAL",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "component": "CORNER_DETAIL_SHALLOW",
+   "mapping_channel": "AI visual reading of the p.7 render (CANDIDATE)",
+   "parsed": {
+    "count": 6,
+    "count_mode": "BARS_PER_METRE",
+    "dia_mm": 12,
+    "layer_qualifier": null
+   },
+   "pool_item_id": "POOL-CORNER_DETAIL_SHALLOW-1929",
+   "position_mm": [
+    17134.379,
+    14726.733
+   ],
+   "raw": "6%%c12/m",
+   "role": "WALL_VERTICAL_L_BAR",
+   "source_id": "DETTXT:DET:1929",
+   "status": "PROVISIONAL",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "component": "SHALLOW_END_BASE",
+   "mapping_channel": "AI visual reading of the p.7 render (CANDIDATE)",
+   "parsed": {
+    "count": 4,
+    "count_mode": "ABSOLUTE_COUNT",
+    "dia_mm": 16,
+    "layer_qualifier": null
+   },
+   "pool_item_id": "POOL-SHALLOW_END_BASE-192B",
+   "position_mm": [
+    17535.335,
+    21881.119
+   ],
+   "raw": "4%%c16",
+   "role": "CORNER_BARS",
+   "source_id": "DETTXT:DET:192B",
+   "status": "PROVISIONAL",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "component": "SHALLOW_WALL",
+   "mapping_channel": "AI visual reading of the p.7 render (CANDIDATE)",
+   "parsed": {
+    "count": null,
+    "count_mode": "SPACING",
+    "dia_mm": 10,
+    "layer_qualifier": null,
+    "spacing_mm": 200
+   },
+   "pool_item_id": "POOL-SHALLOW_WALL-192E",
+   "position_mm": [
+    17575.555,
+    24156.999
+   ],
+   "raw": "%%c10/20cm",
+   "role": "HORIZONTAL_OUTER_FACE",
+   "source_id": "DETTXT:DET:192E",
+   "status": "PROVISIONAL",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "component": "SHALLOW_WALL",
+   "mapping_channel": "AI visual reading of the p.7 render (CANDIDATE)",
+   "parsed": {
+    "count": 6,
+    "count_mode": "BARS_PER_METRE",
+    "dia_mm": 12,
+    "layer_qualifier": null
+   },
+   "pool_item_id": "POOL-SHALLOW_WALL-192F",
+   "position_mm": [
+    17616.688,
+    25467.365
+   ],
+   "raw": "6%%c12/m",
+   "role": "VERTICAL_BARS",
+   "source_id": "DETTXT:DET:192F",
+   "status": "PROVISIONAL",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "component": "DEEP_END_BASE",
+   "mapping_channel": "AI visual reading of the p.7 render (CANDIDATE)",
+   "parsed": {
+    "count": 7,
+    "count_mode": "BARS_PER_METRE",
+    "dia_mm": 14,
+    "layer_qualifier": null
+   },
+   "pool_item_id": "POOL-DEEP_END_BASE-19B0",
+   "position_mm": [
+    6265.947,
+    16828.745
+   ],
+   "raw": "7%%c14/m",
+   "role": "BOTTOM_BARS (second label)",
+   "source_id": "DETTXT:DET:19B0",
+   "status": "PROVISIONAL",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  }
+ ],
+ "source": {
+  "drawing": "ST7757.dxf",
+  "dxf_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+  "pdf": "ST7757.pdf",
+  "pdf_sha256": "74da1523f05eb3c6a4fe3ddebaef2c3d841891f003efc03bc32a3fb4553337e3"
+ },
+ "summary": {
+  "by_component": {
+   "CORNER_DETAIL_DEEP": 2,
+   "CORNER_DETAIL_SHALLOW": 2,
+   "CORNER_DETAIL_SLOPE": 2,
+   "CORNER_DETAIL_SLOPE_SHALLOW": 2,
+   "DEEP_END_BASE": 4,
+   "DEEP_WALL": 5,
+   "SHALLOW_BASE": 3,
+   "SHALLOW_END_BASE": 1,
+   "SHALLOW_WALL": 3,
+   "SLOPED_BASE": 2
+  },
+  "items": 26
+ }
+}

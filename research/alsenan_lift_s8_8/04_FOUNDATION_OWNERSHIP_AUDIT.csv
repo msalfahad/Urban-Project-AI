@@ -1,0 +1,16 @@
+ITEM,VALUE,EVIDENCE,STATE
+FF identity,FF (lift base),"FP tag 1676 'FF' inside the shaft; schedule row 2B1E FO-TY 'FF'; remark 1C64 (legacy-encoded Arabic, decoded by PRE-S8 as 'lift base'; not reproduced)",ESTABLISHED
+schedule size (2B1E W / H / DEPHT),460 x 450 x 55 cm,ST7757.dxf FTB insert 2B1E (p.9),PRINTED
+drawn outline (FP 1B2B),4600 x 4500 mm,S-FOOTINGS LWPOLYLINE 1B2B,MATCH
+S1 definition,460.0 x 450.0 x 55.0 cm; TOP_short 6Ø14/m; TOP_long 6Ø14/m; BOTTOM_short 9Ø14/m; BOTTOM_long 9Ø14/m,S1 FDEF-FF,FDEF-FF
+PRE-S8 figure 460 x 450 x 55,verified,schedule = drawn = S1,VERIFIED
+footing concrete,11.385 m3 (4.60 x 4.50 x 0.55),outline + schedule depth (both have authority),"OWNED_BUT_UNMEASURED (footing family: S1 / S2 count it, no frozen stage holds its m3); not released by S8.8"
+footing bars (four mats),720.239506 kg Ø14 (REBAR_LOWER_BOUND),S4 FOCC-1B2B; BOTTOM_SHORT LOWER_BOUND 216.277531; BOTTOM_LONG LOWER_BOUND 215.841975; TOP_SHORT LOWER_BOUND 142.426667; TOP_LONG LOWER_BOUND 145.693333,ALREADY_OWNED_AND_MEASURED (S4 lower bound; S4.1 end treatments blocked)
+p.14 '2 Ø16' at the wall base,0 kg,"S4.1-T01: 2 top + 2 bottom Ø16 per cut wall (SOURCE_FOUND_DERIVED, S4-07); still missing: bar length / corner laps and whether all four walls carry them (S4-08)",TRANSFERRED_TO_S8_8 -> BLOCKED_UNQUANTIFIED (see 08)
+column starters into FF,85.271 kg Ø16 (4 columns),S3.1 COL-C1-X09-Y09-FOUNDATION 8Ø16 17.952; COL-C2-X09-Y07-FOUNDATION 8Ø16 17.952; COL-C2-X10-Y09-FOUNDATION 8Ø16 17.952; COL-C9-X10-Y07-FOUNDATION 14Ø16 31.415,"ALREADY_OWNED_AND_MEASURED (S3.1, PROVISIONAL)"
+ground beams framing into FF,"GSO-15D-7C8-1, GSO-17C-7E3-1",GSO-15D-7C8-1 LOWER_BOUND 20.688889 kg; GSO-17C-7E3-1 LOWER_BOUND 20.993778 kg,ALREADY_OWNED_AND_MEASURED (S5 lower bound)
+pit floor,the FF top,"ST7757.pdf p.14 'DETAIL OF LIFT WITH ISOLATED FOOTING (WITHOUT BASEMENT)' (typical section, visual): the walls stand on the footing; no pit slab",NOT_A_SEPARATE_ELEMENT
+pit walls on the footing,"1.1 m2 on, 0 m2 off",plan overlap of the net wall pieces with 1B2B,ALL_ON_FOOTING (walls start at its top: no shared volume)
+shaft position on the footing,"margins W 900.207, E 1499.793, S 1299.858, N 1000.142 mm",10EB inside 1B2B,ESTABLISHED
+founding level,not printed (<= -1.50 minimum),p.9 note 1 (S1 P9-SOIL); S1 level register,BLOCKED_UNQUANTIFIED
+lower ground beam (P13-FOOTING-DEEP),-,S2 FTG-FF LOWER_GROUND_BEAM BLOCKED,BLOCKED (footing family; not S8.8)

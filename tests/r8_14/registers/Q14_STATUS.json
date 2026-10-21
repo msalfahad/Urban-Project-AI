@@ -1,0 +1,160 @@
+{
+ "row": "Q-14",
+ "STATE": "COMPUTED_SHADOW",
+ "VALUE": 140.787,
+ "unit": "m2",
+ "final": false,
+ "BASE_SITE_AREA_M2": 141.026289,
+ "THRESHOLD_CONTRIBUTION_M2": 0,
+ "THRESHOLDS": [
+  {
+   "strip": "THRESHOLD-cf12fcdfd3e6a4a6",
+   "state": "NOT_IN_TRADE",
+   "contribution_m2": 0.0
+  },
+  {
+   "strip": "THRESHOLD-bfcea08375237224",
+   "state": "NOT_IN_TRADE",
+   "contribution_m2": 0.0
+  },
+  {
+   "strip": "THRESHOLD-28f50f8dc18c1e90",
+   "state": "NOT_IN_TRADE",
+   "contribution_m2": 0.0
+  },
+  {
+   "strip": "THRESHOLD-c82365dd41b94abe",
+   "state": "NOT_IN_TRADE",
+   "contribution_m2": 0.0
+  },
+  {
+   "strip": "THRESHOLD-04910e5deeeed2fc",
+   "state": "NOT_IN_TRADE",
+   "contribution_m2": 0.0
+  },
+  {
+   "strip": "THRESHOLD-f9846605acbce828",
+   "state": "NOT_IN_TRADE",
+   "contribution_m2": 0.0
+  }
+ ],
+ "PASSAGE_TREATMENT": {
+  "soffit_exclusion_m2": 0.239289,
+  "passages_included_in_site": [],
+  "head_unresolved": [
+   "OP-9e0fd219ca5cd391"
+  ]
+ },
+ "OBJECT_FOOTPRINT_POLICY": [
+  "QORTUBA-CEILING-OBJECT-FOOTPRINT@v1:CEILING:FOOTPRINT_INCLUDED"
+ ],
+ "SEMANTIC_CLASSES": null,
+ "TRADE_AUTHORITY": [
+  "QORTUBA-Q14-CEILING-TREATMENT@v1"
+ ],
+ "TOPOLOGY_POLICY": "WALL_BAND_POLICY_V5 (d1ff58e755bb88f4) + TOPOLOGY_CLOSURE_POLICY_V1",
+ "TOPOLOGY_DIGEST": "4bd11660f9b6679007584a104aa28b59b2d4440d88bfcf99055b6eab89d74927",
+ "ROW_AUTHORITY_DIGEST": "b5399c3d3f9fea1f00aeace07f65a8a46bc50c03c2c40acb570a178e81e86896",
+ "RELEASE_INPUT_DIGEST": "37003eeb9f290637a60e3bef228fb75cca939ed2c0d184a6e061011fd2f3af9d",
+ "PHYSICAL_SITES": [
+  {
+   "site": "SITE-1c4abf65f9b5db1e",
+   "zones": [
+    "BATH"
+   ],
+   "area_m2": 8.5525
+  },
+  {
+   "site": "SITE-5f1762f1a93b91ca",
+   "zones": [
+    "BED.ROOM"
+   ],
+   "area_m2": 19.2725
+  },
+  {
+   "site": "SITE-8c1c7563d5252c50",
+   "zones": [
+    "PAINTRY"
+   ],
+   "area_m2": 11.685
+  },
+  {
+   "site": "SITE-a2b19efc492a6d0b",
+   "zones": [
+    "BATH"
+   ],
+   "area_m2": 5.1
+  },
+  {
+   "site": "SITE-a6405850100155ac",
+   "zones": [
+    "DRESS",
+    "M.B.ROOM"
+   ],
+   "area_m2": 33.2
+  },
+  {
+   "site": "SITE-daca396d6d730e60",
+   "zones": [
+    "BED.ROOM"
+   ],
+   "area_m2": 16.327
+  },
+  {
+   "site": "SITE-fdfa89fe0f5809a4",
+   "zones": [
+    "HALL",
+    "whgm"
+   ],
+   "area_m2": 42.799289
+  },
+  {
+   "site": "SITE-fe8ed5548fb4310e",
+   "zones": [
+    "BATH"
+   ],
+   "area_m2": 4.09
+  }
+ ],
+ "OWNER_FACTS_APPLIED": [
+  "QORTUBA-NEW-OPEN-PASSAGE-SOFFIT-NOT-CEILING-OWNER-001@v1"
+ ],
+ "SOURCE_ANCHOR": {
+  "revision": "QORTUBA_REV_NEW",
+  "dxf_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+  "dwg_identity": "NOT_ESTABLISHED"
+ },
+ "RELEASE_BLOCKERS": [
+  "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+  "PASSAGE_HEAD_CONDITION_NOT_ESTABLISHED: OP-9e0fd219ca5cd391 (0.18 m2) is in the ceiling site but its head condition is not established for this revision (old QP-18 does not transfer)",
+  "OBSTACLE_AUTHORITY_UNPROVEN: 0.84 m2 excluded from BED.ROOM by isolated closed loop(s) H2060 (layer-only; no physical authority)",
+  "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+ ],
+ "COUNTERFACTUALS": {
+  "counterfactual_if_not_an_obstacle": 141.627
+ },
+ "blockers": [],
+ "blocker_classes": [],
+ "SCHEMA": "URBAN_R8_14_Q14_STATUS_V1",
+ "rebuild": "ceiling sites of the frozen V5 run minus the Hall / Lobby soffit footprint; door thresholds NOT_IN_TRADE; no R8.13 value is used",
+ "regression_vs_r8_13": {
+  "R8.13": 141.0263,
+  "R8.14": 140.787,
+  "delta_m2": -0.2393,
+  "is_target": false
+ },
+ "soffit": {
+  "strip": "OP-997f14d12b8e9bc1",
+  "kind": "OPEN_PASSAGE",
+  "location": "INSIDE_SITE",
+  "area_m2": 0.239289,
+  "sides": {
+   "SITE-fdfa89fe0f5809a4": "CEILING_BY_AREA"
+  },
+  "trade": "CEILING",
+  "contribution_m2": -0.239289,
+  "state": "SOFFIT_EXCLUDED_FROM_CEILING",
+  "in_row_total": false
+ },
+ "historical_matching": "NONE"
+}

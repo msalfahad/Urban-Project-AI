@@ -1,0 +1,5 @@
+SOURCE,RC_M3,PLAIN_M3,QUOTED_IN_BRIEF_M3,RC_EXCLUDES_PLAIN,BASIS,ITEM_LEVEL,MATCH
+FREELANCER (S3.1 lineage of the workbook),352.436075,47.055,352.436,YES,sum of 7 RC categories = leaf rows; plain concrete is a separate row of its own sheet,YES (149 leaf rows),YES
+"URBAN M4 (frozen engine, route G)",289.891262,22.155092,312.05,NO in the brief figure: 312.046 = RC 289.891 + plain 22.155,"generic route: footings, necks, columns, ground beams + straps, ground slab, beams, slabs, lintels (no stairs, domes, pool, lift)",YES,YES
+U-C4N (blind AutoCAD MCP run),337.812,,337.812,YES (no blinding row in the record),category values recorded from the owner brief (S3.1 section 16),NO (report missing),YES
+christiannp (blind AutoCAD MCP run),333.173,,333.173,YES (A6 states a rule only),report-explicit values (sealed report not received),PARTLY (per floor / per stage),YES

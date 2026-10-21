@@ -1,0 +1,38 @@
+{
+ "SCHEMA": "URBAN_R8_19_HIDDEN_PROFILE_REGISTER_V1",
+ "row": "HIDDEN_PROFILE_LM",
+ "unit": "lm",
+ "authority": [
+  "US-08: two BOQ items on the SAME payable path, never merged",
+  "QP-06 QORTUBA skirting = HIDDEN"
+ ],
+ "state": "COMPUTED_SHADOW",
+ "HIDDEN_PROFILE_LM": 94.13682,
+ "path": "IDENTICAL to SKIRTING (certified V4 path: no withheld span, no open path defect)",
+ "per_room_lm": {
+  "SITE-5f1762f1a93b91ca": 22.9,
+  "SITE-77a2130eb275604c": 26.157105,
+  "SITE-a6405850100155ac": 29.5,
+  "SITE-daca396d6d730e60": 15.579714,
+  "SITE-1c4abf65f9b5db1e": 0.0,
+  "SITE-8c1c7563d5252c50": 0.0,
+  "SITE-a2b19efc492a6d0b": 0.0,
+  "SITE-fe8ed5548fb4310e": 0.0
+ },
+ "release_blockers": [
+  "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+  "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+ ],
+ "merged_with_skirting": false,
+ "why_separate": "a separate BOQ item (the aluminium profile); equal by method (same path), priced and listed separately (US-08)",
+ "regression_vs_r8_17": {
+  "R8.17": 94.13682,
+  "R8.18": 94.13682,
+  "unchanged": true
+ },
+ "regression_vs_r8_18": {
+  "R8.18": 94.13682,
+  "R8.19": 94.13682,
+  "unchanged": true
+ }
+}

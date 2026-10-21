@@ -1,0 +1,23 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_V3B_FINAL_QA_V1",
+ "checks": {
+  "no_provisional_in_technical": true,
+  "technical_qty_only_for_technical_classes": true,
+  "every_provisional_labelled": true,
+  "provisional_within_range": true,
+  "waste_pending_is_blank_never_zero": true,
+  "rebar_bases_never_summed": true,
+  "alternatives_not_in_totals": true,
+  "line_ids_unique": true,
+  "units_known": true,
+  "no_v3a_line_dropped": true,
+  "matrix_technical_equals_lines": true,
+  "concrete_lines_carry_grade": true,
+  "benchmark_not_read": true,
+  "never_44_19_target": true
+ },
+ "state": "PASS",
+ "release_label": "V3b FULL-BOQ CANDIDATE (not FINAL)",
+ "lines": 389,
+ "provisional_lines": 158
+}

@@ -1,0 +1,82 @@
+{
+ "SCHEMA": "URBAN_QORTUBA_RC1_WALL_TILE_REGISTER_V1",
+ "items": {
+  "WTL-01": {
+   "qty": 127.693512,
+   "unit": "m2",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "room_breakdown": [
+    {
+     "key": "SITE-1c4abf65f9b5db1e",
+     "label": "BATH (1) [1c4abf65]",
+     "qty": 36.32,
+     "kind": "ROOM",
+     "components": {
+      "wall_plane_m2": 34.24,
+      "column_face_m2": 2.08,
+      "obstacle_face_m2": 0.0,
+      "jamb_reveals_m2": 0.0,
+      "head_reveals_m2": 0.0
+     },
+     "height_m": 3.2,
+     "height_authority": "QORTUBA-NEW-WET-SERVICE-FINISH-OWNER-001@v1"
+    },
+    {
+     "key": "SITE-8c1c7563d5252c50",
+     "label": "PAINTRY",
+     "qty": 36.013512,
+     "kind": "ROOM",
+     "components": {
+      "wall_plane_m2": 31.533512,
+      "column_face_m2": 4.48,
+      "obstacle_face_m2": 0.0,
+      "jamb_reveals_m2": 0.0,
+      "head_reveals_m2": 0.0
+     },
+     "height_m": 3.2,
+     "height_authority": "QORTUBA-NEW-WET-SERVICE-FINISH-OWNER-001@v1 (SERVICE_ROOM; PAINTRY via QP-07 = kitchen / preparation zone for the ceramic takeoff)"
+    },
+    {
+     "key": "SITE-a2b19efc492a6d0b",
+     "label": "BATH (2) [a2b19efc]",
+     "qty": 28.32,
+     "kind": "ROOM",
+     "components": {
+      "wall_plane_m2": 23.84,
+      "column_face_m2": 4.48,
+      "obstacle_face_m2": 0.0,
+      "jamb_reveals_m2": 0.0,
+      "head_reveals_m2": 0.0
+     },
+     "height_m": 3.2,
+     "height_authority": "QORTUBA-NEW-WET-SERVICE-FINISH-OWNER-001@v1"
+    },
+    {
+     "key": "SITE-fe8ed5548fb4310e",
+     "label": "BATH (3) [fe8ed554]",
+     "qty": 27.04,
+     "kind": "ROOM",
+     "components": {
+      "wall_plane_m2": 23.2,
+      "column_face_m2": 3.84,
+      "obstacle_face_m2": 0.0,
+      "jamb_reveals_m2": 0.0,
+      "head_reveals_m2": 0.0
+     },
+     "height_m": 3.2,
+     "height_authority": "QORTUBA-NEW-WET-SERVICE-FINISH-OWNER-001@v1"
+    }
+   ],
+   "rules": [
+    "URBAN-EXPOSED-COLUMN-FINISH-METHOD@v1",
+    "QORTUBA-NEW-WALL-FACE-METHOD@v3"
+   ],
+   "blockers": [
+    "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "notes": [],
+   "evidence": "r8_19.trade_rows.WET_SERVICE_WALL_TILE"
+  }
+ }
+}

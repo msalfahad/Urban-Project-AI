@@ -1,0 +1,79 @@
+{
+ "baseline": "763a00e",
+ "code": {
+  "engine/source/delta_release.py": "7b0f72a6f5138b3e0f8515c80a42a38a2cfc035c8fb4c138aa64a4fd5c9708b9",
+  "engine/source/ground_slab_qto.py": "5316356f7a99ef6774492edb7689cbd99bade946b100e694d7df385c9cd92eb5",
+  "engine/source/legacy_text.py": "2508b0f6c3c7bad751edb40009f009ef0ee24beb8c5c3516a0e5e400aa102f6a",
+  "engine/source/pool_qto.py": "9777984a086cb0dceacdfc187be408e61afcf36f239fc283bbe77277836e1763",
+  "engine/source/rebar_unit_mass.py": "81d63a85da8e64600d0c49a6662bcc49655f46dc71603654b3e1438c5b146eb8",
+  "engine/source/slab_rebar_qto.py": "90a7e969835293bfe9abca0307cfb947933e041b2e7f38a4d30ba3776ef3f4ca",
+  "research/alsenan_swimming_pool_s8_2/build_s8_2.py": "cb0ba5265322bce09fcdcea4d43a4d405ef311bf5427bae8d6c784d0a8931ccb",
+  "research/external_engine_lab/alsenan_structural_s1.py": "e3ecd25490cd433540e317454ffdbaadf17c19799f49eb1df9afcb928aa494cb",
+  "research/source_recovery_delta/vector_pdf.py": "5f79e57915514c8b2eb621800efd0265e315856e853a08f38224df7a6bd610d9"
+ },
+ "date": "2026-10-09",
+ "drawing_sha256": {
+  "P7757.dxf": "ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4",
+  "ST7757.dxf": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+  "ST7757.pdf": "74da1523f05eb3c6a4fe3ddebaef2c3d841891f003efc03bc32a3fb4553337e3"
+ },
+ "engine_commit_stamp": "763a00e+code:d16a9a8bc2c0445a",
+ "frozen_baselines": {
+  "AD1": "e2497cc75181393000187b7e657fa8485a4c0f365b4614bed983d0bc6c0ca5b4",
+  "D1.1": "3ecb642e2141f5a9af11453870696b104a11cfb519d65a9e3f505cbff7c73a74",
+  "D1.2": "f256d6a25edf93029c6ba1c8cf9bc336790fd8d9cf7a5045e8395942986a9554",
+  "PRE-S7": "fb3a1c62a8e525b663853d03d43e067f1839026aea149399491bd4cf98f0ad09",
+  "PRE-S7.1": "3a67a8641ce4ea836334e02532af82b9a3bb01be8efdba4f093eee44d92c1ef6",
+  "PRE-S8": "1c8daf59926540941efbf5f749e8e175fe64b7efeb6d7acff0bfbefbb034849d",
+  "S4": "0d63015a19953f295e331aab2d7e49e8facb277e1465fbdd1b6b5a40d1a2362b",
+  "S4.1": "468e90d9657548a7e9124b67ce0a55b63560f030e2f98b414c46ad4e970e030b",
+  "S5": "ff488a92f3eaff80e84fca2d7e0b8e36cc40ddb84232cd315acfd1ce50b4b3d8",
+  "S5.1": "595d64b1bf5c8e0ef7b5bebfaf3ea4063dd884356390c84b4c8aac77cddb5a88",
+  "S6": "c29a28bc66334d5294d71b0d5feb0dd5eae36baf91a04ef6e0105b2ca43be63e",
+  "S6.1": "c4744888ed2207ebff47c0a895e706d7e381b5f905b694eb92e3d1cdc411c0b2",
+  "S7": "b23f97b6db334e641c38c498bf23b46236d68f4fcc26a6eafde1f3bfc156d175",
+  "S7A": "5b256cef99dc57934c76249c28814d5ce07c74caf308aabdbf90e0e8f0adcee1",
+  "S8.1": "e99d83a750b64541f5b3174b853d24209f30e46574fafafe56cfa3fd0d88e354",
+  "S8.1A": "890c1c42f03715b6b26d88744852fe388ca419fd7c6e3f0214e137dc5c1a473e"
+ },
+ "inputs": {
+  "research/alsenan_ground_slab_s8_1/01_GROUND_SLAB_POPULATION_AND_ZONE_REGISTER.csv": "bdd9459281f41bd4bb3db352b28e22b1481d9ef8a054dcf8ecd369af4a371abf",
+  "research/alsenan_ground_slab_s8_1a/05_COVER_APPLICABILITY_AUDIT.csv": "05c44dcfe675a8ce5b4ba19908fc415394dca44544b445e12d175d5bbcd8d799",
+  "research/alsenan_structural_census_s1/POOL_STRUCTURAL_REGISTER.json": "c5d6a847ad70f2ae71f181755e462a026441c77b6911c972a8809c46fdf6e53f",
+  "research/alsenan_structural_census_s1/SPECIAL_STRUCTURAL_OCCURRENCE_REGISTER.json": "870800ec87b1ea39eb95636bfeae124a6e47c1779d926b8427c1e997e85ee8a5",
+  "research/alsenan_structural_census_s1/STRUCTURAL_PROJECT_RULE_REGISTER.json": "3268bce3ef31c21ee93b0d7f9ab9b50195e0d0ae659699422c6927abcdf528d2",
+  "research/pre_s5_1_source_resolution/INDEX.json": "f865d2a5140b296d93c9f338bfbc0e9a5ca886b804b1772e842107bf9ecd5d2d",
+  "research/pre_s5_1_source_resolution/PRE_S5_1_SUMMARY.json": "a424687a0fcd6efb26246a76efffa2bc3cde18cd511b53ccbe699bca983ca020",
+  "research/pre_s8_structural_completeness/02_STRUCTURAL_ELEMENT_CENSUS.csv": "a24db6efc7855c2a1f2eaff5e9739397b03f3f62d79ffaa7376a8609ead51e12",
+  "research/pre_s8_structural_completeness/07_INTERFACE_DOUBLE_COUNT_AUDIT.csv": "be16d5b59ab6725d6ede336ee60c2212a8351a2d014f8a378336248c9d76aa6b",
+  "research/pre_s8_structural_completeness/10_S8_SOURCE_EXHAUSTION.csv": "265d0b420816eec2bf4687bd194ef01a37fdce0e32b47b89bd10afddd337cb53"
+ },
+ "outputs": {
+  "00_README.md": "7ad28f75fb37d0e009442207992abc392f4b64d4ce10a68cf7089bbccf571631",
+  "01_POOL_SOURCE_AND_RULE_REGISTER.csv": "a4adc77fd54283376e658dac946334f2b62b5f8721ded5bccf68118fa92a627d",
+  "02_POOL_POPULATION_AND_OWNERSHIP.csv": "954e229c9556324a63608afc638ee97dc983a654b498d77e70eee105d100b67b",
+  "03_CONCRETE_GEOMETRY_AND_QTO.csv": "338888c5616f7e8828d5e9e618ed6034d037c922402ce9d5066fae9e30292621",
+  "04_BASE_REINFORCEMENT_QTO.csv": "dc86279299867409fcc0381e34127f05b5cb21907df4d93d9186df67e3c21062",
+  "05_WALL_REINFORCEMENT_QTO.csv": "228697e256021f315976d011589b8d725adbaf735452b50b999e1f9c6e41c917",
+  "06_BAR_RUN_AND_BENT_BAR_REGISTER.csv": "81ec1eb33c933e6d211d76e7f26f4eba17d3ab37e83d0fa87d90871eb9a136b6",
+  "07_BLOCKED_REINFORCEMENT_REGISTER.csv": "66192413d2560be66fdeb2c6d655200650b9916b1b7e4641517844dc3edf2ac5",
+  "08_WALL_BASE_INTERFACE_AUDIT.csv": "4e9ea8f2b809668da0df24949fcfff5bca54713003146fd08f2cd22337e61fbe",
+  "09_PLAIN_CONCRETE_AND_BUILD_UP_REGISTER.csv": "ea174585ae36d0247af65e75e3785c2bfab9a1b95b57beae2824c45187c34431",
+  "10_FLOOR_POOL_SUMMARY.csv": "fe98beada2ad8a074e7b5e96527e7486405f2b45b56038c1d56133aa4a0dafe4",
+  "11_PROVENANCE.jsonl": "2e4ad2bf841c27518f63f5a3aa212c12124d4c691e269e1ed81db8c69b43cc25",
+  "12_CONSERVATION_CHECKS.csv": "126a481313ed8d929ef52c524aeba019cbd55bc3703b50cec369f8c3d0898def",
+  "13_REBAR_EVIDENCE_BINDING.csv": "23a8ec16bb552d7863941ac1adf419b22610d17449e09a49e163e8ebd1438184",
+  "14_COVER_APPLICABILITY.csv": "3f30e2b93cc8785d8a6ca30efef2e75bd6b3e07a1a974d84b8b840c462a7fb7b",
+  "15_SENSITIVITY_SCENARIOS.csv": "5ef7a82a4832d5c90a40dae5468c02cf29f30fd007be44b26f3a4ad9d5e33ea4",
+  "16_CONFLICT_AND_QUESTION_REGISTER.csv": "1f79abe6b4c9958d119ece62c20125a51c5eef3ff6f5d7a69c47ee0980cbb54c",
+  "17_S8_2_SUMMARY.json": "60a3d52cca50307f34bc9552c6e6f7a1ed1bfd5ee6e1c5ec49e963d383557693"
+ },
+ "references_read": [],
+ "released": {
+  "concrete_m3": 0.0,
+  "reinforcement_kg": 0.0
+ },
+ "round": "S8_2",
+ "rule": "S8.2 is built blind and frozen before any earlier pool quantity, contractor estimate or third-party figure is opened; only stated or CAD-established dimensions measure",
+ "state": "FROZEN_BEFORE_COMPARISON"
+}

@@ -1,0 +1,178 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_ARCH_R5_STAIRS",
+ "runs": [
+  {
+   "floor": "GF",
+   "run": 0,
+   "layer": "2",
+   "linetype": "UNIFORM_DASH",
+   "tread_lines": 4,
+   "flight_width_m": 1.15,
+   "tread_going_m": 0.3,
+   "tread_finish_m2": 1.38,
+   "riser_count_candidate": 5,
+   "state": "PROVISIONAL",
+   "why": "tread lines counted on the plan; going 0.30 (plan spacing + p.16 typical); the two linetypes of one flight (cut / overhead) are the same flight - runs are NOT summed"
+  },
+  {
+   "floor": "GF",
+   "run": 1,
+   "layer": "2",
+   "linetype": "UNIFORM_DASH",
+   "tread_lines": 4,
+   "flight_width_m": 1.15,
+   "tread_going_m": 0.3,
+   "tread_finish_m2": 1.38,
+   "riser_count_candidate": 5,
+   "state": "PROVISIONAL",
+   "why": "tread lines counted on the plan; going 0.30 (plan spacing + p.16 typical); the two linetypes of one flight (cut / overhead) are the same flight - runs are NOT summed"
+  },
+  {
+   "floor": "GF",
+   "run": 2,
+   "layer": "2",
+   "linetype": "UNIFORM_DASH",
+   "tread_lines": 7,
+   "flight_width_m": 1.15,
+   "tread_going_m": 0.3,
+   "tread_finish_m2": 2.415,
+   "riser_count_candidate": 8,
+   "state": "PROVISIONAL",
+   "why": "tread lines counted on the plan; going 0.30 (plan spacing + p.16 typical); the two linetypes of one flight (cut / overhead) are the same flight - runs are NOT summed"
+  },
+  {
+   "floor": "GF",
+   "run": 3,
+   "layer": "2",
+   "linetype": "UNIFORM_DASH",
+   "tread_lines": 5,
+   "flight_width_m": 2.8,
+   "tread_going_m": 0.3,
+   "tread_finish_m2": 4.2,
+   "riser_count_candidate": 6,
+   "state": "PROVISIONAL",
+   "why": "tread lines counted on the plan; going 0.30 (plan spacing + p.16 typical); the two linetypes of one flight (cut / overhead) are the same flight - runs are NOT summed"
+  },
+  {
+   "floor": "GF",
+   "run": 4,
+   "layer": "5",
+   "linetype": "CONTINUOUS",
+   "tread_lines": 4,
+   "flight_width_m": 1.15,
+   "tread_going_m": 0.3,
+   "tread_finish_m2": 1.38,
+   "riser_count_candidate": 5,
+   "state": "PROVISIONAL",
+   "why": "tread lines counted on the plan; going 0.30 (plan spacing + p.16 typical); the two linetypes of one flight (cut / overhead) are the same flight - runs are NOT summed"
+  },
+  {
+   "floor": "GF",
+   "run": 5,
+   "layer": "5",
+   "linetype": "CONTINUOUS",
+   "tread_lines": 7,
+   "flight_width_m": 1.15,
+   "tread_going_m": 0.3,
+   "tread_finish_m2": 2.415,
+   "riser_count_candidate": 8,
+   "state": "PROVISIONAL",
+   "why": "tread lines counted on the plan; going 0.30 (plan spacing + p.16 typical); the two linetypes of one flight (cut / overhead) are the same flight - runs are NOT summed"
+  },
+  {
+   "floor": "GF",
+   "run": 6,
+   "layer": "5",
+   "linetype": "CONTINUOUS",
+   "tread_lines": 6,
+   "flight_width_m": 1.15,
+   "tread_going_m": 0.3,
+   "tread_finish_m2": 2.07,
+   "riser_count_candidate": 7,
+   "state": "PROVISIONAL",
+   "why": "tread lines counted on the plan; going 0.30 (plan spacing + p.16 typical); the two linetypes of one flight (cut / overhead) are the same flight - runs are NOT summed"
+  },
+  {
+   "floor": "GF",
+   "run": 7,
+   "layer": "5",
+   "linetype": "CONTINUOUS",
+   "tread_lines": 5,
+   "flight_width_m": 2.8,
+   "tread_going_m": 0.3,
+   "tread_finish_m2": 4.2,
+   "riser_count_candidate": 6,
+   "state": "PROVISIONAL",
+   "why": "tread lines counted on the plan; going 0.30 (plan spacing + p.16 typical); the two linetypes of one flight (cut / overhead) are the same flight - runs are NOT summed"
+  },
+  {
+   "floor": "1F",
+   "run": 8,
+   "layer": "2",
+   "linetype": "UNIFORM_DASH",
+   "tread_lines": 5,
+   "flight_width_m": 1.15,
+   "tread_going_m": 0.3,
+   "tread_finish_m2": 1.725,
+   "riser_count_candidate": 6,
+   "state": "PROVISIONAL",
+   "why": "tread lines counted on the plan; going 0.30 (plan spacing + p.16 typical); the two linetypes of one flight (cut / overhead) are the same flight - runs are NOT summed"
+  },
+  {
+   "floor": "1F",
+   "run": 9,
+   "layer": "2",
+   "linetype": "UNIFORM_DASH",
+   "tread_lines": 11,
+   "flight_width_m": 1.15,
+   "tread_going_m": 0.3,
+   "tread_finish_m2": 3.795,
+   "riser_count_candidate": 12,
+   "state": "PROVISIONAL",
+   "why": "tread lines counted on the plan; going 0.30 (plan spacing + p.16 typical); the two linetypes of one flight (cut / overhead) are the same flight - runs are NOT summed"
+  },
+  {
+   "floor": "1F",
+   "run": 10,
+   "layer": "5",
+   "linetype": "CONTINUOUS",
+   "tread_lines": 5,
+   "flight_width_m": 1.15,
+   "tread_going_m": 0.3,
+   "tread_finish_m2": 1.725,
+   "riser_count_candidate": 6,
+   "state": "PROVISIONAL",
+   "why": "tread lines counted on the plan; going 0.30 (plan spacing + p.16 typical); the two linetypes of one flight (cut / overhead) are the same flight - runs are NOT summed"
+  },
+  {
+   "floor": "1F",
+   "run": 11,
+   "layer": "5",
+   "linetype": "CONTINUOUS",
+   "tread_lines": 11,
+   "flight_width_m": 1.15,
+   "tread_going_m": 0.3,
+   "tread_finish_m2": 3.795,
+   "riser_count_candidate": 12,
+   "state": "PROVISIONAL",
+   "why": "tread lines counted on the plan; going 0.30 (plan spacing + p.16 typical); the two linetypes of one flight (cut / overhead) are the same flight - runs are NOT summed"
+  }
+ ],
+ "riser_height": {
+  "state": "BLOCKED",
+  "why": "total risers per storey not established from the plan alone"
+ },
+ "landings": {
+  "state": "BLOCKED",
+  "why": "landing outlines not separated from the stair hall region"
+ },
+ "handrail_m": {
+  "state": "BLOCKED",
+  "why": "no handrail / balustrade geometry on the plans"
+ },
+ "stair_skirting_m": {
+  "state": "BLOCKED",
+  "why": "stair-side wall path not separated"
+ },
+ "source": "STAIR_CONCRETE_V2 known inputs (architectural plan tread lines); p.16 structural typical not used as architectural geometry"
+}

@@ -1,0 +1,10 @@
+PRE_S8_ID,PRE_S8_FLOOR,DXF_HANDLE,PRE_S8_AREA_M2,S9A_BAND,S9A_AREA_M2,AREA_DIFF_M2,PRE_S8_MISSING_INFORMATION,S9A_LEGEND_MATCH,S9A_PDF_SPACING_MM,S9A_OWNER,CLASS,V3B_CA_LENGTH_M,V3B_CA_LENGTH_BASIS,S9A_BAND_LENGTH_M
+HZ-FFRS-5E0,1F_ROOF_SLAB,5E0,1.35,S9A-CP-05,1.35,0,the legend draws the cantilever portion and the bearing wall with the same dense hatch,CANTILEVER_PORTION,100.28,SLABS / CANTILEVER_PORTIONS,SAME_OBJECT,,,
+HZ-GFRS-273,GF_ROOF_SLAB,273,0.75,S9A-CP-04,0.75,0,the legend draws the cantilever portion and the bearing wall with the same dense hatch,CANTILEVER_PORTION,100.28,SLABS / CANTILEVER_PORTIONS,SAME_OBJECT,,,
+HZ-GFRS-2B1,GF_ROOF_SLAB,2B1,0.1,S9A-CP-02,0.1,0,the legend draws the cantilever portion and the bearing wall with the same dense hatch,CANTILEVER_PORTION,98.78,SLABS / CANTILEVER_PORTIONS,SAME_OBJECT,,,
+HZ-GFRS-2B4,GF_ROOF_SLAB,2B4,1.2,S9A-CP-03,1.2,0,the legend draws the cantilever portion and the bearing wall with the same dense hatch,CANTILEVER_PORTION,98.78,SLABS / CANTILEVER_PORTIONS,SAME_OBJECT,,,
+HZ-GFRS-54D,GF_ROOF_SLAB,54D,0.345,S9A-CP-01,0.345,0,the legend draws the cantilever portion and the bearing wall with the same dense hatch,CANTILEVER_PORTION,98.78,BEAMS,SAME_OBJECT,,,
+HZ-SFRS-38C,2F_ROOF_SLAB,38C,0.226,S9A-CP-08,0.226,0,the legend draws the cantilever portion and the bearing wall with the same dense hatch,CANTILEVER_PORTION,98.78,SLABS / CANTILEVER_PORTIONS,SAME_OBJECT,,,
+HZ-SFRS-390,2F_ROOF_SLAB,390,0.62,S9A-CP-07,0.62,0,the legend draws the cantilever portion and the bearing wall with the same dense hatch,CANTILEVER_PORTION,98.78,SLABS / CANTILEVER_PORTIONS,SAME_OBJECT,,,
+HZ-SFRS-391,2F_ROOF_SLAB,391,0.356,S9A-CP-06,0.356346,-0.000346,the legend draws the cantilever portion and the bearing wall with the same dense hatch,CANTILEVER_PORTION,101.78,SLABS / CANTILEVER_PORTIONS,SAME_OBJECT,,,
+BM-GF_ROOF-CA-BL015-69E,GF_ROOF,54D,,S9A-CP-01,,,,,,BEAMS (CA),SAME_OBJECT,1.15,drawn band extent,1.15

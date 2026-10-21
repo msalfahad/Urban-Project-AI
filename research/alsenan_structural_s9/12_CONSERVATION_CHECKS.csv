@@ -1,0 +1,23 @@
+CHECK_ID,CHECK,RESULT,DETAIL
+C01,all 29 frozen manifests and the four stage indexes verify before and after the build,PASS,"29 manifests, 4 indexes"
+C02,every concrete component has exactly one owning family and one id,PASS,560 components
+C03,every component and every bar item has one recorded lane,PASS,
+C04,no blocked / conditional / superseded row carries a released quantity,PASS,
+C05,floor totals = family totals = building totals (concrete and reinforcement),PASS,"158.070256 m3, 18845.961347 kg"
+C06,each family's released kg equals its authoritative version (the correction chain applied),PASS,{}
+C07,each family's released m3 equals its authoritative version,PASS,{}
+C08,superseded figures are excluded: S8.6's lintels never added to S8.6A's,PASS,
+C09,"units: every bar row with a diameter uses d^2 / 162 kg/m; concrete in m3, bars in kg / t",PASS,0 rows off
+C10,"independent paths: footing outline = schedule and L x W x D; every released slab polygon re-integrated (shoelace, holes deducted) within 0.002 m2 of S1",PASS,[]
+C11,"one S9 delta per S9 release, same m3",PASS,110 deltas
+C12,lift footing FF counted once (footing family); the lift family holds only a reference,PASS,
+C13,"pit walls, pit reinforcement and the conditional tie beam stay blocked",PASS,
+C14,stairs: only S8.7's three plates released; S8.7A / B / C release nothing; flights and speculative bars blocked,PASS,
+C15,"tank, dome-zone and stair-zone panels never in the slab release",PASS,
+C16,S9-C01 retracts exactly the S3.1 LOWER_BOUND tie core paths and hook allowances,PASS,"288 parts, 1217.128 kg"
+C17,S3.1 parts reproduce its headline VERIFIED + LOWER_BOUND within part rounding (0.1 kg),PASS,parts 5874.853 vs headline 5874.884
+C18,every unreleased component appears in the missing / blocked register,PASS,[]
+C19,"nothing is created to match an old estimate: no old-BOQ, R5, R9_1, PRE-S8 data or post-freeze input",PASS,
+C20,every released quantity traces to a source drawing reference / owner stage,PASS,[]
+C21,overlap / double-count audit passes,PASS,
+C22,no unmeasured component is counted as zero: unreleased rows have an empty released quantity,PASS,

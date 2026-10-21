@@ -1,0 +1,606 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_COLUMN_REBAR_RECONCILIATION_V3",
+ "rows": [
+  {
+   "occurrence": "COLUMN:GF:C:H2125",
+   "concrete_state": "PROVEN",
+   "volume_m3": 0.375,
+   "rebar_source_state": "CGT C GR",
+   "kg_if_geometry_accepted": 70.127388,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "occurrence": "COLUMN:GF:C:H4100",
+   "concrete_state": "PROVEN",
+   "volume_m3": 0.41,
+   "rebar_source_state": "CGT C GR",
+   "kg_if_geometry_accepted": 71.230597,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "occurrence": "COLUMN:GF:C3:H4102",
+   "concrete_state": "PROVEN",
+   "volume_m3": 0.46875,
+   "rebar_source_state": "CGT C3 GR",
+   "kg_if_geometry_accepted": 71.075537,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "occurrence": "COLUMN:GF:C:H4104",
+   "concrete_state": "PROVEN",
+   "volume_m3": 0.375,
+   "rebar_source_state": "CGT C GR",
+   "kg_if_geometry_accepted": 70.127388,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "occurrence": "COLUMN:GF:C3:H4106",
+   "concrete_state": "PROVEN",
+   "volume_m3": 0.46875,
+   "rebar_source_state": "CGT C3 GR",
+   "kg_if_geometry_accepted": 71.075537,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "occurrence": "COLUMN:GF:C:H4108",
+   "concrete_state": "SLAB_SOFFIT",
+   "volume_m3": 0.434,
+   "rebar_source_state": "CGT C GR",
+   "kg_if_geometry_accepted": 72.333805,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "occurrence": "COLUMN:GF:C3:H4110",
+   "concrete_state": "PROVEN",
+   "volume_m3": 0.5,
+   "rebar_source_state": "CGT C3 GR",
+   "kg_if_geometry_accepted": 71.666647,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "occurrence": "COLUMN:GF:C5:H4112",
+   "concrete_state": "PROVEN",
+   "volume_m3": 0.5625,
+   "rebar_source_state": "CGT C5 GR",
+   "kg_if_geometry_accepted": 87.194055,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "occurrence": "COLUMN:GF:C11:H4114",
+   "concrete_state": "PROVEN",
+   "volume_m3": 1.00375,
+   "rebar_source_state": "CGT C11 GR",
+   "kg_if_geometry_accepted": 124.054797,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "occurrence": "COLUMN:GF:C6:H4116",
+   "concrete_state": "PROVEN",
+   "volume_m3": 0.65625,
+   "rebar_source_state": "CGT C6 GR",
+   "kg_if_geometry_accepted": 89.090351,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "occurrence": "COLUMN:GF:C11:H4118",
+   "concrete_state": "PROVEN",
+   "volume_m3": 1.00375,
+   "rebar_source_state": "CGT C11 GR",
+   "kg_if_geometry_accepted": 124.054797,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "occurrence": "COLUMN:GF:C3:H4120",
+   "concrete_state": "PROVEN",
+   "volume_m3": 0.46875,
+   "rebar_source_state": "CGT C3 GR",
+   "kg_if_geometry_accepted": 71.075537,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "occurrence": "COLUMN:GF:C8:H4122",
+   "concrete_state": "BLOCKED_UPPER_MEMBER_UNBOUND",
+   "volume_m3": null,
+   "rebar_source_state": "CGT C8 GR",
+   "kg_if_geometry_accepted": 110.733805,
+   "release_state": "BLOCKED"
+  },
+  {
+   "occurrence": "COLUMN:GF:C5:H4124",
+   "concrete_state": "BLOCKED_UPPER_MEMBER_UNBOUND",
+   "volume_m3": null,
+   "rebar_source_state": "CGT C5 GR",
+   "kg_if_geometry_accepted": 89.874546,
+   "release_state": "BLOCKED"
+  },
+  {
+   "occurrence": "COLUMN:GF:C10:H4185",
+   "concrete_state": "PROVEN",
+   "volume_m3": 0.63875,
+   "rebar_source_state": "CGT C10 GR",
+   "kg_if_geometry_accepted": 88.341216,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "occurrence": "COLUMN:GF:C:H4187",
+   "concrete_state": "PROVEN",
+   "volume_m3": 0.375,
+   "rebar_source_state": "CGT C GR",
+   "kg_if_geometry_accepted": 70.127388,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "occurrence": "COLUMN:GF:C7:H4189",
+   "concrete_state": "PROVEN",
+   "volume_m3": 0.75,
+   "rebar_source_state": "CGT C7 GR",
+   "kg_if_geometry_accepted": 105.20887,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "occurrence": "COLUMN:GF:C3:H4191",
+   "concrete_state": "PROVEN",
+   "volume_m3": 0.5125,
+   "rebar_source_state": "CGT C3 GR",
+   "kg_if_geometry_accepted": 72.257757,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "occurrence": "COLUMN:GF:C2:H4193",
+   "concrete_state": "PROVEN",
+   "volume_m3": 0.41,
+   "rebar_source_state": "CGT C2 GR",
+   "kg_if_geometry_accepted": 71.230597,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "occurrence": "COLUMN:GF:C2:H4195",
+   "concrete_state": "PROVEN",
+   "volume_m3": 0.41,
+   "rebar_source_state": "CGT C2 GR",
+   "kg_if_geometry_accepted": 71.230597,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "occurrence": "COLUMN:GF:C4:H4197",
+   "concrete_state": "PROVEN",
+   "volume_m3": 0.46875,
+   "rebar_source_state": "CGT C4 GR",
+   "kg_if_geometry_accepted": 71.075537,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "occurrence": "COLUMN:GF:C4:H4199",
+   "concrete_state": "BLOCKED_TAG_NOT_BOUND",
+   "volume_m3": null,
+   "rebar_source_state": "CGT C4 GR",
+   "kg_if_geometry_accepted": 73.439978,
+   "release_state": "BLOCKED"
+  },
+  {
+   "occurrence": "COLUMN:GF:C5:H4201",
+   "concrete_state": "PROVEN",
+   "volume_m3": 0.5625,
+   "rebar_source_state": "CGT C5 GR",
+   "kg_if_geometry_accepted": 87.194055,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "occurrence": "COLUMN:GF:C9:H4203",
+   "concrete_state": "BLOCKED_SEVERAL_OUTLINES_ON_STOREY_SHEET",
+   "volume_m3": null,
+   "rebar_source_state": "CGT C9 GR",
+   "kg_if_geometry_accepted": 127.168373,
+   "release_state": "BLOCKED"
+  },
+  {
+   "occurrence": "COLUMN:GF:C8:H4205",
+   "concrete_state": "BLOCKED_SEVERAL_OUTLINES_ON_STOREY_SHEET",
+   "volume_m3": null,
+   "rebar_source_state": "CGT C8 GR",
+   "kg_if_geometry_accepted": 110.733805,
+   "release_state": "BLOCKED"
+  },
+  {
+   "occurrence": "COLUMN:GF:C3:H4207",
+   "concrete_state": "PROVEN",
+   "volume_m3": 0.46875,
+   "rebar_source_state": "CGT C3 GR",
+   "kg_if_geometry_accepted": 71.075537,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "occurrence": "COLUMN:GF:C9:H4213",
+   "concrete_state": "PROVEN",
+   "volume_m3": 0.9375,
+   "rebar_source_state": "CGT C9 GR",
+   "kg_if_geometry_accepted": 123.223685,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "occurrence": "COLUMN:GF:C2:H4215",
+   "concrete_state": "PROVEN",
+   "volume_m3": 0.41,
+   "rebar_source_state": "CGT C2 GR",
+   "kg_if_geometry_accepted": 71.230597,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "occurrence": "COLUMN:GF:C1:H4217",
+   "concrete_state": "PROVEN",
+   "volume_m3": 0.375,
+   "rebar_source_state": "CGT C1 GR",
+   "kg_if_geometry_accepted": 70.127388,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "occurrence": "COLUMN:GF:C2:H4219",
+   "concrete_state": "PROVEN",
+   "volume_m3": 0.375,
+   "rebar_source_state": "CGT C2 GR",
+   "kg_if_geometry_accepted": 70.127388,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "occurrence": "COLUMN:1F:C3:H4102",
+   "concrete_state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "volume_m3": null,
+   "rebar_source_state": "CGT C3 1ST",
+   "kg_if_geometry_accepted": 54.715534,
+   "release_state": "BLOCKED"
+  },
+  {
+   "occurrence": "COLUMN:1F:C3:H4106",
+   "concrete_state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "volume_m3": null,
+   "rebar_source_state": "CGT C3 1ST",
+   "kg_if_geometry_accepted": 54.715534,
+   "release_state": "BLOCKED"
+  },
+  {
+   "occurrence": "COLUMN:1F:C3:H4110",
+   "concrete_state": "BLOCKED_UPPER_MEMBER_UNBOUND",
+   "volume_m3": null,
+   "rebar_source_state": "CGT C3 1ST",
+   "kg_if_geometry_accepted": 54.715534,
+   "release_state": "BLOCKED"
+  },
+  {
+   "occurrence": "COLUMN:1F:C5:H4112",
+   "concrete_state": "BLOCKED_UPPER_MEMBER_UNBOUND",
+   "volume_m3": null,
+   "rebar_source_state": "CGT C5 1ST",
+   "kg_if_geometry_accepted": 67.989608,
+   "release_state": "BLOCKED"
+  },
+  {
+   "occurrence": "COLUMN:1F:C6:H4116",
+   "concrete_state": "PROVEN",
+   "volume_m3": 0.444,
+   "rebar_source_state": "CGT C6 1ST",
+   "kg_if_geometry_accepted": 68.231092,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "occurrence": "COLUMN:1F:C3:H4120",
+   "concrete_state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "volume_m3": null,
+   "rebar_source_state": "CGT C3 1ST",
+   "kg_if_geometry_accepted": 54.715534,
+   "release_state": "BLOCKED"
+  },
+  {
+   "occurrence": "COLUMN:1F:C8:H4122",
+   "concrete_state": "PROVEN",
+   "volume_m3": 0.621,
+   "rebar_source_state": "CGT C8 1ST",
+   "kg_if_geometry_accepted": 98.732822,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "occurrence": "COLUMN:1F:C5:H4124",
+   "concrete_state": "PROVEN",
+   "volume_m3": 0.345,
+   "rebar_source_state": "CGT C5 1ST",
+   "kg_if_geometry_accepted": 65.231588,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "occurrence": "COLUMN:1F:C7:H4189",
+   "concrete_state": "PROVEN",
+   "volume_m3": 0.552,
+   "rebar_source_state": "CGT C7 1ST",
+   "kg_if_geometry_accepted": 83.720476,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "occurrence": "COLUMN:1F:C3:H4191",
+   "concrete_state": "PROVEN",
+   "volume_m3": 0.38,
+   "rebar_source_state": "CGT C3 1ST",
+   "kg_if_geometry_accepted": 53.060722,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "occurrence": "COLUMN:1F:C2:H4193",
+   "concrete_state": "PROVEN",
+   "volume_m3": 0.37,
+   "rebar_source_state": "CGT C2 1ST",
+   "kg_if_geometry_accepted": 66.334796,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "occurrence": "COLUMN:1F:C2:H4195",
+   "concrete_state": "PROVEN",
+   "volume_m3": 0.37,
+   "rebar_source_state": "CGT C2 1ST",
+   "kg_if_geometry_accepted": 66.334796,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "occurrence": "COLUMN:1F:C4:H4197",
+   "concrete_state": "PROVEN",
+   "volume_m3": 0.37,
+   "rebar_source_state": "CGT C4 1ST",
+   "kg_if_geometry_accepted": 66.334796,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "occurrence": "COLUMN:1F:C4:H4199",
+   "concrete_state": "BLOCKED_TAG_NOT_BOUND",
+   "volume_m3": null,
+   "rebar_source_state": "CGT C4 1ST",
+   "kg_if_geometry_accepted": 67.989608,
+   "release_state": "BLOCKED"
+  },
+  {
+   "occurrence": "COLUMN:1F:C5:H4201",
+   "concrete_state": "PROVEN",
+   "volume_m3": 0.37,
+   "rebar_source_state": "CGT C5 1ST",
+   "kg_if_geometry_accepted": 66.334796,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "occurrence": "COLUMN:1F:C9:H4203",
+   "concrete_state": "PROVEN",
+   "volume_m3": 0.621,
+   "rebar_source_state": "CGT C9 1ST",
+   "kg_if_geometry_accepted": 98.732822,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "occurrence": "COLUMN:1F:C8:H4205",
+   "concrete_state": "PROVEN_UNBOUND_DOMINATED",
+   "volume_m3": 0.621,
+   "rebar_source_state": "CGT C8 1ST",
+   "kg_if_geometry_accepted": 98.732822,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "occurrence": "COLUMN:1F:C3:H4207",
+   "concrete_state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "volume_m3": null,
+   "rebar_source_state": "CGT C3 1ST",
+   "kg_if_geometry_accepted": 54.715534,
+   "release_state": "BLOCKED"
+  },
+  {
+   "occurrence": "COLUMN:1F:C9:H4213",
+   "concrete_state": "PROVEN",
+   "volume_m3": 0.621,
+   "rebar_source_state": "CGT C9 1ST",
+   "kg_if_geometry_accepted": 98.732822,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "occurrence": "COLUMN:1F:C2:H4215",
+   "concrete_state": "PROVEN",
+   "volume_m3": 0.38,
+   "rebar_source_state": "CGT C2 1ST",
+   "kg_if_geometry_accepted": 66.334796,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "occurrence": "COLUMN:1F:C1:H4217",
+   "concrete_state": "PROVEN",
+   "volume_m3": 0.345,
+   "rebar_source_state": "CGT C1 1ST",
+   "kg_if_geometry_accepted": 51.957513,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "occurrence": "COLUMN:1F:C2:H4219",
+   "concrete_state": "PROVEN",
+   "volume_m3": 0.345,
+   "rebar_source_state": "CGT C2 1ST",
+   "kg_if_geometry_accepted": 65.231588,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "occurrence": "COLUMN:2F:C3:H4102",
+   "concrete_state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "volume_m3": null,
+   "rebar_source_state": "CGT C3 2ND",
+   "kg_if_geometry_accepted": 54.715534,
+   "release_state": "BLOCKED"
+  },
+  {
+   "occurrence": "COLUMN:2F:C3:H4106",
+   "concrete_state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "volume_m3": null,
+   "rebar_source_state": "CGT C3 2ND",
+   "kg_if_geometry_accepted": 54.715534,
+   "release_state": "BLOCKED"
+  },
+  {
+   "occurrence": "COLUMN:2F:C3:H4110",
+   "concrete_state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "volume_m3": null,
+   "rebar_source_state": "CGT C3 2ND",
+   "kg_if_geometry_accepted": 54.715534,
+   "release_state": "BLOCKED"
+  },
+  {
+   "occurrence": "COLUMN:2F:C5:H4112",
+   "concrete_state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "volume_m3": null,
+   "rebar_source_state": "CGT C5 2ND",
+   "kg_if_geometry_accepted": 54.715534,
+   "release_state": "BLOCKED"
+  },
+  {
+   "occurrence": "COLUMN:2F:C6:H4116",
+   "concrete_state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "volume_m3": null,
+   "rebar_source_state": "CGT C6 2ND",
+   "kg_if_geometry_accepted": 67.989608,
+   "release_state": "BLOCKED"
+  },
+  {
+   "occurrence": "COLUMN:2F:C3:H4120",
+   "concrete_state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "volume_m3": null,
+   "rebar_source_state": "CGT C3 2ND",
+   "kg_if_geometry_accepted": 54.715534,
+   "release_state": "BLOCKED"
+  },
+  {
+   "occurrence": "COLUMN:2F:C8:H4122",
+   "concrete_state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "volume_m3": null,
+   "rebar_source_state": "CGT C8 2ND",
+   "kg_if_geometry_accepted": 85.530349,
+   "release_state": "BLOCKED"
+  },
+  {
+   "occurrence": "COLUMN:2F:C5:H4124",
+   "concrete_state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "volume_m3": null,
+   "rebar_source_state": "CGT C5 2ND",
+   "kg_if_geometry_accepted": 54.715534,
+   "release_state": "BLOCKED"
+  },
+  {
+   "occurrence": "COLUMN:2F:C7:H4189",
+   "concrete_state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "volume_m3": null,
+   "rebar_source_state": "CGT C7 2ND",
+   "kg_if_geometry_accepted": 70.122942,
+   "release_state": "BLOCKED"
+  },
+  {
+   "occurrence": "COLUMN:2F:C3:H4191",
+   "concrete_state": "PROVEN",
+   "volume_m3": 0.3,
+   "rebar_source_state": "CGT C3 2ND",
+   "kg_if_geometry_accepted": 50.302701,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "occurrence": "COLUMN:2F:C2:H4193",
+   "concrete_state": "PROVEN",
+   "volume_m3": 0.3,
+   "rebar_source_state": "CGT C2 2ND",
+   "kg_if_geometry_accepted": 50.302701,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "occurrence": "COLUMN:2F:C2:H4195",
+   "concrete_state": "PROVEN",
+   "volume_m3": 0.345,
+   "rebar_source_state": "CGT C2 2ND",
+   "kg_if_geometry_accepted": 51.957513,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "occurrence": "COLUMN:2F:C4:H4197",
+   "concrete_state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "volume_m3": null,
+   "rebar_source_state": "CGT C4 2ND",
+   "kg_if_geometry_accepted": 54.715534,
+   "release_state": "BLOCKED"
+  },
+  {
+   "occurrence": "COLUMN:2F:C4:H4199",
+   "concrete_state": "BLOCKED_TAG_NOT_BOUND",
+   "volume_m3": null,
+   "rebar_source_state": "CGT C4 2ND",
+   "kg_if_geometry_accepted": 54.715534,
+   "release_state": "BLOCKED"
+  },
+  {
+   "occurrence": "COLUMN:2F:C5:H4201",
+   "concrete_state": "PROVEN",
+   "volume_m3": 0.345,
+   "rebar_source_state": "CGT C5 2ND",
+   "kg_if_geometry_accepted": 51.957513,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "occurrence": "COLUMN:2F:C9:H4203",
+   "concrete_state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "volume_m3": null,
+   "rebar_source_state": "CGT C9 2ND",
+   "kg_if_geometry_accepted": 85.530349,
+   "release_state": "BLOCKED"
+  },
+  {
+   "occurrence": "COLUMN:2F:C8:H4205",
+   "concrete_state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "volume_m3": null,
+   "rebar_source_state": "CGT C8 2ND",
+   "kg_if_geometry_accepted": 85.530349,
+   "release_state": "BLOCKED"
+  },
+  {
+   "occurrence": "COLUMN:2F:C3:H4207",
+   "concrete_state": "NOT_DRAWN_ON_STOREY_SHEET",
+   "volume_m3": null,
+   "rebar_source_state": "CGT C3 2ND",
+   "kg_if_geometry_accepted": 54.715534,
+   "release_state": "BLOCKED"
+  },
+  {
+   "occurrence": "COLUMN:2F:C9:H4213",
+   "concrete_state": "PROVEN",
+   "volume_m3": 0.532,
+   "rebar_source_state": "CGT C9 2ND",
+   "kg_if_geometry_accepted": 83.401463,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "occurrence": "COLUMN:2F:C2:H4215",
+   "concrete_state": "PROVEN",
+   "volume_m3": 0.38,
+   "rebar_source_state": "CGT C2 2ND",
+   "kg_if_geometry_accepted": 53.060722,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "occurrence": "COLUMN:2F:C1:H4217",
+   "concrete_state": "PROVEN",
+   "volume_m3": 0.38,
+   "rebar_source_state": "CGT C1 2ND",
+   "kg_if_geometry_accepted": 53.060722,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "occurrence": "COLUMN:2F:C2:H4219",
+   "concrete_state": "PROVEN",
+   "volume_m3": 0.38,
+   "rebar_source_state": "CGT C2 2ND",
+   "kg_if_geometry_accepted": 53.060722,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  }
+ ],
+ "valid_lower_bound_kg": 3481.639506,
+ "valid_provisional_kg": 115.059845,
+ "d5_blocked": {
+  "occurrences": 26,
+  "audit_kg_total": 1808.650799,
+  "audit_kg_verified_equivalent": 1739.654321,
+  "state": "BLOCKED_OCCURRENCE_NOT_ESTABLISHED"
+ },
+ "rule": "D5 occurrences keep their definitions and an audit weight; they never enter a verified total"
+}

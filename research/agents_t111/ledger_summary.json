@@ -1,0 +1,378 @@
+{
+ "summary": {
+  "main_owner_lines_m3": 5.0105,
+  "main_drawn_lines_m3": 4.8364,
+  "main_ledger_deducted_m3": 0.0904,
+  "main_ledger_held_clash_m3": 0.1147,
+  "main_owner_after_ledger_m3": 4.9201,
+  "main_drawn_after_ledger_m3": 4.746,
+  "entrance_m3": 0.357,
+  "lobby_m3": 0.126,
+  "round_steps_straight_and_arrival_m3": 0.468884,
+  "round_calculated_m3": 1.6202,
+  "round_ledger_deducted_m3": 0.0591,
+  "freelancer_m3": {
+   "main": 8.131,
+   "entrance": 1.411,
+   "round": 5.51
+  }
+ },
+ "knees": [
+  {
+   "junction": "MS1-U foot (landing +3.50)",
+   "knee_profile_m2": 0.000477,
+   "knee_m3_at_width": 0.000573
+  },
+  {
+   "junction": "MS2-L foot (1F floor)",
+   "knee_profile_m2": 0.000488,
+   "knee_m3_at_width": 0.000586
+  },
+  {
+   "junction": "MS2-U foot (landing +7.684)",
+   "knee_profile_m2": 0.000488,
+   "knee_m3_at_width": 0.000586
+  },
+  {
+   "junction": "RS-A foot (corner landing)",
+   "knee_profile_m2": 0.000432,
+   "knee_m3_at_width": 0.00054
+  }
+ ],
+ "owner_lines": [
+  {
+   "id": "MS1-L",
+   "element": "STEPS",
+   "m3": 0.29999999999999993,
+   "status": "MEASURED",
+   "calc": "10 x 1/2 x 0.166667 x 0.30 x 1.20"
+  },
+  {
+   "id": "MS1-L",
+   "element": "WAIST",
+   "m3": 0.658920329023168,
+   "status": "MEASURED",
+   "calc": "1.20 x hypot(10 x 0.30, 10 r) x 0.16"
+  },
+  {
+   "id": "MS1-T",
+   "element": "TURNING_STEPS",
+   "m3": null,
+   "status": "HELD",
+   "calc": "Q-51 conditional; candidate 1/2 r 1.44 = 0.120"
+  },
+  {
+   "id": "MS1-LD",
+   "element": "LANDING",
+   "m3": 0.24,
+   "status": "MEASURED",
+   "calc": "1.25 x 1.20 x 0.16"
+  },
+  {
+   "id": "MS1-U",
+   "element": "STEPS",
+   "m3": 0.36,
+   "status": "MEASURED",
+   "calc": "12 x 1/2 x 0.166667 x 0.30 x 1.20"
+  },
+  {
+   "id": "MS1-U",
+   "element": "WAIST",
+   "m3": 0.7408812050524699,
+   "status": "MEASURED",
+   "calc": "1.20 x hypot(11 x 0.30, 12 r) x 0.16"
+  },
+  {
+   "id": "MS2-L",
+   "element": "STEPS",
+   "m3": 0.36288,
+   "status": "MEASURED",
+   "calc": "12 x 1/2 x 0.168 x 0.30 x 1.20"
+  },
+  {
+   "id": "MS2-L",
+   "element": "WAIST",
+   "m3": 0.7424780758945007,
+   "status": "MEASURED",
+   "calc": "1.20 x hypot(11 x 0.30, 12 r) x 0.16"
+  },
+  {
+   "id": "MS2-TR",
+   "element": "TURN_RISER",
+   "m3": null,
+   "status": "HELD",
+   "calc": "landing levels not printed"
+  },
+  {
+   "id": "MS2-LD",
+   "element": "LANDING",
+   "m3": 0.5,
+   "status": "MEASURED",
+   "calc": "2.50 x 1.25 x 0.16"
+  },
+  {
+   "id": "MS2-U",
+   "element": "STEPS",
+   "m3": 0.36288,
+   "status": "MEASURED",
+   "calc": "12 x 1/2 x 0.168 x 0.30 x 1.20"
+  },
+  {
+   "id": "MS2-U",
+   "element": "WAIST",
+   "m3": 0.7424780758945007,
+   "status": "MEASURED",
+   "calc": "1.20 x hypot(11 x 0.30, 12 r) x 0.16"
+  },
+  {
+   "id": "E1",
+   "element": "STEPS",
+   "m3": 0.357,
+   "status": "MEASURED",
+   "calc": "5 x 1/2 x 0.17 x 0.30 x 2.80"
+  },
+  {
+   "id": "E1",
+   "element": "WAIST",
+   "m3": null,
+   "status": "HELD",
+   "calc": "not in a slab panel, no thickness printed"
+  },
+  {
+   "id": "D1",
+   "element": "STEPS",
+   "m3": 0.126,
+   "status": "MEASURED",
+   "calc": "4 x 1/2 x 0.175 x 0.30 x 1.20"
+  },
+  {
+   "id": "D1",
+   "element": "WAIST",
+   "m3": null,
+   "status": "HELD",
+   "calc": "no thickness printed"
+  },
+  {
+   "id": "RS-C",
+   "element": "ALL",
+   "m3": null,
+   "status": "HELD",
+   "calc": "T-056: Q-50 / Q-51 open at the time"
+  },
+  {
+   "id": "RS-S",
+   "element": "ALL",
+   "m3": null,
+   "status": "HELD",
+   "calc": "T-056: Q-50 / Q-51 open at the time"
+  },
+  {
+   "id": "RS-LD",
+   "element": "ALL",
+   "m3": null,
+   "status": "HELD",
+   "calc": "T-056: Q-50 / Q-51 open at the time"
+  },
+  {
+   "id": "RS-A",
+   "element": "ALL",
+   "m3": null,
+   "status": "HELD",
+   "calc": "T-056: Q-50 / Q-51 open at the time"
+  }
+ ],
+ "drawn_lines": [
+  {
+   "id": "MS1-L",
+   "element": "STEPS",
+   "m3": 0.26999999999999996,
+   "status": "MEASURED",
+   "calc": "9 x 1/2 x 0.166667 x 0.30 x 1.20",
+   "reason": "the 10th riser's wedge sits on winder W1 (in the turn line)"
+  },
+  {
+   "id": "MS1-L",
+   "element": "WAIST",
+   "m3": 0.5930282961208512,
+   "status": "MEASURED",
+   "calc": "1.20 x hypot(2.70, 1.50) x 0.16",
+   "reason": "drawn straight run 2.70 m up to the turn line"
+  },
+  {
+   "id": "MS1-T",
+   "element": "TURNING_STEPS",
+   "m3": null,
+   "status": "HELD",
+   "calc": "candidate 1/2 x 0.166667 x 1.44 = 0.1200 (NW quarter, wall to central-wall face, riser 10 to the north wall: the same 1.20 basis as the flights) .. x 1.56 = 0.1300 (with the 0.10 x 1.20 well strip up to the drawn closing riser); tread-line basis 1.3225 m2 -> 0.1102",
+   "reason": "Q-51 cond: area condition MET on the wall-to-wall basis (1.20 x 1.20 dimensioned on the 1F / 2F plans, the GF 5000 = 1100 + 2700 + 1200; no landing or void inside the quarter; the sum 1/2 r x total area does not depend on 4 (plan) or 5 (section) turn treads); NOT MET: the well strip is unassigned (turn or landing) and no soffit is drawn for the wedge-over-uniform-waist model"
+  },
+  {
+   "id": "MS1-T",
+   "element": "TURN_SOFFIT_SLAB",
+   "m3": null,
+   "status": "HELD",
+   "calc": "candidate plan 1.44 .. 1.56 m2 x 0.16 = 0.2304 .. 0.2496 (horizontal projection, less than the warped slab)",
+   "reason": "NEW LINE: the slab under the winders is in no line of the owner census (silent omission); soffit not drawn"
+  },
+  {
+   "id": "MS1-LD",
+   "element": "LANDING",
+   "m3": 0.2304,
+   "status": "MEASURED",
+   "calc": "1.20 x 1.20 x 0.16",
+   "reason": "landing depth from the CAD"
+  },
+  {
+   "id": "MS1-U",
+   "element": "STEPS",
+   "m3": 0.36,
+   "status": "MEASURED",
+   "calc": "12 x 1/2 x 0.166667 x 0.30 x 1.20 (incl. the arrival wedge, deducted in the ledger)",
+   "reason": ""
+  },
+  {
+   "id": "MS1-U",
+   "element": "WAIST",
+   "m3": 0.7248123619254849,
+   "status": "MEASURED",
+   "calc": "root-line strip 11 x 0.30 run, 0.16 thick",
+   "reason": ""
+  },
+  {
+   "id": "MS2-L",
+   "element": "STEPS",
+   "m3": 0.36288,
+   "status": "MEASURED",
+   "calc": "12 x 1/2 x 0.168 x 0.30 x 1.20 (incl. the arrival wedge on the flat quarter, deducted in the ledger)",
+   "reason": ""
+  },
+  {
+   "id": "MS2-L",
+   "element": "WAIST",
+   "m3": 0.7261841046566632,
+   "status": "MEASURED",
+   "calc": "root-line strip 11 x 0.30 run, 0.16 thick",
+   "reason": ""
+  },
+  {
+   "id": "MS2-TR",
+   "element": "TURN_RISER",
+   "m3": null,
+   "status": "HELD",
+   "calc": "-",
+   "reason": "levels +7.516 / +7.684 scaled from the section, not printed"
+  },
+  {
+   "id": "MS2-LD",
+   "element": "LANDING",
+   "m3": 0.48,
+   "status": "MEASURED",
+   "calc": "2.50 x 1.20 x 0.16",
+   "reason": "landing depth from the CAD"
+  },
+  {
+   "id": "MS2-U",
+   "element": "STEPS",
+   "m3": 0.36288,
+   "status": "MEASURED",
+   "calc": "12 x 1/2 x 0.168 x 0.30 x 1.20",
+   "reason": ""
+  },
+  {
+   "id": "MS2-U",
+   "element": "WAIST",
+   "m3": 0.7261841046566632,
+   "status": "MEASURED",
+   "calc": "root-line strip 11 x 0.30 run, 0.16 thick",
+   "reason": ""
+  },
+  {
+   "id": "E1",
+   "element": "STEPS",
+   "m3": 0.357,
+   "status": "MEASURED",
+   "calc": "5 x 1/2 x 0.17 x 0.30 x 2.80",
+   "reason": "CAD confirms"
+  },
+  {
+   "id": "E1",
+   "element": "WAIST",
+   "m3": null,
+   "status": "HELD",
+   "calc": "-",
+   "reason": "not in a slab panel, no thickness printed"
+  },
+  {
+   "id": "D1",
+   "element": "STEPS",
+   "m3": 0.126,
+   "status": "MEASURED",
+   "calc": "4 x 1/2 x 0.175 x 0.30 x 1.20",
+   "reason": "CAD confirms"
+  },
+  {
+   "id": "D1",
+   "element": "WAIST",
+   "m3": null,
+   "status": "HELD",
+   "calc": "-",
+   "reason": "no thickness printed"
+  },
+  {
+   "id": "RS-C",
+   "element": "CURVED_STEPS",
+   "m3": null,
+   "status": "HELD",
+   "calc": "candidate 1/2 x 0.160714 x 4.1077 = 0.3301",
+   "reason": "Q-50 / Q-51: curved parts HELD; helicoid soffit not drawn"
+  },
+  {
+   "id": "RS-C",
+   "element": "CURVED_SOFFIT",
+   "m3": null,
+   "status": "HELD",
+   "calc": "-",
+   "reason": "helicoid waist not drawn (Q-51 step 5)"
+  },
+  {
+   "id": "RS-S",
+   "element": "STEPS",
+   "m3": 0.3182142857142857,
+   "status": "CALCULATED",
+   "calc": "11 x 1/2 x 0.160714 x 0.30 x 1.20",
+   "reason": "Q-50 A cond: straight flight geometrically verified (count, pitch, width, both levels)"
+  },
+  {
+   "id": "RS-S",
+   "element": "WAIST",
+   "m3": 0.653446498598479,
+   "status": "CALCULATED",
+   "calc": "1.20 x hypot(3.00, 1.607) x 0.16 (riser 13 to riser 23)",
+   "reason": "T 16 in the round-stair panel (Q-47 A); the CA beam junction stays HELD in the ledger"
+  },
+  {
+   "id": "RS-LD",
+   "element": "LANDING",
+   "m3": 0.2256,
+   "status": "CALCULATED",
+   "calc": "(1.25 x 1.15 - 0.0275 column) x 0.16",
+   "reason": "level +4.696 reconstructed (equal risers), not printed: 'reconstructed, no section'"
+  },
+  {
+   "id": "RS-A",
+   "element": "STEPS",
+   "m3": 0.15066964285714285,
+   "status": "CALCULATED",
+   "calc": "5 x 1/2 x 0.160714 x 0.30 x 1.25",
+   "reason": "Q-50 A cond: verified (5 risers on the 1F plan, floor = last tread, '+5.50' printed at the arrival)"
+  },
+  {
+   "id": "RS-A",
+   "element": "WAIST",
+   "m3": 0.272269374416033,
+   "status": "CALCULATED",
+   "calc": "1.25 x hypot(1.20, 0.643) x 0.16",
+   "reason": "T 16 (round-stair panel)"
+  }
+ ]
+}

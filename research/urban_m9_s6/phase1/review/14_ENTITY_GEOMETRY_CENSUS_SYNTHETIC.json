@@ -1,0 +1,120 @@
+{
+ "drawing": "synthetic villa (tools/arch_synth), V2 at c757d8a",
+ "stage_1_inventory": {
+  "census": {
+   "hatches_below_first_level": 0,
+   "hidden_layers": [],
+   "kinds": {
+    "ARC": 6,
+    "HATCH": 3,
+    "INSERT": 6,
+    "LINE": 128,
+    "LWPOLYLINE": 5,
+    "TEXT": 18
+   },
+   "layouts": [
+    {
+     "entities_by_type": {
+      "HATCH": 3,
+      "INSERT": 6,
+      "LINE": 122,
+      "LWPOLYLINE": 5,
+      "TEXT": 18
+     },
+     "kind": "MODEL",
+     "name": "Model",
+     "viewports": 0
+    },
+    {
+     "entities_by_type": {},
+     "kind": "PAPER",
+     "name": "Layout1",
+     "viewports": 0
+    }
+   ],
+   "max_insert_depth": 1,
+   "minserts": 0,
+   "xrefs": []
+  },
+  "entity_support": {
+   "ARC": "READ",
+   "HATCH": "READ_ONE_BLOCK_LEVEL",
+   "INSERT": "READ_NESTED",
+   "LINE": "READ",
+   "LWPOLYLINE": "READ",
+   "TEXT": "READ"
+  },
+  "findings": [
+   {
+    "code": "ENTITY_KIND_NOT_MEASURED",
+    "evidence": {
+     "count": 3,
+     "kind": "HATCH",
+     "support": "READ_ONE_BLOCK_LEVEL"
+    },
+    "level": "WARNING",
+    "message": "3 HATCH: READ_ONE_BLOCK_LEVEL"
+   }
+  ],
+  "k2": {
+   "dispositions": {
+    "CARRIED": 21,
+    "REALISED": 145
+   },
+   "missing_top_level": [],
+   "top_level": 154,
+   "visits": 166
+  },
+  "state": "PROVISIONAL"
+ },
+ "stage_6_geometry_readiness": {
+  "blocked_regions": [],
+  "findings": [],
+  "measured_regions": [
+   "SH01:GF",
+   "SH02:1F"
+  ],
+  "state": "PASSED"
+ },
+ "documents": [
+  {
+   "bytes": 37520,
+   "file": "synthetic_villa.dxf",
+   "format": "DXF",
+   "header": {
+    "DIMLFAC": 1.0,
+    "INSUNITS": 4,
+    "MEASUREMENT": 1,
+    "dxf_version": "AC1032"
+   },
+   "parse_status": "PARSED",
+   "sha256": "ba5d4c2cc2569fef6face39375080b88c6e7420e15a1b4d47f0e271bcd6d3964"
+  }
+ ],
+ "arch_reader": {
+  "ellipses_as_chords": {
+   "chords": 0,
+   "ellipses": 0
+  },
+  "entity_types": {
+   "ARC": 1,
+   "ATTDEF": 1,
+   "HATCH": 3,
+   "INSERT": 7,
+   "LINE": 123,
+   "LWPOLYLINE": 5,
+   "TEXT": 18
+  },
+  "extra_read": {},
+  "extra_skipped": {},
+  "inserts": 6,
+  "not_read_here": [],
+  "texts": {
+   "UNICODE": 18
+  },
+  "texts_by_kind": {
+   "TEXT": 18
+  },
+  "undecoded_fonts": {}
+ }
+}

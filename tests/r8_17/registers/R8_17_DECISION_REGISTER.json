@@ -1,0 +1,262 @@
+{
+ "SCHEMA": "URBAN_R8_17_DECISION_REGISTER_V1",
+ "recommendation_before_coding": {
+  "SCHEMA": "URBAN_R8_17_RECOMMENDATION_BEFORE_CODING_V1",
+  "written": "after inspecting WALL_CONTACT_PATH_POLICY_V3 (measure_v3 / passage_jambs / door_jambs), the R8.16 V3-O1 record, the HALL / PAINTRY glazed opening source geometry in BOTH revisions, the door / doorless method, the opening reveal records, the wet-room site boundaries, the rule store (US-01..US-17, QP-01..QP-23, TD-01/02, NO_DEFAULT_PERMITTED_FOR), the owner finish / method / physical facts and US-08; before any R8.17 code and before any new Qortuba total",
+  "inspected": [
+   "V3-O1: measure_v3 subtracts, from EVERY edge, the collinear overlap of EVERY jamb record before the edge is classified - physical or not. passage_jambs() emits a record for BOTH short sides of a passage strip, including a side that is the continuous face of another wall (end_kind CONTINUOUS_WALL_FACE, physical = false). At OP-9e0f (M.B.ROOM / DRESS) that record overlaps 0.15 of the H518 edge; the 0.15 is removed from the edge, then the record is not counted because it is not physical - the span counts nowhere",
+   "the design error: ONE record type serves both as an OPENING-SIDE RELATION (what bounds the opening) and as a PHYSICAL SURFACE (what carries a trade); only the second may ever replace wall contact",
+   "HALL / PAINTRY: two parallel glazing lines H533 (x = 1095980.8) and H542 (x = 1096080.8), 100 mm apart, inside a 150 mm wall (faces x = 1095930.8 / 1096080.8), 2750 mm long - consistent with a two-track sliding door. glazing_closures() closed both faces (CLOSURE|GLAZED|...|F1 / F2): the reveal strip is its own TS01 site pair (0.275 + 0.2275 m2, unlabelled); HALL meets it on one 2750 mm edge (H542 + its face closures), PAINTRY on the other",
+   "its jamb surfaces (the 150 mm wall ends at y = 151097.2 and 153847.2) belong to the strip sites, NOT to HALL: the HALL path already stops at H539 / H543 - the door rule (zero jamb skirting) has no numeric effect here; it must be recorded, never subtracted again",
+   "the OLD revision draws the same opening with the SAME handles (H533 / H542) and the same 2750 mm width: QP-12 (owner, rule store: 'the glazed opening between the Hall and the Pantry' 2.750 x 2.200) names this physical occurrence; QP-23 (owner: 2.200 m for 'one kitchen / pantry sliding door') corroborates. The height is occurrence-bound by handle + width + rooms, not a default",
+   "wall heights: QP-01 tile 3.00 m was SUPERSEDED for the new revision by the owner's 3.20 m wet / service fact; QP-02 / QP-03 / QP-04 (blockwork / plaster / paint 3.00 m) were set on the old revision and were never re-stated for the new one. In the old store all four heights were equal (3.00); in the new revision the tile height moved to 3.20 while the plaster / paint height has no new-revision authority - carrying 3.00 forward would be a silent transfer; assuming 3.20 would be a guess",
+   "the window sill fact (QORTUBA-NEW-NORMAL-WINDOWS-ABOVE-FLOOR-OWNER-001@v1) is scoped to trade SKIRTING / DRY_INTERNAL_ROOM; the owner statement itself is plan-wide physical ('normal windows start ~1.00 m above finished floor'). Using it to prove that a window lies inside a wall-tile height needs a VERSIONED scope extension (same statement, wider trade scope), not a silent reuse",
+   "wet rooms: the three BATH sites have NO glazing; PAINTRY has one normal window (H1342 on H463, 1.611 m) and the sliding door. Openings in wet rooms: 3 bath doors (QP-21 2.20 m), the PAINTRY window (QP-22 1.50 m, sill ~1.00 m), the sliding door (QP-12 2.20 m)",
+   "rule store for wall faces: US-06 full opening area (width x height) deducted for every door / window / sliding door / glazed opening; US-07 reveals added back (left / right / top, not the sill) for PLASTER / PAINT only; US-03 no paint and no plaster on a ceramic face; US-10 source over defaults; US-11 no default window / sliding door height; US-16 / US-17 open passage types; R-13 'the owner chose the full column' (Qortuba). No rule states whether a WET-room door reveal is tiled or plastered",
+   "second project: P7757 is UNIT_UNRESOLVED (no eps_r -> no certified topology -> no sites); Al Rashed's physical values are not computable (R8.5: IMAGE / OLE, unmapped regions). No clean second fixture exists in the repo for a path / wall-face regression"
+  ],
+  "1_owner_answer_resolves_the_275_span": "YES for SKIRTING and HIDDEN_PROFILE: a source-scoped physical fact binding H533 / H542 and both glazed face closures gives the occurrence its physical class (SLIDING_GLAZED_DOOR) and its floor contact (OPENING_TO_FLOOR). The withheld span becomes EXCLUDED_AS_FLOOR_REACHING_DOOR. It does NOT by itself give the wall-face height of the opening - that comes from QP-12 (same occurrence, handle + width match), recorded separately.",
+  "2_floor_reaching_sliding_glazed_door": "YES: a trade-path class SLIDING_GLAZED_DOOR_TO_FLOOR, distinct from WINDOW_ABOVE_FLOOR and from a generic FULL_HEIGHT_GLAZED_OPENING (glazing that reaches the floor but is not a door). Topology is unchanged: the glazed closures already exist and the strip is already its own site.",
+  "3_zero_skirting_across": "YES: the path breaks across the full 2.75 m, for skirting and for the hidden profile (US-08).",
+  "4_jambs_zero": "YES under URBAN-SKIRTING-OPENING-METHOD@v1 DOOR_PRESENT. In this source the jambs are not on any room path (they bound the strip sites), so V4 records two zero door-jamb records for the occurrence and subtracts nothing a second time.",
+  "5_window_fact_does_not_apply": "Correct - and the window fact says so itself (does_not_apply_to: sliding doors, a glazed opening with no wall line across it). V4 resolves the physical class BEFORE any sill fact: a SLIDING_GLAZED_DOOR occurrence can never receive SKIRTING_CONTINUITY_UNDER_WINDOW.",
+  "6_v3_o1_root_cause": "measure_v3 lets ANY jamb record consume wall-path length: the overlap of every jamb record is subtracted from each edge before classification, and the record is only afterwards tested for 'physical'. A non-physical opening-side record (CONTINUOUS_WALL_FACE, H518 at the M.B.ROOM / DRESS passage) therefore removed 0.15 of real wall face that no class then counted.",
+  "7_generic_v4_rule": "Separate OPENING_SIDE relations from PHYSICAL_JAMB surfaces. A path span may be consumed ONLY by a jamb record that is physical by positive source evidence (a drawn cap / band end CAPPED / ALIGNED_FREE_END / OPENING_JAMB of an ESTABLISHED band, or a door / glazed-door strip reveal side); a non-physical record is an annotation and never shortens an edge; a topology closure is classified by its own sources and never consumes or creates wall. Every edge length is conserved per site: wall + column + obstacle + window continuity + physical jamb overlap + excluded + withheld = boundary length (checked, not assumed). Trade eligibility is applied after geometry: door / sliding-door jambs = 0, doorless physical jambs counted once.",
+  "8_topology_or_trade": "Trade measurement only. No TS01 input changes; the topology digest must stay the R8.16 digest.",
+  "9_freeze_and_blind": "YES: V4 changes the arithmetic of a frozen, published shadow method -> V4 policy + QORTUBA-NEW-SKIRTING-METHOD@v3 + synthetic tests -> freeze -> commit -> blind Qortuba skirting run -> commit -> only then compare with R8.16.",
+  "10_wall_face_engine_now": "BEGIN the PHYSICAL layer this round (after the V4 blind run), with its own freeze and blind run: vertical surfaces from the V4-classified spans (wall / column / obstacle faces), openings with their own height authority (US-06 full area), lintel bands over closed openings, passage head faces, reveal surfaces (source depth first, US-07 fallback), a per-site reconciliation and a double-count guard. Trade publication only where every authority exists: WALL_TILE in the wet / service rooms can be computed (3.20 m owner fact, QP-21 / QP-22 / QP-12 opening heights, sill fact v2 for containment); PLASTER and PAINT stay BLOCKED on the dry-room wall height of the new revision; wet-room reveal treatment stays OPEN.",
+  "11_waterproofing": "DEFER to R8.18. Its path is the GROSS wet-room perimeter with doorways NOT deducted (US-04 / US-05 / US-14) - a different path from skirting and from the wall face; it should be its own frozen policy on the stabilised V4 site boundaries, not a by-product of the wall-face engine.",
+  "12_disagreements_with_chatgpt": [
+   "'Hall/Lobby passage head = 2.20 m' and the 3.20 m tile are authoritative, but the dry-room PLASTER / PAINT HEIGHT is not: QP-03 / QP-04 (3.00 m) are old-revision rules and the owner moved the new-revision tile height to 3.20 m. Plaster / paint must be BLOCKED on that height (one new owner question), not computed at 3.00 or 3.20.",
+   "The 1.00 m sill fact may support a wall-face trade only through a versioned scope extension (v2, same statement, wider trade scope); using the skirting-scoped v1 for tile would be a scope leak.",
+   "QP-12's 2.20 m is NOT 'approximate evidence' for some opening: it is an owner input for THIS occurrence, bound across revisions by identical handles (H533 / H542), width and rooms - usable, and recorded as such.",
+   "The sliding door's zero jamb skirting changes no number in this source (its jambs bound the strip sites, not HALL); 'subtract the jambs' would double-remove wall.",
+   "A second-project regression cannot be run honestly: no other repo project has a resolved unit and certified topology. Report NOT_RUN rather than adopting a candidate unit for P7757.",
+   "Wet-room door reveals (tile vs plaster) are not covered by any rule; they must not be assumed into WALL_TILE or PLASTER.",
+   "Waterproofing should not wait on the wall-face engine at all: it depends only on the wet-site boundary and the doorway closures (gross perimeter) - it can be its own small frozen policy next round."
+  ],
+  "13_r8_18": "R8.18: (1) apply the owner's dry-room wall height and wet-reveal answers -> PLASTER / PAINT / reveal rows through the frozen wall-face engine (no re-freeze if only authorities arrive); (2) WATERPROOFING_POLICY_V1 (floor membrane m2 + 0.15 m upturn on the GROSS wet perimeter, doorways not deducted) frozen + blind; (3) column / duct face trade authority; (4) closure release workflow for I1471 / H2430 / H2431 (human review record); (5) source anchor (pinned converter / DWG identity, no unpinned software); (6) a second project with a resolved unit for an overfitting regression."
+ },
+ "order": [
+  "recommendation (88d5ac1)",
+  "V4 + facts + tests (e636c77)",
+  "V4 freeze (d3f9f85)",
+  "V4 blind (be98f71)",
+  "wall-face engine + tests (e0d2781)",
+  "wall-face freeze (8bbc21a)",
+  "wall-face blind (after one pre-output crash amendment)",
+  "rebuild / registers"
+ ],
+ "decisions": [
+  {
+   "id": "R817-D01",
+   "decision": "HALL / PAINTRY = SLIDING_GLAZED_DOOR to the floor (owner, source-bound): zero across, zero jambs, never a window"
+  },
+  {
+   "id": "R817-D02",
+   "decision": "WALL_CONTACT_PATH_POLICY_V4: only physical jambs consume path; edge conservation; physical class before sill"
+  },
+  {
+   "id": "R817-D03",
+   "decision": "HIDDEN_PROFILE_LM on the certified V4 path, separate row"
+  },
+  {
+   "id": "R817-D04",
+   "decision": "WALL_FACE_SURFACE_POLICY_V1 frozen + blind; no trade row published (dry height, WF-O1, wet reveals)"
+  },
+  {
+   "id": "R817-D05",
+   "decision": "waterproofing deferred to its own frozen policy"
+  },
+  {
+   "id": "R817-D06",
+   "decision": "second-project regression NOT_RUN (no clean fixture)"
+  }
+ ],
+ "gates": {
+  "MIGRATION_PLANNING_READY": "YES",
+  "MIGRATION_EXECUTION_READY": "NO",
+  "PRODUCTION_MIGRATION": "NO"
+ },
+ "answers": {
+  "1_hall_paintry_authoritative_sliding_door": "YES: QORTUBA-NEW-HALL-PAINTRY-SLIDING-GLASS-DOOR-OWNER-001@v1 binds H533 / H542 (APPLIES)",
+  "2_reaches_the_floor": "YES: floor_contact OPENING_TO_FLOOR from the owner fact; wall below NONE",
+  "3_removed_from_withheld": "YES: withheld 0.0 lm; the 2.75 m is EXCLUDED (2.75 lm SLIDING_GLAZED_DOOR_TO_FLOOR)",
+  "4_any_of_it_payable": "NO: 0.0 lm",
+  "5_its_jambs_carry_skirting": "NO: 2 glazed-door jamb records, 0.0 lm each (they bound the strip sites, nothing subtracted twice)",
+  "6_window_rule_applies": "NO: physical class resolved first; the window fact excludes sliding doors itself",
+  "7_v3_o1_root_cause": "measure_v3 lets ANY jamb record consume wall-path length: the overlap of every jamb record is subtracted from each edge before classification, and the record is only afterwards tested for 'physical'. A non-physical opening-side record (CONTINUOUS_WALL_FACE, H518 at the M.B.ROOM / DRESS passage) therefore removed 0.15 of real wall face that no class then counted.",
+  "8_generic_v4_rule": "Separate OPENING_SIDE relations from PHYSICAL_JAMB surfaces. A path span may be consumed ONLY by a jamb record that is physical by positive source evidence (a drawn cap / band end CAPPED / ALIGNED_FREE_END / OPENING_JAMB of an ESTABLISHED band, or a door / glazed-door strip reveal side); a non-physical record is an annotation and never shortens an edge; a topology closure is classified by its own sources and never consumes or creates wall. Every edge length is conserved per site: wall + column + obstacle + window continuity + physical jamb overlap + excluded + withheld = boundary length (checked, not assumed). Trade eligibility is applied after geometry: door / sliding-door jambs = 0, doorless physical jambs counted once.",
+  "9_h518_payable": "YES: M.B.ROOM / DRESS 29.5 lm (V3 29.35); the H518 side is an OPENING_SIDE annotation with consumed 0.0",
+  "10_v4_frozen_before_qortuba": "YES: freeze e636c77 (no amendment), blind run committed before any comparison",
+  "11_blind_v4_result": "94.13682 lm, COMPUTED, conservation True",
+  "12_rebuilt_result": "94.13682 lm; reproduces the blind record {'payable': True, 'per_site': True, 'topology_digest': True}",
+  "13_breakdown": {
+   "real_walls": 76.045214,
+   "columns": 3.45,
+   "duct": 5.0,
+   "normal_window_continuity": 9.091605,
+   "doorless_jambs": 0.55,
+   "other": 0.0
+  },
+  "14_withheld": "NONE",
+  "15_known_skirting_defects_open": "NONE",
+  "16_hidden_profile_lm": 94.13682,
+  "17_why_separate": "a separate BOQ item (the aluminium profile); equal by method (same path), priced and listed separately (US-08)",
+  "18_doors_zero_jamb": "YES: 18 door / glazed-door jamb records, skirting 0.0 each; 0 of them lie on a room path (they bound the door strip sites), so nothing is subtracted and nothing is added",
+  "19_doorless_jambs_kept": [
+   "OP-997f14d12b8e9bc1 LEFT ALIGNED_FREE_END 0.2",
+   "OP-997f14d12b8e9bc1 RIGHT ALIGNED_FREE_END 0.2",
+   "OP-9e0fd219ca5cd391 LEFT CAPPED 0.15"
+  ],
+  "20_hall_lobby_regress": "NO: 26.157105 lm, both jambs counted, closure 0",
+  "21_mb_dress_regress": "NO (fixed): 29.5 lm",
+  "22_i1471_regress": "NO: its door strip site is kept (closure V2 offset rule), 2 jamb records at zero skirting, DOOR_PRESENT on both sides",
+  "23_sliding_door_affects_q14": "NO",
+  "24_q14": 140.637,
+  "25_floor_rows_changed": {
+   "Q-03": {
+    "R8.16": 17.7425,
+    "R8.17": 17.7425,
+    "delta": 0.0
+   },
+   "Q-03P": {
+    "R8.16": 11.685,
+    "R8.17": 11.685,
+    "delta": 0.0
+   },
+   "Q-11": {
+    "R8.16": 17.7425,
+    "R8.17": 17.7425,
+    "delta": 0.0
+   },
+   "Q-12": {
+    "R8.16": 11.685,
+    "R8.17": 11.685,
+    "delta": 0.0
+   },
+   "Q-13": {
+    "R8.16": 111.8988,
+    "R8.17": 111.8988,
+    "delta": 0.0
+   }
+  },
+  "26_marble_changed": "NO: {'MARBLE_THRESHOLD_PLAN_AREA_M2': 0.51, 'MARBLE_THRESHOLD_LENGTH_LM': 3.4, 'count': 4, 'blocked': []}",
+  "27_wall_face_engine_implemented": "YES: WALL_FACE_SURFACE_POLICY_V1 (engine/source/wall_faces.py), 14 synthetic tests, frozen e0d2781, blind Qortuba run committed",
+  "28_surface_classes": [
+   "WALL_FACE",
+   "COLUMN_FACE",
+   "OBSTACLE_FACE",
+   "LINTEL_FACE",
+   "HEAD_FACE",
+   "JAMB_REVEAL",
+   "HEAD_REVEAL",
+   "ZERO_TOPOLOGY_CLOSURE",
+   "UNPROVEN",
+   "OPENING (DOOR / SLIDING_GLAZED_DOOR / FLOOR_REACHING_GLAZING / WINDOW)"
+  ],
+  "29_plaster_published": "NO: DRY_WALL_HEIGHT_NOT_ESTABLISHED (owner question); WF-O1 (every dry room has a window)",
+  "30_paint_published": "NO: DRY_WALL_HEIGHT_NOT_ESTABLISHED (owner question); WF-O1; column / duct paint authority not stated",
+  "31_wall_tile_published": "NO: BLOCKED - the three BATH rooms compute ({'SITE-1c4abf65f9b5db1e': 36.32, 'SITE-a2b19efc492a6d0b': 28.32, 'SITE-fe8ed5548fb4310e': 27.04} m2 incl. column faces), the PAINTRY fails the engine's own check (WF-O1); wet reveals NOT_ESTABLISHED",
+  "32_exact_blockers": {
+   "WALL_TILE": {
+    "state": "BLOCKED",
+    "blockers": [
+     "AREA_RECONCILIATION_FAILED",
+     "WF-O1: the engine's second-form area check omits the wall plane across a window - the PAINTRY (the only wet / service room with a window) fails closed",
+     "WET_REVEAL_TREATMENT_NOT_ESTABLISHED (owner question)"
+    ]
+   },
+   "PLASTER": {
+    "state": "BLOCKED",
+    "blockers": [
+     "DRY_WALL_HEIGHT_NOT_ESTABLISHED (owner question)",
+     "WF-O1 (every dry room has a window)"
+    ]
+   },
+   "PAINT": {
+    "state": "BLOCKED",
+    "blockers": [
+     "DRY_WALL_HEIGHT_NOT_ESTABLISHED (owner question)",
+     "WF-O1",
+     "column / duct paint authority not stated"
+    ]
+   }
+  },
+  "33_deductions": "US-06 full opening area inside the trade height: door width x 2.20 (QP-21), sliding door 2.75 x 2.20 (QP-12, same occurrence), window width x 1.50 (QP-22) with its position proven by the sill fact v2; the wall above a door is a lintel face; never width alone",
+  "34_reveals": "their own surfaces per opening (left / right jamb + top, never the sill), source depth first (door / glazed strip / band thickness), US-07 0.25 m only for windows (no source depth); dry reveals -> PLASTER, wet / service / outside reveals NOT_ESTABLISHED; the M.B.ROOM / DRESS far side (H518) is wall face, never a jamb",
+  "35_closures_zero": "YES: TOPOLOGY_CLOSURE 0.0 lm in skirting; ZERO_TOPOLOGY_CLOSURE area 0.0 in wall faces",
+  "36_waterproofing": "DEFERRED: DEFER to R8.18. Its path is the GROSS wet-room perimeter with doorways NOT deducted (US-04 / US-05 / US-14) - a different path from skirting and from the wall face; it should be its own frozen policy on the stabilised V4 site boundaries, not a by-product of the wall-face engine.",
+  "37_second_project": "NOT_RUN - P7757: UNIT_UNRESOLVED (R8.9 / R8.10: no eps_r, so no certified topology and no sites; adopting the candidate mm unit would itself be a calibration); Al Rashed: physical values not computable (R8.5: IMAGE / OLE content, unmapped regions)",
+  "38_source_anchor": "NOT_ESTABLISHED",
+  "39_release_blockers": {
+   "Q-03": [
+    "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "Q-03P": [
+    "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+    "OBJECT_FOOTPRINT_IMPLICIT: proven furniture / fixture footprints are inside the measured floor by the topology convention, not by a FLOOR_FINISH footprint authority",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "Q-11": [
+    "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "Q-12": [
+    "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+    "OBJECT_FOOTPRINT_IMPLICIT: proven furniture / fixture footprints are inside the measured floor by the topology convention, not by a FLOOR_FINISH footprint authority",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "Q-13": [
+    "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "Q-14": [
+    "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "SKIRTING": [
+    "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "HIDDEN_PROFILE": [
+    "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "MARBLE_THRESHOLD": [
+    "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "WALL_TILE": [
+    "AREA_RECONCILIATION_FAILED",
+    "WF-O1: the engine's second-form area check omits the wall plane across a window - the PAINTRY (the only wet / service room with a window) fails closed",
+    "WET_REVEAL_TREATMENT_NOT_ESTABLISHED (owner question)"
+   ],
+   "PLASTER": [
+    "DRY_WALL_HEIGHT_NOT_ESTABLISHED (owner question)",
+    "WF-O1 (every dry room has a window)"
+   ],
+   "PAINT": [
+    "DRY_WALL_HEIGHT_NOT_ESTABLISHED (owner question)",
+    "WF-O1",
+    "column / duct paint authority not stated"
+   ]
+  },
+  "40_new_silent_error": [
+   "WF-O1 (frozen wall-face engine, found by its own fail-closed check in the blind run): the second form of the two-way area check leaves out the wall plane across WINDOW spans, so every room with a window reports AREA_RECONCILIATION_FAILED (the primary US-06 form is correct: verified independently, 1 / 1 sites agree once the window plane is included). Not fixed inside the frozen V1",
+   "WF-L1 / WF-L2 (blind-script wiring, no engine change): passage-head constants mismatched and a door's own strip site counted as a room - both corrected in the rebuild and disclosed with the blind-vs-rebuild difference list",
+   "the synthetic window test asserted the area but not the state - the reason WF-O1 passed the freeze"
+  ],
+  "41_r8_18": "R8.18: (1) apply the owner's dry-room wall height and wet-reveal answers -> PLASTER / PAINT / reveal rows through the frozen wall-face engine (no re-freeze if only authorities arrive); (2) WATERPROOFING_POLICY_V1 (floor membrane m2 + 0.15 m upturn on the GROSS wet perimeter, doorways not deducted) frozen + blind; (3) column / duct face trade authority; (4) closure release workflow for I1471 / H2430 / H2431 (human review record); (5) source anchor (pinned converter / DWG identity, no unpinned software); (6) a second project with a resolved unit for an overfitting regression. First item: WALL_FACE_SURFACE_POLICY_V2 (WF-O1) with a state assertion in every area test.",
+  "42_disagreements": [
+   "'Hall/Lobby passage head = 2.20 m' and the 3.20 m tile are authoritative, but the dry-room PLASTER / PAINT HEIGHT is not: QP-03 / QP-04 (3.00 m) are old-revision rules and the owner moved the new-revision tile height to 3.20 m. Plaster / paint must be BLOCKED on that height (one new owner question), not computed at 3.00 or 3.20.",
+   "The 1.00 m sill fact may support a wall-face trade only through a versioned scope extension (v2, same statement, wider trade scope); using the skirting-scoped v1 for tile would be a scope leak.",
+   "QP-12's 2.20 m is NOT 'approximate evidence' for some opening: it is an owner input for THIS occurrence, bound across revisions by identical handles (H533 / H542), width and rooms - usable, and recorded as such.",
+   "The sliding door's zero jamb skirting changes no number in this source (its jambs bound the strip sites, not HALL); 'subtract the jambs' would double-remove wall.",
+   "A second-project regression cannot be run honestly: no other repo project has a resolved unit and certified topology. Report NOT_RUN rather than adopting a candidate unit for P7757.",
+   "Wet-room door reveals (tile vs plaster) are not covered by any rule; they must not be assumed into WALL_TILE or PLASTER.",
+   "Waterproofing should not wait on the wall-face engine at all: it depends only on the wet-site boundary and the doorway closures (gross perimeter) - it can be its own small frozen policy next round."
+  ]
+ }
+}

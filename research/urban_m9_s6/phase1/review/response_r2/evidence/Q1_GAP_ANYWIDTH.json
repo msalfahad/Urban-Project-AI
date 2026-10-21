@@ -1,0 +1,45 @@
+{
+ "n_per_case": 400,
+ "found_fraction": {
+  "GAP|mm|rot=rand|off=0mm": {
+   "frozen": 0.0,
+   "robust": 0.0,
+   "max_measured_error_mm": null
+  },
+  "GAP|mm|rot=rand|off=1e+06mm": {
+   "frozen": 0.0,
+   "robust": 0.0,
+   "max_measured_error_mm": null
+  },
+  "GAP|m|rot=rand|off=0mm": {
+   "frozen": 0.0,
+   "robust": 0.0,
+   "max_measured_error_mm": null
+  },
+  "GAP|m|rot=rand|off=1e+06mm": {
+   "frozen": 0.0,
+   "robust": 0.0,
+   "max_measured_error_mm": null
+  },
+  "PIECE|mm|rot=rand|off=0mm": {
+   "frozen": 0.0625,
+   "robust": 0.1275,
+   "max_measured_error_mm": 0.12709578199246607
+  },
+  "PIECE|mm|rot=rand|off=1e+06mm": {
+   "frozen": 0.1075,
+   "robust": 0.17,
+   "max_measured_error_mm": 0.1331008750712499
+  },
+  "PIECE|m|rot=rand|off=0mm": {
+   "frozen": 0.02,
+   "robust": 0.1425,
+   "max_measured_error_mm": 0.13332186017737513
+  },
+  "PIECE|m|rot=rand|off=1e+06mm": {
+   "frozen": 0.0775,
+   "robust": 0.1525,
+   "max_measured_error_mm": 0.13351958460816604
+  }
+ }
+}

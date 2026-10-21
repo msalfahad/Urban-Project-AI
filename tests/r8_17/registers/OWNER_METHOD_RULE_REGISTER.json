@@ -1,0 +1,180 @@
+{
+ "SCHEMA": "URBAN_R8_17_OWNER_METHOD_RULE_REGISTER_V1",
+ "urban_rules": [
+  {
+   "rule_id": "URBAN-SKIRTING-OPENING-METHOD",
+   "version": 1,
+   "authority": [
+    "PROJECT_OWNER",
+    "URBAN_OWNER_METHOD"
+   ],
+   "received": "R8.16 brief §3, §6-§9, §40",
+   "scope": {
+    "applies_to": "every Urban project unless a project specification explicitly overrides it",
+    "revision_scoped": false
+   },
+   "method": {
+    "DOOR_PRESENT": {
+     "path": "STOP_AT_OPENING",
+     "across_opening": "NONE",
+     "jamb_skirting": "NONE"
+    },
+    "DOORLESS_OPENING": {
+     "across_opening": "NONE",
+     "real_floor_side_jambs": "INCLUDED",
+     "conditions": [
+      "the opening genuinely has no door",
+      "the jamb is a real physical vertical surface",
+      "that side is skirting-eligible",
+      "the floor finish reaches the jamb",
+      "not a full-wall-tile / no-skirting room"
+     ]
+    },
+    "WINDOW_ABOVE_FLOOR": {
+     "wall_below": "INCLUDED"
+    },
+    "FULL_HEIGHT_FLOOR_OPENING": {
+     "path": "BREAK"
+    }
+   },
+   "principle": "SKIRTING FOLLOWS REAL SKIRTING-ELIGIBLE WALL SURFACE AT FLOOR LEVEL; a plan-cut opening is not a floor opening without vertical evidence",
+   "trade": "SKIRTING (and the hidden profile on the same path, US-08)",
+   "never": [
+    "skirting across a clear opening",
+    "a door jamb return",
+    "a topology closure as material",
+    "a window deduction from plan geometry alone",
+    "a sill height transferred between projects"
+   ]
+  }
+ ],
+ "window_fact_versions": [
+  {
+   "fact_id": "QORTUBA-NEW-NORMAL-WINDOWS-ABOVE-FLOOR-OWNER-001",
+   "version": 1,
+   "kind": "WINDOW_FLOOR_CONTACT",
+   "authority": [
+    "PROJECT_OWNER"
+   ],
+   "received": "R8.16 brief §1, §4 (after source exhaustion: no sill / schedule / section in the DXF)",
+   "scope": {
+    "project": "QORTUBA",
+    "source_revision_id": "QORTUBA_REV_NEW",
+    "source_anchor_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+    "region_id": "RC:MODEL_SPACE:4267:540:1649",
+    "frame_id": "MF:RC:MODEL_SPACE:4267:540:1649",
+    "plan": "PLAN_VARIANT_4_SELECTED",
+    "trade": "SKIRTING",
+    "space_classes": [
+     "DRY_INTERNAL_ROOM"
+    ]
+   },
+   "statement": {
+    "text": "for the CURRENT selected Qortuba plan, NORMAL WINDOWS START APPROXIMATELY 1.00 m ABOVE FINISHED FLOOR: there is real wall between the finished floor and the sill",
+    "sill_height_m": 1.0,
+    "sill_is": "approximate; a vertical fact, never a plan dimension",
+    "applies_to": "normal windows: a glazing occurrence hosted IN a wall whose face line runs across the opening (the plan draws the wall below the sill)",
+    "does_not_apply_to": [
+     "full-height glazing",
+     "sliding doors",
+     "external doors",
+     "a glazed opening with no wall line across it (e.g. a glazed screen)"
+    ],
+    "source_first": "a source sill / schedule / section would override this fact"
+   },
+   "unit": "m",
+   "transfer_forbidden": [
+    "the old Qortuba revision (QP-17 / QP-18 stay old-revision rules)",
+    "any other Qortuba revision, region or plan variant",
+    "the DWG (identity NOT_ESTABLISHED)",
+    "P7757",
+    "Al Rashed",
+    "any future villa or project",
+    "an Urban default",
+    "any other window type"
+   ],
+   "relations": []
+  },
+  {
+   "fact_id": "QORTUBA-NEW-NORMAL-WINDOWS-ABOVE-FLOOR-OWNER-001",
+   "version": 2,
+   "kind": "WINDOW_FLOOR_CONTACT",
+   "authority": [
+    "PROJECT_OWNER"
+   ],
+   "received": "R8.16 brief §1, §4 (after source exhaustion: no sill / schedule / section in the DXF); v2 (R8.17): the SAME owner statement, trade scope widened",
+   "scope": {
+    "project": "QORTUBA",
+    "source_revision_id": "QORTUBA_REV_NEW",
+    "source_anchor_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+    "region_id": "RC:MODEL_SPACE:4267:540:1649",
+    "frame_id": "MF:RC:MODEL_SPACE:4267:540:1649",
+    "plan": "PLAN_VARIANT_4_SELECTED",
+    "trades": [
+     "SKIRTING",
+     "WALL_FACE_SURFACE"
+    ],
+    "space_classes": [
+     "DRY_INTERNAL_ROOM",
+     "WET_SERVICE_ROOM",
+     "SERVICE_ROOM"
+    ]
+   },
+   "statement": {
+    "text": "for the CURRENT selected Qortuba plan, NORMAL WINDOWS START APPROXIMATELY 1.00 m ABOVE FINISHED FLOOR: there is real wall between the finished floor and the sill",
+    "sill_height_m": 1.0,
+    "sill_is": "approximate; a vertical fact, never a plan dimension",
+    "applies_to": "normal windows: a glazing occurrence hosted IN a wall whose face line runs across the opening (the plan draws the wall below the sill)",
+    "does_not_apply_to": [
+     "full-height glazing",
+     "sliding doors",
+     "external doors",
+     "a glazed opening with no wall line across it (e.g. a glazed screen)"
+    ],
+    "source_first": "a source sill / schedule / section would override this fact",
+    "wall_face_use": "POSITION ONLY: proves that a normal window lies within a stated wall-finish height (sill + window height); never a quantity, never a sill dimension in an area"
+   },
+   "unit": "m",
+   "transfer_forbidden": [
+    "the old Qortuba revision (QP-17 / QP-18 stay old-revision rules)",
+    "any other Qortuba revision, region or plan variant",
+    "the DWG (identity NOT_ESTABLISHED)",
+    "P7757",
+    "Al Rashed",
+    "any future villa or project",
+    "an Urban default",
+    "any other window type"
+   ],
+   "relations": [
+    {
+     "rule": "QORTUBA-NEW-NORMAL-WINDOWS-ABOVE-FLOOR-OWNER-001@v1",
+     "relation": "CORROBORATING",
+     "why": "same meaning and value (sill ~1.00 m); v2 only names the wall-face trades the owner statement already covers - v1 stays on file for the frozen R8.16 records"
+    }
+   ]
+  }
+ ],
+ "window_fact_v2": "the SAME owner statement (sill ~1.00 m, normal windows), trade scope widened to wall-face surfaces for POSITION only (a window lies inside a stated wall-finish height); v1 stays for the frozen R8.16 skirting record; CORROBORATING, never a conflict",
+ "fact_policy": "OWNER_METHOD_FACT_POLICY_V4",
+ "rule_store_used_for_wall_faces": [
+  "US-01",
+  "US-03",
+  "US-06",
+  "US-07",
+  "US-10",
+  "US-11",
+  "US-16",
+  "US-17",
+  "QP-07",
+  "QP-12",
+  "QP-21",
+  "QP-22",
+  "QP-23",
+  "R-13"
+ ],
+ "rule_store_not_transferred": [
+  "QP-01 tile 3.00 m (superseded in scope by the 3.20 m fact)",
+  "QP-02 / QP-03 / QP-04 3.00 m (old revision; counterfactual only)",
+  "QP-09 window deduction (superseded in scope, R8.16)"
+ ]
+}

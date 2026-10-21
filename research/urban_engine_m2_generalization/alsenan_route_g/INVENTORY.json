@@ -1,0 +1,1024 @@
+[
+ {
+  "blocks_inserted": {
+   "*U296": 1,
+   "816": 1,
+   "A$C60883738": 6,
+   "A$C662819C0": 12,
+   "A$C7BD10DAB": 6,
+   "B24": 1,
+   "C-BEAM2": 9,
+   "C-BEAM3": 4,
+   "CAP": 1,
+   "CF": 4,
+   "CGT": 12,
+   "F": 12,
+   "F11": 1,
+   "FFRS": 1,
+   "FP": 1,
+   "FT": 12,
+   "FTB": 5,
+   "GBP": 1,
+   "GFRS": 1,
+   "LE": 16,
+   "LEL": 6,
+   "ROOF": 1,
+   "SB1": 1,
+   "SBT": 35,
+   "SFRS": 1,
+   "STR2": 11,
+   "SWIM": 1,
+   "TT1": 2,
+   "b20": 1,
+   "b4": 1,
+   "b7": 1,
+   "c": 1,
+   "cou": 2,
+   "ll": 1,
+   "sb2": 1,
+   "str3": 1,
+   "t": 5,
+   "void": 2
+  },
+  "dxf_version": "AC1032",
+  "file": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079.dxf",
+  "frames": [
+   {
+    "box": [
+     -75967.728,
+     29036.099,
+     -40773.418,
+     57066.432
+    ],
+    "frame_id": "FR01",
+    "handle": "B7",
+    "inserts": {},
+    "layer": "DEFPOINTS",
+    "n_texts": 43,
+    "title_guess": [
+     "%%uDETAIL OF SWIMMING POOL.",
+     "%%uDETAIL OF DOME"
+    ]
+   },
+   {
+    "box": [
+     -37243.322,
+     29036.099,
+     -2049.012,
+     57066.432
+    ],
+    "frame_id": "FR02",
+    "handle": "B6",
+    "inserts": {
+     "A$C60883738": 1,
+     "A$C662819C0": 2,
+     "A$C7BD10DAB": 1,
+     "LE": 2,
+     "ROOF": 1,
+     "SFRS": 1
+    },
+    "layer": "DEFPOINTS",
+    "n_texts": 50,
+    "title_guess": [
+     "CHECK  ARCHITECTURAL DETAIL OF"
+    ]
+   },
+   {
+    "box": [
+     -1120.11,
+     -14447.747,
+     20097.096,
+     20052.253
+    ],
+    "frame_id": "FR03",
+    "handle": "270C",
+    "inserts": {
+     "C-BEAM2": 5
+    },
+    "layer": "S-LINE.SCH",
+    "n_texts": 166,
+    "title_guess": [
+     "SCHEDULE OF CONTINUES BEAMS (2 SPAN)"
+    ]
+   },
+   {
+    "box": [
+     1481.084,
+     29036.099,
+     36675.395,
+     57066.432
+    ],
+    "frame_id": "FR04",
+    "handle": "B5",
+    "inserts": {
+     "A$C60883738": 1,
+     "A$C662819C0": 2,
+     "A$C7BD10DAB": 1,
+     "FFRS": 1,
+     "t": 1
+    },
+    "layer": "DEFPOINTS",
+    "n_texts": 99,
+    "title_guess": [
+     "CHECK  ARCHITECTURAL DETAIL OF",
+     "%%USECTION B-B",
+     "SEE DETAIL"
+    ]
+   },
+   {
+    "box": [
+     20636.976,
+     -9116.872,
+     41854.182,
+     20052.253
+    ],
+    "frame_id": "FR05",
+    "handle": "1FF1",
+    "inserts": {
+     "C-BEAM2": 4
+    },
+    "layer": "S-LINE.SCH",
+    "n_texts": 149,
+    "title_guess": [
+     "SCHEDULE OF CONTINUES BEAMS (2 SPAN)"
+    ]
+   },
+   {
+    "box": [
+     40205.49,
+     29036.099,
+     75399.801,
+     57066.432
+    ],
+    "frame_id": "FR06",
+    "handle": "B4",
+    "inserts": {
+     "816": 1,
+     "A$C60883738": 1,
+     "A$C662819C0": 2,
+     "A$C7BD10DAB": 1,
+     "B24": 1,
+     "GFRS": 1,
+     "b20": 1,
+     "b4": 1,
+     "b7": 1,
+     "t": 4,
+     "void": 2
+    },
+    "layer": "DEFPOINTS",
+    "n_texts": 158,
+    "title_guess": [
+     "CHECK  ARCHITECTURAL DETAIL OF",
+     "%%USECTION A-A",
+     "%%USECTION C-C"
+    ]
+   },
+   {
+    "box": [
+     58870.655,
+     -9116.872,
+     85556.404,
+     20052.253
+    ],
+    "frame_id": "FR07",
+    "handle": "1FFB",
+    "inserts": {
+     "C-BEAM3": 4
+    },
+    "layer": "S-LINE.SCH",
+    "n_texts": 193,
+    "title_guess": [
+     "SCHEDULE OF CONTINUES BEAMS (THREE SPAN)"
+    ]
+   },
+   {
+    "box": [
+     78929.897,
+     29036.099,
+     114124.207,
+     57066.432
+    ],
+    "frame_id": "FR08",
+    "handle": "B3",
+    "inserts": {
+     "A$C60883738": 1,
+     "A$C662819C0": 2,
+     "A$C7BD10DAB": 1,
+     "GBP": 1,
+     "LE": 14,
+     "LEL": 6,
+     "SWIM": 1,
+     "TT1": 2,
+     "c": 1,
+     "cou": 2,
+     "ll": 1
+    },
+    "layer": "DEFPOINTS",
+    "n_texts": 52,
+    "title_guess": []
+   },
+   {
+    "box": [
+     94532.33,
+     -7596.093,
+     129726.641,
+     20434.239
+    ],
+    "frame_id": "FR09",
+    "handle": "1B2D",
+    "inserts": {
+     "SBT": 34,
+     "STR2": 11,
+     "str3": 1
+    },
+    "layer": "DEFPOINTS",
+    "n_texts": 342,
+    "title_guess": [
+     "Schedule of Simple Beams"
+    ]
+   },
+   {
+    "box": [
+     117654.303,
+     29036.099,
+     152848.613,
+     57066.432
+    ],
+    "frame_id": "FR10",
+    "handle": "B2",
+    "inserts": {
+     "A$C60883738": 1,
+     "A$C662819C0": 2,
+     "A$C7BD10DAB": 1,
+     "CF": 4,
+     "F": 12,
+     "F11": 1,
+     "FP": 1,
+     "SB1": 1,
+     "sb2": 1
+    },
+    "layer": "DEFPOINTS",
+    "n_texts": 41,
+    "title_guess": []
+   },
+   {
+    "box": [
+     137729.301,
+     -7596.093,
+     172923.612,
+     20434.239
+    ],
+    "frame_id": "FR11",
+    "handle": "1B2C",
+    "inserts": {
+     "CGT": 12,
+     "FT": 12,
+     "FTB": 5
+    },
+    "layer": "DEFPOINTS",
+    "n_texts": 484,
+    "title_guess": [
+     "%%UDETAILS OF COLUMN REINFORCEMENT.",
+     "*  H  =  HIEGHT OF FLOOR",
+     "Schedule  of  Footings"
+    ]
+   },
+   {
+    "box": [
+     156378.709,
+     29036.099,
+     191573.019,
+     57066.432
+    ],
+    "frame_id": "FR12",
+    "handle": "B0",
+    "inserts": {
+     "A$C60883738": 1,
+     "A$C662819C0": 2,
+     "A$C7BD10DAB": 1,
+     "CAP": 1
+    },
+    "layer": "DEFPOINTS",
+    "n_texts": 74,
+    "title_guess": []
+   }
+  ],
+  "insunits": 4,
+  "layers": [
+   {
+    "by_type": {
+     "ARC": 49,
+     "CIRCLE": 1,
+     "INSERT": 7,
+     "LINE": 315,
+     "LWPOLYLINE": 5,
+     "POINT": 1
+    },
+    "closed_curved_outlines": 0,
+    "closed_rectangles": 1,
+    "layer": "1",
+    "n_entities": 378,
+    "role_guess": "UNKNOWN",
+    "texts": 0
+   },
+   {
+    "by_type": {
+     "ARC": 4,
+     "HATCH": 1,
+     "INSERT": 1,
+     "LINE": 119,
+     "LWPOLYLINE": 2
+    },
+    "closed_curved_outlines": 0,
+    "closed_rectangles": 0,
+    "layer": "2",
+    "n_entities": 127,
+    "role_guess": "UNKNOWN",
+    "texts": 0
+   },
+   {
+    "by_type": {
+     "INSERT": 6
+    },
+    "closed_curved_outlines": 0,
+    "closed_rectangles": 0,
+    "layer": "3",
+    "n_entities": 6,
+    "role_guess": "UNKNOWN",
+    "texts": 0
+   },
+   {
+    "by_type": {
+     "INSERT": 29
+    },
+    "closed_curved_outlines": 0,
+    "closed_rectangles": 0,
+    "layer": "4",
+    "n_entities": 29,
+    "role_guess": "UNKNOWN",
+    "texts": 0
+   },
+   {
+    "by_type": {
+     "ARC": 2,
+     "INSERT": 1,
+     "LINE": 12
+    },
+    "closed_curved_outlines": 0,
+    "closed_rectangles": 0,
+    "layer": "5",
+    "n_entities": 15,
+    "role_guess": "UNKNOWN",
+    "texts": 0
+   },
+   {
+    "by_type": {
+     "RTEXT": 10
+    },
+    "closed_curved_outlines": 0,
+    "closed_rectangles": 0,
+    "layer": "?",
+    "n_entities": 10,
+    "role_guess": "UNKNOWN",
+    "texts": 0
+   },
+   {
+    "by_type": {
+     "LWPOLYLINE": 1
+    },
+    "closed_curved_outlines": 0,
+    "closed_rectangles": 0,
+    "layer": "D",
+    "n_entities": 1,
+    "role_guess": "UNKNOWN",
+    "texts": 0
+   },
+   {
+    "by_type": {
+     "LWPOLYLINE": 9
+    },
+    "closed_curved_outlines": 0,
+    "closed_rectangles": 9,
+    "layer": "DEFPOINTS",
+    "n_entities": 9,
+    "role_guess": "FRAME",
+    "texts": 0
+   },
+   {
+    "by_type": {
+     "INSERT": 16,
+     "TEXT": 16
+    },
+    "closed_curved_outlines": 0,
+    "closed_rectangles": 0,
+    "layer": "LEVEL",
+    "n_entities": 32,
+    "role_guess": "UNKNOWN",
+    "texts": 16
+   },
+   {
+    "by_type": {
+     "LWPOLYLINE": 1,
+     "SOLID": 1
+    },
+    "closed_curved_outlines": 0,
+    "closed_rectangles": 0,
+    "layer": "N-ARROW",
+    "n_entities": 2,
+    "role_guess": "UNKNOWN",
+    "texts": 0
+   },
+   {
+    "by_type": {
+     "LWPOLYLINE": 6
+    },
+    "closed_curved_outlines": 0,
+    "closed_rectangles": 2,
+    "layer": "REIN",
+    "n_entities": 6,
+    "role_guess": "REBAR",
+    "texts": 0
+   },
+   {
+    "by_type": {
+     "LINE": 78
+    },
+    "closed_curved_outlines": 0,
+    "closed_rectangles": 0,
+    "layer": "S-AXIS",
+    "n_entities": 78,
+    "role_guess": "GRID",
+    "texts": 0
+   },
+   {
+    "by_type": {
+     "INSERT": 2,
+     "LINE": 2
+    },
+    "closed_curved_outlines": 0,
+    "closed_rectangles": 0,
+    "layer": "S-BEAM",
+    "n_entities": 4,
+    "role_guess": "BEAM",
+    "texts": 0
+   },
+   {
+    "by_type": {
+     "ARC": 5,
+     "CIRCLE": 2,
+     "LINE": 34,
+     "LWPOLYLINE": 6
+    },
+    "closed_curved_outlines": 0,
+    "closed_rectangles": 5,
+    "layer": "S-BOUN",
+    "n_entities": 47,
+    "role_guess": "UNKNOWN",
+    "texts": 0
+   },
+   {
+    "by_type": {
+     "LWPOLYLINE": 6
+    },
+    "closed_curved_outlines": 1,
+    "closed_rectangles": 4,
+    "layer": "S-BW",
+    "n_entities": 6,
+    "role_guess": "UNKNOWN",
+    "texts": 0
+   },
+   {
+    "by_type": {
+     "LINE": 209,
+     "LWPOLYLINE": 171
+    },
+    "closed_curved_outlines": 0,
+    "closed_rectangles": 171,
+    "layer": "S-COL.BON",
+    "n_entities": 380,
+    "role_guess": "COLUMN",
+    "texts": 0
+   },
+   {
+    "by_type": {
+     "HATCH": 154,
+     "SOLID": 17
+    },
+    "closed_curved_outlines": 0,
+    "closed_rectangles": 0,
+    "layer": "S-COL.HAT",
+    "n_entities": 171,
+    "role_guess": "HATCH",
+    "texts": 0
+   },
+   {
+    "by_type": {
+     "DIMENSION": 124,
+     "INSERT": 22
+    },
+    "closed_curved_outlines": 0,
+    "closed_rectangles": 0,
+    "layer": "S-DIM",
+    "n_entities": 146,
+    "role_guess": "DIMENSION",
+    "texts": 0
+   },
+   {
+    "by_type": {
+     "DIMENSION": 15,
+     "LINE": 1
+    },
+    "closed_curved_outlines": 0,
+    "closed_rectangles": 0,
+    "layer": "S-DIM.D",
+    "n_entities": 16,
+    "role_guess": "DIMENSION",
+    "texts": 0
+   },
+   {
+    "by_type": {
+     "DIMENSION": 97
+    },
+    "closed_curved_outlines": 0,
+    "closed_rectangles": 0,
+    "layer": "S-DIM.SCH",
+    "n_entities": 97,
+    "role_guess": "DIMENSION",
+    "texts": 0
+   },
+   {
+    "by_type": {
+     "DIMENSION": 136
+    },
+    "closed_curved_outlines": 0,
+    "closed_rectangles": 0,
+    "layer": "S-DIM1",
+    "n_entities": 136,
+    "role_guess": "DIMENSION",
+    "texts": 0
+   },
+   {
+    "by_type": {
+     "ARC": 2,
+     "LINE": 53,
+     "LWPOLYLINE": 8
+    },
+    "closed_curved_outlines": 0,
+    "closed_rectangles": 4,
+    "layer": "S-EXTL.D",
+    "n_entities": 63,
+    "role_guess": "UNKNOWN",
+    "texts": 0
+   },
+   {
+    "by_type": {
+     "DIMENSION": 5,
+     "INSERT": 2,
+     "LINE": 39,
+     "LWPOLYLINE": 11
+    },
+    "closed_curved_outlines": 0,
+    "closed_rectangles": 7,
+    "layer": "S-FOOTINGS",
+    "n_entities": 57,
+    "role_guess": "FOOTING",
+    "texts": 0
+   },
+   {
+    "by_type": {
+     "LINE": 30,
+     "LWPOLYLINE": 10
+    },
+    "closed_curved_outlines": 0,
+    "closed_rectangles": 0,
+    "layer": "S-HAT",
+    "n_entities": 40,
+    "role_guess": "UNKNOWN",
+    "texts": 0
+   },
+   {
+    "by_type": {
+     "CIRCLE": 22,
+     "HATCH": 43,
+     "INSERT": 5
+    },
+    "closed_curved_outlines": 0,
+    "closed_rectangles": 0,
+    "layer": "S-HAT.BAT",
+    "n_entities": 70,
+    "role_guess": "UNKNOWN",
+    "texts": 0
+   },
+   {
+    "by_type": {
+     "HATCH": 1
+    },
+    "closed_curved_outlines": 0,
+    "closed_rectangles": 0,
+    "layer": "S-INSU.D",
+    "n_entities": 1,
+    "role_guess": "UNKNOWN",
+    "texts": 0
+   },
+   {
+    "by_type": {
+     "HATCH": 3,
+     "LINE": 279,
+     "LWPOLYLINE": 17,
+     "SOLID": 43
+    },
+    "closed_curved_outlines": 0,
+    "closed_rectangles": 14,
+    "layer": "S-LINE.SCH",
+    "n_entities": 342,
+    "role_guess": "UNKNOWN",
+    "texts": 0
+   },
+   {
+    "by_type": {
+     "TEXT": 4
+    },
+    "closed_curved_outlines": 0,
+    "closed_rectangles": 0,
+    "layer": "S-NOTE",
+    "n_entities": 4,
+    "role_guess": "TEXT",
+    "texts": 4
+   },
+   {
+    "by_type": {
+     "ARC": 2,
+     "LINE": 68
+    },
+    "closed_curved_outlines": 0,
+    "closed_rectangles": 0,
+    "layer": "S-OPENING",
+    "n_entities": 70,
+    "role_guess": "UNKNOWN",
+    "texts": 0
+   },
+   {
+    "by_type": {
+     "HATCH": 1
+    },
+    "closed_curved_outlines": 0,
+    "closed_rectangles": 0,
+    "layer": "S-PLAH.D",
+    "n_entities": 1,
+    "role_guess": "UNKNOWN",
+    "texts": 0
+   },
+   {
+    "by_type": {
+     "LINE": 12
+    },
+    "closed_curved_outlines": 0,
+    "closed_rectangles": 0,
+    "layer": "S-REIN-CORNER",
+    "n_entities": 12,
+    "role_guess": "REBAR",
+    "texts": 0
+   },
+   {
+    "by_type": {
+     "ARC": 1,
+     "LINE": 213,
+     "LWPOLYLINE": 14
+    },
+    "closed_curved_outlines": 4,
+    "closed_rectangles": 4,
+    "layer": "S-REIN-SLAB",
+    "n_entities": 228,
+    "role_guess": "REBAR",
+    "texts": 0
+   },
+   {
+    "by_type": {
+     "ARC": 7,
+     "HATCH": 32,
+     "LINE": 271,
+     "LWPOLYLINE": 283
+    },
+    "closed_curved_outlines": 235,
+    "closed_rectangles": 16,
+    "layer": "S-REIN.D",
+    "n_entities": 593,
+    "role_guess": "REBAR",
+    "texts": 0
+   },
+   {
+    "by_type": {
+     "CIRCLE": 7,
+     "TEXT": 7
+    },
+    "closed_curved_outlines": 0,
+    "closed_rectangles": 0,
+    "layer": "S-SEC-TEXT",
+    "n_entities": 14,
+    "role_guess": "TEXT",
+    "texts": 7
+   },
+   {
+    "by_type": {
+     "LWPOLYLINE": 14
+    },
+    "closed_curved_outlines": 0,
+    "closed_rectangles": 0,
+    "layer": "S-SEC.LINE",
+    "n_entities": 14,
+    "role_guess": "UNKNOWN",
+    "texts": 0
+   },
+   {
+    "by_type": {
+     "HATCH": 1
+    },
+    "closed_curved_outlines": 0,
+    "closed_rectangles": 0,
+    "layer": "S-SECRH.D",
+    "n_entities": 1,
+    "role_guess": "UNKNOWN",
+    "texts": 0
+   },
+   {
+    "by_type": {
+     "LWPOLYLINE": 3
+    },
+    "closed_curved_outlines": 0,
+    "closed_rectangles": 3,
+    "layer": "S-SHEET.LO",
+    "n_entities": 3,
+    "role_guess": "FRAME",
+    "texts": 0
+   },
+   {
+    "by_type": {
+     "MTEXT": 3
+    },
+    "closed_curved_outlines": 0,
+    "closed_rectangles": 0,
+    "layer": "S-STAMP",
+    "n_entities": 3,
+    "role_guess": "UNKNOWN",
+    "texts": 3
+   },
+   {
+    "by_type": {
+     "TEXT": 265
+    },
+    "closed_curved_outlines": 0,
+    "closed_rectangles": 0,
+    "layer": "S-TEXT",
+    "n_entities": 265,
+    "role_guess": "TEXT",
+    "texts": 265
+   },
+   {
+    "by_type": {
+     "TEXT": 4
+    },
+    "closed_curved_outlines": 0,
+    "closed_rectangles": 0,
+    "layer": "S-TEXT-CORNER",
+    "n_entities": 4,
+    "role_guess": "TEXT",
+    "texts": 4
+   },
+   {
+    "by_type": {
+     "CIRCLE": 6,
+     "LINE": 4,
+     "LWPOLYLINE": 4,
+     "SOLID": 1,
+     "TEXT": 152,
+     "WIPEOUT": 3
+    },
+    "closed_curved_outlines": 0,
+    "closed_rectangles": 0,
+    "layer": "S-TEXT-SLAB",
+    "n_entities": 170,
+    "role_guess": "TEXT",
+    "texts": 152
+   },
+   {
+    "by_type": {
+     "LINE": 51,
+     "LWPOLYLINE": 17,
+     "MTEXT": 5,
+     "TEXT": 61
+    },
+    "closed_curved_outlines": 4,
+    "closed_rectangles": 0,
+    "layer": "S-TEXT.D",
+    "n_entities": 134,
+    "role_guess": "TEXT",
+    "texts": 66
+   },
+   {
+    "by_type": {
+     "ARC": 1,
+     "INSERT": 78,
+     "LINE": 105,
+     "LWPOLYLINE": 99,
+     "TEXT": 357
+    },
+    "closed_curved_outlines": 0,
+    "closed_rectangles": 3,
+    "layer": "S-TEXT.SCH",
+    "n_entities": 640,
+    "role_guess": "TEXT",
+    "texts": 1319
+   },
+   {
+    "by_type": {
+     "TEXT": 24
+    },
+    "closed_curved_outlines": 0,
+    "closed_rectangles": 0,
+    "layer": "S-TITLE TEXT",
+    "n_entities": 24,
+    "role_guess": "TEXT",
+    "texts": 24
+   },
+   {
+    "by_type": {
+     "LINE": 12
+    },
+    "closed_curved_outlines": 0,
+    "closed_rectangles": 0,
+    "layer": "ST",
+    "n_entities": 12,
+    "role_guess": "UNKNOWN",
+    "texts": 0
+   },
+   {
+    "by_type": {
+     "INSERT": 11
+    },
+    "closed_curved_outlines": 0,
+    "closed_rectangles": 0,
+    "layer": "TEXT",
+    "n_entities": 11,
+    "role_guess": "TEXT",
+    "texts": 0
+   },
+   {
+    "by_type": {
+     "INSERT": 1
+    },
+    "closed_curved_outlines": 0,
+    "closed_rectangles": 0,
+    "layer": "W",
+    "n_entities": 1,
+    "role_guess": "UNKNOWN",
+    "texts": 0
+   }
+  ],
+  "n_entities": 4473,
+  "n_layers": 47,
+  "n_texts": 1860,
+  "policy": "DRAWING_INVENTORY_V1",
+  "sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+  "tag_families": [
+   {
+    "count": 114,
+    "distinct": 29,
+    "examples": [
+     "B1",
+     "B10",
+     "B11",
+     "B12",
+     "B13",
+     "B14",
+     "B15",
+     "B16"
+    ],
+    "family_guess": "BEAMS",
+    "frames": {
+     "FR02": 15,
+     "FR04": 26,
+     "FR06": 44,
+     "FR09": 29
+    },
+    "layers": {
+     "S-TEXT": 85,
+     "S-TEXT.SCH": 29
+    },
+    "prefix": "B"
+   },
+   {
+    "count": 74,
+    "distinct": 11,
+    "examples": [
+     "C1",
+     "C10",
+     "C11",
+     "C2",
+     "C3",
+     "C4",
+     "C5",
+     "C6"
+    ],
+    "family_guess": "COLUMNS",
+    "frames": {
+     "FR08": 24,
+     "FR10": 14,
+     "FR11": 11,
+     "FR12": 25
+    },
+    "layers": {
+     "S-TEXT": 63,
+     "S-TEXT.SCH": 11
+    },
+    "prefix": "C"
+   },
+   {
+    "count": 42,
+    "distinct": 13,
+    "examples": [
+     "CB1",
+     "CB10",
+     "CB11",
+     "CB12",
+     "CB13",
+     "CB2",
+     "CB3",
+     "CB4"
+    ],
+    "family_guess": "BEAMS",
+    "frames": {
+     "FR03": 5,
+     "FR04": 12,
+     "FR05": 4,
+     "FR06": 17,
+     "FR07": 4
+    },
+    "layers": {
+     "S-TEXT": 29,
+     "S-TEXT.SCH": 13
+    },
+    "prefix": "CB"
+   },
+   {
+    "count": 20,
+    "distinct": 14,
+    "examples": [
+     "F10",
+     "F11",
+     "F12",
+     "F13",
+     "F14",
+     "F15",
+     "F2",
+     "F3"
+    ],
+    "family_guess": "FOOTINGS",
+    "frames": {
+     "FR10": 6,
+     "FR11": 14
+    },
+    "layers": {
+     "S-TEXT": 6,
+     "S-TEXT.SCH": 14
+    },
+    "prefix": "F"
+   },
+   {
+    "count": 4,
+    "distinct": 3,
+    "examples": [
+     "SB1",
+     "SB2",
+     "SB3"
+    ],
+    "family_guess": "GROUND_BEAMS",
+    "frames": {
+     "FR09": 3,
+     "OUTSIDE_FRAMES": 1
+    },
+    "layers": {
+     "S-TEXT.SCH": 4
+    },
+    "prefix": "SB"
+   },
+   {
+    "count": 3,
+    "distinct": 2,
+    "examples": [
+     "S-2",
+     "S-3"
+    ],
+    "family_guess": "SLABS",
+    "frames": {
+     "FR03": 1,
+     "FR05": 1,
+     "FR07": 1
+    },
+    "layers": {
+     "S-TEXT.SCH": 3
+    },
+    "prefix": "S"
+   }
+  ]
+ }
+]

@@ -1,0 +1,2717 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_V3_BLOCKWORK_V1",
+ "rows": [
+  {
+   "floor": "GF",
+   "band": "WB-00725d29ac1d1f5d",
+   "thickness_mm": 200,
+   "position": "EXTERNAL",
+   "length_m": 1.05,
+   "pieces": [
+    {
+     "length_m": 1.05,
+     "termination": "BEAM_SOFFIT",
+     "member": "CB7",
+     "D_cm": 75,
+     "height_m": 3.75
+    }
+   ],
+   "area_m2": 3.9375,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "1.05 x 3.75"
+  },
+  {
+   "floor": "GF",
+   "band": "WB-019839880fe9d666",
+   "thickness_mm": 200,
+   "position": "EXTERNAL",
+   "length_m": 0.85,
+   "pieces": [
+    {
+     "length_m": 0.85,
+     "termination": "SLAB_SOFFIT",
+     "member": "SLAB",
+     "D_cm": 16,
+     "height_m": 4.34
+    }
+   ],
+   "area_m2": 3.689,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "0.85 x 4.34"
+  },
+  {
+   "floor": "GF",
+   "band": "WB-037b2417a596d8d4",
+   "thickness_mm": 200,
+   "position": "EXTERNAL",
+   "length_m": 0.4,
+   "pieces": [
+    {
+     "length_m": 0.4,
+     "termination": "BEAM_SOFFIT",
+     "member": "CB4",
+     "D_cm": 50,
+     "height_m": 4.0
+    }
+   ],
+   "area_m2": 1.6,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "0.40 x 4.00"
+  },
+  {
+   "floor": "GF",
+   "band": "WB-09cc6f70c5cf047c",
+   "thickness_mm": 150,
+   "position": "INTERNAL",
+   "length_m": 0.5,
+   "pieces": [
+    {
+     "length_m": 0.5,
+     "termination": "SLAB_SOFFIT",
+     "member": "SLAB",
+     "D_cm": 16,
+     "height_m": 4.34
+    }
+   ],
+   "area_m2": 2.17,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "0.50 x 4.34"
+  },
+  {
+   "floor": "GF",
+   "band": "WB-0be7574d079de4ff",
+   "thickness_mm": 150,
+   "position": "INTERNAL",
+   "length_m": 1.278577,
+   "pieces": [
+    {
+     "length_m": 1.028315,
+     "termination": "SLAB_SOFFIT",
+     "member": "SLAB",
+     "D_cm": 16,
+     "height_m": 4.34
+    },
+    {
+     "length_m": 0.250262,
+     "termination": "BEAM_SOFFIT",
+     "member": "B4",
+     "D_cm": 50.0,
+     "height_m": 4.0
+    }
+   ],
+   "area_m2": 5.463935,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "1.03 x 4.34 + 0.25 x 4.00"
+  },
+  {
+   "floor": "GF",
+   "band": "WB-1c294ff0ed794b7e",
+   "thickness_mm": 150,
+   "position": "INTERNAL",
+   "length_m": 1.1,
+   "pieces": [
+    {
+     "length_m": 1.1,
+     "termination": "SLAB_SOFFIT",
+     "member": "SLAB",
+     "D_cm": 16,
+     "height_m": 4.34
+    }
+   ],
+   "area_m2": 4.774,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "1.10 x 4.34"
+  },
+  {
+   "floor": "GF",
+   "band": "WB-1cef3bd5e65767e7",
+   "thickness_mm": 200,
+   "position": "EXTERNAL",
+   "length_m": 1.270596,
+   "pieces": [
+    {
+     "length_m": 1.270596,
+     "termination": "SLAB_SOFFIT",
+     "member": "SLAB",
+     "D_cm": 16,
+     "height_m": 4.34
+    }
+   ],
+   "area_m2": 5.514387,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "1.27 x 4.34"
+  },
+  {
+   "floor": "GF",
+   "band": "WB-1dbe16a02e97ac1f",
+   "thickness_mm": 200,
+   "position": "EXTERNAL",
+   "length_m": 1.5,
+   "pieces": [
+    {
+     "length_m": 1.5,
+     "termination": "BEAM_SOFFIT",
+     "member": "CB7",
+     "D_cm": 75,
+     "height_m": 3.75
+    }
+   ],
+   "area_m2": 5.625,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "1.50 x 3.75"
+  },
+  {
+   "floor": "GF",
+   "band": "WB-251a4c99fa836ada",
+   "thickness_mm": 200,
+   "position": "EXTERNAL",
+   "length_m": 1.45,
+   "pieces": [
+    {
+     "length_m": 1.45,
+     "termination": "BEAM_SOFFIT",
+     "member": "CB6",
+     "D_cm": 75,
+     "height_m": 3.75
+    }
+   ],
+   "area_m2": 5.4375,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "1.45 x 3.75"
+  },
+  {
+   "floor": "GF",
+   "band": "WB-2953cf29fa31a021",
+   "thickness_mm": 200,
+   "position": "EXTERNAL",
+   "length_m": 0.612094,
+   "pieces": [
+    {
+     "length_m": 0.612094,
+     "termination": "BEAM_SOFFIT",
+     "member": "B9",
+     "D_cm": 75.0,
+     "height_m": 3.75
+    }
+   ],
+   "area_m2": 2.295352,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "0.61 x 3.75"
+  },
+  {
+   "floor": "GF",
+   "band": "WB-2a302059f351ab95",
+   "thickness_mm": 150,
+   "position": "INTERNAL",
+   "length_m": 0.794348,
+   "pieces": [
+    {
+     "length_m": 0.214298,
+     "termination": "SLAB_SOFFIT",
+     "member": "SLAB",
+     "D_cm": 16,
+     "height_m": 4.34
+    },
+    {
+     "length_m": 0.2,
+     "termination": "BEAM_SOFFIT",
+     "member": "B11",
+     "D_cm": 75.0,
+     "height_m": 3.75
+    },
+    {
+     "length_m": 0.380049,
+     "termination": "SLAB_SOFFIT",
+     "member": "SLAB",
+     "D_cm": 16,
+     "height_m": 4.34
+    }
+   ],
+   "area_m2": 3.329466,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "0.21 x 4.34 + 0.20 x 3.75 + 0.38 x 4.34"
+  },
+  {
+   "floor": "GF",
+   "band": "WB-2b2b46032d6f1c90",
+   "thickness_mm": 150,
+   "position": "INTERNAL",
+   "length_m": 2.0,
+   "pieces": [
+    {
+     "length_m": 0.199996,
+     "termination": "BEAM_SOFFIT",
+     "member": "B4",
+     "D_cm": 50.0,
+     "height_m": 4.0
+    },
+    {
+     "length_m": 1.800004,
+     "termination": "SLAB_SOFFIT",
+     "member": "SLAB",
+     "D_cm": 16,
+     "height_m": 4.34
+    }
+   ],
+   "area_m2": 8.612001,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "0.20 x 4.00 + 1.80 x 4.34"
+  },
+  {
+   "floor": "GF",
+   "band": "WB-3151d3ce3e330f6f",
+   "thickness_mm": 150,
+   "position": "EXTERNAL",
+   "length_m": 2.25,
+   "pieces": [
+    {
+     "length_m": 2.25,
+     "termination": "SLAB_SOFFIT",
+     "member": "SLAB",
+     "D_cm": 16,
+     "height_m": 4.34
+    }
+   ],
+   "area_m2": 9.765,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "2.25 x 4.34"
+  },
+  {
+   "floor": "GF",
+   "band": "WB-38027218f500f9fd",
+   "thickness_mm": 200,
+   "position": "INTERNAL",
+   "length_m": 0.4,
+   "pieces": [
+    {
+     "length_m": 0.4,
+     "termination": "BEAM_SOFFIT",
+     "member": "B14",
+     "D_cm": 75.0,
+     "height_m": 3.75
+    }
+   ],
+   "area_m2": 1.5,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "0.40 x 3.75"
+  },
+  {
+   "floor": "GF",
+   "band": "WB-3aa09e3449de3402",
+   "thickness_mm": 150,
+   "position": "INTERNAL",
+   "length_m": 1.256041,
+   "pieces": [
+    {
+     "length_m": 1.256041,
+     "termination": "SLAB_SOFFIT",
+     "member": "SLAB",
+     "D_cm": 16,
+     "height_m": 4.34
+    }
+   ],
+   "area_m2": 5.451218,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "1.26 x 4.34"
+  },
+  {
+   "floor": "GF",
+   "band": "WB-3d40e9be7101a26b",
+   "thickness_mm": 150,
+   "position": "INTERNAL",
+   "length_m": 0.278661,
+   "pieces": [
+    {
+     "length_m": 0.278661,
+     "termination": "SLAB_SOFFIT",
+     "member": "SLAB",
+     "D_cm": 16,
+     "height_m": 4.34
+    }
+   ],
+   "area_m2": 1.209389,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "0.28 x 4.34"
+  },
+  {
+   "floor": "GF",
+   "band": "WB-453a452edc6afa8a",
+   "thickness_mm": 200,
+   "position": "EXTERNAL",
+   "length_m": 0.468422,
+   "pieces": [
+    {
+     "length_m": 0.468422,
+     "termination": "BEAM_SOFFIT",
+     "member": "CB1",
+     "D_cm": 75,
+     "height_m": 3.75
+    }
+   ],
+   "area_m2": 1.756582,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "0.47 x 3.75"
+  },
+  {
+   "floor": "GF",
+   "band": "WB-4b4d89e988da62df",
+   "thickness_mm": 200,
+   "position": "EXTERNAL",
+   "length_m": 3.4,
+   "pieces": [
+    {
+     "length_m": 3.4,
+     "termination": "BEAM_SOFFIT",
+     "member": "B1",
+     "D_cm": 40.0,
+     "height_m": 4.1
+    }
+   ],
+   "area_m2": 13.94,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "3.40 x 4.10"
+  },
+  {
+   "floor": "GF",
+   "band": "WB-51329d271b21bd43",
+   "thickness_mm": 200,
+   "position": "UNRESOLVED_SIDES",
+   "length_m": 1.75,
+   "pieces": [
+    {
+     "length_m": 1.75,
+     "termination": "BEAM_SOFFIT",
+     "member": "CB7",
+     "D_cm": 75,
+     "height_m": 3.75
+    }
+   ],
+   "area_m2": 6.5625,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "1.75 x 3.75"
+  },
+  {
+   "floor": "GF",
+   "band": "WB-5327c5497e9a91e8",
+   "thickness_mm": 150,
+   "position": "INTERNAL",
+   "length_m": 2.355244,
+   "pieces": [
+    {
+     "length_m": 0.346366,
+     "termination": "SLAB_SOFFIT",
+     "member": "SLAB",
+     "D_cm": 16,
+     "height_m": 4.34
+    },
+    {
+     "length_m": 0.2885,
+     "termination": "BEAM_SOFFIT",
+     "member": "B1",
+     "D_cm": 40.0,
+     "height_m": 4.1
+    },
+    {
+     "length_m": 1.720379,
+     "termination": "SLAB_SOFFIT",
+     "member": "SLAB",
+     "D_cm": 16,
+     "height_m": 4.34
+    }
+   ],
+   "area_m2": 10.152523,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "0.35 x 4.34 + 0.29 x 4.10 + 1.72 x 4.34"
+  },
+  {
+   "floor": "GF",
+   "band": "WB-5c345eca557b094b",
+   "thickness_mm": 150,
+   "position": "INTERNAL",
+   "length_m": 1.3,
+   "pieces": [
+    {
+     "length_m": 1.3,
+     "termination": "SLAB_SOFFIT",
+     "member": "SLAB",
+     "D_cm": 16,
+     "height_m": 4.34
+    }
+   ],
+   "area_m2": 5.642,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "1.30 x 4.34"
+  },
+  {
+   "floor": "GF",
+   "band": "WB-6642d7da2679cd7e",
+   "thickness_mm": 200,
+   "position": "INTERNAL",
+   "length_m": 0.3,
+   "pieces": [
+    {
+     "length_m": 0.3,
+     "termination": "BEAM_SOFFIT",
+     "member": "B1",
+     "D_cm": 40.0,
+     "height_m": 4.1
+    }
+   ],
+   "area_m2": 1.23,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "0.30 x 4.10"
+  },
+  {
+   "floor": "GF",
+   "band": "WB-6b91311bb41fa82b",
+   "thickness_mm": 150,
+   "position": "EXTERNAL",
+   "length_m": 2.1,
+   "pieces": [
+    {
+     "length_m": 2.1,
+     "termination": "SLAB_SOFFIT",
+     "member": "SLAB",
+     "D_cm": 16,
+     "height_m": 4.34
+    }
+   ],
+   "area_m2": 9.114,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "2.10 x 4.34"
+  },
+  {
+   "floor": "GF",
+   "band": "WB-6f953f888d37aa0b",
+   "thickness_mm": 200,
+   "position": "EXTERNAL",
+   "length_m": 3.83,
+   "pieces": [
+    {
+     "length_m": 3.83,
+     "termination": "BEAM_SOFFIT",
+     "member": "CB7",
+     "D_cm": 75,
+     "height_m": 3.75
+    }
+   ],
+   "area_m2": 14.3625,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "3.83 x 3.75"
+  },
+  {
+   "floor": "GF",
+   "band": "WB-71ee5d972e9b20d3",
+   "thickness_mm": 150,
+   "position": "EXTERNAL",
+   "length_m": 3.0,
+   "pieces": [
+    {
+     "length_m": 3.0,
+     "termination": "SLAB_SOFFIT",
+     "member": "SLAB",
+     "D_cm": 16,
+     "height_m": 4.34
+    }
+   ],
+   "area_m2": 13.02,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "3.00 x 4.34"
+  },
+  {
+   "floor": "GF",
+   "band": "WB-766286532e35fb57",
+   "thickness_mm": 200,
+   "position": "EXTERNAL",
+   "length_m": 1.65911,
+   "pieces": [
+    {
+     "length_m": 0.761094,
+     "termination": "BEAM_SOFFIT",
+     "member": "CB6",
+     "D_cm": 75,
+     "height_m": 3.75
+    },
+    {
+     "length_m": 0.215143,
+     "termination": "BEAM_SOFFIT",
+     "member": "B27",
+     "D_cm": 85.0,
+     "height_m": 3.65
+    },
+    {
+     "length_m": 0.682873,
+     "termination": "BEAM_SOFFIT",
+     "member": "CB6",
+     "D_cm": 75,
+     "height_m": 3.75
+    }
+   ],
+   "area_m2": 6.200148,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "0.76 x 3.75 + 0.22 x 3.65 + 0.68 x 3.75"
+  },
+  {
+   "floor": "GF",
+   "band": "WB-7bb7618a7f780c37",
+   "thickness_mm": 150,
+   "position": "INTERNAL",
+   "length_m": 0.559057,
+   "pieces": [
+    {
+     "length_m": 0.559057,
+     "termination": "SLAB_SOFFIT",
+     "member": "SLAB",
+     "D_cm": 16,
+     "height_m": 4.34
+    }
+   ],
+   "area_m2": 2.426307,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "0.56 x 4.34"
+  },
+  {
+   "floor": "GF",
+   "band": "WB-7d6873a92b7af440",
+   "thickness_mm": 200,
+   "position": "INTERNAL",
+   "length_m": 1.4,
+   "pieces": [
+    {
+     "length_m": 1.4,
+     "termination": "SLAB_SOFFIT",
+     "member": "SLAB",
+     "D_cm": 16,
+     "height_m": 4.34
+    }
+   ],
+   "area_m2": 6.076,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "1.40 x 4.34"
+  },
+  {
+   "floor": "GF",
+   "band": "WB-83dc530788831705",
+   "thickness_mm": 200,
+   "position": "EXTERNAL",
+   "length_m": 0.8,
+   "pieces": [
+    {
+     "length_m": 0.8,
+     "termination": "BEAM_SOFFIT",
+     "member": "CB4",
+     "D_cm": 50,
+     "height_m": 4.0
+    }
+   ],
+   "area_m2": 3.2,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "0.80 x 4.00"
+  },
+  {
+   "floor": "GF",
+   "band": "WB-941bd7373a29bfd1",
+   "thickness_mm": 200,
+   "position": "EXTERNAL",
+   "length_m": 1.05,
+   "pieces": [
+    {
+     "length_m": 0.749996,
+     "termination": "BEAM_SOFFIT",
+     "member": "B2",
+     "D_cm": 40.0,
+     "height_m": 4.1
+    },
+    {
+     "length_m": 0.300004,
+     "termination": "SLAB_SOFFIT",
+     "member": "SLAB",
+     "D_cm": 16,
+     "height_m": 4.34
+    }
+   ],
+   "area_m2": 4.377001,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "0.75 x 4.10 + 0.30 x 4.34"
+  },
+  {
+   "floor": "GF",
+   "band": "WB-977f0122c85f9a8f",
+   "thickness_mm": 150,
+   "position": "INTERNAL",
+   "length_m": 1.637272,
+   "pieces": [
+    {
+     "length_m": 1.637272,
+     "termination": "SLAB_SOFFIT",
+     "member": "SLAB",
+     "D_cm": 16,
+     "height_m": 4.34
+    }
+   ],
+   "area_m2": 7.10576,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "1.64 x 4.34"
+  },
+  {
+   "floor": "GF",
+   "band": "WB-9acf06e660bcd8ac",
+   "thickness_mm": 150,
+   "position": "INTERNAL",
+   "length_m": 0.55,
+   "pieces": [
+    {
+     "length_m": 0.55,
+     "termination": "BEAM_SOFFIT",
+     "member": "B4",
+     "D_cm": 50.0,
+     "height_m": 4.0
+    }
+   ],
+   "area_m2": 2.2,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "0.55 x 4.00"
+  },
+  {
+   "floor": "GF",
+   "band": "WB-9f24e42de1ba41a9",
+   "thickness_mm": 200,
+   "position": "EXTERNAL",
+   "length_m": 0.7,
+   "pieces": [
+    {
+     "length_m": 0.7,
+     "termination": "BEAM_SOFFIT",
+     "member": "CB1",
+     "D_cm": 75,
+     "height_m": 3.75
+    }
+   ],
+   "area_m2": 2.625,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "0.70 x 3.75"
+  },
+  {
+   "floor": "GF",
+   "band": "WB-a1312890e7877696",
+   "thickness_mm": 200,
+   "position": "EXTERNAL",
+   "length_m": 0.45,
+   "pieces": [
+    {
+     "length_m": 0.45,
+     "termination": "SLAB_SOFFIT",
+     "member": "SLAB",
+     "D_cm": 16,
+     "height_m": 4.34
+    }
+   ],
+   "area_m2": 1.953,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "0.45 x 4.34"
+  },
+  {
+   "floor": "GF",
+   "band": "WB-a39c4478ab7fd29e",
+   "thickness_mm": 200,
+   "position": "INTERNAL",
+   "length_m": 2.65,
+   "pieces": [
+    {
+     "length_m": 2.65,
+     "termination": "UNKNOWN",
+     "member": null,
+     "D_cm": null,
+     "height_m": null
+    }
+   ],
+   "area_m2": 0,
+   "blocked_length_m": 2.65,
+   "status": "BLOCKED",
+   "formula": ""
+  },
+  {
+   "floor": "GF",
+   "band": "WB-a6bdd2e3745599f7",
+   "thickness_mm": 200,
+   "position": "EXTERNAL",
+   "length_m": 1.5,
+   "pieces": [
+    {
+     "length_m": 1.5,
+     "termination": "BEAM_SOFFIT",
+     "member": "CB7",
+     "D_cm": 75,
+     "height_m": 3.75
+    }
+   ],
+   "area_m2": 5.625,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "1.50 x 3.75"
+  },
+  {
+   "floor": "GF",
+   "band": "WB-ab29e8972494d962",
+   "thickness_mm": 200,
+   "position": "EXTERNAL",
+   "length_m": 1.05,
+   "pieces": [
+    {
+     "length_m": 0.199996,
+     "termination": "SLAB_SOFFIT",
+     "member": "SLAB",
+     "D_cm": 16,
+     "height_m": 4.34
+    },
+    {
+     "length_m": 0.2,
+     "termination": "BEAM_SOFFIT",
+     "member": "B5",
+     "D_cm": 50.0,
+     "height_m": 4.0
+    },
+    {
+     "length_m": 0.650004,
+     "termination": "SLAB_SOFFIT",
+     "member": "SLAB",
+     "D_cm": 16,
+     "height_m": 4.34
+    }
+   ],
+   "area_m2": 4.489,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "0.20 x 4.34 + 0.20 x 4.00 + 0.65 x 4.34"
+  },
+  {
+   "floor": "GF",
+   "band": "WB-b29daf58f20e1d45",
+   "thickness_mm": 150,
+   "position": "EXTERNAL",
+   "length_m": 0.429733,
+   "pieces": [
+    {
+     "length_m": 0.429733,
+     "termination": "SLAB_SOFFIT",
+     "member": "SLAB",
+     "D_cm": 16,
+     "height_m": 4.34
+    }
+   ],
+   "area_m2": 1.865041,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "0.43 x 4.34"
+  },
+  {
+   "floor": "GF",
+   "band": "WB-b4b5c8a1476ced3c",
+   "thickness_mm": 200,
+   "position": "EXTERNAL",
+   "length_m": 0.375,
+   "pieces": [
+    {
+     "length_m": 0.375,
+     "termination": "SLAB_SOFFIT",
+     "member": "SLAB",
+     "D_cm": 16,
+     "height_m": 4.34
+    }
+   ],
+   "area_m2": 1.6275,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "0.38 x 4.34"
+  },
+  {
+   "floor": "GF",
+   "band": "WB-c183875971c5d973",
+   "thickness_mm": 150,
+   "position": "INTERNAL",
+   "length_m": 0.961845,
+   "pieces": [
+    {
+     "length_m": 0.961845,
+     "termination": "SLAB_SOFFIT",
+     "member": "SLAB",
+     "D_cm": 16,
+     "height_m": 4.34
+    }
+   ],
+   "area_m2": 4.174407,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "0.96 x 4.34"
+  },
+  {
+   "floor": "GF",
+   "band": "WB-c6f5e6054832528e",
+   "thickness_mm": 200,
+   "position": "EXTERNAL",
+   "length_m": 2.05,
+   "pieces": [
+    {
+     "length_m": 2.05,
+     "termination": "BEAM_SOFFIT",
+     "member": "B2",
+     "D_cm": 40.0,
+     "height_m": 4.1
+    }
+   ],
+   "area_m2": 8.405,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "2.05 x 4.10"
+  },
+  {
+   "floor": "GF",
+   "band": "WB-c77e9fb1ef8d3f72",
+   "thickness_mm": 150,
+   "position": "INTERNAL",
+   "length_m": 2.25,
+   "pieces": [
+    {
+     "length_m": 2.25,
+     "termination": "BEAM_SOFFIT",
+     "member": "B4",
+     "D_cm": 50.0,
+     "height_m": 4.0
+    }
+   ],
+   "area_m2": 9.0,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "2.25 x 4.00"
+  },
+  {
+   "floor": "GF",
+   "band": "WB-d5eef3f02d665956",
+   "thickness_mm": 200,
+   "position": "EXTERNAL",
+   "length_m": 0.267874,
+   "pieces": [
+    {
+     "length_m": 0.267874,
+     "termination": "BEAM_SOFFIT",
+     "member": "B2",
+     "D_cm": 40.0,
+     "height_m": 4.1
+    }
+   ],
+   "area_m2": 1.098283,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "0.27 x 4.10"
+  },
+  {
+   "floor": "GF",
+   "band": "WB-d910d7fa84259ae2",
+   "thickness_mm": 150,
+   "position": "INTERNAL",
+   "length_m": 0.867238,
+   "pieces": [
+    {
+     "length_m": 0.007596,
+     "termination": "BEAM_SOFFIT",
+     "member": "B1",
+     "D_cm": 40.0,
+     "height_m": 4.1
+    },
+    {
+     "length_m": 0.859642,
+     "termination": "SLAB_SOFFIT",
+     "member": "SLAB",
+     "D_cm": 16,
+     "height_m": 4.34
+    }
+   ],
+   "area_m2": 3.76199,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "0.01 x 4.10 + 0.86 x 4.34"
+  },
+  {
+   "floor": "GF",
+   "band": "WB-dbafb1cbf3656620",
+   "thickness_mm": 200,
+   "position": "EXTERNAL",
+   "length_m": 0.3,
+   "pieces": [
+    {
+     "length_m": 0.3,
+     "termination": "BEAM_SOFFIT",
+     "member": "CB4",
+     "D_cm": 50,
+     "height_m": 4.0
+    }
+   ],
+   "area_m2": 1.2,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "0.30 x 4.00"
+  },
+  {
+   "floor": "GF",
+   "band": "WB-dfb9bec05861662b",
+   "thickness_mm": 920,
+   "position": "NOT_MASONRY",
+   "length_m": 14.034513,
+   "pieces": [],
+   "area_m2": null,
+   "blocked_length_m": 14.034513,
+   "status": "EXCLUDED",
+   "why": "band wider than 400 mm (not a block wall: stair / planter / double line)"
+  },
+  {
+   "floor": "GF",
+   "band": "WB-e34465120a0342a2",
+   "thickness_mm": 200,
+   "position": "EXTERNAL",
+   "length_m": 0.27,
+   "pieces": [
+    {
+     "length_m": 0.27,
+     "termination": "SLAB_SOFFIT",
+     "member": "SLAB",
+     "D_cm": 16,
+     "height_m": 4.34
+    }
+   ],
+   "area_m2": 1.1718,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "0.27 x 4.34"
+  },
+  {
+   "floor": "GF",
+   "band": "WB-e8572ef6924f4ee0",
+   "thickness_mm": 200,
+   "position": "EXTERNAL",
+   "length_m": 0.6,
+   "pieces": [
+    {
+     "length_m": 0.6,
+     "termination": "BEAM_SOFFIT",
+     "member": "CB6",
+     "D_cm": 75,
+     "height_m": 3.75
+    }
+   ],
+   "area_m2": 2.25,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "0.60 x 3.75"
+  },
+  {
+   "floor": "GF",
+   "band": "WB-e9d3088639adbcc8",
+   "thickness_mm": 200,
+   "position": "EXTERNAL",
+   "length_m": 0.632986,
+   "pieces": [
+    {
+     "length_m": 0.632986,
+     "termination": "BEAM_SOFFIT",
+     "member": "B9",
+     "D_cm": 75.0,
+     "height_m": 3.75
+    }
+   ],
+   "area_m2": 2.373698,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "0.63 x 3.75"
+  },
+  {
+   "floor": "GF",
+   "band": "WB-eaa58874c1d1927e",
+   "thickness_mm": 200,
+   "position": "INTERNAL",
+   "length_m": 1.35,
+   "pieces": [
+    {
+     "length_m": 1.35,
+     "termination": "BEAM_SOFFIT",
+     "member": "B1",
+     "D_cm": 40.0,
+     "height_m": 4.1
+    }
+   ],
+   "area_m2": 5.535,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "1.35 x 4.10"
+  },
+  {
+   "floor": "GF",
+   "band": "WB-edb7a03bd89db229",
+   "thickness_mm": 150,
+   "position": "INTERNAL",
+   "length_m": 0.626385,
+   "pieces": [
+    {
+     "length_m": 0.626385,
+     "termination": "SLAB_SOFFIT",
+     "member": "SLAB",
+     "D_cm": 16,
+     "height_m": 4.34
+    }
+   ],
+   "area_m2": 2.718511,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "0.63 x 4.34"
+  },
+  {
+   "floor": "GF",
+   "band": "WB-f862f962fc5d2d3d",
+   "thickness_mm": 200,
+   "position": "INTERNAL",
+   "length_m": 1.5,
+   "pieces": [
+    {
+     "length_m": 1.5,
+     "termination": "SLAB_SOFFIT",
+     "member": "SLAB",
+     "D_cm": 16,
+     "height_m": 4.34
+    }
+   ],
+   "area_m2": 6.51,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "1.50 x 4.34"
+  },
+  {
+   "floor": "GF",
+   "band": "WB-f8d49a5c16d612ed",
+   "thickness_mm": 200,
+   "position": "EXTERNAL",
+   "length_m": 1.14508,
+   "pieces": [
+    {
+     "length_m": 1.14508,
+     "termination": "BEAM_SOFFIT",
+     "member": "B9",
+     "D_cm": 75.0,
+     "height_m": 3.75
+    }
+   ],
+   "area_m2": 4.29405,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "1.15 x 3.75"
+  },
+  {
+   "floor": "GF",
+   "band": "WB-fb00121a819e5c86",
+   "thickness_mm": 200,
+   "position": "EXTERNAL",
+   "length_m": 1.23,
+   "pieces": [
+    {
+     "length_m": 1.23,
+     "termination": "SLAB_SOFFIT",
+     "member": "SLAB",
+     "D_cm": 16,
+     "height_m": 4.34
+    }
+   ],
+   "area_m2": 5.3382,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "1.23 x 4.34"
+  },
+  {
+   "floor": "GF",
+   "band": "WB-ff1a31af98b65a3f",
+   "thickness_mm": 200,
+   "position": "EXTERNAL",
+   "length_m": 0.6,
+   "pieces": [
+    {
+     "length_m": 0.6,
+     "termination": "BEAM_SOFFIT",
+     "member": "CB6",
+     "D_cm": 75,
+     "height_m": 3.75
+    }
+   ],
+   "area_m2": 2.25,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "0.60 x 3.75"
+  },
+  {
+   "floor": "1F",
+   "band": "WB-01e4206f1739fca2",
+   "thickness_mm": 150,
+   "position": "INTERNAL",
+   "length_m": 2.842767,
+   "pieces": [
+    {
+     "length_m": 1.38,
+     "termination": "SLAB_SOFFIT",
+     "member": "SLAB",
+     "D_cm": 16,
+     "height_m": 4.04
+    },
+    {
+     "length_m": 0.2,
+     "termination": "BEAM_SOFFIT",
+     "member": "B1",
+     "D_cm": 40.0,
+     "height_m": 3.8
+    },
+    {
+     "length_m": 1.262768,
+     "termination": "SLAB_SOFFIT",
+     "member": "SLAB",
+     "D_cm": 16,
+     "height_m": 4.04
+    }
+   ],
+   "area_m2": 11.436783,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "1.38 x 4.04 + 0.20 x 3.80 + 1.26 x 4.04"
+  },
+  {
+   "floor": "1F",
+   "band": "WB-0e77368edaa3e7dc",
+   "thickness_mm": 200,
+   "position": "EXTERNAL",
+   "length_m": 0.80721,
+   "pieces": [
+    {
+     "length_m": 0.80721,
+     "termination": "BEAM_SOFFIT",
+     "member": "CB12",
+     "D_cm": 75,
+     "height_m": 3.45
+    }
+   ],
+   "area_m2": 2.784874,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "0.81 x 3.45"
+  },
+  {
+   "floor": "1F",
+   "band": "WB-1108fcac5e00de3a",
+   "thickness_mm": 200,
+   "position": "EXTERNAL",
+   "length_m": 1.142302,
+   "pieces": [
+    {
+     "length_m": 1.142302,
+     "termination": "BEAM_SOFFIT",
+     "member": "CB12",
+     "D_cm": 75,
+     "height_m": 3.45
+    }
+   ],
+   "area_m2": 3.940942,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "1.14 x 3.45"
+  },
+  {
+   "floor": "1F",
+   "band": "WB-1afd8c014dda4d0b",
+   "thickness_mm": 200,
+   "position": "INTERNAL",
+   "length_m": 0.335,
+   "pieces": [
+    {
+     "length_m": 0.035865,
+     "termination": "SLAB_SOFFIT",
+     "member": "SLAB",
+     "D_cm": 16,
+     "height_m": 4.04
+    },
+    {
+     "length_m": 0.299135,
+     "termination": "BEAM_SOFFIT",
+     "member": "B19",
+     "D_cm": 75.0,
+     "height_m": 3.45
+    }
+   ],
+   "area_m2": 1.17691,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "0.04 x 4.04 + 0.30 x 3.45"
+  },
+  {
+   "floor": "1F",
+   "band": "WB-2bf3920dd9322585",
+   "thickness_mm": 200,
+   "position": "INTERNAL",
+   "length_m": 3.0,
+   "pieces": [
+    {
+     "length_m": 3.0,
+     "termination": "BEAM_SOFFIT",
+     "member": "B2",
+     "D_cm": 40.0,
+     "height_m": 3.8
+    }
+   ],
+   "area_m2": 11.4,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "3.00 x 3.80"
+  },
+  {
+   "floor": "1F",
+   "band": "WB-304fe2303a0f0177",
+   "thickness_mm": 150,
+   "position": "INTERNAL",
+   "length_m": 0.5,
+   "pieces": [
+    {
+     "length_m": 0.5,
+     "termination": "SLAB_SOFFIT",
+     "member": "SLAB",
+     "D_cm": 16,
+     "height_m": 4.04
+    }
+   ],
+   "area_m2": 2.02,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "0.50 x 4.04"
+  },
+  {
+   "floor": "1F",
+   "band": "WB-34cfd872abf67606",
+   "thickness_mm": 200,
+   "position": "EXTERNAL",
+   "length_m": 0.875,
+   "pieces": [
+    {
+     "length_m": 0.875,
+     "termination": "BEAM_SOFFIT",
+     "member": "CB9",
+     "D_cm": 50,
+     "height_m": 3.7
+    }
+   ],
+   "area_m2": 3.2375,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "0.88 x 3.70"
+  },
+  {
+   "floor": "1F",
+   "band": "WB-378b231d3e12797b",
+   "thickness_mm": 200,
+   "position": "EXTERNAL",
+   "length_m": 0.831985,
+   "pieces": [
+    {
+     "length_m": 0.581981,
+     "termination": "SLAB_SOFFIT",
+     "member": "SLAB",
+     "D_cm": 16,
+     "height_m": 4.04
+    },
+    {
+     "length_m": 0.250004,
+     "termination": "BEAM_SOFFIT",
+     "member": "B23",
+     "D_cm": 75.0,
+     "height_m": 3.45
+    }
+   ],
+   "area_m2": 3.213717,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "0.58 x 4.04 + 0.25 x 3.45"
+  },
+  {
+   "floor": "1F",
+   "band": "WB-3fe0a0cbf51575a0",
+   "thickness_mm": 200,
+   "position": "INTERNAL",
+   "length_m": 0.4,
+   "pieces": [
+    {
+     "length_m": 0.4,
+     "termination": "BEAM_SOFFIT",
+     "member": "B7",
+     "D_cm": 75.0,
+     "height_m": 3.45
+    }
+   ],
+   "area_m2": 1.38,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "0.40 x 3.45"
+  },
+  {
+   "floor": "1F",
+   "band": "WB-401438c612f4b64d",
+   "thickness_mm": 150,
+   "position": "INTERNAL",
+   "length_m": 2.05,
+   "pieces": [
+    {
+     "length_m": 0.474996,
+     "termination": "SLAB_SOFFIT",
+     "member": "SLAB",
+     "D_cm": 16,
+     "height_m": 4.04
+    },
+    {
+     "length_m": 1.575004,
+     "termination": "BEAM_SOFFIT",
+     "member": "B5",
+     "D_cm": 50.0,
+     "height_m": 3.7
+    }
+   ],
+   "area_m2": 7.746499,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "0.47 x 4.04 + 1.58 x 3.70"
+  },
+  {
+   "floor": "1F",
+   "band": "WB-4234d1629bfd4e0b",
+   "thickness_mm": 200,
+   "position": "INTERNAL",
+   "length_m": 0.4,
+   "pieces": [
+    {
+     "length_m": 0.4,
+     "termination": "BEAM_SOFFIT",
+     "member": "B7",
+     "D_cm": 75.0,
+     "height_m": 3.45
+    }
+   ],
+   "area_m2": 1.38,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "0.40 x 3.45"
+  },
+  {
+   "floor": "1F",
+   "band": "WB-48d83d363e52a97c",
+   "thickness_mm": 200,
+   "position": "EXTERNAL",
+   "length_m": 1.04884,
+   "pieces": [
+    {
+     "length_m": 0.1,
+     "termination": "BEAM_SOFFIT",
+     "member": "B4",
+     "D_cm": 50.0,
+     "height_m": 3.7
+    },
+    {
+     "length_m": 0.94884,
+     "termination": "BEAM_SOFFIT",
+     "member": "CB11",
+     "D_cm": 75,
+     "height_m": 3.45
+    }
+   ],
+   "area_m2": 3.643498,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "0.10 x 3.70 + 0.95 x 3.45"
+  },
+  {
+   "floor": "1F",
+   "band": "WB-48f73089c6ec4854",
+   "thickness_mm": 200,
+   "position": "EXTERNAL",
+   "length_m": 1.218241,
+   "pieces": [
+    {
+     "length_m": 1.218241,
+     "termination": "SLAB_SOFFIT",
+     "member": "SLAB",
+     "D_cm": 16,
+     "height_m": 4.04
+    }
+   ],
+   "area_m2": 4.921694,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "1.22 x 4.04"
+  },
+  {
+   "floor": "1F",
+   "band": "WB-4f118cc74e3c3c1f",
+   "thickness_mm": 200,
+   "position": "INTERNAL",
+   "length_m": 0.235,
+   "pieces": [
+    {
+     "length_m": 0.235,
+     "termination": "SLAB_SOFFIT",
+     "member": "SLAB",
+     "D_cm": 16,
+     "height_m": 4.04
+    }
+   ],
+   "area_m2": 0.9494,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "0.23 x 4.04"
+  },
+  {
+   "floor": "1F",
+   "band": "WB-54d0c76459d0947b",
+   "thickness_mm": 150,
+   "position": "EXTERNAL",
+   "length_m": 2.05,
+   "pieces": [
+    {
+     "length_m": 2.0,
+     "termination": "UNKNOWN",
+     "member": null,
+     "D_cm": null,
+     "height_m": null
+    },
+    {
+     "length_m": 0.05,
+     "termination": "BEAM_SOFFIT",
+     "member": "CB13",
+     "D_cm": 50,
+     "height_m": 3.7
+    }
+   ],
+   "area_m2": 0.185,
+   "blocked_length_m": 2.0,
+   "status": "PARTIAL",
+   "formula": "0.05 x 3.70"
+  },
+  {
+   "floor": "1F",
+   "band": "WB-5964db85acb6f1b4",
+   "thickness_mm": 920,
+   "position": "NOT_MASONRY",
+   "length_m": 14.034513,
+   "pieces": [],
+   "area_m2": null,
+   "blocked_length_m": 14.034513,
+   "status": "EXCLUDED",
+   "why": "band wider than 400 mm (not a block wall: stair / planter / double line)"
+  },
+  {
+   "floor": "1F",
+   "band": "WB-59d9ea63ee44b02b",
+   "thickness_mm": 150,
+   "position": "INTERNAL",
+   "length_m": 2.25,
+   "pieces": [
+    {
+     "length_m": 2.2,
+     "termination": "UNKNOWN",
+     "member": null,
+     "D_cm": null,
+     "height_m": null
+    },
+    {
+     "length_m": 0.05,
+     "termination": "BEAM_SOFFIT",
+     "member": "CB12",
+     "D_cm": 75,
+     "height_m": 3.45
+    }
+   ],
+   "area_m2": 0.1725,
+   "blocked_length_m": 2.2,
+   "status": "PARTIAL",
+   "formula": "0.05 x 3.45"
+  },
+  {
+   "floor": "1F",
+   "band": "WB-5abdc4c6ef4135b6",
+   "thickness_mm": 200,
+   "position": "EXTERNAL",
+   "length_m": 4.2,
+   "pieces": [
+    {
+     "length_m": 4.2,
+     "termination": "BEAM_SOFFIT",
+     "member": "B23",
+     "D_cm": 75.0,
+     "height_m": 3.45
+    }
+   ],
+   "area_m2": 14.49,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "4.20 x 3.45"
+  },
+  {
+   "floor": "1F",
+   "band": "WB-603c018e3d30b023",
+   "thickness_mm": 200,
+   "position": "EXTERNAL",
+   "length_m": 0.725,
+   "pieces": [
+    {
+     "length_m": 0.725,
+     "termination": "BEAM_SOFFIT",
+     "member": "B4",
+     "D_cm": 50.0,
+     "height_m": 3.7
+    }
+   ],
+   "area_m2": 2.6825,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "0.72 x 3.70"
+  },
+  {
+   "floor": "1F",
+   "band": "WB-60ba6d6d572187dd",
+   "thickness_mm": 150,
+   "position": "INTERNAL",
+   "length_m": 1.8,
+   "pieces": [
+    {
+     "length_m": 1.749996,
+     "termination": "BEAM_SOFFIT",
+     "member": "B5",
+     "D_cm": 50.0,
+     "height_m": 3.7
+    },
+    {
+     "length_m": 0.050004,
+     "termination": "SLAB_SOFFIT",
+     "member": "SLAB",
+     "D_cm": 16,
+     "height_m": 4.04
+    }
+   ],
+   "area_m2": 6.677001,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "1.75 x 3.70 + 0.05 x 4.04"
+  },
+  {
+   "floor": "1F",
+   "band": "WB-660c2f2e51aec9a5",
+   "thickness_mm": 200,
+   "position": "UNRESOLVED_SIDES",
+   "length_m": 1.45,
+   "pieces": [
+    {
+     "length_m": 1.45,
+     "termination": "BEAM_SOFFIT",
+     "member": "B4",
+     "D_cm": 50.0,
+     "height_m": 3.7
+    }
+   ],
+   "area_m2": 5.365,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "1.45 x 3.70"
+  },
+  {
+   "floor": "1F",
+   "band": "WB-7a30ab3ef4b79d6d",
+   "thickness_mm": 200,
+   "position": "EXTERNAL",
+   "length_m": 0.725,
+   "pieces": [
+    {
+     "length_m": 0.725,
+     "termination": "BEAM_SOFFIT",
+     "member": "B4",
+     "D_cm": 50.0,
+     "height_m": 3.7
+    }
+   ],
+   "area_m2": 2.6825,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "0.72 x 3.70"
+  },
+  {
+   "floor": "1F",
+   "band": "WB-7aac77b9e322f902",
+   "thickness_mm": 200,
+   "position": "UNRESOLVED_SIDES",
+   "length_m": 0.87,
+   "pieces": [
+    {
+     "length_m": 0.87,
+     "termination": "BEAM_SOFFIT",
+     "member": "CB9",
+     "D_cm": 50,
+     "height_m": 3.7
+    }
+   ],
+   "area_m2": 3.219,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "0.87 x 3.70"
+  },
+  {
+   "floor": "1F",
+   "band": "WB-7b81bee181f3e426",
+   "thickness_mm": 200,
+   "position": "EXTERNAL",
+   "length_m": 0.85,
+   "pieces": [
+    {
+     "length_m": 0.85,
+     "termination": "BEAM_SOFFIT",
+     "member": "CB9",
+     "D_cm": 50,
+     "height_m": 3.7
+    }
+   ],
+   "area_m2": 3.145,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "0.85 x 3.70"
+  },
+  {
+   "floor": "1F",
+   "band": "WB-849bcebe48aa753b",
+   "thickness_mm": 200,
+   "position": "EXTERNAL",
+   "length_m": 0.55,
+   "pieces": [
+    {
+     "length_m": 0.55,
+     "termination": "BEAM_SOFFIT",
+     "member": "CB9",
+     "D_cm": 50,
+     "height_m": 3.7
+    }
+   ],
+   "area_m2": 2.035,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "0.55 x 3.70"
+  },
+  {
+   "floor": "1F",
+   "band": "WB-8dced486ea870e7a",
+   "thickness_mm": 150,
+   "position": "INTERNAL",
+   "length_m": 1.19074,
+   "pieces": [
+    {
+     "length_m": 0.464517,
+     "termination": "UNKNOWN",
+     "member": null,
+     "D_cm": null,
+     "height_m": null
+    },
+    {
+     "length_m": 0.25,
+     "termination": "BEAM_SOFFIT",
+     "member": "B6",
+     "D_cm": 50.0,
+     "height_m": 3.7
+    },
+    {
+     "length_m": 0.476223,
+     "termination": "SLAB_SOFFIT",
+     "member": "SLAB",
+     "D_cm": 16,
+     "height_m": 4.04
+    }
+   ],
+   "area_m2": 2.848941,
+   "blocked_length_m": 0.464517,
+   "status": "PARTIAL",
+   "formula": "0.25 x 3.70 + 0.48 x 4.04"
+  },
+  {
+   "floor": "1F",
+   "band": "WB-8df5022e6b779243",
+   "thickness_mm": 150,
+   "position": "INTERNAL",
+   "length_m": 2.1,
+   "pieces": [
+    {
+     "length_m": 0.464517,
+     "termination": "SLAB_SOFFIT",
+     "member": "SLAB",
+     "D_cm": 16,
+     "height_m": 4.04
+    },
+    {
+     "length_m": 0.25,
+     "termination": "BEAM_SOFFIT",
+     "member": "B6",
+     "D_cm": 50.0,
+     "height_m": 3.7
+    },
+    {
+     "length_m": 1.385483,
+     "termination": "SLAB_SOFFIT",
+     "member": "SLAB",
+     "D_cm": 16,
+     "height_m": 4.04
+    }
+   ],
+   "area_m2": 8.399,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "0.46 x 4.04 + 0.25 x 3.70 + 1.39 x 4.04"
+  },
+  {
+   "floor": "1F",
+   "band": "WB-9e6ba2c89077b9b1",
+   "thickness_mm": 150,
+   "position": "INTERNAL",
+   "length_m": 1.05,
+   "pieces": [
+    {
+     "length_m": 1.05,
+     "termination": "SLAB_SOFFIT",
+     "member": "SLAB",
+     "D_cm": 16,
+     "height_m": 4.04
+    }
+   ],
+   "area_m2": 4.242,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "1.05 x 4.04"
+  },
+  {
+   "floor": "1F",
+   "band": "WB-a07f9c9d7af9967f",
+   "thickness_mm": 150,
+   "position": "INTERNAL",
+   "length_m": 2.56148,
+   "pieces": [
+    {
+     "length_m": 2.56148,
+     "termination": "BEAM_SOFFIT",
+     "member": "B4",
+     "D_cm": 50.0,
+     "height_m": 3.7
+    }
+   ],
+   "area_m2": 9.477476,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "2.56 x 3.70"
+  },
+  {
+   "floor": "1F",
+   "band": "WB-a78db9c48be9b9fa",
+   "thickness_mm": 150,
+   "position": "INTERNAL",
+   "length_m": 2.0,
+   "pieces": [
+    {
+     "length_m": 2.0,
+     "termination": "SLAB_SOFFIT",
+     "member": "SLAB",
+     "D_cm": 16,
+     "height_m": 4.04
+    }
+   ],
+   "area_m2": 8.08,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "2.00 x 4.04"
+  },
+  {
+   "floor": "1F",
+   "band": "WB-aa4ae4a992c870cc",
+   "thickness_mm": 150,
+   "position": "INTERNAL",
+   "length_m": 2.4,
+   "pieces": [
+    {
+     "length_m": 2.4,
+     "termination": "BEAM_SOFFIT",
+     "member": "CB13",
+     "D_cm": 50,
+     "height_m": 3.7
+    }
+   ],
+   "area_m2": 8.88,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "2.40 x 3.70"
+  },
+  {
+   "floor": "1F",
+   "band": "WB-b517c99614c9911f",
+   "thickness_mm": 150,
+   "position": "EXTERNAL",
+   "length_m": 1.8,
+   "pieces": [
+    {
+     "length_m": 1.8,
+     "termination": "SLAB_SOFFIT",
+     "member": "SLAB",
+     "D_cm": 16,
+     "height_m": 4.04
+    }
+   ],
+   "area_m2": 7.272,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "1.80 x 4.04"
+  },
+  {
+   "floor": "1F",
+   "band": "WB-b8a23809e790e089",
+   "thickness_mm": 150,
+   "position": "INTERNAL",
+   "length_m": 3.05,
+   "pieces": [
+    {
+     "length_m": 0.386108,
+     "termination": "BEAM_SOFFIT",
+     "member": "B19",
+     "D_cm": 75.0,
+     "height_m": 3.45
+    },
+    {
+     "length_m": 2.663892,
+     "termination": "SLAB_SOFFIT",
+     "member": "SLAB",
+     "D_cm": 16,
+     "height_m": 4.04
+    }
+   ],
+   "area_m2": 12.094196,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "0.39 x 3.45 + 2.66 x 4.04"
+  },
+  {
+   "floor": "1F",
+   "band": "WB-c18999241e7be1e0",
+   "thickness_mm": 200,
+   "position": "EXTERNAL",
+   "length_m": 1.65,
+   "pieces": [
+    {
+     "length_m": 1.65,
+     "termination": "BEAM_SOFFIT",
+     "member": "CB9",
+     "D_cm": 50,
+     "height_m": 3.7
+    }
+   ],
+   "area_m2": 6.105,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "1.65 x 3.70"
+  },
+  {
+   "floor": "1F",
+   "band": "WB-c528786c10d4e2af",
+   "thickness_mm": 200,
+   "position": "EXTERNAL",
+   "length_m": 1.04884,
+   "pieces": [
+    {
+     "length_m": 1.04884,
+     "termination": "BEAM_SOFFIT",
+     "member": "CB11",
+     "D_cm": 75,
+     "height_m": 3.45
+    }
+   ],
+   "area_m2": 3.618498,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "1.05 x 3.45"
+  },
+  {
+   "floor": "1F",
+   "band": "WB-c9b44fcc9771e364",
+   "thickness_mm": 150,
+   "position": "INTERNAL",
+   "length_m": 0.5,
+   "pieces": [
+    {
+     "length_m": 0.5,
+     "termination": "SLAB_SOFFIT",
+     "member": "SLAB",
+     "D_cm": 16,
+     "height_m": 4.04
+    }
+   ],
+   "area_m2": 2.02,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "0.50 x 4.04"
+  },
+  {
+   "floor": "1F",
+   "band": "WB-cd6cf791017153ae",
+   "thickness_mm": 150,
+   "position": "INTERNAL",
+   "length_m": 5.0,
+   "pieces": [
+    {
+     "length_m": 0.099996,
+     "termination": "BEAM_SOFFIT",
+     "member": "CB11",
+     "D_cm": 75,
+     "height_m": 3.45
+    },
+    {
+     "length_m": 4.85,
+     "termination": "SLAB_SOFFIT",
+     "member": "SLAB",
+     "D_cm": 16,
+     "height_m": 4.04
+    },
+    {
+     "length_m": 0.050004,
+     "termination": "BEAM_SOFFIT",
+     "member": "B4",
+     "D_cm": 50.0,
+     "height_m": 3.7
+    }
+   ],
+   "area_m2": 20.124001,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "0.10 x 3.45 + 4.85 x 4.04 + 0.05 x 3.70"
+  },
+  {
+   "floor": "1F",
+   "band": "WB-cfd0fb0488c3c84e",
+   "thickness_mm": 200,
+   "position": "EXTERNAL",
+   "length_m": 0.375,
+   "pieces": [
+    {
+     "length_m": 0.375,
+     "termination": "BEAM_SOFFIT",
+     "member": "CB9",
+     "D_cm": 50,
+     "height_m": 3.7
+    }
+   ],
+   "area_m2": 1.3875,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "0.38 x 3.70"
+  },
+  {
+   "floor": "1F",
+   "band": "WB-d20eff4552b4dc77",
+   "thickness_mm": 150,
+   "position": "EXTERNAL",
+   "length_m": 1.8,
+   "pieces": [
+    {
+     "length_m": 1.8,
+     "termination": "BEAM_SOFFIT",
+     "member": "B1",
+     "D_cm": 40.0,
+     "height_m": 3.8
+    }
+   ],
+   "area_m2": 6.84,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "1.80 x 3.80"
+  },
+  {
+   "floor": "1F",
+   "band": "WB-d279fdd970fc62b9",
+   "thickness_mm": 200,
+   "position": "EXTERNAL",
+   "length_m": 1.4,
+   "pieces": [
+    {
+     "length_m": 1.4,
+     "termination": "BEAM_SOFFIT",
+     "member": "CB9",
+     "D_cm": 50,
+     "height_m": 3.7
+    }
+   ],
+   "area_m2": 5.18,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "1.40 x 3.70"
+  },
+  {
+   "floor": "1F",
+   "band": "WB-d5a57a04d0c3164f",
+   "thickness_mm": 200,
+   "position": "INTERNAL",
+   "length_m": 1.8,
+   "pieces": [
+    {
+     "length_m": 1.8,
+     "termination": "BEAM_SOFFIT",
+     "member": "B1",
+     "D_cm": 40.0,
+     "height_m": 3.8
+    }
+   ],
+   "area_m2": 6.84,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "1.80 x 3.80"
+  },
+  {
+   "floor": "1F",
+   "band": "WB-dbe07948145fd7d3",
+   "thickness_mm": 150,
+   "position": "EXTERNAL",
+   "length_m": 2.45,
+   "pieces": [
+    {
+     "length_m": 1.142334,
+     "termination": "SLAB_SOFFIT",
+     "member": "SLAB",
+     "D_cm": 16,
+     "height_m": 4.04
+    },
+    {
+     "length_m": 0.25,
+     "termination": "BEAM_SOFFIT",
+     "member": "B6",
+     "D_cm": 50.0,
+     "height_m": 3.7
+    },
+    {
+     "length_m": 1.057666,
+     "termination": "UNKNOWN",
+     "member": null,
+     "D_cm": null,
+     "height_m": null
+    }
+   ],
+   "area_m2": 5.540029,
+   "blocked_length_m": 1.057666,
+   "status": "PARTIAL",
+   "formula": "1.14 x 4.04 + 0.25 x 3.70"
+  },
+  {
+   "floor": "1F",
+   "band": "WB-e87638223481be93",
+   "thickness_mm": 200,
+   "position": "EXTERNAL",
+   "length_m": 2.45,
+   "pieces": [
+    {
+     "length_m": 2.45,
+     "termination": "SLAB_SOFFIT",
+     "member": "SLAB",
+     "D_cm": 16,
+     "height_m": 4.04
+    }
+   ],
+   "area_m2": 9.898,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "2.45 x 4.04"
+  },
+  {
+   "floor": "1F",
+   "band": "WB-e8ca7976c38b075c",
+   "thickness_mm": 200,
+   "position": "EXTERNAL",
+   "length_m": 0.493276,
+   "pieces": [
+    {
+     "length_m": 0.493276,
+     "termination": "BEAM_SOFFIT",
+     "member": "CB12",
+     "D_cm": 75,
+     "height_m": 3.45
+    }
+   ],
+   "area_m2": 1.701802,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "0.49 x 3.45"
+  },
+  {
+   "floor": "1F",
+   "band": "WB-ead4ce0967e46e5d",
+   "thickness_mm": 150,
+   "position": "INTERNAL",
+   "length_m": 0.262686,
+   "pieces": [
+    {
+     "length_m": 0.262686,
+     "termination": "UNKNOWN",
+     "member": null,
+     "D_cm": null,
+     "height_m": null
+    }
+   ],
+   "area_m2": 0,
+   "blocked_length_m": 0.262686,
+   "status": "BLOCKED",
+   "formula": ""
+  },
+  {
+   "floor": "1F",
+   "band": "WB-ed300723a4a84c73",
+   "thickness_mm": 150,
+   "position": "EXTERNAL",
+   "length_m": 1.570155,
+   "pieces": [
+    {
+     "length_m": 1.570155,
+     "termination": "BEAM_SOFFIT",
+     "member": "CB13",
+     "D_cm": 50,
+     "height_m": 3.7
+    }
+   ],
+   "area_m2": 5.809573,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "1.57 x 3.70"
+  },
+  {
+   "floor": "1F",
+   "band": "WB-ef9c665bf0d6a247",
+   "thickness_mm": 150,
+   "position": "INTERNAL",
+   "length_m": 1.172833,
+   "pieces": [
+    {
+     "length_m": 1.172833,
+     "termination": "UNKNOWN",
+     "member": null,
+     "D_cm": null,
+     "height_m": null
+    }
+   ],
+   "area_m2": 0,
+   "blocked_length_m": 1.172833,
+   "status": "BLOCKED",
+   "formula": ""
+  },
+  {
+   "floor": "1F",
+   "band": "WB-f02a8d4f0b60fb28",
+   "thickness_mm": 150,
+   "position": "INTERNAL",
+   "length_m": 0.89074,
+   "pieces": [
+    {
+     "length_m": 0.89074,
+     "termination": "SLAB_SOFFIT",
+     "member": "SLAB",
+     "D_cm": 16,
+     "height_m": 4.04
+    }
+   ],
+   "area_m2": 3.59859,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "0.89 x 4.04"
+  },
+  {
+   "floor": "1F",
+   "band": "WB-f0b27ce5e3ef556b",
+   "thickness_mm": 150,
+   "position": "EXTERNAL",
+   "length_m": 0.596726,
+   "pieces": [
+    {
+     "length_m": 0.596726,
+     "termination": "SLAB_SOFFIT",
+     "member": "SLAB",
+     "D_cm": 16,
+     "height_m": 4.04
+    }
+   ],
+   "area_m2": 2.410773,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "0.60 x 4.04"
+  },
+  {
+   "floor": "1F",
+   "band": "WB-ff1e337b2c08ca57",
+   "thickness_mm": 150,
+   "position": "INTERNAL",
+   "length_m": 0.824886,
+   "pieces": [
+    {
+     "length_m": 0.824886,
+     "termination": "BEAM_SOFFIT",
+     "member": "CB13",
+     "D_cm": 50,
+     "height_m": 3.7
+    }
+   ],
+   "area_m2": 3.052078,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "0.82 x 3.70"
+  },
+  {
+   "floor": "2F",
+   "band": "WB-0b020e26a78d67a8",
+   "thickness_mm": 200,
+   "position": "EXTERNAL",
+   "length_m": 0.375,
+   "pieces": [
+    {
+     "length_m": 0.375,
+     "termination": "BEAM_SOFFIT",
+     "member": "B8",
+     "D_cm": 75.0,
+     "height_m": 3.45
+    }
+   ],
+   "area_m2": 1.29375,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "0.38 x 3.45"
+  },
+  {
+   "floor": "2F",
+   "band": "WB-1cbc7904e870d0ad",
+   "thickness_mm": 200,
+   "position": "EXTERNAL",
+   "length_m": 1.05,
+   "pieces": [
+    {
+     "length_m": 0.749996,
+     "termination": "BEAM_SOFFIT",
+     "member": "B15",
+     "D_cm": 120.0,
+     "height_m": 3.0
+    },
+    {
+     "length_m": 0.300004,
+     "termination": "SLAB_SOFFIT",
+     "member": "SLAB",
+     "D_cm": 18,
+     "height_m": 4.02
+    }
+   ],
+   "area_m2": 3.456004,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "0.75 x 3.00 + 0.30 x 4.02"
+  },
+  {
+   "floor": "2F",
+   "band": "WB-203f8bf4e374783d",
+   "thickness_mm": 200,
+   "position": "EXTERNAL",
+   "length_m": 0.875,
+   "pieces": [
+    {
+     "length_m": 0.875,
+     "termination": "BEAM_SOFFIT",
+     "member": "B8",
+     "D_cm": 75.0,
+     "height_m": 3.45
+    }
+   ],
+   "area_m2": 3.01875,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "0.88 x 3.45"
+  },
+  {
+   "floor": "2F",
+   "band": "WB-2b90adc1e31deb16",
+   "thickness_mm": 200,
+   "position": "INTERNAL",
+   "length_m": 0.248394,
+   "pieces": [
+    {
+     "length_m": 0.248394,
+     "termination": "BEAM_SOFFIT",
+     "member": "B1",
+     "D_cm": 40.0,
+     "height_m": 3.8
+    }
+   ],
+   "area_m2": 0.943897,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "0.25 x 3.80"
+  },
+  {
+   "floor": "2F",
+   "band": "WB-3f241bfc3a4bf2c5",
+   "thickness_mm": 920,
+   "position": "NOT_MASONRY",
+   "length_m": 14.034513,
+   "pieces": [],
+   "area_m2": null,
+   "blocked_length_m": 14.034513,
+   "status": "EXCLUDED",
+   "why": "band wider than 400 mm (not a block wall: stair / planter / double line)"
+  },
+  {
+   "floor": "2F",
+   "band": "WB-3f501762bf58d60d",
+   "thickness_mm": 200,
+   "position": "INTERNAL",
+   "length_m": 1.8,
+   "pieces": [
+    {
+     "length_m": 1.8,
+     "termination": "BEAM_SOFFIT",
+     "member": "B1",
+     "D_cm": 40.0,
+     "height_m": 3.8
+    }
+   ],
+   "area_m2": 6.84,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "1.80 x 3.80"
+  },
+  {
+   "floor": "2F",
+   "band": "WB-47b48bb2b451002c",
+   "thickness_mm": 200,
+   "position": "EXTERNAL",
+   "length_m": 4.2,
+   "pieces": [
+    {
+     "length_m": 4.2,
+     "termination": "BEAM_SOFFIT",
+     "member": "B15",
+     "D_cm": 120.0,
+     "height_m": 3.0
+    }
+   ],
+   "area_m2": 12.6,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "4.20 x 3.00"
+  },
+  {
+   "floor": "2F",
+   "band": "WB-48547f86cdc3bfa4",
+   "thickness_mm": 200,
+   "position": "INTERNAL",
+   "length_m": 0.4,
+   "pieces": [
+    {
+     "length_m": 0.4,
+     "termination": "BEAM_SOFFIT",
+     "member": "B2",
+     "D_cm": 40.0,
+     "height_m": 3.8
+    }
+   ],
+   "area_m2": 1.52,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "0.40 x 3.80"
+  },
+  {
+   "floor": "2F",
+   "band": "WB-5efacb71f10902f3",
+   "thickness_mm": 150,
+   "position": "INTERNAL",
+   "length_m": 0.249298,
+   "pieces": [
+    {
+     "length_m": 0.249298,
+     "termination": "BEAM_SOFFIT",
+     "member": "B1",
+     "D_cm": 40.0,
+     "height_m": 3.8
+    }
+   ],
+   "area_m2": 0.947332,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "0.25 x 3.80"
+  },
+  {
+   "floor": "2F",
+   "band": "WB-7220f08e4810a975",
+   "thickness_mm": 200,
+   "position": "EXTERNAL",
+   "length_m": 0.27,
+   "pieces": [
+    {
+     "length_m": 0.27,
+     "termination": "BEAM_SOFFIT",
+     "member": "B8",
+     "D_cm": 75.0,
+     "height_m": 3.45
+    }
+   ],
+   "area_m2": 0.9315,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "0.27 x 3.45"
+  },
+  {
+   "floor": "2F",
+   "band": "WB-7fe312d58e27ed34",
+   "thickness_mm": 200,
+   "position": "EXTERNAL",
+   "length_m": 1.4,
+   "pieces": [
+    {
+     "length_m": 1.4,
+     "termination": "BEAM_SOFFIT",
+     "member": "B8",
+     "D_cm": 75.0,
+     "height_m": 3.45
+    }
+   ],
+   "area_m2": 4.83,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "1.40 x 3.45"
+  },
+  {
+   "floor": "2F",
+   "band": "WB-870c19d3245cf896",
+   "thickness_mm": 150,
+   "position": "EXTERNAL",
+   "length_m": 0.415809,
+   "pieces": [
+    {
+     "length_m": 0.415809,
+     "termination": "BEAM_SOFFIT",
+     "member": "B2",
+     "D_cm": 40.0,
+     "height_m": 3.8
+    }
+   ],
+   "area_m2": 1.580074,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "0.42 x 3.80"
+  },
+  {
+   "floor": "2F",
+   "band": "WB-a1345f947dfe61d6",
+   "thickness_mm": 150,
+   "position": "EXTERNAL",
+   "length_m": 3.0,
+   "pieces": [
+    {
+     "length_m": 3.0,
+     "termination": "BEAM_SOFFIT",
+     "member": "B2",
+     "D_cm": 40.0,
+     "height_m": 3.8
+    }
+   ],
+   "area_m2": 11.4,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "3.00 x 3.80"
+  },
+  {
+   "floor": "2F",
+   "band": "WB-bae2ed5cd4d20a81",
+   "thickness_mm": 200,
+   "position": "EXTERNAL",
+   "length_m": 1.53,
+   "pieces": [
+    {
+     "length_m": 1.53,
+     "termination": "BEAM_SOFFIT",
+     "member": "B8",
+     "D_cm": 75.0,
+     "height_m": 3.45
+    }
+   ],
+   "area_m2": 5.2785,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "1.53 x 3.45"
+  },
+  {
+   "floor": "2F",
+   "band": "WB-c62c61699cbb3caa",
+   "thickness_mm": 200,
+   "position": "EXTERNAL",
+   "length_m": 6.45,
+   "pieces": [
+    {
+     "length_m": 6.45,
+     "termination": "BEAM_SOFFIT",
+     "member": "B7",
+     "D_cm": 75.0,
+     "height_m": 3.45
+    }
+   ],
+   "area_m2": 22.2525,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "6.45 x 3.45"
+  },
+  {
+   "floor": "2F",
+   "band": "WB-cfaef63b50f99fdf",
+   "thickness_mm": 150,
+   "position": "EXTERNAL",
+   "length_m": 3.084191,
+   "pieces": [
+    {
+     "length_m": 1.08424,
+     "termination": "BEAM_SOFFIT",
+     "member": "B2",
+     "D_cm": 40.0,
+     "height_m": 3.8
+    },
+    {
+     "length_m": 1.999951,
+     "termination": "BEAM_SOFFIT",
+     "member": "B1",
+     "D_cm": 40.0,
+     "height_m": 3.8
+    }
+   ],
+   "area_m2": 11.719926,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "1.08 x 3.80 + 2.00 x 3.80"
+  },
+  {
+   "floor": "2F",
+   "band": "WB-dc5cc6a41d490d0f",
+   "thickness_mm": 200,
+   "position": "INTERNAL",
+   "length_m": 0.4,
+   "pieces": [
+    {
+     "length_m": 0.4,
+     "termination": "BEAM_SOFFIT",
+     "member": "B2",
+     "D_cm": 40.0,
+     "height_m": 3.8
+    }
+   ],
+   "area_m2": 1.52,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "0.40 x 3.80"
+  },
+  {
+   "floor": "2F",
+   "band": "WB-e0cdb9d478b58788",
+   "thickness_mm": 150,
+   "position": "INTERNAL",
+   "length_m": 1.950702,
+   "pieces": [
+    {
+     "length_m": 1.950702,
+     "termination": "BEAM_SOFFIT",
+     "member": "B1",
+     "D_cm": 40.0,
+     "height_m": 3.8
+    }
+   ],
+   "area_m2": 7.412668,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "1.95 x 3.80"
+  },
+  {
+   "floor": "2F",
+   "band": "WB-faf4fb9be1b84943",
+   "thickness_mm": 200,
+   "position": "INTERNAL",
+   "length_m": 3.0,
+   "pieces": [
+    {
+     "length_m": 3.0,
+     "termination": "BEAM_SOFFIT",
+     "member": "B3",
+     "D_cm": 40.0,
+     "height_m": 3.8
+    }
+   ],
+   "area_m2": 11.4,
+   "blocked_length_m": 0,
+   "status": "COMPUTED",
+   "formula": "3.00 x 3.80"
+  }
+ ],
+ "parapets": [
+  {
+   "region": "2F ROOF (top)",
+   "length_m": 30.671089,
+   "height_m": 0.5,
+   "area_m2": 15.335544,
+   "status": "COMPUTED",
+   "thickness": "BY DETAIL (p.14 parapet detail) - not bound",
+   "formula": "30.671 x 0.50"
+  },
+  {
+   "region": "1F ROOF exposed (not under 2F)",
+   "length_m": 54.030583,
+   "excluded_along_storey_above_m": 18.370697,
+   "height_m": 0.5,
+   "area_m2": 27.015292,
+   "status": "COMPUTED",
+   "thickness": "BY DETAIL (p.14 parapet detail) - not bound",
+   "formula": "54.031 x 0.50"
+  },
+  {
+   "region": "GF ROOF exposed (not under 1F)",
+   "length_m": 66.823823,
+   "excluded_along_storey_above_m": 38.150423,
+   "height_m": 0.5,
+   "area_m2": 33.411912,
+   "status": "COMPUTED",
+   "thickness": "BY DETAIL (p.14 parapet detail) - not bound",
+   "formula": "66.824 x 0.50"
+  }
+ ],
+ "rule": "established wall bands; height per piece = structural interval - terminating member depth (finish_height_v3 split); door / window openings are already outside the bands (net of openings at full height); masonry over openings BLOCKED_OPENING_HEIGHT"
+}

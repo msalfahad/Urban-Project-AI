@@ -1,0 +1,53 @@
+{
+ "SCHEMA": "URBAN_R8_8_VISIBILITY_AUTHORITY_REGISTER_V1",
+ "rules": [
+  "entity invisibility flag (kernel: hidden record) -> HIDDEN_SOURCE",
+  "frozen layer -> HIDDEN_SOURCE (on an INSERT: the whole occurrence)",
+  "layer OFF -> HIDDEN_SOURCE for its own entities; a layer-0 child takes its insert's layer (ByLayer)",
+  "under a dynamic-block occurrence whose state was not read -> VISIBILITY_UNRESOLVED",
+  "layer table not read / layer missing -> VISIBILITY_UNRESOLVED (never VISIBLE by default)"
+ ],
+ "k1_layer_state_source": "LibreDWG dwg.spec (R2000+): frozen = flag0 & 1; on = !(flag0 & 2)",
+ "k2_layer_state_source": "ezdxf Layer.is_frozen() / is_off()",
+ "record_types": [
+  "parts",
+  "texts",
+  "dimensions"
+ ],
+ "counts_in_selected_region": {
+  "OLD_K1": {
+   "parts": {
+    "VISIBLE": 1118
+   },
+   "texts": {
+    "VISIBLE": 61
+   },
+   "dimensions": {
+    "VISIBLE": 101
+   }
+  },
+  "OLD_K2": {
+   "parts": {
+    "VISIBLE": 1118
+   },
+   "texts": {
+    "VISIBLE": 61
+   },
+   "dimensions": {
+    "VISIBLE": 101
+   }
+  },
+  "NEW_K2": {
+   "parts": {
+    "VISIBLE": 1363
+   },
+   "texts": {
+    "VISIBLE": 61
+   },
+   "dimensions": {
+    "VISIBLE": 102
+   }
+  }
+ },
+ "method_use": "TS01: hidden records are not consumed (hidden_excluded); VISIBILITY_UNRESOLVED fails closed. QS01 v2 (legacy path): any non-VISIBLE record fails closed (hidden_excluded False)"
+}

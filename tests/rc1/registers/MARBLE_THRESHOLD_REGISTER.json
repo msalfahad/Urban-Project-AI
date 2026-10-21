@@ -1,0 +1,116 @@
+{
+ "SCHEMA": "URBAN_QORTUBA_RC1_MARBLE_THRESHOLD_REGISTER_V1",
+ "thresholds": [
+  {
+   "threshold": "THRESHOLD-cf12fcdfd3e6a4a6",
+   "state": "MARBLE_COMPUTED",
+   "trade": "MARBLE_THRESHOLD",
+   "authority_kind": "URBAN_METHOD_RULE",
+   "authority": "URBAN-WET-SERVICE-MARBLE-THRESHOLD@v1",
+   "corroborating_rule": null,
+   "clear_width_mm": 800.0,
+   "clear_width_basis": "face-closure length = the doorway opening between the jamb caps (source)",
+   "depth_mm": 150.0,
+   "depth_basis": "separation of the two face closures = wall thickness at the doorway (source)",
+   "plan_area_m2": 0.12,
+   "length_lm": 0.8,
+   "width_x_depth_m2": 0.12,
+   "vertical_rise_mm": 20,
+   "rise_is": "VERTICAL elevation above the adjoining finished floor (never a plan dimension)",
+   "function": "WATER_CONTAINMENT_BARRIER",
+   "water_containment": true,
+   "counted_once": true,
+   "never": [
+    "a price or rate",
+    "a volume",
+    "a waterproofing / slope / drain change"
+   ]
+  },
+  {
+   "threshold": "THRESHOLD-bfcea08375237224",
+   "state": "MARBLE_COMPUTED",
+   "trade": "MARBLE_THRESHOLD",
+   "authority_kind": "EXPLICIT_PROJECT_FACT",
+   "authority": "QORTUBA-NEW-MAIN-ENTRANCE-MARBLE-OWNER-001@v1",
+   "corroborating_rule": null,
+   "clear_width_mm": 1000.0,
+   "clear_width_basis": "face-closure length = the doorway opening between the jamb caps (source)",
+   "depth_mm": 150.0,
+   "depth_basis": "separation of the two face closures = wall thickness at the doorway (source)",
+   "plan_area_m2": 0.15,
+   "length_lm": 1.0,
+   "width_x_depth_m2": 0.15,
+   "vertical_rise_mm": "NOT_STATED",
+   "rise_is": "VERTICAL elevation above the adjoining finished floor (never a plan dimension)",
+   "function": null,
+   "water_containment": false,
+   "counted_once": true,
+   "never": [
+    "a price or rate",
+    "a volume",
+    "a waterproofing / slope / drain change"
+   ]
+  },
+  {
+   "threshold": "THRESHOLD-28f50f8dc18c1e90",
+   "state": "MARBLE_COMPUTED",
+   "trade": "MARBLE_THRESHOLD",
+   "authority_kind": "URBAN_METHOD_RULE",
+   "authority": "URBAN-WET-SERVICE-MARBLE-THRESHOLD@v1",
+   "corroborating_rule": null,
+   "clear_width_mm": 800.0,
+   "clear_width_basis": "face-closure length = the doorway opening between the jamb caps (source)",
+   "depth_mm": 150.0,
+   "depth_basis": "separation of the two face closures = wall thickness at the doorway (source)",
+   "plan_area_m2": 0.12,
+   "length_lm": 0.8,
+   "width_x_depth_m2": 0.12,
+   "vertical_rise_mm": 20,
+   "rise_is": "VERTICAL elevation above the adjoining finished floor (never a plan dimension)",
+   "function": "WATER_CONTAINMENT_BARRIER",
+   "water_containment": true,
+   "counted_once": true,
+   "never": [
+    "a price or rate",
+    "a volume",
+    "a waterproofing / slope / drain change"
+   ]
+  },
+  {
+   "threshold": "THRESHOLD-f9846605acbce828",
+   "state": "MARBLE_COMPUTED",
+   "trade": "MARBLE_THRESHOLD",
+   "authority_kind": "URBAN_METHOD_RULE",
+   "authority": "URBAN-WET-SERVICE-MARBLE-THRESHOLD@v1",
+   "corroborating_rule": null,
+   "clear_width_mm": 800.0,
+   "clear_width_basis": "face-closure length = the doorway opening between the jamb caps (source)",
+   "depth_mm": 150.0,
+   "depth_basis": "separation of the two face closures = wall thickness at the doorway (source)",
+   "plan_area_m2": 0.12,
+   "length_lm": 0.8,
+   "width_x_depth_m2": 0.12,
+   "vertical_rise_mm": 20,
+   "rise_is": "VERTICAL elevation above the adjoining finished floor (never a plan dimension)",
+   "function": "WATER_CONTAINMENT_BARRIER",
+   "water_containment": true,
+   "counted_once": true,
+   "never": [
+    "a price or rate",
+    "a volume",
+    "a waterproofing / slope / drain change"
+   ]
+  }
+ ],
+ "quantities": {
+  "MARBLE_THRESHOLD_PLAN_AREA_M2": 0.51,
+  "MARBLE_THRESHOLD_LENGTH_LM": 3.4,
+  "count": 4,
+  "blocked": []
+ },
+ "measure_pair": [
+  "MRB-01",
+  "MRB-02"
+ ],
+ "rule": "plan area and length are two measures of the same 4 thresholds - price one basis; 2 cm = vertical rise only"
+}

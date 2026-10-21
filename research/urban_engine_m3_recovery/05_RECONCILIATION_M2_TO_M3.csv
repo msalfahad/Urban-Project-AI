@@ -1,0 +1,80 @@
+TRADE,FAMILY,KIND,CHANGE,CLASS,COMPONENTS,DELTA,NOTE
+CONCRETE,BEAMS,ONLY_M2,REMOVED_OR_RENAMED,,16,-20.2238,an M2 component M3 does not hold under this id (topology changes re-number faces and bands)
+CONCRETE,BEAMS,ONLY_M3,INHERITED_ALONG_LINE,Provisional assumption,4,3.3127,section of the collinear mark
+CONCRETE,BEAMS,ONLY_M3,INTERVENING_FACE_PART,Corrected omission,3,2.8481,strip the pairing had dropped whole
+CONCRETE,BEAMS,ONLY_M3,NEW_OR_RENAMED,,17,21.8195,an M3 component M2 did not hold under this id
+CONCRETE,BEAMS,ONLY_M3,SHARED_FACE_UNAMBIGUOUS_PART,Corrected omission,1,0.184,strip the pairing had dropped whole
+CONCRETE,BEAMS,SAME_COMPONENT_NEW_VALUE,INHERITED_ALONG_LINE,Provisional assumption,2,-3.3626,section of the collinear mark
+CONCRETE,BEAMS,SAME_COMPONENT_NEW_VALUE,SHARED_FACE_UNAMBIGUOUS_PART,Corrected omission,1,-0.8099,strip the pairing had dropped whole
+CONCRETE,BEAMS,SAME_COMPONENT_NEW_VALUE,VALUE_CHANGED,,36,3.6886,"same component, value changed by an engine rule"
+CONCRETE,COLUMNS,ONLY_M2,ABSENT_ON_STOREY_PLAN,Source interpretation,13,-5.88,no outline on that storey's slab plan
+CONCRETE,COLUMNS,ONLY_M3,COLUMN_NECK,Corrected omission,28,10.8555,neck height from the printed levels
+CONCRETE,FOOTINGS,ONLY_M3,FOOTING_LABEL_TYPE_CONFLICT,Remaining source ambiguity,1,1.96,two types labelled at one footing; larger type base
+CONCRETE,FOOTINGS,ONLY_M3,FOOTING_OUTLINE_RECOVERED,Corrected omission,1,2.625,TEMPLATE_ENTRY_GAPS_EXPLAINED / LABEL_OUTSIDE_NEAREST_OUTLINE
+CONCRETE,FOOTINGS,ONLY_M3,FOOTING_TYPE_MARK_WITHOUT_NUMBER,Corrected omission,1,11.385,type mark FF has no number (the M2 pattern refused it)
+CONCRETE,FOOTINGS,ONLY_M3,FOOTING_TYPE_MARK_WITHOUT_NUMBER,Corrected omission,1,0.258,type mark FN has no number (the M2 pattern refused it)
+CONCRETE,GROUND_BEAMS,ONLY_M2,REMOVED_OR_RENAMED,,1,-1.1316,an M2 component M3 does not hold under this id (topology changes re-number faces and bands)
+CONCRETE,GROUND_BEAMS,ONLY_M3,GB_EXTERIOR_DETAIL,Provisional assumption,1,0.4877,"perimeter band, exterior depth from levels"
+CONCRETE,GROUND_BEAMS,ONLY_M3,STRAP_BEAM,Corrected omission,2,2.6494,BOUND
+CONCRETE,GROUND_BEAMS,ONLY_M3,STRAP_BEAM_DUPLICATE_ROW,Remaining source ambiguity,1,1.1315,two schedule rows; the drawn width selects one
+CONCRETE,GROUND_BEAMS,SAME_COMPONENT_NEW_VALUE,GB_EXTERIOR_DETAIL,Provisional assumption,23,9.5742,"perimeter band, exterior depth from levels"
+CONCRETE,GROUND_BEAMS,SAME_COMPONENT_NEW_VALUE,VALUE_CHANGED,,1,0.969,"same component, value changed by an engine rule"
+CONCRETE,GROUND_SLAB,ONLY_M2,NOW_UNRESOLVED:SLAB_STAIR_ZONE,Source interpretation,1,-0.8372,held out of the totals: WINDER of 8 treads over 30% of the cell
+CONCRETE,GROUND_SLAB,ONLY_M2,REMOVED_OR_RENAMED,,5,-11.433,an M2 component M3 does not hold under this id (topology changes re-number faces and bands)
+CONCRETE,GROUND_SLAB,ONLY_M3,NEW_OR_RENAMED,,6,6.8446,an M3 component M2 did not hold under this id
+CONCRETE,PLAIN_CONCRETE,ONLY_M3,BLINDING,Corrected omission,2,26.4121,printed 10 cm plain concrete; projection a convention
+CONCRETE,SLABS,ONLY_M2,NOW_UNRESOLVED:SLAB_STAIR_ZONE,Source interpretation,1,-2.7403,held out of the totals: WINDER of 18 treads over 87% of the cell
+CONCRETE,SLABS,ONLY_M2,REMOVED_OR_RENAMED,,39,-40.1446,an M2 component M3 does not hold under this id (topology changes re-number faces and bands)
+CONCRETE,SLABS,ONLY_M3,NEW_OR_RENAMED,,44,44.3218,an M3 component M2 did not hold under this id
+CONCRETE,SLABS,ONLY_M3,OPEN_BOUNDARY_RECOVERED,Corrected omission,1,0.1372,open-boundary face 4.79 m2: the panel is the face minus its beam bands and columns (0.86 m2)
+CONCRETE,SLABS,SAME_COMPONENT_NEW_VALUE,VALUE_CHANGED,,3,-0.0,"same component, value changed by an engine rule"
+REINFORCEMENT,BEAMS,ONLY_M2,REMOVED_OR_RENAMED,,14,-2689.6714,an M2 component M3 does not hold under this id (topology changes re-number faces and bands)
+REINFORCEMENT,BEAMS,ONLY_M3,INHERITED_ALONG_LINE,Provisional assumption,3,572.9743,section of the collinear mark
+REINFORCEMENT,BEAMS,ONLY_M3,NEW_OR_RENAMED,,15,2730.4458,an M3 component M2 did not hold under this id
+REINFORCEMENT,BEAMS,SAME_COMPONENT_NEW_VALUE,INHERITED_ALONG_LINE,Provisional assumption,2,-298.7396,section of the collinear mark
+REINFORCEMENT,BEAMS,SAME_COMPONENT_NEW_VALUE,SHARED_FACE_UNAMBIGUOUS_PART,Corrected omission,1,-115.8715,strip the pairing had dropped whole
+REINFORCEMENT,BEAMS,SAME_COMPONENT_NEW_VALUE,VALUE_CHANGED,,28,482.7429,"same component, value changed by an engine rule"
+REINFORCEMENT,COLUMNS,ONLY_M2,ABSENT_ON_STOREY_PLAN,Source interpretation,13,-877.6561,no outline on that storey's slab plan
+REINFORCEMENT,COLUMNS,ONLY_M3,COLUMN_NECK,Corrected omission,28,1428.5711,neck height from the printed levels
+REINFORCEMENT,FOOTINGS,ONLY_M3,FOOTING_OUTLINE_RECOVERED,Corrected omission,1,111.7926,TEMPLATE_ENTRY_GAPS_EXPLAINED / LABEL_OUTSIDE_NEAREST_OUTLINE
+REINFORCEMENT,FOOTINGS,ONLY_M3,FOOTING_TYPE_MARK_WITHOUT_NUMBER,Corrected omission,1,734.8185,type mark FF has no number (the M2 pattern refused it)
+REINFORCEMENT,FOOTINGS,ONLY_M3,FOOTING_TYPE_MARK_WITHOUT_NUMBER,Corrected omission,1,12.8,type mark FN has no number (the M2 pattern refused it)
+REINFORCEMENT,GROUND_BEAMS,ONLY_M3,GB_BARS_FROM_PDF_EVIDENCE,Corrected omission,58,4280.9169,"typical-detail bars, OCR read, vector-glyph checked, unreviewed"
+REINFORCEMENT,GROUND_BEAMS,ONLY_M3,STRAP_BEAM,Corrected omission,2,405.1695,BOUND
+REINFORCEMENT,GROUND_BEAMS,ONLY_M3,STRAP_BEAM_DUPLICATE_ROW,Remaining source ambiguity,1,231.4647,two schedule rows; the drawn width selects one
+REINFORCEMENT,GROUND_SLAB,ONLY_M2,REMOVED_OR_RENAMED,,6,-757.4225,an M2 component M3 does not hold under this id (topology changes re-number faces and bands)
+REINFORCEMENT,GROUND_SLAB,ONLY_M3,NEW_OR_RENAMED,,6,422.504,an M3 component M2 did not hold under this id
+REINFORCEMENT,GROUND_SLAB,SAME_COMPONENT_NEW_VALUE,VALUE_CHANGED,,3,-0.0,"same component, value changed by an engine rule"
+REINFORCEMENT,SLABS,ONLY_M2,REMOVED_OR_RENAMED,,28,-1756.7754,an M2 component M3 does not hold under this id (topology changes re-number faces and bands)
+REINFORCEMENT,SLABS,ONLY_M3,NEW_OR_RENAMED,,34,1829.1122,an M3 component M2 did not hold under this id
+REINFORCEMENT,SLABS,SAME_COMPONENT_NEW_VALUE,VALUE_CHANGED,,4,-0.0004,"same component, value changed by an engine rule"
+CONCRETE,COLUMNS,M3_UNRESOLVED,NECK_SECTION_OR_FOOTING,Remaining extraction failure,1,0.0,"exposure 0.105 - 0.525 m3, not in any total (NECK:COL:SH10:C10@148899,36778)"
+CONCRETE,COLUMNS,M3_UNRESOLVED,NECK_SECTION_OR_FOOTING,Remaining extraction failure,1,0.0,"exposure 0.045 - 0.225 m3, not in any total (NECK:COL:SH10:CN@146123,41338)"
+CONCRETE,COLUMNS,M3_UNRESOLVED,NECK_SECTION_OR_FOOTING,Remaining extraction failure,1,0.0,"exposure 0.045 - 0.225 m3, not in any total (NECK:COL:SH10:CN@140890,42630)"
+CONCRETE,COLUMNS,M3_UNRESOLVED,NECK_SECTION_OR_FOOTING,Remaining extraction failure,1,0.0,"exposure 0.045 - 0.225 m3, not in any total (NECK:COL:SH10:CN@149929,40462)"
+CONCRETE,COLUMNS,M3_UNRESOLVED,NECK_SECTION_OR_FOOTING,Remaining extraction failure,1,0.0,"exposure 0.075 - 0.375 m3, not in any total (NECK:COL:SH10:C@150972,36507)"
+CONCRETE,COLUMNS,M3_UNRESOLVED,NECK_SECTION_OR_FOOTING,Remaining extraction failure,1,0.0,"exposure 0.000 - 0.000 m3, not in any total (NECK:COL:SH10:CN@148005,44815)"
+CONCRETE,COLUMNS,M3_UNRESOLVED,NECK_SECTION_OR_FOOTING,Remaining extraction failure,1,0.0,"exposure 0.045 - 0.225 m3, not in any total (NECK:COL:SH10:CN@148243,48963)"
+CONCRETE,COLUMNS,M3_UNRESOLVED,NECK_SECTION_OR_FOOTING,Remaining extraction failure,1,0.0,"exposure 0.045 - 0.225 m3, not in any total (NECK:COL:SH10:CN@146847,47309)"
+CONCRETE,COLUMNS,M3_UNRESOLVED,TYPE_NOT_IN_SCHEDULE,Remaining extraction failure,1,0.0,"exposure 0.000 - 0.000 m3, not in any total (COL:SH12:CN@189247,41800)"
+CONCRETE,COLUMNS,M3_UNRESOLVED,TYPE_NOT_IN_SCHEDULE,Remaining extraction failure,1,0.0,"exposure 0.378 - 1.161 m3, not in any total (COL:SH12:CN@185600,41605)"
+CONCRETE,COLUMNS,M3_UNRESOLVED,TYPE_NOT_IN_SCHEDULE,Remaining extraction failure,1,0.0,"exposure 0.378 - 1.161 m3, not in any total (COL:SH12:CN@181059,41605)"
+CONCRETE,COLUMNS,M3_UNRESOLVED,TYPE_NOT_IN_SCHEDULE,Remaining extraction failure,1,0.0,"exposure 0.378 - 1.161 m3, not in any total (COL:SH12:CN@186967,48963)"
+CONCRETE,COLUMNS,M3_UNRESOLVED,TYPE_NOT_IN_SCHEDULE,Remaining extraction failure,1,0.0,"exposure 0.000 - 0.000 m3, not in any total (COL:SH12:CN@186411,45420)"
+CONCRETE,BEAMS,M3_UNRESOLVED,UNBOUND,Remaining extraction failure,1,0.0,"exposure 0.240 - 0.720 m3, not in any total (BEAMS:1F:BAND0013.1)"
+CONCRETE,BEAMS,M3_UNRESOLVED,UNBOUND,Remaining extraction failure,1,0.0,"exposure 0.042 - 0.126 m3, not in any total (BEAMS:1F:BAND0013.2)"
+CONCRETE,BEAMS,M3_UNRESOLVED,UNBOUND,Remaining extraction failure,1,0.0,"exposure 0.600 - 1.800 m3, not in any total (BEAMS:1F:BAND0014)"
+CONCRETE,BEAMS,M3_UNRESOLVED,UNBOUND,Remaining extraction failure,1,0.0,"exposure 0.135 - 0.202 m3, not in any total (BEAMS:1F:BAND0023)"
+CONCRETE,BEAMS,M3_UNRESOLVED,UNBOUND,Remaining extraction failure,1,0.0,"exposure 0.676 - 1.015 m3, not in any total (BEAMS:1F:BAND0025)"
+CONCRETE,BEAMS,M3_UNRESOLVED,UNBOUND,Remaining extraction failure,1,0.0,"exposure 0.345 - 0.518 m3, not in any total (BEAMS:1F:BAND0026.1)"
+CONCRETE,BEAMS,M3_UNRESOLVED,UNBOUND,Remaining extraction failure,1,0.0,"exposure 0.547 - 0.821 m3, not in any total (BEAMS:1F:BAND0026.2)"
+CONCRETE,BEAMS,M3_UNRESOLVED,UNBOUND,Remaining extraction failure,1,0.0,"exposure 0.121 - 0.364 m3, not in any total (BEAMS:1F:BAND0035)"
+CONCRETE,BEAMS,M3_UNRESOLVED,UNBOUND,Remaining extraction failure,1,0.0,"exposure 0.104 - 0.311 m3, not in any total (BEAMS:1F:BAND0036)"
+CONCRETE,SLABS,M3_UNRESOLVED,SLAB_STAIR_ZONE,Source interpretation,1,0.0,"exposure 2.740 - 2.740 m3, not in any total (SLABS:1F:SITE-b845e1e78b1f74a8)"
+CONCRETE,BEAMS,M3_UNRESOLVED,UNBOUND,Remaining extraction failure,1,0.0,"exposure 0.136 - 0.408 m3, not in any total (BEAMS:GF:BAND0006)"
+CONCRETE,BEAMS,M3_UNRESOLVED,MULTIPLE_MARKS,Remaining source ambiguity,1,0.0,"exposure 0.212 - 0.636 m3, not in any total (BEAMS:GF:BAND0019.2)"
+CONCRETE,BEAMS,M3_UNRESOLVED,UNBOUND,Remaining extraction failure,1,0.0,"exposure 0.240 - 0.720 m3, not in any total (BEAMS:GF:BAND0031.1)"
+CONCRETE,BEAMS,M3_UNRESOLVED,UNBOUND,Remaining extraction failure,1,0.0,"exposure 0.042 - 0.126 m3, not in any total (BEAMS:GF:BAND0031.2)"
+CONCRETE,BEAMS,M3_UNRESOLVED,UNBOUND,Remaining extraction failure,1,0.0,"exposure 0.035 - 0.105 m3, not in any total (BEAMS:GF:BAND0053)"
+CONCRETE,GROUND_SLAB,M3_UNRESOLVED,SLAB_STAIR_ZONE,Source interpretation,1,0.0,"exposure 0.837 - 0.837 m3, not in any total (GROUND_SLAB:GROUND:SITE-4df8fcd99d130701)"
+CONCRETE,GROUND_SLAB,M3_UNRESOLVED,SLAB_CELL_FREE_COLUMNS,Remaining source ambiguity,1,0.0,"exposure 4.907 - 4.907 m3, not in any total (GROUND_SLAB:GROUND:SITE-f65941a3e35ac31e)"

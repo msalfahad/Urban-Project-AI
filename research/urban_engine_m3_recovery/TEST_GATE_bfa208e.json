@@ -1,0 +1,138 @@
+{
+ "blocked_by_missing_path": {
+  "(generated prerequisite: run workbook_boq first)": 1,
+  "/root/.claude": 1,
+  "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01": 373,
+  "data/runs/7757": 1
+ },
+ "code_failure_reasons": {},
+ "code_failure_tests": [],
+ "commit": "bfa208e",
+ "complete_project_regression_gate": "INCOMPLETE",
+ "counts": {
+  "CODE_FAILURE": 0,
+  "EXECUTED_PASSED": 7321,
+  "EXPECTED_FAILURE": 100,
+  "MANDATORY_BLOCKED_BY_MISSING_DATA": 376,
+  "SKIPPED_OTHER": 2,
+  "SKIPPED_PREREQUISITE_UNAVAILABLE": 136
+ },
+ "gate_reasons": [
+  "376 mandatory regression tests blocked by missing data",
+  "136 tests skipped for an unavailable prerequisite",
+  "108 locked prerequisites missing {'BENCHMARK': 14, 'DERIVED': 87, 'SOURCE': 7}"
+ ],
+ "junit": "junit_bfa208e.xml",
+ "locked_prerequisites": {
+  "entries": 113,
+  "lock": "research/environment_recovery/INPUTS.lock.proposed.json",
+  "missing": 108,
+  "missing_by_store": {
+   "BENCHMARK": 14,
+   "DERIVED": 87,
+   "SOURCE": 7
+  }
+ },
+ "note": "reduced from the classifier output (test ids and skip texts left out); reproduce with research/environment_recovery/classify_test_run.py on the junit of the run",
+ "rule": "only EXECUTED_PASSED proves anything; a prerequisite skip is not a pass; the gate is COMPLETE only with no blocked, skipped-for-prerequisite or failed test and every locked prerequisite present",
+ "schema": "URBAN_TEST_GATE_V1",
+ "skip_reasons": [
+  {
+   "class": "SKIPPED_PREREQUISITE_UNAVAILABLE",
+   "tests": 39
+  },
+  {
+   "class": "SKIPPED_PREREQUISITE_UNAVAILABLE",
+   "tests": 39
+  },
+  {
+   "class": "SKIPPED_PREREQUISITE_UNAVAILABLE",
+   "tests": 19
+  },
+  {
+   "class": "SKIPPED_PREREQUISITE_UNAVAILABLE",
+   "tests": 8
+  },
+  {
+   "class": "SKIPPED_PREREQUISITE_UNAVAILABLE",
+   "tests": 5
+  },
+  {
+   "class": "SKIPPED_PREREQUISITE_UNAVAILABLE",
+   "tests": 4
+  },
+  {
+   "class": "SKIPPED_PREREQUISITE_UNAVAILABLE",
+   "tests": 4
+  },
+  {
+   "class": "SKIPPED_PREREQUISITE_UNAVAILABLE",
+   "tests": 3
+  },
+  {
+   "class": "SKIPPED_OTHER",
+   "tests": 2
+  },
+  {
+   "class": "SKIPPED_PREREQUISITE_UNAVAILABLE",
+   "tests": 1
+  },
+  {
+   "class": "SKIPPED_PREREQUISITE_UNAVAILABLE",
+   "tests": 1
+  },
+  {
+   "class": "SKIPPED_PREREQUISITE_UNAVAILABLE",
+   "tests": 1
+  },
+  {
+   "class": "SKIPPED_PREREQUISITE_UNAVAILABLE",
+   "tests": 1
+  },
+  {
+   "class": "SKIPPED_PREREQUISITE_UNAVAILABLE",
+   "tests": 1
+  },
+  {
+   "class": "SKIPPED_PREREQUISITE_UNAVAILABLE",
+   "tests": 1
+  },
+  {
+   "class": "SKIPPED_PREREQUISITE_UNAVAILABLE",
+   "tests": 1
+  },
+  {
+   "class": "SKIPPED_PREREQUISITE_UNAVAILABLE",
+   "tests": 1
+  },
+  {
+   "class": "SKIPPED_PREREQUISITE_UNAVAILABLE",
+   "tests": 1
+  },
+  {
+   "class": "SKIPPED_PREREQUISITE_UNAVAILABLE",
+   "tests": 1
+  },
+  {
+   "class": "SKIPPED_PREREQUISITE_UNAVAILABLE",
+   "tests": 1
+  },
+  {
+   "class": "SKIPPED_PREREQUISITE_UNAVAILABLE",
+   "tests": 1
+  },
+  {
+   "class": "SKIPPED_PREREQUISITE_UNAVAILABLE",
+   "tests": 1
+  },
+  {
+   "class": "SKIPPED_PREREQUISITE_UNAVAILABLE",
+   "tests": 1
+  },
+  {
+   "class": "SKIPPED_PREREQUISITE_UNAVAILABLE",
+   "tests": 1
+  }
+ ],
+ "total": 7935
+}

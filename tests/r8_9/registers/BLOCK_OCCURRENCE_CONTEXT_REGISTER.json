@@ -1,0 +1,550 @@
+{
+ "SCHEMA": "URBAN_R8_9_BLOCK_OCCURRENCE_CONTEXT_V1",
+ "rule": "BUILDING_ASSEMBLY only from boundary-layer children + one independent corroboration (nested door, room-label text child, dimension child, reviewed claim); never by size; unknown fails closed",
+ "runs": {
+  "OLD_K1": {
+   "contexts": {
+    "SYMBOL_OCCURRENCE": 15,
+    "SHEET_FRAME_OCCURRENCE": 1
+   },
+   "occurrences": {
+    "1028": {
+     "context": "SYMBOL_OCCURRENCE",
+     "evidence": {
+      "boundary_layer_children": [],
+      "nested_door_occurrences": 0,
+      "text_children": 0,
+      "dimension_children": 0,
+      "claim": null
+     }
+    },
+    "1443": {
+     "context": "SYMBOL_OCCURRENCE",
+     "evidence": {
+      "boundary_layer_children": [],
+      "nested_door_occurrences": 0,
+      "text_children": 0,
+      "dimension_children": 0,
+      "claim": null
+     }
+    },
+    "1471": {
+     "context": "SYMBOL_OCCURRENCE",
+     "evidence": {
+      "boundary_layer_children": [],
+      "nested_door_occurrences": 0,
+      "text_children": 0,
+      "dimension_children": 0,
+      "claim": null
+     }
+    },
+    "156": {
+     "context": "SHEET_FRAME_OCCURRENCE",
+     "evidence": {
+      "boundary_layer_children": [],
+      "nested_door_occurrences": 0,
+      "text_children": 0,
+      "dimension_children": 0,
+      "claim": null
+     }
+    },
+    "1561": {
+     "context": "SYMBOL_OCCURRENCE",
+     "evidence": {
+      "boundary_layer_children": [],
+      "nested_door_occurrences": 0,
+      "text_children": 0,
+      "dimension_children": 0,
+      "claim": null
+     }
+    },
+    "1641": {
+     "context": "SYMBOL_OCCURRENCE",
+     "evidence": {
+      "boundary_layer_children": [],
+      "nested_door_occurrences": 0,
+      "text_children": 0,
+      "dimension_children": 0,
+      "claim": null
+     }
+    },
+    "1664": {
+     "context": "SYMBOL_OCCURRENCE",
+     "evidence": {
+      "boundary_layer_children": [],
+      "nested_door_occurrences": 0,
+      "text_children": 0,
+      "dimension_children": 0,
+      "claim": null
+     }
+    },
+    "1665": {
+     "context": "SYMBOL_OCCURRENCE",
+     "evidence": {
+      "boundary_layer_children": [],
+      "nested_door_occurrences": 0,
+      "text_children": 0,
+      "dimension_children": 0,
+      "claim": null
+     }
+    },
+    "1666": {
+     "context": "SYMBOL_OCCURRENCE",
+     "evidence": {
+      "boundary_layer_children": [],
+      "nested_door_occurrences": 0,
+      "text_children": 0,
+      "dimension_children": 0,
+      "claim": null
+     }
+    },
+    "1667": {
+     "context": "SYMBOL_OCCURRENCE",
+     "evidence": {
+      "boundary_layer_children": [],
+      "nested_door_occurrences": 0,
+      "text_children": 0,
+      "dimension_children": 0,
+      "claim": null
+     }
+    },
+    "1668": {
+     "context": "SYMBOL_OCCURRENCE",
+     "evidence": {
+      "boundary_layer_children": [],
+      "nested_door_occurrences": 0,
+      "text_children": 0,
+      "dimension_children": 0,
+      "claim": null
+     }
+    },
+    "1988": {
+     "context": "SYMBOL_OCCURRENCE",
+     "evidence": {
+      "boundary_layer_children": [],
+      "nested_door_occurrences": 0,
+      "text_children": 0,
+      "dimension_children": 0,
+      "claim": null
+     }
+    },
+    "202": {
+     "context": "SYMBOL_OCCURRENCE",
+     "evidence": {
+      "boundary_layer_children": [],
+      "nested_door_occurrences": 0,
+      "text_children": 0,
+      "dimension_children": 0,
+      "claim": null
+     }
+    },
+    "2044": {
+     "context": "SYMBOL_OCCURRENCE",
+     "evidence": {
+      "boundary_layer_children": [],
+      "nested_door_occurrences": 0,
+      "text_children": 0,
+      "dimension_children": 0,
+      "claim": null
+     }
+    },
+    "677": {
+     "context": "SYMBOL_OCCURRENCE",
+     "evidence": {
+      "boundary_layer_children": [],
+      "nested_door_occurrences": 0,
+      "text_children": 0,
+      "dimension_children": 0,
+      "claim": null
+     }
+    },
+    "841": {
+     "context": "SYMBOL_OCCURRENCE",
+     "evidence": {
+      "boundary_layer_children": [],
+      "nested_door_occurrences": 0,
+      "text_children": 0,
+      "dimension_children": 0,
+      "claim": null
+     }
+    }
+   }
+  },
+  "OLD_K2": {
+   "contexts": {
+    "SYMBOL_OCCURRENCE": 15,
+    "SHEET_FRAME_OCCURRENCE": 1
+   },
+   "occurrences": {
+    "1028": {
+     "context": "SYMBOL_OCCURRENCE",
+     "evidence": {
+      "boundary_layer_children": [],
+      "nested_door_occurrences": 0,
+      "text_children": 0,
+      "dimension_children": 0,
+      "claim": null
+     }
+    },
+    "1443": {
+     "context": "SYMBOL_OCCURRENCE",
+     "evidence": {
+      "boundary_layer_children": [],
+      "nested_door_occurrences": 0,
+      "text_children": 0,
+      "dimension_children": 0,
+      "claim": null
+     }
+    },
+    "1471": {
+     "context": "SYMBOL_OCCURRENCE",
+     "evidence": {
+      "boundary_layer_children": [],
+      "nested_door_occurrences": 0,
+      "text_children": 0,
+      "dimension_children": 0,
+      "claim": null
+     }
+    },
+    "156": {
+     "context": "SHEET_FRAME_OCCURRENCE",
+     "evidence": {
+      "boundary_layer_children": [],
+      "nested_door_occurrences": 0,
+      "text_children": 0,
+      "dimension_children": 0,
+      "claim": null
+     }
+    },
+    "1561": {
+     "context": "SYMBOL_OCCURRENCE",
+     "evidence": {
+      "boundary_layer_children": [],
+      "nested_door_occurrences": 0,
+      "text_children": 0,
+      "dimension_children": 0,
+      "claim": null
+     }
+    },
+    "1641": {
+     "context": "SYMBOL_OCCURRENCE",
+     "evidence": {
+      "boundary_layer_children": [],
+      "nested_door_occurrences": 0,
+      "text_children": 0,
+      "dimension_children": 0,
+      "claim": null
+     }
+    },
+    "1664": {
+     "context": "SYMBOL_OCCURRENCE",
+     "evidence": {
+      "boundary_layer_children": [],
+      "nested_door_occurrences": 0,
+      "text_children": 0,
+      "dimension_children": 0,
+      "claim": null
+     }
+    },
+    "1665": {
+     "context": "SYMBOL_OCCURRENCE",
+     "evidence": {
+      "boundary_layer_children": [],
+      "nested_door_occurrences": 0,
+      "text_children": 0,
+      "dimension_children": 0,
+      "claim": null
+     }
+    },
+    "1666": {
+     "context": "SYMBOL_OCCURRENCE",
+     "evidence": {
+      "boundary_layer_children": [],
+      "nested_door_occurrences": 0,
+      "text_children": 0,
+      "dimension_children": 0,
+      "claim": null
+     }
+    },
+    "1667": {
+     "context": "SYMBOL_OCCURRENCE",
+     "evidence": {
+      "boundary_layer_children": [],
+      "nested_door_occurrences": 0,
+      "text_children": 0,
+      "dimension_children": 0,
+      "claim": null
+     }
+    },
+    "1668": {
+     "context": "SYMBOL_OCCURRENCE",
+     "evidence": {
+      "boundary_layer_children": [],
+      "nested_door_occurrences": 0,
+      "text_children": 0,
+      "dimension_children": 0,
+      "claim": null
+     }
+    },
+    "1988": {
+     "context": "SYMBOL_OCCURRENCE",
+     "evidence": {
+      "boundary_layer_children": [],
+      "nested_door_occurrences": 0,
+      "text_children": 0,
+      "dimension_children": 0,
+      "claim": null
+     }
+    },
+    "202": {
+     "context": "SYMBOL_OCCURRENCE",
+     "evidence": {
+      "boundary_layer_children": [],
+      "nested_door_occurrences": 0,
+      "text_children": 0,
+      "dimension_children": 0,
+      "claim": null
+     }
+    },
+    "2044": {
+     "context": "SYMBOL_OCCURRENCE",
+     "evidence": {
+      "boundary_layer_children": [],
+      "nested_door_occurrences": 0,
+      "text_children": 0,
+      "dimension_children": 0,
+      "claim": null
+     }
+    },
+    "677": {
+     "context": "SYMBOL_OCCURRENCE",
+     "evidence": {
+      "boundary_layer_children": [],
+      "nested_door_occurrences": 0,
+      "text_children": 0,
+      "dimension_children": 0,
+      "claim": null
+     }
+    },
+    "841": {
+     "context": "SYMBOL_OCCURRENCE",
+     "evidence": {
+      "boundary_layer_children": [],
+      "nested_door_occurrences": 0,
+      "text_children": 0,
+      "dimension_children": 0,
+      "claim": null
+     }
+    }
+   }
+  },
+  "NEW_K2": {
+   "contexts": {
+    "SYMBOL_OCCURRENCE": 19,
+    "SHEET_FRAME_OCCURRENCE": 1
+   },
+   "occurrences": {
+    "1028": {
+     "context": "SYMBOL_OCCURRENCE",
+     "evidence": {
+      "boundary_layer_children": [],
+      "nested_door_occurrences": 0,
+      "text_children": 0,
+      "dimension_children": 0,
+      "claim": null
+     }
+    },
+    "1443": {
+     "context": "SYMBOL_OCCURRENCE",
+     "evidence": {
+      "boundary_layer_children": [],
+      "nested_door_occurrences": 0,
+      "text_children": 0,
+      "dimension_children": 0,
+      "claim": null
+     }
+    },
+    "1471": {
+     "context": "SYMBOL_OCCURRENCE",
+     "evidence": {
+      "boundary_layer_children": [],
+      "nested_door_occurrences": 0,
+      "text_children": 0,
+      "dimension_children": 0,
+      "claim": null
+     }
+    },
+    "156": {
+     "context": "SHEET_FRAME_OCCURRENCE",
+     "evidence": {
+      "boundary_layer_children": [],
+      "nested_door_occurrences": 0,
+      "text_children": 0,
+      "dimension_children": 0,
+      "claim": null
+     }
+    },
+    "1561": {
+     "context": "SYMBOL_OCCURRENCE",
+     "evidence": {
+      "boundary_layer_children": [],
+      "nested_door_occurrences": 0,
+      "text_children": 0,
+      "dimension_children": 0,
+      "claim": null
+     }
+    },
+    "1641": {
+     "context": "SYMBOL_OCCURRENCE",
+     "evidence": {
+      "boundary_layer_children": [],
+      "nested_door_occurrences": 0,
+      "text_children": 0,
+      "dimension_children": 0,
+      "claim": null
+     }
+    },
+    "1664": {
+     "context": "SYMBOL_OCCURRENCE",
+     "evidence": {
+      "boundary_layer_children": [],
+      "nested_door_occurrences": 0,
+      "text_children": 0,
+      "dimension_children": 0,
+      "claim": null
+     }
+    },
+    "1665": {
+     "context": "SYMBOL_OCCURRENCE",
+     "evidence": {
+      "boundary_layer_children": [],
+      "nested_door_occurrences": 0,
+      "text_children": 0,
+      "dimension_children": 0,
+      "claim": null
+     }
+    },
+    "1666": {
+     "context": "SYMBOL_OCCURRENCE",
+     "evidence": {
+      "boundary_layer_children": [],
+      "nested_door_occurrences": 0,
+      "text_children": 0,
+      "dimension_children": 0,
+      "claim": null
+     }
+    },
+    "1667": {
+     "context": "SYMBOL_OCCURRENCE",
+     "evidence": {
+      "boundary_layer_children": [],
+      "nested_door_occurrences": 0,
+      "text_children": 0,
+      "dimension_children": 0,
+      "claim": null
+     }
+    },
+    "1668": {
+     "context": "SYMBOL_OCCURRENCE",
+     "evidence": {
+      "boundary_layer_children": [],
+      "nested_door_occurrences": 0,
+      "text_children": 0,
+      "dimension_children": 0,
+      "claim": null
+     }
+    },
+    "1988": {
+     "context": "SYMBOL_OCCURRENCE",
+     "evidence": {
+      "boundary_layer_children": [],
+      "nested_door_occurrences": 0,
+      "text_children": 0,
+      "dimension_children": 0,
+      "claim": null
+     }
+    },
+    "202": {
+     "context": "SYMBOL_OCCURRENCE",
+     "evidence": {
+      "boundary_layer_children": [],
+      "nested_door_occurrences": 0,
+      "text_children": 0,
+      "dimension_children": 0,
+      "claim": null
+     }
+    },
+    "2044": {
+     "context": "SYMBOL_OCCURRENCE",
+     "evidence": {
+      "boundary_layer_children": [],
+      "nested_door_occurrences": 0,
+      "text_children": 0,
+      "dimension_children": 0,
+      "claim": null
+     }
+    },
+    "677": {
+     "context": "SYMBOL_OCCURRENCE",
+     "evidence": {
+      "boundary_layer_children": [],
+      "nested_door_occurrences": 0,
+      "text_children": 0,
+      "dimension_children": 0,
+      "claim": null
+     }
+    },
+    "700045": {
+     "context": "SYMBOL_OCCURRENCE",
+     "evidence": {
+      "boundary_layer_children": [],
+      "nested_door_occurrences": 0,
+      "text_children": 0,
+      "dimension_children": 0,
+      "claim": null
+     }
+    },
+    "700047": {
+     "context": "SYMBOL_OCCURRENCE",
+     "evidence": {
+      "boundary_layer_children": [],
+      "nested_door_occurrences": 0,
+      "text_children": 0,
+      "dimension_children": 0,
+      "claim": null
+     }
+    },
+    "700051": {
+     "context": "SYMBOL_OCCURRENCE",
+     "evidence": {
+      "boundary_layer_children": [],
+      "nested_door_occurrences": 0,
+      "text_children": 0,
+      "dimension_children": 0,
+      "claim": null
+     }
+    },
+    "700052": {
+     "context": "SYMBOL_OCCURRENCE",
+     "evidence": {
+      "boundary_layer_children": [],
+      "nested_door_occurrences": 0,
+      "text_children": 0,
+      "dimension_children": 0,
+      "claim": null
+     }
+    },
+    "841": {
+     "context": "SYMBOL_OCCURRENCE",
+     "evidence": {
+      "boundary_layer_children": [],
+      "nested_door_occurrences": 0,
+      "text_children": 0,
+      "dimension_children": 0,
+      "claim": null
+     }
+    }
+   }
+  }
+ }
+}

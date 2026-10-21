@@ -1,0 +1,43 @@
+{
+ "note": "machine timings of the one-command run on ST7757 (same container); the export step prints two PDFs with Chromium",
+ "m2_cli_run": {
+  "steps": {
+   "1 accept": 0.0,
+   "2 inventory": 0.884,
+   "3-5 generic detection, quantities, conventions": 2.137,
+   "6 checks, exceptions and sensitivity": 0.451,
+   "7 registers and report": 0.057,
+   "8 export": 4.113
+  },
+  "seconds_compute": 3.475
+ },
+ "m3_cli_run_cold_cache": {
+  "steps": {
+   "1 accept": 0.0,
+   "2 inventory": 0.888,
+   "3-5 generic detection, quantities, conventions": 2.08,
+   "6 checks, exceptions and sensitivity": 1.105,
+   "7 registers and report": 0.049,
+   "8 export": 4.465
+  },
+  "seconds_compute": 4.085
+ },
+ "m3_cli_run_warm_cache": {
+  "steps": {
+   "1 accept": 0.0,
+   "2 inventory": 0.898,
+   "3-5 generic detection, quantities, conventions": 0.914,
+   "6 checks, exceptions and sensitivity": 1.119,
+   "7 registers and report": 0.062,
+   "8 export": 4.87
+  },
+  "seconds_compute": 2.942
+ },
+ "m2_engine_live": {
+  "intake": 1.237,
+  "detect": 0.771,
+  "items": 0.032
+ },
+ "caching": "the intake of a drawing is cached by its sha256 and the intake code digest (--cache DIR): a warm run skips the DXF read",
+ "incremental_recalculation": "a convention change re-prices from the detected model without re-reading or re-detecting (route_generic rebuild; SENSITIVITY.csv is built that way, one rebuild per alternative)"
+}

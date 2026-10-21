@@ -1,0 +1,210 @@
+{
+ "SCHEMA": "URBAN_TRADE_DEPENDENCY_MATRIX_V1",
+ "policy": "TRADE_DEPENDENCY_MATRIX_V1",
+ "matrix": {
+  "FLOOR_FINISH": {
+   "requires": [
+    "geometry",
+    "upstream_status",
+    "semantic_identity",
+    "trade_region"
+   ],
+   "quantity_rule_dependency": false,
+   "note": "valid trade floor region; material is a specification attribute"
+  },
+  "SKIRTING": {
+   "requires": [
+    "geometry",
+    "upstream_status",
+    "semantic_identity",
+    "trade_region"
+   ],
+   "quantity_rule_dependency": false,
+   "note": "valid finish boundary path (dry zones only)"
+  },
+  "THRESHOLD": {
+   "requires": [
+    "geometry",
+    "upstream_status"
+   ],
+   "quantity_rule_dependency": false,
+   "note": "door strip between two closures; independent of room semantics"
+  },
+  "CEILING": {
+   "requires": [
+    "geometry",
+    "upstream_status",
+    "trade_region"
+   ],
+   "quantity_rule_dependency": false,
+   "note": "physical region allowed when indoor / external / void status is unambiguous"
+  },
+  "CORNICE": {
+   "requires": [
+    "geometry",
+    "upstream_status",
+    "trade_region",
+    "rule_authority"
+   ],
+   "quantity_rule_dependency": true,
+   "note": "existence by specification"
+  },
+  "PLASTER": {
+   "requires": [
+    "geometry",
+    "upstream_status",
+    "trade_region",
+    "dimension_height"
+   ],
+   "quantity_rule_dependency": false,
+   "note": "valid wall faces; internal vs external method"
+  },
+  "PAINT": {
+   "requires": [
+    "geometry",
+    "upstream_status",
+    "semantic_identity",
+    "trade_region",
+    "dimension_height",
+    "rule_authority"
+   ],
+   "quantity_rule_dependency": true,
+   "note": "painted (dry) vs tiled (wet) faces; height uses the Urban build-up rule"
+  },
+  "SPATTER_DASH": {
+   "requires": [
+    "geometry",
+    "upstream_status",
+    "trade_region",
+    "rule_authority"
+   ],
+   "quantity_rule_dependency": true,
+   "note": "coverage rule by owner"
+  },
+  "CORNER_BEAD": {
+   "requires": [
+    "geometry",
+    "upstream_status",
+    "trade_region",
+    "rule_authority"
+   ],
+   "quantity_rule_dependency": true,
+   "note": "coverage rule by owner"
+  },
+  "WALL_TILE": {
+   "requires": [
+    "geometry",
+    "upstream_status",
+    "semantic_identity",
+    "trade_region",
+    "dimension_height",
+    "rule_authority"
+   ],
+   "quantity_rule_dependency": true,
+   "note": "wet semantic region + valid wall boundary; full-height tile is an Urban rule"
+  },
+  "WATERPROOFING": {
+   "requires": [
+    "geometry",
+    "upstream_status",
+    "semantic_identity",
+    "trade_region",
+    "rule_authority"
+   ],
+   "quantity_rule_dependency": true,
+   "note": "wet semantic region + WP floor boundary; upturn height is an Urban rule"
+  }
+ },
+ "families": {
+  "FLOOR_FINISH": {
+   "DRY": "DRY_FLOOR",
+   "WET": "WET_TILE",
+   "SERVICE": "WET_TILE",
+   "EXTERNAL": "EXTERNAL_PAVING",
+   "VOID": null,
+   "UNKNOWN": "UNKNOWN"
+  },
+  "SKIRTING": {
+   "DRY": "SKIRTING",
+   "WET": null,
+   "SERVICE": null,
+   "EXTERNAL": null,
+   "VOID": null,
+   "UNKNOWN": "UNKNOWN"
+  },
+  "CEILING": {
+   "DRY": "INTERNAL_CEILING",
+   "WET": "INTERNAL_CEILING",
+   "SERVICE": "INTERNAL_CEILING",
+   "EXTERNAL": "EXTERNAL_SOFFIT",
+   "VOID": "INTERNAL_CEILING",
+   "UNKNOWN": "INTERNAL_CEILING"
+  },
+  "PLASTER": {
+   "DRY": "INTERNAL_PLASTER",
+   "WET": "INTERNAL_PLASTER",
+   "SERVICE": "INTERNAL_PLASTER",
+   "EXTERNAL": "EXTERNAL_RENDER",
+   "VOID": null,
+   "UNKNOWN": "INTERNAL_PLASTER"
+  },
+  "PAINT": {
+   "DRY": "PAINT",
+   "WET": null,
+   "SERVICE": null,
+   "EXTERNAL": "EXTERNAL_PAINT",
+   "VOID": null,
+   "UNKNOWN": "UNKNOWN"
+  },
+  "WALL_TILE": {
+   "DRY": null,
+   "WET": "WET_WALL_TILE",
+   "SERVICE": "WET_WALL_TILE",
+   "EXTERNAL": null,
+   "VOID": null,
+   "UNKNOWN": "UNKNOWN"
+  },
+  "WATERPROOFING": {
+   "DRY": null,
+   "WET": "WET_ROOM_WP",
+   "SERVICE": "WET_ROOM_WP",
+   "EXTERNAL": null,
+   "VOID": null,
+   "UNKNOWN": "UNKNOWN"
+  },
+  "SPATTER_DASH": {
+   "DRY": "INTERNAL_PLASTER",
+   "WET": "INTERNAL_PLASTER",
+   "SERVICE": "INTERNAL_PLASTER",
+   "EXTERNAL": "EXTERNAL_RENDER",
+   "VOID": null,
+   "UNKNOWN": "INTERNAL_PLASTER"
+  },
+  "CORNER_BEAD": {
+   "DRY": "INTERNAL_PLASTER",
+   "WET": "INTERNAL_PLASTER",
+   "SERVICE": "INTERNAL_PLASTER",
+   "EXTERNAL": "EXTERNAL_RENDER",
+   "VOID": null,
+   "UNKNOWN": "INTERNAL_PLASTER"
+  },
+  "CORNICE": {
+   "DRY": "INTERNAL_CEILING",
+   "WET": "INTERNAL_CEILING",
+   "SERVICE": "INTERNAL_CEILING",
+   "EXTERNAL": "EXTERNAL_SOFFIT",
+   "VOID": "INTERNAL_CEILING",
+   "UNKNOWN": "INTERNAL_CEILING"
+  },
+  "THRESHOLD": {
+   "DRY": "THRESHOLD",
+   "WET": "THRESHOLD",
+   "SERVICE": "THRESHOLD",
+   "EXTERNAL": "THRESHOLD",
+   "VOID": "THRESHOLD",
+   "UNKNOWN": "THRESHOLD"
+  }
+ },
+ "blocked_state": "BLOCKED_SEMANTIC_TRADE_BOUNDARY",
+ "rule": "a trade is blocked by an unresolved semantic split only when its zones need different treatments for that trade; no wall is invented to separate zones"
+}

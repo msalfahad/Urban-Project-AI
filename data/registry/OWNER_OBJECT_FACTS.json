@@ -1,0 +1,94 @@
+{
+ "SCHEMA": "URBAN_OWNER_OBJECT_FACTS_V1",
+ "facts": [
+  {
+   "fact_id": "QORTUBA-NEW-PAINTRY-COUNTER-CABINETRY-OWNER-001",
+   "version": 1,
+   "kind": "TRADE_OBJECT_IDENTITY",
+   "authority": [
+    "PROJECT_OWNER"
+   ],
+   "received": "RC1 finalization brief §4 (the five FIXTURE-layer lines represent the counter / cabinet outline for the floor-finish question; ceramic is installed BEFORE the cabinets)",
+   "scope": {
+    "project": "QORTUBA",
+    "source_revision_id": "QORTUBA_REV_NEW",
+    "source_anchor_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+    "region_id": "RC:MODEL_SPACE:4267:540:1649",
+    "frame_id": "MF:RC:MODEL_SPACE:4267:540:1649",
+    "plan": "PLAN_VARIANT_4_SELECTED",
+    "site_zone": "PAINTRY",
+    "trade": "FLOOR_FINISH"
+   },
+   "allowed_domains": [
+    "FLOOR_FINISH_OBJECT_CLASS"
+   ],
+   "parts": [
+    {
+     "handle": "478",
+     "key": "QORTUBA_REV_NEW|H478||SEGMENT|0",
+     "source_layer": "FIXTURE",
+     "fingerprint": "edb6309bdb7d4a222096cc055b83f592692d4cab67b28126c08c1041b980fad9",
+     "physical_reading": "COUNTER_CABINET_OUTLINE (sits on the finished ceramic floor)"
+    },
+    {
+     "handle": "482",
+     "key": "QORTUBA_REV_NEW|H482||SEGMENT|0",
+     "source_layer": "FIXTURE",
+     "fingerprint": "dbcd554b7a9b89ac51bb9b286fc49c8ca41786f15e7ac5040a13023f281d018c",
+     "physical_reading": "COUNTER_CABINET_OUTLINE (sits on the finished ceramic floor)"
+    },
+    {
+     "handle": "532",
+     "key": "QORTUBA_REV_NEW|H532||SEGMENT|0",
+     "source_layer": "FIXTURE",
+     "fingerprint": "4a472ccaea8aff0afa8f22e2218807f9f29ca092c59e6ac68b34ff6dab76d209",
+     "physical_reading": "COUNTER_CABINET_OUTLINE (sits on the finished ceramic floor)"
+    },
+    {
+     "handle": "536",
+     "key": "QORTUBA_REV_NEW|H536||SEGMENT|0",
+     "source_layer": "FIXTURE",
+     "fingerprint": "ed8ea03b476f7407293d967c740553c2ff9a3361db95d93d34f6fd6a931b49fd",
+     "physical_reading": "COUNTER_CABINET_OUTLINE (sits on the finished ceramic floor)"
+    },
+    {
+     "handle": "541",
+     "key": "QORTUBA_REV_NEW|H541||SEGMENT|0",
+     "source_layer": "FIXTURE",
+     "fingerprint": "5955369547d4a15167199882c099571c0c8015c8adf67c5e15c9b13054bc90b2",
+     "physical_reading": "COUNTER_CABINET_OUTLINE (sits on the finished ceramic floor)"
+    }
+   ],
+   "statement": {
+    "object_class": "LATER_INSTALLED_CABINETRY",
+    "accepts_observed_roles": [
+     "SANITARY_FIXTURE"
+    ],
+    "installed_after_floor_finish": true,
+    "sits_on_finished_floor": true,
+    "text": "the PAINTRY FIXTURE lines H478 / H482 / H532 / H536 / H541 outline the kitchen counter / cabinets, installed after the ceramic floor"
+   },
+   "is_not": [
+    "a geometry change",
+    "a deduction",
+    "a rule for any other room, revision or project",
+    "a class for any other FIXTURE-layer entity"
+   ],
+   "transfer_forbidden": [
+    "the old Qortuba revision",
+    "any other Qortuba revision, region or plan variant",
+    "the DWG (identity NOT_ESTABLISHED)",
+    "P7757",
+    "Al Rashed",
+    "any future villa or project",
+    "an Urban default"
+   ],
+   "relations": [
+    {
+     "rule": "URBAN-FLOOR-FINISH-BEFORE-CABINETRY-METHOD@v1",
+     "relation": "SUPPLIES_THE_OBJECT_CLASS"
+    }
+   ]
+  }
+ ]
+}

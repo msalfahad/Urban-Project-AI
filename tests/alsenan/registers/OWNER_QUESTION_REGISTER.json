@@ -1,0 +1,79 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_OWNER_QUESTIONS_V1",
+ "questions": [
+  {
+   "id": "OQ-S1",
+   "group": "SOURCE-REVISION",
+   "question": "The 12-page architectural PDF (plotted May 06 2026 from ...\\7757-FATMA ALSNYAN\\P7757.dwg) holds 7 sheets that the supplied P7757.dwg / .dxf do not contain (area plans, SW and NE elevations, two sections, fence). Please supply the DWG that holds them, or confirm that the PDF is the issued set.",
+   "evidence": "DWG / DXF: 5 sheet frames (GF, 1F, 2F plans; NW, SE elevations); PDF: 12 raster pages",
+   "unblocks": [
+    "all wall / ceiling heights",
+    "external plaster / paint",
+    "stairs in section"
+   ]
+  },
+  {
+   "id": "OQ-S2",
+   "group": "SOURCE-REVISION",
+   "question": "Is ST7757.dwg / ST7757.dxf the issued structural revision? (no pinned decoder can prove the DXF equals the AC1027 DWG here)",
+   "evidence": "ST7757.dwg AC1027 vs ST7757.dxf AC1032 re-saved 2026-10-01",
+   "unblocks": [
+    "structural FINAL status (Phase A is SHADOW either way)"
+   ]
+  },
+  {
+   "id": "OQ-A1",
+   "group": "ARCHITECTURAL",
+   "question": "Layer legend for P7757: which layers carry wall faces, windows / glazing, stairs and overhead / hidden lines? Layer 1 holds both the walls and the sheet frames; layer W is the plot boundary wall.",
+   "evidence": "layer census in the ROOM_REGISTER; the diagnostic run with 'layer 1 = walls' still leaves one site",
+   "unblocks": [
+    "room topology (every room-based quantity)",
+    "windows",
+    "blockwork by thickness"
+   ]
+  },
+  {
+   "id": "OQ-A2",
+   "group": "ARCHITECTURAL",
+   "question": "Door / window schedule (types, sizes, heights, materials). None exists in the source.",
+   "evidence": "door-signature candidates only (OPENING_REGISTER)",
+   "unblocks": [
+    "doors",
+    "windows",
+    "aluminium",
+    "glazing",
+    "reveals",
+    "marble"
+   ]
+  },
+  {
+   "id": "OQ-F1",
+   "group": "FINISH",
+   "question": "Finish schedule per room (floor / wall / ceiling finishes, false-ceiling levels, wet-room tiling height). None exists in the source.",
+   "evidence": "no finish text or schedule in P7757",
+   "unblocks": [
+    "floor finish",
+    "ceiling",
+    "wall tiles",
+    "paint",
+    "skirting"
+   ]
+  },
+  {
+   "id": "OQ-T1",
+   "group": "STRUCTURAL",
+   "question": "Founding level and ground-beam / slab top levels (structural, not finished-floor). The source states only a minimum excavation depth (1.5 m below plot level).",
+   "evidence": "ST7757 schedules sheet notes; ground-beams plan level marks are architectural FFL",
+   "unblocks": [
+    "column necks",
+    "columns per floor",
+    "ground beams"
+   ]
+  }
+ ],
+ "never_asked": [
+  "expected quantities",
+  "the freelancer BOQ",
+  "the web-app report"
+ ]
+}

@@ -1,0 +1,83 @@
+"""Where each R8 contract will live in production — the ONE place names are bound.
+
+R8.0 writes the tests before the code. Every production symbol the tests
+will call is named here and nowhere else, so R8.1 may choose different
+module names by editing this table (a reviewed change), never by editing
+test assertions.
+
+A target that does not exist yet raises TargetNotImplemented. Tests that
+call it are registered TARGET_NOT_IMPLEMENTED in R8_0_EXPECTED_FAILURES.json
+and marked strict-xfail on exactly that exception, so:
+  * today they report XFAIL (the contract is written, the code is not);
+  * the day the module appears they run for real, and a pass shows up as a
+    strict XPASS failure until the register is updated — the ratchet.
+
+Dependency rule (R8.0 brief §6, §21): engine.source.* must not import
+engine.qs_core or engine.ingest. The qs_core targets below are downstream
+consumers of source observations.
+"""
+
+from __future__ import annotations
+
+import importlib
+
+
+class TargetNotImplemented(ImportError):
+    """The production module/function for an R8 contract does not exist yet."""
+
+
+TARGETS = {
+    # source fidelity (engine/source) -------------------------------------
+    # R8.1: K1 acceptance goes builder decode -> PRODUCTION D1 mapper -> PRODUCTION K1
+    # through a test-side adapter that adds only the test-schema MINSERT/xref fields
+    # production refuses to guess (k1_harness.py). Reviewed change.
+    "K1_REALISE": "tests.r8_0.k1_harness:realise_decode",
+    "K1_REALISE_DOCUMENT": "engine.source.cad.kernel:realise",
+    "D1_TO_DOCUMENT": "engine.source.cad.libredwg_map:to_document",
+    "K2_REALISE": "engine.source.cad.kernel_ezdxf:realise",
+    "OCS_PLAN_FRAME": "engine.source.cad.kernel_ocs:plan_frame",
+    # R8.2: the census is route-neutral (SourceDocument in); the harness adds only test-schema fields
+    "CAPABILITY_REGISTER": "tests.r8_0.k1_harness:capability_register_decode",
+    "CAPABILITY_CENSUS_DOCUMENT": "engine.source.cad.census:capability_register",
+    "CAD_TEXT_PLAIN": "engine.source.cad.text:plain",
+    "DIMENSION_MEASURE": "engine.source.cad.dimensions:measured",
+    # R8.1: URBAN-SRD-1 is a per-route representation digest; the D1 route builds the records
+    "SOURCE_REPRESENTATION_DIGEST": "engine.source.cad.libredwg_map:source_representation_digest",
+    "REALISED_GEOMETRY_DIGEST": "engine.source.digests:realised_geometry_digest",
+    # R8.2: fixture routes (decode + R8.0 mutations) -> production D1/K1 -> production reconcile
+    "RECONCILE": "tests.r8_0.k1_harness:reconcile_routes",
+    "RECONCILE_REALISED": "engine.source.reconcile:reconcile",
+    # R8.3: the R8.0 frame / unit contract schema -> production engine/source/frame.py and
+    # cad_profile.py through a test-side adapter that only translates vocabulary (frame_harness.py)
+    "UNIT_CONTEXT": "tests.r8_0.frame_harness:unit_context",
+    "FRAMES": "tests.r8_0.frame_harness:frames",
+    "FRAME_EVIDENCE": "tests.r8_0.frame_harness:frame_evidence",
+    "SOURCE_PROFILE": "tests.r8_0.frame_harness:source_profile",
+    "SOURCE_DELTA": "engine.source.deltas:classify",
+    # downstream evidence (engine/qs_core) -------------------------------
+    "FACT_POLICY_RESOLVE": "engine.qs_core.fact_policy:resolve",
+    "FACT_POLICY_LOAD": "engine.qs_core.fact_policy:load_policy",
+    "SCOPE_APPLIES": "engine.qs_core.scope_selector:applies",
+    "SCOPE_VALIDATE": "engine.qs_core.scope_selector:validate",
+    "TRANSCRIPTION_PROMOTE": "engine.qs_core.transcription:promote",
+    "TRANSCRIPTION_RECORD": "engine.qs_core.transcription:record",
+    "CLAIM_FROM": "engine.qs_core.evidence:claim_from_producer",
+    "PUBLISH_WITH_FRAME": "engine.qs_core.quantities:publish_with_frame",
+}
+
+
+def resolve(name):
+    spec = TARGETS[name]
+    mod_name, _, attr = spec.partition(":")
+    try:
+        mod = importlib.import_module(mod_name)
+    except ModuleNotFoundError as err:
+        raise TargetNotImplemented(f"{name} -> {spec}: module not implemented ({err.name})") from None
+    fn = getattr(mod, attr, None)
+    if fn is None:
+        raise TargetNotImplemented(f"{name} -> {spec}: symbol not implemented")
+    return fn
+
+
+def call(name, *args, **kwargs):
+    return resolve(name)(*args, **kwargs)

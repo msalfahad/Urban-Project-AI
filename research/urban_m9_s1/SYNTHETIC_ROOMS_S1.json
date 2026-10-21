@@ -1,0 +1,48 @@
+{
+ "schema": "URBAN_ROOM_INPUT_V1",
+ "project_id": "SYNTHETIC-S1",
+ "revision_set_sha256": "0000000000000000000000000000000000000000000000000000000000005e01",
+ "geometry_source": "SYNTHETIC_FIXTURE",
+ "note": "synthetic test rooms: not a project, not a drawing; every value below is a test input",
+ "assumptions": {
+  "joint_m": 0.002,
+  "min_cut_m": 0.10,
+  "min_reusable_m": 0.10,
+  "kerf_m": 0.0,
+  "rotation_allowed": false,
+  "membrane_min_reusable_m": 0.30
+ },
+ "assumption_sources": {
+  "joint_m": "synthetic test parameter (2 mm rectified porcelain joint)",
+  "min_cut_m": "synthetic test parameter (smallest acceptable cut)",
+  "min_reusable_m": "synthetic test parameter (offcut kept when both sides >= 0.10 m)",
+  "kerf_m": "synthetic test parameter (cut loss ignored)",
+  "rotation_allowed": "synthetic test parameter (offcuts keep their direction)",
+  "membrane_min_reusable_m": "synthetic test parameter (membrane offcut kept when both sides >= 0.30 m)"
+ },
+ "rooms": [
+  {"room_id": "GF-BATH-01", "floor": "GF", "name_en": "Bathroom", "name_ar": "حمام", "wet": true,
+   "length_m": 3.00, "width_m": 2.00,
+   "floor_finish": {"spec_id": "TILE-120x60", "candidates": ["TILE-120x60", "TILE-60x60", "TILE-160x80"]},
+   "waterproofing": {"spec_id": "MEM-URBAN-DEFAULT-1x10", "doorway_detail": "NOT_ESTABLISHED", "penetrations": 1,
+                     "doorways": [{"door_id": "D-01", "width_m": 0.80, "depth_m": 0.20}]}},
+  {"room_id": "GF-LIV-01", "floor": "GF", "name_en": "Living room", "name_ar": "صالة", "wet": false,
+   "length_m": 5.40, "width_m": 4.20,
+   "floor_finish": {"spec_id": "TILE-120x60", "pieces_per_box": 2,
+                    "packaging_source": "SYNTHETIC TEST PARAMETER - not product data"}},
+  {"room_id": "GF-KIT-01", "floor": "GF", "name_en": "Kitchen", "name_ar": "مطبخ", "wet": false,
+   "polygon": [[0, 0], [4.0, 0], [4.0, 2.5], [2.0, 2.5], [2.0, 3.5], [0, 3.5]],
+   "floor_finish": {"spec_id": "TILE-60x60"}},
+  {"room_id": "1F-BED-01", "floor": "1F", "name_en": "Bedroom", "name_ar": "غرفة نوم", "wet": false,
+   "length_m": 4.20, "width_m": 3.60,
+   "floor_finish": {"spec_id": "TILE-60x60", "pieces_per_box": 4,
+                    "packaging_source": "SYNTHETIC TEST PARAMETER - not product data"}},
+  {"room_id": "1F-BATH-02", "floor": "1F", "name_en": "Bathroom", "name_ar": "حمام", "wet": true,
+   "length_m": 2.30, "width_m": 3.20,
+   "floor_finish": {"spec_id": "TILE-60x60"},
+   "waterproofing": {"spec_id": "MEM-URBAN-DEFAULT-1x10", "doorway_detail": "UPTURN_WITHIN_DOORWAY_PIECE",
+                     "doorways": [{"door_id": "D-11", "width_m": 0.90, "depth_m": 0.20}]}},
+  {"room_id": "1F-STORE-01", "floor": "1F", "name_en": "Store", "name_ar": "مخزن", "wet": false,
+   "floor_finish": {"spec_id": "TILE-60x60"}}
+ ]
+}

@@ -1,0 +1,488 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_FINAL_BOQ_V3_RECOMMENDATION_V1",
+ "base": {
+  "registers": "02feef8",
+  "reporting": "b9fef82"
+ },
+ "classes": {
+  "A": "SOURCE_RESOLVABLE_NOW",
+  "B": "GENERIC_ENGINE_DEFECT",
+  "C": "OWNER_METHOD_ALREADY_AVAILABLE",
+  "D": "PROJECT_OWNER_FACT_REQUIRED",
+  "E": "SOURCE_IMPOSSIBLE",
+  "F": "COMMERCIAL_METHOD_REQUIRED",
+  "G": "REPORTING_ONLY_DEFECT"
+ },
+ "new_source_evidence": [
+  {
+   "where": "ST7757.pdf p.8 note 22",
+   "evidence": "cover >= 2.5 cm columns / slabs / beams; >= 7 cm against soil"
+  },
+  {
+   "where": "ST7757.pdf p.8 note 9",
+   "evidence": "development / lap length >= 70 x dia (tension), 40 x dia (compression)"
+  },
+  {
+   "where": "ST7757.pdf p.8 note 18",
+   "evidence": "normal slab thickness 16 cm unless stated"
+  },
+  {
+   "where": "ST7757.pdf p.8 notes 6 / 8 / 16",
+   "evidence": "f'c 300 kg/cm2, fy 4200 kg/cm2, plain concrete 1:3:6"
+  },
+  {
+   "where": "ST7757.pdf p.3 ground beams plan",
+   "evidence": "5 dia 10 / m E.W., T = 10 cm in two slab zones (+1.00 main, +0.30 annex); untagged ground-beam outlines; pool outline"
+  },
+  {
+   "where": "ST7757.pdf p.7",
+   "evidence": "pool walls 20, base 40, 10 cm plain concrete, depths as per arch.; dome span 4.42 rise 1.90 shell 10 cm"
+  },
+  {
+   "where": "ST7757.pdf p.14",
+   "evidence": "typical lift with isolated footing (without basement), boundary wall, parapet details"
+  },
+  {
+   "where": "ST7757.pdf p.16",
+   "evidence": "typical stair: going 30 cm, landing beams 20 x 40, stair rebar per m; waist value not printed"
+  },
+  {
+   "where": "P7757 sections A-A / B-B",
+   "evidence": "FFL +1.00 / +5.50 / +9.70 / roof +13.90; annex +0.30 roof +4.30; parapet 50 cm"
+  }
+ ],
+ "room_coverage_today": {
+  "certified_rooms": 9,
+  "by_floor": {
+   "GF": 5,
+   "1F": 4,
+   "2F": 0
+  },
+  "label_decoding": "NOT DECODED (font-glyph encoded X-ARAB1B over ANSI_1252)"
+ },
+ "blockers": [
+  {
+   "n": 1,
+   "blocker": "Ground slab",
+   "blocks": "CON-GSLAB m³ (+ its blinding, rebar)",
+   "class": [
+    "A",
+    "B"
+   ],
+   "class_text": "A + B",
+   "missing_evidence": "none: \"T=10cm, 5Ø10/m E.W.\" printed on the ground-beams plan; earlier register missed the annotation",
+   "proposed_resolution": "generic fix: bind slab annotations (T=, mesh) printed on any structural plan to the enclosing slab zone; area = slab zone net of ground-beam bands; two zones (main +1.00, annex +0.30)",
+   "freelancer_number_would_be_calibration": true
+  },
+  {
+   "n": 2,
+   "blocker": "Ground beams (interior)",
+   "blocks": "CON-GBEAM m³",
+   "class": [
+    "A",
+    "B"
+   ],
+   "class_text": "A + B",
+   "missing_evidence": "none for interior beams: outlines on plan + p.13 length rule",
+   "proposed_resolution": "generic fix: measure untagged beam bands and assign the section from a printed length rule (rule stored as source evidence); status COMPUTED_FROM_TYPICAL_DETAIL",
+   "freelancer_number_would_be_calibration": true
+  },
+  {
+   "n": 3,
+   "blocker": "Ground beams (exterior, \"follow arch.\")",
+   "blocks": "part of CON-GBEAM",
+   "class": [
+    "D",
+    "A"
+   ],
+   "class_text": "D (after A attempt)",
+   "missing_evidence": "depth from outer ground (±0.00 / +0.15) to slab level not proved",
+   "proposed_resolution": "try section levels first; otherwise one owner / engineer question",
+   "freelancer_number_would_be_calibration": true
+  },
+  {
+   "n": 4,
+   "blocker": "Column necks",
+   "blocks": "CON-NECK m³",
+   "class": [
+    "D"
+   ],
+   "class_text": "D",
+   "missing_evidence": "founding / footing-top level not printed; note 12 leaves founding level to site and soil",
+   "proposed_resolution": "count and sections (CN, P.C 20×50 / 20×70) computed; height BLOCKED; owner: founding level (or confirm depth from the p.9 depth / bearing table)",
+   "freelancer_number_would_be_calibration": true
+  },
+  {
+   "n": 5,
+   "blocker": "Stairs concrete",
+   "blocks": "CON-STAIR m³",
+   "class": [
+    "B",
+    "D"
+   ],
+   "class_text": "B + D",
+   "missing_evidence": "riser count per flight not proved (B); waist not printed (D)",
+   "proposed_resolution": "generic: prove riser count from plan tread lines + floor-to-floor; waist: note 18's 16 cm is an interpretation, not a printed value → compute as REVIEW and ask one confirmation",
+   "freelancer_number_would_be_calibration": true
+  },
+  {
+   "n": 6,
+   "blocker": "Structural walls",
+   "blocks": "CON-SWALL m³",
+   "class": [
+    "A"
+   ],
+   "class_text": "A (to verify)",
+   "missing_evidence": "the \"B.W 20×60\" schedule row is very likely the **boundary-wall beam**, not a shear wall; lift walls appear in the p.14 typical detail",
+   "proposed_resolution": "re-bind B.W to the boundary wall; locate the lift shaft on the plans; lift walls per note 20; if no lift on the plans, the item is EXPECTED = 0 with evidence",
+   "freelancer_number_would_be_calibration": true
+  },
+  {
+   "n": 7,
+   "blocker": "Pool",
+   "blocks": "CON-POOL m³",
+   "class": [
+    "A",
+    "D"
+   ],
+   "class_text": "A + D",
+   "missing_evidence": "plan outline exists (p.3); thicknesses printed (p.7); depths \"as per arch.\"",
+   "proposed_resolution": "search architectural sections / plan for pool depths; if absent, one owner question (depths)",
+   "freelancer_number_would_be_calibration": true
+  },
+  {
+   "n": 8,
+   "blocker": "Dome (new scope)",
+   "blocks": "concrete, rebar, plaster",
+   "class": [
+    "A"
+   ],
+   "class_text": "A",
+   "missing_evidence": "location to confirm on the roof plans",
+   "proposed_resolution": "shell area of revolution from span 4.42 / rise 1.90 / t 0.10; status REVIEW (detail N.T.S.)",
+   "freelancer_number_would_be_calibration": true
+  },
+  {
+   "n": 9,
+   "blocker": "Beam tag / occurrence issues (GF 18, 1F 7)",
+   "blocks": "part of CON-SUPER",
+   "class": [
+    "B",
+    "D"
+   ],
+   "class_text": "B, then D per residue",
+   "missing_evidence": "binding tolerance, span count, band-type conflict",
+   "proposed_resolution": "generic binding pass with synthetic tests; the residue goes to one image-based owner sheet (not 25 questions)",
+   "freelancer_number_would_be_calibration": true
+  },
+  {
+   "n": 10,
+   "blocker": "Column occurrences (9)",
+   "blocks": "part of CON-SUPER",
+   "class": [
+    "B",
+    "D"
+   ],
+   "class_text": "B, then D",
+   "missing_evidence": "tag binding / several outlines / upper member",
+   "proposed_resolution": "same as 9",
+   "freelancer_number_would_be_calibration": true
+  },
+  {
+   "n": 11,
+   "blocker": "F / F10 footing conflict",
+   "blocks": "CON-FOOT (one outline)",
+   "class": [
+    "D"
+   ],
+   "class_text": "D",
+   "missing_evidence": "genuine drawing conflict",
+   "proposed_resolution": "keep separate and visible; owner / consultant decides (OQ3-S1, already asked)",
+   "freelancer_number_would_be_calibration": true
+  },
+  {
+   "n": 12,
+   "blocker": "Rebar weight",
+   "blocks": "REBAR kg",
+   "class": [
+    "A",
+    "F"
+   ],
+   "class_text": "A + F",
+   "missing_evidence": "cover and laps now in source (§2); hook / bend lengths, bar shapes and stirrup closing are not printed",
+   "proposed_resolution": "weight = Σ count × cut length × kg/m; cut length = member dimension − 2 × cover + hooks + laps (70 Ø / 40 Ø from source); hooks need an Urban detailing method (commercial standard, owner approval); never kg/m³",
+   "freelancer_number_would_be_calibration": true
+  },
+  {
+   "n": 13,
+   "blocker": "Room closure (only 9 rooms, 2F none)",
+   "blocks": "flooring, ceilings, skirting, plaster, paint, wall tile by room",
+   "class": [
+    "B"
+   ],
+   "class_text": "B (largest)",
+   "missing_evidence": "149 / 130 / 48 thin sites per floor fail room-likeness; door / portal closure incomplete",
+   "proposed_resolution": "generic: closure at door / portal openings and wall-gap closure for P7757; synthetic tests; Qortuba rerun",
+   "freelancer_number_would_be_calibration": true
+  },
+  {
+   "n": 14,
+   "blocker": "Arabic labels not decoded",
+   "blocks": "room names (bilingual), wet-room semantics",
+   "class": [
+    "B"
+   ],
+   "class_text": "B",
+   "missing_evidence": "font-glyph encoding (style X-ARAB1B over ANSI_1252)",
+   "proposed_resolution": "generic decoder for that font family (glyph map, tested on both projects); labels stay semantic only",
+   "freelancer_number_would_be_calibration": true
+  },
+  {
+   "n": 15,
+   "blocker": "GF open site (salon / reception / dining) entrance",
+   "blocks": "GF zone areas",
+   "class": [
+    "D"
+   ],
+   "class_text": "D",
+   "missing_evidence": "entrance door / screen / open not drawn",
+   "proposed_resolution": "already asked (OQ3-A1); the room engine still certifies the closed parts",
+   "freelancer_number_would_be_calibration": true
+  },
+  {
+   "n": 16,
+   "blocker": "Wall termination unknown",
+   "blocks": "blockwork area, plaster",
+   "class": [
+    "B"
+   ],
+   "class_text": "B",
+   "missing_evidence": "band covers only part of the wall line",
+   "proposed_resolution": "generic: termination per wall segment from the slab / beam bands above (split the face at band ends)",
+   "freelancer_number_would_be_calibration": true
+  },
+  {
+   "n": 17,
+   "blocker": "Blockwork area",
+   "blocks": "BLK-150 / 200 area",
+   "class": [
+    "C",
+    "B"
+   ],
+   "class_text": "C + B",
+   "missing_evidence": "height = structural interval − termination depth; the interval is already accepted for columns (STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP); **does not need the build-up value**",
+   "proposed_resolution": "reuse the existing method once #16 is fixed",
+   "freelancer_number_would_be_calibration": true
+  },
+  {
+   "n": 18,
+   "blocker": "Floor build-up per storey",
+   "blocks": "paint height, wall-tile height, finished ceiling",
+   "class": [
+    "D",
+    "F"
+   ],
+   "class_text": "D or F",
+   "missing_evidence": "not printed (the p.16 typical stair hint of 5 cm is N.T.S. and typical, so it is not authority)",
+   "proposed_resolution": "owner gives the value per storey, **or** approves a firm-wide Urban method (e.g. one build-up for all residential storeys) that travels to future projects",
+   "freelancer_number_would_be_calibration": true
+  },
+  {
+   "n": 19,
+   "blocker": "Finish materials (floor, ceiling, skirting, paint, wall tile)",
+   "blocks": "material lines",
+   "class": [
+    "F",
+    "G"
+   ],
+   "class_text": "F (+ G)",
+   "missing_evidence": "no finish schedule (\"the supplied files are all the files\")",
+   "proposed_resolution": "separate **quantity** from **specification**: release the finish area on the physical measure with \"material per specification\"; material by room class (dry / wet / service) as an Urban commercial method the owner approves once",
+   "freelancer_number_would_be_calibration": true
+  },
+  {
+   "n": 20,
+   "blocker": "Opening heights (windows, doors, curved glazing)",
+   "blocks": "aluminium area, opening deductions, external plaster",
+   "class": [
+    "A",
+    "B",
+    "D",
+    "E"
+   ],
+   "class_text": "A + B, then D / E",
+   "missing_evidence": "NW and SE elevations are vector in P7757.dxf; SW / NE are raster only",
+   "proposed_resolution": "generic: read head / sill from vector elevations (scale-checked against the section levels); raster elevations measured as a second signal (REVIEW); the rest → owner question or SOURCE_IMPOSSIBLE",
+   "freelancer_number_would_be_calibration": true
+  },
+  {
+   "n": 21,
+   "blocker": "Door type / material / height",
+   "blocks": "door schedule lines",
+   "class": [
+    "D",
+    "E"
+   ],
+   "class_text": "D / E",
+   "missing_evidence": "no door schedule",
+   "proposed_resolution": "count by width class from the plan (computed); type and material → owner",
+   "freelancer_number_would_be_calibration": true
+  },
+  {
+   "n": 22,
+   "blocker": "Stair finishes and railing",
+   "blocks": "stair finish, railing lm",
+   "class": [
+    "B",
+    "F"
+   ],
+   "class_text": "B + F",
+   "missing_evidence": "riser count (as #5); railing geometry is on the plan",
+   "proposed_resolution": "railing length from stair / void edges (generic); material → F",
+   "freelancer_number_would_be_calibration": true
+  },
+  {
+   "n": 23,
+   "blocker": "External plaster / paint",
+   "blocks": "facades",
+   "class": [
+    "A",
+    "B",
+    "E"
+   ],
+   "class_text": "A + B, then E",
+   "missing_evidence": "facades from vector elevations; openings from #20; raster facades lower confidence",
+   "proposed_resolution": "compute per facade; raster facades REVIEW or BLOCKED",
+   "freelancer_number_would_be_calibration": true
+  },
+  {
+   "n": 24,
+   "blocker": "Master-bedroom curved glazing height",
+   "blocks": "curved aluminium area",
+   "class": [
+    "A",
+    "D"
+   ],
+   "class_text": "A, then D",
+   "missing_evidence": "salon's 3.65 m is not transferable",
+   "proposed_resolution": "elevation first, then owner",
+   "freelancer_number_would_be_calibration": true
+  },
+  {
+   "n": 25,
+   "blocker": "Annex block (+0.30 / +4.30)",
+   "blocks": "all trades of that block",
+   "class": [
+    "A"
+   ],
+   "class_text": "A (scope check)",
+   "missing_evidence": "has a ground slab zone and columns; I have not verified whether today's registers cover it",
+   "proposed_resolution": "inventory it explicitly; if missing, add it as its own \"OTHER / EXTERNAL\" floor block",
+   "freelancer_number_would_be_calibration": true
+  },
+  {
+   "n": 26,
+   "blocker": "Boundary wall, courtyard paving, external steps, parapets",
+   "blocks": "external works",
+   "class": [
+    "A",
+    "F"
+   ],
+   "class_text": "A (plans, sections, p.14) + F (finishes)",
+   "missing_evidence": "not in scope today (\"external works not measured\")",
+   "proposed_resolution": "add as EXPECTED scope with geometry from source; materials per F",
+   "freelancer_number_would_be_calibration": true
+  },
+  {
+   "n": 27,
+   "blocker": "Foundation waterproofing / membranes",
+   "blocks": "WP under footings / pool",
+   "class": [
+    "A"
+   ],
+   "class_text": "A",
+   "missing_evidence": "membranes drawn on p.7 / p.13 details",
+   "proposed_resolution": "add as expected items (area from the elements they wrap)",
+   "freelancer_number_would_be_calibration": true
+  },
+  {
+   "n": 28,
+   "blocker": "Gypsum decor, cornices, cove light; plaster corners / beads; spatter dash in wet rooms",
+   "blocks": "finishes extras",
+   "class": [
+    "F"
+   ],
+   "class_text": "F",
+   "missing_evidence": "commercial scope, not drawing facts",
+   "proposed_resolution": "owner decides whether Urban measures them and by which rule; until then they are listed as EXPECTED / NOT IN URBAN SCOPE (never silently omitted)",
+   "freelancer_number_would_be_calibration": true
+  },
+  {
+   "n": 29,
+   "blocker": "Reporting: physical measures shown apart from finish lines; BLOCKED rows dominate",
+   "blocks": "readability",
+   "class": [
+    "G"
+   ],
+   "class_text": "G",
+   "missing_evidence": "—",
+   "proposed_resolution": "Reporting V3 design (§5)",
+   "freelancer_number_would_be_calibration": true
+  }
+ ],
+ "owner_decisions_requested_now": [
+  "floor build-up per storey, or an Urban build-up method",
+  "release finish quantities on the physical measure with 'material per specification' + default material by room class (Urban commercial method)",
+  "rebar detailing method: hooks / bends, stirrup closing, laps at stock-length breaks",
+  "extras scope: gypsum decor / cornices / cove light, plaster corners / beads, spatter dash, reveals"
+ ],
+ "owner_questions_deferred_until_source_exhausted": [
+  "F / F10 (open)",
+  "GF entrance (open)",
+  "founding level",
+  "stair waist confirmation",
+  "pool depths",
+  "exterior ground-beam depth",
+  "opening heights not on vector elevations",
+  "door types",
+  "beam / column residue (one image sheet)"
+ ],
+ "scope_added_from_source_and_workflow_review": [
+  "dome",
+  "lift walls / pit",
+  "boundary wall",
+  "parapets",
+  "courtyard paving + skirting",
+  "entrance / stair marble + nosing",
+  "pool finishes",
+  "pool annex (pump room)",
+  "gypsum decor + cornices",
+  "plaster corners / beads + spatter dash",
+  "door / window reveals",
+  "elevator door frame",
+  "internal railing",
+  "foundation / pool membranes",
+  "annex block (+0.30)"
+ ],
+ "not_in_source": [
+  {
+   "item": "BASEMENT",
+   "evidence": "sections: natural ground +-0.00, GF +1.00; lift detail 'without basement'"
+  }
+ ],
+ "work_order": [
+  "source re-mining register",
+  "generic engine fixes with synthetic tests + Qortuba rerun",
+  "Alsenan rebuild, registers twice, freeze V3a, benchmark evaluation after freeze",
+  "Reporting V3 on the freeze: 11 workbooks + master + 2 PDFs + completeness matrix, build twice, readback, recalc",
+  "ONE full suite from the final commit, package, report"
+ ],
+ "benchmark_use": "freelancer B1 raw-row labels only (section / item names) for scope; no quantity read or used",
+ "gates": {
+  "ENGINE_CHANGED": false,
+  "QUANTITIES_CHANGED": false,
+  "IMPLEMENTATION_STARTED": false
+ },
+ "readable_version": "alsenan_final_boq_v3_recommendation.md",
+ "readable_sha256": "12bb0d404440239807bf07f428b47bb0aebbd9fdf00853e29bca02d46b2e3a3e"
+}

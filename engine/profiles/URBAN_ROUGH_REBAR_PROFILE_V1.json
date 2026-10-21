@@ -1,0 +1,42 @@
+{
+ "profile_id": "URBAN_ROUGH_REBAR_PROFILE_V1",
+ "product": "ROUGH_REBAR_SUMMARY",
+ "authority": "URBAN_OWNER_ESTIMATING_RULE",
+ "use": "SANITY_CHECK_ONLY",
+ "approved_by": "Mohammad (Urban Projects)",
+ "approved_on": "2026-10-06",
+ "ratios_kg_per_m3": {
+  "FOUNDATIONS_RELATED": 75,
+  "GROUND_BEAMS_AND_GROUND_SLAB": 130,
+  "WALLS_AND_COLUMNS": 200,
+  "BEAMS": 150,
+  "SLABS": 90,
+  "STAIRS_AND_DOME": 179,
+  "SWIMMING_POOL": 121
+ },
+ "mapping_overrides": {
+  "FOUNDATION_NECK": "WALLS_AND_COLUMNS"
+ },
+ "mapping_overrides_basis": "owner decision: the calibration behind WALLS_AND_COLUMNS = 200 counted necks with columns; this mapping belongs to this rough profile only - engineering taxonomy keeps FOUNDATION_NECK as a distinct element",
+ "ratio_rounding": "integer kg/m3",
+ "not": [
+  "structural-code values",
+  "consultant-design values",
+  "BBS rules",
+  "BBS values",
+  "final procurement values"
+ ],
+ "provenance": "integer-rounded category intensities calibrated from one FREELANCER_QS_REFERENCE sample and approved by the owner as Urban rough-check values; the calibration sample is held only in the project comparison package, never in production",
+ "footer": "ROUGH REBAR SUMMARY is an estimating and sanity-check tool only. It is not a reinforcement takeoff and must not replace the ACCURATE BOQ REBAR / BBS quantity.",
+ "authority_history": [
+  {
+   "authority": "URBAN_OWNER_RULE",
+   "until": "S3.1 (commit 96978ef)"
+  },
+  {
+   "authority": "URBAN_OWNER_ESTIMATING_RULE",
+   "from": "architecture correction before S4",
+   "ratios_changed": false
+  }
+ ]
+}

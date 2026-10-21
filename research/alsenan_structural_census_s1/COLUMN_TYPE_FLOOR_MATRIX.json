@@ -1,0 +1,177 @@
+{
+ "frozen_before_benchmark": true,
+ "policy": {
+  "cb_states": [
+   "MATCH_CONFIRMED",
+   "SPAN_LENGTH_CONFLICT",
+   "SPAN_COUNT_CONFLICT",
+   "TAG_WITH_NO_MEMBER",
+   "MEMBER_WITH_NO_TAG",
+   "BLOCKED"
+  ],
+  "policy_id": "STRUCTURAL_CENSUS_V1",
+  "precedence": [
+   "LOCAL_PANEL_NOTE",
+   "FLOOR_SPECIFIC_NOTE",
+   "PROJECT_DEFAULT"
+  ],
+  "principles": [
+   "plan decides occurrence; schedule only defines",
+   "no default overrides a local note",
+   "a value is never rounded into a table row it does not match",
+   "every plan object ends in one terminal state"
+  ],
+  "rule_states": [
+   "EXACT_RULE",
+   "RULE_NOT_EXACT_MATCH",
+   "BLOCKED_METHOD"
+  ],
+  "terminal_states": [
+   "COUNTED_AND_DEFINED",
+   "COUNTED_DEFINITION_PARTIAL",
+   "COUNTED_BLOCKED",
+   "NOT_IN_SCOPE"
+  ]
+ },
+ "register": "COLUMN_TYPE_FLOOR_MATRIX",
+ "round": "S1",
+ "rows": [
+  {
+   "1F": 0,
+   "2F": 0,
+   "FOUNDATION": 5,
+   "GF": 5,
+   "column_type": "C",
+   "total": 10
+  },
+  {
+   "1F": 0,
+   "2F": 0,
+   "FOUNDATION": 6,
+   "GF": 0,
+   "column_type": "CN",
+   "total": 6
+  },
+  {
+   "1F": 2,
+   "2F": 1,
+   "FOUNDATION": 0,
+   "GF": 0,
+   "column_type": "P.C",
+   "total": 3
+  },
+  {
+   "1F": 1,
+   "2F": 1,
+   "FOUNDATION": 1,
+   "GF": 1,
+   "column_type": "C1",
+   "total": 4
+  },
+  {
+   "1F": 4,
+   "2F": 4,
+   "FOUNDATION": 4,
+   "GF": 4,
+   "column_type": "C2",
+   "total": 16
+  },
+  {
+   "1F": 2,
+   "2F": 1,
+   "FOUNDATION": 6,
+   "GF": 6,
+   "column_type": "C3",
+   "total": 15
+  },
+  {
+   "1F": 2,
+   "2F": 0,
+   "FOUNDATION": 2,
+   "GF": 2,
+   "column_type": "C4",
+   "total": 6
+  },
+  {
+   "1F": 3,
+   "2F": 1,
+   "FOUNDATION": 3,
+   "GF": 3,
+   "column_type": "C5",
+   "total": 10
+  },
+  {
+   "1F": 1,
+   "2F": 0,
+   "FOUNDATION": 1,
+   "GF": 1,
+   "column_type": "C6",
+   "total": 3
+  },
+  {
+   "1F": 1,
+   "2F": 0,
+   "FOUNDATION": 1,
+   "GF": 1,
+   "column_type": "C7",
+   "total": 3
+  },
+  {
+   "1F": 2,
+   "2F": 0,
+   "FOUNDATION": 2,
+   "GF": 2,
+   "column_type": "C8",
+   "total": 6
+  },
+  {
+   "1F": 2,
+   "2F": 1,
+   "FOUNDATION": 2,
+   "GF": 2,
+   "column_type": "C9",
+   "total": 7
+  },
+  {
+   "1F": 0,
+   "2F": 0,
+   "FOUNDATION": 1,
+   "GF": 1,
+   "column_type": "C10",
+   "total": 2
+  },
+  {
+   "1F": 0,
+   "2F": 0,
+   "FOUNDATION": 2,
+   "GF": 2,
+   "column_type": "C11",
+   "total": 4
+  }
+ ],
+ "source": {
+  "drawing": "ST7757.dxf",
+  "dxf_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+  "pdf": "ST7757.pdf",
+  "pdf_sha256": "74da1523f05eb3c6a4fe3ddebaef2c3d841891f003efc03bc32a3fb4553337e3"
+ },
+ "summary": {
+  "floor_totals": {
+   "1F": 20,
+   "2F": 9,
+   "FOUNDATION": 36,
+   "GF": 30
+  },
+  "floors": [
+   "FOUNDATION",
+   "GF",
+   "1F",
+   "2F"
+  ],
+  "grand_total": 95,
+  "type_conflicts": [
+   "COLPOS-X04-Y01-7988-7462",
+   "COLPOS-X12-Y02-24308-8912"
+  ]
+ }
+}

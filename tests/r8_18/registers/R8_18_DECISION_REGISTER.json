@@ -1,0 +1,330 @@
+{
+ "SCHEMA": "URBAN_R8_18_DECISION_REGISTER_V1",
+ "recommendation_before_coding": {
+  "SCHEMA": "URBAN_R8_18_RECOMMENDATION_BEFORE_CODING_V1",
+  "written": "after inspecting WALL_FACE_SURFACE_POLICY_V1 (site_faces), WF-O1 in the R8.17 blind and rebuild records, the DXF texts for levels / sections / heights, the wet 3.20 m fact, the door strip and glazed strip geometry (frame / leaf / track positions), the rule store (US-01 / US-03 / US-04 / US-05 / US-06 / US-07 / US-14 / QP-03 / QP-04 / QP-07 / QP-13 / R-13 and owner_rules.py section E) and the row / release digest layers; before any R8.18 code and before any new Qortuba wall-face result",
+  "inspected": [
+   "WF-O1: V1 computes its second form as WALL_FACE x H - window deductions + lintels + head faces, but WALL_FACE excludes the window spans (they are booked as OPENING_SPAN): the wall plane across a window is dropped AND the window rectangle is deducted, and a window gets neither a below-sill nor an above-head surface. The primary form (gross plane incl. opening spans - rectangles) is right. The synthetic window test asserted the area of the primary form, never state == COMPUTED - that is how WF-O1 passed the freeze",
+   "levels: the only vertical source fact in the measured region is the text 'LEVEL R.F = 4.00 m' (a roof / floor level, corroborating the owner's ~4.00 m floor-to-floor); no section, elevation, beam depth, ceiling zone or floor build-up exists in the DXF - a derived clear height is impossible from source",
+   "hinged doors: the closed-leaf line (closure A) of every apartment door lies on one face of its strip (I1443 / I1561 / I2044 on the BATH face, I1471 on the M.B.ROOM face, I841 / I1988 on the BED.ROOM face, I677 on the HALL face): the frame is at that face, so the full-depth reveal faces the OTHER room - for every apartment door that is a dry room (HALL or M.B.ROOM); I677's reveal faces the common area (outside the measured unit)",
+   "sliding door: the tracks H542 (on the HALL face, x = 1096080.8) and H533 (x = 1095980.8) occupy the wall from the HALL face to 50 mm short of the PAINTRY face (x = 1095930.8): HALL owns NO reveal (frame flush), PAINTRY owns a 50 mm reveal; its north PAINTRY-side jamb is drawn (H1513, 50 mm), its south side opens into a 150 x 600 wall cavity (no reveal face drawn)",
+   "windows: every glazing line is drawn ON the room face line - a plan convention, not frame evidence; no source reveal depth exists (US-07 0.25 m fallback stays)",
+   "column / duct finish: R-13 ('the owner chose the full column') is about the full vs half deduction COLUMN of the historical blockwork SHEET - not structural columns. R8.17 cited it as column-face finish authority: a misreading (no value was published on it). The only column rule is owner_rules section E (skirting: 'a column is not an opening'). No rule states plaster / paint / tile on column faces or on the duct",
+   "waterproofing: US-04 floor membrane (m2) + 0.15 m upturn along the wet-room perimeter; US-05 doorway NOT deducted; US-14 bathroom, kitchen, pantry / preparation kitchen, iron, washing, laundry; QP-13 the PAINTRY receives it along its GROSS perimeter, which is not the skirting path",
+   "digests: V4, the wall-face engine and waterproofing are trade layers; no TS01 input changes this round"
+  ],
+  "1_wf_o1_cause": "One classification mistake shared by intent but not by code: window spans live in OPENING_SPAN, so the second form (WALL_FACE x H - window rectangles + lintels + heads) loses the wall plane through every window and then also deducts the window rectangle; windows have no below-sill / above-head surfaces at all in V1.",
+  "2_v2_fix": "One wall-plane identity: every span on a wall line (wall face, window, door, sliding door, floor-reaching glazing) belongs to the plane; an opening removes exactly its rectangle clipped to [0, H]. METHOD A from the conservation pass: (sum of plane span lengths) x H - sum of rectangles + head faces. METHOD B from explicitly generated surface records: WALL_FACE (full-height spans) + BELOW_SILL (w x sill) + ABOVE_OPENING (w x (H - top)) + HEAD_FACE. Different data paths, predeclared tolerance, any mismatch -> BLOCKED; a separate reconcile() is tested against a deliberately broken surface list; every area test asserts state == COMPUTED.",
+  "3_topology_unchanged": "YES: trade layer only; the topology digest must stay the R8.17 digest.",
+  "4_height_as_evidence_object": "YES: WALL_HEIGHT_AUTHORITY per (project, revision, floor / measurement scope, trade) with ranked candidates: source finish height > section / elevation clear height > derived from authoritative components > source-bound owner / project fact > permitted project default > BLOCKED. No Urban constant.",
+  "5_315_scope": "YES: QORTUBA new revision, the selected region / plan, DRY_INTERNAL_ROOM, trades PLASTER and PAINT only; the 4.00 - 0.60 - 0.15 - 0.10 arithmetic is stored as OWNER_RATIONALE (components not source-established), never a formula.",
+  "6_320_separate": "YES: the wet / service tile fact stays its own authority and trade. The owner's own dry rationale implies ~3.15 m usable height, below the 3.20 m tile: recorded as POTENTIAL_PHYSICAL_CONFLICT_NOT_PROVEN (rationale components are not source facts; wet rooms may differ) - never clipped, not asked.",
+  "7_future_derivation": "gross vertical height from source levels (finished-floor to finished-floor, or slab to slab with the build-up as a component) MINUS each established deduction (beam / soffit zone where the finish stops at it, ceiling / service / decor zone, floor build-up when the gross is slab-based) - each component carrying its own source and authority; the result carries formula, components, state. Floor-to-floor alone is never a wall height.",
+  "8_blocked_when_a_component_is_unknown": "YES at that rank: a derivation with one unknown required component is BLOCKED (never filled with a default); resolution falls to the next rank (an owner / project fact). For Qortuba: only the 4.00 m level exists in source -> derivation BLOCKED -> rank 4 owner fact 3.15 m.",
+  "9_reveal_authority_separation": "Physical reveal (geometry + owning side, from frame / leaf / track position) is kept apart from its FINISH state: PLASTER_DEFAULT (owner rule), PLASTER_AND_PAINT (only when the owning side is a painted dry surface), PORCELAIN_EXPLICIT (only with explicit authority), OTHER_EXPLICIT, UNRESOLVED (ownership or surface not established - that reveal only). A wet / service owner never gets paint by default.",
+  "10_profile_position": "The frame / track plane splits the wall depth: each side owns the depth between its face and the nearest frame line; a frame flush with a face leaves that side no reveal. A reveal face not drawn on its side (cavity) is UNRESOLVED, never invented.",
+  "11_publish_this_round": "YES as SHADOW authorised subtotals per room after the frozen blind V2 run, IF both area methods reconcile everywhere. The COMPLETE plaster / paint / tile rows stay null: column faces (dry and wet) and the duct have no finish authority (R-13 misread in R8.17) - listed as UNRESOLVED contributors with their areas, never silently excluded.",
+  "12_waterproofing": "YES, same round, own frozen policy (WATERPROOFING_POLICY_V1): floor membrane = wet-room TS01 floor area; upturn path = the GROSS site boundary (doorway / sliding-door / column / window lines all included; internal obstacle perimeters included); 0.15 m; independent of skirting, wall tile and marble.",
+  "13_disagreements_with_chatgpt": [
+   "R-13 gives no column-face finish authority (R8.17 cited it wrongly): column faces must be UNRESOLVED for plaster, paint AND wet tile until the owner states it - one new owner question.",
+   "Two 'independent' area checks are only independent if they read different data (aggregated span lengths vs generated surface records); the 'broken fixture' must be a broken surface list fed to the reconciliation - a correct engine cannot be made to emit one.",
+   "Hinged-door reveal ownership is deterministic too (closed-leaf line = frame face), not only the sliding door's: every apartment door reveal faces a dry room -> PLASTER_AND_PAINT, none is 'wet context'.",
+   "The glazing line drawn on a window's room face is a plan convention, not frame evidence: window reveals keep the US-07 0.25 m fallback depth.",
+   "WET_WALL_TILE_PREP is the same surface set as WALL_TILE (US-03: the tile-prep trade carries the ceramic face) - its own row, never plaster.",
+   "The 3.15 m dry rationale conflicts in principle with 3.20 m wet tile: flag, do not clip, do not ask (not proven by source)."
+  ],
+  "14_r8_19": "R8.19: (1) owner column / duct finish answer -> complete plaster / paint / tile rows (no re-freeze if only authority arrives); (2) closure release review records for I1471 / H2430 / H2431; (3) a BOQ assembly / report layer over the shadow rows (units, row ids, authorities, blockers - no prices); (4) source anchor (pinned DWG route) without unpinned software; (5) a second project with a resolved unit."
+ },
+ "order": [
+  "recommendation (0107408)",
+  "engines + facts + rules + tests + blind script (bcac8a3)",
+  "THIS freeze",
+  "commit",
+  "THEN the blind Qortuba run",
+  "THEN rebuild / registers",
+  "blind (583d726)",
+  "rebuild / registers (WF2-L1 disclosed)"
+ ],
+ "decisions": [
+  {
+   "id": "R818-D01",
+   "decision": "WALL_HEIGHT_AUTHORITY_POLICY_V1: height is a scoped evidence object; Qortuba dry plaster / paint 3.15 m (owner fact, rank 4); no constant"
+  },
+  {
+   "id": "R818-D02",
+   "decision": "wet / service tile 3.20 m kept; the 3.15 / 3.20 relation flagged, never clipped"
+  },
+  {
+   "id": "R818-D03",
+   "decision": "WALL_FACE_SURFACE_POLICY_V2: one plane identity, two independent area paths, fail closed (WF-O1 fixed generically)"
+  },
+  {
+   "id": "R818-D04",
+   "decision": "REVEAL_FINISH_POLICY_V1: ownership from frame / leaf / track position, finish default plaster, porcelain only explicit"
+  },
+  {
+   "id": "R818-D05",
+   "decision": "PLASTER / PAINT / WALL_TILE / WET_WALL_TILE_PREP published as SHADOW authorised subtotals; COMPLETE null (columns, duct)"
+  },
+  {
+   "id": "R818-D06",
+   "decision": "WATERPROOFING_POLICY_V1: floor = wet site area, upturn = gross boundary, 0.15 m, doorways not deducted"
+  },
+  {
+   "id": "R818-D07",
+   "decision": "second-project regression NOT_RUN (no clean fixture)"
+  }
+ ],
+ "gates": {
+  "MIGRATION_PLANNING_READY": "YES",
+  "MIGRATION_EXECUTION_READY": "NO",
+  "PRODUCTION_MIGRATION": "NO"
+ },
+ "answers": {
+  "1_height_scoped_authority": "YES: WALL_HEIGHT_AUTHORITY_POLICY_V1 resolves one height per (project, revision, floor / region, plan, space class, trade) from ranked candidates; no Urban constant exists",
+  "2_315_scope": "YES: 3.15 m (OWNER_PROJECT_FACT, QORTUBA-NEW-DRY-WALL-FINISH-HEIGHT-OWNER-001@v1) for DRY_INTERNAL_ROOM PLASTER and PAINT only (Qortuba new revision, selected plan / region)",
+  "3_rationale_not_formula": "YES: 4.00 - 0.60 - 0.15 - 0.10 stored as OWNER_RATIONALE; the rank-3 derivation is BLOCKED (beam, ceiling and build-up components have no source authority)",
+  "4_320_preserved": "YES: WALL_TILE 3.2 m from QORTUBA-NEW-WET-SERVICE-FINISH-OWNER-001@v1; conflict flagged ['POTENTIAL_PHYSICAL_CONFLICT_NOT_PROVEN'], never clipped",
+  "5_wf_o1_cause": "One classification mistake shared by intent but not by code: window spans live in OPENING_SPAN, so the second form (WALL_FACE x H - window rectangles + lintels + heads) loses the wall plane through every window and then also deducts the window rectangle; windows have no below-sill / above-head surfaces at all in V1.",
+  "6_v2_fix": "One wall-plane identity: every span on a wall line (wall face, window, door, sliding door, floor-reaching glazing) belongs to the plane; an opening removes exactly its rectangle clipped to [0, H]. METHOD A from the conservation pass: (sum of plane span lengths) x H - sum of rectangles + head faces. METHOD B from explicitly generated surface records: WALL_FACE (full-height spans) + BELOW_SILL (w x sill) + ABOVE_OPENING (w x (H - top)) + HEAD_FACE. Different data paths, predeclared tolerance, any mismatch -> BLOCKED; a separate reconcile() is tested against a deliberately broken surface list; every area test asserts state == COMPUTED.",
+  "7_frozen_before_results": "YES: freeze bcac8a3 (amendments NONE), blind record committed before any comparison",
+  "8_every_fixture_both_checks": "YES: 33 synthetic tests; every valid wall-face fixture asserts state == COMPUTED and reconciliation PASS; test_22 feeds a broken surface list and gets FAIL",
+  "9_blind_run_reconciles": "YES: all_sites_reconcile True, double-count guard PASS",
+  "10_dry_plaster_published": "YES as SHADOW authorised subtotal (COMPUTED_SHADOW_WITH_UNRESOLVED); COMPLETE_M2 null",
+  "11_plaster_total_and_per_room": {
+   "DRY_WALL_PLASTER_AUTHORISED_M2": 280.744014,
+   "per_room": {
+    "BED.ROOM (SITE-5f1762f1a93b91ca)": 54.058301,
+    "HALL/whgm (SITE-77a2130eb275604c)": 92.219365,
+    "DRESS/M.B.ROOM (SITE-a6405850100155ac)": 87.888107,
+    "BED.ROOM (SITE-daca396d6d730e60)": 46.578241
+   },
+   "WET_SERVICE_REVEAL_PLASTER_M2": 1.400248
+  },
+  "12_paint_published": "YES as SHADOW authorised subtotal (COMPUTED_SHADOW_WITH_UNRESOLVED); COMPLETE_M2 null",
+  "13_paint_total_and_difference": {
+   "PAINT_AUTHORISED_M2": 280.744014,
+   "why": "every dry-owned wall surface and reveal is PLASTER_AND_PAINT at the same 3.15 m; the wet / service-owned reveals are plaster only (no paint invented)"
+  },
+  "14_tile_published": "YES as SHADOW authorised subtotal (COMPUTED_SHADOW_WITH_UNRESOLVED); COMPLETE_M2 null; WET_WALL_TILE_PREP 112.813512 m2 separate",
+  "15_bathroom_tile": {
+   "SITE-1c4abf65f9b5db1e": [
+    [
+     "BATH"
+    ],
+    34.24
+   ],
+   "SITE-a2b19efc492a6d0b": [
+    [
+     "BATH"
+    ],
+    23.84
+   ],
+   "SITE-fe8ed5548fb4310e": [
+    [
+     "BATH"
+    ],
+    23.2
+   ]
+  },
+  "16_paintry_tile": {
+   "SITE-8c1c7563d5252c50": [
+    [
+     "PAINTRY"
+    ],
+    31.533512
+   ]
+  },
+  "17_reveals_separate_surfaces": "YES: 49 reveal records (opening, owning side, surface), each its own identity; the double-count guard covers wall surfaces and reveals",
+  "18_default_reveal": "PLASTER (URBAN-REVEAL-FINISH-METHOD@v1); PLASTER_AND_PAINT only on a painted dry owner",
+  "19_porcelain_only_explicit": "YES: porcelain reveals NONE (no explicit authority)",
+  "20_sliding_door_reveals": "tracks H542 (flush with the HALL face) and H533 (0.05 m from the PAINTRY face): HALL owns no reveal, PAINTRY owns 0.05 m; the north jamb face is drawn by a wall line, the south jamb face only by H480 (FIXTURE) -> UNRESOLVED (WF2-L1)",
+  "21_profile_resolved_ownership": "YES for the depth split ({'SITE-8c1c7563d5252c50': 0.05, 'SITE-77a2130eb275604c': 0.0, 'state': 'ESTABLISHED', 'frame_offsets_m': [0.05, 0.14999999999898136]}); the south PAINTRY-side jamb face is not drawn by a wall line -> UNRESOLVED",
+  "22_ambiguous_reveals": [
+   "GLAZED|QORTUBA_REV_NEW|H533||SEGMENT|0 RIGHT_JAMB (PAINTRY)"
+  ],
+  "23_column_faces_assigned": "NO: UNRESOLVED in every trade (dry 10.8675 m2, wet / service 14.88 m2)",
+  "24_duct_assigned": "NO: UNRESOLVED (15.75 m2)",
+  "25_why_blocked": {
+   "COLUMN_FACE": "no plaster / paint / tile rule for column faces: R-13 is the blockwork SHEET's full-deduction column (R8.17 misread it); owner_rules section E is skirting only",
+   "OBSTACLE_FACE": "the duct exists (owner fact) but no finish is stated for its faces; skirting eligibility is not a finish",
+   "r8_17_misreading": "column / duct finish: R-13 ('the owner chose the full column') is about the full vs half deduction COLUMN of the historical blockwork SHEET - not structural columns. R8.17 cited it as column-face finish authority: a misreading (no value was published on it). The only column rule is owner_rules section E (skirting: 'a column is not an opening'). No rule states plaster / paint / tile on column faces or on the duct"
+  },
+  "26_hall_lobby_jambs_soffit": {
+   "jambs": [
+    [
+     "LEFT_JAMB",
+     0.44
+    ],
+    [
+     "RIGHT_JAMB",
+     0.44
+    ]
+   ],
+   "soffit": {
+    "reveal_soffit_m2": 0.239289,
+    "q14_soffit_exclusion_m2": 0.239289,
+    "equal": true
+   }
+  },
+  "27_mb_dress_no_invented_jamb": "YES: [('LEFT_JAMB', 0.4725)] - one physical jamb, full height, no soffit; the H518 side is wall plane, never a jamb",
+  "28_closures_zero": "YES: 0 surfaces from topology closures, area 0.0 m2",
+  "29_waterproofing_implemented": "YES: WATERPROOFING_POLICY_V1 (own policy, frozen, blind), COMPUTED_SHADOW",
+  "30_waterproofing_floor_m2": 29.4275,
+  "31_waterproofing_upturn_lm": 44.2,
+  "32_upturn_15cm": "YES: 0.15 m (US-04)",
+  "33_doorways_not_deducted": "YES: doorways_deducted False; door lengths in the upturn {'SITE-1c4abf65f9b5db1e': 0.8, 'SITE-8c1c7563d5252c50': 4.360992, 'SITE-a2b19efc492a6d0b': 0.8, 'SITE-fe8ed5548fb4310e': 0.8} (doors, the sliding door and the window, all kept)",
+  "34_marble_separate": "YES: NONE (no explicit rule links a threshold to the membrane)",
+  "35_floor_ceiling_rows_changed": {
+   "Q-03": {
+    "R8.17": 17.7425,
+    "R8.18": 17.7425,
+    "delta": 0.0
+   },
+   "Q-03P": {
+    "R8.17": 11.685,
+    "R8.18": 11.685,
+    "delta": 0.0
+   },
+   "Q-11": {
+    "R8.17": 17.7425,
+    "R8.18": 17.7425,
+    "delta": 0.0
+   },
+   "Q-12": {
+    "R8.17": 11.685,
+    "R8.18": 11.685,
+    "delta": 0.0
+   },
+   "Q-13": {
+    "R8.17": 111.8988,
+    "R8.18": 111.8988,
+    "delta": 0.0
+   },
+   "Q-14": {
+    "R8.17": 140.637,
+    "R8.18": 140.637,
+    "delta": 0.0
+   }
+  },
+  "36_skirting_hidden_profile_changed": {
+   "SKIRTING": {
+    "R8.17": 94.13682,
+    "R8.18": 94.13682,
+    "unchanged": true,
+    "v4_edited": false,
+    "is_target": false
+   },
+   "HIDDEN_PROFILE": {
+    "R8.17": 94.13682,
+    "R8.18": 94.13682,
+    "unchanged": true
+   }
+  },
+  "37_marble_changed": {
+   "R8.17": {
+    "MARBLE_THRESHOLD_PLAN_AREA_M2": 0.51,
+    "MARBLE_THRESHOLD_LENGTH_LM": 3.4,
+    "count": 4,
+    "blocked": []
+   },
+   "R8.18": {
+    "MARBLE_THRESHOLD_PLAN_AREA_M2": 0.51,
+    "MARBLE_THRESHOLD_LENGTH_LM": 3.4,
+    "count": 4,
+    "blocked": []
+   },
+   "unchanged": true,
+   "waterproofing": "independent"
+  },
+  "38_second_project": "NOT_RUN - no second project has a resolved unit AND a certified topology; running one anyway would need an adopted unit (a calibration) or an uncertified topology",
+  "39_source_anchor": "NOT_ESTABLISHED",
+  "40_release_blockers": {
+   "Q-03": [
+    "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "Q-03P": [
+    "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+    "OBJECT_FOOTPRINT_IMPLICIT: proven furniture / fixture footprints are inside the measured floor by the topology convention, not by a FLOOR_FINISH footprint authority",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "Q-11": [
+    "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "Q-12": [
+    "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+    "OBJECT_FOOTPRINT_IMPLICIT: proven furniture / fixture footprints are inside the measured floor by the topology convention, not by a FLOOR_FINISH footprint authority",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "Q-13": [
+    "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "Q-14": [
+    "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "SKIRTING": [
+    "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "HIDDEN_PROFILE": [
+    "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "MARBLE_THRESHOLD": [
+    "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "DRY_WALL_PLASTER": [
+    "5 UNRESOLVED contributors (26.6175 m2: column / duct finish authority)",
+    "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "WET_SERVICE_REVEAL_PLASTER": [
+    "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "PAINT": [
+    "5 UNRESOLVED contributors (26.6175 m2: column / duct finish authority)",
+    "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "WALL_TILE": [
+    "4 UNRESOLVED contributors (14.88 m2: column / duct finish authority)",
+    "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "WET_WALL_TILE_PREP": [
+    "4 UNRESOLVED contributors (14.88 m2: column / duct finish authority)",
+    "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "WATERPROOFING_FLOOR_M2": [
+    "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "WATERPROOFING_UPTURN_LM": [
+    "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ]
+  },
+  "41_new_silent_errors": [
+   "WF2-L1 (blind-script wiring, found after the blind run): the reveal-face check accepted ANY drawn line, so H480 (FIXTURE) 'closed' the PAINTRY-side south jamb of the sliding door. Rebuild reads admitted wall / structural parts only: that one reveal 0.11 m2 PLASTER_DEFAULT -> UNRESOLVED; WET_SERVICE_REVEAL_PLASTER 1.510248 -> 1.400248; every authorised subtotal unchanged",
+   "R8.17 cited R-13 as column-face finish authority (a misreading; no value was published on it)",
+   "the PAINTRY window / sliding-door spans carry the label FLOOR_CONTACT_UNPROVEN in perimeter_by_class_m because classify_v4 was called without the floor-contact map: a LABEL only - the length is in the gross upturn either way (doorways and openings are never deducted)",
+   "a pre-freeze repository grep for 'waterproof' surfaced historical OLD-revision figures in APPROVED_QUANTITIES.json (bathroom upturn 30.225 lm, PAINTRY 11.150 lm) - NONE: the waterproofing policy has no tunable parameter (floor = certified site area; upturn = gross site boundary; 0.15 m from US-04); the frozen run was blind (expected_value_given False, historical_quantities_used False); the R8.18 values are not compared to them"
+  ],
+  "42_r8_19": "R8.19: (1) owner column / duct finish answer -> complete plaster / paint / tile rows (no re-freeze if only authority arrives); (2) closure release review records for I1471 / H2430 / H2431; (3) a BOQ assembly / report layer over the shadow rows (units, row ids, authorities, blockers - no prices); (4) source anchor (pinned DWG route) without unpinned software; (5) a second project with a resolved unit.",
+  "43_disagreements": [
+   "R-13 gives no column-face finish authority (R8.17 cited it wrongly): column faces must be UNRESOLVED for plaster, paint AND wet tile until the owner states it - one new owner question.",
+   "Two 'independent' area checks are only independent if they read different data (aggregated span lengths vs generated surface records); the 'broken fixture' must be a broken surface list fed to the reconciliation - a correct engine cannot be made to emit one.",
+   "Hinged-door reveal ownership is deterministic too (closed-leaf line = frame face), not only the sliding door's: every apartment door reveal faces a dry room -> PLASTER_AND_PAINT, none is 'wet context'.",
+   "The glazing line drawn on a window's room face is a plan convention, not frame evidence: window reveals keep the US-07 0.25 m fallback depth.",
+   "WET_WALL_TILE_PREP is the same surface set as WALL_TILE (US-03: the tile-prep trade carries the ceramic face) - its own row, never plaster.",
+   "The 3.15 m dry rationale conflicts in principle with 3.20 m wet tile: flag, do not clip, do not ask (not proven by source)."
+  ]
+ }
+}

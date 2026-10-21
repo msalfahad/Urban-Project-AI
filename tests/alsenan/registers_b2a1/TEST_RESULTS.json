@@ -1,0 +1,10 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_B2A_TEST_RESULTS_V1",
+ "state": "RECORDED_BY_THE_PACKAGE_STEP",
+ "why": "the one full suite runs from the final commit",
+ "b2a_test_files": [
+  "tests/alsenan/test_b2a_engines_synthetic.py",
+  "tests/alsenan/test_alsenan_b2a_real.py",
+  "tests/alsenan/test_alsenan_b2a1_real.py"
+ ]
+}

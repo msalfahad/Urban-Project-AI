@@ -1,0 +1,143 @@
+{
+ "classes": [
+  "INDEPENDENT_EXTRACTION_AGREEMENT",
+  "SHARED_SOURCE_AGREEMENT",
+  "SHARED_ASSUMPTION_AGREEMENT",
+  "CORRELATED_REASONING",
+  "UNDETERMINED"
+ ],
+ "rows": [
+  {
+   "class": "SHARED_ASSUMPTION_AGREEMENT",
+   "element": "COLUMNS",
+   "pair": "christiannp vs U-C4N",
+   "values": {
+    "COL_1F_m3": [
+     8.888,
+     8.888
+    ],
+    "COL_2F_m3": [
+     3.377,
+     3.797
+    ],
+    "COL_FOU_m3": [
+     6.15,
+     6.15
+    ],
+    "COL_GF_m3": [
+     26.235,
+     26.235
+    ]
+   },
+   "why": "three floors identical to the litre; christiannp's FOU and GF rest on A2 + A3 (and A8); identical values from a different route would need the same height model and population. U-C4N's own assumptions are not in this environment."
+  },
+  {
+   "class": "INDEPENDENT_EXTRACTION_AGREEMENT",
+   "element": "COLUMNS (FOU+GF total)",
+   "pair": "christiannp vs Urban",
+   "values": {
+    "report_m3": 32.385,
+    "urban_m3": 32.153
+   },
+   "why": "different routes (S1 census vs donor outlines) agree on the total within 0.23 m3; the split differs by convention"
+  },
+  {
+   "class": "SHARED_ASSUMPTION_AGREEMENT",
+   "element": "SLABS (volume)",
+   "pair": "christiannp vs U-C4N",
+   "values": {
+    "christiannp_m3": 96.753,
+    "uc4n_m3": 95.689
+   },
+   "why": "both assumed GF t = 0.20 (christiannp A1; U-C4N per the coverage brief); A1 alone is +11.622 m3"
+  },
+  {
+   "class": "INDEPENDENT_EXTRACTION_AGREEMENT on GF / 2F donor-donor (raster vs vector); UNDETERMINED on 1F (8.1 m2 apart) and on Urban vs donors (opening classification)",
+   "element": "SLAB NET AREA",
+   "pair": "christiannp vs U-C4N vs Urban",
+   "values": {
+    "1F": {
+     "christiannp": 179.325,
+     "uc4n": 171.235,
+     "urban": 169.752
+    },
+    "2F": {
+     "christiannp": 55.275,
+     "uc4n": 55.59,
+     "urban": 55.478
+    },
+    "GF": {
+     "christiannp": 290.555,
+     "uc4n": 291.425,
+     "urban": 276.788
+    }
+   },
+   "why": "areas come from geometry, not from a shared constant"
+  },
+  {
+   "class": "SHARED_ASSUMPTION_AGREEMENT",
+   "element": "GROUND BEAMS (volume)",
+   "pair": "christiannp vs U-C4N",
+   "values": {
+    "christiannp_m3": 36.006,
+    "uc4n_m3": 36.005
+   },
+   "why": "christiannp = length x 0.30 x 0.60 (A5); U-C4N 36.005 / 0.18 = 200.028 m - the same depth assumption on the same length"
+  },
+  {
+   "class": "INDEPENDENT_EXTRACTION_AGREEMENT",
+   "element": "GROUND BEAMS (length)",
+   "pair": "christiannp vs Urban",
+   "values": {
+    "christiannp_m": 200.036,
+    "christiannp_strips": 42,
+    "urban_bands": 43,
+    "urban_m": 198.796
+   },
+   "why": "two pairing implementations, +0.62 %"
+  },
+  {
+   "class": "SHARED_SOURCE_AGREEMENT (thickness: the T=10 cm text) + SHARED_ASSUMPTION_AGREEMENT (area: GF gross outline, A7)",
+   "element": "GROUND SLAB",
+   "pair": "christiannp vs U-C4N",
+   "values": {
+    "christiannp_m3": 32.404,
+    "uc4n_m3": 32.183
+   },
+   "why": "thickness and area authorities are separate; only the thickness is source"
+  },
+  {
+   "class": "UNDETERMINED",
+   "element": "STAIRS",
+   "pair": "christiannp vs U-C4N",
+   "values": {
+    "christiannp_m3": 5.048,
+    "uc4n_m3": 5.325
+   },
+   "why": "both assumption-dependent (christiannp A9); 5 % apart; the stair breakdown is in the report but not imported"
+  },
+  {
+   "class": "SHARED_SOURCE_AGREEMENT",
+   "element": "FOOTINGS",
+   "pair": "all three",
+   "values": {
+    "christiannp": 65.669,
+    "uc4n": 66.579,
+    "urban": 64.346
+   },
+   "why": "same schedule L x W x H; differences are occurrence counts (F3, F / F10, FN)"
+  },
+  {
+   "class": "INDEPENDENT_EXTRACTION_AGREEMENT",
+   "element": "BUA",
+   "pair": "all three",
+   "values": {
+    "christiannp": 598.708,
+    "uc4n": 590.362,
+    "urban": 595.092
+   },
+   "why": "within 1.4 % across three geometry routes"
+  }
+ ],
+ "rule": "agreement raises confidence only when the routes are INDEPENDENT_EXTRACTION_AGREEMENT; both donor runs were agent sessions working from the same owner brief, so donor-donor agreement is CORRELATED_REASONING unless shown otherwise"
+}

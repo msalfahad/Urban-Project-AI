@@ -1,0 +1,123 @@
+{
+ "classes": [
+  "GEOMETRY",
+  "SOURCE_NOT_IN_S8_2",
+  "DEPTH_ASSUMPTION",
+  "SCOPE",
+  "NOTATION_SCOPE",
+  "COUNT_CONVENTION",
+  "BAR_LENGTH",
+  "REFERENCE_FORMULA_MISMATCH",
+  "BLOCKED_IN_S8_2",
+  "UNSEPARATED",
+  "SANITY_RATIO",
+  "REFERENCE_ROUNDING",
+  "UNKNOWN"
+ ],
+ "difference_by_class": {
+  "FREELANCER_QS|CONCRETE_M3|BLOCKED_IN_S8_2": 4.37422550032379,
+  "FREELANCER_QS|CONCRETE_M3|DEPTH_ASSUMPTION": 4.242106036232762,
+  "FREELANCER_QS|CONCRETE_M3|GEOMETRY": 0.023668463443448924,
+  "FREELANCER_QS|CONCRETE_M3|SCOPE": 3.708,
+  "FREELANCER_QS|REBAR_KG|UNSEPARATED": 1500.0,
+  "OLD_URBAN_R4|REBAR_KG|NOTATION_SCOPE": 236.53086419753086,
+  "OLD_URBAN_R4|REBAR_KG|REFERENCE_FORMULA_MISMATCH": 34.29135828395064,
+  "OLD_URBAN_R4|REBAR_KG|SOURCE_NOT_IN_S8_2": 317.91851851851845,
+  "OLD_URBAN_V3B|CONCRETE_M3|BLOCKED_IN_S8_2": 4.37422550032379,
+  "OLD_URBAN_V3B|CONCRETE_M3|GEOMETRY": -2.0314599123613877,
+  "OLD_URBAN_V3B|CONCRETE_M3|SOURCE_NOT_IN_S8_2": 2.7102344120375976,
+  "OLD_URBAN_V3B|FINISH_M2|SCOPE": 15.5,
+  "OLD_URBAN_V3B|PLAIN_CONCRETE_M3|BLOCKED_IN_S8_2": 1.0935563750809476,
+  "OLD_URBAN_V3B|PLAIN_CONCRETE_M3|GEOMETRY": -0.2980563750809475,
+  "OLD_URBAN_V3B|REBAR_KG|COUNT_CONVENTION": 28.71234567901233,
+  "OLD_URBAN_V3B|REBAR_KG|NOTATION_SCOPE": 231.20740720987655,
+  "OLD_URBAN_V3B|REBAR_KG|SOURCE_NOT_IN_S8_2": 325.81851911111113,
+  "OLD_URBAN_V3B|WATERPROOFING_M2|BLOCKED_IN_S8_2": 10.935563750809475,
+  "OLD_URBAN_V3B|WATERPROOFING_M2|GEOMETRY": -6.587133823671781,
+  "OLD_URBAN_V3B|WATERPROOFING_M2|SOURCE_NOT_IN_S8_2": 19.371570072862305,
+  "ROUGH_RATIO|REBAR_KG|SANITY_RATIO": 611.413
+ },
+ "findings": [
+  "F-S8.2-PF-01",
+  "F-S8.2-PF-02",
+  "F-S8.2-PF-03",
+  "F-S8.2-PF-04",
+  "F-S8.2-PF-05",
+  "F-S8.2-PF-06",
+  "F-S8.2-PF-07"
+ ],
+ "freeze_commit": "ae6393bf1516c551c8c278adc8f16103eb1a93aa",
+ "freeze_manifest_sha256": "749affe72ec80083715f01b790b96bb5fca31685a93f952369ec7d4469f3494d",
+ "freeze_manifest_verified": true,
+ "frozen_engine_stamp": "763a00e+code:d16a9a8bc2c0445a",
+ "no_reference_quantity": [
+  {
+   "QUANTITY": "CONCRETE_M3",
+   "REFERENCE": "CHRISTIANNP",
+   "VALUE": null
+  },
+  {
+   "QUANTITY": "CONCRETE_M3",
+   "REFERENCE": "U-C4N",
+   "VALUE": null
+  }
+ ],
+ "reference_consistency": {
+  "freelancer_rows_vs_summary": [
+   12.348,
+   12.348,
+   true
+  ],
+  "r4_components_vs_population": [
+   588.740741,
+   588.740741,
+   true
+  ],
+  "v3b_concrete_parts_vs_line": [
+   5.053,
+   5.053,
+   true
+  ],
+  "v3b_rebar_sets_vs_line": [
+   585.738272,
+   585.738,
+   true
+  ]
+ },
+ "reference_totals": {
+  "FREELANCER_QS|CONCRETE_M3": 12.348,
+  "FREELANCER_QS|REBAR_KG": 1500.0,
+  "OLD_URBAN_R4|REBAR_KG": 588.740741,
+  "OLD_URBAN_V3B|CONCRETE_M3": 5.053,
+  "OLD_URBAN_V3B|FINISH_M2": 15.5,
+  "OLD_URBAN_V3B|PLAIN_CONCRETE_M3": 0.7955,
+  "OLD_URBAN_V3B|REBAR_KG": 585.738272,
+  "OLD_URBAN_V3B|WATERPROOFING_M2": 23.72,
+  "ROUGH_RATIO|REBAR_KG": 611.413
+ },
+ "references_opened": [
+  "research/alsenan_multi_engine_comparison/FREELANCER_CATEGORY_LINEAGE.json",
+  "research/alsenan_multi_engine_comparison/MULTI_ENGINE_CONCRETE_COMPARISON.json",
+  "research/alsenan_multi_engine_comparison/MULTI_ENGINE_REBAR_COMPARISON.json",
+  "research/alsenan_rebar_source_exhaustion_04/registers/REBAR_POPULATION_REGISTER_V4.json",
+  "tests/alsenan/registers_v3b/RASTER_EVIDENCE_REGISTER.json",
+  "tests/alsenan/registers_v3b/REBAR_POPULATION_REGISTER.json",
+  "tests/alsenan/registers_v3b/STRUCTURE_V3B_REGISTER.json",
+  "tests/alsenan/registers_v3b/TECHNICAL_QTO_REGISTER.json"
+ ],
+ "round": "S8_2_POST_FREEZE",
+ "rule": "comparison only: nothing here changes an S8.2 quantity; a correction needs a new issue, new source evidence, a new regression and a new version",
+ "s8_2": {
+  "band_m2": 2.3567255756848677,
+  "footprint_m2": 10.935563750809475,
+  "lanes": {
+   "BLOCKED_UNQUANTIFIED": 16,
+   "SOURCE_CONFLICT": 5
+  },
+  "released_kg": 0.0,
+  "released_m3": 0.0
+ },
+ "s8_2_outputs_written": false,
+ "tuned": false,
+ "unknown_rows": []
+}

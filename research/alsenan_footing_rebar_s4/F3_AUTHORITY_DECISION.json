@@ -1,0 +1,11 @@
+{
+ "decision": "F3 occurrence count = 2, SOURCE_VERIFIED; the reference disagreement is a comparison / engineering flag and never changes the project-source release state",
+ "is_consultant_instruction": false,
+ "is_owner_instruction": false,
+ "is_project_claim": false,
+ "is_source_conflict_in_project_documents": false,
+ "origin": "an external reference-count comparison only (V3C_FORENSIC_ACCURACY_DONOR_AUDIT.md line 187 / 529)",
+ "project_source": "two independent outlines (166B, 166C), each with its own C3/F3 tag (168F, 168E), both drawn at the scheduled 160 x 140 cm (S1 FOOTING_OCCURRENCE_REGISTER; R9.1 08 FO10 / FO11)",
+ "question": "OQ-11 (V3C donor audit, 'F3 is tagged twice on the foundation plan; the [reference] has one')",
+ "supersedes": "pre-S4 COUNT_QUERIES {F3: OQ-11} (which held F3 PROVISIONAL); the pre-S4 package itself is frozen and unchanged"
+}

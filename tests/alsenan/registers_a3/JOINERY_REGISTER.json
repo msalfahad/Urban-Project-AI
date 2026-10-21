@@ -1,0 +1,103 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_A3_JOINERY_V1",
+ "floors": {
+  "GF": {
+   "parts": [
+    "ALSENAN_P7757_DXF|H177||SEGMENT|0",
+    "ALSENAN_P7757_DXF|H284||SEGMENT|0",
+    "ALSENAN_P7757_DXF|H311||SEGMENT|0",
+    "ALSENAN_P7757_DXF|H348||SEGMENT|0",
+    "ALSENAN_P7757_DXF|H462||SEGMENT|0",
+    "ALSENAN_P7757_DXF|H821||SEGMENT|0",
+    "ALSENAN_P7757_DXF|H831||SEGMENT|0"
+   ],
+   "runs": [
+    {
+     "parts": [
+      "ALSENAN_P7757_DXF|H177||SEGMENT|0",
+      "ALSENAN_P7757_DXF|H348||SEGMENT|0",
+      "ALSENAN_P7757_DXF|H821||SEGMENT|0",
+      "ALSENAN_P7757_DXF|H831||SEGMENT|0"
+     ],
+     "fronts": [
+      "ALSENAN_P7757_DXF|H177||SEGMENT|0",
+      "ALSENAN_P7757_DXF|H348||SEGMENT|0"
+     ],
+     "offsets_mm": [
+      500.0
+     ],
+     "front_length_mm": 3516.2,
+     "free_ends_on_walls": 2
+    },
+    {
+     "parts": [
+      "ALSENAN_P7757_DXF|H284||SEGMENT|0",
+      "ALSENAN_P7757_DXF|H311||SEGMENT|0"
+     ],
+     "fronts": [
+      "ALSENAN_P7757_DXF|H284||SEGMENT|0",
+      "ALSENAN_P7757_DXF|H311||SEGMENT|0"
+     ],
+     "offsets_mm": [
+      500.0
+     ],
+     "front_length_mm": 4700.0,
+     "free_ends_on_walls": 2
+    },
+    {
+     "parts": [
+      "ALSENAN_P7757_DXF|H462||SEGMENT|0"
+     ],
+     "fronts": [
+      "ALSENAN_P7757_DXF|H462||SEGMENT|0"
+     ],
+     "offsets_mm": [
+      500.0
+     ],
+     "front_length_mm": 2100.0,
+     "free_ends_on_walls": 2
+    }
+   ]
+  },
+  "1F": {
+   "parts": [
+    "ALSENAN_P7757_DXF|H2826||SEGMENT|0",
+    "ALSENAN_P7757_DXF|H2828||SEGMENT|0"
+   ],
+   "runs": [
+    {
+     "parts": [
+      "ALSENAN_P7757_DXF|H2826||SEGMENT|0"
+     ],
+     "fronts": [
+      "ALSENAN_P7757_DXF|H2826||SEGMENT|0"
+     ],
+     "offsets_mm": [
+      500.0
+     ],
+     "front_length_mm": 1800.0,
+     "free_ends_on_walls": 2
+    },
+    {
+     "parts": [
+      "ALSENAN_P7757_DXF|H2828||SEGMENT|0"
+     ],
+     "fronts": [
+      "ALSENAN_P7757_DXF|H2828||SEGMENT|0"
+     ],
+     "offsets_mm": [
+      500.0
+     ],
+     "front_length_mm": 2100.0,
+     "free_ends_on_walls": 2
+    }
+   ]
+  },
+  "2F": {
+   "parts": [],
+   "runs": []
+  }
+ },
+ "method": "URBAN-FLOOR-FINISH-BEFORE-CABINETRY-METHOD@v1 (floor finish runs under fixed joinery; joinery never splits a room)",
+ "authority": "engine inference COUNTER_RUN (entity_role_inference), not an owner fact"
+}

@@ -1,0 +1,630 @@
+{
+ "categories": [
+  {
+   "arabic_name": "الخرسانه العاديه",
+   "category_id": "PLAIN_CONCRETE",
+   "notes": [],
+   "physical_scope": {
+    "PLAIN_CONCRETE": 47.055
+   },
+   "possible_overlap": [],
+   "summary_value": 47.05500000000001,
+   "unit": "m3"
+  },
+  {
+   "arabic_name": "اجمالى القواعد",
+   "category_id": "FOUNDATIONS_RELATED",
+   "notes": [
+    "label reads 'footings' but the traced rows also include {'PERIMETER_GROUND_BEAM': 8.604, 'STRAP_BEAM': 3.392} m3 (scope wider than the label)"
+   ],
+   "physical_scope": {
+    "FOOTING": 65.634,
+    "PERIMETER_GROUND_BEAM": 8.604,
+    "STRAP_BEAM": 3.392
+   },
+   "possible_overlap": [
+    "PERIMETER_GROUND_BEAM sits in the foundations total; Urban classes it as ground beam (exterior GB)"
+   ],
+   "summary_value": 77.63050000000001,
+   "unit": "m3"
+  },
+  {
+   "arabic_name": "اجمالي الشناجات والارضيه",
+   "category_id": "GROUND_BEAMS_AND_GROUND_SLAB",
+   "notes": [
+    "label reads 'ground beams + ground slab' but the traced rows also include {'BOUNDARY_GROUND_BEAM': 7.56} m3 (scope wider than the label)"
+   ],
+   "physical_scope": {
+    "BOUNDARY_GROUND_BEAM": 7.56,
+    "GROUND_BEAM": 37.98,
+    "GROUND_SLAB": 29.55
+   },
+   "possible_overlap": [
+    "BOUNDARY_GROUND_BEAM (boundary wall beam) counted here; Urban keeps boundary wall separate"
+   ],
+   "summary_value": 75.09,
+   "unit": "m3"
+  },
+  {
+   "arabic_name": "اجمالى الحوائط والأعمدة",
+   "category_id": "WALLS_AND_COLUMNS",
+   "notes": [
+    "label reads 'walls + columns' but the traced rows also include {'COLUMN_NECK': 8.805, 'LIFT_WALL': 2.4} m3 (scope wider than the label)"
+   ],
+   "physical_scope": {
+    "COLUMN_1F": 7.728,
+    "COLUMN_2F": 3.381,
+    "COLUMN_GF": 17.438,
+    "COLUMN_NECK": 8.805,
+    "LIFT_WALL": 2.4
+   },
+   "possible_overlap": [
+    "COLUMN_NECK (1.5 m necks) counted with columns; Urban treats necks as foundation-related"
+   ],
+   "summary_value": 39.7515,
+   "unit": "m3"
+  },
+  {
+   "arabic_name": "الجسور",
+   "category_id": "BEAMS",
+   "notes": [
+    "1F subtotal كمرات!I82 = =SUM(I60:I78) skips row 59 (B1 0.128 m3) that كمرات!I79 includes - formula inconsistency"
+   ],
+   "physical_scope": {
+    "BEAM_GROSS_1F": 17.027,
+    "BEAM_GROSS_2F": 6.056,
+    "BEAM_GROSS_GF": 42.883
+   },
+   "possible_overlap": [
+    "BEAM_GROSS includes the slab depth over each beam -> overlaps Urban SLAB full depth"
+   ],
+   "summary_value": 65.965875,
+   "unit": "m3"
+  },
+  {
+   "arabic_name": "البلاطات",
+   "category_id": "SLABS",
+   "notes": [
+    "1F slab deduction 'بلاطات '!F16 = =0.4*0.15*1.35 is multiplied by G16 = 0 - the deduction is zeroed"
+   ],
+   "physical_scope": {
+    "SLAB_NET_1F": 19.2,
+    "SLAB_NET_2F": 7.497,
+    "SLAB_NET_GF": 33.12
+   },
+   "possible_overlap": [
+    "SLAB_NET areas exclude the beam footprints (allocated to BEAM_GROSS)"
+   ],
+   "summary_value": 59.81739999999999,
+   "unit": "m3"
+  },
+  {
+   "arabic_name": "الدرج+القبه",
+   "category_id": "STAIRS_AND_DOME",
+   "notes": [],
+   "physical_scope": {
+    "DOME": 6.78,
+    "STAIR": 15.053
+   },
+   "possible_overlap": [],
+   "summary_value": 21.8328,
+   "unit": "m3"
+  },
+  {
+   "arabic_name": "حمام السباجة",
+   "category_id": "SWIMMING_POOL",
+   "notes": [
+    "label reads 'pool' but the traced rows also include {'POOL_PUMP_WALL': 1.08, 'POOL_ROOM_FLOOR': 2.4} m3 (scope wider than the label)",
+    "stray cross-sheet total حمام السباحة!D19 (I16+<BROKEN_REF>+السلم!B25+'بلاطات '!<BROKEN_REF>+كمرات!B142+'الحوائط + الأعمدة'!B74+القواعد!B35) contains a broken reference and evaluates to an error (not used by the summary)"
+   ],
+   "physical_scope": {
+    "POOL": 8.868,
+    "POOL_PUMP_WALL": 1.08,
+    "POOL_ROOM_FLOOR": 2.4
+   },
+   "possible_overlap": [],
+   "summary_value": 12.348,
+   "unit": "m3"
+  },
+  {
+   "arabic_name": "اجمالى الخرسانة المسلحة",
+   "category_id": "TOTAL_RC",
+   "notes": [],
+   "physical_scope": {},
+   "possible_overlap": [],
+   "summary_value": 352.436075,
+   "unit": "m3"
+  },
+  {
+   "arabic_name": "اجمالي كميات الحديد",
+   "category_id": "TOTAL_STEEL",
+   "notes": [
+    "steel tonnages on the summary sheet are typed values, not formulas - no bar-by-bar lineage exists in the workbook"
+   ],
+   "physical_scope": {},
+   "possible_overlap": [],
+   "summary_value": 44.19,
+   "unit": "t"
+  }
+ ],
+ "freelancer_view": {
+  "categories": {
+   "BEAMS_1F": {
+    "by_state": {
+     "REFERENCE": 17.027
+    },
+    "category": "BEAMS_1F",
+    "components": [
+     "FQS:كمرات!I60",
+     "FQS:كمرات!I61",
+     "FQS:كمرات!I62",
+     "FQS:كمرات!I63",
+     "FQS:كمرات!I64",
+     "FQS:كمرات!I65",
+     "FQS:كمرات!I66",
+     "FQS:كمرات!I67",
+     "FQS:كمرات!I68",
+     "FQS:كمرات!I69",
+     "FQS:كمرات!I70",
+     "FQS:كمرات!I71",
+     "FQS:كمرات!I72",
+     "FQS:كمرات!I74",
+     "FQS:كمرات!I75",
+     "FQS:كمرات!I76",
+     "FQS:كمرات!I77",
+     "FQS:كمرات!I78"
+    ],
+    "components_without_value": [],
+    "excluded_components": [],
+    "included_components": [
+     "BEAM_GROSS_1F"
+    ],
+    "measurement_basis": "BEAM_GROSS_DEPTH",
+    "overlap_policy": "slab over beam in BEAMS",
+    "quantity": 17.027
+   },
+   "BEAMS_2F": {
+    "by_state": {
+     "REFERENCE": 6.056000000000001
+    },
+    "category": "BEAMS_2F",
+    "components": [
+     "FQS:كمرات!I86",
+     "FQS:كمرات!I87",
+     "FQS:كمرات!I88",
+     "FQS:كمرات!I89",
+     "FQS:كمرات!I90",
+     "FQS:كمرات!I91",
+     "FQS:كمرات!I92",
+     "FQS:كمرات!I93",
+     "FQS:كمرات!I94",
+     "FQS:كمرات!I95"
+    ],
+    "components_without_value": [],
+    "excluded_components": [],
+    "included_components": [
+     "BEAM_GROSS_2F"
+    ],
+    "measurement_basis": "BEAM_GROSS_DEPTH",
+    "overlap_policy": "slab over beam in BEAMS",
+    "quantity": 6.056000000000001
+   },
+   "BEAMS_GF": {
+    "by_state": {
+     "REFERENCE": 42.882875
+    },
+    "category": "BEAMS_GF",
+    "components": [
+     "FQS:كمرات!I11",
+     "FQS:كمرات!I12",
+     "FQS:كمرات!I13",
+     "FQS:كمرات!I14",
+     "FQS:كمرات!I15",
+     "FQS:كمرات!I16",
+     "FQS:كمرات!I17",
+     "FQS:كمرات!I18",
+     "FQS:كمرات!I19",
+     "FQS:كمرات!I20",
+     "FQS:كمرات!I21",
+     "FQS:كمرات!I22",
+     "FQS:كمرات!I23",
+     "FQS:كمرات!I24",
+     "FQS:كمرات!I25",
+     "FQS:كمرات!I26",
+     "FQS:كمرات!I27",
+     "FQS:كمرات!I28",
+     "FQS:كمرات!I29",
+     "FQS:كمرات!I30",
+     "FQS:كمرات!I31",
+     "FQS:كمرات!I32",
+     "FQS:كمرات!I33",
+     "FQS:كمرات!I34",
+     "FQS:كمرات!I35",
+     "FQS:كمرات!I36",
+     "FQS:كمرات!I37",
+     "FQS:كمرات!I38",
+     "FQS:كمرات!I39",
+     "FQS:كمرات!I40",
+     "FQS:كمرات!I41",
+     "FQS:كمرات!I42",
+     "FQS:كمرات!I43",
+     "FQS:كمرات!I44",
+     "FQS:كمرات!I45",
+     "FQS:كمرات!I46",
+     "FQS:كمرات!I47",
+     "FQS:كمرات!I48",
+     "FQS:كمرات!I49",
+     "FQS:كمرات!I50"
+    ],
+    "components_without_value": [],
+    "excluded_components": [],
+    "included_components": [
+     "BEAM_GROSS_GF"
+    ],
+    "measurement_basis": "BEAM_GROSS_DEPTH",
+    "overlap_policy": "slab over beam in BEAMS",
+    "quantity": 42.882875
+   },
+   "BOUNDARY": {
+    "by_state": {
+     "REFERENCE": 7.56
+    },
+    "category": "BOUNDARY",
+    "components": [
+     "FQS:الشناجات!I15"
+    ],
+    "components_without_value": [],
+    "excluded_components": [],
+    "included_components": [
+     "BOUNDARY_GROUND_BEAM"
+    ],
+    "measurement_basis": "BOUNDARY_WALL_BEAM",
+    "overlap_policy": "counted with ground beams in the summary",
+    "quantity": 7.56
+   },
+   "COLUMNS_1F": {
+    "by_state": {
+     "REFERENCE": 7.728000000000001
+    },
+    "category": "COLUMNS_1F",
+    "components": [
+     "FQS:الحوائط + الأعمدة!I52",
+     "FQS:الحوائط + الأعمدة!I53",
+     "FQS:الحوائط + الأعمدة!I54",
+     "FQS:الحوائط + الأعمدة!I55",
+     "FQS:الحوائط + الأعمدة!I56",
+     "FQS:الحوائط + الأعمدة!I57",
+     "FQS:الحوائط + الأعمدة!I58",
+     "FQS:الحوائط + الأعمدة!I59",
+     "FQS:الحوائط + الأعمدة!I60",
+     "FQS:الحوائط + الأعمدة!I61"
+    ],
+    "components_without_value": [],
+    "excluded_components": [],
+    "included_components": [
+     "COLUMN_1F"
+    ],
+    "measurement_basis": "COLUMN_BELOW_BEAM_SOFFIT_3.45",
+    "overlap_policy": "no joint",
+    "quantity": 7.728000000000001
+   },
+   "COLUMNS_2F": {
+    "by_state": {
+     "REFERENCE": 3.3810000000000007
+    },
+    "category": "COLUMNS_2F",
+    "components": [
+     "FQS:الحوائط + الأعمدة!I66",
+     "FQS:الحوائط + الأعمدة!I67",
+     "FQS:الحوائط + الأعمدة!I68",
+     "FQS:الحوائط + الأعمدة!I69",
+     "FQS:الحوائط + الأعمدة!I70",
+     "FQS:الحوائط + الأعمدة!I71"
+    ],
+    "components_without_value": [],
+    "excluded_components": [],
+    "included_components": [
+     "COLUMN_2F"
+    ],
+    "measurement_basis": "COLUMN_BELOW_BEAM_SOFFIT_3.45",
+    "overlap_policy": "no joint",
+    "quantity": 3.3810000000000007
+   },
+   "COLUMNS_GF": {
+    "by_state": {
+     "REFERENCE": 17.4375
+    },
+    "category": "COLUMNS_GF",
+    "components": [
+     "FQS:الحوائط + الأعمدة!I36",
+     "FQS:الحوائط + الأعمدة!I37",
+     "FQS:الحوائط + الأعمدة!I38",
+     "FQS:الحوائط + الأعمدة!I39",
+     "FQS:الحوائط + الأعمدة!I40",
+     "FQS:الحوائط + الأعمدة!I41",
+     "FQS:الحوائط + الأعمدة!I42",
+     "FQS:الحوائط + الأعمدة!I43",
+     "FQS:الحوائط + الأعمدة!I44",
+     "FQS:الحوائط + الأعمدة!I45",
+     "FQS:الحوائط + الأعمدة!I46",
+     "FQS:الحوائط + الأعمدة!I47"
+    ],
+    "components_without_value": [],
+    "excluded_components": [],
+    "included_components": [
+     "COLUMN_GF"
+    ],
+    "measurement_basis": "COLUMN_BELOW_BEAM_SOFFIT_3.75",
+    "overlap_policy": "no joint",
+    "quantity": 17.4375
+   },
+   "DOME": {
+    "by_state": {
+     "REFERENCE": 6.780000000000001
+    },
+    "category": "DOME",
+    "components": [
+     "FQS:السلم!G13"
+    ],
+    "components_without_value": [],
+    "excluded_components": [],
+    "included_components": [
+     "DOME"
+    ],
+    "measurement_basis": "DOME_AREA_x_T",
+    "overlap_policy": "3 domes",
+    "quantity": 6.780000000000001
+   },
+   "FOOTINGS": {
+    "by_state": {
+     "REFERENCE": 65.634
+    },
+    "category": "FOOTINGS",
+    "components": [
+     "FQS:القواعد!I13",
+     "FQS:القواعد!I14",
+     "FQS:القواعد!I15",
+     "FQS:القواعد!I16",
+     "FQS:القواعد!I17",
+     "FQS:القواعد!I18",
+     "FQS:القواعد!I19",
+     "FQS:القواعد!I20",
+     "FQS:القواعد!I21",
+     "FQS:القواعد!I22",
+     "FQS:القواعد!I23",
+     "FQS:القواعد!I24",
+     "FQS:القواعد!I25",
+     "FQS:القواعد!I26",
+     "FQS:القواعد!I27",
+     "FQS:القواعد!I28"
+    ],
+    "components_without_value": [],
+    "excluded_components": [],
+    "included_components": [
+     "FOOTING"
+    ],
+    "measurement_basis": "PAD_LxWxH_SCHEDULE",
+    "overlap_policy": "pads only",
+    "quantity": 65.634
+   },
+   "GROUND_BEAMS": {
+    "by_state": {
+     "REFERENCE": 46.583999999999996
+    },
+    "category": "GROUND_BEAMS",
+    "components": [
+     "FQS:القواعد!I32",
+     "FQS:الشناجات!I13",
+     "FQS:الشناجات!I14"
+    ],
+    "components_without_value": [],
+    "excluded_components": [],
+    "included_components": [
+     "GROUND_BEAM",
+     "PERIMETER_GROUND_BEAM"
+    ],
+    "measurement_basis": "GB_RUN_LENGTH_x_30x60",
+    "overlap_policy": "longitudinal + transverse runs + perimeter",
+    "quantity": 46.583999999999996
+   },
+   "GROUND_SLAB": {
+    "by_state": {
+     "REFERENCE": 29.55
+    },
+    "category": "GROUND_SLAB",
+    "components": [
+     "FQS:الشناجات!I11"
+    ],
+    "components_without_value": [],
+    "excluded_components": [],
+    "included_components": [
+     "GROUND_SLAB"
+    ],
+    "measurement_basis": "GROUND_SLAB_GROSS_AREA_x_T",
+    "overlap_policy": "one area",
+    "quantity": 29.55
+   },
+   "NECKS": {
+    "by_state": {
+     "REFERENCE": 8.805
+    },
+    "category": "NECKS",
+    "components": [
+     "FQS:الحوائط + الأعمدة!I16",
+     "FQS:الحوائط + الأعمدة!I17",
+     "FQS:الحوائط + الأعمدة!I18",
+     "FQS:الحوائط + الأعمدة!I19",
+     "FQS:الحوائط + الأعمدة!I20",
+     "FQS:الحوائط + الأعمدة!I21",
+     "FQS:الحوائط + الأعمدة!I22",
+     "FQS:الحوائط + الأعمدة!I23",
+     "FQS:الحوائط + الأعمدة!I24",
+     "FQS:الحوائط + الأعمدة!I25",
+     "FQS:الحوائط + الأعمدة!I26",
+     "FQS:الحوائط + الأعمدة!I27",
+     "FQS:الحوائط + الأعمدة!I28"
+    ],
+    "components_without_value": [],
+    "excluded_components": [],
+    "included_components": [
+     "COLUMN_NECK"
+    ],
+    "measurement_basis": "NECK_SECTION_x_1.5M",
+    "overlap_policy": "assumed 1.5 m necks",
+    "quantity": 8.805
+   },
+   "PLAIN_CONCRETE": {
+    "by_state": {
+     "REFERENCE": 47.05500000000001
+    },
+    "category": "PLAIN_CONCRETE",
+    "components": [
+     "FQS:القواعد!I11"
+    ],
+    "components_without_value": [],
+    "excluded_components": [],
+    "included_components": [
+     "PLAIN_CONCRETE"
+    ],
+    "measurement_basis": "FOOTPRINT_15x31.37x0.1",
+    "overlap_policy": "one footprint",
+    "quantity": 47.05500000000001
+   },
+   "POOL": {
+    "by_state": {
+     "REFERENCE": 12.348
+    },
+    "category": "POOL",
+    "components": [
+     "FQS:حمام السباحة!I11",
+     "FQS:حمام السباحة!I12",
+     "FQS:حمام السباحة!I13",
+     "FQS:حمام السباحة!I14",
+     "FQS:حمام السباحة!I15"
+    ],
+    "components_without_value": [],
+    "excluded_components": [],
+    "included_components": [
+     "POOL",
+     "POOL_PUMP_WALL",
+     "POOL_ROOM_FLOOR"
+    ],
+    "measurement_basis": "POOL_WALLS_BASE_PLUS_PUMP_ROOM",
+    "overlap_policy": "pool + pump room",
+    "quantity": 12.348
+   },
+   "SLABS_1F": {
+    "by_state": {
+     "REFERENCE": 19.2
+    },
+    "category": "SLABS_1F",
+    "components": [
+     "FQS:بلاطات !I16"
+    ],
+    "components_without_value": [],
+    "excluded_components": [],
+    "included_components": [
+     "SLAB_NET_1F"
+    ],
+    "measurement_basis": "SLAB_NET_OF_BEAMS",
+    "overlap_policy": "between beams",
+    "quantity": 19.2
+   },
+   "SLABS_2F": {
+    "by_state": {
+     "REFERENCE": 7.497400000000001
+    },
+    "category": "SLABS_2F",
+    "components": [
+     "FQS:بلاطات !I23",
+     "FQS:بلاطات !I24"
+    ],
+    "components_without_value": [],
+    "excluded_components": [],
+    "included_components": [
+     "SLAB_NET_2F"
+    ],
+    "measurement_basis": "SLAB_NET_OF_BEAMS",
+    "overlap_policy": "between beams",
+    "quantity": 7.497400000000001
+   },
+   "SLABS_GF": {
+    "by_state": {
+     "REFERENCE": 33.12
+    },
+    "category": "SLABS_GF",
+    "components": [
+     "FQS:بلاطات !I11"
+    ],
+    "components_without_value": [],
+    "excluded_components": [],
+    "included_components": [
+     "SLAB_NET_GF"
+    ],
+    "measurement_basis": "SLAB_NET_OF_BEAMS",
+    "overlap_policy": "between beams",
+    "quantity": 33.12
+   },
+   "STAIRS": {
+    "by_state": {
+     "REFERENCE": 15.052800000000001
+    },
+    "category": "STAIRS",
+    "components": [
+     "FQS:السلم!G20",
+     "FQS:السلم!G21",
+     "FQS:السلم!G11",
+     "FQS:السلم!G12"
+    ],
+    "components_without_value": [],
+    "excluded_components": [],
+    "included_components": [
+     "STAIR"
+    ],
+    "measurement_basis": "STAIR_SLAB_x_0.28",
+    "overlap_policy": "waist + steps as one 0.28 slab",
+    "quantity": 15.052800000000001
+   },
+   "STRAP_BEAMS": {
+    "by_state": {
+     "REFERENCE": 3.3924999999999996
+    },
+    "category": "STRAP_BEAMS",
+    "components": [
+     "FQS:القواعد!I29",
+     "FQS:القواعد!I30",
+     "FQS:القواعد!I31"
+    ],
+    "components_without_value": [],
+    "excluded_components": [],
+    "included_components": [
+     "STRAP_BEAM"
+    ],
+    "measurement_basis": "STRAP_BAND",
+    "overlap_policy": "between footings",
+    "quantity": 3.3924999999999996
+   },
+   "STRUCTURAL_WALLS": {
+    "by_state": {
+     "REFERENCE": 2.4000000000000004
+    },
+    "category": "STRUCTURAL_WALLS",
+    "components": [
+     "FQS:الحوائط + الأعمدة!I11"
+    ],
+    "components_without_value": [],
+    "excluded_components": [],
+    "included_components": [
+     "LIFT_WALL"
+    ],
+    "measurement_basis": "LIFT_WALLS_20",
+    "overlap_policy": "lift walls",
+    "quantity": 2.4000000000000004
+   }
+  },
+  "unmapped_components": [],
+  "view_id": "FREELANCER_QS_VIEW"
+ },
+ "role": "FREELANCER_QS_REFERENCE",
+ "use": "COMPARISON_ONLY"
+}

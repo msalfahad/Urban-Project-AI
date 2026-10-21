@@ -1,0 +1,8341 @@
+{
+ "ambiguous_bindings": [
+  {
+   "candidates": [
+    "BL029",
+    "BL016"
+   ],
+   "element_id": "BM-GF_ROOF-B1-UNBOUND-45D",
+   "element_type": "BEAM",
+   "floor": "GF_ROOF",
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "45D",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB",
+     "text": "B1",
+     "xy_mm": [
+      16626,
+      16532
+     ]
+    }
+   ],
+   "tag": "B1"
+  },
+  {
+   "candidates": [
+    "BL031",
+    "BA004"
+   ],
+   "element_id": "BM-GF_ROOF-B8-UNBOUND-472",
+   "element_type": "BEAM",
+   "floor": "GF_ROOF",
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "472",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB",
+     "text": "B8",
+     "xy_mm": [
+      30868,
+      18194
+     ]
+    }
+   ],
+   "tag": "B8"
+  },
+  {
+   "candidates": [
+    "BL012",
+    "BA003",
+    "BA004"
+   ],
+   "element_id": "BM-1F_ROOF-B6-UNBOUND-76C",
+   "element_type": "BEAM",
+   "floor": "1F_ROOF",
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "76C",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB",
+     "text": "B6",
+     "xy_mm": [
+      14622,
+      9800
+     ]
+    }
+   ],
+   "tag": "B6"
+  },
+  {
+   "candidates": [
+    "BA007",
+    "BA008",
+    "BL030"
+   ],
+   "element_id": "BM-1F_ROOF-B6-UNBOUND-6D7",
+   "element_type": "BEAM",
+   "floor": "1F_ROOF",
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "6D7",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB",
+     "text": "B6",
+     "xy_mm": [
+      29103,
+      10512
+     ]
+    }
+   ],
+   "tag": "B6"
+  },
+  {
+   "candidates": [
+    "BL013",
+    "BA002",
+    "BL009"
+   ],
+   "element_id": "BM-1F_ROOF-B6-UNBOUND-6BD",
+   "element_type": "BEAM",
+   "floor": "1F_ROOF",
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "6BD",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB",
+     "text": "B6",
+     "xy_mm": [
+      14483,
+      15161
+     ]
+    }
+   ],
+   "tag": "B6"
+  },
+  {
+   "candidates": [
+    "BL031",
+    "BA005",
+    "BA006"
+   ],
+   "element_id": "BM-1F_ROOF-B6-UNBOUND-6D4",
+   "element_type": "BEAM",
+   "floor": "1F_ROOF",
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "6D4",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB",
+     "text": "B6",
+     "xy_mm": [
+      29103,
+      15184
+     ]
+    }
+   ],
+   "tag": "B6"
+  }
+ ],
+ "band_lookups": [
+  {
+   "bands": [
+    {
+     "band_id": "TIE_L_LE_50",
+     "description": "L ≤ 50cm",
+     "hi": 50,
+     "lo": null
+    },
+    {
+     "band_id": "TIE_50_LT_L_LT_80",
+     "description": "50cm < L < 80cm",
+     "hi": 80,
+     "lo": 50
+    },
+    {
+     "band_id": "TIE_80_LT_L_LT_120",
+     "description": "80cm < L < 120cm",
+     "hi": 120,
+     "lo": 80
+    }
+   ],
+   "element_id": "COL-C7-X07-Y?@15888-16162-FOUNDATION",
+   "element_type": "COLUMN",
+   "member_type": "C7",
+   "quantity": 1,
+   "rule_ref": "P9-COL-BAND",
+   "rule_text": "column tie rule (arrangement by long side L)",
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "handle": "1BAA",
+     "page": 9,
+     "sheet_title": "DETAILS OF COLUMN REINFORCEMENT (schedule sheet)",
+     "text": "ST. OF COLUMN- 6%%c8/m"
+    }
+   ],
+   "state": "BOUNDARY_GAP",
+   "unit": "nr occurrences",
+   "value": 80.0,
+   "value_unit": "cm"
+  },
+  {
+   "bands": [
+    {
+     "band_id": "TIE_L_LE_50",
+     "description": "L ≤ 50cm",
+     "hi": 50,
+     "lo": null
+    },
+    {
+     "band_id": "TIE_50_LT_L_LT_80",
+     "description": "50cm < L < 80cm",
+     "hi": 80,
+     "lo": 50
+    },
+    {
+     "band_id": "TIE_80_LT_L_LT_120",
+     "description": "80cm < L < 120cm",
+     "hi": 120,
+     "lo": 80
+    }
+   ],
+   "element_id": "COL-C7-X07-Y?@15888-16162-GF",
+   "element_type": "COLUMN",
+   "member_type": "C7",
+   "quantity": 1,
+   "rule_ref": "P9-COL-BAND",
+   "rule_text": "column tie rule (arrangement by long side L)",
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "handle": "1BAA",
+     "page": 9,
+     "sheet_title": "DETAILS OF COLUMN REINFORCEMENT (schedule sheet)",
+     "text": "ST. OF COLUMN- 6%%c8/m"
+    }
+   ],
+   "state": "BOUNDARY_GAP",
+   "unit": "nr occurrences",
+   "value": 80.0,
+   "value_unit": "cm"
+  },
+  {
+   "bands": [
+    {
+     "band_id": "TIE_L_LE_50",
+     "description": "L ≤ 50cm",
+     "hi": 50,
+     "lo": null
+    },
+    {
+     "band_id": "TIE_50_LT_L_LT_80",
+     "description": "50cm < L < 80cm",
+     "hi": 80,
+     "lo": 50
+    },
+    {
+     "band_id": "TIE_80_LT_L_LT_120",
+     "description": "80cm < L < 120cm",
+     "hi": 120,
+     "lo": 80
+    }
+   ],
+   "element_id": "COL-C7-X07-Y?@15888-16162-1F",
+   "element_type": "COLUMN",
+   "member_type": "C7",
+   "quantity": 1,
+   "rule_ref": "P9-COL-BAND",
+   "rule_text": "column tie rule (arrangement by long side L)",
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "handle": "1BAA",
+     "page": 9,
+     "sheet_title": "DETAILS OF COLUMN REINFORCEMENT (schedule sheet)",
+     "text": "ST. OF COLUMN- 6%%c8/m"
+    }
+   ],
+   "state": "BOUNDARY_GAP",
+   "unit": "nr occurrences",
+   "value": 80.0,
+   "value_unit": "cm"
+  }
+ ],
+ "basis_dependent_class": [
+  {
+   "class_by_basis": {
+    "centre-to-centre": "GB_LT_5M",
+    "clear span": "GB_LT_2_5M"
+   },
+   "element_id": "BM-GROUND_BEAMS-GB-BL002-2038",
+   "element_type": "BEAM",
+   "floor": "GROUND_BEAMS",
+   "quantity": 2.75,
+   "rule_ref": "P13 ground-beam typical details (<2.5 / <5 / >5 m)",
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "layer": "1",
+     "page": 3,
+     "sheet_title": "GROUND BEAMS PLAN"
+    },
+    {
+     "drawing": "ST7757.pdf",
+     "page": 13,
+     "sheet_title": "ground beam details"
+    }
+   ],
+   "unit": "m beam"
+  },
+  {
+   "class_by_basis": {
+    "centre-to-centre": "GB_LT_5M",
+    "clear span": "GB_LT_2_5M"
+   },
+   "element_id": "BM-GROUND_BEAMS-GB-BL005-14438",
+   "element_type": "BEAM",
+   "floor": "GROUND_BEAMS",
+   "quantity": 2.6,
+   "rule_ref": "P13 ground-beam typical details (<2.5 / <5 / >5 m)",
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "layer": "1",
+     "page": 3,
+     "sheet_title": "GROUND BEAMS PLAN"
+    },
+    {
+     "drawing": "ST7757.pdf",
+     "page": 13,
+     "sheet_title": "ground beam details"
+    }
+   ],
+   "unit": "m beam"
+  },
+  {
+   "class_by_basis": {
+    "centre-to-centre": "GB_LT_5M",
+    "clear span": "GB_LT_2_5M"
+   },
+   "element_id": "BM-GROUND_BEAMS-GB-BL008-9062",
+   "element_type": "BEAM",
+   "floor": "GROUND_BEAMS",
+   "quantity": 2.85,
+   "rule_ref": "P13 ground-beam typical details (<2.5 / <5 / >5 m)",
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "layer": "1",
+     "page": 3,
+     "sheet_title": "GROUND BEAMS PLAN"
+    },
+    {
+     "drawing": "ST7757.pdf",
+     "page": 13,
+     "sheet_title": "ground beam details"
+    }
+   ],
+   "unit": "m beam"
+  },
+  {
+   "class_by_basis": {
+    "centre-to-centre": "GB_GT_5M",
+    "clear span": "GB_LT_5M"
+   },
+   "element_id": "BM-GROUND_BEAMS-GB-BL011-12362",
+   "element_type": "BEAM",
+   "floor": "GROUND_BEAMS",
+   "quantity": 5.0,
+   "rule_ref": "P13 ground-beam typical details (<2.5 / <5 / >5 m)",
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "layer": "1",
+     "page": 3,
+     "sheet_title": "GROUND BEAMS PLAN"
+    },
+    {
+     "drawing": "ST7757.pdf",
+     "page": 13,
+     "sheet_title": "ground beam details"
+    }
+   ],
+   "unit": "m beam"
+  },
+  {
+   "class_by_basis": {
+    "centre-to-centre": "GB_LT_5M",
+    "clear span": "GB_LT_2_5M"
+   },
+   "element_id": "BM-GROUND_BEAMS-GB-BL020-9788",
+   "element_type": "BEAM",
+   "floor": "GROUND_BEAMS",
+   "quantity": 2.75,
+   "rule_ref": "P13 ground-beam typical details (<2.5 / <5 / >5 m)",
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "layer": "1",
+     "page": 3,
+     "sheet_title": "GROUND BEAMS PLAN"
+    },
+    {
+     "drawing": "ST7757.pdf",
+     "page": 13,
+     "sheet_title": "ground beam details"
+    }
+   ],
+   "unit": "m beam"
+  },
+  {
+   "class_by_basis": {
+    "centre-to-centre": "GB_LT_5M",
+    "clear span": "GB_LT_2_5M"
+   },
+   "element_id": "BM-GROUND_BEAMS-GB-BL027-17038",
+   "element_type": "BEAM",
+   "floor": "GROUND_BEAMS",
+   "quantity": 2.65,
+   "rule_ref": "P13 ground-beam typical details (<2.5 / <5 / >5 m)",
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "layer": "1",
+     "page": 3,
+     "sheet_title": "GROUND BEAMS PLAN"
+    },
+    {
+     "drawing": "ST7757.pdf",
+     "page": 13,
+     "sheet_title": "ground beam details"
+    }
+   ],
+   "unit": "m beam"
+  },
+  {
+   "class_by_basis": {
+    "centre-to-centre": "GB_LT_5M",
+    "clear span": "GB_LT_2_5M"
+   },
+   "element_id": "BM-GROUND_BEAMS-GB-BL028-17038",
+   "element_type": "BEAM",
+   "floor": "GROUND_BEAMS",
+   "quantity": 2.7,
+   "rule_ref": "P13 ground-beam typical details (<2.5 / <5 / >5 m)",
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "layer": "1",
+     "page": 3,
+     "sheet_title": "GROUND BEAMS PLAN"
+    },
+    {
+     "drawing": "ST7757.pdf",
+     "page": 13,
+     "sheet_title": "ground beam details"
+    }
+   ],
+   "unit": "m beam"
+  },
+  {
+   "class_by_basis": {
+    "centre-to-centre": "GB_LT_5M",
+    "clear span": "GB_LT_2_5M"
+   },
+   "element_id": "BM-GROUND_BEAMS-GB-BL036-27612",
+   "element_type": "BEAM",
+   "floor": "GROUND_BEAMS",
+   "quantity": 2.674,
+   "rule_ref": "P13 ground-beam typical details (<2.5 / <5 / >5 m)",
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "layer": "1",
+     "page": 3,
+     "sheet_title": "GROUND BEAMS PLAN"
+    },
+    {
+     "drawing": "ST7757.pdf",
+     "page": 13,
+     "sheet_title": "ground beam details"
+    }
+   ],
+   "unit": "m beam"
+  },
+  {
+   "class_by_basis": {
+    "centre-to-centre": "GB_LT_5M",
+    "clear span": "GB_LT_2_5M"
+   },
+   "element_id": "BM-GROUND_BEAMS-GB-BL037-28583",
+   "element_type": "BEAM",
+   "floor": "GROUND_BEAMS",
+   "quantity": 2.925,
+   "rule_ref": "P13 ground-beam typical details (<2.5 / <5 / >5 m)",
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "layer": "1",
+     "page": 3,
+     "sheet_title": "GROUND BEAMS PLAN"
+    },
+    {
+     "drawing": "ST7757.pdf",
+     "page": 13,
+     "sheet_title": "ground beam details"
+    }
+   ],
+   "unit": "m beam"
+  }
+ ],
+ "blocked_geometry": [
+  {
+   "element_id": "BM-GROUND_BEAMS-GB-BA001",
+   "element_type": "BEAM",
+   "floor": "GROUND_BEAMS",
+   "quantity": 1.806,
+   "question": "Confirm the curved ground beam's supports and length (pool edge).",
+   "reason": "curved ground-beam span - support length not measured",
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "layer": "1",
+     "page": 3,
+     "sheet_title": "GROUND BEAMS PLAN"
+    }
+   ],
+   "unit": "m beam"
+  },
+  {
+   "element_id": "BM-GROUND_BEAMS-GB-BA002",
+   "element_type": "BEAM",
+   "floor": "GROUND_BEAMS",
+   "quantity": 6.287,
+   "question": "Confirm the curved ground beam's supports and length (pool edge).",
+   "reason": "curved ground-beam span - support length not measured",
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "layer": "1",
+     "page": 3,
+     "sheet_title": "GROUND BEAMS PLAN"
+    }
+   ],
+   "unit": "m beam"
+  },
+  {
+   "element_id": "SPC-PARAPET-GFRS",
+   "element_type": "PARAPET",
+   "floor": "GF_ROOF_SLAB",
+   "question": "Give the parapet height and the roof edges that carry a parapet.",
+   "reason": "parapet height / length follow the architectural drawings (not on the structural set)",
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB",
+     "text": "PARAPET, BEFORE CASTING"
+    }
+   ]
+  },
+  {
+   "element_id": "SPC-PARAPET-FFRS",
+   "element_type": "PARAPET",
+   "floor": "1F_ROOF_SLAB",
+   "question": "Give the parapet height and the roof edges that carry a parapet.",
+   "reason": "parapet height / length follow the architectural drawings (not on the structural set)",
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB",
+     "text": "PARAPET, BEFORE CASTING"
+    }
+   ]
+  },
+  {
+   "element_id": "SPC-PARAPET-SFRS",
+   "element_type": "PARAPET",
+   "floor": "2F_ROOF_SLAB",
+   "question": "Give the parapet height and the roof edges that carry a parapet.",
+   "reason": "parapet height / length follow the architectural drawings (not on the structural set)",
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "page": 6,
+     "sheet_title": "SECOND FLOOR ROOF SLAB",
+     "text": "PARAPET, BEFORE CASTING"
+    }
+   ]
+  },
+  {
+   "element_id": "SPC-POOL",
+   "element_type": "POOL",
+   "floor": "GROUND",
+   "question": "Provide the pool plan and section (lengths, depths, slope) from the architect.",
+   "reason": "pool lengths and depths are 'AS PER ARCH' on the detail",
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "page": 7,
+     "sheet_title": "DETAILS (pool / dome)",
+     "text": "DETAIL OF SWIMMING POOL"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "page": 3,
+     "sheet_title": "GROUND BEAMS PLAN",
+     "text": "swimming pool"
+    }
+   ]
+  }
+ ],
+ "competing_tags": [
+  {
+   "candidates": [
+    "F",
+    "F10"
+   ],
+   "context": "one outline holding columns C, C10",
+   "element_id": "FTG-CONFLICT_F_F10-30008-7312",
+   "element_type": "FOOTING",
+   "quantity": 1,
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "1B1B",
+     "layer": "S-FOOTINGS",
+     "page": 2,
+     "sheet_title": "FOUNDATION PLAN"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "10A5",
+     "page": 2,
+     "sheet_title": "FOUNDATION PLAN",
+     "text": "F"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "168B",
+     "page": 2,
+     "sheet_title": "FOUNDATION PLAN",
+     "text": "F10"
+    }
+   ],
+   "unit": "nr"
+  },
+  {
+   "candidates": [
+    "CB3",
+    "B3"
+   ],
+   "context": "both marks sit on the same drawn span",
+   "element_id": "BM-GF_ROOF-CB3-BL022-494+BM-GF_ROOF-B3-BL022-1827",
+   "element_type": "BEAM",
+   "quantity": 3.35,
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "494",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB",
+     "text": "CB3",
+     "xy_mm": [
+      25635,
+      8415
+     ]
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "1827",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB",
+     "text": "B3",
+     "xy_mm": [
+      25171,
+      9058
+     ]
+    }
+   ],
+   "unit": "m beam"
+  }
+ ],
+ "detail_count_mismatches": [
+  {
+   "band_id": "TIE_L_LE_50",
+   "detail_count": 4,
+   "element_ids": [
+    "COL-C-X01-Y01-FOUNDATION",
+    "COL-C-X06-Y01-FOUNDATION",
+    "COL-C-X16-Y01-FOUNDATION",
+    "COL-C-X01-Y05-FOUNDATION",
+    "COL-C-X02-Y05-FOUNDATION"
+   ],
+   "element_type": "COLUMN",
+   "member_type": "C (FOUNDATION)",
+   "schedule_count": 8,
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "handle": "1BAA",
+     "page": 9,
+     "sheet_title": "DETAILS OF COLUMN REINFORCEMENT (schedule sheet)",
+     "text": "ST. OF COLUMN- 6%%c8/m"
+    }
+   ]
+  },
+  {
+   "band_id": "TIE_L_LE_50",
+   "detail_count": 4,
+   "element_ids": [
+    "COL-C-X01-Y01-GF",
+    "COL-C-X06-Y01-GF",
+    "COL-C-X16-Y01-GF",
+    "COL-C-X01-Y05-GF",
+    "COL-C-X02-Y05-GF"
+   ],
+   "element_type": "COLUMN",
+   "member_type": "C (GF)",
+   "schedule_count": 8,
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "handle": "1BAA",
+     "page": 9,
+     "sheet_title": "DETAILS OF COLUMN REINFORCEMENT (schedule sheet)",
+     "text": "ST. OF COLUMN- 6%%c8/m"
+    }
+   ]
+  },
+  {
+   "band_id": "TIE_L_LE_50",
+   "detail_count": 4,
+   "element_ids": [
+    "COL-C1-X09-Y09-FOUNDATION"
+   ],
+   "element_type": "COLUMN",
+   "member_type": "C1 (FOUNDATION)",
+   "schedule_count": 8,
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "handle": "1BAA",
+     "page": 9,
+     "sheet_title": "DETAILS OF COLUMN REINFORCEMENT (schedule sheet)",
+     "text": "ST. OF COLUMN- 6%%c8/m"
+    }
+   ]
+  },
+  {
+   "band_id": "TIE_L_LE_50",
+   "detail_count": 4,
+   "element_ids": [
+    "COL-C1-X09-Y09-GF"
+   ],
+   "element_type": "COLUMN",
+   "member_type": "C1 (GF)",
+   "schedule_count": 8,
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "handle": "1BAA",
+     "page": 9,
+     "sheet_title": "DETAILS OF COLUMN REINFORCEMENT (schedule sheet)",
+     "text": "ST. OF COLUMN- 6%%c8/m"
+    }
+   ]
+  },
+  {
+   "band_id": "TIE_L_LE_50",
+   "detail_count": 4,
+   "element_ids": [
+    "COL-C1-X09-Y09-1F"
+   ],
+   "element_type": "COLUMN",
+   "member_type": "C1 (1F)",
+   "schedule_count": 6,
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "handle": "1BAA",
+     "page": 9,
+     "sheet_title": "DETAILS OF COLUMN REINFORCEMENT (schedule sheet)",
+     "text": "ST. OF COLUMN- 6%%c8/m"
+    }
+   ]
+  },
+  {
+   "band_id": "TIE_L_LE_50",
+   "detail_count": 4,
+   "element_ids": [
+    "COL-C1-X09-Y09-2F"
+   ],
+   "element_type": "COLUMN",
+   "member_type": "C1 (2F)",
+   "schedule_count": 6,
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "handle": "1BAA",
+     "page": 9,
+     "sheet_title": "DETAILS OF COLUMN REINFORCEMENT (schedule sheet)",
+     "text": "ST. OF COLUMN- 6%%c8/m"
+    }
+   ]
+  },
+  {
+   "band_id": "TIE_L_LE_50",
+   "detail_count": 4,
+   "element_ids": [
+    "COL-C2-X09-Y07-FOUNDATION",
+    "COL-C2-X10-Y09-FOUNDATION",
+    "COL-C2-X08-Y10-FOUNDATION",
+    "COL-C2-X09-Y10-FOUNDATION"
+   ],
+   "element_type": "COLUMN",
+   "member_type": "C2 (FOUNDATION)",
+   "schedule_count": 8,
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "handle": "1BAA",
+     "page": 9,
+     "sheet_title": "DETAILS OF COLUMN REINFORCEMENT (schedule sheet)",
+     "text": "ST. OF COLUMN- 6%%c8/m"
+    }
+   ]
+  },
+  {
+   "band_id": "TIE_L_LE_50",
+   "detail_count": 4,
+   "element_ids": [
+    "COL-C2-X09-Y07-GF",
+    "COL-C2-X10-Y09-GF",
+    "COL-C2-X08-Y10-GF",
+    "COL-C2-X09-Y10-GF"
+   ],
+   "element_type": "COLUMN",
+   "member_type": "C2 (GF)",
+   "schedule_count": 8,
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "handle": "1BAA",
+     "page": 9,
+     "sheet_title": "DETAILS OF COLUMN REINFORCEMENT (schedule sheet)",
+     "text": "ST. OF COLUMN- 6%%c8/m"
+    }
+   ]
+  },
+  {
+   "band_id": "TIE_L_LE_50",
+   "detail_count": 4,
+   "element_ids": [
+    "COL-C2-X09-Y07-1F",
+    "COL-C2-X10-Y09-1F",
+    "COL-C2-X08-Y10-1F",
+    "COL-C2-X09-Y10-1F"
+   ],
+   "element_type": "COLUMN",
+   "member_type": "C2 (1F)",
+   "schedule_count": 8,
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "handle": "1BAA",
+     "page": 9,
+     "sheet_title": "DETAILS OF COLUMN REINFORCEMENT (schedule sheet)",
+     "text": "ST. OF COLUMN- 6%%c8/m"
+    }
+   ]
+  },
+  {
+   "band_id": "TIE_L_LE_50",
+   "detail_count": 4,
+   "element_ids": [
+    "COL-C2-X09-Y07-2F",
+    "COL-C2-X10-Y09-2F",
+    "COL-C2-X08-Y10-2F",
+    "COL-C2-X09-Y10-2F"
+   ],
+   "element_type": "COLUMN",
+   "member_type": "C2 (2F)",
+   "schedule_count": 6,
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "handle": "1BAA",
+     "page": 9,
+     "sheet_title": "DETAILS OF COLUMN REINFORCEMENT (schedule sheet)",
+     "text": "ST. OF COLUMN- 6%%c8/m"
+    }
+   ]
+  },
+  {
+   "band_id": "TIE_L_LE_50",
+   "detail_count": 4,
+   "element_ids": [
+    "COL-C3-X04-Y01-FOUNDATION",
+    "COL-C3-X12-Y01-FOUNDATION",
+    "COL-C3-X05-Y02-FOUNDATION",
+    "COL-C3-X03-Y04-FOUNDATION",
+    "COL-C3-X16-Y06-FOUNDATION",
+    "COL-C3-X08-Y09-FOUNDATION"
+   ],
+   "element_type": "COLUMN",
+   "member_type": "C3 (FOUNDATION)",
+   "schedule_count": 8,
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "handle": "1BAA",
+     "page": 9,
+     "sheet_title": "DETAILS OF COLUMN REINFORCEMENT (schedule sheet)",
+     "text": "ST. OF COLUMN- 6%%c8/m"
+    }
+   ]
+  },
+  {
+   "band_id": "TIE_L_LE_50",
+   "detail_count": 4,
+   "element_ids": [
+    "COL-C3-X04-Y01-GF",
+    "COL-C3-X12-Y01-GF",
+    "COL-C3-X05-Y02-GF",
+    "COL-C3-X03-Y04-GF",
+    "COL-C3-X16-Y06-GF",
+    "COL-C3-X08-Y09-GF"
+   ],
+   "element_type": "COLUMN",
+   "member_type": "C3 (GF)",
+   "schedule_count": 8,
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "handle": "1BAA",
+     "page": 9,
+     "sheet_title": "DETAILS OF COLUMN REINFORCEMENT (schedule sheet)",
+     "text": "ST. OF COLUMN- 6%%c8/m"
+    }
+   ]
+  },
+  {
+   "band_id": "TIE_L_LE_50",
+   "detail_count": 4,
+   "element_ids": [
+    "COL-C3-X05-Y02-1F",
+    "COL-C3-X08-Y09-1F"
+   ],
+   "element_type": "COLUMN",
+   "member_type": "C3 (1F)",
+   "schedule_count": 6,
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "handle": "1BAA",
+     "page": 9,
+     "sheet_title": "DETAILS OF COLUMN REINFORCEMENT (schedule sheet)",
+     "text": "ST. OF COLUMN- 6%%c8/m"
+    }
+   ]
+  },
+  {
+   "band_id": "TIE_L_LE_50",
+   "detail_count": 4,
+   "element_ids": [
+    "COL-C3-X08-Y09-2F"
+   ],
+   "element_type": "COLUMN",
+   "member_type": "C3 (2F)",
+   "schedule_count": 6,
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "handle": "1BAA",
+     "page": 9,
+     "sheet_title": "DETAILS OF COLUMN REINFORCEMENT (schedule sheet)",
+     "text": "ST. OF COLUMN- 6%%c8/m"
+    }
+   ]
+  },
+  {
+   "band_id": "TIE_L_LE_50",
+   "detail_count": 4,
+   "element_ids": [
+    "COL-C4-X13-Y10-FOUNDATION",
+    "COL-C4-X15-Y10-FOUNDATION"
+   ],
+   "element_type": "COLUMN",
+   "member_type": "C4 (FOUNDATION)",
+   "schedule_count": 8,
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "handle": "1BAA",
+     "page": 9,
+     "sheet_title": "DETAILS OF COLUMN REINFORCEMENT (schedule sheet)",
+     "text": "ST. OF COLUMN- 6%%c8/m"
+    }
+   ]
+  },
+  {
+   "band_id": "TIE_L_LE_50",
+   "detail_count": 4,
+   "element_ids": [
+    "COL-C4-X13-Y10-GF",
+    "COL-C4-X15-Y10-GF"
+   ],
+   "element_type": "COLUMN",
+   "member_type": "C4 (GF)",
+   "schedule_count": 8,
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "handle": "1BAA",
+     "page": 9,
+     "sheet_title": "DETAILS OF COLUMN REINFORCEMENT (schedule sheet)",
+     "text": "ST. OF COLUMN- 6%%c8/m"
+    }
+   ]
+  },
+  {
+   "band_id": "TIE_L_LE_50",
+   "detail_count": 4,
+   "element_ids": [
+    "COL-C4-X13-Y10-1F",
+    "COL-C4-X15-Y10-1F"
+   ],
+   "element_type": "COLUMN",
+   "member_type": "C4 (1F)",
+   "schedule_count": 8,
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "handle": "1BAA",
+     "page": 9,
+     "sheet_title": "DETAILS OF COLUMN REINFORCEMENT (schedule sheet)",
+     "text": "ST. OF COLUMN- 6%%c8/m"
+    }
+   ]
+  },
+  {
+   "band_id": "TIE_50_LT_L_LT_80",
+   "detail_count": 8,
+   "element_ids": [
+    "COL-C5-X14-Y02-FOUNDATION",
+    "COL-C5-X05-Y04-FOUNDATION",
+    "COL-C5-X11-Y10-FOUNDATION"
+   ],
+   "element_type": "COLUMN",
+   "member_type": "C5 (FOUNDATION)",
+   "schedule_count": 10,
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "handle": "1BAA",
+     "page": 9,
+     "sheet_title": "DETAILS OF COLUMN REINFORCEMENT (schedule sheet)",
+     "text": "ST. OF COLUMN- 6%%c8/m"
+    }
+   ]
+  },
+  {
+   "band_id": "TIE_50_LT_L_LT_80",
+   "detail_count": 8,
+   "element_ids": [
+    "COL-C5-X14-Y02-GF",
+    "COL-C5-X05-Y04-GF",
+    "COL-C5-X11-Y10-GF"
+   ],
+   "element_type": "COLUMN",
+   "member_type": "C5 (GF)",
+   "schedule_count": 10,
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "handle": "1BAA",
+     "page": 9,
+     "sheet_title": "DETAILS OF COLUMN REINFORCEMENT (schedule sheet)",
+     "text": "ST. OF COLUMN- 6%%c8/m"
+    }
+   ]
+  },
+  {
+   "band_id": "TIE_L_LE_50",
+   "detail_count": 4,
+   "element_ids": [
+    "COL-C5-X14-Y02-1F",
+    "COL-C5-X05-Y04-1F",
+    "COL-C5-X11-Y10-1F"
+   ],
+   "element_type": "COLUMN",
+   "member_type": "C5 (1F)",
+   "schedule_count": 8,
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "handle": "1BAA",
+     "page": 9,
+     "sheet_title": "DETAILS OF COLUMN REINFORCEMENT (schedule sheet)",
+     "text": "ST. OF COLUMN- 6%%c8/m"
+    }
+   ]
+  },
+  {
+   "band_id": "TIE_L_LE_50",
+   "detail_count": 4,
+   "element_ids": [
+    "COL-C5-X11-Y10-2F"
+   ],
+   "element_type": "COLUMN",
+   "member_type": "C5 (2F)",
+   "schedule_count": 6,
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "handle": "1BAA",
+     "page": 9,
+     "sheet_title": "DETAILS OF COLUMN REINFORCEMENT (schedule sheet)",
+     "text": "ST. OF COLUMN- 6%%c8/m"
+    }
+   ]
+  },
+  {
+   "band_id": "TIE_50_LT_L_LT_80",
+   "detail_count": 8,
+   "element_ids": [
+    "COL-C6-X08-Y04-FOUNDATION"
+   ],
+   "element_type": "COLUMN",
+   "member_type": "C6 (FOUNDATION)",
+   "schedule_count": 10,
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "handle": "1BAA",
+     "page": 9,
+     "sheet_title": "DETAILS OF COLUMN REINFORCEMENT (schedule sheet)",
+     "text": "ST. OF COLUMN- 6%%c8/m"
+    }
+   ]
+  },
+  {
+   "band_id": "TIE_50_LT_L_LT_80",
+   "detail_count": 8,
+   "element_ids": [
+    "COL-C6-X08-Y04-GF"
+   ],
+   "element_type": "COLUMN",
+   "member_type": "C6 (GF)",
+   "schedule_count": 10,
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "handle": "1BAA",
+     "page": 9,
+     "sheet_title": "DETAILS OF COLUMN REINFORCEMENT (schedule sheet)",
+     "text": "ST. OF COLUMN- 6%%c8/m"
+    }
+   ]
+  },
+  {
+   "band_id": "TIE_80_LT_L_LT_120",
+   "detail_count": 12,
+   "element_ids": [
+    "COL-C9-X10-Y07-FOUNDATION",
+    "COL-C9-X13-Y08-FOUNDATION"
+   ],
+   "element_type": "COLUMN",
+   "member_type": "C9 (FOUNDATION)",
+   "schedule_count": 14,
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "handle": "1BAA",
+     "page": 9,
+     "sheet_title": "DETAILS OF COLUMN REINFORCEMENT (schedule sheet)",
+     "text": "ST. OF COLUMN- 6%%c8/m"
+    }
+   ]
+  },
+  {
+   "band_id": "TIE_80_LT_L_LT_120",
+   "detail_count": 12,
+   "element_ids": [
+    "COL-C9-X10-Y07-GF",
+    "COL-C9-X13-Y08-GF"
+   ],
+   "element_type": "COLUMN",
+   "member_type": "C9 (GF)",
+   "schedule_count": 14,
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "handle": "1BAA",
+     "page": 9,
+     "sheet_title": "DETAILS OF COLUMN REINFORCEMENT (schedule sheet)",
+     "text": "ST. OF COLUMN- 6%%c8/m"
+    }
+   ]
+  },
+  {
+   "band_id": "TIE_50_LT_L_LT_80",
+   "detail_count": 8,
+   "element_ids": [
+    "COL-C9-X10-Y07-2F"
+   ],
+   "element_type": "COLUMN",
+   "member_type": "C9 (2F)",
+   "schedule_count": 10,
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "handle": "1BAA",
+     "page": 9,
+     "sheet_title": "DETAILS OF COLUMN REINFORCEMENT (schedule sheet)",
+     "text": "ST. OF COLUMN- 6%%c8/m"
+    }
+   ]
+  },
+  {
+   "band_id": "TIE_50_LT_L_LT_80",
+   "detail_count": 8,
+   "element_ids": [
+    "COL-C10-X15-Y01-FOUNDATION"
+   ],
+   "element_type": "COLUMN",
+   "member_type": "C10 (FOUNDATION)",
+   "schedule_count": 10,
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "handle": "1BAA",
+     "page": 9,
+     "sheet_title": "DETAILS OF COLUMN REINFORCEMENT (schedule sheet)",
+     "text": "ST. OF COLUMN- 6%%c8/m"
+    }
+   ]
+  },
+  {
+   "band_id": "TIE_50_LT_L_LT_80",
+   "detail_count": 8,
+   "element_ids": [
+    "COL-C10-X15-Y01-GF"
+   ],
+   "element_type": "COLUMN",
+   "member_type": "C10 (GF)",
+   "schedule_count": 10,
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "handle": "1BAA",
+     "page": 9,
+     "sheet_title": "DETAILS OF COLUMN REINFORCEMENT (schedule sheet)",
+     "text": "ST. OF COLUMN- 6%%c8/m"
+    }
+   ]
+  },
+  {
+   "band_id": "TIE_80_LT_L_LT_120",
+   "detail_count": 12,
+   "element_ids": [
+    "COL-C11-X?-Y01@17913-7462-FOUNDATION",
+    "COL-C11-X06-Y04-FOUNDATION"
+   ],
+   "element_type": "COLUMN",
+   "member_type": "C11 (FOUNDATION)",
+   "schedule_count": 14,
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "handle": "1BAA",
+     "page": 9,
+     "sheet_title": "DETAILS OF COLUMN REINFORCEMENT (schedule sheet)",
+     "text": "ST. OF COLUMN- 6%%c8/m"
+    }
+   ]
+  },
+  {
+   "band_id": "TIE_80_LT_L_LT_120",
+   "detail_count": 12,
+   "element_ids": [
+    "COL-C11-X?-Y01@17913-7462-GF",
+    "COL-C11-X06-Y04-GF"
+   ],
+   "element_type": "COLUMN",
+   "member_type": "C11 (GF)",
+   "schedule_count": 14,
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "handle": "1BAA",
+     "page": 9,
+     "sheet_title": "DETAILS OF COLUMN REINFORCEMENT (schedule sheet)",
+     "text": "ST. OF COLUMN- 6%%c8/m"
+    }
+   ]
+  }
+ ],
+ "discipline": "STRUCTURAL",
+ "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+ "duplicate_definitions": [
+  {
+   "element_ids": [
+    "BM-FOUNDATION-SB2-BD003"
+   ],
+   "element_type": "BEAM",
+   "geometry_hint": "drawn width 987 mm fits B = 100 cm (geometry hint only, not applied)",
+   "key": "SB2",
+   "quantity": 5.11,
+   "schedule_ref": "SBT",
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "handle": "2ABA",
+     "page": 10,
+     "sheet_title": "schedule (strap beam)",
+     "text": "SB2"
+    },
+    {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "handle": "1FBB",
+     "page": 10,
+     "sheet_title": "schedule (strap beam)",
+     "text": "SB2"
+    }
+   ],
+   "unit": "m beam",
+   "variants": [
+    {
+     "row": "2ABA",
+     "values": {
+      "BOT-B": "10",
+      "BOT-D": "16",
+      "D": "8",
+      "H": "50",
+      "STI-B": "10",
+      "TOP-B": "20",
+      "TOP-D": "18",
+      "W": "100"
+     }
+    },
+    {
+     "row": "1FBB",
+     "values": {
+      "BOT-B": "10",
+      "BOT-D": "18",
+      "D": "8",
+      "H": "50",
+      "STI-B": "10",
+      "TOP-B": "10",
+      "TOP-D": "18",
+      "W": "80"
+     }
+    }
+   ]
+  }
+ ],
+ "geometry_overlaps": [
+  {
+   "element_ids": [
+    "FT:180F",
+    "FT:180C"
+   ],
+   "element_type": "FOOTING",
+   "overlap": 0.14,
+   "overlap_unit": "m2 plan",
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "180F",
+     "page": 2,
+     "sheet_title": "FOUNDATION PLAN"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "180C",
+     "page": 2,
+     "sheet_title": "FOUNDATION PLAN"
+    }
+   ]
+  }
+ ],
+ "minimum_checks": [
+  {
+   "element_id": "COL-C-X01-Y01-GF",
+   "element_type": "COLUMN",
+   "floor": "GF",
+   "member_type": "C",
+   "provided": 20.0,
+   "quantity": 1,
+   "required": 25,
+   "rule_ref": "P9-COL-TMIN",
+   "rule_text": "minimum column thickness for the storey height (p.9)",
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "handle": "1BEF",
+     "page": 9,
+     "sheet_title": "rule P9-COL-TMIN"
+    }
+   ],
+   "unit": "nr occurrences",
+   "unit_value": "cm"
+  },
+  {
+   "element_id": "COL-C-X06-Y01-GF",
+   "element_type": "COLUMN",
+   "floor": "GF",
+   "member_type": "C",
+   "provided": 20.0,
+   "quantity": 1,
+   "required": 25,
+   "rule_ref": "P9-COL-TMIN",
+   "rule_text": "minimum column thickness for the storey height (p.9)",
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "handle": "1BEF",
+     "page": 9,
+     "sheet_title": "rule P9-COL-TMIN"
+    }
+   ],
+   "unit": "nr occurrences",
+   "unit_value": "cm"
+  },
+  {
+   "element_id": "COL-C-X16-Y01-GF",
+   "element_type": "COLUMN",
+   "floor": "GF",
+   "member_type": "C",
+   "provided": 20.0,
+   "quantity": 1,
+   "required": 25,
+   "rule_ref": "P9-COL-TMIN",
+   "rule_text": "minimum column thickness for the storey height (p.9)",
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "handle": "1BEF",
+     "page": 9,
+     "sheet_title": "rule P9-COL-TMIN"
+    }
+   ],
+   "unit": "nr occurrences",
+   "unit_value": "cm"
+  },
+  {
+   "element_id": "COL-C-X01-Y05-GF",
+   "element_type": "COLUMN",
+   "floor": "GF",
+   "member_type": "C",
+   "provided": 20.0,
+   "quantity": 1,
+   "required": 25,
+   "rule_ref": "P9-COL-TMIN",
+   "rule_text": "minimum column thickness for the storey height (p.9)",
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "handle": "1BEF",
+     "page": 9,
+     "sheet_title": "rule P9-COL-TMIN"
+    }
+   ],
+   "unit": "nr occurrences",
+   "unit_value": "cm"
+  },
+  {
+   "element_id": "COL-C-X02-Y05-GF",
+   "element_type": "COLUMN",
+   "floor": "GF",
+   "member_type": "C",
+   "provided": 20.0,
+   "quantity": 1,
+   "required": 25,
+   "rule_ref": "P9-COL-TMIN",
+   "rule_text": "minimum column thickness for the storey height (p.9)",
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "handle": "1BEF",
+     "page": 9,
+     "sheet_title": "rule P9-COL-TMIN"
+    }
+   ],
+   "unit": "nr occurrences",
+   "unit_value": "cm"
+  },
+  {
+   "element_id": "COL-C2-X09-Y07-GF",
+   "element_type": "COLUMN",
+   "floor": "GF",
+   "member_type": "C2",
+   "provided": 20.0,
+   "quantity": 1,
+   "required": 25,
+   "rule_ref": "P9-COL-TMIN",
+   "rule_text": "minimum column thickness for the storey height (p.9)",
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "handle": "1BEF",
+     "page": 9,
+     "sheet_title": "rule P9-COL-TMIN"
+    }
+   ],
+   "unit": "nr occurrences",
+   "unit_value": "cm"
+  },
+  {
+   "element_id": "COL-C1-X09-Y09-GF",
+   "element_type": "COLUMN",
+   "floor": "GF",
+   "member_type": "C1",
+   "provided": 20.0,
+   "quantity": 1,
+   "required": 25,
+   "rule_ref": "P9-COL-TMIN",
+   "rule_text": "minimum column thickness for the storey height (p.9)",
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "handle": "1BEF",
+     "page": 9,
+     "sheet_title": "rule P9-COL-TMIN"
+    }
+   ],
+   "unit": "nr occurrences",
+   "unit_value": "cm"
+  },
+  {
+   "element_id": "COL-C2-X10-Y09-GF",
+   "element_type": "COLUMN",
+   "floor": "GF",
+   "member_type": "C2",
+   "provided": 20.0,
+   "quantity": 1,
+   "required": 25,
+   "rule_ref": "P9-COL-TMIN",
+   "rule_text": "minimum column thickness for the storey height (p.9)",
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "handle": "1BEF",
+     "page": 9,
+     "sheet_title": "rule P9-COL-TMIN"
+    }
+   ],
+   "unit": "nr occurrences",
+   "unit_value": "cm"
+  },
+  {
+   "element_id": "COL-C2-X08-Y10-GF",
+   "element_type": "COLUMN",
+   "floor": "GF",
+   "member_type": "C2",
+   "provided": 20.0,
+   "quantity": 1,
+   "required": 25,
+   "rule_ref": "P9-COL-TMIN",
+   "rule_text": "minimum column thickness for the storey height (p.9)",
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "handle": "1BEF",
+     "page": 9,
+     "sheet_title": "rule P9-COL-TMIN"
+    }
+   ],
+   "unit": "nr occurrences",
+   "unit_value": "cm"
+  },
+  {
+   "element_id": "COL-C2-X09-Y10-GF",
+   "element_type": "COLUMN",
+   "floor": "GF",
+   "member_type": "C2",
+   "provided": 20.0,
+   "quantity": 1,
+   "required": 25,
+   "rule_ref": "P9-COL-TMIN",
+   "rule_text": "minimum column thickness for the storey height (p.9)",
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "handle": "1BEF",
+     "page": 9,
+     "sheet_title": "rule P9-COL-TMIN"
+    }
+   ],
+   "unit": "nr occurrences",
+   "unit_value": "cm"
+  }
+ ],
+ "orphan_definitions": [
+  {
+   "element_type": "FOOTING",
+   "key": "F7",
+   "schedule_ref": "FT",
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "handle": "1CCC",
+     "page": 9,
+     "sheet_title": "schedule (footing)",
+     "text": "F7"
+    }
+   ],
+   "values": "300x250x50"
+  },
+  {
+   "element_type": "BEAM",
+   "key": "B10",
+   "schedule_ref": "SBT",
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "handle": "1ED0",
+     "page": 10,
+     "sheet_title": "schedule (simple beam)",
+     "text": "B10"
+    }
+   ],
+   "values": "20x75"
+  },
+  {
+   "element_type": "BEAM",
+   "key": "B12",
+   "schedule_ref": "SBT",
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "handle": "1EE6",
+     "page": 10,
+     "sheet_title": "schedule (simple beam)",
+     "text": "B12"
+    }
+   ],
+   "values": "25x75"
+  },
+  {
+   "element_type": "BEAM",
+   "key": "B.W",
+   "schedule_ref": "SBT",
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "handle": "1FA5",
+     "page": 10,
+     "sheet_title": "schedule (simple beam)",
+     "text": "B.W"
+    }
+   ],
+   "values": "20x60"
+  }
+ ],
+ "presence_gaps": [
+  {
+   "element_id": "COLPOS-X?-Y?-29108-18112",
+   "element_type": "COLUMN",
+   "label": "CN",
+   "missing_on": [
+    "COLUMN & AXIS PLAN"
+   ],
+   "present_on": [
+    "FOUNDATION PLAN",
+    "GROUND BEAMS PLAN"
+   ],
+   "quantity": 1,
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "180A",
+     "page": 2,
+     "sheet_title": "FOUNDATION PLAN"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "17BA",
+     "page": 3,
+     "sheet_title": "GROUND BEAMS PLAN"
+    }
+   ],
+   "unit": "nr occurrences"
+  }
+ ],
+ "project_id": "ALSENAN-ST7757",
+ "required_not_drawn": [
+  {
+   "condition": "storey height > 4.30 m",
+   "element_id": "BM-GF-LIFT_TIE",
+   "element_type": "LIFT_TIE_BEAM",
+   "floor": "GF",
+   "rule_ref": "P8-N19",
+   "rule_text": "Lift tie beams at 3.00 m height around the lift shaft when the storey is higher than 4.30 m.",
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "page": 8,
+     "sheet_title": "rule P8-N19"
+    }
+   ]
+  },
+  {
+   "condition": "one lintel per architectural opening, type by opening width",
+   "element_id": "BM-ALL-LINTEL-POPULATION",
+   "element_type": "LINTEL",
+   "floor": "ALL",
+   "rule_ref": "P13-LINTEL",
+   "rule_text": "Lintels by opening width; width = wall width; 40 cm minimum bearing each side.",
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "page": 13,
+     "sheet_title": "rule P13-LINTEL"
+    }
+   ]
+  }
+ ],
+ "rule_conflicts": [
+  {
+   "affected_facts": [
+    "section",
+    "reinforcement"
+   ],
+   "release_effect": "BLOCKED",
+   "rule_refs": [
+    "P14-BOUNDARY",
+    "SBT:B.W"
+   ],
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "page": 14,
+     "sheet_title": "rule P14-BOUNDARY"
+    },
+    {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "page": 10,
+     "sheet_title": "schedule (simple beam)",
+     "text": "B.W"
+    }
+   ],
+   "subject": "boundary wall definition",
+   "trade": [
+    "CONCRETE",
+    "REINFORCEMENT"
+   ],
+   "values": [
+    {
+     "rule_ref": "P14-BOUNDARY",
+     "source_ref": {
+      "drawing": "ST7757.pdf",
+      "page": 14,
+      "sheet_title": "rule P14-BOUNDARY"
+     },
+     "value": "TYPICAL BOUNDARY WALL: (20x30) R.C columns 4Ø14; GROUND BEAM (20x40); 2Ø14 (T&B); Ø8/20 STIRRUPS; 3Ø16 (T&B); 7Ø12; 4Ø12"
+    },
+    {
+     "rule_ref": "schedule row B.W",
+     "source_ref": {
+      "drawing": "ST7757.dxf / ST7757.pdf",
+      "page": 10,
+      "sheet_title": "schedule (simple beam)",
+      "text": "B.W"
+     },
+     "value": "20x60 ['4', '16']"
+    }
+   ]
+  },
+  {
+   "rule_refs": [
+    "P8-N17",
+    "P1-NOTE-C"
+   ],
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "page": 8,
+     "sheet_title": "rule P8-N17"
+    },
+    {
+     "drawing": "ST7757.pdf",
+     "handle": "7E",
+     "page": 1,
+     "sheet_title": "rule P1-NOTE-C"
+    }
+   ],
+   "subject": "formwork rule",
+   "values": [
+    {
+     "rule_ref": "P8-N17",
+     "source_ref": {
+      "drawing": "ST7757.pdf",
+      "page": 8,
+      "sheet_title": "rule P8-N17"
+     },
+     "value": "formwork >= 14 days"
+    },
+    {
+     "rule_ref": "P1-NOTE-C",
+     "source_ref": {
+      "drawing": "ST7757.pdf",
+      "handle": "7E",
+      "page": 1,
+      "sheet_title": "rule P1-NOTE-C"
+     },
+     "value": "formwork >= 21 days"
+    }
+   ]
+  }
+ ],
+ "rule_dependent_elements": [
+  {
+   "affected_facts": [
+    "detailing",
+    "geometry"
+   ],
+   "element_ids": [
+    "SP-GF_ROOF_SLAB-03",
+    "SP-GF_ROOF_SLAB-21",
+    "SP-GF_ROOF_SLAB-28",
+    "SP-1F_ROOF_SLAB-01",
+    "SP-GBP-12"
+   ],
+   "element_type": "STAIR",
+   "gap_kind": "APPLICABILITY",
+   "options": [
+    {
+     "answer": "typical detail applies",
+     "effect": "stair bars from p.16 per flight"
+    },
+    {
+     "answer": "stair-specific detail",
+     "effect": "needs the stair drawing"
+    }
+   ],
+   "quantity": 56.327,
+   "question": "Does the typical stair detail (p.16) apply to each stair on the plans, including the stair inside the void? Please give flight / landing levels and waist thickness.",
+   "rule_ref": "P16-STAIR",
+   "rule_status": "BLOCKED_METHOD",
+   "rule_text": "Typical stair and stair-beam reinforcement (N.T.S.).",
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "page": 16,
+     "sheet_title": "rule P16-STAIR"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB"
+    }
+   ],
+   "unit": "m2 plan"
+  },
+  {
+   "affected_facts": [
+    "extent"
+   ],
+   "element_ids": [
+    "SP-GBP-02",
+    "SP-GBP-03",
+    "SP-GBP-04",
+    "SP-GBP-05",
+    "SP-GBP-06",
+    "SP-GBP-07",
+    "SP-GBP-08",
+    "SP-GBP-09",
+    "SP-GBP-10",
+    "SP-GBP-11",
+    "SP-GBP-13",
+    "SP-GBP-14",
+    "SP-GBP-15",
+    "SP-GBP-16",
+    "SP-GBP-17",
+    "SP-GBP-18",
+    "SP-GBP-19",
+    "SP-GBP-20",
+    "SP-GBP-21",
+    "SP-GBP-22",
+    "SP-GBP-23"
+   ],
+   "element_type": "GROUND_SLAB",
+   "gap_kind": "EXTENT",
+   "options": [
+    {
+     "answer": "all cells inside the building",
+     "effect": "167.636 m2 plan"
+    },
+    {
+     "answer": "only marked cells",
+     "effect": "smaller area"
+    }
+   ],
+   "quantity": 167.636,
+   "question": "Which areas receive the 10 cm ground slab (5Ø10/m each way): every cell inside the ground beams, or only the cells marked with the note?",
+   "release_effect": "LOWER_BOUND",
+   "rule_ref": "P3-GROUND-SLAB",
+   "rule_status": "CANDIDATE",
+   "rule_text": "Ground slab note: 10 cm, 5Ø10/m each way.",
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "page": 3,
+     "sheet_title": "rule P3-GROUND-SLAB"
+    }
+   ],
+   "unit": "m2 plan"
+  },
+  {
+   "affected_facts": [
+    "section"
+   ],
+   "element_ids": [
+    "SP-1F_ROOF_SLAB-13",
+    "SP-1F_ROOF_SLAB-14",
+    "SP-1F_ROOF_SLAB-15",
+    "SP-1F_ROOF_SLAB-16",
+    "SP-1F_ROOF_SLAB-17",
+    "SP-1F_ROOF_SLAB-18",
+    "SP-1F_ROOF_SLAB-19",
+    "SP-1F_ROOF_SLAB-20"
+   ],
+   "element_type": "DOME",
+   "gap_kind": "APPLICABILITY",
+   "options": [
+    {
+     "answer": "yes",
+     "effect": "dome zones use 100 mm"
+    },
+    {
+     "answer": "no",
+     "effect": "per answer"
+    }
+   ],
+   "quantity": 30.278,
+   "question": "Does the dome detail (100 mm shell, ring beam) apply to both domes on the first-floor roof?",
+   "release_effect": "PROVISIONAL",
+   "rule_ref": "P7-DOME",
+   "rule_status": "CANDIDATE",
+   "rule_text": "Dome reinforcement.",
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "page": 7,
+     "sheet_title": "DETAILS (pool / dome)",
+     "text": "DETAIL OF DOME"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB",
+     "text": "SEE DETAIL"
+    }
+   ],
+   "unit": "m2 plan"
+  },
+  {
+   "affected_facts": [
+    "geometry"
+   ],
+   "element_ids": [
+    "SPC-LIFT_PIT"
+   ],
+   "element_type": "LIFT_PIT",
+   "gap_kind": "DIMENSION",
+   "options": [
+    {
+     "answer": "depth given",
+     "effect": "pit walls measured"
+    }
+   ],
+   "question": "What is the lift-pit depth below the lift footing (manufacturer / engineer)?",
+   "rule_ref": "P14-LIFT",
+   "rule_status": "BLOCKED_METHOD",
+   "rule_text": "Lift pit on the FF raft: 20 cm walls with 6Ø12/m and 6Ø16/m, pit depth by the lift manufacturer.",
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "page": 14,
+     "sheet_title": "rule P14-LIFT"
+    }
+   ]
+  },
+  {
+   "affected_facts": [
+    "detailing"
+   ],
+   "element_ids": [
+    "SPC-PLANTED_COLUMN-GFRS-544",
+    "SPC-PLANTED_COLUMN-GFRS-548",
+    "SPC-PLANTED_COLUMN-FFRS-77C"
+   ],
+   "element_type": "PLANTED_COLUMN",
+   "gap_kind": "APPLICABILITY",
+   "options": [
+    {
+     "answer": "yes",
+     "effect": "detail extras added"
+    },
+    {
+     "answer": "no",
+     "effect": "plain column only"
+    }
+   ],
+   "question": "Does the p.15 detail (Beam carrying a planted column: 4Ø16 extra, column bars anchored 100 into the beam.) apply to each of these columns, and do they use the normal tie bands?",
+   "release_effect": "LOWER_BOUND",
+   "rule_ref": "P15-PLANTED",
+   "rule_status": "CANDIDATE",
+   "rule_text": "Beam carrying a planted column: 4Ø16 extra, column bars anchored 100 into the beam.",
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "page": 15,
+     "sheet_title": "rule P15-PLANTED"
+    }
+   ]
+  },
+  {
+   "affected_facts": [
+    "detailing"
+   ],
+   "element_ids": [
+    "SPC-TURN_COLUMN-GFRS-31F",
+    "SPC-TURN_COLUMN-GFRS-324"
+   ],
+   "element_type": "TURN_COLUMN",
+   "gap_kind": "APPLICABILITY",
+   "options": [
+    {
+     "answer": "yes",
+     "effect": "detail extras added"
+    },
+    {
+     "answer": "no",
+     "effect": "plain column only"
+    }
+   ],
+   "question": "Does the p.15 detail (Twisted (turned) column: spiral ties 6Ø8/m over 1 m each side of the floor, 4Ø16 extra.) apply to each of these columns, and do they use the normal tie bands?",
+   "release_effect": "LOWER_BOUND",
+   "rule_ref": "P15-TWISTED",
+   "rule_status": "CANDIDATE",
+   "rule_text": "Twisted (turned) column: spiral ties 6Ø8/m over 1 m each side of the floor, 4Ø16 extra.",
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "page": 15,
+     "sheet_title": "rule P15-TWISTED"
+    }
+   ]
+  },
+  {
+   "affected_facts": [
+    "lower_ground_beam"
+   ],
+   "element_ids": [
+    "FTG-F-1888-7312",
+    "FTG-F15-7088-7312",
+    "FTG-F-13638-7312",
+    "FTG-F11-16163-7312",
+    "FTG-F14-22408-7312",
+    "FTG-CONFLICT_F_F10-30008-7312",
+    "FTG-F5-26458-7912",
+    "FTG-F3-11838-8262",
+    "FTG-F13-11188-10712",
+    "FTG-FN-32258-10812",
+    "FTG-F6-15938-11062",
+    "FTG-F3-5538-11362",
+    "FTG-FN-23558-12287",
+    "FTG-FN-28083-12287",
+    "FTG-F8-29258-13262",
+    "FTG-F-1888-13312",
+    "FTG-F-4288-13462",
+    "FTG-FF-18688-14112",
+    "FTG-F12-13688-14562",
+    "FTG-F9-25608-15262",
+    "FTG-FN-28608-17612",
+    "FTG-F2-16188-19612",
+    "FTG-F2-18888-19612",
+    "FTG-F5-22358-19612",
+    "FTG-F4-26358-19662",
+    "FTG-F4-30408-19687"
+   ],
+   "element_type": "FOOTING",
+   "gap_kind": "DIMENSION",
+   "options": [
+    {
+     "answer": "difference <= 2.5 m",
+     "effect": "no lower ground beam"
+    },
+    {
+     "answer": "difference > 2.5 m",
+     "effect": "lower ground beams added"
+    }
+   ],
+   "quantity": 26,
+   "question": "What is the founding level? (A lower ground beam is required where the ground beam is more than 2.5 m above the footing.)",
+   "rule_ref": "P13-FOOTING-DEEP",
+   "rule_status": "BLOCKED_METHOD",
+   "rule_text": "Where the upper ground beam is more than 2.5 m above the footing, an additional LOWER ground beam is provided.",
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "page": 13,
+     "sheet_title": "rule P13-FOOTING-DEEP"
+    },
+    {
+     "drawing": "ST7757.pdf",
+     "handle": "1E11",
+     "page": 9,
+     "sheet_title": "rule P9-SOIL"
+    }
+   ],
+   "unit": "nr"
+  },
+  {
+   "affected_facts": [
+    "section"
+   ],
+   "element_ids": [
+    "BM-GF_ROOF-CB7-BL003-479",
+    "BM-GF_ROOF-CB7-BL003-47A",
+    "BM-GF_ROOF-B1-BL047-6A1",
+    "BM-GF_ROOF-CB8-BL024-69F",
+    "BM-GF_ROOF-CB8-BL024-6A0",
+    "BM-GF_ROOF-B1-BL012-50E",
+    "BM-GF_ROOF-B1-BL008-478",
+    "BM-GF_ROOF-CB3-BL022-493",
+    "BM-GF_ROOF-CB3-BL022-494",
+    "BM-GF_ROOF-CB3-BL022-495",
+    "BM-GF_ROOF-B3-BL022-1827",
+    "BM-GF_ROOF-B4-BL022-497",
+    "BM-GF_ROOF-B5-BL022-498",
+    "BM-GF_ROOF-CA-BL015-69E",
+    "BM-GF_ROOF-B4-BL010-508",
+    "BM-GF_ROOF-B4-BL009-49B:b4>v",
+    "BM-GF_ROOF-CB5-BL008-475",
+    "BM-GF_ROOF-CB1-BL007-4E1",
+    "BM-GF_ROOF-B27-BL002-532",
+    "BM-GF_ROOF-B9-BL011-5BD",
+    "BM-GF_ROOF-B26-BL014-4CC",
+    "BM-GF_ROOF-CB4-BL016-45C",
+    "BM-GF_ROOF-B22-BL013-496",
+    "BM-GF_ROOF-B1-BL004-476",
+    "BM-GF_ROOF-B1-BL004-477",
+    "BM-GF_ROOF-CB6-BL004-47C",
+    "BM-GF_ROOF-CB6-BL004-47B",
+    "BM-GF_ROOF-B21-BL001-468",
+    "BM-GF_ROOF-B29-BL039-465",
+    "BM-GF_ROOF-CB5-BL017-474",
+    "BM-GF_ROOF-B7-BA001-47D:b7>v",
+    "BM-GF_ROOF-CB4-BL016-45B",
+    "BM-GF_ROOF-B2-BL005-485",
+    "BM-GF_ROOF-B1-BL023-466",
+    "BM-GF_ROOF-B3-BL032-462",
+    "BM-GF_ROOF-B4-BL045-4DB",
+    "BM-GF_ROOF-B4-BL025-46B",
+    "BM-GF_ROOF-B28-BL026-46C",
+    "BM-GF_ROOF-B1-BL048-430",
+    "BM-GF_ROOF-B14-BL036-45F",
+    "BM-GF_ROOF-B20-BL020-453:b20>v",
+    "BM-GF_ROOF-B13-BL042-467",
+    "BM-GF_ROOF-B7-BL028-4B6",
+    "BM-GF_ROOF-B17-BL044-432",
+    "BM-GF_ROOF-B1-BL027-4B7",
+    "BM-GF_ROOF-B1-BL037-45E",
+    "BM-GF_ROOF-B7-BA003-470",
+    "BM-GF_ROOF-CB1-BL007-4E2",
+    "BM-GF_ROOF-B11-BL023-444",
+    "BM-GF_ROOF-B7-BA005-471",
+    "BM-GF_ROOF-B3-BL027-448",
+    "BM-GF_ROOF-B7-BA004-46F",
+    "BM-GF_ROOF-B2-BL028-449",
+    "BM-GF_ROOF-B2-BL016-492",
+    "BM-GF_ROOF-B16-BL030-473",
+    "BM-GF_ROOF-B4-BL040-446",
+    "BM-GF_ROOF-B1-BL040-445",
+    "BM-GF_ROOF-B7-BA002-46E",
+    "BM-GF_ROOF-B1-BL034-447",
+    "BM-GF_ROOF-B7-BA004-4D2",
+    "BM-GF_ROOF-B24-BL043-1814:B24>v",
+    "BM-GF_ROOF-CB2-BL038-42A",
+    "BM-GF_ROOF-CB2-BL038-42B",
+    "BM-GF_ROOF-B3-BL033-6B7",
+    "BM-1F_ROOF-CB11-BL024-6DA",
+    "BM-1F_ROOF-CB11-BL024-6DB",
+    "BM-1F_ROOF-CB11-BL024-6DC",
+    "BM-1F_ROOF-B4-BL011-711",
+    "BM-1F_ROOF-CB10-BL001-717",
+    "BM-1F_ROOF-CB13-BL004-76A",
+    "BM-1F_ROOF-CB12-BL003-6DD",
+    "BM-1F_ROOF-B18-BL008-6ED",
+    "BM-1F_ROOF-B5-BL007-6EC",
+    "BM-1F_ROOF-B25-BL006-6D1",
+    "BM-1F_ROOF-CB13-BL004-76B",
+    "BM-1F_ROOF-CB10-BL001-718",
+    "BM-1F_ROOF-B4-BA002-1828",
+    "BM-1F_ROOF-B4-BL025-6D9",
+    "BM-1F_ROOF-B11-BL025-6D8",
+    "BM-1F_ROOF-B4-BA001-1829",
+    "BM-1F_ROOF-B1-BL014-6D0",
+    "BM-1F_ROOF-B19-BL029-6CF",
+    "BM-1F_ROOF-B7-BL027-6CC",
+    "BM-1F_ROOF-B23-BL009-74B",
+    "BM-1F_ROOF-B7-BL017-6CD",
+    "BM-1F_ROOF-B4-BL032-6B5",
+    "BM-1F_ROOF-B1-BL016-6CE",
+    "BM-1F_ROOF-B1-BL028-6CB",
+    "BM-1F_ROOF-CB12-BL003-6DE",
+    "BM-1F_ROOF-B6-BL014-6C5",
+    "BM-1F_ROOF-B5-BL022-6C4",
+    "BM-1F_ROOF-B2-BL017-6CA",
+    "BM-1F_ROOF-B2-BL019-6BA",
+    "BM-1F_ROOF-B2-BL016-6C9",
+    "BM-1F_ROOF-CB9-BL023-6C6",
+    "BM-1F_ROOF-CB9-BL023-6C7",
+    "BM-1F_ROOF-CB9-BL023-6C8",
+    "BM-1F_ROOF-B3-BL023-6B9",
+    "BM-2F_ROOF-B2-BL006-790",
+    "BM-2F_ROOF-B1-BL006-78F",
+    "BM-2F_ROOF-B2-BL006-78E",
+    "BM-2F_ROOF-B2-BL010-78A",
+    "BM-2F_ROOF-B2-BL010-775",
+    "BM-2F_ROOF-B1-BL003-78C",
+    "BM-2F_ROOF-B1-BL002-78B",
+    "BM-2F_ROOF-B3-BL008-774",
+    "BM-2F_ROOF-B1-BL011-78D",
+    "BM-2F_ROOF-B7-BL001-7A1",
+    "BM-2F_ROOF-B15-BL004-7A9",
+    "BM-2F_ROOF-B3-BL002-79B",
+    "BM-2F_ROOF-B3-BL003-79C",
+    "BM-2F_ROOF-B3-BL007-79D",
+    "BM-2F_ROOF-B8-BL007-79E"
+   ],
+   "element_type": "BEAM",
+   "gap_kind": "EXTENT",
+   "options": [
+    {
+     "answer": "none",
+     "effect": "no change"
+    },
+    {
+     "answer": "listed beams",
+     "effect": "+5 cm width on those beams"
+    }
+   ],
+   "quantity": 389.327,
+   "question": "Which beams are crossed by service pipes (drainage, water, electrical, AC) and must be widened by 5 cm?",
+   "release_effect": "LOWER_BOUND",
+   "rule_ref": "P8-N11",
+   "rule_status": "BLOCKED_METHOD",
+   "rule_text": "Beams crossed by service pipes are widened by 5 cm.",
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "page": 8,
+     "sheet_title": "rule P8-N11"
+    }
+   ],
+   "trade": [
+    "CONCRETE",
+    "FORMWORK"
+   ],
+   "unit": "m beam"
+  },
+  {
+   "affected_facts": [
+    "side_bars"
+   ],
+   "element_ids": [
+    "BM-GF_ROOF-CB7-BL003-479",
+    "BM-GF_ROOF-CB7-BL003-47A",
+    "BM-GF_ROOF-CB8-BL024-69F",
+    "BM-GF_ROOF-CB8-BL024-6A0",
+    "BM-GF_ROOF-CB3-BL022-493",
+    "BM-GF_ROOF-CB3-BL022-494",
+    "BM-GF_ROOF-CB3-BL022-495",
+    "BM-GF_ROOF-CB1-BL007-4E1",
+    "BM-GF_ROOF-CB6-BL004-47C",
+    "BM-GF_ROOF-CB6-BL004-47B",
+    "BM-GF_ROOF-CB1-BL007-4E2",
+    "BM-1F_ROOF-CB11-BL024-6DA",
+    "BM-1F_ROOF-CB11-BL024-6DB",
+    "BM-1F_ROOF-CB11-BL024-6DC",
+    "BM-1F_ROOF-CB12-BL003-6DD",
+    "BM-1F_ROOF-CB12-BL003-6DE"
+   ],
+   "element_type": "BEAM",
+   "gap_kind": "METHOD",
+   "options": [
+    {
+     "answer": "2Ø12 / 3Ø12 / 4Ø12 per face",
+     "effect": "side bars added"
+    }
+   ],
+   "quantity": 86.389,
+   "question": "Beams deeper than 60 cm without side bars in their schedule row (CB1, CB11, CB12, CB3, CB6, CB7, CB8): how many 12 mm side bars per face?",
+   "rule_ref": "P8-N21",
+   "rule_status": "BLOCKED_METHOD",
+   "rule_text": "Side bars 2Ø12 / 3Ø12 / 4Ø12 in beams deeper than 60 cm, according to the beam width, unless stated otherwise.",
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "page": 8,
+     "sheet_title": "rule P8-N21"
+    }
+   ],
+   "trade": [
+    "REINFORCEMENT"
+   ],
+   "unit": "m beam"
+  },
+  {
+   "affected_facts": [
+    "top_over_supports"
+   ],
+   "element_ids": [
+    "SP-GF_ROOF_SLAB-02",
+    "SP-GF_ROOF_SLAB-04",
+    "SP-GF_ROOF_SLAB-05",
+    "SP-GF_ROOF_SLAB-06",
+    "SP-GF_ROOF_SLAB-07",
+    "SP-GF_ROOF_SLAB-08",
+    "SP-GF_ROOF_SLAB-10",
+    "SP-GF_ROOF_SLAB-11",
+    "SP-GF_ROOF_SLAB-12",
+    "SP-GF_ROOF_SLAB-14",
+    "SP-GF_ROOF_SLAB-15",
+    "SP-GF_ROOF_SLAB-16",
+    "SP-GF_ROOF_SLAB-17",
+    "SP-GF_ROOF_SLAB-18",
+    "SP-GF_ROOF_SLAB-19",
+    "SP-GF_ROOF_SLAB-20",
+    "SP-GF_ROOF_SLAB-22",
+    "SP-GF_ROOF_SLAB-23",
+    "SP-GF_ROOF_SLAB-24",
+    "SP-GF_ROOF_SLAB-25",
+    "SP-GF_ROOF_SLAB-26",
+    "SP-GF_ROOF_SLAB-27",
+    "SP-GF_ROOF_SLAB-29",
+    "SP-GF_ROOF_SLAB-30",
+    "SP-GF_ROOF_SLAB-31",
+    "SP-GF_ROOF_SLAB-32",
+    "SP-GF_ROOF_SLAB-33",
+    "SP-GF_ROOF_SLAB-34",
+    "SP-1F_ROOF_SLAB-02",
+    "SP-1F_ROOF_SLAB-03",
+    "SP-1F_ROOF_SLAB-04",
+    "SP-1F_ROOF_SLAB-05",
+    "SP-1F_ROOF_SLAB-07",
+    "SP-1F_ROOF_SLAB-08",
+    "SP-1F_ROOF_SLAB-09",
+    "SP-1F_ROOF_SLAB-11",
+    "SP-1F_ROOF_SLAB-12",
+    "SP-1F_ROOF_SLAB-21",
+    "SP-1F_ROOF_SLAB-22",
+    "SP-1F_ROOF_SLAB-23",
+    "SP-1F_ROOF_SLAB-24",
+    "SP-1F_ROOF_SLAB-25",
+    "SP-2F_ROOF_SLAB-01",
+    "SP-2F_ROOF_SLAB-02",
+    "SP-2F_ROOF_SLAB-03",
+    "SP-2F_ROOF_SLAB-04",
+    "SP-2F_ROOF_SLAB-06",
+    "SP-2F_ROOF_SLAB-07",
+    "SP-2F_ROOF_SLAB-08"
+   ],
+   "element_type": "SLAB",
+   "gap_kind": "APPLICABILITY",
+   "options": [
+    {
+     "answer": "minimum where no top bar drawn",
+     "effect": "added only where missing"
+    },
+    {
+     "answer": "replaces p.15",
+     "effect": "one rule for all supports"
+    },
+    {
+     "answer": "both apply",
+     "effect": "both bar sets"
+    }
+   ],
+   "quantity": 370.501,
+   "question": "The plan note asks for 5Ø10/m top bars over beams for one third of the span, and p.15 gives top-bar extensions of 0.25L / 0.30L. Is the plan note a minimum where no top bar is drawn, or does it replace p.15?",
+   "rule_ref": "P4-6-NOTE-2",
+   "rule_status": "CANDIDATE",
+   "rule_text": "Top steel 5Ø10/m over beams for the slabs, length one third of the span, in both directions.",
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "handle": "D8",
+     "page": 4,
+     "sheet_title": "rule P4-6-NOTE-2"
+    },
+    {
+     "drawing": "ST7757.pdf",
+     "page": 15,
+     "sheet_title": "rule P15-SLAB-ON-BEAMS"
+    }
+   ],
+   "trade": [
+    "REINFORCEMENT"
+   ],
+   "unit": "m2 plan"
+  }
+ ],
+ "section_evidence": [
+  {
+   "element_id": "COL-C-X01-Y01-GF",
+   "element_type": "COLUMN",
+   "evidence": [
+    {
+     "authority": "MEMBER_SCHEDULE",
+     "description": "schedule section (storey band)",
+     "source_ref": {
+      "drawing": "ST7757.dxf / ST7757.pdf",
+      "page": 9,
+      "sheet_title": "schedule (column)",
+      "text": "C"
+     },
+     "value": [
+      20.0,
+      50.0
+     ]
+    },
+    {
+     "authority": "DRAWN_GEOMETRY",
+     "description": "drawn outline",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "34D",
+      "layer": "S-COL.BON",
+      "page": 4,
+      "sheet_title": "GROUND FLOOR ROOF SLAB",
+      "xy_mm": [
+       2088,
+       7412
+      ]
+     },
+     "value": [
+      20.0,
+      40.0
+     ]
+    }
+   ],
+   "floor": "GF",
+   "member_type": "C",
+   "quantity": 1,
+   "tol": 2.5,
+   "unit": "nr occurrences"
+  },
+  {
+   "element_id": "COL-C3-X04-Y01-GF",
+   "element_type": "COLUMN",
+   "evidence": [
+    {
+     "authority": "MEMBER_SCHEDULE",
+     "description": "schedule section (storey band)",
+     "source_ref": {
+      "drawing": "ST7757.dxf / ST7757.pdf",
+      "page": 9,
+      "sheet_title": "schedule (column)",
+      "text": "C3"
+     },
+     "value": [
+      25.0,
+      50.0
+     ]
+    },
+    {
+     "authority": "DRAWN_GEOMETRY",
+     "description": "drawn outline",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "350",
+      "layer": "S-COL.BON",
+      "page": 4,
+      "sheet_title": "GROUND FLOOR ROOF SLAB",
+      "xy_mm": [
+       7938,
+       7412
+      ]
+     },
+     "value": [
+      20.0,
+      40.0
+     ]
+    }
+   ],
+   "floor": "GF",
+   "member_type": "C3",
+   "quantity": 1,
+   "tol": 2.5,
+   "unit": "nr occurrences"
+  },
+  {
+   "element_id": "COL-C-X06-Y01-GF",
+   "element_type": "COLUMN",
+   "evidence": [
+    {
+     "authority": "MEMBER_SCHEDULE",
+     "description": "schedule section (storey band)",
+     "source_ref": {
+      "drawing": "ST7757.dxf / ST7757.pdf",
+      "page": 9,
+      "sheet_title": "schedule (column)",
+      "text": "C"
+     },
+     "value": [
+      20.0,
+      50.0
+     ]
+    },
+    {
+     "authority": "DRAWN_GEOMETRY",
+     "description": "drawn outline",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "359",
+      "layer": "S-COL.BON",
+      "page": 4,
+      "sheet_title": "GROUND FLOOR ROOF SLAB",
+      "xy_mm": [
+       14088,
+       7412
+      ]
+     },
+     "value": [
+      20.0,
+      40.0
+     ]
+    }
+   ],
+   "floor": "GF",
+   "member_type": "C",
+   "quantity": 1,
+   "tol": 2.5,
+   "unit": "nr occurrences"
+  },
+  {
+   "element_id": "COL-C-X16-Y01-GF",
+   "element_type": "COLUMN",
+   "evidence": [
+    {
+     "authority": "MEMBER_SCHEDULE",
+     "description": "schedule section (storey band)",
+     "source_ref": {
+      "drawing": "ST7757.dxf / ST7757.pdf",
+      "page": 9,
+      "sheet_title": "schedule (column)",
+      "text": "C"
+     },
+     "value": [
+      20.0,
+      50.0
+     ]
+    },
+    {
+     "authority": "DRAWN_GEOMETRY",
+     "description": "drawn outline",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "347",
+      "layer": "S-COL.BON",
+      "page": 4,
+      "sheet_title": "GROUND FLOOR ROOF SLAB",
+      "xy_mm": [
+       33158,
+       7512
+      ]
+     },
+     "value": [
+      20.0,
+      40.0
+     ]
+    }
+   ],
+   "floor": "GF",
+   "member_type": "C",
+   "quantity": 1,
+   "tol": 2.5,
+   "unit": "nr occurrences"
+  },
+  {
+   "element_id": "COL-C8-X12-Y02-FOUNDATION",
+   "element_type": "COLUMN",
+   "evidence": [
+    {
+     "authority": "MEMBER_SCHEDULE",
+     "description": "schedule section (storey band)",
+     "source_ref": {
+      "drawing": "ST7757.dxf / ST7757.pdf",
+      "page": 9,
+      "sheet_title": "schedule (column)",
+      "text": "C8"
+     },
+     "value": [
+      30.0,
+      90.0
+     ]
+    },
+    {
+     "authority": "DRAWN_GEOMETRY",
+     "description": "drawn outline",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "10E0",
+      "layer": "S-COL.BON",
+      "page": 2,
+      "sheet_title": "FOUNDATION PLAN",
+      "xy_mm": [
+       24308,
+       8912
+      ]
+     },
+     "value": [
+      30.0,
+      80.0
+     ]
+    }
+   ],
+   "floor": "FOUNDATION",
+   "member_type": "C8",
+   "quantity": 1,
+   "tol": 2.5,
+   "unit": "nr occurrences"
+  },
+  {
+   "element_id": "COL-C8-X12-Y02-GF",
+   "element_type": "COLUMN",
+   "evidence": [
+    {
+     "authority": "MEMBER_SCHEDULE",
+     "description": "schedule section (storey band)",
+     "source_ref": {
+      "drawing": "ST7757.dxf / ST7757.pdf",
+      "page": 9,
+      "sheet_title": "schedule (column)",
+      "text": "C8"
+     },
+     "value": [
+      25.0,
+      90.0
+     ]
+    },
+    {
+     "authority": "DRAWN_GEOMETRY",
+     "description": "drawn outline",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "380",
+      "layer": "S-COL.BON",
+      "page": 4,
+      "sheet_title": "GROUND FLOOR ROOF SLAB",
+      "xy_mm": [
+       24308,
+       8937
+      ]
+     },
+     "value": [
+      25.0,
+      80.0
+     ]
+    }
+   ],
+   "floor": "GF",
+   "member_type": "C8",
+   "quantity": 1,
+   "tol": 2.5,
+   "unit": "nr occurrences"
+  },
+  {
+   "element_id": "COL-C8-X12-Y02-1F",
+   "element_type": "COLUMN",
+   "evidence": [
+    {
+     "authority": "MEMBER_SCHEDULE",
+     "description": "schedule section (storey band)",
+     "source_ref": {
+      "drawing": "ST7757.dxf / ST7757.pdf",
+      "page": 9,
+      "sheet_title": "schedule (column)",
+      "text": "C8"
+     },
+     "value": [
+      20.0,
+      90.0
+     ]
+    },
+    {
+     "authority": "DRAWN_GEOMETRY",
+     "description": "drawn outline",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "69A",
+      "layer": "S-COL.BON",
+      "page": 5,
+      "sheet_title": "FIRST FLOOR ROOF SLAB",
+      "xy_mm": [
+       24308,
+       8937
+      ]
+     },
+     "value": [
+      25.0,
+      80.0
+     ]
+    }
+   ],
+   "floor": "1F",
+   "member_type": "C8",
+   "quantity": 1,
+   "tol": 2.5,
+   "unit": "nr occurrences"
+  },
+  {
+   "element_id": "COL-C5-X14-Y02-1F",
+   "element_type": "COLUMN",
+   "evidence": [
+    {
+     "authority": "MEMBER_SCHEDULE",
+     "description": "schedule section (storey band)",
+     "source_ref": {
+      "drawing": "ST7757.dxf / ST7757.pdf",
+      "page": 9,
+      "sheet_title": "schedule (column)",
+      "text": "C5"
+     },
+     "value": [
+      20.0,
+      50.0
+     ]
+    },
+    {
+     "authority": "DRAWN_GEOMETRY",
+     "description": "drawn outline",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "694",
+      "layer": "S-COL.BON",
+      "page": 5,
+      "sheet_title": "FIRST FLOOR ROOF SLAB",
+      "xy_mm": [
+       27658,
+       8937
+      ]
+     },
+     "value": [
+      25.0,
+      60.0
+     ]
+    }
+   ],
+   "floor": "1F",
+   "member_type": "C5",
+   "quantity": 1,
+   "tol": 2.5,
+   "unit": "nr occurrences"
+  },
+  {
+   "element_id": "COL-C5-X05-Y04-1F",
+   "element_type": "COLUMN",
+   "evidence": [
+    {
+     "authority": "MEMBER_SCHEDULE",
+     "description": "schedule section (storey band)",
+     "source_ref": {
+      "drawing": "ST7757.dxf / ST7757.pdf",
+      "page": 9,
+      "sheet_title": "schedule (column)",
+      "text": "C5"
+     },
+     "value": [
+      20.0,
+      50.0
+     ]
+    },
+    {
+     "authority": "DRAWN_GEOMETRY",
+     "description": "drawn outline",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "685",
+      "layer": "S-COL.BON",
+      "page": 5,
+      "sheet_title": "FIRST FLOOR ROOF SLAB",
+      "xy_mm": [
+       12588,
+       11912
+      ]
+     },
+     "value": [
+      20.0,
+      60.0
+     ]
+    }
+   ],
+   "floor": "1F",
+   "member_type": "C5",
+   "quantity": 1,
+   "tol": 2.5,
+   "unit": "nr occurrences"
+  },
+  {
+   "element_id": "COL-C6-X08-Y04-1F",
+   "element_type": "COLUMN",
+   "evidence": [
+    {
+     "authority": "MEMBER_SCHEDULE",
+     "description": "schedule section (storey band)",
+     "source_ref": {
+      "drawing": "ST7757.dxf / ST7757.pdf",
+      "page": 9,
+      "sheet_title": "schedule (column)",
+      "text": "C6"
+     },
+     "value": [
+      20.0,
+      60.0
+     ]
+    },
+    {
+     "authority": "DRAWN_GEOMETRY",
+     "description": "drawn outline",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "688",
+      "layer": "S-COL.BON",
+      "page": 5,
+      "sheet_title": "FIRST FLOOR ROOF SLAB",
+      "xy_mm": [
+       17013,
+       12362
+      ]
+     },
+     "value": [
+      25.0,
+      70.0
+     ]
+    }
+   ],
+   "floor": "1F",
+   "member_type": "C6",
+   "quantity": 1,
+   "tol": 2.5,
+   "unit": "nr occurrences"
+  },
+  {
+   "element_id": "COL-C-X01-Y05-GF",
+   "element_type": "COLUMN",
+   "evidence": [
+    {
+     "authority": "MEMBER_SCHEDULE",
+     "description": "schedule section (storey band)",
+     "source_ref": {
+      "drawing": "ST7757.dxf / ST7757.pdf",
+      "page": 9,
+      "sheet_title": "schedule (column)",
+      "text": "C"
+     },
+     "value": [
+      20.0,
+      50.0
+     ]
+    },
+    {
+     "authority": "DRAWN_GEOMETRY",
+     "description": "drawn outline",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "34A",
+      "layer": "S-COL.BON",
+      "page": 4,
+      "sheet_title": "GROUND FLOOR ROOF SLAB",
+      "xy_mm": [
+       1988,
+       13812
+      ]
+     },
+     "value": [
+      20.0,
+      40.0
+     ]
+    }
+   ],
+   "floor": "GF",
+   "member_type": "C",
+   "quantity": 1,
+   "tol": 2.5,
+   "unit": "nr occurrences"
+  },
+  {
+   "element_id": "COL-C-X02-Y05-GF",
+   "element_type": "COLUMN",
+   "evidence": [
+    {
+     "authority": "MEMBER_SCHEDULE",
+     "description": "schedule section (storey band)",
+     "source_ref": {
+      "drawing": "ST7757.dxf / ST7757.pdf",
+      "page": 9,
+      "sheet_title": "schedule (column)",
+      "text": "C"
+     },
+     "value": [
+      20.0,
+      50.0
+     ]
+    },
+    {
+     "authority": "DRAWN_GEOMETRY",
+     "description": "drawn outline",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "356",
+      "layer": "S-COL.BON",
+      "page": 4,
+      "sheet_title": "GROUND FLOOR ROOF SLAB",
+      "xy_mm": [
+       4788,
+       13912
+      ]
+     },
+     "value": [
+      20.0,
+      40.0
+     ]
+    }
+   ],
+   "floor": "GF",
+   "member_type": "C",
+   "quantity": 1,
+   "tol": 2.5,
+   "unit": "nr occurrences"
+  },
+  {
+   "element_id": "COL-C3-X16-Y06-GF",
+   "element_type": "COLUMN",
+   "evidence": [
+    {
+     "authority": "MEMBER_SCHEDULE",
+     "description": "schedule section (storey band)",
+     "source_ref": {
+      "drawing": "ST7757.dxf / ST7757.pdf",
+      "page": 9,
+      "sheet_title": "schedule (column)",
+      "text": "C3"
+     },
+     "value": [
+      25.0,
+      50.0
+     ]
+    },
+    {
+     "authority": "DRAWN_GEOMETRY",
+     "description": "drawn outline",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "344",
+      "layer": "S-COL.BON",
+      "page": 4,
+      "sheet_title": "GROUND FLOOR ROOF SLAB",
+      "xy_mm": [
+       33158,
+       14962
+      ]
+     },
+     "value": [
+      20.0,
+      50.0
+     ]
+    }
+   ],
+   "floor": "GF",
+   "member_type": "C3",
+   "quantity": 1,
+   "tol": 2.5,
+   "unit": "nr occurrences"
+  },
+  {
+   "element_id": "COL-C2-X09-Y07-FOUNDATION",
+   "element_type": "COLUMN",
+   "evidence": [
+    {
+     "authority": "MEMBER_SCHEDULE",
+     "description": "schedule section (storey band)",
+     "source_ref": {
+      "drawing": "ST7757.dxf / ST7757.pdf",
+      "page": 9,
+      "sheet_title": "schedule (column)",
+      "text": "C2"
+     },
+     "value": [
+      30.0,
+      50.0
+     ]
+    },
+    {
+     "authority": "DRAWN_GEOMETRY",
+     "description": "drawn outline",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "1096",
+      "layer": "S-COL.BON",
+      "page": 2,
+      "sheet_title": "FOUNDATION PLAN",
+      "xy_mm": [
+       19688,
+       15662
+      ]
+     },
+     "value": [
+      20.0,
+      50.0
+     ]
+    }
+   ],
+   "floor": "FOUNDATION",
+   "member_type": "C2",
+   "quantity": 1,
+   "tol": 2.5,
+   "unit": "nr occurrences"
+  },
+  {
+   "element_id": "COL-C9-X10-Y07-FOUNDATION",
+   "element_type": "COLUMN",
+   "evidence": [
+    {
+     "authority": "MEMBER_SCHEDULE",
+     "description": "schedule section (storey band)",
+     "source_ref": {
+      "drawing": "ST7757.dxf / ST7757.pdf",
+      "page": 9,
+      "sheet_title": "schedule (column)",
+      "text": "C9"
+     },
+     "value": [
+      30.0,
+      100.0
+     ]
+    },
+    {
+     "authority": "DRAWN_GEOMETRY",
+     "description": "drawn outline",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "1090",
+      "layer": "S-COL.BON",
+      "page": 2,
+      "sheet_title": "FOUNDATION PLAN",
+      "xy_mm": [
+       21713,
+       15912
+      ]
+     },
+     "value": [
+      25.0,
+      100.0
+     ]
+    }
+   ],
+   "floor": "FOUNDATION",
+   "member_type": "C9",
+   "quantity": 1,
+   "tol": 2.5,
+   "unit": "nr occurrences"
+  },
+  {
+   "element_id": "COL-C9-X10-Y07-1F",
+   "element_type": "COLUMN",
+   "evidence": [
+    {
+     "authority": "MEMBER_SCHEDULE",
+     "description": "schedule section (storey band)",
+     "source_ref": {
+      "drawing": "ST7757.dxf / ST7757.pdf",
+      "page": 9,
+      "sheet_title": "schedule (column)",
+      "text": "C9"
+     },
+     "value": [
+      20.0,
+      90.0
+     ]
+    },
+    {
+     "authority": "DRAWN_GEOMETRY",
+     "description": "drawn outline",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "679",
+      "layer": "S-COL.BON",
+      "page": 5,
+      "sheet_title": "FIRST FLOOR ROOF SLAB",
+      "xy_mm": [
+       21713,
+       15912
+      ]
+     },
+     "value": [
+      25.0,
+      100.0
+     ]
+    }
+   ],
+   "floor": "1F",
+   "member_type": "C9",
+   "quantity": 1,
+   "tol": 2.5,
+   "unit": "nr occurrences"
+  },
+  {
+   "element_id": "COL-P.C-X?-Y?@24888-15994-2F",
+   "element_type": "COLUMN",
+   "evidence": [
+    {
+     "authority": "MEMBER_SCHEDULE",
+     "description": "schedule section (storey band)",
+     "source_ref": {
+      "drawing": "ST7757.dxf / ST7757.pdf",
+      "page": 9,
+      "sheet_title": "schedule (column)",
+      "text": "P.C"
+     },
+     "value": [
+      20,
+      50
+     ]
+    },
+    {
+     "authority": "DRAWN_GEOMETRY",
+     "description": "drawn outline",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "778",
+      "layer": "S-COL.BON",
+      "page": 6,
+      "sheet_title": "SECOND FLOOR ROOF SLAB",
+      "xy_mm": [
+       24888,
+       15994
+      ]
+     },
+     "value": [
+      20.0,
+      40.0
+     ]
+    }
+   ],
+   "floor": "2F",
+   "member_type": "P.C",
+   "quantity": 1,
+   "tol": 2.5,
+   "unit": "nr occurrences"
+  },
+  {
+   "element_id": "COL-C7-X07-Y?@15888-16162-1F",
+   "element_type": "COLUMN",
+   "evidence": [
+    {
+     "authority": "MEMBER_SCHEDULE",
+     "description": "schedule section (storey band)",
+     "source_ref": {
+      "drawing": "ST7757.dxf / ST7757.pdf",
+      "page": 9,
+      "sheet_title": "schedule (column)",
+      "text": "C7"
+     },
+     "value": [
+      20.0,
+      80.0
+     ]
+    },
+    {
+     "authority": "DRAWN_GEOMETRY",
+     "description": "drawn outline",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "68E",
+      "layer": "S-COL.BON",
+      "page": 5,
+      "sheet_title": "FIRST FLOOR ROOF SLAB",
+      "xy_mm": [
+       15888,
+       16187
+      ]
+     },
+     "value": [
+      25.0,
+      80.0
+     ]
+    }
+   ],
+   "floor": "1F",
+   "member_type": "C7",
+   "quantity": 1,
+   "tol": 2.5,
+   "unit": "nr occurrences"
+  },
+  {
+   "element_id": "COL-C9-X13-Y08-1F",
+   "element_type": "COLUMN",
+   "evidence": [
+    {
+     "authority": "MEMBER_SCHEDULE",
+     "description": "schedule section (storey band)",
+     "source_ref": {
+      "drawing": "ST7757.dxf / ST7757.pdf",
+      "page": 9,
+      "sheet_title": "schedule (column)",
+      "text": "C9"
+     },
+     "value": [
+      20.0,
+      90.0
+     ]
+    },
+    {
+     "authority": "DRAWN_GEOMETRY",
+     "description": "drawn outline",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "667",
+      "layer": "S-COL.BON",
+      "page": 5,
+      "sheet_title": "FIRST FLOOR ROOF SLAB",
+      "xy_mm": [
+       27308,
+       16587
+      ]
+     },
+     "value": [
+      20.0,
+      100.0
+     ]
+    }
+   ],
+   "floor": "1F",
+   "member_type": "C9",
+   "quantity": 1,
+   "tol": 2.5,
+   "unit": "nr occurrences"
+  },
+  {
+   "element_id": "COL-C3-X08-Y09-1F",
+   "element_type": "COLUMN",
+   "evidence": [
+    {
+     "authority": "MEMBER_SCHEDULE",
+     "description": "schedule section (storey band)",
+     "source_ref": {
+      "drawing": "ST7757.dxf / ST7757.pdf",
+      "page": 9,
+      "sheet_title": "schedule (column)",
+      "text": "C3"
+     },
+     "value": [
+      20.0,
+      50.0
+     ]
+    },
+    {
+     "authority": "DRAWN_GEOMETRY",
+     "description": "drawn outline",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "691",
+      "layer": "S-COL.BON",
+      "page": 5,
+      "sheet_title": "FIRST FLOOR ROOF SLAB",
+      "xy_mm": [
+       17013,
+       17362
+      ]
+     },
+     "value": [
+      25.0,
+      50.0
+     ]
+    }
+   ],
+   "floor": "1F",
+   "member_type": "C3",
+   "quantity": 1,
+   "tol": 2.5,
+   "unit": "nr occurrences"
+  },
+  {
+   "element_id": "COL-C3-X08-Y09-2F",
+   "element_type": "COLUMN",
+   "evidence": [
+    {
+     "authority": "MEMBER_SCHEDULE",
+     "description": "schedule section (storey band)",
+     "source_ref": {
+      "drawing": "ST7757.dxf / ST7757.pdf",
+      "page": 9,
+      "sheet_title": "schedule (column)",
+      "text": "C3"
+     },
+     "value": [
+      20.0,
+      50.0
+     ]
+    },
+    {
+     "authority": "DRAWN_GEOMETRY",
+     "description": "drawn outline",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "424",
+      "layer": "S-COL.BON",
+      "page": 6,
+      "sheet_title": "SECOND FLOOR ROOF SLAB",
+      "xy_mm": [
+       17013,
+       17362
+      ]
+     },
+     "value": [
+      25.0,
+      50.0
+     ]
+    }
+   ],
+   "floor": "2F",
+   "member_type": "C3",
+   "quantity": 1,
+   "tol": 2.5,
+   "unit": "nr occurrences"
+  },
+  {
+   "element_id": "COL-C1-X09-Y09-FOUNDATION",
+   "element_type": "COLUMN",
+   "evidence": [
+    {
+     "authority": "MEMBER_SCHEDULE",
+     "description": "schedule section (storey band)",
+     "source_ref": {
+      "drawing": "ST7757.dxf / ST7757.pdf",
+      "page": 9,
+      "sheet_title": "schedule (column)",
+      "text": "C1"
+     },
+     "value": [
+      30.0,
+      50.0
+     ]
+    },
+    {
+     "authority": "DRAWN_GEOMETRY",
+     "description": "drawn outline",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "1099",
+      "layer": "S-COL.BON",
+      "page": 2,
+      "sheet_title": "FOUNDATION PLAN",
+      "xy_mm": [
+       19688,
+       17362
+      ]
+     },
+     "value": [
+      20.0,
+      50.0
+     ]
+    }
+   ],
+   "floor": "FOUNDATION",
+   "member_type": "C1",
+   "quantity": 1,
+   "tol": 2.5,
+   "unit": "nr occurrences"
+  },
+  {
+   "element_id": "COL-C2-X10-Y09-FOUNDATION",
+   "element_type": "COLUMN",
+   "evidence": [
+    {
+     "authority": "MEMBER_SCHEDULE",
+     "description": "schedule section (storey band)",
+     "source_ref": {
+      "drawing": "ST7757.dxf / ST7757.pdf",
+      "page": 9,
+      "sheet_title": "schedule (column)",
+      "text": "C2"
+     },
+     "value": [
+      30.0,
+      50.0
+     ]
+    },
+    {
+     "authority": "DRAWN_GEOMETRY",
+     "description": "drawn outline",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "1093",
+      "layer": "S-COL.BON",
+      "page": 2,
+      "sheet_title": "FOUNDATION PLAN",
+      "xy_mm": [
+       21688,
+       17362
+      ]
+     },
+     "value": [
+      20.0,
+      50.0
+     ]
+    }
+   ],
+   "floor": "FOUNDATION",
+   "member_type": "C2",
+   "quantity": 1,
+   "tol": 2.5,
+   "unit": "nr occurrences"
+  },
+  {
+   "element_id": "COL-C5-X11-Y10-1F",
+   "element_type": "COLUMN",
+   "evidence": [
+    {
+     "authority": "MEMBER_SCHEDULE",
+     "description": "schedule section (storey band)",
+     "source_ref": {
+      "drawing": "ST7757.dxf / ST7757.pdf",
+      "page": 9,
+      "sheet_title": "schedule (column)",
+      "text": "C5"
+     },
+     "value": [
+      20.0,
+      50.0
+     ]
+    },
+    {
+     "authority": "DRAWN_GEOMETRY",
+     "description": "drawn outline",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "673",
+      "layer": "S-COL.BON",
+      "page": 5,
+      "sheet_title": "FIRST FLOOR ROOF SLAB",
+      "xy_mm": [
+       23558,
+       20687
+      ]
+     },
+     "value": [
+      25.0,
+      60.0
+     ]
+    }
+   ],
+   "floor": "1F",
+   "member_type": "C5",
+   "quantity": 1,
+   "tol": 2.5,
+   "unit": "nr occurrences"
+  },
+  {
+   "element_id": "COL-C5-X11-Y10-2F",
+   "element_type": "COLUMN",
+   "evidence": [
+    {
+     "authority": "MEMBER_SCHEDULE",
+     "description": "schedule section (storey band)",
+     "source_ref": {
+      "drawing": "ST7757.dxf / ST7757.pdf",
+      "page": 9,
+      "sheet_title": "schedule (column)",
+      "text": "C5"
+     },
+     "value": [
+      20.0,
+      50.0
+     ]
+    },
+    {
+     "authority": "DRAWN_GEOMETRY",
+     "description": "drawn outline",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "415",
+      "layer": "S-COL.BON",
+      "page": 6,
+      "sheet_title": "SECOND FLOOR ROOF SLAB",
+      "xy_mm": [
+       23558,
+       20712
+      ]
+     },
+     "value": [
+      20.0,
+      60.0
+     ]
+    }
+   ],
+   "floor": "2F",
+   "member_type": "C5",
+   "quantity": 1,
+   "tol": 2.5,
+   "unit": "nr occurrences"
+  },
+  {
+   "element_id": "COL-C4-X13-Y10-1F",
+   "element_type": "COLUMN",
+   "evidence": [
+    {
+     "authority": "MEMBER_SCHEDULE",
+     "description": "schedule section (storey band)",
+     "source_ref": {
+      "drawing": "ST7757.dxf / ST7757.pdf",
+      "page": 9,
+      "sheet_title": "schedule (column)",
+      "text": "C4"
+     },
+     "value": [
+      20.0,
+      50.0
+     ]
+    },
+    {
+     "authority": "DRAWN_GEOMETRY",
+     "description": "drawn outline",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "697",
+      "layer": "S-COL.BON",
+      "page": 5,
+      "sheet_title": "FIRST FLOOR ROOF SLAB",
+      "xy_mm": [
+       27458,
+       20687
+      ]
+     },
+     "value": [
+      25.0,
+      50.0
+     ]
+    }
+   ],
+   "floor": "1F",
+   "member_type": "C4",
+   "quantity": 1,
+   "tol": 2.5,
+   "unit": "nr occurrences"
+  },
+  {
+   "element_id": "COL-C4-X15-Y10-FOUNDATION",
+   "element_type": "COLUMN",
+   "evidence": [
+    {
+     "authority": "MEMBER_SCHEDULE",
+     "description": "schedule section (storey band)",
+     "source_ref": {
+      "drawing": "ST7757.dxf / ST7757.pdf",
+      "page": 9,
+      "sheet_title": "schedule (column)",
+      "text": "C4"
+     },
+     "value": [
+      30.0,
+      50.0
+     ]
+    },
+    {
+     "authority": "DRAWN_GEOMETRY",
+     "description": "drawn outline",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "108D",
+      "layer": "S-COL.BON",
+      "page": 2,
+      "sheet_title": "FOUNDATION PLAN",
+      "xy_mm": [
+       31508,
+       20687
+      ]
+     },
+     "value": [
+      25.0,
+      50.0
+     ]
+    }
+   ],
+   "floor": "FOUNDATION",
+   "member_type": "C4",
+   "quantity": 1,
+   "tol": 2.5,
+   "unit": "nr occurrences"
+  },
+  {
+   "element_id": "COL-C4-X15-Y10-1F",
+   "element_type": "COLUMN",
+   "evidence": [
+    {
+     "authority": "MEMBER_SCHEDULE",
+     "description": "schedule section (storey band)",
+     "source_ref": {
+      "drawing": "ST7757.dxf / ST7757.pdf",
+      "page": 9,
+      "sheet_title": "schedule (column)",
+      "text": "C4"
+     },
+     "value": [
+      20.0,
+      50.0
+     ]
+    },
+    {
+     "authority": "DRAWN_GEOMETRY",
+     "description": "drawn outline",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "676",
+      "layer": "S-COL.BON",
+      "page": 5,
+      "sheet_title": "FIRST FLOOR ROOF SLAB",
+      "xy_mm": [
+       31508,
+       20687
+      ]
+     },
+     "value": [
+      25.0,
+      50.0
+     ]
+    }
+   ],
+   "floor": "1F",
+   "member_type": "C4",
+   "quantity": 1,
+   "tol": 2.5,
+   "unit": "nr occurrences"
+  },
+  {
+   "element_id": "BM-GF_ROOF-B21-BL001-468",
+   "element_type": "BEAM",
+   "evidence": [
+    {
+     "authority": "MEMBER_SCHEDULE",
+     "description": "schedule width (cm)",
+     "source_ref": {
+      "drawing": "ST7757.dxf / ST7757.pdf",
+      "page": 10,
+      "sheet_title": "schedule (simple beam)",
+      "text": "B21"
+     },
+     "value": 45.0
+    },
+    {
+     "authority": "DRAWN_GEOMETRY",
+     "description": "drawn width (cm)",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "468",
+      "page": 4,
+      "sheet_title": "GROUND FLOOR ROOF SLAB",
+      "text": "B21",
+      "xy_mm": [
+       28103,
+       12422
+      ]
+     },
+     "value": 40.0
+    }
+   ],
+   "floor": "GF_ROOF",
+   "member_type": "B21",
+   "quantity": 7.768,
+   "tol": 2.5,
+   "unit": "m beam"
+  },
+  {
+   "element_id": "BM-GF_ROOF-B29-BL039-465",
+   "element_type": "BEAM",
+   "evidence": [
+    {
+     "authority": "MEMBER_SCHEDULE",
+     "description": "schedule width (cm)",
+     "source_ref": {
+      "drawing": "ST7757.dxf / ST7757.pdf",
+      "page": 10,
+      "sheet_title": "schedule (simple beam)",
+      "text": "B29"
+     },
+     "value": 25.0
+    },
+    {
+     "authority": "DRAWN_GEOMETRY",
+     "description": "drawn width (cm)",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "465",
+      "page": 4,
+      "sheet_title": "GROUND FLOOR ROOF SLAB",
+      "text": "B29",
+      "xy_mm": [
+       23682,
+       12602
+      ]
+     },
+     "value": 20.0
+    }
+   ],
+   "floor": "GF_ROOF",
+   "member_type": "B29",
+   "quantity": 7.21,
+   "tol": 2.5,
+   "unit": "m beam"
+  },
+  {
+   "element_id": "BM-GF_ROOF-CB2-BL038-42A",
+   "element_type": "BEAM",
+   "evidence": [
+    {
+     "authority": "MEMBER_SCHEDULE",
+     "description": "schedule width (cm)",
+     "source_ref": {
+      "drawing": "ST7757.dxf / ST7757.pdf",
+      "page": 10,
+      "sheet_title": "schedule (simple beam)",
+      "text": "CB2"
+     },
+     "value": 20.0
+    },
+    {
+     "authority": "DRAWN_GEOMETRY",
+     "description": "drawn width (cm)",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "42A",
+      "page": 4,
+      "sheet_title": "GROUND FLOOR ROOF SLAB",
+      "text": "CB2",
+      "xy_mm": [
+       20953,
+       20890
+      ]
+     },
+     "value": 25.0
+    }
+   ],
+   "floor": "GF_ROOF",
+   "member_type": "CB2",
+   "quantity": 3.87,
+   "tol": 2.5,
+   "unit": "m beam"
+  },
+  {
+   "element_id": "BM-GF_ROOF-CB2-BL038-42B",
+   "element_type": "BEAM",
+   "evidence": [
+    {
+     "authority": "MEMBER_SCHEDULE",
+     "description": "schedule width (cm)",
+     "source_ref": {
+      "drawing": "ST7757.dxf / ST7757.pdf",
+      "page": 10,
+      "sheet_title": "schedule (simple beam)",
+      "text": "CB2"
+     },
+     "value": 20.0
+    },
+    {
+     "authority": "DRAWN_GEOMETRY",
+     "description": "drawn width (cm)",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "42B",
+      "page": 4,
+      "sheet_title": "GROUND FLOOR ROOF SLAB",
+      "text": "CB2",
+      "xy_mm": [
+       25130,
+       20890
+      ]
+     },
+     "value": 25.0
+    }
+   ],
+   "floor": "GF_ROOF",
+   "member_type": "CB2",
+   "quantity": 3.9,
+   "tol": 2.5,
+   "unit": "m beam"
+  },
+  {
+   "element_id": "BM-1F_ROOF-CB10-BL001-717",
+   "element_type": "BEAM",
+   "evidence": [
+    {
+     "authority": "MEMBER_SCHEDULE",
+     "description": "schedule width (cm)",
+     "source_ref": {
+      "drawing": "ST7757.dxf / ST7757.pdf",
+      "page": 10,
+      "sheet_title": "schedule (simple beam)",
+      "text": "CB10"
+     },
+     "value": 25.0
+    },
+    {
+     "authority": "DRAWN_GEOMETRY",
+     "description": "drawn width (cm)",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "717",
+      "page": 5,
+      "sheet_title": "FIRST FLOOR ROOF SLAB",
+      "text": "CB10",
+      "xy_mm": [
+       12138,
+       9903
+      ]
+     },
+     "value": 20.0
+    }
+   ],
+   "floor": "1F_ROOF",
+   "member_type": "CB10",
+   "quantity": 2.85,
+   "tol": 2.5,
+   "unit": "m beam"
+  },
+  {
+   "element_id": "BM-1F_ROOF-CB10-BL001-718",
+   "element_type": "BEAM",
+   "evidence": [
+    {
+     "authority": "MEMBER_SCHEDULE",
+     "description": "schedule width (cm)",
+     "source_ref": {
+      "drawing": "ST7757.dxf / ST7757.pdf",
+      "page": 10,
+      "sheet_title": "schedule (simple beam)",
+      "text": "CB10"
+     },
+     "value": 25.0
+    },
+    {
+     "authority": "DRAWN_GEOMETRY",
+     "description": "drawn width (cm)",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "718",
+      "page": 5,
+      "sheet_title": "FIRST FLOOR ROOF SLAB",
+      "text": "CB10",
+      "xy_mm": [
+       12138,
+       13663
+      ]
+     },
+     "value": 20.0
+    }
+   ],
+   "floor": "1F_ROOF",
+   "member_type": "CB10",
+   "quantity": 4.175,
+   "tol": 2.5,
+   "unit": "m beam"
+  },
+  {
+   "element_id": "BM-1F_ROOF-B6-BL014-6C5",
+   "element_type": "BEAM",
+   "evidence": [
+    {
+     "authority": "MEMBER_SCHEDULE",
+     "description": "schedule width (cm)",
+     "source_ref": {
+      "drawing": "ST7757.dxf / ST7757.pdf",
+      "page": 10,
+      "sheet_title": "schedule (simple beam)",
+      "text": "B6"
+     },
+     "value": 25.0
+    },
+    {
+     "authority": "DRAWN_GEOMETRY",
+     "description": "drawn width (cm)",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "6C5",
+      "page": 5,
+      "sheet_title": "FIRST FLOOR ROOF SLAB",
+      "text": "B6",
+      "xy_mm": [
+       24665,
+       18398
+      ]
+     },
+     "value": 20.0
+    }
+   ],
+   "floor": "1F_ROOF",
+   "member_type": "B6",
+   "quantity": 4.729,
+   "tol": 2.5,
+   "unit": "m beam"
+  }
+ ],
+ "single_level_members": [
+  {
+   "element_ids": [
+    "COL-CN-X16-Y03-FOUNDATION",
+    "COL-CN-X?-Y?@24058-12787-FOUNDATION",
+    "COL-CN-X?-Y?@28583-12787-FOUNDATION",
+    "COL-CN-X15-Y?@31208-15726-FOUNDATION",
+    "COL-CN-X?-Y?@29108-18112-FOUNDATION",
+    "COL-CN-X?-Y10@31108-20498-FOUNDATION"
+   ],
+   "element_type": "COLUMN",
+   "level": "FOUNDATION",
+   "member_type": "CN",
+   "peers_continue": true,
+   "quantity": 6,
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "page": 2,
+     "sheet_title": "FOUNDATION PLAN",
+     "text": "CN"
+    },
+    {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "page": 9,
+     "sheet_title": "schedule (column)",
+     "text": "CN"
+    }
+   ],
+   "unit": "nr occurrences"
+  }
+ ],
+ "span_matches": [
+  {
+   "element_id": "CBO-GFRS-CB1-BL007",
+   "element_type": "BEAM",
+   "extension": null,
+   "floor": "GF_ROOF",
+   "member_type": "CB1",
+   "plan_spans": [
+    7.45,
+    5.6
+   ],
+   "quantity": 13.05,
+   "schedule_spans": [
+    7.5,
+    5.7
+   ],
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "4E1",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB",
+     "text": "CB1"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "4E2",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB",
+     "text": "CB1"
+    },
+    {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "handle": "2851",
+     "page": 11,
+     "sheet_title": "schedule (continuous beam)",
+     "text": "CB1"
+    }
+   ],
+   "state": "MATCH_CONFIRMED",
+   "unit": "m beam"
+  },
+  {
+   "element_id": "CBO-GFRS-CB2-BL038",
+   "element_type": "BEAM",
+   "extension": null,
+   "floor": "GF_ROOF",
+   "member_type": "CB2",
+   "plan_spans": [
+    3.87,
+    3.9
+   ],
+   "quantity": 7.77,
+   "schedule_spans": [
+    4.0,
+    4.0
+   ],
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "42A",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB",
+     "text": "CB2"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "42B",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB",
+     "text": "CB2"
+    },
+    {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "handle": "28C7",
+     "page": 11,
+     "sheet_title": "schedule (continuous beam)",
+     "text": "CB2"
+    }
+   ],
+   "state": "MATCH_CONFIRMED",
+   "unit": "m beam"
+  },
+  {
+   "element_id": "CBO-GFRS-CB3-BL022",
+   "element_type": "BEAM",
+   "extension": null,
+   "floor": "GF_ROOF",
+   "member_type": "CB3",
+   "plan_spans": [
+    3.67,
+    3.35,
+    3.816
+   ],
+   "quantity": 10.836,
+   "schedule_spans": [
+    3.4,
+    3.3,
+    3.8
+   ],
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "493",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB",
+     "text": "CB3"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "494",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB",
+     "text": "CB3"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "495",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB",
+     "text": "CB3"
+    },
+    {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "handle": "2344",
+     "page": 11,
+     "sheet_title": "schedule (continuous beam)",
+     "text": "CB3"
+    }
+   ],
+   "state": "MATCH_CONFIRMED",
+   "unit": "m beam"
+  },
+  {
+   "element_id": "CBO-GFRS-CB4-BL016",
+   "element_type": "BEAM",
+   "extension": null,
+   "floor": "GF_ROOF",
+   "member_type": "CB4",
+   "plan_spans": [
+    2.724,
+    3.75
+   ],
+   "quantity": 6.474,
+   "schedule_spans": [
+    3.3,
+    3.7
+   ],
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "45C",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB",
+     "text": "CB4"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "45B",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB",
+     "text": "CB4"
+    },
+    {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "handle": "2933",
+     "page": 11,
+     "sheet_title": "schedule (continuous beam)",
+     "text": "CB4"
+    }
+   ],
+   "state": "SPAN_LENGTH_CONFLICT",
+   "unit": "m beam"
+  },
+  {
+   "element_id": "CBO-GFRS-CB5-BL008",
+   "element_type": "BEAM",
+   "extension": null,
+   "floor": "GF_ROOF",
+   "member_type": "CB5",
+   "plan_spans": [
+    2.85
+   ],
+   "quantity": 2.85,
+   "schedule_spans": [
+    2.5,
+    4.5
+   ],
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "475",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB",
+     "text": "CB5"
+    },
+    {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "handle": "299F",
+     "page": 11,
+     "sheet_title": "schedule (continuous beam)",
+     "text": "CB5"
+    }
+   ],
+   "state": "SPAN_COUNT_CONFLICT",
+   "unit": "m beam"
+  },
+  {
+   "element_id": "CBO-GFRS-CB5-BL017",
+   "element_type": "BEAM",
+   "extension": null,
+   "floor": "GF_ROOF",
+   "member_type": "CB5",
+   "plan_spans": [
+    4.2
+   ],
+   "quantity": 4.2,
+   "schedule_spans": [
+    2.5,
+    4.5
+   ],
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "474",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB",
+     "text": "CB5"
+    },
+    {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "handle": "299F",
+     "page": 11,
+     "sheet_title": "schedule (continuous beam)",
+     "text": "CB5"
+    }
+   ],
+   "state": "SPAN_COUNT_CONFLICT",
+   "unit": "m beam"
+  },
+  {
+   "element_id": "CBO-GFRS-CB6-BL004",
+   "element_type": "BEAM",
+   "extension": null,
+   "floor": "GF_ROOF",
+   "member_type": "CB6",
+   "plan_spans": [
+    4.35,
+    6.225
+   ],
+   "quantity": 10.575,
+   "schedule_spans": [
+    4.4,
+    6.3
+   ],
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "47C",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB",
+     "text": "CB6"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "47B",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB",
+     "text": "CB6"
+    },
+    {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "handle": "2A04",
+     "page": 11,
+     "sheet_title": "schedule (continuous beam)",
+     "text": "CB6"
+    }
+   ],
+   "state": "MATCH_CONFIRMED",
+   "unit": "m beam"
+  },
+  {
+   "element_id": "CBO-GFRS-CB7-BL003",
+   "element_type": "BEAM",
+   "extension": null,
+   "floor": "GF_ROOF",
+   "member_type": "CB7",
+   "plan_spans": [
+    5.85,
+    6.15
+   ],
+   "quantity": 12.0,
+   "schedule_spans": [
+    6.0,
+    6.1
+   ],
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "479",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB",
+     "text": "CB7"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "47A",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB",
+     "text": "CB7"
+    },
+    {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "handle": "22EC",
+     "page": 11,
+     "sheet_title": "schedule (continuous beam)",
+     "text": "CB7"
+    }
+   ],
+   "state": "MATCH_CONFIRMED",
+   "unit": "m beam"
+  },
+  {
+   "element_id": "CBO-GFRS-CB8-BL024",
+   "element_type": "BEAM",
+   "extension": [
+    3.825,
+    6.545,
+    6.95
+   ],
+   "floor": "GF_ROOF",
+   "member_type": "CB8",
+   "plan_spans": [
+    6.545,
+    6.95
+   ],
+   "quantity": 13.495,
+   "schedule_spans": [
+    3.7,
+    6.4,
+    6.8
+   ],
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "69F",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB",
+     "text": "CB8"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "6A0",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB",
+     "text": "CB8"
+    },
+    {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "handle": "2574",
+     "page": 11,
+     "sheet_title": "schedule (continuous beam)",
+     "text": "CB8"
+    }
+   ],
+   "state": "SPAN_COUNT_CONFLICT",
+   "unit": "m beam"
+  },
+  {
+   "element_id": "CBO-FFRS-CB10-BL001",
+   "element_type": "BEAM",
+   "extension": null,
+   "floor": "1F_ROOF",
+   "member_type": "CB10",
+   "plan_spans": [
+    2.85,
+    4.175
+   ],
+   "quantity": 7.025,
+   "schedule_spans": [
+    3.0,
+    4.1
+   ],
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "717",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB",
+     "text": "CB10"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "718",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB",
+     "text": "CB10"
+    },
+    {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "handle": "23F0",
+     "page": 11,
+     "sheet_title": "schedule (continuous beam)",
+     "text": "CB10"
+    }
+   ],
+   "state": "MATCH_CONFIRMED",
+   "unit": "m beam"
+  },
+  {
+   "element_id": "CBO-FFRS-CB11-BL024",
+   "element_type": "BEAM",
+   "extension": null,
+   "floor": "1F_ROOF",
+   "member_type": "CB11",
+   "plan_spans": [
+    7.458,
+    3.35,
+    3.85
+   ],
+   "quantity": 14.658,
+   "schedule_spans": [
+    7.1,
+    3.2,
+    3.7
+   ],
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "6DA",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB",
+     "text": "CB11"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "6DB",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB",
+     "text": "CB11"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "6DC",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB",
+     "text": "CB11"
+    },
+    {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "handle": "26C1",
+     "page": 11,
+     "sheet_title": "schedule (continuous beam)",
+     "text": "CB11"
+    }
+   ],
+   "state": "MATCH_CONFIRMED",
+   "unit": "m beam"
+  },
+  {
+   "element_id": "CBO-FFRS-CB12-BL003",
+   "element_type": "BEAM",
+   "extension": null,
+   "floor": "1F_ROOF",
+   "member_type": "CB12",
+   "plan_spans": [
+    6.175,
+    5.6
+   ],
+   "quantity": 11.775,
+   "schedule_spans": [
+    6.1,
+    5.5
+   ],
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "6DD",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB",
+     "text": "CB12"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "6DE",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB",
+     "text": "CB12"
+    },
+    {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "handle": "2469",
+     "page": 11,
+     "sheet_title": "schedule (continuous beam)",
+     "text": "CB12"
+    }
+   ],
+   "state": "MATCH_CONFIRMED",
+   "unit": "m beam"
+  },
+  {
+   "element_id": "CBO-FFRS-CB13-BL004",
+   "element_type": "BEAM",
+   "extension": null,
+   "floor": "1F_ROOF",
+   "member_type": "CB13",
+   "plan_spans": [
+    3.45,
+    3.725
+   ],
+   "quantity": 7.175,
+   "schedule_spans": [
+    3.7,
+    3.6
+   ],
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "76A",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB",
+     "text": "CB13"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "76B",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB",
+     "text": "CB13"
+    },
+    {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "handle": "24DF",
+     "page": 11,
+     "sheet_title": "schedule (continuous beam)",
+     "text": "CB13"
+    }
+   ],
+   "state": "MATCH_CONFIRMED",
+   "unit": "m beam"
+  },
+  {
+   "element_id": "CBO-FFRS-CB9-BL023",
+   "element_type": "BEAM",
+   "extension": null,
+   "floor": "1F_ROOF",
+   "member_type": "CB9",
+   "plan_spans": [
+    3.87,
+    3.9,
+    4.05
+   ],
+   "quantity": 11.82,
+   "schedule_spans": [
+    4.1,
+    4.0,
+    3.7
+   ],
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "6C6",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB",
+     "text": "CB9"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "6C7",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB",
+     "text": "CB9"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "6C8",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB",
+     "text": "CB9"
+    },
+    {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "handle": "2619",
+     "page": 11,
+     "sheet_title": "schedule (continuous beam)",
+     "text": "CB9"
+    }
+   ],
+   "state": "MATCH_CONFIRMED",
+   "unit": "m beam"
+  }
+ ],
+ "table_lookups": [
+  {
+   "element_ids": [
+    "SP-GF_ROOF_SLAB-02",
+    "SP-GF_ROOF_SLAB-04",
+    "SP-GF_ROOF_SLAB-05",
+    "SP-GF_ROOF_SLAB-06",
+    "SP-GF_ROOF_SLAB-07",
+    "SP-GF_ROOF_SLAB-08",
+    "SP-GF_ROOF_SLAB-10",
+    "SP-GF_ROOF_SLAB-11",
+    "SP-GF_ROOF_SLAB-12",
+    "SP-GF_ROOF_SLAB-14",
+    "SP-GF_ROOF_SLAB-15",
+    "SP-GF_ROOF_SLAB-16",
+    "SP-GF_ROOF_SLAB-17",
+    "SP-GF_ROOF_SLAB-18",
+    "SP-GF_ROOF_SLAB-19",
+    "SP-GF_ROOF_SLAB-20",
+    "SP-GF_ROOF_SLAB-22",
+    "SP-GF_ROOF_SLAB-23",
+    "SP-GF_ROOF_SLAB-24",
+    "SP-GF_ROOF_SLAB-25",
+    "SP-GF_ROOF_SLAB-26",
+    "SP-GF_ROOF_SLAB-27",
+    "SP-GF_ROOF_SLAB-29",
+    "SP-GF_ROOF_SLAB-30",
+    "SP-GF_ROOF_SLAB-31",
+    "SP-GF_ROOF_SLAB-32",
+    "SP-GF_ROOF_SLAB-33",
+    "SP-GF_ROOF_SLAB-34",
+    "SP-1F_ROOF_SLAB-02",
+    "SP-1F_ROOF_SLAB-03",
+    "SP-1F_ROOF_SLAB-04",
+    "SP-1F_ROOF_SLAB-05",
+    "SP-1F_ROOF_SLAB-07",
+    "SP-1F_ROOF_SLAB-08",
+    "SP-1F_ROOF_SLAB-09",
+    "SP-1F_ROOF_SLAB-11",
+    "SP-1F_ROOF_SLAB-12",
+    "SP-1F_ROOF_SLAB-21",
+    "SP-1F_ROOF_SLAB-22",
+    "SP-1F_ROOF_SLAB-23",
+    "SP-1F_ROOF_SLAB-24",
+    "SP-1F_ROOF_SLAB-25",
+    "SP-2F_ROOF_SLAB-03",
+    "SP-2F_ROOF_SLAB-04",
+    "SP-2F_ROOF_SLAB-06",
+    "SP-2F_ROOF_SLAB-07",
+    "SP-2F_ROOF_SLAB-08"
+   ],
+   "element_type": "SLAB",
+   "fact": "temperature_steel",
+   "key": 160,
+   "key_unit": "mm",
+   "quantity": 356.866,
+   "rule_ref": "P15-TEMP-TABLE",
+   "rule_text": "temperature reinforcement table (p.15)",
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "page": 15,
+     "sheet_title": "rule P15-TEMP-TABLE"
+    }
+   ],
+   "state": "RULE_NOT_EXACT_MATCH",
+   "table_keys": [
+    100,
+    125,
+    150,
+    175,
+    200,
+    250,
+    300
+   ],
+   "unit": "m2 plan"
+  },
+  {
+   "element_ids": [
+    "SP-2F_ROOF_SLAB-01",
+    "SP-2F_ROOF_SLAB-02"
+   ],
+   "element_type": "SLAB",
+   "fact": "temperature_steel",
+   "key": 180,
+   "key_unit": "mm",
+   "quantity": 13.635,
+   "rule_ref": "P15-TEMP-TABLE",
+   "rule_text": "temperature reinforcement table (p.15)",
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "page": 15,
+     "sheet_title": "rule P15-TEMP-TABLE"
+    }
+   ],
+   "state": "RULE_NOT_EXACT_MATCH",
+   "table_keys": [
+    100,
+    125,
+    150,
+    175,
+    200,
+    250,
+    300
+   ],
+   "unit": "m2 plan"
+  }
+ ],
+ "transverse_rules": [
+  {
+   "bands": [
+    {
+     "band_id": "TIE_L_LE_50",
+     "closed_ties_per_set": 1,
+     "element_ids": [
+      "COL-C-X01-Y01-FOUNDATION",
+      "COL-C-X01-Y01-GF",
+      "COL-C3-X04-Y01-FOUNDATION",
+      "COL-C3-X04-Y01-GF",
+      "COL-C-X06-Y01-FOUNDATION",
+      "COL-C-X06-Y01-GF",
+      "COL-C3-X12-Y01-FOUNDATION",
+      "COL-C3-X12-Y01-GF",
+      "COL-C-X16-Y01-FOUNDATION",
+      "COL-C-X16-Y01-GF",
+      "COL-P.C-X15-Y02-1F",
+      "COL-C5-X14-Y02-1F",
+      "COL-C3-X05-Y02-FOUNDATION",
+      "COL-C3-X05-Y02-GF",
+      "COL-C3-X05-Y02-1F",
+      "COL-CN-X16-Y03-FOUNDATION",
+      "COL-C5-X05-Y04-1F",
+      "COL-C3-X03-Y04-FOUNDATION",
+      "COL-C3-X03-Y04-GF",
+      "COL-CN-X?-Y?@24058-12787-FOUNDATION",
+      "COL-CN-X?-Y?@28583-12787-FOUNDATION",
+      "COL-C-X01-Y05-FOUNDATION",
+      "COL-C-X01-Y05-GF",
+      "COL-C-X02-Y05-FOUNDATION",
+      "COL-C-X02-Y05-GF",
+      "COL-C3-X16-Y06-FOUNDATION",
+      "COL-C3-X16-Y06-GF",
+      "COL-C2-X09-Y07-FOUNDATION",
+      "COL-C2-X09-Y07-GF",
+      "COL-C2-X09-Y07-1F",
+      "COL-C2-X09-Y07-2F",
+      "COL-CN-X15-Y?@31208-15726-FOUNDATION",
+      "COL-P.C-X?-Y?@24888-15994-2F",
+      "COL-C3-X08-Y09-FOUNDATION",
+      "COL-C3-X08-Y09-GF",
+      "COL-C3-X08-Y09-1F",
+      "COL-C3-X08-Y09-2F",
+      "COL-C1-X09-Y09-FOUNDATION",
+      "COL-C1-X09-Y09-GF",
+      "COL-C1-X09-Y09-1F",
+      "COL-C1-X09-Y09-2F",
+      "COL-C2-X10-Y09-FOUNDATION",
+      "COL-C2-X10-Y09-GF",
+      "COL-C2-X10-Y09-1F",
+      "COL-C2-X10-Y09-2F",
+      "COL-CN-X?-Y?@29108-18112-FOUNDATION",
+      "COL-CN-X?-Y10@31108-20498-FOUNDATION",
+      "COL-C2-X08-Y10-FOUNDATION",
+      "COL-C2-X08-Y10-GF",
+      "COL-C2-X08-Y10-1F",
+      "COL-C2-X08-Y10-2F",
+      "COL-C2-X09-Y10-FOUNDATION",
+      "COL-C2-X09-Y10-GF",
+      "COL-C2-X09-Y10-1F",
+      "COL-C2-X09-Y10-2F",
+      "COL-C5-X11-Y10-1F",
+      "COL-C5-X11-Y10-2F",
+      "COL-C4-X13-Y10-FOUNDATION",
+      "COL-C4-X13-Y10-GF",
+      "COL-C4-X13-Y10-1F",
+      "COL-C4-X15-Y10-FOUNDATION",
+      "COL-C4-X15-Y10-GF",
+      "COL-C4-X15-Y10-1F"
+     ]
+    },
+    {
+     "band_id": "TIE_50_LT_L_LT_80",
+     "closed_ties_per_set": 2,
+     "element_ids": [
+      "COL-C10-X15-Y01-FOUNDATION",
+      "COL-C10-X15-Y01-GF",
+      "COL-P.C-X08-Y02-1F",
+      "COL-C5-X14-Y02-FOUNDATION",
+      "COL-C5-X14-Y02-GF",
+      "COL-C5-X05-Y04-FOUNDATION",
+      "COL-C5-X05-Y04-GF",
+      "COL-C6-X08-Y04-FOUNDATION",
+      "COL-C6-X08-Y04-GF",
+      "COL-C6-X08-Y04-1F",
+      "COL-C9-X10-Y07-2F",
+      "COL-C5-X11-Y10-FOUNDATION",
+      "COL-C5-X11-Y10-GF"
+     ]
+    },
+    {
+     "band_id": "TIE_80_LT_L_LT_120",
+     "closed_ties_per_set": 3,
+     "element_ids": [
+      "COL-C11-X?-Y01@17913-7462-FOUNDATION",
+      "COL-C11-X?-Y01@17913-7462-GF",
+      "COL-C8-X12-Y02-FOUNDATION",
+      "COL-C8-X12-Y02-GF",
+      "COL-C8-X12-Y02-1F",
+      "COL-C11-X06-Y04-FOUNDATION",
+      "COL-C11-X06-Y04-GF",
+      "COL-C8-X15-Y06-FOUNDATION",
+      "COL-C8-X15-Y06-GF",
+      "COL-C8-X15-Y06-1F",
+      "COL-C9-X10-Y07-FOUNDATION",
+      "COL-C9-X10-Y07-GF",
+      "COL-C9-X10-Y07-1F",
+      "COL-C9-X13-Y08-FOUNDATION",
+      "COL-C9-X13-Y08-GF",
+      "COL-C9-X13-Y08-1F"
+     ]
+    }
+   ],
+   "element_ids": [
+    "COL-C10-X15-Y01-FOUNDATION",
+    "COL-C10-X15-Y01-GF",
+    "COL-C-X01-Y01-FOUNDATION",
+    "COL-C-X01-Y01-GF",
+    "COL-C3-X04-Y01-FOUNDATION",
+    "COL-C3-X04-Y01-GF",
+    "COL-C-X06-Y01-FOUNDATION",
+    "COL-C-X06-Y01-GF",
+    "COL-C11-X?-Y01@17913-7462-FOUNDATION",
+    "COL-C11-X?-Y01@17913-7462-GF",
+    "COL-C3-X12-Y01-FOUNDATION",
+    "COL-C3-X12-Y01-GF",
+    "COL-C-X16-Y01-FOUNDATION",
+    "COL-C-X16-Y01-GF",
+    "COL-P.C-X08-Y02-1F",
+    "COL-C8-X12-Y02-FOUNDATION",
+    "COL-C8-X12-Y02-GF",
+    "COL-C8-X12-Y02-1F",
+    "COL-P.C-X15-Y02-1F",
+    "COL-C5-X14-Y02-FOUNDATION",
+    "COL-C5-X14-Y02-GF",
+    "COL-C5-X14-Y02-1F",
+    "COL-C3-X05-Y02-FOUNDATION",
+    "COL-C3-X05-Y02-GF",
+    "COL-C3-X05-Y02-1F",
+    "COL-CN-X16-Y03-FOUNDATION",
+    "COL-C5-X05-Y04-FOUNDATION",
+    "COL-C5-X05-Y04-GF",
+    "COL-C5-X05-Y04-1F",
+    "COL-C3-X03-Y04-FOUNDATION",
+    "COL-C3-X03-Y04-GF",
+    "COL-C11-X06-Y04-FOUNDATION",
+    "COL-C11-X06-Y04-GF",
+    "COL-C6-X08-Y04-FOUNDATION",
+    "COL-C6-X08-Y04-GF",
+    "COL-C6-X08-Y04-1F",
+    "COL-CN-X?-Y?@24058-12787-FOUNDATION",
+    "COL-CN-X?-Y?@28583-12787-FOUNDATION",
+    "COL-C-X01-Y05-FOUNDATION",
+    "COL-C-X01-Y05-GF",
+    "COL-C-X02-Y05-FOUNDATION",
+    "COL-C-X02-Y05-GF",
+    "COL-C3-X16-Y06-FOUNDATION",
+    "COL-C3-X16-Y06-GF",
+    "COL-C8-X15-Y06-FOUNDATION",
+    "COL-C8-X15-Y06-GF",
+    "COL-C8-X15-Y06-1F",
+    "COL-C2-X09-Y07-FOUNDATION",
+    "COL-C2-X09-Y07-GF",
+    "COL-C2-X09-Y07-1F",
+    "COL-C2-X09-Y07-2F",
+    "COL-CN-X15-Y?@31208-15726-FOUNDATION",
+    "COL-C9-X10-Y07-FOUNDATION",
+    "COL-C9-X10-Y07-GF",
+    "COL-C9-X10-Y07-1F",
+    "COL-C9-X10-Y07-2F",
+    "COL-P.C-X?-Y?@24888-15994-2F",
+    "COL-C7-X07-Y?@15888-16162-FOUNDATION",
+    "COL-C7-X07-Y?@15888-16162-GF",
+    "COL-C7-X07-Y?@15888-16162-1F",
+    "COL-C9-X13-Y08-FOUNDATION",
+    "COL-C9-X13-Y08-GF",
+    "COL-C9-X13-Y08-1F",
+    "COL-C3-X08-Y09-FOUNDATION",
+    "COL-C3-X08-Y09-GF",
+    "COL-C3-X08-Y09-1F",
+    "COL-C3-X08-Y09-2F",
+    "COL-C1-X09-Y09-FOUNDATION",
+    "COL-C1-X09-Y09-GF",
+    "COL-C1-X09-Y09-1F",
+    "COL-C1-X09-Y09-2F",
+    "COL-C2-X10-Y09-FOUNDATION",
+    "COL-C2-X10-Y09-GF",
+    "COL-C2-X10-Y09-1F",
+    "COL-C2-X10-Y09-2F",
+    "COL-CN-X?-Y?@29108-18112-FOUNDATION",
+    "COL-CN-X?-Y10@31108-20498-FOUNDATION",
+    "COL-C2-X08-Y10-FOUNDATION",
+    "COL-C2-X08-Y10-GF",
+    "COL-C2-X08-Y10-1F",
+    "COL-C2-X08-Y10-2F",
+    "COL-C2-X09-Y10-FOUNDATION",
+    "COL-C2-X09-Y10-GF",
+    "COL-C2-X09-Y10-1F",
+    "COL-C2-X09-Y10-2F",
+    "COL-C5-X11-Y10-FOUNDATION",
+    "COL-C5-X11-Y10-GF",
+    "COL-C5-X11-Y10-1F",
+    "COL-C5-X11-Y10-2F",
+    "COL-C4-X13-Y10-FOUNDATION",
+    "COL-C4-X13-Y10-GF",
+    "COL-C4-X13-Y10-1F",
+    "COL-C4-X15-Y10-FOUNDATION",
+    "COL-C4-X15-Y10-GF",
+    "COL-C4-X15-Y10-1F"
+   ],
+   "element_type": "COLUMN",
+   "per_metre": true,
+   "rule_ref": "P9-COL-TIES",
+   "rule_text": "ST. OF COLUMN- 6Ø8/m (column ties)",
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "handle": "1BAA",
+     "page": 9,
+     "sheet_title": "DETAILS OF COLUMN REINFORCEMENT (schedule sheet)",
+     "text": "ST. OF COLUMN- 6%%c8/m"
+    }
+   ],
+   "zone_length_state": "NOT_ESTABLISHED"
+  }
+ ],
+ "type_evidence": [
+  {
+   "current": {
+    "authority": "AXIS_PLAN_TAG",
+    "value": "C10"
+   },
+   "definitions": {
+    "C10": {
+     "reinforcement": {
+      "count": 10,
+      "dia_mm": 16,
+      "raw": [
+       "10",
+       "16"
+      ]
+     },
+     "section": [
+      30.0,
+      70.0
+     ]
+    }
+   },
+   "element_id": "COLPOS-X15-Y01-31408-7462",
+   "element_ids": [
+    "COL-C10-X15-Y01-FOUNDATION",
+    "COL-C10-X15-Y01-GF"
+   ],
+   "element_type": "COLUMN",
+   "evidence": [
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "COLUMN & AXIS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "1059",
+      "layer": "S-TEXT",
+      "page": 1,
+      "sheet_title": "COLUMN & AXIS PLAN",
+      "text": "C10"
+     },
+     "value": "C10"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "FOUNDATION PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "10D4",
+      "layer": "S-TEXT",
+      "page": 2,
+      "sheet_title": "FOUNDATION PLAN",
+      "text": "C10"
+     },
+     "value": "C10"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "GROUND BEAMS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "23E",
+      "layer": "S-TEXT",
+      "page": 3,
+      "sheet_title": "GROUND BEAMS PLAN",
+      "text": "C10"
+     },
+     "value": "C10"
+    },
+    {
+     "authority": "DRAWN_GEOMETRY",
+     "description": "axis-plan size label 30X70 matches the C10 schedule section",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "layer": "S-TEXT",
+      "page": 1,
+      "sheet_title": "COLUMN & AXIS PLAN",
+      "text": "30X70"
+     },
+     "value": "C10"
+    }
+   ],
+   "label": "at grid X15/Y01",
+   "quantity": 2,
+   "unit": "nr occurrences"
+  },
+  {
+   "current": {
+    "authority": "AXIS_PLAN_TAG",
+    "value": "C"
+   },
+   "definitions": {
+    "C": {
+     "reinforcement": {
+      "count": 8,
+      "dia_mm": 16,
+      "raw": [
+       "8",
+       "16"
+      ]
+     },
+     "section": [
+      30.0,
+      50.0
+     ]
+    }
+   },
+   "element_id": "COLPOS-X01-Y01-2138-7462",
+   "element_ids": [
+    "COL-C-X01-Y01-FOUNDATION",
+    "COL-C-X01-Y01-GF"
+   ],
+   "element_type": "COLUMN",
+   "evidence": [
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "COLUMN & AXIS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "1008",
+      "layer": "S-TEXT",
+      "page": 1,
+      "sheet_title": "COLUMN & AXIS PLAN",
+      "text": "C"
+     },
+     "value": "C"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "FOUNDATION PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "1680",
+      "layer": "S-TEXT",
+      "page": 2,
+      "sheet_title": "FOUNDATION PLAN",
+      "text": "C"
+     },
+     "value": "C"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "GROUND BEAMS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "208",
+      "layer": "S-TEXT",
+      "page": 3,
+      "sheet_title": "GROUND BEAMS PLAN",
+      "text": "C"
+     },
+     "value": "C"
+    },
+    {
+     "authority": "DRAWN_GEOMETRY",
+     "description": "axis-plan size label 30X50 matches the C schedule section",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "layer": "S-TEXT",
+      "page": 1,
+      "sheet_title": "COLUMN & AXIS PLAN",
+      "text": "30X50"
+     },
+     "value": "C"
+    }
+   ],
+   "label": "at grid X01/Y01",
+   "quantity": 2,
+   "unit": "nr occurrences"
+  },
+  {
+   "current": {
+    "authority": "TAG_CONFLICT",
+    "value": "C3"
+   },
+   "definitions": {
+    "C": {
+     "reinforcement": {
+      "count": 8,
+      "dia_mm": 16,
+      "raw": [
+       "8",
+       "16"
+      ]
+     },
+     "section": [
+      30.0,
+      50.0
+     ]
+    },
+    "C3": {
+     "reinforcement": {
+      "count": 8,
+      "dia_mm": 16,
+      "raw": [
+       "8",
+       "16"
+      ]
+     },
+     "section": [
+      30.0,
+      50.0
+     ]
+    }
+   },
+   "element_id": "COLPOS-X04-Y01-7988-7462",
+   "element_ids": [
+    "COL-C3-X04-Y01-FOUNDATION",
+    "COL-C3-X04-Y01-GF"
+   ],
+   "element_type": "COLUMN",
+   "evidence": [
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "COLUMN & AXIS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "100A",
+      "layer": "S-TEXT",
+      "page": 1,
+      "sheet_title": "COLUMN & AXIS PLAN",
+      "text": "C3"
+     },
+     "value": "C3"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "FOUNDATION PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "1681",
+      "layer": "S-TEXT",
+      "page": 2,
+      "sheet_title": "FOUNDATION PLAN",
+      "text": "C3"
+     },
+     "value": "C3"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "GROUND BEAMS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "20D",
+      "layer": "S-TEXT",
+      "page": 3,
+      "sheet_title": "GROUND BEAMS PLAN",
+      "text": "C"
+     },
+     "value": "C"
+    }
+   ],
+   "label": "at grid X04/Y01",
+   "quantity": 2,
+   "unit": "nr occurrences"
+  },
+  {
+   "current": {
+    "authority": "AXIS_PLAN_TAG",
+    "value": "C"
+   },
+   "definitions": {
+    "C": {
+     "reinforcement": {
+      "count": 8,
+      "dia_mm": 16,
+      "raw": [
+       "8",
+       "16"
+      ]
+     },
+     "section": [
+      30.0,
+      50.0
+     ]
+    }
+   },
+   "element_id": "COLPOS-X06-Y01-14088-7462",
+   "element_ids": [
+    "COL-C-X06-Y01-FOUNDATION",
+    "COL-C-X06-Y01-GF"
+   ],
+   "element_type": "COLUMN",
+   "evidence": [
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "COLUMN & AXIS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "100C",
+      "layer": "S-TEXT",
+      "page": 1,
+      "sheet_title": "COLUMN & AXIS PLAN",
+      "text": "C"
+     },
+     "value": "C"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "FOUNDATION PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "1682",
+      "layer": "S-TEXT",
+      "page": 2,
+      "sheet_title": "FOUNDATION PLAN",
+      "text": "C"
+     },
+     "value": "C"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "GROUND BEAMS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "219",
+      "layer": "S-TEXT",
+      "page": 3,
+      "sheet_title": "GROUND BEAMS PLAN",
+      "text": "C"
+     },
+     "value": "C"
+    },
+    {
+     "authority": "DRAWN_GEOMETRY",
+     "description": "axis-plan size label 30X50 matches the C schedule section",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "layer": "S-TEXT",
+      "page": 1,
+      "sheet_title": "COLUMN & AXIS PLAN",
+      "text": "30X50"
+     },
+     "value": "C"
+    }
+   ],
+   "label": "at grid X06/Y01",
+   "quantity": 2,
+   "unit": "nr occurrences"
+  },
+  {
+   "current": {
+    "authority": "AXIS_PLAN_TAG",
+    "value": "C11"
+   },
+   "definitions": {
+    "C11": {
+     "reinforcement": {
+      "count": 14,
+      "dia_mm": 16,
+      "raw": [
+       "14",
+       "16"
+      ]
+     },
+     "section": [
+      30.0,
+      110.0
+     ]
+    }
+   },
+   "element_id": "COLPOS-X?-Y01-17913-7462",
+   "element_ids": [
+    "COL-C11-X?-Y01@17913-7462-FOUNDATION",
+    "COL-C11-X?-Y01@17913-7462-GF"
+   ],
+   "element_type": "COLUMN",
+   "evidence": [
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "COLUMN & AXIS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "1016",
+      "layer": "S-TEXT",
+      "page": 1,
+      "sheet_title": "COLUMN & AXIS PLAN",
+      "text": "C11"
+     },
+     "value": "C11"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "FOUNDATION PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "1684",
+      "layer": "S-TEXT",
+      "page": 2,
+      "sheet_title": "FOUNDATION PLAN",
+      "text": "C11"
+     },
+     "value": "C11"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "GROUND BEAMS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "24A",
+      "layer": "S-TEXT",
+      "page": 3,
+      "sheet_title": "GROUND BEAMS PLAN",
+      "text": "C11"
+     },
+     "value": "C11"
+    },
+    {
+     "authority": "DRAWN_GEOMETRY",
+     "description": "axis-plan size label 30X110 matches the C11 schedule section",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "layer": "S-TEXT",
+      "page": 1,
+      "sheet_title": "COLUMN & AXIS PLAN",
+      "text": "30X110"
+     },
+     "value": "C11"
+    }
+   ],
+   "label": "at grid None/Y01",
+   "quantity": 2,
+   "unit": "nr occurrences"
+  },
+  {
+   "current": {
+    "authority": "AXIS_PLAN_TAG",
+    "value": "C3"
+   },
+   "definitions": {
+    "C3": {
+     "reinforcement": {
+      "count": 8,
+      "dia_mm": 16,
+      "raw": [
+       "8",
+       "16"
+      ]
+     },
+     "section": [
+      30.0,
+      50.0
+     ]
+    }
+   },
+   "element_id": "COLPOS-X12-Y01-24458-7462",
+   "element_ids": [
+    "COL-C3-X12-Y01-FOUNDATION",
+    "COL-C3-X12-Y01-GF"
+   ],
+   "element_type": "COLUMN",
+   "evidence": [
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "COLUMN & AXIS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "1018",
+      "layer": "S-TEXT",
+      "page": 1,
+      "sheet_title": "COLUMN & AXIS PLAN",
+      "text": "C3"
+     },
+     "value": "C3"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "FOUNDATION PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "10E5",
+      "layer": "S-TEXT",
+      "page": 2,
+      "sheet_title": "FOUNDATION PLAN",
+      "text": "C3"
+     },
+     "value": "C3"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "GROUND BEAMS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "252",
+      "layer": "S-TEXT",
+      "page": 3,
+      "sheet_title": "GROUND BEAMS PLAN",
+      "text": "C3"
+     },
+     "value": "C3"
+    },
+    {
+     "authority": "DRAWN_GEOMETRY",
+     "description": "axis-plan size label 30X50 matches the C3 schedule section",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "layer": "S-TEXT",
+      "page": 1,
+      "sheet_title": "COLUMN & AXIS PLAN",
+      "text": "30X50"
+     },
+     "value": "C3"
+    }
+   ],
+   "label": "at grid X12/Y01",
+   "quantity": 2,
+   "unit": "nr occurrences"
+  },
+  {
+   "current": {
+    "authority": "AXIS_PLAN_TAG",
+    "value": "C"
+   },
+   "definitions": {
+    "C": {
+     "reinforcement": {
+      "count": 8,
+      "dia_mm": 16,
+      "raw": [
+       "8",
+       "16"
+      ]
+     },
+     "section": [
+      30.0,
+      50.0
+     ]
+    }
+   },
+   "element_id": "COLPOS-X16-Y01-33108-7562",
+   "element_ids": [
+    "COL-C-X16-Y01-FOUNDATION",
+    "COL-C-X16-Y01-GF"
+   ],
+   "element_type": "COLUMN",
+   "evidence": [
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "COLUMN & AXIS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "105B",
+      "layer": "S-TEXT",
+      "page": 1,
+      "sheet_title": "COLUMN & AXIS PLAN",
+      "text": "C"
+     },
+     "value": "C"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "FOUNDATION PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "166E",
+      "layer": "S-TEXT",
+      "page": 2,
+      "sheet_title": "FOUNDATION PLAN",
+      "text": "C"
+     },
+     "value": "C"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "GROUND BEAMS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "201",
+      "layer": "S-TEXT",
+      "page": 3,
+      "sheet_title": "GROUND BEAMS PLAN",
+      "text": "C"
+     },
+     "value": "C"
+    },
+    {
+     "authority": "DRAWN_GEOMETRY",
+     "description": "axis-plan size label 30X50 matches the C schedule section",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "layer": "S-TEXT",
+      "page": 1,
+      "sheet_title": "COLUMN & AXIS PLAN",
+      "text": "30X50"
+     },
+     "value": "C"
+    }
+   ],
+   "label": "at grid X16/Y01",
+   "quantity": 2,
+   "unit": "nr occurrences"
+  },
+  {
+   "current": {
+    "authority": "TAG_CONFLICT",
+    "value": "C8"
+   },
+   "definitions": {
+    "C7": {
+     "reinforcement": {
+      "count": 12,
+      "dia_mm": 16,
+      "raw": [
+       "12",
+       "16"
+      ]
+     },
+     "section": [
+      30.0,
+      80.0
+     ]
+    },
+    "C8": {
+     "reinforcement": {
+      "count": 12,
+      "dia_mm": 16,
+      "raw": [
+       "12",
+       "16"
+      ]
+     },
+     "section": [
+      30.0,
+      90.0
+     ]
+    }
+   },
+   "element_id": "COLPOS-X12-Y02-24308-8912",
+   "element_ids": [
+    "COL-C8-X12-Y02-FOUNDATION",
+    "COL-C8-X12-Y02-GF",
+    "COL-C8-X12-Y02-1F"
+   ],
+   "element_type": "COLUMN",
+   "evidence": [
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "COLUMN & AXIS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "101A",
+      "layer": "S-TEXT",
+      "page": 1,
+      "sheet_title": "COLUMN & AXIS PLAN",
+      "text": "C8"
+     },
+     "value": "C8"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "FOUNDATION PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "10E1",
+      "layer": "S-TEXT",
+      "page": 2,
+      "sheet_title": "FOUNDATION PLAN",
+      "text": "C8"
+     },
+     "value": "C8"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "GROUND BEAMS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "24E",
+      "layer": "S-TEXT",
+      "page": 3,
+      "sheet_title": "GROUND BEAMS PLAN",
+      "text": "C7"
+     },
+     "value": "C7"
+    },
+    {
+     "authority": "DRAWN_GEOMETRY",
+     "description": "axis-plan size label 30X80 matches the C7 schedule section",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "layer": "S-TEXT",
+      "page": 1,
+      "sheet_title": "COLUMN & AXIS PLAN",
+      "text": "30X80"
+     },
+     "value": "C7"
+    }
+   ],
+   "label": "at grid X12/Y02",
+   "quantity": 3,
+   "unit": "nr occurrences"
+  },
+  {
+   "current": {
+    "authority": "AXIS_PLAN_TAG",
+    "value": "C5"
+   },
+   "definitions": {
+    "C5": {
+     "reinforcement": {
+      "count": 10,
+      "dia_mm": 16,
+      "raw": [
+       "10",
+       "16"
+      ]
+     },
+     "section": [
+      30.0,
+      60.0
+     ]
+    }
+   },
+   "element_id": "COLPOS-X14-Y02-27658-8962",
+   "element_ids": [
+    "COL-C5-X14-Y02-FOUNDATION",
+    "COL-C5-X14-Y02-GF",
+    "COL-C5-X14-Y02-1F"
+   ],
+   "element_type": "COLUMN",
+   "evidence": [
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "COLUMN & AXIS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "101C",
+      "layer": "S-TEXT",
+      "page": 1,
+      "sheet_title": "COLUMN & AXIS PLAN",
+      "text": "C5"
+     },
+     "value": "C5"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "FOUNDATION PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "166F",
+      "layer": "S-TEXT",
+      "page": 2,
+      "sheet_title": "FOUNDATION PLAN",
+      "text": "C5"
+     },
+     "value": "C5"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "GROUND BEAMS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "23D",
+      "layer": "S-TEXT",
+      "page": 3,
+      "sheet_title": "GROUND BEAMS PLAN",
+      "text": "C5"
+     },
+     "value": "C5"
+    },
+    {
+     "authority": "DRAWN_GEOMETRY",
+     "description": "axis-plan size label 30X60 matches the C5 schedule section",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "layer": "S-TEXT",
+      "page": 1,
+      "sheet_title": "COLUMN & AXIS PLAN",
+      "text": "30X60"
+     },
+     "value": "C5"
+    }
+   ],
+   "label": "at grid X14/Y02",
+   "quantity": 3,
+   "unit": "nr occurrences"
+  },
+  {
+   "current": {
+    "authority": "AXIS_PLAN_TAG",
+    "value": "C3"
+   },
+   "definitions": {
+    "C3": {
+     "reinforcement": {
+      "count": 8,
+      "dia_mm": 16,
+      "raw": [
+       "8",
+       "16"
+      ]
+     },
+     "section": [
+      30.0,
+      50.0
+     ]
+    }
+   },
+   "element_id": "COLPOS-X05-Y02-12538-9062",
+   "element_ids": [
+    "COL-C3-X05-Y02-FOUNDATION",
+    "COL-C3-X05-Y02-GF",
+    "COL-C3-X05-Y02-1F"
+   ],
+   "element_type": "COLUMN",
+   "evidence": [
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "COLUMN & AXIS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "100E",
+      "layer": "S-TEXT",
+      "page": 1,
+      "sheet_title": "COLUMN & AXIS PLAN",
+      "text": "C3"
+     },
+     "value": "C3"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "FOUNDATION PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "168E",
+      "layer": "S-TEXT",
+      "page": 2,
+      "sheet_title": "FOUNDATION PLAN",
+      "text": "C3"
+     },
+     "value": "C3"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "GROUND BEAMS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "22D",
+      "layer": "S-TEXT",
+      "page": 3,
+      "sheet_title": "GROUND BEAMS PLAN",
+      "text": "C3"
+     },
+     "value": "C3"
+    },
+    {
+     "authority": "DRAWN_GEOMETRY",
+     "description": "axis-plan size label 30X50 matches the C3 schedule section",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "layer": "S-TEXT",
+      "page": 1,
+      "sheet_title": "COLUMN & AXIS PLAN",
+      "text": "30X50"
+     },
+     "value": "C3"
+    }
+   ],
+   "label": "at grid X05/Y02",
+   "quantity": 3,
+   "unit": "nr occurrences"
+  },
+  {
+   "current": {
+    "authority": "AXIS_PLAN_TAG",
+    "value": "CN"
+   },
+   "definitions": {
+    "CN": {
+     "reinforcement": {
+      "count": 4,
+      "dia_mm": 14,
+      "raw": [
+       "30",
+       "30",
+       "4",
+       "%%C",
+       "14"
+      ]
+     },
+     "section": [
+      30.0,
+      30.0
+     ]
+    }
+   },
+   "element_id": "COLPOS-X16-Y03-33108-11312",
+   "element_ids": [
+    "COL-CN-X16-Y03-FOUNDATION"
+   ],
+   "element_type": "COLUMN",
+   "evidence": [
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "COLUMN & AXIS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "1071",
+      "layer": "S-TEXT",
+      "page": 1,
+      "sheet_title": "COLUMN & AXIS PLAN",
+      "text": "CN"
+     },
+     "value": "CN"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "FOUNDATION PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "10FD",
+      "layer": "S-TEXT",
+      "page": 2,
+      "sheet_title": "FOUNDATION PLAN",
+      "text": "CN"
+     },
+     "value": "CN"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "GROUND BEAMS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "808",
+      "layer": "S-TEXT",
+      "page": 3,
+      "sheet_title": "GROUND BEAMS PLAN",
+      "text": "CN"
+     },
+     "value": "CN"
+    },
+    {
+     "authority": "DRAWN_GEOMETRY",
+     "description": "axis-plan size label 30X30 matches the CN schedule section",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "layer": "S-TEXT",
+      "page": 1,
+      "sheet_title": "COLUMN & AXIS PLAN",
+      "text": "30X30"
+     },
+     "value": "CN"
+    }
+   ],
+   "label": "at grid X16/Y03",
+   "quantity": 1,
+   "unit": "nr occurrences"
+  },
+  {
+   "current": {
+    "authority": "AXIS_PLAN_TAG",
+    "value": "C5"
+   },
+   "definitions": {
+    "C5": {
+     "reinforcement": {
+      "count": 10,
+      "dia_mm": 16,
+      "raw": [
+       "10",
+       "16"
+      ]
+     },
+     "section": [
+      30.0,
+      60.0
+     ]
+    }
+   },
+   "element_id": "COLPOS-X05-Y04-12538-11912",
+   "element_ids": [
+    "COL-C5-X05-Y04-FOUNDATION",
+    "COL-C5-X05-Y04-GF",
+    "COL-C5-X05-Y04-1F"
+   ],
+   "element_type": "COLUMN",
+   "evidence": [
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "COLUMN & AXIS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "1010",
+      "layer": "S-TEXT",
+      "page": 1,
+      "sheet_title": "COLUMN & AXIS PLAN",
+      "text": "C5"
+     },
+     "value": "C5"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "FOUNDATION PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "10BE",
+      "layer": "S-TEXT",
+      "page": 2,
+      "sheet_title": "FOUNDATION PLAN",
+      "text": "C5"
+     },
+     "value": "C5"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "GROUND BEAMS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "224",
+      "layer": "S-TEXT",
+      "page": 3,
+      "sheet_title": "GROUND BEAMS PLAN",
+      "text": "C5"
+     },
+     "value": "C5"
+    },
+    {
+     "authority": "DRAWN_GEOMETRY",
+     "description": "axis-plan size label 30X60 matches the C5 schedule section",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "layer": "S-TEXT",
+      "page": 1,
+      "sheet_title": "COLUMN & AXIS PLAN",
+      "text": "30X60"
+     },
+     "value": "C5"
+    }
+   ],
+   "label": "at grid X05/Y04",
+   "quantity": 3,
+   "unit": "nr occurrences"
+  },
+  {
+   "current": {
+    "authority": "AXIS_PLAN_TAG",
+    "value": "C3"
+   },
+   "definitions": {
+    "C3": {
+     "reinforcement": {
+      "count": 8,
+      "dia_mm": 16,
+      "raw": [
+       "8",
+       "16"
+      ]
+     },
+     "section": [
+      30.0,
+      50.0
+     ]
+    }
+   },
+   "element_id": "COLPOS-X03-Y04-6338-12062",
+   "element_ids": [
+    "COL-C3-X03-Y04-FOUNDATION",
+    "COL-C3-X03-Y04-GF"
+   ],
+   "element_type": "COLUMN",
+   "evidence": [
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "COLUMN & AXIS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "1006",
+      "layer": "S-TEXT",
+      "page": 1,
+      "sheet_title": "COLUMN & AXIS PLAN",
+      "text": "C3"
+     },
+     "value": "C3"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "FOUNDATION PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "168F",
+      "layer": "S-TEXT",
+      "page": 2,
+      "sheet_title": "FOUNDATION PLAN",
+      "text": "C3"
+     },
+     "value": "C3"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "GROUND BEAMS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "20E",
+      "layer": "S-TEXT",
+      "page": 3,
+      "sheet_title": "GROUND BEAMS PLAN",
+      "text": "C3"
+     },
+     "value": "C3"
+    },
+    {
+     "authority": "DRAWN_GEOMETRY",
+     "description": "axis-plan size label 30X50 matches the C3 schedule section",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "layer": "S-TEXT",
+      "page": 1,
+      "sheet_title": "COLUMN & AXIS PLAN",
+      "text": "30X50"
+     },
+     "value": "C3"
+    }
+   ],
+   "label": "at grid X03/Y04",
+   "quantity": 2,
+   "unit": "nr occurrences"
+  },
+  {
+   "current": {
+    "authority": "AXIS_PLAN_TAG",
+    "value": "C11"
+   },
+   "definitions": {
+    "C11": {
+     "reinforcement": {
+      "count": 14,
+      "dia_mm": 16,
+      "raw": [
+       "14",
+       "16"
+      ]
+     },
+     "section": [
+      30.0,
+      110.0
+     ]
+    }
+   },
+   "element_id": "COLPOS-X06-Y04-14438-12062",
+   "element_ids": [
+    "COL-C11-X06-Y04-FOUNDATION",
+    "COL-C11-X06-Y04-GF"
+   ],
+   "element_type": "COLUMN",
+   "evidence": [
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "COLUMN & AXIS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "1012",
+      "layer": "S-TEXT",
+      "page": 1,
+      "sheet_title": "COLUMN & AXIS PLAN",
+      "text": "C11"
+     },
+     "value": "C11"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "FOUNDATION PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "10BF",
+      "layer": "S-TEXT",
+      "page": 2,
+      "sheet_title": "FOUNDATION PLAN",
+      "text": "C11"
+     },
+     "value": "C11"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "GROUND BEAMS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "225",
+      "layer": "S-TEXT",
+      "page": 3,
+      "sheet_title": "GROUND BEAMS PLAN",
+      "text": "C11"
+     },
+     "value": "C11"
+    },
+    {
+     "authority": "DRAWN_GEOMETRY",
+     "description": "axis-plan size label 30X110 matches the C11 schedule section",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "layer": "S-TEXT",
+      "page": 1,
+      "sheet_title": "COLUMN & AXIS PLAN",
+      "text": "30X110"
+     },
+     "value": "C11"
+    }
+   ],
+   "label": "at grid X06/Y04",
+   "quantity": 2,
+   "unit": "nr occurrences"
+  },
+  {
+   "current": {
+    "authority": "AXIS_PLAN_TAG",
+    "value": "C6"
+   },
+   "definitions": {
+    "C6": {
+     "reinforcement": {
+      "count": 10,
+      "dia_mm": 16,
+      "raw": [
+       "10",
+       "16"
+      ]
+     },
+     "section": [
+      30.0,
+      70.0
+     ]
+    }
+   },
+   "element_id": "COLPOS-X08-Y04-17038-12362",
+   "element_ids": [
+    "COL-C6-X08-Y04-FOUNDATION",
+    "COL-C6-X08-Y04-GF",
+    "COL-C6-X08-Y04-1F"
+   ],
+   "element_type": "COLUMN",
+   "evidence": [
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "COLUMN & AXIS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "1014",
+      "layer": "S-TEXT",
+      "page": 1,
+      "sheet_title": "COLUMN & AXIS PLAN",
+      "text": "C6"
+     },
+     "value": "C6"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "FOUNDATION PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "168D",
+      "layer": "S-TEXT",
+      "page": 2,
+      "sheet_title": "FOUNDATION PLAN",
+      "text": "C6"
+     },
+     "value": "C6"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "GROUND BEAMS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "229",
+      "layer": "S-TEXT",
+      "page": 3,
+      "sheet_title": "GROUND BEAMS PLAN",
+      "text": "C6"
+     },
+     "value": "C6"
+    },
+    {
+     "authority": "DRAWN_GEOMETRY",
+     "description": "axis-plan size label 30X70 matches the C6 schedule section",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "layer": "S-TEXT",
+      "page": 1,
+      "sheet_title": "COLUMN & AXIS PLAN",
+      "text": "30X70"
+     },
+     "value": "C6"
+    }
+   ],
+   "label": "at grid X08/Y04",
+   "quantity": 3,
+   "unit": "nr occurrences"
+  },
+  {
+   "current": {
+    "authority": "AXIS_PLAN_TAG",
+    "value": "CN"
+   },
+   "definitions": {
+    "CN": {
+     "reinforcement": {
+      "count": 4,
+      "dia_mm": 14,
+      "raw": [
+       "30",
+       "30",
+       "4",
+       "%%C",
+       "14"
+      ]
+     },
+     "section": [
+      30.0,
+      30.0
+     ]
+    }
+   },
+   "element_id": "COLPOS-X?-Y?-24058-12787",
+   "element_ids": [
+    "COL-CN-X?-Y?@24058-12787-FOUNDATION"
+   ],
+   "element_type": "COLUMN",
+   "evidence": [
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "COLUMN & AXIS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "17B6",
+      "layer": "S-TEXT",
+      "page": 1,
+      "sheet_title": "COLUMN & AXIS PLAN",
+      "text": "CN"
+     },
+     "value": "CN"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "FOUNDATION PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "10F5",
+      "layer": "S-TEXT",
+      "page": 2,
+      "sheet_title": "FOUNDATION PLAN",
+      "text": "CN"
+     },
+     "value": "CN"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "GROUND BEAMS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "7F4",
+      "layer": "S-TEXT",
+      "page": 3,
+      "sheet_title": "GROUND BEAMS PLAN",
+      "text": "CN"
+     },
+     "value": "CN"
+    },
+    {
+     "authority": "DRAWN_GEOMETRY",
+     "description": "axis-plan size label 30X30 matches the CN schedule section",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "layer": "S-TEXT",
+      "page": 1,
+      "sheet_title": "COLUMN & AXIS PLAN",
+      "text": "30X30"
+     },
+     "value": "CN"
+    }
+   ],
+   "label": "at grid None/None",
+   "quantity": 1,
+   "unit": "nr occurrences"
+  },
+  {
+   "current": {
+    "authority": "AXIS_PLAN_TAG",
+    "value": "CN"
+   },
+   "definitions": {
+    "CN": {
+     "reinforcement": {
+      "count": 4,
+      "dia_mm": 14,
+      "raw": [
+       "30",
+       "30",
+       "4",
+       "%%C",
+       "14"
+      ]
+     },
+     "section": [
+      30.0,
+      30.0
+     ]
+    }
+   },
+   "element_id": "COLPOS-X?-Y?-28583-12787",
+   "element_ids": [
+    "COL-CN-X?-Y?@28583-12787-FOUNDATION"
+   ],
+   "element_type": "COLUMN",
+   "evidence": [
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "COLUMN & AXIS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "1073",
+      "layer": "S-TEXT",
+      "page": 1,
+      "sheet_title": "COLUMN & AXIS PLAN",
+      "text": "CN"
+     },
+     "value": "CN"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "FOUNDATION PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "10ED",
+      "layer": "S-TEXT",
+      "page": 2,
+      "sheet_title": "FOUNDATION PLAN",
+      "text": "CN"
+     },
+     "value": "CN"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "GROUND BEAMS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "7EC",
+      "layer": "S-TEXT",
+      "page": 3,
+      "sheet_title": "GROUND BEAMS PLAN",
+      "text": "CN"
+     },
+     "value": "CN"
+    },
+    {
+     "authority": "DRAWN_GEOMETRY",
+     "description": "axis-plan size label 30X30 matches the CN schedule section",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "layer": "S-TEXT",
+      "page": 1,
+      "sheet_title": "COLUMN & AXIS PLAN",
+      "text": "30X30"
+     },
+     "value": "CN"
+    }
+   ],
+   "label": "at grid None/None",
+   "quantity": 1,
+   "unit": "nr occurrences"
+  },
+  {
+   "current": {
+    "authority": "AXIS_PLAN_TAG",
+    "value": "C"
+   },
+   "definitions": {
+    "C": {
+     "reinforcement": {
+      "count": 8,
+      "dia_mm": 16,
+      "raw": [
+       "8",
+       "16"
+      ]
+     },
+     "section": [
+      30.0,
+      50.0
+     ]
+    }
+   },
+   "element_id": "COLPOS-X01-Y05-2038-13762",
+   "element_ids": [
+    "COL-C-X01-Y05-FOUNDATION",
+    "COL-C-X01-Y05-GF"
+   ],
+   "element_type": "COLUMN",
+   "evidence": [
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "COLUMN & AXIS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "84D",
+      "layer": "S-TEXT",
+      "page": 1,
+      "sheet_title": "COLUMN & AXIS PLAN",
+      "text": "C"
+     },
+     "value": "C"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "FOUNDATION PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "167F",
+      "layer": "S-TEXT",
+      "page": 2,
+      "sheet_title": "FOUNDATION PLAN",
+      "text": "C"
+     },
+     "value": "C"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "GROUND BEAMS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "20C",
+      "layer": "S-TEXT",
+      "page": 3,
+      "sheet_title": "GROUND BEAMS PLAN",
+      "text": "C"
+     },
+     "value": "C"
+    },
+    {
+     "authority": "DRAWN_GEOMETRY",
+     "description": "axis-plan size label 30X50 matches the C schedule section",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "layer": "S-TEXT",
+      "page": 1,
+      "sheet_title": "COLUMN & AXIS PLAN",
+      "text": "30X50"
+     },
+     "value": "C"
+    }
+   ],
+   "label": "at grid X01/Y05",
+   "quantity": 2,
+   "unit": "nr occurrences"
+  },
+  {
+   "current": {
+    "authority": "AXIS_PLAN_TAG",
+    "value": "C"
+   },
+   "definitions": {
+    "C": {
+     "reinforcement": {
+      "count": 8,
+      "dia_mm": 16,
+      "raw": [
+       "8",
+       "16"
+      ]
+     },
+     "section": [
+      30.0,
+      50.0
+     ]
+    }
+   },
+   "element_id": "COLPOS-X02-Y05-4738-13862",
+   "element_ids": [
+    "COL-C-X02-Y05-FOUNDATION",
+    "COL-C-X02-Y05-GF"
+   ],
+   "element_type": "COLUMN",
+   "evidence": [
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "COLUMN & AXIS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "1004",
+      "layer": "S-TEXT",
+      "page": 1,
+      "sheet_title": "COLUMN & AXIS PLAN",
+      "text": "C"
+     },
+     "value": "C"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "FOUNDATION PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "1678",
+      "layer": "S-TEXT",
+      "page": 2,
+      "sheet_title": "FOUNDATION PLAN",
+      "text": "C"
+     },
+     "value": "C"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "GROUND BEAMS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "215",
+      "layer": "S-TEXT",
+      "page": 3,
+      "sheet_title": "GROUND BEAMS PLAN",
+      "text": "C"
+     },
+     "value": "C"
+    },
+    {
+     "authority": "DRAWN_GEOMETRY",
+     "description": "axis-plan size label 30X50 matches the C schedule section",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "layer": "S-TEXT",
+      "page": 1,
+      "sheet_title": "COLUMN & AXIS PLAN",
+      "text": "30X50"
+     },
+     "value": "C"
+    }
+   ],
+   "label": "at grid X02/Y05",
+   "quantity": 2,
+   "unit": "nr occurrences"
+  },
+  {
+   "current": {
+    "authority": "AXIS_PLAN_TAG",
+    "value": "C3"
+   },
+   "definitions": {
+    "C3": {
+     "reinforcement": {
+      "count": 8,
+      "dia_mm": 16,
+      "raw": [
+       "8",
+       "16"
+      ]
+     },
+     "section": [
+      30.0,
+      50.0
+     ]
+    }
+   },
+   "element_id": "COLPOS-X16-Y06-33108-14962",
+   "element_ids": [
+    "COL-C3-X16-Y06-FOUNDATION",
+    "COL-C3-X16-Y06-GF"
+   ],
+   "element_type": "COLUMN",
+   "evidence": [
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "COLUMN & AXIS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "106F",
+      "layer": "S-TEXT",
+      "page": 1,
+      "sheet_title": "COLUMN & AXIS PLAN",
+      "text": "C3"
+     },
+     "value": "C3"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "FOUNDATION PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "10A1",
+      "layer": "S-TEXT",
+      "page": 2,
+      "sheet_title": "FOUNDATION PLAN",
+      "text": "C3"
+     },
+     "value": "C3"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "GROUND BEAMS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "1FD",
+      "layer": "S-TEXT",
+      "page": 3,
+      "sheet_title": "GROUND BEAMS PLAN",
+      "text": "C3"
+     },
+     "value": "C3"
+    },
+    {
+     "authority": "DRAWN_GEOMETRY",
+     "description": "axis-plan size label 30X50 matches the C3 schedule section",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "layer": "S-TEXT",
+      "page": 1,
+      "sheet_title": "COLUMN & AXIS PLAN",
+      "text": "30X50"
+     },
+     "value": "C3"
+    }
+   ],
+   "label": "at grid X16/Y06",
+   "quantity": 2,
+   "unit": "nr occurrences"
+  },
+  {
+   "current": {
+    "authority": "AXIS_PLAN_TAG",
+    "value": "C8"
+   },
+   "definitions": {
+    "C8": {
+     "reinforcement": {
+      "count": 12,
+      "dia_mm": 16,
+      "raw": [
+       "12",
+       "16"
+      ]
+     },
+     "section": [
+      30.0,
+      90.0
+     ]
+    }
+   },
+   "element_id": "COLPOS-X15-Y06-31508-15062",
+   "element_ids": [
+    "COL-C8-X15-Y06-FOUNDATION",
+    "COL-C8-X15-Y06-GF",
+    "COL-C8-X15-Y06-1F"
+   ],
+   "element_type": "COLUMN",
+   "evidence": [
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "COLUMN & AXIS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "106D",
+      "layer": "S-TEXT",
+      "page": 1,
+      "sheet_title": "COLUMN & AXIS PLAN",
+      "text": "C8"
+     },
+     "value": "C8"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "FOUNDATION PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "1670",
+      "layer": "S-TEXT",
+      "page": 2,
+      "sheet_title": "FOUNDATION PLAN",
+      "text": "C8"
+     },
+     "value": "C8"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "GROUND BEAMS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "239",
+      "layer": "S-TEXT",
+      "page": 3,
+      "sheet_title": "GROUND BEAMS PLAN",
+      "text": "C8"
+     },
+     "value": "C8"
+    },
+    {
+     "authority": "DRAWN_GEOMETRY",
+     "description": "axis-plan size label 30X90 matches the C8 schedule section",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "layer": "S-TEXT",
+      "page": 1,
+      "sheet_title": "COLUMN & AXIS PLAN",
+      "text": "30X90"
+     },
+     "value": "C8"
+    }
+   ],
+   "label": "at grid X15/Y06",
+   "quantity": 3,
+   "unit": "nr occurrences"
+  },
+  {
+   "current": {
+    "authority": "AXIS_PLAN_TAG",
+    "value": "C2"
+   },
+   "definitions": {
+    "C2": {
+     "reinforcement": {
+      "count": 8,
+      "dia_mm": 16,
+      "raw": [
+       "8",
+       "16"
+      ]
+     },
+     "section": [
+      30.0,
+      50.0
+     ]
+    }
+   },
+   "element_id": "COLPOS-X09-Y07-19688-15662",
+   "element_ids": [
+    "COL-C2-X09-Y07-FOUNDATION",
+    "COL-C2-X09-Y07-GF",
+    "COL-C2-X09-Y07-1F",
+    "COL-C2-X09-Y07-2F"
+   ],
+   "element_type": "COLUMN",
+   "evidence": [
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "COLUMN & AXIS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "107B",
+      "layer": "S-TEXT",
+      "page": 1,
+      "sheet_title": "COLUMN & AXIS PLAN",
+      "text": "C2"
+     },
+     "value": "C2"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "FOUNDATION PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "109B",
+      "layer": "S-TEXT",
+      "page": 2,
+      "sheet_title": "FOUNDATION PLAN",
+      "text": "C2"
+     },
+     "value": "C2"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "GROUND BEAMS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "1F7",
+      "layer": "S-TEXT",
+      "page": 3,
+      "sheet_title": "GROUND BEAMS PLAN",
+      "text": "C2"
+     },
+     "value": "C2"
+    }
+   ],
+   "label": "at grid X09/Y07",
+   "quantity": 4,
+   "unit": "nr occurrences"
+  },
+  {
+   "current": {
+    "authority": "AXIS_PLAN_TAG",
+    "value": "CN"
+   },
+   "definitions": {
+    "CN": {
+     "reinforcement": {
+      "count": 4,
+      "dia_mm": 14,
+      "raw": [
+       "30",
+       "30",
+       "4",
+       "%%C",
+       "14"
+      ]
+     },
+     "section": [
+      30.0,
+      30.0
+     ]
+    }
+   },
+   "element_id": "COLPOS-X15-Y?-31208-15726",
+   "element_ids": [
+    "COL-CN-X15-Y?@31208-15726-FOUNDATION"
+   ],
+   "element_type": "COLUMN",
+   "evidence": [
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "COLUMN & AXIS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "17D2",
+      "layer": "S-TEXT",
+      "page": 1,
+      "sheet_title": "COLUMN & AXIS PLAN",
+      "text": "CN"
+     },
+     "value": "CN"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "FOUNDATION PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "17C9",
+      "layer": "S-TEXT",
+      "page": 2,
+      "sheet_title": "FOUNDATION PLAN",
+      "text": "CN"
+     },
+     "value": "CN"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "GROUND BEAMS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "17C2",
+      "layer": "S-TEXT",
+      "page": 3,
+      "sheet_title": "GROUND BEAMS PLAN",
+      "text": "CN"
+     },
+     "value": "CN"
+    },
+    {
+     "authority": "DRAWN_GEOMETRY",
+     "description": "axis-plan size label 30X30 matches the CN schedule section",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "layer": "S-TEXT",
+      "page": 1,
+      "sheet_title": "COLUMN & AXIS PLAN",
+      "text": "30X30"
+     },
+     "value": "CN"
+    }
+   ],
+   "label": "at grid X15/None",
+   "quantity": 1,
+   "unit": "nr occurrences"
+  },
+  {
+   "current": {
+    "authority": "AXIS_PLAN_TAG",
+    "value": "C9"
+   },
+   "definitions": {
+    "C9": {
+     "reinforcement": {
+      "count": 14,
+      "dia_mm": 16,
+      "raw": [
+       "14",
+       "16"
+      ]
+     },
+     "section": [
+      30.0,
+      100.0
+     ]
+    }
+   },
+   "element_id": "COLPOS-X10-Y07-21713-15912",
+   "element_ids": [
+    "COL-C9-X10-Y07-FOUNDATION",
+    "COL-C9-X10-Y07-GF",
+    "COL-C9-X10-Y07-1F",
+    "COL-C9-X10-Y07-2F"
+   ],
+   "element_type": "COLUMN",
+   "evidence": [
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "COLUMN & AXIS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "1075",
+      "layer": "S-TEXT",
+      "page": 1,
+      "sheet_title": "COLUMN & AXIS PLAN",
+      "text": "C9"
+     },
+     "value": "C9"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "FOUNDATION PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "109A",
+      "layer": "S-TEXT",
+      "page": 2,
+      "sheet_title": "FOUNDATION PLAN",
+      "text": "C9"
+     },
+     "value": "C9"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "GROUND BEAMS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "1F6",
+      "layer": "S-TEXT",
+      "page": 3,
+      "sheet_title": "GROUND BEAMS PLAN",
+      "text": "C9"
+     },
+     "value": "C9"
+    }
+   ],
+   "label": "at grid X10/Y07",
+   "quantity": 4,
+   "unit": "nr occurrences"
+  },
+  {
+   "current": {
+    "authority": "AXIS_PLAN_TAG",
+    "value": "C7"
+   },
+   "definitions": {
+    "C7": {
+     "reinforcement": {
+      "count": 12,
+      "dia_mm": 16,
+      "raw": [
+       "12",
+       "16"
+      ]
+     },
+     "section": [
+      30.0,
+      80.0
+     ]
+    }
+   },
+   "element_id": "COLPOS-X07-Y?-15888-16162",
+   "element_ids": [
+    "COL-C7-X07-Y?@15888-16162-FOUNDATION",
+    "COL-C7-X07-Y?@15888-16162-GF",
+    "COL-C7-X07-Y?@15888-16162-1F"
+   ],
+   "element_type": "COLUMN",
+   "evidence": [
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "COLUMN & AXIS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "105D",
+      "layer": "S-TEXT",
+      "page": 1,
+      "sheet_title": "COLUMN & AXIS PLAN",
+      "text": "C7"
+     },
+     "value": "C7"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "FOUNDATION PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "10C9",
+      "layer": "S-TEXT",
+      "page": 2,
+      "sheet_title": "FOUNDATION PLAN",
+      "text": "C7"
+     },
+     "value": "C7"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "GROUND BEAMS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "231",
+      "layer": "S-TEXT",
+      "page": 3,
+      "sheet_title": "GROUND BEAMS PLAN",
+      "text": "C7"
+     },
+     "value": "C7"
+    },
+    {
+     "authority": "DRAWN_GEOMETRY",
+     "description": "axis-plan size label 30X80 matches the C7 schedule section",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "layer": "S-TEXT",
+      "page": 1,
+      "sheet_title": "COLUMN & AXIS PLAN",
+      "text": "30X80"
+     },
+     "value": "C7"
+    }
+   ],
+   "label": "at grid X07/None",
+   "quantity": 3,
+   "unit": "nr occurrences"
+  },
+  {
+   "current": {
+    "authority": "AXIS_PLAN_TAG",
+    "value": "C9"
+   },
+   "definitions": {
+    "C9": {
+     "reinforcement": {
+      "count": 14,
+      "dia_mm": 16,
+      "raw": [
+       "14",
+       "16"
+      ]
+     },
+     "section": [
+      30.0,
+      100.0
+     ]
+    }
+   },
+   "element_id": "COLPOS-X13-Y08-27308-16612",
+   "element_ids": [
+    "COL-C9-X13-Y08-FOUNDATION",
+    "COL-C9-X13-Y08-GF",
+    "COL-C9-X13-Y08-1F"
+   ],
+   "element_type": "COLUMN",
+   "evidence": [
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "COLUMN & AXIS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "106B",
+      "layer": "S-TEXT",
+      "page": 1,
+      "sheet_title": "COLUMN & AXIS PLAN",
+      "text": "C9"
+     },
+     "value": "C9"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "FOUNDATION PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "1677",
+      "layer": "S-TEXT",
+      "page": 2,
+      "sheet_title": "FOUNDATION PLAN",
+      "text": "C9"
+     },
+     "value": "C9"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "GROUND BEAMS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "246",
+      "layer": "S-TEXT",
+      "page": 3,
+      "sheet_title": "GROUND BEAMS PLAN",
+      "text": "C9"
+     },
+     "value": "C9"
+    },
+    {
+     "authority": "DRAWN_GEOMETRY",
+     "description": "axis-plan size label 30X100 matches the C9 schedule section",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "layer": "S-TEXT",
+      "page": 1,
+      "sheet_title": "COLUMN & AXIS PLAN",
+      "text": "30X100"
+     },
+     "value": "C9"
+    }
+   ],
+   "label": "at grid X13/Y08",
+   "quantity": 3,
+   "unit": "nr occurrences"
+  },
+  {
+   "current": {
+    "authority": "AXIS_PLAN_TAG",
+    "value": "C3"
+   },
+   "definitions": {
+    "C3": {
+     "reinforcement": {
+      "count": 8,
+      "dia_mm": 16,
+      "raw": [
+       "8",
+       "16"
+      ]
+     },
+     "section": [
+      30.0,
+      50.0
+     ]
+    }
+   },
+   "element_id": "COLPOS-X08-Y09-17038-17362",
+   "element_ids": [
+    "COL-C3-X08-Y09-FOUNDATION",
+    "COL-C3-X08-Y09-GF",
+    "COL-C3-X08-Y09-1F",
+    "COL-C3-X08-Y09-2F"
+   ],
+   "element_type": "COLUMN",
+   "evidence": [
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "COLUMN & AXIS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "105F",
+      "layer": "S-TEXT",
+      "page": 1,
+      "sheet_title": "COLUMN & AXIS PLAN",
+      "text": "C3"
+     },
+     "value": "C3"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "FOUNDATION PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "10CD",
+      "layer": "S-TEXT",
+      "page": 2,
+      "sheet_title": "FOUNDATION PLAN",
+      "text": "C3"
+     },
+     "value": "C3"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "GROUND BEAMS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "235",
+      "layer": "S-TEXT",
+      "page": 3,
+      "sheet_title": "GROUND BEAMS PLAN",
+      "text": "C3"
+     },
+     "value": "C3"
+    },
+    {
+     "authority": "DRAWN_GEOMETRY",
+     "description": "axis-plan size label 30X50 matches the C3 schedule section",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "layer": "S-TEXT",
+      "page": 1,
+      "sheet_title": "COLUMN & AXIS PLAN",
+      "text": "30X50"
+     },
+     "value": "C3"
+    }
+   ],
+   "label": "at grid X08/Y09",
+   "quantity": 4,
+   "unit": "nr occurrences"
+  },
+  {
+   "current": {
+    "authority": "AXIS_PLAN_TAG",
+    "value": "C1"
+   },
+   "definitions": {
+    "C1": {
+     "reinforcement": {
+      "count": 8,
+      "dia_mm": 16,
+      "raw": [
+       "8",
+       "16"
+      ]
+     },
+     "section": [
+      30.0,
+      50.0
+     ]
+    }
+   },
+   "element_id": "COLPOS-X09-Y09-19688-17362",
+   "element_ids": [
+    "COL-C1-X09-Y09-FOUNDATION",
+    "COL-C1-X09-Y09-GF",
+    "COL-C1-X09-Y09-1F",
+    "COL-C1-X09-Y09-2F"
+   ],
+   "element_type": "COLUMN",
+   "evidence": [
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "COLUMN & AXIS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "1079",
+      "layer": "S-TEXT",
+      "page": 1,
+      "sheet_title": "COLUMN & AXIS PLAN",
+      "text": "C1"
+     },
+     "value": "C1"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "FOUNDATION PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "109D",
+      "layer": "S-TEXT",
+      "page": 2,
+      "sheet_title": "FOUNDATION PLAN",
+      "text": "C1"
+     },
+     "value": "C1"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "GROUND BEAMS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "1F9",
+      "layer": "S-TEXT",
+      "page": 3,
+      "sheet_title": "GROUND BEAMS PLAN",
+      "text": "C1"
+     },
+     "value": "C1"
+    }
+   ],
+   "label": "at grid X09/Y09",
+   "quantity": 4,
+   "unit": "nr occurrences"
+  },
+  {
+   "current": {
+    "authority": "AXIS_PLAN_TAG",
+    "value": "C2"
+   },
+   "definitions": {
+    "C2": {
+     "reinforcement": {
+      "count": 8,
+      "dia_mm": 16,
+      "raw": [
+       "8",
+       "16"
+      ]
+     },
+     "section": [
+      30.0,
+      50.0
+     ]
+    }
+   },
+   "element_id": "COLPOS-X10-Y09-21688-17362",
+   "element_ids": [
+    "COL-C2-X10-Y09-FOUNDATION",
+    "COL-C2-X10-Y09-GF",
+    "COL-C2-X10-Y09-1F",
+    "COL-C2-X10-Y09-2F"
+   ],
+   "element_type": "COLUMN",
+   "evidence": [
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "COLUMN & AXIS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "1077",
+      "layer": "S-TEXT",
+      "page": 1,
+      "sheet_title": "COLUMN & AXIS PLAN",
+      "text": "C2"
+     },
+     "value": "C2"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "FOUNDATION PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "109C",
+      "layer": "S-TEXT",
+      "page": 2,
+      "sheet_title": "FOUNDATION PLAN",
+      "text": "C2"
+     },
+     "value": "C2"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "GROUND BEAMS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "1F8",
+      "layer": "S-TEXT",
+      "page": 3,
+      "sheet_title": "GROUND BEAMS PLAN",
+      "text": "C2"
+     },
+     "value": "C2"
+    }
+   ],
+   "label": "at grid X10/Y09",
+   "quantity": 4,
+   "unit": "nr occurrences"
+  },
+  {
+   "current": {
+    "authority": "FOUNDATION_PLAN_TAG",
+    "value": "CN"
+   },
+   "definitions": {
+    "CN": {
+     "reinforcement": {
+      "count": 4,
+      "dia_mm": 14,
+      "raw": [
+       "30",
+       "30",
+       "4",
+       "%%C",
+       "14"
+      ]
+     },
+     "section": [
+      30.0,
+      30.0
+     ]
+    }
+   },
+   "element_id": "COLPOS-X?-Y?-29108-18112",
+   "element_ids": [
+    "COL-CN-X?-Y?@29108-18112-FOUNDATION"
+   ],
+   "element_type": "COLUMN",
+   "evidence": [
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "FOUNDATION PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "1810",
+      "layer": "S-TEXT",
+      "page": 2,
+      "sheet_title": "FOUNDATION PLAN",
+      "text": "CN"
+     },
+     "value": "CN"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "GROUND BEAMS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "17B9",
+      "layer": "S-TEXT",
+      "page": 3,
+      "sheet_title": "GROUND BEAMS PLAN",
+      "text": "CN"
+     },
+     "value": "CN"
+    }
+   ],
+   "label": "at grid None/None",
+   "quantity": 1,
+   "unit": "nr occurrences"
+  },
+  {
+   "current": {
+    "authority": "AXIS_PLAN_TAG",
+    "value": "CN"
+   },
+   "definitions": {
+    "CN": {
+     "reinforcement": {
+      "count": 4,
+      "dia_mm": 14,
+      "raw": [
+       "30",
+       "30",
+       "4",
+       "%%C",
+       "14"
+      ]
+     },
+     "section": [
+      30.0,
+      30.0
+     ]
+    }
+   },
+   "element_id": "COLPOS-X?-Y10-31108-20498",
+   "element_ids": [
+    "COL-CN-X?-Y10@31108-20498-FOUNDATION"
+   ],
+   "element_type": "COLUMN",
+   "evidence": [
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "COLUMN & AXIS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "17D0",
+      "layer": "S-TEXT",
+      "page": 1,
+      "sheet_title": "COLUMN & AXIS PLAN",
+      "text": "CN"
+     },
+     "value": "CN"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "FOUNDATION PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "17CA",
+      "layer": "S-TEXT",
+      "page": 2,
+      "sheet_title": "FOUNDATION PLAN",
+      "text": "CN"
+     },
+     "value": "CN"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "GROUND BEAMS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "17C3",
+      "layer": "S-TEXT",
+      "page": 3,
+      "sheet_title": "GROUND BEAMS PLAN",
+      "text": "CN"
+     },
+     "value": "CN"
+    },
+    {
+     "authority": "DRAWN_GEOMETRY",
+     "description": "axis-plan size label 30X30 matches the CN schedule section",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "layer": "S-TEXT",
+      "page": 1,
+      "sheet_title": "COLUMN & AXIS PLAN",
+      "text": "30X30"
+     },
+     "value": "CN"
+    }
+   ],
+   "label": "at grid None/Y10",
+   "quantity": 1,
+   "unit": "nr occurrences"
+  },
+  {
+   "current": {
+    "authority": "AXIS_PLAN_TAG",
+    "value": "C2"
+   },
+   "definitions": {
+    "C2": {
+     "reinforcement": {
+      "count": 8,
+      "dia_mm": 16,
+      "raw": [
+       "8",
+       "16"
+      ]
+     },
+     "section": [
+      30.0,
+      50.0
+     ]
+    }
+   },
+   "element_id": "COLPOS-X08-Y10-17038-20562",
+   "element_ids": [
+    "COL-C2-X08-Y10-FOUNDATION",
+    "COL-C2-X08-Y10-GF",
+    "COL-C2-X08-Y10-1F",
+    "COL-C2-X08-Y10-2F"
+   ],
+   "element_type": "COLUMN",
+   "evidence": [
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "COLUMN & AXIS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "1061",
+      "layer": "S-TEXT",
+      "page": 1,
+      "sheet_title": "COLUMN & AXIS PLAN",
+      "text": "C2"
+     },
+     "value": "C2"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "FOUNDATION PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "1675",
+      "layer": "S-TEXT",
+      "page": 2,
+      "sheet_title": "FOUNDATION PLAN",
+      "text": "C2"
+     },
+     "value": "C2"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "GROUND BEAMS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "1DD",
+      "layer": "S-TEXT",
+      "page": 3,
+      "sheet_title": "GROUND BEAMS PLAN",
+      "text": "C2"
+     },
+     "value": "C2"
+    },
+    {
+     "authority": "DRAWN_GEOMETRY",
+     "description": "axis-plan size label 30X50 matches the C2 schedule section",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "layer": "S-TEXT",
+      "page": 1,
+      "sheet_title": "COLUMN & AXIS PLAN",
+      "text": "30X50"
+     },
+     "value": "C2"
+    }
+   ],
+   "label": "at grid X08/Y10",
+   "quantity": 4,
+   "unit": "nr occurrences"
+  },
+  {
+   "current": {
+    "authority": "AXIS_PLAN_TAG",
+    "value": "C2"
+   },
+   "definitions": {
+    "C2": {
+     "reinforcement": {
+      "count": 8,
+      "dia_mm": 16,
+      "raw": [
+       "8",
+       "16"
+      ]
+     },
+     "section": [
+      30.0,
+      50.0
+     ]
+    }
+   },
+   "element_id": "COLPOS-X09-Y10-19738-20562",
+   "element_ids": [
+    "COL-C2-X09-Y10-FOUNDATION",
+    "COL-C2-X09-Y10-GF",
+    "COL-C2-X09-Y10-1F",
+    "COL-C2-X09-Y10-2F"
+   ],
+   "element_type": "COLUMN",
+   "evidence": [
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "COLUMN & AXIS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "1063",
+      "layer": "S-TEXT",
+      "page": 1,
+      "sheet_title": "COLUMN & AXIS PLAN",
+      "text": "C2"
+     },
+     "value": "C2"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "FOUNDATION PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "1674",
+      "layer": "S-TEXT",
+      "page": 2,
+      "sheet_title": "FOUNDATION PLAN",
+      "text": "C2"
+     },
+     "value": "C2"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "GROUND BEAMS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "1E1",
+      "layer": "S-TEXT",
+      "page": 3,
+      "sheet_title": "GROUND BEAMS PLAN",
+      "text": "C2"
+     },
+     "value": "C2"
+    },
+    {
+     "authority": "DRAWN_GEOMETRY",
+     "description": "axis-plan size label 30X50 matches the C2 schedule section",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "layer": "S-TEXT",
+      "page": 1,
+      "sheet_title": "COLUMN & AXIS PLAN",
+      "text": "30X50"
+     },
+     "value": "C2"
+    }
+   ],
+   "label": "at grid X09/Y10",
+   "quantity": 4,
+   "unit": "nr occurrences"
+  },
+  {
+   "current": {
+    "authority": "AXIS_PLAN_TAG",
+    "value": "C5"
+   },
+   "definitions": {
+    "C5": {
+     "reinforcement": {
+      "count": 10,
+      "dia_mm": 16,
+      "raw": [
+       "10",
+       "16"
+      ]
+     },
+     "section": [
+      30.0,
+      60.0
+     ]
+    }
+   },
+   "element_id": "COLPOS-X11-Y10-23558-20662",
+   "element_ids": [
+    "COL-C5-X11-Y10-FOUNDATION",
+    "COL-C5-X11-Y10-GF",
+    "COL-C5-X11-Y10-1F",
+    "COL-C5-X11-Y10-2F"
+   ],
+   "element_type": "COLUMN",
+   "evidence": [
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "COLUMN & AXIS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "1069",
+      "layer": "S-TEXT",
+      "page": 1,
+      "sheet_title": "COLUMN & AXIS PLAN",
+      "text": "C5"
+     },
+     "value": "C5"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "FOUNDATION PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "1673",
+      "layer": "S-TEXT",
+      "page": 2,
+      "sheet_title": "FOUNDATION PLAN",
+      "text": "C5"
+     },
+     "value": "C5"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "GROUND BEAMS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "1E5",
+      "layer": "S-TEXT",
+      "page": 3,
+      "sheet_title": "GROUND BEAMS PLAN",
+      "text": "C5"
+     },
+     "value": "C5"
+    },
+    {
+     "authority": "DRAWN_GEOMETRY",
+     "description": "axis-plan size label 30X60 matches the C5 schedule section",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "layer": "S-TEXT",
+      "page": 1,
+      "sheet_title": "COLUMN & AXIS PLAN",
+      "text": "30X60"
+     },
+     "value": "C5"
+    }
+   ],
+   "label": "at grid X11/Y10",
+   "quantity": 4,
+   "unit": "nr occurrences"
+  },
+  {
+   "current": {
+    "authority": "AXIS_PLAN_TAG",
+    "value": "C4"
+   },
+   "definitions": {
+    "C4": {
+     "reinforcement": {
+      "count": 8,
+      "dia_mm": 16,
+      "raw": [
+       "8",
+       "16"
+      ]
+     },
+     "section": [
+      30.0,
+      50.0
+     ]
+    }
+   },
+   "element_id": "COLPOS-X13-Y10-27458-20662",
+   "element_ids": [
+    "COL-C4-X13-Y10-FOUNDATION",
+    "COL-C4-X13-Y10-GF",
+    "COL-C4-X13-Y10-1F"
+   ],
+   "element_type": "COLUMN",
+   "evidence": [
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "COLUMN & AXIS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "1065",
+      "layer": "S-TEXT",
+      "page": 1,
+      "sheet_title": "COLUMN & AXIS PLAN",
+      "text": "C4"
+     },
+     "value": "C4"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "FOUNDATION PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "1672",
+      "layer": "S-TEXT",
+      "page": 2,
+      "sheet_title": "FOUNDATION PLAN",
+      "text": "C4"
+     },
+     "value": "C4"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "GROUND BEAMS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "242",
+      "layer": "S-TEXT",
+      "page": 3,
+      "sheet_title": "GROUND BEAMS PLAN",
+      "text": "C4"
+     },
+     "value": "C4"
+    },
+    {
+     "authority": "DRAWN_GEOMETRY",
+     "description": "axis-plan size label 30X50 matches the C4 schedule section",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "layer": "S-TEXT",
+      "page": 1,
+      "sheet_title": "COLUMN & AXIS PLAN",
+      "text": "30X50"
+     },
+     "value": "C4"
+    }
+   ],
+   "label": "at grid X13/Y10",
+   "quantity": 3,
+   "unit": "nr occurrences"
+  },
+  {
+   "current": {
+    "authority": "AXIS_PLAN_TAG",
+    "value": "C4"
+   },
+   "definitions": {
+    "C4": {
+     "reinforcement": {
+      "count": 8,
+      "dia_mm": 16,
+      "raw": [
+       "8",
+       "16"
+      ]
+     },
+     "section": [
+      30.0,
+      50.0
+     ]
+    }
+   },
+   "element_id": "COLPOS-X15-Y10-31508-20687",
+   "element_ids": [
+    "COL-C4-X15-Y10-FOUNDATION",
+    "COL-C4-X15-Y10-GF",
+    "COL-C4-X15-Y10-1F"
+   ],
+   "element_type": "COLUMN",
+   "evidence": [
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "COLUMN & AXIS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "1067",
+      "layer": "S-TEXT",
+      "page": 1,
+      "sheet_title": "COLUMN & AXIS PLAN",
+      "text": "C4"
+     },
+     "value": "C4"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "FOUNDATION PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "1671",
+      "layer": "S-TEXT",
+      "page": 2,
+      "sheet_title": "FOUNDATION PLAN",
+      "text": "C4"
+     },
+     "value": "C4"
+    },
+    {
+     "authority": "PLAN_MEMBER_TAG",
+     "description": "GROUND BEAMS PLAN tag",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "handle": "1E9",
+      "layer": "S-TEXT",
+      "page": 3,
+      "sheet_title": "GROUND BEAMS PLAN",
+      "text": "C4"
+     },
+     "value": "C4"
+    },
+    {
+     "authority": "DRAWN_GEOMETRY",
+     "description": "axis-plan size label 30X50 matches the C4 schedule section",
+     "source_ref": {
+      "drawing": "ST7757.dxf",
+      "layer": "S-TEXT",
+      "page": 1,
+      "sheet_title": "COLUMN & AXIS PLAN",
+      "text": "30X50"
+     },
+     "value": "C4"
+    }
+   ],
+   "label": "at grid X15/Y10",
+   "quantity": 3,
+   "unit": "nr occurrences"
+  }
+ ],
+ "unresolved_semantics": [
+  {
+   "element_ids": [
+    "FTG-F-1888-7312",
+    "FTG-F15-7088-7312",
+    "FTG-F-13638-7312",
+    "FTG-F11-16163-7312",
+    "FTG-CONFLICT_F_F10-30008-7312",
+    "FTG-F5-26458-7912",
+    "FTG-F3-11838-8262",
+    "FTG-F6-15938-11062",
+    "FTG-F3-5538-11362",
+    "FTG-F-1888-13312",
+    "FTG-F-4288-13462",
+    "FTG-F9-25608-15262",
+    "FTG-F2-16188-19612",
+    "FTG-F2-18888-19612",
+    "FTG-F5-22358-19612",
+    "FTG-F4-26358-19662",
+    "FTG-F4-30408-19687"
+   ],
+   "element_type": "FOOTING",
+   "field": "BOXED",
+   "meaning_options": [
+    {
+     "answer": "box / cage bars: a + b bars in the two directions",
+     "effect": "extra bar set per footing"
+    },
+    {
+     "answer": "top mesh counts",
+     "effect": "a top layer is added"
+    },
+    {
+     "answer": "column starter / dowel count",
+     "effect": "starter bars only"
+    }
+   ],
+   "member_types": [
+    "F",
+    "F10",
+    "F11",
+    "F15",
+    "F2",
+    "F3",
+    "F4",
+    "F5",
+    "F6",
+    "F7",
+    "F9"
+   ],
+   "quantity": 17,
+   "raw_values": {
+    "F": "3+4",
+    "F10": "3+5",
+    "F11": "3+8",
+    "F15": "3+4",
+    "F2": "3+4",
+    "F3": "3+4",
+    "F4": "3+4",
+    "F5": "3+4",
+    "F6": "3+5",
+    "F7": "3+6",
+    "F9": "3+8"
+   },
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "page": 9,
+     "sheet_title": "schedule (footing)",
+     "text": "BOXED"
+    }
+   ],
+   "unit": "nr"
+  }
+ ],
+ "untyped_members": [
+  {
+   "element_id": "BM-GF_ROOF-UNTAGGED-BL021-12388",
+   "element_type": "BEAM",
+   "family": "no mark",
+   "floor": "GF_ROOF",
+   "quantity": 3.5,
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "layer": "1",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB"
+    }
+   ],
+   "unit": "m beam"
+  },
+  {
+   "element_id": "BM-GF_ROOF-UNTAGGED-BL021-15888",
+   "element_type": "BEAM",
+   "family": "no mark",
+   "floor": "GF_ROOF",
+   "quantity": 1.069,
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "layer": "1",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB"
+    }
+   ],
+   "unit": "m beam"
+  },
+  {
+   "element_id": "BM-GF_ROOF-UNTAGGED-BL029-16412",
+   "element_type": "BEAM",
+   "family": "no mark",
+   "floor": "GF_ROOF",
+   "quantity": 0.95,
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "layer": "1",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB"
+    }
+   ],
+   "unit": "m beam"
+  },
+  {
+   "element_id": "BM-GF_ROOF-UNTAGGED-BL031-16567",
+   "element_type": "BEAM",
+   "family": "no mark",
+   "floor": "GF_ROOF",
+   "quantity": 3.995,
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "layer": "1",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB"
+    }
+   ],
+   "unit": "m beam"
+  },
+  {
+   "element_id": "BM-GF_ROOF-UNTAGGED-BL046-31108",
+   "element_type": "BEAM",
+   "family": "no mark",
+   "floor": "GF_ROOF",
+   "quantity": 1.975,
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "layer": "1",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB"
+    }
+   ],
+   "unit": "m beam"
+  },
+  {
+   "element_id": "BM-1F_ROOF-UNTAGGED-BL002-8912",
+   "element_type": "BEAM",
+   "family": "no mark",
+   "floor": "1F_ROOF",
+   "quantity": 5.587,
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "layer": "1",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB"
+    }
+   ],
+   "unit": "m beam"
+  },
+  {
+   "element_id": "BM-1F_ROOF-UNTAGGED-BL005-9062",
+   "element_type": "BEAM",
+   "family": "no mark",
+   "floor": "1F_ROOF",
+   "quantity": 2.85,
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "layer": "1",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB"
+    }
+   ],
+   "unit": "m beam"
+  },
+  {
+   "element_id": "BM-1F_ROOF-UNTAGGED-BL005-11912",
+   "element_type": "BEAM",
+   "family": "no mark",
+   "floor": "1F_ROOF",
+   "quantity": 4.175,
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "layer": "1",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB"
+    }
+   ],
+   "unit": "m beam"
+  },
+  {
+   "element_id": "BM-1F_ROOF-UNTAGGED-BL010-12388",
+   "element_type": "BEAM",
+   "family": "no mark",
+   "floor": "1F_ROOF",
+   "quantity": 3.5,
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "layer": "1",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB"
+    }
+   ],
+   "unit": "m beam"
+  },
+  {
+   "element_id": "BM-1F_ROOF-UNTAGGED-BL010-15888",
+   "element_type": "BEAM",
+   "family": "no mark",
+   "floor": "1F_ROOF",
+   "quantity": 1.069,
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "layer": "1",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB"
+    }
+   ],
+   "unit": "m beam"
+  },
+  {
+   "element_id": "BM-1F_ROOF-UNTAGGED-BL012-12638",
+   "element_type": "BEAM",
+   "family": "no mark",
+   "floor": "1F_ROOF",
+   "quantity": 4.4,
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "layer": "1",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB"
+    }
+   ],
+   "unit": "m beam"
+  },
+  {
+   "element_id": "BM-1F_ROOF-UNTAGGED-BL013-12638",
+   "element_type": "BEAM",
+   "family": "no mark",
+   "floor": "1F_ROOF",
+   "quantity": 4.4,
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "layer": "1",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB"
+    }
+   ],
+   "unit": "m beam"
+  },
+  {
+   "element_id": "BM-1F_ROOF-UNTAGGED-BL018-16004",
+   "element_type": "BEAM",
+   "family": "no mark",
+   "floor": "1F_ROOF",
+   "quantity": 4.487,
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "layer": "1",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB"
+    }
+   ],
+   "unit": "m beam"
+  },
+  {
+   "element_id": "BM-1F_ROOF-UNTAGGED-BL020-16087",
+   "element_type": "BEAM",
+   "family": "no mark",
+   "floor": "1F_ROOF",
+   "quantity": 1.275,
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "layer": "1",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB"
+    }
+   ],
+   "unit": "m beam"
+  },
+  {
+   "element_id": "BM-1F_ROOF-UNTAGGED-BL021-16482",
+   "element_type": "BEAM",
+   "family": "no mark",
+   "floor": "1F_ROOF",
+   "quantity": 3.959,
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "layer": "1",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB"
+    }
+   ],
+   "unit": "m beam"
+  },
+  {
+   "element_id": "BM-1F_ROOF-UNTAGGED-BL030-26861",
+   "element_type": "BEAM",
+   "family": "no mark",
+   "floor": "1F_ROOF",
+   "quantity": 4.772,
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "layer": "1",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB"
+    }
+   ],
+   "unit": "m beam"
+  },
+  {
+   "element_id": "BM-1F_ROOF-UNTAGGED-BL031-26861",
+   "element_type": "BEAM",
+   "family": "no mark",
+   "floor": "1F_ROOF",
+   "quantity": 4.797,
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "layer": "1",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB"
+    }
+   ],
+   "unit": "m beam"
+  },
+  {
+   "element_id": "BM-1F_ROOF-UNTAGGED-BL033-30758",
+   "element_type": "BEAM",
+   "family": "no mark",
+   "floor": "1F_ROOF",
+   "quantity": 0.75,
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "layer": "1",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB"
+    }
+   ],
+   "unit": "m beam"
+  },
+  {
+   "element_id": "BM-1F_ROOF-UNTAGGED-BA003",
+   "element_type": "BEAM",
+   "family": "dome ring (curved)",
+   "floor": "1F_ROOF",
+   "quantity": 1.517,
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "layer": "1",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB"
+    }
+   ],
+   "unit": "m beam"
+  },
+  {
+   "element_id": "BM-1F_ROOF-UNTAGGED-BA004",
+   "element_type": "BEAM",
+   "family": "dome ring (curved)",
+   "floor": "1F_ROOF",
+   "quantity": 1.294,
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "layer": "1",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB"
+    }
+   ],
+   "unit": "m beam"
+  },
+  {
+   "element_id": "BM-1F_ROOF-UNTAGGED-BA005",
+   "element_type": "BEAM",
+   "family": "dome ring (curved)",
+   "floor": "1F_ROOF",
+   "quantity": 1.621,
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "layer": "1",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB"
+    }
+   ],
+   "unit": "m beam"
+  },
+  {
+   "element_id": "BM-1F_ROOF-UNTAGGED-BA006",
+   "element_type": "BEAM",
+   "family": "dome ring (curved)",
+   "floor": "1F_ROOF",
+   "quantity": 1.734,
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "layer": "1",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB"
+    }
+   ],
+   "unit": "m beam"
+  },
+  {
+   "element_id": "BM-1F_ROOF-UNTAGGED-BA007",
+   "element_type": "BEAM",
+   "family": "dome ring (curved)",
+   "floor": "1F_ROOF",
+   "quantity": 1.734,
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "layer": "1",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB"
+    }
+   ],
+   "unit": "m beam"
+  },
+  {
+   "element_id": "BM-1F_ROOF-UNTAGGED-BA008",
+   "element_type": "BEAM",
+   "family": "dome ring (curved)",
+   "floor": "1F_ROOF",
+   "quantity": 1.621,
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "layer": "1",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB"
+    }
+   ],
+   "unit": "m beam"
+  },
+  {
+   "element_id": "BM-2F_ROOF-UNTAGGED-BL005-14112",
+   "element_type": "BEAM",
+   "family": "no mark",
+   "floor": "2F_ROOF",
+   "quantity": 3.25,
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "layer": "1",
+     "page": 6,
+     "sheet_title": "SECOND FLOOR ROOF SLAB"
+    }
+   ],
+   "unit": "m beam"
+  }
+ ]
+}

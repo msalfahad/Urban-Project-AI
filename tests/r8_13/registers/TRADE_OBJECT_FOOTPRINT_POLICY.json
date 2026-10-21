@@ -1,0 +1,168 @@
+{
+ "SCHEMA": "URBAN_R8_13_TRADE_OBJECT_FOOTPRINT_POLICY_V1",
+ "policies": [
+  {
+   "policy": "QORTUBA-CEILING-OBJECT-FOOTPRINT@v1",
+   "trade": "CEILING",
+   "object_class": "ANY_NON_PARTITION_OBJECT",
+   "treatment": "FOOTPRINT_INCLUDED",
+   "authority": "OWNER_CLAIM",
+   "scope": {
+    "revision": "QORTUBA_REV_NEW",
+    "region": "RC:MODEL_SPACE:4267:540:1649",
+    "spaces": "the Q-14 claim's space ids"
+   },
+   "source_refs": [
+    "QORTUBA-Q14-CEILING-FOOTPRINT-OWNER-001"
+   ]
+  },
+  {
+   "policy": "QORTUBA-NEW-FLOOR-OBJECT-FOOTPRINT-OWNER-001@v1",
+   "trade": "FLOOR_FINISH",
+   "object_class": "ANY_NON_PARTITION_OBJECT",
+   "treatment": "FOOTPRINT_INCLUDED",
+   "authority": "OWNER_METHOD_FACT",
+   "scope": {
+    "project": "QORTUBA",
+    "source_revision_id": "QORTUBA_REV_NEW",
+    "source_anchor_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+    "region_id": "RC:MODEL_SPACE:4267:540:1649",
+    "frame_id": "MF:RC:MODEL_SPACE:4267:540:1649",
+    "plan": "PLAN_VARIANT_4_SELECTED",
+    "trade": "FLOOR_FINISH",
+    "space_classes": [
+     "DRY_INTERNAL_ROOM"
+    ],
+    "finish": "PORCELAIN_DRY_FLOOR"
+   },
+   "source_refs": [
+    "QORTUBA-NEW-FLOOR-OBJECT-FOOTPRINT-OWNER-001@v1"
+   ]
+  }
+ ],
+ "applied_to": {
+  "Q-13": "QORTUBA-NEW-FLOOR-OBJECT-FOOTPRINT-OWNER-001@v1",
+  "Q-14": "QORTUBA-CEILING-OBJECT-FOOTPRINT@v1",
+  "Q-03 / Q-03P / Q-11 / Q-12": "NONE (out of scope: wet / service floors)"
+ },
+ "leak_check_other_rows_changed": {
+  "Q-03": false,
+  "Q-03P": false,
+  "Q-11": false,
+  "Q-12": false,
+  "Q-14": false
+ },
+ "q13_without_the_policy": {
+  "state": "BLOCKED_MULTIPLE: BLOCKED_ROLE, BLOCKED_TRADE_RULE",
+  "blocker_classes": [
+   "ROLE_AUTHORITY",
+   "TRADE_RULE"
+  ],
+  "blockers": [
+   {
+    "site": "SITE-a6405850100155ac",
+    "zones": [
+     "DRESS",
+     "M.B.ROOM"
+    ],
+    "area_m2": 33.2,
+    "blockers": [
+     {
+      "class": "ROLE_AUTHORITY",
+      "issue": "TOPOLOGY_ROLE_UNRESOLVED",
+      "detail": [
+       "1445",
+       "1446",
+       "1669",
+       "1670",
+       "514",
+       "517"
+      ]
+     },
+     {
+      "class": "TRADE_RULE",
+      "issue": "OBJECT_FOOTPRINT_POLICY_UNRESOLVED",
+      "detail": "QORTUBA-FLOOR-TREATMENT: FLOOR_FINISH"
+     }
+    ]
+   },
+   {
+    "site": "SITE-fdfa89fe0f5809a4",
+    "zones": [
+     "HALL",
+     "whgm"
+    ],
+    "area_m2": 42.799289,
+    "blockers": [
+     {
+      "class": "TRADE_RULE",
+      "issue": "OBJECT_FOOTPRINT_POLICY_UNRESOLVED",
+      "detail": {
+       "source": "1663",
+       "roles": [
+        "FURNITURE"
+       ],
+       "pockets_m2": [
+        2.3914
+       ]
+      }
+     },
+     {
+      "class": "ROLE_AUTHORITY",
+      "issue": "TOPOLOGY_ROLE_UNRESOLVED",
+      "detail": [
+       "612083",
+       "612083",
+       "612083",
+       "612084",
+       "612084",
+       "612084",
+       "612085",
+       "612085",
+       "612085",
+       "612086",
+       "612086",
+       "612086"
+      ]
+     },
+     {
+      "class": "TRADE_RULE",
+      "issue": "OBJECT_FOOTPRINT_POLICY_UNRESOLVED",
+      "detail": "QORTUBA-FLOOR-TREATMENT: FLOOR_FINISH"
+     }
+    ]
+   }
+  ]
+ },
+ "blockers_cleared_by_the_policy": [
+  {
+   "site": "SITE-a6405850100155ac",
+   "zones": [
+    "DRESS",
+    "M.B.ROOM"
+   ],
+   "cleared": [
+    "ROLE_AUTHORITY:TOPOLOGY_ROLE_UNRESOLVED",
+    "TRADE_RULE:OBJECT_FOOTPRINT_POLICY_UNRESOLVED"
+   ]
+  },
+  {
+   "site": "SITE-fdfa89fe0f5809a4",
+   "zones": [
+    "HALL",
+    "whgm"
+   ],
+   "cleared": [
+    "ROLE_AUTHORITY:TOPOLOGY_ROLE_UNRESOLVED",
+    "TRADE_RULE:OBJECT_FOOTPRINT_POLICY_UNRESOLVED",
+    "TRADE_RULE:OBJECT_FOOTPRINT_POLICY_UNRESOLVED:1663"
+   ]
+  }
+ ],
+ "never": [
+  "'ignore furniture globally'",
+  "a role for SF3 / FIRNTUR",
+  "a topology input",
+  "a transfer to another revision / project"
+ ]
+}

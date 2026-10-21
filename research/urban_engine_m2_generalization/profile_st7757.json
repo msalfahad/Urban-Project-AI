@@ -1,0 +1,17 @@
+{"profile": "ST7757_PROFILE_V1",
+ "confirmed_by": "values typed from the printed drawings (the person-confirmed project profile of the generic route)",
+ "drawing_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+ "manual_inputs": 4,
+ "conventions": [
+  {"id": "STOREY_HEIGHT_GF", "title": "Storey height GF (floor to floor)", "kind": "number", "unit": "m", "base": 4.5, "low": 4.5, "high": 4.5,
+   "provenance": "PRINTED_VALUE", "source": "P7757 architectural section VE-AA-09 (printed floor-to-floor)", "rationale": "Typed from the printed section."},
+  {"id": "STOREY_HEIGHT_1F", "title": "Storey height 1F (floor to floor)", "kind": "number", "unit": "m", "base": 4.2, "low": 4.2, "high": 4.2,
+   "provenance": "PRINTED_VALUE", "source": "P7757 architectural section VE-AA-09 (printed floor-to-floor)", "rationale": "Typed from the printed section."},
+  {"id": "STOREY_HEIGHT_2F", "title": "Storey height 2F (floor to floor)", "kind": "number", "unit": "m", "base": 4.2, "low": 4.2, "high": 4.2,
+   "provenance": "PRINTED_VALUE", "source": "P7757 architectural section VE-AA-09 (printed floor-to-floor)", "rationale": "Typed from the printed section."},
+  {"id": "GB_TYPICAL_SECTIONS", "title": "Typical ground-beam sections by span (ST7757 p.13 titles)", "kind": "choice",
+   "options": ["P13_EXCLUSIVE_BANDS"], "base": "P13_EXCLUSIVE_BANDS",
+   "classes": [{"max_span_m": 2.5, "W": 0.30, "H": 0.30}, {"max_span_m": 5.0, "W": 0.30, "H": 0.40}, {"max_span_m": null, "W": 0.30, "H": 0.60}],
+   "provenance": "READING_OF_PRINTED_VALUE", "source": "ST7757.pdf p.13 typical ground-beam titles '< 2.5 m (30x30)', '< 5 m (30x40)', '> 5 m (30x60)' (vector glyphs; typed)",
+   "rationale": "Read as exclusive span bands; exterior beams 'FOLLOW ARCH.' are not separated by the generic route (a known limit)."}
+ ]}

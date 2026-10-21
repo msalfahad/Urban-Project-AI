@@ -1,0 +1,1268 @@
+{
+ "set": "URBAN_M8_GENERIC_CONVENTIONS_V6",
+ "note": "M8 = M7 (V5) + STAIR_DRAWN_RUN, STAIR_RISER_M, STAIR_UNPRINTED_WAIST, STAIR_WAIST_CONVENTION_M, STAIR_FLIGHT_ON_TWO_PLANS, STAIR_TREAD_ANGLE_WRAP, STAIR_LOOSE_FLIGHT, SCOPE_FROM_FINDINGS, NON_STRUCTURAL_LAYERS, PRINTED_DIMENSION_NOTES, POOL_WALL_HEIGHT_M, POOL_WALL_THICKNESS_M, POOL_FLOOR_THICKNESS_M, PIT_DEPTH_M, PIT_WALL_THICKNESS_M, PIT_BASE_THICKNESS_M, TANK_HEIGHT_M, TANK_WALL_THICKNESS_M, TANK_SLAB_THICKNESS_M, TANK_REFERENCED_SIDE_M, DOME_ON_TOP_PLAN, DOME_RISE_RATIO, DOME_SHELL_THICKNESS_M, DOME_RING_DEPTH_M, DOME_REFERENCED_RADIUS_M, PIT_REFERENCED_SIDE_M, POOL_REFERENCED_AREA_M2, REFERENCED_ELEMENT_ALLOWANCE_M3, PARAPET_HEIGHT_M, PARAPET_THICKNESS_M, BOUNDARY_WALL_ROW_BY_WIDTH, BOUNDARY_WALL_RC_SECTION_M2, SLAB_STEP_DROP_M, UNEXPLAINED_STRIP_DEPTH_M, UNEXPLAINED_LINEWORK_SECTION_M2, FINDING_BOUNDS, STOREY_PLAN_MISSING_BRACKET. Values and rationale written before any M8 run or comparison (general Gulf RC villa practice, never fitted to a reference figure). Opt-in (--conventions); V5 and the frozen M2 - M7 packages are unchanged.",
+ "conventions": [
+  {
+   "id": "BAR_STOCK_LENGTH_M",
+   "title": "Stock bar length",
+   "kind": "number",
+   "unit": "m",
+   "base": 12.0,
+   "low": 12.0,
+   "high": 12.0,
+   "provenance": "STANDARD_PRACTICE",
+   "source": "12 m stock bars",
+   "rationale": "Laps are added beyond this length."
+  },
+  {
+   "id": "BEAM_BAR_ANCHORAGE_D",
+   "title": "Beam main-bar extension into each support, in bar diameters",
+   "kind": "number",
+   "unit": "d",
+   "base": 40,
+   "low": 0,
+   "high": 50,
+   "provenance": "STANDARD_PRACTICE",
+   "source": "typical anchorage",
+   "rationale": "Bottom and top bars run the clear span plus this anchorage at both ends; 0 is the bare clear span."
+  },
+  {
+   "id": "BEAM_DEPTH_READING",
+   "title": "What the schedule beam depth H is measured from",
+   "kind": "choice",
+   "options": [
+    "TOTAL_DEPTH",
+    "BELOW_SLAB"
+   ],
+   "base": "TOTAL_DEPTH",
+   "provenance": "READING_OF_PRINTED_VALUE",
+   "source": "beam schedule (datum not printed on most Kuwait villa schedules)",
+   "rationale": "TOTAL_DEPTH (B x H x L, the slab strip inside H) is the usual schedule convention; BELOW_SLAB (B x (H + t) x L) is the alternative and sets each beam's high end."
+  },
+  {
+   "id": "BEAM_LAP_D",
+   "title": "Beam bar lap length, in bar diameters",
+   "kind": "number",
+   "unit": "d",
+   "base": 50,
+   "low": 40,
+   "high": 60,
+   "provenance": "STANDARD_PRACTICE",
+   "source": "tension lap of beam bars",
+   "rationale": "A bar longer than BAR_STOCK_LENGTH_M takes one lap per extra stock length."
+  },
+  {
+   "id": "BLINDING_OVERLAP",
+   "title": "Blinding where outlines overlap (beam strip on a footing, strips at a junction, footing projections)",
+   "kind": "choice",
+   "options": [
+    "DEDUCT"
+   ],
+   "base": "DEDUCT",
+   "provenance": "STANDARD_PRACTICE",
+   "source": "one blinding layer under footings and beams",
+   "rationale": "The blinding layer is cast once: its plan is the union of the footing outlines (+ projection) and the beam strips (band + projection each side), registered on the foundation plan by the columns landing in the footings, computed exactly by inclusion-exclusion of the convex outlines. An outline without a place (a footing by its label only, a curved band) is added whole. Without a registration the overlap is a coverage risk."
+  },
+  {
+   "id": "BLINDING_PROJECTION_M",
+   "title": "Blinding projection beyond the member it is under, each side",
+   "kind": "number",
+   "unit": "m",
+   "base": 0.1,
+   "low": 0.05,
+   "high": 0.15,
+   "provenance": "STANDARD_PRACTICE",
+   "source": "blinding laid wider than the footing / beam it carries",
+   "rationale": "Not printed on most villa sets; 10 cm each side is usual, 5 - 15 cm the range."
+  },
+  {
+   "id": "BLINDING_THICKNESS_EXPOSURE_M",
+   "title": "Blinding thickness when not printed (exposure only)",
+   "kind": "number",
+   "unit": "m",
+   "base": 0.1,
+   "low": 0.05,
+   "high": 0.1,
+   "provenance": "ENGINEERING_JUDGEMENT",
+   "source": "typical villa blinding",
+   "rationale": "Only an exposure for UNRESOLVED blinding (never added to a total); blinding is measured only with a printed thickness (profile)."
+  },
+  {
+   "id": "BLINDING_UNDER",
+   "title": "Members that sit on blinding",
+   "kind": "choice",
+   "options": [
+    "FOOTINGS_ONLY",
+    "FOOTINGS_AND_GROUND_BEAMS"
+   ],
+   "base": "FOOTINGS_ONLY",
+   "provenance": "ENGINEERING_JUDGEMENT",
+   "source": "typical details",
+   "rationale": "Footings always sit on blinding; ground and strap beams only when their typical detail shows it (a profile sets FOOTINGS_AND_GROUND_BEAMS from the printed detail)."
+  },
+  {
+   "id": "CB_AMBIGUOUS_DIRECTION_BASE",
+   "title": "Base reading of a continuous beam whose direction is ambiguous",
+   "kind": "choice",
+   "options": [
+    "LARGER",
+    "SMALLER"
+   ],
+   "base": "LARGER",
+   "provenance": "ENGINEERING_JUDGEMENT",
+   "source": "both readings are computed",
+   "rationale": "When the printed spans fit both directions equally, the reading with the larger bar mass is the base and the other sets the range (LOW confidence)."
+  },
+  {
+   "id": "CB_BOTTOM_EXTENSION_M",
+   "title": "Continuous beam: bottom bars run across an interior support and this far beyond its far face",
+   "kind": "number",
+   "unit": "m",
+   "base": 0.15,
+   "low": 0.075,
+   "high": 0.3,
+   "provenance": "STANDARD_PRACTICE",
+   "source": "bottom bars lapped or continued over interior supports",
+   "rationale": "Each span's bottom bars cross an interior support and stop this far past it; at an end support they take BEAM_BAR_ANCHORAGE_D."
+  },
+  {
+   "id": "CB_DIRECTION_MARGIN_M",
+   "title": "Continuous beam: margin by which one reading direction must fit better",
+   "kind": "number",
+   "unit": "m",
+   "base": 0.25,
+   "low": 0.15,
+   "high": 0.4,
+   "provenance": "ENGINEERING_JUDGEMENT",
+   "source": "sum of absolute span residuals",
+   "rationale": "When the printed spans fit both directions, the reading whose summed residual is lower by at least this margin is taken; otherwise the direction is AMBIGUOUS and the bars carry both readings."
+  },
+  {
+   "id": "CB_PRINTED_SPAN_BASIS",
+   "title": "What a printed continuous-beam span length measures",
+   "kind": "choice",
+   "options": [
+    "AXIS",
+    "CLEAR"
+   ],
+   "base": "AXIS",
+   "provenance": "ENGINEERING_JUDGEMENT",
+   "source": "design-model spans are support centre to support centre",
+   "rationale": "AXIS compares support centres; CLEAR compares support faces. A project profile sets the printed basis where the schedule states it."
+  },
+  {
+   "id": "CB_SPAN_MATCH_TOL_M",
+   "title": "Continuous beam: tolerance between a drawn span and its printed length",
+   "kind": "number",
+   "unit": "m",
+   "base": 0.4,
+   "low": 0.25,
+   "high": 0.5,
+   "provenance": "ENGINEERING_JUDGEMENT",
+   "source": "printed spans are design-model lengths at 0.1 m resolution; drawn supports are column outlines",
+   "rationale": "A drawn span matches its printed length within max(this, CB_SPAN_MATCH_TOL_REL x length). Every span of the sequence must match, in order."
+  },
+  {
+   "id": "CB_SPAN_MATCH_TOL_REL",
+   "title": "Continuous beam: relative tolerance of a span match",
+   "kind": "number",
+   "unit": "fraction",
+   "base": 0.1,
+   "low": 0.05,
+   "high": 0.15,
+   "provenance": "ENGINEERING_JUDGEMENT",
+   "source": "as CB_SPAN_MATCH_TOL_M",
+   "rationale": "The larger of the absolute and the relative tolerance applies to each span."
+  },
+  {
+   "id": "CB_SUPPORT_BAR_EXTENT_FRAC",
+   "title": "Continuous beam: top bars over a support reach this fraction of the span on each side",
+   "kind": "number",
+   "unit": "fraction",
+   "base": 0.25,
+   "low": 0.2,
+   "high": 0.33,
+   "provenance": "STANDARD_PRACTICE",
+   "source": "usual cut-off of support top bars (0.25 - 0.33 of the span)",
+   "rationale": "Support (MID) bars run over the support and this fraction of the adjacent span on each side, from the support face. A project profile sets the printed typical value."
+  },
+  {
+   "id": "CB_SUPPORT_BAR_SPAN_BASIS",
+   "title": "The span the support-bar fraction is taken of",
+   "kind": "choice",
+   "options": [
+    "CLEAR",
+    "AXIS"
+   ],
+   "base": "CLEAR",
+   "provenance": "STANDARD_PRACTICE",
+   "source": "code notation ln = clear span",
+   "rationale": "CLEAR: the face-to-face span; AXIS: the support-centre span (when the typical detail dimensions it so)."
+  },
+  {
+   "id": "COLLINEAR_INHERITANCE",
+   "title": "Untagged span collinear with a tagged span across a support",
+   "kind": "choice",
+   "options": [
+    "SPAN_EVIDENCE_ONLY",
+    "ALLOW",
+    "OFF"
+   ],
+   "base": "SPAN_EVIDENCE_ONLY",
+   "provenance": "ENGINEERING_JUDGEMENT",
+   "source": "the schedule's printed span sequence of a continuous beam (continuous_beams.match)",
+   "rationale": "An unlabelled span takes a continuous-beam mark only when it is one of the spans whose lengths match the schedule's printed span sequence. Alignment across a support is not evidence: such a span is UNRESOLVED, with the neighbour's section as an alternative and the schedule depths at its drawn width as the exposure. ALLOW is the M3 reading (every collinear span inherits); OFF leaves every untagged span unresolved."
+  },
+  {
+   "id": "COLUMN_LAP_D",
+   "title": "Column main-bar lap per storey, in bar diameters",
+   "kind": "number",
+   "unit": "d",
+   "base": 50,
+   "low": 40,
+   "high": 60,
+   "provenance": "STANDARD_PRACTICE",
+   "source": "typical lap",
+   "rationale": "Each storey's main bars run the storey height plus one lap."
+  },
+  {
+   "id": "COLUMN_OUTLINE_BY_SECTION",
+   "title": "A column mark binds to an outline drawn at one of its scheduled sections before a nearer outline that is not",
+   "kind": "choice",
+   "options": [
+    "SECTION_THEN_LAYER_THEN_NEAREST"
+   ],
+   "base": "SECTION_THEN_LAYER_THEN_NEAREST",
+   "provenance": "STANDARD_PRACTICE",
+   "source": "a column's plan outline is its section; a pit, tank or plinth square near a footing label is another element",
+   "rationale": "M7 cluttered-drawing evaluation: a lift pit or pit walls beside a footing's C/F label took the column's place; the column then failed the storey-presence check on every plan and dropped out of the takeoff."
+  },
+  {
+   "id": "COLUMN_PRESENCE_CONTRADICTION",
+   "title": "A column absent on a storey plan but shown above it (or absent on every plan) is held unresolved",
+   "kind": "choice",
+   "options": [
+    "UNRESOLVED_EXPOSURE"
+   ],
+   "base": "UNRESOLVED_EXPOSURE",
+   "provenance": "STANDARD_PRACTICE",
+   "source": "a column shown on an upper plan stands on a column (or a beam) below; one shown on no plan is a binding error",
+   "rationale": "M7: one column outline left off a roof plan made that storey's column EXPLICIT_NONE (not counted, no exposure); now 0 .. section x height is held unresolved and reported."
+  },
+  {
+   "id": "COLUMN_SECTION_MISMATCH",
+   "title": "Column drawn at another section than its schedule",
+   "kind": "choice",
+   "options": [
+    "SCHEDULE",
+    "DRAWN"
+   ],
+   "base": "SCHEDULE",
+   "provenance": "READING_OF_PRINTED_VALUE",
+   "source": "drawn outline vs schedule storey band",
+   "rationale": "Schedule as base; drawn as the alternative."
+  },
+  {
+   "id": "DUPLICATE_ANNOTATION_READ_ONCE",
+   "title": "An annotation drawn twice at the same place is read once",
+   "kind": "choice",
+   "options": [
+    "SAME_TEXT_POSITION_1MM_ROTATION"
+   ],
+   "base": "SAME_TEXT_POSITION_1MM_ROTATION",
+   "provenance": "STANDARD_PRACTICE",
+   "source": "a duplicated text is a drafting duplicate, never a second member",
+   "rationale": "M7 metamorphic finding: duplicating every text crashed the run (two column items with one id) - a duplicated label must never duplicate concrete."
+  },
+  {
+   "id": "FOOTING_BAR_END",
+   "title": "Footing bar ends",
+   "kind": "choice",
+   "options": [
+    "STRAIGHT",
+    "HOOKED_90"
+   ],
+   "base": "STRAIGHT",
+   "provenance": "ENGINEERING_JUDGEMENT",
+   "source": "footing details",
+   "rationale": "Straight between covers as base; 90 deg hooks at both ends as the high end."
+  },
+  {
+   "id": "FOOTING_LABEL_CONFLICT",
+   "title": "Two footing types labelled at one footing with no outline",
+   "kind": "choice",
+   "options": [
+    "LARGER",
+    "SMALLER"
+   ],
+   "base": "LARGER",
+   "provenance": "ENGINEERING_JUDGEMENT",
+   "source": "the two labelled schedule types",
+   "rationale": "One physical footing carries two type labels and no outline settles it: it is quantified once, at the larger type (the conservative reading), with the smaller as the low bound. An RFI settles the type."
+  },
+  {
+   "id": "FOOTING_LABEL_ONLY",
+   "title": "Footing mark with a schedule row but no outline found",
+   "kind": "choice",
+   "options": [
+    "SCHEDULE_SIZE"
+   ],
+   "base": "SCHEDULE_SIZE",
+   "provenance": "ENGINEERING_JUDGEMENT",
+   "source": "footing schedule size of the labelled type",
+   "rationale": "The label and its schedule type are certain; the outline is not found. The quantity is the schedule size, PROVISIONAL and LOW confidence, with a coverage-risk record; a second label next to an outline of the same type stays unresolved (never counted twice)."
+  },
+  {
+   "id": "FOOTING_SIZE_MISMATCH",
+   "title": "Footing drawn at another plan size than its schedule",
+   "kind": "choice",
+   "options": [
+    "SCHEDULE",
+    "DRAWN"
+   ],
+   "base": "SCHEDULE",
+   "provenance": "READING_OF_PRINTED_VALUE",
+   "source": "drawn outline vs schedule row",
+   "rationale": "Schedule as base; the drawn size is the alternative."
+  },
+  {
+   "id": "FOOTING_TYPE_FROM_SIZE",
+   "title": "Footing outline with only a column mark",
+   "kind": "choice",
+   "options": [
+    "UNIQUE_SIZE_MATCH"
+   ],
+   "base": "UNIQUE_SIZE_MATCH",
+   "provenance": "ENGINEERING_JUDGEMENT",
+   "source": "drawn outline vs footing schedule sizes",
+   "rationale": "When exactly one footing type has the drawn plan size, the outline is that type (LOW confidence; an RFI confirms it)."
+  },
+  {
+   "id": "GB_DEPTH_EXPOSURE_M",
+   "title": "Depth range for an unmarked ground beam (exposure only)",
+   "kind": "number",
+   "unit": "m",
+   "base": 0.6,
+   "low": 0.3,
+   "high": 1.0,
+   "provenance": "ENGINEERING_JUDGEMENT",
+   "source": "villa ground beams",
+   "rationale": "Used only for the UNRESOLVED exposure range; never in a total."
+  },
+  {
+   "id": "GB_EXTERIOR_BUILDUP_M",
+   "title": "Floor build-up between the floor level and the top of an exterior ground beam",
+   "kind": "number",
+   "unit": "m",
+   "base": 0.1,
+   "low": 0.0,
+   "high": 0.2,
+   "provenance": "STANDARD_PRACTICE",
+   "source": "tiled floor on screed (finish + bedding)",
+   "rationale": "The exterior depth runs from the slab level under the floor finish to the outer ground level; the finish thickness is not printed."
+  },
+  {
+   "id": "GB_EXTERIOR_CANDIDATE",
+   "title": "A perimeter ground beam takes the printed exterior detail",
+   "kind": "choice",
+   "options": [
+    "EXTERIOR",
+    "INTERIOR"
+   ],
+   "base": "INTERIOR",
+   "provenance": "ENGINEERING_JUDGEMENT",
+   "source": "band side classification of the ground-beam plan (slab_engine.band_sides: a long side with no slab cell and no member beyond it)",
+   "rationale": "A perimeter ground beam is only a candidate for the printed exterior detail (captioned for exterior walls): without architectural evidence the typical class section is the base and the exterior detail the high alternative. GB_EXTERIOR_EVIDENCE decides when the architecture is supplied."
+  },
+  {
+   "id": "GB_EXTERIOR_EVIDENCE",
+   "title": "Evidence that makes a perimeter ground beam exterior",
+   "kind": "choice",
+   "options": [
+    "ARCH_WALLS_REQUIRED",
+    "PERIMETER"
+   ],
+   "base": "ARCH_WALLS_REQUIRED",
+   "provenance": "ENGINEERING_JUDGEMENT",
+   "source": "arch_evidence.gb_exterior: the architectural ground-floor plan registered on the column outlines",
+   "rationale": "ARCH_WALLS_REQUIRED: the exterior detail applies where the architecture draws a wall on a band with an outside side, at the floor level printed inside it; a band whose exterior depth would not be deeper than its class section is a source conflict (class section). PERIMETER is the M3 reading (every perimeter band)."
+  },
+  {
+   "id": "GB_LENGTH_BASIS",
+   "title": "Span length that selects a typical ground-beam class",
+   "kind": "choice",
+   "options": [
+    "CLEAR",
+    "CENTRE_TO_CENTRE"
+   ],
+   "base": "CENTRE_TO_CENTRE",
+   "provenance": "STANDARD_PRACTICE",
+   "source": "typical section titles by span",
+   "rationale": "Span conventionally means centre to centre; the clear-length class is the alternative."
+  },
+  {
+   "id": "LINTEL_BEARING_M",
+   "title": "Lintel bearing on each masonry jamb",
+   "kind": "number",
+   "unit": "m",
+   "base": 0.2,
+   "low": 0.15,
+   "high": 0.25,
+   "provenance": "STANDARD_PRACTICE",
+   "source": "lintel bearing on block walls",
+   "rationale": "A column jamb takes no bearing; a masonry jamb this much."
+  },
+  {
+   "id": "LINTEL_UNDER_BEAM",
+   "title": "An opening with a structural beam over it",
+   "kind": "choice",
+   "options": [
+    "UNRESOLVED",
+    "REQUIRED",
+    "NOT_REQUIRED"
+   ],
+   "base": "UNRESOLVED",
+   "provenance": "ENGINEERING_JUDGEMENT",
+   "source": "the head height against the beam soffit decides (elevations / sections)",
+   "rationale": "Under a beam a separate lintel is needed only when the opening head is below the beam soffit; without head heights the opening is UNRESOLVED with the lintel volume as its exposure."
+  },
+  {
+   "id": "NECK_HEIGHT_EXPOSURE_M",
+   "title": "Foundation neck height when the founding level is not printed (exposure only)",
+   "kind": "number",
+   "unit": "m",
+   "base": 1.5,
+   "low": 0.5,
+   "high": 2.5,
+   "provenance": "ENGINEERING_JUDGEMENT",
+   "source": "typical villa necks",
+   "rationale": "Only an exposure for an UNRESOLVED neck (never added to a total); a neck is measured only with the printed founding depth and neck top level of the project (profile)."
+  },
+  {
+   "id": "PLANTED_COLUMN_LABELS",
+   "title": "Planted columns labelled on a slab plan with their own section (e.g. 'P.C 20x70')",
+   "kind": "choice",
+   "options": [
+    "SLAB_PLAN_LABEL_SECTION"
+   ],
+   "base": "SLAB_PLAN_LABEL_SECTION",
+   "label_pattern": "^\\s*P\\.?\\s*C\\.?\\s*(\\d{2,3})\\s*[xX*]\\s*(\\d{2,3})\\s*$",
+   "label_unit_m": 0.01,
+   "provenance": "READING_OF_PRINTED_VALUE",
+   "source": "a planted-column label on a slab plan prints the column section; the column stands on that slab and rises one storey",
+   "rationale": "M5 finding: the generic route read columns from the column plan only, so labelled planted columns were missed (a detection gap, never a zero). Concrete only; their bars stay MISSING_DATA."
+  },
+  {
+   "id": "REBAR_COVER_BEAM_M",
+   "title": "Beam cover to links",
+   "kind": "number",
+   "unit": "m",
+   "base": 0.025,
+   "low": 0.02,
+   "high": 0.04,
+   "provenance": "STANDARD_PRACTICE",
+   "source": "typical general notes",
+   "rationale": "Overridden by a printed cover in the profile."
+  },
+  {
+   "id": "REBAR_COVER_COLUMN_M",
+   "title": "Column cover to ties",
+   "kind": "number",
+   "unit": "m",
+   "base": 0.04,
+   "low": 0.025,
+   "high": 0.05,
+   "provenance": "STANDARD_PRACTICE",
+   "source": "typical general notes",
+   "rationale": "Overridden by a printed cover in the profile."
+  },
+  {
+   "id": "REBAR_COVER_FOOTING_M",
+   "title": "Footing cover",
+   "kind": "number",
+   "unit": "m",
+   "base": 0.05,
+   "low": 0.05,
+   "high": 0.075,
+   "provenance": "STANDARD_PRACTICE",
+   "source": "typical general notes",
+   "rationale": "Overridden by a printed cover in the profile."
+  },
+  {
+   "id": "REBAR_HOOK_STANDARD",
+   "title": "Code table for bends and hooks",
+   "kind": "choice",
+   "options": [
+    "ACI_318_19"
+   ],
+   "base": "ACI_318_19",
+   "provenance": "STANDARD_PRACTICE",
+   "source": "engine.source.bbs_optimiser ACI 318-19 Tables 25.3.1 / 25.3.2 (not verified against a project document)",
+   "rationale": "Diameter-aware bend diameters and hook tails; PROVISIONAL_CODE_METHOD."
+  },
+  {
+   "id": "SCHEDULE_DUPLICATE_ROW",
+   "title": "A mark with two schedule rows",
+   "kind": "choice",
+   "options": [
+    "DRAWN_WIDTH_MATCH"
+   ],
+   "base": "DRAWN_WIDTH_MATCH",
+   "provenance": "ENGINEERING_JUDGEMENT",
+   "source": "the schedule rows and the drawn width of the bound band",
+   "rationale": "When one mark has two schedule rows and the drawn width matches exactly one of them, that row is the base; the other row gives the range. A drawn width that matches neither or both leaves the member UNRESOLVED."
+  },
+  {
+   "id": "SHEET_FRAMES_FROM_LINES",
+   "title": "A sheet frame drawn as separate lines (or an exploded polyline) is a frame",
+   "kind": "choice",
+   "options": [
+    "MAXIMAL_LINE_RECTANGLE"
+   ],
+   "base": "MAXIMAL_LINE_RECTANGLE",
+   "provenance": "STANDARD_PRACTICE",
+   "source": "CAD practice: frames and title blocks are often drawn with LINE entities",
+   "rationale": "M7 metamorphic finding: exploding the frame polylines of a drawing removed every sheet and every quantity, silently."
+  },
+  {
+   "id": "SIDE_BAR_READING",
+   "title": "Reading of a side-bar notation 'n Ø d / s'",
+   "kind": "choice",
+   "options": [
+    "PRINTED_COUNT",
+    "SPACING_EACH_FACE"
+   ],
+   "base": "PRINTED_COUNT",
+   "provenance": "ENGINEERING_JUDGEMENT",
+   "source": "typical-detail notation",
+   "rationale": "The printed count is the base; bars at the printed spacing on each face over the section height give the high end."
+  },
+  {
+   "id": "SLAB_DEDUCT_MEMBER_OVERLAP",
+   "title": "A slab face's overlap with beam bands and column outlines",
+   "kind": "choice",
+   "options": [
+    "DEDUCT"
+   ],
+   "base": "DEDUCT",
+   "provenance": "STANDARD_PRACTICE",
+   "source": "conservation: beams and columns own their plan area",
+   "rationale": "A face whose polygon runs into a band or a column outline loses that area before its volume (never counted twice)."
+  },
+  {
+   "id": "SLAB_JUNCTION_GAP_CLOSURE",
+   "title": "Band ends around an undrawn support close the slab cells there",
+   "kind": "choice",
+   "options": [
+    "JUNCTION_BOX_1_2M"
+   ],
+   "base": "JUNCTION_BOX_1_2M",
+   "max_gap_m": 1.2,
+   "provenance": "STANDARD_PRACTICE",
+   "source": "beams framing into a support the plan does not draw (a missing column outline, a beam line broken at a junction)",
+   "rationale": "M7 finding (held-out M6 seed 240): one column outline left off a roof plan merged every bay into one face; the face held the bay opening's VOID label and the whole storey's slab was excluded as an opening."
+  },
+  {
+   "id": "SLAB_MESH_DIRECTIONS",
+   "title": "Directions of a slab mesh tag that does not say each way",
+   "kind": "number",
+   "unit": "directions",
+   "base": 1,
+   "low": 1,
+   "high": 2,
+   "provenance": "READING_OF_PRINTED_VALUE",
+   "source": "slab bar tag without E.W.",
+   "rationale": "A tag without E.W. covers one direction as base; both directions as the high end."
+  },
+  {
+   "id": "SLAB_NOTE_MESH_SCOPE",
+   "title": "A sheet's single each-way mesh note applies to untagged panels",
+   "kind": "choice",
+   "options": [
+    "APPLY"
+   ],
+   "base": "APPLY",
+   "provenance": "READING_OF_PRINTED_VALUE",
+   "source": "printed sheet note 'n Ø d /m E.W.'",
+   "rationale": "One each-way mesh note on the sheet and no tag inside the panel: the note applies (scope confirmed by RFI)."
+  },
+  {
+   "id": "SLAB_OPENING_EXTENT_GUARD",
+   "title": "A void label claims its face only when no beam band lies inside the face",
+   "kind": "choice",
+   "options": [
+    "SUSPECT_IF_FACE_HOLDS_BAND"
+   ],
+   "base": "SUSPECT_IF_FACE_HOLDS_BAND",
+   "provenance": "STANDARD_PRACTICE",
+   "source": "an opening is bounded by members, it does not contain them",
+   "rationale": "M7: a labelled face that holds a band is cells merged through a gap; it is held as an unresolved exposure (0 .. its slab part) instead of being deleted as an opening."
+  },
+  {
+   "id": "SLAB_SHEET_UNIFORM_THICKNESS",
+   "title": "Untagged panels take the sheet's single printed thickness",
+   "kind": "choice",
+   "options": [
+    "APPLY"
+   ],
+   "base": "APPLY",
+   "provenance": "READING_OF_PRINTED_VALUE",
+   "source": "every thickness tag on the sheet prints the same value",
+   "rationale": "When all printed tags agree the sheet value applies to untagged panels."
+  },
+  {
+   "id": "SLAB_STAIR_FOOTPRINT_UNRESOLVED",
+   "title": "The footprint of a flight drawn inside a slab panel is held unresolved",
+   "kind": "choice",
+   "options": [
+    "FLIGHT_HULL_EXPOSURE"
+   ],
+   "base": "FLIGHT_HULL_EXPOSURE",
+   "provenance": "STANDARD_PRACTICE",
+   "source": "tread lines inside a slab panel are a stair passing through the slab (a void) or a stair below it (slab over it)",
+   "rationale": "M7: the panel used to be counted whole with a coverage-risk line; the flight's hull area is now 0 .. hull x t exposure and the rest of the panel is counted."
+  },
+  {
+   "id": "SLAB_THICKNESS_EXPOSURE_M",
+   "title": "Thickness range for a panel with no printed thickness (exposure only)",
+   "kind": "number",
+   "unit": "m",
+   "base": 0.16,
+   "low": 0.12,
+   "high": 0.25,
+   "provenance": "ENGINEERING_JUDGEMENT",
+   "source": "Kuwait villa slab range",
+   "rationale": "Used only for the UNRESOLVED exposure range; never in a total."
+  },
+  {
+   "id": "SLAB_UNTAGGED_THICKNESS_SOURCE",
+   "title": "Thickness of an untagged slab panel",
+   "kind": "choice",
+   "options": [
+    "PROJECT_DEFAULT_FIRST",
+    "SHEET_UNIFORM_FIRST"
+   ],
+   "base": "PROJECT_DEFAULT_FIRST",
+   "provenance": "ENGINEERING_JUDGEMENT",
+   "source": "a printed project default ('unless otherwise noted') governs every panel without its own tag",
+   "rationale": "When the profile prints SLAB_PROJECT_DEFAULT_THICKNESS_M, untagged panels take it; one panel's local tag is never spread to the rest of its sheet. Without a printed default the sheet-uniform reading (SLAB_SHEET_UNIFORM_THICKNESS) applies."
+  },
+  {
+   "id": "STAIR_RISER_RULE",
+   "title": "Risers of a drawn stair run",
+   "kind": "choice",
+   "options": [
+    "LINES_PLUS_ONE",
+    "LINES"
+   ],
+   "base": "LINES_PLUS_ONE",
+   "provenance": "ENGINEERING_JUDGEMENT",
+   "source": "a plan draws the tread nosings; the top riser arrives at the landing or floor",
+   "rationale": "n drawn tread lines are n treads and n + 1 risers (LINES_PLUS_ONE); LINES reads each line as a riser. The riser height rise / risers must fall in 0.14 - 0.20 m, else the zone holds only part of the stair."
+  },
+  {
+   "id": "STAIR_WAIST_EXPOSURE_M",
+   "title": "Stair waist when no section prints it (exposure only)",
+   "kind": "number",
+   "unit": "m",
+   "base": 0.175,
+   "low": 0.15,
+   "high": 0.2,
+   "provenance": "STANDARD_PRACTICE",
+   "source": "villa stair waists 15 - 20 cm",
+   "rationale": "Only an exposure for an UNRESOLVED stair (never in a total); a printed waist (profile STAIR_WAIST_M) makes the stair PROVISIONAL."
+  },
+  {
+   "id": "UNTAGGED_BEAM_DEPTH_RANGE_M",
+   "title": "Depth range for an untagged beam band with no schedule row at its width (exposure only)",
+   "kind": "number",
+   "unit": "m",
+   "base": 0.5,
+   "low": 0.3,
+   "high": 0.9,
+   "provenance": "ENGINEERING_JUDGEMENT",
+   "source": "villa beam depths",
+   "rationale": "Used only for the UNRESOLVED exposure; when schedule rows exist at the band width their depth range is used instead."
+  },
+  {
+   "id": "WIDTH_CONFLICT_SECTION",
+   "title": "Width of a beam drawn at another width than its schedule",
+   "kind": "choice",
+   "options": [
+    "SCHEDULE",
+    "DRAWN"
+   ],
+   "base": "SCHEDULE",
+   "provenance": "READING_OF_PRINTED_VALUE",
+   "source": "drawn band width vs schedule row",
+   "rationale": "The schedule is the design table; the drawn width is the alternative."
+  },
+  {
+   "id": "COLUMN_LAYER_EVIDENCE",
+   "title": "A schedule-sized rectangle is a column only on a layer that shows columns",
+   "kind": "choice",
+   "options": [
+    "NAMED_OR_MARKED_OR_MAJORITY_FIT"
+   ],
+   "base": "NAMED_OR_MARKED_OR_MAJORITY_FIT",
+   "provenance": "STANDARD_PRACTICE",
+   "source": "columns are drawn on a column layer, carry marks, or make up most of their layer's outlines; furniture, fixtures and equipment are drawn on their own layers at arbitrary sizes",
+   "rationale": "M7 metamorphic harness: an unrelated furniture layer added to a plan put a column-sized rectangle into the column set, which cut a beam and split two slab cells (quantities changed by an unrelated layer)."
+  },
+  {
+   "id": "STAIR_TREADS_ONE_LAYER",
+   "title": "A stair tread family is read from one layer's lines at a time",
+   "kind": "choice",
+   "options": [
+    "PER_LAYER_LARGEST_FAMILY"
+   ],
+   "base": "PER_LAYER_LARGEST_FAMILY",
+   "provenance": "STANDARD_PRACTICE",
+   "source": "a flight's treads are drawn together on one layer; lines of another layer inside the stair bay (furniture, services, hatching) are not treads",
+   "rationale": "M7 metamorphic harness: rectangles on an unrelated furniture layer placed between two treads broke the equal-going run, the stair bay was no longer recognised and its slab cell was counted in full."
+  },
+  {
+   "id": "GEOMETRY_LOCAL_ORIGIN",
+   "title": "The route computes in a drawing-local frame (origin at the lower-left of the linework); slab cells are noded locally",
+   "kind": "choice",
+   "options": [
+    "SHEET_EDGE_LOWER_LEFT"
+   ],
+   "base": "SHEET_EDGE_LOWER_LEFT",
+   "provenance": "STANDARD_PRACTICE",
+   "source": "an area is a property of the shape, not of where the drawing sits; georeferenced drawings place plans millions of units from the origin",
+   "rationale": "M7 metamorphic harness: translating a metre drawing by 1.2e6 units changed slab cell areas by up to 1e-4 m2 per cell (shoelace terms x * y ~ 1e12 lose four decimals); noded locally the areas agree to 1e-9. On ST7757 translated by (1 234 567, -765 432) units, beam bands stopped being cut at three flush columns (1F unresolved exposure +0.19 m3): the overlap predicate's absolute tolerance is below the floating noise at those coordinates."
+  },
+  {
+   "id": "RECTANGLE_FROM_FOUR_SIDES",
+   "title": "A rectangle drawn as four whole sides meeting at its corners is an outline, also where other lines cross it",
+   "kind": "choice",
+   "options": [
+    "DRAWN_SIDES_AND_MINIMAL_CELLS"
+   ],
+   "base": "DRAWN_SIDES_AND_MINIMAL_CELLS",
+   "provenance": "STANDARD_PRACTICE",
+   "source": "a composite (cross / T / L) column is often drawn as overlapping rectangles; an exploded polyline is four lines",
+   "rationale": "M7 metamorphic harness on ST7757: with its polylines exploded to lines, four composite column outlines on one slab plan were no longer found (the line method returned the five minimal cells of each cross), so beams ran through those columns (GF beams +0.30 m3)."
+  },
+  {
+   "id": "UNIT_AWARE_RECTANGLES",
+   "title": "Polyline rectangles are read down to 1 mm in the drawing's own unit",
+   "kind": "choice",
+   "options": [
+    "ONE_MILLIMETRE"
+   ],
+   "base": "ONE_MILLIMETRE",
+   "provenance": "STANDARD_PRACTICE",
+   "source": "the same drawing in metres and in millimetres is the same building",
+   "rationale": "M7 metamorphic harness on ST7757: re-expressed in metres, every polyline rectangle under 1.0 unit (every column outline) was dropped by a fixed 1.0-unit threshold."
+  },
+  {
+   "id": "TOUCH_IS_NOT_OVERLAP",
+   "title": "Flush faces are a touch: a column touching a band does not cut it, and does stand on it",
+   "kind": "choice",
+   "options": [
+    "OVERLAP_ABOVE_1E-4_M2"
+   ],
+   "base": "OVERLAP_ABOVE_1E-4_M2",
+   "provenance": "STANDARD_PRACTICE",
+   "source": "a column face flush with a beam face is a touch; a beam runs through a column only where they overlap",
+   "rationale": "M7 metamorphic harness on ST7757: an exact-zero overlap test on a flush column flipped between runs of the same drawing at two placements (floating noise), cutting one GF band or not. Rotated by 180 degrees, a column flush with a ground-beam face read as free-standing (exact-zero overlap), sending a 6.8 m2 ground-slab cell to UNRESOLVED (1.09 m3)."
+  },
+  {
+   "id": "CB_ENDS_BY_SHARED_SUPPORT",
+   "title": "A continuous-beam span end is interior when its support is shared with another span of the line",
+   "kind": "choice",
+   "options": [
+    "SHARED_SUPPORT"
+   ],
+   "base": "SHARED_SUPPORT",
+   "provenance": "STANDARD_PRACTICE",
+   "source": "bottom bars are anchored at the free ends of a continuous beam and extended into the supports between spans, whatever direction the line is drawn in",
+   "rationale": "M7 metamorphic harness on ST7757 (rotation): on a line whose printed spans match the drawing REVERSED, the end anchorage was applied at the interior support and the support extension at the free end (a 5D18 bottom group 73.2 kg in one orientation, 66.2 kg in the other)."
+  },
+  {
+   "id": "LENGTH_CLASS_AT_MILLIMETRE",
+   "title": "A drawn length is compared with a printed class limit at 1 mm precision",
+   "kind": "choice",
+   "options": [
+    "ROUND_TO_MM"
+   ],
+   "base": "ROUND_TO_MM",
+   "provenance": "STANDARD_PRACTICE",
+   "source": "a drawing is dimensioned to the millimetre; a class limit printed as 5.0 m is read against the drawn length to that precision",
+   "rationale": "M7 metamorphic harness on ST7757: a 5.000 m ground beam fell below or above the 5.0 m typical-section limit depending on the drawing's placement, units or orientation (the beam's low reading 0.9 or 0.6 m3)."
+  },
+  {
+   "id": "POLYGON_FROM_LINE_RING",
+   "title": "A closed ring of lines on one layer, each vertex joining exactly two of them, is a polygon outline",
+   "kind": "choice",
+   "options": [
+    "CLEAN_RING_ONLY"
+   ],
+   "base": "CLEAN_RING_ONLY",
+   "provenance": "STANDARD_PRACTICE",
+   "source": "drawings are often exported with polylines exploded to lines; the outline is the same",
+   "rationale": "M7 metamorphic harness on ST7757: with polylines exploded, a clipped (non-rectangular) footing outline was no longer read; the footing fell back to its schedule L x W x D (0.258 -> 0.300 m3)."
+  },
+  {
+   "id": "LEGEND_NEAREST_CAPTION",
+   "title": "A legend swatch takes its nearest caption on its own row; equally near captions naming different families leave it ambiguous",
+   "kind": "choice",
+   "options": [
+    "NEAREST_ROW_CAPTION"
+   ],
+   "base": "NEAREST_ROW_CAPTION",
+   "provenance": "STANDARD_PRACTICE",
+   "source": "a legend is a table of rows: each swatch is captioned on its own row, beside it",
+   "rationale": "M6 held-out V2 (W5): with legend rows drawn close together every swatch saw every caption within 3 m, the vote tied and the legend was read as an unexplained fill group (one false finding per held-out set; the hatched cases stayed unnamed)."
+  },
+  {
+   "id": "STAIR_DRAWN_RUN",
+   "title": "A stair zone that holds part of a stair is measured from its drawn run",
+   "kind": "choice",
+   "options": [
+    "MEASURE_DRAWN_RUN",
+    "SLAB_ZONE_EXPOSURE"
+   ],
+   "base": "MEASURE_DRAWN_RUN",
+   "provenance": "STANDARD_PRACTICE",
+   "source": "a multi-flight or winder stair is drawn flight by flight; one zone holds the run drawn in it",
+   "rationale": "M8: when the storey rise does not divide into the zone's drawn risers inside the 0.14 - 0.20 m band, the zone holds part of the stair. M4 kept it as a slab-zone exposure; the drawn run is now measured with the riser convention and the rest of the zone is landing. The storey-rise reading stays a diagnostic."
+  },
+  {
+   "id": "STAIR_RISER_M",
+   "title": "Riser height of a drawn run whose riser the drawing does not fix",
+   "kind": "number",
+   "unit": "m",
+   "base": 0.165,
+   "low": 0.15,
+   "high": 0.18,
+   "provenance": "STANDARD_PRACTICE",
+   "source": "residential stair risers 150 - 180 mm",
+   "rationale": "Used only for a run whose storey rise does not give a riser inside the 0.14 - 0.20 m band, or a flight drawn outside any stair zone. A printed riser (profile STAIR_RISER_PRINTED_M or a note beside the flight) replaces it."
+  },
+  {
+   "id": "STAIR_UNPRINTED_WAIST",
+   "title": "A stair whose waist is not printed is priced at the usual waist",
+   "kind": "choice",
+   "options": [
+    "CONVENTION_PROVISIONAL",
+    "UNRESOLVED_EXPOSURE"
+   ],
+   "base": "CONVENTION_PROVISIONAL",
+   "provenance": "STANDARD_PRACTICE",
+   "source": "a QS prices a drawn stair at the usual waist and states the range",
+   "rationale": "M8: a stair measured from its drawn treads whose waist is not printed is PROVISIONAL (support CONVENTION_ONLY, confidence LOW) with STAIR_WAIST_CONVENTION_M, instead of UNRESOLVED with the waist range as exposure. UNRESOLVED_EXPOSURE keeps the M4 behaviour."
+  },
+  {
+   "id": "STAIR_WAIST_CONVENTION_M",
+   "title": "Stair waist when no section prints it (priced)",
+   "kind": "number",
+   "unit": "m",
+   "base": 0.175,
+   "low": 0.15,
+   "high": 0.2,
+   "provenance": "STANDARD_PRACTICE",
+   "source": "villa stair waists 15 - 20 cm",
+   "rationale": "The same range as STAIR_WAIST_EXPOSURE_M, used as a stated convention for a PROVISIONAL stair."
+  },
+  {
+   "id": "STAIR_FLIGHT_ON_TWO_PLANS",
+   "title": "A flight drawn at the same place on two vertically adjacent plans",
+   "kind": "choice",
+   "options": [
+    "SAME_FLIGHT_ONCE",
+    "EACH_PLAN"
+   ],
+   "base": "SAME_FLIGHT_ONCE",
+   "provenance": "ENGINEERING_JUDGEMENT",
+   "source": "the ground-beam plan and the slab plan above it both draw the flight that rises between them",
+   "rationale": "Measured once (the drawing with more treads); the second drawing's own volume is an exposure 0 .. v, so the stacked-flights reading stays inside the bounded range."
+  },
+  {
+   "id": "STAIR_TREAD_ANGLE_WRAP",
+   "title": "Tread directions are compared modulo 180 degrees",
+   "kind": "choice",
+   "options": [
+    "MODULO_180"
+   ],
+   "base": "MODULO_180",
+   "provenance": "STANDARD_PRACTICE",
+   "source": "a line and the same line drawn the other way are one direction",
+   "rationale": "M8 metamorphic harness: a horizontal tread at 179.99 degrees (a drawing rotated by 180 degrees, floating noise) fell in another direction bin than one at 0 degrees, the flight split and the stair zone was read differently. Directions are now binned modulo 180 degrees."
+  },
+  {
+   "id": "STAIR_LOOSE_FLIGHT",
+   "title": "Tread lines of a settled stair family outside any stair zone",
+   "kind": "choice",
+   "options": [
+    "MEASURE_DRAWN_FLIGHT"
+   ],
+   "base": "MEASURE_DRAWN_FLIGHT",
+   "provenance": "STANDARD_PRACTICE",
+   "source": "a flight is drawn as parallel tread lines at a tread pitch",
+   "rationale": "M8: measured as a flight (risers = lines + 1, convention riser, waist) with no landing (none is drawn); an unsettled family stays an exposure."
+  },
+  {
+   "id": "SCOPE_FROM_FINDINGS",
+   "title": "Completeness findings become measured items or bounded exposures",
+   "kind": "choice",
+   "options": [
+    "SETTLED_MEASURED_ELSE_BOUNDED"
+   ],
+   "base": "SETTLED_MEASURED_ELSE_BOUNDED",
+   "provenance": "STANDARD_PRACTICE",
+   "source": "a QS prices every drawn element and lists what is not drawn as an allowance",
+   "rationale": "M8 (engine.source.scope_quantities): a finding whose family is settled (one family, shape and words agree, confidence MEDIUM or HIGH) and whose plan geometry is enough is measured PROVISIONAL from the drawn geometry with the conventions below for what the drawing does not print; every other finding gets an exposure range by its kind and shape. Nothing stays volume-less; a finding never adds twice."
+  },
+  {
+   "id": "NON_STRUCTURAL_LAYERS",
+   "title": "A drawn group on a non-structural layer is not concrete",
+   "kind": "choice",
+   "options": [
+    "LAYER_NAME_WORDS"
+   ],
+   "base": "LAYER_NAME_WORDS",
+   "provenance": "STANDARD_PRACTICE",
+   "source": "furniture, fixtures, services and landscape layers on a plan (FURN, FIXTURE, EQUIP, SANITARY, PLUMB, ELEC, LIGHT, HVAC, MECH, LANDSCAPE, TREE, PLANTING, IRRIGATION, INTERIOR, DECOR, CARPET, TILE, FLOORING, CEILING)",
+   "rationale": "M8 metamorphic harness: rectangles and circles on a furniture layer became pits, domes and bounded drawn-not-measured groups. A group whose layer name carries one of these words is a qualifier (0 .. 0), never measured and never bounded."
+  },
+  {
+   "id": "PRINTED_DIMENSION_NOTES",
+   "title": "Dimension notes beside a drawn element are its printed values",
+   "kind": "choice",
+   "options": [
+    "KEYWORD_NUMBER_WITHIN_1_5M"
+   ],
+   "base": "KEYWORD_NUMBER_WITHIN_1_5M",
+   "provenance": "READING_OF_PRINTED_VALUE",
+   "source": "DEPTH / HEIGHT / H= / THK / T= / WAIST / RISER notes written beside the element",
+   "rationale": "A note within 1.5 m of the element's outline, keyword then number (mm when >= 20, else m; CM when written), replaces the convention for that dimension and is recorded on the item."
+  },
+  {
+   "id": "POOL_WALL_HEIGHT_M",
+   "title": "Pool wall height, floor top to coping, when not printed",
+   "kind": "number",
+   "unit": "m",
+   "base": 1.6,
+   "low": 1.2,
+   "high": 2.0,
+   "provenance": "ENGINEERING_JUDGEMENT",
+   "source": "residential pools: water depth 1.2 - 1.8 m plus freeboard",
+   "rationale": "Walls = drawn wall plan area (ring, or strip length x drawn thickness) x this height."
+  },
+  {
+   "id": "POOL_WALL_THICKNESS_M",
+   "title": "Pool wall thickness when the plan draws a single outline",
+   "kind": "number",
+   "unit": "m",
+   "base": 0.25,
+   "low": 0.2,
+   "high": 0.3,
+   "provenance": "STANDARD_PRACTICE",
+   "source": "RC pool walls 200 - 300 mm",
+   "rationale": "Used only when no double outline gives the wall thickness."
+  },
+  {
+   "id": "POOL_FLOOR_THICKNESS_M",
+   "title": "Pool floor slab thickness when not printed",
+   "kind": "number",
+   "unit": "m",
+   "base": 0.25,
+   "low": 0.2,
+   "high": 0.3,
+   "provenance": "STANDARD_PRACTICE",
+   "source": "RC pool floors 200 - 300 mm",
+   "rationale": "Floor = the pool's outer plan area x this thickness."
+  },
+  {
+   "id": "PIT_DEPTH_M",
+   "title": "Lift / sump pit wall height when not printed",
+   "kind": "number",
+   "unit": "m",
+   "base": 1.2,
+   "low": 1.0,
+   "high": 1.6,
+   "provenance": "STANDARD_PRACTICE",
+   "source": "residential lift pits 1.0 - 1.5 m below the lowest landing",
+   "rationale": "Walls = drawn wall plan area x this height."
+  },
+  {
+   "id": "PIT_WALL_THICKNESS_M",
+   "title": "Pit wall thickness when the plan draws a single outline",
+   "kind": "number",
+   "unit": "m",
+   "base": 0.2,
+   "low": 0.2,
+   "high": 0.25,
+   "provenance": "STANDARD_PRACTICE",
+   "source": "pit walls 200 - 250 mm",
+   "rationale": "Used only when no double outline gives it."
+  },
+  {
+   "id": "PIT_BASE_THICKNESS_M",
+   "title": "Pit base slab thickness when not printed",
+   "kind": "number",
+   "unit": "m",
+   "base": 0.25,
+   "low": 0.2,
+   "high": 0.3,
+   "provenance": "STANDARD_PRACTICE",
+   "source": "pit bases 200 - 300 mm",
+   "rationale": "Not added when the pit lies inside a measured footing (the footing is its base)."
+  },
+  {
+   "id": "TANK_HEIGHT_M",
+   "title": "RC water tank wall height when not printed",
+   "kind": "number",
+   "unit": "m",
+   "base": 1.5,
+   "low": 1.2,
+   "high": 2.0,
+   "provenance": "ENGINEERING_JUDGEMENT",
+   "source": "villa roof / ground RC tanks 1.2 - 2.0 m high",
+   "rationale": "Walls = drawn wall plan area x this height."
+  },
+  {
+   "id": "TANK_WALL_THICKNESS_M",
+   "title": "Tank wall thickness when the plan draws a single outline",
+   "kind": "number",
+   "unit": "m",
+   "base": 0.2,
+   "low": 0.15,
+   "high": 0.25,
+   "provenance": "STANDARD_PRACTICE",
+   "source": "RC tank walls 150 - 250 mm",
+   "rationale": "Used only when no double outline gives it."
+  },
+  {
+   "id": "TANK_SLAB_THICKNESS_M",
+   "title": "Tank cover (and base) slab thickness when not printed",
+   "kind": "number",
+   "unit": "m",
+   "base": 0.2,
+   "low": 0.15,
+   "high": 0.25,
+   "provenance": "STANDARD_PRACTICE",
+   "source": "RC tank slabs 150 - 250 mm",
+   "rationale": "A tank drawn on a slab plan stands on that measured slab: the cover slab only; elsewhere base and cover."
+  },
+  {
+   "id": "TANK_REFERENCED_SIDE_M",
+   "title": "Plan side of a tank that is named but not drawn (exposure only)",
+   "kind": "number",
+   "unit": "m",
+   "base": 2.0,
+   "low": 1.5,
+   "high": 2.5,
+   "provenance": "ENGINEERING_JUDGEMENT",
+   "source": "villa RC tanks 1.5 - 2.5 m square",
+   "rationale": "A tank referenced in notes with no drawing is an allowance: exposure 0 (a GRP tank on plinths) .. the RC tank of this side, TANK_HEIGHT_M high and the high thicknesses."
+  },
+  {
+   "id": "DOME_ON_TOP_PLAN",
+   "title": "A radial or ring group on the topmost slab plan is a dome when the set names domes",
+   "kind": "choice",
+   "options": [
+    "RADIAL_OR_RING_WITH_REFERENCE"
+   ],
+   "base": "RADIAL_OR_RING_WITH_REFERENCE",
+   "provenance": "ENGINEERING_JUDGEMENT",
+   "source": "dome ribs and dome rings are drawn on the roof plan; a stair needs a storey above it to arrive at",
+   "rationale": "On the topmost slab plan, lines radiating from a circle centre (or two concentric circles) with a DOMES word anywhere in the set are a dome (PROVISIONAL, LOW); below the top plan, or with no dome word, the group stays an exposure under each candidate family."
+  },
+  {
+   "id": "DOME_RISE_RATIO",
+   "title": "Dome rise over its base radius when no section prints it",
+   "kind": "number",
+   "unit": "m",
+   "base": 1.0,
+   "low": 0.5,
+   "high": 1.0,
+   "provenance": "ENGINEERING_JUDGEMENT",
+   "source": "villa domes are hemispherical (1.0) or shallower (0.5)",
+   "rationale": "Spherical cap: shell area pi (r^2 + h^2), h = ratio x r, r = the drawn radius."
+  },
+  {
+   "id": "DOME_SHELL_THICKNESS_M",
+   "title": "Dome shell thickness when not printed",
+   "kind": "number",
+   "unit": "m",
+   "base": 0.12,
+   "low": 0.1,
+   "high": 0.15,
+   "provenance": "STANDARD_PRACTICE",
+   "source": "RC dome shells 100 - 150 mm",
+   "rationale": "Shell volume = cap area x thickness."
+  },
+  {
+   "id": "DOME_RING_DEPTH_M",
+   "title": "Depth of a dome ring drawn as two circles and not measured as a beam",
+   "kind": "number",
+   "unit": "m",
+   "base": 0.4,
+   "low": 0.3,
+   "high": 0.6,
+   "provenance": "ENGINEERING_JUDGEMENT",
+   "source": "dome ring beams 300 - 600 mm deep",
+   "rationale": "Ring = the drawn ring area x this depth; a ring already measured as a curved beam band is not added."
+  },
+  {
+   "id": "DOME_REFERENCED_RADIUS_M",
+   "title": "Radius of a dome that is named but not drawn (exposure only)",
+   "kind": "number",
+   "unit": "m",
+   "base": 1.5,
+   "low": 1.0,
+   "high": 2.5,
+   "provenance": "ENGINEERING_JUDGEMENT",
+   "source": "villa domes 2 - 5 m across",
+   "rationale": "Allowance 0 .. the cap of this radius at the high rise and shell."
+  },
+  {
+   "id": "PIT_REFERENCED_SIDE_M",
+   "title": "Inner side of a lift pit that is named but not drawn (exposure only)",
+   "kind": "number",
+   "unit": "m",
+   "base": 1.8,
+   "low": 1.5,
+   "high": 2.2,
+   "provenance": "STANDARD_PRACTICE",
+   "source": "residential lift pits 1.5 - 2.2 m square",
+   "rationale": "Allowance 0 .. walls and base of this pit at the high depth."
+  },
+  {
+   "id": "POOL_REFERENCED_AREA_M2",
+   "title": "Plan area of a pool that is named but not drawn (exposure only)",
+   "kind": "number",
+   "unit": "m2",
+   "base": 24.0,
+   "low": 12.0,
+   "high": 40.0,
+   "provenance": "ENGINEERING_JUDGEMENT",
+   "source": "villa pools 12 - 40 m2",
+   "rationale": "Allowance 0 .. walls and floor of a square pool of this area."
+  },
+  {
+   "id": "REFERENCED_ELEMENT_ALLOWANCE_M3",
+   "title": "One small RC element named but not drawn, or with no rule (exposure only)",
+   "kind": "number",
+   "unit": "m3",
+   "base": 1.0,
+   "low": 0.5,
+   "high": 3.0,
+   "provenance": "ENGINEERING_JUDGEMENT",
+   "source": "a ramp, planter, wall piece or cantilever portion of a villa",
+   "rationale": "Allowance 0 .. high for a family with no geometry rule; never in the measured total."
+  },
+  {
+   "id": "PARAPET_HEIGHT_M",
+   "title": "Roof parapet height when not printed (exposure only)",
+   "kind": "number",
+   "unit": "m",
+   "base": 1.0,
+   "low": 0.9,
+   "high": 1.2,
+   "provenance": "STANDARD_PRACTICE",
+   "source": "roof parapets 0.9 - 1.2 m",
+   "rationale": "Exposure 0 (a block parapet) .. free roof edge x this height x thickness."
+  },
+  {
+   "id": "PARAPET_THICKNESS_M",
+   "title": "Roof parapet thickness when not printed (exposure only)",
+   "kind": "number",
+   "unit": "m",
+   "base": 0.2,
+   "low": 0.15,
+   "high": 0.25,
+   "provenance": "STANDARD_PRACTICE",
+   "source": "parapets 150 - 250 mm",
+   "rationale": "See PARAPET_HEIGHT_M."
+  },
+  {
+   "id": "BOUNDARY_WALL_ROW_BY_WIDTH",
+   "title": "A boundary-wall strip takes the section of the family's schedule row of its width",
+   "kind": "choice",
+   "options": [
+    "SAME_FAMILY_ROW_WIDTH_MATCH"
+   ],
+   "base": "SAME_FAMILY_ROW_WIDTH_MATCH",
+   "provenance": "READING_OF_PRINTED_VALUE",
+   "source": "a schedule row keyed by the family's mark ('B.W') printing the drawn width as its first size",
+   "rationale": "PROVISIONAL strip length x the row's width x its second size; no row of the drawn width: exposure with BOUNDARY_WALL_RC_SECTION_M2."
+  },
+  {
+   "id": "BOUNDARY_WALL_RC_SECTION_M2",
+   "title": "RC section of a boundary-wall foundation per metre when no row binds",
+   "kind": "number",
+   "unit": "m2",
+   "base": 0.18,
+   "low": 0.08,
+   "high": 0.36,
+   "provenance": "ENGINEERING_JUDGEMENT",
+   "source": "a 0.2 x 0.4 - 0.6 tie beam with or without a strip footing",
+   "rationale": "Exposure only: 0 .. strip length x the high section."
+  },
+  {
+   "id": "SLAB_STEP_DROP_M",
+   "title": "Drop of a sunken slab outline when not printed (exposure only)",
+   "kind": "number",
+   "unit": "m",
+   "base": 0.15,
+   "low": 0.05,
+   "high": 0.4,
+   "provenance": "ENGINEERING_JUDGEMENT",
+   "source": "sunken wet areas 50 - 400 mm",
+   "rationale": "A sunken outline inside a measured panel adds its edge: perimeter x drop x the panel thickness (0 .. high)."
+  },
+  {
+   "id": "UNEXPLAINED_STRIP_DEPTH_M",
+   "title": "Depth that bounds an unidentified drawn strip (exposure only)",
+   "kind": "number",
+   "unit": "m",
+   "base": 0.6,
+   "low": 0.3,
+   "high": 1.0,
+   "provenance": "ENGINEERING_JUDGEMENT",
+   "source": "a strip on a structural plan could be a beam or wall of up to this depth",
+   "rationale": "Exposure 0 .. strip length x drawn width x the high depth."
+  },
+  {
+   "id": "UNEXPLAINED_LINEWORK_SECTION_M2",
+   "title": "Section that bounds unidentified linework per metre (exposure only)",
+   "kind": "number",
+   "unit": "m2",
+   "base": 0.1,
+   "low": 0.04,
+   "high": 0.16,
+   "provenance": "ENGINEERING_JUDGEMENT",
+   "source": "a pair of drawn lines could be a member of up to 0.4 x 0.4",
+   "rationale": "Exposure 0 .. half the linework length x the high section."
+  },
+  {
+   "id": "FINDING_BOUNDS",
+   "title": "Every finding without a volume gets a range by its kind and shape",
+   "kind": "choice",
+   "options": [
+    "BY_KIND_AND_SHAPE"
+   ],
+   "base": "BY_KIND_AND_SHAPE",
+   "provenance": "ENGINEERING_JUDGEMENT",
+   "source": "engine.source.scope_quantities.BOUND_RULES",
+   "rationale": "Regions held for a detail: 0 .. area x the high slab thickness; a referenced family with no drawing: its allowance; a footing / beam row on no plan: one instance (beam: the longest measured span); a column drawn without an item: its own volume; an item with no presence: -its volume .. 0; a fill on a measured member: -area x the member's thickness .. 0 (a void); a member overlap: -overlap x depth .. 0; a note on a measured member: a qualifier with no volume of its own (0 .. 0, stated); a missing storey plan: the neighbouring storeys' measured slab + beam volume."
+  },
+  {
+   "id": "STOREY_PLAN_MISSING_BRACKET",
+   "title": "A storey named by a height or a schedule band but with no plan",
+   "kind": "choice",
+   "options": [
+    "NEIGHBOUR_STOREYS"
+   ],
+   "base": "NEIGHBOUR_STOREYS",
+   "provenance": "ENGINEERING_JUDGEMENT",
+   "source": "storeys of one villa carry similar slab and beam volumes",
+   "rationale": "Exposure = min .. max of the neighbouring storeys' measured slab + beam volume (one neighbour: 0.5 .. 1.0 of it)."
+  }
+ ]
+}

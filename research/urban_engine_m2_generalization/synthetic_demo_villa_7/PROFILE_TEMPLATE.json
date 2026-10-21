@@ -1,0 +1,29 @@
+{
+ "_note": "Fill every null; confirm every guess. A null leaves that part UNRESOLVED, it is never defaulted.",
+ "drawing_sha256": "31badacacc08aefb21934a35cf08fb49f8975db3fa6565c4bfc5492947ecef01",
+ "families": {
+  "COLUMNS": {
+   "layers": [],
+   "layers_state": "UNCONFIRMED_GUESS",
+   "schedule": {},
+   "schedule_source": null,
+   "sheets": [],
+   "size_tol_mm": 10,
+   "tag_regex": "^(C)\\d+[A-Z]?$"
+  },
+  "FOOTINGS": {
+   "layers": [
+    "FOUNDATION"
+   ],
+   "layers_state": "UNCONFIRMED_GUESS",
+   "schedule": {},
+   "schedule_source": null,
+   "sheets": [],
+   "size_tol_mm": 10,
+   "tag_regex": "^(F)\\d+[A-Z]?$"
+  }
+ },
+ "profile": "NEW_PROJECT_PROFILE_UNCONFIRMED",
+ "sheets": [],
+ "units_to_mm": null
+}

@@ -1,0 +1,107 @@
+{
+ "SCHEMA": "URBAN_R8_10_UNRESOLVED_ROLE_MATERIALITY_V1",
+ "objects": {
+  "FIRNTUR": {
+   "role": "ROLE_UNRESOLVED (SOURCE_EVIDENCE_CANDIDATE: built-in wardrobe joinery, 600 mm deep rectangle-with-diagonal symbols in DRESS; never an Urban-wide dictionary entry)",
+   "parts": [
+    "1445",
+    "1446",
+    "1669",
+    "1670",
+    "514",
+    "517"
+   ]
+  },
+  "SF3_PM": {
+   "role": "ROLE_UNRESOLVED (SOURCE_EVIDENCE_CANDIDATE: sofa outline from the bound 'MY BLOCKS' library; the library is mixed - 958 blocks incl. doors, title blocks, floors - so membership is not furniture evidence)",
+   "occurrences": [
+    "700047",
+    "700051",
+    "700052"
+   ]
+  }
+ },
+ "per_site_per_trade": {
+  "SITE-27d6688454aaf8de": {
+   "Q-13": {
+    "state": "ROLE_MATERIAL_TO_TRADE",
+    "why": "QORTUBA-FLOOR-TREATMENT: no authority says how this trade treats an object footprint; the object's role could change the region (e.g. a fixed obstacle vs loose furniture)",
+    "sources": [
+     "612083",
+     "612083",
+     "612083",
+     "612084",
+     "612084",
+     "612084",
+     "612085",
+     "612085",
+     "612085",
+     "612086",
+     "612086",
+     "612086",
+     "612087",
+     "612087",
+     "612087",
+     "612088",
+     "612088",
+     "612088",
+     "612089",
+     "612089"
+    ]
+   },
+   "Q-14": {
+    "state": "ROLE_UNRESOLVED_BUT_NON_MATERIAL_TO_TRADE",
+    "why": "QORTUBA-Q14-CEILING-TREATMENT: this trade measures the whole physical footprint whatever stands inside it, and the object cannot separate the labels",
+    "sources": [
+     "612083",
+     "612083",
+     "612083",
+     "612084",
+     "612084",
+     "612084",
+     "612085",
+     "612085",
+     "612085",
+     "612086",
+     "612086",
+     "612086",
+     "612087",
+     "612087",
+     "612087",
+     "612088",
+     "612088",
+     "612088",
+     "612089",
+     "612089"
+    ]
+   }
+  },
+  "SITE-a6405850100155ac": {
+   "Q-13": {
+    "state": "ROLE_MATERIAL_TO_TRADE",
+    "why": "QORTUBA-FLOOR-TREATMENT: no authority says how this trade treats an object footprint; the object's role could change the region (e.g. a fixed obstacle vs loose furniture)",
+    "sources": [
+     "1445",
+     "1446",
+     "1669",
+     "1670",
+     "514",
+     "517"
+    ]
+   },
+   "Q-14": {
+    "state": "ROLE_UNRESOLVED_BUT_NON_MATERIAL_TO_TRADE",
+    "why": "QORTUBA-Q14-CEILING-TREATMENT: this trade measures the whole physical footprint whatever stands inside it, and the object cannot separate the labels",
+    "sources": [
+     "1445",
+     "1446",
+     "1669",
+     "1670",
+     "514",
+     "517"
+    ]
+   }
+  }
+ },
+ "rule": "global role truth and trade materiality are separate records: an object may stay ROLE_UNRESOLVED while a trade that measures the whole footprint proceeds"
+}

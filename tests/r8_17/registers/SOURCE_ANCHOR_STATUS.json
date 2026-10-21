@@ -1,0 +1,38 @@
+{
+ "SCHEMA": "URBAN_R8_17_SOURCE_ANCHOR_STATUS_V1",
+ "dxf_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+ "dwg_sha256": "e4babbc2ded14d8b01d64fbfd4b373e6a09ba60c4490a56e6305a82c9e47171f",
+ "dwg_present": true,
+ "decoder": {
+  "tool": "libredwg dwgread",
+  "version": "dwgread 0.13.3",
+  "binary_sha256": "fe49cf28f5ee5cd84cbb7b9c7ae0475586cedbfcb1a9ca9bc2cab8c72e094c47",
+  "pinned_sha256_r8_7": "fe49cf28f5ee5cd84cbb7b9c7ae0475586cedbfcb1a9ca9bc2cab8c72e094c47",
+  "input_sha256": "e4babbc2ded14d8b01d64fbfd4b373e6a09ba60c4490a56e6305a82c9e47171f",
+  "exit_code": 1,
+  "errors": [
+   "ERROR 0x940",
+   "ERROR: Failed to decode file: /home/user/Urban-Project-AI/data/inputs/by_sha256/e4babbc2ded14d8b01d64fbfd4b373e6a09ba60c4490a56e6305a82c9e47171f.dwg 0x940",
+   "ERROR: Failed to read compressed AcDbObjects section",
+   "ERROR: Failed to read compressed Classes section",
+   "ERROR: Failed to read compressed Header section",
+   "ERROR: Failed to read uncompressed AppInfo section",
+   "ERROR: Failed to read uncompressed AuxHeader section",
+   "ERROR: Invalid num_segidx",
+   "ERROR: Some section size or address out of bounds",
+   "ERROR: Template section not found",
+   "ERROR: read_R2004_section_info out of range"
+  ],
+  "capability_signature": "AC1032 R2018: Header / Classes / AcDbObjects sections NOT readable",
+  "entity_coverage": 0,
+  "unsupported_classes": "all (no object section decoded)",
+  "handle_preservation": "NOT_TESTABLE",
+  "block_lineage": "NOT_TESTABLE",
+  "geometry_comparison": "NOT_POSSIBLE"
+ },
+ "state": "NOT_ESTABLISHED",
+ "correction": "R8.13 said 'no local DWG decoder is installed': the pinned libredwg 0.13.3 build IS present (off PATH, /tmp/ldwg) - it was re-run here and still cannot read this AC1032 file. K1 is built on the same reader. ezdxf reads DXF only. Nothing was downloaded",
+ "confidence": "NONE for exact identity; R8.7 header-level corroboration (same creator, creation time, editing time + ~2 min) is consistent but cannot exclude an edit",
+ "effect": "SOURCE_ANCHOR stays a release blocker on every new-revision row; R8.14 does not fail on it",
+ "next": "a pinned AC1032-capable reader (hash-locked), or an owner-supplied DXF re-export with a checksum chain from the DWG"
+}

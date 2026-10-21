@@ -1,0 +1,53 @@
+{
+ "classes": {
+  "DOUBLE_COUNT": 3,
+  "GEOMETRY": 7,
+  "MISSED_OBJECT": 10,
+  "NO_DIFFERENCE": 6,
+  "SUPPORT_IDENTITY": 43
+ },
+ "double_count_m3": 0.212,
+ "frozen_manifest_sha256": "9861d791de738722ce53907894c1ff7691923c007411021eb092a2c58616ba9e",
+ "pre_s8_coverage": {
+  "COVERAGE_STATE": "MEASURED",
+  "URBAN_LINES": "[\"B0017 C-LINT-GF\", \"B0024 C-LINT-1F\", \"B0030 C-LINT-2F\"]",
+  "V3B_LINE_TECHNICAL_M3_SHARED": "4.749"
+ },
+ "pre_s8_quantity_state": "V3b B0017 C-LINT-GF: technical DERIVED 2.726 m3; V3b B0024 C-LINT-1F: technical DERIVED 1.493 m3; V3b B0030 C-LINT-2F: technical DERIVED 0.53 m3",
+ "round": "S8_6_POST_FREEZE",
+ "rule": "explains differences; never changes a frozen quantity",
+ "s8_6_released_kg": 96.427279858,
+ "s8_6_released_m3": 0.745261681,
+ "s8_6_sensitivity_kg": 522.09111712,
+ "s8_6_sensitivity_m3": 4.231716541,
+ "v3b_concrete_m3": {
+  "1F": 1.493,
+  "2F": 0.53,
+  "GF": 2.726
+ },
+ "v3b_concrete_total_m3": 4.749,
+ "v3b_population": [
+  {
+   "blocked": 0,
+   "classes": [
+    "DERIVED",
+    "PROVISIONAL_CODE_METHOD"
+   ],
+   "high_kg": 626.904,
+   "hook_kg": 44.425,
+   "lap_kg": 0.0,
+   "low_kg": 626.904,
+   "net_kg": 626.904,
+   "population": "LINTELS",
+   "sets": 177,
+   "technical_kg": 582.479,
+   "weight_share_pct": 2.36
+  }
+ ],
+ "v3b_rebar_kg": {
+  "1F": 190.642,
+  "2F": 62.049,
+  "GF": 329.787
+ },
+ "v3b_rebar_total_kg": 582.478
+}
