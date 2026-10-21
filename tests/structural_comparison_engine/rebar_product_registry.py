@@ -209,4 +209,7 @@ OTHER_REBAR_AWARE = (
     "engine/source/concrete_ledger_v3.py",
     # T-105: stair concrete V1 names REINFORCEMENT only as an UNSUPPORTED_LATER_ITEM line with no quantity (Q-20)
     "engine/source/stair_steps_concrete.py",
+    # T-133: the V3.0.1 extension names REINFORCEMENT only to leave the steel lines of a column piece unchanged and
+    # LIST them as downstream STALE (outside the candidate); it writes no reinforcement quantity and applies no ratio
+    "engine/source/arch_v301.py",
 )
