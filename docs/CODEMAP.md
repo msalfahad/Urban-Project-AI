@@ -14,15 +14,15 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `data/` | 19 | Registries (owner facts, project rules, trades) and trade rules. Large run data is gitignored. |
 | `docs/` | 72 | Design notes and the generated maps. |
 | `documents/` | 5 |  |
-| `engine/` | 621 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
+| `engine/` | 622 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 2471 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 2474 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 7 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 1332 | pytest suites, one folder per round. |
+| `tests/` | 1334 | pytest suites, one folder per round. |
 | `tools/` | 106 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (254 modules)
@@ -387,7 +387,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `workbooks.py` | 242 | MEDIUM | 0 | REPORTING V3 - workbook layouts (generic over a BOQ_LINES model). |
 | `workbooks_v3b.py` | 308 | MEDIUM | 0 | REPORTING V3b - workbook layouts over the two-view line model (TECHNICAL_QTO / COMMERCIAL_BOQ). |
 
-## `engine/source/` (269 modules)
+## `engine/source/` (270 modules)
 
 | Module | Lines | Risk | Imp | Purpose |
 |---|---|---|---|---|
@@ -481,6 +481,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `flag_detectors.py` | 629 | MEDIUM | 2 | GENERIC ENGINEERING-FLAG DETECTORS. |
 | `footing_rebar.py` | 388 | CRITICAL | 1 | FOOTING_REBAR (S4) - accurate footing reinforcement, occurrence by occurrence, component by component (generic). |
 | `footing_rebar_guard.py` | 422 | CRITICAL | 5 | FOOTING_REBAR_GUARD (pre-S4) - what Accurate Footing Rebar (S4) may consume, and how it fails closed. |
+| `footing_rebar_population_v1.py` | 361 | MEDIUM | 1 | FOOTING_REBAR_POPULATION_V1 - footing steel by bar population from the footing schedule (generic, NOT wired). |
 | `footprint_authority.py` | 93 | MEDIUM | 2 | OBJECT FOOTPRINT AUTHORITY (RC1; V2 at RC1 final) - may a trade measure through the objects that stand on a site? |
 | `frame.py` | 1076 | HIGH | 15 | UNIT_CONTEXT + REGION_MEASUREMENT_TRANSFORM + MEASUREMENT_FRAME (R8.3). |
 | `freeze_schema.py` | 76 | MEDIUM | 5 | FREEZE SCHEMA (RC1 final) - every identity field of a freeze record is a real identity or says why not. |
@@ -559,7 +560,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `rebar_provenance.py` | 143 | CRITICAL | 4 | Generic accurate-rebar provenance contract: one contract for every element family (no second system). |
 | `rebar_sanity_qa.py` | 34 | MEDIUM | 2 | kg/m3 QA helpers - sanity layer, not the accurate reinforcement implementation (generic). |
 | `rebar_sanity_variance.py` | 156 | MEDIUM | 3 | REBAR SANITY VARIANCE - report layer between ACCURATE_BOQ_REBAR and ROUGH_REBAR_SUMMARY (generic). |
-| `rebar_unit_mass.py` | 72 | CRITICAL | 11 | REBAR UNIT MASS - one project-wide method (generic). |
+| `rebar_unit_mass.py` | 72 | CRITICAL | 12 | REBAR UNIT MASS - one project-wide method (generic). |
 | `reconcile.py` | 394 | MEDIUM | 4 | Tolerance-aware reconciliation of two CAD routes (K1 vs K2, or D1 vs D1') — R8.2 §14-§16. |
 | `region_candidates.py` | 191 | MEDIUM | 1 | Deterministic model-space REGION CANDIDATES (R8.4 §19-§20). |
 | `region_membership.py` | 218 | MEDIUM | 4 | Exact region membership of a curve (R8.8): SEGMENT, ARC, CIRCLE, ELLIPTICAL_ARC against an axis-aligned region. |
@@ -645,7 +646,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `trade_regions.py` | 234 | MEDIUM | 5 | TRADE TREATMENT ASSIGNMENT AND TRADE MATERIALITY (R8.10). |
 | `trade_strips.py` | 163 | MEDIUM | 8 | STRIP ALLOCATION AUDIT (R8.13) - a door threshold or an open-passage strip is never silently absorbed into, or |
 | `urban_methods.py` | 83 | MEDIUM | 3 | URBAN METHOD REGISTER (V1) - reusable measurement methods: versioned, scope-limited, overrideable. A method is |
-| `urban_methods_v3.py` | 111 | MEDIUM | 2 | URBAN METHOD REGISTER V3 - methods adopted by owner decision OD-V3 (Mohammad, Alsenan final BOQ round), added to the |
+| `urban_methods_v3.py` | 111 | MEDIUM | 3 | URBAN METHOD REGISTER V3 - methods adopted by owner decision OD-V3 (Mohammad, Alsenan final BOQ round), added to the |
 | `visual_source_claim.py` | 195 | MEDIUM | 1 | VISUAL_SOURCE_CLAIM_V1 - structured claims read from rendered drawing evidence (PDF pages whose text is vector |
 | `wall_band_reconciliation.py` | 130 | MEDIUM | 1 | WALL_BAND_RECONCILIATION (generic): independent wall-length methods and the classified disagreement. |
 | `wall_bands.py` | 1036 | HIGH | 20 | WALL BANDS, WALL ENDS AND OPEN PASSAGES - topology-obstacle geometry from structure, never from size. |
@@ -1012,6 +1013,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t124_membrane_offcut_once/` | 1 |
 | `tests/t126_route_g_scope/` | 1 |
 | `tests/t135_stair_flight_once/` | 1 |
+| `tests/t136_footing_rebar_population/` | 1 |
 | `tests/water_tank_s8_4/` | 3 |
 | `tests/zz_freeze_integrity/` | 2 |
 
@@ -1161,6 +1163,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t126/` | 2 |
 | `research/agents_t129/` | 4 |
 | `research/agents_t135/` | 4 |
+| `research/agents_t136/` | 3 |
 | `research/alsenan_arch_truth_05/` | 28 |
 | `research/alsenan_column_rebar_s3/` | 17 |
 | `research/alsenan_column_rebar_s3_1/` | 15 |

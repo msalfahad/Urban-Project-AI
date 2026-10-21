@@ -394,7 +394,7 @@ Risk **CRITICAL** (recommended validation L4). Ask about: rebar, reinforcement, 
 **Open first:**
 
 - `engine/source/accurate_boq_rebar.py` (256 lines, CRITICAL, frozen; imported by 17 directly, 21 transitively, SHARED)
-- `engine/source/rebar_unit_mass.py` (72 lines, CRITICAL, frozen; imported by 11 directly, 33 transitively, SHARED)
+- `engine/source/rebar_unit_mass.py` (72 lines, CRITICAL, frozen; imported by 12 directly, 35 transitively, SHARED)
 - `engine/source/slab_rebar_qto.py` (314 lines, CRITICAL, frozen; imported by 9 directly, 12 transitively)
 
 **Other current modules:** `bar_shapes.py`, `bbs_optimiser.py`, `beam_rebar_readiness.py`, `column_rebar.py`, `footing_rebar.py`, `footing_rebar_guard.py`, `ground_system_rebar.py`, `rebar_boq_sections.py`, `rebar_model.py`, `rebar_provenance.py`, `rebar_sanity_qa.py`, `rebar_sanity_variance.py`, `rough_rebar_sanity.py`, `slab_rebar_binding.py`, `slab_rebar_readiness.py`, `superstructure_beam_rebar.py`
