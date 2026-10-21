@@ -209,4 +209,7 @@ OTHER_REBAR_AWARE = (
     "engine/source/concrete_ledger_v3.py",
     # T-105: stair concrete V1 names REINFORCEMENT only as an UNSUPPORTED_LATER_ITEM line with no quantity (Q-20)
     "engine/source/stair_steps_concrete.py",
+    # T-134: the element register v0 links STR.REBAR lines to the concrete element whose geometry they read (ids and
+    # states only); it writes no reinforcement quantity and applies no ratio
+    "engine/source/element_register_v0.py",
 )
