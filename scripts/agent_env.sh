@@ -31,7 +31,8 @@ set -euo pipefail
 
 ENGINE_BRANCH="claude/access-permissions-setup-ii24ws"
 BOARD_BRANCH="agents/control"
-EXPECTED_REPO_RE='(^|[/:])msalfahad/Urban-Project-AI(\.git)?/?$'
+# GitHub owner/repo names are case-insensitive; the attached checkout's origin can be lower case.
+EXPECTED_REPO_RE='(^|[/:])msalfahad/urban-project-ai(\.git)?/?$'
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 WORK="$ROOT/.work"
@@ -45,7 +46,7 @@ say() { echo "AGENT_ENV: $*"; }
 check_repo() {
   local url
   url="$(git -C "$ROOT" remote get-url origin 2>/dev/null)" || die "no origin remote in $ROOT"
-  [[ "$url" =~ $EXPECTED_REPO_RE ]] || die "origin is not msalfahad/Urban-Project-AI: $url"
+  [[ "${url,,}" =~ $EXPECTED_REPO_RE ]] || die "origin is not msalfahad/Urban-Project-AI: $url"
 }
 
 tree_dir() {  # map a tree name to its directory
@@ -122,7 +123,7 @@ cmd_setup() {
 
 cmd_status() {
   check_repo
-  say "repo $(git -C "$ROOT" remote get-url origin | sed -E 's#.*[/:](msalfahad/Urban-Project-AI).*#\1#')"
+  say "repo $(git -C "$ROOT" remote get-url origin | sed -E 's#.*[/:](msalfahad/urban-project-ai).*#\1#I')"
   say "session checkout $(git -C "$ROOT" rev-parse --abbrev-ref HEAD) @ $(git -C "$ROOT" rev-parse --short HEAD)"
   [[ -d "$WORK/engine" ]] && say "engine $WORK/engine @ $(git -C "$WORK/engine" rev-parse --short HEAD) (origin/$ENGINE_BRANCH)"
   [[ -d "$WORK/board" ]] && say "board $WORK/board on $(git -C "$WORK/board" rev-parse --abbrev-ref HEAD) @ $(git -C "$WORK/board" rev-parse --short HEAD)"
