@@ -1,0 +1,127 @@
+{
+ "candidates": {
+  "1F BM-1F-032": {
+   "B2": 5.22
+  },
+  "1F BM-1F-039": {
+   "B4": 72.86
+  },
+  "2F BM-2F-015": {
+   "B8": 9.15,
+   "B3": 9.15
+  },
+  "2F BM-2F-016": {
+   "B15": 56.8,
+   "B1": 13.01,
+   "B2": 20.21,
+   "B3": 25.11
+  },
+  "2F BM-2F-017": {
+   "B1": 5.87
+  },
+  "2F BM-2F-018": {
+   "B1": 5.87
+  },
+  "GF BM-GF-057": {
+   "B3": 21.46,
+   "CB3": 39.23
+  },
+  "GF BM-GF-059": {
+   "B24": 41.88
+  },
+  "GF BM-GF-060": {
+   "B7": 1.52
+  }
+ },
+ "totals": {
+  "RELEASED": 5171.03,
+  "range_lo:ends (note 9)": 1610.85,
+  "range_lo:side bars (2-bar minimum)": 361.94,
+  "HELD_DEFINED": 536.3,
+  "range_lo:ends (note 9) [members held]": 133.1,
+  "range_lo:bars over end columns inside the register span": 13.83,
+  "range_lo:side bars (2-bar minimum) [members held]": 25.28,
+  "range_lo:Ln upper reading": 0.0,
+  "HELD_CANDIDATE_lo": 176.86,
+  "HELD_CANDIDATE_hi": 238.41
+ },
+ "totals_hi": {
+  "range_hi:ends (note 9)": 2818.98,
+  "range_hi:side bars (2-bar minimum)": 361.94,
+  "range_hi:ends (note 9) [members held]": 232.93,
+  "range_hi:bars over end columns inside the register span": 13.83,
+  "range_hi:side bars (2-bar minimum) [members held]": 25.28,
+  "range_hi:Ln upper reading": 0.58
+ },
+ "per_floor": {
+  "GF": {
+   "RELEASED": 2954.89,
+   "links_kg_A": 1138.91,
+   "links_kg_B": 1181.12,
+   "links_kg_C": 1129.36,
+   "links_kg_B_upper": 1283.52,
+   "HELD_DEFINED": 398.94,
+   "links_kg_A [members held]": 215.73,
+   "links_kg_B [members held]": 220.01,
+   "links_kg_C [members held]": 215.52,
+   "links_kg_B_upper [members held]": 257.54,
+   "HELD_CANDIDATE_lo": 64.86,
+   "HELD_CANDIDATE_hi": 82.63
+  },
+  "1F": {
+   "HELD_DEFINED": 137.36,
+   "links_kg_A [members held]": 37.77,
+   "links_kg_B [members held]": 39.7,
+   "links_kg_C [members held]": 37.87,
+   "links_kg_B_upper [members held]": 39.7,
+   "RELEASED": 1917.81,
+   "links_kg_A": 691.11,
+   "links_kg_B": 714.19,
+   "links_kg_C": 688.72,
+   "links_kg_B_upper": 775.49,
+   "HELD_CANDIDATE_lo": 78.09,
+   "HELD_CANDIDATE_hi": 78.09
+  },
+  "2F": {
+   "RELEASED": 298.33,
+   "links_kg_A": 133.1,
+   "links_kg_B": 140.21,
+   "links_kg_C": 131.72,
+   "links_kg_B_upper": 140.21,
+   "HELD_CANDIDATE_lo": 33.91,
+   "HELD_CANDIDATE_hi": 77.69
+  }
+ },
+ "links": {
+  "kg_A": 1963.12,
+  "kg_B": 2035.52,
+  "kg_C": 1949.8,
+  "kg_B_upper": 2199.22,
+  "kg_A [members held]": 253.5,
+  "kg_B [members held]": 259.71,
+  "kg_C [members held]": 253.39,
+  "kg_B_upper [members held]": 297.25
+ },
+ "unquantified": [
+  "GF BM-GF-047 B26 planted-column extra (p.15)",
+  "GF BM-GF-048 B27 planted-column extra (p.15)",
+  "GF BM-GF-053 B20 upstand all bars",
+  "GF BM-GF-058 (none) all bars",
+  "GF BM-GF-058 (none) all bars",
+  "GF BM-GF-061 (none) all bars",
+  "1F BM-1F-029 B23 upstand all bars",
+  "1F BM-1F-033 (none) all bars",
+  "1F BM-1F-033 (none) all bars",
+  "1F BM-1F-034 (none) all bars",
+  "1F BM-1F-035 (none) all bars",
+  "1F BM-1F-036 (none) all bars",
+  "1F BM-1F-037 (none) all bars",
+  "1F BM-1F-038 (none) all bars"
+ ],
+ "bars_over_12m": [],
+ "frozen_S6_lower_bound_kg_per_floor": {
+  "1F": 1572.18,
+  "2F": 276.55,
+  "GF": 1781.42
+ }
+}

@@ -1,0 +1,140 @@
+row_id,member_id,floor,mark,schedule_mark,type,status,width_m,depth_m,length_m,span_index,n_spans,axis,span_start,span_end,w_left_lo,w_left_hi,w_right_lo,w_right_hi,Ln_lo,Ln_hi,clear_length_m,geometry_left,geometry_right,framing_beams,m3_low
+R001,BM-GF-001,GF,B11,B11,beam span,CALCULATED,0.2,0.75,4.5541,,,V,,,,,,,,,4.5541,FACE,"ends on a drawn face: 1 of 2 (length is the register's, not re-measured)",,0.683109772
+R002,BM-GF-002,GF,B1,B1,beam span,CALCULATED,0.2,0.4,1.47,,,H,,,,,,,,,1.47,FACE,,,0.1176
+R003,BM-GF-003,GF,B8,B8,beam span,CALCULATED,0.2,0.75,3.5201,,,V,,,,,,,,,3.5201,FACE,,,0.528021
+R004,BM-GF-004,GF,B4,B4,beam span,CALCULATED,0.2,0.5,3.75,,,H,,,,,,,,,3.75,FACE,,,0.375
+R005,BM-GF-005,GF,B1,B1,beam span,CALCULATED,0.2,0.4,1.75,,,V,,,,,,,,,1.75,FACE,,,0.14
+R006,BM-GF-006,GF,B7,B7,beam strip at the void,CALCULATED,0.2,0.75,1.7,,,H,,,,,,,,,1.7,FACE,,,0.255
+R007,BM-GF-007,GF,B3,B3,beam span,CALCULATED,0.2,0.4,3.3,,,H,,,,,,,,,3.3,FACE,,,0.264
+R008,BM-GF-008,GF,B1,B1,beam span,CALCULATED,0.2,0.4,2.5484,,,V,,,,,,,,,2.5484,FACE,"ends on a drawn face: 1 of 2 (length is the register's, not re-measured)",,0.203875164
+R009,BM-GF-009,GF,B4,B4,beam span,CALCULATED,0.2,0.5,3.4159,,,H,,,,,,,,,3.4159,,"ends on a drawn face: 0 of 2 (length is the register's, not re-measured)",,0.341334248
+R010,BM-GF-010,GF,B4,B4,beam span,CALCULATED,0.2,0.5,1.9799,,,V,,,,,,,,,1.9799,FACE,,,0.197986
+R011,BM-GF-011,GF,B4,B4,beam span,CALCULATED,0.2,0.5,4.5,,,V,,,,,,,,,4.5,FACE,,,0.45
+R012,BM-GF-012,GF,B1,B1,beam span,CALCULATED,0.2,0.4,1.2,,,V,,,,,,,,,1.2,FACE,,,0.096
+R013a,BM-GF-013,GF,CB7,CB7,beam span (split at the interior column found inside the band),CALCULATED,0.2,0.75,5.45,1,2,H,42.4934,47.9434,0.4,0.4,0.4,0.4,5.85,5.85,5.45,END_COLUMN_INSIDE_REGISTER_SPAN (register runs to the column's outer face; clear span -0.201),INTERIOR (gap between spans),B4@3.90,1.77
+R013b,BM-GF-013,GF,CB7,CB7,beam span (split at the interior column found inside the band),CALCULATED,0.2,0.75,5.7486,2,2,H,48.3434,54.092,0.4,0.4,0.39999999999999997,0.39999999999999997,6.1486,6.1486,5.7486,INTERIOR (gap between spans),FACE_FOUND,B1@4.45 B4@1.25,1.77
+R014,BM-GF-014,GF,B1,B1,beam span,CALCULATED,0.2,0.4,1.1448,,,H,,,,,,,,,1.1448,FACE,,,0.091584285
+R015,BM-GF-015,GF,B3,B3,beam span,CALCULATED,0.2,0.4,2.5,,,H,,,,,,,,,2.5,FACE,,,0.2
+R016,BM-GF-016,GF,B5,B5,beam span,CALCULATED,0.2,0.5,3.5432,,,H,,,,,,,,,3.5432,FACE,"ends on a drawn face: 1 of 2 (length is the register's, not re-measured)",,0.354315596
+R017,BM-GF-017,GF,B4,B4,beam span,CALCULATED,0.2,0.5,2.8907,,,H,,,,,,,,,2.8907,FACE,"ends on a drawn face: 1 of 2 (length is the register's, not re-measured)",,0.289066055
+R018,BM-GF-018,GF,CB3,CB3,beam span,CALCULATED,0.2,0.75,3.02,1,3,H,61.093,64.113,0.5,0.5,0.8,0.8,3.67,3.67,3.02,FACE_FOUND,INTERIOR (gap between spans),,0.453
+R019,BM-GF-018,GF,CB3,CB3,beam span,CALCULATED,0.2,0.75,3.1888,3,3,H,68.1626,71.3514,0.5996,0.5996,0.0,0.112,3.4886,3.5446,3.1888,INTERIOR (gap between spans),GEOMETRY_CHECK (no face line within 10 mm of the register end; first line at 0.112),,0.478313528
+R020,BM-GF-019,GF,B1,B1,beam span,CALCULATED,0.2,0.4,0.8,,,V,,,,,,,,,0.8,FACE,,,0.064
+R021,BM-GF-020,GF,B2,B2,beam span,CALCULATED,0.2,0.4,2.7,,,V,,,,,,,,,2.7,FACE,,,0.216
+R022,BM-GF-021,GF,CB4,CB4,beam span,CALCULATED,0.2,0.5,2.3744,1,2,V,38.6728,41.0472,0.0,0.6248,0.7008,0.7008,2.7248,3.0372,2.3744,GEOMETRY_CHECK (no face line within 10 mm of the register end; first line at 0.625),INTERIOR (gap between spans),,0.237438267
+R023,BM-GF-021,GF,CB4,CB4,beam span,CALCULATED,0.2,0.5,3.2,2,2,V,41.748,44.948,0.7008,0.7008,0.4,0.4,3.7504,3.7504,3.2,INTERIOR (gap between spans),FACE_FOUND,B3@1.35,0.32
+R024,BM-GF-022,GF,B14,B14,beam span,CALCULATED,0.2,0.75,1.8,,,H,,,,,,,,,1.8,FACE,,,0.27
+R025,BM-GF-023,GF,B1,B1,beam span,CALCULATED,0.2,0.4,0.7,,,V,,,,,,,,,0.7,FACE,,,0.056
+R026,BM-GF-024,GF,B3,B3,beam span,CALCULATED,0.2,0.4,2.95,,,V,,,,,,,,,2.95,FACE,,,0.236
+R027,BM-GF-025,GF,B2,B2,beam span,CALCULATED,0.2,0.4,2.7,,,V,,,,,,,,,2.7,FACE,,,0.216
+R028,BM-GF-026,GF,B7,B7,beam span,CALCULATED,0.2,0.75,1.2,,,V,,,,,,,,,1.2,FACE,,,0.18
+R029,BM-GF-027,GF,B1,B1,beam span,CALCULATED,0.2,0.4,1.8,,,H,,,,,,,,,1.8,FACE,,,0.144
+R030,BM-GF-028,GF,B2,B2,beam span,CALCULATED,0.2,0.4,2.9,,,H,,,,,,,,,2.5024,FACE,END_COLUMN_INSIDE_REGISTER_SPAN 0.398,,0.232
+R031,BM-GF-029,GF,B9,B9,beam span,CALCULATED,0.2,0.75,6.3,,,V,,,,,,,,,6.3,FACE,"ends on a drawn face: 1 of 2 (length is the register's, not re-measured)",END_COLUMN_CANDIDATE 0.000 / 0.201 (not applied: 1 of 2 end faces),0.945
+R032,BM-GF-030,GF,CB6,CB6,beam span,CALCULATED,0.2,0.75,4.0,1,2,H,42.292,46.292,0.2,0.2,0.501,0.501,4.3505,4.3505,4.0,FACE_FOUND,INTERIOR (gap between spans),,0.6
+R033,BM-GF-030,GF,CB6,CB6,beam span,CALCULATED,0.2,0.75,5.85,2,2,H,46.793,52.643,0.501,0.501,0.25,0.25,6.2255,6.2255,5.85,INTERIOR (gap between spans),FACE_FOUND,(none)@5.80 B4@2.80,0.8775
+R034,BM-GF-031,GF,B1,B1,beam span,CALCULATED,0.2,0.4,1.2,,,H,,,,,,,,,1.2,FACE,,,0.096
+R035,BM-GF-031,GF,B1,B1,beam span,CALCULATED,0.2,0.4,1.9,,,H,,,,,,,,,1.9,FACE,,,0.15139055
+R036,BM-GF-032,GF,B4,B4,beam span,CALCULATED,0.2,0.5,4.45,,,V,,,,,,,,,4.45,FACE,,,0.445
+R037,BM-GF-033,GF,B1,B1,beam span,CALCULATED,0.2,0.4,0.95,,,H,,,,,,,,,0.95,FACE,,,0.076
+R038,BM-GF-034,GF,B1,B1,beam span,CALCULATED,0.2,0.4,1.3,,,V,,,,,,,,,1.3,FACE,,,0.104
+R039,BM-GF-035,GF,CB5,CB5,beam span,CALCULATED,0.2,0.4,2.3,1,2,V,38.348,40.648,0.5,0.5,0.6,0.6,2.85,2.85,2.3,FACE_FOUND,INTERIOR (gap between spans),,0.184
+R040,BM-GF-036,GF,B13,B13,beam span,CALCULATED,0.25,0.75,5.0272,,,H,,,,,,,,,5.0272,,"ends on a drawn face: 0 of 2 (length is the register's, not re-measured)",END_COLUMN_CANDIDATE 0.029 / 0.000 (not applied: 0 of 2 end faces),0.942592455
+R041,BM-GF-037,GF,B28,B28,beam span,CALCULATED,0.25,0.75,0.8049,,,V,,,,,,,,,0.8049,FACE,,,0.15091125
+R042,BM-GF-038,GF,B16,B16,beam span,CALCULATED,0.3,0.75,3.85,,,V,,,,,,,,,3.475,END_COLUMN_INSIDE_REGISTER_SPAN 0.375,,,0.86625
+R043,BM-GF-039,GF,CA,CA,beam span,CALCULATED,0.3,0.5,1.15,,,V,,,,,,,,,1.15,FACE,,,0.1725
+R044,BM-GF-040,GF,CB8,CB8,beam span,CALCULATED,0.3,0.75,3.4502,1,3,H,54.4934,57.5431,0.4005,0.4005,1.1254,1.1254,3.8126,3.8126,3.0497,END_COLUMN_INSIDE_REGISTER_SPAN (register runs to the column's outer face; clear span -0.401),INTERIOR (gap between spans),B27@1.81,0.776298933
+R045,BM-GF-041,GF,CB8,CB8,beam span,CALCULATED,0.3,0.75,5.745,2,3,H,58.6685,64.4135,1.1254,1.1254,0.4995,0.4995,6.5575,6.5575,5.745,INTERIOR (gap between spans),INTERIOR (gap between spans),B22@2.17,1.292625
+R046,BM-GF-041,GF,CB8,CB8,beam span,CALCULATED,0.3,0.75,6.35,3,3,H,64.913,71.263,0.4995,0.4995,0.7000000000000001,0.7000000000000001,6.9497,6.9497,6.35,INTERIOR (gap between spans),FACE_FOUND,B1@2.75 CB3 and B3 (With Stair)@1.33 CB3@4.84,1.42875
+R047,BM-GF-042,GF,CB1,CB1,beam span,CALCULATED,0.35,0.75,7.4,1,2,V,36.748,43.746,0.402,0.402,0.502,0.502,7.45,7.45,6.998,END_COLUMN_INSIDE_REGISTER_SPAN (register runs to the column's outer face; clear span -0.402),INTERIOR (gap between spans),,1.9425
+R048,BM-GF-042,GF,CB1,CB1,beam span,CALCULATED,0.35,0.75,5.1,2,2,V,44.248,49.348,0.502,0.502,0.5,0.5,5.601,5.601,5.1,INTERIOR (gap between spans),FACE_FOUND,B17@1.35 B7@4.38 B8@3.34,1.33875
+R049,BM-GF-043,GF,B20,B20,beam span (west of the column),CALCULATED,0.4,0.75,3.0,,,H,,,,,,,,,3.0,FACE,,,0.9
+R050,BM-GF-043,GF,B20,B20,beam span,CALCULATED,0.4,0.75,3.3,,,H,,,,,,,,,3.3,FACE,,,0.99
+R051,BM-GF-044,GF,B17,B17,beam span,CALCULATED,0.45,0.75,5.1,,,H,,,,,,,,,5.1,FACE,,,1.72125
+R052,BM-GF-045,GF,B22,B22,beam span,CALCULATED,0.5,0.75,7.8,,,V,,,,,,,,,7.8,FACE,,,2.925
+R053,BM-GF-046,GF,B24,B24,beam span,CALCULATED,0.5,0.75,3.55,,,H,,,,,,,,,3.55,FACE,,,1.33125
+R054,BM-GF-047,GF,B26,B26,beam span (one span; planted column P.C 20x50 carried),CALCULATED,0.65,0.85,7.0675,,,H,,,,,,,,,7.0675,,"ends on a drawn face: 0 of 2 (length is the register's, not re-measured)",,3.9048
+R055,BM-GF-048,GF,B27,B27,beam span (one span; planted column P.C 20x70 carried),CALCULATED,0.9,0.85,4.9505,,,H,,,,,,,,,4.9505,,"ends on a drawn face: 0 of 2 (length is the register's, not re-measured)",,3.7872
+R056,BM-GF-049,GF,B7,B7,void ring arc piece,CALCULATED,0.2,0.75,1.885,,,,,,,,,,,,,,,,0.282743339
+R057,BM-GF-050,GF,B7,B7,void ring arc piece,CALCULATED,0.2,0.75,0.6158,,,,,,,,,,,,,,,,0.092372232
+R058,BM-GF-051,GF,B7,B7,void ring arc piece,CALCULATED,0.2,0.75,0.4765,,,,,,,,,,,,,,,,0.071471968
+R059,BM-GF-052,GF,B7,B7,void ring arc piece,CALCULATED,0.2,0.75,0.3485,,,,,,,,,,,,,,,,0.052268595
+R060,BM-GF-053,GF,B20 upstand,-,upstand on top of B20 (not in the engine),CALCULATED,0.2,0.2,3.0,,,H,,,,,,,,,3.0,FACE,,,0.12
+R061,BM-GF-054,GF,B29,B29,beam span,CONFLICT,0.25 schedule / 0.2 drawn,0.75,6.7412,,,H,,,,,,,,,6.7412,FACE,"ends on a drawn face: 1 of 2 (length is the register's, not re-measured)",,1.0112
+R062,BM-GF-055,GF,CB2,CB2,beam span,CONFLICT,0.2 schedule / 0.25 drawn,0.5,3.47,1,2,H,59.993,63.463,0.2,0.2,0.599,0.599,3.8695,3.8695,3.47,FACE_FOUND,INTERIOR (gap between spans),B3@1.90,0.347
+R063,BM-GF-055,GF,CB2,CB2,beam span,CONFLICT,0.2 schedule / 0.25 drawn,0.5,3.35,2,2,H,64.062,67.412,0.599,0.599,0.49999999999999994,0.49999999999999994,3.8995,3.8995,3.35,INTERIOR (gap between spans),FACE_FOUND,B1@1.60 B4@1.48,0.335
+R064,BM-GF-056,GF,B21,B21,beam span,CONFLICT,0.45 schedule / 0.4 drawn,0.75,7.4802,,,H,,,,,,,,,7.4802,,"ends on a drawn face: 0 of 2 (length is the register's, not re-measured)",,2.2441
+R065,BM-GF-057,GF,CB3 and B3 (With Stair),CB3,two marks on one span,HELD,0.2,see candidates,2.65,2,3,H,64.913,67.563,0.8,0.8,0.5996,0.5996,3.3498,3.3498,2.65,INTERIOR (gap between spans),INTERIOR (gap between spans),,0.212
+R066,BM-GF-058,GF,(none),-,0.20 strip north of B20,HELD,0.199,see candidates,3.002,,,H,,,,,,,,,3.002,,"ends on a drawn face: 0 of 2 (length is the register's, not re-measured)",,0.24
+R067,BM-GF-058,GF,(none),-,0.20 strip north of B20 (east piece),HELD,0.2,see candidates,0.525,,,H,,,,,,,,,0.525,,"ends on a drawn face: 0 of 2 (length is the register's, not re-measured)",,0.042
+R068,BM-GF-059,GF,(none),-,unlabelled span past a column,HELD,0.5,see candidates,1.501,,,H,,,,,,,,,1.501,FACE,,,0.375
+R069,BM-GF-060,GF,"(B7, contested)",-,void ring arc piece,HELD,,see candidates,,,,,,,,,,,,,,,,,0.035
+R070,BM-GF-061,GF,(none),-,outer west strip 0.20 (projection band),HELD,0.2,not printed,4.1,,,V,,,,,,,,,4.1,FACE,"ends on a drawn face: 1 of 2 (length is the register's, not re-measured)",,
+R071,BM-1F-001,1F,B3,B3,beam span,CALCULATED,0.2,0.4,2.5,,,H,,,,,,,,,2.5,FACE,,,0.2
+R072,BM-1F-002,1F,CB9,CB9,beam span,CALCULATED,0.2,0.5,3.47,1,3,H,21.268,24.738,0.2,0.2,0.6,0.6,3.87,3.87,3.47,FACE_FOUND,INTERIOR (gap between spans),B2@1.90,0.347
+R073,BM-1F-002,1F,CB9,CB9,beam span,CALCULATED,0.2,0.5,3.35,2,3,H,25.338,28.688,0.6,0.6,0.501,0.501,3.9005,3.9005,3.35,INTERIOR (gap between spans),INTERIOR (gap between spans),B6@1.03,0.335
+R074,BM-1F-002,1F,CB9,CB9,beam span,CALCULATED,0.2,0.5,3.55,3,3,H,29.189,32.739,0.501,0.501,0.5,0.5,4.0505,4.0505,3.55,INTERIOR (gap between spans),FACE_FOUND,,0.355
+R075,BM-1F-003,1F,B4,B4,beam span,CALCULATED,0.2,0.5,3.8117,,,H,,,,,,,,,3.8117,FACE,,,0.381173125
+R076,BM-1F-004,1F,B4,B4,beam span,CALCULATED,0.2,0.5,4.3,,,H,,,,,,,,,4.3,FACE,,,0.43
+R077,BM-1F-005,1F,B11,B11,beam span,CALCULATED,0.2,0.75,4.7478,,,H,,,,,,,,,4.7478,FACE,,,0.712172543
+R078,BM-1F-006,1F,B2,B2,beam span,CALCULATED,0.2,0.4,2.7,,,V,,,,,,,,,2.7,FACE,,,0.216
+R079,BM-1F-007,1F,B7,B7,beam span,CALCULATED,0.2,0.75,1.8,,,H,,,,,,,,,1.8,FACE,,,0.27
+R080,BM-1F-008,1F,B1,B1,beam span,CALCULATED,0.2,0.4,0.7,,,V,,,,,,,,,0.7,FACE,,,0.056
+R081,BM-1F-009,1F,B2,B2,beam span,CALCULATED,0.2,0.4,3.0,,,V,,,,,,,,,3.0,FACE,,,0.24
+R082,BM-1F-010,1F,B1,B1,beam span,CALCULATED,0.2,0.4,1.6075,,,V,,,,,,,,,1.6075,FACE,"ends on a drawn face: 1 of 2 (length is the register's, not re-measured)",,0.128599641
+R083,BM-1F-011,1F,B2,B2,beam span,CALCULATED,0.2,0.4,2.7,,,V,,,,,,,,,2.7,FACE,,,0.216
+R084,BM-1F-012,1F,B7,B7,beam span,CALCULATED,0.2,0.75,1.2,,,V,,,,,,,,,1.2,FACE,,,0.18
+R085,BM-1F-013,1F,B1,B1,beam span,CALCULATED,0.2,0.4,1.8,,,H,,,,,,,,,1.8,FACE,,,0.144
+R086,BM-1F-014,1F,B4,B4,beam span,CALCULATED,0.2,0.5,4.1,,,H,,,,,,,,,4.1,FACE,,,0.41
+R087,BM-1F-015,1F,B5,B5,beam span,CALCULATED,0.2,0.5,3.475,,,V,,,,,,,,,3.475,FACE,,,0.3475
+R088,BM-1F-016,1F,B5,B5,beam span,CALCULATED,0.2,0.5,4.85,,,V,,,,,,,,,4.85,FACE,,,0.485
+R089,BM-1F-017,1F,CB12,CB12,beam span,CALCULATED,0.25,0.75,5.625,1,2,V,38.0475,43.6725,0.2,0.2,0.9,0.9,6.175,6.175,5.625,FACE_FOUND,INTERIOR (gap between spans),B6@1.27,1.0546875
+R090,BM-1F-017,1F,CB12,CB12,beam span,CALCULATED,0.25,0.75,5.025,2,2,V,44.5725,49.5975,0.9,0.9,0.25,0.25,5.6,5.6,5.025,INTERIOR (gap between spans),FACE_FOUND,B4@0.65,0.9421875
+R091,BM-1F-018,1F,B6,B6,beam span,CALCULATED,0.25,0.5,4.1,,,H,,,,,,,,,4.1,FACE,,,0.5125
+R092,BM-1F-019,1F,B6,B6,beam span,CALCULATED,0.25,0.5,4.4222,,,H,,,,,,,,,4.4222,FACE,,,0.552772881
+R093,BM-1F-020,1F,B6,B6,beam span,CALCULATED,0.25,0.5,4.3722,,,H,,,,,,,,,4.3722,FACE,,,0.546522881
+R094,BM-1F-021,1F,B6,B6,beam span,CALCULATED,0.25,0.5,4.1,,,H,,,,,,,,,4.1,FACE,,,0.5125
+R095,BM-1F-022,1F,CB13,CB13,beam span,CALCULATED,0.3,0.5,3.0,1,2,V,38.048,41.048,0.2,0.2,0.7,0.7,3.45,3.45,3.0,FACE_FOUND,INTERIOR (gap between spans),B6@1.27,0.45
+R096,BM-1F-022,1F,CB13,CB13,beam span,CALCULATED,0.3,0.5,3.15,2,2,V,41.748,44.898,0.7,0.7,0.45,0.45,3.725,3.725,3.15,INTERIOR (gap between spans),FACE_FOUND,B4@1.35 B6@2.24,0.4725
+R097,BM-1F-023,1F,CB11,CB11,beam span,CALCULATED,0.3,0.75,6.7083,1,3,H,18.6819,25.3902,0.7,0.7,0.7988,0.7988,7.4577,7.4577,6.7083,FACE_FOUND,INTERIOR (gap between spans),B18@4.46,1.509360469
+R098,BM-1F-023,1F,CB11,CB11,beam span,CALCULATED,0.3,0.75,2.65,2,3,H,26.189,28.839,0.7988,0.7988,0.601,0.601,3.3499,3.3499,2.65,INTERIOR (gap between spans),INTERIOR (gap between spans),B25@2.15,0.59625
+R099,BM-1F-023,1F,CB11,CB11,beam span,CALCULATED,0.3,0.75,3.3,3,3,H,29.44,32.74,0.601,0.601,0.5,0.5,3.8505,3.8505,3.3,INTERIOR (gap between spans),FACE_FOUND,(none)@3.25,0.7425
+R100,BM-1F-024,1F,B18,B18,beam span,CALCULATED,0.35,0.75,6.3,,,V,,,,,,,,,6.3,FACE,,,1.65375
+R101,BM-1F-025,1F,B19,B19,beam span,CALCULATED,0.4,0.75,5.3375,,,H,,,,,,,,,5.3375,,"ends on a drawn face: 0 of 2 (length is the register's, not re-measured)",,1.601237049
+R102,BM-1F-026,1F,B23,B23,beam span (west of the column),CALCULATED,0.45,0.75,3.0,,,H,,,,,,,,,3.0,FACE,,,1.0125
+R103,BM-1F-026,1F,B23,B23,beam span,CALCULATED,0.45,0.75,3.3,,,H,,,,,,,,,3.3,FACE,,,1.11375
+R104,BM-1F-027,1F,B25,B25,beam span,CALCULATED,0.55,0.75,6.8754,,,V,,,,,,,,,6.8754,FACE,"ends on a drawn face: 1 of 2 (length is the register's, not re-measured)",,2.836087573
+R105,BM-1F-028,1F,B4,B4,dome-opening ring beam (west opening),CALCULATED,0.2,0.5,arc pieces,,,,,,,,,,,,,,,,0.7553
+R106,BM-1F-029,1F,B23 upstand,-,upstand on top of B23 (not in the engine),CALCULATED,0.2,0.2,3.0,,,H,,,,,,,,,3.0,FACE,,,0.12
+R107,BM-1F-030,1F,B6,B6,beam span,CONFLICT,0.25 schedule / 0.2 drawn,0.5,4.4153,,,V,,,,,,,,,4.4153,FACE,,,0.4415
+R108,BM-1F-031,1F,CB10,CB10,inner west strip span 1,CONFLICT,0.3,see candidates,2.301,1,2,V,38.3475,40.6485,0.5,0.5,0.599,0.599,2.8505,2.8505,2.301,FACE_FOUND,INTERIOR (gap between spans),B6@0.97,0.2875
+R109,BM-1F-031,1F,CB10,CB10,inner west strip span 2,CONFLICT,0.3,see candidates,3.651,2,2,V,41.2475,44.8985,0.599,0.599,0.45,0.45,4.1755,4.1755,3.651,INTERIOR (gap between spans),FACE_FOUND,B6@2.74,0.4563
+R110,BM-1F-032,1F,(none),-,unlabelled span past a column,HELD,0.2,see candidates,0.801,,,V,,,,,,,,,0.801,FACE,,,0.064
+R111,BM-1F-033,1F,(none),-,0.20 strip north of B23,HELD,0.2,see candidates,2.999,,,H,,,,,,,,,2.999,,"ends on a drawn face: 0 of 2 (length is the register's, not re-measured)",,0.24
+R112,BM-1F-033,1F,(none),-,0.20 strip north of B23 (east piece),HELD,0.2,see candidates,0.524,,,H,,,,,,,,,0.524,FACE,"ends on a drawn face: 1 of 2 (length is the register's, not re-measured)",,0.042
+R113,BM-1F-034,1F,(none),-,outer west strip 0.20,HELD,0.2,see candidates,7.5,,,V,,,,,,,,,7.5,FACE,"ends on a drawn face: 1 of 2 (length is the register's, not re-measured)",,0.6
+R114,BM-1F-035,1F,(none),-,south-east box 0.30,HELD,0.3,see candidates,0.899,,,H,,,,,,,,,0.899,FACE,"ends on a drawn face: 1 of 2 (length is the register's, not re-measured)",,0.135
+R115,BM-1F-036,1F,(none),-,strip outside CB12 0.30,HELD,0.349,see candidates,4.51,,,V,,,,,,,,,4.51,FACE,"ends on a drawn face: 1 of 2 (length is the register's, not re-measured)",,0.676
+R116,BM-1F-037,1F,(none),-,rounded box outside CB12 at mid length,HELD,0.4,not printed,1.0,,,V,,,,,,,,,1.0,FACE,"ends on a drawn face: 1 of 2 (length is the register's, not re-measured)",,
+R117,BM-1F-038,1F,(none),-,"0.10 strip outside CB12, south part",HELD,0.1,not printed,5.69,,,H,,,,,,,,,5.69,,"ends on a drawn face: 0 of 2 (length is the register's, not re-measured)",,
+R118,BM-1F-039,1F,(none printed),-,dome-opening ring (east opening),HELD,0.2,not printed for this ring,arc pieces,,,,,,,,,,,,,,,,0.8997
+R119,BM-2F-001,2F,B3,B3,beam span,CALCULATED,0.2,0.4,2.5,,,H,,,,,,,,,2.5,FACE,,,0.2
+R120,BM-2F-002,2F,B8,B8,beam span,CALCULATED,0.2,0.75,3.47,,,H,,,,,,,,,3.47,FACE,,,0.5205
+R121,BM-2F-003,2F,B3,B3,beam span,CALCULATED,0.2,0.4,2.45,,,H,,,,,,,,,2.45,FACE,,,0.196
+R122,BM-2F-004,2F,B2,B2,beam span,CALCULATED,0.2,0.4,2.5,,,H,,,,,,,,,2.5,FACE,,,0.2
+R123,BM-2F-005,2F,B1,B1,beam span,CALCULATED,0.2,0.4,1.8,,,H,,,,,,,,,1.8,FACE,,,0.144
+R124,BM-2F-006,2F,B2,B2,beam span,CALCULATED,0.2,0.4,3.0,,,H,,,,,,,,,3.0,FACE,,,0.24
+R125,BM-2F-007,2F,B15,B15,beam span,CALCULATED,0.2,1.2,2.7,,,V,,,,,,,,,2.7,FACE,,,0.648
+R126,BM-2F-008,2F,B2,B2,beam span,CALCULATED,0.2,0.4,1.8,,,H,,,,,,,,,1.8,FACE,,,0.144
+R127,BM-2F-008,2F,B2,B2,beam span,CALCULATED,0.2,0.4,3.0,,,H,,,,,,,,,3.0,FACE,,,0.24
+R128,BM-2F-009,2F,B1,B1,beam span,CALCULATED,0.2,0.4,1.0,,,V,,,,,,,,,1.0,FACE,,,0.08
+R129,BM-2F-010,2F,B3,B3,beam span,CALCULATED,0.2,0.4,3.0,,,V,,,,,,,,,3.0,FACE,,,0.24
+R130,BM-2F-011,2F,B7,B7,beam span,CALCULATED,0.2,0.75,6.6,,,V,,,,,,,,,6.6,FACE,,,0.99
+R131,BM-2F-012,2F,B3,B3,beam span,CALCULATED,0.2,0.4,2.7,,,V,,,,,,,,,2.7,FACE,,,0.216
+R132,BM-2F-013,2F,B1,B1,beam span,CALCULATED,0.2,0.4,1.2,,,V,,,,,,,,,1.2,FACE,,,0.096
+R133,BM-2F-014,2F,B1,B1,beam span,CALCULATED,0.2,0.4,1.8,,,H,,,,,,,,,1.8,FACE,,,0.144
+R134,BM-2F-015,2F,(none),-,unlabelled span past a column,HELD,0.2,see candidates,1.13,,,H,,,,,,,,,1.13,FACE,,,0.09
+R135,BM-2F-016,2F,(none),-,unlabelled span past a column,HELD,0.199,see candidates,3.1,,,V,,,,,,,,,3.1,FACE,,,0.248
+R136,BM-2F-017,2F,(none),-,unlabelled span past a column,HELD,0.2,see candidates,1.399,,,V,,,,,,,,,1.399,FACE,,,0.112
+R137,BM-2F-018,2F,(none),-,unlabelled span past a column,HELD,0.2,see candidates,1.399,,,V,,,,,,,,,1.399,FACE,,,0.112
+R138,BM-GF-035.2,GF,CB5,CB5,beam span,CALCULATED,0.2,0.4,3.7,2,2,V,41.248,44.948,0.6,0.6,0.4,0.4,4.2,4.2,3.7,INTERIOR (gap between spans),FACE_FOUND,,0.2960
