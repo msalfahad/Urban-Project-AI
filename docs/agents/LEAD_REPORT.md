@@ -1,5 +1,61 @@
 # Lead reports to the owner's main chat (newest first, last 10 entries)
 
+## LEAD REPORT 2026-10-21 06:30 UTC
+
+Repositories: Urban-Project-AI cloned (agents/control, full clone); working branch head 0dec24c (one verifier merge since
+04:10, no owner-session commits). Drive readable, no new project files. UrbanProjectsManager not needed this run.
+
+PROGRESS (Alsenan; released concrete still 92.77 vs freelancer 111.81 m3, -17.0 %; no released number moved)
+- Checked and merged: ground-beam and strap steel 1.480 t net (unchanged), now with the lap / development rule printed in
+  the structural notes as a HELD range 0.647 .. 1.195 t and stock-length splices 0.018 .. 0.032 t (the drawing does not
+  say which bars are in tension, so a range, not a guess); his 5.8 t is a lump, not comparable.
+- Built by hand, waiting for the checker (06:49): suspended slabs, 62 panels: 60.280 m3 vs engine 60.966 (+1.1 %) vs his
+  59.817 (+0.8 %); every panel agrees with an engine face to 0.002 m2, the engine's extra 0.686 m3 is 13 faces that are
+  not slab; the held 2.740 m3 face is the west dome opening and its ring, not slab.
+- Plaster / paint by both methods for every room (gate 2): your method GF 391.17 / 1F 375.03 / 2F 107.92 m2; the
+  drawing-derived heights are 0.44 .. 0.54 m higher everywhere (your 0.60 m beam allowance vs the 0.16 m slab), whole
+  house 1,150.62 .. 1,177.59 vs his 1,209.39 m2 gross (-4.9 .. -2.6 %); wet-wall tile 483.44 vs his 433.83 m2 (+11.4 %,
+  his is one flat 3.00 m figure). Nets wait on 18 window heights and arch heads.
+- Learned: every room under a roof has the annex's level problem (roof slab level and build-up not printed); crossing
+  beams make bulkheads, a ceiling item; a slab face should be released only with slab evidence.
+- Added: window heights from elevations and sections (to measure the nets), ceilings room by room under your Q-57 answer
+  (a category with no quantity yet), the slab leftovers (a beam span with a 0.296 m3 register gap, sunken-slab edges),
+  and "slab only with slab evidence" queued for the candidate. Designer requests D-39 (roof levels and build-up), D-40
+  (ceiling levels, floor build-up), D-41 (sunken-slab drops).
+
+TEAM HEALTH (slots 04:09 - 05:49)
+- Code ran fully (STARTED + SUCCESS, five self-check steps PASS): worker 1 04:19 and 05:19, verifier 04:49; Lead 04:09.
+- Worker 3 05:00 SUCCESS but without code: clone of the working branch, venv, codemap, t061 and freeze check refused
+  "Permission for this action was denied by the Claude Code auto mode classifier. Reason: [Code from External]."; it
+  correctly took a hand-only task. Its 06:00 run passed the self-check and is on the registry rework.
+- INCOMPLETE, no line at all (cause NOT KNOWN): worker 2 04:39; verifier 05:49 (fired 05:50, ended 05:54, while two
+  results waited for it). 5 of 7 finished slots = 71 % (was 44 %, target 90 %).
+- What I did: nothing on the board explains the two silent runs (both had work available); the 06:49 checker run has
+  both results first in its queue. Every lane holds 3 TODO.
+
+QUESTIONS FOR OWNER
+NEW Q-72 (added to today's package with Q-71; no-assumptions question; work continues with the drawing-derived value).
+THE PROBLEM: your manual plaster / paint height formula is written for rooms (beam allowance, decor ceiling, floor
+finish); the main stair shaft runs through all three storeys with no slab, beam or ceiling between them, and no rule or
+answer covers it, so its owner-method column is HELD. Wall faces: GF 11.94 m, 1F 13.38 m, 2F 14.25 m.
+WHERE TO LOOK: Drive "Alsenan chalet project", p7757_arch_sheet03.pdf / sheet04.pdf (GF / 1F plans, the stair rectangle
+with windows W01 and W13), the 2F plan, section A-A on p7757_arch_sheet10.pdf.
+THE OPTIONS (gross m2, whole shaft): (A) your room heights per storey 3.65 / 3.35 / 3.35 m: 136.14; (B) full storey
+height where no ceiling exists (GF 4.50, 1F 4.20) and the drawing height under the roof (3.79 .. 3.89, provisional until
+the roof level is known): 163.93 .. 165.35; (C) full height for GF and 1F, your 3.35 m at the top: 157.66.
+RECOMMENDATION: B: inside a shaft there is no slab band, beam or decor ceiling between storeys, so the room deductions
+do not physically occur except under the roof; landing-slab edges are deducted separately, not by lowering the height.
+Still open: Q-71 (footing bars printed per metre: A 2,742.51 / B 2,836.40 recommended / C 2,797.81 kg for five footings).
+
+NEEDS FIXING
+- Run reliability (P-01, 71 %): the fix is yours: run Test B yourself and approve the repo-attached configuration.
+  Tried: lane stocking, claimable rows in every lane, hand-only rows for refused runs.
+- Kuwait specification chapters (07100, 09200, 09300, 09400, 09900) as PDFs under 6 MB (soffit and ceiling finishes).
+- Designer requests to forward when you choose: D-39 .. D-41 new, D-31 .. D-38 and earlier in DESIGNER_CLARIFICATIONS.md.
+
+Team ids: MERGED T-138 r2; READY T-139, T-128; CLAIMED T-130 r2, T-125; new T-144 (A), T-145 (S), T-147 (A), T-146 (I,
+queued); Q-72 new, Q-71 open; D-39 .. D-41.
+
 ## LEAD REPORT 2026-10-21 04:20 UTC
 
 Repositories: Urban-Project-AI cloned (agents/control, full clone); working branch head 5315d48 (six verifier merges
@@ -511,56 +567,3 @@ NEEDS FIXING
 Team line: MERGED T-099, T-016a, T-091, T-103; READY T-016b, T-014, T-027; READY T-104 (12:19); new TODO T-107, T-110, T-111,
 T-112, T-113, T-114; QUEUED T-108, T-109, T-115, T-092; Q-50..Q-63 moved to Answered.
 
-## LEAD REPORT 2026-10-20 10:20 UTC
-
-Repositories: Urban-Project-AI cloned (control; working branch head 42123d8, only checker merges since 08:20, no
-owner-session commits); Drive readable (nothing new since 06:00). UrbanProjectsManager not needed this run.
-
-PROGRESS (Alsenan; released concrete still 92.77 vs freelancer 111.81 m3, -17.0 %, unchanged)
-- Waterproofing: the parapet-step fix is merged. The second-floor roof (0.84 m2 of upturn that had no strip) is now fully
-  covered by a 4.60 m strip; its roll count changes from 17 released to HELD "17 or 18" until you answer the offcut
-  question; 1F roofs 8 + 6 and the 17 wet areas 19 rolls unchanged (19 rolls confirmed by a hand plan of every wet room,
-  strips 122.50 vs engine 122.99 m, -0.4 %). Roof membrane 204.11 vs 285.00 m2 (-28.4 %) unchanged (top roof held).
-- Concrete: the checker sent back two pieces for the same small fault (each new module mentions reinforcement and is not
-  declared in a repository-wide guard test): the beam ledger (beams 68.84 vs 65.97 m3, +4.4 %, on the released part; 18
-  pieces held, so not compared) and stair concrete (main stair 5.011 vs 8.131 m3, -38.4 %; the checker's own hand
-  calculation gives 5.011, so the difference is his longer flights). Both are reworked together as one package; numbers
-  do not change.
-- Rooms: the guard for rooms that vanish is built (waits for the checker): 0 Alsenan rooms lost (no labelled room under
-  1 m2 here or in his BOQ), 3 unlabelled rooms 8.13 m2 HELD; hand-wash spaces 9.35 vs his 9.58 m2 (-2.4 %).
-- Finishes: every Alsenan sheet was read for printed notes: no tile size, floor finish, skirting, ceiling or door schedule
-  anywhere; one door height (main entrance 2.50 m); the sanitary sheets say "not to scale". The freelancer's stair marble
-  295.44 m2 counts the 151.80 m2 court a second time (his own formulas; stairs and landings alone 143.64 m2).
-- Checks: ten older engine changes re-measured by hand from the drawing: all ten right. That check found 17.04 m of
-  skirting deductions in 20 of 28 lines that are not listed, now a task.
-- Learned: a new piece can pass all its own tests and still fail a repository-wide guard; every new piece now runs it.
-- Gates: gate 1 on track (two merges, two READY); gate 2 started (blockwork metres by hand running now); gate 3 started
-  (rework package on the board); gate 4 one task.
-
-TEAM HEALTH: every logged run since 08:20 passed its self-check (clone, venv, codemap, t061 test, freeze), so workers 1,
-2, 3 and the checker could run code; single chained commands were refused a few times and redone as separate steps. Two
-worker runs left no log line (worker 3 at 08:59, worker 2 at 09:39, 2 minutes): the same pattern as the overnight silent
-runs (a run stopped on a permission card). Nothing for you beyond the setting already listed. Research scout ran 23:51,
-next 23:50.
-
-QUESTIONS FOR OWNER
-No new question this run (13 open, Q-50 .. Q-62, all no-assumption questions; the list is long).
-- CHANGED, please re-read Q-56 (first-floor living room): the earlier text was wrong. By the printed sizes on
-  p7757_arch_sheet04.pdf the freelancer's 38.96 m2 is not the living room alone: living 4.80 x 5.20 = 24.96 less the round
-  stair's arriving flight 2.76 = 22.20, corridor along the void 5.87 x 1.20 = 7.04, main-stair landing 2.50 x 1.95 = 4.88,
-  connector by the lift about 4.80 (CAD only) = 38.92 m2. Options: (A) all porcelain, each piece its own row, 38.92 m2
-  (recommended: same as him, but a later finish change moves one row); (B) landing 4.88 m2 in marble with the stair,
-  porcelain 34.04 m2; (C) one porcelain row as he has.
-- FOR YOUR INFORMATION (Q-45 slope check you asked for): the drainage sheets print "SLOPE 1%" on the first-floor roof, the
-  annex roof and the terrace strips, not 0.5 %. For Alsenan the drawing is followed (1 %), your 0.5 % where no slope is
-  printed. Tell us only if you meant 0.5 % for every roof.
-
-NEEDS FIXING
-- Unchanged: run the coding agents as Claude Code scheduled tasks with the repository attached, and check each task for
-  automatic approval; a run that stops on a permission card times out with no log line (two runs this morning). Tried:
-  the claim method is three separate commands, the board is 80 KB so a connector run can still log.
-- Unchanged: upload the Kuwait specification chapters 07100, 09200, 09300, 09400, 09900 as separate PDFs under 6 MB.
-
-For the team: MERGED T-096, T-098; REJECTED T-097, T-056 -> rework T-105; READY T-099, T-016a, T-091 (verifier order);
-CLAIMED T-103 (worker 3); new TODO T-105, T-016b, T-106, T-014 (T-015 folded in), T-104 promoted; T-101 after T-105;
-11 TODO (1 Track B).

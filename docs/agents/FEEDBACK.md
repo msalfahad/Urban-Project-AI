@@ -34,6 +34,33 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
    commit. Decision: board-only handoffs are verified as hand evidence (the verifier re-reads the cited notes), and the
    next task on the topic writes the files (T-117); a run with no line stays a NEEDS FIXING item for the owner's setting.
 
+## 2026-10-21 06:30 (lead run)
+
+- **T-138 r2 ground-beam / strap steel**: WORKED. MERGED 0dec24c (05:07); net 1,479.86 kg unchanged; development 40 d ..
+  70 d (ST p.8 note 9) HELD 646.53 .. 1,194.51 kg; procurement laps on the two runs over 12 m HELD 18.20 .. 31.86 kg;
+  checker re-measured both runs on the DXF (13.770 / 18.570 m). Freelancer 5.8 t / 9.75 t are lumps: RULE_DIFFERENCE, no %.
+  Learned: route G prints ground-beam steel only under the typed ST7757 profile (58 lines, 3,526.92 kg); the default run
+  has 59 UNRESOLVED and 0 kg. Decision: T-141 (span splitter V2) now has its hand check; the typed-profile dependence is
+  already the gate-0 generality item (T-045 / T-024), not a new task.
+- **T-139 slabs panel by panel**: WORKED (pending the checker). 62 panels 60.280 m3 vs engine 60.966 (+1.14 %) vs
+  freelancer 59.817 (+0.77 %); every panel matches an engine face within 0.002 m2; the engine excess is 13 non-slab
+  faces (0.686 m3); the held 2.740 m3 face settled as dome opening + ring (not slab). Open: CB5 span 2 (beam-register gap
+  0.296 m3), sunken-slab drops (not printed), 1F +3.48 m2 UNRESOLVED. Decision: T-145 (S) for the leftovers, T-146 (I,
+  queued) for "slab face released only with slab evidence", designer D-41; the checker decides the UNRESOLVED.
+- **T-128 plaster / paint both methods**: WORKED (pending the checker), run without code (self-check refused "[Code from
+  External]", NO REPO CODE row taken correctly). Dry gross owner GF 391.17 / 1F 375.03 / 2F 107.92 m2; drawing-derived
+  440.30..451.45 / 424.30..435.48 / 122.09..125.31; whole house drawing-derived 1,150.62..1,177.59 vs freelancer 1,209.39
+  gross (-4.9..-2.6 %). The difference between methods is +0.44..+0.54 m height everywhere (owner 0.60 beam allowance vs
+  the 0.16 m slab). Gaps: shaft owner column (no rule), roof datum, 18 window heights, ceilings. No-assumptions check: the
+  worker held the shaft owner column instead of inventing a height (right), but raised no question; a missing owner
+  case is a question. Decision: owner Q-72 (today's package), designer D-39 / D-40, T-144 (window heights -> nets),
+  T-147 (ceilings, Q-57 A mod, a missing category). Registry note for the coverage work: UP-GEN-003 1.1.0 still says the
+  plaster / paint deduction is pending while UP-OPEN-SCHED-001 is approved (a stale status, not a rule conflict: the
+  approved opening rule is the newer one); recorded here for the T-130 r2 / T-140 registry pass.
+- Recurring: silent runs fell (2 of 7 finished slots without a line: worker 2 04:39, verifier 05:49) and code ran in
+  5 of 6 logged runs; worker 3 05:00 was refused code again ("[Code from External]") but its 06:00 run passed.
+  Decision: no board cause found (the verifier had two READY tasks waiting at 05:49); stays under NEEDS FIXING (P-01).
+
 ## 2026-10-21 04:10 (lead run)
 
 - **T-131 r2 ARCH_TAKEOFF_V3.0 skeleton**: WORKED. MERGED b1a6d6d (02:30): 217 differing lines = 217 ledger rows, 1333

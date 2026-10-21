@@ -1,56 +1,8 @@
 [
- {
-  "agent": "Lead planner",
-  "role": "Plans the work, keeps the board and milestones, asks you questions",
-  "cadence": "every 2 h at :09",
-  "last_run": "2026-10-21T04:09:43Z",
-  "result": "running",
-  "working_on": "Board restocked (lanes S 4, A 3, I 4): steel laps rework, V3.0.1 wiring now claimable; no new owner question",
-  "as_of": "2026-10-21T04:20:00Z"
- },
- {
-  "agent": "Worker 1",
-  "role": "Builds one board task per run on its own branch",
-  "cadence": "hourly :19",
-  "last_run": "2026-10-21T03:19:47Z",
-  "result": "ok",
-  "working_on": "Delivered ground-beam and strap steel by hand (1.480 t confirmed; sent back to add laps from the structural notes) (T-138)",
-  "as_of": "2026-10-21T04:20:00Z"
- },
- {
-  "agent": "Worker 2",
-  "role": "Builds one board task per run on its own branch",
-  "cadence": "hourly :39",
-  "last_run": "2026-10-21T03:39:26Z",
-  "result": "failed",
-  "working_on": "Last run left no log line (INCOMPLETE, cause not known); 02:39 run delivered the pool-court soffit 12.834 m2, merged (T-127)",
-  "as_of": "2026-10-21T04:20:00Z"
- },
- {
-  "agent": "Worker 3",
-  "role": "Builds one board task per run on its own branch",
-  "cadence": "hourly :59",
-  "last_run": "2026-10-21T04:00:07Z",
-  "result": "failed",
-  "working_on": "Runs 02:59 and 03:59 left no log line (INCOMPLETE); last delivered the membrane coverage proof, merged (T-137); V3.0.1 wiring now claimable (T-133)",
-  "as_of": "2026-10-21T04:20:00Z"
- },
- {
-  "agent": "Verifier",
-  "role": "Checks finished tasks, merges or rejects, keeps the scoreboard",
-  "cadence": "hourly :49",
-  "last_run": "2026-10-21T03:49:24Z",
-  "result": "ok",
-  "working_on": "Merged membrane coverage proof, stairs ledger and pool-court soffit; sent back ground-beam steel for laps; nothing waiting",
-  "as_of": "2026-10-21T04:20:00Z"
- },
- {
-  "agent": "Research scout",
-  "role": "Finds techniques and tools for the biggest gap",
-  "cadence": "daily 23:50 UTC",
-  "last_run": "2026-10-20T23:50:52Z",
-  "result": "ok",
-  "working_on": "Answered membrane coverage, wall centreline and scanned-notes requests; open: footing schedules from CAD tables, laps and stock lengths",
-  "as_of": "2026-10-21T04:20:00Z"
- }
+ {"agent": "Lead planner", "role": "Plans the work, keeps the board and milestones, asks you questions", "cadence": "every 2 h at :09", "last_run": "2026-10-21T06:16:27Z", "result": "running", "working_on": "Board restocked (lanes S 3, A 3, I 3): window heights, ceilings, slab leftovers added; stair-shaft question added to today's package", "as_of": "2026-10-21T06:35:00Z"},
+ {"agent": "Worker 1", "role": "Builds one board task per run on its own branch", "cadence": "hourly :19", "last_run": "2026-10-21T05:19:36Z", "result": "ok", "working_on": "Delivered suspended slabs by hand, 62 panels: 60.280 m3 vs engine 60.966 vs freelancer 59.817, waiting for the checker (T-139)", "as_of": "2026-10-21T06:35:00Z"},
+ {"agent": "Worker 2", "role": "Builds one board task per run on its own branch", "cadence": "hourly :39", "last_run": "2026-10-21T05:40:05Z", "result": "running", "working_on": "Wall run version 2: bands across open floor, doorways at free ends, curved bays (T-125); its 04:39 run left no log line", "as_of": "2026-10-21T06:35:00Z"},
+ {"agent": "Worker 3", "role": "Builds one board task per run on its own branch", "cadence": "hourly :59", "last_run": "2026-10-21T06:00:15Z", "result": "running", "working_on": "Coverage registry rework (T-130 r2); last delivered plaster / paint by both methods for every room, waiting for the checker (T-128)", "as_of": "2026-10-21T06:35:00Z"},
+ {"agent": "Verifier", "role": "Checks finished tasks, merges or rejects, keeps the scoreboard", "cadence": "hourly :49", "last_run": "2026-10-21T05:50:05Z", "result": "failed", "working_on": "05:49 run left no log line while slabs and plaster / paint waited; 04:49 run merged ground-beam and strap steel with the lap range (T-138)", "as_of": "2026-10-21T06:35:00Z"},
+ {"agent": "Research scout", "role": "Finds techniques and tools for the biggest gap", "cadence": "daily 23:50 UTC", "last_run": "2026-10-20T23:50:52Z", "result": "ok", "working_on": "Open: footing schedules from CAD tables, laps and stock lengths in bar schedules", "as_of": "2026-10-21T06:35:00Z"}
 ]

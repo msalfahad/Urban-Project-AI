@@ -46,20 +46,21 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
-## Status (Lead, 2026-10-21 04:10; re-estimated each run from what merged and was verified)
+## Status (Lead, 2026-10-21 06:30; re-estimated each run from what merged and was verified)
 
 | Plan | Board | State | Note |
 |---|---|---|---|
-| P-01 | owner + auditor | in progress, AT RISK | Test B and the main config not confirmed. Slots 02:19-03:59 + Lead 02:09: SUCCESS Lead 02:09, worker 2 02:39, worker 1 03:19, verifier 03:49; no line at all: worker 1 02:19, verifier 02:49, worker 3 02:59 and 03:59, worker 2 03:39 (2-4 min where shown). 4 of 9 = 44 % vs 90 % (was 56 %) |
-| P-02 | T-130 r2 (lane I) | REJECTED 02:30, rework TODO first in lane I | B1-02 / B10-13 / B8-07 have merged code; lintels / slabs to justify; census T-140 after it |
-| P-03 | T-131 MERGED b1a6d6d; T-133 (V3.0.1) TODO; T-142 (V3.0.2) QUEUED | skeleton DONE | 217 / 217 lines documented vs released V2.9; V3.0.1 claimable now |
+| P-01 | owner + auditor | in progress, AT RISK | Test B and the main config not confirmed. Slots 04:09-05:49: SUCCESS Lead 04:09, worker 1 04:19 and 05:19, verifier 04:49, worker 3 04:59 (code refused, hand task); no line at all: worker 2 04:39, verifier 05:49 (4.7 min, two results waiting). 5 of 7 = 71 % vs 90 % (was 44 %) |
+| P-02 | T-130 r2 (lane I) | CLAIMED 06:08 (worker 3) | census T-140 after it; UP-GEN-003 stale status noted for it |
+| P-03 | T-131 MERGED b1a6d6d; T-133 (V3.0.1) TODO; T-142 (V3.0.2), T-146 (slab evidence) QUEUED | skeleton DONE | V3.0.1 claimable since 04:10, not yet claimed (worker 3 took the registry rework first, as ordered) |
 | P-04 | T-132 (verifier) | TODO, unblocked | candidate WAPE 54.65 % on 2 concrete lines (footing key held), released 17.03 % on 3 |
 | P-05 | T-126 MERGED cd34bd0 | done as a piece; wiring in T-133 | |
-| P-06 | T-128 (lane A) | TODO | worker 2 closed 02:56 on the soffit instead |
-| P-07 | T-125, T-143 (hand truth), then T-108 (lane A) | TODO | |
-| P-08 | T-136 MERGED 6d532c5; T-138 r2, T-141 (lane S) | footings DONE as a piece | ground beams / straps 1.480 t confirmed, back for laps; Q-71 decides 2.74 .. 2.84 t |
-| P-09 | T-134 (lane I) | TODO, claimable now | |
+| P-06 | T-128 READY 69c1a0a (lane A) | hand result waiting for the checker | both methods per room; nets wait on T-144 (window heights); shaft owner column on Q-72; ceilings T-147 |
+| P-07 | T-125 CLAIMED (worker 2), T-143 (hand truth), then T-108 (lane A) | in progress | |
+| P-08 | T-136 MERGED 6d532c5; T-138 r2 MERGED 0dec24c; T-141 (lane S) | footings and ground beams / straps DONE as hand pieces | ground beams 1.480 t net + lap range HELD; Q-71 decides 2.74 .. 2.84 t |
+| P-09 | T-134 (lane I) | TODO, claimable | |
+| (gate 3 check) | T-139 READY 84d156e; T-145 (lane S) | slabs by hand waiting for the checker | 60.280 hand vs 60.966 engine vs 59.817 m3 |
 
-Day-7 target (2026-10-27): ON TRACK: V3.0 merged at 02:29 (21 Oct); the first verified improvement through it is V3.0.1
-(columns -2.268 m3, blinding, landing / arrival once, beams, stairs), claimable now. Risk: run reliability (44 %),
-worker 3 has not closed a run since 01:45; not the engineering.
+Day-7 target (2026-10-27): ON TRACK: V3.0 merged; the first verified improvement through it is V3.0.1 (columns -2.268
+m3, blinding, landing / arrival once, beams, stairs), claimable now. Risk: run reliability (71 %), and V3.0.1 is not
+claimed yet; not the engineering.

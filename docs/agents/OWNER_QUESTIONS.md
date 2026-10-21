@@ -177,6 +177,30 @@ WAITS ON: footing steel of F8, F12, F13, F14, FF (2.74 .. 2.84 t, the largest he
 metre or at a spacing on any villa (T-136, then T-009). The top layer of these footings also waits on a designer
 detail for its bar ends (not drawn); that is a drawing request, not this question.
 
+### Q-72 Main stair shaft walls: which height does your manual plaster / paint method take for a stair shaft that runs through all storeys? (lead 2026-10-21 06:30, from worker 3's two-method room table; T-128; no-assumptions question: your manual height formula (Q-43, G1) is written for rooms with a beam and a decor ceiling, and no Urban rule or answer covers a wall that runs through the storeys with no slab, beam or ceiling between them) — addition to today's package (Q-71)
+
+THE PROBLEM: the main dog-leg stair shaft (2.46 m wide inside, same rectangle on the three plans) has wall faces GF
+11.94 m, 1F 13.38 m, 2F 14.25 m. The drawing-derived method gives 163.93 .. 165.35 m2 gross paint (plaster to the roof
+soffit 167.49 m2). Your manual method has no stair-shaft case, so the owner-manual column for the shaft is HELD; the
+other 28 rooms have both columns.
+WHERE TO LOOK: Drive "Alsenan chalet project", p7757_arch_sheet03.pdf / sheet04.pdf (GF / 1F plans: the stair
+rectangle with W01 and W13), the 2F plan, and section A-A on p7757_arch_sheet10.pdf (the storey level marks and
+the roof). Example: GF shaft wall 11.94 m x 4.50 m storey interval = 53.73 m2, against 11.94 x 3.65 = 43.58 m2 with your
+room height.
+THE OPTIONS (gross m2, whole shaft):
+(A) Your room heights per storey on the shaft faces (3.65 / 3.35 / 3.35 m): 43.58 + 44.82 + 47.74 = 136.14 m2.
+(B) The full storey interval where no ceiling exists (GF 4.50, 1F 4.20) and the drawing-derived height under the roof
+at the top (3.79 .. 3.89 m, PROVISIONAL until the roof datum D-39 is answered): 163.93 .. 165.35 m2.
+(C) The full storey interval for GF and 1F, and your 3.35 m room height at the top storey only: 53.73 + 56.20 + 47.74
+= 157.66 m2.
+RECOMMENDATION: B. Engineering reason: inside a stair shaft there is no slab band, beam allowance or decor ceiling
+between the storeys, so the deductions your formula makes for a room (0.60 beam, 0.15 decor ceiling, 0.10 floor
+finish) do not physically occur except under the roof; the wall is plastered and painted from the bottom landing to
+the top. The landing-slab edge bands where the landings meet the shaft walls are deducted separately (landing lengths
+from the stair ledger), not by lowering the height.
+WAITS ON: the owner-manual column of the shaft (A 136.14 / C 157.66 m2; B uses the drawing-derived value); work
+continues with the drawing-derived value shown as such. Nothing released changes.
+
 No question open (Lead 2026-10-20 20:10). Q-67, Q-68, Q-69 (answered 18:50) and Q-70 (answered 20:10, owner management decision) moved to Answered; their tasks: Q-67 -> T-123 / T-131 / T-127, Q-68 -> T-127, Q-69 -> T-125 / T-108, Q-70 -> T-129. From now on genuine owner decisions go in ONE daily package (owner management decision §10).
 
 Earlier note: Q-64, Q-65 and Q-66 answered by the owner 2026-10-20 16:23 (moved to Answered by the Lead 18:20). Q-67, Q-68, Q-69 new (Lead 18:20).
