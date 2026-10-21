@@ -203,4 +203,9 @@ OTHER_REBAR_AWARE = (
     # T-131: the V3.0 candidate names the STR.REBAR lines of a re-measured strap only to LIST them as downstream
     # (unchanged, outside the candidate); it writes no reinforcement quantity and applies no ratio
     "engine/source/arch_v30.py",
+    # T-105: concrete ledger V3 names reinforcement only in its docstring (beam steel stays the route's own items: it
+    # emits, supersedes and changes no reinforcement item; research/agents_t105/check_ledger_v3_steel_passthrough.py)
+    "engine/source/concrete_ledger_v3.py",
+    # T-105: stair concrete V1 names REINFORCEMENT only as an UNSUPPORTED_LATER_ITEM line with no quantity (Q-20)
+    "engine/source/stair_steps_concrete.py",
 )
