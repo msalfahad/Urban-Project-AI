@@ -13,6 +13,7 @@ If the full clone of the repository is refused, retry once with a docs-only clon
 `git sparse-checkout set docs/agents`; if that is refused too, use the GitHub connector. Fetch and rebase if the push is rejected.
 
 ## Entries
+- 2026-10-21 00:10 UTC | Lead | STARTED | run unknown | repo msalfahad/Urban-Project-AI, branch agents/control | task state: board | report pending
 - 2026-10-21 00:00 UTC | Worker 3 | STARTED | run session_01KKAJa3LZiDMxsiW4Spa3dG | repo msalfahad/Urban-Project-AI, branch agents/control | task state: none yet | self-check pending
 - 2026-10-20 23:56 UTC | Research scout | OK | R-06, R-07, R-08 | Most useful: R-07 strip length must be the projection of outline ∩ the whole 1.00 m strip rectangle, proven by shapely difference(grid_size=0.001) (explains the 4.20 x 0.20 m step-upturn miss); R-08 exact check area / t = Σ centreline − t/2 per T − t per X; R-06 KITAB-Bench shows permissive Arabic OCR CER 0.54-0.79, so only closed-list, two-reader agreement. 3 answers + 1 new finding (ifcmcp WATCH), 4 Ideas lines. | private repo urban-boq-private-data not attachable (no add_repo tool); Drive read instead; none else
 - 2026-10-20 23:50 UTC | Verifier | STARTED | run session_01PDSxEdnctBbdggUvto5JHs | repo msalfahad/Urban-Project-AI, branch agents/control | task state: READY T-131, T-105, T-135, T-102 (oldest first; the 22:51 verifier run left no final line: UNCLOSED) | self-check pending
