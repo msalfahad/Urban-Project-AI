@@ -1,0 +1,4132 @@
+{
+ "master": "URBAN_BOQ_FAMILY_MASTER",
+ "version": "1.1.0",
+ "supersedes": "1.0.0 (kept unchanged on disk)",
+ "source": "re-derived from the code of claude/access-permissions-setup-ii24ws at 0dec24c and from runs of that code (task T-130, plan P-02); 1.0.0 was the M9A read-only audit of 8177ccf",
+ "loaded_by": "nothing yet: engine/source/rule_store.py:104 and engine/source/coverage_census.py still read 1.0.0, so no run, census or quantity changes with this file; adopting it is a census version of its own",
+ "capability_states": [
+  "INTEGRATED_AND_TESTED",
+  "PARTIAL",
+  "IMPLEMENTED_NOT_INTEGRATED",
+  "EXPERIMENTAL",
+  "BLOCKED_BY_SOURCE",
+  "NOT_IMPLEMENTED"
+ ],
+ "capability_definitions": {
+  "INTEGRATED_AND_TESTED": "the released configuration emits BOQ lines of the family from tested code, and no verifier-confirmed open defect or unwired verified correction touches that path",
+  "PARTIAL": "the released configuration emits lines (or a run file) of the family, but part of the scope is missing, always held on a known input, or a verifier-confirmed defect / unwired verified correction is open",
+  "IMPLEMENTED_NOT_INTEGRATED": "merged, tested code measures the family, but only an opt-in method or a standalone piece reads it; the released configuration does not",
+  "EXPERIMENTAL": "research code only (round / P7757 engines), read by no method",
+  "BLOCKED_BY_SOURCE": "needs documents the engine does not read",
+  "NOT_IMPLEMENTED": "no code measures the family"
+ },
+ "released_configuration": "ARCH_TAKEOFF_V2.9 + route G (conventions URBAN_M8_GENERIC_CONVENTIONS_V6) (the scored configuration of docs/agents/SCOREBOARD.md; ARCH_METHODS has no default, tools/urban_boq_m9.py:67; the owner switches the released default)",
+ "v3_0_candidate": "ARCH_TAKEOFF_V3.0 (merged b1a6d6d, verifier 2026-10-21 02:30 UTC; opt-in, not the released default): ARCH_TAKEOFF_V2.13 + route G + checker-verified pieces (straps T-073, passage walls T-109 / T-123, stair floor residue T-116); 'in_v3_0_candidate' = the family's lines are produced by that candidate; 'v3_0_planned_tasks' = board tasks that change them next",
+ "run_evidence": {
+  "engine_commit": "0dec24c (r2: both runs repeated on the working head; the released BOQ_LINES.csv is byte-identical to the r1 run on 1513f1d, the candidate again 579 lines); the N10 figures of B1-02 / B10-13 come from tools/struct_n10.py on the released run's route G registers",
+  "python": "3.11 (project venv from requirements.txt)",
+  "inputs": "the development villa's architectural and structural DXF from the private Drive folder (read-only, never in this repository): sha256 ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4 and 9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079 (= SOURCE_MANIFEST)",
+  "released_run": "tools/urban_boq_m9.py arch --method ARCH_TAKEOFF_V2.9 --structural <ST> --conventions engine/profiles/URBAN_M8_GENERIC_CONVENTIONS_V6.json, no facts file: exit 0, 1455 lines, BOQ_LINES.csv sha256 b96185d468524743e600f1992d4e4b2028193ff4a379961bc5686c9662f8c115",
+  "candidate_run_v2_13": "arch_compute(method ARCH_TAKEOFF_V2.13) with the project inputs of the T-120 runner in research/agents_t120/ (fixture reading, exterior spaces, pantry 4.50 x 3.00 m typed record): 579 lines, architectural only",
+  "released_qty": "sum of measured_net over lines in MEASURED / SOURCE_DERIVED / PROVISIONAL; held lines carry no quantity (bounded low / high summed where the line gives a range); missing is never 0",
+  "item_codes_seen": {
+   "released_run": [
+    "ARCH.EXTERIOR",
+    "ARCH.FACADE",
+    "ARCH.FACADE_RUN",
+    "ARCH.PASSAGE",
+    "ARCH.SPACE",
+    "ARCH.THRESHOLD",
+    "ARCH.WALL_PANEL",
+    "ARCH.WALL_RUN",
+    "ARCH.WALL_VOLUME",
+    "ARCH.WINDOW",
+    "ARCH.WINDOW_REVEAL",
+    "DOOR.EXTERNAL.ALUMINIUM",
+    "DOOR.INTERNAL.PVC",
+    "FIN.CEILING",
+    "FIN.EXT.FINISH",
+    "FIN.FLOOR.PORCELAIN",
+    "FIN.FLOOR.WET_TILE",
+    "FIN.MARBLE.LANDING",
+    "FIN.MARBLE.RISER",
+    "FIN.MARBLE.THRESHOLD",
+    "FIN.MARBLE.TREAD",
+    "FIN.PAINT",
+    "FIN.PLASTER",
+    "FIN.RAILING",
+    "FIN.SKIRTING",
+    "FIN.STAIR.FLIGHT",
+    "FIN.STAIR.STEP_LM",
+    "FIN.WALL.TILE",
+    "FIN.WP.DOORWAY",
+    "FIN.WP.DOORWAY_TRANSITION",
+    "FIN.WP.FLOOR",
+    "FIN.WP.PENETRATION",
+    "FIN.WP.TERMINATION",
+    "FIN.WP.WALL_UPTURN",
+    "MAS.BLOCK",
+    "STR.CONC.BEAM",
+    "STR.CONC.BLINDING",
+    "STR.CONC.BOUNDARY_WALL",
+    "STR.CONC.COLUMN",
+    "STR.CONC.DOME",
+    "STR.CONC.FOOTING",
+    "STR.CONC.GROUND_BEAM",
+    "STR.CONC.GROUND_SLAB",
+    "STR.CONC.NECK",
+    "STR.CONC.POOL",
+    "STR.CONC.SLAB",
+    "STR.CONC.STAIR",
+    "STR.CONC.STRAP",
+    "STR.REBAR"
+   ],
+   "candidate_run_v2_13": [
+    "ARCH.EXTERIOR",
+    "ARCH.FACADE",
+    "ARCH.FACADE_RUN",
+    "ARCH.PASSAGE",
+    "ARCH.SPACE",
+    "ARCH.THRESHOLD",
+    "ARCH.WALL_PANEL",
+    "ARCH.WALL_RUN",
+    "ARCH.WALL_VOLUME",
+    "ARCH.WINDOW",
+    "ARCH.WINDOW_REVEAL",
+    "DOOR.EXTERNAL.ALUMINIUM",
+    "DOOR.INTERNAL.PVC",
+    "FIN.CEILING",
+    "FIN.EXT.FINISH",
+    "FIN.FLOOR.PORCELAIN",
+    "FIN.FLOOR.WET_TILE",
+    "FIN.MARBLE.LANDING",
+    "FIN.MARBLE.RISER",
+    "FIN.MARBLE.THRESHOLD",
+    "FIN.MARBLE.TREAD",
+    "FIN.PAINT",
+    "FIN.PLASTER",
+    "FIN.RAILING",
+    "FIN.SKIRTING",
+    "FIN.STAIR.FLIGHT",
+    "FIN.STAIR.STEP_LM",
+    "FIN.WALL.TILE",
+    "FIN.WP.DOORWAY",
+    "FIN.WP.DOORWAY_TRANSITION",
+    "FIN.WP.DOORWAY_TRANSITION_NR",
+    "FIN.WP.FLOOR",
+    "FIN.WP.MEMBRANE_ROLLS",
+    "FIN.WP.PENETRATION",
+    "FIN.WP.ROOF",
+    "FIN.WP.ROOF_UPTURN",
+    "FIN.WP.TERMINATION",
+    "FIN.WP.WALL_UPTURN",
+    "MAS.BLOCK"
+   ]
+  }
+ },
+ "item_code_scan": "every quoted item code in engine/source/*.py and tools/urban_boq_m9.py, except the item master engine/source/boq_line.py and the census map engine/source/coverage_census.py, is owned by exactly one family ('item_codes') or listed in 'item_codes_without_family'; a NOT_IMPLEMENTED family owns no written code and no engine/source function name carries one of its 'name_terms' (tests/t130_family_master)",
+ "item_codes_without_family": {
+  "ARCH.EXTERIOR": "the area of an exterior space (garden, court, roof) as a register line; its waterproofing is FIN.WP.* (B8-06 / B8-07) and it carries no finish of its own",
+  "STR.CONC.OTHER": "declared in the item master (engine/source/boq_line.py) for a route G family outside the map; no module writes it",
+  "FIN.FLOOR": "the label of an unresolved-floor record (engine/source/arch_measure.py:378), not a line code"
+ },
+ "census_gaps": [
+  "B8-03: engine/source/coverage_census.py:31 maps FIN.WP.UPTURN only; the V2.4+ methods emit FIN.WP.WALL_UPTURN",
+  "B6-02 / B6-03 / B6-04: DOOR.* and ARCH.WINDOW are counted under B6-01 only (coverage_census.py:35-36)",
+  "B9-01: maps MAS.BLOCK only; ARCH.WALL_RUN / WALL_PANEL / WALL_VOLUME are not counted",
+  "B3-04: FIN.MARBLE.THRESHOLD is not mapped; B2-02 / B2-03 have no entry (always NOT_RUN)",
+  "B5-01, B7-02, B7-06, B8-05: the 1.0.0 capability under-states what the census itself reports QUANTIFIED",
+  "B4-08: no item code is mapped; the released reveal lines are ARCH.WINDOW_REVEAL and FIN.PLASTER 'window reveals' (the latter counted under B4-03)",
+  "B8-07: the released balcony membrane is FIN.WP.FLOOR 'exterior wp_floor', counted under B8-01; FIN.WP.BALCONY (V2.11+) is not mapped",
+  "B1-02 / B10-13: the N10 tool writes no BOQ line, so a run always reports them NOT_IMPLEMENTED"
+ ],
+ "families": [
+  {
+   "code": "B1-01",
+   "group": "B1 Site",
+   "item_en": "Site clearance",
+   "item_ar": "تنظيف الموقع",
+   "unit": "m2",
+   "capability": "NOT_IMPLEMENTED",
+   "capability_1_0_0": "NOT_IMPLEMENTED",
+   "capability_change": "UNCHANGED",
+   "implementation": "none",
+   "source_needed": "site plan, scope",
+   "next_slice": "S4",
+   "evidence": [
+    "no method emits a line of this family: no item code for it in engine/source/boq_line.py:46-110 and none in the item codes seen in the released and candidate runs (run_evidence.item_codes_seen)"
+   ],
+   "released_method_reads": "none",
+   "opt_in_readers": "none",
+   "missing": "site works are not measured by any route",
+   "in_v3_0_candidate": "no",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": [],
+   "name_terms": [
+    "site_clear"
+   ]
+  },
+  {
+   "code": "B1-02",
+   "group": "B1 Site",
+   "item_en": "Excavation by type and depth",
+   "item_ar": "حفريات",
+   "unit": "m3",
+   "capability": "IMPLEMENTED_NOT_INTEGRATED",
+   "capability_1_0_0": "NOT_IMPLEMENTED",
+   "capability_change": "RAISED",
+   "implementation": "none",
+   "source_needed": "foundation plan + levels + soil report",
+   "next_slice": "S5",
+   "evidence": [
+    "engine/source/struct_n10.py:216 excavation(): a pit per footing (L + 2 ws) x (W + 2 ws) and a trench per ground beam clear length x (width + 2 ws) from the route G register; the volume only when the working space and the depth (or NGL and founding level) are stated facts, otherwise HELD (EX-D1 / EX-D2); backfill always HELD (:255)",
+    "tools/struct_n10.py:42 build(): standalone tool over a route G run, writes EXCAVATION.json; no method imports it (only tests/m9_n10 and the rebar firewall registry name it)",
+    "commit 40f3184 (Structural N10); tests/m9_n10/test_n10_structural.py:82 / :90 (held without levels, measured with stated depth and working space)",
+    "development villa (tool run on the released route G registers, head 0dec24c): 26 footing pits + 3 ground-beam trenches, footprint 139.299 m2; volume HELD: working space and excavation depth not stated (no project fact); the 59 UNRESOLVED ground-beam rows of route G give no trench (the 3 trenches come from its PROVISIONAL rows)"
+   ],
+   "released_method_reads": "none",
+   "opt_in_readers": "none (standalone tool tools/struct_n10.py)",
+   "missing": "not in any method or BOQ line; volume needs the working space and the depth (owner / project facts); pits are not merged where they overlap (upper bound); by type and depth (soil classes) not modelled; no hand check",
+   "in_v3_0_candidate": "no",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": [],
+   "note": "1.0.0 and 1.0.0-derived r1 said NOT_IMPLEMENTED; raised on the verifier's T-130 r1 finding (merged, tested code measures the footprints)"
+  },
+  {
+   "code": "B1-03",
+   "group": "B1 Site",
+   "item_en": "Backfill and compaction",
+   "item_ar": "ردم ودك",
+   "unit": "m3",
+   "capability": "NOT_IMPLEMENTED",
+   "capability_1_0_0": "NOT_IMPLEMENTED",
+   "capability_change": "UNCHANGED",
+   "implementation": "none",
+   "source_needed": "excavation - structure - blinding volumes",
+   "next_slice": "S5",
+   "evidence": [
+    "no method emits a line of this family: no item code for it in engine/source/boq_line.py:46-110 and none in the item codes seen in the released and candidate runs (run_evidence.item_codes_seen)"
+   ],
+   "released_method_reads": "none",
+   "opt_in_readers": "none",
+   "missing": "site works are not measured by any route",
+   "in_v3_0_candidate": "no",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": [],
+   "name_terms": [
+    "backfill",
+    "compaction"
+   ]
+  },
+  {
+   "code": "B1-04",
+   "group": "B1 Site",
+   "item_en": "Disposal of surplus",
+   "item_ar": "نقل الفائض",
+   "unit": "m3",
+   "capability": "NOT_IMPLEMENTED",
+   "capability_1_0_0": "NOT_IMPLEMENTED",
+   "capability_change": "UNCHANGED",
+   "implementation": "none",
+   "source_needed": "excavation, backfill",
+   "next_slice": "S5",
+   "evidence": [
+    "no method emits a line of this family: no item code for it in engine/source/boq_line.py:46-110 and none in the item codes seen in the released and candidate runs (run_evidence.item_codes_seen)"
+   ],
+   "released_method_reads": "none",
+   "opt_in_readers": "none",
+   "missing": "site works are not measured by any route",
+   "in_v3_0_candidate": "no",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": [],
+   "name_terms": [
+    "disposal",
+    "surplus_soil"
+   ]
+  },
+  {
+   "code": "B1-05",
+   "group": "B1 Site",
+   "item_en": "Soil treatment / anti-termite",
+   "item_ar": "معالجة التربة",
+   "unit": "m2",
+   "capability": "NOT_IMPLEMENTED",
+   "capability_1_0_0": "NOT_IMPLEMENTED",
+   "capability_change": "UNCHANGED",
+   "implementation": "none",
+   "source_needed": "specification",
+   "next_slice": "S5",
+   "evidence": [
+    "no method emits a line of this family: no item code for it in engine/source/boq_line.py:46-110 and none in the item codes seen in the released and candidate runs (run_evidence.item_codes_seen)"
+   ],
+   "released_method_reads": "none",
+   "opt_in_readers": "none",
+   "missing": "site works are not measured by any route",
+   "in_v3_0_candidate": "no",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": [],
+   "name_terms": [
+    "termite",
+    "soil_treat"
+   ]
+  },
+  {
+   "code": "B1-06",
+   "group": "B1 Site",
+   "item_en": "Dewatering / shoring / temporary works",
+   "item_ar": "نزح مياه / سند جوانب",
+   "unit": "item",
+   "capability": "BLOCKED_BY_SOURCE",
+   "capability_1_0_0": "BLOCKED_BY_SOURCE",
+   "capability_change": "UNCHANGED",
+   "implementation": "none",
+   "source_needed": "site investigation",
+   "next_slice": "-",
+   "evidence": [
+    "no method emits a line of this family: no item code for it in engine/source/boq_line.py:46-110 and none in the item codes seen in the released and candidate runs (run_evidence.item_codes_seen)"
+   ],
+   "released_method_reads": "none",
+   "opt_in_readers": "none",
+   "missing": "needs a site investigation",
+   "in_v3_0_candidate": "no",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": []
+  },
+  {
+   "code": "B1-07",
+   "group": "B1 Site",
+   "item_en": "Preliminaries",
+   "item_ar": "أعمال تمهيدية",
+   "unit": "item",
+   "capability": "NOT_IMPLEMENTED",
+   "capability_1_0_0": "NOT_IMPLEMENTED",
+   "capability_change": "UNCHANGED",
+   "implementation": "none",
+   "source_needed": "contract",
+   "next_slice": "-",
+   "evidence": [
+    "no method emits a line of this family: no item code for it in engine/source/boq_line.py:46-110 and none in the item codes seen in the released and candidate runs (run_evidence.item_codes_seen)"
+   ],
+   "released_method_reads": "none",
+   "opt_in_readers": "none",
+   "missing": "site works are not measured by any route",
+   "in_v3_0_candidate": "no",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": [],
+   "name_terms": [
+    "prelim"
+   ]
+  },
+  {
+   "code": "B2-01",
+   "group": "B2 Spaces",
+   "item_en": "Room register (stable id, AR/EN name, role)",
+   "item_ar": "سجل الغرف",
+   "unit": "-",
+   "capability": "PARTIAL",
+   "capability_1_0_0": "IMPLEMENTED_NOT_INTEGRATED",
+   "capability_change": "RAISED",
+   "implementation": "ARCH_TAKEOFF_V2.9: register file ARCH_ROOMS.json, room ids on every line; no BOQ line of its own",
+   "source_needed": "architectural plans",
+   "next_slice": "S2",
+   "evidence": [
+    "engine/source/arch_rooms.py:984 spaces() builds the room register of every plan region in the released arch route",
+    "engine/source/arch_measure.py:92 room_id(floor, face_id): stable room id on every line",
+    "tools/urban_boq_m9.py:246 ARCH_ROOMS.json written by every arch run (not a BOQ line)",
+    "commit 677c740 (T-099 room census guard, verifier run 37): 0 rooms lost on the development villa, 3 unlabelled rooms HELD; engine/source/room_census_guard.py:186 census() is read by no method",
+    "commit 362630a (T-061 room label guard): engine/source/room_label_guard.py:171 guard() is read only by the opt-in methods (engine/source/arch_v211.py:232)",
+    "commit b35c944 (T-022 ROOM_VOCAB_V2): read by ARCH_TAKEOFF_V2.10 and later only"
+   ],
+   "released_method_reads": "ARCH_TAKEOFF_V2.9: register file ARCH_ROOMS.json, room ids on every line; no BOQ line of its own",
+   "opt_in_readers": "ARCH_TAKEOFF_V2.10 .. V2.13 (room vocabulary V2, label guard from V2.11)",
+   "missing": "no BOQ line (a register, not a quantity); unlabelled rooms held; the census guard is not wired",
+   "in_v3_0_candidate": "yes",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": [],
+   "note": "1.0.0 named TS01 / room_slice (tests); the register now runs in the released arch route"
+  },
+  {
+   "code": "B2-02",
+   "group": "B2 Spaces",
+   "item_en": "Room clear internal floor area",
+   "item_ar": "مساحة الغرفة الصافية",
+   "unit": "m2",
+   "capability": "PARTIAL",
+   "capability_1_0_0": "IMPLEMENTED_NOT_INTEGRATED",
+   "capability_change": "RAISED",
+   "implementation": "ARCH_TAKEOFF_V2.9: on FIN.FLOOR.PORCELAIN / FIN.FLOOR.WET_TILE / ARCH.SPACE lines",
+   "source_needed": "architectural plans",
+   "next_slice": "S2",
+   "evidence": [
+    "engine/source/arch_measure.py:381 the room's clear floor area is the net of its floor-finish line",
+    "engine/source/arch_measure.py:323 a space without a finish kind gets ARCH.SPACE / ARCH.EXTERIOR with its area",
+    "commit c1f0467 (T-113, verifier run 40): first-floor living released 44.869 m2 vs hand 38.588 m2 (+16.3 %), HAND_RIGHT: the stair void residue stays in the room face",
+    "commit 5592692 (T-116 STAIR_FLOOR_RESIDUE_V1): engine/source/stair_floor_residue.py:142 face_residue(), read by no released method; wired in ARCH_TAKEOFF_V3.0 (T-131)"
+   ],
+   "released_method_reads": "ARCH_TAKEOFF_V2.9: on FIN.FLOOR.PORCELAIN / FIN.FLOOR.WET_TILE / ARCH.SPACE lines",
+   "opt_in_readers": "ARCH_TAKEOFF_V3.0 stair-residue piece (merged b1a6d6d)",
+   "missing": "a stair footprint or void inside a room face is not deducted in the released method (verifier-confirmed)",
+   "in_v3_0_candidate": "yes",
+   "v3_0_planned_tasks": [
+    "T-133"
+   ],
+   "development_villa": {
+    "released_run": [
+     {
+      "item_code": "FIN.FLOOR.PORCELAIN",
+      "unit": "m2",
+      "lines": 31,
+      "released_lines": 31,
+      "released_qty": 323.143,
+      "held_lines": 0,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     },
+     {
+      "item_code": "FIN.FLOOR.WET_TILE",
+      "unit": "m2",
+      "lines": 13,
+      "released_lines": 13,
+      "released_qty": 53.143,
+      "held_lines": 0,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     },
+     {
+      "item_code": "ARCH.SPACE",
+      "unit": "m2",
+      "lines": 12,
+      "released_lines": 12,
+      "released_qty": 63.158,
+      "held_lines": 0,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     }
+    ],
+    "candidate_run_v2_13": [
+     {
+      "item_code": "FIN.FLOOR.PORCELAIN",
+      "unit": "m2",
+      "lines": 31,
+      "released_lines": 31,
+      "released_qty": 323.143,
+      "held_lines": 0,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     },
+     {
+      "item_code": "FIN.FLOOR.WET_TILE",
+      "unit": "m2",
+      "lines": 16,
+      "released_lines": 16,
+      "released_qty": 62.491,
+      "held_lines": 0,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     },
+     {
+      "item_code": "ARCH.SPACE",
+      "unit": "m2",
+      "lines": 12,
+      "released_lines": 12,
+      "released_qty": 63.158,
+      "held_lines": 0,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     }
+    ]
+   },
+   "item_codes": [
+    "ARCH.SPACE"
+   ],
+   "note": "no census map entry for B2-02 (engine/source/coverage_census.py:23-40): a run always reports it NOT_RUN"
+  },
+  {
+   "code": "B2-03",
+   "group": "B2 Spaces",
+   "item_en": "Gross / covered floor area per floor",
+   "item_ar": "المساحة الإجمالية",
+   "unit": "m2",
+   "capability": "PARTIAL",
+   "capability_1_0_0": "EXPERIMENTAL",
+   "capability_change": "RAISED",
+   "implementation": "ARCH_TAKEOFF_V2.9: ARCH_FLOOR_AREAS.json (file, not a BOQ line)",
+   "source_needed": "plans",
+   "next_slice": "S4",
+   "evidence": [
+    "engine/source/arch_floor.py:108 reconcile(): gross floor plate per floor with three balance checks",
+    "engine/source/arch_floor.py:156 gross_floor_plate_m2",
+    "tools/urban_boq_m9.py:252 ARCH_FLOOR_AREAS.json written by every arch run"
+   ],
+   "released_method_reads": "ARCH_TAKEOFF_V2.9: ARCH_FLOOR_AREAS.json (file, not a BOQ line)",
+   "opt_in_readers": "same in every later method",
+   "missing": "no BOQ line; no independent check of the plates; no census map entry",
+   "in_v3_0_candidate": "yes",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": [],
+   "note": "development villa released run: gross floor plate GF 284.1465, 1F 209.8017, 2F 55.08 m2, every floor's three checks BALANCED (ARCH_FLOOR_AREAS.json of the released run)"
+  },
+  {
+   "code": "B2-04",
+   "group": "B2 Spaces",
+   "item_en": "Open pantry functional zone",
+   "item_ar": "مطبخ أمريكي مفتوح",
+   "unit": "zone",
+   "capability": "IMPLEMENTED_NOT_INTEGRATED",
+   "capability_1_0_0": "EXPERIMENTAL",
+   "capability_change": "RAISED",
+   "implementation": "none (ARCH_TAKEOFF_V2.9 holds the zone)",
+   "source_needed": "plans + MEP",
+   "next_slice": "S4",
+   "evidence": [
+    "engine/source/arch_v213.py:223 typed_zones(): an open-plan wet zone measured from its printed size typed in the project data file (owner Q-37 A, Q-17 A)",
+    "commit 2264938 (T-120 ARCH_TAKEOFF_V2.13, verifier run 44): pantry 4.50 x 3.00 m = 13.50 m2, 2 rolls, re-checked",
+    "commit 8c23eea (T-114, verifier run 41): pantry cutting plan by hand"
+   ],
+   "released_method_reads": "none (ARCH_TAKEOFF_V2.9 holds the zone)",
+   "opt_in_readers": "ARCH_TAKEOFF_V2.13 (opt-in)",
+   "missing": "a zone needs its printed size typed by a reviewer; not in the released method",
+   "in_v3_0_candidate": "yes",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": []
+  },
+  {
+   "code": "B2-05",
+   "group": "B2 Spaces",
+   "item_en": "Voids / double height / shafts",
+   "item_ar": "فراغات ومناور",
+   "unit": "m2",
+   "capability": "PARTIAL",
+   "capability_1_0_0": "IMPLEMENTED_NOT_INTEGRATED",
+   "capability_change": "RAISED",
+   "implementation": "ARCH_TAKEOFF_V2.9 (floor-area categories VOID / STAIR_FLIGHTS in ARCH_FLOOR_AREAS.json)",
+   "source_needed": "plans + sections",
+   "next_slice": "S2",
+   "evidence": [
+    "engine/source/arch_floor.py:65 split_face(): voids and stair treads split out of a face in the released route",
+    "engine/source/arch_measure.py:434 FIN.CEILING over a void",
+    "commit c1f0467 (T-113, verifier run 40): a stair void residue left inside the first-floor living face (+6.281 m2)",
+    "commit 5592692 (T-116): stair_floor_residue.py read by no released method"
+   ],
+   "released_method_reads": "ARCH_TAKEOFF_V2.9 (floor-area categories VOID / STAIR_FLIGHTS in ARCH_FLOOR_AREAS.json)",
+   "opt_in_readers": "ARCH_TAKEOFF_V3.0 stair-residue piece (merged b1a6d6d)",
+   "missing": "void residues inside room faces (verifier-confirmed defect); double heights not measured as a line",
+   "in_v3_0_candidate": "yes",
+   "v3_0_planned_tasks": [
+    "T-133"
+   ],
+   "development_villa": {
+    "released_run": [],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": []
+  },
+  {
+   "code": "B3-01",
+   "group": "B3 Floors",
+   "item_en": "Dry floor porcelain / ceramic",
+   "item_ar": "بورسلان أرضيات",
+   "unit": "m2",
+   "capability": "PARTIAL",
+   "capability_1_0_0": "IMPLEMENTED_NOT_INTEGRATED",
+   "capability_change": "RAISED",
+   "implementation": "ARCH_TAKEOFF_V2.9: FIN.FLOOR.PORCELAIN",
+   "source_needed": "rooms, finish schedule",
+   "next_slice": "S2",
+   "evidence": [
+    "engine/source/arch_measure.py:381 FIN.FLOOR.PORCELAIN per dry room",
+    "commit c1f0467 (T-113, verifier run 40): first-floor living +16.3 % HAND_RIGHT (stair void residue)",
+    "commit 4ae3a68 (T-122, verifier run 45): first-floor porcelain 33.594 .. 33.711 m2 under owner Q-66 B (research)"
+   ],
+   "released_method_reads": "ARCH_TAKEOFF_V2.9: FIN.FLOOR.PORCELAIN",
+   "opt_in_readers": "ARCH_TAKEOFF_V3.0 stair-residue piece (merged b1a6d6d)",
+   "missing": "rooms with a stair void / landing inside them (verifier-confirmed); no printed tile size, so the tile count (engine/source/tile_count.py, commit 8de2a21) holds every room",
+   "in_v3_0_candidate": "yes",
+   "v3_0_planned_tasks": [
+    "T-133"
+   ],
+   "development_villa": {
+    "released_run": [
+     {
+      "item_code": "FIN.FLOOR.PORCELAIN",
+      "unit": "m2",
+      "lines": 31,
+      "released_lines": 31,
+      "released_qty": 323.143,
+      "held_lines": 0,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     }
+    ],
+    "candidate_run_v2_13": [
+     {
+      "item_code": "FIN.FLOOR.PORCELAIN",
+      "unit": "m2",
+      "lines": 31,
+      "released_lines": 31,
+      "released_qty": 323.143,
+      "held_lines": 0,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     }
+    ]
+   },
+   "item_codes": [
+    "FIN.FLOOR.PORCELAIN"
+   ]
+  },
+  {
+   "code": "B3-02",
+   "group": "B3 Floors",
+   "item_en": "Wet-room floor tile",
+   "item_ar": "سيراميك أرضيات حمامات",
+   "unit": "m2",
+   "capability": "PARTIAL",
+   "capability_1_0_0": "IMPLEMENTED_NOT_INTEGRATED",
+   "capability_change": "RAISED",
+   "implementation": "ARCH_TAKEOFF_V2.9: FIN.FLOOR.WET_TILE (wet rooms merged into dry zones where the label is ambiguous)",
+   "source_needed": "rooms",
+   "next_slice": "S2",
+   "evidence": [
+    "engine/source/arch_measure.py:381 FIN.FLOOR.WET_TILE per wet room",
+    "commit 8fcabe0 (T-010 wet / dry from the room label and fixtures, verifier run 22): read by ARCH_TAKEOFF_V2.11 and later only (engine/source/arch_v211.py:105 wet_classes)"
+   ],
+   "released_method_reads": "ARCH_TAKEOFF_V2.9: FIN.FLOOR.WET_TILE (wet rooms merged into dry zones where the label is ambiguous)",
+   "opt_in_readers": "ARCH_TAKEOFF_V2.11 .. V2.13 (wet / dry evidence)",
+   "missing": "the released method misses wet rooms that only the fixtures identify",
+   "in_v3_0_candidate": "yes",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [
+     {
+      "item_code": "FIN.FLOOR.WET_TILE",
+      "unit": "m2",
+      "lines": 13,
+      "released_lines": 13,
+      "released_qty": 53.143,
+      "held_lines": 0,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     }
+    ],
+    "candidate_run_v2_13": [
+     {
+      "item_code": "FIN.FLOOR.WET_TILE",
+      "unit": "m2",
+      "lines": 16,
+      "released_lines": 16,
+      "released_qty": 62.491,
+      "held_lines": 0,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     }
+    ]
+   },
+   "item_codes": [
+    "FIN.FLOOR.WET_TILE"
+   ]
+  },
+  {
+   "code": "B3-03",
+   "group": "B3 Floors",
+   "item_en": "Marble floor / entrance",
+   "item_ar": "رخام أرضيات",
+   "unit": "m2",
+   "capability": "IMPLEMENTED_NOT_INTEGRATED",
+   "capability_1_0_0": "IMPLEMENTED_NOT_INTEGRATED",
+   "capability_change": "UNCHANGED",
+   "implementation": "marble_thresholds, trade_strips (research)",
+   "source_needed": "finish schedule",
+   "next_slice": "S4",
+   "evidence": [
+    "engine/source/marble_thresholds.py exists (research engine, read by no method)",
+    "commit 4ae3a68 (T-122, verifier run 45): first-floor landing marble 4.875 m2 by hand (research only)"
+   ],
+   "released_method_reads": "none",
+   "opt_in_readers": "none",
+   "missing": "no marble floor line except stair landings (B7-04)",
+   "in_v3_0_candidate": "no",
+   "v3_0_planned_tasks": [
+    "T-133"
+   ],
+   "development_villa": {
+    "released_run": [],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": []
+  },
+  {
+   "code": "B3-04",
+   "group": "B3 Floors",
+   "item_en": "Door threshold marble",
+   "item_ar": "عتبات رخام",
+   "unit": "m2 / lm",
+   "capability": "PARTIAL",
+   "capability_1_0_0": "IMPLEMENTED_NOT_INTEGRATED",
+   "capability_change": "RAISED",
+   "implementation": "ARCH_TAKEOFF_V2.9: FIN.MARBLE.THRESHOLD",
+   "source_needed": "plans + doors",
+   "next_slice": "S4",
+   "evidence": [
+    "engine/source/owner_finish_scope.py:136 the wet-area doorway marble threshold (owner scope, knowledge 1.0.0+)",
+    "engine/source/surface_ledger.py:115 the threshold row of a door"
+   ],
+   "released_method_reads": "ARCH_TAKEOFF_V2.9: FIN.MARBLE.THRESHOLD",
+   "opt_in_readers": "same in every later method",
+   "missing": "census gap: FIN.MARBLE.THRESHOLD is not mapped to B3-04 (engine/source/coverage_census.py:23-40)",
+   "in_v3_0_candidate": "yes",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [
+     {
+      "item_code": "FIN.MARBLE.THRESHOLD",
+      "unit": "m2",
+      "lines": 10,
+      "released_lines": 10,
+      "released_qty": 1.34,
+      "held_lines": 0,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     }
+    ],
+    "candidate_run_v2_13": [
+     {
+      "item_code": "FIN.MARBLE.THRESHOLD",
+      "unit": "m2",
+      "lines": 10,
+      "released_lines": 10,
+      "released_qty": 1.34,
+      "held_lines": 0,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     }
+    ]
+   },
+   "item_codes": [
+    "ARCH.THRESHOLD",
+    "FIN.MARBLE.THRESHOLD"
+   ]
+  },
+  {
+   "code": "B3-05",
+   "group": "B3 Floors",
+   "item_en": "Screed / build-up",
+   "item_ar": "لياسة أرضيات / مدة",
+   "unit": "m2 (m3 when thickness proven)",
+   "capability": "IMPLEMENTED_NOT_INTEGRATED",
+   "capability_1_0_0": "NOT_IMPLEMENTED",
+   "capability_change": "RAISED",
+   "implementation": "none",
+   "source_needed": "sections, spec",
+   "next_slice": "S4",
+   "evidence": [
+    "engine/source/finish_materials_table.py:1 the cement-sand bed under tiles as a range (owner Q-45), roof / balcony screed HELD (owner Q-41, thickness not given)",
+    "commit 6002856 (T-086, verifier run 30): new files only, read by no method"
+   ],
+   "released_method_reads": "none",
+   "opt_in_readers": "none",
+   "missing": "no BOQ line; screed thickness on roofs not given (Q-41)",
+   "in_v3_0_candidate": "no",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": []
+  },
+  {
+   "code": "B3-06",
+   "group": "B3 Floors",
+   "item_en": "Ordinary skirting",
+   "item_ar": "نعلة / وزرة",
+   "unit": "lm",
+   "capability": "PARTIAL",
+   "capability_1_0_0": "IMPLEMENTED_NOT_INTEGRATED",
+   "capability_change": "RAISED",
+   "implementation": "ARCH_TAKEOFF_V2.9: FIN.SKIRTING",
+   "source_needed": "rooms + doors",
+   "next_slice": "S2",
+   "evidence": [
+    "engine/source/arch_measure.py:506-557 FIN.SKIRTING per room (released, bounded or held)",
+    "commit a51bdca (T-106 skirting deduction audit, verifier run 40): all released nets right; 20 of 28 lines do not list 17.035 m of deductions; engine/source/skirting_deduction_audit.py:196 audit() read by no method"
+   ],
+   "released_method_reads": "ARCH_TAKEOFF_V2.9: FIN.SKIRTING",
+   "opt_in_readers": "none",
+   "missing": "listed deductions do not add back on 20 lines (T-118 queued); door closures without a door id",
+   "in_v3_0_candidate": "yes",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [
+     {
+      "item_code": "FIN.SKIRTING",
+      "unit": "lm",
+      "lines": 36,
+      "released_lines": 11,
+      "released_qty": 185.517,
+      "held_lines": 11,
+      "held_bounded_low": 0.0,
+      "held_bounded_high": 27.138,
+      "not_applicable_lines": 14
+     }
+    ],
+    "candidate_run_v2_13": [
+     {
+      "item_code": "FIN.SKIRTING",
+      "unit": "lm",
+      "lines": 39,
+      "released_lines": 11,
+      "released_qty": 185.517,
+      "held_lines": 11,
+      "held_bounded_low": 0.0,
+      "held_bounded_high": 27.138,
+      "not_applicable_lines": 17
+     }
+    ]
+   },
+   "item_codes": [
+    "FIN.SKIRTING"
+   ]
+  },
+  {
+   "code": "B3-07",
+   "group": "B3 Floors",
+   "item_en": "Hidden profile / transition strips",
+   "item_ar": "بروفايل مخفي",
+   "unit": "lm",
+   "capability": "IMPLEMENTED_NOT_INTEGRATED",
+   "capability_1_0_0": "IMPLEMENTED_NOT_INTEGRATED",
+   "capability_change": "UNCHANGED",
+   "implementation": "none (ARCH.THRESHOLD strips held)",
+   "source_needed": "details",
+   "next_slice": "S4",
+   "evidence": [
+    "engine/source/trade_strips.py exists (research engine, read by no method)",
+    "the released route emits ARCH.THRESHOLD doorway strips (engine/source/surface_ledger.py:78) as BLOCKED_RFI (owner decision Q-S6-1 open): geometry, not a profile line"
+   ],
+   "released_method_reads": "none (ARCH.THRESHOLD strips held)",
+   "opt_in_readers": "none",
+   "missing": "no profile / transition-strip line",
+   "in_v3_0_candidate": "no",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": []
+  },
+  {
+   "code": "B4-01",
+   "group": "B4 Walls",
+   "item_en": "Wet-room wall porcelain / ceramic",
+   "item_ar": "سيراميك جدران",
+   "unit": "m2",
+   "capability": "PARTIAL",
+   "capability_1_0_0": "IMPLEMENTED_NOT_INTEGRATED",
+   "capability_change": "RAISED",
+   "implementation": "ARCH_TAKEOFF_V2.9: FIN.WALL.TILE (every line BLOCKED_RFI without an established height)",
+   "source_needed": "rooms, faces, heights, openings",
+   "next_slice": "S2",
+   "evidence": [
+    "engine/source/arch_measure.py:639-681 FIN.WALL.TILE in the wall-finish loop of every wet room",
+    "commit a703655 (T-112, verifier run 40): wall heights by the owner method and from the drawing (research)"
+   ],
+   "released_method_reads": "ARCH_TAKEOFF_V2.9: FIN.WALL.TILE (every line BLOCKED_RFI without an established height)",
+   "opt_in_readers": "same",
+   "missing": "height not established (owner Q-48 A / Q-52): every development-villa line held",
+   "in_v3_0_candidate": "yes",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [
+     {
+      "item_code": "FIN.WALL.TILE",
+      "unit": "m2",
+      "lines": 14,
+      "released_lines": 0,
+      "released_qty": 0.0,
+      "held_lines": 14,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     }
+    ],
+    "candidate_run_v2_13": [
+     {
+      "item_code": "FIN.WALL.TILE",
+      "unit": "m2",
+      "lines": 17,
+      "released_lines": 0,
+      "released_qty": 0.0,
+      "held_lines": 17,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     }
+    ]
+   },
+   "item_codes": [
+    "FIN.WALL.TILE"
+   ]
+  },
+  {
+   "code": "B4-02",
+   "group": "B4 Walls",
+   "item_en": "Kitchen / laundry / pantry tiled zones",
+   "item_ar": "تكسية مطابخ وغسيل",
+   "unit": "m2",
+   "capability": "NOT_IMPLEMENTED",
+   "capability_1_0_0": "NOT_IMPLEMENTED",
+   "capability_change": "UNCHANGED",
+   "implementation": "none generic",
+   "source_needed": "elevations / spec",
+   "next_slice": "S4",
+   "evidence": [
+    "no method emits a line of this family: no item code for it in engine/source/boq_line.py:46-110 and none in the item codes seen in the released and candidate runs (run_evidence.item_codes_seen)"
+   ],
+   "released_method_reads": "none",
+   "opt_in_readers": "none",
+   "missing": "kitchen / laundry tiled zones not measured",
+   "in_v3_0_candidate": "no",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": [],
+   "name_terms": [
+    "kitchen_tile",
+    "laundry_tile",
+    "pantry_tile",
+    "splash"
+   ]
+  },
+  {
+   "code": "B4-03",
+   "group": "B4 Walls",
+   "item_en": "Internal plaster",
+   "item_ar": "لياسة / مساح داخلي",
+   "unit": "m2",
+   "capability": "PARTIAL",
+   "capability_1_0_0": "IMPLEMENTED_NOT_INTEGRATED",
+   "capability_change": "RAISED",
+   "implementation": "ARCH_TAKEOFF_V2.9: FIN.PLASTER",
+   "source_needed": "faces, masonry termination",
+   "next_slice": "S4",
+   "evidence": [
+    "engine/source/arch_measure.py:639-681 FIN.PLASTER per room face",
+    "engine/source/arch_measure.py:195 _wall_finish_rs(): net from the room's own boundary",
+    "commit d52b5dd (T-081-r2 room levels V2 + finish height V2, verifier run 30): engine/source/finish_height_v2.py:173 room_heights() read by no method",
+    "commit a703655 (T-112, verifier run 40): owner method 234.17 m2 on 4 verified dry rooms (research)"
+   ],
+   "released_method_reads": "ARCH_TAKEOFF_V2.9: FIN.PLASTER",
+   "opt_in_readers": "none",
+   "missing": "most walls held without an established height; the owner manual method is not wired",
+   "in_v3_0_candidate": "yes",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [
+     {
+      "item_code": "FIN.PLASTER",
+      "unit": "m2",
+      "lines": 49,
+      "released_lines": 20,
+      "released_qty": 17.74,
+      "held_lines": 29,
+      "held_bounded_low": 2.36,
+      "held_bounded_high": 2.6,
+      "not_applicable_lines": 0
+     }
+    ],
+    "candidate_run_v2_13": [
+     {
+      "item_code": "FIN.PLASTER",
+      "unit": "m2",
+      "lines": 52,
+      "released_lines": 20,
+      "released_qty": 17.74,
+      "held_lines": 32,
+      "held_bounded_low": 2.36,
+      "held_bounded_high": 2.6,
+      "not_applicable_lines": 0
+     }
+    ]
+   },
+   "item_codes": [
+    "FIN.PLASTER"
+   ]
+  },
+  {
+   "code": "B4-04",
+   "group": "B4 Walls",
+   "item_en": "External plaster",
+   "item_ar": "لياسة خارجية",
+   "unit": "m2",
+   "capability": "PARTIAL",
+   "capability_1_0_0": "EXPERIMENTAL",
+   "capability_change": "RAISED",
+   "implementation": "ARCH_TAKEOFF_V2.9: ARCH.FACADE_RUN (lm), ARCH.FACADE (m2), FIN.EXT.FINISH (held without a specification)",
+   "source_needed": "elevations",
+   "next_slice": "S4",
+   "evidence": [
+    "tools/urban_boq_m9.py:1260 _v29_facade(): facade outline run per floor and area (UP-FACADE-001)",
+    "tools/urban_boq_m9.py:2704 FACADE.json",
+    "commit 5476226 (T-014 facade gap closure, verifier run 39): engine/source/facade_gap_closure.py read only by engine/source/facade_passage_walls.py",
+    "commit 4fddf74 (T-109 passage walls) + 6699bb6 (T-123, verifier run 45): ground-floor run 98.887 -> 105.887 m (hand right), wired in ARCH_TAKEOFF_V3.0"
+   ],
+   "released_method_reads": "ARCH_TAKEOFF_V2.9: ARCH.FACADE_RUN (lm), ARCH.FACADE (m2), FIN.EXT.FINISH (held without a specification)",
+   "opt_in_readers": "ARCH_TAKEOFF_V3.0 passage piece (merged b1a6d6d)",
+   "missing": "the external finish is held without a stated specification; facade m2 held",
+   "in_v3_0_candidate": "yes",
+   "v3_0_planned_tasks": [
+    "T-133"
+   ],
+   "development_villa": {
+    "released_run": [
+     {
+      "item_code": "ARCH.FACADE_RUN",
+      "unit": "lm",
+      "lines": 6,
+      "released_lines": 3,
+      "released_qty": 191.856,
+      "held_lines": 3,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     },
+     {
+      "item_code": "ARCH.FACADE",
+      "unit": "m2",
+      "lines": 4,
+      "released_lines": 0,
+      "released_qty": 0.0,
+      "held_lines": 4,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     },
+     {
+      "item_code": "FIN.EXT.FINISH",
+      "unit": "m2",
+      "lines": 3,
+      "released_lines": 0,
+      "released_qty": 0.0,
+      "held_lines": 3,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     }
+    ],
+    "candidate_run_v2_13": [
+     {
+      "item_code": "ARCH.FACADE_RUN",
+      "unit": "lm",
+      "lines": 6,
+      "released_lines": 3,
+      "released_qty": 191.856,
+      "held_lines": 3,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     },
+     {
+      "item_code": "ARCH.FACADE",
+      "unit": "m2",
+      "lines": 4,
+      "released_lines": 0,
+      "released_qty": 0.0,
+      "held_lines": 4,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     },
+     {
+      "item_code": "FIN.EXT.FINISH",
+      "unit": "m2",
+      "lines": 3,
+      "released_lines": 0,
+      "released_qty": 0.0,
+      "held_lines": 3,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     }
+    ]
+   },
+   "item_codes": []
+  },
+  {
+   "code": "B4-05",
+   "group": "B4 Walls",
+   "item_en": "Spatter dash",
+   "item_ar": "طرطشة",
+   "unit": "m2",
+   "capability": "NOT_IMPLEMENTED",
+   "capability_1_0_0": "NOT_IMPLEMENTED",
+   "capability_change": "UNCHANGED",
+   "implementation": "none",
+   "source_needed": "faces",
+   "next_slice": "S4",
+   "evidence": [
+    "no method emits a line of this family: no item code for it in engine/source/boq_line.py:46-110 and none in the item codes seen in the released and candidate runs (run_evidence.item_codes_seen)"
+   ],
+   "released_method_reads": "none",
+   "opt_in_readers": "none",
+   "missing": "spatter dash not measured",
+   "in_v3_0_candidate": "no",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": [],
+   "name_terms": [
+    "spatter",
+    "dash_coat"
+   ]
+  },
+  {
+   "code": "B4-06",
+   "group": "B4 Walls",
+   "item_en": "Internal paint",
+   "item_ar": "صبغ / دهان داخلي",
+   "unit": "m2",
+   "capability": "PARTIAL",
+   "capability_1_0_0": "IMPLEMENTED_NOT_INTEGRATED",
+   "capability_change": "RAISED",
+   "implementation": "ARCH_TAKEOFF_V2.9: FIN.PAINT",
+   "source_needed": "faces + finished ceiling",
+   "next_slice": "S4",
+   "evidence": [
+    "engine/source/arch_measure.py:639-681 FIN.PAINT per room face",
+    "engine/source/surface_ledger.py:155 in wet rooms paint only above the tile"
+   ],
+   "released_method_reads": "ARCH_TAKEOFF_V2.9: FIN.PAINT",
+   "opt_in_readers": "none",
+   "missing": "every development-villa paint line held (height) or not applicable (wet rooms tiled full height)",
+   "in_v3_0_candidate": "yes",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [
+     {
+      "item_code": "FIN.PAINT",
+      "unit": "m2",
+      "lines": 27,
+      "released_lines": 0,
+      "released_qty": 0.0,
+      "held_lines": 13,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 14
+     }
+    ],
+    "candidate_run_v2_13": [
+     {
+      "item_code": "FIN.PAINT",
+      "unit": "m2",
+      "lines": 30,
+      "released_lines": 0,
+      "released_qty": 0.0,
+      "held_lines": 13,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 17
+     }
+    ]
+   },
+   "item_codes": [
+    "FIN.PAINT"
+   ]
+  },
+  {
+   "code": "B4-07",
+   "group": "B4 Walls",
+   "item_en": "External paint / coatings",
+   "item_ar": "دهان خارجي",
+   "unit": "m2",
+   "capability": "PARTIAL",
+   "capability_1_0_0": "EXPERIMENTAL",
+   "capability_change": "RAISED",
+   "implementation": "ARCH_TAKEOFF_V2.9: FIN.EXT.FINISH (held)",
+   "source_needed": "elevations",
+   "next_slice": "S4",
+   "evidence": [
+    "tools/urban_boq_m9.py:1260 _v29_facade(): FIN.EXT.FINISH line per floor, held without a specification"
+   ],
+   "released_method_reads": "ARCH_TAKEOFF_V2.9: FIN.EXT.FINISH (held)",
+   "opt_in_readers": "ARCH_TAKEOFF_V3.0 passage piece (merged b1a6d6d, run length only)",
+   "missing": "no specification read; the line is always held",
+   "in_v3_0_candidate": "yes",
+   "v3_0_planned_tasks": [
+    "T-133"
+   ],
+   "development_villa": {
+    "released_run": [
+     {
+      "item_code": "FIN.EXT.FINISH",
+      "unit": "m2",
+      "lines": 3,
+      "released_lines": 0,
+      "released_qty": 0.0,
+      "held_lines": 3,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     }
+    ],
+    "candidate_run_v2_13": [
+     {
+      "item_code": "FIN.EXT.FINISH",
+      "unit": "m2",
+      "lines": 3,
+      "released_lines": 0,
+      "released_qty": 0.0,
+      "held_lines": 3,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     }
+    ]
+   },
+   "item_codes": [
+    "ARCH.FACADE",
+    "ARCH.FACADE_RUN",
+    "FIN.EXT.FINISH"
+   ]
+  },
+  {
+   "code": "B4-08",
+   "group": "B4 Walls",
+   "item_en": "Reveals and returns",
+   "item_ar": "جوانب الفتحات",
+   "unit": "m2 / lm",
+   "capability": "PARTIAL",
+   "capability_1_0_0": "NOT_IMPLEMENTED",
+   "capability_change": "RAISED",
+   "implementation": "ARCH_TAKEOFF_V2.9 + route G (conventions URBAN_M8_GENERIC_CONVENTIONS_V6): FIN.PLASTER 'window reveals' (where sill, height and plaster height are established) and ARCH.WINDOW_REVEAL (sill surface)",
+   "source_needed": "openings + wall thickness",
+   "next_slice": "S4",
+   "evidence": [
+    "engine/source/arch_v28.py:734 window_strip_lines(): UP-REVEAL-001 window reveals = jambs 2 x measured strip depth x the window's height inside the plaster band + head soffit depth x width where wall remains above; emitted as FIN.PLASTER element 'window reveals' PROVISIONAL (:816) and the internal sill surface as ARCH.WINDOW_REVEAL",
+    "tools/urban_boq_m9.py:714 the call in every method from ARCH_TAKEOFF_V2.8, so in the released V2.9 (run file WINDOW_REVEALS.json); commit 789d1a6 (Phase 2B-9, V2.8)",
+    "tests/m9_p2b9/test_p2b9_openings.py:101 / :148 (worked example: reveals and sill surface; a window without sill / schedule held BLOCKED_RFI, :91)",
+    "development villa released run: 27 ARCH.WINDOW_REVEAL lines, all BLOCKED_RFI (WINDOW_REVEAL_FLOOR_STATUS_NOT_ESTABLISHED: no window reaches an established sill and height), so WINDOW_REVEALS.json has 0 reveal records and no reveal plaster line is released",
+    "engine/source/opening_reveals.py:46 passage_reveals() (door / passage jambs and soffit, OPENING_REVEAL_POLICY_V2) is read by no arch method"
+   ],
+   "released_method_reads": "ARCH_TAKEOFF_V2.9 + route G (conventions URBAN_M8_GENERIC_CONVENTIONS_V6): FIN.PLASTER 'window reveals' (where sill, height and plaster height are established) and ARCH.WINDOW_REVEAL (sill surface)",
+   "opt_in_readers": "same in every later method (V2.10 .. V3.0)",
+   "missing": "every development-villa window held (sill / height not established), so 0 m2 released and the 27 held lines carry no range; door and passage reveals not measured by any method; returns are measured only as wall (V2.8 return stubs inside the wall faces), never as their own line; external reveals listed as geometry, not finish; census gap: no item code is mapped to B4-08",
+   "in_v3_0_candidate": "yes",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [
+     {
+      "item_code": "ARCH.WINDOW_REVEAL",
+      "unit": "m2",
+      "lines": 27,
+      "released_lines": 0,
+      "released_qty": 0.0,
+      "held_lines": 27,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     }
+    ],
+    "candidate_run_v2_13": [
+     {
+      "item_code": "ARCH.WINDOW_REVEAL",
+      "unit": "m2",
+      "lines": 27,
+      "released_lines": 0,
+      "released_qty": 0.0,
+      "held_lines": 27,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     }
+    ]
+   },
+   "item_codes": [
+    "ARCH.WINDOW_REVEAL"
+   ],
+   "note": "1.0.0 and r1 said NOT_IMPLEMENTED; r1 read ARCH.WINDOW_REVEAL as geometry only and missed the V2.8 reveal plaster path; raised on the verifier's T-130 r1 finding"
+  },
+  {
+   "code": "B4-09",
+   "group": "B4 Walls",
+   "item_en": "Corner beads / profiles",
+   "item_ar": "زوايا معدنية",
+   "unit": "lm",
+   "capability": "IMPLEMENTED_NOT_INTEGRATED",
+   "capability_1_0_0": "IMPLEMENTED_NOT_INTEGRATED",
+   "capability_change": "UNCHANGED",
+   "implementation": "source.corner_bead (research)",
+   "source_needed": "faces",
+   "next_slice": "S4",
+   "evidence": [
+    "engine/source/corner_bead.py exists (research engine, read by no method)"
+   ],
+   "released_method_reads": "none",
+   "opt_in_readers": "none",
+   "missing": "not in any method",
+   "in_v3_0_candidate": "no",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": []
+  },
+  {
+   "code": "B4-10",
+   "group": "B4 Walls",
+   "item_en": "45-degree ceramic edge / steel profile",
+   "item_ar": "حواف 45 / بروفايل",
+   "unit": "lm",
+   "capability": "IMPLEMENTED_NOT_INTEGRATED",
+   "capability_1_0_0": "IMPLEMENTED_NOT_INTEGRATED",
+   "capability_change": "UNCHANGED",
+   "implementation": "finishes_rules.edge_finish (idle)",
+   "source_needed": "exposed tile edges",
+   "next_slice": "S4",
+   "evidence": [
+    "engine/finishes_rules.py exists (idle arithmetic, read by no method)"
+   ],
+   "released_method_reads": "none",
+   "opt_in_readers": "none",
+   "missing": "not in any method",
+   "in_v3_0_candidate": "no",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": []
+  },
+  {
+   "code": "B4-11",
+   "group": "B4 Walls",
+   "item_en": "Facade cladding / stone",
+   "item_ar": "تكسية واجهات / حجر",
+   "unit": "m2",
+   "capability": "NOT_IMPLEMENTED",
+   "capability_1_0_0": "NOT_IMPLEMENTED",
+   "capability_change": "UNCHANGED",
+   "implementation": "none",
+   "source_needed": "elevations, spec",
+   "next_slice": "S4",
+   "evidence": [
+    "no method emits a line of this family: no item code for it in engine/source/boq_line.py:46-110 and none in the item codes seen in the released and candidate runs (run_evidence.item_codes_seen)"
+   ],
+   "released_method_reads": "none",
+   "opt_in_readers": "none",
+   "missing": "cladding not measured",
+   "in_v3_0_candidate": "no",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": [],
+   "name_terms": [
+    "cladding"
+   ]
+  },
+  {
+   "code": "B5-01",
+   "group": "B5 Ceilings",
+   "item_en": "Physical ceiling area per room",
+   "item_ar": "مساحة الأسقف",
+   "unit": "m2",
+   "capability": "PARTIAL",
+   "capability_1_0_0": "NOT_IMPLEMENTED",
+   "capability_change": "RAISED",
+   "implementation": "ARCH_TAKEOFF_V2.9: FIN.CEILING",
+   "source_needed": "rooms, voids",
+   "next_slice": "S2",
+   "evidence": [
+    "engine/source/arch_measure.py:418 FIN.CEILING per room (physical ceiling area, no material)",
+    "engine/source/arch_measure.py:337 stairwell ceiling; :434 ceiling over a void",
+    "defect O-P8-02 (by design): every ceiling line is PROVISIONAL, the ceiling type is not in a plan"
+   ],
+   "released_method_reads": "ARCH_TAKEOFF_V2.9: FIN.CEILING",
+   "opt_in_readers": "same",
+   "missing": "ceiling material / type (BLOCKED_BY_SOURCE: RCP); ceilings over outside air (owner Q-68)",
+   "in_v3_0_candidate": "yes",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [
+     {
+      "item_code": "FIN.CEILING",
+      "unit": "m2",
+      "lines": 31,
+      "released_lines": 29,
+      "released_qty": 403.163,
+      "held_lines": 2,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     }
+    ],
+    "candidate_run_v2_13": [
+     {
+      "item_code": "FIN.CEILING",
+      "unit": "m2",
+      "lines": 31,
+      "released_lines": 29,
+      "released_qty": 403.163,
+      "held_lines": 2,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     }
+    ]
+   },
+   "item_codes": [
+    "FIN.CEILING"
+   ],
+   "note": "1.0.0 said NOT_IMPLEMENTED; the released run quantifies it"
+  },
+  {
+   "code": "B5-02",
+   "group": "B5 Ceilings",
+   "item_en": "Gypsum / moisture-resistant / decorative ceiling",
+   "item_ar": "جبس / ديكور سقف",
+   "unit": "m2",
+   "capability": "BLOCKED_BY_SOURCE",
+   "capability_1_0_0": "BLOCKED_BY_SOURCE",
+   "capability_change": "UNCHANGED",
+   "implementation": "none",
+   "source_needed": "RCP, spec",
+   "next_slice": "S4",
+   "evidence": [
+    "no method emits a line of this family: no item code for it in engine/source/boq_line.py:46-110 and none in the item codes seen in the released and candidate runs (run_evidence.item_codes_seen)"
+   ],
+   "released_method_reads": "none",
+   "opt_in_readers": "none",
+   "missing": "needs RCP, spec",
+   "in_v3_0_candidate": "no",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": []
+  },
+  {
+   "code": "B5-03",
+   "group": "B5 Ceilings",
+   "item_en": "Cornice / cove / light channel",
+   "item_ar": "كرنيش",
+   "unit": "lm",
+   "capability": "BLOCKED_BY_SOURCE",
+   "capability_1_0_0": "BLOCKED_BY_SOURCE",
+   "capability_change": "UNCHANGED",
+   "implementation": "none",
+   "source_needed": "RCP",
+   "next_slice": "S4",
+   "evidence": [
+    "no method emits a line of this family: no item code for it in engine/source/boq_line.py:46-110 and none in the item codes seen in the released and candidate runs (run_evidence.item_codes_seen)"
+   ],
+   "released_method_reads": "none",
+   "opt_in_readers": "none",
+   "missing": "needs RCP",
+   "in_v3_0_candidate": "no",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": []
+  },
+  {
+   "code": "B5-04",
+   "group": "B5 Ceilings",
+   "item_en": "Bulkheads / dropped ceilings",
+   "item_ar": "تنزيلات سقف",
+   "unit": "m2 / lm",
+   "capability": "BLOCKED_BY_SOURCE",
+   "capability_1_0_0": "BLOCKED_BY_SOURCE",
+   "capability_change": "UNCHANGED",
+   "implementation": "none",
+   "source_needed": "RCP, sections",
+   "next_slice": "S4",
+   "evidence": [
+    "no method emits a line of this family: no item code for it in engine/source/boq_line.py:46-110 and none in the item codes seen in the released and candidate runs (run_evidence.item_codes_seen)"
+   ],
+   "released_method_reads": "none",
+   "opt_in_readers": "none",
+   "missing": "needs RCP, sections",
+   "in_v3_0_candidate": "no",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": []
+  },
+  {
+   "code": "B5-05",
+   "group": "B5 Ceilings",
+   "item_en": "Access panels",
+   "item_ar": "فتحات صيانة",
+   "unit": "pcs",
+   "capability": "BLOCKED_BY_SOURCE",
+   "capability_1_0_0": "BLOCKED_BY_SOURCE",
+   "capability_change": "UNCHANGED",
+   "implementation": "none",
+   "source_needed": "RCP",
+   "next_slice": "S4",
+   "evidence": [
+    "no method emits a line of this family: no item code for it in engine/source/boq_line.py:46-110 and none in the item codes seen in the released and candidate runs (run_evidence.item_codes_seen)"
+   ],
+   "released_method_reads": "none",
+   "opt_in_readers": "none",
+   "missing": "needs RCP",
+   "in_v3_0_candidate": "no",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": []
+  },
+  {
+   "code": "B6-01",
+   "group": "B6 Openings",
+   "item_en": "Opening census (doors, windows, type, size, host wall)",
+   "item_ar": "حصر الفتحات",
+   "unit": "pcs",
+   "capability": "PARTIAL",
+   "capability_1_0_0": "PARTIAL",
+   "capability_change": "UNCHANGED",
+   "implementation": "ARCH_TAKEOFF_V2.9: ARCH.WINDOW, ARCH.PASSAGE, DOOR.* (ARCH.DOOR replaced by the door classes)",
+   "source_needed": "plans, schedule",
+   "next_slice": "S4",
+   "evidence": [
+    "engine/source/arch_measure.py:698-755 one pcs line per jambed opening (ARCH.DOOR / WINDOW / PASSAGE)",
+    "tools/urban_boq_m9.py:2575 _v21_doors(): door counts replaced by the owner door classes",
+    "engine/source/arch_v29.py:277 curved_openings(): curved wall openings read as openings",
+    "commit c564481 (T-077 opening omission guard), 2dee954 (T-082 heights from vector PDF elevations): read by no released method"
+   ],
+   "released_method_reads": "ARCH_TAKEOFF_V2.9: ARCH.WINDOW, ARCH.PASSAGE, DOOR.* (ARCH.DOOR replaced by the door classes)",
+   "opt_in_readers": "same",
+   "missing": "opening heights and m2 (B6-02..04)",
+   "in_v3_0_candidate": "yes",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [
+     {
+      "item_code": "ARCH.WINDOW",
+      "unit": "pcs",
+      "lines": 27,
+      "released_lines": 27,
+      "released_qty": 27.0,
+      "held_lines": 0,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     },
+     {
+      "item_code": "ARCH.PASSAGE",
+      "unit": "pcs",
+      "lines": 11,
+      "released_lines": 11,
+      "released_qty": 11.0,
+      "held_lines": 0,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     },
+     {
+      "item_code": "DOOR.INTERNAL.PVC",
+      "unit": "pcs",
+      "lines": 15,
+      "released_lines": 15,
+      "released_qty": 15.0,
+      "held_lines": 0,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     },
+     {
+      "item_code": "DOOR.EXTERNAL.ALUMINIUM",
+      "unit": "pcs",
+      "lines": 2,
+      "released_lines": 2,
+      "released_qty": 2.0,
+      "held_lines": 0,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     }
+    ],
+    "candidate_run_v2_13": [
+     {
+      "item_code": "ARCH.WINDOW",
+      "unit": "pcs",
+      "lines": 27,
+      "released_lines": 27,
+      "released_qty": 27.0,
+      "held_lines": 0,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     },
+     {
+      "item_code": "ARCH.PASSAGE",
+      "unit": "pcs",
+      "lines": 11,
+      "released_lines": 11,
+      "released_qty": 11.0,
+      "held_lines": 0,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     },
+     {
+      "item_code": "DOOR.INTERNAL.PVC",
+      "unit": "pcs",
+      "lines": 15,
+      "released_lines": 15,
+      "released_qty": 15.0,
+      "held_lines": 0,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     },
+     {
+      "item_code": "DOOR.EXTERNAL.ALUMINIUM",
+      "unit": "pcs",
+      "lines": 2,
+      "released_lines": 2,
+      "released_qty": 2.0,
+      "held_lines": 0,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     }
+    ]
+   },
+   "item_codes": [
+    "ARCH.DOOR",
+    "ARCH.PASSAGE"
+   ]
+  },
+  {
+   "code": "B6-02",
+   "group": "B6 Openings",
+   "item_en": "Internal doors (PVC / wood)",
+   "item_ar": "أبواب داخلية",
+   "unit": "pcs + m2",
+   "capability": "PARTIAL",
+   "capability_1_0_0": "NOT_IMPLEMENTED",
+   "capability_change": "RAISED",
+   "implementation": "ARCH_TAKEOFF_V2.9: DOOR.INTERNAL.PVC (pcs)",
+   "source_needed": "schedule",
+   "next_slice": "S4",
+   "evidence": [
+    "engine/source/door_model.py:54 DOOR.INTERNAL.PVC class (owner door classes 2026-10-13)",
+    "tools/urban_boq_m9.py:2575 _v21_doors() releases the class count",
+    "commit 5f07bf0 (T-078 door / window m2 from printed dimensions): engine/source/opening_area.py:304 measure() read only by engine/source/opening_height_pdf.py, by no method"
+   ],
+   "released_method_reads": "ARCH_TAKEOFF_V2.9: DOOR.INTERNAL.PVC (pcs)",
+   "opt_in_readers": "same",
+   "missing": "door m2 not released (no printed height wired); census gap: DOOR.* are counted under B6-01 only",
+   "in_v3_0_candidate": "yes",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [
+     {
+      "item_code": "DOOR.INTERNAL.PVC",
+      "unit": "pcs",
+      "lines": 15,
+      "released_lines": 15,
+      "released_qty": 15.0,
+      "held_lines": 0,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     }
+    ],
+    "candidate_run_v2_13": [
+     {
+      "item_code": "DOOR.INTERNAL.PVC",
+      "unit": "pcs",
+      "lines": 15,
+      "released_lines": 15,
+      "released_qty": 15.0,
+      "held_lines": 0,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     }
+    ]
+   },
+   "item_codes": [
+    "DOOR.INTERNAL.PVC"
+   ],
+   "note": "1.0.0 said NOT_IMPLEMENTED; the released run counts the class"
+  },
+  {
+   "code": "B6-03",
+   "group": "B6 Openings",
+   "item_en": "Main / external / steel doors",
+   "item_ar": "باب رئيسي / خارجي",
+   "unit": "pcs",
+   "capability": "PARTIAL",
+   "capability_1_0_0": "NOT_IMPLEMENTED",
+   "capability_change": "RAISED",
+   "implementation": "ARCH_TAKEOFF_V2.9: DOOR.EXTERNAL.ALUMINIUM, DOOR.MAIN_ENTRANCE (pcs)",
+   "source_needed": "schedule",
+   "next_slice": "S4",
+   "evidence": [
+    "engine/source/door_model.py:54 DOOR.EXTERNAL.ALUMINIUM / DOOR.MAIN_ENTRANCE classes",
+    "tools/urban_boq_m9.py:2575 _v21_doors()"
+   ],
+   "released_method_reads": "ARCH_TAKEOFF_V2.9: DOOR.EXTERNAL.ALUMINIUM, DOOR.MAIN_ENTRANCE (pcs)",
+   "opt_in_readers": "same",
+   "missing": "steel doors not a class; m2 not released; census gap as B6-02",
+   "in_v3_0_candidate": "yes",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [
+     {
+      "item_code": "DOOR.EXTERNAL.ALUMINIUM",
+      "unit": "pcs",
+      "lines": 2,
+      "released_lines": 2,
+      "released_qty": 2.0,
+      "held_lines": 0,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     }
+    ],
+    "candidate_run_v2_13": [
+     {
+      "item_code": "DOOR.EXTERNAL.ALUMINIUM",
+      "unit": "pcs",
+      "lines": 2,
+      "released_lines": 2,
+      "released_qty": 2.0,
+      "held_lines": 0,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     }
+    ]
+   },
+   "item_codes": [
+    "DOOR.EXTERNAL.ALUMINIUM",
+    "DOOR.MAIN_ENTRANCE"
+   ]
+  },
+  {
+   "code": "B6-04",
+   "group": "B6 Openings",
+   "item_en": "Windows / aluminium / glazing / skylights",
+   "item_ar": "شبابيك ألمنيوم",
+   "unit": "pcs + m2",
+   "capability": "PARTIAL",
+   "capability_1_0_0": "NOT_IMPLEMENTED",
+   "capability_change": "RAISED",
+   "implementation": "ARCH_TAKEOFF_V2.9: ARCH.WINDOW (pcs)",
+   "source_needed": "schedule, elevations",
+   "next_slice": "S4",
+   "evidence": [
+    "engine/source/arch_measure.py:698 ARCH.WINDOW count",
+    "engine/source/arch_v28.py:766 window strip from the opening schedule (width, height, sill)",
+    "engine/source/arch_v29.py:277 curved glazing as openings",
+    "commit 5f07bf0 (T-078): window m2 from printed dimensions, read by no method"
+   ],
+   "released_method_reads": "ARCH_TAKEOFF_V2.9: ARCH.WINDOW (pcs)",
+   "opt_in_readers": "same",
+   "missing": "window m2 not released (the freelancer's m2 line is unit-refused); census gap as B6-02",
+   "in_v3_0_candidate": "yes",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [
+     {
+      "item_code": "ARCH.WINDOW",
+      "unit": "pcs",
+      "lines": 27,
+      "released_lines": 27,
+      "released_qty": 27.0,
+      "held_lines": 0,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     }
+    ],
+    "candidate_run_v2_13": [
+     {
+      "item_code": "ARCH.WINDOW",
+      "unit": "pcs",
+      "lines": 27,
+      "released_lines": 27,
+      "released_qty": 27.0,
+      "held_lines": 0,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     }
+    ]
+   },
+   "item_codes": [
+    "ARCH.WINDOW"
+   ]
+  },
+  {
+   "code": "B6-05",
+   "group": "B6 Openings",
+   "item_en": "Shutters",
+   "item_ar": "شتر",
+   "unit": "pcs / m2",
+   "capability": "NOT_IMPLEMENTED",
+   "capability_1_0_0": "NOT_IMPLEMENTED",
+   "capability_change": "UNCHANGED",
+   "implementation": "none",
+   "source_needed": "schedule",
+   "next_slice": "S4",
+   "evidence": [
+    "no method emits a line of this family: no item code for it in engine/source/boq_line.py:46-110 and none in the item codes seen in the released and candidate runs (run_evidence.item_codes_seen)"
+   ],
+   "released_method_reads": "none",
+   "opt_in_readers": "none",
+   "missing": "shutters not measured",
+   "in_v3_0_candidate": "no",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": [],
+   "name_terms": [
+    "shutter"
+   ]
+  },
+  {
+   "code": "B6-06",
+   "group": "B6 Openings",
+   "item_en": "Elevator outer surround marble",
+   "item_ar": "رخام حول المصعد",
+   "unit": "m2",
+   "capability": "EXPERIMENTAL",
+   "capability_1_0_0": "EXPERIMENTAL",
+   "capability_change": "UNCHANGED",
+   "implementation": "engine/elevator_marble.py (round 6, P7757)",
+   "source_needed": "plans",
+   "next_slice": "S3",
+   "evidence": [
+    "engine/elevator_marble.py exists (round 6 research, read by no method)"
+   ],
+   "released_method_reads": "none",
+   "opt_in_readers": "none",
+   "missing": "not in any method",
+   "in_v3_0_candidate": "no",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": []
+  },
+  {
+   "code": "B6-07",
+   "group": "B6 Openings",
+   "item_en": "Elevator threshold marble",
+   "item_ar": "عتبة المصعد",
+   "unit": "m2 + lm",
+   "capability": "EXPERIMENTAL",
+   "capability_1_0_0": "EXPERIMENTAL",
+   "capability_change": "UNCHANGED",
+   "implementation": "elevator_marble (round 6)",
+   "source_needed": "plans",
+   "next_slice": "S3",
+   "evidence": [
+    "engine/elevator_marble.py exists (round 6 research, read by no method)"
+   ],
+   "released_method_reads": "none",
+   "opt_in_readers": "none",
+   "missing": "not in any method",
+   "in_v3_0_candidate": "no",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": []
+  },
+  {
+   "code": "B7-01",
+   "group": "B7 Stairs",
+   "item_en": "Stair assembly reconstruction (all stairs, occurrence once)",
+   "item_ar": "حصر السلالم",
+   "unit": "-",
+   "capability": "PARTIAL",
+   "capability_1_0_0": "PARTIAL",
+   "capability_change": "UNCHANGED",
+   "implementation": "ARCH_TAKEOFF_V2.9: FIN.STAIR.FLIGHT (held) and the stair finish lines",
+   "source_needed": "plans + sections",
+   "next_slice": "S3",
+   "evidence": [
+    "engine/source/arch_measure.py:876 _stair_lines() per drawn flight; :930 FIN.STAIR.FLIGHT",
+    "engine/source/arch_measure.py:829 _seen_below(): a flight seen below the cut is not measured again",
+    "commit 1513f1d (T-129, verifier run 46): the first -> second floor lower flight is counted again on the second-floor plan (+3.45 m2 tread marble, +11.5 lm steps)",
+    "commit 05e2eab (T-135 STAIR_FLIGHT_ONCE_V1, verifier merge): engine/source/stair_flight_once_v1.py:180 flights_once() measures each flight once; read by no method"
+   ],
+   "released_method_reads": "ARCH_TAKEOFF_V2.9: FIN.STAIR.FLIGHT (held) and the stair finish lines",
+   "opt_in_readers": "none",
+   "missing": "a flight drawn on two plans counted twice (verifier-confirmed); flight length held",
+   "in_v3_0_candidate": "yes",
+   "v3_0_planned_tasks": [
+    "T-133"
+   ],
+   "development_villa": {
+    "released_run": [
+     {
+      "item_code": "FIN.STAIR.FLIGHT",
+      "unit": "lm",
+      "lines": 14,
+      "released_lines": 0,
+      "released_qty": 0.0,
+      "held_lines": 14,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     }
+    ],
+    "candidate_run_v2_13": [
+     {
+      "item_code": "FIN.STAIR.FLIGHT",
+      "unit": "lm",
+      "lines": 14,
+      "released_lines": 0,
+      "released_qty": 0.0,
+      "held_lines": 14,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     }
+    ]
+   },
+   "item_codes": [
+    "FIN.STAIR.FLIGHT"
+   ]
+  },
+  {
+   "code": "B7-02",
+   "group": "B7 Stairs",
+   "item_en": "Tread marble",
+   "item_ar": "رخام نايم",
+   "unit": "m2",
+   "capability": "PARTIAL",
+   "capability_1_0_0": "EXPERIMENTAL",
+   "capability_change": "RAISED",
+   "implementation": "ARCH_TAKEOFF_V2.9: FIN.MARBLE.TREAD",
+   "source_needed": "flights",
+   "next_slice": "S3",
+   "evidence": [
+    "engine/source/arch_measure.py:899 FIN.MARBLE.TREAD from the tread polygons",
+    "commit 1513f1d (T-129, verifier run 46): +3.45 m2 counted twice on the second floor",
+    "commit 05e2eab (T-135 STAIR_FLIGHT_ONCE_V1): engine/source/stair_flight_once_v1.py:180, read by no method"
+   ],
+   "released_method_reads": "ARCH_TAKEOFF_V2.9: FIN.MARBLE.TREAD",
+   "opt_in_readers": "none",
+   "missing": "double-counted flight; round stair held (owner Q-50)",
+   "in_v3_0_candidate": "yes",
+   "v3_0_planned_tasks": [
+    "T-133"
+   ],
+   "development_villa": {
+    "released_run": [
+     {
+      "item_code": "FIN.MARBLE.TREAD",
+      "unit": "m2",
+      "lines": 14,
+      "released_lines": 11,
+      "released_qty": 27.324,
+      "held_lines": 3,
+      "held_bounded_low": 0.0,
+      "held_bounded_high": 8.924,
+      "not_applicable_lines": 0
+     }
+    ],
+    "candidate_run_v2_13": [
+     {
+      "item_code": "FIN.MARBLE.TREAD",
+      "unit": "m2",
+      "lines": 14,
+      "released_lines": 11,
+      "released_qty": 27.324,
+      "held_lines": 3,
+      "held_bounded_low": 0.0,
+      "held_bounded_high": 8.924,
+      "not_applicable_lines": 0
+     }
+    ]
+   },
+   "item_codes": [
+    "FIN.MARBLE.TREAD"
+   ],
+   "note": "1.0.0 said EXPERIMENTAL; the released run quantifies it"
+  },
+  {
+   "code": "B7-03",
+   "group": "B7 Stairs",
+   "item_en": "Visible riser marble",
+   "item_ar": "رخام قائم",
+   "unit": "m2",
+   "capability": "PARTIAL",
+   "capability_1_0_0": "EXPERIMENTAL",
+   "capability_change": "RAISED",
+   "implementation": "ARCH_TAKEOFF_V2.9: FIN.MARBLE.RISER (held)",
+   "source_needed": "flights + tread thickness",
+   "next_slice": "S3",
+   "evidence": [
+    "engine/source/arch_measure.py:922 / :950 FIN.MARBLE.RISER (UP-STAIR-003), held without the tread thickness"
+   ],
+   "released_method_reads": "ARCH_TAKEOFF_V2.9: FIN.MARBLE.RISER (held)",
+   "opt_in_readers": "none",
+   "missing": "tread marble thickness not given: every line held",
+   "in_v3_0_candidate": "yes",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [
+     {
+      "item_code": "FIN.MARBLE.RISER",
+      "unit": "m2",
+      "lines": 14,
+      "released_lines": 0,
+      "released_qty": 0.0,
+      "held_lines": 14,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     }
+    ],
+    "candidate_run_v2_13": [
+     {
+      "item_code": "FIN.MARBLE.RISER",
+      "unit": "m2",
+      "lines": 14,
+      "released_lines": 0,
+      "released_qty": 0.0,
+      "held_lines": 14,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     }
+    ]
+   },
+   "item_codes": [
+    "FIN.MARBLE.RISER"
+   ]
+  },
+  {
+   "code": "B7-04",
+   "group": "B7 Stairs",
+   "item_en": "Landing marble",
+   "item_ar": "رخام استراحة / بسطة",
+   "unit": "m2",
+   "capability": "PARTIAL",
+   "capability_1_0_0": "EXPERIMENTAL",
+   "capability_change": "RAISED",
+   "implementation": "ARCH_TAKEOFF_V2.9: FIN.MARBLE.LANDING (bounded)",
+   "source_needed": "landing polygons",
+   "next_slice": "S3",
+   "evidence": [
+    "engine/source/arch_measure.py:965 _landing(): FIN.MARBLE.LANDING as a bounded range",
+    "commit 4ae3a68 (T-122) and 1513f1d (T-129): landings by hand, counted once (research, verifier runs 45 / 46)"
+   ],
+   "released_method_reads": "ARCH_TAKEOFF_V2.9: FIN.MARBLE.LANDING (bounded)",
+   "opt_in_readers": "none",
+   "missing": "landing polygons not settled (owner Q-66 B, Q-70 A); the hand result is not wired",
+   "in_v3_0_candidate": "yes",
+   "v3_0_planned_tasks": [
+    "T-133"
+   ],
+   "development_villa": {
+    "released_run": [
+     {
+      "item_code": "FIN.MARBLE.LANDING",
+      "unit": "m2",
+      "lines": 2,
+      "released_lines": 0,
+      "released_qty": 0.0,
+      "held_lines": 2,
+      "held_bounded_low": 0.0,
+      "held_bounded_high": 20.775,
+      "not_applicable_lines": 0
+     }
+    ],
+    "candidate_run_v2_13": [
+     {
+      "item_code": "FIN.MARBLE.LANDING",
+      "unit": "m2",
+      "lines": 2,
+      "released_lines": 0,
+      "released_qty": 0.0,
+      "held_lines": 2,
+      "held_bounded_low": 0.0,
+      "held_bounded_high": 20.775,
+      "not_applicable_lines": 0
+     }
+    ]
+   },
+   "item_codes": [
+    "FIN.MARBLE.LANDING"
+   ]
+  },
+  {
+   "code": "B7-05",
+   "group": "B7 Stairs",
+   "item_en": "Nosing / edge finishing",
+   "item_ar": "حافة الدرجة",
+   "unit": "lm",
+   "capability": "EXPERIMENTAL",
+   "capability_1_0_0": "EXPERIMENTAL",
+   "capability_change": "UNCHANGED",
+   "implementation": "stair_assembly NOSING_LENGTH",
+   "source_needed": "flights",
+   "next_slice": "S3",
+   "evidence": [
+    "engine/stair_assembly.py exists (NOSING_LENGTH, research, read by no method)"
+   ],
+   "released_method_reads": "none",
+   "opt_in_readers": "none",
+   "missing": "not in any method",
+   "in_v3_0_candidate": "no",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": []
+  },
+  {
+   "code": "B7-06",
+   "group": "B7 Stairs",
+   "item_en": "Commercial step basis",
+   "item_ar": "الدرج بالمتر الطولي",
+   "unit": "lm",
+   "capability": "PARTIAL",
+   "capability_1_0_0": "EXPERIMENTAL",
+   "capability_change": "RAISED",
+   "implementation": "ARCH_TAKEOFF_V2.9: FIN.STAIR.STEP_LM",
+   "source_needed": "unique steps",
+   "next_slice": "S3",
+   "evidence": [
+    "engine/source/arch_measure.py:902 FIN.STAIR.STEP_LM: sum of the physical step widths (owner Q-19)",
+    "commit 05e2eab (T-135 STAIR_FLIGHT_ONCE_V1): engine/source/stair_flight_once_v1.py:180, read by no method"
+   ],
+   "released_method_reads": "ARCH_TAKEOFF_V2.9: FIN.STAIR.STEP_LM",
+   "opt_in_readers": "none",
+   "missing": "same double count as B7-02 (T-129)",
+   "in_v3_0_candidate": "yes",
+   "v3_0_planned_tasks": [
+    "T-133"
+   ],
+   "development_villa": {
+    "released_run": [
+     {
+      "item_code": "FIN.STAIR.STEP_LM",
+      "unit": "lm",
+      "lines": 14,
+      "released_lines": 11,
+      "released_qty": 91.028,
+      "held_lines": 3,
+      "held_bounded_low": 0.0,
+      "held_bounded_high": 29.896,
+      "not_applicable_lines": 0
+     }
+    ],
+    "candidate_run_v2_13": [
+     {
+      "item_code": "FIN.STAIR.STEP_LM",
+      "unit": "lm",
+      "lines": 14,
+      "released_lines": 11,
+      "released_qty": 91.028,
+      "held_lines": 3,
+      "held_bounded_low": 0.0,
+      "held_bounded_high": 29.896,
+      "not_applicable_lines": 0
+     }
+    ]
+   },
+   "item_codes": [
+    "FIN.STAIR.STEP_LM"
+   ]
+  },
+  {
+   "code": "B7-07",
+   "group": "B7 Stairs",
+   "item_en": "Stair skirting zigzag",
+   "item_ar": "توشيح متعرج",
+   "unit": "lm",
+   "capability": "IMPLEMENTED_NOT_INTEGRATED",
+   "capability_1_0_0": "IMPLEMENTED_NOT_INTEGRATED",
+   "capability_change": "UNCHANGED",
+   "implementation": "finishes_rules.zigzag_skirting (idle arithmetic)",
+   "source_needed": "goings + rises",
+   "next_slice": "S3",
+   "evidence": [
+    "engine/finishes_rules.py exists (zigzag skirting, idle arithmetic)"
+   ],
+   "released_method_reads": "none",
+   "opt_in_readers": "none",
+   "missing": "not in any method",
+   "in_v3_0_candidate": "no",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": []
+  },
+  {
+   "code": "B7-08",
+   "group": "B7 Stairs",
+   "item_en": "Stair skirting sloped",
+   "item_ar": "توشيح مائل",
+   "unit": "lm",
+   "capability": "IMPLEMENTED_NOT_INTEGRATED",
+   "capability_1_0_0": "IMPLEMENTED_NOT_INTEGRATED",
+   "capability_change": "UNCHANGED",
+   "implementation": "finishes_rules.sloped_skirting (idle)",
+   "source_needed": "run + rise",
+   "next_slice": "S3",
+   "evidence": [
+    "engine/finishes_rules.py exists (sloped skirting, idle)"
+   ],
+   "released_method_reads": "none",
+   "opt_in_readers": "none",
+   "missing": "not in any method",
+   "in_v3_0_candidate": "no",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": []
+  },
+  {
+   "code": "B7-09",
+   "group": "B7 Stairs",
+   "item_en": "Open-edge guardrail (3D installed path)",
+   "item_ar": "درابزين الدرج",
+   "unit": "lm",
+   "capability": "PARTIAL",
+   "capability_1_0_0": "NOT_IMPLEMENTED",
+   "capability_change": "RAISED",
+   "implementation": "ARCH_TAKEOFF_V2.9: FIN.RAILING (held)",
+   "source_needed": "open edges + flight geometry",
+   "next_slice": "S3",
+   "evidence": [
+    "engine/source/arch_measure.py:938-954 FIN.RAILING per open side: sqrt(plan path^2 + rise^2) (UP-STAIR-012)"
+   ],
+   "released_method_reads": "ARCH_TAKEOFF_V2.9: FIN.RAILING (held)",
+   "opt_in_readers": "none",
+   "missing": "open sides not established: every development-villa line held",
+   "in_v3_0_candidate": "yes",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [
+     {
+      "item_code": "FIN.RAILING",
+      "unit": "lm",
+      "lines": 14,
+      "released_lines": 0,
+      "released_qty": 0.0,
+      "held_lines": 14,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     }
+    ],
+    "candidate_run_v2_13": [
+     {
+      "item_code": "FIN.RAILING",
+      "unit": "lm",
+      "lines": 14,
+      "released_lines": 0,
+      "released_qty": 0.0,
+      "held_lines": 14,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     }
+    ]
+   },
+   "item_codes": [
+    "FIN.RAILING"
+   ],
+   "note": "1.0.0 said NOT_IMPLEMENTED; the released route emits the line (held)"
+  },
+  {
+   "code": "B7-10",
+   "group": "B7 Stairs",
+   "item_en": "Wall-mounted handrail",
+   "item_ar": "مسكة الدرج",
+   "unit": "lm",
+   "capability": "NOT_IMPLEMENTED",
+   "capability_1_0_0": "NOT_IMPLEMENTED",
+   "capability_change": "UNCHANGED",
+   "implementation": "none",
+   "source_needed": "drawn / specified only",
+   "next_slice": "S3",
+   "evidence": [
+    "FIN.HANDRAIL is defined (engine/source/boq_line.py:91) but no module emits it (grep of engine/ and tools/)"
+   ],
+   "released_method_reads": "none",
+   "opt_in_readers": "none",
+   "missing": "not measured",
+   "in_v3_0_candidate": "no",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": [
+    "FIN.HANDRAIL"
+   ],
+   "name_terms": [
+    "handrail"
+   ]
+  },
+  {
+   "code": "B7-11",
+   "group": "B7 Stairs",
+   "item_en": "Posts / glass panels",
+   "item_ar": "قوائم / زجاج",
+   "unit": "pcs / m2",
+   "capability": "BLOCKED_BY_SOURCE",
+   "capability_1_0_0": "BLOCKED_BY_SOURCE",
+   "capability_change": "UNCHANGED",
+   "implementation": "none",
+   "source_needed": "spec",
+   "next_slice": "S3",
+   "evidence": [
+    "no method emits a line of this family: no item code for it in engine/source/boq_line.py:46-110 and none in the item codes seen in the released and candidate runs (run_evidence.item_codes_seen)"
+   ],
+   "released_method_reads": "none",
+   "opt_in_readers": "none",
+   "missing": "needs a specification",
+   "in_v3_0_candidate": "no",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": []
+  },
+  {
+   "code": "B7-12",
+   "group": "B7 Stairs",
+   "item_en": "Stair concrete",
+   "item_ar": "خرسانة الدرج",
+   "unit": "m3",
+   "capability": "PARTIAL",
+   "capability_1_0_0": "INTEGRATED_AND_TESTED",
+   "capability_change": "LOWERED",
+   "implementation": "ARCH_TAKEOFF_V2.9 + route G (conventions URBAN_M8_GENERIC_CONVENTIONS_V6): STR.CONC.STAIR",
+   "source_needed": "structural plans + sections",
+   "next_slice": "-",
+   "evidence": [
+    "engine/source/generic_route.py:1921 _stair_items(); :1995 STAIRS concrete in route G",
+    "docs/agents SCOREBOARD (verifier, released run): stair + dome concrete compared line UNRESOLVED (owner Q-12)",
+    "commit e74c182 (T-105 with T-056 STAIR_CONCRETE_V1, verifier merge): engine/source/stair_steps_concrete.py:399 measure_all() gives stair concrete flight by flight; read by no method; round stair HELD (owner Q-50 / Q-51)"
+   ],
+   "released_method_reads": "ARCH_TAKEOFF_V2.9 + route G (conventions URBAN_M8_GENERIC_CONVENTIONS_V6): STR.CONC.STAIR",
+   "opt_in_readers": "none",
+   "missing": "flight-by-flight stair concrete merged but not wired; round stair and winders held",
+   "in_v3_0_candidate": "yes",
+   "v3_0_planned_tasks": [
+    "T-133"
+   ],
+   "development_villa": {
+    "released_run": [
+     {
+      "item_code": "STR.CONC.STAIR",
+      "unit": "m3",
+      "lines": 3,
+      "released_lines": 3,
+      "released_qty": 4.635,
+      "held_lines": 0,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     }
+    ],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": [
+    "STR.CONC.STAIR"
+   ],
+   "note": "1.0.0 said INTEGRATED_AND_TESTED; lowered: the stair line is UNRESOLVED on the development villa and the stair piece that replaces it is not wired"
+  },
+  {
+   "code": "B7-13",
+   "group": "B7 Stairs",
+   "item_en": "Stair formwork",
+   "item_ar": "شدة الدرج",
+   "unit": "m2",
+   "capability": "NOT_IMPLEMENTED",
+   "capability_1_0_0": "NOT_IMPLEMENTED",
+   "capability_change": "UNCHANGED",
+   "implementation": "stair_geometry INCLINED_WAIST_SURFACE_AREA (structural, not a trade)",
+   "source_needed": "sections",
+   "next_slice": "S5",
+   "evidence": [
+    "no method emits a line of this family: no item code for it in engine/source/boq_line.py:46-110 and none in the item codes seen in the released and candidate runs (run_evidence.item_codes_seen); engine/source/stair_geometry.py INCLINED_WAIST_SURFACE_AREA is structural geometry, not a trade"
+   ],
+   "released_method_reads": "none",
+   "opt_in_readers": "none",
+   "missing": "no formwork trade",
+   "in_v3_0_candidate": "no",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": [],
+   "name_terms": [
+    "stair_formwork"
+   ]
+  },
+  {
+   "code": "B7-14",
+   "group": "B7 Stairs",
+   "item_en": "Stair reinforcement",
+   "item_ar": "حديد الدرج",
+   "unit": "kg",
+   "capability": "BLOCKED_BY_SOURCE",
+   "capability_1_0_0": "BLOCKED_BY_SOURCE",
+   "capability_change": "UNCHANGED",
+   "implementation": "none (MISSING_DATA in V6)",
+   "source_needed": "bar details",
+   "next_slice": "S5",
+   "evidence": [
+    "route G gives stair concrete without a bar model (coverage census B11-03)"
+   ],
+   "released_method_reads": "none",
+   "opt_in_readers": "none",
+   "missing": "needs bar details",
+   "in_v3_0_candidate": "no",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": []
+  },
+  {
+   "code": "B8-01",
+   "group": "B8 Waterproofing",
+   "item_en": "Wet-room floor membrane",
+   "item_ar": "عازل أرضيات الحمامات",
+   "unit": "m2",
+   "capability": "PARTIAL",
+   "capability_1_0_0": "IMPLEMENTED_NOT_INTEGRATED",
+   "capability_change": "RAISED",
+   "implementation": "ARCH_TAKEOFF_V2.9: FIN.WP.FLOOR",
+   "source_needed": "wet rooms",
+   "next_slice": "S2",
+   "evidence": [
+    "engine/source/arch_measure.py:560 FIN.WP.FLOOR per wet room",
+    "engine/source/waterproofing_system.py:284 areas_from_floor() (ARCH_TAKEOFF_V2.4+ system)",
+    "commit 8fcabe0 (T-010, verifier run 22): wet / dry evidence 72.12 m2 vs the released 62.773 m2 (wet rooms merged into dry zones in the released method)",
+    "commit 9f14742 (T-093 ARCH_TAKEOFF_V2.11, verifier run 32); commit 2264938 (V2.13, verifier run 44: 85.62 m2 with the typed pantry zone)"
+   ],
+   "released_method_reads": "ARCH_TAKEOFF_V2.9: FIN.WP.FLOOR",
+   "opt_in_readers": "ARCH_TAKEOFF_V2.11 .. V2.13",
+   "missing": "the released method misses wet rooms identified by fixtures (verifier-confirmed)",
+   "in_v3_0_candidate": "yes",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [
+     {
+      "item_code": "FIN.WP.FLOOR",
+      "unit": "m2",
+      "lines": 14,
+      "released_lines": 14,
+      "released_qty": 62.773,
+      "held_lines": 0,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     }
+    ],
+    "candidate_run_v2_13": [
+     {
+      "item_code": "FIN.WP.FLOOR",
+      "unit": "m2",
+      "lines": 18,
+      "released_lines": 18,
+      "released_qty": 85.621,
+      "held_lines": 0,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     }
+    ]
+   },
+   "item_codes": [
+    "FIN.WP.FLOOR",
+    "FIN.WP.PENETRATION"
+   ],
+   "note": "1.0.0 said IMPLEMENTED_NOT_INTEGRATED; the released route emits the line"
+  },
+  {
+   "code": "B8-02",
+   "group": "B8 Waterproofing",
+   "item_en": "Doorway floor continuation",
+   "item_ar": "عازل عند الباب",
+   "unit": "m2",
+   "capability": "PARTIAL",
+   "capability_1_0_0": "IMPLEMENTED_NOT_INTEGRATED",
+   "capability_change": "RAISED",
+   "implementation": "ARCH_TAKEOFF_V2.9: FIN.WP.DOORWAY, FIN.WP.DOORWAY_TRANSITION (bounded)",
+   "source_needed": "doors + wall depth",
+   "next_slice": "S2",
+   "evidence": [
+    "engine/source/arch_measure.py:571 / :602 FIN.WP.DOORWAY per doorway",
+    "engine/source/surface_ledger.py:134 FIN.WP.DOORWAY_TRANSITION by detail (bounded until the detail is chosen)",
+    "engine/source/arch_v211.py:494 door_transition_lines(): one transition per door (opt-in)"
+   ],
+   "released_method_reads": "ARCH_TAKEOFF_V2.9: FIN.WP.DOORWAY, FIN.WP.DOORWAY_TRANSITION (bounded)",
+   "opt_in_readers": "ARCH_TAKEOFF_V2.11 .. V2.13",
+   "missing": "doorway detail not chosen: transitions bounded",
+   "in_v3_0_candidate": "yes",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [
+     {
+      "item_code": "FIN.WP.DOORWAY",
+      "unit": "m2",
+      "lines": 14,
+      "released_lines": 14,
+      "released_qty": 1.93,
+      "held_lines": 0,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     },
+     {
+      "item_code": "FIN.WP.DOORWAY_TRANSITION",
+      "unit": "m2",
+      "lines": 13,
+      "released_lines": 0,
+      "released_qty": 0.0,
+      "held_lines": 13,
+      "held_bounded_low": 0.0,
+      "held_bounded_high": 2.139,
+      "not_applicable_lines": 0
+     }
+    ],
+    "candidate_run_v2_13": [
+     {
+      "item_code": "FIN.WP.DOORWAY",
+      "unit": "m2",
+      "lines": 14,
+      "released_lines": 14,
+      "released_qty": 1.93,
+      "held_lines": 0,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     },
+     {
+      "item_code": "FIN.WP.DOORWAY_TRANSITION",
+      "unit": "m2",
+      "lines": 13,
+      "released_lines": 0,
+      "released_qty": 0.0,
+      "held_lines": 13,
+      "held_bounded_low": 0.0,
+      "held_bounded_high": 2.139,
+      "not_applicable_lines": 0
+     },
+     {
+      "item_code": "FIN.WP.DOORWAY_TRANSITION_NR",
+      "unit": "pcs",
+      "lines": 14,
+      "released_lines": 14,
+      "released_qty": 14.0,
+      "held_lines": 0,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     }
+    ]
+   },
+   "item_codes": [
+    "FIN.WP.DOORWAY",
+    "FIN.WP.DOORWAY_TRANSITION",
+    "FIN.WP.DOORWAY_TRANSITION_NR",
+    "FIN.WP.THRESHOLD"
+   ]
+  },
+  {
+   "code": "B8-03",
+   "group": "B8 Waterproofing",
+   "item_en": "Wet-room upturn (0.20 m incl. doorway)",
+   "item_ar": "رفعة العازل",
+   "unit": "m2 + lm",
+   "capability": "PARTIAL",
+   "capability_1_0_0": "IMPLEMENTED_NOT_INTEGRATED",
+   "capability_change": "RAISED",
+   "implementation": "ARCH_TAKEOFF_V2.9: FIN.WP.WALL_UPTURN",
+   "source_needed": "wet-room boundary",
+   "next_slice": "S2",
+   "evidence": [
+    "engine/source/waterproofing_system.py:905-910 FIN.WP.WALL_UPTURN on eligible wall boundaries (UP-WP-002)",
+    "engine/source/surface_ledger.py:142 the V2.4+ ledger replaces FIN.WP.UPTURN by FIN.WP.WALL_UPTURN",
+    "engine/source/arch_measure.py:615 FIN.WP.UPTURN (ARCH_TAKEOFF_V1 .. V2.3 path only)"
+   ],
+   "released_method_reads": "ARCH_TAKEOFF_V2.9: FIN.WP.WALL_UPTURN",
+   "opt_in_readers": "ARCH_TAKEOFF_V2.11 .. V2.13",
+   "missing": "census gap: B8-03 maps to FIN.WP.UPTURN only (engine/source/coverage_census.py:31), so the released run reports it NOT_FOUND_IN_SOURCE although 14 wall-upturn lines are released",
+   "in_v3_0_candidate": "yes",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [
+     {
+      "item_code": "FIN.WP.WALL_UPTURN",
+      "unit": "m2",
+      "lines": 14,
+      "released_lines": 14,
+      "released_qty": 22.065,
+      "held_lines": 0,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     }
+    ],
+    "candidate_run_v2_13": [
+     {
+      "item_code": "FIN.WP.WALL_UPTURN",
+      "unit": "m2",
+      "lines": 18,
+      "released_lines": 17,
+      "released_qty": 25.115,
+      "held_lines": 1,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     }
+    ]
+   },
+   "item_codes": [
+    "FIN.WP.TERMINATION",
+    "FIN.WP.UPTURN",
+    "FIN.WP.WALL_UPTURN"
+   ],
+   "note": "1.0.0 text '7 conflicting implementations (C01)': the released route uses one (waterproofing_system); the membrane fold versions V2..V5 lay strips, they do not re-measure the upturn area"
+  },
+  {
+   "code": "B8-04",
+   "group": "B8 Waterproofing",
+   "item_en": "Shower floor and tanking",
+   "item_ar": "عازل الشاور",
+   "unit": "m2",
+   "capability": "NOT_IMPLEMENTED",
+   "capability_1_0_0": "NOT_IMPLEMENTED",
+   "capability_change": "UNCHANGED",
+   "implementation": "none generic",
+   "source_needed": "shower extents, tanking height",
+   "next_slice": "S2",
+   "evidence": [
+    "no method emits a line of this family: no item code for it in engine/source/boq_line.py:46-110 and none in the item codes seen in the released and candidate runs (run_evidence.item_codes_seen)"
+   ],
+   "released_method_reads": "none",
+   "opt_in_readers": "none",
+   "missing": "shower extents and tanking height not read",
+   "in_v3_0_candidate": "no",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": [],
+   "name_terms": [
+    "shower",
+    "tanking"
+   ]
+  },
+  {
+   "code": "B8-05",
+   "group": "B8 Waterproofing",
+   "item_en": "Membrane overlap / rolls / procurement",
+   "item_ar": "تراكب لفات العازل",
+   "unit": "m2 / rolls",
+   "capability": "IMPLEMENTED_NOT_INTEGRATED",
+   "capability_1_0_0": "NOT_IMPLEMENTED",
+   "capability_change": "RAISED",
+   "implementation": "ARCH_TAKEOFF_V2.9: procurement roll view only (no BOQ line)",
+   "source_needed": "product data sheet",
+   "next_slice": "S2",
+   "evidence": [
+    "engine/source/arch_v211.py:568 rolls_lines(): FIN.WP.MEMBRANE_ROLLS per wet area / roof (owner Q-49 A strips)",
+    "engine/source/arch_v213.py:86 prove_q58_a(); :413 rolls_lines()",
+    "commit 9f14742 (T-093 V2.11, verifier run 32: wet areas 19 rolls = hand); 54bd6a4 (T-096 V2.12, run 35); 2264938 (T-120 V2.13, run 44: second-floor roof 17 rolls under Q-58 A, placement re-checked); f47ae01 (T-124 MEMBRANE_FOLD_V5, read by no method)",
+    "engine/source/membrane_layout.py:1 exact roll plan per rectangular wet room in the released route; engine/source/coverage_census.py:108 it is a procurement view, never a BOQ line (coverage census)"
+   ],
+   "released_method_reads": "ARCH_TAKEOFF_V2.9: procurement roll view only (no BOQ line)",
+   "opt_in_readers": "ARCH_TAKEOFF_V2.11 .. V2.13",
+   "missing": "the owner strip method's roll lines are opt-in only; MEMBRANE_FOLD_V5 not wired",
+   "in_v3_0_candidate": "yes",
+   "v3_0_planned_tasks": [
+    "T-133"
+   ],
+   "development_villa": {
+    "released_run": [],
+    "candidate_run_v2_13": [
+     {
+      "item_code": "FIN.WP.MEMBRANE_ROLLS",
+      "unit": "pcs",
+      "lines": 22,
+      "released_lines": 21,
+      "released_qty": 52.0,
+      "held_lines": 1,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     }
+    ]
+   },
+   "item_codes": [
+    "FIN.WP.DETAILING",
+    "FIN.WP.MEMBRANE_ROLLS"
+   ],
+   "note": "1.0.0 said NOT_IMPLEMENTED (single factor)"
+  },
+  {
+   "code": "B8-06",
+   "group": "B8 Waterproofing",
+   "item_en": "Roof waterproofing + 0.20 upturn",
+   "item_ar": "عزل الأسطح",
+   "unit": "m2",
+   "capability": "IMPLEMENTED_NOT_INTEGRATED",
+   "capability_1_0_0": "IMPLEMENTED_NOT_INTEGRATED",
+   "capability_change": "UNCHANGED",
+   "implementation": "none (ARCH_TAKEOFF_V2.9 has no roof waterproofing line)",
+   "source_needed": "roof plan",
+   "next_slice": "S4",
+   "evidence": [
+    "engine/source/arch_v211.py:227 roof_records(); :527 roof_lines(): FIN.WP.ROOF inside the parapet + FIN.WP.ROOF_UPTURN",
+    "commit 4054509 (T-071 exterior spaces, verifier 2026-10-19); 9f14742 (V2.11, verifier run 32)"
+   ],
+   "released_method_reads": "none (ARCH_TAKEOFF_V2.9 has no roof waterproofing line)",
+   "opt_in_readers": "ARCH_TAKEOFF_V2.11 .. V2.13",
+   "missing": "opt-in only; the top roof is held",
+   "in_v3_0_candidate": "yes",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [],
+    "candidate_run_v2_13": [
+     {
+      "item_code": "FIN.WP.ROOF",
+      "unit": "m2",
+      "lines": 4,
+      "released_lines": 3,
+      "released_qty": 204.112,
+      "held_lines": 1,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     },
+     {
+      "item_code": "FIN.WP.ROOF_UPTURN",
+      "unit": "lm",
+      "lines": 4,
+      "released_lines": 3,
+      "released_qty": 181.589,
+      "held_lines": 1,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     }
+    ]
+   },
+   "item_codes": [
+    "FIN.WP.ROOF",
+    "FIN.WP.ROOF_UPTURN"
+   ]
+  },
+  {
+   "code": "B8-07",
+   "group": "B8 Waterproofing",
+   "item_en": "Terraces / balconies / planters",
+   "item_ar": "عزل البلكونات",
+   "unit": "m2",
+   "capability": "PARTIAL",
+   "capability_1_0_0": "NOT_IMPLEMENTED",
+   "capability_change": "RAISED",
+   "implementation": "ARCH_TAKEOFF_V2.9 + route G (conventions URBAN_M8_GENERIC_CONVENTIONS_V6): FIN.WP.FLOOR 'exterior wp_floor' (balcony drawn as a space)",
+   "source_needed": "plans",
+   "next_slice": "S4",
+   "evidence": [
+    "engine/source/arch_measure.py:349 owner scope (ARCH_TAKEOFF_V2.3 and later, so the released V2.9): a space typed EXTERIOR whose label is BALCONY / TERRACE / ROOF gets engine/source/owner_finish_scope.py:231 exterior_wp_lines(): FIN.WP.FLOOR element 'exterior wp_floor' PROVISIONAL over the drawn area (UP-WP-ROOF-001), the balcony upturn HELD by specification",
+    "tests/m9_kb/test_kb_wp5.py:80 (drawn balcony: one PROVISIONAL membrane line 8.0 m2 in V2.3, none in V2.2) and tests/m9_kb/test_kb_finish_scope.py:191",
+    "engine/source/arch_v211.py:527 roof_lines(): FIN.WP.BALCONY (:537) for a balcony label on its own exterior layer (EXTERIOR_SPACES_V1, commit a444907 T-071; V2.11 commit bfadb52), opt-in ARCH_TAKEOFF_V2.11 .. V3.0",
+    "development villa: no balcony / terrace label, 0 lines in both runs (not proof of absence)"
+   ],
+   "released_method_reads": "ARCH_TAKEOFF_V2.9 + route G (conventions URBAN_M8_GENERIC_CONVENTIONS_V6): FIN.WP.FLOOR 'exterior wp_floor' (balcony drawn as a space)",
+   "opt_in_readers": "ARCH_TAKEOFF_V2.11 .. V3.0 (FIN.WP.BALCONY from exterior spaces)",
+   "missing": "balcony upturn held by specification; planters not measured; census gap: the released balcony membrane carries FIN.WP.FLOOR, which engine/source/coverage_census.py:31 counts under B8-01; no hand check",
+   "in_v3_0_candidate": "yes",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": [
+    "FIN.WP.BALCONY"
+   ],
+   "note": "1.0.0 and r1 said NOT_IMPLEMENTED ('no item code'); the verifier found FIN.WP.BALCONY (opt-in); the released owner-scope path was found in this rework"
+  },
+  {
+   "code": "B8-08",
+   "group": "B8 Waterproofing",
+   "item_en": "Foundations / basement / below-grade walls",
+   "item_ar": "عزل الأساسات",
+   "unit": "m2",
+   "capability": "NOT_IMPLEMENTED",
+   "capability_1_0_0": "NOT_IMPLEMENTED",
+   "capability_change": "UNCHANGED",
+   "implementation": "none",
+   "source_needed": "structural plans",
+   "next_slice": "S5",
+   "evidence": [
+    "no method emits a line of this family: no item code for it in engine/source/boq_line.py:46-110 and none in the item codes seen in the released and candidate runs (run_evidence.item_codes_seen)"
+   ],
+   "released_method_reads": "none",
+   "opt_in_readers": "none",
+   "missing": "below-grade waterproofing not measured",
+   "in_v3_0_candidate": "no",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": [],
+   "name_terms": [
+    "below_grade",
+    "basement",
+    "tanking"
+   ]
+  },
+  {
+   "code": "B8-09",
+   "group": "B8 Waterproofing",
+   "item_en": "Pool / tank internal waterproofing",
+   "item_ar": "عزل المسبح والخزان",
+   "unit": "m2",
+   "capability": "BLOCKED_BY_SOURCE",
+   "capability_1_0_0": "BLOCKED_BY_SOURCE",
+   "capability_change": "UNCHANGED",
+   "implementation": "none",
+   "source_needed": "details",
+   "next_slice": "S5",
+   "evidence": [
+    "no method emits a line of this family: no item code for it in engine/source/boq_line.py:46-110 and none in the item codes seen in the released and candidate runs (run_evidence.item_codes_seen)"
+   ],
+   "released_method_reads": "none",
+   "opt_in_readers": "none",
+   "missing": "needs details",
+   "in_v3_0_candidate": "no",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": []
+  },
+  {
+   "code": "B9-01",
+   "group": "B9 Masonry",
+   "item_en": "Block walls by type and thickness",
+   "item_ar": "طابوق أسود / أبيض",
+   "unit": "m2 (m3 / pcs procurement)",
+   "capability": "PARTIAL",
+   "capability_1_0_0": "EXPERIMENTAL",
+   "capability_change": "RAISED",
+   "implementation": "ARCH_TAKEOFF_V2.9: ARCH.WALL_RUN, ARCH.WALL_PANEL, ARCH.WALL_VOLUME, MAS.BLOCK",
+   "source_needed": "plans + legend / spec",
+   "next_slice": "S4",
+   "evidence": [
+    "engine/source/arch_measure.py:789 _wall_lines(): ARCH.WALL_RUN by thickness (PROVISIONAL); :811 MAS.BLOCK held",
+    "tools/urban_boq_m9.py:1158 _v29_masonry(): ARCH.WALL_PANEL m2 / ARCH.WALL_VOLUME m3 from height evidence",
+    "commit 2dc1657 (T-027 masonry centreline, verifier run 39) and bc21314 (T-117 vs hand): engine/source/masonry_centreline.py:212 measure() read by no method",
+    "commit 79bd397 (T-103 wall metres by hand, verifier run 37)"
+   ],
+   "released_method_reads": "ARCH_TAKEOFF_V2.9: ARCH.WALL_RUN, ARCH.WALL_PANEL, ARCH.WALL_VOLUME, MAS.BLOCK",
+   "opt_in_readers": "none",
+   "missing": "panel m2 / m3 held (owner Q-60 height not wired); block type per wall (Q-65); census gap: B9-01 maps to MAS.BLOCK only",
+   "in_v3_0_candidate": "yes",
+   "v3_0_planned_tasks": [
+    "T-125",
+    "T-108"
+   ],
+   "development_villa": {
+    "released_run": [
+     {
+      "item_code": "ARCH.WALL_RUN",
+      "unit": "lm",
+      "lines": 7,
+      "released_lines": 7,
+      "released_qty": 216.931,
+      "held_lines": 0,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     },
+     {
+      "item_code": "ARCH.WALL_PANEL",
+      "unit": "m2",
+      "lines": 7,
+      "released_lines": 0,
+      "released_qty": 0.0,
+      "held_lines": 7,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     },
+     {
+      "item_code": "ARCH.WALL_VOLUME",
+      "unit": "m3",
+      "lines": 7,
+      "released_lines": 0,
+      "released_qty": 0.0,
+      "held_lines": 7,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     },
+     {
+      "item_code": "MAS.BLOCK",
+      "unit": "m2",
+      "lines": 7,
+      "released_lines": 0,
+      "released_qty": 0.0,
+      "held_lines": 7,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     }
+    ],
+    "candidate_run_v2_13": [
+     {
+      "item_code": "ARCH.WALL_RUN",
+      "unit": "lm",
+      "lines": 7,
+      "released_lines": 7,
+      "released_qty": 216.931,
+      "held_lines": 0,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     },
+     {
+      "item_code": "ARCH.WALL_PANEL",
+      "unit": "m2",
+      "lines": 7,
+      "released_lines": 0,
+      "released_qty": 0.0,
+      "held_lines": 7,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     },
+     {
+      "item_code": "ARCH.WALL_VOLUME",
+      "unit": "m3",
+      "lines": 7,
+      "released_lines": 0,
+      "released_qty": 0.0,
+      "held_lines": 7,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     },
+     {
+      "item_code": "MAS.BLOCK",
+      "unit": "m2",
+      "lines": 7,
+      "released_lines": 0,
+      "released_qty": 0.0,
+      "held_lines": 7,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     }
+    ]
+   },
+   "item_codes": [
+    "ARCH.WALL_PANEL",
+    "ARCH.WALL_RUN",
+    "ARCH.WALL_VOLUME",
+    "MAS.BLOCK"
+   ],
+   "note": "1.0.0 said EXPERIMENTAL (qs_core.masonry research)"
+  },
+  {
+   "code": "B9-02",
+   "group": "B9 Masonry",
+   "item_en": "Lintels",
+   "item_ar": "عتب",
+   "unit": "m3 / kg (pcs, lm)",
+   "capability": "PARTIAL",
+   "capability_1_0_0": "INTEGRATED_AND_TESTED",
+   "capability_change": "LOWERED",
+   "implementation": "ARCH_TAKEOFF_V2.9 + route G (conventions URBAN_M8_GENERIC_CONVENTIONS_V6): STR.CONC.LINTEL (only with a printed lintel schedule)",
+   "source_needed": "openings + lintel schedule",
+   "next_slice": "-",
+   "evidence": [
+    "engine/source/generic_route.py:2028 _lintel_items(): route G lintels over the jambed openings of the architectural plans, bound to the PRINTED lintel schedule by opening width; no schedule, no lintel line",
+    "tests/lintels_s8_6/test_s8_6_package.py and tests/lintels_s8_6a/test_s8_6a_package.py (frozen S8.6 packages)",
+    "development villa released run: 0 STR.CONC.LINTEL lines; route G family coverage LINTELS = NO_EVIDENCE_FOUND ('not proof of absence'), while the same run counts 27 windows, 17 doors and 11 passages; no hand check of lintels exists"
+   ],
+   "released_method_reads": "ARCH_TAKEOFF_V2.9 + route G (conventions URBAN_M8_GENERIC_CONVENTIONS_V6): STR.CONC.LINTEL (only with a printed lintel schedule)",
+   "opt_in_readers": "same in every later method",
+   "missing": "with no printed lintel schedule (the development villa) every opening's lintel is unanswered (family NOT_FOUND_IN_SOURCE, no held line per opening); no lintel hand check on any villa",
+   "in_v3_0_candidate": "yes",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": [
+    "STR.CONC.LINTEL"
+   ],
+   "note": "1.0.0 and r1 said INTEGRATED_AND_TESTED; lowered on the verifier's T-130 r1 finding: no released line and no independent check on the development villa"
+  },
+  {
+   "code": "B9-03",
+   "group": "B9 Masonry",
+   "item_en": "Mesh at block-to-concrete joints",
+   "item_ar": "شبك",
+   "unit": "lm",
+   "capability": "NOT_IMPLEMENTED",
+   "capability_1_0_0": "NOT_IMPLEMENTED",
+   "capability_change": "UNCHANGED",
+   "implementation": "none",
+   "source_needed": "faces",
+   "next_slice": "S4",
+   "evidence": [
+    "no method emits a line of this family: no item code for it in engine/source/boq_line.py:46-110 and none in the item codes seen in the released and candidate runs (run_evidence.item_codes_seen)"
+   ],
+   "released_method_reads": "none",
+   "opt_in_readers": "none",
+   "missing": "mesh at joints not measured",
+   "in_v3_0_candidate": "no",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": [],
+   "name_terms": [
+    "joint_mesh",
+    "mesh_joint",
+    "block_mesh"
+   ]
+  },
+  {
+   "code": "B9-04",
+   "group": "B9 Masonry",
+   "item_en": "Mortar / glue",
+   "item_ar": "مونة / غراء",
+   "unit": "bags / m3",
+   "capability": "NOT_IMPLEMENTED",
+   "capability_1_0_0": "NOT_IMPLEMENTED",
+   "capability_change": "UNCHANGED",
+   "implementation": "skill (procurement)",
+   "source_needed": "from B9-01",
+   "next_slice": "S4",
+   "evidence": [
+    "no method emits a line of this family: no item code for it in engine/source/boq_line.py:46-110 and none in the item codes seen in the released and candidate runs (run_evidence.item_codes_seen); block mortar from the mix is QUEUED (T-115); finish_materials_table.py covers tile beds only"
+   ],
+   "released_method_reads": "none",
+   "opt_in_readers": "none",
+   "missing": "block mortar / glue not measured",
+   "in_v3_0_candidate": "no",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": [],
+   "name_terms": [
+    "mortar",
+    "glue"
+   ]
+  },
+  {
+   "code": "B9-05",
+   "group": "B9 Masonry",
+   "item_en": "Parapet walls (block)",
+   "item_ar": "دروة",
+   "unit": "m2",
+   "capability": "PARTIAL",
+   "capability_1_0_0": "PARTIAL",
+   "capability_change": "UNCHANGED",
+   "implementation": "none as a block line",
+   "source_needed": "roof plan, sections",
+   "next_slice": "S4",
+   "evidence": [
+    "M8 parapet bound (RC 0..high) in route G family coverage (PARAPETS, B10-12)"
+   ],
+   "released_method_reads": "none as a block line",
+   "opt_in_readers": "none",
+   "missing": "block parapets not measured (owner Q-65 block type)",
+   "in_v3_0_candidate": "no",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": []
+  },
+  {
+   "code": "B10-01",
+   "group": "B10 Concrete",
+   "item_en": "Blinding",
+   "item_ar": "خرسانة نظافة",
+   "unit": "m3",
+   "capability": "PARTIAL",
+   "capability_1_0_0": "INTEGRATED_AND_TESTED",
+   "capability_change": "LOWERED",
+   "implementation": "ARCH_TAKEOFF_V2.9 + route G (conventions URBAN_M8_GENERIC_CONVENTIONS_V6): STR.CONC.BLINDING",
+   "source_needed": "foundation plan",
+   "next_slice": "-",
+   "evidence": [
+    "engine/source/generic_route.py:1374 _blinding_items(); :1448 PLAIN_CONCRETE in route G",
+    "commit 5fe31ca (T-100 by hand, verifier run 40): blinding scope by member family differs from route G",
+    "commit cd34bd0 (T-126 route G scope V1, verifier run 46): engine/source/route_g_scope_v1.py:276 blinding_scope() read by no method (opt-in: 15.179 m3 released + held)"
+   ],
+   "released_method_reads": "ARCH_TAKEOFF_V2.9 + route G (conventions URBAN_M8_GENERIC_CONVENTIONS_V6): STR.CONC.BLINDING",
+   "opt_in_readers": "none",
+   "missing": "development villa: one bounded line only; the member-family scope piece is not wired",
+   "in_v3_0_candidate": "yes",
+   "v3_0_planned_tasks": [
+    "T-133"
+   ],
+   "development_villa": {
+    "released_run": [
+     {
+      "item_code": "STR.CONC.BLINDING",
+      "unit": "m3",
+      "lines": 1,
+      "released_lines": 0,
+      "released_qty": 0.0,
+      "held_lines": 1,
+      "held_bounded_low": 7.276,
+      "held_bounded_high": 16.887,
+      "not_applicable_lines": 0
+     }
+    ],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": [
+    "STR.CONC.BLINDING"
+   ],
+   "note": "1.0.0 said INTEGRATED_AND_TESTED; lowered on the verifier's T-100 / T-126 findings"
+  },
+  {
+   "code": "B10-02",
+   "group": "B10 Concrete",
+   "item_en": "Isolated / combined footings",
+   "item_ar": "قواعد",
+   "unit": "m3",
+   "capability": "INTEGRATED_AND_TESTED",
+   "capability_1_0_0": "INTEGRATED_AND_TESTED",
+   "capability_change": "UNCHANGED",
+   "implementation": "ARCH_TAKEOFF_V2.9 + route G (conventions URBAN_M8_GENERIC_CONVENTIONS_V6): STR.CONC.FOOTING",
+   "source_needed": "foundation plan + schedule",
+   "next_slice": "-",
+   "evidence": [
+    "engine/source/generic_route.py:509 FOOTINGS concrete in route G",
+    "commit 8774071 (T-058 strip guard) and 9671133 (T-060 ledger V2): footing band pieces read by no method"
+   ],
+   "released_method_reads": "ARCH_TAKEOFF_V2.9 + route G (conventions URBAN_M8_GENERIC_CONVENTIONS_V6): STR.CONC.FOOTING",
+   "opt_in_readers": "none",
+   "missing": "footing edge band held (owner Q-28) in the unwired ledger; compared line UNRESOLVED (owner Q-12)",
+   "in_v3_0_candidate": "yes",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [
+     {
+      "item_code": "STR.CONC.FOOTING",
+      "unit": "m3",
+      "lines": 26,
+      "released_lines": 26,
+      "released_qty": 66.264,
+      "held_lines": 0,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     }
+    ],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": [
+    "STR.CONC.FOOTING"
+   ]
+  },
+  {
+   "code": "B10-03",
+   "group": "B10 Concrete",
+   "item_en": "Necks",
+   "item_ar": "رقاب",
+   "unit": "m3",
+   "capability": "PARTIAL",
+   "capability_1_0_0": "PARTIAL",
+   "capability_change": "UNCHANGED",
+   "implementation": "ARCH_TAKEOFF_V2.9 + route G (conventions URBAN_M8_GENERIC_CONVENTIONS_V6): STR.CONC.NECK",
+   "source_needed": "schedule",
+   "next_slice": "-",
+   "evidence": [
+    "engine/source/generic_route.py:1268 _neck_items(); :1295 necks (FOUNDATION COLUMNS)"
+   ],
+   "released_method_reads": "ARCH_TAKEOFF_V2.9 + route G (conventions URBAN_M8_GENERIC_CONVENTIONS_V6): STR.CONC.NECK",
+   "opt_in_readers": "none",
+   "missing": "neck height bounded from printed levels",
+   "in_v3_0_candidate": "yes",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [
+     {
+      "item_code": "STR.CONC.NECK",
+      "unit": "m3",
+      "lines": 36,
+      "released_lines": 0,
+      "released_qty": 0.0,
+      "held_lines": 36,
+      "held_bounded_low": 3.075,
+      "held_bounded_high": 15.375,
+      "not_applicable_lines": 0
+     }
+    ],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": [
+    "STR.CONC.NECK"
+   ]
+  },
+  {
+   "code": "B10-04",
+   "group": "B10 Concrete",
+   "item_en": "Strap / ground beams",
+   "item_ar": "شناجات / ميدات",
+   "unit": "m3",
+   "capability": "PARTIAL",
+   "capability_1_0_0": "INTEGRATED_AND_TESTED",
+   "capability_change": "LOWERED",
+   "implementation": "ARCH_TAKEOFF_V2.9 + route G (conventions URBAN_M8_GENERIC_CONVENTIONS_V6): STR.CONC.STRAP, STR.CONC.GROUND_BEAM",
+   "source_needed": "GB plan",
+   "next_slice": "-",
+   "evidence": [
+    "engine/source/generic_route.py:160 _straps(); :769 GROUND_BEAMS in route G",
+    "commit c874c7b (T-073 plot-edge members, verifier run 33): straps 3.390 m3 measured, ENGINE_RIGHT; wired in ARCH_TAKEOFF_V3.0 (T-131)"
+   ],
+   "released_method_reads": "ARCH_TAKEOFF_V2.9 + route G (conventions URBAN_M8_GENERIC_CONVENTIONS_V6): STR.CONC.STRAP, STR.CONC.GROUND_BEAM",
+   "opt_in_readers": "ARCH_TAKEOFF_V3.0 strap piece (merged b1a6d6d)",
+   "missing": "every development-villa ground-beam line bounded; band held (owner Q-28)",
+   "in_v3_0_candidate": "yes",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [
+     {
+      "item_code": "STR.CONC.STRAP",
+      "unit": "m3",
+      "lines": 3,
+      "released_lines": 3,
+      "released_qty": 3.781,
+      "held_lines": 0,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     },
+     {
+      "item_code": "STR.CONC.GROUND_BEAM",
+      "unit": "m3",
+      "lines": 59,
+      "released_lines": 0,
+      "released_qty": 0.0,
+      "held_lines": 59,
+      "held_bounded_low": 17.801,
+      "held_bounded_high": 59.337,
+      "not_applicable_lines": 0
+     }
+    ],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": [
+    "STR.CONC.GROUND_BEAM",
+    "STR.CONC.STRAP"
+   ],
+   "note": "1.0.0 said INTEGRATED_AND_TESTED; lowered: the released route releases no ground-beam quantity on the development villa"
+  },
+  {
+   "code": "B10-05",
+   "group": "B10 Concrete",
+   "item_en": "Ground slab",
+   "item_ar": "بلاطة أرضية",
+   "unit": "m3",
+   "capability": "PARTIAL",
+   "capability_1_0_0": "PARTIAL",
+   "capability_change": "UNCHANGED",
+   "implementation": "ARCH_TAKEOFF_V2.9 + route G (conventions URBAN_M8_GENERIC_CONVENTIONS_V6): STR.CONC.GROUND_SLAB",
+   "source_needed": "plans",
+   "next_slice": "S5",
+   "evidence": [
+    "engine/source/generic_route.py:1095-1214 GROUND_SLAB / SLABS in route G"
+   ],
+   "released_method_reads": "ARCH_TAKEOFF_V2.9 + route G (conventions URBAN_M8_GENERIC_CONVENTIONS_V6): STR.CONC.GROUND_SLAB",
+   "opt_in_readers": "none",
+   "missing": "two pieces bounded",
+   "in_v3_0_candidate": "yes",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [
+     {
+      "item_code": "STR.CONC.GROUND_SLAB",
+      "unit": "m3",
+      "lines": 25,
+      "released_lines": 23,
+      "released_qty": 17.127,
+      "held_lines": 2,
+      "held_bounded_low": 4.767,
+      "held_bounded_high": 4.767,
+      "not_applicable_lines": 0
+     }
+    ],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": [
+    "STR.CONC.GROUND_SLAB"
+   ]
+  },
+  {
+   "code": "B10-06",
+   "group": "B10 Concrete",
+   "item_en": "Columns",
+   "item_ar": "أعمدة",
+   "unit": "m3",
+   "capability": "PARTIAL",
+   "capability_1_0_0": "INTEGRATED_AND_TESTED",
+   "capability_change": "LOWERED",
+   "implementation": "ARCH_TAKEOFF_V2.9 + route G (conventions URBAN_M8_GENERIC_CONVENTIONS_V6): STR.CONC.COLUMN",
+   "source_needed": "plans + schedule",
+   "next_slice": "-",
+   "evidence": [
+    "engine/source/generic_route.py:689 COLUMNS concrete in route G",
+    "commit 5fe31ca (T-100, verifier run 40): columns at the full storey interval 34.446 m3 vs 36.711 m3 from the typed values: 5 columns no upper slab plan draws (HAND_RIGHT)",
+    "commit b87f4d6 (T-075 column schedule text rows), 8ceeeb2 (T-064 project data file), cd34bd0 (T-126 column_scope, engine/source/route_g_scope_v1.py:161): read by no released method"
+   ],
+   "released_method_reads": "ARCH_TAKEOFF_V2.9 + route G (conventions URBAN_M8_GENERIC_CONVENTIONS_V6): STR.CONC.COLUMN",
+   "opt_in_readers": "none",
+   "missing": "every development-villa column line BLOCKED_RFI (no machine-read section); typed values not wired",
+   "in_v3_0_candidate": "yes",
+   "v3_0_planned_tasks": [
+    "T-133",
+    "T-119"
+   ],
+   "development_villa": {
+    "released_run": [
+     {
+      "item_code": "STR.CONC.COLUMN",
+      "unit": "m3",
+      "lines": 82,
+      "released_lines": 0,
+      "released_qty": 0.0,
+      "held_lines": 82,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     }
+    ],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": [
+    "STR.CONC.COLUMN"
+   ],
+   "note": "1.0.0 said INTEGRATED_AND_TESTED; lowered: no column quantity is released on the development villa and the verifier found phantom columns in the typed path"
+  },
+  {
+   "code": "B10-07",
+   "group": "B10 Concrete",
+   "item_en": "Beams",
+   "item_ar": "كمرات / جسور",
+   "unit": "m3",
+   "capability": "PARTIAL",
+   "capability_1_0_0": "INTEGRATED_AND_TESTED",
+   "capability_change": "LOWERED",
+   "implementation": "ARCH_TAKEOFF_V2.9 + route G (conventions URBAN_M8_GENERIC_CONVENTIONS_V6): STR.CONC.BEAM",
+   "source_needed": "beam plans",
+   "next_slice": "-",
+   "evidence": [
+    "engine/source/generic_route.py:856 BEAMS concrete in route G",
+    "commit cb4a66f (T-085 beam binding V2, verifier run 32): about +4.30 m3 of beam concrete once wired; read by no method",
+    "commit 575df66 (T-110 beam member register, verifier run 45, research); owner Q-61 C member by member",
+    "commit e74c182 (T-105 with T-097 CONCRETE_LEDGER_V3, verifier merge): engine/source/concrete_ledger_v3.py:418 measure() / :501 apply() bind the held spans; read by no released method"
+   ],
+   "released_method_reads": "ARCH_TAKEOFF_V2.9 + route G (conventions URBAN_M8_GENERIC_CONVENTIONS_V6): STR.CONC.BEAM",
+   "opt_in_readers": "none",
+   "missing": "24 spans bounded; beam binding V2 / concrete ledger V3 merged but not wired",
+   "in_v3_0_candidate": "yes",
+   "v3_0_planned_tasks": [
+    "T-133",
+    "T-102"
+   ],
+   "development_villa": {
+    "released_run": [
+     {
+      "item_code": "STR.CONC.BEAM",
+      "unit": "m3",
+      "lines": 136,
+      "released_lines": 112,
+      "released_qty": 64.82,
+      "held_lines": 24,
+      "held_bounded_low": 8.449,
+      "held_bounded_high": 14.434,
+      "not_applicable_lines": 0
+     }
+    ],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": [
+    "STR.CONC.BEAM"
+   ],
+   "note": "1.0.0 said INTEGRATED_AND_TESTED; lowered: spans held and a verified binding correction not wired"
+  },
+  {
+   "code": "B10-08",
+   "group": "B10 Concrete",
+   "item_en": "Suspended slabs",
+   "item_ar": "بلاطات",
+   "unit": "m3",
+   "capability": "PARTIAL",
+   "capability_1_0_0": "INTEGRATED_AND_TESTED",
+   "capability_change": "LOWERED",
+   "implementation": "ARCH_TAKEOFF_V2.9 + route G (conventions URBAN_M8_GENERIC_CONVENTIONS_V6): STR.CONC.SLAB",
+   "source_needed": "slab plans",
+   "next_slice": "-",
+   "evidence": [
+    "engine/source/generic_route.py:1095-1214 SLABS concrete in route G",
+    "development villa released run: 76 STR.CONC.SLAB lines, 75 released 61.551 m3 + 1 BOUNDED_EXPOSURE 2.740 m3 held (the dome opening and ring face, which the slab hand ledger reads as not slab, owner Q-44 A)",
+    "slab panel-by-panel hand ledger (T-139) is READY, not merged: no verifier-checked slab hand check yet"
+   ],
+   "released_method_reads": "ARCH_TAKEOFF_V2.9 + route G (conventions URBAN_M8_GENERIC_CONVENTIONS_V6): STR.CONC.SLAB",
+   "opt_in_readers": "none",
+   "missing": "one face held on the development villa (2.740 m3, a non-slab face inside the slab family); no merged hand check (T-139 READY: 13 non-slab faces in the engine total)",
+   "in_v3_0_candidate": "yes",
+   "v3_0_planned_tasks": [
+    "T-139"
+   ],
+   "development_villa": {
+    "released_run": [
+     {
+      "item_code": "STR.CONC.SLAB",
+      "unit": "m3",
+      "lines": 76,
+      "released_lines": 75,
+      "released_qty": 61.551,
+      "held_lines": 1,
+      "held_bounded_low": 2.74,
+      "held_bounded_high": 2.74,
+      "not_applicable_lines": 0
+     }
+    ],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": [
+    "STR.CONC.SLAB"
+   ],
+   "note": "1.0.0 and r1 said INTEGRATED_AND_TESTED; lowered on the verifier's T-130 r1 finding (a held face and no merged hand check)"
+  },
+  {
+   "code": "B10-09",
+   "group": "B10 Concrete",
+   "item_en": "Domes / rings",
+   "item_ar": "قباب",
+   "unit": "m3",
+   "capability": "PARTIAL",
+   "capability_1_0_0": "PARTIAL",
+   "capability_change": "UNCHANGED",
+   "implementation": "ARCH_TAKEOFF_V2.9 + route G (conventions URBAN_M8_GENERIC_CONVENTIONS_V6): STR.CONC.DOME",
+   "source_needed": "roof plan",
+   "next_slice": "-",
+   "evidence": [
+    "route G DOMES family (engine/source/boq_line.py:113 ROUTE_G_FAMILY)"
+   ],
+   "released_method_reads": "ARCH_TAKEOFF_V2.9 + route G (conventions URBAN_M8_GENERIC_CONVENTIONS_V6): STR.CONC.DOME",
+   "opt_in_readers": "none",
+   "missing": "stair + dome compared concrete line UNRESOLVED on the development villa (owner Q-12)",
+   "in_v3_0_candidate": "yes",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [
+     {
+      "item_code": "STR.CONC.DOME",
+      "unit": "m3",
+      "lines": 2,
+      "released_lines": 2,
+      "released_qty": 7.372,
+      "held_lines": 0,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     }
+    ],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": [
+    "STR.CONC.DOME"
+   ]
+  },
+  {
+   "code": "B10-10",
+   "group": "B10 Concrete",
+   "item_en": "Pool / tank / lift pit / pump room",
+   "item_ar": "مسبح / خزان / مصعد",
+   "unit": "m3",
+   "capability": "PARTIAL",
+   "capability_1_0_0": "PARTIAL",
+   "capability_change": "UNCHANGED",
+   "implementation": "ARCH_TAKEOFF_V2.9 + route G (conventions URBAN_M8_GENERIC_CONVENTIONS_V6): STR.CONC.POOL, STR.CONC.TANK, STR.CONC.LIFT",
+   "source_needed": "plans + details",
+   "next_slice": "S5",
+   "evidence": [
+    "route G POOL / WATER_TANK / LIFT families (engine/source/boq_line.py:113)",
+    "commit 15de9c4 (T-057 pool check list), fd0d5dd (T-048 curved pool strips): read by no released method"
+   ],
+   "released_method_reads": "ARCH_TAKEOFF_V2.9 + route G (conventions URBAN_M8_GENERIC_CONVENTIONS_V6): STR.CONC.POOL, STR.CONC.TANK, STR.CONC.LIFT",
+   "opt_in_readers": "none",
+   "missing": "pool compared line UNRESOLVED (owner Q-12); pool floor term FREELANCER_RIGHT (verifier 2026-10-19)",
+   "in_v3_0_candidate": "yes",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [
+     {
+      "item_code": "STR.CONC.POOL",
+      "unit": "m3",
+      "lines": 2,
+      "released_lines": 2,
+      "released_qty": 3.495,
+      "held_lines": 0,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     }
+    ],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": [
+    "STR.CONC.LIFT",
+    "STR.CONC.POOL",
+    "STR.CONC.TANK"
+   ]
+  },
+  {
+   "code": "B10-11",
+   "group": "B10 Concrete",
+   "item_en": "Boundary wall concrete",
+   "item_ar": "سور",
+   "unit": "m3",
+   "capability": "PARTIAL",
+   "capability_1_0_0": "PARTIAL",
+   "capability_change": "UNCHANGED",
+   "implementation": "ARCH_TAKEOFF_V2.9 + route G (conventions URBAN_M8_GENERIC_CONVENTIONS_V6): STR.CONC.BOUNDARY_WALL",
+   "source_needed": "foundation plan + schedule",
+   "next_slice": "-",
+   "evidence": [
+    "route G BOUNDARY_WALL family (engine/source/boq_line.py:113)",
+    "commit c874c7b (T-073): plot-edge members separated from the band (piece)"
+   ],
+   "released_method_reads": "ARCH_TAKEOFF_V2.9 + route G (conventions URBAN_M8_GENERIC_CONVENTIONS_V6): STR.CONC.BOUNDARY_WALL",
+   "opt_in_readers": "none",
+   "missing": "fence / boundary split not settled (owner Q-28)",
+   "in_v3_0_candidate": "yes",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [
+     {
+      "item_code": "STR.CONC.BOUNDARY_WALL",
+      "unit": "m3",
+      "lines": 1,
+      "released_lines": 1,
+      "released_qty": 7.22,
+      "held_lines": 0,
+      "held_bounded_low": null,
+      "held_bounded_high": null,
+      "not_applicable_lines": 0
+     }
+    ],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": [
+    "STR.CONC.BOUNDARY_WALL"
+   ]
+  },
+  {
+   "code": "B10-12",
+   "group": "B10 Concrete",
+   "item_en": "RC parapets",
+   "item_ar": "دروة خرسانية",
+   "unit": "m3",
+   "capability": "PARTIAL",
+   "capability_1_0_0": "PARTIAL",
+   "capability_change": "UNCHANGED",
+   "implementation": "ARCH_TAKEOFF_V2.9 + route G (conventions URBAN_M8_GENERIC_CONVENTIONS_V6): family coverage PARAPETS (bounded)",
+   "source_needed": "roof plan",
+   "next_slice": "S5",
+   "evidence": [
+    "route G PARAPETS family coverage: BOUNDED_NOT_MEASURED (exposure range only)"
+   ],
+   "released_method_reads": "ARCH_TAKEOFF_V2.9 + route G (conventions URBAN_M8_GENERIC_CONVENTIONS_V6): family coverage PARAPETS (bounded)",
+   "opt_in_readers": "none",
+   "missing": "RC parapets not measured",
+   "in_v3_0_candidate": "yes",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": [
+    "STR.CONC.PARAPET"
+   ]
+  },
+  {
+   "code": "B10-13",
+   "group": "B10 Concrete",
+   "item_en": "Formwork (all elements)",
+   "item_ar": "شدة خشبية",
+   "unit": "m2",
+   "capability": "IMPLEMENTED_NOT_INTEGRATED",
+   "capability_1_0_0": "NOT_IMPLEMENTED",
+   "capability_change": "RAISED",
+   "implementation": "none",
+   "source_needed": "structural geometry",
+   "next_slice": "S5",
+   "evidence": [
+    "engine/source/struct_n10.py:184 formwork(): contact faces per route G register row (slab soffit MEASURED, beam soffit MEASURED, beam sides CONDITIONAL on the schedule depth basis FW-D2, column sides UPPER_BOUND, footing / ground-beam sides CONDITIONAL FORMED / EARTH_CAST FW-D1, stairs / necks / lintels HELD); alternatives never summed",
+    "tools/struct_n10.py:42 build(): standalone tool, writes FORMWORK.json / FORMWORK_FACES.csv; no method imports it",
+    "commit 40f3184 (Structural N10); tests/m9_n10/test_n10_structural.py:45 / :58 / :158 (hand truth faces, held never zero, synthetic villas)",
+    "development villa (tool run on the released route G registers, head 0dec24c): slab soffit 379.041 m2, beam soffit 99.123 m2, beam sides 337.405 (TOTAL) or 458.025 m2 (BELOW_SLAB), footing sides 93.260 m2 if FORMED or 0 if EARTH_CAST, ground-beam sides 10.581 m2 FORMED (3 rows only); 311 faces HELD (columns 118, slabs 76 edges, ground beams 59, ground slab 25, beams 24, others 9)"
+   ],
+   "released_method_reads": "none",
+   "opt_in_readers": "none (standalone tool tools/struct_n10.py)",
+   "missing": "not in any method or BOQ line; owner conventions FW-D1 .. FW-D4 open; slab edges and column-beam framing not in the register; stair formwork held (B7-13); no hand check",
+   "in_v3_0_candidate": "no",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": [],
+   "note": "1.0.0 and r1 said NOT_IMPLEMENTED; raised on the verifier's T-130 r1 finding"
+  },
+  {
+   "code": "B11-01",
+   "group": "B11 Rebar",
+   "item_en": "Footing / column / beam / slab / GB bars",
+   "item_ar": "حديد تسليح",
+   "unit": "kg",
+   "capability": "PARTIAL",
+   "capability_1_0_0": "PARTIAL",
+   "capability_change": "UNCHANGED",
+   "implementation": "ARCH_TAKEOFF_V2.9 + route G (conventions URBAN_M8_GENERIC_CONVENTIONS_V6): STR.REBAR (PROVISIONAL bar models)",
+   "source_needed": "schedules, bar notes, details",
+   "next_slice": "S5",
+   "evidence": [
+    "route G bar models: engine/source/generic_route.py:1838 footings, :1779 ground beams, :2251 beams, :2297 slabs",
+    "STR.REBAR from engine/source/boq_line.py:327"
+   ],
+   "released_method_reads": "ARCH_TAKEOFF_V2.9 + route G (conventions URBAN_M8_GENERIC_CONVENTIONS_V6): STR.REBAR (PROVISIONAL bar models)",
+   "opt_in_readers": "none",
+   "missing": "rebar by bar population not built (T-136 first slice); 30 lines held",
+   "in_v3_0_candidate": "yes",
+   "v3_0_planned_tasks": [
+    "T-136"
+   ],
+   "development_villa": {
+    "released_run": [
+     {
+      "item_code": "STR.REBAR",
+      "unit": "kg",
+      "lines": 497,
+      "released_lines": 467,
+      "released_qty": 16392.647,
+      "held_lines": 30,
+      "held_bounded_low": 29.537,
+      "held_bounded_high": 32.571,
+      "not_applicable_lines": 0
+     }
+    ],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": [
+    "STR.REBAR"
+   ]
+  },
+  {
+   "code": "B11-02",
+   "group": "B11 Rebar",
+   "item_en": "Bar bending schedule (bar marks, shapes)",
+   "item_ar": "جدول تفريد الحديد",
+   "unit": "kg + schedule",
+   "capability": "PARTIAL",
+   "capability_1_0_0": "PARTIAL",
+   "capability_change": "UNCHANGED",
+   "implementation": "none as a BOQ line",
+   "source_needed": "details",
+   "next_slice": "S5",
+   "evidence": [
+    "engine/source/bbs_optimiser.py exists (route G, partial)"
+   ],
+   "released_method_reads": "none as a BOQ line",
+   "opt_in_readers": "none",
+   "missing": "no bar-mark schedule output",
+   "in_v3_0_candidate": "no",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": []
+  },
+  {
+   "code": "B11-03",
+   "group": "B11 Rebar",
+   "item_en": "Rebar of stairs / pool / domes / tank / pit / boundary wall",
+   "item_ar": "تسليح العناصر الخاصة",
+   "unit": "kg",
+   "capability": "BLOCKED_BY_SOURCE",
+   "capability_1_0_0": "BLOCKED_BY_SOURCE",
+   "capability_change": "UNCHANGED",
+   "implementation": "MISSING_DATA in V6",
+   "source_needed": "bar details",
+   "next_slice": "S5",
+   "evidence": [
+    "coverage census of the released run: MISSING_DATA, concrete lines of these families carry no bar model"
+   ],
+   "released_method_reads": "none",
+   "opt_in_readers": "none",
+   "missing": "needs bar details",
+   "in_v3_0_candidate": "no",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": []
+  },
+  {
+   "code": "B11-04",
+   "group": "B11 Rebar",
+   "item_en": "Net vs procurement (laps, stock length)",
+   "item_ar": "وزن صافي / توريد",
+   "unit": "kg",
+   "capability": "IMPLEMENTED_NOT_INTEGRATED",
+   "capability_1_0_0": "IMPLEMENTED_NOT_INTEGRATED",
+   "capability_change": "UNCHANGED",
+   "implementation": "URBAN-REBAR-NET-AND-PROCUREMENT@v1 (research)",
+   "source_needed": "notes",
+   "next_slice": "S5",
+   "evidence": [
+    "URBAN-REBAR-NET-AND-PROCUREMENT@v1 (research)"
+   ],
+   "released_method_reads": "none",
+   "opt_in_readers": "none",
+   "missing": "not in any method",
+   "in_v3_0_candidate": "no",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": []
+  },
+  {
+   "code": "B12-01",
+   "group": "B12 MEP",
+   "item_en": "Sanitary fixtures and floor drains",
+   "item_ar": "أدوات صحية / صفايات",
+   "unit": "pcs",
+   "capability": "EXPERIMENTAL",
+   "capability_1_0_0": "EXPERIMENTAL",
+   "capability_change": "UNCHANGED",
+   "implementation": "sanitary_source (research)",
+   "source_needed": "sanitary plans",
+   "next_slice": "-",
+   "evidence": [
+    "engine/sanitary_source.py exists (research); the fixture reading feeds only the wet / dry evidence of ARCH_TAKEOFF_V2.11+ (engine/source/arch_v211.py:105), never a fixture count line"
+   ],
+   "released_method_reads": "none",
+   "opt_in_readers": "none",
+   "missing": "no fixture count line",
+   "in_v3_0_candidate": "no",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": []
+  },
+  {
+   "code": "B12-02",
+   "group": "B12 MEP",
+   "item_en": "Pipes / drainage / water supply",
+   "item_ar": "مواسير",
+   "unit": "lm",
+   "capability": "BLOCKED_BY_SOURCE",
+   "capability_1_0_0": "BLOCKED_BY_SOURCE",
+   "capability_change": "UNCHANGED",
+   "implementation": "none",
+   "source_needed": "MEP plans",
+   "next_slice": "-",
+   "evidence": [
+    "no method emits a line of this family: no item code for it in engine/source/boq_line.py:46-110 and none in the item codes seen in the released and candidate runs (run_evidence.item_codes_seen)"
+   ],
+   "released_method_reads": "none",
+   "opt_in_readers": "none",
+   "missing": "needs MEP plans",
+   "in_v3_0_candidate": "no",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": []
+  },
+  {
+   "code": "B12-03",
+   "group": "B12 MEP",
+   "item_en": "Electrical points / DB / cables",
+   "item_ar": "نقاط كهرباء",
+   "unit": "pcs / lm",
+   "capability": "BLOCKED_BY_SOURCE",
+   "capability_1_0_0": "BLOCKED_BY_SOURCE",
+   "capability_change": "UNCHANGED",
+   "implementation": "none",
+   "source_needed": "electrical plans",
+   "next_slice": "-",
+   "evidence": [
+    "no method emits a line of this family: no item code for it in engine/source/boq_line.py:46-110 and none in the item codes seen in the released and candidate runs (run_evidence.item_codes_seen)"
+   ],
+   "released_method_reads": "none",
+   "opt_in_readers": "none",
+   "missing": "needs electrical plans",
+   "in_v3_0_candidate": "no",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": []
+  },
+  {
+   "code": "B12-04",
+   "group": "B12 MEP",
+   "item_en": "HVAC / ducts / grilles",
+   "item_ar": "تكييف",
+   "unit": "pcs / lm / m2",
+   "capability": "BLOCKED_BY_SOURCE",
+   "capability_1_0_0": "BLOCKED_BY_SOURCE",
+   "capability_change": "UNCHANGED",
+   "implementation": "cooling (E9 load calc, not QTO)",
+   "source_needed": "HVAC plans",
+   "next_slice": "-",
+   "evidence": [
+    "no method emits a line of this family: no item code for it in engine/source/boq_line.py:46-110 and none in the item codes seen in the released and candidate runs (run_evidence.item_codes_seen)"
+   ],
+   "released_method_reads": "none",
+   "opt_in_readers": "none",
+   "missing": "needs HVAC plans",
+   "in_v3_0_candidate": "no",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": []
+  },
+  {
+   "code": "B12-05",
+   "group": "B12 MEP",
+   "item_en": "Low voltage / smart home",
+   "item_ar": "تيار خفيف",
+   "unit": "pcs",
+   "capability": "BLOCKED_BY_SOURCE",
+   "capability_1_0_0": "BLOCKED_BY_SOURCE",
+   "capability_change": "UNCHANGED",
+   "implementation": "none",
+   "source_needed": "LV plans",
+   "next_slice": "-",
+   "evidence": [
+    "no method emits a line of this family: no item code for it in engine/source/boq_line.py:46-110 and none in the item codes seen in the released and candidate runs (run_evidence.item_codes_seen)"
+   ],
+   "released_method_reads": "none",
+   "opt_in_readers": "none",
+   "missing": "needs LV plans",
+   "in_v3_0_candidate": "no",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": []
+  },
+  {
+   "code": "B13-01",
+   "group": "B13 Other",
+   "item_en": "Roofing build-up / insulation / screed to falls",
+   "item_ar": "عزل حراري / ميول",
+   "unit": "m2",
+   "capability": "NOT_IMPLEMENTED",
+   "capability_1_0_0": "NOT_IMPLEMENTED",
+   "capability_change": "UNCHANGED",
+   "implementation": "none",
+   "source_needed": "roof sections, spec",
+   "next_slice": "S4",
+   "evidence": [
+    "no method emits a line of this family: no item code for it in engine/source/boq_line.py:46-110 and none in the item codes seen in the released and candidate runs (run_evidence.item_codes_seen); roof screed held in engine/source/finish_materials_table.py (owner Q-41, thickness not given)"
+   ],
+   "released_method_reads": "none",
+   "opt_in_readers": "none",
+   "missing": "roof build-up not measured",
+   "in_v3_0_candidate": "no",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": [],
+   "name_terms": [
+    "roof_screed",
+    "insulation",
+    "screed_to_fall",
+    "roof_build"
+   ]
+  },
+  {
+   "code": "B13-02",
+   "group": "B13 Other",
+   "item_en": "Interlock / external paving",
+   "item_ar": "انترلوك",
+   "unit": "m2",
+   "capability": "NOT_IMPLEMENTED",
+   "capability_1_0_0": "NOT_IMPLEMENTED",
+   "capability_change": "UNCHANGED",
+   "implementation": "none",
+   "source_needed": "site plan",
+   "next_slice": "S4",
+   "evidence": [
+    "no method emits a line of this family: no item code for it in engine/source/boq_line.py:46-110 and none in the item codes seen in the released and candidate runs (run_evidence.item_codes_seen)"
+   ],
+   "released_method_reads": "none",
+   "opt_in_readers": "none",
+   "missing": "paving not measured",
+   "in_v3_0_candidate": "no",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": [],
+   "name_terms": [
+    "paving",
+    "interlock"
+   ]
+  },
+  {
+   "code": "B13-03",
+   "group": "B13 Other",
+   "item_en": "Landscaping / irrigation",
+   "item_ar": "تنسيق حدائق",
+   "unit": "m2 / lm",
+   "capability": "BLOCKED_BY_SOURCE",
+   "capability_1_0_0": "BLOCKED_BY_SOURCE",
+   "capability_change": "UNCHANGED",
+   "implementation": "none",
+   "source_needed": "landscape plan",
+   "next_slice": "-",
+   "evidence": [
+    "no method emits a line of this family: no item code for it in engine/source/boq_line.py:46-110 and none in the item codes seen in the released and candidate runs (run_evidence.item_codes_seen)"
+   ],
+   "released_method_reads": "none",
+   "opt_in_readers": "none",
+   "missing": "needs a landscape plan",
+   "in_v3_0_candidate": "no",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": []
+  },
+  {
+   "code": "B13-04",
+   "group": "B13 Other",
+   "item_en": "Fencing / gates",
+   "item_ar": "بوابات / أسوار",
+   "unit": "lm / pcs",
+   "capability": "NOT_IMPLEMENTED",
+   "capability_1_0_0": "NOT_IMPLEMENTED",
+   "capability_change": "UNCHANGED",
+   "implementation": "none",
+   "source_needed": "site plan",
+   "next_slice": "S4",
+   "evidence": [
+    "no method emits a line of this family: no item code for it in engine/source/boq_line.py:46-110 and none in the item codes seen in the released and candidate runs (run_evidence.item_codes_seen)"
+   ],
+   "released_method_reads": "none",
+   "opt_in_readers": "none",
+   "missing": "fencing not measured",
+   "in_v3_0_candidate": "no",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": [],
+   "name_terms": [
+    "fenc",
+    "gates"
+   ]
+  },
+  {
+   "code": "B13-05",
+   "group": "B13 Other",
+   "item_en": "Expansion joints / sealants",
+   "item_ar": "فواصل تمدد",
+   "unit": "lm",
+   "capability": "BLOCKED_BY_SOURCE",
+   "capability_1_0_0": "BLOCKED_BY_SOURCE",
+   "capability_change": "UNCHANGED",
+   "implementation": "none",
+   "source_needed": "details",
+   "next_slice": "-",
+   "evidence": [
+    "no method emits a line of this family: no item code for it in engine/source/boq_line.py:46-110 and none in the item codes seen in the released and candidate runs (run_evidence.item_codes_seen)"
+   ],
+   "released_method_reads": "none",
+   "opt_in_readers": "none",
+   "missing": "needs details",
+   "in_v3_0_candidate": "no",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": []
+  },
+  {
+   "code": "B13-06",
+   "group": "B13 Other",
+   "item_en": "Joinery / kitchen cabinets / wardrobes",
+   "item_ar": "مطابخ / خزائن",
+   "unit": "lm / pcs",
+   "capability": "BLOCKED_BY_SOURCE",
+   "capability_1_0_0": "BLOCKED_BY_SOURCE",
+   "capability_change": "UNCHANGED",
+   "implementation": "none (floor-before-cabinetry method only)",
+   "source_needed": "interior drawings",
+   "next_slice": "-",
+   "evidence": [
+    "no method emits a line of this family: no item code for it in engine/source/boq_line.py:46-110 and none in the item codes seen in the released and candidate runs (run_evidence.item_codes_seen)"
+   ],
+   "released_method_reads": "none",
+   "opt_in_readers": "none",
+   "missing": "needs interior drawings",
+   "in_v3_0_candidate": "no",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": []
+  },
+  {
+   "code": "B13-07",
+   "group": "B13 Other",
+   "item_en": "Special metalwork (canopies, pergolas)",
+   "item_ar": "أعمال حديد",
+   "unit": "kg / m2",
+   "capability": "BLOCKED_BY_SOURCE",
+   "capability_1_0_0": "BLOCKED_BY_SOURCE",
+   "capability_change": "UNCHANGED",
+   "implementation": "none",
+   "source_needed": "details",
+   "next_slice": "-",
+   "evidence": [
+    "no method emits a line of this family: no item code for it in engine/source/boq_line.py:46-110 and none in the item codes seen in the released and candidate runs (run_evidence.item_codes_seen)"
+   ],
+   "released_method_reads": "none",
+   "opt_in_readers": "none",
+   "missing": "needs details",
+   "in_v3_0_candidate": "no",
+   "v3_0_planned_tasks": [],
+   "development_villa": {
+    "released_run": [],
+    "candidate_run_v2_13": []
+   },
+   "item_codes": []
+  }
+ ]
+}
