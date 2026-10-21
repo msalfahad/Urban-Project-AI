@@ -28,6 +28,9 @@ pre-approved command:
 - `bash scripts/agent_env.sh freeze [--tree T]`
 - `bash scripts/agent_env.sh run [--tree T] tools/alsenan_scoreboard.py|tools/alsenan_keymap.py ...`
 - `bash scripts/agent_env.sh task <ID>` and `bash scripts/agent_env.sh decode <SRC> <NAME>`
+- `bash scripts/agent_env.sh board pull`, `board log "- <line>"` and `board commit "<message>"`: the board's only
+  write path. `log` puts one line at the top of `## Entries` in RUN_LOG.md and pushes; `commit` commits the edited
+  files under `docs/agents/` (anything else is refused) and pushes `agents/control`, rebasing once if rejected.
 
 Git work happens in the worktrees with `git -C .work/<tree> ...`, against `origin` only: commits, `git pull --rebase`,
 and normal pushes of `agents/control` (board files under `docs/agents/` only) and of the agent's own `agents/task-<ID>`
@@ -55,7 +58,7 @@ tracked file, commit, branch, board text, test or log. Refer to a file only by i
 
 ## Run records
 
-- Every run writes a `STARTED` line at the top of `## Entries` in `.work/board/docs/agents/RUN_LOG.md` before it claims
-  a task. It ends with one final line: SUCCESS, BLOCKED, FAILED or INCOMPLETE, with the exact text of any refused command.
+- Every run writes a `STARTED` line with `bash scripts/agent_env.sh board log "- <time> | <agent> | STARTED | ..."`
+  before it claims a task, and its final line the same way. It ends with one final line: SUCCESS, BLOCKED, FAILED or INCOMPLETE, with the exact text of any refused command.
 - A scheduler "succeeded" is not a successful run, and a successful run is not an engineering verification.
 - Engineering verification is recorded only by the Verifier, on the board.

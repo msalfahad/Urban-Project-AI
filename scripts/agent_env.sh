@@ -4,7 +4,8 @@
 # A scheduled task clones this repository at main, which holds no engine code. This script, run by the
 # SessionStart hook in .claude/settings.json, prepares the real work trees beside it and runs the project's own
 # checks with a fixed set of subcommands. It never clones, never adds a remote, never resets or deletes existing
-# work, never pushes, and never touches another repository.
+# work and never touches another repository. Its only push is `board`: files under docs/agents/ of the board
+# worktree, to origin agents/control, never forced.
 #
 #   .work/engine     detached worktree of origin/claude/access-permissions-setup-ii24ws (engine, tests, tools)
 #   .work/board      worktree of local branch agents/control (docs/agents: board, RUN_LOG)
@@ -22,6 +23,9 @@
 #   run [--tree T] SCRIPT [args]  SCRIPT is tools/alsenan_scoreboard.py or tools/alsenan_keymap.py
 #   task ID                       create or reuse .work/task-ID on branch agents/task-ID
 #   decode SRC NAME               base64-decode SRC into .work/private/NAME (unzipped when NAME ends in .zip)
+#   board pull                    git pull --rebase of the board worktree
+#   board log "LINE"              put LINE at the top of the "## Entries" list of docs/agents/RUN_LOG.md, commit, push
+#   board commit "MESSAGE"        commit every change under docs/agents/ of the board worktree and push agents/control
 # T is "engine" (default) or "task-<ID>".
 set -euo pipefail
 
@@ -217,6 +221,46 @@ cmd_decode() {
   fi
 }
 
+board_push() {  # push agents/control; on rejection rebase once and push again
+  local b="$WORK/board"
+  git -C "$b" push --quiet origin "HEAD:refs/heads/$BOARD_BRANCH" 2>/dev/null && return 0
+  git -C "$b" pull --quiet --rebase origin "$BOARD_BRANCH" || die "board rebase failed"
+  git -C "$b" push --quiet origin "HEAD:refs/heads/$BOARD_BRANCH" || die "board push rejected twice"
+}
+
+cmd_board() {
+  check_repo
+  local b="$WORK/board" sub="${1:-}"; shift || true
+  [[ -d "$b" ]] || die "no board worktree; run setup"
+  [[ "$(git -C "$b" rev-parse --abbrev-ref HEAD)" == "$BOARD_BRANCH" ]] || die "board worktree is not on $BOARD_BRANCH"
+  case "$sub" in
+    pull) git -C "$b" pull --quiet --rebase origin "$BOARD_BRANCH"; say "board @ $(git -C "$b" rev-parse --short HEAD)" ;;
+    log)
+      [[ $# -eq 1 && "$1" == "- "* && "$1" != *$'\n'* ]] || die 'board log needs ONE line starting with "- "'
+      git -C "$b" pull --quiet --rebase origin "$BOARD_BRANCH"
+      local f="$b/docs/agents/RUN_LOG.md"
+      grep -q '^## Entries' "$f" || die "RUN_LOG.md has no \"## Entries\" heading"
+      LINE="$1" python3 -I -c 'import os,sys
+p=sys.argv[1]; s=open(p,encoding="utf-8").read(); h="## Entries"; i=s.index(h)+len(h)
+j=s.index("\n",i)+1
+while s[j:j+1]=="\n": j+=1
+open(p,"w",encoding="utf-8").write(s[:j]+os.environ["LINE"]+"\n"+s[j:])' "$f"
+      git -C "$b" add docs/agents/RUN_LOG.md
+      git -C "$b" commit --quiet -m "Run log: ${1:2:60}"
+      board_push; say "run-log line pushed @ $(git -C "$b" rev-parse --short HEAD)" ;;
+    commit)
+      [[ $# -eq 1 && -n "$1" ]] || die "board commit needs one MESSAGE"
+      local outside
+      outside="$(git -C "$b" status --porcelain --untracked-files=all | awk '{print $NF}' | grep -v '^docs/agents/' || true)"
+      [[ -z "$outside" ]] || die "changes outside docs/agents/ refused: $outside"
+      git -C "$b" add -A docs/agents
+      git -C "$b" diff --cached --quiet && { say "nothing to commit"; return 0; }
+      git -C "$b" commit --quiet -m "$1"
+      board_push; say "board pushed @ $(git -C "$b" rev-parse --short HEAD)" ;;
+    *) die "board needs pull, log or commit" ;;
+  esac
+}
+
 main() {
   local c="${1:-}"; shift || true
   case "$c" in
@@ -229,7 +273,8 @@ main() {
     run) cmd_run "$@" ;;
     task) cmd_task "$@" ;;
     decode) cmd_decode "$@" ;;
-    *) sed -n '2,27p' "${BASH_SOURCE[0]}"; [[ -z "$c" ]] || exit 2 ;;
+    board) cmd_board "$@" ;;
+    *) sed -n '2,31p' "${BASH_SOURCE[0]}"; [[ -z "$c" ]] || exit 2 ;;
   esac
 }
 main "$@"
