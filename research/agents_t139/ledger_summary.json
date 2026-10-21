@@ -1,0 +1,65 @@
+{
+ "GF": {
+  "panels": 33,
+  "slab_m2": 206.6845,
+  "slab_m3": 33.0692,
+  "m2_by_thickness": {
+   "0.16": 206.6845
+  },
+  "sunken_m2": 19.3964,
+  "area_by_class": {
+   "BEAM_OR_COLUMN": 55.0714,
+   "BEAM": 13.1545,
+   "NOT_SLAB": 0.0866,
+   "SLAB": 206.6845,
+   "DETAIL": 13.3895,
+   "STAIR": 13.1761,
+   "OPENING+RING": 4.0814,
+   "OPENING": 3.24,
+   "EDGE_HELD": 1.5621,
+   "VOID+STAIR": 23.2371,
+   "BEAM_HELD": 1.3756
+  },
+  "all_faces_m2": 335.0588
+ },
+ "1F": {
+  "panels": 22,
+  "slab_m2": 123.4786,
+  "slab_m3": 19.7569,
+  "m2_by_thickness": {
+   "0.16": 123.4786
+  },
+  "sunken_m2": 5.4,
+  "area_by_class": {
+   "BEAM_OR_COLUMN": 39.7524,
+   "STAIR": 11.265,
+   "SLAB": 123.4786,
+   "EDGE_HELD": 3.8837,
+   "OPENING": 3.24,
+   "DOME_OPENING+RING": 33.6181
+  },
+  "all_faces_m2": 215.2378
+ },
+ "2F": {
+  "panels": 7,
+  "slab_m2": 44.885,
+  "slab_m3": 7.4543,
+  "m2_by_thickness": {
+   "0.16": 31.25,
+   "0.18": 13.635
+  },
+  "sunken_m2": 0,
+  "area_by_class": {
+   "BEAM_OR_COLUMN": 10.1608,
+   "NOT_SLAB": 0.0866,
+   "SLAB": 44.885,
+   "NOT_THIS_SLAB": 161.4748,
+   "EDGE_HELD": 0.2718
+  },
+  "all_faces_m2": 216.879
+ },
+ "TOTAL": {
+  "slab_m2": 375.0481,
+  "slab_m3": 60.2804
+ }
+}
