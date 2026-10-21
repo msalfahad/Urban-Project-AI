@@ -34,6 +34,38 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
    commit. Decision: board-only handoffs are verified as hand evidence (the verifier re-reads the cited notes), and the
    next task on the topic writes the files (T-117); a run with no line stays a NEEDS FIXING item for the owner's setting.
 
+## 2026-10-21 02:10 (lead run)
+
+- **T-102 beam spans settled by printed section cuts**: WORKED. MERGED a606124 (verifier run started 01:49). Beam
+  register 64.820 -> 66.733 vs freelancer 65.97 m3 (-1.7 % -> +1.2 %); C-C / D-D held (designer D-30). Not wired.
+  Decision: wiring joins T-133 with the other beam pieces.
+- **T-131 r2 V3.0 ledger**: WORKED (waits for the checker). The fault named at rejection is fixed: 217 lines differ from
+  released V2.9 = 217 ledger rows, 0 undocumented, the other 1333 byte-identical; L4 364 = 364. No quantity change.
+  Decision: first in the verifier order; T-133 / T-134 start from its merge.
+- **T-130 coverage registry 1.1.0**: WORKED (waits). 99 families re-derived with file:line; 29 raised, 5 lowered. A
+  second, independent worker-3 reading (by accident, see below) agrees on 90 of 99 statuses; the 9 disagreements are
+  listed for the checker's spot-check. Census gap found (released upturn reported NOT_FOUND). Decision: new T-140.
+- **T-136 footing steel by bar population**: PARTIAL (waits). Released 874.86 kg on 19 footings with printed counts
+  (route G 50 mm practice cover gives -3.6 %; the drawing's 70 mm note 22 is right by hand); 2,742.51 .. 2,836.40 kg HELD:
+  no Urban rule turns "n per metre" into a bar count. Rule check: every released value cites the rebar rule and note 22;
+  the gap was asked (Q-71), not assumed. Decision: Q-71 is today's owner package; top-bar ends -> designer D-31; FN over
+  F9 -> D-32; next slice T-138 (ground beams and straps by hand).
+- **T-137 membrane coverage proof**: WORKED (waits). 688 layouts, 0 failed; residues are declared patches of equal m2;
+  roll counts unchanged (wet 21, roofs 17 + 6 + 8). Learned: the R-07 band bound overstates by one strip; 43 of 109 V4
+  wall frames self-intersect at a dome opening (no count change). Taken by worker 3 because no lane I task was claimable.
+  Decision: no follow-up task now; the self-intersection is a note for whoever next touches V4 / V5.
+- **T-111 stairs flight by flight + Q-62 ledger**: WORKED (waits; NO REPO CODE). Main stair 5.011 -> 4.920 vs 8.131 m3
+  (-39.5 %, rule difference on his flight length); found an arrival wedge the code piece misses (0.030) and a slab under
+  the winders carried by no line (0.230 .. 0.250 m3). Entrance and round stair verdicts proposed UNRESOLVED. Decision:
+  winder slab -> T-139; asked the checker whether those verdicts need an owner question or a drawing (no question yet).
+- **Worker 2 00:39, 01:39 and worker 3 01:59**: FAILED (no line, no commit; 1.5 - 2 min in the scheduler). Cause NOT
+  KNOWN; worker 2 has not closed a run since 23:02 (23:41 was refused clone and claim push). Owner setting P-01.
+- **Verifier 00:49**: BLOCKED: clone "[Untrusted Code Integration]", docs-only clone "Blocked by classifier"; it still
+  logged through the connector. Its 01:49 run executes.
+- **Lead mistake (00:15)**: released T-130 while the 23:00 worker-3 run was still alive (scheduler PENDING); the 00:00 run
+  redid the task. Decision: the Lead checks the run state in the scheduler before releasing a claim.
+- **Recurring**: unwired merged pieces (cause 1) still the reason no released number moved; V3.0 r2 is at the checker.
+
 ## 2026-10-21 00:15 (lead run)
 
 - **T-105 concrete ledger V3 beams + stair concrete V1 (rework)**: WORKED. MERGED e74c182 (verifier run 47); firewall

@@ -46,19 +46,19 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
-## Status (Lead, 2026-10-21 00:15; re-estimated each run from what merged and was verified)
+## Status (Lead, 2026-10-21 02:10; re-estimated each run from what merged and was verified)
 
 | Plan | Board | State | Note |
 |---|---|---|---|
-| P-01 | owner + auditor | in progress, at risk | Test B and the main config not confirmed. Slots 22:09-23:59: Lead 22:09, worker 2 22:39, verifier 22:49, worker 1 23:19 and the scout closed SUCCESS; worker 1 22:19 left no line; worker 3 22:59 stopped after its claim (INCOMPLETE); worker 2 23:39 BLOCKED ("[Code from External]", "[Modify Shared Resources]"). 5 of 8 = 63 % vs 90 % target |
-| P-02 | T-130 (lane I) | TODO (released) | claimed 23:01 by a run that ended silently; after T-131 r2 |
-| P-03 | T-131 rework r2 (lane I, top); T-133 (V3.0.1) TODO | REJECTED once, rework small | checker confirmed straps 3.390 m3 (-0.07 %) by its own re-measure; fault: 197 lines differ from released V2.9, ledger covers ~33. V3.0.1 now also carries beams ledger V3, stairs V1, stair flight once, and T-102 if merged |
-| P-04 | T-132 (verifier) | TODO | after T-102 and T-131 r2 |
+| P-01 | owner + auditor | in progress, at risk | Test B and the main config not confirmed. Finished slots 00:09-01:59: Lead 00:09, worker 1 00:19 and 01:19, worker 3 23:59 and 00:59 SUCCESS; worker 2 00:39 and 01:39 and worker 3 01:59 left no line; verifier 00:49 BLOCKED (clone refused). 5 of 9 = 56 % vs 90 % target (was 63 %) |
+| P-02 | T-130 (lane I) | READY 3e9b858 | second reading agrees on 90 / 99; census follow-up T-140 |
+| P-03 | T-131 r2 (lane I); T-133 (V3.0.1) TODO | READY 67f760a, first in the checker's order | 217 / 217 rows vs released V2.9; V3.0.1 carries columns, blinding, landing / arrival, beams (ledger V3 + section cuts a606124), stairs, stair flight once |
+| P-04 | T-132 (verifier) | TODO | after T-131 r2 |
 | P-05 | T-126 MERGED cd34bd0 | done as a piece; wiring in T-133 | |
-| P-06 | T-128 (lane A) | TODO | |
-| P-07 | T-125 then T-108 (lane A) | T-125 TODO | exact area / thickness identity added (scout R-08) |
-| P-08 | T-136 (lane S) | TODO, claimable (T-105 merged) | research request R-09 on schedule tables |
+| P-06 | T-128 (lane A) | TODO | worker 2 has not closed a run since 23:02 |
+| P-07 | T-125 then T-108 (lane A) | T-125 TODO | |
+| P-08 | T-136 READY; T-138 TODO | footings built (874.86 kg released + held on Q-71) | ground beams / straps next; Q-71 decides 2.74 .. 2.84 t |
 | P-09 | T-134 (lane I) | TODO, waits for T-131 | |
 
-Day-7 target (2026-10-27): ON TRACK, narrower margin: the rework is about one worker-3 run, then one checker run; the risk
-is worker 3's run reliability (2 silent runs since 21:59), not the engineering.
+Day-7 target (2026-10-27): ON TRACK: the V3.0 rework is done and first at the checker (run in progress); after its merge
+T-133 wires the verified pieces. Risk unchanged: run reliability (56 %), not the engineering.

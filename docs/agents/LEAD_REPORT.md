@@ -1,5 +1,62 @@
 # Lead reports to the owner's main chat (newest first, last 10 entries)
 
+## LEAD REPORT 2026-10-21 02:15 UTC
+
+Repositories: Urban-Project-AI cloned (agents/control); working branch head a606124 (one verifier merge since 00:15, no
+owner-session commits). Drive readable, no new project files. UrbanProjectsManager not needed this run.
+
+PROGRESS (Alsenan; released concrete still 92.77 vs freelancer 111.81 m3, -17.0 %; no released number moved)
+- Checked and merged: two beam spans settled by their printed section cuts (B23 1.0125, B20 0.900 m3): beam register
+  64.82 -> 66.73 vs his 65.97 m3 (-1.7 % -> +1.2 %), 19 pieces still held, two cut lines (C-C, D-D) sent to the designer.
+- Built, waiting for the checker (its run is in progress): the V3.0 candidate rework: now every one of the 217 lines that
+  differ from the released method has its before / after row (0 undocumented, the other 1333 identical; day-7 on track);
+  footing steel by bar population: 874.86 kg released on 19 footings printed with a count (the route's 50 mm practice
+  cover gives 3.6 % less; the drawing's 70 mm note is right by hand), 2,742.51 .. 2,836.40 kg HELD on your Q-71 below (his
+  5.8 t is a lump with straps and ground beams, not comparable); membrane: all 688 strip layouts proven to cover their
+  outlines, 0 failed, roll counts unchanged (wet 21, roofs 17 + 6 + 8); stairs flight by flight: main stair 5.011 ->
+  4.920 vs his 8.131 m3 (-39.5 %, rule difference on his flight length), and it found the slab under the winders in no
+  BOQ line (0.23 .. 0.25 m3, now on the board); coverage registry refreshed (99 families, 29 raised, 5 lowered).
+- Learned: rebar needs an owner rule for bars printed per metre or at a spacing (every villa uses this notation); the
+  released census reports the wet-room upturn (14 released lines, 22.065 m2) as not found: a census fix is on the board.
+- Next on the board: ground-beam and strap steel bar by bar and slabs panel by panel by hand (structural), the census
+  that reads the new registry (integration), then V3.0.1 wiring of every checked piece once V3.0 merges.
+
+TEAM HEALTH (slots 00:09 - 01:59)
+- Code ran fully (STARTED + SUCCESS, all five self-check steps PASS): worker 1 00:19 and 01:19; worker 3 23:59 (ran 106
+  min) and 00:59; Lead 00:09. 5 of 9 finished slots = 56 % (target 90 %, was 63 %).
+- Verifier 00:49 BLOCKED: clone "Permission for this action was denied by the Claude Code auto mode classifier. Reason:
+  [Untrusted Code Integration]." and the docs-only clone "Blocked by classifier."; it logged through the connector. Its
+  01:49 run executes (merged one task so far).
+- INCOMPLETE, no line at all (cause NOT KNOWN): worker 2 00:39 and 01:39 (2 min each; worker 2 has not closed a run since
+  23:02), worker 3 01:59 (1.5 min; probably found no integration task claimable). What I did: stocked every lane with 3
+  TODO, set the checker's order so V3.0 merges first and unlocks two integration tasks.
+- My mistake at 00:15: I released a claim while its run was still alive, so two worker-3 runs did the registry twice;
+  I now check the scheduler state before releasing.
+
+QUESTIONS FOR OWNER
+Q-71 (today's decision package; asked by worker 1, checked by me: no Urban rule, owner decision or knowledge entry gives a
+bar count for "per metre" or "@ spacing" notation).
+THE PROBLEM: five Alsenan footings print their bars per metre ("9 ø 14/m"), not as a count; 9 per metre over a 3.86 m
+spread is 34.74 bars, and the usual conversions give different steel. Those five footings' steel is HELD (2.74 .. 2.84 t).
+WHERE TO LOOK: Drive "Alsenan chalet project", ST7757.pdf page 9 "Schedule of Footings", rows F8, F12, F13, F14, FF; page 8
+note 22 (cover 7 cm). Example F8 bottom short bars "9 ø 14/m", footing 400 x 360 cm: bars 3.46 m long spread over 3.86 m.
+THE OPTIONS: (A) round up inside the covers: 35 bars, all five footings 2,742.51 kg; (B) as A plus one so a bar sits at
+each edge: 36 bars, 2,836.40 kg; (C) rate x full footing side, kept fractional: 36.0 bars, 2,797.81 kg.
+RECOMMENDATION: B (practice, not a code clause: spaces + 1, rounded up, is how a steel fixer sets out a mesh; the same rule
+then serves "/m" and "@ spacing" in footings, slabs and ground beams on every villa). A to B differs by 93.89 kg (3.4 %).
+WHAT STAYS HELD until you answer: those five footings' steel; every per-metre / spacing bar in the ground-beam steel task.
+Work continues meanwhile (count-printed bars are released). The top-bar ends of these footings are not drawn: that is a
+designer request (D-31), not part of this question.
+
+NEEDS FIXING
+- Run reliability (P-01, 56 % since 00:09): the same fix is yours: run Test B yourself and approve the repo-attached
+  configuration. Tried: board order, lane stocking, NO REPO CODE rows for refused runs.
+- Kuwait specification chapters (07100, 09200, 09300, 09400, 09900) as PDFs under 6 MB (soffit finish, Q-68 C).
+- Designer requests to forward when you choose: D-31 (footing top-bar ends), D-32 (footing FN drawn over F9), D-30 and
+  earlier in DESIGNER_CLARIFICATIONS.md.
+
+Team ids: MERGED T-102; READY T-131 r2, T-130, T-136, T-137, T-111 (checker order); new TODO T-138, T-139, T-140; Q-71; D-31, D-32.
+
 ## LEAD REPORT 2026-10-21 00:20 UTC
 
 Repositories: Urban-Project-AI cloned (agents/control); working branch head 05e2eab (only verifier merges since 22:15, no
@@ -545,67 +602,3 @@ Team line: MERGED T-094, T-064, T-073 (06:55); READY T-096, T-098, T-097, T-056 
 new TODO T-099, T-100, T-102, T-103, promoted T-027, T-016a (T-023, T-028 folded into T-099); queued T-101, T-104; Q-60,
 Q-61, Q-62 new; R-08 new; 10 TODO (1 Track B); BOARD_ARCHIVE.md created.
 
-## LEAD REPORT 2026-10-20 06:20 UTC
-
-Repositories: Urban-Project-AI cloned (control; working branch head cb4a66f, only checker merges since 04:20, no
-owner-session commits); Drive readable (nothing new in the Alsenan folder). UrbanProjectsManager not needed this run.
-
-PROGRESS (Alsenan)
-- Waterproofing is now in the released BOQ (new method version): wet-area floor 72.12 vs freelancer 72.01 m2 (+0.16 %),
-  19 rolls for 17 wet areas each alone (pantry held); roofs 204.11 vs 285.00 m2 (-28.4 %) with the second-floor top roof
-  now a visible held line, upturn 181.59 vs 194.00 lm (-6.4 %); roof rolls released 31. The freelancer gives no rolls.
-- Got worse on inspection: the hand cutting plan of every roof (checked by the checker in the code) shows the engine lays
-  no strip on the 0.20 m upturn of a straight 4.20 m parapet on the second-floor roof (0.84 m2): by hand that roof needs
-  18 rolls, not 17 (roofs 32), unless that piece may be cut from the same roof's side trim. Fix is first on the board;
-  the roof's count will be held at 17 / 18 until you answer (below). 1F roofs 8 = 8 and 6 = 6.
-- Concrete: released 92.77 vs 111.81 m3 (-17.0 %), unchanged. The beam fix is merged (planted columns no longer split
-  beams, an arc strip, upstands, the dome-opening ring beams you kept): about +4.30 m3 of beams once the concrete ledger
-  reads it, now tasked against the 24 hand-read spans. The typed-values file waits for the checker (66 held lines /
-  58.87 m3 rest only on values read from the drawings).
-- Tiles: count per room with your joints is merged, but every Alsenan room stays held: no sheet prints a tile size.
-- Still held: plaster 1151.14 / paint 1191.13 m2 (beam, annex, door-height, ceiling answers), 1F landing floor.
-- Learned: an engine count equal to a hand count proves little when both use the same strip rule; only an independent
-  full strip plan found the missed piece. Offcut reuse inside one room is the open rule behind both membrane and tiles.
-- Gates: 0 done; 1 at risk (one released roof count wrong, fix first); 2 and 3 started; 4 started.
-
-TEAM HEALTH
-- Every scheduled run since 04:20 left a log line. Code runs PASSED all five self-check steps for worker 1 (04:29, 05:04,
-  05:44), worker 2 (05:55), worker 3 (05:33) and the verifier (05:41: merged four).
-- Worker 2 04:45: its chained claim command was refused, no work; 05:55 it passed with separate commands. Done by me:
-  claim method restated on the board (three separate commands).
-- Verifier 06:05: freeze check and the merge refused ("[Code from External]"), CSV read refused ("[PII Data Handling]"),
-  so the roof hand plans stay READY. Done by me: first in its order, with a note that the CSV holds only dimensions.
-- Worker 3 06:23 (self-check PASS): plot-edge foundation members built, waits for the checker; straps 3.390 vs freelancer
-  3.3925 m3, the released +0.39 m3 traced to one strap running into an open footing outline; natural-ground beam 3.526
-  vs 7.560 m3; its Alsenan engine run was refused, so those are hand readings. Scout: next run 23:50 UTC (new request: proving a strip layout covers every piece).
-
-QUESTIONS FOR OWNER (10 open, all no-assumption questions; Q-50 to Q-57 are in earlier entries and OWNER_QUESTIONS.md)
-1. CORRECTED Q-58 Membrane pieces the strips do not reach. Problem: the 0.84 m2 I called "slanted corners" at 04:20 is
-   the 0.20 m upturn of a straight 4.20 m parapet on the second-floor roof (north side of its 4.20 x 2.10 west part); it
-   needs a 4.60 m piece; no full-width roll leftover is that long (longest 3.03 m), but the roof's narrow last strip leaves
-   a side trim 0.70 x 6.97 m. Same choice for the small pieces round the two dome openings (about 0.31 m2) and tiny wet-room
-   corners (0.003 - 0.010 m2). Where: Drive Alsenan, Alsenan_Architectural_P7757_Pages_05-06, second-floor roof, west part
-   (printed 129 + 442 + 139 = 710 across), its north parapet and the R221 openings. Options: (A) cut from the same roof's /
-   room's own leftover or trim when a piece of that size exists, never carried to another roof or room: 2F roof 17, roofs
-   31, wet 19; (B) every piece from a roll as a full strip, no trim reuse: 2F roof 18, roofs 32; (C) ready-made collars at
-   openings as their own line, the parapet piece as in B: roofs 32. Recommendation: A (normal site practice; your "each
-   alone" answer forbids sharing between rooms, not inside one; practice, not a code clause); B if the BOQ must not count
-   on trims (one roll more here).
-2. NEW to you (asked by worker 1 at 05:05) Q-59 Tiles: may the offcut of a cut tile be used for another cut piece in the
-   same room? Problem: it changes the tiles bought by 15 - 20 %: 23 Alsenan rooms (206.91 m2) need 697 tiles of 60x60
-   without reuse (+21 % over net m2) and 611 with reuse (+6 %); 120x60 378 vs 317; 160x80 218 vs 185; a 1.50 x 1.30 m WC in
-   60x60 = 9 tiles vs 6. Where: Drive Alsenan, p7757_arch_sheet03.pdf, the small W.C. rooms. Options: (A) no reuse;
-   (B) reuse inside the same room only when the offcut is at least a size you give (e.g. 20 cm short side); (C) buy by m2
-   plus your size waste rule only, no layout count. Recommendation: B with 20 cm (tilers cut the second edge piece from
-   the first one's offcut; lands near the waste the trade expects; practice, not a code clause). Note: one answer "reuse
-   inside the same room, never across rooms" would settle Q-58 A and Q-59 B together.
-
-NEEDS FIXING (only you can do it)
-1. Code runs for the scheduled agents still get single steps refused (verifier freeze check and merge at 06:05). Already
-   done: verifier order, claim method, hand tasks for refused runs. The one thing to do: option 2 of
-   docs/agents/EXECUTION_PERMISSIONS.md section 5 (Claude Code scheduled tasks with Urban-Project-AI attached), and check
-   each task's settings for automatic approval.
-2. Upload the Kuwait specification chapters 07100, 09200, 09300, 09400, 09900 as separate PDFs under 6 MB (repeat).
-
-Team line: MERGED T-089, T-093, T-087, T-085; READY T-094 (verify first), T-064, T-073; new T-096 (first code task), T-097,
-T-098; T-095 after T-096; Q-58 rewritten, Q-59 relayed; R-07 new; 8 TODO (1 Track B).

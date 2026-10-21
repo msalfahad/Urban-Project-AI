@@ -2,47 +2,47 @@
  {
   "agent": "Lead planner",
   "role": "Plans the work, keeps the board and milestones, asks you questions",
-  "cadence": "every 2 h (:09)",
-  "last_run": "2026-10-21T00:09:54Z",
+  "cadence": "every 2 h at :09",
+  "last_run": "2026-10-21T02:09:48Z",
   "result": "running",
-  "working_on": "Board: V3.0 candidate sent back for a small ledger rework (top of integration lane); 2 pieces merged (beam ledger, stair flight once); new membrane coverage proof task; no owner question",
-  "as_of": "2026-10-21T00:14:35Z"
+  "working_on": "Board stocked (lanes S 3, A 3, I 3); footing-bar question Q-71 sent as today's decision package",
+  "as_of": "2026-10-21T02:15:00Z"
  },
  {
   "agent": "Worker 1",
   "role": "Builds one board task per run on its own branch",
   "cadence": "hourly :19",
-  "last_run": "2026-10-20T23:19:15Z",
+  "last_run": "2026-10-21T01:19:46Z",
   "result": "ok",
-  "working_on": "Structural: two beam spans settled by printed section cuts, +1.91 m3, beams 64.82 -> 66.73 vs 65.97 (waiting for the checker) [T-102]",
-  "as_of": "2026-10-21T00:14:35Z"
+  "working_on": "Delivered stairs flight by flight (main stair 4.920 m3 vs 8.131) and footing steel by bar population (T-111, T-136)",
+  "as_of": "2026-10-21T02:15:00Z"
  },
  {
   "agent": "Worker 2",
   "role": "Builds one board task per run on its own branch",
   "cadence": "hourly :39",
-  "last_run": "2026-10-20T23:40:08Z",
+  "last_run": "2026-10-21T01:39:20Z",
   "result": "failed",
-  "working_on": "Finishes: last run refused by the platform before it could claim the pool-court soffit rework; previous run delivered stair flight counted once (merged) [T-127 next]",
-  "as_of": "2026-10-21T00:14:35Z"
+  "working_on": "No completed run since 23:02 (00:39 and 01:39 left no log line); next: pool-court soffit rework (T-127)",
+  "as_of": "2026-10-21T02:15:00Z"
  },
  {
   "agent": "Worker 3",
   "role": "Builds one board task per run on its own branch",
   "cadence": "hourly :59",
-  "last_run": "2026-10-20T23:59:55Z",
-  "result": "running",
-  "working_on": "Integration: V3.0 candidate rework (a ledger row for each line that differs from the released method), then the coverage registry [T-131 r2, T-130]",
-  "as_of": "2026-10-21T00:14:35Z"
+  "last_run": "2026-10-21T01:59:24Z",
+  "result": "failed",
+  "working_on": "Delivered V3.0 ledger rework and membrane coverage proof (T-131, T-137); 01:59 run left no log line",
+  "as_of": "2026-10-21T02:15:00Z"
  },
  {
   "agent": "Verifier",
   "role": "Checks finished tasks, merges or rejects, keeps the scoreboard",
   "cadence": "hourly :49",
-  "last_run": "2026-10-20T23:49:35Z",
+  "last_run": "2026-10-21T01:49:38Z",
   "result": "running",
-  "working_on": "Checking the beam section-cut piece; last run merged the beam/stair ledger and stair-flight-once, sent V3.0 back [T-102]",
-  "as_of": "2026-10-21T00:14:35Z"
+  "working_on": "Merged beam section-cut piece (T-102); checking V3.0 candidate, coverage registry, footing steel, membrane proof, stairs",
+  "as_of": "2026-10-21T02:15:00Z"
  },
  {
   "agent": "Research scout",
@@ -50,7 +50,7 @@
   "cadence": "daily 23:50 UTC",
   "last_run": "2026-10-20T23:50:52Z",
   "result": "ok",
-  "working_on": "Answered Arabic notes on scans, strip coverage proof, wall centrelines; next: reading footing rebar schedules from CAD tables [R-09]",
-  "as_of": "2026-10-21T00:14:35Z"
+  "working_on": "Reading footing reinforcement schedules from CAD tables (request R-09)",
+  "as_of": "2026-10-21T02:15:00Z"
  }
 ]
