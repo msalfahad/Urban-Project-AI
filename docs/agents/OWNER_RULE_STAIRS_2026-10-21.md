@@ -99,6 +99,47 @@ with a 1e-9 tolerance; add 4.48 m -> 28 risers to the tests. The actual_riser > 
 - عدد قطع النايم = عدد النوايم ، عدد قطع القايم = عدد القوايم
 - مساحة البسطة = landing_depth × (2 × stair_width) ، بند منفصل
 
+## 2b. Owner's own English version (sent the same day; same content as the Arabic, both govern)
+
+Task: add a Stairs calculation rule to the BOQ engine
+
+Concept: stair calculation needs two things: the floor height and the available horizontal length.
+1) Number of steps: divide floor height by the riser height. If there is a fraction, always round UP so no step exceeds
+   the maximum riser.
+2) Treads are always one fewer than risers in each flight, because the last riser steps onto the landing or the upper
+   floor, which is not counted as a tread.
+3) Flight length = number of treads × tread depth. Then compare it with the available length to check if it fits.
+
+Terms: Riser: step height, maximum 0.16 m. Tread: step depth, default 0.30 m (allowed 0.28–0.30). Landing: not counted
+as a tread.
+
+Inputs: floor_height (m); max_riser default 0.16; tread default 0.30; stair_width (m); available_length: horizontal
+length available for the stair (m); landing_depth: mid-landing depth (m), default = stair_width.
+
+Calculation:
+1) risers = ceil(floor_height / max_riser) ← always round up
+2) actual_riser = floor_height / risers ← all risers equal, never a short leftover step
+3) Single straight flight: treads = risers - 1; required_length = treads × tread
+4) Two flights (U-shape) with a mid landing: flight1 = ceil(risers / 2), flight2 = floor(risers / 2) (e.g. 10+10 or
+   10+9); treads per flight = flight risers - 1 → total treads = risers - 2; longest flight length = (flight1 - 1) ×
+   tread; required_length = longest flight length + landing_depth
+5) Space check: single-flight required_length ≤ available_length → single flight ✅; else two-flight required_length ≤
+   available_length → two flights ✅; else → ❌ warning: "Not enough space, need at least X m"
+6) Warn if tread < 0.28 or actual_riser > 0.16
+
+Example (floor height 3.20 m): 3.20 / 0.16 = 20 risers, 16 cm each; single flight: 19 treads × 0.30 = 5.70 m; two
+flights: 10 + 10, each flight 9 treads = 2.70 m, + 1.00 m landing = 3.70 m.
+
+Tests that must pass (landing 1.00 m): H=3.20, L=6.0 → 20 risers, single flight, 19 treads, length 5.70 ✅; H=3.20,
+L=4.0 → two flights 10+10, 18 treads, length 3.70 ✅; H=3.20, L=3.0 → ❌ need at least 3.70 m; H=3.00 → ceil(18.75)=19
+risers, 15.8 cm, single 18 treads = 5.40, two flights 10+9 → 2.70 + 1.00 = 3.70; H=3.50 → 22 risers, 15.9 cm, single 21
+treads = 6.30, two flights 11+11 → 3.00 + 1.00 = 4.00; H=4.00 → 25 risers, 16.0 cm, single 24 treads = 7.20, two flights
+13+12 → 3.60 + 1.00 = 4.60.
+
+BOQ outputs: riser count, actual riser, tread count, stair type (single/two flights), required length, check result;
+tread finish area = treads × tread × stair_width; riser finish area = risers × actual_riser × stair_width; tread pieces
+= tread count, riser pieces = riser count; landing area = landing_depth × (2 × stair_width), separate item.
+
 ## 3. Open with the owner (asked 2026-10-21 by the main chat; agents do not ask again)
 
 - S-1 Precedence with UP-STAIR-002 ("stair geometry comes from the drawing, never from typical values"): when the
