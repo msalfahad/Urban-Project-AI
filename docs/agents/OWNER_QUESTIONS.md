@@ -183,6 +183,17 @@ rounding up rate x length (close to A), but they do not say which length (inside
 never confirmed as your Urban rule, so the team has NOT used them. Please say whether they are your rule; if yes, which length.
 ALSO WAITS ON (this answer now decides): column links 781.37 .. 829.41 kg (A 793.96 / B 829.41 / C 781.37), and the link and
 slab-bar counts of the new beam-steel and slab-steel hand ledgers.
+RECOMMENDATION STATUS (lead 2026-10-21 16:20): the option-B recommendation above is WITHDRAWN, as the main chat's was
+(owner workflow controls 2026-10-21); the team gives drawing facts only and you choose.
+DRAWING FACTS (lead 2026-10-21 16:20, from worker 3's independent recount from the footing schedule, notes and details; not yet
+checked by the checker): (1) "/m" means bars per metre run: the same drawing set writes a count as "n ø d", a spacing as
+"ø d/s cm" (ground-beam links ø8/15 cm, p.13) and a rate as "n ø d/m" (these five footings, column ties p.9, lintel
+stirrups p.13, lift walls p.14); reading "9 ø 14/m" as 9 bars in all is contradicted by the footings printed with a count,
+which carry 5 to 10 bars per metre. (2) How a rate becomes whole bars is printed nowhere. (3) With a bar at each edge,
+option A spaces the bars WIDER than the printed rate in 20 of the 20 rows (F8 bottom short bars 11.35 cm against 11.11 cm
+printed); option B is at or closer than the printed rate in 20 of 20; option C leaves a fraction in 15 of 20. (4) The recount
+reproduces A 2,742.51 / B 2,836.40 / C 2,797.81 kg to 0.01 kg. (5) The lift footing FF is the only two-layer footing drawn
+(p.14): top and bottom bars joined by legs at both edges, legs not dimensioned (HELD whatever you answer).
 
 ### Q-72 Main stair shaft walls: which height does your manual plaster / paint method take for a stair shaft that runs through all storeys? (lead 2026-10-21 06:30, from worker 3's two-method room table; T-128; no-assumptions question: your manual height formula (Q-43, G1) is written for rooms with a beam and a decor ceiling, and no Urban rule or answer covers a wall that runs through the storeys with no slab, beam or ceiling between them) — addition to today's package (Q-71)
 
@@ -268,6 +279,29 @@ black blocks on the gross area (fewer after the openings of Q-73, before waste).
 RECOMMENDATION: A, if the 2025 sales order is still your supplier's size: it is your own purchase record, the same
 kind of evidence as the white-block pallet list you gave in Q-60, and it serves both 15 and 20 cm walls.
 WAITS ON: black-block counts, mortar and procurement for every inner wall (T-143, then T-108). Area and m3 stay reported.
+
+### OQ-04 (re-asked) Outside areas: does the BOQ include finishes for the courts, porch and side passage, beyond waterproofing? (lead 2026-10-21 16:20, from worker 2's room-by-room floor area; T-153, T-157; existing owner-session question OQ-04 in research/urban_m9_p2b1/OWNER_QUESTIONS.md, never answered; no-assumptions question: UP-WP-ROOF-001 covers waterproofing only and no Urban rule or answer sets an exterior paving / tiling scope) — addition to today's package (Q-71 .. Q-75)
+
+THE PROBLEM: the outside areas are now measured from the drawings, but no rule says whether their finishes belong in
+this BOQ, so every outside finish is HELD and the freelancer's yard line cannot be compared. Measured (by hand, waiting
+for the checker): west court 138.761 m2 (includes the porch 19.181 and a 3.360 m2 element footprint), north court strip
+21.348 m2, pool deck 7.605 m2 (pool water 7.548 m2 is not a floor): courts 167.714 m2; side passage 5.640 m2 (outside
+under your Q-67 A if the drawings confirm it is open to the air). The freelancer prices "yard" 151.80 m2.
+WHERE TO LOOK: Drive "Alsenan chalet project", architectural GF plan (sheet 3, single-sheet file p7757_arch_sheet03.pdf):
+the west court with the porch, the north strip along the boundary, the pool deck; the freelancer workbook, yard row.
+THE OPTIONS:
+(A) Outside finishes are in the BOQ: one line per surface (court paving / tiles, porch, pool deck, passage) on the measured
+areas, 167.714 + 5.640 = 173.354 m2; the material per area comes from the designer (HELD until then).
+(B) Outside finishes are not in this BOQ (landscape / by others): the areas stay as information lines, no finish line;
+only waterproofing and the structure are measured outside.
+(C) Only the porch and the pool deck (the parts used as floors of the house, 19.181 + 7.605 = 26.786 m2) get finish lines;
+the rest of the courts is landscape (information only).
+RECOMMENDATION: A, with the material HELD on the designer. Reason: the freelancer already prices a yard line, so leaving
+it out (B) makes the two BOQs cover different scope and the comparison meaningless; A keeps every outside area visible as a
+measured line and lets the 15.91 m2 difference to his 151.80 m2 be explained area by area (the passage, the strip or the
+deck). No code clause is cited.
+WAITS ON: outside finish lines (about 173 m2 on Alsenan) and the court comparison. Work continues: areas are measured,
+classification of the garden band 13.986 m2 goes to the designer (D-48), not to you.
 
 No question open (Lead 2026-10-20 20:10). Q-67, Q-68, Q-69 (answered 18:50) and Q-70 (answered 20:10, owner management decision) moved to Answered; their tasks: Q-67 -> T-123 / T-131 / T-127, Q-68 -> T-127, Q-69 -> T-125 / T-108, Q-70 -> T-129. From now on genuine owner decisions go in ONE daily package (owner management decision §10).
 

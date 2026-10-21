@@ -34,6 +34,35 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
    commit. Decision: board-only handoffs are verified as hand evidence (the verifier re-reads the cited notes), and the
    next task on the topic writes the files (T-117); a run with no line stays a NEEDS FIXING item for the owner's setting.
 
+## 2026-10-21 16:20 (lead run)
+
+- **Setup case bug (recurring cause, FIXED by the main chat 15:30)**: the repo-attached checkout has a lower-case origin
+  URL and `agent_env.sh check_repo` matched case-sensitively, so the checker 13:55 and worker 1 14:27 were BLOCKED and
+  worker 3 15:02 could run no repo code (it fell back to a hand task, correctly). Main 1c559a8 fixes it; this Lead run used
+  the attached checkout and the wrapper (setup, board log) with no refusal. Decision: no task; watch the checker's 15:51
+  run and worker 1's 16:19 run as the first runs after the fix.
+- **T-134 element register v0**: WORKED. 652 elements, 1,504 of 1,530 lines linked, 26 UNLINKED with reason, 0 double
+  finishes / concrete, 13 tests, 6 mutations caught. Wrong / missing: 6 CONFLICT elements (1.960 m3 footing, 5 beams 5.022 m3
+  + 685.225 kg) are released by a route convention that no owner rule names; the 1F arrival landing has no outline.
+  Decision: Lead ruling in ELEMENT_REGISTER.md (structure owns them, CONFLICT; if the checker finds no owner rule behind
+  the convention, lane I holds them in the next V3.0 package); landing outline stays with T-133b. No new task yet.
+- **T-153 floor area room by room**: PARTIAL by design. Interior floor 376.86 .. 376.98 m2, wet 85.62 vs 72.01 (+13.61 =
+  pantry, Q-37 A), dry like for like 337.18 vs 337.57 m2 (-0.12 %); 11 held labels settled as EXTERIOR with area. Wrong:
+  V2.9 counts the side passage as internal (engine defect); garden band 13.986 m2 CONFLICT; courts 167.714 vs his yard
+  151.80 UNRESOLVED. Decision: worker proposal P-1 = existing OQ-04, re-asked with the numbers (no new Q- id); P-2 is a
+  drawing conflict, so designer D-48, not an owner question; follow-up T-157 (classification from sections / elevations,
+  not backlog-permitted).
+- **T-154 pool-court soffit reconciliation**: WORKED. Re-add to 0.0000 m2; the 0.088 m2 traced to a turned column face
+  0.065, a strip inside the V2.9 outline 0.016 and rounding 0.008; opening heads 0.904 / 0.200, glazing reveal 0.561 and
+  wall tops 0.276 measured by neither method (no double count). Decision: rulings in ELEMENT_REGISTER.md (the 14.704 m2
+  CAD basis never feeds a ceiling line); the two court-wall openings added to T-150's scope.
+- **T-155 Q-71 evidence**: WORKED (hand). "/m" = bars per metre is drawing-confirmed; the whole-bar rule is printed
+  nowhere; A / B / C reproduced to 0.01 kg; A spaces bars wider than printed in 20 of 20 rows. Decision: facts added to
+  Q-71, the option-B recommendation withdrawn there too (owner controls); FF legs HELD in the register.
+- **Checker backlog (16 READY)**: every READY row tagged CHECKER-RUNS (T-133 also EVIDENCE); queue for 4 runs written with
+  both gates; only T-149, T-150, T-156 backlog-permitted. New T-156 (lane I, Gate B automated checks) so the checker's
+  Gate B work on integration packages is tooled before the next package arrives.
+
 ## 2026-10-21 12:20 (lead run)
 
 - **Checker outage (recurring cause, now the first one)**: FAILED as a team function. No verdict, merge or RUN_LOG line
