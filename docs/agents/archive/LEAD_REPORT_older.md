@@ -1,3 +1,83 @@
+## LEAD REPORT 2026-10-21 08:20 UTC
+
+Repositories: Urban-Project-AI: full clone refused ("Permission for this action was denied by the Claude Code auto mode
+classifier. Reason: [Untrusted Code Integration]."), docs-only clone used (enough for the board). Drive readable, no new
+project files. UrbanProjectsManager not needed this run.
+
+PROGRESS (Alsenan; released concrete still 92.77 vs freelancer 111.81 m3, -17.0 %; nothing checked or merged since 05:07)
+- Columns to the deepest member framing into each column, by hand (your column rule): 28.816 .. 28.979 m3 vs engine
+  36.711 (-21 %) vs his 28.547 (+0.9 .. +1.5 %). The 5.467 m3 the rule takes out is not lost: it is the joints 4.264 +
+  column heads 1.203 m3, which must become their own lines in the candidate.
+- Block wall area by hand, to the member above each wall (your Q-60 A): gross 955.63 m2 vs his 1,094.50 (-12.7 %); with
+  the held walls at their candidate heights -5.3 .. -4.7 %; m3 172.19; white blocks 2,512 (62.5 x 25). Net area and the
+  black-block count cannot be finished: no rule exists (asked below).
+- Ground-beam spans split at the columns that stand on them (code): 52 of 53 spans equal the hand ledger to 0.3 mm;
+  bottom steel 1,238.56 -> 1,194.60 kg (-3.5 %). Two oblique straps held on their length (asked below).
+- Wall run version 2 (code): GF 134.56 m vs hand 143.16 (-1.3 % with the pool glass line beside it), 1F -0.35 %, 2F
+  -0.44 %; the two big errors of version 1 (+16.6 m of non-wall) are gone.
+- First candidate extension (V3.0.1) built: columns 36.714 -> 34.446 m3, blinding 22.155 -> 15.179 m3 released + three
+  held lines; but its own run on the drawings was refused, so the checker must run it.
+- Learned: the joints and column heads are a missing concrete line, not a column error; the block BOQ needs two of your
+  rules before it can be priced.
+
+TEAM HEALTH (slots 05:40 - 08:00)
+- Code ran fully: worker 1 06:21 and 07:20, worker 2 05:40 and 07:40, worker 3 06:00; worker 3 07:01 delivered, but its
+  run of the drawings was refused "[Code from External]".
+- No record at all: the checker at 06:49 and 07:49 (also 05:49), the last 3.5 minutes, not even the start line. Eight
+  results now wait for it. Likeliest cause: its first clone refused like mine this run, with no fallback (not proven).
+- Worker 3 07:59: claimed the element register, then its push to the board was refused "[Untrusted Code Integration]"
+  (BLOCKED; your main chat closed the run and released the task); it is first in its lane again.
+- 6 of 9 finished slots SUCCESS = 67 % (was 71 %, target 90 %).
+- What I did: ordered the checker's queue (registry, candidate, slabs, columns first); cut the board from 345 KB to
+  130 KB (34 merged rows to the archive) so a run that can only use the connector can still edit it; no new hand tasks in
+  lanes A / S beyond one column-steel task until the queue falls; filed the two rule gaps the workers left open.
+
+QUESTIONS FOR OWNER (three new, added to today's package with Q-71 and Q-72; all no-assumptions questions; work
+continues, only the affected quantity is held)
+
+NEW Q-73 Block walls: are openings deducted from the block area?
+THE PROBLEM: block area is measured gross, 955.63 m2; your opening table has rows for plaster, paint and tiles but none
+for block, so net block m2, m3, blocks, glue and pallets are HELD on every wall.
+WHERE TO LOOK: Drive "Alsenan chalet project", p7757_arch_sheet03.pdf (GF plan): the outer wall with the main entrance
+and saloon windows, and an inner 20 cm wall with a door (0.90 x 2.20 = 1.98 m2 with no block in it).
+THE OPTIONS: (A) deduct every opening at full size, from the same table as plaster and paint: 955.63 m2 minus the
+measured openings (total measured once the window heights are read, already on the board); (B) deduct only openings
+over 0.50 m2: within a few m2 of A here; (C) no deduction: 955.63 m2 gross.
+RECOMMENDATION: A. Practice, not a code clause: no block is built in the opening, the same openings are already
+deducted for plaster and paint, and the lintels are a separate line.
+
+NEW Q-74 Oblique strap beams: which length?
+THE PROBLEM: SB2 and SB3 run at an angle between footings: along their own axis face to face 2.293 / 3.258 m; the
+released method projects them to 1.829 / 2.838 m. Your ground-beam rule does not cover straps; both values HELD.
+WHERE TO LOOK: Drive "Alsenan chalet project", ST7757.pdf / ST7757 dxf.dxf, foundation and ground-beam plan, straps SB2
+and SB3; measure along the middle of each strap from footing edge to footing edge.
+THE OPTIONS: (A) along the axis, footing face to footing face: 2.293 / 3.258 m; (B) projected, as today: 1.829 / 2.838 m
+(25 % / 15 % shorter); (C) footing centre to centre (counts the part inside the footings twice; not measured).
+RECOMMENDATION: A. The strap is poured between the two footing faces along its own axis; the part inside the footings is
+already footing concrete; bar anchorage into the footings stays with your lap / development range.
+
+NEW Q-75 Black (cement) blocks: which size?
+THE PROBLEM: about 563 m2 of the gross block area is black block; Q-60 gave white-block pallet data only, so the black
+count is HELD.
+WHERE TO LOOK: your supplier records for the inner-wall black solid blocks (15 and 20 cm). Your stored takeoff notes
+(from your 2025 sales order) give a 39 x 19 face + 1 cm joint = 40 x 20 module.
+THE OPTIONS: (A) 40 x 20 module, 12.5 per m2: about 7,040 blocks on the gross black area (fewer after Q-73 openings,
+before waste); (B) another size you now buy (tell us the face); (C) keep the count held, report m2 / m3 only.
+RECOMMENDATION: A, if that is still your supplier's size: it is your own purchase record, like the white pallet list.
+
+Still open: Q-71 (footing bars per metre: A 2,742.51 / B 2,836.40 recommended / C 2,797.81 kg), Q-72 (stair shaft
+height: A 136.14 / B 163.93 .. 165.35 recommended / C 157.66 m2). Five questions open.
+
+NEEDS FIXING
+- The checker has left no record for three hours while eight results wait; the fix is yours: run Test B yourself and
+  approve the repo-attached configuration (P-01). Tried: ordered queue, smaller board, hand-only rows for refused runs.
+- Kuwait specification chapters (07100, 09200, 09300, 09400, 09900) as PDFs under 6 MB.
+- Designer requests to forward when you choose: new D-42 (1F walls under the dome openings: wall top), D-43 (lift
+  tie-beam size), D-44 (beam B15 upstand or downstand); earlier ones in DESIGNER_CLARIFICATIONS.md.
+
+Team ids: READY T-130 r2, T-133, T-139, T-119, T-141, T-125, T-128, T-143 (checker order); T-134 back to TODO; new
+T-148 (S); Q-73 .. Q-75 new; D-42 .. D-44; R-11 new.
+
 ## LEAD REPORT 2026-10-21 06:30 UTC
 
 Repositories: Urban-Project-AI cloned (agents/control, full clone); working branch head 0dec24c (one verifier merge since
