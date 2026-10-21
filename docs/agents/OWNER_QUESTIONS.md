@@ -302,6 +302,13 @@ measured line and lets the 15.91 m2 difference to his 151.80 m2 be explained are
 deck). No code clause is cited.
 WAITS ON: outside finish lines (about 173 m2 on Alsenan) and the court comparison. Work continues: areas are measured,
 classification of the garden band 13.986 m2 goes to the designer (D-48), not to you.
+Answer (owner, main chat 2026-10-21 20:25, his words: "Outdoor court area انترلوك for chalet, but houses outdoor areas sides
+and infront flooring area for ceramic, stairs outside is marble"): A with the material set by the owner rule
+docs/agents/OWNER_RULE_OUTDOOR_FLOORS_2026-10-21.md: outside finishes ARE in the BOQ; CHALET outdoor court = INTERLOCK
+paving; HOUSE (villa) outdoor side areas and front area = CERAMIC flooring; OUTSIDE STAIRS = MARBLE (as UP-STAIR-001).
+Still open with the owner (main chat asked; agents do not ask again): OD-1 in a chalet, are the covered porch, the pool deck
+and the side passage interlock like the court, or ceramic like house side / front areas? Until answered those three stay
+HELD; the west court (less the porch) and the north court strip are interlock.
 
 No question open (Lead 2026-10-20 20:10). Q-67, Q-68, Q-69 (answered 18:50) and Q-70 (answered 20:10, owner management decision) moved to Answered; their tasks: Q-67 -> T-123 / T-131 / T-127, Q-68 -> T-127, Q-69 -> T-125 / T-108, Q-70 -> T-129. From now on genuine owner decisions go in ONE daily package (owner management decision §10).
 
