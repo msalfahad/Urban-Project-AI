@@ -1,0 +1,49 @@
+{
+ "runs_m": {
+  "GF": 98.886694,
+  "1F": 63.168865,
+  "2F": 29.8
+ },
+ "gf_faces_m": 105.886694,
+ "by_facing_m2": {
+  "SE": {
+   "measured": 197.829,
+   "held_lo": 0.0,
+   "held_hi": 0.0
+  },
+  "SW": {
+   "measured": 296.856,
+   "held_lo": 1.838,
+   "held_hi": 7.212
+  },
+  "NW": {
+   "measured": 204.804,
+   "held_lo": 4.896,
+   "held_hi": 5.945
+  },
+  "NE": {
+   "measured": 323.044,
+   "held_lo": 0.088,
+   "held_hi": 0.104
+  }
+ },
+ "measured_m2": 1022.534,
+ "held_m2": [
+  6.822,
+  13.261
+ ],
+ "plinth_m2": 66.736,
+ "storey_and_parapet_m2": 955.797,
+ "slab_edge_over_open_air_m": 13.0789,
+ "opening_widths_m": 45.1248,
+ "printed_opening_area_m2": 47.589,
+ "freelancer_wall_rows_m2": 968.237,
+ "freelancer_other_rows_m2": {
+  "frames (SE 24.93, NW 3.9375)": 28.8675,
+  "dome inside + outside": 181.806,
+  "soffit over the pool": 19.154,
+  "parapets (1.7 x 48.47, 0.7 x 28.4, 0.7 x 36.2, 0.7 x 27.2)": 146.659,
+  "boundary fence": 107.24,
+  "drip edge (0.28 x 181.7)": 50.876
+ }
+}
