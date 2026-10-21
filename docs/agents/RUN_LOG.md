@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-21T23:51Z | Verifier | STARTED | run session_01Mipjfjrmtbeh8QwoFG2uW5 | repo-attached routine | task state: READY waiting T-142 (Gate B), T-155 r2, T-125, T-143, T-128, T-147, T-154, T-150, T-139 r2, T-152, T-159, T-140 | self-check pending
 - 2026-10-21 23:41 UTC | Worker 2 | STARTED | run session_012BbE242QXW1pEnJ8wMgxoP | repo msalfahad/Urban-Project-AI, branch agents/control | task state: none yet | self-check pending
 - 2026-10-21 23:29 UTC | Worker 3 | SUCCESS | T-140 READY (coverage census V2 on BOQ_FAMILY_MASTER 1.1.0, 5e7f57a) | Released V2.9 + route G (1,455 lines, byte-identical to T-130): census V2 reproduces all 51 per-code 1.1.0 figures; wall upturn B8-03 now FOUND 22.065 m2 (was NOT_FOUND_IN_SOURCE), doors / windows B6-02..04 15 / 2 / 27 pcs, thresholds 1.340 m2, spaces 63.158 m2, block walls HELD (only 216.931 lm run), gross area NO_LINE_KEY; necks HELD (V1 over-stated QUANTIFIED). Finding: 'released V2.9' means two runs (no profile 1,455 lines vs profiled 1,621 lines, 8 structural figures differ). No quantity changed; adoption by m9 not done | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-10-21 23:00 UTC | Worker 3 | STARTED | run session_01C7VFsM9TdcW6H4HvKnWQez | repo-attached routine | task state: none yet | self-check pending
