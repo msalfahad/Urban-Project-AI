@@ -5,7 +5,7 @@ quantity changes: a checked piece for the V3.0 candidate (lane I).
 
 Sources (Drive "Alsenan chalet project", scratchpad copies, never committed): "ST7757 dxf.dxf" (sha256
 9f9d1179...38079 = manifest) and "ST7757.pdf" (sha256 74da1523...37e3): p.4 GROUND FLOOR ROOF SLAB, p.5 FIRST FLOOR ROOF
-SLAB, p.6 SECOND FLOOR ROOF SLAB (read at 220 dpi), p.8 general notes, p.3 dome detail, p.16 typical stair details.
+SLAB, p.6 SECOND FLOOR ROOF SLAB (read at 220 dpi), p.8 general notes, p.7 dome detail, p.16 typical stair details.
 Independent second source for the panel edges: the beam member register (research/agents_t110, merged), its
 centrelines and schedule widths. Rules: URBAN-NON-OVERLAPPING-SLAB-BEAM-MODEL@v1, owner Q-44 A (dome openings stay
 open, ring beam stays), Q-62 A cond (stair / landing / slab concrete once), Q-61 C, UP-QTY-STATUS-001.
@@ -31,8 +31,8 @@ settled as NOT slab (section 4). Held, never 0: the slab under the main-stair wi
 
 ## 2. How each panel was measured (one row per face in PANELS.csv)
 
-- **Outline**: the structural sheets print no panel dimension chains (p.4-6 note "THE BUILDER TO WORK WITH STATED
-  DIMENSIONS NOT TO SCALE DRAWING"), so each panel is the drawn face between beam faces. Checks against printed values:
+- **Outline**: the structural sheets print no panel dimension chains (the p.4-6 sheet note says, in short, that the builder works
+  to written dimensions and must not scale the drawing), so each panel is the drawn face between beam faces. Checks against printed values:
   (a) the GF plate spans x 42.093 .. 73.463 = **31.370 m = printed "NEIGHBOUR 31.37"**; (b) the pool-court bay
   re-adds to T-127's printed-dimension bay 4.591 m2 (void 3.690 + B7 ring 0.666 + corners 0.234 = 4.5908, faces
   GF-040 + 034 + 035 + 036 + 059 + 060 + 061); (c) five panels re-derived from the independent beam register (T-110
@@ -47,15 +47,15 @@ settled as NOT slab (section 4). Held, never 0: the slab under the main-stair wi
 | 2F-013 (tank, 'T 18') | B3 x -17.555 / -15.555 (0.20), B1 y 46.548, B3 y 49.748 (0.20) | 1.800 x 3.000 | 5.4000 | 0.18 tag | 0.9720 |
 
 - **Thickness**: printed panel tag where drawn ('T 16': GF-078, GF-141, 1F-084; 'T 18 (T&B)': 2F-011, 2F-013); every
-  other panel by **ST p.8 general note 18, read by eye this run: "سمك بلاطات الأسقف العادية 16 سم ما لم يذكر خلاف ذلك"
-  (ordinary roof slabs 16 cm unless otherwise stated)**. This is the human reading the M5 audit asked for (RFI-M5-16:
+  other panel by **ST p.8 general note 18, read by eye this run (paraphrase: ordinary roof slabs are
+  16 cm thick unless the drawing states another value)**. This is the human reading the M5 audit asked for (RFI-M5-16:
   "printed twice, read by machine only"). No panel uses a default the drawing does not print.
 - **Beams not in the slab**: each panel stops at the beam faces (URBAN-NON-OVERLAPPING-SLAB-BEAM-MODEL@v1); the beam
   lines take D - t over their own footprint (T-110 / concrete ledger V3).
 - **Openings deducted only where drawn**: GF 'Open to below' X box 3.240 m2 (GF-048) and the pool-court VOID 3.690 m2
   inside the B7 ring (GF-040, = verifier's T-121 / T-127 3.689); GF light well with the round stair 23.237 m2 (GF-130:
   VOID X + stair, the stair concrete is the stair ledger's); 1F X box 3.240 m2 (1F-036); 1F dome openings r 2.2111 m
-  (Q-44 A: skylights; p.3 dome detail diameter 442 = the inner circle) with the B4 ring band r 2.2111 .. 2.4111 in the
+  (Q-44 A: skylights; p.7 dome detail diameter 442 = the inner circle) with the B4 ring band r 2.2111 .. 2.4111 in the
   beam register (BM-1F-028 / -039). 2F: no opening (2F-025 is a closed box with bars both ways).
 - **Drop panels / level steps**: no drop panel is drawn. Sunken slabs (hatch ANSI31 scale 2000 = legend "Sunken slab"):
   GF-015, GF-016, GF-081, GF-128, GF-141 (19.396 m2) and 1F-018 (5.400 m2), counted at the panel thickness; the drop
@@ -93,7 +93,7 @@ to the beam / edge family (HELD there when no section prints it). On Alsenan thi
 
 Settled from the drawings, NOT slab: it is the west dome square of the 1F roof (17.13 m2 x 0.16). The sheet that
 settles it is ST p.5: the circles r 2.2111 / 2.4111 m about the dome centre with four "SEE DETAIL" labels (the radial
-lines the census read as winder treads are the dome drawing), and p.3 DETAIL OF DOME: diameter 442 = the inner circle.
+lines the census read as winder treads are the dome drawing), and p.7 DETAIL OF DOME: diameter 442 = the inner circle.
 With owner Q-44 A the inside is an open skylight (14.982 m2 here) and the band 2.2111 .. 2.4111 is the B4 ring beam
 (1.511 m2, beam register BM-1F-028); its four corners (1.639 m2, 0.262 m3) are already measured slab panels (engine
 and hand). Proposal: close the line as NOT_SLAB_DOME_OPENING (the M5 audit dropped it, decision D-03; the release
@@ -134,7 +134,7 @@ register still lists it UNRESOLVED). No slab volume is lost: hand and engine bot
 - Hand 60.280 vs freelancer 59.817 m3 (+0.463, +0.77 %): GF -0.15 % and 2F -0.57 % **RULE_DIFFERENCE / within
   tolerance** (lump areas); 1F +2.90 % **UNRESOLVED** (lump 120.00 m2), candidate cause the dome corners (HAND_RIGHT on
   the drawing if so).
-- Held 2.740 m3 face: **settled NOT slab** (dome opening + ring beam; p.5 + p.3 + Q-44 A).
+- Held 2.740 m3 face: **settled NOT slab** (dome opening + ring beam; p.5 + p.7 + Q-44 A).
 - Beam register gap (lane S / I): CB5 span 2 (0.20 x 0.40 x 3.70, 0.296 m3) is in no beam row and the engine measures
   its band as slab.
 
@@ -155,3 +155,9 @@ register still lists it UNRESOLVED). No slab volume is lost: hand and engine bot
 - Sunken-slab step edges (GF 5 panels 19.396 m2, 1F 1 panel 5.400 m2): drop depth not printed; edges not measured.
 - Edge strips and boxes (GF 1.562 m2, 1F 3.884 m2, 2F 0.272 m2): not slab; held in the beam lane (D-05 / D-26).
 - Pool-court contested ring piece BM-GF-060 and CB3 / 'B3 (With Stair)' BM-GF-057: beam lane, HELD (Q-61 C).
+
+## r2 corrections (worker 1, 2026-10-21, checker verdict 16:45)
+
+- General note 18 and the p.4-6 sheet note are now paraphrased, not quoted (public repository).
+- The dome detail (diameter 442) is ST PDF p.7 DETAIL OF DOME, not p.3 (p.3 is the ground-beam plan): corrected at
+  every citation. The value 442 and every quantity are unchanged (text-only rework).
