@@ -14,15 +14,15 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `data/` | 19 | Registries (owner facts, project rules, trades) and trade rules. Large run data is gitignored. |
 | `docs/` | 72 | Design notes and the generated maps. |
 | `documents/` | 5 |  |
-| `engine/` | 626 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
+| `engine/` | 627 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 2505 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 2520 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 7 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 1340 | pytest suites, one folder per round. |
+| `tests/` | 1342 | pytest suites, one folder per round. |
 | `tools/` | 106 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (254 modules)
@@ -387,7 +387,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `workbooks.py` | 242 | MEDIUM | 0 | REPORTING V3 - workbook layouts (generic over a BOQ_LINES model). |
 | `workbooks_v3b.py` | 308 | MEDIUM | 0 | REPORTING V3b - workbook layouts over the two-view line model (TECHNICAL_QTO / COMMERCIAL_BOQ). |
 
-## `engine/source/` (274 modules)
+## `engine/source/` (275 modules)
 
 | Module | Lines | Risk | Imp | Purpose |
 |---|---|---|---|---|
@@ -491,13 +491,14 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `generic_route.py` | 2440 | CRITICAL | 20 | GENERIC ROUTE (M2) - a structural drawing set -> concrete and reinforcement items, with NO project register |
 | `geometry_role.py` | 342 | HIGH | 19 | GEOMETRY ROLE ADMISSION (R8.8): what a canonical part IS, before any room topology is built. |
 | `graphic_evidence.py` | 153 | CRITICAL | 5 | GRAPHIC EVIDENCE POLICY - what a drawn detail may and may not contribute to an accurate reinforcement quantity. |
-| `ground_beam_network.py` | 497 | MEDIUM | 4 | Ground-beam physical network: paired faces -> bands -> support-to-support spans (generic, accurate-side). |
+| `ground_beam_network.py` | 497 | MEDIUM | 5 | Ground-beam physical network: paired faces -> bands -> support-to-support spans (generic, accurate-side). |
 | `ground_beam_recovery.py` | 96 | MEDIUM | 1 | GROUND_BEAM_OCCURRENCE_RECOVERY (generic). |
 | `ground_slab_qto.py` | 318 | CRITICAL | 3 | GROUND SLAB QTO - restricted, source-zoned slab-on-grade concrete and mesh quantities (generic). |
 | `ground_slab_recovery.py` | 95 | MEDIUM | 1 | GROUND_SLAB_REGION_RECOVERY (generic). |
 | `ground_system_provenance.py` | 103 | CRITICAL | 5 | S5 ground-system rebar provenance: the generic accurate-rebar contract plus member-specific fields (no second system). |
 | `ground_system_rebar.py` | 699 | CRITICAL | 1 | GROUND_SYSTEM_REBAR (S5) - accurate ground-beam and strap-beam reinforcement, occurrence by occurrence, component |
 | `ground_system_resolution.py` | 369 | MEDIUM | 1 | Ground-system source resolution (pre-S5.1): generic decisions over measured evidence, no geometry library, no kg. |
+| `ground_system_spans_v2.py` | 589 | MEDIUM | 1 | GROUND_SYSTEM_SPANS_V2 - ground-beam span splitter and strap measurement, face to face (generic; stdlib only). |
 | `independent_export.py` | 251 | MEDIUM | 2 | INDEPENDENT EXPORT ADMISSION (R8.5 follow-up) — may this DXF serve as the independent parser route? |
 | `knowledge.py` | 289 | HIGH | 32 | ENGINEERING KNOWLEDGE (M9 Phase 2B-1, ARCH_TAKEOFF_V2.3 only) - the owner rules, conflicts, question catalogue and |
 | `legacy_text.py` | 136 | CRITICAL | 3 | LEGACY CAD TEXT DECODING (V3) - Arabic written with legacy AutoCAD SHX fonts. |
@@ -1022,6 +1023,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t135_stair_flight_once/` | 1 |
 | `tests/t136_footing_rebar_population/` | 1 |
 | `tests/t137_membrane_coverage/` | 1 |
+| `tests/t141_ground_system_spans_v2/` | 1 |
 | `tests/water_tank_s8_4/` | 3 |
 | `tests/zz_freeze_integrity/` | 2 |
 
@@ -1179,8 +1181,11 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t136/` | 4 |
 | `research/agents_t137/` | 2 |
 | `research/agents_t138/` | 3 |
+| `research/agents_t141/` | 4 |
 | `research/agents_t145/` | 4 |
+| `research/agents_t148/` | 5 |
 | `research/agents_t150/` | 4 |
+| `research/agents_t153/` | 6 |
 | `research/alsenan_arch_truth_05/` | 28 |
 | `research/alsenan_column_rebar_s3/` | 17 |
 | `research/alsenan_column_rebar_s3_1/` | 15 |

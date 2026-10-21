@@ -1,0 +1,60 @@
+id,storey,mark,x,y,section,A_m2,D_ctrl,controlling,interval,height,status,reason
+COL-GF-01,GF,C4,71.713,49.723,0.25x0.50,0.125,0.75,BM-GF-046,4.5,3.75,HELD,"framing member BM-GF-059 (unlabelled, HELD); controlling depth NOT changed by it (D_ctrl settled by calculated members)"
+COL-GF-02,GF,C5,63.763,49.723,0.25x0.60,0.15,0.75,BM-GF-001,4.5,3.75,HELD,"framing member BM-GF-055 (CB2, CONFLICT width only); controlling depth NOT changed by it (D_ctrl settled by calculated members)"
+COL-GF-03,GF,C4,67.663,49.723,0.25x0.50,0.125,0.75,BM-GF-038; BM-GF-046,4.5,3.75,HELD,"framing member BM-GF-055 (CB2, CONFLICT width only); controlling depth NOT changed by it (D_ctrl settled by calculated members)"
+COL-GF-04,GF,C2,57.193,49.598,0.20x0.50,0.1,0.40,BM-GF-015; BM-GF-020,4.5,4.10,CALCULATED,
+COL-GF-05,GF,C2,59.893,49.598,0.20x0.50,0.1,0.50,BM-GF-055,4.5,4.00,HELD,"framing member BM-GF-055 (CB2, CONFLICT width only); controlling depth NOT changed by it (D_ctrl settled by calculated members)"
+COL-GF-06,GF,C3,57.218,46.398,0.25x0.50,0.125,0.40,BM-GF-019; BM-GF-020,4.5,4.10,CALCULATED,
+COL-GF-07,GF,C1,59.893,46.398,0.20x0.50,0.1,0.75,BM-GF-026,4.5,3.75,CALCULATED,
+COL-GF-08,GF,C2,61.893,46.398,0.20x0.50,0.1,0.40,BM-GF-023; BM-GF-024; BM-GF-027,4.5,4.10,CALCULATED,
+COL-GF-09,GF,C9,67.513,45.623,0.25x1.00,0.25,0.75,BM-GF-036; BM-GF-038; BM-GF-044; BM-GF-056,4.5,3.75,HELD,"framing member BM-GF-056 (B21, CONFLICT width only); controlling depth NOT changed by it (D_ctrl settled by calculated members)"
+COL-GF-10,GF,C7,56.093,45.223,0.25x0.80,0.2,0.75,BM-GF-043,4.5,3.75,HELD,"framing member BM-GF-058 (unlabelled, HELD); controlling depth changes: BM-GF-058 depth not printed"
+COL-GF-11,GF,C9,61.918,44.948,0.25x1.00,0.25,0.75,BM-GF-022; BM-GF-036,4.5,3.75,CALCULATED,
+COL-GF-12,GF,C2,59.893,44.698,0.20x0.50,0.1,0.75,BM-GF-022; BM-GF-026; BM-GF-043,4.5,3.75,CALCULATED,
+COL-GF-13,GF,C8,71.713,44.123,0.25x0.90,0.225,0.85,BM-GF-047,4.5,3.65,CALCULATED,
+COL-GF-14,GF,C3,73.363,43.998,0.25x0.50,0.125,0.75,BM-GF-042,4.5,3.75,CALCULATED,
+COL-GF-15,GF,C,44.993,42.948,0.20x0.50,0.1,0.75,BM-GF-049,4.5,3.75,HELD,"GF annex zone (+0.30 floor, roof +4.30): storey interval waits on owner Q-54 B"
+COL-GF-16,GF,C,42.193,42.848,0.20x0.50,0.1,0.75,BM-GF-029,4.5,3.75,HELD,"GF annex zone (+0.30 floor, roof +4.30): storey interval waits on owner Q-54 B"
+COL-GF-17,GF,C6,57.218,41.398,0.25x0.70,0.175,0.50,BM-GF-021,4.5,4.00,CALCULATED,
+COL-GF-18,GF,C3,46.543,41.123,0.25x0.50,0.125,0.75,BM-GF-030,4.5,3.75,HELD,"GF annex zone (+0.30 floor, roof +4.30): storey interval waits on owner Q-54 B"
+COL-GF-19,GF,C11,54.643,41.123,0.25x1.10,0.275,0.85,BM-GF-048,4.5,3.65,CALCULATED,
+COL-GF-20,GF,C5,52.768,40.948,0.25x0.60,0.15,0.75,BM-GF-030,4.5,3.75,HELD,"GF annex zone (+0.30 floor, roof +4.30): storey interval waits on owner Q-54 B"
+COL-GF-21,GF,C3,52.768,38.098,0.25x0.50,0.125,0.50,BM-GF-016,4.5,4.00,HELD,"GF annex zone (+0.30 floor, roof +4.30): storey interval waits on owner Q-54 B"
+COL-GF-22,GF,C5,67.863,37.973,0.25x0.60,0.15,0.75,BM-GF-018,4.5,3.75,HELD,"framing member BM-GF-057 (CB3 and B3 (With Stair), HELD); controlling depth NOT changed by it (D_ctrl settled by calculated members)"
+COL-GF-23,GF,C8,64.513,37.973,0.25x0.90,0.225,0.75,BM-GF-018,4.5,3.75,CONFLICT,"C8 at the lower neighbour side: p.1 prints 30X80, schedule C8 30 x 90 / 25 x 90 / 20 x 90 (designer D-16)"
+COL-GF-24,GF,C,73.363,36.548,0.20x0.50,0.1,0.75,BM-GF-042,4.5,3.75,CALCULATED,
+COL-GF-25,GF,C11,58.118,36.473,0.25x1.10,0.275,0.85,BM-GF-048,4.5,3.65,CALCULATED,
+COL-GF-26,GF,C3,64.663,36.473,0.25x0.50,0.125,0.75,BM-GF-041,4.5,3.75,CALCULATED,
+COL-GF-27,GF,C10,71.613,36.473,0.25x0.70,0.175,0.85,BM-GF-047,4.5,3.65,CALCULATED,
+COL-GF-28,GF,C,42.293,36.448,0.20x0.50,0.1,0.75,BM-GF-013; BM-GF-029,4.5,3.75,HELD,"GF annex zone (+0.30 floor, roof +4.30): storey interval waits on owner Q-54 B"
+COL-GF-29,GF,C3,48.143,36.448,0.25x0.50,0.125,0.75,BM-GF-013,4.5,3.75,HELD,"GF annex zone (+0.30 floor, roof +4.30): storey interval waits on owner Q-54 B"
+COL-GF-30,GF,C,54.293,36.448,0.20x0.50,0.1,0.75,BM-GF-013; BM-GF-040,4.5,3.75,CALCULATED,
+COL-1F-31,1F,C4,32.989,49.723,0.20x0.50,0.1,0.75,BM-1F-017,4.2,3.45,CALCULATED,
+COL-1F-32,1F,C5,25.039,49.723,0.20x0.50,0.1,0.50,BM-1F-002,4.2,3.70,CALCULATED,
+COL-1F-33,1F,C4,28.939,49.723,0.20x0.50,0.1,0.50,BM-1F-002; BM-1F-015,4.2,3.70,CALCULATED,
+COL-1F-34,1F,C2,18.469,49.598,0.20x0.50,0.1,0.40,BM-1F-001; BM-1F-006,4.2,3.80,CALCULATED,
+COL-1F-35,1F,C2,21.169,49.598,0.20x0.50,0.1,0.50,BM-1F-002,4.2,3.70,CALCULATED,
+COL-1F-36,1F,C3,18.494,46.398,0.20x0.50,0.1,0.40,BM-1F-006,4.2,3.80,HELD,"framing member BM-1F-032 (unlabelled, HELD); controlling depth NOT changed by it (D_ctrl settled by calculated members)"
+COL-1F-37,1F,C1,21.169,46.398,0.20x0.50,0.1,0.75,BM-1F-012,4.2,3.45,CALCULATED,
+COL-1F-38,1F,C2,23.169,46.398,0.20x0.50,0.1,0.40,BM-1F-008; BM-1F-009; BM-1F-013,4.2,3.80,CALCULATED,
+COL-1F-39,1F,C9,28.789,45.623,0.20x0.90,0.18,0.75,BM-1F-025,4.2,3.45,CALCULATED,
+COL-1F-40,1F,C7,17.369,45.223,0.20x0.80,0.16,0.75,BM-1F-026,4.2,3.45,HELD,"framing member BM-1F-033 (unlabelled, HELD); controlling depth changes: BM-1F-033 depth not printed"
+COL-1F-41,1F,C9,23.194,44.948,0.20x0.90,0.18,0.75,BM-1F-007; BM-1F-024,4.2,3.45,CALCULATED,
+COL-1F-42,1F,C2,21.169,44.698,0.20x0.50,0.1,0.75,BM-1F-007; BM-1F-012; BM-1F-026,4.2,3.45,CALCULATED,
+COL-1F-43,1F,C8,33.139,44.123,0.20x0.90,0.18,0.75,BM-1F-017,4.2,3.45,HELD,"framing member BM-1F-037 (unlabelled rounded box outside CB12, HELD); controlling depth changes: BM-1F-037 depth not printed"
+COL-1F-44,1F,C6,18.494,41.398,0.20x0.60,0.12,0.50,BM-1F-022,4.2,3.70,CALCULATED,
+COL-1F-45,1F,C5,14.069,40.948,0.20x0.50,0.1,0.50,BM-1F-031,4.2,3.70,HELD,"framing member BM-1F-031 (CB10, CONFLICT width only), BM-1F-034 (unlabelled, HELD); controlling depth changes: BM-1F-034 depth not printed"
+COL-1F-46,1F,C3,14.069,38.098,0.20x0.50,0.1,0.50,BM-1F-003; BM-1F-031,4.2,3.70,HELD,"framing member BM-1F-031 (CB10, CONFLICT width only), BM-1F-034 (unlabelled, HELD); controlling depth changes: BM-1F-034 depth not printed"
+COL-1F-47,1F,C5,29.139,37.973,0.20x0.50,0.1,0.75,BM-1F-023,4.2,3.45,CALCULATED,
+COL-1F-48,1F,C8,25.789,37.973,0.20x0.90,0.18,0.75,BM-1F-023,4.2,3.45,CONFLICT,"C8 at the lower neighbour side: p.1 prints 30X80, schedule C8 30 x 90 / 25 x 90 / 20 x 90 (designer D-16)"
+COL-2F-49,2F,C5,-13.685,49.748,0.20x0.50,0.1,0.75,BM-2F-002,4.2,3.45,HELD,"framing member BM-2F-015 (unlabelled, HELD); controlling depth NOT changed by it (D_ctrl settled by calculated members)"
+COL-2F-50,2F,C2,-20.255,49.598,0.20x0.50,0.1,1.20,BM-2F-007,4.2,3.00,CALCULATED,
+COL-2F-51,2F,C2,-17.555,49.598,0.20x0.50,0.1,0.75,BM-2F-002,4.2,3.45,CALCULATED,
+COL-2F-52,2F,C3,-20.23,46.398,0.20x0.50,0.1,1.20,BM-2F-007,4.2,3.00,HELD,"framing member BM-2F-016 (unlabelled, HELD); controlling depth NOT changed by it (D_ctrl settled by calculated members)"
+COL-2F-53,2F,C1,-17.555,46.398,0.20x0.50,0.1,0.40,BM-2F-003; BM-2F-012; BM-2F-013; BM-2F-014,4.2,3.80,CALCULATED,
+COL-2F-54,2F,C2,-15.555,46.398,0.20x0.50,0.1,0.40,BM-2F-009; BM-2F-010; BM-2F-014,4.2,3.80,CALCULATED,
+COL-2F-55,2F,C9,-15.555,44.798,0.20x0.70,0.14,0.40,BM-2F-008; BM-2F-009,4.2,3.80,HELD,"framing member BM-2F-017 (unlabelled, HELD); controlling depth NOT changed by it (D_ctrl settled by calculated members)"
+COL-2F-56,2F,C2,-17.555,44.698,0.20x0.50,0.1,0.40,BM-2F-008; BM-2F-013,4.2,3.80,HELD,"framing member BM-2F-018 (unlabelled, HELD); controlling depth NOT changed by it (D_ctrl settled by calculated members)"
+COL-1F-57,1F,P.C 20x70,18.331,37.948,0.20x0.70,0.14,0.75,BM-1F-023,4.2,3.45,CALCULATED,
+COL-1F-58,1F,P.C 20x50,32.989,37.948,0.20x0.50,0.1,0.75,BM-1F-017; BM-1F-023,4.2,3.45,HELD,"framing member BM-1F-035 (unlabelled, HELD), BM-1F-038 (unlabelled 0.10 strip outside CB12, HELD); controlling depth changes: BM-1F-038 depth not printed"
+COL-2F-59,2F,P.C 20x50,-12.355,45.03,0.20x0.50,0.1,0.75,BM-2F-011,4.2,3.45,CALCULATED,
