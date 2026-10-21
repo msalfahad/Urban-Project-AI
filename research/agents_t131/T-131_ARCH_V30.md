@@ -64,3 +64,28 @@ computed from 44.869 m2 (STALE until the range settles); the doorway strips at O
 - Checker: re-run `tools/alsenan_scoreboard.py` on V3.0 and V2.9 and re-measure 3 changed lines by hand.
 
 Reproduce: `python3 -I research/agents_t131/alsenan_v30_run.py <plan.dxf> <structural.dxf> --out <scratch>/t131`.
+
+## Rework r2 (verifier run 47, checker rule 4): the ledger against the released V2.9
+
+Change: `engine/source/arch_v30.py` gains `CHAIN` / `VERSIONS` (V2.10 T-034 faad086; V2.11 T-079 rework T-093 9f14742
+run 32; V2.12 T-096 54bd6a4 run 35; V2.13 T-120 2264938 run 44), `version_steps`, `inherited_rows` and
+`released_identity`; `write()` adds one INHERITED_FROM_BASE row for every other line that differs from V2.9 (whole line
+by line id) and gives every row a `since_v2_9` chain; the run fails if any line outside the ledger differs from V2.9.
+`tools/urban_boq_m9.py`: `--v30-history METHOD=BOQ_LINES.json` (V2.10 / V2.11 / V2.12 runs) beside `--v30-released`.
+No quantity changes: integrate() is untouched; the candidate is 1530 lines = 1519 identical to V2.13 + 9 replaced + 2 added, as the verifier reproduced in run 47 (only the ledger and the run record grow).
+
+Development villa (same Drive DXFs; `alsenan_v30_run.py` now also runs V2.10, V2.11, V2.12): V2.9 1455 lines, V3.0
+1530; V3.0 vs V2.9 differs in 217 lines (102 changed, 95 added, 20 removed: the verifier's count) and the ledger has
+exactly 217 rows (0 undocumented, 0 extra); the other 1333 lines are byte-identical to V2.9.
+
+| Rows | Version(s) that changed the line | What changed against V2.9 |
+|---|---|---|
+| 11 pieces (straps 5, passage 5, stair 1) | V3.0 | the measured changes of the skeleton (table above) |
+| 22 membrane roll lines | V2.11 (+ V2.12 for 20, + V2.13 for 2) | new lines: 52 rolls on 21 lines + 1 held (V2.9 has no roll line) |
+| 93 changed | V2.11 | quantity identical to V2.9 on every one; 90 carry the knowledge-registry tag URBAN_KB_1.7.0 instead of 1.5.0 (same rule id and version), 3 a note |
+| 71 added, 20 removed | V2.11 (1 also V2.13, 1 only V2.13) | wet / dry decided spaces: wet tile +9.348 m2, floor membrane +22.848 m2 (62.773 -> 85.621, of which 13.500 = the typed 4.50 x 3.00 pantry, V2.13); upturn re-split 22.065 m2 on 14 lines -> 25.115 m2 on 18 lines; roofs 204.112 m2 + upturn 181.589 lm; 14 doorway transitions (pcs); plaster / paint / skirting / wall tile / penetration lines of the 3 decided spaces held (no quantity) |
+
+V2.10 and V2.12 change no line on this villa outside the roll lines (V2.12 changes the roll counts). Tests:
+tests/t131_arch_v30 29 pass (4 new: version steps never guess a version that was not given; inherited rows for
+changed / added / removed lines and none for identical ones; the identity refuses an undocumented line; end to end on
+the synthetic passage villa, plain and mirrored: candidate vs V2.9 = ledger exactly, every outside line byte-identical).

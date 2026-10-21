@@ -2882,8 +2882,8 @@ def cmd_arch(a):
     v30 = a.method == V30                     # T-131: the candidate runs ARCH_TAKEOFF_V2.13 exactly, then integrates
     if v30:
         a.method = V213
-    elif getattr(a, "v30_decisions", None) or getattr(a, "v30_released", None):
-        raise SystemExit("--v30-decisions / --v30-released need --method ARCH_TAKEOFF_V3.0")
+    elif getattr(a, "v30_decisions", None) or getattr(a, "v30_released", None) or getattr(a, "v30_history", None):
+        raise SystemExit("--v30-decisions / --v30-released / --v30-history need --method ARCH_TAKEOFF_V3.0")
     decisions = None
     if getattr(a, "decisions", None):
         if a.method not in (V23, V24, V25, V26, V27, V271, V28, V29, V210, V211, V212, V213):
@@ -3047,10 +3047,22 @@ def cmd_arch(a):
         ch_s, log_s = A30.strap_changes(R, structural, base_lines)
         ch_p, log_p = A30.passage_changes(v30cap, base_lines, arch["rooms"], arch["regions"], dec)
         ch_f, log_f = A30.stair_changes(room, arch, E)
+        hist = {}                                   # T-131 r2: V2.10 .. V2.12 runs name the version of each change
+        for item in getattr(a, "v30_history", None) or ():
+            m, _, pth = item.partition("=")
+            if m not in A30.HISTORY or not pth:
+                raise SystemExit(f"--v30-history: METHOD=BOQ_LINES.json with METHOD one of {A30.HISTORY}")
+            h = json.loads(Path(pth).read_text(encoding="utf-8"))
+            hist[m] = h["lines"] if isinstance(h, dict) else h
+        if hist and released is None:
+            raise SystemExit("--v30-history needs --v30-released (the released ARCH_TAKEOFF_V2.9 lines)")
         names, ident, _led = A30.write(out, base_lines, ch_s + ch_p + ch_f, [log_s, log_p, log_f], dec,
                                        {"plan": Path(plan).name, "structural": Path(structural).name if structural
                                         else None, "released_lines": Path(a.v30_released).name
-                                        if getattr(a, "v30_released", None) else None}, released)
+                                        if getattr(a, "v30_released", None) else None,
+                                        "history": {x.partition("=")[0]: Path(x.partition("=")[2]).name
+                                                    for x in getattr(a, "v30_history", None) or ()}},
+                                       released, hist or None)
         svgs += names
         v30rec = {"method": V30, "base": V213, "released_default": False, "identity": ident}
     ev = Counter(ln["evidence_state"] for ln in room["lines"])
@@ -3215,6 +3227,9 @@ def main(argv=None):
                                            "binding an owner answer with its condition check (e.g. Q-67 A)")
     p.add_argument("--v30-released", help="ARCH_TAKEOFF_V3.0: BOQ_LINES.json of the released ARCH_TAKEOFF_V2.9 run "
                                           "on the same drawings (the ledger's 'before released' column)")
+    p.add_argument("--v30-history", nargs="+", metavar="METHOD=BOQ_LINES.json",
+                   help="ARCH_TAKEOFF_V3.0 with --v30-released: BOQ_LINES.json of the ARCH_TAKEOFF_V2.10 / V2.11 / "
+                        "V2.12 runs on the same drawings, so each ledger row names the version that changed its line")
     # S6: the drawing admission (always on for ARCH_TAKEOFF_V2) and its reviewer inputs (recorded, never defaulted)
     p.add_argument("--strict-admission", action="store_true",
                    help="ARCH_TAKEOFF_V1 behind the S6 drawing admission: a fatal finding stops the run with exit 2 and "

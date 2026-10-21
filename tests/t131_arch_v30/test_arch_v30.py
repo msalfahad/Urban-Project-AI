@@ -344,3 +344,87 @@ def test_ledger_lists_released_before_and_lines_not_in_the_released_run():
     led = A30.ledger([A30._change("STAIR_FLOOR_RESIDUE", "REPLACE", a, a2)], released_lines=[])
     assert led["rows"][0]["before_released_v2_9"]["state"] == "NOT_IN_RELEASED"
     assert led["released_default"] is False
+
+
+# ------------------------------------------------------------------------------------------------ r2: every V2.9 difference
+# Verifier run 47 (checker rule 4): a ledger row for EVERY line where the candidate differs from the released V2.9,
+# naming the version that changed it, and every line outside the ledger byte-identical to the V2.9 run.
+def _released_diff(released, candidate):
+    a, b = {x["line_id"]: x for x in released}, {x["line_id"]: x for x in candidate}
+    return {i for i in a.keys() | b.keys() if i not in a or i not in b or A30.line_sha(a[i]) != A30.line_sha(b[i])}
+
+
+def _documented(led):
+    return {i for r in led["rows"] for i in [r["line_id"]] + (r.get("line_ids") or [])}
+
+
+def test_version_steps_name_each_version_and_never_guess_a_missing_one():
+    a = _floor_line("1F-A", 10.0)
+    a11 = copy.deepcopy(a)
+    a11["rule"]["rule_set"] = "registry-1.7"              # a rule tag change, same quantity
+    a13 = copy.deepcopy(a11)
+    a13["measured_net"] = 9.5
+    by = lambda *ls: {x["line_id"]: x for x in ls}        # noqa: E731
+    chain = {"ARCH_TAKEOFF_V2.9": by(a), "ARCH_TAKEOFF_V2.10": by(a), "ARCH_TAKEOFF_V2.11": by(a11),
+             "ARCH_TAKEOFF_V2.12": by(a11), "ARCH_TAKEOFF_V2.13": by(a13), "ARCH_TAKEOFF_V3.0": by(a13)}
+    st = A30.version_steps(a["line_id"], chain)
+    assert [(s["version"], s["change"], s["fields"]) for s in st] == [
+        ("ARCH_TAKEOFF_V2.11", "CHANGED", ["rule"]), ("ARCH_TAKEOFF_V2.13", "CHANGED", ["measured_net"])]
+    chain.update({"ARCH_TAKEOFF_V2.10": None, "ARCH_TAKEOFF_V2.11": None, "ARCH_TAKEOFF_V2.12": None})
+    st = A30.version_steps(a["line_id"], chain)
+    assert len(st) == 1 and st[0]["version"].startswith("ARCH_TAKEOFF_V2.10 .. ARCH_TAKEOFF_V2.13")
+    assert "not given" in st[0]["version"] and A30._evidence(st)["merge_commit"] is None   # unattributed, not guessed
+
+
+def test_inherited_rows_cover_changed_added_and_removed_lines_and_nothing_else():
+    keep, gone, chg = _floor_line("1F-K", 5.0), _floor_line("1F-G", 3.0), _floor_line("1F-C", 7.0)
+    chg2 = copy.deepcopy(chg)
+    chg2["rule"]["rule_set"] = "registry-1.7"
+    new = _floor_line("1F-N", 2.0)
+    released, base = [keep, gone, chg], [keep, chg2, new]
+    hist = {"ARCH_TAKEOFF_V2.10": released, "ARCH_TAKEOFF_V2.11": base, "ARCH_TAKEOFF_V2.12": base}
+    rows = A30.inherited_rows(base, base, released, set(), hist)
+    got = {(r["line_id"], r["action"], r["since_v2_9"][0]["version"]) for r in rows}
+    assert got == {(chg["line_id"], "CHANGED_SINCE_V2_9", "ARCH_TAKEOFF_V2.11"),
+                   (new["line_id"], "ADDED_SINCE_V2_9", "ARCH_TAKEOFF_V2.11"),
+                   (gone["line_id"], "REMOVED_SINCE_V2_9", "ARCH_TAKEOFF_V2.11")}
+    r = next(x for x in rows if x["line_id"] == chg["line_id"])
+    assert r["fields_changed_vs_v2_9"] == ["rule"] and r["change"] == {"delta": 0.0, "pct": 0.0}
+    assert r["verification"]["merge_commit"] == "9f14742" and r["verification"]["task"].startswith("T-079")
+    g = next(x for x in rows if x["line_id"] == gone["line_id"])
+    assert g["after_v3_0"]["state"] is None and g["before_released_v2_9"]["value"] == 3.0     # removed, never 0
+    led = {"rows": rows}
+    ident = A30.released_identity(base, released, led)
+    assert ident["outside_ledger"] == ident["outside_ledger_identical_to_v2_9"] == 1        # only 'keep'
+    with pytest.raises(ValueError):                                                         # a row missing -> refused
+        A30.released_identity(base, released, {"rows": rows[:1]})
+
+
+@pytest.mark.parametrize("variant", [{}, {"mirror": True}])
+def test_candidate_vs_released_v2_9_is_exactly_the_ledger_end_to_end(tmp_path, variant):
+    dxf = _passage_villa(tmp_path / "p.dxf", **variant)
+    v29 = _run(dxf, tmp_path / "v29", "ARCH_TAKEOFF_V2.9")
+    hist = []
+    for m in A30.HISTORY:
+        hist.append(f"{m}={_run(dxf, tmp_path / m, m) / 'BOQ_LINES.json'}")
+    out = _run(dxf, tmp_path / "v30", "ARCH_TAKEOFF_V3.0", "--v30-released", str(v29 / "BOQ_LINES.json"),
+               "--v30-history", *hist)
+    released = _lines(v29 / "BOQ_LINES.json")
+    released = released["lines"] if isinstance(released, dict) else released
+    cand = _lines(out / "V3_0_BOQ_LINES.json")
+    cand = cand["lines"] if isinstance(cand, dict) else cand
+    led = _lines(out / "V3_0_INTEGRATION_LEDGER.json")
+    diff = _released_diff(released, cand)
+    assert _documented(led) == diff                                     # 0 undocumented, 0 extra rows
+    rel = {x["line_id"]: x for x in released}
+    for x in cand:
+        if x["line_id"] not in diff:
+            assert json.dumps(x, sort_keys=True) == json.dumps(rel[x["line_id"]], sort_keys=True)
+    for r in led["rows"]:
+        if r["line_id"] in diff:
+            assert r["since_v2_9"], r["line_id"]
+            for st in r["since_v2_9"]:
+                assert st["version"] in A30.VERSIONS or st["version"] == A30.METHOD, st
+    ident = _lines(out / "V3_0_RUN.json")["identity"]
+    assert ident["history_given"] == sorted(A30.HISTORY)
+    assert ident["vs_released_v2_9"]["outside_ledger"] == len(cand) - len(diff & {x["line_id"] for x in cand})

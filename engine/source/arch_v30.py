@@ -30,6 +30,13 @@ Integrated pieces (each carries a verifier MERGED verdict; PIECES below names th
   MEMBRANE_V2_13        the ARCH_TAKEOFF_V2.13 membrane purchase lines (Q-58 A proven cutting plans, the typed pantry
                         zone): integrated as they are (the base run is V2.13); listed in the ledger with V2.9 before.
 
+Ledger against the RELEASED method (r2, verifier run 47, checker rule 4): with --v30-released (the V2.9 run's
+BOQ_LINES.json) the ledger also carries one INHERITED_FROM_BASE row for EVERY other line where the candidate differs
+from V2.9 (whole line, by line id: changed, added or removed), naming each version on the way that changed it
+(V2.10 .. V2.13: task, merge commit, verifier run; --v30-history gives the V2.10 .. V2.12 runs, a version not given is
+named as a range, never guessed), and the run asserts that every line outside the ledger is byte-identical to V2.9
+(released_identity; V3_0_RUN.json identity.vs_released_v2_9).
+
 Pieces waiting for the checker join later as V3.0.x extensions of this same candidate (never a new method family).
 
 Rules: owner decision 2026-10-20 sections 2 and 5, Q-12 B, Q-16, Q-31, Q-37 A, Q-49 A, Q-56 A, Q-58 A, Q-64 B,
@@ -111,6 +118,33 @@ WAITING = {"T-122": "1F porcelain / landing marble under Q-66 B (research only: 
                     "still missing)",
            "T-124": "MEMBRANE_FOLD_V5 offcut-once audit (verified, read by no method: joins as V3.0.x)",
            "T-126": "route G blinding scope / undrawn columns (READY, not yet verified)"}
+
+# r2 (verifier run 47, checker rule 4): every line where the candidate differs from the RELEASED ARCH_TAKEOFF_V2.9 has a
+# ledger row naming each method version on the way that changed it (V2.10 .. V2.13 are merged opt-in versions the base
+# run carries; V3.0 is this candidate's pieces), with that version's merge commit and verifier run
+CHAIN = ("ARCH_TAKEOFF_V2.9", "ARCH_TAKEOFF_V2.10", "ARCH_TAKEOFF_V2.11", "ARCH_TAKEOFF_V2.12", BASE_METHOD, METHOD)
+HISTORY = CHAIN[1:4]                      # the versions whose BOQ_LINES.json the caller may give (--v30-history)
+VERSIONS = {
+    "ARCH_TAKEOFF_V2.10": {"task": "T-034", "merge_commit": "faad086",
+                           "verifier_run": "verified, merged by the owner session (2026-10-19 11:0x UTC)",
+                           "module": "engine/source/room_vocab.py", "policy": "URBAN_BOQ_M9_T034_ARCH_V2_10",
+                           "what": "room names typed with ROOM_VOCAB_V2 (compound names before bare words)",
+                           "owner_rules": ["UP-KB-PREC-001"]},
+    "ARCH_TAKEOFF_V2.11": {"task": "T-079 (rework T-093)", "merge_commit": "9f14742",
+                           "verifier_run": "run 32 (2026-10-20 05:34 UTC)", "module": "engine/source/arch_v211.py",
+                           "policy": "URBAN_BOQ_T079_ARCH_V2_11",
+                           "what": "wet / dry evidence decides held spaces, roofs, MEMBRANE_FOLD_V2 rolls per area "
+                                   "alone; knowledge registry 1.7.0",
+                           "owner_rules": ["Q-06 a", "Q-13 B", "Q-30 A", "Q-49 A"]},
+    "ARCH_TAKEOFF_V2.12": {"task": "T-096", "merge_commit": "54bd6a4", "verifier_run": "run 35 (2026-10-20 09:40 UTC)",
+                           "module": "engine/source/arch_v212.py", "policy": "URBAN_BOQ_T096_ARCH_V2_12",
+                           "what": "complete membrane coverage (MEMBRANE_FOLD_V3), cutting plan V2 under Q-58",
+                           "owner_rules": ["Q-49 A", "Q-58 (held when the readings differ)"]},
+    BASE_METHOD: {"task": "T-120", "merge_commit": "2264938", "verifier_run": "run 44 (2026-10-20 18:40 UTC)",
+                  "module": "engine/source/arch_v213.py", "policy": "URBAN_BOQ_T120_ARCH_V2_13",
+                  "what": "Q-58 A released only on a proven cutting plan; typed open-plan wet zones",
+                  "owner_rules": ["Q-58 A conditional", "Q-37 A", "Q-17 A"]},
+}
 
 
 # ================================================================================================ capture
@@ -651,9 +685,113 @@ def ledger(changes, released_lines=None):
                      "drawing_method": p["drawing_method"], "owner_rules": p["owner_rules"],
                      "verification": {k: p[k] for k in ("task", "merge_commit", "verifier_run", "module", "policy")}
                      | ({"condition_check": p["condition_check"]} if "condition_check" in p else {}),
-                     "held": c.get("held") or [], "downstream": c.get("downstream") or [], "rollback": ROLLBACK})
+                     "held": c.get("held") or [], "downstream": c.get("downstream") or [], "rollback": ROLLBACK,
+                     "line_ids": sorted({x["line_id"] for x in (c["before"], c["after"]) if x is not None})})
     return {"schema": LEDGER_SCHEMA, "method": METHOD, "base": BASE_METHOD, "released": RELEASED_METHOD,
             "released_default": False, "rows": rows, "waiting_pieces": WAITING}
+
+
+def _by_id(lines):
+    return {ln["line_id"]: ln for ln in lines or ()}
+
+
+def _fields(a, b):
+    """the fields of two lines with one id that differ (whole-line comparison, the checker's basis)."""
+    if a is None or b is None:
+        return []
+    return sorted(k for k in set(a) | set(b) if json.dumps(a.get(k), sort_keys=True, default=str)
+                  != json.dumps(b.get(k), sort_keys=True, default=str))
+
+
+def version_steps(line_id, chain_lines):
+    """-> the versions that changed one line on the way V2.9 -> V3.0: [{"version", "change": ADDED | REMOVED |
+    CHANGED, "fields"}]. chain_lines {method: {line_id: line} or None}; a version whose lines were not given is
+    skipped, so the step after it is named as a range (never guessed)."""
+    steps, prev, prev_v, gap = [], None, None, []
+    for v in CHAIN:
+        lines = chain_lines.get(v)
+        if lines is None:
+            gap.append(v)
+            continue
+        cur = lines.get(line_id)
+        if prev_v is not None and (cur is not None or prev is not None) and line_sha(cur) != line_sha(prev):
+            ch = "ADDED" if prev is None else "REMOVED" if cur is None else "CHANGED"
+            steps.append({"version": v if not gap else f"{gap[0]} .. {v} (history of {', '.join(gap)} not given)",
+                          "change": ch, "fields": _fields(prev, cur)})
+        prev, prev_v, gap = cur, v, []
+    return steps
+
+
+def _evidence(steps):
+    """the verification record of the version(s) that changed a line (the last step first named)."""
+    named = [VERSIONS[st["version"]] | {"version": st["version"]} for st in steps if st["version"] in VERSIONS]
+    if not named:
+        return {"task": None, "merge_commit": None, "verifier_run": None, "module": None, "policy": None,
+                "unattributed": [st["version"] for st in steps]}
+    last = named[-1]
+    return {k: last[k] for k in ("task", "merge_commit", "verifier_run", "module", "policy")} | {
+        "version": last["version"], "all_versions": [{k: n[k] for k in ("version", "task", "merge_commit",
+                                                                           "verifier_run")} for n in named]}
+
+
+def inherited_rows(candidate_lines, base_lines, released_lines, documented, history=None):
+    """one row per line where the candidate differs from the released V2.9 (changed, added or removed, whole-line
+    comparison by line id) that no piece row documents: the line comes unchanged from the base V2.13 run, so the row
+    names the versions V2.10 .. V2.13 that changed it (history {method: lines} gives V2.10 .. V2.12)."""
+    rel, cand = _by_id(released_lines), _by_id(candidate_lines)
+    chain = {CHAIN[0]: rel, BASE_METHOD: _by_id(base_lines), METHOD: cand}
+    for v in HISTORY:
+        chain[v] = _by_id(history[v]) if history and history.get(v) is not None else None
+    rows = []
+    order = [ln["line_id"] for ln in candidate_lines] + [i for i in rel if i not in cand]
+    for lid in order:
+        if lid in documented:
+            continue
+        b, a = rel.get(lid), cand.get(lid)
+        if b is not None and a is not None and line_sha(a) == line_sha(b):
+            continue
+        steps = version_steps(lid, chain)
+        ref = a if a is not None else b
+        b29, aft = _qty(b) if b is not None else dict(_qty(None), state="NOT_IN_RELEASED"), _qty(a)
+        d = None
+        if b29["value"] is not None and aft["value"] is not None:
+            d = {"delta": _r(aft["value"] - b29["value"]),
+                 "pct": _r(100.0 * (aft["value"] - b29["value"]) / b29["value"], 3) if b29["value"] else None}
+        ev = _evidence(steps)
+        loc = ref.get("location") or {}
+        named = [VERSIONS[st["version"]] for st in steps if st["version"] in VERSIONS]
+        rows.append({"piece": "INHERITED_FROM_BASE",
+                     "action": "REMOVED_SINCE_V2_9" if a is None else "ADDED_SINCE_V2_9" if b is None
+                     else "CHANGED_SINCE_V2_9",
+                     "line_id": lid, "item_code": ref["item_code"], "floor": loc.get("floor"),
+                     "room_id": loc.get("room_id"), "element_id": loc.get("element_id"), "unit": ref["unit"],
+                     "before_released_v2_9": b29, "before_base_v2_13": aft, "after_v3_0": aft, "change": d,
+                     "fields_changed_vs_v2_9": _fields(b, a) if (a is not None and b is not None) else None,
+                     "since_v2_9": steps,
+                     "drawing_reference": "as the base run (the line is the base V2.13 line unchanged)",
+                     "owner_manual_method": None, "drawing_method": "; ".join(n["what"] for n in named) or None,
+                     "owner_rules": sorted({r for n in named for r in n["owner_rules"]}),
+                     "verification": ev, "held": [], "downstream": [], "rollback": ROLLBACK})
+    return rows
+
+
+def released_identity(candidate_lines, released_lines, led):
+    """checker rule 4: every candidate line outside the ledger is byte-identical to the released V2.9 line with its id,
+    and every V2.9 line the candidate does not carry has a row. Raises on a difference no row documents."""
+    rel, cand = _by_id(released_lines), _by_id(candidate_lines)
+    doc = set()
+    for r in led["rows"]:
+        doc.add(r["line_id"])
+        doc.update(r.get("line_ids") or ())
+    outside = [lid for lid in cand if lid not in doc]
+    bad = [lid for lid in outside if lid not in rel or line_sha(rel[lid]) != line_sha(cand[lid])]
+    lost = [lid for lid in rel if lid not in cand and lid not in doc]
+    if bad or lost:
+        raise ValueError(f"{METHOD}: {len(bad)} candidate line(s) and {len(lost)} released line(s) differ from the "
+                         f"released {RELEASED_METHOD} without a ledger row (e.g. {(bad + lost)[:3]})")
+    return {"released_lines": len(rel), "candidate_lines": len(cand), "ledger_rows": len(led["rows"]),
+            "outside_ledger": len(outside), "outside_ledger_identical_to_v2_9": len(outside),
+            "outside_ledger_sha256": hashlib.sha256("".join(line_sha(cand[i]) for i in outside).encode()).hexdigest()}
 
 
 LEDGER_CSV = ("piece", "action", "line_id", "item_code", "floor", "room_id", "element_id", "unit", "v2_9_state",
@@ -692,13 +830,25 @@ def _j(obj):
     return json.dumps(obj, indent=1, sort_keys=True, ensure_ascii=False, default=str) + "\n"
 
 
-def write(out, base_lines, changes, logs, decisions, inputs, released_lines=None):
-    """the V3.0 files beside the base run's outputs. -> the file names."""
+def write(out, base_lines, changes, logs, decisions, inputs, released_lines=None, history=None):
+    """the V3.0 files beside the base run's outputs. With the released V2.9 lines, the ledger also lists every other
+    line that differs from V2.9 (INHERITED_FROM_BASE, named by version; history gives V2.10 .. V2.12) and the run
+    asserts that every line outside the ledger is byte-identical to V2.9. -> the file names."""
     from engine.source import boq_line as BL
     from pathlib import Path
     out = Path(out)
     lines, ident = integrate(base_lines, changes)
     led = ledger([c for c in changes] + membrane_rows(base_lines), released_lines)
+    if released_lines is not None:
+        for r in led["rows"]:
+            r["since_v2_9"] = version_steps(r["line_id"], {CHAIN[0]: _by_id(released_lines),
+                                                          BASE_METHOD: _by_id(base_lines), METHOD: _by_id(lines),
+                                                          **{v: (_by_id(history[v]) if history and history.get(v)
+                                                                 is not None else None) for v in HISTORY}})
+        documented = {i for r in led["rows"] for i in [r["line_id"]] + (r.get("line_ids") or [])}
+        led["rows"] += inherited_rows(lines, base_lines, released_lines, documented, history)
+        ident = dict(ident, vs_released_v2_9=released_identity(lines, released_lines, led),
+                     history_given=sorted(v for v in HISTORY if history and history.get(v) is not None))
     down = [dict(d, from_line=r["line_id"], piece=r["piece"]) for r in led["rows"] for d in r["downstream"]]
     files = {"V3_0_BOQ_LINES.json": BL.dumps(lines),
              "V3_0_BOQ_LINES.csv": _lines_csv(lines),

@@ -64,6 +64,12 @@ def main(argv=None):
               str(out / "facts.json"), "--project", PID, "--no-svg"]
     M.main(["arch", "--out", str(out / "v29"), "--method", "ARCH_TAKEOFF_V2.9"] + common)
     extra = ["--v30-released", str(out / "v29" / "BOQ_LINES.json")]
+    hist = []                                  # r2: the versions between V2.9 and V2.13 name each change's origin
+    for m in ("ARCH_TAKEOFF_V2.10", "ARCH_TAKEOFF_V2.11", "ARCH_TAKEOFF_V2.12"):
+        tag = "v" + m.split("_V")[-1].replace(".", "")
+        M.main(["arch", "--out", str(out / tag), "--method", m] + common)
+        hist.append(f"{m}={out / tag / 'BOQ_LINES.json'}")
+    extra += ["--v30-history"] + hist
     if not a.no_decision:
         (out / "decisions.json").write_text(json.dumps(DECISIONS), encoding="utf-8")
         extra += ["--v30-decisions", str(out / "decisions.json")]
@@ -80,6 +86,13 @@ def main(argv=None):
             return f"{x['low']:.3f}..{x['high']:.3f} {x['state']}"
         return x["state"]
     print("identity:", run["identity"])
+    by = {}
+    for r in led["rows"]:
+        if r["piece"] == "INHERITED_FROM_BASE":
+            k = (" + ".join(st["version"] for st in r["since_v2_9"]) or "?", r["action"], r["item_code"])
+            by[k] = by.get(k, 0) + 1
+    for (v, act, code), n in sorted(by.items()):
+        print(f"inherited {n:4d}  {act:19s} {code:30s} {v}")
     for r in led["rows"]:
         if r["piece"] == "MEMBRANE_V2_13" and r["before_released_v2_9"]["state"] == r["after_v3_0"]["state"]:
             continue
