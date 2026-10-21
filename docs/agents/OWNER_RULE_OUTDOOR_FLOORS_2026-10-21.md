@@ -27,3 +27,23 @@ How agents apply it:
 Alsenan effect (areas measured by T-153, waiting for the Checker where not yet verified): west court 138.761 m2 including
 the porch 19.181 m2 and a 3.360 m2 element footprint, north court strip 21.348 m2 (Checker re-measured 21.021, split
 HELD), pool deck 7.605 m2, side passage 5.640 m2; the freelancer prices "yard" 151.80 m2.
+
+## Owner additions (2026-10-21, main chat; his words: "side walk court will be on the right side next to the pool
+(Porcelain because sides will always be porcelain or ceramic no interlock) its considered part of the house. so 150 times
+the length 1597 for side. (look for it to learn) pool deck not sure yet. What covered porch not sure. show me, if its the
+seating area next to door it could be wood or ceramic or marble with the stairs")
+
+- SIDES ARE NEVER INTERLOCK, in any project type: a side walk / side strip along the house is porcelain or ceramic and
+  counts as PART OF THE HOUSE. Interlock is for the open court only.
+- Alsenan side walk (the strip between the north neighbour wall and the house block with the stair, the W.Cs, the master
+  bedroom and the pool; GF plan): owner manual method = printed width 1500 x printed block length 15970 (the DXF dimension
+  15970 runs x -145040 .. -129070 at y -797705; 1500 dimensions on the same strip) = 1.50 x 15.97 = 23.955 m2, porcelain.
+  T-153 measured that strip as 21.348 m2 (Checker 21.021): the 2.6 m2 difference must be explained term by term
+  (what the drawn strip excludes: the pool frame, a door swing, a step, the strip ends) with both figures kept, the
+  owner's manual method beside the drawing-derived one.
+- POOL DECK: HELD (owner not sure yet).
+- COVERED PORCH (GF, in front of the main entrance door with the entrance steps, under the 1F; about 4.60 x 4.10 =
+  19.181 m2): shown to the owner on a marked plan; finish OPEN (wood, ceramic, or marble together with the stairs):
+  HELD until he decides. The entrance steps themselves are marble (outside stairs).
+- Side passage 5.640 m2 (between annex and house): a side area, so porcelain / ceramic by the sides rule, part of the
+  house (consistent with Q-67 A exterior classification for walls; its floor finish is porcelain / ceramic, not interlock).
