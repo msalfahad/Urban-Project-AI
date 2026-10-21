@@ -1,6 +1,6 @@
 # T-128: plaster, paint and wet-wall tile per Alsenan room by BOTH methods (owner manual G1 and drawing-derived)
 
-Worker 3, 2026-10-21 05:00-06:40 UTC. Lane A (plan P-06). NO REPO CODE: this run's self-check (venv + project checks)
+Worker 3, 2026-10-21 05:00-05:35 UTC. Lane A (plan P-06). NO REPO CODE: this run's self-check (venv + project checks)
 was refused by the session permission check, so no engine module or project tool ran; every number below is a hand /
 standard-library calculation (`calc.py`, inputs typed with their source) on lengths traced from the Drive drawings.
 Development villa (Alsenan), not an accuracy claim; nothing released changes. No client names, no coordinates, no images.
