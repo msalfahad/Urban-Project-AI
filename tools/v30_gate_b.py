@@ -39,7 +39,13 @@ Flags, one per Gate B "always checked by hand" rule (a row may carry several):
   CLASS_CHANGE     the item code, trade or material state differs (a material classification change);
   DOUBLE_FINISH    with --register (an ELEMENT_REGISTER_V0.json beside the run, T-134): one element whose PRIMARY lines
                    carry two different floor-surface finish items (one surface finished twice);
-  CROSS_DEPENDENCY the line names another as never additive with it, or is so named (a possible double count).
+  CROSS_DEPENDENCY the line names another as never additive with it, or is so named (a possible double count), or a
+                   --ledger row lists it as downstream of a change (e.g. the steel of a changed concrete member, kept
+                   and marked STALE), or it is the changed line of such a row.
+
+Every row also says whether the two raw lines differ at all ("changed", "changed_fields": the top-level fields that
+differ; "*" for a new or dropped line), so a change of evidence text only (no flag) is still visible; the summary
+counts each rule over all rows and over the changed rows only (caught_on_changed).
 
 Lines without a quantity (BOUNDED_EXPOSURE, BLOCKED_RFI, EXCLUDED_WITH_REASON, NOT_APPLICABLE_WITH_EVIDENCE) are
 listed with their state and range in "not_compared" and never enter a total, a share or a delta as 0.
@@ -78,7 +84,7 @@ SHA_RE = re.compile(r"^[0-9a-f]{8,40}$")
 CSV_FIELDS = ("row_id", "pairing", "before_line_id", "after_line_id", "item_code", "trade", "unit", "floor", "room_id",
               "element_id", "before_state", "before_value", "before_low", "before_high", "after_state", "after_value",
               "after_low", "after_high", "delta", "delta_pct", "before_share_pct", "after_share_pct", "before_method",
-              "after_method", "flags")
+              "after_method", "flags", "changed_fields")
 
 
 # ------------------------------------------------------------------------------------------------------------ inputs
@@ -120,6 +126,20 @@ def _index(lines, side):
 
 
 # ----------------------------------------------------------------------------------------------------------- pairing
+def ledger_downstream(ledgers):
+    """line ids a V3.0 ledger row lists as downstream of its change (e.g. the steel of a changed concrete member, kept
+    unchanged and listed STALE), plus the ids of the rows that list them."""
+    out = set()
+    for led in ledgers or ():
+        for row in led.get("rows") or ():
+            ids = [d.get("line_id") for d in row.get("downstream") or () if d.get("line_id")]
+            if ids:
+                out.update(ids)
+                out.update(row.get("line_ids") or [row.get("line_id")])
+    out.discard(None)
+    return out
+
+
 def ledger_pairs(ledgers):
     """(id_a, id_b) candidate pairs from V3.0 / V3.0.x integration ledgers (rows with two line_ids)."""
     out = []
@@ -201,6 +221,19 @@ def double_finish_lines(register):
     return out
 
 
+def _side(r):
+    return {"state": (r or {}).get("state"), "value": _r((r or {}).get("value")), "low": _r((r or {}).get("low")),
+            "high": _r((r or {}).get("high"))}
+
+
+def _changed_fields(b, a):
+    """the top-level fields of the two raw lines that differ (line_id excluded); a new or dropped line -> ["*"]."""
+    if b is None or a is None:
+        return ["*"]
+    return sorted(k for k in set(b) | set(a) if k != "line_id" and json.dumps(b.get(k), sort_keys=True, default=str)
+                  != json.dumps(a.get(k), sort_keys=True, default=str))
+
+
 def structural(item_code):
     return item_code.startswith("STR.") and item_code not in NOT_STRUCTURAL
 
@@ -211,7 +244,8 @@ def diff(before_lines, after_lines, *, register=None, ledgers=None, share_pct=SH
     tb, ta = trade_totals(B), trade_totals(A)
     before_methods = {r["method"] for r in B.values()}
     dbl = double_finish_lines(register)
-    cross = set()
+    raw_b, raw_a = {x["line_id"]: x for x in before_lines}, {x["line_id"]: x for x in after_lines}
+    cross = set(ledger_downstream(ledgers))
     for recs in (B, A):
         for r in recs.values():
             if r["never_additive_with"]:
@@ -252,14 +286,15 @@ def diff(before_lines, after_lines, *, register=None, ledgers=None, share_pct=SH
             f.append("DOUBLE_FINISH")
         if (aid in cross) or (bid in cross):
             f.append("CROSS_DEPENDENCY")
+        changed = _changed_fields(raw_b.get(bid), raw_a.get(aid))
         unit = ref["unit"] if not (b and a and b["unit"] != a["unit"]) else f"{b['unit']}->{a['unit']}"
         rows.append({"row_id": aid or bid, "pairing": how, "before_line_id": bid, "after_line_id": aid,
                      "item_code": ref["item_code"] if not (b and a and b["item_code"] != a["item_code"])
                      else f"{b['item_code']}->{a['item_code']}",
                      "trade": ref["trade"], "unit": unit, "floor": ref["floor"], "room_id": ref["room_id"],
                      "element_id": ref["element_id"],
-                     "before": {k: (b or {}).get(k) for k in ("state", "value", "low", "high")},
-                     "after": {k: (a or {}).get(k) for k in ("state", "value", "low", "high")},
+                     "changed": bool(changed), "changed_fields": changed,
+                     "before": _side(b), "after": _side(a),
                      "delta": _r(delta), "delta_pct": _r(pct, 4), "before_share_pct": _r(sb, 4),
                      "after_share_pct": _r(sa, 4), "before_method": (b or {}).get("method"),
                      "after_method": (a or {}).get("method"), "flags": [x for x in FLAGS if x in f]})
@@ -269,9 +304,13 @@ def diff(before_lines, after_lines, *, register=None, ledgers=None, share_pct=SH
                     or (r["after"]["state"] and r["after"]["value"] is None)]
     caught = Counter(x for r in rows for x in r["flags"])
     only = Counter(r["flags"][0] for r in rows if len(r["flags"]) == 1)
+    on_changed = Counter(x for r in rows if r["changed"] for x in r["flags"])
     summary = {"rows": len(rows), "flagged": sum(1 for r in rows if r["flags"]),
                "unflagged": sum(1 for r in rows if not r["flags"]),
-               "per_rule": {x: {"caught": caught.get(x, 0), "only_this_rule": only.get(x, 0)} for x in FLAGS},
+               "changed_rows": sum(1 for r in rows if r["changed"]),
+               "changed_rows_unflagged": sum(1 for r in rows if r["changed"] and not r["flags"]),
+               "per_rule": {x: {"caught": caught.get(x, 0), "only_this_rule": only.get(x, 0),
+                                "caught_on_changed": on_changed.get(x, 0)} for x in FLAGS},
                "pairing": dict(Counter(r["pairing"] for r in rows)), "not_compared": len(not_compared),
                "thresholds": {"share_pct": share_pct, "move_pct": move_pct},
                "register_given": register is not None, "ledgers_given": len(ledgers or ())}
@@ -319,6 +358,7 @@ def to_csv(doc):
             for k in ("state", "value", "low", "high"):
                 row[f"{side}_{k}"] = r[side][k]
         row["flags"] = " ".join(r["flags"])
+        row["changed_fields"] = " ".join(r["changed_fields"])
         w.writerow(row)
     return buf.getvalue()
 

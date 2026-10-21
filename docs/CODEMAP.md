@@ -787,7 +787,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `urban_intake.py` | 225 | CRITICAL | 27 | URBAN INTAKE (M2) - one drawing file -> a plain, source-pointed geometry record for the generic engine. |
 | `urban_project_run.py` | 321 | CRITICAL | 1 | URBAN PROJECT RUN (M7) - one manifest per project; the blind protocol enforced by the tool, not remembered. |
 | `urban_structural_boq.py` | 602 | CRITICAL | 3 | URBAN STRUCTURAL BOQ (M1) - one command from a drawing set to a planning BOQ, an exception report, Excel and PDF. |
-| `v30_gate_b.py` | 368 | MEDIUM | 1 | V3.0 GATE B AUTOMATED CHECKS (T-156) for the Checker: a line-by-line before / after BOQ diff with the hand-check |
+| `v30_gate_b.py` | 408 | MEDIUM | 1 | V3.0 GATE B AUTOMATED CHECKS (T-156) for the Checker: a line-by-line before / after BOQ diff with the hand-check |
 | `wall_v2_diagnostic.py` | 231 | MEDIUM | 1 | Wall extraction V2 — measure the representation, then rebuild the graph. |
 
 `tools/run_e1_2.py` symbols: def layer_roles (L120-146), def prepare (L149-155), def ground_floor (L158-168), class IntervalPrim (L173-206), def interval_prims (L209-221), def boundary_role_of (L224-231), def interpret (L236-278), def build_candidates (L302-344), def build_sandbox (L349-413), def code_hashes (L416-423), def source_crops (L494-515), def candidate_overlays (L518-573), def phase_geometry (L607-777), def phase_v2_inputs (L982-1027), def release_decision (L1054-1132), def phase_finalize (L1137-1479), def main (L1605-1630)

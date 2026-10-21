@@ -229,6 +229,39 @@ def test_ledger_pairs_a_replaced_line():
     assert set(r[0]["flags"]) == {"MOVED_5PCT", "STRUCTURAL", "SHARE_2PCT"}
 
 
+def test_changed_rows_and_counts_on_changed():
+    doc = run()
+    ch = {r["row_id"] for r in doc["rows"] if r["changed"]}
+    # by hand: rule v1 -> v2, 100 -> 105, 100 -> 104.99, dropped, porcelain -> wet tile, m2 -> m, measured -> held,
+    # two new ceiling lines
+    assert ch == {"L-PL-4", "L-PT-1", "L-PT-2", "L-DROP-1", "L-FL-3W", "L-MB-1M", "L-HD-2", "L-NEW-1", "L-NEW-2"}
+    s = doc["summary"]
+    assert s["changed_rows"] == 9 and s["changed_rows_unflagged"] == 1                # L-PT-2 (+4.99 %)
+    assert s["per_rule"]["SHARE_2PCT"]["caught_on_changed"] == 0
+    assert s["per_rule"]["NEW_LINE"]["caught_on_changed"] == 2
+    rows = {r["row_id"]: r for r in doc["rows"]}
+    assert rows["L-PL-4"]["changed_fields"] == ["rule"] and rows["L-NEW-1"]["changed_fields"] == ["*"]
+
+
+def test_text_only_change_is_visible_without_a_flag():
+    b = [ln("M1", "FIN.PAINT", "m2", 1.0), ln("M2", "FIN.PAINT", "m2", 99.0)]
+    a = copy.deepcopy(b)
+    a[0]["notes"] = "evidence attached"
+    r = {x["row_id"]: x for x in G.diff(b, a)["rows"]}
+    assert r["M1"]["changed"] and r["M1"]["changed_fields"] == ["notes"] and r["M1"]["flags"] == []
+
+
+def test_ledger_downstream_lines_are_cross_dependencies():
+    b = [ln("C1", "STR.CONC.COLUMN", "m3", 0.42), ln("S1", "STR.REBAR", "kg", 10.0), ln("P1", "FIN.PAINT", "m2", 1.0),
+         ln("P2", "FIN.PAINT", "m2", 99.0)]
+    a = copy.deepcopy(b)
+    led = {"rows": [{"line_id": "P1", "line_ids": ["P1"], "downstream": [{"line_id": "P2", "item_code": "FIN.PAINT"}]},
+                    {"line_id": "C1", "line_ids": ["C1"], "downstream": []}]}
+    f = _flags(G.diff(b, a, ledgers=[led]))
+    assert "CROSS_DEPENDENCY" in f["P1"] and "CROSS_DEPENDENCY" in f["P2"]
+    assert "CROSS_DEPENDENCY" not in f["C1"] and "CROSS_DEPENDENCY" not in f["S1"]
+
+
 # ---------------------------------------------------------------------------------------- mutations (must be caught)
 @pytest.mark.parametrize("kw,row,flag,present", [
     ({"share_pct": 2.01}, "L-PL-1", "SHARE_2PCT", False),       # threshold one step up loses the 2.00 % line
