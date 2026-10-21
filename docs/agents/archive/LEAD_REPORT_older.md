@@ -1,3 +1,48 @@
+## LEAD REPORT 2026-10-21 04:20 UTC
+
+Repositories: Urban-Project-AI cloned (agents/control, full clone); working branch head 5315d48 (six verifier merges
+since 02:10, no owner-session commits). Drive readable, no new project files. UrbanProjectsManager not needed this run.
+
+PROGRESS (Alsenan; released concrete still 92.77 vs freelancer 111.81 m3, -17.0 %; no released number moved)
+- The V3.0 candidate is merged (opt-in): every one of the 217 lines that differ from the released method carries its
+  before / after row, the other 1333 lines are identical; straps in it 3.390 vs his 3.3925 m3 (-0.07 %). This opens the
+  wiring of every checked piece (columns -2.268 m3, blinding, landing / arrival once, beams, stairs): day-7 on track.
+- Checked and merged: stairs flight by flight, main stair 4.920 m3 (your method) / 4.746 (drawn) vs his 8.131 (-39.5 %,
+  engine right: his 5.3 m flights are on no drawing); pool-court soffit 12.834 vs his 19.154 m2 (+49.2 % his side, engine
+  right), all soffits over outside air 44.446 m2, finish held (no note on any sheet); footing steel 0.875 t released
+  + 2.74 .. 2.84 t held on Q-71; membrane: 688 strip layouts proven to leave no bare surface, roll counts unchanged.
+- Sent back: ground-beam and strap steel (1.480 t net confirmed by the checker, but the 40 d / 70 d lap and development
+  lengths printed in the structural general notes were not used and bars over 12 m stock had no procurement line); the
+  coverage registry (three families called "not implemented" have merged code). Both reworks are first in their lanes.
+- Learned: on an unmarked ground-beam plan the span length picks the section, so the old splitter's three missed
+  columns change the bars, not only the length (+3.7 % on released spans): a new splitter task is on the board.
+- Missing: slab under the main-stair winders (0.23 .. 0.25 m3, in no line, held); plaster / paint both methods, block
+  m2 and blocks per type (gate 2); slabs panel by panel and column heights by hand (gate 3).
+
+TEAM HEALTH (slots 02:19 - 03:59 and my 02:09 run)
+- Code ran fully (STARTED + SUCCESS, five self-check steps PASS): worker 2 02:39, worker 1 03:19, verifier 03:49 (its
+  t061 test was refused twice "[Code from External]" and then ran); Lead 02:09.
+- INCOMPLETE, no line at all (cause NOT KNOWN; 2-4 min where the scheduler shows it): worker 1 02:19, verifier 02:49,
+  worker 3 02:59 and 03:59, worker 2 03:39. 4 of 9 slots = 44 % (was 56 %, target 90 %).
+- What I did: worker 3 has not closed a run since 01:45, and its integration lane had nothing claimable (the two wiring
+  rows still said "waits for V3.0"): both are now marked claimable, with the registry rework first; every lane holds
+  3-4 TODO; the scout has a new request on laps and stock lengths.
+
+QUESTIONS FOR OWNER
+No new question this run. Still open: Q-71 (footing bars printed "per metre": A 2,742.51 kg, B 2,836.40 kg recommended,
+C 2,797.81 kg for the five footings), asked at 02:15 as today's package. The laps in the steel rework need no question:
+the structural notes print them; the zone is not printed, so they go in as a held 40 d .. 70 d range.
+
+NEEDS FIXING
+- Run reliability (P-01, 44 %): the same fix is yours: run Test B yourself and approve the repo-attached configuration.
+  Tried: lane stocking, claimable rows for every lane, NO REPO CODE rows for refused runs.
+- Kuwait specification chapters (07100, 09200, 09300, 09400, 09900) as PDFs under 6 MB (soffit finish, Q-68 C).
+- Designer requests to forward when you choose: D-33 .. D-38 (ground beams / straps), D-31, D-32 and earlier in
+  DESIGNER_CLARIFICATIONS.md.
+
+Team ids: MERGED T-131 r2, T-102, T-136, T-137, T-111, T-127; REJECTED -> TODO r2 T-130, T-138; claimable T-133, T-134;
+new T-141 (S), T-142 (I, queued after T-133), T-143 (A); R-10; Q-71 open.
+
 ## LEAD REPORT 2026-10-21 02:15 UTC
 
 Repositories: Urban-Project-AI cloned (agents/control); working branch head a606124 (one verifier merge since 00:15, no

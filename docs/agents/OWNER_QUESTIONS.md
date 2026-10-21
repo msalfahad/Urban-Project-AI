@@ -176,6 +176,13 @@ spaces plus one, rounded up; it is how a steel fixer cuts and counts, and the sa
 WAITS ON: footing steel of F8, F12, F13, F14, FF (2.74 .. 2.84 t, the largest held footing steel); every bar printed per
 metre or at a spacing on any villa (T-136, then T-009). The top layer of these footings also waits on a designer
 detail for its bar ends (not drawn); that is a drawing request, not this question.
+NEW EVIDENCE (lead 2026-10-21 12:20, from worker 1's column-steel hand ledger): the frozen structural route (S3.1) cites three
+PROJECT-ONLY statements recorded as owner claims on 2026-10-06 and never entered in the Urban rule registers: "6 ø 8/m = 6 tie
+sets per metre", "a column with L = 80 uses 3 links", and "note 22B: rate per metre, rounded up (ceil)". They point towards
+rounding up rate x length (close to A), but they do not say which length (inside the covers or the full side) and they were
+never confirmed as your Urban rule, so the team has NOT used them. Please say whether they are your rule; if yes, which length.
+ALSO WAITS ON (this answer now decides): column links 781.37 .. 829.41 kg (A 793.96 / B 829.41 / C 781.37), and the link and
+slab-bar counts of the new beam-steel and slab-steel hand ledgers.
 
 ### Q-72 Main stair shaft walls: which height does your manual plaster / paint method take for a stair shaft that runs through all storeys? (lead 2026-10-21 06:30, from worker 3's two-method room table; T-128; no-assumptions question: your manual height formula (Q-43, G1) is written for rooms with a beam and a decor ceiling, and no Urban rule or answer covers a wall that runs through the storeys with no slab, beam or ceiling between them) — addition to today's package (Q-71)
 

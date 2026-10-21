@@ -46,21 +46,23 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
-## Status (Lead, 2026-10-21 08:20; re-estimated each run from what merged and was verified)
+## Status (Lead, 2026-10-21 12:20; re-estimated each run from what merged and was verified)
 
 | Plan | Board | State | Note |
 |---|---|---|---|
-| P-01 | owner + auditor | in progress, AT RISK | Test B and the main config not confirmed. Slots 05:40-08:00: SUCCESS worker 2 05:40 and 07:40, worker 3 06:00 and 07:01, worker 1 06:21 and 07:20; no line at all: verifier 06:49 and 07:49 (and 05:49); worker 3 07:59 BLOCKED (push refused after its claim). 6 of 9 = 67 % vs 90 % (was 71 %). The checker is the bottleneck: 8 results wait |
+| P-01 | owner + auditor | in progress, AT RISK (the critical path) | Test B ran 10:23 / 10:49 on agents/config-candidate (53468f6): BLOCKED on step 5; main config not approved. Since 08:20: SUCCESS worker 1 08:19 and 10:21, worker 2 09:40 and 11:40; no record at all: checker 09:50 and 11:50 (also 05:49, 06:49, 07:49), worker 3 10:59; worker 3 08:00 BLOCKED (push refused). 4 of 7 slots = 57 % vs 90 % |
 | P-02 | T-130 r2 (lane I) | READY bead4db, first in the checker queue | census T-140 after it |
-| P-03 | T-131 MERGED b1a6d6d; T-133 (V3.0.1) READY ec14d8b, PARTIAL (its own Drive run refused; checker must run it); T-142, T-146 QUEUED | skeleton DONE; first extension built | finish moves and stairs need a reading piece each (not wired) |
-| P-04 | T-132 (verifier) | TODO, unblocked, not started | candidate WAPE 54.65 % on 2 concrete lines, released 17.03 % on 3 (unchanged) |
+| P-03 | T-131 MERGED b1a6d6d; T-133 (V3.0.1) READY ec14d8b PARTIAL; T-142, T-146, T-151 QUEUED | skeleton DONE; first extension waiting for the checker | the checker must run V3.0.1 on the drawings itself |
+| P-04 | T-132 (verifier) | TODO, not started | candidate WAPE 54.65 % on 2 concrete lines, released 17.03 % on 3 (unchanged) |
 | P-05 | T-126 MERGED cd34bd0 | done as a piece; wired in T-133 (READY) | |
-| P-06 | T-128 READY 69c1a0a (lane A) | hand result waiting for the checker | nets on T-144 (window heights); shaft owner column on Q-72; ceilings T-147 |
-| P-07 | T-125 READY 14f554b; T-143 READY ab543b1 (hand truth); T-108 QUEUED | gross measured, waiting for the checker | 955.63 m2 gross vs 1,094.50 (-12.7 %); net on owner Q-73, black count on Q-75 |
-| P-08 | T-136, T-138 r2 MERGED; T-141 READY 4f609ad; T-148 (columns, lane S) TODO | footings and ground beams DONE as pieces; span splitter waiting for the checker | straps on owner Q-74; Q-71 decides 2.74 .. 2.84 t |
-| P-09 | T-134 (lane I) | TODO again (08:00 run BLOCKED on a refused push) | first in lane I |
-| (gate 3 check) | T-139 READY 84d156e; T-119 READY 444e943; T-145 TODO | slabs and columns by hand waiting for the checker | slabs 60.280 hand vs 60.966 engine vs 59.817; columns 28.816 .. 28.979 vs 36.711 vs 28.547 m3 |
+| P-06 | T-128, T-144 READY (lane A) | hand results waiting for the checker | drawing-derived dry net incl. shaft 976.22 .. 1,080.33 vs 1,151.14 m2; owner method on Q-72 for the shaft; 23 openings on D-45 |
+| P-07 | T-125, T-143 READY; T-108 QUEUED | gross measured, waiting for the checker | net on owner Q-73, black count on Q-75 |
+| P-08 | T-136, T-138 r2 MERGED; T-141, T-148 READY; T-149 (beams), T-152 (slabs) TODO | footings, ground beams, columns DONE as hand pieces; beams and slabs next | links / per-metre counts on Q-71 (now also columns 0.78 .. 0.83 t) |
+| P-09 | T-134 (lane I) | TODO (worker 3 has delivered nothing since 07:37) | first in lane I |
+| P-11 | T-147 READY (ceilings); T-150 (doors, windows) TODO | started ahead of week 3 | ceilings 388.14 vs 409.58 m2 (-5.2 %) |
+| (gate 1) | T-153 TODO | floor area room by room, 11 held spaces | |
+| (gate 3 check) | T-139, T-145, T-119 READY | slabs, slab leftovers and columns by hand waiting for the checker | slabs 60.280 vs 59.817; beams 65.060 vs 65.97; columns 28.816 .. 28.979 vs 28.547 m3 |
 
-Day-7 target (2026-10-27): AT RISK on the checker, not on the engineering: V3.0.1 (columns -2.268 m3, blinding split
-into released and held lines) is built and READY, but the checker has not run since 05:07 and must also run V3.0.1 on
-the drawings itself (the worker's run was refused). If the checker merges it by 2026-10-24 the day-7 target holds.
+Day-7 target (2026-10-27): AT RISK on the checker only. The engineering for it (V3.0.1: columns -2.268 m3, blinding split
+into released and held lines) has been READY since 07:37; the checker has merged nothing since 05:07. If it merges
+V3.0.1 by 2026-10-24 the target holds; every extra day without the checker costs one day of the 6 days left.

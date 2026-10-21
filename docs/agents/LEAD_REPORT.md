@@ -1,5 +1,61 @@
 # Lead reports to the owner's main chat (newest first, last 10 entries)
 
+## LEAD REPORT 2026-10-21 12:20 UTC
+
+Repositories: Urban-Project-AI cloned in full (agents/control); working branch head still 0dec24c (no merge and no
+owner-session commit since 05:07); your Test B branch agents/config-candidate moved to 53468f6. Drive readable (Alsenan
+folder and the other project folders listed; no new files needed). UrbanProjectsManager not needed this run.
+
+PROGRESS (Alsenan; released concrete still 92.77 vs freelancer 111.81 m3, -17.0 %; no released number changed)
+- Ceilings, a BOQ category that had no quantity, now measured room by room (your Q-57 A modified): decor gypsum
+  388.14 m2 vs his 409.58 (-5.2 %). GF -11.1 % is exactly the light well 23.24 + stair strips 2.45 he ceils (engine right
+  on two drawings); on 1F he leaves out about 23 m2 over the double-height void. Bulkheads 32.78 m2 by your method (175.76
+  drawing-derived, provisional). Paintable gypsum 420.92 vs his 452.33 (-6.9 %; +2.8 % without his cove strips). Held:
+  wet-room board type, coves, drops, dome openings.
+- Column steel by bar population (column schedule, by hand): 1,887.13 kg net released + 1,552.43 kg held by cause; links
+  0.78 .. 0.83 t wait on Q-71; his column steel is part of one 7.95 t lump (rule difference, no %). Found: the released
+  structural route reports 172.56 kg as verified on 3 planted columns from a duplicated schedule row with no printed row;
+  the candidate will hold them.
+- Slab leftovers settled: beams 65.060 vs his 65.97 m3 (-1.4 %, was -1.8 %); slabs 60.280 vs 59.817 (+0.77 %); every one
+  of the 13 extra faces has a home line or a named hold; sunken-slab drops are printed nowhere (held).
+- Window sills / heads from the elevations: 9 openings measured, 3 earlier readings corrected; drawing-derived dry
+  plaster net incl. the shaft 976.22 .. 1,080.33 vs his 1,151.14 m2 (-15.2 .. -6.2 %); the range is the 23 openings with
+  nothing printed.
+- Learned: close every dimension chain on its printed total before trusting a part; every released bar line needs its
+  printed schedule row.
+- Gate 2 (finishes) and gate 3 (structure) both gained hand truths; neither moved, because nothing was checked or merged.
+
+TEAM HEALTH (slots 08:00 - 12:00)
+- Code ran fully: worker 1 08:19 and 10:21, worker 2 09:40 and 11:40 (all self-checks PASS, Drive read OK).
+- No record at all: the checker at 09:50 and 11:50 (also 05:49, 06:49, 07:49): the 11:50 run ended after about 2 minutes,
+  before its start line, the signature of a refused first clone with no fallback (not proven). Worker 3 at 10:59 the same
+  (about 1.5 minutes). Worker 3 08:00 BLOCKED (board push refused "[Untrusted Code Integration]").
+- 4 of 7 slots SUCCESS = 57 % (was 67 %, target 90 %). Twelve results wait for the checker; the day-7 target holds only if
+  it merges the candidate extension by 24 Oct.
+- What I did: re-ordered the checker queue (registry, candidate, slabs with the slab leftovers, columns, then the rest);
+  gave lanes S and A only drawing-reading tasks a checker can verify by re-reading (beam steel, slab steel, doors and
+  windows, floor area room by room); queued the column-steel wiring with the planted columns held; filed designer items
+  D-45 .. D-47.
+
+QUESTIONS FOR OWNER
+No new question. New evidence on Q-71 (bars printed per metre): the released structural route uses three statements
+recorded as your claims on 6 Oct ("6 ø 8/m = 6 tie sets per metre", "L = 80 uses 3 links", "note 22B: rate per metre,
+rounded up") that were never put in the Urban rules; the team did not use them. Please say whether they are your rule
+and, if so, on which length (inside the covers or the full side). Q-71 now also decides column links 0.78 .. 0.83 t and the
+beam and slab bar counts. Still open: Q-71 .. Q-75 (five, one package; see the 08:20 report for the full text).
+
+NEEDS FIXING
+- The checker has merged nothing for seven hours and twelve results wait: please finish Test B and approve the
+  repo-attached configuration (P-01), or run the checker once by hand. Tried: queue re-ordered, board kept small,
+  hand-only tasks so a checker that can run no code can still verify.
+- Kuwait specification chapters (07100, 09200, 09300, 09400, 09900) as PDFs under 6 MB (09200 now also for the wet-room
+  ceiling board).
+- Designer requests to forward when you choose: new D-45 (window schedule), D-46 (planted-column bars), D-47 (wet-room
+  ceiling board and drops).
+
+Team ids: READY T-130 r2, T-133, T-139 + T-145, T-119, T-141, T-148, T-125, T-143, T-128, T-144, T-147 (checker order);
+new TODO T-149, T-152 (S), T-150, T-153 (A); T-151 (I) queued; T-134 first in lane I.
+
 ## LEAD REPORT 2026-10-21 08:20 UTC
 
 Repositories: Urban-Project-AI: full clone refused ("Permission for this action was denied by the Claude Code auto mode
@@ -135,49 +191,3 @@ NEEDS FIXING
 
 Team ids: MERGED T-138 r2; READY T-139, T-128; CLAIMED T-130 r2, T-125; new T-144 (A), T-145 (S), T-147 (A), T-146 (I,
 queued); Q-72 new, Q-71 open; D-39 .. D-41.
-
-## LEAD REPORT 2026-10-21 04:20 UTC
-
-Repositories: Urban-Project-AI cloned (agents/control, full clone); working branch head 5315d48 (six verifier merges
-since 02:10, no owner-session commits). Drive readable, no new project files. UrbanProjectsManager not needed this run.
-
-PROGRESS (Alsenan; released concrete still 92.77 vs freelancer 111.81 m3, -17.0 %; no released number moved)
-- The V3.0 candidate is merged (opt-in): every one of the 217 lines that differ from the released method carries its
-  before / after row, the other 1333 lines are identical; straps in it 3.390 vs his 3.3925 m3 (-0.07 %). This opens the
-  wiring of every checked piece (columns -2.268 m3, blinding, landing / arrival once, beams, stairs): day-7 on track.
-- Checked and merged: stairs flight by flight, main stair 4.920 m3 (your method) / 4.746 (drawn) vs his 8.131 (-39.5 %,
-  engine right: his 5.3 m flights are on no drawing); pool-court soffit 12.834 vs his 19.154 m2 (+49.2 % his side, engine
-  right), all soffits over outside air 44.446 m2, finish held (no note on any sheet); footing steel 0.875 t released
-  + 2.74 .. 2.84 t held on Q-71; membrane: 688 strip layouts proven to leave no bare surface, roll counts unchanged.
-- Sent back: ground-beam and strap steel (1.480 t net confirmed by the checker, but the 40 d / 70 d lap and development
-  lengths printed in the structural general notes were not used and bars over 12 m stock had no procurement line); the
-  coverage registry (three families called "not implemented" have merged code). Both reworks are first in their lanes.
-- Learned: on an unmarked ground-beam plan the span length picks the section, so the old splitter's three missed
-  columns change the bars, not only the length (+3.7 % on released spans): a new splitter task is on the board.
-- Missing: slab under the main-stair winders (0.23 .. 0.25 m3, in no line, held); plaster / paint both methods, block
-  m2 and blocks per type (gate 2); slabs panel by panel and column heights by hand (gate 3).
-
-TEAM HEALTH (slots 02:19 - 03:59 and my 02:09 run)
-- Code ran fully (STARTED + SUCCESS, five self-check steps PASS): worker 2 02:39, worker 1 03:19, verifier 03:49 (its
-  t061 test was refused twice "[Code from External]" and then ran); Lead 02:09.
-- INCOMPLETE, no line at all (cause NOT KNOWN; 2-4 min where the scheduler shows it): worker 1 02:19, verifier 02:49,
-  worker 3 02:59 and 03:59, worker 2 03:39. 4 of 9 slots = 44 % (was 56 %, target 90 %).
-- What I did: worker 3 has not closed a run since 01:45, and its integration lane had nothing claimable (the two wiring
-  rows still said "waits for V3.0"): both are now marked claimable, with the registry rework first; every lane holds
-  3-4 TODO; the scout has a new request on laps and stock lengths.
-
-QUESTIONS FOR OWNER
-No new question this run. Still open: Q-71 (footing bars printed "per metre": A 2,742.51 kg, B 2,836.40 kg recommended,
-C 2,797.81 kg for the five footings), asked at 02:15 as today's package. The laps in the steel rework need no question:
-the structural notes print them; the zone is not printed, so they go in as a held 40 d .. 70 d range.
-
-NEEDS FIXING
-- Run reliability (P-01, 44 %): the same fix is yours: run Test B yourself and approve the repo-attached configuration.
-  Tried: lane stocking, claimable rows for every lane, NO REPO CODE rows for refused runs.
-- Kuwait specification chapters (07100, 09200, 09300, 09400, 09900) as PDFs under 6 MB (soffit finish, Q-68 C).
-- Designer requests to forward when you choose: D-33 .. D-38 (ground beams / straps), D-31, D-32 and earlier in
-  DESIGNER_CLARIFICATIONS.md.
-
-Team ids: MERGED T-131 r2, T-102, T-136, T-137, T-111, T-127; REJECTED -> TODO r2 T-130, T-138; claimable T-133, T-134;
-new T-141 (S), T-142 (I, queued after T-133), T-143 (A); R-10; Q-71 open.
-

@@ -34,6 +34,38 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
    commit. Decision: board-only handoffs are verified as hand evidence (the verifier re-reads the cited notes), and the
    next task on the topic writes the files (T-117); a run with no line stays a NEEDS FIXING item for the owner's setting.
 
+## 2026-10-21 12:20 (lead run)
+
+- **Checker outage (recurring cause, now the first one)**: FAILED as a team function. No verdict, merge or RUN_LOG line
+  since 05:07; the checker's 05:49, 06:49, 07:49, 09:50 and 11:50 runs left nothing (11:50 ended after about 2 minutes,
+  before even the STARTED line, the same signature as the refused clones of this morning). 12 results wait; the working
+  head is still 0dec24c; worker 3's 10:59 run left nothing either (about 1.5 minutes). Decision: queue re-ordered (slabs
+  and slab leftovers checked together; candidate first after the registry); hand-only tasks only for lanes S / A so a
+  checker that can run no code can still verify by re-reading; the fix (Test B, the repo-attached configuration) is the
+  owner's and is in NEEDS FIXING again.
+- **T-144 openings for finishes**: WORKED (pending the checker). 79 opening faces with sheet and reading; 9 openings print
+  sill and head, 3 readings corrected by closing each dimension chain on its printed total (W14 sill +6.90, W17 crown
+  3.50, W15 sill 0.00); nets re-add to the plaster / paint table: drawing-derived dry net incl. the shaft 976.22 ..
+  1,080.33 vs freelancer plaster net 1,151.14 m2 (-15.2 .. -6.2 %); 104.1 m2 of the range is the 24 unprinted opening
+  faces. Went wrong: nothing; the range is the drawings' gap. Decision: designer D-45 (window schedule); no new task.
+- **T-145 slab leftovers**: WORKED (pending the checker). CB5 span 2 is a beam (0.296 m3), beam register 64.764 ->
+  65.060 vs 65.97 m3 (-1.4 %); the 13 non-slab faces 0.686 m3 re-add exactly; slab 60.280 vs 59.817 (+0.77 %);
+  sunken-slab drop not printed anywhere -> HELD on D-41 (no default). Decision: the checker verifies it with T-139;
+  lane I wiring stays T-146.
+- **T-147 ceilings**: WORKED (pending the checker). A BOQ category that had no quantity now has one, room by room:
+  decor ceiling 388.14 vs 409.58 m2 (-5.2 %), the whole GF difference = light well 23.24 + stair strips 2.45 (ENGINE_RIGHT
+  proposal from two drawings); bulkheads 32.78 m2 (owner method) vs 175.76 m2 drawing-derived PROVISIONAL; paintable
+  gypsum 420.92 vs his 452.33 (-6.9 %, +2.8 % without his coves). Held by drawing: wet-board type, coves, drops, domes.
+  Decision: designer D-47; Kuwait spec 09200 stays in NEEDS FIXING; wiring after the checker (lane I).
+- **T-148 column steel**: WORKED for the released part, PARTIAL by drawing (pending the checker). Net 1,887.13 kg
+  released, 1,552.43 kg held by named cause, links 781 .. 829 kg on Q-71, laps on the note-9 range; freelancer gives one
+  7.95 t lump (RULE_DIFFERENCE). Went wrong in the ENGINE (not the task): the frozen route releases 172.56 kg as
+  VERIFIED on 3 planted columns from a duplicated schedule row. Decision: T-151 (lane I, queued) holds them in the
+  candidate; designer D-46; the 2026-10-06 project-only "owner claims" the frozen route uses were NOT adopted (no
+  assumptions) and are now evidence under Q-71 for the owner.
+- **New tasks**: T-149 beam steel, T-152 slab steel (S); T-150 doors and windows, T-153 floor area (A); T-151 (I, queued).
+  Recurring cause 2 (verified pieces not wired) is unchanged: nothing can be wired until the checker merges.
+
 ## 2026-10-21 08:20 (lead run)
 
 - **T-119 columns to the controlling member**: WORKED (pending the checker). 59 columns by
