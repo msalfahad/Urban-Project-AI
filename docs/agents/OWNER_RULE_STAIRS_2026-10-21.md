@@ -140,7 +140,19 @@ BOQ outputs: riser count, actual riser, tread count, stair type (single/two flig
 tread finish area = treads × tread × stair_width; riser finish area = risers × actual_riser × stair_width; tread pieces
 = tread count, riser pieces = riser count; landing area = landing_depth × (2 × stair_width), separate item.
 
-## 3. Open with the owner (asked 2026-10-21 by the main chat; agents do not ask again)
+## 3. Owner answers (2026-10-21, main chat: "As you recommend")
+
+- S-1 = DRAWING GOVERNS. When the drawing prints or draws the stair, the drawn riser / tread count and geometry govern
+  (UP-STAIR-002); this rule runs as a CHECK on it (a mismatch, an actual riser above 0.16 m or a tread under 0.28 m is a
+  flagged finding, never a silent change). When the stair is not drawn, this rule is the owner-approved method and its
+  quantities carry ASSUMED — OWNER-APPROVED with this file as the source.
+- S-2 = RISER LESS THE TREAD BUILD-UP. Riser finish area uses the visible riser = actual riser less the tread build-up
+  (UP-STAIR-003; tread marble 30 mm, UP-STAIR-006), not the full actual_riser.
+- S-3 = FINISHED FLOOR TO FINISHED FLOOR. floor_height is finished floor level to finished floor level.
+
+The calculator may now be integrated through the normal path (Checker Gate A, Worker 3 integration package, Gate B).
+
+## 3a. The questions as asked (2026-10-21 by the main chat; agents do not ask again)
 
 - S-1 Precedence with UP-STAIR-002 ("stair geometry comes from the drawing, never from typical values"): when the
   drawing prints the stair, does the drawn count govern and this rule run as a check, or does this rule govern?
