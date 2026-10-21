@@ -119,9 +119,9 @@ its line, stops before step 2 (claim) and step 10 (log). The cause is NOT KNOWN 
 | 02:49 | Verifier | INCOMPLETE | no line at all; cause NOT KNOWN |
 | 02:59 | Worker 3 | INCOMPLETE | no line at all; cause NOT KNOWN |
 | 03:19 | Worker 1 | SUCCESS | STARTED 03:20, final 03:41; ground-beam steel READY |
-| 03:39 | Worker 2 | INCOMPLETE | scheduler 03:39:26 to 03:42:04 (2 min 38 s) SUCCEEDED; no line; cause NOT KNOWN |
+| 03:39 | Worker 2 | BLOCKED | scheduler 03:39:26 to 03:42:04; agent report relayed by the owner: full clone of agents/control and the commit / push of the STARTED line refused "[Instruction Poisoning]"; docs-only clone worked (read only); no line written, GitHub connector deliberately not used |
 | 03:49 | Verifier | SUCCESS | STARTED 03:50, final 04:05; 3 merged, 1 rejected; t061 refused twice [Code from External] then ran |
-| 03:59 | Worker 3 | INCOMPLETE | scheduler 04:00:07 to 04:04:10 (4 min 3 s) SUCCEEDED; no line; cause NOT KNOWN |
+| 03:59 | Worker 3 | BLOCKED | scheduler 04:00:07 to 04:04:10; agent report relayed by the owner: full and docs-only clone refused "[Untrusted Code Integration]"; building the RUN_LOG edit refused "[Instruction Poisoning]"; no line written |
 | 04:09 | Lead | SUCCESS | STARTED 04:10, final 04:20 |
 | 04:19 | Worker 1 | SUCCESS | STARTED 04:20, final 04:30; ground-beam steel rework READY |
 
@@ -130,11 +130,11 @@ its line, stops before step 2 (claim) and step 10 (log). The cause is NOT KNOWN 
 | Status | Runs | Share |
 |---|---|---|
 | SUCCESS | 27 | 64 % |
-| BLOCKED | 2 | 5 % |
+| BLOCKED | 4 | 10 % |
 | FAILED | 0 | 0 % |
-| INCOMPLETE | 13 | 31 % |
+| INCOMPLETE | 11 | 26 % |
 
-Pattern: every INCOMPLETE run whose scheduler record is still visible ended SUCCEEDED after 2.5 to 4 minutes with no STARTED line, so it stopped before step (1) of the start-of-run record. The same early stop happened in the main chat's Test B session (3 min, refused write). The Lead runs (5 of 5) never stopped early. Cause NOT KNOWN.
+Pattern: every INCOMPLETE run whose scheduler record is still visible ended SUCCEEDED after 2.5 to 4 minutes with no STARTED line, so it stopped before step (1) of the start-of-run record. The same early stop happened in the main chat's Test B session (3 min, refused write). The Lead runs (5 of 5) never stopped early. Cause for most NOT KNOWN; the two runs with an agent report (worker 2 03:39, worker 3 03:59) were stopped by the auto-mode check on the clone and on the board write ([Instruction Poisoning], [Untrusted Code Integration]); the early-stop pattern of the others is consistent with that.
 
 ## Refused commands (today, from RUN_LOG; exact refusal reasons)
 
