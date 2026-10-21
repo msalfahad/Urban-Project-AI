@@ -26,3 +26,28 @@ Owner answers (his words in brackets):
    in Sigma: not answered yet (boundary wall stays HELD under Q-65).
 4. Pool ceiling ("if it's correct okay"): the measured 12.834 m2 (T-127, Checker-verified 12.8343) is accepted against the
    freelancer's 19.154 circle formula.
+
+## Item 3 follow-up: the owner's images (main chat, 2026-10-21 23:10)
+
+27 images arrived on Drive in the "Alsenan chalet project" folder (all titled PHOTO-2026-06-15-11-31-14.jpg, created
+2026-10-21 22:50-22:52). The 4 the main chat looked at are the DESIGNER'S 3D RENDERS (design-intent images with the
+consultant's title strip), NOT site photos. Described only (no image copied, no names):
+- Street-side entrance: arched opening with a stepped (crenellated) arch surround, blue shutters and doors, a free-standing
+  rounded-top wall carrying the house number, flat roofs with blue railings. No dome.
+- Court seen from above: the court floor is IRREGULAR NATURAL-STONE PAVING (crazy paving), not interlock blocks; the
+  entrance steps up to the main door are in the same grey stone; the covered porch is a raised seating terrace with a blue
+  railing; curved garden walls, planters, a fire pit. No dome.
+- Sea side: two arched windows on the upper floor, a ring-shaped opening through the floor plate over the pool (the
+  pool-court void the measured 12.834 m2 soffit excludes), blue railings on the roofs, sand / beach outside. No dome.
+- Looking up at the pool-court ceiling: a curved soffit with the circular opening and its thick ring edge; curved
+  glazing below. No dome.
+Findings for the board (photo review rules, WORKFLOW_CONTROLS section 8):
+- DOMES: none in the 4 renders; agrees with the owner (no domes). The freelancer's 181.81 m2 "domes inside and outside"
+  stays excluded from Sigma; whether the structural drawings' dome / curved elements are the pool-court ring and curved
+  walls instead of domes is for the photo review to check against the dome detail (ST p.7) before any concrete change.
+- COURT FINISH: the renders show natural-stone crazy paving where the owner rule says interlock for a chalet court:
+  DIFFERS (design intent vs owner rule): the owner decides; the court finish line stays as the owner rule says until he
+  answers.
+- PORCH: raised seating terrace with a railing, floor in the court stone in the render: input for the owner's open porch
+  choice (wood / ceramic / marble with the steps).
+- The renders are design intent, not as-built; dimensions are never scaled from them.
