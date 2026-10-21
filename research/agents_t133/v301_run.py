@@ -4,7 +4,8 @@ history runs as research/agents_t131/alsenan_v30_run.py (route G conventions V6)
 units, states, engine ids only: no coordinates, no names) and the family totals. Every output goes to --out (outside
 the repository).
 
-    python3 -I research/agents_t133/v301_run.py <plan.dxf> <structural.dxf> --out <scratch>/t133
+    python3 -I research/agents_t133/v301_run.py <plan.dxf> <structural.dxf> --out <scratch>/t133 \
+        --profile research/urban_engine_m4_correctness/profile_st7757_m4.json
 
 NOT EXECUTED by the worker (T-133 run of 2026-10-21: running research scripts on the Drive drawings was refused by the
 session permission check); the verifier runs it."""
@@ -38,13 +39,14 @@ def main(argv=None):
     ap.add_argument("plan")
     ap.add_argument("structural")
     ap.add_argument("--out", required=True)
+    ap.add_argument("--profile", required=True, help="route G drawing profile (T-142 D1: without it the route G "
+                    "scope piece reads no storey height and holds every column piece)")
     a = ap.parse_args(argv)
     from tools import urban_boq_m9 as M
     out = Path(a.out)
     out.mkdir(parents=True, exist_ok=True)
     (out / "facts.json").write_text(json.dumps(T131.facts(Path(a.plan).name), ensure_ascii=False), encoding="utf-8")
-    common = ["--drawings", a.plan, "--structural", a.structural, "--conventions", str(T131.CONV), "--facts",
-              str(out / "facts.json"), "--project", T131.PID, "--no-svg"]
+    common = T131.common_args(a, out)
     M.main(["arch", "--out", str(out / "v29"), "--method", "ARCH_TAKEOFF_V2.9"] + common)
     extra = ["--v30-released", str(out / "v29" / "BOQ_LINES.json")]
     hist = []

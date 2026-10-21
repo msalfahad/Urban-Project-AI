@@ -213,4 +213,8 @@ OTHER_REBAR_AWARE = (
     # T-133: the V3.0.1 extension names REINFORCEMENT only to leave the steel lines of a column piece unchanged and
     # LIST them as downstream STALE (outside the candidate); it writes no reinforcement quantity and applies no ratio
     "engine/source/arch_v301.py",
+    # T-142: the V3.0.2 extension wires FOOTING_REBAR_POPULATION_V1 (T-136): it replaces route G's footing steel lines
+    # by that piece's lines (kg = printed count x (side - 2 x printed cover) x d^2/162, per-metre counts HELD as a
+    # range); it applies no ratio and writes no kg of its own
+    "engine/source/arch_v302.py",
 )
