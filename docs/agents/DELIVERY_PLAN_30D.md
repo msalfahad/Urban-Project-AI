@@ -46,21 +46,21 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
-## Status (Lead, 2026-10-21 06:30; re-estimated each run from what merged and was verified)
+## Status (Lead, 2026-10-21 08:20; re-estimated each run from what merged and was verified)
 
 | Plan | Board | State | Note |
 |---|---|---|---|
-| P-01 | owner + auditor | in progress, AT RISK | Test B and the main config not confirmed. Slots 04:09-05:49: SUCCESS Lead 04:09, worker 1 04:19 and 05:19, verifier 04:49, worker 3 04:59 (code refused, hand task); no line at all: worker 2 04:39, verifier 05:49 (4.7 min, two results waiting). 5 of 7 = 71 % vs 90 % (was 44 %) |
-| P-02 | T-130 r2 (lane I) | CLAIMED 06:08 (worker 3) | census T-140 after it; UP-GEN-003 stale status noted for it |
-| P-03 | T-131 MERGED b1a6d6d; T-133 (V3.0.1) TODO; T-142 (V3.0.2), T-146 (slab evidence) QUEUED | skeleton DONE | V3.0.1 claimable since 04:10, not yet claimed (worker 3 took the registry rework first, as ordered) |
-| P-04 | T-132 (verifier) | TODO, unblocked | candidate WAPE 54.65 % on 2 concrete lines (footing key held), released 17.03 % on 3 |
-| P-05 | T-126 MERGED cd34bd0 | done as a piece; wiring in T-133 | |
-| P-06 | T-128 READY 69c1a0a (lane A) | hand result waiting for the checker | both methods per room; nets wait on T-144 (window heights); shaft owner column on Q-72; ceilings T-147 |
-| P-07 | T-125 CLAIMED (worker 2), T-143 (hand truth), then T-108 (lane A) | in progress | |
-| P-08 | T-136 MERGED 6d532c5; T-138 r2 MERGED 0dec24c; T-141 (lane S) | footings and ground beams / straps DONE as hand pieces | ground beams 1.480 t net + lap range HELD; Q-71 decides 2.74 .. 2.84 t |
-| P-09 | T-134 (lane I) | TODO, claimable | |
-| (gate 3 check) | T-139 READY 84d156e; T-145 (lane S) | slabs by hand waiting for the checker | 60.280 hand vs 60.966 engine vs 59.817 m3 |
+| P-01 | owner + auditor | in progress, AT RISK | Test B and the main config not confirmed. Slots 05:40-08:00: SUCCESS worker 2 05:40 and 07:40, worker 3 06:00 and 07:01, worker 1 06:21 and 07:20; no line at all: verifier 06:49 and 07:49 (and 05:49); worker 3 07:59 BLOCKED (push refused after its claim). 6 of 9 = 67 % vs 90 % (was 71 %). The checker is the bottleneck: 8 results wait |
+| P-02 | T-130 r2 (lane I) | READY bead4db, first in the checker queue | census T-140 after it |
+| P-03 | T-131 MERGED b1a6d6d; T-133 (V3.0.1) READY ec14d8b, PARTIAL (its own Drive run refused; checker must run it); T-142, T-146 QUEUED | skeleton DONE; first extension built | finish moves and stairs need a reading piece each (not wired) |
+| P-04 | T-132 (verifier) | TODO, unblocked, not started | candidate WAPE 54.65 % on 2 concrete lines, released 17.03 % on 3 (unchanged) |
+| P-05 | T-126 MERGED cd34bd0 | done as a piece; wired in T-133 (READY) | |
+| P-06 | T-128 READY 69c1a0a (lane A) | hand result waiting for the checker | nets on T-144 (window heights); shaft owner column on Q-72; ceilings T-147 |
+| P-07 | T-125 READY 14f554b; T-143 READY ab543b1 (hand truth); T-108 QUEUED | gross measured, waiting for the checker | 955.63 m2 gross vs 1,094.50 (-12.7 %); net on owner Q-73, black count on Q-75 |
+| P-08 | T-136, T-138 r2 MERGED; T-141 READY 4f609ad; T-148 (columns, lane S) TODO | footings and ground beams DONE as pieces; span splitter waiting for the checker | straps on owner Q-74; Q-71 decides 2.74 .. 2.84 t |
+| P-09 | T-134 (lane I) | TODO again (08:00 run BLOCKED on a refused push) | first in lane I |
+| (gate 3 check) | T-139 READY 84d156e; T-119 READY 444e943; T-145 TODO | slabs and columns by hand waiting for the checker | slabs 60.280 hand vs 60.966 engine vs 59.817; columns 28.816 .. 28.979 vs 36.711 vs 28.547 m3 |
 
-Day-7 target (2026-10-27): ON TRACK: V3.0 merged; the first verified improvement through it is V3.0.1 (columns -2.268
-m3, blinding, landing / arrival once, beams, stairs), claimable now. Risk: run reliability (71 %), and V3.0.1 is not
-claimed yet; not the engineering.
+Day-7 target (2026-10-27): AT RISK on the checker, not on the engineering: V3.0.1 (columns -2.268 m3, blinding split
+into released and held lines) is built and READY, but the checker has not run since 05:07 and must also run V3.0.1 on
+the drawings itself (the worker's run was refused). If the checker merges it by 2026-10-24 the day-7 target holds.

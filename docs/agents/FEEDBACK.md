@@ -34,6 +34,50 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
    commit. Decision: board-only handoffs are verified as hand evidence (the verifier re-reads the cited notes), and the
    next task on the topic writes the files (T-117); a run with no line stays a NEEDS FIXING item for the owner's setting.
 
+## 2026-10-21 08:20 (lead run)
+
+- **T-119 columns to the controlling member**: WORKED (pending the checker). 59 columns by
+  URBAN-COLUMN-HEIGHT-TO-CONTROLLING-MEMBER@v1: 28.816 .. 28.979 m3 vs engine 36.711 (-21.1 .. -21.5 %: 2.268 undrawn
+  columns + 5.467 height basis) vs freelancer 28.547 (+0.9 .. +1.5 %). The 5.467 m3 is not lost: joints 4.264 + heads
+  1.203 m3 must become their own lines (beams and slabs hold neither). Decision: after the merge, lane I wires columns
+  + joint + head lines into the candidate (added to the T-142 / T-146 chain note); B15 upstand / downstand = designer
+  D-44; column steel by bar population is the next rebar slice (T-148, lane S).
+- **T-125 masonry centreline V2**: WORKED (pending the checker). Run length GF 134.563 / 1F 120.335 / 2F 39.600 m vs hand
+  143.160 / 120.753 / 39.775 (GF -6.0 %, -1.3 % with the 6.726 m pool glazed line beside it); the two big V1 causes
+  (+14.13 / +2.50 m of non-wall) are gone; 62 tests, L4 0 new failures. Open: 45 deg holds 0.842 m, bay arc 3.747 vs
+  3.673, pool glass 6.726 (DXF) vs 4.95 (hand chord): the checker settles; designer item if it stays. Decision: wiring
+  waits for the T-143 hand truth and the checker (T-108).
+- **T-130 r2 coverage registry 1.1.0**: WORKED (pending the checker). Every named fault of the 02:30 rejection fixed with
+  file:line; INTEGRATED_AND_TESTED 3 -> 1 (footings), PARTIAL 42 -> 46, IMPLEMENTED_NOT_INTEGRATED 11 -> 13,
+  NOT_IMPLEMENTED 22 -> 18; L4 0 new failures. The merge into its old branch was refused ('[Untrusted Code
+  Integration]'), the worker re-applied on a fresh branch (allowed fallback). Decision: first in the verifier queue
+  (it unblocks the census T-140).
+- **T-133 candidate V3.0.1**: PARTIAL. Route G scope (columns 36.714 -> 34.446 m3, blinding 22.155 -> 15.179 m3 released +
+  3 HELD lines) and the membrane audit are wired with a byte-identity test; but the worker's own run of the Drive
+  DXFs was refused ('[Code from External]'), so the after-figures are the merged pieces' verified values, not a run of
+  V3.0.1, and L4 ran only 1 of 12 chunks. Finish moves (landing / arrival) and stairs were not wired because they are
+  hand ledgers with no reading piece. Decision: the checker must run research/agents_t133/v301_run.py on the Drive DXFs
+  and the scoreboard on V3.0.1 vs V2.9 (gate 3 of its check), and complete L4; the hand-ledger pieces need a small
+  reading piece each, which is the next lane I work after T-134 (noted on T-142).
+- **T-141 ground-beam span splitter V2**: WORKED for ground beams (pending the checker). 52 of 53 spans equal the hand
+  ledger within 0.3 mm; the three S5 defects fixed (9.50 -> 4.40 + 4.40 m etc.); ground-beam bottom steel 1,238.56 ->
+  1,194.60 kg (-43.96 kg, -3.5 %). No-assumptions check: the worker held both strap lengths instead of choosing (right)
+  but filed no question for the missing rule. Decision: owner Q-74 (strap length basis).
+- **T-143 block area by hand**: PARTIAL by design. Gross 955.63 m2 measured vs freelancer 1,094.50 (-12.7 %); with held
+  runs at candidate heights 1,036.5 .. 1,042.7 (-5.3 .. -4.7 %); m3 172.19; 214.36 m2 PROVISIONAL; net m2 HELD on every
+  row (no Urban rule deducts openings from block) and the black count HELD (no black block size). Decision: owner
+  Q-73 (opening deduction) and Q-75 (black block size, the owner's own 2025 sales order offered as option A); designer
+  D-42 (1F walls under the dome openings), D-43 (lift tie beam size). The 12.7 % gap is mostly height basis (Q-60 A
+  to the member above vs his storey heights) and the glass lines: the checker re-measures 5 walls.
+- **T-134 element register v0**: FAILED to start: worker 3 claimed it at 08:00, then its push to agents/control was refused
+  '[Untrusted Code Integration]' (BLOCKED; final line written by the main chat from the owner's relay). Decision: back to
+  TODO, first in lane I (main chat released it at the owner's request; agreed).
+- Recurring: (1) the verifier ran three times (05:49, 06:49, 07:49, the last 3.5 minutes) and left no line at all, not
+  even the STARTED line, while 8 results wait; my own full clone at 08:11 was refused '[Untrusted Code Integration]' and
+  the docs-only clone worked, so the likeliest cause is a refused first clone with no fallback (not proven). (2) Two
+  rule gaps reached the board as "gap for the Lead" with no question filed: from now on the Lead files them the same
+  run. (3) BOARD.md had grown back to 345 KB: cut to 130 KB (34 merged rows and old notes to the archive).
+
 ## 2026-10-21 06:30 (lead run)
 
 - **T-138 r2 ground-beam / strap steel**: WORKED. MERGED 0dec24c (05:07); net 1,479.86 kg unchanged; development 40 d ..

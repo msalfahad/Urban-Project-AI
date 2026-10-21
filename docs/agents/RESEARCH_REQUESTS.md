@@ -26,6 +26,17 @@ how estimators report a lap RANGE when tension / compression zones are not print
 into stock lengths with laps, and test cases. Unblocks T-138 r2 (ground beams and straps), T-141 (span splitter) and the
 footing / slab steel lines in V3.0.2.
 
+### R-11 Named measurement-standard clauses for (a) opening deductions in blockwork and (b) the measured length of strap / oblique ground beams (lead 2026-10-21 08:20)
+Problem: two owner questions (Q-73, Q-74) carry the Lead's recommendation as "practice, not a code clause"; the owner
+decides better with the exact clause of the standards Gulf QS practice uses. Gap: block net area HELD on every wall
+(gross 955.63 m2 measured, freelancer 1,094.50 m2, -12.7 %); two oblique straps 2.293 / 3.258 m (axis face to face) vs
+1.829 / 2.838 m (projected), both HELD. Look for: NRM2 (work sections for masonry and in-situ concrete), POMI and
+SMM7 / CESMM4 text on (a) which voids are deducted from masonry and the size threshold, and whether lintels / bond
+beams are measured separately; (b) how beams between foundations (strap / tie / ground beams) are measured, between
+which faces, and whether the length is along the axis; plus any Kuwait MPW or Gulf BOQ preamble wording that adopts
+one of them. Cite the clause number only from a page actually read. Unblocks the owner's answers to Q-73 / Q-74 and then
+T-108 (block counts) and the strap lines of T-141.
+
 ## Answered
 
 ### R-06 Arabic and English finishing notes and room tags on SCANNED villa plans (lead 2026-10-20 00:30)

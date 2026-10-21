@@ -201,6 +201,67 @@ from the stair ledger), not by lowering the height.
 WAITS ON: the owner-manual column of the shaft (A 136.14 / C 157.66 m2; B uses the drawing-derived value); work
 continues with the drawing-derived value shown as such. Nothing released changes.
 
+### Q-73 Block walls: are door, window and glass openings deducted from the block area, and is there a size below which an opening is not deducted? (lead 2026-10-21 08:20, from worker 2's wall-by-wall block table; T-143, T-108; no-assumptions question: your opening table (UP-GEN-003, "openings are deducted per trade from one table") has rows for plaster, paint and tiles but no row for blockwork, and no other Urban rule deducts openings from block) — addition to today's package (Q-71, Q-72)
+
+THE PROBLEM: the block area by hand is measured gross (physical run x height to the beam or slab above, your Q-60 A):
+GF 460.07 / 1F 371.83 / 2F 123.73 = 955.63 m2 (freelancer walls 1,094.50 m2, -12.7 %). The net block area, and from it
+the m3, blocks, glue and pallets, is HELD on every wall because no rule says what to take off for the openings.
+WHERE TO LOOK: Drive "Alsenan chalet project", p7757_arch_sheet03.pdf (GF plan): the long outer wall with the main
+entrance and the saloon windows, and any inner 20 cm wall with a door. Example: one inner door 0.90 m wide x 2.20 m
+(the door height your Q-55 C answer sets where none is printed) = 1.98 m2 of wall with no block in it; a small vent
+0.40 x 0.40 = 0.16 m2.
+THE OPTIONS:
+(A) Deduct every opening at its full size (doors, windows, passages, glass lines), from the same opening table as
+plaster and paint: net = 955.63 m2 minus the measured openings (the opening total is measured once the window and
+arch heights are read from the elevations, work already on the board).
+(B) Deduct only openings larger than 0.50 m2; smaller ones (vents, small niches) stay in the wall: on this villa
+almost every door and window is larger, so B is within a few m2 of A.
+(C) No deduction: block measured gross, 955.63 m2; the openings are covered by the block waste.
+RECOMMENDATION: A. Practice, not a code clause: the block is not built where the opening is, the same openings are
+already deducted for plaster and paint from your one table, and the lintels over the openings are a separate line
+(the printed structural lintel schedule), so deducting them avoids counting the same piece of wall twice. Option B is
+the common small-opening allowance in measurement standards; it changes little here.
+WAITS ON: net block m2 and m3, block counts, glue bags and pallets for every wall (T-143, then T-108). Gross stays
+reported meanwhile; nothing released changes.
+
+### Q-74 Oblique strap beams: which length does the BOQ measure? (lead 2026-10-21 08:20, from worker 1's ground-beam span splitter; T-141; no-assumptions question: your ground-beam rule (type from the schedule, length from the plan) is written for ground beams and does not cover strap beams, and no Urban rule or answer sets the strap length)
+
+THE PROBLEM: two strap beams run at an angle between footings. Measured along the strap's own axis from footing face to
+footing face they are SB2 2.293 m and SB3 3.258 m; the engine's released ground-system method measures them shorter,
+SB2 1.829 m and SB3 2.838 m (it projects them). Both values are HELD for concrete, formwork and steel until a rule
+picks one.
+WHERE TO LOOK: Drive "Alsenan chalet project", ST7757 dxf.dxf / ST7757.pdf, the foundation and ground-beam plan: the
+two strap beams marked SB2 and SB3 drawn at an angle between two footings. Check: measure along the middle of each
+strap from the edge of one footing to the edge of the other.
+THE OPTIONS:
+(A) Along the strap's own axis, footing face to footing face (the concrete actually poured outside the footings):
+SB2 2.293 m, SB3 3.258 m.
+(B) As the released method today, the shorter projected length: SB2 1.829 m, SB3 2.838 m (25 % and 15 % shorter).
+(C) Footing centre to centre along the axis (the strap concrete inside the footings counted twice, once in the
+footing): longer than A by half of each footing; not measured yet.
+RECOMMENDATION: A. Engineering reason: a strap beam is a beam whose concrete and bars run between the two footing faces
+along its own axis; the part inside the footings is already in the footing concrete, and a projected length is not a
+length that is built. The steel of the strap still takes its bar anchorage into the footings from the structural notes
+(your lap / development range), separately from this concrete length.
+WAITS ON: concrete, formwork and steel of the two oblique straps on Alsenan, and every oblique strap on any villa
+(T-141, wiring by lane I).
+
+### Q-75 Black (cement) blocks: which block size does the BOQ count with? (lead 2026-10-21 08:20, from worker 2's block table; T-143, T-108; no-assumptions question: your Q-60 answer gives the white-block pallet data (62.5 x 25 face, 6.4 per m2; 60 x 20 face, 8.33 per m2) but no size for the black blocks, so the black-block count is HELD)
+
+THE PROBLEM: about 563 m2 of the 955.63 m2 measured gross block area is black block (the white walls are 392.5 m2,
+2,512 white blocks at 6.4 per m2). Without a black block size the black count, mortar and pallets are HELD.
+WHERE TO LOOK: your own supplier records: the black solid blocks you buy for inner walls (15 and 20 cm). Your stored
+takeoff notes (Claude skill "quantity-takeoff-rules", from your 2025 sales order) give black solid blocks 15 cm and
+20 cm with a 39 x 19 cm face and a 1 cm joint, i.e. a 40 x 20 module.
+THE OPTIONS:
+(A) The 40 x 20 module of your 2025 sales order: 12.5 blocks per m2 of wall, for 15 and 20 cm: about 563 x 12.5 = 7,040
+black blocks on the gross area (fewer after the openings of Q-73, before waste).
+(B) A different size you now buy (tell us the face size): count = area / face area.
+(C) Keep the black count HELD and report m2 and m3 only.
+RECOMMENDATION: A, if the 2025 sales order is still your supplier's size: it is your own purchase record, the same
+kind of evidence as the white-block pallet list you gave in Q-60, and it serves both 15 and 20 cm walls.
+WAITS ON: black-block counts, mortar and procurement for every inner wall (T-143, then T-108). Area and m3 stay reported.
+
 No question open (Lead 2026-10-20 20:10). Q-67, Q-68, Q-69 (answered 18:50) and Q-70 (answered 20:10, owner management decision) moved to Answered; their tasks: Q-67 -> T-123 / T-131 / T-127, Q-68 -> T-127, Q-69 -> T-125 / T-108, Q-70 -> T-129. From now on genuine owner decisions go in ONE daily package (owner management decision §10).
 
 Earlier note: Q-64, Q-65 and Q-66 answered by the owner 2026-10-20 16:23 (moved to Answered by the Lead 18:20). Q-67, Q-68, Q-69 new (Lead 18:20).
