@@ -46,25 +46,25 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
-## Status (Lead, 2026-10-21 16:20; re-estimated each run from what merged and was verified)
+## Status (Lead, 2026-10-21 20:20; re-estimated each run from what merged and was verified)
 
 | Plan | Board | State | Note |
 |---|---|---|---|
-| P-01 | owner + auditor | in progress, AT RISK (the critical path) | main config APPROVED and on main (53468f6, 11:45); case fix 1c559a8 (15:30) after the checker 13:55 and worker 1 14:27 were BLOCKED by it. Worker 1 repo-attached from 16:19; checker 15:51 is the first old-prompt run after the fix; migration order worker 1 -> checker -> worker 3 -> Lead -> worker 2 -> dashboard (this Lead run already used the attached checkout and wrapper without refusal). Slots 12:00-16:00: SUCCESS worker 3 13:00 and 15:02 (15:02 hand only), worker 2 13:40 and 15:41; BLOCKED checker 13:55, worker 1 14:27: 4 of 6 = 67 % vs 90 % |
-| P-02 | T-130 r2 (lane I) | READY bead4db, first in the checker queue | census T-140 after it |
-| P-03 | T-131 MERGED b1a6d6d; T-133 (V3.0.1) READY ec14d8b PARTIAL; T-142, T-146, T-151 QUEUED | skeleton DONE; first extension waiting for the checker | the checker must run V3.0.1 on the drawings itself |
-| P-04 | T-132 (verifier) | TODO, not started | candidate WAPE 54.65 % on 2 concrete lines, released 17.03 % on 3 (unchanged) |
-| P-05 | T-126 MERGED cd34bd0 | done as a piece; wired in T-133 (READY) | |
-| P-06 | T-128, T-144 READY (lane A) | hand results waiting for the checker | drawing-derived dry net incl. shaft 976.22 .. 1,080.33 vs 1,151.14 m2; owner method on Q-72 for the shaft; 23 openings on D-45 |
-| P-07 | T-125, T-143 READY; T-108 QUEUED | gross measured, waiting for the checker | net on owner Q-73, black count on Q-75 |
-| P-08 | T-136, T-138 r2 MERGED; T-141, T-148 READY; T-149 (beams), T-152 (slabs) TODO | footings, ground beams, columns DONE as hand pieces; beams and slabs next | links / per-metre counts on Q-71 (now also columns 0.78 .. 0.83 t) |
-| P-09 | T-134 (lane I) READY 7053291; Lead rulings in ELEMENT_REGISTER.md | v0 code waiting for the checker | 1,504 of 1,530 V3.0 lines linked; 6 CONFLICT elements released by convention; 1F arrival landing has no outline (T-133b) |
-| (Gate B tooling) | T-156 (lane I) TODO, backlog-permitted | new | the checker's automated diff and random-line pick for every integration package |
-| P-11 | T-147 READY (ceilings); T-150 (doors, windows) TODO | started ahead of week 3 | ceilings 388.14 vs 409.58 m2 (-5.2 %) |
-| (gate 1) | T-153 READY; T-157 TODO | floor area room by room: interior 376.86 .. 376.98 m2, dry like for like -0.12 %, 11 held spaces now exterior with area | V2.9 defect: side passage counted inside; outside finishes on OQ-04; garden band D-48 |
-| (gate 3 check) | T-139, T-145, T-119 READY | slabs, slab leftovers and columns by hand waiting for the checker | slabs 60.280 vs 59.817; beams 65.060 vs 65.97; columns 28.816 .. 28.979 vs 28.547 m3 |
+| P-01 | owner + auditor | in progress, improving | Worker 1 (16:19, 18:21) and the checker (17:52) ran clean on the repo-attached setup; Worker 3 migrates at its 20:59 run; Lead next. Since 15:51 every slot has a final line; the SessionStart hook still does not run by itself (agents run setup by hand, it works) |
+| P-02 | T-130 r3 (lane I) | READY 3f23e23, checker run A | r2 rejected 16:45 (footings must be PARTIAL, 3 wrong citations); census T-140 after it |
+| P-03 | T-133 MERGED 967d6d5 (Gate B, PARTIAL); T-142 TODO (+ defects D1-D3); T-146, T-151 QUEUED | **first extension VERIFIED and merged** | columns above necks 36.714 -> 34.446 m3, blinding 15.179 m3 released in the candidate (hand -0.2 %); opt-in only, released default unchanged |
+| P-04 | T-132 (verifier) | TODO, after READY <= 3 | checker figures 17:40: concrete WAPE V2.9 18.17 % (5 compared / 3 held), V3.0.1 15.38 % (3 / 5): the drop is only blinding moving to HELD, not an accuracy gain |
+| P-05 | T-126 MERGED, wired in T-133 | DONE (verified through Gate B) | |
+| P-06 | T-128, T-144 READY | waiting for the checker | |
+| P-07 | T-125, T-143 READY; T-108 QUEUED | waiting for the checker | net on owner Q-73, black count on Q-75 |
+| P-08 | T-136, T-138 r2, T-148 MERGED; T-141 MERGED (not wired); T-149 READY; T-152 TODO (permitted); T-160 TODO | footings, ground beams, columns DONE as verified hand pieces; beams waiting; slabs next | links / per-metre counts on Q-71 |
+| P-09 | T-134 READY; rulings in ELEMENT_REGISTER.md (20:20 added 9 elements) | v0 code waiting since 13:24 | checker run A |
+| (Gate B tooling) | T-156 READY | waiting, checker run A | proposal on the random-line pool goes to the owner |
+| P-11 | T-147, T-150 READY; T-159 TODO (owner request, facade per side) | started ahead of week 3 | windows 56.771 vs 54.931 m2 on the 8 printed (+3.3 %); counts agree; heights on D-45 |
+| (gate 1) | T-153 MERGED bfa0f71; T-157 TODO | floor area room by room VERIFIED in part (dewaneya 0.0 %); north strip split HELD | outside finishes on OQ-04 |
+| (gate 3 check) | T-145 MERGED; T-139 REJECTED (text); T-119 r2 READY | slabs checked 0.0 / 0.05 / 0.0 % on 3 panels; columns HELD range at the tank | |
 
-Day-7 target (2026-10-27): AT RISK on the checker only. The engineering for it (V3.0.1: columns -2.268 m3, blinding split
-into released and held lines) has been READY since 07:37; the checker has merged nothing since 05:05. V3.0.1 is first in
-the checker's run 1 as a Gate B integration package. If it merges by 2026-10-24 the target holds; every extra day without
-the checker costs one day of the 6 days left.
+Day-7 target (2026-10-27): **MET on 2026-10-21 17:40** (6 days early): the checker verified the V3.0.1 integration
+package through Gate B (hand checks of every safety line plus 2 random lines) and merged it. Day-14 target (2026-11-03,
+measurable increase in verified coverage): on track if T-142 (footing steel, membrane evidence, soffits) and T-146 / T-151
+pass Gate B; measurement needs SCOREBOARD v2 (T-132), which the checker starts once READY falls to 3.

@@ -34,6 +34,41 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
    commit. Decision: board-only handoffs are verified as hand evidence (the verifier re-reads the cited notes), and the
    next task on the topic writes the files (T-117); a run with no line stays a NEEDS FIXING item for the owner's setting.
 
+## 2026-10-21 20:20 (lead run)
+
+- **Checker back (recurring cause 4 closed for now)**: 15:51 and 17:52 runs SUCCESS on the repo-attached setup; 5 merged
+  (T-145, T-133 Gate B, T-153, T-141, T-148), 3 rejected with exact gates (T-130 r2, T-139, T-119). Decision: queue for
+  3 more runs (note on BOARD.md 20:20); every READY tag now CAPACITY, not CHECKER-RUNS.
+- **T-133 V3.0.1 integration package: WORKED (MERGED PARTIAL, Gate B)**: first verified change through the integrated
+  candidate: columns above necks 36.714 -> 34.446 m3 (5 undrawn pieces 2.268 m3, re-confirmed by hand), blinding 22.155
+  -> 15.179 m3 released in the candidate (hand 15.213, -0.2 %) with ground-beam / strap blinding HELD. Day-7 target met
+  6 days early. Went wrong: D1 runners omit --profile, D2 storey summary 1.428 m3 short of the lines, D3 two held lower
+  bounds 10 / 15 % over hand. Decision: D1-D3 added to T-142 (lane I, now TODO, backlog-permitted).
+- **T-153 floor area: WORKED (MERGED)**: dewaneya re-measured 0.0 %; north court strip 21.021 vs 21.348 m2 (+1.6 %) and a
+  0.37 m2 duct outline not addressed. Decision: added to T-157 (still not backlog-permitted).
+- **T-141 span splitter V2 and T-148 column steel: WORKED (MERGED)**; steel lines of the 5 undrawn columns STALE until
+  T-151 (queued after T-142 / T-146, same candidate file).
+- **T-139 slabs: PARTIAL (REJECTED on text only)**: quantities checked (3 panels 0.0 / 0.05 / 0.0 %); verbatim note text
+  and a wrong page. 1F 0.37 m2 UNRESOLVED against his 120.00 m2 lump (about 0.06 m3) and a dome-ring double count in the
+  beam register. Decision: text rework by worker 1; new T-160 (S) for the ring and the 0.37 m2 (drawing search first, no
+  owner question below 0.5 % unless a rule gap appears).
+- **T-119 columns: FAILED then reworked (READY r2)**: rejected for releasing 2F C2 / C3 on an unprinted reading; r2 holds
+  them 3.00 .. 3.80 m and adds B19. Decision: checker run A first (critical); D-44 text corrected.
+- **T-130 registry: REJECTED r2, READY r3**: 99 of 170 citations failed in r2, all fixed; footings PARTIAL. Decision:
+  checker run A (unblocks the census T-140).
+- **T-149 beam steel: WORKED (READY)**: 5,171.03 kg net; links Q-71; laps HELD; found 5 spans over end columns and CB7 = 2
+  spans. Decision: feeds T-160.
+- **T-150 doors / windows: PARTIAL by design (READY)**: counts agree (29 windows, 5 ALU doors), heights are the gap;
+  windows +3.3 % on the 8 printed. No-assumptions finding: W16 'INFERRED' has no rule, must be HELD; door 2.20 vs 2.40 is
+  RULE_DIFFERENCE (Q-55 C), not UNRESOLVED. Decision: note to the checker in the row.
+- **T-156 Gate B tool: WORKED (READY)**; its proposal to draw random lines only from quantity lines changes an
+  owner-approved control: put to the owner as a proposal, approved rule kept meanwhile.
+- **Worker 2 19:48 NO-CLAIM**: correct (only non-permitted lane A rows); it refreshed six READY branches onto the working
+  head (useful backlog work). Decision: T-159 (owner request) and T-158 now give lane A permitted work.
+- New recurring cause: **SessionStart hook does not run** in repo-attached sessions (checker 16:52, 18:08, worker 2 19:48,
+  worker 3 19:48, this Lead run): every agent runs setup by hand and it works, so no loss; reported to the main chat as
+  a low-priority fix.
+
 ## 2026-10-21 16:20 (lead run)
 
 - **Setup case bug (recurring cause, FIXED by the main chat 15:30)**: the repo-attached checkout has a lower-case origin

@@ -46,6 +46,20 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+### Lead 2026-10-21 20:20 (from T-119 r2, T-133 MERGED, T-149, T-150, T-153 MERGED, T-159, T-160)
+
+| Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |
+|---|---|---|---|---|---|
+| 2F columns C2 / C3 at the water tank | column concrete, beam B15 / B3, rebar | COLUMN concrete, height range 3.00 .. 3.80 m (joint +0.160 m3 at the high end) | HELD (range) | T-119 r2; D-44 open | designer D-44 (B15 upstand or downstand) |
+| 1F column C9 framing incl. B19 40 x 75 (oblique) | column, beam | COLUMN takes the joint once; B19 takes its span to the column face | DRAWING-CONFIRMED, not VERIFIED | URBAN-NON-OVERLAPPING-SLAB-BEAM-MODEL@v1 | checker run A |
+| 5 columns above the necks with no column on the slab plan above (2.268 m3) | column concrete, column steel | COLUMN: NOT APPLICABLE WITH EVIDENCE in V3.0.1; their 10 steel lines STALE until T-151 | VERIFIED (checker 17:40, by hand) | T-126 / T-133 Gate B | T-151 rewires steel |
+| Blinding under footings 15.179 m3 | blinding concrete | BLINDING, released in the candidate only | VERIFIED (hand 15.213, -0.2 %) | T-126 / T-133 Gate B | ground-beam and strap blinding stay HELD; lower bounds over hand (T-142 D3) |
+| Beam spans running over end columns (5 register spans) and GF CB7 (2 spans, not 1) | beam concrete, beam steel | BEAM: span to the column face, column takes the joint | DRAWING-CONFIRMED (T-149), not VERIFIED | URBAN-NON-OVERLAPPING-SLAB-BEAM-MODEL@v1 | T-160 corrects the register with the dome rings |
+| Dome ring beams (each dome opening) | slab, beam, ceiling | BEAM: in-square ring part only; the parts inside B6 / B25 / CB12 belong to those beams; the 8 dome corner pieces are SLAB | DRAWING-CONFIRMED (checker 16:45), not VERIFIED | owner Q-44 A; non-overlapping model | T-160 |
+| Windows W01 .. W26 and doors (65 openings) | openings, block deduction, plaster / paint reveals, facade | OPENINGS trade owns count and size; block, plaster and facade list the opening and deduct only under their own rule | 8 windows DRAWING-CONFIRMED, 20 HELD (D-45), W16 HELD (no rule for a twin), doors ASSUMED — OWNER-APPROVED 2.20 m (Q-55 C) | T-150 | D-45, D-07 |
+| Facade sides (exterior wall faces per side and storey) | facade plaster / paint, blockwork, openings | FACADE finish per side; openings listed apart; boundary / street fence NOT a facade (Q-65 HELD) | to be measured | owner request 2026-10-21; Q-64 B | T-159 |
+| GF north court strip (21.021 checker vs 21.348 worker) and the 0.37 m2 duct outline in it | external area | EXTERNAL area; split with the west court HELD | HELD (split) | checker 18:40 on T-153 | T-157 |
+
 ### Lead 2026-10-21 16:20 (from the CLAIMED / READY tasks T-133, T-134, T-148, T-153, T-154, T-155)
 
 | Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |

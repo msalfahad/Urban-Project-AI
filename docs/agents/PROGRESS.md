@@ -1,8 +1,12 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
 Plain words, no task numbers. Measured numbers come from SCOREBOARD.md; anything not measured says so.
-Last update: 2026-10-21 16:20 UTC (Lead). Previous version: 2026-10-21 12:20 UTC. No measured number changed since
-12:20 (nothing checked or merged); the new hand results below wait for the checker.
+Last update: 2026-10-21 20:20 UTC (Lead). Previous version: 2026-10-21 16:20 UTC. The released numbers did not change
+(the released method is untouched). NEW and checker-verified since 16:20, in the opt-in candidate only: columns above the
+necks 36.714 -> 34.446 m3 (5 columns no upper slab plan draws, 2.268 m3, confirmed by hand) and blinding under footings
+15.179 m3 (hand 15.213, -0.2 %), the first change verified through the whole integrated BOQ (day-7 target met early).
+Also verified as hand pieces: floor area room by room (dewaneya 0.0 %), column steel (3 columns re-counted, 0.0 %),
+ground-beam spans (3 spans re-measured).
 
 ## Where we are on the five gates
 | Gate | In plain words | Due | Done so far | State |
@@ -149,18 +153,16 @@ Not measured, and paused by your order (Alsenan first).
   development lengths, so a steel ledger is not complete until it has read them.
 
 ## Being worked on now
-- Checker (running since 15:51, its first run after the setup fix): sixteen results wait, now in four runs: (1) the
-  coverage registry, the first candidate extension (checked as a whole integrated BOQ: automated diff, every large or
-  moved line by hand, 2 random lines), floor area room by room (gate 1), slabs with the slab leftovers; (2) columns,
-  ground beams, column steel, the element register; (3) footing bars per metre, wall run version 2, block area,
-  plaster / paint by both methods; (4) window heights, ceilings, the pool-court soffit. Nothing merged since 05:05.
-- Integration (worker 3): NEW the checker's tool for the integrated BOQ (line-by-line before / after table, the 2 % / 5 %
-  flags and the reproducible random-line pick), while the coverage census waits for the registry to be merged.
-- Structural (worker 1): beam steel by bar population from the beam schedule (allowed despite the queue: steel is the
-  largest money at risk); slab steel after it. Links and per-metre bars stay held on your Q-71.
-- Architecture and finishes (worker 2): doors and windows as BOQ lines (allowed despite the queue: a missing category),
-  including the two pool-court wall openings that no engine version records; then the outside areas (garden band, side
-  passage, courts) classified from the sections once the queue is down to 3.
+- Checker (running again since 15:51; 5 merged, 3 sent back with exact reasons): thirteen results wait. Next: columns at
+  the water tank (now held as a 3.00 .. 3.80 m range), the coverage registry, its own integrated-BOQ diff tool, the
+  element register; then beam steel and the finishes hand results; then doors / windows.
+- Integration (worker 3): next the second candidate extension: footing steel (874.86 kg released on the 19 footings with
+  a printed count, the per-metre footings held on your Q-71), membrane coverage proof attached to each roll line, the
+  soffits over outside air (44.446 m2, finish held), plus three defects the checker found in the first extension.
+- Structural (worker 1): two text fixes in the slab check (note quoted word for word, a wrong page), then slab steel by
+  bar population; then the dome ring beams (the register may count about 1.1 m2 of ring per dome twice).
+- Architecture and finishes (worker 2): YOUR REQUEST first: the outside of the house side by side, length and height of
+  every facade side and its area, openings listed apart; then the stair calculator from your new stair rule.
 - Research scout (next run 24 Oct 23:50 UTC, now twice a week): open requests on footing schedules from CAD tables,
   laps in bar schedules, and the measurement-standard clauses behind the block-opening and strap-length questions.
 
@@ -190,9 +192,11 @@ Not measured, and paused by your order (Alsenan first).
   Q-73 openings in block walls (A deduct every opening, recommended; B over 0.50 m2 only; C none, gross 955.63 m2);
   Q-74 oblique strap length (A along the axis 2.293 / 3.258 m, recommended; B projected; C centre to centre); Q-75 black
   block size (A 40 x 20 module, 12.5 per m2, recommended; B another size; C count held).
-- Setting (P-01): done by your main chat (repo-attached configuration on main, case fix 15:30); the checker's 15:51 run
-  is the first test of it. If that run again leaves no final record, the checker's migration to the repo-attached way
-  (as worker 1 now runs) is the next step; sixteen results wait.
+- Setting (P-01): done by your main chat; worker 1 and the checker now run clean on it; worker 3 moves at 20:59, the Lead
+  after it. One small fix for the main chat: the start-up hook does not run by itself in these sessions (every agent
+  runs setup by hand, which works).
+- Proposal (no decision needed now): draw the checker's 2 random lines only from lines that carry a quantity (269 of the
+  460 other lines carry none, so random picks land on held text).
 - Your confirmation of the reconciliation proposal (manual and drawing methods side by side); until then nothing released
   changes.
 - Designer requests to forward when you choose: DESIGNER_CLARIFICATIONS.md (new D-48 garden band and side passage: open
