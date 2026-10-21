@@ -47,3 +47,17 @@ seating area next to door it could be wood or ceramic or marble with the stairs"
   HELD until he decides. The entrance steps themselves are marble (outside stairs).
 - Side passage 5.640 m2 (between annex and house): a side area, so porcelain / ceramic by the sides rule, part of the
   house (consistent with Q-67 A exterior classification for walls; its floor finish is porcelain / ceramic, not interlock).
+
+## Owner decisions after the renders (2026-10-21 23:20, main chat; his words: "you are correct, but interlock is cheaper
+and it is available, this stone is not available at this time" / "in plan its the level and not up the stairs. lets
+measure the area and can decide later for the kind and price")
+
+- COURT = INTERLOCK, confirmed for Alsenan even though the designer's renders show natural-stone crazy paving: the owner
+  chooses interlock because it is cheaper and available and the rendered stone is not available now. General rule: a
+  render shows design intent; when the owner sets a different, available material for the BOQ, the owner's choice governs
+  and the line records "owner choice, differs from render".
+- COVERED PORCH: on the plan it is AT COURT LEVEL, not up the entrance steps (the render's raised terrace does not govern).
+  MEASURE its area as its own line (about 4.60 x 4.10 = 19.181 m2, to be re-measured from the plan and kept separate from
+  the court interlock area so it is never counted twice); the finish KIND and PRICE stay open (owner decides later):
+  quantity measured, material HELD.
+- The entrance steps stay marble (outside stairs); the pool deck stays HELD.
