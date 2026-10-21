@@ -192,13 +192,7 @@ CANDIDATE_METHODS = (V30,)
 # line outside its rows byte-identical to V3.0. An extension of V3.0, never a new method family; opt-in, not the
 # released default; rollback = run ARCH_TAKEOFF_V2.9.
 V301 = "ARCH_TAKEOFF_V3.0.1"
-# T-142: ARCH_TAKEOFF_V3.0.2 = the SAME candidate extended again (engine.source.arch_v302): a V3.0.1 run (its V3_0_* and
-# V3_0_1_* files unchanged) + footing steel by bar population (T-136), the membrane coverage proof (T-137), the soffits
-# over outside air (T-127) and the V3.0.1 Gate B fixes, in V3_0_2_* files; every line outside its rows byte-identical
-# to V3.0.1. Opt-in, not the released default; rollback = run ARCH_TAKEOFF_V2.9.
-V302 = "ARCH_TAKEOFF_V3.0.2"
 CANDIDATE_EXTENSIONS = (V301,)
-CANDIDATE_EXTENSIONS_V302 = (V302,)           # its own tuple: the V3.0 / V3.0.1 method lists stay as they were
 M9_DIR = "m9"
 CREATED = datetime(2026, 1, 1)
 
@@ -2886,6 +2880,14 @@ def _blocked(out, report, conversions, *, code, what, extra=None):
     print(json.dumps({"state": what, "exit_code": code, "stopping": [f"{f['stage']}:{f['code']}" for f in st],
                       "outputs": sorted(p.name for p in out.iterdir() if p.is_file())}, indent=1))
     return code
+
+
+# T-142: ARCH_TAKEOFF_V3.0.2 = the SAME candidate extended again (engine.source.arch_v302): a V3.0.1 run (its V3_0_* and
+# V3_0_1_* files unchanged) + footing steel by bar population (T-136), the membrane coverage proof (T-137), the soffits
+# over outside air (T-127) and the V3.0.1 Gate B fixes, in V3_0_2_* files; every line outside its rows byte-identical
+# to V3.0.1. Opt-in, not the released default; rollback = run ARCH_TAKEOFF_V2.9.
+V302 = "ARCH_TAKEOFF_V3.0.2"
+CANDIDATE_EXTENSIONS_V302 = (V302,)  # its own tuple: the V3.0 / V3.0.1 method lists stay as they were
 
 
 def cmd_arch(a):
