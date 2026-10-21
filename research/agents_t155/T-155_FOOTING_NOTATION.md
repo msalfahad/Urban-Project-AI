@@ -131,3 +131,11 @@ symbol of F12 / F13 / F14 / FF (read on the PDF at 300 dpi and confirmed in the 
 column, layer S-REIN.D, none in the F8 row) and the p.13 "Boxed bars" callout; corrected the three wrong statements.
 Leg length and the meaning of `3+n` stay HELD / UNKNOWN (nothing printed). No count, length, kg, reading or mapping
 changed; the tool is unchanged and its `--check` still passes.
+
+Evidence check of the "nothing printed" statements: (1) the only dimensions on the two p.13 typical details are
+"Min. 30cm" (column-bar bend), "Max. 10cm" (bend to bottom mesh), D (footing depth), "L x W" and the 10 cm blinding
+projections; none is on the boxed bar, its legs or its count. (2) The p.13 typical footing details and their "Boxed
+bars" callout are NOT in `ST7757 dxf.dxf` at all (no such text in model space, any layout or any block; the DXF holds
+only the p.9 schedule with its BOXED column and the REMARKS symbols), and the PDF has no text layer (outlined text), so
+this evidence can only be read visually on the issued PDF: a CAD-only reader cannot see it. Lesson for the engine:
+a bar-end or bar-shape rule must cite the PDF detail sheet, and a DXF-only run must report it as not visible.
