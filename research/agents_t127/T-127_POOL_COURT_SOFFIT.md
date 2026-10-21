@@ -63,18 +63,22 @@ Q-39 C is not needed: the soffit boundary is the band face that Q-38 A fixes (pr
 ### 1.4 Why not 18.393 / 14.704 (written reason, acceptance clause)
 
 T-121's gross is a CAD set: slab plate less the V2.9 facade outline. The outline follows the house, so it counts slab that
-bears on the free-standing court walls and the recess in front of the curved frame. Added back to the hand gross:
+bears on the walls that bound the court and the recess in front of the curved frame. Those walls are the house's own
+facade walls (the GF plan overview: the north wall runs on west along the north facade; the east wall carries the east
+facade glazing further south), each with an opening onto outside air. Which faces the V2.9 outline actually walked is not
+reproduced here (no engine run in this NO REPO CODE task): the table is a reconstruction that comes within 0.088 m2.
+Added back to the hand gross:
 
 | Piece | m2 | Is it soffit? |
 |---|---|---|
 | hand gross (1.1) | 16.525 | yes |
 | recess between the curved frame line (CAD 0.080 m off the printed band face, T-123) and the printed 657 line | 0.561 | exterior, but inside the printed 0.20 glazing band: listed separately (SX-02, M-11), not in PL-03 |
-| slab over the east boundary wall, X 1.800..2.000 x 5.400 | 1.080 | 0.904 of it is the head soffit of the printed 4521 opening in that wall (4.521 x 0.200, SX-01, M-11); 0.176 sits on the wall piers |
-| slab over the north court wall, Y 5.400..5.600 (less the column) | 0.316 | no: it bears on the wall |
+| slab over the east facade wall, X 1.800..2.000 x 5.400 | 1.080 | 0.904 of it is the head soffit of the printed 4521 opening in that wall (4.521 x 0.200, SX-01, M-11); 0.176 sits on the wall piers |
+| slab over the north facade wall, Y 5.400..5.600 (less the column) | 0.316 | 0.200 of it is the head soffit of the 1.00 m opening in that wall (CAD width between the column and a 0.30 pier, wall 200 printed; overhead lines drawn, SX-03, M-11); 0.116 sits on the pier and wall end |
 | sum | 18.481 | T-121 18.393: +0.088 not traced (the V2.9 outline's walk along the north wall / column 2F87 is not reproduced by hand) |
 
 So the 1.870 m2 between the verifier's net 14.704 and 12.834 is basis, not error in the void: 1.396 m2 of wall tops and
-openings heads, 0.561 m2 of frame recess, less the untraced 0.088. The verifier's void (3.689) is confirmed.
+opening heads, 0.561 m2 of frame recess, less the untraced 0.088. The verifier's void (3.689) is confirmed.
 
 ## 2. Corrected soffits over outside air (all five places)
 
@@ -88,6 +92,7 @@ openings heads, 0.561 m2 of frame recess, less the untraced 0.088. The verifier'
 | **Total** | **44.446** | 45.632 | verifier CAD basis 46.316 | | HELD | 44.446 + 44.446 |
 | SX-01 head soffit of the 4.521 m boundary opening (sea side) | 0.904 | in PL-03 CAD | 4.521 x 0.200 printed | none | HELD, with the opening reveals | not added |
 | SX-02 recess in front of the curved pool frame | 0.561 | in PL-03 CAD | CAD 0.080 x frame arc 6.657 + ends | none | HELD with the glazing reveal / external-strip line (T-123) | not added |
+| SX-03 head soffit of the 1.00 m opening in the north facade wall of the court | 0.200 | in PL-03 CAD | CAD 1.000 x printed 0.200 | none | HELD, with the opening reveals | not added |
 
 Option A is the owner's PROVISIONAL estimating method only (Q-68 C): it is shown in its own column, never as a released
 finish. No soffit is a gypsum / decor ceiling candidate (Q-68: never interior gypsum on exterior exposure).
@@ -118,10 +123,11 @@ decided here.
 ## 5. Learned / missing
 
 - A soffit is the ceiling the space sees: measure between the faces of the walls that bound the space, not "plate outside
-  the house outline". Where a space is bounded by free-standing site / court walls, the outline method counts their tops
-  (here 1.396 m2, +8.4 % on the court) and openings' heads.
+  the house outline". Where a court is a notch in the house open through wall openings, the outline method can count the
+  tops of its bounding walls and the opening heads
+  (here 1.396 m2, +8.4 % on the court).
 - A void inside a beam ring is the area inside the INNER faces (3.690 m2), not the route G face (4.373 m2, which is the
   bay less the corners); the ring band and the bay corners are beam soffit and stay in the ceiling.
-- Missing: finish (HELD, D-24); beam side faces under the soffits (T-110 depths); SX-01 / SX-02 need their reveal lines;
+- Missing: finish (HELD, D-24); beam side faces under the soffits (T-110 depths); SX-01 / SX-02 / SX-03 need their reveal lines;
   the 0.088 m2 residual of the T-121 CAD set; the porch was not re-measured in this run (T-121 and the verifier agree
   within 0.017 m2).

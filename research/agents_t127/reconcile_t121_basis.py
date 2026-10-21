@@ -1,6 +1,6 @@
 """T-127: why T-121's CAD gross for the pool court (18.393 m2, plate inside the slab sheet less the V2.9 facade outline)
 is larger than the soffit measured face to face from the printed dimensions (16.525 m2). Same local frame as
-pool_court_hand.py. The pieces added back are slab over the free-standing court walls and the 0.08 m recess between the
+pool_court_hand.py. The pieces added back are slab over the court's bounding facade walls (with their opening heads) and the 0.08 m recess between the
 curved frame (CAD line, 0.080 m off the printed band face) and the printed 657 line. Run: python3 -I reconcile_t121_basis.py"""
 import math, sys
 sys.path.insert(0, str(__import__("pathlib").Path(__file__).resolve().parent))
