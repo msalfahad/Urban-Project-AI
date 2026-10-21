@@ -1,7 +1,7 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
 Plain words, no task numbers. Measured numbers come from SCOREBOARD.md; anything not measured says so.
-Last update: 2026-10-20 22:15 UTC (Lead). Previous version: 2026-10-20 20:10 UTC.
+Last update: 2026-10-21 00:15 UTC (Lead). Previous version: 2026-10-20 22:15 UTC.
 
 ## Where we are on the five gates
 | Gate | In plain words | Due | Done so far | State |
@@ -13,21 +13,22 @@ Last update: 2026-10-20 22:15 UTC (Lead). Previous version: 2026-10-20 20:10 UTC
 | 4 | Read scanned and PDF plans | 9 Dec | the vector-PDF height reader is merged, but the Alsenan PDF sheets are scans; a scan reader that releases a number only when its dimension chain adds up exactly is now on the board | started (one task) |
 
 ## Engine vs freelancer BOQ: Alsenan Chalet (released concrete run, commit 8774071, unchanged; waterproofing released in ARCH_TAKEOFF_V2.11)
-Since 20:10 the checker merged six pieces, each re-measured by it on the drawing: the first-floor landing in marble once
-(porcelain 33.594 .. 33.711 m2, a range), the GF side passage shown open to outside air (facade 105.887 m), the roll-count
-audit (no count changes), the beam register (64.764 vs his 65.97 m3), blinding by member with the 5 undrawn columns removed,
-and the second-floor stair arrival in marble (your Q-70 A condition met). The ONE opt-in candidate V3.0 is built and waits
-for the checker: straps 3.390 m3 (-0.07 % against him), GF facade 105.887 m, 1F porcelain as a range. No released number
-changed; the released default stays until you switch it.
+Since 22:15 the checker merged two more pieces (re-measured by it on the drawing): the new concrete ledger for beams and
+stairs (its guard-test fault fixed) and the rule that a stair flight drawn on two floor plans is measured once (2F east
+copy removed: tread marble 27.324 -> 20.424 m2 + 0 .. 3.450 held). The ONE opt-in candidate V3.0 was SENT BACK: its
+straps 3.390 m3 (-0.07 % against him) were confirmed by the checker's own re-measure, but about 170 lines where it differs
+from the released method (inherited from the four opt-in versions before it) have no before / after row; a small rework is
+first on the board. A second beam piece (two spans settled by printed section cuts, +1.91 m3) waits for the checker.
+No released number changed; the released default stays until you switch it.
 "piece" = a merged, checked method piece run on the real drawing; "hand" = a reading of the drawing.
 | Trade | Unit | Engine | Freelancer | Difference | Change since last report | Target | State |
 |---|---|---|---|---|---|---|---|
 | Concrete, 3 lines compared (footings, stairs + domes, pool) | m3 | 92.77 | 111.81 | -19.04 (-17.03 %) | none | within 2 % | released run unchanged; new pieces not wired |
 | Isolated footings (hand = engine register) | m3 | 64.346 | 65.634 | -1.29 (-2.0 %) | none | within 2 % | engine right (freelancer counts one footing twice); F10 HELD with a designer request |
 | Foundation straps (piece, merged; checker ran it on the drawing) | m3 | 3.390 | 3.3925 | -0.0025 (-0.07 %) | now confirmed by the checker (engine right) | within 2 % | the released run still gives 3.781: one strap runs into an open footing outline (+0.39); the new piece is not wired |
-| Beams (new concrete ledger, sent back for one guard-test declaration, rework on the board) | m3 | 68.84 released + 18 pieces held (4.25 - 9.18 m3 if counted) | 65.97 | +2.87 (+4.4 %) on the released part only; line not compared while 18 pieces are held | was 64.82 (-1.7 %): +4.018 m3, each by hand (B26 3.905 and B27 3.787 as single spans, B7 strip 0.255 + arc 0.066, 1F ring beams 0.755 + 0.900, upstands 0.240) | within 2 % | 2 pieces settled by printed sections (1.91 m3, on the board); 16 pieces the drawings contradict or leave unmarked: asked you |
+| Beams (new concrete ledger, MERGED 23:28 after its rework; not wired yet) | m3 | 68.84 released + 18 pieces held (4.25 - 9.18 m3 if counted) | 65.97 | +2.87 (+4.4 %) on the released part only; line not compared while 18 pieces are held | was 64.82 (-1.7 %): +4.018 m3, each by hand (B26 3.905 and B27 3.787 as single spans, B7 strip 0.255 + arc 0.066, 1F ring beams 0.755 + 0.900, upstands 0.240) | within 2 % | 2 pieces settled by printed sections (1.91 m3, on the board); 16 pieces the drawings contradict or leave unmarked: asked you |
 | Neck-only columns CN (piece, merged) | m3 | 5 column lines now "not present" (were held); 6 necks 0.090 m2 each, height held | 0 columns; 0.810 m3 necks at an unprinted 1.50 m | columns agree; necks unresolved | merged (was waiting for the checker) | within 2 % | neck height waits for a printed founding level (your earlier answer) |
-| Stairs (hand merged; code piece = checker's own hand figure, sent back for one guard-test declaration) | m3 | main stair 5.011 (steps 1.386 + sloping slabs 2.885 + landings 0.740), now also from the code piece; entrance steps 0.357 (its sloping slab held: not printed), lobby steps 0.126 | main stair 8.131; entrance 1.411; round stair 5.510 | main stair -3.12 (-38.4 %) | code piece = hand (new) | within 2 % | his flights are longer than drawn; winder steps and the round stair asked you; the last riser inside the arrival slab (0.163 m3) asked you |
+| Stairs (hand merged; code piece MERGED 23:28 = checker's own hand figure; not wired yet) | m3 | main stair 5.011 (steps 1.386 + sloping slabs 2.885 + landings 0.740), now also from the code piece; entrance steps 0.357 (its sloping slab held: not printed), lobby steps 0.126 | main stair 8.131; entrance 1.411; round stair 5.510 | main stair -3.12 (-38.4 %) | code piece = hand (new) | within 2 % | his flights are longer than drawn; winder steps and the round stair asked you; the last riser inside the arrival slab (0.163 m3) asked you |
 | Blinding (piece, merged; checker re-measured) | m3 | 15.179 released under the 25 released footings (checker's own outline union 151.794 m2 x 0.10) + HELD: F10 0.480 .. 0.590, under ground beams 5.724 .. 9.423, under straps 0.772 (released run still 22.155) | 47.055 | not comparable: his figure is one plate under the whole plot, drawn nowhere (rule difference) | NEW: piece checked and merged | within 2 % | held parts wait on your Q-21 / Q-31 answers (C) and the designer; never shown as 0 |
 | Columns (piece, merged; checker re-measured) | m3 | 34.446 (piece: the 5 occurrences no upper slab plan draws removed, -2.268); released run still 36.714 | 28.547 | piece +5.90 (+20.7 %); released +8.17 (+28.6 %) | NEW: piece checked and merged (engine right on the 5 columns); in the next candidate step | within 2 % | the rest is height: he takes storey minus 0.75 m everywhere; the Urban rule takes the deepest beam at each column: column-by-column table on the board |
 | Pool | m3 | 3.50 (released) | 12.35 | -8.85 | none | within 2 % | volume from the printed sizes is on the board |
@@ -52,7 +53,7 @@ changed; the released default stays until you switch it.
 | Paint | m2 | held | 1191.13 | - | none | within 3 % | same walls as plaster; ceilings have no rule yet (he paints 452.33 m2 of decor ceilings): asked you |
 | Dry-room floor tiles, 10 rooms (piece, merged) | m2 | 194.98 | 189.61 | +5.37 (+2.83 %) | NEW: fix merged: 1F living 38.459 .. 38.979 (candidate range) vs hand 38.588 .. 38.990; under your Q-66 B porcelain 33.584 .. 34.104 | within 1 - 2 % | first-floor living 44.869 vs hand 38.588 (38.990 if the foot of the east flight is landing) vs his 38.96: the engine counts the round-stair opening (2.10), the stair well (2.53) and the round-stair quarter landing (1.35) as floor, and loses 0.30 on winder steps; fix on the board. Landing finish: asked you (your two rules differ). Second-floor lobby 8.775 vs 7.70 engine right |
 | Floor tile count per room (piece, merged) | tiles | held in all 25 floor rooms: no tile size printed on any Alsenan sheet; for 60x60 on 23 rooms 697 tiles without offcut reuse (+21 % over net m2) or 611 with reuse in the same room (+6 %) | not given | not comparable | new | exact | tile size per room and offcut reuse asked you |
-| Stair marble (piece, merged) | m2 | 39.49 (treads, risers, landings) | 295.44, of which 151.80 is the court paving counted a second time; stairs and landings alone 143.64 | not comparable: his step rows are metres added to m2 | NEW: his double count found in his own formulas | exact | turning steps and round stair held (your answers pending) |
+| Stair marble (piece, merged; flight-once piece merged 23:33: released tread marble 27.324 -> 20.424 m2 + 0 .. 3.450 held, steps 91.028 -> 68.028 lm + 0 .. 11.500 held) | m2 | 39.49 (treads, risers, landings) | 295.44, of which 151.80 is the court paving counted a second time; stairs and landings alone 143.64 | not comparable: his step rows are metres added to m2 | NEW: his double count found in his own formulas | exact | turning steps and round stair held (your answers pending) |
 | Tiling materials (piece, PROVISIONAL) | bags / m3 | cement 80 - 111 bags, sand 10.91 - 15.21 m3, adhesive 58 bags of 20 kg | not given | - | new | - | provisional by your answer; stair bed held on the 1:3 question |
 | Floor area | m2 | held | not compared | - | none | within 1 - 2 % | 11 labelled spaces held instead of lost; room-by-room table on the board |
 
@@ -60,6 +61,11 @@ changed; the released default stays until you switch it.
 Not measured, and paused by your order (Alsenan first).
 
 ## What the team has learned so far
+- (21 Oct, night) A candidate built on the newest opt-in version still has to show every line that differs from the
+  RELEASED method, not only from the version under it; the checker counts 197 such lines. On Alsenan a printed beam
+  section cut also crosses the 0.20 m projection strip, so "the one span at the printed width" decides, not "the span the
+  cut crosses". Arabic notes on scans: free OCR misreads too much (published error rates 54 - 79 %); only closed lists
+  (tile sizes, room names) checked by two readers may release a value.
 - (20 Oct, late) A stair flight drawn on the upper floor plan for orientation is measured again by the released method
   (+3.45 m2 marble); the 2F "stair lobby 450 x 195" was two dimensions read as one room: the 1.95 m belongs to the stair's
   own dimension chain, so the arrival is landing. The freelancer's blinding plate covers the whole plot; the drawings give
@@ -121,18 +127,18 @@ Not measured, and paused by your order (Alsenan first).
   proven count is being re-checked piece by piece.
 
 ## Being worked on now
-- Checker (next run 22:49): the V3.0 candidate first (re-run the scoreboard on it and on the released method, re-measure
-  3 of its lines by hand), then the beam / stair rework (beams 68.84 vs his 65.97 m3, +4.4 %, 18 pieces held; main stair
-  5.011 vs 8.131 m3, rule difference). Then its scoreboard per trade and unit with the verified and held shares.
-- Integration (worker 3): once V3.0 is merged, the next step adds the merged pieces that waited for it: columns -2.268 m3,
-  blinding 15.179 m3 + held lines, 1F landing marble / porcelain 33.594 .. 33.711 m2, 2F arrival marble 4.875 / porcelain
-  2.500 m2; then the element register (stable ids per room, wall, opening, member) and the coverage registry refresh.
-- Structural (worker 1): beams settled by two printed section cuts (B23 1.0125 m3, B20 0.900 m3); columns to the deepest
-  beam at each column; stairs flight by flight; then footing steel by bar population from the schedule (rebar -40.6 % is
-  the largest money at risk).
-- Architecture and finishes (worker 2): one stair flight counted twice on the 2F plan (+3.45 m2 marble, +11.5 lm steps);
-  pool-court soffit by hand and its finish search; plaster and paint by both methods; the wall run with your five lengths.
-- Research scout (next run 23:50 UTC): Arabic / English notes on scans; proving strip coverage; wall centrelines.
+- Checker (running since 23:49): two beam spans settled by printed section cuts (B23 1.0125 m3, B20 0.900 m3; beams then
+  64.82 -> 66.73 vs his 65.97, -1.7 % -> +1.2 %, 19 pieces still held); then the V3.0 candidate again once reworked; then
+  its scoreboard per trade and unit with the verified and held shares.
+- Integration (worker 3): V3.0 rework first (a row for each of the ~197 lines that differ from the released method), then
+  the coverage registry refresh; once V3.0 merges, the merged pieces that wait for it go in: columns -2.268 m3, blinding
+  15.179 m3 + held lines, landing and arrival marble once, beams 68.84 m3 (18 held), stairs, stair flight once.
+- Structural (worker 1): footing steel by bar population from the schedule (rebar -40.6 % is the largest money at risk);
+  columns to the deepest beam at each column; stairs flight by flight (incl. the 2F west lane, 10 vs 11 treads, held).
+- Architecture and finishes (worker 2): pool-court soffit by hand and its finish search; plaster and paint by both
+  methods; the wall run with your five lengths (now with an exact area / thickness check); a proof that every piece of a
+  membrane outline is covered by a strip or a named patch.
+- Research scout (next run 21 Oct 23:50 UTC): one new request, reading footing reinforcement schedules from CAD tables.
 
 ## What is missing
 - Ceilings over outside air: 46.316 m2 per the checker; the hand rework and the finish search are on the board.
@@ -148,8 +154,9 @@ Not measured, and paused by your order (Alsenan first).
 - No question open: Q-67 (passage outside if the drawings confirm it: they do, the checker re-reads it), Q-68 (soffit
   finish from the specification, A provisional), Q-69 (physical block length beside the 143.16 m manual run) and Q-70
   (2F arrival marble if it is the landing) are answered and on the board. New decisions will come as one daily package.
-- Setting (P-01): finish Test B and approve the repo-attached configuration; until then runs keep ending silently
-  (since 20:10: worker 2 21:39 left nothing, worker 3 21:59 only its start line).
+- Setting (P-01): finish Test B and approve the repo-attached configuration; until then runs keep ending silently or
+  refused (since 22:15: worker 1 22:19 left nothing, worker 3 22:59 stopped after its claim, worker 2 23:39 refused
+  "[Code from External]" and "[Modify Shared Resources]").
 - Your confirmation of the reconciliation proposal (manual and drawing methods side by side); until then nothing released
   changes.
 - Designer requests to forward when you choose: DESIGNER_CLARIFICATIONS.md.

@@ -34,6 +34,36 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
    commit. Decision: board-only handoffs are verified as hand evidence (the verifier re-reads the cited notes), and the
    next task on the topic writes the files (T-117); a run with no line stays a NEEDS FIXING item for the owner's setting.
 
+## 2026-10-21 00:15 (lead run)
+
+- **T-105 concrete ledger V3 beams + stair concrete V1 (rework)**: WORKED. MERGED e74c182 (verifier run 47); firewall
+  test passes, L4 364 = 364 vs base, 0 new. Beams 68.84 m3 released part vs freelancer 65.97 (+4.4 %), 18 pieces held;
+  main stair 5.011 vs 8.131 m3 (RULE_DIFFERENCE). Rule check: Q-16 A, Q-19, Q-62 A cond cited; no assumed value. Not
+  wired. Decision: wiring added to T-133 (d); T-136 (footing rebar) unblocked.
+- **T-135 stair flight counted once**: WORKED. MERGED 05e2eab; checker re-measured the 2F east lane (10 x 0.30 x 1.15).
+  Tread marble 27.324 -> 20.424 m2 + 0..3.450 held, steps 91.028 -> 68.028 + 0..11.500 lm. PARTIAL part: 2F west lane
+  HELD (10 vs 11 treads, north end 0.300 m short). Decision: the west lane goes to T-111 (hand reading); wiring T-133 (e).
+- **T-131 V3.0 skeleton**: PARTIAL (REJECTED, gate checker rule 4). Everything technical passed, straps re-measured by
+  the checker (3.390 vs 3.3925 m3, -0.07 %), but the ledger covers 11 rows + 22 roll lines of 197 lines that differ from
+  the released V2.9. Cause: the task asked for "before = V2.9 + V2.13" per line yet the identity test only checked
+  V2.13. Decision: rework r2 on the same branch, top of lane I, acceptance = 0 undocumented lines vs V2.9.
+- **T-102 beam section-cut binding**: READY, not yet checked (verifier run started 23:49). Handoff has the numbers
+  (64.820 -> 66.733 vs 65.97 m3, -1.7 % -> +1.2 %; C-C / D-D held, designer D-30). No decision needed now.
+- **T-130 coverage registry**: FAILED (no output). Worker 3 claimed it 23:01, the run left no final line and no branch.
+  Cause NOT KNOWN (third silent worker-3 run in a row: 21:59, 22:59). Decision: released to TODO after T-131 r2.
+- **T-127 claim (worker 2, 23:39)**: FAILED (BLOCKED) by the platform: clone refused "[Code from External]", the claim
+  push refused "[Modify Shared Resources]" (the same run still pushed its STARTED and final lines). Owner setting P-01;
+  row left TODO.
+- **Scout R-06 / R-07 / R-08**: answered. R-07 -> new T-137 (membrane coverage proof, shapely difference at 1 mm grid,
+  residue = named patch or failure). R-08 -> exact area / thickness identity added to T-125's acceptance (no AGPL / GPL
+  skeleton libraries). R-06 -> no task now: free Arabic OCR is not reliable enough to release a value (KITAB-Bench CER
+  0.54 - 0.79); a closed-list, two-reader check stays the design of T-092 (QUEUED, gate 4); the Tesseract Arabic data
+  needs an image change only the owner can make, not requested yet (no current task needs it).
+- **Recurring**: (a) unwired merged pieces (cause 1) unchanged: still 0 released quantity moved; V3.0 is the only path
+  and its rework is first. (b) Verifier wrote MERGED / REJECTED in the Branch column, so the board showed READY for
+  merged rows: Lead corrected the statuses and left a note for the verifier. (c) silent runs: worker 1 22:19, worker 3
+  22:59 (cause 4, owner setting).
+
 ## 2026-10-20 22:15 (lead run)
 
 - **T-122 / T-123 / T-124 / T-110: WORKED (MERGED 21:05, verifier run 45, each re-measured on the Drive DXFs).** 1F

@@ -1,5 +1,47 @@
 # Lead reports to the owner's main chat (newest first, last 10 entries)
 
+## LEAD REPORT 2026-10-21 00:20 UTC
+
+Repositories: Urban-Project-AI cloned (agents/control); working branch head 05e2eab (only verifier merges since 22:15, no
+owner-session commits). Drive readable, no new project files. UrbanProjectsManager not needed this run.
+
+PROGRESS (Alsenan; released concrete still 92.77 vs freelancer 111.81 m3, -17.0 %; no released number moved)
+- Checked and merged since 22:15, each re-measured by the checker: the new concrete ledger (beams 68.84 m3 on the
+  released part vs his 65.97, +4.4 %, 18 pieces held; main stair 5.011 vs his 8.131 m3, rule difference) and "a stair
+  flight drawn on two plans is measured once": tread marble 27.324 -> 20.424 m2 + 0 .. 3.450 held, steps 91.028 -> 68.028
+  lm + 0 .. 11.500 held (the 2F east copy is a true double count; the 2F west lane, 10 vs 11 treads, stays held).
+- The ONE opt-in candidate V3.0 was SENT BACK by the checker. Its numbers stand (straps 3.390 vs his 3.3925 m3, -0.07 %,
+  re-measured by the checker itself), but 197 lines differ from the released method and only about 33 have a before /
+  after row. The rework is small and first in the integration lane; day 7 (27 Oct) stays on track if worker 3's next
+  runs complete.
+- Waiting for the checker: two beam spans settled by printed section cuts (B23 1.0125, B20 0.900 m3): beams 64.82 ->
+  66.73 vs his 65.97 (-1.7 % -> +1.2 %), still 19 held and 7 drawn-vs-schedule conflicts.
+- Learned: a candidate must document every difference against the RELEASED method, not only the version under it; free
+  Arabic OCR on scans misreads too often to release anything (published error 54 - 79 %), so only closed lists checked by
+  two readers will be used. New on the board: a proof that every piece of a membrane outline is covered by a strip or a
+  named patch; an exact area / thickness check for the wall-run lengths; footing steel by bar population is claimable
+  (rebar -40.6 % is the largest money at risk; gate 3), with a research request on reading schedule tables.
+
+TEAM HEALTH (slots 22:09 - 23:59)
+- Code ran fully, STARTED + SUCCESS, all five self-check steps PASS: worker 2 22:39, verifier 22:49 (65 min, closed
+  23:56), worker 1 23:19; scout 23:50 SUCCESS (3 answers); Lead 22:09. 5 of 8 slots = 63 % (target 90 %).
+- Worker 2 23:39 BLOCKED by the platform: clone "Permission for this action was denied by the Claude Code auto mode
+  classifier. Reason: [Code from External]." and the claim push "... Reason: [Modify Shared Resources]."
+- INCOMPLETE, cause NOT KNOWN: worker 1 22:19 (no line at all), worker 3 22:59 (claimed the coverage registry at 23:01,
+  then nothing, no branch). What I did: released that task, put the V3.0 rework first, fixed three board statuses the
+  checker had written in the wrong column (merged rows showed READY on your dashboard) and left it a note.
+- Running now: worker 3 (00:00), verifier (23:49).
+
+QUESTIONS FOR OWNER
+None new; no question is open.
+
+NEEDS FIXING
+- Run reliability (P-01, 63 % in the last two hours): the same fix as before is yours: run Test B yourself and approve the
+  repo-attached configuration. Tried: board order, lane stocking, releasing stale claims.
+- Kuwait specification chapters (07100, 09200, 09300, 09400, 09900) as PDFs under 6 MB (soffit finish, Q-68 C).
+
+Team ids: MERGED T-105, T-135; REJECTED T-131 -> TODO r2; READY T-102; T-130 released; new T-137; T-136 claimable; R-09.
+
 ## LEAD REPORT 2026-10-20 22:20 UTC
 
 Repositories: Urban-Project-AI cloned (agents/control) and the working branch read (head 1513f1d; only verifier merges since
@@ -567,52 +609,3 @@ NEEDS FIXING (only you can do it)
 
 Team line: MERGED T-089, T-093, T-087, T-085; READY T-094 (verify first), T-064, T-073; new T-096 (first code task), T-097,
 T-098; T-095 after T-096; Q-58 rewritten, Q-59 relayed; R-07 new; 8 TODO (1 Track B).
-## LEAD REPORT 2026-10-20 04:20 UTC
-
-Repositories: Urban-Project-AI cloned (control; working branch head 2fb9553, no owner-session commits since 02:10);
-Drive readable (nothing new in the Alsenan folder). UrbanProjectsManager not needed this run.
-
-PROGRESS (Alsenan; the released BOQ did not change: nothing merged since 02:10)
-- Concrete: released 92.77 vs freelancer 111.81 m3 (-17.0 %), unchanged.
-- Membrane purchase (your "each room alone" answer), now built in the engine, waiting for the checker: 17 wet areas 19
-  rolls = hand 19 (21 with the pantry); strips 122.99 vs 125.27 m by hand (-1.8 %, same rolls: in 4 rooms the engine
-  starts from the other wall, e.g. ground-floor kitchen 15.30 vs 16.60 m); 67.01 m of roll left over; roofs 17 + 6 + 8 =
-  31 = hand, 25.76 m left over; each count proven minimal by a lower bound; top roof held by your answer. The freelancer
-  has no roll lines (not comparable). One gap with no rule: the small patches at the dome openings and slanted corners
-  (asked below).
-- Waterproofing wiring fix (rolls released, top roof shown as held): being built by worker 1 since 03:20.
-- Still held: plaster 1151.14 / paint 1191.13 m2 (beam, annex, door-height, ceiling answers), 1F landing floor.
-- Learned: finishing a method exposes the next rule gap (the patches); the engine's per-room search beats the hand table
-  on strip length without changing what is bought.
-- Gates: 0 done; 1 at risk (wiring fix in progress, cutting plan waits for the checker); 2 and 3 started; 4 started.
-
-TEAM HEALTH
-- Worker 2 03:39: all five self-check steps PASS; delivered the cutting plan in 13 minutes (the checker will look at depth).
-- Worker 1 03:19: claimed and pushed its branch; still running at 04:10 (no log line yet; normal for a long task).
-- Verifier 02:26 PASS (merged three); 02:52 nothing to check; 03:50 venv and codemap refused "[Untrusted Code
-  Integration]" / "[Code from External]", so the cutting plan waits. Done by me: it is first in the verifier's order with
-  a hand re-check of one room and one roof.
-- No log line, no claim: worker 1 02:19, worker 2 02:39, worker 3 02:59 and 03:59 (3 - 13 minutes each). Four of the five
-  finished worker runs since 02:10 left nothing. Nothing on the board can fix a run that ends before its first write.
-- Scout: next run 23:50 UTC.
-
-QUESTIONS FOR OWNER (9 open, all no-assumption questions; Q-50 to Q-57 are in the earlier entries and OWNER_QUESTIONS.md)
-1. NEW Q-58 Membrane patches the straight strips cannot reach. Problem: round the two dome openings on the second-floor
-   roof the 0.20 m upturn is 27.78 m = 5.56 m2; 5.24 m2 folds up from the strips, 0.31 m2 must be cut as small pieces;
-   the slanted (45 deg) parapet corners miss another 0.84 m2 (tiny bits, under 0.01 m2 each, in four ground-floor wet
-   areas and the first-floor west roof). No rule says where these come from; they are in no roll count now. Where: Drive
-   Alsenan, Alsenan_Architectural_P7757_Pages_05-06, the second-floor roof, its two domes and slanted corners; that roof
-   uses 17 rolls and leaves 11.91 m (11.91 m2) of roll over. Options: (A) cut them from the same roof's / room's own
-   leftover, no extra roll: roofs stay 31, wet areas 19 (21); (B) one extra roll per roof / room that needs patches: roofs
-   32, wet areas 23 with the pantry; (C) a ready-made collar / corner piece as its own line per opening and corner, rolls
-   unchanged. Recommendation: A (patches are normally cut on site from the same roof's offcut; your "each alone" answer
-   forbids sharing offcuts between rooms, not inside one; practice, not a code clause).
-
-NEEDS FIXING (only you can do it)
-1. Code runs for the scheduled agents: four of five finished worker runs since 02:10 left no log line, and the verifier
-   was refused at 03:50 after passing at 02:26. Already done: hand tasks for refused runs, verifier order set, separate-
-   command self-check. The one thing to do: option 2 of docs/agents/EXECUTION_PERMISSIONS.md section 5 (Claude Code
-   scheduled tasks with Urban-Project-AI attached; pause the Cowork ones after one clean run each).
-2. Upload the Kuwait specification chapters 07100, 09200, 09300, 09400, 09900 as separate PDFs under 6 MB (repeat).
-
-Team line: T-089 READY (verify first, depth check), T-093 CLAIMED worker 1; Q-58 new; 10 TODO (1 Track B); no merges.

@@ -4,7 +4,16 @@ At most 3 open. Each: the problem in one sentence, the measured gap, what to loo
 
 ## Open
 
-(none open)
+### R-09 Reading footing reinforcement from CAD schedule tables (lead 2026-10-21 00:15)
+Problem: rebar is the largest money at risk and is counted today from per-metre or merged-cell readings, never by bar
+population; the footing schedule on the structural DXF is a drawn table (lines + MTEXT / TEXT cells, some merged) with
+two notations, count ('n T d') and spacing ('T d @ s'). Gap: rebar earlier estimate 26.24 vs freelancer 44.19 t
+(-40.6 %); route defects B3 (per-metre bars used as an absolute count) and B4 (a footing with zero rebar from a merged
+cell, silent). Look for: robust ways to rebuild a table grid from DXF lines and text (cell detection, merged cells,
+rotated tables, text that overflows a cell) with permissive code; how bar-bending-schedule tools and BS 8666 / ACI 315
+practice turn 'T d @ s' into a bar count (end bars, first bar at cover or at s/2) and which convention a Kuwait drawing
+implies when its notes are silent; test cases (tables with merged and empty cells). Unblocks T-136 (footing steel), then
+T-009 (columns, beams).
 
 ## Answered
 

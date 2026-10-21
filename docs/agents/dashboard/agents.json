@@ -3,54 +3,54 @@
   "agent": "Lead planner",
   "role": "Plans the work, keeps the board and milestones, asks you questions",
   "cadence": "every 2 h (:09)",
-  "last_run": "2026-10-20T22:10:29Z",
+  "last_run": "2026-10-21T00:09:54Z",
   "result": "running",
-  "working_on": "Board restocked to 12 TODO across lanes S / A / I (V3.0.1 wiring, element register, stair flight once, footing rebar, beam section cuts); verifier told to check the V3.0 skeleton first; no owner question open",
-  "as_of": "2026-10-20T22:16:43Z"
+  "working_on": "Board: V3.0 candidate sent back for a small ledger rework (top of integration lane); 2 pieces merged (beam ledger, stair flight once); new membrane coverage proof task; no owner question",
+  "as_of": "2026-10-21T00:14:35Z"
  },
  {
   "agent": "Worker 1",
   "role": "Builds one board task per run on its own branch",
   "cadence": "hourly :19",
-  "last_run": "2026-10-20T21:19:34Z",
+  "last_run": "2026-10-20T23:19:15Z",
   "result": "ok",
-  "working_on": "Structural lane. Delivered: beam ledger V3 + stair concrete rework, beams 68.84 vs 65.97 m3 (+4.4 %), main stair 5.011 vs 8.131 m3 (T-105, waits for the checker)",
-  "as_of": "2026-10-20T22:16:43Z"
+  "working_on": "Structural: two beam spans settled by printed section cuts, +1.91 m3, beams 64.82 -> 66.73 vs 65.97 (waiting for the checker) [T-102]",
+  "as_of": "2026-10-21T00:14:35Z"
  },
  {
   "agent": "Worker 2",
   "role": "Builds one board task per run on its own branch",
   "cadence": "hourly :39",
-  "last_run": "2026-10-20T21:39:33Z",
+  "last_run": "2026-10-20T23:40:08Z",
   "result": "failed",
-  "working_on": "Architecture / finishes lane. Last delivered: stair arrivals counted once, 2F arrival marble 4.875 m2 (T-129, merged). Its 21:39 run left no log line (cause not known)",
-  "as_of": "2026-10-20T22:16:43Z"
+  "working_on": "Finishes: last run refused by the platform before it could claim the pool-court soffit rework; previous run delivered stair flight counted once (merged) [T-127 next]",
+  "as_of": "2026-10-21T00:14:35Z"
  },
  {
   "agent": "Worker 3",
   "role": "Builds one board task per run on its own branch",
   "cadence": "hourly :59",
-  "last_run": "2026-10-20T21:59:20Z",
-  "result": "failed",
-  "working_on": "Integration lane. Delivered: V3.0 opt-in candidate skeleton, straps 3.390 m3, GF facade 105.887 m, 1F porcelain range (T-131, waits for the checker). Its 21:59 run wrote only its start line",
-  "as_of": "2026-10-20T22:16:43Z"
+  "last_run": "2026-10-20T23:59:55Z",
+  "result": "running",
+  "working_on": "Integration: V3.0 candidate rework (a ledger row for each line that differs from the released method), then the coverage registry [T-131 r2, T-130]",
+  "as_of": "2026-10-21T00:14:35Z"
  },
  {
   "agent": "Verifier",
   "role": "Checks finished tasks, merges or rejects, keeps the scoreboard",
   "cadence": "hourly :49",
-  "last_run": "2026-10-20T21:49:26Z",
-  "result": "ok",
-  "working_on": "Merged blinding by member + undrawn columns (-2.268 m3) and stair arrivals once, each re-measured on the drawing (T-126, T-129); next: the V3.0 candidate (T-131), then T-105",
-  "as_of": "2026-10-20T22:16:43Z"
+  "last_run": "2026-10-20T23:49:35Z",
+  "result": "running",
+  "working_on": "Checking the beam section-cut piece; last run merged the beam/stair ledger and stair-flight-once, sent V3.0 back [T-102]",
+  "as_of": "2026-10-21T00:14:35Z"
  },
  {
   "agent": "Research scout",
   "role": "Finds techniques and tools for the biggest gap",
   "cadence": "daily 23:50 UTC",
-  "last_run": "2026-10-19T23:51:17Z",
+  "last_run": "2026-10-20T23:50:52Z",
   "result": "ok",
-  "working_on": "Open requests: Arabic / English notes on scans, membrane strip coverage proof, wall centrelines",
-  "as_of": "2026-10-20T22:16:43Z"
+  "working_on": "Answered Arabic notes on scans, strip coverage proof, wall centrelines; next: reading footing rebar schedules from CAD tables [R-09]",
+  "as_of": "2026-10-21T00:14:35Z"
  }
 ]
