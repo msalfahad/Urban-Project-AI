@@ -18,6 +18,10 @@ used twice is an error. Lines whose item code no key names stay UNMAPPED (listed
 
 CLI: python3 -I tools/alsenan_keymap.py --run RUN_DIR --reference BENCHMARK_NORMALISED.json --key-map KEY_MAP.json
      --out OUT.json [--markdown OUT.md]
+T-181 (opt-in, doors and windows in pcs AND m2, URBAN_ALSENAN_OPENINGS_KEY_MAP_V1):
+     python3 -I tools/alsenan_keymap.py --openings-register OPENINGS.csv --openings-raw FREELANCER_RAW_ROWS.json
+     --openings-key-map T181_OPENINGS_KEY_MAP.json --openings-out OUT.json [--openings-markdown OUT.md]
+     [--openings-engine-run RUN_DIR]
 """
 
 from __future__ import annotations
@@ -133,7 +137,373 @@ def run(run_dir, normalised_doc, key_map_doc):
     return result
 
 
+# ---- T-181: doors and windows like for like, pcs AND m2 (URBAN_ALSENAN_OPENINGS_KEY_MAP_V1) ----
+#
+# Opt-in path; nothing above changes. Input 1: an opening register, one row per physical opening (the T-150 r2 layout,
+# research/agents_t150/OPENINGS_T150.csv: ID, KIND, BOQ_LINE, CLASS_STATUS, WIDTH_M, WIDTH_LO_M, HEIGHT_M,
+# HEIGHT_STATUS, HEIGHT_SOURCE, FREELANCER_KEY, VERDICT, HOLD_CAUSE). Input 2: the freelancer's raw workbook rows
+# (FREELANCER_RAW_ROWS.json). Input 3: the openings key map, which names per opening class the register BOQ lines,
+# the engine item codes (pcs side of an engine run) and the reference rows, and maps the register's scope labels to
+# his rows. Rules (each is a test in tests/t181_openings_like_for_like):
+# - pcs and m2 are separate keys (CLASS[nr], CLASS[m2]); a unit is never converted into the other.
+# - a reference row's count / width / height / area come from its own cells; area must equal count x width x height
+#   (his formula) and the class's rows must re-add to the cover total, else refused.
+# - per opening: pcs 1 when the class is settled and no hold cause questions the opening; m2 = width x height only
+#   when the height is PRINTED (DRAWING-CONFIRMED) or ASSUMED with an owner-approved source (ASSUMED — OWNER-APPROVED,
+#   WORKFLOW_CONTROLS s.4); a held height, a width range, a missing width or a hold cause -> HELD (candidate kept),
+#   never 0. A class-held opening answers every class the key map lists as its candidates once as HELD.
+# - a class with no reference row is NOT COMPARABLE (a reference-set gap): listed, never a false positive.
+# - each of his rows is tied to the openings it covers (scope table); a register label the map does not know is an
+#   error; a label ending in "?" is an uncertain tie, listed and never counted.
+
+OPENINGS_SCHEMA = "URBAN_ALSENAN_OPENINGS_KEY_MAP_V1"
+OPENINGS_RESULT_SCHEMA = "URBAN_ALSENAN_OPENINGS_LIKE_FOR_LIKE_V1"
+EV_CONFIRMED, EV_ASSUMED, EV_HELD, EV_UNKNOWN = ("DRAWING-CONFIRMED", "ASSUMED — OWNER-APPROVED", "HELD", "UNKNOWN")
+_AREA_TOL = 1e-6
+
+
+def _num(v, where):
+    if v is None or (isinstance(v, str) and not v.strip()):
+        return None
+    try:
+        x = float(v)
+    except (TypeError, ValueError):
+        raise ValueError(f"{where}: {v!r} is not a number") from None
+    if not x == x or x in (float("inf"), float("-inf")) or x < 0:
+        raise ValueError(f"{where}: {v!r} is not a finite non-negative number")
+    return x
+
+
+def load_openings_key_map(doc):
+    """Validated openings key map: classes by name, register BOQ line -> class, scope label -> reference id."""
+    if doc.get("SCHEMA") != OPENINGS_SCHEMA:
+        raise ValueError(f"openings key map schema {doc.get('SCHEMA')!r} is not {OPENINGS_SCHEMA}")
+    classes, by_line, by_code, used_refs = {}, {}, {}, set()
+    for c in doc["classes"]:
+        name = c["class"]
+        if name in classes:
+            raise ValueError(f"class {name!r} repeated")
+        classes[name] = c
+        for ln in c["register_boq_lines"]:
+            if ln in by_line:
+                raise ValueError(f"register line {ln!r} answers two classes")
+            by_line[ln] = name
+        for code in c.get("engine_item_codes") or ():
+            if code in by_code:
+                raise ValueError(f"engine item code {code!r} answers two classes")
+            by_code[code] = name
+        for rid in c.get("reference_rows") or ():
+            if rid in used_refs:
+                raise ValueError(f"reference row {rid!r} used by two classes")
+            used_refs.add(rid)
+        if not c.get("reference_rows") and not str(c.get("not_comparable_reason") or "").strip():
+            raise ValueError(f"class {name!r} has no reference row and no not-comparable reason")
+    labels = dict(doc.get("scope_labels") or {})
+    for lab, rid in labels.items():
+        if rid not in used_refs:
+            raise ValueError(f"scope label {lab!r} -> {rid!r}: not a reference row of any class")
+    held = {}
+    for oid, h in (doc.get("held_class_candidates") or {}).items():
+        bad = [x for x in h["classes"] if x not in classes]
+        if bad or not str(h.get("source") or "").strip():
+            raise ValueError(f"held-class candidates of {oid!r}: unknown class {bad} or no source")
+        held[oid] = h
+    return {"classes": classes, "by_line": by_line, "by_code": by_code, "labels": labels, "held": held,
+            "approved_assumption_sources": tuple(doc.get("approved_assumption_sources") or ())}
+
+
+def _raw_index(raw_doc):
+    out = {}
+    for r in raw_doc["rows"]:
+        out[f"{r['file']}:{r['sheet']}:{r['row']}"] = r
+    return out
+
+
+def reference_opening_rows(raw_doc, km):
+    """Per reference row: count, width, height, area from its own cells (key map 'cells'); checks area = count x
+    width x height and the class sums against the cover totals. Returns {ref_id: row} and per-class sums."""
+    cells = km["doc"]["reference_cells"]
+    idx = _raw_index(raw_doc)
+    rows, per_class = {}, {}
+    for name, c in km["classes"].items():
+        pcs = m2 = 0.0
+        for rid in c.get("reference_rows") or ():
+            raw = idx.get(rid)
+            if raw is None:
+                raise ValueError(f"reference row {rid!r} not in the raw rows")
+            n = raw["row"]
+            got = {}
+            for field in ("count", "width", "height", "area"):
+                cell = raw["cells"].get(f"{cells[field]}{n}")
+                got[field] = _num(None if cell is None else cell.get("v"), f"{rid} {field}")
+                if got[field] is None:
+                    raise ValueError(f"{rid}: {field} cell {cells[field]}{n} is empty")
+            if abs(got["count"] * got["width"] * got["height"] - got["area"]) > _AREA_TOL:
+                raise ValueError(f"{rid}: area {got['area']} != count x width x height")
+            rows[rid] = dict(got, ref_id=rid, cls=name, label=None)
+            pcs += got["count"]
+            m2 += got["area"]
+        cover = c.get("cover_total")
+        if cover is not None and abs(cover["m2"] - m2) > _AREA_TOL:
+            raise ValueError(f"class {name!r}: rows sum {m2} m2 != cover total {cover['m2']} ({cover['ref_id']})")
+        per_class[name] = {"nr": pcs if c.get("reference_rows") else None,
+                           "m2": m2 if c.get("reference_rows") else None}
+    return rows, per_class
+
+
+def opening_quantities(reg_row, km):
+    """(class or None, pcs (status, qty, evidence), m2 (status, qty, evidence, candidate)) of one register row."""
+    oid = reg_row["ID"]
+    cls = km["by_line"].get(reg_row["BOQ_LINE"])
+    cause = str(reg_row.get("HOLD_CAUSE") or "").strip()
+    class_settled = cls is not None and reg_row.get("CLASS_STATUS") == EV_CONFIRMED
+    width = _num(reg_row.get("WIDTH_M"), f"{oid} width")
+    width_lo = _num(reg_row.get("WIDTH_LO_M"), f"{oid} width low")
+    height = _num(reg_row.get("HEIGHT_M"), f"{oid} height")
+    hs = str(reg_row.get("HEIGHT_STATUS") or "").strip().upper()
+    if hs not in ("PRINTED", "ASSUMED", "HELD"):
+        raise ValueError(f"{oid}: height status {hs!r} is not PRINTED / ASSUMED / HELD")
+    if hs == "ASSUMED":
+        src = str(reg_row.get("HEIGHT_SOURCE") or "")
+        if not any(s in src for s in km["approved_assumption_sources"]):
+            raise ValueError(f"{oid}: ASSUMED height without an owner-approved source ({src!r})")
+    if hs in ("PRINTED", "ASSUMED") and height is None:
+        raise ValueError(f"{oid}: height status {hs} without a height")
+    why = []
+    if cause:
+        why.append("hold cause: " + cause[:120])
+    if not class_settled:
+        why.append("class not settled")
+    pcs = ("RELEASED", 1.0, EV_CONFIRMED) if not why else ("HELD", None, EV_HELD)
+    cand = None
+    if width is not None and width_lo is not None:
+        why.append(f"width range {width_lo:.2f} .. {width:.2f}")
+        if height is not None:
+            cand = (round(width_lo * height, 6), round(width * height, 6))
+    if width is None:
+        why.append("width not established")
+    if hs == "HELD":
+        why.append("height HELD")
+    if height is not None and width is not None and cand is None:
+        cand = (round(width * height, 6),) * 2
+    if why:
+        m2 = ("HELD", None, EV_HELD, cand, "; ".join(why))
+    else:
+        m2 = ("RELEASED", round(width * height, 6), EV_CONFIRMED if hs == "PRINTED" else EV_ASSUMED, cand, "")
+    return cls, pcs, m2
+
+
+def openings_like_for_like(register_rows, raw_doc, okm_doc, engine_lines=None):
+    """Doors and windows compared like for like (pcs vs pcs, m2 vs m2) per opening class; JSON-ready dict."""
+    km = load_openings_key_map(okm_doc)
+    km["doc"] = okm_doc
+    ref_rows, ref_sums = reference_opening_rows(raw_doc, km)
+    label_of = {}
+    for lab, rid in km["labels"].items():
+        ref_rows[rid]["label"] = lab
+        label_of[rid] = lab
+    seen, per_open = set(), []
+    for r in register_rows:
+        oid = r["ID"]
+        if oid in seen:
+            raise ValueError(f"opening {oid!r} repeated in the register")
+        seen.add(oid)
+        cls, pcs, m2 = opening_quantities(r, km)
+        lab = str(r.get("FREELANCER_KEY") or "").strip()
+        uncertain = lab.endswith("?")
+        if lab and lab.lower() != "none" and lab.rstrip("?") not in km["labels"]:
+            raise ValueError(f"{oid}: freelancer label {lab!r} is not in the key map's scope labels")
+        per_open.append({"id": oid, "kind": r.get("KIND"), "floor": r.get("FLOOR"), "register_line": r["BOQ_LINE"],
+                         "class": cls, "pcs_status": pcs[0], "pcs": pcs[1], "pcs_evidence": pcs[2],
+                         "m2_status": m2[0], "m2": m2[1], "m2_evidence": m2[2], "m2_candidate": m2[3],
+                         "held_why": m2[4], "ref_id": None if not lab or lab.lower() == "none" or uncertain
+                         else km["labels"][lab], "uncertain_ref_id": km["labels"][lab.rstrip("?")] if uncertain
+                         else None, "register_verdict": r.get("VERDICT")})
+    eng, ref, not_comparable = [], [], {}
+    for name, c in km["classes"].items():
+        for unit in ("nr", "m2"):
+            key = f"{name}[{unit}]"
+            if c.get("reference_rows"):
+                ref.append({"id": f"REF:{key}", "trade": c["trade"], "unit": unit, "qty": ref_sums[name][unit],
+                            "key": key})
+    for o in per_open:
+        if o["id"] in km["held"]:
+            if o["class"] is not None:
+                raise ValueError(f"{o['id']}: held-class candidates given for an opening whose class is settled")
+            targets = list(km["held"][o["id"]]["classes"])
+        else:
+            targets = [o["class"]] if o["class"] else []
+        for name in targets:
+            c = km["classes"][name]
+            held_class = o["class"] != name
+            for unit, st, q in (("nr", o["pcs_status"], o["pcs"]), ("m2", o["m2_status"], o["m2"])):
+                if held_class:
+                    st, q = "HELD", None
+                row = {"id": f"{o['id']}:{name}[{unit}]", "trade": c["trade"], "unit": unit, "qty": q,
+                       "status": st, "key": f"{name}[{unit}]", "surface": o["id"]}
+                if c.get("reference_rows"):
+                    eng.append(row)
+                else:
+                    not_comparable.setdefault(name, []).append(row)
+    unclassed = [o["id"] for o in per_open if o["class"] is None and o["id"] not in km["held"]]
+    scored = S.score(eng, ref)
+    classes = []
+    for name, c in km["classes"].items():
+        mine = [o for o in per_open if o["class"] == name]
+        held_in = [o["id"] for o in per_open if name in km["held"].get(o["id"], {}).get("classes", ())]
+        conf = [o for o in mine if o["m2_status"] == "RELEASED" and o["m2_evidence"] == EV_CONFIRMED]
+        assu = [o for o in mine if o["m2_status"] == "RELEASED" and o["m2_evidence"] == EV_ASSUMED]
+        heldm = [o for o in mine if o["m2_status"] == "HELD"]
+        entry = {"class": name, "trade": c["trade"], "comparable": bool(c.get("reference_rows")),
+                 "not_comparable_reason": c.get("not_comparable_reason"),
+                 "pcs_settled": sum(1 for o in mine if o["pcs_status"] == "RELEASED"),
+                 "pcs_held": [o["id"] for o in mine if o["pcs_status"] == "HELD"], "class_held_candidates": held_in,
+                 "m2_confirmed": round(sum(o["m2"] for o in conf), 6), "m2_confirmed_n": len(conf),
+                 "m2_assumed_owner_approved": round(sum(o["m2"] for o in assu), 6), "m2_assumed_n": len(assu),
+                 "m2_held": [o["id"] for o in heldm],
+                 "m2_held_candidates_known": [o["m2_candidate"] for o in heldm if o["m2_candidate"]],
+                 "reference": ref_sums.get(name), "lines": {}}
+        for ln in scored["lines"]:
+            if ln["key"].startswith(name + "["):
+                entry["lines"][ln["unit"]] = {k: ln[k] for k in ("outcome", "engine_qty", "reference_qty",
+                                                                  "signed_error", "abs_error", "engine_ids")}
+        # same openings both sides: openings whose m2 this side releases and that one of his rows covers
+        same = [o for o in mine if o["m2_status"] == "RELEASED" and o["ref_id"]]
+        if same and c.get("reference_rows"):
+            e = sum(o["m2"] for o in same)
+            f = sum(ref_rows[o["ref_id"]]["width"] * ref_rows[o["ref_id"]]["height"] for o in same)
+            entry["same_openings_m2"] = {"openings": [o["id"] for o in same], "engine": round(e, 6),
+                                         "freelancer": round(f, 6), "diff": round(e - f, 6),
+                                         "pct": None if not f else round(100.0 * (e - f) / f, 3)}
+        classes.append(entry)
+    scope = []
+    for rid, rr in sorted(ref_rows.items(), key=lambda kv: (kv[1]["cls"], kv[0])):
+        cov = [o for o in per_open if o["ref_id"] == rid]
+        unc = [o["id"] for o in per_open if o["uncertain_ref_id"] == rid]
+        n_cov = len(cov)
+        e_m2 = None if any(o["m2_status"] != "RELEASED" for o in cov) or not cov else round(sum(o["m2"] for o in cov), 6)
+        wrong_class = [o["id"] for o in cov if o["class"] != rr["cls"]]
+        scope.append({"ref_id": rid, "label": rr["label"], "class": rr["cls"], "his_count": rr["count"],
+                      "his_width": rr["width"], "his_height": rr["height"], "his_m2": rr["area"],
+                      "openings": [o["id"] for o in cov], "uncertain_openings": unc,
+                      "openings_pcs_settled": sum(1 for o in cov if o["pcs_status"] == "RELEASED"),
+                      "engine_m2": e_m2, "class_mismatch": wrong_class,
+                      "scope": "DIFFERS" if n_cov != rr["count"] or wrong_class else
+                      "AGREES" if all(o["pcs_status"] == "RELEASED" for o in cov) else "COUNT HELD"})
+    engine_side = None
+    if engine_lines is not None:
+        erows = []
+        for ln in engine_lines:
+            name = km["by_code"].get(ln["item_code"])
+            if name is None or not km["classes"][name].get("reference_rows"):
+                continue
+            st = line_status(ln)
+            if st is None:
+                continue
+            u = S.norm_unit(ln["unit"])
+            erows.append({"id": ln["line_id"], "trade": km["classes"][name]["trade"], "unit": u, "qty": st[1],
+                          "status": st[0], "key": f"{name}[{u}]", "surface": (ln.get("location") or {}).get("element_id")})
+        es = S.score(erows, ref)
+        engine_side = {"lines": [{k: ln[k] for k in ("key", "unit", "outcome", "engine_qty", "reference_qty",
+                                                      "signed_error")} for ln in es["lines"]],
+                       "false_positives": es["false_positives"]}
+    return {"SCHEMA": OPENINGS_RESULT_SCHEMA, "key_map": okm_doc.get("SCHEMA"),
+            "side": okm_doc.get("register_side_label", "opening register"), "classes": classes,
+            "scored": {"buckets": scored["buckets"], "lines": scored["lines"],
+                       "false_positives": scored["false_positives"], "duplicates": scored["duplicates"]},
+            "not_comparable": {k: [{"id": r["id"], "unit": r["unit"], "qty": r["qty"], "status": r["status"]}
+                                   for r in v] for k, v in not_comparable.items()},
+            "not_a_supply_class": unclassed, "scope_rows": scope, "openings": per_open,
+            "engine_run_pcs": engine_side,
+            "rule": "pcs vs pcs and m2 vs m2 only; held never 0; ASSUMED — OWNER-APPROVED kept apart from "
+                    "DRAWING-CONFIRMED; no reference row = NOT COMPARABLE, never a false positive"}
+
+
+def _f(x, nd=3):
+    return "HELD" if x is None else f"{x:.{nd}f}"
+
+
+def openings_markdown(res):
+    out = [f"Side: {res['side']}. pcs and m2 never converted; HELD is never 0.", "",
+           "| Class | Unit | This side | Evidence split | Held | Freelancer | Outcome | Diff | % |",
+           "|---|---|---|---|---|---|---|---|---|"]
+    for c in res["classes"]:
+        ref = c["reference"] or {}
+        for unit in ("nr", "m2"):
+            ln = c["lines"].get(unit)
+            if unit == "nr":
+                this = f"{c['pcs_settled']} settled"
+                split = EV_CONFIRMED
+                held = ", ".join(c["pcs_held"] + [f"{x} (class)" for x in c["class_held_candidates"]]) or "-"
+            else:
+                tot = c["m2_confirmed"] + c["m2_assumed_owner_approved"]
+                this = f"{tot:.3f} on {c['m2_confirmed_n'] + c['m2_assumed_n']}"
+                split = f"confirmed {c['m2_confirmed']:.3f} ({c['m2_confirmed_n']}); assumed {c['m2_assumed_owner_approved']:.3f} ({c['m2_assumed_n']})"
+                held = f"{len(c['m2_held'])} openings" + (f" + {len(c['class_held_candidates'])} class held"
+                                                         if c["class_held_candidates"] else "")
+            if not c["comparable"]:
+                out.append(f"| {c['class']} | {unit} | {this} | {split} | {held} | none | NOT COMPARABLE | - | - |")
+                continue
+            r = ref.get(unit)
+            d = ln.get("signed_error") if ln else None
+            pct = "-" if d is None or not r else f"{100.0 * d / r:+.2f} %"
+            out.append(f"| {c['class']} | {unit} | {this} | {split} | {held} | {_f(r)} | {ln['outcome'] if ln else '-'} | "
+                       f"{'-' if d is None else f'{d:+.3f}'} | {pct} |")
+        s = c.get("same_openings_m2")
+        if s:
+            out.append(f"| {c['class']} same openings | m2 | {s['engine']:.3f} on {len(s['openings'])} | - | - | "
+                       f"{s['freelancer']:.3f} | DIAGNOSTIC | {s['diff']:+.3f} | {s['pct']:+.2f} % |")
+    out += ["", "| His row | Label | Class | His count x W x H = m2 | Openings covered | Settled pcs | m2 this side | Scope |",
+            "|---|---|---|---|---|---|---|---|"]
+    for s in res["scope_rows"]:
+        unc = f" (+? {', '.join(s['uncertain_openings'])})" if s["uncertain_openings"] else ""
+        out.append(f"| {s['ref_id']} | {s['label']} | {s['class']} | {s['his_count']:g} x {s['his_width']:g} x "
+                   f"{s['his_height']:g} = {s['his_m2']:.3f} | {', '.join(s['openings']) or '-'}{unc} | "
+                   f"{s['openings_pcs_settled']} | {_f(s['engine_m2'])} | {s['scope']} |")
+    if res.get("engine_run_pcs"):
+        out += ["", "Engine run (released BOQ lines only; no engine door / window m2 line exists):", "",
+                "| Key | Outcome | Engine | Freelancer | Diff |", "|---|---|---|---|---|"]
+        for ln in res["engine_run_pcs"]["lines"]:
+            d = ln["signed_error"]
+            eq = "no line" if ln["outcome"] == S.OUT_SILENT else _f(ln["engine_qty"])
+            out.append(f"| {ln['key']} | {ln['outcome']} | {eq} | {_f(ln['reference_qty'])} | "
+                       f"{'-' if d is None else f'{d:+.3f}'} |")
+    return "\n".join(out) + "\n"
+
+
+def _read_register(path):
+    import csv
+    with open(path, encoding="utf-8", newline="") as fh:
+        return list(csv.DictReader(fh))
+
+
+def main_openings(argv):
+    ap = argparse.ArgumentParser(description="T-181 doors and windows like for like (pcs and m2)")
+    ap.add_argument("--openings-register", required=True, help="opening register CSV (T-150 r2 layout)")
+    ap.add_argument("--openings-raw", required=True, help="FREELANCER_RAW_ROWS.json")
+    ap.add_argument("--openings-key-map", required=True, help=OPENINGS_SCHEMA + " file")
+    ap.add_argument("--openings-engine-run", help="run dir with BOQ_LINES.json: the engine's own pcs lines beside")
+    ap.add_argument("--openings-out", required=True)
+    ap.add_argument("--openings-markdown")
+    a = ap.parse_args(argv)
+    lines = None
+    if a.openings_engine_run:
+        lines = json.loads((Path(a.openings_engine_run) / "BOQ_LINES.json").read_text(encoding="utf-8"))
+    res = openings_like_for_like(_read_register(a.openings_register),
+                                 json.loads(Path(a.openings_raw).read_text(encoding="utf-8")),
+                                 json.loads(Path(a.openings_key_map).read_text(encoding="utf-8")), lines)
+    Path(a.openings_out).write_text(json.dumps(res, ensure_ascii=False, indent=1), encoding="utf-8")
+    md = openings_markdown(res)
+    if a.openings_markdown:
+        Path(a.openings_markdown).write_text(md, encoding="utf-8")
+    print(md, end="")
+    return 0
+
+
 def main(argv=None):
+    argv = sys.argv[1:] if argv is None else list(argv)
+    if "--openings-register" in argv:          # T-181 opt-in path; the v1 / v2 CLI below is unchanged
+        return main_openings(argv)
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     ap.add_argument("--run", required=True)
     ap.add_argument("--reference", required=True)
