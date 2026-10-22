@@ -1,0 +1,117 @@
+{
+ "task": "T-162",
+ "terms": {
+  "terms": {
+   "SW": {
+    "his": 275.16,
+    "geometric": 253.79,
+    "q07": 238.069
+   },
+   "SE": {
+    "his": 191.542,
+    "geometric": 150.482,
+    "q07": 144.647
+   },
+   "NE": {
+    "his": 258.0,
+    "geometric": 274.045,
+    "q07": 251.435
+   },
+   "NW": {
+    "his": 389.938,
+    "geometric": 63.425,
+    "q07": 63.425
+   },
+   "ROOF": {
+    "his": 230.084,
+    "geometric": 70.03,
+    "q07": 70.03
+   },
+   "FENCE": {
+    "his": 107.24,
+    "geometric": 0.0,
+    "q07": 0.0
+   },
+   "DRIP": {
+    "his": 50.876,
+    "geometric": 0.0,
+    "q07": 0.0
+   }
+  },
+  "faces_not_in_his_rows_m2": 210.761,
+  "his_openings_count": 36,
+  "facade_openings": 36,
+  "facade_open_printed_m2": 66.576,
+  "facade_open_assumed_m2": 12.76,
+  "facade_open_held_width_m": 24.98
+ },
+ "corners": {
+  "vertical": {
+   "CONVEX": {
+    "count": 26,
+    "measured_ml": 108.284,
+    "held_ml": [
+     26.199,
+     27.049
+    ]
+   },
+   "MOUTH_END": {
+    "count": 4,
+    "measured_ml": 20.7,
+    "held_ml": [
+     0.0,
+     0.0
+    ]
+   },
+   "CONCAVE": {
+    "count": 11,
+    "measured_ml": 46.2,
+    "held_ml": [
+     10.4,
+     10.7
+    ]
+   }
+  },
+  "external_vertical_ml": 128.984,
+  "parapet_top_outer_ml": {
+   "GF annex (+4.80)": 29.342,
+   "GF house (+6.00)": 28.77,
+   "1F (+11.00 / wave)": 50.569,
+   "2F (+14.40)": 29.8
+  },
+  "parapet_top_outer_total_ml": 138.481,
+  "opening_reveals_measured_ml": 189.63,
+  "opening_reveals_assumed_ml": 58.6,
+  "opening_jambs_held": [
+   "W11",
+   "W12",
+   "W04",
+   "W08",
+   "W05",
+   "W06",
+   "W07",
+   "W02",
+   "W09",
+   "W10",
+   "W19",
+   "W20",
+   "W24",
+   "W25",
+   "W21",
+   "W22",
+   "W23",
+   "W27",
+   "W28",
+   "W29"
+  ],
+  "slab_edge_over_open_air_m": 13.079
+ },
+ "his": {
+  "gross_m2": 1502.84,
+  "net_m2": 1469.9675,
+  "deduction_half_m2": 32.8725,
+  "corners_ml": 1297.35,
+  "corners_m2_equiv": 648.675
+ },
+ "t159_measured_m2": 1022.534
+}

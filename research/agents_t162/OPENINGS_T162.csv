@@ -1,0 +1,22 @@
+HIS_ROW,COUNT,HIS_W_M,HIS_H_M,HIS_M2,CENSUS_IDS (T-150),MATCH,NOTE
+29,1.0,1.2,2.0,2.4000,W01,MATCH,1.20 x 2.00 printed
+30,1.0,1.2,2.3,2.7600,W13,MATCH,1.20 x 2.30 printed
+31,1.0,1.2,1.7,2.0400,W26,MATCH,1.20 x 1.70 printed
+32,1.0,1.0,2.3,2.3000,"one of D-GF-01, D-GF-05, D-GF-06, D-2F-01",WIDTH_MATCH,door 1.00; height 2.20 owner reference (ASSUMED)
+33,1.0,2.45,1.5,3.6750,W14,MATCH_HEIGHT_DIFFERS,2.45 x 1.60 printed against his 1.50
+34,4.0,1.0,2.3,9.2000,"four of D-GF-01, D-GF-03, D-GF-05, D-GF-06, D-GF-09, D-2F-01",WIDTH_MATCH,"the census has 6 outside-class doors 0.90 / 1.00 wide (D-GF-05 class HELD, Q-67)"
+35,2.0,1.5,1.5,4.5000,W08; W09,WIDTH_MATCH,1.50 wide; heights not printed (HELD)
+36,2.0,1.0,1.5,3.0000,"two of W10, W25, W27",WIDTH_MATCH,1.00 wide; three candidates for two; heights HELD
+37,1.0,2.0,2.3,4.6000,D-GF-07,MATCH_HEIGHT_DIFFERS,main door 2.00 x 2.50 printed against his 2.30
+38,2.0,1.55,2.7,8.3700,W15; W16,MATCH_HEIGHT_DIFFERS,1.55 x 3.10 printed (W16 INFERRED twin) against his 2.70
+39,2.0,1.5,1.5,4.5000,W24; ?,PARTIAL,W24 1.55 wide (height HELD); no second 1.50 / 1.55 window left in the census
+40,6.0,1.0,2.3,13.8000,remaining outside doors + ?,PARTIAL,rows 32 + 34 + 40 hold 11 doors 1.00 x 2.30; the census has 6 outside-class doors: 5 doors not identified (the 1.00 m lift-shaft / arch openings are interior)
+41,1.0,0.5,1.5,0.7500,W18,MATCH_HEIGHT_DIFFERS,0.50 x 2.16 printed against his 1.50
+97,11.0,0.5,0.7,3.8500,W04; W05; W06; W07; W19; W20; W21; W22; W23; W28,PARTIAL,11 x 0.70 x 0.50 against the 10 small bathroom windows 0.60 wide (heights HELD) and W18 0.50 (row 41)
+NOT_IN_HIS_LIST,,6.33,,,W02,HELD,facade opening of the census with no row in his list
+NOT_IN_HIS_LIST,,6.57,4.3,28.2510,W03,PRINTED,facade opening of the census with no row in his list
+NOT_IN_HIS_LIST,,3.29,3.5,11.5150,W17,PRINTED,facade opening of the census with no row in his list
+NOT_IN_HIS_LIST,,1.95,,,W11,HELD,facade opening of the census with no row in his list
+NOT_IN_HIS_LIST,,1.95,,,W12,HELD,facade opening of the census with no row in his list
+NOT_IN_HIS_LIST,,1.2,,,W29,HELD,facade opening of the census with no row in his list
+NOT_IN_HIS_LIST,,1.0,,,one of W10 / W25 / W27,HELD,facade opening of the census with no row in his list
