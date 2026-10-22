@@ -1,0 +1,631 @@
+{
+ "floors": {
+  "1F|DRY": {
+   "rooms": 5,
+   "face_m": 112.9,
+   "own_gross_aoa": 378.21,
+   "own_gross_held": 0,
+   "own_held_rooms": 0,
+   "own_net_lo": 318.69,
+   "own_net_hi": 335.77,
+   "dwg_gross_conf_lo": 89.72,
+   "dwg_gross_conf_hi": 92.09,
+   "dwg_gross_held_lo": 338.17,
+   "dwg_gross_held_hi": 347.09,
+   "dwg_net_lo": 365.63,
+   "dwg_net_hi": 396.25,
+   "dwg_held_rooms": 0,
+   "freelancer_same_rooms": 441.26
+  },
+  "1F|WET": {
+   "rooms": 6,
+   "face_m": 57.78,
+   "own_gross_aoa": 193.56,
+   "own_gross_held": 0,
+   "own_held_rooms": 0,
+   "own_net_lo": 170.0,
+   "own_net_hi": 180.05,
+   "dwg_gross_conf_lo": 108.92,
+   "dwg_gross_conf_hi": 111.79,
+   "dwg_gross_held_lo": 110.07,
+   "dwg_gross_held_hi": 112.97,
+   "dwg_net_lo": 194.11,
+   "dwg_net_hi": 211.25,
+   "dwg_held_rooms": 0,
+   "freelancer_same_rooms": 0
+  },
+  "2F|DRY": {
+   "rooms": 2,
+   "face_m": 27.91,
+   "own_gross_aoa": 93.5,
+   "own_gross_held": 0,
+   "own_held_rooms": 0,
+   "own_net_lo": 78.21,
+   "own_net_hi": 85.58,
+   "dwg_gross_conf_lo": 0.0,
+   "dwg_gross_conf_hi": 0.0,
+   "dwg_gross_held_lo": 105.78,
+   "dwg_gross_held_hi": 108.57,
+   "dwg_net_lo": 89.52,
+   "dwg_net_hi": 100.65,
+   "dwg_held_rooms": 0,
+   "freelancer_same_rooms": 94.86
+  },
+  "2F|WET": {
+   "rooms": 1,
+   "face_m": 9.7,
+   "own_gross_aoa": 32.49,
+   "own_gross_held": 0,
+   "own_held_rooms": 0,
+   "own_net_lo": 28.72,
+   "own_net_hi": 30.73,
+   "dwg_gross_conf_lo": 0.0,
+   "dwg_gross_conf_hi": 0.0,
+   "dwg_gross_held_lo": 36.76,
+   "dwg_gross_held_hi": 37.73,
+   "dwg_net_lo": 32.73,
+   "dwg_net_hi": 35.97,
+   "dwg_held_rooms": 0,
+   "freelancer_same_rooms": 0
+  },
+  "GF|DRY": {
+   "rooms": 4,
+   "face_m": 107.35,
+   "own_gross_aoa": 272.75,
+   "own_gross_held": 102.78,
+   "own_held_rooms": 0,
+   "own_net_lo": 208.06,
+   "own_net_hi": 234.82,
+   "dwg_gross_conf_lo": 159.75,
+   "dwg_gross_conf_hi": 163.65,
+   "dwg_gross_held_lo": 263.01,
+   "dwg_gross_held_hi": 269.84,
+   "dwg_net_lo": 326.18,
+   "dwg_net_hi": 385.99,
+   "dwg_held_rooms": 0,
+   "freelancer_same_rooms": 388.08
+  },
+  "GF|WET": {
+   "rooms": 11,
+   "face_m": 86.51,
+   "own_gross_aoa": 148.21,
+   "own_gross_held": 109.62,
+   "own_held_rooms": 2,
+   "own_net_lo": 123.71,
+   "own_net_hi": 137.21,
+   "dwg_gross_conf_lo": 132.67,
+   "dwg_gross_conf_hi": 135.91,
+   "dwg_gross_held_lo": 158.35,
+   "dwg_gross_held_hi": 162.64,
+   "dwg_net_lo": 248.53,
+   "dwg_net_hi": 280.18,
+   "dwg_held_rooms": 2,
+   "freelancer_same_rooms": 24.3
+  },
+  "ST|DRY": {
+   "rooms": 3,
+   "face_m": 41.12,
+   "own_gross_aoa": 0,
+   "own_gross_held": 0,
+   "own_held_rooms": 3,
+   "own_net_lo": 0,
+   "own_net_hi": 0,
+   "dwg_gross_conf_lo": 122.6,
+   "dwg_gross_conf_hi": 122.6,
+   "dwg_gross_held_lo": 49.3,
+   "dwg_gross_held_hi": 50.6,
+   "dwg_net_lo": 147.21,
+   "dwg_net_hi": 160.55,
+   "dwg_held_rooms": 0,
+   "freelancer_same_rooms": 40.5
+  }
+ },
+ "vs_freelancer_same_rooms": {
+  "GF": {
+   "owner": 375.52,
+   "owner_has_held": false,
+   "dwg_lo": 422.76,
+   "dwg_hi": 433.49,
+   "freelancer": 388.08,
+   "rooms": [
+    "GF-01",
+    "GF-04",
+    "GF-08",
+    "GF-15"
+   ]
+  },
+  "1F": {
+   "owner": 378.21,
+   "owner_has_held": false,
+   "dwg_lo": 427.89,
+   "dwg_hi": 439.18,
+   "freelancer": 441.26,
+   "rooms": [
+    "1F-01",
+    "1F-04",
+    "1F-10",
+    "1F-11",
+    "1F-13"
+   ]
+  },
+  "2F": {
+   "owner": 93.5,
+   "owner_has_held": false,
+   "dwg_lo": 105.78,
+   "dwg_hi": 108.57,
+   "freelancer": 94.86,
+   "rooms": [
+    "2F-03",
+    "2F-01"
+   ]
+  },
+  "ST": {
+   "owner": 0.0,
+   "owner_has_held": true,
+   "dwg_lo": 67.95,
+   "dwg_hi": 67.95,
+   "freelancer": 40.5,
+   "rooms": [
+    "ST-GF"
+   ]
+  }
+ },
+ "house": {
+  "dwg_gross_lo": 1128.32,
+  "dwg_gross_hi": 1154.44,
+  "dwg_net_lo": 928.54,
+  "dwg_net_hi": 1043.43,
+  "owner_gross_dry_excl_shaft": 847.23,
+  "owner_net_dry_lo": 684.45,
+  "owner_net_dry_hi": 753.0,
+  "wet_owner_gross": 483.89,
+  "wet_dwg_gross_lo": 546.76,
+  "wet_dwg_gross_hi": 561.05,
+  "freelancer_plaster_gross": 1209.39,
+  "freelancer_plaster_net": 1151.14,
+  "freelancer_paint_net": 1191.13,
+  "freelancer_wet_spatter": 433.83
+ },
+ "pairs": [
+  {
+   "oids": [
+    "GF-01/o4",
+    "GF-02/o2"
+   ],
+   "rooms": [
+    "GF-01",
+    "GF-02"
+   ],
+   "len": [
+    0.99,
+    0.991
+   ],
+   "kind": [
+    "DOOR",
+    "DOOR"
+   ],
+   "door_block": "D315",
+   "diff_m": 0.001
+  },
+  {
+   "oids": [
+    "GF-02/o1",
+    "GF-03/o1"
+   ],
+   "rooms": [
+    "GF-02",
+    "GF-03"
+   ],
+   "len": [
+    0.791,
+    0.79
+   ],
+   "kind": [
+    "DOOR",
+    "DOOR"
+   ],
+   "door_block": "D315",
+   "diff_m": 0.001
+  },
+  {
+   "oids": [
+    "GF-04/o3",
+    "GF-05/o1"
+   ],
+   "rooms": [
+    "GF-04",
+    "GF-05"
+   ],
+   "len": [
+    0.79,
+    0.741
+   ],
+   "kind": [
+    "DOOR",
+    "DOOR"
+   ],
+   "door_block": "D315",
+   "diff_m": 0.049
+  },
+  {
+   "oids": [
+    "GF-08/o2",
+    "ST-GF/o3"
+   ],
+   "rooms": [
+    "GF-08",
+    "ST-GF"
+   ],
+   "len": [
+    0.99,
+    0.99
+   ],
+   "kind": [
+    "DOOR",
+    "DOOR"
+   ],
+   "door_block": "D120",
+   "diff_m": 0.0
+  },
+  {
+   "oids": [
+    "GF-08/o5",
+    "GF-15/o3"
+   ],
+   "rooms": [
+    "GF-08",
+    "GF-15"
+   ],
+   "len": [
+    0.99,
+    0.94
+   ],
+   "kind": [
+    "DOOR",
+    "DOOR"
+   ],
+   "door_block": "D115",
+   "diff_m": 0.05
+  },
+  {
+   "oids": [
+    "GF-10/o2",
+    "GF-11/o1"
+   ],
+   "rooms": [
+    "GF-10",
+    "GF-11"
+   ],
+   "len": [
+    0.741,
+    0.786
+   ],
+   "kind": [
+    "DOOR",
+    "DOOR"
+   ],
+   "door_block": "D315",
+   "diff_m": 0.045
+  },
+  {
+   "oids": [
+    "GF-11/o2",
+    "ST-GF/o2"
+   ],
+   "rooms": [
+    "GF-11",
+    "ST-GF"
+   ],
+   "len": [
+    0.891,
+    0.89
+   ],
+   "kind": [
+    "DOOR",
+    "DOOR"
+   ],
+   "door_block": "D315",
+   "diff_m": 0.001
+  },
+  {
+   "oids": [
+    "GF-12/o1",
+    "GF-14/o2"
+   ],
+   "rooms": [
+    "GF-12",
+    "GF-14"
+   ],
+   "len": [
+    0.73,
+    0.79
+   ],
+   "kind": [
+    "DOOR",
+    "DOOR"
+   ],
+   "door_block": "D315",
+   "diff_m": 0.06
+  },
+  {
+   "oids": [
+    "GF-13/o3",
+    "GF-14/o3"
+   ],
+   "rooms": [
+    "GF-13",
+    "GF-14"
+   ],
+   "len": [
+    0.741,
+    0.79
+   ],
+   "kind": [
+    "DOOR",
+    "DOOR"
+   ],
+   "door_block": "D315",
+   "diff_m": 0.049
+  },
+  {
+   "oids": [
+    "GF-15/o1",
+    "GF-16/o3"
+   ],
+   "rooms": [
+    "GF-15",
+    "GF-16"
+   ],
+   "len": [
+    0.79,
+    0.79
+   ],
+   "kind": [
+    "GAP",
+    "GAP"
+   ],
+   "door_block": null,
+   "diff_m": 0.0
+  },
+  {
+   "oids": [
+    "1F-01/o1",
+    "1F-13/o8"
+   ],
+   "rooms": [
+    "1F-01",
+    "1F-13"
+   ],
+   "len": [
+    0.93,
+    0.425
+   ],
+   "kind": [
+    "DOOR",
+    "DOOR"
+   ],
+   "door_block": "D115",
+   "diff_m": 0.505
+  },
+  {
+   "oids": [
+    "1F-01/o1",
+    "ST-1F/o4"
+   ],
+   "rooms": [
+    "1F-01",
+    "ST-1F"
+   ],
+   "len": [
+    0.93,
+    0.58
+   ],
+   "kind": [
+    "DOOR",
+    "DOOR"
+   ],
+   "door_block": "D115",
+   "diff_m": 0.35
+  },
+  {
+   "oids": [
+    "1F-01/o2",
+    "1F-03/o1"
+   ],
+   "rooms": [
+    "1F-01",
+    "1F-03"
+   ],
+   "len": [
+    0.79,
+    0.79
+   ],
+   "kind": [
+    "DOOR",
+    "DOOR"
+   ],
+   "door_block": "D315",
+   "diff_m": 0.0
+  },
+  {
+   "oids": [
+    "1F-02/o2",
+    "1F-04/o3"
+   ],
+   "rooms": [
+    "1F-02",
+    "1F-04"
+   ],
+   "len": [
+    0.79,
+    0.79
+   ],
+   "kind": [
+    "DOOR",
+    "DOOR"
+   ],
+   "door_block": "D315",
+   "diff_m": 0.0
+  },
+  {
+   "oids": [
+    "1F-04/o1",
+    "1F-13/o7"
+   ],
+   "rooms": [
+    "1F-04",
+    "1F-13"
+   ],
+   "len": [
+    0.93,
+    0.99
+   ],
+   "kind": [
+    "DOOR",
+    "DOOR"
+   ],
+   "door_block": "D115",
+   "diff_m": 0.06
+  },
+  {
+   "oids": [
+    "1F-07/o2",
+    "1F-08/o1"
+   ],
+   "rooms": [
+    "1F-07",
+    "1F-08"
+   ],
+   "len": [
+    0.79,
+    0.731
+   ],
+   "kind": [
+    "DOOR",
+    "DOOR"
+   ],
+   "door_block": "D315",
+   "diff_m": 0.059
+  },
+  {
+   "oids": [
+    "1F-07/o3",
+    "1F-13/o2"
+   ],
+   "rooms": [
+    "1F-07",
+    "1F-13"
+   ],
+   "len": [
+    0.89,
+    0.89
+   ],
+   "kind": [
+    "DOOR",
+    "DOOR"
+   ],
+   "door_block": "d220",
+   "diff_m": 0.0
+  },
+  {
+   "oids": [
+    "1F-10/o1",
+    "1F-13/o3"
+   ],
+   "rooms": [
+    "1F-10",
+    "1F-13"
+   ],
+   "len": [
+    0.83,
+    0.89
+   ],
+   "kind": [
+    "DOOR",
+    "DOOR"
+   ],
+   "door_block": "D215",
+   "diff_m": 0.06
+  },
+  {
+   "oids": [
+    "1F-11/o2",
+    "1F-12/o2"
+   ],
+   "rooms": [
+    "1F-11",
+    "1F-12"
+   ],
+   "len": [
+    0.79,
+    0.74
+   ],
+   "kind": [
+    "DOOR",
+    "DOOR"
+   ],
+   "door_block": "D315",
+   "diff_m": 0.05
+  },
+  {
+   "oids": [
+    "1F-11/o3",
+    "1F-13/o4"
+   ],
+   "rooms": [
+    "1F-11",
+    "1F-13"
+   ],
+   "len": [
+    0.89,
+    0.89
+   ],
+   "kind": [
+    "DOOR",
+    "DOOR"
+   ],
+   "door_block": "D215",
+   "diff_m": 0.0
+  },
+  {
+   "oids": [
+    "2F-01/o3",
+    "2F-03/o1"
+   ],
+   "rooms": [
+    "2F-01",
+    "2F-03"
+   ],
+   "len": [
+    0.89,
+    0.83
+   ],
+   "kind": [
+    "DOOR",
+    "DOOR"
+   ],
+   "door_block": "d220",
+   "diff_m": 0.06
+  },
+  {
+   "oids": [
+    "2F-02/o2",
+    "2F-03/o2"
+   ],
+   "rooms": [
+    "2F-02",
+    "2F-03"
+   ],
+   "len": [
+    0.79,
+    0.79
+   ],
+   "kind": [
+    "DOOR",
+    "DOOR"
+   ],
+   "door_block": "D315",
+   "diff_m": 0.0
+  }
+ ]
+}

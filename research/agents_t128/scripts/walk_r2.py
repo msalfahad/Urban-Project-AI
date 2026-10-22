@@ -40,7 +40,9 @@ def run_floor(fl):
     faces = {}
     for f in ns['faces']:
         faces[len(faces)] = f
-    return dict(walls=unary_union(by['1']), cols=unary_union(by['S-COL.BON']), wins=unary_union(by['W']),
+    drawn = unary_union([g for g in (unary_union(by['1']), unary_union(by['S-COL.BON']), unary_union(by['W']),
+                                     unary_union(doorcl), unary_union(gaps) if gaps else None) if g is not None])
+    return dict(drawn=drawn, walls=unary_union(by['1']), cols=unary_union(by['S-COL.BON']), wins=unary_union(by['W']),
                 doors=unary_union(doorcl), gaps=unary_union(gaps) if gaps else None, faces=ns['faces'],
                 doorrecs=ns['doors'])
 
@@ -54,6 +56,74 @@ def face_at(F, x, y, min_area=0.3):
 
 OPEN_R = {'GF-16': 0.08, 'GF-07': 0.03, 'GF-08': 0.03, 'GF-14': 0.03, '1F-13': 0.03, 'ST-1F': 0.03, '2F-01': 0.03, 'ST-2F': 0.03}
 TOL = 0.005  # the T-147 regions sit on the drawn lines (grown back by BUF with mitred joins)
+
+
+# r3 (checker 2026-10-22 16:11 on 1F-11): the barrier-buffer region can leak into the glazing-frame cavity at a window
+# jamb (two frame lines 2 x BUF apart): a zig-zag notch that adds contour length but almost no area. Rule: a walked
+# contour is checked against its area-equivalent drawn faces; a direction reversal across an edge under 0.12 m is an
+# artefact, never a wall face. SPIKE_MID = the checker's 0.12 m; REVERSAL = outer edges within 30 deg of antiparallel.
+SPIKE_MID, REVERSAL_DEG = 0.12, 150.0
+
+
+def _dirdeg(a, b):
+    return math.degrees(math.atan2(b[1] - a[1], b[0] - a[0]))
+
+
+def _turn(d1, d2):
+    t = abs(d2 - d1) % 360.0
+    return min(t, 360.0 - t)
+
+
+def _on_drawn(drawn, a, b, tol=0.01):
+    """an edge lies on a drawn barrier line when its quarter, mid and three-quarter points are within tol of one
+    (tol 0.01 > the 0.003 sagitta of a 0.2 m chord on the tightest Alsenan glazing arc; < the 0.015 BUF offset of a
+    cavity side, which is what an artefact edge shows)."""
+    return all(drawn.distance(Point(a[0] + (b[0] - a[0]) * t, a[1] + (b[1] - a[1]) * t)) <= tol for t in (0.25, 0.5, 0.75))
+
+
+def spikes(ring_coords, drawn=None):
+    """notches in a closed ring: edges (i, i+1, i+2) with edge i+1 under SPIKE_MID and edges i, i+2 reversed (within
+    30 deg of antiparallel), or two consecutive edges reversed with one under SPIKE_MID. With `drawn` (the union of
+    every barrier line), a reversal whose edges ALL lie on drawn lines is a real face (an acute corner where a curved
+    glazing band meets a wall, GF-15) and is not reported. Returns [(i, kind, mid_len)]."""
+    c = list(ring_coords)[:-1]
+    # drop zero-length edges first (duplicate vertices from the region builder)
+    c = [p for k, p in enumerate(c) if math.dist(p, c[k - 1]) > 1e-6]
+    n = len(c); out = []
+    E = [(c[k], c[(k + 1) % n]) for k in range(n)]
+    L = [math.dist(a, b) for a, b in E]; D = [_dirdeg(a, b) for a, b in E]
+    drawn_ok = (lambda ks: drawn is not None and all(_on_drawn(drawn, *E[j % n]) for j in ks))
+    for k in range(n):
+        if L[(k + 1) % n] < SPIKE_MID and _turn(D[k], D[(k + 2) % n]) >= REVERSAL_DEG:
+            if not drawn_ok((k, k + 1, k + 2)):
+                out.append((k, 'U', round(L[(k + 1) % n], 3)))
+        elif min(L[k], L[(k + 1) % n]) < SPIKE_MID and _turn(D[k], D[(k + 1) % n]) >= REVERSAL_DEG:
+            if not drawn_ok((k, k + 1)):
+                out.append((k, 'V', round(min(L[k], L[(k + 1) % n]), 3)))
+    return out
+
+
+def trim_notches(poly, drawn=None):
+    """replace each U notch (edges i, i+1, i+2) by the straight chord from the start of edge i to the end of edge i+2
+    (the mouth of the cavity, which lies on the drawn face line); repeat until none is left. Returns (poly, trims)."""
+    trims = []
+    for _ in range(20):
+        c = list(poly.exterior.coords)[:-1]
+        c = [p for k, p in enumerate(c) if math.dist(p, c[k - 1]) > 1e-6]
+        sp = [s for s in spikes(c + [c[0]], drawn) if s[1] == 'U']
+        if not sp:
+            break
+        k = sp[0][0]; n = len(c)
+        drop = {(k + 1) % n, (k + 2) % n}           # the two inner vertices of the notch
+        before = sum(math.dist(c[(k + j) % n], c[(k + j + 1) % n]) for j in range(3))
+        chord = math.dist(c[k], c[(k + 3) % n])
+        trims.append({'edge': k, 'removed_m': round(before - chord, 4), 'chord_m': round(chord, 4)})
+        c = [p for j, p in enumerate(c) if j not in drop]
+        poly = Polygon(c, [list(r.coords) for r in poly.interiors])
+    return poly, trims
+
+
+NOTCH_TRIM = {'1F-11'}   # rooms where the spike scan found a frame-cavity notch (checker 16:11: only 1F-11 of 32)
 
 
 def classify(F, poly, step=0.005):
@@ -143,7 +213,7 @@ if __name__ == '__main__':
     print('1F-11 mouth strip m2', round(mouth.area, 4), 'GF-14 niche strip m2', round(niche.area, 4))
     ADD = {'1F-11': mouth, 'GF-14': niche}
     R = [(rid, F, unary_union([poly, ADD[rid]]) if rid in ADD else poly) for rid, F, poly in R]
-    res = {}; allops = []
+    res = {}; allops = []; SCAN = {}
     for rid, F, poly in R:
         parts_m2 = round(poly.area, 4)
         if poly.geom_type == 'MultiPolygon':
@@ -161,6 +231,16 @@ if __name__ == '__main__':
         strip_m2 = round(raw.area - poly.area, 4)
         parts = list(poly.geoms) if poly.geom_type == 'MultiPolygon' else [poly]   # separate parts: walked one by one
         parts = [pp for pp in parts if pp.area > 0.05]
+        trims = []
+        if rid in NOTCH_TRIM:                     # r3: frame-cavity notches at the W17 jambs (checker 16:11)
+            tp = []
+            for pp in parts:
+                q, t = trim_notches(pp, F['drawn']); tp.append(q); trims += t
+            notch_m2 = round(sum(pp.area for pp in parts) - sum(q.area for q in tp), 4)
+            parts = tp
+        # r3 spike scan over EVERY room (any ring of any walked part): must be empty after the trims
+        scan = [s for pp in parts for r in [pp.exterior] + list(pp.interiors) for s in spikes(list(r.coords), F['drawn'])]
+        SCAN[rid] = scan
         dropped = [pp for pp in parts if rid in DROP_SMALL_PART and pp.area < 1.0]
         parts = [pp for pp in parts if pp not in dropped]
         tot, runs = {}, []
@@ -199,6 +279,10 @@ if __name__ == '__main__':
                     'by_class_m': {k: round(v, 3) for k, v in sorted(tot.items())},
                     'paintable_m': round(wallish + small_open, 3), 'openings': ops,
                     'virtual_m': round(sum(o['len'] for o in ops if o['kind'] == 'VIRTUAL'), 3)}
+        if trims:
+            res[rid]['notch_trims'] = trims
+            res[rid]['notch_trim_m'] = round(sum(t['removed_m'] for t in trims), 4)
+            res[rid]['notch_trim_m2'] = notch_m2
         print(rid, res[rid]['area_m2'], 'strip', strip_m2, res[rid]['contour_m'], 'paintable', res[rid]['paintable_m'],
               [(o['kind'], o['len'], o.get('door_block') or '', 'curved' if o.get('curved') else '') for o in ops])
     # one opening, one width: the same opening seen from its two rooms (midpoints within 0.35 m on one floor)
@@ -211,4 +295,9 @@ if __name__ == '__main__':
                               'door_block': oa.get('door_block') or ob.get('door_block'),
                               'diff_m': round(abs(oa['len'] - ob['len']), 3)})
     for p in pairs: print('PAIR', p)
-    json.dump({'rooms': res, 'opening_pairs': pairs}, open(OUT, 'w'), indent=1)
+    bad = {k: v for k, v in SCAN.items() if v}
+    print('SPIKE SCAN', len(SCAN), 'rooms;', 'none left' if not bad else f'LEFT {bad}')
+    json.dump({'rooms': res, 'opening_pairs': pairs,
+               'spike_scan': {'rooms_scanned': len(SCAN), 'rule': f'U / V reversal across an edge < {SPIKE_MID} m',
+                              'left': bad}}, open(OUT, 'w'), indent=1)
+    sys.exit(1 if bad else 0)

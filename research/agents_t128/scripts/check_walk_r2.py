@@ -38,9 +38,54 @@ def run(tf, name):
     print(name, {k: round(v, 3) for k, v in tot.items()}, 'contour', round(poly.exterior.length, 4), 'OK' if ok else 'FAIL')
     return ok
 
+# r3 adverse case (checker 2026-10-22 16:11, Alsenan 1F-11 at the W17 jambs): the region leaks into a glazing-frame
+# cavity at the jamb. Same villa K room; at the north-east jamb the walked ring dips into a 0.03 m wide, 0.075 m deep
+# cavity between two frame lines (x = 3.995 and 3.935, layer W) whose sides sit 0.015 m (BUF) off them: by hand the
+# ring is 0.15 m too long (two sides 0.075; the 0.03 bottom replaces 0.03 of north wall). Drawn face length = 11 + arc.
+# After trim_notches: contour = drawn face length, spike scan empty, VIRTUAL only the 1.00 open side.
+# Second adverse case: the same 0.03 x 0.075 recess drawn on all three sides (a real face, like the acute corner where
+# the GF-15 glazing band meets its wall): it must NOT be reported or trimmed (contour keeps its 0.15 m).
+def notch_fixture(tf, drawn_recess):
+    half = math.asin(0.75); cx = 4.0 - 2.0 * math.cos(half); cy = 1.5
+    east = arc(cx, cy, 2.0, -half, half)
+    ring = [(0, 0)] + east + [(3.98, 3.0), (3.98, 3.075), (3.95, 3.075), (3.95, 3.0), (0, 3)]
+    room = Polygon(ring)
+    walls = [LineString([(0, 3), (4, 3)]), LineString([(0, 0), (1.0, 0)]), LineString([(1.8, 0), (4, 0)]),
+             LineString([(0, 0), (0, 1.0)]), LineString([(0, 2.0), (0, 3)])]
+    wins = [LineString(east), LineString([(3.995, 3.0), (3.995, 3.2)]), LineString([(3.935, 3.0), (3.935, 3.2)])]
+    if drawn_recess:
+        wins += [LineString([(3.98, 3.0), (3.98, 3.075), (3.95, 3.075), (3.95, 3.0)])]
+    gaps = [LineString([(1.0, 0), (1.8, 0)])]
+    g = lambda geoms: unary_union([tf(x) for x in geoms])
+    F = dict(walls=g(walls), cols=LineString([(-50, -50), (-50, -49)]), wins=g(wins), doors=LineString([(-60, -60), (-60, -59)]),
+             gaps=g(gaps))
+    F['drawn'] = unary_union([F['walls'], F['wins'], F['gaps']])
+    return F, tf(room)
+
+def run_notch(tf, name):
+    # tolerance 1e-5 m: the 400-chord arc polyline is 2.5e-6 m shorter than the true arc
+    arc_len = 2 * 2.0 * math.asin(0.75); face = 11 + arc_len
+    F, poly = notch_fixture(tf, False)
+    before = W.spikes(list(poly.exterior.coords), F['drawn'])
+    q, trims = W.trim_notches(poly, F['drawn'])
+    after = W.spikes(list(q.exterior.coords), F['drawn'])
+    tot, _ = W.classify(F, q, step=0.002)
+    ok1 = (abs(poly.exterior.length - (face + 0.15)) < 1e-5 and len(before) == 1 and before[0][1] == 'U'
+           and abs(q.exterior.length - face) < 1e-5 and not after and len(trims) == 1
+           and abs(trims[0]['removed_m'] - 0.15) < 1e-4 and abs(tot.get('VIRTUAL', 0) - (1.00 - 0.01)) < 0.004)
+    F2, poly2 = notch_fixture(tf, True)
+    sp2 = W.spikes(list(poly2.exterior.coords), F2['drawn'])
+    q2, trims2 = W.trim_notches(poly2, F2['drawn'])
+    ok2 = not sp2 and not trims2 and abs(q2.exterior.length - (face + 0.15)) < 1e-5
+    print(name, 'cavity notch: contour', round(poly.exterior.length, 4), '->', round(q.exterior.length, 4), 'drawn face',
+          round(face, 4), 'scan', before, '->', after, '| drawn recess kept', round(q2.exterior.length, 4), sp2,
+          'OK' if ok1 and ok2 else 'FAIL')
+    return ok1 and ok2
+
 ident = lambda g: g
 mirror = lambda g: affinity.scale(g, xfact=-1, yfact=1, origin=(0, 0))
 rot = lambda g: affinity.translate(affinity.rotate(g, 37, origin=(0, 0)), 1000.0, -800.0)
 res = [run(ident, 'plain'), run(mirror, 'mirrored'), run(rot, 'rotated 37 deg + 1 km shift')]
+res += [run_notch(ident, 'plain'), run_notch(mirror, 'mirrored'), run_notch(rot, 'rotated 37 deg + 1 km shift')]
 print('check_walk', 'PASS' if all(res) else 'FAIL')
 sys.exit(0 if all(res) else 1)
