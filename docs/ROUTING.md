@@ -325,7 +325,7 @@ Risk **CRITICAL** (recommended validation L4). Ask about: stair, railing, riser,
 
 **Depends on:** `engine/source/arch_completeness.py`, `engine/source/arch_floor.py`, `engine/source/arch_rooms.py`, `engine/source/arch_v28.py`, `engine/source/boq_line.py`, `engine/source/knowledge.py`, `engine/source/material_result.py`, `engine/source/material_spec.py`, `engine/source/membrane_layout.py`, `engine/source/owner_finish_scope.py`
 
-**Other current modules:** `stair_fit_checks.py`, `stair_floor_residue.py`, `stair_generic.py`, `stair_riser_schedule.py`, `stair_scenario_checks.py`, `stair_steps_concrete.py`
+**Other current modules:** `stair_fit_checks.py`, `stair_floor_residue.py`, `stair_generic.py`, `stair_riser_schedule.py`, `stair_rule_calculator.py`, `stair_scenario_checks.py`, `stair_steps_concrete.py`
 
 **Earlier generations and tools** (check which method uses them before reuse): `engine/stair_assembly.py`, `engine/stair_completeness.py`
 
