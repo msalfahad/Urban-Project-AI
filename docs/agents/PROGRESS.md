@@ -1,9 +1,29 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
 Plain words, no task numbers. Measured numbers come from SCOREBOARD.md; anything not measured says so.
-Last update: 2026-10-22 16:20 UTC (Lead). Previous version: 2026-10-22 12:20 UTC. The released numbers did not change
+Last update: 2026-10-22 20:20 UTC (Lead). Previous version: 2026-10-22 16:20 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released default V2.9 + route G untouched).
-Your pool (teaching case) is now reconstructed and checked: the checker re-read the cut itself and confirmed the concrete
+Since 16:20 (newest first):
+- Stair inside the roof beams: the main stair's upper flights pass through two beams (0.40 x 0.75 and 0.45 x 0.75 m over
+  3.30 m). The released run already bills both beams at full depth over the stair (checker re-measured both, 0.0 %), so
+  the stair ledger had counted that concrete a second time: the two upper flights drop 1.055 -> 0.998 and 1.059 -> 1.001
+  m3, the staircase system 6.790 -> 6.675 m3 (0.863 of it still held on the riser-count conflict). New rule: the element
+  billed through a junction at full section owns the overlap. A reusable overlap check (owned volumes must add up to the
+  union) is merged; next it checks every stair foot and landing against the slabs.
+- Domes: the two terrace domes measured from the printed detail, 2 x 2.541 = 5.081 m3, VERIFIED by the checker; the
+  engine's 7.372 m3 rests on a convention where the drawing prints the values (+2.291 too much); tower dome, rings and
+  bars held; your client's no-dome request stays a separate scenario, never released.
+- Plaster / paint: the one-room fix passed (first-floor east master 59.45 m2 net, 0.0 %); block opening deductions by
+  physical scope merged (43 walls now carry a net, 476.21 m2 candidate, 28 openings held); stair-shaft walls merged;
+  your stair calculator merged; the default-value guard merged.
+- Railings and shutters (a category missing from every BOQ so far) handed in: 38.916 m of railings drawn and measured,
+  the main stair's inner balustrade held, 6 shutter leaves (area held); the freelancer has only one 'internal railing'
+  row of 18.95 m.
+- One problem found and being fixed: the guard's merge broke a repository-wide safety test (a module that touches steel
+  must be registered); no quantity is affected; fix first in the integration lane.
+- The fifth candidate extension (checked slab and stair steel, the dome ring) is with the checker; the pool steel stays
+  out of it until its bar lengths are redone on the verified 1.20 m wall.
+Earlier today: Your pool (teaching case) is now reconstructed and checked: the checker re-read the cut itself and confirmed the concrete
 wall is 1.20 m (rim to the structure line; your 1.15 m is the finished water depth) and the 0.15 m upstand above the deck
 (1.350 m2 outer face along 8.998 m). Pool concrete 7.202 m3 (base 4.374 + walls 2.828) VERIFIED for the concrete scope;
 engine 3.495 (-51.5 %), freelancer 12.348 (+71.5 %: pump room and steps drawn nowhere, base counted again in his wall
@@ -166,20 +186,19 @@ Not measured, and paused by your order (Alsenan first).
   development lengths, so a steel ledger is not complete until it has read them.
 
 ## Being worked on now
-- Checker (one extra run a day from 16:49): your stair calculator first (waiting 9 h), then the default-value guard, the
-  scoreboard's five separate measures and the block openings by physical scope; then the stair-shaft walls.
-- Structural (worker 1): dome scenarios (approved design vs your client's request vs a consultant revision), then the
-  formwork rework (beams running through a column), the angled strap beams at their axis length, then a cross-check that
-  every element (stair, pool, dome, tank, lift) appears on every storey and drawing it should.
-- Architecture and finishes (worker 2): the one-room plaster / paint fix, then railings, balustrades and shutters as BOQ
-  lines (a category missing from every BOQ so far), then black block units once the openings are checked.
-- Integration (worker 3): the fifth candidate extension (checked slab steel, stair / landing steel and the dome ring), then
-  the lessons-into-tests work; after that the guard and the missing stair flights go into the candidate.
+- Checker: the fifth candidate extension (slab / stair steel, dome ring) and the railings; then the safety-test fix.
+- Structural (worker 1): the formwork rework (beams running through a column), the pool bar lengths redone on the
+  verified 1.20 m wall (both pool details side by side), the stair feet and landings against the slabs, then the
+  every-element-on-every-storey cross-check and the angled strap beams.
+- Architecture and finishes (worker 2): black block units from the checked net block area, a plan = elevation = schedule
+  check of every opening, then a register of every drawing sheet and its revision.
+- Integration (worker 3): the safety-test fix, doors / windows in pieces AND m2 on the scoreboard, then the guard and the
+  missing upper stair flights into the candidate, then the verified pool (7.202 m3) and dome (5.081 m3) concrete.
 
 ## What is missing
 - Window sills / heads for 20 windows and 3 arch openings (designer window schedule asked); every door but the main entrance (2.20 m by your Q-55 C, stated as assumed).
 - Ceilings: wet-room board type, cove detail, drop heights at openings, dome openings (designer); bar counts of the 3 planted columns (designer).
-- Block walls: net area (openings rule, asked), black-block count (size, asked), wall tops under the dome openings and the lift tie beam (designer).
+- Block walls: net area on 32 of 75 walls (28 openings still held), black-block count (being investigated), wall tops under the dome openings and the lift tie beam (designer).
 - Ceilings over outside air: area settled (44.446 m2); the finish has no note on any sheet (specification / designer).
 - Slab under the main-stair winders (0.23 .. 0.25 m3) in no line yet; 16 beam pieces the drawings contradict or leave unmarked (designer list).
 - Roof levels and roof build-up (rooms under a roof), decor-ceiling levels and floor build-up, sunken-slab drops: three new

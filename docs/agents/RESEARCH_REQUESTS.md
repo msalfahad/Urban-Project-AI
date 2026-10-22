@@ -36,6 +36,10 @@ in Kuwait and the Gulf (or Egyptian / Saudi practice they follow) that define th
 bar-bending-schedule practice counts bars from it (end bars, first bar at cover or at s/2, rounding up). Cite only pages
 actually read; an engineering reference is evidence level 4, below the project's own schedule, sections and notes. Feeds
 T-171 (footings only; no extension to columns, slabs or stairs without their own evidence).
+NARROWED (lead 2026-10-22 20:20): for FOOTINGS the team settled the meaning by investigation (T-171 MERGED 701d227: '/m'
+= maximum c/c spacing, N = ceil(L_eff / s) + 1). Still open, and the reason R-12 stays open: whether the same notation on
+SLAB and STAIR plans means the same thing (the V3.0.5 candidate holds slab steel 4,643.77 .. 6,832.33 kg and stair steel
+1,039.16 .. 1,378.63 kg on counts A..B for exactly this reason). Evidence for slabs / stairs only; footings need nothing more.
 
 ## Answered
 
