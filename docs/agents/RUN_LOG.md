@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-22T03:50Z | Verifier | STARTED | run session_016bFtEv8Gtp6E62Et45TAWV | repo-attached routine | task state: READY tasks per Lead 00:20 VERIFIER QUEUE (T-142, T-152, T-139 r2, T-125 ...) | self-check pending
 - 2026-10-22 03:43 UTC | Worker 2 | STARTED | run unknown | repo msalfahad/Urban-Project-AI, branch agents/control | task state: none yet | self-check pending
 - 2026-10-22 03:35 UTC | Worker 3 | SUCCESS | T-165 READY (ca90323) | Two runs are both called 'released V2.9 + route G': the board's 92.77 vs 111.81 m3 (-17.03 %, 3 lines) and 1.1.0 / census use the run WITHOUT the route G profile (1,455 lines), the latest scoreboard notes (-17.16 %, 5 lines) and every V3.0.x Gate B diff use the PROFILED run (1,621); records name neither, so both are now pinned specs (tools/release_baseline.py, sha-pinned, refuses on any difference, manifests byte-identical; both reproduced on the Drive DXFs). All 8 differing figures come from the profile (columns 36.714 m3, ground beams 27.365, blinding 22.155, necks 10.855, steel +6,640 kg); facts change nothing, project id changes every line id; Lead must rule the baseline (Q-17 A: neither run is exact). | self-check codemap PASS / t061 PASS / freeze PASS; problem: none
 - 2026-10-22 03:01 UTC | Worker 3 | STARTED | run session_011GYdE9j912uSEg7PVbAdeG | repo-attached routine | task state: none yet | self-check pending
