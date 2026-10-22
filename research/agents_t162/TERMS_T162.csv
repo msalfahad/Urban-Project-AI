@@ -1,0 +1,50 @@
+GROUP,HIS_ROW,COUNT,HIS_H_M,HIS_L_M,HIS_M2,T159_FACES,DRAWING_GEOMETRIC_M2,DRAWING_Q07_M2,DIFF_GEOMETRIC_MINUS_HIS_M2,STATUS,CAUSE
+SW,51,1.0,6.0,1.5,9.0000,GF SW-9 EDGE 1.5,8.7750,7.5000,-0.2250,MAPPED,"GF SW-9 roof-edge part 1.50 m to the +6.00 parapet; he takes 6.00 from +-0.00, the drawing +0.15 -> +6.00"
+SW,52,1.0,10.0,6.9,69.0000,GF SW-7 FLUSH 6.77 + 1F SW-3 STOREY 6.77/PARAPET 6.77,73.4545,67.7000,+4.4545,MAPPED,"the 6.77 m of the SW face beside the 2F tower, GF + 1F to the +11.00 parapet ('130' sheet 07); his 10.00 = +1.00 -> +11.00 (no plinth), 6.90 against 6.77 m"
+SW,53,1.0,14.4,7.9,113.7600,GF SW-7 FLUSH 8.1 + 1F SW-3 STOREY 8.1 + 2F SW-1,115.4250,108.5400,+1.6650,MAPPED,"the 8.10 m full-height face under the 2F tower; his 14.40 from +-0.00 over 7.90 m, the drawing +0.15 -> +14.40 over 8.10 m"
+SW,54,1.0,5.25,4.0,21.0000,GF SW-1 + GF SW-2 + GF NW-1,26.2355,25.3892,+5.2355,MAPPED_AS_GROUP,"annex faces round the diwaniya corner (SW-1 3.10, arc SW-2 2.042, jog NW-1 0.50 = 5.642 m); his 4.00 m at 5.25 m: no 5.25 level is printed (sheet 07 '480'). Rows 54 + 55 + 60 = 18.50 m of annex faces against the drawing's 18.742 m: the annex is all there, split between his SW and SE groups differently"
+SW,55,1.0,4.8,13.0,62.4000,GF SW-3,29.9000,28.9400,-32.5000,MAPPED_AS_GROUP,annex SW face at the court (6.40 m) to +4.80; his 13.00 m: see row 54 (group 54 + 55 + 60)
+SE,58,1.0,14.4,6.75,97.2000,2F SE-1 + 1F SE-2 + GF SE-4,74.9350,71.1100,-22.2650,PARTIAL,"street face of the stair tower: only 4.50 m runs flush from the ground to +14.40 (GF SE-4, 1F SE-2, 2F); 2.30 m of the 2F face stands on the 1F roof (+9.70) over the porch; his one plane 14.40 x 6.75"
+SE,59,1.0,11.85,5.25,62.2125,1F SE-1,43.3870,43.3870,-18.8255,PARTIAL,"1F street face 7.50 m: 3.40 m from the annex roof +4.30, 4.10 m from +5.50 over the porch court, wave top +11.30 (printed '6800' + '200') to +10.085; his 5.25 m x 11.85 m: neither printed"
+SE,60,1.0,4.8,1.5,7.2000,GF SE-1,32.1600,30.1500,+24.9600,MAPPED_AS_GROUP,"annex street face 6.70 m, +-0.00 -> +4.80 (W11 / W12 in it); his 1.50 m: see row 54 (group 54 + 55 + 60)"
+SE,61,2.0,0.45,27.7,24.9300,,,,,NOT_IN_T159,frame bands 2 x 0.45 x 27.70: T-159 measures wall faces only; frames not measured
+NE,63,1.0,4.8,10.0,48.0000,GF NE-6,51.8400,48.6000,+3.8400,MAPPED,annex NE face 10.80 m to +4.80; his 10.00 m
+NE,64,1.0,10.0,19.2,192.0000,GF NE-4 + 1F NE-2,222.2050,202.8350,+30.2050,RULE_DIFFERENCE,"two faces: GF 19.37 m +-0.00 -> +6.00 and the 1F set back 1.50 m, 19.27 m +5.50 -> +11.00 (sheet 09); his one plane 10.00 x 19.20 (+1.00 -> +11.00): no plinth, the 0.50 m where both faces exist counted once (T-159 HAND_RIGHT)"
+NE,65,2.0,6.0,1.5,18.0000,,,,,UNRESOLVED,"2 x 1.50 x 6.00 'annex vertical': no 1.50 m wide, 6.00 m high face on sheet 09; the 1.50 m is the 1F set-back depth, whose end faces are 1F SE-1 / NW-5 (measured there): possible double count"
+NW,68,1.0,6.0,1.5,9.0000,,,,,UNRESOLVED,1.50 x 6.00 'annex face': the GF block projects 1.50 m beyond the 1F on the sea side; its SW return (SW-9 1.50 m) is his row 51; no NW face 1.50 m wide is drawn
+NW,69,1.0,9.8,6.75,66.1500,,,,,UNRESOLVED,"9.80 x 6.75 'high face': 6.75 m fits the 2F sea face (6.80 m), which is 4.70 m high (+9.70 -> +14.40) and stands 6.77 m behind the 1F sea face; 9.80 m is not printed; the 2F sea face is mapped to row 77 (4.70 m printed), so row 69 as the 2F face would be a double count"
+NW,70+71+74,1.0,5.7,4.95,109.8900,1F NW-1 + 1F NW-2 + 1F NW-3 + 1F NE-1 + 1F NW-4 + 1F SW-1 + 1F NW-5,63.4252,63.4252,-46.4648,PARTIAL,"rows 70 + 71 + 74 (4 x 4.95 m = 19.80 m at 5.50 / 5.70 m) against the 1F sea faces 12.628 m (+5.50 -> parapet, wave tops); 7.17 m of his length is not on the 1F sea face line (candidates: the pool-court walls, not house faces, or the GF pool glazing face NW-4)"
+NW,72,6.0,,9.65,181.8060,,,,,EXCLUDED,domes inside and outside 6 x 3.14 x 9.65 = 181.806: owner item 3 (no domes; T-161 renders)
+NW,73,2.0,,3.05,19.1540,,,,,ACCEPTED_12.834,"pool soffit 2 x 3.14 x 3.05 = 19.154: owner item 4 accepts the measured 12.834 (T-127, Checker 12.8343)"
+NW,75,1.0,0.45,8.75,3.9375,,,,,NOT_IN_T159,frame band 0.45 x 8.75: not measured in T-159
+ROOF,77,1.0,4.7,17.75,83.4250,2F NE-1 + 2F NW-1,70.0300,70.0300,-13.3950,PARTIAL,2F faces not in his elevation rows: NE 8.10 + NW 6.80 = 14.90 m at 4.70 (printed 420 + 50); his 17.75 m
+ROOF,78,1.0,1.7,48.47,82.3990,,,,,UNRESOLVED,"1F roof parapet, his 48.47 m x 1.70: the outer faces are in T-159 (50.569 m run); a run of 48.47 m fits the INNER face; 1.70 m is not printed (1.30 above +9.70 on sheets 07 / 09)"
+ROOF,79,1.0,0.7,28.4,19.8800,,,,,UNRESOLVED,"annex roof parapet, his 28.40 m x 0.70: outer run 29.342 m in T-159 (inner face fits 28.40); printed 0.50 (+4.30 -> +4.80)"
+ROOF,83,1.0,0.7,36.2,25.3400,,,,,UNRESOLVED,"'parapets of the annex roofs' 36.20 m x 0.70: GF house roof parapet outer run 28.770 m, printed 0.50 (+5.50 -> +6.00); 36.20 m fits no parapet run"
+ROOF,84,1.0,0.7,27.2,19.0400,,,,,UNRESOLVED,parapet 27.20 m x 0.70: as row 83 (together 63.40 m against 28.770 m)
+FENCE,87,1.0,2.4,37.65,107.2400,,,,,HELD_Q-65,"boundary wall 2.40 m high (rows 87-90, 107.24): owner Q-65 HELD; not a house face"
+DRIP,92,1.0,0.28,181.7,50.8760,,,,,HELD_UNANSWERED,drip edge 0.28 x 181.70 = 50.876: owner has not answered (notes item 3)
+NOT_IN_HIS_ROWS,,,,,,GF SW-5,16.0500,,,FACE_NOT_IN_HIS_ROWS,porch: house face under the 1F plate (3.00 m)
+NOT_IN_HIS_ROWS,,,,,,GF SW-6,7.4900,,,FACE_NOT_IN_HIS_ROWS,porch: flush face (1.40 m)
+NOT_IN_HIS_ROWS,,,,,,GF SW-9,2.6750,,,FACE_NOT_IN_HIS_ROWS,COVERED 0.50 m under the 1F plate
+NOT_IN_HIS_ROWS,,,,,,GF SW-8,0.3600,,,FACE_NOT_IN_HIS_ROWS,pool-court return
+NOT_IN_HIS_ROWS,,,,,,1F SW-2,18.4800,,,FACE_NOT_IN_HIS_ROWS,1F face over the porch (4.40 m)
+NOT_IN_HIS_ROWS,,,,,,GF SE-2,19.7950,,,FACE_NOT_IN_HIS_ROWS,"entrance face under the porch (3.70 m, D-GF-07)"
+NOT_IN_HIS_ROWS,,,,,,GF SE-3,2.1400,,,FACE_NOT_IN_HIS_ROWS,porch return
+NOT_IN_HIS_ROWS,,,,,,GF SE-5,0.2675,,,FACE_NOT_IN_HIS_ROWS,notch return
+NOT_IN_HIS_ROWS,,,,,,GF P-2,25.1450,,,FACE_NOT_IN_HIS_ROWS,side-passage face (Q-67 A)
+NOT_IN_HIS_ROWS,,,,,,GF NE-1,7.4900,,,FACE_NOT_IN_HIS_ROWS,porch return
+NOT_IN_HIS_ROWS,,,,,,GF NE-2,2.6750,,,FACE_NOT_IN_HIS_ROWS,pool-court return
+NOT_IN_HIS_ROWS,,,,,,GF NE-3,0.4280,,,FACE_NOT_IN_HIS_ROWS,pool-court return
+NOT_IN_HIS_ROWS,,,,,,GF NW-7,47.4000,,,FACE_NOT_IN_HIS_ROWS,GF sea face 7.90 m (W02 saloon glazing 6.33 m in it)
+NOT_IN_HIS_ROWS,,,,,,GF NW-2,1.3375,,,FACE_NOT_IN_HIS_ROWS,return
+NOT_IN_HIS_ROWS,,,,,,GF NW-3,0.8707,,,FACE_NOT_IN_HIS_ROWS,pool-court return
+NOT_IN_HIS_ROWS,,,,,,GF NW-4,29.9596,,,FACE_NOT_IN_HIS_ROWS,pool glazing face (W03)
+NOT_IN_HIS_ROWS,,,,,,GF NW-5,0.6457,,,FACE_NOT_IN_HIS_ROWS,pool-court return
+NOT_IN_HIS_ROWS,,,,,,GF NW-6,2.4075,,,FACE_NOT_IN_HIS_ROWS,pool-court face
+NOT_IN_HIS_ROWS,,,,,,GF P-1,25.1450,,,FACE_NOT_IN_HIS_ROWS,side-passage face (Q-67 A)
+HIS_CORNERS,walls (rows 51-75),,,,,,,,,M.L,A 281.70 + B 183.55 = 465.25
+HIS_CORNERS,roof face (row 77),,,,,,,,,M.L,A 51.85 + B 12.60 = 64.45
+HIS_CORNERS,parapets (rows 78-84),,,,,,,,,M.L,A 140.27 + B 280.59 = 420.86
+HIS_CORNERS,boundary wall (rows 87-90),,,,,,,,,M.L,A 73.65 + B 91.44 = 165.09
+HIS_CORNERS,drip edge (row 92),,,,,,,,,M.L,A 0.00 + B 181.70 = 181.70

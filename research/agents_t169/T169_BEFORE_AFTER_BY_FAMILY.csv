@@ -1,0 +1,8 @@
+floor,family,before_arch_run_lm,after_arch_run_lm,delta_arch_run_lm,before_openings_lm,after_openings_lm,delta_openings_lm,before_physical_blockwork_lm,after_physical_blockwork_lm,delta_physical_blockwork_lm,before_glass_aluminium_lm,after_glass_aluminium_lm,delta_glass_aluminium_lm
+GF,0.15,37.7885,37.7885,0.0,6.1236,5.997,-0.1266,31.6649,31.7915,0.1266,0.0,0.0,0.0
+GF,0.20,96.775,96.775,0.0,27.5414,27.5414,0.0,69.2336,69.2336,0.0,17.8414,17.8414,0.0
+GF,0.40,0.6,0.6,0.0,0.0,0.0,0.0,0.6,0.6,0.0,0.0,0.0,0.0
+1F,0.15,56.7357,56.7357,0.0,10.2683,10.1,-0.1683,46.4674,46.6357,0.1683,0.0,0.0,0.0
+1F,0.20,63.5988,63.5988,0.0,18.2855,18.2855,0.0,45.3133,45.3133,0.0,16.3855,16.3855,0.0
+2F,0.15,10.9,10.9,0.0,1.8,1.8,0.0,9.1,9.1,0.0,0.0,0.0,0.0
+2F,0.20,28.7,28.7,0.0,5.9,5.9,0.0,22.8,22.8,0.0,4.0,4.0,0.0

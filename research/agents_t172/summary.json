@@ -1,0 +1,154 @@
+{
+ "parapets": {
+  "ANNEX": {
+   "outer_top_arris_ml": 29.34209,
+   "inner_top_arris_ml": 28.427986,
+   "top_surface_m2": 5.777008,
+   "outer_face_m2": [
+    14.671045,
+    14.671045
+   ],
+   "inner_face_m2": [
+    14.213993,
+    14.213993
+   ],
+   "stop_ends": [],
+   "held_height_sides": [],
+   "t_mean_m": 0.2,
+   "edges_per_metre": 1.968847,
+   "start": "annex / passage wall x 15.073..15.273 rises to the +5.50 passage slab (T-159 P-1 band +0.30 -> +5.50): higher construction",
+   "end": "1F SE-1 face stands on the annex roof (T-159 OVER_LOWER_ROOF +4.30 -> +5.50)"
+  },
+  "GF": {
+   "outer_top_arris_ml": 28.769945,
+   "inner_top_arris_ml": 27.969945,
+   "top_surface_m2": 5.673989,
+   "outer_face_m2": [
+    14.384973,
+    14.384973
+   ],
+   "inner_face_m2": [
+    13.984973,
+    13.984973
+   ],
+   "stop_ends": [
+    {
+     "end": "end",
+     "status": "HELD",
+     "vertical_ml": [
+      0.0,
+      1.0
+     ],
+     "top_ml": [
+      0.0,
+      0.2
+     ]
+    }
+   ],
+   "held_height_sides": [],
+   "t_mean_m": 0.2,
+   "edges_per_metre": 1.972193,
+   "start": "1F NW-5 face rises from the GF roof at x 34.343 (1F outline)",
+   "end": "NE-4 ends at the 1.20 m side-passage mouth; the passage roof slab is also at +5.50; whether the parapet stops (stop-end) or turns along the mouth is not drawn on the sections read (A-A sheet 10, NE elevation sheet 09)"
+  },
+  "1F": {
+   "outer_top_arris_ml": 50.568811,
+   "inner_top_arris_ml": 48.783531,
+   "top_surface_m2": 9.935234,
+   "outer_face_m2": [
+    53.913514,
+    59.291514
+   ],
+   "inner_face_m2": [
+    52.082054,
+    57.185121
+   ],
+   "stop_ends": [],
+   "held_height_sides": [
+    "NE-1",
+    "SW-1",
+    "SW-2"
+   ],
+   "t_mean_m": 0.2,
+   "edges_per_metre": 1.964696,
+   "start": "2F NW-1 face rises from the 1F roof (2F outline)",
+   "end": "2F SE-1 face rises from the 1F roof between y 13.323 and 15.623 (2F outline)"
+  },
+  "2F": {
+   "outer_top_arris_ml": 29.8,
+   "inner_top_arris_ml": 28.3,
+   "top_surface_m2": 5.415193,
+   "outer_face_m2": [
+    14.9,
+    14.9
+   ],
+   "inner_face_m2": [
+    14.15,
+    14.15
+   ],
+   "stop_ends": [],
+   "held_height_sides": [],
+   "t_mean_m": 0.186409,
+   "edges_per_metre": 1.949664,
+   "start": "closed ring",
+   "end": "closed ring"
+  }
+ },
+ "vertical_corners": {
+  "convex_and_mouth_count": 34,
+  "confirmed_ml": 167.8,
+  "held_extra_ml_max": 11.9,
+  "held_bottom_corners": [],
+  "concave_count": 11
+ },
+ "frames": {
+  "source": "DXF elevation frames (Drive P7757_DXF_COMPRESSED.zip), layer 1 line chains, measured by research chain tool in the scratchpad; each frame line is drawn as a pair of lines 0.050 m apart",
+  "SE_frame_stair_tower": {
+   "lines_m": [
+    [
+     28.308,
+     28.15
+    ],
+    [
+     26.947,
+     26.79
+    ],
+    [
+     25.538,
+     25.37
+    ]
+   ],
+   "base": "+0.15 (stair-tower plinth line)",
+   "shape": "three nested inverted-U arches around the stair windows"
+  },
+  "NW_frame_pool_court_arch": {
+   "lines_m": [
+    [
+     9.316,
+     9.157
+    ],
+    [
+     7.893,
+     7.711
+    ]
+   ],
+   "base": "+5.50 (1F floor line)",
+   "shape": "two nested arches around the 1F pool-court arched opening; '45' printed at the crown"
+  }
+ },
+ "workbook_check": {
+  "cells_checked": 33,
+  "mismatches": [],
+  "A93": 547.47,
+  "B93": 749.88
+ },
+ "cells": {
+  "A_sum": 547.47,
+  "B_sum": 749.88
+ },
+ "parapet_totals": {
+  "outer_top_arris_ml": 138.4808,
+  "inner_top_arris_ml": 133.4815,
+  "top_surface_m2": 26.8014
+ }
+}

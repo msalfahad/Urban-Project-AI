@@ -1,0 +1,271 @@
+{
+ "stairs": [
+  {
+   "stair_id": "ST-01",
+   "name": "dog-leg stair in the shaft beside the lift (the 'main' stair of the census)",
+   "serves": "GF +1.00 -> 1F +5.50 -> 2F +9.70; ENDS at 2F",
+   "beside_lift": true,
+   "rows": [
+    {
+     "part": "MS1-L steps",
+     "m3": 0.27000053999999996
+    },
+    {
+     "part": "MS1-L waist",
+     "m3": 0.5930285758513933
+    },
+    {
+     "part": "MS1-U steps",
+     "m3": 0.36000072
+    },
+    {
+     "part": "MS1-U waist",
+     "m3": 0.7248127038183697
+    },
+    {
+     "part": "MS2-L steps",
+     "m3": 0.36288
+    },
+    {
+     "part": "MS2-L waist",
+     "m3": 0.7261841046566635
+    },
+    {
+     "part": "MS2-U steps",
+     "m3": 0.36288
+    },
+    {
+     "part": "MS2-U waist",
+     "m3": 0.7261841046566635
+    },
+    {
+     "part": "MS1-LD landing",
+     "m3": 0.2304,
+     "owner": "STAIR"
+    },
+    {
+     "part": "MS2-LD landing",
+     "m3": 0.48,
+     "owner": "STAIR"
+    },
+    {
+     "part": "1F-ARRIVAL landing",
+     "m3": 0.78,
+     "owner": "FLOOR_SLAB"
+    },
+    {
+     "part": "2F-ARRIVAL landing",
+     "m3": 0.78,
+     "owner": "FLOOR_SLAB"
+    }
+   ],
+   "measured_m3": 4.836370748983091,
+   "q62_deducted_m3": 0.090411,
+   "net_m3": 4.745959748983092,
+   "held": [
+    {
+     "id": "MS1-T",
+     "candidate_m3": [
+      0.12,
+      0.13
+     ],
+     "why": "Q-51 cond: well strip 0.10 x 1.20 unassigned, no soffit drawn"
+    },
+    {
+     "id": "MS1-T-SLAB",
+     "candidate_m3": [
+      0.2304,
+      0.2496
+     ],
+     "why": "soffit not drawn (horizontal projection 1.44 .. 1.56 m2 x 0.16)"
+    },
+    {
+     "id": "MS2-TR",
+     "candidate_m3": null,
+     "why": "landing levels scaled, not printed"
+    },
+    {
+     "id": "HEAD-CLASH",
+     "candidate_m3": [
+      0.1147,
+      0.1147
+     ],
+     "why": "designer clash (Q-46 RFI)"
+    },
+    {
+     "id": "B3-WITH-STAIR",
+     "candidate_m3": null,
+     "why": "owner Q-61 (2): HOLD, never duplicate concrete"
+    }
+   ]
+  },
+  {
+   "stair_id": "ST-01b",
+   "name": "lobby flight D1 inside the ST-01 shaft, under its half landing (court door lobby +0.30 -> GF hall +1.00)",
+   "serves": "lobby +0.30 -> GF +1.00 only",
+   "beside_lift": true,
+   "rows": [
+    {
+     "part": "D1 steps",
+     "m3": 0.126
+    },
+    {
+     "part": "D1 waist",
+     "m3": null
+    }
+   ],
+   "measured_m3": 0.126,
+   "q62_deducted_m3": 0,
+   "net_m3": 0.126,
+   "held": [
+    {
+     "id": "D1-WAIST",
+     "candidate_m3": null,
+     "why": "no thickness printed; on fill"
+    }
+   ]
+  },
+  {
+   "stair_id": "ST-02",
+   "name": "round (part-curved) stair in the reception",
+   "serves": "GF +1.00 -> 1F +5.50; ENDS at 1F",
+   "beside_lift": false,
+   "rows": [
+    {
+     "part": "RS-S steps",
+     "m3": 0.31821372
+    },
+    {
+     "part": "RS-S waist",
+     "m3": 0.6534462395514832
+    },
+    {
+     "part": "RS-A steps",
+     "m3": 0.150669375
+    },
+    {
+     "part": "RS-A waist",
+     "m3": 0.2722692664797847
+    },
+    {
+     "part": "RS-LD landing",
+     "m3": 0.2256,
+     "owner": "STAIR"
+    }
+   ],
+   "measured_m3": 1.620198601031268,
+   "q62_deducted_m3": 0.059061,
+   "net_m3": 1.5611376010312679,
+   "held": [
+    {
+     "id": "RS-C",
+     "candidate_m3": [
+      0.33,
+      0.33
+     ],
+     "why": "owner Q-50 / Q-51: curved parts HELD (CAD tread areas 4.1077 m2)"
+    },
+    {
+     "id": "RS-C-SOFFIT",
+     "candidate_m3": null,
+     "why": "not drawn (Q-51 step 5); see the walking-line indication in the report, not a quantity"
+    },
+    {
+     "id": "CA-JUNCTION",
+     "candidate_m3": [
+      0.0,
+      0.09
+     ],
+     "why": "CA level not stated"
+    }
+   ]
+  },
+  {
+   "stair_id": "ST-03",
+   "name": "entrance stair E1 (court +0.15 -> GF +1.00, outside)",
+   "serves": "court +0.15 -> GF +1.00 only",
+   "beside_lift": false,
+   "rows": [
+    {
+     "part": "E1 steps",
+     "m3": 0.357
+    },
+    {
+     "part": "E1 waist",
+     "m3": null
+    }
+   ],
+   "measured_m3": 0.357,
+   "q62_deducted_m3": 0,
+   "net_m3": 0.357,
+   "held": [
+    {
+     "id": "E1-WAIST",
+     "candidate_m3": null,
+     "why": "not in a slab panel, no thickness printed"
+    }
+   ]
+  }
+ ],
+ "reconciliation": {
+  "ST01": {
+   "freelancer": 8.1312,
+   "own_net": 4.745959748983092,
+   "own_flights_net": 4.035559748983091,
+   "own_landings": 0.7103999999999999,
+   "engine": 2.7859805860857927,
+   "engine_scope": "GF -> 1F only (1F -> 2F folded away, D-T184-1)",
+   "flights_sloped_m": [
+    3.088690499226007,
+    3.775066165720675,
+    3.782208878420122,
+    3.782208878420122
+   ],
+   "flight_equiv_thickness_m": 0.23308329655397986,
+   "his_flights_minus_own": {
+    "length_5_3_vs_drawn": 2.2753333942795924,
+    "thickness_0_28_vs_drawn": 0.8123068567373168,
+    "residual": -2.220446049250313e-16
+   },
+   "his_landings_minus_own": {
+    "area_5_04_vs_4_44": 0.11999999999999994,
+    "thickness_0_20_vs_0_16": 0.1776,
+    "residual": 1.3877787807814457e-16
+   }
+  },
+  "ST01b": {
+   "freelancer": null,
+   "own_net": 0.126,
+   "engine": null
+  },
+  "ST02": {
+   "freelancer": 5.5104,
+   "own_net": 1.5611376010312679,
+   "engine": 0.9005718529491811,
+   "held": [
+    "RS-C",
+    "RS-C-SOFFIT",
+    "CA-JUNCTION"
+   ],
+   "lengths": {
+    "walking_line_plan_m": 8.86758683995183,
+    "walking_line_sloped_m": 9.944048288503375,
+    "outer_string_plan_m": 9.887295455429516,
+    "outer_string_sloped_m": 10.863176856838756,
+    "both_strings_plan_m": 17.73517367990366
+   },
+   "his_length_unexplained_m": 5.536823143161243
+  },
+  "ST03": {
+   "freelancer": 1.4112,
+   "own_net": 0.357,
+   "engine": 0.9482674779781379,
+   "his_run_1_8_vs_drawn_plan_1_2": 0.6000000000000001
+  },
+  "DOMES": {
+   "freelancer": 6.78,
+   "engine": 7.371715997049325,
+   "own": "T-185"
+  }
+ }
+}
