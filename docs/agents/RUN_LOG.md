@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-22 13:52 UTC | Verifier | STARTED | run unknown | repo-attached routine | task state: 6 READY waiting (T-171, T-150 r2, T-172, T-162 r2, T-128 r2, T-158) per Lead 12:20 queue; T-183 r2 status to check | self-check pending
 - 2026-10-22 13:42 UTC | Worker 2 | STARTED | run session_013nud3o8krkp4hSffAL8Hbn | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-22T13:18Z | Worker 3 | SUCCESS | T-186 READY (agents/task-T-186 2e8bf5c; default guard, unwired) | New guard holds a line that uses a convention where the drawings print the value, a partial footprint, a finished depth as RC height, a missed element, a double count, a client change as approved design or an over-wide deduction (32 tests, villa Q pool right 10.865 vs old 7.925 m3). On the released baseline A (re-run, b96185d4 reproduced) it holds 14.554 m3 concrete (pool 3.495, domes 7.372, stairs 3.687) and 1,885.36 kg beam bars (bottom extension 0.15 conv vs printed 7.5 cm) and finds 3 silent omissions (main stair 1F->2F, lobby flight, third dome); wiring as V3.0.x waits on T-167. ERS: read, s.2-4 + s.7 row | self-check codemap PASS / t061 PASS / freeze PASS; Drive read OK (P7757_DXF_COMPRESSED.zip, ST7757 dxf.dxf); problem: none
 - 2026-10-22T13:01Z | Worker 3 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
