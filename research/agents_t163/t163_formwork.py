@@ -28,7 +28,10 @@ Q-26 A, Q-28 (provisional only), Q-21 C, UP-QTY-STATUS-001 (released / held / un
 
 Usage:
   python -I t163_formwork.py --check                       synthetic villa (not Alsenan): hand values asserted
-  python -I t163_formwork.py <faces.json> <out_dir> [--r1] Alsenan ledger (--r1: the rejected r1 walk, byte for byte) (faces.json = T-139 slab_faces.py output of
+  python -I t163_formwork.py <faces.json> <out_dir> [--r1|--r2] Alsenan ledger r3 (--r1 / --r2: the rejected r1 / r2
+                                                           files, byte for byte; r3 = r2 walk + domes by scenario from
+                                                           the merged T-185 ledger (S0 baseline, S1 beside, never
+                                                           released) and one owner (the ring) for the dome-opening face) (faces.json = T-139 slab_faces.py output of
                                                            the structural DXF, kept in the private scratch, never
                                                            committed); writes FORMWORK_LINES.csv, ledger_summary.json,
                                                            JOINT_BY_COLUMN.csv
@@ -382,6 +385,7 @@ def check():
         side, joint, edge = _r2_sums(f, k, d, t)
         assert all(abs(x - y) < 2e-3 for x, y in zip((side, joint, edge), exp)), ((side, joint, edge), exp)
     check_r2_adverse()
+    check_dome_scenarios()
     print("T-163 check PASS: walker sides 9.800 / joints 0.560 / edges 2.940 m2 (plain, mirrored, mm; r1 and r2); "
           "element method equal on the tee-free bay; footing 2.160; column 5.250; flight risers 2.000 + soffit 3.706; "
           "held depth -> held length; bad inputs refused; r2 adverse: through beam narrower than the column face "
@@ -520,6 +524,171 @@ def geomB(b):
 
 def rd(p):
     return list(csv.DictReader(open(os.path.join(RES, p), encoding="utf-8")))
+
+
+# ------------------------------------------------------------------- r3: dome formwork by scenario (D-T163-2 / -3)
+S0, S1 = "S0_APPROVED_DESIGN", "S1_CLIENT_REQUESTED"
+S1_STATUS = "S1_NOT_RELEASED"            # shown beside the baseline, never summed into it (owner 2026-10-22 11:50)
+OWNED = "OWNED_BY_OTHER_LINE"            # a face listed once, measured on the line named in its basis
+
+
+class ScenarioLeak(ValueError):
+    """a scenario-tagged element's baseline (S0) line carries an S1 removal, or a baseline line is missing."""
+
+
+def dome_lines(ledger):
+    """r3 (Checker 2026-10-22 21:58, D-T163-2 / D-T163-3). Formwork of the domes READ from the merged scenario ledger
+    (T-185 T185_LEDGER.json 'lines'), never re-derived and never taken from the client request:
+
+      baseline = S0_APPROVED_DESIGN rows only. Per dome:
+        shell soffit form  = the S0 'shell intrados (soffit form ...)' row: CALCULATED value as printed in the ledger;
+                             HELD when the row is HELD / absent while the S0 shell exists (never 0);
+        shell top form     = the S0 'shell top (extrados) formwork' row (HELD in T-185: casting method not specified);
+        ring formwork      = HELD while the S0 ring concrete row is HELD (p.5 plan vs p.7 detail conflict); the ring
+                             line OWNS the dome-opening face (inner face over the ring depth): the slab-thickness band
+                             at the opening is never a separate slab-edge line (D-T163-3, one owner per face);
+        drum formwork      = HELD while the S0 drum row is HELD;
+        a dome with no S0 shell row is listed HELD (never 0).
+      S1_CLIENT_REQUESTED rows are listed with status S1_NOT_RELEASED (never in the baseline total): the ring
+      formwork m2 the ledger prints, the removed shells as 'removed in S1', HELD / UNKNOWN items as such.
+
+    Guard: an S0 row with status OMITTED_BY_SCENARIO, or an S0 formwork / intrados row with qty 0, is the client request
+    leaking into the approved design -> ScenarioLeak. -> list of dict(element, floor, item, method, m2, status,
+    held_range, basis); floor 'roof'."""
+    rows = ledger["lines"] if isinstance(ledger, dict) else ledger
+    out = []
+
+    def put(item, m2, status, basis, held_range=None, method="G"):
+        out.append(dict(element="DOME", floor="roof", item=item, method=method, m2=m2, status=status,
+                        held_range=held_range, basis=basis))
+
+    domes = []
+    for r in rows:
+        if r.get("dome") and r["dome"] not in domes:
+            domes.append(r["dome"])
+    for dm in domes:
+        s0 = [r for r in rows if r.get("dome") == dm and r.get("scenario") == S0]
+        for r in s0:
+            if r.get("status") == "OMITTED_BY_SCENARIO":
+                raise ScenarioLeak(f"{dm}: S0 row '{r['item']}' is OMITTED_BY_SCENARIO (a client removal in S0)")
+            if (("form" in r["item"] or "intrados" in r["item"]) and r.get("unit") == "m2"
+                    and r.get("qty") is not None and not isinstance(r["qty"], list) and float(r["qty"]) == 0.0):
+                raise ScenarioLeak(f"{dm}: S0 row '{r['item']}' is 0 m2")
+
+        def row(key):
+            return next((r for r in s0 if r["item"].startswith(key)), None)
+
+        shell = row("shell concrete")
+        if shell is None:
+            put(f"{dm} S0: no S0 shell row in the scenario ledger", None, HELD,
+                "T-185 ledger lists no approved-design shell for this dome: not established, never 0")
+            continue
+        intr = row("shell intrados")
+        if intr and intr["status"] == CALC and intr.get("qty") is not None:
+            put(f"{dm} S0 approved design: shell soffit form (intrados {intr['basis']})", float(intr["qty"]), CALC,
+                f"T185_LEDGER.json S0 '{intr['item']}' {float(intr['qty']):.3f} m2 as printed (T-185 MERGED 94e39ee6); "
+                "contact area of the soffit form = intrados area")
+        else:
+            put(f"{dm} S0 approved design: shell soffit form", None, HELD,
+                "shell " + (shell["status"] + ": " + shell["basis"])[:160] if not intr else
+                f"T-185 intrados {intr['status']}: {intr['basis'][:140]}")
+        top = row("shell top (extrados) formwork")
+        put(f"{dm} S0 approved design: shell top (extrados) form", None, HELD,
+            ("T-185: " + top["basis"][:140]) if top else "not listed in T-185: casting method not specified")
+        ring = row("ring beam concrete")
+        if ring is not None or row("support") is None:
+            put(f"{dm} S0 approved design: ring beam faces (inner face = the dome-opening face over the ring depth, "
+                "outer downstand, soffit)", None, HELD,
+                ("T-185 S0 ring " + ring["status"] + ": " + ring["basis"][:150]) if ring else
+                "no S0 ring row in T-185: ring not established")
+        drum = row("drum")
+        if drum is not None:
+            put(f"{dm} S0 approved design: drum faces (1.30 m)", None, HELD, "T-185: " + drum["basis"][:150])
+        sup = row("support")
+        if sup is not None:
+            put(f"{dm} S0 approved design: support faces", None, HELD, "T-185: " + sup["basis"][:150])
+        # S1 beside, never released
+        s1 = [r for r in rows if r.get("dome") == dm and r.get("scenario") == S1]
+        ring_form = any(r.get("unit") == "m2" and re.search(r"\bring\b", r["item"]) and "form" in r["item"]
+                        for r in s1)
+        for r in s1:
+            it = r["item"]
+            if r.get("unit") == "m2" and "form" in it and r.get("qty") not in (None, 0) and not isinstance(r["qty"], list):
+                put(f"{dm} S1 client request (NOT RELEASED): {it}", float(r["qty"]), S1_STATUS,
+                    f"T185_LEDGER.json S1 {r['status']}: {r['basis'][:150]}")
+            elif r.get("status") == "OMITTED_BY_SCENARIO" and ("intrados" in it or "formwork" in it):
+                put(f"{dm} S1 client request (NOT RELEASED): {it} removed", None, S1_STATUS,
+                    "client-requested removal, shown beside the baseline only (owner 2026-10-22 11:50)")
+            elif re.search(r"\bring\b", it) and r.get("unit") == "m3" and not ring_form:   # 'springing' != ring
+                put(f"{dm} S1 client request (NOT RELEASED): edge ring faces", None, S1_STATUS,
+                    f"T-185 S1 ring {r['status']}: {r['basis'][:150]}")
+            elif "opening in the flat" in it:
+                put(f"{dm} S1 client request (NOT RELEASED): {it[:60]}", None, S1_STATUS,
+                    f"T-185 S1 {r['status']}: {r['basis'][:150]}")
+    return out
+
+
+def check_dome_scenarios():
+    """r3 synthetic check (not Alsenan; one dome of another villa, hand values). Shell: springing chord radius 1.50,
+    rise 1.00, thickness 0.08 (concentric spheres). Hand: R_o = (1.50^2 + 1.00^2) / (2 x 1.00) = 1.625; springing plane
+    1.625 - 1.00 = 0.625 below the centre; R_i = 1.545, h_i = 1.545 - 0.625 = 0.920; intrados 2 pi x 1.545 x 0.920
+    = 8.9309 m2 (the ledger prints it; dome_lines only reads it). S1 (client request): shell removed, edge ring
+    formwork 3.000 m2 incl. the opening face. Cases: (a) baseline = 8.931 CALCULATED, S1 3.000 beside, never summed;
+    (b) ADVERSE client request present vs absent: S0 lines identical, never 0; (c) ADVERSE an S0 row OMITTED_BY_SCENARIO
+    -> ScenarioLeak; (d) ADVERSE S0 intrados 0 m2 -> ScenarioLeak; (e) S0 intrados absent -> HELD (never 0); (f) the
+    opening band listed OWNED_BY_OTHER_LINE is outside every total; (g) a dome with no S0 shell row -> HELD."""
+    Ro = (1.5 ** 2 + 1.0 ** 2) / 2.0
+    Ri, hi_ = Ro - 0.08, Ro - 0.08 - (Ro - 1.0)
+    A = 2 * math.pi * Ri * hi_
+    assert abs(A - 8.9309) < 1e-3
+    base = [dict(scenario=S0, dome="D1", item="shell concrete", unit="m3", qty=1.1, status="DRAWING-CONFIRMED", basis="x"),
+            dict(scenario=S0, dome="D1", item="shell intrados (soffit form / internal finish)", unit="m2", qty=A,
+                 status=CALC, basis="2 pi R_i h_i"),
+            dict(scenario=S0, dome="D1", item="shell top (extrados) formwork", unit="m2", qty=None, status=HELD,
+                 basis="casting method not specified"),
+            dict(scenario=S0, dome="D1", item="ring beam concrete", unit="m3", qty=[0.5, 0.7], status=HELD,
+                 basis="plan vs detail")]
+    s1 = [dict(scenario=S1, dome="D1", item="shell intrados (soffit form / internal finish)", unit="m2", qty=0,
+               status="OMITTED_BY_SCENARIO", basis="client"),
+          dict(scenario=S1, dome="D1", item="edge ring formwork (opening face 0.40)", unit="m2", qty=3.0,
+               status=CALC, basis="ring"),
+          dict(scenario=S1, dome="D1", item="drum between the roof and the springing", unit="m3", qty=0,
+               status="OMITTED_BY_SCENARIO", basis="client")]
+    with_req, without = dome_lines(base + s1), dome_lines(base)
+    t = dome_scenario_totals(with_req)
+    assert abs(t["S0_CALCULATED"] - 8.931) < 1e-3 and t["S1_NOT_RELEASED_M2"] == 3.0          # (a)
+    s0_only = [x for x in with_req if x["status"] != S1_STATUS]
+    assert s0_only == without and all(x["m2"] != 0 for x in s0_only)                            # (b)
+    assert not any("ring faces" in x["item"] for x in with_req if x["status"] == S1_STATUS)      # 'springing' != ring
+    for bad in ([dict(base[0], status="OMITTED_BY_SCENARIO", qty=0)] + base[1:],                 # (c)
+                base[:1] + [dict(base[1], qty=0.0)] + base[2:]):                                 # (d)
+        try:
+            dome_lines(bad)
+        except ScenarioLeak:
+            pass
+        else:
+            raise AssertionError("client removal leaked into the S0 baseline without a ScenarioLeak")
+    e = dome_lines(base[:1] + base[2:])
+    assert [x for x in e if "soffit" in x["item"]][0]["status"] == HELD                          # (e)
+    assert dome_scenario_totals(e)["S0_CALCULATED"] == 0.0 and dome_scenario_totals(e)["S0_HELD_LINES"] == 3
+    rows = [dict(element=x["element"], floor=x["floor"], item=x["item"], method=x["method"],
+                 m2="" if x["m2"] is None else x["m2"], held_lo="", held_hi="", status=x["status"])
+            for x in with_req]
+    rows.append(dict(element="SLAB_EDGE", floor="1F", item="opening band", method="G", m2="", held_lo="",
+                     held_hi="", status=OWNED))
+    tt = totals(rows)
+    assert abs(tt["G_CALCULATED"] - 8.931) < 1e-3 and "E_CALCULATED" not in tt                  # (a) + (f)
+    g = dome_lines([dict(scenario=S1, dome="D2", item="shell concrete", unit="m3", qty=0,
+                         status="OMITTED_BY_SCENARIO", basis="client")])
+    assert g[0]["status"] == HELD and g[0]["m2"] is None                                          # (g)
+    print("dome scenarios check PASS")
+
+
+def dome_scenario_totals(dl):
+    """baseline (S0) CALCULATED m2, S0 HELD line count, S1 m2 shown beside (never in the baseline)."""
+    return dict(S0_CALCULATED=round(sum(x["m2"] for x in dl if x["status"] == CALC), 3),
+                S0_HELD_LINES=sum(1 for x in dl if x["status"] == HELD),
+                S1_NOT_RELEASED_M2=round(sum(x["m2"] or 0.0 for x in dl if x["status"] == S1_STATUS), 3))
 
 
 def ground_lines():
@@ -954,12 +1123,19 @@ def alsenan(faces_json, outdir, rule="r2"):
                                      held_len_m={k: round(v, 3) for k, v in sorted(hlen.items())})
     # dome openings (Q-44 A: open skylights; ST p.7 inner diameter 442) and the pool-court void
     r = 2.2111
-    add("SLAB_EDGE", "1F", "two dome openings, slab-thickness band at the opening (2 x 2 pi x 2.2111 x 0.16)", "G",
-        2 * 2 * math.pi * r * 0.16, CALC, "Q-44 A openings stay open; p.7 inner circle 442 (T-139); the ring's inner "
-        "face below the slab goes with the ring line")
-    add("BEAM", "1F", "dome ring beams: inner and outer faces below the slab, soffit", "G", None, HELD,
-        "west ring B4 20 x 50 in-bay part, east ring depth not printed: T-160 (READY, not merged); inner face "
-        "2 pi r = 13.893 m per opening")
+    if rule in ("r1", "r2"):                           # kept to reproduce the rejected r1 / r2 files byte for byte
+        add("SLAB_EDGE", "1F", "two dome openings, slab-thickness band at the opening (2 x 2 pi x 2.2111 x 0.16)",
+            "G", 2 * 2 * math.pi * r * 0.16, CALC, "Q-44 A openings stay open; p.7 inner circle 442 (T-139); the "
+            "ring's inner face below the slab goes with the ring line")
+        add("BEAM", "1F", "dome ring beams: inner and outer faces below the slab, soffit", "G", None, HELD,
+            "west ring B4 20 x 50 in-bay part, east ring depth not printed: T-160 (READY, not merged); inner face "
+            "2 pi r = 13.893 m per opening")
+    else:                                              # r3 (D-T163-3): one owner for the dome-opening face
+        add("SLAB_EDGE", "1F", f"two dome openings, slab-thickness band at the opening (2 x 2 pi x {r} x 0.16 = "
+            f"{2 * 2 * math.pi * r * 0.16:.3f} m2): measured on the ring line, not here", "G", None, OWNED,
+            "D-T163-3 one owner per face: the opening face belongs to the ring (S0: ring per the p.7 detail under "
+            "the shell edge or the p.5 B4 band, HELD in T-185; S1: T-185 DOME-A edge ring formwork takes the "
+            "opening face over the full 0.50 depth); never also a slab free edge")
     add("SLAB_EDGE", "GF", "pool-court void (3.690 m2 inside the B7 ring), slab-thickness band", "G", None, HELD,
         "void and ring band drawn as one face; contested ring piece BM-GF-060 HELD: perimeter 6.810 (circle of "
         "3.690 m2) .. 7.563 m (drawn face)", (6.810 * 0.16, 7.563 * 0.16))
@@ -1010,7 +1186,14 @@ def alsenan(faces_json, outdir, rule="r2"):
         "side of the slab not printed (D-44); tank steel T-166 READY")
     add("LIFT", "FDN", "lift-pit walls 20 cm on the FF raft (p.14 detail)", "E=G", None, HELD,
         "height 'AS ARCH.', no merged concrete ledger for the pit walls")
-    add("DOME", "roof", "dome shells", "E=G", 0.0, NA, "client change Q-29: no dome shell (T-139 / T-160)")
+    if rule in ("r1", "r2"):
+        add("DOME", "roof", "dome shells", "E=G", 0.0, NA, "client change Q-29: no dome shell (T-139 / T-160)")
+    else:                                              # r3 (D-T163-2): S0 baseline from the merged scenario ledger
+        led = json.load(open(os.path.join(RES, "agents_t185", "T185_LEDGER.json"), encoding="utf-8"))
+        dl = dome_lines(led)
+        for x in dl:
+            add(x["element"], x["floor"], x["item"], x["method"], x["m2"], x["status"], x["basis"], x["held_range"])
+        summary["dome_scenarios"] = dome_scenario_totals(dl)
     return lines, summary, walk, beams, cols, g
 
 
@@ -1202,8 +1385,8 @@ def main(argv):
     if argv[:1] == ["--check"]:
         check()
         return
-    rule = "r1" if "--r1" in argv else "r2"
-    argv = [a for a in argv if a != "--r1"]
+    rule = "r1" if "--r1" in argv else "r2" if "--r2" in argv else "r3"
+    argv = [a for a in argv if a not in ("--r1", "--r2")]
     faces_json, outdir = argv[:2]
     os.makedirs(outdir, exist_ok=True)
     lines, summary, walk, beams, cols, g = alsenan(faces_json, outdir, rule)

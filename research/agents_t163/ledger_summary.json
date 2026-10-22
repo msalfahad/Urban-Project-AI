@@ -1,4 +1,9 @@
 {
+ "dome_scenarios": {
+  "S0_CALCULATED": 48.299,
+  "S0_HELD_LINES": 9,
+  "S1_NOT_RELEASED_M2": 8.783
+ },
  "floors": {
   "1F": {
    "beam_sides_E": 109.884,
@@ -69,16 +74,16 @@
    "slab_soffit": 206.684
   }
  },
- "rule": "r2",
+ "rule": "r3",
  "totals": {
   "ABOVE_HELD_HI": 277.365,
   "ABOVE_HELD_LO": 221.507,
-  "ABOVE_HELD_UNQUANTIFIED_LINES": 9.0,
+  "ABOVE_HELD_UNQUANTIFIED_LINES": 17.0,
   "BELOW_HELD_HI": 227.118,
   "BELOW_HELD_LO": 162.64,
   "BELOW_HELD_UNQUANTIFIED_LINES": 34.0,
   "E_CALCULATED": 802.658,
-  "G_CALCULATED": 1034.42,
+  "G_CALCULATED": 1078.274,
   "OQ10_EARTH_CAST": 0.0,
   "OQ10_FORMED": 103.14
  }

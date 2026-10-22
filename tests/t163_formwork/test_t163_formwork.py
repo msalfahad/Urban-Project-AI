@@ -1,4 +1,4 @@
-"""T-163 r2 (D-T163-1): formwork joint faces of columns (research/agents_t163/t163_formwork.py, research only).
+"""T-163 r2 (D-T163-1) + r3 (D-T163-2 / -3, domes by scenario): formwork joint faces of columns (research/agents_t163/t163_formwork.py, research only).
 
 Synthetic villa (not the development villa), hand values in the module's check() and check_r2_adverse() docstrings:
 normal bay (sides 9.800, joints 0.560, edges 2.940 m2, plain / mirrored / mm, r1 and r2) and the adverse cases the
@@ -48,3 +48,30 @@ def test_missing_depth_stays_held_never_zero():
           "W": dict(Ld=0.40, pieces=[("BEAM", "Bh", 0.40, None)]), "E": dict(Ld=0.40, pieces=[("SLAB", "", 0.40, 0.59)])}
     lo, hi, st, note = m.stated_joint(c, tr)
     assert st == m.HELD and hi > lo and note                            # W longer at the stated size, beam depth held
+
+
+def test_dome_scenarios_synthetic():
+    """r3 (D-T163-2 / -3): synthetic dome of another villa, hand intrados 8.931 m2; adverse leak cases raise."""
+    _load().check_dome_scenarios()
+
+
+def test_committed_alsenan_lines_scenario_and_one_owner():
+    """r3 on the committed ledger: S0 shells measured from T-185 (never 0), S1 outside every total, the dome-opening
+    band owned by the ring (no CALCULATED slab-edge line for it)."""
+    import csv
+    import json
+    m = _load()
+    here = ROOT / "research" / "agents_t163"
+    rows = list(csv.DictReader(open(here / "FORMWORK_LINES.csv", encoding="utf-8")))
+    soff = [r for r in rows if r["element"] == "DOME" and "S0" in r["item"] and "soffit" in r["item"]
+            and r["status"] == m.CALC]
+    assert len(soff) == 2 and all(abs(float(r["m2"]) - 24.150) < 1e-3 for r in soff)
+    assert not any(r["element"] == "DOME" and r["m2"] not in ("",) and float(r["m2"]) == 0.0 for r in rows)
+    assert not any(r["element"] == "SLAB_EDGE" and "dome opening" in r["item"] and r["status"] == m.CALC for r in rows)
+    s1 = [r for r in rows if r["status"] == m.S1_STATUS]
+    assert s1 and all("S1" in r["item"] for r in s1)
+    led = json.load(open(ROOT / "research" / "agents_t185" / "T185_LEDGER.json", encoding="utf-8"))
+    assert m.dome_scenario_totals(m.dome_lines(led))["S0_CALCULATED"] == 48.299
+    s = json.load(open(here / "ledger_summary.json", encoding="utf-8"))
+    calc = sum(float(r["m2"]) for r in rows if r["status"] == m.CALC and r["m2"] and r["method"] in ("G", "E=G"))
+    assert abs(calc - s["totals"]["G_CALCULATED"]) < 0.01 and s["rule"] == "r3"

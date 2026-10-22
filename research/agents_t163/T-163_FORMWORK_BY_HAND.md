@@ -19,6 +19,83 @@ used: footings T-065 / T-100 / T-136, ground beams and straps T-138 r2 / T-141, 
 T-145, slabs T-139, stairs T-084 / T-111. Rules: URBAN-NON-OVERLAPPING-SLAB-BEAM-MODEL@v1, URBAN-COLUMN-HEIGHT-TO-
 CONTROLLING-MEMBER@v1, OQ-10 / OQ-11, Q-21 C, Q-26 A, Q-28, Q-44 A, Q-61 C, Q-62 A cond, UP-QTY-STATUS-001.
 
+## 00. Rework r3 (Checker 2026-10-22 21:58, D-T163-2 / D-T163-3): domes by scenario, one owner for the opening face
+
+Worker 1, 2026-10-22 22:27 .. UTC, branch `agents/task-T-163-r3` (r2 bc34f9aa merged onto working head faa04202).
+Everything else of r2 is carried unchanged: `--r2` reproduces the r2 FORMWORK_LINES.csv, JOINT_BY_COLUMN.csv and
+ledger_summary.json byte for byte, `--r1` the r1 FORMWORK_LINES.csv (both checked this run on a fresh faces.json).
+
+**Physical element (standard s.2).** Each detailed dome (DOME-A, DOME-B) is, in the APPROVED design S0, a 0.10 m
+spherical shell on a ring at the 1F roof opening, with a 1.30 m drum between roof and springing (section B-B); the
+tower dome has no structural detail. The formwork of a shell is its soffit form (contact area = intrados) and, only if
+the casting method needs it, a top form; the ring is a beam whose INNER face is the opening face. The client request
+S1 (no shells, open skylights) is a separate scenario the owner keeps beside the baseline and never releases
+(owner 2026-10-22 09:40 / 11:50: S0 keeps the 3 concrete domes; T-185 MERGED 94e39ee6).
+
+**What was wrong (r2).** (D-T163-2) the row `DOME roof dome shells 0.0 NOT_APPLICABLE 'client change Q-29'` applied
+S1 to the baseline: a missing approved-design element shown as 0. (D-T163-3) the row `SLAB_EDGE 1F two dome openings
+2 x 2 pi x 2.2111 x 0.16 = 4.446 m2 CALCULATED` priced the opening face as a free slab edge; in S1 the merged T-185
+DOME-A edge-ring formwork (8.783 m2) already takes that face over the full 0.50 ring depth (10.558 m x 0.50), so its
+0.16 band was in two ledgers; in S0 the opening is closed by the shell on the ring, and the slab either butts the p.7
+detail ring (r 2.011 .. 2.211) or IS the top of the p.5 B4 band (r 2.211 .. 2.411): in neither case a free slab edge.
+
+**r3 rule (module: `dome_lines`, `dome_scenario_totals`, `check_dome_scenarios`).** The dome formwork is READ from
+`research/agents_t185/T185_LEDGER.json`, never re-derived and never taken from the client request:
+baseline = S0 rows only; per dome the shell soffit form = the S0 intrados row (CALCULATED as printed), the top form,
+the ring faces and the drum faces HELD as T-185 holds them (top form: casting method not specified; ring: p.5 plan vs
+p.7 detail conflict, depth 'AS PER ARCH'; drum: material and thickness not printed); a dome with no S0 shell row is
+HELD. S1 rows are listed with status `S1_NOT_RELEASED` (outside every total). Guard: an S0 row OMITTED_BY_SCENARIO
+or an S0 formwork / intrados row of 0 m2 raises `ScenarioLeak` (the client request leaking into the approved design).
+The dome-opening slab band is one line with status `OWNED_BY_OTHER_LINE` (no m2): the face is measured on the ring.
+
+**Check of the figures read (order of magnitude, own arithmetic, not a re-derivation).** S0 shell, printed chord
+radius 2.21, rise 1.90, t 0.10, concentric spheres: R_o = (2.21^2 + 1.90^2) / (2 x 1.90) = 2.2353; springing plane
+2.2353 - 1.90 = 0.3353 below the centre; R_i = 2.1353, h_i = 2.1353 - 0.3353 = 1.800; intrados 2 pi x 2.1353 x 1.800
+= 24.150 m2 = the T-185 row (24.1496). Extrados 2 pi x 2.2353 x 1.90 = 26.685 = the T-185 row and the Checker's figure.
+
+**Alsenan effect (m2 contact area; engine has no formwork line; freelancer has no formwork row: FREELANCER_NO_ROW).**
+
+| line | r2 | r3 | status r3 |
+|---|---|---|---|
+| DOME-A S0 shell soffit form | 0.0 (NA, S1 leaked) | 24.150 | CALCULATED (T-185) |
+| DOME-B S0 shell soffit form | 0.0 (NA, S1 leaked) | 24.150 | CALCULATED (T-185) |
+| DOME-A / -B shell top form, ring faces, drum faces | - / one generic ring line | 6 lines | HELD (T-185) |
+| DOME-TOWER soffit form, top form, support | - | 3 lines | HELD (no structural detail) |
+| 1F slab edge, two dome openings | 4.446 CALCULATED | owned by the ring line | OWNED_BY_OTHER_LINE |
+| 1F slab-edge band total | 13.113 | 8.667 | CALCULATED (walked free edges only) |
+| all slab-edge bands | 31.058 | 26.612 | CALCULATED |
+| S1 (NOT RELEASED, beside): DOME-A edge-ring formwork | - | 8.783 | S1_NOT_RELEASED; DOME-B ring HELD, shells removed, tower opening UNKNOWN |
+| above-ground G CALCULATED | 1,034.420 | **1,078.274** (+48.299 - 4.446 = +43.854, +4.2 %) | |
+| above-ground HELD unquantified lines | 9 | 17 | |
+
+Held ranges (221.507 .. 277.365 above, 162.640 .. 227.118 below) and the E method (802.658) do not move. The 1F slab
+soffit (T-139 123.479 m2) is the same in S0 and S1: the slab has the opening in both (in S0 the shell, not the slab,
+closes it), so no slab soffit moves with the scenario. The intrados is one surface for two trades (formwork contact
+area here, internal finish in the finishes trade): the m2 is the formwork's and never also counted as formwork twice.
+
+**Tests.** `--check` adds `check_dome_scenarios` (synthetic dome of another villa, chord radius 1.50, rise 1.00,
+t 0.08: hand intrados 2 pi x 1.545 x 0.920 = 8.931 m2): (a) baseline 8.931 CALCULATED, S1 ring 3.000 beside and never
+summed; (b) ADVERSE client request present vs absent: S0 lines identical, never 0; a drum row 'springing' is not read
+as a ring; (c) ADVERSE S0 row OMITTED_BY_SCENARIO -> ScenarioLeak; (d) ADVERSE S0 intrados 0 m2 -> ScenarioLeak;
+(e) S0 intrados absent -> HELD; (f) the OWNED_BY_OTHER_LINE opening band is outside every total; (g) a dome with no S0
+shell row -> HELD. `tests/t163_formwork` also asserts on the committed Alsenan files: no CALCULATED SLAB_EDGE dome
+opening line, no S1 line in any total, both S0 soffits 24.150.
+
+**Lessons register row (proposed, standard s.7).** Trigger: 'S1 client change leaked into a downstream trade
+(formwork) after the owner kept S0'. Rule: a scenario-tagged element (S0 / S1 / S2) carries its tag into every derived
+trade (formwork, finishes, rebar, waterproofing); a derived ledger reads the scenario ledger, never the client request;
+an S0 line equal to 0 because of a client request is a ScenarioLeak. Scope: any villa. Provenance: Checker 2026-10-22
+21:58 on T-163 r2, owner 2026-10-22 09:40 / 11:50. Test: `check_dome_scenarios` (c) / (d). Second row: 'a face at the
+junction of a slab opening and a ring / edge beam is owned by the beam (its full depth), never also a slab free edge'
+(D-T163-3; test (f) and the Alsenan assertion).
+
+**Uncertain / not done.** The S0 ring and drum faces stay HELD until the p.5 / p.7 ring conflict and the drum material
+are answered (T-185 / designer items); the tower dome stays HELD (no structural detail). The RING_MIX held lines next to
+the ring bands (r2, 9.230 + 1.066 + 0.238 m2 at 1F) are scenario-independent (the ring exists in S0 and S1) and are
+carried unchanged; their basis text still names T-160 'READY, not merged' (T-160 has since MERGED b5da75b): text only.
+Pool formwork stays HELD as in r2 although T-183 r2 has since fixed the pool geometry (concrete 7.202 m3 VERIFIED):
+that is a separate piece (candidate follow-up, not in this rework's scope).
+
 ## 0. Rework r2 (Checker 2026-10-22 12:05, D-T163-1): column joint faces at through / flush and oblique framing
 
 **What was wrong.** The Checker re-measured COL-GF-19 (C11 0.25 x 1.10, D_ctrl 0.85, slab 0.16) at **1.004 m2** of
