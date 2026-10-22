@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-22T20:11Z | Lead | STARTED | run session_01T2CWaubhJSMjuf3RqVDHUx | repo-attached routine | task state: board | report pending
 - 2026-10-22T19:51Z | Verifier | STARTED | run unknown | repo-attached routine | task state: T-179 (Gate B V3.0.5), T-189, T-178 READY; reading queue | self-check pending
 - 2026-10-22T19:40Z | Worker 2 | STARTED | run session_01TukiUEGmjmZ5mBcsvtjPgo | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-22T19:11Z | Worker 1 | SUCCESS | T-189 READY agents/task-T-189 @ b8730b23 | B20 / B23 billed at full 0.75 depth over the stair in released A (b96185d4 reproduced) and V3.0.4 (d86de34a reproduced): the flight solid inside the bands is owned by the beams (rule R-CONC-OWN-1 proposed); ST-01 MS1-U 1.0548 -> 0.9976, MS2-U 1.0588 -> 1.0014 m3 (= Checker 17:18), staircase 6.790 -> 6.675 m3 (MS1-L 0.863 HELD, C-ST-4); new unwired exact 3-D overlap check + tests/t189_overlap 35 pass (stair/beam, beam/slab, column/beam, neck/footing, pool wall/base; unknown levels held); pool PASS_HELD (F8 / B.W levels not printed). No released quantity changed; no owner question. ERS: read, s.2.1-2.4 + s.4 A/B/C applied | self-check codemap PASS, pytest t061 PASS, freeze PASS; Drive read OK (ST7757 dxf.dxf, P7757_DXF_COMPRESSED.zip); problem: none (3 known s7/s9a rebuild test failures identical on the untouched engine tree)
