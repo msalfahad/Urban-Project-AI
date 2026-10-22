@@ -2888,16 +2888,25 @@ def _blocked(out, report, conversions, *, code, what, extra=None):
 # to V3.0.1. Opt-in, not the released default; rollback = run ARCH_TAKEOFF_V2.9.
 V302 = "ARCH_TAKEOFF_V3.0.2"
 CANDIDATE_EXTENSIONS_V302 = (V302,)  # its own tuple: the V3.0 / V3.0.1 method lists stay as they were
+# T-151: ARCH_TAKEOFF_V3.0.3 = the SAME candidate extended again (engine.source.arch_v303): a V3.0.2 run (its V3_0_*,
+# V3_0_1_* and V3_0_2_* files unchanged) + the checker-verified column / ground-system / beam steel hand ledgers and the
+# V3.0.2 Gate B fix D4, in V3_0_3_* files; every line outside its rows byte-identical to V3.0.2. Opt-in, not the
+# released default; rollback = run ARCH_TAKEOFF_V2.9.
+V303 = "ARCH_TAKEOFF_V3.0.3"
+CANDIDATE_EXTENSIONS_V303 = (V303,)  # its own tuple: the V3.0 / V3.0.1 / V3.0.2 method lists stay as they were
 
 
 def cmd_arch(a):
     from engine.source import discovery as DS
     facts = json.loads(Path(a.facts).read_text(encoding="utf-8")) if a.facts else None
-    v302 = a.method == V302                   # T-142: the V3.0.1 run, then its V3.0.2 extension
-    v301 = a.method in (V301, V302)           # T-133: the V3.0 candidate run, then its V3.0.1 extension
-    v30 = a.method in (V30, V301, V302)       # T-131: the candidate runs ARCH_TAKEOFF_V2.13 exactly, then integrates
+    v303 = a.method == V303                   # T-151: the V3.0.2 run, then its V3.0.3 extension
+    v302 = a.method in (V302, V303)           # T-142: the V3.0.1 run, then its V3.0.2 extension
+    v301 = a.method in (V301, V302, V303)     # T-133: the V3.0 candidate run, then its V3.0.1 extension
+    v30 = a.method in (V30, V301, V302, V303)  # T-131: the candidate runs ARCH_TAKEOFF_V2.13 exactly, then integrates
     if getattr(a, "v302_inputs", None) and not v302:
         raise SystemExit("--v302-inputs needs --method ARCH_TAKEOFF_V3.0.2")
+    if getattr(a, "v303_inputs", None) and not v303:
+        raise SystemExit("--v303-inputs needs --method ARCH_TAKEOFF_V3.0.3")
     if v30:
         a.method = V213
     elif getattr(a, "v30_decisions", None) or getattr(a, "v30_released", None) or getattr(a, "v30_history", None):
@@ -3123,6 +3132,25 @@ def cmd_arch(a):
             svgs += names2
             v30rec = {"method": V302, "extends": V301, "base": V213, "released_default": False,
                       "identity": ident2, "v3_0_1_identity": ident1, "v3_0_identity": ident}
+        if v303:
+            # T-151: ARCH_TAKEOFF_V3.0.3 files beside the V3_0_2_* files (engine.source.arch_v303)
+            from engine.source import arch_v303 as A303
+            inp3 = A303.load_inputs(json.loads(Path(a.v303_inputs).read_text(encoding="utf-8"))
+                                    if getattr(a, "v303_inputs", None) else None, room["project_id"])
+            ch302 = ch_r + ch_mp + ch_so + ch_x
+            l302 = A303.integrate(base_lines, ch_s + ch_p + ch_f, ch_g + ch_m, ch302, [])[1]
+            ch_t, logs_t = A303.steel_changes(inp3, l302, log_g)
+            ch_e, log_e = A303.evidence_fix_changes(inp3, l302)
+            names3, ident3, _led3 = A303.write(
+                out, base_lines, ch_s + ch_p + ch_f, ch_g + ch_m, ch302, ch_t + ch_e, logs_t + [log_e],
+                {"plan": Path(plan).name, "structural": Path(structural).name if structural else None,
+                 "project_inputs": Path(a.v303_inputs).name if getattr(a, "v303_inputs", None) else None,
+                 "released_lines": Path(a.v30_released).name if getattr(a, "v30_released", None) else None},
+                released)
+            svgs += names3
+            v30rec = {"method": V303, "extends": V302, "base": V213, "released_default": False,
+                      "identity": ident3, "v3_0_2_identity": ident2, "v3_0_1_identity": ident1,
+                      "v3_0_identity": ident}
     ev = Counter(ln["evidence_state"] for ln in room["lines"])
     print(json.dumps({"method": a.method, "regions": [{"floor": r["floor"], "state": r["stage_state"],
                                                         "rooms": r.get("space_counts"), "lines": r.get("lines"),
@@ -3256,7 +3284,8 @@ def main(argv=None):
                    help="one architectural plan DXF (a DWG goes through tools/dwg_adapter.py: an external converter)")
     p.add_argument("--out", required=True)
     p.add_argument("--method", required=True,
-                   choices=ARCH_METHODS + CANDIDATE_METHODS + CANDIDATE_EXTENSIONS + CANDIDATE_EXTENSIONS_V302,
+                   choices=ARCH_METHODS + CANDIDATE_METHODS + CANDIDATE_EXTENSIONS + CANDIDATE_EXTENSIONS_V302 +
+                   CANDIDATE_EXTENSIONS_V303,
                    help="the versioned architectural takeoff method (no default: the route is opt-in until validated); "
                         "ARCH_TAKEOFF_V2 (S6) adds the drawing admission, unit-relative tolerances, empty-band plan "
                         "regions and the completeness gates (exit 2: admission blocked, 3: completeness failed)")
@@ -3289,6 +3318,8 @@ def main(argv=None):
     p.add_argument("--v302-inputs", help="ARCH_TAKEOFF_V3.0.2: project inputs (URBAN_V302_PROJECT_INPUTS_V1) typed from "
                                          "the printed sheets: footing schedule size unit, cover note, bar-end detail; "
                                          "the checked soffit areas over outside air")
+    p.add_argument("--v303-inputs", help="ARCH_TAKEOFF_V3.0.3: steel hand ledgers (URBAN_V303_STEEL_LEDGERS_V1), each "
+                                         "with its file sha256, task, merge commit and checker run; the D4 citations")
     p.add_argument("--v30-history", nargs="+", metavar="METHOD=BOQ_LINES.json",
                    help="ARCH_TAKEOFF_V3.0 with --v30-released: BOQ_LINES.json of the ARCH_TAKEOFF_V2.10 / V2.11 / "
                         "V2.12 runs on the same drawings, so each ledger row names the version that changed its line")
