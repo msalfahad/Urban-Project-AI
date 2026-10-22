@@ -1,3 +1,69 @@
+## LEAD REPORT 2026-10-22 08:20 UTC
+
+Repositories: attached Urban-Project-AI checkout (main 1c559a8) + wrapper; `.work` absent at start again, `setup` by hand
+worked, then `board log` / `board commit` worked, no refusal. Working branch head 554c1c4 (5 checker merges since 04:20; no
+owner-session commit on it). Drive readable: no file created or modified in the project folders since my last run, so no
+photo-review task. UrbanProjectsManager not used. Your directive of 08:05 (engineering reasoning standard) and the 07:10
+corners correction are applied below; nothing in them was undone or duplicated.
+
+PROGRESS (Alsenan; released numbers unchanged: released concrete 92.77 vs freelancer 111.81 m3, -17.03 %, run A)
+- Structure, checked and merged as hand pieces: stair steel by bar population (main bars 367.88 .. 420.54 kg, HELD on the
+  "per metre" meaning; landing strip 18.204 kg = frozen engine at 0.0 %), pool steel HELD (the p.7 detail is two-zone, your
+  floor is flat: designer item), tank walls HELD (not drawn); dome rings: only the in-bay ring part is concrete (west 0.7552
+  m3, checker 0.7553), so the beam register 65.060 vs his 65.97 m3 (-1.4 %) stands; the released-run definition is pinned.
+- MERGED through the integrated check (candidate V3.0.3, opt-in, NOT released): column steel 1,887.13 / ground beams
+  1,252.91 / beams 5,171.03 kg drawing-confirmed, the rest held or unknown (never 0), route G's convention steel superseded,
+  not summed. It was rejected once for one real fault (18 column link lines dropped their upper reading: held column range
+  topped at 1,703.73 instead of 2,119.35 kg); worker 3 fixed exactly that and the checker passed all three slices in one run
+  (own re-counts 0.0 %). Outside areas by your rule merged too (porch floor 10.680 m2, checker 0.0 %).
+- SCOREBOARD v2 (first time, checker 08:15): concrete WAPE 17.03 % released run A / 15.38 % candidate, on 3 of 8 lines
+  compared (the candidate's drop is blinding moving to held, not accuracy); verified share 0 of 8 whole reference lines
+  (pieces were re-measured, no whole line yet); plaster, paint, floor area: 1 reference line each, all HELD, no %; doors and
+  windows: not comparable in m2 (the engine counts pieces) - the hand m2 tables exist and must reach the candidate.
+- New, first figures for a missing category: formwork above ground 1,038.533 m2 calculated (slab soffit 375.048, beam
+  soffit 97.855, beam sides 288.711, columns 183.967, joints 14.224, slab edges 31.795, stairs 44.533) + 220.752 .. 276.506
+  HELD; below ground both open alternatives (formed 103.140 / earth-cast 0) + held 162.640 .. 227.118. Freelancer has no row
+  (no %). Learned: a face rule without junction deductions overstates beam sides +13.4 % and columns +5.4 %.
+- Finishes, reworks waiting for the checker: plaster / paint on the verified curved boundaries (GF master bedroom 78.61 m2
+  by your method / 56.01 net, checker 78.60 / 56.02; 1F east master 74.87 vs his 74.46, +0.6 %; whole house dry walls
+  drawing-derived 1,129.09 .. 1,155.22 vs his 1,209.39 m2, -6.6 .. -4.5 %); doors / windows (windows 56.771 m2 on 8 printed
+  vs his 54.931, +3.3 %; W16 and the main door HELD; door heights 2.20 your fallback: aluminium 10.560 vs his 12.000 m2,
+  -12.0 %, rule difference); your stair rule as a check calculator (your table 6 of 6; 4.48 m -> 28 risers); wall-stub fix.
+- Your directive turned three questions into engineering work: the "per metre" bar notation (footings only, with its own
+  evidence), the stair shaft geometry and black block units; block openings (full opening, physical scope) and strap length
+  (beam axis) are answered and in work; corners: one m.l line at full physical length (457.095 measured + 58.600 at your door
+  height), his half and your PDF's half rate kept as payment columns, never m2.
+- Not measured yet: coverage, verified share and held quantity per trade (SCOREBOARD v2 is being built by the checker now).
+
+TEAM HEALTH (04:20 - 08:20)
+- Closed slots: worker 1 04:44, 07:22; worker 2 05:46, 08:08; worker 3 05:11, 07:43; checker 06:23, 08:17: 8 of 8
+  STARTED + SUCCESS, every self-check PASS (codemap, t061, freeze 0): every agent ran code. The checker did your scoreboard
+  first, as asked, and still cleared the steel package and the outside areas. Worker 2 is now on the repo-attached setup too (first run 05:40, clean).
+- Small fault: workers write board-row times 40-60 min ahead of their own RUN_LOG lines (one row says 09:05, written 08:08);
+  no quantity affected.
+- Lead self-check PASS (codemap stale none, t061, freeze 0). This run: queue for 3 checker runs with the scoreboard as a
+  standing slot (7 READY; the census needs only a head merge); the checker's scoreboard-script task ranked first for worker 3; transition rule for the 9 rows claimed before your
+  directive; ruling on door D-GF-06 (arched head in the render, not drawn: rectangle kept with your fallback height, the arch
+  held on new designer item D-58); 2 new tasks (slab / stair steel and dome ring into the candidate after V3.0.4, T-179; lessons of
+  merged work into rules and regression tests); register +7 rulings (corners corrected); scout request on the meaning of
+  "n ø d/m" (reference books are evidence level 4 only); the block-opening / strap / corner request closed by your answers.
+
+OWNER PACKAGE
+No genuine owner decision today. Under your directive the 04:20 items are withdrawn: the "per metre" notation is an
+investigation (it returns to you only if the drawings and references cannot settle it, in your new format); corners are
+settled by your notes. Q-72 and Q-75 are investigations; Q-73 and Q-74 answered by you.
+
+NEEDS FIXING
+- Small, for the main chat: the start-up hook still does not prepare `.work` in repo-attached sessions (every agent this
+  window ran `setup` by hand; nothing lost). Second small item: the worker prompts could say "UTC time from `date -u`" so
+  board-row times match the run log.
+- Still waiting: Kuwait specification chapters (07100, 09200, 09300, 09400, 09900) as PDFs under 6 MB; designer items
+  D-39 .. D-58 when you choose to send them.
+
+Team ids: MERGED T-166, T-160, T-165, T-151 r2 (Gate B), T-157; T-132 DONE; READY T-140 (head merge), T-169, T-162, T-163,
+T-150 r2, T-128 r2, T-158; TODO permitted T-171, T-174 (S), T-172, T-173, T-175, T-176 (A), T-177, T-167, T-178 (I); T-168
+after T-177; T-179 after T-167; T-146 after T-179; TODO not permitted T-049, T-170 (S), T-164 (A).
+
 ## LEAD REPORT 2026-10-22 04:20 UTC
 
 Repositories: attached Urban-Project-AI checkout (main 1c559a8) + wrapper; `.work` absent at start again, `setup` by hand

@@ -1,5 +1,98 @@
 # Lead reports to the owner's main chat (newest first, last 3 entries; older in archive/LEAD_REPORT_older.md)
 
+## LEAD REPORT 2026-10-22 20:20 UTC
+
+Repositories: attached Urban-Project-AI checkout (main 0bc35c72); `.work` prepared AUTOMATICALLY at start ("setup by
+auto"). Working branch head moved 6380294 -> 9957cc12 (checker merges T-158, T-186, T-182, T-175, T-173, T-128 r3, T-185,
+T-189, T-178; no owner commit on the engine branch). Drive readable: nothing created in the Alsenan folder since 16:00, so
+no photo-review task. UrbanProjectsManager not used. Owner session 18:00 read and applied (T-189 done and merged; MS1-L
+stays HELD; extra checker run kept); nothing undone or duplicated.
+
+PROGRESS (Alsenan; released numbers unchanged: released concrete 92.77 vs freelancer 111.81 m3, -17.03 %, run A)
+- STAIR / BEAM OVERLAP (structure; m3), merged: the main stair's upper flights pass through B20 (0.40 x 0.75) and B23
+  (0.45 x 0.75) over 3.30 m. The released run bills both beams at full depth over the stair (checker's own DXF
+  re-measure 0.990 / 1.11375 m3, 0.0 %), so the stair ledger counted the overlap twice: MS1-U 1.0548 -> 0.9976, MS2-U
+  1.0588 -> 1.0014 m3 (= checker 17:18 to 0.0001); staircase system 6.790 -> 6.675 m3, of which MS1-L 0.863 HELD
+  (riser-count conflict C-ST-4); vs freelancer main stair 8.131: own 4.631 (-3.500 m3, causes as in the stair reconciliation).
+  Rule R-CONC-OWN-1: the line billed through the junction at full section owns the overlap; otherwise the element that
+  would lose it keeps it; undefined = HELD. A reusable overlap check (owned volumes add up to the union; 35 tests incl.
+  beam / slab, column / beam, neck / footing, pool wall / base) is merged, unwired. Still open (new task): the released
+  stair line also runs into B20 (about 0.065 m3) and the flight feet / landings were never checked against the slabs.
+- DOMES (structure; m3), merged: 2 terrace shells from the printed 442 / 190 / 10 = 2 x 2.5407 = 5.081 m3 VERIFIED; engine
+  7.372 on rise = radius and 0.12 conventions = ENGINE WRONG +2.291; freelancer 4.520 for the same two (-0.561, typed
+  22.6 m2) + a third dome 2.260 with no structure; tower dome, rings, drums and shell bars HELD; client change S1 never
+  released. The dome part of the stair / dome line is verified; the line stays PARTIALLY VERIFIED (tower dome, stairs).
+- CANDIDATE V3.0.5 (Gate B package at the checker now): candidate rebar quantity lines 12,834.52 -> 10,250.17 kg (route
+  slab provisional 2,584.35 kg superseded by checked slab steel), held 15,250.79 .. 21,556.50 kg; beams 64.820 -> 65.294
+  m3 (west dome ring 0.7552 VERIFIED replaces route arc bands 0.2811 of the same ring: a double count removed). Pool steel
+  BLOCKED: its bar lengths were taken on the 1.15 m finished depth while the verified wall is 1.20 m (rework planned).
+- PLASTER / PAINT (m2), merged: the one-room fix passed (1F east master contour 22.149 vs checker 22.1507 m, owner gross
+  74.20 / net 59.45 m2, 0.0 %; 3 rooms checker-verified); house dry walls drawing-derived 1,128.32 .. 1,154.44 vs freelancer
+  1,209.39 m2 (-6.7 .. -4.5 %). No engine line yet, so the scoreboard's plaster / paint cells stay NOT YET MEASURED.
+- BLOCK OPENINGS (m2), merged: deductions by physical scope, checker's own DXF 3.520 / 3.960 m2 (0.0 %); 43 walls carry a
+  net (476.21 m2 candidate), 28 openings HELD; freelancer deducts 122.39 m2 incl. a 9.45 m2 glazed bay our walls never
+  contain. STAIR-SHAFT WALLS (m2), merged: W face own 66.049 vs 66.15 (-0.16 %); his open south side +20.11 m2 ENGINE_RIGHT.
+- RAILINGS / SHUTTERS (m, pcs), READY: 38.916 m DRAWING-CONFIRMED (roofs 19.150 at printed 1.04 / 1.10 m; round-stair
+  balustrade + 1F gallery 16.324; two short pieces 3.442), main-stair balustrade 16.153 m HELD, GF sea strip 6.127 m HELD
+  (plan vs elevation conflict, also near the parapet chain: register ruling, never counted twice); 6 shutter leaves, m2
+  HELD. Freelancer: one 'internal railing' 18.95 m only (scope UNRESOLVED); roof railings and shutters he does not have.
+- Also merged: your stair calculator (UP-STAIR-015, 6 / 6 of your cases), the default guard (unwired), the five separate
+  scoreboard measures, and 7 resolved lessons turned into rules + tests (each test fails on a deliberately broken variant).
+- Change since 16:20: no released quantity moved; verified quantities added this period: the two dome shells 5.081 m3
+  and the B20 / B23 lines over the stair (2.104 m3); scoreboard concrete Verified share stays 0 / 8 whole lines (pool,
+  stair / dome PARTIALLY VERIFIED by your whole-line rule).
+
+TEAM HEALTH (16:20 - 20:20)
+- Closed slots: worker 1 16:21 -> 16:35, 18:21 -> 19:11; worker 2 17:40 -> 17:51, 19:40 -> 20:11; worker 3 17:00 -> 18:26,
+  19:01 -> 19:09; checker 15:51 -> 16:30, 16:52 -> 17:20, 17:52 -> 18:01: 9 of 9 STARTED + final SUCCESS, every
+  self-check PASS, every final line `ERS: read` + section. Checker 19:51 open at 20:20 (2 merges + scoreboard work
+  committed); worker 1's 20:19 slot had no STARTED line yet when this report was written. Refusals: one at 17:52 (a combined
+  check + merge command refused as 'Sensitive-Source Provenance'; the merge then ran alone), none since.
+- One merged change broke a whole-repo gate: since the guard merge (18b12176, 17:00) the rebar firewall test fails on the
+  working head (`AssertionError: ['engine/source/default_guard.py']`; I re-ran it at 20:15). No quantity is affected. It is a
+  REPEAT of the 2026-10-20 cause (new engine module not declared). Fix task first in lane I (after V3.0.5 merges, same
+  registry file), with a known-failure register so every checker compares test by test against one list; the queue note
+  now tells the checker to run the firewall test in gate b for every new engine module.
+- READY 5 (16:20) -> 4 (20:20: V3.0.5, overlap, lessons, railings; the checker has since merged overlap and lessons):
+  all CAPACITY, oldest 1.9 h (was 9 h at 16:20). Verdicts 16:20 - 20:20: 9 merged, 0 rejected.
+- Lead self-check PASS (codemap stale none, t061, freeze 0). Two board-commit rebase conflicts with the checker's T-189 /
+  T-178 verdict commits, resolved by keeping both (their verdict cells, my status notes). Queue check after my edits:
+  46 actionable rows, 0 flagged, 0 stall checks (T-017 had NO_BLOCKER: blocker named).
+- This run: lane orders S T-163 r2, T-191, T-192, T-188, T-174; A T-176, T-194, T-195; I T-190, T-181, T-187, T-193.
+  New: T-190 (firewall fix + known failures), T-191 (pool bar populations on the verified 1.20 m wall, both details side
+  by side), T-192 (stair feet / landings vs slabs with the new overlap check), T-193 (verified pool 7.202 + dome shells 5.081
+  m3 into the candidate, after the guard package), T-194 (your review plan R6: plan = elevation = schedule for every
+  opening), T-195 (R9: drawing / revision register). Register +5 rulings (stair / beam ownership, overlap rule, domes, pool
+  steel stale, railings vs parapet). R-12 narrowed to slabs / stairs (footings settled by the team).
+
+Proposed lessons rows (main chat's file):
+- 2026-10-22 | Stair flights inside B20 / B23 counted in both the stair ledger and the beam lines (+0.115 m3; Checker T-180)
+  | each ledger measured its element as a full solid; no rule said who owns a 3-D intersection | R-CONC-OWN-1: the line
+  billed through the junction at full section owns it, the other is measured net; undefined = HELD; sum of owned = union
+  (every villa, every pair of structural solids) | tests/t189_overlap (normal: stair head in a beam; adverse: unknown level
+  stays HELD, never deducted) | fixed (T-189 merged); stair feet / landings vs slabs: T-192.
+- 2026-10-22 | A new engine module merged undeclared in the rebar firewall (default_guard.py; same as T-097 / T-056 on
+  2026-10-20) | the task's acceptance named only its own tests; gate b ran only the impact-level folders | every task that
+  adds an engine/ module runs the whole-repo guard tests (firewall, conftest write guard) in its self-gate and in gate b;
+  one known-failure register for comparisons (process, every task) | T-190 (firewall PASS on the head; register) | open (T-190).
+- 2026-10-22 | Pool bar lengths stayed on the 1.15 m finished depth after the wall was verified at 1.20 m (found by T-179)
+  | a derived ledger (steel) was not re-opened when the quantity it stands on (concrete geometry) was corrected | when a
+  verified quantity changes, every ledger that cites it is marked STALE and re-derived before integration (every element)
+  | T-191 adverse case (a finished depth given as wall height must fail) | open (T-191).
+
+OWNER PACKAGE
+No genuine owner decision today (standard 2.7 not met by anything open). New designer-side items stay on the list for
+when you choose to send them: the main-stair riser count (C-ST-4), the pool detail zones (D-57), the GF sea-front strip
+(railing or parapet: plan and elevation disagree).
+
+NEEDS FIXING
+- Nothing only you can do this run. Still waiting from earlier: Kuwait specification chapters 07100, 09200, 09300, 09400,
+  09900 as PDFs under 6 MB (deferred by you).
+
+Team ids: MERGED T-158, T-186 (PARTIAL: firewall), T-182, T-175, T-173, T-128 r3, T-185, T-189, T-178; READY T-179 (Gate
+B), T-164; TODO S T-163 r2, T-191, T-192, T-188, T-174; A T-176, T-194, T-195; I T-190 (after T-179), T-181; QUEUED T-187,
+T-193, T-146, T-168, T-170.
+
 ## LEAD REPORT 2026-10-22 16:20 UTC
 
 Repositories: attached Urban-Project-AI checkout (main b8ff258f); `.work` was prepared AUTOMATICALLY at start this time
@@ -154,68 +247,3 @@ Team ids: MERGED T-140, T-169, T-177; REJECTED T-162 r1 (reworked), T-183, T-163
 T-172, T-162 r2, T-128 r2, T-158; CLAIMED T-167; TODO S T-184, T-185, T-174 (+ T-183 r2, T-163 r2), A T-175, T-173, T-176,
 T-164 (not permitted), I T-186, T-182, T-181, T-178; QUEUED T-179, T-146, T-168, T-170; SUPERSEDED T-049.
 
-## LEAD REPORT 2026-10-22 08:20 UTC
-
-Repositories: attached Urban-Project-AI checkout (main 1c559a8) + wrapper; `.work` absent at start again, `setup` by hand
-worked, then `board log` / `board commit` worked, no refusal. Working branch head 554c1c4 (5 checker merges since 04:20; no
-owner-session commit on it). Drive readable: no file created or modified in the project folders since my last run, so no
-photo-review task. UrbanProjectsManager not used. Your directive of 08:05 (engineering reasoning standard) and the 07:10
-corners correction are applied below; nothing in them was undone or duplicated.
-
-PROGRESS (Alsenan; released numbers unchanged: released concrete 92.77 vs freelancer 111.81 m3, -17.03 %, run A)
-- Structure, checked and merged as hand pieces: stair steel by bar population (main bars 367.88 .. 420.54 kg, HELD on the
-  "per metre" meaning; landing strip 18.204 kg = frozen engine at 0.0 %), pool steel HELD (the p.7 detail is two-zone, your
-  floor is flat: designer item), tank walls HELD (not drawn); dome rings: only the in-bay ring part is concrete (west 0.7552
-  m3, checker 0.7553), so the beam register 65.060 vs his 65.97 m3 (-1.4 %) stands; the released-run definition is pinned.
-- MERGED through the integrated check (candidate V3.0.3, opt-in, NOT released): column steel 1,887.13 / ground beams
-  1,252.91 / beams 5,171.03 kg drawing-confirmed, the rest held or unknown (never 0), route G's convention steel superseded,
-  not summed. It was rejected once for one real fault (18 column link lines dropped their upper reading: held column range
-  topped at 1,703.73 instead of 2,119.35 kg); worker 3 fixed exactly that and the checker passed all three slices in one run
-  (own re-counts 0.0 %). Outside areas by your rule merged too (porch floor 10.680 m2, checker 0.0 %).
-- SCOREBOARD v2 (first time, checker 08:15): concrete WAPE 17.03 % released run A / 15.38 % candidate, on 3 of 8 lines
-  compared (the candidate's drop is blinding moving to held, not accuracy); verified share 0 of 8 whole reference lines
-  (pieces were re-measured, no whole line yet); plaster, paint, floor area: 1 reference line each, all HELD, no %; doors and
-  windows: not comparable in m2 (the engine counts pieces) - the hand m2 tables exist and must reach the candidate.
-- New, first figures for a missing category: formwork above ground 1,038.533 m2 calculated (slab soffit 375.048, beam
-  soffit 97.855, beam sides 288.711, columns 183.967, joints 14.224, slab edges 31.795, stairs 44.533) + 220.752 .. 276.506
-  HELD; below ground both open alternatives (formed 103.140 / earth-cast 0) + held 162.640 .. 227.118. Freelancer has no row
-  (no %). Learned: a face rule without junction deductions overstates beam sides +13.4 % and columns +5.4 %.
-- Finishes, reworks waiting for the checker: plaster / paint on the verified curved boundaries (GF master bedroom 78.61 m2
-  by your method / 56.01 net, checker 78.60 / 56.02; 1F east master 74.87 vs his 74.46, +0.6 %; whole house dry walls
-  drawing-derived 1,129.09 .. 1,155.22 vs his 1,209.39 m2, -6.6 .. -4.5 %); doors / windows (windows 56.771 m2 on 8 printed
-  vs his 54.931, +3.3 %; W16 and the main door HELD; door heights 2.20 your fallback: aluminium 10.560 vs his 12.000 m2,
-  -12.0 %, rule difference); your stair rule as a check calculator (your table 6 of 6; 4.48 m -> 28 risers); wall-stub fix.
-- Your directive turned three questions into engineering work: the "per metre" bar notation (footings only, with its own
-  evidence), the stair shaft geometry and black block units; block openings (full opening, physical scope) and strap length
-  (beam axis) are answered and in work; corners: one m.l line at full physical length (457.095 measured + 58.600 at your door
-  height), his half and your PDF's half rate kept as payment columns, never m2.
-- Not measured yet: coverage, verified share and held quantity per trade (SCOREBOARD v2 is being built by the checker now).
-
-TEAM HEALTH (04:20 - 08:20)
-- Closed slots: worker 1 04:44, 07:22; worker 2 05:46, 08:08; worker 3 05:11, 07:43; checker 06:23, 08:17: 8 of 8
-  STARTED + SUCCESS, every self-check PASS (codemap, t061, freeze 0): every agent ran code. The checker did your scoreboard
-  first, as asked, and still cleared the steel package and the outside areas. Worker 2 is now on the repo-attached setup too (first run 05:40, clean).
-- Small fault: workers write board-row times 40-60 min ahead of their own RUN_LOG lines (one row says 09:05, written 08:08);
-  no quantity affected.
-- Lead self-check PASS (codemap stale none, t061, freeze 0). This run: queue for 3 checker runs with the scoreboard as a
-  standing slot (7 READY; the census needs only a head merge); the checker's scoreboard-script task ranked first for worker 3; transition rule for the 9 rows claimed before your
-  directive; ruling on door D-GF-06 (arched head in the render, not drawn: rectangle kept with your fallback height, the arch
-  held on new designer item D-58); 2 new tasks (slab / stair steel and dome ring into the candidate after V3.0.4, T-179; lessons of
-  merged work into rules and regression tests); register +7 rulings (corners corrected); scout request on the meaning of
-  "n ø d/m" (reference books are evidence level 4 only); the block-opening / strap / corner request closed by your answers.
-
-OWNER PACKAGE
-No genuine owner decision today. Under your directive the 04:20 items are withdrawn: the "per metre" notation is an
-investigation (it returns to you only if the drawings and references cannot settle it, in your new format); corners are
-settled by your notes. Q-72 and Q-75 are investigations; Q-73 and Q-74 answered by you.
-
-NEEDS FIXING
-- Small, for the main chat: the start-up hook still does not prepare `.work` in repo-attached sessions (every agent this
-  window ran `setup` by hand; nothing lost). Second small item: the worker prompts could say "UTC time from `date -u`" so
-  board-row times match the run log.
-- Still waiting: Kuwait specification chapters (07100, 09200, 09300, 09400, 09900) as PDFs under 6 MB; designer items
-  D-39 .. D-58 when you choose to send them.
-
-Team ids: MERGED T-166, T-160, T-165, T-151 r2 (Gate B), T-157; T-132 DONE; READY T-140 (head merge), T-169, T-162, T-163,
-T-150 r2, T-128 r2, T-158; TODO permitted T-171, T-174 (S), T-172, T-173, T-175, T-176 (A), T-177, T-167, T-178 (I); T-168
-after T-177; T-179 after T-167; T-146 after T-179; TODO not permitted T-049, T-170 (S), T-164 (A).
