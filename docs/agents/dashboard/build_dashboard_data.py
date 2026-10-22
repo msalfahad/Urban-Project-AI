@@ -144,10 +144,38 @@ now = datetime.now(timezone.utc)
 status_of = {t["id"]: t["status"] for t in tasks}
 sb2 = status_of.get("T-132", "not on the board")
 ind = []
-for name, what in (("BOQ coverage", "share of BOQ families measured, by trade"),
-                   ("Independent verification share", "VERIFIED share by trade and unit")):
-    ind.append({"indicator": name, "value": NYM, "unit": "", "basis": NYM,
-                "source": "SCOREBOARD v2 (T-132, status " + sb2 + ")", "detail": what})
+# SCOREBOARD v2 (T-132): the newest "## SCOREBOARD v2 <time>" heading and the table under it (format fixed on the board,
+# owner session 2026-10-22 07:30). Indicators 1, 2 and 4 come from it; without it they stay NOT YET MEASURED.
+sbt = (SRC / "SCOREBOARD.md").read_text()
+v2 = re.search(r"^## SCOREBOARD v2 ([^\n]*)\n(.*?)(?=^## |\Z)", sbt, re.S | re.M)
+v2rows, v2when = [], ""
+if v2:
+    v2when = v2.group(1).strip()
+    head = None
+    for line in v2.group(2).splitlines():
+        if not line.startswith("|") or line.startswith("|---"):
+            continue
+        c = cells(line)
+        if head is None:
+            head = c
+            continue
+        v2rows.append(dict(zip(head, c)))
+
+
+def per_trade(col):
+    vals = [(r.get("Trade", ""), r.get("Unit", ""), r.get(col, "")) for r in v2rows]
+    vals = [v for v in vals if v[2] and v[2] != NYM and v[2] != "-"]
+    return "; ".join(t + " (" + u + ") " + x for t, u, x in vals)
+
+
+for name, col, what in (("BOQ coverage", "Coverage %", "reference lines covered, by trade and unit"),
+                        ("Independent verification share", "Verified share %",
+                         "reference lines the checker re-measured from the drawing, by trade and unit")):
+    got = per_trade(col) if v2rows else ""
+    ind.append({"indicator": name, "value": got or NYM, "unit": "% by trade and unit" if got else "",
+                "basis": "measured" if got else NYM,
+                "source": ("SCOREBOARD v2 " + v2when) if v2rows else "SCOREBOARD v2 (T-132, status " + sb2 + ")",
+                "detail": what})
 
 pk = [t for t in tasks if "lane I" in t["trade"] and "integration (" in t["trade"]]
 merged = [t["id"] for t in pk if t["status"] in ("MERGED", "DONE")]
@@ -157,9 +185,11 @@ ind.append({"indicator": "Integration into V3.0", "value": str(len(merged)) if p
             "source": "BOARD.md lane I integration rows",
             "detail": ("merged: " + ", ".join(merged) if merged else "none merged")
                       + ("; open: " + ", ".join(waiting) if waiting else "")})
-ind.append({"indicator": "Unresolved scope", "value": NYM, "unit": "", "basis": NYM,
-            "source": "HELD + UNKNOWN by trade and unit (SCOREBOARD v2, T-132, status " + sb2 + ")",
-            "detail": "no consolidated HELD / UNKNOWN table yet; held is never shown as 0"})
+held = per_trade("Held or UNKNOWN") if v2rows else ""
+ind.append({"indicator": "Unresolved scope", "value": held or NYM, "unit": "HELD + UNKNOWN by trade and unit" if held else "",
+            "basis": "measured" if held else NYM,
+            "source": ("SCOREBOARD v2 " + v2when) if v2rows else "HELD + UNKNOWN by trade and unit (SCOREBOARD v2, T-132, status " + sb2 + ")",
+            "detail": "held is never shown as 0"})
 
 # run reliability, last 48 h: STARTED lines and whether the same agent wrote a final line before its next start
 logs = [SRC / "RUN_LOG.md"] + sorted((SRC / "archive").glob("RUN_LOG_*.md"))
