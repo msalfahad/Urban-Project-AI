@@ -16,9 +16,11 @@ URBAN-NON-OVERLAPPING-SLAB-BEAM-MODEL@v1, UP-QTY-STATUS-001, Q-62 A cond.
 Files: `read_bays.py` (reads the bay faces, ring radii and columns from the DXF; prints JSON), `DOMES_INPUT.json`
 (the numbers it read, with the member and register id of each face), `dome_ring.py` (closed-form + shapely ring
 partition; `--check` = synthetic NON-Alsenan fixture), `DOME_RINGS.csv` (one row per dome, per side, per column),
-`slab_1f_gap.py` (the 1F lump test). Repeat:
+`slab_1f_gap.py` (the 1F lump test), `arc_ends.py` (does every drawn ring arc end on a bay face?). Repeat:
 `python -I read_bays.py <ST dxf> 16.38,41.65 30.83,41.65` -> `python -I dome_ring.py DOMES_INPUT.json --csv DOME_RINGS.csv`;
-`python -I dome_ring.py --check`; `python -I slab_1f_gap.py <T-139 PANELS.csv>`.
+`python -I dome_ring.py --check`; `python -I slab_1f_gap.py research/agents_t139/PANELS.csv`;
+`python -I arc_ends.py <ST dxf> 16,41,17,42 W=14.269,E=18.369,S=39.4403,N=43.8625` (west dome; east dome
+`30,41,31,42 W=28.6168,E=32.989,S=39.4403,N=43.8625`; GF pool court `71,46,74,48.5 W=71.4134,E=73.1134,S=45.8278,N=48.5283`).
 
 ## 1. Result in engineering terms (concrete, m3; Alsenan development villa)
 
@@ -63,8 +65,10 @@ Faces = distance from the dome centre to each framing member's inner face (DXF l
 | bay check: opening + ring + corners | 14.9818 + 1.5105 + 1.6387 = 18.1310 = 4.1000 x 4.4222 | 15.3278 + 1.7994 + 2.2074 = 19.3346 = 4.3722 x 4.4222 |
 
 The drawing itself confirms the in-bay model: on p.5 / the DXF the outer ring circle is drawn only between the framing
-members (west arcs 34.4-66.5, 113.5-151.1, 208.9-246.5, 293.5-325.6 deg; the gaps end exactly where r_o meets the faces
-d = 2.2111 (B6), 2.1111 (CB10), 1.9889 (CB13)); the framing beams run through unbroken.
+members (west arcs 34.4-66.5, 113.5-151.1, 208.9-246.5, 293.5-325.6 deg); `arc_ends.py` puts every one of the 12 west
+arc ends and 8 east outer arc ends on a bay face (within 3 mm), and the framing beams run through unbroken. The west
+inner circle is also broken at the CB10 / CB13 faces; only the east inner circle is one full CIRCLE entity reaching
+0.05 m into CB12 (section 7, item 3).
 
 Each overlap is removed once: the B6 parts stay in the B6 spans (each spans the full bay width, 4.100 / 4.4222 /
 4.3722 m), the CB10 / CB13 / B25 / CB12 parts stay in those members, the column parts stay in the column line
@@ -155,7 +159,12 @@ counted twice, as quoted in Q-62) the in-bay figure is the owner's rule applied,
 - Ring depth on the p.7 detail ("as per architect", drawn about 0.75): dropped with the dome under Q-44 A; no number taken.
 - Ring rebar (B4 bars vs the p.7 ring bars): not measured here (beam steel T-149 / S8.3 sensitivity only).
 - Formwork of the ring (both faces of the in-bay arcs): not measured (formwork task T-163).
-- GF roof slab: no dome opening (no 4.42 m circle, no see-detail label); its quarter-circle void ring (B7 arc pieces,
-  pool-court bay) was settled in-bay by T-127 (0.666 m2 of B7 ring inside the bay, one contested piece HELD in BM-GF-060),
-  so it carries no full-annulus risk either.
+- GF roof slab: no dome opening (no 4.42 m circle, no see-detail label). Its only ring is the B7 band round the
+  pool-court void (two half rings, r 1.55 / 1.75 and 1.735 / 1.935, joined by two small fillet arcs). Checked this run
+  with `arc_ends.py`: **all 18 arc ends lie on the four bay faces (B8 east, CB1 west, the south beam, B7 south) or join
+  another arc of the void**, so the band is drawn in-bay like the domes and no register row (BM-GF-049 .. -052, the
+  contested BM-GF-060 HELD) takes a full annulus. The bay re-adds: 1.700 x 2.7005 = 4.5909 m2 = void 3.690 + ring 0.666
+  + corners 0.234 (T-127); a plain two-circle lens model without the fillets gives void 3.712 / ring 0.645 / corners
+  0.2343 (corners equal; the 0.021 m2 difference is the fillet strip, which T-127 / T-139 already place in the
+  contested piece). No change.
 - The third (tower) dome: no structural drawing (S8.3 CF-S8.3-01), outside this task.
