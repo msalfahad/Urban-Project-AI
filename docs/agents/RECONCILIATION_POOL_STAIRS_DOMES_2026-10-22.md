@@ -78,3 +78,46 @@ Superseded r1: T-183 (worker 1, 2026-10-22 11:05 UTC, READY 8beaa6a): pool RC to
 Pool reconstructed from the drawing: floor 10.935 m2 x printed 0.40 = 4.374 m3; walls 2.357 m2 ring plan x 1.15 (floor top -0.85 to rim +0.30) = 2.710 m3; total 7.084 m3, steps UNKNOWN. Engine A 3.495 (-3.589: curved half of the wall ring missed; conventions 0.25 floor / 1.60 walls / 6.045 m2 instead of the printed 0.40, 1.15 and 10.935 m2). Freelancer 12.348 (+5.264: pump room 3.480 m3 not drawn, wall height 1.80, steps 0.228). Verified concrete lines 1 / 8. T-183 builds the full component split (blinding, base, walls at the junction, steps, rebar, formwork, joints, waterproofing, finishes) on this basis; main chat spot-check 2026-10-22 10:55: arithmetic of every term re-done, consistent.
 
 T-184 (worker 1, 2026-10-22, READY on agents/task-T-184): every stair inventoried with continuity; 'the stair beside the lift' IS the dog-leg ST-01 (shares the lift's west wall on every plan); the round reception stair is ST-02. Stairs own 6.790 m3 measured + held parts vs freelancer 15.053 vs engine A 4.635 (engine 12.007 = stairs 4.635 + 2 domes 7.372). ST7757 p.16 is a typical N.T.S. section whose levels fit no Alsenan stair (reinforcement arrangement only). Full ledger: research/agents_t184/T-184_STAIRCASES.md.
+
+## 7. Owner review 2026-10-22 16:30 (main chat): stair difference to the m3, verification scope, pool intersection
+
+**Stairs, engine (released A) 4.635 vs own 6.790 = +2.155 m3; the missing ST-01 storey is 2.598 m3; the 0.443 m3 between them,
+stair by stair (research/agents_t184/T-184_STAIRCASES.md sections 1 and 5 on the working branch, recomputed by the main chat):**
+
+| Stair | Engine | Own (measured, held parts excluded) | Own - engine | Cause |
+|---|---|---|---|---|
+| ST-01 GF -> 1F | 2.786 | 2.148 | -0.638 | engine CONVENTIONS where the drawing prints otherwise or nothing: waist 0.175 (printed T 16), riser 0.165, and the winder turn measured by convention (own: HELD 0.35 .. 0.38 with its slab) |
+| ST-01 1F -> 2F | 0 | 2.598 | +2.598 | D-T184-1: the storey folded away as "drawn again on" (levels ignored); silent omission |
+| ST-01b lobby flight | 0 | 0.126 | +0.126 | small omission (steps only; waist HELD) |
+| ST-02 round stair | 0.901 | 1.561 | +0.660 | engine reads only an 8.37 m2 winder region; own = straight flight + corner landing + short flight; curved treads HELD |
+| ST-03 entrance stair | 0.948 | 0.357 | -0.591 | engine adds a 0.175 m convention waist no drawing prints (own: waist HELD) |
+| Total | 4.635 | 6.790 | +2.155 | 2.598 - 0.443; 0.443 = 0.638 + 0.591 - 0.660 - 0.126 (closes to 0.000) |
+
+The two totals do NOT have the same scope: the engine's 4.635 contains conventional values (ST-01 winder turn, ST-01 and
+ST-03 convention waists) for parts the own ledger HOLDS, so "+2.155" is not the size of the engine error. No landing is
+counted twice: the floor-arrival landings (2 x 1.95 x 2.50) are floor slab in both, the intermediate landings (1.44 +
+3.00 m2 at T 16) are stair in both. Same calculation revision on both sides (released manifest A; T-184 ledger 9fbedc4,
+merged 924c2bd).
+
+**Verification status, stairs (never "VERIFIED" for the system):**
+
+| Scope | m3 | Status |
+|---|---|---|
+| ST-01 MS2-L flight (1F -> 2F lower), Checker re-measure 15:00 | 1.059 | VERIFIED (sample) |
+| ST-02 RS-S straight flight, Checker re-measure 15:00 | 0.972 | VERIFIED (sample) |
+| Rest of the measured scope (other flights, landings, ST-01b steps, ST-03 steps) | 4.759 | DRAWING-CONFIRMED / CALCULATED, not independently re-measured |
+| ST-01 winder turn + its slab, closing riser, head clash 0.115, 'B3 (With Stair)' beams | 0.35 .. 0.38 + open items | HELD |
+| ST-02 12 curved treads (candidate 0.330), helicoid soffit (not drawn), CA junction 0 .. 0.09 | not quantified | HELD (Q-50 / Q-51) |
+| ST-01b and ST-03 waists | not printed | HELD |
+| Staircase system | 6.790 measured + held | PARTIALLY VERIFIED: 2 of the measured flights (2.031 m3, 30 %) re-measured; the system is not VERIFIED while the held geometry is open |
+
+**Pool, owner questions answered by the Checker's 16:14 re-read (T-183 r2 MERGED 6380294), arithmetic re-done by the main chat:**
+- 1.20 m wall height = rim (wall cap / water line) to the structural base top (structure line rim - 1.200 on the NW cut);
+  finished floor rim - 1.150 = the printed 115. VERIFIED.
+- The 0.15 m upstand is the top of the same wall (0.15 above the deck finish, 0.20 above the deck structure), INSIDE the
+  1.20 m: no extra concrete; only its exposed outer face 8.998 m x 0.15 = 1.350 m2 is a separate quantity (finish / formwork).
+- Wall / base intersection counted once: the base is the full outer D outline 3.50 x 1.75 + pi x 1.75^2 / 2 = 10.936 m2
+  x 0.40 = 4.374 m3 (it includes the ground under the walls); the walls are the ring (outer 10.936 - water 3.10 x 1.55 +
+  pi x 1.55^2 / 2 = 8.579) = 2.357 m2 standing on the base top, x 1.20 = 2.828 m3. No volume is in both.
+- Pool concrete 7.202 m3 VERIFIED; the pool LINE stays PARTIALLY VERIFIED: reinforcement R1 860.97 .. 894.43 / R2 596.17 ..
+  616.66 kg HELD (designer), joints / waterstop, membrane termination and finishes UNKNOWN.
