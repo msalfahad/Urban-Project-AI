@@ -1,0 +1,27 @@
+{
+ "schema": "URBAN_SCOREBOARD_CHECKER_VERDICTS_V1",
+ "purpose": "Checker verdicts that tools/scoreboard_v2.py reads for the Verified share and Rule difference share columns of SCOREBOARD v2 on the development villa. Seeded by worker 3 (T-177) ONLY from merged checker notes in docs/agents/SCOREBOARD.md (branch agents/control), each cited by its note heading and the board commit that wrote it; reference ids are those of tests/alsenan/T001B_KEY_MAP.json. The Checker owns this file from here: a new verdict is a new record with its source; freelancer agreement is never a verdict. Quantities are the checker's, as the note prints them.",
+ "verdicts": [
+  {"ref_id": "RC:ورقة1:15", "kind": "RULE_DIFFERENCE", "scope": "WHOLE",
+   "source": "SCOREBOARD.md note 'Verifier 2026-10-20 (40th run, 14:50)': blinding engine 22.155 vs freelancer 47.055 m3 RULE_DIFFERENCE (freelancer plate not drawn)",
+   "commit": "b435bed6"},
+  {"ref_id": "RC:ورقة1:15", "kind": "REMEASURE", "scope": "PARTIAL", "method": "CHECKER_REMEASURE_FROM_DRAWING",
+   "source": "SCOREBOARD.md note 'Verifier 2026-10-21 (17:45)': released blinding 15.179 vs hand 15.213 m3 (-0.2 %); a part of the blinding reference line",
+   "commit": "32215d08", "unit": "m3", "engine_qty": 15.179, "checker_qty": 15.213},
+  {"ref_id": "RC:ورقة1:19", "kind": "REMEASURE", "scope": "PARTIAL", "method": "CHECKER_REMEASURE_FROM_DRAWING",
+   "source": "SCOREBOARD.md note 'Verifier 2026-10-21 (17:45)': columns above necks 34.446 m3 (5 undrawn pieces 2.268 m3, by hand); necks not included",
+   "commit": "32215d08", "unit": "m3", "checker_qty": 34.446},
+  {"ref_id": "RC:ورقة1:22", "kind": "REMEASURE", "scope": "PARTIAL", "method": "CHECKER_REMEASURE_FROM_DRAWING",
+   "source": "SCOREBOARD.md note 'Verifier 2026-10-21 (04:05)': main stair concrete 4.920 vs freelancer 8.131 m3 ENGINE_RIGHT; the stairs + domes line has more than the main stair",
+   "commit": "60035816", "unit": "m3", "checker_qty": 4.920},
+  {"ref_id": "PLS:الفاتورة:16", "kind": "RULE_DIFFERENCE", "scope": "PARTIAL",
+   "source": "SCOREBOARD.md note 'Verifier 2026-10-20 (40th run, 14:50)': plaster / paint owner method 234.17 vs freelancer 258.40 m2 on 4 rooms RULE_DIFFERENCE",
+   "commit": "b435bed6"},
+  {"ref_id": "PNT:الفاتورة:16", "kind": "RULE_DIFFERENCE", "scope": "PARTIAL",
+   "source": "SCOREBOARD.md note 'Verifier 2026-10-20 (40th run, 14:50)': plaster / paint owner method 234.17 vs freelancer 258.40 m2 on 4 rooms RULE_DIFFERENCE",
+   "commit": "b435bed6"},
+  {"ref_id": "FIN:الغلاف:15", "kind": "RULE_DIFFERENCE", "scope": "PARTIAL",
+   "source": "SCOREBOARD.md note 'Verifier 2026-10-20 (44th run, 18:40)': candidate V2.13 wet floor 85.62 vs freelancer 72.01 m2 RULE_DIFFERENCE Q-37 A; the wet floor is a part of the total-floors reference line",
+   "commit": "f00a527c"}
+ ]
+}
