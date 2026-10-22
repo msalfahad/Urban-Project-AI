@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-22T00:21Z | Worker 1 | STARTED | run session_014z4gmfTxL2bxappWbK6qYz | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-22T00:12Z | Lead | STARTED | run session_015r36jyGQPSTSBE5DdAYQ4s | repo-attached routine | task state: board | report pending
 - 2026-10-22 00:01 UTC | Worker 2 | SUCCESS | T-161 READY (b5d5e9e on agents/task-T-161) | 27 owner images = designer renders, all described, 26 findings vs SE p.6 / NW p.8 / sheet03. Domes: 9 renders show the 3 drawn domes (Q-27 A); BOQ unchanged by Q-29 client change (dome concrete 6.78 m3, Sigma domes 181.81 m2 stay out). DIFFERS, no quantity changed: court / side strip stone vs owner interlock / porcelain (owner choice), porch raised + balustrade vs plan level, main door single vs printed 2.00 double, SX-01 arch + low wall + railing and W02 as two windows (both HELD causes), street fence low wall + railing + pier. Missing BOQ categories: railings, shutters. No new owner question; 5 designer items proposed. | self-check setup PASS, codemap stale none PASS, t061 PASS, freeze 0 PASS (also on b5d5e9e); Drive read OK; problem: none
 - 2026-10-21T23:51Z | Verifier | STARTED | run session_01Mipjfjrmtbeh8QwoFG2uW5 | repo-attached routine | task state: READY waiting T-142 (Gate B), T-155 r2, T-125, T-143, T-128, T-147, T-154, T-150, T-139 r2, T-152, T-159, T-140 | self-check pending
