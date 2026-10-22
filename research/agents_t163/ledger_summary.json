@@ -1,0 +1,84 @@
+{
+ "floors": {
+  "1F": {
+   "beam_sides_E": 109.884,
+   "beam_sides_G": 93.564,
+   "beam_soffit_E": 34.242,
+   "beam_soffit_G": 34.065,
+   "edge_G": 8.949,
+   "held_len_m": {
+    "BEAM_SIDE_HELD_LEN": 4.721,
+    "BEAM_SIDE_HELD_LEN:HELD_EDGE": 12.926,
+    "BEAM_SIDE_HELD_LEN:RING_MIX": 25.455,
+    "BEAM_SIDE_HELD_LEN:STAIR": 9.3,
+    "EDGE_HELD_LEN:RING_MIX": 6.666,
+    "JOINT_HELD_LEN": 1.895,
+    "JOINT_HELD_LEN:HELD_EDGE": 3.41,
+    "JOINT_HELD_LEN:RING_MIX": 0.799,
+    "JOINT_HELD_LEN:STAIR": 1.902,
+    "JUNCTION_HELD_LEN": 2.2
+   },
+   "held_soffit_sides": 5.947,
+   "joint_G": 5.348,
+   "slab_soffit": 123.479
+  },
+  "2F": {
+   "beam_sides_E": 30.339,
+   "beam_sides_G": 28.591,
+   "beam_soffit_E": 7.904,
+   "beam_soffit_G": 7.824,
+   "edge_G": 4.16,
+   "held_len_m": {
+    "BEAM_SIDE_HELD_LEN": 10.56,
+    "BEAM_SIDE_HELD_LEN:DRAFT": 0.65,
+    "BEAM_SIDE_HELD_LEN:HELD_EDGE": 3.15,
+    "JOINT_HELD_LEN": 0.8,
+    "JOINT_HELD_LEN:DRAFT": 0.598,
+    "JOINT_HELD_LEN:HELD_EDGE": 0.55,
+    "JUNCTION_HELD_LEN": 2.4
+   },
+   "held_soffit_sides": 1.406,
+   "joint_G": 0.854,
+   "slab_soffit": 44.885
+  },
+  "GF": {
+   "beam_sides_E": 187.103,
+   "beam_sides_G": 166.556,
+   "beam_soffit_E": 55.738,
+   "beam_soffit_G": 55.966,
+   "edge_G": 14.24,
+   "held_len_m": {
+    "BEAM_SIDE_HELD_LEN": 3.907,
+    "BEAM_SIDE_HELD_LEN:DRAFT": 0.65,
+    "BEAM_SIDE_HELD_LEN:HELD_EDGE": 7.893,
+    "BEAM_SIDE_HELD_LEN:RING_MIX": 7.003,
+    "BEAM_SIDE_HELD_LEN:STAIR": 32.261,
+    "BEAM_SIDE_HELD_LEN:UNMATCHED": 3.541,
+    "EDGE_HELD_LEN:RING_MIX": 1.215,
+    "EDGE_HELD_LEN:STAIR": 2.35,
+    "JOINT_HELD_LEN": 0.5,
+    "JOINT_HELD_LEN:DRAFT": 0.598,
+    "JOINT_HELD_LEN:HELD_EDGE": 1.448,
+    "JOINT_HELD_LEN:STAIR": 2.821,
+    "JOINT_HELD_LEN:UNMATCHED": 0.266,
+    "JUNCTION_HELD_LEN": 10.115,
+    "UNMATCHED_LEN": 4.87
+   },
+   "held_soffit_sides": 26.777,
+   "joint_G": 8.022,
+   "slab_soffit": 206.684
+  }
+ },
+ "totals": {
+  "ABOVE_HELD_HI": 276.506,
+  "ABOVE_HELD_LO": 220.752,
+  "ABOVE_HELD_UNQUANTIFIED_LINES": 9.0,
+  "BELOW_HELD_HI": 227.118,
+  "BELOW_HELD_LO": 162.64,
+  "BELOW_HELD_UNQUANTIFIED_LINES": 34.0,
+  "E_CALCULATED": 802.658,
+  "G_CALCULATED": 1038.533,
+  "OQ10_EARTH_CAST": 0.0,
+  "OQ10_FORMED": 103.14
+ }
+}
