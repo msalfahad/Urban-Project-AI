@@ -121,6 +121,19 @@ from exact splitting); slab-thickness band 31.795 -> **31.058** (-0.737: column-
 two break slivers); held above ground 220.752 .. 276.506 -> **221.507 .. 277.365**. Beam and slab soffits, shafts,
 stairs and every below-ground line: unchanged (`--r1` reproduces the r1 files byte for byte).
 
+**Beam sides, element method E vs drawing faces G reconciled in units (r2, CALCULATED members, m2 at D - t).**
+E 327.326 (2 x clear length x (D - 0.16), 719.585 m of face) vs G 287.681 = slab sides 219.036 (489.806 m) + outer
+sides 68.014 (135.474 m, plate edges and openings, beam ends included) + the part of faces beside shallower beams
+0.631. The walk sees 794.430 m of side face at D - t = 367.348 m2, of which: covered by a deeper or equal beam 15.009
+(31.759 m, tee and through junctions), by a column 20.262 (41.716 m), drafting gaps between band pieces 0.829 (1.865 m);
+beside shallower beams deducted 5.702 (10.523 m, only D - D2 counted); HELD faces 37.865 (stair zones 11.996, dome /
+pool-court rings 13.044, held edge strips 8.211, unmatched pieces 2.039, held-depth neighbours 1.615, break slivers
+0.960). So E - G = +39.645 = covered 36.100 + shallower 5.702 + held 37.865 - the walk's extra perimeter 40.022 (faces E
+does not see: beam ends below the slab and the band length through junction squares beyond E's clear length). Of E's
+excess, 37.865 m2 are faces G HOLDS (not faces that do not exist) and the net junction deduction is 41.802 - 40.022 =
+1.780 m2. Residual not split further: the 40.022 m2 extra perimeter by member (end faces vs junction squares) is
+UNRESOLVED here; it is the place to look if a re-measured bay disagrees.
+
 **Lessons-register row proposed (ENGINEERING_REASONING_STANDARD section 7):** 2026-10-22 | Column joint faces +12 %
 (COL-GF-19 1.124 vs 1.004 m2); whole joint line 14.224 vs 11.878 + 1.003 .. 1.180 HELD | (1) one element walked as its
 drafting pieces: probes from internal edges leaked past acute wedges; (2) a 30 mm probe read the member 30 mm away,
