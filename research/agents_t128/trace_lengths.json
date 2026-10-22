@@ -1,0 +1,546 @@
+{
+ "GF dewaneya": {
+  "floor": "GF",
+  "parts": {
+   "ROOM": {
+    "WALL": 14.114240295244647,
+    "WIN": 3.9,
+    "DOOR": 1.962586924939469
+   }
+  },
+  "face_m_raw": 19.976827220184116,
+  "virt_m": 0,
+  "corr_m": 0.16,
+  "datum_split_m": {
+   "ROOF": 19.97682722018412
+  },
+  "contour_m": 19.976827220184116,
+  "area_m2_raw": 24.586675
+ },
+ "GF wash by dewaneya": {
+  "floor": "GF",
+  "parts": {
+   "ROOM": {
+    "WALL": 5.27414213562373,
+    "DOOR": 1.76
+   }
+  },
+  "face_m_raw": 7.03414213562373,
+  "virt_m": 0,
+  "corr_m": 0.16,
+  "datum_split_m": {
+   "ROOF": 7.03414213562373
+  },
+  "contour_m": 7.03414213562373,
+  "area_m2_raw": 3.011625
+ },
+ "GF WC by dewaneya": {
+  "floor": "GF",
+  "parts": {
+   "ROOM": {
+    "WALL": 6.58,
+    "DOOR": 0.76
+   }
+  },
+  "face_m_raw": 7.34,
+  "virt_m": 0,
+  "corr_m": 0.16000000000000003,
+  "datum_split_m": {
+   "ROOF": 7.34
+  },
+  "contour_m": 7.34,
+  "area_m2_raw": 3.244975
+ },
+ "GF driver": {
+  "floor": "GF",
+  "parts": {
+   "ROOM": {
+    "WALL": 10.12,
+    "DOOR": 1.6400000000000001,
+    "WIN": 0.58
+   }
+  },
+  "face_m_raw": 12.34,
+  "virt_m": 0,
+  "corr_m": 0.16,
+  "datum_split_m": {
+   "ROOF": 12.339999999999998
+  },
+  "contour_m": 12.34,
+  "area_m2_raw": 7.66135
+ },
+ "GF driver WC": {
+  "floor": "GF",
+  "parts": {
+   "ROOM": {
+    "WALL": 4.67,
+    "DOOR": 0.77
+   }
+  },
+  "face_m_raw": 5.4399999999999995,
+  "virt_m": 0,
+  "corr_m": 0.16,
+  "datum_split_m": {
+   "ROOF": 5.4399999999999995
+  },
+  "contour_m": 5.4399999999999995,
+  "area_m2_raw": 1.853225
+ },
+ "GF kitchen": {
+  "floor": "GF",
+  "parts": {
+   "ROOM": {
+    "WALL": 11.84656854249492,
+    "DOOR": 0.97,
+    "WIN": 1.5
+   }
+  },
+  "face_m_raw": 14.31656854249492,
+  "virt_m": 0,
+  "corr_m": 0.16,
+  "datum_split_m": {
+   "ROOF": 14.316568542494919
+  },
+  "contour_m": 14.31656854249492,
+  "area_m2_raw": 9.377575
+ },
+ "GF pantry": {
+  "floor": "GF",
+  "parts": {
+   "ROOM": {
+    "WALL": 6.944142135623731,
+    "WIN": 2.5,
+    "VIRT": 4.46,
+    "DOOR": 0.97
+   }
+  },
+  "face_m_raw": 10.414142135623731,
+  "virt_m": 4.46,
+  "corr_m": 0.11202412391294014,
+  "datum_split_m": {
+   "FLOOR": 6.35414213562373,
+   "ROOF": 4.0600000000000005
+  },
+  "contour_m": 14.874142135623732,
+  "area_m2_raw": 13.28305
+ },
+ "GF open room (din)": {
+  "floor": "GF",
+  "parts": {
+   "ROOM": {
+    "WALL": 47.01692420859536,
+    "DOOR": 4.00544099972991,
+    "VIRT": 7.085,
+    "WIN": 7.262835365853658
+   }
+  },
+  "face_m_raw": 58.28520057417893,
+  "virt_m": 7.085,
+  "corr_m": 0.1426587651553303,
+  "datum_split_m": {
+   "FLOOR": 22.809637082317902,
+   "ROOF": 35.475563491861045
+  },
+  "contour_m": 65.37020057417894,
+  "area_m2_raw": 136.5468
+ },
+ "GF master bed": {
+  "floor": "GF",
+  "parts": {
+   "ROOM": {
+    "WALL": 14.711921358123258,
+    "DOOR": 1.682271152671672,
+    "VIRT": 1.4400017468763968,
+    "WIN": 3.955,
+    "NONE": 0.07717424926092457
+   }
+  },
+  "face_m_raw": 20.426366760055853,
+  "virt_m": 1.4400017468763968,
+  "corr_m": 0.1494632581799223,
+  "datum_split_m": {
+   "FLOOR": 17.302224624432125,
+   "ROOF": 3.124142135623731
+  },
+  "contour_m": 21.86636850693225,
+  "area_m2_raw": 22.618425
+ },
+ "GF master bath": {
+  "floor": "GF",
+  "parts": {
+   "ROOM": {
+    "WALL": 6.141249926426754,
+    "DOOR": 0.76,
+    "WIN": 0.6
+   }
+  },
+  "face_m_raw": 7.5012499264267545,
+  "virt_m": 0,
+  "corr_m": 0.16,
+  "datum_split_m": {
+   "FLOOR": 3.4873982783554096,
+   "ROOF": 4.013851648071345
+  },
+  "contour_m": 7.5012499264267545,
+  "area_m2_raw": 3.598125
+ },
+ "GF WC 175x135 by stair": {
+  "floor": "GF",
+  "parts": {
+   "ROOM": {
+    "WALL": 4.680000000000001,
+    "DOOR": 0.77,
+    "WIN": 0.59
+   }
+  },
+  "face_m_raw": 6.040000000000001,
+  "virt_m": 0,
+  "corr_m": 0.16,
+  "datum_split_m": {
+   "FLOOR": 6.040000000000001
+  },
+  "contour_m": 6.040000000000001,
+  "area_m2_raw": 2.255225
+ },
+ "GF basin 110x135": {
+  "floor": "GF",
+  "parts": {
+   "STAIR_SHAFT": {
+    "WALL": 9.746568542494924,
+    "WIN": 1.2,
+    "DOOR": 0.89
+   },
+   "ROOM": {
+    "WALL": 4.834142135623731,
+    "DOOR": 1.74
+   }
+  },
+  "face_m_raw": 18.410710678118654,
+  "virt_m": 0,
+  "corr_m": 0.16,
+  "datum_split_m": {
+   "FLOOR": 18.410710678118654
+  },
+  "contour_m": 18.410710678118654,
+  "area_m2_raw": 13.824575
+ },
+ "GF WC wedge A": {
+  "floor": "GF",
+  "parts": {
+   "ROOM": {
+    "WALL": 5.183245409816732,
+    "DOOR": 0.7826320095765,
+    "REVEAL": 0.04,
+    "WIN": 0.5816201117318451
+   }
+  },
+  "face_m_raw": 6.547497531125077,
+  "virt_m": 0,
+  "corr_m": 0.15999999999999998,
+  "datum_split_m": {
+   "FLOOR": 6.547497531125077
+  },
+  "contour_m": 6.587497531125077,
+  "area_m2_raw": 2.22785
+ },
+ "GF WC wedge B": {
+  "floor": "GF",
+  "parts": {
+   "ROOM": {
+    "WALL": 6.423063592387826,
+    "DOOR": 0.7835489488577951
+   }
+  },
+  "face_m_raw": 7.206612541245621,
+  "virt_m": 0,
+  "corr_m": 0.16,
+  "datum_split_m": {
+   "FLOOR": 7.206612541245621
+  },
+  "contour_m": 7.206612541245621,
+  "area_m2_raw": 2.53065
+ },
+ "GF wash lobby": {
+  "floor": "GF",
+  "parts": {
+   "ROOM": {
+    "WALL": 6.584427100374357,
+    "DOOR": 1.5451126801631785,
+    "VIRT": 1.2100037812440918
+   }
+  },
+  "face_m_raw": 8.129539780537534,
+  "virt_m": 1.2100037812440918,
+  "corr_m": 0.1392708708173611,
+  "datum_split_m": {
+   "FLOOR": 8.129539780537536
+  },
+  "contour_m": 9.339543561781626,
+  "area_m2_raw": 4.5612
+ },
+ "1F mbed W 425x450": {
+  "floor": "1F",
+  "parts": {
+   "ROOM": {
+    "WALL": 13.34656854249492,
+    "WIN": 2.45,
+    "DOOR": 1.72
+   }
+  },
+  "face_m_raw": 17.51656854249492,
+  "virt_m": 0,
+  "corr_m": 0.16,
+  "datum_split_m": {
+   "ROOF": 17.51656854249492
+  },
+  "contour_m": 17.51656854249492,
+  "area_m2_raw": 18.74545
+ },
+ "1F mbed 500x365": {
+  "floor": "1F",
+  "parts": {
+   "ROOM": {
+    "WALL": 13.938284271247461,
+    "DOOR": 1.74,
+    "WIN": 1.55
+   }
+  },
+  "face_m_raw": 17.22828427124746,
+  "virt_m": 0,
+  "corr_m": 0.16,
+  "datum_split_m": {
+   "ROOF": 17.22828427124746
+  },
+  "contour_m": 17.22828427124746,
+  "area_m2_raw": 17.91565
+ },
+ "1F mbed 380x430": {
+  "floor": "1F",
+  "parts": {
+   "ROOM": {
+    "WALL": 14.179999999999998,
+    "DOOR": 1.8599999999999999
+   }
+  },
+  "face_m_raw": 16.04,
+  "virt_m": 0,
+  "corr_m": 0.16,
+  "datum_split_m": {
+   "FLOOR": 6.539999999999999,
+   "ROOF": 9.5
+  },
+  "contour_m": 16.04,
+  "area_m2_raw": 16.057725
+ },
+ "1F mbed E": {
+  "floor": "1F",
+  "parts": {
+   "ROOM": {
+    "WALL": 16.9533870819836,
+    "DOOR": 1.6400000000000001,
+    "WIN": 3.3192002080681826
+   }
+  },
+  "face_m_raw": 21.912587290051782,
+  "virt_m": 0,
+  "corr_m": 0.16,
+  "datum_split_m": {
+   "ROOF": 21.912587290051786
+  },
+  "contour_m": 21.912587290051782,
+  "area_m2_raw": 18.6338
+ },
+ "1F laundry": {
+  "floor": "1F",
+  "parts": {
+   "ROOM": {
+    "WALL": 14.54242640687119,
+    "DOOR": 1.63,
+    "WIN": 0.59
+   }
+  },
+  "face_m_raw": 16.76242640687119,
+  "virt_m": 0,
+  "corr_m": 0.16,
+  "datum_split_m": {
+   "FLOOR": 16.762426406871192
+  },
+  "contour_m": 16.76242640687119,
+  "area_m2_raw": 9.859725
+ },
+ "1F WC 147x180": {
+  "floor": "1F",
+  "parts": {
+   "ROOM": {
+    "WALL": 5.029999999999999,
+    "DOOR": 0.77,
+    "WIN": 0.58
+   }
+  },
+  "face_m_raw": 6.379999999999999,
+  "virt_m": 0,
+  "corr_m": 0.16,
+  "datum_split_m": {
+   "FLOOR": 6.38
+  },
+  "contour_m": 6.379999999999999,
+  "area_m2_raw": 2.532775
+ },
+ "1F bath W upper": {
+  "floor": "1F",
+  "parts": {
+   "ROOM": {
+    "WALL": 7.49,
+    "WIN": 0.58,
+    "DOOR": 0.77
+   }
+  },
+  "face_m_raw": 8.84,
+  "virt_m": 0,
+  "corr_m": 0.16,
+  "datum_split_m": {
+   "ROOF": 8.84
+  },
+  "contour_m": 8.84,
+  "area_m2_raw": 4.866225
+ },
+ "1F bath W lower": {
+  "floor": "1F",
+  "parts": {
+   "ROOM": {
+    "WALL": 7.49,
+    "WIN": 0.59,
+    "DOOR": 0.76
+   }
+  },
+  "face_m_raw": 8.84,
+  "virt_m": 0,
+  "corr_m": 0.16,
+  "datum_split_m": {
+   "ROOF": 8.84
+  },
+  "contour_m": 8.84,
+  "area_m2_raw": 4.866225
+ },
+ "1F bath E 210x225": {
+  "floor": "1F",
+  "parts": {
+   "ROOM": {
+    "WALL": 7.3100000000000005,
+    "DOOR": 0.77,
+    "WIN": 0.46
+   }
+  },
+  "face_m_raw": 8.540000000000001,
+  "virt_m": 0,
+  "corr_m": 0.16,
+  "datum_split_m": {
+   "ROOF": 8.54
+  },
+  "contour_m": 8.540000000000001,
+  "area_m2_raw": 4.573975
+ },
+ "1F bath by laundry": {
+  "floor": "1F",
+  "parts": {
+   "ROOM": {
+    "WALL": 6.064142135623731,
+    "DOOR": 0.77,
+    "WIN": 0.6
+   }
+  },
+  "face_m_raw": 7.434142135623731,
+  "virt_m": 0,
+  "corr_m": 0.16000000000000003,
+  "datum_split_m": {
+   "FLOOR": 5.1441421356237305,
+   "ROOF": 2.29
+  },
+  "contour_m": 7.434142135623731,
+  "area_m2_raw": 3.44575
+ },
+ "1F living zone": {
+  "floor": "1F",
+  "parts": {
+   "STAIR_SHAFT": {
+    "WALL": 10.182426406871194,
+    "WIN": 2.2,
+    "DOOR": 0.96
+   },
+   "ROOM": {
+    "WALL": 31.76188828934955,
+    "DOOR": 3.549817034402925,
+    "WIN": 3.1,
+    "REVEAL": 0.17,
+    "NONE": 0.08366885841063335,
+    "VIRT": 0.96
+   }
+  },
+  "face_m_raw": 51.8378005890343,
+  "virt_m": 0.96,
+  "corr_m": 0.15709078790619355,
+  "datum_split_m": {
+   "FLOOR": 22.42708991091564,
+   "ROOF": 29.410710678118647
+  },
+  "contour_m": 52.96780058903428,
+  "area_m2_raw": 75.451875
+ },
+ "2F maid": {
+  "floor": "2F",
+  "parts": {
+   "ROOM": {
+    "WALL": 15.91,
+    "DOOR": 1.63,
+    "WIN": 1.2
+   }
+  },
+  "face_m_raw": 18.74,
+  "virt_m": 0,
+  "corr_m": 0.16,
+  "datum_split_m": {
+   "ROOF": 18.740000000000002
+  },
+  "contour_m": 18.74,
+  "area_m2_raw": 19.02435
+ },
+ "2F WC 300x185": {
+  "floor": "2F",
+  "parts": {
+   "ROOM": {
+    "WALL": 8.18,
+    "DOOR": 0.77,
+    "WIN": 0.59
+   }
+  },
+  "face_m_raw": 9.54,
+  "virt_m": 0,
+  "corr_m": 0.16,
+  "datum_split_m": {
+   "ROOF": 9.539999999999997
+  },
+  "contour_m": 9.54,
+  "area_m2_raw": 5.381475
+ },
+ "2F lobby": {
+  "floor": "2F",
+  "parts": {
+   "STAIR_SHAFT": {
+    "WALL": 11.962426406871195,
+    "WIN": 2.2
+   },
+   "ROOM": {
+    "WALL": 11.416568542494922,
+    "DOOR": 1.8199999999999998
+   }
+  },
+  "face_m_raw": 27.398994949366116,
+  "virt_m": 0,
+  "corr_m": 0.16,
+  "datum_split_m": {
+   "ROOF": 27.39899494936612
+  },
+  "contour_m": 27.39899494936612,
+  "area_m2_raw": 21.56765
+ }
+}
