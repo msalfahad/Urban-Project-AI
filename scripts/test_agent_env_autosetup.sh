@@ -44,7 +44,13 @@ tail -1 "$TMP/a/.work/setup.log" | grep -q "setup by hook" || fail "hook setup n
 python3 -I -c "import json,sys; h=json.load(open(sys.argv[1]))['hooks']['SessionStart'][0]; assert 'matcher' not in h, h; assert 'AGENT_ENV_SETUP_BY=hook' in h['hooks'][0]['command']" "$TMP/a/.claude/settings.json" || fail "settings hook not as expected"
 ok "hook setup idempotent, recorded, runs on every session start"
 
-# 4. a non-cloud shell never prepares anything
+# 4. the board-to-queue check runs from the pre-approved wrapper (owner 2026-10-22, T-185 regression)
+out="$(CLAUDE_CODE_REMOTE=true bash "$TMP/a/scripts/agent_env.sh" board check 2>&1)" && rc=0 || rc=$?
+grep -q "^queue check: [0-9]* actionable rows" <<<"$out" || fail "board check printed no summary: $out"
+[[ $rc -le 1 ]] || fail "board check exit $rc"
+ok "board check runs (exit $rc, $(tail -1 <<<"$out"))"
+
+# 5. a non-cloud shell never prepares anything
 prep_clone "$TMP/b"
 out="$(env -u CLAUDE_CODE_REMOTE -u AGENT_ENV_FORCE bash "$TMP/b/scripts/agent_env.sh" status 2>&1)" || fail "non-cloud status failed: $out"
 [[ ! -e "$TMP/b/.work" ]] || fail "non-cloud shell created .work"

@@ -28,6 +28,8 @@
 #   board pull                    git pull --rebase of the board worktree
 #   board log "LINE"              put LINE at the top of the "## Entries" list of docs/agents/RUN_LOG.md, commit, push
 #   board commit "MESSAGE"        commit every change under docs/agents/ of the board worktree and push agents/control
+#   board check                   pull, then docs/agents/dashboard/queue_check.py: every actionable task has an agent, a
+#                                 queue place and a reason; exit 1 when a row is flagged
 # T is "engine" (default) or "task-<ID>".
 set -euo pipefail
 
@@ -280,7 +282,12 @@ open(p,"w",encoding="utf-8").write(s[:j]+os.environ["LINE"]+"\n"+s[j:])' "$f"
       git -C "$b" diff --cached --quiet && { say "nothing to commit"; return 0; }
       git -C "$b" commit --quiet -m "$1"
       board_push; say "board pushed @ $(git -C "$b" rev-parse --short HEAD)" ;;
-    *) die "board needs pull, log or commit" ;;
+    check)
+      git -C "$b" pull --quiet --rebase origin "$BOARD_BRANCH"
+      local q="$b/docs/agents/dashboard/queue_check.py"
+      [[ -f "$q" ]] || die "no queue_check.py on the board"
+      python3 -I "$q" "$b/docs/agents" ;;
+    *) die "board needs pull, log, commit or check" ;;
   esac
 }
 
@@ -297,7 +304,7 @@ main() {
     task) check_repo; ensure_prepared; cmd_task "$@" ;;
     decode) check_repo; ensure_prepared; cmd_decode "$@" ;;
     board) check_repo; ensure_prepared; cmd_board "$@" ;;
-    *) sed -n '2,31p' "${BASH_SOURCE[0]}"; [[ -z "$c" ]] || exit 2 ;;
+    *) sed -n '2,33p' "${BASH_SOURCE[0]}"; [[ -z "$c" ]] || exit 2 ;;
   esac
 }
 main "$@"
