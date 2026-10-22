@@ -1,0 +1,418 @@
+{
+ "schema": "T184_STAIR_INVENTORY_INPUT_V1",
+ "project": "development villa (Drive folder 'Alsenan chalet project'); dimensions, counts and levels only, no coordinates, names or drawing content",
+ "sources": {
+  "ARCH_GF": "p7757_arch_sheet03.pdf (GF plan) + architectural DXF (P7757_DXF_COMPRESSED.zip, sha ab54dd55)",
+  "ARCH_1F": "p7757_arch_sheet04.pdf (1F plan) + architectural DXF",
+  "ARCH_2F": "Alsenan_Architectural_P7757_Pages_05-06.pdf page 1 (2F plan) + architectural DXF",
+  "ARCH_SE": "Alsenan_Architectural_P7757_Pages_05-06.pdf page 2 (SOUTH EAST ELEVATION)",
+  "SEC_AA": "p7757_arch_sheet10.pdf (section A-A), counts per T-111 (checker re-measured the 1F flight, 0.0 %)",
+  "ST_P3": "ST7757.pdf p.3 GROUND BEAMS PLAN",
+  "ST_P4": "ST7757.pdf p.4 GROUND FLOOR ROOF SLAB",
+  "ST_P5": "ST7757.pdf p.5 FIRST FLOOR ROOF SLAB",
+  "ST_P6": "ST7757.pdf p.6 SECOND FLOOR ROOF SLAB",
+  "ST_P16": "ST7757.pdf p.16 DETAILS (4): TYPICAL STEEL LAYOUT - STAIR SECTION (N.T.S.), TYPICAL DETAIL OF STAIR BEAM",
+  "T111": "research/agents_t111 (flight readings and intersection ledger, merged c0e8443)"
+ },
+ "floor_levels": {
+  "GF": 1.0,
+  "1F": 5.5,
+  "2F": 9.7,
+  "2F_ROOF_SLAB": 13.9
+ },
+ "lift": {
+  "inside": "1.80 x 1.80 (printed '180' x '180' on GF, 1F, 2F plans)",
+  "structural_box": "B14 / B7 / B1 on ST p.4, B7 / B1 on ST p.5"
+ },
+ "stairs": [
+  {
+   "stair_id": "ST-01",
+   "name": "dog-leg stair in the shaft beside the lift (the 'main' stair of the census)",
+   "beside_lift": true,
+   "evidence_place": "one shaft 2.50 m inside ('250' on GF, 1F, 2F plans), its east wall line is the lift shaft's west wall on GF, 1F and 2F (ARCH_GF/1F/2F); ST p.4 and p.5 draw the stair panels 'T 16', '8 d16/m' beside the lift box",
+   "serves": "GF +1.00 -> 1F +5.50 -> 2F +9.70; ENDS at 2F",
+   "end_evidence": "2F plan draws no flight leaving +9.70 (both lanes are the 1F -> 2F flights seen through the opening, T-111 s.3); ST p.6 covers the shaft with slab panels (the north one 'T 18', 7 d14/m T&B, under the 'WATER TANK PLACE' cloud), no stair opening; SE elevation: the tower is roofed at 2F roof level",
+   "flights": [
+    {
+     "id": "MS1-L",
+     "z_from": 1.0,
+     "z_to": 2.6667,
+     "risers": 10,
+     "riser": 0.166667,
+     "going": 0.3,
+     "goings": 9,
+     "steps_counted": 9,
+     "width": 1.2,
+     "waist": 0.16,
+     "src": "ARCH_GF 10 riser lines, 2.70 m to the turn; SEC_AA; ST_P4 T 16"
+    },
+    {
+     "id": "MS1-U",
+     "z_from": 3.5,
+     "z_to": 5.5,
+     "risers": 12,
+     "riser": 0.166667,
+     "going": 0.3,
+     "goings": 11,
+     "steps_counted": 12,
+     "width": 1.2,
+     "waist": 0.16,
+     "src": "SEC_AA 12 risers (Q-46 A); plans 11 lines; ST_P4 T 16"
+    },
+    {
+     "id": "MS2-L",
+     "z_from": 5.5,
+     "z_to": 7.516,
+     "risers": 12,
+     "riser": 0.168,
+     "going": 0.3,
+     "goings": 11,
+     "steps_counted": 12,
+     "width": 1.2,
+     "waist": 0.16,
+     "src": "ARCH_1F 12 riser lines, DXF dimension 3300; SEC_AA; ST_P5 T 16"
+    },
+    {
+     "id": "MS2-U",
+     "z_from": 7.684,
+     "z_to": 9.7,
+     "risers": 12,
+     "riser": 0.168,
+     "going": 0.3,
+     "goings": 11,
+     "steps_counted": 12,
+     "width": 1.2,
+     "waist": 0.16,
+     "src": "SEC_AA 12 risers; plans 11 lines; ST_P5 T 16"
+    }
+   ],
+   "held_parts": [
+    {
+     "id": "MS1-T",
+     "what": "winder turn GF -> 1F (5 risers on A-A, 4 wedges on the plans)",
+     "candidate_m3": [
+      0.12,
+      0.13
+     ],
+     "why": "Q-51 cond: well strip 0.10 x 1.20 unassigned, no soffit drawn"
+    },
+    {
+     "id": "MS1-T-SLAB",
+     "what": "slab under the winders",
+     "candidate_m3": [
+      0.2304,
+      0.2496
+     ],
+     "why": "soffit not drawn (horizontal projection 1.44 .. 1.56 m2 x 0.16)"
+    },
+    {
+     "id": "MS2-TR",
+     "what": "closing riser 1F -> 2F (+7.516 -> +7.684)",
+     "candidate_m3": null,
+     "why": "landing levels scaled, not printed"
+    },
+    {
+     "id": "HEAD-CLASH",
+     "what": "last 0.20 m of MS1-U / MS2-U inside B20 / B23 (section vs structural plan)",
+     "candidate_m3": [
+      0.1147,
+      0.1147
+     ],
+     "why": "designer clash (Q-46 RFI)"
+    },
+    {
+     "id": "B3-WITH-STAIR",
+     "what": "'B3 (With Stair)' beams on ST p.4 / p.5 (cranked stair beam, ST p.16 'TYPICAL DETAIL OF STAIR BEAM')",
+     "candidate_m3": null,
+     "why": "owner Q-61 (2): HOLD, never duplicate concrete"
+    }
+   ],
+   "landings": [
+    {
+     "id": "MS1-LD",
+     "level": 3.5,
+     "length": 1.2,
+     "width": 1.2,
+     "thickness": 0.16,
+     "floor_level": false,
+     "src": "T111 DXF wall-to-riser 1.20 x 1.20"
+    },
+    {
+     "id": "MS2-LD",
+     "level": 7.516,
+     "length": 1.2,
+     "width": 2.5,
+     "thickness": 0.16,
+     "floor_level": false,
+     "src": "T111 DXF 2.50 x 1.20"
+    },
+    {
+     "id": "1F-ARRIVAL",
+     "level": 5.5,
+     "length": 1.95,
+     "width": 2.5,
+     "thickness": 0.16,
+     "floor_level": true,
+     "inside_floor_slab": true,
+     "src": "ARCH_1F '195' x '250'; ST_P5 slab panel: FLOOR SLAB concrete, not stair"
+    },
+    {
+     "id": "2F-ARRIVAL",
+     "level": 9.7,
+     "length": 1.95,
+     "width": 2.5,
+     "thickness": 0.16,
+     "floor_level": true,
+     "inside_floor_slab": true,
+     "src": "ARCH_2F '195' x '250' (Q-70 polygon): FLOOR SLAB concrete, not stair"
+    }
+   ],
+   "deductions_q62": [
+    {
+     "id": "MS1-U head in B20 / 1F slab",
+     "m3": 0.03
+    },
+    {
+     "id": "MS2-U head in B23 / 2F slab",
+     "m3": 0.03024
+    },
+    {
+     "id": "MS2-L top wedge in landing MS2-LD",
+     "m3": 0.030171
+    }
+   ]
+  },
+  {
+   "stair_id": "ST-01b",
+   "name": "lobby flight D1 inside the ST-01 shaft, under its half landing (court door lobby +0.30 -> GF hall +1.00)",
+   "beside_lift": true,
+   "serves": "lobby +0.30 -> GF +1.00 only",
+   "flights": [
+    {
+     "id": "D1",
+     "z_from": 0.3,
+     "z_to": 1.0,
+     "risers": 4,
+     "riser": 0.175,
+     "going": 0.3,
+     "goings": 3,
+     "steps_counted": 4,
+     "width": 1.2,
+     "waist": null,
+     "src": "ARCH_GF 4 solid riser lines under the dashed upper flight; SEC_AA 4 risers; ST_P3 '+0.30' in the shaft"
+    }
+   ],
+   "held_parts": [
+    {
+     "id": "D1-WAIST",
+     "what": "waist / slab under D1",
+     "candidate_m3": null,
+     "why": "no thickness printed; on fill"
+    }
+   ],
+   "landings": [],
+   "deductions_q62": []
+  },
+  {
+   "stair_id": "ST-02",
+   "name": "round (part-curved) stair in the reception",
+   "beside_lift": false,
+   "evidence_place": "in the reception / void (ARCH_GF, ARCH_1F), 12 curved + 11 straight + corner landing + 5 risers; the lift is across the hall from it, not beside it",
+   "serves": "GF +1.00 -> 1F +5.50; ENDS at 1F",
+   "end_evidence": "1F plan: the short flight arrives at +5.50 with the up arrow; no flight leaves +5.50 there; 2F plan and ST p.5 draw no stair at that place (roof / domes / slab panels only)",
+   "flights": [
+    {
+     "id": "RS-S",
+     "z_from": 2.9286,
+     "z_to": 4.6964,
+     "risers": 11,
+     "riser": 0.160714,
+     "going": 0.3,
+     "goings": 10,
+     "steps_counted": 11,
+     "width": 1.2,
+     "waist": 0.16,
+     "src": "DXF 11 riser lines 3.00 m, DXF dimension 1200; ST_P4 round-stair panel T 16, 8 d16/m"
+    },
+    {
+     "id": "RS-A",
+     "z_from": 4.6964,
+     "z_to": 5.5,
+     "risers": 5,
+     "riser": 0.160714,
+     "going": 0.3,
+     "goings": 4,
+     "steps_counted": 5,
+     "width": 1.25,
+     "waist": 0.16,
+     "src": "ARCH_1F 5 riser lines, DXF dimension 1250; '+5.50' at the arrival"
+    }
+   ],
+   "held_parts": [
+    {
+     "id": "RS-C",
+     "what": "12 curved treads (+1.00 -> +2.929)",
+     "candidate_m3": [
+      0.33,
+      0.33
+     ],
+     "why": "owner Q-50 / Q-51: curved parts HELD (CAD tread areas 4.1077 m2)"
+    },
+    {
+     "id": "RS-C-SOFFIT",
+     "what": "helicoid waist under the curved treads",
+     "candidate_m3": null,
+     "why": "not drawn (Q-51 step 5); see the walking-line indication in the report, not a quantity"
+    },
+    {
+     "id": "CA-JUNCTION",
+     "what": "beam CA 30 x 50 across RS-S",
+     "candidate_m3": [
+      0.0,
+      0.09
+     ],
+     "why": "CA level not stated"
+    }
+   ],
+   "landings": [
+    {
+     "id": "RS-LD",
+     "level": 4.6964,
+     "length": 1.15,
+     "width": 1.25,
+     "thickness": 0.16,
+     "deduct_m2": 0.0275,
+     "floor_level": false,
+     "src": "T111 DXF 1.25 x 1.15 less a column corner"
+    }
+   ],
+   "deductions_q62": [
+    {
+     "id": "RS-S top wedge in corner landing",
+     "m3": 0.028928
+    },
+    {
+     "id": "RS-A head in arrival plate C-T1",
+     "m3": 0.030133
+    }
+   ]
+  },
+  {
+   "stair_id": "ST-03",
+   "name": "entrance stair E1 (court +0.15 -> GF +1.00, outside)",
+   "beside_lift": false,
+   "serves": "court +0.15 -> GF +1.00 only",
+   "flights": [
+    {
+     "id": "E1",
+     "z_from": 0.15,
+     "z_to": 1.0,
+     "risers": 5,
+     "riser": 0.17,
+     "going": 0.3,
+     "goings": 4,
+     "steps_counted": 5,
+     "width": 2.8,
+     "waist": null,
+     "src": "DXF 5 riser lines 2.800 m (dimension 2800); section B-B 5 risers; ST_P3 4 lines drawn, no slab panel"
+    }
+   ],
+   "held_parts": [
+    {
+     "id": "E1-WAIST",
+     "what": "waist / base under E1",
+     "candidate_m3": null,
+     "why": "not in a slab panel, no thickness printed"
+    }
+   ],
+   "landings": [],
+   "deductions_q62": []
+  }
+ ],
+ "not_a_stair": [
+  {
+   "what": "radial 20-line circle r 2.41 m on the 1F slab sheet (engine finding 'could be DOMES or STAIRS')",
+   "why": "ST p.5 labels the two radial circles 'SEE DETAIL' (dome detail p.7); no architectural plan draws a stair there; handed to T-185 (domes)"
+  }
+ ],
+ "engine_baseline_A": {
+  "run": "tools/release_baseline.py run research/agents_t165/baselines/V29_ROUTEG_NO_PROFILE.json, REPRODUCED 1455 lines, BOQ_LINES.csv b96185d4, engine 130e2e3",
+  "lines": [
+   {
+    "line": "STR.CONC.STAIR GF (CC-7390ea1139: 3 runs, 26 tread lines, ST p.4 shaft; 'drawn again on' the 1F slab sheet)",
+    "stair": "ST-01 GF -> 1F",
+    "m3": 2.7859805860857927,
+    "range": [
+     2.091406246729973,
+     3.1882745972607633
+    ]
+   },
+   {
+    "line": "STR.CONC.STAIR GROUND (CC-66961c6b20: winder region 8.37 m2 on the ground-beam plan)",
+    "stair": "ST-02 (part)",
+    "m3": 0.9005718529491811,
+    "range": [
+     0.6879954609490952,
+     1.0320994300613546
+    ]
+   },
+   {
+    "line": "STR.CONC.STAIR GROUND (CC-325233f037: 4 tread lines, 2.80 m)",
+    "stair": "ST-03",
+    "m3": 0.9482674779781379,
+    "range": [
+     0.6116168477474295,
+     1.0860799346671572
+    ]
+   },
+   {
+    "line": "STR.CONC.DOME 2F x 2 (r 2.211, convention shell)",
+    "stair": "DOMES (T-185)",
+    "m3": 7.371715997049325,
+    "range": [
+     3.8394354151298566,
+     9.214644996311655
+    ]
+   }
+  ],
+  "exposures_not_in_total": [
+   {
+    "finding": "CC-13011ac02f ST p.4 round-stair strings (arcs + lines, 23.40 m)",
+    "range": [
+     0.0,
+     1.8719
+    ]
+   },
+   {
+    "finding": "CC-4d4e4dcdd8 ground-beam plan ST-01 lower flight (same flight as CC-7390ea1139, stacked exposure)",
+    "range": [
+     0.0,
+     1.2267
+    ]
+   }
+  ]
+ },
+ "freelancer": {
+  "source": "FREELANCER_RAW_ROWS.json, RC workbook (RECONCILIATION_POOL_STAIRS_DOMES section 1)",
+  "main_flights": {
+   "formula": "4 x 1.2 x 5.3 x 0.28",
+   "m3": 7.1232
+  },
+  "main_landings": {
+   "formula": "3 x 1.2 x 1.4 x 0.20",
+   "m3": 1.008
+  },
+  "stair_2": {
+   "formula": "1.2 x 16.4 x 0.28",
+   "m3": 5.5104
+  },
+  "entrance": {
+   "formula": "1.8 x 2.8 x 0.28",
+   "m3": 1.4112
+  },
+  "domes": {
+   "formula": "3 x 22.6 x 0.10",
+   "m3": 6.78
+  }
+ }
+}
