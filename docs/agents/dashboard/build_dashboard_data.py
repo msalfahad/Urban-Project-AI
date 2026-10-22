@@ -153,7 +153,11 @@ if v2:
     v2when = v2.group(1).strip()
     head = None
     for line in v2.group(2).splitlines():
-        if not line.startswith("|") or line.startswith("|---"):
+        if not line.startswith("|"):
+            if head is not None:
+                break  # the first table under the heading only
+            continue
+        if line.startswith("|---"):
             continue
         c = cells(line)
         if head is None:
@@ -163,9 +167,12 @@ if v2:
 
 
 def per_trade(col):
-    vals = [(r.get("Trade", ""), r.get("Unit", ""), r.get(col, "")) for r in v2rows]
-    vals = [v for v in vals if v[2] and v[2] != NYM and v[2] != "-"]
-    return "; ".join(t + " (" + u + ") " + x for t, u, x in vals)
+    def base(r):
+        b = r.get("Baseline", "").split(" ")[0]
+        return "released" if b == "A" else b.replace("ARCH_TAKEOFF_", "")
+    vals = [(r.get("Trade", ""), r.get("Unit", ""), base(r), r.get(col, "")) for r in v2rows]
+    vals = [v for v in vals if v[3] and v[3] != NYM and v[3] != "-"]
+    return "; ".join(t + " (" + u + ", " + b + ") " + x for t, u, b, x in vals)
 
 
 for name, col, what in (("BOQ coverage", "Coverage %", "reference lines covered, by trade and unit"),
