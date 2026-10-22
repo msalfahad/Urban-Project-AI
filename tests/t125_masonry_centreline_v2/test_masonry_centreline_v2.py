@@ -317,3 +317,121 @@ def test_stretch_longer_than_its_door_is_listed():
     assert len(h) == 1 and h[0]["max_lm"] == pytest.approx(2.0, abs=1e-4)   # ... but the 2.00 m is listed
     assert r["by_thickness"][0]["status"] == "MEASURED_WITH_HELD_PIECES"
     assert r["by_thickness"][0]["held_max_lm"] == pytest.approx(2.0, abs=1e-4)
+
+
+# ------------------------------------------------------------------------------- T-169: jamb stub at a free-end doorway
+# Defect D-T125-1 (checker, T-125 merge): a wall-layer jamb stub standing on the face of the wall across a free-end
+# doorway was absorbed into the doorway, so the physical length lost it. Hand values (m), the DOORWAY room above with P
+# drawn from y 0.95 (face-to-face gap 0.85 from W1's face y 0.10) and a 0.69 leaf hinged at (3.00, 0.20):
+#   STUB 0.06  both of P's faces (x 3.00 -/+ 0.05) drawn y 0.10 .. 0.16 on W1's face, no line across its end:
+#              arch run P = 4.00 - 0.10 = 3.90 (unchanged), doorway 0.85 - 0.06 = 0.79, physical 3.90 - 0.79 = 3.11
+#              (wall 3.05 + stub 0.06); before T-169: doorway 0.85, physical 3.05.
+#   STUB 0.03  under the L-P9-04 0.05 m convention: doorway 0.85, physical 3.05, the stub listed BELOW_L-P9-04_LISTED.
+#   ONE FACE   one face line 0.06 only: doorway 0.85, listed ONE_FACE_LISTED (a frame line is not a wall).
+#   FLOATING   both faces drawn y 0.30 .. 0.36 (not on W1's face): no stub, doorway 0.85.
+#   RECORD     the 0.06 stub is its own 0.10 wall record (an arch_v28 RETURN_STUB): P stops at y 0.16 (3.84), the stub
+#              record 0.06 (a T stem on W1), family 0.10 arch 3.90, doorway 0.79, physical 3.11 (counted once).
+#   DOOR REC   no swing, a door record 0.80 centred (3.00, 0.56), P from y 0.96 (gap 0.86), stub 0.06: doorway 0.80,
+#              physical 3.90 - 0.80 = 3.10; the door record and the doorway are one opening.
+#   MID-WALL   0.20 wall x 0 .. 6.00, faces drawn 0 .. 2.00 and 2.85 .. 6.00 (a 0.05 jamb nib inside the drawn
+#              faces), door record 0.80 at x 2.45: V1 opening gap, physical 6.00 - 0.80 = 5.20; no free-end doorway,
+#              no jamb stub listed: the fix does not touch it.
+def jamb(stub=0.06, faces=(1, -1), at=0.10, record=False, leaf=0.69, p_from=0.95, hinge=(3.0, 0.20)):
+    fx = doorway(leaf=None, p_from=p_from)
+    if leaf:
+        fx.doors.append({"c": hinge, "r": leaf})
+    if record:
+        fx.band("J", 0.10, (3.0, 0.10), (3.0, 0.10 + stub))
+    else:
+        for side in faces:
+            fx.faces.append(((3.0 + 0.05 * side, at), (3.0 + 0.05 * side, at + stub)))
+    return fx
+
+
+def _p(r):
+    return [x for x in r["runs"] if x["run_id"] == "P"][0]
+
+
+@pytest.mark.parametrize("xf", XFORMS)
+def test_t169_jamb_stub_stays_wall(xf):
+    r = run(jamb(), **xf)
+    assert fam(r)["0.10"] == pytest.approx(3.90, abs=TOL)                          # the architectural run unchanged
+    assert fam(r, "physical_blockwork_lm")["0.10"] == pytest.approx(3.11, abs=1e-6)
+    assert len(r["doorways"]) == 1
+    d = r["doorways"][0]
+    assert d["gap_m"] == pytest.approx(0.79, abs=1e-4) and d["face_to_face_m"] == pytest.approx(0.85, abs=1e-4)
+    assert d["jamb_stub"]["status"] == "WALL" and d["jamb_stub"]["basis"] == "FACE_LINES"
+    assert d["jamb_stub"]["stub_m"] == pytest.approx(0.06, abs=1e-4)
+    assert [s["stub_m"] for s in r["jamb_stubs"]] == [pytest.approx(0.06, abs=1e-4)]
+    p = _p(r)
+    assert p["openings_lm"] == pytest.approx(0.79, abs=1e-4) and p["ends"][0] == "T_STEM"
+    assert p["physical_blockwork_lm"] + p["openings_lm"] == pytest.approx(p["arch_run_lm"], abs=1e-6)
+    assert r["identity"]["status"] == "PASS", r["identity"]
+
+
+@pytest.mark.parametrize("xf", [dict(), dict(rot=-121.0, mirror=True), dict(unit=1.0, shift=(0.25, -0.04))])
+def test_t169_short_one_face_and_floating_are_listed_not_wall(xf):
+    short = run(jamb(stub=0.03), **xf)
+    assert short["doorways"][0]["gap_m"] == pytest.approx(0.85, abs=1e-4)
+    assert fam(short, "physical_blockwork_lm")["0.10"] == pytest.approx(3.05, abs=1e-6)
+    assert short["jamb_stubs"][0]["status"] == "BELOW_L-P9-04_LISTED"
+    assert short["jamb_stubs"][0]["stub_m"] == pytest.approx(0.03, abs=1e-4)
+    one = run(jamb(faces=(1,)), **xf)
+    assert one["doorways"][0]["gap_m"] == pytest.approx(0.85, abs=1e-4)
+    assert one["jamb_stubs"][0]["status"] == "ONE_FACE_LISTED"
+    assert fam(one, "physical_blockwork_lm")["0.10"] == pytest.approx(3.05, abs=1e-6)
+    fl = run(jamb(at=0.30), **xf)
+    assert fl["doorways"][0]["gap_m"] == pytest.approx(0.85, abs=1e-4) and fl["jamb_stubs"] == []
+    assert "jamb_stub" not in fl["doorways"][0]
+
+
+@pytest.mark.parametrize("xf", [dict(), dict(rot=37.0), dict(mirror=True), dict(unit=1.0, shift=(0.25, -0.04))])
+def test_t169_stub_as_its_own_record_counted_once(xf):
+    r = run(jamb(record=True), **xf)
+    assert fam(r)["0.10"] == pytest.approx(3.90, abs=1e-6)
+    assert fam(r, "physical_blockwork_lm")["0.10"] == pytest.approx(3.11, abs=1e-6)
+    d = r["doorways"][0]
+    assert d["gap_m"] == pytest.approx(0.79, abs=1e-4)
+    assert d["jamb_stub"]["basis"] == "WALL_RECORD" and d["jamb_stub"]["record_id"] == "J"
+    assert r["identity"]["status"] == "PASS", r["identity"]
+
+
+def test_t169_short_record_stub_never_counted_twice():
+    """a 0.03 wall record on the face (under L-P9-04 but a record V1 measures): the end stops at it, run 3.90 once."""
+    r = run(jamb(stub=0.03, record=True))
+    assert fam(r)["0.10"] == pytest.approx(3.90, abs=1e-6)
+    assert r["doorways"][0]["gap_m"] == pytest.approx(0.82, abs=1e-4)
+    assert r["jamb_stubs"][0]["status"] == "WALL" and r["jamb_stubs"][0]["basis"] == "WALL_RECORD"
+    assert fam(r, "physical_blockwork_lm")["0.10"] == pytest.approx(3.08, abs=1e-6)
+
+
+def test_t169_door_record_fits_the_gap_between_jambs():
+    fx = jamb(leaf=None, p_from=0.96)
+    fx.opening("D1", "DOOR", 0.80, (3.0, 0.56))
+    r = run(fx)
+    assert r["doorways"][0]["evidence"] == "DOOR_RECORD" and r["doorways"][0]["gap_m"] == pytest.approx(0.80, abs=1e-4)
+    p = _p(r)
+    assert p["arch_run_lm"] == pytest.approx(3.90, abs=1e-6)
+    assert p["openings_lm"] == pytest.approx(0.80, abs=1e-4)
+    assert p["physical_blockwork_lm"] == pytest.approx(3.10, abs=1e-4)
+
+
+@pytest.mark.parametrize("xf", XFORMS)
+def test_t169_mid_wall_door_untouched(xf):
+    fx = Fx().band("M", 0.20, (0.0, 0.0), (6.0, 0.0), faces=[(0.0, 2.0), (2.85, 6.0)])
+    fx.opening("D1", "DOOR", 0.80, (2.45, 0.0))
+    r = run(fx, **xf)
+    assert fam(r)["0.20"] == pytest.approx(6.0, abs=TOL)
+    assert fam(r, "physical_blockwork_lm")["0.20"] == pytest.approx(5.20, abs=1e-6)
+    assert r["doorways"] == [] and r["jamb_stubs"] == []
+
+
+def test_t169_no_stub_doorway_unchanged():
+    """the T-125 doorway fixture (no jamb drawn): byte-identical figures, no jamb_stub key."""
+    r = run(doorway())
+    assert r["doorways"][0]["gap_m"] == pytest.approx(0.80, abs=1e-4) and "jamb_stub" not in r["doorways"][0]
+    assert r["jamb_stubs"] == [] and fam(r, "physical_blockwork_lm")["0.10"] == pytest.approx(3.10, abs=TOL)
+
+
+def test_t169_policy_names_the_stub_convention():
+    assert V2.policy_record()["jamb_stub_min_m"] == 0.05 == V2.MIN_STRETCH_M
