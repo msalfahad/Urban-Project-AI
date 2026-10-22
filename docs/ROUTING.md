@@ -37,10 +37,10 @@ Risk **CRITICAL** (recommended validation L4). Ask about: cad, dwg, dxf, block, 
 
 **Open first:**
 
-- `engine/source/cad/kernel_ezdxf.py` (348 lines, HIGH; imported by 10 directly, 96 transitively, SHARED)
+- `engine/source/cad/kernel_ezdxf.py` (348 lines, HIGH; imported by 10 directly, 97 transitively, SHARED)
 - `engine/source/cad/kernel.py` (365 lines, HIGH; imported by 17 directly, 30 transitively, SHARED)
 - `engine/source/cad/libredwg_map.py` (489 lines, HIGH; imported by 10 directly, 25 transitively, SHARED)
-- `tools/urban_intake.py` (225 lines, CRITICAL, frozen; imported by 27 directly, 87 transitively, SHARED)
+- `tools/urban_intake.py` (225 lines, CRITICAL, frozen; imported by 27 directly, 88 transitively, SHARED)
 
 **Depends on:** `engine/source/findings.py`, `engine/source/observations.py`, `engine/source/capability.py`, `engine/source/decoder_pins.py`, `engine/source/realised.py`, `engine/source/cad/affine.py`, `engine/source/cad/kernel_ocs.py`, `engine/source/digests.py`
 
@@ -67,7 +67,7 @@ Risk **HIGH** (recommended validation L3). Ask about: unit, insunits, millimet, 
 
 **Open first:**
 
-- `engine/source/frame.py` (1076 lines, HIGH; imported by 15 directly, 84 transitively, SHARED)
+- `engine/source/frame.py` (1076 lines, HIGH; imported by 15 directly, 85 transitively, SHARED)
 
 **Depends on:** `engine/source/findings.py`
 
@@ -92,12 +92,12 @@ Risk **HIGH** (recommended validation L3). Ask about: room, space, zone, closure
 
 **Open first:**
 
-- `engine/source/arch_rooms.py` (2250 lines, HIGH; imported by 39 directly, 113 transitively, SHARED)
-- `engine/source/arch_plan.py` (478 lines, HIGH; imported by 19 directly, 120 transitively, SHARED)
-- `engine/source/space_model.py` (196 lines, MEDIUM; imported by 3 directly, 50 transitively)
-- `engine/source/owner_finish_scope.py` (262 lines, MEDIUM; imported by 9 directly, 77 transitively)
-- `engine/source/waterproofing_system.py` (998 lines, HIGH; imported by 10 directly, 74 transitively, SHARED)
-- `engine/source/arch_v211.py` (659 lines, MEDIUM; imported by 6 directly, 63 transitively)
+- `engine/source/arch_rooms.py` (2250 lines, HIGH; imported by 39 directly, 114 transitively, SHARED)
+- `engine/source/arch_plan.py` (478 lines, HIGH; imported by 19 directly, 121 transitively, SHARED)
+- `engine/source/space_model.py` (196 lines, MEDIUM; imported by 3 directly, 51 transitively)
+- `engine/source/owner_finish_scope.py` (262 lines, MEDIUM; imported by 9 directly, 78 transitively)
+- `engine/source/waterproofing_system.py` (998 lines, HIGH; imported by 10 directly, 75 transitively, SHARED)
+- `engine/source/arch_v211.py` (659 lines, MEDIUM; imported by 6 directly, 64 transitively)
 
 **Depends on:** `engine/source/knowledge.py`, `engine/source/boq_line.py`, `engine/source/drawing_model.py`, `engine/source/membrane_layout.py`, `engine/source/topology.py`, `engine/source/arch_v27.py`, `engine/source/arch_v29.py`, `engine/source/exterior_spaces.py`, `engine/source/lintel_measure.py`, `engine/source/material_spec.py`
 
@@ -128,11 +128,11 @@ Risk **HIGH** (recommended validation L3). Ask about: wall, blockwork, block, ma
 
 **Open first:**
 
-- `engine/source/arch_walls.py` (236 lines, HIGH; imported by 5 directly, 113 transitively)
+- `engine/source/arch_walls.py` (236 lines, HIGH; imported by 5 directly, 114 transitively)
 - `engine/source/wall_contact_path.py` (695 lines, HIGH; imported by 21 directly, 24 transitively, SHARED)
 - `engine/source/wall_bands.py` (1036 lines, HIGH; imported by 20 directly, 50 transitively, SHARED)
-- `engine/source/arch_rooms.py` (2250 lines, HIGH; imported by 39 directly, 113 transitively, SHARED)
-- `engine/source/arch_v28.py` (1028 lines, MEDIUM; imported by 9 directly, 117 transitively)
+- `engine/source/arch_rooms.py` (2250 lines, HIGH; imported by 39 directly, 114 transitively, SHARED)
+- `engine/source/arch_v28.py` (1028 lines, MEDIUM; imported by 9 directly, 118 transitively)
 
 **Depends on:** `engine/source/arch_plan.py`, `engine/source/arch_v27.py`, `engine/source/member_detection.py`, `engine/source/release_safety.py`, `engine/source/topology.py`, `engine/source/arch_v29.py`, `engine/source/drawing_model.py`, `engine/source/geometry_role.py`, `engine/source/lintel_measure.py`, `engine/source/plane_poly.py`
 
@@ -164,10 +164,10 @@ Risk **HIGH** (recommended validation L3). Ask about: door, opening, doorway, th
 
 **Open first:**
 
-- `engine/source/door_standards.py` (671 lines, MEDIUM; imported by 7 directly, 53 transitively)
-- `engine/source/door_feasibility.py` (619 lines, MEDIUM; imported by 3 directly, 50 transitively)
-- `engine/source/door_model.py` (837 lines, HIGH; imported by 13 directly, 55 transitively, SHARED)
-- `engine/source/owner_finish_scope.py` (262 lines, MEDIUM; imported by 9 directly, 77 transitively)
+- `engine/source/door_standards.py` (671 lines, MEDIUM; imported by 7 directly, 54 transitively)
+- `engine/source/door_feasibility.py` (619 lines, MEDIUM; imported by 3 directly, 51 transitively)
+- `engine/source/door_model.py` (837 lines, HIGH; imported by 13 directly, 56 transitively, SHARED)
+- `engine/source/owner_finish_scope.py` (262 lines, MEDIUM; imported by 9 directly, 78 transitively)
 
 **Depends on:** `engine/source/knowledge.py`, `engine/source/arch_rooms.py`, `engine/source/boq_line.py`, `engine/source/member_detection.py`
 
@@ -201,10 +201,10 @@ Risk **CRITICAL** (recommended validation L4). Ask about: window, glazing, sill,
 
 **Open first:**
 
-- `engine/source/schedule_reader.py` (352 lines, CRITICAL, frozen; imported by 5 directly, 98 transitively)
-- `engine/source/opening_census.py` (474 lines, CRITICAL, frozen; imported by 9 directly, 168 transitively)
-- `engine/source/schedule_grammar.py` (98 lines, CRITICAL, frozen; imported by 7 directly, 107 transitively)
-- `engine/source/arch_v28.py` (1028 lines, MEDIUM; imported by 9 directly, 117 transitively)
+- `engine/source/schedule_reader.py` (352 lines, CRITICAL, frozen; imported by 5 directly, 99 transitively)
+- `engine/source/opening_census.py` (474 lines, CRITICAL, frozen; imported by 9 directly, 169 transitively)
+- `engine/source/schedule_grammar.py` (98 lines, CRITICAL, frozen; imported by 7 directly, 108 transitively)
+- `engine/source/arch_v28.py` (1028 lines, MEDIUM; imported by 9 directly, 118 transitively)
 
 **Depends on:** `engine/source/drawing_model.py`, `engine/source/release_safety.py`
 
@@ -241,10 +241,10 @@ Risk **HIGH** (recommended validation L3). Ask about: plaster, paint, tile, tili
 
 **Open first:**
 
-- `engine/source/arch_measure.py` (1165 lines, HIGH; imported by 20 directly, 71 transitively, SHARED)
-- `engine/source/wall_height.py` (90 lines, MEDIUM; imported by 4 directly, 74 transitively)
-- `engine/source/owner_finish_scope.py` (262 lines, MEDIUM; imported by 9 directly, 77 transitively)
-- `engine/source/arch_v28.py` (1028 lines, MEDIUM; imported by 9 directly, 117 transitively)
+- `engine/source/arch_measure.py` (1165 lines, HIGH; imported by 20 directly, 72 transitively, SHARED)
+- `engine/source/wall_height.py` (90 lines, MEDIUM; imported by 4 directly, 75 transitively)
+- `engine/source/owner_finish_scope.py` (262 lines, MEDIUM; imported by 9 directly, 78 transitively)
+- `engine/source/arch_v28.py` (1028 lines, MEDIUM; imported by 9 directly, 118 transitively)
 
 **Depends on:** `engine/source/arch_rooms.py`, `engine/source/knowledge.py`, `engine/source/release_safety.py`, `engine/source/arch_completeness.py`, `engine/source/arch_floor.py`, `engine/source/boq_line.py`, `engine/source/material_result.py`, `engine/source/material_spec.py`, `engine/source/membrane_layout.py`, `engine/source/plane_poly.py`
 
@@ -284,11 +284,11 @@ Risk **HIGH** (recommended validation L3). Ask about: waterproof, membrane, uptu
 
 **Open first:**
 
-- `engine/source/waterproofing_system.py` (998 lines, HIGH; imported by 10 directly, 74 transitively, SHARED)
-- `engine/source/wp_geometry.py` (317 lines, MEDIUM; imported by 8 directly, 77 transitively)
-- `engine/source/membrane_layout.py` (819 lines, HIGH; imported by 17 directly, 99 transitively, SHARED)
-- `engine/source/arch_v211.py` (659 lines, MEDIUM; imported by 6 directly, 63 transitively)
-- `engine/source/owner_finish_scope.py` (262 lines, MEDIUM; imported by 9 directly, 77 transitively)
+- `engine/source/waterproofing_system.py` (998 lines, HIGH; imported by 10 directly, 75 transitively, SHARED)
+- `engine/source/wp_geometry.py` (317 lines, MEDIUM; imported by 8 directly, 78 transitively)
+- `engine/source/membrane_layout.py` (819 lines, HIGH; imported by 17 directly, 100 transitively, SHARED)
+- `engine/source/arch_v211.py` (659 lines, MEDIUM; imported by 6 directly, 64 transitively)
+- `engine/source/owner_finish_scope.py` (262 lines, MEDIUM; imported by 9 directly, 78 transitively)
 
 **Depends on:** `engine/source/knowledge.py`, `engine/source/arch_rooms.py`, `engine/source/boq_line.py`, `engine/source/arch_plan.py`, `engine/source/exterior_spaces.py`, `engine/source/material_result.py`, `engine/source/material_spec.py`, `engine/source/membrane_fold_v2.py`, `engine/source/plane_poly.py`, `engine/source/project_rules.py`
 
@@ -319,9 +319,9 @@ Risk **CRITICAL** (recommended validation L4). Ask about: stair, railing, riser,
 
 **Open first:**
 
-- `engine/source/stair_geometry.py` (336 lines, CRITICAL, frozen; imported by 7 directly, 162 transitively)
-- `engine/source/stair_measure.py` (119 lines, CRITICAL, frozen; imported by 3 directly, 96 transitively)
-- `engine/source/arch_measure.py` (1165 lines, HIGH; imported by 20 directly, 71 transitively, SHARED)
+- `engine/source/stair_geometry.py` (336 lines, CRITICAL, frozen; imported by 7 directly, 163 transitively)
+- `engine/source/stair_measure.py` (119 lines, CRITICAL, frozen; imported by 3 directly, 97 transitively)
+- `engine/source/arch_measure.py` (1165 lines, HIGH; imported by 20 directly, 72 transitively, SHARED)
 
 **Depends on:** `engine/source/arch_completeness.py`, `engine/source/arch_floor.py`, `engine/source/arch_rooms.py`, `engine/source/arch_v28.py`, `engine/source/boq_line.py`, `engine/source/knowledge.py`, `engine/source/material_result.py`, `engine/source/material_spec.py`, `engine/source/membrane_layout.py`, `engine/source/owner_finish_scope.py`
 
@@ -351,13 +351,13 @@ Risk **CRITICAL** (recommended validation L4). Ask about: concrete, slab, beam, 
 
 **Open first:**
 
-- `engine/source/concrete_completeness.py` (2362 lines, CRITICAL, frozen; imported by 10 directly, 95 transitively, SHARED)
+- `engine/source/concrete_completeness.py` (2362 lines, CRITICAL, frozen; imported by 10 directly, 96 transitively, SHARED)
 - `engine/source/slab_rebar_qto.py` (314 lines, CRITICAL, frozen; imported by 9 directly, 13 transitively)
 - `engine/source/footing_rebar_guard.py` (422 lines, CRITICAL, frozen; imported by 5 directly, 5 transitively)
 
 **Depends on:** `engine/source/accurate_boq_rebar.py`, `engine/source/drawing_inventory.py`, `engine/source/drawing_model.py`, `engine/source/generic_route.py`, `engine/source/member_detection.py`, `engine/source/rebar_unit_mass.py`, `engine/source/schedule_grammar.py`, `engine/source/schedule_table.py`, `engine/source/slab_rebar_binding.py`, `engine/source/structural_population_discovery.py`
 
-**Other current modules:** `beam_binding.py`, `beam_occurrence_recovery.py`, `beam_rebar_readiness.py`, `beam_section_cut_binding.py`, `column_concrete_geometry.py`, `column_rebar.py`, `column_schedule_text_rows.py`, `concrete_curved_strips.py`, `concrete_model.py`, `concrete_strip_guard.py`, `continuous_beams.py`, `footing_rebar.py`, `ground_beam_network.py`, `ground_beam_recovery.py`, `ground_slab_qto.py`, `ground_slab_recovery.py`, `ground_system_provenance.py`, `ground_system_rebar.py`, `ground_system_resolution.py`, `slab_engine.py`, `slab_layered_mesh.py`, `slab_opening_reconciliation.py`, `slab_qto_authority.py`, `slab_rebar_binding.py`, `slab_rebar_readiness.py`, `slab_region.py`, `special_column_components.py`
+**Other current modules:** `beam_binding.py`, `beam_occurrence_recovery.py`, `beam_rebar_readiness.py`, `beam_section_cut_binding.py`, `column_concrete_geometry.py`, `column_rebar.py`, `column_schedule_text_rows.py`, `concrete_curved_strips.py`, `concrete_model.py`, `concrete_overlap_ownership.py`, `concrete_strip_guard.py`, `continuous_beams.py`, `footing_rebar.py`, `ground_beam_network.py`, `ground_beam_recovery.py`, `ground_slab_qto.py`, `ground_slab_recovery.py`, `ground_system_provenance.py`, `ground_system_rebar.py`, `ground_system_resolution.py`, `slab_engine.py`, `slab_layered_mesh.py`, `slab_opening_reconciliation.py`, `slab_qto_authority.py`, `slab_rebar_binding.py`, `slab_rebar_readiness.py`, `slab_region.py`, `special_column_components.py`
 
 **Earlier generations and tools** (check which method uses them before reuse): `engine/structural_registration.py`
 
@@ -394,7 +394,7 @@ Risk **CRITICAL** (recommended validation L4). Ask about: rebar, reinforcement, 
 **Open first:**
 
 - `engine/source/accurate_boq_rebar.py` (256 lines, CRITICAL, frozen; imported by 17 directly, 21 transitively, SHARED)
-- `engine/source/rebar_unit_mass.py` (72 lines, CRITICAL, frozen; imported by 12 directly, 89 transitively, SHARED)
+- `engine/source/rebar_unit_mass.py` (72 lines, CRITICAL, frozen; imported by 12 directly, 90 transitively, SHARED)
 - `engine/source/slab_rebar_qto.py` (314 lines, CRITICAL, frozen; imported by 9 directly, 13 transitively)
 
 **Other current modules:** `bar_shapes.py`, `bbs_optimiser.py`, `beam_rebar_readiness.py`, `column_rebar.py`, `footing_rebar.py`, `footing_rebar_guard.py`, `ground_system_rebar.py`, `rebar_boq_sections.py`, `rebar_model.py`, `rebar_provenance.py`, `rebar_sanity_qa.py`, `rebar_sanity_variance.py`, `rough_rebar_sanity.py`, `slab_rebar_binding.py`, `slab_rebar_readiness.py`, `superstructure_beam_rebar.py`
@@ -483,12 +483,12 @@ Risk **CRITICAL** (recommended validation L4). Ask about: boq, total, release, r
 
 **Open first:**
 
-- `tools/urban_boq_m9.py` (3424 lines, HIGH; imported by 43 directly, 48 transitively, SHARED)
+- `tools/urban_boq_m9.py` (3424 lines, HIGH; imported by 43 directly, 49 transitively, SHARED)
 - `engine/source/delta_release.py` (159 lines, CRITICAL, frozen; imported by 37 directly, 37 transitively, SHARED)
-- `engine/source/boq_line.py` (386 lines, HIGH; imported by 36 directly, 104 transitively, SHARED)
-- `engine/source/knowledge.py` (289 lines, HIGH; imported by 32 directly, 128 transitively, SHARED)
-- `engine/source/door_standards.py` (671 lines, MEDIUM; imported by 7 directly, 53 transitively)
-- `engine/source/project_rules.py` (748 lines, MEDIUM; imported by 5 directly, 76 transitively)
+- `engine/source/boq_line.py` (386 lines, HIGH; imported by 36 directly, 105 transitively, SHARED)
+- `engine/source/knowledge.py` (289 lines, HIGH; imported by 32 directly, 129 transitively, SHARED)
+- `engine/source/door_standards.py` (671 lines, MEDIUM; imported by 7 directly, 54 transitively)
+- `engine/source/project_rules.py` (748 lines, MEDIUM; imported by 5 directly, 77 transitively)
 
 **Depends on:** `engine/source/door_model.py`, `engine/source/owner_finish_scope.py`, `engine/boq_room_workbook.py`, `engine/source/arch_completeness.py`, `engine/source/arch_floor.py`, `engine/source/arch_measure.py`, `engine/source/arch_plan.py`, `engine/source/arch_rooms.py`, `engine/source/arch_v211.py`, `engine/source/arch_v212.py`
 

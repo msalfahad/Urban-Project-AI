@@ -1,0 +1,1676 @@
+{
+ "rooms": {
+  "GF-01": {
+   "area_m2": 24.9391,
+   "removed_strip_m2": 0.0,
+   "dropped_part_m2": 0,
+   "walked_area_m2": 24.9391,
+   "contour_m": 20.127,
+   "parts": 1,
+   "by_class_m": {
+    "COLUMN": 0.2,
+    "DOOR": 0.01,
+    "GAP": 1.97,
+    "WALL": 14.042,
+    "WINDOW": 3.905
+   },
+   "paintable_m": 14.242,
+   "openings": [
+    {
+     "kind": "WINDOW",
+     "len": 1.955,
+     "curved": false,
+     "oid": "GF-01/o1"
+    },
+    {
+     "kind": "WINDOW",
+     "len": 1.95,
+     "curved": false,
+     "oid": "GF-01/o2"
+    },
+    {
+     "kind": "DOOR",
+     "len": 0.99,
+     "door_block": "D120",
+     "hinge_dist_m": 0.54,
+     "oid": "GF-01/o3"
+    },
+    {
+     "kind": "DOOR",
+     "len": 0.99,
+     "door_block": "D315",
+     "hinge_dist_m": 1.07,
+     "oid": "GF-01/o4"
+    }
+   ],
+   "virtual_m": 0
+  },
+  "GF-02": {
+   "area_m2": 3.1325,
+   "removed_strip_m2": 0.0,
+   "dropped_part_m2": 0,
+   "walked_area_m2": 3.1325,
+   "contour_m": 7.2,
+   "parts": 1,
+   "by_class_m": {
+    "COLUMN": 0.4,
+    "GAP": 1.781,
+    "WALL": 5.018
+   },
+   "paintable_m": 5.419,
+   "openings": [
+    {
+     "kind": "DOOR",
+     "len": 0.791,
+     "door_block": "D315",
+     "hinge_dist_m": 0.4,
+     "oid": "GF-02/o1"
+    },
+    {
+     "kind": "DOOR",
+     "len": 0.991,
+     "door_block": "D315",
+     "hinge_dist_m": 1.05,
+     "oid": "GF-02/o2"
+    }
+   ],
+   "virtual_m": 0
+  },
+  "GF-03": {
+   "area_m2": 3.375,
+   "removed_strip_m2": 0.0,
+   "dropped_part_m2": 0,
+   "walked_area_m2": 3.375,
+   "contour_m": 7.5,
+   "parts": 1,
+   "by_class_m": {
+    "DOOR": 0.01,
+    "GAP": 0.78,
+    "WALL": 6.71
+   },
+   "paintable_m": 6.71,
+   "openings": [
+    {
+     "kind": "DOOR",
+     "len": 0.79,
+     "door_block": "D315",
+     "hinge_dist_m": 0.43,
+     "oid": "GF-03/o1"
+    }
+   ],
+   "virtual_m": 0
+  },
+  "GF-04": {
+   "area_m2": 7.875,
+   "removed_strip_m2": 0.0,
+   "dropped_part_m2": 0,
+   "walked_area_m2": 7.875,
+   "contour_m": 12.5,
+   "parts": 1,
+   "by_class_m": {
+    "COLUMN": 0.25,
+    "DOOR": 0.01,
+    "GAP": 1.666,
+    "WALL": 9.974,
+    "WINDOW": 0.6
+   },
+   "paintable_m": 10.224,
+   "openings": [
+    {
+     "kind": "WINDOW",
+     "len": 0.6,
+     "curved": false,
+     "oid": "GF-04/o1"
+    },
+    {
+     "kind": "DOOR",
+     "len": 0.885,
+     "door_block": "d220",
+     "hinge_dist_m": 0.49,
+     "oid": "GF-04/o2"
+    },
+    {
+     "kind": "DOOR",
+     "len": 0.79,
+     "door_block": "D315",
+     "hinge_dist_m": 0.4,
+     "oid": "GF-04/o3"
+    }
+   ],
+   "virtual_m": 0
+  },
+  "GF-05": {
+   "area_m2": 1.95,
+   "removed_strip_m2": 0.0,
+   "dropped_part_m2": 0,
+   "walked_area_m2": 1.95,
+   "contour_m": 5.6,
+   "parts": 1,
+   "by_class_m": {
+    "DOOR": 0.01,
+    "GAP": 0.781,
+    "WALL": 4.809
+   },
+   "paintable_m": 4.859,
+   "openings": [
+    {
+     "kind": "DOOR",
+     "len": 0.741,
+     "door_block": "D315",
+     "hinge_dist_m": 0.45,
+     "oid": "GF-05/o1"
+    }
+   ],
+   "virtual_m": 0
+  },
+  "GF-06": {
+   "area_m2": 9.6302,
+   "removed_strip_m2": 0.0,
+   "dropped_part_m2": 0,
+   "walked_area_m2": 9.6302,
+   "contour_m": 14.5,
+   "parts": 1,
+   "by_class_m": {
+    "COLUMN": 1.05,
+    "DOOR": 0.01,
+    "GAP": 0.98,
+    "VIRTUAL": 0.02,
+    "WALL": 10.939,
+    "WINDOW": 1.501
+   },
+   "paintable_m": 12.059,
+   "openings": [
+    {
+     "kind": "WINDOW",
+     "len": 1.501,
+     "curved": false,
+     "oid": "GF-06/o1"
+    },
+    {
+     "kind": "DOOR",
+     "len": 0.94,
+     "door_block": "D120",
+     "hinge_dist_m": 0.56,
+     "oid": "GF-06/o2"
+    }
+   ],
+   "virtual_m": 0
+  },
+  "GF-07": {
+   "area_m2": 13.4106,
+   "removed_strip_m2": 0.0,
+   "dropped_part_m2": 0,
+   "walked_area_m2": 13.4106,
+   "contour_m": 14.981,
+   "parts": 1,
+   "by_class_m": {
+    "COLUMN": 0.95,
+    "DOOR": 0.01,
+    "GAP": 0.98,
+    "VIRTUAL": 4.49,
+    "WALL": 6.05,
+    "WINDOW": 2.5
+   },
+   "paintable_m": 7.0,
+   "openings": [
+    {
+     "kind": "DOOR",
+     "len": 0.99,
+     "door_block": "D120",
+     "hinge_dist_m": 0.53,
+     "oid": "GF-07/o1"
+    },
+    {
+     "kind": "VIRTUAL",
+     "len": 4.49,
+     "oid": "GF-07/o2"
+    },
+    {
+     "kind": "WINDOW",
+     "len": 1.0,
+     "curved": false,
+     "oid": "GF-07/o3"
+    },
+    {
+     "kind": "WINDOW",
+     "len": 1.5,
+     "curved": false,
+     "oid": "GF-07/o4"
+    }
+   ],
+   "virtual_m": 4.49
+  },
+  "GF-08": {
+   "area_m2": 134.3979,
+   "removed_strip_m2": 0.0001,
+   "dropped_part_m2": 0.8488,
+   "walked_area_m2": 133.549,
+   "contour_m": 58.923,
+   "parts": 1,
+   "by_class_m": {
+    "COLUMN": 9.1,
+    "DOOR": 0.23,
+    "GAP": 4.74,
+    "VIRTUAL": 5.755,
+    "WALL": 31.142,
+    "WINDOW": 7.956
+   },
+   "paintable_m": 40.262,
+   "openings": [
+    {
+     "kind": "DOOR",
+     "len": 1.11,
+     "door_block": "D200",
+     "hinge_dist_m": 0.59,
+     "oid": "GF-08/o1"
+    },
+    {
+     "kind": "DOOR",
+     "len": 0.99,
+     "door_block": "D120",
+     "hinge_dist_m": 0.54,
+     "oid": "GF-08/o2"
+    },
+    {
+     "kind": "GAP",
+     "len": 0.99,
+     "door_block": null,
+     "hinge_dist_m": 1.22,
+     "oid": "GF-08/o3"
+    },
+    {
+     "kind": "VIRTUAL",
+     "len": 1.245,
+     "oid": "GF-08/o4"
+    },
+    {
+     "kind": "DOOR",
+     "len": 0.99,
+     "door_block": "D115",
+     "hinge_dist_m": 0.5,
+     "oid": "GF-08/o5"
+    },
+    {
+     "kind": "WINDOW",
+     "len": 1.625,
+     "curved": true,
+     "oid": "GF-08/o6"
+    },
+    {
+     "kind": "WINDOW",
+     "len": 6.33,
+     "curved": false,
+     "oid": "GF-08/o7"
+    },
+    {
+     "kind": "VIRTUAL",
+     "len": 4.49,
+     "oid": "GF-08/o8"
+    },
+    {
+     "kind": "GAP",
+     "len": 0.89,
+     "door_block": null,
+     "hinge_dist_m": 1.3,
+     "oid": "GF-08/o9"
+    }
+   ],
+   "virtual_m": 5.735
+  },
+  "GF-10": {
+   "area_m2": 2.3625,
+   "removed_strip_m2": 0.0,
+   "dropped_part_m2": 0,
+   "walked_area_m2": 2.3625,
+   "contour_m": 6.2,
+   "parts": 1,
+   "by_class_m": {
+    "DOOR": 0.01,
+    "GAP": 0.776,
+    "WALL": 4.814,
+    "WINDOW": 0.6
+   },
+   "paintable_m": 4.859,
+   "openings": [
+    {
+     "kind": "WINDOW",
+     "len": 0.6,
+     "curved": false,
+     "oid": "GF-10/o1"
+    },
+    {
+     "kind": "DOOR",
+     "len": 0.741,
+     "door_block": "D315",
+     "hinge_dist_m": 0.45,
+     "oid": "GF-10/o2"
+    }
+   ],
+   "virtual_m": 0
+  },
+  "GF-11": {
+   "area_m2": 1.485,
+   "removed_strip_m2": 0.0,
+   "dropped_part_m2": 0,
+   "walked_area_m2": 1.485,
+   "contour_m": 4.9,
+   "parts": 1,
+   "by_class_m": {
+    "GAP": 1.677,
+    "WALL": 3.223
+   },
+   "paintable_m": 3.223,
+   "openings": [
+    {
+     "kind": "DOOR",
+     "len": 0.786,
+     "door_block": "D315",
+     "hinge_dist_m": 0.4,
+     "oid": "GF-11/o1"
+    },
+    {
+     "kind": "DOOR",
+     "len": 0.891,
+     "door_block": "D315",
+     "hinge_dist_m": 0.65,
+     "oid": "GF-11/o2"
+    }
+   ],
+   "virtual_m": 0
+  },
+  "GF-12": {
+   "area_m2": 2.6752,
+   "removed_strip_m2": 0.0,
+   "dropped_part_m2": 0,
+   "walked_area_m2": 2.6752,
+   "contour_m": 7.414,
+   "parts": 1,
+   "by_class_m": {
+    "DOOR": 0.01,
+    "GAP": 0.78,
+    "WALL": 6.624
+   },
+   "paintable_m": 6.684,
+   "openings": [
+    {
+     "kind": "DOOR",
+     "len": 0.73,
+     "door_block": "D315",
+     "hinge_dist_m": 0.46,
+     "oid": "GF-12/o1"
+    }
+   ],
+   "virtual_m": 0
+  },
+  "GF-13": {
+   "area_m2": 2.3445,
+   "removed_strip_m2": 0.0,
+   "dropped_part_m2": 0,
+   "walked_area_m2": 2.3445,
+   "contour_m": 6.81,
+   "parts": 1,
+   "by_class_m": {
+    "COLUMN": 0.63,
+    "DOOR": 0.806,
+    "GAP": 0.781,
+    "VIRTUAL": 0.015,
+    "WALL": 3.978,
+    "WINDOW": 0.6
+   },
+   "paintable_m": 4.673,
+   "openings": [
+    {
+     "kind": "DOOR",
+     "len": 0.796,
+     "door_block": "D315",
+     "hinge_dist_m": 0.55,
+     "oid": "GF-13/o1"
+    },
+    {
+     "kind": "WINDOW",
+     "len": 0.6,
+     "curved": false,
+     "oid": "GF-13/o2"
+    },
+    {
+     "kind": "DOOR",
+     "len": 0.741,
+     "door_block": "D315",
+     "hinge_dist_m": 0.45,
+     "oid": "GF-13/o3"
+    }
+   ],
+   "virtual_m": 0
+  },
+  "GF-14": {
+   "area_m2": 4.7391,
+   "removed_strip_m2": 0.0002,
+   "dropped_part_m2": 0,
+   "walked_area_m2": 4.7389,
+   "contour_m": 9.512,
+   "parts": 1,
+   "by_class_m": {
+    "GAP": 1.58,
+    "VIRTUAL": 1.255,
+    "WALL": 6.676
+   },
+   "paintable_m": 6.686,
+   "openings": [
+    {
+     "kind": "VIRTUAL",
+     "len": 1.245,
+     "oid": "GF-14/o1"
+    },
+    {
+     "kind": "DOOR",
+     "len": 0.79,
+     "door_block": "D315",
+     "hinge_dist_m": 0.4,
+     "oid": "GF-14/o2"
+    },
+    {
+     "kind": "DOOR",
+     "len": 0.79,
+     "door_block": "D315",
+     "hinge_dist_m": 0.4,
+     "oid": "GF-14/o3"
+    }
+   ],
+   "virtual_m": 1.245
+  },
+  "GF-15": {
+   "area_m2": 16.5567,
+   "removed_strip_m2": 0.0,
+   "dropped_part_m2": 0,
+   "walked_area_m2": 16.5567,
+   "contour_m": 21.537,
+   "parts": 1,
+   "by_class_m": {
+    "COLUMN": 1.8,
+    "DOOR": 0.01,
+    "GAP": 1.77,
+    "VIRTUAL": 0.02,
+    "WALL": 12.831,
+    "WINDOW": 5.106
+   },
+   "paintable_m": 14.702,
+   "openings": [
+    {
+     "kind": "GAP",
+     "len": 0.79,
+     "door_block": null,
+     "hinge_dist_m": 2.29,
+     "oid": "GF-15/o1"
+    },
+    {
+     "kind": "WINDOW",
+     "len": 5.106,
+     "curved": true,
+     "oid": "GF-15/o2"
+    },
+    {
+     "kind": "DOOR",
+     "len": 0.94,
+     "door_block": "D115",
+     "hinge_dist_m": 0.54,
+     "oid": "GF-15/o3"
+    }
+   ],
+   "virtual_m": 0
+  },
+  "GF-16": {
+   "area_m2": 4.5958,
+   "removed_strip_m2": 0.1756,
+   "dropped_part_m2": 0,
+   "walked_area_m2": 4.4203,
+   "contour_m": 8.314,
+   "parts": 1,
+   "by_class_m": {
+    "GAP": 1.126,
+    "VIRTUAL": 0.165,
+    "WALL": 6.423,
+    "WINDOW": 0.6
+   },
+   "paintable_m": 6.443,
+   "openings": [
+    {
+     "kind": "WINDOW",
+     "len": 0.6,
+     "curved": false,
+     "oid": "GF-16/o1"
+    },
+    {
+     "kind": "GAP",
+     "len": 0.14,
+     "door_block": null,
+     "hinge_dist_m": 3.46,
+     "oid": "GF-16/o2"
+    },
+    {
+     "kind": "GAP",
+     "len": 0.79,
+     "door_block": null,
+     "hinge_dist_m": 2.28,
+     "oid": "GF-16/o3"
+    },
+    {
+     "kind": "VIRTUAL",
+     "len": 0.145,
+     "oid": "GF-16/o4"
+    },
+    {
+     "kind": "GAP",
+     "len": 0.195,
+     "door_block": null,
+     "hinge_dist_m": 1.02,
+     "oid": "GF-16/o5"
+    }
+   ],
+   "virtual_m": 0.145
+  },
+  "ST-GF": {
+   "area_m2": 12.475,
+   "removed_strip_m2": 0.0,
+   "dropped_part_m2": 0,
+   "walked_area_m2": 12.475,
+   "contour_m": 15.1,
+   "parts": 1,
+   "by_class_m": {
+    "COLUMN": 0.6,
+    "DOOR": 0.01,
+    "GAP": 2.756,
+    "WALL": 10.533,
+    "WINDOW": 1.2
+   },
+   "paintable_m": 11.134,
+   "openings": [
+    {
+     "kind": "DOOR",
+     "len": 0.885,
+     "door_block": "D120",
+     "hinge_dist_m": 0.54,
+     "oid": "ST-GF/o1"
+    },
+    {
+     "kind": "DOOR",
+     "len": 0.89,
+     "door_block": "D315",
+     "hinge_dist_m": 0.7,
+     "oid": "ST-GF/o2"
+    },
+    {
+     "kind": "DOOR",
+     "len": 0.99,
+     "door_block": "D120",
+     "hinge_dist_m": 0.5,
+     "oid": "ST-GF/o3"
+    },
+    {
+     "kind": "WINDOW",
+     "len": 1.2,
+     "curved": false,
+     "oid": "ST-GF/o4"
+    }
+   ],
+   "virtual_m": 0
+  },
+  "1F-01": {
+   "area_m2": 19.05,
+   "removed_strip_m2": 0.0,
+   "dropped_part_m2": 0,
+   "walked_area_m2": 19.05,
+   "contour_m": 17.7,
+   "parts": 1,
+   "by_class_m": {
+    "COLUMN": 1.7,
+    "DOOR": 0.01,
+    "GAP": 1.77,
+    "WALL": 11.77,
+    "WINDOW": 2.45
+   },
+   "paintable_m": 13.53,
+   "openings": [
+    {
+     "kind": "DOOR",
+     "len": 0.93,
+     "door_block": "D115",
+     "hinge_dist_m": 0.55,
+     "oid": "1F-01/o1"
+    },
+    {
+     "kind": "DOOR",
+     "len": 0.79,
+     "door_block": "D315",
+     "hinge_dist_m": 0.4,
+     "oid": "1F-01/o2"
+    },
+    {
+     "kind": "WINDOW",
+     "len": 2.45,
+     "curved": false,
+     "oid": "1F-01/o3"
+    }
+   ],
+   "virtual_m": 0
+  },
+  "1F-02": {
+   "area_m2": 5.0225,
+   "removed_strip_m2": 0.0,
+   "dropped_part_m2": 0,
+   "walked_area_m2": 5.0225,
+   "contour_m": 9.0,
+   "parts": 1,
+   "by_class_m": {
+    "DOOR": 0.01,
+    "GAP": 0.78,
+    "WALL": 7.61,
+    "WINDOW": 0.6
+   },
+   "paintable_m": 7.61,
+   "openings": [
+    {
+     "kind": "WINDOW",
+     "len": 0.6,
+     "curved": false,
+     "oid": "1F-02/o1"
+    },
+    {
+     "kind": "DOOR",
+     "len": 0.79,
+     "door_block": "D315",
+     "hinge_dist_m": 0.43,
+     "oid": "1F-02/o2"
+    }
+   ],
+   "virtual_m": 0
+  },
+  "1F-03": {
+   "area_m2": 5.0225,
+   "removed_strip_m2": 0.0,
+   "dropped_part_m2": 0,
+   "walked_area_m2": 5.0225,
+   "contour_m": 9.0,
+   "parts": 1,
+   "by_class_m": {
+    "DOOR": 0.01,
+    "GAP": 0.78,
+    "WALL": 7.61,
+    "WINDOW": 0.6
+   },
+   "paintable_m": 7.61,
+   "openings": [
+    {
+     "kind": "DOOR",
+     "len": 0.79,
+     "door_block": "D315",
+     "hinge_dist_m": 0.42,
+     "oid": "1F-03/o1"
+    },
+    {
+     "kind": "WINDOW",
+     "len": 0.6,
+     "curved": false,
+     "oid": "1F-03/o2"
+    }
+   ],
+   "virtual_m": 0
+  },
+  "1F-04": {
+   "area_m2": 18.215,
+   "removed_strip_m2": 0.0,
+   "dropped_part_m2": 0,
+   "walked_area_m2": 18.215,
+   "contour_m": 17.4,
+   "parts": 1,
+   "by_class_m": {
+    "COLUMN": 0.8,
+    "DOOR": 0.01,
+    "GAP": 1.771,
+    "WALL": 13.269,
+    "WINDOW": 1.55
+   },
+   "paintable_m": 14.129,
+   "openings": [
+    {
+     "kind": "DOOR",
+     "len": 0.93,
+     "door_block": "D115",
+     "hinge_dist_m": 0.55,
+     "oid": "1F-04/o1"
+    },
+    {
+     "kind": "WINDOW",
+     "len": 1.55,
+     "curved": false,
+     "oid": "1F-04/o2"
+    },
+    {
+     "kind": "DOOR",
+     "len": 0.79,
+     "door_block": "D315",
+     "hinge_dist_m": 0.41,
+     "oid": "1F-04/o3"
+    }
+   ],
+   "virtual_m": 0
+  },
+  "1F-07": {
+   "area_m2": 10.1512,
+   "removed_strip_m2": 0.0,
+   "dropped_part_m2": 0,
+   "walked_area_m2": 10.1512,
+   "contour_m": 16.94,
+   "parts": 1,
+   "by_class_m": {
+    "COLUMN": 0.85,
+    "DOOR": 0.01,
+    "GAP": 1.67,
+    "VIRTUAL": 0.02,
+    "WALL": 13.79,
+    "WINDOW": 0.6
+   },
+   "paintable_m": 14.66,
+   "openings": [
+    {
+     "kind": "WINDOW",
+     "len": 0.6,
+     "curved": false,
+     "oid": "1F-07/o1"
+    },
+    {
+     "kind": "DOOR",
+     "len": 0.79,
+     "door_block": "D315",
+     "hinge_dist_m": 0.4,
+     "oid": "1F-07/o2"
+    },
+    {
+     "kind": "DOOR",
+     "len": 0.89,
+     "door_block": "d220",
+     "hinge_dist_m": 0.49,
+     "oid": "1F-07/o3"
+    }
+   ],
+   "virtual_m": 0
+  },
+  "1F-08": {
+   "area_m2": 2.646,
+   "removed_strip_m2": 0.0,
+   "dropped_part_m2": 0,
+   "walked_area_m2": 2.646,
+   "contour_m": 6.54,
+   "parts": 1,
+   "by_class_m": {
+    "COLUMN": 0.05,
+    "DOOR": 0.01,
+    "GAP": 0.781,
+    "WALL": 5.099,
+    "WINDOW": 0.6
+   },
+   "paintable_m": 5.209,
+   "openings": [
+    {
+     "kind": "DOOR",
+     "len": 0.731,
+     "door_block": "D315",
+     "hinge_dist_m": 0.46,
+     "oid": "1F-08/o1"
+    },
+    {
+     "kind": "WINDOW",
+     "len": 0.6,
+     "curved": false,
+     "oid": "1F-08/o2"
+    }
+   ],
+   "virtual_m": 0
+  },
+  "1F-09": {
+   "area_m2": 3.5775,
+   "removed_strip_m2": 0.0,
+   "dropped_part_m2": 0,
+   "walked_area_m2": 3.5775,
+   "contour_m": 7.6,
+   "parts": 1,
+   "by_class_m": {
+    "COLUMN": 0.5,
+    "DOOR": 0.01,
+    "GAP": 0.78,
+    "WALL": 5.71,
+    "WINDOW": 0.6
+   },
+   "paintable_m": 6.26,
+   "openings": [
+    {
+     "kind": "WINDOW",
+     "len": 0.6,
+     "curved": false,
+     "oid": "1F-09/o1"
+    },
+    {
+     "kind": "DOOR",
+     "len": 0.74,
+     "door_block": "D315",
+     "hinge_dist_m": 0.45,
+     "oid": "1F-09/o2"
+    }
+   ],
+   "virtual_m": 0
+  },
+  "1F-10": {
+   "area_m2": 16.34,
+   "removed_strip_m2": 0.0,
+   "dropped_part_m2": 0,
+   "walked_area_m2": 16.34,
+   "contour_m": 16.2,
+   "parts": 1,
+   "by_class_m": {
+    "DOOR": 0.01,
+    "GAP": 1.87,
+    "WALL": 14.32
+   },
+   "paintable_m": 14.38,
+   "openings": [
+    {
+     "kind": "DOOR",
+     "len": 0.83,
+     "door_block": "D215",
+     "hinge_dist_m": 0.51,
+     "oid": "1F-10/o1"
+    },
+    {
+     "kind": "DOOR",
+     "len": 0.99,
+     "door_block": "D315",
+     "hinge_dist_m": 0.7,
+     "oid": "1F-10/o2"
+    }
+   ],
+   "virtual_m": 0
+  },
+  "1F-11": {
+   "area_m2": 19.0238,
+   "removed_strip_m2": 0.0,
+   "dropped_part_m2": 0,
+   "walked_area_m2": 19.0238,
+   "contour_m": 22.35,
+   "parts": 1,
+   "by_class_m": {
+    "COLUMN": 1.7,
+    "DOOR": 0.01,
+    "GAP": 1.67,
+    "VIRTUAL": 0.22,
+    "WALL": 15.483,
+    "WINDOW": 3.266
+   },
+   "paintable_m": 17.404,
+   "openings": [
+    {
+     "kind": "WINDOW",
+     "len": 3.266,
+     "curved": true,
+     "oid": "1F-11/o1"
+    },
+    {
+     "kind": "DOOR",
+     "len": 0.79,
+     "door_block": "D315",
+     "hinge_dist_m": 0.4,
+     "oid": "1F-11/o2"
+    },
+    {
+     "kind": "DOOR",
+     "len": 0.89,
+     "door_block": "D215",
+     "hinge_dist_m": 0.47,
+     "oid": "1F-11/o3"
+    }
+   ],
+   "virtual_m": 0
+  },
+  "1F-12": {
+   "area_m2": 4.725,
+   "removed_strip_m2": 0.0,
+   "dropped_part_m2": 0,
+   "walked_area_m2": 4.725,
+   "contour_m": 8.7,
+   "parts": 1,
+   "by_class_m": {
+    "DOOR": 0.01,
+    "GAP": 0.78,
+    "WALL": 7.41,
+    "WINDOW": 0.5
+   },
+   "paintable_m": 7.46,
+   "openings": [
+    {
+     "kind": "WINDOW",
+     "len": 0.5,
+     "curved": false,
+     "oid": "1F-12/o1"
+    },
+    {
+     "kind": "DOOR",
+     "len": 0.74,
+     "door_block": "D315",
+     "hinge_dist_m": 0.45,
+     "oid": "1F-12/o2"
+    }
+   ],
+   "virtual_m": 0
+  },
+  "1F-13": {
+   "area_m2": 63.011,
+   "removed_strip_m2": 0.0037,
+   "dropped_part_m2": 0,
+   "walked_area_m2": 63.0073,
+   "contour_m": 41.94,
+   "parts": 1,
+   "by_class_m": {
+    "COLUMN": 1.935,
+    "GAP": 5.075,
+    "VIRTUAL": 2.53,
+    "WALL": 29.3,
+    "WINDOW": 3.1
+   },
+   "paintable_m": 31.275,
+   "openings": [
+    {
+     "kind": "GAP",
+     "len": 0.99,
+     "door_block": null,
+     "hinge_dist_m": 2.33,
+     "oid": "1F-13/o1"
+    },
+    {
+     "kind": "DOOR",
+     "len": 0.89,
+     "door_block": "d220",
+     "hinge_dist_m": 0.45,
+     "oid": "1F-13/o2"
+    },
+    {
+     "kind": "DOOR",
+     "len": 0.89,
+     "door_block": "D215",
+     "hinge_dist_m": 0.45,
+     "oid": "1F-13/o3"
+    },
+    {
+     "kind": "DOOR",
+     "len": 0.89,
+     "door_block": "D215",
+     "hinge_dist_m": 0.45,
+     "oid": "1F-13/o4"
+    },
+    {
+     "kind": "WINDOW",
+     "len": 1.55,
+     "curved": false,
+     "oid": "1F-13/o5"
+    },
+    {
+     "kind": "WINDOW",
+     "len": 1.55,
+     "curved": false,
+     "oid": "1F-13/o6"
+    },
+    {
+     "kind": "DOOR",
+     "len": 0.99,
+     "door_block": "D115",
+     "hinge_dist_m": 0.5,
+     "oid": "1F-13/o7"
+    },
+    {
+     "kind": "DOOR",
+     "len": 0.425,
+     "door_block": "D115",
+     "hinge_dist_m": 0.78,
+     "oid": "1F-13/o8"
+    },
+    {
+     "kind": "VIRTUAL",
+     "len": 2.49,
+     "oid": "1F-13/o9"
+    }
+   ],
+   "virtual_m": 2.49
+  },
+  "ST-1F": {
+   "area_m2": 12.9725,
+   "removed_strip_m2": 0.0,
+   "dropped_part_m2": 0,
+   "walked_area_m2": 12.9725,
+   "contour_m": 15.499,
+   "parts": 1,
+   "by_class_m": {
+    "COLUMN": 0.605,
+    "GAP": 0.58,
+    "VIRTUAL": 2.486,
+    "WALL": 9.627,
+    "WINDOW": 2.201
+   },
+   "paintable_m": 10.233,
+   "openings": [
+    {
+     "kind": "WINDOW",
+     "len": 1.2,
+     "curved": false,
+     "oid": "ST-1F/o1"
+    },
+    {
+     "kind": "WINDOW",
+     "len": 1.0,
+     "curved": false,
+     "oid": "ST-1F/o2"
+    },
+    {
+     "kind": "VIRTUAL",
+     "len": 2.486,
+     "oid": "ST-1F/o3"
+    },
+    {
+     "kind": "DOOR",
+     "len": 0.58,
+     "door_block": "D115",
+     "hinge_dist_m": 0.29,
+     "oid": "ST-1F/o4"
+    }
+   ],
+   "virtual_m": 2.486
+  },
+  "2F-01": {
+   "area_m2": 5.6258,
+   "removed_strip_m2": 0.0019,
+   "dropped_part_m2": 0,
+   "walked_area_m2": 5.6239,
+   "contour_m": 11.5,
+   "parts": 1,
+   "by_class_m": {
+    "COLUMN": 0.205,
+    "GAP": 2.871,
+    "VIRTUAL": 2.491,
+    "WALL": 5.933
+   },
+   "paintable_m": 6.138,
+   "openings": [
+    {
+     "kind": "VIRTUAL",
+     "len": 2.491,
+     "oid": "2F-01/o1"
+    },
+    {
+     "kind": "GAP",
+     "len": 0.99,
+     "door_block": null,
+     "hinge_dist_m": 1.46,
+     "oid": "2F-01/o2"
+    },
+    {
+     "kind": "DOOR",
+     "len": 0.89,
+     "door_block": "d220",
+     "hinge_dist_m": 0.45,
+     "oid": "2F-01/o3"
+    },
+    {
+     "kind": "DOOR",
+     "len": 0.99,
+     "door_block": "D115",
+     "hinge_dist_m": 0.5,
+     "oid": "2F-01/o4"
+    }
+   ],
+   "virtual_m": 2.491
+  },
+  "2F-02": {
+   "area_m2": 5.55,
+   "removed_strip_m2": 0.0,
+   "dropped_part_m2": 0,
+   "walked_area_m2": 5.55,
+   "contour_m": 9.7,
+   "parts": 1,
+   "by_class_m": {
+    "DOOR": 0.01,
+    "GAP": 0.78,
+    "WALL": 8.31,
+    "WINDOW": 0.6
+   },
+   "paintable_m": 8.31,
+   "openings": [
+    {
+     "kind": "WINDOW",
+     "len": 0.6,
+     "curved": false,
+     "oid": "2F-02/o1"
+    },
+    {
+     "kind": "DOOR",
+     "len": 0.79,
+     "door_block": "D315",
+     "hinge_dist_m": 0.43,
+     "oid": "2F-02/o2"
+    }
+   ],
+   "virtual_m": 0
+  },
+  "2F-03": {
+   "area_m2": 19.35,
+   "removed_strip_m2": 0.0,
+   "dropped_part_m2": 0,
+   "walked_area_m2": 19.35,
+   "contour_m": 18.9,
+   "parts": 1,
+   "by_class_m": {
+    "COLUMN": 0.31,
+    "DOOR": 0.01,
+    "GAP": 1.67,
+    "WALL": 15.71,
+    "WINDOW": 1.2
+   },
+   "paintable_m": 16.08,
+   "openings": [
+    {
+     "kind": "DOOR",
+     "len": 0.83,
+     "door_block": "d220",
+     "hinge_dist_m": 0.52,
+     "oid": "2F-03/o1"
+    },
+    {
+     "kind": "DOOR",
+     "len": 0.79,
+     "door_block": "D315",
+     "hinge_dist_m": 0.4,
+     "oid": "2F-03/o2"
+    },
+    {
+     "kind": "WINDOW",
+     "len": 1.2,
+     "curved": false,
+     "oid": "2F-03/o3"
+    }
+   ],
+   "virtual_m": 0
+  },
+  "ST-2F": {
+   "area_m2": 12.9742,
+   "removed_strip_m2": 0.0,
+   "dropped_part_m2": 0,
+   "walked_area_m2": 12.9742,
+   "contour_m": 15.499,
+   "parts": 1,
+   "by_class_m": {
+    "COLUMN": 0.605,
+    "VIRTUAL": 2.491,
+    "WALL": 10.203,
+    "WINDOW": 2.201
+   },
+   "paintable_m": 10.808,
+   "openings": [
+    {
+     "kind": "WINDOW",
+     "len": 1.2,
+     "curved": false,
+     "oid": "ST-2F/o1"
+    },
+    {
+     "kind": "WINDOW",
+     "len": 1.0,
+     "curved": false,
+     "oid": "ST-2F/o2"
+    },
+    {
+     "kind": "VIRTUAL",
+     "len": 2.491,
+     "oid": "ST-2F/o3"
+    }
+   ],
+   "virtual_m": 2.491
+  }
+ },
+ "opening_pairs": [
+  {
+   "oids": [
+    "GF-01/o4",
+    "GF-02/o2"
+   ],
+   "rooms": [
+    "GF-01",
+    "GF-02"
+   ],
+   "len": [
+    0.99,
+    0.991
+   ],
+   "kind": [
+    "DOOR",
+    "DOOR"
+   ],
+   "door_block": "D315",
+   "diff_m": 0.001
+  },
+  {
+   "oids": [
+    "GF-02/o1",
+    "GF-03/o1"
+   ],
+   "rooms": [
+    "GF-02",
+    "GF-03"
+   ],
+   "len": [
+    0.791,
+    0.79
+   ],
+   "kind": [
+    "DOOR",
+    "DOOR"
+   ],
+   "door_block": "D315",
+   "diff_m": 0.001
+  },
+  {
+   "oids": [
+    "GF-04/o3",
+    "GF-05/o1"
+   ],
+   "rooms": [
+    "GF-04",
+    "GF-05"
+   ],
+   "len": [
+    0.79,
+    0.741
+   ],
+   "kind": [
+    "DOOR",
+    "DOOR"
+   ],
+   "door_block": "D315",
+   "diff_m": 0.049
+  },
+  {
+   "oids": [
+    "GF-08/o2",
+    "ST-GF/o3"
+   ],
+   "rooms": [
+    "GF-08",
+    "ST-GF"
+   ],
+   "len": [
+    0.99,
+    0.99
+   ],
+   "kind": [
+    "DOOR",
+    "DOOR"
+   ],
+   "door_block": "D120",
+   "diff_m": 0.0
+  },
+  {
+   "oids": [
+    "GF-08/o5",
+    "GF-15/o3"
+   ],
+   "rooms": [
+    "GF-08",
+    "GF-15"
+   ],
+   "len": [
+    0.99,
+    0.94
+   ],
+   "kind": [
+    "DOOR",
+    "DOOR"
+   ],
+   "door_block": "D115",
+   "diff_m": 0.05
+  },
+  {
+   "oids": [
+    "GF-10/o2",
+    "GF-11/o1"
+   ],
+   "rooms": [
+    "GF-10",
+    "GF-11"
+   ],
+   "len": [
+    0.741,
+    0.786
+   ],
+   "kind": [
+    "DOOR",
+    "DOOR"
+   ],
+   "door_block": "D315",
+   "diff_m": 0.045
+  },
+  {
+   "oids": [
+    "GF-11/o2",
+    "ST-GF/o2"
+   ],
+   "rooms": [
+    "GF-11",
+    "ST-GF"
+   ],
+   "len": [
+    0.891,
+    0.89
+   ],
+   "kind": [
+    "DOOR",
+    "DOOR"
+   ],
+   "door_block": "D315",
+   "diff_m": 0.001
+  },
+  {
+   "oids": [
+    "GF-12/o1",
+    "GF-14/o2"
+   ],
+   "rooms": [
+    "GF-12",
+    "GF-14"
+   ],
+   "len": [
+    0.73,
+    0.79
+   ],
+   "kind": [
+    "DOOR",
+    "DOOR"
+   ],
+   "door_block": "D315",
+   "diff_m": 0.06
+  },
+  {
+   "oids": [
+    "GF-13/o3",
+    "GF-14/o3"
+   ],
+   "rooms": [
+    "GF-13",
+    "GF-14"
+   ],
+   "len": [
+    0.741,
+    0.79
+   ],
+   "kind": [
+    "DOOR",
+    "DOOR"
+   ],
+   "door_block": "D315",
+   "diff_m": 0.049
+  },
+  {
+   "oids": [
+    "GF-15/o1",
+    "GF-16/o3"
+   ],
+   "rooms": [
+    "GF-15",
+    "GF-16"
+   ],
+   "len": [
+    0.79,
+    0.79
+   ],
+   "kind": [
+    "GAP",
+    "GAP"
+   ],
+   "door_block": null,
+   "diff_m": 0.0
+  },
+  {
+   "oids": [
+    "1F-01/o1",
+    "1F-13/o8"
+   ],
+   "rooms": [
+    "1F-01",
+    "1F-13"
+   ],
+   "len": [
+    0.93,
+    0.425
+   ],
+   "kind": [
+    "DOOR",
+    "DOOR"
+   ],
+   "door_block": "D115",
+   "diff_m": 0.505
+  },
+  {
+   "oids": [
+    "1F-01/o1",
+    "ST-1F/o4"
+   ],
+   "rooms": [
+    "1F-01",
+    "ST-1F"
+   ],
+   "len": [
+    0.93,
+    0.58
+   ],
+   "kind": [
+    "DOOR",
+    "DOOR"
+   ],
+   "door_block": "D115",
+   "diff_m": 0.35
+  },
+  {
+   "oids": [
+    "1F-01/o2",
+    "1F-03/o1"
+   ],
+   "rooms": [
+    "1F-01",
+    "1F-03"
+   ],
+   "len": [
+    0.79,
+    0.79
+   ],
+   "kind": [
+    "DOOR",
+    "DOOR"
+   ],
+   "door_block": "D315",
+   "diff_m": 0.0
+  },
+  {
+   "oids": [
+    "1F-02/o2",
+    "1F-04/o3"
+   ],
+   "rooms": [
+    "1F-02",
+    "1F-04"
+   ],
+   "len": [
+    0.79,
+    0.79
+   ],
+   "kind": [
+    "DOOR",
+    "DOOR"
+   ],
+   "door_block": "D315",
+   "diff_m": 0.0
+  },
+  {
+   "oids": [
+    "1F-04/o1",
+    "1F-13/o7"
+   ],
+   "rooms": [
+    "1F-04",
+    "1F-13"
+   ],
+   "len": [
+    0.93,
+    0.99
+   ],
+   "kind": [
+    "DOOR",
+    "DOOR"
+   ],
+   "door_block": "D115",
+   "diff_m": 0.06
+  },
+  {
+   "oids": [
+    "1F-07/o2",
+    "1F-08/o1"
+   ],
+   "rooms": [
+    "1F-07",
+    "1F-08"
+   ],
+   "len": [
+    0.79,
+    0.731
+   ],
+   "kind": [
+    "DOOR",
+    "DOOR"
+   ],
+   "door_block": "D315",
+   "diff_m": 0.059
+  },
+  {
+   "oids": [
+    "1F-07/o3",
+    "1F-13/o2"
+   ],
+   "rooms": [
+    "1F-07",
+    "1F-13"
+   ],
+   "len": [
+    0.89,
+    0.89
+   ],
+   "kind": [
+    "DOOR",
+    "DOOR"
+   ],
+   "door_block": "d220",
+   "diff_m": 0.0
+  },
+  {
+   "oids": [
+    "1F-10/o1",
+    "1F-13/o3"
+   ],
+   "rooms": [
+    "1F-10",
+    "1F-13"
+   ],
+   "len": [
+    0.83,
+    0.89
+   ],
+   "kind": [
+    "DOOR",
+    "DOOR"
+   ],
+   "door_block": "D215",
+   "diff_m": 0.06
+  },
+  {
+   "oids": [
+    "1F-11/o2",
+    "1F-12/o2"
+   ],
+   "rooms": [
+    "1F-11",
+    "1F-12"
+   ],
+   "len": [
+    0.79,
+    0.74
+   ],
+   "kind": [
+    "DOOR",
+    "DOOR"
+   ],
+   "door_block": "D315",
+   "diff_m": 0.05
+  },
+  {
+   "oids": [
+    "1F-11/o3",
+    "1F-13/o4"
+   ],
+   "rooms": [
+    "1F-11",
+    "1F-13"
+   ],
+   "len": [
+    0.89,
+    0.89
+   ],
+   "kind": [
+    "DOOR",
+    "DOOR"
+   ],
+   "door_block": "D215",
+   "diff_m": 0.0
+  },
+  {
+   "oids": [
+    "2F-01/o3",
+    "2F-03/o1"
+   ],
+   "rooms": [
+    "2F-01",
+    "2F-03"
+   ],
+   "len": [
+    0.89,
+    0.83
+   ],
+   "kind": [
+    "DOOR",
+    "DOOR"
+   ],
+   "door_block": "d220",
+   "diff_m": 0.06
+  },
+  {
+   "oids": [
+    "2F-02/o2",
+    "2F-03/o2"
+   ],
+   "rooms": [
+    "2F-02",
+    "2F-03"
+   ],
+   "len": [
+    0.79,
+    0.79
+   ],
+   "kind": [
+    "DOOR",
+    "DOOR"
+   ],
+   "door_block": "D315",
+   "diff_m": 0.0
+  }
+ ]
+}

@@ -1,0 +1,57 @@
+{
+ "SCHEMA": "T189_OVERLAP_INPUT_V1",
+ "note": "Drawing readings only (development villa, Drive 'Alsenan chalet project'): ST7757 dxf.dxf (sha 9f9d1179, mm, sheet coordinates / 1000), section A-A (p7757_arch_sheet10.pdf) via T-184 and the Checker's T-180 17:18 re-measure, the route G beam lines of the pinned released baseline A (V29_ROUTEG_NO_PROFILE, BOQ_LINES.csv b96185d4, structural/PROVISIONAL_REGISTER.csv), the slab ledger T-139 (PANELS.csv) and the pool ledger T-183 (ALSENAN_POOL_INPUT.json). Levels: the stair's printed levels (+3.50 / +5.50 GF->1F upper flight, +7.684 / +9.70 1F->2F upper flight) are used for the stair, the beams and the slabs alike (one reference; the sensitivity section of T-189_OVERLAP_OWNERSHIP.md shows the in-band intersection does not change for any offset between the two reference planes from -0.167 to +0.289 m).",
+ "stairs": {
+  "MS1-U": {
+   "sheet": "GF ROOF SLAB plan (ST p.4)",
+   "first_riser_line": {"handle": "25B", "y": 48.448},
+   "last_riser_line": {"handle": "459", "y": 45.148, "note": "12 lines 25B .. 459 at 0.300 m (25B, 25C, 261, 263, 262, 260, 267, 266, 265, 264, 270, 459)"},
+   "string_x": [58.593, 59.793], "string_note": "wall face 59.793 to the S-OPENING line 1.20 (structural width, T-184 / Checker 17:18); tread lines drawn 58.643 .. 59.793 (1.15)",
+   "direction": [0, -1], "z0": 3.50, "riser": 0.166667, "going": 0.30, "goings": 11, "n_triangles": 12, "waist": 0.16,
+   "ledger_T184": {"steps": 0.36000072, "waist": 0.7248127038183697, "q62_deducted": 0.030}
+  },
+  "MS2-U": {
+   "sheet": "FIRST FLOOR ROOF SLAB plan (ST p.5)",
+   "first_riser_line": {"handle": "62F", "y": 48.448},
+   "last_riser_line": {"handle": null, "y": 45.148, "note": "the plan draws 11 lines 62F .. 644 (48.448 .. 45.448); section A-A counts 12 risers (owner Q-46 A: the section counts), so the 12th riser line is 11 goings from 62F = 45.148, hidden inside the B23 band on the plan (= the GF plan's line 459)"},
+   "string_x": [19.869, 21.069], "string_note": "wall face 21.069 to the S-OPENING line 633 (19.769 .. 19.869): 1.20",
+   "direction": [0, -1], "z0": 7.684, "riser": 0.168, "going": 0.30, "goings": 11, "n_triangles": 12, "waist": 0.16,
+   "ledger_T184": {"steps": 0.36288, "waist": 0.7261841046566635, "q62_deducted": 0.03024}
+  }
+ },
+ "beams": {
+  "B20 span 2": {
+   "storey": "GF roof", "band_faces_y": [44.948, 45.348], "faces_handles": ["458", "2C6"], "x": [56.493, 59.793],
+   "top": 5.50, "depth": 0.75, "width": 0.40,
+   "released_line": "baseline A structural/PROVISIONAL_REGISTER.csv P-C:BEAMS:GF:BAND0043.2, mark B20 (BOUND): depth 0.75, length 3.3, net plan 1.32 m2 (= 0.40 x 3.30, junction deductions 0), 0.99 m3, 'slab panels stop at band faces'",
+   "register": "research/agents_t110/BEAM_MEMBER_REGISTER.csv BM-GF-043 (BAND0043.2) B20 40x75, 3.30 m, 0.9900 m3 CALCULATED",
+   "schedule": "ST7757.pdf p.10 B20 40 x 75"
+  },
+  "B23 span 2": {
+   "storey": "1F roof", "band_faces_y": [44.898, 45.348], "faces_handles": ["5E4", "5E1"], "x": [17.769, 21.069],
+   "top": 9.70, "depth": 0.75, "width": 0.45,
+   "released_line": "baseline A structural/PROVISIONAL_REGISTER.csv P-C:BEAMS:1F:BAND0031.2, mark B23 (BOUND): depth 0.75, length 3.3, net plan 1.485 m2 (= 0.45 x 3.30, junction deductions 0), 1.11375 m3",
+   "register": "research/agents_t110/BEAM_MEMBER_REGISTER.csv BM-1F-026 (BAND0031.2) B23 45x75, 3.30 m, 1.1138 m3 CALCULATED",
+   "schedule": "ST7757.pdf p.10 B23 45 x 75"
+  }
+ },
+ "slabs": {
+  "GF-077 (part under the 1F arrival)": {"y": [43.398, 44.948], "x": [58.593, 59.793], "top": 5.50, "t": 0.16,
+   "source": "T-139 PANELS.csv GF-077 (t 0.16, ST p.8 note 18): '1F arrival landing = B20 band 0.40 + 1.55 m of this panel'; only the 1.20 x 1.55 part beside the flight is modelled (the rest of the panel touches no flight)"},
+  "1F-062 (part under the 2F arrival)": {"y": [43.398, 44.898], "x": [19.869, 21.069], "top": 9.70, "t": 0.16,
+   "source": "T-139 PANELS.csv 1F-062 (t 0.16): '2F arrival landing = B23 band 0.45 + 1.50 m of this panel'"}
+ },
+ "landings": {
+  "MS1-LD": {"y": [48.448, 49.648], "x": [58.593, 59.793], "top": 3.50, "t": 0.16, "source": "T-184 ledger 1.20 x 1.20 x 0.16 = 0.2304 (Checker VERIFIED 17:18)"},
+  "MS2-LD (east half)": {"y": [48.448, 49.648], "x": [19.869, 21.069], "top": 7.684, "t": 0.16, "source": "T-184 2.50 x 1.20 landing, east half 1.25 x 1.20 (Checker VERIFIED 17:18); the east-half strip in front of MS2-U only (the arrival half +7.684)"}
+ },
+ "pool": {
+  "frame": "pool centre of the half circle = origin; +x towards the straight back; sheet alignment of the foundation plan to the ground-beam plan by the sheet offset 38.7244 m in x (reproduces T-183's 1.297 m2 F8 overlap: 1.2964)",
+  "outline": {"r_outer": 1.75, "back_x": 1.75, "wall_t": 0.20}, "base_t": 0.40,
+  "levels": {"base_underside": -1.30, "base_top": -0.90, "rim": 0.30},
+  "F8": {"x": [-2.2502, 1.7498], "y": [-4.85, -1.25], "t": 0.50, "level": null,
+         "source": "ST7757 dxf.dxf S-FOOTINGS outline 1B24 (4.00 x 3.60); founding level not printed (T-183 interface 1)"},
+  "BW_band": {"x": [1.55, 1.75], "y": [-1.75, 1.75], "depth": 0.60, "level": null,
+              "source": "T-183 interface 2: S-BOUN band 0.20 x 0.60 through the back wall line over 3.50 m; level not printed"}
+ }
+}

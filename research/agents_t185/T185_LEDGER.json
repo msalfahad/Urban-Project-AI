@@ -1,0 +1,696 @@
+{
+ "lines": [
+  {
+   "scenario": "S0_APPROVED_DESIGN",
+   "dome": "DOME-A",
+   "item": "shell concrete",
+   "unit": "m3",
+   "qty": 2.5406806606781682,
+   "status": "DRAWING-CONFIRMED",
+   "basis": "exact solid between concentric spheres from the printed chord / rise / thickness",
+   "released": false
+  },
+  {
+   "scenario": "S0_APPROVED_DESIGN",
+   "dome": "DOME-A",
+   "item": "shell intrados (soffit form / internal finish)",
+   "unit": "m2",
+   "qty": 24.149555005730146,
+   "status": "CALCULATED",
+   "basis": "2 pi R_i h_i",
+   "released": false
+  },
+  {
+   "scenario": "S0_APPROVED_DESIGN",
+   "dome": "DOME-A",
+   "item": "shell extrados (external finish / waterproofing)",
+   "unit": "m2",
+   "qty": 26.68500215885706,
+   "status": "CALCULATED",
+   "basis": "2 pi R_o h",
+   "released": false
+  },
+  {
+   "scenario": "S0_APPROVED_DESIGN",
+   "dome": "DOME-A",
+   "item": "shell bars (hoops + meridians, no laps / anchorage)",
+   "unit": "kg",
+   "qty": [
+    298.33728096320533,
+    432.9285375292879
+   ],
+   "status": "HELD",
+   "basis": "bar population; range = mesh at the intrados with meridians curtailed at the maximum spacing .. mesh at the extrados with every meridian to the crown (bar position and crown curtailment not dimensioned)",
+   "released": false
+  },
+  {
+   "scenario": "S0_APPROVED_DESIGN",
+   "dome": "DOME-A",
+   "item": "ring beam concrete",
+   "unit": "m3",
+   "qty": [
+    0.7552,
+    1.1422
+   ],
+   "status": "HELD",
+   "basis": "CONFLICT in the issued set: p.5 plan B4 20 x 50 band r 2.211-2.411 (in-bay 1.5105 m2, T-160) vs p.7 detail ring under the shell edge r 2.011-2.211 (in-bay 2.2845 m2) with depth 'AS PER ARCH' (CF-S8.3-02/-03/-04); candidates at the B4 0.50 depth only",
+   "released": false
+  },
+  {
+   "scenario": "S0_APPROVED_DESIGN",
+   "dome": "DOME-A",
+   "item": "drum between the roof and the springing (1.30 m)",
+   "unit": "m3",
+   "qty": null,
+   "status": "HELD",
+   "basis": "section B-B draws a 1.30 m drum (+9.70 -> +11.00), unhatched; material and thickness not printed; whether it IS the ring ('as per arch') not stated",
+   "released": false
+  },
+  {
+   "scenario": "S0_APPROVED_DESIGN",
+   "dome": "DOME-A",
+   "item": "ring bars (3ø16 top, 3ø18 bottom; sides 2ø14/20cm and links 8ø8/m follow the depth)",
+   "unit": "kg",
+   "qty": [
+    142.47,
+    155.97
+   ],
+   "status": "HELD",
+   "basis": "top + bottom longitudinal only, closed ring at the detail (r 2.1111) .. plan (r 2.3111) centreline; laps and anchorage not detailed; dome A ring also tagged B4 (2ø12 / 4ø16 / 6ø8/m): CF-S8.3-04",
+   "released": false
+  },
+  {
+   "scenario": "S0_APPROVED_DESIGN",
+   "dome": "DOME-A",
+   "item": "shell bar anchorage legs into the ring",
+   "unit": "kg",
+   "qty": null,
+   "status": "HELD",
+   "basis": "leg drawn to the ring bottom (N.I.S); ring depth 'AS PER ARCH'",
+   "released": false
+  },
+  {
+   "scenario": "S0_APPROVED_DESIGN",
+   "dome": "DOME-A",
+   "item": "shell hoop laps",
+   "unit": "kg",
+   "qty": null,
+   "status": "HELD",
+   "basis": "5 .. 7 hoops are longer than a 12 m bar; no lap length printed for shell bars (p.8 note 9 is for starter bars)",
+   "released": false
+  },
+  {
+   "scenario": "S0_APPROVED_DESIGN",
+   "dome": "DOME-A",
+   "item": "shell top (extrados) formwork",
+   "unit": "m2",
+   "qty": null,
+   "status": "HELD",
+   "basis": "casting method not specified; soffit form = intrados area (CALCULATED line)",
+   "released": false
+  },
+  {
+   "scenario": "S0_APPROVED_DESIGN",
+   "dome": "DOME-A",
+   "item": "shell external finish / waterproofing",
+   "unit": "m2",
+   "qty": null,
+   "status": "HELD",
+   "basis": "finish not specified (owner Q-24: 'fiberglass or anything visible'); extrados area given as geometry",
+   "released": false
+  },
+  {
+   "scenario": "S0_APPROVED_DESIGN",
+   "dome": "DOME-B",
+   "item": "shell concrete",
+   "unit": "m3",
+   "qty": 2.5406806606781682,
+   "status": "DRAWING-CONFIRMED",
+   "basis": "exact solid between concentric spheres from the printed chord / rise / thickness",
+   "released": false
+  },
+  {
+   "scenario": "S0_APPROVED_DESIGN",
+   "dome": "DOME-B",
+   "item": "shell intrados (soffit form / internal finish)",
+   "unit": "m2",
+   "qty": 24.149555005730146,
+   "status": "CALCULATED",
+   "basis": "2 pi R_i h_i",
+   "released": false
+  },
+  {
+   "scenario": "S0_APPROVED_DESIGN",
+   "dome": "DOME-B",
+   "item": "shell extrados (external finish / waterproofing)",
+   "unit": "m2",
+   "qty": 26.68500215885706,
+   "status": "CALCULATED",
+   "basis": "2 pi R_o h",
+   "released": false
+  },
+  {
+   "scenario": "S0_APPROVED_DESIGN",
+   "dome": "DOME-B",
+   "item": "shell bars (hoops + meridians, no laps / anchorage)",
+   "unit": "kg",
+   "qty": [
+    298.33728096320533,
+    432.9285375292879
+   ],
+   "status": "HELD",
+   "basis": "bar population; range = mesh at the intrados with meridians curtailed at the maximum spacing .. mesh at the extrados with every meridian to the crown (bar position and crown curtailment not dimensioned)",
+   "released": false
+  },
+  {
+   "scenario": "S0_APPROVED_DESIGN",
+   "dome": "DOME-B",
+   "item": "ring beam concrete",
+   "unit": "m3",
+   "qty": [
+    0.8997,
+    1.3108
+   ],
+   "status": "HELD",
+   "basis": "no section mark on this ring (D-28); plan band in-bay 1.7994 m2 vs detail band in-bay 2.6216 m2; depth 'AS PER ARCH'; candidates at 0.50 only",
+   "released": false
+  },
+  {
+   "scenario": "S0_APPROVED_DESIGN",
+   "dome": "DOME-B",
+   "item": "drum between the roof and the springing (1.30 m)",
+   "unit": "m3",
+   "qty": null,
+   "status": "HELD",
+   "basis": "as DOME-A",
+   "released": false
+  },
+  {
+   "scenario": "S0_APPROVED_DESIGN",
+   "dome": "DOME-B",
+   "item": "ring bars (3ø16 top, 3ø18 bottom; sides and links follow the depth)",
+   "unit": "kg",
+   "qty": [
+    142.47,
+    155.97
+   ],
+   "status": "HELD",
+   "basis": "as DOME-A, no B4 tag on this ring",
+   "released": false
+  },
+  {
+   "scenario": "S0_APPROVED_DESIGN",
+   "dome": "DOME-B",
+   "item": "shell bar anchorage legs into the ring",
+   "unit": "kg",
+   "qty": null,
+   "status": "HELD",
+   "basis": "as DOME-A",
+   "released": false
+  },
+  {
+   "scenario": "S0_APPROVED_DESIGN",
+   "dome": "DOME-B",
+   "item": "shell hoop laps",
+   "unit": "kg",
+   "qty": null,
+   "status": "HELD",
+   "basis": "as DOME-A",
+   "released": false
+  },
+  {
+   "scenario": "S0_APPROVED_DESIGN",
+   "dome": "DOME-B",
+   "item": "shell top (extrados) formwork",
+   "unit": "m2",
+   "qty": null,
+   "status": "HELD",
+   "basis": "as DOME-A",
+   "released": false
+  },
+  {
+   "scenario": "S0_APPROVED_DESIGN",
+   "dome": "DOME-B",
+   "item": "shell external finish / waterproofing",
+   "unit": "m2",
+   "qty": null,
+   "status": "HELD",
+   "basis": "as DOME-A",
+   "released": false
+  },
+  {
+   "scenario": "S0_APPROVED_DESIGN",
+   "dome": "DOME-TOWER",
+   "item": "shell concrete",
+   "unit": "m3",
+   "qty": null,
+   "status": "HELD",
+   "basis": "no structural detail: thickness / support not printed; never a default (owner Q-18)",
+   "released": false
+  },
+  {
+   "scenario": "S0_APPROVED_DESIGN",
+   "dome": "DOME-TOWER",
+   "item": "shell extrados (architectural outline)",
+   "unit": "m2",
+   "qty": 29.79651406278873,
+   "status": "CALCULATED",
+   "basis": "2 pi R_o h from the architectural chord / rise",
+   "released": false
+  },
+  {
+   "scenario": "S0_APPROVED_DESIGN",
+   "dome": "DOME-TOWER",
+   "item": "support (opening / ring in the +13.90 slab)",
+   "unit": "m3",
+   "qty": null,
+   "status": "HELD",
+   "basis": "ST p.6 draws a flat 160 mm panel with no opening and no ring there; section A-A (which cuts the tower) draws no dome; owner Q-27 A: the dome exists (CONFLICT D-21 / CF-S8.3-01)",
+   "released": false
+  },
+  {
+   "scenario": "S1_CLIENT_REQUESTED",
+   "dome": "DOME-A",
+   "item": "shell concrete",
+   "unit": "m3",
+   "qty": 0,
+   "status": "OMITTED_BY_SCENARIO",
+   "basis": "client-requested removal (owner Q-29 2026-10-19 (client wants no concrete domes, open skylight); owner 2026-10-22: client request only, no consultant revision)",
+   "released": false
+  },
+  {
+   "scenario": "S1_CLIENT_REQUESTED",
+   "dome": "DOME-A",
+   "item": "shell intrados (soffit form / internal finish)",
+   "unit": "m2",
+   "qty": 0,
+   "status": "OMITTED_BY_SCENARIO",
+   "basis": "client-requested removal (owner Q-29 2026-10-19 (client wants no concrete domes, open skylight); owner 2026-10-22: client request only, no consultant revision)",
+   "released": false
+  },
+  {
+   "scenario": "S1_CLIENT_REQUESTED",
+   "dome": "DOME-A",
+   "item": "shell extrados (external finish / waterproofing)",
+   "unit": "m2",
+   "qty": 0,
+   "status": "OMITTED_BY_SCENARIO",
+   "basis": "client-requested removal (owner Q-29 2026-10-19 (client wants no concrete domes, open skylight); owner 2026-10-22: client request only, no consultant revision)",
+   "released": false
+  },
+  {
+   "scenario": "S1_CLIENT_REQUESTED",
+   "dome": "DOME-A",
+   "item": "shell bars (hoops + meridians, no laps / anchorage)",
+   "unit": "kg",
+   "qty": 0,
+   "status": "OMITTED_BY_SCENARIO",
+   "basis": "client-requested removal (owner Q-29 2026-10-19 (client wants no concrete domes, open skylight); owner 2026-10-22: client request only, no consultant revision)",
+   "released": false
+  },
+  {
+   "scenario": "S1_CLIENT_REQUESTED",
+   "dome": "DOME-A",
+   "item": "drum between the roof and the springing (1.30 m)",
+   "unit": "m3",
+   "qty": 0,
+   "status": "OMITTED_BY_SCENARIO",
+   "basis": "client-requested removal (owner Q-29 2026-10-19 (client wants no concrete domes, open skylight); owner 2026-10-22: client request only, no consultant revision)",
+   "released": false
+  },
+  {
+   "scenario": "S1_CLIENT_REQUESTED",
+   "dome": "DOME-A",
+   "item": "shell bar anchorage legs into the ring",
+   "unit": "kg",
+   "qty": 0,
+   "status": "OMITTED_BY_SCENARIO",
+   "basis": "client-requested removal (owner Q-29 2026-10-19 (client wants no concrete domes, open skylight); owner 2026-10-22: client request only, no consultant revision)",
+   "released": false
+  },
+  {
+   "scenario": "S1_CLIENT_REQUESTED",
+   "dome": "DOME-A",
+   "item": "shell hoop laps",
+   "unit": "kg",
+   "qty": 0,
+   "status": "OMITTED_BY_SCENARIO",
+   "basis": "client-requested removal (owner Q-29 2026-10-19 (client wants no concrete domes, open skylight); owner 2026-10-22: client request only, no consultant revision)",
+   "released": false
+  },
+  {
+   "scenario": "S1_CLIENT_REQUESTED",
+   "dome": "DOME-A",
+   "item": "shell top (extrados) formwork",
+   "unit": "m2",
+   "qty": 0,
+   "status": "OMITTED_BY_SCENARIO",
+   "basis": "client-requested removal (owner Q-29 2026-10-19 (client wants no concrete domes, open skylight); owner 2026-10-22: client request only, no consultant revision)",
+   "released": false
+  },
+  {
+   "scenario": "S1_CLIENT_REQUESTED",
+   "dome": "DOME-A",
+   "item": "shell external finish / waterproofing",
+   "unit": "m2",
+   "qty": 0,
+   "status": "OMITTED_BY_SCENARIO",
+   "basis": "client-requested removal (owner Q-29 2026-10-19 (client wants no concrete domes, open skylight); owner 2026-10-22: client request only, no consultant revision)",
+   "released": false
+  },
+  {
+   "scenario": "S1_CLIENT_REQUESTED",
+   "dome": "DOME-A",
+   "item": "edge ring beam B4 0.20 x 0.50 (in-bay, Q-44 A)",
+   "unit": "m3",
+   "qty": 0.7552,
+   "status": "DRAWING-CONFIRMED",
+   "basis": "p.5 B4 mark x 2 + schedule 20 x 50; in-bay 1.5105 m2 x 0.50 (T-160); owner Q-44 A keeps the ring as the skylight edge",
+   "released": false
+  },
+  {
+   "scenario": "S1_CLIENT_REQUESTED",
+   "dome": "DOME-A",
+   "item": "edge ring B4 bars (2ø12 top, 4ø16 bottom, 6ø8/m) on the in-bay arcs",
+   "unit": "kg",
+   "qty": [
+    62.6,
+    64.49
+   ],
+   "status": "HELD",
+   "basis": "centreline arcs 1.2939 + 1.5171 + 1.5171 + 1.2939 = 5.6220 m; links A ceil / B ceil+1 per arc, path 1.200 m as T-149 for B4; end anchorage into the framing beams not detailed",
+   "released": false
+  },
+  {
+   "scenario": "S1_CLIENT_REQUESTED",
+   "dome": "DOME-A",
+   "item": "edge ring formwork (opening face 0.50, outer downstand 0.34, soffit 0.20)",
+   "unit": "m2",
+   "qty": 8.783,
+   "status": "CALCULATED",
+   "basis": "inner arc in-bay 273.593 deg x 2.2111 = 10.558 m x 0.50 + outer arc 139.377 deg x 2.4111 = 5.865 m x 0.34 + plan 1.5105 m2 (formwork owner method: T-163)",
+   "released": false
+  },
+  {
+   "scenario": "S1_CLIENT_REQUESTED",
+   "dome": "DOME-A",
+   "item": "open area of the opening (sky to the 1F room below)",
+   "unit": "m2",
+   "qty": 15.359,
+   "status": "CALCULATED",
+   "basis": "pi x 2.2111^2 (full circle; 14.982 m2 inside the bay faces, the rest over CB10 / CB13 kept whole, T-160 s.7 item 3)",
+   "released": false
+  },
+  {
+   "scenario": "S1_CLIENT_REQUESTED",
+   "dome": "DOME-A",
+   "item": "skylight glazing or cover over the opening",
+   "unit": "m2",
+   "qty": null,
+   "status": "UNKNOWN",
+   "basis": "client asks for an open area; whether glazed, at which level, which system: consultant",
+   "released": false
+  },
+  {
+   "scenario": "S1_CLIENT_REQUESTED",
+   "dome": "DOME-A",
+   "item": "kerb / upstand round the opening for the membrane upturn",
+   "unit": "m3",
+   "qty": null,
+   "status": "UNKNOWN",
+   "basis": "owner Q-44 A asks for a 0.20 upturn round the opening; no kerb drawn",
+   "released": false
+  },
+  {
+   "scenario": "S1_CLIENT_REQUESTED",
+   "dome": "DOME-A",
+   "item": "membrane upturn round the opening (0.20)",
+   "unit": "m",
+   "qty": 13.893,
+   "status": "HELD",
+   "basis": "2 pi x 2.2111; conditional on the kerb above",
+   "released": false
+  },
+  {
+   "scenario": "S1_CLIENT_REQUESTED",
+   "dome": "DOME-A",
+   "item": "drainage and wet-area treatment of the 1F room below the open area",
+   "unit": "",
+   "qty": null,
+   "status": "UNKNOWN",
+   "basis": "the opening lies over the 1F west master bedroom and two baths (D-20); an open area admits rain",
+   "released": false
+  },
+  {
+   "scenario": "S2_CONSULTANT_REVISED",
+   "dome": "DOME-A",
+   "item": "all items",
+   "unit": "",
+   "qty": null,
+   "status": "UNKNOWN",
+   "basis": "no consultant-issued revised drawing",
+   "released": false
+  },
+  {
+   "scenario": "S1_CLIENT_REQUESTED",
+   "dome": "DOME-B",
+   "item": "shell concrete",
+   "unit": "m3",
+   "qty": 0,
+   "status": "OMITTED_BY_SCENARIO",
+   "basis": "client-requested removal (owner Q-29 2026-10-19; owner 2026-10-22: client request only)",
+   "released": false
+  },
+  {
+   "scenario": "S1_CLIENT_REQUESTED",
+   "dome": "DOME-B",
+   "item": "shell intrados (soffit form / internal finish)",
+   "unit": "m2",
+   "qty": 0,
+   "status": "OMITTED_BY_SCENARIO",
+   "basis": "client-requested removal (owner Q-29 2026-10-19; owner 2026-10-22: client request only)",
+   "released": false
+  },
+  {
+   "scenario": "S1_CLIENT_REQUESTED",
+   "dome": "DOME-B",
+   "item": "shell extrados (external finish / waterproofing)",
+   "unit": "m2",
+   "qty": 0,
+   "status": "OMITTED_BY_SCENARIO",
+   "basis": "client-requested removal (owner Q-29 2026-10-19; owner 2026-10-22: client request only)",
+   "released": false
+  },
+  {
+   "scenario": "S1_CLIENT_REQUESTED",
+   "dome": "DOME-B",
+   "item": "shell bars (hoops + meridians, no laps / anchorage)",
+   "unit": "kg",
+   "qty": 0,
+   "status": "OMITTED_BY_SCENARIO",
+   "basis": "client-requested removal (owner Q-29 2026-10-19; owner 2026-10-22: client request only)",
+   "released": false
+  },
+  {
+   "scenario": "S1_CLIENT_REQUESTED",
+   "dome": "DOME-B",
+   "item": "drum between the roof and the springing (1.30 m)",
+   "unit": "m3",
+   "qty": 0,
+   "status": "OMITTED_BY_SCENARIO",
+   "basis": "client-requested removal (owner Q-29 2026-10-19; owner 2026-10-22: client request only)",
+   "released": false
+  },
+  {
+   "scenario": "S1_CLIENT_REQUESTED",
+   "dome": "DOME-B",
+   "item": "shell bar anchorage legs into the ring",
+   "unit": "kg",
+   "qty": 0,
+   "status": "OMITTED_BY_SCENARIO",
+   "basis": "client-requested removal (owner Q-29 2026-10-19; owner 2026-10-22: client request only)",
+   "released": false
+  },
+  {
+   "scenario": "S1_CLIENT_REQUESTED",
+   "dome": "DOME-B",
+   "item": "shell hoop laps",
+   "unit": "kg",
+   "qty": 0,
+   "status": "OMITTED_BY_SCENARIO",
+   "basis": "client-requested removal (owner Q-29 2026-10-19; owner 2026-10-22: client request only)",
+   "released": false
+  },
+  {
+   "scenario": "S1_CLIENT_REQUESTED",
+   "dome": "DOME-B",
+   "item": "shell top (extrados) formwork",
+   "unit": "m2",
+   "qty": 0,
+   "status": "OMITTED_BY_SCENARIO",
+   "basis": "client-requested removal (owner Q-29 2026-10-19; owner 2026-10-22: client request only)",
+   "released": false
+  },
+  {
+   "scenario": "S1_CLIENT_REQUESTED",
+   "dome": "DOME-B",
+   "item": "shell external finish / waterproofing",
+   "unit": "m2",
+   "qty": 0,
+   "status": "OMITTED_BY_SCENARIO",
+   "basis": "client-requested removal (owner Q-29 2026-10-19; owner 2026-10-22: client request only)",
+   "released": false
+  },
+  {
+   "scenario": "S1_CLIENT_REQUESTED",
+   "dome": "DOME-B",
+   "item": "edge ring beam (Q-44 A; no section mark, D-28)",
+   "unit": "m3",
+   "qty": null,
+   "status": "HELD",
+   "basis": "candidate 0.8997 at the B4 size (in-bay 1.7994 m2 x 0.50), never released (T-160)",
+   "released": false
+  },
+  {
+   "scenario": "S1_CLIENT_REQUESTED",
+   "dome": "DOME-B",
+   "item": "edge ring bars",
+   "unit": "kg",
+   "qty": null,
+   "status": "HELD",
+   "basis": "section not identified; candidate 74.25 .. 76.15 kg with B4 bars on 6.7096 m of in-bay arc",
+   "released": false
+  },
+  {
+   "scenario": "S1_CLIENT_REQUESTED",
+   "dome": "DOME-B",
+   "item": "open area of the opening (sky to the 1F room below)",
+   "unit": "m2",
+   "qty": 15.359,
+   "status": "CALCULATED",
+   "basis": "pi x 2.2111^2 (15.328 m2 inside the bay faces)",
+   "released": false
+  },
+  {
+   "scenario": "S1_CLIENT_REQUESTED",
+   "dome": "DOME-B",
+   "item": "skylight glazing or cover over the opening",
+   "unit": "m2",
+   "qty": null,
+   "status": "UNKNOWN",
+   "basis": "as DOME-A",
+   "released": false
+  },
+  {
+   "scenario": "S1_CLIENT_REQUESTED",
+   "dome": "DOME-B",
+   "item": "kerb / upstand round the opening for the membrane upturn",
+   "unit": "m3",
+   "qty": null,
+   "status": "UNKNOWN",
+   "basis": "as DOME-A",
+   "released": false
+  },
+  {
+   "scenario": "S1_CLIENT_REQUESTED",
+   "dome": "DOME-B",
+   "item": "membrane upturn round the opening (0.20)",
+   "unit": "m",
+   "qty": 13.893,
+   "status": "HELD",
+   "basis": "as DOME-A",
+   "released": false
+  },
+  {
+   "scenario": "S1_CLIENT_REQUESTED",
+   "dome": "DOME-B",
+   "item": "drainage and wet-area treatment of the 1F room below the open area",
+   "unit": "",
+   "qty": null,
+   "status": "UNKNOWN",
+   "basis": "the opening lies over the 1F living area (D-20)",
+   "released": false
+  },
+  {
+   "scenario": "S2_CONSULTANT_REVISED",
+   "dome": "DOME-B",
+   "item": "all items",
+   "unit": "",
+   "qty": null,
+   "status": "UNKNOWN",
+   "basis": "no consultant-issued revised drawing",
+   "released": false
+  },
+  {
+   "scenario": "S1_CLIENT_REQUESTED",
+   "dome": "DOME-TOWER",
+   "item": "shell concrete",
+   "unit": "m3",
+   "qty": 0,
+   "status": "OMITTED_BY_SCENARIO",
+   "basis": "client-requested removal (owner Q-29 (all three domes); owner 2026-10-22: client request only)",
+   "released": false
+  },
+  {
+   "scenario": "S1_CLIENT_REQUESTED",
+   "dome": "DOME-TOWER",
+   "item": "shell extrados (architectural outline)",
+   "unit": "m2",
+   "qty": 0,
+   "status": "OMITTED_BY_SCENARIO",
+   "basis": "client-requested removal (owner Q-29 (all three domes); owner 2026-10-22: client request only)",
+   "released": false
+  },
+  {
+   "scenario": "S1_CLIENT_REQUESTED",
+   "dome": "DOME-TOWER",
+   "item": "new opening in the flat +13.90 slab (trimming beams, slab panel change)",
+   "unit": "",
+   "qty": null,
+   "status": "UNKNOWN",
+   "basis": "no opening is drawn at this position: an open skylight here is a structural change to the 2F roof slab",
+   "released": false
+  },
+  {
+   "scenario": "S1_CLIENT_REQUESTED",
+   "dome": "DOME-TOWER",
+   "item": "skylight glazing or cover",
+   "unit": "m2",
+   "qty": null,
+   "status": "UNKNOWN",
+   "basis": "consultant",
+   "released": false
+  },
+  {
+   "scenario": "S1_CLIENT_REQUESTED",
+   "dome": "DOME-TOWER",
+   "item": "drainage of the 2F maid room below",
+   "unit": "",
+   "qty": null,
+   "status": "UNKNOWN",
+   "basis": "consultant",
+   "released": false
+  },
+  {
+   "scenario": "S2_CONSULTANT_REVISED",
+   "dome": "DOME-TOWER",
+   "item": "all items",
+   "unit": "",
+   "qty": null,
+   "status": "UNKNOWN",
+   "basis": "no consultant-issued revised drawing",
+   "released": false
+  }
+ ],
+ "unit_mass": "D2_OVER_162",
+ "S0_shell_m3": {
+  "measured": 5.0813613213563364,
+  "open": [
+   "DOME-TOWER"
+  ]
+ },
+ "S1_shell_m3": {
+  "measured": 0,
+  "open": []
+ }
+}

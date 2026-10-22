@@ -1,0 +1,18 @@
+ROW,FIELD,R2,R3,CAUSE
+1F-11,CONTOUR_M,22.35,22.149,"frame-cavity notches at both W17 jambs trimmed (checker 2026-10-22 16:11): -0.2008 m contour, -0.0027 m2 area; W17 run 3.266 -> 3.286"
+1F-11,FACE_M,22.35,22.149,"frame-cavity notches at both W17 jambs trimmed (checker 2026-10-22 16:11): -0.2008 m contour, -0.0027 m2 area; W17 run 3.266 -> 3.286"
+1F-11,PAINTABLE_M,17.384,17.163,"frame-cavity notches at both W17 jambs trimmed (checker 2026-10-22 16:11): -0.2008 m contour, -0.0027 m2 area; W17 run 3.266 -> 3.286"
+1F-11,OPENINGS,W17 3.27; D315 to bath 0.80; D215 0.90,W17 3.29; D315 to bath 0.80; D215 0.90,"frame-cavity notches at both W17 jambs trimmed (checker 2026-10-22 16:11): -0.2008 m contour, -0.0027 m2 area; W17 run 3.266 -> 3.286"
+1F-11,OWNER_GROSS_M2,74.87,74.2,"frame-cavity notches at both W17 jambs trimmed (checker 2026-10-22 16:11): -0.2008 m contour, -0.0027 m2 area; W17 run 3.266 -> 3.286"
+1F-11,OWNER_NET_M2,60.19,59.45,"frame-cavity notches at both W17 jambs trimmed (checker 2026-10-22 16:11): -0.2008 m contour, -0.0027 m2 area; W17 run 3.266 -> 3.286"
+1F-11,DWG_GROSS_M2,84.71 .. 86.94,83.94 .. 86.16,"frame-cavity notches at both W17 jambs trimmed (checker 2026-10-22 16:11): -0.2008 m contour, -0.0027 m2 area; W17 run 3.266 -> 3.286"
+1F-11,DWG_NET_M2,69.54 .. 71.77,68.70 .. 70.92,"frame-cavity notches at both W17 jambs trimmed (checker 2026-10-22 16:11): -0.2008 m contour, -0.0027 m2 area; W17 run 3.266 -> 3.286"
+1F-11,DWG_PLASTER_GROSS_HI_M2,90.29,89.48,"frame-cavity notches at both W17 jambs trimmed (checker 2026-10-22 16:11): -0.2008 m contour, -0.0027 m2 area; W17 run 3.266 -> 3.286"
+FLOOR 1F|DRY,face_m,113.1,112.9,1F-11 only
+FLOOR 1F|DRY,own_gross_aoa,378.88,378.21,1F-11 only
+FLOOR 1F|DRY,own_net_lo,319.43,318.69,1F-11 only
+FLOOR 1F|DRY,own_net_hi,336.51,335.77,1F-11 only
+FLOOR 1F|DRY,dwg_gross_held_lo,338.93,338.17,1F-11 only
+FLOOR 1F|DRY,dwg_gross_held_hi,347.87,347.09,1F-11 only
+FLOOR 1F|DRY,dwg_net_lo,366.46,365.63,1F-11 only
+FLOOR 1F|DRY,dwg_net_hi,397.1,396.25,1F-11 only
