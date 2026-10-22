@@ -1,8 +1,10 @@
 """T-162 corners / arrises on a facade (research only, not a method, not wired): pure functions, metres in, metres out.
 
-Owner item 2 (notes 2026-10-21, FLAGGED, not a rule): corners are measured in metres run (m.l) and shown both ways,
-the m.l figure and the freelancer's practice "2 m.l = 1 m2" as a comparison only. Nothing here converts corners into
-area for a quantity: the owner decides.
+Corners are their own m.l line (owner notes Sigma, correction of 2026-10-22 07:10; ENGINEERING_REASONING_STANDARD
+section 3): the PHYSICAL length is measured in full; the freelancer's "2 m = 1 m" is a PAYMENT convention (half the
+length paid, or the full length at half the m2 rate: Urban cost PDF 1.25 KWD/m.l = half of 2.50 KWD/m2). Physical,
+contract, payable, rate and amount are kept as separate figures (four_figures); nothing here ever converts m.l to m2,
+and add_area_m2 refuses any item that is not in m2 (r2, after the Checker's rejection of r1 on 2026-10-22 10:20).
 
 What is measured:
   1. VERTICAL corners where two faces of one floor's outline meet. Walking the closed outline, the turn at each
@@ -109,6 +111,72 @@ def opening_reveal_ml(width_m, height_m, has_sill):
     return known + 2 * height_m, 0.0
 
 
-def both_ways(ml):
-    """the m.l figure and the freelancer's practice 2 m.l = 1 m2 (comparison only, not a rule)."""
-    return {"ml": ml, "freelancer_m2_equiv": None if ml is None else ml / 2.0}
+def opening_arrises(openings):
+    """arrises round a list of openings, composed ONCE from opening_reveal_ml (r2: r1's caller added the two jambs a
+    second time, 2 x height per opening). openings: iterable of (id, width m, height m or None, status, has_sill).
+    -> {"measured": m.l with printed / inferred heights (+ head / sill of the HELD ones), "assumed": m.l on an approved
+    fallback height, "held_ids": openings whose jambs are HELD, "per": {id: m.l or None}}"""
+    measured = assumed = 0.0
+    held, per = [], {}
+    for oid, w, h, status, sill in openings:
+        known, rest = opening_reveal_ml(w, h, sill)
+        if rest is None:
+            measured += known
+            held.append(oid)
+            per[oid] = None
+        elif status == "ASSUMED":
+            assumed += known
+            per[oid] = known
+        else:
+            measured += known
+            per[oid] = known
+    return {"measured": measured, "assumed": assumed, "held_ids": held, "per": per}
+
+
+URBAN_PDF_CORNER_RATE_KWD_PER_ML = 1.25      # Urban cost PDF: exterior corners 1,300 m.l x 1.25 KWD (owner notes)
+URBAN_PDF_EXT_PLASTER_RATE_KWD_PER_M2 = 2.50  # Urban cost PDF: exterior plaster labour 1,500 m2 x 2.50 KWD
+
+
+def four_figures(physical_ml, contract_ml=None):
+    """one corner line as four separate figures, all in m.l or KWD, never m2 (standard section 3):
+    physical length (full), contract measurement quantity (default: the physical length; a contract basis such as
+    the freelancer's 1,297.35 is passed explicitly), payable length under the freelancer's half convention
+    (comparison only, never a physical length), and the amount at the Urban PDF rate (full length x 1.25 KWD/m.l,
+    which equals the half length x 2.50). A HELD physical length (None) stays None in every figure."""
+    c = physical_ml if contract_ml is None else contract_ml
+    return {"unit": "m.l",
+            "physical_ml": physical_ml,
+            "contract_ml": c,
+            "payable_ml_half_convention": None if c is None else c / 2.0,
+            "rate_basis": "1.25 KWD/m.l on the full length (= half of 2.50 KWD/m2)",
+            "amount_kwd": None if c is None else c * URBAN_PDF_CORNER_RATE_KWD_PER_ML}
+
+
+def add_area_m2(*items):
+    """sum plaster surfaces: each item (quantity, unit). Refuses anything that is not m2 (a corner m.l line can never be
+    added to a plaster area) and returns None (HELD) when any quantity is None, never 0."""
+    tot = 0.0
+    for q, unit in items:
+        if unit != "m2":
+            raise ValueError(f"not an area: {q} {unit} (corners stay their own m.l line)")
+        if q is None:
+            return None
+        tot += q
+    return tot
+
+
+def parapet_components(outer_ml, inner_ml, t_m, h_inner_m):
+    """one parapet run as its physical items (plain parapet, section with a flat top): outer top arris m.l, inner top
+    arris m.l (each on its own run), top surface m2 on the centreline ((outer + inner) / 2 x t), inner face m2 (inner
+    run x height above the roof slab top). The outer face is part of the facade and is not returned. A height given as
+    (lo, hi) returns a range; None -> HELD (None), never 0."""
+    if t_m is None or outer_ml is None or inner_ml is None:
+        raise ValueError("parapet run needs outer, inner run and thickness")
+    top = (outer_ml + inner_ml) / 2.0 * t_m
+    if h_inner_m is None:
+        face = None
+    elif isinstance(h_inner_m, tuple):
+        face = (inner_ml * h_inner_m[0], inner_ml * h_inner_m[1])
+    else:
+        face = inner_ml * h_inner_m
+    return {"outer_top_arris_ml": outer_ml, "inner_top_arris_ml": inner_ml, "top_m2": top, "inner_face_m2": face}

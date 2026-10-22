@@ -248,7 +248,8 @@ def main():
     gross = num(inv[25]["B"])
     ded = num(inv[25]["D"])
     print(f"\n   his gross {gross:.3f}, deduction at half {ded:.4f} (65.745 / 2), net {num(inv[25]['F']):.4f}; "
-          f"corners {num(inv[26]['B']):.2f} m.l at 2 m.l = 1 m2 -> {num(inv[26]['F']):.3f}")
+          f"corners {num(inv[26]['B']):.2f} m.l, his own m.l line paid at half ('2 m = 1 m'): payable "
+          f"{num(inv[26]['F']):.3f} m.l (a payment convention, never m2; owner notes correction 2026-10-22 07:10)")
     # 2. openings
     print("\n2. HIS 13 OPENING ROWS AGAINST THE T-150 CENSUS")
     orows, n_his = [], 0

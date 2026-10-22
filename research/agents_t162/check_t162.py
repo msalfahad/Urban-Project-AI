@@ -10,7 +10,17 @@ By hand:
   +0.00 -> +4.60 = 4.60 m each.  1F corners: 4 x (+4.00 -> +8.50) = 4 x 4.50.  8 convex corners = 35.20 m.l.
   Parapet outer top edge: GF east 8.00 + the GF roof edge on the south and north 2 x 4.00 = 16.00; 1F 28.00 -> 44.00.
   Reveals: door 1.00 + 2 x 2.20 = 5.40; window 2 x 1.50 + 2 x 1.20 = 5.40; window 3: head + sill 4.00, jambs HELD.
-  Measured 35.20 + 44.00 + 5.40 + 5.40 + 4.00 = 94.00 m.l (freelancer practice 2 m.l = 1 m2: 47.00), jambs HELD.
+  Measured 35.20 + 44.00 + 5.40 + 5.40 + 4.00 = 94.00 m.l, jambs HELD.
+r2 (rework of the Checker's 2026-10-22 rejection): corners are ONE m.l line with four separate figures, never m2:
+  physical 94.00 m.l; payable under the freelancer's half convention 47.00 m.l (a payment figure, the physical length
+  stays 94.00); amount at the Urban PDF rate 94.00 x 1.25 = 117.50 KWD (= 47.00 x 2.50). Adverse: adding a corner m.l
+  line to a plaster m2 total must raise; a HELD length stays None in every figure.
+  1F parapet (closed ring 6 x 8, t 0.20, 0.50 high above its roof slab): outer top arris 28.00, inner top arris
+  28.00 - 8 x 0.20 = 26.40 m.l, top (28.00 + 26.40) / 2 x 0.20 = 5.44 m2, inner face 26.40 x 0.50 = 13.20 m2;
+  54.40 m.l of top arrises = 1.943 per metre of outer run, never 3 (the freelancer's 3 lines per metre).
+  Opening arrises composed once over a list: door 1.00 x 2.20 ASSUMED 5.40; window 1.50 x 1.20 5.40; window 2.00 with
+  no printed height 4.00 + jambs HELD -> measured 9.40, assumed 5.40; adverse: a 1.20 x 2.00 window with a sill is
+  6.40 m.l, never 10.40 (r1's caller added the jambs twice).
 Adversarial: rotated 30 / -121 deg, mirrored, millimetres, clockwise walk, a re-started ring, a collinear extra
 vertex, an L-shaped ring (one concave corner), a tangent arc fillet (no corner), a non-tangent arc (two corners), a
 dropped passage-mouth edge (two MOUTH_END), a missing level (HELD None, never 0), an inconsistent band (raises)."""
@@ -152,8 +162,56 @@ def check():
     eq("window HELD height: jambs", h[1], None)
     tot = 35.20 + par + d[0] + w[0] + h[0]
     eq("measured m.l", tot, 94.00)
-    eq("freelancer practice 2 m.l = 1 m2 (comparison only)", C.both_ways(tot)["freelancer_m2_equiv"], 47.00)
-    eq("both ways of a HELD figure", C.both_ways(None)["freelancer_m2_equiv"], None)
+    # r2 (a): four separate figures, never m2
+    ff = C.four_figures(tot)
+    eq("physical m.l (unchanged by the half convention)", ff["physical_ml"], 94.00)
+    eq("contract m.l (default = physical)", ff["contract_ml"], 94.00)
+    eq("payable m.l under the half convention", ff["payable_ml_half_convention"], 47.00)
+    eq("amount at 1.25 KWD/m.l", ff["amount_kwd"], 117.50)
+    eq("amount = payable x 2.50 KWD/m2 rate", ff["payable_ml_half_convention"] * C.URBAN_PDF_EXT_PLASTER_RATE_KWD_PER_M2,
+       ff["amount_kwd"])
+    eq("no m2 figure in a corner line", float(sum(1 for k in ff if "m2" in k)), 0.0)
+    eq("unit m.l", 1.0 if ff["unit"] == "m.l" else 0.0, 1.0)
+    fh = C.four_figures(None)
+    eq("HELD corner: payable stays HELD", fh["payable_ml_half_convention"], None)
+    eq("HELD corner: amount stays HELD", fh["amount_kwd"], None)
+    eq("his contract basis passed explicitly: payable", C.four_figures(None, 1297.35)["payable_ml_half_convention"],
+       648.675)
+    try:
+        C.add_area_m2((100.0, "m2"), (tot, "m.l"))
+        fails.append("corners added to m2 must raise")
+        print("FAIL corners added to m2 must raise")
+    except ValueError:
+        print("PASS corners added to m2 raise (adverse)")
+    eq("plaster m2 sum", C.add_area_m2((100.0, "m2"), (20.5, "m2")), 120.5)
+    eq("plaster m2 sum with a HELD face -> HELD, never 0", C.add_area_m2((100.0, "m2"), (None, "m2")), None)
+    # r2 (b): parapet as physical items
+    pc = C.parapet_components(28.00, 28.00 - 8 * 0.20, 0.20, 0.50)
+    eq("parapet outer top arris", pc["outer_top_arris_ml"], 28.00)
+    eq("parapet inner top arris", pc["inner_top_arris_ml"], 26.40)
+    eq("parapet top m2", pc["top_m2"], 5.44)
+    eq("parapet inner face m2", pc["inner_face_m2"], 13.20)
+    eq("top arrises per metre of outer run (never 3)", (pc["outer_top_arris_ml"] + pc["inner_top_arris_ml"]) / 28.00,
+       54.40 / 28.00)
+    eq("adverse: 3 lines per metre is not the physical count", 1.0 if abs(54.40 / 28.00 - 3.0) > 0.5 else 0.0, 1.0)
+    rng = C.parapet_components(10.0, 9.6, 0.20, (0.40, 1.60))["inner_face_m2"]
+    eq("held height range: face lo", rng[0], 3.84)
+    eq("held height range: face hi", rng[1], 15.36)
+    eq("unknown height -> HELD None", C.parapet_components(10.0, 9.6, 0.20, None)["inner_face_m2"], None)
+    try:
+        C.parapet_components(10.0, 9.6, None, 0.5)
+        fails.append("missing thickness must raise")
+        print("FAIL missing thickness must raise")
+    except ValueError:
+        print("PASS missing thickness raises (never 0)")
+    # r2: opening arrises composed once (the r1 caller defect)
+    ag = C.opening_arrises([("d", 1.00, 2.20, "ASSUMED", False), ("w", 1.50, 1.20, "PRINTED", True),
+                            ("w3", 2.00, None, "HELD", True)])
+    eq("openings measured", ag["measured"], 9.40)
+    eq("openings assumed", ag["assumed"], 5.40)
+    eq("openings held ids", float(len(ag["held_ids"])), 1.0)
+    eq("adverse: 1.20 x 2.00 window with sill is 6.40, never 10.40",
+       C.opening_arrises([("x", 1.20, 2.00, "PRINTED", True)])["measured"], 6.40)
     print(f"\n{'ALL PASS' if not fails else 'FAILED: ' + ', '.join(fails)}")
     return not fails
 

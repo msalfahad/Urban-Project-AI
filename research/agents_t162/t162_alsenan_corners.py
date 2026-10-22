@@ -204,22 +204,13 @@ def main():
           f"inner face, his parapet rows; not in T-159's faces)")
     # 3. opening reveals
     print("\n3. OPENING REVEALS ON THE FACADE (head + jambs + sill; m.l)")
-    known = jamb = 0.0
-    held_ids, assumed = [], 0.0
     orows = []
+    # r2: composed once by C.opening_arrises (r1 added 2 x height a second time here: jambs double counted)
+    agg = C.opening_arrises([(oid, w, hgt, st, sill) for oid, f, sd, w, hgt, st, sill in OPENINGS])
+    known, assumed, held_ids = agg["measured"], agg["assumed"], agg["held_ids"]
     for oid, f, sd, w, hgt, st, sill in OPENINGS:
-        k, j = C.opening_reveal_ml(w, hgt, sill)
-        if hgt is None:
-            held_ids.append(oid)
-            known += k
-            ml = None
-        elif st == "ASSUMED":
-            assumed += k + 2 * hgt
-            ml = k + 2 * hgt
-        else:
-            known += k + 2 * hgt
-            ml = k + 2 * hgt
-        orows.append((oid, f, sd, w, hgt, st, sill, ml, k))
+        k, _ = C.opening_reveal_ml(w, hgt, sill)
+        orows.append((oid, f, sd, w, hgt, st, sill, agg["per"][oid], k))
     print(f"   {len(OPENINGS)} facade openings: printed / inferred heights -> {known:.3f} m.l (incl. the head / sill "
           f"of the {len(held_ids)} with HELD heights); door jambs at the owner reference 2.20 (ASSUMED) {assumed:.3f} m.l;"
           f" jambs HELD on {len(held_ids)}: {', '.join(held_ids)}")
