@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-22T06:21Z | Worker 1 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-22T05:51Z | Verifier | STARTED | run unknown | repo-attached routine | task state: READY per Lead 04:20 VERIFIER QUEUE (T-151 Gate B, T-166, T-160, T-165, T-140, T-157, T-162, + T-169, T-163, T-150 r2) | self-check pending
 - 2026-10-22T05:46:31Z | Worker 2 | SUCCESS | T-150 r2 READY (d4a22b0) | Doors / windows rework on the 4 faults: W16 HELD on D-45 (width only, r1 inferred 4.805 m2 gone; windows 56.771 m2 DRAWING-CONFIRMED on 8 vs freelancer 54.931 (+3.3 %), 21 HELD 26.53 m); main entrance HELD on T-161 F07c / D-53 (5.000 m2 candidate only); door heights 2.20 ASSUMED — OWNER-APPROVED = RULE_DIFFERENCE (ALU 10.560 vs 12.000 m2, -12.0 %); no freelancer line = NOT COMPARABLE (PVC 36.080 m2). Open for Lead: T-161 F22 may hold D-GF-06 2.200 m2. No new owner question. | self-check codemap PASS / t061 PASS / freeze PASS; problem: none
 - 2026-10-22T05:40:12Z | Worker 2 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
