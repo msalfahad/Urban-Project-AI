@@ -1,0 +1,549 @@
+{
+ "method": "OPENING_SCOPE_V1",
+ "rules": [
+  "Q-73 (owner, CONFIRMED 2026-10-22)",
+  "UP-GEN-003 v1.1.0",
+  "UP-WP-002 v2.0.0",
+  "UP-DOOR-HGT-001 / Q-55 C",
+  "UP-OPEN-SCHED-001",
+  "ENGINEERING_REASONING_STANDARD.md s.3 build before deduct"
+ ],
+ "floors": {
+  "GF": {
+   "t143_gross_measured_m2": 460.071,
+   "block_deductions_by_status": {
+    "ASSUMED — OWNER-APPROVED": {
+     "n": 12,
+     "m2": 23.76
+    },
+    "DRAWING-CONFIRMED": {
+     "n": 1,
+     "m2": 2.4
+    },
+    "HELD": {
+     "n": 14,
+     "m2": 0.0
+    }
+   },
+   "rows": 40,
+   "rows_with_net": 25,
+   "net_rows_gross_m2": 296.433,
+   "net_rows_net_m2": 278.833,
+   "net_DRAWING_CONFIRMED_m2": 122.322,
+   "net_ASSUMED_OWNER_APPROVED_m2": 38.363,
+   "net_on_provisional_gross_m2": 118.148,
+   "rows_net_held": [
+    "GF-W00",
+    "GF-W02",
+    "GF-W03",
+    "GF-W04",
+    "GF-W06",
+    "GF-W07",
+    "GF-W08",
+    "GF-W09",
+    "GF-W10",
+    "GF-W13",
+    "GF-W14",
+    "GF-W15",
+    "GF-W16",
+    "GF-W17",
+    "GF-W18",
+    "GF-W23",
+    "GF-W24",
+    "GF-W25",
+    "GF-W26",
+    "GF-W27",
+    "GF-W30",
+    "GF-W35",
+    "GF-W36",
+    "GF-W37",
+    "GF-H01",
+    "GF-H02"
+   ],
+   "finish_deductions": {
+    "EXTERNAL_PLASTER_PAINT": {
+     "ASSUMED — OWNER-APPROVED": {
+      "n": 5,
+      "m2": 10.56
+     },
+     "HELD": {
+      "n": 14,
+      "m2": 0.0
+     },
+     "DRAWING-CONFIRMED": {
+      "n": 1,
+      "m2": 2.4
+     }
+    },
+    "INTERNAL_PLASTER_PAINT": {
+     "ASSUMED — OWNER-APPROVED": {
+      "n": 9,
+      "m2": 18.92
+     },
+     "HELD": {
+      "n": 12,
+      "m2": 0.0
+     },
+     "DRAWING-CONFIRMED": {
+      "n": 1,
+      "m2": 2.4
+     }
+    },
+    "SHAFT_FACE": {
+     "HELD": {
+      "n": 1,
+      "m2": 0.0
+     }
+    },
+    "WALL_TILE": {
+     "ASSUMED — OWNER-APPROVED": {
+      "n": 10,
+      "m2": 18.04
+     },
+     "HELD": {
+      "n": 5,
+      "m2": 0.0
+     }
+    }
+   },
+   "reveal_lm_by_status": {
+    "ASSUMED — OWNER-APPROVED": {
+     "n": 12,
+     "m": 63.6
+    },
+    "DRAWING-CONFIRMED": {
+     "n": 2,
+     "m": 28.14
+    },
+    "HELD": {
+     "n": 23,
+     "m": 0.0
+    }
+   },
+   "flags": [],
+   "gross_less_established_deductions_m2 (not a net: HELD openings remain)": 433.911,
+   "held_openings_in_gross": {
+    "n": 14,
+    "width_m": 16.0
+   },
+   "lintel_face_candidates_min_bearing_m2": {
+    "n": 13,
+    "m2": 4.48,
+    "status": "HELD (lintel line; bearing beyond the printed MIN.40cm not established)"
+   },
+   "lintel_not_needed_head_at_member": [],
+   "thresholds_lm": 28.52,
+   "sills_lm": 19.0,
+   "wet_doorways_upturn_not_deducted": [
+    "D-GF-02",
+    "D-GF-04",
+    "D-GF-08",
+    "D-GF-10",
+    "D-GF-11",
+    "D-GF-12",
+    "D-GF-14",
+    "A-GF-01"
+   ]
+  },
+  "1F": {
+   "t143_gross_measured_m2": 371.829,
+   "block_deductions_by_status": {
+    "ASSUMED — OWNER-APPROVED": {
+     "n": 10,
+     "m2": 19.14
+    },
+    "DRAWING-CONFIRMED": {
+     "n": 4,
+     "m2": 12.565
+    },
+    "HELD": {
+     "n": 10,
+     "m2": 0.0
+    }
+   },
+   "rows": 26,
+   "rows_with_net": 14,
+   "net_rows_gross_m2": 152.141,
+   "net_rows_net_m2": 144.221,
+   "net_DRAWING_CONFIRMED_m2": 106.134,
+   "net_ASSUMED_OWNER_APPROVED_m2": 38.087,
+   "net_on_provisional_gross_m2": 0,
+   "rows_net_held": [
+    "1F-W00",
+    "1F-W04",
+    "1F-W05",
+    "1F-W06",
+    "1F-W07",
+    "1F-W10",
+    "1F-W11",
+    "1F-W13",
+    "1F-W16",
+    "1F-W17",
+    "1F-W18",
+    "1F-W24"
+   ],
+   "finish_deductions": {
+    "EXTERNAL_PLASTER_PAINT": {
+     "DRAWING-CONFIRMED": {
+      "n": 4,
+      "m2": 12.565
+     },
+     "HELD": {
+      "n": 8,
+      "m2": 0.0
+     }
+    },
+    "INTERNAL_PLASTER_PAINT": {
+     "ASSUMED — OWNER-APPROVED": {
+      "n": 13,
+      "m2": 25.74
+     },
+     "DRAWING-CONFIRMED": {
+      "n": 3,
+      "m2": 11.485
+     },
+     "HELD": {
+      "n": 8,
+      "m2": 0.0
+     }
+    },
+    "SHAFT_FACE": {
+     "HELD": {
+      "n": 1,
+      "m2": 0.0
+     }
+    },
+    "WALL_TILE": {
+     "ASSUMED — OWNER-APPROVED": {
+      "n": 7,
+      "m2": 12.54
+     },
+     "DRAWING-CONFIRMED": {
+      "n": 1,
+      "m2": 1.08
+     },
+     "HELD": {
+      "n": 5,
+      "m2": 0.0
+     }
+    }
+   },
+   "reveal_lm_by_status": {
+    "ASSUMED — OWNER-APPROVED": {
+     "n": 10,
+     "m": 52.7
+    },
+    "DRAWING-CONFIRMED": {
+     "n": 5,
+     "m": 43.3
+    },
+    "HELD": {
+     "n": 11,
+     "m": 0.0
+    }
+   },
+   "flags": [],
+   "gross_less_established_deductions_m2 (not a net: HELD openings remain)": 340.124,
+   "held_openings_in_gross": {
+    "n": 10,
+    "width_m": 9.1
+   },
+   "lintel_face_candidates_min_bearing_m2": {
+    "n": 14,
+    "m2": 5.445,
+    "status": "HELD (lintel line; bearing beyond the printed MIN.40cm not established)"
+   },
+   "lintel_not_needed_head_at_member": [],
+   "thresholds_lm": 11.0,
+   "sills_lm": 16.09,
+   "wet_doorways_upturn_not_deducted": [
+    "D-1F-01",
+    "D-1F-04",
+    "D-1F-05",
+    "D-1F-06",
+    "D-1F-07",
+    "D-1F-10"
+   ]
+  },
+  "2F": {
+   "t143_gross_measured_m2": 123.727,
+   "block_deductions_by_status": {
+    "ASSUMED — OWNER-APPROVED": {
+     "n": 3,
+     "m2": 5.94
+    },
+    "DRAWING-CONFIRMED": {
+     "n": 1,
+     "m2": 2.04
+    },
+    "HELD": {
+     "n": 4,
+     "m2": 0.0
+    }
+   },
+   "rows": 9,
+   "rows_with_net": 4,
+   "net_rows_gross_m2": 54.916,
+   "net_rows_net_m2": 53.156,
+   "net_DRAWING_CONFIRMED_m2": 43.136,
+   "net_ASSUMED_OWNER_APPROVED_m2": 10.02,
+   "net_on_provisional_gross_m2": 0,
+   "rows_net_held": [
+    "2F-W00",
+    "2F-W02",
+    "2F-W03",
+    "2F-W05",
+    "2F-W07"
+   ],
+   "finish_deductions": {
+    "EXTERNAL_PLASTER_PAINT": {
+     "ASSUMED — OWNER-APPROVED": {
+      "n": 1,
+      "m2": 2.2
+     },
+     "DRAWING-CONFIRMED": {
+      "n": 1,
+      "m2": 2.04
+     },
+     "HELD": {
+      "n": 3,
+      "m2": 0.0
+     }
+    },
+    "INTERNAL_PLASTER_PAINT": {
+     "ASSUMED — OWNER-APPROVED": {
+      "n": 4,
+      "m2": 7.92
+     },
+     "DRAWING-CONFIRMED": {
+      "n": 1,
+      "m2": 2.04
+     },
+     "HELD": {
+      "n": 3,
+      "m2": 0.0
+     }
+    },
+    "SHAFT_FACE": {
+     "HELD": {
+      "n": 1,
+      "m2": 0.0
+     }
+    },
+    "WALL_TILE": {
+     "ASSUMED — OWNER-APPROVED": {
+      "n": 1,
+      "m2": 1.76
+     },
+     "HELD": {
+      "n": 1,
+      "m2": 0.0
+     }
+    }
+   },
+   "reveal_lm_by_status": {
+    "ASSUMED — OWNER-APPROVED": {
+     "n": 3,
+     "m": 15.9
+    },
+    "DRAWING-CONFIRMED": {
+     "n": 1,
+     "m": 5.8
+    },
+    "HELD": {
+     "n": 4,
+     "m": 0.0
+    }
+   },
+   "flags": [],
+   "gross_less_established_deductions_m2 (not a net: HELD openings remain)": 115.747,
+   "held_openings_in_gross": {
+    "n": 4,
+    "width_m": 3.8
+   },
+   "lintel_face_candidates_min_bearing_m2": {
+    "n": 4,
+    "m2": 1.42,
+    "status": "HELD (lintel line; bearing beyond the printed MIN.40cm not established)"
+   },
+   "lintel_not_needed_head_at_member": [],
+   "thresholds_lm": 2.7,
+   "sills_lm": 4.0,
+   "wet_doorways_upturn_not_deducted": [
+    "D-2F-03"
+   ]
+  },
+  "ALL": {
+   "t143_gross_measured_m2": 955.627,
+   "block_deductions_by_status": {
+    "ASSUMED — OWNER-APPROVED": {
+     "n": 25,
+     "m2": 48.84
+    },
+    "DRAWING-CONFIRMED": {
+     "n": 6,
+     "m2": 17.005
+    },
+    "HELD": {
+     "n": 28,
+     "m2": 0.0
+    }
+   },
+   "rows": 75,
+   "rows_with_net": 43,
+   "net_rows_gross_m2": 503.49,
+   "net_rows_net_m2": 476.21,
+   "net_DRAWING_CONFIRMED_m2": 271.592,
+   "net_ASSUMED_OWNER_APPROVED_m2": 86.47,
+   "net_on_provisional_gross_m2": 118.148,
+   "rows_net_held": [
+    "GF-W00",
+    "GF-W02",
+    "GF-W03",
+    "GF-W04",
+    "GF-W06",
+    "GF-W07",
+    "GF-W08",
+    "GF-W09",
+    "GF-W10",
+    "GF-W13",
+    "GF-W14",
+    "GF-W15",
+    "GF-W16",
+    "GF-W17",
+    "GF-W18",
+    "GF-W23",
+    "GF-W24",
+    "GF-W25",
+    "GF-W26",
+    "GF-W27",
+    "GF-W30",
+    "1F-W00",
+    "1F-W04",
+    "1F-W05",
+    "1F-W06",
+    "1F-W07",
+    "1F-W10",
+    "1F-W11",
+    "1F-W13",
+    "1F-W16",
+    "1F-W17",
+    "1F-W18",
+    "1F-W24",
+    "2F-W00",
+    "2F-W02",
+    "2F-W03",
+    "2F-W05",
+    "2F-W07",
+    "GF-W35",
+    "GF-W36",
+    "GF-W37",
+    "GF-H01",
+    "GF-H02"
+   ],
+   "finish_deductions": {
+    "EXTERNAL_PLASTER_PAINT": {
+     "ASSUMED — OWNER-APPROVED": {
+      "n": 6,
+      "m2": 12.76
+     },
+     "HELD": {
+      "n": 25,
+      "m2": 0.0
+     },
+     "DRAWING-CONFIRMED": {
+      "n": 6,
+      "m2": 17.005
+     }
+    },
+    "INTERNAL_PLASTER_PAINT": {
+     "ASSUMED — OWNER-APPROVED": {
+      "n": 26,
+      "m2": 52.58
+     },
+     "HELD": {
+      "n": 23,
+      "m2": 0.0
+     },
+     "DRAWING-CONFIRMED": {
+      "n": 5,
+      "m2": 15.925
+     }
+    },
+    "SHAFT_FACE": {
+     "HELD": {
+      "n": 3,
+      "m2": 0.0
+     }
+    },
+    "WALL_TILE": {
+     "ASSUMED — OWNER-APPROVED": {
+      "n": 18,
+      "m2": 32.34
+     },
+     "HELD": {
+      "n": 11,
+      "m2": 0.0
+     },
+     "DRAWING-CONFIRMED": {
+      "n": 1,
+      "m2": 1.08
+     }
+    }
+   },
+   "reveal_lm_by_status": {
+    "ASSUMED — OWNER-APPROVED": {
+     "n": 25,
+     "m": 132.2
+    },
+    "DRAWING-CONFIRMED": {
+     "n": 8,
+     "m": 77.24
+    },
+    "HELD": {
+     "n": 38,
+     "m": 0.0
+    }
+   },
+   "flags": [],
+   "gross_less_established_deductions_m2 (not a net: HELD openings remain)": 889.782,
+   "held_openings_in_gross": {
+    "n": 28,
+    "width_m": 28.9
+   },
+   "lintel_face_candidates_min_bearing_m2": {
+    "n": 31,
+    "m2": 11.345,
+    "status": "HELD (lintel line; bearing beyond the printed MIN.40cm not established)"
+   },
+   "lintel_not_needed_head_at_member": [],
+   "thresholds_lm": 42.22,
+   "sills_lm": 39.09,
+   "wet_doorways_upturn_not_deducted": [
+    "D-GF-02",
+    "D-GF-04",
+    "D-GF-08",
+    "D-GF-10",
+    "D-GF-11",
+    "D-GF-12",
+    "D-GF-14",
+    "D-1F-01",
+    "D-1F-04",
+    "D-1F-05",
+    "D-1F-06",
+    "D-1F-07",
+    "D-1F-10",
+    "D-2F-03",
+    "A-GF-01"
+   ]
+  }
+ },
+ "census_gaps_found": [
+  "P-GF-01",
+  "P-1F-01",
+  "P-GF-02",
+  "P-GF-03",
+  "P-GF-04",
+  "P-GF-05"
+ ]
+}
