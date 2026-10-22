@@ -28,6 +28,10 @@
    "kind": "AUTHORED",
    "sha256": "50c120c62d191ccfd08f2b3bc6fc79b2f13be4cc81f9a3c2478e4f797f283954"
   },
+  "owner_decisions/URBAN_RULES_1.6.0.json": {
+   "kind": "AUTHORED",
+   "sha256": "a9a04c63044685041d90c06b715b99c2da859aeb997a36f672876fbf57008cd8"
+  },
   "owner_library/URBAN_PROJECTS_RULE_LIBRARY_1.4.0.json": {
    "kind": "COPY",
    "sha256": "6881733f21015a247790fb7980850e4eb47054665684deb299e0b8413a6274ee",
