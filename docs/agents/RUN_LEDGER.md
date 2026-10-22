@@ -136,6 +136,89 @@ its line, stops before step 2 (claim) and step 10 (log). The cause is NOT KNOWN 
 
 Pattern: every INCOMPLETE run whose scheduler record is still visible ended SUCCEEDED after 2.5 to 4 minutes with no STARTED line, so it stopped before step (1) of the start-of-run record. The same early stop happened in the main chat's Test B session (3 min, refused write). The Lead runs (5 of 5) never stopped early. Cause for most NOT KNOWN; the two runs with an agent report (worker 2 03:39, worker 3 03:59) were stopped by the auto-mode check on the clone and on the board write ([Instruction Poisoning], [Untrusted Code Integration]); the early-stop pattern of the others is consistent with that.
 
+## 2026-10-21 04:31 to 2026-10-22 04:31 UTC (daily audit 2026-10-22, written 05:30)
+
+Cadence: hourly slots until about 08:30 on 21 Oct, then workers and checker every 2 h, Lead every 4 h. Rows are the slots
+with evidence (RUN_LOG lines, Lead notes of runs with no line). A slot with no line and no note is not counted, so the
+INCOMPLETE count is a lower bound. Scout: no slot in the window (Sun + Wed 23:50 UTC).
+
+| Slot (UTC) | Agent | Status | Evidence |
+|---|---|---|---|
+| 04:39 | Worker 2 | INCOMPLETE | no line (Lead 06:38 note); cause NOT KNOWN |
+| 04:49 | Verifier | SUCCESS | STARTED 04:52, final 05:07; ground-beam steel rework merged |
+| 04:59 | Worker 3 | SUCCESS | STARTED 05:00, final 05:34; plaster / paint both methods READY (repo code refused '[Code from External]', hand task taken) |
+| 05:19 | Worker 1 | SUCCESS | STARTED 05:20, final 05:47; suspended slabs by hand READY |
+| 05:39 | Worker 2 | SUCCESS | STARTED 05:40, final 06:36; masonry centreline V2 READY |
+| 05:49 | Verifier | INCOMPLETE | no line (Lead 08:19 note); cause NOT KNOWN |
+| 05:59 | Worker 3 | SUCCESS | STARTED 06:00, final 06:41; family registry 1.1.0 rework READY |
+| 06:09 | Lead | SUCCESS | STARTED 06:17, final 06:38 |
+| 06:19 | Worker 1 | SUCCESS | STARTED 06:21, final 06:37; columns to controlling member READY |
+| 06:49 | Verifier | INCOMPLETE | no line (Lead 08:19 note); cause NOT KNOWN |
+| 06:59 | Worker 3 | SUCCESS | STARTED 07:01, final 07:37; V3.0.1 route G scope READY (PARTIAL) |
+| 07:19 | Worker 1 | SUCCESS | STARTED 07:20, final 07:41; ground spans V2 READY |
+| 07:39 | Worker 2 | SUCCESS | STARTED 07:40, final 08:01; block wall area READY |
+| 07:49 | Verifier | INCOMPLETE | no line (Lead 08:19 note); cause NOT KNOWN |
+| 07:59 | Worker 3 | BLOCKED | STARTED 08:00, final 08:20 written by the main chat from the agent's relayed report; board claim not pushed |
+| 08:09 | Lead | SUCCESS | STARTED 08:11, final 08:19 |
+| 08:19 | Worker 1 | SUCCESS | STARTED 08:19, final 08:35; slab leftovers READY |
+| 09:39 | Worker 2 | SUCCESS | STARTED 09:40, final 09:58; openings for finishes READY |
+| 09:49 | Verifier | INCOMPLETE | no line (Lead 12:26 note); cause NOT KNOWN |
+| 10:19 | Worker 1 | SUCCESS | STARTED 10:21, final 10:35; column steel READY |
+| 10:59 | Worker 3 | INCOMPLETE | no line, about 1.5 min in the scheduler (Lead 12:26 note); cause NOT KNOWN |
+| 11:39 | Worker 2 | SUCCESS | STARTED 11:40, final 12:07; ceilings by room READY |
+| 11:49 | Verifier | INCOMPLETE | no line, ended after about 2 min (Lead 12:26 note); cause NOT KNOWN |
+| 12:09 | Lead | SUCCESS | STARTED 12:13, final 12:26 |
+| 12:19 | Worker 1 | INCOMPLETE | no line; cause NOT KNOWN (old prompt; repo-attached migration came at 14:25) |
+| 12:59 | Worker 3 | SUCCESS | STARTED 13:00, final 13:24; element register v0 READY |
+| 13:39 | Worker 2 | SUCCESS | STARTED 13:40, final 14:02; floor area by space READY |
+| 13:49 | Verifier | BLOCKED | STARTED 13:50, final 13:55: setup refused, EXECUTION NOT VERIFIED, nothing merged |
+| 14:19 | Worker 1 | BLOCKED | STARTED 14:24, final 14:27: session setup failed (case-sensitive repository-name check; fixed on main 1c559a8) |
+| 14:59 | Worker 3 | SUCCESS | STARTED 15:02, final 15:16; bars-per-metre evidence READY |
+| 15:39 | Worker 2 | SUCCESS | STARTED 15:41, final 15:57; pool-court soffit reconciliation READY |
+| 15:49 | Verifier | SUCCESS | STARTED 15:51, final 16:52; 2 merged |
+| 16:09 | Lead | SUCCESS | STARTED 16:11, final 16:27 |
+| 16:19 | Worker 1 | SUCCESS | STARTED 16:21, final 16:41 (first repo-attached run); beam steel READY |
+| 16:59 | Worker 3 | SUCCESS | STARTED 17:00, final 17:22; Gate B tool READY |
+| 17:39 | Worker 2 | SUCCESS | STARTED 17:40, final 17:58; doors / windows READY |
+| 17:49 | Verifier | SUCCESS | STARTED 17:52, final 18:08 (first repo-attached run); 3 merged, 1 rejected |
+| 18:19 | Worker 1 | SUCCESS | STARTED 18:21, final 18:30; columns rework READY |
+| 18:59 | Worker 3 | SUCCESS | STARTED 19:02, final 19:48; registry 1.1.0 rework READY |
+| 19:39 | Worker 2 | SUCCESS | STARTED 19:41, final 19:48; NO-CLAIM by the backlog rule, merged the head into own READY branches |
+| 19:49 | Verifier | SUCCESS | STARTED 19:55, final 20:33; 3 merged |
+| 20:09 | Lead | SUCCESS | STARTED 20:11, final 20:17 |
+| 20:19 | Worker 1 | SUCCESS | STARTED 20:22, final 20:41; 2 READY |
+| 20:59 | Worker 3 | SUCCESS | STARTED 21:02, final 22:58 (first repo-attached run); V3.0.2 package READY |
+| 21:39 | Worker 2 | SUCCESS | STARTED 21:39, final 22:08; facade per side READY |
+| 21:49 | Verifier | SUCCESS | STARTED 21:50, final 22:16; 4 merged |
+| 22:19 | Worker 1 | SUCCESS | STARTED 22:20, final 22:27; footing evidence rework READY |
+| 22:59 | Worker 3 | SUCCESS | STARTED 23:00, final 23:29; coverage census V2 READY |
+| 23:39 | Worker 2 | SUCCESS | STARTED 23:41, final 00:01; review of the 27 images READY |
+| 23:49 | Verifier | SUCCESS | STARTED 23:51, final 00:38; 4 merged incl. V3.0.2 Gate B |
+| 00:09 | Lead | SUCCESS | STARTED 00:12, final 00:20 (first repo-attached run) |
+| 00:19 | Worker 1 | SUCCESS | STARTED 00:21, final 00:39; dome rings READY |
+| 00:59 | Worker 3 | SUCCESS | STARTED 01:00, final 01:55; V3.0.3 package READY |
+| 01:39 | Worker 2 | SUCCESS | STARTED 01:40, final 02:06; outdoor floors READY |
+| 01:49 | Verifier | SUCCESS | STARTED 01:53, final 02:45; 3 merged, 1 rejected |
+| 02:19 | Worker 1 | SUCCESS | STARTED 02:21, final 02:36; stair steel READY |
+| 02:59 | Worker 3 | SUCCESS | STARTED 03:01, final 03:35; released-baseline trace READY |
+| 03:39 | Worker 2 | SUCCESS | STARTED 03:43, final 04:09; exterior Sigma term by term READY |
+| 03:49 | Verifier | SUCCESS | STARTED 03:50, final 04:02; 3 merged, 1 rejected |
+| 04:09 | Lead | SUCCESS | STARTED 04:12, final 04:22 |
+| 04:19 | Worker 1 | SUCCESS | STARTED 04:22, final 04:44; formwork READY |
+
+**Totals, 61 slots with evidence:**
+
+| Status | Runs | Share |
+|---|---|---|
+| SUCCESS | 50 | 82 % |
+| BLOCKED | 3 | 5 % |
+| FAILED | 0 | 0 % |
+| INCOMPLETE | 8 | 13 % |
+
+Since 14:30 UTC (agents moving one by one to the repo-attached way of working): 32 of 32 slots STARTED + SUCCESS (100 %).
+Every INCOMPLETE and BLOCKED run happened before 14:30 under the old clone-based prompts. Previous day: 64 % SUCCESS.
+Checker output in the window: 23 merges, 5 rejections, each with gate and evidence.
+
 ## Refused commands (today, from RUN_LOG; exact refusal reasons)
 
 | Refusal reason | Command (as the agents report it) | Agents |
