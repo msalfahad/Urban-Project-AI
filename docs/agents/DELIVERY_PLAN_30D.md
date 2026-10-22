@@ -46,24 +46,28 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
-## Status (Lead, 2026-10-22 00:20; re-estimated each run from what merged and was verified)
+## Status (Lead, 2026-10-22 04:20; re-estimated each run from what merged and was verified)
+
+Baseline (Lead ruling 04:20, from T-165): the RELEASED baseline is run A (V2.9 + route G, no profile, 1,455 lines); run B
+(profiled, 1,621 lines) is the comparison base for V3.0.x line pairing. Every Gate B verdict gives both diffs.
 
 | Plan | Board | State | Note |
 |---|---|---|---|
-| P-01 | owner + auditor | in progress, improving | Worker 1, Checker, Worker 3 migrated and ran clean; Lead's first repo-attached run is this one (setup by hand again: .work absent at start); Worker 2 next. 20:20 - 00:20: every closed slot has STARTED + final line; checker 23:51 still running |
-| P-02 | T-130 r3 MERGED 78f0aac; T-140 census V2 READY | DONE (registry); census waiting | T-140: two runs are both called released V2.9 + route G -> T-165 pins the baseline |
-| P-03 | T-133 MERGED (Gate B); T-142 V3.0.2 READY (Gate B); T-151 TODO after T-142 (steel); T-146 QUEUED after T-151 + T-139 r2 | second extension waiting for Gate B | V3.0.2: footing steel 3,735.91 -> 874.86 kg drawing-confirmed + 2,742.51 .. 2,836.40 HELD; soffits 44.446 m2; 1,647 lines byte-identical |
-| P-04 | T-132 (checker) | TODO, after READY <= 3, on the T-165 baseline | |
+| P-01 | owner + auditor | in progress, improving | Worker 1, Checker, Worker 3 migrated and run clean; Lead repo-attached since 00:12 (two clean runs incl. this one); Worker 2 next. 00:20 - 04:20: 9 of 9 closed slots STARTED + SUCCESS, every self-check PASS |
+| P-02 | T-130 r3 MERGED; T-140 census V2 READY; T-165 baseline READY | DONE (registry); census and baseline waiting for the checker | baseline ruled (run A) |
+| P-03 | T-133, T-142 MERGED (Gate B); T-151 V3.0.3 READY (Gate B, 3 slices); T-167 TODO after T-151; T-146 QUEUED after T-167 | third extension waiting for Gate B | V3.0.3: column steel 1,887.13 kg + ground beams 1,252.91 + beams 5,171.03 kg DRAWING-CONFIRMED (13 lines VERIFIED), rest HELD / UNKNOWN; route steel 14,219 kg superseded, not summed |
+| P-04 | T-132 (checker) | TODO, after READY <= 3, on baseline A + the candidate | |
 | P-05 | T-126 / T-133 | DONE | |
-| P-06 | T-144 MERGED; T-128 READY | waiting for the checker | stair shaft on Q-72 |
-| P-07 | T-125, T-143 READY; T-108 QUEUED | waiting for the checker | net on Q-73, black count on Q-75 |
-| P-08 | T-136, T-138 r2, T-148, T-149, T-155 r2 MERGED; T-152 READY; T-166 TODO | footings, ground beams, columns, beams DONE as verified hand pieces; slabs waiting; stairs / pool / tank next | counts on Q-71 (now 6.38 .. 6.73 t of held steel) |
-| P-09 | T-134 MERGED 0c8eae7; register rulings +12 (00:20) | DONE (v0 code); content grows each run | |
-| (Gate B tooling) | T-156 MERGED a9c47f1 | DONE | |
-| P-10 | T-163 formwork TODO; excavation not started (OQ-13 / Q-21 C) | queued (missing category) | formwork alternatives OQ-10 / OQ-11 side by side |
-| P-11 | T-147, T-150, T-159, T-161 READY; T-157, T-162, T-164 TODO | started ahead of week 3 | outdoor finish lines by the owner rule; railings / shutters missing category |
-| (gate 1) | T-153 MERGED; T-157 TODO (permitted) | floor area VERIFIED in part | OQ-04 answered |
+| P-06 | T-144 MERGED; T-128 REJECTED -> r2 TODO | rework | curved rooms re-walked on verified boundaries |
+| P-07 | T-125, T-143 MERGED; T-169 TODO (defect fix); T-108 QUEUED | hand truth merged; automation after T-169 | net on Q-73, black count on Q-75 |
+| P-08 | T-136, T-138 r2, T-148, T-149, T-152, T-155 r2 MERGED; T-166 READY | footings, ground beams, columns, beams, slabs DONE as verified hand pieces; stairs / pool / tank waiting | 6.74 .. 7.15 t held on Q-71 |
+| P-09 | T-134 MERGED; register rulings +14 (04:20) | DONE (v0 code); content grows each run | |
+| (Gate B tooling) | T-156 MERGED; T-168 TODO after T-165 | v2 queued | manifests checked |
+| P-10 | T-163 formwork TODO (permitted); T-170 levels for excavation TODO | started (missing categories) | excavation needs the Q-21 C level chain first |
+| P-11 | T-147, T-159, T-161 MERGED; T-157, T-162 READY; T-150 r2 TODO; T-164 TODO | ahead of week 3 | main door and W16 HELD |
+| (gate 1) | T-153 MERGED; T-157 READY | floor area VERIFIED in part; outside areas waiting | porch floor 10.680 vs soffit 19.181 explained |
+| (concrete gap) | T-049 TODO (pool) | queued | pool 3.50 vs 12.35 m3 |
 
 Day-7 target (2026-10-27): **MET on 2026-10-21 17:40**. Day-14 target (2026-11-03, measurable increase in verified coverage):
-on track if T-142 passes Gate B in the next checker run and T-151 (steel) follows within two days; measurement needs SCOREBOARD
-v2 (T-132) on one pinned baseline (T-165).
+on track: V3.0.2 merged through Gate B 00:30; V3.0.3 (steel) in Gate B over the next two checker runs; measurement needs
+SCOREBOARD v2 (T-132) on baseline A, which waits only on READY <= 3.

@@ -46,6 +46,38 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+### Lead 2026-10-22 04:20 (from T-151, T-157, T-160, T-162, T-165, T-166 READY; T-150 / T-128 REJECTED; T-142, T-152, T-143, T-147, T-159, T-161, T-154 MERGED)
+
+BASELINE RULING (from T-165, which reproduced both runs and traced the provenance). THE RELEASED BASELINE is spec
+`V29_ROUTEG_NO_PROFILE` (run A: ARCH_TAKEOFF_V2.9 + route G, conventions V6, no profile, no facts, no project id; 1,455
+lines; BOQ_LINES.csv b96185d4...). Reasons: (1) it is the configuration the scoreboard recorded when released figures were
+first reported (verifier 19th run, commit 8774071, "no facts file, no profile": concrete 92.77 vs 111.81 m3, -17.03 %) and
+the one BOQ_FAMILY_MASTER 1.1.0 `run_evidence.released_run` names; (2) it releases nothing on a value outside owner Q-17 A,
+while run B releases on the M4 profile, which is not a Q-17 A data file and carries two values the T-044 audit classed
+DIFFERENT / NOT_PRINTED. Spec `V29_ROUTEG_PROFILED` (run B, 1,621 lines) is the COMPARISON BASE: V3.0.x candidates run on
+the same profile and project id, so Gate B pairs lines against B; every Gate B verdict ALSO gives the element diff against
+A. The "-17.16 % on 5 lines" figure is reported only as "profiled comparison run". This names an unrecorded configuration;
+it does not switch the released default (V2.9 + route G, owner only). T-167 removes the dependence of candidate lines on
+DIFFERENT / NOT_PRINTED profile values (spec C = PRINTED values in a Q-17 A data file); T-168 makes the Gate B tool check
+the manifests.
+
+| Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |
+|---|---|---|---|---|---|
+| Main entrance door, printed 2.00 x 2.50 double (5.000 m2) | openings, facade, block deduction | OPENINGS; CORRECTS the 00:20 line: the line is HELD with cause T-161 F07c (render single leaf vs printed double); 5.000 m2 kept as the candidate value | HELD | WORKFLOW_CONTROLS s.8 (a DIFFERS finding that affects a quantity holds it); checker T-150 verdict 04:05 | D-53; T-150 r2 |
+| W16 (twin of a printed window) | openings, facade, plaster reveals | OPENINGS: width 1.55 m only, NO area | HELD | no rule for a twin; INFERRED is not a s.5 status | D-45; T-150 r2 |
+| GF covered porch: floor at court level 10.680 m2 (2.00 x 4.30 + 1.20 x 1.50 + 1.40 x 0.20, T-157) | external floor, ceiling, stair | FLOOR: porch line 10.680, material HELD, never in the court interlock line. SOFFIT 19.181 m2 (CEILING trade) covers porch floor + entrance treads 3.360 + top landing 5.180 = 19.220 (checker settles 0.039). The owner's "about 19.181" (23:20 note) was the covered area, not the porch floor | floor DRAWING-CONFIRMED, not VERIFIED | owner 23:20 (court level); sections B-B / A-A | checker RUN 2 |
+| Entrance stair E1: treads 3.360, visible risers 1.960 (5 x 0.140 x 2.80), top landing 5.180 | stair finish, external floor, ceiling | STAIR finish, MARBLE (outside stairs rule); never also in the porch or court line; drawn riser 0.170 > 0.16 = FLAG under owner stair rule S-1 (drawn governs) | DRAWING-CONFIRMED | OWNER_RULE_OUTDOOR_FLOORS; OWNER_RULE_STAIRS S-1 / S-2; UP-STAIR-001 / -003 | D-56 |
+| GF north side walk | external floor | FLOOR FINISH porcelain: measured 21.021 DRAWING-CONFIRMED (checker 21.021) beside owner manual 23.955 ASSUMED — OWNER-APPROVED; difference = boundary wall 0.20 x 15.97 (his 1.50 runs to the wall's outer face) less corner column 0.20 x 1.30; both shown, neither replaces the other; the 0.327 band T-153 put here belongs to the pool deck | both shown | owner additions 20:45; T-157 | none |
+| Pool deck 7.939 m2 (7.605 + the 0.334 mouth band under the 1F edge) | external floor, pool | EXTERNAL FLOOR, material HELD | HELD | owner 20:45 / 23:20 | none (owner, not asked again) |
+| Six outdoor openings with a printed 0.15 m level change, no step drawn (7.30 m) | external floor, stair, openings | none until the designer says how the level change is made (step, sloped sill, ramp): locations and widths DRAWING-CONFIRMED, finish HELD; the owner stair rule is NOT applied (nothing shows a stair); his "gate steps" 6 items 7.70 m comparison only | HELD | MISSION.md drawing-first; OWNER_RULE_STAIRS S-1 applies to an undrawn STAIR, not to an unknown threshold detail | D-55 |
+| GF garden band 13.986 m2 | floor area, landscape | none until classified; section A-A draws floor +1.00 to the facade under the +5.50 slab (new evidence) | HELD, CONFLICT | defect B9 | D-48 |
+| Stair landing steel strip over A1-L1 (18.204 kg) | rebar (frozen S8.7 line and the T-166 ledger) | REBAR, ONE line: lane I takes the T-166 ledger line and the frozen S8.7 line never enters the same total | DRAWING-CONFIRMED (0.0 % to frozen S8.7) | T-166 | lane I |
+| Pool walls / floor steel (R1 deep 888.90 .. 927.54, R2 shallow 615.34 .. 639.45 kg) | rebar, pool concrete | REBAR; HELD: the p.7 detail draws two zones, the owner fixed a flat floor (Q-26 A): which population serves the flat floor is for the designer | HELD | Q-26 A; T-166 | D-57 |
+| Dome ring beams | beam concrete, slab | confirmed (20:20 ruling): ring = in-bay part only (west 0.7552 m3 DRAWING-CONFIRMED; east HELD 0.8997 candidate, no mark); full annulus would double count 0.697 / 0.552 m3 | DRAWING-CONFIRMED / HELD | Q-44 A; T-160 | checker RUN 1 |
+| Exterior corners (Sigma "corners") | facade plaster beads / corner treatment | FACADE, in m.l: 457.095 measured (vertical 128.984 + parapet top edges 138.481 + reveals 189.630) + 58.600 door jambs ASSUMED — OWNER-APPROVED (Q-55 C height) + 20 jamb pairs HELD; m2 conversion NOT applied | DRAWING-CONFIRMED (m.l) | owner Sigma notes item 2 (owner decides) | OWNER PACKAGE 04:20 |
+| 0.200 m projecting outline outside the 1F / GF SE faces (layer D / layer 2) | facade, possibly shutters / ledge | none until classified | UNKNOWN | checker 04:05 observation | T-164 |
+| Column, ground-beam / strap and beam steel in V3.0.3 (1,371 ledger lines + 497 superseded route lines) | rebar | REBAR from the Gate-A-verified ledgers only; route G convention lines kept as SUPERSEDED (never deleted, never summed); straps HELD on Q-74 A / B / C; planted columns HELD (D-46) | DRAWING-CONFIRMED / HELD / UNKNOWN, NOT RELEASED | T-148, T-138 r2, T-141, T-149 MERGED | T-151 Gate B (3 slices) |
+
 ### Lead 2026-10-22 00:20 (from T-142, T-152, T-159, T-161, T-140 READY; T-149 / T-144 / T-155 / T-134 MERGED; owner outdoor-floor decisions 20:45 / 23:20)
 
 Code: element_register_v0 MERGED 0c8eae7 (checker 22:40). Baseline note: two runs are both called "released V2.9 + route
@@ -66,7 +98,7 @@ used the PROFILED run.
 | Soffits over outside air 44.446 m2 (porch 19.181, passage 5.640, pool court 12.834, 1F edges 4.374 + 2.417) | ceiling, slab, external plaster | CEILING (area lines); finish HELD; SX-01..03 (1.665 m2) listed, never added | VERIFIED pool court (checker 12.8343); others DRAWING-CONFIRMED | Q-68 C; T-127 / T-142 | T-142 Gate B |
 | Exterior faces per side and storey (T-159: 1,022.534 m2 measured + 6.822 .. 13.261 HELD + 13.079 m slab edge) | facade plaster / paint (freelancer "Sigma"), parapets, blockwork, openings | FACADE finish per face; parapet faces and roof faces are FACADE lines of their own; a face standing on a lower roof starts at that roof; boundary / street fence NOT facade (Q-65 HELD); domes EXCLUDED (owner Sigma item 3, client change Q-29); openings listed apart (T-150 owns count and size) | DRAWING-CONFIRMED (printed levels), wavy-parapet heights from the CAD top line flagged for the checker | Q-07 B, Q-64 B, owner Sigma notes | T-162 reconciles his 1,502.84 / 1,469.97 m2 term by term; corners m.l FLAGGED (R-11 c) |
 | Railings / balustrades and shutters | stairs, facade, openings, metal works | none yet: a missing BOQ category; T-164 builds the census of what is DRAWN | NOT IN THE DRAWING for the rendered ones (no quantity); UNKNOWN for the category | T-161 READY | D-54, T-164 |
-| Main entrance door 2.00 x 2.50 (double, printed) | openings, facade, block deduction | OPENINGS: printed size governs (5.000 m2); render single leaf is a DIFFERS note only | DRAWING-CONFIRMED | Q-55 C (2.50 printed governs) | D-53 |
+| Main entrance door 2.00 x 2.50 (double, printed) [CORRECTED by the Lead 04:20: HELD, see the 04:20 table] | openings, facade, block deduction | OPENINGS: printed size governs (5.000 m2); render single leaf is a DIFFERS note only | DRAWING-CONFIRMED | Q-55 C (2.50 printed governs) | D-53 |
 
 ### Lead 2026-10-21 20:20 (from T-119 r2, T-133 MERGED, T-149, T-150, T-153 MERGED, T-159, T-160)
 

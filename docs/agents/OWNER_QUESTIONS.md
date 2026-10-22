@@ -203,6 +203,10 @@ statements URBAN_OWNER_DECISION: AD2-D02 = reading C (rate x the full side, frac
 top-bar reading "one third of the span each side". Neither is in your answered decisions or the Urban rule registers, so the
 team has NOT used them. Please say whether either was your decision; the earlier S3.1 statements (12:20 above) pointed to
 rounding up, so the two frozen sources do not agree with each other.
+UPDATE (lead 2026-10-22 04:20): the slab steel is now CHECKED and merged (the checker re-counted three panels at 0.0 %), and
+worker 1's stair steel (waiting for the checker) prints its main bars the same way ("8 ø 16/m" along each flight): C 367.88 /
+A 382.31 / B 420.54 kg. With it, this answer decides about 6.74 .. 7.15 t of held steel (footings, column links, slab bottom
+mesh, stair main bars; ranges, never added as one verified figure). Nothing else changed in the question.
 
 ### Q-72 Main stair shaft walls: which height does your manual plaster / paint method take for a stair shaft that runs through all storeys? (lead 2026-10-21 06:30, from worker 3's two-method room table; T-128; no-assumptions question: your manual height formula (Q-43, G1) is written for rooms with a beam and a decor ceiling, and no Urban rule or answer covers a wall that runs through the storeys with no slab, beam or ceiling between them) — addition to today's package (Q-71)
 
