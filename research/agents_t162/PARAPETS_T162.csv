@@ -1,0 +1,10 @@
+CHAIN,LEVELS,OUTER_TOP_ARRIS_ML,INNER_TOP_ARRIS_ML,TOP_M2,INNER_FACE_M2,ENDS,HEIGHTS_HELD_ON,STATUS,SOURCE
+ANNEX,+4.30 -> +4.80,29.342,28.428,5.777,14.214,both ABUT (no stop-end),,DRAWING-CONFIRMED geometry; plaster scope of inner face / top: UNKNOWN (no specification),"agents/task-T-172 d7f81ef (READY, not verified)"
+GF,+5.50 -> +6.00,28.770,27.970,5.674,13.985,ABUT the 1F NW face; passage-mouth end UNKNOWN: stop-end HELD 0 .. 1.20 m.l,,DRAWING-CONFIRMED geometry; plaster scope of inner face / top: UNKNOWN (no specification),"agents/task-T-172 d7f81ef (READY, not verified)"
+1F,+9.70 -> +11.00 printed (NE / SW); waves NW / SE,50.569,48.784,9.935,52.082..57.185,both ABUT the 2F faces (no stop-end),NE-1 SW-1 SW-2,DRAWING-CONFIRMED geometry; plaster scope of inner face / top: UNKNOWN (no specification),"agents/task-T-172 d7f81ef (READY, not verified)"
+2F,+13.90 -> +14.40,29.800,28.300,5.415,14.150,closed ring (no end),,DRAWING-CONFIRMED geometry; plaster scope of inner face / top: UNKNOWN (no specification),"agents/task-T-172 d7f81ef (READY, not verified)"
+
+HIS_ROWS,DRAWN_CHAINS,HIS_L_M,HIS_H_M,HIS_M2,INNER_RUN_M,PHYSICAL_M2,HIS_MINUS_PHYSICAL_M2,LENGTH_EFFECT_M2,MAPPING
+79,ANNEX,28.40,0.7,19.880,28.428,19.991..19.991,-0.111..-0.111,-0.020,'annex roof parapet': run 28.40 = the annex inner run 28.428
+83+84,GF+2F,63.40,0.7,44.380,56.270,39.224..39.224,+5.156..+5.156,+4.991,"'parapets of the annexes' roofs' + 'parapet' (J84 subtotal 44.38): the GF house and 2F roof parapets, inner runs 27.970 + 28.300 = 56.270 m"
+78,1F,48.47,1.7,82.399,48.784,62.017..67.120,+15.279..+20.382,-0.533,'parapet' 48.47 = the 1F inner run 48.784
