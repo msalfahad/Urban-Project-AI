@@ -208,6 +208,8 @@ worker 1's stair steel (waiting for the checker) prints its main bars the same w
 A 382.31 / B 420.54 kg. With it, this answer decides about 6.74 .. 7.15 t of held steel (footings, column links, slab bottom
 mesh, stair main bars; ranges, never added as one verified figure). Nothing else changed in the question.
 
+STATUS (main chat 2026-10-22, owner ENGINEERING_REASONING_STANDARD directive): reopened as INVESTIGATION T-171 (footings only: notation meaning first, then N = ceil(L_eff / s) + 1 only if it is shown to be a maximum spacing, Checker 10-point verification). No owner answer recorded; it returns to the owner only under the standard's section 2.7, in its section 6 format.
+
 ### Q-72 Main stair shaft walls: which height does your manual plaster / paint method take for a stair shaft that runs through all storeys? (lead 2026-10-21 06:30, from worker 3's two-method room table; T-128; no-assumptions question: your manual height formula (Q-43, G1) is written for rooms with a beam and a decor ceiling, and no Urban rule or answer covers a wall that runs through the storeys with no slab, beam or ceiling between them) — addition to today's package (Q-71)
 
 THE PROBLEM: the main dog-leg stair shaft (2.46 m wide inside, same rectangle on the three plans) has wall faces GF
@@ -232,6 +234,8 @@ from the stair ledger), not by lowering the height.
 WAITS ON: the owner-manual column of the shaft (A 136.14 / C 157.66 m2; B uses the drawing-derived value); work
 continues with the drawing-derived value shown as such. Nothing released changes.
 
+STATUS (main chat 2026-10-22, owner directive): reopened as INVESTIGATION T-173 (actual exposed wall geometry from the sections; the owner manual height kept as its own column). No owner answer recorded.
+
 ### Q-73 Block walls: are door, window and glass openings deducted from the block area, and is there a size below which an opening is not deducted? (lead 2026-10-21 08:20, from worker 2's wall-by-wall block table; T-143, T-108; no-assumptions question: your opening table (UP-GEN-003, "openings are deducted per trade from one table") has rows for plaster, paint and tiles but no row for blockwork, and no other Urban rule deducts openings from block) — addition to today's package (Q-71, Q-72)
 
 THE PROBLEM: the block area by hand is measured gross (physical run x height to the beam or slab above, your Q-60 A):
@@ -255,6 +259,8 @@ the common small-opening allowance in measurement standards; it changes little h
 WAITS ON: net block m2 and m3, block counts, glue bags and pallets for every wall (T-143, then T-108). Gross stays
 reported meanwhile; nothing released changes.
 
+Answer: (owner, 2026-10-22, ENGINEERING_REASONING_STANDARD directive section 6, his words) "The owner-approved rule is to deduct full openings from blockwork, plaster and paint, subject to the actual construction scope." = A, applied to what is physically built (no masonry invented behind glazing). Implementation T-175. Lead: move to Answered.
+
 ### Q-74 Oblique strap beams: which length does the BOQ measure? (lead 2026-10-21 08:20, from worker 1's ground-beam span splitter; T-141; no-assumptions question: your ground-beam rule (type from the schedule, length from the plan) is written for ground beams and does not cover strap beams, and no Urban rule or answer sets the strap length)
 
 THE PROBLEM: two strap beams run at an angle between footings. Measured along the strap's own axis from footing face to
@@ -276,6 +282,8 @@ length that is built. The steel of the strap still takes its bar anchorage into 
 (your lap / development range), separately from this concrete length.
 WAITS ON: concrete, formwork and steel of the two oblique straps on Alsenan, and every oblique strap on any villa
 (T-141, wiring by lane I).
+
+Answer: (owner, 2026-10-22, directive section 7, his words) "Use the actual beam-axis length for volume calculations, subject to the approved treatment of footing overlaps and intersections." = A for concrete; bars, formwork and excavation derived separately. Implementation T-174. Lead: move to Answered.
 
 ### Q-75 Black (cement) blocks: which block size does the BOQ count with? (lead 2026-10-21 08:20, from worker 2's block table; T-143, T-108; no-assumptions question: your Q-60 answer gives the white-block pallet data (62.5 x 25 face, 6.4 per m2; 60 x 20 face, 8.33 per m2) but no size for the black blocks, so the black-block count is HELD)
 
@@ -372,3 +380,5 @@ Every Answer below binds every agent. One line per question, newest first; grep 
 - **Q-03** Waterproofing upturn — Answer: 0.20 m. Already the current rule (knowledge 1.4.0 rules[41], UP-WP-003; 0.15 m is superseded, rules[47]). No change.
 - **Q-04** Door minimum, D-16 — Answer: The minimum is the door opening: ordinary 1.00 m opening = 1.10 m wall to wall. These are minimums: when the plan
 - **Q-05** Second villa and independent QS — Answer: Yes. Other villas exist as AutoCAD and PDF, but without full concrete and rebar drawings. Use them as development
+STATUS (main chat 2026-10-22, owner directive section 8): reopened as INVESTIGATION T-176: 40 x 20 (12.5 / m2) is a starting calculation, not the procurement quantity; net area first, units by a documented procurement method. Not answered.
+

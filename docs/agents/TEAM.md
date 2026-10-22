@@ -119,3 +119,5 @@ reader, A7 vs BOQ output), proposed next task. Docs only, table in `docs/agents/
 | Lead's plan | Owner | the Lead's 3-5 line notification; the owner can overrule in OWNER_QUESTIONS.md or a session |
 | Team health | Lead | each run: list the scheduled tasks (list_triggers) and check each agent's last run (failed, not run on time, could not attach a repository, claim older than 12 h, READY older than 24 h); report problems in the notification and fix what the board can fix |
 | Owner's own Claude Code sessions | Lead | new commits on the working branch close matching board tasks (DONE, owner session) |
+
+Engineering reasoning (owner directive 2026-10-22): every agent follows docs/agents/ENGINEERING_REASONING_STANDARD.md (the one authoritative copy).

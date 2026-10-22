@@ -124,3 +124,7 @@ to give details and align what's in the plan with the photos." No new agent: pho
   its cause, and goes to the owner (via the main chat's daily package) or the designer list, never guessed. Evidence
   statuses stay those of section 5; a photo is recorded as supporting evidence beside the status, not as a new status.
 - The owner's photos of 2026-10-21 (domes): the first photo review; the owner says the chalet has no domes.
+
+## 9. Engineering reasoning standard (owner, 2026-10-22)
+
+Investigations, reconciliations, verification depth, escalation and owner-question format follow ENGINEERING_REASONING_STANDARD.md. It adds to sections 1-8 and changes none of them.

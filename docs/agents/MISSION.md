@@ -145,3 +145,5 @@ drain cross-check; boundary base vs ground beam; unlabelled beam with and withou
 beams; stair riser uniformity and landings; stair waist and steps without double counting; foundation datum ambiguity;
 verified typed value vs assumption; project rule over Urban default; conflicting revisions; missing CAD geometry;
 separation of projects. Each test records expected, actual and reason for any failure.
+
+Note (owner directive 2026-10-22): WHEN and HOW to ask the owner now follow ENGINEERING_REASONING_STANDARD.md sections 2.7 and 6; the no-assumptions rule above is unchanged.
