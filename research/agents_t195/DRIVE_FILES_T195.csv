@@ -1,0 +1,31 @@
+drive_title,drive_id,bytes,kind,sha256,carries
+P7757 dxf.dxf,1fW7QqfjtcVATjD3rXJGcX_zAJm3Zj7nD,17227946,CAD_EXCHANGE,NOT DOWNLOADED,architectural DXF (same bytes as the zip member below; not downloaded: over the connector limit)
+P7757_DXF_COMPRESSED.zip,1aFn_W3RV23n3QtRyN-FILRY_CKE8Mj5c,714410,CAD_EXCHANGE_ZIP,ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4,member P7757.dxf (sha256 given = the member; = SOURCE_MANIFEST P7757.dxf)
+P7757.dwg,1vwm_jH416TOfojcYy08xN3j1J7k5_Wid,2655476,CAD_NATIVE,NOT DOWNLOADED,architectural native DWG (bytes = SOURCE_MANIFEST P7757.dwg)
+المخطط المعماري - 2026-05-06T113026.059.dwf,17PQEjZWEZ9vIeix1u7QsvzQMOw2yVtXo,2655253,DWF_PUBLISH,NOT DOWNLOADED,architectural DWF publish (bytes = SOURCE_MANIFEST P7757_Architectural.dwf)
+المخطط المعماري p7757.pdf,15FHjKyIhGIPO2aitDwLrgD9lk2K1EjnY,37528314,PDF_PLOT,NOT DOWNLOADED,architectural set ARCH p.1-12 (not downloadable: 37.5 MB; identity by title + size only)
+المخطط المعماري p7757.pdf,1Ceb5X65iLhQU6WpIU-ShgbWD-r4QXuS3,37528314,PDF_PLOT,NOT DOWNLOADED,"SECOND upload, same title and byte size: a duplicate copy (content identity not provable: not downloadable)"
+Alsenan_Architectural_P7757_Pages_01-02.pdf,1OKpxCbRqGzw_QJg7IGFJBAsA5g8yys8F,6000352,PDF_PART,bb2363f2449dc4b0,ARCH p.1-2
+Alsenan_Architectural_P7757_Pages_03-04.pdf,1knf5fABkA4f7lVqDFGQygLBZOgAAN1pT,6789743,PDF_PART,NOT DOWNLOADED,ARCH p.3-4 (over the connector limit: use p7757_arch_sheet03 / 04)
+Alsenan_Architectural_P7757_Pages_05-06.pdf,1gS1g2fhvkzdGd1xXjS4RycqvkR4XoJmC,6225932,PDF_PART,d6480919db67c810,ARCH p.5-6
+Alsenan_Architectural_P7757_Pages_07-08.pdf,19bPv9YGx5ArF_zi2TeAEde1jDscdwK0I,6099455,PDF_PART,991dc783730ffa93,ARCH p.7-8
+Alsenan_Architectural_P7757_Pages_09-10.pdf,1790-8m9hq9dvM9mceFzEVaFThaSw_PdU,6371489,PDF_PART,NOT DOWNLOADED,ARCH p.9-10 (over the connector limit: use p7757_arch_sheet09 / 10)
+Alsenan_Architectural_P7757_Pages_11-12.pdf,1ToVFztO8uohZqlQsyc4JJHgGcVBUSbGq,6116815,PDF_PART,9c72175ccfeb04f2,ARCH p.11-12
+p7757_arch_sheet03.pdf,1aJUU2B_l8O8hrMUJ6PFa4TK5KbFblLCj,3375172,PDF_SINGLE,f12d7db79f650319,ARCH p.3
+p7757_arch_sheet04.pdf,1pdA1OJgBKQOb4tcY3qIbkiHDY6AuVg9H,3415122,PDF_SINGLE,c712da4a333815cb,ARCH p.4
+p7757_arch_sheet09.pdf,1aXuWRH7Do0Yi8JBxfs0TOvWEKd_bpR2U,3209545,PDF_SINGLE,ff539473477021c3,ARCH p.9
+p7757_arch_sheet10.pdf,1JN7vOJaijdC7IZfmbMURxeOkwcTn6euz,3137565,PDF_SINGLE,e20fcf2c5d090d35,ARCH p.10
+TEST_PAGE_01.pdf,1fJOhZsVkt1NdwEIldbumknPM-TaJAt8x,3104229,PDF_SINGLE,a61c2a4e9f0a5a32,"ARCH p.1 (rendered pixel-identical at 30 dpi to Pages_01-02 page 1: a test split, not another issue)"
+ST7757 dxf.dxf,1wmgfLZE2YD3oEBnwkQ6e6nT-aEWapPuL,3153037,CAD_EXCHANGE,9f9d1179a5d2a663,"structural DXF, 12 model-space frames (= SOURCE_MANIFEST ST7757.dxf)"
+ST7757.dwg,1Jp4TjIJuWSsf1k49jigJ2pbs0PU8J4sD,491151,CAD_NATIVE,NOT DOWNLOADED,structural native DWG (bytes = SOURCE_MANIFEST ST7757.dwg)
+ST7757.pdf,1U9GMN2bkqlpbdL8Z9QJ3rlJyFYhhlox9,2219156,PDF_PLOT,74da1523f05eb3c6,structural set ST p.1-16 (= SOURCE_MANIFEST ST7757.pdf)
+sanitary-7757.pdf,1hiEpFsXzy5G0OxA6vj0_p1LBISJnhIK3,674366,PDF_PLOT,116736870983e63a,sanitary (drainage) set SAN p.1-3 (= SOURCE_MANIFEST sanitary-7757.pdf)
+حصر خرسانة+الحديد (1).xlsx,1OJaezzQX0CLKf0UVzZ69IY9AngoKoPKi,49706,WORKBOOK,NOT DOWNLOADED,freelancer workbook (concrete + rebar): not a drawing
+الصبغ.xls,1d9r1IgTJUHHa7_54GDzuPMcXP4Pzl_PR,106496,WORKBOOK,NOT DOWNLOADED,freelancer workbook (paint)
+المساح الداخلى والسجما.xls,1d_pTXrINhv1HRRRXAratna2sn_Q2uPIp,117248,WORKBOOK,NOT DOWNLOADED,freelancer workbook (internal plaster + Sigma)
+الالومنيوم.xlsx,1stCdLkIrPNhKOuristFCwxnktnEi4lq2,6152749,WORKBOOK,NOT DOWNLOADED,freelancer workbook (aluminium)
+المبانى.xlsx,11YtKkt22-Y7xd4C0RG3ildvDepGz50vU,6164004,WORKBOOK,NOT DOWNLOADED,freelancer workbook (blockwork)
+الارضيات+العازل+الديكور+الرخام (1).xlsx,1gMr2tCH8d2yoKNMZuLhUtB3YNpAAUm8P,23654476,WORKBOOK,NOT DOWNLOADED,"freelancer workbook (floors, insulation, decor, marble)"
+Alsenan Chalet_by_category.xlsx,1VQEb8W5Yr7-iThTZx2LB-3rdsmFer2QH,12550,WORKBOOK,NOT DOWNLOADED,BOQ summary by category: not a drawing
+Alsenan Chalet_by_category.pdf,18_6wgLHvCfWYy9k7qoK_CjJ2coY4LDL5,119987,REPORT,NOT DOWNLOADED,BOQ summary by category: not a drawing
+PHOTO-2026-06-15-11-31-14.jpg,27 files (ids: T-161),,PHOTO,,"27 site / design images with one shared title, created 2026-10-21 22:50-22:52 (T-161): not drawings"
