@@ -1,0 +1,99 @@
+{
+ "SCHEMA": "T-185 dome scenario input v1 (numbers read from the drawings; no client data)",
+ "sources": {
+  "ST": "Drive 'Alsenan chalet project' / 'ST7757 dxf.dxf': p.7 DETAIL OF DOME (N.I.S): DIM 1A38 '442', DIM 1A6D '190', DIM 19B1 '10', DIM 182F 'AS PER ARCH', arcs 182B / 182E (concentric, 500 drawn units apart = 10 cm at the detail's 0.02 factor), bar texts 1A0E / 1A15 'ø12MM/15cm', ring texts 1A47 '3ø16', 1A4B '3ø18', 1A37 '2ø14/20cm', 1A29 '8ø8/m'; p.5 FIRST FLOOR ROOF SLAB ring band r 2.2111 / 2.4111 (T-160)",
+  "ARCH": "Drive 'Alsenan chalet project' / 'P7757_DXF_COMPRESSED.zip' (P7757.dxf): 2F plan circles 12EB and 2F33 r 2211.1 (layer 5, the +9.70 roof), circle 1300 r 2205.0 (layer 2, HIDDEN linetype, inside the 2F maid room); SE elevation DIM 2C86 '441', DIM 2AF3 '215', DIM 2B71 '193'",
+  "ARCH_SECTION": "Drive 'Alsenan chalet project' / 'Alsenan_Architectural_P7757_Pages_11-12' p.1 SECTION B-B: '130' from the +9.70 roof to the springing line, '420' +9.70 -> +13.90, '50' parapet; both terrace domes drawn in view on a drum of thin unhatched double lines (the roof slab is hatched)",
+  "DRIVE_SEARCH": "folder 'Alsenan chalet project' listed 2026-10-22 16:25 UTC: no revised structural or architectural sheet; newest drawing files 2026-10-19 (single-sheet extracts of the issued set); 27 photos 2026-10-21 = designer renders (T-161)"
+ },
+ "domes": [
+  {"id": "DOME-A", "where": "1F roof (+9.70), west bay, centre (16.380, 41.651) on ST p.5", "unit": "m",
+   "structural_detail": "ST p.7 DETAIL OF DOME, bound by 4 SEE DETAIL labels",
+   "printed": {"chord": 4.42, "rise": 1.90, "thickness": 0.10},
+   "shell_bars": {"d_mm": 12, "spacing": 0.15, "stock_m": 12.0, "note": "one mesh drawn (CF-S8.3-07), hoop + meridian"},
+   "held_components": [
+    {"item": "ring beam concrete", "unit": "m3", "candidate": [0.7552, 1.1422],
+     "reason": "CONFLICT in the issued set: p.5 plan B4 20 x 50 band r 2.211-2.411 (in-bay 1.5105 m2, T-160) vs p.7 detail ring under the shell edge r 2.011-2.211 (in-bay 2.2845 m2) with depth 'AS PER ARCH' (CF-S8.3-02/-03/-04); candidates at the B4 0.50 depth only"},
+    {"item": "drum between the roof and the springing (1.30 m)", "unit": "m3", "candidate": null,
+     "reason": "section B-B draws a 1.30 m drum (+9.70 -> +11.00), unhatched; material and thickness not printed; whether it IS the ring ('as per arch') not stated"},
+    {"item": "ring bars (3ø16 top, 3ø18 bottom; sides 2ø14/20cm and links 8ø8/m follow the depth)", "unit": "kg", "candidate": [142.47, 155.97],
+     "reason": "top + bottom longitudinal only, closed ring at the detail (r 2.1111) .. plan (r 2.3111) centreline; laps and anchorage not detailed; dome A ring also tagged B4 (2ø12 / 4ø16 / 6ø8/m): CF-S8.3-04"},
+    {"item": "shell bar anchorage legs into the ring", "unit": "kg", "candidate": null,
+     "reason": "leg drawn to the ring bottom (N.I.S); ring depth 'AS PER ARCH'"},
+    {"item": "shell hoop laps", "unit": "kg", "candidate": null,
+     "reason": "5 .. 7 hoops are longer than a 12 m bar; no lap length printed for shell bars (p.8 note 9 is for starter bars)"},
+    {"item": "shell top (extrados) formwork", "unit": "m2", "candidate": null,
+     "reason": "casting method not specified; soffit form = intrados area (CALCULATED line)"},
+    {"item": "shell external finish / waterproofing", "unit": "m2", "candidate": null,
+     "reason": "finish not specified (owner Q-24: 'fiberglass or anything visible'); extrados area given as geometry"}
+   ]},
+  {"id": "DOME-B", "where": "1F roof (+9.70), east bay, centre (30.828, 41.651) on ST p.5", "unit": "m",
+   "structural_detail": "ST p.7 DETAIL OF DOME, bound by 4 SEE DETAIL labels",
+   "printed": {"chord": 4.42, "rise": 1.90, "thickness": 0.10},
+   "shell_bars": {"d_mm": 12, "spacing": 0.15, "stock_m": 12.0, "note": "one mesh drawn (CF-S8.3-07), hoop + meridian"},
+   "held_components": [
+    {"item": "ring beam concrete", "unit": "m3", "candidate": [0.8997, 1.3108],
+     "reason": "no section mark on this ring (D-28); plan band in-bay 1.7994 m2 vs detail band in-bay 2.6216 m2; depth 'AS PER ARCH'; candidates at 0.50 only"},
+    {"item": "drum between the roof and the springing (1.30 m)", "unit": "m3", "candidate": null,
+     "reason": "as DOME-A"},
+    {"item": "ring bars (3ø16 top, 3ø18 bottom; sides and links follow the depth)", "unit": "kg", "candidate": [142.47, 155.97],
+     "reason": "as DOME-A, no B4 tag on this ring"},
+    {"item": "shell bar anchorage legs into the ring", "unit": "kg", "candidate": null, "reason": "as DOME-A"},
+    {"item": "shell hoop laps", "unit": "kg", "candidate": null, "reason": "as DOME-A"},
+    {"item": "shell top (extrados) formwork", "unit": "m2", "candidate": null, "reason": "as DOME-A"},
+    {"item": "shell external finish / waterproofing", "unit": "m2", "candidate": null, "reason": "as DOME-A"}
+   ]},
+  {"id": "DOME-TOWER", "where": "2F roof (+13.90) over the 2F maid room; springing +14.40 (SE elevation)", "unit": "m",
+   "structural_detail": null,
+   "printed": {"chord": 4.41, "rise": 2.15, "thickness": null},
+   "held_components": [
+    {"item": "support (opening / ring in the +13.90 slab)", "unit": "m3", "candidate": null,
+     "reason": "ST p.6 draws a flat 160 mm panel with no opening and no ring there; section A-A (which cuts the tower) draws no dome; owner Q-27 A: the dome exists (CONFLICT D-21 / CF-S8.3-01)"}
+   ]}
+ ],
+ "changes": [
+  {"dome": "DOME-A", "requested_by": "client", "kind": "REMOVE_SHELL", "issued_drawing": null,
+   "reference": "owner Q-29 2026-10-19 (client wants no concrete domes, open skylight); owner 2026-10-22: client request only, no consultant revision",
+   "also_removes": ["drum between the roof and the springing (1.30 m)"],
+   "s1_items": [
+    {"item": "edge ring beam B4 0.20 x 0.50 (in-bay, Q-44 A)", "unit": "m3", "qty": 0.7552, "status": "DRAWING-CONFIRMED",
+     "basis": "p.5 B4 mark x 2 + schedule 20 x 50; in-bay 1.5105 m2 x 0.50 (T-160); owner Q-44 A keeps the ring as the skylight edge"},
+    {"item": "edge ring B4 bars (2ø12 top, 4ø16 bottom, 6ø8/m) on the in-bay arcs", "unit": "kg", "qty": [62.60, 64.49], "status": "HELD",
+     "basis": "centreline arcs 1.2939 + 1.5171 + 1.5171 + 1.2939 = 5.6220 m; links A ceil / B ceil+1 per arc, path 1.200 m as T-149 for B4; end anchorage into the framing beams not detailed"},
+    {"item": "edge ring formwork (opening face 0.50, outer downstand 0.34, soffit 0.20)", "unit": "m2", "qty": 8.783, "status": "CALCULATED",
+     "basis": "inner arc in-bay 273.593 deg x 2.2111 = 10.558 m x 0.50 + outer arc 139.377 deg x 2.4111 = 5.865 m x 0.34 + plan 1.5105 m2 (formwork owner method: T-163)"},
+    {"item": "open area of the opening (sky to the 1F room below)", "unit": "m2", "qty": 15.359, "status": "CALCULATED",
+     "basis": "pi x 2.2111^2 (full circle; 14.982 m2 inside the bay faces, the rest over CB10 / CB13 kept whole, T-160 s.7 item 3)"},
+    {"item": "skylight glazing or cover over the opening", "unit": "m2", "qty": null, "basis": "client asks for an open area; whether glazed, at which level, which system: consultant"},
+    {"item": "kerb / upstand round the opening for the membrane upturn", "unit": "m3", "qty": null, "basis": "owner Q-44 A asks for a 0.20 upturn round the opening; no kerb drawn"},
+    {"item": "membrane upturn round the opening (0.20)", "unit": "m", "qty": 13.893, "status": "HELD",
+     "basis": "2 pi x 2.2111; conditional on the kerb above"},
+    {"item": "drainage and wet-area treatment of the 1F room below the open area", "unit": "", "qty": null,
+     "basis": "the opening lies over the 1F west master bedroom and two baths (D-20); an open area admits rain"}
+   ]},
+  {"dome": "DOME-B", "requested_by": "client", "kind": "REMOVE_SHELL", "issued_drawing": null,
+   "reference": "owner Q-29 2026-10-19; owner 2026-10-22: client request only",
+   "also_removes": ["drum between the roof and the springing (1.30 m)"],
+   "s1_items": [
+    {"item": "edge ring beam (Q-44 A; no section mark, D-28)", "unit": "m3", "qty": null, "status": "HELD",
+     "basis": "candidate 0.8997 at the B4 size (in-bay 1.7994 m2 x 0.50), never released (T-160)"},
+    {"item": "edge ring bars", "unit": "kg", "qty": null, "status": "HELD", "basis": "section not identified; candidate 74.25 .. 76.15 kg with B4 bars on 6.7096 m of in-bay arc"},
+    {"item": "open area of the opening (sky to the 1F room below)", "unit": "m2", "qty": 15.359, "status": "CALCULATED",
+     "basis": "pi x 2.2111^2 (15.328 m2 inside the bay faces)"},
+    {"item": "skylight glazing or cover over the opening", "unit": "m2", "qty": null, "basis": "as DOME-A"},
+    {"item": "kerb / upstand round the opening for the membrane upturn", "unit": "m3", "qty": null, "basis": "as DOME-A"},
+    {"item": "membrane upturn round the opening (0.20)", "unit": "m", "qty": 13.893, "status": "HELD", "basis": "as DOME-A"},
+    {"item": "drainage and wet-area treatment of the 1F room below the open area", "unit": "", "qty": null,
+     "basis": "the opening lies over the 1F living area (D-20)"}
+   ]},
+  {"dome": "DOME-TOWER", "requested_by": "client", "kind": "REMOVE_SHELL", "issued_drawing": null,
+   "reference": "owner Q-29 (all three domes); owner 2026-10-22: client request only",
+   "s1_items": [
+    {"item": "new opening in the flat +13.90 slab (trimming beams, slab panel change)", "unit": "", "qty": null,
+     "basis": "no opening is drawn at this position: an open skylight here is a structural change to the 2F roof slab"},
+    {"item": "skylight glazing or cover", "unit": "m2", "qty": null, "basis": "consultant"},
+    {"item": "drainage of the 2F maid room below", "unit": "", "qty": null, "basis": "consultant"}
+   ]}
+ ],
+ "revised_drawings": []
+}
