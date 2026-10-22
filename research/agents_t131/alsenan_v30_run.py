@@ -4,7 +4,8 @@ drawings (the development villa's Drive copies: the architectural DXF from P7757
 every line the candidate changes (quantities, units, states and engine ids only: no coordinates, no names). Every
 output goes to --out (outside the repository).
 
-    python3 -I research/agents_t131/alsenan_v30_run.py <plan.dxf> <structural.dxf> --out <scratch>/t131 [--no-decision]
+    python3 -I research/agents_t131/alsenan_v30_run.py <plan.dxf> <structural.dxf> --out <scratch>/t131 \
+        --profile research/urban_engine_m4_correctness/profile_st7757_m4.json [--no-decision]
 
 Project inputs as T-120: research/agents_t010/sanitary_reading.json, research/agents_t071/alsenan_facts.json and the
 pantry's printed 4.50 x 3.00 m typed as a project data record (owner Q-37 A, Q-17 A). The owner's Q-67 A answer is
@@ -49,19 +50,28 @@ DECISIONS = {"schema": "URBAN_V30_PROJECT_DECISIONS_V1", "project": PID, "decisi
     "source": "owner in the main chat, 2026-10-20 18:45 UTC (OWNER_QUESTIONS.md Q-67)"}]}
 
 
+def common_args(a, out):
+    """the arguments every run of this script shares; the route G profile is required (T-142 D1)."""
+    if not getattr(a, "profile", None):
+        raise SystemExit("--profile (route G drawing profile) is required")
+    return ["--drawings", a.plan, "--structural", a.structural, "--conventions", str(CONV), "--profile", a.profile,
+            "--facts", str(Path(out) / "facts.json"), "--project", PID, "--no-svg"]
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser()
     ap.add_argument("plan")
     ap.add_argument("structural")
     ap.add_argument("--out", required=True)
     ap.add_argument("--no-decision", action="store_true")
+    ap.add_argument("--profile", required=True, help="route G drawing profile (T-142 D1: without it the route G "
+                    "storey heights are not read and every column piece stays held)")
     a = ap.parse_args(argv)
     from tools import urban_boq_m9 as M
     out = Path(a.out)
     out.mkdir(parents=True, exist_ok=True)
     (out / "facts.json").write_text(json.dumps(facts(Path(a.plan).name), ensure_ascii=False), encoding="utf-8")
-    common = ["--drawings", a.plan, "--structural", a.structural, "--conventions", str(CONV), "--facts",
-              str(out / "facts.json"), "--project", PID, "--no-svg"]
+    common = common_args(a, out)
     M.main(["arch", "--out", str(out / "v29"), "--method", "ARCH_TAKEOFF_V2.9"] + common)
     extra = ["--v30-released", str(out / "v29" / "BOQ_LINES.json")]
     hist = []                                  # r2: the versions between V2.9 and V2.13 name each change's origin

@@ -1,0 +1,61 @@
+line,group,t_m,"L1_arch_run_m (owner manual, UP-WALL-GEOM-001)",glass_line_out_m (Q-69 B),L2a_physical_candidate_m,freelancer_matched_pieces_m,L1_minus_freelancer_m,note
+GF-W00,EXTERNAL,0.200,9.9,0.0,9.9,9.9,0.0,
+GF-W01,EXTERNAL,0.200,16.47,0.0,16.47,16.48,-0.01,
+GF-W02,INTERNAL,0.200,1.65,0.0,1.65,0.0,1.65,
+GF-W03,INTERNAL,0.200,2.65,0.0,2.65,0.0,2.65,
+GF-W04,EXTERNAL,0.200,5.85,0.0,5.85,5.85,0.0,
+GF-W05,EXTERNAL,0.200,1.9,0.0,1.9,1.9,0.0,
+GF-W06,EXTERNAL,0.200,2.5,0.0,2.5,2.5,0.0,
+GF-W07,EXTERNAL,0.200,1.1,0.0,1.1,0.0,1.1,
+GF-W08,INTERNAL,0.200,4.4,0.0,4.4,1.8,2.6,
+GF-W09,INTERNAL,0.200,1.8,0.0,1.8,1.8,0.0,
+GF-W10,EXTERNAL,0.200,12.87,0.0,12.87,9.52,3.35,
+GF-W11,EXTERNAL,0.200,7.0,6.332,0.668,0.0,7.0,full glazing span out of the physical run (owner Q-69 B); solid piece kept
+GF-W12,EXTERNAL,0.200,0.45,0.0,0.45,0.0,0.45,
+GF-W13,INTERNAL,0.200,0.75,0.0,0.75,0.7,0.05,
+GF-W14,INTERNAL,0.200,3.9,0.0,3.9,3.9,-0.0,
+GF-W15,EXTERNAL,0.200,7.1,0.0,7.1,2.7,4.4,
+GF-W16,EXTERNAL,0.200,4.45,0.0,4.45,0.0,4.45,
+GF-W17,EXTERNAL,0.200,3.7,0.0,3.7,3.7,0.0,
+GF-W18,EXTERNAL,0.200,6.1,0.0,6.1,6.1,0.0,
+GF-W19,INTERNAL,0.150,2.175,0.0,2.175,2.15,0.025,
+GF-W20,INTERNAL,0.150,1.068,0.0,1.068,0.0,1.068,
+GF-W21,INTERNAL,0.150,1.024,0.0,1.024,1.0,0.024,
+GF-W22,INTERNAL,0.150,3.168,0.0,3.168,0.0,3.168,
+GF-W23,INTERNAL,0.150,1.5,0.0,1.5,1.5,0.0,
+GF-W24,INTERNAL,0.150,4.7,0.0,4.7,0.0,4.7,
+GF-W25,INTERNAL,0.150,4.6,0.0,4.6,0.0,4.6,
+GF-W26,INTERNAL,0.150,4.55,0.0,4.55,0.0,4.55,
+GF-W27,INTERNAL,0.150,1.65,0.0,1.65,0.0,1.65,
+GF-W28,INTERNAL,0.150,5.527,0.0,5.527,0.0,5.527,
+GF-W29,INTERNAL,0.150,1.224,0.0,1.224,1.26,-0.036,
+GF-W30,INTERNAL,0.150,1.525,0.0,1.525,1.5,0.025,
+GF-W31,INTERNAL,0.150,1.385,0.0,1.385,1.35,0.035,
+GF-W32,INTERNAL,0.150,3.005,0.0,3.005,3.0,0.005,
+GF-W33,INTERNAL,0.150,1.473,0.0,1.473,0.0,1.473,
+GF-W34,INTERNAL,0.150,2.611,0.0,2.611,2.65,-0.039,
+GF-W35,EXTERNAL,0.200,1.885,0.0,1.885,0.0,1.885,
+GF-W36,EXTERNAL,0.200,0.5,0.0,0.5,0.0,0.5,
+GF-W37,EXTERNAL,0.200,5.05,4.95,0.1,0.0,5.05,full glazing span out of the physical run (owner Q-69 B); solid piece kept
+freelancer row 15 (no hand piece within 0.06 m),EXTERNAL,external,0,0,0,3.55,-3.55,his piece not paired (T-103)
+freelancer row 22 (no hand piece within 0.06 m),EXTERNAL,external,0,0,0,5.75,-5.75,his piece not paired (T-103)
+freelancer row 26 (no hand piece within 0.06 m),EXTERNAL,external,0,0,0,2.55,-2.55,his piece not paired (T-103)
+freelancer row 28 (no hand piece within 0.06 m),EXTERNAL,external,0,0,0,1.3,-1.3,his piece not paired (T-103)
+freelancer row 32 (no hand piece within 0.06 m),EXTERNAL,external,0,0,0,3.2,-3.2,his piece not paired (T-103)
+freelancer row 34 (no hand piece within 0.06 m),EXTERNAL,external,0,0,0,0.8,-0.8,his piece not paired (T-103)
+freelancer row 35 (no hand piece within 0.06 m),EXTERNAL,external,0,0,0,2.75,-2.75,his piece not paired (T-103)
+freelancer row 134 (no hand piece within 0.06 m),INTERNAL,internal 15 cm,0,0,0,2.5,-2.5,his piece not paired (T-103)
+freelancer row 138 (no hand piece within 0.06 m),INTERNAL,internal 15 cm,0,0,0,1.3,-1.3,his piece not paired (T-103)
+freelancer row 139 (no hand piece within 0.06 m),INTERNAL,internal 15 cm,0,0,0,1.26,-1.26,his piece not paired (T-103)
+freelancer row 141 (no hand piece within 0.06 m),INTERNAL,internal 15 cm,0,0,0,0.96,-0.96,his piece not paired (T-103)
+freelancer row 142 (no hand piece within 0.06 m),INTERNAL,internal 15 cm,0,0,0,1.9,-1.9,his piece not paired (T-103)
+freelancer row 143 (no hand piece within 0.06 m),INTERNAL,internal 15 cm,0,0,0,5.0,-5.0,his piece not paired (T-103)
+freelancer row 144 (no hand piece within 0.06 m),INTERNAL,internal 15 cm,0,0,0,2.9,-2.9,his piece not paired (T-103)
+freelancer row 146 (no hand piece within 0.06 m),INTERNAL,internal 15 cm,0,0,0,2.65,-2.65,his piece not paired (T-103)
+freelancer row 147 (no hand piece within 0.06 m),INTERNAL,internal 15 cm,0,0,0,4.45,-4.45,his piece not paired (T-103)
+freelancer row 147 (no hand piece within 0.06 m),INTERNAL,internal 15 cm,0,0,0,4.45,-4.45,his piece not paired (T-103)
+freelancer row 147 (no hand piece within 0.06 m),INTERNAL,internal 15 cm,0,0,0,4.45,-4.45,his piece not paired (T-103)
+freelancer row 149 (no hand piece within 0.06 m),INTERNAL,internal 15 cm,0,0,0,1.3,-1.3,his piece not paired (T-103)
+TOTAL EXTERNAL,EXTERNAL,,86.825,11.282,75.543,78.55,8.275,
+TOTAL INTERNAL,INTERNAL,,56.335,0.0,56.335,55.73,0.605,
+TOTAL GF,,,143.16,11.282,131.878,134.28,8.88,physical - freelancer = -2.402 m (-1.8 %)

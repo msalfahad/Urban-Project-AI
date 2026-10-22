@@ -1,0 +1,14 @@
+term,sign,m2,local_frame_location,drawing_evidence,evidence_status,boq_line_owner_proposal,v2_9_measures,v3_0_measures
+hand gross PL-03,+,16.5245,court face to face,T-127 printed dimensions,VERIFIED,ceilings soffit over outside air,no,no
+E east court wall top (incl. SX-01 0.9043 + piers 0.1757),+,1.0800,X 1.80..2.00 Y 0..5.40,wall 20/200; dim 4521.4,DRAWING-CONFIRMED,openings (SX-01 head) / none (piers: wall top),no,no
+NE wall corner,+,0.0400,X 1.80..2.00 Y 5.40..5.60,walls 200,DRAWING-CONFIRMED,none (wall top),no,no
+N north court wall top (incl. SX-03 0.2000 + pier 0.0600 + face 0.0003),+,0.2603,X 0.50..1.80 Y 5.40..5.60,wall 200; head lines; width 1.000 CAD,DRAWING-CONFIRMED,openings (SX-03 head) / none (pier),no,no
+W frame recess SX-02,+,0.5609,between r 2.250 (657 line) and frame line r 2.330,Q-38 A printed 657; 0.080 CAD,DRAWING-CONFIRMED,openings / glazing reveal strip (T-123),no (outline walks the frame line),no
+C turned 1F column face over B28 dropped by the census,-,0.0650,X 0.30..0.50 Y 0..0.325,ST S-COL.BON 0.200x0.900 + T.C mark; 1F plan same; GF plan none,DRAWING-CONFIRMED,stays in PL-03 (soffit),no,no
+R census clean-up rounding (erosion/dilation 0.05),-,0.0078,convex corners,none (method artefact),METHOD ARTEFACT,none,n/a,n/a
+sliver,-,0.0001,X 1.797..1.800 Y 0,face offset,METHOD ARTEFACT,none,n/a,n/a
+CAD gross (T-121 census re-run),=,18.3927,,route G V6 + V2.9 FACADE,DRAWING-CONFIRMED,,,
+void (B7 ring inner faces),-,3.6901,X -0.05..1.65 Y 1.58..4.28,ST arcs,VERIFIED,,,
+CAD net (verifier void 3.689),=,14.7037,,,,,,
+hand net PL-03,=,12.8343,,,VERIFIED geometry; finish HELD,,,
+T-127 north strip X -0.08..0 (not in CAD; inside V2.9 outline),info,0.0160,X -0.08..0 Y 5.40..5.60,V2.9 outline vertices,n/a,none,no,no

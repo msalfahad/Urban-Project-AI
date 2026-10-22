@@ -1,0 +1,67 @@
+floor,band,t_m,hand_rows,v1_run_m,v2_arch_run_m,v2_openings_m,v2_physical_m,hand_run_m,hand_openings_m,hand_solid_m,v2_minus_hand_m,v2_minus_v1_m,v2_runs,cause_if_over_0.05,verdict_proposal
+GF,WB-FL0001-FL0002,0.2,GF-W00 + GF-W01,27.670,26.370,0.000,26.370,26.370,0.000,26.370,-0.000,-1.300,WB-FL0001-FL0002#1 WB-FL0001-FL0002#2,,
+GF,WB-FL0007-FL0008,0.2,GF-W02 + GF-W03,16.520,4.300,0.000,4.300,4.300,0.000,4.300,+0.000,-12.220,WB-FL0007-FL0008#1 WB-FL0007-FL0008#2,,
+GF,WB-FL0010-FL0011,0.15,GF-W27,0.626,1.500,0.874,0.626,1.650,0.800,0.850,-0.150,+0.874,WB-FL0010-FL0011,"T stem: the hand runs the stem to the through-wall centreline (the T piece counted twice); V2 stops on the face (V1 rule, kept) (the doorway itself is now in the run)",ENGINE_RIGHT
+GF,WB-FL0017-FL0018,0.2,GF-W04 + GF-W05,8.950,7.750,4.000,3.750,7.750,1.000,3.600,+0.000,-1.200,WB-FL0017-FL0018#1 WB-FL0017-FL0018#2,,
+GF,WB-FL0020-FL0021,0.2,GF-W06,2.500,2.500,1.000,1.500,2.500,1.000,1.500,+0.000,+0.000,WB-FL0020-FL0021,,
+GF,WB-FL0023-FL0024,0.2,GF-W07,1.100,1.100,0.000,1.100,1.100,0.000,1.100,+0.000,+0.000,WB-FL0023-FL0024,,
+GF,WB-FL0025-FL0026,0.2,GF-W08,4.300,4.300,2.000,2.300,4.400,0.000,2.400,-0.100,+0.000,WB-FL0025-FL0026,"T stem: the hand runs the stem to the through-wall centreline (the T piece counted twice); V2 stops on the face (V1 rule, kept)",ENGINE_RIGHT
+GF,WB-FL0028-FL0029,0.4,GF-H01,0.600,0.600,0.000,0.600,,0.000,0.700,,+0.000,WB-FL0028-FL0029,,
+GF,WB-FL0030-FL0031,0.15,GF-W28,5.527,5.527,1.000,4.527,5.527,1.000,4.527,+0.000,+0.000,WB-FL0030-FL0031,,
+GF,WB-FL0032-FL0033,0.2,GF-W09,1.800,1.800,0.000,1.800,1.800,0.000,1.800,+0.000,+0.000,WB-FL0032-FL0033,,
+GF,WB-FL0038-FL0039,0.15,GF-W29,0.500,1.350,0.850,0.500,1.224,0.800,0.424,+0.126,+0.850,WB-FL0038-FL0039,doorway at the free end measured from the drawn face of the wall across (x 17.80 local) to the wall end (x 18.65): 0.850 m; the hand row takes 0.649,ENGINE_RIGHT
+GF,WB-FL0041-FL0042,0.2,GF-W10,12.870,12.870,2.700,10.170,12.870,0.000,10.170,+0.000,+0.000,WB-FL0041-FL0042,,
+GF,WB-FL0046-FL0047,0.15,GF-W33,1.256,1.256,0.000,1.256,1.473,0.000,1.473,-0.217,+0.000,WB-FL0046-FL0047,"45 deg junction: V2 holds the end (max listed) or cuts it square at the drawn end, as V1",UNRESOLVED
+GF,WB-FL0048-FL0049,0.15,GF-W32,2.842,2.842,1.600,1.242,3.005,0.000,1.227,-0.163,+0.000,WB-FL0048-FL0049,"45 deg junction: V2 holds the end (max listed) or cuts it square at the drawn end, as V1",UNRESOLVED
+GF,WB-FL0055-FL0056,0.2,GF-W11,7.000,7.000,6.332,0.668,7.000,6.332,0.668,+0.000,+0.000,WB-FL0055-FL0056,,
+GF,WB-FL0057-FL0058,0.2,GF-W12,0.450,0.450,0.000,0.450,0.450,0.000,0.450,+0.000,+0.000,WB-FL0057-FL0058,,
+GF,WB-FL0059-FL0060,0.15,GF-W19,2.000,2.000,0.000,2.000,2.175,0.000,2.175,-0.175,+0.000,WB-FL0059-FL0060,"T stem: the hand runs the stem to the through-wall centreline (the T piece counted twice); V2 stops on the face (V1 rule, kept)",ENGINE_RIGHT
+GF,WB-FL0063-FL0064,0.15,GF-W20 + GF-W21,4.000,2.042,0.000,2.042,2.092,0.000,2.092,-0.050,-1.958,WB-FL0063-FL0064#1 WB-FL0063-FL0064#2,split done (BAND_ACROSS_OPEN_FLOOR); the rest is a 45 deg end V2 holds,UNRESOLVED
+GF,WB-FL0068-FL0069,0.2,GF-W13,0.700,0.700,0.000,0.700,0.750,0.000,0.750,-0.050,+0.000,WB-FL0068-FL0069,corner end HELD by the piece (max 0.20 m listed),UNRESOLVED (piece HELD)
+GF,WB-FL0070-FL0072,0.15,GF-W22,2.887,2.887,0.000,2.887,3.168,0.000,3.168,-0.281,+0.000,WB-FL0070-FL0072,"T stem: the hand runs the stem to the through-wall centreline (the T piece counted twice); V2 stops on the face (V1 rule, kept)",ENGINE_RIGHT
+GF,WB-FL0076-FL0077,0.2,GF-W14,3.900,3.900,0.900,3.000,3.900,1.100,2.800,+0.000,+0.000,WB-FL0076-FL0077,,
+GF,WB-FL0078-FL0079,0.2,GF-W15,7.100,7.100,3.200,3.900,7.100,0.000,3.900,+0.000,+0.000,WB-FL0078-FL0079,,
+GF,WB-FL0081-FL0082,0.2,GF-W16,4.450,4.450,2.500,1.950,4.450,0.000,1.950,+0.000,+0.000,WB-FL0081-FL0082,,
+GF,WB-FL0083-FL0084,0.2,GF-W17,3.600,3.700,1.000,2.700,3.700,1.000,2.700,+0.000,+0.100,WB-FL0083-FL0084,,
+GF,WB-FL0086-FL0087,0.15,GF-W23,1.300,1.300,0.000,1.300,1.500,0.000,1.500,-0.200,+0.000,WB-FL0086-FL0087,"T stem: the hand runs the stem to the through-wall centreline (the T piece counted twice); V2 stops on the face (V1 rule, kept)",ENGINE_RIGHT
+GF,WB-FL0089-FL0090,0.15,GF-W24,4.500,4.500,0.800,3.700,4.700,0.800,3.900,-0.200,+0.000,WB-FL0089-FL0090,"T stem: the hand runs the stem to the through-wall centreline (the T piece counted twice); V2 stops on the face (V1 rule, kept)",ENGINE_RIGHT
+GF,WB-FL0092-FL0093,0.15,GF-W25,4.500,4.500,0.000,4.500,4.600,0.000,4.600,-0.100,+0.000,WB-FL0092-FL0093,"T stem: the hand runs the stem to the through-wall centreline (the T piece counted twice); V2 stops on the face (V1 rule, kept)",ENGINE_RIGHT
+GF,WB-FL0094-FL0096,0.2,GF-W36,0.500,0.500,0.000,0.500,0.500,0.000,0.500,+0.000,+0.000,WB-FL0094-FL0096,,
+GF,WB-FL0095-FL0096,0.15,GF-W26,4.450,4.450,1.000,3.450,4.550,1.000,3.550,-0.100,+0.000,WB-FL0095-FL0096,"T stem: the hand runs the stem to the through-wall centreline (the T piece counted twice); V2 stops on the face (V1 rule, kept)",ENGINE_RIGHT
+GF,WB-FL0097-FL0098,0.2,GF-W18,6.100,6.100,3.910,2.190,6.100,0.000,2.190,+0.000,+0.000,WB-FL0097-FL0098,,
+GF,WB-FL0100-FL0101,0.15,GF-W31,1.279,1.279,0.000,1.279,1.385,0.000,1.385,-0.106,-0.000,WB-FL0100-FL0101,"45 deg junction: V2 holds the end (max listed) or cuts it square at the drawn end, as V1",UNRESOLVED
+GF,WB-FL0102-FL0103,0.15,GF-W34,2.355,2.355,0.000,2.355,2.611,0.000,2.611,-0.256,+0.000,WB-FL0102-FL0103,"45 deg junction: V2 holds the end (max listed) or cuts it square at the drawn end, as V1",UNRESOLVED
+GF,ARCBAND|D2:269:0|D2:270:0,0.2,GF-W35,1.885,1.885,0.000,1.885,1.885,0.000,1.885,+0.000,+0.000,ARCBAND|D2:269:0|D2:270:0,,
+1F,WB-FL0002-FL0003,0.2,1F-W06,16.470,16.470,2.752,13.718,16.470,0.000,13.568,+0.000,+0.000,WB-FL0002-FL0003,,
+1F,WB-FL0006-FL0007,0.15,1F-W11,4.250,4.250,0.800,3.450,4.425,0.800,3.625,-0.175,+0.000,WB-FL0006-FL0007,"T stem: the hand runs the stem to the through-wall centreline (the T piece counted twice); V2 stops on the face (V1 rule, kept)",ENGINE_RIGHT
+1F,WB-FL0011-FL0012,0.15,1F-W12,2.636,3.725,1.089,2.636,3.800,1.000,2.800,-0.075,+1.089,WB-FL0011-FL0012,"T stem: the hand runs the stem to the through-wall centreline (the T piece counted twice); V2 stops on the face (V1 rule, kept) (the doorway itself is now in the run)",ENGINE_RIGHT
+1F,WB-FL0013-FL0014,0.15,1F-W13,8.225,8.225,1.800,6.425,8.325,0.000,6.525,-0.100,+0.000,WB-FL0013-FL0014,"T stem: the hand runs the stem to the through-wall centreline (the T piece counted twice); V2 stops on the face (V1 rule, kept)",ENGINE_RIGHT
+1F,WB-FL0016-FL0018,0.2,1F-W07,3.220,3.220,1.900,1.320,3.295,0.000,1.395,-0.075,+0.000,WB-FL0016-FL0018,"T stem: the hand runs the stem to the through-wall centreline (the T piece counted twice); V2 stops on the face (V1 rule, kept)",ENGINE_RIGHT
+1F,WB-FL0020-FL0021,0.2,1F-W08,3.600,3.600,0.000,3.600,3.600,0.000,3.600,+0.000,+0.000,WB-FL0020-FL0021,,
+1F,WB-FL0022-FL0023,0.15,1F-W14 + 1F-W15,4.016,4.016,1.300,2.716,2.875,0.000,2.875,+1.141,-0.000,WB-FL0022-FL0023,1F doorless 1.30 m opening with head lines drawn (V1 and V2 keep it; T-103's own basis keeps openings in the run),ENGINE_RIGHT
+1F,WB-FL0024-FL0025,0.2,1F-W09,1.800,1.800,0.000,1.800,1.800,0.000,1.800,+0.000,+0.000,WB-FL0024-FL0025,,
+1F,WB-FL0027-FL0028,0.15,1F-W16,5.420,5.420,1.800,3.620,5.570,0.000,3.770,-0.150,+0.000,WB-FL0027-FL0028#1,"T stem: the hand runs the stem to the through-wall centreline (the T piece counted twice); V2 stops on the face (V1 rule, kept); both walls drawn through one crossing: the piece is counted once (V1 counted it in both walls; so does the hand)",ENGINE_RIGHT
+1F,WB-FL0030-FL0031,0.2,1F-W10,12.870,12.870,2.800,10.070,12.870,0.000,9.920,+0.000,+0.000,WB-FL0030-FL0031,,
+1F,WB-FL0041-FL0042,0.2,1F-W00 + 1F-W01 + 1F-W25,10.650,11.139,7.183,3.955,11.173,3.136,4.433,-0.034,+0.489,WB-FL0041-FL0042#1 WB-FL0041-FL0042#2 BAY|WB-FL0041-FL0042,,
+1F,1F-STUB-001,0.2,,0.169,0.000,0.000,0.000,0.000,,,+0.000,-0.169,,,
+1F,WB-FL0043-FL0044,0.15,1F-W17,2.100,2.100,0.800,1.300,2.250,0.800,1.450,-0.150,+0.000,WB-FL0043-FL0044,"T stem: the hand runs the stem to the through-wall centreline (the T piece counted twice); V2 stops on the face (V1 rule, kept)",ENGINE_RIGHT
+1F,WB-FL0046-FL0047,0.15,1F-W18,5.200,5.200,0.000,5.200,5.275,0.000,5.275,-0.075,+0.000,WB-FL0046-FL0047,"T stem: the hand runs the stem to the through-wall centreline (the T piece counted twice); V2 stops on the face (V1 rule, kept)",ENGINE_RIGHT
+1F,WB-FL0050-FL0051,0.15,1F-W19,1.800,1.800,0.800,1.000,1.975,0.800,1.175,-0.175,+0.000,WB-FL0050-FL0051,"T stem: the hand runs the stem to the through-wall centreline (the T piece counted twice); V2 stops on the face (V1 rule, kept)",ENGINE_RIGHT
+1F,WB-FL0054-FL0055,0.15,1F-W20,6.275,6.125,0.000,6.125,6.275,0.000,6.275,-0.150,-0.150,WB-FL0054-FL0055#1 WB-FL0054-FL0055#2,both walls drawn through one crossing: the piece is counted once (V1 counted it in both walls; so does the hand),ENGINE_RIGHT
+1F,WB-FL0059-FL0060,0.15,1F-W21,1.950,1.950,0.000,1.950,1.975,0.000,1.975,-0.025,+0.000,WB-FL0059-FL0060,,
+1F,WB-FL0059-FL0061,0.2,1F-W02,0.700,0.700,0.000,0.700,0.700,0.000,0.700,+0.000,+0.000,WB-FL0059-FL0061,,
+1F,WB-FL0063-FL0065,0.15,1F-W22,5.075,5.075,0.000,5.075,5.175,0.000,5.175,-0.100,+0.000,WB-FL0063-FL0065,"T stem: the hand runs the stem to the through-wall centreline (the T piece counted twice); V2 stops on the face (V1 rule, kept)",ENGINE_RIGHT
+1F,WB-FL0068-FL0070,0.2,1F-W03,3.900,3.900,0.000,3.900,3.900,0.000,3.900,+0.000,+0.000,WB-FL0068-FL0070,,
+1F,WB-FL0074-FL0075,0.15,1F-W23,5.520,6.400,1.880,4.520,6.500,0.000,4.700,-0.100,+0.880,WB-FL0074-FL0075,"T stem: the hand runs the stem to the through-wall centreline (the T piece counted twice); V2 stops on the face (V1 rule, kept) (the doorway itself is now in the run)",ENGINE_RIGHT
+1F,WB-FL0074-FL0076,0.2,1F-W04,3.600,3.600,1.200,2.400,3.600,2.557,1.043,+0.000,+0.000,WB-FL0074-FL0076,,
+1F,WB-FL0078-FL0079,0.15,1F-W24,2.450,2.450,0.000,2.450,2.625,0.000,2.625,-0.175,+0.000,WB-FL0078-FL0079,"T stem: the hand runs the stem to the through-wall centreline (the T piece counted twice); V2 stops on the face (V1 rule, kept)",ENGINE_RIGHT
+1F,WB-FL0082-FL0083,0.2,1F-W05,6.300,6.300,2.450,3.850,6.300,2.450,3.850,+0.000,+0.000,WB-FL0082-FL0083,,
+2F,WB-FL0002-FL0003,0.15,2F-W03,7.900,7.900,1.000,6.900,7.900,1.000,6.900,+0.000,+0.000,WB-FL0002-FL0003,,
+2F,WB-FL0004-FL0005,0.2,2F-W00,1.800,1.800,1.000,0.800,1.800,1.000,0.800,+0.000,+0.000,WB-FL0004-FL0005,,
+2F,WB-FL0006-FL0007,0.2,2F-W01,1.800,1.800,0.000,1.800,1.800,0.000,1.800,+0.000,+0.000,WB-FL0006-FL0007,,
+2F,WB-FL0010-FL0011,0.2,2F-W02,7.000,7.000,2.800,4.200,7.000,0.000,4.200,+0.000,+0.000,WB-FL0010-FL0011,,
+2F,WB-FL0020-FL0021,0.2,2F-W04,6.225,6.225,0.000,6.225,6.225,0.000,6.225,+0.000,+0.000,WB-FL0020-FL0021,,
+2F,WB-FL0024-FL0025,0.15,2F-W08,3.000,3.000,0.800,2.200,3.100,0.800,2.300,-0.100,+0.000,WB-FL0024-FL0025,"T stem: the hand runs the stem to the through-wall centreline (the T piece counted twice); V2 stops on the face (V1 rule, kept)",ENGINE_RIGHT
+2F,WB-FL0024-FL0026,0.2,2F-W05,2.250,2.250,0.900,1.350,2.325,0.900,1.425,-0.075,+0.000,WB-FL0024-FL0026,"T stem: the hand runs the stem to the through-wall centreline (the T piece counted twice); V2 stops on the face (V1 rule, kept)",ENGINE_RIGHT
+2F,WB-FL0031-FL0032,0.2,2F-W06,3.900,3.900,0.000,3.900,3.900,0.000,3.900,+0.000,+0.000,WB-FL0031-FL0032,,
+2F,WB-FL0035-FL0036,0.2,2F-W07,5.725,5.725,1.200,4.525,5.725,1.200,4.525,+0.000,+0.000,WB-FL0035-FL0036,,
