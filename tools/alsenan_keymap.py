@@ -140,7 +140,22 @@ def main(argv=None):
     ap.add_argument("--key-map", required=True)
     ap.add_argument("--out", required=True)
     ap.add_argument("--markdown")
+    # T-177 opt-in: the SCOREBOARD v2 table (tools/scoreboard_v2.py) in the same call; without --v2-out nothing below
+    # runs and the outputs above stay byte-identical
+    ap.add_argument("--v2-out", help="SCOREBOARD v2 JSON (tools/scoreboard_v2.py)")
+    ap.add_argument("--v2-markdown")
+    ap.add_argument("--v2-label", help="Baseline cell of the --run side")
+    ap.add_argument("--v2-verdicts", help="checker verdict file URBAN_SCOREBOARD_CHECKER_VERDICTS_V1")
+    ap.add_argument("--v2-candidate-lines", help="a candidate's V3_0_x_BOQ_LINES.json, scored beside --run's "
+                                                 "release report")
+    ap.add_argument("--v2-candidate-label")
+    ap.add_argument("--v2-heading", help="UTC date time for the '## SCOREBOARD v2' heading")
     a = ap.parse_args(argv)
+    v2 = [a.v2_markdown, a.v2_label, a.v2_verdicts, a.v2_candidate_lines, a.v2_candidate_label, a.v2_heading]
+    if a.v2_out is None and any(x is not None for x in v2):
+        ap.error("the --v2-* options need --v2-out")
+    if a.v2_out is not None and (a.v2_label is None or a.v2_verdicts is None):
+        ap.error("--v2-out needs --v2-label and --v2-verdicts")
     result = run(a.run, json.loads(Path(a.reference).read_text(encoding="utf-8")),
                  json.loads(Path(a.key_map).read_text(encoding="utf-8")))
     Path(a.out).write_text(json.dumps(result, ensure_ascii=False, indent=1), encoding="utf-8")
@@ -148,6 +163,13 @@ def main(argv=None):
     if a.markdown:
         Path(a.markdown).write_text(md, encoding="utf-8")
     print(md, end="")
+    if a.v2_out is not None:
+        from tools import scoreboard_v2 as V2
+        res2 = V2.build(a.run, a.v2_label, json.loads(Path(a.reference).read_text(encoding="utf-8")),
+                        json.loads(Path(a.key_map).read_text(encoding="utf-8")),
+                        json.loads(Path(a.v2_verdicts).read_text(encoding="utf-8")),
+                        a.v2_candidate_lines, a.v2_candidate_label)
+        print(V2.write(res2, a.v2_out, a.v2_markdown, a.v2_heading), end="")
     return 0
 
 
