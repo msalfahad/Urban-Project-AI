@@ -3,7 +3,8 @@
 usage: python3 -I build_dashboard_data.py <docs/agents dir> <out dir> [<board commit>]
 
 Reads BOARD.md (and BOARD_ARCHIVE.md), PLAN.md, SCOREBOARD.md, OWNER_QUESTIONS.md, RUN_LOG.md (+ archive) and RUN_LEDGER.md;
-writes tasks.json, milestones.json, targets.json, indicators.json (WORKFLOW_CONTROLS section 6),
+writes tasks.json, milestones.json, targets.json, indicators.json (WORKFLOW_CONTROLS section 6), performance.json
+(+ performance_detail.json, section 10: before / after the 2026-10-22 workflow change),
 owner_questions.json. Stdlib only. Nothing here is estimated: a value the board does not state is written as null.
 The agents table (agents.json) and refresh.json are written by the refresher from list_triggers and the clock.
 """
@@ -232,10 +233,10 @@ ind.append({"indicator": "Autonomous run reliability", "value": (str(round(100 *
 (OUT / "indicators.json").write_text(json.dumps(ind, indent=1, ensure_ascii=False))
 
 # ---- performance, before / after (owner approval 2026-10-22 "faster execution", WORKFLOW_CONTROLS section 10) ---------
-# BEFORE = the 24 h before the change, AFTER = from the change to now, both scaled to a day. Events come from the final
+# BEFORE = the 24 h before the change, AFTER = from the change to now (shown after 12 h), both scaled to a day. Events come from the final
 # RUN_LOG lines only: a worker line whose task field says READY is a completion; the task ids in a Verifier line's task
 # field are its verdicts (MERGED, or REJECTED when the id follows the word REJECTED before any later MERGED).
-CUT = datetime(2026, 10, 22, 15, 0, tzinfo=timezone.utc)
+CUT = datetime(2026, 10, 22, 15, 30, tzinfo=timezone.utc)  # board rules + Checker prompt live; 15:04 run was the old prompt
 TID = r"T-\d+(?:\s*r\d+)?"
 
 
@@ -306,7 +307,7 @@ owner_decisions_open = [q["id"] for q in qs if q["waits_on"] == "owner decision"
 perf = {
     "change": CUT.strftime("%Y-%m-%d %H:%M UTC") + " (one extra Checker run a day, overlap guard, batching; WORKFLOW_CONTROLS section 10)",
     "before": window(CUT.replace(day=CUT.day - 1), CUT),
-    "after": window(CUT, now) if now > CUT else NYM,
+    "after": window(CUT, now) if (now - CUT).total_seconds() >= 12 * 3600 else NYM + " (shown once 12 h have passed since the change)",
     "backlog_now": len(backlog), "backlog_oldest_h": max(ages) if ages else None, "backlog": backlog,
     "verification_to_integration": NYM + " (needs 'integrates: T-...' in each Gate B package row, section 10 rule 6)",
     "owner_blocked_tasks": owner_blocked, "owner_decisions_open": owner_decisions_open,
@@ -315,7 +316,44 @@ perf = {
                                     "verified_share": per_trade("Verified share %") or NYM,
                                     "source": ("SCOREBOARD v2 " + v2when) if v2rows else NYM},
 }
-(OUT / "performance.json").write_text(json.dumps(perf, indent=1, ensure_ascii=False))
+(OUT / "performance_detail.json").write_text(json.dumps(perf, indent=1, ensure_ascii=False))
+# the page reads rows: one per measure, BEFORE and AFTER side by side (AFTER is NOT YET MEASURED until the change is live)
+B = perf["before"]
+A = perf["after"] if isinstance(perf["after"], dict) else {k: perf["after"] for k in B}
+SRC_LOG = "RUN_LOG.md final lines"
+
+
+def pr(measure, key, unit, source=SRC_LOG, now=""):
+    return {"measure": measure, "before": B.get(key, NYM) if key else NYM, "after": A.get(key, NYM) if key else NYM,
+            "now": now, "unit": unit, "source": source}
+
+
+perf_rows = [
+    pr("Completed engineering tasks", "completed_per_day", "READY hand-ins per day"),
+    pr("Independently verified tasks", "verified_merged_per_day", "merged after Checker gates, per day"),
+    pr("Sent back by the Checker", "rejected", "rejections in the window"),
+    pr("Completion to verification", "hours_completion_to_verdict_avg", "average hours, READY line to verdict"),
+    pr("Unattended runs succeeded", "runs_success", "final SUCCESS / OK lines in the window (24 h before; since the change)"),
+    pr("Unattended runs failed or blocked", "runs_failed_or_blocked", "final BLOCKED / FAILED / INCOMPLETE lines"),
+    {"measure": "Checker backlog", "before": "11 at 2026-10-22 14:45 (main chat count of READY rows)", "after": NYM,
+     "now": str(len(backlog)) + " READY, oldest " + (str(max(ages)) + " h" if ages else "-"), "unit": "READY rows on BOARD.md",
+     "source": "BOARD.md"},
+    {"measure": "Verification to integration", "before": NYM, "after": NYM, "now": perf["verification_to_integration"],
+     "unit": "average hours", "source": "BOARD.md Gate B rows (integrates:)"},
+    {"measure": "Blocked by a genuine owner decision", "before": "", "after": "",
+     "now": str(len(owner_blocked)) + " tasks; open owner decisions: " + (", ".join(owner_decisions_open) or "none")
+            + ("; team investigations: " + ", ".join(perf["team_investigations"]) if perf["team_investigations"] else ""),
+     "unit": "tasks / questions", "source": "BOARD.md, OWNER_QUESTIONS.md"},
+    {"measure": "BOQ scope covered", "before": "", "after": "", "now": perf["scope_and_verified_coverage"]["coverage"],
+     "unit": "% of reference lines, by trade and unit", "source": perf["scope_and_verified_coverage"]["source"]},
+    {"measure": "Independently verified coverage", "before": "", "after": "",
+     "now": perf["scope_and_verified_coverage"]["verified_share"], "unit": "% of reference lines the Checker re-measured",
+     "source": perf["scope_and_verified_coverage"]["source"]},
+]
+for r in perf_rows:
+    for f in ("before", "after", "now"):
+        r[f] = "" if r[f] is None else str(r[f])
+(OUT / "performance.json").write_text(json.dumps(perf_rows, indent=1, ensure_ascii=False))
 
 print(json.dumps({"tasks": len(tasks), "milestones": len(ms), "targets": len(tg), "open_questions": len(qs),
                   "indicators": len(ind), "backlog": len(backlog), "board_commit": COMMIT}))
