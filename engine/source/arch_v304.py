@@ -21,8 +21,10 @@ How it is built (tools/urban_boq_m9.py `arch --method ARCH_TAKEOFF_V3.0.4`):
      project, a usable record carries the profile's value, and the restricted run removes exactly the non-usable ones;
      otherwise the run is refused (never a silent pass);
   4. PROFILE_AUDIT: every V3.0.3 line whose quantity state (evidence state, value, range) differs from the same line of
-     the restricted run (or which the restricted run does not have) rests on a non-usable profile value. It becomes
-     HELD:
+     the restricted run (or which the restricted run does not have) rests on a non-usable profile value. A line whose
+     route G category changes without the value ('P-C:' provisional -> 'U-C:' unresolved) changes its line id but not
+     its element: it is paired by item code, unit, floor, room and element id without that prefix (pair_key), only
+     when the pairing is one to one. It becomes HELD:
         restricted line BOUNDED_EXPOSURE      -> BOUNDED_EXPOSURE over the restricted run's own range (the range the
                                                  drawings support without the value); the V3.0.3 figure kept in the
                                                  inputs as information
@@ -31,7 +33,8 @@ How it is built (tools/urban_boq_m9.py `arch --method ARCH_TAKEOFF_V3.0.4`):
                                                  inputs as information, never as a quantity
      its cause names the removed value(s), the data-file status and hold reason; the single-value runs name which value
      moves it (NO_SINGLE_VALUE when none alone does). A line of the restricted run that the V3.0.3 run does not have
-     is listed (RESTRICTED_ONLY), never added;
+     is listed (RESTRICTED_ONLY), never added; a V3.0.3 line that carries no quantity (NOT_APPLICABLE / EXCLUDED, e.g.
+     route lines a verified hand ledger superseded) is listed, never re-held; a line a person approved is refused;
   5. the V3_0_4_* files are written beside them: every line outside the V3.0.4 rows is byte-identical to the V3.0.3
      line (asserted on every run), and V3_0_4_DIFF.csv lists every line against V3.0.3 and against the released V2.9.
 
@@ -40,10 +43,12 @@ Nothing here names a project, a sheet, a key value or a coordinate; every number
 
 from __future__ import annotations
 
+import collections
 import copy
 import csv
 import hashlib
 import io
+import re
 
 from engine.source import arch_v30 as A30
 from engine.source import arch_v302 as A302
@@ -119,6 +124,17 @@ def qstate(ln):
         return None
     q = A30._qty(ln)
     return (q["state"], q["value"], q["low"], q["high"])
+
+
+_STATE_PREFIX = re.compile(r"^[A-Z]-[A-Z]:")
+
+
+def pair_key(ln):
+    """the element of a line independent of the route G category prefix of its item id ('P-C:' provisional, 'U-C:'
+    unresolved, ...): a line that changes category without the profile value keeps its element but not its line id."""
+    loc = ln.get("location") or {}
+    return (ln["item_code"], ln["unit"], loc.get("floor"), loc.get("room_id"),
+            _STATE_PREFIX.sub("", str(loc.get("element_id"))))
 
 
 def _fig(ln):
@@ -234,7 +250,7 @@ def _cause(lid, l303, runs, restricted_keys):
     for r in runs:
         if r["id"] == RESTRICTED:
             continue
-        o = r["by_id"].get(lid)
+        o = r["get"](lid)
         if qstate(o) != qstate(l303):
             moved.append(r)
     keys = sorted({k for r in moved for k in r["removed_keys"]})
@@ -253,11 +269,22 @@ def audit_changes(inputs, lines, profile, audit_classes=None):
     rr = next(r for r in runs if r["id"] == RESTRICTED)
     have = {x["line_id"] for x in lines}
     keys_r = sorted(rr["removed_keys"])
+    # a V3.0.3 line the restricted run does not have by id is paired with the restricted line of the same element
+    # (pair_key) when exactly one such restricted-only line exists on each side; otherwise it stays unpaired (ABSENT)
+    def _pairs(run_by_id):
+        miss = [x for x in lines if x["line_id"] not in run_by_id]
+        extra = [x for i, x in run_by_id.items() if i not in have]
+        a, b = collections.Counter(pair_key(x) for x in miss), collections.Counter(pair_key(x) for x in extra)
+        by = {pair_key(x): x for x in extra}
+        return {x["line_id"]: by[pair_key(x)] for x in miss if a[pair_key(x)] == 1 and b[pair_key(x)] == 1}
+    for r in runs:
+        r["paired"] = _pairs(r["by_id"])
+        r["get"] = (lambda rr_: lambda lid: rr_["by_id"].get(lid) or rr_["paired"].get(lid))(r)
     recs = chk["records"]
     df = inputs["data_file"]
     changes, rows, by_cause, kept_out = [], [], {}, []
     for ln in lines:
-        o = rr["by_id"].get(ln["line_id"])
+        o = rr["get"](ln["line_id"])
         if qstate(o) == qstate(ln):
             continue
         if ln["evidence_state"] in ("NOT_APPLICABLE_WITH_EVIDENCE", "EXCLUDED_WITH_REASON"):
@@ -281,6 +308,7 @@ def audit_changes(inputs, lines, profile, audit_classes=None):
                              "never re-held by the candidate")
         fo = _fig(o)
         info = {"policy": PIECES[PIECE]["policy"], "candidate_v3_0_3": A30._qty(ln), "restricted_run": fo,
+                "restricted_line_id": None if o is None else o["line_id"],
                 "removed_keys": keys_r, "moved_by": cause, "moved_by_runs": moved_by,
                 "data_file": df["file"], "data_file_sha256": df["sha256"]}
         if fo["state"] == "BOUNDED_EXPOSURE":
@@ -319,9 +347,10 @@ def audit_changes(inputs, lines, profile, audit_classes=None):
             code["v3_0_3_released"] = _r(code["v3_0_3_released"] + q["value"])
         code["to_bounded" if after["evidence_state"] == "BOUNDED_EXPOSURE" else "to_blocked"] += 1
         rows.append(ln["line_id"])
-    only = sorted(set(rr["by_id"]) - have)
+    paired_ids = {x["line_id"] for x in rr["paired"].values()}
+    only = sorted(set(rr["by_id"]) - have - paired_ids)
     log.update(state="RUN", removed_keys=keys_r, usable_keys=chk["usable"], lines_held=len(changes),
-               by_cause=by_cause, no_quantity_in_v3_0_3=kept_out, restricted_only=[{"line_id": x, "item_code": rr["by_id"][x]["item_code"],
+               by_cause=by_cause, paired_by_element=len(rr["paired"]), no_quantity_in_v3_0_3=kept_out, restricted_only=[{"line_id": x, "item_code": rr["by_id"][x]["item_code"],
                                                     "quantity": A30._qty(rr["by_id"][x])} for x in only],
                runs=[{"id": r["id"], "removed_keys": r["removed_keys"], "profile_sha256": r["profile_sha256"],
                       "lines_sha256": r["lines_sha256"], "lines": len(r["lines"])} for r in inputs["runs"]],

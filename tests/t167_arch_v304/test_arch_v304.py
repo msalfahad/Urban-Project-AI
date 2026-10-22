@@ -198,6 +198,30 @@ def test_cause_by_single_value_runs_and_no_single_value():
     assert set(log["by_cause"]) == {"FOUNDING_DEPTH_M", "NO_SINGLE_VALUE"}
 
 
+def test_a_category_change_keeps_the_element_and_is_paired_one_to_one():
+    """route G re-files a neck from 'P-C:' (provisional) to 'U-C:' (unresolved) without the founding value: the line id
+    changes, the element does not. N4 0.20 x 0.30 released 0.06 x 1.80 = 0.108 m3; restricted U-C N4 held 0.06 x 1.60
+    .. 0.06 x 2.40 = 0.096 .. 0.144 m3 -> paired, HELD 0.096 .. 0.144 (not UNKNOWN). Adverse: two U-C candidates for
+    one element are never guessed between: the line stays unpaired (BLOCKED, UNKNOWN)."""
+    base = v303_lines() + [ln("STR.CONC.NECK", "P-C:NECK:N4", "FOUNDATION", "PROVISIONAL", 0.06 * 1.80)]
+    u = ln("STR.CONC.NECK", "U-C:NECK:N4", "FOUNDATION", "BOUNDED_EXPOSURE", rng=(0.06 * 1.60, 0.06 * 2.40))
+    r = restricted_lines() + [u]
+    ch, log = A304.audit_changes(A304.load_inputs(inputs(runs=[run("RESTRICTED", NOT_USABLE, r)]), PID), base,
+                                 profile())
+    n4 = by_eid(ch)["P-C:NECK:N4"]
+    assert n4["after"]["evidence_state"] == "BOUNDED_EXPOSURE" and n4["evidence_status"] == "HELD"
+    assert (n4["after"]["bounded_range"]["low"], n4["after"]["bounded_range"]["high"]) == (A(0.096), A(0.144))
+    assert n4["after"]["calculation"]["inputs"]["profile_audit"]["restricted_line_id"] == u["line_id"]
+    assert n4["after"]["line_id"] == base[-1]["line_id"]                     # the candidate keeps its own line id
+    assert log["paired_by_element"] == 1 and u["line_id"] not in [x["line_id"] for x in log["restricted_only"]]
+    u2 = ln("STR.CONC.NECK", "X-C:NECK:N4", "FOUNDATION", "BOUNDED_EXPOSURE", rng=(0.0, 1.0))
+    ch2, log2 = A304.audit_changes(A304.load_inputs(inputs(runs=[run("RESTRICTED", NOT_USABLE, r + [u2])]), PID),
+                                   base, profile())
+    n4b = by_eid(ch2)["P-C:NECK:N4"]
+    assert n4b["after"]["evidence_state"] == "BLOCKED_RFI" and n4b["evidence_status"] == "UNKNOWN"
+    assert log2["paired_by_element"] == 0
+
+
 def test_a_profile_without_non_usable_values_changes_nothing():
     """the adverse direction: a restricted run identical to the candidate (no line rests on the removed values) holds
     nothing; every line stays byte-identical."""
