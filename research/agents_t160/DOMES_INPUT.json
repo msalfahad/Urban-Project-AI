@@ -1,0 +1,49 @@
+{
+ "SCHEMA": "T-160 dome bays: one record per dome opening; distances in metres from the dome centre; read from Drive 'Alsenan chalet project' / 'ST7757 dxf.dxf' (sha256 9f9d1179...) by read_bays.py, layer 1 (beam edges), S-COL.BON (columns); sheet ST p.5 FIRST FLOOR ROOF SLAB; ring sizes from the plan B4 (owner Q-44 A) and ST p.7 DETAIL OF DOME (dia 442, depth 'as per architect').",
+ "unit_m": 1.0,
+ "slab_t_m": 0.16,
+ "slab_t_source": "ST p.8 general note 18 (roof slabs 16 cm unless stated); no tag on the four dome-square corners (T-139)",
+ "domes": [
+  {
+   "id": "DOME-1F-W",
+   "sheet": "ST p.5 first-floor roof slab",
+   "centre_m": [16.38008, 41.651386],
+   "r_inner_m": 2.2110915,
+   "r_outer_m": 2.4110915,
+   "faces": {
+    "W": {"d_m": 2.111092, "far_d_m": 2.411092, "member": "CB10 inner strip (drawn 0.30)", "register": "BM-1F-031 (CONFLICT)"},
+    "E": {"d_m": 1.988908, "far_d_m": 2.288908, "member": "CB13 (0.30)", "register": "BM-1F-022"},
+    "S": {"d_m": 2.211092, "far_d_m": 2.461092, "member": "B6 south (0.25)", "register": "BM-1F-021"},
+    "N": {"d_m": 2.211092, "far_d_m": 2.461092, "member": "B6 north (0.25)", "register": "BM-1F-018"}
+   },
+   "beyond": {"E": "slab panel east of CB13 (T-139 1F-084, printed tag T 16)"},
+   "columns_rel_m": [[-2.411011, -1.002044, -2.211011, -0.402044], [1.988989, -0.602044, 2.238989, 0.097956]],
+   "ring_mark": "B4 (two B4 texts on the ring, rotated 39.8 / 320.2)",
+   "ring_width_m": 0.20,
+   "ring_depth_m": 0.50,
+   "ring_depth_status": "DRAWING-CONFIRMED: plan mark B4, schedule B4 20 x 50; owner Q-44 A keeps the plan B4 size (the p.7 ring depth 'as per architect' is dropped with the dome)",
+   "register_row": "BM-1F-028 CALCULATED 0.7553 (in-bay 1.5105 m2 x 0.50)"
+  },
+  {
+   "id": "DOME-1F-E",
+   "sheet": "ST p.5 first-floor roof slab",
+   "centre_m": [30.827897, 41.651386],
+   "r_inner_m": 2.2110915,
+   "r_outer_m": 2.4110915,
+   "faces": {
+    "W": {"d_m": 2.211092, "far_d_m": 2.761092, "member": "B25 (0.55)", "register": "BM-1F-027"},
+    "E": {"d_m": 2.161092, "far_d_m": 2.411092, "member": "CB12 span 1 (0.25)", "register": "BM-1F-017"},
+    "S": {"d_m": 2.211092, "far_d_m": 2.461092, "member": "B6 south (0.25)", "register": "BM-1F-020"},
+    "N": {"d_m": 2.211092, "far_d_m": 2.461092, "member": "B6 north (0.25)", "register": "BM-1F-019"}
+   },
+   "beyond": {},
+   "columns_rel_m": [],
+   "ring_mark": null,
+   "ring_width_m": 0.20,
+   "ring_depth_m": null,
+   "ring_depth_status": "HELD: no mark on or near this ring (only B6, B25, CB12 and four SEE DETAIL texts within 3.2 m); owner Q-61 C(3): B4 only where identified as B4; candidate at the B4 size 0.50 shown, never released",
+   "candidate_depth_m": 0.50,
+   "register_row": "BM-1F-039 HELD candidate 0.8997 (in-bay 1.7993 m2 x 0.50)"
+  }
+ ]
+}
