@@ -1,0 +1,951 @@
+{
+ "summary": [
+  {
+   "case": "HI",
+   "finish": "plaster",
+   "gross": 177.07,
+   "contacts_known": 4.98,
+   "openings_known": 12.33,
+   "contacts_held_max": 6.02,
+   "openings_held_max": 13.89,
+   "returns_hi": 1.22,
+   "returns_lo": 1.22,
+   "net_hi": 160.98,
+   "net_lo": 141.07,
+   "storeys": [
+    {
+     "gross": 70.77,
+     "net_hi": 62.01,
+     "net_lo": 50.83,
+     "z_from": null,
+     "z_to": 5.5
+    },
+    {
+     "gross": 54.18,
+     "net_hi": 47.67,
+     "net_lo": 42.99,
+     "z_from": 5.5,
+     "z_to": 9.7
+    },
+    {
+     "gross": 52.12,
+     "net_hi": 50.08,
+     "net_lo": 46.04,
+     "z_from": 9.7,
+     "z_to": null
+    }
+   ]
+  },
+  {
+   "case": "HI",
+   "finish": "paint",
+   "gross": 175.14,
+   "contacts_known": 4.98,
+   "openings_known": 12.33,
+   "contacts_held_max": 6.02,
+   "openings_held_max": 13.74,
+   "returns_hi": 1.21,
+   "returns_lo": 1.21,
+   "net_hi": 159.03,
+   "net_lo": 139.27,
+   "storeys": [
+    {
+     "gross": 70.77,
+     "net_hi": 62.01,
+     "net_lo": 50.83,
+     "z_from": null,
+     "z_to": 5.5
+    },
+    {
+     "gross": 54.18,
+     "net_hi": 47.67,
+     "net_lo": 42.99,
+     "z_from": 5.5,
+     "z_to": 9.7
+    },
+    {
+     "gross": 50.18,
+     "net_hi": 48.14,
+     "net_lo": 44.25,
+     "z_from": 9.7,
+     "z_to": null
+    }
+   ]
+  },
+  {
+   "case": "LO",
+   "finish": "plaster",
+   "gross": 173.82,
+   "contacts_known": 5.88,
+   "openings_known": 12.33,
+   "contacts_held_max": 6.07,
+   "openings_held_max": 13.69,
+   "returns_hi": 1.21,
+   "returns_lo": 1.21,
+   "net_hi": 156.82,
+   "net_lo": 137.06,
+   "storeys": [
+    {
+     "gross": 68.81,
+     "net_hi": 59.73,
+     "net_lo": 48.52,
+     "z_from": null,
+     "z_to": 5.5
+    },
+    {
+     "gross": 54.18,
+     "net_hi": 47.09,
+     "net_lo": 42.48,
+     "z_from": 5.5,
+     "z_to": 9.7
+    },
+    {
+     "gross": 50.83,
+     "net_hi": 48.79,
+     "net_lo": 44.85,
+     "z_from": 9.7,
+     "z_to": null
+    }
+   ]
+  },
+  {
+   "case": "LO",
+   "finish": "paint",
+   "gross": 171.88,
+   "contacts_known": 5.88,
+   "openings_known": 12.33,
+   "contacts_held_max": 6.07,
+   "openings_held_max": 13.54,
+   "returns_hi": 1.2,
+   "returns_lo": 1.2,
+   "net_hi": 154.87,
+   "net_lo": 135.26,
+   "storeys": [
+    {
+     "gross": 68.81,
+     "net_hi": 59.73,
+     "net_lo": 48.52,
+     "z_from": null,
+     "z_to": 5.5
+    },
+    {
+     "gross": 54.18,
+     "net_hi": 47.09,
+     "net_lo": 42.48,
+     "z_from": 5.5,
+     "z_to": 9.7
+    },
+    {
+     "gross": 48.89,
+     "net_hi": 46.85,
+     "net_lo": 43.06,
+     "z_from": 9.7,
+     "z_to": null
+    }
+   ]
+  }
+ ],
+ "faces": {
+  "HI": {
+   "plaster": [
+    {
+     "id": "W (west, outer wall: W01 / W13 / W26)",
+     "gross": 66.15,
+     "contacts_known": 1.99,
+     "openings_known": 7.93,
+     "contacts_held_max": 1.95,
+     "openings_held_max": 0.0,
+     "returns_hi": 1.22,
+     "returns_lo": 1.22,
+     "net_hi": 57.45,
+     "net_lo": 55.5,
+     "pieces": {
+      "contacts": {
+       "MS1-L flight": 0.69,
+       "MS1-T winders (HELD: soffit not drawn)": 1.36,
+       "MS2-L flight": 0.97,
+       "MS2-LD landing (west half)": 0.19,
+       "1F slab band (arrival landing)": 0.08,
+       "2F slab band (arrival landing)": 0.11,
+       "B20 end (HELD Q-46 / OQ-11)": 0.38,
+       "B23 end (HELD Q-46 / OQ-11)": 0.34
+      },
+      "openings": {
+       "W01": 2.4,
+       "W13": 2.76,
+       "W26": 2.04,
+       "D115": 1.27
+      }
+     },
+     "storeys": [
+      {
+       "z_from": null,
+       "z_to": 5.5,
+       "gross": 23.3,
+       "net_hi": 20.32,
+       "net_lo": 18.7
+      },
+      {
+       "z_from": 5.5,
+       "z_to": 9.7,
+       "gross": 21.84,
+       "net_hi": 16.95,
+       "net_lo": 16.61
+      },
+      {
+       "z_from": 9.7,
+       "z_to": null,
+       "gross": 21.01,
+       "net_hi": 18.97,
+       "net_lo": 18.97
+      }
+     ]
+    },
+    {
+     "id": "E (east, lift-shaft wall)",
+     "gross": 66.47,
+     "contacts_known": 2.4,
+     "openings_known": 0.0,
+     "contacts_held_max": 0.65,
+     "openings_held_max": 3.81,
+     "returns_hi": 0.0,
+     "returns_lo": 0.0,
+     "net_hi": 64.07,
+     "net_lo": 59.61,
+     "pieces": {
+      "contacts": {
+       "MS1-LD landing": 0.19,
+       "MS1-U flight": 0.97,
+       "MS2-LD landing (east half)": 0.19,
+       "MS2-U flight": 0.97,
+       "1F slab band (arrival landing)": 0.08,
+       "2F slab band (arrival landing)": 0.11,
+       "B20 end (HELD Q-46 / OQ-11)": 0.38,
+       "B23 end (HELD Q-46 / OQ-11)": 0.34
+      },
+      "openings": {
+       "GF-passage-E": 4.05
+      }
+     },
+     "storeys": [
+      {
+       "z_from": null,
+       "z_to": 5.5,
+       "gross": 23.62,
+       "net_hi": 22.44,
+       "net_lo": 18.28
+      },
+      {
+       "z_from": 5.5,
+       "z_to": 9.7,
+       "gross": 21.84,
+       "net_hi": 20.62,
+       "net_lo": 20.32
+      },
+      {
+       "z_from": 9.7,
+       "z_to": null,
+       "gross": 21.01,
+       "net_hi": 21.01,
+       "net_lo": 21.01
+      }
+     ]
+    },
+    {
+     "id": "N (north, outer wall)",
+     "gross": 33.6,
+     "contacts_known": 0.59,
+     "openings_known": 2.2,
+     "contacts_held_max": 1.54,
+     "openings_held_max": 10.08,
+     "returns_hi": 0.0,
+     "returns_lo": 0.0,
+     "net_hi": 30.81,
+     "net_lo": 19.19,
+     "pieces": {
+      "contacts": {
+       "MS1-T winders (HELD: soffit not drawn)": 1.54,
+       "MS1-LD landing": 0.19,
+       "MS2-LD landing (west half)": 0.2,
+       "MS2-LD landing (east half)": 0.2
+      },
+      "openings": {
+       "GF-court-door": 2.2,
+       "1F-north-window": 4.02,
+       "W27": 6.06
+      }
+     },
+     "storeys": [
+      {
+       "z_from": null,
+       "z_to": 5.5,
+       "gross": 13.0,
+       "net_hi": 10.61,
+       "net_lo": 7.07
+      },
+      {
+       "z_from": 5.5,
+       "z_to": 9.7,
+       "gross": 10.5,
+       "net_hi": 10.1,
+       "net_lo": 6.06
+      },
+      {
+       "z_from": 9.7,
+       "z_to": null,
+       "gross": 10.1,
+       "net_hi": 10.1,
+       "net_lo": 6.06
+      }
+     ]
+    },
+    {
+     "id": "S (GF south wall only; above it the 1F arrival landing)",
+     "gross": 10.85,
+     "contacts_known": 0.0,
+     "openings_known": 2.2,
+     "contacts_held_max": 1.88,
+     "openings_held_max": 0.0,
+     "returns_hi": 0.0,
+     "returns_lo": 0.0,
+     "net_hi": 8.65,
+     "net_lo": 6.77,
+     "pieces": {
+      "contacts": {
+       "B20 over the wall (HELD Q-46 / OQ-11)": 1.88
+      },
+      "openings": {
+       "GF-south-door": 2.2
+      }
+     },
+     "storeys": [
+      {
+       "z_from": null,
+       "z_to": 5.5,
+       "gross": 10.85,
+       "net_hi": 8.65,
+       "net_lo": 6.77
+      },
+      {
+       "z_from": 5.5,
+       "z_to": 9.7,
+       "gross": 0.0,
+       "net_hi": 0.0,
+       "net_lo": 0.0
+      },
+      {
+       "z_from": 9.7,
+       "z_to": null,
+       "gross": 0.0,
+       "net_hi": 0.0,
+       "net_lo": 0.0
+      }
+     ]
+    }
+   ],
+   "paint": [
+    {
+     "id": "W (west, outer wall: W01 / W13 / W26)",
+     "gross": 65.37,
+     "contacts_known": 1.99,
+     "openings_known": 7.93,
+     "contacts_held_max": 1.95,
+     "openings_held_max": 0.0,
+     "returns_hi": 1.21,
+     "returns_lo": 1.21,
+     "net_hi": 56.66,
+     "net_lo": 54.7,
+     "pieces": {
+      "contacts": {
+       "MS1-L flight": 0.69,
+       "MS1-T winders (HELD: soffit not drawn)": 1.36,
+       "MS2-L flight": 0.97,
+       "MS2-LD landing (west half)": 0.19,
+       "1F slab band (arrival landing)": 0.08,
+       "2F slab band (arrival landing)": 0.11,
+       "B20 end (HELD Q-46 / OQ-11)": 0.38,
+       "B23 end (HELD Q-46 / OQ-11)": 0.34
+      },
+      "openings": {
+       "W01": 2.4,
+       "W13": 2.76,
+       "W26": 2.04,
+       "D115": 1.27
+      }
+     },
+     "storeys": [
+      {
+       "z_from": null,
+       "z_to": 5.5,
+       "gross": 23.3,
+       "net_hi": 20.32,
+       "net_lo": 18.7
+      },
+      {
+       "z_from": 5.5,
+       "z_to": 9.7,
+       "gross": 21.84,
+       "net_hi": 16.95,
+       "net_lo": 16.61
+      },
+      {
+       "z_from": 9.7,
+       "z_to": null,
+       "gross": 20.23,
+       "net_hi": 18.19,
+       "net_lo": 18.19
+      }
+     ]
+    },
+    {
+     "id": "E (east, lift-shaft wall)",
+     "gross": 65.69,
+     "contacts_known": 2.4,
+     "openings_known": 0.0,
+     "contacts_held_max": 0.65,
+     "openings_held_max": 3.81,
+     "returns_hi": 0.0,
+     "returns_lo": 0.0,
+     "net_hi": 63.29,
+     "net_lo": 58.83,
+     "pieces": {
+      "contacts": {
+       "MS1-LD landing": 0.19,
+       "MS1-U flight": 0.97,
+       "MS2-LD landing (east half)": 0.19,
+       "MS2-U flight": 0.97,
+       "1F slab band (arrival landing)": 0.08,
+       "2F slab band (arrival landing)": 0.11,
+       "B20 end (HELD Q-46 / OQ-11)": 0.38,
+       "B23 end (HELD Q-46 / OQ-11)": 0.34
+      },
+      "openings": {
+       "GF-passage-E": 4.05
+      }
+     },
+     "storeys": [
+      {
+       "z_from": null,
+       "z_to": 5.5,
+       "gross": 23.62,
+       "net_hi": 22.44,
+       "net_lo": 18.28
+      },
+      {
+       "z_from": 5.5,
+       "z_to": 9.7,
+       "gross": 21.84,
+       "net_hi": 20.62,
+       "net_lo": 20.32
+      },
+      {
+       "z_from": 9.7,
+       "z_to": null,
+       "gross": 20.23,
+       "net_hi": 20.23,
+       "net_lo": 20.23
+      }
+     ]
+    },
+    {
+     "id": "N (north, outer wall)",
+     "gross": 33.22,
+     "contacts_known": 0.59,
+     "openings_known": 2.2,
+     "contacts_held_max": 1.54,
+     "openings_held_max": 9.93,
+     "returns_hi": 0.0,
+     "returns_lo": 0.0,
+     "net_hi": 30.43,
+     "net_lo": 18.97,
+     "pieces": {
+      "contacts": {
+       "MS1-T winders (HELD: soffit not drawn)": 1.54,
+       "MS1-LD landing": 0.19,
+       "MS2-LD landing (west half)": 0.2,
+       "MS2-LD landing (east half)": 0.2
+      },
+      "openings": {
+       "GF-court-door": 2.2,
+       "1F-north-window": 4.02,
+       "W27": 5.91
+      }
+     },
+     "storeys": [
+      {
+       "z_from": null,
+       "z_to": 5.5,
+       "gross": 13.0,
+       "net_hi": 10.61,
+       "net_lo": 7.07
+      },
+      {
+       "z_from": 5.5,
+       "z_to": 9.7,
+       "gross": 10.5,
+       "net_hi": 10.1,
+       "net_lo": 6.06
+      },
+      {
+       "z_from": 9.7,
+       "z_to": null,
+       "gross": 9.73,
+       "net_hi": 9.73,
+       "net_lo": 5.84
+      }
+     ]
+    },
+    {
+     "id": "S (GF south wall only; above it the 1F arrival landing)",
+     "gross": 10.85,
+     "contacts_known": 0.0,
+     "openings_known": 2.2,
+     "contacts_held_max": 1.88,
+     "openings_held_max": 0.0,
+     "returns_hi": 0.0,
+     "returns_lo": 0.0,
+     "net_hi": 8.65,
+     "net_lo": 6.77,
+     "pieces": {
+      "contacts": {
+       "B20 over the wall (HELD Q-46 / OQ-11)": 1.88
+      },
+      "openings": {
+       "GF-south-door": 2.2
+      }
+     },
+     "storeys": [
+      {
+       "z_from": null,
+       "z_to": 5.5,
+       "gross": 10.85,
+       "net_hi": 8.65,
+       "net_lo": 6.77
+      },
+      {
+       "z_from": 5.5,
+       "z_to": 9.7,
+       "gross": 0.0,
+       "net_hi": 0.0,
+       "net_lo": 0.0
+      },
+      {
+       "z_from": 9.7,
+       "z_to": null,
+       "gross": 0.0,
+       "net_hi": 0.0,
+       "net_lo": 0.0
+      }
+     ]
+    }
+   ]
+  },
+  "LO": {
+   "plaster": [
+    {
+     "id": "W (west, outer wall: W01 / W13 / W26)",
+     "gross": 64.83,
+     "contacts_known": 2.2,
+     "openings_known": 7.93,
+     "contacts_held_max": 1.95,
+     "openings_held_max": 0.0,
+     "returns_hi": 1.21,
+     "returns_lo": 1.21,
+     "net_hi": 55.9,
+     "net_lo": 53.95,
+     "pieces": {
+      "contacts": {
+       "MS1-L flight": 0.69,
+       "MS1-T winders (HELD: soffit not drawn)": 1.36,
+       "MS2-L flight": 0.93,
+       "MS2-LD landing (west half)": 0.31,
+       "1F slab band (arrival landing)": 0.13,
+       "2F slab band (arrival landing)": 0.18,
+       "B20 end (HELD Q-46 / OQ-11)": 0.38,
+       "B23 end (HELD Q-46 / OQ-11)": 0.34
+      },
+      "openings": {
+       "W01": 2.4,
+       "W13": 2.76,
+       "W26": 2.04,
+       "D115": 1.27
+      }
+     },
+     "storeys": [
+      {
+       "z_from": null,
+       "z_to": 5.5,
+       "gross": 22.5,
+       "net_hi": 19.46,
+       "net_lo": 17.84
+      },
+      {
+       "z_from": 5.5,
+       "z_to": 9.7,
+       "gross": 21.84,
+       "net_hi": 16.78,
+       "net_lo": 16.44
+      },
+      {
+       "z_from": 9.7,
+       "z_to": null,
+       "gross": 20.49,
+       "net_hi": 18.45,
+       "net_lo": 18.45
+      }
+     ]
+    },
+    {
+     "id": "E (east, lift-shaft wall)",
+     "gross": 65.95,
+     "contacts_known": 2.71,
+     "openings_known": 0.0,
+     "contacts_held_max": 0.7,
+     "openings_held_max": 3.81,
+     "returns_hi": 0.0,
+     "returns_lo": 0.0,
+     "net_hi": 63.24,
+     "net_lo": 58.73,
+     "pieces": {
+      "contacts": {
+       "MS1-LD landing": 0.31,
+       "MS1-U flight": 0.93,
+       "MS2-LD landing (east half)": 0.31,
+       "MS2-U flight": 0.93,
+       "1F slab band (arrival landing)": 0.13,
+       "2F slab band (arrival landing)": 0.18,
+       "B20 end (HELD Q-46 / OQ-11)": 0.38,
+       "B23 end (HELD Q-46 / OQ-11)": 0.34
+      },
+      "openings": {
+       "GF-passage-E": 4.05
+      }
+     },
+     "storeys": [
+      {
+       "z_from": null,
+       "z_to": 5.5,
+       "gross": 23.62,
+       "net_hi": 22.29,
+       "net_lo": 18.11
+      },
+      {
+       "z_from": 5.5,
+       "z_to": 9.7,
+       "gross": 21.84,
+       "net_hi": 20.46,
+       "net_lo": 20.13
+      },
+      {
+       "z_from": 9.7,
+       "z_to": null,
+       "gross": 20.49,
+       "net_hi": 20.49,
+       "net_lo": 20.49
+      }
+     ]
+    },
+    {
+     "id": "N (north, outer wall)",
+     "gross": 32.44,
+     "contacts_known": 0.96,
+     "openings_known": 2.2,
+     "contacts_held_max": 1.54,
+     "openings_held_max": 9.88,
+     "returns_hi": 0.0,
+     "returns_lo": 0.0,
+     "net_hi": 29.28,
+     "net_lo": 17.86,
+     "pieces": {
+      "contacts": {
+       "MS1-T winders (HELD: soffit not drawn)": 1.54,
+       "MS1-LD landing": 0.31,
+       "MS2-LD landing (west half)": 0.32,
+       "MS2-LD landing (east half)": 0.32
+      },
+      "openings": {
+       "GF-court-door": 2.2,
+       "1F-north-window": 3.92,
+       "W27": 5.96
+      }
+     },
+     "storeys": [
+      {
+       "z_from": null,
+       "z_to": 5.5,
+       "gross": 12.09,
+       "net_hi": 9.58,
+       "net_lo": 6.04
+      },
+      {
+       "z_from": 5.5,
+       "z_to": 9.7,
+       "gross": 10.5,
+       "net_hi": 9.85,
+       "net_lo": 5.91
+      },
+      {
+       "z_from": 9.7,
+       "z_to": null,
+       "gross": 9.85,
+       "net_hi": 9.85,
+       "net_lo": 5.91
+      }
+     ]
+    },
+    {
+     "id": "S (GF south wall only; above it the 1F arrival landing)",
+     "gross": 10.6,
+     "contacts_known": 0.0,
+     "openings_known": 2.2,
+     "contacts_held_max": 1.88,
+     "openings_held_max": 0.0,
+     "returns_hi": 0.0,
+     "returns_lo": 0.0,
+     "net_hi": 8.4,
+     "net_lo": 6.52,
+     "pieces": {
+      "contacts": {
+       "B20 over the wall (HELD Q-46 / OQ-11)": 1.88
+      },
+      "openings": {
+       "GF-south-door": 2.2
+      }
+     },
+     "storeys": [
+      {
+       "z_from": null,
+       "z_to": 5.5,
+       "gross": 10.6,
+       "net_hi": 8.4,
+       "net_lo": 6.52
+      },
+      {
+       "z_from": 5.5,
+       "z_to": 9.7,
+       "gross": 0.0,
+       "net_hi": 0.0,
+       "net_lo": 0.0
+      },
+      {
+       "z_from": 9.7,
+       "z_to": null,
+       "gross": 0.0,
+       "net_hi": 0.0,
+       "net_lo": 0.0
+      }
+     ]
+    }
+   ],
+   "paint": [
+    {
+     "id": "W (west, outer wall: W01 / W13 / W26)",
+     "gross": 64.05,
+     "contacts_known": 2.2,
+     "openings_known": 7.93,
+     "contacts_held_max": 1.95,
+     "openings_held_max": 0.0,
+     "returns_hi": 1.2,
+     "returns_lo": 1.2,
+     "net_hi": 55.11,
+     "net_lo": 53.15,
+     "pieces": {
+      "contacts": {
+       "MS1-L flight": 0.69,
+       "MS1-T winders (HELD: soffit not drawn)": 1.36,
+       "MS2-L flight": 0.93,
+       "MS2-LD landing (west half)": 0.31,
+       "1F slab band (arrival landing)": 0.13,
+       "2F slab band (arrival landing)": 0.18,
+       "B20 end (HELD Q-46 / OQ-11)": 0.38,
+       "B23 end (HELD Q-46 / OQ-11)": 0.34
+      },
+      "openings": {
+       "W01": 2.4,
+       "W13": 2.76,
+       "W26": 2.04,
+       "D115": 1.27
+      }
+     },
+     "storeys": [
+      {
+       "z_from": null,
+       "z_to": 5.5,
+       "gross": 22.5,
+       "net_hi": 19.46,
+       "net_lo": 17.84
+      },
+      {
+       "z_from": 5.5,
+       "z_to": 9.7,
+       "gross": 21.84,
+       "net_hi": 16.78,
+       "net_lo": 16.44
+      },
+      {
+       "z_from": 9.7,
+       "z_to": null,
+       "gross": 19.71,
+       "net_hi": 17.67,
+       "net_lo": 17.67
+      }
+     ]
+    },
+    {
+     "id": "E (east, lift-shaft wall)",
+     "gross": 65.17,
+     "contacts_known": 2.71,
+     "openings_known": 0.0,
+     "contacts_held_max": 0.7,
+     "openings_held_max": 3.81,
+     "returns_hi": 0.0,
+     "returns_lo": 0.0,
+     "net_hi": 62.46,
+     "net_lo": 57.95,
+     "pieces": {
+      "contacts": {
+       "MS1-LD landing": 0.31,
+       "MS1-U flight": 0.93,
+       "MS2-LD landing (east half)": 0.31,
+       "MS2-U flight": 0.93,
+       "1F slab band (arrival landing)": 0.13,
+       "2F slab band (arrival landing)": 0.18,
+       "B20 end (HELD Q-46 / OQ-11)": 0.38,
+       "B23 end (HELD Q-46 / OQ-11)": 0.34
+      },
+      "openings": {
+       "GF-passage-E": 4.05
+      }
+     },
+     "storeys": [
+      {
+       "z_from": null,
+       "z_to": 5.5,
+       "gross": 23.62,
+       "net_hi": 22.29,
+       "net_lo": 18.11
+      },
+      {
+       "z_from": 5.5,
+       "z_to": 9.7,
+       "gross": 21.84,
+       "net_hi": 20.46,
+       "net_lo": 20.13
+      },
+      {
+       "z_from": 9.7,
+       "z_to": null,
+       "gross": 19.71,
+       "net_hi": 19.71,
+       "net_lo": 19.71
+      }
+     ]
+    },
+    {
+     "id": "N (north, outer wall)",
+     "gross": 32.06,
+     "contacts_known": 0.96,
+     "openings_known": 2.2,
+     "contacts_held_max": 1.54,
+     "openings_held_max": 9.73,
+     "returns_hi": 0.0,
+     "returns_lo": 0.0,
+     "net_hi": 28.9,
+     "net_lo": 17.64,
+     "pieces": {
+      "contacts": {
+       "MS1-T winders (HELD: soffit not drawn)": 1.54,
+       "MS1-LD landing": 0.31,
+       "MS2-LD landing (west half)": 0.32,
+       "MS2-LD landing (east half)": 0.32
+      },
+      "openings": {
+       "GF-court-door": 2.2,
+       "1F-north-window": 3.92,
+       "W27": 5.81
+      }
+     },
+     "storeys": [
+      {
+       "z_from": null,
+       "z_to": 5.5,
+       "gross": 12.09,
+       "net_hi": 9.58,
+       "net_lo": 6.04
+      },
+      {
+       "z_from": 5.5,
+       "z_to": 9.7,
+       "gross": 10.5,
+       "net_hi": 9.85,
+       "net_lo": 5.91
+      },
+      {
+       "z_from": 9.7,
+       "z_to": null,
+       "gross": 9.48,
+       "net_hi": 9.48,
+       "net_lo": 5.69
+      }
+     ]
+    },
+    {
+     "id": "S (GF south wall only; above it the 1F arrival landing)",
+     "gross": 10.6,
+     "contacts_known": 0.0,
+     "openings_known": 2.2,
+     "contacts_held_max": 1.88,
+     "openings_held_max": 0.0,
+     "returns_hi": 0.0,
+     "returns_lo": 0.0,
+     "net_hi": 8.4,
+     "net_lo": 6.52,
+     "pieces": {
+      "contacts": {
+       "B20 over the wall (HELD Q-46 / OQ-11)": 1.88
+      },
+      "openings": {
+       "GF-south-door": 2.2
+      }
+     },
+     "storeys": [
+      {
+       "z_from": null,
+       "z_to": 5.5,
+       "gross": 10.6,
+       "net_hi": 8.4,
+       "net_lo": 6.52
+      },
+      {
+       "z_from": 5.5,
+       "z_to": 9.7,
+       "gross": 0.0,
+       "net_hi": 0.0,
+       "net_lo": 0.0
+      },
+      {
+       "z_from": 9.7,
+       "z_to": null,
+       "gross": 0.0,
+       "net_hi": 0.0,
+       "net_lo": 0.0
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "owner_manual": {
+  "per_storey": {
+   "GF": 55.11,
+   "1F": 43.55,
+   "2F": 43.55
+  },
+  "total": 142.22
+ },
+ "lengths_by_storey": {
+  "GF": 15.1,
+  "1F": 13.0,
+  "2F": 13.0
+ }
+}

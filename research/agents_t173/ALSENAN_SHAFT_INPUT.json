@@ -1,0 +1,312 @@
+{
+ "schema": "T173_SHAFT_INPUT_V1",
+ "project": "development villa (Drive folder 'Alsenan chalet project'); shaft-local dimensions and levels only: no coordinates, names or drawing content",
+ "element": "ST-01 dog-leg stair shaft beside the lift (T-184 inventory id; ELEMENT_REGISTER 'Stair shaft walls (Q-72)')",
+ "frame": "X east from the west inner face (0 .. 2.50), Y south from the north inner face; the three architectural plans place the shaft at the same Y and at a constant X offset (checked: west inner face, east inner face and north inner face agree to 1 mm on GF, 1F, 2F)",
+ "sources": {
+  "PLAN_GF": "P7757_DXF_COMPRESSED.zip (architectural DXF) GF plan, layers 1 / D / W / S-COL.BON / 2 / 5; p7757_arch_sheet03.pdf",
+  "PLAN_1F": "architectural DXF 1F plan; p7757_arch_sheet04.pdf",
+  "PLAN_2F": "architectural DXF 2F plan; Alsenan_Architectural_P7757_Pages_05-06.pdf p.1",
+  "SEC_AA": "p7757_arch_sheet10.pdf section A-A 1:100 (re-read at 400 dpi this run: 157.5 px/m, slab band tops +1.00 / +5.50 / +9.70 / +13.90 at 4.50 / 4.20 / 4.20 m spacing)",
+  "ST_P4_P5": "ST7757 dxf.dxf GF roof slab and 1F roof slab plans: B2 along both long shaft walls (wall width, flush), 'B3 (With Stair)' along the north wall, B20 (40 x 75) / B23 (45 x 75) across the stair head",
+  "T184": "research/agents_t184 (merged 9fbedc4): flights, landings, levels",
+  "T144": "research/agents_t144 (merged): W01 / W13 / W26 sill and head",
+  "T128R2": "agents/task-T-128 r2 (READY 8710bb1): shaft face lengths 15.10 / 13.013 / 13.008 m on the T-147 region"
+ },
+ "dimensions_m": {
+  "width_inside": {
+   "v": 2.5,
+   "src": "PLAN_GF/1F/2F printed 250; DXF inner faces 2.500 apart"
+  },
+  "void_length": {
+   "v": 4.5,
+   "src": "1F / 2F printed chain 120 + 330 (+ 195 arrival landing = 645); DXF north inner face to the first riser of the 1F -> 2F flight"
+  },
+  "gf_length": {
+   "v": 5.0,
+   "src": "PLAN_GF printed 500; DXF north to south inner face 5.000"
+  },
+  "box_length_upper": {
+   "v": 5.2,
+   "src": "east wall (lift) ends 5.20 from the north face on 1F / 2F (DXF); T-147 region box used by T-128 r2"
+  },
+  "lane_w": {
+   "v": 1.2,
+   "src": "printed 120 / 10 / 120"
+  },
+  "well": {
+   "v": 0.1,
+   "src": "printed 10"
+  },
+  "pier_returns": {
+   "v": [
+    3.0,
+    3.5
+   ],
+   "depth": 0.05,
+   "src": "column on the west wall projects 0.05 (printed '5'; DXF S-COL.BON) on GF, 1F, 2F"
+  },
+  "slab_t": {
+   "v": 0.16,
+   "src": "ST general note 'all slabs 16 cm'; stairs 'T 16' (T-184)"
+  },
+  "buildup_b": {
+   "v": [
+    0.0,
+    0.1
+   ],
+   "src": "not printed (T-128 s.2: 0 .. the owner's own 0.10 floor allowance, Q-43); PROVISIONAL"
+  },
+  "decor_ceiling": {
+   "v": 0.15,
+   "src": "owner Q-48 A (paint stops 0.15 under the soffit): ASSUMED - OWNER-APPROVED"
+  }
+ },
+ "levels": {
+  "gf_lobby": 0.3,
+  "gf": 1.0,
+  "landing1": 3.5,
+  "f1": 5.5,
+  "landing2_w": 7.516,
+  "landing2_e": 7.684,
+  "f2": 9.7,
+  "roof_mark": 13.9,
+  "src": "printed marks (SEC_AA, plans); landing2 halves from T-184 (scaled, T-111)"
+ },
+ "flights": {
+  "D1": {
+   "lane": "E",
+   "z0": 0.3,
+   "risers": 4,
+   "riser": 0.175,
+   "going": 0.3,
+   "first_riser_Y": 1.15,
+   "dir": "+Y",
+   "src": "PLAN_GF 4 riser lines in the east lane, solid on grade (SEC_AA hatched to the ground)"
+  },
+  "MS1-L": {
+   "lane": "W",
+   "z0": 1.0,
+   "risers": 10,
+   "riser": 0.166667,
+   "going": 0.3,
+   "first_riser_Y": 3.85,
+   "dir": "-Y",
+   "waist": 0.16,
+   "src": "T-184; DXF riser lines Y 3.85 .. 1.15"
+  },
+  "MS1-U": {
+   "lane": "E",
+   "z0": 3.5,
+   "risers": 12,
+   "riser": 0.166667,
+   "going": 0.3,
+   "first_riser_Y": 1.2,
+   "dir": "+Y",
+   "waist": 0.16,
+   "src": "T-184; DXF riser lines Y 1.20 .. 4.50"
+  },
+  "MS2-L": {
+   "lane": "W",
+   "z0": 5.5,
+   "risers": 12,
+   "riser": 0.168,
+   "going": 0.3,
+   "first_riser_Y": 4.5,
+   "dir": "-Y",
+   "waist": 0.16,
+   "src": "T-184; 1F plan 330 dimension"
+  },
+  "MS2-U": {
+   "lane": "E",
+   "z0": 7.684,
+   "risers": 12,
+   "riser": 0.168,
+   "going": 0.3,
+   "first_riser_Y": 1.2,
+   "dir": "+Y",
+   "waist": 0.16,
+   "src": "T-184"
+  }
+ },
+ "landings": {
+  "MS1-T (winders)": {
+   "zone": "NW 1.20 x 1.20, Y 0 .. 1.15 on the west wall, X 0 .. 1.30 on the north wall",
+   "status": "HELD",
+   "why": "soffit not drawn (T-184 MS1-T, C-ST-3)"
+  },
+  "MS1-LD": {
+   "level": 3.5,
+   "X": [
+    1.3,
+    2.5
+   ],
+   "Y": [
+    0.0,
+    1.2
+   ],
+   "src": "T-184 1.20 x 1.20"
+  },
+  "MS2-LD": {
+   "level_w": 7.516,
+   "level_e": 7.684,
+   "Y": [
+    0.0,
+    1.2
+   ],
+   "split_X": 1.25,
+   "src": "T-184 2.50 x 1.20, closing riser at the well"
+  }
+ },
+ "beams_at_head": {
+  "B20": {
+   "slab": "1F",
+   "w": 0.4,
+   "d": 0.75,
+   "status": "HELD",
+   "why": "Q-46 RFI: structural plan puts it across the stair head, section A-A over the GF south wall; OQ-11 depth basis open"
+  },
+  "B23": {
+   "slab": "2F",
+   "w": 0.45,
+   "d": 0.75,
+   "status": "HELD",
+   "why": "as B20"
+  }
+ },
+ "openings": {
+  "W01": {
+   "wall": "W",
+   "Y": [
+    1.05,
+    2.25
+   ],
+   "z": [
+    2.0,
+    4.0
+   ],
+   "status": "PRINTED",
+   "src": "T-144 (SE chain 185 / 200)"
+  },
+  "W13": {
+   "wall": "W",
+   "Y": [
+    1.05,
+    2.25
+   ],
+   "z": [
+    6.5,
+    8.8
+   ],
+   "status": "PRINTED",
+   "src": "T-144 (SE chain 250 / 230)"
+  },
+  "W26": {
+   "wall": "W",
+   "Y": [
+    1.05,
+    2.25
+   ],
+   "z": [
+    10.8,
+    12.5
+   ],
+   "status": "PRINTED",
+   "src": "T-144 (arched, band to the crown, UP-OPEN-SCHED-001)"
+  },
+  "D115": {
+   "wall": "W",
+   "Y": [
+    4.625,
+    5.2
+   ],
+   "z": [
+    5.5,
+    7.7
+   ],
+   "status": "ASSUMED",
+   "src": "door 1.00 (DXF frame), shaft-box part 0.575; head 2.20 Q-55 C"
+  },
+  "GF-court-door": {
+   "wall": "N",
+   "X": [
+    1.4,
+    2.4
+   ],
+   "z": [
+    0.3,
+    2.5
+   ],
+   "status": "ASSUMED",
+   "src": "DXF frame jambs 1.00; head 2.20 Q-55 C (section A-A draws the lintel at about +2.5, consistent)"
+  },
+  "1F-north-window": {
+   "wall": "N",
+   "X": [
+    1.4,
+    2.4
+   ],
+   "held_band": [
+    3.5,
+    7.524
+   ],
+   "status": "HELD",
+   "src": "DXF window 1.00 in the 1F plan; sill / head printed nowhere; bounded by landing 1 top and landing 2 soffit (it crosses the 1F plan cut)"
+  },
+  "W27": {
+   "wall": "N",
+   "X": [
+    1.4,
+    2.4
+   ],
+   "held_band": [
+    7.684,
+    "top"
+   ],
+   "status": "HELD",
+   "src": "DXF window 1.00 in the 2F plan; sill / head printed nowhere; bounded by landing 2 top and the roof soffit"
+  },
+  "GF-passage-E": {
+   "wall": "E",
+   "Y": [
+    2.1,
+    3.0
+   ],
+   "held_band": [
+    1.0,
+    5.5
+   ],
+   "status": "HELD",
+   "src": "DXF gap 0.90 in the east wall to the basin space, no leaf or frame drawn, overhead line only: a doorless opening, so Q-55 C (door heads) does not apply (as T-128 r2: HELD); bounded by the +1.00 floor and the MS1-U flight that crosses above it (the flight is subtracted first)"
+  },
+  "GF-south-door": {
+   "wall": "S",
+   "X": [
+    1.4,
+    2.4
+   ],
+   "z": [
+    1.0,
+    3.2
+   ],
+   "status": "ASSUMED",
+   "src": "DXF frame jambs 1.00; head 2.20 Q-55 C"
+  }
+ },
+ "scaled_candidates_not_used": {
+  "1F-north-window": "section A-A (east lane cut): glazing drawn about +5.6 .. +7.36 (under the landing 2 soffit): 1.00 x 1.76",
+  "W27": "section A-A: glazing drawn about +9.75 .. +11.25, lintel above: 1.00 x 1.50",
+  "note": "scaled from a 1:100 PDF, not printed: designer item, never a quantity (MISSION drawing-first; T-144 convention)"
+ },
+ "owner_manual": {
+  "heights": {
+   "GF": 3.65,
+   "1F": 3.35,
+   "2F": 3.35
+  },
+  "src": "Q-43 / G1 (OWNER_RECONCILIATION_2026-10-20): floor-to-floor - 0.60 beam - 0.15 decor - 0.10 floor"
+ },
+ "freelancer": {
+  "rows": "plaster workbook, first sheet: 'stair-house walls' height 12.90 x length 14.80 = 190.92; 'continued' height 5.40 x length 2.50 = 13.50; total 204.42 m2 (gross; openings in his separate half-deduction list)"
+ }
+}
