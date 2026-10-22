@@ -5,6 +5,39 @@ The binding Answer line of each question is also in the index at the end of OWNE
 ## Answered
 
 
+### OQ-04 (re-asked) Outside areas: does the BOQ include finishes for the courts, porch and side passage, beyond waterproofing? (lead 2026-10-21 16:20, from worker 2's room-by-room floor area; T-153, T-157; existing owner-session question OQ-04 in research/urban_m9_p2b1/OWNER_QUESTIONS.md, never answered; no-assumptions question: UP-WP-ROOF-001 covers waterproofing only and no Urban rule or answer sets an exterior paving / tiling scope) — addition to today's package (Q-71 .. Q-75)
+
+THE PROBLEM: the outside areas are now measured from the drawings, but no rule says whether their finishes belong in
+this BOQ, so every outside finish is HELD and the freelancer's yard line cannot be compared. Measured (by hand, waiting
+for the checker): west court 138.761 m2 (includes the porch 19.181 and a 3.360 m2 element footprint), north court strip
+21.348 m2, pool deck 7.605 m2 (pool water 7.548 m2 is not a floor): courts 167.714 m2; side passage 5.640 m2 (outside
+under your Q-67 A if the drawings confirm it is open to the air). The freelancer prices "yard" 151.80 m2.
+WHERE TO LOOK: Drive "Alsenan chalet project", architectural GF plan (sheet 3, single-sheet file p7757_arch_sheet03.pdf):
+the west court with the porch, the north strip along the boundary, the pool deck; the freelancer workbook, yard row.
+THE OPTIONS:
+(A) Outside finishes are in the BOQ: one line per surface (court paving / tiles, porch, pool deck, passage) on the measured
+areas, 167.714 + 5.640 = 173.354 m2; the material per area comes from the designer (HELD until then).
+(B) Outside finishes are not in this BOQ (landscape / by others): the areas stay as information lines, no finish line;
+only waterproofing and the structure are measured outside.
+(C) Only the porch and the pool deck (the parts used as floors of the house, 19.181 + 7.605 = 26.786 m2) get finish lines;
+the rest of the courts is landscape (information only).
+RECOMMENDATION: A, with the material HELD on the designer. Reason: the freelancer already prices a yard line, so leaving
+it out (B) makes the two BOQs cover different scope and the comparison meaningless; A keeps every outside area visible as a
+measured line and lets the 15.91 m2 difference to his 151.80 m2 be explained area by area (the passage, the strip or the
+deck). No code clause is cited.
+WAITS ON: outside finish lines (about 173 m2 on Alsenan) and the court comparison. Work continues: areas are measured,
+classification of the garden band 13.986 m2 goes to the designer (D-48), not to you.
+Answer (owner, main chat 2026-10-21 20:25, his words: "Outdoor court area انترلوك for chalet, but houses outdoor areas sides
+and infront flooring area for ceramic, stairs outside is marble"): A with the material set by the owner rule
+docs/agents/OWNER_RULE_OUTDOOR_FLOORS_2026-10-21.md: outside finishes ARE in the BOQ; CHALET outdoor court = INTERLOCK
+paving; HOUSE (villa) outdoor side areas and front area = CERAMIC flooring; OUTSIDE STAIRS = MARBLE (as UP-STAIR-001).
+Still open with the owner (main chat asked; agents do not ask again): OD-1 in a chalet, are the covered porch, the pool deck
+and the side passage interlock like the court, or ceramic like house side / front areas? Until answered those three stay
+HELD; the west court (less the porch) and the north court strip are interlock.
+
+Later owner decisions on the same scope (main chat 2026-10-21 20:45 and 23:20, recorded in docs/agents/OWNER_RULE_OUTDOOR_FLOORS_2026-10-21.md): sides are never interlock (porcelain / ceramic, part of the house); the Alsenan north strip IS the side walk: porcelain, owner manual 1.50 x 15.97 = 23.955 m2 beside the measured 21.348 m2 (this supersedes "the north court strip is interlock" above); side passage porcelain / ceramic; court = interlock confirmed over the renders (owner choice); porch at court level, its own measured line, material HELD; pool deck HELD. OD-1 is therefore settled except the pool deck and the porch material (owner decides later; agents do not ask). (moved to Answered by the Lead 2026-10-22 00:20)
+
+
 ### Q-67 The ground-floor side passage between the annex and the house: outside or inside? (lead 2026-10-20 18:20, from worker 2's census of slabs over outside air; T-109, T-121, T-123; no-assumptions question: UP-SPACE-002 makes an unlabelled space with a doorless opening POSSIBLY_EXTERIOR until a project decision binds it)
 
 THE PROBLEM: the 1.20 x 4.70 m passage (5.64 m2) at court level +0.15 between the annex and the house has no room name, no

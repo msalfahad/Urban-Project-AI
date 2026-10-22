@@ -1,5 +1,68 @@
 # Lead reports to the owner's main chat (newest first, last 10 entries)
 
+## LEAD REPORT 2026-10-22 00:20 UTC
+
+Repositories: this Lead run is the first on the repository-attached prompt: attached Urban-Project-AI checkout (main
+1c559a8) + wrapper. `.work` was not prepared at start (the start-up hook again did not run); `setup` by hand worked, then
+`board log` / `board commit` worked, no refusal. Working branch head 15fd913 (7 checker merges since my last report; no
+owner-session commit on it). Drive readable: no new file since the 27 images of 21 Oct 22:50 (already under review), so no
+new photo-review task. UrbanProjectsManager not used.
+
+PROGRESS (Alsenan; released numbers unchanged: released concrete 92.77 vs freelancer 111.81 m3, -17.0 %; no candidate
+quantity changed since 20:20)
+- Structure, verified as hand pieces (checker re-measured from the drawing, NOT released): columns to the member above each
+  column 28.816 .. 29.139 m3 vs his 28.547 (+0.9 .. +2.1 %; the two water-tank columns are a 3.00 .. 3.80 m range until the
+  designer says whether the tank beam stands up or hangs down); beam steel 5,171 kg net by bar population (three beams
+  re-counted 0.0 / +0.01 / -0.1 %; his steel is a lump, so rule difference, no %); footing "per metre" evidence for your
+  Q-71 (boxed bars and cage symbols described, leg lengths not printed: held).
+- Waiting for the checker: the second candidate extension (footing steel route G 3,735.91 -> 874.86 kg drawing-confirmed
+  on the 19 footings printed with a count + 2,742.51 .. 2,836.40 kg held on Q-71; soffits over outside air 44.446 m2,
+  finish held); slab steel by bar population (bottom mesh 2,853.00 .. 3,068.05 kg depending on Q-71; top bars over supports
+  held 752.73 .. 1,931.52 kg because a sheet note and the typical slab detail give different extents: designer); the facade
+  side by side you asked for: 1,022.534 m2 measured + 6.822 .. 13.261 m2 held + 13.079 m of slab edge, against his walls
+  968.237 m2 (+5.6 %, rule difference: he takes one plane per elevation, the drawing has set-back faces).
+- Your 27 images: all are the designer's renders, not site photos. They show the three domes the drawings draw; your
+  client-change answer (no concrete domes) still governs, so no dome quantity changes and the 181.81 m2 of domes stays out
+  of the exterior plaster. Differences recorded, no quantity moved: court and side strip rendered in stone (your interlock /
+  porcelain choice governs), porch raised with a balustrade (you said court level), main door single leaf vs printed double
+  2.00 x 2.50, the pool-court opening rendered as an arch over a low wall. Found: railings and shutters are in NO BOQ yet
+  (missing category; only what is drawn will be measured).
+- Learned: two different runs are both called "released V2.9 + route G" (with and without the route G profile; 8 family
+  figures differ). Until one is pinned by its provenance, every comparison names its run; the checker's integrated diffs use
+  the profiled one.
+- Your rules applied today: outside floors (court interlock, sides porcelain, outside stairs marble, porch on its own line,
+  pool deck held) moved to Answered and into the outdoor-floor task; your Sigma notes became their own reconciliation task
+  (13 openings vs the 65-opening census, corners in m.l both ways with a reference-book search, domes out, pool ceiling
+  12.834 m2 accepted).
+
+TEAM HEALTH (20:17 - 00:20)
+- Closed slots: worker 1 20:22 SUCCESS, 22:20 SUCCESS; worker 2 21:39 SUCCESS, 23:41 SUCCESS; worker 3 21:02 SUCCESS, 23:00
+  SUCCESS; checker 21:50 SUCCESS (20:33 also). Checker 23:51 still running (it merged at 23:53), worker 1 00:19 starting.
+  7 of 7 closed slots STARTED + SUCCESS. Every self-check PASS (codemap, t061, freeze 0): every agent ran code.
+- Lead self-check PASS (codemap stale none, t061, freeze 0).
+- What I did: checker queue for 3 runs (V3.0.2 Gate B first, slab steel and the slab rework critical, three results over 6 h
+  next); steel integration re-sequenced ahead of the slab-face package because all its inputs are merged; lane S had nothing
+  it was allowed to claim, so the dome-ring task is released; 5 new tasks (release baseline, Sigma reconciliation, railings /
+  shutters census, stair / pool / tank steel, formwork); 6 designer items (D-49 .. D-54); 12 element-register rulings
+  (including: the north strip is the side walk, porcelain, never interlock; porch floor and porch soffit are two surfaces).
+
+OWNER PACKAGE (same five questions; no new question)
+- Q-71 bars per metre: it now decides about 6.38 .. 6.73 t of held steel (five footings 2,742.51 .. 2,836.40 kg, column
+  links 781 .. 829 kg, slab bottom mesh 2,853.00 .. 3,068.05 kg). NEW evidence: a second frozen engine file calls option C
+  (rate x full side, unrounded) "your decision", while the first pointed to rounding up; neither is in your answers, so the
+  team uses neither. Please say whether either was yours, or choose A / B / C. Drawing facts only, no recommendation.
+- Q-72 stair shaft, Q-73 block openings, Q-74 strap length, Q-75 black block size: unchanged (full text in OWNER_QUESTIONS.md).
+
+NEEDS FIXING
+- Small, for the main chat: the start-up hook still does not prepare `.work` in repo-attached sessions (this run too); setup
+  by hand works every time, so nothing is lost.
+- Still waiting: Kuwait specification chapters (07100, 09200, 09300, 09400, 09900) as PDFs under 6 MB; designer items
+  D-39 .. D-54 when you choose to send them.
+
+Team ids: MERGED T-119 r2, T-130 r3, T-134, T-156, T-149, T-144, T-155 r2; READY 12 (T-142 Gate B, T-152, T-139 r2, T-125,
+T-143, T-128, T-147, T-154, T-150, T-159, T-161, T-140); TODO permitted T-160 (S), T-157 / T-162 / T-158 (A), T-151 /
+T-165 (I); TODO not permitted T-166, T-163 (S), T-164 (A); T-132 checker only.
+
 ## LEAD REPORT 2026-10-21 20:20 UTC
 
 Repositories: attached Urban-Project-AI checkout + wrapper (setup by hand: the start-up hook did not run; then board log /
@@ -119,59 +182,3 @@ NEEDS FIXING
 Team ids: READY 16 (checker order run 1: T-130 r2, T-133 Gate B, T-153, T-139 + T-145; run 2: T-119, T-141, T-148, T-134;
 run 3: T-155, T-125, T-143, T-128; run 4: T-144, T-147, T-154); backlog-permitted TODO T-149 (S), T-150 (A), T-156 (I, new);
 TODO not permitted T-152 (S), T-157 (A, new); T-140 waits for T-130; D-48; OQ-04 re-asked.
-
-## LEAD REPORT 2026-10-21 12:20 UTC
-
-Repositories: Urban-Project-AI cloned in full (agents/control); working branch head still 0dec24c (no merge and no
-owner-session commit since 05:07); your Test B branch agents/config-candidate moved to 53468f6. Drive readable (Alsenan
-folder and the other project folders listed; no new files needed). UrbanProjectsManager not needed this run.
-
-PROGRESS (Alsenan; released concrete still 92.77 vs freelancer 111.81 m3, -17.0 %; no released number changed)
-- Ceilings, a BOQ category that had no quantity, now measured room by room (your Q-57 A modified): decor gypsum
-  388.14 m2 vs his 409.58 (-5.2 %). GF -11.1 % is exactly the light well 23.24 + stair strips 2.45 he ceils (engine right
-  on two drawings); on 1F he leaves out about 23 m2 over the double-height void. Bulkheads 32.78 m2 by your method (175.76
-  drawing-derived, provisional). Paintable gypsum 420.92 vs his 452.33 (-6.9 %; +2.8 % without his cove strips). Held:
-  wet-room board type, coves, drops, dome openings.
-- Column steel by bar population (column schedule, by hand): 1,887.13 kg net released + 1,552.43 kg held by cause; links
-  0.78 .. 0.83 t wait on Q-71; his column steel is part of one 7.95 t lump (rule difference, no %). Found: the released
-  structural route reports 172.56 kg as verified on 3 planted columns from a duplicated schedule row with no printed row;
-  the candidate will hold them.
-- Slab leftovers settled: beams 65.060 vs his 65.97 m3 (-1.4 %, was -1.8 %); slabs 60.280 vs 59.817 (+0.77 %); every one
-  of the 13 extra faces has a home line or a named hold; sunken-slab drops are printed nowhere (held).
-- Window sills / heads from the elevations: 9 openings measured, 3 earlier readings corrected; drawing-derived dry
-  plaster net incl. the shaft 976.22 .. 1,080.33 vs his 1,151.14 m2 (-15.2 .. -6.2 %); the range is the 23 openings with
-  nothing printed.
-- Learned: close every dimension chain on its printed total before trusting a part; every released bar line needs its
-  printed schedule row.
-- Gate 2 (finishes) and gate 3 (structure) both gained hand truths; neither moved, because nothing was checked or merged.
-
-TEAM HEALTH (slots 08:00 - 12:00)
-- Code ran fully: worker 1 08:19 and 10:21, worker 2 09:40 and 11:40 (all self-checks PASS, Drive read OK).
-- No record at all: the checker at 09:50 and 11:50 (also 05:49, 06:49, 07:49): the 11:50 run ended after about 2 minutes,
-  before its start line, the signature of a refused first clone with no fallback (not proven). Worker 3 at 10:59 the same
-  (about 1.5 minutes). Worker 3 08:00 BLOCKED (board push refused "[Untrusted Code Integration]").
-- 4 of 7 slots SUCCESS = 57 % (was 67 %, target 90 %). Twelve results wait for the checker; the day-7 target holds only if
-  it merges the candidate extension by 24 Oct.
-- What I did: re-ordered the checker queue (registry, candidate, slabs with the slab leftovers, columns, then the rest);
-  gave lanes S and A only drawing-reading tasks a checker can verify by re-reading (beam steel, slab steel, doors and
-  windows, floor area room by room); queued the column-steel wiring with the planted columns held; filed designer items
-  D-45 .. D-47.
-
-QUESTIONS FOR OWNER
-No new question. New evidence on Q-71 (bars printed per metre): the released structural route uses three statements
-recorded as your claims on 6 Oct ("6 ø 8/m = 6 tie sets per metre", "L = 80 uses 3 links", "note 22B: rate per metre,
-rounded up") that were never put in the Urban rules; the team did not use them. Please say whether they are your rule
-and, if so, on which length (inside the covers or the full side). Q-71 now also decides column links 0.78 .. 0.83 t and the
-beam and slab bar counts. Still open: Q-71 .. Q-75 (five, one package; see the 08:20 report for the full text).
-
-NEEDS FIXING
-- The checker has merged nothing for seven hours and twelve results wait: please finish Test B and approve the
-  repo-attached configuration (P-01), or run the checker once by hand. Tried: queue re-ordered, board kept small,
-  hand-only tasks so a checker that can run no code can still verify.
-- Kuwait specification chapters (07100, 09200, 09300, 09400, 09900) as PDFs under 6 MB (09200 now also for the wet-room
-  ceiling board).
-- Designer requests to forward when you choose: new D-45 (window schedule), D-46 (planted-column bars), D-47 (wet-room
-  ceiling board and drops).
-
-Team ids: READY T-130 r2, T-133, T-139 + T-145, T-119, T-141, T-148, T-125, T-143, T-128, T-144, T-147 (checker order);
-new TODO T-149, T-152 (S), T-150, T-153 (A); T-151 (I) queued; T-134 first in lane I.

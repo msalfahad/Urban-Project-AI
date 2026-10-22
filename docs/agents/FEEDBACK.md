@@ -34,6 +34,35 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
    commit. Decision: board-only handoffs are verified as hand evidence (the verifier re-reads the cited notes), and the
    next task on the topic writes the files (T-117); a run with no line stays a NEEDS FIXING item for the owner's setting.
 
+## 2026-10-22 00:20 (lead run)
+
+- **Checker 20:33 / 22:16 SUCCESS, 23:51 running**: 7 merged since 20:20 (T-119 r2, T-130 r3, T-134, T-156, T-149, T-144,
+  T-155 r2 at 23:53), 1 rejected (T-155 r1, text and evidence, now merged as r2). Every READY row CAPACITY.
+- **T-119 r2 columns: WORKED (MERGED 0f32ff8)**: tank columns HELD 3.00 .. 3.80 m; re-measured 0.0 %.
+- **T-130 r3 registry 1.1.0 and T-140 census V2: WORKED / READY**: T-140 found that "released V2.9 + route G" names two runs
+  (no profile 1,455 lines vs profiled 1,621 lines, 8 family figures differ). Decision: new T-165 (lane I, permitted) pins
+  one baseline by provenance; until then every diff names its run (register note).
+- **T-134 element register v0, T-156 Gate B tool: WORKED (MERGED)**. Checker note: 58 lines change only the knowledge
+  rule_set id vs V2.9 and are listed changed-unflagged (seen, not hidden): no action.
+- **T-149 beam steel: WORKED (MERGED 4972ac5)** with two integration conditions (RELEASED -> DRAWING-CONFIRMED, end-support
+  top bars UNKNOWN). Decision: added to T-151, which is re-sequenced ahead of T-146 (all inputs merged) and claimable the
+  moment T-142 merges.
+- **T-144 opening heights: WORKED (MERGED 75be4ad)**.
+- **T-155 r2 Q-71 evidence: WORKED (MERGED 15fd913)**: BOXED cells and closed-cage symbols described; leg lengths HELD.
+- **T-142 V3.0.2 integration package: pending Gate B** (footing steel 3,735.91 -> 874.86 kg drawing-confirmed + 2,742.51 ..
+  2,836.40 held; soffits 44.446 m2; D1-D3 fixed).
+- **T-152 slab steel: pending (PARTIAL by design)**: bottom 2,853.00 .. 3,068.05 kg on Q-71; top bars HELD on a sheet-note
+  vs typical-detail conflict; a frozen file labels two statements as owner decisions that the owner never recorded.
+  Decision: D-49 .. D-52 filed for the designer; the AD2 statements and the slab share added to Q-71 as evidence (no new
+  question); T-160 now permitted (lane S had nothing claimable).
+- **T-159 facade per side: pending**: 1,022.534 m2 vs freelancer walls 968.237 (+5.6 %, RULE_DIFFERENCE). The owner's Sigma
+  checks (openings, corners, domes, pool ceiling) were not part of it. Decision: new T-162 (lane A, permitted) and R-11 (c)/(d)
+  for the corner and half-opening conventions.
+- **T-161 photo review: pending**: renders show the 3 drawn domes (BOQ unchanged by the client change); missing BOQ
+  categories railings and shutters. Decision: new T-164 (lane A, gate 1, not permitted yet), D-53 / D-54 filed.
+- **Lane S running dry** (worker 1 had no permitted row after T-152). Decision: T-160 permitted now, T-166 (stair / pool / tank
+  steel) and T-163 (formwork, a missing category) queued behind it.
+
 ## 2026-10-21 20:20 (lead run)
 
 - **Checker back (recurring cause 4 closed for now)**: 15:51 and 17:52 runs SUCCESS on the repo-attached setup; 5 merged

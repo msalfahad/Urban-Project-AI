@@ -1,12 +1,14 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
 Plain words, no task numbers. Measured numbers come from SCOREBOARD.md; anything not measured says so.
-Last update: 2026-10-21 20:20 UTC (Lead). Previous version: 2026-10-21 16:20 UTC. The released numbers did not change
-(the released method is untouched). NEW and checker-verified since 16:20, in the opt-in candidate only: columns above the
-necks 36.714 -> 34.446 m3 (5 columns no upper slab plan draws, 2.268 m3, confirmed by hand) and blinding under footings
-15.179 m3 (hand 15.213, -0.2 %), the first change verified through the whole integrated BOQ (day-7 target met early).
-Also verified as hand pieces: floor area room by room (dewaneya 0.0 %), column steel (3 columns re-counted, 0.0 %),
-ground-beam spans (3 spans re-measured).
+Last update: 2026-10-22 00:20 UTC (Lead). Previous version: 2026-10-21 20:20 UTC. The released numbers did not change
+(the released method is untouched) and no candidate quantity changed since 20:20. Checked and merged since 20:20, as hand
+pieces (not in any released line): columns to the member above each column (28.816 .. 29.139 m3 vs his 28.547; the two
+columns at the water tank held as a 3.00 .. 3.80 m range), beam steel by bar population (5,171 kg net; the checker
+re-counted three beams at 0.0 / +0.01 / -0.1 %), window heights and sills for the plaster / paint nets, the footing
+"per metre" evidence for your Q-71, the coverage registry and the element register code. Waiting for the checker: the
+second candidate extension (footing steel, soffits), slab steel, the facade per side you asked for, and the review of
+your 27 images (they are the designer's renders).
 
 ## Where we are on the five gates
 | Gate | In plain words | Due | Done so far | State |
@@ -18,12 +20,9 @@ ground-beam spans (3 spans re-measured).
 | 4 | Read scanned and PDF plans | 9 Dec | the vector-PDF height reader is merged, but the Alsenan PDF sheets are scans; a scan reader that releases a number only when its dimension chain adds up exactly is now on the board | started (one task) |
 
 ## Engine vs freelancer BOQ: Alsenan Chalet (released concrete run, commit 8774071, unchanged; waterproofing released in ARCH_TAKEOFF_V2.11)
-Since 08:20 (Lead 12:20): still nothing checked or merged (the checker has left no record since 05:07; twelve results
-wait for it). New hand results this morning, waiting for the checker: ceilings room by room for the first time (decor
-ceiling 388.14 m2 vs his 409.58, -5.2 %); column steel by bar population (1,887.13 kg net released, 1,552.43 kg held by
-cause; his steel is one 7.95 t lump); the slab leftovers settled (beams 65.060 vs 65.97 m3, -1.4 %; slabs 60.280 vs
-59.817, +0.77 %); window sills and heads read from the elevations for 9 openings (plaster / paint nets now measured as a
-range). No released number changed; the released default stays until you switch it.
+Since 20:20 (Lead 2026-10-22 00:20): no released or candidate number changed; the checker merged hand pieces only
+(columns to the member above, beam steel, window heights, footing "per metre" evidence). New hand results waiting for it:
+slab steel, the facade per side, the image review. The released default stays until you switch it.
 "piece" = a merged, checked method piece run on the real drawing; "hand" = a reading of the drawing.
 | Trade | Unit | Engine | Freelancer | Difference | Change since last report | Target | State |
 |---|---|---|---|---|---|---|---|
@@ -36,7 +35,7 @@ range). No released number changed; the released default stays until you switch 
 | Stairs (flight-by-flight ledger MERGED 04:03, checker re-measured one flight 0.7248 m3 and both arrival wedges; not wired yet) | m3 | main stair 4.920 by your method / 4.746 by the drawing (was 5.011: three arrival wedges now counted once); slab under the winders in no line: HELD 0.230 .. 0.250; entrance steps 0.357 (its sloping slab held: not printed), lobby steps 0.126 | main stair 8.131; entrance 1.411; round stair 5.510 | main stair -3.211 (-39.5 %) | was -3.12 (-38.4 %): wedges counted once; checker: engine right (his 5.3 m flights are on no drawing) | within 2 % | his flights are longer than drawn; winder steps and the round stair asked you; the last riser inside the arrival slab (0.163 m3) asked you |
 | Blinding (piece, merged; checker re-measured) | m3 | 15.179 released under the 25 released footings (checker's own outline union 151.794 m2 x 0.10) + HELD: F10 0.480 .. 0.590, under ground beams 5.724 .. 9.423, under straps 0.772 (released run still 22.155) | 47.055 | not comparable: his figure is one plate under the whole plot, drawn nowhere (rule difference) | NEW: piece checked and merged | within 2 % | held parts wait on your Q-21 / Q-31 answers (C) and the designer; never shown as 0 |
 | Columns (piece, merged; checker re-measured) | m3 | 34.446 (piece: the 5 occurrences no upper slab plan draws removed, -2.268); released run still 36.714 | 28.547 | piece +5.90 (+20.7 %); released +8.17 (+28.6 %) | NEW: piece checked and merged (engine right on the 5 columns); in the next candidate step | within 2 % | the rest is height: he takes storey minus 0.75 m everywhere; the Urban rule takes the deepest beam at each column: column-by-column table on the board |
-| Columns to the deepest member framing into each column (hand, waiting for the checker; your rule) | m3 | 28.816 .. 28.979 (range = column C8 drawn 30x80 vs schedule 30x90, designer); the 5.467 m3 between the old and new heights is joint 4.264 + column heads 1.203, to become their own lines, not lost | 28.547 | +0.27 .. +0.43 (+0.9 .. +1.5 %) | NEW row | within 2 % | 33 columns calculated, 26 held on a held beam, a projection depth, the annex level or C8 |
+| Columns to the deepest member framing into each column (hand, CHECKED and merged; your rule) | m3 | 28.816 .. 29.139 (range = column C8 drawn 30x80 vs schedule 30x90, and the two water-tank columns 3.00 .. 3.80 m high until the designer says whether the tank beam stands up or hangs down); the joints and column heads become their own lines, not lost | 28.547 | +0.27 .. +0.59 (+0.9 .. +2.1 %) | checked: two columns re-measured by the checker at 0.0 % | within 2 % | 33 columns calculated, 26 held on a held beam, a projection depth, the annex level or C8 |
 | Pool | m3 | 3.50 (released) | 12.35 | -8.85 | none | within 2 % | volume from the printed sizes is on the board |
 | Domes | m3 | none (your answer: not concrete) | 6.78 | rule difference | none | - | settled |
 | Wet-area waterproofing floor, 17 areas (piece + hand) | m2 | 72.12 | 72.01 | +0.11 (+0.16 %) | none | within 3 % | not yet in the released BOQ (wiring is first on the board) |
@@ -51,7 +50,8 @@ range). No released number changed; the released default stays until you switch 
 | Plaster / paint wall height (both methods) | m | your manual method: GF 3.65, annex 3.15 (provisional), 1F and 2F 3.35; drawing-derived (hand, waiting for the checker): GF 4.09 .. 4.19, 1F / 2F 3.79 .. 3.89 to the decor ceiling | GF 3.60, upper 3.40 (flat) | drawing-derived is 0.44 .. 0.54 m higher everywhere: your 0.60 m beam allowance against the 0.16 m slab where no beam crosses | NEW: drawing-derived heights measured | exact | rooms under a roof wait on the roof level (designer); floor build-up not printed (0 .. 0.10 m range) |
 | Facade run (pieces merged, not wired) | m | 1F 63.009 (released 63.169); GF released 98.887, merged piece 105.887 = hand (geometric perimeter); billable by your Q-64 B 105.787, reveal returns 0.100 apart | no run row (he prices exterior plaster per elevation) | 1F -0.160 (-0.25 %) = hand; GF engine -7.000 (-6.6 %) vs hand | NEW: GF fix checked and merged; the passage is roofed full length by the slab plans: outside or inside asked you (98.887 if inside) | exact | GF: the open-air side passage walls were missing; new finding: the first floor covers 4.08 m2 of that passage (soffit and slab over outside air measured nowhere: census on the board); a 0.10 m notch at the pool glass asked you (105.787 or 105.887) |
 | Ceilings over outside air (hand, MERGED 04:03; checker re-measured the pool court 12.834 from the printed dimensions) | m2 | 44.446 (porch 19.181, side passage 5.640, pool court 12.834 = 16.525 gross less the drawn opening 3.690, 1F edges 4.374 + 2.417); opening heads and frame recess 1.665 listed apart; finish HELD (no note on any sheet; your Q-68 C, option A provisional only) | 19.154 (pool ceiling only) | pool ceiling his +6.320 (+49.2 % over hand): engine right | was 46.316 (checker basis that added the court walls' tops) | exact | finish waits on the Kuwait specification chapters / designer |
-| Rebar | t | footings (piece MERGED 02:29): 0.875 t on 19 footings printed with a bar count + 2.743 .. 2.836 t HELD (your Q-71); ground beams and straps (hand, MERGED 05:07): 1.480 t net + laps / development 0.647 .. 1.195 t HELD + stock-length splices 0.018 .. 0.032 t HELD ; columns above the necks (hand, waiting for the checker): 1.887 t net released + 1.552 t HELD by cause, links 0.781 .. 0.829 t HELD (Q-71), laps on the note-9 range HELD | footings + straps + ground beams one lump 5.8 t; walls + columns + necks one lump 7.95 t; total 44.19 t | not comparable (his lumps mix elements) | ground-beam steel now merged with its lap range | within 2 % | the drawing prints the lap rule (40 d / 70 d) but not which bars are in tension: a range, not a guess |
+| Facade faces side by side, your request (hand, waiting for the checker) | m2 | 1,022.534 measured + 6.822 .. 13.261 HELD + 13.079 m of slab edge (depth not printed); in your Q-07 bands without plinth 955.797 | his walls 968.237 (his exterior Sigma 1,502.84 gross includes domes, parapets, boundary wall, drip edge) | +54.30 (+5.6 %): rule difference (he takes one plane per elevation, the drawing has set-back faces) | NEW row | within 3 % | net after openings held; his Sigma is being reconciled term by term with your notes (13 openings, corners in m.l, domes out, pool ceiling 12.834 accepted) |
+| Rebar | t | footings (piece MERGED 02:29): 0.875 t on 19 footings printed with a bar count + 2.743 .. 2.836 t HELD (your Q-71); ground beams and straps (hand, MERGED 05:07): 1.480 t net + laps / development 0.647 .. 1.195 t HELD + stock-length splices 0.018 .. 0.032 t HELD ; columns above the necks (hand, CHECKED and merged): 1.887 t net + 1.552 t HELD by cause, links 0.781 .. 0.829 t HELD (Q-71), laps on the note-9 range HELD; beams (hand, CHECKED and merged): 5.171 t net; suspended slabs (hand, waiting for the checker): bottom 2.853 .. 3.068 t on your Q-71, top bars 0.753 .. 1.932 t HELD on a sheet-note vs typical-detail conflict (designer) | footings + straps + ground beams one lump 5.8 t; walls + columns + necks one lump 7.95 t; total 44.19 t | not comparable (his lumps mix elements) | ground-beam steel now merged with its lap range | within 2 % | the drawing prints the lap rule (40 d / 70 d) but not which bars are in tension: a range, not a guess |
 | Ground-beam spans split at the columns standing on them (code piece, waiting for the checker) | kg | ground-beam bottom steel 1,194.60 (was 1,238.56 by the released splitter, -43.96 kg, -3.5 %); 52 of 53 spans = the hand ledger within 0.3 mm | lump of another scope | not comparable | NEW row | - | two oblique straps HELD on their length (asked you Q-74) |
 | Blockwork wall metres (hand, merged; code piece run on Alsenan, merged: 149.42 / 118.20 / 39.60, not ready to wire) | m | GF 143.16, 1F 120.75, 2F 39.78 (hand) | 134.28, 120.31, 39.10 | +8.88 (+6.6 %), +0.44 (+0.4 %), +0.68 (+1.7 %) | NEW: every wall typed: white 141.31 m and black 136.00 m by your fallback (ASSUMED), black 57.54 m by the structural note, 125.35 m held (parapets, street fence: asked you; sea-side 7.00 m) | within 3 % | GF over target: explained wall by wall, the two glass walls (12.05 m) are the whole gap: asked you; 3 walls drawn 0.15 hold a column the notes say must be built at column thickness (designer); he gives no block type on any row; a below-ground black block run (2 x 31.17 m) is in neither BOQ |
 | Block wall area, gross before openings (hand, waiting for the checker; your Q-60 A height to the member above) | m2 | 955.63 measured (GF 460.07, 1F 371.83, 2F 123.73); with the held walls at their candidate heights 1,036.5 .. 1,042.7; m3 172.19; white blocks 2,512 (62.5x25) or 3,268 (60x20) | 1,094.50 (GF 515.40, 1F 441.41, 2F 137.70) | -138.9 (-12.7 %); with held walls -5.3 .. -4.7 % | NEW row | within 3 % | net area HELD: no rule deducts openings from block (asked you Q-73); black count HELD (block size, asked Q-75); 12.91 m of walls with no height (designer) |
@@ -63,7 +63,8 @@ range). No released number changed; the released default stays until you switch 
 | Floor tile count per room (piece, merged) | tiles | held in all 25 floor rooms: no tile size printed on any Alsenan sheet; for 60x60 on 23 rooms 697 tiles without offcut reuse (+21 % over net m2) or 611 with reuse in the same room (+6 %) | not given | not comparable | new | exact | tile size per room and offcut reuse asked you |
 | Stair marble (piece, merged; flight-once piece merged 23:33: released tread marble 27.324 -> 20.424 m2 + 0 .. 3.450 held, steps 91.028 -> 68.028 lm + 0 .. 11.500 held) | m2 | 39.49 (treads, risers, landings) | 295.44, of which 151.80 is the court paving counted a second time; stairs and landings alone 143.64 | not comparable: his step rows are metres added to m2 | NEW: his double count found in his own formulas | exact | turning steps and round stair held (your answers pending) |
 | Tiling materials (piece, PROVISIONAL) | bags / m3 | cement 80 - 111 bags, sand 10.91 - 15.21 m3, adhesive 58 bags of 20 kg | not given | - | new | - | provisional by your answer; stair bed held on the 1:3 question |
-| Floor area | m2 | held | not compared | - | none | within 1 - 2 % | 11 labelled spaces held instead of lost; room-by-room table on the board |
+| Floor area inside the house, room by room (hand, CHECKED and merged) | m2 | 376.86 .. 376.98 (GF 210.80, 1F 138.13 .. 138.25, 2F 27.93); wet 85.62, dry like for like 337.18 | wet 72.01; dry like for like 337.57 | dry -0.39 (-0.12 %); wet +13.61 = the pantry, wet by your answer | was held | within 1 - 2 % | every one of the 41 labels has a row, none silent; the released method still counts the open side passage (about 5.2 m2) as inside floor |
+| Outside floors by your new rule (hand areas; finish lines being built) | m2 | court interlock 138.761 less the porch 19.181 (and a 3.360 element footprint); porch 19.181 its own line, material open; north side walk porcelain: your method 1.50 x 15.97 = 23.955, drawing 21.348 (checker 21.021); side passage porcelain 5.640; pool deck 7.605 HELD | yard 151.80 | not compared until the lines exist | NEW row | within 1 - 2 % | the renders show stone in the court: your choice (interlock) governs and is recorded as differing from the render |
 
 ## Engine vs freelancer BOQ: development project 2 (apartment)
 Not measured, and paused by your order (Alsenan first).
@@ -153,18 +154,19 @@ Not measured, and paused by your order (Alsenan first).
   development lengths, so a steel ledger is not complete until it has read them.
 
 ## Being worked on now
-- Checker (running again since 15:51; 5 merged, 3 sent back with exact reasons): thirteen results wait. Next: columns at
-  the water tank (now held as a 3.00 .. 3.80 m range), the coverage registry, its own integrated-BOQ diff tool, the
-  element register; then beam steel and the finishes hand results; then doors / windows.
-- Integration (worker 3): next the second candidate extension: footing steel (874.86 kg released on the 19 footings with
-  a printed count, the per-metre footings held on your Q-71), membrane coverage proof attached to each roll line, the
-  soffits over outside air (44.446 m2, finish held), plus three defects the checker found in the first extension.
-- Structural (worker 1): two text fixes in the slab check (note quoted word for word, a wrong page), then slab steel by
-  bar population; then the dome ring beams (the register may count about 1.1 m2 of ring per dome twice).
-- Architecture and finishes (worker 2): YOUR REQUEST first: the outside of the house side by side, length and height of
-  every facade side and its area, openings listed apart; then the stair calculator from your new stair rule.
-- Research scout (next run 24 Oct 23:50 UTC, now twice a week): open requests on footing schedules from CAD tables,
-  laps in bar schedules, and the measurement-standard clauses behind the block-opening and strap-length questions.
+- Checker (clean runs at 20:33 and 22:16, running since 23:51; 7 merged since 20:20, one sent back and merged after its rework): twelve results wait.
+  Next: the second candidate extension (footing steel, soffits) through the full integrated check, then slab steel and the
+  slab text fixes, then blockwork, plaster / paint, ceilings, doors / windows, the facade and the image review.
+- Integration (worker 3): when the second extension is merged, the third: column, ground-beam, strap and beam steel from
+  the checked hand ledgers into the candidate (planted columns and unsized bars held). Meanwhile: one fixed definition of
+  "the released run" (two different runs carry that name today; 8 family figures differ between them).
+- Structural (worker 1): the dome ring beams (the beam register may count part of each ring twice), then stair, pool and
+  tank steel by bar population, then formwork (a missing category; your two open formwork alternatives side by side).
+- Architecture and finishes (worker 2): YOUR outdoor floor rule as BOQ lines (court interlock, porch on its own, side walk
+  and passage porcelain, steps marble), then your exterior Sigma notes term by term, then the stair calculator; then
+  railings and shutters (missing from every BOQ so far; only what is drawn is measured).
+- Research scout (next run 24 Oct 23:50 UTC): added to its requests: published conventions for exterior plaster corners
+  (2 m.l = 1 m2) and half-area opening deductions, for you to decide.
 
 ## What is missing
 - Window sills / heads for 20 windows and 3 arch openings (designer window schedule asked); every door but the main entrance (2.20 m by your Q-55 C, stated as assumed).
@@ -181,26 +183,22 @@ Not measured, and paused by your order (Alsenan first).
 - The Kuwait specification chapters on waterproofing, floors, wall tiles and paint (file too big: parts needed).
 
 ## Waiting for the owner
-- Still open, one package (all no-assumptions questions; work continues, only the affected quantity is held): Q-71 bars
-  printed per metre (A 2,742.51, B 2,836.40, C 2,797.81 kg for five footings; no recommendation any more, drawing facts
-  only: "/m" is bars per metre, the whole-bar rule is printed nowhere, A spaces bars wider than printed in all 20 rows;
-  it also decides column links 781 .. 829 kg and the beam and slab bar counts; three project-only statements of 6 Oct the
-  team did not use: please say whether they are your rule); NEW in the package: the outside areas (existing question
-  OQ-04): are court / porch / passage / pool-deck finishes in the BOQ (A all, 173.354 m2, material from the designer,
-  recommended; B none; C porch and deck only, 26.786 m2)? The freelancer prices a yard of 151.80 m2 against 167.714 m2
-  measured; Q-72 stair shaft (A 136.14, B 163.93 .. 165.35 recommended, C 157.66 m2);
-  Q-73 openings in block walls (A deduct every opening, recommended; B over 0.50 m2 only; C none, gross 955.63 m2);
-  Q-74 oblique strap length (A along the axis 2.293 / 3.258 m, recommended; B projected; C centre to centre); Q-75 black
-  block size (A 40 x 20 module, 12.5 per m2, recommended; B another size; C count held).
-- Setting (P-01): done by your main chat; worker 1 and the checker now run clean on it; worker 3 moves at 20:59, the Lead
-  after it. One small fix for the main chat: the start-up hook does not run by itself in these sessions (every agent
-  runs setup by hand, which works).
-- Proposal (no decision needed now): draw the checker's 2 random lines only from lines that carry a quantity (269 of the
-  460 other lines carry none, so random picks land on held text).
+- Still open, one package (work continues, only the affected quantity is held): Q-71 bars printed per metre (A / B / C;
+  drawing facts only). It now decides about 6.38 .. 6.73 t of held steel: five footings 2,742.51 .. 2,836.40 kg, column
+  links 781 .. 829 kg and the slab bottom mesh 2,853.00 .. 3,068.05 kg. NEW evidence: a second frozen engine file calls
+  "rate x full side, unrounded" (option C) your decision, while the earlier one pointed to rounding up; neither is in your
+  answers, so the team uses neither: please say whether either was yours. Q-72 stair shaft (A 136.14, B 163.93 .. 165.35
+  recommended, C 157.66 m2); Q-73 openings in block walls (A deduct every opening, recommended; B over 0.50 m2 only; C none,
+  gross 955.63 m2); Q-74 oblique strap length (A along the axis 2.293 / 3.258 m, recommended; B projected; C centre to
+  centre); Q-75 black block size (A 40 x 20 module, 12.5 per m2, recommended; B another size; C count held).
+- Answered and applied: outside areas (your rule: court interlock, sides porcelain / ceramic, outside stairs marble; porch
+  measured, material later; pool deck held). Nobody will ask again.
+- Your choices still open from your own notes (not questions): porch material, pool deck finish, corners (2 m.l = 1 m2) and
+  the half-opening deduction in exterior plaster once the sources are found.
+- Proposal (no decision needed now): draw the checker's 2 random lines only from lines that carry a quantity.
 - Your confirmation of the reconciliation proposal (manual and drawing methods side by side); until then nothing released
   changes.
-- Designer requests to forward when you choose: DESIGNER_CLARIFICATIONS.md (new D-48 garden band and side passage: open
-  or roofed, planter or floor; D-45 window schedule, D-46 planted-column bars, D-47 wet-room ceiling boards and drops;
-  earlier D-39 .. D-44).
-- Upload the Kuwait specification chapters 07100, 09200, 09300, 09400, 09900 as separate PDFs under 6 MB (also needed for
-  the wet-room ceiling board and the soffit finish under your Q-68 C).
+- Designer requests to forward when you choose: DESIGNER_CLARIFICATIONS.md, NEW D-49 .. D-54 (slab top-bar extent, three
+  slab labels and a bar zone, 13 slab panels with no bars, the tank slab note, the main door / pool-court arch / W02 against
+  the renders, a railing and shutter schedule); earlier D-39 .. D-48.
+- Upload the Kuwait specification chapters 07100, 09200, 09300, 09400, 09900 as separate PDFs under 6 MB.

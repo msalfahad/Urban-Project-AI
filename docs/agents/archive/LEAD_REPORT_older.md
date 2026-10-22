@@ -1,3 +1,59 @@
+## LEAD REPORT 2026-10-21 12:20 UTC
+
+Repositories: Urban-Project-AI cloned in full (agents/control); working branch head still 0dec24c (no merge and no
+owner-session commit since 05:07); your Test B branch agents/config-candidate moved to 53468f6. Drive readable (Alsenan
+folder and the other project folders listed; no new files needed). UrbanProjectsManager not needed this run.
+
+PROGRESS (Alsenan; released concrete still 92.77 vs freelancer 111.81 m3, -17.0 %; no released number changed)
+- Ceilings, a BOQ category that had no quantity, now measured room by room (your Q-57 A modified): decor gypsum
+  388.14 m2 vs his 409.58 (-5.2 %). GF -11.1 % is exactly the light well 23.24 + stair strips 2.45 he ceils (engine right
+  on two drawings); on 1F he leaves out about 23 m2 over the double-height void. Bulkheads 32.78 m2 by your method (175.76
+  drawing-derived, provisional). Paintable gypsum 420.92 vs his 452.33 (-6.9 %; +2.8 % without his cove strips). Held:
+  wet-room board type, coves, drops, dome openings.
+- Column steel by bar population (column schedule, by hand): 1,887.13 kg net released + 1,552.43 kg held by cause; links
+  0.78 .. 0.83 t wait on Q-71; his column steel is part of one 7.95 t lump (rule difference, no %). Found: the released
+  structural route reports 172.56 kg as verified on 3 planted columns from a duplicated schedule row with no printed row;
+  the candidate will hold them.
+- Slab leftovers settled: beams 65.060 vs his 65.97 m3 (-1.4 %, was -1.8 %); slabs 60.280 vs 59.817 (+0.77 %); every one
+  of the 13 extra faces has a home line or a named hold; sunken-slab drops are printed nowhere (held).
+- Window sills / heads from the elevations: 9 openings measured, 3 earlier readings corrected; drawing-derived dry
+  plaster net incl. the shaft 976.22 .. 1,080.33 vs his 1,151.14 m2 (-15.2 .. -6.2 %); the range is the 23 openings with
+  nothing printed.
+- Learned: close every dimension chain on its printed total before trusting a part; every released bar line needs its
+  printed schedule row.
+- Gate 2 (finishes) and gate 3 (structure) both gained hand truths; neither moved, because nothing was checked or merged.
+
+TEAM HEALTH (slots 08:00 - 12:00)
+- Code ran fully: worker 1 08:19 and 10:21, worker 2 09:40 and 11:40 (all self-checks PASS, Drive read OK).
+- No record at all: the checker at 09:50 and 11:50 (also 05:49, 06:49, 07:49): the 11:50 run ended after about 2 minutes,
+  before its start line, the signature of a refused first clone with no fallback (not proven). Worker 3 at 10:59 the same
+  (about 1.5 minutes). Worker 3 08:00 BLOCKED (board push refused "[Untrusted Code Integration]").
+- 4 of 7 slots SUCCESS = 57 % (was 67 %, target 90 %). Twelve results wait for the checker; the day-7 target holds only if
+  it merges the candidate extension by 24 Oct.
+- What I did: re-ordered the checker queue (registry, candidate, slabs with the slab leftovers, columns, then the rest);
+  gave lanes S and A only drawing-reading tasks a checker can verify by re-reading (beam steel, slab steel, doors and
+  windows, floor area room by room); queued the column-steel wiring with the planted columns held; filed designer items
+  D-45 .. D-47.
+
+QUESTIONS FOR OWNER
+No new question. New evidence on Q-71 (bars printed per metre): the released structural route uses three statements
+recorded as your claims on 6 Oct ("6 ø 8/m = 6 tie sets per metre", "L = 80 uses 3 links", "note 22B: rate per metre,
+rounded up") that were never put in the Urban rules; the team did not use them. Please say whether they are your rule
+and, if so, on which length (inside the covers or the full side). Q-71 now also decides column links 0.78 .. 0.83 t and the
+beam and slab bar counts. Still open: Q-71 .. Q-75 (five, one package; see the 08:20 report for the full text).
+
+NEEDS FIXING
+- The checker has merged nothing for seven hours and twelve results wait: please finish Test B and approve the
+  repo-attached configuration (P-01), or run the checker once by hand. Tried: queue re-ordered, board kept small,
+  hand-only tasks so a checker that can run no code can still verify.
+- Kuwait specification chapters (07100, 09200, 09300, 09400, 09900) as PDFs under 6 MB (09200 now also for the wet-room
+  ceiling board).
+- Designer requests to forward when you choose: new D-45 (window schedule), D-46 (planted-column bars), D-47 (wet-room
+  ceiling board and drops).
+
+Team ids: READY T-130 r2, T-133, T-139 + T-145, T-119, T-141, T-148, T-125, T-143, T-128, T-144, T-147 (checker order);
+new TODO T-149, T-152 (S), T-150, T-153 (A); T-151 (I) queued; T-134 first in lane I.
+
 ## LEAD REPORT 2026-10-21 08:20 UTC
 
 Repositories: Urban-Project-AI: full clone refused ("Permission for this action was denied by the Claude Code auto mode

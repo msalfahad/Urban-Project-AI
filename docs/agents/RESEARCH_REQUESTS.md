@@ -36,6 +36,12 @@ beams are measured separately; (b) how beams between foundations (strap / tie / 
 which faces, and whether the length is along the axis; plus any Kuwait MPW or Gulf BOQ preamble wording that adopts
 one of them. Cite the clause number only from a page actually read. Unblocks the owner's answers to Q-73 / Q-74 and then
 T-108 (block counts) and the strap lines of T-141.
+ADDED (lead 2026-10-22 00:20, owner notes on exterior Sigma 2026-10-21, item 2 "look for it then I can decide, flag it"):
+(c) external plaster CORNERS / arrises / rounded edges: is there a published convention that measures them in linear metres
+and converts "2 m.l = 1 m2" (the freelancer adds 1,297.35 m.l as 648.68 m2 to 1,469.97 m2 net), or are arrises an
+enumerated / linear labour item only, never added to the m2 (NRM2 / POMI / SMM7 internal and external angles, beads and
+arrises; Kuwait MPW or Gulf BOQ preamble wording); and (d) the freelancer's practice of deducting openings at HALF their
+area in external plaster: which standard, if any, states it. Owner decides; the team only reports the sources. Unblocks T-162.
 
 ## Answered
 

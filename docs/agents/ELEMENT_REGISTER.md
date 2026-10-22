@@ -46,6 +46,28 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+### Lead 2026-10-22 00:20 (from T-142, T-152, T-159, T-161, T-140 READY; T-149 / T-144 / T-155 / T-134 MERGED; owner outdoor-floor decisions 20:45 / 23:20)
+
+Code: element_register_v0 MERGED 0c8eae7 (checker 22:40). Baseline note: two runs are both called "released V2.9 + route
+G" (T-140: without the route G profile 1,455 lines; with profile + facts 1,621 lines; 8 family figures differ). Until T-165
+pins one by provenance, every register row and every Gate B diff names the run it uses; the checker's T-156 / T-133 diffs
+used the PROFILED run.
+
+| Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |
+|---|---|---|---|---|---|
+| GF north side walk (the strip between the north neighbour wall and the house; T-153 "north court strip") | external floor, court | FLOOR FINISH, porcelain / ceramic, part of the house; NOT interlock and NOT in the court line. Owner manual 1.50 x 15.97 = 23.955 m2 beside the measured 21.348 (checker 21.021) | owner manual ASSUMED — OWNER-APPROVED (rule file, additions 20:45); measured DRAWING-CONFIRMED, split HELD | OWNER_RULE_OUTDOOR_FLOORS additions 20:45 (supersedes the 20:25 line that put the north strip in interlock) | T-157 reconciles 2.6 m2 term by term |
+| GF west court less the porch (138.761 - 19.181 m2, less the 3.360 element footprint per the measured geometry) | external floor | EXTERNAL FLOOR, interlock ("owner choice, differs from render": T-161 renders show stone) | DRAWING-CONFIRMED area, not VERIFIED | owner 23:20 | T-157 |
+| GF covered porch about 4.60 x 4.10 = 19.181 m2, at court level | external floor, soffit, court | FLOOR: its own line, material HELD; never also in the court interlock line. Its SOFFIT 19.181 m2 is a separate surface: CEILING trade (T-142 FIN.CEILING line, finish HELD Q-68 C) | floor DRAWING-CONFIRMED area, material HELD | owner 23:20; Q-68 C | owner decides material later (not asked again) |
+| GF side passage 5.640 m2 | floor, soffit, external walls | FLOOR: porcelain / ceramic (sides rule); SOFFIT: CEILING trade (T-142 line 5.640); walls: external plaster / paint (Q-67 A) | PROVISIONAL external (Q-67 A cond) | owner 20:45 sides rule; Q-67 A | D-48 |
+| Pool deck 7.605 m2 | external floor, pool | EXTERNAL FLOOR; material HELD | HELD (owner not sure) | owner 20:45 / 23:20 | none (owner) |
+| Entrance steps (outside stairs) | stairs, external floor | STAIR finish, marble | DRAWING-CONFIRMED geometry where printed | owner rule (outside stairs marble), UP-STAIR-001 | T-157 / T-158 check mode |
+| Footing steel (19 printed-count footings 874.86 kg; F8 / F12 / F13 / F14 / FF) | rebar, footing concrete | REBAR; count-printed footings DRAWING-CONFIRMED in V3.0.2; per-metre five HELD 2,742.51 .. 2,836.40 kg; 20 BOXED cells HELD | DRAWING-CONFIRMED / HELD, NOT RELEASED | T-136 MERGED, T-142 READY (Gate B), T-155 r2 MERGED 15fd913 | Q-71 |
+| Suspended-slab steel, 62 panels | rebar, slab concrete | REBAR per panel and direction; the 8 dome corner pieces and 5 other unbarred panels HELD (D-51); top bars HELD range (D-49) | bottom lengths DRAWING-CONFIRMED (not VERIFIED), counts HELD on Q-71 | T-152 READY | Q-71, D-49 .. D-52 |
+| Soffits over outside air 44.446 m2 (porch 19.181, passage 5.640, pool court 12.834, 1F edges 4.374 + 2.417) | ceiling, slab, external plaster | CEILING (area lines); finish HELD; SX-01..03 (1.665 m2) listed, never added | VERIFIED pool court (checker 12.8343); others DRAWING-CONFIRMED | Q-68 C; T-127 / T-142 | T-142 Gate B |
+| Exterior faces per side and storey (T-159: 1,022.534 m2 measured + 6.822 .. 13.261 HELD + 13.079 m slab edge) | facade plaster / paint (freelancer "Sigma"), parapets, blockwork, openings | FACADE finish per face; parapet faces and roof faces are FACADE lines of their own; a face standing on a lower roof starts at that roof; boundary / street fence NOT facade (Q-65 HELD); domes EXCLUDED (owner Sigma item 3, client change Q-29); openings listed apart (T-150 owns count and size) | DRAWING-CONFIRMED (printed levels), wavy-parapet heights from the CAD top line flagged for the checker | Q-07 B, Q-64 B, owner Sigma notes | T-162 reconciles his 1,502.84 / 1,469.97 m2 term by term; corners m.l FLAGGED (R-11 c) |
+| Railings / balustrades and shutters | stairs, facade, openings, metal works | none yet: a missing BOQ category; T-164 builds the census of what is DRAWN | NOT IN THE DRAWING for the rendered ones (no quantity); UNKNOWN for the category | T-161 READY | D-54, T-164 |
+| Main entrance door 2.00 x 2.50 (double, printed) | openings, facade, block deduction | OPENINGS: printed size governs (5.000 m2); render single leaf is a DIFFERS note only | DRAWING-CONFIRMED | Q-55 C (2.50 printed governs) | D-53 |
+
 ### Lead 2026-10-21 20:20 (from T-119 r2, T-133 MERGED, T-149, T-150, T-153 MERGED, T-159, T-160)
 
 | Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |
