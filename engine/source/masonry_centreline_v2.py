@@ -17,7 +17,9 @@ What V2 adds, all from the floor's own drawing (never a project constant):
   2. DOORWAY AT A FREE END. A band end with no band at it whose centreline, carried on, reaches the near face of a
      non-parallel band within MAX_GAP_M, with a door record or a door swing (hinge in the gap, leaf no longer than the
      gap) in that gap and nothing else in between: the end is carried to that face (the doorway is in the run, as an
-     opening between two jambs is); V1 then sees a T stem there.
+     opening between two jambs is); V1 then sees a T stem there. A jamb stub standing on that face (both faces drawn
+     on a wall layer, or its own wall record) is wall, not doorway: the doorway is the gap between the jambs, the
+     stub stays in the physical length (T-169, defect D-T125-1; under the L-P9-04 0.05 m convention it is listed).
   3. CURVED GLAZED BAY. Concentric glazing arcs (a curved glass line) whose chord covers an undrawn stretch of a
      straight band (parallel, within the band's reach): the glass mid circle is carried to the band centreline (as
      centrelines meet at an L); the chord between the two meeting points leaves the band and the arc between them joins
@@ -57,6 +59,7 @@ RULES = ("UP-WALL-GEOM-001", "UP-COL-ORIENT-001", "UP-MAS-HEIGHT-001", "UP-QTY-S
 JOIN_TOL_M = V1.JOIN_TOL_M          # 2 cm: a face line "on" a band face, an end "on" a face
 MAX_GAP_M = V1.MAX_GAP_M            # 3.0 m: the widest opening a run is carried across
 MIN_STRETCH_M = 0.05                # an undrawn stretch shorter than this is a drafting artefact (L-P9-04 convention)
+JAMB_STUB_MIN_M = 0.05              # T-169: a jamb stub at a free-end doorway this long or longer is wall (L-P9-04)
 FACE_ANG = math.radians(1.0)        # a face segment parallel to the band within 1 deg
 COVER_SHARE = 0.5                   # a column / band / glazing covers a stretch when it covers half of it or more
 SWING_REACH_M = 0.10                # a door hinge within 10 cm of the gap (frame / jamb set-back)
@@ -319,6 +322,76 @@ def _inside_band(B, p, reach=JOIN_TOL_M):
     return -reach <= s <= B.L + reach and abs(o) <= B.h + reach
 
 
+def _jamb_stub(A, E, od, g, faces, k, others):
+    """T-169 (defect D-T125-1): the jamb stub standing on the near face of the wall across a free-end doorway.
+
+    Seen from the free end E of band A along od, the wall across has its near face at g. A jamb stub is wall drawn
+    on that face towards E: BOTH of A's face lines (offsets +-t/2) drawn on a wall-role layer, unbroken from the face
+    back to the stub's end (a nib the drawing gives no closing line or wall record of its own), or a collinear wall
+    record (an arch_v28 RETURN_STUB) standing in the gap on that face. Its length is wall, not doorway:
+      >= JAMB_STUB_MIN_M (the L-P9-04 stub convention, 0.05 m): status WALL, the doorway is g - stub;
+      (a wall record is WALL at any length: V1 measures it, so the end stops at it and nothing counts twice);
+      shorter face lines: status BELOW_L-P9-04_LISTED, a drafting artefact by that convention: the doorway stays
+      g, the stub is listed (never dropped silently);
+      one face only drawn: status ONE_FACE_LISTED (a frame or a lining line is not a wall): doorway g, listed.
+    Returns {status, stub_m, basis, record_id, faces_m, rule}."""
+    nrm = (-od[1], od[0])
+    faces_m = []
+    for side in (1.0, -1.0):
+        ivs = []
+        for a, b in faces:
+            pa, pb = (a[0] * k, a[1] * k), (b[0] * k, b[1] * k)
+            if math.dist(pa, pb) <= 0:
+                continue
+            if abs(V1._cross(V1._unit(V1._sub(pb, pa)), od)) > math.sin(FACE_ANG):
+                continue
+            qa, qb = V1._dot(V1._sub(pa, E), od), V1._dot(V1._sub(pb, E), od)
+            oa, ob = V1._dot(V1._sub(pa, E), nrm), V1._dot(V1._sub(pb, E), nrm)
+            if abs(oa - side * A.h) > JOIN_TOL_M or abs(ob - side * A.h) > JOIN_TOL_M:
+                continue
+            lo, hi = max(0.0, min(qa, qb)), min(g, max(qa, qb))
+            if hi > lo:
+                ivs.append((lo, hi))
+        ext = 0.0
+        for lo, hi in reversed(_merge(ivs)):
+            if hi >= g - JOIN_TOL_M:
+                ext = g - lo
+            break
+        faces_m.append(round(ext, 4))
+    face_stub = min(faces_m)
+    rec_stub, rec_id = 0.0, None
+    for D in others:
+        if abs(V1._cross(D.u, od)) >= V1.PARALLEL_SIN:
+            continue
+        if abs(V1._dot(V1._sub(D.p0, E), nrm)) > A.h + JOIN_TOL_M:
+            continue
+        q = sorted(V1._dot(V1._sub(p, E), od) for p in (D.p0, D.at(D.L)))
+        if q[0] > JOIN_TOL_M and q[1] >= g - JOIN_TOL_M and q[0] < g - 1e-6 and g - q[0] > rec_stub:
+            rec_stub, rec_id = g - q[0], D.id
+    out = {"rule": "L-P9-04 (stubs under 0.05 m are drafting artefacts; T-169)", "faces_m": faces_m,
+           "record_id": rec_id}
+    if rec_stub > 0:                   # a wall record V1 measures itself: the free end stops at it (never twice)
+        stub, basis = rec_stub, "WALL_RECORD"
+    else:
+        stub, basis = face_stub, "FACE_LINES"
+    out.update(stub_m=round(stub, 4), basis=basis)
+    if stub >= JAMB_STUB_MIN_M - 1e-9 or basis == "WALL_RECORD":
+        out["status"] = "WALL"
+        out["note"] = ("jamb stub on the face of the wall across: wall (in the run and in the physical blockwork "
+                       "length), not doorway" + ("; it is its own wall record, the free end stops at it"
+                                                 if basis == "WALL_RECORD" else ""))
+    elif stub >= 1e-3:
+        out["status"] = "BELOW_L-P9-04_LISTED"
+        out["note"] = "shorter than 0.05 m: a drafting artefact by L-P9-04; left in the doorway, listed here"
+    elif max(faces_m) >= 1e-3:
+        out["status"] = "ONE_FACE_LISTED"
+        out["stub_m"] = round(max(faces_m), 4)
+        out["note"] = "one face line only on the wall layer (not a wall piece by itself): left in the doorway, listed"
+    else:
+        out["status"] = "NONE"
+    return out
+
+
 # ------------------------------------------------------------------------------------------------------ the measure
 def _sub_record(w, k, s0, s1, band, idx):
     """a part [s0, s1] (metres along the band) of a straight wall record, in the record's drawing units."""
@@ -337,8 +410,8 @@ def measure(walls, unit_m=None, openings=(), columns_m=None, floor=None, evidenc
     """the V2 masonry centreline run of one floor (see the module docstring)."""
     walls = list(walls or ())
     rec = {"policy": POLICY_ID, "rules": list(RULES), "floor": floor, "status": None, "unit_m": None,
-           "by_thickness": [], "runs": [], "stretches": [], "doorways": [], "bays": [], "glazed_lines": [],
-           "piers": [], "identity": None, "held": [], "v1": None, "height": dict(HEIGHT_HELD)}
+           "by_thickness": [], "runs": [], "stretches": [], "doorways": [], "jamb_stubs": [], "bays": [],
+           "glazed_lines": [], "piers": [], "identity": None, "held": [], "v1": None, "height": dict(HEIGHT_HELD)}
     if not walls:
         rec["status"] = "NO_WALL_BANDS"
         rec["why"] = "no wall band on this floor: the masonry run is not measured (None, never 0)"
@@ -543,50 +616,63 @@ def measure(walls, unit_m=None, openings=(), columns_m=None, floor=None, evidenc
             if touching or best is None:
                 continue
             g, C = best
+            # a jamb stub standing on C's near face (T-169, defect D-T125-1): wall, not doorway
+            jamb = _jamb_stub(A, E, od, g, faces, k, [D for D in pbands if D is not A])
+            gd = g - jamb["stub_m"] if jamb["status"] == "WALL" else g      # the doorway between the jambs
+            if gd <= JOIN_TOL_M:
+                continue
             # nothing else in the gap: no column, no parallel band (a collinear neighbour is V1's opening gap)
-            gap_mid = (E[0] + od[0] * g / 2, E[1] + od[1] * g / 2)
+            gap_mid = (E[0] + od[0] * gd / 2, E[1] + od[1] * gd / 2)
             if any(P.distance(_pt(gap_mid)) <= A.h for P in col_polys):
                 continue
             if any(D is not A and abs(V1._cross(A.u, D.u)) < V1.PARALLEL_SIN and
-                   any(_inside_band(D, (E[0] + od[0] * g * f, E[1] + od[1] * g * f), 0.0) for f in (0.25, 0.5, 0.75))
+                   any(_inside_band(D, (E[0] + od[0] * gd * f, E[1] + od[1] * gd * f), 0.0)
+                       for f in (0.25, 0.5, 0.75))
                    for D in pbands):
                 continue
-            # door evidence in the gap
+            # door evidence in the gap (the doorway between the jambs, gd)
             why = None
             for o, c, ev in ops:
                 if o.get("kind") != "DOOR" and not o.get("door_symbol"):
                     continue
                 sa = V1._dot(V1._sub(c, E), od)
                 oa = V1._dot(V1._sub(c, E), (-od[1], od[0]))
-                if -JOIN_TOL_M <= sa <= g + JOIN_TOL_M and abs(oa) <= A.h + JOIN_TOL_M and \
-                        o.get("width_m") is not None and float(o["width_m"]) <= g + JOIN_TOL_M and \
-                        g <= float(o["width_m"]) + SWING_FRAME_M:
+                if -JOIN_TOL_M <= sa <= gd + JOIN_TOL_M and abs(oa) <= A.h + JOIN_TOL_M and \
+                        o.get("width_m") is not None and float(o["width_m"]) <= gd + JOIN_TOL_M and \
+                        gd <= float(o["width_m"]) + SWING_FRAME_M:
                     why = ("DOOR_RECORD", o.get("opening_id"), o.get("width_m"))
                     break
             if why is None:
                 for sw in door_arcs:
                     sa = V1._dot(V1._sub(sw["c"], E), od)
                     oa = V1._dot(V1._sub(sw["c"], E), (-od[1], od[0]))
-                    if -SWING_REACH_M <= sa <= g + SWING_REACH_M and abs(oa) <= A.h + SWING_REACH_M and \
-                            SWING_LEAF_M[0] <= sw["r"] <= min(SWING_LEAF_M[1], g + JOIN_TOL_M) and \
-                            g <= sw["r"] + SWING_FRAME_M:
+                    if -SWING_REACH_M <= sa <= gd + SWING_REACH_M and abs(oa) <= A.h + SWING_REACH_M and \
+                            SWING_LEAF_M[0] <= sw["r"] <= min(SWING_LEAF_M[1], gd + JOIN_TOL_M) and \
+                            gd <= sw["r"] + SWING_FRAME_M:
                         why = ("DOOR_SWING", None, round(sw["r"], 4))
                         break
             if why is None:
                 continue
-            # move the record's end to C's near face
+            # move the record's end to C's near face; a jamb stub drawn only as face lines is carried with it (in the
+            # run, as wall); a jamb stub that is its own wall record stays that record's run: the end stops at it
             s0, s1 = w["_span"]
             P0, P1 = w["centreline"][0], w["centreline"][-1]
-            Pn = (E[0] + od[0] * g, E[1] + od[1] * g)
+            reach = gd if jamb["basis"] == "WALL_RECORD" and jamb["status"] == "WALL" else g
+            Pn = (E[0] + od[0] * reach, E[1] + od[1] * reach)
             if end == 0:
                 w["centreline"] = [(Pn[0] / k, Pn[1] / k), P1]
             else:
                 w["centreline"] = [P0, (Pn[0] / k, Pn[1] / k)]
             w["gross_lm"] = round(math.dist(w["centreline"][0], w["centreline"][-1]) * k, 9)
-            w["_doorway"] = w.get("_doorway", []) + [(g, E, od)]
-            rec["doorways"].append({"floor": floor, "wall_id": w["wall_id"], "end": end, "gap_m": round(g, 4),
-                                    "to_wall": C.id, "evidence": why[0], "opening_id": why[1],
-                                    "width_or_leaf_m": why[2]})
+            w["_doorway"] = w.get("_doorway", []) + [(g, E, od, gd)]
+            dw = {"floor": floor, "wall_id": w["wall_id"], "end": end, "gap_m": round(gd, 4),
+                  "to_wall": C.id, "evidence": why[0], "opening_id": why[1], "width_or_leaf_m": why[2],
+                  "face_to_face_m": round(g, 4)}
+            if jamb["status"] != "NONE":
+                js = dict(jamb, floor=floor, wall_id=w["wall_id"], end=end, to_wall=C.id)
+                dw["jamb_stub"] = js
+                rec["jamb_stubs"].append(js)
+            rec["doorways"].append(dw)
 
     # 3. V1 on the checked records (its junction rules, its column cut, its opening-gap join)
     v1_ops = [o for o, c, ev in ops if ev]
@@ -609,7 +695,7 @@ def measure(walls, unit_m=None, openings=(), columns_m=None, floor=None, evidenc
             for wv in ws:
                 ss += [base.su((q[0] * k, q[1] * k))[0] for q in (wv["centreline"][0], wv["centreline"][-1])]
             lo, hi = min(ss), max(ss)
-            gaps = [(g, E, od) for wv in ws for g, E, od in wv.get("_doorway", ())]
+            gaps = [(g, E, od) for wv in ws for g, E, od, _gd in wv.get("_doorway", ())]
             for o, c, ev in ops:
                 sc, oc = base.su(c)
                 if any(-JOIN_TOL_M <= V1._dot(V1._sub(c, E), od) <= g + JOIN_TOL_M for g, E, od in gaps):
@@ -623,8 +709,8 @@ def measure(walls, unit_m=None, openings=(), columns_m=None, floor=None, evidenc
                     if tag == "GLAZED" and wv["_span"][0] - 1e-6 <= lo2 and hi2 <= wv["_span"][1] + 1e-6:
                         opn.append({"what": "GLAZED_STRETCH", "opening_id": None, "width_m": round(hi2 - lo2, 4),
                                     "evidence": "GLAZING_IN_BAND"})
-                for g, _E, _od in wv.get("_doorway", ()):
-                    opn.append({"what": "DOORWAY_AT_FREE_END", "opening_id": None, "width_m": round(g, 4),
+                for _g, _E, _od, gd in wv.get("_doorway", ()):
+                    opn.append({"what": "DOORWAY_AT_FREE_END", "opening_id": None, "width_m": round(gd, 4),
                                 "evidence": "DOOR_RECORD_OR_SWING"})
         op_lm = sum(x["width_m"] for x in opn)
         glass = sum(x["width_m"] for x in opn if x["what"] in ("WINDOW", "GLAZED_STRETCH"))
@@ -786,7 +872,8 @@ def measure_floors(floors):
 
 def policy_record():
     return {"policy_id": POLICY_ID, "rules": list(RULES), "reuses": V1.POLICY_ID, "join_tol_m": JOIN_TOL_M,
-            "max_gap_m": MAX_GAP_M, "min_stretch_m": MIN_STRETCH_M, "glazed_min_m": GLAZED_MIN_M,
+            "max_gap_m": MAX_GAP_M, "min_stretch_m": MIN_STRETCH_M, "jamb_stub_min_m": JAMB_STUB_MIN_M,
+            "glazed_min_m": GLAZED_MIN_M,
             "never": ["a masonry m2 or m3 (Q-60 heights: T-108)", "an opening deducted from the architectural run",
                       "a split stretch dropped without a listing", "a glazed line added to a block family",
                       "a missing input given 0 or replaced by V1 figures"]}
