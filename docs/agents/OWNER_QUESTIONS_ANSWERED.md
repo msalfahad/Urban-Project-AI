@@ -1032,6 +1032,8 @@ WAITS ON: dome concrete lines and the roof membrane rows on Alsenan (T-049, T-07
 
 Answer (owner, main chat, 2026-10-19 14:45 UTC), his words: "Design confirm that 3 domes are concrete and rebar from plans. but after discussing with alsenan owner he said he want them to be not concrete and use the sun light as skylight space. so it will be an open area." = a CLIENT CHANGE to the design: none of the three domes is concrete (no dome concrete, no dome rebar); each dome position is an open skylight area. Lead (applied, not the owner's words): the dome concrete lines leave the BOQ as a recorded scope change (reason CLIENT_CHANGE_DOMES_TO_SKYLIGHT, shown, never silently dropped); the freelancer's 6.78 m3 is a RULE_DIFFERENCE (design scope vs client scope); the roof membrane stops at each opening with the 0.20 m upturn round it (Q-24 answer); what closes the skylight (glazing, frame) is not specified, so it is a HELD item of its own; whether the roof slab is drawn continuous under a dome (then the opening size is not printed) is checked from the drawings and asked if so.
 
+APPLICATION REFINED (owner, main chat 2026-10-22, his directive): the client change is scenario S1 (proposed); the approved-design baseline S0 keeps the three concrete domes until a consultant-revised design (S2) exists; the earlier removal of the dome lines from the BOQ is replaced by the S0 / S1 scenario split (T-185). The owner's 2026-10-19 words above are unchanged.
+
 ### Q-30 Kitchens: waterproofed like a bathroom, floor only, or not at all? (lead 2026-10-19 14:30; membrane table requirement, T-072, T-074; no-assumptions question)
 
 THE PROBLEM: your membrane-table instruction names kitchens with bathrooms and roofs, but no Urban rule covers kitchen
