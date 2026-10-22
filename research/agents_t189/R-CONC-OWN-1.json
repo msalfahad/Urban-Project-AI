@@ -1,0 +1,19 @@
+{
+ "schema": "URBAN_PROPOSED_RULE_V1",
+ "id": "R-CONC-OWN-1",
+ "version": "1.0.0-proposed",
+ "status": "PROPOSED (T-189, worker 1, 2026-10-22); not in force: adoption = a NEW rule version in the rule library by lane I / the Lead after the Checker's verdict; no existing rule or knowledge file is edited",
+ "scope": "any villa; structural concrete at every junction of two or more structural elements (stair flight / landing, beam, slab, column, neck, footing, strap / ground beam, pool base / wall, wall / slab)",
+ "provenance": [
+  "owner Q-20 (no concrete counted twice)",
+  "owner Q-62 A cond (2026-10-20): model flight and slab / landing, compute the 3-D intersection, assign it to the slab / landing, deduct it from the stair, keep the deduction in the ledger; no double count at stair-landing, beam-slab, column-beam, footing-ground-beam junctions; never deduct plan overlaps unless the volumes intersect in 3-D; one convention for the whole project",
+  "route G measurement bases of the released V2.9 + route G beam lines: 'net plan (B x L - column - junction) x H', 'column footprint split out; junction squares owned by one band; slab panels stop at band faces'",
+  "Checker D-CHK-T180-1 (2026-10-22 17:18) and owner 2026-10-22 18:00 (T-189)",
+  "ENGINEERING_REASONING_STANDARD sections 2.3, 3, 4"
+ ],
+ "statement": "Concrete where structural elements intersect is measured exactly once. The intersection volume (computed in 3-D, never from a plan overlap alone) is owned by the element whose BOQ line, by its stated measurement basis, is billed THROUGH the junction at its full section; every other element is measured net of it and keeps the deduction in its ledger. If no line's basis contains the intersection, the element that would otherwise lose it keeps it (a gap is never closed by a zero). Where two bases both contain it, the project's one precedence decides (route G: column > beam > slab / landing > stair; pool base > pool wall). A pair with no established precedence, or a junction whose levels are not printed on one element, is HELD (OWNER_UNDEFINED / UNDETERMINED with its bounded exposure), never guessed and never deducted.",
+ "stair_head_corollary": "A flight arriving into a beam billed at its full depth through the stair shaft is deducted by the flight solid between the beam's stair-side face and the flight end (the step triangles' parts and the waist strip inside the band, plus the arrival wedge beyond the last riser line), not only by the last step triangle. When the beam is billed as a downstand below the slab only (slab-plate basis, URBAN-NON-OVERLAPPING-SLAB-BEAM-MODEL@v1), the beam owns only the part below the slab soffit and the slab owns the rest.",
+ "check": "engine/source/concrete_overlap_ownership.py (CONCRETE_OVERLAP_OWNERSHIP_V1, unwired): sum of billed = union of physical (DOUBLE = GAP = OUTSIDE = 0), every intersecting pair with one owner",
+ "tests": "tests/t189_overlap (normal and adverse: stair head into a beam, beam through a slab, column through a beam, neck into a footing, pool wall on its base, plan overlap with unknown levels, rotation / mirror, units)",
+ "alsenan_effect": "ST-01 upper flights MS1-U 1.0548 -> 0.9976 m3, MS2-U 1.0588 -> 1.0014 m3 (-0.1147 m3 on the stair ledger; B20 / B23 lines unchanged, they already bill the full 0.75 depth through the shaft)"
+}

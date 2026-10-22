@@ -1,0 +1,159 @@
+{
+ "schema": "T189_STAIR_LEDGER_REV2",
+ "supersedes": "research/agents_t184/T184_LEDGER.json (rev1, kept unchanged)",
+ "rule": "R-CONC-OWN-1 (research/agents_t189/R-CONC-OWN-1.json, proposed)",
+ "st01_rows": [
+  {
+   "piece": "MS1-L",
+   "gross_m3": 0.863029,
+   "q62_wedge_m3": 0.0,
+   "head_in_full_depth_beam_m3": 0.0,
+   "rev1_net_m3": 0.863029,
+   "rev2_net_m3": 0.863029,
+   "status": "HELD",
+   "why": "owner 18:00 (4): structural GF roof slab plan draws 12 straight riser lines (16 with the winders) vs architectural plan 10 + section A-A 15: consultant item C-ST-4; candidate 0.863 (section) .. 1.055 (structural plan), Checker 17:18",
+   "held_range_m3": [
+    0.863,
+    1.055
+   ]
+  },
+  {
+   "piece": "MS1-U",
+   "gross_m3": 1.084813,
+   "q62_wedge_m3": 0.03,
+   "head_in_full_depth_beam_m3": 0.057261,
+   "rev1_net_m3": 1.054813,
+   "rev2_net_m3": 0.997552,
+   "status": "DRAWING-CONFIRMED",
+   "why": "rev2 = Checker quantity 0.9976 (17:18, D-CHK-T180-1); Checker to confirm on rev2",
+   "held_range_m3": null
+  },
+  {
+   "piece": "MS2-L",
+   "gross_m3": 1.089064,
+   "q62_wedge_m3": 0.030171,
+   "head_in_full_depth_beam_m3": 0.0,
+   "rev1_net_m3": 1.058893,
+   "rev2_net_m3": 1.058893,
+   "status": "VERIFIED",
+   "why": "Checker 15:00 (T-184 MERGED): 1.059",
+   "held_range_m3": null
+  },
+  {
+   "piece": "MS2-U",
+   "gross_m3": 1.089064,
+   "q62_wedge_m3": 0.03024,
+   "head_in_full_depth_beam_m3": 0.057451,
+   "rev1_net_m3": 1.058824,
+   "rev2_net_m3": 1.001373,
+   "status": "DRAWING-CONFIRMED",
+   "why": "rev2 = Checker quantity 1.0014 (17:18, D-CHK-T180-1); Checker to confirm on rev2",
+   "held_range_m3": null
+  },
+  {
+   "piece": "MS1-LD",
+   "gross_m3": 0.2304,
+   "q62_wedge_m3": 0.0,
+   "head_in_full_depth_beam_m3": 0.0,
+   "rev1_net_m3": 0.2304,
+   "rev2_net_m3": 0.2304,
+   "status": "VERIFIED",
+   "why": "Checker 17:18: 0.2304",
+   "held_range_m3": null
+  },
+  {
+   "piece": "MS2-LD",
+   "gross_m3": 0.48,
+   "q62_wedge_m3": 0.0,
+   "head_in_full_depth_beam_m3": 0.0,
+   "rev1_net_m3": 0.48,
+   "rev2_net_m3": 0.48,
+   "status": "PARTLY VERIFIED",
+   "why": "east half 0.240 VERIFIED, west half 0.2304 .. 0.240 not verified (Checker 17:18)",
+   "held_range_m3": null
+  }
+ ],
+ "st01_rev1_m3": 4.746,
+ "st01_rev2_m3": 4.6312,
+ "st01_change_m3": -0.1147,
+ "other_stairs_unchanged_m3": {
+  "ST-01b": 0.126,
+  "ST-02": 1.5611,
+  "ST-03": 0.357
+ },
+ "staircase_system_rev1_m3": 6.7901,
+ "staircase_system_rev2_m3": 6.6754,
+ "staircase_system_rev2_not_held_m3": 5.8124,
+ "held_unchanged": [
+  {
+   "id": "MS1-T",
+   "candidate_m3": [
+    0.12,
+    0.13
+   ],
+   "why": "Q-51 cond: well strip 0.10 x 1.20 unassigned, no soffit drawn"
+  },
+  {
+   "id": "MS1-T-SLAB",
+   "candidate_m3": [
+    0.2304,
+    0.2496
+   ],
+   "why": "soffit not drawn (horizontal projection 1.44 .. 1.56 m2 x 0.16)"
+  },
+  {
+   "id": "MS2-TR",
+   "candidate_m3": null,
+   "why": "landing levels scaled, not printed"
+  },
+  {
+   "id": "B3-WITH-STAIR",
+   "candidate_m3": null,
+   "why": "owner Q-61 (2): HOLD, never duplicate concrete"
+  },
+  {
+   "id": "D1-WAIST",
+   "candidate_m3": null,
+   "why": "no thickness printed; on fill"
+  },
+  {
+   "id": "RS-C",
+   "candidate_m3": [
+    0.33,
+    0.33
+   ],
+   "why": "owner Q-50 / Q-51: curved parts HELD (CAD tread areas 4.1077 m2)"
+  },
+  {
+   "id": "RS-C-SOFFIT",
+   "candidate_m3": null,
+   "why": "not drawn (Q-51 step 5); see the walking-line indication in the report, not a quantity"
+  },
+  {
+   "id": "CA-JUNCTION",
+   "candidate_m3": [
+    0.0,
+    0.09
+   ],
+   "why": "CA level not stated"
+  },
+  {
+   "id": "E1-WAIST",
+   "candidate_m3": null,
+   "why": "not in a slab panel, no thickness printed"
+  }
+ ],
+ "resolved": {
+  "id": "HEAD-CLASH",
+  "candidate_rev1": [
+   0.1147,
+   0.1147
+  ],
+  "resolution": "flight solid inside B20 / B23 (billed at 0.75 full depth through the shaft in the released route G lines) deducted from the stair, owned by the beams; the riser-count RFI (Q-46) stays open for the designer, quantities follow its answer"
+ },
+ "system_status": "PARTIALLY VERIFIED (owner 16:45; never VERIFIED as a whole while pieces are held)",
+ "beams": {
+  "B20": "baseline A structural/PROVISIONAL_REGISTER.csv P-C:BEAMS:GF:BAND0043.2, mark B20 (BOUND): depth 0.75, length 3.3, net plan 1.32 m2 (= 0.40 x 3.30, junction deductions 0), 0.99 m3, 'slab panels stop at band faces'",
+  "B23": "baseline A structural/PROVISIONAL_REGISTER.csv P-C:BEAMS:1F:BAND0031.2, mark B23 (BOUND): depth 0.75, length 3.3, net plan 1.485 m2 (= 0.45 x 3.30, junction deductions 0), 1.11375 m3"
+ }
+}
