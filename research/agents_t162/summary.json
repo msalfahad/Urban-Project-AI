@@ -1,0 +1,243 @@
+{
+ "task": "T-162",
+ "terms": {
+  "terms": {
+   "SW": {
+    "his": 275.16,
+    "geometric": 253.79,
+    "q07": 238.069
+   },
+   "SE": {
+    "his": 191.542,
+    "geometric": 150.482,
+    "q07": 144.647
+   },
+   "NE": {
+    "his": 258.0,
+    "geometric": 274.045,
+    "q07": 251.435
+   },
+   "NW": {
+    "his": 389.938,
+    "geometric": 63.425,
+    "q07": 63.425
+   },
+   "ROOF": {
+    "his": 230.084,
+    "geometric": 70.03,
+    "q07": 70.03
+   },
+   "FENCE": {
+    "his": 107.24,
+    "geometric": 0.0,
+    "q07": 0.0
+   },
+   "DRIP": {
+    "his": 50.876,
+    "geometric": 0.0,
+    "q07": 0.0
+   }
+  },
+  "faces_not_in_his_rows_m2": 210.761,
+  "his_openings_count": 36,
+  "facade_openings": 36,
+  "facade_open_printed_m2": 66.576,
+  "facade_open_assumed_m2": 12.76,
+  "facade_open_held_width_m": 24.98
+ },
+ "corners": {
+  "vertical": {
+   "CONVEX": {
+    "count": 26,
+    "measured_ml": 108.284,
+    "held_ml": [
+     26.199,
+     27.049
+    ]
+   },
+   "MOUTH_END": {
+    "count": 4,
+    "measured_ml": 20.7,
+    "held_ml": [
+     0.0,
+     0.0
+    ]
+   },
+   "CONCAVE": {
+    "count": 11,
+    "measured_ml": 46.2,
+    "held_ml": [
+     10.4,
+     10.7
+    ]
+   }
+  },
+  "external_vertical_ml": 128.984,
+  "parapet_top_outer_ml": {
+   "GF annex (+4.80)": 29.342,
+   "GF house (+6.00)": 28.77,
+   "1F (+11.00 / wave)": 50.569,
+   "2F (+14.40)": 29.8
+  },
+  "parapet_top_outer_total_ml": 138.481,
+  "opening_reveals_measured_ml": 137.11,
+  "opening_reveals_assumed_ml": 32.2,
+  "opening_jambs_held": [
+   "W11",
+   "W12",
+   "W04",
+   "W08",
+   "W05",
+   "W06",
+   "W07",
+   "W02",
+   "W09",
+   "W10",
+   "W19",
+   "W20",
+   "W24",
+   "W25",
+   "W21",
+   "W22",
+   "W23",
+   "W27",
+   "W28",
+   "W29"
+  ],
+  "slab_edge_over_open_air_m": 13.079,
+  "r1_opening_reveals_note": "r1 189.630 measured / 58.600 assumed counted the jambs twice (-52.520 / -26.400 m.l in r2)"
+ },
+ "his": {
+  "gross_m2": 1502.84,
+  "net_m2": 1469.9675,
+  "deduction_half_m2": 32.8725,
+  "corners_ml": 1297.35,
+  "corners_payable_ml_half_convention": 648.675
+ },
+ "t159_measured_m2": 1022.534,
+ "r2": {
+  "parapets": {
+   "ANNEX": {
+    "outer": 29.342,
+    "inner": 28.428,
+    "top": 5.777,
+    "face_lo": 14.214,
+    "face_hi": 14.214,
+    "held_sides": []
+   },
+   "GF": {
+    "outer": 28.77,
+    "inner": 27.97,
+    "top": 5.674,
+    "face_lo": 13.985,
+    "face_hi": 13.985,
+    "held_sides": []
+   },
+   "1F": {
+    "outer": 50.569,
+    "inner": 48.784,
+    "top": 9.935,
+    "face_lo": 52.082,
+    "face_hi": 57.185,
+    "held_sides": [
+     "NE-1",
+     "SW-1",
+     "SW-2"
+    ]
+   },
+   "2F": {
+    "outer": 29.8,
+    "inner": 28.3,
+    "top": 5.415,
+    "face_lo": 14.15,
+    "face_hi": 14.15,
+    "held_sides": []
+   }
+  },
+  "parapet_rows_reconciliation": [
+   {
+    "his_rows": "79",
+    "drawn": "ANNEX",
+    "his_L_m": 28.4,
+    "his_H_m": [
+     0.7
+    ],
+    "his_m2": 19.88,
+    "inner_run_m": 28.428,
+    "inner_face_m2": [
+     14.214,
+     14.214
+    ],
+    "top_m2": 5.777,
+    "physical_m2": [
+     19.991,
+     19.991
+    ],
+    "diff_m2": [
+     -0.111,
+     -0.111
+    ],
+    "length_effect_m2": -0.02,
+    "why": "'annex roof parapet': run 28.40 = the annex inner run 28.428"
+   },
+   {
+    "his_rows": "83+84",
+    "drawn": "GF+2F",
+    "his_L_m": 63.4,
+    "his_H_m": [
+     0.7
+    ],
+    "his_m2": 44.38,
+    "inner_run_m": 56.27,
+    "inner_face_m2": [
+     28.135,
+     28.135
+    ],
+    "top_m2": 11.089,
+    "physical_m2": [
+     39.224,
+     39.224
+    ],
+    "diff_m2": [
+     5.156,
+     5.156
+    ],
+    "length_effect_m2": 4.991,
+    "why": "'parapets of the annexes' roofs' + 'parapet' (J84 subtotal 44.38): the GF house and 2F roof parapets, inner runs 27.970 + 28.300 = 56.270 m"
+   },
+   {
+    "his_rows": "78",
+    "drawn": "1F",
+    "his_L_m": 48.47,
+    "his_H_m": [
+     1.7
+    ],
+    "his_m2": 82.399,
+    "inner_run_m": 48.784,
+    "inner_face_m2": [
+     52.082,
+     57.185
+    ],
+    "top_m2": 9.935,
+    "physical_m2": [
+     62.017,
+     67.12
+    ],
+    "diff_m2": [
+     15.279,
+     20.382
+    ],
+    "length_effect_m2": -0.533,
+    "why": "'parapet' 48.47 = the 1F inner run 48.784"
+   }
+  ],
+  "corners_measured_ml": 576.872,
+  "corners_measured_payable_ml_half_convention": 288.436,
+  "corners_measured_amount_kwd_at_1_25": 721.09,
+  "opening_arrises_assumed_ml": 32.2,
+  "his_parapet_ml": {
+   "A": 140.27,
+   "B": 280.59
+  }
+ }
+}

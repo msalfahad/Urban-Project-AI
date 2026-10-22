@@ -1,0 +1,3 @@
+{"source": "DXF elevation frames (Drive P7757_DXF_COMPRESSED.zip), layer 1 line chains, measured by research chain tool in the scratchpad; each frame line is drawn as a pair of lines 0.050 m apart",
+ "SE_frame_stair_tower": {"lines_m": [[28.308, 28.150], [26.947, 26.790], [25.538, 25.370]], "base": "+0.15 (stair-tower plinth line)", "shape": "three nested inverted-U arches around the stair windows"},
+ "NW_frame_pool_court_arch": {"lines_m": [[9.316, 9.157], [7.893, 7.711]], "base": "+5.50 (1F floor line)", "shape": "two nested arches around the 1F pool-court arched opening; '45' printed at the crown"}}
