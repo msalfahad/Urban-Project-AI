@@ -26,7 +26,7 @@
  "description": "Development villa, same drawings. Spec C (T-167): ARCH_TAKEOFF_V2.9 + route G, conventions V6, the T-131 facts file and project id development-villa-t131 (as spec B, so Gate B pairs lines by id), with the route G profile restricted to owner Q-17 A: research/agents_t167/profile_st7757_q17a.json = only the values the controlled project data file research/urban_engine_m4_correctness/project_data_st7757_t064.json makes usable (13 DRAWING-VERIFIED + NECK_TOP_LEVEL_M INFERRED); FOUNDING_DEPTH_M (owner Q-21 C), CB_SUPPORT_BAR_EXTENT_FRAC (T-044 DIFFERENT) and CB_SUPPORT_BAR_SPAN_BASIS (T-044 NOT_PRINTED) removed. Evidence for the Lead's baseline ruling; it does not switch the released default.",
  "profile": {
   "path": "research/agents_t167/profile_st7757_q17a.json",
-  "sha256": "de5e71c585ce18fd8c879e06ec3b371cbb207f812c97699568db27d7af1144dc"
+  "sha256": "63d6ac28481d80e62f67bfaff952b0f5d12a0f60a2c5101fe0e92b92bc097343"
  },
  "facts": {
   "path": "research/agents_t165/baselines/v29_profiled_facts.json",

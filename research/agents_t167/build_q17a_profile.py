@@ -6,7 +6,8 @@ Input (both tracked, both left untouched):
       8ceeeb2; URBAN_PROJECT_DATA_FILE_V1, owner Q-17 A): 13 DRAWING-VERIFIED + 1 INFERRED (NECK_TOP_LEVEL_M) usable,
       3 HELD (FOUNDING_DEPTH_M: owner Q-21 C; CB_SUPPORT_BAR_EXTENT_FRAC: T-044 DIFFERENT; CB_SUPPORT_BAR_SPAN_BASIS:
       T-044 NOT_PRINTED)
-Output: research/agents_t167/profile_st7757_q17a.json = the M4 profile with ONLY the values the data file makes usable,
+Output: research/agents_t167/profile_st7757_q17a.json = the M4 profile with ONLY the values the data file makes usable
+(same profile name, so line ids pair with spec B and the V3.0.x candidate),
 each checked against its data-file record by engine.source.arch_v304.check_profile (value, unit, range ends = the record
 value or a usable printed alternative). Every other field is copied unchanged.
 
@@ -42,7 +43,11 @@ def build():
            "runs": [{"id": A304.RESTRICTED, "removed_keys": held, "profile_sha256": "-",
                      "lines_sha256": A304.lines_sha256([]), "lines": []}]}
     chk = A304.check_profile(A304.load_inputs(inp), prof)          # refuses on any value / unit / range mismatch
-    out = dict(prof, profile=prof["profile"] + "_Q17A",
+    # the profile NAME is kept: route G writes it into every line's rule_id, which enters the line-id hash; a renamed
+    # profile would pair no route G line with spec B or with the V3.0.3 candidate (found on the first T-167 run: 0 of
+    # 3,076 lines paired). The restricted set is identified by its rule_set_digest (a digest of the conventions), by
+    # this file's sha256 in spec C, and by confirmed_by below.
+    out = dict(prof,
                confirmed_by="T-167: the ST7757_M4 profile restricted to the values the owner Q-17 A project data file "
                             f"({DATA.name}) makes usable (DRAWING-VERIFIED / INFERRED); removed: {', '.join(held)}",
                manual_inputs=len(chk["usable"]),

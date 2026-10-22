@@ -1,5 +1,5 @@
 {
- "profile": "ST7757_M4_Q17A",
+ "profile": "ST7757_M4",
  "confirmed_by": "T-167: the ST7757_M4 profile restricted to the values the owner Q-17 A project data file (project_data_st7757_t064.json) makes usable (DRAWING-VERIFIED / INFERRED); removed: CB_SUPPORT_BAR_EXTENT_FRAC, CB_SUPPORT_BAR_SPAN_BASIS, FOUNDING_DEPTH_M",
  "drawing_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
  "manual_inputs": 14,

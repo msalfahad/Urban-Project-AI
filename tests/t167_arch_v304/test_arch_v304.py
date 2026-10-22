@@ -300,6 +300,19 @@ def test_tampered_run_lines_and_unknown_removed_keys_are_refused():
         A304.audit_changes(A304.load_inputs(inputs(runs=rs), PID), v303_lines(), profile())
 
 
+def test_a_restricted_run_of_another_candidate_is_refused_not_compared():
+    """adverse (found on the development villa): a profile renamed for the restricted run changes every route G
+    line id; comparing by id would hold every line of the candidate. Fewer than half of the ids shared -> refused."""
+    other = []
+    for x in restricted_lines():
+        y = copy.deepcopy(x)
+        y["line_id"] = "L-other-" + x["line_id"][-8:]
+        other.append(y)
+    with pytest.raises(A304.InputsError, match="not the same candidate"):
+        A304.audit_changes(A304.load_inputs(inputs(runs=[run("RESTRICTED", NOT_USABLE, other)]), PID), v303_lines(),
+                           profile())
+
+
 def test_an_approved_line_is_never_re_held_silently():
     base = v303_lines()
     base[1]["approval_state"] = "APPROVED"

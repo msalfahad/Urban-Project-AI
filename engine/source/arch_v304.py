@@ -66,6 +66,7 @@ RESTRICTED = "RESTRICTED"
 NO_SINGLE_VALUE = "NO_SINGLE_VALUE"
 EVIDENCE_STATUS = A302.EVIDENCE_STATUS
 NUM_TOL = 1e-9
+MIN_SHARED_IDS = 0.5      # a restricted run sharing fewer line ids is another candidate (project id / profile name)
 
 PIECES = {
     PIECE: {
@@ -268,6 +269,11 @@ def audit_changes(inputs, lines, profile, audit_classes=None):
     runs = [dict(r, by_id={x["line_id"]: x for x in r["lines"]}) for r in inputs["runs"]]
     rr = next(r for r in runs if r["id"] == RESTRICTED)
     have = {x["line_id"] for x in lines}
+    shared = len(have & set(rr["by_id"]))
+    if lines and shared < MIN_SHARED_IDS * len(have):
+        raise InputsError(f"the {RESTRICTED} run shares {shared} of {len(have)} line ids with this candidate: it is not "
+                          "the same candidate (project id, profile name and drawings must be the same), so nothing "
+                          "can be compared line by line")
     keys_r = sorted(rr["removed_keys"])
     # a V3.0.3 line the restricted run does not have by id is paired with the restricted line of the same element
     # (pair_key) when exactly one such restricted-only line exists on each side; otherwise it stays unpaired (ABSENT)
