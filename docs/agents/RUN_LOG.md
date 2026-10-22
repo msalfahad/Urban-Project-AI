@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-22T20:11Z | Worker 2 | SUCCESS | T-164 READY d849ca4a | Railings: 38.916 lm DRAWING-CONFIRMED (roofs 19.150 with printed h 1.04 / 1.10; ST-02 balustrade + 1F gallery 16.324 per tread; D-23 = balustrade 2.400; D1 1.042), HELD ST-01 16.153 measured + 2 winder turns, GF sea strip 6.127 (plan vs NW elevation conflict, vs T-162 parapet), fence and entrance guards; shutters 6 leaves (W14, W11, W12), m2 HELD. Freelancer only 'internal railing' 18.95 (+16.97, +89.5 % on our interior, scope UNRESOLVED); roof railings / shutters HAND_FOUND. Learned: p.12 fence sheet draws the dewaneya face, correcting T-161 F05/F13/F15; fence 580+250 = 8.30 vs Q-65 8.20. ERS: read, s.2.1-2.4 / s.4 / s.7 applied. | self-check codemap PASS, t061 PASS, freeze PASS; problem: FIN workbook (23.6 MB) over the Drive connector limit, 18.95 taken from the research record
 - 2026-10-22T20:11Z | Lead | STARTED | run session_01T2CWaubhJSMjuf3RqVDHUx | repo-attached routine | task state: board | report pending
 - 2026-10-22T19:51Z | Verifier | STARTED | run unknown | repo-attached routine | task state: T-179 (Gate B V3.0.5), T-189, T-178 READY; reading queue | self-check pending
 - 2026-10-22T19:40Z | Worker 2 | STARTED | run session_01TukiUEGmjmZ5mBcsvtjPgo | repo-attached routine | task state: none yet | self-check pending
