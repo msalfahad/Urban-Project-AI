@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-22 11:53 UTC | Worker 2 | SUCCESS | T-162 r2 READY (a5bd25c) | Exterior corners as one m.l line, physical / payable (half) / 1.25 KWD rate / amount, never m2: measured 576.872 m.l + 32.200 ASSUMED + HELD vs his 1,297.35 (house scope 950.56: parapet third line 140.27 + 8.628, walls/roof +192.59 partly unresolved); own r1 defect fixed: opening jambs double counted (189.630 -> 137.110 m.l, 58.600 -> 32.200). Parapets: top 26.801 m2, inner faces 94.431..99.534 m2; his rows 78-84 146.659 m2 = inner face + top (row 79 -0.111), +4.991 undrawn run and 1F 1.70 height +15.812..+20.915 UNRESOLVED; ST p.14 shows 3 parapet types deferred to the arch detail: designer item. No owner question. | self-check codemap PASS, t061 PASS, freeze PASS; ERS: read, applied sections 2-4 and 7; problem: none
 - 2026-10-22 11:51 UTC | Verifier | STARTED | run session_01JhioQDzN6sZGA9Zt13YQ2m | repo-attached routine | task state: READY T-183, T-177, T-171, T-172, T-163, T-158, T-150 r2, T-128 r2 | self-check pending
 - 2026-10-22 11:41 UTC | Worker 2 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-22 11:01 UTC | Worker 3 | STARTED | run session_01Bx2j5wfG9PTJtm68UijD9F | repo-attached routine | task state: none yet | self-check pending
