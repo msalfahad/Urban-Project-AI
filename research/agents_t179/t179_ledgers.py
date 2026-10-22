@@ -201,6 +201,34 @@ def _sid(el):
     return STAIR_ID[key]
 
 
+def stair_development(r):
+    """note 9 development of one T-166 bar family as a held range whose ends follow the held count (T-179 r2,
+    D-T179-1): low = count A x 2 x 40 d, high = count B x 2 x 70 d, x d^2/162 kg/m, rounded to the ledger's 0.01 kg.
+
+    Why not the ledger's high: the merged T-166 column 'dev_held_kg' typed 2 x 70 d x count A at the high end although
+    the count itself is held A .. B (the slab lines of this package already use count B). A held range must contain
+    every physical reading, so the high end takes the highest count. The ledger text is kept as a reading. The ledger
+    low must equal count A x 2 x 40 d and the ledger high must be one of the two count readings at 2 x 70 d; any other
+    ledger value is refused (re-type the row), never silently overwritten."""
+    d = int(r["d"])
+    na, nb = f(r["n_A"]), f(r["n_B"])
+    if na is None or nb is None:
+        raise ValueError(f"T-166 row {r['element']} {r['part']}: development without both count readings")
+    kgm = d * d / 162.0
+    lo_calc = round(min(na, nb) * 2 * 0.040 * d * kgm, 2)
+    hi_a, hi_b = (round(n * 2 * 0.070 * d * kgm, 2) for n in (na, nb))
+    hi_calc = max(hi_a, hi_b)
+    lo_led, hi_led = rng(r["dev_held_kg"])
+    if abs(lo_led - lo_calc) > 0.011 or min(abs(hi_led - hi_a), abs(hi_led - hi_b)) > 0.011:
+        raise ValueError(f"T-166 row {r['element']} {r['part']}: development {r['dev_held_kg']} is not note 9 on "
+                         f"counts {na:g} .. {nb:g} (expected {lo_calc} .. {hi_a} / {hi_b}): re-type the row")
+    why = []
+    if abs(hi_led - hi_calc) > 0.011:
+        why = [f"HIGH_FROM_COUNT_B: ledger high {hi_led} kg = count {min(na, nb):g} x 2 x 70 d; the count is held "
+               f"{na:g} .. {nb:g}, so the high end is {max(na, nb):g} x 2 x 70 d = {hi_calc} kg (T-179 r2, D-T179-1)"]
+    return lo_led, hi_calc, why
+
+
 def stair_records(t166_rows):
     recs = []
     for r in t166_rows:
@@ -239,12 +267,13 @@ def stair_records(t166_rows):
                                    "exists to supersede")
             recs.append(rec)
             if r["dev_held_kg"] not in ("", "-"):
-                lo, hi = rng(r["dev_held_kg"])
+                lo, hi, why_hi = stair_development(r)
                 recs.append(dict(base, component=part, part="DEVELOPMENT", state="HELD_RANGE", low=lo, high=hi,
-                                 readings={"ledger": r["dev_held_kg"]},
+                                 readings={"ledger": r["dev_held_kg"], "count_A": f(r["n_A"]), "count_B": f(r["n_B"])},
                                  reasons=["DEVELOPMENT_NOT_DIMENSIONED: note 9 (2 x 40 d .. 2 x 70 d per bar)"]
-                                 + (["TYPICAL_ONLY family"] if st == "HELD_TYPICAL_ONLY" else []),
-                                 range_basis="note 9 2 x 40 d .. 2 x 70 d per bar"))
+                                 + (["TYPICAL_ONLY family"] if st == "HELD_TYPICAL_ONLY" else []) + why_hi,
+                                 range_basis="note 9: count A x 2 x 40 d .. count B x 2 x 70 d per bar (the count is "
+                                             "held A .. B, so each end takes its own count reading)"))
             continue
         if st.startswith("HELD_DESIGNER"):
             reasons = ["POOL_POPULATION_DESIGNER: p.7 prints two zones (deep-end R1 / shallow-end R2) for a pool the "

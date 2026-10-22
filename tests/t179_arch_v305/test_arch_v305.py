@@ -212,6 +212,41 @@ def test_pool_rows_blocked_on_the_superseded_wall_height_and_strip_owned_once():
     assert "owned once" in strip[0]["info"]["register"]
 
 
+def stair_row(**kw):
+    """one T-166-format stair row of villa K: flight K-F1, main bottom bars 8ø16/m, count held A 10 .. B 11."""
+    r = {"element": "MS1-L lower flight", "part": "main bottom bars along the flight", "mark": "8ø16/m", "page": "",
+         "d": "16", "direction": "", "n_A": "10", "n_B": "11", "n_C": "9.6", "length_m": "3.0", "m_A": "", "m_B": "",
+         "m_C": "", "kg_A": "47.407", "kg_B": "52.148", "kg_C": "45.511", "status": "MEASURED_NET_COUNT_HELD_Q71",
+         "dev_held_kg": "20.23..35.40", "note": ""}
+    r.update(kw)
+    return r
+
+
+def test_stair_development_high_end_takes_count_b():
+    """T-179 r2, D-T179-1 (checker 21:02). Note 9: 40 d .. 70 d at each bar end; ø16: 1.580247 kg/m.
+    normal: A 10 x 2 x 0.64 = 12.80 m = 20.23 kg (low, ledger); B 11 x 2 x 1.12 = 24.64 m = 38.94 kg (high).
+    The merged ledger typed the high as 10 x 2 x 1.12 = 22.40 m = 35.40 kg (count A at both ends): replaced, reason kept."""
+    dev = next(r for r in L5.stair_records([stair_row()]) if r.get("part") == "DEVELOPMENT")
+    assert (dev["low"], dev["high"]) == (A(20.23), A(38.94))
+    assert dev["high"] == A(11 * 2 * 1.12 * 256 / 162, abs=0.005)
+    assert any("HIGH_FROM_COUNT_B" in x and "35.4" in x for x in dev["reasons"])
+    assert dev["readings"]["ledger"] == "20.23..35.40"              # the ledger text stays as a reading
+    # a ledger already typed on count B passes unchanged and carries no correction reason
+    ok = next(r for r in L5.stair_records([stair_row(dev_held_kg="20.23..38.94")]) if r.get("part") == "DEVELOPMENT")
+    assert ok["high"] == A(38.94) and not any("HIGH_FROM_COUNT_B" in x for x in ok["reasons"])
+    # adverse: one count reading (A = B = 8, ø8 step bars): high = 8 x 2 x 0.56 x 64/162 = 3.54 kg, no change
+    one = next(r for r in L5.stair_records([stair_row(d="8", n_A="8", n_B="8", dev_held_kg="2.02..3.54",
+                                                      status="HELD_TYPICAL_ONLY")]) if r.get("part") == "DEVELOPMENT")
+    assert (one["low"], one["high"]) == (A(2.02), A(3.54))
+    # adverse: a ledger development that is not note 9 on its own counts is refused, never overwritten
+    for bad in ("25.00..35.40", "20.23..40.00"):
+        with pytest.raises(ValueError):
+            L5.stair_records([stair_row(dev_held_kg=bad)])
+    # adverse: a missing count reading is refused (never a range from one guessed count)
+    with pytest.raises(ValueError):
+        L5.stair_records([stair_row(n_B="")])
+
+
 # ------------------------------------------------------------------------------------------------ integration
 def test_route_slab_lines_superseded_and_ledger_lines_added():
     base, inp, ch, logs = case()
