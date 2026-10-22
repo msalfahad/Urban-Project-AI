@@ -2,7 +2,8 @@
 
 usage: python3 -I build_dashboard_data.py <docs/agents dir> <out dir> [<board commit>]
 
-Reads BOARD.md (and BOARD_ARCHIVE.md), PLAN.md, SCOREBOARD.md and OWNER_QUESTIONS.md; writes tasks.json, milestones.json, targets.json,
+Reads BOARD.md (and BOARD_ARCHIVE.md), PLAN.md, SCOREBOARD.md, OWNER_QUESTIONS.md, RUN_LOG.md (+ archive) and RUN_LEDGER.md;
+writes tasks.json, milestones.json, targets.json, indicators.json (WORKFLOW_CONTROLS section 6),
 owner_questions.json. Stdlib only. Nothing here is estimated: a value the board does not state is written as null.
 The agents table (agents.json) and refresh.json are written by the refresher from list_triggers and the clock.
 """
@@ -136,5 +137,60 @@ if open_part:
 written = qs or [{"id": "-", "title": "No open questions", "text": ""}]
 (OUT / "owner_questions.json").write_text(json.dumps(written, indent=1, ensure_ascii=False))
 
+# ---- indicators (WORKFLOW_CONTROLS_2026-10-21.md section 6) -----------------------------------------------------
+# Five indicators, each from its own source. A value the sources do not measure is "NOT YET MEASURED", never estimated.
+NYM = "NOT YET MEASURED"
+now = datetime.now(timezone.utc)
+status_of = {t["id"]: t["status"] for t in tasks}
+sb2 = status_of.get("T-132", "not on the board")
+ind = []
+for name, what in (("BOQ coverage", "share of BOQ families measured, by trade"),
+                   ("Independent verification share", "VERIFIED share by trade and unit")):
+    ind.append({"indicator": name, "value": NYM, "unit": "", "basis": NYM,
+                "source": "SCOREBOARD v2 (T-132, status " + sb2 + ")", "detail": what})
+
+pk = [t for t in tasks if "lane I" in t["trade"] and "integration (" in t["trade"]]
+merged = [t["id"] for t in pk if t["status"] in ("MERGED", "DONE")]
+waiting = [t["id"] + " " + t["status"] for t in pk if t["status"] not in ("MERGED", "DONE")]
+ind.append({"indicator": "Integration into V3.0", "value": str(len(merged)) if pk else NYM,
+            "unit": "packages merged through Gate B", "basis": "measured" if pk else NYM,
+            "source": "BOARD.md lane I integration rows",
+            "detail": ("merged: " + ", ".join(merged) if merged else "none merged")
+                      + ("; open: " + ", ".join(waiting) if waiting else "")})
+ind.append({"indicator": "Unresolved scope", "value": NYM, "unit": "", "basis": NYM,
+            "source": "HELD + UNKNOWN by trade and unit (SCOREBOARD v2, T-132, status " + sb2 + ")",
+            "detail": "no consolidated HELD / UNKNOWN table yet; held is never shown as 0"})
+
+# run reliability, last 48 h: STARTED lines and whether the same agent wrote a final line before its next start
+logs = [SRC / "RUN_LOG.md"] + sorted((SRC / "archive").glob("RUN_LOG_*.md"))
+ev = []
+for f in logs:
+    for line in f.read_text().splitlines():
+        m = re.match(r"-\s*(\d{4}-\d{2}-\d{2})[ T](\d{2}:\d{2})(?::\d{2})?(?: UTC|Z)?\s*\|\s*([^|]+?)\s*\|\s*([^|]+?)\s*\|", line)
+        if not m:
+            continue
+        at = datetime.strptime(m.group(1) + " " + m.group(2), "%Y-%m-%d %H:%M").replace(tzinfo=timezone.utc)
+        if (now - at).total_seconds() <= 48 * 3600:
+            ev.append((at, m.group(3), m.group(4).split()[0].upper()))
+ev.sort()
+started = closed = 0
+for i, (at, agent, word) in enumerate(ev):
+    if word != "STARTED":
+        continue
+    started += 1
+    for at2, agent2, word2 in ev[i + 1:]:
+        if agent2 == agent:
+            closed += word2 != "STARTED"
+            break
+ledger = (SRC / "RUN_LEDGER.md").read_text() if (SRC / "RUN_LEDGER.md").exists() else ""
+tot = re.findall(r"\*\*Totals, (\d+) slots[^*]*\*\*\s*\n\s*\n\|[^\n]*\n\|[^\n]*\n\| SUCCESS \| (\d+) \|", ledger)
+last = ("last daily ledger: " + tot[-1][1] + " of " + tot[-1][0] + " slots SUCCESS") if tot else "no daily ledger total"
+ind.append({"indicator": "Autonomous run reliability", "value": (str(round(100 * closed / started)) + " %") if started else NYM,
+            "unit": "runs with STARTED + final line, last 48 h", "basis": "measured" if started else NYM,
+            "source": "RUN_LOG.md + archive, RUN_LEDGER.md",
+            "detail": str(closed) + " of " + str(started) + " started runs closed; " + last
+                      + "; slots with no line at all are counted only in the ledger"})
+(OUT / "indicators.json").write_text(json.dumps(ind, indent=1, ensure_ascii=False))
+
 print(json.dumps({"tasks": len(tasks), "milestones": len(ms), "targets": len(tg), "open_questions": len(qs),
-                  "board_commit": COMMIT}))
+                  "indicators": len(ind), "board_commit": COMMIT}))
