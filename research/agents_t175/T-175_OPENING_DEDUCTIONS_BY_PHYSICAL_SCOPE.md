@@ -1,6 +1,6 @@
 # T-175: opening deductions by physical scope (blockwork, plaster, paint, reveals, sills, thresholds, lintels)
 
-Worker 2, 2026-10-22 13:47 - 15:10 UTC, run session_013nud3o8krkp4hSffAL8Hbn. Lane A, gate 2. Owner rule Q-73 (CONFIRMED
+Worker 2, 2026-10-22 13:47 - 14:05 UTC, run session_013nud3o8krkp4hSffAL8Hbn. Lane A, gate 2. Owner rule Q-73 (CONFIRMED
 2026-10-22, final): "Deduct the full area of every actual opening from the relevant blockwork. Apply the rule only to
 masonry that physically exists. Measure reveals separately where applicable and prevent double counting." New opt-in
 module OPENING_SCOPE_V1 (`engine/source/opening_scope_v1.py`, imported by nothing, not wired); no released quantity, rule
