@@ -350,6 +350,13 @@ perf_rows = [
      "now": perf["scope_and_verified_coverage"]["verified_share"], "unit": "% of reference lines the Checker re-measured",
      "source": perf["scope_and_verified_coverage"]["source"]},
 ]
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from queue_check import check as queue_check  # noqa: E402  (board-to-agent-queue consistency, owner 2026-10-22)
+qres = queue_check((SRC / "BOARD.md").read_text().splitlines(), (SRC / "RUN_LOG.md").read_text().splitlines())[0]
+qflag = [r["id"] + " " + r["flags"][0].split(":")[0] for r in qres if r["flags"]]
+perf_rows.append({"measure": "Tasks not in an agent's executable queue, or stalled there", "before": "T-185 (found by the owner 2026-10-22)",
+                  "after": "", "now": (str(len(qflag)) + " flagged: " + ", ".join(qflag)) if qflag else "0 flagged",
+                  "unit": "actionable board rows (queue_check.py)", "source": "BOARD.md lane orders + RUN_LOG.md"})
 for r in perf_rows:
     for f in ("before", "after", "now"):
         r[f] = "" if r[f] is None else str(r[f])
