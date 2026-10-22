@@ -51,3 +51,22 @@ Findings for the board (photo review rules, WORKFLOW_CONTROLS section 8):
 - PORCH: raised seating terrace with a railing, floor in the court stone in the render: input for the owner's open porch
   choice (wood / ceramic / marble with the steps).
 - The renders are design intent, not as-built; dimensions are never scaled from them.
+
+## Correction: how the corners are counted (main chat, 2026-10-22 07:10, owner asked "analyze his area and meters")
+
+Read again, cell by cell (freelancer workbook sheet البيان rows 50-93, sheet الفاتورة rows 14-26; Urban cost PDF plaster
+section). The earlier reading "2 m.l = 1 m2, added to the plaster area" is WRONG and is withdrawn:
+- The freelancer's invoice line is "زوايا وفواصل ومبروم م.ط" (unit m.l): full 1,297.35 m.l, column "بالنصف" (at half) "2م = 1م",
+  payable 648.675 m.l. It is a SEPARATE line in metres run, paid at half its length; nothing is added to the 1,469.97 m2.
+  The same sheet treats openings the same way (deducted at half) and the interior corners too (770.75 -> 385.375 m.l).
+- The Urban cost PDF prices the same thing as exterior corners 1,300 m.l (his 1,297.35 rounded) x 1.25 KWD = 1,625 KWD, i.e.
+  the full length at HALF the exterior plaster rate (2.50 KWD/m2). Same money as 648.675 x 2.50. Both sources agree: corners
+  are their own m.l line; "2 m = 1 m" is a half-rate pricing convention, not an area.
+- His 1,297.35 m.l = column A "عرانيس ونهايات" (arrises / stop-ends) 547.47 + column B "زوايا" (corners) 749.88. Column B by row:
+  parapet tops counted as 2 edges per metre of parapet (96.94 + 56.80 + 72.45 + 54.40 = 280.59), boundary wall 75.34 + 16.10 =
+  91.44, drip edge 181.70, vertical corners 100 + 48 = 148, pool ceiling 18, frame 17.55, roof facade 12.60. Column A is
+  entered per facade by hand (no formula; one cell holds the text "8.3.1", not a number); for parapets it equals the parapet
+  length (the top line).
+- Like for like: without the boundary wall (165.09 m.l in A + B; HELD under Q-65) and the drip edge (181.70) his figure is
+  950.56 m.l against the drawing-measured 457.095 m.l (+58.600 door jambs). Most of the rest is the parapet convention: he
+  counts 3 lines per metre of parapet (both top edges + the top line), the drawing measure counts 1 (the outer top edge).
