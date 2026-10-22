@@ -32,5 +32,9 @@
   "path": "research/agents_t165/baselines/v29_profiled_facts.json",
   "sha256": "f70170d68ad76f81a8a03c692a695dbfc872743fa065ec38209c63d09304c837"
  },
- "project": "development-villa-t131"
+ "project": "development-villa-t131",
+ "expected": {
+  "line_count": 1565,
+  "boq_lines_csv_sha256": "f5744fd46631e3b8d41ccbcc267015d4ca4a0640c1867f86a00ce70fb9dea2fd"
+ }
 }
