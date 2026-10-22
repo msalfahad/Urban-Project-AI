@@ -273,7 +273,7 @@ def _union(polys):
     return GR._convex_union_area(polys)[0] if polys else 0.0
 
 
-def blinding_scope(R, items=None, *, beam_detail=None, strap_blinding_printed=False):
+def blinding_scope(R, items=None, *, beam_detail=None, strap_blinding_printed=False, footprint="SIZE_MATCHED"):
     """footing blinding member by member, ground-beam and strap blinding as families, each m2 once."""
     g = R.get("generic") or {}
     D, conv = g.get("D"), R.get("conv")
@@ -356,8 +356,12 @@ def blinding_scope(R, items=None, *, beam_detail=None, strap_blinding_printed=Fa
         return S, free, n
     Sb, fb, nb = strips(beams)
     Ss, fs, ns = strips(straps)
-    uF = _union(F_all)
-    uFb = _union(F_all + Sb)
+    if footprint not in FOOTPRINTS:                        # T-142 (D3): see FOOTPRINTS at the end of the module
+        raise ScopeError(f"footprint {footprint!r}: one of {FOOTPRINTS}")
+    F_reach, reach_log = _reach_windows(D, state, u, p, pn) if footprint == "REACH" else ([], [])
+    F_m = F_all + F_reach
+    uF = _union(F_m)
+    uFb = _union(F_m + Sb)
     beam_low = ((uFb - uF) * u * u + fb) * t              # merged with the footing layer below
     # its own layer at beam level: crossings once, and the column / neck outlines the ground-beam plan draws inside
     # the strips taken out (the neck passes down through that layer to its footing)
@@ -377,7 +381,13 @@ def blinding_scope(R, items=None, *, beam_detail=None, strap_blinding_printed=Fa
     uSb = _union(Sb)
     footprints = (uSb + _union(C) - _union(Sb + C)) * u * u if C else 0.0
     beam_high = ((uSb * u * u - footprints) + fb) * t
-    strap_low = ((_union(F_all + Sb + Ss) - uFb) * u * u + fs) * t
+    strap_low = ((_union(F_m + Sb + Ss) - uFb) * u * u + fs) * t
+    # the merged strip against the outlined footings only: under REACH the upper end of the held strap range (the
+    # strips over an outline-less footing may or may not merge); under SIZE_MATCHED it IS strap_low (V1 unchanged)
+    strap_merged_high = ((_union(F_all + Sb + Ss) - _union(F_all + Sb)) * u * u + fs) * t if F_reach else strap_low
+    low_open = footprint == "REACH" and any(x["half_window_m"] is None for x in reach_log)
+    if low_open:                                         # a footing that can sit anywhere: no lower bound from here
+        beam_low = strap_low = 0.0
     strap_high = (_union(Ss) * u * u + fs) * t
     if under == "FOOTINGS_AND_GROUND_BEAMS" and nb:
         r = {"family": "GROUND_BEAM", "members": nb, "free_strips": sum(1 for b, band, sid in beams
@@ -386,6 +396,13 @@ def blinding_scope(R, items=None, *, beam_detail=None, strap_blinding_printed=Fa
              "column_footprints_in_strips_m2": _r(footprints)}
         if beam_detail == "OWN_LAYER":
             r.update(status="RELEASED", m3=_r(beam_high), reason="detail choice given: beam blinding its own layer")
+        elif beam_detail == "MERGED_WITH_FOOTING" and F_reach:
+            # T-142: the merged value needs every footing's outline; an outline-less footing leaves a range
+            v1_low = ((_union(F_all + Sb) - _union(F_all)) * u * u + fb) * t
+            r.update(status="HELD", m3=None, exposure_m3=[_r(beam_low), _r(max(beam_low, v1_low))],
+                     blocker="FOOTING_OUTLINE_NOT_FOUND",
+                     reason="detail choice given (merged with the footing layer), but a footing on the plan has no "
+                            "outline, so how much of the strips merges into it is not drawn: held")
         elif beam_detail == "MERGED_WITH_FOOTING":
             r.update(status="RELEASED", m3=_r(beam_low), reason="detail choice given: merged with the footing layer")
         else:
@@ -403,10 +420,15 @@ def blinding_scope(R, items=None, *, beam_detail=None, strap_blinding_printed=Fa
         # a strap runs between footings at footing level: its blinding can only merge with theirs, so the held
         # quantity is the merged strip (the own-strip area is kept as a diagnostic, never a reading)
         r = {"family": "STRAP", "members": ns, "merged_m3": _r(strap_low), "own_strip_diagnostic_m3": _r(strap_high)}
-        if strap_blinding_printed and under == "FOOTINGS_AND_GROUND_BEAMS":
+        if strap_blinding_printed and under == "FOOTINGS_AND_GROUND_BEAMS" and F_reach:
+            r.update(status="HELD", m3=None, exposure_m3=[_r(strap_low), _r(max(strap_low, strap_merged_high))],
+                     blocker="FOOTING_OUTLINE_NOT_FOUND",
+                     reason="a strap section prints the blinding, but a footing on the plan has no outline, so how "
+                            "much of the strips merges into it is not drawn: held (T-142)")
+        elif strap_blinding_printed and under == "FOOTINGS_AND_GROUND_BEAMS":
             r.update(status="RELEASED", m3=_r(strap_low), reason="a strap section prints the blinding")
         else:
-            r.update(status="HELD", m3=None, exposure_m3=[_r(strap_low), _r(strap_low)],
+            r.update(status="HELD", m3=None, exposure_m3=[_r(strap_low), _r(max(strap_low, strap_merged_high))],
                      blocker="STRAP_BLINDING_NOT_PRINTED",
                      reason="the strap schedule prints sizes only; no strap section shows a blinding (designer "
                             "request)")
@@ -418,6 +440,9 @@ def blinding_scope(R, items=None, *, beam_detail=None, strap_blinding_printed=Fa
     hh = sum((r.get("exposure_m3") or [0, 0])[1] or 0 for r in held)
     released = released_footing_m3 + rel_other
     return {"state": "MEASURED", "registration": state, "thickness_m": t, "projection_m": p,
+            **({"footprint": footprint, "no_outline_windows": reach_log,
+                "merged_low_bound": "NOT_ESTABLISHED" if low_open else "ESTABLISHED"}
+               if footprint != "SIZE_MATCHED" else {}),
             "records": recs, "footing_overlap_m2": _r(overlap_m2),
             "footing_records_sum_m3": _r(rel), "released_m3": _r(released),
             "held_exposure_m3": [_r(hl), _r(hh)], "total_range_m3": [_r(released + hl), _r(released + hh)],
@@ -425,10 +450,11 @@ def blinding_scope(R, items=None, *, beam_detail=None, strap_blinding_printed=Fa
 
 
 # ------------------------------------------------------------------------------------------------- the piece
-def measure(R, *, items=None, beam_detail=None, strap_blinding_printed=False):
+def measure(R, *, items=None, beam_detail=None, strap_blinding_printed=False, footprint="SIZE_MATCHED"):
     items = R["items"] if items is None else items
     cols = column_scope(R, items)
-    bl = blinding_scope(R, items, beam_detail=beam_detail, strap_blinding_printed=strap_blinding_printed)
+    bl = blinding_scope(R, items, beam_detail=beam_detail, strap_blinding_printed=strap_blinding_printed,
+                        footprint=footprint)
     by_st = {}
     for c in cols:
         k = by_st.setdefault(c["storey"], {"RELEASED": 0.0, "HELD": 0.0, "NOT_PRESENT": 0.0, "route": 0.0,
@@ -525,3 +551,42 @@ def policy_record():
                     "printed section); undrawn pieces NOT_PRESENT and listed; blinding per member family: footing "
                     "blinding follows its footing, ground-beam blinding a held range while the footing detail is "
                     "open (Q-21 C), strap blinding held while no strap section prints it; missing never 0"}
+
+
+# ------------------------------------------------------------------------------------------- T-142 footprint REACH
+# T-142 (V3.0.2, Gate B defect D3): which footing areas the merged beam / strap strips are taken against for the
+# held LOWER bound. V1 (SIZE_MATCHED, the default, unchanged) takes only the footings route G found an outline for; a
+# footing route G holds without an outline (two labels of different types, or a label alone) is still a footing on the
+# plan, so the strips over it merge into the footing layer too, and V1's lower bound came out above the hand value.
+# REACH keeps every outline V1 takes and adds, for each footing without an outline, the window around its label(s) in
+# which member_detection itself searches for that footing's outline (label +- 1.6 x the longest schedule side, plus
+# the blinding projection): every strip inside that window is taken as possibly merged, so the lower bound can only go
+# down (a true lower bound, wider than the hand value; the line stays HELD). A footing without an outline and without
+# a schedule size gives no window: the lower bound is then NOT_ESTABLISHED (0, with the reason). The released footing
+# blinding and both upper bounds are the same under both settings.
+FOOTPRINTS = ("SIZE_MATCHED", "REACH")
+LABEL_REACH_FACTOR = 1.6   # member_detection.footings: an outline may lie up to this x its long side beside its label
+NO_OUTLINE_STATES = ("LABEL_TYPE_CONFLICT", "LABEL_TYPE_CONFLICT_SECONDARY", "LABEL_ONLY", "NO_OUTLINE")
+
+
+def _reach_windows(D, state, u, p, pn):
+    """footprint REACH: for every footing route G holds without an outline, the window around its label in which
+    member_detection searches for that outline (label +- LABEL_REACH_FACTOR x its longest schedule side, plus the
+    projection). -> (quads, log); a footing with no label position or no schedule size gets no window (log None)."""
+    quads, log = [], []
+    for rec in _sheets(D, "FOUNDATION_PLAN"):
+        for f in rec.get("footings", []):
+            if f.get("box") or f["state"] not in NO_OUTLINE_STATES:
+                continue
+            sizes = [c["schedule_m"] for c in (f.get("candidates") or {}).values() if c.get("schedule_m")] or \
+                ([f["schedule_m"]] if f.get("schedule_m") else [])
+            if f.get("mark_at") and sizes and state == "REGISTERED":
+                w = LABEL_REACH_FACTOR * max(max(z[:2]) for z in sizes) / u
+                x, y = f["mark_at"]
+                quads.append(_quad((x - w, y - w, x + w, y + w), pn))
+                log.append({"member": f.get("member_id"), "mark": f.get("mark"), "state": f["state"],
+                            "half_window_m": _r(w * u + p, 3)})
+            else:
+                log.append({"member": f.get("member_id"), "mark": f.get("mark"), "state": f["state"],
+                            "half_window_m": None, "why": "no label position or schedule size"})
+    return quads, log
