@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-22T07:51Z | Verifier | STARTED | run session_01BYLe1oqQXdEDgmDf6QiUDK | repo-attached routine | task state: owner-session T-132 SCOREBOARD v2 first, then Lead 04:20 RUN 2 (T-151 r2 slices a-c, T-140, T-157); READY also T-162, T-163, T-169, T-150 r2, T-158 | self-check pending
 - 2026-10-22T07:43Z | Worker 3 | SUCCESS | T-151 r2 READY (34765d8), integration package V3.0.3 | Fixed checker defect D-T151-1: 18 column link lines now range over the ledger's upper path too; column HELD range 1,280.99 .. 1,703.73 -> 1,280.99 .. 2,119.35 kg (links 781.38 .. 1,245.03 = T148 B upper path), released 1,887.13 kg and every other record unchanged (r1 vs r2: only 18 records differ, highs only); own Drive run 3,132 lines, Gate B counts = checker r1 (1,880 changed, 0 unflagged); new test fails any dropped reading. All NOT RELEASED; slices (b)/(c) still to check | self-check codemap PASS, pytest t061 PASS, freeze PASS; L3 1,147 pass 0 failed; problem: none
 - 2026-10-22T07:42Z | Worker 2 | STARTED | run session_01DwbgzrDcqcUnfufJnreZHz | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-22T07:00Z | Worker 3 | STARTED | run session_01A7Q9i5mSCWipj4oKjDUchE | repo-attached routine | task state: none yet | self-check pending
