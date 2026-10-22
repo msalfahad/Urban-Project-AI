@@ -132,10 +132,20 @@ def columns():
             out.append(rec(el, fl, x["mark"], comp, "RELEASED", kg=f(x["kg"]), schedule_row="PRINTED",
                            verified_by=verified(el, comp), **common))
         elif st == "HELD" and "/" in x["kg"]:
+            # r2 (checker defect D-T151-1, 2026-10-22 06:25): the kg cell holds the LOWER-path readings A / B / C;
+            # where the ledger also prints an upper path in kg_hi ('A .. / B .. (upper)': overlapping link lengths
+            # not printed, p.9 N.T.S.), the range runs over BOTH paths, so the held exposure is never understated
             rd = readings(x["kg"])
+            basis = "readings A / B / C (owner Q-71 open), min .. max"
+            if x["kg_hi"]:
+                up = readings(x["kg_hi"])
+                if not up:
+                    raise ValueError(f"{el} {comp}: kg_hi {x['kg_hi']!r} has no readings")
+                rd.update({f"{k}_upper": v for k, v in up.items()})
+                basis = ("readings A / B / C lower path + A / B upper path (owner Q-71 open; overlapping link "
+                         "lengths not printed), min .. max over both paths")
             out.append(rec(el, fl, x["mark"], comp, "HELD_RANGE", low=min(rd.values()), high=max(rd.values()),
-                           readings_=rd, reasons=why, range_basis="readings A / B / C (owner Q-71 open), min .. max",
-                           **common))
+                           readings_=rd, reasons=why, range_basis=basis, **common))
         elif st == "HELD" and x["kg_hi"]:
             out.append(rec(el, fl, x["mark"], comp, "HELD_RANGE", low=f(x["kg"]), high=f(x["kg_hi"]), reasons=why,
                            range_basis="40 d .. 70 d (p.8 note 9, zone not printed)", **common))

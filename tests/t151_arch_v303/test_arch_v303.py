@@ -354,3 +354,59 @@ def test_the_typed_ledgers_reproduce_their_own_totals_and_load():
                 assert r["state"] != "RELEASED" and any("Q-74" in x for x in r["reasons"])
     ends = [r for r in doc["ledgers"][2]["records"] if r["component"].startswith("END-SUPPORT")]
     assert ends and all(r["state"] == "UNQUANTIFIED" for r in ends)
+
+
+# ------------------------------------------------------------------------------------------------ r2: D-T151-1
+def _col_row(**kw):
+    r = {"id": "COL-K-01", "storey": "GF", "mark": "K2", "section": "30x60", "component": "LINKS 6 ø 8 / m",
+         "reading": "6 ø 8 / m", "count": "", "length_m": "", "length_basis": "storey interval", "kg": "", "kg_hi": "",
+         "status": "HELD", "cause": "count Q-71 (open)"}
+    r.update(kw)
+    return r
+
+
+def test_r2_held_link_range_runs_over_the_upper_path_too(monkeypatch):
+    """Checker defect D-T151-1 (2026-10-22 06:25): a HELD column link row prints its lower-path readings in kg and an
+    upper path in kg_hi. VILLA K, synthetic, by hand: lower A 10.000 / B 11.000 / C 9.500 kg, upper A 20.000 /
+    B 21.000 kg -> HELD 9.500 .. 21.000 kg (r1 gave 9.500 .. 11.000, the high understated by 10.000 kg = -47.6 %);
+    a row with no upper path stays 9.500 .. 11.000; an upper cell without readings is refused, never dropped."""
+    sys.path.insert(0, str(ROOT / "research" / "agents_t151"))
+    import t151_ledgers as LG
+    both = _col_row(kg="A 10.000 / B 11.000 / C 9.500 (lower bound)", kg_hi="A 20.000 / B 21.000 (upper)")
+    lower = _col_row(id="COL-K-02", kg="A 10.000 / B 11.000 / C 9.500")
+    monkeypatch.setattr(LG, "rows", lambda p: [both, lower])
+    a, b = LG.columns()
+    assert (a["state"], a["low"], a["high"]) == ("HELD_RANGE", A(9.5), A(21.0))
+    assert a["readings"] == {"A": 10.0, "B": 11.0, "C": 9.5, "A_upper": 20.0, "B_upper": 21.0}
+    assert "upper path" in a["range_basis"]
+    assert (b["low"], b["high"]) == (A(9.5), A(11.0)) and "A_upper" not in b["readings"]
+    assert LG.totals([a, b])["held_high"] == A(32.0) and LG.totals([a, b])["held_low"] == A(19.0)
+    monkeypatch.setattr(LG, "rows", lambda p: [_col_row(kg="A 10 / B 11 / C 9.5", kg_hi="not printed")])
+    with pytest.raises(ValueError, match="no readings"):
+        LG.columns()
+
+
+def test_r2_every_column_ledger_reading_lies_inside_its_held_range():
+    """Every number printed in a HELD column row's kg / kg_hi cells of the checker-merged T148_COLUMNS.csv lies inside
+    the typed record's low .. high (records 1:1 with CSV rows, in order); the 57 link ranges re-add to the ledger's
+    own path totals: lower = min per line 781.378 kg (<= the T148_SUMMARY C path 781.373 + rounding), high = the
+    T148_SUMMARY B upper path 1,245.029 kg; column HELD range 1,280.992 .. 2,119.349 kg (checker 06:25)."""
+    sys.path.insert(0, str(ROOT / "research" / "agents_t151"))
+    import re
+    import t151_ledgers as LG
+    src, recs = LG.rows(LG.T148["file"]), LG.columns()
+    assert len(src) == len(recs) == 327
+    for x, r in zip(src, recs):
+        assert r["element"] == x["id"] and r["component"] == x["component"]
+        if r["state"] == "HELD_RANGE":
+            vals = [float(v) for c in ("kg", "kg_hi") for v in re.findall(r"\d+\.\d+|\d+", x[c].split("(")[0]
+                                                                            if c == "kg_hi" else x[c])]
+            vals = [v for v in vals if v > 1.0]       # readings only (the 'A' / 'B' letters carry no digits)
+            assert vals and all(r["low"] - 1e-9 <= v <= r["high"] + 1e-9 for v in vals), (x["id"], vals, r)
+    summ = json.loads((ROOT / "research" / "agents_t148" / "T148_SUMMARY.json").read_text(encoding="utf-8"))
+    links = [r for r in recs if r["component"].startswith("LINKS") and r["state"] == "HELD_RANGE"]
+    assert len(links) == 57
+    assert sum(r["high"] for r in links) == A(summ["links_B_upper_path_kg"], abs=0.01)
+    assert sum(r["low"] for r in links) == A(781.378, abs=0.001)
+    t = LG.totals(recs)
+    assert (t["held_low"], t["held_high"]) == (A(1280.992, abs=0.001), A(2119.349, abs=0.001))
