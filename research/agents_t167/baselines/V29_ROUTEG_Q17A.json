@@ -1,0 +1,36 @@
+{
+ "schema": "URBAN_BASELINE_SPEC_V1",
+ "method": "ARCH_TAKEOFF_V2.9",
+ "python": "3.11",
+ "inputs": {
+  "plan": {
+   "sha256": "ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4",
+   "size": 17227946
+  },
+  "structural": {
+   "sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "size": 3153037
+  }
+ },
+ "conventions": {
+  "path": "engine/profiles/URBAN_M8_GENERIC_CONVENTIONS_V6.json",
+  "sha256": "c6e4dab8108ccd21807fb5d83ea811285682f57225c87b934f8e6c73ca173dca"
+ },
+ "as_of": "2026-10-22",
+ "options": {
+  "no_svg": true,
+  "no_m9_xlsx": true,
+  "no_completeness": false
+ },
+ "baseline_id": "V29_ROUTEG_Q17A",
+ "description": "Development villa, same drawings. Spec C (T-167): ARCH_TAKEOFF_V2.9 + route G, conventions V6, the T-131 facts file and project id development-villa-t131 (as spec B, so Gate B pairs lines by id), with the route G profile restricted to owner Q-17 A: research/agents_t167/profile_st7757_q17a.json = only the values the controlled project data file research/urban_engine_m4_correctness/project_data_st7757_t064.json makes usable (13 DRAWING-VERIFIED + NECK_TOP_LEVEL_M INFERRED); FOUNDING_DEPTH_M (owner Q-21 C), CB_SUPPORT_BAR_EXTENT_FRAC (T-044 DIFFERENT) and CB_SUPPORT_BAR_SPAN_BASIS (T-044 NOT_PRINTED) removed. Evidence for the Lead's baseline ruling; it does not switch the released default.",
+ "profile": {
+  "path": "research/agents_t167/profile_st7757_q17a.json",
+  "sha256": "de5e71c585ce18fd8c879e06ec3b371cbb207f812c97699568db27d7af1144dc"
+ },
+ "facts": {
+  "path": "research/agents_t165/baselines/v29_profiled_facts.json",
+  "sha256": "f70170d68ad76f81a8a03c692a695dbfc872743fa065ec38209c63d09304c837"
+ },
+ "project": "development-villa-t131"
+}
