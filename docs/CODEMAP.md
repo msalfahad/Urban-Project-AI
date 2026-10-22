@@ -18,11 +18,11 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 2711 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 2713 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 9 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 1380 | pytest suites, one folder per round. |
+| `tests/` | 1382 | pytest suites, one folder per round. |
 | `tools/` | 109 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (254 modules)
@@ -515,7 +515,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `lintel_release_audit.py` | 151 | HIGH | 1 | LINTEL RELEASE AUDIT - whether a released lintel's bearing, end supports and measurement have authority (generic). |
 | `marble_thresholds.py` | 125 | MEDIUM | 2 | MARBLE THRESHOLDS (R8.15) - a door threshold whose whole strip is a separate MARBLE_THRESHOLD trade element. |
 | `masonry_centreline.py` | 461 | MEDIUM | 3 | MASONRY CENTRELINE RUN (T-027, MASONRY_CENTRELINE_V1) - the masonry run of one floor per wall thickness, measured |
-| `masonry_centreline_v2.py` | 880 | MEDIUM | 1 | MASONRY CENTRELINE RUN V2 (T-125, MASONRY_CENTRELINE_V2) - the masonry run of one floor per wall thickness on the |
+| `masonry_centreline_v2.py` | 880 | MEDIUM | 2 | MASONRY CENTRELINE RUN V2 (T-125, MASONRY_CENTRELINE_V2) - the masonry run of one floor per wall thickness on the |
 | `material_result.py` | 168 | MEDIUM | 7 | MATERIAL RESULT (M9 S1) - what a layout consumes, kept apart from the net BOQ quantity (generic; stdlib). |
 | `material_spec.py` | 146 | HIGH | 10 | MATERIAL SPECIFICATION (M9 S1) - what a material IS, kept apart from how much of it a room needs (generic; stdlib only). |
 | `member_detection.py` | 1143 | CRITICAL | 28 | MEMBER DETECTION (M2) - footings, columns, beams and ground beams of a NEW drawing, with no project register |
@@ -775,7 +775,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `pdf_evidence.py` | 446 | MEDIUM | 1 | PDF EVIDENCE (M3) - typical-detail evidence from a drawing PDF: native text first, then the vector check, then |
 | `phase0_audit.py` | 94 | MEDIUM | 0 | Phase 0 CLI: audit a BOQ/takeoff Excel, and optionally test-write the result. |
 | `read_document_text.py` | 77 | MEDIUM | 0 | Read AR-00's vector-outline text once, and cache every answer. |
-| `release_baseline.py` | 446 | HIGH | 1 | RELEASE BASELINE RUNNER (T-165): one pinned definition of a baseline run of the released architectural method + route |
+| `release_baseline.py` | 446 | HIGH | 2 | RELEASE BASELINE RUNNER (T-165): one pinned definition of a baseline run of the released architectural method + route |
 | `run_cad_pipeline.py` | 574 | MEDIUM | 2 | One CAD run: decode, normalize, profile, localise, measure, freeze. |
 | `run_e1.py` | 877 | MEDIUM | 0 | E1 — align the frozen A18 reading to exact CAD geometry, then freeze. |
 | `run_e1_1.py` | 1359 | MEDIUM | 0 | E1.1 — CAD entity role and region ownership correction, then freeze. |
@@ -1051,6 +1051,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t173_shaft/` | 1 |
 | `tests/t175_opening_scope/` | 2 |
 | `tests/t177_scoreboard_v2/` | 1 |
+| `tests/t178_lessons/` | 1 |
 | `tests/t182_scoreboard_five_measures/` | 1 |
 | `tests/t183_pool_rc/` | 1 |
 | `tests/t184_stairs/` | 1 |
@@ -1248,6 +1249,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t173/` | 5 |
 | `research/agents_t175/` | 7 |
 | `research/agents_t177/` | 2 |
+| `research/agents_t178/` | 2 |
 | `research/agents_t182/` | 1 |
 | `research/agents_t183/` | 3 |
 | `research/agents_t184/` | 5 |
