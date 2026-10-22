@@ -46,28 +46,31 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
-## Status (Lead, 2026-10-22 12:20; re-estimated each run from what merged and was verified)
+## Status (Lead, 2026-10-22 16:20; re-estimated each run from what merged and was verified)
 
 Baseline: the RELEASED baseline is run A (V2.9 + route G, no profile, 1,455 lines), pinned by T-165 (37124da); run B
 (profiled, 1,621 lines) is the comparison base for V3.0.x line pairing. The engineering reasoning standard (owner 08:05)
-governs every item; the owner's teaching case (pool, domes, two staircases, 09:40 / 11:50) is the structural priority.
+governs every item; the owner's teaching case (pool, domes, two staircases, 09:40 / 11:50) is the structural priority;
+WORKFLOW_CONTROLS section 10 (owner 15:15: faster execution, same evidence) governs how work flows.
 
 | Plan | Board | State | Note |
 |---|---|---|---|
-| P-01 | owner + auditor | in progress, improving | 08:20 - 12:20: 7 closed slots STARTED + SUCCESS (checker 2, worker 1 2, worker 2 2, worker 3 1); worker 3's 11:01 run still open (T-167); every self-check PASS |
-| P-02 | T-130 r3, T-165, T-140 (c3273f1) MERGED | DONE (registry, baseline, census V2) | |
-| P-03 | T-133, T-142, T-151 r2 MERGED (V3.0.3); T-167 V3.0.4 CLAIMED 11:08; T-179 after T-167; T-146 after T-179; T-186 default guard (owner pool lesson) | V3.0.4 in work | no Gate B package READY now |
-| P-04 | T-132 DONE; T-177 MERGED 12:01 (130e2e3, script); T-180 standing slot 1 / 8 reconciled, 0 / 8 VERIFIED; T-182 / T-181 next | DONE by script | pool PARTIALLY VERIFIED, not counted (owner 11:50 whole-line rule) |
+| P-01 | owner + auditor | in progress, improving | 12:20 - 16:20: 8 closed slots STARTED + final SUCCESS (worker 1 2, worker 2 2, worker 3 3, checker 1); checker 15:51 still open at 16:20; every self-check PASS; one extra checker run from 16:49 |
+| P-02 | T-130 r3, T-165, T-140 MERGED | DONE (registry, baseline, census V2) | |
+| P-03 | V3.0.3 (T-151 r2) and V3.0.4 (T-167, Gate B PASS 15:00, cf5819c: 84 profile-based lines HELD, necks 10.856 m3 -> HELD 3.075 .. 15.375) MERGED; T-179 V3.0.5 claimable now; T-187 (guard wiring + stair storey fix) after T-186 and T-179; T-146 after T-179 | V3.0.5 next | integrates: T-152, T-166, T-160 |
+| P-04 | T-132 DONE; T-177 MERGED; T-182 five measures READY; T-181 after T-182; T-180 slot: pool and 2 stair flights reconciled, 0 / 8 VERIFIED | script DONE; five measures in the checker queue | whole-line rule (owner 11:50) |
 | P-05 | T-126 / T-133 | DONE | |
-| P-06 | T-144 MERGED; T-128 r2 READY; T-173 stair shaft TODO | rework waiting for the checker | |
-| P-07 | T-125, T-143, T-169 MERGED; T-175 openings first in lane A; T-176 units; T-108 QUEUED | hand truth merged | net block after T-175 |
-| P-08 | populations MERGED; T-171 notation READY; T-174 straps TODO | notation answered by investigation, Checker next run | 2,769.06 .. 2,829.83 kg HELD on the unprinted leg diameter |
-| P-09 | T-134 MERGED; register rulings +5 (12:20: pool shell, staircases / shaft, domes S0, column joints, parapets / corners) | DONE (v0 code); content grows each run | |
-| (Gate B tooling) | T-156 MERGED; T-168 QUEUED | after lane I's 4 TODO | |
-| P-10 | T-163 formwork REJECTED (joint faces +12 %), r2 in lane S; T-170 QUEUED | started; first figures not yet verified | |
-| P-11 | T-147, T-159, T-161, T-157 MERGED; T-162 r2, T-172, T-150 r2 READY; T-164 TODO | ahead of week 3 | |
-| (concrete gap) | T-183 pool (rework r2), T-184 staircases, T-185 domes S0 / S1 / S2 | pool 7.202 m3 own (checker) vs engine 3.495 vs freelancer 12.348 | released numbers unchanged |
+| P-06 | T-144 MERGED; T-128 r2 REJECTED 16:11 on ONE room (1F-11 contour +0.200 m, owner net +1.25 %), r3 small; T-173 stair shaft READY | rework r3 | GF master bed 0.02 % confirmed |
+| P-07 | T-125, T-143, T-169 MERGED; T-175 openings READY; T-176 units after T-175 MERGED; T-108 QUEUED | net block waits on the T-175 verdict | 43 walls carry a net (476.21 m2 candidate), 28 openings HELD |
+| P-08 | populations MERGED; T-171 notation MERGED 701d227 (2,769.06 .. 2,829.83 kg HELD on the unprinted leg diameter); T-174 straps TODO | notation DONE by investigation | |
+| P-09 | T-134 MERGED; register rulings +7 (16:20: staircase identity corrected, shaft walls, opening deductions, pool upstand, 1F-11 curved glazing, default guard, corners pair) | DONE (v0 code); content grows each run | |
+| (Gate B tooling) | T-156 MERGED; T-168 QUEUED (after T-182, same scorer) | | |
+| P-10 | T-163 formwork r2 in lane S (after T-185); T-170 excavation levels QUEUED | started; first figures not yet verified | |
+| P-11 | T-147, T-159, T-161, T-157, T-150 r2, T-172, T-162 r2 MERGED; T-164 railings / shutters now backlog-permitted | ahead of week 3 | |
+| (concrete gap) | T-183 r2 pool MERGED 6380294 (7.202 m3); T-184 staircases MERGED 924c2bd (6.790 m3 measured + held; engine storey loss -2.598 m3); T-185 domes S0 / S1 / S2 first in lane S | pool and stairs reconstructed; domes next | released numbers unchanged |
+| (review plan R1-R9, owner 15:00) | R1 = T-186 READY; R2 + R3 = T-188 TODO | started | |
 
 Day-7 target (2026-10-27): **MET on 2026-10-21 17:40**. Day-14 target (2026-11-03, measurable increase in verified coverage):
-on track: V3.0.2 merged through Gate B 00:30; V3.0.3 (steel) merged through Gate B 08:12; SCOREBOARD v2 written 08:15
-(verified share 0 / 8 whole reference lines: the day-14 measure is the rise of that share and of coverage).
+on track: V3.0.2, V3.0.3 and V3.0.4 merged through Gate B; SCOREBOARD v2 by script (verified share still 0 / 8 whole
+reference lines: the day-14 measure is the rise of that share and of coverage; the pool and stair lines are now
+reconstructed and partly re-measured, so CONC.POOL is the first candidate to become whole-line VERIFIED).

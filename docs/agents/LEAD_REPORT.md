@@ -1,5 +1,89 @@
 # Lead reports to the owner's main chat (newest first, last 3 entries; older in archive/LEAD_REPORT_older.md)
 
+## LEAD REPORT 2026-10-22 16:20 UTC
+
+Repositories: attached Urban-Project-AI checkout (main b8ff258f); `.work` was prepared AUTOMATICALLY at start this time
+("prepared ... setup by auto": the 15:20 startup fix works for the Lead). Working branch head 6380294 (7 checker merges
+since 12:20: T-184, T-171, T-150 r2, T-167 Gate B, T-172, T-162 r2, T-183 r2; no owner commit on the engine branch). Drive
+readable: no file created in the Alsenan folder since 12:00, so no photo-review task. UrbanProjectsManager not used.
+Owner sessions 15:15 and 15:55 read and applied; nothing undone or duplicated.
+
+PROGRESS (Alsenan; released numbers unchanged: released concrete 92.77 vs freelancer 111.81 m3, -17.03 %, run A)
+- POOL (structure; m3), now checked: concrete 7.202 m3 = base 10.936 m2 x 0.40 = 4.374 + wall ring 2.357 m2 x 1.20 =
+  2.828, upstand 0.15 m above the deck (outer face 1.350 m2 along 8.998 m, inside the 1.20, no extra m3). The checker
+  re-read the cut itself: rim +0.30, finished floor -0.85, structure line -0.90, 0.0 % against the worker. Engine 3.495
+  (-51.5 %), freelancer 12.348 (+71.5 %: pump room 3.480 and steps 0.228 on no drawing; base counted again in his 1.80 m).
+  Your eight conditions: all PASS except (h) steel (R1 860.97 .. 894.43 vs R2 596.17 .. 616.66 kg, designer). Concrete
+  scope VERIFIED; the pool LINE stays PARTIALLY VERIFIED (whole-line rule), so concrete verified share stays 0 / 8.
+  Learned: the architectural cut draws the base 0.15 m against the structural 0.40 m printed: structure governs
+  thickness, architecture governs levels (consultant item).
+- STAIRS (structure; m3), merged: the stair beside the lift IS the dog-leg main stair (GF -> 1F -> 2F); the round stair is
+  GF -> 1F only. Own 6.790 m3 measured + held parts vs freelancer 15.053 vs engine 4.635. Checker re-measured one flight
+  of each: 1.059 and 0.972 m3, 0.0 %; lines PARTIALLY VERIFIED. Freelancer main stair +3.385 closes to 0 (his 5.3 m flight
+  includes the 1.95 m floor landing; 0.28 thickness vs 0.233 drawn); his 'stair 2' 16.4 m run matches no drawing. Found:
+  the engine silently drops the 1F -> 2F flights (-2.598 m3 incl. landing). It goes into the candidate with the default
+  guard (new package, after the next extension).
+- CANDIDATE V3.0.4 merged through Gate B: 84 lines that rested on unprinted profile values are HELD (column necks 10.856
+  m3 -> HELD 3.075 .. 15.375 m3; neck steel 1,428.571 kg blocked; founding depth not printed, your Q-21 C); 3,048 lines
+  byte-identical; candidate concrete WAPE 15.38 % on 3 of 8 compared (unchanged).
+- FOOTING PER-METRE NOTATION (rebar; kg), merged: maximum c/c spacing; 2,769.06 .. 2,829.83 kg HELD only on the
+  unprinted leg diameter (designer). The frozen 874.86 kg footing line is untouched.
+- DOORS / WINDOWS (pcs and m2), merged: windows 56.771 m2 on 8 printed vs freelancer 54.931 (+3.3 %); aluminium doors
+  10.560 vs 12.000 m2 (-12.0 %) = your 2.20 m door height vs his 2.40 (rule difference, not an error).
+- CORNERS / PARAPETS (facade; m.l and m2), merged as one pair: physical, contract (his 1,297.35 m.l), payable half
+  (648.675) and rate kept apart; his parapet third line 140.27 m.l and a 1F 1.70 m height still UNRESOLVED (designer).
+- PLASTER / PAINT (m2), sent back on ONE room: GF master bed 0.02 % (passed); 1F east master contour 22.350 vs the
+  checker's 22.150 m (+0.9 %), owner net 60.19 vs 59.45 m2 (+1.25 %): the room outline slips into the window-frame gap
+  at both ends of the curved glazing. Small rework r3; nothing else re-opened.
+- Waiting for the checker: your stair calculator (9 h), the default-value guard (holds 14.554 m3 and 1,885.36 kg on the
+  released run, finds 3 silent omissions), the five separate scoreboard measures, block openings by physical scope (43
+  walls now carry a net, 476.21 m2 candidate; 28 openings HELD) and the stair-shaft walls (owner manual 142.22 m2 gross
+  beside drawing-derived 171.88 .. 175.14 m2; his 204.42 closes to 0: open south side +20.11 and one unexplained row).
+- Change since 12:20: no released quantity moved; the candidate moved to V3.0.4 (more held, nothing invented); the pool
+  concrete is the first teaching-case element VERIFIED for its concrete scope.
+
+TEAM HEALTH (12:20 - 16:20)
+- Closed slots: worker 1 12:45, 14:30; worker 2 14:08, 16:12; worker 3 12:16 (the 11:01 run, closed), 13:18, 15:57;
+  checker 15:04: 8 of 8 STARTED + SUCCESS, every self-check PASS, every final line `ERS: read` + section. The checker's
+  15:51 run has no final line at 16:20 (scheduler PENDING; 3 merges and 1 rejection already committed): not INCOMPLETE
+  yet. If it is still open at 16:49 the new overlap guard turns that extra run into a no-op (expected behaviour).
+- READY 6 -> 5 (T-158, T-186, T-182, T-175, T-173), all CAPACITY; the stair calculator has waited 9 h because owner
+  slots went first all day; it is now first in the next checker run (your 15:15 order). Rejections since 12:20: 1 of 8
+  verdicts (12.5 %, under the 15 % target).
+- Lead self-check PASS (codemap stale none, t061, freeze 0). One board-commit rebase conflict with the checker's 16:14
+  commit: resolved by re-applying my edits on its version (nothing of its verdict lost); pushed agents/control normally.
+- This run: queue for 2 checker runs; T-179 (V3.0.5) claimable; new T-187 (guard + missing 1F -> 2F flights into the
+  candidate, after T-186 and T-179) and T-188 (element inventory and storey continuity, your review plan R2 / R3);
+  T-128 r3 first in lane A; railings / shutters now backlog-permitted; T-176 waits for the openings verdict; register +7
+  rulings (staircase identity corrected); T-184 checker column filled in the reconciliation file; BOARD.md 484 -> 387 KB
+  (12 rows merged on 21 Oct and 16 old notes moved to the archive unchanged).
+
+Proposed lessons rows (the register is the main chat's file under WORKFLOW_CONTROLS section 10; please enter):
+- 2026-10-22 | Engine drops the 1F -> 2F flights of a stair that spans three storeys (-2.598 m3, T-184) | storey fold in
+  the stair reader: a flight is bound to one storey pair only | An element spanning storeys is listed on every storey it
+  crosses; a storey with no element or line is HELD (every villa) | T-188 (normal: 3-storey stair; adverse: a stair
+  that correctly ends at 1F must not flag) | open (T-187 fix, T-188 check).
+- 2026-10-22 | Room contour +0.200 m at a curved glazing band (1F-11, T-128 r2) | region built from barrier buffers leaks
+  into the glazing-frame cavity at the jambs (length without area) | Contour = drawn face length; a frame cavity is never
+  contour; a polygon spike scan runs over every room (every villa) | T-128 r3 (normal: curved band; adverse: frame cavity at
+  the jamb) | rework r3.
+- 2026-10-22 | Architectural cut draws the pool base 0.15 m vs structural 0.40 m printed (Checker on T-183 r2) | two
+  disciplines draw one element for different purposes | Structure governs member thickness, architecture governs levels and
+  finishes; a disagreement is a consultant item, never averaged (every villa) | T-183 r2 R-POOL-8 test | consultant C10.
+
+OWNER PACKAGE
+No genuine owner decision today (standard 2.7 not met by anything open). The pool steel and the parapet types are
+designer items, listed in DESIGNER_CLARIFICATIONS.md for when you choose to send them.
+
+NEEDS FIXING
+- For the main chat: the five-measure scoreboard writes a `## SCOREBOARD v2.1` heading the dashboard parser does not read
+  yet (adapt the parser when it merges).
+- Still waiting: Kuwait specification chapters 07100, 09200, 09300, 09400, 09900 as PDFs under 6 MB (deferred by you).
+
+Team ids: MERGED T-184, T-171, T-150 r2, T-167 (Gate B), T-172, T-162 r2, T-183 r2; REJECTED T-128 r2 (r3 claimable);
+READY T-158, T-186, T-182, T-175, T-173; TODO S T-185, T-163 r2, T-174, T-188; A T-128 r3, T-164, T-176 (after T-175);
+I T-179, T-178, T-181 (after T-182); QUEUED T-187, T-146, T-168, T-170.
+
 ## LEAD REPORT 2026-10-22 12:20 UTC
 
 Repositories: attached Urban-Project-AI checkout (main 1c559a8) + wrapper; `.work` absent at start again, `setup` by hand
@@ -135,84 +219,3 @@ NEEDS FIXING
 Team ids: MERGED T-166, T-160, T-165, T-151 r2 (Gate B), T-157; T-132 DONE; READY T-140 (head merge), T-169, T-162, T-163,
 T-150 r2, T-128 r2, T-158; TODO permitted T-171, T-174 (S), T-172, T-173, T-175, T-176 (A), T-177, T-167, T-178 (I); T-168
 after T-177; T-179 after T-167; T-146 after T-179; TODO not permitted T-049, T-170 (S), T-164 (A).
-
-## LEAD REPORT 2026-10-22 04:20 UTC
-
-Repositories: attached Urban-Project-AI checkout (main 1c559a8) + wrapper; `.work` absent at start again, `setup` by hand
-worked, then `board log` / `board commit` worked, no refusal (second clean repo-attached Lead run). Working branch head
-c8a524f (11 checker merges since 00:20; no owner-session commit). Drive readable: no file created since the 27 images of 21 Oct
-22:50 (already reviewed and merged), so no new photo-review task. UrbanProjectsManager not used.
-
-PROGRESS (Alsenan; released numbers unchanged: released concrete 92.77 vs freelancer 111.81 m3, -17.03 %)
-- WHICH RUN IS RELEASED, settled: two different runs were both called "released V2.9 + route G" (worker 3 reproduced both and
-  traced the records). The 92.77 vs 111.81 m3 figure and the coverage registry come from the run WITHOUT the route G profile
-  (1,455 lines); the latest scoreboard notes and every candidate check used the PROFILED run (1,621 lines; -17.16 % on 5
-  lines). My ruling: the released baseline is the run without the profile (it is the one first scored as released, and it
-  releases nothing on a value the drawings do not print); the profiled run is a comparison base only. This names what was
-  never recorded; it does not switch your released default. Found with it: the profile holds two values the drawings print
-  differently or not at all (beam support-bar extent 0.22 vs the printed 0.3 Ln2; the span basis); they reach about 64 kg of
-  steel in the profiled run. A new task holds every candidate line that rests on them.
-- Candidate (opt-in, NOT released), through the integrated check since 00:20: footing steel 3,735.91 kg (convention) ->
-  874.86 kg drawing-confirmed on the 19 footings printed with a count (checker re-counted every one, 0.0 %) + 2,742.51 ..
-  2,836.40 kg HELD on your Q-71; soffits over outside air 44.446 m2 (finish held). Next package waiting (column, ground-beam,
-  beam steel: 1,887 + 1,253 + 5,171 kg drawing-confirmed, the rest held or unknown, never 0; route G's 14,219 kg of
-  convention steel superseded, not summed). It is 1,880 structural lines, too big for one checker run, so it is split in
-  three slices over the next two runs.
-- Checked and merged as hand pieces: slab steel (bottom mesh 2,853.00 .. 3,068.05 kg on Q-71), block wall area (955.63 m2
-  gross vs his 1,094.50, -12.7 %; one wall re-measured 0.0 %), ceilings (388.14 vs his 409.58 m2, -5.2 %), facade per side
-  (1,022.534 m2 vs his walls 968.237, +5.6 %, rule difference), the pool-court soffit, the image review.
-- Sent back (rework, exact faults on the board): plaster / paint by both methods (ground-floor master bedroom walked along the
-  straight court line instead of the curved glazing: +1.7 % on that room); doors / windows (the main entrance must be HELD
-  because the renders differ from the printed double door: my own 00:20 register line said otherwise and was wrong under
-  the photo rule; one twin window had an invented area 4.805 m2: now held).
-- New hand results waiting for the checker: outdoor floors by your rule (open court 119.542 m2 interlock; porch floor at court
-  level 10.680 m2; entrance steps marble 3.360 + 1.960 + landing 5.180; north side walk 21.021 beside your 23.955, the
-  difference being the boundary wall your 1.50 m runs to; yard like for like 151.234 vs his 151.80, -0.37 %). NOTE: the
-  "about 19.181 m2" recorded for the porch is the porch ROOF, which also covers the entrance steps and landing (10.680 +
-  3.360 + 5.180 = 19.220); the porch floor itself is 10.680 m2. Your exterior Sigma term by term: 811.77 of the drawn
-  1,022.53 m2 sit in his rows, 210.76 m2 of drawn faces (porch, sea face, pool glazing face, passage) in none; his 13 opening
-  rows are not "small windows only": they leave out the big glazings W02 / W03 / W17 / W11 / W12; corners measured 457.095
-  m.l vs his 1,297.35 m.l. Stair steel by bar population (main bars 367.88 .. 420.54 kg on Q-71); dome rings (no double count:
-  the beam register's 65.060 m3 vs his 65.97, -1.4 %, stands).
-- Learned: pool concrete is now the largest single concrete gap (3.50 vs 12.35 m3): hand ledger promoted. Excavation needs
-  the level chain your Q-21 C asks for before any volume: task added.
-
-TEAM HEALTH (00:20 - 04:20)
-- Closed slots: worker 1 00:39, 02:36; worker 2 02:06, 04:09; worker 3 01:55, 03:35; checker 00:38, 02:45, 04:02: 9 of 9
-  STARTED + SUCCESS, every self-check PASS (codemap, t061, freeze 0): every agent ran code. Worker 1 04:19 starting now.
-- The checker cleared everything I queued, 4 per run, in order. READY 7 (6 Gate A + 1 Gate B in 3 slices); expected about 3
-  after 05:49.
-- Lead self-check PASS (codemap stale none, t061, freeze 0). This run: queue for 3 checker runs; baseline ruling; 2 reworks;
-  4 new tasks (T-167 hold candidate lines on unprinted profile values, T-168 Gate B tool checks the pinned baseline, T-169
-  fix a merged wall-stub defect, T-170 foundation level chain); pool concrete promoted; formwork permitted; register +14
-  rulings; designer items D-55 .. D-57.
-
-OWNER PACKAGE
-1. Q-71 bars per metre (open): now decides about 6.74 .. 7.15 t of held steel (footings 2,742.51 .. 2,836.40 kg, column
-   links 781 .. 829, slab bottom mesh 2,853.00 .. 3,068.05, stair main bars 367.88 .. 420.54 kg). Full text in
-   OWNER_QUESTIONS.md; options A / B / C, drawing facts only.
-2. Exterior corners in your Sigma (your own note, item 2: "research the reference books, owner decides"; not a numbered
-   question, 5 are open). PROBLEM: his Sigma converts corners at 2 m.l = 1 m2. EVIDENCE: corners measured from the drawing
-   457.095 m.l (vertical external corners 128.984, parapet top outer edges 138.481, opening reveals 189.630) + 58.600 m.l
-   of door jambs from your 2.20 m door height + 20 jamb pairs HELD; his corner rows 1,297.35 m.l (walls 465.25, roof 64.45,
-   parapets 420.86, fence 165.09, drip 181.70). EXISTING RULE: none; no reference book found states 2 m.l = 1 m2 (the
-   ministry specification 09200 file is too large for the connector to read past about page 80); your Urban cost PDF keeps
-   corners as m.l. OPTIONS: (A) a corner line in m.l: 457.095 m.l measured (+58.600 assumed); (B) your freelancer's
-   conversion 2 m.l = 1 m2: 228.548 m2 (+29.300) added to plaster; (C) decide after the 09200 chapter is read: needs that
-   chapter as a PDF under 6 MB on Drive. RECOMMENDATION: A, because your own cost PDF prices corners in m.l and a m2
-   conversion would mix a bead or angle item into the plaster area with no measurable basis. HELD meanwhile: only the
-   conversion; the m.l lines and all facade work continue.
-3. Q-72 stair shaft, Q-73 block openings, Q-74 strap length, Q-75 black block size: unchanged (OWNER_QUESTIONS.md).
-For information, no answer needed: the released-baseline ruling above (tell us only if you meant the profiled run), and the
-porch floor 10.680 m2 vs the 19.181 m2 roof.
-
-NEEDS FIXING
-- Small, for the main chat: the start-up hook still does not prepare `.work` in repo-attached sessions (every agent this
-  window ran `setup` by hand; nothing lost).
-- Still waiting: Kuwait specification chapters (07100, 09200, 09300, 09400, 09900) as PDFs under 6 MB (09200 now also
-  decides the corner question); designer items D-39 .. D-57 when you choose to send them.
-
-Team ids: MERGED T-155 r2, T-142 (Gate B), T-139 r2, T-152, T-125, T-143, T-147, T-154, T-159, T-161; REJECTED -> rework T-128,
-T-150; READY T-151 (Gate B, 3 slices), T-166, T-160, T-165, T-140, T-157, T-162; TODO permitted T-150 r2, T-128 r2, T-169,
-T-158 (A), T-163 (S), T-167 / T-168 (I, after T-151 / T-165 merge); TODO not permitted T-164 (A), T-049, T-170 (S); T-132
-checker; T-146 queued after T-167.

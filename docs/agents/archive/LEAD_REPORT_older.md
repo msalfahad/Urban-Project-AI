@@ -1,3 +1,84 @@
+## LEAD REPORT 2026-10-22 04:20 UTC
+
+Repositories: attached Urban-Project-AI checkout (main 1c559a8) + wrapper; `.work` absent at start again, `setup` by hand
+worked, then `board log` / `board commit` worked, no refusal (second clean repo-attached Lead run). Working branch head
+c8a524f (11 checker merges since 00:20; no owner-session commit). Drive readable: no file created since the 27 images of 21 Oct
+22:50 (already reviewed and merged), so no new photo-review task. UrbanProjectsManager not used.
+
+PROGRESS (Alsenan; released numbers unchanged: released concrete 92.77 vs freelancer 111.81 m3, -17.03 %)
+- WHICH RUN IS RELEASED, settled: two different runs were both called "released V2.9 + route G" (worker 3 reproduced both and
+  traced the records). The 92.77 vs 111.81 m3 figure and the coverage registry come from the run WITHOUT the route G profile
+  (1,455 lines); the latest scoreboard notes and every candidate check used the PROFILED run (1,621 lines; -17.16 % on 5
+  lines). My ruling: the released baseline is the run without the profile (it is the one first scored as released, and it
+  releases nothing on a value the drawings do not print); the profiled run is a comparison base only. This names what was
+  never recorded; it does not switch your released default. Found with it: the profile holds two values the drawings print
+  differently or not at all (beam support-bar extent 0.22 vs the printed 0.3 Ln2; the span basis); they reach about 64 kg of
+  steel in the profiled run. A new task holds every candidate line that rests on them.
+- Candidate (opt-in, NOT released), through the integrated check since 00:20: footing steel 3,735.91 kg (convention) ->
+  874.86 kg drawing-confirmed on the 19 footings printed with a count (checker re-counted every one, 0.0 %) + 2,742.51 ..
+  2,836.40 kg HELD on your Q-71; soffits over outside air 44.446 m2 (finish held). Next package waiting (column, ground-beam,
+  beam steel: 1,887 + 1,253 + 5,171 kg drawing-confirmed, the rest held or unknown, never 0; route G's 14,219 kg of
+  convention steel superseded, not summed). It is 1,880 structural lines, too big for one checker run, so it is split in
+  three slices over the next two runs.
+- Checked and merged as hand pieces: slab steel (bottom mesh 2,853.00 .. 3,068.05 kg on Q-71), block wall area (955.63 m2
+  gross vs his 1,094.50, -12.7 %; one wall re-measured 0.0 %), ceilings (388.14 vs his 409.58 m2, -5.2 %), facade per side
+  (1,022.534 m2 vs his walls 968.237, +5.6 %, rule difference), the pool-court soffit, the image review.
+- Sent back (rework, exact faults on the board): plaster / paint by both methods (ground-floor master bedroom walked along the
+  straight court line instead of the curved glazing: +1.7 % on that room); doors / windows (the main entrance must be HELD
+  because the renders differ from the printed double door: my own 00:20 register line said otherwise and was wrong under
+  the photo rule; one twin window had an invented area 4.805 m2: now held).
+- New hand results waiting for the checker: outdoor floors by your rule (open court 119.542 m2 interlock; porch floor at court
+  level 10.680 m2; entrance steps marble 3.360 + 1.960 + landing 5.180; north side walk 21.021 beside your 23.955, the
+  difference being the boundary wall your 1.50 m runs to; yard like for like 151.234 vs his 151.80, -0.37 %). NOTE: the
+  "about 19.181 m2" recorded for the porch is the porch ROOF, which also covers the entrance steps and landing (10.680 +
+  3.360 + 5.180 = 19.220); the porch floor itself is 10.680 m2. Your exterior Sigma term by term: 811.77 of the drawn
+  1,022.53 m2 sit in his rows, 210.76 m2 of drawn faces (porch, sea face, pool glazing face, passage) in none; his 13 opening
+  rows are not "small windows only": they leave out the big glazings W02 / W03 / W17 / W11 / W12; corners measured 457.095
+  m.l vs his 1,297.35 m.l. Stair steel by bar population (main bars 367.88 .. 420.54 kg on Q-71); dome rings (no double count:
+  the beam register's 65.060 m3 vs his 65.97, -1.4 %, stands).
+- Learned: pool concrete is now the largest single concrete gap (3.50 vs 12.35 m3): hand ledger promoted. Excavation needs
+  the level chain your Q-21 C asks for before any volume: task added.
+
+TEAM HEALTH (00:20 - 04:20)
+- Closed slots: worker 1 00:39, 02:36; worker 2 02:06, 04:09; worker 3 01:55, 03:35; checker 00:38, 02:45, 04:02: 9 of 9
+  STARTED + SUCCESS, every self-check PASS (codemap, t061, freeze 0): every agent ran code. Worker 1 04:19 starting now.
+- The checker cleared everything I queued, 4 per run, in order. READY 7 (6 Gate A + 1 Gate B in 3 slices); expected about 3
+  after 05:49.
+- Lead self-check PASS (codemap stale none, t061, freeze 0). This run: queue for 3 checker runs; baseline ruling; 2 reworks;
+  4 new tasks (T-167 hold candidate lines on unprinted profile values, T-168 Gate B tool checks the pinned baseline, T-169
+  fix a merged wall-stub defect, T-170 foundation level chain); pool concrete promoted; formwork permitted; register +14
+  rulings; designer items D-55 .. D-57.
+
+OWNER PACKAGE
+1. Q-71 bars per metre (open): now decides about 6.74 .. 7.15 t of held steel (footings 2,742.51 .. 2,836.40 kg, column
+   links 781 .. 829, slab bottom mesh 2,853.00 .. 3,068.05, stair main bars 367.88 .. 420.54 kg). Full text in
+   OWNER_QUESTIONS.md; options A / B / C, drawing facts only.
+2. Exterior corners in your Sigma (your own note, item 2: "research the reference books, owner decides"; not a numbered
+   question, 5 are open). PROBLEM: his Sigma converts corners at 2 m.l = 1 m2. EVIDENCE: corners measured from the drawing
+   457.095 m.l (vertical external corners 128.984, parapet top outer edges 138.481, opening reveals 189.630) + 58.600 m.l
+   of door jambs from your 2.20 m door height + 20 jamb pairs HELD; his corner rows 1,297.35 m.l (walls 465.25, roof 64.45,
+   parapets 420.86, fence 165.09, drip 181.70). EXISTING RULE: none; no reference book found states 2 m.l = 1 m2 (the
+   ministry specification 09200 file is too large for the connector to read past about page 80); your Urban cost PDF keeps
+   corners as m.l. OPTIONS: (A) a corner line in m.l: 457.095 m.l measured (+58.600 assumed); (B) your freelancer's
+   conversion 2 m.l = 1 m2: 228.548 m2 (+29.300) added to plaster; (C) decide after the 09200 chapter is read: needs that
+   chapter as a PDF under 6 MB on Drive. RECOMMENDATION: A, because your own cost PDF prices corners in m.l and a m2
+   conversion would mix a bead or angle item into the plaster area with no measurable basis. HELD meanwhile: only the
+   conversion; the m.l lines and all facade work continue.
+3. Q-72 stair shaft, Q-73 block openings, Q-74 strap length, Q-75 black block size: unchanged (OWNER_QUESTIONS.md).
+For information, no answer needed: the released-baseline ruling above (tell us only if you meant the profiled run), and the
+porch floor 10.680 m2 vs the 19.181 m2 roof.
+
+NEEDS FIXING
+- Small, for the main chat: the start-up hook still does not prepare `.work` in repo-attached sessions (every agent this
+  window ran `setup` by hand; nothing lost).
+- Still waiting: Kuwait specification chapters (07100, 09200, 09300, 09400, 09900) as PDFs under 6 MB (09200 now also
+  decides the corner question); designer items D-39 .. D-57 when you choose to send them.
+
+Team ids: MERGED T-155 r2, T-142 (Gate B), T-139 r2, T-152, T-125, T-143, T-147, T-154, T-159, T-161; REJECTED -> rework T-128,
+T-150; READY T-151 (Gate B, 3 slices), T-166, T-160, T-165, T-140, T-157, T-162; TODO permitted T-150 r2, T-128 r2, T-169,
+T-158 (A), T-163 (S), T-167 / T-168 (I, after T-151 / T-165 merge); TODO not permitted T-164 (A), T-049, T-170 (S); T-132
+checker; T-146 queued after T-167.
+
 ## LEAD REPORT 2026-10-22 00:20 UTC
 
 Repositories: this Lead run is the first on the repository-attached prompt: attached Urban-Project-AI checkout (main

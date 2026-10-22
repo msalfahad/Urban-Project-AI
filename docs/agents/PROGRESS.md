@@ -1,22 +1,26 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
 Plain words, no task numbers. Measured numbers come from SCOREBOARD.md; anything not measured says so.
-Last update: 2026-10-22 12:20 UTC (Lead). Previous version: 2026-10-22 08:20 UTC. The released numbers did not change
+Last update: 2026-10-22 16:20 UTC (Lead). Previous version: 2026-10-22 12:20 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released default V2.9 + route G untouched).
-Your pool (teaching case): the checker measured it independently against your eight conditions. Base 10.936 m2 x 0.40 m
-= 4.374 m3 VERIFIED; wall ring 2.357 m2 (curved part 1.037 m2 measured) x 1.20 m = 2.828 m3, pool shell 7.202 m3 against
-the engine's 3.495 (it read half the ring and used convention thickness / height) and the freelancer's 12.348 (pump room
-3.48 m3 and steps 0.228 m3 appear in no drawing, detail or specification read; his 1.80 m wall height counts the base
-again). The worker had taken your 1.15 m as the wall height; the section shows 1.15 is the finished water depth over a
-50 mm build-up, so the concrete wall is 1.20 m, and the wall rises 0.15 m above the deck: sent back for exactly that.
-The pool line is PARTIALLY VERIFIED (steel held for the designer), so 0 of 8 concrete reference lines are verified whole.
-Also checked since 08:20: the scoreboard is now produced by a merged script (no more hand tables); the wall-stub fix and
-the coverage census merged. Formwork was sent back: one column's joint faces came out 12 % high (a beam running through
-the column was counted across the full face). Waiting for the checker: the "per metre" footing notation (it is a maximum
-spacing; 2,769 .. 2,830 kg held only on a leg diameter the drawing does not print), corners and parapets as physical
-items with his Sigma rows mapped onto them, doors / windows, plaster / paint, your stair calculator.
-Next for structure: both staircases first (your order), then the pool rework, then formwork rework, then dome scenarios
-(the three domes stay in the approved design; your client's no-dome request is a separate scenario, not released).
+Your pool (teaching case) is now reconstructed and checked: the checker re-read the cut itself and confirmed the concrete
+wall is 1.20 m (rim to the structure line; your 1.15 m is the finished water depth) and the 0.15 m upstand above the deck
+(1.350 m2 outer face along 8.998 m). Pool concrete 7.202 m3 (base 4.374 + walls 2.828) VERIFIED for the concrete scope;
+engine 3.495 (-51.5 %), freelancer 12.348 (+71.5 %: pump room and steps drawn nowhere, base counted again in his wall
+height). All eight of your conditions pass except the steel (held for the designer: the two-zone detail vs your flat
+floor), so the whole pool line stays PARTIALLY VERIFIED and the verified count stays 0 of 8 by your whole-line rule.
+Both staircases are reconstructed and merged: the stair beside the lift is the dog-leg main stair (ground to second
+floor), the round stair goes ground to first only; own 6.790 m3 measured plus held parts vs freelancer 15.053 vs engine
+4.635 m3. The checker re-measured one flight of each, both 0.0 %. Found: the engine drops the first-to-second-floor
+flights entirely (-2.598 m3); the fix goes into the candidate after the next extension.
+Also merged since 12:20: the per-metre footing notation (a maximum spacing; 2,769 .. 2,830 kg held only on a leg diameter
+the drawing does not print), doors / windows by hand, corners and parapets as physical items with his Sigma rows mapped
+onto them, and the fourth candidate extension (84 lines that rested on values the drawings do not print are now HELD,
+e.g. the column necks 10.856 m3 -> held 3.075 .. 15.375 m3 because the founding depth is not printed).
+Sent back: plaster / paint on one room only (first-floor east master: the room outline slips into the window-frame gap at
+both ends of the curved glazing, +0.200 m of wall, owner net +1.25 %); everything else in it stands.
+Next for structure: the dome scenarios (three concrete domes in the approved design; your client's no-dome request shown
+separately, not released), then the formwork rework.
 
 ## Where we are on the five gates
 | Gate | In plain words | Due | Done so far | State |
@@ -162,16 +166,15 @@ Not measured, and paused by your order (Alsenan first).
   development lengths, so a steel ledger is not complete until it has read them.
 
 ## Being worked on now
-- Checker (clean runs at 09:52 and 11:51, three items each, your items first): next run the pool rework if it has landed
-  (else the column concrete line re-measured whole), the footing notation, doors / windows, then corners / parapets with
-  the Sigma comparison as one pair; then plaster / paint, the stair calculator and both staircases.
-- Structural (worker 1): both staircases project-wide (every flight, landing and the stair beside the lift; the last
-  structural page), then the pool rework (1.20 m wall, 0.15 m upstand), then the formwork rework, then the dome scenarios.
-- Architecture and finishes (worker 2): block openings by physical scope (your answer), then the stair-shaft walls (they
-  share the stair beside the lift with the staircase work; one owner per element), then black block units.
-- Integration (worker 3): the fourth candidate extension (every line resting on an unprinted value held), then a guard that
-  refuses a convention value where a drawing prints one (your pool lesson), then the scoreboard's five separate measures and
-  doors / windows in pieces AND m2.
+- Checker (one extra run a day from 16:49): your stair calculator first (waiting 9 h), then the default-value guard, the
+  scoreboard's five separate measures and the block openings by physical scope; then the stair-shaft walls.
+- Structural (worker 1): dome scenarios (approved design vs your client's request vs a consultant revision), then the
+  formwork rework (beams running through a column), the angled strap beams at their axis length, then a cross-check that
+  every element (stair, pool, dome, tank, lift) appears on every storey and drawing it should.
+- Architecture and finishes (worker 2): the one-room plaster / paint fix, then railings, balustrades and shutters as BOQ
+  lines (a category missing from every BOQ so far), then black block units once the openings are checked.
+- Integration (worker 3): the fifth candidate extension (checked slab steel, stair / landing steel and the dome ring), then
+  the lessons-into-tests work; after that the guard and the missing stair flights go into the candidate.
 
 ## What is missing
 - Window sills / heads for 20 windows and 3 arch openings (designer window schedule asked); every door but the main entrance (2.20 m by your Q-55 C, stated as assumed).
@@ -188,9 +191,8 @@ Not measured, and paused by your order (Alsenan first).
 - The Kuwait specification chapters on waterproofing, floors, wall tiles and paint (file too big: parts needed).
 
 ## Waiting for the owner
-- No decision needed today. Per your standard, the open points are investigations, not questions: the "per metre" notation
-  (answered from the drawings, waiting for the checker; only the unprinted leg diameter stays a designer item), the stair
-  shaft and the black block units. Block openings and strap length are answered by you and in work.
+- No decision needed today. The per-metre notation was settled from the drawings by the team (only the unprinted leg
+  diameter stays a designer item); the stair-shaft walls are investigated and waiting for the checker; black block units are an investigation in work.
 - Designer items to forward when you choose (DESIGNER_CLARIFICATIONS.md): footing bar leg diameter, pool steel (the p.7
   detail is two-zone, your floor is flat), the three parapet types ST p.14 leaves to the architectural detail, and the
   earlier D-39 .. D-58.
