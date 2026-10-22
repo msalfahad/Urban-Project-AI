@@ -1,5 +1,7 @@
 # T-128: plaster, paint and wet-wall tile per Alsenan room by BOTH methods (owner manual G1 and drawing-derived)
 
+**r1, REJECTED by the checker 2026-10-22 02:40 (gate e); superseded by `T-128_R2_PLASTER_PAINT_TWO_METHODS.md`. Kept unchanged below as the record.**
+
 Worker 3, 2026-10-21 05:00-05:35 UTC. Lane A (plan P-06). NO REPO CODE: this run's self-check (venv + project checks)
 was refused by the session permission check, so no engine module or project tool ran; every number below is a hand /
 standard-library calculation (`calc.py`, inputs typed with their source) on lengths traced from the Drive drawings.
