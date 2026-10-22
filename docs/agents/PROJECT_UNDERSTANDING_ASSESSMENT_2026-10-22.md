@@ -51,3 +51,36 @@ missing cross-discipline coordination.
 ## 5. Owner lesson recorded 2026-10-22 (pool)
 
 The engine used defaults and incomplete geometry although the information was present across the architectural and structural drawings. Prevention: the default guard (T-186) is the first concrete piece of the project-understanding engine (phase 2: cross-drawing reconciliation before measurement). Its regression tests cover curved pool walls, printed thickness ignored, partial footprints, a missed staircase, a dropped upper flight, double-counted landings / pool junctions, and a client request treated as an approved revision.
+
+## 6. Residential engineering-review plan (owner approval 2026-10-22 15:00: continue in parallel, V3.0 not delayed; Kuwait specification PDFs deferred)
+
+Order by what prevents a wrong BOQ: (1) missing elements, (2) wrong defaults, (3) incomplete geometry, (4) cross-drawing
+inconsistency. Each check is a pure, unwired module with a non-Alsenan fixture, run as a lane S / A task in its own run;
+its findings are HELD lines and issue rows, never quantities. None waits on a specification PDF.
+
+| # | Check | Prevents | Sources it needs (all present for Alsenan) | Evidence so far | Next task size |
+|---|---|---|---|---|---|
+| R1 | Default guard: no convention value where any project document prints one (T-186) | wrong defaults | every sheet's printed dimensions, levels, schedule values | pool 0.25 / 1.60 conventions vs printed 0.40 / 1.20 (T-183) | READY, wiring after T-167 |
+| R2 | Element inventory across disciplines: every architectural element (stair, pool, tank, dome, lift, ramp, parapet) has a structural counterpart and a BOQ owner, and the reverse | missing elements | ARCH plans + sections, ST plans + details, element register (T-134) | 1F->2F flights folded away (D-T184-1, -2.598 m3); pump room in freelancer but on no drawing | one run: register cross-join + report |
+| R3 | Storey continuity: an element that spans floors (stair, lift, shaft, void, column) appears on every storey it crosses | missing elements, incomplete geometry | per-storey plans, section A-A / B-B | ST-01 ends at 2F, ST-02 at 1F (T-184) | one run |
+| R4 | Curved / partial geometry completeness: plan area and length of an element equal its outline (arcs included), never a straight strip | incomplete geometry | DXF arcs and polylines, structural outlines | pool ring curved half missed (11.784 m centreline) | one run per element family |
+| R5 | Level chain: FFL -> structural top -> soffit -> footing, each level a named physical datum | incorrect heights, depths | level marks, sections, structural notes (T-170 queued) | pool wall 1.15 finished vs 1.20 structural (T-183 r2) | two runs |
+| R6 | Opening consistency: plan opening = elevation opening = schedule row (width, sill, head, type) | inconsistency, deduction errors | plans, elevations, door / window schedule if issued | 20 windows print no head (T-144); Q-73 deductions (T-175) | one run |
+| R7 | Scope vs drawings: every BOQ / freelancer line maps to a drawn element, and every drawn element to a line | missing and invented scope | BOQ lines, element register, freelancer rows | freelancer pump room 3.480 m3 and pool steps 0.228 not drawn | one run |
+| R8 | Client change vs approved design: a client request is a scenario (S1), never a revision until the consultant issues one | wrong scope released | owner notes, revision register | domes S0 / S1 / S2 (Q-29) | in place (scenario rule) |
+| R9 | Document / revision register: every sheet with title, number, revision, date, discipline; the BOQ cites the revision it used | stale-drawing errors | Drive file list and title blocks | not built | one run (phase 1) |
+
+Project-specific information that will eventually be required (asked of the owner only when a project needs it and no
+drawing or rule settles it; nothing below blocks current work):
+
+1. Per project: the issued drawing set with revision letters and dates (architectural, structural, MEP, sanitary), and
+   which revision is "for construction".
+2. Door / window schedule, or confirmation that none was issued (otherwise heights stay ASSUMED / HELD).
+3. Finishes schedule or specification sheet (floor, wall, ceiling, exterior finishes; waterproofing system).
+4. Soil report / founding depth, where the drawings do not print it (Q-21 C for Alsenan: founding depth HELD).
+5. Plot data: plot area, setbacks, ground level relative to the road and the datum of +0.00 (for excavation and
+   external works).
+6. Client requests not yet issued as consultant revisions (scenario S1 list), with the date of each.
+7. Special elements' supplier data where the drawings defer to it: pool equipment and pump room, lift pit, water tanks,
+   skylights replacing domes.
+8. Later (deferred by the owner): Kuwait residential regulation and specification PDFs, for phase 4 checks.

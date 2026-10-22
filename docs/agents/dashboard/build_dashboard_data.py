@@ -132,7 +132,9 @@ open_part = re.search(r"^## Open\s*(.*?)^## Answered", text, re.S | re.M)
 qs = []
 if open_part:
     for m in re.finditer(r"^### (Q-\d+)\s+(.*?)\n(.*?)(?=^### |\Z)", open_part.group(1), re.S | re.M):
-        qs.append({"id": m.group(1), "title": m.group(2).strip()[:140], "text": " ".join(m.group(3).split())[:500]})
+        inv = re.search(r"^STATUS[^\n]*INVESTIGATION (T-\d+)", m.group(3), re.M)  # reopened as a team task (owner 2026-10-22)
+        qs.append({"id": m.group(1), "title": m.group(2).strip()[:140], "text": " ".join(m.group(3).split())[:500],
+                   "waits_on": ("team investigation " + inv.group(1)) if inv else "owner decision"})
 # an empty file cannot be read by the dashboard, so "nothing open" is one placeholder row with id "-"
 written = qs or [{"id": "-", "title": "No open questions", "text": ""}]
 (OUT / "owner_questions.json").write_text(json.dumps(written, indent=1, ensure_ascii=False))
@@ -229,5 +231,91 @@ ind.append({"indicator": "Autonomous run reliability", "value": (str(round(100 *
                       + "; slots with no line at all are counted only in the ledger"})
 (OUT / "indicators.json").write_text(json.dumps(ind, indent=1, ensure_ascii=False))
 
+# ---- performance, before / after (owner approval 2026-10-22 "faster execution", WORKFLOW_CONTROLS section 10) ---------
+# BEFORE = the 24 h before the change, AFTER = from the change to now, both scaled to a day. Events come from the final
+# RUN_LOG lines only: a worker line whose task field says READY is a completion; the task ids in a Verifier line's task
+# field are its verdicts (MERGED, or REJECTED when the id follows the word REJECTED before any later MERGED).
+CUT = datetime(2026, 10, 22, 15, 0, tzinfo=timezone.utc)
+TID = r"T-\d+(?:\s*r\d+)?"
+
+
+def norm(t):
+    return re.sub(r"\s+", " ", t)
+
+
+finals = []  # (time, agent, word, task field, message)
+for f in logs:
+    for line in f.read_text().splitlines():
+        m = re.match(r"-\s*(\d{4}-\d{2}-\d{2})[ T](\d{2}:\d{2})(?::\d{2})?(?: UTC|Z)?\s*\|\s*([^|]+?)\s*\|\s*([^|]+?)\s*\|"
+                     r"\s*([^|]*?)\s*\|(.*)", line)
+        if m:
+            at = datetime.strptime(m.group(1) + " " + m.group(2), "%Y-%m-%d %H:%M").replace(tzinfo=timezone.utc)
+            finals.append((at, m.group(3), m.group(4).split()[0].upper().strip("(),"), m.group(5), m.group(6)))
+finals.sort(key=lambda e: e[0])
+ready_at, verdicts = {}, []  # task id -> latest completion time; (time, id, MERGED / REJECTED)
+for at, agent, word, field, msg in finals:
+    if agent.startswith("Worker") and word in ("SUCCESS", "OK") and "READY" in field:
+        for tid in re.findall(TID + r"(?=[^|]*?READY)", field):
+            ready_at[norm(tid)] = at
+    if agent == "Verifier" and word in ("SUCCESS", "OK", "BLOCKED", "INCOMPLETE"):
+        for tid in dict.fromkeys(norm(t) for t in re.findall(TID, field)):
+            pos = msg.find(tid.split(" ")[0])
+            before = msg[:pos] if pos >= 0 else ""
+            r, g = before.rfind("REJECT"), before.rfind("MERGED")
+            kind = "REJECTED" if r > g else ("MERGED" if g > r else "CHECKED")  # CHECKED: no merge / reject word before it
+            verdicts.append((at, tid, kind, ready_at.get(tid) or ready_at.get(tid.split(" ")[0])))
+runs = [(at, agent, word) for at, agent, word, _, _ in finals]
+
+
+def window(lo, hi):
+    days = max((hi - lo).total_seconds() / 86400, 1e-9)
+    comp = [1 for at, agent, word, field, _ in finals if lo <= at < hi and agent.startswith("Worker")
+            and word in ("SUCCESS", "OK") and "READY" in field]
+    ver = [v for v in verdicts if lo <= v[0] < hi]
+    merged = [v for v in ver if v[2] == "MERGED"]
+    rejected = [v for v in ver if v[2] == "REJECTED"]
+    lag = [(v[0] - v[3]).total_seconds() / 3600 for v in ver if v[3] and v[3] <= v[0]]
+    st = [r for r in runs if lo <= r[0] < hi and r[2] == "STARTED"]
+    ok = [r for r in runs if lo <= r[0] < hi and r[2] in ("SUCCESS", "OK")]
+    bad = [r for r in runs if lo <= r[0] < hi and r[2] in ("BLOCKED", "FAILED", "INCOMPLETE")]
+    return {"from": lo.strftime("%Y-%m-%d %H:%M"), "to": hi.strftime("%Y-%m-%d %H:%M"), "days": round(days, 2),
+            "completed_per_day": round(len(comp) / days, 1), "verdicts_per_day": round(len(ver) / days, 1),
+            "verified_merged_per_day": round(len(merged) / days, 1),
+            "rejected": len(rejected), "checked_other": len(ver) - len(merged) - len(rejected),
+            "hours_completion_to_verdict_avg": round(sum(lag) / len(lag), 1) if lag else NYM,
+            "runs_started": len(st), "runs_success": len(ok), "runs_failed_or_blocked": len(bad),
+            "runs_started_without_final": max(len(st) - len(ok) - len(bad), 0)}
+
+
+# backlog now: READY rows, age from the worker's READY line (or the time in the status cell)
+backlog = []
+for line in BOARD_LINES:
+    c = cells(line) if re.match(r"\|\s*T-\d", line) else []
+    if len(c) > 4 and c[4].startswith("READY"):
+        tid = c[0] + (" " + re.search(r"\b(r\d+)\b", c[4]).group(1) if re.search(r"^READY\s*(\[[^\]]*\]\s*)*r\d+", c[4]) else "")
+        at = ready_at.get(tid) or ready_at.get(c[0])
+        if not at:
+            m = re.search(r"(\d{4}-\d{2}-\d{2}) (\d{2}:\d{2}) UTC\)", c[4])
+            at = datetime.strptime(m.group(1) + " " + m.group(2), "%Y-%m-%d %H:%M").replace(tzinfo=timezone.utc) if m else None
+        backlog.append({"id": tid, "gate_b": "Gate B" in c[4],
+                        "age_h": round((now - at).total_seconds() / 3600, 1) if at else None})
+ages = [b["age_h"] for b in backlog if b["age_h"] is not None]
+owner_blocked = [t["id"] for t in tasks if t["status"] not in ("MERGED", "DONE", "SUPERSEDED", "REJECTED")
+                 and re.search(r"owner decision|waits? (?:on|for) the owner|BLOCKED \(owner", t["note"], re.I)]
+owner_decisions_open = [q["id"] for q in qs if q["waits_on"] == "owner decision"]
+perf = {
+    "change": CUT.strftime("%Y-%m-%d %H:%M UTC") + " (one extra Checker run a day, overlap guard, batching; WORKFLOW_CONTROLS section 10)",
+    "before": window(CUT.replace(day=CUT.day - 1), CUT),
+    "after": window(CUT, now) if now > CUT else NYM,
+    "backlog_now": len(backlog), "backlog_oldest_h": max(ages) if ages else None, "backlog": backlog,
+    "verification_to_integration": NYM + " (needs 'integrates: T-...' in each Gate B package row, section 10 rule 6)",
+    "owner_blocked_tasks": owner_blocked, "owner_decisions_open": owner_decisions_open,
+    "team_investigations": [q["id"] + " " + q["waits_on"] for q in qs if q["waits_on"] != "owner decision"],
+    "scope_and_verified_coverage": {"coverage": per_trade("Coverage %") or NYM,
+                                    "verified_share": per_trade("Verified share %") or NYM,
+                                    "source": ("SCOREBOARD v2 " + v2when) if v2rows else NYM},
+}
+(OUT / "performance.json").write_text(json.dumps(perf, indent=1, ensure_ascii=False))
+
 print(json.dumps({"tasks": len(tasks), "milestones": len(ms), "targets": len(tg), "open_questions": len(qs),
-                  "indicators": len(ind), "board_commit": COMMIT}))
+                  "indicators": len(ind), "backlog": len(backlog), "board_commit": COMMIT}))
