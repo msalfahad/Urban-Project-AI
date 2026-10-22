@@ -1,0 +1,17 @@
+{
+ "SCHEMA": "T183_POOL_INPUT_V1",
+ "source": "printed values only: ST p.7 DETAIL OF SWIMMING POOL (walls 20, floor 40, 5cm screed, 5cm insulation membrane, 10cm plain concrete; bar labels), ST DXF GROUND BEAMS PLAN layer S-BW outlines 7C6 / 7C5 (D: back 3.50, rectangle 1.75, half circle r 1.75; water r 1.55), architectural GF plan (350 / 350 / 20), NW elevation 115 (owner Q-26 A: flat, 1.15 m), ST p.8 note 5 (ready-mix concrete), note 22 (7 cm cover in contact with soil)",
+ "unit": "m",
+ "outline": {"kind": "D", "r": 1.75, "b": 1.75},
+ "wall_t": 0.20, "base_t": 0.40, "wall_h": 1.15,
+ "blinding_t": 0.10, "screed_t": 0.05, "membrane_t": 0.05, "blinding_projection": null,
+ "casting_method": "CAST_IN_PLACE",
+ "steps_drawn": false, "pump_room_drawn": false,
+ "soil_cover": 0.07,
+ "populations": {
+  "R1_deep_end_detail": {"wall_v_out": [7, 14], "wall_v_in": [7, 12], "wall_h_out": [0.20, 12], "wall_h_in": [0.20, 12],
+                         "floor_main": [7, 14], "floor_dist": [6, 14], "rim": [3, 16], "corner": [3, 16]},
+  "R2_shallow_end_detail": {"wall_v_out": [6, 12], "wall_v_in": [6, 12], "wall_h_out": [0.20, 10], "wall_h_in": [0.20, 10],
+                            "floor_main": [6, 12], "floor_dist": [6, 12], "rim": null, "corner": [4, 16]}
+ }
+}
