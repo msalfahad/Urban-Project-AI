@@ -1,16 +1,25 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
 Plain words, no task numbers. Measured numbers come from SCOREBOARD.md; anything not measured says so.
-Last update: 2026-10-22 04:20 UTC (Lead). Previous version: 2026-10-22 00:20 UTC. The released numbers did not change
-(the released method is untouched). Which run is "released" is now pinned: the run without the route G profile (the one
-behind 92.77 vs 111.81 m3); the profiled run is a comparison base only. Checked and merged since 00:20: the second
-candidate extension through the integrated check (footing steel 3,735.91 kg convention -> 874.86 kg drawing-confirmed on
-the 19 footings printed with a count + 2,742.51 .. 2,836.40 kg held on your Q-71; soffits over outside air 44.446 m2), slab
-steel by bar population, block wall area by hand, ceilings room by room, the facade per side, the pool-court soffit and the
-review of your 27 images. Sent back for rework: plaster / paint by both methods (two curved rooms walked on the wrong line)
-and doors / windows (the main door must be held after the render difference; one twin window had an invented area).
-Waiting for the checker: the third candidate extension (column, ground-beam and beam steel), stair / pool / tank steel, the
-dome rings, the outside floors, and your exterior Sigma reconciled term by term.
+Last update: 2026-10-22 08:20 UTC (Lead). Previous version: 2026-10-22 04:20 UTC. The released numbers did not change
+(the released method is untouched; released concrete 92.77 vs 111.81 m3, -17.03 %). Checked and merged since 04:20: stair,
+pool and water-tank steel by bar population (stair main bars 367.88 .. 420.54 kg held on the "per metre" meaning; pool and
+tank steel held), the dome rings (no double count: beam register 65.060 vs his 65.97 m3, -1.4 %, stands) the pinned
+definition of the released run, the outside areas by your rule (court 119.542 m2 interlock, porch floor 10.680, entrance
+steps marble, north side walk 21.021 beside your 23.955; checker re-measured the porch 0.0 %), and the third candidate
+extension through the integrated check (column 1,887.13 / ground beams 1,252.91 / beams 5,171.03 kg drawing-confirmed, the
+rest held, never 0; route G convention steel superseded, not summed). That steel package was sent back once for one fault (18 column link lines lost their upper reading)
+and merged after the fix.
+Your directive of this morning is in force: the "per metre" steel notation, the stair shaft and the black block size are
+now engineering investigations, not questions to you; block openings (full opening, physical scope) and strap length (beam
+axis) are answered and in work; corners are their own m.l line at full physical length, the half is payment only.
+New hand results waiting for the checker: formwork for the first time (1,038.533 m2 above ground, held parts as ranges;
+below ground both your open alternatives shown), plaster / paint by both methods reworked (whole house dry walls
+drawing-derived 1,129.09 .. 1,155.22 vs his 1,209.39 m2, -6.6 .. -4.5 %), doors / windows reworked, your stair rule as a
+calculator (your table 6 of 6 exact), and the wall-stub fix. SCOREBOARD v2 is now on the board: concrete error 17.03 %
+on the released run and 15.38 % on the candidate (3 of 8 lines compared; the drop comes from blinding moving to held,
+not from accuracy); 0 of 8 reference lines re-measured whole by the checker yet; plaster, paint and floor area held;
+doors and windows not comparable in m2 yet (the engine counts pieces).
 
 ## Where we are on the five gates
 | Gate | In plain words | Due | Done so far | State |

@@ -46,6 +46,18 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+### Lead 2026-10-22 08:20 (from T-163, T-169, T-158, T-150 r2, T-151 r2, T-128 r2 READY; T-166, T-160, T-165 MERGED; owner-notes correction 07:10; owner directive 08:05)
+
+| Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |
+|---|---|---|---|---|---|
+| Exterior corners / arrises / stop-ends (Sigma "corners") | facade plaster, beads, parapets | FACADE, ONE m.l line: physical length 457.095 m.l measured (vertical 128.984 + parapet top edges 138.481 + reveals 189.630) + 58.600 door jambs ASSUMED — OWNER-APPROVED (Q-55 C) + 20 jamb pairs HELD. CORRECTS the 04:20 line: nothing is "for the owner to decide" any more; the owner-notes correction (07:10) shows "2 m = 1 m" is a half-rate payment convention, so contract / payable quantity (his half) and the Urban PDF rate basis (1,300 m.l x 1.25 KD) are separate columns, never m2 and never a change to the physical length (standard section 3). Parapet decomposition (two faces, top surface, arrises) is T-172 | DRAWING-CONFIRMED (m.l) | OWNER_NOTES_SIGMA correction; standard s.3 | T-172 |
+| Door D-GF-06 (GF, to the +1.00 landing) | openings, facade, plaster reveals | OPENINGS: 2.200 m2 = printed width x 2.20 (ASSUMED — OWNER-APPROVED, Q-55 C), FLAG; the render's arched head (T-161 F22) is NOT IN THE DRAWING and contradicts no printed value, so it is not quantified: HELD as its own item | ASSUMED — OWNER-APPROVED + HELD increment | WORKFLOW_CONTROLS s.8; contrast main door (render contradicts a printed size: HELD) | D-58; T-150 r2 |
+| Formwork faces (all RC elements above and below ground) | formwork, concrete | FORMWORK: derived from the verified concrete faces (T-139 slabs, beam register, T-119 columns); one face belongs to one element; junctions deducted (beam into column, slab over beam); below-ground sides FORMED vs EARTH_CAST both shown (OQ-10 open alternatives, not a new question) | CALCULATED, pending checker | T-163 | checker RUN B |
+| Owner stair rule calculator (UP-STAIR-015, every villa) | stair finish, stair concrete | STAIR: check mode only; the drawn count governs (owner S-1); entrance flight E1 5 x 0.170 FLAGGED (same as D-56), not changed | rule recorded, not wired | OWNER_RULE_STAIRS | checker RUN C |
+| Stair shaft walls (Q-72) | plaster, paint, block | PLASTER / PAINT: HELD; Q-72 is now investigation T-173 (owner directive 08:05), not an owner question; T-128 r2 keeps the shaft out of both methods | HELD | standard s.2 | T-173 |
+| Angled straps SB2 / SB3 (Q-74 answered 08:05) | concrete, rebar, formwork, excavation | CONCRETE at the beam-axis length (2.293 / 3.258 m between established faces, footing overlap counted once); bars, formwork and excavation derived separately | HELD until T-174 merges | owner directive s.7 | T-174 |
+| Block / plaster / paint openings (Q-73 answered 08:05) | block, plaster, paint, openings, waterproofing | each opening id has separate consequences per trade; full opening deducted only where that trade is physically built round it; no masonry invented behind full-height glazing | HELD until T-175 merges | owner directive s.6 | T-175 |
+
 ### Lead 2026-10-22 04:20 (from T-151, T-157, T-160, T-162, T-165, T-166 READY; T-150 / T-128 REJECTED; T-142, T-152, T-143, T-147, T-159, T-161, T-154 MERGED)
 
 BASELINE RULING (from T-165, which reproduced both runs and traced the provenance). THE RELEASED BASELINE is spec

@@ -1,5 +1,71 @@
 # Lead reports to the owner's main chat (newest first, last 3 entries; older in archive/LEAD_REPORT_older.md)
 
+## LEAD REPORT 2026-10-22 08:20 UTC
+
+Repositories: attached Urban-Project-AI checkout (main 1c559a8) + wrapper; `.work` absent at start again, `setup` by hand
+worked, then `board log` / `board commit` worked, no refusal. Working branch head 554c1c4 (5 checker merges since 04:20; no
+owner-session commit on it). Drive readable: no file created or modified in the project folders since my last run, so no
+photo-review task. UrbanProjectsManager not used. Your directive of 08:05 (engineering reasoning standard) and the 07:10
+corners correction are applied below; nothing in them was undone or duplicated.
+
+PROGRESS (Alsenan; released numbers unchanged: released concrete 92.77 vs freelancer 111.81 m3, -17.03 %, run A)
+- Structure, checked and merged as hand pieces: stair steel by bar population (main bars 367.88 .. 420.54 kg, HELD on the
+  "per metre" meaning; landing strip 18.204 kg = frozen engine at 0.0 %), pool steel HELD (the p.7 detail is two-zone, your
+  floor is flat: designer item), tank walls HELD (not drawn); dome rings: only the in-bay ring part is concrete (west 0.7552
+  m3, checker 0.7553), so the beam register 65.060 vs his 65.97 m3 (-1.4 %) stands; the released-run definition is pinned.
+- MERGED through the integrated check (candidate V3.0.3, opt-in, NOT released): column steel 1,887.13 / ground beams
+  1,252.91 / beams 5,171.03 kg drawing-confirmed, the rest held or unknown (never 0), route G's convention steel superseded,
+  not summed. It was rejected once for one real fault (18 column link lines dropped their upper reading: held column range
+  topped at 1,703.73 instead of 2,119.35 kg); worker 3 fixed exactly that and the checker passed all three slices in one run
+  (own re-counts 0.0 %). Outside areas by your rule merged too (porch floor 10.680 m2, checker 0.0 %).
+- SCOREBOARD v2 (first time, checker 08:15): concrete WAPE 17.03 % released run A / 15.38 % candidate, on 3 of 8 lines
+  compared (the candidate's drop is blinding moving to held, not accuracy); verified share 0 of 8 whole reference lines
+  (pieces were re-measured, no whole line yet); plaster, paint, floor area: 1 reference line each, all HELD, no %; doors and
+  windows: not comparable in m2 (the engine counts pieces) - the hand m2 tables exist and must reach the candidate.
+- New, first figures for a missing category: formwork above ground 1,038.533 m2 calculated (slab soffit 375.048, beam
+  soffit 97.855, beam sides 288.711, columns 183.967, joints 14.224, slab edges 31.795, stairs 44.533) + 220.752 .. 276.506
+  HELD; below ground both open alternatives (formed 103.140 / earth-cast 0) + held 162.640 .. 227.118. Freelancer has no row
+  (no %). Learned: a face rule without junction deductions overstates beam sides +13.4 % and columns +5.4 %.
+- Finishes, reworks waiting for the checker: plaster / paint on the verified curved boundaries (GF master bedroom 78.61 m2
+  by your method / 56.01 net, checker 78.60 / 56.02; 1F east master 74.87 vs his 74.46, +0.6 %; whole house dry walls
+  drawing-derived 1,129.09 .. 1,155.22 vs his 1,209.39 m2, -6.6 .. -4.5 %); doors / windows (windows 56.771 m2 on 8 printed
+  vs his 54.931, +3.3 %; W16 and the main door HELD; door heights 2.20 your fallback: aluminium 10.560 vs his 12.000 m2,
+  -12.0 %, rule difference); your stair rule as a check calculator (your table 6 of 6; 4.48 m -> 28 risers); wall-stub fix.
+- Your directive turned three questions into engineering work: the "per metre" bar notation (footings only, with its own
+  evidence), the stair shaft geometry and black block units; block openings (full opening, physical scope) and strap length
+  (beam axis) are answered and in work; corners: one m.l line at full physical length (457.095 measured + 58.600 at your door
+  height), his half and your PDF's half rate kept as payment columns, never m2.
+- Not measured yet: coverage, verified share and held quantity per trade (SCOREBOARD v2 is being built by the checker now).
+
+TEAM HEALTH (04:20 - 08:20)
+- Closed slots: worker 1 04:44, 07:22; worker 2 05:46, 08:08; worker 3 05:11, 07:43; checker 06:23, 08:17: 8 of 8
+  STARTED + SUCCESS, every self-check PASS (codemap, t061, freeze 0): every agent ran code. The checker did your scoreboard
+  first, as asked, and still cleared the steel package and the outside areas. Worker 2 is now on the repo-attached setup too (first run 05:40, clean).
+- Small fault: workers write board-row times 40-60 min ahead of their own RUN_LOG lines (one row says 09:05, written 08:08);
+  no quantity affected.
+- Lead self-check PASS (codemap stale none, t061, freeze 0). This run: queue for 3 checker runs with the scoreboard as a
+  standing slot (7 READY; the census needs only a head merge); the checker's scoreboard-script task ranked first for worker 3; transition rule for the 9 rows claimed before your
+  directive; ruling on door D-GF-06 (arched head in the render, not drawn: rectangle kept with your fallback height, the arch
+  held on new designer item D-58); 2 new tasks (slab / stair steel and dome ring into the candidate after V3.0.4, T-179; lessons of
+  merged work into rules and regression tests); register +7 rulings (corners corrected); scout request on the meaning of
+  "n ø d/m" (reference books are evidence level 4 only); the block-opening / strap / corner request closed by your answers.
+
+OWNER PACKAGE
+No genuine owner decision today. Under your directive the 04:20 items are withdrawn: the "per metre" notation is an
+investigation (it returns to you only if the drawings and references cannot settle it, in your new format); corners are
+settled by your notes. Q-72 and Q-75 are investigations; Q-73 and Q-74 answered by you.
+
+NEEDS FIXING
+- Small, for the main chat: the start-up hook still does not prepare `.work` in repo-attached sessions (every agent this
+  window ran `setup` by hand; nothing lost). Second small item: the worker prompts could say "UTC time from `date -u`" so
+  board-row times match the run log.
+- Still waiting: Kuwait specification chapters (07100, 09200, 09300, 09400, 09900) as PDFs under 6 MB; designer items
+  D-39 .. D-58 when you choose to send them.
+
+Team ids: MERGED T-166, T-160, T-165, T-151 r2 (Gate B), T-157; T-132 DONE; READY T-140 (head merge), T-169, T-162, T-163,
+T-150 r2, T-128 r2, T-158; TODO permitted T-171, T-174 (S), T-172, T-173, T-175, T-176 (A), T-177, T-167, T-178 (I); T-168
+after T-177; T-179 after T-167; T-146 after T-179; TODO not permitted T-049, T-170 (S), T-164 (A).
+
 ## LEAD REPORT 2026-10-22 04:20 UTC
 
 Repositories: attached Urban-Project-AI checkout (main 1c559a8) + wrapper; `.work` absent at start again, `setup` by hand
@@ -143,58 +209,3 @@ NEEDS FIXING
 Team ids: MERGED T-119 r2, T-130 r3, T-134, T-156, T-149, T-144, T-155 r2; READY 12 (T-142 Gate B, T-152, T-139 r2, T-125,
 T-143, T-128, T-147, T-154, T-150, T-159, T-161, T-140); TODO permitted T-160 (S), T-157 / T-162 / T-158 (A), T-151 /
 T-165 (I); TODO not permitted T-166, T-163 (S), T-164 (A); T-132 checker only.
-
-## LEAD REPORT 2026-10-21 20:20 UTC
-
-Repositories: attached Urban-Project-AI checkout + wrapper (setup by hand: the start-up hook did not run; then board log /
-commit worked, no refusal). Working branch head 8a22eec (5 checker merges since my last report, no owner-session commit on
-it). Drive readable (Alsenan folder: no new files today). UrbanProjectsManager not needed.
-
-PROGRESS (Alsenan; released numbers unchanged: released concrete 92.77 vs freelancer 111.81 m3, -17.0 %)
-- MILESTONE: the first change verified through the whole integrated BOQ (day-7 target, due 27 Oct, met today 17:40).
-  The checker ran the opt-in candidate on the drawings, hand-checked every safety line plus 2 random lines and merged it:
-  columns above the necks 36.714 -> 34.446 m3 (5 columns that no upper slab plan draws, 2.268 m3, confirmed absent on
-  the drawing) and blinding under footings 15.179 m3 released in the candidate (hand 15.213, -0.2 %); ground-beam and strap
-  blinding stay HELD. Candidate only: the released default is unchanged and needs you to switch.
-- Concrete accuracy reading (checker, 8 reference lines): released WAPE 18.17 %; candidate 15.38 %, but that drop comes only
-  from blinding moving to HELD, so it is not an accuracy gain. Three defects found in the candidate (a run script without its
-  profile, a storey summary 1.428 m3 short of its own lines, two held lower bounds 10 / 15 % over hand): none touches a
-  released quantity; they go into the next extension.
-- Verified as hand pieces: floor area room by room (dewaneya re-measured 0.0 %; north court strip 21.021 vs 21.348 m2, split
-  held), column steel (3 columns re-counted 0.0 %; his 7.95 t is a kg/m3 lump = rule difference), ground-beam spans (3 spans
-  re-measured). Slabs checked by hand on 3 panels (0.0 / 0.05 / 0.0 %) but sent back for two text fixes (a sheet note quoted
-  word for word in the public repository, a wrong page).
-- New hand results waiting: beam steel 5,171 kg net by bar population (links on your Q-71, laps held); doors / windows:
-  counts agree with the freelancer (29 windows, 5 aluminium doors), the gap is heights: windows 56.771 vs 54.931 m2 on the 8
-  with printed heights (+3.3 %), 20 held for the designer window schedule; columns at the water tank now held as a 3.00 ..
-  3.80 m range instead of a guessed height.
-- Learned: the dome ring circle overlaps the straight beams, so the beam register may count roughly 1.1 m2 of ring plan per
-  dome twice (now a task); on 1F the slab hand total and the freelancer differ by only 0.37 m2 after the dome corners (about
-  0.06 m3, under 0.5 %): searched on the drawings first, no question to you unless a rule gap appears.
-- Your requests today: facade length and height per side is first in the architectural lane; the stair rule is recorded,
-  your S-1..S-3 answers are in the calculator task, nobody will ask for it again.
-
-TEAM HEALTH (16:20 - 20:20)
-- Every run left a STARTED and a final line: worker 1 16:21 and 18:21 SUCCESS, worker 3 17:00 and 19:02 SUCCESS, worker 2
-  17:40 SUCCESS and 19:41 NO-CLAIM (correct: nothing it was allowed to claim; it refreshed six waiting branches instead),
-  checker 17:52 SUCCESS; checker 19:55 still running. All self-checks PASS (codemap, t061, freeze 0): every agent ran code.
-- 7 of 7 closed slots successful (target 90 %). Worker 3 moves to the new setup at 20:59, then the Lead.
-- What I did: queue for the next 3 checker runs (critical columns first); second extension opened for worker 3 with the
-  three defects; slab steel released to worker 1; new dome-ring task; your facade request at the top of lane A; element
-  register +9 elements; designer item D-44 corrected; a no-assumptions catch sent to the checker (one window "inferred" from
-  a twin must be HELD).
-
-QUESTIONS FOR OWNER
-No new question. The daily package is unchanged (Q-71 .. Q-75 and OQ-04 outside-area finishes).
-
-NEEDS FIXING
-- Small, for the main chat: the start-up hook (setup) does not run by itself in the repo-attached sessions; every agent runs
-  setup by hand and it works, so nothing is lost.
-- Proposal for your workflow controls (no hurry): draw the checker's 2 random lines only from BOQ lines that carry a
-  quantity (269 of 460 other lines carry none, so a random pick often lands on held text). Until you say so the checker keeps
-  your approved rule.
-- Still waiting: Kuwait specification chapters (07100, 09200, 09300, 09400, 09900) as PDFs under 6 MB; designer items D-44 ..
-  D-48 when you choose to send them.
-
-Team ids: MERGED T-145, T-133 (Gate B), T-153, T-141, T-148; REJECTED T-130 r2, T-139, T-119; READY 13 (run A: T-119 r2,
-T-130 r3, T-156, T-134); TODO T-159, T-158 (A), T-142 (I), T-152 (S, permitted), T-160 (S, new), T-157, T-140, T-132.

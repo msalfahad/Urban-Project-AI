@@ -26,7 +26,20 @@ how estimators report a lap RANGE when tension / compression zones are not print
 into stock lengths with laps, and test cases. Unblocks T-138 r2 (ground beams and straps), T-141 (span splitter) and the
 footing / slab steel lines in V3.0.2.
 
-### R-11 Named measurement-standard clauses for (a) opening deductions in blockwork and (b) the measured length of strap / oblique ground beams (lead 2026-10-21 08:20)
+### R-12 What "n ø d / m" means on Gulf / Arab-region structural foundation schedules (lead 2026-10-22 08:20)
+Problem: footing schedules print reinforcement as "n ø d/m" (for example "9 ø 14/m"); the team must establish from
+evidence whether it means a bar density, a maximum spacing s = 1/n, or a count in a 1 m module, before any rounding
+(owner directive 2026-10-22, ENGINEERING_REASONING_STANDARD section 3: "a notation's meaning before its arithmetic").
+Gap: about 6.7 .. 7.2 t of footing, column-link, slab and stair steel is HELD on this one meaning (footings 2,742.51 ..
+2,836.40 kg alone). Look for: published detailing manuals, code commentaries or ministry / consultant standard notes used
+in Kuwait and the Gulf (or Egyptian / Saudi practice they follow) that define the "/m" notation on schedules, and how
+bar-bending-schedule practice counts bars from it (end bars, first bar at cover or at s/2, rounding up). Cite only pages
+actually read; an engineering reference is evidence level 4, below the project's own schedule, sections and notes. Feeds
+T-171 (footings only; no extension to columns, slabs or stairs without their own evidence).
+
+## Answered
+
+### R-11 Named measurement-standard clauses for (a) opening deductions in blockwork and (b) the measured length of strap / oblique ground beams (lead 2026-10-21 08:20) — CLOSED (lead 2026-10-22 08:20): (a) and (b) answered by the owner himself in his directive of 2026-10-22 (Q-73: full openings deducted subject to physical scope, T-175; Q-74: actual beam-axis length, T-174); (c) settled by the owner-notes correction 07:10 (corners are a separate m.l line paid at half, never m2; T-172); (d) moot for the engine (Q-73 deducts full openings); the freelancer's half deduction stays a comparison note in T-162. No scout work needed.
 Problem: two owner questions (Q-73, Q-74) carry the Lead's recommendation as "practice, not a code clause"; the owner
 decides better with the exact clause of the standards Gulf QS practice uses. Gap: block net area HELD on every wall
 (gross 955.63 m2 measured, freelancer 1,094.50 m2, -12.7 %); two oblique straps 2.293 / 3.258 m (axis face to face) vs
@@ -43,7 +56,6 @@ enumerated / linear labour item only, never added to the m2 (NRM2 / POMI / SMM7 
 arrises; Kuwait MPW or Gulf BOQ preamble wording); and (d) the freelancer's practice of deducting openings at HALF their
 area in external plaster: which standard, if any, states it. Owner decides; the team only reports the sources. Unblocks T-162.
 
-## Answered
 
 ### R-06 Arabic and English finishing notes and room tags on SCANNED villa plans (lead 2026-10-20 00:30)
 Problem: the Alsenan architectural PDF sheets are raster scans, and the finishing facts (tile sizes, floor finish per

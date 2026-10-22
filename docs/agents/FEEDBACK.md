@@ -34,6 +34,37 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
    commit. Decision: board-only handoffs are verified as hand evidence (the verifier re-reads the cited notes), and the
    next task on the topic writes the files (T-117); a run with no line stays a NEEDS FIXING item for the owner's setting.
 
+## 2026-10-22 08:20 (lead run)
+
+- **Checker 07:51 SUCCESS (finished 08:17, during this Lead run)**: T-132 SCOREBOARD v2 written (concrete WAPE A 17.03 % / V3.0.3
+  15.38 % on 3 of 8 compared; verified share 0 / 8 whole reference lines; doors / windows m2 refused: engine counts pcs);
+  MERGED T-151 r2 (Gate B a-c PASS, 47df193) and T-157 (554c1c4, porch 10.680 m2 own 0.0 %); T-140 all gates PASS but a merge
+  conflict in rebar_product_registry.py. Decisions: T-157 WORKED; T-151 r2 WORKED (Gate B); T-140 back to worker 3 for the
+  head merge only; the checker's new T-177 (scoreboard columns by script) ranked first in lane I; my integration task
+  renumbered T-179.
+- **Checker 06:23 SUCCESS**: MERGED T-166, T-160, T-165, REJECTED T-151 (slice a); own re-measures 0.0 % (stair MS1-U 59.656 kg,
+  pool R1 verticals 165.03 kg, west dome ring 0.7553 m3); both baselines reproduced byte-identical. Running since 07:51 (T-132 first).
+- **T-166 stair / pool / tank steel: WORKED (MERGED a9e1d63)**. Pool steel HELD on D-57, tank walls not drawn. Into T-179.
+- **T-160 dome rings: WORKED (MERGED b5da75b)**: no double count; risk noted (frozen M8 _dome uses the full annulus, 0 on
+  Alsenan). Decision: lesson + regression test in T-178; integration in T-179.
+- **T-165 release baseline: WORKED (MERGED 37124da)**: the 04:20 ruling (run A released, run B comparison base) now rests on
+  merged pinned specs. Decision: T-168 claimable now.
+- **T-151 V3.0.3: PARTIAL (REJECTED slice a, D-T151-1: 18 link lines dropped their upper-path readings, held upper bound
+  understated by 415.62 kg)**. Worker 3 fixed exactly that (r2 READY 34765d8, only 18 records differ, highs only, new test
+  fails any dropped reading). r2 MERGED 08:12; T-167 -> T-179 -> T-146 now open in that order.
+- **READY since 04:20, pending the checker (Lead review, no fault found)**: T-163 formwork 1,038.533 m2 above ground +
+  held ranges (draft face rule overstates beam sides +13.4 %: learned, the hand walker deducts junctions); T-169 jamb-stub
+  fix (68 of 72 runs byte-identical); T-150 r2 (Lead ruling on F22 / D-GF-06: rectangular 2.200 m2 with fallback height,
+  arched-head increment HELD on D-58); T-158 stair rule calculator (owner table 6/6); T-128 r2 (GF master contour = checker
+  0.0 %; shaft HELD -> T-173).
+- **Owner directive 08:05 (engineering reasoning standard)**: Q-71 / Q-72 / Q-75 became investigations, Q-73 / Q-74 answered,
+  corners settled by the 07:10 notes correction. Decision: the 04:20 owner-package items (Q-71, corners) are withdrawn;
+  R-11 closed; R-12 opened for T-171 ("n ø d/m" meaning, evidence level 4 only); new T-178 carries section 4 rules + tests
+  for merged pieces; transition rule for the 9 READY rows written in the VERIFIER QUEUE.
+- **Recurring cause 9 (new)**: worker board rows carry clock times 40-60 min ahead of their own RUN_LOG lines (T-128 r2 row
+  "09:05" written 08:08; T-150 r2 "06:35" vs 05:46; T-163 "05:20" vs 04:44; T-169 "05:52" vs 05:11). No quantity affected.
+  Decision: report to the main chat (prompt wording "UTC time" should say "from `date -u`").
+
 ## 2026-10-22 04:20 (lead run)
 
 - **Checker 00:38 / 02:45 / 04:02 SUCCESS**: 11 merged since 00:20 (T-155 r2, T-142 Gate B, T-139 r2, T-152, T-125, T-143,
