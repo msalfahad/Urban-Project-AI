@@ -1,0 +1,130 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_OPENINGS_KEY_MAP_V1",
+ "task": "T-181",
+ "purpose": "Doors and windows like for like (pcs vs pcs, m2 vs m2) per opening class: the opening register (research/agents_t150/OPENINGS_T150.csv, T-150 r2, Checker MERGED 2026-10-22 15:00 b35666a) against the freelancer's aluminium workbook rows (tests/alsenan/registers_b1/FREELANCER_RAW_ROWS.json, file ALU, sheet 'الكميات'). New key-map version beside T001B_KEY_MAP.json (URBAN_ALSENAN_KEY_MAP_V1, unchanged). Built by tools/alsenan_keymap.py --openings-register.",
+ "register_side_label": "opening register T-150 r2 (hand census from the drawings, Checker MERGED b35666a); NOT an engine run",
+ "reference_cells": {
+  "count": "B",
+  "width": "C",
+  "height": "D",
+  "area": "H",
+  "source": "his header rows 8-9: B 'عدد' (number), C 'طول' (length), D 'عرض / ارتفاع' (width / height), H the row's area by his formula =D*C*B"
+ },
+ "approved_assumption_sources": [
+  "Q-55 C"
+ ],
+ "approved_assumption_note": "door height 2.20 m where every sheet is silent: owner answer Q-55 C / UP-DOOR-HGT-001 (OWNER_QUESTIONS_ANSWERED), ASSUMED — OWNER-APPROVED (WORKFLOW_CONTROLS s.4)",
+ "classes": [
+  {
+   "class": "DOOR.EXTERNAL.ALUMINIUM",
+   "trade": "DOORS",
+   "register_boq_lines": [
+    "DOOR.EXTERNAL.ALUMINIUM"
+   ],
+   "engine_item_codes": [
+    "DOOR.EXTERNAL.ALUMINIUM"
+   ],
+   "reference_rows": [
+    "ALU:الكميات:14",
+    "ALU:الكميات:51"
+   ],
+   "cover_total": {
+    "ref_id": "ALU:الغلاف:16",
+    "m2": 12.0
+   }
+  },
+  {
+   "class": "WINDOW.ALUMINIUM",
+   "trade": "WINDOWS",
+   "register_boq_lines": [
+    "WINDOW.ALUMINIUM"
+   ],
+   "engine_item_codes": [
+    "ARCH.WINDOW"
+   ],
+   "reference_rows": [
+    "ALU:الكميات:15",
+    "ALU:الكميات:16",
+    "ALU:الكميات:17",
+    "ALU:الكميات:18",
+    "ALU:الكميات:19",
+    "ALU:الكميات:20",
+    "ALU:الكميات:21",
+    "ALU:الكميات:22",
+    "ALU:الكميات:34",
+    "ALU:الكميات:35",
+    "ALU:الكميات:36",
+    "ALU:الكميات:37",
+    "ALU:الكميات:38",
+    "ALU:الكميات:39",
+    "ALU:الكميات:40",
+    "ALU:الكميات:48",
+    "ALU:الكميات:49",
+    "ALU:الكميات:50",
+    "ALU:الكميات:52"
+   ],
+   "cover_total": {
+    "ref_id": "ALU:الغلاف:17",
+    "m2": 116.9
+   }
+  },
+  {
+   "class": "DOOR.INTERNAL.PVC",
+   "trade": "DOORS",
+   "register_boq_lines": [
+    "DOOR.INTERNAL.PVC"
+   ],
+   "engine_item_codes": [
+    "DOOR.INTERNAL.PVC"
+   ],
+   "reference_rows": [],
+   "not_comparable_reason": "no PVC / internal door supply line in the freelancer workbooks (his plaster sheet only deducts 26 x 1.00 x 2.10); a reference-set gap, never a false positive (T001B not_keyed, T-150 r2 s.4)"
+  },
+  {
+   "class": "DOOR.MAIN_ENTRANCE",
+   "trade": "DOORS",
+   "register_boq_lines": [
+    "DOOR.MAIN_ENTRANCE"
+   ],
+   "engine_item_codes": [
+    "DOOR.MAIN_ENTRANCE"
+   ],
+   "reference_rows": [],
+   "not_comparable_reason": "no main-door supply line in the freelancer aluminium workbook (T-150 r2 s.4)"
+  }
+ ],
+ "held_class_candidates": {
+  "D-GF-05": {
+   "classes": [
+    "DOOR.EXTERNAL.ALUMINIUM",
+    "DOOR.INTERNAL.PVC"
+   ],
+   "source": "register CLASS_EVIDENCE: kitchen to the side passage; ALUMINIUM if the passage is open-air, PVC if not (owner Q-67 A CONDITIONAL; designer D-48 open)"
+  }
+ },
+ "scope_labels": {
+  "ALU-GF-EXT": "ALU:الكميات:14",
+  "ALU-GF-BATH": "ALU:الكميات:15",
+  "ALU-GF-W6.57": "ALU:الكميات:16",
+  "ALU-GF-W6.33": "ALU:الكميات:17",
+  "ALU-GF-W1.00": "ALU:الكميات:18",
+  "ALU-GF-W1.50a": "ALU:الكميات:19",
+  "ALU-GF-W1.20": "ALU:الكميات:20",
+  "ALU-GF-W1.95": "ALU:الكميات:21",
+  "ALU-GF-W1.50b": "ALU:الكميات:22",
+  "ALU-1F-W1.00": "ALU:الكميات:34",
+  "ALU-1F-BATH": "ALU:الكميات:35",
+  "ALU-1F-W3.15": "ALU:الكميات:36",
+  "ALU-1F-W1.55x2": "ALU:الكميات:37",
+  "ALU-1F-W1.55": "ALU:الكميات:38",
+  "ALU-1F-W2.45": "ALU:الكميات:39",
+  "ALU-1F-W1.20": "ALU:الكميات:40",
+  "ALU-2F-W1.00": "ALU:الكميات:48",
+  "ALU-2F-W1.20a": "ALU:الكميات:49",
+  "ALU-2F-BATH": "ALU:الكميات:50",
+  "ALU-2F-DOOR": "ALU:الكميات:51",
+  "ALU-2F-W1.20b": "ALU:الكميات:52"
+ },
+ "scope_label_note": "labels are the register's FREELANCER_KEY values (T-150 r2); each names the one workbook row with that floor and size. GF rows 19 and 22 are both 1 x 1.50 x 2.00 and roof rows 49 and 52 both 1 x 1.20 x 2.00: within each pair the a / b tie is interchangeable (identical quantities), the opening sets are not.",
+ "rule": "a reference row answers one class; pcs and m2 are separate keys and never converted; a class without a reference row is NOT COMPARABLE"
+}
