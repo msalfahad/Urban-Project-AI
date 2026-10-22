@@ -1034,6 +1034,8 @@ Answer (owner, main chat, 2026-10-19 14:45 UTC), his words: "Design confirm that
 
 APPLICATION REFINED (owner, main chat 2026-10-22, his directive): the client change is scenario S1 (proposed); the approved-design baseline S0 keeps the three concrete domes until a consultant-revised design (S2) exists; the earlier removal of the dome lines from the BOQ is replaced by the S0 / S1 scenario split (T-185). The owner's 2026-10-19 words above are unchanged.
 
+CONFIRMED (owner, main chat 2026-10-22, his words): "The removal of the concrete domes is currently ONLY a request from the villa/chalet owner. The consultant has NOT issued a revised structural drawing." Keep the three concrete domes in the approved-design baseline; show the non-concrete alternative separately; do not release the deletion; do not assume open skylights need no structural redesign; list what the consultant must approve. Project-specific, not a general rule.
+
 ### Q-30 Kitchens: waterproofed like a bathroom, floor only, or not at all? (lead 2026-10-19 14:30; membrane table requirement, T-072, T-074; no-assumptions question)
 
 THE PROBLEM: your membrane-table instruction names kitchens with bathrooms and roofs, but no Urban rule covers kitchen

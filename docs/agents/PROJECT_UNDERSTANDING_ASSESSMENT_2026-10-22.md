@@ -47,3 +47,7 @@ reader effort vs an intake requirement.
 
 Rows are added when T-180 / T-181 / T-182 or other verdicts show that a quantity difference comes from drawing interpretation or
 missing cross-discipline coordination.
+
+## 5. Owner lesson recorded 2026-10-22 (pool)
+
+The engine used defaults and incomplete geometry although the information was present across the architectural and structural drawings. Prevention: the default guard (T-186) is the first concrete piece of the project-understanding engine (phase 2: cross-drawing reconciliation before measurement). Its regression tests cover curved pool walls, printed thickness ignored, partial footprints, a missed staircase, a dropped upper flight, double-counted landings / pool junctions, and a client request treated as an approved revision.
