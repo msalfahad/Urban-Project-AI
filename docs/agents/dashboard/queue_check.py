@@ -5,9 +5,12 @@ usage: python3 -I queue_check.py <docs/agents dir> [--json <out file>]
 Every actionable task row on BOARD.md must have a responsible agent, a place in that agent's executable queue, a clear
 status, and, when it cannot start, a named dependency or blocker. The queue of a worker is the Lead's newest
 "LANE ORDER" note (S = worker 1, A = worker 2, I = worker 3), with any newer owner-session "WORKER n takes T-xxx" put first.
-READY rows belong to the Checker (it takes every READY row). A queued task is STALLED when its worker has finished more
-runs since the queue note than the task's position in the queue. Stdlib only; reads the board, writes nothing to it.
-Exit code 1 when any row is flagged.
+READY rows belong to the Checker (it takes every READY row). Stdlib only; reads the board, writes nothing to it.
+FLAG (exit code 1): a structural gap the Lead fixes (NOT_QUEUED, NO_AGENT, NO_BLOCKER, UNCLEAR_STATUS).
+STALL_CHECK (owner 2026-10-22: an investigation trigger, never evidence of failure, exit code unchanged): the worker
+finished more runs since the task got its place than its position, and at least one of those runs is not explained by
+work ahead of it in the queue, rework (rN) or an owner-session priority. A task that names an open dependency
+("after T-nnn", "waits for T-nnn") is WAITING and never a stall check.
 """
 import json
 import re
@@ -58,7 +61,7 @@ def queues_of(board_lines):
     if lead:
         since, text = max(lead, key=lambda x: x[0])
         seg = text[text.index("LANE ORDER"):]
-        for lane, num, body in re.findall(r"\b([SAI])\s*\(worker\s*(\d)\)\s*:\s*([^;]*)", seg):
+        for lane, num, body in re.findall(r"\b([SAI])\s*\(worker\s*(\d)[^)]*\)\s*:\s*([^;]*)", seg):
             queues["Worker " + num] = list(dict.fromkeys(re.findall(TID, body)))
             placed.update({t: since for t in queues["Worker " + num]})
     owner = []
@@ -75,22 +78,24 @@ def queues_of(board_lines):
 
 
 def finals(log_lines):
-    """(time, worker) of every finished worker run (final lines only, not STARTED)."""
+    """(time, worker, task field) of every finished worker run (final lines only, not STARTED)."""
     out = []
     for line in log_lines:
-        m = re.match(r"-\s*" + STAMP + r"(?::\d{2})?(?: UTC|Z)?\s*\|\s*(Worker \d)\s*\|\s*([A-Z-]+)", line)
+        m = re.match(r"-\s*" + STAMP + r"(?::\d{2})?(?: UTC|Z)?\s*\|\s*(Worker \d)\s*\|\s*([A-Z-]+)[^|]*\|\s*([^|]*)", line)
         if m and m.group(4) != "STARTED":
-            out.append((when(m.group(1), m.group(2)), m.group(3)))
+            out.append((when(m.group(1), m.group(2)), m.group(3), m.group(5)))
     return out
 
 
 def check(board_lines, log_lines):
     rows = rows_of(board_lines)
+    status_of = {r["id"]: r["status"] for r in rows}
     queues, since, placed = queues_of(board_lines)
+    owner_placed = {t for t, at in placed.items() if since is None or at > since}
     runs = finals(log_lines)
     result = []
     for r in rows:
-        st, flags, agent, place = r["status"], [], "", ""
+        st, flags, checks, agent, place = r["status"], [], [], "", ""
         if st in DONE or st == "REJECTED":
             continue
         if r["checker"]:
@@ -112,10 +117,18 @@ def check(board_lines, log_lines):
                 pos = queues[agent].index(r["id"]) + 1
                 place = agent + " position " + str(pos)
                 t0 = placed.get(r["id"], since)
-                ran = sum(1 for at, w in runs if w == agent and at > t0)
-                if ran > pos:
-                    flags.append("STALLED: " + agent + " finished " + str(ran) + " runs since " + t0.strftime("%H:%M")
-                                 + " UTC, when the task got position " + str(pos))
+                mine = [f for at, w, f in runs if w == agent and at > t0]
+                ahead = set(queues[agent][:pos - 1])
+                unexplained = [f for f in mine if not (set(re.findall(TID, f)) & (ahead | owner_placed)
+                                                      or re.search(r"\br\d+\b", f))]
+                deps = [d for d in re.findall(r"(?:after|waits? (?:on|for))\s+(" + TID + ")", r["note"])
+                        if status_of.get(d, "MERGED") not in DONE]
+                if deps:
+                    place += " (WAITING on " + ", ".join(deps) + ")"
+                elif len(mine) > pos and unexplained:
+                    checks.append("STALL_CHECK (investigate, not a failure): " + agent + " finished " + str(len(mine))
+                                  + " runs since " + t0.strftime("%H:%M") + " UTC (position " + str(pos) + "), "
+                                  + str(len(unexplained)) + " on work not ahead of it, not rework, not owner priority")
             if not agent:
                 flags.append("NO_AGENT: no lane and no queue")
         elif st == "QUEUED" or st.startswith("BLOCKED"):
@@ -125,7 +138,7 @@ def check(board_lines, log_lines):
                 flags.append("NO_BLOCKER: " + st + " without a named dependency or blocker")
         else:
             flags.append("UNCLEAR_STATUS: '" + st + "'")
-        result.append({"id": r["id"], "status": st, "agent": agent, "queue": place, "flags": flags})
+        result.append({"id": r["id"], "status": st, "agent": agent, "queue": place, "flags": flags, "checks": checks})
     return result, queues, since
 
 
@@ -135,12 +148,15 @@ def main(argv):
     log = (src / "RUN_LOG.md").read_text().splitlines()
     res, queues, since = check(board, log)
     flagged = [r for r in res if r["flags"]]
+    checked = [r for r in res if r["checks"]]
     print("queue note: " + (since.strftime("%Y-%m-%d %H:%M UTC") if since else "none") + "; "
           + "; ".join(w + ": " + ", ".join(q) for w, q in queues.items()))
     for r in res:
-        print(("FLAG " if r["flags"] else "ok   ") + r["id"] + " | " + r["status"] + " | " + (r["agent"] or "-") + " | "
-              + (r["queue"] or "-") + ((" | " + "; ".join(r["flags"])) if r["flags"] else ""))
-    print("queue check: " + str(len(res)) + " actionable rows, " + str(len(flagged)) + " flagged")
+        tag = "FLAG " if r["flags"] else ("CHECK" if r["checks"] else "ok   ")
+        print(tag + " " + r["id"] + " | " + r["status"] + " | " + (r["agent"] or "-") + " | " + (r["queue"] or "-")
+              + ((" | " + "; ".join(r["flags"] + r["checks"])) if r["flags"] or r["checks"] else ""))
+    print("queue check: " + str(len(res)) + " actionable rows, " + str(len(flagged)) + " flagged, "
+          + str(len(checked)) + " stall checks to investigate")
     if "--json" in argv:
         Path(argv[argv.index("--json") + 1]).write_text(json.dumps(res, indent=1, ensure_ascii=False))
     return 1 if flagged else 0

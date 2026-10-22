@@ -34,9 +34,31 @@ def test_queued_in_order():  # normal: position 4, the worker has finished 2 run
     assert r["flags"] == [] and r["queue"] == "Worker 1 position 4", r
 
 
-def test_stalled():  # adverse: the worker finished 5 runs since the note and T-185 (position 4) is still TODO
+def test_lane_order_with_times():  # the Lead's 16:20 format: "S (worker 1, 16:19): ..."
+    lead = LEAD_WITH.replace("S (worker 1):", "S (worker 1, 16:19):").replace("A (worker 2):", "A (worker 2, 17:39):")
+    r = get(check([lead, ROW], [])[0], "T-185")
+    assert r["flags"] == [] and r["queue"] == "Worker 1 position 4", r
+
+
+def test_stall_check():  # adverse: 5 runs since the note on work not ahead of T-185 (position 4): investigate, not a failure
     r = get(check([LEAD_WITH, ROW], runs(5))[0], "T-185")
-    assert any(f.startswith("STALLED") for f in r["flags"]), r
+    assert r["flags"] == [] and any(c.startswith("STALL_CHECK") for c in r["checks"]), r
+
+
+def test_no_stall_when_runs_went_ahead_rework_or_priority():  # normal: runs on queued-ahead work, rework, owner priority
+    ahead = ["- 2026-10-22 13:05 UTC | Worker 1 | SUCCESS | T-184 READY | ... | none",
+             "- 2026-10-22 14:05 UTC | Worker 1 | SUCCESS | T-183 r2 READY | ... | none",
+             "- 2026-10-22 15:05 UTC | Worker 1 | SUCCESS | T-163 r2 READY | ... | none",
+             "- 2026-10-22 16:05 UTC | Worker 1 | SUCCESS | T-171 r3 READY (rework) | ... | none",
+             "- 2026-10-22 17:05 UTC | Worker 1 | SUCCESS | T-184 READY | ... | none"]
+    r = get(check([LEAD_WITH, ROW], ahead)[0], "T-185")
+    assert r["checks"] == [] and r["flags"] == [], r
+
+
+def test_open_dependency_is_waiting():  # a named open dependency is WAITING, never a stall check
+    dep = ROW.replace("TODO [owner teaching case]", "TODO (after T-186) [owner teaching case]")
+    r = get(check([LEAD_WITH, dep, "| T-186 | 2 | lane I · guard | x | READY | | |"], runs(5))[0], "T-185")
+    assert r["checks"] == [] and "WAITING on T-186" in r["queue"], r
 
 
 def test_owner_session_moves_it_first():  # a newer owner-session note puts it at position 1; runs before it do not count
@@ -45,7 +67,7 @@ def test_owner_session_moves_it_first():  # a newer owner-session note puts it a
     late = ["- 2026-10-22 16:30 UTC | Worker 1 | SUCCESS | T-163 READY | ... | none",
             "- 2026-10-22 18:30 UTC | Worker 1 | SUCCESS | T-174 READY | ... | none"]
     r = get(check([OWNER_TAKES, LEAD_WITH, ROW], runs(2) + late)[0], "T-185")  # two runs after the note, still TODO
-    assert any(f.startswith("STALLED") for f in r["flags"]), r
+    assert any(c.startswith("STALL_CHECK") for c in r["checks"]), r
 
 
 def test_merged_rows_ignored_and_blockers_required():
