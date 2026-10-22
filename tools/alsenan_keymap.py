@@ -18,6 +18,10 @@ used twice is an error. Lines whose item code no key names stay UNMAPPED (listed
 
 CLI: python3 -I tools/alsenan_keymap.py --run RUN_DIR --reference BENCHMARK_NORMALISED.json --key-map KEY_MAP.json
      --out OUT.json [--markdown OUT.md]
+T-181 (opt-in, doors and windows in pcs AND m2, URBAN_ALSENAN_OPENINGS_KEY_MAP_V1):
+     python3 -I tools/alsenan_keymap.py --openings-register OPENINGS.csv --openings-raw FREELANCER_RAW_ROWS.json
+     --openings-key-map T181_OPENINGS_KEY_MAP.json --openings-out OUT.json [--openings-markdown OUT.md]
+     [--openings-engine-run RUN_DIR]
 """
 
 from __future__ import annotations
@@ -456,6 +460,14 @@ def openings_markdown(res):
         out.append(f"| {s['ref_id']} | {s['label']} | {s['class']} | {s['his_count']:g} x {s['his_width']:g} x "
                    f"{s['his_height']:g} = {s['his_m2']:.3f} | {', '.join(s['openings']) or '-'}{unc} | "
                    f"{s['openings_pcs_settled']} | {_f(s['engine_m2'])} | {s['scope']} |")
+    if res.get("engine_run_pcs"):
+        out += ["", "Engine run (released BOQ lines only; no engine door / window m2 line exists):", "",
+                "| Key | Outcome | Engine | Freelancer | Diff |", "|---|---|---|---|---|"]
+        for ln in res["engine_run_pcs"]["lines"]:
+            d = ln["signed_error"]
+            eq = "no line" if ln["outcome"] == S.OUT_SILENT else _f(ln["engine_qty"])
+            out.append(f"| {ln['key']} | {ln['outcome']} | {eq} | {_f(ln['reference_qty'])} | "
+                       f"{'-' if d is None else f'{d:+.3f}'} |")
     return "\n".join(out) + "\n"
 
 
