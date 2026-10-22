@@ -14,8 +14,10 @@
 #   .work/private    private Drive copies (mode 700); outside every worktree and git-excluded, never committed
 #
 # Usage: bash scripts/agent_env.sh <command> [args]
-#   setup                         prepare worktrees and venv (idempotent)
-#   status                        repository, branches, worktrees and venv facts
+#   setup                         prepare worktrees and venv (idempotent); every other command runs it by
+#                                 itself when the work trees are missing (cloud sessions only), so a session
+#                                 whose SessionStart hook did not run still prepares itself
+#   status                        repository, branches, worktrees and venv facts, and who prepared them
 #   selfcheck [--tree T]          codemap check, pytest tests/t061_room_label_guard, freeze check
 #   codemap [--tree T] route|impact|check|build [args...]
 #   freeze [--tree T]             tools/freeze_verify.py check against the frozen baseline index
@@ -69,10 +71,22 @@ set_upstream() {  # track origin/<branch> so that pull and push need no argument
 
 need_venv() { [[ -x "$PY" ]] || die "venv missing; run: bash scripts/agent_env.sh setup"; }
 
+is_cloud() { [[ "${CLAUDE_CODE_REMOTE:-}" == "true" || "${AGENT_ENV_FORCE:-}" == "1" ]]; }
+prepared() { [[ -d "$WORK/engine" && -d "$WORK/board" && -x "$PY" ]]; }
+
+ensure_prepared() {  # self-healing: a session whose SessionStart hook did not run prepares itself here
+  prepared && return 0
+  is_cloud || return 0
+  [[ -n "${AGENT_ENV_IN_SETUP:-}" ]] && return 0
+  say "work trees missing: running setup automatically"
+  AGENT_ENV_SETUP_BY="${AGENT_ENV_SETUP_BY:-auto}" cmd_setup >&2
+}
+
 cmd_setup() {
-  if [[ "${CLAUDE_CODE_REMOTE:-}" != "true" && "${AGENT_ENV_FORCE:-}" != "1" ]]; then
+  if ! is_cloud; then
     say "not a cloud session; setup skipped"; return 0
   fi
+  local AGENT_ENV_IN_SETUP=1
   check_repo
   mkdir -p "$WORK"
   local exclude="$ROOT/.git/info/exclude"
@@ -118,17 +132,21 @@ cmd_setup() {
   fi
 
   mkdir -p "$PRIVATE" && chmod 700 "$PRIVATE"
+  echo "$(date -u +%Y-%m-%dT%H:%M:%SZ) setup by ${AGENT_ENV_SETUP_BY:-manual}" >> "$WORK/setup.log"
   cmd_status
 }
 
 cmd_status() {
   check_repo
+  [[ -n "${AGENT_ENV_IN_SETUP:-}" ]] || ensure_prepared
   say "repo $(git -C "$ROOT" remote get-url origin | sed -E 's#.*[/:](msalfahad/urban-project-ai).*#\1#I')"
   say "session checkout $(git -C "$ROOT" rev-parse --abbrev-ref HEAD) @ $(git -C "$ROOT" rev-parse --short HEAD)"
   [[ -d "$WORK/engine" ]] && say "engine $WORK/engine @ $(git -C "$WORK/engine" rev-parse --short HEAD) (origin/$ENGINE_BRANCH)"
   [[ -d "$WORK/board" ]] && say "board $WORK/board on $(git -C "$WORK/board" rev-parse --abbrev-ref HEAD) @ $(git -C "$WORK/board" rev-parse --short HEAD)"
   [[ -x "$PY" ]] && say "venv $("$PY" --version 2>&1) at $VENV"
   [[ -d "$PRIVATE" ]] && say "private drawings go only to $PRIVATE (git-excluded, outside every worktree)"
+  [[ -f "$WORK/setup.log" ]] && say "prepared: $(tail -1 "$WORK/setup.log")"
+  prepared || say "NOT PREPARED (not a cloud session, or setup failed above)"
   return 0
 }
 
@@ -271,14 +289,14 @@ main() {
   case "$c" in
     setup) cmd_setup "$@" ;;
     status) cmd_status "$@" ;;
-    selfcheck) cmd_selfcheck "$@" ;;
-    codemap) cmd_codemap "$@" ;;
-    freeze) cmd_freeze "$@" ;;
-    pytest) cmd_pytest "$@" ;;
-    run) cmd_run "$@" ;;
-    task) cmd_task "$@" ;;
-    decode) cmd_decode "$@" ;;
-    board) cmd_board "$@" ;;
+    selfcheck) check_repo; ensure_prepared; cmd_selfcheck "$@" ;;
+    codemap) check_repo; ensure_prepared; cmd_codemap "$@" ;;
+    freeze) check_repo; ensure_prepared; cmd_freeze "$@" ;;
+    pytest) check_repo; ensure_prepared; cmd_pytest "$@" ;;
+    run) check_repo; ensure_prepared; cmd_run "$@" ;;
+    task) check_repo; ensure_prepared; cmd_task "$@" ;;
+    decode) check_repo; ensure_prepared; cmd_decode "$@" ;;
+    board) check_repo; ensure_prepared; cmd_board "$@" ;;
     *) sed -n '2,31p' "${BASH_SOURCE[0]}"; [[ -z "$c" ]] || exit 2 ;;
   esac
 }

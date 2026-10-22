@@ -42,11 +42,10 @@
   "hooks": {
     "SessionStart": [
       {
-        "matcher": "startup",
         "hooks": [
           {
             "type": "command",
-            "command": "bash \"$CLAUDE_PROJECT_DIR/scripts/agent_env.sh\" setup",
+            "command": "AGENT_ENV_SETUP_BY=hook bash \"$CLAUDE_PROJECT_DIR/scripts/agent_env.sh\" setup",
             "timeout": 600
           }
         ]
