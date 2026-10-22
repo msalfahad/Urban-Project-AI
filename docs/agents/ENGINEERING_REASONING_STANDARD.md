@@ -92,15 +92,15 @@ owner). Never "which total do you prefer". Understandable without the owner reco
 
 | Date | Problem | Root cause | General rule (scope) | Regression test | Status |
 |---|---|---|---|---|---|
-| 2026-10-22 | Freelancer corners: an itemised list summed 1,370.85 m.l against his 1,297.35 | The main chat's summary counted the boundary wall's stop-end column (73.65 m.l) twice (once in "stop-ends 547.47", once in "boundary wall 165.09") and rounded 48.15 to 48: 73.65 - 0.15 = 73.50. His workbook: column A 547.47 (formula SUM A51:A90) + column B 749.88 (SUM B51:B92) = 1,297.35, no residual | Reconcile a total from its source cells and formulas, never from a re-typed summary (any workbook) | T-172 | explained (main chat, from the workbook cells) |
+| 2026-10-22 | Freelancer corners: an itemised list summed 1,370.85 m.l against his 1,297.35 | The main chat's summary counted the boundary wall's stop-end column (73.65 m.l) twice (once in "stop-ends 547.47", once in "boundary wall 165.09") and rounded 48.15 to 48: 73.65 - 0.15 = 73.50. His workbook: column A 547.47 (formula SUM A51:A90) + column B 749.88 (SUM B51:B92) = 1,297.35, no residual | Reconcile a total from its source cells and formulas, never from a re-typed summary (any workbook) | T-172 | arithmetic explained (main chat, from the workbook cells), accepted by the owner 2026-10-22; physical classification and measurement of the affected items: Checker to verify independently (T-172) |
 | 2026-10-22 | "2 m = 1 m" read as corners converted to m2 of plaster | A payment convention (half payable length) read as a physical conversion | Physical, contract, payable, rate and amount kept separate (any trade) | T-172 | rule recorded; test pending |
 | 2026-10-21 | Q-71 option B recommended partly as "more conservative" | Notation meaning not established before rounding | Notation meaning first; N = ceil(L_eff / s_max) + 1 only when "/m" is shown to be a maximum spacing and L_eff is the bar-position length inside the covers (footings only until shown for others) | T-171 | investigation |
 
 ## 8. What this directive changed on the board (2026-10-22, main chat)
 
-- Q-73 ANSWERED by this directive (section 6): full openings are deducted from blockwork, plaster and paint, subject to
+- Q-73 ANSWERED by this directive (section 6) and CONFIRMED by the owner 2026-10-22 (final): full openings are deducted from blockwork, plaster and paint, subject to
   the physical construction scope (no masonry invented behind glazing). Implementation T-175.
-- Q-74 ANSWERED by this directive (section 7): the actual beam-axis length governs the concrete volume of angled straps,
+- Q-74 ANSWERED by this directive (section 7) and CONFIRMED by the owner 2026-10-22 (final; 2.29 / 3.26 m to be verified against the drawings): the actual beam-axis length governs the concrete volume of angled straps,
   with the footing overlap treatment established from the drawings; bars, formwork and excavation derived separately.
   Implementation T-174.
 - Q-71, Q-72, Q-75 reopened as INVESTIGATIONS (T-171, T-173, T-176). They return to the owner only under section 2
@@ -108,3 +108,7 @@ owner). Never "which total do you prefer". Understandable without the owner reco
 - MISSION.md "stop that part and ask the owner at once" / "a question is one sentence with the options": superseded for
   WHEN and HOW to ask by sections 2.7 and 6. The no-assumptions rule itself stands: no invented value, no freelancer
   value, no silent default; an unresolved quantity stays HELD, never 0.
+
+## 9. Compliance check (owner, 2026-10-22)
+
+Every agent's next unattended run is checked by the main chat: final RUN_LOG line states `ERS: read` and the section applied; material-discrepancy handoffs carry element, reconciliation, rule, test and a lessons row; owner questions in the section 6 format. Instruction-file edits need no quantity regression test. Resolved engineering questions are never returned to the owner.

@@ -261,6 +261,8 @@ reported meanwhile; nothing released changes.
 
 Answer: (owner, 2026-10-22, ENGINEERING_REASONING_STANDARD directive section 6, his words) "The owner-approved rule is to deduct full openings from blockwork, plaster and paint, subject to the actual construction scope." = A, applied to what is physically built (no masonry invented behind glazing). Implementation T-175. Lead: move to Answered.
 
+CONFIRMED (owner, main chat 2026-10-22, his words): "Deduct the full area of every actual opening from the relevant blockwork. Apply the rule only to masonry that physically exists. Measure reveals separately where applicable and prevent double counting." Final; not to be returned to the owner.
+
 ### Q-74 Oblique strap beams: which length does the BOQ measure? (lead 2026-10-21 08:20, from worker 1's ground-beam span splitter; T-141; no-assumptions question: your ground-beam rule (type from the schedule, length from the plan) is written for ground beams and does not cover strap beams, and no Urban rule or answer sets the strap length)
 
 THE PROBLEM: two strap beams run at an angle between footings. Measured along the strap's own axis from footing face to
@@ -284,6 +286,8 @@ WAITS ON: concrete, formwork and steel of the two oblique straps on Alsenan, and
 (T-141, wiring by lane I).
 
 Answer: (owner, 2026-10-22, directive section 7, his words) "Use the actual beam-axis length for volume calculations, subject to the approved treatment of footing overlaps and intersections." = A for concrete; bars, formwork and excavation derived separately. Implementation T-174. Lead: move to Answered.
+
+CONFIRMED (owner, main chat 2026-10-22, his words): "Use the actual angled beam-axis length between the appropriate footing faces. Verify 2.29 m and 3.26 m against the drawings. Reinforcement, formwork and excavation retain their own measurement geometries." Final; not to be returned to the owner.
 
 ### Q-75 Black (cement) blocks: which block size does the BOQ count with? (lead 2026-10-21 08:20, from worker 2's block table; T-143, T-108; no-assumptions question: your Q-60 answer gives the white-block pallet data (62.5 x 25 face, 6.4 per m2; 60 x 20 face, 8.33 per m2) but no size for the black blocks, so the black-block count is HELD)
 
