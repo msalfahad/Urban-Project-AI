@@ -1,0 +1,83 @@
+{
+ "freelancer": {
+  "pool_m3": 12.348,
+  "pool_t": 1.5,
+  "stairs_plus_dome_m3": 21.8328,
+  "stairs_plus_dome_t": 3.9,
+  "tank": "no row (tank T&B inside his slabs lump)"
+ },
+ "main_bars_owner_basis_kg": {
+  "A": 237.43,
+  "B": 261.17,
+  "C": 227.93
+ },
+ "main_bars_owner_basis_lengths_m": {
+  "MS1-L": 3.4319,
+  "MS1-U": 3.8588,
+  "MS2-L": 3.8671,
+  "MS2-U": 3.8671
+ },
+ "pool_R1_HELD": {
+  "A": 900.01,
+  "B": 927.54,
+  "C": 888.9
+ },
+ "pool_R1_dev_HELD_kg": [
+  233.88,
+  409.28
+ ],
+ "pool_R2_HELD": {
+  "A": 620.13,
+  "B": 639.45,
+  "C": 615.34
+ },
+ "pool_R2_dev_HELD_kg": [
+  142.24,
+  248.92
+ ],
+ "pool_geometry": {
+  "H": 1.55,
+  "P_cl": 11.7836,
+  "P_in": 11.0695,
+  "P_out": 12.4978
+ },
+ "rows": 66,
+ "s87_overlap_GF_strip_EW_kg": {
+  "A": 18.963,
+  "B": 20.859,
+  "C": 18.204
+ },
+ "stairs_corner_landing_HELD_candidate": {
+  "A": 19.75,
+  "B": 21.73,
+  "C": 18.17
+ },
+ "stairs_dev_HELD_kg": [
+  161.82,
+  283.18
+ ],
+ "stairs_dev_HELD_typical_kg": [
+  211.56,
+  370.24
+ ],
+ "stairs_main_stair_only": {
+  "A": 307.01,
+  "B": 337.71,
+  "C": 294.73
+ },
+ "stairs_plan_printed_count_held_Q71": {
+  "A": 382.31,
+  "B": 420.54,
+  "C": 367.88
+ },
+ "stairs_round_stair_calculated": {
+  "A": 75.3,
+  "B": 82.82,
+  "C": 73.14
+ },
+ "stairs_typical_only_HELD": {
+  "A": 283.46,
+  "B": 304.65,
+  "C": 277.24
+ }
+}

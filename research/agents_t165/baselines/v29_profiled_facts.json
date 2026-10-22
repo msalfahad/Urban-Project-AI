@@ -1,0 +1,136 @@
+{
+ "exterior_spaces": {
+  "inner_shapes": {
+   "D2:12083:0": {
+    "source": "owner Q-29 answer 2026-10-19 14:45 with Q-24, as D2:4843:0; second dome circle on the same roof, same printed radius",
+    "treatment": "OPENING"
+   },
+   "D2:4843:0": {
+    "source": "owner Q-29 answer 2026-10-19 14:45 (client change: every dome position is an open skylight area, no dome concrete) with Q-24 (membrane stops at the dome base, 0.20 m upturn round it); circle drawn on the second-floor plan roof (+9.70), radius printed R221",
+    "treatment": "OPENING"
+   }
+  },
+  "policy": "EXTERIOR_SPACES_V1 project facts (Alsenan development villa; entity handles only, no coordinates, no client data)"
+ },
+ "project_data": {
+  "project": "development-villa-t131",
+  "records": [
+   {
+    "applies_to": {
+     "floors": [
+      "GF"
+     ],
+     "members": [
+      "PANTRY"
+     ]
+    },
+    "drawing_file": "P7757.dxf",
+    "drawing_number": "architectural set",
+    "entered_by": "TYPED",
+    "key": "WET_ZONE_SIZE_GF_PANTRY",
+    "kind": "table",
+    "project": "development-villa-t131",
+    "reference": "printed 4.50 x 3.00 m at the PANTRY label",
+    "reviewer_or_source": "verifier hand reading (T-114 read the same printed size)",
+    "revision": "no revision printed",
+    "sheet": "ground floor plan",
+    "status": "DRAWING-VERIFIED",
+    "unit": "none",
+    "value": {
+     "length_m": 4.5,
+     "width_m": 3.0
+    }
+   }
+  ],
+  "schema": "URBAN_PROJECT_DATA_FILE_V1"
+ },
+ "sanitary_by_room": {
+  "1F-R26FA0D": [
+   "FLOOR_DRAIN"
+  ],
+  "1F-R48AA46": [
+   "WC",
+   "BASIN",
+   "FLOOR_DRAIN"
+  ],
+  "1F-R48CDA5": [
+   "WC",
+   "SHOWER",
+   "BASIN",
+   "FLOOR_DRAIN"
+  ],
+  "1F-R52AC05": [
+   "WC",
+   "BASIN",
+   "FLOOR_DRAIN"
+  ],
+  "1F-R8BDA49": [
+   "WC",
+   "BASIN",
+   "FLOOR_DRAIN"
+  ],
+  "1F-RED23B8": [
+   "WC",
+   "SHOWER",
+   "BASIN",
+   "FLOOR_DRAIN"
+  ],
+  "2F-RE83BED": [
+   "WC",
+   "BASIN",
+   "SHOWER",
+   "FLOOR_DRAIN"
+  ],
+  "GF-R8496F0": [
+   "BASIN",
+   "BASIN",
+   "FLOOR_DRAIN"
+  ],
+  "GF-RA3AD49": [
+   "FLOOR_DRAIN"
+  ],
+  "GF-RB28769": [
+   "WC",
+   "FLOOR_DRAIN"
+  ],
+  "GF-RB62B55": [
+   "WC",
+   "BASIN",
+   "FLOOR_DRAIN"
+  ],
+  "GF-RC99C2A": [
+   "FLOOR_DRAIN"
+  ],
+  "GF-RD36087": [
+   "BASIN",
+   "FLOOR_DRAIN"
+  ],
+  "GF-RD6F891": [
+   "WC",
+   "SHOWER",
+   "BASIN",
+   "FLOOR_DRAIN"
+  ],
+  "GF-RDBD4F9": [
+   "BASIN",
+   "BASIN",
+   "FLOOR_DRAIN"
+  ],
+  "GF-RDF7D28": [
+   "WC",
+   "BASIN",
+   "FLOOR_DRAIN"
+  ],
+  "GF-RF38DAF": [
+   "WC",
+   "BASIN",
+   "FLOOR_DRAIN"
+  ],
+  "GF-RFAD3C4": [
+   "WC",
+   "BASIN",
+   "FLOOR_DRAIN"
+  ]
+ },
+ "schema": "URBAN_ARCH_FACTS_V1"
+}
