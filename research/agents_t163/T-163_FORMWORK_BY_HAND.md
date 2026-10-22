@@ -1,6 +1,6 @@
 # T-163 Alsenan formwork m2 per element type, from the checker-merged concrete ledgers (lane S; NO REPO CODE)
 
-Worker 1, 2026-10-22 (r1 05:20; **r2 rework 20:29 .. 21:40, section 0**). Development villa, not an accuracy claim. Nothing is wired and no released quantity changes:
+Worker 1, 2026-10-22 (r1 05:20; **r2 rework 20:29 .. 20:40 UTC, section 0**). Development villa, not an accuracy claim. Nothing is wired and no released quantity changes:
 a checked piece for the V3.0 candidate (lane I). Formwork is a missing BOQ category: the released method has no
 formwork line, and `engine/source/struct_n10.py` writes a FORMWORK.json that no BOQ line reads (L-N10-04).
 
