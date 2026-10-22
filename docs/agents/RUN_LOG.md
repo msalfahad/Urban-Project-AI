@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-22 11:41 UTC | Worker 2 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-22 11:01 UTC | Worker 3 | STARTED | run session_01Bx2j5wfG9PTJtm68UijD9F | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-22T10:38Z | Worker 1 | SUCCESS | T-183 READY (8beaa6a) | Alsenan pool RC own 7.084 m3 (base 10.936 m2 x 0.40 = 4.374 + walls 2.357 m2 x 1.15 = 2.710) vs engine A 3.495 (-3.589, -50.7 %: half D + conventions 0.25/1.60) vs freelancer 12.348 (+5.264, +74.3 %: pump room 3.480 + steps 0.228 not drawn, base counted again in his 1.80 wall height +0.960, 0.25 m wall not drawn +0.600, floor area -0.054); blinding >=1.222 m3 HELD projection, formwork 32.101 m2, membrane 30.307 m2, rebar R1 847.00..885.64 / R2 586.25..610.35 kg HELD designer; T-166 hoop defect -41.90/-29.09 kg; F8 footing overlaps pool 1.297 m2 and B.W band 3.50 m under the back wall (designer). No owner question (ERS 2.7). ERS: read, s.2-4 + 7 applied (element defined, reconciliation to 0.000, rules R-POOL-1..7, tests normal+adverse, lessons row) | self-check codemap PASS, pytest t061 PASS, freeze PASS; Drive read OK; problem: none
 - 2026-10-22T10:20Z | Worker 1 | STARTED | run session_016XL3Y4kCT3s2yeWR5Ba5Dr | repo-attached routine | task state: none yet | self-check pending
