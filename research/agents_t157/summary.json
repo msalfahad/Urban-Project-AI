@@ -1,0 +1,110 @@
+{
+ "task": "T-157",
+ "rows": 10,
+ "checks": {
+  "west court = open + porch + steps + landing (vs T-153 138.761)": [
+   138.7589,
+   138.761
+  ],
+  "face = west + north strip + pool court (vs T-153 177.115)": [
+   177.1145,
+   177.115
+  ],
+  "north strip + pool court (T-153 21.348 + 17.007)": [
+   38.3556,
+   38.355
+  ],
+  "deck = pool court face - pool outer (T-153 7.605 + the moved band)": [
+   7.9394,
+   7.9392
+  ],
+  "north strip polygon vs hand 1.30 x 16.17": [
+   21.0142,
+   21.021
+  ],
+  "owner manual = hand + 0.20 x 15.97 - 0.20 x 1.30": [
+   23.955,
+   23.955
+  ],
+  "steps tread m2 vs 4 x 0.30 x 2.80": [
+   3.3594,
+   3.36
+  ],
+  "landing vs 1.40 x 3.70": [
+   5.1794,
+   5.18
+  ],
+  "porch vs 2.00 x 4.30 + 1.20 x 1.50 + 1.40 x 0.20": [
+   10.6785,
+   10.68
+  ],
+  "covered under the 1F (porch + steps + landing) vs 4.60 x 4.30 - 1.40 x 0.40": [
+   19.2173,
+   19.22
+  ]
+ },
+ "vs_freelancer": {
+  "yard like for like (open court + porch + north side walk)": [
+   151.234,
+   151.8,
+   -0.566,
+   -0.37
+  ],
+  "entrance landing": [
+   5.179,
+   5.1,
+   0.079,
+   1.55
+  ],
+  "gate / door thresholds lm (drawn widths, HELD)": [
+   7.3,
+   7.7,
+   -0.4,
+   null
+  ]
+ },
+ "entrance_steps": {
+  "risers": 5,
+  "treads": 4,
+  "actual_riser": 0.17,
+  "visible_riser": 0.14,
+  "tread_m2": 3.36,
+  "riser_m2": 1.96,
+  "rule_check_risers": 6,
+  "flags": [
+   "drawn riser 0.170 m above 0.16 m (owner stair rule check, drawing governs)"
+  ]
+ },
+ "thresholds": [
+  [
+   "street gate (west boundary)",
+   2.5,
+   "±0.00 -> +0.15"
+  ],
+  [
+   "sea-side gate (east boundary, end of the north side walk)",
+   1.0,
+   "±0.00 -> +0.15"
+  ],
+  [
+   "dewaneya door from the court",
+   1.0,
+   "+0.15 -> +0.30"
+  ],
+  [
+   "driver door from the court",
+   0.9,
+   "+0.15 -> +0.30"
+  ],
+  [
+   "annex lobby door from the side passage",
+   1.0,
+   "+0.15 -> +0.30"
+  ],
+  [
+   "stair-hall door to the north side walk",
+   0.9,
+   "+0.30 -> +0.15"
+  ]
+ ]
+}
