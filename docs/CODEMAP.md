@@ -18,12 +18,12 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 2627 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 2629 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 8 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 1356 | pytest suites, one folder per round. |
-| `tools/` | 108 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
+| `tests/` | 1358 | pytest suites, one folder per round. |
+| `tools/` | 109 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (254 modules)
 
@@ -691,7 +691,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `shx_arabic.py` | 359 | HIGH | 1 | SHX ARABIC TEXT INTAKE - Arabic notes and labels drawn with legacy SHX fonts (TEXT, MTEXT, ATTRIB). |
 | `unit_evidence.py` | 139 | HIGH | 2 | Deterministic unit / scale EVIDENCE from a D1 (LibreDWG JSON) decode — R8.3 §16. |
 
-## `tools/` (101 modules)
+## `tools/` (102 modules)
 
 | Module | Lines | Risk | Imp | Purpose |
 |---|---|---|---|---|
@@ -705,8 +705,8 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `a18_review_package.py` | 378 | MEDIUM | 0 | Package a frozen blind run for external review. Packaging only. |
 | `a18_zone_register.py` | 127 | MEDIUM | 0 | The visual zone register, transcribed from a frozen pass, and drawn. |
 | `align_sanitary.py` | 205 | MEDIUM | 0 | Register the sanitary set, align it to the plan, and ask the pantry. |
-| `alsenan_keymap.py` | 156 | MEDIUM | 1 | ALSENAN KEY MAP (task T-001b) - turns one engine run (canonical BOQ_LINES.json + BOQ_RELEASE_REPORT.json) and the |
-| `alsenan_scoreboard.py` | 339 | MEDIUM | 2 | ALSENAN SCOREBOARD (task T-001a) - engine BOQ rows vs reference (freelancer) rows, scored per trade and unit as |
+| `alsenan_keymap.py` | 178 | MEDIUM | 3 | ALSENAN KEY MAP (task T-001b) - turns one engine run (canonical BOQ_LINES.json + BOQ_RELEASE_REPORT.json) and the |
+| `alsenan_scoreboard.py` | 339 | MEDIUM | 3 | ALSENAN SCOREBOARD (task T-001a) - engine BOQ rows vs reference (freelancer) rows, scored per trade and unit as |
 | `arch_change_verify.py` | 710 | MEDIUM | 0 | BOQ CHANGE ATTRIBUTION WITH INDEPENDENT VERIFICATION (Phase 2B-8) - every BOQ total that differs between two runs of |
 | `arch_dimensions.py` | 70 | MEDIUM | 2 | ARCH DIMENSIONS (M9 Phase 2A P2-09a) - the DIMENSION entities of a plan DXF as plain records for the read-only |
 | `arch_discovery.py` | 266 | MEDIUM | 5 | ARCHITECTURAL DRAWING DISCOVERY (M9 S6) - the ezdxf side of engine.source.discovery: a source census of the whole |
@@ -784,6 +784,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `run_round6e.py` | 548 | MEDIUM | 1 | Round 6E on P7757: stable identity, stair completeness, one truth. |
 | `run_supervised_benchmark.py` | 300 | MEDIUM | 0 | Run P7757 as a supervised development set and report the geometry effect. |
 | `scan_vertical_evidence.py` | 259 | MEDIUM | 1 | §14. Search the architectural source set for what a plan cannot say. |
+| `scoreboard_v2.py` | 371 | MEDIUM | 2 | SCOREBOARD V2 (task T-177) - the SCOREBOARD v2 table (owner session 2026-10-22 07:30, T-132) computed by script |
 | `split_submission_set.py` | 139 | MEDIUM | 0 | Split a submission set into DRAWINGS the engine may read and a SEALED part. |
 | `struct_n10.py` | 73 | MEDIUM | 0 | STRUCTURAL N10 (Phase N10) - formwork faces, excavation footprints and the reinforcement audit for a route G run. |
 | `synthetic_villa.py` | 603 | CRITICAL | 11 | SYNTHETIC VILLA (M2) - structural DXF drawings generated from a design spec, with ground truth from the SPEC. |
@@ -1039,6 +1040,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t151_arch_v303/` | 1 |
 | `tests/t156_gate_b/` | 1 |
 | `tests/t165_release_baseline/` | 1 |
+| `tests/t177_scoreboard_v2/` | 1 |
 | `tests/water_tank_s8_4/` | 3 |
 | `tests/zz_freeze_integrity/` | 2 |
 
@@ -1222,6 +1224,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t165/` | 6 |
 | `research/agents_t166/` | 4 |
 | `research/agents_t169/` | 4 |
+| `research/agents_t177/` | 2 |
 | `research/alsenan_arch_truth_05/` | 28 |
 | `research/alsenan_column_rebar_s3/` | 17 |
 | `research/alsenan_column_rebar_s3_1/` | 15 |
