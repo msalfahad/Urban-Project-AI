@@ -12,8 +12,10 @@
    "height_status": "ASSUMED",
    "count": 1,
    "area_m2": 2.2,
-   "area_lo_m2": null,
-   "area_status": "ASSUMED",
+   "area_status": "ASSUMED — OWNER-APPROVED",
+   "candidate_lo_m2": null,
+   "candidate_hi_m2": null,
+   "hold_cause": null,
    "owner_min_area_m2": 2.42
   },
   {
@@ -28,8 +30,10 @@
    "height_status": "ASSUMED",
    "count": 1,
    "area_m2": 1.76,
-   "area_lo_m2": null,
-   "area_status": "ASSUMED",
+   "area_status": "ASSUMED — OWNER-APPROVED",
+   "candidate_lo_m2": null,
+   "candidate_hi_m2": null,
+   "hold_cause": null,
    "owner_min_area_m2": 2.2
   },
   {
@@ -44,8 +48,10 @@
    "height_status": "ASSUMED",
    "count": 1,
    "area_m2": 1.98,
-   "area_lo_m2": null,
-   "area_status": "ASSUMED",
+   "area_status": "ASSUMED — OWNER-APPROVED",
+   "candidate_lo_m2": null,
+   "candidate_hi_m2": null,
+   "hold_cause": null,
    "owner_min_area_m2": 2.42
   },
   {
@@ -60,8 +66,10 @@
    "height_status": "ASSUMED",
    "count": 1,
    "area_m2": 1.76,
-   "area_lo_m2": null,
-   "area_status": "ASSUMED",
+   "area_status": "ASSUMED — OWNER-APPROVED",
+   "candidate_lo_m2": null,
+   "candidate_hi_m2": null,
+   "hold_cause": null,
    "owner_min_area_m2": 2.2
   },
   {
@@ -76,8 +84,10 @@
    "height_status": "ASSUMED",
    "count": 1,
    "area_m2": 2.2,
-   "area_lo_m2": null,
-   "area_status": "ASSUMED",
+   "area_status": "ASSUMED — OWNER-APPROVED",
+   "candidate_lo_m2": null,
+   "candidate_hi_m2": null,
+   "hold_cause": null,
    "owner_min_area_m2": null
   },
   {
@@ -92,8 +102,10 @@
    "height_status": "ASSUMED",
    "count": 1,
    "area_m2": 2.2,
-   "area_lo_m2": null,
-   "area_status": "ASSUMED",
+   "area_status": "ASSUMED — OWNER-APPROVED",
+   "candidate_lo_m2": null,
+   "candidate_hi_m2": null,
+   "hold_cause": null,
    "owner_min_area_m2": 2.42
   },
   {
@@ -107,9 +119,11 @@
    "height_m": 2.5,
    "height_status": "PRINTED",
    "count": 1,
-   "area_m2": 5.0,
-   "area_lo_m2": null,
-   "area_status": "DRAWING-CONFIRMED",
+   "area_m2": null,
+   "area_status": "HELD",
+   "candidate_lo_m2": 5.0,
+   "candidate_hi_m2": 5.0,
+   "hold_cause": "T-161 F07c (WORKFLOW_CONTROLS s.8): the renders show a single leaf, the plan / SE elevation print a 2.00 x 2.50 double; designer D-53; 2.00 x 2.50 = 5.000 m2 kept as the candidate only",
    "owner_min_area_m2": null
   },
   {
@@ -124,8 +138,10 @@
    "height_status": "ASSUMED",
    "count": 1,
    "area_m2": 2.2,
-   "area_lo_m2": null,
-   "area_status": "ASSUMED",
+   "area_status": "ASSUMED — OWNER-APPROVED",
+   "candidate_lo_m2": null,
+   "candidate_hi_m2": null,
+   "hold_cause": null,
    "owner_min_area_m2": 2.42
   },
   {
@@ -140,8 +156,10 @@
    "height_status": "ASSUMED",
    "count": 1,
    "area_m2": 1.98,
-   "area_lo_m2": null,
-   "area_status": "ASSUMED",
+   "area_status": "ASSUMED — OWNER-APPROVED",
+   "candidate_lo_m2": null,
+   "candidate_hi_m2": null,
+   "hold_cause": null,
    "owner_min_area_m2": 2.42
   },
   {
@@ -156,8 +174,10 @@
    "height_status": "ASSUMED",
    "count": 1,
    "area_m2": 1.76,
-   "area_lo_m2": null,
-   "area_status": "ASSUMED",
+   "area_status": "ASSUMED — OWNER-APPROVED",
+   "candidate_lo_m2": null,
+   "candidate_hi_m2": null,
+   "hold_cause": null,
    "owner_min_area_m2": 2.2
   },
   {
@@ -172,8 +192,10 @@
    "height_status": "ASSUMED",
    "count": 1,
    "area_m2": 1.76,
-   "area_lo_m2": null,
-   "area_status": "ASSUMED",
+   "area_status": "ASSUMED — OWNER-APPROVED",
+   "candidate_lo_m2": null,
+   "candidate_hi_m2": null,
+   "hold_cause": null,
    "owner_min_area_m2": 2.2
   },
   {
@@ -188,8 +210,10 @@
    "height_status": "ASSUMED",
    "count": 1,
    "area_m2": 1.76,
-   "area_lo_m2": null,
-   "area_status": "ASSUMED",
+   "area_status": "ASSUMED — OWNER-APPROVED",
+   "candidate_lo_m2": null,
+   "candidate_hi_m2": null,
+   "hold_cause": null,
    "owner_min_area_m2": 2.2
   },
   {
@@ -204,8 +228,10 @@
    "height_status": "ASSUMED",
    "count": 1,
    "area_m2": 2.2,
-   "area_lo_m2": null,
-   "area_status": "ASSUMED",
+   "area_status": "ASSUMED — OWNER-APPROVED",
+   "candidate_lo_m2": null,
+   "candidate_hi_m2": null,
+   "hold_cause": null,
    "owner_min_area_m2": 2.42
   },
   {
@@ -219,9 +245,11 @@
    "height_m": 2.2,
    "height_status": "ASSUMED",
    "count": 1,
-   "area_m2": 1.76,
-   "area_lo_m2": 1.518,
-   "area_status": "ASSUMED_RANGE",
+   "area_m2": null,
+   "area_status": "HELD",
+   "candidate_lo_m2": 1.518,
+   "candidate_hi_m2": 1.76,
+   "hold_cause": null,
    "owner_min_area_m2": 2.2
   },
   {
@@ -236,8 +264,10 @@
    "height_status": "HELD",
    "count": 1,
    "area_m2": null,
-   "area_lo_m2": null,
    "area_status": "HELD",
+   "candidate_lo_m2": null,
+   "candidate_hi_m2": null,
+   "hold_cause": null,
    "owner_min_area_m2": null
   },
   {
@@ -252,8 +282,10 @@
    "height_status": "ASSUMED",
    "count": 1,
    "area_m2": 1.76,
-   "area_lo_m2": null,
-   "area_status": "ASSUMED",
+   "area_status": "ASSUMED — OWNER-APPROVED",
+   "candidate_lo_m2": null,
+   "candidate_hi_m2": null,
+   "hold_cause": null,
    "owner_min_area_m2": 2.2
   },
   {
@@ -268,8 +300,10 @@
    "height_status": "ASSUMED",
    "count": 1,
    "area_m2": 2.2,
-   "area_lo_m2": null,
-   "area_status": "ASSUMED",
+   "area_status": "ASSUMED — OWNER-APPROVED",
+   "candidate_lo_m2": null,
+   "candidate_hi_m2": null,
+   "hold_cause": null,
    "owner_min_area_m2": 2.42
   },
   {
@@ -284,8 +318,10 @@
    "height_status": "ASSUMED",
    "count": 1,
    "area_m2": 2.2,
-   "area_lo_m2": null,
-   "area_status": "ASSUMED",
+   "area_status": "ASSUMED — OWNER-APPROVED",
+   "candidate_lo_m2": null,
+   "candidate_hi_m2": null,
+   "hold_cause": null,
    "owner_min_area_m2": 2.42
   },
   {
@@ -300,8 +336,10 @@
    "height_status": "ASSUMED",
    "count": 1,
    "area_m2": 1.76,
-   "area_lo_m2": null,
-   "area_status": "ASSUMED",
+   "area_status": "ASSUMED — OWNER-APPROVED",
+   "candidate_lo_m2": null,
+   "candidate_hi_m2": null,
+   "hold_cause": null,
    "owner_min_area_m2": 2.2
   },
   {
@@ -316,8 +354,10 @@
    "height_status": "ASSUMED",
    "count": 1,
    "area_m2": 1.98,
-   "area_lo_m2": null,
-   "area_status": "ASSUMED",
+   "area_status": "ASSUMED — OWNER-APPROVED",
+   "candidate_lo_m2": null,
+   "candidate_hi_m2": null,
+   "hold_cause": null,
    "owner_min_area_m2": 2.42
   },
   {
@@ -332,8 +372,10 @@
    "height_status": "ASSUMED",
    "count": 1,
    "area_m2": 1.76,
-   "area_lo_m2": null,
-   "area_status": "ASSUMED",
+   "area_status": "ASSUMED — OWNER-APPROVED",
+   "candidate_lo_m2": null,
+   "candidate_hi_m2": null,
+   "hold_cause": null,
    "owner_min_area_m2": 2.2
   },
   {
@@ -348,8 +390,10 @@
    "height_status": "ASSUMED",
    "count": 1,
    "area_m2": 1.76,
-   "area_lo_m2": null,
-   "area_status": "ASSUMED",
+   "area_status": "ASSUMED — OWNER-APPROVED",
+   "candidate_lo_m2": null,
+   "candidate_hi_m2": null,
+   "hold_cause": null,
    "owner_min_area_m2": 2.2
   },
   {
@@ -364,8 +408,10 @@
    "height_status": "ASSUMED",
    "count": 1,
    "area_m2": 1.98,
-   "area_lo_m2": null,
-   "area_status": "ASSUMED",
+   "area_status": "ASSUMED — OWNER-APPROVED",
+   "candidate_lo_m2": null,
+   "candidate_hi_m2": null,
+   "hold_cause": null,
    "owner_min_area_m2": 2.42
   },
   {
@@ -380,8 +426,10 @@
    "height_status": "ASSUMED",
    "count": 1,
    "area_m2": 1.98,
-   "area_lo_m2": null,
-   "area_status": "ASSUMED",
+   "area_status": "ASSUMED — OWNER-APPROVED",
+   "candidate_lo_m2": null,
+   "candidate_hi_m2": null,
+   "hold_cause": null,
    "owner_min_area_m2": 2.42
   },
   {
@@ -396,8 +444,10 @@
    "height_status": "ASSUMED",
    "count": 1,
    "area_m2": 1.76,
-   "area_lo_m2": null,
-   "area_status": "ASSUMED",
+   "area_status": "ASSUMED — OWNER-APPROVED",
+   "candidate_lo_m2": null,
+   "candidate_hi_m2": null,
+   "hold_cause": null,
    "owner_min_area_m2": 2.2
   },
   {
@@ -412,8 +462,10 @@
    "height_status": "ASSUMED",
    "count": 1,
    "area_m2": 2.2,
-   "area_lo_m2": null,
-   "area_status": "ASSUMED",
+   "area_status": "ASSUMED — OWNER-APPROVED",
+   "candidate_lo_m2": null,
+   "candidate_hi_m2": null,
+   "hold_cause": null,
    "owner_min_area_m2": 2.42
   },
   {
@@ -428,8 +480,10 @@
    "height_status": "ASSUMED",
    "count": 1,
    "area_m2": 1.98,
-   "area_lo_m2": null,
-   "area_status": "ASSUMED",
+   "area_status": "ASSUMED — OWNER-APPROVED",
+   "candidate_lo_m2": null,
+   "candidate_hi_m2": null,
+   "hold_cause": null,
    "owner_min_area_m2": 2.42
   },
   {
@@ -444,8 +498,10 @@
    "height_status": "ASSUMED",
    "count": 1,
    "area_m2": 1.76,
-   "area_lo_m2": null,
-   "area_status": "ASSUMED",
+   "area_status": "ASSUMED — OWNER-APPROVED",
+   "candidate_lo_m2": null,
+   "candidate_hi_m2": null,
+   "hold_cause": null,
    "owner_min_area_m2": 2.2
   },
   {
@@ -460,8 +516,10 @@
    "height_status": "PRINTED",
    "count": 1,
    "area_m2": 2.4,
-   "area_lo_m2": null,
    "area_status": "DRAWING-CONFIRMED",
+   "candidate_lo_m2": null,
+   "candidate_hi_m2": null,
+   "hold_cause": null,
    "owner_min_area_m2": null
   },
   {
@@ -476,8 +534,10 @@
    "height_status": "HELD",
    "count": 1,
    "area_m2": null,
-   "area_lo_m2": null,
    "area_status": "HELD",
+   "candidate_lo_m2": null,
+   "candidate_hi_m2": null,
+   "hold_cause": "T-161 F23: rendered as two windows with a pier (count 1 vs 2 not settled); designer D-53 (besides D-45 height)",
    "owner_min_area_m2": null
   },
   {
@@ -492,8 +552,10 @@
    "height_status": "PRINTED",
    "count": 1,
    "area_m2": 28.251,
-   "area_lo_m2": null,
    "area_status": "DRAWING-CONFIRMED",
+   "candidate_lo_m2": null,
+   "candidate_hi_m2": null,
+   "hold_cause": null,
    "owner_min_area_m2": null
   },
   {
@@ -508,8 +570,10 @@
    "height_status": "HELD",
    "count": 1,
    "area_m2": null,
-   "area_lo_m2": null,
    "area_status": "HELD",
+   "candidate_lo_m2": null,
+   "candidate_hi_m2": null,
+   "hold_cause": null,
    "owner_min_area_m2": null
   },
   {
@@ -524,8 +588,10 @@
    "height_status": "HELD",
    "count": 1,
    "area_m2": null,
-   "area_lo_m2": null,
    "area_status": "HELD",
+   "candidate_lo_m2": null,
+   "candidate_hi_m2": null,
+   "hold_cause": null,
    "owner_min_area_m2": null
   },
   {
@@ -540,8 +606,10 @@
    "height_status": "HELD",
    "count": 1,
    "area_m2": null,
-   "area_lo_m2": null,
    "area_status": "HELD",
+   "candidate_lo_m2": null,
+   "candidate_hi_m2": null,
+   "hold_cause": null,
    "owner_min_area_m2": null
   },
   {
@@ -556,8 +624,10 @@
    "height_status": "HELD",
    "count": 1,
    "area_m2": null,
-   "area_lo_m2": null,
    "area_status": "HELD",
+   "candidate_lo_m2": null,
+   "candidate_hi_m2": null,
+   "hold_cause": null,
    "owner_min_area_m2": null
   },
   {
@@ -572,8 +642,10 @@
    "height_status": "HELD",
    "count": 1,
    "area_m2": null,
-   "area_lo_m2": null,
    "area_status": "HELD",
+   "candidate_lo_m2": null,
+   "candidate_hi_m2": null,
+   "hold_cause": null,
    "owner_min_area_m2": null
   },
   {
@@ -588,8 +660,10 @@
    "height_status": "HELD",
    "count": 1,
    "area_m2": null,
-   "area_lo_m2": null,
    "area_status": "HELD",
+   "candidate_lo_m2": null,
+   "candidate_hi_m2": null,
+   "hold_cause": null,
    "owner_min_area_m2": null
   },
   {
@@ -604,8 +678,10 @@
    "height_status": "HELD",
    "count": 1,
    "area_m2": null,
-   "area_lo_m2": null,
    "area_status": "HELD",
+   "candidate_lo_m2": null,
+   "candidate_hi_m2": null,
+   "hold_cause": null,
    "owner_min_area_m2": null
   },
   {
@@ -620,8 +696,10 @@
    "height_status": "HELD",
    "count": 1,
    "area_m2": null,
-   "area_lo_m2": null,
    "area_status": "HELD",
+   "candidate_lo_m2": null,
+   "candidate_hi_m2": null,
+   "hold_cause": null,
    "owner_min_area_m2": null
   },
   {
@@ -636,8 +714,10 @@
    "height_status": "HELD",
    "count": 1,
    "area_m2": null,
-   "area_lo_m2": null,
    "area_status": "HELD",
+   "candidate_lo_m2": null,
+   "candidate_hi_m2": null,
+   "hold_cause": null,
    "owner_min_area_m2": null
   },
   {
@@ -652,8 +732,10 @@
    "height_status": "PRINTED",
    "count": 1,
    "area_m2": 2.76,
-   "area_lo_m2": null,
    "area_status": "DRAWING-CONFIRMED",
+   "candidate_lo_m2": null,
+   "candidate_hi_m2": null,
+   "hold_cause": null,
    "owner_min_area_m2": null
   },
   {
@@ -668,8 +750,10 @@
    "height_status": "PRINTED",
    "count": 1,
    "area_m2": 3.92,
-   "area_lo_m2": null,
    "area_status": "DRAWING-CONFIRMED",
+   "candidate_lo_m2": null,
+   "candidate_hi_m2": null,
+   "hold_cause": null,
    "owner_min_area_m2": null
   },
   {
@@ -684,8 +768,10 @@
    "height_status": "PRINTED",
    "count": 1,
    "area_m2": 4.805,
-   "area_lo_m2": null,
    "area_status": "DRAWING-CONFIRMED",
+   "candidate_lo_m2": null,
+   "candidate_hi_m2": null,
+   "hold_cause": null,
    "owner_min_area_m2": null
   },
   {
@@ -696,12 +782,14 @@
    "class_status": "DRAWING-CONFIRMED",
    "width_m": 1.55,
    "width_lo_m": null,
-   "height_m": 3.1,
-   "height_status": "INFERRED",
+   "height_m": null,
+   "height_status": "HELD",
    "count": 1,
-   "area_m2": 4.805,
-   "area_lo_m2": null,
-   "area_status": "INFERRED",
+   "area_m2": null,
+   "area_status": "HELD",
+   "candidate_lo_m2": null,
+   "candidate_hi_m2": null,
+   "hold_cause": null,
    "owner_min_area_m2": null
   },
   {
@@ -716,8 +804,10 @@
    "height_status": "PRINTED",
    "count": 1,
    "area_m2": 11.515,
-   "area_lo_m2": null,
    "area_status": "DRAWING-CONFIRMED",
+   "candidate_lo_m2": null,
+   "candidate_hi_m2": null,
+   "hold_cause": null,
    "owner_min_area_m2": null
   },
   {
@@ -732,8 +822,10 @@
    "height_status": "PRINTED",
    "count": 1,
    "area_m2": 1.08,
-   "area_lo_m2": null,
    "area_status": "DRAWING-CONFIRMED",
+   "candidate_lo_m2": null,
+   "candidate_hi_m2": null,
+   "hold_cause": null,
    "owner_min_area_m2": null
   },
   {
@@ -748,8 +840,10 @@
    "height_status": "HELD",
    "count": 1,
    "area_m2": null,
-   "area_lo_m2": null,
    "area_status": "HELD",
+   "candidate_lo_m2": null,
+   "candidate_hi_m2": null,
+   "hold_cause": null,
    "owner_min_area_m2": null
   },
   {
@@ -764,8 +858,10 @@
    "height_status": "HELD",
    "count": 1,
    "area_m2": null,
-   "area_lo_m2": null,
    "area_status": "HELD",
+   "candidate_lo_m2": null,
+   "candidate_hi_m2": null,
+   "hold_cause": null,
    "owner_min_area_m2": null
   },
   {
@@ -780,8 +876,10 @@
    "height_status": "HELD",
    "count": 1,
    "area_m2": null,
-   "area_lo_m2": null,
    "area_status": "HELD",
+   "candidate_lo_m2": null,
+   "candidate_hi_m2": null,
+   "hold_cause": null,
    "owner_min_area_m2": null
   },
   {
@@ -796,8 +894,10 @@
    "height_status": "HELD",
    "count": 1,
    "area_m2": null,
-   "area_lo_m2": null,
    "area_status": "HELD",
+   "candidate_lo_m2": null,
+   "candidate_hi_m2": null,
+   "hold_cause": null,
    "owner_min_area_m2": null
   },
   {
@@ -812,8 +912,10 @@
    "height_status": "HELD",
    "count": 1,
    "area_m2": null,
-   "area_lo_m2": null,
    "area_status": "HELD",
+   "candidate_lo_m2": null,
+   "candidate_hi_m2": null,
+   "hold_cause": null,
    "owner_min_area_m2": null
   },
   {
@@ -828,8 +930,10 @@
    "height_status": "HELD",
    "count": 1,
    "area_m2": null,
-   "area_lo_m2": null,
    "area_status": "HELD",
+   "candidate_lo_m2": null,
+   "candidate_hi_m2": null,
+   "hold_cause": null,
    "owner_min_area_m2": null
   },
   {
@@ -844,8 +948,10 @@
    "height_status": "HELD",
    "count": 1,
    "area_m2": null,
-   "area_lo_m2": null,
    "area_status": "HELD",
+   "candidate_lo_m2": null,
+   "candidate_hi_m2": null,
+   "hold_cause": null,
    "owner_min_area_m2": null
   },
   {
@@ -860,8 +966,10 @@
    "height_status": "PRINTED",
    "count": 1,
    "area_m2": 2.04,
-   "area_lo_m2": null,
    "area_status": "DRAWING-CONFIRMED",
+   "candidate_lo_m2": null,
+   "candidate_hi_m2": null,
+   "hold_cause": null,
    "owner_min_area_m2": null
   },
   {
@@ -876,8 +984,10 @@
    "height_status": "HELD",
    "count": 1,
    "area_m2": null,
-   "area_lo_m2": null,
    "area_status": "HELD",
+   "candidate_lo_m2": null,
+   "candidate_hi_m2": null,
+   "hold_cause": null,
    "owner_min_area_m2": null
   },
   {
@@ -892,8 +1002,10 @@
    "height_status": "HELD",
    "count": 1,
    "area_m2": null,
-   "area_lo_m2": null,
    "area_status": "HELD",
+   "candidate_lo_m2": null,
+   "candidate_hi_m2": null,
+   "hold_cause": null,
    "owner_min_area_m2": null
   },
   {
@@ -908,8 +1020,10 @@
    "height_status": "HELD",
    "count": 1,
    "area_m2": null,
-   "area_lo_m2": null,
    "area_status": "HELD",
+   "candidate_lo_m2": null,
+   "candidate_hi_m2": null,
+   "hold_cause": null,
    "owner_min_area_m2": null
   },
   {
@@ -924,8 +1038,10 @@
    "height_status": "HELD",
    "count": 1,
    "area_m2": null,
-   "area_lo_m2": null,
    "area_status": "HELD",
+   "candidate_lo_m2": null,
+   "candidate_hi_m2": null,
+   "hold_cause": "T-161 F09: rendered as a round arch over a low curved wall with a railing; designer D-53 (besides the unprinted filling / height)",
    "owner_min_area_m2": null
   },
   {
@@ -940,8 +1056,10 @@
    "height_status": "HELD",
    "count": 1,
    "area_m2": null,
-   "area_lo_m2": null,
    "area_status": "HELD",
+   "candidate_lo_m2": null,
+   "candidate_hi_m2": null,
+   "hold_cause": null,
    "owner_min_area_m2": null
   },
   {
@@ -956,8 +1074,10 @@
    "height_status": "HELD",
    "count": 1,
    "area_m2": null,
-   "area_lo_m2": null,
    "area_status": "HELD",
+   "candidate_lo_m2": null,
+   "candidate_hi_m2": null,
+   "hold_cause": null,
    "owner_min_area_m2": null
   },
   {
@@ -972,8 +1092,10 @@
    "height_status": "HELD",
    "count": 1,
    "area_m2": null,
-   "area_lo_m2": null,
    "area_status": "HELD",
+   "candidate_lo_m2": null,
+   "candidate_hi_m2": null,
+   "hold_cause": null,
    "owner_min_area_m2": null
   },
   {
@@ -988,8 +1110,10 @@
    "height_status": "HELD",
    "count": 1,
    "area_m2": null,
-   "area_lo_m2": null,
    "area_status": "HELD",
+   "candidate_lo_m2": null,
+   "candidate_hi_m2": null,
+   "hold_cause": null,
    "owner_min_area_m2": null
   },
   {
@@ -1004,8 +1128,10 @@
    "height_status": "HELD",
    "count": 1,
    "area_m2": null,
-   "area_lo_m2": null,
    "area_status": "HELD",
+   "candidate_lo_m2": null,
+   "candidate_hi_m2": null,
+   "hold_cause": null,
    "owner_min_area_m2": null
   },
   {
@@ -1020,8 +1146,10 @@
    "height_status": "HELD",
    "count": 1,
    "area_m2": null,
-   "area_lo_m2": null,
    "area_status": "HELD",
+   "candidate_lo_m2": null,
+   "candidate_hi_m2": null,
+   "hold_cause": null,
    "owner_min_area_m2": null
   },
   {
@@ -1036,8 +1164,10 @@
    "height_status": "HELD",
    "count": 1,
    "area_m2": null,
-   "area_lo_m2": null,
    "area_status": "HELD",
+   "candidate_lo_m2": null,
+   "candidate_hi_m2": null,
+   "hold_cause": null,
    "owner_min_area_m2": null
   }
  ],
@@ -1053,12 +1183,11 @@
    "n_assumed": 4,
    "n_held": 0,
    "held_width_m": 0.0,
-   "m2_held_range": [
+   "n_held_candidate": 0,
+   "m2_held_candidate": [
     0.0,
     0.0
    ],
-   "n_inferred": 0,
-   "m2_inferred": 0.0,
    "owner_min_m2": 9.68,
    "fl_count": 4,
    "fl_m2_all": 9.6,
@@ -1074,13 +1203,12 @@
    "m2_assumed": 13.2,
    "n_assumed": 7,
    "n_held": 1,
-   "held_width_m": 0.0,
-   "m2_held_range": [
+   "held_width_m": 0.8,
+   "n_held_candidate": 1,
+   "m2_held_candidate": [
     1.518,
     1.76
    ],
-   "n_inferred": 0,
-   "m2_inferred": 0.0,
    "owner_min_m2": 18.04,
    "fl_count": 0,
    "fl_m2_all": 0.0,
@@ -1097,12 +1225,11 @@
    "n_assumed": 1,
    "n_held": 0,
    "held_width_m": 0.0,
-   "m2_held_range": [
+   "n_held_candidate": 0,
+   "m2_held_candidate": [
     0.0,
     0.0
    ],
-   "n_inferred": 0,
-   "m2_inferred": 0.0,
    "owner_min_m2": 0.0,
    "fl_count": 0,
    "fl_m2_all": 0.0,
@@ -1113,18 +1240,17 @@
    "floor": "GF",
    "count": 1,
    "width_m": 2.0,
-   "m2_confirmed": 5.0,
-   "n_confirmed": 1,
+   "m2_confirmed": 0.0,
+   "n_confirmed": 0,
    "m2_assumed": 0.0,
    "n_assumed": 0,
-   "n_held": 0,
-   "held_width_m": 0.0,
-   "m2_held_range": [
-    0.0,
-    0.0
+   "n_held": 1,
+   "held_width_m": 2.0,
+   "n_held_candidate": 1,
+   "m2_held_candidate": [
+    5.0,
+    5.0
    ],
-   "n_inferred": 0,
-   "m2_inferred": 0.0,
    "owner_min_m2": 0.0,
    "fl_count": 0,
    "fl_m2_all": 0.0,
@@ -1141,12 +1267,11 @@
    "n_assumed": 0,
    "n_held": 1,
    "held_width_m": 0.0,
-   "m2_held_range": [
+   "n_held_candidate": 0,
+   "m2_held_candidate": [
     0.0,
     0.0
    ],
-   "n_inferred": 0,
-   "m2_inferred": 0.0,
    "owner_min_m2": 0.0,
    "fl_count": 0,
    "fl_m2_all": 0.0,
@@ -1163,12 +1288,11 @@
    "n_assumed": 10,
    "n_held": 0,
    "held_width_m": 0.0,
-   "m2_held_range": [
+   "n_held_candidate": 0,
+   "m2_held_candidate": [
     0.0,
     0.0
    ],
-   "n_inferred": 0,
-   "m2_inferred": 0.0,
    "owner_min_m2": 23.1,
    "fl_count": 0,
    "fl_m2_all": 0.0,
@@ -1185,12 +1309,11 @@
    "n_assumed": 1,
    "n_held": 0,
    "held_width_m": 0.0,
-   "m2_held_range": [
+   "n_held_candidate": 0,
+   "m2_held_candidate": [
     0.0,
     0.0
    ],
-   "n_inferred": 0,
-   "m2_inferred": 0.0,
    "owner_min_m2": 2.42,
    "fl_count": 1,
    "fl_m2_all": 2.4,
@@ -1207,12 +1330,11 @@
    "n_assumed": 2,
    "n_held": 0,
    "held_width_m": 0.0,
-   "m2_held_range": [
+   "n_held_candidate": 0,
+   "m2_held_candidate": [
     0.0,
     0.0
    ],
-   "n_inferred": 0,
-   "m2_inferred": 0.0,
    "owner_min_m2": 4.62,
    "fl_count": 0,
    "fl_m2_all": 0.0,
@@ -1229,12 +1351,11 @@
    "n_assumed": 0,
    "n_held": 10,
    "held_width_m": 16.63,
-   "m2_held_range": [
+   "n_held_candidate": 0,
+   "m2_held_candidate": [
     0.0,
     0.0
    ],
-   "n_inferred": 0,
-   "m2_inferred": 0.0,
    "owner_min_m2": 0.0,
    "fl_count": 12,
    "fl_m2_all": 75.59,
@@ -1249,14 +1370,13 @@
    "n_confirmed": 5,
    "m2_assumed": 0.0,
    "n_assumed": 0,
-   "n_held": 7,
-   "held_width_m": 5.55,
-   "m2_held_range": [
+   "n_held": 8,
+   "held_width_m": 7.1,
+   "n_held_candidate": 0,
+   "m2_held_candidate": [
     0.0,
     0.0
    ],
-   "n_inferred": 1,
-   "m2_inferred": 4.805,
    "owner_min_m2": 0.0,
    "fl_count": 13,
    "fl_m2_all": 34.03,
@@ -1273,12 +1393,11 @@
    "n_assumed": 0,
    "n_held": 3,
    "held_width_m": 2.8,
-   "m2_held_range": [
+   "n_held_candidate": 0,
+   "m2_held_candidate": [
     0.0,
     0.0
    ],
-   "n_inferred": 0,
-   "m2_inferred": 0.0,
    "owner_min_m2": 0.0,
    "fl_count": 4,
    "fl_m2_all": 7.28,
@@ -1295,12 +1414,11 @@
    "n_assumed": 0,
    "n_held": 1,
    "held_width_m": 4.521,
-   "m2_held_range": [
+   "n_held_candidate": 0,
+   "m2_held_candidate": [
     0.0,
     0.0
    ],
-   "n_inferred": 0,
-   "m2_inferred": 0.0,
    "owner_min_m2": 0.0,
    "fl_count": 0,
    "fl_m2_all": 0.0,
@@ -1317,12 +1435,11 @@
    "n_assumed": 0,
    "n_held": 1,
    "held_width_m": 1.0,
-   "m2_held_range": [
+   "n_held_candidate": 0,
+   "m2_held_candidate": [
     0.0,
     0.0
    ],
-   "n_inferred": 0,
-   "m2_inferred": 0.0,
    "owner_min_m2": 0.0,
    "fl_count": 0,
    "fl_m2_all": 0.0,
@@ -1339,12 +1456,11 @@
    "n_assumed": 0,
    "n_held": 1,
    "held_width_m": 1.0,
-   "m2_held_range": [
+   "n_held_candidate": 0,
+   "m2_held_candidate": [
     0.0,
     0.0
    ],
-   "n_inferred": 0,
-   "m2_inferred": 0.0,
    "owner_min_m2": 0.0,
    "fl_count": 0,
    "fl_m2_all": 0.0,
@@ -1361,12 +1477,11 @@
    "n_assumed": 0,
    "n_held": 1,
    "held_width_m": 1.0,
-   "m2_held_range": [
+   "n_held_candidate": 0,
+   "m2_held_candidate": [
     0.0,
     0.0
    ],
-   "n_inferred": 0,
-   "m2_inferred": 0.0,
    "owner_min_m2": 0.0,
    "fl_count": 0,
    "fl_m2_all": 0.0,
@@ -1383,12 +1498,11 @@
    "n_assumed": 0,
    "n_held": 1,
    "held_width_m": 1.0,
-   "m2_held_range": [
+   "n_held_candidate": 0,
+   "m2_held_candidate": [
     0.0,
     0.0
    ],
-   "n_inferred": 0,
-   "m2_inferred": 0.0,
    "owner_min_m2": 0.0,
    "fl_count": 0,
    "fl_m2_all": 0.0,
@@ -1405,12 +1519,11 @@
    "n_assumed": 0,
    "n_held": 1,
    "held_width_m": 1.0,
-   "m2_held_range": [
+   "n_held_candidate": 0,
+   "m2_held_candidate": [
     0.0,
     0.0
    ],
-   "n_inferred": 0,
-   "m2_inferred": 0.0,
    "owner_min_m2": 0.0,
    "fl_count": 0,
    "fl_m2_all": 0.0,
@@ -1427,12 +1540,11 @@
    "n_assumed": 0,
    "n_held": 1,
    "held_width_m": 1.0,
-   "m2_held_range": [
+   "n_held_candidate": 0,
+   "m2_held_candidate": [
     0.0,
     0.0
    ],
-   "n_inferred": 0,
-   "m2_inferred": 0.0,
    "owner_min_m2": 0.0,
    "fl_count": 0,
    "fl_m2_all": 0.0,
@@ -1449,12 +1561,11 @@
    "n_assumed": 0,
    "n_held": 1,
    "held_width_m": 0.93,
-   "m2_held_range": [
+   "n_held_candidate": 0,
+   "m2_held_candidate": [
     0.0,
     0.0
    ],
-   "n_inferred": 0,
-   "m2_inferred": 0.0,
    "owner_min_m2": 0.0,
    "fl_count": 0,
    "fl_m2_all": 0.0,
@@ -1466,69 +1577,83 @@
    "count": 5,
    "width_m": 4.8,
    "m2_confirmed": 0.0,
+   "n_confirmed": 0,
    "m2_assumed": 10.56,
+   "n_assumed": 5,
    "n_held": 0,
    "held_width_m": 0.0,
-   "m2_inferred": 0.0,
+   "n_held_candidate": 0,
    "owner_min_m2": 12.1,
-   "m2_held_range": [
-    0.0,
-    0.0
-   ],
    "fl_count": 5,
    "fl_m2_all": 12.0,
-   "fl_m2_same_confirmed": 0.0
+   "fl_m2_same_confirmed": 0.0,
+   "m2_held_candidate": [
+    0.0,
+    0.0
+   ]
   },
   "DOOR.INTERNAL.PVC": {
    "count": 20,
    "width_m": 17.2,
    "m2_confirmed": 0.0,
+   "n_confirmed": 0,
    "m2_assumed": 36.08,
+   "n_assumed": 19,
    "n_held": 1,
-   "held_width_m": 0.0,
-   "m2_inferred": 0.0,
+   "held_width_m": 0.8,
+   "n_held_candidate": 1,
    "owner_min_m2": 45.76,
-   "m2_held_range": [
-    1.518,
-    1.76
-   ],
    "fl_count": 0,
    "fl_m2_all": 0.0,
-   "fl_m2_same_confirmed": 0.0
+   "fl_m2_same_confirmed": 0.0,
+   "m2_held_candidate": [
+    1.518,
+    1.76
+   ]
   },
   "DOOR.MAIN_ENTRANCE": {
    "count": 1,
    "width_m": 2.0,
-   "m2_confirmed": 5.0,
+   "m2_confirmed": 0.0,
+   "n_confirmed": 0,
    "m2_assumed": 0.0,
-   "n_held": 0,
-   "held_width_m": 0.0,
-   "m2_inferred": 0.0,
+   "n_assumed": 0,
+   "n_held": 1,
+   "held_width_m": 2.0,
+   "n_held_candidate": 1,
    "owner_min_m2": 0.0,
-   "m2_held_range": [
-    0.0,
-    0.0
-   ],
    "fl_count": 0,
    "fl_m2_all": 0.0,
-   "fl_m2_same_confirmed": 0.0
+   "fl_m2_same_confirmed": 0.0,
+   "m2_held_candidate": [
+    5.0,
+    5.0
+   ]
   },
   "WINDOW.ALUMINIUM": {
    "count": 29,
    "width_m": 44.49,
    "m2_confirmed": 56.771,
+   "n_confirmed": 8,
    "m2_assumed": 0.0,
-   "n_held": 20,
-   "held_width_m": 24.98,
-   "m2_inferred": 4.805,
+   "n_assumed": 0,
+   "n_held": 21,
+   "held_width_m": 26.53,
+   "n_held_candidate": 0,
    "owner_min_m2": 0.0,
-   "m2_held_range": [
-    0.0,
-    0.0
-   ],
    "fl_count": 29,
    "fl_m2_all": 116.9,
-   "fl_m2_same_confirmed": 54.931
+   "fl_m2_same_confirmed": 54.931,
+   "m2_held_candidate": [
+    0.0,
+    0.0
+   ]
   }
+ },
+ "status_labels": {
+  "m2_confirmed": "DRAWING-CONFIRMED",
+  "m2_assumed": "ASSUMED — OWNER-APPROVED (Q-55 C / UP-DOOR-HGT-001)",
+  "m2_held_candidate": "HELD: candidate only, never a measured quantity",
+  "owner_min_m2": "CONDITIONAL owner-minimum scenario (Q-04), never added"
  }
 }
