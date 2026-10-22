@@ -485,7 +485,7 @@ Risk **CRITICAL** (recommended validation L4). Ask about: boq, total, release, r
 
 - `tools/urban_boq_m9.py` (3343 lines, HIGH; imported by 41 directly, 46 transitively, SHARED)
 - `engine/source/delta_release.py` (159 lines, CRITICAL, frozen; imported by 37 directly, 37 transitively, SHARED)
-- `engine/source/boq_line.py` (386 lines, HIGH; imported by 30 directly, 98 transitively, SHARED)
+- `engine/source/boq_line.py` (386 lines, HIGH; imported by 32 directly, 100 transitively, SHARED)
 - `engine/source/knowledge.py` (289 lines, HIGH; imported by 32 directly, 124 transitively, SHARED)
 - `engine/source/door_standards.py` (671 lines, MEDIUM; imported by 7 directly, 51 transitively)
 - `engine/source/project_rules.py` (748 lines, MEDIUM; imported by 5 directly, 72 transitively)
