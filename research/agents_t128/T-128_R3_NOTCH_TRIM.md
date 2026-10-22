@@ -87,4 +87,13 @@ glazing-frame cavity at the jambs: length without area | a walked contour is che
 reversal across an edge under 0.12 m is an artefact unless all its edges lie on drawn lines (any villa, any region tool)
 | check_walk_r2.py cavity-notch case + drawn-recess case; walk_r2.py spike scan fails the run | fixed in r3.
 
+## 6. The other curved glazing bands, drawn face vs walked (area-equivalent check, no change)
+
+Only three rooms have a curved window run (walk_r3.json): GF-15 and GF-08 share the W03 band, 1F-11 has W17.
+W03: the inner layer W polyline is 6.873 m (DXF, this run); within 6 mm of the GF-15 ring 5.058 m, of the GF-08
+(open room) ring 1.633 m, and 0.182 m between the two layer 1 lines of the dividing wall end (no room face): 5.058 +
+1.633 + 0.182 = 6.873, residual 0.000 m. The walked GF-15 window run 5.106 also takes the 0.092 m drawn frame segment at
+the start of the band (the Checker's 5.011 + 0.091 = 5.102, verified); neither W03 room shows a notch in the scan.
+W17: inner arc 3.198 + frame segments 0.050 + 0.040 = 3.288 m drawn vs 3.286 walked in r3.
+
 Missing / uncertain: nothing new; r2 section 8 still applies (unprinted openings, floor build-up, roof datum, G2, Q-72).

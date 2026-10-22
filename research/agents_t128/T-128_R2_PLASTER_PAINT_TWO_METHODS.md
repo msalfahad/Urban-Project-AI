@@ -1,5 +1,8 @@
 # T-128 r2: plaster, paint and wet-wall tile per Alsenan room by both methods, re-walked on the verified boundaries
 
+> r3 (2026-10-22): 1F-11 and the 1F / house totals are superseded by `T-128_R3_NOTCH_TRIM.md` and the *_R3 files
+> (frame-cavity notches at the W17 jambs trimmed: 1F-11 owner gross 74.20, net 59.45 m2). Everything else stands.
+
 Worker 2, 2026-10-22 07:47 - 09:00 UTC. Lane A, rework of REJECTED r1 (checker 2026-10-22 02:40, gate e). NO REPO CODE:
 research files only (this folder); no engine module, rule, knowledge version, key map, test or released quantity
 changed. Development villa (Alsenan), not an accuracy claim. No client name, image or personal data is committed;
