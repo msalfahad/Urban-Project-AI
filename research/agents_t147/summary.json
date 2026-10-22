@@ -1,0 +1,173 @@
+{
+ "floors": {
+  "GF": {
+   "horiz_DRY": 158.0814,
+   "plan_DRY": 183.7696,
+   "dome_held": 0.0,
+   "no_ceiling": 23.2371,
+   "stair_strip": 2.4511000000000003,
+   "own_bulk_m2": 21.580600000000004,
+   "dwg_bulk_m2": 99.63122,
+   "held_bulk_lm": 40.202999999999996,
+   "cove_lm_DRY": 54.163999999999994,
+   "paint_own_DRY": 175.7226,
+   "horiz_WET": 48.9272,
+   "plan_WET": 48.9272,
+   "cove_lm_WET": 70.884,
+   "paint_own_WET": 52.86659999999999,
+   "edge_open_lm": 21.316,
+   "held_space_m2": 1.3731,
+   "shaft_STAIR": 12.475,
+   "shaft_SHAFT": 3.24
+  },
+  "1F": {
+   "horiz_DRY": 109.5961,
+   "plan_DRY": 135.5548,
+   "dome_held": 29.0696,
+   "no_ceiling": 0.0,
+   "stair_strip": 0.0,
+   "own_bulk_m2": 11.197200000000002,
+   "dwg_bulk_m2": 71.0582,
+   "held_bulk_lm": 15.456,
+   "edge_open_lm": 25.683999999999997,
+   "cove_lm_DRY": 75.94999999999999,
+   "paint_own_DRY": 120.2971,
+   "horiz_WET": 28.0336,
+   "plan_WET": 31.1445,
+   "cove_lm_WET": 57.78,
+   "paint_own_WET": 28.5298,
+   "held_space_m2": 2.97,
+   "shaft_STAIR": 12.9725,
+   "shaft_SHAFT": 3.24
+  },
+  "2F": {
+   "horiz_DRY": 37.95,
+   "plan_DRY": 37.95,
+   "dome_held": 0.0,
+   "no_ceiling": 0.0,
+   "stair_strip": 0.0,
+   "own_bulk_m2": 0.0,
+   "dwg_bulk_m2": 5.06592,
+   "held_bulk_lm": 2.452,
+   "paint_own_DRY": 37.95,
+   "horiz_WET": 5.55,
+   "plan_WET": 5.55,
+   "cove_lm_WET": 9.7,
+   "paint_own_WET": 5.55,
+   "cove_lm_DRY": 34.4,
+   "shaft_SHAFT": 3.24
+  }
+ },
+ "freelancer": {
+  "GF": {
+   "DRY": 197.33,
+   "WET": 35.48,
+   "cornice_dry": 127.13,
+   "cornice_wet": 77.33
+  },
+  "1F": {
+   "DRY": 112.96,
+   "WET": 30.91,
+   "cornice_dry": 122.82,
+   "cornice_wet": 57.53
+  },
+  "2F": {
+   "DRY": 27.28,
+   "WET": 5.62,
+   "cornice_dry": 32.9,
+   "cornice_wet": 9.75
+  }
+ },
+ "compare": [
+  {
+   "ROOMS": "GF-01",
+   "FREELANCER_ROW": "dewaneya",
+   "FREELANCER_M2": 24.84,
+   "PLAN_M2": 24.94,
+   "HORIZONTAL_M2": 24.94,
+   "HORIZ_MINUS_FL": 0.1,
+   "PCT": 0.4
+  },
+  {
+   "ROOMS": "GF-04",
+   "FREELANCER_ROW": "driver",
+   "FREELANCER_M2": 7.87,
+   "PLAN_M2": 7.875,
+   "HORIZONTAL_M2": 7.875,
+   "HORIZ_MINUS_FL": 0.005,
+   "PCT": 0.1
+  },
+  {
+   "ROOMS": "GF-15",
+   "FREELANCER_ROW": "master bed room",
+   "FREELANCER_M2": 16.66,
+   "PLAN_M2": 16.557,
+   "HORIZONTAL_M2": 16.557,
+   "HORIZ_MINUS_FL": -0.103,
+   "PCT": -0.6
+  },
+  {
+   "ROOMS": "GF-06",
+   "FREELANCER_ROW": "kitchen",
+   "FREELANCER_M2": 9.55,
+   "PLAN_M2": 9.63,
+   "HORIZONTAL_M2": 9.63,
+   "HORIZ_MINUS_FL": 0.08,
+   "PCT": 0.8
+  },
+  {
+   "ROOMS": "GF-07+GF-08",
+   "FREELANCER_ROW": "reception + dining 137.50 + entrance 10.46",
+   "FREELANCER_M2": 147.96,
+   "PLAN_M2": 147.898,
+   "HORIZONTAL_M2": 122.21,
+   "HORIZ_MINUS_FL": -25.75,
+   "PCT": -17.4
+  },
+  {
+   "ROOMS": "1F-07",
+   "FREELANCER_ROW": "laundry",
+   "FREELANCER_M2": 10.0,
+   "PLAN_M2": 10.151,
+   "HORIZONTAL_M2": 10.151,
+   "HORIZ_MINUS_FL": 0.151,
+   "PCT": 1.5
+  },
+  {
+   "ROOMS": "1F-13",
+   "FREELANCER_ROW": "living",
+   "FREELANCER_M2": 38.96,
+   "PLAN_M2": 63.011,
+   "HORIZONTAL_M2": 48.975,
+   "HORIZ_MINUS_FL": 10.015,
+   "PCT": 25.7
+  },
+  {
+   "ROOMS": "2F-03",
+   "FREELANCER_ROW": "maid room",
+   "FREELANCER_M2": 19.58,
+   "PLAN_M2": 19.35,
+   "HORIZONTAL_M2": 19.35,
+   "HORIZ_MINUS_FL": -0.23,
+   "PCT": -1.2
+  },
+  {
+   "ROOMS": "2F-02",
+   "FREELANCER_ROW": "roof-floor bath",
+   "FREELANCER_M2": 5.62,
+   "PLAN_M2": 5.55,
+   "HORIZONTAL_M2": 5.55,
+   "HORIZ_MINUS_FL": -0.07,
+   "PCT": -1.2
+  },
+  {
+   "ROOMS": "1F-01+1F-04+1F-10+1F-11",
+   "FREELANCER_ROW": "bed rooms 1-4",
+   "FREELANCER_M2": 74.0,
+   "PLAN_M2": 72.544,
+   "HORIZONTAL_M2": 60.621,
+   "HORIZ_MINUS_FL": -13.379,
+   "PCT": -18.1
+  }
+ ]
+}

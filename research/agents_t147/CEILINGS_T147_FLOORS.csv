@@ -1,0 +1,10 @@
+FLOOR,KIND,PLAN_M2,HORIZONTAL_GYPSUM_M2,PAINT_OWNER_M2,FREELANCER_DECOR_M2,HORIZ_MINUS_FL_M2,HORIZ_VS_FL_PCT,COVE_RUN_CLOSED_ROOMS_M,FREELANCER_CORNICE_M,NOTE
+GF,DRY,183.77,158.081,175.723,197.33,-39.249,-19.9,54.164,127.13,
+GF,WET,48.927,48.927,52.867,35.48,13.447,37.9,70.884,77.33,
+GF,BOTH,,,,,,,,,owner-method bulkhead faces 21.581 m2; drawing-derived 99.631 m2 PROVISIONAL; held bulkhead edges 40.203 m; dome openings HELD 0.000 m2; no ceiling (light well / lift) 23.237 m2; stair strips 2.451 m2; opening edges 21.316 m; unidentified spaces 1.373 m2
+1F,DRY,135.555,109.596,120.297,112.96,-3.364,-3.0,75.95,122.82,
+1F,WET,31.145,28.034,28.53,30.91,-2.876,-9.3,57.78,57.53,
+1F,BOTH,,,,,,,,,owner-method bulkhead faces 11.197 m2; drawing-derived 71.058 m2 PROVISIONAL; held bulkhead edges 15.456 m; dome openings HELD 29.070 m2; no ceiling (light well / lift) 0.000 m2; stair strips 0.000 m2; opening edges 25.684 m; unidentified spaces 2.970 m2
+2F,DRY,37.95,37.95,37.95,27.28,10.67,39.1,34.4,32.9,
+2F,WET,5.55,5.55,5.55,5.62,-0.07,-1.2,9.7,9.75,
+2F,BOTH,,,,,,,,,owner-method bulkhead faces 0.000 m2; drawing-derived 5.066 m2 PROVISIONAL; held bulkhead edges 2.452 m; dome openings HELD 0.000 m2; no ceiling (light well / lift) 0.000 m2; stair strips 0.000 m2; opening edges 0.000 m; unidentified spaces 0.000 m2
