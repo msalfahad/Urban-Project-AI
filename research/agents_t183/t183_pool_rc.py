@@ -20,8 +20,15 @@ General rules carried by the code (scope: every villa; provenance: T-183, ENGINE
               outer outline - water outline, or a takeoff with a base but no wall line, is refused (never a silent 0).
     R-POOL-3  Blinding / screed / membrane under the base are their own lines; the RC base thickness is the printed
               RC thickness only. Blinding never enters the RC total; changing the blinding never changes RC m3.
-    R-POOL-4  Wall height = height above the base top from the documents (owner Q-26 A for Alsenan: flat floor, inner
-              depth 1.15 m); a missing height gives None (HELD), never a convention.
+    R-POOL-4  (r2) Wall height = rim (wall top) to the STRUCTURAL base top, read from the section's structure line; a
+              finished water depth (rim to finished floor) is never a concrete dimension: the floor build-up drawn
+              between the structure line and the finished floor is added, and both values are kept, labelled. A
+              finished depth with no structural level or build-up gives None (HELD), never the finished depth and
+              never a convention. (r1 took the finished depth 1.15 m as the RC height: defect D-T183-1.)
+    R-POOL-8  (r2) Where the wall top stands above the surrounding deck, the upstand is part of the wall (same pour,
+              already inside rim - base top); its outer face above the deck is an exposed face of its own for
+              formwork, finish and the membrane termination, measured along the deck edges only (not along a wall
+              that stands on a boundary with no deck).
     R-POOL-5  A pump room, balance tank or steps count only when drawn (owner Q-22 A / Q-19 for the pump room).
     R-POOL-6  Wall horizontal bars are distributed over the wall height above the base top; the base's own mats
               occupy the base thickness (no hoop counted inside the base).
@@ -144,6 +151,57 @@ class Outline:
         return {"A": (n, sum(a)), "B": (n + 1, sum(b)), "C": (rate * H, rate * self.area())}
 
 
+# ---------------------------------------------------------------- heights from levels (R-POOL-4 r2)
+
+def wall_height_from_levels(rim, base_top_structural=None, finished_floor=None, floor_buildup=None, *, tol=1e-6):
+    """RC wall height above the base top, from levels on one datum (metres).
+
+    rim                  : top of the wall (structure; the water edge / coping line in the section)
+    base_top_structural  : the structure line of the floor (top of the RC base), if the section draws it
+    finished_floor       : the finished pool floor (the printed water depth runs rim -> here)
+    floor_buildup        : thickness drawn between the structure line and the finished floor
+    Returns {"wall_h", "finished_depth", "floor_buildup", "status", "basis"}; wall_h None = HELD.
+    A finished depth alone is never returned as wall_h (adverse case of D-T183-1)."""
+    out = {"finished_depth": None if finished_floor is None else rim - finished_floor,
+           "floor_buildup": floor_buildup, "wall_h": None, "status": HELD,
+           "basis": "no structural floor level and no drawn build-up: the finished depth is not a concrete height"}
+    if base_top_structural is not None:
+        h = rim - base_top_structural
+        if not h > 0:
+            raise PoolError("rim must be above the structural base top")
+        if finished_floor is not None:
+            bu = finished_floor - base_top_structural
+            if bu < -tol:
+                raise PoolError("finished floor below the structure line")
+            if floor_buildup is not None and abs(bu - floor_buildup) > tol:
+                raise PoolError(f"levels give a build-up of {bu:.4f} m, the section prints {floor_buildup:.4f} m")
+            out["floor_buildup"] = bu
+        out.update(wall_h=h, status=DRAWING_CONFIRMED,
+                   basis="rim to the structure line (top of the RC base)")
+    elif finished_floor is not None and floor_buildup is not None:
+        out.update(wall_h=rim - finished_floor + floor_buildup, status=DRAWING_CONFIRMED,
+                   basis="finished depth + the floor build-up drawn under the finished floor")
+    return out
+
+
+def upstand_faces(deck_edge_m, rim, deck_finish, deck_structure_top=None):
+    """R-POOL-8: outer face of the wall above the deck, along the deck edges only (m2). None when the deck level is
+    not drawn. The concrete is already in the wall (rim - base top)."""
+    if deck_finish is None or deck_edge_m is None:
+        return None
+    if rim <= deck_finish:
+        return {"height_above_deck_finish_m": 0.0, "exposed_m2": 0.0, "deck_edge_m": deck_edge_m,
+                "basis": "wall top at or below the deck finish: no upstand"}
+    res = {"deck_edge_m": deck_edge_m,
+           "height_above_deck_finish_m": rim - deck_finish,
+           "exposed_m2": deck_edge_m * (rim - deck_finish),
+           "basis": "outer face above the deck finish along the deck edges (finish / membrane termination)"}
+    if deck_structure_top is not None:
+        res["height_above_deck_structure_m"] = rim - deck_structure_top
+        res["above_deck_structure_m2"] = deck_edge_m * (rim - deck_structure_top)
+    return res
+
+
 # ---------------------------------------------------------------- concrete components
 
 def concrete_components(outer, wall_t, base_t, wall_h, *, blinding_t=None, screed_t=None, membrane_t=None,
@@ -238,13 +296,23 @@ def formwork(outer, wall_t, base_t, wall_h, casting_method):
 
 # ---------------------------------------------------------------- waterproofing and finishes (areas only)
 
-def surfaces(outer, wall_t, base_t, wall_h):
-    """I: membrane on the protected concrete faces (net, measured on the concrete); J: water-side surfaces."""
+def surfaces(outer, wall_t, base_t, wall_h, finished_depth=None, floor_buildup=None):
+    """I: membrane on the protected concrete faces (net, measured on the concrete); J: water-side surfaces.
+    finish_walls_m2 = the visible wall finish, finished floor -> rim (finished depth; = wall_h when no build-up is
+    drawn); water_face_structure_m2 = the structural water face, base top -> rim (any coating applied to the
+    concrete before the floor build-up); floor_buildup_m3 = the drawn floor build-up (composition not given)."""
     if wall_h is None:
         return None
     inner = outer.inset(wall_t)
+    fin_h = wall_h if finished_depth is None else finished_depth
+    if fin_h > wall_h + 1e-9:
+        raise PoolError("finished depth larger than the structural wall height")
     return {"membrane_under_base_m2": outer.area(), "membrane_outer_walls_m2": outer.perimeter() * (base_t + wall_h),
-            "finish_floor_m2": inner.area(), "finish_walls_m2": inner.perimeter() * wall_h}
+            "finish_floor_m2": inner.area(), "finish_walls_m2": inner.perimeter() * fin_h,
+            "finish_wall_height_m": fin_h,
+            "water_face_structure_m2": inner.perimeter() * wall_h,
+            "floor_buildup_m3": None if floor_buildup is None else inner.area() * floor_buildup,
+            "wall_top_m2": (outer.area() - inner.area())}
 
 
 # ---------------------------------------------------------------- reinforcement by bar population
@@ -323,6 +391,19 @@ def ledger(inp):
         outer = Outline("RECT", a=to_m(o["a"], u), b=to_m(o["b"], u))
     wt, bt = to_m(inp["wall_t"], u), to_m(inp["base_t"], u)
     wh = to_m(inp.get("wall_h"), u)
+    lv = inp.get("levels")
+    heights = None
+    fd = fbu = None
+    if lv is not None:
+        if wh is not None:
+            raise PoolError("give the wall height either as wall_h (structural) or as levels, not both")
+        s = UNITS[u]
+
+        def L(k):
+            return None if lv.get(k) is None else float(lv[k]) * s
+        heights = wall_height_from_levels(L("rim"), L("base_top_structural"), L("finished_floor"),
+                                          L("floor_buildup"))
+        wh, fd, fbu = heights["wall_h"], heights["finished_depth"], heights["floor_buildup"]
     conc = concrete_components(outer, wt, bt, wh, blinding_t=to_m(inp.get("blinding_t"), u),
                                screed_t=to_m(inp.get("screed_t"), u), membrane_t=to_m(inp.get("membrane_t"), u),
                                blinding_projection=to_m(inp.get("blinding_projection"), u),
@@ -335,9 +416,14 @@ def ledger(inp):
     # a NOT_DRAWN component is reported but never enters the RC total
     rc_lines = {k: v for k, v in conc.items() if v.get("status") != NOT_DRAWN}
     assert_complete(rc_lines)
-    out = {"concrete": conc, "rc_total_m3": rc_total(rc_lines),
+    out = {"concrete": conc, "rc_total_m3": rc_total(rc_lines), "heights": heights,
            "formwork": formwork(outer, wt, bt, wh, inp.get("casting_method")),
-           "surfaces": surfaces(outer, wt, bt, wh), "rebar": {}}
+           "surfaces": surfaces(outer, wt, bt, wh, fd, fbu), "rebar": {}}
+    if lv is not None and lv.get("deck_finish") is not None:
+        no_deck = to_m(inp.get("no_deck_edge"), u) or 0.0
+        out["upstand"] = upstand_faces(outer.perimeter() - no_deck, lv["rim"] * UNITS[u], lv["deck_finish"] * UNITS[u],
+                                       None if lv.get("deck_structure_top") is None
+                                       else lv["deck_structure_top"] * UNITS[u])
     for name, pop in (inp.get("populations") or {}).items():
         pop = {k: tuple(v) if v else None for k, v in pop.items()}
         for basis, cov in (("face_to_face", None), ("net_soil_cover", to_m(inp.get("soil_cover"), u))):
@@ -378,6 +464,14 @@ def check():
     eq("D perimeter 4 + 2 + 2 pi", d.perimeter(), 6 + 2 * math.pi)
     ch = d.chords("across_back", 2.0)
     eq("D chords C = rate x area", ch["C"][1], 2 * (4 + 2 * math.pi))
+    # r2: levels (cm): rim +45, finished floor -95 (depth 1.40), structure line -103 (build-up 8 cm), deck finish +20
+    lv = ledger({"unit": "cm", "outline": {"kind": "RECT", "a": 400, "b": 600}, "wall_t": 25, "base_t": 30,
+                 "levels": {"rim": 45, "base_top_structural": -103, "finished_floor": -95, "deck_finish": 20,
+                            "deck_structure_top": 12}, "no_deck_edge": 400, "casting_method": "CAST_IN_PLACE"})
+    eq("r2 wall height rim to structure 1.48 (not the 1.40 finished depth)", lv["heights"]["wall_h"], 1.48)
+    eq("r2 walls 4.75 x 1.48", lv["concrete"]["D_WALLS"]["m3"], 4.75 * 1.48)
+    eq("r2 finish walls 18 x 1.40", lv["surfaces"]["finish_walls_m2"], 18 * 1.40)
+    eq("r2 upstand (20 - 4) x 0.25", lv["upstand"]["exposed_m2"], 16 * 0.25)
     print("ALL PASS" if ok else "SOME FAILED")
     return ok
 

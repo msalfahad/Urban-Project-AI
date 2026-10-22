@@ -197,3 +197,80 @@ def test_refusals():
         P.Outline("D", r=1.0, b=1.0).inset(1.5)
     with pytest.raises(P.PoolError):
         P.Outline("RECT", a=1.0, b=1.0).chords("diagonal", 5)
+
+
+# ---------------------------------------------------------------- r2 guard: finished depth is not the RC wall height
+# (D-T183-1: a printed finished water depth was taken as the structural wall height; ENGINEERING_REASONING_STANDARD
+# lessons row 2026-10-22 "Pool walls 2.710 vs 2.828 m3")
+
+LV = {"rim": 45, "base_top_structural": -103, "finished_floor": -95, "deck_finish": 20, "deck_structure_top": 12}
+RECT_LV = {"unit": "cm", "outline": {"kind": "RECT", "a": 400, "b": 600}, "wall_t": 25, "base_t": 30,
+           "levels": LV, "no_deck_edge": 400, "casting_method": "CAST_IN_PLACE"}
+
+
+def test_wall_height_to_the_structure_line_normal():
+    led = P.ledger(RECT_LV)
+    h = led["heights"]
+    # rim +0.45, structure line -1.03 -> 1.48; finished floor -0.95 -> depth 1.40 kept beside it; build-up 0.08
+    assert h["wall_h"] == approx(1.48) and h["finished_depth"] == approx(1.40) and h["floor_buildup"] == approx(0.08)
+    assert led["concrete"]["D_WALLS"]["m3"] == approx(4.75 * 1.48)
+    assert led["rc_total_m3"] == approx(7.2 + 4.75 * 1.48)
+    # formwork and the structural water face use 1.48; the visible finish runs finished floor -> rim, 1.40
+    assert led["formwork"]["water_face_m2"] == approx(18 * 1.48)
+    assert led["formwork"]["outer_face_m2"] == approx(20 * (0.30 + 1.48))
+    s = led["surfaces"]
+    assert s["finish_walls_m2"] == approx(18 * 1.40) and s["water_face_structure_m2"] == approx(18 * 1.48)
+    assert s["floor_buildup_m3"] == approx(3.5 * 5.5 * 0.08)
+    assert s["membrane_outer_walls_m2"] == approx(20 * 1.78)
+
+
+def test_finished_depth_alone_is_held_never_the_concrete_height_adverse():
+    # only the finished depth is known (no structure line, no build-up): HELD, None, never 1.40 and never 0
+    lv = {"rim": 45, "finished_floor": -95}
+    led = P.ledger(dict(RECT_LV, levels=lv))
+    assert led["heights"]["finished_depth"] == approx(1.40)
+    assert led["heights"]["wall_h"] is None and led["heights"]["status"] == P.HELD
+    assert led["concrete"]["D_WALLS"]["m3"] is None and led["rc_total_m3"] is None
+    # the r1 error, reproduced: taking the finished depth as the height under-measures the walls by band x build-up
+    r1 = P.concrete_components(P.Outline("RECT", a=4, b=6), 0.25, 0.30, 1.40)["D_WALLS"]["m3"]
+    r2 = P.ledger(RECT_LV)["concrete"]["D_WALLS"]["m3"]
+    assert r2 - r1 == approx(4.75 * 0.08)
+
+
+def test_finished_depth_plus_printed_buildup_gives_the_structural_height():
+    lv = {"rim": 45, "finished_floor": -95, "floor_buildup": 8}
+    assert P.ledger(dict(RECT_LV, levels=lv))["heights"]["wall_h"] == approx(1.48)
+
+
+def test_level_conflicts_are_refused():
+    with pytest.raises(P.PoolError, match="build-up"):
+        P.ledger(dict(RECT_LV, levels=dict(LV, floor_buildup=5)))          # levels give 8 cm, section prints 5
+    with pytest.raises(P.PoolError, match="below the structure"):
+        P.ledger(dict(RECT_LV, levels=dict(LV, finished_floor=-110)))
+    with pytest.raises(P.PoolError, match="not both"):
+        P.ledger(dict(RECT_LV, wall_h=140))
+    with pytest.raises(P.PoolError, match="finished depth larger"):
+        P.surfaces(P.Outline("RECT", a=4, b=6), 0.25, 0.30, 1.40, finished_depth=1.48)
+
+
+def test_upstand_along_the_deck_edges_only():
+    up = P.ledger(RECT_LV)["upstand"]
+    # perimeter 20.00 - 4.00 on a boundary with no deck = 16.00 m; rim 0.45 - deck finish 0.20 = 0.25 m
+    assert up["deck_edge_m"] == approx(16.0) and up["exposed_m2"] == approx(4.0)
+    assert up["above_deck_structure_m2"] == approx(16.0 * 0.33)
+    # wall top flush with (or below) the deck: no upstand face, and the concrete never changes with the deck level
+    flush = P.ledger(dict(RECT_LV, levels=dict(LV, deck_finish=45)))
+    assert flush["upstand"]["exposed_m2"] == 0.0
+    assert flush["rc_total_m3"] == approx(P.ledger(RECT_LV)["rc_total_m3"])
+
+
+def test_d_pool_levels_mirror_and_mm():
+    # a D pool r 2.00 / b 1.20, mm: rim +350, structure -1150, finished -1100; mirrored D = same outline
+    led = P.ledger({"unit": "mm", "outline": {"kind": "D", "r": 2000, "b": 1200}, "wall_t": 250, "base_t": 350,
+                    "levels": {"rim": 350, "base_top_structural": -1150, "finished_floor": -1100},
+                    "casting_method": "CAST_IN_PLACE"})
+    d = P.Outline("D", r=2.0, b=1.2)
+    band = d.area() - d.inset(0.25).area()
+    assert led["heights"]["wall_h"] == approx(1.50) and led["heights"]["finished_depth"] == approx(1.45)
+    assert led["concrete"]["D_WALLS"]["m3"] == approx(band * 1.50)
+    assert "upstand" not in led                                          # no deck level drawn: no upstand line
