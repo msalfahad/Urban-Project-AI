@@ -1,25 +1,22 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
 Plain words, no task numbers. Measured numbers come from SCOREBOARD.md; anything not measured says so.
-Last update: 2026-10-22 08:20 UTC (Lead). Previous version: 2026-10-22 04:20 UTC. The released numbers did not change
-(the released method is untouched; released concrete 92.77 vs 111.81 m3, -17.03 %). Checked and merged since 04:20: stair,
-pool and water-tank steel by bar population (stair main bars 367.88 .. 420.54 kg held on the "per metre" meaning; pool and
-tank steel held), the dome rings (no double count: beam register 65.060 vs his 65.97 m3, -1.4 %, stands) the pinned
-definition of the released run, the outside areas by your rule (court 119.542 m2 interlock, porch floor 10.680, entrance
-steps marble, north side walk 21.021 beside your 23.955; checker re-measured the porch 0.0 %), and the third candidate
-extension through the integrated check (column 1,887.13 / ground beams 1,252.91 / beams 5,171.03 kg drawing-confirmed, the
-rest held, never 0; route G convention steel superseded, not summed). That steel package was sent back once for one fault (18 column link lines lost their upper reading)
-and merged after the fix.
-Your directive of this morning is in force: the "per metre" steel notation, the stair shaft and the black block size are
-now engineering investigations, not questions to you; block openings (full opening, physical scope) and strap length (beam
-axis) are answered and in work; corners are their own m.l line at full physical length, the half is payment only.
-New hand results waiting for the checker: formwork for the first time (1,038.533 m2 above ground, held parts as ranges;
-below ground both your open alternatives shown), plaster / paint by both methods reworked (whole house dry walls
-drawing-derived 1,129.09 .. 1,155.22 vs his 1,209.39 m2, -6.6 .. -4.5 %), doors / windows reworked, your stair rule as a
-calculator (your table 6 of 6 exact), and the wall-stub fix. SCOREBOARD v2 is now on the board: concrete error 17.03 %
-on the released run and 15.38 % on the candidate (3 of 8 lines compared; the drop comes from blinding moving to held,
-not from accuracy); 0 of 8 reference lines re-measured whole by the checker yet; plaster, paint and floor area held;
-doors and windows not comparable in m2 yet (the engine counts pieces).
+Last update: 2026-10-22 12:20 UTC (Lead). Previous version: 2026-10-22 08:20 UTC. The released numbers did not change
+(released concrete 92.77 vs 111.81 m3, -17.03 %; released default V2.9 + route G untouched).
+Your pool (teaching case): the checker measured it independently against your eight conditions. Base 10.936 m2 x 0.40 m
+= 4.374 m3 VERIFIED; wall ring 2.357 m2 (curved part 1.037 m2 measured) x 1.20 m = 2.828 m3, pool shell 7.202 m3 against
+the engine's 3.495 (it read half the ring and used convention thickness / height) and the freelancer's 12.348 (pump room
+3.48 m3 and steps 0.228 m3 appear in no drawing, detail or specification read; his 1.80 m wall height counts the base
+again). The worker had taken your 1.15 m as the wall height; the section shows 1.15 is the finished water depth over a
+50 mm build-up, so the concrete wall is 1.20 m, and the wall rises 0.15 m above the deck: sent back for exactly that.
+The pool line is PARTIALLY VERIFIED (steel held for the designer), so 0 of 8 concrete reference lines are verified whole.
+Also checked since 08:20: the scoreboard is now produced by a merged script (no more hand tables); the wall-stub fix and
+the coverage census merged. Formwork was sent back: one column's joint faces came out 12 % high (a beam running through
+the column was counted across the full face). Waiting for the checker: the "per metre" footing notation (it is a maximum
+spacing; 2,769 .. 2,830 kg held only on a leg diameter the drawing does not print), corners and parapets as physical
+items with his Sigma rows mapped onto them, doors / windows, plaster / paint, your stair calculator.
+Next for structure: both staircases first (your order), then the pool rework, then formwork rework, then dome scenarios
+(the three domes stay in the approved design; your client's no-dome request is a separate scenario, not released).
 
 ## Where we are on the five gates
 | Gate | In plain words | Due | Done so far | State |
@@ -165,19 +162,16 @@ Not measured, and paused by your order (Alsenan first).
   development lengths, so a steel ledger is not complete until it has read them.
 
 ## Being worked on now
-- Checker (clean runs at 20:33 and 22:16, running since 23:51; 7 merged since 20:20, one sent back and merged after its rework): twelve results wait.
-  Next: the second candidate extension (footing steel, soffits) through the full integrated check, then slab steel and the
-  slab text fixes, then blockwork, plaster / paint, ceilings, doors / windows, the facade and the image review.
-- Integration (worker 3): when the second extension is merged, the third: column, ground-beam, strap and beam steel from
-  the checked hand ledgers into the candidate (planted columns and unsized bars held). Meanwhile: one fixed definition of
-  "the released run" (two different runs carry that name today; 8 family figures differ between them).
-- Structural (worker 1): the dome ring beams (the beam register may count part of each ring twice), then stair, pool and
-  tank steel by bar population, then formwork (a missing category; your two open formwork alternatives side by side).
-- Architecture and finishes (worker 2): YOUR outdoor floor rule as BOQ lines (court interlock, porch on its own, side walk
-  and passage porcelain, steps marble), then your exterior Sigma notes term by term, then the stair calculator; then
-  railings and shutters (missing from every BOQ so far; only what is drawn is measured).
-- Research scout (next run 24 Oct 23:50 UTC): added to its requests: published conventions for exterior plaster corners
-  (2 m.l = 1 m2) and half-area opening deductions, for you to decide.
+- Checker (clean runs at 09:52 and 11:51, three items each, your items first): next run the pool rework if it has landed
+  (else the column concrete line re-measured whole), the footing notation, doors / windows, then corners / parapets with
+  the Sigma comparison as one pair; then plaster / paint, the stair calculator and both staircases.
+- Structural (worker 1): both staircases project-wide (every flight, landing and the stair beside the lift; the last
+  structural page), then the pool rework (1.20 m wall, 0.15 m upstand), then the formwork rework, then the dome scenarios.
+- Architecture and finishes (worker 2): block openings by physical scope (your answer), then the stair-shaft walls (they
+  share the stair beside the lift with the staircase work; one owner per element), then black block units.
+- Integration (worker 3): the fourth candidate extension (every line resting on an unprinted value held), then a guard that
+  refuses a convention value where a drawing prints one (your pool lesson), then the scoreboard's five separate measures and
+  doors / windows in pieces AND m2.
 
 ## What is missing
 - Window sills / heads for 20 windows and 3 arch openings (designer window schedule asked); every door but the main entrance (2.20 m by your Q-55 C, stated as assumed).
@@ -194,22 +188,12 @@ Not measured, and paused by your order (Alsenan first).
 - The Kuwait specification chapters on waterproofing, floors, wall tiles and paint (file too big: parts needed).
 
 ## Waiting for the owner
-- Still open, one package (work continues, only the affected quantity is held): Q-71 bars printed per metre (A / B / C;
-  drawing facts only). It now decides about 6.38 .. 6.73 t of held steel: five footings 2,742.51 .. 2,836.40 kg, column
-  links 781 .. 829 kg and the slab bottom mesh 2,853.00 .. 3,068.05 kg. NEW evidence: a second frozen engine file calls
-  "rate x full side, unrounded" (option C) your decision, while the earlier one pointed to rounding up; neither is in your
-  answers, so the team uses neither: please say whether either was yours. Q-72 stair shaft (A 136.14, B 163.93 .. 165.35
-  recommended, C 157.66 m2); Q-73 openings in block walls (A deduct every opening, recommended; B over 0.50 m2 only; C none,
-  gross 955.63 m2); Q-74 oblique strap length (A along the axis 2.293 / 3.258 m, recommended; B projected; C centre to
-  centre); Q-75 black block size (A 40 x 20 module, 12.5 per m2, recommended; B another size; C count held).
-- Answered and applied: outside areas (your rule: court interlock, sides porcelain / ceramic, outside stairs marble; porch
-  measured, material later; pool deck held). Nobody will ask again.
-- Your choices still open from your own notes (not questions): porch material, pool deck finish, corners (2 m.l = 1 m2) and
-  the half-opening deduction in exterior plaster once the sources are found.
-- Proposal (no decision needed now): draw the checker's 2 random lines only from lines that carry a quantity.
-- Your confirmation of the reconciliation proposal (manual and drawing methods side by side); until then nothing released
-  changes.
-- Designer requests to forward when you choose: DESIGNER_CLARIFICATIONS.md, NEW D-49 .. D-54 (slab top-bar extent, three
-  slab labels and a bar zone, 13 slab panels with no bars, the tank slab note, the main door / pool-court arch / W02 against
-  the renders, a railing and shutter schedule); earlier D-39 .. D-48.
+- No decision needed today. Per your standard, the open points are investigations, not questions: the "per metre" notation
+  (answered from the drawings, waiting for the checker; only the unprinted leg diameter stays a designer item), the stair
+  shaft and the black block units. Block openings and strap length are answered by you and in work.
+- Designer items to forward when you choose (DESIGNER_CLARIFICATIONS.md): footing bar leg diameter, pool steel (the p.7
+  detail is two-zone, your floor is flat), the three parapet types ST p.14 leaves to the architectural detail, and the
+  earlier D-39 .. D-58.
+- For the dome change: the consultant must approve the opening geometry, edge / ring structure, load path, waterproofing
+  upstands and the skylight or open-area system before scenario S1 can be priced as approved (list in progress).
 - Upload the Kuwait specification chapters 07100, 09200, 09300, 09400, 09900 as separate PDFs under 6 MB.

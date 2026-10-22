@@ -1,3 +1,66 @@
+## LEAD REPORT 2026-10-22 00:20 UTC
+
+Repositories: this Lead run is the first on the repository-attached prompt: attached Urban-Project-AI checkout (main
+1c559a8) + wrapper. `.work` was not prepared at start (the start-up hook again did not run); `setup` by hand worked, then
+`board log` / `board commit` worked, no refusal. Working branch head 15fd913 (7 checker merges since my last report; no
+owner-session commit on it). Drive readable: no new file since the 27 images of 21 Oct 22:50 (already under review), so no
+new photo-review task. UrbanProjectsManager not used.
+
+PROGRESS (Alsenan; released numbers unchanged: released concrete 92.77 vs freelancer 111.81 m3, -17.0 %; no candidate
+quantity changed since 20:20)
+- Structure, verified as hand pieces (checker re-measured from the drawing, NOT released): columns to the member above each
+  column 28.816 .. 29.139 m3 vs his 28.547 (+0.9 .. +2.1 %; the two water-tank columns are a 3.00 .. 3.80 m range until the
+  designer says whether the tank beam stands up or hangs down); beam steel 5,171 kg net by bar population (three beams
+  re-counted 0.0 / +0.01 / -0.1 %; his steel is a lump, so rule difference, no %); footing "per metre" evidence for your
+  Q-71 (boxed bars and cage symbols described, leg lengths not printed: held).
+- Waiting for the checker: the second candidate extension (footing steel route G 3,735.91 -> 874.86 kg drawing-confirmed
+  on the 19 footings printed with a count + 2,742.51 .. 2,836.40 kg held on Q-71; soffits over outside air 44.446 m2,
+  finish held); slab steel by bar population (bottom mesh 2,853.00 .. 3,068.05 kg depending on Q-71; top bars over supports
+  held 752.73 .. 1,931.52 kg because a sheet note and the typical slab detail give different extents: designer); the facade
+  side by side you asked for: 1,022.534 m2 measured + 6.822 .. 13.261 m2 held + 13.079 m of slab edge, against his walls
+  968.237 m2 (+5.6 %, rule difference: he takes one plane per elevation, the drawing has set-back faces).
+- Your 27 images: all are the designer's renders, not site photos. They show the three domes the drawings draw; your
+  client-change answer (no concrete domes) still governs, so no dome quantity changes and the 181.81 m2 of domes stays out
+  of the exterior plaster. Differences recorded, no quantity moved: court and side strip rendered in stone (your interlock /
+  porcelain choice governs), porch raised with a balustrade (you said court level), main door single leaf vs printed double
+  2.00 x 2.50, the pool-court opening rendered as an arch over a low wall. Found: railings and shutters are in NO BOQ yet
+  (missing category; only what is drawn will be measured).
+- Learned: two different runs are both called "released V2.9 + route G" (with and without the route G profile; 8 family
+  figures differ). Until one is pinned by its provenance, every comparison names its run; the checker's integrated diffs use
+  the profiled one.
+- Your rules applied today: outside floors (court interlock, sides porcelain, outside stairs marble, porch on its own line,
+  pool deck held) moved to Answered and into the outdoor-floor task; your Sigma notes became their own reconciliation task
+  (13 openings vs the 65-opening census, corners in m.l both ways with a reference-book search, domes out, pool ceiling
+  12.834 m2 accepted).
+
+TEAM HEALTH (20:17 - 00:20)
+- Closed slots: worker 1 20:22 SUCCESS, 22:20 SUCCESS; worker 2 21:39 SUCCESS, 23:41 SUCCESS; worker 3 21:02 SUCCESS, 23:00
+  SUCCESS; checker 21:50 SUCCESS (20:33 also). Checker 23:51 still running (it merged at 23:53), worker 1 00:19 starting.
+  7 of 7 closed slots STARTED + SUCCESS. Every self-check PASS (codemap, t061, freeze 0): every agent ran code.
+- Lead self-check PASS (codemap stale none, t061, freeze 0).
+- What I did: checker queue for 3 runs (V3.0.2 Gate B first, slab steel and the slab rework critical, three results over 6 h
+  next); steel integration re-sequenced ahead of the slab-face package because all its inputs are merged; lane S had nothing
+  it was allowed to claim, so the dome-ring task is released; 5 new tasks (release baseline, Sigma reconciliation, railings /
+  shutters census, stair / pool / tank steel, formwork); 6 designer items (D-49 .. D-54); 12 element-register rulings
+  (including: the north strip is the side walk, porcelain, never interlock; porch floor and porch soffit are two surfaces).
+
+OWNER PACKAGE (same five questions; no new question)
+- Q-71 bars per metre: it now decides about 6.38 .. 6.73 t of held steel (five footings 2,742.51 .. 2,836.40 kg, column
+  links 781 .. 829 kg, slab bottom mesh 2,853.00 .. 3,068.05 kg). NEW evidence: a second frozen engine file calls option C
+  (rate x full side, unrounded) "your decision", while the first pointed to rounding up; neither is in your answers, so the
+  team uses neither. Please say whether either was yours, or choose A / B / C. Drawing facts only, no recommendation.
+- Q-72 stair shaft, Q-73 block openings, Q-74 strap length, Q-75 black block size: unchanged (full text in OWNER_QUESTIONS.md).
+
+NEEDS FIXING
+- Small, for the main chat: the start-up hook still does not prepare `.work` in repo-attached sessions (this run too); setup
+  by hand works every time, so nothing is lost.
+- Still waiting: Kuwait specification chapters (07100, 09200, 09300, 09400, 09900) as PDFs under 6 MB; designer items
+  D-39 .. D-54 when you choose to send them.
+
+Team ids: MERGED T-119 r2, T-130 r3, T-134, T-156, T-149, T-144, T-155 r2; READY 12 (T-142 Gate B, T-152, T-139 r2, T-125,
+T-143, T-128, T-147, T-154, T-150, T-159, T-161, T-140); TODO permitted T-160 (S), T-157 / T-162 / T-158 (A), T-151 /
+T-165 (I); TODO not permitted T-166, T-163 (S), T-164 (A); T-132 checker only.
+
 ## LEAD REPORT 2026-10-21 20:20 UTC
 
 Repositories: attached Urban-Project-AI checkout + wrapper (setup by hand: the start-up hook did not run; then board log /
