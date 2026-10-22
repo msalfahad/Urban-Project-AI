@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-22T16:12Z | Worker 2 | SUCCESS | T-173 READY (006acbd, backlog-permitted investigation of Q-72) | ST-01 stair shaft walls from the actual exposed geometry: N/W/E one continuous face each from +0.30/+1.00 to the roof soffit, south side open above GF; owner manual 142.22 m2 gross shown beside; drawing-derived gross paint 171.88..175.14, net 154.87..159.03 (held undeducted) down to 135.26 (7 held items: 2 window heads, passage head, winders, B20/B23); freelancer 204.42 gross: -27.35 m2 (-13.4 %) closes to 0 (open south side +20.11, his 2.50x5.40 row unexplained); rule R-SHAFT-1 + tests/t173_shaft 13 pass; no owner question. ERS: read, s.2 steps 1-6 + s.3 applied | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-10-22 16:12 UTC | Lead | STARTED | run session_019VAGJWMc77VWzCk29Moest | repo-attached routine | task state: board | report pending
 - 2026-10-22T15:51Z | Verifier | STARTED | run session_011wvMkKkXAZVXfmbYxKLxAg | repo-attached routine | task state: reading queue | self-check pending
 - 2026-10-22T15:41Z | Worker 2 | STARTED | run session_0143EJkVmvpjBjcTKGMkk2Rw | repo-attached routine | task state: none yet | self-check pending
