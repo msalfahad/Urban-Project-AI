@@ -1,0 +1,113 @@
+{
+ "rule_set": "URBAN_RULES",
+ "version": "1.6.0",
+ "base": {
+  "rule_set": "URBAN_RULES",
+  "version": "1.5.0",
+  "file": "rules/owner_decisions/URBAN_RULES_1.5.0.json"
+ },
+ "rule": "an overlay over URBAN_RULES 1.5.0 (itself the owner library 1.4.0 + the 1.5.0 overlay): an OWNER_APPROVED record replaces the record with the same rule_id or adds a new rule; the 1.4.0 and 1.5.0 files are never edited; frozen results keep the version they were computed with. engine/source/rule_store.py does not resolve 1.6.0 yet (VERSIONS 1.4.0 / 1.5.0, latest 1.5.0 unchanged): registering it is part of the integration path, so no method reads this file today except engine/source/stair_rule_calculator.py, which reads its one record directly",
+ "records": [
+  {
+   "rule_id": "UP-STAIR-015",
+   "version": "1.0.0",
+   "supersedes": null,
+   "status": "OWNER_APPROVED",
+   "approval": {
+    "by": "owner (Urban Projects)",
+    "on": "2026-10-21",
+    "source": "owner main chat 2026-10-21, recorded in docs/agents/OWNER_RULE_STAIRS_2026-10-21.md on agents/control (the Arabic text governs; the owner's English version has the same content); answers S-1 .. S-3 the same day (\"As you recommend\")"
+   },
+   "rule_name": "Stair riser / tread count and fit check from the floor height and the available length",
+   "names": {
+    "ar": [
+     "حساب الدرج",
+     "القايم / المراية",
+     "النايم / الدعسة",
+     "البسطة",
+     "قلبة وحدة",
+     "قلبتين"
+    ],
+    "en": [
+     "stair calculation",
+     "riser",
+     "tread",
+     "landing",
+     "single straight flight",
+     "two flights (U) with a mid landing"
+    ]
+   },
+   "trade": "MARBLE",
+   "scope": "STAIR",
+   "rule_kind": "MEASUREMENT_RULE",
+   "default_or_mandatory": "DEFAULT",
+   "project_override_allowed": true,
+   "country_context": "KUWAIT",
+   "owner_confirmed": true,
+   "inputs": {
+    "floor_height": "m; finished floor level to finished floor level (S-3)",
+    "max_riser": "m; default 0.16",
+    "tread": "m; default 0.30; allowed 0.28 - 0.30",
+    "stair_width": "m",
+    "available_length": "m; the horizontal length available for the stair",
+    "landing_depth": "m; mid-landing depth; default = stair_width"
+   },
+   "calculation_method": [
+    "1 risers = ceil(floor_height / max_riser), always rounded up",
+    "2 actual_riser = floor_height / risers: all risers equal, never a short leftover step",
+    "3 single straight flight: treads = risers - 1; required_length = treads x tread",
+    "4 two flights (U) with a mid landing: flight1 = ceil(risers / 2), flight2 = floor(risers / 2); treads per flight = its risers - 1 (total treads = risers - 2); required_length = (flight1 - 1) x tread + landing_depth",
+    "5 fit check: single flight when its required_length <= available_length; otherwise U when its required_length <= available_length; otherwise the warning 'space is not enough, needs at least X m'",
+    "6 warning when tread < 0.28 or actual_riser > 0.16",
+    "7 the landing is never counted as a tread; the last riser lands on the landing or the upper floor"
+   ],
+   "boq_outputs": [
+    "risers, actual_riser, treads, stair type (single / U), required_length, fit result",
+    "tread cladding m2 = treads x tread x stair_width",
+    "riser cladding m2 = risers x visible_riser x stair_width, visible_riser = actual_riser - tread build-up (S-2; UP-STAIR-003, tread marble 0.030 m UP-STAIR-006)",
+    "tread pieces = treads; riser pieces = risers",
+    "landing m2 = landing_depth x (2 x stair_width), its own line"
+   ],
+   "relations": {
+    "UP-STAIR-002": "S-1 answered DRAWING GOVERNS: when the drawing prints or draws the stair, its riser / tread count and geometry govern and this rule runs as a CHECK (a count mismatch, an actual riser above 0.16 m or a tread under 0.28 m is a flagged finding, never a silent change); when the stair is not drawn this rule is the owner-approved method and its quantities carry ASSUMED — OWNER-APPROVED with this record as the source. The 0.16 / 0.30 defaults are therefore never used on a drawn stair (UP-STAIR-002: typical values are diagnostic only)",
+    "UP-STAIR-003": "S-2 answered RISER LESS THE TREAD BUILD-UP: the riser finish area uses the visible riser, not the full actual_riser",
+    "UP-STAIR-006": "the tread build-up is the tread marble thickness, 0.030 m unless the drawing, specification or owner gives another",
+    "UP-STAIR-009": "the 0.155 - 0.165 m range stays a diagnostic sanity range; this rule's 0.16 m is a limit that raises a warning, never a measured riser of a drawn stair"
+   },
+   "open_points": [
+    {
+     "id": "S-1",
+     "question": "precedence with UP-STAIR-002 when the drawing prints the stair",
+     "status": "ANSWERED",
+     "answer": "the drawing governs; this rule checks it"
+    },
+    {
+     "id": "S-2",
+     "question": "riser cladding height: full actual_riser or actual_riser less the tread build-up",
+     "status": "ANSWERED",
+     "answer": "actual_riser less the tread build-up (UP-STAIR-003)"
+    },
+    {
+     "id": "S-3",
+     "question": "floor_height basis: finished floor to finished floor, or structural level to structural level",
+     "status": "ANSWERED",
+     "answer": "finished floor to finished floor"
+    }
+   ],
+   "arithmetic": "exact decimal arithmetic: 4.48 / 0.16 is exactly 28 risers (binary floating point gives 28.000000000000004 and ceil 29); limit comparisons carry a 1e-9 m tolerance",
+   "acceptance": [
+    {"floor_height": 3.20, "available_length": 6.0, "landing_depth": 1.00, "risers": 20, "actual_riser": 0.160, "single": "19 / 5.70", "u": "10+10 / 18 / 3.70", "result": "single"},
+    {"floor_height": 3.20, "available_length": 4.0, "landing_depth": 1.00, "risers": 20, "actual_riser": 0.160, "single": "19 / 5.70", "u": "10+10 / 18 / 3.70", "result": "U"},
+    {"floor_height": 3.20, "available_length": 3.0, "landing_depth": 1.00, "risers": 20, "actual_riser": 0.160, "single": "19 / 5.70", "u": "10+10 / 18 / 3.70", "result": "fails: needs at least 3.70 m"},
+    {"floor_height": 3.00, "landing_depth": 1.00, "risers": 19, "actual_riser": 0.158, "single": "18 / 5.40", "u": "10+9 / 17 / 3.70"},
+    {"floor_height": 3.50, "landing_depth": 1.00, "risers": 22, "actual_riser": 0.159, "single": "21 / 6.30", "u": "11+11 / 20 / 4.00"},
+    {"floor_height": 4.00, "landing_depth": 1.00, "risers": 25, "actual_riser": 0.160, "single": "24 / 7.20", "u": "13+12 / 23 / 4.60"}
+   ],
+   "unit": "nr | m | m2 (never summed across units, UP-STAIR-004)",
+   "value": null,
+   "unknown_behavior": "STAIR_INPUT_NOT_ESTABLISHED (a missing floor height or width: no quantity); STAIR_DOES_NOT_FIT (every line HELD with the 'needs at least X m' warning); AVAILABLE_LENGTH_NOT_GIVEN (the type-dependent lines HELD, both types shown)",
+   "code": "engine/source/stair_rule_calculator.py",
+   "tests": "tests/t158_stair_calculator/"
+  }
+ ]
+}
