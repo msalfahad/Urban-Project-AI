@@ -111,8 +111,13 @@ What A holds and B releases is, by quantity: columns 36.714 m3, ground beams 27.
   released at the generator's hand truth 12.54 m3 with it; footings 21.84 m3 equal in both; compare names the profile as
   the only configuration difference and only STR.* figure sets as differing; per-code figures on a hand-made line list
   (two units of one code kept apart, bounded + unbounded held, a quantity state without a number counted held).
-- Development villa: both specs REPRODUCED (line count and BOQ_LINES.csv sha); the manifests of two runs of each spec
-  on the committed code are byte-identical (see the board handoff for the commit and manifest sha).
+- Development villa: both specs REPRODUCED (line count and BOQ_LINES.csv sha). On the committed code 146fffb (tree
+  CLEAN) each spec was run twice: the two manifests are byte-identical, BASELINE_MANIFEST.json sha256
+  V29_ROUTEG_NO_PROFILE 694d5f5d39fd096c..., V29_ROUTEG_PROFILED edbc84036de1770f.... On another commit (a merge) the
+  manifest differs only in `engine`; `compare` then shows 0 configuration and 0 figure differences and identical
+  hashed outputs = reproduced.
+- L2: tests/t165_release_baseline + m9_foundation + structural_comparison_engine (rebar firewall) + t061 + t156 (Gate B
+  tool) + t130: 233 pass, 0 fail; freeze 0; codemap check stale none.
 
 ## Missing / for the Lead
 
