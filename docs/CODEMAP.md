@@ -14,16 +14,16 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `data/` | 19 | Registries (owner facts, project rules, trades) and trade rules. Large run data is gitignored. |
 | `docs/` | 72 | Design notes and the generated maps. |
 | `documents/` | 5 |  |
-| `engine/` | 630 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
+| `engine/` | 631 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 2560 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 2617 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 8 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 1351 | pytest suites, one folder per round. |
-| `tools/` | 107 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
+| `tests/` | 1354 | pytest suites, one folder per round. |
+| `tools/` | 108 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (254 modules)
 
@@ -387,7 +387,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `workbooks.py` | 242 | MEDIUM | 0 | REPORTING V3 - workbook layouts (generic over a BOQ_LINES model). |
 | `workbooks_v3b.py` | 308 | MEDIUM | 0 | REPORTING V3b - workbook layouts over the two-view line model (TECHNICAL_QTO / COMMERCIAL_BOQ). |
 
-## `engine/source/` (278 modules)
+## `engine/source/` (279 modules)
 
 | Module | Lines | Risk | Imp | Purpose |
 |---|---|---|---|---|
@@ -395,7 +395,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `arch_completeness.py` | 773 | MEDIUM | 5 | ARCHITECTURAL COMPLETENESS (M9 S6, ARCH_TAKEOFF_V2) - every physical region and every eligible finish surface ends |
 | `arch_evidence.py` | 263 | MEDIUM | 2 | ARCHITECTURAL EVIDENCE (M4) - what an architectural floor plan says about the ground beams under it (generic; stdlib + |
 | `arch_floor.py` | 183 | MEDIUM | 6 | FLOOR AREA RECONCILIATION (M9 S4) - every m2 of a floor plan in exactly one category, or an explicit residual. |
-| `arch_measure.py` | 1165 | HIGH | 19 | ARCHITECTURAL MEASUREMENT (M9 S2) - canonical BOQ lines per room from the spaces of arch_rooms (generic, stdlib). |
+| `arch_measure.py` | 1165 | HIGH | 20 | ARCHITECTURAL MEASUREMENT (M9 S2) - canonical BOQ lines per room from the spaces of arch_rooms (generic, stdlib). |
 | `arch_plan.py` | 478 | HIGH | 19 | ARCHITECTURAL PLAN READING (M9 S2) - which part of a drawing is which floor plan, and what each layer IS (generic). |
 | `arch_quantity_truth.py` | 536 | MEDIUM | 2 | ARCH_QUANTITY_TRUTH_V1 - generic architectural quantity calculators with explicit evidence states. |
 | `arch_rooms.py` | 2250 | HIGH | 39 | ARCHITECTURAL SPACES (M9 S2, S4) - rooms of one floor plan from its wall linework, on the TS01 topology (generic). |
@@ -511,7 +511,8 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `lintel_qto.py` | 218 | CRITICAL | 4 | LINTEL QTO - schedule binding, lintel geometry, bar lengths and counts for masonry-wall lintels (generic). |
 | `lintel_release_audit.py` | 151 | HIGH | 1 | LINTEL RELEASE AUDIT - whether a released lintel's bearing, end supports and measurement have authority (generic). |
 | `marble_thresholds.py` | 125 | MEDIUM | 2 | MARBLE THRESHOLDS (R8.15) - a door threshold whose whole strip is a separate MARBLE_THRESHOLD trade element. |
-| `masonry_centreline.py` | 461 | MEDIUM | 1 | MASONRY CENTRELINE RUN (T-027, MASONRY_CENTRELINE_V1) - the masonry run of one floor per wall thickness, measured |
+| `masonry_centreline.py` | 461 | MEDIUM | 3 | MASONRY CENTRELINE RUN (T-027, MASONRY_CENTRELINE_V1) - the masonry run of one floor per wall thickness, measured |
+| `masonry_centreline_v2.py` | 793 | MEDIUM | 1 | MASONRY CENTRELINE RUN V2 (T-125, MASONRY_CENTRELINE_V2) - the masonry run of one floor per wall thickness on the |
 | `material_result.py` | 168 | MEDIUM | 7 | MATERIAL RESULT (M9 S1) - what a layout consumes, kept apart from the net BOQ quantity (generic; stdlib). |
 | `material_spec.py` | 146 | HIGH | 10 | MATERIAL SPECIFICATION (M9 S1) - what a material IS, kept apart from how much of it a room needs (generic; stdlib only). |
 | `member_detection.py` | 1143 | CRITICAL | 28 | MEMBER DETECTION (M2) - footings, columns, beams and ground beams of a NEW drawing, with no project register |
@@ -689,7 +690,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `shx_arabic.py` | 359 | HIGH | 1 | SHX ARABIC TEXT INTAKE - Arabic notes and labels drawn with legacy SHX fonts (TEXT, MTEXT, ATTRIB). |
 | `unit_evidence.py` | 139 | HIGH | 2 | Deterministic unit / scale EVIDENCE from a D1 (LibreDWG JSON) decode — R8.3 §16. |
 
-## `tools/` (100 modules)
+## `tools/` (101 modules)
 
 | Module | Lines | Risk | Imp | Purpose |
 |---|---|---|---|---|
@@ -711,7 +712,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `arch_intake.py` | 328 | MEDIUM | 9 | ARCH INTAKE (M9 S2 / S3) - the architectural route's extra readings of a DXF, next to tools/urban_intake.py |
 | `arch_overlay.py` | 126 | MEDIUM | 1 | ARCH OVERLAY (M9 S2, S3, S4) - one SVG per plan region: the wall layers, every measured space coloured by class, the |
 | `arch_run_audit.py` | 434 | MEDIUM | 0 | ARCHITECTURAL RUN AUDIT (Phase 2B-6) - read-only checks of a finished `urban_boq_m9.py arch` run that turn the |
-| `arch_synth.py` | 631 | HIGH | 37 | SYNTHETIC ARCHITECTURAL PLANS (M9 S2) - DXF plans whose every quantity is known by construction, for the regression |
+| `arch_synth.py` | 631 | HIGH | 38 | SYNTHETIC ARCHITECTURAL PLANS (M9 S2) - DXF plans whose every quantity is known by construction, for the regression |
 | `arch_v27_explain.py` | 147 | MEDIUM | 1 | ARCH_TAKEOFF_V2.6 -> V2.7 BOQ difference explainer (Phase 2B-7): every BOQ total that differs between the two runs |
 | `audit_cad_source.py` | 155 | MEDIUM | 2 | Representation audit of an authored CAD source. No measurement. |
 | `audit_dwf_source.py` | 175 | MEDIUM | 0 | Structural audit of a DWF package. Representation only, no geometry read. |
@@ -769,6 +770,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `pdf_evidence.py` | 446 | MEDIUM | 1 | PDF EVIDENCE (M3) - typical-detail evidence from a drawing PDF: native text first, then the vector check, then |
 | `phase0_audit.py` | 94 | MEDIUM | 0 | Phase 0 CLI: audit a BOQ/takeoff Excel, and optionally test-write the result. |
 | `read_document_text.py` | 77 | MEDIUM | 0 | Read AR-00's vector-outline text once, and cache every answer. |
+| `release_baseline.py` | 446 | HIGH | 1 | RELEASE BASELINE RUNNER (T-165): one pinned definition of a baseline run of the released architectural method + route |
 | `run_cad_pipeline.py` | 574 | MEDIUM | 2 | One CAD run: decode, normalize, profile, localise, measure, freeze. |
 | `run_e1.py` | 877 | MEDIUM | 0 | E1 — align the frozen A18 reading to exact CAD geometry, then freeze. |
 | `run_e1_1.py` | 1359 | MEDIUM | 0 | E1.1 — CAD entity role and region ownership correction, then freeze. |
@@ -785,9 +787,9 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `struct_n10.py` | 73 | MEDIUM | 0 | STRUCTURAL N10 (Phase N10) - formwork faces, excavation footprints and the reinforcement audit for a route G run. |
 | `synthetic_villa.py` | 603 | CRITICAL | 11 | SYNTHETIC VILLA (M2) - structural DXF drawings generated from a design spec, with ground truth from the SPEC. |
 | `synthetic_villa_m6.py` | 698 | CRITICAL | 5 | SYNTHETIC VILLA M6 - completeness cases drawn onto the M2 synthetic villa, with the truth of what was drawn. |
-| `synthetic_villa_m8.py` | 211 | CRITICAL | 5 | SYNTHETIC VILLA M8 - the M6 completeness villa with the DESIGN of every scope element it draws, so that the |
+| `synthetic_villa_m8.py` | 211 | CRITICAL | 6 | SYNTHETIC VILLA M8 - the M6 completeness villa with the DESIGN of every scope element it draws, so that the |
 | `urban_boq_m2.py` | 603 | CRITICAL | 18 | URBAN BOQ M2 - the one-command BOQ with ROUTE G, the generic engine, on top of the frozen M1 pipeline. |
-| `urban_boq_m9.py` | 3343 | HIGH | 40 | URBAN BOQ M9 (S1) - canonical BOQ lines, room material plans and the room-by-room workbook, on top of route G. |
+| `urban_boq_m9.py` | 3343 | HIGH | 41 | URBAN BOQ M9 (S1) - canonical BOQ lines, room material plans and the room-by-room workbook, on top of route G. |
 | `urban_intake.py` | 225 | CRITICAL | 27 | URBAN INTAKE (M2) - one drawing file -> a plain, source-pointed geometry record for the generic engine. |
 | `urban_project_run.py` | 321 | CRITICAL | 1 | URBAN PROJECT RUN (M7) - one manifest per project; the blind protocol enforced by the tool, not remembered. |
 | `urban_structural_boq.py` | 602 | CRITICAL | 3 | URBAN STRUCTURAL BOQ (M1) - one command from a drawing set to a planning BOQ, an exception report, Excel and PDF. |
@@ -1021,6 +1023,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t116_stair_floor_residue/` | 1 |
 | `tests/t120_membrane_release_v213/` | 1 |
 | `tests/t124_membrane_offcut_once/` | 1 |
+| `tests/t125_masonry_centreline_v2/` | 1 |
 | `tests/t126_route_g_scope/` | 1 |
 | `tests/t130_family_master/` | 1 |
 | `tests/t131_arch_v30/` | 1 |
@@ -1033,6 +1036,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t142_arch_v302/` | 1 |
 | `tests/t151_arch_v303/` | 1 |
 | `tests/t156_gate_b/` | 1 |
+| `tests/t165_release_baseline/` | 1 |
 | `tests/water_tank_s8_4/` | 3 |
 | `tests/zz_freeze_integrity/` | 2 |
 
@@ -1182,6 +1186,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t122/` | 4 |
 | `research/agents_t123/` | 3 |
 | `research/agents_t124/` | 3 |
+| `research/agents_t125/` | 7 |
 | `research/agents_t126/` | 2 |
 | `research/agents_t127/` | 4 |
 | `research/agents_t129/` | 4 |
@@ -1196,14 +1201,22 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t139/` | 6 |
 | `research/agents_t141/` | 4 |
 | `research/agents_t142/` | 2 |
+| `research/agents_t143/` | 10 |
 | `research/agents_t144/` | 6 |
 | `research/agents_t145/` | 4 |
+| `research/agents_t147/` | 10 |
 | `research/agents_t148/` | 5 |
 | `research/agents_t149/` | 6 |
 | `research/agents_t151/` | 3 |
 | `research/agents_t152/` | 5 |
 | `research/agents_t153/` | 6 |
+| `research/agents_t154/` | 4 |
 | `research/agents_t155/` | 2 |
+| `research/agents_t159/` | 7 |
+| `research/agents_t160/` | 7 |
+| `research/agents_t161/` | 2 |
+| `research/agents_t165/` | 6 |
+| `research/agents_t166/` | 4 |
 | `research/alsenan_arch_truth_05/` | 28 |
 | `research/alsenan_column_rebar_s3/` | 17 |
 | `research/alsenan_column_rebar_s3_1/` | 15 |

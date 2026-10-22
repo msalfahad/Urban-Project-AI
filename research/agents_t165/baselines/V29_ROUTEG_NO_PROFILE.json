@@ -1,0 +1,34 @@
+{
+ "schema": "URBAN_BASELINE_SPEC_V1",
+ "method": "ARCH_TAKEOFF_V2.9",
+ "python": "3.11",
+ "inputs": {
+  "plan": {
+   "sha256": "ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4",
+   "size": 17227946
+  },
+  "structural": {
+   "sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "size": 3153037
+  }
+ },
+ "conventions": {
+  "path": "engine/profiles/URBAN_M8_GENERIC_CONVENTIONS_V6.json",
+  "sha256": "c6e4dab8108ccd21807fb5d83ea811285682f57225c87b934f8e6c73ca173dca"
+ },
+ "as_of": "2026-10-22",
+ "options": {
+  "no_svg": true,
+  "no_m9_xlsx": true,
+  "no_completeness": false
+ },
+ "baseline_id": "V29_ROUTEG_NO_PROFILE",
+ "description": "Development villa (Drive 'Alsenan chalet project': architectural DXF from P7757_DXF_COMPRESSED.zip, structural 'ST7757 dxf.dxf'). ARCH_TAKEOFF_V2.9 + route G, conventions V6, NO route G profile, no facts file, no project id: the run BOQ_FAMILY_MASTER 1.1.0 run_evidence.released_run records (1,455 lines, BOQ_LINES.csv b96185d4), used by T-130, census V2 (T-140) and the SCOREBOARD concrete table rows / PROGRESS 'concrete 92.77 vs 111.81 m3'. T-165 pins it; the Lead rules which spec is THE released baseline.",
+ "profile": null,
+ "facts": null,
+ "project": null,
+ "expected": {
+  "line_count": 1455,
+  "boq_lines_csv_sha256": "b96185d468524743e600f1992d4e4b2028193ff4a379961bc5686c9662f8c115"
+ }
+}

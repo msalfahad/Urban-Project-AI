@@ -1,0 +1,13 @@
+dome,status,annulus_full_m2,ring_in_bay_m2,ring_outside_bay_m2,opening_in_bay_m2,slab_corners_m2,bay_m2,readd_m2,method_diff_m2,ring_depth_m,ring_m3,slab_share_m3,downstand_m3,candidate_m3,full_annulus_m3,double_count_avoided_m3,part,member,register,d_m,far_d_m,ring_in_member_m2,ring_beyond_member_m2,beyond_is,opening_in_member_m2,column_rel_m,ring_in_column_m2,ring_in_column_inside_bay_m2,opening_in_column_m2
+DOME-1F-W,CALCULATED,2.9042,1.5105,1.3937,14.9818,1.6387,18.131,2.9042,2.9e-07,0.5,0.7552,0.2417,0.5136,,1.4521,0.6969,DOME,,,,,,,,,,,,
+DOME-1F-W,,,,,,,,,,,,,,,,,SIDE W,CB10 inner strip (drawn 0.30),BM-1F-031 (CONFLICT),2.111092,2.411092,0.384,0.0,,0.0881,,,,
+DOME-1F-W,,,,,,,,,,,,,,,,,SIDE E,CB13 (0.30),BM-1F-022,1.988908,2.288908,0.3685,0.1241,"slab panel east of CB13 (T-139 1F-084, printed tag T 16)",0.2892,,,,
+DOME-1F-W,,,,,,,,,,,,,,,,,SIDE S,B6 south (0.25),BM-1F-021,2.211092,2.461092,0.2586,0.0,,0.0,,,,
+DOME-1F-W,,,,,,,,,,,,,,,,,SIDE N,B6 north (0.25),BM-1F-018,2.211092,2.461092,0.2586,0.0,,0.0,,,,
+DOME-1F-W,,,,,,,,,,,,,,,,,COLUMN,,,,,,,,,"[-2.411011, -1.002044, -2.211011, -0.402044]",0.0534,0.0,0.0
+DOME-1F-W,,,,,,,,,,,,,,,,,COLUMN,,,,,,,,,"[1.988989, -0.602044, 2.238989, 0.097956]",0.0362,0.0,0.1388
+DOME-1F-E,HELD,2.9042,1.7994,1.1048,15.3278,2.2074,19.3346,2.9042,3.5e-07,,,,,0.8997,,,DOME,,,,,,,,,,,,
+DOME-1F-E,,,,,,,,,,,,,,,,,SIDE W,B25 (0.55),BM-1F-027,2.211092,2.761092,0.2586,0.0,,0.0,,,,
+DOME-1F-E,,,,,,,,,,,,,,,,,SIDE E,CB12 span 1 (0.25),BM-1F-017,2.161092,2.411092,0.329,0.0,,0.0312,,,,
+DOME-1F-E,,,,,,,,,,,,,,,,,SIDE S,B6 south (0.25),BM-1F-020,2.211092,2.461092,0.2586,0.0,,0.0,,,,
+DOME-1F-E,,,,,,,,,,,,,,,,,SIDE N,B6 north (0.25),BM-1F-019,2.211092,2.461092,0.2586,0.0,,0.0,,,,

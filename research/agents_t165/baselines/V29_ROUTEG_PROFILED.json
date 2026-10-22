@@ -1,0 +1,40 @@
+{
+ "schema": "URBAN_BASELINE_SPEC_V1",
+ "method": "ARCH_TAKEOFF_V2.9",
+ "python": "3.11",
+ "inputs": {
+  "plan": {
+   "sha256": "ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4",
+   "size": 17227946
+  },
+  "structural": {
+   "sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "size": 3153037
+  }
+ },
+ "conventions": {
+  "path": "engine/profiles/URBAN_M8_GENERIC_CONVENTIONS_V6.json",
+  "sha256": "c6e4dab8108ccd21807fb5d83ea811285682f57225c87b934f8e6c73ca173dca"
+ },
+ "as_of": "2026-10-22",
+ "options": {
+  "no_svg": true,
+  "no_m9_xlsx": true,
+  "no_completeness": false
+ },
+ "baseline_id": "V29_ROUTEG_PROFILED",
+ "description": "Development villa, same drawings. ARCH_TAKEOFF_V2.9 + route G, conventions V6, WITH the typed route G profile research/urban_engine_m4_correctness/profile_st7757_m4.json (17 values typed in M2-M4, audited by T-044), the T-131 facts file and project id development-villa-t131: the V2.9 base of the V3.0.x runners (T-131 .. T-151) and of the checker's scoreboard notes since 2026-10-21 17:45 (1,621 lines). T-165 pins it; the Lead rules which spec is THE released baseline.",
+ "profile": {
+  "path": "research/urban_engine_m4_correctness/profile_st7757_m4.json",
+  "sha256": "f482b5be2ca1594fd1a0ca4b89fb28684b51fcde5f0dc4db7b8fa5d17f4c0fdd"
+ },
+ "facts": {
+  "path": "research/agents_t165/baselines/v29_profiled_facts.json",
+  "sha256": "f70170d68ad76f81a8a03c692a695dbfc872743fa065ec38209c63d09304c837"
+ },
+ "project": "development-villa-t131",
+ "expected": {
+  "line_count": 1621,
+  "boq_lines_csv_sha256": "7d9ccb8a59c4c6f76636b130f9a902aa8ea65a82a19e3b9302f5642817e939f3"
+ }
+}
