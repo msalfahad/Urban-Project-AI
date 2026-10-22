@@ -39,6 +39,7 @@ ACCURATE_MODULES = (
     "engine/source/authority_decisions.py",     # AD1 owner authority decisions, provenance classes, facet errata
     "engine/source/cover_authority.py",         # D1.2 cover basis, straight-run / count directions, cover errata
     "engine/source/footing_rebar_population_v1.py",  # T-136 footing steel by bar population from the schedule (opt-in, not wired)
+    "engine/source/ground_system_spans_v2.py",  # T-141 ground-beam span splitter V2 + strap axis lengths (geometry only, no kg; opt-in, not wired)
     "engine/source/slab_rebar_readiness.py",    # PRE-S7 slab readiness (no kg)
     "engine/source/slab_qto_authority.py",      # AD2 / PRE-S7.1 slab QTO authority lanes (no kg)
     "engine/source/slab_rebar_qto.py",          # S7 restricted project-basis slab rebar QTO (rate density, D^2/162)
@@ -209,4 +210,14 @@ OTHER_REBAR_AWARE = (
     "engine/source/concrete_ledger_v3.py",
     # T-105: stair concrete V1 names REINFORCEMENT only as an UNSUPPORTED_LATER_ITEM line with no quantity (Q-20)
     "engine/source/stair_steps_concrete.py",
+    # T-133: the V3.0.1 extension names REINFORCEMENT only to leave the steel lines of a column piece unchanged and
+    # LIST them as downstream STALE (outside the candidate); it writes no reinforcement quantity and applies no ratio
+    "engine/source/arch_v301.py",
+    # T-134: the element register v0 links STR.REBAR lines to the concrete element whose geometry they read (ids and
+    # states only); it writes no reinforcement quantity and applies no ratio
+    "engine/source/element_register_v0.py",
+    # T-142: the V3.0.2 extension wires FOOTING_REBAR_POPULATION_V1 (T-136): it replaces route G's footing steel lines
+    # by that piece's lines (kg = printed count x (side - 2 x printed cover) x d^2/162, per-metre counts HELD as a
+    # range); it applies no ratio and writes no kg of its own
+    "engine/source/arch_v302.py",
 )

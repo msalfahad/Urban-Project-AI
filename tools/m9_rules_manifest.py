@@ -27,7 +27,8 @@ COPIES = {"owner_library/URBAN_PROJECTS_RULE_LIBRARY_1.4.0.json": "data/trade_ru
 EXPORTS = {"methods/URBAN_METHOD_REGISTER_V1.json": ("engine/source/urban_methods.py", UM1.register),
            "methods/URBAN_METHOD_REGISTER_V3.json": ("engine/source/urban_methods_v3.py", UM3.register)}
 AUTHORED = ("owner_decisions/URBAN_RULES_1.5.0.json", "materials/URBAN_MATERIAL_SPECS_1.0.0.json",
-            "coverage/BOQ_FAMILY_MASTER_1.0.0.json")
+            "coverage/BOQ_FAMILY_MASTER_1.0.0.json",
+            "coverage/BOQ_FAMILY_MASTER_1.1.0.json")    # T-130: re-derived from code and runs; read by no method yet
 REFERENCED = tuple(f"engine/profiles/URBAN_M{m}_GENERIC_CONVENTIONS_V{v}.json"
                    for m, v in ((2, 1), (3, 2), (4, 3), (5, 4), (7, 5), (8, 6)))
 

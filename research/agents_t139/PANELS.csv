@@ -1,0 +1,403 @@
+id,floor,cls,area,t,m3,basis,evidence,cx,cy,w,l
+GF-000,GF,BEAM_OR_COLUMN,0.05,,,,beam band / column / junction piece (width 0.200 m),57.16,49.681,0.2,0.5
+GF-001,GF,BEAM_OR_COLUMN,0.05,,,,beam band / column / junction piece (width 0.186 m),57.227,49.515,0.186,0.539
+GF-002,GF,BEAM_OR_COLUMN,0.5,,,,beam band / column / junction piece (width 0.200 m),58.543,49.748,0.2,2.5
+GF-003,GF,BEAM_OR_COLUMN,0.05,,,,beam band / column / junction piece (width 0.200 m),59.86,49.681,0.2,0.5
+GF-004,GF,BEAM_OR_COLUMN,0.05,,,,beam band / column / junction piece (width 0.200 m),59.927,49.515,0.2,0.5
+GF-005,GF,BEAM_OR_COLUMN,0.8675,,,,beam band / column / junction piece (width 0.250 m),61.728,49.723,0.25,3.47
+GF-006,GF,BEAM_OR_COLUMN,0.075,,,,beam band / column / junction piece (width 0.231 m),63.663,49.681,0.231,0.65
+GF-007,GF,BEAM_OR_COLUMN,0.075,,,,beam band / column / junction piece (width 0.231 m),63.863,49.765,0.231,0.65
+GF-008,GF,BEAM_OR_COLUMN,0.8375,,,,beam band / column / junction piece (width 0.250 m),65.738,49.723,0.25,3.35
+GF-009,GF,BEAM_OR_COLUMN,0.0625,,,,beam band / column / junction piece (width 0.224 m),67.58,49.681,0.224,0.559
+GF-010,GF,BEAM_OR_COLUMN,0.0625,,,,beam band / column / junction piece (width 0.224 m),67.747,49.765,0.224,0.559
+GF-011,GF,BEAM,2.7,,,,"B24 band + its east cantilever end (hatched, BM-GF-059 HELD)",70.588,49.59,0.5,5.75
+GF-012,GF,BEAM_OR_COLUMN,0.0625,,,,beam band / column / junction piece (width 0.250 m),71.63,49.681,0.25,0.5
+GF-013,GF,BEAM_OR_COLUMN,0.0625,,,,beam band / column / junction piece (width 0.250 m),71.797,49.765,0.25,0.5
+GF-014,GF,NOT_SLAB,0.0866,,,,"break-line sliver west of B2 (drafting break mark), no slab",57.057,49.267,0.1,1.25
+GF-015,GF,SLAB,2.5725,0.16,0.4116,ST p.8 note 18: roof slabs 16 cm unless otherwise stated,"B1, 5%%c10/m, 5%%c10/m; hatched ANSI31 scale 2000 = legend 'Sunken slab' (depth of the drop not printed)",62.728,48.723,1.47,1.75
+GF-016,GF,SLAB,3.325,0.16,0.532,ST p.8 note 18: roof slabs 16 cm unless otherwise stated,"B4, B1, 5%%c10/m, 5%%c10/m; hatched ANSI31 scale 2000 = legend 'Sunken slab' (depth of the drop not printed)",64.613,48.723,1.75,1.9
+GF-017,GF,BEAM_OR_COLUMN,0.35,,,,beam band / column / junction piece (width 0.200 m),65.663,48.723,0.2,1.75
+GF-018,GF,SLAB,2.8875,0.16,0.462,ST p.8 note 18: roof slabs 16 cm unless otherwise stated,"B16, 5%%c10/m, 5%%c10/m",66.588,48.723,1.65,1.75
+GF-019,GF,BEAM_OR_COLUMN,0.34,,,,beam band / column / junction piece (width 0.200 m),72.263,48.628,0.2,1.7
+GF-020,GF,SLAB,1.0534,0.16,0.1685,ST p.8 note 18: roof slabs 16 cm unless otherwise stated,"B7, 5%%c10/m, 5%%C10; north of the pool-court bay, B24 / B7",72.263,49.038,0.62,1.7
+GF-021,GF,DETAIL,5.44,,,,section A-A drawing,43.876,48.115,1.6,3.8
+GF-022,GF,DETAIL,3.9145,,,,section C-C drawing,47.285,48.331,1.391,3.0
+GF-023,GF,DETAIL,4.035,,,,section D-D drawing,51.232,48.373,1.391,3.0
+GF-024,GF,BEAM_OR_COLUMN,0.54,,,,beam band / column / junction piece (width 0.200 m),57.193,47.998,0.2,2.7
+GF-025,GF,STAIR,10.725,,,,"main stair zone GF->1F ('T 16', 8d16/m): flights, turn, half landing are the stair ledger's",58.546,47.501,2.5,4.3
+GF-026,GF,BEAM_OR_COLUMN,0.54,,,,beam band / column / junction piece (width 0.200 m),59.893,47.998,0.2,2.7
+GF-027,GF,SLAB,5.31,0.16,0.8496,ST p.8 note 18: roof slabs 16 cm unless otherwise stated,"B3, 5%%c10/m, 5%%c10/m",60.893,48.123,1.8,2.95
+GF-028,GF,BEAM_OR_COLUMN,0.59,,,,beam band / column / junction piece (width 0.200 m),61.893,48.123,0.2,2.95
+GF-029,GF,BEAM_OR_COLUMN,0.294,,,,beam band / column / junction piece (width 0.200 m),62.728,47.748,0.2,1.47
+GF-030,GF,BEAM_OR_COLUMN,0.75,,,,beam band / column / junction piece (width 0.200 m),65.538,47.748,0.2,3.75
+GF-031,GF,BEAM_OR_COLUMN,1.08,,,,beam band / column / junction piece (width 0.300 m),67.567,47.794,0.3,3.85
+GF-032,GF,SLAB,12.3205,0.16,1.9713,ST p.8 note 18: roof slabs 16 cm unless otherwise stated,"B8, 6%%c10/m, 5%%c10/m",69.463,47.588,3.5,3.52
+GF-033,GF,BEAM_OR_COLUMN,0.704,,,,beam band / column / junction piece (width 0.200 m),71.313,47.588,0.2,3.52
+GF-034,GF,SLAB,0.0875,0.16,0.014,ST p.8 note 18: roof slabs 16 cm unless otherwise stated,bay corner outside the B7 ring,71.532,48.365,0.307,0.646
+GF-035,GF,BEAM,0.1463,,,,B7 ring band piece,72.868,48.284,0.332,1.095
+GF-036,GF,SLAB,0.0488,0.16,0.0078,ST p.8 note 18: roof slabs 16 cm unless otherwise stated,bay corner outside the B7 ring,73.01,48.423,0.231,0.463
+GF-037,GF,BEAM_OR_COLUMN,0.36,,,,beam band / column / junction piece (width 0.200 m),60.893,46.548,0.2,1.8
+GF-038,GF,BEAM_OR_COLUMN,0.915,,,,beam band / column / junction piece (width 0.200 m),63.563,47.31,0.2,4.596
+GF-039,GF,SLAB,8.3043,0.16,1.3287,ST p.8 note 18: roof slabs 16 cm unless otherwise stated,"T.C, B13, 5%%c10/m, 6%%C10/m; T.C turn column at its corner",65.431,46.53,2.604,3.75
+GF-040,GF,OPENING+RING,4.0814,,,,"pool-court void 3.690 m2 inside the B7 ring + 0.391 m2 of B7 ring band (beam register BM-GF-049..052, contested piece BM-GF-060 HELD)",72.235,47.163,1.7,2.7
+GF-041,GF,BEAM_OR_COLUMN,0.06,,,,beam band / column / junction piece (width 0.200 m),57.171,46.476,0.2,0.5
+GF-042,GF,BEAM_OR_COLUMN,0.16,,,,beam band / column / junction piece (width 0.200 m),57.193,45.748,0.2,0.8
+GF-043,GF,BEAM_OR_COLUMN,0.04,,,,beam band / column / junction piece (width 0.200 m),57.227,46.281,0.2,0.4
+GF-044,GF,BEAM_OR_COLUMN,0.0225,,,,beam band / column / junction piece (width 0.050 m),57.319,46.374,0.05,0.5
+GF-045,GF,BEAM_OR_COLUMN,0.05,,,,beam band / column / junction piece (width 0.200 m),59.86,46.315,0.2,0.5
+GF-046,GF,BEAM_OR_COLUMN,0.24,,,,beam band / column / junction piece (width 0.200 m),59.893,45.548,0.2,1.2
+GF-047,GF,BEAM_OR_COLUMN,0.05,,,,beam band / column / junction piece (width 0.186 m),59.927,46.481,0.186,0.539
+GF-048,GF,OPENING,3.24,,,,'Open to below' X box (B1 / B14 / B7),60.893,45.548,1.8,1.8
+GF-049,GF,BEAM_OR_COLUMN,0.05,,,,beam band / column / junction piece (width 0.200 m),61.86,46.315,0.2,0.5
+GF-050,GF,BEAM_OR_COLUMN,0.14,,,,beam band / column / junction piece (width 0.200 m),61.893,45.798,0.2,0.7
+GF-051,GF,BEAM_OR_COLUMN,0.05,,,,beam band / column / junction piece (width 0.200 m),61.927,46.481,0.2,0.5
+GF-052,GF,SLAB,4.0794,0.16,0.6527,ST p.8 note 18: roof slabs 16 cm unless otherwise stated,"B11, 5%%c10/m, 5%%c10/m",62.721,46.257,1.47,2.945
+GF-053,GF,BEAM_OR_COLUMN,0.08,,,,beam band / column / junction piece (width 0.250 m),67.197,45.6,0.25,0.4
+GF-054,GF,BEAM_OR_COLUMN,0.02,,,,beam band / column / junction piece (width 0.100 m),67.28,45.715,0.1,0.4
+GF-055,GF,BEAM_OR_COLUMN,0.0609,,,,beam band / column / junction piece (width 0.200 m),67.496,45.95,0.2,0.375
+GF-056,GF,BEAM_OR_COLUMN,0.02,,,,beam band / column / junction piece (width 0.100 m),67.747,45.531,0.1,0.4
+GF-057,GF,BEAM_OR_COLUMN,0.08,,,,beam band / column / junction piece (width 0.250 m),67.83,45.646,0.25,0.4
+GF-058,GF,BEAM_OR_COLUMN,2.3538,,,,beam band / column / junction piece (width 0.450 m),70.496,45.602,0.45,5.4
+GF-059,GF,SLAB,0.0665,0.16,0.0106,ST p.8 note 18: roof slabs 16 cm unless otherwise stated,bay corner outside the B7 ring,71.515,45.974,0.32,0.463
+GF-060,GF,BEAM,0.1288,,,,B7 ring band piece,72.896,46.044,0.35,1.038
+GF-061,GF,SLAB,0.0315,0.16,0.005,ST p.8 note 18: roof slabs 16 cm unless otherwise stated,bay corner outside the B7 ring,73.033,45.915,0.184,0.369
+GF-062,GF,BEAM_OR_COLUMN,0.1278,,,,beam band / column / junction piece (width 0.200 m),52.593,44.636,0.2,0.639
+GF-063,GF,EDGE_HELD,1.0721,,,,"0.20 strip north of B20 / rounded corner (beam register BM-GF-058 HELD, designer D-05)",54.833,45.491,2.044,4.799
+GF-064,GF,BEAM_OR_COLUMN,0.1,,,,beam band / column / junction piece (width 0.250 m),55.96,45.181,0.25,0.8
+GF-065,GF,BEAM_OR_COLUMN,0.1,,,,beam band / column / junction piece (width 0.250 m),56.227,45.265,0.25,0.8
+GF-066,GF,BEAM_OR_COLUMN,2.64,,,,beam band / column / junction piece (width 0.400 m),56.255,45.142,0.4,7.1
+GF-067,GF,BEAM_OR_COLUMN,0.05,,,,beam band / column / junction piece (width 0.200 m),59.86,44.781,0.2,0.5
+GF-068,GF,BEAM_OR_COLUMN,0.05,,,,beam band / column / junction piece (width 0.200 m),59.927,44.615,0.2,0.5
+GF-069,GF,BEAM_OR_COLUMN,0.36,,,,beam band / column / junction piece (width 0.200 m),60.893,44.548,0.2,1.8
+GF-070,GF,BEAM_OR_COLUMN,0.12,,,,beam band / column / junction piece (width 0.200 m),61.871,45.104,0.2,1.0
+GF-071,GF,BEAM_OR_COLUMN,0.08,,,,beam band / column / junction piece (width 0.194 m),61.927,44.715,0.194,0.825
+GF-072,GF,BEAM_OR_COLUMN,0.045,,,,beam band / column / junction piece (width 0.050 m),62.019,44.9,0.05,1.0
+GF-073,GF,BEAM_OR_COLUMN,1.2697,,,,beam band / column / junction piece (width 0.250 m),64.529,45.098,0.25,5.131
+GF-074,GF,BEAM_OR_COLUMN,0.0609,,,,beam band / column / junction piece (width 0.200 m),67.531,45.296,0.2,0.375
+GF-075,GF,BEAM_OR_COLUMN,0.2175,,,,beam band / column / junction piece (width 0.250 m),71.831,44.933,0.25,1.13
+GF-076,GF,SLAB,1.2993,0.16,0.2079,ST p.8 note 18: roof slabs 16 cm unless otherwise stated,"B1, 5%%c10/m, 5%%C10",72.538,44.813,1.13,1.15
+GF-077,GF,SLAB,5.375,0.16,0.86,ST p.8 note 18: roof slabs 16 cm unless otherwise stated,"B3, 5%%c10/m, 5%%c10/m; 1F arrival landing of the main stair (2.50 x 1.95) = B20 band 0.40 + 1.55 m of this panel (Q-62: slab, not stair)",58.85,44.026,1.75,3.3
+GF-078,GF,SLAB,11.7,0.16,1.872,printed panel tag 'T 16',"6%%C10/m, 7%%C12/m",65.706,43.662,3.3,4.171
+GF-079,GF,SLAB,2.8165,0.16,0.4506,ST p.8 note 18: roof slabs 16 cm unless otherwise stated,"B4, 5%%c10/m, 5%%c10/m",68.599,44.424,1.58,1.98
+GF-080,GF,BEAM_OR_COLUMN,0.396,,,,beam band / column / junction piece (width 0.200 m),69.413,44.388,0.2,1.98
+GF-081,GF,SLAB,4.1176,0.16,0.6588,ST p.8 note 18: roof slabs 16 cm unless otherwise stated,"T.C, B28, B4, 5%%c10/m, 5%%c10/m; hatched ANSI31 scale 2000 = legend 'Sunken slab' (depth of the drop not printed)",70.559,44.416,1.98,2.2
+GF-082,GF,BEAM_OR_COLUMN,0.0903,,,,beam band / column / junction piece (width 0.250 m),71.481,44.093,0.25,0.5
+GF-083,GF,BEAM_OR_COLUMN,0.0347,,,,beam band / column / junction piece (width 0.134 m),71.597,44.202,0.134,0.519
+GF-084,GF,BEAM_OR_COLUMN,0.0533,,,,beam band / column / junction piece (width 0.200 m),71.847,44.422,0.2,0.325
+GF-085,GF,BEAM_OR_COLUMN,0.0533,,,,beam band / column / junction piece (width 0.200 m),71.88,43.824,0.2,0.325
+GF-086,GF,BEAM_OR_COLUMN,0.0444,,,,beam band / column / junction piece (width 0.200 m),72.068,44.136,0.2,0.25
+GF-087,GF,BEAM_OR_COLUMN,0.19,,,,beam band / column / junction piece (width 0.200 m),72.638,44.148,0.2,0.95
+GF-088,GF,BEAM_OR_COLUMN,0.05,,,,beam band / column / junction piece (width 0.186 m),73.33,44.081,0.186,0.539
+GF-089,GF,BEAM_OR_COLUMN,0.05,,,,beam band / column / junction piece (width 0.186 m),73.397,43.915,0.186,0.539
+GF-090,GF,BEAM_OR_COLUMN,0.04,,,,beam band / column / junction piece (width 0.200 m),42.16,42.915,0.2,0.4
+GF-091,GF,BEAM_OR_COLUMN,0.04,,,,beam band / column / junction piece (width 0.200 m),42.227,42.781,0.2,0.4
+GF-092,GF,BEAM_OR_COLUMN,0.5,,,,beam band / column / junction piece (width 0.200 m),43.543,42.948,0.2,2.5
+GF-093,GF,BEAM_OR_COLUMN,0.04,,,,beam band / column / junction piece (width 0.179 m),44.927,42.915,0.179,0.447
+GF-094,GF,BEAM_OR_COLUMN,0.04,,,,beam band / column / junction piece (width 0.200 m),45.06,42.981,0.2,0.4
+GF-095,GF,BEAM_OR_COLUMN,0.3769,,,,beam band / column / junction piece (width 0.522 m),45.959,42.514,0.522,1.838
+GF-096,GF,EDGE_HELD,0.49,,,,"outer west strip 0.20 (beam register BM-GF-061 HELD, D-26)",52.593,43.091,0.2,2.45
+GF-097,GF,BEAM,0.74,,,,"CB5 span 2 (printed spans 2.5 / 4.5 m; second CB5 label on this span): beam footprint, missing in the beam register",52.793,43.098,0.2,3.7
+GF-098,GF,SLAB,15.54,0.16,2.4864,ST p.8 note 18: roof slabs 16 cm unless otherwise stated,"D.C, CB4, B1, B1, 6%%C10/m, 7%%C10/m; D.C dead column inside",54.993,43.098,3.7,4.2
+GF-099,GF,BEAM_OR_COLUMN,0.64,,,,beam band / column / junction piece (width 0.200 m),57.193,43.348,0.2,3.2
+GF-100,GF,BEAM_OR_COLUMN,0.66,,,,beam band / column / junction piece (width 0.200 m),58.943,43.098,0.2,3.3
+GF-101,GF,SLAB,5.5444,0.16,0.8871,ST p.8 note 18: roof slabs 16 cm unless otherwise stated,"B1, 5%%c10/m, 5%%c10/m",62.306,43.37,2.37,2.548
+GF-102,GF,BEAM_OR_COLUMN,0.5139,,,,beam band / column / junction piece (width 0.200 m),63.564,43.483,0.2,2.59
+GF-103,GF,BEAM_OR_COLUMN,0.6859,,,,beam band / column / junction piece (width 0.200 m),69.779,43.298,0.2,3.448
+GF-104,GF,BEAM_OR_COLUMN,4.37,,,,beam band / column / junction piece (width 0.350 m),73.285,42.937,0.35,13.0
+GF-105,GF,SLAB,6.1402,0.16,0.9824,ST p.8 note 18: roof slabs 16 cm unless otherwise stated,"CB6, 5%%c10/m, 6%%C10/m",44.219,42.025,1.6,4.0
+GF-106,GF,BEAM_OR_COLUMN,0.1236,,,,beam band / column / junction piece (width 0.200 m),52.593,41.557,0.2,0.618
+GF-107,GF,BEAM_OR_COLUMN,0.084,,,,beam band / column / junction piece (width 0.200 m),57.171,41.507,0.2,0.7
+GF-108,GF,BEAM_OR_COLUMN,1.3514,,,,beam band / column / junction piece (width 0.200 m),64.472,42.098,0.2,6.773
+GF-109,GF,BEAM_OR_COLUMN,2.9426,,,,beam band / column / junction piece (width 0.400 m),68.12,41.683,0.4,7.608
+GF-110,GF,BEAM_OR_COLUMN,0.8,,,,beam band / column / junction piece (width 0.200 m),44.293,41.148,0.2,4.0
+GF-111,GF,BEAM_OR_COLUMN,0.03,,,,beam band / column / junction piece (width 0.200 m),46.382,41.126,0.2,0.2
+GF-112,GF,BEAM_OR_COLUMN,0.1,,,,beam band / column / junction piece (width 0.200 m),46.393,41.498,0.2,0.5
+GF-113,GF,BEAM_OR_COLUMN,0.05,,,,beam band / column / junction piece (width 0.200 m),46.66,41.161,0.2,0.3
+GF-114,GF,BEAM_OR_COLUMN,1.17,,,,beam band / column / junction piece (width 0.200 m),49.718,41.148,0.2,5.85
+GF-115,GF,BEAM_OR_COLUMN,0.0317,,,,beam band / column / junction piece (width 0.200 m),52.774,41.157,0.2,0.2
+GF-116,GF,BEAM_OR_COLUMN,0.0637,,,,beam band / column / junction piece (width 0.200 m),52.809,40.821,0.2,0.4
+GF-117,GF,BEAM_OR_COLUMN,0.24,,,,beam band / column / junction piece (width 0.200 m),53.493,41.148,0.2,1.2
+GF-118,GF,BEAM_OR_COLUMN,0.088,,,,beam band / column / junction piece (width 0.200 m),54.387,41.115,0.2,0.88
+GF-119,GF,BEAM_OR_COLUMN,0.0495,,,,beam band / column / junction piece (width 0.050 m),54.59,41.022,0.05,1.1
+GF-120,GF,BEAM_OR_COLUMN,0.132,,,,beam band / column / junction piece (width 0.200 m),54.815,41.17,0.2,1.1
+GF-121,GF,BEAM_OR_COLUMN,0.3652,,,,beam band / column / junction piece (width 0.200 m),56.18,41.149,0.2,1.9
+GF-122,GF,BEAM_OR_COLUMN,0.056,,,,beam band / column / junction piece (width 0.200 m),57.227,41.235,0.2,0.56
+GF-123,GF,BEAM_OR_COLUMN,0.0315,,,,beam band / column / junction piece (width 0.050 m),57.319,41.364,0.05,0.7
+GF-124,GF,SLAB,16.2536,0.16,2.6006,ST p.8 note 18: roof slabs 16 cm unless otherwise stated,"CB4, B4, 7%%C10/m, 6%%C10/m",58.951,40.528,3.3,4.95
+GF-125,GF,BEAM_OR_COLUMN,3.9,,,,beam band / column / junction piece (width 0.500 m),60.843,40.548,0.5,7.8
+GF-126,GF,SLAB,15.1084,0.16,2.4173,ST p.8 note 18: roof slabs 16 cm unless otherwise stated,"7%%C10/m, 6%%C10/m, 6%%C14/m",69.948,40.763,3.411,5.15
+GF-127,GF,BEAM_OR_COLUMN,1.22,,,,beam band / column / junction piece (width 0.200 m),42.193,39.598,0.2,6.1
+GF-128,GF,SLAB,2.0804,0.16,0.3329,ST p.8 note 18: roof slabs 16 cm unless otherwise stated,"5%%c10/m, 5%%c10/m; hatched ANSI31 scale 2000 = legend 'Sunken slab' (depth of the drop not printed)",56.509,40.256,1.41,2.951
+GF-129,GF,BEAM_OR_COLUMN,0.502,,,,beam band / column / junction piece (width 0.200 m),57.195,39.792,0.2,2.645
+GF-130,GF,VOID+STAIR,23.2371,,,,"VOID (light well, X) with the round stair inside ('T 16' on the flight): stair ledger",64.151,40.164,3.95,6.395
+GF-131,GF,STAIR,0.3325,,,,round-stair flight edge strip,67.538,40.335,0.1,3.325
+GF-132,GF,STAIR,1.8561,,,,round-stair straight flight strip (tread lines cross it),67.832,39.9,0.525,3.9
+GF-133,GF,BEAM,4.6468,,,,B26 65 x 85 band (beam register BM-GF-047),71.74,40.299,0.65,7.453
+GF-134,GF,SLAB,7.8555,0.16,1.2569,ST p.8 note 18: roof slabs 16 cm unless otherwise stated,5%%c10/m,72.588,40.182,1.145,7.5
+GF-135,GF,SLAB,18.0,0.16,2.88,ST p.8 note 18: roof slabs 16 cm unless otherwise stated,"7%%C10/m, 6%%C10/m, B4, 3%%c16/Top",44.293,38.798,4.0,4.5
+GF-136,GF,BEAM_OR_COLUMN,0.89,,,,beam band / column / junction piece (width 0.200 m),46.393,38.773,0.2,4.45
+GF-137,GF,SLAB,13.485,0.16,2.1576,ST p.8 note 18: roof slabs 16 cm unless otherwise stated,"7%%C10/m, 6%%C10/m",47.995,38.795,3.0,4.5
+GF-138,GF,BEAM_OR_COLUMN,0.9,,,,beam band / column / junction piece (width 0.200 m),49.593,38.798,0.2,4.5
+GF-139,GF,SLAB,13.455,0.16,2.1528,ST p.8 note 18: roof slabs 16 cm unless otherwise stated,"CB5, B1, 7%%C10/m, 6%%C10/m",51.188,38.796,3.0,4.5
+GF-140,GF,BEAM_OR_COLUMN,0.46,,,,beam band / column / junction piece (width 0.200 m),52.793,39.498,0.2,2.3
+GF-141,GF,SLAB,7.3009,0.16,1.1681,printed panel tag 'T 16',"B5, 6%%c10/m, 5%%c10/m; hatched ANSI31 scale 2000 = legend 'Sunken slab' (depth of the drop not printed)",54.195,39.319,3.0,3.543
+GF-142,GF,BEAM,4.7926,,,,B27 90 x 85 band (beam register BM-GF-048),56.423,38.825,0.9,6.133
+GF-143,GF,BEAM_OR_COLUMN,0.03,,,,beam band / column / junction piece (width 0.100 m),64.713,38.623,0.1,0.3
+GF-144,GF,BEAM_OR_COLUMN,0.1725,,,,beam band / column / junction piece (width 0.300 m),64.713,38.96,0.3,0.575
+GF-145,GF,STAIR,0.2625,,,,round-stair flight strip,66.176,38.623,0.1,2.625
+GF-146,GF,SLAB,0.4563,0.16,0.073,ST p.8 note 18: roof slabs 16 cm unless otherwise stated,wedge between the round-stair flight edge (tread lines stop) and B21,68.241,38.852,0.37,2.43
+GF-147,GF,BEAM_OR_COLUMN,0.0225,,,,beam band / column / junction piece (width 0.050 m),52.667,38.122,0.05,0.5
+GF-148,GF,BEAM_OR_COLUMN,0.04,,,,beam band / column / junction piece (width 0.179 m),52.76,38.215,0.179,0.447
+GF-149,GF,BEAM_OR_COLUMN,0.06,,,,beam band / column / junction piece (width 0.200 m),52.816,38.02,0.2,0.5
+GF-150,GF,BEAM_OR_COLUMN,0.7234,,,,beam band / column / junction piece (width 0.200 m),54.702,37.947,0.2,3.691
+GF-151,GF,BEAM_OR_COLUMN,0.07,,,,beam band / column / junction piece (width 0.200 m),56.938,37.915,0.2,0.7
+GF-152,GF,BEAM_OR_COLUMN,0.07,,,,beam band / column / junction piece (width 0.192 m),57.172,37.981,0.192,0.728
+GF-153,GF,BEAM_OR_COLUMN,0.5929,,,,beam band / column / junction piece (width 0.200 m),59.111,37.949,0.2,3.038
+GF-154,GF,BEAM_OR_COLUMN,0.604,,,,beam band / column / junction piece (width 0.200 m),62.603,37.948,0.2,3.02
+GF-155,GF,BEAM_OR_COLUMN,0.096,,,,beam band / column / junction piece (width 0.200 m),64.389,37.926,0.2,0.8
+GF-156,GF,BEAM_OR_COLUMN,0.036,,,,beam band / column / junction piece (width 0.050 m),64.552,38.074,0.05,0.8
+GF-157,GF,BEAM_OR_COLUMN,0.064,,,,beam band / column / junction piece (width 0.200 m),64.7,37.981,0.2,0.64
+GF-158,GF,BEAM_OR_COLUMN,0.1425,,,,beam band / column / junction piece (width 0.300 m),64.713,38.335,0.3,0.475
+GF-159,GF,BEAM_HELD,1.3756,,,,"CB3 / 'B3 (With Stair)' band (BM-GF-057 HELD, Q-61 C)",66.178,38.311,0.525,2.625
+GF-160,GF,BEAM_OR_COLUMN,0.53,,,,beam band / column / junction piece (width 0.200 m),66.238,37.948,0.2,2.65
+GF-161,GF,BEAM_OR_COLUMN,0.0512,,,,beam band / column / junction piece (width 0.100 m),67.537,38.316,0.1,0.525
+GF-162,GF,BEAM_OR_COLUMN,0.072,,,,beam band / column / junction piece (width 0.200 m),67.77,37.926,0.2,0.6
+GF-163,GF,BEAM_OR_COLUMN,0.0244,,,,beam band / column / junction piece (width 0.050 m),67.869,38.074,0.05,0.525
+GF-164,GF,BEAM_OR_COLUMN,0.048,,,,beam band / column / junction piece (width 0.200 m),68.003,37.981,0.2,0.48
+GF-165,GF,BEAM_OR_COLUMN,0.6383,,,,beam band / column / junction piece (width 0.200 m),69.759,37.948,0.2,3.194
+GF-166,GF,BEAM_OR_COLUMN,0.05,,,,beam band / column / junction piece (width 0.186 m),71.63,37.915,0.186,0.539
+GF-167,GF,BEAM_OR_COLUMN,0.05,,,,beam band / column / junction piece (width 0.186 m),71.797,37.981,0.186,0.539
+GF-168,GF,BEAM_OR_COLUMN,0.26,,,,beam band / column / junction piece (width 0.200 m),52.793,37.198,0.2,1.3
+GF-169,GF,SLAB,5.0803,0.16,0.8128,ST p.8 note 18: roof slabs 16 cm unless otherwise stated,"5%%c10/m, 5%%c10/m",54.933,37.212,1.3,4.576
+GF-170,GF,BEAM_OR_COLUMN,0.9559,,,,beam band / column / junction piece (width 0.300 m),55.948,36.501,0.3,3.475
+GF-171,GF,BEAM_OR_COLUMN,0.1362,,,,beam band / column / junction piece (width 0.234 m),58.298,36.514,0.234,1.128
+GF-172,GF,SLAB,2.9374,0.16,0.47,ST p.8 note 18: roof slabs 16 cm unless otherwise stated,"5%%c10/m, 5%%c10/m",59.356,37.284,1.2,2.891
+GF-173,GF,SLAB,7.764,0.16,1.2422,ST p.8 note 18: roof slabs 16 cm unless otherwise stated,"CB3, CB3, 5%%c10/m, 5%%c10/m, B1",64.328,37.248,1.2,6.47
+GF-174,GF,BEAM_OR_COLUMN,0.0625,,,,beam band / column / junction piece (width 0.250 m),64.747,36.515,0.25,0.5
+GF-175,GF,BEAM_OR_COLUMN,0.24,,,,beam band / column / junction piece (width 0.200 m),67.663,37.248,0.2,1.2
+GF-176,GF,SLAB,4.2878,0.16,0.686,ST p.8 note 18: roof slabs 16 cm unless otherwise stated,"CB3, 5%%c10/m, 5%%c10/m",69.55,37.249,1.2,3.589
+GF-177,GF,BEAM_OR_COLUMN,0.0869,,,,beam band / column / junction piece (width 0.250 m),71.733,36.514,0.25,0.644
+GF-178,GF,BEAM_OR_COLUMN,0.04,,,,beam band / column / junction piece (width 0.179 m),73.33,36.615,0.179,0.447
+GF-179,GF,BEAM_OR_COLUMN,0.04,,,,beam band / column / junction piece (width 0.179 m),42.227,36.415,0.179,0.447
+GF-180,GF,BEAM_OR_COLUMN,0.04,,,,beam band / column / junction piece (width 0.179 m),42.36,36.481,0.179,0.447
+GF-181,GF,BEAM_OR_COLUMN,1.09,,,,beam band / column / junction piece (width 0.200 m),45.218,36.448,0.2,5.45
+GF-182,GF,BEAM_OR_COLUMN,0.04,,,,beam band / column / junction piece (width 0.179 m),48.077,36.415,0.179,0.447
+GF-183,GF,BEAM_OR_COLUMN,0.04,,,,beam band / column / junction piece (width 0.179 m),48.21,36.481,0.179,0.447
+GF-184,GF,BEAM_OR_COLUMN,1.15,,,,beam band / column / junction piece (width 0.200 m),51.218,36.448,0.2,5.75
+GF-185,GF,BEAM_OR_COLUMN,0.04,,,,beam band / column / junction piece (width 0.179 m),54.227,36.415,0.179,0.447
+GF-186,GF,BEAM_OR_COLUMN,0.04,,,,beam band / column / junction piece (width 0.179 m),54.36,36.481,0.179,0.447
+GF-187,GF,BEAM_OR_COLUMN,0.1273,,,,beam band / column / junction piece (width 0.217 m),57.961,36.434,0.217,1.128
+GF-188,GF,BEAM_OR_COLUMN,0.0625,,,,beam band / column / junction piece (width 0.250 m),64.58,36.431,0.25,0.5
+GF-189,GF,BEAM_OR_COLUMN,3.6594,,,,beam band / column / junction piece (width 0.300 m),64.976,36.499,0.3,12.733
+GF-190,GF,BEAM_OR_COLUMN,0.0875,,,,beam band / column / junction piece (width 0.250 m),71.497,36.431,0.25,0.7
+GF-191,GF,BEAM_OR_COLUMN,0.2295,,,,beam band / column / junction piece (width 0.200 m),72.54,36.448,0.2,1.15
+GF-192,GF,BEAM_OR_COLUMN,0.04,,,,beam band / column / junction piece (width 0.179 m),73.397,36.481,0.179,0.447
+1F-000,1F,BEAM_OR_COLUMN,0.05,,,,beam band / column / junction piece (width 0.186 m),18.436,49.681,0.186,0.539
+1F-001,1F,BEAM_OR_COLUMN,0.05,,,,beam band / column / junction piece (width 0.200 m),18.502,49.515,0.2,0.5
+1F-002,1F,BEAM_OR_COLUMN,0.5,,,,beam band / column / junction piece (width 0.200 m),19.819,49.748,0.2,2.7
+1F-003,1F,BEAM_OR_COLUMN,0.032,,,,beam band / column / junction piece (width 0.200 m),21.151,49.756,0.2,0.2
+1F-004,1F,BEAM_OR_COLUMN,0.694,,,,beam band / column / junction piece (width 0.200 m),23.004,49.748,0.2,3.47
+1F-005,1F,BEAM_OR_COLUMN,0.048,,,,beam band / column / junction piece (width 0.200 m),24.899,49.715,0.2,0.48
+1F-006,1F,BEAM_OR_COLUMN,0.027,,,,beam band / column / junction piece (width 0.050 m),25.01,49.622,0.05,0.6
+1F-007,1F,BEAM_OR_COLUMN,0.072,,,,beam band / column / junction piece (width 0.200 m),25.132,49.77,0.2,0.6
+1F-008,1F,BEAM_OR_COLUMN,0.67,,,,beam band / column / junction piece (width 0.200 m),27.014,49.748,0.2,3.95
+1F-009,1F,BEAM_OR_COLUMN,0.04,,,,beam band / column / junction piece (width 0.200 m),28.822,49.715,0.2,0.4
+1F-010,1F,BEAM_OR_COLUMN,0.0225,,,,beam band / column / junction piece (width 0.050 m),28.915,49.622,0.05,0.5
+1F-011,1F,BEAM_OR_COLUMN,0.06,,,,beam band / column / junction piece (width 0.200 m),29.017,49.77,0.2,0.5
+1F-012,1F,BEAM_OR_COLUMN,0.71,,,,beam band / column / junction piece (width 0.200 m),30.964,49.748,0.2,4.05
+1F-013,1F,BEAM_OR_COLUMN,0.05,,,,beam band / column / junction piece (width 0.179 m),32.916,49.696,0.179,0.559
+1F-014,1F,BEAM_OR_COLUMN,0.0625,,,,beam band / column / junction piece (width 0.224 m),33.072,49.765,0.224,0.559
+1F-015,1F,BEAM_OR_COLUMN,0.042,,,,beam band / column / junction piece (width 0.200 m),21.195,49.477,0.2,0.3
+1F-016,1F,STAIR,11.265,,,,"main stair zone 1F->2F ('T 16', 8d16/m): stair ledger",19.757,47.524,2.7,4.3
+1F-017,1F,BEAM_OR_COLUMN,0.54,,,,beam band / column / junction piece (width 0.200 m),21.169,47.998,0.2,2.7
+1F-018,1F,SLAB,5.4,0.16,0.864,ST p.8 note 18: roof slabs 16 cm unless otherwise stated,"B2, 5%%c10/m, 5%%c10/m; hatched ANSI31 scale 2000 = legend 'Sunken slab' (depth of the drop not printed)",22.169,48.148,1.8,3.0
+1F-019,1F,BEAM_OR_COLUMN,0.6,,,,beam band / column / junction piece (width 0.200 m),23.169,48.148,0.2,3.0
+1F-020,1F,SLAB,9.5034,0.16,1.5205,ST p.8 note 18: roof slabs 16 cm unless otherwise stated,"B5, 6%%c10/m, 5%%c10/m",27.567,47.507,2.22,4.415
+1F-021,1F,BEAM_OR_COLUMN,0.695,,,,beam band / column / junction piece (width 0.200 m),28.789,47.86,0.2,3.475
+1F-022,1F,BEAM_OR_COLUMN,0.36,,,,beam band / column / junction piece (width 0.200 m),22.169,46.548,0.2,1.8
+1F-023,1F,SLAB,13.8041,0.16,2.2087,ST p.8 note 18: roof slabs 16 cm unless otherwise stated,"B6, 7%%C10/m, 6%%C10/m, P.C 20x50, 8%%C16; P.C 20x50 planted column",24.752,47.336,3.0,4.797
+1F-024,1F,BEAM_OR_COLUMN,0.8836,,,,beam band / column / junction piece (width 0.200 m),26.369,47.439,0.2,4.44
+1F-025,1F,SLAB,17.705,0.16,2.8328,ST p.8 note 18: roof slabs 16 cm unless otherwise stated,"B4, CB12, 7%%C10/m, 6%%C10/m",30.939,47.482,4.1,4.325
+1F-026,1F,BEAM_OR_COLUMN,1.2793,,,,beam band / column / junction piece (width 0.250 m),33.112,47.036,0.25,5.485
+1F-027,1F,EDGE_HELD,1.4148,,,,"strip outside CB12 0.30 (BM-1F-036 HELD, D-05)",33.387,47.413,0.298,4.808
+1F-028,1F,EDGE_HELD,0.203,,,,"strip outside CB12, north part (BM-1F-036 HELD, D-05)",33.562,47.498,0.05,4.059
+1F-029,1F,BEAM_OR_COLUMN,0.06,,,,beam band / column / junction piece (width 0.200 m),18.447,46.476,0.2,0.5
+1F-030,1F,BEAM_OR_COLUMN,0.16,,,,beam band / column / junction piece (width 0.200 m),18.469,45.748,0.2,0.8
+1F-031,1F,BEAM_OR_COLUMN,0.04,,,,beam band / column / junction piece (width 0.200 m),18.502,46.281,0.2,0.4
+1F-032,1F,BEAM_OR_COLUMN,0.0225,,,,beam band / column / junction piece (width 0.050 m),18.595,46.374,0.05,0.5
+1F-033,1F,BEAM_OR_COLUMN,0.05,,,,beam band / column / junction piece (width 0.200 m),21.136,46.315,0.2,0.5
+1F-034,1F,BEAM_OR_COLUMN,0.24,,,,beam band / column / junction piece (width 0.200 m),21.169,45.548,0.2,1.2
+1F-035,1F,BEAM_OR_COLUMN,0.05,,,,beam band / column / junction piece (width 0.200 m),21.202,46.481,0.2,0.5
+1F-036,1F,OPENING,3.24,,,,X box (B1 / B7): open to below,22.169,45.548,1.8,1.8
+1F-037,1F,BEAM_OR_COLUMN,0.05,,,,beam band / column / junction piece (width 0.200 m),23.136,46.315,0.2,0.5
+1F-038,1F,BEAM_OR_COLUMN,0.14,,,,beam band / column / junction piece (width 0.200 m),23.169,45.798,0.2,0.7
+1F-039,1F,BEAM_OR_COLUMN,0.05,,,,beam band / column / junction piece (width 0.200 m),23.202,46.481,0.2,0.5
+1F-040,1F,BEAM_OR_COLUMN,0.1,,,,beam band / column / junction piece (width 0.200 m),28.756,45.79,0.2,1.0
+1F-041,1F,SLAB,3.2205,0.16,0.5153,ST p.8 note 18: roof slabs 16 cm unless otherwise stated,"B6, 5%%c10/m, 5%%C10",16.319,44.505,0.785,4.1
+1F-042,1F,BEAM_OR_COLUMN,0.1,,,,beam band / column / junction piece (width 0.239 m),17.236,45.181,0.239,0.838
+1F-043,1F,EDGE_HELD,0.366,,,,"0.20 strip north of B23, east piece (BM-1F-033 HELD, D-05)",17.379,45.448,0.2,1.83
+1F-044,1F,BEAM_OR_COLUMN,0.1,,,,beam band / column / junction piece (width 0.239 m),17.502,45.265,0.239,0.838
+1F-045,1F,BEAM_OR_COLUMN,2.995,,,,beam band / column / junction piece (width 0.450 m),17.529,45.116,0.45,7.1
+1F-046,1F,BEAM_OR_COLUMN,0.05,,,,beam band / column / junction piece (width 0.200 m),21.136,44.781,0.2,0.5
+1F-047,1F,BEAM_OR_COLUMN,0.05,,,,beam band / column / junction piece (width 0.200 m),21.202,44.615,0.2,0.5
+1F-048,1F,BEAM_OR_COLUMN,0.36,,,,beam band / column / junction piece (width 0.200 m),22.169,44.548,0.2,1.8
+1F-049,1F,BEAM_OR_COLUMN,0.12,,,,beam band / column / junction piece (width 0.200 m),23.147,45.104,0.2,1.0
+1F-050,1F,BEAM_OR_COLUMN,0.08,,,,beam band / column / junction piece (width 0.194 m),23.202,44.715,0.194,0.825
+1F-051,1F,BEAM_OR_COLUMN,0.025,,,,beam band / column / junction piece (width 0.050 m),23.296,45.101,0.05,0.603
+1F-052,1F,BEAM_OR_COLUMN,1.1911,,,,beam band / column / junction piece (width 0.400 m),24.797,44.828,0.4,3.173
+1F-053,1F,BEAM_OR_COLUMN,0.0381,,,,beam band / column / junction piece (width 0.169 m),26.336,45.09,0.169,0.447
+1F-054,1F,BEAM_OR_COLUMN,0.04,,,,beam band / column / junction piece (width 0.200 m),26.402,44.963,0.2,0.4
+1F-055,1F,BEAM_OR_COLUMN,0.8969,,,,beam band / column / junction piece (width 0.400 m),27.582,45.166,0.4,2.438
+1F-056,1F,BEAM_OR_COLUMN,0.1,,,,beam band / column / junction piece (width 0.200 m),28.822,45.456,0.2,1.0
+1F-057,1F,SLAB,4.4135,0.16,0.7062,ST p.8 note 18: roof slabs 16 cm unless otherwise stated,"B6, 5%%c10/m",30.805,44.617,1.01,4.372
+1F-058,1F,BEAM_OR_COLUMN,0.82,,,,beam band / column / junction piece (width 0.200 m),30.939,45.223,0.2,4.1
+1F-059,1F,EDGE_HELD,0.6272,,,,outer west strip 0.20 (BM-1F-034 HELD),13.869,43.853,0.2,3.197
+1F-060,1F,SLAB,0.4674,0.16,0.0748,ST p.8 note 18: roof slabs 16 cm unless otherwise stated,B4; west dome square corner outside the ring (r 2.4111),14.607,43.553,0.774,1.554
+1F-061,1F,BEAM_OR_COLUMN,1.025,,,,beam band / column / junction piece (width 0.250 m),16.319,43.987,0.25,4.1
+1F-062,1F,SLAB,6.455,0.16,1.0328,ST p.8 note 18: roof slabs 16 cm unless otherwise stated,"B4, 5%%c10/m, 6%%c10/m; 2F arrival landing of the main stair (2.50 x 1.95) = B23 band 0.45 + 1.50 m of this panel (Q-62: slab, not stair)",20.66,43.965,1.7,4.3
+1F-063,1F,SLAB,4.2148,0.16,0.6744,ST p.8 note 18: roof slabs 16 cm unless otherwise stated,"B1, B11, 5%%c10/m, 5%%c10/m",24.856,43.916,1.607,2.95
+1F-064,1F,BEAM_OR_COLUMN,0.3239,,,,beam band / column / junction piece (width 0.200 m),26.369,44.008,0.2,1.632
+1F-065,1F,SLAB,2.7619,0.16,0.4419,ST p.8 note 18: roof slabs 16 cm unless otherwise stated,"5%%c10/m, 5%%c10/m",27.283,44.063,1.598,1.825
+1F-066,1F,BEAM_OR_COLUMN,1.093,,,,beam band crossed by a bar label (width 0.250 m),30.803,43.987,0.25,4.372
+1F-067,1F,BEAM_OR_COLUMN,0.09,,,,beam band / column / junction piece (width 0.200 m),33.106,44.273,0.2,0.9
+1F-068,1F,BEAM_OR_COLUMN,0.0899,,,,beam band / column / junction piece (width 0.200 m),33.172,43.972,0.2,0.867
+1F-069,1F,EDGE_HELD,0.3852,,,,"rounded box outside CB12 (BM-1F-037 HELD, D-26)",33.434,44.058,0.405,1.005
+1F-070,1F,BEAM_OR_COLUMN,0.86,,,,beam band / column / junction piece (width 0.200 m),20.819,43.098,0.2,4.3
+1F-071,1F,BEAM_OR_COLUMN,0.9496,,,,beam band / column / junction piece (width 0.200 m),25.693,43.098,0.2,4.748
+1F-072,1F,BEAM_OR_COLUMN,1.875,,,,beam band / column / junction piece (width 0.300 m),14.124,41.611,0.3,6.85
+1F-073/c0,1F,SLAB,0.3525,0.16,0.0564,ST p.8 note 18: roof slabs 16 cm unless otherwise stated,dome square corner outside the ring r 2.4111 (split from 1F-073),18.061,43.606,,
+1F-073/c1,1F,SLAB,0.3517,0.16,0.0563,ST p.8 note 18: roof slabs 16 cm unless otherwise stated,dome square corner outside the ring r 2.4111 (split from 1F-073),18.062,39.696,,
+1F-073,1F,DOME_OPENING+RING,16.492,,,,west dome: opening r 2.2111 (Q-44 A skylight) + ring B4 band (BM-1F-028); its two east corners are slab rows below,16.412,41.651,4.1,4.422
+1F-074,1F,BEAM_OR_COLUMN,0.0875,,,,beam band / column / junction piece (width 0.235 m),18.452,41.515,0.235,0.743
+1F-075,1F,BEAM_OR_COLUMN,3.7998,,,,beam band / column / junction piece (width 0.550 m),28.342,41.602,0.55,6.942
+1F-076/c0,1F,SLAB,0.5823,0.16,0.0932,ST p.8 note 18: roof slabs 16 cm unless otherwise stated,dome square corner outside the ring r 2.4111 (split from 1F-076),28.979,43.501,,
+1F-076/c1,1F,SLAB,0.5223,0.16,0.0836,ST p.8 note 18: roof slabs 16 cm unless otherwise stated,dome square corner outside the ring r 2.4111 (split from 1F-076),32.639,43.528,,
+1F-076,1F,DOME_OPENING+RING,1.8086,,,,east dome: part of the opening / ring; its two north corners are slab rows below,30.73,42.357,4.372,4.422
+1F-077,1F,DOME_OPENING+RING,15.3175,,,,east dome opening + ring (BM-1F-039),30.824,41.651,4.372,4.422
+1F-078,1F,BEAM_OR_COLUMN,0.0305,,,,beam band / column / junction piece (width 0.050 m),33.009,41.651,0.05,0.927
+1F-079,1F,EDGE_HELD,0.5465,,,,outer west strip,13.869,40.919,0.2,2.732
+1F-080,1F,BEAM_OR_COLUMN,0.06,,,,beam band / column / junction piece (width 0.200 m),14.036,41.048,0.2,0.6
+1F-081,1F,BEAM_OR_COLUMN,0.06,,,,beam band / column / junction piece (width 0.200 m),14.102,40.848,0.2,0.6
+1F-082,1F,BEAM_OR_COLUMN,1.88,,,,beam band / column / junction piece (width 0.300 m),18.521,41.48,0.3,6.85
+1F-083,1F,BEAM_OR_COLUMN,0.0875,,,,beam band / column / junction piece (width 0.235 m),18.536,41.281,0.235,0.743
+1F-084,1F,SLAB,20.855,0.16,3.3368,printed panel tag 'T 16',"B18, 8%%C10/m, 7%%C10/m, 3%%c14, 3%%c14, 3%%c14, 3%%c14, T, 16, CB13, CB13",20.819,40.573,4.3,4.85
+1F-085,1F,BEAM_OR_COLUMN,2.205,,,,beam band / column / junction piece (width 0.350 m),23.144,41.298,0.35,6.3
+1F-086,1F,SLAB,11.0285,0.16,1.7646,ST p.8 note 18: roof slabs 16 cm unless otherwise stated,"B5, 6%%c10/m, 5%%c10/m",24.456,40.573,2.274,4.85
+1F-087,1F,BEAM_OR_COLUMN,0.97,,,,beam band / column / junction piece (width 0.200 m),25.693,40.573,0.2,4.85
+1F-088,1F,SLAB,11.0285,0.16,1.7646,ST p.8 note 18: roof slabs 16 cm unless otherwise stated,"6%%c10/m, 5%%c10/m",26.93,40.573,2.274,4.85
+1F-089,1F,BEAM_OR_COLUMN,1.3852,,,,beam band / column / junction piece (width 0.250 m),33.116,40.863,0.25,5.815
+1F-090,1F,SLAB,0.4674,0.16,0.0748,ST p.8 note 18: roof slabs 16 cm unless otherwise stated,west dome square corner outside the ring,14.607,39.75,1.046,1.15
+1F-091,1F,SLAB,0.5818,0.16,0.0931,ST p.8 note 18: roof slabs 16 cm unless otherwise stated,east dome square corner outside the ring,28.978,39.802,1.25,1.25
+1F-092,1F,SLAB,0.5221,0.16,0.0835,ST p.8 note 18: roof slabs 16 cm unless otherwise stated,east dome square corner outside the ring,32.639,39.775,1.142,1.2
+1F-093,1F,EDGE_HELD,0.341,,,,outer west strip,13.869,38.7,0.2,1.705
+1F-094,1F,SLAB,4.6836,0.16,0.7494,ST p.8 note 18: roof slabs 16 cm unless otherwise stated,"5%%c10/m, 5%%c10/m, B6",16.319,38.619,1.142,4.1
+1F-095,1F,BEAM_OR_COLUMN,1.025,,,,beam band / column / junction piece (width 0.250 m),16.319,39.315,0.25,4.1
+1F-096,1F,SLAB,4.5573,0.16,0.7292,ST p.8 note 18: roof slabs 16 cm unless otherwise stated,"5%%c10/m, 5%%c10/m",30.803,38.669,1.042,4.372
+1F-097,1F,BEAM_OR_COLUMN,1.093,,,,beam band / column / junction piece (width 0.250 m),30.803,39.315,0.25,4.372
+1F-098,1F,BEAM_OR_COLUMN,0.05,,,,beam band / column / junction piece (width 0.186 m),14.036,38.181,0.186,0.539
+1F-099,1F,BEAM_OR_COLUMN,0.05,,,,beam band / column / junction piece (width 0.200 m),14.102,38.015,0.2,0.5
+1F-100,1F,BEAM_OR_COLUMN,0.7623,,,,beam band / column / junction piece (width 0.200 m),16.075,37.948,0.2,3.812
+1F-101,1F,BEAM_OR_COLUMN,0.07,,,,beam band / column / junction piece (width 0.200 m),18.214,37.915,0.2,0.7
+1F-102,1F,BEAM_OR_COLUMN,0.07,,,,beam band / column / junction piece (width 0.200 m),18.447,37.981,0.2,0.7
+1F-103,1F,BEAM_OR_COLUMN,3.8937,,,,beam band / column / junction piece (width 0.300 m),25.617,38.001,0.3,14.32
+1F-104,1F,BEAM_OR_COLUMN,0.1,,,,beam band / column / junction piece (width 0.250 m),25.656,37.931,0.25,0.8
+1F-105,1F,BEAM_OR_COLUMN,0.1,,,,beam band / column / junction piece (width 0.239 m),25.922,38.015,0.239,0.838
+1F-106,1F,BEAM_OR_COLUMN,0.075,,,,beam band / column / junction piece (width 0.250 m),29.039,37.931,0.25,0.6
+1F-107,1F,BEAM_OR_COLUMN,0.075,,,,beam band / column / junction piece (width 0.231 m),29.239,38.015,0.231,0.65
+1F-108,1F,BEAM_OR_COLUMN,0.05,,,,beam band / column / junction piece (width 0.186 m),32.906,37.915,0.186,0.539
+1F-109,1F,BEAM_OR_COLUMN,0.05,,,,beam band / column / junction piece (width 0.200 m),33.072,37.981,0.2,0.5
+2F-000,2F,BEAM_OR_COLUMN,0.05,,,,beam band / column / junction piece (width 0.200 m),-20.289,49.681,0.2,0.5
+2F-001,2F,BEAM_OR_COLUMN,0.05,,,,beam band / column / junction piece (width 0.186 m),-20.222,49.515,0.186,0.539
+2F-002,2F,BEAM_OR_COLUMN,0.5,,,,beam band / column / junction piece (width 0.200 m),-18.905,49.748,0.2,2.5
+2F-003,2F,BEAM_OR_COLUMN,0.032,,,,beam band / column / junction piece (width 0.200 m),-17.574,49.756,0.2,0.2
+2F-004,2F,BEAM_OR_COLUMN,0.694,,,,beam band / column / junction piece (width 0.200 m),-15.72,49.748,0.2,3.47
+2F-005,2F,BEAM_OR_COLUMN,0.06,,,,beam band / column / junction piece (width 0.190 m),-13.785,49.715,0.19,0.632
+2F-006,2F,BEAM_OR_COLUMN,0.06,,,,beam band / column / junction piece (width 0.190 m),-13.585,49.781,0.19,0.632
+2F-007,2F,BEAM_OR_COLUMN,0.226,,,,beam band / column / junction piece (width 0.200 m),-12.82,49.748,0.2,1.13
+2F-008,2F,NOT_SLAB,0.0866,,,,break-line sliver west of B15 (drafting break mark),-20.392,49.267,0.1,1.25
+2F-009,2F,BEAM_OR_COLUMN,0.042,,,,beam band / column / junction piece (width 0.200 m),-17.53,49.477,0.2,0.3
+2F-010,2F,BEAM_OR_COLUMN,0.54,,,,beam band / column / junction piece (width 0.200 m),-20.255,47.998,0.2,2.7
+2F-011,2F,SLAB,8.235,0.18,1.4823,printed panel tag 'T 18',"B3, B3, 7%%C14/m, 6%%c14/m, (T&B), (T&B), T, 18; water tank, 'T 18 (T&B)'",-18.903,48.001,2.5,3.3
+2F-012,2F,BEAM_OR_COLUMN,0.54,,,,beam band / column / junction piece (width 0.200 m),-17.555,47.998,0.2,2.7
+2F-013,2F,SLAB,5.4,0.18,0.972,printed panel tag 'T 18',"B1, 6%%c12/m, 6%%c12/m, T, 18, (T&B), (T&B); water tank, 'T 18'",-16.555,48.148,1.8,3.0
+2F-014,2F,BEAM_OR_COLUMN,0.6,,,,beam band / column / junction piece (width 0.200 m),-15.555,48.148,0.2,3.0
+2F-015,2F,BEAM_OR_COLUMN,0.36,,,,beam band / column / junction piece (width 0.200 m),-16.555,46.548,0.2,1.8
+2F-016,2F,SLAB,15.0,0.16,2.4,ST p.8 note 18: roof slabs 16 cm unless otherwise stated,"B2, B3, B7, 7%%C10/m, 6%%C10/m",-13.955,47.148,3.0,5.0
+2F-017,2F,BEAM_OR_COLUMN,0.8837,,,,beam band / column / junction piece (width 0.200 m),-12.355,47.439,0.2,4.418
+2F-018,2F,BEAM_OR_COLUMN,0.06,,,,beam band / column / junction piece (width 0.200 m),-20.278,46.476,0.2,0.5
+2F-019,2F,BEAM_OR_COLUMN,0.04,,,,beam band / column / junction piece (width 0.200 m),-20.222,46.281,0.2,0.4
+2F-020,2F,BEAM_OR_COLUMN,0.0225,,,,beam band / column / junction piece (width 0.050 m),-20.129,46.374,0.05,0.5
+2F-021,2F,BEAM_OR_COLUMN,0.49,,,,beam band / column / junction piece (width 0.200 m),-18.88,46.248,0.2,2.45
+2F-022,2F,BEAM_OR_COLUMN,0.05,,,,beam band / column / junction piece (width 0.200 m),-17.589,46.315,0.2,0.5
+2F-023,2F,BEAM_OR_COLUMN,0.24,,,,beam band / column / junction piece (width 0.200 m),-17.555,45.548,0.2,1.2
+2F-024,2F,BEAM_OR_COLUMN,0.05,,,,beam band / column / junction piece (width 0.186 m),-17.522,46.481,0.186,0.539
+2F-025,2F,SLAB,3.24,0.16,0.5184,ST p.8 note 18: roof slabs 16 cm unless otherwise stated,"B2, B1, 5%%c10/m, 5%%c10/m; closed box (bars 5d10/m both ways), not an opening",-16.555,45.548,1.8,1.8
+2F-026,2F,BEAM_OR_COLUMN,0.05,,,,beam band / column / junction piece (width 0.186 m),-15.589,46.315,0.186,0.539
+2F-027,2F,BEAM_OR_COLUMN,0.2,,,,beam band / column / junction piece (width 0.200 m),-15.555,45.648,0.2,1.0
+2F-028,2F,BEAM_OR_COLUMN,0.05,,,,beam band / column / junction piece (width 0.186 m),-15.522,46.481,0.186,0.539
+2F-029,2F,NOT_THIS_SLAB,0.5136,,,,1F roof outline / upper-roof dome repeated around the 2F core (1F sheet),-23.545,45.448,0.2,2.629
+2F-030,2F,NOT_THIS_SLAB,0.366,,,,1F roof outline / upper-roof dome repeated around the 2F core (1F sheet),-21.345,45.448,0.2,1.83
+2F-031,2F,EDGE_HELD,0.2718,,,,"0.10 strip west of the B15 / bearing-wall band: no tag, no bars, depth not printed",-20.39,44.913,0.1,4.35
+2F-032,2F,BEAM_OR_COLUMN,0.62,,,,beam band / column / junction piece (width 0.200 m),-20.255,44.598,0.2,3.1
+2F-033,2F,SLAB,7.25,0.16,1.16,ST p.8 note 18: roof slabs 16 cm unless otherwise stated,"B1, B2, 6%%c10/m, 5%%c10/m",-18.905,44.698,2.5,2.9
+2F-034,2F,BEAM_OR_COLUMN,0.05,,,,beam band / column / junction piece (width 0.200 m),-17.589,44.781,0.2,0.5
+2F-035,2F,BEAM_OR_COLUMN,0.05,,,,beam band / column / junction piece (width 0.200 m),-17.522,44.615,0.2,0.5
+2F-036,2F,BEAM_OR_COLUMN,0.36,,,,beam band / column / junction piece (width 0.200 m),-16.555,44.548,0.2,1.8
+2F-037,2F,BEAM_OR_COLUMN,0.0643,,,,beam band / column / junction piece (width 0.200 m),-15.585,44.944,0.2,0.5
+2F-038,2F,BEAM_OR_COLUMN,0.0343,,,,beam band / column / junction piece (width 0.200 m),-15.542,44.542,0.2,0.2
+2F-039,2F,BEAM_OR_COLUMN,0.0357,,,,beam band / column / junction piece (width 0.137 m),-15.503,44.815,0.137,0.52
+2F-040,2F,BEAM_OR_COLUMN,0.6,,,,beam band / column / junction piece (width 0.200 m),-13.955,44.548,0.2,3.0
+2F-041,2F,BEAM_OR_COLUMN,0.04,,,,beam band / column / junction piece (width 0.179 m),-12.389,45.096,0.179,0.447
+2F-042,2F,BEAM_OR_COLUMN,0.04,,,,beam band / column / junction piece (width 0.179 m),-12.322,44.963,0.179,0.447
+2F-043,2F,NOT_THIS_SLAB,0.6272,,,,1F roof outline / upper-roof dome repeated around the 2F core (1F sheet),-24.856,43.853,0.2,3.197
+2F-044,2F,BEAM_OR_COLUMN,0.28,,,,beam band / column / junction piece (width 0.200 m),-17.555,43.748,0.2,1.4
+2F-045,2F,SLAB,2.16,0.16,0.3456,ST p.8 note 18: roof slabs 16 cm unless otherwise stated,"5%%c10/m, 5%%c10/m, B1",-16.555,43.848,1.2,1.8
+2F-046,2F,BEAM_OR_COLUMN,0.28,,,,beam band / column / junction piece (width 0.200 m),-15.555,43.748,0.2,1.4
+2F-047,2F,SLAB,3.6,0.16,0.576,ST p.8 note 18: roof slabs 16 cm unless otherwise stated,"5%%c10/m, 5%%c10/m, B2",-13.955,43.848,1.2,3.0
+2F-048,2F,BEAM_OR_COLUMN,0.3563,,,,beam band / column / junction piece (width 0.200 m),-12.355,43.939,0.2,1.782
+2F-049,2F,NOT_THIS_SLAB,0.7674,,,,1F roof outline / upper-roof dome repeated around the 2F core (1F sheet),-23.382,42.689,0.683,2.21
+2F-050,2F,NOT_THIS_SLAB,0.7674,,,,1F roof outline / upper-roof dome repeated around the 2F core (1F sheet),-23.011,42.959,0.683,2.21
+2F-051,2F,NOT_THIS_SLAB,0.7674,,,,1F roof outline / upper-roof dome repeated around the 2F core (1F sheet),-22.574,43.101,0.683,2.21
+2F-052,2F,NOT_THIS_SLAB,0.7674,,,,1F roof outline / upper-roof dome repeated around the 2F core (1F sheet),-22.115,43.101,0.683,2.211
+2F-053,2F,NOT_THIS_SLAB,0.7674,,,,1F roof outline / upper-roof dome repeated around the 2F core (1F sheet),-21.678,42.959,0.683,2.21
+2F-054,2F,NOT_THIS_SLAB,0.7674,,,,1F roof outline / upper-roof dome repeated around the 2F core (1F sheet),-21.307,42.689,0.683,2.21
+2F-055,2F,BEAM_OR_COLUMN,0.5,,,,beam band / column / junction piece (width 0.200 m),-18.905,43.148,0.2,2.5
+2F-056,2F,BEAM_OR_COLUMN,0.36,,,,beam band / column / junction piece (width 0.200 m),-16.555,43.148,0.2,1.8
+2F-057,2F,BEAM_OR_COLUMN,0.6,,,,beam band / column / junction piece (width 0.200 m),-13.955,43.148,0.2,3.0
+2F-058,2F,NOT_THIS_SLAB,128.3845,,,,"the 1F roof seen around the core (+9.70 'ROOF', domes): measured on the 1F sheet",-13.239,42.695,12.3,19.675
+2F-059,2F,NOT_THIS_SLAB,0.7674,,,,1F roof outline / upper-roof dome repeated around the 2F core (1F sheet),-8.934,42.689,0.683,2.21
+2F-060,2F,NOT_THIS_SLAB,0.7674,,,,1F roof outline / upper-roof dome repeated around the 2F core (1F sheet),-8.563,42.959,0.683,2.21
+2F-061,2F,NOT_THIS_SLAB,0.7674,,,,1F roof outline / upper-roof dome repeated around the 2F core (1F sheet),-8.126,43.101,0.683,2.21
+2F-062,2F,NOT_THIS_SLAB,0.7674,,,,1F roof outline / upper-roof dome repeated around the 2F core (1F sheet),-7.667,43.101,0.683,2.211
+2F-063,2F,NOT_THIS_SLAB,0.7674,,,,1F roof outline / upper-roof dome repeated around the 2F core (1F sheet),-7.23,42.959,0.683,2.21
+2F-064,2F,NOT_THIS_SLAB,0.7674,,,,1F roof outline / upper-roof dome repeated around the 2F core (1F sheet),-6.859,42.689,0.683,2.21
+2F-065,2F,NOT_THIS_SLAB,0.7674,,,,1F roof outline / upper-roof dome repeated around the 2F core (1F sheet),-23.794,41.881,0.683,2.211
+2F-066,2F,NOT_THIS_SLAB,0.7674,,,,1F roof outline / upper-roof dome repeated around the 2F core (1F sheet),-23.652,42.318,0.683,2.21
+2F-067,2F,NOT_THIS_SLAB,0.7674,,,,1F roof outline / upper-roof dome repeated around the 2F core (1F sheet),-21.037,42.318,0.683,2.21
+2F-068,2F,NOT_THIS_SLAB,0.7674,,,,1F roof outline / upper-roof dome repeated around the 2F core (1F sheet),-20.895,41.881,0.683,2.211
+2F-069,2F,NOT_THIS_SLAB,0.7674,,,,1F roof outline / upper-roof dome repeated around the 2F core (1F sheet),-9.346,41.881,0.683,2.211
+2F-070,2F,NOT_THIS_SLAB,0.7674,,,,1F roof outline / upper-roof dome repeated around the 2F core (1F sheet),-9.204,42.318,0.683,2.21
+2F-071,2F,NOT_THIS_SLAB,0.7674,,,,1F roof outline / upper-roof dome repeated around the 2F core (1F sheet),-6.589,42.318,0.683,2.21
+2F-072,2F,NOT_THIS_SLAB,0.7674,,,,1F roof outline / upper-roof dome repeated around the 2F core (1F sheet),-6.447,41.881,0.683,2.211
+2F-073,2F,NOT_THIS_SLAB,0.5465,,,,1F roof outline / upper-roof dome repeated around the 2F core (1F sheet),-24.855,40.919,0.2,2.732
+2F-074,2F,NOT_THIS_SLAB,0.7674,,,,1F roof outline / upper-roof dome repeated around the 2F core (1F sheet),-23.794,41.422,0.683,2.211
+2F-075,2F,NOT_THIS_SLAB,0.7674,,,,1F roof outline / upper-roof dome repeated around the 2F core (1F sheet),-23.652,40.985,0.683,2.21
+2F-076,2F,NOT_THIS_SLAB,0.7674,,,,1F roof outline / upper-roof dome repeated around the 2F core (1F sheet),-23.382,40.614,0.683,2.21
+2F-077,2F,NOT_THIS_SLAB,0.7674,,,,1F roof outline / upper-roof dome repeated around the 2F core (1F sheet),-21.307,40.614,0.683,2.21
+2F-078,2F,NOT_THIS_SLAB,0.7674,,,,1F roof outline / upper-roof dome repeated around the 2F core (1F sheet),-21.037,40.985,0.683,2.21
+2F-079,2F,NOT_THIS_SLAB,0.7674,,,,1F roof outline / upper-roof dome repeated around the 2F core (1F sheet),-20.895,41.422,0.683,2.211
+2F-080,2F,NOT_THIS_SLAB,0.7674,,,,1F roof outline / upper-roof dome repeated around the 2F core (1F sheet),-9.346,41.422,0.683,2.211
+2F-081,2F,NOT_THIS_SLAB,0.7674,,,,1F roof outline / upper-roof dome repeated around the 2F core (1F sheet),-9.204,40.985,0.683,2.21
+2F-082,2F,NOT_THIS_SLAB,0.7674,,,,1F roof outline / upper-roof dome repeated around the 2F core (1F sheet),-8.934,40.614,0.683,2.21
+2F-083,2F,NOT_THIS_SLAB,0.7674,,,,1F roof outline / upper-roof dome repeated around the 2F core (1F sheet),-6.859,40.614,0.683,2.21
+2F-084,2F,NOT_THIS_SLAB,0.7674,,,,1F roof outline / upper-roof dome repeated around the 2F core (1F sheet),-6.589,40.985,0.683,2.21
+2F-085,2F,NOT_THIS_SLAB,0.7674,,,,1F roof outline / upper-roof dome repeated around the 2F core (1F sheet),-6.447,41.422,0.683,2.211
+2F-086,2F,NOT_THIS_SLAB,0.7674,,,,1F roof outline / upper-roof dome repeated around the 2F core (1F sheet),-23.011,40.344,0.683,2.21
+2F-087,2F,NOT_THIS_SLAB,0.7674,,,,1F roof outline / upper-roof dome repeated around the 2F core (1F sheet),-22.574,40.202,0.683,2.21
+2F-088,2F,NOT_THIS_SLAB,0.7674,,,,1F roof outline / upper-roof dome repeated around the 2F core (1F sheet),-22.115,40.202,0.683,2.21
+2F-089,2F,NOT_THIS_SLAB,0.7674,,,,1F roof outline / upper-roof dome repeated around the 2F core (1F sheet),-21.678,40.344,0.683,2.21
+2F-090,2F,NOT_THIS_SLAB,0.7674,,,,1F roof outline / upper-roof dome repeated around the 2F core (1F sheet),-8.563,40.344,0.683,2.21
+2F-091,2F,NOT_THIS_SLAB,0.7674,,,,1F roof outline / upper-roof dome repeated around the 2F core (1F sheet),-8.126,40.202,0.683,2.21
+2F-092,2F,NOT_THIS_SLAB,0.7674,,,,1F roof outline / upper-roof dome repeated around the 2F core (1F sheet),-7.667,40.202,0.683,2.211
+2F-093,2F,NOT_THIS_SLAB,0.7674,,,,1F roof outline / upper-roof dome repeated around the 2F core (1F sheet),-7.23,40.344,0.683,2.21
+2F-094,2F,NOT_THIS_SLAB,0.341,,,,1F roof outline / upper-roof dome repeated around the 2F core (1F sheet),-24.855,38.7,0.2,1.705

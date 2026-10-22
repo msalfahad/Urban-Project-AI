@@ -187,6 +187,12 @@ V27_FAMILY = (V27, V271, V28, V29, V210, V211, V212, V213)
 V30 = "ARCH_TAKEOFF_V3.0"
 ARCH_POLICY_ID_V30 = "URBAN_BOQ_T131_ARCH_V3_0"
 CANDIDATE_METHODS = (V30,)
+# T-133: ARCH_TAKEOFF_V3.0.1 = the SAME candidate extended (engine.source.arch_v301): a V3.0 run (its V3_0_* files
+# unchanged) + the route G scope piece (T-126) and the MEMBRANE_FOLD_V5 audit evidence (T-124) in V3_0_1_* files; every
+# line outside its rows byte-identical to V3.0. An extension of V3.0, never a new method family; opt-in, not the
+# released default; rollback = run ARCH_TAKEOFF_V2.9.
+V301 = "ARCH_TAKEOFF_V3.0.1"
+CANDIDATE_EXTENSIONS = (V301,)
 M9_DIR = "m9"
 CREATED = datetime(2026, 1, 1)
 
@@ -2876,10 +2882,22 @@ def _blocked(out, report, conversions, *, code, what, extra=None):
     return code
 
 
+# T-142: ARCH_TAKEOFF_V3.0.2 = the SAME candidate extended again (engine.source.arch_v302): a V3.0.1 run (its V3_0_* and
+# V3_0_1_* files unchanged) + footing steel by bar population (T-136), the membrane coverage proof (T-137), the soffits
+# over outside air (T-127) and the V3.0.1 Gate B fixes, in V3_0_2_* files; every line outside its rows byte-identical
+# to V3.0.1. Opt-in, not the released default; rollback = run ARCH_TAKEOFF_V2.9.
+V302 = "ARCH_TAKEOFF_V3.0.2"
+CANDIDATE_EXTENSIONS_V302 = (V302,)  # its own tuple: the V3.0 / V3.0.1 method lists stay as they were
+
+
 def cmd_arch(a):
     from engine.source import discovery as DS
     facts = json.loads(Path(a.facts).read_text(encoding="utf-8")) if a.facts else None
-    v30 = a.method == V30                     # T-131: the candidate runs ARCH_TAKEOFF_V2.13 exactly, then integrates
+    v302 = a.method == V302                   # T-142: the V3.0.1 run, then its V3.0.2 extension
+    v301 = a.method in (V301, V302)           # T-133: the V3.0 candidate run, then its V3.0.1 extension
+    v30 = a.method in (V30, V301, V302)       # T-131: the candidate runs ARCH_TAKEOFF_V2.13 exactly, then integrates
+    if getattr(a, "v302_inputs", None) and not v302:
+        raise SystemExit("--v302-inputs needs --method ARCH_TAKEOFF_V3.0.2")
     if v30:
         a.method = V213
     elif getattr(a, "v30_decisions", None) or getattr(a, "v30_released", None) or getattr(a, "v30_history", None):
@@ -2952,7 +2970,10 @@ def cmd_arch(a):
         from contextlib import nullcontext
         if v30:
             from engine.source import arch_v30 as A30
-        with (A30.capture() if v30 else nullcontext()) as v30cap:      # T-131: read-only captures for the pieces
+        if v301:
+            from engine.source import arch_v301 as A301
+        with (A30.capture() if v30 else nullcontext()) as v30cap, \
+                (A301.capture() if v301 else nullcontext()) as v301cap:  # T-131 / T-133: read-only captures
             room, arch, E = arch_compute(plan, method=a.method, facts=facts, layer_roles=roles or None,
                                          reference_areas=refs, project_id=a.project, strict=a.strict_admission,
                                          units=a.units, region_specs=a.region,
@@ -3065,6 +3086,43 @@ def cmd_arch(a):
                                        released, hist or None)
         svgs += names
         v30rec = {"method": V30, "base": V213, "released_default": False, "identity": ident}
+        if v301:
+            # T-133: ARCH_TAKEOFF_V3.0.1 files beside the V3_0_* files (engine.source.arch_v301)
+            ch_g, log_g = A301.scope_changes(R, base_lines, lambda it: structural_lines(dict(R, items=[it]))[0])
+            ch_m, log_m = A301.membrane_changes(v301cap, base_lines)
+            names1, ident1, _led1 = A301.write(out, base_lines, ch_s + ch_p + ch_f, ch_g + ch_m, [log_g, log_m],
+                                               {"plan": Path(plan).name, "structural": Path(structural).name
+                                                if structural else None,
+                                                "released_lines": Path(a.v30_released).name
+                                                if getattr(a, "v30_released", None) else None},
+                                               released, hist or None)
+            svgs += names1
+            v30rec = {"method": V301, "extends": V30, "base": V213, "released_default": False,
+                      "identity": ident1, "v3_0_identity": ident}
+        if v302:
+            # T-142: ARCH_TAKEOFF_V3.0.2 files beside the V3_0_1_* files (engine.source.arch_v302)
+            from engine.source import arch_v302 as A302
+            inp = A302.load_inputs(json.loads(Path(a.v302_inputs).read_text(encoding="utf-8"))
+                                   if getattr(a, "v302_inputs", None) else None, room["project_id"])
+            l301 = A302.integrate(base_lines, ch_s + ch_p + ch_f, ch_g + ch_m, [])[0]
+            to_line = lambda it: structural_lines(dict(R, items=[it]))[0]  # noqa: E731
+            fr = (inp or {}).get("footing_rebar")
+            rows2 = A302.schedule_rows_from_drawing(structural, fr["size_unit"]["value"]) \
+                if (fr and structural and R is not None) else []
+            ch_r, log_r = A302.footing_rebar_changes(R, rows2, l301, inp)
+            ch_mp, log_mp = A302.membrane_proof_changes(v301cap, l301)
+            ch_so, log_so = A302.soffit_changes(inp, l301)
+            ch_x, log_x = A302.scope_fix_changes(R, l301, to_line)
+            names2, ident2, _led2 = A302.write(
+                out, base_lines, ch_s + ch_p + ch_f, ch_g + ch_m, ch_r + ch_mp + ch_so + ch_x,
+                [log_r, log_mp, log_so, log_x],
+                {"plan": Path(plan).name, "structural": Path(structural).name if structural else None,
+                 "project_inputs": Path(a.v302_inputs).name if getattr(a, "v302_inputs", None) else None,
+                 "released_lines": Path(a.v30_released).name if getattr(a, "v30_released", None) else None},
+                released, scope_summary=log_g.get("columns_by_storey"))
+            svgs += names2
+            v30rec = {"method": V302, "extends": V301, "base": V213, "released_default": False,
+                      "identity": ident2, "v3_0_1_identity": ident1, "v3_0_identity": ident}
     ev = Counter(ln["evidence_state"] for ln in room["lines"])
     print(json.dumps({"method": a.method, "regions": [{"floor": r["floor"], "state": r["stage_state"],
                                                         "rooms": r.get("space_counts"), "lines": r.get("lines"),
@@ -3197,7 +3255,8 @@ def main(argv=None):
     p.add_argument("--drawings", nargs=1, required=True,
                    help="one architectural plan DXF (a DWG goes through tools/dwg_adapter.py: an external converter)")
     p.add_argument("--out", required=True)
-    p.add_argument("--method", required=True, choices=ARCH_METHODS + CANDIDATE_METHODS,
+    p.add_argument("--method", required=True,
+                   choices=ARCH_METHODS + CANDIDATE_METHODS + CANDIDATE_EXTENSIONS + CANDIDATE_EXTENSIONS_V302,
                    help="the versioned architectural takeoff method (no default: the route is opt-in until validated); "
                         "ARCH_TAKEOFF_V2 (S6) adds the drawing admission, unit-relative tolerances, empty-band plan "
                         "regions and the completeness gates (exit 2: admission blocked, 3: completeness failed)")
@@ -3227,6 +3286,9 @@ def main(argv=None):
                                            "binding an owner answer with its condition check (e.g. Q-67 A)")
     p.add_argument("--v30-released", help="ARCH_TAKEOFF_V3.0: BOQ_LINES.json of the released ARCH_TAKEOFF_V2.9 run "
                                           "on the same drawings (the ledger's 'before released' column)")
+    p.add_argument("--v302-inputs", help="ARCH_TAKEOFF_V3.0.2: project inputs (URBAN_V302_PROJECT_INPUTS_V1) typed from "
+                                         "the printed sheets: footing schedule size unit, cover note, bar-end detail; "
+                                         "the checked soffit areas over outside air")
     p.add_argument("--v30-history", nargs="+", metavar="METHOD=BOQ_LINES.json",
                    help="ARCH_TAKEOFF_V3.0 with --v30-released: BOQ_LINES.json of the ARCH_TAKEOFF_V2.10 / V2.11 / "
                         "V2.12 runs on the same drawings, so each ledger row names the version that changed its line")

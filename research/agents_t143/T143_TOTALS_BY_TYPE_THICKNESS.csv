@@ -1,0 +1,13 @@
+floor,block_type,t_m,runs,L1_arch_run_m,L2a_q69_physical_m,held_len_m,gross_m2_q69_measured,of_which_provisional_m2,m3_measured,white_blocks_at_6.4,white_blocks_at_8.33,note
+1F,BLACK,0.150,14,57.045,57.045,11.062,179.231,0.0,26.8845,,,gross before opening deduction (net HELD); black: no supplier face size -> count HELD
+1F,BLACK,0.200,4,9.695,9.695,0.0,35.485,0.0,7.097,,,gross before opening deduction (net HELD); black: no supplier face size -> count HELD
+1F,WHITE,0.200,8,54.013,50.877,6.899,157.113,0.0,31.4225,1006.0,1309.0,gross before opening deduction (net HELD); product face size not chosen
+2F,BLACK,0.150,1,3.1,3.1,0.0,11.78,0.0,1.767,,,gross before opening deduction (net HELD); black: no supplier face size -> count HELD
+2F,BLACK,0.200,4,9.825,9.825,1.287,32.444,0.0,6.4888,,,gross before opening deduction (net HELD); black: no supplier face size -> count HELD
+2F,WHITE,0.150,1,7.9,7.9,0.535,27.987,0.0,4.1981,179.0,233.0,gross before opening deduction (net HELD); product face size not chosen
+2F,WHITE,0.200,3,18.95,18.95,3.917,51.516,0.0,10.3032,330.0,429.0,gross before opening deduction (net HELD); product face size not chosen
+GF,-,0.200,1,0.9,0.9,0.9,0.0,0.0,0.0,,,gross before opening deduction (net HELD); product face size not chosen
+GF,-,0.400,1,0.7,0.7,0.7,0.0,0.0,0.0,,,gross before opening deduction (net HELD); product face size not chosen
+GF,BLACK,0.150,16,41.185,41.185,1.525,159.695,63.733,23.9541,,,gross before opening deduction (net HELD); black: no supplier face size -> count HELD
+GF,BLACK,0.200,8,41.52,41.52,2.65,144.65,82.495,28.9299,,,gross before opening deduction (net HELD); black: no supplier face size -> count HELD
+GF,WHITE,0.200,14,60.455,49.173,7.545,155.726,68.131,31.1452,997.0,1297.0,gross before opening deduction (net HELD); product face size not chosen
