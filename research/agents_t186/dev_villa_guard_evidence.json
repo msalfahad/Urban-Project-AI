@@ -1,0 +1,41 @@
+{
+ "schema": "T186_GUARD_EVIDENCE_V1",
+ "note": "Development villa (Drive 'Alsenan chalet project'). Documents by Drive title only; no drawing content beyond the printed values the board and merged files already record. Every printed record names its merged / answered source. Nothing here is a released quantity.",
+ "doc_alias": {"ST7757.dxf": "ST7757 dxf.dxf", "ST7757 dxf.dxf": "ST7757 dxf.dxf", "P7757.dxf": "P7757_DXF_COMPRESSED.zip"},
+ "documents": [
+  {"doc": "ST7757 dxf.dxf", "role": "PLAN", "what": "structural plans (footings, ground beams, slabs, roofs)"},
+  {"doc": "P7757_DXF_COMPRESSED.zip", "role": "PLAN", "what": "architectural plans, levels"},
+  {"doc": "ST7757.pdf", "role": "STRUCTURAL_DETAIL", "what": "p.7 pool and dome details, p.13 footing / ground-beam details, p.16 typical stair section (pages not in the DXF)"},
+  {"doc": "p7757_arch_sheet10.pdf", "role": "SECTION", "what": "architectural section A-A (stairs, levels)"},
+  {"doc": "Alsenan_Architectural_P7757_Pages_11-12", "role": "SECTION", "what": "architectural section B-B"}
+ ],
+ "printed": [
+  {"id": "EV-POOL-FLOOR-T", "element_kind": "POOL", "element_id": "POOL-1", "param": "POOL_FLOOR_THICKNESS_M", "value": 0.40, "unit": "m", "doc": "ST7757.pdf", "note": "p.7 pool detail '40'; Checker T-180 (verifier 2026-10-22 10:20) re-measured the base 10.935 m2 x 0.40 = 4.374 m3", "basis": "STRUCTURAL"},
+  {"id": "EV-POOL-DEPTH-FIN", "element_kind": "POOL", "element_id": "POOL-1", "param": "POOL_WALL_HEIGHT_M", "value": 1.15, "unit": "m", "doc": "P7757_DXF_COMPRESSED.zip", "note": "finished water depth, rim +0.30 to floor -0.85 (owner Q-26 A); the RC height is to the structural surface (Checker 2026-10-22 12:05, D-T183-1, rework T-183 r2): structural value not yet established", "basis": "FINISHED"},
+  {"id": "EV-CB-BOTTOM-EXT", "element_kind": null, "element_id": null, "param": "CB_BOTTOM_EXTENSION_M", "value": 0.075, "unit": "m", "doc": "ST7757 dxf.dxf", "note": "'7.5cm' at the bottom bar ends past the interior support, SH03 / SH05 / SH07 continuous-beam typical details; project data file project_data_st7757_t064.json DRAWING-VERIFIED (T-044 r2, T-064)", "basis": "STRUCTURAL"},
+  {"id": "EV-CB-EXTENT-022", "element_kind": null, "element_id": null, "param": "CB_SUPPORT_BAR_EXTENT_FRAC", "value": 0.22, "unit": "fraction", "doc": "ST7757 dxf.dxf", "note": "'0.22 Ln' / 'Ln1' / 'Ln2' dimension overrides; data file HELD (T-044 class DIFFERENT)", "basis": "STRUCTURAL"},
+  {"id": "EV-CB-EXTENT-030", "element_kind": null, "element_id": null, "param": "CB_SUPPORT_BAR_EXTENT_FRAC", "value": 0.30, "unit": "fraction", "doc": "ST7757 dxf.dxf", "note": "'0.3 Ln2' printed beside 0.22 on one detail; which bars take which extent is not settled (data file hold reason)", "basis": "STRUCTURAL"},
+  {"id": "EV-BLINDING-PROJ", "element_kind": null, "element_id": null, "param": "BLINDING_PROJECTION_M", "value": 0.10, "unit": "m", "doc": "ST7757.pdf", "note": "p.13 '10 | 30 | 10' under each ground-beam section; data file DRAWING-VERIFIED", "basis": "STRUCTURAL"},
+  {"id": "EV-STAIR-T16", "element_kind": "STAIR", "element_id": null, "param": "STAIR_WAIST_CONVENTION_M", "value": 0.16, "unit": "m", "doc": "ST7757 dxf.dxf", "note": "'T 16' inside the stair panels of the GF / 1F roof slabs and the round-stair panel (owner Q-47 A; T-111 ledger, merged). Applies to ST-01 and ST-02 only, not to the entrance flight (no thickness printed, T-111)", "basis": "STRUCTURAL", "applies_to": ["ST-01", "ST-02"]},
+  {"id": "EV-DOME-SHELL-10", "element_kind": "DOME", "element_id": null, "param": "DOME_SHELL_THICKNESS_M", "value": 0.10, "unit": "m", "doc": "ST7757.pdf", "note": "'DETAIL OF DOME' 442 / 190 / 10 on the first-floor roof domes (Q-27 problem text; T-160 merged); '10' read as the shell thickness: notation meaning to be confirmed by T-185", "basis": "STRUCTURAL", "applies_to": ["DOME-1", "DOME-2"]},
+  {"id": "EV-DOME-RISE", "element_kind": "DOME", "element_id": null, "param": "DOME_RISE_RATIO", "value": 0.8597, "unit": "ratio", "doc": "ST7757.pdf", "note": "rise '190' over the half span 442 / 2 = 2.21 m: 1.90 / 2.21 = 0.8597 (a ratio derived from two printed values; the engine's convention is 1.0, a hemisphere)", "basis": "STRUCTURAL", "applies_to": ["DOME-1", "DOME-2"]}
+ ],
+ "inventory": [
+  {"id": "POOL-1", "kind": "POOL", "parts": {"FLOOR": {"value": 10.936, "unit": "m2"}, "WALLS": {"value": 2.357, "unit": "m2"}}, "source": "outer D 3.50 x 1.75 + r 1.75 (S-BW 7C6), wall ring band 2.357 m2 all round incl. the curved half (CONCRETE_LEDGER_V2 records, T-049; Checker T-180 10.935 m2)"},
+  {"id": "ST-01", "kind": "STAIR", "parts": {"GF-1F": null, "1F-2F": null, "LOBBY": null}, "source": "T-111 ledger (merged): main dog-leg GF -> 1F (MS1-L, MS1-LD, MS1-U) -> 2F (MS2-L, MS2-LD, MS2-U), and the hall -> +0.30 lobby flight in its shaft"},
+  {"id": "ST-02", "kind": "STAIR", "parts": {"WHOLE": null}, "source": "T-111: round reception stair GF -> 1F"},
+  {"id": "ST-03", "kind": "STAIR", "parts": {"WHOLE": null}, "source": "T-111: entrance flight"},
+  {"id": "DOME-1", "kind": "DOME", "parts": {"SHELL": null}, "source": "first-floor roof, DETAIL OF DOME (Q-27 A)"},
+  {"id": "DOME-2", "kind": "DOME", "parts": {"SHELL": null}, "source": "first-floor roof, DETAIL OF DOME (Q-27 A)"},
+  {"id": "DOME-3", "kind": "DOME", "parts": {"SHELL": null}, "source": "upper (second-floor) roof, architecture only, no structural detail (Q-27 A: three domes)"}
+ ],
+ "mapping": {
+  "P-C:SCOPE:POOL:GROUND:CC-4075a81d7f:FLOOR": {"element_id": "POOL-1", "element_kind": "POOL", "part": "FLOOR", "footprint_dim": "outer_m2"},
+  "P-C:SCOPE:POOL:GROUND:CC-4075a81d7f:WALLS": {"element_id": "POOL-1", "element_kind": "POOL", "part": "WALLS", "footprint_dim": "wall_plan_m2"},
+  "P-C:SCOPE:STAIRS:GF:CC-7390ea1139:FLIGHTS": {"element_id": "ST-01", "element_kind": "STAIR", "part": "GF-1F", "why": "two 12-riser flights + a 5-riser winder on the GF roof-slab sheet: the main stair GF -> 1F (reconciliation file 2026-10-22, T-184 READY)"},
+  "P-C:SCOPE:STAIRS:GROUND:CC-66961c6b20:FLIGHTS": {"element_id": "ST-02", "element_kind": "STAIR", "part": "WHOLE", "why": "winder region on the ground-beam plan: the round stair (reconciliation file 2026-10-22)"},
+  "P-C:SCOPE:STAIRS:GROUND:CC-325233f037:FLIGHTS": {"element_id": "ST-03", "element_kind": "STAIR", "part": "WHOLE", "why": "5 risers, 2.80 m wide: the entrance flight (T-111: entrance 2.8 m)"},
+  "P-C:SCOPE:DOMES:2F:CC-6e7b8c8d1f:SHELL": {"element_id": "DOME-1", "element_kind": "DOME", "part": "SHELL"},
+  "P-C:SCOPE:DOMES:2F:CC-a0729cfebc:SHELL": {"element_id": "DOME-2", "element_kind": "DOME", "part": "SHELL"}
+ }
+}

@@ -14,15 +14,15 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `data/` | 19 | Registries (owner facts, project rules, trades) and trade rules. Large run data is gitignored. |
 | `docs/` | 72 | Design notes and the generated maps. |
 | `documents/` | 5 |  |
-| `engine/` | 634 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
+| `engine/` | 635 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 2669 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 2672 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 9 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 1369 | pytest suites, one folder per round. |
+| `tests/` | 1372 | pytest suites, one folder per round. |
 | `tools/` | 109 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (254 modules)
@@ -387,7 +387,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `workbooks.py` | 242 | MEDIUM | 0 | REPORTING V3 - workbook layouts (generic over a BOQ_LINES model). |
 | `workbooks_v3b.py` | 308 | MEDIUM | 0 | REPORTING V3b - workbook layouts over the two-view line model (TECHNICAL_QTO / COMMERCIAL_BOQ). |
 
-## `engine/source/` (282 modules)
+## `engine/source/` (283 modules)
 
 | Module | Lines | Risk | Imp | Purpose |
 |---|---|---|---|---|
@@ -459,6 +459,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `curved_member_geometry.py` | 346 | CRITICAL | 3 | CURVED MEMBER GEOMETRY - circular arcs, rings and spherical shells measured exactly (generic, stdlib). |
 | `curved_opening.py` | 80 | MEDIUM | 2 | CURVED OPENING MEASUREMENT (V1.1) - every geometric basis of a curved (arc) glazing run is published under an |
 | `decoder_pins.py` | 108 | MEDIUM | 9 | DECODER_BINARY_PIN registry (R8 A9) — which decoder builds may support FINAL provenance. |
+| `default_guard.py` | 437 | MEDIUM | 1 | DEFAULT GUARD - no convention value where the project documents print one; no partial footprint; no silent |
 | `delta_correction.py` | 154 | CRITICAL | 3 | DELTA CORRECTION (ERRATA) - an explicit correction layer over a frozen delta release (generic, stdlib only). |
 | `delta_release.py` | 159 | CRITICAL | 37 | DELTA RELEASE - a frozen accurate-rebar release plus a delta, never a rewritten historical result. |
 | `detail_evidence.py` | 361 | MEDIUM | 7 | DETAIL EVIDENCE (M3) - typical-detail evidence read from a drawing PDF, in one schema for machine reads (native |
@@ -1049,6 +1050,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t177_scoreboard_v2/` | 1 |
 | `tests/t183_pool_rc/` | 1 |
 | `tests/t184_stairs/` | 1 |
+| `tests/t186_default_guard/` | 1 |
 | `tests/water_tank_s8_4/` | 3 |
 | `tests/zz_freeze_integrity/` | 2 |
 
@@ -1240,6 +1242,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t177/` | 2 |
 | `research/agents_t183/` | 3 |
 | `research/agents_t184/` | 5 |
+| `research/agents_t186/` | 3 |
 | `research/alsenan_arch_truth_05/` | 28 |
 | `research/alsenan_column_rebar_s3/` | 17 |
 | `research/alsenan_column_rebar_s3_1/` | 15 |
