@@ -64,8 +64,10 @@ The BOQ shows S0 and S1 side by side; S1 is not released as the approved design 
 | Entrance stair | | | | 1.411 | | | |
 | Domes S0 | | | | 6.780 | | | |
 | Domes S1 | | 0 shell | | n/a | | | |
-| Pool floor | | | | 4.320 | | | |
-| Pool walls | | | | 4.320 | | | |
-| Pool steps / benches | | | | 0.228 | | | |
-| Pump room walls + floor (exists?) | | | | 3.480 | | | |
-| Blinding under pool (separate line) | | | | (not in his pool) | | | |
+| Pool floor (RC base) | ST p.7 '40'; S-BW 7C6 outer D 3.50 x 1.75 + r 1.75; Q-26 A flat | 10.936 m2 x 0.40 = 4.374 (wall foot included) | 1.511 (6.045 m2 x convention 0.25) | 4.320 | his -0.054: typed 10.8 m2 vs 10.936 (residual unexplained); engine -2.863: half D lost + 0.25 not printed | DRAWING-CONFIRMED (T-183) | T-180: VERIFIED 4.374 |
+| Pool walls | S-BW 7C6 / 7C5 band 2.357 m2 (all round, curved half included); 1.15 above base top (Q-26 A; NW cut 115) | 2.357 x 1.15 = 2.710 | 1.984 (straight strip 1.24 m2 x convention 1.60) | 4.320 | his +1.610: length 12 vs 11.784 (+0.050), base thickness counted again in 1.80 (+0.960), 0.25 m not drawn (+0.600); engine -0.726: curved half lost, height convention | DRAWING-CONFIRMED (T-183) | T-180: own 2.710 |
+| Pool steps / benches | GF plan pool interior, p.7 (sloped profile excluded by Q-26 A) | none drawn | none | 0.228 | his scope, not drawn | NOT DRAWN (consultant C5: access) | |
+| Pump room walls + floor (exists?) | S-BW (pool D + lift box only), GF plan, both DXF texts; owner Q-19 / Q-22 A | does not exist on the drawings | none | 3.480 | his scope, not drawn | NOT DRAWN | |
+| Blinding under pool (separate line) | p.7 '10cm PLAIN CONCRETE' under 5 cm membrane + 5 cm screed; projection not dimensioned | >= 12.217 m2 x 0.10 = 1.222 (lower bound) | not separate | (not in his pool) | projection HELD (footing p.13 10 cm not extended: +0.134) | HELD (lower bound shown) | |
+
+T-183 (worker 1, 2026-10-22 11:05 UTC, READY 8beaa6a): pool RC total 7.084 m3 (base 4.374 + walls 2.710), engine A 3.495, freelancer 12.348 (+5.264 closes to 0.000); formwork 32.101 m2, membrane 30.307 m2 net, water-face 21.309 m2; rebar R1 847.00 .. 885.64 / R2 586.25 .. 610.35 kg HELD (designer); T-166 hoops corrected (-41.90 / -29.09 kg). Full ledger: research/agents_t183/T-183_POOL_RC.md on agents/task-T-183.
