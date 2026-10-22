@@ -150,8 +150,14 @@ def main(argv=None):
                                                  "release report")
     ap.add_argument("--v2-candidate-label")
     ap.add_argument("--v2-heading", help="UTC date time for the '## SCOREBOARD v2' heading")
+    # T-182 opt-in: the five-measures table (## SCOREBOARD v2.1); without it the v2 output is unchanged
+    ap.add_argument("--v2-five-measures", action="store_true", help="T-182 five-measures layout")
+    ap.add_argument("--v2-min-accuracy-scope", type=float, help="minimum scope share for the accuracy column")
     a = ap.parse_args(argv)
-    v2 = [a.v2_markdown, a.v2_label, a.v2_verdicts, a.v2_candidate_lines, a.v2_candidate_label, a.v2_heading]
+    v2 = [a.v2_markdown, a.v2_label, a.v2_verdicts, a.v2_candidate_lines, a.v2_candidate_label, a.v2_heading,
+          a.v2_five_measures or None, a.v2_min_accuracy_scope]
+    if a.v2_min_accuracy_scope is not None and not a.v2_five_measures:
+        ap.error("--v2-min-accuracy-scope needs --v2-five-measures")
     if a.v2_out is None and any(x is not None for x in v2):
         ap.error("the --v2-* options need --v2-out")
     if a.v2_out is not None and (a.v2_label is None or a.v2_verdicts is None):
@@ -165,10 +171,12 @@ def main(argv=None):
     print(md, end="")
     if a.v2_out is not None:
         from tools import scoreboard_v2 as V2
+        five = {} if not a.v2_five_measures else {"layout": V2.LAYOUT_FIVE, "min_scope": (
+            V2.MIN_ACCURACY_SCOPE if a.v2_min_accuracy_scope is None else a.v2_min_accuracy_scope)}
         res2 = V2.build(a.run, a.v2_label, json.loads(Path(a.reference).read_text(encoding="utf-8")),
                         json.loads(Path(a.key_map).read_text(encoding="utf-8")),
                         json.loads(Path(a.v2_verdicts).read_text(encoding="utf-8")),
-                        a.v2_candidate_lines, a.v2_candidate_label)
+                        a.v2_candidate_lines, a.v2_candidate_label, **five)
         print(V2.write(res2, a.v2_out, a.v2_markdown, a.v2_heading), end="")
     return 0
 

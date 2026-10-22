@@ -44,6 +44,35 @@ CLI (also through tools/alsenan_keymap.py --v2-* options, which the agent wrappe
     python3 -I tools/scoreboard_v2.py --run RUN_DIR --label "A (released ...)" --reference BENCHMARK_NORMALISED.json
         --key-map KEY_MAP.json --verdicts VERDICTS.json [--candidate-lines V3_0_x_BOQ_LINES.json
         --candidate-label "..."] --out OUT.json [--markdown OUT.md] [--heading "YYYY-MM-DD HH:MM UTC"]
+        [--layout five --min-accuracy-scope 0.50]
+
+FIVE MEASURES layout (task T-182, owner scoreboard review 2026-10-22; opt-in `layout=LAYOUT_FIVE`, heading
+"## SCOREBOARD v2.1 <time>"; the default layout above and its JSON stay byte-identical). The five measures are kept
+apart, each with its numerator and denominator, and released / candidate sides are always separate rows:
+
+| Trade | Unit | Baseline | Ref lines | Coverage % (n / d) | Verified n / d | Accuracy vs independent (lines, scope
+share) | Freelancer variance | Held or UNKNOWN | Rule difference share % |
+
+1. Coverage % (n / d): reference lines the engine answers (compared, held, unsupported, released without a reference
+   quantity) / reference lines; tools/alsenan_scoreboard.py `covered` unchanged.
+2. Verified n / d: exactly the T-177 Verified share (whole-scope checker re-measures of THIS side's compared quantity,
+   within 1 %); nothing else raises it (a partial re-measure, a rule verdict, a re-measure of another line, a stale or
+   discrepant re-measure, freelancer agreement).
+3. Accuracy vs independent: engine against the CHECKER's own quantity, never against the freelancer. Lines: every
+   reference line with a whole-scope checker re-measure in the line's unit whose engine quantity is released on this
+   side (outcome COMPARED or REFERENCE_QTY_MISSING); a discrepant (> 1 %) or stale re-measure is INCLUDED (the checker
+   quantity is a property of the element, not of the engine run; leaving discrepancies out would flatter the figure);
+   a HELD line has no engine quantity and is listed, never 0. WAPE = sum |engine - checker| / sum checker, signed =
+   sum (engine - checker) / sum checker. Scope share = sum checker quantity of those lines / the trade-and-unit size,
+   where each reference line's size is its checker quantity when one exists, else this side's released engine
+   quantity; the freelancer's quantity is never a weight (so a smaller freelancer variance can never move this
+   column). A reference line with neither (HELD / unit refused / silent) leaves the size incomplete: the share is
+   then only an upper bound and the cell says NOT YET MEASURED. Rule: reported only when at least one line, the size
+   is complete and the share >= MIN_ACCURACY_SCOPE (0.50, an initial operational value like the WORKFLOW_CONTROLS s.1
+   thresholds, for the Lead / owner to review; --min-accuracy-scope); otherwise NOT YET MEASURED with the reason.
+4. Freelancer variance: the v1 WAPE / signed against the freelancer on the compared lines, with compared / reference
+   lines; a comparison, not accuracy (the freelancer is not ground truth).
+5. Held or UNKNOWN: the T-177 cell unchanged (bounded sums, UNKNOWN, conditional sets, NOT YET MEASURED causes).
 """
 
 from __future__ import annotations
@@ -67,6 +96,22 @@ COLUMNS = ("Trade", "Unit", "Baseline", "Ref lines", "Coverage %", "Compared", "
 NYM = "NOT YET MEASURED"
 QTY_MATCH_TOL = 0.0005          # the engine quantity a verdict re-measured must be this run's quantity
 DISCREPANCY_REL = 0.01          # WORKFLOW_CONTROLS s.1: hand vs engine above 1 % -> investigate, the line is HELD
+
+LAYOUT_V2 = "V2"
+LAYOUT_FIVE = "FIVE_MEASURES"
+COLUMNS_FIVE = ("Trade", "Unit", "Baseline", "Ref lines", "Coverage % (n / d)", "Verified n / d",
+                "Accuracy vs independent (lines, scope share)", "Freelancer variance", "Held or UNKNOWN",
+                "Rule difference share %")
+HEADING_FIVE = "SCOREBOARD v2.1"
+MIN_ACCURACY_SCOPE = 0.50       # initial operational value (T-182); the Lead / owner review it with actual results
+ACCURACY_OUTCOMES = (S.OUT_COMPARED, S.OUT_REF_QTY_MISSING)   # the side's whole engine quantity is released
+FIVE_RULES = ("five measures kept apart (T-182): coverage = answered / reference lines; verified = whole-scope checker "
+              "re-measures of this side's compared quantity within 1 %, nothing else raises it; accuracy = engine vs "
+              "the checker's own quantity (discrepant and stale re-measures included, held lines listed, never 0), "
+              "scope share = checker quantity of those lines / sizes of all reference lines (checker quantity, else "
+              "this side's released engine quantity; never the freelancer's), reported only with a complete size and "
+              "share >= the minimum; freelancer variance = comparison only, never accuracy; released and candidate "
+              "sides never combined")
 
 KINDS = ("REMEASURE", "RULE_DIFFERENCE", "NO_RULE_DIFFERENCE")
 SCOPES = ("WHOLE", "PARTIAL")
@@ -140,8 +185,10 @@ def _remeasure_status(v, line):
 
 # ---- one scored side --------------------------------------------------------------------------------------------------
 
-def score_side(lines, release_report, normalised_doc, key_map_doc, verdicts_doc, label, provenance=""):
-    """The v2 rows of one side (a run, or candidate lines beside a base run's release report)."""
+def score_side(lines, release_report, normalised_doc, key_map_doc, verdicts_doc, label, provenance="",
+               layout=LAYOUT_V2, min_scope=MIN_ACCURACY_SCOPE):
+    """The v2 rows of one side (a run, or candidate lines beside a base run's release report); layout LAYOUT_FIVE
+    gives the T-182 five-measures cells and an accuracy_audit."""
     eng, adapter = K.engine_rows(lines, release_report, key_map_doc)
     ref = K.reference_rows(normalised_doc, key_map_doc)
     result = S.score(eng, ref)
@@ -209,14 +256,122 @@ def score_side(lines, release_report, normalised_doc, key_map_doc, verdicts_doc,
                           "source": v["source"], "commit": v["commit"]})
 
     score_by = {(x["trade"], x["unit"]): x for x in result["buckets"]}
+    five = layout == LAYOUT_FIVE
+    if layout not in (LAYOUT_V2, LAYOUT_FIVE):
+        raise ValueError(f"layout {layout!r} not in {(LAYOUT_V2, LAYOUT_FIVE)}")
+    acc_audit = _accuracy(result["lines"], by_ref, buckets, min_scope) if five else None
     rows = []
     for key in sorted(buckets, key=lambda k: (str(k[0]), str(k[1]))):
         b = buckets[key]
         s = score_by[key]
-        b["cells"] = _cells(b, s, label + provenance)
+        b["cells"] = _cells_five(b, s, label + provenance) if five else _cells(b, s, label + provenance)
         rows.append(b)
-    return {"label": label, "provenance": provenance.lstrip(", "), "rows": rows, "verdict_audit": audit,
-            "score": result, "adapter": adapter}
+    out = {"label": label, "provenance": provenance.lstrip(", "), "rows": rows, "verdict_audit": audit,
+           "score": result, "adapter": adapter}
+    if five:
+        out["accuracy_audit"] = acc_audit
+    return out
+
+
+# ---- T-182: accuracy against the checker's independent quantity --------------------------------------------------------
+
+def _accuracy(result_lines, by_ref, buckets, min_scope):
+    """Fill b['accuracy'] per bucket; return the per-line audit. Never reads the freelancer quantity."""
+    if not (0.0 < float(min_scope) <= 1.0):
+        raise ValueError(f"minimum accuracy scope {min_scope!r} must be in (0, 1]")
+    audit = []
+    for b in buckets.values():
+        b["accuracy"] = {"lines": 0, "sum_checker": 0.0, "sum_abs": 0.0, "sum_signed": 0.0, "stale_lines": 0,
+                         "discrepant_lines": 0, "independent_not_compared": 0, "size_known": 0.0,
+                         "size_unknown_lines": 0, "min_scope": float(min_scope)}
+    for ln in result_lines:
+        a = buckets[(ln["trade"], ln["unit"])]["accuracy"]
+        whole = [v for v in by_ref.get(ln["ref_id"], [])
+                 if v["kind"] == "REMEASURE" and v["scope"] == "WHOLE" and S.norm_unit(v["unit"]) == ln["unit"]]
+        v = whole[0] if whole else None      # load_verdicts allows one whole re-measure per reference line
+        released = ln["outcome"] in ACCURACY_OUTCOMES and ln["engine_qty"] is not None
+        if v is not None:
+            c = float(v["checker_qty"])
+            a["size_known"] += c
+            rec = {"ref_id": ln["ref_id"], "outcome": ln["outcome"], "checker_qty": c, "engine_qty": ln["engine_qty"],
+                   "source": v["source"], "commit": v["commit"]}
+            if not released:
+                a["independent_not_compared"] += 1
+                audit.append(rec | {"counted": False, "reason": f"NO_RELEASED_ENGINE_QTY ({ln['outcome']}): the "
+                                                                "line stays HELD, never 0"})
+                continue
+            e = float(ln["engine_qty"])
+            a["lines"] += 1
+            a["sum_checker"] += c
+            a["sum_abs"] += abs(e - c)
+            a["sum_signed"] += e - c
+            stale = abs(float(v["engine_qty"]) - e) > QTY_MATCH_TOL
+            disc = c == 0 or abs(e - c) / abs(c) > DISCREPANCY_REL
+            a["stale_lines"] += stale
+            a["discrepant_lines"] += disc
+            audit.append(rec | {"counted": True, "reason": "COUNTED" + (" (stale: re-measured against another engine "
+                                                                        "quantity)" if stale else "")
+                                + (" (discrepancy above 1 %)" if disc else "")})
+        elif released:
+            a["size_known"] += float(ln["engine_qty"])
+        else:
+            a["size_unknown_lines"] += 1
+    for b in buckets.values():
+        a = b["accuracy"]
+        a["scope_share"] = (a["sum_checker"] / a["size_known"]) if a["size_known"] > 0 else None
+        a["size_complete"] = a["size_unknown_lines"] == 0
+        ok = (a["lines"] > 0 and a["sum_checker"] > 0 and a["size_complete"] and a["scope_share"] is not None
+              and a["scope_share"] + 1e-12 >= a["min_scope"])
+        a["reported"] = ok
+        a["wape"] = a["sum_abs"] / a["sum_checker"] if ok else None
+        a["signed"] = a["sum_signed"] / a["sum_checker"] if ok else None
+    return audit
+
+
+def accuracy_text(b):
+    """The Accuracy vs independent cell; NOT YET MEASURED unless the scope rule is met."""
+    a, u = b["accuracy"], b["unit"]
+    n = a["lines"]
+    head = f"{n} line{'s' if n != 1 else ''}"
+    extra = []
+    if a["discrepant_lines"]:
+        extra.append(f"{a['discrepant_lines']} above 1 %")
+    if a["stale_lines"]:
+        extra.append(f"{a['stale_lines']} stale")
+    if a["independent_not_compared"]:
+        k = a["independent_not_compared"]
+        extra.append(f"{k} checker-measured line{'s' if k != 1 else ''} HELD in the engine, not counted")
+    tail = ("; " + "; ".join(extra)) if extra else ""
+    mn = f"{100.0 * a['min_scope']:.0f} %"
+    if n == 0:
+        return f"{NYM} (0 lines with an independent checker quantity{tail})"
+    share = f"{100.0 * a['scope_share']:.2f} % = {_q(a['sum_checker'])} / {_q(a['size_known'])} {u}"
+    if not a["size_complete"]:
+        k = a["size_unknown_lines"]
+        return (f"{NYM} ({head}; scope at most {share}: {k} ref line{'s' if k != 1 else ''} without a quantity "
+                f"independent of the freelancer{tail})")
+    if not a["reported"]:
+        return f"{NYM} ({head}; scope {share}, below the {mn} minimum{tail})"
+    return (f"WAPE {100.0 * a['wape']:.2f} %, signed {100.0 * a['signed']:.2f} % ({head}; scope {share}, "
+            f"minimum {mn}{tail})")
+
+
+def _cells_five(b, s, baseline):
+    n = b["ref_lines"]
+    cov = NYM if not n else f"{100.0 * s['covered'] / n:.2f} ({s['covered']} / {n})"
+    verified = f"{b['verified']} / {n} ({100.0 * b['verified'] / n:.2f} %)"
+    p = b["partial_remeasures"]
+    if p:
+        verified += f"; {p} partial re-measure{'s' if p != 1 else ''} not counted"
+    k = s["compared"]
+    var = (f"{NYM} (0 / {n} compared)" if not k or s["wape"] is None else
+           f"WAPE {_f2(s['wape'])} %, signed {_f2(s['signed_error_ratio'])} % ({k} / {n} compared)")
+    rule = (NYM if not b["rule_assessed"] else f"{100.0 * b['rule_difference'] / n:.2f} ({b['rule_difference']} / {n})")
+    p = b["partial_rule_verdicts"]
+    if p:
+        rule += f" ({p} partial rule verdict{'s' if p != 1 else ''} not counted)"
+    return [str(b["trade"]), str(b["unit"]), baseline, str(n), cov, verified, accuracy_text(b), var, held_text(b),
+            rule]
 
 
 def _f2(x):
@@ -299,33 +454,45 @@ def lines_provenance(lines_path):
     return out
 
 
-def build(run_dir, label, normalised_doc, key_map_doc, verdicts_doc, candidate_lines=None, candidate_label=None):
-    """Score the run (and the candidate lines beside the run's release report) into one SCOREBOARD v2 result."""
+def build(run_dir, label, normalised_doc, key_map_doc, verdicts_doc, candidate_lines=None, candidate_label=None,
+          layout=LAYOUT_V2, min_scope=MIN_ACCURACY_SCOPE):
+    """Score the run (and the candidate lines beside the run's release report) into one SCOREBOARD v2 result
+    (layout LAYOUT_FIVE: the T-182 five-measures table)."""
     run_dir = Path(run_dir)
+    five = layout == LAYOUT_FIVE
+    kw = {"layout": layout, "min_scope": min_scope} if five else {"layout": layout}
     rel_path = run_dir / "BOQ_RELEASE_REPORT.json"
     rel = _load(rel_path) if rel_path.exists() else None
     sides = [score_side(_load(run_dir / "BOQ_LINES.json"), rel, normalised_doc, key_map_doc, verdicts_doc, label,
-                        run_provenance(run_dir))]
+                        run_provenance(run_dir), **kw)]
     if candidate_lines is not None:
         if not _nonempty(candidate_label):
             raise ValueError("a candidate needs its label")
+        if five and candidate_label.strip() == str(label).strip():
+            raise ValueError("the candidate label equals the released label: the two sides are never combined")
         sides.append(score_side(_load(candidate_lines), rel, normalised_doc, key_map_doc, verdicts_doc,
-                                candidate_label, lines_provenance(candidate_lines)))
-    return {"SCHEMA": SCHEMA, "columns": list(COLUMNS), "release_report_present": rel is not None,
-            "sides": [{k: v for k, v in s.items() if k != "score"} | {"buckets_v1": s["score"]["buckets"]}
-                      for s in sides],
-            "rule": "per trade and unit, never mixed; HELD / UNKNOWN never 0 and never counted correct; verified "
-                    "share only from whole-scope checker re-measures of this run's quantity; development reference "
-                    "only, no product accuracy claim"}
+                                candidate_label, lines_provenance(candidate_lines), **kw))
+    res = {"SCHEMA": SCHEMA, "columns": list(COLUMNS_FIVE if five else COLUMNS), "release_report_present": rel is not None,
+           "sides": [{k: v for k, v in s.items() if k != "score"} | {"buckets_v1": s["score"]["buckets"]}
+                     for s in sides],
+           "rule": "per trade and unit, never mixed; HELD / UNKNOWN never 0 and never counted correct; verified "
+                   "share only from whole-scope checker re-measures of this run's quantity; development reference "
+                   "only, no product accuracy claim"}
+    if five:
+        res |= {"layout": LAYOUT_FIVE, "min_accuracy_scope": float(min_scope), "five_measures_rule": FIVE_RULES}
+    return res
 
 
 def markdown(result, heading=None):
-    """The SCOREBOARD v2 table: rows grouped by trade and unit, one per side in side order."""
+    """The SCOREBOARD v2 table: rows grouped by trade and unit, one per side in side order (the T-182 layout under
+    '## SCOREBOARD v2.1', which the T-132 dashboard parser of '## SCOREBOARD v2 ' does not pick up by mistake)."""
+    five = result.get("layout") == LAYOUT_FIVE
+    cols = COLUMNS_FIVE if five else COLUMNS
     out = []
     if heading:
-        out += [f"## SCOREBOARD v2 {heading}", ""]
-    out.append("| " + " | ".join(COLUMNS) + " |")
-    out.append("|" + "---|" * len(COLUMNS))
+        out += [f"## {HEADING_FIVE if five else 'SCOREBOARD v2'} {heading}", ""]
+    out.append("| " + " | ".join(cols) + " |")
+    out.append("|" + "---|" * len(cols))
     keys = []
     for s in result["sides"]:
         for r in s["rows"]:
@@ -359,9 +526,16 @@ def main(argv=None):
     ap.add_argument("--out", required=True)
     ap.add_argument("--markdown")
     ap.add_argument("--heading")
+    ap.add_argument("--layout", choices=("v2", "five"), default="v2",
+                    help="five = the T-182 five-measures table (## SCOREBOARD v2.1)")
+    ap.add_argument("--min-accuracy-scope", type=float, help=f"default {MIN_ACCURACY_SCOPE} (layout five only)")
     a = ap.parse_args(argv)
+    if a.layout != "five" and a.min_accuracy_scope is not None:
+        ap.error("--min-accuracy-scope needs --layout five")
+    extra = {} if a.layout != "five" else {"layout": LAYOUT_FIVE, "min_scope": (
+        MIN_ACCURACY_SCOPE if a.min_accuracy_scope is None else a.min_accuracy_scope)}
     result = build(a.run, a.label, _load(a.reference), _load(a.key_map), _load(a.verdicts), a.candidate_lines,
-                   a.candidate_label)
+                   a.candidate_label, **extra)
     print(write(result, a.out, a.markdown, a.heading), end="")
     return 0
 
