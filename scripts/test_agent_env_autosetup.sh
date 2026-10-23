@@ -26,9 +26,14 @@ grep -q "setup by auto" "$TMP/a/.work/setup.log" || fail "setup.log does not rec
 grep -q "prepared: .*setup by auto" <<<"$out" || fail "status does not report who prepared the session"
 ok "status prepared the session automatically (hook absent)"
 
-# 2. existing work is never lost: a marker file and a task worktree survive further commands
+# 2. existing work is never lost: a marker file and a task worktree survive further commands. The run lock (task needs it)
+# is taken against a LOCAL bare copy of agents/control, never the real board.
+BARE="$TMP/remote/msalfahad/Urban-Project-AI.git"; mkdir -p "$(dirname "$BARE")"
+git clone --quiet --bare "$URL" "$BARE"
+git -C "$TMP/a" remote set-url origin "$BARE"
+CLAUDE_CODE_REMOTE=true bash "$TMP/a/scripts/agent_env.sh" board log "- $(date -u +%Y-%m-%dT%H:%MZ) | Worker 1 | STARTED | test | x | x | x" >/dev/null || fail "lock not taken"
 echo keep > "$TMP/a/.work/board/docs/agents/_autosetup_test_marker"
-CLAUDE_CODE_REMOTE=true bash "$TMP/a/scripts/agent_env.sh" task TESTAUTO >/dev/null
+CLAUDE_CODE_REMOTE=true bash "$TMP/a/scripts/agent_env.sh" task TESTAUTO >/dev/null || fail "task with lock failed"
 echo work > "$TMP/a/.work/task-TESTAUTO/_task_marker"
 out="$(CLAUDE_CODE_REMOTE=true bash "$TMP/a/scripts/agent_env.sh" status 2>&1)"
 grep -q "running setup automatically" <<<"$out" && fail "setup ran again on a prepared session"

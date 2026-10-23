@@ -30,6 +30,12 @@
 #   board commit "MESSAGE"        commit every change under docs/agents/ of the board worktree and push agents/control
 #   board check                   pull, then docs/agents/dashboard/queue_check.py: every actionable task has an agent, a
 #                                 queue place and a reason; exit 1 when a row is flagged
+# RUN LOCK (owner 2026-10-23, pilot): one run per agent at a time. `board log` with a STARTED line of the Lead, a Worker
+# or the Verifier atomically takes docs/agents/locks/<agent>.lock on agents/control (the lock file and the STARTED line
+# are one commit; a concurrent run's push conflicts on the same file and that run re-checks). A held lock younger than
+# the agent's TTL makes the second run write an IDLE final line and exit 3 ("AGENT_ENV LOCKED"). An older lock is stale
+# and is taken over the same way (the STARTED line says so). The run's final line releases its own lock. `task` and
+# `board commit` refuse to run without the lock this session holds (a run that lost a stale lock cannot claim or merge).
 # T is "engine" (default) or "task-<ID>".
 set -euo pipefail
 
@@ -211,6 +217,7 @@ cmd_task() {
   local id="${1:-}"
   [[ "$id" =~ ^[A-Za-z0-9._-]+$ ]] || die "task ID must be letters, digits, . _ -"
   local dir="$WORK/task-$id" br="agents/task-$id"
+  require_lock
   if [[ -e "$dir" ]]; then say "task worktree exists: $dir"; return 0; fi
   git -C "$ROOT" fetch --quiet --no-tags origin "+refs/heads/$ENGINE_BRANCH:refs/remotes/origin/$ENGINE_BRANCH"
   if git -C "$ROOT" show-ref --verify --quiet "refs/heads/$br"; then
@@ -253,6 +260,72 @@ board_push() {  # push agents/control; on rejection rebase once and push again
   git -C "$b" push --quiet origin "HEAD:refs/heads/$BOARD_BRANCH" || die "board push rejected twice"
 }
 
+LOCK_DIR="docs/agents/locks"
+lock_slug() {  # agent name in a run-log line -> lock slug and TTL in minutes (empty: agent not locked)
+  case "$1" in
+    "Lead") echo "lead 120" ;;
+    "Worker 1") echo "worker-1 120" ;;
+    "Worker 2") echo "worker-2 120" ;;
+    "Worker 3") echo "worker-3 180" ;;
+    "Verifier"|"Checker") echo "checker 120" ;;
+    *) echo "" ;;
+  esac
+}
+
+lock_py() {  # lock_py MODE FILE [TOKEN TTL AGENT]: decide / write / release a lock file; prints the decision
+  python3 -I - "$@" <<'LOCKPY'
+import json, sys, time
+from datetime import datetime, timezone
+mode, path = sys.argv[1], sys.argv[2]
+now = time.time()
+try:
+    cur = json.load(open(path, encoding="utf-8"))
+except (OSError, ValueError):
+    cur = None
+if mode == "check":                      # FREE | BUSY <token> <since> | STALE <token> <since>
+    if not cur:
+        print("FREE"); sys.exit()
+    age_min = (now - cur["since_epoch"]) / 60
+    print(("STALE" if age_min >= cur["ttl_min"] else "BUSY"), cur["token"], cur["since"])
+elif mode == "take":
+    token, ttl, agent = sys.argv[3], int(sys.argv[4]), sys.argv[5]
+    json.dump({"agent": agent, "token": token, "since_epoch": now, "ttl_min": ttl,
+               "since": datetime.fromtimestamp(now, timezone.utc).strftime("%Y-%m-%dT%H:%MZ")},
+              open(path, "w", encoding="utf-8"), indent=1)
+    print("TAKEN")
+elif mode == "holder":                   # token of the current holder, or NONE
+    print(cur["token"] if cur else "NONE")
+LOCKPY
+}
+
+log_insert() {  # put LINE at the top of the "## Entries" list of RUN_LOG.md
+  LINE="$2" python3 -I -c 'import os,sys
+p=sys.argv[1]; s=open(p,encoding="utf-8").read(); h="## Entries"; i=s.index(h)+len(h)
+j=s.index("\n",i)+1
+while s[j:j+1]=="\n": j+=1
+open(p,"w",encoding="utf-8").write(s[:j]+os.environ["LINE"]+"\n"+s[j:])' "$1"
+}
+
+board_sync() {  # fetch agents/control and move the board worktree to it, keeping uncommitted edits (never discards them)
+  local b="$WORK/board"
+  git -C "$b" fetch --quiet origin "$BOARD_BRANCH"
+  git -C "$b" reset --quiet --keep "origin/$BOARD_BRANCH" || die "board has local commits or edits that block a sync"
+}
+
+require_lock() {  # the session must hold its agent lock (cloud sessions only; the lock is written by board log STARTED)
+  is_cloud || return 0
+  local held="$WORK/agent_lock"
+  [[ -f "$held" ]] || die "no run lock held: write the STARTED line with board log first (owner 2026-10-23 run lock)"
+  local slug token
+  read -r slug token < "$held"
+  git -C "$WORK/board" fetch --quiet origin "$BOARD_BRANCH"
+  local remote
+  remote="$(git -C "$WORK/board" show "origin/$BOARD_BRANCH:$LOCK_DIR/$slug.lock" 2>/dev/null | python3 -I -c 'import json,sys
+try: print(json.load(sys.stdin)["token"])
+except Exception: print("NONE")')"
+  [[ "$remote" == "$token" ]] || die "run lock lost (held by ${remote}); this run may not claim, merge or commit: end it"
+}
+
 cmd_board() {
   check_repo
   local b="$WORK/board" sub="${1:-}"; shift || true
@@ -262,19 +335,56 @@ cmd_board() {
     pull) git -C "$b" pull --quiet --rebase origin "$BOARD_BRANCH"; say "board @ $(git -C "$b" rev-parse --short HEAD)" ;;
     log)
       [[ $# -eq 1 && "$1" == "- "* && "$1" != *$'\n'* ]] || die 'board log needs ONE line starting with "- "'
-      git -C "$b" pull --quiet --rebase origin "$BOARD_BRANCH"
-      local f="$b/docs/agents/RUN_LOG.md"
-      grep -q '^## Entries' "$f" || die "RUN_LOG.md has no \"## Entries\" heading"
-      LINE="$1" python3 -I -c 'import os,sys
-p=sys.argv[1]; s=open(p,encoding="utf-8").read(); h="## Entries"; i=s.index(h)+len(h)
-j=s.index("\n",i)+1
-while s[j:j+1]=="\n": j+=1
-open(p,"w",encoding="utf-8").write(s[:j]+os.environ["LINE"]+"\n"+s[j:])' "$f"
-      git -C "$b" add docs/agents/RUN_LOG.md
-      git -C "$b" commit --quiet -m "Run log: ${1:2:60}"
-      board_push; say "run-log line pushed @ $(git -C "$b" rev-parse --short HEAD)" ;;
+      local f="$b/docs/agents/RUN_LOG.md" line="$1" agent word slug ttl
+      agent="$(cut -d'|' -f2 <<<"$line" | sed 's/^ *//; s/ *$//')"
+      word="$(cut -d'|' -f3 <<<"$line" | awk '{print toupper($1)}')"
+      read -r slug ttl <<<"$(lock_slug "$agent")"
+      local attempt lf="$b/$LOCK_DIR/${slug:-none}.lock" held="$WORK/agent_lock"
+      for attempt in 1 2 3 4; do
+        board_sync
+        grep -q '^## Entries' "$f" || die "RUN_LOG.md has no \"## Entries\" heading"
+        local msg="$line" lockop=""
+        if [[ -n "$slug" && "$word" == "STARTED" ]] && is_cloud; then
+          mkdir -p "$b/$LOCK_DIR"
+          local dec tok since
+          read -r dec tok since <<<"$(lock_py check "$lf")"
+          if [[ "$dec" == "BUSY" ]]; then
+            msg="- $(date -u +%Y-%m-%dT%H:%MZ) | $agent | IDLE | none (run lock held by run $tok since $since) | overlap lock: another $agent run is active; no claim, no change, no quantity | lock"
+            log_insert "$f" "$msg"; git -C "$b" add docs/agents/RUN_LOG.md
+            git -C "$b" commit --quiet -m "Run log: $agent idle (run lock held)"
+            if git -C "$b" push --quiet origin "HEAD:refs/heads/$BOARD_BRANCH" 2>/dev/null; then
+              echo "AGENT_ENV LOCKED: another $agent run holds the run lock since $since; an IDLE final line was written; end this run now"
+              exit 3
+            fi
+            continue
+          fi
+          local newtok="$(date -u +%Y%m%dT%H%M%S)-$$-$RANDOM"
+          lock_py take "$lf" "$newtok" "$ttl" "$agent" >/dev/null
+          [[ "$dec" == "STALE" ]] && msg="$msg | stale run lock of run $tok since $since recovered"
+          git -C "$b" add "$LOCK_DIR/$slug.lock"; lockop="take $newtok"
+        elif [[ -n "$slug" && "$word" != "STARTED" && -f "$held" ]]; then
+          local hslug htok
+          read -r hslug htok < "$held"
+          if [[ "$hslug" == "$slug" && "$(lock_py holder "$lf")" == "$htok" ]]; then
+            git -C "$b" rm --quiet "$LOCK_DIR/$slug.lock"; lockop="release"
+          fi
+        fi
+        log_insert "$f" "$msg"
+        git -C "$b" add docs/agents/RUN_LOG.md
+        git -C "$b" commit --quiet -m "Run log: ${msg:2:60}"
+        if git -C "$b" push --quiet origin "HEAD:refs/heads/$BOARD_BRANCH" 2>/dev/null; then
+          case "$lockop" in
+            take*) echo "$slug ${lockop#take }" > "$held"; say "run lock $slug taken" ;;
+            release) rm -f "$held"; say "run lock $slug released" ;;
+          esac
+          say "run-log line pushed @ $(git -C "$b" rev-parse --short HEAD)"; return 0
+        fi
+        git -C "$b" reset --quiet --keep HEAD~1   # drop only our unpushed commit (never other edits); re-sync, decide again
+      done
+      die "board log: push rejected four times" ;;
     commit)
       [[ $# -eq 1 && -n "$1" ]] || die "board commit needs one MESSAGE"
+      require_lock
       local outside
       outside="$(git -C "$b" status --porcelain --untracked-files=all | awk '{print $NF}' | grep -v '^docs/agents/' || true)"
       [[ -z "$outside" ]] || die "changes outside docs/agents/ refused: $outside"
@@ -304,7 +414,7 @@ main() {
     task) check_repo; ensure_prepared; cmd_task "$@" ;;
     decode) check_repo; ensure_prepared; cmd_decode "$@" ;;
     board) check_repo; ensure_prepared; cmd_board "$@" ;;
-    *) sed -n '2,33p' "${BASH_SOURCE[0]}"; [[ -z "$c" ]] || exit 2 ;;
+    *) sed -n '2,39p' "${BASH_SOURCE[0]}"; [[ -z "$c" ]] || exit 2 ;;
   esac
 }
 main "$@"
