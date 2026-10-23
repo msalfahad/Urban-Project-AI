@@ -2,6 +2,40 @@
 
 Development reference only: tuning against it is allowed, so these numbers never prove product accuracy (MISSION.md).
 
+## SCOREBOARD v2 2026-10-23 21:15 UTC
+
+### CLOSABLE LINES (owner 2026-10-23 17:50; ranked by whether the line can genuinely close from the existing drawings alone, not by the share measured; Checker classification, 21:15 run)
+
+| Rank | Reference line | Unit | Class | What blocks it (named item) | Own-measured so far |
+|---|---|---|---|---|---|
+| 1 | Floor area | m2 | CLOSABLE NOW (state A, opt-in --set-bindings path, T-216 merged bebd1241); candidates CLOSABLE AFTER the 1F living foot-of-flight pieces 0 .. 0.520 m2 are settled | A: the remaining 38 released floor lines (GF 23 incl. 11 strips, 1F 13: the living, 5 strips, laundry, 2 baths and the 4 bed rooms, 2F strips OP-001 / OP-002) need the Checker re-measure; FINDING: 2F strips OP-001 (exterior sill 0.15) and OP-002 (lift landing 0.20) are thresholds by T-218 / UP-THR-001, carried as porcelain floor in A (0.35 m2, class, not geometry) | PARTIALLY VERIFIED 9 of 47 pieces: 3 hand-wash sets (T-208 / T-216) + this run 2F maid 19.350, 2F W.C. 5.550, 2F strip OP-007 0.180, 1F baths 5.0225 x 2 and 4.725 (39.8525 m2 own = engine, 0.0 %) |
+| 2 | Plaster | m2 | CLOSABLE AFTER T-211, and after T-238 (W15 / W16 deduction 4.363 m2, own walk 21:05; merged T-150 / T-175 / T-201 still carry 4.805) | lane I plaster / paint package; wall heights (T-228; T-227 r2 MERGED ebce3d97) | NOT YET MEASURED |
+| 3 | Paint | m2 | as plaster | as plaster | NOT YET MEASURED |
+| 4 | Doors (aluminium) | m2 | CLOSABLE AFTER T-232 | engine answers pcs; D-GF-05 class HELD | T-181 path only |
+| 5 | Windows (aluminium) | m2 | CLOSABLE AFTER T-232, except W02 BLOCKED BY CONSULTANT D-53; W15 / W16 window area is 1.55 x 3.00 = 4.650 each by Q-32 A (own crown 3.00), not 4.805 | engine answers pcs (T-232); W02 count D-53 | 15.615 m2 VERIFIED of 88.081 (28 / 29 openings) |
+| 6 | CONC.BEAM | m3 | CLOSABLE AFTER T-229 integration for the runs; depths BLOCKED BY CONSULTANT D-02 / D-16 / D-63 / D-65 | as 19:05 | 4 of 238 census rows (T-229) |
+| 7 | CONC.FOOTING | m3 | BLOCKED BY CONSULTANT (Q-31 C designer item: F10 + F); also straps SB3 (D-15) and the boundary band C1 (Q-28 A) are in this keyed line | F10 + F 2.176 .. 2.275 m3 HELD | footing component VERIFIED: 25 / 26 outlines 64.304 m3 (T-233, Checker 20:14; FN / F9 D-32 ruled once in F9); straps SB3 0.6516 VERIFIED |
+| 8 | CONC.GROUND | m3 | BLOCKED BY CONSULTANT D-35 | as 19:05 | 3 lift-beam lengths (T-230) |
+| 9 | CONC.BLINDING | m3 | BLOCKED BY CONSULTANT D-15 / D-14; ground-beam blinding on Q-21 C | strap blinding 0 .. 0.913, beyond-plot 0 .. 0.189, F10 + F, ground beams | footing blinding inside the plot 14.990 m3 VERIFIED (T-233, Checker 20:14) |
+| 10 | CONC.SLAB | m3 | BLOCKED BY CONSULTANT D-41 | the slab drop (T-213) | slab panels 1F 19.3864 + 2F 5.400 m2 (T-213) |
+| 11 | CONC.COLUMN | m3 | BLOCKED BY CONSULTANT D-16 (C8), D-65, D-26 (PC-1F-B), D-39 (PC-2F), tank columns | as 19:05 | 31 / 59 |
+| 12 | CONC.POOL | m3 | BLOCKED BY CONSULTANT (steps) | pool steps | base + walls VERIFIED components |
+| 13 | CONC.STAIR_DOME | m3 | BLOCKED BY CONSULTANT (stair winder / waists, tower dome) | curved / winder parts | 2 flights + 2 dome shells VERIFIED components |
+
+Reading: floor area (state A) stays the highest closable line; the T-180 slot continues on it (next: 1F laundry / bath 3.5775 / 2.646, the 4 bed rooms, then GF batched by plan). Roof waterproofing / screed (T-221 MERGED) is not a scored reference line yet: its +5.50 area is HELD by layer 31.681 / 32.721 m2 (Checker 21:05).
+
+| Trade | Unit | Baseline | Ref lines | Coverage % | Compared | WAPE % | Signed % | Verified share % | Held or UNKNOWN | Rule difference share % |
+|---|---|---|---|---|---|---|---|---|---|---|
+| Concrete | m3 | A (released V29_ROUTEG_NO_PROFILE, manifest bca44b32, BOQ_LINES.csv b96185d4; re-run this run, REPRODUCED) | 8 | 100.00 | 3 | 17.03 | -17.03 | 0.00 (0 / 8; 3 partial re-measures not counted; CONC.FOOTING and CONC.BLINDING PARTIALLY VERIFIED this run, footing 64.304 and footing blinding 14.990 m3 components) | 5 ref lines HELD; 205 engine lines: 122 bounded 44.108 .. 113.540 m3 + 83 UNKNOWN (no bound) | 12.50 (1 / 8: blinding) |
+| Concrete | m3 | ARCH_TAKEOFF_V3.0.7 (candidate, 197c5599) | 8 | 100.00 | 1 | 1.84 | 1.84 | 0.00 (0 / 8) | as the 19:05 row | 12.50 (1 / 8: blinding) |
+| Concrete | m3 | ARCH_TAKEOFF_V3.0.8 (candidate, 57fe219a; NOT RELEASED) | 8 | 100.00 | NOT YET MEASURED (scorer not re-run on V3.0.8 by the Checker) | NOT YET MEASURED | NOT YET MEASURED | 0.00 (0 / 8) | as the 19:05 row | 12.50 (1 / 8: blinding) |
+| Floor area | m2 | A (as above) with the opt-in T-216 binding (--set-bindings research/agents_t216/ALSENAN_SET_BINDINGS_T216.json) | 1 | 100.00 | 1 | 5.85 | -5.85 | 0.00 (0 / 1; PARTIALLY VERIFIED 9 / 47 pieces, 49.201 m2 own-measured incl. the 3 sets (3.1325 + 1.485 + 4.7307 + 39.8525); not counted until every piece is re-measured) | 0 ref lines HELD; 9.348 m2 of the 385.634 is ASSUMED — OWNER-APPROVED (Q-06 A, verdict 54cb4c42), own column | NOT YET MEASURED (1 partial rule verdict not counted) |
+| Floor area | m2 | ARCH_TAKEOFF_V3.0.5 .. V3.0.8 (candidates) | 1 | 100.00 | 0 | NOT YET MEASURED | NOT YET MEASURED | 0.00 (0 / 1) | 1 ref line HELD: 1F living foot-of-flight 0 .. 0.520 m2 (bound 379.223 .. 379.743, T-216 worker run; not re-run by the Checker) | NOT YET MEASURED |
+| Blockwork | m2 | wall register v1 + merged deltas (T-225, T-226, T-222) | NOT YET MEASURED | NOT YET MEASURED | 0 | NOT YET MEASURED | NOT YET MEASURED | net VERIFIED 4.458 m2 (GF-W07); P-GF-05 masonry above 2.640 m2 re-measured (component); T-227 r2 MERGED ebce3d97: W15 / W16 deductions 4.363 m2 each and W18 1.080 re-measured; 1F-W00 net 12.863 SOURCE-SUPPORTED (gross register v1) | as 19:05, plus T-222: bay basis held 0 .. 1.645 m2 -> 0 (SOURCE-SUPPORTED), P-1F-01 masonry above 0 .. 4.992 HELD | NOT YET MEASURED |
+| Plaster, Paint, Doors (aluminium), Windows (aluminium) | m2 | A and V3.0.5 .. V3.0.8 | 1 each | as the 16:58 rows (no line of these trades moved) | as 16:58 | as 16:58 | as 16:58 | as 16:58 (windows 15.615 m2 VERIFIED of the T-181 path) | as 16:58 | as 16:58 |
+
+Sources (Verifier, 20:52 run, session_01A3AEdxaWbHn7dePps4gUme). Merged this run: T-227 r2 ebce3d97 and T-221 63f4d90e (research only, no engine or candidate line moved, so the trade rows are restated from the 20:20 section and the scorer was not re-run). Own re-measures on Drive 'P7757_DXF_COMPRESSED.zip' (P7757.dxf ab54dd55): 2F maid faces 1292 / 1279 / 1284 / 128D + 128B (3.000 x 6.450), 2F W.C. 1296 / 128F / 1298 (1.850 x 3.000), OP-007 jamb gap 0.900 in the 0.20 wall 128D / 1295; 1F baths B3E / C23 / AE4 + AE5 / C27 + C28 and C22 / C1B + C1C / C25 / C26 (2.050 x 2.450 each), C0D + C0E / B69 + B6A / B1B / C0C (2.250 x 2.100). Drive read OK. Released default unchanged (V2.9 + route G).
+
 ## SCOREBOARD v2 2026-10-23 20:20 UTC
 
 ### CLOSABLE LINES (owner 2026-10-23 17:50; ranked by whether the line can genuinely close from the existing drawings alone, not by the share measured; Checker classification, 20:20 run)
