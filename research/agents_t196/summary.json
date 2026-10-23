@@ -1,0 +1,406 @@
+{
+ "all_rows_accounted": true,
+ "elements": {
+  "HAS_LINE": 820,
+  "MISSING_LINE": 14
+ },
+ "elements_missing_by_kind": {
+  "DOME": 1,
+  "OPEN": 1,
+  "RAILING": 10,
+  "STAIR": 2
+ },
+ "findings": [
+  {
+   "component": "slab",
+   "elements": [
+    "development-villa-t131/297e913da9d9/2F/SLAB/E0a49118d",
+    "development-villa-t131/297e913da9d9/2F/SLAB/E0c76afd0",
+    "development-villa-t131/297e913da9d9/2F/SLAB/E16e8ccbe",
+    "development-villa-t131/297e913da9d9/2F/SLAB/E563ff24d",
+    "development-villa-t131/297e913da9d9/2F/SLAB/E6fd87f17",
+    "development-villa-t131/297e913da9d9/2F/SLAB/E8221887d",
+    "development-villa-t131/297e913da9d9/2F/SLAB/E82702635",
+    "development-villa-t131/297e913da9d9/2F/SLAB/Edc450a83",
+    "development-villa-t131/297e913da9d9/2F/SLAB/Ef22f7138"
+   ],
+   "finding": "DUPLICATE_ROW",
+   "rows": [
+    "RC:S15:23",
+    "RC:S15:24"
+   ],
+   "trade": "SLAB"
+  },
+  {
+   "element": "ALSENAN/DOME-TOWER",
+   "finding": "ROW_WITHOUT_LINE",
+   "rows": [
+    "RC:S16:13"
+   ]
+  },
+  {
+   "element": "ALSENAN/ST-01.1F-2F",
+   "finding": "ROW_WITHOUT_LINE",
+   "rows": [
+    "RC:S16:20",
+    "RC:S16:21"
+   ]
+  },
+  {
+   "finding": "NOT_DRAWN_SCOPE",
+   "reference_qty": 3.708,
+   "rows": [
+    "RC:S17:13",
+    "RC:S17:14",
+    "RC:S17:15"
+   ],
+   "unit": "m3"
+  },
+  {
+   "discipline": "ST",
+   "element": "ALSENAN/DOME-TOWER",
+   "finding": "NOT_DRAWN_PART",
+   "part": "tower dome shell (3rd dome)",
+   "reference_qty": 2.26,
+   "row_id": "RC:S16:13",
+   "unit": "m3"
+  }
+ ],
+ "ledger_elements": {
+  "ALSENAN/DOME-A": {
+   "lines": 2,
+   "rows": [
+    "RC:S16:13"
+   ],
+   "status": "HAS_LINE"
+  },
+  "ALSENAN/DOME-B": {
+   "lines": 2,
+   "rows": [
+    "RC:S16:13"
+   ],
+   "status": "HAS_LINE"
+  },
+  "ALSENAN/DOME-TOWER": {
+   "lines": 0,
+   "rows": [
+    "RC:S16:13"
+   ],
+   "status": "MISSING_LINE"
+  },
+  "ALSENAN/POOL-01": {
+   "lines": 2,
+   "rows": [
+    "RC:S17:11",
+    "RC:S17:12"
+   ],
+   "status": "HAS_LINE"
+  },
+  "ALSENAN/RL-01": {
+   "lines": 0,
+   "rows": [],
+   "status": "MISSING_LINE"
+  },
+  "ALSENAN/RL-02": {
+   "lines": 0,
+   "rows": [],
+   "status": "MISSING_LINE"
+  },
+  "ALSENAN/RL-03": {
+   "lines": 0,
+   "rows": [],
+   "status": "MISSING_LINE"
+  },
+  "ALSENAN/RL-04": {
+   "lines": 0,
+   "rows": [],
+   "status": "MISSING_LINE"
+  },
+  "ALSENAN/RL-05": {
+   "lines": 0,
+   "rows": [],
+   "status": "MISSING_LINE"
+  },
+  "ALSENAN/RL-06": {
+   "lines": 0,
+   "rows": [],
+   "status": "MISSING_LINE"
+  },
+  "ALSENAN/RL-07": {
+   "lines": 0,
+   "rows": [],
+   "status": "MISSING_LINE"
+  },
+  "ALSENAN/RL-08": {
+   "lines": 0,
+   "rows": [],
+   "status": "MISSING_LINE"
+  },
+  "ALSENAN/RL-09": {
+   "lines": 0,
+   "rows": [],
+   "status": "MISSING_LINE"
+  },
+  "ALSENAN/RL-10": {
+   "lines": 0,
+   "rows": [],
+   "status": "MISSING_LINE"
+  },
+  "ALSENAN/ST-01.1F-2F": {
+   "lines": 0,
+   "rows": [
+    "RC:S16:20",
+    "RC:S16:21"
+   ],
+   "status": "MISSING_LINE"
+  },
+  "ALSENAN/ST-01.GF-1F": {
+   "lines": 1,
+   "rows": [
+    "RC:S16:20",
+    "RC:S16:21"
+   ],
+   "status": "HAS_LINE"
+  },
+  "ALSENAN/ST-01b": {
+   "lines": 0,
+   "rows": [],
+   "status": "MISSING_LINE"
+  },
+  "ALSENAN/ST-02": {
+   "lines": 1,
+   "rows": [
+    "RC:S16:12"
+   ],
+   "status": "HAS_LINE"
+  },
+  "ALSENAN/ST-03": {
+   "lines": 1,
+   "rows": [
+    "RC:S16:11"
+   ],
+   "status": "HAS_LINE"
+  }
+ },
+ "line_bindings": [
+  "T-184: route G GF flights = ST-01 GF -> 1F only (2 flights + winder)",
+  "T-184: route G GROUND flight 2.80 m wide, 5 risers = entrance stair E1",
+  "T-184: the 8.37 m2 winder region on the ground-beam plan = part of ST-02",
+  "route G dome family 2F: the terrace domes (T-185 S0); tower dome has no line",
+  "route G pool family: one pool drawn (T-183)"
+ ],
+ "lines": {
+  "LINKED": 1733,
+  "UNLINKED": 1399
+ },
+ "lines_unlinked_by_reason": {
+  "boundary wall is a later kind (step 3)": 1,
+  "element key 'SOFFIT' names no room, opening, wall, roof zone or structural element": 5,
+  "facade outlines are a later kind (ELEMENT_REGISTER.md build order step 3)": 13,
+  "no element named": 3,
+  "route G element key family BEAM_STEEL is not a register v0 kind": 763,
+  "route G element key family COLUMN_STEEL is not a register v0 kind": 327,
+  "route G element key family GROUND_SYSTEM_STEEL is not a register v0 kind": 281,
+  "stair site region not bound to a staircase: kind WINDER, width 2.2111 m, zone 17.1272 m2, storey rise 4.2 m; matches no T-184 flight by geometry (ST-01 1F -> 2F = two straight 1.20 m flights + landing): either the ST-01 shaft read as one winder region (the D-T184-1 place) or another drawing; physical element to establish (Lead / Checker)": 1,
+  "threshold strip the engine left unattributed (no opening or door assembly names it)": 5
+ },
+ "not_issued": [
+  {
+   "candidate_lines": 1,
+   "designer_item": true,
+   "families": [
+    "STR.CONC.BOUNDARY_WALL"
+   ],
+   "item": "site / plot layout with external works",
+   "quantity_status": "UNKNOWN (sheet not issued; never 0)",
+   "reference_rows": 0,
+   "status": "NOT_ISSUED",
+   "trades": []
+  },
+  {
+   "candidate_lines": 8,
+   "designer_item": true,
+   "families": [
+    "FIN.WP.ROOF"
+   ],
+   "item": "roof plan (top roof: falls, drains, parapets, waterproofing)",
+   "quantity_status": "UNKNOWN (sheet not issued; never 0)",
+   "reference_rows": 0,
+   "status": "NOT_ISSUED",
+   "trades": []
+  },
+  {
+   "candidate_lines": 71,
+   "designer_item": true,
+   "families": [
+    "ARCH.WINDOW",
+    "DOOR."
+   ],
+   "item": "door / window schedule",
+   "quantity_status": "UNKNOWN (sheet not issued; never 0)",
+   "reference_rows": 21,
+   "status": "NOT_ISSUED",
+   "trades": [
+    "ALUMINIUM"
+   ]
+  },
+  {
+   "candidate_lines": 67,
+   "designer_item": true,
+   "families": [
+    "FIN.FLOOR",
+    "FIN.WALL",
+    "FIN.EXT"
+   ],
+   "item": "finishes schedule or specification",
+   "quantity_status": "UNKNOWN (sheet not issued; never 0)",
+   "reference_rows": 0,
+   "status": "NOT_ISSUED",
+   "trades": []
+  },
+  {
+   "candidate_lines": 36,
+   "designer_item": true,
+   "families": [
+    "FIN.CEILING"
+   ],
+   "item": "reflected ceiling plan",
+   "quantity_status": "UNKNOWN (sheet not issued; never 0)",
+   "reference_rows": 29,
+   "status": "NOT_ISSUED",
+   "trades": [
+    "CEILING"
+   ]
+  },
+  {
+   "candidate_lines": 35,
+   "designer_item": true,
+   "families": [
+    "FIN.WALL.TILE",
+    "FIN.WP.WALL_UPTURN"
+   ],
+   "item": "wet-room / kitchen details",
+   "quantity_status": "UNKNOWN (sheet not issued; never 0)",
+   "reference_rows": 0,
+   "status": "NOT_ISSUED",
+   "trades": []
+  },
+  {
+   "candidate_lines": 42,
+   "designer_item": true,
+   "families": [
+    "FIN.RAILING",
+    "FIN.MARBLE.TREAD",
+    "FIN.MARBLE.RISER"
+   ],
+   "item": "stair details (architectural)",
+   "quantity_status": "UNKNOWN (sheet not issued; never 0)",
+   "reference_rows": 15,
+   "status": "NOT_ISSUED",
+   "trades": [
+    "MARBLE"
+   ]
+  },
+  {
+   "candidate_lines": 0,
+   "designer_item": true,
+   "families": [],
+   "item": "water supply",
+   "quantity_status": "UNKNOWN (sheet not issued; never 0)",
+   "reference_rows": 0,
+   "status": "NOT_ISSUED",
+   "trades": []
+  },
+  {
+   "candidate_lines": 0,
+   "designer_item": true,
+   "families": [],
+   "item": "electrical",
+   "quantity_status": "UNKNOWN (sheet not issued; never 0)",
+   "reference_rows": 0,
+   "status": "NOT_ISSUED",
+   "trades": []
+  },
+  {
+   "candidate_lines": 0,
+   "designer_item": true,
+   "families": [],
+   "item": "air conditioning",
+   "quantity_status": "UNKNOWN (sheet not issued; never 0)",
+   "reference_rows": 0,
+   "status": "NOT_ISSUED",
+   "trades": []
+  }
+ ],
+ "rows": {
+  "AGGREGATE": 52,
+  "DRAWN": 15,
+  "NOT_DRAWN": 3,
+  "NOT_MAPPED": 421,
+  "SCOPE_UNKNOWN": 3
+ },
+ "rows_by_trade": {
+  "ALUMINIUM": {
+   "NOT_MAPPED": 21
+  },
+  "BEAM": {
+   "NOT_MAPPED": 67
+  },
+  "BLINDING": {
+   "AGGREGATE": 1
+  },
+  "BLOCKWORK": {
+   "NOT_MAPPED": 128
+  },
+  "CEILING": {
+   "NOT_MAPPED": 29
+  },
+  "COLUMN": {
+   "AGGREGATE": 37,
+   "DRAWN": 2,
+   "SCOPE_UNKNOWN": 2
+  },
+  "FLOOR": {
+   "NOT_MAPPED": 30
+  },
+  "FOOTING": {
+   "AGGREGATE": 6,
+   "DRAWN": 9,
+   "SCOPE_UNKNOWN": 1
+  },
+  "GROUND_BEAM": {
+   "NOT_MAPPED": 4
+  },
+  "MARBLE": {
+   "NOT_MAPPED": 15
+  },
+  "OTHER_CONCRETE": {
+   "AGGREGATE": 2,
+   "DRAWN": 2,
+   "NOT_DRAWN": 3,
+   "NOT_MAPPED": 1
+  },
+  "PAINT": {
+   "NOT_MAPPED": 37
+  },
+  "PLASTER": {
+   "NOT_MAPPED": 65
+  },
+  "SKIRTING": {
+   "NOT_MAPPED": 3
+  },
+  "SLAB": {
+   "AGGREGATE": 4
+  },
+  "STAIR_CONCRETE": {
+   "AGGREGATE": 2,
+   "DRAWN": 2
+  },
+  "STRAP_BEAM": {
+   "NOT_MAPPED": 3
+  },
+  "WATERPROOFING": {
+   "NOT_MAPPED": 18
+  }
+ }
+}

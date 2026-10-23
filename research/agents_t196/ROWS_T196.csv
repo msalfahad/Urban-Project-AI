@@ -1,0 +1,495 @@
+row_id,trade,unit,qty,status,elements,components,not_drawn_parts,reason
+FIN:S1:14,WATERPROOFING,m2,4.73,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S1:15,WATERPROOFING,m2,1.7,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S1:16,WATERPROOFING,m2,3.7,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S1:17,WATERPROOFING,m2,2.3,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S1:18,WATERPROOFING,m2,2.67,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S1:19,WATERPROOFING,m2,2.36,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S1:20,WATERPROOFING,m2,9.55,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S1:21,WATERPROOFING,m2,1.95,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S1:22,WATERPROOFING,m2,3.37,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S1:23,WATERPROOFING,m2,3.15,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S1:27,WATERPROOFING,m2,4.72,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S1:28,WATERPROOFING,m2,3.6,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S1:29,WATERPROOFING,m2,2.59,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S1:30,WATERPROOFING,m2,5.0,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S1:31,WATERPROOFING,m2,5.0,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S1:32,WATERPROOFING,m2,10.0,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S1:36,WATERPROOFING,m2,5.62,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S1:43,WATERPROOFING,m2,285.0,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S2:13,FLOOR,m2,151.8,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S2:16,MARBLE,m2,14.0,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S2:17,MARBLE,m2,5.1,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S2:18,SKIRTING,m,4.37,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S2:19,MARBLE,nr,5.0,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S2:23,MARBLE,m2,75.6,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S2:24,MARBLE,m2,6.2,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S2:25,SKIRTING,m,23.1,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S2:26,MARBLE,nr,63.0,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S2:30,MARBLE,m2,33.6,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S2:31,MARBLE,m2,1.44,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S2:32,SKIRTING,m,2.4,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S2:33,MARBLE,nr,28.0,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S2:36,MARBLE,m2,1.3,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S2:37,MARBLE,m2,2.5,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S2:38,MARBLE,m2,1.0,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S2:39,MARBLE,m2,1.0,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S2:40,MARBLE,m2,0.9,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S2:41,MARBLE,m2,1.0,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S3:13,CEILING,m2,137.5,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S3:14,CEILING,m2,16.66,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S3:15,CEILING,m2,10.46,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S3:16,CEILING,m2,24.84,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S3:17,CEILING,m2,7.87,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S3:21,CEILING,m2,38.96,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S3:22,CEILING,m2,17.29,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S3:23,CEILING,m2,19.46,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S3:24,CEILING,m2,18.25,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S3:25,CEILING,m2,19.0,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S3:28,CEILING,m2,19.58,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S3:29,CEILING,m2,7.7,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S3:42,CEILING,m2,4.73,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S3:43,CEILING,m2,1.7,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S3:44,CEILING,m2,3.7,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S3:45,CEILING,m2,2.3,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S3:46,CEILING,m2,2.67,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S3:47,CEILING,m2,2.36,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S3:48,CEILING,m2,9.55,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S3:49,CEILING,m2,1.95,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S3:50,CEILING,m2,3.37,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S3:51,CEILING,m2,3.15,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S3:55,CEILING,m2,4.72,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S3:56,CEILING,m2,3.6,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S3:57,CEILING,m2,2.59,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S3:58,CEILING,m2,5.0,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S3:59,CEILING,m2,5.0,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S3:60,CEILING,m2,10.0,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S3:63,CEILING,m2,5.62,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S4:13,FLOOR,m2,137.5,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S4:14,FLOOR,m2,16.66,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S4:15,FLOOR,m2,10.46,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S4:16,FLOOR,m2,24.84,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S4:17,FLOOR,m2,7.87,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S4:21,FLOOR,m2,38.96,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S4:22,FLOOR,m2,17.29,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S4:23,FLOOR,m2,19.46,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S4:24,FLOOR,m2,18.25,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S4:25,FLOOR,m2,19.0,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S4:28,FLOOR,m2,19.58,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S4:29,FLOOR,m2,7.7,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S4:42,FLOOR,m2,4.73,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S4:43,FLOOR,m2,1.7,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S4:44,FLOOR,m2,3.7,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S4:45,FLOOR,m2,2.3,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S4:46,FLOOR,m2,2.67,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S4:47,FLOOR,m2,2.36,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S4:48,FLOOR,m2,9.55,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S4:49,FLOOR,m2,1.95,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S4:50,FLOOR,m2,3.37,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S4:51,FLOOR,m2,3.15,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S4:55,FLOOR,m2,4.72,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S4:56,FLOOR,m2,3.6,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S4:57,FLOOR,m2,2.59,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S4:58,FLOOR,m2,5.0,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S4:59,FLOOR,m2,5.0,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S4:60,FLOOR,m2,10.0,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+FIN:S4:63,FLOOR,m2,5.62,NOT_MAPPED,,,,FIN workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:14,BLOCKWORK,m2,14.2,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:15,BLOCKWORK,m2,14.2,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:16,BLOCKWORK,m2,13.88,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:17,BLOCKWORK,m2,10.0,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:18,BLOCKWORK,m2,5.2,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:19,BLOCKWORK,m2,25.4,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:20,BLOCKWORK,m2,23.0,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:21,BLOCKWORK,m2,12.32,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:22,BLOCKWORK,m2,23.0,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:23,BLOCKWORK,m2,21.8,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:24,BLOCKWORK,m2,24.4,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:25,BLOCKWORK,m2,10.0,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:26,BLOCKWORK,m2,10.2,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:27,BLOCKWORK,m2,20.475,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:28,BLOCKWORK,m2,4.55,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:29,BLOCKWORK,m2,8.05,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:30,BLOCKWORK,m2,15.575,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:31,BLOCKWORK,m2,6.65,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:32,BLOCKWORK,m2,11.2,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:33,BLOCKWORK,m2,4.9,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:34,BLOCKWORK,m2,2.8,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:35,BLOCKWORK,m2,9.625,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:36,BLOCKWORK,m2,9.45,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:41,BLOCKWORK,m2,2.4,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:42,BLOCKWORK,m2,1.92,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:43,BLOCKWORK,m2,2.0,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:44,BLOCKWORK,m2,3.0,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:45,BLOCKWORK,m2,4.8,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:46,BLOCKWORK,m2,2.4,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:47,BLOCKWORK,m2,2.4,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:48,BLOCKWORK,m2,7.8,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:49,BLOCKWORK,m2,2.4,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:50,BLOCKWORK,m2,3.0,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:51,BLOCKWORK,m2,2.4,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:63,BLOCKWORK,m2,13.135,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:64,BLOCKWORK,m2,13.135,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:65,BLOCKWORK,m2,12.839,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:66,BLOCKWORK,m2,9.25,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:67,BLOCKWORK,m2,19.24,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:68,BLOCKWORK,m2,19.61,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:69,BLOCKWORK,m2,12.21,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:70,BLOCKWORK,m2,9.805,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:71,BLOCKWORK,m2,24.79,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:72,BLOCKWORK,m2,14.06,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:73,BLOCKWORK,m2,13.869,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:74,BLOCKWORK,m2,14.076,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:75,BLOCKWORK,m2,11.5575,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:76,BLOCKWORK,m2,2.76,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:77,BLOCKWORK,m2,9.315,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:78,BLOCKWORK,m2,41.25,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:84,BLOCKWORK,m2,2.0,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:85,BLOCKWORK,m2,2.88,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:86,BLOCKWORK,m2,9.45,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:87,BLOCKWORK,m2,9.3,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:88,BLOCKWORK,m2,3.1,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:89,BLOCKWORK,m2,4.9,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:90,BLOCKWORK,m2,2.4,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:101,BLOCKWORK,m2,8.625,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:102,BLOCKWORK,m2,11.9715,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:103,BLOCKWORK,m2,3.9675,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:104,BLOCKWORK,m2,23.46,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:105,BLOCKWORK,m2,28.221,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:106,BLOCKWORK,m2,10.695,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:107,BLOCKWORK,m2,9.315,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:111,BLOCKWORK,m2,2.0,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:112,BLOCKWORK,m2,2.4,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:113,BLOCKWORK,m2,0.48,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:114,BLOCKWORK,m2,2.4,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:115,BLOCKWORK,m2,2.4,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:133,BLOCKWORK,m2,8.6,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:134,BLOCKWORK,m2,10.0,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:135,BLOCKWORK,m2,10.6,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:136,BLOCKWORK,m2,6.0,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:137,BLOCKWORK,m2,12.0,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:138,BLOCKWORK,m2,5.2,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:139,BLOCKWORK,m2,10.08,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:140,BLOCKWORK,m2,4.0,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:141,BLOCKWORK,m2,3.84,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:142,BLOCKWORK,m2,7.6,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:143,BLOCKWORK,m2,20.0,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:144,BLOCKWORK,m2,11.6,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:145,BLOCKWORK,m2,5.4,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:146,BLOCKWORK,m2,10.6,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:147,BLOCKWORK,m2,46.725,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:148,BLOCKWORK,m2,5.25,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:149,BLOCKWORK,m2,4.225,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:150,BLOCKWORK,m2,74.4,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:154,BLOCKWORK,m2,6.66,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:155,BLOCKWORK,m2,10.878,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:156,BLOCKWORK,m2,13.32,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:157,BLOCKWORK,m2,7.4,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:158,BLOCKWORK,m2,6.105,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:159,BLOCKWORK,m2,15.91,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:160,BLOCKWORK,m2,12.95,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:161,BLOCKWORK,m2,14.06,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:162,BLOCKWORK,m2,6.475,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:163,BLOCKWORK,m2,29.6,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:164,BLOCKWORK,m2,7.77,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:165,BLOCKWORK,m2,18.5,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:166,BLOCKWORK,m2,13.505,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:167,BLOCKWORK,m2,12.58,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:168,BLOCKWORK,m2,11.47,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:169,BLOCKWORK,m2,9.065,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:170,BLOCKWORK,m2,15.17,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:172,BLOCKWORK,m2,66.0,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:176,BLOCKWORK,m2,11.1,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:177,BLOCKWORK,m2,77.13,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:178,BLOCKWORK,m2,29.8,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:185,BLOCKWORK,m2,11.52,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:186,BLOCKWORK,m2,2.4,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:188,BLOCKWORK,m2,7.68,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:189,BLOCKWORK,m2,8.64,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:191,BLOCKWORK,m2,1.92,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:192,BLOCKWORK,m2,2.16,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:203,BLOCKWORK,m2,14.4,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:204,BLOCKWORK,m2,4.8,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:205,BLOCKWORK,m2,2.8,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:206,BLOCKWORK,m2,10.8,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:208,BLOCKWORK,m2,13.32,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:209,BLOCKWORK,m2,4.44,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:210,BLOCKWORK,m2,2.59,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:211,BLOCKWORK,m2,9.99,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:213,BLOCKWORK,m2,13.32,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:214,BLOCKWORK,m2,4.44,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:215,BLOCKWORK,m2,2.59,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:216,BLOCKWORK,m2,9.99,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:222,BLOCKWORK,m2,7.2,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+BLK:S6:223,BLOCKWORK,m2,2.64,NOT_MAPPED,,,,BLK workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PNT:S7:4,PAINT,m2,72.0,NOT_MAPPED,,,,PNT workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PNT:S7:5,PAINT,m2,45.0,NOT_MAPPED,,,,PNT workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PNT:S7:6,PAINT,m2,75.78,NOT_MAPPED,,,,PNT workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PNT:S7:7,PAINT,m2,195.3,NOT_MAPPED,,,,PNT workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PNT:S7:8,PAINT,m2,40.5,NOT_MAPPED,,,,PNT workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PNT:S7:9,PAINT,m2,24.3,NOT_MAPPED,,,,PNT workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PNT:S7:11,PAINT,m2,59.5,NOT_MAPPED,,,,PNT workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PNT:S7:12,PAINT,m2,58.82,NOT_MAPPED,,,,PNT workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PNT:S7:13,PAINT,m2,75.82,NOT_MAPPED,,,,PNT workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PNT:S7:14,PAINT,m2,74.46,NOT_MAPPED,,,,PNT workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PNT:S7:15,PAINT,m2,140.875,NOT_MAPPED,,,,PNT workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PNT:S7:16,PAINT,m2,31.79,NOT_MAPPED,,,,PNT workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PNT:S7:18,PAINT,m2,24.24,NOT_MAPPED,,,,PNT workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PNT:S7:19,PAINT,m2,15.75,NOT_MAPPED,,,,PNT workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PNT:S7:21,PAINT,m2,64.26,NOT_MAPPED,,,,PNT workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PNT:S7:22,PAINT,m2,30.6,NOT_MAPPED,,,,PNT workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PNT:S7:24,PAINT,m2,190.92,NOT_MAPPED,,,,PNT workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PNT:S7:25,PAINT,m2,13.5,NOT_MAPPED,,,,PNT workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PNT:S7:27,PAINT,m2,15.96,NOT_MAPPED,,,,PNT workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PNT:S7:29,PAINT,m2,2.4,NOT_MAPPED,,,,PNT workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PNT:S7:30,PAINT,m2,2.76,NOT_MAPPED,,,,PNT workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PNT:S7:31,PAINT,m2,2.04,NOT_MAPPED,,,,PNT workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PNT:S7:32,PAINT,m2,2.3,NOT_MAPPED,,,,PNT workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PNT:S7:33,PAINT,m2,3.675,NOT_MAPPED,,,,PNT workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PNT:S7:34,PAINT,m2,9.2,NOT_MAPPED,,,,PNT workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PNT:S7:35,PAINT,m2,4.5,NOT_MAPPED,,,,PNT workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PNT:S7:36,PAINT,m2,3.0,NOT_MAPPED,,,,PNT workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PNT:S7:37,PAINT,m2,4.6,NOT_MAPPED,,,,PNT workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PNT:S7:38,PAINT,m2,8.37,NOT_MAPPED,,,,PNT workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PNT:S7:39,PAINT,m2,4.5,NOT_MAPPED,,,,PNT workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PNT:S7:40,PAINT,m2,13.8,NOT_MAPPED,,,,PNT workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PNT:S7:41,PAINT,m2,0.75,NOT_MAPPED,,,,PNT workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PNT:S7:44,PAINT,m2,54.6,NOT_MAPPED,,,,PNT workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PNT:S7:47,PAINT,m2,337.57,NOT_MAPPED,,,,PNT workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PNT:S7:48,PAINT,m2,72.01,NOT_MAPPED,,,,PNT workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PNT:S7:49,PAINT,m2,28.285,NOT_MAPPED,,,,PNT workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PNT:S7:50,PAINT,m2,14.46,NOT_MAPPED,,,,PNT workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+RC:S11:11,BLINDING,m3,47.055,AGGREGATE,FTG/Ebc82b881 FTG/F.1 FTG/F.2 FTG/F.3 FTG/F.4 FTG/F11 FTG/F12 FTG/F13 FTG/F14 FTG/F15 FTG/F2.1 FTG/F2.2 FTG/F3.1 FTG/F3.2 FTG/F4.1 FTG/F4.2 FTG/F5.1 FTG/F5.2 FTG/F6 FTG/F8 FTG/F9 FTG/FF FTG/FN.1 FTG/FN.2 FTG/FN.3 FTG/FN.4,blinding,,blinding under the footings
+RC:S11:13,FOOTING,m3,0.864,AGGREGATE,FTG/F.1 FTG/F.2 FTG/F.3 FTG/F.4,footing,,footing type mark F: every footing printed with it
+RC:S11:14,FOOTING,m3,2.261,AGGREGATE,FTG/F2.1 FTG/F2.2,footing,,footing type mark F2: every footing printed with it
+RC:S11:15,FOOTING,m3,0.672,AGGREGATE,FTG/F3.1 FTG/F3.2,footing,,footing type mark F3: every footing printed with it
+RC:S11:16,FOOTING,m3,3.52,AGGREGATE,FTG/F4.1 FTG/F4.2,footing,,footing type mark F4: every footing printed with it
+RC:S11:17,FOOTING,m3,4.032,AGGREGATE,FTG/F5.1 FTG/F5.2,footing,,footing type mark F5: every footing printed with it
+RC:S11:18,FOOTING,m3,2.86,DRAWN,FTG/F6,footing,,footing type mark F6: every footing printed with it
+RC:S11:19,FOOTING,m3,7.2,DRAWN,FTG/F8,footing,,footing type mark F8: every footing printed with it
+RC:S11:20,FOOTING,m3,5.049,DRAWN,FTG/F9,footing,,footing type mark F9: every footing printed with it
+RC:S11:21,FOOTING,m3,1.96,SCOPE_UNKNOWN,,,,"MAP_MISS: selector {'kind': 'FTG', 'label_base': 'F10'} found no element"
+RC:S11:22,FOOTING,m3,2.625,DRAWN,FTG/F11,footing,,footing type mark F11: every footing printed with it
+RC:S11:23,FOOTING,m3,9.856,DRAWN,FTG/F12,footing,,footing type mark F12: every footing printed with it
+RC:S11:24,FOOTING,m3,5.16,DRAWN,FTG/F13,footing,,footing type mark F13: every footing printed with it
+RC:S11:25,FOOTING,m3,6.27,DRAWN,FTG/F14,footing,,footing type mark F14: every footing printed with it
+RC:S11:26,FOOTING,m3,0.72,DRAWN,FTG/F15,footing,,footing type mark F15: every footing printed with it
+RC:S11:27,FOOTING,m3,11.385,DRAWN,FTG/FF,footing,,footing type mark FF: every footing printed with it
+RC:S11:28,FOOTING,m3,1.2,AGGREGATE,FTG/FN.1 FTG/FN.2 FTG/FN.3 FTG/FN.4,footing,,footing type mark FN: every footing printed with it
+RC:S11:29,STRAP_BEAM,m3,1.5925,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S11:30,STRAP_BEAM,m3,1.15,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S11:31,STRAP_BEAM,m3,0.65,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S11:32,GROUND_BEAM,m3,8.604,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S12:11,OTHER_CONCRETE,m3,29.55,AGGREGATE,SLAB/E041a51a8 SLAB/E0b390edd SLAB/E11bddcea SLAB/E377149e9 SLAB/E41a8f2b0 SLAB/E508c0917 SLAB/E673e4da3 SLAB/E69563d7e SLAB/E6b99e44b SLAB/E6cd9e9aa SLAB/E8be2a541 SLAB/E9f5ad695 SLAB/Ea65f897f SLAB/Ea7fc29c3 SLAB/Eb419dbd4 SLAB/Eb59cf95b SLAB/Ebefa5ca2 SLAB/Ebfec8f26 SLAB/Ec5171edc SLAB/Ed07b83f2 SLAB/Ed1417061 SLAB/Ed4d81d7a SLAB/Ef8336f80 SLAB/Ef982457a SLAB/Efabb38b1,ground slab,,ground slab panels
+RC:S12:13,GROUND_BEAM,m3,18.0,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S12:14,GROUND_BEAM,m3,19.98,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S12:15,GROUND_BEAM,m3,7.56,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S13:11,OTHER_CONCRETE,m3,2.4,NOT_MAPPED,,,,lift walls are a later register kind (no ledger merged)
+RC:S13:16,COLUMN,m3,0.225,AGGREGATE,COL/C1.NECK.1 COL/C1.NECK.2 COL/C1.NECK.3,neck,,neck of every column printed with the mark
+RC:S13:17,COLUMN,m3,0.9,AGGREGATE,COL/C2.NECK.1 COL/C2.NECK.10 COL/C2.NECK.11 COL/C2.NECK.12 COL/C2.NECK.2 COL/C2.NECK.3 COL/C2.NECK.4 COL/C2.NECK.5 COL/C2.NECK.6 COL/C2.NECK.7 COL/C2.NECK.8 COL/C2.NECK.9,neck,,neck of every column printed with the mark
+RC:S13:18,COLUMN,m3,1.125,AGGREGATE,COL/C3.NECK.1 COL/C3.NECK.10 COL/C3.NECK.11 COL/C3.NECK.12 COL/C3.NECK.13 COL/C3.NECK.14 COL/C3.NECK.15 COL/C3.NECK.16 COL/C3.NECK.17 COL/C3.NECK.18 COL/C3.NECK.2 COL/C3.NECK.3 COL/C3.NECK.4 COL/C3.NECK.5 COL/C3.NECK.6 COL/C3.NECK.7 COL/C3.NECK.8 COL/C3.NECK.9,neck,,neck of every column printed with the mark
+RC:S13:19,COLUMN,m3,0.45,AGGREGATE,COL/C4.NECK.1 COL/C4.NECK.2 COL/C4.NECK.3 COL/C4.NECK.4 COL/C4.NECK.5 COL/C4.NECK.6,neck,,neck of every column printed with the mark
+RC:S13:20,COLUMN,m3,0.81,AGGREGATE,COL/C5.NECK.1 COL/C5.NECK.2 COL/C5.NECK.3 COL/C5.NECK.4 COL/C5.NECK.5 COL/C5.NECK.6 COL/C5.NECK.7 COL/C5.NECK.8 COL/C5.NECK.9,neck,,neck of every column printed with the mark
+RC:S13:21,COLUMN,m3,0.315,AGGREGATE,COL/C6.NECK.1 COL/C6.NECK.2 COL/C6.NECK.3,neck,,neck of every column printed with the mark
+RC:S13:22,COLUMN,m3,0.36,AGGREGATE,COL/C7.NECK.1 COL/C7.NECK.2 COL/C7.NECK.3,neck,,neck of every column printed with the mark
+RC:S13:23,COLUMN,m3,0.81,AGGREGATE,COL/C8.NECK.1 COL/C8.NECK.2 COL/C8.NECK.3 COL/C8.NECK.4 COL/C8.NECK.5 COL/C8.NECK.6,neck,,neck of every column printed with the mark
+RC:S13:24,COLUMN,m3,0.9,AGGREGATE,COL/C9.NECK.1 COL/C9.NECK.2 COL/C9.NECK.3 COL/C9.NECK.4 COL/C9.NECK.5 COL/C9.NECK.6,neck,,neck of every column printed with the mark
+RC:S13:25,COLUMN,m3,0.315,DRAWN,COL/C10.NECK,neck,,neck of every column printed with the mark
+RC:S13:26,COLUMN,m3,0.66,AGGREGATE,COL/C11.NECK.1 COL/C11.NECK.2 COL/C11.NECK.3 COL/C11.NECK.4 COL/C11.NECK.5 COL/C11.NECK.6,neck,,neck of every column printed with the mark
+RC:S13:27,COLUMN,m3,1.125,AGGREGATE,COL/C.NECK.1 COL/C.NECK.10 COL/C.NECK.11 COL/C.NECK.12 COL/C.NECK.13 COL/C.NECK.2 COL/C.NECK.3 COL/C.NECK.4 COL/C.NECK.5 COL/C.NECK.6 COL/C.NECK.7 COL/C.NECK.8 COL/C.NECK.9,neck,,neck of every column printed with the mark
+RC:S13:28,COLUMN,m3,0.81,AGGREGATE,COL/CN.NECK.1 COL/CN.NECK.2 COL/CN.NECK.3 COL/CN.NECK.4 COL/CN.NECK.5 COL/CN.NECK.6,neck,,neck of every column printed with the mark
+RC:S13:36,COLUMN,m3,0.75,AGGREGATE,COL/C1.1 COL/C1.2 COL/C1.3,column,,columns of the mark on that storey
+RC:S13:37,COLUMN,m3,2.25,AGGREGATE,COL/C2.1 COL/C2.10 COL/C2.11 COL/C2.12 COL/C2.2 COL/C2.3 COL/C2.4 COL/C2.5 COL/C2.6 COL/C2.7 COL/C2.8 COL/C2.9,column,,columns of the mark on that storey
+RC:S13:38,COLUMN,m3,2.34375,AGGREGATE,COL/C3.1 COL/C3.10 COL/C3.11 COL/C3.12 COL/C3.13 COL/C3.14 COL/C3.15 COL/C3.16 COL/C3.17 COL/C3.18 COL/C3.2 COL/C3.3 COL/C3.4 COL/C3.5 COL/C3.6 COL/C3.7 COL/C3.8 COL/C3.9,column,,columns of the mark on that storey
+RC:S13:39,COLUMN,m3,0.9375,AGGREGATE,COL/C4.1 COL/C4.2 COL/C4.3 COL/C4.4 COL/C4.5 COL/C4.6,column,,columns of the mark on that storey
+RC:S13:40,COLUMN,m3,1.6875,AGGREGATE,COL/C5.1 COL/C5.2 COL/C5.3 COL/C5.4 COL/C5.5 COL/C5.6 COL/C5.7 COL/C5.8 COL/C5.9,column,,columns of the mark on that storey
+RC:S13:41,COLUMN,m3,0.65625,AGGREGATE,COL/C6.1 COL/C6.2 COL/C6.3,column,,columns of the mark on that storey
+RC:S13:42,COLUMN,m3,0.75,AGGREGATE,COL/C7.1 COL/C7.2 COL/C7.3,column,,columns of the mark on that storey
+RC:S13:43,COLUMN,m3,1.6875,AGGREGATE,COL/C8.1 COL/C8.2 COL/C8.3 COL/C8.4 COL/C8.5 COL/C8.6,column,,columns of the mark on that storey
+RC:S13:44,COLUMN,m3,2.8125,AGGREGATE,COL/C9.1 COL/C9.2 COL/C9.3 COL/C9.4 COL/C9.5 COL/C9.6,column,,columns of the mark on that storey
+RC:S13:45,COLUMN,m3,0.65625,AGGREGATE,COL/C10.1 COL/C10.2 COL/C10.3,column,,columns of the mark on that storey
+RC:S13:46,COLUMN,m3,1.03125,AGGREGATE,COL/C11.1 COL/C11.2 COL/C11.3 COL/C11.4 COL/C11.5 COL/C11.6,column,,columns of the mark on that storey
+RC:S13:47,COLUMN,m3,1.875,AGGREGATE,COL/C.1 COL/C.10 COL/C.11 COL/C.12 COL/C.13 COL/C.14 COL/C.15 COL/C.2 COL/C.3 COL/C.4 COL/C.5 COL/C.6 COL/C.7 COL/C.8 COL/C.9,column,,columns of the mark on that storey
+RC:S13:52,COLUMN,m3,0.345,AGGREGATE,COL/C1.1 COL/C1.2 COL/C1.3,column,,columns of the mark on that storey
+RC:S13:53,COLUMN,m3,1.38,AGGREGATE,COL/C2.1 COL/C2.10 COL/C2.11 COL/C2.12 COL/C2.2 COL/C2.3 COL/C2.4 COL/C2.5 COL/C2.6 COL/C2.7 COL/C2.8 COL/C2.9,column,,columns of the mark on that storey
+RC:S13:54,COLUMN,m3,1.035,AGGREGATE,COL/C3.1 COL/C3.2 COL/C3.3 COL/C3.4 COL/C3.5 COL/C3.6 COL/C3.7 COL/C3.8 COL/C3.9,column,,columns of the mark on that storey
+RC:S13:55,COLUMN,m3,0.69,AGGREGATE,COL/C4.1 COL/C4.2 COL/C4.3 COL/C4.4 COL/C4.5 COL/C4.6,column,,columns of the mark on that storey
+RC:S13:56,COLUMN,m3,1.035,AGGREGATE,COL/C5.1 COL/C5.2 COL/C5.3 COL/C5.4 COL/C5.5 COL/C5.6 COL/C5.7 COL/C5.8 COL/C5.9,column,,columns of the mark on that storey
+RC:S13:57,COLUMN,m3,1.104,AGGREGATE,COL/C7.1 COL/C7.2 COL/C7.3,column,,columns of the mark on that storey
+RC:S13:58,COLUMN,m3,0.621,AGGREGATE,COL/C8.1 COL/C8.2 COL/C8.3 COL/C8.4 COL/C8.5 COL/C8.6,column,,columns of the mark on that storey
+RC:S13:59,COLUMN,m3,0.69,AGGREGATE,COL/C9.1 COL/C9.2 COL/C9.3 COL/C9.4 COL/C9.5 COL/C9.6,column,,columns of the mark on that storey
+RC:S13:60,COLUMN,m3,0.345,SCOPE_UNKNOWN,,,,"MAP_MISS: selector {'kind': 'COL', 'label_base': 'PC1', 'floor': '1F'} found no element"
+RC:S13:61,COLUMN,m3,0.483,SCOPE_UNKNOWN,,,,"MAP_MISS: selector {'kind': 'COL', 'label_base': 'PC2', 'floor': '1F'} found no element"
+RC:S13:66,COLUMN,m3,0.345,AGGREGATE,COL/C1.1 COL/C1.2 COL/C1.3,column,,columns of the mark on that storey
+RC:S13:67,COLUMN,m3,1.38,AGGREGATE,COL/C2.1 COL/C2.10 COL/C2.11 COL/C2.12 COL/C2.2 COL/C2.3 COL/C2.4 COL/C2.5 COL/C2.6 COL/C2.7 COL/C2.8 COL/C2.9,column,,columns of the mark on that storey
+RC:S13:68,COLUMN,m3,0.345,AGGREGATE,COL/C3.1 COL/C3.2 COL/C3.3 COL/C3.4 COL/C3.5 COL/C3.6 COL/C3.7 COL/C3.8 COL/C3.9,column,,columns of the mark on that storey
+RC:S13:69,COLUMN,m3,0.345,AGGREGATE,COL/C5.1 COL/C5.2 COL/C5.3 COL/C5.4 COL/C5.5 COL/C5.6,column,,columns of the mark on that storey
+RC:S13:70,COLUMN,m3,0.621,AGGREGATE,COL/C9.1 COL/C9.2 COL/C9.3,column,,columns of the mark on that storey
+RC:S13:71,COLUMN,m3,0.345,DRAWN,COL/PC,column,,columns of the mark on that storey
+RC:S14:11,BEAM,m3,0.44,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S14:12,BEAM,m3,2.15625,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S14:13,BEAM,m3,0.352,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S14:14,BEAM,m3,0.336,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S14:15,BEAM,m3,0.236,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S14:16,BEAM,m3,0.208,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S14:17,BEAM,m3,0.375,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S14:18,BEAM,m3,0.3,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S14:19,BEAM,m3,0.2,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S14:20,BEAM,m3,0.37,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S14:21,BEAM,m3,0.9,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S14:22,BEAM,m3,2.16,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S14:23,BEAM,m3,0.27,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S14:24,BEAM,m3,1.8225,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S14:25,BEAM,m3,0.465,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S14:26,BEAM,m3,1.03125,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S14:27,BEAM,m3,0.264,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S14:28,BEAM,m3,1.265625,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S14:29,BEAM,m3,0.37,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S14:30,BEAM,m3,4.42,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S14:31,BEAM,m3,0.525,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S14:32,BEAM,m3,0.86625,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S14:33,BEAM,m3,0.6825,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S14:34,BEAM,m3,0.236,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S14:35,BEAM,m3,0.368,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S14:36,BEAM,m3,0.248,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S14:37,BEAM,m3,2.6325,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S14:38,BEAM,m3,2.925,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S14:39,BEAM,m3,0.975,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S14:40,BEAM,m3,1.107,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S14:43,BEAM,m3,3.4125,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S14:44,BEAM,m3,0.79,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S14:45,BEAM,m3,1.533,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S14:46,BEAM,m3,4.0275,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S14:47,BEAM,m3,1.8,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S14:48,BEAM,m3,0.655,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S14:49,BEAM,m3,0.568,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S14:50,BEAM,m3,1.59,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S14:59,BEAM,m3,0.128,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S14:60,BEAM,m3,0.32,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S14:61,BEAM,m3,0.24,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S14:62,BEAM,m3,0.24,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S14:63,BEAM,m3,0.36,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S14:64,BEAM,m3,0.2,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S14:65,BEAM,m3,0.46,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S14:66,BEAM,m3,0.43,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S14:67,BEAM,m3,0.27,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S14:68,BEAM,m3,0.33,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S14:69,BEAM,m3,0.54625,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S14:70,BEAM,m3,1.65375,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S14:71,BEAM,m3,0.705,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S14:72,BEAM,m3,2.39625,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S14:74,BEAM,m3,1.217,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S14:75,BEAM,m3,3.29625,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S14:76,BEAM,m3,2.4375,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S14:77,BEAM,m3,0.875,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S14:78,BEAM,m3,1.05,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S14:86,BEAM,m3,0.48,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S14:87,BEAM,m3,0.4,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S14:88,BEAM,m3,0.144,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S14:89,BEAM,m3,0.4,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S14:90,BEAM,m3,0.48,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S14:91,BEAM,m3,0.81,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S14:92,BEAM,m3,0.144,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S14:93,BEAM,m3,0.576,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S14:94,BEAM,m3,0.99,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S14:95,BEAM,m3,1.632,NOT_MAPPED,,,,beam / strap marks are not carried by register v0 (route G bands have no printed mark): join by mark pending
+RC:S15:11,SLAB,m3,33.12,AGGREGATE,SLAB/E0149fae9 SLAB/E05d7ad08 SLAB/E09c46c57 SLAB/E12a7c452 SLAB/E1b8ab5d2 SLAB/E1dca316a SLAB/E339c756f SLAB/E34149985 SLAB/E35c6d440 SLAB/E38e47c89 SLAB/E3d9e0f49 SLAB/E4851c94e SLAB/E51afdf23 SLAB/E57ac362a SLAB/E5f3c023c SLAB/E62948116 SLAB/E6295614a SLAB/E6821b850 SLAB/E6f1f746f SLAB/E78095613 SLAB/E836475bc SLAB/E85e87d39 SLAB/E87ed54f1 SLAB/E9110e662 SLAB/E92ab6161 SLAB/E939a5a25 SLAB/E964d9b2e SLAB/E968b3d23 SLAB/E9d32262d SLAB/Ea797e0ee SLAB/Eb6418c5e SLAB/Eb9930e9e SLAB/Ebc5811f2 SLAB/Eccbcac68 SLAB/Ed0c4e89c SLAB/Ed9660a7d SLAB/Ede796fdf SLAB/Edf7016e3 SLAB/Ef560ec4a SLAB/Efbb9e6f1,slab,,his slab row covers the storey's slab panels
+RC:S15:16,SLAB,m3,19.2,AGGREGATE,SLAB/E0fd06e93 SLAB/E159293b8 SLAB/E2332145d SLAB/E281b144a SLAB/E2b5c213b SLAB/E3ae257c2 SLAB/E3cae46ed SLAB/E3e1f66f3 SLAB/E4261ba2d SLAB/E4857ce55 SLAB/E5266a554 SLAB/E546ea37f SLAB/E549e7488 SLAB/E6c68d4ba SLAB/E8285748b SLAB/E8999bfc1 SLAB/E94801fdd SLAB/E9dc06af7 SLAB/Ea0783bdb SLAB/Eb1ea21df SLAB/Ecd5c7140 SLAB/Ed42efdb8 SLAB/Ee6cad4c1 SLAB/Ef88b6c3a SLAB/Efef41d53 SLAB/Eff06f5df,slab,,his slab row covers the storey's slab panels
+RC:S15:23,SLAB,m3,5.0944,AGGREGATE,SLAB/E0a49118d SLAB/E0c76afd0 SLAB/E16e8ccbe SLAB/E563ff24d SLAB/E6fd87f17 SLAB/E8221887d SLAB/E82702635 SLAB/Edc450a83 SLAB/Ef22f7138,slab,,his slab row covers the storey's slab panels
+RC:S15:24,SLAB,m3,2.403,AGGREGATE,SLAB/E0a49118d SLAB/E0c76afd0 SLAB/E16e8ccbe SLAB/E563ff24d SLAB/E6fd87f17 SLAB/E8221887d SLAB/E82702635 SLAB/Edc450a83 SLAB/Ef22f7138,slab,,his slab row covers the storey's slab panels
+RC:S16:11,STAIR_CONCRETE,m3,1.4112,DRAWN,ST-03,,,T-184: his entrance stair = E1
+RC:S16:12,STAIR_CONCRETE,m3,5.5104,DRAWN,ST-02,,,T-184: his 'stair 2' = the round reception stair
+RC:S16:13,OTHER_CONCRETE,m3,6.78,AGGREGATE,DOME-A DOME-B DOME-TOWER,,tower dome shell (3rd dome) (ST) 2.26,"his 3 domes (T-185): two terrace domes drawn in structure, the tower dome only in the architecture"
+RC:S16:20,STAIR_CONCRETE,m3,7.1232,AGGREGATE,ST-01.1F-2F ST-01.GF-1F,flights,,T-184: his main stair 4 flights = ST-01 both storeys
+RC:S16:21,STAIR_CONCRETE,m3,1.008,AGGREGATE,ST-01.1F-2F ST-01.GF-1F,landings,,T-184: his 3 landings = ST-01 half landings + arrival
+RC:S17:11,OTHER_CONCRETE,m3,4.32,DRAWN,POOL-01,base,,T-183
+RC:S17:12,OTHER_CONCRETE,m3,4.32,DRAWN,POOL-01,walls,,T-183
+RC:S17:13,OTHER_CONCRETE,m3,1.08,NOT_DRAWN,,,,T-183 item K: pump room / balance tank in no document read
+RC:S17:14,OTHER_CONCRETE,m3,0.228,NOT_DRAWN,,,,"T-183 item E: STEPS: NOT DRAWN, consultant item (owner 16:45)"
+RC:S17:15,OTHER_CONCRETE,m3,2.4,NOT_DRAWN,,,,T-183 item K: pump room / balance tank in no document read
+ALU:S19:14,ALUMINIUM,m2,9.6,NOT_MAPPED,,,,ALU workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+ALU:S19:15,ALUMINIUM,m2,1.92,NOT_MAPPED,,,,ALU workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+ALU:S19:16,ALUMINIUM,m2,28.251,NOT_MAPPED,,,,ALU workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+ALU:S19:17,ALUMINIUM,m2,27.219,NOT_MAPPED,,,,ALU workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+ALU:S19:18,ALUMINIUM,m2,2.0,NOT_MAPPED,,,,ALU workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+ALU:S19:19,ALUMINIUM,m2,3.0,NOT_MAPPED,,,,ALU workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+ALU:S19:20,ALUMINIUM,m2,2.4,NOT_MAPPED,,,,ALU workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+ALU:S19:21,ALUMINIUM,m2,7.8,NOT_MAPPED,,,,ALU workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+ALU:S19:22,ALUMINIUM,m2,3.0,NOT_MAPPED,,,,ALU workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+ALU:S19:34,ALUMINIUM,m2,2.0,NOT_MAPPED,,,,ALU workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+ALU:S19:35,ALUMINIUM,m2,2.88,NOT_MAPPED,,,,ALU workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+ALU:S19:36,ALUMINIUM,m2,9.45,NOT_MAPPED,,,,ALU workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+ALU:S19:37,ALUMINIUM,m2,9.3,NOT_MAPPED,,,,ALU workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+ALU:S19:38,ALUMINIUM,m2,3.1,NOT_MAPPED,,,,ALU workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+ALU:S19:39,ALUMINIUM,m2,4.9,NOT_MAPPED,,,,ALU workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+ALU:S19:40,ALUMINIUM,m2,2.4,NOT_MAPPED,,,,ALU workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+ALU:S19:48,ALUMINIUM,m2,2.0,NOT_MAPPED,,,,ALU workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+ALU:S19:49,ALUMINIUM,m2,2.4,NOT_MAPPED,,,,ALU workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+ALU:S19:50,ALUMINIUM,m2,0.48,NOT_MAPPED,,,,ALU workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+ALU:S19:51,ALUMINIUM,m2,2.4,NOT_MAPPED,,,,ALU workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+ALU:S19:52,ALUMINIUM,m2,2.4,NOT_MAPPED,,,,ALU workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PLS:S20:4,PLASTER,m2,72.0,NOT_MAPPED,,,,PLS workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PLS:S20:5,PLASTER,m2,45.0,NOT_MAPPED,,,,PLS workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PLS:S20:6,PLASTER,m2,75.78,NOT_MAPPED,,,,PLS workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PLS:S20:7,PLASTER,m2,195.3,NOT_MAPPED,,,,PLS workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PLS:S20:8,PLASTER,m2,40.5,NOT_MAPPED,,,,PLS workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PLS:S20:9,PLASTER,m2,24.3,NOT_MAPPED,,,,PLS workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PLS:S20:10,PLASTER,m,17.4,NOT_MAPPED,,,,PLS workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PLS:S20:11,PLASTER,m2,59.5,NOT_MAPPED,,,,PLS workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PLS:S20:12,PLASTER,m2,58.82,NOT_MAPPED,,,,PLS workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PLS:S20:13,PLASTER,m2,75.82,NOT_MAPPED,,,,PLS workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PLS:S20:14,PLASTER,m2,74.46,NOT_MAPPED,,,,PLS workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PLS:S20:15,PLASTER,m2,140.875,NOT_MAPPED,,,,PLS workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PLS:S20:16,PLASTER,m2,31.79,NOT_MAPPED,,,,PLS workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PLS:S20:17,PLASTER,m,29.2,NOT_MAPPED,,,,PLS workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PLS:S20:19,PLASTER,m2,64.26,NOT_MAPPED,,,,PLS workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PLS:S20:20,PLASTER,m2,30.6,NOT_MAPPED,,,,PLS workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PLS:S20:23,PLASTER,m2,190.92,NOT_MAPPED,,,,PLS workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PLS:S20:24,PLASTER,m2,13.5,NOT_MAPPED,,,,PLS workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PLS:S20:26,PLASTER,m2,15.96,NOT_MAPPED,,,,PLS workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PLS:S20:29,PLASTER,m2,2.4,NOT_MAPPED,,,,PLS workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PLS:S20:30,PLASTER,m2,2.76,NOT_MAPPED,,,,PLS workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PLS:S20:31,PLASTER,m2,2.04,NOT_MAPPED,,,,PLS workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PLS:S20:32,PLASTER,m2,2.3,NOT_MAPPED,,,,PLS workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PLS:S20:33,PLASTER,m2,3.675,NOT_MAPPED,,,,PLS workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PLS:S20:34,PLASTER,m2,9.2,NOT_MAPPED,,,,PLS workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PLS:S20:35,PLASTER,m2,4.5,NOT_MAPPED,,,,PLS workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PLS:S20:36,PLASTER,m2,3.0,NOT_MAPPED,,,,PLS workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PLS:S20:37,PLASTER,m2,4.6,NOT_MAPPED,,,,PLS workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PLS:S20:38,PLASTER,m2,8.37,NOT_MAPPED,,,,PLS workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PLS:S20:39,PLASTER,m2,4.5,NOT_MAPPED,,,,PLS workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PLS:S20:40,PLASTER,m2,13.8,NOT_MAPPED,,,,PLS workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PLS:S20:41,PLASTER,m2,0.75,NOT_MAPPED,,,,PLS workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PLS:S20:42,PLASTER,m,26.4,NOT_MAPPED,,,,PLS workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PLS:S20:44,PLASTER,m2,54.6,NOT_MAPPED,,,,PLS workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PLS:S20:51,PLASTER,m2,9.0,NOT_MAPPED,,,,PLS workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PLS:S20:52,PLASTER,m2,69.0,NOT_MAPPED,,,,PLS workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PLS:S20:53,PLASTER,m2,113.76,NOT_MAPPED,,,,PLS workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PLS:S20:54,PLASTER,m2,21.0,NOT_MAPPED,,,,PLS workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PLS:S20:55,PLASTER,m2,62.4,NOT_MAPPED,,,,PLS workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PLS:S20:58,PLASTER,m2,97.2,NOT_MAPPED,,,,PLS workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PLS:S20:59,PLASTER,m2,62.2125,NOT_MAPPED,,,,PLS workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PLS:S20:60,PLASTER,m2,7.2,NOT_MAPPED,,,,PLS workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PLS:S20:61,PLASTER,m2,24.93,NOT_MAPPED,,,,PLS workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PLS:S20:63,PLASTER,m2,48.0,NOT_MAPPED,,,,PLS workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PLS:S20:64,PLASTER,m2,192.0,NOT_MAPPED,,,,PLS workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PLS:S20:65,PLASTER,m2,18.0,NOT_MAPPED,,,,PLS workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PLS:S20:68,PLASTER,m2,9.0,NOT_MAPPED,,,,PLS workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PLS:S20:69,PLASTER,m2,66.15,NOT_MAPPED,,,,PLS workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PLS:S20:70,PLASTER,m2,28.215,NOT_MAPPED,,,,PLS workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PLS:S20:71,PLASTER,m2,27.225,NOT_MAPPED,,,,PLS workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PLS:S20:72,PLASTER,m2,181.806,NOT_MAPPED,,,,PLS workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PLS:S20:73,PLASTER,m2,19.154,NOT_MAPPED,,,,PLS workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PLS:S20:74,PLASTER,m2,54.45,NOT_MAPPED,,,,PLS workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PLS:S20:75,PLASTER,m2,3.9375,NOT_MAPPED,,,,PLS workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PLS:S20:77,PLASTER,m2,83.425,NOT_MAPPED,,,,PLS workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PLS:S20:78,PLASTER,m2,82.399,NOT_MAPPED,,,,PLS workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PLS:S20:79,PLASTER,m2,19.88,NOT_MAPPED,,,,PLS workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PLS:S20:83,PLASTER,m2,25.34,NOT_MAPPED,,,,PLS workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PLS:S20:84,PLASTER,m2,19.04,NOT_MAPPED,,,,PLS workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PLS:S20:87,PLASTER,m2,90.36,NOT_MAPPED,,,,PLS workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PLS:S20:88,PLASTER,m2,13.92,NOT_MAPPED,,,,PLS workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PLS:S20:89,PLASTER,m2,1.2,NOT_MAPPED,,,,PLS workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PLS:S20:90,PLASTER,m2,1.76,NOT_MAPPED,,,,PLS workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PLS:S20:92,PLASTER,m2,50.876,NOT_MAPPED,,,,PLS workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
+PLS:S20:97,PLASTER,m2,3.85,NOT_MAPPED,,,,PLS workbook: room / surface join is the next R7 step (finish rows to register ROOM / WALL / OPEN elements)
