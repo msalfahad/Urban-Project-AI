@@ -199,6 +199,30 @@ def test_a_binding_for_a_set_this_run_does_not_hold_is_listed_unused():
     assert rep["set_bindings"]["unused_bindings"] == ["RC:S-Z"] and ln["outcome"] == "COMPARED"
 
 
+def _with_own_line(qty, ev="PROVISIONAL"):
+    ln = line("C9", "FIN.FLOOR.WET_TILE", "m2", ev, qty, "RB:floor")
+    ln["location"]["room_id"] = "RB"
+    return lines() + [ln]
+
+
+def test_a_space_the_side_already_floors_is_answered_once_never_twice():
+    # a candidate whose wet-room evidence floors RB itself (2.20 wet tile), scored beside the base run's sets
+    eng, rep, ln, _ = score(bindings(), lns=_with_own_line(2.20))
+    assert ln["outcome"] == "COMPARED" and abs(ln["engine_qty"] - 50.25) < TOL      # not 52.45
+    assert "COND:RC:S-B:FLOOR" not in {e["id"] for e in eng}
+    k = rep["set_bindings"]["keys"]["FLOOR"]
+    assert k["decided_by_own_line"] == [{"set": "COND:RC:S-B", "key": "FLOOR", "line_ids": ["C9"], "qty": 2.2}]
+    assert k["released_m2"] == 48.45 and k["assumed_owner_approved_m2"] == 1.8 and k["line_total"] == 50.25
+
+
+@pytest.mark.parametrize("qty,ev", [(2.30, "PROVISIONAL"), (None, "BLOCKED_RFI")])
+def test_an_own_line_of_another_quantity_or_held_keeps_the_set_held(qty, ev):
+    eng, rep, ln, _ = score(bindings(), lns=_with_own_line(qty, ev))
+    e = next(x for x in eng if x["id"] == "COND:RC:S-B:FLOOR")
+    assert e["status"] == "HELD" and e["qty"] is None and "conflict" in e["binding_reason"]
+    assert ln["outcome"] == "HELD" and rep["set_bindings"]["keys"]["FLOOR"]["line_total"] is None
+
+
 # ---- adverse: refused ---------------------------------------------------------------------------------------------------
 
 @pytest.mark.parametrize("mutate,msg", [

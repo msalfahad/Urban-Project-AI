@@ -100,7 +100,9 @@ def engine_rows(lines, release_report, key_map_doc):
                 row = {"id": f"COND:{s['set_id']}:{key}", "trade": k["trade"], "unit": unit, "qty": None,
                        "status": "HELD", "key": key, "surface": f"COND:{s['set_id']}"}
                 if sb is not None:
-                    row = bound_set_row(row, s, key, items, sb)
+                    row = bound_set_row(row, s, key, items, sb, subject_key_lines(lines, k, s.get("subject")))
+                    if row is None:              # decided by the subject's own line in these lines: answered once
+                        continue
                 rows.append(row)
                 conditional[key] = conditional.get(key, 0) + 1
     report = {"excluded_lines_by_key": excluded, "conditional_sets_by_key": conditional,
@@ -157,7 +159,11 @@ def run(run_dir, normalised_doc, key_map_doc):
 #   its evidence (fixture symbol and printed size), a set of another kind than REVIEW_CLASSIFICATION, a bound
 #   scenario that still carries a closure-strip item of a space with a door closure (one physical strip, one line: the
 #   opening's threshold line holds it), and a binding whose quantities are not this run's scenario (stale binding);
-# - a bound scenario that holds none of the key's items keeps the set HELD for that key (missing is never 0).
+# - a bound scenario that holds none of the key's items keeps the set HELD for that key (missing is never 0);
+# - one floor, one line: when the scored lines already carry the set's space (location room_id = the set's subject)
+#   as released line(s) of the key equal to the bound quantity (a V3.0.x candidate scored beside the base run's
+#   release report, whose wet-room evidence decided the space), the set adds nothing and is listed "decided by own
+#   line"; own lines that are held or of another quantity keep the set HELD (conflict), never summed twice.
 
 SET_BINDINGS_SCHEMA = "URBAN_SCORER_SET_BINDINGS_V1"
 SB_ASSUMED, SB_HELD = "ASSUMED_OWNER_APPROVED", "HELD"
@@ -223,11 +229,21 @@ def load_set_bindings(doc):
         else:
             raise ValueError(f"{where}: status {st!r} is not {SB_ASSUMED} or {SB_HELD}")
         sets[sid] = b
-    return {"doc": doc, "keys": keys, "sets": sets, "strips": strips, "used": set()}
+    return {"doc": doc, "keys": keys, "sets": sets, "strips": strips, "used": set(), "decided": []}
 
 
-def bound_set_row(row, scenario_set, key, key_items, sb):
-    """The scorer row of one CONDITIONAL set holding `key` under a binding file (the HELD row when not bound)."""
+def subject_key_lines(lines, key_entry, subject):
+    """The scored side's own lines of the key's item codes located in the set's subject space (room id)."""
+    if not subject:
+        return []
+    codes = set(key_entry["item_codes"])
+    return [ln for ln in lines if ln["item_code"] in codes and (ln.get("location") or {}).get("room_id") == subject]
+
+
+def bound_set_row(row, scenario_set, key, key_items, sb, own_lines=()):
+    """The scorer row of one CONDITIONAL set holding `key` under a binding file (the HELD row when not bound), or
+    None when the scored side already decides the set's space by its own released line(s) of exactly the bound key
+    quantity (a candidate scored beside the base run's release report: the space is answered once, by its line)."""
     sid = scenario_set.get("set_id")
     if key not in sb["keys"]:
         return row
@@ -256,6 +272,15 @@ def bound_set_row(row, scenario_set, key, key_items, sb):
         return dict(row, binding=SB_HELD, binding_reason=f"the bound {b['scenario']} scenario holds none of the key's "
                                                          "items: HELD, never 0")
     qty = round(sum(float(q[i]) for i in present), 6)
+    if own_lines:
+        st = [line_status(ln) for ln in own_lines]
+        own = [x for x in st if x is not None]
+        ids = sorted(ln["line_id"] for ln in own_lines)
+        if own and all(x[0] == "RELEASED" for x in own) and abs(sum(x[1] for x in own) - qty) <= _SB_QTY_TOL:
+            sb["decided"].append({"set": f"COND:{sid}", "key": key, "line_ids": ids, "qty": qty})
+            return None
+        return dict(row, binding=SB_HELD, binding_reason="the space already has its own line(s) of this key in these "
+                    f"lines ({', '.join(ids)}) that are held or differ from the bound {qty}: conflict, HELD")
     return dict(row, qty=qty, status=SB_SCORER_STATUS, evidence="ASSUMED — OWNER-APPROVED", binding=SB_ASSUMED,
                 rule_id=b["rule_id"], verdict_commit=b["verdict"]["commit"], scenario=b["scenario"],
                 closure_strip_m2=None if cs is None else float(cs["m2"]),
@@ -284,6 +309,7 @@ def set_binding_report(rows, sb):
                             "geometry_status": r.get("geometry_status"),
                             "closure_strip_not_in_key_m2": r.get("closure_strip_m2")} for r in bound],
             "held_sets": held_sets,
+            "decided_by_own_line": [d for d in sb["decided"] if d["key"] == key],
             "line_total": None if (held_lines or held_sets) else round(r_q + a_q, 6)}
     out["unused_bindings"] = sorted(set(sb["sets"]) - sb["used"])
     return out
@@ -301,6 +327,11 @@ def set_bindings_markdown(sides):
         for key, k in rep["keys"].items():
             bs = ", ".join(f"{b['set']} {b['qty']:.4f} ({b['rule_id']}, {b['verdict_commit']})"
                            for b in k["bound_sets"]) or "-"
+            dec = k.get("decided_by_own_line") or []
+            if dec:
+                bs += (f"; {len(dec)} set{'s' if len(dec) != 1 else ''} decided by this side's own released line "
+                       f"(in the released lines, not added again): " + ", ".join(f"{d['set']} {d['qty']:.4f}"
+                                                                                  for d in dec))
             hs = [f"{h['set']} ({h['reason']})" for h in k["held_sets"]]
             if k["held_lines"]:
                 hs.append(f"{len(k['held_lines'])} held engine line{'s' if len(k['held_lines']) != 1 else ''}")
