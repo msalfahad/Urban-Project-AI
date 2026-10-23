@@ -36,6 +36,32 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
    commit. Decision: board-only handoffs are verified as hand evidence (the verifier re-reads the cited notes), and the
    next task on the topic writes the files (T-117); a run with no line stays a NEEDS FIXING item for the owner's setting.
 
+## 2026-10-23 12:20 (lead run)
+
+- **Worker 1 10:20 -> 10:39 / Checker 10:53 -> 11:52**: T-205 MERGED 5f40dfdb -> **WORKED** (necks released 10.855 vs
+  freelancer 8.805 m3, +2.0505, reconciled to 0.000 in four named causes; drawing-derived neck = footing top -> GB top,
+  every neck HELD on two unprinted terms; checker re-derived 0.0 %). Decision: the two printed section conflicts it found
+  (C8 D-16, lift group new D-63) become T-217; the build-up term b is T-214 (now first in lane S). Lessons row added.
+- **Worker 2 09:40 -> 10:02 / Checker 11:52**: T-208 MERGED 54cb4c42 -> **WORKED** (3 hand-wash spaces bound WET by Q-06 A,
+  9.348 m2, checker 0.0 % on 2 of 3). But the scoreboard still shows floor area NOT YET MEASURED: no scorer reads the
+  binding. Decision: T-216 (key-map opt-in path, first in lane I); its named residuals (1F bedrooms -1.379, strips
+  +1.300) and the FOUND kitchen dry-vs-Q-30 A -> T-218.
+- **Worker 3 09:01 -> 10:05 / Checker 11:52**: T-193 Gate B MERGED e866328a -> **WORKED** (V3.0.7: pool base + walls 7.202
+  and terrace dome shells 5.081 m3 in the candidate, DOME-B billed once, 3,535 lines byte-identical, all 10 changed lines
+  0.0 % by hand). Decision: T-199 (V3.0.8 formwork + railings) promoted to TODO.
+- **Worker 2 10:41 -> 11:17**: T-212 READY (gate 0 fix of the red guard test) -> pending verdict; first in the 12:49 queue.
+- **Worker 3 11:00 -> 11:30**: T-203 READY (registry 1.2.0) -> pending; as_of V3.0.6 while V3.0.7 merged meanwhile: the
+  checker passes it only with the as_of stated and unchanged states, else a narrow rework.
+- **Worker 1 11:25 -> 11:42**: T-213 READY (one set of sunken panels under two storey conventions, residual -0.0100 m2;
+  step concrete 0 by geometry; drop HELD) -> pending. Its note on the opt-in M8 SLAB_STEP bound (4 sqrt(A) wrong twice)
+  goes to 'Later' for lane I, after T-213 merges.
+- **Worker 2 11:41 -> 12:02**: T-209 READY (wet-wall tiles 340.41 m2 on 12 rooms, 6 HELD; like for like +4.28 % fully
+  decomposed, residual 0) -> pending.
+- **Process**: every slot since 10:20 closed (8 / 8 STARTED + final, plus one checker overlap-guard run at 11:50 that
+  stood down correctly). The red guard test stayed on the working branch about 3 h because the fix went READY after the
+  10:53 checker run had started (it was not in that run's queue); now first. Row stamps of T-203 / T-205 disagree with
+  their RUN_LOG lines (cosmetic; workers told to stamp with `date -u`).
+
 ## 2026-10-23 10:20 (lead run)
 
 - **Worker 1 08:20 -> 08:42**: T-204 MERGED 4fbf7627 (Checker 09:11) -> **WORKED** (lift pit drawn and detailed on ST PDF
@@ -587,32 +613,3 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
   and its rework is first. (b) Verifier wrote MERGED / REJECTED in the Branch column, so the board showed READY for
   merged rows: Lead corrected the statuses and left a note for the verifier. (c) silent runs: worker 1 22:19, worker 3
   22:59 (cause 4, owner setting).
-
-## 2026-10-20 22:15 (lead run)
-
-- **T-122 / T-123 / T-124 / T-110: WORKED (MERGED 21:05, verifier run 45, each re-measured on the Drive DXFs).** 1F
-  landing 4.875 printed / 4.865 m2 drawn to marble once, porcelain 33.594 .. 33.711 HELD (hand 33.713); GF facade 98.887 vs
-  hand 105.887 m (-6.6 %), passage 1.20 x 4.70 with the mouth open (Q-67 A condition met); membrane V5: no released or proven
-  roll count changes; beam register 64.764 vs freelancer 65.97 m3 (-1.8 %) with B29 and B21 drawn-vs-schedule CONFLICTs
-  confirmed. T-110 is PARTIAL on the beam line itself (HELD 4.123 .. 8.553 m3, 3 projection pieces, D-26..D-28). Decision:
-  T-102 promoted (the two printed section cuts settle two spans); the rest stays with the designer list; T-122 joins V3.0.1
-  (T-133).
-- **T-126 route G scope (blinding by member, undrawn columns): WORKED (MERGED cd34bd0, run 46).** Columns 36.714 -> 34.446
-  m3 (5 undrawn occurrences NOT_PRESENT, -2.268, ENGINE_RIGHT); blinding 22.155 -> 15.179 m3 released, and the checker's own
-  union of the raw footing outlines gave the same 151.794 m2; held F10 0.480 .. 0.590, ground beams 5.724 .. 9.423, straps
-  0.772. Freelancer's 47.055 whole-plot plate = RULE_DIFFERENCE. Decision: wire into V3.0.1 (T-133); column heights stay
-  with T-119 (freelancer 28.547 is still -17 % on the height basis).
-- **T-129 stair arrivals once: WORKED (MERGED 1513f1d, run 46).** 2F arrival 4.875 m2 marble (Q-70 A condition met: the
-  195 is in the stair's own 1200 + 3300 + 1950 chain), 2F porcelain 2.500 not 3.900; front floor 7.375 vs freelancer 7.70
-  (+4.4 %). Found a released defect: V2.9 counts the 1F -> 2F lower flight again on the 2F plan (+3.45 m2 tread marble,
-  +11.5 lm steps). Decision: code task T-135 (lane A); the arrival joins V3.0.1 (T-133).
-- **T-131 V3.0 skeleton: READY (33f1da2), awaits the checker.** 1519 of 1528 Alsenan lines byte-identical; straps 3.781 ->
-  3.390 m3 (+11.5 % -> -0.07 %), GF facade 98.887 -> 105.887 lm under Q-67 A, 1F porcelain 44.869 -> 38.459 .. 38.979 range;
-  L4 396 = 396. Decision: verifier checks it first; T-133 / T-134 build on it once merged.
-- **T-105 beam ledger + stair rework: READY (7975663), awaits the checker.** Firewall declarations only; beams 68.84 vs
-  65.97 m3 (+4.4 %, 18 spans held), main stair 5.011 vs 8.131 (RULE_DIFFERENCE). Decision: after it merges, T-136 (footing
-  rebar) may take the same registry file.
-- **Silent runs (recurring cause 4, new form): FAILED.** Worker 2 21:39 (1.5 min, no line, no commit) and worker 3 21:59
-  (STARTED written, 9 min, no claim, no final line) although claimable TODO existed for both (T-127 / T-128 / T-125;
-  T-130). Cause NOT KNOWN from the repository. Decision: no board change can fix it; P-01 (owner's Test B + repo-attached
-  config) stays the fix; reported under NEEDS FIXING.

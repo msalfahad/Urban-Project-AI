@@ -21,7 +21,7 @@
 |---|---|---|---|---|
 | P-01 | owner + auditor | in progress, good | pilot (owner 06:15): 08:20 - 10:20 every slot STARTED + final SUCCESS (worker 1 08:20, 09:20; worker 2 08:40, 09:40; worker 3 09:01 -> 10:05; checker 08:51, 09:51), run lock taken and released, 0 IDLE, every self-check PASS, 0 refusals. ONE regression merged (t202 guard test red since 01eeafd0, no quantity effect): a pilot rollback trigger for the auditor's 12:15 check-in; fix T-212 at the top of the board |
 | P-02 | I | BOQ_FAMILY_MASTER 1.1.0 refreshed from code and releases (evidence per family) | every family has a status with a file:line or commit | checker spot-checks 10 |
-| P-03 | V3.0.4, V3.0.5 r2, V3.0.6 MERGED; V3.0.7 READY 10:03 (T-193: verified pool 7.202 + dome shells 5.081 m3 in, the double-billed DOME-B misread retired; pool +3.707 / domes -2.290 m3), first in the 10:49 checker run; next V3.0.8 formwork + railings (T-199), V3.0.9 plaster / paint (T-211), then slab faces (T-146) | candidate grows by verified pieces only | NOT RELEASED |
+| P-03 | V3.0.4, V3.0.5 r2, V3.0.6 and V3.0.7 MERGED (V3.0.7 e866328a 11:49, Gate B PASS: verified pool 7.202 + dome shells 5.081 m3 in, DOME-B billed once; verification -> integration 19.6 h for the pool (T-183 merged 22 Oct 16:14) and 17.6 h for the dome shells (T-185 18:15)); next V3.0.8 = T-199 formwork + railings (TODO now); earlier: V3.0.7 READY 10:03, first in the 10:49 checker run; next V3.0.8 formwork + railings (T-199), V3.0.9 plaster / paint (T-211), then slab faces (T-146) | candidate grows by verified pieces only | NOT RELEASED |
 | P-04 | checker | SCOREBOARD v2: per trade and unit WAPE, coverage, verified share, held = UNKNOWN share; no mixed units | table on the board | Lead reviews |
 | P-05 | S | blinding scope (under ground beams and straps) and the 5 columns not on the roof-slab plans, fed into V3.0 | blinding within the hand range 20.71–26.37 m3; columns −2.27 m3 | checker hand |
 
@@ -46,7 +46,7 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
-## Status (Lead, 2026-10-23 10:20; re-estimated each run from what merged and was verified)
+## Status (Lead, 2026-10-23 12:20; re-estimated each run from what merged and was verified)
 
 Baseline: the RELEASED baseline is run A (V2.9 + route G, no profile, 1,455 lines), pinned by T-165 (37124da); run B
 (profiled, 1,621 lines) is the comparison base for V3.0.x line pairing. The engineering reasoning standard (owner 08:05)
@@ -56,8 +56,8 @@ WORKFLOW_CONTROLS section 10 (owner 15:15: faster execution, same evidence) gove
 | Plan | Board | State | Note |
 |---|---|---|---|
 | P-01 | owner + auditor | in progress, good | pilot (owner 06:15): 08:20 - 10:20 every slot STARTED + final SUCCESS (worker 1 08:20, 09:20; worker 2 08:40, 09:40; worker 3 09:01 -> 10:05; checker 08:51, 09:51), run lock taken and released, 0 IDLE, every self-check PASS, 0 refusals. ONE regression merged (t202 guard test red since 01eeafd0, no quantity effect): a pilot rollback trigger for the auditor's 12:15 check-in; fix T-212 at the top of the board |
-| P-02 | T-130 r3, T-165, T-140 MERGED | DONE (registry, baseline, census V2) | |
-| P-03 | V3.0.4, V3.0.5 r2, V3.0.6 MERGED; V3.0.7 READY 10:03 (T-193: verified pool 7.202 + dome shells 5.081 m3 in, the double-billed DOME-B misread retired; pool +3.707 / domes -2.290 m3), first in the 10:49 checker run; next V3.0.8 formwork + railings (T-199), V3.0.9 plaster / paint (T-211), then slab faces (T-146) | candidate grows by verified pieces only | NOT RELEASED |
+| P-02 | T-130 r3, T-165, T-140 MERGED; T-203 registry 1.2.0 (candidate-level state) READY 11:30 | DONE (registry, baseline, census V2); candidate-level state at the checker | |
+| P-03 | V3.0.4, V3.0.5 r2, V3.0.6 and V3.0.7 MERGED (V3.0.7 e866328a 11:49, Gate B PASS: verified pool 7.202 + dome shells 5.081 m3 in, DOME-B billed once; verification -> integration 19.6 h for the pool (T-183 merged 22 Oct 16:14) and 17.6 h for the dome shells (T-185 18:15)); next V3.0.8 = T-199 formwork + railings (TODO now); earlier: V3.0.7 READY 10:03, first in the 10:49 checker run; next V3.0.8 formwork + railings (T-199), V3.0.9 plaster / paint (T-211), then slab faces (T-146) | candidate grows by verified pieces only | NOT RELEASED |
 | P-04 | T-132 DONE; T-177 and T-182 (five measures, 50991742) MERGED; T-181 claimable; T-180 slot: pool and 2 stair flights reconciled, 0 / 8 VERIFIED | script DONE; five measures in the checker queue | whole-line rule (owner 11:50) |
 | P-05 | T-126 / T-133 | DONE | |
 | P-06 | T-128 r3 MERGED a6ac2c66 (3 rooms checker 0.0 %); T-173 stair shaft MERGED 8b4d2c83 | hand package DONE; engine line not yet (scoreboard plaster / paint NOT YET MEASURED until a candidate line exists) | integration task to plan once the candidate chain frees lane I |

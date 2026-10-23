@@ -1,5 +1,72 @@
 # Lead reports to the owner's main chat (newest first, last 3 entries; older in archive/LEAD_REPORT_older.md)
 
+## LEAD REPORT 2026-10-23 12:20 UTC
+
+Repositories: attached Urban-Project-AI checkout (main ccbe7876); `.work` prepared AUTOMATICALLY ("setup by auto", 12:10).
+Working branch head d5df7d1f -> e866328a (checker merges T-208 54cb4c42, T-205 5f40dfdb, T-193 Gate B e866328a; no
+owner commit on the engine branch). Drive readable: nothing created in the Alsenan folder or the private-data root since
+10:00, no new image, so no photo-review task. UrbanProjectsManager not used. OWNER_SESSION_CHANGES: no entry since 06:15;
+pilot rules applied (4 claimable TODO in lanes S and A); nothing undone or duplicated. The pilot +6 h check-in (12:15)
+had not logged in PILOT section 7 when this report was written.
+
+PROGRESS (Alsenan; released unchanged: concrete 92.77 vs freelancer 111.81 m3, -17.03 %, run A; SCOREBOARD v2 11:55:
+verified share 0 / 8 whole concrete reference lines in every state; V3.0.7 concrete compared 1 line, WAPE 1.84 %)
+- CANDIDATE V3.0.7 MERGED (Gate B, NOT RELEASED; m3): checker-verified pool base 4.374 + walls 2.828 (1.20 STRUCTURAL)
+  and terrace dome shells 2 x 2.541 replace 4 convention lines; DOME-B billed once (V3.0.5 billed it twice); checker by
+  hand all 10 changed lines 0.0 %, 3,535 lines byte-identical. Verification -> integration: 19.6 h (pool), 17.6 h
+  (domes). Lines CONC.POOL / domes stay HELD as whole lines (steps not drawn; tower dome HELD).
+- NECKS (m3), MERGED: released 10.855 vs freelancer 8.805 (+2.0505, +23.3 %) reconciled to 0.000: -1.350 scope he prices
+  and the engine holds, -0.165 his C11 0.40 vs printed 0.30, +0.720 two necks he omits (36 drawn), +2.8455 height basis
+  (released top at FFL = finished-as-structural; his 1.50 = the p.9 minimum founding depth, not a length). Drawing-
+  derived: footing top -> ground-beam top, h = 2.33 - H - b + d; b (build-up) and d (formation below -1.50) unprinted ->
+  every neck HELD (checker re-derived 0.0 %). Verdicts: C11 section and counts ENGINE_RIGHT; total UNRESOLVED.
+- FLOOR AREA (m2), MERGED: hand-wash sets bound WET by Q-06 A (9.348, ASSUMED — OWNER-APPROVED; checker 0.0 % on 2 / 3):
+  engine 385.634 vs 409.58 (-5.85 % raw), scope -23.990, like for like +0.044 (+0.01 %, not proof). Still NOT YET
+  MEASURED on the scoreboard: no scorer reads the binding (fix: key-map opt-in path). Found: GF kitchen 9.630 dry in
+  V2.9 / V2.11 against Q-30 A (floor total unchanged; waterproofing affected).
+- WAITING FOR THE CHECKER: wet-room wall tiles (owner method 340.41 m2 on 12 rooms, 6 HELD; like for like 11 rooms
+  308.07 vs 295.44 m2, +4.28 % = length -2.65 + height +43.19 (Q-48 A vs his 3.00, RULE_DIFFERENCE) - doors 22.99 -
+  windows 4.92, residual 0; he deducts no openings: ENGINE_RIGHT); sunken wet slabs (ONE set of 6, not two: 1F floor
+  19.3864 + 2F floor 5.400 m2, residual -0.0100 m2 vs the earlier record; slab concrete 3.9658 m3 unchanged, step
+  concrete 0 by geometry, drop HELD under D-41); coverage registry 1.2.0 (in-candidate 50 / 49 families, 11
+  INTEGRATED_IN_CANDIDATE_AND_TESTED); the guard-test fix.
+- COLUMNS (m3): checker own re-measure 23 -> 25 / 59, all 0.0 %; line PARTIALLY VERIFIED (C8 conflict D-16, tank columns).
+What improved: the candidate carries verified pool and dome-shell concrete and no double dome; the neck difference is
+fully explained. What did not move: whole-line verified share 0 / 8; floor area still unscored. Learned (4 lessons rows,
+ERS s.7): decompose a total difference into scope / count / section / datum before a verdict, and a design limit is never
+a member length; declare a slab element's storey convention and match by geometry; deduct openings by their own area,
+never width x full height; a guard sweep resolves relative imports. Missing: pit depth, tank, sunken-panel drop, floor
+build-up, existing ground, plaster / paint / formwork / railings candidate lines, foundation waterproofing lines.
+
+ENGINEERING QUESTIONS OPENED (ERS s.5, Lead): T-216 a verified binding no scorer uses (floor area made scorable, no
+quantity change); T-217 printed section conflicts C8 (D-16) and the lift column / neck group (plan 20X50 / 25X100 vs
+schedule 30x50 / 30x100, new D-63) as CONFLICT records with both volumes, never the larger; T-218 floor-area residuals
+(1F bedrooms -1.379, strips +1.300) and the kitchen's wet sub-lines under Q-30 A; T-219 (queued) footing membrane +
+protection screed and lift-pit membrane / board / screed as waterproofing lines without double count against the
+blinding. Promoted: T-199 (V3.0.8 formwork + railings, T-193 merged), T-170 (excavation, T-205 merged; depth HELD). T-214
+(floor build-up) first in lane S: it is the term b that holds every neck. Cross-trade (register +9 rulings): sunken
+panels one element per hatch, storey = floor carried; necks own the GB junction and share one datum with the GF columns;
+kitchen wet sub-lines to waterproofing; wall tiles over door heads; foundation membrane to waterproofing. Integration
+readiness: no Gate B package READY; T-199 is next. Later: the opt-in M8 SLAB_STEP bound is wrong for beam-framed panels.
+
+TEAM HEALTH: 10:20 - 12:20 (pilot): 8 / 8 slots STARTED + final SUCCESS (worker 1 10:20, 11:25; worker 2 10:41,
+11:41; worker 3 11:00; checker 10:53; plus one checker overlap-guard run 11:50 that stood down correctly; Lead 10:13);
+every self-check PASS; 0 refusals; Drive read OK. Ran code: all three workers and the checker (one tool process killed by
+a container restart at 11:48, re-run OK). Throughput: 3 merges (1 Gate B), 0 rejections; READY 4 now (oldest T-212 1.1 h),
+one above target: backlog rule on, 6 backlog-permitted rows + one integration package keep every worker claimable. The
+red guard test stayed on the working branch about 3 h (since 01eeafd0): its fix went READY at 11:17, after the 10:53
+checker run had started; it is first at 12:49. No new merge regression. Row stamps of T-203 / T-205 disagree with their
+RUN_LOG lines (cosmetic). Board: TODO S 4 (T-214, T-217, T-174, T-170), A 4 (T-215, T-218, T-017, T-176), I 4 (T-216,
+T-199, T-168, T-210) + queued T-219, T-211 -> T-146. Queue check: 46 actionable rows, 0 flagged, 0 stall checks. Self-check PASS (codemap stale
+none, t061, freeze 0).
+
+OWNER PACKAGE: none today. No finding meets ERS s.2.7: the new conflicts (C8, lift group) and the missing levels are
+designer items (D-16, D-63 new, D-41, D-43, D-39 / D-40); nothing needs your judgment.
+
+NEEDS FIXING (only the owner can do): carried: a site / plot level survey for Alsenan, if one exists, in the Alsenan
+Drive folder (every excavation depth and the neck term d stay HELD without it; D-62 lists the site plan as missing).
+Main chat / auditor: pilot_metrics.py merged / rejected parser (carried from 08:20).
+
 ## LEAD REPORT 2026-10-23 10:20 UTC
 
 Repositories: attached Urban-Project-AI checkout (main ccbe7876); `.work` prepared AUTOMATICALLY ("setup by auto", 10:13).
@@ -139,71 +206,3 @@ with 12 verdicts, while RUN_LOG shows 8 merges and 1 rejection in the window: it
 final-line format; fix before the 12:15 check-in, or the pilot's '+40 % merged' criterion reads as a failure. The Lead
 edits no dashboard code. Also: `bash scripts/agent_env.sh board check` refuses when the board has uncommitted edits
 ("cannot pull with rebase: You have unstaged changes"), so the Lead ran queue_check.py directly before committing.
-
-## LEAD REPORT 2026-10-23 04:20 UTC
-
-Repositories: attached Urban-Project-AI checkout (main ccbe7876); `.work` prepared AUTOMATICALLY ("setup by auto").
-Working branch head 06c2b045 -> 57bb0411 (checker merges T-179 r2 90d0b769, T-190 465e0015, T-192 86fd5f42, T-198
-57bb0411; no owner commit on the engine branch). Drive readable: no file created or modified in the Alsenan folder since
-2026-10-22 20:00 and no new image anywhere, so no photo-review task. UrbanProjectsManager not used. OWNER_SESSION_CHANGES:
-no entry newer than 18:00; nothing undone or duplicated. T-190 was handed in by the main chat at 00:32 ("owner pilot
-prerequisite 1") with no OWNER_SESSION_CHANGES line: noted, not undone.
-
-PROGRESS (Alsenan; released numbers unchanged: released concrete 92.77 vs freelancer 111.81 m3, -17.03 %, run A;
-SCOREBOARD v2 04:02 note: no scored cell moved; verified share still 0 / 8 whole concrete reference lines)
-- STAIRS (m3): ownership at every foot / head / landing MERGED: MS2-L 1.0589 -> 1.0334 VERIFIED (checker: first riser
-  0.150 m inside B20, waist below +5.50 inside the beam 0.025448 m3, 0.0 %); E1 wedge 0.0020 into the released ground
-  slab; staircase system 6.6754 -> 6.6479 m3 PARTIALLY VERIFIED (owner rule 16:45). Freelancer stairs 15.053; engine
-  released 4.635. Candidate V3.0.6 (READY, Gate B 05:49) restores the ST-01 1F -> 2F flights the engine drops
-  (D-T184-1): MS2-L 1.0334 VERIFIED + MS2-U 1.0014 DRAWING-CONFIRMED + MS2-LD HELD 0.4696 .. 0.4800 (rev1 claimed 2.598,
-  now 2.504 .. 2.515: -0.0575 at the B23 head, -0.0254 at the B20 foot).
-- MISREAD ELEMENT (m3; cross-trade): the candidate line STAIRS:1F:SITE 4.451 m3 ('winder') is a dome outline (18 lines
-  from one point to r 2.211 m over 360 deg). Engineering question: is the dome concrete then counted twice (inside the
-  7.372 dome convention lines AND as this stair)? Ruling: owner trade DOMES; line HELD MISREAD in V3.0.6 and RETIRED in
-  V3.0.7 (T-193) when the verified shells 5.081 m3 replace the conventions; T-193 must name the dome and prove one
-  count. Lessons row added (type an element from its evidence, never a shape heuristic).
-- REBAR (kg): V3.0.5 r2 MERGED (Gate B PASS): stair / strip highs on count B (+65.04 kg), stair held 1,039.16 ..
-  1,443.67 kg, STR.REBAR held 15,250.79 .. 21,621.55 kg; candidate quantity lines 10,250.17 kg unchanged; NOT RELEASED.
-  Pool steel rev2 REJECTED: walls / hoops / outline re-measured 0.0 % (R1 839.34 .. 883.59 kg net, R2 583.08 .. 617.96),
-  but the base mats used only the footing meaning of '/m' (max spacing + 1): low end about -14.45 kg R1, -10.63 kg R2
-  (checker's own count); freelancer 1,500 kg = RULE_DIFFERENCE; line HELD (D-57). Rework r2 first in lane S.
-- COLUMNS (m3): checker T-180 slot now 8 / 59 columns own re-measure, all 0.0 % (this cycle COL-GF-10 0.750, COL-1F-44
-  0.444, COL-1F-36 0.380, COL-GF-11 0.9375, COL-GF-17 0.700, COL-2F-54 0.380). Line 28.816 .. 29.139 vs his 28.547
-  stays PARTIALLY VERIFIED (range: C8 30x80 vs 30x90, tank columns 3.00 .. 3.80 m).
-- OPENINGS (pcs / m2): census r3 MERGED: +3 leafless openings (P-GF-01 0.90, P-1F-01 1.30, P-GF-05 1.20; heads HELD),
-  W01 1.85 -> 1.00 / W03 1.00 -> 0.00 sill above FFL (checker own DXF from the level marker), windows pcs 28 + W02 HELD
-  vs his 29; established block m2 change 0.000; new HELD scope: P-1F-01 masonry above lintel 0 .. 4.992 m2, head
-  soffits 0.615 m2, P-GF-05 threshold. Windows m2 stays DRAWING-CONFIRMED on 8 of 29 (56.771 vs his 54.931 on the same 8,
-  +3.35 %); 21 heads HELD -> new T-201.
-- CURVED GEOMETRY (R4) READY: finds the 4 known cases (pool wall band 1.240 / base 6.045 m2 vs drawn 2.3567 / 10.9356
-  m2; W17 deduction 2.977 face arc vs 2.9736 chord AMBIGUOUS; 1F-11 r2 +0.1993 m past the drawn faces; dome bands
-  DOUBLE_ARC x4 in V3.0.4+ring, clean in V3.0.5). No quantity moved.
-- SCOPE CROSSWALK (R7) REJECTED: right on footings (F4 2 x 1.76 = 3.52 m3, 0.0 %) but the register holds ~3 elements per
-  physical column (GF C2 12 vs 4): identity fault in register-v0, ruling recorded; no register column count to be quoted.
-What improved: a lost structural scope (1F -> 2F flights) is back in the candidate; the opening list is complete; the
-safety firewall is green. What got worse: nothing measured; one honest find that a candidate line was a misread element.
-Learned (lessons register, 5 rows added): notation meaning per element type; type from evidence not shape; one element
-per physical column; re-datum elevation chains; map regenerated last.
-Missing: engine lines for plaster / paint / formwork / railings / block (scoreboard NOT YET MEASURED until integrated);
-21 window heads; level chain (R5) for excavation; whole-line VERIFIED still 0 / 8.
-
-TEAM HEALTH: 00:20 - 04:20: 8 / 8 slots STARTED + final SUCCESS (worker 1 00:20 -> 00:46, 02:20 -> 02:35; worker 2
-01:40 -> 02:02, 03:40 -> 04:02; worker 3 01:00 -> 01:52, 03:00 -> 03:55; checker 01:51 -> 02:04, 03:51 -> 04:03), plus
-the 23:51 checker run closed at 01:15. Every self-check PASS (codemap, t061, freeze); 0 refusals; Drive read OK in every
-run. Ran code: all three workers and the checker. Throughput: 4 merges (1 Gate B), 2 rejections (both narrow, both
-PARTIAL), 2 READY now (T-187 0.4 h, T-197 0.3 h): backlog <= 3. Problems found and fixed: (1) T-192's row stayed READY
-after its 01:57 merge (verdict text lost, likely in a board rebase): restored from the merge commit + RUN_LOG; (2) stale
-codemap at handoff a second time (recurring cause 8): rule in every row and the queue note; (3) worker clock stamps in
-rows (T-197 '04:40' at 04:02): queue note asks for `date -u`. Board: T-191 r2 / T-196 r2 TODO (first in S / I), new
-T-200 (R5 level chain, S), T-201 (opening heads, A), T-202 (guard sweep + known-failures ledger, I), T-108 block-area
-engine piece PROMOTED (A); T-170 now after T-200; T-193 acceptance adds the misread retirement. TODO now S 4 (T-191 r2,
-T-200, T-188, T-174), A 3 (T-201, T-108, T-176), I 3 (T-196 r2, T-202, T-168) + chain T-193 / T-199 / T-146 queued.
-Queue check: 44 actionable rows, 0 flagged, 0 stall checks. Register +5 rulings. BOARD.md is 425 KB: archive pass due
-next run.
-
-OWNER PACKAGE: none today. No item meets ENGINEERING_REASONING_STANDARD s.2.7: the misread dome / stair line, the column
-identity and the pool base-mesh count are team corrections with the drawings in hand; pool steel stays a designer item
-(D-57).
-
-NEEDS FIXING: nothing only the owner can do. FYI: T-190 was handed in by the main chat at 00:32 without an
-OWNER_SESSION_CHANGES line (the rule of 2026-10-19 asks for one).

@@ -46,6 +46,20 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+### Lead 2026-10-23 12:20 (from T-208, T-205, T-193 MERGED; T-212, T-213, T-203, T-209 READY)
+
+| Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |
+|---|---|---|---|---|---|
+| Sunken wet-slab panels (supersedes the 10:20 open question) | slab concrete, step formwork, bed / fill, waterproofing, ceilings | ONE set of 6 panels, one element per hatch (275 / 276 / 280 / 287 / 298 under the 1F floor = 19.3864 m2; 5BF under the 2F floor = 5.400 m2); storey named by the FLOOR CARRIED, T-139's slab-sheet names kept as aliases; slab concrete stays in the slab line (3.9658 m3, unchanged, panel lowered at full thickness); step concrete 0 (every edge a beam / column face); riser form +41.451 d m2 and beam-side form -41.451 d m2 = STRUCTURE (net 0); fill 24.786 d m3 + waterproofing upturn 41.451 d m2 = lane A; ceiling below = CEILINGS | outlines DRAWING-CONFIRMED; drop d NOT PRINTED -> every d-term HELD, never 0 | T-213 READY (Checker 12:49) | D-41 (wording corrected: one set, two storey conventions) |
+| Neck columns (36 necks, every footing) | concrete, formwork, rebar, excavation | STRUCTURE CONC.NECK: neck = footing top -> ground-beam top (= GF structural slab top); ground beams are billed net of the column footprint, so the neck owns the junction (R-CONC-OWN-1); the GF column starts at the same datum (one stack, never GAP or DOUBLE) | every neck HELD (b = FFL -> slab build-up and d = formation below the -1.50 limit unprinted); C11 0.30 x 1.10 and the C3 / C11 counts ENGINE_RIGHT vs freelancer | T-205 MERGED 5f40dfdb (Checker 11:52 re-derived 0.0 %) | T-214 (b), D-39 / Q-21 C (d) |
+| Lift column / neck group C1 / C2 / C2 / C9 on FF | concrete, formwork, rebar, lift pit | STRUCTURE CONC.COLUMN / CONC.NECK (unchanged; the pit ring stays net of them) | CONFLICT: plan texts 20X50 x3 / 25X100 vs schedule FOUNDATION 30x50 / 30x100; pit depth unprinted (D-43); released 1.4625 m3 sits on the finished-level datum | T-205 MERGED | T-217; D-63 (new) |
+| Column C8 at F14 | concrete, formwork, rebar | STRUCTURE CONC.COLUMN | CONFLICT 30X80 (plan text + drawn) vs schedule 30 x 90, 0.24 .. 0.27 m2: carried as a range, never its larger end | D-16 (existing), T-205 | T-217, T-180 slot |
+| GF basin-only hand-wash spaces (3) | floor finish, waterproofing, wall tiles | FLOOR AREA as WET spaces by Q-06 A (ASSUMED — OWNER-APPROVED): 3.1325 / 1.485 / 4.7307 m2; their closure strips 0.330 m2 stay in ARCH.THRESHOLD only (one strip, one line) | geometry DRAWING-CONFIRMED (Checker own re-measure 2 / 3, 0.0 %) | T-208 MERGED 54cb4c42 | T-216 (scorer), T-218 (kitchen Q-30 A) |
+| GF kitchen (9.630 m2) | floor finish, waterproofing | FLOOR AREA total unchanged; WET by Q-30 A, so its wet sub-lines (membrane + upturn) belong to WATERPROOFING; V2.9 and V2.11 class it dry | FOUND (T-208), not yet measured | T-208 MERGED | T-218 |
+| Wet-wall tiles over door heads (14 doors) | wall tiles, plaster, paint | WALL TILES: the band over each door head is built and tiled; openings are deducted by their own area (Q-73), never by width x full height | 14.67 m2 between the two forms (T-209 READY) | T-209 READY (Checker 12:49) | none |
+| DOME-B (east terrace dome) | concrete, formwork | DOMES: one element, billed once in V3.0.7 (the 1F 'stair' 4.451 m3 misread retired) | VERIFIED component in the candidate (2 x 2.541 m3 terrace shells); the dome line stays HELD (tower dome) | T-193 Gate B MERGED e866328a | none |
+| Footing membrane + 5 cm protection screed; lift pit membrane / board / screed | waterproofing, concrete (blinding) | WATERPROOFING (blinding 15.179 m3 stays STRUCTURE) | drawn, no BOQ line in any state | T-206, T-204 MERGED | T-219 (queued) |
+
 ### Lead 2026-10-23 10:20 (from T-108 r2, T-204, T-207, T-206 MERGED; T-193 and T-208 READY)
 
 | Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |

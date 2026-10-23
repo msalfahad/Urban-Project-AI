@@ -1,12 +1,34 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
 Plain words, no task numbers. Measured numbers come from SCOREBOARD.md; anything not measured says so.
-Last update: 2026-10-23 10:20 UTC (Lead). Previous version: 2026-10-23 08:20 UTC. The released numbers did not change
-(released concrete 92.77 vs 111.81 m3, -17.03 %; released default V2.9 + route G untouched). Pilot, hours 2-4: every
-agent run started and closed; the checker merged 4 more pieces and sent none back; 2 pieces wait for the checker (both
-0.3 h old), one of them the next candidate step. One safety test went red with a merge (no quantity affected): its fix
-is now the first task for whichever worker runs next.
-Since 08:20 (newest first):
+Last update: 2026-10-23 12:20 UTC (Lead). Previous version: 2026-10-23 10:20 UTC. The released numbers did not change
+(released concrete 92.77 vs 111.81 m3, -17.03 %; released default V2.9 + route G untouched). Pilot, hours 4-6: every
+agent run started and closed; the checker merged 3 more pieces (one of them candidate step 7) and sent none back; 4
+pieces wait for the checker (0.3 - 1.1 h old), the safety-test fix first.
+Since 10:20 (newest first):
+- Candidate step 7 MERGED after the checker's own hand check of all 10 changed lines (0.0 %), NOT released: the
+  checker-verified pool base + walls (7.202 m3) and the two terrace dome shells (2 x 2.541 m3) are now in the candidate,
+  and the dome it billed twice is billed once. The candidate concrete error on the one line it can compare stays 1.84 %;
+  the pool and dome lines themselves stay held as whole lines (pool steps not drawn, tower dome held), so the verified
+  share of whole reference lines is still 0 of 8.
+- Neck columns: released 10.855 vs freelancer 8.805 m3 (+2.05 m3, +23.3 %) explained exactly, nothing left over: he
+  prices 1.350 m3 of necks the engine holds, uses a 0.40 m wide section where 0.30 is printed (-0.165), misses two necks
+  (+0.720), and the rest (+2.846) is two different height bases, both wrong: the engine took the neck to the finished
+  floor, he took the 1.5 m minimum founding depth as a neck length. From the drawings a neck runs from the footing top to
+  the ground-beam top; two levels needed for that are not printed, so every neck stays held (checker-confirmed). Two
+  printed size conflicts found (column C8, and the four lift columns: plan vs schedule) - now a task and a designer item.
+- Floor area: the hand-wash spaces are settled and checker-verified (wet by your answer), but the scoreboard still
+  cannot score the line because the scorer does not read that settlement yet; a task now wires it in (no quantity
+  changes). Also found: the ground-floor kitchen is classed dry in the engine although your answer makes it wet - its
+  floor total is unchanged, its waterproofing is not; a task measures the effect.
+- Waiting for the checker: wet-room wall tiles room by room by your manual method (340.41 m2 on 12 rooms, 6 held; on the
+  same 11 rooms as the freelancer 308.07 vs 295.44 m2, +4.28 %, fully explained: your 0.15 m decor-ceiling heights vs his
+  flat 3.00 m add 43.19 m2, he deducts no doors or windows -27.91 m2, one open side -2.65 m2); the lowered wet-room slab
+  panels (one set of 6, not two; slab concrete unchanged, step concrete 0 by geometry, drop not printed); the coverage
+  registry with a candidate-level state; the safety-test fix.
+Released numbers: unchanged.
+
+Earlier (08:20 -> 10:20):
 - Next candidate step (step 7) handed to the checker, NOT released: the checker-verified pool (base 4.374 + walls 2.828
   = 7.202 m3, on the 1.20 m structural height) and the two terrace dome shells (2 x 2.541 m3) replace the convention
   values; a dome that the engine was billing twice (once as a 'stair' on the first-floor slab sheet) is removed. Effect
