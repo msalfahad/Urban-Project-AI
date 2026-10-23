@@ -18,6 +18,12 @@ UP-MAS-VOID-001  A wall piece under an open slab void (dome / skylight opening) 
   over it, and no section cutting it, has no top: HELD, never the storey height.
 UP-MAS-BAND-001  A drawn wall band whose thickness is no block family and whose material is printed nowhere is HELD on
   its material (never booked as block, never as concrete).
+UP-OPEN-ARCH-001 (r2, Checker 20:14 ruling; ERS s.3; owner Q-73 final 'deduct the actual opening, only from masonry that
+  physically exists'; Q-32 A for the window line)  An opening's height is read on the OPENING line. A surround band,
+  moulding or stepped reveal drawn outside it is a wall-face element, never the opening. Masonry / plaster / paint
+  deduct the TRUE outline: jamb rectangle (width x spring) + the arch segment as drawn (the drawn chain or arc, never
+  its chord, never the enclosing rectangle). The WINDOW line keeps the owner's Q-32 A enclosing rectangle on the opening
+  line (width x crown): a rule difference between trades, kept side by side.
 """
 from __future__ import annotations
 
@@ -151,3 +157,70 @@ def band_material(t_m, printed_material=None):
     if any(abs(t_m - f) < 0.005 for f in BLOCK_FAMILIES_M):
         return {"status": "PROJECT-SPECIFIC", "material": "BLOCK (owner Q-60 type fallback)"}
     return {"status": HELD, "material": None, "reason": f"NO_BLOCK_FAMILY_{t_m:.2f}: material printed nowhere"}
+
+
+# ------------------------------------------------------------------------------------------- UP-OPEN-ARCH-001
+def polygon_area(pts):
+    """Shoelace area of a closed outline (list of (x, y), any orientation)."""
+    n = len(pts)
+    return abs(sum(pts[i][0] * pts[i - 1][1] - pts[i - 1][0] * pts[i][1] for i in range(n))) / 2.0
+
+
+def arched_opening(width_m, spring_m, arch_profile, band_m=None, tol=0.002):
+    """An arched opening read on its opening line.
+
+    arch_profile: the drawn arch as points (x, y) in metres, x from the left jamb (0) to the right jamb (width_m), y
+    above the opening bottom, from the left springing (0, spring_m) to the right springing (width_m, spring_m); the
+    drawn chain (or the arc sampled finely), never only its two ends. band_m: a surround band drawn outside the opening
+    (information only: it never enters the outline). Returns the masonry deduction outline and the Q-32 A window area.
+    """
+    if width_m is None or spring_m is None or not arch_profile:
+        return {"status": HELD, "reason": "OPENING_LINE_NOT_READ: width, springing or arch profile missing"}
+    if width_m <= 0 or spring_m < 0:
+        raise ValueError("width must be > 0 and springing >= 0")
+    if len(arch_profile) < 3:
+        raise ValueError("ARCH_AS_CHORD: an arch needs its drawn profile, not only the two springing points")
+    (x0, y0), (x1, y1) = arch_profile[0], arch_profile[-1]
+    if abs(x0) > tol or abs(x1 - width_m) > tol or abs(y0 - spring_m) > tol or abs(y1 - spring_m) > tol:
+        raise ValueError("ARCH_NOT_ON_OPENING_LINE: the profile must spring from both jambs at the springing level")
+    for x, y in arch_profile:
+        if x < -tol or x > width_m + tol or y < spring_m - tol:
+            raise ValueError("ARCH_OUTSIDE_JAMBS: a profile point lies outside the opening (surround or moulding line?)")
+    outline = [(0.0, 0.0)] + [tuple(p) for p in arch_profile] + [(width_m, 0.0)]
+    area = polygon_area(outline)
+    crown = max(y for _, y in arch_profile)
+    rect = width_m * spring_m
+    return {"status": DC, "width_m": _r(width_m), "spring_m": _r(spring_m), "crown_m": _r(crown),
+            "jamb_rectangle_m2": _r(rect, 4), "arch_segment_m2": _r(area - rect, 4),
+            "masonry_deduction_m2": _r(area, 4), "window_area_q32a_m2": _r(width_m * crown, 4),
+            "band_m": band_m, "band_crown_m": None if band_m is None else _r(crown + band_m)}
+
+
+def check_masonry_deduction(claimed_m2, opening, tol=0.005):
+    """Refuse a masonry / plaster / paint deduction for an arched opening that is not its true outline."""
+    if opening.get("status") not in ESTABLISHED:
+        raise ValueError("OPENING_HELD: no deduction from a held outline (net stays HELD, never 0)")
+    w, crown = opening["width_m"], opening["crown_m"]
+    if opening.get("band_crown_m") is not None and abs(claimed_m2 - w * opening["band_crown_m"]) <= tol:
+        raise ValueError("BAND_CROWN_AS_HEAD: the surround band crown was taken as the opening head")
+    if abs(claimed_m2 - w * crown) <= tol and abs(w * crown - opening["masonry_deduction_m2"]) > tol:
+        raise ValueError("RECTANGLE_FOR_MASONRY: width x crown is the Q-32 A window area, not the masonry opening")
+    if abs(claimed_m2 - opening["masonry_deduction_m2"]) > tol:
+        raise ValueError("NOT_THE_OUTLINE: the deduction differs from the opening outline "
+                         f"{opening['masonry_deduction_m2']:.4f} m2")
+    return True
+
+
+def measured_arched_opening(width_m, spring_m, crown_m, arch_segment_m2, band_m=None, status=DC):
+    """The same record from a measurement made off the drawing (profile area already integrated by the reader); the
+    repository keeps the measured values, never the drawing's coordinates."""
+    if None in (width_m, spring_m, crown_m, arch_segment_m2):
+        return {"status": HELD, "reason": "OPENING_LINE_NOT_READ"}
+    rise = crown_m - spring_m
+    if rise < 0 or arch_segment_m2 < 0 or arch_segment_m2 > width_m * rise + 1e-6:
+        raise ValueError("ARCH_SEGMENT_IMPOSSIBLE: the segment must lie inside width x rise")
+    rect = width_m * spring_m
+    return {"status": status, "width_m": _r(width_m), "spring_m": _r(spring_m), "crown_m": _r(crown_m),
+            "jamb_rectangle_m2": _r(rect, 4), "arch_segment_m2": _r(arch_segment_m2, 4),
+            "masonry_deduction_m2": _r(rect + arch_segment_m2, 4), "window_area_q32a_m2": _r(width_m * crown_m, 4),
+            "band_m": band_m, "band_crown_m": None if band_m is None else _r(crown_m + band_m)}

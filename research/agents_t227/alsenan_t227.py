@@ -107,6 +107,31 @@ DOME_REASON = ("piece under an open dome opening TESTED by T-227: the 1F roof-sl
                "band is continuous in that view) and no section cuts these partitions. Missing: what closes the top of "
                "a partition under the dome / skylight void (designer); never the storey height")
 
+# ---------------------------------------------------------------------------------------------- r2: arched openings
+# Checker 20:14 (T-227 REJECTED, narrow r2) and UP-OPEN-ARCH-001. Own re-measure this run on Drive 'Alsenan chalet
+# project' / P7757_DXF_COMPRESSED.zip (P7757.dxf, sha ab54dd55), NW elevation frame, layer 1, the wall-opening chain
+# (not the outer 0.10 surround-band chain, not the window frame on layer W): W16 jambs 2566 / 256A + 49 arch segments
+# (crown pair 2785 / 2786); W15 jambs 2889 / 288A + 46 arch segments, the same outline translated 2.046 m. Both read:
+# width 1.5523, springing 2.1609 above the +5.50 floor (jamb bottoms), crown 3.000 (+8.50, = printed '300'), arch
+# segment by the drawn chain 1.0086 m2 (polygon of the chain, never its chord); band 0.10 outside ('+ 10', band chain
+# 1.7523 wide to 3.101). Measured values only; no coordinate is kept in the repository.
+ARCH_EVIDENCE = ("arched opening read on its opening line (UP-OPEN-ARCH-001; Checker 20:14 ruling, own re-measure r2): "
+                 "P7757.dxf NW frame layer 1, W16 jambs 2566 / 256A + 49-segment arch chain (crown 2785 / 2786), W15 "
+                 "jambs 2889 / 288A + 46-segment chain; 1.5523 x 2.1609 + arch 1.0086 = 4.363 m2 each; the 0.10 "
+                 "surround band (crown 3.101) is a wall-face element, not the opening")
+ARCHED = {oid: R.measured_arched_opening(1.5523, 2.1609, 3.000, 1.0086, band_m=0.10) for oid in ("W15", "W16")}
+T175 = ROOT / "research/agents_t175/T175_OPENING_CONSEQUENCES.csv"
+
+
+def merged_block_deductions():
+    """The block deduction each opening carries in the merged T-175 ledger (what register v1 summed)."""
+    out = {}
+    for r in csv.DictReader(open(T175, encoding="utf-8")):
+        if r["block_deduction_m2"]:
+            out[r["opening"]] = float(r["block_deduction_m2"])
+    return out
+
+
 EVIDENCE_HEADS = ("heads: research/agents_t201/HEADS_T201.csv (T-201 MERGED 5dade783; Checker 07:00) and "
                   "research/agents_t207/CLOSURE_T207.csv (T-207 MERGED e081911c): drawn geometry on the DWF elevations / "
                   "sections and the current issue")
@@ -126,7 +151,32 @@ def read_heads():
         if r["ID"] in ("W11", "W12") and r["AFTER_STATUS"] in R.ESTABLISHED:
             heads[r["ID"]] = {"width_m": 1.95, "height_m": 2.20, "area_m2": 4.290, "status": r["AFTER_STATUS"],
                               "src": "T-207"}
+    # r2: an arched opening deducts its true outline, not the T-201 band-crown rectangle (4.805)
+    for oid, a in ARCHED.items():
+        if oid in heads:
+            R.check_masonry_deduction(a["masonry_deduction_m2"], a)
+            heads[oid] = {"width_m": None, "height_m": None, "area_m2": round(a["masonry_deduction_m2"], 3),
+                          "status": a["status"], "src": "T-227 r2 (UP-OPEN-ARCH-001)",
+                          "was_m2": heads[oid]["area_m2"]}
     return heads
+
+
+def arch_correction(r):
+    """Openings of the run whose merged block deduction (summed into register v1) read the band crown as a
+    rectangular head: returns (corrected base deductions, list of (id, old, new))."""
+    merged = merged_block_deductions()
+    ded0 = float(r["deductions_m2"] or 0)
+    fixes = []
+    held = set(held_ids(r["held_openings"]))
+    for oid in held_ids(r["openings_in_run"]):
+        if oid in ARCHED and oid not in held and oid in merged:
+            new = round(ARCHED[oid]["masonry_deduction_m2"], 3)
+            try:
+                R.check_masonry_deduction(merged[oid], ARCHED[oid])
+            except ValueError:
+                fixes.append((oid, merged[oid], new))
+                ded0 += new - merged[oid]
+    return round(ded0, 3), fixes
 
 
 def held_ids(cell):
@@ -148,12 +198,15 @@ def build():
         closed = [o for o in ho if o in heads]
         if closed:
             gross = float(r["gross_m2"]) if r["gross_m2"] else None
-            ded0 = float(r["deductions_m2"] or 0)
+            ded0, fixes = arch_correction(r)
             res = R.apply_heads(gross, r["gross_class"], ded0, ho, heads)
             new["deductions_m2"] = f3(res["deductions_m2"])
             new["held_openings"] = ";".join(res["still_held"])
+            fix_txt = "".join(f"; {o} {a:.3f} -> {b:.3f} arched outline (was the band-crown rectangle)"
+                              for o, a, b in fixes)
             changes.append(f"deductions_m2 {r['deductions_m2']} -> {new['deductions_m2']} "
-                           f"(+{res['added_m2']:.3f}: {', '.join(o + ' ' + format(heads[o]['area_m2'], '.3f') for o in closed)})")
+                           f"(+{res['added_m2']:.3f}: {', '.join(o + ' ' + format(heads[o]['area_m2'], '.3f') for o in closed)}"
+                           f"{fix_txt})")
             changes.append(f"held_openings {r['held_openings']} -> {new['held_openings'] or '-'}")
             hi = None if gross is None else gross - res["deductions_m2"]
             only_openings = r["held_cause_class"] == "held opening" and "also]" not in r["unresolved_reason"]
@@ -188,6 +241,8 @@ def build():
                 if r["gross_class"] == "HELD":
                     reason_bits.append("gross HELD (see cause)")
             new["evidence"] = r["evidence"] + "; " + EVIDENCE_HEADS
+            if fixes or any(o in ARCHED for o in closed):
+                new["evidence"] += "; " + ARCH_EVIDENCE
             new["source_ledgers"] = r["source_ledgers"] + " + T-201 + T-207 (via T-227)"
         # (a)-(d) tested holds: class unchanged, the missing item named
         cause = r["held_cause_class"]
@@ -314,6 +369,11 @@ def outputs():
                   "sensitivity_m2_per_cm_b_roof": sens},
         "lift_tie_beam": tie, "lift_openings": R.opening_height("LIFT_LANDING", owner_fallback=Q55_FALLBACK),
         "dome_pieces_m": round(sum(L for _, L in DOME_PIECES), 2),
+        "arched_openings_r2": {oid: {k: a[k] for k in ("width_m", "spring_m", "crown_m", "jamb_rectangle_m2",
+                                                       "arch_segment_m2", "masonry_deduction_m2", "window_area_q32a_m2",
+                                                       "band_crown_m", "status")}
+                               for oid, a in ARCHED.items()},
+        "arched_was_m2": {"W15": merged_block_deductions().get("W15"), "W16": heads["W16"].get("was_m2")},
         "verified_by_checker_m2": 0.0,
     }
     files["summary.json"] = json.dumps(summ, indent=1, ensure_ascii=False) + "\n"

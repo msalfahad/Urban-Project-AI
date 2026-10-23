@@ -12,6 +12,10 @@ Fixture villa T227-K (NOT Alsenan), hand truth:
   K2 0.60 x 0.80 = 0.480 drawn -> deductions 4.480, net 21.120 m2
   lift: storey 4.50 > 4.30 -> tie beam required; clear run 5.00 m; no section -> strip HELD; printed 0.20 x 0.40 ->
   strip 2.000 m2; storey 4.20 -> not required
+  r2 arched opening (UP-OPEN-ARCH-001): window 1.20 wide, springing 2.00, semicircular arch r 0.60 (crown 2.60), a 0.10
+  surround band outside it (band crown 2.70): masonry deduction 1.20 x 2.00 + pi x 0.60^2 / 2 = 2.400 + 0.5655 =
+  2.9655 m2; window line (Q-32 A) 1.20 x 2.60 = 3.120 m2; refused: 1.20 x 2.70 = 3.240 (band crown as head), 1.20 x
+  2.60 = 3.120 for masonry, 2.400 + chord only
 """
 from __future__ import annotations
 
@@ -192,8 +196,85 @@ def test_annex_and_lift_walls_stay_held():
 
 def test_summary_figures():
     s = json.loads((HERE / "summary.json").read_text(encoding="utf-8"))
-    assert s["nets_newly_source_supported"] == {"GF-W16": 15.404, "1F-W00": 11.979, "1F-W06": 54.487,
+    # r2: 1F-W00 = 22.669 - (W15 4.363 + W16 4.363 arched outlines + W18 0.50 x 2.16 = 1.080) = 12.863 (was 11.979)
+    assert s["nets_newly_source_supported"] == {"GF-W16": 15.404, "1F-W00": 12.863, "1F-W06": 54.487,
                                                 "1F-W10": 44.929}
-    assert s["nets_newly_source_supported_total_m2"] == pytest.approx(126.799)
+    assert s["nets_newly_source_supported_total_m2"] == pytest.approx(127.683)
     assert s["annex"]["storey_test"] == "HELD" and s["verified_by_checker_m2"] == 0.0
     assert s["dome_pieces_m"] == pytest.approx(10.29)
+
+
+# --------------------------------------------------------------------------------------- r2: UP-OPEN-ARCH-001
+import math  # noqa: E402
+
+
+def semicircle(w=1.20, spring=2.00, n=400):
+    r = w / 2
+    return [(r - r * math.cos(math.pi * i / n), spring + r * math.sin(math.pi * i / n)) for i in range(n + 1)]
+
+
+def test_arched_opening_normal_by_hand():
+    a = R.arched_opening(1.20, 2.00, semicircle(), band_m=0.10)
+    assert a["status"] == R.DC
+    assert a["crown_m"] == pytest.approx(2.60)
+    assert a["masonry_deduction_m2"] == pytest.approx(2.400 + math.pi * 0.36 / 2, abs=1e-4)   # 2.9655
+    assert a["window_area_q32a_m2"] == pytest.approx(3.120)
+    assert a["band_crown_m"] == pytest.approx(2.70)
+    assert R.check_masonry_deduction(2.9655, a)
+
+
+def test_arched_opening_mirror_and_units_invariant():
+    prof = semicircle()
+    mirrored = [(1.20 - x, y) for x, y in reversed(prof)]
+    a, b = R.arched_opening(1.20, 2.00, prof), R.arched_opening(1.20, 2.00, mirrored)
+    assert a["masonry_deduction_m2"] == pytest.approx(b["masonry_deduction_m2"])
+    mm = R.polygon_area([(x * 1000, y * 1000) for x, y in [(0, 0)] + prof + [(1.20, 0)]]) / 1e6
+    assert mm == pytest.approx(a["masonry_deduction_m2"], abs=1e-4)
+
+
+def test_plain_window_rectangle_is_its_own_outline():
+    p = R.measured_arched_opening(0.60, 0.80, 0.80, 0.0)
+    assert p["masonry_deduction_m2"] == pytest.approx(0.48) == p["window_area_q32a_m2"]
+    assert R.check_masonry_deduction(0.48, p)
+
+
+@pytest.mark.parametrize("claimed, code", [
+    (1.20 * 2.70, "BAND_CROWN_AS_HEAD"),          # surround band crown taken as the head
+    (1.20 * 2.60, "RECTANGLE_FOR_MASONRY"),       # width x crown used for masonry
+    (2.400, "NOT_THE_OUTLINE"),                    # jamb rectangle only
+])
+def test_arched_deduction_refusals(claimed, code):
+    a = R.arched_opening(1.20, 2.00, semicircle(), band_m=0.10)
+    with pytest.raises(ValueError, match=code):
+        R.check_masonry_deduction(claimed, a)
+
+
+def test_arch_as_chord_and_band_line_refused():
+    with pytest.raises(ValueError, match="ARCH_AS_CHORD"):
+        R.arched_opening(1.20, 2.00, [(0.0, 2.00), (1.20, 2.00)])
+    band_profile = [(x * 1.40 / 1.20 - 0.10, y + 0.0) for x, y in semicircle()]    # the band line, wider than the jambs
+    with pytest.raises(ValueError, match="ARCH_NOT_ON_OPENING_LINE"):
+        R.arched_opening(1.20, 2.00, band_profile)
+    with pytest.raises(ValueError, match="ARCH_SEGMENT_IMPOSSIBLE"):
+        R.measured_arched_opening(1.20, 2.00, 2.60, 0.80)                     # more than width x rise 0.72
+
+
+def test_arched_opening_missing_data_is_held_never_zero():
+    h = R.arched_opening(1.20, None, semicircle())
+    assert h["status"] == R.HELD and "masonry_deduction_m2" not in h
+    with pytest.raises(ValueError, match="OPENING_HELD"):
+        R.check_masonry_deduction(0.0, h)
+
+
+def test_alsenan_w15_w16_r2_delta():
+    rows = {d["wall_id"]: d for d in delta()}
+    d = rows["1F-W00"]
+    assert d["deductions_m2"] == "9.806" and d["net_m2"] == "12.863" and d["net_m3"] == "2.573"
+    assert "W15 4.805 -> 4.363 arched outline" in d["change"] and "W16 4.363" in d["change"]
+    assert "UP-OPEN-ARCH-001" in d["evidence"]
+    s = json.loads((HERE / "summary.json").read_text(encoding="utf-8"))
+    for oid in ("W15", "W16"):
+        a = s["arched_openings_r2"][oid]
+        assert a["masonry_deduction_m2"] == pytest.approx(4.363, abs=5e-4)
+        assert a["crown_m"] == pytest.approx(3.00) and a["band_crown_m"] == pytest.approx(3.10)
+    assert s["arched_was_m2"] == {"W15": 4.805, "W16": 4.805}
