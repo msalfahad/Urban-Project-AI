@@ -1,0 +1,72 @@
+{
+ "A": {
+  "by_code": {
+   "BINDING_AMBIGUOUS REVIEW": 2,
+   "COMPONENT_HELD HELD": 1,
+   "COMPONENT_NOT_DRAWN NOT_DRAWN": 1,
+   "END_NOT_EVIDENCED REVIEW": 1,
+   "NOT_DRAWN NOT_DRAWN": 2,
+   "NO_BOQ_LINE HELD": 3,
+   "NO_STRUCTURAL_COUNTERPART HELD": 1,
+   "NO_STRUCTURAL_DETAIL HELD": 2,
+   "STOREY_WITHOUT_LINE HELD": 2,
+   "TYPICAL_DETAIL_ONLY REVIEW": 4
+  },
+  "by_status": {
+   "HELD": 9,
+   "NOT_DRAWN": 3,
+   "REVIEW": 7
+  },
+  "elements": 12,
+  "findings": 19,
+  "lines": 7,
+  "reference_rows": 11
+ },
+ "V305": {
+  "by_code": {
+   "BINDING_AMBIGUOUS REVIEW": 2,
+   "COMPONENT_HELD HELD": 1,
+   "COMPONENT_NOT_DRAWN NOT_DRAWN": 1,
+   "END_NOT_EVIDENCED REVIEW": 1,
+   "KIND_MISMATCH HELD": 1,
+   "NOT_DRAWN NOT_DRAWN": 2,
+   "NO_BOQ_LINE HELD": 3,
+   "NO_STRUCTURAL_COUNTERPART HELD": 1,
+   "NO_STRUCTURAL_DETAIL HELD": 2,
+   "STOREY_WITHOUT_LINE HELD": 2,
+   "TYPICAL_DETAIL_ONLY REVIEW": 4
+  },
+  "by_status": {
+   "HELD": 10,
+   "NOT_DRAWN": 3,
+   "REVIEW": 7
+  },
+  "elements": 12,
+  "findings": 20,
+  "lines": 8,
+  "reference_rows": 11
+ },
+ "V306": {
+  "by_code": {
+   "BINDING_AMBIGUOUS REVIEW": 2,
+   "COMPONENT_HELD HELD": 1,
+   "COMPONENT_NOT_DRAWN NOT_DRAWN": 1,
+   "END_NOT_EVIDENCED REVIEW": 1,
+   "KIND_MISMATCH HELD": 1,
+   "NOT_DRAWN NOT_DRAWN": 2,
+   "NO_BOQ_LINE HELD": 2,
+   "NO_STRUCTURAL_COUNTERPART HELD": 1,
+   "NO_STRUCTURAL_DETAIL HELD": 2,
+   "TYPICAL_DETAIL_ONLY REVIEW": 4
+  },
+  "by_status": {
+   "HELD": 7,
+   "NOT_DRAWN": 3,
+   "REVIEW": 7
+  },
+  "elements": 12,
+  "findings": 17,
+  "lines": 14,
+  "reference_rows": 11
+ }
+}

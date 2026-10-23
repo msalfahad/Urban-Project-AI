@@ -14,15 +14,15 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `data/` | 19 | Registries (owner facts, project rules, trades) and trade rules. Large run data is gitignored. |
 | `docs/` | 72 | Design notes and the generated maps. |
 | `documents/` | 5 |  |
-| `engine/` | 644 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
+| `engine/` | 645 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 2800 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 2804 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 9 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 1423 | pytest suites, one folder per round. |
+| `tests/` | 1427 | pytest suites, one folder per round. |
 | `tools/` | 109 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (254 modules)
@@ -387,7 +387,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `workbooks.py` | 242 | MEDIUM | 0 | REPORTING V3 - workbook layouts (generic over a BOQ_LINES model). |
 | `workbooks_v3b.py` | 308 | MEDIUM | 0 | REPORTING V3b - workbook layouts over the two-view line model (TECHNICAL_QTO / COMMERCIAL_BOQ). |
 
-## `engine/source/` (292 modules)
+## `engine/source/` (293 modules)
 
 | Module | Lines | Risk | Imp | Purpose |
 |---|---|---|---|---|
@@ -477,6 +477,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `door_transition.py` | 124 | MEDIUM | 4 | DOOR FINISH TRANSITION (R8.14) - where one floor finish meets another inside a door threshold, as a TRADE |
 | `drawing_inventory.py` | 280 | CRITICAL | 5 | DRAWING INVENTORY (M1) - what a DXF holds, before any quantity (generic). |
 | `drawing_model.py` | 309 | CRITICAL | 20 | DRAWING MODEL (M2) - a normalized, source-pointed model of one structural drawing set (generic, stdlib). |
+| `element_continuity_v1.py` | 354 | MEDIUM | 1 | ELEMENT_CONTINUITY_V1 (T-188, residential review R2 + R3): element inventory across disciplines and storey continuity. |
 | `element_register_v0.py` | 607 | MEDIUM | 2 | ELEMENT REGISTER V0 (T-134; owner management decision 2026-10-20 §4; design docs/agents/ELEMENT_REGISTER.md). |
 | `elevation_binding.py` | 134 | CRITICAL | 2 | ELEVATION BINDING - which physical object a dimension printed on an elevation or section measures (generic). |
 | `engineering_flags.py` | 214 | MEDIUM | 6 | ENGINEERING FLAG MODEL + COMPONENT RELEASE (generic, project-independent). |
@@ -1070,6 +1071,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t185_dome_scenarios/` | 1 |
 | `tests/t186_default_guard/` | 1 |
 | `tests/t187_arch_v306/` | 1 |
+| `tests/t188_element_continuity/` | 2 |
 | `tests/t189_overlap/` | 1 |
 | `tests/t191_pool_steel/` | 2 |
 | `tests/t192_staircase_ownership/` | 1 |
@@ -1284,6 +1286,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t185/` | 4 |
 | `research/agents_t186/` | 3 |
 | `research/agents_t187/` | 3 |
+| `research/agents_t188/` | 4 |
 | `research/agents_t189/` | 5 |
 | `research/agents_t190/` | 1 |
 | `research/agents_t191/` | 6 |
