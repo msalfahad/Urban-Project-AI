@@ -1,0 +1,29 @@
+item,wall_id,type,t_m,length_m,gross_figure_m2 (not a quantity),smallest_held_quantity,missing
+annex datum,GF-W00,BLACK,0.2,9.900,32.175,gross: length x (4.05 - b_roof - member depth); 0.0990 m2 per cm of b_roof,annex roof structural slab top / roof build-up (D-39)
+annex datum,GF-W02,BLACK,0.2,1.650,6.336,gross: length x (4.05 - b_roof - member depth); 0.0165 m2 per cm of b_roof,annex roof structural slab top / roof build-up (D-39)
+annex datum,GF-W04,WHITE,0.2,5.850,19.012,gross: length x (4.05 - b_roof - member depth); 0.0585 m2 per cm of b_roof,annex roof structural slab top / roof build-up (D-39)
+annex datum,GF-W06,WHITE,0.2,2.500,9.000,gross: length x (4.05 - b_roof - member depth); 0.0250 m2 per cm of b_roof,annex roof structural slab top / roof build-up (D-39)
+annex datum,GF-W17,WHITE,0.2,3.700,13.320,gross: length x (4.05 - b_roof - member depth); 0.0370 m2 per cm of b_roof,annex roof structural slab top / roof build-up (D-39)
+annex datum,GF-W18,WHITE,0.2,6.100,19.825,gross: length x (4.05 - b_roof - member depth); 0.0610 m2 per cm of b_roof,annex roof structural slab top / roof build-up (D-39)
+annex datum,GF-W23,BLACK,0.15,1.300,4.992,gross: length x (4.05 - b_roof - member depth); 0.0130 m2 per cm of b_roof,annex roof structural slab top / roof build-up (D-39)
+annex datum,GF-W24,BLACK,0.15,4.500,17.280,gross: length x (4.05 - b_roof - member depth); 0.0450 m2 per cm of b_roof,annex roof structural slab top / roof build-up (D-39)
+annex datum,GF-W25,BLACK,0.15,4.500,17.280,gross: length x (4.05 - b_roof - member depth); 0.0450 m2 per cm of b_roof,annex roof structural slab top / roof build-up (D-39)
+annex datum,GF-W26,BLACK,0.15,4.450,15.575,gross: length x (4.05 - b_roof - member depth); 0.0445 m2 per cm of b_roof,annex roof structural slab top / roof build-up (D-39)
+annex datum,GF-W27,BLACK,0.15,1.500,5.760,gross: length x (4.05 - b_roof - member depth); 0.0150 m2 per cm of b_roof,annex roof structural slab top / roof build-up (D-39)
+annex datum,GF-W35,WHITE,0.2,1.885,6.975,gross: length x (4.05 - b_roof - member depth); 0.0189 m2 per cm of b_roof,annex roof structural slab top / roof build-up (D-39)
+annex datum,GF-W36,WHITE,0.2,0.500,0.000,gross: length x (4.05 - b_roof - member depth); 0.0050 m2 per cm of b_roof,annex roof structural slab top / roof build-up (D-39)
+lift tie beam,GF-W08,BLACK,0.2,4.300,17.565,strip (its share of 5.50 m clear run) x tie-beam depth,tie-beam section and the datum of '3.00 m' (D-43)
+lift tie beam,GF-W09,BLACK,0.2,1.800,7.380,strip (its share of 5.50 m clear run) x tie-beam depth,tie-beam section and the datum of '3.00 m' (D-43)
+lift tie beam,GF-W13,BLACK,0.2,0.700,2.870,strip (its share of 5.50 m clear run) x tie-beam depth,tie-beam section and the datum of '3.00 m' (D-43)
+lift tie beam,GF-W14,BLACK,0.2,3.900,15.556,strip (its share of 5.50 m clear run) x tie-beam depth,tie-beam section and the datum of '3.00 m' (D-43)
+lift opening,GF-W08,BLACK,0.2,1.00 (opening width),17.565,L-GF-01: 1.00 m x head (net bounds 11.615 .. 15.365),L-GF-01 head / structural opening height (HELD: no printed / drawn height; owner fallback scope INTERNAL_DOOR does not cover LIFT_LANDING)
+lift opening,1F-W07,BLACK,0.2,1.00 (opening width),11.321,L-1F-01: 1.00 m x head (net bounds 5.891 .. 9.341),L-1F-01 head / structural opening height (HELD: no printed / drawn height; owner fallback scope INTERNAL_DOOR does not cover LIFT_LANDING)
+lift opening,2F-W00,BLACK,0.2,1.00 (opening width),6.840,L-2F-01: 1.00 m x head (net bounds 3.040 .. 6.840),L-2F-01 head / structural opening height (HELD: no printed / drawn height; owner fallback scope INTERNAL_DOOR does not cover LIFT_LANDING)
+strip,GF-H01,-,0.4,0.600,-,0.600 m x height,material / construction and base level (HELD)
+strip,GF-H02,-,0.2,0.900,-,0.900 m x height,what it is and its material (PROJECT-SPECIFIC)
+under dome opening,1F-W11,BLACK,0.15,4.01,-,4.01 m x height (HELD),what closes the partition top under the dome / skylight void
+under dome opening,1F-W13,BLACK,0.15,2.98,-,2.98 m x height (HELD),what closes the partition top under the dome / skylight void
+under dome opening,1F-W13,BLACK,0.15,1.40,-,1.40 m x height (HELD),what closes the partition top under the dome / skylight void
+under dome opening,1F-W17,BLACK,0.15,0.44,-,0.44 m x height (HELD),what closes the partition top under the dome / skylight void
+under dome opening,1F-W18,BLACK,0.15,0.44,-,0.44 m x height (HELD),what closes the partition top under the dome / skylight void
+under dome opening,1F-W24,BLACK,0.15,1.02,-,1.02 m x height (HELD),what closes the partition top under the dome / skylight void
