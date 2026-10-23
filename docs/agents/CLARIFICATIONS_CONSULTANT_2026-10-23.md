@@ -7,10 +7,15 @@ Source register: DESIGNER_CLARIFICATIONS.md (D-nn rows, each raised by a task th
 confirm each row's search is complete (all 12 architectural + 16 structural + 3 sanitary sheets relevant to it) or move
 the row back to an investigation task. Items are ordered by the reference lines they block (closable-line effect).
 
+SEND STATUS (main chat 18:00): rows 1-6, 10-12 READY TO SEND (two printed sources disagree, or the element is not drawn on
+any sheet; recorded searches in the 'Search' column). Rows 7, 8, 9 NOT YET: drawing search in progress (T-227 claimed 17:42:
+lift details ST p.14, section B-B, roof details; T-222 claimable: P-1F-01 / P-GF-05); each is sent only if those tasks end
+with the item still unresolved, else removed. No row is answerable from the plans on the evidence merged so far.
+
 | # | D | Element | Conflicting / missing evidence (drawing references) | Question to the consultant | BOQ lines held | Search |
 |---|---|---|---|---|---|---|
 | 1 | D-16 | Column C8 | Structural plan prints 30X80 (dimensioned 70 + 10, five 0.80 outlines); column schedule prints 30 x 90 | Which section is built? | CONC.COLUMN reference line (blocks VERIFIED); neck 0.240 .. 0.270 m2, GF 0.900 .. 1.0125 m3, 1F 0.180 .. 0.200 m2 | T-100, T-119, T-217 + Checker own ST DXF re-measure 13:53 |
-| 2 | (T-180) | Water-tank columns | Column height 3.00 .. 3.80 m: tank slab / roof levels do not fix the column top (ST tank details, roof slab plan) | Top level (or height) of the tank columns | CONC.COLUMN reference line (blocks VERIFIED) | T-180 slot, T-188; LEAD: give it a D number with the sheets read |
+| 2 | D-44 | Beam B15 20 x 120 at the water tank (sets the 2F tank-column heights) | ST slab plan prints B15 20 x 120 (ST p.10 schedule agrees: B15 20 / 120); no section shows whether it is an upstand or a downstand; if upstand, B3 0.40 controls: 2F C2 / C3 heights 3.00 .. 3.80 m | Is B15 an upstand or a downstand? | CONC.COLUMN reference line (2F C2 / C3 heights), the tank joint 0.160 m3 | T-119, T-119 r2; main chat 18:00: the ST DXF 'WATER TANK PLACE' area prints marks and bars only, no level |
 | 3 | (pool) | Pool steps / access | No step, bench or ladder drawn on the GF plan, ST p.7 or the sections ("STEPS: NOT DRAWN" is absence of evidence) | Steps, benches or a ladder? If concrete, their drawing | CONC.POOL whole line (base + walls 7.202 m3 VERIFIED; line PARTIALLY VERIFIED) | T-183, T-203 |
 | 4 | D-57 | Pool reinforcement on the flat floor | ST p.7 draws a two-zone pool (R1 / R2, slope, step); owner Q-26 A fixed a flat floor at 1.15 m | Which bar population the flat floor and walls take | Pool steel HELD (R1 888.90 .. 927.54, R2 615.34 .. 639.45 kg) | T-166, T-191 r2 |
 | 5 | C-ST-4 | Main stair MS1-L riser count | Structural stair linework vs the architectural plan / section riser count disagree | Riser count (and landing edge) as built | Staircase system 6.648 m3 PARTIALLY VERIFIED (MS1-L HELD) | T-184, T-189, T-192 |
