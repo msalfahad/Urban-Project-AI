@@ -105,3 +105,33 @@ is F alone .. F10 alone and contains neither reading (cause: one tag per outline
 | Pool | with the pool line | owned by the pool line | - | not in the footing or beam layers |
 
 Freelancer 47.055 m3 is one plate under the whole plot (15.00 x 31.37 x 0.10); no sheet draws it; comparison only.
+
+## 6. Lock-safety fix: as deployed (main eafbb0f6, 2026-10-23 21:2x, after the Checker run ended 21:11 and before the 21:49 run)
+
+Changed files on main: `scripts/agent_env.sh`, `scripts/test_agent_env_runlock.sh`, `CLAUDE.md`, `.claude/settings.json`.
+Checker prompt step 7: merges are published only with `bash scripts/agent_env.sh engine push`. No engine, rule, quantity,
+V2.9 or schedule file changed; freeze check on the working head 63f4d90: 0 differing.
+
+Guarded publication paths: `board commit` (verdicts; lock re-checked before every push and again by the pre-push hook at
+push time), `board log` final lines (SUCCESS refused once the lock is lost or expired), `task`, `engine push`, and raw
+`git push` of the engine branch, of `agents/task-*`, and of `agents/control` by a session that held a lock (pre-push hook).
+Denied in settings: `--no-verify`, `core.hooksPath`, the internal-push marker, GitHub write tools.
+
+Tests (complete runs): `scripts/test_agent_env_runlock.sh` ALL PASSED (the 6 original cases + hook install + 7 new:
+valid publication; replaced ownership on verdict, engine push, raw engine push, raw task push and SUCCESS line; near-expiry
+margin; expiry during a long run; takeover between publications; a 25-second pause after the lock check during which the
+lock is taken over, for engine push and for a board verdict; a session with no lock record). `scripts/test_agent_env_autosetup.sh`
+ALL PASSED. A first run found a real defect (the hook was written relative to the caller's directory); fixed with an
+absolute path and a test that the hook is written inside the checkout.
+
+Residual risks (not removed by this fix):
+1. Not atomic: between the hook's check and the server accepting the ref there is a window of the push itself. The
+   10-minute margin (1 minute for board pushes) makes a takeover inside it impossible unless the push takes longer than
+   the margin or clocks differ by more than that. It is a margin, not a fence.
+2. Client-side only: an agent that deliberately bypasses the script (a fresh clone, an edited hook, the internal-push
+   marker, a GitHub API write) is stopped only by permission rules and its prompt, not by the server.
+3. GitHub tools: the deny rules cover the known write tools by name; a new tool name would not be covered.
+Smallest reliable fence (recommended next): server-side. Either (a) an atomic two-ref push (`git push --atomic` of the
+engine ref together with a lock-witness commit on agents/control that fast-forwards only if the lock file is unchanged), so
+any lock change rejects the merge; or (b) a GitHub branch rule on the engine branch allowing pushes only from a single
+merge path. (a) is a contained change in agent_env.sh; (b) needs the owner's repository settings.
