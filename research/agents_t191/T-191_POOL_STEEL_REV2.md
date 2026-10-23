@@ -18,7 +18,7 @@ D2_OVER_162 (authority URBAN_OWNER_RULE, as every merged Alsenan steel ledger, e
 
 Code: `t191_pool_steel.py` (new, unwired; `--check`, `ledger INPUT.json`), `t191_report.py` (per-mark rev1 -> rev2
 delta; writes `T191_STEEL.csv`, `T191_SUMMARY.json`), input `ALSENAN_POOL_STEEL_INPUT.json`, tests
-`tests/t191_pool_steel/` (20 + 11 r2 pass, synthetic, not Alsenan, plus one regression on the printed-only input).
+`tests/t191_pool_steel/` (20 + 10 r2 pass, synthetic, not Alsenan, plus one regression on the printed-only input).
 
 ## 1. Result in engineering terms (kg; the line stays HELD)
 
