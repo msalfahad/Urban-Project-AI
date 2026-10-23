@@ -2,7 +2,7 @@
 
 Development reference only: tuning against it is allowed, so these numbers never prove product accuracy (MISSION.md).
 
-## SCOREBOARD v2 2026-10-23 09:15 UTC
+## SCOREBOARD v2 2026-10-23 09:10 UTC
 
 | Trade | Unit | Baseline | Ref lines | Coverage % | Compared | WAPE % | Signed % | Verified share % | Held or UNKNOWN | Rule difference share % |
 |---|---|---|---|---|---|---|---|---|---|---|
