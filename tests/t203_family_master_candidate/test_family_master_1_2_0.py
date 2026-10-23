@@ -86,11 +86,15 @@ def test_every_candidate_state_names_a_merged_package_on_this_head(new):
 
 
 def test_registry_candidate_is_the_newest_candidate_module_on_this_head(new):
-    """r2 root cause: as_of must follow the newest merged candidate module (no newer arch_v30N.py on the head)."""
+    """r2 root cause: as_of must follow the newest merged candidate module (no newer arch_v30N.py on the head that the
+    registry of record does not account for). T-231 (r3): 1.2.0 accounts for V3.0 .. V3.0.7; every newer candidate
+    module on the head must be accounted for by a NEWER registry version (merged or pending), never left silent."""
     mods = FMC.head_candidate_modules(ROOT)
-    assert max(mods) == FMC.version_key(new["candidate"]["method_version"]) == 7
+    assert FMC.version_key(new["candidate"]["method_version"]) == 7
     assert mods[7] == "engine/source/arch_v307.py"
-    assert {p["module"] for p in new["candidate_packages"]} == set(mods.values())
+    assert {p["module"] for p in new["candidate_packages"]} == {m for n, m in mods.items() if n <= 7}
+    newer = FMC.newer_registry_modules(new, ROOT)
+    assert all(m in newer for n, m in mods.items() if n > 7), (mods, newer)
 
 
 def test_counts_and_the_re_derived_split(new, old):
