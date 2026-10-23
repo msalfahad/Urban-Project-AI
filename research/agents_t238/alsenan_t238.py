@@ -85,10 +85,11 @@ FEATURES = [
                   "left end on a wall line and its right end on the head of a drawn door frame (~2.2 m above +1.00); no "
                   "jamb pair, no dimension",
          consequence="identity UNKNOWN: binding tried (B-B cut line on the DWF GF plan, looking north; section x = "
-                     "plan x + offset solved from cut walls: only 5 of 30 wall lines coincide, a weak registration): "
-                     "the arc projects onto the front wall of the wash / basin space north of the cut, where P-GF-01 "
-                     "(0.90 doorless, head HELD) and the 45-degree W.C. doors stand; no census opening is 1.255 wide, "
-                     "so it is not bound; never a quantity; for the Checker / designer (D-45 family)",
+                     "plan x + offset solved from the cut walls): AMBIGUOUS, two offsets 1.85 m apart (6 of 30 lines within "
+                     "0.01 m; 9 of 30 within 0.06 m, the latter fitting the W02 cut): the arc lands on the front wall "
+                     "of the wash / basin space (P-GF-01 0.90 doorless, head HELD; the 45-degree W.C. doors) or on the "
+                     "wall east of it; no census opening is 1.255 wide, so it is not bound; never a quantity; for the "
+                     "Checker / designer (D-45 family)",
          status=R.UNKNOWN),
 ]
 

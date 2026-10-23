@@ -73,7 +73,7 @@ sections A-A and B-B rendered, their arcs listed).
    arch). Section B-B: domes, rectangular doors, and ONE GF arc in a wall beyond the cut (chord 1.255, rise 0.269, from
    a wall line to the head of a drawn door frame, no jamb pair, no dimension): **not bound** to any census opening
    (`F-BB-GF-ARCH`, UNKNOWN); T-201 had reported "an arched head over one GF doorway" on B-B to the Lead: this is it, and
-   it is in the DWF too. A binding by the B-B cut line (looking north, offset solved from the cut walls, only 5 of 30 coincide: weak) puts it on the front wall of the wash / basin space where P-GF-01 (0.90, head HELD) and the 45-degree W.C. doors stand; no census opening is 1.255 wide. SE: the porch's stone voussoir arch (quarter arch r 1.90, half drawn) is the porch mouth, an
+   it is in the DWF too. A binding by the B-B cut line (looking north, offset solved from the cut walls) is AMBIGUOUS: two offsets 1.85 m apart (6 of 30 wall lines within 0.01 m; 9 of 30 within 0.06 m, the latter fitting the W02 cut) put it on the front wall of the wash / basin space (P-GF-01 0.90, head HELD; the 45-degree W.C. doors) or on the wall east of it; no census opening is 1.255 wide. SE: the porch's stone voussoir arch (quarter arch r 1.90, half drawn) is the porch mouth, an
    open side, not a census opening (`F-PORCH-ARCH`): no ledger deducts it or measures its face / soffit / arrises
    (UNKNOWN, facade owner).
 
