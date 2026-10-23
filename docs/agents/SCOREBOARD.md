@@ -2,6 +2,38 @@
 
 Development reference only: tuning against it is allowed, so these numbers never prove product accuracy (MISSION.md).
 
+## SCOREBOARD v2 2026-10-23 19:05 UTC
+
+### CLOSABLE LINES (owner 2026-10-23 17:50; ranked by whether the line can genuinely close from the existing drawings alone, not by the share measured; Checker's first classification from the held items on record, the Lead confirms each D-number per owner item 6)
+
+| Rank | Reference line | Unit | Class | What blocks it (named item) | Own-measured so far |
+|---|---|---|---|---|---|
+| 1 | Floor area | m2 | CLOSABLE AFTER T-216 | architectural only; the floor-area line is not yet integrated (lane I T-216); 3 conditional review sets UNKNOWN until then | NOT YET MEASURED |
+| 2 | Plaster | m2 | CLOSABLE AFTER T-211 | lane I plaster / paint package; wall heights from the blockwork programme (T-226 merged, T-227 READY, T-228) | NOT YET MEASURED |
+| 3 | Paint | m2 | CLOSABLE AFTER T-211 | as plaster | NOT YET MEASURED |
+| 4 | Doors (aluminium) | m2 | CLOSABLE AFTER T-232 | engine answers pcs; doors / windows pcs AND m2 package (lane I T-232); D-GF-05 class HELD | T-181 path only |
+| 5 | Windows (aluminium) | m2 | CLOSABLE AFTER T-232, except W02 BLOCKED BY CONSULTANT D-53 | engine answers pcs (T-232); W02 count D-53 | 15.615 m2 VERIFIED of 88.081 (28 / 29 openings) |
+| 6 | CONC.BEAM | m3 | CLOSABLE AFTER T-229 integration for the runs; depths BLOCKED BY CONSULTANT D-02 / D-16 / D-63 / D-65 | B27 / B26 corrected runs await lane I; CB10 width D-02, unprinted depths | 4 of 238 census rows (T-229) |
+| 7 | CONC.FOOTING | m3 | BLOCKED BY CONSULTANT (Q-31 C designer item: F10+F) | F10+F outline / depth; strap level D-15 for the strap ends inside footings | F11 schedule re-read this run |
+| 8 | CONC.GROUND | m3 | BLOCKED BY CONSULTANT D-35 | exterior ground-beam depth 'FOLLOW ARCH.'; lift-end corrections (T-230) await lane I | 3 lift-beam lengths (T-230) |
+| 9 | CONC.BLINDING | m3 | BLOCKED BY CONSULTANT D-15 | blinding under straps; line is also a rule difference (1 / 8) | NOT YET MEASURED |
+| 10 | CONC.SLAB | m3 | BLOCKED BY CONSULTANT D-41 | the slab drop, printed nowhere (T-213) | slab panels 1F 19.3864 + 2F 5.400 m2 (T-213) |
+| 11 | CONC.COLUMN | m3 | BLOCKED BY CONSULTANT D-16 (C8), D-65 (5 upper lines), D-26 (PC-1F-B), D-39 (PC-2F), tank columns (D number pending, Lead) | 31 / 59 columns own-measured | 31 / 59 |
+| 12 | CONC.POOL | m3 | BLOCKED BY CONSULTANT (steps 'NOT DRAWN - consultant item') | pool steps | base + walls VERIFIED components |
+| 13 | CONC.STAIR_DOME | m3 | BLOCKED BY CONSULTANT (stair winder / waists, tower dome: T-185 consultant list) | curved / winder parts | 2 flights + 2 dome shells VERIFIED components |
+
+Reading: no reference line is CLOSABLE NOW from the drawings alone; the four highest close after lane I packages already ordered by the owner (T-216, T-211, T-232). Every concrete line waits on at least one consultant item, so the T-180 slot should move to the highest closable line once its package merges (floor area after T-216) rather than continue CONC.COLUMN.
+
+| Trade | Unit | Baseline | Ref lines | Coverage % | Compared | WAPE % | Signed % | Verified share % | Held or UNKNOWN | Rule difference share % |
+|---|---|---|---|---|---|---|---|---|---|---|
+| Concrete | m3 | A (released V29_ROUTEG_NO_PROFILE, manifest 0f8b99af, BOQ_LINES.csv b96185d4; not re-run, row of 01:10 stands) | 8 | 100.00 | 3 | 17.03 | -17.03 | 0.00 (0 / 8; CONC.COLUMN PARTIALLY VERIFIED 31 / 59, pool PARTIALLY VERIFIED: not counted) | 5 ref lines HELD; 205 engine lines: 122 bounded 44.108 .. 113.540 m3 + 83 UNKNOWN (no bound) | 12.50 (1 / 8: blinding) |
+| Concrete | m3 | ARCH_TAKEOFF_V3.0.7 (candidate, V3_0_7_BOQ_LINES.csv 197c5599, reproduced this run) | 8 | 100.00 | 1 | 1.84 | 1.84 | 0.00 (0 / 8; as the 16:58 row) | 7 ref lines HELD; 77 engine lines: 67 bounded 22.640 .. 49.620 m3 + 10 UNKNOWN (no bound); 14 more excluded with reason | 12.50 (1 / 8: blinding) |
+| Concrete | m3 | ARCH_TAKEOFF_V3.0.8 (candidate, V3_0_8_BOQ_LINES.csv 57fe219a, reproduced this run, merged 3b042470; NOT RELEASED) | 8 | 100.00 | NOT YET MEASURED (scorer not re-run by the Checker) | NOT YET MEASURED | NOT YET MEASURED | 0.00 (0 / 8; SB3 strap 0.6516 m3 VERIFIED component, SB1 / SB2 DRAWING-CONFIRMED, PC-1F-A 0.588 DRAWING-CONFIRMED: no whole line verified) | 7 ref lines HELD; STR.CONC.STRAP held 0.0295 .. 0.5031 m3 (SB3 / F3 upper end stale: 0.2683 per T-230), STR.CONC.COLUMN blocked 9 (PC-1F-B, PC-2F, 5 x D-65), established 33.606 m3 (-0.840 vs V3.0.7: two planted columns to held) | 12.50 (1 / 8: blinding) |
+| Blockwork | m2 | wall register v1 + merged deltas (T-225, T-226; not the engine) | NOT YET MEASURED (no line-for-line freelancer comparison while held length remains) | NOT YET MEASURED | 0 | NOT YET MEASURED | NOT YET MEASURED | net VERIFIED 4.458 m2 (GF-W07, Checker 18:01) of established net 361.212 m2 SOURCE-SUPPORTED; 1F-W05 gross 23.223 m2 VERIFIED, net not | 44 walls HELD on named items (T-225 register) less T-226 closures; held gross figure carried, never 0 | NOT YET MEASURED |
+| Plaster, Paint, Floor area, Doors (aluminium), Windows (aluminium) | m2 | A and V3.0.5 .. V3.0.8 | 1 each | as the 16:58 rows (no line of these trades moved in V3.0.8: 3,532 V3.0.7 lines byte-identical, the 21 changed are STR.CONC.STRAP / STR.CONC.COLUMN) | as 16:58 | as 16:58 | as 16:58 | as 16:58 (windows 15.615 m2 VERIFIED of the T-181 path) | as 16:58 | as 16:58 |
+
+Sources (Verifier, 17:52 run, run unknown). Merged this run: T-226 a04f8e21 (blockwork heights; research only, no engine line), T-230 17ed6f92 (strap / tie-beam ends; research only), T-231 3b042470 (Gate B, V3.0.8 candidate). V3.0.3 .. V3.0.8 reproduced on the merged head from Drive 'P7757_DXF_COMPRESSED.zip' (P7757.dxf ab54dd55) and 'ST7757 dxf.dxf' (9f9d1179): hashes as the rows. tools/alsenan_scoreboard.py NOT re-run (freelancer workbooks not downloaded this run): V3.0.8 comparison cells say NOT YET MEASURED rather than carry the worker's figure. Drive read OK. Released default unchanged (V2.9 + route G).
+
 ## SCOREBOARD v2 2026-10-23 16:58 UTC
 
 | Trade | Unit | Baseline | Ref lines | Coverage % | Compared | WAPE % | Signed % | Verified share % | Held or UNKNOWN | Rule difference share % |
