@@ -31,7 +31,13 @@ Rules checked (every one refuses, none repairs):
     NOT_IN_CANDIDATE name none; a named package must be at or below the candidate version (no future package);
   - 'in_v3_0_candidate' agrees with the state (yes for the first three, no for NOT_IN_CANDIDATE);
   - HELD_IN_CANDIDATE says released_in_candidate "none"; INTEGRATED_IN_CANDIDATE_AND_TESTED names what changed and
-    what stays open.
+    what stays open;
+  - (r2, from the T-203 r1 rejection) a package may say which families it took to "no quantity released" ('holds')
+    or released a quantity of again ('releases'); each named family must name that package, and a family whose last
+    such event (in version order) is 'releases' can never be HELD_IN_CANDIDATE;
+  - (r2) the head carries no candidate module newer than the registry's candidate: an engine/source/arch_v30*.py whose
+    version is above candidate.method_version means a newer package merged and the registry's as_of is stale
+    (scan_head=False only for synthetic registries checked outside this repository's head).
 
 Read by no engine method and by no run: it changes no quantity, no release state and no default.
 """
@@ -53,12 +59,24 @@ SHA40 = re.compile(r"^[0-9a-f]{40}$")
 TASK = re.compile(r"^T-\d{3}[a-z]?$")
 VERDICT = re.compile(r"^MERGED\b.*\b(?:verifier|Verifier|checker|Checker)\b.*\b20\d\d-\d\d-\d\d \d\d:\d\d UTC\b")
 VERSION = re.compile(r"^ARCH_TAKEOFF_V3\.0(?:\.(\d+))?$")
+MODULE = re.compile(r"^arch_v30(\d*)\.py$")
 
 
 def version_key(v):
     """ARCH_TAKEOFF_V3.0 -> 0, ARCH_TAKEOFF_V3.0.6 -> 6; None when the text is not a candidate version."""
     m = VERSION.match(v or "")
     return None if not m else int(m.group(1) or 0)
+
+
+def head_candidate_modules(root=ROOT):
+    """{version number: path} of every candidate module engine/source/arch_v30[N].py on the tree at root."""
+    out = {}
+    d = Path(root) / "engine/source"
+    for f in sorted(d.glob("arch_v30*.py")) if d.is_dir() else []:
+        m = MODULE.match(f.name)
+        if m:
+            out[int(m.group(1) or 0)] = f"engine/source/{f.name}"
+    return out
 
 
 def git_is_ancestor(commit, head="HEAD", root=ROOT):
@@ -68,8 +86,9 @@ def git_is_ancestor(commit, head="HEAD", root=ROOT):
     return r.returncode == 0
 
 
-def check(doc, root=ROOT, is_ancestor=None):
-    """Return a list of problems (empty = the candidate states hold). is_ancestor(commit) -> bool, optional."""
+def check(doc, root=ROOT, is_ancestor=None, scan_head=True):
+    """Return a list of problems (empty = the candidate states hold). is_ancestor(commit) -> bool, optional.
+    scan_head: refuse when the tree at root carries a candidate module newer than the registry's candidate."""
     bad = []
     states = doc.get("candidate_states")
     if tuple(states or ()) != STATES:
@@ -120,6 +139,35 @@ def check(doc, root=ROOT, is_ancestor=None):
         bad.append(f"candidate.method_version {mv} is not the newest merged package's version")
     if cand.get("as_of_package") not in by_task:
         bad.append(f"candidate.as_of_package {cand.get('as_of_package')!r} is not a listed merged package")
+    elif version_key(by_task[cand["as_of_package"]].get("method_version")) != version_key(mv):
+        bad.append(f"candidate.as_of_package {cand['as_of_package']} is not the package of {mv}")
+    if scan_head and version_key(mv) is not None:
+        for n, path in sorted(head_candidate_modules(root).items()):
+            if n > version_key(mv):
+                bad.append(f"the head carries {path} (ARCH_TAKEOFF_V3.0.{n}), newer than the registry's candidate {mv}: "
+                           "a newer package merged and the registry's as_of is stale")
+
+    # holds / releases trace, in version order: the last event decides whether HELD_IN_CANDIDATE is still possible
+    fam_by_code = {f.get("code"): f for f in doc.get("families", [])}
+    last_event = {}
+    for p in sorted(pkgs, key=lambda q: version_key(q.get("method_version")) or 0):
+        for ev in ("holds", "releases"):
+            codes = p.get(ev, [])
+            if not isinstance(codes, list):
+                bad.append(f"package {p.get('task')}: '{ev}' must be a list of family codes")
+                continue
+            for code in codes:
+                f = fam_by_code.get(code)
+                if f is None:
+                    bad.append(f"package {p.get('task')}: '{ev}' names {code!r}, not a family of this registry")
+                    continue
+                if p.get("task") not in ((f.get("candidate") or {}).get("packages") or []):
+                    bad.append(f"{code}: package {p.get('task')} {ev} it, but its candidate block does not name that package")
+                last_event[code] = (ev, p.get("task"))
+    for code, (ev, t) in last_event.items():
+        c = fam_by_code[code].get("candidate") or {}
+        if ev == "releases" and c.get("state") == "HELD_IN_CANDIDATE":
+            bad.append(f"{code}: HELD_IN_CANDIDATE, but package {t} released a quantity of the family (stale state)")
 
     counts = {s: 0 for s in STATES}
     yes_no = {"yes": 0, "no": 0}
@@ -178,7 +226,7 @@ def main(argv):
         return 2
     path = Path(argv[2]) if len(argv) > 2 else DEFAULT
     doc = json.loads(path.read_text(encoding="utf-8"))
-    bad = check(doc, is_ancestor=git_is_ancestor)
+    bad = check(doc, root=ROOT, is_ancestor=git_is_ancestor)
     for b in bad:
         print("PROBLEM", b)
     print(f"{path.name}: {len(bad)} problem(s); states {doc.get('candidate_state_counts')}")

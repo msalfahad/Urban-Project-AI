@@ -8,12 +8,12 @@ every family, re-derived from the merged ARCH_TAKEOFF_V3.0.x candidate packages.
 Sources (no run is repeated here; every figure below is the merged package's own run, reproduced by its Gate B verdict):
 the package reports research/agents_t131/T-131_ARCH_V30.md, agents_t133/T-133_ARCH_V301.md, agents_t142/T-142_ARCH_V302.md,
 agents_t151/T-151_ARCH_V303.md, agents_t167/T-167_ARCH_V304.md, agents_t179/T-179_ARCH_V305.md (r2 section),
-agents_t187/T-187_ARCH_V306.md, and the checker verdicts on the board (agents/control docs/agents/BOARD.md and
+agents_t187/T-187_ARCH_V306.md, agents_t193/T-193_ARCH_V307.md (r2 of T-203, after the Verifier 13:03 rejection), and the checker verdicts on the board (agents/control docs/agents/BOARD.md and
 BOARD_ARCHIVE.md; quoted by verdict head only). Families are bound by the registry's own item-code ownership (1.1.0
 'item_codes'); where a package's lines carry another family's item code (stair / pool / tank steel under STR.REBAR,
 the dome ring under STR.CONC.BEAM) the physical family says so and the line is counted once.
 
-What changes against 1.1.0: version / supersedes / source / loaded_by; v3_0_candidate (the candidate is now V3.0.6);
+What changes against 1.1.0: version / supersedes / source / loaded_by; v3_0_candidate (the candidate is now V3.0.7);
 in_v3_0_candidate per family (re-derived; the 1.1.0 value kept as in_v3_0_candidate_1_1_0) and its counts;
 v3_0_planned_tasks (packages since merged removed, queued lane I packages added); new: candidate_states,
 candidate_state_definitions, candidate, candidate_packages, candidate_state_counts, each family's 'candidate' block.
@@ -35,8 +35,8 @@ from tools import family_master_candidate as FMC  # noqa: E402
 
 OLD = ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.1.0.json"
 OUT = ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.2.0.json"
-CAND = "ARCH_TAKEOFF_V3.0.6"
-AS_OF = "T-187"
+CAND = "ARCH_TAKEOFF_V3.0.7"
+AS_OF = "T-193"
 
 PACKAGES = [
     {"task": "T-131", "method_version": "ARCH_TAKEOFF_V3.0", "module": "engine/source/arch_v30.py",
@@ -77,7 +77,8 @@ PACKAGES = [
      "integrates": ["T-064", "T-044"],
      "pieces": "PROFILE_AUDIT: every route G profile value checked against the owner Q-17 A project data file; lines "
                "resting on a non-usable value HELD",
-     "tests": ["tests/t167_arch_v304"]},
+     "tests": ["tests/t167_arch_v304"],
+     "holds": ["B10-03"]},
     {"task": "T-179", "method_version": "ARCH_TAKEOFF_V3.0.5", "module": "engine/source/arch_v305.py",
      "merge_commit": "90d0b769ada207d70d68ba53eb12d660f9d997ac",
      "verdict": "MERGED r2 (verifier 2026-10-23 01:05 UTC; Gate B PASS on 85bba0ff; r1 rejected 2026-10-22 21:02 UTC "
@@ -92,7 +93,17 @@ PACKAGES = [
      "gate": "GATE_B",
      "integrates": ["T-186", "T-190", "T-184", "T-189", "T-192"],
      "pieces": "STAIR_CONCRETE (ST-01 ledger rev3, 1F -> 2F), DEFAULT_GUARD over every candidate line",
-     "tests": ["tests/t187_arch_v306"]},
+     "tests": ["tests/t187_arch_v306"],
+     "holds": ["B10-09", "B10-10"]},
+    {"task": "T-193", "method_version": "ARCH_TAKEOFF_V3.0.7", "module": "engine/source/arch_v307.py",
+     "merge_commit": "e866328a66149abe881c0d1329f904170b631402",
+     "verdict": "MERGED (verifier 2026-10-23 11:52 UTC, e866328a, Gate B PASS)",
+     "gate": "GATE_B",
+     "integrates": ["T-183", "T-185"],
+     "pieces": "POOL_CONCRETE (T-183 r2 base + walls), DOME_SHELL (T-185 S0 terrace shells), the 1F 'winder' misread "
+               "retired as the east dome, DEFAULT_GUARD re-check on evidence version 2 (conventions V6 + the M4 profile)",
+     "tests": ["tests/t193_arch_v307"],
+     "releases": ["B10-09", "B10-10"]},
 ]
 
 RUNS = {  # the packages' own development-villa runs (Gate B reproduced), line counts and BOQ_LINES.csv sha prefixes
@@ -102,6 +113,8 @@ RUNS = {  # the packages' own development-villa runs (Gate B reproduced), line c
     "ARCH_TAKEOFF_V3.0.4": "3,132 lines, V3_0_4_BOQ_LINES.csv d86de34a (84 rows changed)",
     "ARCH_TAKEOFF_V3.0.5": "3,534 lines, V3_0_5_BOQ_LINES.csv 76d75bde (r2; 478 rows changed against V3.0.4)",
     "ARCH_TAKEOFF_V3.0.6": "3,540 lines, V3_0_6_BOQ_LINES.csv 3e622799 (13 rows changed, 3,527 byte-identical to V3.0.5)",
+    "ARCH_TAKEOFF_V3.0.7": "3,545 lines, V3_0_7_BOQ_LINES.csv 197c5599 (5 changed + 5 added, 3,535 byte-identical to "
+                           "V3.0.6)",
 }
 for _p in PACKAGES:
     if _p["method_version"] in RUNS:
@@ -130,12 +143,15 @@ SPEC = {
               "FACADE_PASSAGE (T-109): the two ground-floor open-air passage mouths OP-001 / OP-007 (2 pcs) "
               "NOT_APPLICABLE_WITH_EVIDENCE: not building openings",
               "doors and windows are base lines, counted by class under B6-02 .. B6-04", "yes"),
-    "B7-12": (I, ["T-187"],
+    "B7-12": (I, ["T-187", "T-193"],
               "STAIR_CONCRETE (T-184 / T-189 / T-192 rev3), ST-01 first to second floor: MS2-L 1.033445 m3 VERIFIED, "
               "MS2-U 1.001373 DRAWING-CONFIRMED, MS2-LD 0.4696 .. 0.4800 HELD, MS2-TR UNKNOWN; DEFAULT_GUARD (T-186) holds "
               "the route lines of ST-01 ground to first floor 2.785981 and ST-02 1.769462 m3 (waist convention 0.175 where "
               "'T 16' is printed) and the first-floor 'winder' line 4.450745 m3 as MISREAD (dome ribs); lobby flight "
-              "placeholder UNKNOWN. STR.CONC.STAIR released 9.954455 -> 2.983085 m3, held 0.4696 .. 0.4800, 5 blocked",
+              "placeholder UNKNOWN. STR.CONC.STAIR released 9.954455 -> 2.983085 m3, held 0.4696 .. 0.4800, 5 blocked. "
+              "V3.0.7 (T-193): that 'winder' line RETIRED: it is the east terrace dome DOME-B drawn on its own slab "
+              "sheet, now carried once by the verified DOME-B shell under B10-09; STR.CONC.STAIR released 2.983085 and "
+              "held 0.4696 .. 0.4800 unchanged, blocked 5 -> 4",
               "the ST-01 ground-to-first pieces, ST-01b, ST-02 and ST-03 ledger lines are not integrated (later V3.0.x); "
               "ST-02 curved parts held (Q-50); MS2-TR landing levels scaled, not printed; the ST-01 shaft floor in no line",
               "yes"),
@@ -152,13 +168,17 @@ SPEC = {
               "by V3.0.2 (T-137: 12 PROVEN, 9 PROVEN_EXCEPT_DETAIL, 1 NOT_PROVEN); roll counts unchanged",
               "the second-floor top roof roll line holds its area with no count (NOT_PROVEN); 9 lines proven except the "
               "internal-corner / thin-wall details they list", "yes"),
-    "B10-01": (I, ["T-133", "T-142", "T-187"],
+    "B10-01": (I, ["T-133", "T-142", "T-187", "T-193"],
                "ROUTE_G_SCOPE_V1 (T-126) by member family: footings 15.179 m3 released (verifier hand 15.213, -0.2 %), "
                "separate HELD lines F10 0.480 .. 0.590, under ground beams 4.949 .. 9.423 m3 and under straps 0.378 .. "
                "0.772 m3 after the V3.0.2 REACH fix of defect D3 (hand 5.189 .. 9.387 and 0.670 inside); V3.0.6 default "
-               "guard: the released footing line REBASED_ON_PRINTED (convention 0.10 = printed projection 0.10), unchanged",
+               "guard: the released footing line REBASED_ON_PRINTED (convention 0.10 = printed projection 0.10), unchanged; "
+               "V3.0.7 guard evidence version 2 (T-193): the 0.10 thickness now confirmed by the printed footing note "
+               "(structural PDF p.13 '10cm Plain con.', EV-BLINDING-T), so the line is REBASED_ON_PRINTED on both "
+               "conventions; 15.179437 m3 and the line itself byte-identical (evidence only, no quantity moved)",
                "the three held lines are never summed (F10 two labels Q-31 C; ground-beam lines Q-21 C; no strap section "
-               "printed); blinding thickness has no printed record in the guard evidence (DG-2 recorded only)", "yes"),
+               "printed); pool blinding (its projection) HELD outside these lines (T-183 line B); DG-2 recorded only",
+               "yes"),
     "B10-03": (H, ["T-167"],
                "PROFILE_AUDIT (T-064 data file, owner Q-17 A): the 28 necks released 10.855 m3 on FOUNDING_DEPTH_M "
                "(a printed excavation minimum, owner Q-21 C) become HELD; all 36 neck lines held 3.075 .. 15.375 m3, "
@@ -182,18 +202,34 @@ SPEC = {
                "64.8196 -> 65.2937 m3, held 8.449 .. 14.434 -> 8.224 .. 13.759 m3",
                "east ring BLOCKED (section not printed, D-28); 24 held spans; BEAM_BINDING_V2 (T-085) and "
                "CONCRETE_LEDGER_V3 not wired; slab faces that are not slab (T-146) still in the slab line. The ring is a "
-               "dome element (B10-09) carried under STR.CONC.BEAM, counted once, here", "yes"),
-    "B10-09": (H, ["T-187"],
-               "DEFAULT_GUARD (T-186): the two second-floor dome lines 3.685858 m3 each HELD (shell 0.12 / rise 1.0 "
-               "conventions where 10 / 190 over 442 are printed); third dome placeholder DOME-3:SHELL UNKNOWN (Q-27 A); "
-               "STR.CONC.DOME released 7.371716 -> 0, 3 blocked",
-               "the verified dome shells (T-185) wait for T-193 (READY); the verified west ring is under B10-07", "none"),
-    "B10-10": (H, ["T-187"],
-               "DEFAULT_GUARD (T-186): pool floor 1.51125 and walls 1.984 m3 HELD (0.25 / 1.60 conventions where 0.40 is "
-               "printed; footprint 6.045 of 10.936 m2, wall band 1.24 of 2.357 m2); STR.CONC.POOL released 3.49525 -> 0, "
-               "2 blocked",
-               "the verified pool base + walls (T-183) wait for T-193 (READY); no package report names a tank, lift-pit or "
-               "pump-room concrete line of the candidate (not established)", "none"),
+               "dome element (B10-09) carried under STR.CONC.BEAM, counted once, here. Since V3.0.7 carries the S0 "
+               "shells (T-193 s.9, line byte-identical): T-185 reads the released 0.7552 m3 as the S1 edge-beam value, "
+               "under S0 a CONFLICT 0.7552 .. 1.1422 m3 (plan band vs detail ring, depth 'AS PER ARCH'); its scenario "
+               "tag needs a ruling in a later V3.0.x package", "yes"),
+    "B10-09": (I, ["T-187", "T-193"],
+               "DEFAULT_GUARD (T-186, V3.0.6): the two second-floor dome lines 3.685858 m3 each HELD (shell 0.12 / rise "
+               "1.0 conventions where 10 / 190 over 442 are printed); third dome placeholder DOME-3:SHELL UNKNOWN (Q-27 A); "
+               "STR.CONC.DOME released 7.371716 -> 0, 3 blocked. V3.0.7 (T-193): DOME_SHELL (T-185, scenario S0) adds "
+               "DOME-A (west) and DOME-B (east) 2.540681 m3 each VERIFIED (exact solid between concentric spheres from "
+               "the printed chord 4.42, rise 1.90, shell 0.10) and supersedes the two convention lines (3.685858 each, "
+               "-2.290355 m3 in total: rise, thickness and outer-area basis); the east dome's second reading as a 1F "
+               "'winder' stair (4.450745 m3) retired under B7-12, so each dome is carried once. STR.CONC.DOME released "
+               "0 -> 5.081362 m3, blocked 3 -> 1",
+               "DOME-3 (upper-roof dome) stays an UNKNOWN / HELD placeholder (no structural detail, Q-27 A; never 0); "
+               "S0 rings (west ring under B10-07, CONFLICT; east ring BLOCKED), drums and shell bars (298.34 .. 432.93 kg "
+               "per dome) HELD; scenario S1 / S2 rows beside in the run file only, never in the candidate totals; NOT "
+               "RELEASED", "yes"),
+    "B10-10": (I, ["T-187", "T-193"],
+               "DEFAULT_GUARD (T-186, V3.0.6): pool floor 1.51125 and walls 1.984 m3 HELD (0.25 / 1.60 conventions where "
+               "0.40 is printed; footprint 6.045 of 10.936 m2, wall band 1.24 of 2.357 m2); STR.CONC.POOL released "
+               "3.49525 -> 0, 2 blocked. V3.0.7 (T-193): POOL_CONCRETE (T-183 r2) adds base 4.374226 m3 (footprint "
+               "10.935564 m2 x printed 0.40) and walls 2.828071 m3 (band 2.356726 m2 x 1.20 m structural height, never "
+               "the 1.15 finished depth), both VERIFIED, and supersedes the two convention lines (+3.707047 m3 against "
+               "them); the steps line POOL-1:STEPS added BLOCKED. STR.CONC.POOL released 0 -> 7.202297 m3, blocked 2 -> 1",
+               "the pool line group is PARTIALLY VERIFIED: steps HELD 'NOT DRAWN, consultant item' (never 0); pool bar "
+               "populations (T-191, merged in lane S) not integrated; pool blinding projection HELD; joints / waterstop, "
+               "membrane termination and finishes UNKNOWN; no tank, lift-pit or pump-room concrete line of the candidate "
+               "(not established); NOT RELEASED", "yes"),
     "B11-01": (I, ["T-142", "T-151", "T-167", "T-179"],
                "footing steel by bar population 874.86 kg DRAWING-CONFIRMED + 2,742.51 .. 2,836.40 kg HELD (V3.0.2, T-136; "
                "owner Q-71); column 1,887.13 kg + held 1,280.99 .. 2,119.35, ground system 1,252.91 + held 1,297.14 .. "
@@ -209,11 +245,12 @@ SPEC = {
                "T-183 r2: wall 1.20 m to the structure line; designer item D-57; the T-166 readings kept as information "
                "only), tank 2F-011 held 143.382 .. 149.310 kg, tank walls held; stair steel is counted under B7-14, the "
                "dome ring steel under B11-01 (beam ledger BM-1F-028), never twice",
-               "pool steel re-derived on the verified structure (T-191, lane S); tank walls; dome shell steel", "none"),
+               "pool steel re-derived on the verified structure (T-191, merged in lane S, not yet integrated); tank walls; "
+               "dome shell steel", "none"),
 }
 
-PLANNED = {  # queued / READY lane I packages that name the family (board 2026-10-23 10:20); merged ones removed
-    "B10-09": ["T-193"], "B10-10": ["T-193"], "B10-13": ["T-199"], "B7-09": ["T-199"], "B6-05": ["T-199"],
+PLANNED = {  # queued / TODO lane I packages that name the family (board 2026-10-23 14:20); merged ones removed
+    "B10-13": ["T-199"], "B7-09": ["T-199"], "B6-05": ["T-199"],
     "B4-03": ["T-211"], "B4-06": ["T-211"], "B10-08": ["T-146"],
 }
 MERGED_TASKS = {t for p in PACKAGES for t in [p["task"], *p["integrates"]]}
@@ -240,13 +277,13 @@ def build():
     new = copy.deepcopy(doc)
     new["version"] = "1.2.0"
     new["supersedes"] = "1.1.0 (kept unchanged on disk; every released-configuration state copied unchanged)"
-    new["source"] = ("1.1.0 + a candidate-level state per family re-derived from the merged ARCH_TAKEOFF_V3.0 .. V3.0.6 "
+    new["source"] = ("1.1.0 + a candidate-level state per family re-derived from the merged ARCH_TAKEOFF_V3.0 .. V3.0.7 "
                      "candidate packages (task T-203, pilot 2026-10-23 prerequisite 6; builder "
                      "research/agents_t203/build_master_1_2_0.py; check tools/family_master_candidate.py)")
     new["loaded_by"] = ("nothing: engine/source/rule_store.py keeps 1.0.0 and engine/source/coverage_census_v2.py reads "
                         "1.1.0, so no run, census or quantity changes with this file")
     new["v3_0_candidate"] = (
-        f"{CAND} (T-187 merge 8a6d604a, Verifier 2026-10-23 06:24 UTC, Gate B PASS): the same opt-in candidate extended "
+        f"{CAND} (T-193 merge e866328a, Verifier 2026-10-23 11:52 UTC, Gate B PASS): the same opt-in candidate extended "
         "in place since ARCH_TAKEOFF_V3.0 (T-131 b1a6d6d): ARCH_TAKEOFF_V2.13 + route G with the M4 profile + the "
         "checker-verified pieces of candidate_packages; every line outside a package's rows byte-identical to the "
         "previous version (asserted by each package). NOT the released default (ARCH_TAKEOFF_V2.9 + route G stays "
@@ -260,7 +297,10 @@ def build():
         "scope_of_the_figures": "the development villa runs of each package (own run, reproduced by its Gate B "
                                 "verdict); the methods are generic and each package tests them on a synthetic villa",
         "default_guard_note": "V3.0.6 records DG-2 SEARCH_INCOMPLETE on every convention line (one source document); "
-                              "it is recorded, not holding (T-187 s.5.5): convention lines stay live in the candidate",
+                              "it is recorded, not holding (T-187 s.5.5): convention lines stay live in the candidate. "
+                              "V3.0.7 re-runs the guard over its own lines on evidence version 2 with the convention "
+                              "set the route ran on (V6 + the 17 M4 profile conventions, T-193 s.5.5); V3.0.6 lines are "
+                              "not re-evaluated by it",
     }
     new["candidate_packages"] = PACKAGES
     new["in_v3_0_candidate_counts"] = {"yes": 0, "no": 0}
