@@ -179,3 +179,61 @@ def test_totals_never_sum_held():
 
 def test_unwired():
     assert M.policy_record()["wired"] is False
+
+
+# ---- r2 (Checker rejection 2026-10-23 07:13: the length is the physical run, a T stem stops on the face) ----------
+# Fixture "T108-C": a 0.15 partition meets a 0.20 through wall in a T at one end and is free at the other. Storey 4.20,
+# beam B3 20 x 40 over the whole partition -> height 3.80. Physical run (stem stops on the face of the through wall):
+# 3.00 m -> gross 3.00 x 3.80 = 11.40 m2; door 0.80 x 2.20 = 1.76 -> net 9.64 m2. The same run carried to the
+# through-wall centreline would be 3.00 + 0.20 / 2 = 3.10 m (11.78 m2): the 0.10 m piece is already in the through wall.
+F2 = {"floor_to_floor_m": 4.20, "status": DC}
+B3 = {"kind": "BEAM", "mark": "B3", "depth_m": 0.40, "status": DC}
+D3 = dict(D1, id="D3", width_m=0.80)
+
+
+def wc(length, measured_to="FACE", source="PHYSICAL_MODULE", **kw):
+    return dict({"id": "WC", "floor": "2F", "group": "INTERNAL", "t_m": 0.15, "block_type": "BLACK", "type_status": AOA,
+                 "physical_length_m": length, "length_status": DC, "length_source": source,
+                 "ends": [{"kind": "T_STEM", "measured_to": measured_to}, {"kind": "FREE_END"}],
+                 "pieces": [{"length_m": length, "member": B3}]}, **kw)
+
+
+def test_t_stem_to_the_face_is_the_physical_length():
+    x = M.wall_ledger(wc(3.00), F2, [D3])
+    assert x["gross_m2"] == pytest.approx(11.40) and x["net_m2"] == pytest.approx(9.64)
+    assert x["net_m3"] == pytest.approx(9.64 * 0.15)
+
+
+def test_t_stem_to_the_centreline_is_refused_adverse():
+    with pytest.raises(ValueError, match="counts that piece twice"):
+        M.wall_ledger(wc(3.10, measured_to="CENTRELINE"), F2, [D3])
+
+
+def test_hand_length_is_a_comparison_never_a_quantity_adverse():
+    x = M.wall_ledger(wc(3.10, measured_to=None, source="HAND"), F2, [D3])
+    assert x["gross_status"] == HELD and x["net_m2"] is None and x["net_m3"] is None
+    assert "LENGTH_SOURCE_HAND" in x["gross"]["flags"]
+    t = M.totals([x])[("2F", "BLACK", 0.15)]
+    assert t["net_by_status"] == {} and t["walls_net_held"] == 1          # never summed, never 0
+
+
+def test_held_end_is_a_bound_not_added():
+    x = M.wall_ledger(wc(3.00, held_end_max_m=0.137), F2, [D3])
+    assert x["gross_m2"] == pytest.approx(11.40)                           # the measured run only
+    he = x["gross"]["held_end"]
+    assert he["status"] == HELD and he["bounds_m2"][0] == 0.0
+    assert he["bounds_m2"][1] == pytest.approx(0.137 * 3.80)
+    assert "HELD_END" in x["gross"]["flags"]
+
+
+def test_unknown_length_source_or_end_kind_refused():
+    with pytest.raises(ValueError):
+        M.wall_ledger(wc(3.00, source="CENTRELINE"), F2)
+    with pytest.raises(ValueError):
+        M.wall_ledger(dict(wc(3.00), ends=[{"kind": "Y"}]), F2)
+
+
+def test_unstated_source_unchanged_backward_compatible():
+    w = wc(3.00)
+    del w["length_source"], w["ends"]
+    assert M.wall_ledger(w, F2, [D3])["net_m2"] == pytest.approx(9.64)

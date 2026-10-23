@@ -49,6 +49,13 @@ COVERAGE_READ = {
     "1F-W12": "over D-1F-03 (1.089 m gap): the B4 band (layer 1 edges at -0.124 / +0.076 m, 0.20 wide) continues over "
               "0.988 m of the gap; crossing line at the node 0.101 m: B4 20 x 50, same member as the sampled piece",
     "1F-W25": "NOT read: concave bay stubs (0.537 m physical, 0.168 m sampled under CB12); for the Checker"}
+# r2: length the physical module and the hand run do not agree on, with no T-125 ENGINE_RIGHT verdict: the V2 length is
+# established (measured masonry), the rest is a HELD bound (0 .. max more), never added, never 0.
+BAY_HELD = ("1F-W25", "1F concave bay band WB-FL0041-FL0042 (1F-W00 + 1F-W01 + 1F-W25): hand masonry 8.037 m vs V2 7.560 m "
+            "= 0.443 m glass basis (V2 / census glazing 3.579 m on the glass mid circle carried to the centrelines; the "
+            "hand row took the drawn glazing arc 3.136 m, its own L1 - L3 = 0.094 m, not its L2a 0.537) + 0.034 m arc vs "
+            "chord (T-125 row F UNRESOLVED): which ends of the bay are masonry is not settled by the plan; held on the "
+            "bay row (all three runs sit under CB12, one height)")
 TIE_BEAM_ROWS = ("GF-W08", "GF-W09", "GF-W13", "GF-W14")   # ST p.8 note 19: lift tie beam at 3.00 m, size not printed
 
 
@@ -80,61 +87,144 @@ def parse_pieces(s):
     return pieces, annex
 
 
-def openings_by_row():
-    hosts = list(csv.DictReader(open(ROOT / "research/agents_t175/T175_OPENING_HOSTS.csv", encoding="utf-8")))
+def op_from_host(h):
+    kind = T175.kind_of(h)
     lrows, bearing = T175.lintel_rows()
-    by_row = {}
+    w = float(h["WIDTH_M"]) if h["WIDTH_M"] else None
+    ws = DC if (w is not None and not h["WIDTH_LO_M"] and not h["HOLD_CAUSE"]) else HELD
+    hv = float(h["HEIGHT_M"]) if h["HEIGHT_M"] else None
+    hs = {"PRINTED": DC, "ASSUMED": AOA}.get(h["HEIGHT_STATUS_T150"], HELD) if hv is not None else HELD
+    return {"id": h["ID"], "kind": kind, "width_m": w, "width_status": ws, "height_m": hv, "height_status": hs,
+            "sill_m": float(h["SILL_ABOVE_FFL_M"]) if h["SILL_ABOVE_FFL_M"] else 0.0, "in_gross": True,
+            "frame": kind in ("DOOR", "WINDOW", "SHAFT", "GATE"),
+            "faces": (T175.face(h["SIDE_A"]), T175.face(h["SIDE_B"])),
+            "wet_side": any(T175.face(s) == "WALL_TILE" for s in (h["SIDE_A"], h["SIDE_B"])),
+            "lintel": T175.lintel_for(w, lrows, bearing)}
+
+
+def openings_by_row():
+    """Openings per T-143 row (T-175 hosts, IN_GROSS YES), and, per V2 run, the openings that are IN the physical run
+    but were outside every hand row (the hand runs stopped at them: P-1F-01 in WB-FL0022-FL0023, T-175 'not in the
+    gross'): with the physical run they are inside the measured gross and are deducted (Q-73), never left out."""
+    hosts = list(csv.DictReader(open(ROOT / "research/agents_t175/T175_OPENING_HOSTS.csv", encoding="utf-8")))
+    by_row, by_run = {}, {}
     for h in hosts:
         if h["ID"] in ("W02", "W03", "W17", "U-01", "D-GF-15", "P-GF-02", "P-GF-03", "P-GF-04", "P-GF-05"):
             continue                                    # glazed lines / no building wall: no masonry (T-175 s.2)
-        if h["IN_GROSS"] != "YES" or not h["HOST_ROW"]:
-            continue
-        kind = T175.kind_of(h)
-        w = float(h["WIDTH_M"]) if h["WIDTH_M"] else None
-        ws = DC if (w is not None and not h["WIDTH_LO_M"] and not h["HOLD_CAUSE"]) else HELD
-        hv = float(h["HEIGHT_M"]) if h["HEIGHT_M"] else None
-        hs = {"PRINTED": DC, "ASSUMED": AOA}.get(h["HEIGHT_STATUS_T150"], HELD) if hv is not None else HELD
-        op = {"id": h["ID"], "kind": kind, "width_m": w, "width_status": ws, "height_m": hv, "height_status": hs,
-              "sill_m": float(h["SILL_ABOVE_FFL_M"]) if h["SILL_ABOVE_FFL_M"] else 0.0, "in_gross": True,
-              "frame": kind in ("DOOR", "WINDOW", "SHAFT", "GATE"),
-              "faces": (T175.face(h["SIDE_A"]), T175.face(h["SIDE_B"])),
-              "wet_side": any(T175.face(s) == "WALL_TILE" for s in (h["SIDE_A"], h["SIDE_B"])),
-              "lintel": T175.lintel_for(w, lrows, bearing)}
-        by_row.setdefault(h["HOST_ROW"], []).append(op)
-    return by_row
+        if h["IN_GROSS"] == "YES" and h["HOST_ROW"]:
+            by_row.setdefault(h["HOST_ROW"], []).append(op_from_host(h))
+        elif not h["HOST_ROW"] and h["V2_RUN"]:
+            by_run.setdefault((h["FLOOR"], h["V2_RUN"]), []).append(op_from_host(h))
+    return by_row, by_run
+
+
+def v2_runs():
+    """T108_V2_RUN_LENGTHS.csv (t108_v2_lengths.py, one MASONRY_CENTRELINE_V2 run) keyed by (floor, run id)."""
+    return {(r["floor"], r["run_id"]): r for r in csv.DictReader(open(HERE / "T108_V2_RUN_LENGTHS.csv", encoding="utf-8"))}
+
+
+def t125_verdicts():
+    """Per hand row: the T-125 band comparison (cause, verdict) of the hand vs V2 length."""
+    out = {}
+    for r in csv.DictReader(open(ROOT / "research/agents_t125/V2_VS_V1_VS_HAND_BY_RUN.csv", encoding="utf-8")):
+        for rid in r["hand_rows"].split(" + "):
+            if rid:
+                out[rid] = (r["verdict_proposal"], r["cause_if_over_0.05"])
+    return out
+
+
+def groups(rows):
+    """Rows that share a V2 run are one physical run (1F-W14 + 1F-W15 = WB-FL0022-FL0023): merged, never two lengths."""
+    out, seen = [], {}
+    for r in rows:
+        runs = [x for x in r["v2_runs"].split() if x]
+        hit = next((seen[(r["floor"], x)] for x in runs if (r["floor"], x) in seen), None)
+        if hit is None:
+            hit = {"rows": [], "runs": []}
+            out.append(hit)
+        hit["rows"].append(r)
+        for x in runs:
+            if x not in hit["runs"]:
+                hit["runs"].append(x)
+            seen[(r["floor"], x)] = hit
+    return out
 
 
 def build():
     rows = list(csv.DictReader(open(ROOT / "research/agents_t143/T143_BLOCK_BY_WALL_RUN.csv", encoding="utf-8")))
     t175 = {r["row_id"]: r for r in csv.DictReader(open(ROOT / "research/agents_t175/T175_NET_BLOCK_BY_WALL.csv",
                                                         encoding="utf-8"))}
-    ops = openings_by_row()
+    ops, run_ops = openings_by_row()
+    V2, verd = v2_runs(), t125_verdicts()
     out, hchecks = [], []
-    for r in rows:
-        pieces, annex = parse_pieces(r["members_above"])
+    for grp in groups(rows):
+        R = grp["rows"]
+        r = R[0]
+        rid = " + ".join(x["row_id"] for x in R)
+        for x in R[1:]:
+            for k in ("floor", "group", "t_m", "block_type", "type_status"):
+                if x[k] != r[k]:
+                    raise SystemExit(f"{rid}: rows of one physical run differ in {k}")
+        pieces, annex = [], False
+        for x in R:
+            p, a = parse_pieces(x["members_above"])
+            pieces += p
+            annex = annex or a
         storey = STOREYS["GF annex" if annex else r["floor"]]
         bt = r["block_type"] if r["block_type"] in ("WHITE", "BLACK") else None
-        held_row = r["status"] == "HELD" and not pieces or bt is None
-        wall = {"id": r["row_id"], "floor": r["floor"], "group": r["group"], "t_m": float(r["t_m"]),
+        held_row = all(x["status"] == "HELD" for x in R) and not pieces or bt is None
+        hand_len = sum(float(x["L2a_q69_physical_m"]) for x in R)
+        hand_arch = sum(float(x["L1_arch_run_m"]) for x in R)
+        runs = [V2[(r["floor"], x)] for x in grp["runs"]]
+        if runs:            # r2: the physical run of the verified module is the length (Q-69 B, T-125)
+            phys = round(sum(float(v["physical_q69b_m"]) for v in runs), 4)
+            arch = round(sum(float(v["arch_run_m"]) for v in runs), 4)
+            ends = [{"kind": e, "measured_to": "FACE" if e == "T_STEM" else None}
+                    for v in runs for e in v["ends"].split("+") if e]
+            he = round(sum(float(v["held_end_max_m"] or 0) for v in runs), 4)
+            src = "PHYSICAL_MODULE"
+        else:               # no V2 run (GF-W30, GF-W37, GF-H02): the hand run is a comparison, never a quantity
+            phys, arch, ends, he, src = hand_len, hand_arch, [], 0.0, "HAND"
+        he_why = None
+        vv = {verd.get(y["row_id"], ("", ""))[0] for y in R}
+        if runs and any(v.startswith("UNRESOLVED") for v in vv) and hand_len - phys > he:
+            he, he_why = round(hand_len - phys, 4), ("T-125 UNRESOLVED end (45 deg / partial corner): the hand run is "
+                                                     "longer by this much; V2 holds or cuts the end: 0 .. max more")
+        elif he:
+            he_why = "junction end not measured by MASONRY_CENTRELINE_V2 (no clean T or L): 0 .. max more"
+        if rid == BAY_HELD[0]:
+            he, he_why = 0.4769, BAY_HELD[1]
+        wall = {"id": rid, "floor": r["floor"], "group": r["group"], "t_m": float(r["t_m"]),
                 "block_type": bt, "type_status": TYPE_STATUS.get(r["type_status"], HELD) if bt else HELD,
-                "physical_length_m": float(r["L2a_q69_physical_m"]),
-                "length_status": HELD if held_row else DC,
-                "arch_length_m": float(r["L1_arch_run_m"]),
+                "physical_length_m": phys, "length_status": HELD if held_row else DC, "length_source": src,
+                "ends": ends, "held_end_max_m": he or None, "held_end_why": he_why, "arch_length_m": arch,
                 "pieces": [] if bt is None else [{"length_m": p["length_m"], "member": p["member"]} for p in pieces]}
+        wops = [o for x in R for o in ops.get(x["row_id"], [])] + \
+               [o for x in grp["runs"] for o in run_ops.get((r["floor"], x), [])]
         # a row whose thickness / material is HELD in T-103 (GF-H01 0.40 band, GF-H02) gets no gross at all
-        x = M.wall_ledger(wall, storey, ops.get(r["row_id"], []), printed_lintel_schedule=True)
+        x = M.wall_ledger(wall, storey, wops, printed_lintel_schedule=True)
         if r["row_id"] in TIE_BEAM_ROWS:                # T-143: gross PROVISIONAL, the tie-beam strip not deducted
             x["net_status"], x["net_m2"], x["net_m3"] = HELD, None, None
             x["gross_status"] = HELD
             x["hold_note"] = "ST p.8 note 19 lift tie beam (size not printed): its strip is not deducted"
         for p_in, p_out in zip(pieces, x["gross"]["pieces"]):
             if p_in["t143_h"] is not None and p_out["height_m"] is not None:
-                hchecks.append((r["row_id"], float(p_in["t143_h"]), p_out["height_m"]))
-        x["t143_gross"] = float(r["gross_m2_q69_physical"]) if r["gross_m2_q69_physical"] not in ("", "HELD") else None
-        t5 = t175.get(r["row_id"], {})
-        x["t175_net"] = float(t5["net_m2_on_t143_gross"]) if t5.get("net_m2_on_t143_gross") else None
-        x["t175_status"] = t5.get("s5_status")
+                hchecks.append((rid, float(p_in["t143_h"]), p_out["height_m"]))
+        g143 = [float(y["gross_m2_q69_physical"]) for y in R if y["gross_m2_q69_physical"] not in ("", "HELD")]
+        x["t143_gross"] = round(sum(g143), 6) if len(g143) == len(R) else None
+        t5 = [t175.get(y["row_id"], {}) for y in R]
+        x["t175_net"] = round(sum(float(t["net_m2_on_t143_gross"]) for t in t5), 6) \
+            if all(t.get("net_m2_on_t143_gross") for t in t5) else None
+        x["t175_status"] = ";".join(sorted({t.get("s5_status") or "" for t in t5} - {""})) or None
         x["storey_source"] = storey["source"]
+        x["length_source"] = src
+        x["v2_runs"] = " ".join(grp["runs"])
+        x["hand_length_m"] = hand_len
+        x["d_length_vs_hand_m"] = round(phys - hand_len, 4)
+        vs = sorted({verd.get(y["row_id"], ("", ""))[0] for y in R} - {""})
+        cs = sorted({verd.get(y["row_id"], ("", ""))[1] for y in R} - {""})
+        x["t125_verdict"] = ";".join(vs)
+        x["t125_cause"] = " | ".join(cs)
         out.append(x)
     return out, hchecks
 
@@ -146,7 +236,9 @@ def r3(v):
 def by_wall_csv(L):
     o = io.StringIO()
     w = csv.writer(o, lineterminator="\n")
-    w.writerow(["row_id", "floor", "group", "t_m", "block_type", "type_status", "physical_length_m", "held_length_m",
+    w.writerow(["row_id", "floor", "group", "t_m", "block_type", "type_status", "length_source", "v2_runs",
+                "physical_length_m", "hand_length_t143_m (comparison)", "d_length_vs_hand_m", "t125_verdict",
+                "held_end_max_m (HELD, not added)", "held_length_m",
                 "height_weighted_m", "coverage", "gross_m2", "gross_status", "t143_gross_m2", "d_gross_m2",
                 "deducted_m2", "held_openings", "net_m2", "net_status", "net_candidate_m2 (HELD: not a quantity)",
                 "net_bounds_m2", "t175_net_m2", "t175_status", "d_net_vs_t175_m2", "net_m3",
@@ -165,7 +257,9 @@ def by_wall_csv(L):
         if x["held_openings"]:
             why = (why + "; " if why else "") + "held opening(s): " + ";".join(x["held_openings"])
         w.writerow([x["wall"], x["floor"], x["group"], x["t_m"], x["block_type"] or "-", x["type_status"],
-                    r3(g["physical_length_m"]), r3(g.get("held_length_m")), r3(g.get("height_weighted_m")),
+                    x["length_source"], x["v2_runs"], r3(g["physical_length_m"]), r3(x["hand_length_m"]),
+                    r3(x["d_length_vs_hand_m"]), x["t125_verdict"],
+                    r3((g.get("held_end") or {}).get("max_m")), r3(g.get("held_length_m")), r3(g.get("height_weighted_m")),
                     r3(g.get("coverage")), r3(x["gross_m2"]), x["gross_status"], r3(x["t143_gross"]), r3(dg),
                     r3(x["deducted_m2"]), ";".join(x["held_openings"]), r3(x["net_m2"]), x["net_status"],
                     r3(x["net_candidate_m2"]), f"{r3(b[0])} .. {r3(b[1])}" if b else "", r3(x["t175_net"]),
@@ -197,7 +291,7 @@ def vs_freelancer_csv(L):
           csv.DictReader(open(ROOT / "research/agents_t143/T143_TOTALS_VS_FREELANCER.csv", encoding="utf-8"))}
     o = io.StringIO()
     w = csv.writer(o, lineterminator="\n")
-    w.writerow(["floor", "section", "walls", "engine_gross_known_m2", "engine_held_length_m", "fl_gross_m2",
+    w.writerow(["floor", "section", "walls", "engine_gross_known_m2", "engine_held_length_m (incl. held ends)", "fl_gross_m2",
                 "d_gross_m2", "d_gross_pct", "engine_net_established_m2 (DC+AOA, walls with a net)",
                 "same_walls_gross_m2", "engine_walls_net_held", "fl_deduction_m2", "fl_net_m2", "like_for_like"])
     for (f, sec), r in sorted(fl.items(), key=lambda kv: (FLOORS.index(kv[0][0]), kv[0][1])):
@@ -205,7 +299,7 @@ def vs_freelancer_csv(L):
         t = None if sec == "EXTERNAL" else float(sec.split()[-1])
         W = [x for x in L if x["floor"] == f and x["group"] == grp and (t is None or abs(x["t_m"] - t) < 1e-6)]
         gk = sum(x["gross_m2"] or 0 for x in W)
-        hl = sum(x["gross"].get("held_length_m") or 0 for x in W)
+        hl = sum((x["gross"].get("held_length_m") or 0) + (x["gross"].get("held_end") or {}).get("max_m", 0) for x in W)
         net = [x for x in W if x["net_m2"] is not None]
         fg = float(r["freelancer_gross_m2"])
         lfl = "NO: held length > 0 (held is missing, not 0)" if hl > 1e-6 else "gross yes; net only on walls with a net"
@@ -216,7 +310,8 @@ def vs_freelancer_csv(L):
 
 
 def summary(L, hchecks):
-    s = {"method": M.METHOD, "rules": list(M.RULES), "inputs": ["T143_BLOCK_BY_WALL_RUN.csv",
+    s = {"method": M.METHOD, "rules": list(M.RULES), "inputs": ["T108_V2_RUN_LENGTHS.csv (MASONRY_CENTRELINE_V2 run)",
+         "V2_VS_V1_VS_HAND_BY_RUN.csv (T-125 verdicts)", "T143_BLOCK_BY_WALL_RUN.csv (members above, hand length)",
          "T175_OPENING_HOSTS.csv", "T175_NET_BLOCK_BY_WALL.csv", "T143_TOTALS_VS_FREELANCER.csv"],
          "printed_lintel_schedule": "ST7757.pdf p.13 LINTEL SCHEDULE (S8.6): atab NOT APPLICABLE on every opening",
          "height_recomputation": {"pieces": len(hchecks),
@@ -253,6 +348,10 @@ def summary(L, hchecks):
                      {k: round(v, 3) for k, v in sorted(gbs.items())},
                  "gross_m3_known": round(sum(x["gross_m3"] or 0 for x in W), 3),
                  "held_length_m": round(sum(x["gross"].get("held_length_m") or 0 for x in W), 3),
+                 "held_end_or_unresolved_length (HELD bound, not added)": {
+                     "max_m": round(sum((x["gross"].get("held_end") or {}).get("max_m", 0) for x in W), 4),
+                     "bounds_m2": [0.0, round(sum(((x["gross"].get("held_end") or {}).get("bounds_m2") or (0, 0))[1]
+                                                  for x in W), 3)]},
                  "walls_with_net": len(net),
                  "net_by_status": {k: {"walls": v["walls"], "m2": round(v["m2"], 3), "m3": round(v["m3"], 3)}
                                    for k, v in sorted(by.items())},
@@ -262,11 +361,23 @@ def summary(L, hchecks):
                  "white_units_installed_on_established_net": {k: round(v, 1) for k, v in sorted(wu.items())},
                  "white_net_held_walls": sum(1 for x in W if x["block_type"] == "WHITE" and x["net_m2"] is None)}
     s["held_scope_outside_the_rows"] = [
-        "P-1F-01 masonry above the S8.6 lintel (black 0.15), in no run: 0 .. 4.992 m2 bounds, HELD on the head (T-198 C2)",
         "pool-court east-wall piers 0.632 + 0.247 m and the north pier (T-154 / T-175): built, in no T-143 row, height not read: HELD",
         "masonry above / below the glazing of W02 (GF-W11), W03 (GF-W37), W17 (1F-W25): Q-69 B item (4), HELD on heads (T-144; T-201 READY)",
         "roof parapets 104.25 lm (+4.30 m thickness held) and street fence 8.20 lm: material HELD (owner Q-65 C), heights from ST p.14 details not measured here",
-        "T-stem overlap of centreline runs 2.70 m3 (T-143, measured part, gross basis): to deduct for a physical volume; not split per row, not re-derived here"]
+        "held ends / unresolved length (V2 held junctions, T-125 UNRESOLVED 45 deg ends, the 1F bay glass basis): up to "
+        + f"{sum((x['gross'].get('held_end') or {}).get('max_m', 0) for x in L):.4f} m more on "
+        + ", ".join(x["wall"] for x in L if x["gross"].get("held_end")) + " (bounds per row in T108_BY_WALL.csv)"]
+    s["r2_length_source"] = {
+        "rule": "the physical run of MASONRY_CENTRELINE_V2 (T-125, verified) is the length; T-143 L2a is a comparison",
+        "rows_by_source": {k: sum(1 for x in L if x["length_source"] == k) for k in ("PHYSICAL_MODULE", "HAND")},
+        "sum_physical_m": round(sum(x["gross"]["physical_length_m"] or 0 for x in L if x["length_source"] == "PHYSICAL_MODULE"), 4),
+        "sum_hand_m_same_rows": round(sum(x["hand_length_m"] for x in L if x["length_source"] == "PHYSICAL_MODULE"), 4),
+        "t_stem_overlap": "0 by construction (a V2 T stem stops on the face of the through wall); the r1 'T-stem overlap "
+                          "2.70 m3 HELD' was the same double count, not a held item",
+        "by_t125_verdict_m": {v or "(none: equal within 0.05)": round(sum(x["d_length_vs_hand_m"] for x in L
+                                                                       if x["length_source"] == "PHYSICAL_MODULE"
+                                                                       and x["t125_verdict"] == v), 4)
+                              for v in sorted({x["t125_verdict"] for x in L if x["length_source"] == "PHYSICAL_MODULE"})}}
     return s
 
 

@@ -28,6 +28,10 @@ Owner rules applied (docs/agents/OWNER_QUESTIONS_ANSWERED.md):
 
 Physical vs installed vs procurement (standard s.3): area and volume here are NET INSTALLED quantities; a volume from a
 centreline run carries the T-stem overlap at junctions, reported only when the caller gives it (never estimated).
+r2 (Checker rejection 2026-10-23 07:13): the length is the PHYSICAL run of the verified physical module
+(MASONRY_CENTRELINE_V2, T-125: a T stem stops on the face of the through wall), so the stem overlap is 0 by
+construction; a hand run is a comparison column only (length_source HAND caps the status at HELD) and a T-stem end
+measured to the centreline is refused (check_length_source).
 
 Guards (ValueError): a status outside the five section-5 statuses; lengths / depths in millimetres (a piece > 60 m, a
 storey > 12 m, a depth > 3 m); a member depth not below the storey height; an unknown block type or member kind.
@@ -86,11 +90,41 @@ def piece_height(storey, member):
     return round(f2f - d, 6), OS.weakest(ss, ms), f"{f2f} - {d} ({kind.lower()} {member.get('mark') or ''})"
 
 
+LENGTH_SOURCES = ("PHYSICAL_MODULE", "HAND", None)   # r2: where physical_length_m comes from (None: not stated)
+END_KINDS = ("T_STEM", "L", "FREE_END", "HELD", "CURVED", "OTHER")
+
+
+def check_length_source(wall):
+    """r2 (T-108 rejection 2026-10-23 07:13, owner Q-69 B 'never count masonry in two segments'). Returns
+    (length_status_cap, flags). Refuses (ValueError) a run whose T-stem end is measured to the through-wall centreline:
+    that piece of masonry is already in the through wall, so the length counts it twice. A length that is stated to be
+    a HAND run (not the verified physical module) is a comparison column, never a quantity: its status is capped at
+    HELD. An unstated source changes nothing (backward compatible)."""
+    src = wall.get("length_source")
+    if src not in LENGTH_SOURCES:
+        raise ValueError(f"wall {wall.get('id')}: length source {src!r} not in {LENGTH_SOURCES}")
+    for e in wall.get("ends") or ():
+        k = e.get("kind")
+        if k not in END_KINDS:
+            raise ValueError(f"wall {wall.get('id')}: end kind {k!r} not in {END_KINDS}")
+        if k == "T_STEM" and e.get("measured_to") not in ("FACE", None):
+            raise ValueError(f"wall {wall.get('id')}: a T-stem end measured to the {e.get('measured_to')} of the "
+                             f"through wall counts that piece twice (Q-69 B); give the physical length to the face")
+    if src == "HAND":
+        return HELD, ["LENGTH_SOURCE_HAND"]
+    return None, []
+
+
 def wall_gross(wall, storey):
     """Gross block area of one wall run. `wall`: id, t_m, physical_length_m (+ status), arch_length_m (optional),
     pieces [{length_m, member{kind, mark, depth_m, status}}]. The pieces are the member-above samples along the run;
-    their lengths are scaled to the architectural run (or the physical one when no architectural run is given)."""
+    their lengths are scaled to the architectural run (or the physical one when no architectural run is given).
+    r2: optional length_source / ends (check_length_source) and held_end_max_m: a junction end the physical module
+    left unmeasured (up to that length more may be masonry): reported as a HELD bound, never added, never 0."""
+    cap, lflags = check_length_source(wall)
     ls = _st(wall.get("length_status", UNKNOWN))
+    if cap is not None:
+        ls = OS.weakest(ls, cap)
     L = _num(wall.get("physical_length_m"), f"wall {wall.get('id')} length", MAX_PIECE_M)
     La = _num(wall.get("arch_length_m"), f"wall {wall.get('id')} architectural run", MAX_PIECE_M)
     pieces = wall.get("pieces") or []
@@ -98,7 +132,7 @@ def wall_gross(wall, storey):
     if L is None or not pieces:
         out.update(gross_m2=None, gross_status=HELD if ls != UNKNOWN else UNKNOWN, held_length_m=L,
                    height_weighted_m=None, coverage=None,
-                   why="no length" if L is None else "no member above bound to this run")
+                   why="no length" if L is None else "no member above bound to this run", flags=lflags)
         return out
     tot = 0.0
     hl, hk, sts, held_why = 0.0, 0.0, [ls], []
@@ -125,8 +159,15 @@ def wall_gross(wall, storey):
     status = OS.weakest(*sts)
     out.update(gross_m2=gross, gross_status=status, held_length_m=held_len, height_weighted_m=hw,
                coverage=round(tot / ref, 6), why="; ".join(sorted(set(held_why))))
-    out["flags"] = (["LOW_HEIGHT_COVERAGE"] if tot / ref < 0.8 - TOL else [])
+    out["flags"] = (["LOW_HEIGHT_COVERAGE"] if tot / ref < 0.8 - TOL else []) + lflags
     out["clear_h_min_m"] = min((p["height_m"] for p in out["pieces"] if p["height_m"] is not None), default=None)
+    he = _num(wall.get("held_end_max_m"), f"wall {wall.get('id')} held end", MAX_PIECE_M)
+    if he is not None and he > TOL:
+        out["held_end"] = {"max_m": he, "status": HELD,
+                           "bounds_m2": (0.0, round(he * hw, 6)) if hw is not None else None,
+                           "why": wall.get("held_end_why") or "junction end not measured by the physical module "
+                                                              "(no clean T or L): 0 .. max more"}
+        out["flags"].append("HELD_END")
     return out
 
 

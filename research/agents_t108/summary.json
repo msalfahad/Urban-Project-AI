@@ -9,7 +9,9 @@
   "ENGINEERING_REASONING_STANDARD.md s.3 (installed vs procurement, build before deduct)"
  ],
  "inputs": [
-  "T143_BLOCK_BY_WALL_RUN.csv",
+  "T108_V2_RUN_LENGTHS.csv (MASONRY_CENTRELINE_V2 run)",
+  "V2_VS_V1_VS_HAND_BY_RUN.csv (T-125 verdicts)",
+  "T143_BLOCK_BY_WALL_RUN.csv (members above, hand length)",
   "T175_OPENING_HOSTS.csv",
   "T175_NET_BLOCK_BY_WALL.csv",
   "T143_TOTALS_VS_FREELANCER.csv"
@@ -20,16 +22,18 @@
   "max_abs_diff_vs_t143_m": 0.0
  },
  "gross_vs_t143": {
-  "rows": 71,
-  "max_abs_diff_m2": 0.006,
-  "sum_abs_diff_m2": 0.026
+  "rows": 70,
+  "max_abs_diff_m2": 4.608,
+  "sum_abs_diff_m2": 20.763
  },
  "net_vs_t175": {
-  "rows": 43,
-  "max_abs_diff_m2": 0.001,
-  "sum_abs_diff_m2": 0.008
+  "rows": 41,
+  "max_abs_diff_m2": 1.272,
+  "sum_abs_diff_m2": 12.837
  },
- "status_mismatch_vs_t175": [],
+ "status_mismatch_vs_t175": [
+  "1F-W14 + 1F-W15"
+ ],
  "low_height_coverage_resolved_by_own_read": {
   "GF-W27": "over D-GF-02 (0.874 m gap): no beam edge parallel within 0.70 m, one crossing line at the node (0.053 m), slab rebar text only, no T tag: slab 0.16 (ST p.8 note 18), same member as the sampled piece",
   "GF-W29": "over D-GF-10 (0.85 m gap): no beam edge parallel within 0.70 m, one crossing line at the node (0.003 m), slab rebar text only, no T tag: slab 0.16, same member as the sampled piece",
@@ -44,28 +48,35 @@
  ],
  "GF": {
   "walls": 40,
-  "gross_known_m2": 460.075,
+  "gross_known_m2": 451.791,
   "gross_known_by_status_m2 (HELD = known pieces of held / provisional walls)": {
-   "DRAWING-CONFIRMED": 218.153,
-   "HELD": 241.922
+   "DRAWING-CONFIRMED": 213.329,
+   "HELD": 238.463
   },
-  "gross_m3_known": 84.03,
-  "held_length_m": 13.32,
+  "gross_m3_known": 82.757,
+  "held_length_m": 13.22,
+  "held_end_or_unresolved_length (HELD bound, not added)": {
+   "max_m": 1.3621,
+   "bounds_m2": [
+    0.0,
+    5.815
+   ]
+  },
   "walls_with_net": 14,
   "net_by_status": {
    "ASSUMED — OWNER-APPROVED": {
     "walls": 4,
-    "m2": 38.363,
-    "m3": 6.034
+    "m2": 38.221,
+    "m3": 6.013
    },
    "DRAWING-CONFIRMED": {
     "walls": 10,
-    "m2": 122.324,
-    "m3": 21.679
+    "m2": 117.641,
+    "m3": 20.977
    }
   },
   "walls_net_held": 26,
-  "net_candidate_on_held_walls_m2 (not a quantity)": 118.149,
+  "net_candidate_on_held_walls_m2 (not a quantity)": 115.448,
   "white_units_installed_on_established_net": {
    "60x20": 83.7,
    "62.5x25": 64.3
@@ -73,50 +84,64 @@
   "white_net_held_walls": 11
  },
  "1F": {
-  "walls": 26,
-  "gross_known_m2": 371.835,
+  "walls": 25,
+  "gross_known_m2": 370.18,
   "gross_known_by_status_m2 (HELD = known pieces of held / provisional walls)": {
-   "DRAWING-CONFIRMED": 292.298,
-   "HELD": 79.537
+   "DRAWING-CONFIRMED": 292.548,
+   "HELD": 77.632
   },
-  "gross_m3_known": 65.405,
-  "held_length_m": 17.96,
-  "walls_with_net": 14,
+  "gross_m3_known": 65.061,
+  "held_length_m": 17.618,
+  "held_end_or_unresolved_length (HELD bound, not added)": {
+   "max_m": 0.4769,
+   "bounds_m2": [
+    0.0,
+    1.645
+   ]
+  },
+  "walls_with_net": 12,
   "net_by_status": {
    "ASSUMED — OWNER-APPROVED": {
     "walls": 3,
-    "m2": 38.087,
-    "m3": 5.713
+    "m2": 36.733,
+    "m3": 5.51
    },
    "DRAWING-CONFIRMED": {
-    "walls": 11,
-    "m2": 106.134,
-    "m3": 17.976
+    "walls": 9,
+    "m2": 92.04,
+    "m3": 15.793
    }
   },
-  "walls_net_held": 12,
+  "walls_net_held": 13,
   "net_candidate_on_held_walls_m2 (not a quantity)": 0,
   "white_units_installed_on_established_net": {
-   "60x20": 143.5,
-   "62.5x25": 110.2
+   "60x20": 131.9,
+   "62.5x25": 101.3
   },
   "white_net_held_walls": 5
  },
  "2F": {
   "walls": 9,
-  "gross_known_m2": 123.733,
+  "gross_known_m2": 123.226,
   "gross_known_by_status_m2 (HELD = known pieces of held / provisional walls)": {
-   "DRAWING-CONFIRMED": 61.756,
-   "HELD": 61.977
+   "DRAWING-CONFIRMED": 61.376,
+   "HELD": 61.849
   },
-  "gross_m3_known": 22.758,
-  "held_length_m": 5.738,
+  "gross_m3_known": 22.675,
+  "held_length_m": 5.697,
+  "held_end_or_unresolved_length (HELD bound, not added)": {
+   "max_m": 0,
+   "bounds_m2": [
+    0.0,
+    0
+   ]
+  },
   "walls_with_net": 4,
   "net_by_status": {
    "ASSUMED — OWNER-APPROVED": {
     "walls": 1,
-    "m2": 10.02,
-    "m3": 1.503
+    "m2": 9.64,
+    "m3": 1.446
    },
    "DRAWING-CONFIRMED": {
     "walls": 3,
@@ -133,40 +158,62 @@
   "white_net_held_walls": 3
  },
  "ALL": {
-  "walls": 75,
-  "gross_known_m2": 955.643,
+  "walls": 74,
+  "gross_known_m2": 945.197,
   "gross_known_by_status_m2 (HELD = known pieces of held / provisional walls)": {
-   "DRAWING-CONFIRMED": 572.208,
-   "HELD": 383.435
+   "DRAWING-CONFIRMED": 567.253,
+   "HELD": 377.944
   },
-  "gross_m3_known": 172.193,
-  "held_length_m": 37.019,
-  "walls_with_net": 32,
+  "gross_m3_known": 170.494,
+  "held_length_m": 36.535,
+  "held_end_or_unresolved_length (HELD bound, not added)": {
+   "max_m": 1.839,
+   "bounds_m2": [
+    0.0,
+    7.46
+   ]
+  },
+  "walls_with_net": 30,
   "net_by_status": {
    "ASSUMED — OWNER-APPROVED": {
     "walls": 8,
-    "m2": 86.469,
-    "m3": 13.25
+    "m2": 84.595,
+    "m3": 12.969
    },
    "DRAWING-CONFIRMED": {
-    "walls": 24,
-    "m2": 271.594,
-    "m3": 48.282
+    "walls": 22,
+    "m2": 252.817,
+    "m3": 45.397
    }
   },
-  "walls_net_held": 43,
-  "net_candidate_on_held_walls_m2 (not a quantity)": 118.149,
+  "walls_net_held": 44,
+  "net_candidate_on_held_walls_m2 (not a quantity)": 115.448,
   "white_units_installed_on_established_net": {
-   "60x20": 406.2,
-   "62.5x25": 311.9
+   "60x20": 394.7,
+   "62.5x25": 303.1
   },
   "white_net_held_walls": 19
  },
  "held_scope_outside_the_rows": [
-  "P-1F-01 masonry above the S8.6 lintel (black 0.15), in no run: 0 .. 4.992 m2 bounds, HELD on the head (T-198 C2)",
   "pool-court east-wall piers 0.632 + 0.247 m and the north pier (T-154 / T-175): built, in no T-143 row, height not read: HELD",
   "masonry above / below the glazing of W02 (GF-W11), W03 (GF-W37), W17 (1F-W25): Q-69 B item (4), HELD on heads (T-144; T-201 READY)",
   "roof parapets 104.25 lm (+4.30 m thickness held) and street fence 8.20 lm: material HELD (owner Q-65 C), heights from ST p.14 details not measured here",
-  "T-stem overlap of centreline runs 2.70 m3 (T-143, measured part, gross basis): to deduct for a physical volume; not split per row, not re-derived here"
- ]
+  "held ends / unresolved length (V2 held junctions, T-125 UNRESOLVED 45 deg ends, the 1F bay glass basis): up to 1.8390 m more on GF-W13, GF-W20, GF-W21, GF-W31, GF-W32, GF-W33, GF-W34, 1F-W25 (bounds per row in T108_BY_WALL.csv)"
+ ],
+ "r2_length_source": {
+  "rule": "the physical run of MASONRY_CENTRELINE_V2 (T-125, verified) is the length; T-143 L2a is a comparison",
+  "rows_by_source": {
+   "PHYSICAL_MODULE": 71,
+   "HAND": 3
+  },
+  "sum_physical_m": 285.1876,
+  "sum_hand_m_same_rows": 288.345,
+  "t_stem_overlap": "0 by construction (a V2 T stem stops on the face of the through wall); the r1 'T-stem overlap 2.70 m3 HELD' was the same double count, not a held item",
+  "by_t125_verdict_m": {
+   "(none: equal within 0.05)": -0.6013,
+   "ENGINE_RIGHT": -1.714,
+   "UNRESOLVED": -0.7921,
+   "UNRESOLVED (piece HELD)": -0.05
+  }
+ }
 }
