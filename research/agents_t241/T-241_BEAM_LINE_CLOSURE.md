@@ -128,8 +128,8 @@ ring (+0.4742, already in the candidate).
 | candidate V3.0.9a 65.2937 | as released, without the ring item; the integration (lane I, T-146 / a V3.0.x package) takes CB5 span 2 into CONC.BEAM and out of CONC.SLAB in the same package as T-234's 13 non-slab faces |
 | freelancer 65.9659 | FREELANCER_RIGHT nowhere proven per member; RULE_DIFFERENCE on lengths through supports (C1 at faces vs his centre / through lengths); FREELANCER omission of 6 labelled marks (9.883 m3); his 1F total formula slip -0.128; the near-equal totals are a coincidence |
 
-Checker re-measure list: (1) one run per storey from the edge lines: GF CB5 span 2 (edges x 52.693 / 52.893 between
-the B1 face y 41.248 and the B20 face y 44.948 = 3.700) and GF B22 (T-110: 7.80); 1F B25 (BAND0032, drawn 0.55 x 0.75 x 6.8754 = 2.850, not in his sheet) and 1F B19 end at C9 (T-229
+Checker re-measure list: (1) one run per storey from the edge lines: GF CB5 span 2 (two edge lines 0.200 apart, 3.700
+between the column / B1 face and the B20 south face, T-145) and GF B22 (T-110: 7.80); 1F B25 (BAND0032, drawn 0.55 x 0.75 x 6.8754 = 2.850, not in his sheet) and 1F B19 end at C9 (T-229
 0.0289); 2F B7 (6.60) and 2F B15 (BAND0006.2, 1.20 deep); (2) every
 CONFLICT run: CB10 (D-02), B29 / CB2 / B21 / 1F B6 (D-27) drawn widths on the edge lines; (3) the seven column joints
 347 / 34A / 34D / 350 / 356 / 359 / 667 (SOLID hatch) under their bands and 778 under 2F B7 (T-220); (4) faces GF-097,
