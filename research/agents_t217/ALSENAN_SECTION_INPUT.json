@@ -1,0 +1,3578 @@
+{
+ "schema": "T217_SECTION_INPUT_V1",
+ "source_file": {
+  "ST7757 dxf.dxf": "sha256 9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079 (Drive 'Alsenan chalet project')"
+ },
+ "binding": "FP label -> outline from research/agents_t205/ALSENAN_NECK_INPUT.json (T-205, merged 5f40dfdb)",
+ "schedule": {
+  "C": {
+   "handle": "1D03",
+   "bands": {
+    "FOU": {
+     "W": 30,
+     "D": 50
+    },
+    "GR": {
+     "W": 20,
+     "D": 50
+    },
+    "1ST": null,
+    "2ND": null
+   }
+  },
+  "C1": {
+   "handle": "1D32",
+   "bands": {
+    "FOU": {
+     "W": 30,
+     "D": 50
+    },
+    "GR": {
+     "W": 20,
+     "D": 50
+    },
+    "1ST": {
+     "W": 20,
+     "D": 50
+    },
+    "2ND": {
+     "W": 20,
+     "D": 50
+    }
+   }
+  },
+  "C2": {
+   "handle": "1D46",
+   "bands": {
+    "FOU": {
+     "W": 30,
+     "D": 50
+    },
+    "GR": {
+     "W": 20,
+     "D": 50
+    },
+    "1ST": {
+     "W": 20,
+     "D": 50
+    },
+    "2ND": {
+     "W": 20,
+     "D": 50
+    }
+   }
+  },
+  "C3": {
+   "handle": "1D5A",
+   "bands": {
+    "FOU": {
+     "W": 30,
+     "D": 50
+    },
+    "GR": {
+     "W": 25,
+     "D": 50
+    },
+    "1ST": {
+     "W": 20,
+     "D": 50
+    },
+    "2ND": {
+     "W": 20,
+     "D": 50
+    }
+   }
+  },
+  "C4": {
+   "handle": "1D6E",
+   "bands": {
+    "FOU": {
+     "W": 30,
+     "D": 50
+    },
+    "GR": {
+     "W": 25,
+     "D": 50
+    },
+    "1ST": {
+     "W": 20,
+     "D": 50
+    },
+    "2ND": {
+     "W": 20,
+     "D": 50
+    }
+   }
+  },
+  "C5": {
+   "handle": "1D82",
+   "bands": {
+    "FOU": {
+     "W": 30,
+     "D": 60
+    },
+    "GR": {
+     "W": 25,
+     "D": 60
+    },
+    "1ST": {
+     "W": 20,
+     "D": 50
+    },
+    "2ND": {
+     "W": 20,
+     "D": 50
+    }
+   }
+  },
+  "C6": {
+   "handle": "1D96",
+   "bands": {
+    "FOU": {
+     "W": 30,
+     "D": 70
+    },
+    "GR": {
+     "W": 25,
+     "D": 70
+    },
+    "1ST": {
+     "W": 20,
+     "D": 60
+    },
+    "2ND": {
+     "W": 20,
+     "D": 50
+    }
+   }
+  },
+  "C7": {
+   "handle": "1DAA",
+   "bands": {
+    "FOU": {
+     "W": 30,
+     "D": 80
+    },
+    "GR": {
+     "W": 25,
+     "D": 80
+    },
+    "1ST": {
+     "W": 20,
+     "D": 80
+    },
+    "2ND": {
+     "W": 20,
+     "D": 60
+    }
+   }
+  },
+  "C8": {
+   "handle": "1DBE",
+   "bands": {
+    "FOU": {
+     "W": 30,
+     "D": 90
+    },
+    "GR": {
+     "W": 25,
+     "D": 90
+    },
+    "1ST": {
+     "W": 20,
+     "D": 90
+    },
+    "2ND": {
+     "W": 20,
+     "D": 70
+    }
+   }
+  },
+  "C9": {
+   "handle": "1DD2",
+   "bands": {
+    "FOU": {
+     "W": 30,
+     "D": 100
+    },
+    "GR": {
+     "W": 25,
+     "D": 100
+    },
+    "1ST": {
+     "W": 20,
+     "D": 90
+    },
+    "2ND": {
+     "W": 20,
+     "D": 70
+    }
+   }
+  },
+  "C10": {
+   "handle": "1DE6",
+   "bands": {
+    "FOU": {
+     "W": 30,
+     "D": 70
+    },
+    "GR": {
+     "W": 25,
+     "D": 70
+    },
+    "1ST": null,
+    "2ND": null
+   }
+  },
+  "C11": {
+   "handle": "1DFA",
+   "bands": {
+    "FOU": {
+     "W": 30,
+     "D": 110
+    },
+    "GR": {
+     "W": 25,
+     "D": 110
+    },
+    "1ST": null,
+    "2ND": null
+   }
+  },
+  "CN": {
+   "handle": "TEXT row (T-075)",
+   "bands": {
+    "FOU": {
+     "W": 30,
+     "D": 30
+    },
+    "GR": null,
+    "1ST": null,
+    "2ND": null
+   }
+  }
+ },
+ "instances": [
+  {
+   "id": "NECK:COL:SH10:C@150972,36507",
+   "mark": "C",
+   "fp_label_handle": "166E",
+   "fp_outline": "10A4",
+   "footing": "F10|F",
+   "pit_raft": false,
+   "storeys": {
+    "FOUNDATION": {
+     "drawn": [
+      {
+       "sheet": "FP",
+       "handle": "10A4",
+       "W_mm": 300,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      },
+      {
+       "sheet": "CAP",
+       "handle": "840",
+       "W_mm": 300,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      },
+      {
+       "sheet": "GBP",
+       "handle": "200",
+       "W_mm": 300,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [
+      {
+       "sheet": "CAP",
+       "handle": "105C",
+       "label_handle": "105B",
+       "W_cm": 30,
+       "D_cm": 50
+      }
+     ],
+     "dims": [
+      {
+       "sheet": "CAP",
+       "handles": [
+        "D1E",
+        "D2D",
+        "D01",
+        "D0F"
+       ],
+       "W_mm": 300,
+       "D_mm": 500
+      }
+     ]
+    },
+    "GF": {
+     "drawn": [
+      {
+       "sheet": "GFRS",
+       "handle": "347",
+       "W_mm": 200,
+       "D_mm": 400,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [],
+     "dims": []
+    },
+    "1F": {
+     "drawn": [],
+     "texts": [],
+     "dims": [],
+     "not_drawn_on": [
+      "FFRS"
+     ]
+    },
+    "2F": {
+     "drawn": [],
+     "texts": [],
+     "dims": [],
+     "not_drawn_on": [
+      "SFRS"
+     ]
+    }
+   },
+   "engine_col_id": "COL:SH12:C@189304,38185"
+  },
+  {
+   "id": "NECK:COL:SH10:C@119898,42592",
+   "mark": "C",
+   "fp_label_handle": "blk:167F",
+   "fp_outline": "10A8",
+   "footing": "F",
+   "pit_raft": false,
+   "storeys": {
+    "FOUNDATION": {
+     "drawn": [
+      {
+       "sheet": "FP",
+       "handle": "10A8",
+       "W_mm": 300,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      },
+      {
+       "sheet": "CAP",
+       "handle": "844",
+       "W_mm": 300,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      },
+      {
+       "sheet": "GBP",
+       "handle": "204",
+       "W_mm": 300,
+       "D_mm": 400,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [
+      {
+       "sheet": "CAP",
+       "handle": "1003",
+       "label_handle": "84D",
+       "W_cm": 30,
+       "D_cm": 50
+      }
+     ],
+     "dims": [
+      {
+       "sheet": "CAP",
+       "handles": [
+        "A91",
+        "AA0",
+        "A74",
+        "A83"
+       ],
+       "W_mm": 300,
+       "D_mm": 500
+      }
+     ]
+    },
+    "GF": {
+     "drawn": [
+      {
+       "sheet": "GFRS",
+       "handle": "34A",
+       "W_mm": 200,
+       "D_mm": 400,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [],
+     "dims": []
+    },
+    "1F": {
+     "drawn": [],
+     "texts": [],
+     "dims": [],
+     "not_drawn_on": [
+      "FFRS"
+     ]
+    },
+    "2F": {
+     "drawn": [],
+     "texts": [],
+     "dims": [],
+     "not_drawn_on": [
+      "SFRS"
+     ]
+    }
+   },
+   "engine_col_id": "COL:SH12:C@157926,42114"
+  },
+  {
+   "id": "NECK:COL:SH10:C@120004,36736",
+   "mark": "C",
+   "fp_label_handle": "blk:1680",
+   "fp_outline": "10AB",
+   "footing": "F",
+   "pit_raft": false,
+   "storeys": {
+    "FOUNDATION": {
+     "drawn": [
+      {
+       "sheet": "FP",
+       "handle": "10AB",
+       "W_mm": 300,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      },
+      {
+       "sheet": "CAP",
+       "handle": "849",
+       "W_mm": 300,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      },
+      {
+       "sheet": "GBP",
+       "handle": "207",
+       "W_mm": 300,
+       "D_mm": 400,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [
+      {
+       "sheet": "CAP",
+       "handle": "1009",
+       "label_handle": "1008",
+       "W_cm": 30,
+       "D_cm": 50
+      }
+     ],
+     "dims": [
+      {
+       "sheet": "CAP",
+       "handles": [
+        "AEA",
+        "AF8",
+        "B07",
+        "B16"
+       ],
+       "W_mm": 300,
+       "D_mm": 500
+      }
+     ]
+    },
+    "GF": {
+     "drawn": [
+      {
+       "sheet": "GFRS",
+       "handle": "34D",
+       "W_mm": 200,
+       "D_mm": 400,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [],
+     "dims": []
+    },
+    "1F": {
+     "drawn": [],
+     "texts": [],
+     "dims": [],
+     "not_drawn_on": [
+      "FFRS"
+     ]
+    },
+    "2F": {
+     "drawn": [],
+     "texts": [],
+     "dims": [],
+     "not_drawn_on": [
+      "SFRS"
+     ]
+    }
+   },
+   "engine_col_id": "COL:SH12:C@159273,36849"
+  },
+  {
+   "id": "NECK:COL:SH10:C@122085,43426",
+   "mark": "C",
+   "fp_label_handle": "blk:1678",
+   "fp_outline": "10B4",
+   "footing": "F",
+   "pit_raft": false,
+   "storeys": {
+    "FOUNDATION": {
+     "drawn": [
+      {
+       "sheet": "FP",
+       "handle": "10B4",
+       "W_mm": 300,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      },
+      {
+       "sheet": "CAP",
+       "handle": "856",
+       "W_mm": 300,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      },
+      {
+       "sheet": "GBP",
+       "handle": "214",
+       "W_mm": 300,
+       "D_mm": 400,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [
+      {
+       "sheet": "CAP",
+       "handle": "1005",
+       "label_handle": "1004",
+       "W_cm": 30,
+       "D_cm": 50
+      }
+     ],
+     "dims": [
+      {
+       "sheet": "CAP",
+       "handles": [
+        "A39",
+        "A48",
+        "A56",
+        "A65"
+       ],
+       "W_mm": 300,
+       "D_mm": 500
+      }
+     ]
+    },
+    "GF": {
+     "drawn": [
+      {
+       "sheet": "GFRS",
+       "handle": "356",
+       "W_mm": 200,
+       "D_mm": 400,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [],
+     "dims": []
+    },
+    "1F": {
+     "drawn": [],
+     "texts": [],
+     "dims": [],
+     "not_drawn_on": [
+      "FFRS"
+     ]
+    },
+    "2F": {
+     "drawn": [],
+     "texts": [],
+     "dims": [],
+     "not_drawn_on": [
+      "SFRS"
+     ]
+    }
+   },
+   "engine_col_id": "COL:SH12:C@162182,43405"
+  },
+  {
+   "id": "NECK:COL:SH10:C@131290,36755",
+   "mark": "C",
+   "fp_label_handle": "blk:1682",
+   "fp_outline": "10B7",
+   "footing": "F",
+   "pit_raft": false,
+   "storeys": {
+    "FOUNDATION": {
+     "drawn": [
+      {
+       "sheet": "FP",
+       "handle": "10B7",
+       "W_mm": 300,
+       "D_mm": 400,
+       "hatch": "SOLID"
+      },
+      {
+       "sheet": "CAP",
+       "handle": "85B",
+       "W_mm": 300,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      },
+      {
+       "sheet": "GBP",
+       "handle": "218",
+       "W_mm": 300,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [
+      {
+       "sheet": "CAP",
+       "handle": "100D",
+       "label_handle": "100C",
+       "W_cm": 30,
+       "D_cm": 50
+      }
+     ],
+     "dims": [
+      {
+       "sheet": "CAP",
+       "handles": [
+        "B64",
+        "B72",
+        "B81",
+        "B90"
+       ],
+       "W_mm": 300,
+       "D_mm": 500
+      }
+     ]
+    },
+    "GF": {
+     "drawn": [
+      {
+       "sheet": "GFRS",
+       "handle": "359",
+       "W_mm": 200,
+       "D_mm": 400,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [],
+     "dims": []
+    },
+    "1F": {
+     "drawn": [],
+     "texts": [],
+     "dims": [],
+     "not_drawn_on": [
+      "FFRS"
+     ]
+    },
+    "2F": {
+     "drawn": [],
+     "texts": [],
+     "dims": [],
+     "not_drawn_on": [
+      "SFRS"
+     ]
+    }
+   },
+   "engine_col_id": "COL:SH12:C@171462,36855"
+  },
+  {
+   "id": "NECK:COL:SH10:C1@137485,46080",
+   "mark": "C1",
+   "fp_label_handle": "109D",
+   "fp_outline": "1099",
+   "footing": "FF",
+   "pit_raft": true,
+   "storeys": {
+    "FOUNDATION": {
+     "drawn": [
+      {
+       "sheet": "FP",
+       "handle": "1099",
+       "W_mm": 200,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      },
+      {
+       "sheet": "CAP",
+       "handle": "837",
+       "W_mm": 200,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      },
+      {
+       "sheet": "GBP",
+       "handle": "1F5",
+       "W_mm": 200,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [
+      {
+       "sheet": "CAP",
+       "handle": "107A",
+       "label_handle": "1079",
+       "W_cm": 20,
+       "D_cm": 50
+      }
+     ],
+     "dims": [
+      {
+       "sheet": "CAP",
+       "handles": [
+        "E80",
+        "E8F",
+        "E63",
+        "E72"
+       ],
+       "W_mm": 200,
+       "D_mm": 500
+      }
+     ]
+    },
+    "GF": {
+     "drawn": [
+      {
+       "sheet": "GFRS",
+       "handle": "341",
+       "W_mm": 200,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [],
+     "dims": []
+    },
+    "1F": {
+     "drawn": [
+      {
+       "sheet": "FFRS",
+       "handle": "682",
+       "W_mm": 200,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [],
+     "dims": []
+    },
+    "2F": {
+     "drawn": [
+      {
+       "sheet": "SFRS",
+       "handle": "421",
+       "W_mm": 200,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [],
+     "dims": []
+    }
+   },
+   "engine_col_id": "COL:SH12:C1@175733,47896"
+  },
+  {
+   "id": "NECK:COL:SH10:C10@148899,36778",
+   "mark": "C10",
+   "fp_label_handle": "10D4",
+   "fp_outline": "10E8",
+   "footing": "F10|F",
+   "pit_raft": false,
+   "storeys": {
+    "FOUNDATION": {
+     "drawn": [
+      {
+       "sheet": "FP",
+       "handle": "10E8",
+       "W_mm": 300,
+       "D_mm": 700,
+       "hatch": "SOLID"
+      },
+      {
+       "sheet": "CAP",
+       "handle": "88D",
+       "W_mm": 300,
+       "D_mm": 700,
+       "hatch": "SOLID"
+      },
+      {
+       "sheet": "GBP",
+       "handle": "255",
+       "W_mm": 300,
+       "D_mm": 700,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [
+      {
+       "sheet": "CAP",
+       "handle": "105A",
+       "label_handle": "1059",
+       "W_cm": 30,
+       "D_cm": 70
+      }
+     ],
+     "dims": [
+      {
+       "sheet": "CAP",
+       "handles": [
+        "101E",
+        "102D",
+        "103B",
+        "104A"
+       ],
+       "W_mm": 300,
+       "D_mm": 700
+      }
+     ]
+    },
+    "GF": {
+     "drawn": [
+      {
+       "sheet": "GFRS",
+       "handle": "371",
+       "W_mm": 250,
+       "D_mm": 700,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [],
+     "dims": []
+    },
+    "1F": {
+     "drawn": [],
+     "texts": [],
+     "dims": [],
+     "not_drawn_on": [
+      "FFRS"
+     ]
+    },
+    "2F": {
+     "drawn": [],
+     "texts": [],
+     "dims": [],
+     "not_drawn_on": [
+      "SFRS"
+     ]
+    }
+   },
+   "engine_col_id": "COL:SH12:C10@187123,37764"
+  },
+  {
+   "id": "NECK:COL:SH10:C11@131730,40428",
+   "mark": "C11",
+   "fp_label_handle": "10BF",
+   "fp_outline": "10BA",
+   "footing": "F13",
+   "pit_raft": false,
+   "storeys": {
+    "FOUNDATION": {
+     "drawn": [
+      {
+       "sheet": "FP",
+       "handle": "10BA",
+       "W_mm": 300,
+       "D_mm": 1100,
+       "hatch": "SOLID"
+      },
+      {
+       "sheet": "CAP",
+       "handle": "85E",
+       "W_mm": 300,
+       "D_mm": 1100,
+       "hatch": "SOLID"
+      },
+      {
+       "sheet": "GBP",
+       "handle": "220",
+       "W_mm": 300,
+       "D_mm": 1100,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [
+      {
+       "sheet": "CAP",
+       "handle": "1013",
+       "label_handle": "1012",
+       "W_cm": 30,
+       "D_cm": 110
+      }
+     ],
+     "dims": [
+      {
+       "sheet": "CAP",
+       "handles": [
+        "C15",
+        "C24",
+        "C32",
+        "C41"
+       ],
+       "W_mm": 300,
+       "D_mm": 1100
+      }
+     ]
+    },
+    "GF": {
+     "drawn": [
+      {
+       "sheet": "GFRS",
+       "handle": "35C",
+       "W_mm": 250,
+       "D_mm": 1100,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [],
+     "dims": []
+    },
+    "1F": {
+     "drawn": [],
+     "texts": [],
+     "dims": [],
+     "not_drawn_on": [
+      "FFRS"
+     ]
+    },
+    "2F": {
+     "drawn": [],
+     "texts": [],
+     "dims": [],
+     "not_drawn_on": [
+      "SFRS"
+     ]
+    }
+   },
+   "engine_col_id": "COL:SH12:C11@170513,40465"
+  },
+  {
+   "id": "NECK:COL:SH10:C11@133022,37046",
+   "mark": "C11",
+   "fp_label_handle": "blk:1684",
+   "fp_outline": "10DD",
+   "footing": "F11",
+   "pit_raft": false,
+   "storeys": {
+    "FOUNDATION": {
+     "drawn": [
+      {
+       "sheet": "FP",
+       "handle": "10DD",
+       "W_mm": 300,
+       "D_mm": 1100,
+       "hatch": "SOLID"
+      },
+      {
+       "sheet": "CAP",
+       "handle": "883",
+       "W_mm": 300,
+       "D_mm": 1100,
+       "hatch": "SOLID"
+      },
+      {
+       "sheet": "GBP",
+       "handle": "249",
+       "W_mm": 300,
+       "D_mm": 1100,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [
+      {
+       "sheet": "CAP",
+       "handle": "1017",
+       "label_handle": "1016",
+       "W_cm": 30,
+       "D_cm": 110
+      }
+     ],
+     "dims": [
+      {
+       "sheet": "CAP",
+       "handles": [
+        "C9A",
+        "CA8",
+        "CB7"
+       ],
+       "W_mm": 300,
+       "D_mm": 1100
+      }
+     ]
+    },
+    "GF": {
+     "drawn": [
+      {
+       "sheet": "GFRS",
+       "handle": "37D",
+       "W_mm": 250,
+       "D_mm": 1100,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [],
+     "dims": []
+    },
+    "1F": {
+     "drawn": [],
+     "texts": [],
+     "dims": [],
+     "not_drawn_on": [
+      "FFRS"
+     ]
+    },
+    "2F": {
+     "drawn": [],
+     "texts": [],
+     "dims": [],
+     "not_drawn_on": [
+      "SFRS"
+     ]
+    }
+   },
+   "engine_col_id": "COL:SH12:C11@173942,37893"
+  },
+  {
+   "id": "NECK:COL:SH10:C2@133875,50112",
+   "mark": "C2",
+   "fp_label_handle": "1675",
+   "fp_outline": "1084",
+   "footing": "F2",
+   "pit_raft": false,
+   "storeys": {
+    "FOUNDATION": {
+     "drawn": [
+      {
+       "sheet": "FP",
+       "handle": "1084",
+       "W_mm": 300,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      },
+      {
+       "sheet": "CAP",
+       "handle": "817",
+       "W_mm": 300,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      },
+      {
+       "sheet": "GBP",
+       "handle": "1DC",
+       "W_mm": 300,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [
+      {
+       "sheet": "CAP",
+       "handle": "1062",
+       "label_handle": "1061",
+       "W_cm": 30,
+       "D_cm": 50
+      }
+     ],
+     "dims": [
+      {
+       "sheet": "CAP",
+       "handles": [
+        "9A5",
+        "9B4",
+        "988",
+        "997"
+       ],
+       "W_mm": 300,
+       "D_mm": 500
+      }
+     ]
+    },
+    "GF": {
+     "drawn": [
+      {
+       "sheet": "GFRS",
+       "handle": "32C",
+       "W_mm": 200,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [],
+     "dims": []
+    },
+    "1F": {
+     "drawn": [
+      {
+       "sheet": "FFRS",
+       "handle": "66D",
+       "W_mm": 200,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [],
+     "dims": []
+    },
+    "2F": {
+     "drawn": [
+      {
+       "sheet": "SFRS",
+       "handle": "40F",
+       "W_mm": 200,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [],
+     "dims": []
+    }
+   },
+   "engine_col_id": "COL:SH12:C2@171718,49639"
+  },
+  {
+   "id": "NECK:COL:SH10:C2@136610,50085",
+   "mark": "C2",
+   "fp_label_handle": "1674",
+   "fp_outline": "1087",
+   "footing": "F2",
+   "pit_raft": false,
+   "storeys": {
+    "FOUNDATION": {
+     "drawn": [
+      {
+       "sheet": "FP",
+       "handle": "1087",
+       "W_mm": 300,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      },
+      {
+       "sheet": "CAP",
+       "handle": "821",
+       "W_mm": 300,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      },
+      {
+       "sheet": "GBP",
+       "handle": "1E0",
+       "W_mm": 300,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [
+      {
+       "sheet": "CAP",
+       "handle": "1064",
+       "label_handle": "1063",
+       "W_cm": 30,
+       "D_cm": 50
+      }
+     ],
+     "dims": [
+      {
+       "sheet": "CAP",
+       "handles": [
+        "96A",
+        "979",
+        "94D",
+        "95C"
+       ],
+       "W_mm": 300,
+       "D_mm": 500
+      }
+     ]
+    },
+    "GF": {
+     "drawn": [
+      {
+       "sheet": "GFRS",
+       "handle": "32F",
+       "W_mm": 200,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [],
+     "dims": []
+    },
+    "1F": {
+     "drawn": [
+      {
+       "sheet": "FFRS",
+       "handle": "670",
+       "W_mm": 200,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [],
+     "dims": []
+    },
+    "2F": {
+     "drawn": [
+      {
+       "sheet": "SFRS",
+       "handle": "412",
+       "W_mm": 200,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [],
+     "dims": []
+    }
+   },
+   "engine_col_id": "COL:SH12:C2@176712,49778"
+  },
+  {
+   "id": "NECK:COL:SH10:C2@138612,46077",
+   "mark": "C2",
+   "fp_label_handle": "109C",
+   "fp_outline": "1093",
+   "footing": "FF",
+   "pit_raft": true,
+   "storeys": {
+    "FOUNDATION": {
+     "drawn": [
+      {
+       "sheet": "FP",
+       "handle": "1093",
+       "W_mm": 200,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      },
+      {
+       "sheet": "CAP",
+       "handle": "831",
+       "W_mm": 200,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      },
+      {
+       "sheet": "GBP",
+       "handle": "1EF",
+       "W_mm": 200,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [
+      {
+       "sheet": "CAP",
+       "handle": "1078",
+       "label_handle": "1077",
+       "W_cm": 20,
+       "D_cm": 50
+      }
+     ],
+     "dims": [
+      {
+       "sheet": "CAP",
+       "handles": [
+        "EBB",
+        "ECA",
+        "E9E",
+        "EAD"
+       ],
+       "W_mm": 200,
+       "D_mm": 500
+      }
+     ]
+    },
+    "GF": {
+     "drawn": [
+      {
+       "sheet": "GFRS",
+       "handle": "33B",
+       "W_mm": 200,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [],
+     "dims": []
+    },
+    "1F": {
+     "drawn": [
+      {
+       "sheet": "FFRS",
+       "handle": "67C",
+       "W_mm": 200,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [],
+     "dims": []
+    },
+    "2F": {
+     "drawn": [
+      {
+       "sheet": "SFRS",
+       "handle": "41B",
+       "W_mm": 200,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [],
+     "dims": []
+    }
+   },
+   "engine_col_id": "COL:SH12:C2@178676,46826"
+  },
+  {
+   "id": "NECK:COL:SH10:C2@137427,44773",
+   "mark": "C2",
+   "fp_label_handle": "109B",
+   "fp_outline": "1096",
+   "footing": "FF",
+   "pit_raft": true,
+   "storeys": {
+    "FOUNDATION": {
+     "drawn": [
+      {
+       "sheet": "FP",
+       "handle": "1096",
+       "W_mm": 200,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      },
+      {
+       "sheet": "CAP",
+       "handle": "834",
+       "W_mm": 200,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      },
+      {
+       "sheet": "GBP",
+       "handle": "1F2",
+       "W_mm": 200,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [
+      {
+       "sheet": "CAP",
+       "handle": "107C",
+       "label_handle": "107B",
+       "W_cm": 20,
+       "D_cm": 50
+      }
+     ],
+     "dims": [
+      {
+       "sheet": "CAP",
+       "handles": [
+        "E45",
+        "E54",
+        "E28",
+        "E36"
+       ],
+       "W_mm": 200,
+       "D_mm": 500
+      }
+     ]
+    },
+    "GF": {
+     "drawn": [
+      {
+       "sheet": "GFRS",
+       "handle": "33E",
+       "W_mm": 200,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [],
+     "dims": []
+    },
+    "1F": {
+     "drawn": [
+      {
+       "sheet": "FFRS",
+       "handle": "67F",
+       "W_mm": 200,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [],
+     "dims": []
+    },
+    "2F": {
+     "drawn": [
+      {
+       "sheet": "SFRS",
+       "handle": "41E",
+       "W_mm": 200,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [],
+     "dims": []
+    }
+   },
+   "engine_col_id": "COL:SH12:C2@175756,43920"
+  },
+  {
+   "id": "NECK:COL:SH10:C3@150039,43577",
+   "mark": "C3",
+   "fp_label_handle": "10A1",
+   "fp_outline": "10A0",
+   "footing": "F8",
+   "pit_raft": false,
+   "storeys": {
+    "FOUNDATION": {
+     "drawn": [
+      {
+       "sheet": "FP",
+       "handle": "10A0",
+       "W_mm": 300,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      },
+      {
+       "sheet": "CAP",
+       "handle": "83C",
+       "W_mm": 300,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      },
+      {
+       "sheet": "GBP",
+       "handle": "1FC",
+       "W_mm": 300,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [
+      {
+       "sheet": "CAP",
+       "handle": "1070",
+       "label_handle": "106F",
+       "W_cm": 30,
+       "D_cm": 50
+      }
+     ],
+     "dims": []
+    },
+    "GF": {
+     "drawn": [
+      {
+       "sheet": "GFRS",
+       "handle": "344",
+       "W_mm": 200,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [],
+     "dims": []
+    },
+    "1F": {
+     "drawn": [],
+     "texts": [],
+     "dims": [],
+     "not_drawn_on": [
+      "FFRS"
+     ]
+    },
+    "2F": {
+     "drawn": [],
+     "texts": [],
+     "dims": [],
+     "not_drawn_on": [
+      "SFRS"
+     ]
+    }
+   },
+   "engine_col_id": "COL:SH12:C3@189247,43302"
+  },
+  {
+   "id": "NECK:COL:SH10:C3@125165,36762",
+   "mark": "C3",
+   "fp_label_handle": "1681",
+   "fp_outline": "10AE",
+   "footing": "F15",
+   "pit_raft": false,
+   "storeys": {
+    "FOUNDATION": {
+     "drawn": [
+      {
+       "sheet": "FP",
+       "handle": "10AE",
+       "W_mm": 300,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      },
+      {
+       "sheet": "CAP",
+       "handle": "84C",
+       "W_mm": 300,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      },
+      {
+       "sheet": "GBP",
+       "handle": "20B",
+       "W_mm": 300,
+       "D_mm": 400,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [
+      {
+       "sheet": "CAP",
+       "handle": "100B",
+       "label_handle": "100A",
+       "W_cm": 30,
+       "D_cm": 50
+      }
+     ],
+     "dims": [
+      {
+       "sheet": "CAP",
+       "handles": [
+        "B27",
+        "B35",
+        "B44",
+        "B53"
+       ],
+       "W_mm": 300,
+       "D_mm": 500
+      }
+     ]
+    },
+    "GF": {
+     "drawn": [
+      {
+       "sheet": "GFRS",
+       "handle": "350",
+       "W_mm": 200,
+       "D_mm": 400,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [],
+     "dims": []
+    },
+    "1F": {
+     "drawn": [],
+     "texts": [],
+     "dims": [],
+     "not_drawn_on": [
+      "FFRS"
+     ]
+    },
+    "2F": {
+     "drawn": [],
+     "texts": [],
+     "dims": [],
+     "not_drawn_on": [
+      "SFRS"
+     ]
+    }
+   },
+   "engine_col_id": "COL:SH12:C3@165127,36809"
+  },
+  {
+   "id": "NECK:COL:SH10:C3@123284,41372",
+   "mark": "C3",
+   "fp_label_handle": "168F",
+   "fp_outline": "10B1",
+   "footing": "F3",
+   "pit_raft": false,
+   "storeys": {
+    "FOUNDATION": {
+     "drawn": [
+      {
+       "sheet": "FP",
+       "handle": "10B1",
+       "W_mm": 300,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      },
+      {
+       "sheet": "CAP",
+       "handle": "853",
+       "W_mm": 300,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      },
+      {
+       "sheet": "GBP",
+       "handle": "211",
+       "W_mm": 300,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [
+      {
+       "sheet": "CAP",
+       "handle": "1007",
+       "label_handle": "1006",
+       "W_cm": 30,
+       "D_cm": 50
+      }
+     ],
+     "dims": [
+      {
+       "sheet": "CAP",
+       "handles": [
+        "AAF",
+        "ABD",
+        "ACC",
+        "ADB"
+       ],
+       "W_mm": 300,
+       "D_mm": 500
+      }
+     ]
+    },
+    "GF": {
+     "drawn": [
+      {
+       "sheet": "GFRS",
+       "handle": "353",
+       "W_mm": 250,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [],
+     "dims": []
+    },
+    "1F": {
+     "drawn": [],
+     "texts": [],
+     "dims": [],
+     "not_drawn_on": [
+      "FFRS"
+     ]
+    },
+    "2F": {
+     "drawn": [],
+     "texts": [],
+     "dims": [],
+     "not_drawn_on": [
+      "SFRS"
+     ]
+    }
+   },
+   "engine_col_id": "COL:SH12:C3@162406,40325"
+  },
+  {
+   "id": "NECK:COL:SH10:C3@129555,38490",
+   "mark": "C3",
+   "fp_label_handle": "168E",
+   "fp_outline": "10C5",
+   "footing": "F3",
+   "pit_raft": false,
+   "storeys": {
+    "FOUNDATION": {
+     "drawn": [
+      {
+       "sheet": "FP",
+       "handle": "10C5",
+       "W_mm": 300,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      },
+      {
+       "sheet": "CAP",
+       "handle": "868",
+       "W_mm": 300,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      },
+      {
+       "sheet": "GBP",
+       "handle": "22C",
+       "W_mm": 300,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [
+      {
+       "sheet": "CAP",
+       "handle": "100F",
+       "label_handle": "100E",
+       "W_cm": 30,
+       "D_cm": 50
+      }
+     ],
+     "dims": [
+      {
+       "sheet": "CAP",
+       "handles": [
+        "BBC",
+        "BCB",
+        "B9F",
+        "BAD"
+       ],
+       "W_mm": 300,
+       "D_mm": 500
+      }
+     ]
+    },
+    "GF": {
+     "drawn": [
+      {
+       "sheet": "GFRS",
+       "handle": "365",
+       "W_mm": 250,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [],
+     "dims": []
+    },
+    "1F": {
+     "drawn": [
+      {
+       "sheet": "FFRS",
+       "handle": "68B",
+       "W_mm": 200,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [],
+     "dims": []
+    },
+    "2F": {
+     "drawn": [],
+     "texts": [],
+     "dims": [],
+     "not_drawn_on": [
+      "SFRS"
+     ]
+    }
+   },
+   "engine_col_id": "COL:SH12:C3@167036,38502"
+  },
+  {
+   "id": "NECK:COL:SH10:C3@133946,46136",
+   "mark": "C3",
+   "fp_label_handle": "10CD",
+   "fp_outline": "10CC",
+   "footing": "F12",
+   "pit_raft": false,
+   "storeys": {
+    "FOUNDATION": {
+     "drawn": [
+      {
+       "sheet": "FP",
+       "handle": "10CC",
+       "W_mm": 300,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      },
+      {
+       "sheet": "CAP",
+       "handle": "870",
+       "W_mm": 300,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      },
+      {
+       "sheet": "GBP",
+       "handle": "234",
+       "W_mm": 300,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [
+      {
+       "sheet": "CAP",
+       "handle": "1060",
+       "label_handle": "105F",
+       "W_cm": 30,
+       "D_cm": 50
+      }
+     ],
+     "dims": [
+      {
+       "sheet": "CAP",
+       "handles": [
+        "9E0",
+        "9EF",
+        "9C3",
+        "9D2"
+       ],
+       "W_mm": 300,
+       "D_mm": 500
+      }
+     ]
+    },
+    "GF": {
+     "drawn": [
+      {
+       "sheet": "GFRS",
+       "handle": "36B",
+       "W_mm": 250,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [],
+     "dims": []
+    },
+    "1F": {
+     "drawn": [
+      {
+       "sheet": "FFRS",
+       "handle": "691",
+       "W_mm": 250,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [],
+     "dims": []
+    },
+    "2F": {
+     "drawn": [
+      {
+       "sheet": "SFRS",
+       "handle": "424",
+       "W_mm": 250,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [],
+     "dims": []
+    }
+   },
+   "engine_col_id": "COL:SH12:C3@171508,46863"
+  },
+  {
+   "id": "NECK:COL:SH10:C3@141170,36765",
+   "mark": "C3",
+   "fp_label_handle": "10E5",
+   "fp_outline": "10E4",
+   "footing": "F14",
+   "pit_raft": false,
+   "storeys": {
+    "FOUNDATION": {
+     "drawn": [
+      {
+       "sheet": "FP",
+       "handle": "10E4",
+       "W_mm": 300,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      },
+      {
+       "sheet": "CAP",
+       "handle": "88A",
+       "W_mm": 300,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      },
+      {
+       "sheet": "GBP",
+       "handle": "251",
+       "W_mm": 300,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [
+      {
+       "sheet": "CAP",
+       "handle": "1019",
+       "label_handle": "1018",
+       "W_cm": 30,
+       "D_cm": 50
+      }
+     ],
+     "dims": [
+      {
+       "sheet": "CAP",
+       "handles": [
+        "CC6",
+        "CD5",
+        "CE3",
+        "CF2"
+       ],
+       "W_mm": 300,
+       "D_mm": 500
+      }
+     ]
+    },
+    "GF": {
+     "drawn": [
+      {
+       "sheet": "GFRS",
+       "handle": "383",
+       "W_mm": 250,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [],
+     "dims": []
+    },
+    "1F": {
+     "drawn": [],
+     "texts": [],
+     "dims": [],
+     "not_drawn_on": [
+      "FFRS"
+     ]
+    },
+    "2F": {
+     "drawn": [],
+     "texts": [],
+     "dims": [],
+     "not_drawn_on": [
+      "SFRS"
+     ]
+    }
+   },
+   "engine_col_id": "COL:SH12:C3@178496,36874"
+  },
+  {
+   "id": "NECK:COL:SH10:C4@148342,50109",
+   "mark": "C4",
+   "fp_label_handle": "1671",
+   "fp_outline": "108D",
+   "footing": "F4",
+   "pit_raft": false,
+   "storeys": {
+    "FOUNDATION": {
+     "drawn": [
+      {
+       "sheet": "FP",
+       "handle": "108D",
+       "W_mm": 250,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      },
+      {
+       "sheet": "CAP",
+       "handle": "82A",
+       "W_mm": 250,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      },
+      {
+       "sheet": "GBP",
+       "handle": "1E8",
+       "W_mm": 250,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [
+      {
+       "sheet": "CAP",
+       "handle": "1068",
+       "label_handle": "1067",
+       "W_cm": 30,
+       "D_cm": 50
+      }
+     ],
+     "dims": [
+      {
+       "sheet": "CAP",
+       "handles": [
+        "898",
+        "8AB",
+        "8B9",
+        "8C8"
+       ],
+       "W_mm": 300,
+       "D_mm": 500
+      }
+     ]
+    },
+    "GF": {
+     "drawn": [
+      {
+       "sheet": "GFRS",
+       "handle": "335",
+       "W_mm": 250,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [],
+     "dims": []
+    },
+    "1F": {
+     "drawn": [
+      {
+       "sheet": "FFRS",
+       "handle": "676",
+       "W_mm": 250,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [],
+     "dims": []
+    },
+    "2F": {
+     "drawn": [],
+     "texts": [],
+     "dims": [],
+     "not_drawn_on": [
+      "SFRS"
+     ]
+    }
+   },
+   "engine_col_id": "COL:SH12:C4@188844,49402"
+  },
+  {
+   "id": "NECK:COL:SH10:C4@144340,50189",
+   "mark": "C4",
+   "fp_label_handle": "1672",
+   "fp_outline": "10D7",
+   "footing": "F4",
+   "pit_raft": false,
+   "storeys": {
+    "FOUNDATION": {
+     "drawn": [
+      {
+       "sheet": "FP",
+       "handle": "10D7",
+       "W_mm": 300,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      },
+      {
+       "sheet": "CAP",
+       "handle": "87C",
+       "W_mm": 300,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      },
+      {
+       "sheet": "GBP",
+       "handle": "241",
+       "W_mm": 300,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [
+      {
+       "sheet": "CAP",
+       "handle": "1066",
+       "label_handle": "1065",
+       "W_cm": 30,
+       "D_cm": 50
+      }
+     ],
+     "dims": [
+      {
+       "sheet": "CAP",
+       "handles": [
+        "8D7",
+        "8E5",
+        "8F4",
+        "903"
+       ],
+       "W_mm": 300,
+       "D_mm": 500
+      }
+     ]
+    },
+    "GF": {
+     "drawn": [
+      {
+       "sheet": "GFRS",
+       "handle": "377",
+       "W_mm": 250,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [],
+     "dims": []
+    },
+    "1F": {
+     "drawn": [
+      {
+       "sheet": "FFRS",
+       "handle": "697",
+       "W_mm": 250,
+       "D_mm": 500,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [],
+     "dims": []
+    },
+    "2F": {
+     "drawn": [],
+     "texts": [],
+     "dims": [],
+     "not_drawn_on": [
+      "SFRS"
+     ]
+    }
+   },
+   "engine_col_id": "COL:SH12:C4@183558,49034"
+  },
+  {
+   "id": "NECK:COL:SH10:C5@140479,50181",
+   "mark": "C5",
+   "fp_label_handle": "1673",
+   "fp_outline": "108A",
+   "footing": "F5",
+   "pit_raft": false,
+   "storeys": {
+    "FOUNDATION": {
+     "drawn": [
+      {
+       "sheet": "FP",
+       "handle": "108A",
+       "W_mm": 300,
+       "D_mm": 600,
+       "hatch": "SOLID"
+      },
+      {
+       "sheet": "CAP",
+       "handle": "826",
+       "W_mm": 300,
+       "D_mm": 600,
+       "hatch": "SOLID"
+      },
+      {
+       "sheet": "GBP",
+       "handle": "1E4",
+       "W_mm": 300,
+       "D_mm": 600,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [
+      {
+       "sheet": "CAP",
+       "handle": "106A",
+       "label_handle": "1069",
+       "W_cm": 30,
+       "D_cm": 60
+      }
+     ],
+     "dims": [
+      {
+       "sheet": "CAP",
+       "handles": [
+        "912",
+        "93F",
+        "921",
+        "930"
+       ],
+       "W_mm": 300,
+       "D_mm": 600
+      }
+     ]
+    },
+    "GF": {
+     "drawn": [
+      {
+       "sheet": "GFRS",
+       "handle": "332",
+       "W_mm": 250,
+       "D_mm": 600,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [],
+     "dims": []
+    },
+    "1F": {
+     "drawn": [
+      {
+       "sheet": "FFRS",
+       "handle": "673",
+       "W_mm": 250,
+       "D_mm": 600,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [],
+     "dims": []
+    },
+    "2F": {
+     "drawn": [
+      {
+       "sheet": "SFRS",
+       "handle": "415",
+       "W_mm": 200,
+       "D_mm": 600,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [],
+     "dims": []
+    }
+   },
+   "engine_col_id": "COL:SH12:C5@179659,49078"
+  },
+  {
+   "id": "NECK:COL:SH10:C5@129305,40458",
+   "mark": "C5",
+   "fp_label_handle": "10BE",
+   "fp_outline": "10BD",
+   "footing": "F13",
+   "pit_raft": false,
+   "storeys": {
+    "FOUNDATION": {
+     "drawn": [
+      {
+       "sheet": "FP",
+       "handle": "10BD",
+       "W_mm": 300,
+       "D_mm": 600,
+       "hatch": "SOLID"
+      },
+      {
+       "sheet": "CAP",
+       "handle": "862",
+       "W_mm": 300,
+       "D_mm": 600,
+       "hatch": "SOLID"
+      },
+      {
+       "sheet": "GBP",
+       "handle": "223",
+       "W_mm": 300,
+       "D_mm": 600,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [
+      {
+       "sheet": "CAP",
+       "handle": "1011",
+       "label_handle": "1010",
+       "W_cm": 30,
+       "D_cm": 60
+      }
+     ],
+     "dims": [
+      {
+       "sheet": "CAP",
+       "handles": [
+        "BE9",
+        "BF8",
+        "BDA",
+        "C07"
+       ],
+       "W_mm": 300,
+       "D_mm": 600
+      }
+     ]
+    },
+    "GF": {
+     "drawn": [
+      {
+       "sheet": "GFRS",
+       "handle": "35F",
+       "W_mm": 250,
+       "D_mm": 600,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [],
+     "dims": []
+    },
+    "1F": {
+     "drawn": [
+      {
+       "sheet": "FFRS",
+       "handle": "685",
+       "W_mm": 200,
+       "D_mm": 600,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [],
+     "dims": []
+    },
+    "2F": {
+     "drawn": [],
+     "texts": [],
+     "dims": [],
+     "not_drawn_on": [
+      "SFRS"
+     ]
+    }
+   },
+   "engine_col_id": "COL:SH12:C5@167134,41033"
+  },
+  {
+   "id": "NECK:COL:SH10:C5@144472,38438",
+   "mark": "C5",
+   "fp_label_handle": "166F",
+   "fp_outline": "10D3",
+   "footing": "F5",
+   "pit_raft": false,
+   "storeys": {
+    "FOUNDATION": {
+     "drawn": [
+      {
+       "sheet": "FP",
+       "handle": "10D3",
+       "W_mm": 300,
+       "D_mm": 600,
+       "hatch": "SOLID"
+      },
+      {
+       "sheet": "CAP",
+       "handle": "878",
+       "W_mm": 300,
+       "D_mm": 600,
+       "hatch": "SOLID"
+      },
+      {
+       "sheet": "GBP",
+       "handle": "23C",
+       "W_mm": 300,
+       "D_mm": 600,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [
+      {
+       "sheet": "CAP",
+       "handle": "101D",
+       "label_handle": "101C",
+       "W_cm": 30,
+       "D_cm": 60
+      }
+     ],
+     "dims": [
+      {
+       "sheet": "CAP",
+       "handles": [
+        "F8B",
+        "FBA",
+        "F9A",
+        "FA9"
+       ],
+       "W_mm": 300,
+       "D_mm": 600
+      }
+     ]
+    },
+    "GF": {
+     "drawn": [
+      {
+       "sheet": "GFRS",
+       "handle": "374",
+       "W_mm": 250,
+       "D_mm": 600,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [],
+     "dims": []
+    },
+    "1F": {
+     "drawn": [
+      {
+       "sheet": "FFRS",
+       "handle": "694",
+       "W_mm": 250,
+       "D_mm": 600,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [],
+     "dims": []
+    },
+    "2F": {
+     "drawn": [],
+     "texts": [],
+     "dims": [],
+     "not_drawn_on": [
+      "SFRS"
+     ]
+    }
+   },
+   "engine_col_id": "COL:SH12:C5@183747,37338"
+  },
+  {
+   "id": "NECK:COL:SH10:C6@134002,42128",
+   "mark": "C6",
+   "fp_label_handle": "168D",
+   "fp_outline": "10C2",
+   "footing": "F6",
+   "pit_raft": false,
+   "storeys": {
+    "FOUNDATION": {
+     "drawn": [
+      {
+       "sheet": "FP",
+       "handle": "10C2",
+       "W_mm": 300,
+       "D_mm": 700,
+       "hatch": "SOLID"
+      },
+      {
+       "sheet": "CAP",
+       "handle": "865",
+       "W_mm": 300,
+       "D_mm": 700,
+       "hatch": "SOLID"
+      },
+      {
+       "sheet": "GBP",
+       "handle": "228",
+       "W_mm": 300,
+       "D_mm": 700,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [
+      {
+       "sheet": "CAP",
+       "handle": "1015",
+       "label_handle": "1014",
+       "W_cm": 30,
+       "D_cm": 70
+      }
+     ],
+     "dims": [
+      {
+       "sheet": "CAP",
+       "handles": [
+        "C5F",
+        "C6E",
+        "C50",
+        "C7D"
+       ],
+       "W_mm": 300,
+       "D_mm": 700
+      }
+     ]
+    },
+    "GF": {
+     "drawn": [
+      {
+       "sheet": "GFRS",
+       "handle": "362",
+       "W_mm": 250,
+       "D_mm": 700,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [],
+     "dims": []
+    },
+    "1F": {
+     "drawn": [
+      {
+       "sheet": "FFRS",
+       "handle": "688",
+       "W_mm": 250,
+       "D_mm": 700,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [],
+     "dims": []
+    },
+    "2F": {
+     "drawn": [],
+     "texts": [],
+     "dims": [],
+     "not_drawn_on": [
+      "SFRS"
+     ]
+    }
+   },
+   "engine_col_id": "COL:SH12:C6@174120,41652"
+  },
+  {
+   "id": "NECK:COL:SH10:C7@133324,44621",
+   "mark": "C7",
+   "fp_label_handle": "10C9",
+   "fp_outline": "10C8",
+   "footing": "F12",
+   "pit_raft": false,
+   "storeys": {
+    "FOUNDATION": {
+     "drawn": [
+      {
+       "sheet": "FP",
+       "handle": "10C8",
+       "W_mm": 300,
+       "D_mm": 800,
+       "hatch": "SOLID"
+      },
+      {
+       "sheet": "CAP",
+       "handle": "86C",
+       "W_mm": 300,
+       "D_mm": 800,
+       "hatch": "SOLID"
+      },
+      {
+       "sheet": "GBP",
+       "handle": "230",
+       "W_mm": 300,
+       "D_mm": 800,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [
+      {
+       "sheet": "CAP",
+       "handle": "105E",
+       "label_handle": "105D",
+       "W_cm": 30,
+       "D_cm": 80
+      }
+     ],
+     "dims": [
+      {
+       "sheet": "CAP",
+       "handles": [
+        "9FE",
+        "A0D",
+        "A1B"
+       ],
+       "W_mm": 300,
+       "D_mm": 800
+      }
+     ]
+    },
+    "GF": {
+     "drawn": [
+      {
+       "sheet": "GFRS",
+       "handle": "368",
+       "W_mm": 250,
+       "D_mm": 800,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [],
+     "dims": []
+    },
+    "1F": {
+     "drawn": [
+      {
+       "sheet": "FFRS",
+       "handle": "68E",
+       "W_mm": 250,
+       "D_mm": 800,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [],
+     "dims": []
+    },
+    "2F": {
+     "drawn": [],
+     "texts": [],
+     "dims": [],
+     "not_drawn_on": [
+      "SFRS"
+     ]
+    }
+   },
+   "engine_col_id": "COL:SH12:C7@171987,44467"
+  },
+  {
+   "id": "NECK:COL:SH10:C8@148730,43412",
+   "mark": "C8",
+   "fp_label_handle": "1670",
+   "fp_outline": "10D0",
+   "footing": "F8",
+   "pit_raft": false,
+   "storeys": {
+    "FOUNDATION": {
+     "drawn": [
+      {
+       "sheet": "FP",
+       "handle": "10D0",
+       "W_mm": 300,
+       "D_mm": 900,
+       "hatch": "SOLID"
+      },
+      {
+       "sheet": "CAP",
+       "handle": "873",
+       "W_mm": 300,
+       "D_mm": 900,
+       "hatch": "SOLID"
+      },
+      {
+       "sheet": "GBP",
+       "handle": "238",
+       "W_mm": 300,
+       "D_mm": 900,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [
+      {
+       "sheet": "CAP",
+       "handle": "106E",
+       "label_handle": "106D",
+       "W_cm": 30,
+       "D_cm": 90
+      }
+     ],
+     "dims": [
+      {
+       "sheet": "CAP",
+       "handles": [
+        "DEF",
+        "DFC",
+        "E0A",
+        "E19"
+       ],
+       "W_mm": 300,
+       "D_mm": 900
+      }
+     ]
+    },
+    "GF": {
+     "drawn": [
+      {
+       "sheet": "GFRS",
+       "handle": "36E",
+       "W_mm": 250,
+       "D_mm": 900,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [],
+     "dims": []
+    },
+    "1F": {
+     "drawn": [
+      {
+       "sheet": "FFRS",
+       "handle": "664",
+       "W_mm": 200,
+       "D_mm": 900,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [],
+     "dims": []
+    },
+    "2F": {
+     "drawn": [],
+     "texts": [],
+     "dims": [],
+     "not_drawn_on": [
+      "SFRS"
+     ]
+    }
+   },
+   "engine_col_id": "COL:SH12:C8@186799,43443"
+  },
+  {
+   "id": "NECK:COL:SH10:C8@141489,38336",
+   "mark": "C8",
+   "fp_label_handle": "10E1",
+   "fp_outline": "10E0",
+   "footing": "F14",
+   "pit_raft": false,
+   "storeys": {
+    "FOUNDATION": {
+     "drawn": [
+      {
+       "sheet": "FP",
+       "handle": "10E0",
+       "W_mm": 300,
+       "D_mm": 800,
+       "hatch": "SOLID"
+      },
+      {
+       "sheet": "CAP",
+       "handle": "886",
+       "W_mm": 300,
+       "D_mm": 800,
+       "hatch": "SOLID"
+      },
+      {
+       "sheet": "GBP",
+       "handle": "24D",
+       "W_mm": 300,
+       "D_mm": 800,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [
+      {
+       "sheet": "CAP",
+       "handle": "101B",
+       "label_handle": "101A",
+       "W_cm": 30,
+       "D_cm": 80
+      }
+     ],
+     "dims": [
+      {
+       "sheet": "CAP",
+       "handles": [
+        "FC8",
+        "FD7",
+        "FE5",
+        "FF4"
+       ],
+       "W_mm": 300,
+       "D_mm": 800
+      }
+     ]
+    },
+    "GF": {
+     "drawn": [
+      {
+       "sheet": "GFRS",
+       "handle": "380",
+       "W_mm": 250,
+       "D_mm": 800,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [],
+     "dims": []
+    },
+    "1F": {
+     "drawn": [
+      {
+       "sheet": "FFRS",
+       "handle": "69A",
+       "W_mm": 250,
+       "D_mm": 800,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [],
+     "dims": []
+    },
+    "2F": {
+     "drawn": [],
+     "texts": [],
+     "dims": [],
+     "not_drawn_on": [
+      "SFRS"
+     ]
+    }
+   },
+   "engine_col_id": "COL:SH12:C8@180193,39182"
+  },
+  {
+   "id": "NECK:COL:SH10:C9@138589,44775",
+   "mark": "C9",
+   "fp_label_handle": "109A",
+   "fp_outline": "1090",
+   "footing": "FF",
+   "pit_raft": true,
+   "storeys": {
+    "FOUNDATION": {
+     "drawn": [
+      {
+       "sheet": "FP",
+       "handle": "1090",
+       "W_mm": 250,
+       "D_mm": 1000,
+       "hatch": "SOLID"
+      },
+      {
+       "sheet": "CAP",
+       "handle": "82E",
+       "W_mm": 250,
+       "D_mm": 1000,
+       "hatch": "SOLID"
+      },
+      {
+       "sheet": "GBP",
+       "handle": "1EC",
+       "W_mm": 250,
+       "D_mm": 1000,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [
+      {
+       "sheet": "CAP",
+       "handle": "1076",
+       "label_handle": "1075",
+       "W_cm": 25,
+       "D_cm": 100
+      }
+     ],
+     "dims": [
+      {
+       "sheet": "CAP",
+       "handles": [
+        "EF6",
+        "F05",
+        "ED9",
+        "EE7"
+       ],
+       "W_mm": 250,
+       "D_mm": 1000
+      }
+     ]
+    },
+    "GF": {
+     "drawn": [
+      {
+       "sheet": "GFRS",
+       "handle": "338",
+       "W_mm": 250,
+       "D_mm": 1000,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [],
+     "dims": []
+    },
+    "1F": {
+     "drawn": [
+      {
+       "sheet": "FFRS",
+       "handle": "679",
+       "W_mm": 250,
+       "D_mm": 1000,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [],
+     "dims": []
+    },
+    "2F": {
+     "drawn": [
+      {
+       "sheet": "SFRS",
+       "handle": "418",
+       "W_mm": 200,
+       "D_mm": 700,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [],
+     "dims": []
+    }
+   },
+   "engine_col_id": "COL:SH12:C9@178676,44981"
+  },
+  {
+   "id": "NECK:COL:SH10:C9@144230,46259",
+   "mark": "C9",
+   "fp_label_handle": "1677",
+   "fp_outline": "10DA",
+   "footing": "F9",
+   "pit_raft": false,
+   "storeys": {
+    "FOUNDATION": {
+     "drawn": [
+      {
+       "sheet": "FP",
+       "handle": "10DA",
+       "W_mm": 300,
+       "D_mm": 1000,
+       "hatch": "SOLID"
+      },
+      {
+       "sheet": "CAP",
+       "handle": "880",
+       "W_mm": 300,
+       "D_mm": 1000,
+       "hatch": "SOLID"
+      },
+      {
+       "sheet": "GBP",
+       "handle": "245",
+       "W_mm": 300,
+       "D_mm": 1000,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [
+      {
+       "sheet": "CAP",
+       "handle": "106C",
+       "label_handle": "106B",
+       "W_cm": 30,
+       "D_cm": 100
+      }
+     ],
+     "dims": [
+      {
+       "sheet": "CAP",
+       "handles": [
+        "DB5",
+        "DC3",
+        "DD1",
+        "DE0"
+       ],
+       "W_mm": 300,
+       "D_mm": 1000
+      }
+     ]
+    },
+    "GF": {
+     "drawn": [
+      {
+       "sheet": "GFRS",
+       "handle": "37A",
+       "W_mm": 250,
+       "D_mm": 1000,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [],
+     "dims": []
+    },
+    "1F": {
+     "drawn": [
+      {
+       "sheet": "FFRS",
+       "handle": "667",
+       "W_mm": 200,
+       "D_mm": 1000,
+       "hatch": "SOLID"
+      }
+     ],
+     "texts": [],
+     "dims": []
+    },
+    "2F": {
+     "drawn": [],
+     "texts": [],
+     "dims": [],
+     "not_drawn_on": [
+      "SFRS"
+     ]
+    }
+   },
+   "engine_col_id": "COL:SH12:C9@183316,44994"
+  },
+  {
+   "id": "NECK:COL:SH10:CN@146123,41338",
+   "mark": "CN",
+   "fp_label_handle": "10ED",
+   "fp_outline": "10EE",
+   "footing": "FN",
+   "pit_raft": false,
+   "storeys": {
+    "FOUNDATION": {
+     "drawn": [
+      {
+       "sheet": "FP",
+       "handle": "10EE",
+       "W_mm": 300,
+       "D_mm": 300,
+       "hatch": "NONE"
+      },
+      {
+       "sheet": "CAP",
+       "handle": "88F",
+       "W_mm": 300,
+       "D_mm": 300,
+       "hatch": "NONE"
+      },
+      {
+       "sheet": "GBP",
+       "handle": "7ED",
+       "W_mm": 300,
+       "D_mm": 300,
+       "hatch": "NONE"
+      }
+     ],
+     "texts": [
+      {
+       "sheet": "CAP",
+       "handle": "1074",
+       "label_handle": "1073",
+       "W_cm": 30,
+       "D_cm": 30
+      }
+     ],
+     "dims": [
+      {
+       "sheet": "CAP",
+       "handles": [
+        "F50",
+        "F6E"
+       ],
+       "W_mm": 300,
+       "D_mm": 300
+      }
+     ]
+    },
+    "GF": {
+     "drawn": [],
+     "texts": [],
+     "dims": [],
+     "not_drawn_on": [
+      "GFRS"
+     ]
+    },
+    "1F": {
+     "drawn": [],
+     "texts": [],
+     "dims": [],
+     "not_drawn_on": [
+      "FFRS"
+     ]
+    },
+    "2F": {
+     "drawn": [],
+     "texts": [],
+     "dims": [],
+     "not_drawn_on": [
+      "SFRS"
+     ]
+    }
+   },
+   "engine_col_id": "COL:SH12:CN@185600,41605"
+  },
+  {
+   "id": "NECK:COL:SH10:CN@140890,42630",
+   "mark": "CN",
+   "fp_label_handle": "10F5",
+   "fp_outline": "10F6",
+   "footing": "FN",
+   "pit_raft": false,
+   "storeys": {
+    "FOUNDATION": {
+     "drawn": [
+      {
+       "sheet": "FP",
+       "handle": "10F6",
+       "W_mm": 300,
+       "D_mm": 300,
+       "hatch": "NONE"
+      },
+      {
+       "sheet": "CAP",
+       "handle": "892",
+       "W_mm": 300,
+       "D_mm": 300,
+       "hatch": "NONE"
+      },
+      {
+       "sheet": "GBP",
+       "handle": "7F5",
+       "W_mm": 300,
+       "D_mm": 300,
+       "hatch": "NONE"
+      }
+     ],
+     "texts": [
+      {
+       "sheet": "CAP",
+       "handle": "17B7",
+       "label_handle": "17B6",
+       "W_cm": 30,
+       "D_cm": 30
+      }
+     ],
+     "dims": [
+      {
+       "sheet": "CAP",
+       "handles": [
+        "F23",
+        "F32"
+       ],
+       "W_mm": 300,
+       "D_mm": 300
+      }
+     ]
+    },
+    "GF": {
+     "drawn": [],
+     "texts": [],
+     "dims": [],
+     "not_drawn_on": [
+      "GFRS"
+     ]
+    },
+    "1F": {
+     "drawn": [],
+     "texts": [],
+     "dims": [],
+     "not_drawn_on": [
+      "FFRS"
+     ]
+    },
+    "2F": {
+     "drawn": [],
+     "texts": [],
+     "dims": [],
+     "not_drawn_on": [
+      "SFRS"
+     ]
+    }
+   },
+   "engine_col_id": "COL:SH12:CN@181059,41605"
+  },
+  {
+   "id": "NECK:COL:SH10:CN@149929,40462",
+   "mark": "CN",
+   "fp_label_handle": "10FD",
+   "fp_outline": "10FE",
+   "footing": "FN",
+   "pit_raft": false,
+   "storeys": {
+    "FOUNDATION": {
+     "drawn": [
+      {
+       "sheet": "FP",
+       "handle": "10FE",
+       "W_mm": 300,
+       "D_mm": 300,
+       "hatch": "NONE"
+      },
+      {
+       "sheet": "CAP",
+       "handle": "895",
+       "W_mm": 300,
+       "D_mm": 300,
+       "hatch": "NONE"
+      },
+      {
+       "sheet": "GBP",
+       "handle": "809",
+       "W_mm": 300,
+       "D_mm": 300,
+       "hatch": "NONE"
+      }
+     ],
+     "texts": [
+      {
+       "sheet": "CAP",
+       "handle": "1072",
+       "label_handle": "1071",
+       "W_cm": 30,
+       "D_cm": 30
+      }
+     ],
+     "dims": [
+      {
+       "sheet": "CAP",
+       "handles": [
+        "D3E",
+        "D4D",
+        "D5C",
+        "D6B"
+       ],
+       "W_mm": 300,
+       "D_mm": 300
+      }
+     ]
+    },
+    "GF": {
+     "drawn": [],
+     "texts": [],
+     "dims": [],
+     "not_drawn_on": [
+      "GFRS"
+     ]
+    },
+    "1F": {
+     "drawn": [],
+     "texts": [],
+     "dims": [],
+     "not_drawn_on": [
+      "FFRS"
+     ]
+    },
+    "2F": {
+     "drawn": [],
+     "texts": [],
+     "dims": [],
+     "not_drawn_on": [
+      "SFRS"
+     ]
+    }
+   },
+   "engine_col_id": "COL:SH12:CN@189247,41800"
+  },
+  {
+   "id": "NECK:COL:SH10:CN@148005,44815",
+   "mark": "CN",
+   "fp_label_handle": "17C9",
+   "fp_outline": "17C5",
+   "footing": "F8",
+   "pit_raft": false,
+   "storeys": {
+    "FOUNDATION": {
+     "drawn": [
+      {
+       "sheet": "FP",
+       "handle": "17C5",
+       "W_mm": 300,
+       "D_mm": 300,
+       "hatch": "NONE"
+      },
+      {
+       "sheet": "CAP",
+       "handle": "17CC",
+       "W_mm": 300,
+       "D_mm": 300,
+       "hatch": "NONE"
+      },
+      {
+       "sheet": "GBP",
+       "handle": "17BD",
+       "W_mm": 300,
+       "D_mm": 300,
+       "hatch": "NONE"
+      }
+     ],
+     "texts": [
+      {
+       "sheet": "CAP",
+       "handle": "17D3",
+       "label_handle": "17D2",
+       "W_cm": 30,
+       "D_cm": 30
+      }
+     ],
+     "dims": [
+      {
+       "sheet": "CAP",
+       "handles": [
+        "17EF",
+        "17E2"
+       ],
+       "W_mm": 300,
+       "D_mm": 300
+      }
+     ]
+    },
+    "GF": {
+     "drawn": [],
+     "texts": [],
+     "dims": [],
+     "not_drawn_on": [
+      "GFRS"
+     ]
+    },
+    "1F": {
+     "drawn": [],
+     "texts": [],
+     "dims": [],
+     "not_drawn_on": [
+      "FFRS"
+     ]
+    },
+    "2F": {
+     "drawn": [],
+     "texts": [],
+     "dims": [],
+     "not_drawn_on": [
+      "SFRS"
+     ]
+    }
+   },
+   "engine_col_id": "COL:SH12:CN@186411,45420"
+  },
+  {
+   "id": "NECK:COL:SH10:CN@148243,48963",
+   "mark": "CN",
+   "fp_label_handle": "17CA",
+   "fp_outline": "17C8",
+   "footing": "F4",
+   "pit_raft": false,
+   "storeys": {
+    "FOUNDATION": {
+     "drawn": [
+      {
+       "sheet": "FP",
+       "handle": "17C8",
+       "W_mm": 300,
+       "D_mm": 300,
+       "hatch": "NONE"
+      },
+      {
+       "sheet": "CAP",
+       "handle": "17CF",
+       "W_mm": 300,
+       "D_mm": 300,
+       "hatch": "NONE"
+      },
+      {
+       "sheet": "GBP",
+       "handle": "17C0",
+       "W_mm": 300,
+       "D_mm": 300,
+       "hatch": "NONE"
+      }
+     ],
+     "texts": [
+      {
+       "sheet": "CAP",
+       "handle": "17D1",
+       "label_handle": "17D0",
+       "W_cm": 30,
+       "D_cm": 30
+      }
+     ],
+     "dims": []
+    },
+    "GF": {
+     "drawn": [],
+     "texts": [],
+     "dims": [],
+     "not_drawn_on": [
+      "GFRS"
+     ]
+    },
+    "1F": {
+     "drawn": [],
+     "texts": [],
+     "dims": [],
+     "not_drawn_on": [
+      "FFRS"
+     ]
+    },
+    "2F": {
+     "drawn": [],
+     "texts": [],
+     "dims": [],
+     "not_drawn_on": [
+      "SFRS"
+     ]
+    }
+   },
+   "engine_col_id": "COL:SH12:CN@186967,48963"
+  },
+  {
+   "id": "NECK:COL:SH10:CN@146847,47309",
+   "mark": "CN",
+   "fp_label_handle": "1810",
+   "fp_outline": "180A",
+   "footing": "FN",
+   "pit_raft": false,
+   "storeys": {
+    "FOUNDATION": {
+     "drawn": [
+      {
+       "sheet": "FP",
+       "handle": "180A",
+       "W_mm": 300,
+       "D_mm": 300,
+       "hatch": "NONE"
+      },
+      {
+       "sheet": "GBP",
+       "handle": "17BA",
+       "W_mm": 300,
+       "D_mm": 300,
+       "hatch": "NONE"
+      }
+     ],
+     "texts": [],
+     "dims": [],
+     "not_drawn_on": [
+      "CAP"
+     ]
+    },
+    "GF": {
+     "drawn": [],
+     "texts": [],
+     "dims": [],
+     "not_drawn_on": [
+      "GFRS"
+     ]
+    },
+    "1F": {
+     "drawn": [],
+     "texts": [],
+     "dims": [],
+     "not_drawn_on": [
+      "FFRS"
+     ]
+    },
+    "2F": {
+     "drawn": [],
+     "texts": [],
+     "dims": [],
+     "not_drawn_on": [
+      "SFRS"
+     ]
+    }
+   }
+  }
+ ],
+ "members_starting_on_a_slab": [
+  {
+   "start_sheet": "GFRS",
+   "start_handle": "31B",
+   "W_mm": 200,
+   "D_mm": 900,
+   "storey": "1F",
+   "on_neck": "10D0",
+   "pc_text": null,
+   "own_outline": {
+    "sheet": "FFRS",
+    "handle": "664",
+    "W_mm": 200,
+    "D_mm": 900
+   }
+  },
+  {
+   "start_sheet": "GFRS",
+   "start_handle": "322",
+   "W_mm": 200,
+   "D_mm": 1000,
+   "storey": "1F",
+   "on_neck": "10DA",
+   "pc_text": null,
+   "own_outline": {
+    "sheet": "FFRS",
+    "handle": "667",
+    "W_mm": 200,
+    "D_mm": 1000
+   }
+  },
+  {
+   "start_sheet": "GFRS",
+   "start_handle": "329",
+   "W_mm": 200,
+   "D_mm": 700,
+   "storey": "1F",
+   "on_neck": null,
+   "pc_text": {
+    "handle": "544",
+    "W_cm": 20,
+    "D_cm": 70
+   },
+   "own_outline": {
+    "sheet": "FFRS",
+    "handle": "66A",
+    "W_mm": 200,
+    "D_mm": 700
+   }
+  },
+  {
+   "start_sheet": "GFRS",
+   "start_handle": "386",
+   "W_mm": 200,
+   "D_mm": 500,
+   "storey": "1F",
+   "on_neck": null,
+   "pc_text": {
+    "handle": "548",
+    "W_cm": 20,
+    "D_cm": 50
+   },
+   "own_outline": {
+    "sheet": "FFRS",
+    "handle": "69D",
+    "W_mm": 200,
+    "D_mm": 500
+   }
+  },
+  {
+   "start_sheet": "FFRS",
+   "start_handle": "77B",
+   "W_mm": 200,
+   "D_mm": 400,
+   "storey": "2F",
+   "on_neck": null,
+   "pc_text": {
+    "handle": "77C",
+    "W_cm": 20,
+    "D_cm": 50
+   },
+   "own_outline": {
+    "sheet": "SFRS",
+    "handle": "778",
+    "W_mm": 200,
+    "D_mm": 400
+   }
+  }
+ ],
+ "slab_plan_notes": [
+  {
+   "sheet": "GFRS",
+   "handle": "31F",
+   "kind": "T.C",
+   "W_cm": null,
+   "D_cm": null
+  },
+  {
+   "sheet": "GFRS",
+   "handle": "324",
+   "kind": "T.C",
+   "W_cm": null,
+   "D_cm": null
+  },
+  {
+   "sheet": "GFRS",
+   "handle": "38A",
+   "kind": "D.C",
+   "W_cm": null,
+   "D_cm": null
+  },
+  {
+   "sheet": "GFRS",
+   "handle": "544",
+   "kind": "P.C",
+   "W_cm": 20,
+   "D_cm": 70
+  },
+  {
+   "sheet": "GFRS",
+   "handle": "548",
+   "kind": "P.C",
+   "W_cm": 20,
+   "D_cm": 50
+  },
+  {
+   "sheet": "FFRS",
+   "handle": "77C",
+   "kind": "P.C",
+   "W_cm": 20,
+   "D_cm": 50
+  }
+ ],
+ "outlines_not_over_a_neck": {
+  "GFRS": [],
+  "FFRS": [],
+  "SFRS": []
+ },
+ "counts": {
+  "FP": 36,
+  "CAP": 35,
+  "GBP": 36,
+  "GFRS": 34,
+  "FFRS": 21,
+  "SFRS": 9
+ }
+}

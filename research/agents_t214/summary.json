@@ -1,0 +1,514 @@
+{
+ "conditions": [
+  {
+   "DRAWING": "PROVEN (b = 0.049 m, DRAWING-CONFIRMED)",
+   "OWNER_MANUAL": "NOT PROVEN (ALLOWANCE_AS_DATUM: Q-43 is WALL_HEIGHT_ALLOWANCE, Q-45 dry bed is MORTAR_BED)",
+   "condition_id": "T189-B20",
+   "range": [
+    -0.167,
+    0.289
+   ],
+   "ref": "research/agents_t189/T-189_OVERLAP_OWNERSHIP.md s.2: MS1-U head inside B20 unchanged for an offset 0.289 m down .. 0.167 m up"
+  },
+  {
+   "DRAWING": "PROVEN (b = 0.050 m, DRAWING-CONFIRMED)",
+   "OWNER_MANUAL": "NOT PROVEN (ALLOWANCE_AS_DATUM: Q-43 is WALL_HEIGHT_ALLOWANCE, Q-45 dry bed is MORTAR_BED)",
+   "condition_id": "T189-B23",
+   "range": [
+    -0.167,
+    0.289
+   ],
+   "ref": "research/agents_t189/T-189_OVERLAP_OWNERSHIP.md s.2: MS2-U head inside B23, same margins"
+  }
+ ],
+ "level_chain": {
+  "R2_summary": {
+   "by_status": {
+    "DRAWING-CONFIRMED": 5,
+    "HELD": 121,
+    "VERIFIED": 4
+   },
+   "issues": {
+    "FINISHED_AS_STRUCTURAL": 4,
+    "HELD_LINK": 121,
+    "NEEDS_HELD": 1,
+    "WRONG_REFERENCE": 7
+   },
+   "links": 130
+  },
+  "R3_summary": {
+   "by_status": {
+    "DRAWING-CONFIRMED": 17,
+    "HELD": 109,
+    "VERIFIED": 4
+   },
+   "issues": {
+    "FINISHED_AS_STRUCTURAL": 4,
+    "HELD_LINK": 109,
+    "NEEDS_HELD": 1,
+    "WRONG_REFERENCE": 7
+   },
+   "links": 130
+  },
+  "datums_changed": {
+   "1F-FLOOR/BEAM_BOTTOM": {
+    "R2": null,
+    "R3": [
+     4.701,
+     "DRAWING-CONFIRMED"
+    ]
+   },
+   "1F-FLOOR/SLAB_SOFFIT": {
+    "R2": null,
+    "R3": [
+     5.291,
+     "DRAWING-CONFIRMED"
+    ]
+   },
+   "1F-FLOOR/SLAB_TOP": {
+    "R2": null,
+    "R3": [
+     5.451,
+     "DRAWING-CONFIRMED"
+    ]
+   },
+   "2F-FLOOR/BEAM_BOTTOM": {
+    "R2": null,
+    "R3": [
+     8.9,
+     "DRAWING-CONFIRMED"
+    ]
+   },
+   "2F-FLOOR/SLAB_SOFFIT": {
+    "R2": null,
+    "R3": [
+     9.49,
+     "DRAWING-CONFIRMED"
+    ]
+   },
+   "2F-FLOOR/SLAB_TOP": {
+    "R2": null,
+    "R3": [
+     9.65,
+     "DRAWING-CONFIRMED"
+    ]
+   },
+   "ANNEX-FLOOR/SLAB_SOFFIT": {
+    "R2": null,
+    "R3": [
+     0.15,
+     "DRAWING-CONFIRMED"
+    ]
+   },
+   "ANNEX-FLOOR/SLAB_TOP": {
+    "R2": null,
+    "R3": [
+     0.25,
+     "DRAWING-CONFIRMED"
+    ]
+   },
+   "GF-EXT-F8/GB_TOP": {
+    "R2": null,
+    "R3": [
+     0.95,
+     "DRAWING-CONFIRMED"
+    ]
+   },
+   "GF-EXT-F8/SLAB_TOP": {
+    "R2": null,
+    "R3": [
+     0.95,
+     "DRAWING-CONFIRMED"
+    ]
+   },
+   "GF-FLOOR/SLAB_SOFFIT": {
+    "R2": null,
+    "R3": [
+     0.85,
+     "DRAWING-CONFIRMED"
+    ]
+   },
+   "GF-FLOOR/SLAB_TOP": {
+    "R2": null,
+    "R3": [
+     0.95,
+     "DRAWING-CONFIRMED"
+    ]
+   }
+  },
+  "evidence_set": "R3 = T-206 R2 + FLOOR_BUILD_UP drawing layers below",
+  "layers_added": [
+   {
+    "b": 0.05,
+    "chain_id": "GF-FLOOR",
+    "status": "DRAWING-CONFIRMED"
+   },
+   {
+    "b": 0.05,
+    "chain_id": "GF-EXT-F8",
+    "status": "DRAWING-CONFIRMED"
+   },
+   {
+    "b": 0.05,
+    "chain_id": "ANNEX-FLOOR",
+    "status": "DRAWING-CONFIRMED"
+   },
+   {
+    "b": 0.049,
+    "chain_id": "1F-FLOOR",
+    "status": "DRAWING-CONFIRMED"
+   },
+   {
+    "b": 0.05,
+    "chain_id": "2F-FLOOR",
+    "status": "DRAWING-CONFIRMED"
+   }
+  ],
+  "uses_changed": {
+   "A3-NECK-TOP": {
+    "R2": {
+     "code": "FINISHED_AS_STRUCTURAL",
+     "detail": "value +1.000 used for GF-EXT-F8/GB_TOP, which no sheet establishes; it equals GF-EXT-F8/FFL: the quantity is HELD",
+     "sensitivity": null
+    },
+    "R3": {
+     "code": "FINISHED_AS_STRUCTURAL",
+     "detail": "value +1.000 used, the drawings give +0.950 for GF-EXT-F8/GB_TOP",
+     "sensitivity": null
+    }
+   },
+   "A4-STAIR-B20": {
+    "R2": {
+     "code": "FINISHED_AS_STRUCTURAL",
+     "detail": "uses 1F-FLOOR/FFL where 1F-FLOOR/SLAB_TOP is needed; the needed datum is not established (HELD): the quantity is HELD",
+     "sensitivity": "quantity unchanged only if the needed datum lies within 0.289 m below to 0.167 m above the used one; not established, so not proven"
+    },
+    "R3": {
+     "code": "FINISHED_AS_STRUCTURAL",
+     "detail": "uses 1F-FLOOR/FFL where 1F-FLOOR/SLAB_TOP is needed; difference +0.049 m",
+     "sensitivity": "difference inside the stated margin: quantity unchanged"
+    }
+   },
+   "A4-STAIR-B23": {
+    "R2": {
+     "code": "FINISHED_AS_STRUCTURAL",
+     "detail": "uses 2F-FLOOR/FFL where 2F-FLOOR/SLAB_TOP is needed; the needed datum is not established (HELD): the quantity is HELD",
+     "sensitivity": "quantity unchanged only if the needed datum lies within 0.289 m below to 0.167 m above the used one; not established, so not proven"
+    },
+    "R3": {
+     "code": "FINISHED_AS_STRUCTURAL",
+     "detail": "uses 2F-FLOOR/FFL where 2F-FLOOR/SLAB_TOP is needed; difference +0.050 m",
+     "sensitivity": "difference inside the stated margin: quantity unchanged"
+    }
+   }
+  }
+ },
+ "method": "FLOOR_BUILDUP_V1",
+ "plot_resolution_m": 0.002,
+ "task": "T-214",
+ "zones": [
+  {
+   "drawing_b_m": 0.05,
+   "drawing_basis": "DRAWN (unprinted) layer, vector + current issue agree",
+   "drawing_notes": [],
+   "drawing_status": "DRAWING-CONFIRMED",
+   "ffl": 1.0,
+   "floor": "GF",
+   "owner_manual": [
+    {
+     "partial": false,
+     "range_m": [
+      0.1,
+      0.1
+     ],
+     "residual_drawn_minus_owner_m": [
+      -0.05,
+      -0.05
+     ],
+     "residual_named": "different scope / basis (see the rule's scope)",
+     "rule": "Q-43",
+     "scope": "WALL_HEIGHT_ALLOWANCE",
+     "usable_as_datum": false
+    },
+    {
+     "partial": true,
+     "range_m": [
+      0.03,
+      0.043
+     ],
+     "residual_drawn_minus_owner_m": [
+      0.007,
+      0.02
+     ],
+     "residual_named": "the missing parts tile thickness (not given by the owner, not printed)",
+     "rule": "Q-45 dry bed",
+     "scope": "MORTAR_BED",
+     "usable_as_datum": false
+    }
+   ],
+   "slab_top_drawing": 0.95,
+   "type": "DRY",
+   "zone": "GF-DRY"
+  },
+  {
+   "drawing_b_m": null,
+   "drawing_basis": "NOT_PRINTED_NOT_DRAWN",
+   "drawing_notes": [
+    "drawn layer of a cut DRY zone not carried to this WET zone"
+   ],
+   "drawing_status": "HELD",
+   "ffl": 1.0,
+   "floor": "GF",
+   "owner_manual": [
+    {
+     "partial": true,
+     "range_m": [
+      0.04,
+      0.063
+     ],
+     "residual_drawn_minus_owner_m": null,
+     "residual_named": null,
+     "rule": "Q-45 wet bed",
+     "scope": "MORTAR_BED",
+     "usable_as_datum": false
+    }
+   ],
+   "slab_top_drawing": null,
+   "type": "WET",
+   "zone": "GF-WET"
+  },
+  {
+   "drawing_b_m": 0.05,
+   "drawing_basis": "DRAWN (unprinted) layer, vector + current issue agree",
+   "drawing_notes": [],
+   "drawing_status": "DRAWING-CONFIRMED",
+   "ffl": 0.3,
+   "floor": "ANNEX",
+   "owner_manual": [
+    {
+     "partial": false,
+     "range_m": [
+      0.1,
+      0.1
+     ],
+     "residual_drawn_minus_owner_m": [
+      -0.05,
+      -0.05
+     ],
+     "residual_named": "different scope / basis (see the rule's scope)",
+     "rule": "Q-43",
+     "scope": "WALL_HEIGHT_ALLOWANCE",
+     "usable_as_datum": false
+    },
+    {
+     "partial": true,
+     "range_m": [
+      0.03,
+      0.043
+     ],
+     "residual_drawn_minus_owner_m": [
+      0.007,
+      0.02
+     ],
+     "residual_named": "the missing parts tile thickness (not given by the owner, not printed)",
+     "rule": "Q-45 dry bed",
+     "scope": "MORTAR_BED",
+     "usable_as_datum": false
+    }
+   ],
+   "slab_top_drawing": 0.25,
+   "type": "DRY",
+   "zone": "ANNEX-DRY"
+  },
+  {
+   "drawing_b_m": 0.049,
+   "drawing_basis": "DRAWN (unprinted) layer, vector + current issue agree",
+   "drawing_notes": [],
+   "drawing_status": "DRAWING-CONFIRMED",
+   "ffl": 5.5,
+   "floor": "1F",
+   "owner_manual": [
+    {
+     "partial": false,
+     "range_m": [
+      0.1,
+      0.1
+     ],
+     "residual_drawn_minus_owner_m": [
+      -0.051,
+      -0.051
+     ],
+     "residual_named": "different scope / basis (see the rule's scope)",
+     "rule": "Q-43",
+     "scope": "WALL_HEIGHT_ALLOWANCE",
+     "usable_as_datum": false
+    },
+    {
+     "partial": true,
+     "range_m": [
+      0.03,
+      0.043
+     ],
+     "residual_drawn_minus_owner_m": [
+      0.006,
+      0.019
+     ],
+     "residual_named": "the missing parts tile thickness (not given by the owner, not printed)",
+     "rule": "Q-45 dry bed",
+     "scope": "MORTAR_BED",
+     "usable_as_datum": false
+    }
+   ],
+   "slab_top_drawing": 5.451,
+   "type": "DRY",
+   "zone": "1F-DRY"
+  },
+  {
+   "drawing_b_m": null,
+   "drawing_basis": "SUNKEN_DROP_NOT_PRINTED",
+   "drawing_notes": [],
+   "drawing_status": "HELD",
+   "ffl": 5.5,
+   "floor": "1F",
+   "owner_manual": [
+    {
+     "partial": true,
+     "range_m": [
+      0.04,
+      0.063
+     ],
+     "residual_drawn_minus_owner_m": null,
+     "residual_named": null,
+     "rule": "Q-45 wet bed",
+     "scope": "MORTAR_BED",
+     "usable_as_datum": false
+    }
+   ],
+   "slab_top_drawing": null,
+   "type": "SUNKEN",
+   "zone": "1F-SUNKEN"
+  },
+  {
+   "drawing_b_m": null,
+   "drawing_basis": "NOT_PRINTED_NOT_DRAWN",
+   "drawing_notes": [],
+   "drawing_status": "HELD",
+   "ffl": 5.5,
+   "floor": "1F",
+   "owner_manual": [],
+   "slab_top_drawing": null,
+   "type": "ROOF",
+   "zone": "1F-TERRACE-ROOF"
+  },
+  {
+   "drawing_b_m": 0.05,
+   "drawing_basis": "DRAWN (unprinted) layer, vector + current issue agree",
+   "drawing_notes": [],
+   "drawing_status": "DRAWING-CONFIRMED",
+   "ffl": 9.7,
+   "floor": "2F",
+   "owner_manual": [
+    {
+     "partial": false,
+     "range_m": [
+      0.1,
+      0.1
+     ],
+     "residual_drawn_minus_owner_m": [
+      -0.05,
+      -0.05
+     ],
+     "residual_named": "different scope / basis (see the rule's scope)",
+     "rule": "Q-43",
+     "scope": "WALL_HEIGHT_ALLOWANCE",
+     "usable_as_datum": false
+    },
+    {
+     "partial": true,
+     "range_m": [
+      0.03,
+      0.043
+     ],
+     "residual_drawn_minus_owner_m": [
+      0.007,
+      0.02
+     ],
+     "residual_named": "the missing parts tile thickness (not given by the owner, not printed)",
+     "rule": "Q-45 dry bed",
+     "scope": "MORTAR_BED",
+     "usable_as_datum": false
+    }
+   ],
+   "slab_top_drawing": 9.65,
+   "type": "DRY",
+   "zone": "2F-DRY"
+  },
+  {
+   "drawing_b_m": null,
+   "drawing_basis": "SUNKEN_DROP_NOT_PRINTED",
+   "drawing_notes": [],
+   "drawing_status": "HELD",
+   "ffl": 9.7,
+   "floor": "2F",
+   "owner_manual": [
+    {
+     "partial": true,
+     "range_m": [
+      0.04,
+      0.063
+     ],
+     "residual_drawn_minus_owner_m": null,
+     "residual_named": null,
+     "rule": "Q-45 wet bed",
+     "scope": "MORTAR_BED",
+     "usable_as_datum": false
+    }
+   ],
+   "slab_top_drawing": null,
+   "type": "SUNKEN",
+   "zone": "2F-SUNKEN"
+  },
+  {
+   "drawing_b_m": null,
+   "drawing_basis": "NOT_PRINTED_NOT_DRAWN",
+   "drawing_notes": [
+    "CONSTANT_LAYER_VS_FALLS: a constant drawn layer 0.050 m cannot carry the falls of a ROOF zone (printed, or the owner's falls rule where none is printed)"
+   ],
+   "drawing_status": "HELD",
+   "ffl": 9.7,
+   "floor": "2F",
+   "owner_manual": [],
+   "slab_top_drawing": null,
+   "type": "ROOF",
+   "zone": "2F-TERRACE-ROOF"
+  },
+  {
+   "drawing_b_m": null,
+   "drawing_basis": "NOT_PRINTED_NOT_DRAWN",
+   "drawing_notes": [
+    "CONSTANT_LAYER_VS_FALLS: a constant drawn layer 0.050 m cannot carry the falls of a ROOF zone (printed, or the owner's falls rule where none is printed)"
+   ],
+   "drawing_status": "HELD",
+   "ffl": 13.9,
+   "floor": "ROOF",
+   "owner_manual": [],
+   "slab_top_drawing": null,
+   "type": "ROOF",
+   "zone": "MAIN-ROOF"
+  },
+  {
+   "drawing_b_m": null,
+   "drawing_basis": "NOT_PRINTED_NOT_DRAWN",
+   "drawing_notes": [
+    "CONSTANT_LAYER_VS_FALLS: a constant drawn layer 0.050 m cannot carry the falls of a ROOF zone (printed, or the owner's falls rule where none is printed)"
+   ],
+   "drawing_status": "HELD",
+   "ffl": 4.3,
+   "floor": "ANNEX-ROOF",
+   "owner_manual": [],
+   "slab_top_drawing": null,
+   "type": "ROOF",
+   "zone": "ANNEX-ROOF"
+  }
+ ]
+}
