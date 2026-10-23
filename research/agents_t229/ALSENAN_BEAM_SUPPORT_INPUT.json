@@ -1,0 +1,9290 @@
+{
+ "schema": "T229_BEAM_SUPPORT_INPUT_V1",
+ "source_dxf_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+ "source": "Drive 'Alsenan chalet project' / 'ST7757 dxf.dxf' + route G overlays (committed)",
+ "counts": {
+  "GF": {
+   "pieces": 65,
+   "supports": 30,
+   "carried": 4
+  },
+  "1F": {
+   "pieces": 43,
+   "supports": 20,
+   "carried": 1
+  },
+  "2F": {
+   "pieces": 19,
+   "supports": 9,
+   "carried": 0
+  }
+ },
+ "rings": [
+  "1F:BAND0033",
+  "1F:BAND0034",
+  "1F:BAND0035",
+  "1F:BAND0036",
+  "GF:BAND0049",
+  "GF:BAND0050",
+  "GF:BAND0051",
+  "GF:BAND0052",
+  "GF:BAND0053"
+ ],
+ "outlines": {
+  "31B": {
+   "storey": "GF",
+   "kind": "CARRIED_COLUMN",
+   "w_mm": 200,
+   "d_mm": 900,
+   "A_m2": 0.18
+  },
+  "322": {
+   "storey": "GF",
+   "kind": "CARRIED_COLUMN",
+   "w_mm": 200,
+   "d_mm": 1000,
+   "A_m2": 0.2
+  },
+  "329": {
+   "storey": "GF",
+   "kind": "CARRIED_COLUMN",
+   "w_mm": 700,
+   "d_mm": 200,
+   "A_m2": 0.14
+  },
+  "32C": {
+   "storey": "GF",
+   "kind": "COLUMN_BELOW",
+   "w_mm": 200,
+   "d_mm": 500,
+   "A_m2": 0.1
+  },
+  "32F": {
+   "storey": "GF",
+   "kind": "COLUMN_BELOW",
+   "w_mm": 200,
+   "d_mm": 500,
+   "A_m2": 0.1
+  },
+  "332": {
+   "storey": "GF",
+   "kind": "COLUMN_BELOW",
+   "w_mm": 600,
+   "d_mm": 250,
+   "A_m2": 0.15
+  },
+  "335": {
+   "storey": "GF",
+   "kind": "COLUMN_BELOW",
+   "w_mm": 500,
+   "d_mm": 250,
+   "A_m2": 0.125
+  },
+  "338": {
+   "storey": "GF",
+   "kind": "COLUMN_BELOW",
+   "w_mm": 250,
+   "d_mm": 1000,
+   "A_m2": 0.25
+  },
+  "33B": {
+   "storey": "GF",
+   "kind": "COLUMN_BELOW",
+   "w_mm": 200,
+   "d_mm": 500,
+   "A_m2": 0.1
+  },
+  "33E": {
+   "storey": "GF",
+   "kind": "COLUMN_BELOW",
+   "w_mm": 200,
+   "d_mm": 500,
+   "A_m2": 0.1
+  },
+  "341": {
+   "storey": "GF",
+   "kind": "COLUMN_BELOW",
+   "w_mm": 200,
+   "d_mm": 500,
+   "A_m2": 0.1
+  },
+  "344": {
+   "storey": "GF",
+   "kind": "COLUMN_BELOW",
+   "w_mm": 200,
+   "d_mm": 500,
+   "A_m2": 0.1
+  },
+  "347": {
+   "storey": "GF",
+   "kind": "COLUMN_BELOW",
+   "w_mm": 200,
+   "d_mm": 400,
+   "A_m2": 0.08
+  },
+  "34A": {
+   "storey": "GF",
+   "kind": "COLUMN_BELOW",
+   "w_mm": 200,
+   "d_mm": 400,
+   "A_m2": 0.08
+  },
+  "34D": {
+   "storey": "GF",
+   "kind": "COLUMN_BELOW",
+   "w_mm": 400,
+   "d_mm": 200,
+   "A_m2": 0.08
+  },
+  "350": {
+   "storey": "GF",
+   "kind": "COLUMN_BELOW",
+   "w_mm": 400,
+   "d_mm": 200,
+   "A_m2": 0.08
+  },
+  "353": {
+   "storey": "GF",
+   "kind": "COLUMN_BELOW",
+   "w_mm": 500,
+   "d_mm": 250,
+   "A_m2": 0.125
+  },
+  "356": {
+   "storey": "GF",
+   "kind": "COLUMN_BELOW",
+   "w_mm": 400,
+   "d_mm": 200,
+   "A_m2": 0.08
+  },
+  "359": {
+   "storey": "GF",
+   "kind": "COLUMN_BELOW",
+   "w_mm": 400,
+   "d_mm": 200,
+   "A_m2": 0.08
+  },
+  "35C": {
+   "storey": "GF",
+   "kind": "COLUMN_BELOW",
+   "w_mm": 1100,
+   "d_mm": 250,
+   "A_m2": 0.275
+  },
+  "35F": {
+   "storey": "GF",
+   "kind": "COLUMN_BELOW",
+   "w_mm": 250,
+   "d_mm": 600,
+   "A_m2": 0.15
+  },
+  "362": {
+   "storey": "GF",
+   "kind": "COLUMN_BELOW",
+   "w_mm": 250,
+   "d_mm": 700,
+   "A_m2": 0.175
+  },
+  "365": {
+   "storey": "GF",
+   "kind": "COLUMN_BELOW",
+   "w_mm": 250,
+   "d_mm": 500,
+   "A_m2": 0.125
+  },
+  "368": {
+   "storey": "GF",
+   "kind": "COLUMN_BELOW",
+   "w_mm": 800,
+   "d_mm": 250,
+   "A_m2": 0.2
+  },
+  "36B": {
+   "storey": "GF",
+   "kind": "COLUMN_BELOW",
+   "w_mm": 250,
+   "d_mm": 500,
+   "A_m2": 0.125
+  },
+  "36E": {
+   "storey": "GF",
+   "kind": "COLUMN_BELOW",
+   "w_mm": 900,
+   "d_mm": 250,
+   "A_m2": 0.225
+  },
+  "371": {
+   "storey": "GF",
+   "kind": "COLUMN_BELOW",
+   "w_mm": 700,
+   "d_mm": 250,
+   "A_m2": 0.175
+  },
+  "374": {
+   "storey": "GF",
+   "kind": "COLUMN_BELOW",
+   "w_mm": 600,
+   "d_mm": 250,
+   "A_m2": 0.15
+  },
+  "377": {
+   "storey": "GF",
+   "kind": "COLUMN_BELOW",
+   "w_mm": 500,
+   "d_mm": 250,
+   "A_m2": 0.125
+  },
+  "37A": {
+   "storey": "GF",
+   "kind": "COLUMN_BELOW",
+   "w_mm": 1000,
+   "d_mm": 250,
+   "A_m2": 0.25
+  },
+  "37D": {
+   "storey": "GF",
+   "kind": "COLUMN_BELOW",
+   "w_mm": 1100,
+   "d_mm": 250,
+   "A_m2": 0.275
+  },
+  "380": {
+   "storey": "GF",
+   "kind": "COLUMN_BELOW",
+   "w_mm": 800,
+   "d_mm": 250,
+   "A_m2": 0.2
+  },
+  "383": {
+   "storey": "GF",
+   "kind": "COLUMN_BELOW",
+   "w_mm": 500,
+   "d_mm": 250,
+   "A_m2": 0.125
+  },
+  "386": {
+   "storey": "GF",
+   "kind": "CARRIED_COLUMN",
+   "w_mm": 500,
+   "d_mm": 200,
+   "A_m2": 0.1
+  },
+  "40F": {
+   "storey": "2F",
+   "kind": "COLUMN_BELOW",
+   "w_mm": 200,
+   "d_mm": 500,
+   "A_m2": 0.1
+  },
+  "412": {
+   "storey": "2F",
+   "kind": "COLUMN_BELOW",
+   "w_mm": 200,
+   "d_mm": 500,
+   "A_m2": 0.1
+  },
+  "415": {
+   "storey": "2F",
+   "kind": "COLUMN_BELOW",
+   "w_mm": 600,
+   "d_mm": 200,
+   "A_m2": 0.12
+  },
+  "418": {
+   "storey": "2F",
+   "kind": "COLUMN_BELOW",
+   "w_mm": 200,
+   "d_mm": 700,
+   "A_m2": 0.14
+  },
+  "41B": {
+   "storey": "2F",
+   "kind": "COLUMN_BELOW",
+   "w_mm": 200,
+   "d_mm": 500,
+   "A_m2": 0.1
+  },
+  "41E": {
+   "storey": "2F",
+   "kind": "COLUMN_BELOW",
+   "w_mm": 200,
+   "d_mm": 500,
+   "A_m2": 0.1
+  },
+  "421": {
+   "storey": "2F",
+   "kind": "COLUMN_BELOW",
+   "w_mm": 200,
+   "d_mm": 500,
+   "A_m2": 0.1
+  },
+  "424": {
+   "storey": "2F",
+   "kind": "COLUMN_BELOW",
+   "w_mm": 250,
+   "d_mm": 500,
+   "A_m2": 0.125
+  },
+  "664": {
+   "storey": "1F",
+   "kind": "COLUMN_BELOW",
+   "w_mm": 200,
+   "d_mm": 900,
+   "A_m2": 0.18
+  },
+  "667": {
+   "storey": "1F",
+   "kind": "COLUMN_BELOW",
+   "w_mm": 200,
+   "d_mm": 1000,
+   "A_m2": 0.2
+  },
+  "66A": {
+   "storey": "1F",
+   "kind": "COLUMN_BELOW",
+   "w_mm": 700,
+   "d_mm": 200,
+   "A_m2": 0.14
+  },
+  "66D": {
+   "storey": "1F",
+   "kind": "COLUMN_BELOW",
+   "w_mm": 200,
+   "d_mm": 500,
+   "A_m2": 0.1
+  },
+  "670": {
+   "storey": "1F",
+   "kind": "COLUMN_BELOW",
+   "w_mm": 200,
+   "d_mm": 500,
+   "A_m2": 0.1
+  },
+  "673": {
+   "storey": "1F",
+   "kind": "COLUMN_BELOW",
+   "w_mm": 600,
+   "d_mm": 250,
+   "A_m2": 0.15
+  },
+  "676": {
+   "storey": "1F",
+   "kind": "COLUMN_BELOW",
+   "w_mm": 500,
+   "d_mm": 250,
+   "A_m2": 0.125
+  },
+  "679": {
+   "storey": "1F",
+   "kind": "COLUMN_BELOW",
+   "w_mm": 250,
+   "d_mm": 1000,
+   "A_m2": 0.25
+  },
+  "67C": {
+   "storey": "1F",
+   "kind": "COLUMN_BELOW",
+   "w_mm": 200,
+   "d_mm": 500,
+   "A_m2": 0.1
+  },
+  "67F": {
+   "storey": "1F",
+   "kind": "COLUMN_BELOW",
+   "w_mm": 200,
+   "d_mm": 500,
+   "A_m2": 0.1
+  },
+  "682": {
+   "storey": "1F",
+   "kind": "COLUMN_BELOW",
+   "w_mm": 200,
+   "d_mm": 500,
+   "A_m2": 0.1
+  },
+  "685": {
+   "storey": "1F",
+   "kind": "COLUMN_BELOW",
+   "w_mm": 200,
+   "d_mm": 600,
+   "A_m2": 0.12
+  },
+  "688": {
+   "storey": "1F",
+   "kind": "COLUMN_BELOW",
+   "w_mm": 250,
+   "d_mm": 700,
+   "A_m2": 0.175
+  },
+  "68B": {
+   "storey": "1F",
+   "kind": "COLUMN_BELOW",
+   "w_mm": 200,
+   "d_mm": 500,
+   "A_m2": 0.1
+  },
+  "68E": {
+   "storey": "1F",
+   "kind": "COLUMN_BELOW",
+   "w_mm": 800,
+   "d_mm": 250,
+   "A_m2": 0.2
+  },
+  "691": {
+   "storey": "1F",
+   "kind": "COLUMN_BELOW",
+   "w_mm": 250,
+   "d_mm": 500,
+   "A_m2": 0.125
+  },
+  "694": {
+   "storey": "1F",
+   "kind": "COLUMN_BELOW",
+   "w_mm": 600,
+   "d_mm": 250,
+   "A_m2": 0.15
+  },
+  "697": {
+   "storey": "1F",
+   "kind": "COLUMN_BELOW",
+   "w_mm": 500,
+   "d_mm": 250,
+   "A_m2": 0.125
+  },
+  "69A": {
+   "storey": "1F",
+   "kind": "COLUMN_BELOW",
+   "w_mm": 800,
+   "d_mm": 250,
+   "A_m2": 0.2
+  },
+  "69D": {
+   "storey": "1F",
+   "kind": "COLUMN_BELOW",
+   "w_mm": 500,
+   "d_mm": 200,
+   "A_m2": 0.1
+  },
+  "778": {
+   "storey": "2F",
+   "kind": "COLUMN_BELOW",
+   "w_mm": 200,
+   "d_mm": 400,
+   "A_m2": 0.08
+  },
+  "77B": {
+   "storey": "1F",
+   "kind": "CARRIED_COLUMN",
+   "w_mm": 200,
+   "d_mm": 400,
+   "A_m2": 0.08
+  }
+ },
+ "pieces": {
+  "2F:BAND0001.1": {
+   "storey": "2F",
+   "band": "BAND0001.1",
+   "mark": "B3",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.2,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.4,
+   "width_m": 0.2,
+   "length_m": 2.5,
+   "t110": [
+    [
+     "BM-2F-001",
+     "B3",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.50088
+  },
+  "2F:BAND0001.2": {
+   "storey": "2F",
+   "band": "BAND0001.2",
+   "mark": "B8",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.5205,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.75,
+   "width_m": 0.2,
+   "length_m": 3.47,
+   "t110": [
+    [
+     "BM-2F-002",
+     "B8",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.69567
+  },
+  "2F:BAND0001.3": {
+   "storey": "2F",
+   "band": "BAND0001.3",
+   "mark": "B8",
+   "binding": "BOUND",
+   "route_g": "HELD (route G UNLABELLED_SPAN_ACROSS_SUPPORT)",
+   "route_g_m3": null,
+   "route_g_held_exposure_m3": 0.0904,
+   "depth_m": 0.75,
+   "width_m": 0.2,
+   "length_m": 1.13,
+   "t110": [
+    [
+     "BM-2F-015",
+     "(none)",
+     "unlabelled span past a column",
+     "HELD"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.22646
+  },
+  "2F:BAND0002.1": {
+   "storey": "2F",
+   "band": "BAND0002.1",
+   "mark": "B3",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.196,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.4,
+   "width_m": 0.2,
+   "length_m": 2.45,
+   "t110": [
+    [
+     "BM-2F-003",
+     "B3",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.48878
+  },
+  "2F:BAND0003": {
+   "storey": "2F",
+   "band": "BAND0003",
+   "mark": "B2",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.2,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.4,
+   "width_m": 0.2,
+   "length_m": 2.5,
+   "t110": [
+    [
+     "BM-2F-004",
+     "B2",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.49863
+  },
+  "2F:BAND0004": {
+   "storey": "2F",
+   "band": "BAND0004",
+   "mark": "B1",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.144,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.4,
+   "width_m": 0.2,
+   "length_m": 1.8,
+   "t110": [
+    [
+     "BM-2F-005",
+     "B1",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.35914
+  },
+  "2F:BAND0005": {
+   "storey": "2F",
+   "band": "BAND0005",
+   "mark": "B2",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.24,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.4,
+   "width_m": 0.2,
+   "length_m": 3.0,
+   "t110": [
+    [
+     "BM-2F-006",
+     "B2",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.59851
+  },
+  "2F:BAND0006.1": {
+   "storey": "2F",
+   "band": "BAND0006.1",
+   "mark": "B15",
+   "binding": "BOUND",
+   "route_g": "HELD (route G UNLABELLED_SPAN_ACROSS_SUPPORT)",
+   "route_g_m3": null,
+   "route_g_held_exposure_m3": 0.248,
+   "depth_m": 1.2,
+   "width_m": 0.2,
+   "length_m": 3.1,
+   "t110": [
+    [
+     "BM-2F-016",
+     "(none)",
+     "unlabelled span past a column",
+     "HELD"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.62118
+  },
+  "2F:BAND0006.2": {
+   "storey": "2F",
+   "band": "BAND0006.2",
+   "mark": "B15",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.648,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 1.2,
+   "width_m": 0.2,
+   "length_m": 2.7,
+   "t110": [
+    [
+     "BM-2F-007",
+     "B15",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.54102
+  },
+  "2F:BAND0007.1": {
+   "storey": "2F",
+   "band": "BAND0007.1",
+   "mark": "B2",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.144,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.4,
+   "width_m": 0.2,
+   "length_m": 1.8,
+   "t110": [
+    [
+     "BM-2F-008",
+     "B2",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.36076
+  },
+  "2F:BAND0007.2": {
+   "storey": "2F",
+   "band": "BAND0007.2",
+   "mark": "B2",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.24,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.4,
+   "width_m": 0.2,
+   "length_m": 3.0,
+   "t110": [
+    [
+     "BM-2F-008",
+     "B2",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.6012
+  },
+  "2F:BAND0008.1": {
+   "storey": "2F",
+   "band": "BAND0008.1",
+   "mark": "B1",
+   "binding": "BOUND",
+   "route_g": "HELD (route G UNLABELLED_SPAN_ACROSS_SUPPORT)",
+   "route_g_m3": null,
+   "route_g_held_exposure_m3": 0.112,
+   "depth_m": 0.4,
+   "width_m": 0.2,
+   "length_m": 1.4,
+   "t110": [
+    [
+     "BM-2F-017",
+     "(none)",
+     "unlabelled span past a column",
+     "HELD"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.27916
+  },
+  "2F:BAND0008.2": {
+   "storey": "2F",
+   "band": "BAND0008.2",
+   "mark": "B1",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.08,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.4,
+   "width_m": 0.2,
+   "length_m": 1.0,
+   "t110": [
+    [
+     "BM-2F-009",
+     "B1",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.19956
+  },
+  "2F:BAND0008.3": {
+   "storey": "2F",
+   "band": "BAND0008.3",
+   "mark": "B3",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.24,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.4,
+   "width_m": 0.2,
+   "length_m": 3.0,
+   "t110": [
+    [
+     "BM-2F-010",
+     "B3",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.59848
+  },
+  "2F:BAND0009": {
+   "storey": "2F",
+   "band": "BAND0009",
+   "mark": "B7",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.99,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.75,
+   "width_m": 0.2,
+   "length_m": 6.6,
+   "t110": [
+    [
+     "BM-2F-011",
+     "B7",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 1.3225
+  },
+  "2F:BAND0010.1": {
+   "storey": "2F",
+   "band": "BAND0010.1",
+   "mark": "B3",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.216,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.4,
+   "width_m": 0.2,
+   "length_m": 2.7,
+   "t110": [
+    [
+     "BM-2F-012",
+     "B3",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.54102
+  },
+  "2F:BAND0011.1": {
+   "storey": "2F",
+   "band": "BAND0011.1",
+   "mark": "B1",
+   "binding": "BOUND",
+   "route_g": "HELD (route G UNLABELLED_SPAN_ACROSS_SUPPORT)",
+   "route_g_m3": null,
+   "route_g_held_exposure_m3": 0.112,
+   "depth_m": 0.4,
+   "width_m": 0.2,
+   "length_m": 1.4,
+   "t110": [
+    [
+     "BM-2F-018",
+     "(none)",
+     "unlabelled span past a column",
+     "HELD"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.28042
+  },
+  "2F:BAND0011.2": {
+   "storey": "2F",
+   "band": "BAND0011.2",
+   "mark": "B1",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.096,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.4,
+   "width_m": 0.2,
+   "length_m": 1.2,
+   "t110": [
+    [
+     "BM-2F-013",
+     "B1",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.24044
+  },
+  "2F:BAND0012.1": {
+   "storey": "2F",
+   "band": "BAND0012.1",
+   "mark": "B1",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.144,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.4,
+   "width_m": 0.2,
+   "length_m": 1.8,
+   "t110": [
+    [
+     "BM-2F-014",
+     "B1",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.35932
+  },
+  "1F:BAND0001.1": {
+   "storey": "1F",
+   "band": "BAND0001.1",
+   "mark": "B3",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.2,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.4,
+   "width_m": 0.2,
+   "length_m": 2.5,
+   "t110": [
+    [
+     "BM-1F-001",
+     "B3",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.50397
+  },
+  "1F:BAND0001.2": {
+   "storey": "1F",
+   "band": "BAND0001.2",
+   "mark": "CB9",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.347,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.5,
+   "width_m": 0.2,
+   "length_m": 3.47,
+   "t110": [
+    [
+     "BM-1F-002",
+     "CB9",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.70043
+  },
+  "1F:BAND0001.3": {
+   "storey": "1F",
+   "band": "BAND0001.3",
+   "mark": "CB9",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.335,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.5,
+   "width_m": 0.2,
+   "length_m": 3.35,
+   "t110": [
+    [
+     "BM-1F-002",
+     "CB9",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.67617
+  },
+  "1F:BAND0001.4": {
+   "storey": "1F",
+   "band": "BAND0001.4",
+   "mark": "CB9",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.355,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.5,
+   "width_m": 0.2,
+   "length_m": 3.55,
+   "t110": [
+    [
+     "BM-1F-002",
+     "CB9",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.71645
+  },
+  "1F:BAND0002.1": {
+   "storey": "1F",
+   "band": "BAND0002.1",
+   "mark": "B4",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.381173125,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.5,
+   "width_m": 0.2,
+   "length_m": 3.8117,
+   "t110": [
+    [
+     "BM-1F-003",
+     "B4",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.7605
+  },
+  "1F:BAND0003": {
+   "storey": "1F",
+   "band": "BAND0003",
+   "mark": "B4",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.43,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.5,
+   "width_m": 0.2,
+   "length_m": 4.3,
+   "t110": [
+    [
+     "BM-1F-004",
+     "B4",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.86764
+  },
+  "1F:BAND0004": {
+   "storey": "1F",
+   "band": "BAND0004",
+   "mark": "B11",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.712172543,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.75,
+   "width_m": 0.2,
+   "length_m": 4.7478,
+   "t110": [
+    [
+     "BM-1F-005",
+     "B11",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.95817
+  },
+  "1F:BAND0005.1": {
+   "storey": "1F",
+   "band": "BAND0005.1",
+   "mark": "B2",
+   "binding": "BOUND",
+   "route_g": "HELD (route G UNLABELLED_SPAN_ACROSS_SUPPORT)",
+   "route_g_m3": null,
+   "route_g_held_exposure_m3": 0.064,
+   "depth_m": 0.4,
+   "width_m": 0.2,
+   "length_m": 0.8,
+   "t110": [
+    [
+     "BM-1F-032",
+     "(none)",
+     "unlabelled span past a column",
+     "HELD"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.16156
+  },
+  "1F:BAND0005.2": {
+   "storey": "1F",
+   "band": "BAND0005.2",
+   "mark": "B2",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.216,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.4,
+   "width_m": 0.2,
+   "length_m": 2.7,
+   "t110": [
+    [
+     "BM-1F-006",
+     "B2",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.5449
+  },
+  "1F:BAND0006.1": {
+   "storey": "1F",
+   "band": "BAND0006.1",
+   "mark": "B7",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.27,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.75,
+   "width_m": 0.2,
+   "length_m": 1.8,
+   "t110": [
+    [
+     "BM-1F-007",
+     "B7",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.35965
+  },
+  "1F:BAND0007.1": {
+   "storey": "1F",
+   "band": "BAND0007.1",
+   "mark": "B1",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.056,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.4,
+   "width_m": 0.2,
+   "length_m": 0.7,
+   "t110": [
+    [
+     "BM-1F-008",
+     "B1",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.13966
+  },
+  "1F:BAND0007.2": {
+   "storey": "1F",
+   "band": "BAND0007.2",
+   "mark": "B2",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.24,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.4,
+   "width_m": 0.2,
+   "length_m": 3.0,
+   "t110": [
+    [
+     "BM-1F-009",
+     "B2",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.59882
+  },
+  "1F:BAND0008": {
+   "storey": "1F",
+   "band": "BAND0008",
+   "mark": "B1",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.128599641,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.4,
+   "width_m": 0.2,
+   "length_m": 1.6075,
+   "t110": [
+    [
+     "BM-1F-010",
+     "B1",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.32046
+  },
+  "1F:BAND0009": {
+   "storey": "1F",
+   "band": "BAND0009",
+   "mark": "B6",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.551917632,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.5,
+   "width_m": 0.2,
+   "length_m": 4.4153,
+   "t110": [
+    [
+     "BM-1F-030",
+     "B6",
+     "beam span",
+     "CONFLICT"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": true,
+   "plan_m2": 0.88127
+  },
+  "1F:BAND0010.1": {
+   "storey": "1F",
+   "band": "BAND0010.1",
+   "mark": "B2",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.216,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.4,
+   "width_m": 0.2,
+   "length_m": 2.7,
+   "t110": [
+    [
+     "BM-1F-011",
+     "B2",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.53896
+  },
+  "1F:BAND0011.1": {
+   "storey": "1F",
+   "band": "BAND0011.1",
+   "mark": "B7",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.18,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.75,
+   "width_m": 0.2,
+   "length_m": 1.2,
+   "t110": [
+    [
+     "BM-1F-012",
+     "B7",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.23948
+  },
+  "1F:BAND0012.1": {
+   "storey": "1F",
+   "band": "BAND0012.1",
+   "mark": "B1",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.144,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.4,
+   "width_m": 0.2,
+   "length_m": 1.8,
+   "t110": [
+    [
+     "BM-1F-013",
+     "B1",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.35966
+  },
+  "1F:BAND0013.1": {
+   "storey": "1F",
+   "band": "BAND0013.1",
+   "mark": "UNBOUND",
+   "binding": "UNBOUND",
+   "route_g": "HELD (route G UNBOUND)",
+   "route_g_m3": null,
+   "route_g_held_exposure_m3": 0.24,
+   "depth_m": null,
+   "width_m": 0.2,
+   "length_m": 3.0,
+   "t110": [
+    [
+     "BM-1F-033",
+     "(none)",
+     "0.20 strip north of B23",
+     "HELD"
+    ]
+   ],
+   "projection": true,
+   "width_conflict": false,
+   "plan_m2": 0.59854
+  },
+  "1F:BAND0013.2": {
+   "storey": "1F",
+   "band": "BAND0013.2",
+   "mark": "UNBOUND",
+   "binding": "UNBOUND",
+   "route_g": "HELD (route G UNBOUND)",
+   "route_g_m3": null,
+   "route_g_held_exposure_m3": 0.042,
+   "depth_m": null,
+   "width_m": 0.2,
+   "length_m": 0.525,
+   "t110": [
+    [
+     "BM-1F-033",
+     "(none)",
+     "0.20 strip north of B23 (east piece)",
+     "HELD"
+    ]
+   ],
+   "projection": true,
+   "width_conflict": false,
+   "plan_m2": 0.10455
+  },
+  "1F:BAND0014": {
+   "storey": "1F",
+   "band": "BAND0014",
+   "mark": "UNBOUND",
+   "binding": "UNBOUND",
+   "route_g": "HELD (route G UNBOUND)",
+   "route_g_m3": null,
+   "route_g_held_exposure_m3": 0.6,
+   "depth_m": null,
+   "width_m": 0.2,
+   "length_m": 7.5,
+   "t110": [
+    [
+     "BM-1F-034",
+     "(none)",
+     "outer west strip 0.20",
+     "HELD"
+    ]
+   ],
+   "projection": true,
+   "width_conflict": false,
+   "plan_m2": 1.51344
+  },
+  "1F:BAND0015": {
+   "storey": "1F",
+   "band": "BAND0015",
+   "mark": "B4",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.41,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.5,
+   "width_m": 0.2,
+   "length_m": 4.1,
+   "t110": [
+    [
+     "BM-1F-014",
+     "B4",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.82735
+  },
+  "1F:BAND0016": {
+   "storey": "1F",
+   "band": "BAND0016",
+   "mark": "B5",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.3475,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.5,
+   "width_m": 0.2,
+   "length_m": 3.475,
+   "t110": [
+    [
+     "BM-1F-015",
+     "B5",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.69398
+  },
+  "1F:BAND0017": {
+   "storey": "1F",
+   "band": "BAND0017",
+   "mark": "B5",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.485,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.5,
+   "width_m": 0.2,
+   "length_m": 4.85,
+   "t110": [
+    [
+     "BM-1F-016",
+     "B5",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.96831
+  },
+  "1F:BAND0018.1": {
+   "storey": "1F",
+   "band": "BAND0018.1",
+   "mark": "CB12",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 1.0546875,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.75,
+   "width_m": 0.25,
+   "length_m": 5.625,
+   "t110": [
+    [
+     "BM-1F-017",
+     "CB12",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 1.41264
+  },
+  "1F:BAND0018.2": {
+   "storey": "1F",
+   "band": "BAND0018.2",
+   "mark": "CB12",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.9421875,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.75,
+   "width_m": 0.25,
+   "length_m": 5.025,
+   "t110": [
+    [
+     "BM-1F-017",
+     "CB12",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 1.26225
+  },
+  "1F:BAND0019": {
+   "storey": "1F",
+   "band": "BAND0019",
+   "mark": "B6",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.5125,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.5,
+   "width_m": 0.25,
+   "length_m": 4.1,
+   "t110": [
+    [
+     "BM-1F-018",
+     "B6",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 1.02948
+  },
+  "1F:BAND0020": {
+   "storey": "1F",
+   "band": "BAND0020",
+   "mark": "B6",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.552772881,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.5,
+   "width_m": 0.25,
+   "length_m": 4.4222,
+   "t110": [
+    [
+     "BM-1F-019",
+     "B6",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 1.11078
+  },
+  "1F:BAND0021": {
+   "storey": "1F",
+   "band": "BAND0021",
+   "mark": "B6",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.546522881,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.5,
+   "width_m": 0.25,
+   "length_m": 4.3722,
+   "t110": [
+    [
+     "BM-1F-020",
+     "B6",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 1.08822
+  },
+  "1F:BAND0022": {
+   "storey": "1F",
+   "band": "BAND0022",
+   "mark": "B6",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.5125,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.5,
+   "width_m": 0.25,
+   "length_m": 4.1,
+   "t110": [
+    [
+     "BM-1F-021",
+     "B6",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 1.02088
+  },
+  "1F:BAND0023": {
+   "storey": "1F",
+   "band": "BAND0023",
+   "mark": "UNBOUND",
+   "binding": "UNBOUND",
+   "route_g": "HELD (route G UNBOUND)",
+   "route_g_m3": null,
+   "route_g_held_exposure_m3": 0.135,
+   "depth_m": null,
+   "width_m": 0.3,
+   "length_m": 0.9,
+   "t110": [
+    [
+     "BM-1F-035",
+     "(none)",
+     "south-east box 0.30",
+     "HELD"
+    ]
+   ],
+   "projection": true,
+   "width_conflict": false,
+   "plan_m2": 0.27027
+  },
+  "1F:BAND0024.1": {
+   "storey": "1F",
+   "band": "BAND0024.1",
+   "mark": "CB13",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.45,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.5,
+   "width_m": 0.3,
+   "length_m": 3.0,
+   "t110": [
+    [
+     "BM-1F-022",
+     "CB13",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.90174
+  },
+  "1F:BAND0024.2": {
+   "storey": "1F",
+   "band": "BAND0024.2",
+   "mark": "CB13",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.4725,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.5,
+   "width_m": 0.3,
+   "length_m": 3.15,
+   "t110": [
+    [
+     "BM-1F-022",
+     "CB13",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.94719
+  },
+  "1F:BAND0025": {
+   "storey": "1F",
+   "band": "BAND0025",
+   "mark": "UNBOUND",
+   "binding": "UNBOUND",
+   "route_g": "HELD (route G UNBOUND)",
+   "route_g_m3": null,
+   "route_g_held_exposure_m3": 0.676415831,
+   "depth_m": null,
+   "width_m": 0.3,
+   "length_m": 4.5094,
+   "t110": [
+    [
+     "BM-1F-036",
+     "(none)",
+     "strip outside CB12 0.30",
+     "HELD"
+    ]
+   ],
+   "projection": true,
+   "width_conflict": false,
+   "plan_m2": 1.34524
+  },
+  "1F:BAND0026.1": {
+   "storey": "1F",
+   "band": "BAND0026.1",
+   "mark": "UNBOUND",
+   "binding": "UNBOUND",
+   "route_g": "HELD (route G UNBOUND)",
+   "route_g_m3": null,
+   "route_g_held_exposure_m3": 0.345,
+   "depth_m": null,
+   "width_m": 0.3,
+   "length_m": 2.3,
+   "t110": [
+    [
+     "BM-1F-031",
+     "CB10",
+     "inner west strip span 1",
+     "CONFLICT"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": true,
+   "plan_m2": 0.68662
+  },
+  "1F:BAND0026.2": {
+   "storey": "1F",
+   "band": "BAND0026.2",
+   "mark": "UNBOUND",
+   "binding": "UNBOUND",
+   "route_g": "HELD (route G UNBOUND)",
+   "route_g_m3": null,
+   "route_g_held_exposure_m3": 0.5475,
+   "depth_m": null,
+   "width_m": 0.3,
+   "length_m": 3.65,
+   "t110": [
+    [
+     "BM-1F-031",
+     "CB10",
+     "inner west strip span 2",
+     "CONFLICT"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": true,
+   "plan_m2": 1.08949
+  },
+  "1F:BAND0027.1": {
+   "storey": "1F",
+   "band": "BAND0027.1",
+   "mark": "CB11",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 1.509360469,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.75,
+   "width_m": 0.3,
+   "length_m": 6.7083,
+   "t110": [
+    [
+     "BM-1F-023",
+     "CB11",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 2.01572
+  },
+  "1F:BAND0027.2": {
+   "storey": "1F",
+   "band": "BAND0027.2",
+   "mark": "CB11",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.59625,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.75,
+   "width_m": 0.3,
+   "length_m": 2.65,
+   "t110": [
+    [
+     "BM-1F-023",
+     "CB11",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.79663
+  },
+  "1F:BAND0027.3": {
+   "storey": "1F",
+   "band": "BAND0027.3",
+   "mark": "CB11",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.7425,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.75,
+   "width_m": 0.3,
+   "length_m": 3.3,
+   "t110": [
+    [
+     "BM-1F-023",
+     "CB11",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.99141
+  },
+  "1F:BAND0028": {
+   "storey": "1F",
+   "band": "BAND0028",
+   "mark": "B18",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 1.65375,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.75,
+   "width_m": 0.35,
+   "length_m": 6.3,
+   "t110": [
+    [
+     "BM-1F-024",
+     "B18",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 2.20367
+  },
+  "1F:BAND0030.1": {
+   "storey": "1F",
+   "band": "BAND0030.1",
+   "mark": "B19",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 1.601237049,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.75,
+   "width_m": 0.4,
+   "length_m": 5.3375,
+   "t110": [
+    [
+     "BM-1F-025",
+     "B19",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 2.13581
+  },
+  "1F:BAND0031.1": {
+   "storey": "1F",
+   "band": "BAND0031.1",
+   "mark": "B23",
+   "binding": "BOUND",
+   "route_g": "HELD (route G UNLABELLED_SPAN_ACROSS_SUPPORT)",
+   "route_g_m3": null,
+   "route_g_held_exposure_m3": 1.0125,
+   "depth_m": 0.75,
+   "width_m": 0.45,
+   "length_m": 3.0,
+   "t110": [
+    [
+     "BM-1F-026",
+     "B23",
+     "beam span (west of the column)",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 1.34522
+  },
+  "1F:BAND0031.2": {
+   "storey": "1F",
+   "band": "BAND0031.2",
+   "mark": "B23",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 1.11375,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.75,
+   "width_m": 0.45,
+   "length_m": 3.3,
+   "t110": [
+    [
+     "BM-1F-026",
+     "B23",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 1.48002
+  },
+  "1F:BAND0032": {
+   "storey": "1F",
+   "band": "BAND0032",
+   "mark": "B25",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 2.836087573,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.75,
+   "width_m": 0.55,
+   "length_m": 6.8754,
+   "t110": [
+    [
+     "BM-1F-027",
+     "B25",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 3.79299
+  },
+  "1F:BAND0033": {
+   "storey": "1F",
+   "band": "BAND0033",
+   "mark": "B4",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.129385766,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.5,
+   "width_m": 0.2,
+   "length_m": 1.2939,
+   "t110": [],
+   "projection": false,
+   "width_conflict": false
+  },
+  "1F:BAND0034": {
+   "storey": "1F",
+   "band": "BAND0034",
+   "mark": "B4",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.151710972,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.5,
+   "width_m": 0.2,
+   "length_m": 1.5171,
+   "t110": [],
+   "projection": false,
+   "width_conflict": false
+  },
+  "1F:BAND0035": {
+   "storey": "1F",
+   "band": "BAND0035",
+   "mark": "UNBOUND",
+   "binding": "UNBOUND",
+   "route_g": "HELD (route G UNBOUND)",
+   "route_g_m3": null,
+   "route_g_held_exposure_m3": 0.121368777,
+   "depth_m": null,
+   "width_m": 0.2,
+   "length_m": 1.5171,
+   "t110": [],
+   "projection": false,
+   "width_conflict": false
+  },
+  "1F:BAND0036": {
+   "storey": "1F",
+   "band": "BAND0036",
+   "mark": "UNBOUND",
+   "binding": "UNBOUND",
+   "route_g": "HELD (route G UNBOUND)",
+   "route_g_m3": null,
+   "route_g_held_exposure_m3": 0.103508613,
+   "depth_m": null,
+   "width_m": 0.2,
+   "length_m": 1.2939,
+   "t110": [],
+   "projection": false,
+   "width_conflict": false
+  },
+  "GF:BAND0001": {
+   "storey": "GF",
+   "band": "BAND0001",
+   "mark": "B11",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.683109772,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.75,
+   "width_m": 0.2,
+   "length_m": 4.5541,
+   "t110": [
+    [
+     "BM-GF-001",
+     "B11",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.91037
+  },
+  "GF:BAND0002": {
+   "storey": "GF",
+   "band": "BAND0002",
+   "mark": "B1",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.1176,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.4,
+   "width_m": 0.2,
+   "length_m": 1.47,
+   "t110": [
+    [
+     "BM-GF-002",
+     "B1",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.29409
+  },
+  "GF:BAND0003": {
+   "storey": "GF",
+   "band": "BAND0003",
+   "mark": "B8",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.528021,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.75,
+   "width_m": 0.2,
+   "length_m": 3.5201,
+   "t110": [
+    [
+     "BM-GF-003",
+     "B8",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.70378
+  },
+  "GF:BAND0004": {
+   "storey": "GF",
+   "band": "BAND0004",
+   "mark": "B4",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.375,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.5,
+   "width_m": 0.2,
+   "length_m": 3.75,
+   "t110": [
+    [
+     "BM-GF-004",
+     "B4",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.74975
+  },
+  "GF:BAND0005": {
+   "storey": "GF",
+   "band": "BAND0005",
+   "mark": "B1",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.14,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.4,
+   "width_m": 0.2,
+   "length_m": 1.75,
+   "t110": [
+    [
+     "BM-GF-005",
+     "B1",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.3502
+  },
+  "GF:BAND0006": {
+   "storey": "GF",
+   "band": "BAND0006",
+   "mark": "UNBOUND",
+   "binding": "UNBOUND",
+   "route_g": "HELD (route G UNBOUND)",
+   "route_g_m3": null,
+   "route_g_held_exposure_m3": 0.136,
+   "depth_m": null,
+   "width_m": 0.2,
+   "length_m": 1.7,
+   "t110": [
+    [
+     "BM-GF-006",
+     "B7",
+     "beam strip at the void",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.33933
+  },
+  "GF:BAND0007": {
+   "storey": "GF",
+   "band": "BAND0007",
+   "mark": "B3",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.264,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.4,
+   "width_m": 0.2,
+   "length_m": 3.3,
+   "t110": [
+    [
+     "BM-GF-007",
+     "B3",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.65967
+  },
+  "GF:BAND0008": {
+   "storey": "GF",
+   "band": "BAND0008",
+   "mark": "B29",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 1.26398007,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.75,
+   "width_m": 0.2,
+   "length_m": 6.7412,
+   "t110": [
+    [
+     "BM-GF-054",
+     "B29",
+     "beam span",
+     "CONFLICT"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": true,
+   "plan_m2": 1.34779
+  },
+  "GF:BAND0009": {
+   "storey": "GF",
+   "band": "BAND0009",
+   "mark": "B1",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.203875164,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.4,
+   "width_m": 0.2,
+   "length_m": 2.5484,
+   "t110": [
+    [
+     "BM-GF-008",
+     "B1",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.50939
+  },
+  "GF:BAND0010": {
+   "storey": "GF",
+   "band": "BAND0010",
+   "mark": "B4",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.341334248,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.5,
+   "width_m": 0.2,
+   "length_m": 3.4159,
+   "t110": [
+    [
+     "BM-GF-009",
+     "B4",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.68304
+  },
+  "GF:BAND0011": {
+   "storey": "GF",
+   "band": "BAND0011",
+   "mark": "B4",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.197986,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.5,
+   "width_m": 0.2,
+   "length_m": 1.9799,
+   "t110": [
+    [
+     "BM-GF-010",
+     "B4",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.39558
+  },
+  "GF:BAND0012": {
+   "storey": "GF",
+   "band": "BAND0012",
+   "mark": "B4",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.45,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.5,
+   "width_m": 0.2,
+   "length_m": 4.5,
+   "t110": [
+    [
+     "BM-GF-011",
+     "B4",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.89953
+  },
+  "GF:BAND0013": {
+   "storey": "GF",
+   "band": "BAND0013",
+   "mark": "B1",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.096,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.4,
+   "width_m": 0.2,
+   "length_m": 1.2,
+   "t110": [
+    [
+     "BM-GF-012",
+     "B1",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.24046
+  },
+  "GF:BAND0014": {
+   "storey": "GF",
+   "band": "BAND0014",
+   "mark": "CB7",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 1.77,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.75,
+   "width_m": 0.2,
+   "length_m": 11.8,
+   "t110": [
+    [
+     "BM-GF-013",
+     "CB7",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 2.35896
+  },
+  "GF:BAND0015": {
+   "storey": "GF",
+   "band": "BAND0015",
+   "mark": "B1",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.091584285,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.4,
+   "width_m": 0.2,
+   "length_m": 1.1448,
+   "t110": [
+    [
+     "BM-GF-014",
+     "B1",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.22891
+  },
+  "GF:BAND0016.1": {
+   "storey": "GF",
+   "band": "BAND0016.1",
+   "mark": "B3",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.2,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.4,
+   "width_m": 0.2,
+   "length_m": 2.5,
+   "t110": [
+    [
+     "BM-GF-015",
+     "B3",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.49983
+  },
+  "GF:BAND0017": {
+   "storey": "GF",
+   "band": "BAND0017",
+   "mark": "B5",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.354315596,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.5,
+   "width_m": 0.2,
+   "length_m": 3.5432,
+   "t110": [
+    [
+     "BM-GF-016",
+     "B5",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.70879
+  },
+  "GF:BAND0018": {
+   "storey": "GF",
+   "band": "BAND0018",
+   "mark": "B4",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.289066055,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.5,
+   "width_m": 0.2,
+   "length_m": 2.8907,
+   "t110": [
+    [
+     "BM-GF-017",
+     "B4",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.57771
+  },
+  "GF:BAND0019.1": {
+   "storey": "GF",
+   "band": "BAND0019.1",
+   "mark": "CB3",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.453,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.75,
+   "width_m": 0.2,
+   "length_m": 3.02,
+   "t110": [
+    [
+     "BM-GF-018",
+     "CB3",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.60413
+  },
+  "GF:BAND0019.2": {
+   "storey": "GF",
+   "band": "BAND0019.2",
+   "mark": "MULTIPLE_MARKS",
+   "binding": "MULTIPLE_MARKS",
+   "route_g": "HELD (route G MULTIPLE_MARKS)",
+   "route_g_m3": null,
+   "route_g_held_exposure_m3": 0.212,
+   "depth_m": null,
+   "width_m": 0.2,
+   "length_m": 2.65,
+   "t110": [
+    [
+     "BM-GF-057",
+     "CB3 and B3 (With Stair)",
+     "two marks on one span",
+     "HELD"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.52963
+  },
+  "GF:BAND0019.3": {
+   "storey": "GF",
+   "band": "BAND0019.3",
+   "mark": "CB3",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.478313528,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.75,
+   "width_m": 0.2,
+   "length_m": 3.1888,
+   "t110": [
+    [
+     "BM-GF-018",
+     "CB3",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.63732
+  },
+  "GF:BAND0020.1": {
+   "storey": "GF",
+   "band": "BAND0020.1",
+   "mark": "B1",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.064,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.4,
+   "width_m": 0.2,
+   "length_m": 0.8,
+   "t110": [
+    [
+     "BM-GF-019",
+     "B1",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.16054
+  },
+  "GF:BAND0020.2": {
+   "storey": "GF",
+   "band": "BAND0020.2",
+   "mark": "B2",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.216,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.4,
+   "width_m": 0.2,
+   "length_m": 2.7,
+   "t110": [
+    [
+     "BM-GF-020",
+     "B2",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.53986
+  },
+  "GF:BAND0021.1": {
+   "storey": "GF",
+   "band": "BAND0021.1",
+   "mark": "CB4",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.237438267,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.5,
+   "width_m": 0.2,
+   "length_m": 2.3744,
+   "t110": [
+    [
+     "BM-GF-021",
+     "CB4",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.47483
+  },
+  "GF:BAND0021.2": {
+   "storey": "GF",
+   "band": "BAND0021.2",
+   "mark": "CB4",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.32,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.5,
+   "width_m": 0.2,
+   "length_m": 3.2,
+   "t110": [
+    [
+     "BM-GF-021",
+     "CB4",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.63944
+  },
+  "GF:BAND0022.1": {
+   "storey": "GF",
+   "band": "BAND0022.1",
+   "mark": "B14",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.27,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.75,
+   "width_m": 0.2,
+   "length_m": 1.8,
+   "t110": [
+    [
+     "BM-GF-022",
+     "B14",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.35964
+  },
+  "GF:BAND0023.1": {
+   "storey": "GF",
+   "band": "BAND0023.1",
+   "mark": "B1",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.056,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.4,
+   "width_m": 0.2,
+   "length_m": 0.7,
+   "t110": [
+    [
+     "BM-GF-023",
+     "B1",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.14021
+  },
+  "GF:BAND0023.2": {
+   "storey": "GF",
+   "band": "BAND0023.2",
+   "mark": "B3",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.236,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.4,
+   "width_m": 0.2,
+   "length_m": 2.95,
+   "t110": [
+    [
+     "BM-GF-024",
+     "B3",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.58998
+  },
+  "GF:BAND0024.1": {
+   "storey": "GF",
+   "band": "BAND0024.1",
+   "mark": "B2",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.216,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.4,
+   "width_m": 0.2,
+   "length_m": 2.7,
+   "t110": [
+    [
+     "BM-GF-025",
+     "B2",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.53987
+  },
+  "GF:BAND0025.1": {
+   "storey": "GF",
+   "band": "BAND0025.1",
+   "mark": "B7",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.18,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.75,
+   "width_m": 0.2,
+   "length_m": 1.2,
+   "t110": [
+    [
+     "BM-GF-026",
+     "B7",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.24046
+  },
+  "GF:BAND0026.1": {
+   "storey": "GF",
+   "band": "BAND0026.1",
+   "mark": "B1",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.144,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.4,
+   "width_m": 0.2,
+   "length_m": 1.8,
+   "t110": [
+    [
+     "BM-GF-027",
+     "B1",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.35963
+  },
+  "GF:BAND0027": {
+   "storey": "GF",
+   "band": "BAND0027",
+   "mark": "B2",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.232,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.4,
+   "width_m": 0.2,
+   "length_m": 2.9,
+   "t110": [
+    [
+     "BM-GF-028",
+     "B2",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.58961
+  },
+  "GF:BAND0028": {
+   "storey": "GF",
+   "band": "BAND0028",
+   "mark": "B9",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.945,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.75,
+   "width_m": 0.2,
+   "length_m": 6.3,
+   "t110": [
+    [
+     "BM-GF-029",
+     "B9",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 1.25922
+  },
+  "GF:BAND0029.1": {
+   "storey": "GF",
+   "band": "BAND0029.1",
+   "mark": "CB6",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.6,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.75,
+   "width_m": 0.2,
+   "length_m": 4.0,
+   "t110": [
+    [
+     "BM-GF-030",
+     "CB6",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.79987
+  },
+  "GF:BAND0029.2": {
+   "storey": "GF",
+   "band": "BAND0029.2",
+   "mark": "CB6",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.8775,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.75,
+   "width_m": 0.2,
+   "length_m": 5.85,
+   "t110": [
+    [
+     "BM-GF-030",
+     "CB6",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 1.16898
+  },
+  "GF:BAND0029.3": {
+   "storey": "GF",
+   "band": "BAND0029.3",
+   "mark": "B1",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.096,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.4,
+   "width_m": 0.2,
+   "length_m": 1.2,
+   "t110": [
+    [
+     "BM-GF-031",
+     "B1",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.23987
+  },
+  "GF:BAND0029.4": {
+   "storey": "GF",
+   "band": "BAND0029.4",
+   "mark": "B1",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.15139055,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.4,
+   "width_m": 0.2,
+   "length_m": 1.9,
+   "t110": [
+    [
+     "BM-GF-031",
+     "B1",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.37995
+  },
+  "GF:BAND0030.1": {
+   "storey": "GF",
+   "band": "BAND0030.1",
+   "mark": "B4",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.445,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.5,
+   "width_m": 0.2,
+   "length_m": 4.45,
+   "t110": [
+    [
+     "BM-GF-032",
+     "B4",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.88938
+  },
+  "GF:BAND0031.1": {
+   "storey": "GF",
+   "band": "BAND0031.1",
+   "mark": "UNBOUND",
+   "binding": "UNBOUND",
+   "route_g": "HELD (route G UNBOUND)",
+   "route_g_m3": null,
+   "route_g_held_exposure_m3": 0.24,
+   "depth_m": null,
+   "width_m": 0.2,
+   "length_m": 3.0,
+   "t110": [
+    [
+     "BM-GF-058",
+     "(none)",
+     "0.20 strip north of B20",
+     "HELD"
+    ]
+   ],
+   "projection": true,
+   "width_conflict": false,
+   "plan_m2": 0.60007
+  },
+  "GF:BAND0031.2": {
+   "storey": "GF",
+   "band": "BAND0031.2",
+   "mark": "UNBOUND",
+   "binding": "UNBOUND",
+   "route_g": "HELD (route G UNBOUND)",
+   "route_g_m3": null,
+   "route_g_held_exposure_m3": 0.042,
+   "depth_m": null,
+   "width_m": 0.2,
+   "length_m": 0.525,
+   "t110": [
+    [
+     "BM-GF-058",
+     "(none)",
+     "0.20 strip north of B20 (east piece)",
+     "HELD"
+    ]
+   ],
+   "projection": true,
+   "width_conflict": false,
+   "plan_m2": 0.10503
+  },
+  "GF:BAND0032": {
+   "storey": "GF",
+   "band": "BAND0032",
+   "mark": "B1",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.076,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.4,
+   "width_m": 0.2,
+   "length_m": 0.95,
+   "t110": [
+    [
+     "BM-GF-033",
+     "B1",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.18963
+  },
+  "GF:BAND0033.1": {
+   "storey": "GF",
+   "band": "BAND0033.1",
+   "mark": "B1",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.104,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.4,
+   "width_m": 0.2,
+   "length_m": 1.3,
+   "t110": [
+    [
+     "BM-GF-034",
+     "B1",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.2601
+  },
+  "GF:BAND0033.2": {
+   "storey": "GF",
+   "band": "BAND0033.2",
+   "mark": "CB5",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.184,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.4,
+   "width_m": 0.2,
+   "length_m": 2.3,
+   "t110": [
+    [
+     "BM-GF-035",
+     "CB5",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.45993
+  },
+  "GF:BAND0034.1": {
+   "storey": "GF",
+   "band": "BAND0034.1",
+   "mark": "B13",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.942592455,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.75,
+   "width_m": 0.25,
+   "length_m": 5.0272,
+   "t110": [
+    [
+     "BM-GF-036",
+     "B13",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 1.25243
+  },
+  "GF:BAND0035.1": {
+   "storey": "GF",
+   "band": "BAND0035.1",
+   "mark": "B28",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.15091125,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.75,
+   "width_m": 0.25,
+   "length_m": 0.8049,
+   "t110": [
+    [
+     "BM-GF-037",
+     "B28",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.2014
+  },
+  "GF:BAND0036.1": {
+   "storey": "GF",
+   "band": "BAND0036.1",
+   "mark": "CB2",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.347,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.5,
+   "width_m": 0.25,
+   "length_m": 3.47,
+   "t110": [
+    [
+     "BM-GF-055",
+     "CB2",
+     "beam span",
+     "CONFLICT"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": true,
+   "plan_m2": 0.87013
+  },
+  "GF:BAND0036.2": {
+   "storey": "GF",
+   "band": "BAND0036.2",
+   "mark": "CB2",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.335,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.5,
+   "width_m": 0.25,
+   "length_m": 3.35,
+   "t110": [
+    [
+     "BM-GF-055",
+     "CB2",
+     "beam span",
+     "CONFLICT"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": true,
+   "plan_m2": 0.84005
+  },
+  "GF:BAND0037.1": {
+   "storey": "GF",
+   "band": "BAND0037.1",
+   "mark": "B16",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.86625,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.75,
+   "width_m": 0.3,
+   "length_m": 3.85,
+   "t110": [
+    [
+     "BM-GF-038",
+     "B16",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 1.14889
+  },
+  "GF:BAND0038.1": {
+   "storey": "GF",
+   "band": "BAND0038.1",
+   "mark": "CA",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.1725,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.5,
+   "width_m": 0.3,
+   "length_m": 1.15,
+   "t110": [
+    [
+     "BM-GF-039",
+     "CA",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.34344
+  },
+  "GF:BAND0039": {
+   "storey": "GF",
+   "band": "BAND0039",
+   "mark": "CB8",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.776298933,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.75,
+   "width_m": 0.3,
+   "length_m": 3.4502,
+   "t110": [
+    [
+     "BM-GF-040",
+     "CB8",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 1.02954
+  },
+  "GF:BAND0040.1": {
+   "storey": "GF",
+   "band": "BAND0040.1",
+   "mark": "CB8",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 1.292625,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.75,
+   "width_m": 0.3,
+   "length_m": 5.745,
+   "t110": [
+    [
+     "BM-GF-041",
+     "CB8",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 1.71193
+  },
+  "GF:BAND0040.2": {
+   "storey": "GF",
+   "band": "BAND0040.2",
+   "mark": "CB8",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 1.42875,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.75,
+   "width_m": 0.3,
+   "length_m": 6.35,
+   "t110": [
+    [
+     "BM-GF-041",
+     "CB8",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 1.89336
+  },
+  "GF:BAND0041.1": {
+   "storey": "GF",
+   "band": "BAND0041.1",
+   "mark": "CB1",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 1.9425,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.75,
+   "width_m": 0.35,
+   "length_m": 7.4,
+   "t110": [
+    [
+     "BM-GF-042",
+     "CB1",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 2.6072
+  },
+  "GF:BAND0041.2": {
+   "storey": "GF",
+   "band": "BAND0041.2",
+   "mark": "CB1",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 1.33875,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.75,
+   "width_m": 0.35,
+   "length_m": 5.1,
+   "t110": [
+    [
+     "BM-GF-042",
+     "CB1",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 1.79713
+  },
+  "GF:BAND0042": {
+   "storey": "GF",
+   "band": "BAND0042",
+   "mark": "B21",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 2.524572334,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.75,
+   "width_m": 0.4,
+   "length_m": 7.4802,
+   "t110": [
+    [
+     "BM-GF-056",
+     "B21",
+     "beam span",
+     "CONFLICT"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": true,
+   "plan_m2": 3.00071
+  },
+  "GF:BAND0043.1": {
+   "storey": "GF",
+   "band": "BAND0043.1",
+   "mark": "B20",
+   "binding": "BOUND",
+   "route_g": "HELD (route G UNLABELLED_SPAN_ACROSS_SUPPORT)",
+   "route_g_m3": null,
+   "route_g_held_exposure_m3": 0.9,
+   "depth_m": 0.75,
+   "width_m": 0.4,
+   "length_m": 3.0,
+   "t110": [
+    [
+     "BM-GF-043",
+     "B20",
+     "beam span (west of the column)",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 1.20046
+  },
+  "GF:BAND0043.2": {
+   "storey": "GF",
+   "band": "BAND0043.2",
+   "mark": "B20",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.99,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.75,
+   "width_m": 0.4,
+   "length_m": 3.3,
+   "t110": [
+    [
+     "BM-GF-043",
+     "B20",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 1.31932
+  },
+  "GF:BAND0044.1": {
+   "storey": "GF",
+   "band": "BAND0044.1",
+   "mark": "B17",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 1.72125,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.75,
+   "width_m": 0.45,
+   "length_m": 5.1,
+   "t110": [
+    [
+     "BM-GF-044",
+     "B17",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 2.29814
+  },
+  "GF:BAND0045": {
+   "storey": "GF",
+   "band": "BAND0045",
+   "mark": "B22",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 2.925,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.75,
+   "width_m": 0.5,
+   "length_m": 7.8,
+   "t110": [
+    [
+     "BM-GF-045",
+     "B22",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 3.88702
+  },
+  "GF:BAND0046.1": {
+   "storey": "GF",
+   "band": "BAND0046.1",
+   "mark": "B24",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 1.33125,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.75,
+   "width_m": 0.5,
+   "length_m": 3.55,
+   "t110": [
+    [
+     "BM-GF-046",
+     "B24",
+     "beam span",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 1.7807
+  },
+  "GF:BAND0046.2": {
+   "storey": "GF",
+   "band": "BAND0046.2",
+   "mark": "B24",
+   "binding": "BOUND",
+   "route_g": "HELD (route G UNLABELLED_SPAN_ACROSS_SUPPORT)",
+   "route_g_m3": null,
+   "route_g_held_exposure_m3": 0.5625,
+   "depth_m": 0.75,
+   "width_m": 0.5,
+   "length_m": 1.5,
+   "t110": [
+    [
+     "BM-GF-059",
+     "(none)",
+     "unlabelled span past a column",
+     "HELD"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.75273
+  },
+  "GF:BAND0047.1": {
+   "storey": "GF",
+   "band": "BAND0047.1",
+   "mark": "B26",
+   "binding": "BOUND",
+   "route_g": "HELD (route G UNLABELLED_SPAN_ACROSS_SUPPORT)",
+   "route_g_m3": null,
+   "route_g_held_exposure_m3": 0.683248018,
+   "depth_m": 0.85,
+   "width_m": 0.65,
+   "length_m": 1.2366,
+   "t110": [],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.80506
+  },
+  "GF:BAND0047.2": {
+   "storey": "GF",
+   "band": "BAND0047.2",
+   "mark": "B26",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 3.103895567,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.85,
+   "width_m": 0.65,
+   "length_m": 5.6179,
+   "t110": [],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 3.65704
+  },
+  "GF:BAND0048.1": {
+   "storey": "GF",
+   "band": "BAND0048.1",
+   "mark": "B27",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 2.502511916,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.85,
+   "width_m": 0.9,
+   "length_m": 3.2713,
+   "t110": [],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 2.94801
+  },
+  "GF:BAND0048.2": {
+   "storey": "GF",
+   "band": "BAND0048.2",
+   "mark": "B27",
+   "binding": "BOUND",
+   "route_g": "HELD (route G UNLABELLED_SPAN_ACROSS_SUPPORT)",
+   "route_g_m3": null,
+   "route_g_held_exposure_m3": 0.840630374,
+   "depth_m": 0.85,
+   "width_m": 0.9,
+   "length_m": 1.1027,
+   "t110": [],
+   "projection": false,
+   "width_conflict": false,
+   "plan_m2": 0.99372
+  },
+  "GF:BAND0049": {
+   "storey": "GF",
+   "band": "BAND0049",
+   "mark": "B7",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.282743339,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.75,
+   "width_m": 0.2,
+   "length_m": 1.885,
+   "t110": [
+    [
+     "BM-GF-049",
+     "B7",
+     "void ring arc piece",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false
+  },
+  "GF:BAND0050": {
+   "storey": "GF",
+   "band": "BAND0050",
+   "mark": "B7",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.092372232,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.75,
+   "width_m": 0.2,
+   "length_m": 0.6158,
+   "t110": [
+    [
+     "BM-GF-050",
+     "B7",
+     "void ring arc piece",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false
+  },
+  "GF:BAND0051": {
+   "storey": "GF",
+   "band": "BAND0051",
+   "mark": "B7",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.071471968,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.75,
+   "width_m": 0.2,
+   "length_m": 0.4765,
+   "t110": [
+    [
+     "BM-GF-051",
+     "B7",
+     "void ring arc piece",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false
+  },
+  "GF:BAND0052": {
+   "storey": "GF",
+   "band": "BAND0052",
+   "mark": "B7",
+   "binding": "BOUND",
+   "route_g": "RELEASED",
+   "route_g_m3": 0.052268595,
+   "route_g_held_exposure_m3": null,
+   "depth_m": 0.75,
+   "width_m": 0.2,
+   "length_m": 0.3485,
+   "t110": [
+    [
+     "BM-GF-052",
+     "B7",
+     "void ring arc piece",
+     "CALCULATED"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false
+  },
+  "GF:BAND0053": {
+   "storey": "GF",
+   "band": "BAND0053",
+   "mark": "UNBOUND",
+   "binding": "UNBOUND",
+   "route_g": "HELD (route G UNBOUND)",
+   "route_g_m3": null,
+   "route_g_held_exposure_m3": 0.035018311,
+   "depth_m": null,
+   "width_m": 0.2,
+   "length_m": 0.4377,
+   "t110": [
+    [
+     "BM-GF-060",
+     "(B7, contested)",
+     "void ring arc piece",
+     "HELD"
+    ]
+   ],
+   "projection": false,
+   "width_conflict": false
+  }
+ },
+ "gaps": [
+  {
+   "storey": "GF",
+   "a": "GF:BAND0019.1",
+   "b": "GF:BAND0019.2",
+   "mark_a": "CB3",
+   "mark_b": "MULTIPLE_MARKS",
+   "length_m": 0.7996,
+   "width_m": 0.1999,
+   "area_m2": 0.15984,
+   "support_share": 0.9999,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0,
+   "other_beams": [],
+   "members": [
+    [
+     "380",
+     "COLUMN_BELOW",
+     0.9999
+    ]
+   ],
+   "edge_line_cover": [
+    1.0,
+    1.0
+   ],
+   "outline_face_cover": [
+    1.0,
+    0.0
+   ],
+   "edges_continuous": true,
+   "depth_m": null,
+   "depth_note": "pieces differ 0.75 / None",
+   "projection": false,
+   "width_conflict": false
+  },
+  {
+   "storey": "GF",
+   "a": "GF:BAND0019.2",
+   "b": "GF:BAND0019.3",
+   "mark_a": "MULTIPLE_MARKS",
+   "mark_b": "CB3",
+   "length_m": 0.5997,
+   "width_m": 0.1999,
+   "area_m2": 0.11988,
+   "support_share": 0.9977,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0,
+   "other_beams": [
+    "GF:BAND0013"
+   ],
+   "members": [
+    [
+     "374",
+     "COLUMN_BELOW",
+     0.9977
+    ]
+   ],
+   "edge_line_cover": [
+    1.0,
+    1.0
+   ],
+   "outline_face_cover": [
+    0.999,
+    0.0
+   ],
+   "edges_continuous": true,
+   "depth_m": null,
+   "depth_note": "pieces differ None / 0.75",
+   "projection": false,
+   "width_conflict": false
+  },
+  {
+   "storey": "GF",
+   "a": "GF:BAND0020.1",
+   "b": "GF:BAND0020.2",
+   "mark_a": "B1",
+   "mark_b": "B2",
+   "length_m": 0.4981,
+   "width_m": 0.1999,
+   "area_m2": 0.09957,
+   "support_share": 0.9968,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0,
+   "other_beams": [],
+   "members": [
+    [
+     "36B",
+     "COLUMN_BELOW",
+     0.9968
+    ]
+   ],
+   "edge_line_cover": [
+    1.0,
+    1.0
+   ],
+   "outline_face_cover": [
+    0.0,
+    0.998
+   ],
+   "edges_continuous": true,
+   "depth_m": 0.4,
+   "depth_note": null,
+   "projection": false,
+   "width_conflict": false
+  },
+  {
+   "storey": "GF",
+   "a": "GF:BAND0021.1",
+   "b": "GF:BAND0021.2",
+   "mark_a": "CB4",
+   "mark_b": "CB4",
+   "length_m": 0.7014,
+   "width_m": 0.1999,
+   "area_m2": 0.14021,
+   "support_share": 0.998,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0,
+   "other_beams": [
+    "GF:BAND0029.4"
+   ],
+   "members": [
+    [
+     "362",
+     "COLUMN_BELOW",
+     0.998
+    ]
+   ],
+   "edge_line_cover": [
+    1.0,
+    1.0
+   ],
+   "outline_face_cover": [
+    0.0,
+    0.998
+   ],
+   "edges_continuous": true,
+   "depth_m": 0.5,
+   "depth_note": null,
+   "projection": false,
+   "width_conflict": false
+  },
+  {
+   "storey": "GF",
+   "a": "GF:BAND0023.1",
+   "b": "GF:BAND0023.2",
+   "mark_a": "B1",
+   "mark_b": "B3",
+   "length_m": 0.4981,
+   "width_m": 0.1999,
+   "area_m2": 0.09957,
+   "support_share": 0.9943,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0,
+   "other_beams": [],
+   "members": [
+    [
+     "33B",
+     "COLUMN_BELOW",
+     0.9943
+    ]
+   ],
+   "edge_line_cover": [
+    1.0,
+    1.0
+   ],
+   "outline_face_cover": [
+    0.999,
+    0.999
+   ],
+   "edges_continuous": true,
+   "depth_m": 0.4,
+   "depth_note": null,
+   "projection": false,
+   "width_conflict": false
+  },
+  {
+   "storey": "GF",
+   "a": "GF:BAND0029.1",
+   "b": "GF:BAND0029.2",
+   "mark_a": "CB6",
+   "mark_b": "CB6",
+   "length_m": 0.5015,
+   "width_m": 0.1999,
+   "area_m2": 0.10024,
+   "support_share": 0.9935,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0,
+   "other_beams": [],
+   "members": [
+    [
+     "353",
+     "COLUMN_BELOW",
+     0.9935
+    ]
+   ],
+   "edge_line_cover": [
+    1.0,
+    1.0
+   ],
+   "outline_face_cover": [
+    0.0,
+    0.997
+   ],
+   "edges_continuous": true,
+   "depth_m": 0.75,
+   "depth_note": null,
+   "projection": false,
+   "width_conflict": false
+  },
+  {
+   "storey": "GF",
+   "a": "GF:BAND0029.2",
+   "b": "GF:BAND0029.3",
+   "mark_a": "CB6",
+   "mark_b": "B1",
+   "length_m": 0.2507,
+   "width_m": 0.1999,
+   "area_m2": 0.05012,
+   "support_share": 0.9923,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0,
+   "other_beams": [],
+   "members": [
+    [
+     "35F",
+     "COLUMN_BELOW",
+     0.9923
+    ]
+   ],
+   "edge_line_cover": [
+    1.0,
+    1.0
+   ],
+   "outline_face_cover": [
+    0.0,
+    0.992
+   ],
+   "edges_continuous": true,
+   "depth_m": null,
+   "depth_note": "pieces differ 0.75 / 0.4",
+   "projection": false,
+   "width_conflict": false
+  },
+  {
+   "storey": "GF",
+   "a": "GF:BAND0029.3",
+   "b": "GF:BAND0029.4",
+   "mark_a": "B1",
+   "mark_b": "B1",
+   "length_m": 1.1012,
+   "width_m": 0.1999,
+   "area_m2": 0.22013,
+   "support_share": 0.9984,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0,
+   "other_beams": [],
+   "members": [
+    [
+     "35C",
+     "COLUMN_BELOW",
+     0.9984
+    ]
+   ],
+   "edge_line_cover": [
+    1.0,
+    1.0
+   ],
+   "outline_face_cover": [
+    0.0,
+    0.998
+   ],
+   "edges_continuous": true,
+   "depth_m": 0.4,
+   "depth_note": null,
+   "projection": false,
+   "width_conflict": false
+  },
+  {
+   "storey": "GF",
+   "a": "GF:BAND0031.1",
+   "b": "GF:BAND0031.2",
+   "mark_a": "UNBOUND",
+   "mark_b": "UNBOUND",
+   "length_m": 0.7996,
+   "width_m": 0.1999,
+   "area_m2": 0.15984,
+   "support_share": 0.001,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0,
+   "other_beams": [],
+   "members": [
+    [
+     "368",
+     "COLUMN_BELOW",
+     0.001
+    ]
+   ],
+   "edge_line_cover": [
+    1.0,
+    1.0
+   ],
+   "outline_face_cover": [
+    1.0,
+    0.0
+   ],
+   "edges_continuous": true,
+   "depth_m": null,
+   "depth_note": null,
+   "projection": true,
+   "width_conflict": false
+  },
+  {
+   "storey": "GF",
+   "a": "GF:BAND0033.1",
+   "b": "GF:BAND0033.2",
+   "mark_a": "B1",
+   "mark_b": "CB5",
+   "length_m": 0.4981,
+   "width_m": 0.1999,
+   "area_m2": 0.09958,
+   "support_share": 1.0,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0,
+   "other_beams": [],
+   "members": [
+    [
+     "365",
+     "COLUMN_BELOW",
+     1.0
+    ]
+   ],
+   "edge_line_cover": [
+    1.0,
+    1.0
+   ],
+   "outline_face_cover": [
+    1.0,
+    0.0
+   ],
+   "edges_continuous": true,
+   "depth_m": 0.4,
+   "depth_note": null,
+   "projection": false,
+   "width_conflict": false
+  },
+  {
+   "storey": "GF",
+   "a": "GF:BAND0036.1",
+   "b": "GF:BAND0036.2",
+   "mark_a": "CB2",
+   "mark_b": "CB2",
+   "length_m": 0.5997,
+   "width_m": 0.2507,
+   "area_m2": 0.15034,
+   "support_share": 0.9893,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0,
+   "other_beams": [],
+   "members": [
+    [
+     "332",
+     "COLUMN_BELOW",
+     0.9893
+    ]
+   ],
+   "edge_line_cover": [
+    1.0,
+    1.0
+   ],
+   "outline_face_cover": [
+    0.998,
+    0.998
+   ],
+   "edges_continuous": true,
+   "depth_m": 0.5,
+   "depth_note": null,
+   "projection": false,
+   "width_conflict": true
+  },
+  {
+   "storey": "GF",
+   "a": "GF:BAND0040.1",
+   "b": "GF:BAND0040.2",
+   "mark_a": "CB8",
+   "mark_b": "CB8",
+   "length_m": 0.5015,
+   "width_m": 0.2981,
+   "area_m2": 0.14948,
+   "support_share": 0.8362,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0,
+   "other_beams": [],
+   "members": [
+    [
+     "383",
+     "COLUMN_BELOW",
+     0.8362
+    ]
+   ],
+   "edge_line_cover": [
+    1.0,
+    1.0
+   ],
+   "outline_face_cover": [
+    0.997,
+    0.0
+   ],
+   "edges_continuous": true,
+   "depth_m": 0.75,
+   "depth_note": null,
+   "projection": false,
+   "width_conflict": false
+  },
+  {
+   "storey": "GF",
+   "a": "GF:BAND0041.1",
+   "b": "GF:BAND0041.2",
+   "mark_a": "CB1",
+   "mark_b": "CB1",
+   "length_m": 0.5015,
+   "width_m": 0.3523,
+   "area_m2": 0.17668,
+   "support_share": 0.566,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0,
+   "other_beams": [],
+   "members": [
+    [
+     "344",
+     "COLUMN_BELOW",
+     0.566
+    ]
+   ],
+   "edge_line_cover": [
+    1.0,
+    1.0
+   ],
+   "outline_face_cover": [
+    0.997,
+    0.0
+   ],
+   "edges_continuous": true,
+   "depth_m": 0.75,
+   "depth_note": null,
+   "projection": false,
+   "width_conflict": false
+  },
+  {
+   "storey": "GF",
+   "a": "GF:BAND0043.1",
+   "b": "GF:BAND0043.2",
+   "mark_a": "B20",
+   "mark_b": "B20",
+   "length_m": 0.7996,
+   "width_m": 0.3998,
+   "area_m2": 0.31968,
+   "support_share": 0.6246,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0,
+   "other_beams": [],
+   "members": [
+    [
+     "368",
+     "COLUMN_BELOW",
+     0.6246
+    ]
+   ],
+   "edge_line_cover": [
+    1.0,
+    1.0
+   ],
+   "outline_face_cover": [
+    0.0,
+    1.0
+   ],
+   "edges_continuous": true,
+   "depth_m": 0.75,
+   "depth_note": null,
+   "projection": false,
+   "width_conflict": false
+  },
+  {
+   "storey": "GF",
+   "a": "GF:BAND0046.1",
+   "b": "GF:BAND0046.2",
+   "mark_a": "B24",
+   "mark_b": "B24",
+   "length_m": 0.5014,
+   "width_m": 0.5015,
+   "area_m2": 0.25145,
+   "support_share": 0.4968,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0,
+   "other_beams": [],
+   "members": [
+    [
+     "335",
+     "COLUMN_BELOW",
+     0.4968
+    ]
+   ],
+   "edge_line_cover": [
+    1.0,
+    1.0
+   ],
+   "outline_face_cover": [
+    0.0,
+    0.997
+   ],
+   "edges_continuous": true,
+   "depth_m": 0.75,
+   "depth_note": null,
+   "projection": false,
+   "width_conflict": false
+  },
+  {
+   "storey": "GF",
+   "a": "GF:BAND0047.1",
+   "b": "GF:BAND0047.2",
+   "mark_a": "B26",
+   "mark_b": "B26",
+   "length_m": 0.2102,
+   "width_m": 0.6507,
+   "area_m2": 0.13678,
+   "support_share": 0.0,
+   "carried_share": 0.7301,
+   "other_beam_share": 0.0,
+   "other_beams": [],
+   "members": [
+    [
+     "386",
+     "CARRIED_COLUMN",
+     0.7301
+    ]
+   ],
+   "edge_line_cover": [
+    1.0,
+    1.0
+   ],
+   "outline_face_cover": [
+    0.0,
+    0.0
+   ],
+   "edges_continuous": true,
+   "depth_m": 0.85,
+   "depth_note": null,
+   "projection": false,
+   "width_conflict": false
+  },
+  {
+   "storey": "GF",
+   "a": "GF:BAND0048.1",
+   "b": "GF:BAND0048.2",
+   "mark_a": "B27",
+   "mark_b": "B27",
+   "length_m": 0.5768,
+   "width_m": 0.9012,
+   "area_m2": 0.51982,
+   "support_share": 0.0,
+   "carried_share": 0.2693,
+   "other_beam_share": 0.0,
+   "other_beams": [],
+   "members": [
+    [
+     "329",
+     "CARRIED_COLUMN",
+     0.2693
+    ]
+   ],
+   "edge_line_cover": [
+    1.0,
+    1.0
+   ],
+   "outline_face_cover": [
+    0.0,
+    0.0
+   ],
+   "edges_continuous": true,
+   "depth_m": 0.85,
+   "depth_note": null,
+   "projection": false,
+   "width_conflict": false
+  },
+  {
+   "storey": "1F",
+   "a": "1F:BAND0001.1",
+   "b": "1F:BAND0001.2",
+   "mark_a": "B3",
+   "mark_b": "CB9",
+   "length_m": 0.1996,
+   "width_m": 0.2017,
+   "area_m2": 0.04026,
+   "support_share": 0.9919,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0,
+   "other_beams": [],
+   "members": [
+    [
+     "670",
+     "COLUMN_BELOW",
+     0.9919
+    ]
+   ],
+   "edge_line_cover": [
+    1.0,
+    1.0
+   ],
+   "outline_face_cover": [
+    0.0,
+    0.996
+   ],
+   "edges_continuous": true,
+   "depth_m": null,
+   "depth_note": "pieces differ 0.4 / 0.5",
+   "projection": false,
+   "width_conflict": false
+  },
+  {
+   "storey": "1F",
+   "a": "1F:BAND0001.2",
+   "b": "1F:BAND0001.3",
+   "mark_a": "CB9",
+   "mark_b": "CB9",
+   "length_m": 0.5989,
+   "width_m": 0.2018,
+   "area_m2": 0.12086,
+   "support_share": 0.9957,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0,
+   "other_beams": [],
+   "members": [
+    [
+     "673",
+     "COLUMN_BELOW",
+     0.9957
+    ]
+   ],
+   "edge_line_cover": [
+    1.0,
+    1.0
+   ],
+   "outline_face_cover": [
+    0.0,
+    0.999
+   ],
+   "edges_continuous": true,
+   "depth_m": 0.5,
+   "depth_note": null,
+   "projection": false,
+   "width_conflict": false
+  },
+  {
+   "storey": "1F",
+   "a": "1F:BAND0001.3",
+   "b": "1F:BAND0001.4",
+   "mark_a": "CB9",
+   "mark_b": "CB9",
+   "length_m": 0.5002,
+   "width_m": 0.2018,
+   "area_m2": 0.10094,
+   "support_share": 0.9947,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0,
+   "other_beams": [],
+   "members": [
+    [
+     "697",
+     "COLUMN_BELOW",
+     0.9947
+    ]
+   ],
+   "edge_line_cover": [
+    1.0,
+    1.0
+   ],
+   "outline_face_cover": [
+    0.0,
+    0.998
+   ],
+   "edges_continuous": true,
+   "depth_m": 0.5,
+   "depth_note": null,
+   "projection": false,
+   "width_conflict": false
+  },
+  {
+   "storey": "1F",
+   "a": "1F:BAND0005.1",
+   "b": "1F:BAND0005.2",
+   "mark_a": "B2",
+   "mark_b": "B2",
+   "length_m": 0.5002,
+   "width_m": 0.2018,
+   "area_m2": 0.10094,
+   "support_share": 0.9937,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0,
+   "other_beams": [],
+   "members": [
+    [
+     "691",
+     "COLUMN_BELOW",
+     0.9937
+    ]
+   ],
+   "edge_line_cover": [
+    1.0,
+    1.0
+   ],
+   "outline_face_cover": [
+    0.0,
+    0.999
+   ],
+   "edges_continuous": true,
+   "depth_m": 0.4,
+   "depth_note": null,
+   "projection": false,
+   "width_conflict": false
+  },
+  {
+   "storey": "1F",
+   "a": "1F:BAND0007.1",
+   "b": "1F:BAND0007.2",
+   "mark_a": "B1",
+   "mark_b": "B2",
+   "length_m": 0.5002,
+   "width_m": 0.1996,
+   "area_m2": 0.09984,
+   "support_share": 0.9982,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0,
+   "other_beams": [],
+   "members": [
+    [
+     "67C",
+     "COLUMN_BELOW",
+     0.9982
+    ]
+   ],
+   "edge_line_cover": [
+    1.0,
+    1.0
+   ],
+   "outline_face_cover": [
+    0.999,
+    0.999
+   ],
+   "edges_continuous": true,
+   "depth_m": 0.4,
+   "depth_note": null,
+   "projection": false,
+   "width_conflict": false
+  },
+  {
+   "storey": "1F",
+   "a": "1F:BAND0013.1",
+   "b": "1F:BAND0013.2",
+   "mark_a": "UNBOUND",
+   "mark_b": "UNBOUND",
+   "length_m": 0.8006,
+   "width_m": 0.1996,
+   "area_m2": 0.1598,
+   "support_share": 0.0018,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0,
+   "other_beams": [],
+   "members": [
+    [
+     "68E",
+     "COLUMN_BELOW",
+     0.0018
+    ]
+   ],
+   "edge_line_cover": [
+    1.0,
+    1.0
+   ],
+   "outline_face_cover": [
+    0.999,
+    0.0
+   ],
+   "edges_continuous": true,
+   "depth_m": null,
+   "depth_note": null,
+   "projection": true,
+   "width_conflict": false
+  },
+  {
+   "storey": "1F",
+   "a": "1F:BAND0018.1",
+   "b": "1F:BAND0018.2",
+   "mark_a": "CB12",
+   "mark_b": "CB12",
+   "length_m": 0.8994,
+   "width_m": 0.2511,
+   "area_m2": 0.22584,
+   "support_share": 0.7965,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0573,
+   "other_beams": [
+    "1F:BAND0020"
+   ],
+   "members": [
+    [
+     "664",
+     "COLUMN_BELOW",
+     0.7965
+    ]
+   ],
+   "edge_line_cover": [
+    1.0,
+    1.0
+   ],
+   "outline_face_cover": [
+    1.0,
+    0.0
+   ],
+   "edges_continuous": true,
+   "depth_m": 0.75,
+   "depth_note": null,
+   "projection": false,
+   "width_conflict": false
+  },
+  {
+   "storey": "1F",
+   "a": "1F:BAND0024.1",
+   "b": "1F:BAND0024.2",
+   "mark_a": "CB13",
+   "mark_b": "CB13",
+   "length_m": 0.6997,
+   "width_m": 0.3005,
+   "area_m2": 0.21026,
+   "support_share": 0.8319,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0,
+   "other_beams": [],
+   "members": [
+    [
+     "688",
+     "COLUMN_BELOW",
+     0.8319
+    ]
+   ],
+   "edge_line_cover": [
+    1.0,
+    1.0
+   ],
+   "outline_face_cover": [
+    0.0,
+    1.0
+   ],
+   "edges_continuous": true,
+   "depth_m": 0.5,
+   "depth_note": null,
+   "projection": false,
+   "width_conflict": false
+  },
+  {
+   "storey": "1F",
+   "a": "1F:BAND0026.1",
+   "b": "1F:BAND0026.2",
+   "mark_a": "UNBOUND",
+   "mark_b": "UNBOUND",
+   "length_m": 0.5989,
+   "width_m": 0.2984,
+   "area_m2": 0.17871,
+   "support_share": 0.6672,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0,
+   "other_beams": [],
+   "members": [
+    [
+     "685",
+     "COLUMN_BELOW",
+     0.6672
+    ]
+   ],
+   "edge_line_cover": [
+    1.0,
+    1.0
+   ],
+   "outline_face_cover": [
+    0.0,
+    1.0
+   ],
+   "edges_continuous": true,
+   "depth_m": null,
+   "depth_note": null,
+   "projection": false,
+   "width_conflict": true
+  },
+  {
+   "storey": "1F",
+   "a": "1F:BAND0027.1",
+   "b": "1F:BAND0027.2",
+   "mark_a": "CB11",
+   "mark_b": "CB11",
+   "length_m": 0.7985,
+   "width_m": 0.3005,
+   "area_m2": 0.23995,
+   "support_share": 0.8319,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0,
+   "other_beams": [],
+   "members": [
+    [
+     "69A",
+     "COLUMN_BELOW",
+     0.8319
+    ]
+   ],
+   "edge_line_cover": [
+    1.0,
+    1.0
+   ],
+   "outline_face_cover": [
+    1.0,
+    0.0
+   ],
+   "edges_continuous": true,
+   "depth_m": 0.75,
+   "depth_note": null,
+   "projection": false,
+   "width_conflict": false
+  },
+  {
+   "storey": "1F",
+   "a": "1F:BAND0027.2",
+   "b": "1F:BAND0027.3",
+   "mark_a": "CB11",
+   "mark_b": "CB11",
+   "length_m": 0.601,
+   "width_m": 0.3005,
+   "area_m2": 0.1806,
+   "support_share": 0.8305,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0,
+   "other_beams": [],
+   "members": [
+    [
+     "694",
+     "COLUMN_BELOW",
+     0.8305
+    ]
+   ],
+   "edge_line_cover": [
+    1.0,
+    1.0
+   ],
+   "outline_face_cover": [
+    0.998,
+    0.0
+   ],
+   "edges_continuous": true,
+   "depth_m": 0.75,
+   "depth_note": null,
+   "projection": false,
+   "width_conflict": false
+  },
+  {
+   "storey": "1F",
+   "a": "1F:BAND0031.1",
+   "b": "1F:BAND0031.2",
+   "mark_a": "B23",
+   "mark_b": "B23",
+   "length_m": 0.8007,
+   "width_m": 0.4486,
+   "area_m2": 0.35917,
+   "support_share": 0.556,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0,
+   "other_beams": [],
+   "members": [
+    [
+     "68E",
+     "COLUMN_BELOW",
+     0.556
+    ]
+   ],
+   "edge_line_cover": [
+    1.0,
+    1.0
+   ],
+   "outline_face_cover": [
+    0.0,
+    0.999
+   ],
+   "edges_continuous": true,
+   "depth_m": 0.75,
+   "depth_note": null,
+   "projection": false,
+   "width_conflict": false
+  },
+  {
+   "storey": "2F",
+   "a": "2F:BAND0001.1",
+   "b": "2F:BAND0001.2",
+   "mark_a": "B3",
+   "mark_b": "B8",
+   "length_m": 0.2004,
+   "width_m": 0.2004,
+   "area_m2": 0.04016,
+   "support_share": 0.9978,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0,
+   "other_beams": [],
+   "members": [
+    [
+     "412",
+     "COLUMN_BELOW",
+     0.9978
+    ]
+   ],
+   "edge_line_cover": [
+    1.0,
+    1.0
+   ],
+   "outline_face_cover": [
+    0.0,
+    0.998
+   ],
+   "edges_continuous": true,
+   "depth_m": null,
+   "depth_note": "pieces differ 0.4 / 0.75",
+   "projection": false,
+   "width_conflict": false
+  },
+  {
+   "storey": "2F",
+   "a": "2F:BAND0001.2",
+   "b": "2F:BAND0001.3",
+   "mark_a": "B8",
+   "mark_b": "B8",
+   "length_m": 0.6004,
+   "width_m": 0.2004,
+   "area_m2": 0.12031,
+   "support_share": 0.9974,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0,
+   "other_beams": [],
+   "members": [
+    [
+     "415",
+     "COLUMN_BELOW",
+     0.9974
+    ]
+   ],
+   "edge_line_cover": [
+    1.0,
+    1.0
+   ],
+   "outline_face_cover": [
+    0.999,
+    0.999
+   ],
+   "edges_continuous": true,
+   "depth_m": 0.75,
+   "depth_note": null,
+   "projection": false,
+   "width_conflict": false
+  },
+  {
+   "storey": "2F",
+   "a": "2F:BAND0006.1",
+   "b": "2F:BAND0006.2",
+   "mark_a": "B15",
+   "mark_b": "B15",
+   "length_m": 0.4997,
+   "width_m": 0.2004,
+   "area_m2": 0.10014,
+   "support_share": 0.9999,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0,
+   "other_beams": [],
+   "members": [
+    [
+     "424",
+     "COLUMN_BELOW",
+     0.9999
+    ]
+   ],
+   "edge_line_cover": [
+    1.0,
+    1.0
+   ],
+   "outline_face_cover": [
+    0.0,
+    1.0
+   ],
+   "edges_continuous": true,
+   "depth_m": 1.2,
+   "depth_note": null,
+   "projection": false,
+   "width_conflict": false
+  },
+  {
+   "storey": "2F",
+   "a": "2F:BAND0007.1",
+   "b": "2F:BAND0007.2",
+   "mark_a": "B2",
+   "mark_b": "B2",
+   "length_m": 0.1995,
+   "width_m": 0.2004,
+   "area_m2": 0.03998,
+   "support_share": 0.9977,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0,
+   "other_beams": [],
+   "members": [
+    [
+     "418",
+     "COLUMN_BELOW",
+     0.9977
+    ]
+   ],
+   "edge_line_cover": [
+    1.0,
+    1.0
+   ],
+   "outline_face_cover": [
+    0.999,
+    0.0
+   ],
+   "edges_continuous": true,
+   "depth_m": 0.4,
+   "depth_note": null,
+   "projection": false,
+   "width_conflict": false
+  },
+  {
+   "storey": "2F",
+   "a": "2F:BAND0008.1",
+   "b": "2F:BAND0008.2",
+   "mark_a": "B1",
+   "mark_b": "B1",
+   "length_m": 0.7001,
+   "width_m": 0.1995,
+   "area_m2": 0.13967,
+   "support_share": 0.9986,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0,
+   "other_beams": [],
+   "members": [
+    [
+     "418",
+     "COLUMN_BELOW",
+     0.9986
+    ]
+   ],
+   "edge_line_cover": [
+    1.0,
+    1.0
+   ],
+   "outline_face_cover": [
+    1.0,
+    1.0
+   ],
+   "edges_continuous": true,
+   "depth_m": 0.4,
+   "depth_note": null,
+   "projection": false,
+   "width_conflict": false
+  },
+  {
+   "storey": "2F",
+   "a": "2F:BAND0008.2",
+   "b": "2F:BAND0008.3",
+   "mark_a": "B1",
+   "mark_b": "B3",
+   "length_m": 0.4997,
+   "width_m": 0.1995,
+   "area_m2": 0.09969,
+   "support_share": 0.9995,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0,
+   "other_beams": [
+    "2F:BAND0012.1"
+   ],
+   "members": [
+    [
+     "41B",
+     "COLUMN_BELOW",
+     0.9995
+    ]
+   ],
+   "edge_line_cover": [
+    1.0,
+    1.0
+   ],
+   "outline_face_cover": [
+    1.0,
+    1.0
+   ],
+   "edges_continuous": true,
+   "depth_m": 0.4,
+   "depth_note": null,
+   "projection": false,
+   "width_conflict": false
+  },
+  {
+   "storey": "2F",
+   "a": "2F:BAND0011.1",
+   "b": "2F:BAND0011.2",
+   "mark_a": "B1",
+   "mark_b": "B1",
+   "length_m": 0.5006,
+   "width_m": 0.2004,
+   "area_m2": 0.10032,
+   "support_share": 0.9962,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0,
+   "other_beams": [],
+   "members": [
+    [
+     "41E",
+     "COLUMN_BELOW",
+     0.9962
+    ]
+   ],
+   "edge_line_cover": [
+    1.0,
+    1.0
+   ],
+   "outline_face_cover": [
+    0.999,
+    0.999
+   ],
+   "edges_continuous": true,
+   "depth_m": 0.4,
+   "depth_note": null,
+   "projection": false,
+   "width_conflict": false
+  }
+ ],
+ "ends": [
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0001",
+   "mark": "B11",
+   "end": 0,
+   "touch": "BEAM",
+   "members": [
+    [
+     "GF:BAND0034.1",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.75,
+   "side_beams": [
+    "GF:BAND0034.1"
+   ],
+   "beyond_area_m2": 0.0046,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0439,
+    0.0022
+   ],
+   "beyond_edge_cover": [
+    0.991,
+    1.0
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0001",
+   "mark": "B11",
+   "end": 1,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "332",
+     "COLUMN_BELOW"
+    ],
+    [
+     "gap BAND0036.1|BAND0036.2",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.75,
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0,
+    0.0001
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0002",
+   "mark": "B1",
+   "end": 0,
+   "touch": "BEAM",
+   "members": [
+    [
+     "GF:BAND0023.2",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.4,
+   "side_beams": [
+    "GF:BAND0023.2"
+   ],
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0002",
+   "mark": "B1",
+   "end": 1,
+   "touch": "BEAM",
+   "members": [
+    [
+     "GF:BAND0001",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.4,
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0,
+    0.0
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0003",
+   "mark": "B8",
+   "end": 0,
+   "touch": "BEAM",
+   "members": [
+    [
+     "GF:BAND0044.1",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.75,
+   "side_beams": [
+    "GF:BAND0044.1"
+   ],
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0003",
+   "mark": "B8",
+   "end": 1,
+   "touch": "BEAM",
+   "members": [
+    [
+     "GF:BAND0046.1",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.75,
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0,
+    0.0
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0004",
+   "mark": "B4",
+   "end": 0,
+   "touch": "BEAM",
+   "members": [
+    [
+     "GF:BAND0001",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.5,
+   "side_beams": [
+    "GF:BAND0001"
+   ],
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0,
+    0.0
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0004",
+   "mark": "B4",
+   "end": 1,
+   "touch": "BEAM",
+   "members": [
+    [
+     "GF:BAND0037.1",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.5,
+   "side_beams": [
+    "GF:BAND0037.1",
+    "GF:BAND0037.1"
+   ],
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0005",
+   "mark": "B1",
+   "end": 0,
+   "touch": "BEAM",
+   "members": [
+    [
+     "GF:BAND0004",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.4,
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0,
+    0.0
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0005",
+   "mark": "B1",
+   "end": 1,
+   "touch": "BEAM",
+   "members": [
+    [
+     "GF:BAND0036.2",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.4,
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0,
+    0.0
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0006",
+   "mark": "UNBOUND",
+   "end": 0,
+   "touch": "BEAM",
+   "members": [
+    [
+     "GF:BAND0003",
+     "BEAM"
+    ]
+   ],
+   "depth_m": null,
+   "side_beams": [
+    "GF:BAND0003",
+    "GF:BAND0003"
+   ],
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0006",
+   "mark": "UNBOUND",
+   "end": 1,
+   "touch": "BEAM",
+   "members": [
+    [
+     "GF:BAND0041.2",
+     "BEAM"
+    ]
+   ],
+   "depth_m": null,
+   "side_beams": [
+    "GF:BAND0041.2"
+   ],
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0007",
+   "mark": "B3",
+   "end": 0,
+   "touch": "BEAM",
+   "members": [
+    [
+     "GF:BAND0021.2",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.4,
+   "side_beams": [
+    "GF:BAND0021.2"
+   ],
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0,
+    0.0
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0007",
+   "mark": "B3",
+   "end": 1,
+   "touch": "BEAM",
+   "members": [
+    [
+     "GF:BAND0045",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.4,
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0,
+    0.0
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0008",
+   "mark": "B29",
+   "end": 0,
+   "touch": "BEAM",
+   "members": [
+    [
+     "GF:BAND0045",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.75,
+   "side_beams": [
+    "GF:BAND0045"
+   ],
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0008",
+   "mark": "B29",
+   "end": 1,
+   "touch": "BEAM",
+   "members": [
+    [
+     "GF:BAND0042",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.75,
+   "side_beams": [
+    "GF:BAND0042"
+   ],
+   "beyond_area_m2": 0.00321,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0319,
+    0.0002
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0009",
+   "mark": "B1",
+   "end": 0,
+   "touch": "BEAM",
+   "members": [
+    [
+     "GF:BAND0008",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.4,
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0,
+    0.0
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0009",
+   "mark": "B1",
+   "end": 1,
+   "touch": "BEAM",
+   "members": [
+    [
+     "GF:BAND0034.1",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.4,
+   "side_beams": [
+    "GF:BAND0034.1"
+   ],
+   "beyond_area_m2": 0.00411,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0414,
+    0.0
+   ],
+   "beyond_edge_cover": [
+    0.995,
+    1.0
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0010",
+   "mark": "B4",
+   "end": 0,
+   "touch": "BEAM",
+   "members": [
+    [
+     "GF:BAND0042",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.5,
+   "side_beams": [
+    "GF:BAND0042"
+   ],
+   "beyond_area_m2": 0.0032,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0319,
+    0.0002
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0010",
+   "mark": "B4",
+   "end": 1,
+   "touch": "BEAM",
+   "members": [
+    [
+     "GF:BAND0047.2",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.5,
+   "side_beams": [
+    "GF:BAND0047.2",
+    "GF:BAND0047.2"
+   ],
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0011",
+   "mark": "B4",
+   "end": 0,
+   "touch": "BEAM",
+   "members": [
+    [
+     "GF:BAND0010",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.5,
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0,
+    0.0
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0011",
+   "mark": "B4",
+   "end": 1,
+   "touch": "BEAM",
+   "members": [
+    [
+     "GF:BAND0044.1",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.5,
+   "side_beams": [
+    "GF:BAND0044.1"
+   ],
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0012",
+   "mark": "B4",
+   "end": 0,
+   "touch": "BEAM",
+   "members": [
+    [
+     "GF:BAND0014",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.5,
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0,
+    0.0
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0012",
+   "mark": "B4",
+   "end": 1,
+   "touch": "BEAM",
+   "members": [
+    [
+     "GF:BAND0029.2",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.5,
+   "beyond_area_m2": 1e-05,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0,
+    0.0001
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0013",
+   "mark": "B1",
+   "end": 0,
+   "touch": "BEAM",
+   "members": [
+    [
+     "GF:BAND0040.2",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.4,
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0,
+    0.0
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0013",
+   "mark": "B1",
+   "end": 1,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "374",
+     "COLUMN_BELOW"
+    ],
+    [
+     "gap BAND0019.2|BAND0019.3",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.4,
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0,
+    0.0
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0014",
+   "mark": "CB7",
+   "end": 0,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "34D",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": 0.75,
+   "over_support": [
+    "34D"
+   ],
+   "beyond_area_m2": 0.12062,
+   "beyond_closed": false,
+   "beyond_side_t_m": [
+    0.8,
+    0.8
+   ],
+   "beyond_edge_cover": [
+    0.247,
+    0.247
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0014",
+   "mark": "CB7",
+   "end": 1,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "359",
+     "COLUMN_BELOW"
+    ],
+    [
+     "GF:BAND0039",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.75,
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0015",
+   "mark": "B1",
+   "end": 0,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "371",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": 0.4,
+   "beyond_area_m2": 0.0022,
+   "beyond_closed": false,
+   "beyond_side_t_m": [
+    0.7048,
+    0.7048
+   ],
+   "beyond_edge_cover": [
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0015",
+   "mark": "B1",
+   "end": 1,
+   "touch": "BEAM",
+   "members": [
+    [
+     "GF:BAND0041.1",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.4,
+   "beyond_area_m2": 1e-05,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0001,
+    0.0
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0016.1",
+   "mark": "B3",
+   "end": 0,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "32C",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": 0.4,
+   "beyond_area_m2": 0.12067,
+   "beyond_closed": false,
+   "beyond_side_t_m": [
+    0.8,
+    0.8
+   ],
+   "beyond_edge_cover": [
+    0.343,
+    0.0
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0016.1",
+   "mark": "B3",
+   "end": 1,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "32F",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": 0.4,
+   "beyond_area_m2": 0.00061,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0003,
+    0.1999
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0017",
+   "mark": "B5",
+   "end": 0,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "365",
+     "COLUMN_BELOW"
+    ],
+    [
+     "gap BAND0033.1|BAND0033.2",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.5,
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0017",
+   "mark": "B5",
+   "end": 1,
+   "touch": "BEAM",
+   "members": [
+    [
+     "GF:BAND0048.1",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.5,
+   "side_beams": [
+    "GF:BAND0048.1"
+   ],
+   "beyond_area_m2": 0.01472,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.1471,
+    0.0001
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0018",
+   "mark": "B4",
+   "end": 0,
+   "touch": "BEAM",
+   "members": [
+    [
+     "GF:BAND0048.2",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.5,
+   "side_beams": [
+    "GF:BAND0048.2"
+   ],
+   "beyond_area_m2": 0.01483,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.1466,
+    0.2971
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    0.003
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0018",
+   "mark": "B4",
+   "end": 1,
+   "touch": "BEAM",
+   "members": [
+    [
+     "GF:BAND0045",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.5,
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0,
+    0.0
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0019.1",
+   "mark": "CB3",
+   "end": 0,
+   "touch": "BEAM",
+   "members": [
+    [
+     "GF:BAND0045",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.75,
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0,
+    0.0
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0019.3",
+   "mark": "CB3",
+   "end": 1,
+   "touch": "BEAM",
+   "members": [
+    [
+     "gap BAND0047.1|BAND0047.2",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.75,
+   "side_beams": [
+    "GF:BAND0047.1"
+   ],
+   "beyond_area_m2": 0.00047,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0,
+    0.0048
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0020.1",
+   "mark": "B1",
+   "end": 0,
+   "touch": "BEAM",
+   "members": [
+    [
+     "GF:BAND0043.2",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.4,
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0020.2",
+   "mark": "B2",
+   "end": 1,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "32C",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": 0.4,
+   "beyond_area_m2": 0.06057,
+   "beyond_closed": false,
+   "beyond_side_t_m": [
+    0.8,
+    0.8
+   ],
+   "beyond_edge_cover": [
+    0.623,
+    0.623
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0021.1",
+   "mark": "CB4",
+   "end": 0,
+   "touch": "BEAM",
+   "members": [
+    [
+     "GF:BAND0048.1",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.5,
+   "side_beams": [
+    "GF:BAND0048.1"
+   ],
+   "beyond_area_m2": 0.0264,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.3365,
+    0.2667
+   ],
+   "beyond_edge_cover": [
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0021.2",
+   "mark": "CB4",
+   "end": 1,
+   "touch": "BEAM",
+   "members": [
+    [
+     "GF:BAND0043.2",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.5,
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0,
+    0.0
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0022.1",
+   "mark": "B14",
+   "end": 0,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "33E",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": 0.75,
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0,
+    0.0
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0022.1",
+   "mark": "B14",
+   "end": 1,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "338",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": 0.75,
+   "beyond_area_m2": 0.00018,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0009,
+    0.0009
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0023.1",
+   "mark": "B1",
+   "end": 0,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "338",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": 0.4,
+   "beyond_area_m2": 0.00096,
+   "beyond_closed": false,
+   "beyond_side_t_m": [
+    0.8,
+    0.0008
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0023.2",
+   "mark": "B3",
+   "end": 1,
+   "touch": "BEAM",
+   "members": [
+    [
+     "GF:BAND0036.1",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.4,
+   "side_beams": [
+    "GF:BAND0036.1"
+   ],
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0024.1",
+   "mark": "B2",
+   "end": 0,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "341",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": 0.4,
+   "beyond_area_m2": 0.00017,
+   "beyond_closed": false,
+   "beyond_side_t_m": [
+    0.0005,
+    0.0006
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0024.1",
+   "mark": "B2",
+   "end": 1,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "32F",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": 0.4,
+   "beyond_area_m2": 0.06037,
+   "beyond_closed": false,
+   "beyond_side_t_m": [
+    0.8,
+    0.8
+   ],
+   "beyond_edge_cover": [
+    0.623,
+    0.623
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0025.1",
+   "mark": "B7",
+   "end": 0,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "33E",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": 0.75,
+   "side_beams": [
+    "GF:BAND0043.2"
+   ],
+   "beyond_area_m2": 1e-05,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0,
+    0.0
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0025.1",
+   "mark": "B7",
+   "end": 1,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "341",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": 0.75,
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0026.1",
+   "mark": "B1",
+   "end": 0,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "341",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": 0.4,
+   "beyond_area_m2": 0.12008,
+   "beyond_closed": false,
+   "beyond_side_t_m": [
+    0.8,
+    0.8
+   ],
+   "beyond_edge_cover": [
+    0.25,
+    0.0
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0026.1",
+   "mark": "B1",
+   "end": 1,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "33B",
+     "COLUMN_BELOW"
+    ],
+    [
+     "gap BAND0023.1|BAND0023.2",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.4,
+   "beyond_area_m2": 2e-05,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0001,
+    0.0001
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0027",
+   "mark": "B2",
+   "end": 0,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "34A",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": 0.4,
+   "beyond_area_m2": 0.12327,
+   "beyond_closed": false,
+   "beyond_side_t_m": [
+    0.8,
+    0.8
+   ],
+   "beyond_edge_cover": [
+    0.247,
+    0.0
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0027",
+   "mark": "B2",
+   "end": 1,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "356",
+     "COLUMN_BELOW"
+    ],
+    [
+     "GF:BAND0049",
+     "RING"
+    ]
+   ],
+   "depth_m": 0.4,
+   "over_support": [
+    "356"
+   ],
+   "beyond_area_m2": 0.06766,
+   "beyond_closed": false,
+   "beyond_side_t_m": [
+    0.8,
+    0.8
+   ],
+   "beyond_edge_cover": [
+    0.003,
+    0.003
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0028",
+   "mark": "B9",
+   "end": 0,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "34D",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": 0.75,
+   "beyond_area_m2": 0.12034,
+   "beyond_closed": false,
+   "beyond_side_t_m": [
+    0.8,
+    0.8
+   ],
+   "beyond_edge_cover": [
+    0.252,
+    0.002
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0028",
+   "mark": "B9",
+   "end": 1,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "34A",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": 0.75,
+   "over_support": [
+    "34A"
+   ],
+   "side_beams": [
+    "GF:BAND0027"
+   ],
+   "beyond_area_m2": 0.12056,
+   "beyond_closed": false,
+   "beyond_side_t_m": [
+    0.8,
+    0.8
+   ],
+   "beyond_edge_cover": [
+    0.249,
+    0.249
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0029.1",
+   "mark": "CB6",
+   "end": 0,
+   "touch": "BEAM",
+   "members": [
+    [
+     "GF:BAND0028",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.75,
+   "side_beams": [
+    "GF:BAND0028"
+   ],
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0029.4",
+   "mark": "B1",
+   "end": 1,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "362",
+     "COLUMN_BELOW"
+    ],
+    [
+     "gap BAND0021.1|BAND0021.2",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.4,
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0,
+    0.0
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0030.1",
+   "mark": "B4",
+   "end": 0,
+   "touch": "BEAM",
+   "members": [
+    [
+     "GF:BAND0014",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.5,
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0,
+    0.0
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0030.1",
+   "mark": "B4",
+   "end": 1,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "353",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": 0.5,
+   "beyond_area_m2": 6e-05,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0,
+    0.0509
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0031.1",
+   "mark": "UNBOUND",
+   "end": 0,
+   "touch": "JUNCTION_OWNER",
+   "members": [],
+   "depth_m": null,
+   "side_beams": [
+    "GF:BAND0043.1"
+   ],
+   "beyond_area_m2": 0.15992,
+   "beyond_closed": false,
+   "beyond_side_t_m": [
+    0.8,
+    0.8
+   ],
+   "beyond_edge_cover": [
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0031.2",
+   "mark": "UNBOUND",
+   "end": 1,
+   "touch": "JUNCTION_OWNER",
+   "members": [],
+   "depth_m": null,
+   "side_beams": [
+    "GF:BAND0043.2"
+   ],
+   "beyond_area_m2": 0.0149,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0745,
+    0.0745
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    0.0
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0032",
+   "mark": "B1",
+   "end": 0,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "36E",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": 0.4,
+   "beyond_area_m2": 0.00017,
+   "beyond_closed": false,
+   "beyond_side_t_m": [
+    0.0001,
+    0.0001
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0032",
+   "mark": "B1",
+   "end": 1,
+   "touch": "BEAM",
+   "members": [
+    [
+     "gap BAND0041.1|BAND0041.2",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.4,
+   "beyond_area_m2": 1e-05,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0001,
+    0.0001
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0033.1",
+   "mark": "B1",
+   "end": 0,
+   "touch": "BEAM",
+   "members": [
+    [
+     "GF:BAND0014",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.4,
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0,
+    0.0
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0033.2",
+   "mark": "CB5",
+   "end": 1,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "35F",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": 0.4,
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0034.1",
+   "mark": "B13",
+   "end": 0,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "338",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": 0.75,
+   "beyond_area_m2": 0.00642,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0,
+    0.0518
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0034.1",
+   "mark": "B13",
+   "end": 1,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "37A",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": 0.75,
+   "beyond_area_m2": 0.00653,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0244,
+    0.0519
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0035.1",
+   "mark": "B28",
+   "end": 0,
+   "touch": "CARRIED",
+   "members": [
+    [
+     "31B",
+     "CARRIED_COLUMN"
+    ]
+   ],
+   "depth_m": 0.75,
+   "beyond_area_m2": 0.08163,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.3255,
+    0.3255
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    0.998
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0035.1",
+   "mark": "B28",
+   "end": 1,
+   "touch": "BEAM",
+   "members": [
+    [
+     "GF:BAND0044.1",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.75,
+   "beyond_area_m2": 1e-05,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0,
+    0.0
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0036.1",
+   "mark": "CB2",
+   "end": 0,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "32F",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": 0.5,
+   "beyond_area_m2": 0.03117,
+   "beyond_closed": false,
+   "beyond_side_t_m": [
+    0.1999,
+    0.8
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    0.0
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0036.2",
+   "mark": "CB2",
+   "end": 1,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "377",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": 0.5,
+   "beyond_area_m2": 0.00103,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0005,
+    0.4981
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0037.1",
+   "mark": "B16",
+   "end": 0,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "322",
+     "CARRIED_COLUMN"
+    ],
+    [
+     "37A",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": 0.75,
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0037.1",
+   "mark": "B16",
+   "end": 1,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "377",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": 0.75,
+   "beyond_area_m2": 0.16447,
+   "beyond_closed": false,
+   "beyond_side_t_m": [
+    0.8,
+    0.8
+   ],
+   "beyond_edge_cover": [
+    0.0,
+    0.311
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0038.1",
+   "mark": "CA",
+   "end": 0,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "380",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": 0.5,
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0038.1",
+   "mark": "CA",
+   "end": 1,
+   "touch": "NONE",
+   "members": [],
+   "depth_m": 0.5,
+   "beyond_area_m2": 0.23848,
+   "beyond_closed": false,
+   "beyond_side_t_m": [
+    0.8,
+    0.8
+   ],
+   "beyond_edge_cover": [
+    0.001,
+    0.001
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0039",
+   "mark": "CB8",
+   "end": 0,
+   "touch": "BEAM",
+   "members": [
+    [
+     "GF:BAND0014",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.75,
+   "over_support": [
+    "359"
+   ],
+   "beyond_area_m2": 0.07864,
+   "beyond_closed": false,
+   "beyond_side_t_m": [
+    0.8,
+    0.0
+   ],
+   "beyond_edge_cover": [
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0039",
+   "mark": "CB8",
+   "end": 1,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "37D",
+     "COLUMN_BELOW"
+    ],
+    [
+     "GF:BAND0048.2",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.75,
+   "side_beams": [
+    "GF:BAND0048.2"
+   ],
+   "beyond_area_m2": 0.04169,
+   "beyond_closed": false,
+   "beyond_side_t_m": [
+    0.0239,
+    0.8
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    0.0
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0040.1",
+   "mark": "CB8",
+   "end": 0,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "37D",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": 0.75,
+   "beyond_area_m2": 0.03871,
+   "beyond_closed": false,
+   "beyond_side_t_m": [
+    0.8,
+    0.0009
+   ],
+   "beyond_edge_cover": [
+    0.101,
+    1.0
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0040.2",
+   "mark": "CB8",
+   "end": 1,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "371",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": 0.75,
+   "beyond_area_m2": 0.01917,
+   "beyond_closed": false,
+   "beyond_side_t_m": [
+    0.7048,
+    0.8
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    0.073
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0041.1",
+   "mark": "CB1",
+   "end": 0,
+   "touch": "OVER_SUPPORT",
+   "members": [],
+   "depth_m": 0.75,
+   "over_support": [
+    "347"
+   ],
+   "side_beams": [
+    "GF:BAND0015"
+   ],
+   "beyond_area_m2": 0.28184,
+   "beyond_closed": false,
+   "beyond_side_t_m": [
+    0.8,
+    0.8
+   ],
+   "beyond_edge_cover": [
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0041.2",
+   "mark": "CB1",
+   "end": 1,
+   "touch": "BEAM",
+   "members": [
+    [
+     "GF:BAND0046.2",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.75,
+   "beyond_area_m2": 2e-05,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0,
+    0.0
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0042",
+   "mark": "B21",
+   "end": 0,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "322",
+     "CARRIED_COLUMN"
+    ],
+    [
+     "37A",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": 0.75,
+   "beyond_area_m2": 0.01265,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0,
+    0.0633
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0042",
+   "mark": "B21",
+   "end": 1,
+   "touch": "BEAM",
+   "members": [
+    [
+     "GF:BAND0019.3",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.75,
+   "side_beams": [
+    "GF:BAND0019.3"
+   ],
+   "beyond_area_m2": 0.01238,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0,
+    0.0626
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    0.996
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0043.1",
+   "mark": "B20",
+   "end": 0,
+   "touch": "JUNCTION_OWNER",
+   "members": [],
+   "depth_m": 0.75,
+   "side_beams": [
+    "GF:BAND0031.1"
+   ],
+   "beyond_area_m2": 0.31992,
+   "beyond_closed": false,
+   "beyond_side_t_m": [
+    0.8,
+    0.8
+   ],
+   "beyond_edge_cover": [
+    0.0,
+    0.248
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0043.2",
+   "mark": "B20",
+   "end": 1,
+   "touch": "BEAM",
+   "members": [
+    [
+     "GF:BAND0025.1",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.75,
+   "beyond_area_m2": 1e-05,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0001,
+    0.0
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0044.1",
+   "mark": "B17",
+   "end": 0,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "37A",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": 0.75,
+   "beyond_area_m2": 0.05896,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.3016,
+    0.2791
+   ],
+   "beyond_edge_cover": [
+    0.993,
+    1.0
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0044.1",
+   "mark": "B17",
+   "end": 1,
+   "touch": "BEAM",
+   "members": [
+    [
+     "GF:BAND0041.2",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.75,
+   "side_beams": [
+    "GF:BAND0041.2"
+   ],
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0,
+    0.0
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0045",
+   "mark": "B22",
+   "end": 0,
+   "touch": "BEAM",
+   "members": [
+    [
+     "GF:BAND0040.1",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.75,
+   "beyond_area_m2": 2e-05,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0,
+    0.0001
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0045",
+   "mark": "B22",
+   "end": 1,
+   "touch": "BEAM",
+   "members": [
+    [
+     "GF:BAND0022.1",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.75,
+   "beyond_area_m2": 3e-05,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0,
+    0.0001
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0046.1",
+   "mark": "B24",
+   "end": 0,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "377",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": 0.75,
+   "beyond_area_m2": 0.12668,
+   "beyond_closed": false,
+   "beyond_side_t_m": [
+    0.4981,
+    0.8
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    0.247
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0046.2",
+   "mark": "B24",
+   "end": 1,
+   "touch": "JUNCTION_OWNER",
+   "members": [],
+   "depth_m": 0.75,
+   "side_beams": [
+    "GF:BAND0041.2"
+   ],
+   "beyond_area_m2": 0.4012,
+   "beyond_closed": false,
+   "beyond_side_t_m": [
+    0.8,
+    0.8
+   ],
+   "beyond_edge_cover": [
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0047.1",
+   "mark": "B26",
+   "end": 0,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "371",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": 0.85,
+   "beyond_area_m2": 0.35888,
+   "beyond_closed": false,
+   "beyond_side_t_m": [
+    0.8,
+    0.8
+   ],
+   "beyond_edge_cover": [
+    0.019,
+    0.312
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0047.2",
+   "mark": "B26",
+   "end": 1,
+   "touch": "CARRIED",
+   "members": [
+    [
+     "31B",
+     "CARRIED_COLUMN"
+    ]
+   ],
+   "depth_m": 0.85,
+   "side_beams": [
+    "GF:BAND0010"
+   ],
+   "beyond_area_m2": 0.21322,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.336,
+    0.3193
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0048.1",
+   "mark": "B27",
+   "end": 0,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "35C",
+     "COLUMN_BELOW"
+    ],
+    [
+     "GF:BAND0029.4",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.85,
+   "side_beams": [
+    "GF:BAND0029.4"
+   ],
+   "beyond_area_m2": 0.21023,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0,
+    0.5534
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0048.2",
+   "mark": "B27",
+   "end": 1,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "37D",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": 0.85,
+   "side_beams": [
+    "GF:BAND0039"
+   ],
+   "beyond_area_m2": 0.26843,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0664,
+    0.6255
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0001.1",
+   "mark": "B3",
+   "end": 0,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "66D",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": 0.4,
+   "beyond_area_m2": 0.12117,
+   "beyond_closed": false,
+   "beyond_side_t_m": [
+    0.8,
+    0.8
+   ],
+   "beyond_edge_cover": [
+    0.344,
+    0.001
+   ]
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0001.4",
+   "mark": "CB9",
+   "end": 1,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "676",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": 0.5,
+   "beyond_area_m2": 0.06091,
+   "beyond_closed": false,
+   "beyond_side_t_m": [
+    0.8,
+    0.8
+   ],
+   "beyond_edge_cover": [
+    0.375,
+    0.625
+   ]
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0002.1",
+   "mark": "B4",
+   "end": 0,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "68B",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": 0.5,
+   "beyond_area_m2": 0.00013,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0006,
+    0.0006
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0002.1",
+   "mark": "B4",
+   "end": 1,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "66A",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": 0.5,
+   "beyond_area_m2": 0.00042,
+   "beyond_closed": false,
+   "beyond_side_t_m": [
+    0.7019,
+    0.7019
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    0.999
+   ]
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0003",
+   "mark": "B4",
+   "end": 0,
+   "touch": "BEAM",
+   "members": [
+    [
+     "1F:BAND0024.2",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.5,
+   "side_beams": [
+    "1F:BAND0024.2",
+    "1F:BAND0024.2"
+   ],
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0003",
+   "mark": "B4",
+   "end": 1,
+   "touch": "BEAM",
+   "members": [
+    [
+     "1F:BAND0028",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.5,
+   "beyond_area_m2": 1e-05,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0001,
+    0.0
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0004",
+   "mark": "B11",
+   "end": 0,
+   "touch": "BEAM",
+   "members": [
+    [
+     "1F:BAND0028",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.75,
+   "beyond_area_m2": 1e-05,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0001,
+    0.0
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0004",
+   "mark": "B11",
+   "end": 1,
+   "touch": "BEAM",
+   "members": [
+    [
+     "1F:BAND0032",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.75,
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0005.1",
+   "mark": "B2",
+   "end": 0,
+   "touch": "BEAM",
+   "members": [
+    [
+     "1F:BAND0031.2",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.4,
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0005.2",
+   "mark": "B2",
+   "end": 1,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "66D",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": 0.4,
+   "beyond_area_m2": 0.06157,
+   "beyond_closed": false,
+   "beyond_side_t_m": [
+    0.8,
+    0.8
+   ],
+   "beyond_edge_cover": [
+    0.624,
+    0.624
+   ]
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0006.1",
+   "mark": "B7",
+   "end": 0,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "67F",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": 0.75,
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0006.1",
+   "mark": "B7",
+   "end": 1,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "679",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": 0.75,
+   "side_beams": [
+    "1F:BAND0028"
+   ],
+   "beyond_area_m2": 3e-05,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0001,
+    0.0001
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0007.1",
+   "mark": "B1",
+   "end": 0,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "679",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": 0.4,
+   "beyond_area_m2": 0.00026,
+   "beyond_closed": false,
+   "beyond_side_t_m": [
+    0.0005,
+    0.0005
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0007.2",
+   "mark": "B2",
+   "end": 1,
+   "touch": "BEAM",
+   "members": [
+    [
+     "1F:BAND0001.2",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.4,
+   "side_beams": [
+    "1F:BAND0001.2",
+    "1F:BAND0001.2"
+   ],
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0008",
+   "mark": "B1",
+   "end": 0,
+   "touch": "BEAM",
+   "members": [
+    [
+     "1F:BAND0004",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.4,
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0,
+    0.0
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0008",
+   "mark": "B1",
+   "end": 1,
+   "touch": "BEAM",
+   "members": [
+    [
+     "77B",
+     "CARRIED_COLUMN"
+    ],
+    [
+     "1F:BAND0030.1",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.4,
+   "side_beams": [
+    "1F:BAND0030.1"
+   ],
+   "beyond_area_m2": 0.00272,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0257,
+    0.0016
+   ],
+   "beyond_edge_cover": [
+    0.982,
+    1.0
+   ]
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0009",
+   "mark": "B6",
+   "end": 0,
+   "touch": "BEAM",
+   "members": [
+    [
+     "77B",
+     "CARRIED_COLUMN"
+    ],
+    [
+     "1F:BAND0030.1",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.5,
+   "side_beams": [
+    "1F:BAND0030.1"
+   ],
+   "beyond_area_m2": 0.0021,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0225,
+    0.0
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0009",
+   "mark": "B6",
+   "end": 1,
+   "touch": "BEAM",
+   "members": [
+    [
+     "1F:BAND0001.3",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.5,
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0,
+    0.0
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0010.1",
+   "mark": "B2",
+   "end": 0,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "682",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": 0.4,
+   "beyond_area_m2": 0.00048,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.5002,
+    0.0004
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0010.1",
+   "mark": "B2",
+   "end": 1,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "670",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": 0.4,
+   "beyond_area_m2": 0.00027,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0,
+    0.2984
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0011.1",
+   "mark": "B7",
+   "end": 0,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "67F",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": 0.75,
+   "side_beams": [
+    "1F:BAND0031.2"
+   ],
+   "beyond_area_m2": 0.06021,
+   "beyond_closed": false,
+   "beyond_side_t_m": [
+    0.8,
+    0.8
+   ],
+   "beyond_edge_cover": [
+    0.626,
+    0.625
+   ]
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0011.1",
+   "mark": "B7",
+   "end": 1,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "682",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": 0.75,
+   "beyond_area_m2": 0.00051,
+   "beyond_closed": false,
+   "beyond_side_t_m": [
+    0.5002,
+    0.5002
+   ],
+   "beyond_edge_cover": [
+    0.999,
+    1.0
+   ]
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0012.1",
+   "mark": "B1",
+   "end": 0,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "682",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": 0.4,
+   "beyond_area_m2": 0.12015,
+   "beyond_closed": false,
+   "beyond_side_t_m": [
+    0.8,
+    0.8
+   ],
+   "beyond_edge_cover": [
+    0.249,
+    0.0
+   ]
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0012.1",
+   "mark": "B1",
+   "end": 1,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "67C",
+     "COLUMN_BELOW"
+    ],
+    [
+     "gap BAND0007.1|BAND0007.2",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.4,
+   "side_beams": [
+    "1F:BAND0007.2"
+   ],
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0013.1",
+   "mark": "UNBOUND",
+   "end": 0,
+   "touch": "JUNCTION_OWNER",
+   "members": [],
+   "depth_m": null,
+   "side_beams": [
+    "1F:BAND0031.1"
+   ],
+   "beyond_area_m2": 0.15968,
+   "beyond_closed": false,
+   "beyond_side_t_m": [
+    0.8,
+    0.8
+   ],
+   "beyond_edge_cover": [
+    0.001,
+    0.001
+   ]
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0013.2",
+   "mark": "UNBOUND",
+   "end": 1,
+   "touch": "JUNCTION_OWNER",
+   "members": [],
+   "depth_m": null,
+   "side_beams": [
+    "1F:BAND0031.2"
+   ],
+   "beyond_area_m2": 0.01499,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0751,
+    0.0751
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    0.016
+   ]
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0014",
+   "mark": "UNBOUND",
+   "end": 0,
+   "touch": "NONE",
+   "members": [],
+   "depth_m": null,
+   "beyond_area_m2": 0.16144,
+   "beyond_closed": false,
+   "beyond_side_t_m": [
+    0.8,
+    0.8
+   ],
+   "beyond_edge_cover": [
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0014",
+   "mark": "UNBOUND",
+   "end": 1,
+   "touch": "JUNCTION_OWNER",
+   "members": [],
+   "depth_m": null,
+   "side_beams": [
+    "1F:BAND0031.1"
+   ],
+   "beyond_area_m2": 0.16144,
+   "beyond_closed": false,
+   "beyond_side_t_m": [
+    0.8,
+    0.8
+   ],
+   "beyond_edge_cover": [
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0015",
+   "mark": "B4",
+   "end": 0,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "667",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": 0.5,
+   "beyond_area_m2": 0.00012,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0,
+    0.153
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0015",
+   "mark": "B4",
+   "end": 1,
+   "touch": "BEAM",
+   "members": [
+    [
+     "1F:BAND0018.2",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.5,
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0016",
+   "mark": "B5",
+   "end": 0,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "667",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": 0.5,
+   "beyond_area_m2": 0.00039,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.6203,
+    0.0
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0016",
+   "mark": "B5",
+   "end": 1,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "697",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": 0.5,
+   "beyond_area_m2": 0.00011,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0004,
+    0.0493
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    0.993
+   ]
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0017",
+   "mark": "B5",
+   "end": 0,
+   "touch": "BEAM",
+   "members": [
+    [
+     "gap BAND0027.1|BAND0027.2",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.5,
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0,
+    0.0
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0017",
+   "mark": "B5",
+   "end": 1,
+   "touch": "BEAM",
+   "members": [
+    [
+     "1F:BAND0004",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.5,
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0,
+    0.0
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0018.1",
+   "mark": "CB12",
+   "end": 0,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "69D",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": 0.75,
+   "beyond_area_m2": 0.1057,
+   "beyond_closed": false,
+   "beyond_side_t_m": [
+    0.8,
+    0.8
+   ],
+   "beyond_edge_cover": [
+    0.0,
+    0.249
+   ]
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0018.2",
+   "mark": "CB12",
+   "end": 1,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "676",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": 0.75,
+   "side_beams": [
+    "1F:BAND0025"
+   ],
+   "beyond_area_m2": 9e-05,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0004,
+    0.0004
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0019",
+   "mark": "B6",
+   "end": 0,
+   "touch": "BEAM",
+   "members": [
+    [
+     "1F:BAND0026.2",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.5,
+   "side_beams": [
+    "1F:BAND0026.2"
+   ],
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0019",
+   "mark": "B6",
+   "end": 1,
+   "touch": "BEAM",
+   "members": [
+    [
+     "1F:BAND0024.2",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.5,
+   "side_beams": [
+    "1F:BAND0024.2",
+    "1F:BAND0024.2"
+   ],
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0020",
+   "mark": "B6",
+   "end": 0,
+   "touch": "BEAM",
+   "members": [
+    [
+     "1F:BAND0032",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.5,
+   "side_beams": [
+    "1F:BAND0032",
+    "1F:BAND0032"
+   ],
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0020",
+   "mark": "B6",
+   "end": 1,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "664",
+     "COLUMN_BELOW"
+    ],
+    [
+     "gap BAND0018.1|BAND0018.2",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.5,
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0021",
+   "mark": "B6",
+   "end": 0,
+   "touch": "BEAM",
+   "members": [
+    [
+     "1F:BAND0032",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.5,
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0,
+    0.0
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0021",
+   "mark": "B6",
+   "end": 1,
+   "touch": "BEAM",
+   "members": [
+    [
+     "1F:BAND0018.1",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.5,
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0,
+    0.0
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0022",
+   "mark": "B6",
+   "end": 0,
+   "touch": "BEAM",
+   "members": [
+    [
+     "1F:BAND0026.1",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.5,
+   "side_beams": [
+    "1F:BAND0026.1",
+    "1F:BAND0026.1"
+   ],
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0022",
+   "mark": "B6",
+   "end": 1,
+   "touch": "BEAM",
+   "members": [
+    [
+     "1F:BAND0024.1",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.5,
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0023",
+   "mark": "UNBOUND",
+   "end": 0,
+   "touch": "JUNCTION_OWNER",
+   "members": [],
+   "depth_m": null,
+   "side_beams": [
+    "1F:BAND0027.3"
+   ],
+   "beyond_area_m2": 0.2404,
+   "beyond_closed": false,
+   "beyond_side_t_m": [
+    0.8,
+    0.8
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    0.0
+   ]
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0023",
+   "mark": "UNBOUND",
+   "end": 1,
+   "touch": "NONE",
+   "members": [],
+   "depth_m": null,
+   "beyond_area_m2": 0.2404,
+   "beyond_closed": false,
+   "beyond_side_t_m": [
+    0.8,
+    0.8
+   ],
+   "beyond_edge_cover": [
+    0.001,
+    0.126
+   ]
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0024.1",
+   "mark": "CB13",
+   "end": 0,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "66A",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": 0.5,
+   "side_beams": [
+    "1F:BAND0027.1"
+   ],
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0024.2",
+   "mark": "CB13",
+   "end": 1,
+   "touch": "BEAM",
+   "members": [
+    [
+     "1F:BAND0031.2",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.5,
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0,
+    0.0
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0025",
+   "mark": "UNBOUND",
+   "end": 0,
+   "touch": "JUNCTION_OWNER",
+   "members": [],
+   "depth_m": null,
+   "side_beams": [
+    "1F:BAND0018.2"
+   ],
+   "beyond_area_m2": 0.23864,
+   "beyond_closed": false,
+   "beyond_side_t_m": [
+    0.8,
+    0.8
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    0.0
+   ]
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0025",
+   "mark": "UNBOUND",
+   "end": 1,
+   "touch": "JUNCTION_OWNER",
+   "members": [],
+   "depth_m": null,
+   "side_beams": [
+    "1F:BAND0018.2"
+   ],
+   "beyond_area_m2": 0.23862,
+   "beyond_closed": false,
+   "beyond_side_t_m": [
+    0.8,
+    0.8
+   ],
+   "beyond_edge_cover": [
+    0.0,
+    0.312
+   ]
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0026.1",
+   "mark": "UNBOUND",
+   "end": 0,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "68B",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": null,
+   "side_beams": [
+    "1F:BAND0014"
+   ],
+   "beyond_area_m2": 0.11951,
+   "beyond_closed": false,
+   "beyond_side_t_m": [
+    0.8,
+    0.8
+   ],
+   "beyond_edge_cover": [
+    0.625,
+    0.375
+   ]
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0026.2",
+   "mark": "UNBOUND",
+   "end": 1,
+   "touch": "BEAM",
+   "members": [
+    [
+     "1F:BAND0031.1",
+     "BEAM"
+    ]
+   ],
+   "depth_m": null,
+   "side_beams": [
+    "1F:BAND0014"
+   ],
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0,
+    0.0
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0027.1",
+   "mark": "CB11",
+   "end": 0,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "66A",
+     "COLUMN_BELOW"
+    ],
+    [
+     "1F:BAND0024.1",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.75,
+   "beyond_area_m2": 0.05064,
+   "beyond_closed": false,
+   "beyond_side_t_m": [
+    0.8,
+    0.7019
+   ],
+   "beyond_edge_cover": [
+    0.016,
+    1.0
+   ]
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0027.3",
+   "mark": "CB11",
+   "end": 1,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "69D",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": 0.75,
+   "side_beams": [
+    "1F:BAND0023"
+   ],
+   "beyond_area_m2": 0.11522,
+   "beyond_closed": false,
+   "beyond_side_t_m": [
+    0.8,
+    0.8
+   ],
+   "beyond_edge_cover": [
+    0.625,
+    0.312
+   ]
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0028",
+   "mark": "B18",
+   "end": 0,
+   "touch": "BEAM",
+   "members": [
+    [
+     "1F:BAND0027.1",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.75,
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0,
+    0.0
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0028",
+   "mark": "B18",
+   "end": 1,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "679",
+     "COLUMN_BELOW"
+    ],
+    [
+     "1F:BAND0006.1",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.75,
+   "beyond_area_m2": 0.06066,
+   "beyond_closed": false,
+   "beyond_side_t_m": [
+    0.0,
+    0.8
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    0.0
+   ]
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0030.1",
+   "mark": "B19",
+   "end": 0,
+   "touch": "NONE",
+   "members": [],
+   "depth_m": 0.75,
+   "beyond_area_m2": 0.03848,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.072,
+    0.1203
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0030.1",
+   "mark": "B19",
+   "end": 1,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "667",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": 0.75,
+   "over_support": [
+    "667"
+   ],
+   "beyond_area_m2": 0.00136,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.1417,
+    0.0
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0031.1",
+   "mark": "B23",
+   "end": 0,
+   "touch": "PROJECTION",
+   "members": [
+    [
+     "1F:BAND0014",
+     "PROJECTION"
+    ]
+   ],
+   "depth_m": 0.75,
+   "side_beams": [
+    "1F:BAND0026.2",
+    "1F:BAND0013.1"
+   ]
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0031.2",
+   "mark": "B23",
+   "end": 1,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "67F",
+     "COLUMN_BELOW"
+    ],
+    [
+     "1F:BAND0011.1",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.75,
+   "beyond_area_m2": 0.26941,
+   "beyond_closed": false,
+   "beyond_side_t_m": [
+    0.8,
+    0.8
+   ],
+   "beyond_edge_cover": [
+    0.001,
+    0.001
+   ]
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0032",
+   "mark": "B25",
+   "end": 0,
+   "touch": "BEAM",
+   "members": [
+    [
+     "1F:BAND0027.2",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.75,
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0,
+    0.0
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0032",
+   "mark": "B25",
+   "end": 1,
+   "touch": "BEAM",
+   "members": [
+    [
+     "1F:BAND0030.1",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.75,
+   "side_beams": [
+    "1F:BAND0030.1"
+   ],
+   "beyond_area_m2": 0.0185,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0668,
+    0.0003
+   ],
+   "beyond_edge_cover": [
+    0.995,
+    1.0
+   ]
+  },
+  {
+   "storey": "2F",
+   "piece": "2F:BAND0001.1",
+   "mark": "B3",
+   "end": 0,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "40F",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": 0.4,
+   "beyond_area_m2": 0.0001,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0005,
+    0.0005
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "2F",
+   "piece": "2F:BAND0001.3",
+   "mark": "B8",
+   "end": 1,
+   "touch": "JUNCTION_OWNER",
+   "members": [],
+   "depth_m": 0.75,
+   "side_beams": [
+    "2F:BAND0009"
+   ],
+   "beyond_area_m2": 0.16032,
+   "beyond_closed": false,
+   "beyond_side_t_m": [
+    0.8,
+    0.8
+   ],
+   "beyond_edge_cover": [
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "storey": "2F",
+   "piece": "2F:BAND0002.1",
+   "mark": "B3",
+   "end": 0,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "424",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": 0.4,
+   "beyond_area_m2": 1e-05,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0,
+    0.0
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "2F",
+   "piece": "2F:BAND0002.1",
+   "mark": "B3",
+   "end": 1,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "421",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": 0.4,
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true
+  },
+  {
+   "storey": "2F",
+   "piece": "2F:BAND0003",
+   "mark": "B2",
+   "end": 0,
+   "touch": "BEAM",
+   "members": [
+    [
+     "2F:BAND0006.1",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.4,
+   "beyond_area_m2": 0.11962,
+   "beyond_closed": false,
+   "beyond_side_t_m": [
+    0.8,
+    0.8
+   ],
+   "beyond_edge_cover": [
+    0.001,
+    0.345
+   ]
+  },
+  {
+   "storey": "2F",
+   "piece": "2F:BAND0003",
+   "mark": "B2",
+   "end": 1,
+   "touch": "BEAM",
+   "members": [
+    [
+     "2F:BAND0011.1",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.4,
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0,
+    0.0
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "2F",
+   "piece": "2F:BAND0004",
+   "mark": "B1",
+   "end": 0,
+   "touch": "BEAM",
+   "members": [
+    [
+     "2F:BAND0011.1",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.4,
+   "beyond_area_m2": 1e-05,
+   "beyond_closed": false,
+   "beyond_side_t_m": [
+    0.0,
+    0.0
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "2F",
+   "piece": "2F:BAND0004",
+   "mark": "B1",
+   "end": 1,
+   "touch": "BEAM",
+   "members": [
+    [
+     "2F:BAND0008.1",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.4,
+   "beyond_area_m2": 1e-05,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0,
+    0.0
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "2F",
+   "piece": "2F:BAND0005",
+   "mark": "B2",
+   "end": 0,
+   "touch": "BEAM",
+   "members": [
+    [
+     "2F:BAND0008.1",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.4,
+   "beyond_area_m2": 1e-05,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.1996,
+    0.1995
+   ],
+   "beyond_edge_cover": [
+    0.001,
+    1.0
+   ]
+  },
+  {
+   "storey": "2F",
+   "piece": "2F:BAND0005",
+   "mark": "B2",
+   "end": 1,
+   "touch": "BEAM",
+   "members": [
+    [
+     "2F:BAND0009",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.4,
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true
+  },
+  {
+   "storey": "2F",
+   "piece": "2F:BAND0006.1",
+   "mark": "B15",
+   "end": 0,
+   "touch": "JUNCTION_OWNER",
+   "members": [],
+   "depth_m": 1.2,
+   "side_beams": [
+    "2F:BAND0003"
+   ],
+   "beyond_area_m2": 0.16032,
+   "beyond_closed": false,
+   "beyond_side_t_m": [
+    0.8,
+    0.8
+   ],
+   "beyond_edge_cover": [
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "storey": "2F",
+   "piece": "2F:BAND0006.2",
+   "mark": "B15",
+   "end": 1,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "40F",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": 1.2,
+   "beyond_area_m2": 0.06037,
+   "beyond_closed": false,
+   "beyond_side_t_m": [
+    0.8,
+    0.8
+   ],
+   "beyond_edge_cover": [
+    0.625,
+    0.626
+   ]
+  },
+  {
+   "storey": "2F",
+   "piece": "2F:BAND0007.1",
+   "mark": "B2",
+   "end": 0,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "41E",
+     "COLUMN_BELOW"
+    ],
+    [
+     "gap BAND0011.1|BAND0011.2",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.4,
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0,
+    0.0
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "2F",
+   "piece": "2F:BAND0007.2",
+   "mark": "B2",
+   "end": 1,
+   "touch": "BEAM",
+   "members": [
+    [
+     "2F:BAND0009",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.4,
+   "beyond_area_m2": 1e-05,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0,
+    0.0
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "2F",
+   "piece": "2F:BAND0008.1",
+   "mark": "B1",
+   "end": 0,
+   "touch": "JUNCTION_OWNER",
+   "members": [],
+   "depth_m": 0.4,
+   "side_beams": [
+    "2F:BAND0005",
+    "2F:BAND0004"
+   ],
+   "beyond_area_m2": 0.1596,
+   "beyond_closed": false,
+   "beyond_side_t_m": [
+    0.8,
+    0.8
+   ],
+   "beyond_edge_cover": [
+    0.001,
+    0.001
+   ]
+  },
+  {
+   "storey": "2F",
+   "piece": "2F:BAND0008.3",
+   "mark": "B3",
+   "end": 1,
+   "touch": "BEAM",
+   "members": [
+    [
+     "2F:BAND0001.2",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.4,
+   "side_beams": [
+    "2F:BAND0001.2",
+    "2F:BAND0001.2"
+   ],
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true
+  },
+  {
+   "storey": "2F",
+   "piece": "2F:BAND0009",
+   "mark": "B7",
+   "end": 0,
+   "touch": "JUNCTION_OWNER",
+   "members": [],
+   "depth_m": 0.75,
+   "side_beams": [
+    "2F:BAND0005"
+   ],
+   "beyond_area_m2": 0.16032,
+   "beyond_closed": false,
+   "beyond_side_t_m": [
+    0.8,
+    0.8
+   ],
+   "beyond_edge_cover": [
+    0.001,
+    0.001
+   ]
+  },
+  {
+   "storey": "2F",
+   "piece": "2F:BAND0009",
+   "mark": "B7",
+   "end": 1,
+   "touch": "BEAM",
+   "members": [
+    [
+     "2F:BAND0001.3",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.75,
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0,
+    0.0
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "2F",
+   "piece": "2F:BAND0010.1",
+   "mark": "B3",
+   "end": 0,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "421",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": 0.4,
+   "side_beams": [
+    "2F:BAND0012.1"
+   ],
+   "beyond_area_m2": 0.00022,
+   "beyond_closed": false,
+   "beyond_side_t_m": [
+    0.0,
+    0.0
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "2F",
+   "piece": "2F:BAND0010.1",
+   "mark": "B3",
+   "end": 1,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "412",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": 0.4,
+   "beyond_area_m2": 0.00023,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0006,
+    0.0006
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "2F",
+   "piece": "2F:BAND0011.1",
+   "mark": "B1",
+   "end": 0,
+   "touch": "JUNCTION_OWNER",
+   "members": [],
+   "depth_m": 0.4,
+   "side_beams": [
+    "2F:BAND0004",
+    "2F:BAND0003"
+   ],
+   "beyond_area_m2": 0.16032,
+   "beyond_closed": false,
+   "beyond_side_t_m": [
+    0.8,
+    0.8
+   ],
+   "beyond_edge_cover": [
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "storey": "2F",
+   "piece": "2F:BAND0011.2",
+   "mark": "B1",
+   "end": 1,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "421",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": 0.4,
+   "beyond_area_m2": 0.0002,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0,
+    0.0
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "2F",
+   "piece": "2F:BAND0012.1",
+   "mark": "B1",
+   "end": 0,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "421",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": 0.4,
+   "beyond_area_m2": 8e-05,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0004,
+    0.0004
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "storey": "2F",
+   "piece": "2F:BAND0012.1",
+   "mark": "B1",
+   "end": 1,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "41B",
+     "COLUMN_BELOW"
+    ],
+    [
+     "gap BAND0008.2|BAND0008.3",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.4,
+   "beyond_area_m2": 0.0,
+   "beyond_closed": true
+  }
+ ],
+ "through": [
+  {
+   "storey": "GF",
+   "outline": "322",
+   "kind": "CARRIED_COLUMN",
+   "A_m2": 0.2,
+   "piece": "GF:BAND0037.1",
+   "mark": "B16",
+   "share": 0.3766,
+   "depth_m": 0.75,
+   "column_instance": null,
+   "column_mark": null,
+   "released_column_m3": null,
+   "ledger": [
+    {
+     "id": "COL-GF-09",
+     "joint_m3_lo": 0.1475,
+     "joint_m3_hi": 0.1475,
+     "status": "HELD"
+    }
+   ]
+  },
+  {
+   "storey": "GF",
+   "outline": "322",
+   "kind": "CARRIED_COLUMN",
+   "A_m2": 0.2,
+   "piece": "GF:BAND0042",
+   "mark": "B21",
+   "share": 0.3433,
+   "depth_m": 0.75,
+   "column_instance": null,
+   "column_mark": null,
+   "released_column_m3": null,
+   "ledger": [
+    {
+     "id": "COL-GF-09",
+     "joint_m3_lo": 0.1475,
+     "joint_m3_hi": 0.1475,
+     "status": "HELD"
+    }
+   ]
+  },
+  {
+   "storey": "GF",
+   "outline": "347",
+   "kind": "COLUMN_BELOW",
+   "A_m2": 0.08,
+   "piece": "GF:BAND0041.1",
+   "mark": "CB1",
+   "share": 1.0,
+   "depth_m": 0.75,
+   "column_instance": "NECK:COL:SH10:C@150972,36507",
+   "column_mark": "C",
+   "released_column_m3": 0.45,
+   "ledger": [
+    {
+     "id": "COL-GF-24",
+     "joint_m3_lo": 0.059,
+     "joint_m3_hi": 0.059,
+     "status": "DRAWING-CONFIRMED"
+    }
+   ]
+  },
+  {
+   "storey": "GF",
+   "outline": "34A",
+   "kind": "COLUMN_BELOW",
+   "A_m2": 0.08,
+   "piece": "GF:BAND0028",
+   "mark": "B9",
+   "share": 0.495,
+   "depth_m": 0.75,
+   "column_instance": "NECK:COL:SH10:C@119898,42592",
+   "column_mark": "C",
+   "released_column_m3": 0.45,
+   "ledger": [
+    {
+     "id": "COL-GF-16",
+     "joint_m3_lo": 0.059,
+     "joint_m3_hi": 0.059,
+     "status": "HELD"
+    }
+   ]
+  },
+  {
+   "storey": "GF",
+   "outline": "34D",
+   "kind": "COLUMN_BELOW",
+   "A_m2": 0.08,
+   "piece": "GF:BAND0014",
+   "mark": "CB7",
+   "share": 0.5016,
+   "depth_m": 0.75,
+   "column_instance": "NECK:COL:SH10:C@120004,36736",
+   "column_mark": "C",
+   "released_column_m3": 0.45,
+   "ledger": [
+    {
+     "id": "COL-GF-28",
+     "joint_m3_lo": 0.059,
+     "joint_m3_hi": 0.059,
+     "status": "HELD"
+    }
+   ]
+  },
+  {
+   "storey": "GF",
+   "outline": "350",
+   "kind": "COLUMN_BELOW",
+   "A_m2": 0.08,
+   "piece": "GF:BAND0014",
+   "mark": "CB7",
+   "share": 0.996,
+   "depth_m": 0.75,
+   "column_instance": "NECK:COL:SH10:C3@125165,36762",
+   "column_mark": "C3",
+   "released_column_m3": 0.5625,
+   "ledger": [
+    {
+     "id": "COL-GF-29",
+     "joint_m3_lo": 0.0737,
+     "joint_m3_hi": 0.0737,
+     "status": "HELD"
+    }
+   ]
+  },
+  {
+   "storey": "GF",
+   "outline": "356",
+   "kind": "COLUMN_BELOW",
+   "A_m2": 0.08,
+   "piece": "GF:BAND0027",
+   "mark": "B2",
+   "share": 0.9927,
+   "depth_m": 0.4,
+   "column_instance": "NECK:COL:SH10:C@122085,43426",
+   "column_mark": "C",
+   "released_column_m3": 0.45,
+   "ledger": [
+    {
+     "id": "COL-GF-15",
+     "joint_m3_lo": 0.059,
+     "joint_m3_hi": 0.059,
+     "status": "HELD"
+    }
+   ]
+  },
+  {
+   "storey": "GF",
+   "outline": "359",
+   "kind": "COLUMN_BELOW",
+   "A_m2": 0.08,
+   "piece": "GF:BAND0039",
+   "mark": "CB8",
+   "share": 0.9994,
+   "depth_m": 0.75,
+   "column_instance": "NECK:COL:SH10:C@131290,36755",
+   "column_mark": "C",
+   "released_column_m3": 0.45,
+   "ledger": [
+    {
+     "id": "COL-GF-30",
+     "joint_m3_lo": 0.059,
+     "joint_m3_hi": 0.059,
+     "status": "DRAWING-CONFIRMED"
+    }
+   ]
+  },
+  {
+   "storey": "1F",
+   "outline": "667",
+   "kind": "COLUMN_BELOW",
+   "A_m2": 0.2,
+   "piece": "1F:BAND0030.1",
+   "mark": "B19",
+   "share": 0.0436,
+   "depth_m": 0.75,
+   "column_instance": "NECK:COL:SH10:C9@144230,46259",
+   "column_mark": "C9",
+   "released_column_m3": 0.756,
+   "ledger": [
+    {
+     "id": "COL-1F-39",
+     "joint_m3_lo": 0.1062,
+     "joint_m3_hi": 0.1062,
+     "status": "DRAWING-CONFIRMED"
+    }
+   ]
+  },
+  {
+   "storey": "1F",
+   "outline": "77B",
+   "kind": "CARRIED_COLUMN",
+   "A_m2": 0.08,
+   "piece": "1F:BAND0030.1",
+   "mark": "B19",
+   "share": 0.9781,
+   "depth_m": 0.75,
+   "column_instance": null,
+   "column_mark": null,
+   "released_column_m3": null,
+   "ledger": []
+  },
+  {
+   "storey": "2F",
+   "outline": "778",
+   "kind": "COLUMN_BELOW",
+   "A_m2": 0.08,
+   "piece": "2F:BAND0009",
+   "mark": "B7",
+   "share": 0.9989,
+   "depth_m": 0.75,
+   "column_instance": null,
+   "column_mark": null,
+   "released_column_m3": null,
+   "ledger": [
+    {
+     "id": "COL-2F-59",
+     "joint_m3_lo": 0.059,
+     "joint_m3_hi": 0.059,
+     "status": "DRAWING-CONFIRMED"
+    }
+   ]
+  }
+ ]
+}
