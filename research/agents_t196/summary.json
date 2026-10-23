@@ -191,7 +191,7 @@
  ],
  "lines": {
   "LINKED": 1733,
-  "UNLINKED": 1399
+  "UNLINKED": 1801
  },
  "lines_unlinked_by_reason": {
   "boundary wall is a later kind (step 3)": 1,
@@ -200,7 +200,10 @@
   "no element named": 3,
   "route G element key family BEAM_STEEL is not a register v0 kind": 763,
   "route G element key family COLUMN_STEEL is not a register v0 kind": 327,
+  "route G element key family DOME_RING is not a register v0 kind": 2,
   "route G element key family GROUND_SYSTEM_STEEL is not a register v0 kind": 281,
+  "route G element key family SLAB_STEEL is not a register v0 kind": 312,
+  "route G element key family STAIR_POOL_TANK_STEEL is not a register v0 kind": 88,
   "stair site region not bound to a staircase: kind WINDER, width 2.2111 m, zone 17.1272 m2, storey rise 4.2 m; matches no T-184 flight by geometry (ST-01 1F -> 2F = two straight 1.20 m flights + landing): either the ST-01 shaft read as one winder region (the D-T184-1 place) or another drawing; physical element to establish (Lead / Checker)": 1,
   "threshold strip the engine left unattributed (no opening or door assembly names it)": 5
  },

@@ -2,8 +2,9 @@
 
 Worker 3, 2026-10-23. Lane I, backlog-permitted (owner-approved review plan, PROJECT_UNDERSTANDING_ASSESSMENT s.6 R7).
 Pure check module, unwired; no quantity, rule, method or released line changes. Released default V2.9 + route G
-unchanged; candidate read: ARCH_TAKEOFF_V3.0.4 (V3_0_4_BOQ_LINES.csv **d86de34a**, reproduced in this run on the Drive
-copies P7757.dxf ab54dd55 / ST7757 dxf 9f9d1179; V3.0.5 r2 is READY, not merged, so V3.0.4 per the task row).
+unchanged; candidates read, both reproduced in this run on the Drive copies P7757.dxf ab54dd55 / ST7757 dxf 9f9d1179:
+ARCH_TAKEOFF_V3.0.5 r2 (V3_0_5_BOQ_LINES.csv **76d75bde**, merged 90d0b769: the committed summary.json) and V3.0.4
+(**d86de34a**). Rows, elements and findings are identical on both; only the unlinked line count differs (below).
 
 ## What was built
 
@@ -11,13 +12,13 @@ copies P7757.dxf ab54dd55 / ST7757 dxf 9f9d1179; V3.0.5 r2 is READY, not merged,
 |---|---|
 | `engine/source/scope_crosswalk_v1.py` | `crosswalk(elements, rows, row_map, lines, line_links, rulings, documents)`: (a) reference rows -> drawn elements DRAWN / AGGREGATE / NOT_DRAWN / SCOPE_UNKNOWN (+ NOT_MAPPED for a join not yet made, never counted as any of the four); (b) candidate lines -> elements LINKED / UNLINKED with reason; (c) reverse: every drawn element HAS_LINE / CARRIED_BY_RULING / MISSING_LINE, and every required sheet NOT_IN_SET -> NOT_ISSUED designer item with its lines and rows, quantity UNKNOWN (never 0). Findings: DUPLICATE_ROW (same element, component and trade; one finding per row group), ROW_WITHOUT_LINE, RULING_CARRIER_WITHOUT_LINE, NOT_DRAWN_SCOPE (per unit), NOT_DRAWN_PART (one discipline does not draw a part of a drawn row). `build_elements` joins an element_register_v0 register with ledger elements (an id given twice is refused); `register_links` reads the register's links (HOST role left out). |
 | `tests/t196_scope_crosswalk/` | non-Alsenan hand fixture (11 elements, 10 lines, 10 DETAIL rows + 1 subtotal) and adverse cases, 8 tests |
-| `research/agents_t196/alsenan_t196.py` | the development-villa run: register v0 + T-183 / T-184 / T-185 / T-164 ledger elements, the RC workbook joined in full, the T-195 required-sheet list; prints ids and counts only |
+| `research/agents_t196/alsenan_t196.py` | the development-villa run (`<run dir> --lines <V3_0_x_BOQ_LINES.json> --commit-csv`): register v0 + T-183 / T-184 / T-185 / T-164 ledger elements, the RC workbook joined in full, the T-195 required-sheet list; prints ids and counts only |
 | `research/agents_t196/ROWS_T196.csv`, `summary.json` | per reference row: row id (workbook code : sheet ordinal : row), trade, unit, his quantity, status, element ids, reason. No cell text, no sheet name, no coordinate |
 
 Row ids: `<workbook>:S<n>:<row>` where S<n> is the sheet's ordinal in `tests/alsenan/registers_b1/FREELANCER_RAW_ROWS.json`
 order (RC workbook = S10 .. S17; S16 = stairs / domes, S17 = pool). The Checker reads a row there by file + ordinal + row.
 
-## Alsenan result (V3.0.4 d86de34a; rerun identical)
+## Alsenan result (V3.0.5 r2 76d75bde and V3.0.4 d86de34a; rerun identical)
 
 **(a) Freelancer rows, 494 DETAIL (the 122 subtotal / cover rows are sums, not scope):** DRAWN 15, AGGREGATE 52,
 NOT_DRAWN 3, SCOPE_UNKNOWN 3, NOT_MAPPED 421. The RC workbook (148 DETAIL rows, 399.62 m3 of his) is joined in full:
@@ -36,10 +37,11 @@ Total reference concrete on no structural drawing: **5.968 m3** (3.708 + 2.260),
 The other workbooks (FIN 95, BLK 128, PLS 65, PNT 37, ALU 21 DETAIL rows) are NOT_MAPPED: their room / surface join
 to register ROOM / WALL / OPEN elements is the next R7 step.
 
-**(b) Candidate lines, 3,132:** LINKED 1,733, UNLINKED 1,399. Unlinked: 1,371 steel lines (BEAM_STEEL 763,
-COLUMN_STEEL 327, GROUND_SYSTEM_STEEL 281: register v0 binds steel to its concrete element only through the route G
-key families; the V3.0.3 ledger families are a later kind), facade 13 (later kind), thresholds 5, soffit ceilings 5,
-WP 3, boundary wall 1, and **one stair line: `P-C:STAIRS:1F:SITE-b845...` 4.451 m3 PROVISIONAL** (see below).
+**(b) Candidate lines, V3.0.5: 3,534** (V3.0.4: 3,132): LINKED 1,733 (both), UNLINKED 1,801 (V3.0.4: 1,399).
+Unlinked: steel ledger lines 1,771 (BEAM_STEEL 763, COLUMN_STEEL 327, GROUND_SYSTEM_STEEL 281, SLAB_STEEL 312 and
+STAIR_POOL_TANK_STEEL 88 new in V3.0.5: register v0 binds steel to its concrete element only through the route G key
+families; the ledger families are a later kind), V3.0.5's 2 DOME_RING beam lines (ring = BEAM per the register ruling;
+no ring element yet), facade 13 (later kind), thresholds 5, soffit ceilings 5, WP 3, boundary wall 1, and **one stair line: `P-C:STAIRS:1F:SITE-b845...` 4.451 m3 PROVISIONAL** (see below).
 Ledger bindings: pool 2 lines -> POOL-01; 2 dome shells -> DOME-A / DOME-B pair; SCOPE:STAIRS:GF flights 2.786 ->
 ST-01 GF -> 1F; SCOPE:STAIRS:GROUND flight 0.948 -> ST-03 (E1); `STAIRS:GROUND:SITE` (zone 8.3723 m2) 1.769 -> ST-02.
 
