@@ -1,0 +1,46 @@
+{
+ "pipeline_reproduces_T108_BY_WALL": true,
+ "builder_reproduces_register_v1": true,
+ "pieces": 15,
+ "pieces_closed_R4": 6,
+ "pieces_held": {
+  "R2": 7,
+  "R3": 1,
+  "CONFLICT (column outline)": 1
+ },
+ "dome_pieces_T227": 6,
+ "walls_changed": [
+  "GF-W10",
+  "1F-W05",
+  "1F-W11",
+  "1F-W16"
+ ],
+ "net_established_m2": {
+  "VERIFIED": {
+   "before": 0,
+   "after": 0
+  },
+  "DRAWING-CONFIRMED": {
+   "before": 252.815,
+   "after": 272.149
+  },
+  "ASSUMED — OWNER-APPROVED": {
+   "before": 84.595,
+   "after": 84.595
+  }
+ },
+ "gross_established_m2": {
+  "before": 567.251,
+  "after": 663.158
+ },
+ "gap_after": {
+  "gap": 240.569,
+  "reconstructed": 240.568
+ },
+ "d12_rows": 20,
+ "d12_m3_range_on_established_net": {
+  "at_drawn": 22.513,
+  "at_note": 30.62
+ },
+ "verified_by_checker": 0
+}
