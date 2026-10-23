@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-23 13:53 UTC | Verifier | STARTED | run session_01PQQSzBue3QAtn7c3bAtAuN | repo-attached routine | task state: READY T-214, T-218, T-217 (per RUN_LOG) | self-check pending
 - 2026-10-23 13:46 UTC | Worker 1 | SUCCESS | T-217 READY (agents/task-T-217 @ 0347999c) | Column / neck sections per member x storey from schedule, CAP size text + dimension chain and drawn outlines (slab plans: SOLID = own column, ANSI35 = starts there): 26 CONFLICT member-storeys hold released 13.194 m3 vs range 11.8665 .. 15.063 m3 (C8 at F14 neck 0.24 .. 0.27 m2, GF 0.900 .. 1.0125 m3; lift necks printed + dimensioned at their GR section, 0.55 .. 0.75 m3/m vs released 1.4625); 6 drafting notes ENGINE_RIGHT by the drawing's own dims; 3 planted columns (P.C) have no line in any state (1.428 m3 at 4.20); 5 released upper lines (2.268 m3) on members their slab plan does not draw: UNKNOWN. ERS: read, s.2-4 + s.7 row proposed; no owner question | self-check: codemap check PASS, pytest t061 PASS, freeze PASS; Drive read OK (ST7757 dxf + pdf); problem: none (t202 guard red only on the known masonry_area_v1 offender, NEW 0)
 - 2026-10-23T13:42Z | Worker 2 | STARTED | run session_01Q2V7fPynCjJRtDTxJMf6Eb | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-23 13:23 UTC | Worker 1 | STARTED | run session_01CF5LLRB8BokMEE3ow6Zbqn | repo-attached routine | task state: none yet | self-check pending
