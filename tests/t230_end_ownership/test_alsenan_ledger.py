@@ -46,13 +46,16 @@ def test_strap_footing_rows():
 
 
 def test_ground_beam_junctions():
-    assert SUM["junctions_total"] == 34 and SUM["junctions_zero"] == 26
+    assert SUM["junctions_total"] == 34 and SUM["junctions_zero"] == 25
     nz = {r["column"]: r for r in SUM["junctions_nonzero"]}
     for c in ("COL:204", "COL:207", "COL:20B", "COL:214"):        # drafting-note outlines (T-217), exterior beams
         assert list(nz[c]["double_plan_m2"]) == [0.03, 0.03]
         assert list(nz[c]["double_m3"]) == [0.024, 0.0285]
     assert list(SUM["gb_double_exterior_m3"]) == [0.096, 0.114]
-    assert list(nz["COL:24D"]["double_plan_m2"]) == [0.0, 0.03]        # C8 CONFLICT: a range, never its larger end
+    # C8: the neck is placed by the dimensioned CAP sheet (= FP, on the axis +-0.15), 50 mm off the beam-plan copy:
+    # the beam strip beside it (0.80 x 0.05) is beam concrete in no span; the 0.90 schedule reading is a range
+    assert list(nz["COL:24D"]["double_plan_m2"]) == [0.0, 0.025]
+    assert list(nz["COL:24D"]["gap_plan_m2"]) == [0.04, 0.04]
     assert nz["COL:24D"]["status"].startswith("CONFLICT")
     assert list(nz["COL:211"]["gap_plan_m2"]) == [0.03, 0.03]           # corner beside C3 billed by no span
 

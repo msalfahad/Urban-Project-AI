@@ -19,6 +19,34 @@
  },
  "junctions_nonzero": [
   {
+   "column": "COL:17BD",
+   "depths_m": [
+    0.8,
+    0.95
+   ],
+   "double_m3": [
+    0.0,
+    0.0
+   ],
+   "double_plan_m2": [
+    0.0,
+    0.0
+   ],
+   "ends": [
+    "107+7CE#1:end"
+   ],
+   "gap_m3": [
+    0.0021,
+    0.0025
+   ],
+   "gap_plan_m2": [
+    0.0026,
+    0.0026
+   ],
+   "neck": "T-217 AGREE (17C5 CN); CAP; CAP = FP places it off the beam-plan outline",
+   "status": "HELD (depth candidates / exterior bottom D-35)"
+  },
+  {
    "column": "COL:1EF",
    "depths_m": [
     0.3,
@@ -43,7 +71,7 @@
     0.0047,
     0.0104
    ],
-   "neck": "T-217 CONFLICT 1093 C2: [(200.0, 500.0), (300.0, 500.0)]",
+   "neck": "T-217 CONFLICT 1093 C2: [(200.0, 500.0), (300.0, 500.0)]; CAP",
    "status": "CONFLICT (T-217 section) + depth candidates"
   },
   {
@@ -71,7 +99,7 @@
     0.0,
     0.0
    ],
-   "neck": "T-217 CONFLICT 1096 C2: [(200.0, 500.0), (300.0, 500.0)]",
+   "neck": "T-217 CONFLICT 1096 C2: [(200.0, 500.0), (300.0, 500.0)]; CAP",
    "status": "CONFLICT (T-217 section) + depth candidates"
   },
   {
@@ -99,7 +127,7 @@
     0.0,
     0.0
    ],
-   "neck": "T-217 DRAFTING_NOTE: printed (300.0, 500.0) drawn on the foundation plan at the same place (3 of 4 edge pairs coincide)",
+   "neck": "T-217 DRAFTING_NOTE (10A8 C): printed (300.0, 500.0) at the CAP place = FP; the beam-plan outline is the drafting copy; CAP = FP places it off the beam-plan outline",
    "status": "HELD (depth candidates / exterior bottom D-35)"
   },
   {
@@ -128,7 +156,7 @@
     0.0,
     0.0
    ],
-   "neck": "T-217 DRAFTING_NOTE: printed (300.0, 500.0) drawn on the foundation plan at the same place (3 of 4 edge pairs coincide)",
+   "neck": "T-217 DRAFTING_NOTE (10AB C): printed (300.0, 500.0) at the CAP place = FP; the beam-plan outline is the drafting copy; CAP = FP places it off the beam-plan outline",
    "status": "HELD (depth candidates / exterior bottom D-35)"
   },
   {
@@ -158,7 +186,7 @@
     0.0,
     0.0
    ],
-   "neck": "T-217 DRAFTING_NOTE: printed (300.0, 500.0) drawn on the foundation plan at the same place (3 of 4 edge pairs coincide)",
+   "neck": "T-217 DRAFTING_NOTE (10AE C3): printed (300.0, 500.0) at the CAP place = FP; the beam-plan outline is the drafting copy; CAP = FP places it off the beam-plan outline",
    "status": "HELD (depth candidates / exterior bottom D-35)"
   },
   {
@@ -190,7 +218,7 @@
     0.03,
     0.03
    ],
-   "neck": "T-217 AGREE (10B1 C3)",
+   "neck": "T-217 AGREE (10B1 C3); CAP",
    "status": "HELD (depth candidates / exterior bottom D-35)"
   },
   {
@@ -218,7 +246,7 @@
     0.0,
     0.0
    ],
-   "neck": "T-217 DRAFTING_NOTE: printed (300.0, 500.0) drawn on the foundation plan at the same place (3 of 4 edge pairs coincide)",
+   "neck": "T-217 DRAFTING_NOTE (10B4 C): printed (300.0, 500.0) at the CAP place = FP; the beam-plan outline is the drafting copy; CAP = FP places it off the beam-plan outline",
    "status": "HELD (depth candidates / exterior bottom D-35)"
   },
   {
@@ -228,11 +256,11 @@
    ],
    "double_m3": [
     0.0,
-    0.012
+    0.01
    ],
    "double_plan_m2": [
     0.0,
-    0.03
+    0.025
    ],
    "ends": [
     "184+7CF#1:end",
@@ -240,19 +268,19 @@
     "7DC+7DD#1:start"
    ],
    "gap_m3": [
-    0.0,
-    0.0
+    0.016,
+    0.016
    ],
    "gap_plan_m2": [
-    0.0,
-    0.0
+    0.04,
+    0.04
    ],
-   "neck": "T-217 CONFLICT 10E0 C8: [(300.0, 800.0), (300.0, 900.0)]",
+   "neck": "T-217 CONFLICT 10E0 C8: [(300.0, 800.0), (300.0, 900.0)]; CAP; CAP = FP places it off the beam-plan outline",
    "status": "CONFLICT (T-217 section)"
   }
  ],
  "junctions_total": 34,
- "junctions_zero": 26,
+ "junctions_zero": 25,
  "policy": {
   "guard_class": "UNWIRED_PRODUCER",
   "policy_id": "END_OWNERSHIP_V1",
@@ -264,6 +292,8 @@
    "D_new_m": 0.4,
    "L_to_support_m": 2.9,
    "L_v2_m": 1.8999,
+   "bars": "9 T14 (3 top, 3 + 3 bottom), straight run",
+   "bars_lb_kg": 31.578,
    "delta_m3": [
     0.177,
     0.12
@@ -280,6 +310,11 @@
      "FOOTING outline: no 3-D contact with the beam"
     ]
    ],
+   "sides_m2": 2.32,
+   "sides_m2_v2": [
+    1.1399,
+    1.5199
+   ],
    "span_id": "15D+7C8#1",
    "status": "DRAWING-CONFIRMED",
    "support": "S-BW 7C2",
@@ -293,6 +328,8 @@
    "D_new_m": 0.6,
    "L_to_support_m": 5.02,
    "L_v2_m": 5.02,
+   "bars": "9 T16 (3 top, 3 + 3 bottom), straight run",
+   "bars_lb_kg": 71.396,
    "delta_m3": [
     0.0
    ],
@@ -302,6 +339,10 @@
     0.9036
    ],
    "refused": [],
+   "sides_m2": 6.024,
+   "sides_m2_v2": [
+    6.024
+   ],
    "span_id": "177+7CD#1",
    "status": "DRAWING-CONFIRMED",
    "support": "S-BW 7C2",
@@ -315,6 +356,8 @@
    "D_new_m": 0.4,
    "L_to_support_m": 3.2278,
    "L_v2_m": 1.9278,
+   "bars": "9 T14 (3 top, 3 + 3 bottom), straight run",
+   "bars_lb_kg": 35.147,
    "delta_m3": [
     0.2138,
     0.156
@@ -330,6 +373,11 @@
      "FTG:1B2B",
      "FOOTING outline: no 3-D contact with the beam"
     ]
+   ],
+   "sides_m2": 2.5822,
+   "sides_m2_v2": [
+    1.1567,
+    1.5422
    ],
    "span_id": "17C+7E3#1",
    "status": "DRAWING-CONFIRMED",

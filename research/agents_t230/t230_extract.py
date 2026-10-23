@@ -83,6 +83,8 @@ def main():
                       "polygon": [tuple(p) for p in b["polygon"]]})
     cols = R.outlines(msp, "S-COL.BON", GBP)
     cols_fp = [(i, [(x - shift, y) for x, y in p]) for i, p, _ in R.outlines(msp, "S-COL.BON", FP)]
+    CAPF = (FP[0] + shift, FP[1], FP[2] + shift, FP[3])        # COLUMN & AXIS PLAN frame: one more pitch (T-217)
+    cols_cap = [(i, [(x - 2 * shift, y) for x, y in p]) for i, p, _ in R.outlines(msp, "S-COL.BON", CAPF)]
     feet_fp = R.outlines(msp, "S-FOOTINGS", FP, blocks=("F",))
     feet_gb = [(i, [(x - shift, y) for x, y in p], h) for i, p, h in feet_fp]
     supports = [{"support_id": "COL:" + i, "kind": "COLUMN", "polygon": p, "handles": h} for i, p, h in cols] + \
@@ -107,32 +109,45 @@ def main():
         if m:
             t217[m.group(1)] = r
 
+    def match(polys, P):
+        hit = [q for _, q in polys if EO.overlap_area(q, P) > 0.5 * EO.area(P)]
+        return hit[0] if len(hit) == 1 else None
+
+    def same_place(a, b):
+        return all(abs(x - y) <= TOL_MM for x, y in zip(sorted(c[0] for c in a) + sorted(c[1] for c in a),
+                                                      sorted(c[0] for c in b) + sorted(c[1] for c in b)))
+
     def necks(cid):
-        """Neck plan candidates for a ground-beam-plan column: (status, [polys], note)."""
+        """Neck plan readings for a ground-beam-plan column: (status, [polys], note). The neck is placed by the
+        COLUMN & AXIS PLAN (CAP: size text + locating dimension chain, T-217), checked against the foundation plan;
+        the ground-beam-plan outline is the beam sheet's copy."""
         h = cid.split(":", 1)[1]
-        P = S[cid]["polygon"]
+        G = S[cid]["polygon"]
+        cap, fp = match(cols_cap, G), match(cols_fp, G)
+        P = cap or G
+        where = "CAP" if cap else "GBP (no CAP outline)"
+        moved = cap is not None and not same_place(cap, G)
+        pos = (f"; CAP {'= FP' if fp and same_place(cap, fp) else '!= FP'} places it off the beam-plan outline"
+               if moved else "")
         r = t217.get(h)
         if r is None:
-            return "NO_T217_RECORD", [P], "drawn outline (no T-217 FOUNDATION row names this handle)"
+            return ("NO_T217_RECORD", [P], f"{where} outline (no T-217 FOUNDATION row names this handle){pos}")
         sizes = printed_sizes(r["candidates"])
         printed = [(x, y) for x, y, p, _ in sizes if p]
         if r["status"] == "AGREE":
-            return EO.DRAWING_CONFIRMED, [P], f"T-217 AGREE ({r['member']} {r['mark']})"
+            return EO.DRAWING_CONFIRMED, [P], f"T-217 AGREE ({r['member']} {r['mark']}); {where}{pos}"
         if r["status"] == "DRAFTING_NOTE":
             ab = printed[0]
             if same_size(P, ab):
-                return EO.DRAWING_CONFIRMED, [P], f"T-217 DRAFTING_NOTE: the ground-beam plan draws the printed {ab}"
-            fp = [q for i, q in cols_fp if EO.overlap_area(q, P) > 0.5 * EO.area(P) and same_size(q, ab)]
-            if len(fp) == 1:
-                shared = sum(1 for k in range(4) for v in (0, 1)
-                             if abs(sorted(c[v] for c in fp[0])[k] - sorted(c[v] for c in P)[k]) <= TOL_MM) // 2
-                return EO.DRAWING_CONFIRMED, fp, (f"T-217 DRAFTING_NOTE: printed {ab} drawn on the foundation plan at "
-                                                  f"the same place ({shared} of 4 edge pairs coincide)")
+                both = fp is not None and same_place(P, fp)
+                return EO.DRAWING_CONFIRMED, [P], (f"T-217 DRAFTING_NOTE ({r['member']} {r['mark']}): printed {ab} "
+                                                  f"at the {where} place{' = FP' if both else ''}; the beam-plan "
+                                                  f"outline is the drafting copy{pos}")
             w, h_ = dims(P)
             axis = 0 if abs(w - sorted(ab)[0]) > TOL_MM and abs(w - sorted(ab)[1]) > TOL_MM else 1
             target = [v for v in ab if abs(v - (h_ if axis == 0 else w)) > TOL_MM] or list(ab)
             delta = max(target) - (w if axis == 0 else h_)
-            return EO.HELD, EO.widened(P, axis, delta), f"T-217 DRAFTING_NOTE: printed {ab}, position not drawn"
+            return EO.HELD, EO.widened(P, axis, delta), f"T-217 DRAFTING_NOTE: printed {ab}, position not drawn{pos}"
         # CONFLICT: the drawn reading plus every other printed size, its extra at an unprinted position
         polys = [P]
         w, h_ = dims(P)
@@ -145,7 +160,7 @@ def main():
             else:
                 axis = 0 if w >= h_ else 1
                 polys += EO.widened(P, axis, max(ab) - max(w, h_))
-        return EO.CONFLICT, polys, f"T-217 CONFLICT {r['member']} {r['mark']}: {sorted(set(printed))}"
+        return EO.CONFLICT, polys, f"T-217 CONFLICT {r['member']} {r['mark']}: {sorted(set(printed))}; {where}{pos}"
 
     rows, free, overl, junction = [], [], [], {}
     for sp in out["spans"]:

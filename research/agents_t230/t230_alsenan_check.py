@@ -183,6 +183,13 @@ def main(write=False):
                "refused": f["refused"], "L_v2_m": L_old, "L_to_support_m": L_new}
         if L_new is not None:
             Dn = class_of(L_new)
+            # p.13 bars by class (T-138 reading): > 5 m 3 T16 top + 3 + 3 T16 bottom; < 5 m (and < 2.5 m) 3 + 3 + 3 T14;
+            # straight run lower bound = the span, unit mass d^2 / 162 (project method D2_OVER_162, rebar_unit_mass)
+            dia = 16 if Dn == 0.60 else 14
+            kg_new = 9 * dia * dia / 162.0 * L_new
+            row.update({"bars_lb_kg": round(kg_new, 3), "bars": f"9 T{dia} (3 top, 3 + 3 bottom), straight run",
+                        "sides_m2": round(2 * L_new * Dn, 4),
+                        "sides_m2_v2": [round(2 * L_old * d, 4) for d in old_ds]})
             row.update({"D_new_m": Dn, "m3_v2": [round(L_old * 0.30 * d, 4) for d in old_ds],
                         "m3_new": round(L_new * 0.30 * Dn, 4),
                         "delta_m3": [round(L_new * 0.30 * Dn - L_old * 0.30 * d, 4) for d in old_ds]})

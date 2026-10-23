@@ -8,7 +8,7 @@
    ],
    "end": "start",
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (10D0 C8)",
+   "neck_note": "T-217 AGREE (10D0 C8); CAP",
    "neck_status": "DRAWING-CONFIRMED",
    "span_id": "107+7CE#1"
   },
@@ -20,7 +20,7 @@
    ],
    "end": "end",
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (17C5 CN)",
+   "neck_note": "T-217 AGREE (17C5 CN); CAP; CAP = FP places it off the beam-plan outline",
    "neck_status": "DRAWING-CONFIRMED",
    "span_id": "107+7CE#1"
   },
@@ -32,7 +32,7 @@
    ],
    "end": "end",
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (10C2 C6)",
+   "neck_note": "T-217 AGREE (10C2 C6); CAP",
    "neck_status": "DRAWING-CONFIRMED",
    "span_id": "109+7CB#1"
   },
@@ -44,7 +44,7 @@
    ],
    "end": "start",
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (10C2 C6)",
+   "neck_note": "T-217 AGREE (10C2 C6); CAP",
    "neck_status": "DRAWING-CONFIRMED",
    "span_id": "109+7CB#2"
   },
@@ -56,7 +56,7 @@
    ],
    "end": "end",
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (10CC C3)",
+   "neck_note": "T-217 AGREE (10CC C3); CAP",
    "neck_status": "DRAWING-CONFIRMED",
    "span_id": "109+7CB#2"
   },
@@ -68,7 +68,7 @@
    ],
    "end": "start",
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (10CC C3)",
+   "neck_note": "T-217 AGREE (10CC C3); CAP",
    "neck_status": "DRAWING-CONFIRMED",
    "span_id": "109+7CB#3"
   },
@@ -80,7 +80,7 @@
    ],
    "end": "end",
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (1084 C2)",
+   "neck_note": "T-217 AGREE (1084 C2); CAP",
    "neck_status": "DRAWING-CONFIRMED",
    "span_id": "109+7CB#3"
   },
@@ -92,7 +92,7 @@
    ],
    "end": "start",
    "n_readings": 1,
-   "neck_note": "T-217 DRAFTING_NOTE: the ground-beam plan draws the printed (300.0, 500.0)",
+   "neck_note": "T-217 DRAFTING_NOTE (10B7 C): printed (300.0, 500.0) at the CAP place; the beam-plan outline is the drafting copy",
    "neck_status": "DRAWING-CONFIRMED",
    "span_id": "10A+7C9#1"
   },
@@ -104,7 +104,7 @@
    ],
    "end": "end",
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (10BA C11)",
+   "neck_note": "T-217 AGREE (10BA C11); CAP",
    "neck_status": "DRAWING-CONFIRMED",
    "span_id": "10A+7C9#1"
   },
@@ -116,7 +116,7 @@
    ],
    "end": "end",
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (10C5 C3)",
+   "neck_note": "T-217 AGREE (10C5 C3); CAP",
    "neck_status": "DRAWING-CONFIRMED",
    "span_id": "10B+7D1#1"
   },
@@ -128,7 +128,7 @@
    ],
    "end": "start",
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (10C5 C3)",
+   "neck_note": "T-217 AGREE (10C5 C3); CAP",
    "neck_status": "DRAWING-CONFIRMED",
    "span_id": "10B+7D1#2"
   },
@@ -140,7 +140,7 @@
    ],
    "end": "end",
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (10BD C5)",
+   "neck_note": "T-217 AGREE (10BD C5); CAP",
    "neck_status": "DRAWING-CONFIRMED",
    "span_id": "10B+7D1#2"
   },
@@ -152,7 +152,7 @@
    ],
    "end": "end",
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (10D0 C8)",
+   "neck_note": "T-217 AGREE (10D0 C8); CAP",
    "neck_status": "DRAWING-CONFIRMED",
    "span_id": "114+115+7DF#1"
   },
@@ -164,7 +164,7 @@
    ],
    "end": "start",
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (10D0 C8)",
+   "neck_note": "T-217 AGREE (10D0 C8); CAP",
    "neck_status": "DRAWING-CONFIRMED",
    "span_id": "114+115+7DF#2"
   },
@@ -176,7 +176,7 @@
    ],
    "end": "end",
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (10A0 C3)",
+   "neck_note": "T-217 AGREE (10A0 C3); CAP",
    "neck_status": "DRAWING-CONFIRMED",
    "span_id": "114+115+7DF#2"
   },
@@ -188,7 +188,7 @@
    ],
    "end": "start",
    "n_readings": 1,
-   "neck_note": "T-217 DRAFTING_NOTE: printed (300.0, 500.0) drawn on the foundation plan at the same place (3 of 4 edge pairs coincide)",
+   "neck_note": "T-217 DRAFTING_NOTE (10AB C): printed (300.0, 500.0) at the CAP place = FP; the beam-plan outline is the drafting copy; CAP = FP places it off the beam-plan outline",
    "neck_status": "DRAWING-CONFIRMED",
    "span_id": "136+7D5#1"
   },
@@ -200,7 +200,7 @@
    ],
    "end": "end",
    "n_readings": 1,
-   "neck_note": "T-217 DRAFTING_NOTE: printed (300.0, 500.0) drawn on the foundation plan at the same place (3 of 4 edge pairs coincide)",
+   "neck_note": "T-217 DRAFTING_NOTE (10A8 C): printed (300.0, 500.0) at the CAP place = FP; the beam-plan outline is the drafting copy; CAP = FP places it off the beam-plan outline",
    "neck_status": "DRAWING-CONFIRMED",
    "span_id": "136+7D5#1"
   },
@@ -212,7 +212,7 @@
    ],
    "end": "end",
    "n_readings": 1,
-   "neck_note": "T-217 DRAFTING_NOTE: printed (300.0, 500.0) drawn on the foundation plan at the same place (3 of 4 edge pairs coincide)",
+   "neck_note": "T-217 DRAFTING_NOTE (10B4 C): printed (300.0, 500.0) at the CAP place = FP; the beam-plan outline is the drafting copy; CAP = FP places it off the beam-plan outline",
    "neck_status": "DRAWING-CONFIRMED",
    "span_id": "137+138#1"
   },
@@ -224,7 +224,7 @@
    ],
    "end": "start",
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (10B1 C3)",
+   "neck_note": "T-217 AGREE (10B1 C3); CAP",
    "neck_status": "DRAWING-CONFIRMED",
    "span_id": "13D+7D2#1"
   },
@@ -236,7 +236,7 @@
    ],
    "end": "end",
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (10BD C5)",
+   "neck_note": "T-217 AGREE (10BD C5); CAP",
    "neck_status": "DRAWING-CONFIRMED",
    "span_id": "13D+7D2#1"
   },
@@ -248,7 +248,7 @@
    ],
    "end": "end",
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (10B1 C3)",
+   "neck_note": "T-217 AGREE (10B1 C3); CAP",
    "neck_status": "DRAWING-CONFIRMED",
    "span_id": "13E+7D6#1"
   },
@@ -260,7 +260,7 @@
    ],
    "end": "start",
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (10B1 C3)",
+   "neck_note": "T-217 AGREE (10B1 C3); CAP",
    "neck_status": "DRAWING-CONFIRMED",
    "span_id": "13E+7D6#2"
   },
@@ -272,7 +272,7 @@
    ],
    "end": "start",
    "n_readings": 1,
-   "neck_note": "T-217 DRAFTING_NOTE: printed (300.0, 500.0) drawn on the foundation plan at the same place (3 of 4 edge pairs coincide)",
+   "neck_note": "T-217 DRAFTING_NOTE (10AE C3): printed (300.0, 500.0) at the CAP place = FP; the beam-plan outline is the drafting copy; CAP = FP places it off the beam-plan outline",
    "neck_status": "DRAWING-CONFIRMED",
    "span_id": "13F+7D3#1"
   },
@@ -284,7 +284,7 @@
    ],
    "end": "end",
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (10C5 C3)",
+   "neck_note": "T-217 AGREE (10C5 C3); CAP",
    "neck_status": "DRAWING-CONFIRMED",
    "span_id": "142+7D8#1"
   },
@@ -296,7 +296,7 @@
    ],
    "end": "start",
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (10BA C11)",
+   "neck_note": "T-217 AGREE (10BA C11); CAP",
    "neck_status": "DRAWING-CONFIRMED",
    "span_id": "145+7CA#1"
   },
@@ -308,7 +308,7 @@
    ],
    "end": "end",
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (10C2 C6)",
+   "neck_note": "T-217 AGREE (10C2 C6); CAP",
    "neck_status": "DRAWING-CONFIRMED",
    "span_id": "145+7CA#1"
   },
@@ -323,7 +323,7 @@
    ],
    "end": "end",
    "n_readings": 4,
-   "neck_note": "T-217 CONFLICT 1096 C2: [(200.0, 500.0), (300.0, 500.0)]",
+   "neck_note": "T-217 CONFLICT 1096 C2: [(200.0, 500.0), (300.0, 500.0)]; CAP",
    "neck_status": "CONFLICT",
    "span_id": "15C+7CC#1"
   },
@@ -338,7 +338,7 @@
    ],
    "end": "start",
    "n_readings": 4,
-   "neck_note": "T-217 CONFLICT 1099 C1: [(200.0, 500.0), (300.0, 500.0)]",
+   "neck_note": "T-217 CONFLICT 1099 C1: [(200.0, 500.0), (300.0, 500.0)]; CAP",
    "neck_status": "CONFLICT",
    "span_id": "15E+15F#1"
   },
@@ -350,7 +350,7 @@
    ],
    "end": "end",
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (1087 C2)",
+   "neck_note": "T-217 AGREE (1087 C2); CAP",
    "neck_status": "DRAWING-CONFIRMED",
    "span_id": "15E+15F#1"
   },
@@ -362,7 +362,7 @@
    ],
    "end": "start",
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (1084 C2)",
+   "neck_note": "T-217 AGREE (1084 C2); CAP",
    "neck_status": "DRAWING-CONFIRMED",
    "span_id": "170+7C3#1"
   },
@@ -374,7 +374,7 @@
    ],
    "end": "end",
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (1087 C2)",
+   "neck_note": "T-217 AGREE (1087 C2); CAP",
    "neck_status": "DRAWING-CONFIRMED",
    "span_id": "170+7C3#1"
   },
@@ -386,7 +386,7 @@
    ],
    "end": "start",
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (1087 C2)",
+   "neck_note": "T-217 AGREE (1087 C2); CAP",
    "neck_status": "DRAWING-CONFIRMED",
    "span_id": "170+7C3#2"
   },
@@ -398,7 +398,7 @@
    ],
    "end": "end",
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (108A C5)",
+   "neck_note": "T-217 AGREE (108A C5); CAP",
    "neck_status": "DRAWING-CONFIRMED",
    "span_id": "170+7C3#2"
   },
@@ -410,7 +410,7 @@
    ],
    "end": "start",
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (108A C5)",
+   "neck_note": "T-217 AGREE (108A C5); CAP",
    "neck_status": "DRAWING-CONFIRMED",
    "span_id": "170+7C3#3"
   },
@@ -422,7 +422,7 @@
    ],
    "end": "end",
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (10D7 C4)",
+   "neck_note": "T-217 AGREE (10D7 C4); CAP",
    "neck_status": "DRAWING-CONFIRMED",
    "span_id": "170+7C3#3"
   },
@@ -434,7 +434,7 @@
    ],
    "end": "start",
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (10D7 C4)",
+   "neck_note": "T-217 AGREE (10D7 C4); CAP",
    "neck_status": "DRAWING-CONFIRMED",
    "span_id": "170+7C3#4"
   },
@@ -446,7 +446,7 @@
    ],
    "end": "end",
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (17C8 CN)",
+   "neck_note": "T-217 AGREE (17C8 CN); CAP",
    "neck_status": "DRAWING-CONFIRMED",
    "span_id": "170+7C3#4"
   },
@@ -458,7 +458,7 @@
    ],
    "end": "end",
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (108A C5)",
+   "neck_note": "T-217 AGREE (108A C5); CAP",
    "neck_status": "DRAWING-CONFIRMED",
    "span_id": "176+7E6#1"
   },
@@ -470,7 +470,7 @@
    ],
    "end": "end",
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (10DA C9)",
+   "neck_note": "T-217 AGREE (10DA C9); CAP",
    "neck_status": "DRAWING-CONFIRMED",
    "span_id": "177+7CD#1"
   },
@@ -482,7 +482,7 @@
    ],
    "end": "start",
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (10DA C9)",
+   "neck_note": "T-217 AGREE (10DA C9); CAP",
    "neck_status": "DRAWING-CONFIRMED",
    "span_id": "177+7CD#2"
   },
@@ -494,7 +494,7 @@
    ],
    "end": "end",
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (10C8 C7)",
+   "neck_note": "T-217 AGREE (10C8 C7); CAP",
    "neck_status": "DRAWING-CONFIRMED",
    "span_id": "178+7DB#1"
   },
@@ -506,7 +506,7 @@
    ],
    "end": "end",
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (10D3 C5)",
+   "neck_note": "T-217 AGREE (10D3 C5); CAP",
    "neck_status": "DRAWING-CONFIRMED",
    "span_id": "17B+7E5#1"
   },
@@ -521,7 +521,7 @@
    ],
    "end": "start",
    "n_readings": 4,
-   "neck_note": "T-217 CONFLICT 1093 C2: [(200.0, 500.0), (300.0, 500.0)]",
+   "neck_note": "T-217 CONFLICT 1093 C2: [(200.0, 500.0), (300.0, 500.0)]; CAP",
    "neck_status": "CONFLICT",
    "span_id": "17E+17F#1"
   },
@@ -544,13 +544,13 @@
    "column": "COL:24D",
    "double_plan_m2_per_reading": [
     0.0,
-    0.03,
-    0.015,
+    0.025,
+    0.0125,
     0.0
    ],
    "end": "end",
    "n_readings": 4,
-   "neck_note": "T-217 CONFLICT 10E0 C8: [(300.0, 800.0), (300.0, 900.0)]",
+   "neck_note": "T-217 CONFLICT 10E0 C8: [(300.0, 800.0), (300.0, 900.0)]; CAP; CAP = FP places it off the beam-plan outline",
    "neck_status": "CONFLICT",
    "span_id": "184+7CF#1"
   },
@@ -560,12 +560,12 @@
    "double_plan_m2_per_reading": [
     0.0,
     0.0,
-    0.015,
-    0.03
+    0.0125,
+    0.025
    ],
    "end": "start",
    "n_readings": 4,
-   "neck_note": "T-217 CONFLICT 10E0 C8: [(300.0, 800.0), (300.0, 900.0)]",
+   "neck_note": "T-217 CONFLICT 10E0 C8: [(300.0, 800.0), (300.0, 900.0)]; CAP; CAP = FP places it off the beam-plan outline",
    "neck_status": "CONFLICT",
    "span_id": "184+7CF#2"
   },
@@ -577,7 +577,7 @@
    ],
    "end": "end",
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (10D3 C5)",
+   "neck_note": "T-217 AGREE (10D3 C5); CAP",
    "neck_status": "DRAWING-CONFIRMED",
    "span_id": "184+7CF#2"
   },
@@ -589,7 +589,7 @@
    ],
    "end": "start",
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (10D3 C5)",
+   "neck_note": "T-217 AGREE (10D3 C5); CAP",
    "neck_status": "DRAWING-CONFIRMED",
    "span_id": "184+7CF#3"
   },
@@ -601,7 +601,7 @@
    ],
    "end": "start",
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (10C8 C7)",
+   "neck_note": "T-217 AGREE (10C8 C7); CAP",
    "neck_status": "DRAWING-CONFIRMED",
    "span_id": "185+7C7#1"
   },
@@ -613,7 +613,7 @@
    ],
    "end": "start",
    "n_readings": 1,
-   "neck_note": "T-217 DRAFTING_NOTE: the ground-beam plan draws the printed (300.0, 500.0)",
+   "neck_note": "T-217 DRAFTING_NOTE (10B7 C): printed (300.0, 500.0) at the CAP place; the beam-plan outline is the drafting copy",
    "neck_status": "DRAWING-CONFIRMED",
    "span_id": "7D0+FC#1"
   },
@@ -625,7 +625,7 @@
    ],
    "end": "end",
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (10DD C11)",
+   "neck_note": "T-217 AGREE (10DD C11); CAP",
    "neck_status": "DRAWING-CONFIRMED",
    "span_id": "7D0+FC#1"
   },
@@ -637,7 +637,7 @@
    ],
    "end": "start",
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (10DD C11)",
+   "neck_note": "T-217 AGREE (10DD C11); CAP",
    "neck_status": "DRAWING-CONFIRMED",
    "span_id": "7D0+FC#2"
   },
@@ -649,7 +649,7 @@
    ],
    "end": "end",
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (10E4 C3)",
+   "neck_note": "T-217 AGREE (10E4 C3); CAP",
    "neck_status": "DRAWING-CONFIRMED",
    "span_id": "7D0+FC#2"
   },
@@ -661,7 +661,7 @@
    ],
    "end": "start",
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (10E4 C3)",
+   "neck_note": "T-217 AGREE (10E4 C3); CAP",
    "neck_status": "DRAWING-CONFIRMED",
    "span_id": "7D0+FC#3"
   },
@@ -673,7 +673,7 @@
    ],
    "end": "end",
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (10E8 C10)",
+   "neck_note": "T-217 AGREE (10E8 C10); CAP",
    "neck_status": "DRAWING-CONFIRMED",
    "span_id": "7D0+FC#3"
   },
@@ -685,7 +685,7 @@
    ],
    "end": "start",
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (10E8 C10)",
+   "neck_note": "T-217 AGREE (10E8 C10); CAP",
    "neck_status": "DRAWING-CONFIRMED",
    "span_id": "7D0+FC#4"
   },
@@ -697,7 +697,7 @@
    ],
    "end": "end",
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (10A4 C)",
+   "neck_note": "T-217 AGREE (10A4 C); CAP",
    "neck_status": "DRAWING-CONFIRMED",
    "span_id": "7D0+FC#4"
   },
@@ -709,7 +709,7 @@
    ],
    "end": "start",
    "n_readings": 1,
-   "neck_note": "T-217 DRAFTING_NOTE: printed (300.0, 500.0) drawn on the foundation plan at the same place (3 of 4 edge pairs coincide)",
+   "neck_note": "T-217 DRAFTING_NOTE (10AB C): printed (300.0, 500.0) at the CAP place = FP; the beam-plan outline is the drafting copy; CAP = FP places it off the beam-plan outline",
    "neck_status": "DRAWING-CONFIRMED",
    "span_id": "7D4+F8#1"
   },
@@ -721,7 +721,7 @@
    ],
    "end": "end",
    "n_readings": 1,
-   "neck_note": "T-217 DRAFTING_NOTE: printed (300.0, 500.0) drawn on the foundation plan at the same place (3 of 4 edge pairs coincide)",
+   "neck_note": "T-217 DRAFTING_NOTE (10AE C3): printed (300.0, 500.0) at the CAP place = FP; the beam-plan outline is the drafting copy; CAP = FP places it off the beam-plan outline",
    "neck_status": "DRAWING-CONFIRMED",
    "span_id": "7D4+F8#1"
   },
@@ -733,7 +733,7 @@
    ],
    "end": "start",
    "n_readings": 1,
-   "neck_note": "T-217 DRAFTING_NOTE: printed (300.0, 500.0) drawn on the foundation plan at the same place (3 of 4 edge pairs coincide)",
+   "neck_note": "T-217 DRAFTING_NOTE (10AE C3): printed (300.0, 500.0) at the CAP place = FP; the beam-plan outline is the drafting copy; CAP = FP places it off the beam-plan outline",
    "neck_status": "DRAWING-CONFIRMED",
    "span_id": "7D4+F8#2"
   },
@@ -748,7 +748,7 @@
    ],
    "end": "start",
    "n_readings": 4,
-   "neck_note": "T-217 CONFLICT 10E0 C8: [(300.0, 800.0), (300.0, 900.0)]",
+   "neck_note": "T-217 CONFLICT 10E0 C8: [(300.0, 800.0), (300.0, 900.0)]; CAP; CAP = FP places it off the beam-plan outline",
    "neck_status": "CONFLICT",
    "span_id": "7DC+7DD#1"
   },
@@ -760,7 +760,7 @@
    ],
    "end": "end",
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (10F6 CN)",
+   "neck_note": "T-217 AGREE (10F6 CN); CAP",
    "neck_status": "DRAWING-CONFIRMED",
    "span_id": "7DC+7DD#1"
   },
@@ -772,7 +772,7 @@
    ],
    "end": "start",
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (10F6 CN)",
+   "neck_note": "T-217 AGREE (10F6 CN); CAP",
    "neck_status": "DRAWING-CONFIRMED",
    "span_id": "7DC+7DD#2"
   },
@@ -784,7 +784,7 @@
    ],
    "end": "start",
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (10A4 C)",
+   "neck_note": "T-217 AGREE (10A4 C); CAP",
    "neck_status": "DRAWING-CONFIRMED",
    "span_id": "7E0+FD#1"
   },
@@ -796,7 +796,7 @@
    ],
    "end": "end",
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (10FE CN)",
+   "neck_note": "T-217 AGREE (10FE CN); CAP",
    "neck_status": "DRAWING-CONFIRMED",
    "span_id": "7E0+FD#1"
   },
@@ -808,7 +808,7 @@
    ],
    "end": "start",
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (10FE CN)",
+   "neck_note": "T-217 AGREE (10FE CN); CAP",
    "neck_status": "DRAWING-CONFIRMED",
    "span_id": "7E0+FD#2"
   },
@@ -820,7 +820,7 @@
    ],
    "end": "end",
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (10A0 C3)",
+   "neck_note": "T-217 AGREE (10A0 C3); CAP",
    "neck_status": "DRAWING-CONFIRMED",
    "span_id": "7E0+FD#2"
   },
@@ -832,7 +832,7 @@
    ],
    "end": "start",
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (10C2 C6)",
+   "neck_note": "T-217 AGREE (10C2 C6); CAP",
    "neck_status": "DRAWING-CONFIRMED",
    "span_id": "7E1+7E2#1"
   },
@@ -844,7 +844,7 @@
    ],
    "end": "end",
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (10EE CN)",
+   "neck_note": "T-217 AGREE (10EE CN); CAP",
    "neck_status": "DRAWING-CONFIRMED",
    "span_id": "7E7+7E8#1"
   },
@@ -856,7 +856,7 @@
    ],
    "end": "start",
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (10EE CN)",
+   "neck_note": "T-217 AGREE (10EE CN); CAP",
    "neck_status": "DRAWING-CONFIRMED",
    "span_id": "7E7+7E8#2"
   },
@@ -868,7 +868,7 @@
    ],
    "end": "start",
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (10F6 CN)",
+   "neck_note": "T-217 AGREE (10F6 CN); CAP",
    "neck_status": "DRAWING-CONFIRMED",
    "span_id": "7E9+7EA#1"
   },
@@ -880,7 +880,7 @@
    ],
    "end": "end",
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (10EE CN)",
+   "neck_note": "T-217 AGREE (10EE CN); CAP",
    "neck_status": "DRAWING-CONFIRMED",
    "span_id": "7E9+7EA#1"
   }
@@ -1367,10 +1367,10 @@
     "107+7CE#1:end"
    ],
    "gap_plan_m2_per_reading": [
-    0.0
+    0.0026
    ],
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (17C5 CN)",
+   "neck_note": "T-217 AGREE (17C5 CN); CAP; CAP = FP places it off the beam-plan outline",
    "neck_status": "DRAWING-CONFIRMED"
   },
   {
@@ -1385,7 +1385,7 @@
     0.0
    ],
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (17C8 CN)",
+   "neck_note": "T-217 AGREE (17C8 CN); CAP",
    "neck_status": "DRAWING-CONFIRMED"
   },
   {
@@ -1401,7 +1401,7 @@
     0.0
    ],
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (1084 C2)",
+   "neck_note": "T-217 AGREE (1084 C2); CAP",
    "neck_status": "DRAWING-CONFIRMED"
   },
   {
@@ -1418,7 +1418,7 @@
     0.0
    ],
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (1087 C2)",
+   "neck_note": "T-217 AGREE (1087 C2); CAP",
    "neck_status": "DRAWING-CONFIRMED"
   },
   {
@@ -1435,7 +1435,7 @@
     0.0
    ],
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (108A C5)",
+   "neck_note": "T-217 AGREE (108A C5); CAP",
    "neck_status": "DRAWING-CONFIRMED"
   },
   {
@@ -1475,7 +1475,7 @@
     0.0047
    ],
    "n_readings": 4,
-   "neck_note": "T-217 CONFLICT 1093 C2: [(200.0, 500.0), (300.0, 500.0)]",
+   "neck_note": "T-217 CONFLICT 1093 C2: [(200.0, 500.0), (300.0, 500.0)]; CAP",
    "neck_status": "CONFLICT"
   },
   {
@@ -1496,7 +1496,7 @@
     0.0
    ],
    "n_readings": 4,
-   "neck_note": "T-217 CONFLICT 1096 C2: [(200.0, 500.0), (300.0, 500.0)]",
+   "neck_note": "T-217 CONFLICT 1096 C2: [(200.0, 500.0), (300.0, 500.0)]; CAP",
    "neck_status": "CONFLICT"
   },
   {
@@ -1517,7 +1517,7 @@
     0.0
    ],
    "n_readings": 4,
-   "neck_note": "T-217 CONFLICT 1099 C1: [(200.0, 500.0), (300.0, 500.0)]",
+   "neck_note": "T-217 CONFLICT 1099 C1: [(200.0, 500.0), (300.0, 500.0)]; CAP",
    "neck_status": "CONFLICT"
   },
   {
@@ -1533,7 +1533,7 @@
     0.0
    ],
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (10A0 C3)",
+   "neck_note": "T-217 AGREE (10A0 C3); CAP",
    "neck_status": "DRAWING-CONFIRMED"
   },
   {
@@ -1549,7 +1549,7 @@
     0.0
    ],
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (10A4 C)",
+   "neck_note": "T-217 AGREE (10A4 C); CAP",
    "neck_status": "DRAWING-CONFIRMED"
   },
   {
@@ -1564,7 +1564,7 @@
     0.0
    ],
    "n_readings": 1,
-   "neck_note": "T-217 DRAFTING_NOTE: printed (300.0, 500.0) drawn on the foundation plan at the same place (3 of 4 edge pairs coincide)",
+   "neck_note": "T-217 DRAFTING_NOTE (10A8 C): printed (300.0, 500.0) at the CAP place = FP; the beam-plan outline is the drafting copy; CAP = FP places it off the beam-plan outline",
    "neck_status": "DRAWING-CONFIRMED"
   },
   {
@@ -1580,7 +1580,7 @@
     0.0
    ],
    "n_readings": 1,
-   "neck_note": "T-217 DRAFTING_NOTE: printed (300.0, 500.0) drawn on the foundation plan at the same place (3 of 4 edge pairs coincide)",
+   "neck_note": "T-217 DRAFTING_NOTE (10AB C): printed (300.0, 500.0) at the CAP place = FP; the beam-plan outline is the drafting copy; CAP = FP places it off the beam-plan outline",
    "neck_status": "DRAWING-CONFIRMED"
   },
   {
@@ -1597,7 +1597,7 @@
     0.0
    ],
    "n_readings": 1,
-   "neck_note": "T-217 DRAFTING_NOTE: printed (300.0, 500.0) drawn on the foundation plan at the same place (3 of 4 edge pairs coincide)",
+   "neck_note": "T-217 DRAFTING_NOTE (10AE C3): printed (300.0, 500.0) at the CAP place = FP; the beam-plan outline is the drafting copy; CAP = FP places it off the beam-plan outline",
    "neck_status": "DRAWING-CONFIRMED"
   },
   {
@@ -1614,7 +1614,7 @@
     0.03
    ],
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (10B1 C3)",
+   "neck_note": "T-217 AGREE (10B1 C3); CAP",
    "neck_status": "DRAWING-CONFIRMED"
   },
   {
@@ -1629,7 +1629,7 @@
     0.0
    ],
    "n_readings": 1,
-   "neck_note": "T-217 DRAFTING_NOTE: printed (300.0, 500.0) drawn on the foundation plan at the same place (3 of 4 edge pairs coincide)",
+   "neck_note": "T-217 DRAFTING_NOTE (10B4 C): printed (300.0, 500.0) at the CAP place = FP; the beam-plan outline is the drafting copy; CAP = FP places it off the beam-plan outline",
    "neck_status": "DRAWING-CONFIRMED"
   },
   {
@@ -1645,7 +1645,7 @@
     0.0
    ],
    "n_readings": 1,
-   "neck_note": "T-217 DRAFTING_NOTE: the ground-beam plan draws the printed (300.0, 500.0)",
+   "neck_note": "T-217 DRAFTING_NOTE (10B7 C): printed (300.0, 500.0) at the CAP place; the beam-plan outline is the drafting copy",
    "neck_status": "DRAWING-CONFIRMED"
   },
   {
@@ -1661,7 +1661,7 @@
     0.0
    ],
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (10BA C11)",
+   "neck_note": "T-217 AGREE (10BA C11); CAP",
    "neck_status": "DRAWING-CONFIRMED"
   },
   {
@@ -1677,7 +1677,7 @@
     0.0
    ],
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (10BD C5)",
+   "neck_note": "T-217 AGREE (10BD C5); CAP",
    "neck_status": "DRAWING-CONFIRMED"
   },
   {
@@ -1695,7 +1695,7 @@
     0.0
    ],
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (10C2 C6)",
+   "neck_note": "T-217 AGREE (10C2 C6); CAP",
    "neck_status": "DRAWING-CONFIRMED"
   },
   {
@@ -1712,7 +1712,7 @@
     0.0
    ],
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (10C5 C3)",
+   "neck_note": "T-217 AGREE (10C5 C3); CAP",
    "neck_status": "DRAWING-CONFIRMED"
   },
   {
@@ -1728,7 +1728,7 @@
     0.0
    ],
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (10C8 C7)",
+   "neck_note": "T-217 AGREE (10C8 C7); CAP",
    "neck_status": "DRAWING-CONFIRMED"
   },
   {
@@ -1744,7 +1744,7 @@
     0.0
    ],
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (10CC C3)",
+   "neck_note": "T-217 AGREE (10CC C3); CAP",
    "neck_status": "DRAWING-CONFIRMED"
   },
   {
@@ -1761,7 +1761,7 @@
     0.0
    ],
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (10D0 C8)",
+   "neck_note": "T-217 AGREE (10D0 C8); CAP",
    "neck_status": "DRAWING-CONFIRMED"
   },
   {
@@ -1778,7 +1778,7 @@
     0.0
    ],
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (10D3 C5)",
+   "neck_note": "T-217 AGREE (10D3 C5); CAP",
    "neck_status": "DRAWING-CONFIRMED"
   },
   {
@@ -1794,7 +1794,7 @@
     0.0
    ],
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (10D7 C4)",
+   "neck_note": "T-217 AGREE (10D7 C4); CAP",
    "neck_status": "DRAWING-CONFIRMED"
   },
   {
@@ -1810,7 +1810,7 @@
     0.0
    ],
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (10DA C9)",
+   "neck_note": "T-217 AGREE (10DA C9); CAP",
    "neck_status": "DRAWING-CONFIRMED"
   },
   {
@@ -1826,16 +1826,16 @@
     0.0
    ],
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (10DD C11)",
+   "neck_note": "T-217 AGREE (10DD C11); CAP",
    "neck_status": "DRAWING-CONFIRMED"
   },
   {
    "column": "COL:24D",
    "double_plan_m2_per_reading": [
     0.0,
-    0.03,
-    0.03,
-    0.03
+    0.025,
+    0.025,
+    0.025
    ],
    "ends": [
     "184+7CF#1:end",
@@ -1843,13 +1843,13 @@
     "7DC+7DD#1:start"
    ],
    "gap_plan_m2_per_reading": [
-    0.0,
-    0.0,
-    0.0,
-    0.0
+    0.04,
+    0.04,
+    0.04,
+    0.04
    ],
    "n_readings": 4,
-   "neck_note": "T-217 CONFLICT 10E0 C8: [(300.0, 800.0), (300.0, 900.0)]",
+   "neck_note": "T-217 CONFLICT 10E0 C8: [(300.0, 800.0), (300.0, 900.0)]; CAP; CAP = FP places it off the beam-plan outline",
    "neck_status": "CONFLICT"
   },
   {
@@ -1865,7 +1865,7 @@
     0.0
    ],
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (10E4 C3)",
+   "neck_note": "T-217 AGREE (10E4 C3); CAP",
    "neck_status": "DRAWING-CONFIRMED"
   },
   {
@@ -1881,7 +1881,7 @@
     0.0
    ],
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (10E8 C10)",
+   "neck_note": "T-217 AGREE (10E8 C10); CAP",
    "neck_status": "DRAWING-CONFIRMED"
   },
   {
@@ -1898,7 +1898,7 @@
     0.0
    ],
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (10EE CN)",
+   "neck_note": "T-217 AGREE (10EE CN); CAP",
    "neck_status": "DRAWING-CONFIRMED"
   },
   {
@@ -1915,7 +1915,7 @@
     0.0
    ],
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (10F6 CN)",
+   "neck_note": "T-217 AGREE (10F6 CN); CAP",
    "neck_status": "DRAWING-CONFIRMED"
   },
   {
@@ -1931,7 +1931,7 @@
     0.0
    ],
    "n_readings": 1,
-   "neck_note": "T-217 AGREE (10FE CN)",
+   "neck_note": "T-217 AGREE (10FE CN); CAP",
    "neck_status": "DRAWING-CONFIRMED"
   }
  ],

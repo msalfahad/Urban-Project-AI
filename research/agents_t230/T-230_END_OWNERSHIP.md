@@ -66,22 +66,29 @@ under the +0.30 marks): gap >= 0.28 m. Strap bars (D-36), links (D-37), SB2 row 
 ## 3. Ground-beam ends at necks (34 junctions, 72 ends)
 
 Basis checked: GROUND_SYSTEM_SPANS_V2 face to face, faces read from the column outline DRAWN ON THE GROUND-BEAM PLAN;
-neck = the PRINTED section (T-205 / T-217). Per junction: DOUBLE = neck plan inside a billed span; GAP = beam strip drawn
+neck = the PRINTED section (T-205 / T-217) at the place the COLUMN & AXIS PLAN (CAP: size text + locating dimension
+chain) puts it, checked against the foundation plan (FP). Every ground-beam-plan outline was compared with its CAP and FP
+outline (one frame pitch 38,724.406 mm, T-217): 29 coincide, 4 differ in size (below), C8 (24D) sits 50 mm off the axis
+on the beam plan only (CAP = FP: axis y 37,948 +- 150, as the CAP chain 150 + 150 prints), CN (17BD) 100 mm (CAP = FP),
+and 17BA has no CAP / FP outline (no beam ends on it). Per junction: DOUBLE = neck plan inside a billed span; GAP = beam strip drawn
 beside / around the neck that no span bills (union over the ends, counted once).
 
 | Junction | Ends | What the drawings print | DOUBLE / GAP plan (m2) | m3 | Owner | Status |
 |---|---|---|---|---|---|---|
-| 26 junctions | 52 ends | outline = printed section, column covers the band | 0 / 0 | 0 | - | DRAWING-CONFIRMED |
+| 25 junctions (incl. 1F5 / 1E8 below) | 56 ends | outline = printed section at the CAP place, column covers the band | 0 / 0 | 0 | - | DRAWING-CONFIRMED |
 | C at F (GBP 204), C at F (207), C3 at F15 (20B), C at F (214) | 136+7D5#1, 7D4+F8#1, 7D4+F8#2, 137+138#1 | GB plan draws 0.30 x 0.40; printed 0.30 x 0.50 (CAP text + dims) drawn on the foundation plan at the same place (3 of 4 edges coincide): the 0.10 m lies in the span | DOUBLE 0.030 each, 0.120 | **0.096 .. 0.114** (exterior beams, depth 0.80 .. 0.95 "FOLLOW ARCH.", D-35) | NECK; beam -0.10 m at each end | plan DRAWING-CONFIRMED, m3 HELD on D-35 |
 | C3 (211) | 13D+7D2, 13E+7D6 x2 | both bands drawn through the corner beside the 0.30 x 0.50 neck (0.10 x 0.30) | GAP 0.030 | 0.009 .. 0.0285 | GROUND BEAM keeps it | plan DRAWING-CONFIRMED |
-| C8 (24D) | 184+7CF#1 / #2, 7DC+7DD | 0.30 x 0.80 drawn + text vs schedule 0.30 x 0.90 (T-217 CONFLICT) | DOUBLE 0 .. 0.030 | 0 .. 0.012 | NECK | CONFLICT (range, never its larger end) |
+| C8 (24D) | 184+7CF#1 / #2, 7DC+7DD | 0.30 x 0.80 drawn + text vs schedule 0.30 x 0.90 (T-217 CONFLICT); CAP = FP place it 50 mm below the beam-plan copy, so the beam strip beside it (0.80 x 0.05) is beam concrete in no span | GAP 0.040 (every reading), DOUBLE 0 .. 0.025 | GAP 0.016; DOUBLE 0 .. 0.010 | GB keeps the GAP; NECK the DOUBLE | GAP DRAWING-CONFIRMED; DOUBLE CONFLICT (range, never its larger end) |
+| CN (17BD) | 107+7CE#1 | CAP = FP 100 mm beside the beam-plan copy; the band is drawn 26 mm past the face | GAP 0.0026 | 0.0021 .. 0.0025 | GB | DRAWING-CONFIRMED plan (depth candidates) |
 | lift C2 (1F2) | 15C+7CC | 0.20 x 0.50 vs schedule 0.30 x 0.50 (CONFLICT) | DOUBLE 0 .. 0.030 | 0 .. 0.012 | NECK | CONFLICT |
 | lift C2 (1EF), oblique band | 17E+17F | as above; band leaves the column corner obliquely | DOUBLE 0 .. 0.005, GAP 0.0047 .. 0.0104 | 0 .. 0.002 / 0.0014 .. 0.0042 | NECK / GB | CONFLICT |
 | lift C1 (1F5), C4 (1E8) | 15E+15F, 1811+1812 | section differs across the band width only | 0 / 0 in every reading | 0 | - | DRAWING-CONFIRMED (0) |
 
 **Finding 2.** On four exterior-wall beam ends the span is measured to a drafting outline (0.30 x 0.40 on the ground-beam
-plan) while the neck is 0.30 x 0.50 (printed, T-217 DRAFTING_NOTE): the beam is billed 0.10 m into the neck at each, 0.12
-m2 of plan, 0.096 .. 0.114 m3 counted twice (neck + beam). The same applies to the frozen route G beam lines, whose basis
+plan) while the neck is 0.30 x 0.50 (printed, T-217 DRAFTING_NOTE; CAP and FP draw the 0.50 at the same place, 3 of 4
+edges equal to the beam-plan copy, so the extra 0.10 lies in the span): the beam is billed 0.10 m into the neck at each,
+0.12 m2 of plan, 0.096 .. 0.114 m3 counted twice (neck + beam). At C8 the opposite: 0.040 m2 of beam beside the neck is
+billed by no line (0.016 m3). The same applies to the frozen route G beam lines, whose basis
 also deducts the drawn ground-beam-plan outline (generic_route 'column footprint split out'); not quantified here.
 
 ## 4. Ground-beam ends at the lift (footing outline is not a support)
@@ -97,8 +104,16 @@ touch, so a footing outline cannot terminate a ground beam.
 | 17C+7E3#1 | FF outline, 1.9278 m | ring 7C2 | **3.228** | < 5 m: 0.40 | **0.3873** | 0.1735 .. 0.2313 | +0.156 .. +0.214 |
 | 177+7CD#1 | HELD (GAP_TO_COLUMN 1EC; 4.97 / 5.02 / 3.52 candidates) | ring 7C2 (band end = ring face to 0.2 mm; C9 1EC is 50 mm beside the band, not in its path) | **5.020** | > 5 m: 0.60 | **0.9036** | HELD | resolves the T-141 hold (5.02, > 5 m) |
 
-Bars and formwork of these spans move with them (top / bottom runs +1.000 / +1.300 m, sides 2 x dL x D); not
-quantified here (lane I with the T-138 ledger). The pit wall is its own line (T-204, height HELD); the ring owns its
+Bars and formwork move with them (p.13 bars by class as T-138 reads them; straight-run lower bound; d^2 / 162):
+
+| Span | bars (lower bound) | T-138 / V2 basis | change | side faces 2 x L x D (m2) | V2 basis |
+|---|---|---|---|---|---|
+| 15D+7C8#1 | 9 T14 x 2.900 = **31.578 kg** | 3 x 6.896 = 20.688 RELEASED | +10.890 kg | **2.320** | 1.140 .. 1.520 |
+| 17C+7E3#1 | 9 T14 x 3.228 = **35.147 kg** | 3 x 6.998 = 20.994 RELEASED | +14.153 kg | **2.582** | 1.157 .. 1.542 |
+| 177+7CD#1 | 9 T16 x 5.020 = **71.396 kg** (> 5 m class) | 54.117 HELD (T14 at 4.97) | class + length | **6.024** | HELD |
+
+Bar ends (40 d .. 70 d, D-36), links (Q-71 count) and the formed / earth-cast choice below ground (OQ-10) stay as T-138 /
+T-163 hold them. The pit wall is its own line (T-204, height HELD); the ring owns its
 wall section, the beam stops on its face: no overlap.
 
 Ground beams over footings in plan: 80 overlaps on 51 spans, 19.925 m2 of plan; 3-D intersection 0 (gap >= 0.28 m, see
@@ -111,8 +126,8 @@ s.2 levels). Nothing is deducted for them (Q-62), and none of them is a beam end
   (designer: strap soffit level, D-15 narrowed).
 - Ground beams: the freelancer prices every beam 0.30 x 0.60 x 253 m inside "ground beams + ground floor" with the slab
   (T-138): no per-end comparison is possible. ENGINE (V2 face basis) WRONG at the 3 lift ends (+0.276 .. +0.391 m3 of
-  beam missing on the face-to-face basis, plus the held 0.9036) and at the 4 drafting-note ends (-0.096 .. -0.114 m3
-  double); RULE_DIFFERENCE none.
+  beam missing on the face-to-face basis, plus the held 0.9036), at the 4 drafting-note ends (-0.096 .. -0.114 m3
+  double) and beside C3 / C8 / CN (+0.027 .. +0.047 m3 of beam in no line); RULE_DIFFERENCE none.
 - Necks: unchanged (T-205); they own every DOUBLE above.
 
 ## 6. Rule (proposed, R-END-OWN-1; any villa; provenance T-230 on R-CONC-OWN-1, Q-62, Q-74, T-174, T-205)
