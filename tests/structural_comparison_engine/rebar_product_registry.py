@@ -224,6 +224,11 @@ OTHER_REBAR_AWARE = (
     # supersedes route G's provisional steel lines of each ledger's scope by one line per typed ledger record (kg as
     # the ledger prints it; held ranges / defined / lower bounds never added); it applies no ratio and computes no kg
     "engine/source/arch_v303.py",
+    # T-179: the V3.0.5 extension wires checker-merged hand ledgers (slab steel, stair / pool / tank steel, dome ring
+    # concrete) exactly as V3.0.3: it supersedes route G's provisional lines of each ledger's scope by one line per typed
+    # ledger record (kg as the ledger prints it; held ranges never added, held / unknown never 0); no ratio, no kg of
+    # its own
+    "engine/source/arch_v305.py",
     # T-140: the coverage census V2 names STR.REBAR / reinforcement only to report which families' steel is missing
     # (MISSING_DATA, as census V1); it writes no reinforcement quantity and applies no ratio
     "engine/source/coverage_census_v2.py",
