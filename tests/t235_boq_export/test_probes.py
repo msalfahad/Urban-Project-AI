@@ -30,7 +30,6 @@ def _export(lines, tmp_path, name="a"):
     return X.export(lines, tmp_path / name, candidate_version="TEST_CANDIDATE", boq_lines_sha256="0" * 64)
 
 
-@pytest.mark.xfail(strict=True, reason="T-235 baseline: no export tool on the merged head")
 def test_probe_5b_zero_on_a_line_with_missing_inputs_is_refused(tmp_path):
     from tools import boq_export_v1 as X
     lines = _base() + [_line("WIN-W14", 0.0, code="ARCH.WINDOW", unit="m2")]     # no height: inputs {}, gross None
@@ -38,7 +37,6 @@ def test_probe_5b_zero_on_a_line_with_missing_inputs_is_refused(tmp_path):
         _export(lines, tmp_path)
 
 
-@pytest.mark.xfail(strict=True, reason="T-235 baseline: no export tool on the merged head")
 def test_probe_10_a_line_of_another_project_is_refused(tmp_path):
     from tools import boq_export_v1 as X
     lines = _base() + [_line("F9", 3.0, project="PY", rev=REV_B, inputs={"L": 1.0, "B": 1.0, "H": 3.0})]
@@ -46,7 +44,6 @@ def test_probe_10_a_line_of_another_project_is_refused(tmp_path):
         _export(lines, tmp_path)
 
 
-@pytest.mark.xfail(strict=True, reason="T-235 baseline: no export tool on the merged head")
 def test_probe_11_producer_order_does_not_change_the_bytes(tmp_path):
     base = _base()
     shuf = base[:]
