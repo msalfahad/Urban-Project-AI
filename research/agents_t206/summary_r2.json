@@ -1,0 +1,2442 @@
+{
+ "r2": {
+  "summary": {
+   "links": 130,
+   "by_status": {
+    "HELD": 121,
+    "DRAWING-CONFIRMED": 5,
+    "VERIFIED": 4
+   },
+   "issues": {
+    "HELD_LINK": 121,
+    "FINISHED_AS_STRUCTURAL": 4,
+    "WRONG_REFERENCE": 7,
+    "NEEDS_HELD": 1
+   }
+  },
+  "datums": [
+   [
+    "1F-FLOOR",
+    "FFL",
+    5.5,
+    "DRAWING-CONFIRMED",
+    "PRINTED"
+   ],
+   [
+    "1F-WET-275",
+    "FFL",
+    5.5,
+    "DRAWING-CONFIRMED",
+    "PRINTED"
+   ],
+   [
+    "1F-WET-275",
+    "SLAB_TOP",
+    null,
+    "HELD",
+    "NOT_PRINTED"
+   ],
+   [
+    "1F-WET-276",
+    "FFL",
+    5.5,
+    "DRAWING-CONFIRMED",
+    "PRINTED"
+   ],
+   [
+    "1F-WET-276",
+    "SLAB_TOP",
+    null,
+    "HELD",
+    "NOT_PRINTED"
+   ],
+   [
+    "1F-WET-280",
+    "FFL",
+    5.5,
+    "DRAWING-CONFIRMED",
+    "PRINTED"
+   ],
+   [
+    "1F-WET-280",
+    "SLAB_TOP",
+    null,
+    "HELD",
+    "NOT_PRINTED"
+   ],
+   [
+    "1F-WET-287",
+    "FFL",
+    5.5,
+    "DRAWING-CONFIRMED",
+    "PRINTED"
+   ],
+   [
+    "1F-WET-287",
+    "SLAB_TOP",
+    null,
+    "HELD",
+    "NOT_PRINTED"
+   ],
+   [
+    "1F-WET-298",
+    "FFL",
+    5.5,
+    "DRAWING-CONFIRMED",
+    "PRINTED"
+   ],
+   [
+    "1F-WET-298",
+    "SLAB_TOP",
+    null,
+    "HELD",
+    "NOT_PRINTED"
+   ],
+   [
+    "2F-FLOOR",
+    "FFL",
+    9.7,
+    "DRAWING-CONFIRMED",
+    "PRINTED"
+   ],
+   [
+    "2F-ROOF",
+    "FINISHED_ROOF",
+    13.9,
+    "DRAWING-CONFIRMED",
+    "PRINTED"
+   ],
+   [
+    "2F-ROOF",
+    "PARAPET_TOP",
+    14.4,
+    "DRAWING-CONFIRMED",
+    "PRINTED"
+   ],
+   [
+    "2F-WET-5BF",
+    "FFL",
+    9.7,
+    "DRAWING-CONFIRMED",
+    "PRINTED"
+   ],
+   [
+    "2F-WET-5BF",
+    "SLAB_TOP",
+    null,
+    "HELD",
+    "NOT_PRINTED"
+   ],
+   [
+    "ANNEX-FLOOR",
+    "FFL",
+    0.3,
+    "DRAWING-CONFIRMED",
+    "PRINTED"
+   ],
+   [
+    "ANNEX-ROOF",
+    "FINISHED_ROOF",
+    4.3,
+    "DRAWING-CONFIRMED",
+    "PRINTED"
+   ],
+   [
+    "ANNEX-ROOF",
+    "PARAPET_TOP",
+    4.8,
+    "DRAWING-CONFIRMED",
+    "PRINTED"
+   ],
+   [
+    "FTG-F",
+    "GB_TOP",
+    null,
+    "HELD",
+    "NOT_PRINTED"
+   ],
+   [
+    "FTG-F",
+    "FORMATION",
+    null,
+    "HELD",
+    "NOT_PRINTED"
+   ],
+   [
+    "FTG-F",
+    "EXISTING_GROUND",
+    0.0,
+    "DRAWING-CONFIRMED",
+    "PRINTED"
+   ],
+   [
+    "FTG-F10",
+    "GB_TOP",
+    null,
+    "HELD",
+    "NOT_PRINTED"
+   ],
+   [
+    "FTG-F10",
+    "FORMATION",
+    null,
+    "HELD",
+    "NOT_PRINTED"
+   ],
+   [
+    "FTG-F10",
+    "EXISTING_GROUND",
+    0.0,
+    "DRAWING-CONFIRMED",
+    "PRINTED"
+   ],
+   [
+    "FTG-F11",
+    "GB_TOP",
+    null,
+    "HELD",
+    "NOT_PRINTED"
+   ],
+   [
+    "FTG-F11",
+    "FORMATION",
+    null,
+    "HELD",
+    "NOT_PRINTED"
+   ],
+   [
+    "FTG-F11",
+    "EXISTING_GROUND",
+    0.0,
+    "DRAWING-CONFIRMED",
+    "PRINTED"
+   ],
+   [
+    "FTG-F12",
+    "GB_TOP",
+    null,
+    "HELD",
+    "NOT_PRINTED"
+   ],
+   [
+    "FTG-F12",
+    "FORMATION",
+    null,
+    "HELD",
+    "NOT_PRINTED"
+   ],
+   [
+    "FTG-F12",
+    "EXISTING_GROUND",
+    0.0,
+    "DRAWING-CONFIRMED",
+    "PRINTED"
+   ],
+   [
+    "FTG-F13",
+    "GB_TOP",
+    null,
+    "HELD",
+    "NOT_PRINTED"
+   ],
+   [
+    "FTG-F13",
+    "FORMATION",
+    null,
+    "HELD",
+    "NOT_PRINTED"
+   ],
+   [
+    "FTG-F13",
+    "EXISTING_GROUND",
+    0.0,
+    "DRAWING-CONFIRMED",
+    "PRINTED"
+   ],
+   [
+    "FTG-F14",
+    "GB_TOP",
+    null,
+    "HELD",
+    "NOT_PRINTED"
+   ],
+   [
+    "FTG-F14",
+    "FORMATION",
+    null,
+    "HELD",
+    "NOT_PRINTED"
+   ],
+   [
+    "FTG-F14",
+    "EXISTING_GROUND",
+    0.0,
+    "DRAWING-CONFIRMED",
+    "PRINTED"
+   ],
+   [
+    "FTG-F15",
+    "GB_TOP",
+    null,
+    "HELD",
+    "NOT_PRINTED"
+   ],
+   [
+    "FTG-F15",
+    "FORMATION",
+    null,
+    "HELD",
+    "NOT_PRINTED"
+   ],
+   [
+    "FTG-F15",
+    "EXISTING_GROUND",
+    0.0,
+    "DRAWING-CONFIRMED",
+    "PRINTED"
+   ],
+   [
+    "FTG-F2",
+    "GB_TOP",
+    null,
+    "HELD",
+    "NOT_PRINTED"
+   ],
+   [
+    "FTG-F2",
+    "FORMATION",
+    null,
+    "HELD",
+    "NOT_PRINTED"
+   ],
+   [
+    "FTG-F2",
+    "EXISTING_GROUND",
+    0.0,
+    "DRAWING-CONFIRMED",
+    "PRINTED"
+   ],
+   [
+    "FTG-F3",
+    "GB_TOP",
+    null,
+    "HELD",
+    "NOT_PRINTED"
+   ],
+   [
+    "FTG-F3",
+    "FORMATION",
+    null,
+    "HELD",
+    "NOT_PRINTED"
+   ],
+   [
+    "FTG-F3",
+    "EXISTING_GROUND",
+    0.0,
+    "DRAWING-CONFIRMED",
+    "PRINTED"
+   ],
+   [
+    "FTG-F4",
+    "GB_TOP",
+    null,
+    "HELD",
+    "NOT_PRINTED"
+   ],
+   [
+    "FTG-F4",
+    "FORMATION",
+    null,
+    "HELD",
+    "NOT_PRINTED"
+   ],
+   [
+    "FTG-F4",
+    "EXISTING_GROUND",
+    0.0,
+    "DRAWING-CONFIRMED",
+    "PRINTED"
+   ],
+   [
+    "FTG-F5",
+    "GB_TOP",
+    null,
+    "HELD",
+    "NOT_PRINTED"
+   ],
+   [
+    "FTG-F5",
+    "FORMATION",
+    null,
+    "HELD",
+    "NOT_PRINTED"
+   ],
+   [
+    "FTG-F5",
+    "EXISTING_GROUND",
+    0.0,
+    "DRAWING-CONFIRMED",
+    "PRINTED"
+   ],
+   [
+    "FTG-F6",
+    "GB_TOP",
+    null,
+    "HELD",
+    "NOT_PRINTED"
+   ],
+   [
+    "FTG-F6",
+    "FORMATION",
+    null,
+    "HELD",
+    "NOT_PRINTED"
+   ],
+   [
+    "FTG-F6",
+    "EXISTING_GROUND",
+    0.0,
+    "DRAWING-CONFIRMED",
+    "PRINTED"
+   ],
+   [
+    "FTG-F7",
+    "GB_TOP",
+    null,
+    "HELD",
+    "NOT_PRINTED"
+   ],
+   [
+    "FTG-F7",
+    "FORMATION",
+    null,
+    "HELD",
+    "NOT_PRINTED"
+   ],
+   [
+    "FTG-F7",
+    "EXISTING_GROUND",
+    0.0,
+    "DRAWING-CONFIRMED",
+    "PRINTED"
+   ],
+   [
+    "FTG-F8",
+    "GB_TOP",
+    null,
+    "HELD",
+    "NOT_PRINTED"
+   ],
+   [
+    "FTG-F8",
+    "FORMATION",
+    null,
+    "HELD",
+    "NOT_PRINTED"
+   ],
+   [
+    "FTG-F8",
+    "EXISTING_GROUND",
+    0.0,
+    "DRAWING-CONFIRMED",
+    "PRINTED"
+   ],
+   [
+    "FTG-F9",
+    "GB_TOP",
+    null,
+    "HELD",
+    "NOT_PRINTED"
+   ],
+   [
+    "FTG-F9",
+    "FORMATION",
+    null,
+    "HELD",
+    "NOT_PRINTED"
+   ],
+   [
+    "FTG-F9",
+    "EXISTING_GROUND",
+    0.0,
+    "DRAWING-CONFIRMED",
+    "PRINTED"
+   ],
+   [
+    "FTG-FF",
+    "FFL",
+    1.0,
+    "DRAWING-CONFIRMED",
+    "PRINTED"
+   ],
+   [
+    "FTG-FF",
+    "FOOTING_TOP",
+    null,
+    "HELD",
+    "NOT_PRINTED"
+   ],
+   [
+    "FTG-FF",
+    "FORMATION",
+    null,
+    "HELD",
+    "NOT_PRINTED"
+   ],
+   [
+    "FTG-FF",
+    "EXISTING_GROUND",
+    0.0,
+    "DRAWING-CONFIRMED",
+    "PRINTED"
+   ],
+   [
+    "FTG-FN",
+    "GB_TOP",
+    null,
+    "HELD",
+    "NOT_PRINTED"
+   ],
+   [
+    "FTG-FN",
+    "FORMATION",
+    null,
+    "HELD",
+    "NOT_PRINTED"
+   ],
+   [
+    "FTG-FN",
+    "EXISTING_GROUND",
+    0.0,
+    "DRAWING-CONFIRMED",
+    "PRINTED"
+   ],
+   [
+    "GF-EXT-F8",
+    "FFL",
+    1.0,
+    "DRAWING-CONFIRMED",
+    "PRINTED"
+   ],
+   [
+    "GF-EXT-F8",
+    "FINISHED_GROUND",
+    0.15,
+    "DRAWING-CONFIRMED",
+    "PRINTED"
+   ],
+   [
+    "GF-EXT-F8",
+    "GB_BOTTOM",
+    null,
+    "HELD",
+    "NOT_PRINTED"
+   ],
+   [
+    "GF-EXT-F8",
+    "FOOTING_BOTTOM",
+    null,
+    "HELD",
+    "NOT_PRINTED"
+   ],
+   [
+    "GF-EXT-F8",
+    "EXISTING_GROUND",
+    0.0,
+    "DRAWING-CONFIRMED",
+    "PRINTED"
+   ],
+   [
+    "GF-FLOOR",
+    "FFL",
+    1.0,
+    "DRAWING-CONFIRMED",
+    "PRINTED"
+   ],
+   [
+    "POOL",
+    "POOL_FINISHED_FLOOR",
+    -0.85,
+    "VERIFIED",
+    "PRINTED"
+   ],
+   [
+    "POOL",
+    "POOL_RIM",
+    0.3,
+    "VERIFIED",
+    "PRINTED"
+   ],
+   [
+    "POOL",
+    "POOL_BASE_TOP",
+    -0.9,
+    "VERIFIED",
+    "PRINTED"
+   ],
+   [
+    "POOL",
+    "POOL_BASE_UNDERSIDE",
+    -1.3,
+    "VERIFIED",
+    "DERIVED POOL_BASE_TOP - BASE_THICKNESS"
+   ],
+   [
+    "POOL",
+    "BLINDING_TOP",
+    -1.4,
+    "DRAWING-CONFIRMED",
+    "DERIVED POOL_BASE_UNDERSIDE - UNDERLAY"
+   ],
+   [
+    "POOL",
+    "FORMATION",
+    -1.5,
+    "DRAWING-CONFIRMED",
+    "DERIVED BLINDING_TOP - BLINDING_THICKNESS"
+   ],
+   [
+    "POOL",
+    "EXISTING_GROUND",
+    0.0,
+    "DRAWING-CONFIRMED",
+    "PRINTED"
+   ]
+  ],
+  "links": [
+   [
+    "GF-EXT-F8",
+    "FLOOR_BUILD_UP",
+    null,
+    "HELD",
+    [
+     "GF-EXT-F8/SLAB_TOP",
+     "GF-EXT-F8/layer FLOOR_BUILD_UP"
+    ]
+   ],
+   [
+    "GF-EXT-F8",
+    "GB_TOP_BELOW_SLAB_TOP",
+    null,
+    "HELD",
+    [
+     "GF-EXT-F8/SLAB_TOP",
+     "GF-EXT-F8/GB_TOP"
+    ]
+   ],
+   [
+    "GF-EXT-F8",
+    "GB_DEPTH",
+    null,
+    "HELD",
+    [
+     "GF-EXT-F8/GB_TOP",
+     "GF-EXT-F8/GB_BOTTOM",
+     "GF-EXT-F8/layer GB_DEPTH"
+    ]
+   ],
+   [
+    "GF-EXT-F8",
+    "NECK_RUN",
+    null,
+    "HELD",
+    [
+     "GF-EXT-F8/GB_TOP",
+     "GF-EXT-F8/FOOTING_TOP",
+     "GF-EXT-F8/layer NECK_RUN"
+    ]
+   ],
+   [
+    "GF-EXT-F8",
+    "FOOTING_DEPTH",
+    null,
+    "HELD",
+    [
+     "GF-EXT-F8/FOOTING_TOP",
+     "GF-EXT-F8/FOOTING_BOTTOM"
+    ]
+   ],
+   [
+    "GF-EXT-F8",
+    "UNDERLAY",
+    null,
+    "HELD",
+    [
+     "GF-EXT-F8/FOOTING_BOTTOM",
+     "GF-EXT-F8/BLINDING_TOP"
+    ]
+   ],
+   [
+    "GF-EXT-F8",
+    "BLINDING_THICKNESS",
+    null,
+    "HELD",
+    [
+     "GF-EXT-F8/BLINDING_TOP",
+     "GF-EXT-F8/FORMATION"
+    ]
+   ],
+   [
+    "GF-EXT-F8",
+    "EXCAVATION_DEPTH",
+    null,
+    "HELD",
+    [
+     "GF-EXT-F8/FORMATION",
+     "GF-EXT-F8/layer EXCAVATION_DEPTH"
+    ]
+   ],
+   [
+    "GF-FLOOR",
+    "FLOOR_BUILD_UP",
+    null,
+    "HELD",
+    [
+     "GF-FLOOR/SLAB_TOP",
+     "GF-FLOOR/layer FLOOR_BUILD_UP"
+    ]
+   ],
+   [
+    "GF-FLOOR",
+    "SLAB_THICKNESS",
+    null,
+    "HELD",
+    [
+     "GF-FLOOR/SLAB_TOP",
+     "GF-FLOOR/SLAB_SOFFIT"
+    ]
+   ],
+   [
+    "1F-FLOOR",
+    "FLOOR_BUILD_UP",
+    null,
+    "HELD",
+    [
+     "1F-FLOOR/SLAB_TOP",
+     "1F-FLOOR/layer FLOOR_BUILD_UP"
+    ]
+   ],
+   [
+    "1F-FLOOR",
+    "SLAB_THICKNESS",
+    null,
+    "HELD",
+    [
+     "1F-FLOOR/SLAB_TOP",
+     "1F-FLOOR/SLAB_SOFFIT"
+    ]
+   ],
+   [
+    "1F-FLOOR",
+    "BEAM_DEPTH",
+    null,
+    "HELD",
+    [
+     "1F-FLOOR/SLAB_TOP",
+     "1F-FLOOR/BEAM_BOTTOM"
+    ]
+   ],
+   [
+    "2F-FLOOR",
+    "FLOOR_BUILD_UP",
+    null,
+    "HELD",
+    [
+     "2F-FLOOR/SLAB_TOP",
+     "2F-FLOOR/layer FLOOR_BUILD_UP"
+    ]
+   ],
+   [
+    "2F-FLOOR",
+    "SLAB_THICKNESS",
+    null,
+    "HELD",
+    [
+     "2F-FLOOR/SLAB_TOP",
+     "2F-FLOOR/SLAB_SOFFIT"
+    ]
+   ],
+   [
+    "2F-FLOOR",
+    "BEAM_DEPTH",
+    null,
+    "HELD",
+    [
+     "2F-FLOOR/SLAB_TOP",
+     "2F-FLOOR/BEAM_BOTTOM"
+    ]
+   ],
+   [
+    "2F-ROOF",
+    "ROOF_BUILD_UP",
+    null,
+    "HELD",
+    [
+     "2F-ROOF/SLAB_TOP",
+     "2F-ROOF/layer ROOF_BUILD_UP"
+    ]
+   ],
+   [
+    "2F-ROOF",
+    "SLAB_THICKNESS",
+    null,
+    "HELD",
+    [
+     "2F-ROOF/SLAB_TOP",
+     "2F-ROOF/SLAB_SOFFIT"
+    ]
+   ],
+   [
+    "2F-ROOF",
+    "BEAM_DEPTH",
+    null,
+    "HELD",
+    [
+     "2F-ROOF/SLAB_TOP",
+     "2F-ROOF/BEAM_BOTTOM",
+     "2F-ROOF/layer BEAM_DEPTH"
+    ]
+   ],
+   [
+    "2F-ROOF",
+    "PARAPET_HEIGHT",
+    0.5,
+    "DRAWING-CONFIRMED",
+    []
+   ],
+   [
+    "ANNEX-FLOOR",
+    "FLOOR_BUILD_UP",
+    null,
+    "HELD",
+    [
+     "ANNEX-FLOOR/SLAB_TOP",
+     "ANNEX-FLOOR/layer FLOOR_BUILD_UP"
+    ]
+   ],
+   [
+    "ANNEX-FLOOR",
+    "SLAB_THICKNESS",
+    null,
+    "HELD",
+    [
+     "ANNEX-FLOOR/SLAB_TOP",
+     "ANNEX-FLOOR/SLAB_SOFFIT"
+    ]
+   ],
+   [
+    "ANNEX-ROOF",
+    "ROOF_BUILD_UP",
+    null,
+    "HELD",
+    [
+     "ANNEX-ROOF/SLAB_TOP",
+     "ANNEX-ROOF/layer ROOF_BUILD_UP"
+    ]
+   ],
+   [
+    "ANNEX-ROOF",
+    "SLAB_THICKNESS",
+    null,
+    "HELD",
+    [
+     "ANNEX-ROOF/SLAB_TOP",
+     "ANNEX-ROOF/SLAB_SOFFIT"
+    ]
+   ],
+   [
+    "ANNEX-ROOF",
+    "BEAM_DEPTH",
+    null,
+    "HELD",
+    [
+     "ANNEX-ROOF/SLAB_TOP",
+     "ANNEX-ROOF/BEAM_BOTTOM",
+     "ANNEX-ROOF/layer BEAM_DEPTH"
+    ]
+   ],
+   [
+    "ANNEX-ROOF",
+    "PARAPET_HEIGHT",
+    0.5,
+    "DRAWING-CONFIRMED",
+    []
+   ],
+   [
+    "POOL",
+    "FINISHED_DEPTH",
+    1.15,
+    "VERIFIED",
+    []
+   ],
+   [
+    "POOL",
+    "FLOOR_BUILD_UP",
+    0.05,
+    "VERIFIED",
+    []
+   ],
+   [
+    "POOL",
+    "RC_WALL_HEIGHT",
+    1.2,
+    "VERIFIED",
+    []
+   ],
+   [
+    "POOL",
+    "BASE_THICKNESS",
+    0.4,
+    "VERIFIED",
+    []
+   ],
+   [
+    "POOL",
+    "UNDERLAY",
+    0.1,
+    "DRAWING-CONFIRMED",
+    []
+   ],
+   [
+    "POOL",
+    "BLINDING_THICKNESS",
+    0.1,
+    "DRAWING-CONFIRMED",
+    []
+   ],
+   [
+    "POOL",
+    "EXCAVATION_DEPTH",
+    1.5,
+    "DRAWING-CONFIRMED",
+    []
+   ],
+   [
+    "FTG-F",
+    "NECK_RUN",
+    null,
+    "HELD",
+    [
+     "FTG-F/GB_TOP",
+     "FTG-F/FOOTING_TOP",
+     "FTG-F/layer NECK_RUN"
+    ]
+   ],
+   [
+    "FTG-F",
+    "FOOTING_DEPTH",
+    null,
+    "HELD",
+    [
+     "FTG-F/FOOTING_TOP",
+     "FTG-F/FOOTING_BOTTOM"
+    ]
+   ],
+   [
+    "FTG-F",
+    "UNDERLAY",
+    null,
+    "HELD",
+    [
+     "FTG-F/FOOTING_BOTTOM",
+     "FTG-F/BLINDING_TOP"
+    ]
+   ],
+   [
+    "FTG-F",
+    "BLINDING_THICKNESS",
+    null,
+    "HELD",
+    [
+     "FTG-F/BLINDING_TOP",
+     "FTG-F/FORMATION"
+    ]
+   ],
+   [
+    "FTG-F",
+    "EXCAVATION_DEPTH",
+    null,
+    "HELD",
+    [
+     "FTG-F/FORMATION",
+     "FTG-F/layer EXCAVATION_DEPTH"
+    ]
+   ],
+   [
+    "FTG-F2",
+    "NECK_RUN",
+    null,
+    "HELD",
+    [
+     "FTG-F2/GB_TOP",
+     "FTG-F2/FOOTING_TOP",
+     "FTG-F2/layer NECK_RUN"
+    ]
+   ],
+   [
+    "FTG-F2",
+    "FOOTING_DEPTH",
+    null,
+    "HELD",
+    [
+     "FTG-F2/FOOTING_TOP",
+     "FTG-F2/FOOTING_BOTTOM"
+    ]
+   ],
+   [
+    "FTG-F2",
+    "UNDERLAY",
+    null,
+    "HELD",
+    [
+     "FTG-F2/FOOTING_BOTTOM",
+     "FTG-F2/BLINDING_TOP"
+    ]
+   ],
+   [
+    "FTG-F2",
+    "BLINDING_THICKNESS",
+    null,
+    "HELD",
+    [
+     "FTG-F2/BLINDING_TOP",
+     "FTG-F2/FORMATION"
+    ]
+   ],
+   [
+    "FTG-F2",
+    "EXCAVATION_DEPTH",
+    null,
+    "HELD",
+    [
+     "FTG-F2/FORMATION",
+     "FTG-F2/layer EXCAVATION_DEPTH"
+    ]
+   ],
+   [
+    "FTG-F3",
+    "NECK_RUN",
+    null,
+    "HELD",
+    [
+     "FTG-F3/GB_TOP",
+     "FTG-F3/FOOTING_TOP",
+     "FTG-F3/layer NECK_RUN"
+    ]
+   ],
+   [
+    "FTG-F3",
+    "FOOTING_DEPTH",
+    null,
+    "HELD",
+    [
+     "FTG-F3/FOOTING_TOP",
+     "FTG-F3/FOOTING_BOTTOM"
+    ]
+   ],
+   [
+    "FTG-F3",
+    "UNDERLAY",
+    null,
+    "HELD",
+    [
+     "FTG-F3/FOOTING_BOTTOM",
+     "FTG-F3/BLINDING_TOP"
+    ]
+   ],
+   [
+    "FTG-F3",
+    "BLINDING_THICKNESS",
+    null,
+    "HELD",
+    [
+     "FTG-F3/BLINDING_TOP",
+     "FTG-F3/FORMATION"
+    ]
+   ],
+   [
+    "FTG-F3",
+    "EXCAVATION_DEPTH",
+    null,
+    "HELD",
+    [
+     "FTG-F3/FORMATION",
+     "FTG-F3/layer EXCAVATION_DEPTH"
+    ]
+   ],
+   [
+    "FTG-F4",
+    "NECK_RUN",
+    null,
+    "HELD",
+    [
+     "FTG-F4/GB_TOP",
+     "FTG-F4/FOOTING_TOP",
+     "FTG-F4/layer NECK_RUN"
+    ]
+   ],
+   [
+    "FTG-F4",
+    "FOOTING_DEPTH",
+    null,
+    "HELD",
+    [
+     "FTG-F4/FOOTING_TOP",
+     "FTG-F4/FOOTING_BOTTOM"
+    ]
+   ],
+   [
+    "FTG-F4",
+    "UNDERLAY",
+    null,
+    "HELD",
+    [
+     "FTG-F4/FOOTING_BOTTOM",
+     "FTG-F4/BLINDING_TOP"
+    ]
+   ],
+   [
+    "FTG-F4",
+    "BLINDING_THICKNESS",
+    null,
+    "HELD",
+    [
+     "FTG-F4/BLINDING_TOP",
+     "FTG-F4/FORMATION"
+    ]
+   ],
+   [
+    "FTG-F4",
+    "EXCAVATION_DEPTH",
+    null,
+    "HELD",
+    [
+     "FTG-F4/FORMATION",
+     "FTG-F4/layer EXCAVATION_DEPTH"
+    ]
+   ],
+   [
+    "FTG-F5",
+    "NECK_RUN",
+    null,
+    "HELD",
+    [
+     "FTG-F5/GB_TOP",
+     "FTG-F5/FOOTING_TOP",
+     "FTG-F5/layer NECK_RUN"
+    ]
+   ],
+   [
+    "FTG-F5",
+    "FOOTING_DEPTH",
+    null,
+    "HELD",
+    [
+     "FTG-F5/FOOTING_TOP",
+     "FTG-F5/FOOTING_BOTTOM"
+    ]
+   ],
+   [
+    "FTG-F5",
+    "UNDERLAY",
+    null,
+    "HELD",
+    [
+     "FTG-F5/FOOTING_BOTTOM",
+     "FTG-F5/BLINDING_TOP"
+    ]
+   ],
+   [
+    "FTG-F5",
+    "BLINDING_THICKNESS",
+    null,
+    "HELD",
+    [
+     "FTG-F5/BLINDING_TOP",
+     "FTG-F5/FORMATION"
+    ]
+   ],
+   [
+    "FTG-F5",
+    "EXCAVATION_DEPTH",
+    null,
+    "HELD",
+    [
+     "FTG-F5/FORMATION",
+     "FTG-F5/layer EXCAVATION_DEPTH"
+    ]
+   ],
+   [
+    "FTG-F6",
+    "NECK_RUN",
+    null,
+    "HELD",
+    [
+     "FTG-F6/GB_TOP",
+     "FTG-F6/FOOTING_TOP",
+     "FTG-F6/layer NECK_RUN"
+    ]
+   ],
+   [
+    "FTG-F6",
+    "FOOTING_DEPTH",
+    null,
+    "HELD",
+    [
+     "FTG-F6/FOOTING_TOP",
+     "FTG-F6/FOOTING_BOTTOM"
+    ]
+   ],
+   [
+    "FTG-F6",
+    "UNDERLAY",
+    null,
+    "HELD",
+    [
+     "FTG-F6/FOOTING_BOTTOM",
+     "FTG-F6/BLINDING_TOP"
+    ]
+   ],
+   [
+    "FTG-F6",
+    "BLINDING_THICKNESS",
+    null,
+    "HELD",
+    [
+     "FTG-F6/BLINDING_TOP",
+     "FTG-F6/FORMATION"
+    ]
+   ],
+   [
+    "FTG-F6",
+    "EXCAVATION_DEPTH",
+    null,
+    "HELD",
+    [
+     "FTG-F6/FORMATION",
+     "FTG-F6/layer EXCAVATION_DEPTH"
+    ]
+   ],
+   [
+    "FTG-F7",
+    "NECK_RUN",
+    null,
+    "HELD",
+    [
+     "FTG-F7/GB_TOP",
+     "FTG-F7/FOOTING_TOP",
+     "FTG-F7/layer NECK_RUN"
+    ]
+   ],
+   [
+    "FTG-F7",
+    "FOOTING_DEPTH",
+    null,
+    "HELD",
+    [
+     "FTG-F7/FOOTING_TOP",
+     "FTG-F7/FOOTING_BOTTOM"
+    ]
+   ],
+   [
+    "FTG-F7",
+    "UNDERLAY",
+    null,
+    "HELD",
+    [
+     "FTG-F7/FOOTING_BOTTOM",
+     "FTG-F7/BLINDING_TOP"
+    ]
+   ],
+   [
+    "FTG-F7",
+    "BLINDING_THICKNESS",
+    null,
+    "HELD",
+    [
+     "FTG-F7/BLINDING_TOP",
+     "FTG-F7/FORMATION"
+    ]
+   ],
+   [
+    "FTG-F7",
+    "EXCAVATION_DEPTH",
+    null,
+    "HELD",
+    [
+     "FTG-F7/FORMATION",
+     "FTG-F7/layer EXCAVATION_DEPTH"
+    ]
+   ],
+   [
+    "FTG-F8",
+    "NECK_RUN",
+    null,
+    "HELD",
+    [
+     "FTG-F8/GB_TOP",
+     "FTG-F8/FOOTING_TOP",
+     "FTG-F8/layer NECK_RUN"
+    ]
+   ],
+   [
+    "FTG-F8",
+    "FOOTING_DEPTH",
+    null,
+    "HELD",
+    [
+     "FTG-F8/FOOTING_TOP",
+     "FTG-F8/FOOTING_BOTTOM"
+    ]
+   ],
+   [
+    "FTG-F8",
+    "UNDERLAY",
+    null,
+    "HELD",
+    [
+     "FTG-F8/FOOTING_BOTTOM",
+     "FTG-F8/BLINDING_TOP"
+    ]
+   ],
+   [
+    "FTG-F8",
+    "BLINDING_THICKNESS",
+    null,
+    "HELD",
+    [
+     "FTG-F8/BLINDING_TOP",
+     "FTG-F8/FORMATION"
+    ]
+   ],
+   [
+    "FTG-F8",
+    "EXCAVATION_DEPTH",
+    null,
+    "HELD",
+    [
+     "FTG-F8/FORMATION",
+     "FTG-F8/layer EXCAVATION_DEPTH"
+    ]
+   ],
+   [
+    "FTG-F9",
+    "NECK_RUN",
+    null,
+    "HELD",
+    [
+     "FTG-F9/GB_TOP",
+     "FTG-F9/FOOTING_TOP",
+     "FTG-F9/layer NECK_RUN"
+    ]
+   ],
+   [
+    "FTG-F9",
+    "FOOTING_DEPTH",
+    null,
+    "HELD",
+    [
+     "FTG-F9/FOOTING_TOP",
+     "FTG-F9/FOOTING_BOTTOM"
+    ]
+   ],
+   [
+    "FTG-F9",
+    "UNDERLAY",
+    null,
+    "HELD",
+    [
+     "FTG-F9/FOOTING_BOTTOM",
+     "FTG-F9/BLINDING_TOP"
+    ]
+   ],
+   [
+    "FTG-F9",
+    "BLINDING_THICKNESS",
+    null,
+    "HELD",
+    [
+     "FTG-F9/BLINDING_TOP",
+     "FTG-F9/FORMATION"
+    ]
+   ],
+   [
+    "FTG-F9",
+    "EXCAVATION_DEPTH",
+    null,
+    "HELD",
+    [
+     "FTG-F9/FORMATION",
+     "FTG-F9/layer EXCAVATION_DEPTH"
+    ]
+   ],
+   [
+    "FTG-F10",
+    "NECK_RUN",
+    null,
+    "HELD",
+    [
+     "FTG-F10/GB_TOP",
+     "FTG-F10/FOOTING_TOP",
+     "FTG-F10/layer NECK_RUN"
+    ]
+   ],
+   [
+    "FTG-F10",
+    "FOOTING_DEPTH",
+    null,
+    "HELD",
+    [
+     "FTG-F10/FOOTING_TOP",
+     "FTG-F10/FOOTING_BOTTOM"
+    ]
+   ],
+   [
+    "FTG-F10",
+    "UNDERLAY",
+    null,
+    "HELD",
+    [
+     "FTG-F10/FOOTING_BOTTOM",
+     "FTG-F10/BLINDING_TOP"
+    ]
+   ],
+   [
+    "FTG-F10",
+    "BLINDING_THICKNESS",
+    null,
+    "HELD",
+    [
+     "FTG-F10/BLINDING_TOP",
+     "FTG-F10/FORMATION"
+    ]
+   ],
+   [
+    "FTG-F10",
+    "EXCAVATION_DEPTH",
+    null,
+    "HELD",
+    [
+     "FTG-F10/FORMATION",
+     "FTG-F10/layer EXCAVATION_DEPTH"
+    ]
+   ],
+   [
+    "FTG-F11",
+    "NECK_RUN",
+    null,
+    "HELD",
+    [
+     "FTG-F11/GB_TOP",
+     "FTG-F11/FOOTING_TOP",
+     "FTG-F11/layer NECK_RUN"
+    ]
+   ],
+   [
+    "FTG-F11",
+    "FOOTING_DEPTH",
+    null,
+    "HELD",
+    [
+     "FTG-F11/FOOTING_TOP",
+     "FTG-F11/FOOTING_BOTTOM"
+    ]
+   ],
+   [
+    "FTG-F11",
+    "UNDERLAY",
+    null,
+    "HELD",
+    [
+     "FTG-F11/FOOTING_BOTTOM",
+     "FTG-F11/BLINDING_TOP"
+    ]
+   ],
+   [
+    "FTG-F11",
+    "BLINDING_THICKNESS",
+    null,
+    "HELD",
+    [
+     "FTG-F11/BLINDING_TOP",
+     "FTG-F11/FORMATION"
+    ]
+   ],
+   [
+    "FTG-F11",
+    "EXCAVATION_DEPTH",
+    null,
+    "HELD",
+    [
+     "FTG-F11/FORMATION",
+     "FTG-F11/layer EXCAVATION_DEPTH"
+    ]
+   ],
+   [
+    "FTG-F12",
+    "NECK_RUN",
+    null,
+    "HELD",
+    [
+     "FTG-F12/GB_TOP",
+     "FTG-F12/FOOTING_TOP",
+     "FTG-F12/layer NECK_RUN"
+    ]
+   ],
+   [
+    "FTG-F12",
+    "FOOTING_DEPTH",
+    null,
+    "HELD",
+    [
+     "FTG-F12/FOOTING_TOP",
+     "FTG-F12/FOOTING_BOTTOM"
+    ]
+   ],
+   [
+    "FTG-F12",
+    "UNDERLAY",
+    null,
+    "HELD",
+    [
+     "FTG-F12/FOOTING_BOTTOM",
+     "FTG-F12/BLINDING_TOP"
+    ]
+   ],
+   [
+    "FTG-F12",
+    "BLINDING_THICKNESS",
+    null,
+    "HELD",
+    [
+     "FTG-F12/BLINDING_TOP",
+     "FTG-F12/FORMATION"
+    ]
+   ],
+   [
+    "FTG-F12",
+    "EXCAVATION_DEPTH",
+    null,
+    "HELD",
+    [
+     "FTG-F12/FORMATION",
+     "FTG-F12/layer EXCAVATION_DEPTH"
+    ]
+   ],
+   [
+    "FTG-F13",
+    "NECK_RUN",
+    null,
+    "HELD",
+    [
+     "FTG-F13/GB_TOP",
+     "FTG-F13/FOOTING_TOP",
+     "FTG-F13/layer NECK_RUN"
+    ]
+   ],
+   [
+    "FTG-F13",
+    "FOOTING_DEPTH",
+    null,
+    "HELD",
+    [
+     "FTG-F13/FOOTING_TOP",
+     "FTG-F13/FOOTING_BOTTOM"
+    ]
+   ],
+   [
+    "FTG-F13",
+    "UNDERLAY",
+    null,
+    "HELD",
+    [
+     "FTG-F13/FOOTING_BOTTOM",
+     "FTG-F13/BLINDING_TOP"
+    ]
+   ],
+   [
+    "FTG-F13",
+    "BLINDING_THICKNESS",
+    null,
+    "HELD",
+    [
+     "FTG-F13/BLINDING_TOP",
+     "FTG-F13/FORMATION"
+    ]
+   ],
+   [
+    "FTG-F13",
+    "EXCAVATION_DEPTH",
+    null,
+    "HELD",
+    [
+     "FTG-F13/FORMATION",
+     "FTG-F13/layer EXCAVATION_DEPTH"
+    ]
+   ],
+   [
+    "FTG-F14",
+    "NECK_RUN",
+    null,
+    "HELD",
+    [
+     "FTG-F14/GB_TOP",
+     "FTG-F14/FOOTING_TOP",
+     "FTG-F14/layer NECK_RUN"
+    ]
+   ],
+   [
+    "FTG-F14",
+    "FOOTING_DEPTH",
+    null,
+    "HELD",
+    [
+     "FTG-F14/FOOTING_TOP",
+     "FTG-F14/FOOTING_BOTTOM"
+    ]
+   ],
+   [
+    "FTG-F14",
+    "UNDERLAY",
+    null,
+    "HELD",
+    [
+     "FTG-F14/FOOTING_BOTTOM",
+     "FTG-F14/BLINDING_TOP"
+    ]
+   ],
+   [
+    "FTG-F14",
+    "BLINDING_THICKNESS",
+    null,
+    "HELD",
+    [
+     "FTG-F14/BLINDING_TOP",
+     "FTG-F14/FORMATION"
+    ]
+   ],
+   [
+    "FTG-F14",
+    "EXCAVATION_DEPTH",
+    null,
+    "HELD",
+    [
+     "FTG-F14/FORMATION",
+     "FTG-F14/layer EXCAVATION_DEPTH"
+    ]
+   ],
+   [
+    "FTG-F15",
+    "NECK_RUN",
+    null,
+    "HELD",
+    [
+     "FTG-F15/GB_TOP",
+     "FTG-F15/FOOTING_TOP",
+     "FTG-F15/layer NECK_RUN"
+    ]
+   ],
+   [
+    "FTG-F15",
+    "FOOTING_DEPTH",
+    null,
+    "HELD",
+    [
+     "FTG-F15/FOOTING_TOP",
+     "FTG-F15/FOOTING_BOTTOM"
+    ]
+   ],
+   [
+    "FTG-F15",
+    "UNDERLAY",
+    null,
+    "HELD",
+    [
+     "FTG-F15/FOOTING_BOTTOM",
+     "FTG-F15/BLINDING_TOP"
+    ]
+   ],
+   [
+    "FTG-F15",
+    "BLINDING_THICKNESS",
+    null,
+    "HELD",
+    [
+     "FTG-F15/BLINDING_TOP",
+     "FTG-F15/FORMATION"
+    ]
+   ],
+   [
+    "FTG-F15",
+    "EXCAVATION_DEPTH",
+    null,
+    "HELD",
+    [
+     "FTG-F15/FORMATION",
+     "FTG-F15/layer EXCAVATION_DEPTH"
+    ]
+   ],
+   [
+    "FTG-FF",
+    "LIFT_PIT_DEPTH",
+    null,
+    "HELD",
+    [
+     "FTG-FF/FOOTING_TOP",
+     "FTG-FF/layer LIFT_PIT_DEPTH"
+    ]
+   ],
+   [
+    "FTG-FF",
+    "FOOTING_DEPTH",
+    null,
+    "HELD",
+    [
+     "FTG-FF/FOOTING_TOP",
+     "FTG-FF/FOOTING_BOTTOM"
+    ]
+   ],
+   [
+    "FTG-FF",
+    "UNDERLAY",
+    null,
+    "HELD",
+    [
+     "FTG-FF/FOOTING_BOTTOM",
+     "FTG-FF/BLINDING_TOP",
+     "FTG-FF/layer UNDERLAY"
+    ]
+   ],
+   [
+    "FTG-FF",
+    "BLINDING_THICKNESS",
+    null,
+    "HELD",
+    [
+     "FTG-FF/BLINDING_TOP",
+     "FTG-FF/FORMATION"
+    ]
+   ],
+   [
+    "FTG-FF",
+    "EXCAVATION_DEPTH",
+    null,
+    "HELD",
+    [
+     "FTG-FF/FORMATION",
+     "FTG-FF/layer EXCAVATION_DEPTH"
+    ]
+   ],
+   [
+    "FTG-FN",
+    "NECK_RUN",
+    null,
+    "HELD",
+    [
+     "FTG-FN/GB_TOP",
+     "FTG-FN/FOOTING_TOP",
+     "FTG-FN/layer NECK_RUN"
+    ]
+   ],
+   [
+    "FTG-FN",
+    "FOOTING_DEPTH",
+    null,
+    "HELD",
+    [
+     "FTG-FN/FOOTING_TOP",
+     "FTG-FN/FOOTING_BOTTOM"
+    ]
+   ],
+   [
+    "FTG-FN",
+    "UNDERLAY",
+    null,
+    "HELD",
+    [
+     "FTG-FN/FOOTING_BOTTOM",
+     "FTG-FN/BLINDING_TOP"
+    ]
+   ],
+   [
+    "FTG-FN",
+    "BLINDING_THICKNESS",
+    null,
+    "HELD",
+    [
+     "FTG-FN/BLINDING_TOP",
+     "FTG-FN/FORMATION"
+    ]
+   ],
+   [
+    "FTG-FN",
+    "EXCAVATION_DEPTH",
+    null,
+    "HELD",
+    [
+     "FTG-FN/FORMATION",
+     "FTG-FN/layer EXCAVATION_DEPTH"
+    ]
+   ],
+   [
+    "1F-WET-275",
+    "WET_FLOOR_BUILD_UP",
+    null,
+    "HELD",
+    [
+     "1F-WET-275/SLAB_TOP",
+     "1F-WET-275/layer WET_FLOOR_BUILD_UP"
+    ]
+   ],
+   [
+    "1F-WET-275",
+    "SLAB_THICKNESS",
+    null,
+    "HELD",
+    [
+     "1F-WET-275/SLAB_TOP",
+     "1F-WET-275/SLAB_SOFFIT"
+    ]
+   ],
+   [
+    "1F-WET-276",
+    "WET_FLOOR_BUILD_UP",
+    null,
+    "HELD",
+    [
+     "1F-WET-276/SLAB_TOP",
+     "1F-WET-276/layer WET_FLOOR_BUILD_UP"
+    ]
+   ],
+   [
+    "1F-WET-276",
+    "SLAB_THICKNESS",
+    null,
+    "HELD",
+    [
+     "1F-WET-276/SLAB_TOP",
+     "1F-WET-276/SLAB_SOFFIT"
+    ]
+   ],
+   [
+    "1F-WET-280",
+    "WET_FLOOR_BUILD_UP",
+    null,
+    "HELD",
+    [
+     "1F-WET-280/SLAB_TOP",
+     "1F-WET-280/layer WET_FLOOR_BUILD_UP"
+    ]
+   ],
+   [
+    "1F-WET-280",
+    "SLAB_THICKNESS",
+    null,
+    "HELD",
+    [
+     "1F-WET-280/SLAB_TOP",
+     "1F-WET-280/SLAB_SOFFIT"
+    ]
+   ],
+   [
+    "1F-WET-287",
+    "WET_FLOOR_BUILD_UP",
+    null,
+    "HELD",
+    [
+     "1F-WET-287/SLAB_TOP",
+     "1F-WET-287/layer WET_FLOOR_BUILD_UP"
+    ]
+   ],
+   [
+    "1F-WET-287",
+    "SLAB_THICKNESS",
+    null,
+    "HELD",
+    [
+     "1F-WET-287/SLAB_TOP",
+     "1F-WET-287/SLAB_SOFFIT"
+    ]
+   ],
+   [
+    "1F-WET-298",
+    "WET_FLOOR_BUILD_UP",
+    null,
+    "HELD",
+    [
+     "1F-WET-298/SLAB_TOP",
+     "1F-WET-298/layer WET_FLOOR_BUILD_UP"
+    ]
+   ],
+   [
+    "1F-WET-298",
+    "SLAB_THICKNESS",
+    null,
+    "HELD",
+    [
+     "1F-WET-298/SLAB_TOP",
+     "1F-WET-298/SLAB_SOFFIT"
+    ]
+   ],
+   [
+    "2F-WET-5BF",
+    "WET_FLOOR_BUILD_UP",
+    null,
+    "HELD",
+    [
+     "2F-WET-5BF/SLAB_TOP",
+     "2F-WET-5BF/layer WET_FLOOR_BUILD_UP"
+    ]
+   ],
+   [
+    "2F-WET-5BF",
+    "SLAB_THICKNESS",
+    null,
+    "HELD",
+    [
+     "2F-WET-5BF/SLAB_TOP",
+     "2F-WET-5BF/SLAB_SOFFIT"
+    ]
+   ]
+  ],
+  "bounds": [
+   [
+    "GF-EXT-F8",
+    "FORMATION",
+    "AT_MOST",
+    -1.5,
+    "OPEN (the datum is not established; the limit is not a value)"
+   ],
+   [
+    "FTG-F",
+    "FORMATION",
+    "AT_MOST",
+    -1.5,
+    "OPEN (the datum is not established; the limit is not a value)"
+   ],
+   [
+    "FTG-F2",
+    "FORMATION",
+    "AT_MOST",
+    -1.5,
+    "OPEN (the datum is not established; the limit is not a value)"
+   ],
+   [
+    "FTG-F3",
+    "FORMATION",
+    "AT_MOST",
+    -1.5,
+    "OPEN (the datum is not established; the limit is not a value)"
+   ],
+   [
+    "FTG-F4",
+    "FORMATION",
+    "AT_MOST",
+    -1.5,
+    "OPEN (the datum is not established; the limit is not a value)"
+   ],
+   [
+    "FTG-F5",
+    "FORMATION",
+    "AT_MOST",
+    -1.5,
+    "OPEN (the datum is not established; the limit is not a value)"
+   ],
+   [
+    "FTG-F6",
+    "FORMATION",
+    "AT_MOST",
+    -1.5,
+    "OPEN (the datum is not established; the limit is not a value)"
+   ],
+   [
+    "FTG-F7",
+    "FORMATION",
+    "AT_MOST",
+    -1.5,
+    "OPEN (the datum is not established; the limit is not a value)"
+   ],
+   [
+    "FTG-F8",
+    "FORMATION",
+    "AT_MOST",
+    -1.5,
+    "OPEN (the datum is not established; the limit is not a value)"
+   ],
+   [
+    "FTG-F9",
+    "FORMATION",
+    "AT_MOST",
+    -1.5,
+    "OPEN (the datum is not established; the limit is not a value)"
+   ],
+   [
+    "FTG-F10",
+    "FORMATION",
+    "AT_MOST",
+    -1.5,
+    "OPEN (the datum is not established; the limit is not a value)"
+   ],
+   [
+    "FTG-F11",
+    "FORMATION",
+    "AT_MOST",
+    -1.5,
+    "OPEN (the datum is not established; the limit is not a value)"
+   ],
+   [
+    "FTG-F12",
+    "FORMATION",
+    "AT_MOST",
+    -1.5,
+    "OPEN (the datum is not established; the limit is not a value)"
+   ],
+   [
+    "FTG-F13",
+    "FORMATION",
+    "AT_MOST",
+    -1.5,
+    "OPEN (the datum is not established; the limit is not a value)"
+   ],
+   [
+    "FTG-F14",
+    "FORMATION",
+    "AT_MOST",
+    -1.5,
+    "OPEN (the datum is not established; the limit is not a value)"
+   ],
+   [
+    "FTG-F15",
+    "FORMATION",
+    "AT_MOST",
+    -1.5,
+    "OPEN (the datum is not established; the limit is not a value)"
+   ],
+   [
+    "FTG-FF",
+    "FORMATION",
+    "AT_MOST",
+    -1.5,
+    "OPEN (the datum is not established; the limit is not a value)"
+   ],
+   [
+    "FTG-FN",
+    "FORMATION",
+    "AT_MOST",
+    -1.5,
+    "OPEN (the datum is not established; the limit is not a value)"
+   ]
+  ],
+  "uses": [
+   [
+    "A1-POOL-WALL-r1",
+    "FINISHED_AS_STRUCTURAL",
+    "uses POOL/POOL_FINISHED_FLOOR where POOL/POOL_BASE_TOP is needed; difference +0.050 m",
+    null
+   ],
+   [
+    "A1-POOL-WALL-r2",
+    "OK",
+    "",
+    null
+   ],
+   [
+    "A2-SILL-W01-r1",
+    "WRONG_REFERENCE",
+    "measured from GF-EXT-F8/FINISHED_GROUND instead of GF-EXT-F8/FFL: every height read this way is off by -0.850 m",
+    null
+   ],
+   [
+    "A2-SILL-W01-r3",
+    "OK",
+    "",
+    null
+   ],
+   [
+    "A3-NECK-TOP",
+    "FINISHED_AS_STRUCTURAL",
+    "value +1.000 used for GF-EXT-F8/GB_TOP, which no sheet establishes; it equals GF-EXT-F8/FFL: the quantity is HELD",
+    null
+   ],
+   [
+    "A3-NECK-FOOT",
+    "NEEDS_HELD",
+    "GF-EXT-F8/FOOTING_TOP is HELD",
+    null
+   ],
+   [
+    "A4-STAIR-B20",
+    "FINISHED_AS_STRUCTURAL",
+    "uses 1F-FLOOR/FFL where 1F-FLOOR/SLAB_TOP is needed; the needed datum is not established (HELD): the quantity is HELD",
+    "quantity unchanged only if the needed datum lies within 0.289 m below to 0.167 m above the used one; not established, so not proven"
+   ],
+   [
+    "A4-STAIR-B23",
+    "FINISHED_AS_STRUCTURAL",
+    "uses 2F-FLOOR/FFL where 2F-FLOOR/SLAB_TOP is needed; the needed datum is not established (HELD): the quantity is HELD",
+    "quantity unchanged only if the needed datum lies within 0.289 m below to 0.167 m above the used one; not established, so not proven"
+   ],
+   [
+    "W-1F-WET-275",
+    "WRONG_REFERENCE",
+    "uses 1F-FLOOR/SLAB_TOP where 1F-WET-275/SLAB_TOP is needed; the needed datum is not established (HELD): the quantity is HELD",
+    null
+   ],
+   [
+    "W-1F-WET-276",
+    "WRONG_REFERENCE",
+    "uses 1F-FLOOR/SLAB_TOP where 1F-WET-276/SLAB_TOP is needed; the needed datum is not established (HELD): the quantity is HELD",
+    null
+   ],
+   [
+    "W-1F-WET-280",
+    "WRONG_REFERENCE",
+    "uses 1F-FLOOR/SLAB_TOP where 1F-WET-280/SLAB_TOP is needed; the needed datum is not established (HELD): the quantity is HELD",
+    null
+   ],
+   [
+    "W-1F-WET-287",
+    "WRONG_REFERENCE",
+    "uses 1F-FLOOR/SLAB_TOP where 1F-WET-287/SLAB_TOP is needed; the needed datum is not established (HELD): the quantity is HELD",
+    null
+   ],
+   [
+    "W-1F-WET-298",
+    "WRONG_REFERENCE",
+    "uses 1F-FLOOR/SLAB_TOP where 1F-WET-298/SLAB_TOP is needed; the needed datum is not established (HELD): the quantity is HELD",
+    null
+   ],
+   [
+    "W-2F-WET-5BF",
+    "WRONG_REFERENCE",
+    "uses 2F-FLOOR/SLAB_TOP where 2F-WET-5BF/SLAB_TOP is needed; the needed datum is not established (HELD): the quantity is HELD",
+    null
+   ]
+  ],
+  "owner_manual_layers": [
+   [
+    "GF-EXT-F8",
+    "FLOOR_BUILD_UP",
+    0.1
+   ],
+   [
+    "GF-FLOOR",
+    "FLOOR_BUILD_UP",
+    0.1
+   ],
+   [
+    "1F-FLOOR",
+    "FLOOR_BUILD_UP",
+    0.1
+   ],
+   [
+    "2F-FLOOR",
+    "FLOOR_BUILD_UP",
+    0.1
+   ]
+  ]
+ },
+ "footings": [
+  {
+   "type": "F",
+   "H_m": 0.3,
+   "status": "HELD (formation not printed, Q-21 C)",
+   "above_formation": {
+    "blinding_top": 0.1,
+    "footing_bottom": 0.17,
+    "footing_top": 0.47
+   },
+   "if_formation_at_limit_-1.50": {
+    "footing_bottom": -1.33,
+    "footing_top": -1.03
+   },
+   "released_convention_footing_bottom_-1.50": {
+    "footing_top": -1.2,
+    "implied_formation": -1.67
+   }
+  },
+  {
+   "type": "F2",
+   "H_m": 0.35,
+   "status": "HELD (formation not printed, Q-21 C)",
+   "above_formation": {
+    "blinding_top": 0.1,
+    "footing_bottom": 0.17,
+    "footing_top": 0.52
+   },
+   "if_formation_at_limit_-1.50": {
+    "footing_bottom": -1.33,
+    "footing_top": -0.98
+   },
+   "released_convention_footing_bottom_-1.50": {
+    "footing_top": -1.15,
+    "implied_formation": -1.67
+   }
+  },
+  {
+   "type": "F3",
+   "H_m": 0.3,
+   "status": "HELD (formation not printed, Q-21 C)",
+   "above_formation": {
+    "blinding_top": 0.1,
+    "footing_bottom": 0.17,
+    "footing_top": 0.47
+   },
+   "if_formation_at_limit_-1.50": {
+    "footing_bottom": -1.33,
+    "footing_top": -1.03
+   },
+   "released_convention_footing_bottom_-1.50": {
+    "footing_top": -1.2,
+    "implied_formation": -1.67
+   }
+  },
+  {
+   "type": "F4",
+   "H_m": 0.4,
+   "status": "HELD (formation not printed, Q-21 C)",
+   "above_formation": {
+    "blinding_top": 0.1,
+    "footing_bottom": 0.17,
+    "footing_top": 0.57
+   },
+   "if_formation_at_limit_-1.50": {
+    "footing_bottom": -1.33,
+    "footing_top": -0.93
+   },
+   "released_convention_footing_bottom_-1.50": {
+    "footing_top": -1.1,
+    "implied_formation": -1.67
+   }
+  },
+  {
+   "type": "F5",
+   "H_m": 0.4,
+   "status": "HELD (formation not printed, Q-21 C)",
+   "above_formation": {
+    "blinding_top": 0.1,
+    "footing_bottom": 0.17,
+    "footing_top": 0.57
+   },
+   "if_formation_at_limit_-1.50": {
+    "footing_bottom": -1.33,
+    "footing_top": -0.93
+   },
+   "released_convention_footing_bottom_-1.50": {
+    "footing_top": -1.1,
+    "implied_formation": -1.67
+   }
+  },
+  {
+   "type": "F6",
+   "H_m": 0.5,
+   "status": "HELD (formation not printed, Q-21 C)",
+   "above_formation": {
+    "blinding_top": 0.1,
+    "footing_bottom": 0.17,
+    "footing_top": 0.67
+   },
+   "if_formation_at_limit_-1.50": {
+    "footing_bottom": -1.33,
+    "footing_top": -0.83
+   },
+   "released_convention_footing_bottom_-1.50": {
+    "footing_top": -1.0,
+    "implied_formation": -1.67
+   }
+  },
+  {
+   "type": "F7",
+   "H_m": 0.5,
+   "status": "HELD (formation not printed, Q-21 C)",
+   "above_formation": {
+    "blinding_top": 0.1,
+    "footing_bottom": 0.17,
+    "footing_top": 0.67
+   },
+   "if_formation_at_limit_-1.50": {
+    "footing_bottom": -1.33,
+    "footing_top": -0.83
+   },
+   "released_convention_footing_bottom_-1.50": {
+    "footing_top": -1.0,
+    "implied_formation": -1.67
+   }
+  },
+  {
+   "type": "F8",
+   "H_m": 0.5,
+   "status": "HELD (formation not printed, Q-21 C)",
+   "above_formation": {
+    "blinding_top": 0.1,
+    "footing_bottom": 0.17,
+    "footing_top": 0.67
+   },
+   "if_formation_at_limit_-1.50": {
+    "footing_bottom": -1.33,
+    "footing_top": -0.83
+   },
+   "released_convention_footing_bottom_-1.50": {
+    "footing_top": -1.0,
+    "implied_formation": -1.67
+   }
+  },
+  {
+   "type": "F9",
+   "H_m": 0.55,
+   "status": "HELD (formation not printed, Q-21 C)",
+   "above_formation": {
+    "blinding_top": 0.1,
+    "footing_bottom": 0.17,
+    "footing_top": 0.72
+   },
+   "if_formation_at_limit_-1.50": {
+    "footing_bottom": -1.33,
+    "footing_top": -0.78
+   },
+   "released_convention_footing_bottom_-1.50": {
+    "footing_top": -0.95,
+    "implied_formation": -1.67
+   }
+  },
+  {
+   "type": "F10",
+   "H_m": 0.5,
+   "status": "HELD (formation not printed, Q-21 C)",
+   "above_formation": {
+    "blinding_top": 0.1,
+    "footing_bottom": 0.17,
+    "footing_top": 0.67
+   },
+   "if_formation_at_limit_-1.50": {
+    "footing_bottom": -1.33,
+    "footing_top": -0.83
+   },
+   "released_convention_footing_bottom_-1.50": {
+    "footing_top": -1.0,
+    "implied_formation": -1.67
+   }
+  },
+  {
+   "type": "F11",
+   "H_m": 0.5,
+   "status": "HELD (formation not printed, Q-21 C)",
+   "above_formation": {
+    "blinding_top": 0.1,
+    "footing_bottom": 0.17,
+    "footing_top": 0.67
+   },
+   "if_formation_at_limit_-1.50": {
+    "footing_bottom": -1.33,
+    "footing_top": -0.83
+   },
+   "released_convention_footing_bottom_-1.50": {
+    "footing_top": -1.0,
+    "implied_formation": -1.67
+   }
+  },
+  {
+   "type": "F12",
+   "H_m": 0.7,
+   "status": "HELD (formation not printed, Q-21 C)",
+   "above_formation": {
+    "blinding_top": 0.1,
+    "footing_bottom": 0.17,
+    "footing_top": 0.87
+   },
+   "if_formation_at_limit_-1.50": {
+    "footing_bottom": -1.33,
+    "footing_top": -0.63
+   },
+   "released_convention_footing_bottom_-1.50": {
+    "footing_top": -0.8,
+    "implied_formation": -1.67
+   }
+  },
+  {
+   "type": "F13",
+   "H_m": 0.5,
+   "status": "HELD (formation not printed, Q-21 C)",
+   "above_formation": {
+    "blinding_top": 0.1,
+    "footing_bottom": 0.17,
+    "footing_top": 0.67
+   },
+   "if_formation_at_limit_-1.50": {
+    "footing_bottom": -1.33,
+    "footing_top": -0.83
+   },
+   "released_convention_footing_bottom_-1.50": {
+    "footing_top": -1.0,
+    "implied_formation": -1.67
+   }
+  },
+  {
+   "type": "F14",
+   "H_m": 0.5,
+   "status": "HELD (formation not printed, Q-21 C)",
+   "above_formation": {
+    "blinding_top": 0.1,
+    "footing_bottom": 0.17,
+    "footing_top": 0.67
+   },
+   "if_formation_at_limit_-1.50": {
+    "footing_bottom": -1.33,
+    "footing_top": -0.83
+   },
+   "released_convention_footing_bottom_-1.50": {
+    "footing_top": -1.0,
+    "implied_formation": -1.67
+   }
+  },
+  {
+   "type": "F15",
+   "H_m": 0.4,
+   "status": "HELD (formation not printed, Q-21 C)",
+   "above_formation": {
+    "blinding_top": 0.1,
+    "footing_bottom": 0.17,
+    "footing_top": 0.57
+   },
+   "if_formation_at_limit_-1.50": {
+    "footing_bottom": -1.33,
+    "footing_top": -0.93
+   },
+   "released_convention_footing_bottom_-1.50": {
+    "footing_top": -1.1,
+    "implied_formation": -1.67
+   }
+  },
+  {
+   "type": "FF",
+   "H_m": 0.55,
+   "status": "HELD (formation, pit depth and the membrane thickness of the lift detail not printed)",
+   "above_formation": null,
+   "detail": "ST7757.pdf p.14 lift detail; screed 0.05 + membrane (no thickness) + blinding 0.10"
+  },
+  {
+   "type": "FN",
+   "H_m": 0.3,
+   "status": "HELD (formation not printed, Q-21 C)",
+   "above_formation": {
+    "blinding_top": 0.1,
+    "footing_bottom": 0.17,
+    "footing_top": 0.47
+   },
+   "if_formation_at_limit_-1.50": {
+    "footing_bottom": -1.33,
+    "footing_top": -1.03
+   },
+   "released_convention_footing_bottom_-1.50": {
+    "footing_top": -1.2,
+    "implied_formation": -1.67
+   }
+  }
+ ],
+ "sheets_searched_r2": [
+  "Drive 'Alsenan chalet project' / ST7757.pdf p.1-16 (axis, foundation, ground-beam and three slab plans; notes p.8; schedules p.9-12; details p.13-16)",
+  "Drive 'Alsenan chalet project' / ST7757 dxf.dxf every TEXT / MTEXT / ATTRIB / DIMENSION text (nested inserts to depth 4, layout DETAILS too)",
+  "Drive 'Alsenan chalet project' / sanitary-7757.pdf sheets 1-3 (GF / 1F / 2F drainage plans)"
+ ]
+}

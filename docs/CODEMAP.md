@@ -18,11 +18,11 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 2825 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 2831 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 9 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 1435 | pytest suites, one folder per round. |
+| `tests/` | 1439 | pytest suites, one folder per round. |
 | `tools/` | 109 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (254 modules)
@@ -514,7 +514,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `independent_export.py` | 251 | MEDIUM | 2 | INDEPENDENT EXPORT ADMISSION (R8.5 follow-up) — may this DXF serve as the independent parser route? |
 | `knowledge.py` | 289 | HIGH | 32 | ENGINEERING KNOWLEDGE (M9 Phase 2B-1, ARCH_TAKEOFF_V2.3 only) - the owner rules, conflicts, question catalogue and |
 | `legacy_text.py` | 136 | CRITICAL | 3 | LEGACY CAD TEXT DECODING (V3) - Arabic written with legacy AutoCAD SHX fonts. |
-| `level_chain_v1.py` | 495 | MEDIUM | 1 | LEVEL_CHAIN_V1 (T-200, residential review R5): every level a named physical datum, with the build-up between them. |
+| `level_chain_v1.py` | 495 | MEDIUM | 2 | LEVEL_CHAIN_V1 (T-200, residential review R5): every level a named physical datum, with the build-up between them. |
 | `level_marks.py` | 144 | MEDIUM | 3 | LEVEL MARK UNIT EVIDENCE (V1) - authored level annotations of ONE elevation / section view as unit evidence. |
 | `link_geometry.py` | 96 | CRITICAL | 2 | LINK GEOMETRY - stirrup / link topology and envelope lower bounds for accurate beam reinforcement (generic). |
 | `lintel_measure.py` | 164 | MEDIUM | 8 | LINTEL MEASURE (M4) - masonry-wall openings of an architectural floor plan and the lintels a printed lintel |
@@ -1086,6 +1086,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t201_heads/` | 3 |
 | `tests/t202_guard_sweep/` | 1 |
 | `tests/t204_lift_tank/` | 2 |
+| `tests/t206_level_chain_r2/` | 2 |
 | `tests/t207_openings_closure/` | 2 |
 | `tests/water_tank_s8_4/` | 3 |
 | `tests/zz_freeze_integrity/` | 2 |
@@ -1305,6 +1306,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t201/` | 10 |
 | `research/agents_t202/` | 6 |
 | `research/agents_t204/` | 6 |
+| `research/agents_t206/` | 6 |
 | `research/agents_t207/` | 7 |
 | `research/alsenan_arch_truth_05/` | 28 |
 | `research/alsenan_column_rebar_s3/` | 17 |
