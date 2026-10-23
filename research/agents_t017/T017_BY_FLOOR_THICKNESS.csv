@@ -1,0 +1,8 @@
+floor,t_m,census_runs,ledger_physical_m (T-108 r2 rows),census_arch_run_m,census_minus_ledger_m,census_both_faces_m (columns drawn through included),census_column_cut_m,census_openings_in_run_m,census_one_face_m,census_corner_extensions_m,census_crossings_m,census_junction_residual_m (one face + corners),t225_residual_m (engine physical - run A both faces - openings),curved_wall_entities_not_read
+GF,0.15,16,39.3130,38.9348,-0.3782,32.0277,1.0899,6.7970,0.9500,0.2500,0.0000,1.2000,1.457,0
+GF,0.20,26,91.4430,88.4834,-2.9596,75.9792,13.1600,21.3598,2.0294,2.2750,0.0000,4.3044,2.529,2
+GF,0.40,1,0.6000,0.6000,-0.0000,1.4000,0.8000,0.0000,0.0000,0.0000,0.0000,0.0000,0.000,0
+1F,0.15,15,56.7360,56.7357,-0.0003,46.3357,1.8000,10.1000,1.4000,0.5500,0.1500,1.9500,2.376,0
+1F,0.20,18,60.0210,59.8352,-0.1858,52.6813,10.0173,14.8240,0.7472,1.6000,0.0000,2.3472,1.781,4
+2F,0.15,2,10.9000,10.9000,-0.0000,8.7000,0.0000,1.8000,0.2000,0.2000,0.0000,0.4000,0.400,0
+2F,0.20,10,28.7000,28.7000,-0.0000,25.8000,4.1000,5.9000,0.1500,0.9500,0.0000,1.1000,0.500,0

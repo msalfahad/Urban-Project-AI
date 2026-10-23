@@ -1,0 +1,118 @@
+{
+ "causes": {
+  "CORNER_SQUARE_OWNERSHIP": 9,
+  "CURVED_NOT_READ": 2,
+  "GLAZING_END_PIECE_NOT_FOUND": 1,
+  "NOT_ON_WALL_LAYER": 1,
+  "OBLIQUE_END_NOT_CLOSED": 3
+ },
+ "floors": {
+  "1F": {
+   "caps": 0,
+   "gaps": {
+    "COLUMN": 1.2327,
+    "CROSSING": 0.15,
+    "CROSSING_OTHER": 0.15,
+    "ONE_FACE": 2.3626,
+    "OPENING": 24.924,
+    "SPLIT": 3.0594
+   },
+   "runs": 33,
+   "totals": {
+    "0.15": {
+     "arch_run_m": 56.7357,
+     "one_face_m": 1.4,
+     "openings_m": 10.1,
+     "runs": 15,
+     "solid_m": 46.3357
+    },
+    "0.20": {
+     "arch_run_m": 59.8352,
+     "one_face_m": 0.7472,
+     "openings_m": 14.824,
+     "runs": 18,
+     "solid_m": 52.6813
+    }
+   },
+   "unmatched_by_t": {},
+   "unmatched_m": 0,
+   "unmatched_runs": 0,
+   "wall_arcs_not_read": 4
+  },
+  "2F": {
+   "caps": 0,
+   "gaps": {
+    "COLUMN": 0.6,
+    "ONE_FACE": 0.35,
+    "OPENING": 7.7
+   },
+   "runs": 12,
+   "totals": {
+    "0.15": {
+     "arch_run_m": 10.9,
+     "one_face_m": 0.2,
+     "openings_m": 1.8,
+     "runs": 2,
+     "solid_m": 8.7
+    },
+    "0.20": {
+     "arch_run_m": 28.7,
+     "one_face_m": 0.15,
+     "openings_m": 5.9,
+     "runs": 10,
+     "solid_m": 25.8
+    }
+   },
+   "unmatched_by_t": {},
+   "unmatched_m": 0,
+   "unmatched_runs": 0,
+   "wall_arcs_not_read": 0
+  },
+  "GF": {
+   "caps": 1,
+   "gaps": {
+    "COLUMN": 14.84,
+    "ONE_FACE": 3.3158,
+    "OPENING": 29.3568,
+    "SPLIT": 9.4898
+   },
+   "runs": 43,
+   "totals": {
+    "0.15": {
+     "arch_run_m": 38.9348,
+     "one_face_m": 0.95,
+     "openings_m": 6.797,
+     "runs": 16,
+     "solid_m": 32.0277
+    },
+    "0.20": {
+     "arch_run_m": 88.4834,
+     "one_face_m": 2.0294,
+     "openings_m": 21.3598,
+     "runs": 26,
+     "solid_m": 75.9792
+    },
+    "0.40": {
+     "arch_run_m": 0.6,
+     "one_face_m": 0.0,
+     "openings_m": 0.0,
+     "runs": 1,
+     "solid_m": 1.4
+    }
+   },
+   "unmatched_by_t": {
+    "0.15": 1.1928
+   },
+   "unmatched_m": 1.1928,
+   "unmatched_runs": 1,
+   "wall_arcs_not_read": 2
+  }
+ },
+ "method": "PAIR_MIDLINE_CENSUS_V1",
+ "rows": {
+  "AGREE": 59,
+  "DIFFERS": 12,
+  "NOT_READ_OR_NOT_FOUND": 4,
+  "total": 75
+ }
+}
