@@ -1,0 +1,64 @@
+{
+ "curved_room_line": {
+  "line": "L-9a22d1b81ee426e86af1",
+  "m2": 19.0165,
+  "state": "PROVISIONAL"
+ },
+ "dressing_line": {
+  "item": "ARCH.SPACE",
+  "line": "L-7c5a02386f49947cf223",
+  "m2": 2.97,
+  "state": "PROVISIONAL"
+ },
+ "gf_side_passage": {
+  "boundary_wall_strip": "L-2973740849077f193603",
+  "boundary_wall_strip_m2": 0.28,
+  "mouth_strip": "L-686c823304edc2a7ae64",
+  "mouth_strip_m2": 0.24,
+  "space_a": "L-d1894ada6c9ed91bcb4d",
+  "space_a_m2": 1.56,
+  "space_b": "L-7e20189137840959b393",
+  "space_b_m2": 3.6
+ },
+ "source": "own re-run 2026-10-23 of tools/release_baseline.py run research/agents_t165/baselines/V29_ROUTEG_NO_PROFILE.json on engine 242e50b2: REPRODUCED, 1455 lines, BOQ_LINES.csv b96185d4",
+ "strips": {
+  "1F-OP-007": {
+   "item": "FIN.FLOOR.PORCELAIN",
+   "line": "L-51a0d437797dddfb180e",
+   "m2": 0.2,
+   "state": "SOURCE_DERIVED"
+  },
+  "1F-OP-011": {
+   "item": "FIN.FLOOR.PORCELAIN",
+   "line": "L-c2e57836761709440929",
+   "m2": 0.15,
+   "state": "SOURCE_DERIVED"
+  },
+  "2F-OP-001": {
+   "item": "FIN.FLOOR.PORCELAIN",
+   "line": "L-f7dc931e2c059cda77df",
+   "m2": 0.15,
+   "state": "PROVISIONAL"
+  },
+  "2F-OP-002": {
+   "item": "FIN.FLOOR.PORCELAIN",
+   "line": "L-22c46d456725a74b5ff7",
+   "m2": 0.2,
+   "state": "SOURCE_DERIVED"
+  },
+  "GF-OP-001": {
+   "item": "FIN.FLOOR.PORCELAIN",
+   "line": "L-2973740849077f193603",
+   "m2": 0.28,
+   "state": "PROVISIONAL",
+   "twin": "L-891f465afcfe1dec121e",
+   "twin_state": "BLOCKED_RFI"
+  },
+  "GF-OP-007": {
+   "item": "FIN.FLOOR.PORCELAIN",
+   "line": "L-686c823304edc2a7ae64",
+   "m2": 0.24,
+   "state": "PROVISIONAL"
+  }
+ }
+}
