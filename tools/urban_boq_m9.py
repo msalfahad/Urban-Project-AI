@@ -2913,6 +2913,13 @@ CANDIDATE_EXTENSIONS_V305 = (V305,)  # its own tuple: the V3.0 .. V3.0.4 method 
 # Opt-in, not the released default; rollback = run ARCH_TAKEOFF_V2.9.
 V306 = "ARCH_TAKEOFF_V3.0.6"
 CANDIDATE_EXTENSIONS_V306 = (V306,)  # its own tuple: the V3.0 .. V3.0.5 method lists stay as they were
+# T-193: ARCH_TAKEOFF_V3.0.7 = the SAME candidate extended again (engine.source.arch_v307): a V3.0.6 run (its V3_0_* ..
+# V3_0_6_* files unchanged) + checker-verified concrete solids (pool base / walls, dome shells) replacing the convention
+# lines the V3.0.6 guard held, the misread line of the same element retired, and the guard re-checked on a new evidence
+# version, in V3_0_7_* files; every line outside its rows byte-identical to V3.0.6.
+# Opt-in, not the released default; rollback = run ARCH_TAKEOFF_V2.9.
+V307 = "ARCH_TAKEOFF_V3.0.7"
+CANDIDATE_EXTENSIONS_V307 = (V307,)  # its own tuple: the V3.0 .. V3.0.6 method lists stay as they were
 
 
 def _v304_inputs(path, project_id):
@@ -2947,13 +2954,14 @@ def _v304_inputs(path, project_id):
 def cmd_arch(a):
     from engine.source import discovery as DS
     facts = json.loads(Path(a.facts).read_text(encoding="utf-8")) if a.facts else None
-    v306 = a.method == V306                   # T-187: the V3.0.5 run, then its V3.0.6 extension
-    v305 = a.method in (V305, V306)           # T-179: the V3.0.4 run, then its V3.0.5 extension
-    v304 = a.method in (V304, V305, V306)     # T-167: the V3.0.3 run, then its V3.0.4 extension
-    v303 = a.method in (V303, V304, V305, V306)  # T-151: the V3.0.2 run, then its V3.0.3 extension
-    v302 = a.method in (V302, V303, V304, V305, V306)  # T-142: the V3.0.1 run, then its V3.0.2 extension
-    v301 = a.method in (V301, V302, V303, V304, V305, V306)  # T-133: the V3.0 candidate run, then its V3.0.1 extension
-    v30 = a.method in (V30, V301, V302, V303, V304, V305, V306)  # T-131: the candidate runs V2.13, then integrates
+    v307 = a.method == V307                   # T-193: the V3.0.6 run, then its V3.0.7 extension
+    v306 = a.method in (V306, V307)           # T-187: the V3.0.5 run, then its V3.0.6 extension
+    v305 = a.method in (V305, V306, V307)     # T-179: the V3.0.4 run, then its V3.0.5 extension
+    v304 = a.method in (V304, V305, V306, V307)  # T-167: the V3.0.3 run, then its V3.0.4 extension
+    v303 = a.method in (V303, V304, V305, V306, V307)  # T-151: the V3.0.2 run, then its V3.0.3 extension
+    v302 = a.method in (V302, V303, V304, V305, V306, V307)  # T-142: the V3.0.1 run, then its V3.0.2 extension
+    v301 = a.method in (V301, V302, V303, V304, V305, V306, V307)  # T-133: the V3.0 run, then its V3.0.1 extension
+    v30 = a.method in (V30, V301, V302, V303, V304, V305, V306, V307)  # T-131: the candidate runs V2.13, integrates
     if getattr(a, "v302_inputs", None) and not v302:
         raise SystemExit("--v302-inputs needs --method ARCH_TAKEOFF_V3.0.2")
     if getattr(a, "v303_inputs", None) and not v303:
@@ -2964,6 +2972,8 @@ def cmd_arch(a):
         raise SystemExit("--v305-inputs needs --method ARCH_TAKEOFF_V3.0.5")
     if getattr(a, "v306_inputs", None) and not v306:
         raise SystemExit("--v306-inputs needs --method ARCH_TAKEOFF_V3.0.6")
+    if getattr(a, "v307_inputs", None) and not v307:
+        raise SystemExit("--v307-inputs needs --method ARCH_TAKEOFF_V3.0.7")
     if v30:
         a.method = V213
     elif getattr(a, "v30_decisions", None) or getattr(a, "v30_released", None) or getattr(a, "v30_history", None):
@@ -3250,6 +3260,20 @@ def cmd_arch(a):
                                   "identity": ident6, "v3_0_5_identity": ident5, "v3_0_4_identity": ident4,
                                   "v3_0_3_identity": ident3, "v3_0_2_identity": ident2, "v3_0_1_identity": ident1,
                                   "v3_0_identity": ident}
+                        if v307:
+                            # T-193: ARCH_TAKEOFF_V3.0.7 files beside the V3_0_6_* files (engine.source.arch_v307)
+                            from engine.source import arch_v307 as A307
+                            inp7 = A307.load_inputs(json.loads(Path(a.v307_inputs).read_text(encoding="utf-8"))
+                                                    if getattr(a, "v307_inputs", None) else None, room["project_id"])
+                            l306 = A306.integrate(l305, ch_v6)[0]
+                            v6ids = {c["after"]["line_id"] for c in ch_v6 if c.get("after") is not None}
+                            ch_v7, logs_v7 = A307.changes_for(inp7, l306, earlier6, v6ids)
+                            names7, ident7, _led7 = A307.write(out, l306, ch_v7, logs_v7, inp7, released)
+                            svgs += names7
+                            v30rec = {"method": V307, "extends": V306, "base": V213, "released_default": False,
+                                      "identity": ident7, "v3_0_6_identity": ident6, "v3_0_5_identity": ident5,
+                                      "v3_0_4_identity": ident4, "v3_0_3_identity": ident3, "v3_0_2_identity": ident2,
+                                      "v3_0_1_identity": ident1, "v3_0_identity": ident}
     ev = Counter(ln["evidence_state"] for ln in room["lines"])
     print(json.dumps({"method": a.method, "regions": [{"floor": r["floor"], "state": r["stage_state"],
                                                         "rooms": r.get("space_counts"), "lines": r.get("lines"),
@@ -3385,7 +3409,7 @@ def main(argv=None):
     p.add_argument("--method", required=True,
                    choices=ARCH_METHODS + CANDIDATE_METHODS + CANDIDATE_EXTENSIONS + CANDIDATE_EXTENSIONS_V302 +
                    CANDIDATE_EXTENSIONS_V303 + CANDIDATE_EXTENSIONS_V304 + CANDIDATE_EXTENSIONS_V305 +
-                   CANDIDATE_EXTENSIONS_V306,
+                   CANDIDATE_EXTENSIONS_V306 + CANDIDATE_EXTENSIONS_V307,
                    help="the versioned architectural takeoff method (no default: the route is opt-in until validated); "
                         "ARCH_TAKEOFF_V2 (S6) adds the drawing admission, unit-relative tolerances, empty-band plan "
                         "regions and the completeness gates (exit 2: admission blocked, 3: completeness failed)")
@@ -3429,6 +3453,9 @@ def main(argv=None):
     p.add_argument("--v306-inputs", help="ARCH_TAKEOFF_V3.0.6 (URBAN_V306_INPUTS_V1): the checker-merged stair concrete "
                                          "ledger (scope lines superseded or declared another element) and the default "
                                          "guard evidence, convention set and holding / recorded checks")
+    p.add_argument("--v307-inputs", help="ARCH_TAKEOFF_V3.0.7 (URBAN_V307_INPUTS_V1): checker-verified concrete solids "
+                                         "(pool, dome shells) with the convention lines they supersede or retire, the "
+                                         "scenarios beside the approved design and the guard evidence version")
     p.add_argument("--v30-history", nargs="+", metavar="METHOD=BOQ_LINES.json",
                    help="ARCH_TAKEOFF_V3.0 with --v30-released: BOQ_LINES.json of the ARCH_TAKEOFF_V2.10 / V2.11 / "
                         "V2.12 runs on the same drawings, so each ledger row names the version that changed its line")
