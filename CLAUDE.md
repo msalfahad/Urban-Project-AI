@@ -61,5 +61,9 @@ tracked file, commit, branch, board text, test or log. Refer to a file only by i
 
 - Every run writes a `STARTED` line with `bash scripts/agent_env.sh board log "- <time> | <agent> | STARTED | ..."`
   before it claims a task, and its final line the same way. It ends with one final line: SUCCESS, BLOCKED, FAILED or INCOMPLETE, with the exact text of any refused command.
+- RUN LOCK (owner 2026-10-23): the `STARTED` line also takes this agent's run lock. If `board log` prints
+  `AGENT_ENV LOCKED` (exit 3), another run of the same agent is active: it has already written your IDLE final line;
+  end the run at once and do nothing else. `task` and `board commit` refuse without the lock; if they say
+  "run lock lost", your run outlived its lock: write the final line (INCOMPLETE, with that text) and end.
 - A scheduler "succeeded" is not a successful run, and a successful run is not an engineering verification.
 - Engineering verification is recorded only by the Verifier, on the board.
