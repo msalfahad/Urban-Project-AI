@@ -1,0 +1,473 @@
+{
+ "d44_conclusion": "NOT DRAWN on any sheet of any format (8 sheets / views searched): D-44 consultant row 2 is send-ready; the architect's elevations and sections draw neither the tank nor anything above the +14.40 coping, so they neither show nor exclude an upstand",
+ "d44_record": [
+  {
+   "drawn": false,
+   "finding": "B15 drawn on the street-side edge of the 'WATER TANK PLACE' panel (T18, 7/6 bars T&B) in the same double-line style as every other beam; size only, no level, no section mark",
+   "sheet": "ST7757.pdf p.6 SECOND FLOOR ROOF SLAB",
+   "view": "plan"
+  },
+  {
+   "drawn": false,
+   "finding": "B15 20 / 120, bars only; no upstand / inverted column or note",
+   "sheet": "ST7757.pdf p.10 Schedule of Simple Beams",
+   "view": "schedule"
+  },
+  {
+   "drawn": false,
+   "finding": "no tank or B15 detail; the typical parapet detail rises 0.30 RC above the slab",
+   "sheet": "ST7757.pdf p.14 DETAILS (2)",
+   "view": "parapet, boundary wall, lift details"
+  },
+  {
+   "drawn": false,
+   "finding": "typical details only; no B15",
+   "sheet": "ST7757.pdf p.15 / p.16",
+   "view": "beam / slab / stair details"
+  },
+  {
+   "drawn": false,
+   "finding": "the 2F block top is one coping line at +14.40 (0.50 above +13.90) over its full width on the face along which B15 runs; nothing is drawn above it but the dome; no tank is drawn either",
+   "sheet": "architectural .dwf / p7757_arch_sheet09.pdf NORTH EAST ELEVATION and the NORTH WEST / SOUTH WEST ELEVATIONS",
+   "view": "elevations"
+  },
+  {
+   "drawn": false,
+   "finding": "roof band +13.90 uniform (0.05 / 0.20 lines); a 2.18 m box beyond, top at +14.40, lies 2.15 .. 4.33 m from the north face (outside the 0 .. 3.5 m tank panel): not B15; no deep beam drawn under the roof band",
+   "sheet": "architectural .dwf / p7757_arch_sheet10.pdf SECTION A-A",
+   "view": "section (cut about 1.9 m inside the street-side face, looking toward it)"
+  },
+  {
+   "drawn": false,
+   "finding": "the 2F block is seen beyond, top +14.40, dome; no tank, no B15",
+   "sheet": "Alsenan_Architectural_P7757_Pages_11-12.pdf p.11 SECTION B-B",
+   "view": "section (south of the block)"
+  },
+  {
+   "drawn": false,
+   "finding": "no roof plan at +13.90, no tank",
+   "sheet": "sanitary-7757.pdf p.1-3",
+   "view": "drainage plans"
+  }
+ ],
+ "drawn_roof_band": "every roof band of SECTION A-A / B-B (+4.30, +5.50 sea strip, +9.70, +13.90) draws the same constant 0.05 / 0.20 lines as the dry floors (section_bands.py, T-214): refused as a roof build-up (CONSTANT_LAYER_VS_FALLS); no slab step is drawn at any roof edge or on ST p.5 / p.6",
+ "fall": {
+  "ref": "sanitary-7757.pdf p.2 (1st floor drainage plan: annex roof +4.30 two arrows, +5.50 strip two arrows) and p.3 (2nd floor drainage plan: +9.70 roof, arrows to three outlets)",
+  "status": "DRAWING-CONFIRMED (printed 'SLOPE 1%')",
+  "value": 0.01
+ },
+ "method": "ROOF_FALLS_V1",
+ "parapet_rule": {
+  "ref": "ST7757.pdf p.14 'TYPICAL DETAIL OF PARAPET SECTION.'",
+  "text": "MUST BE MORE THAN THE HEIGHT OF ROOF FINISHING",
+  "upstand_above_slab_m": 0.3
+ },
+ "roofs": [
+  {
+   "falls": {
+    "area_m2": 147.6909,
+    "models": {
+     "AXIS": {
+      "catchment_m2": [
+       55.97,
+       52.999,
+       38.721
+      ],
+      "far_point": [
+       9.432,
+       5.0
+      ],
+      "path_max_m": 14.432,
+      "rise_max_m": 0.1443,
+      "rise_mean_m": 0.0708,
+      "volume_above_t0_m3": 10.4545
+     },
+     "EIKONAL": {
+      "catchment_m2": [
+       55.97,
+       52.999,
+       38.721
+      ],
+      "far_point": [
+       9.432,
+       5.0
+      ],
+      "path_max_m": 10.675,
+      "rise_max_m": 0.1068,
+      "rise_mean_m": 0.0553,
+      "volume_above_t0_m3": 8.1677
+     }
+    },
+    "resolution_m": 0.00071,
+    "slope": 0.01,
+    "step_m": 0.05
+   },
+   "falls_status": "DRAWING-CONFIRMED range (FALL_LAYOUT_NOT_DRAWN)",
+   "name": "first-floor roof terraces around the 2F block, finished +9.70",
+   "outlets_ref": "sanitary-7757.pdf p.3: RWP 4 T/B at the three corners (SW, SE, NE)",
+   "outline_ref": "architectural .dwf, 2nd.FLOOR PLAN 1:100 (ROOF +9.70 hatch extent, parapet inner faces, 2F block outer faces)",
+   "parapet": {
+    "allowance_left_m": [
+     0.1557,
+     0.1932
+    ],
+    "status": "NOT PROVEN",
+    "unknown": [
+     "t0 (screed at the outlet)",
+     "membrane / protection"
+    ]
+   },
+   "rise_max_m": [
+    0.1068,
+    0.1443
+   ],
+   "rise_mean_m": [
+    0.0553,
+    0.0708
+   ],
+   "scope_note": "the two drawn domes (R 2.21) stand inside this outline; dome scenarios per T-185; neither contains the far point",
+   "screed_volume_above_t0_m3": [
+    8.1677,
+    10.4545
+   ],
+   "zone": "ROOF-970"
+  },
+  {
+   "falls": {
+    "area_m2": 32.3867,
+    "models": {
+     "AXIS": {
+      "catchment_m2": [
+       32.387
+      ],
+      "far_point": [
+       0.0,
+       1.302
+      ],
+      "path_max_m": 20.274,
+      "rise_max_m": 0.2027,
+      "rise_mean_m": 0.0895,
+      "volume_above_t0_m3": 2.8995
+     },
+     "EIKONAL": {
+      "catchment_m2": [
+       32.387
+      ],
+      "far_point": [
+       0.0,
+       1.302
+      ],
+      "path_max_m": 19.017,
+      "rise_max_m": 0.1902,
+      "rise_mean_m": 0.0837,
+      "volume_above_t0_m3": 2.7116
+     }
+    },
+    "resolution_m": 0.00071,
+    "slope": 0.01,
+    "step_m": 0.05
+   },
+   "falls_status": "DRAWING-CONFIRMED range (FALL_LAYOUT_NOT_DRAWN)",
+   "name": "ground-floor roof strips south and sea side of the 1F, finished +5.50",
+   "outlets_ref": "sanitary-7757.pdf p.2: one RWP 4 T/B at the south-east corner; arrows 'SLOPE 1%' along both legs",
+   "outline_ref": "architectural .dwf, 1st.FLOOR PLAN 1:100 (+5.50 strips between the 1F faces and the boundary / roof edge)",
+   "parapet": {
+    "allowance_left_m": [
+     0.0973,
+     0.1098
+    ],
+    "status": "NOT PROVEN",
+    "unknown": [
+     "t0 (screed at the outlet)",
+     "membrane / protection"
+    ]
+   },
+   "rise_max_m": [
+    0.1902,
+    0.2027
+   ],
+   "rise_mean_m": [
+    0.0837,
+    0.0895
+   ],
+   "screed_volume_above_t0_m3": [
+    2.7116,
+    2.8995
+   ],
+   "zone": "TERRACE-550"
+  },
+  {
+   "falls": {
+    "area_m2": 52.848,
+    "models": {
+     "AXIS": {
+      "catchment_m2": [
+       52.848
+      ],
+      "far_point": [
+       10.201,
+       4.5
+      ],
+      "path_max_m": 14.701,
+      "rise_max_m": 0.147,
+      "rise_mean_m": 0.0734,
+      "volume_above_t0_m3": 3.8815
+     },
+     "EIKONAL": {
+      "catchment_m2": [
+       52.848
+      ],
+      "far_point": [
+       10.201,
+       4.5
+      ],
+      "path_max_m": 11.149,
+      "rise_max_m": 0.1115,
+      "rise_mean_m": 0.0587,
+      "volume_above_t0_m3": 3.1032
+     }
+    },
+    "resolution_m": 0.00071,
+    "slope": 0.01,
+    "step_m": 0.05
+   },
+   "falls_status": "DRAWING-CONFIRMED range (FALL_LAYOUT_NOT_DRAWN)",
+   "name": "annex roof, finished +4.30",
+   "outlets_ref": "sanitary-7757.pdf p.2: one RWP 4 T/B at the south-west corner; 'SLOPE 1%' along the south and west edges",
+   "outline_ref": "architectural .dwf, 1st.FLOOR PLAN 1:100 (ROOF +4.30 hatch extent, rounded north-west return R 1.10)",
+   "parapet": {
+    "allowance_left_m": [
+     0.153,
+     0.1885
+    ],
+    "status": "NOT PROVEN",
+    "unknown": [
+     "t0 (screed at the outlet)",
+     "membrane / protection"
+    ]
+   },
+   "rise_max_m": [
+    0.1115,
+    0.147
+   ],
+   "rise_mean_m": [
+    0.0587,
+    0.0734
+   ],
+   "screed_volume_above_t0_m3": [
+    3.1032,
+    3.8815
+   ],
+   "zone": "ROOF-430"
+  },
+  {
+   "falls": null,
+   "falls_status": "HELD: DRAINS_NOT_DRAWN",
+   "name": "main roof over the 2F block, finished +13.90",
+   "outlets_ref": "no outlet drawn on any sheet: sanitary-7757.pdf has GF / 1F / 2F drainage plans only; the architectural set has no top-roof plan (D-62)",
+   "outline_ref": "ST7757.pdf p.6 (second floor roof slab) and SECTION A-A / B-B",
+   "zone": "ROOF-1390"
+  }
+ ],
+ "section_cuts": [
+  {
+   "clearance_m": 0.58,
+   "cut": "x line through the stair and the +0.30 landing",
+   "cuts_wet_room": false,
+   "floor": "GF",
+   "nearest_wet_room": "W.C (north group, west wall face)",
+   "section": "A-A"
+  },
+  {
+   "clearance_m": 1.07,
+   "cut": "y line through dining / saloon",
+   "cuts_wet_room": false,
+   "floor": "GF",
+   "nearest_wet_room": "Wash / W.C (south group, north wall)",
+   "section": "B-B"
+  },
+  {
+   "clearance_m": 1.92,
+   "cut": "x line through the stair / void",
+   "cuts_wet_room": false,
+   "floor": "1F",
+   "nearest_wet_room": "master BATH (south pair, east wall)",
+   "section": "A-A"
+  },
+  {
+   "clearance_m": 0.93,
+   "cut": "y line through the bedrooms / living area",
+   "cuts_wet_room": false,
+   "floor": "1F",
+   "nearest_wet_room": "BATH (sea side, south wall)",
+   "section": "B-B"
+  },
+  {
+   "clearance_m": 0.235,
+   "cut": "x line through the stair flight",
+   "cuts_wet_room": false,
+   "floor": "2F",
+   "nearest_wet_room": "W.C (wall shared with the stair)",
+   "section": "A-A"
+  },
+  {
+   "clearance_m": null,
+   "cut": "y line south of the 2F block (terrace only)",
+   "cuts_wet_room": false,
+   "floor": "2F",
+   "nearest_wet_room": "none on the cut side",
+   "section": "B-B"
+  }
+ ],
+ "task": "T-221",
+ "zones": [
+  {
+   "b": null,
+   "falls_rise_max_m": [
+    0.1068,
+    0.1443
+   ],
+   "falls_status": "DRAWING-CONFIRMED range (FALL_LAYOUT_NOT_DRAWN)",
+   "ffl": 9.7,
+   "kind": "ROOF",
+   "missing": [
+    "t0, the screed at the outlet",
+    "the reference point of the printed finished roof level (drain, high point or marker)",
+    "membrane / insulation / protection (no specification, D-62)"
+   ],
+   "owner_beside": [
+    "Q-41 SCREED",
+    "Q-45 MORTAR_BED"
+   ],
+   "status": "HELD",
+   "structural_top": null,
+   "zone_id": "ROOF-970"
+  },
+  {
+   "b": null,
+   "falls_rise_max_m": [
+    0.1902,
+    0.2027
+   ],
+   "falls_status": "DRAWING-CONFIRMED range (FALL_LAYOUT_NOT_DRAWN)",
+   "ffl": 5.5,
+   "kind": "TERRACE",
+   "missing": [
+    "t0, the screed at the outlet",
+    "the reference point of the printed finished roof level (drain, high point or marker)",
+    "membrane / protection (no specification, D-62)"
+   ],
+   "owner_beside": [
+    "Q-41 SCREED",
+    "Q-45 MORTAR_BED"
+   ],
+   "status": "HELD",
+   "structural_top": null,
+   "zone_id": "TERRACE-550"
+  },
+  {
+   "b": null,
+   "falls_rise_max_m": [
+    0.1115,
+    0.147
+   ],
+   "falls_status": "DRAWING-CONFIRMED range (FALL_LAYOUT_NOT_DRAWN)",
+   "ffl": 4.3,
+   "kind": "ROOF",
+   "missing": [
+    "t0, the screed at the outlet",
+    "the reference point of the printed finished roof level (drain, high point or marker)",
+    "membrane / insulation / protection (no specification, D-62)"
+   ],
+   "owner_beside": [
+    "Q-41 SCREED",
+    "Q-45 MORTAR_BED"
+   ],
+   "status": "HELD",
+   "structural_top": null,
+   "zone_id": "ROOF-430"
+  },
+  {
+   "b": null,
+   "ffl": 13.9,
+   "kind": "ROOF",
+   "missing": [
+    "the outlets (no drain drawn) and so the falls surface",
+    "t0, the screed at the outlet",
+    "the reference point of the printed finished roof level (drain, high point or marker)",
+    "membrane / insulation / protection (no specification, D-62)"
+   ],
+   "owner_beside": [
+    "Q-41 SCREED",
+    "Q-45 MORTAR_BED"
+   ],
+   "status": "HELD",
+   "structural_top": null,
+   "zone_id": "ROOF-1390"
+  },
+  {
+   "b": null,
+   "ffl": 1.0,
+   "kind": "WET",
+   "missing": [
+    "a printed wet build-up or a section through the wet zone",
+    "tile thickness",
+    "membrane"
+   ],
+   "owner_beside": [
+    "Q-45 MORTAR_BED",
+    "Q-41 MORTAR_BED"
+   ],
+   "status": "HELD",
+   "structural_top": null,
+   "zone_id": "GF-WET"
+  },
+  {
+   "b": null,
+   "ffl": 0.3,
+   "kind": "WET",
+   "missing": [
+    "a printed wet build-up or a section through the wet zone",
+    "tile thickness",
+    "membrane"
+   ],
+   "owner_beside": [
+    "Q-45 MORTAR_BED",
+    "Q-41 MORTAR_BED"
+   ],
+   "status": "HELD",
+   "structural_top": null,
+   "zone_id": "ANNEX-WET"
+  },
+  {
+   "b": null,
+   "ffl": 5.5,
+   "kind": "SUNKEN",
+   "missing": [
+    "the printed drop of the sunken panel"
+   ],
+   "owner_beside": [
+    "Q-45 MORTAR_BED",
+    "Q-41 MORTAR_BED"
+   ],
+   "status": "HELD",
+   "structural_top": null,
+   "zone_id": "1F-SUNKEN"
+  },
+  {
+   "b": null,
+   "ffl": 9.7,
+   "kind": "SUNKEN",
+   "missing": [
+    "the printed drop of the sunken panel"
+   ],
+   "owner_beside": [
+    "Q-45 MORTAR_BED",
+    "Q-41 MORTAR_BED"
+   ],
+   "status": "HELD",
+   "structural_top": null,
+   "zone_id": "2F-SUNKEN"
+  }
+ ]
+}
