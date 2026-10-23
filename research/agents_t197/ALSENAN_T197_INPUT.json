@@ -1,0 +1,1110 @@
+{
+ "SCHEMA": "T197_ALSENAN_INPUT_V1",
+ "source": "Drive 'Alsenan chalet project': P7757_DXF_COMPRESSED.zip / P7757.dxf (sha256 ab54dd55...), 'ST7757 dxf.dxf' (sha256 9f9d1179...); entities read by handle; coordinates relative to each element's arc centre, metres",
+ "elements": [
+  {
+   "element_id": "W17",
+   "kind": "OPENING",
+   "units": "m",
+   "ref": "P7757.dxf 1F plan: ARC BD2 (layer W, r 2135) outer glazing arc; ARC BCE (layer 5, r 1935) wall-face arc between the jamb ends (T-194)",
+   "pieces": [
+    {
+     "piece_id": "BD2",
+     "role": "OUTER",
+     "centre": [
+      0.0,
+      0.0
+     ],
+     "radius": 2.135,
+     "start_angle": 135.1898329,
+     "end_angle": 223.4682229,
+     "handle": "BD2",
+     "layer": "W"
+    },
+    {
+     "piece_id": "BCE",
+     "role": "INNER",
+     "centre": [
+      0.0,
+      0.0
+     ],
+     "radius": 1.935,
+     "start_angle": 135.1898329,
+     "end_angle": 223.3294912,
+     "handle": "BCE",
+     "layer": "5"
+    }
+   ]
+  },
+  {
+   "element_id": "1F-11",
+   "kind": "ROOM_CONTOUR",
+   "units": "m",
+   "ref": "P7757.dxf 1F plan: east master bed room + entry, layer 1 / W faces by handle (Checker T-128 r3 verdict 2026-10-22 18:05), door gaps virtual",
+   "pieces": [
+    {
+     "piece_id": "ACE",
+     "role": "FACE",
+     "line": [
+      [
+       -1.385,
+       2.5
+      ],
+      [
+       -5.585,
+       2.5
+      ]
+     ],
+     "layer": "1"
+    },
+    {
+     "piece_id": "B6B",
+     "role": "FACE",
+     "line": [
+      [
+       -1.385,
+       1.6248077
+      ],
+      [
+       -1.385,
+       2.5
+      ]
+     ],
+     "layer": "1"
+    },
+    {
+     "piece_id": "BD1",
+     "role": "FACE",
+     "centre": [
+      0.0,
+      0.0
+     ],
+     "radius": 2.135,
+     "start_angle": 130.4445582,
+     "end_angle": 135.1898329,
+     "handle": "BD1",
+     "layer": "1"
+    },
+    {
+     "piece_id": "BD2",
+     "role": "FACE",
+     "centre": [
+      0.0,
+      0.0
+     ],
+     "radius": 2.135,
+     "start_angle": 135.1898329,
+     "end_angle": 223.4682229,
+     "handle": "BD2",
+     "layer": "W"
+    },
+    {
+     "piece_id": "BD6",
+     "role": "FACE",
+     "centre": [
+      0.0,
+      0.0
+     ],
+     "radius": 2.135,
+     "start_angle": 223.4682229,
+     "end_angle": 224.634053,
+     "handle": "BD6",
+     "layer": "1"
+    },
+    {
+     "piece_id": "C0A",
+     "role": "FACE",
+     "line": [
+      [
+       -3.785,
+       -1.5
+      ],
+      [
+       -1.5192844,
+       -1.5
+      ]
+     ],
+     "layer": "1"
+    },
+    {
+     "piece_id": "C16",
+     "role": "FACE",
+     "line": [
+      [
+       -3.785,
+       -1.5
+      ],
+      [
+       -3.785,
+       -1.65
+      ]
+     ],
+     "layer": "1"
+    },
+    {
+     "piece_id": "C10",
+     "role": "FACE",
+     "line": [
+      [
+       -3.785,
+       -1.7592601
+      ],
+      [
+       -3.785,
+       -1.65
+      ]
+     ],
+     "layer": "1"
+    },
+    {
+     "piece_id": "C0F",
+     "role": "FACE",
+     "line": [
+      [
+       -3.785,
+       -3.75
+      ],
+      [
+       -3.785,
+       -2.5592601
+      ]
+     ],
+     "layer": "1"
+    },
+    {
+     "piece_id": "B1C",
+     "role": "FACE",
+     "line": [
+      [
+       -3.785,
+       -3.75
+      ],
+      [
+       -4.0476856,
+       -3.75
+      ]
+     ],
+     "layer": "1"
+    },
+    {
+     "piece_id": "B1D",
+     "role": "FACE",
+     "line": [
+      [
+       -4.9476856,
+       -3.75
+      ],
+      [
+       -5.585,
+       -3.75
+      ]
+     ],
+     "layer": "1"
+    },
+    {
+     "piece_id": "B0B",
+     "role": "FACE",
+     "line": [
+      [
+       -5.585,
+       -3.75
+      ],
+      [
+       -5.585,
+       -1.65
+      ]
+     ],
+     "layer": "1"
+    },
+    {
+     "piece_id": "C0B",
+     "role": "FACE",
+     "line": [
+      [
+       -5.585,
+       -1.65
+      ],
+      [
+       -5.085,
+       -1.65
+      ]
+     ],
+     "layer": "1"
+    },
+    {
+     "piece_id": "C15",
+     "role": "FACE",
+     "line": [
+      [
+       -5.085,
+       -1.5
+      ],
+      [
+       -5.085,
+       -1.65
+      ]
+     ],
+     "layer": "1"
+    },
+    {
+     "piece_id": "C09",
+     "role": "FACE",
+     "line": [
+      [
+       -5.585,
+       -1.5
+      ],
+      [
+       -5.085,
+       -1.5
+      ]
+     ],
+     "layer": "1"
+    },
+    {
+     "piece_id": "B0D",
+     "role": "FACE",
+     "line": [
+      [
+       -5.585,
+       -1.5
+      ],
+      [
+       -5.585,
+       2.5
+      ]
+     ],
+     "layer": "1"
+    },
+    {
+     "piece_id": "GAP-E",
+     "role": "GAP",
+     "line": [
+      [
+       -3.785,
+       -1.7592601
+      ],
+      [
+       -3.785,
+       -2.5592601
+      ]
+     ],
+     "layer": null
+    },
+    {
+     "piece_id": "GAP-S",
+     "role": "GAP",
+     "line": [
+      [
+       -4.0476856,
+       -3.75
+      ],
+      [
+       -4.9476856,
+       -3.75
+      ]
+     ],
+     "layer": null
+    }
+   ],
+   "loops": [
+    {
+     "pieces": [
+      "ACE",
+      "B6B",
+      "BD1",
+      "BD2",
+      "BD6",
+      "C0A",
+      "C16",
+      "C10",
+      "C0F",
+      "B1C",
+      "B1D",
+      "B0B",
+      "C0B",
+      "C15",
+      "C09",
+      "B0D",
+      "GAP-E",
+      "GAP-S"
+     ]
+    }
+   ]
+  },
+  {
+   "element_id": "POOL-GF-WALL",
+   "kind": "POOL_WALL",
+   "units": "m",
+   "ref": "ST7757 dxf.dxf ground beams plan, layer S-BW: LWPOLYLINE 7C6 (outer D), 7C5 (water D); walls 20 (ST p.7)",
+   "pieces": [
+    {
+     "piece_id": "7C6.0",
+     "role": "OUTER",
+     "line": [
+      [
+       1.75,
+       1.75
+      ],
+      [
+       1.75,
+       -1.75
+      ]
+     ],
+     "layer": "S-BW"
+    },
+    {
+     "piece_id": "7C6.1",
+     "role": "OUTER",
+     "line": [
+      [
+       1.75,
+       -1.75
+      ],
+      [
+       0.0,
+       -1.75
+      ]
+     ],
+     "layer": "S-BW"
+    },
+    {
+     "piece_id": "7C6.2",
+     "role": "OUTER",
+     "a": [
+      0.0,
+      -1.75
+     ],
+     "b": [
+      0.0,
+      1.75
+     ],
+     "bulge": -1.0,
+     "extrusion_z": 1.0,
+     "layer": "S-BW"
+    },
+    {
+     "piece_id": "7C6.3",
+     "role": "OUTER",
+     "line": [
+      [
+       0.0,
+       1.75
+      ],
+      [
+       1.75,
+       1.75
+      ]
+     ],
+     "layer": "S-BW"
+    },
+    {
+     "piece_id": "7C5.0",
+     "role": "INNER",
+     "line": [
+      [
+       1.55,
+       1.55
+      ],
+      [
+       1.55,
+       -1.55
+      ]
+     ],
+     "layer": "S-BW"
+    },
+    {
+     "piece_id": "7C5.1",
+     "role": "INNER",
+     "line": [
+      [
+       1.55,
+       -1.55
+      ],
+      [
+       0.0,
+       -1.55
+      ]
+     ],
+     "layer": "S-BW"
+    },
+    {
+     "piece_id": "7C5.2",
+     "role": "INNER",
+     "a": [
+      0.0,
+      -1.55
+     ],
+     "b": [
+      0.0,
+      1.55
+     ],
+     "bulge": -1.0,
+     "extrusion_z": 1.0,
+     "layer": "S-BW"
+    },
+    {
+     "piece_id": "7C5.3",
+     "role": "INNER",
+     "line": [
+      [
+       0.0,
+       1.55
+      ],
+      [
+       1.55,
+       1.55
+      ]
+     ],
+     "layer": "S-BW"
+    }
+   ],
+   "loops": [
+    {
+     "pieces": [
+      "7C6.0",
+      "7C6.1",
+      "7C6.2",
+      "7C6.3"
+     ]
+    },
+    {
+     "pieces": [
+      "7C5.0",
+      "7C5.1",
+      "7C5.2",
+      "7C5.3"
+     ],
+     "hole": true
+    }
+   ]
+  },
+  {
+   "element_id": "POOL-GF-BASE",
+   "kind": "POOL_WALL",
+   "units": "m",
+   "ref": "ST7757 dxf.dxf layer S-BW: LWPOLYLINE 7C6 (outer D = base footprint, T-183 r2)",
+   "pieces": [
+    {
+     "piece_id": "B7C6.0",
+     "role": "OUTER",
+     "line": [
+      [
+       1.75,
+       1.75
+      ],
+      [
+       1.75,
+       -1.75
+      ]
+     ],
+     "layer": "S-BW"
+    },
+    {
+     "piece_id": "B7C6.1",
+     "role": "OUTER",
+     "line": [
+      [
+       1.75,
+       -1.75
+      ],
+      [
+       0.0,
+       -1.75
+      ]
+     ],
+     "layer": "S-BW"
+    },
+    {
+     "piece_id": "B7C6.2",
+     "role": "OUTER",
+     "a": [
+      0.0,
+      -1.75
+     ],
+     "b": [
+      0.0,
+      1.75
+     ],
+     "bulge": -1.0,
+     "extrusion_z": 1.0,
+     "layer": "S-BW"
+    },
+    {
+     "piece_id": "B7C6.3",
+     "role": "OUTER",
+     "line": [
+      [
+       0.0,
+       1.75
+      ],
+      [
+       1.75,
+       1.75
+      ]
+     ],
+     "layer": "S-BW"
+    }
+   ],
+   "loops": [
+    {
+     "pieces": [
+      "B7C6.0",
+      "B7C6.1",
+      "B7C6.2",
+      "B7C6.3"
+     ]
+    }
+   ]
+  },
+  {
+   "element_id": "DOME-1F-W-BAND-NE",
+   "kind": "RING",
+   "units": "m",
+   "ref": "route G 1F slab overlay arc band under ARC 600 (one of BAND0033..0036; identified by its sector area, T-179 s.5.1)",
+   "pieces": [
+    {
+     "piece_id": "o",
+     "role": "OUTER",
+     "centre": [
+      0.0,
+      0.0
+     ],
+     "radius": 2.4110915,
+     "start_angle": 34.4216846,
+     "end_angle": 66.498555,
+     "handle": "600",
+     "layer": "1"
+    },
+    {
+     "piece_id": "r1",
+     "role": "FACE",
+     "line": [
+      [
+       0.9614763,
+       2.2110915
+      ],
+      [
+       0.8817218,
+       2.0276815
+      ]
+     ]
+    },
+    {
+     "piece_id": "i",
+     "role": "INNER",
+     "centre": [
+      0.0,
+      0.0
+     ],
+     "radius": 2.2110915,
+     "start_angle": 34.4216846,
+     "end_angle": 66.498555,
+     "handle": null,
+     "layer": null
+    },
+    {
+     "piece_id": "r0",
+     "role": "FACE",
+     "line": [
+      [
+       1.9889085,
+       1.36294
+      ],
+      [
+       1.8239286,
+       1.2498841
+      ]
+     ]
+    }
+   ],
+   "loops": [
+    {
+     "pieces": [
+      "o",
+      "r1",
+      "i",
+      "r0"
+     ]
+    }
+   ]
+  },
+  {
+   "element_id": "DOME-1F-W-BAND-NW",
+   "kind": "RING",
+   "units": "m",
+   "ref": "route G 1F slab overlay arc band under ARC 601 (one of BAND0033..0036; identified by its sector area, T-179 s.5.1)",
+   "pieces": [
+    {
+     "piece_id": "o",
+     "role": "OUTER",
+     "centre": [
+      0.0,
+      0.0
+     ],
+     "radius": 2.4110915,
+     "start_angle": 113.501445,
+     "end_angle": 151.113103,
+     "handle": "601",
+     "layer": "1"
+    },
+    {
+     "piece_id": "r1",
+     "role": "FACE",
+     "line": [
+      [
+       -2.1110915,
+       1.1647553
+      ],
+      [
+       -1.9359765,
+       1.0681389
+      ]
+     ]
+    },
+    {
+     "piece_id": "i",
+     "role": "INNER",
+     "centre": [
+      0.0,
+      0.0
+     ],
+     "radius": 2.2110915,
+     "start_angle": 113.501445,
+     "end_angle": 151.113103,
+     "handle": null,
+     "layer": null
+    },
+    {
+     "piece_id": "r0",
+     "role": "FACE",
+     "line": [
+      [
+       -0.9614763,
+       2.2110915
+      ],
+      [
+       -0.8817218,
+       2.0276815
+      ]
+     ]
+    }
+   ],
+   "loops": [
+    {
+     "pieces": [
+      "o",
+      "r1",
+      "i",
+      "r0"
+     ]
+    }
+   ]
+  },
+  {
+   "element_id": "DOME-1F-W-BAND-SW",
+   "kind": "RING",
+   "units": "m",
+   "ref": "route G 1F slab overlay arc band under ARC 602 (one of BAND0033..0036; identified by its sector area, T-179 s.5.1)",
+   "pieces": [
+    {
+     "piece_id": "o",
+     "role": "OUTER",
+     "centre": [
+      0.0,
+      0.0
+     ],
+     "radius": 2.4110915,
+     "start_angle": 208.886897,
+     "end_angle": 246.498555,
+     "handle": "602",
+     "layer": "1"
+    },
+    {
+     "piece_id": "r1",
+     "role": "FACE",
+     "line": [
+      [
+       -0.9614763,
+       -2.2110915
+      ],
+      [
+       -0.8817218,
+       -2.0276815
+      ]
+     ]
+    },
+    {
+     "piece_id": "i",
+     "role": "INNER",
+     "centre": [
+      0.0,
+      0.0
+     ],
+     "radius": 2.2110915,
+     "start_angle": 208.886897,
+     "end_angle": 246.498555,
+     "handle": null,
+     "layer": null
+    },
+    {
+     "piece_id": "r0",
+     "role": "FACE",
+     "line": [
+      [
+       -2.1110915,
+       -1.1647553
+      ],
+      [
+       -1.9359765,
+       -1.0681389
+      ]
+     ]
+    }
+   ],
+   "loops": [
+    {
+     "pieces": [
+      "o",
+      "r1",
+      "i",
+      "r0"
+     ]
+    }
+   ]
+  },
+  {
+   "element_id": "DOME-1F-W-BAND-SE",
+   "kind": "RING",
+   "units": "m",
+   "ref": "route G 1F slab overlay arc band under ARC 603 (one of BAND0033..0036; identified by its sector area, T-179 s.5.1)",
+   "pieces": [
+    {
+     "piece_id": "o",
+     "role": "OUTER",
+     "centre": [
+      0.0,
+      0.0
+     ],
+     "radius": 2.4110915,
+     "start_angle": 293.501445,
+     "end_angle": 325.5783154,
+     "handle": "603",
+     "layer": "1"
+    },
+    {
+     "piece_id": "r1",
+     "role": "FACE",
+     "line": [
+      [
+       1.9889085,
+       -1.36294
+      ],
+      [
+       1.8239286,
+       -1.2498841
+      ]
+     ]
+    },
+    {
+     "piece_id": "i",
+     "role": "INNER",
+     "centre": [
+      0.0,
+      0.0
+     ],
+     "radius": 2.2110915,
+     "start_angle": 293.501445,
+     "end_angle": 325.5783154,
+     "handle": null,
+     "layer": null
+    },
+    {
+     "piece_id": "r0",
+     "role": "FACE",
+     "line": [
+      [
+       0.9614763,
+       -2.2110915
+      ],
+      [
+       0.8817218,
+       -2.0276815
+      ]
+     ]
+    }
+   ],
+   "loops": [
+    {
+     "pieces": [
+      "o",
+      "r1",
+      "i",
+      "r0"
+     ]
+    }
+   ]
+  },
+  {
+   "element_id": "DOME-1F-W-RING",
+   "kind": "RING",
+   "units": "m",
+   "ref": "ST7757 dxf.dxf p.5: ARC 600..603 (r 2411.09, outer, drawn between the framing faces), ARC 5FE / 5FF (r 2211.09, inner); in-bay ring = 4 pieces between the faces (T-160, BM-1F-028 B4 20 x 50)",
+   "pieces": [
+    {
+     "piece_id": "ONE",
+     "role": "OUTER",
+     "centre": [
+      0.0,
+      0.0
+     ],
+     "radius": 2.4110915,
+     "start_angle": 34.4216846,
+     "end_angle": 66.498555,
+     "handle": "600",
+     "layer": "1"
+    },
+    {
+     "piece_id": "INE",
+     "role": "INNER",
+     "centre": [
+      0.0,
+      0.0
+     ],
+     "radius": 2.2110915,
+     "start_angle": 25.9057007,
+     "end_angle": 90.0,
+     "handle": "5FE",
+     "layer": "1"
+    },
+    {
+     "piece_id": "FNE0",
+     "role": "FACE",
+     "line": [
+      [
+       1.9889085,
+       1.36294
+      ],
+      [
+       1.9889085,
+       0.9660066
+      ]
+     ]
+    },
+    {
+     "piece_id": "FNE1",
+     "role": "FACE",
+     "line": [
+      [
+       0.9614763,
+       2.2110915
+      ],
+      [
+       0.0,
+       2.2110915
+      ]
+     ]
+    },
+    {
+     "piece_id": "ONW",
+     "role": "OUTER",
+     "centre": [
+      0.0,
+      0.0
+     ],
+     "radius": 2.4110915,
+     "start_angle": 113.501445,
+     "end_angle": 151.113103,
+     "handle": "601",
+     "layer": "1"
+    },
+    {
+     "piece_id": "INW",
+     "role": "INNER",
+     "centre": [
+      0.0,
+      0.0
+     ],
+     "radius": 2.2110915,
+     "start_angle": 90.0,
+     "end_angle": 162.7024412,
+     "handle": "5FE",
+     "layer": "1"
+    },
+    {
+     "piece_id": "FNW0",
+     "role": "FACE",
+     "line": [
+      [
+       -0.9614763,
+       2.2110915
+      ],
+      [
+       0.0,
+       2.2110915
+      ]
+     ]
+    },
+    {
+     "piece_id": "FNW1",
+     "role": "FACE",
+     "line": [
+      [
+       -2.1110915,
+       1.1647553
+      ],
+      [
+       -2.1110915,
+       0.6574331
+      ]
+     ]
+    },
+    {
+     "piece_id": "OSW",
+     "role": "OUTER",
+     "centre": [
+      0.0,
+      0.0
+     ],
+     "radius": 2.4110915,
+     "start_angle": 208.886897,
+     "end_angle": 246.498555,
+     "handle": "602",
+     "layer": "1"
+    },
+    {
+     "piece_id": "ISW",
+     "role": "INNER",
+     "centre": [
+      0.0,
+      0.0
+     ],
+     "radius": 2.2110915,
+     "start_angle": 197.2975588,
+     "end_angle": 270.0,
+     "handle": "5FF",
+     "layer": "1"
+    },
+    {
+     "piece_id": "FSW0",
+     "role": "FACE",
+     "line": [
+      [
+       -2.1110915,
+       -1.1647553
+      ],
+      [
+       -2.1110915,
+       -0.6574331
+      ]
+     ]
+    },
+    {
+     "piece_id": "FSW1",
+     "role": "FACE",
+     "line": [
+      [
+       -0.9614763,
+       -2.2110915
+      ],
+      [
+       -0.0,
+       -2.2110915
+      ]
+     ]
+    },
+    {
+     "piece_id": "OSE",
+     "role": "OUTER",
+     "centre": [
+      0.0,
+      0.0
+     ],
+     "radius": 2.4110915,
+     "start_angle": 293.501445,
+     "end_angle": 325.5783154,
+     "handle": "603",
+     "layer": "1"
+    },
+    {
+     "piece_id": "ISE",
+     "role": "INNER",
+     "centre": [
+      0.0,
+      0.0
+     ],
+     "radius": 2.2110915,
+     "start_angle": 270.0,
+     "end_angle": 334.0942993,
+     "handle": "5FF",
+     "layer": "1"
+    },
+    {
+     "piece_id": "FSE0",
+     "role": "FACE",
+     "line": [
+      [
+       0.9614763,
+       -2.2110915
+      ],
+      [
+       -0.0,
+       -2.2110915
+      ]
+     ]
+    },
+    {
+     "piece_id": "FSE1",
+     "role": "FACE",
+     "line": [
+      [
+       1.9889085,
+       -1.36294
+      ],
+      [
+       1.9889085,
+       -0.9660066
+      ]
+     ]
+    }
+   ],
+   "loops": [
+    {
+     "pieces": [
+      "ONE",
+      "FNE1",
+      "INE",
+      "FNE0"
+     ]
+    },
+    {
+     "pieces": [
+      "ONW",
+      "FNW1",
+      "INW",
+      "FNW0"
+     ]
+    },
+    {
+     "pieces": [
+      "OSW",
+      "FSW1",
+      "ISW",
+      "FSW0"
+     ]
+    },
+    {
+     "pieces": [
+      "OSE",
+      "FSE1",
+      "ISE",
+      "FSE0"
+     ]
+    }
+   ],
+   "expected_families": [
+    "CONC.BEAM"
+   ]
+  }
+ ]
+}
