@@ -1,0 +1,159 @@
+{
+ "task": "T-225",
+ "base": "41847bff",
+ "quantities_changed": 0,
+ "register_rows": 74,
+ "walls_net_held": 44,
+ "held_cause_counts": {
+  "annex datum (Q-54 B)": 9,
+  "beam depth / register conflict": 10,
+  "held opening": 12,
+  "lift tie beam size (ST p.8 n.19)": 4,
+  "no member drawn above": 6,
+  "no wall band or member bound (glazed line / held strip)": 3
+ },
+ "held_gross_figure_by_cause_m2 (not a quantity)": {
+  "annex datum (Q-54 B)": 113.118,
+  "beam depth / register conflict": 118.007,
+  "held opening": 54.412,
+  "lift tie beam size (ST p.8 n.19)": 43.371,
+  "no member drawn above": 49.035,
+  "no wall band or member bound (glazed line / held strip)": 0.0
+ },
+ "black": {
+  "0.15": {
+   "gross_source_supported": 215.721,
+   "gross_held_figure": 127.194,
+   "deductions": 29.92,
+   "net_source_supported": 103.332,
+   "net_project_specific": 79.005
+  },
+  "0.2": {
+   "gross_source_supported": 125.876,
+   "gross_held_figure": 85.699,
+   "deductions": 6.16,
+   "net_source_supported": 107.715,
+   "net_project_specific": 0
+  }
+ },
+ "net_VERIFIED_m2": 0.0,
+ "net_VERIFIED_walls": 0,
+ "gap": {
+  "BLACK 0.15": "3.464",
+  "BLACK 0.2": "12.001",
+  "WHITE 0.15": "-2.200",
+  "WHITE 0.2": "150.731"
+ },
+ "freelancer_cover_totals_m2": {
+  "H37": 300.875,
+  "H52": 34.52,
+  "H54": 266.355,
+  "H80": 240.9015,
+  "H91": 34.03,
+  "H93": 206.8715,
+  "H108": 96.255,
+  "H116": 9.68,
+  "H118": 86.575,
+  "H121": 559.8015,
+  "H180": 651.568,
+  "H194": 34.32,
+  "H196": 617.248,
+  "H218": 93.48,
+  "H225": 9.84,
+  "H227": 83.64
+ },
+ "v29_released_wall_run_lm": 216.931,
+ "v29_block_m2_lines": 7,
+ "totals_by_floor_t_type": {
+  "1F|0.15|BLACK": {
+   "walls": 13.0,
+   "gross HELD": 66.307,
+   "deductions on net HELD": 9.24,
+   "gross DRAWING-CONFIRMED": 113.183,
+   "deductions on net ASSUMED — OWNER-APPROVED": 7.92,
+   "net ASSUMED — OWNER-APPROVED": 36.733,
+   "deductions on net DRAWING-CONFIRMED": 0.0,
+   "net DRAWING-CONFIRMED": 52.306
+  },
+  "1F|0.2|BLACK": {
+   "walls": 4.0,
+   "gross DRAWING-CONFIRMED": 35.221,
+   "deductions on net DRAWING-CONFIRMED": 0.0,
+   "net DRAWING-CONFIRMED": 23.9,
+   "deductions on net HELD": 1.98
+  },
+  "1F|0.2|WHITE": {
+   "walls": 8.0,
+   "gross DRAWING-CONFIRMED": 144.143,
+   "deductions on net HELD": 12.565,
+   "deductions on net DRAWING-CONFIRMED": 0.0,
+   "net DRAWING-CONFIRMED": 15.833,
+   "gross HELD": 11.324
+  },
+  "2F|0.15|BLACK": {
+   "walls": 1.0,
+   "gross DRAWING-CONFIRMED": 11.4,
+   "deductions on net ASSUMED — OWNER-APPROVED": 1.76,
+   "net ASSUMED — OWNER-APPROVED": 9.64
+  },
+  "2F|0.15|WHITE": {
+   "walls": 1.0,
+   "gross HELD": 27.993,
+   "deductions on net HELD": 2.2
+  },
+  "2F|0.2|BLACK": {
+   "walls": 4.0,
+   "gross DRAWING-CONFIRMED": 28.5,
+   "deductions on net HELD": 1.98,
+   "deductions on net DRAWING-CONFIRMED": 0.0,
+   "net DRAWING-CONFIRMED": 21.66,
+   "gross HELD": 3.817
+  },
+  "2F|0.2|WHITE": {
+   "walls": 3.0,
+   "gross HELD": 30.04,
+   "deductions on net HELD": 2.04,
+   "gross DRAWING-CONFIRMED": 21.476,
+   "deductions on net DRAWING-CONFIRMED": 0.0,
+   "net DRAWING-CONFIRMED": 21.476
+  },
+  "GF|0.15|BLACK": {
+   "walls": 16.0,
+   "gross DRAWING-CONFIRMED": 91.138,
+   "deductions on net DRAWING-CONFIRMED": 0.0,
+   "net DRAWING-CONFIRMED": 51.026,
+   "gross HELD": 60.887,
+   "deductions on net HELD": 3.52,
+   "deductions on net ASSUMED — OWNER-APPROVED": 7.48,
+   "net ASSUMED — OWNER-APPROVED": 32.632
+  },
+  "GF|0.2|-": {
+   "walls": 1.0,
+   "gross HELD": 0.0,
+   "deductions on net HELD": 0.0
+  },
+  "GF|0.2|BLACK": {
+   "walls": 8.0,
+   "gross HELD": 81.882,
+   "deductions on net HELD": 2.2,
+   "gross DRAWING-CONFIRMED": 62.155,
+   "deductions on net DRAWING-CONFIRMED": 0.0,
+   "net DRAWING-CONFIRMED": 62.155
+  },
+  "GF|0.2|WHITE": {
+   "walls": 14.0,
+   "gross HELD": 95.693,
+   "deductions on net HELD": 10.76,
+   "gross DRAWING-CONFIRMED": 60.035,
+   "deductions on net ASSUMED — OWNER-APPROVED": 2.2,
+   "net ASSUMED — OWNER-APPROVED": 5.59,
+   "deductions on net DRAWING-CONFIRMED": 0.0,
+   "net DRAWING-CONFIRMED": 4.459
+  },
+  "GF|0.4|-": {
+   "walls": 1.0,
+   "gross HELD": 0.0,
+   "deductions on net HELD": 0.0
+  }
+ }
+}
