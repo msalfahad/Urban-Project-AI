@@ -1,0 +1,16 @@
+block_type,t_m,product,net_status,units_status,walls,net_m2,installed_units,procurement_units,mortar_wet_m3,mortar_edge_tolerance_m3,cement / sand,grid_implied_cutting (evidence),gross_m2 of walls whose net is HELD
+-,0.20,-,HELD,HELD,1,0.000,0.000,HELD (cutting / breakage not established),HELD (type),,HELD (type),,0.000
+-,0.40,-,HELD,HELD,1,0.000,0.000,HELD (cutting / breakage not established),HELD (type),,HELD (type),,0.000
+BLACK,0.15,BLACK_40x20,ASSUMED — OWNER-APPROVED,ASSUMED — OWNER-APPROVED,7,79.005,987.562,HELD (cutting / breakage not established),0.8740,0.0787,HELD (mix not established),0.1250,0.000
+BLACK,0.15,BLACK_40x20,DRAWING-CONFIRMED,ASSUMED — OWNER-APPROVED,10,103.332,1291.650,HELD (cutting / breakage not established),1.1431,0.1005,HELD (mix not established),0.0947,0.000
+BLACK,0.15,BLACK_40x20,HELD,HELD,13,0.000,0.000,HELD (cutting / breakage not established),0.0000,0.0000,HELD (mix not established),,143.417
+BLACK,0.20,BLACK_40x20,DRAWING-CONFIRMED,ASSUMED — OWNER-APPROVED,6,107.715,1346.437,HELD (cutting / breakage not established),1.5888,0.1025,HELD (mix not established),0.0442,0.000
+BLACK,0.20,BLACK_40x20,HELD,HELD,10,0.000,0.000,HELD (cutting / breakage not established),0.0000,0.0000,HELD (mix not established),,103.860
+WHITE,0.15,WHITE_60x20,HELD,HELD,1,0.000,0.000,HELD (cutting / breakage not established),HELD (thin-bed adhesive),,n/a (adhesive),,27.993
+WHITE,0.15,WHITE_62.5x25,HELD,HELD,1,0.000,0.000,HELD (cutting / breakage not established),HELD (thin-bed adhesive),,n/a (adhesive),,27.993
+WHITE,0.20,WHITE_60x20,ASSUMED — OWNER-APPROVED,ASSUMED — OWNER-APPROVED,1,5.590,46.583,HELD (cutting / breakage not established),HELD (thin-bed adhesive),,n/a (adhesive),0.5671,0.000
+WHITE,0.20,WHITE_60x20,DRAWING-CONFIRMED,ASSUMED — OWNER-APPROVED,6,41.768,348.067,HELD (cutting / breakage not established),HELD (thin-bed adhesive),,n/a (adhesive),0.2067,0.000
+WHITE,0.20,WHITE_60x20,HELD,HELD,18,0.000,0.000,HELD (cutting / breakage not established),HELD (thin-bed adhesive),,n/a (adhesive),,313.153
+WHITE,0.20,WHITE_62.5x25,ASSUMED — OWNER-APPROVED,ASSUMED — OWNER-APPROVED,1,5.590,35.776,HELD (cutting / breakage not established),HELD (thin-bed adhesive),,n/a (adhesive),0.6771,0.000
+WHITE,0.20,WHITE_62.5x25,DRAWING-CONFIRMED,ASSUMED — OWNER-APPROVED,6,41.768,267.315,HELD (cutting / breakage not established),HELD (thin-bed adhesive),,n/a (adhesive),0.1746,0.000
+WHITE,0.20,WHITE_62.5x25,HELD,HELD,18,0.000,0.000,HELD (cutting / breakage not established),HELD (thin-bed adhesive),,n/a (adhesive),,313.153
