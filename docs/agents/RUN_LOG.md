@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-23 12:41 UTC | Worker 2 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-23 12:27 UTC | Worker 1 | STARTED | run session_01LKVtscw1NmPLZ6M27VrNc4 | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-23T12:19Z | Lead | SUCCESS | board | run unknown. Since 10:20: 8/8 slots STARTED + final SUCCESS (+ checker overlap-guard 11:50, correct); classified T-205, T-208, T-193 (Gate B V3.0.7) WORKED; 4 READY (T-212 gate-0 fix first at 12:49, T-213, T-203 as_of V3.0.6 check, T-209) -> backlog rule on with 6 backlog-permitted rows; new T-216 (floor-area binding into the scorer), T-217 (C8 / lift column-neck section conflicts, new D-63), T-218 (floor residuals + kitchen wet Q-30 A), T-219 queued (foundation / pit waterproofing); T-199 (V3.0.8) and T-170 promoted; lanes S 4 / A 4 / I 4 TODO; register +9 rulings, lessons +4; no new Drive files or photos (Drive read OK); no owner decision, no notification. ERS: read; applied s.5 (Lead: engineering questions, cross-trade necks / GF columns one datum, sunken panels one set, integration readiness T-199) and s.7 rows; queue check: 46 actionable rows, 0 flagged, 0 stall checks | self-check PASS (codemap stale none, t061, freeze 0); .work prepared by auto; problem: none
 - 2026-10-23 12:11 UTC | Lead | STARTED | run unknown | repo-attached routine | task state: board | report pending
