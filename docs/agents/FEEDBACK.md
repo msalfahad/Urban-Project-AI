@@ -36,6 +36,18 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
    commit. Decision: board-only handoffs are verified as hand evidence (the verifier re-reads the cited notes), and the
    next task on the topic writes the files (T-117); a run with no line stays a NEEDS FIXING item for the owner's setting.
 
+## 2026-10-23 20:10 (lead run)
+
+| Task | Result | Evidence | Decision |
+|---|---|---|---|
+| T-231 (V3.0.8 Gate B) | WORKED | MERGED 3b042470 (Checker 17:52 run, verdict 19:04): L4 suite to the end NEW 0, 21 lines by hand, straps 3.3905 vs freelancer 3.3925 m3 (-0.06 %), columns 34.446 -> 33.606 | T-211 promoted to TODO, first in lane I; the SB3 / F3 held bound in V3.0.8 is stale (T-230 range) -> carried in T-199 as named |
+| T-233 (CONC.FOOTING + BLINDING whole lines) | WORKED (lines PARTIALLY VERIFIED by design) | MERGED 2ecb5bf0; Checker own 26 outlines, 25 footings 64.304 m3 and blinding 15.179 m3 0.0 %; D-32 ruled from the drawing; two PARTIAL REMEASURE records in the verdict file (owner 19:00 (3) met) | footing line waits on Q-31 C (F10 + F), Q-28 A band C1 and D-15 strap level; blinding on D-14, D-15, Q-21 C: all consultant / designer items on record, no new task; D-32 closed in DESIGNER_CLARIFICATIONS; T-235 part (4) may proceed on PARTIAL records only (no VERIFIED claim) |
+| T-216 (floor-area line scored) | WORKED | MERGED bebd1241; A COMPARED 385.634 vs 409.58 m2; scorer byte-identical without the flag; candidates rightly HELD (0 .. 0.520 m2, D-13 / D-23) | T-180 slot moved to the FLOOR AREA whole line on run A (Checker 19:05 reading); T-223 (curved room +1.727 UNRESOLVED) first new lane A row |
+| T-222 (block HELD bounds part 2) | PARTIAL | MERGED 769cad40; P-GF-05 2.640 m2 Checker 0.0 %; bay basis (+1.481 m2), 1F-W14+W15 junction (+0.302 m2) and the B-B occlusion for P-1F-01 not re-measured (SOURCE-SUPPORTED) | D-60 removed (drawings answer it); D-64 conflict withdrawn by the Lead on two independent readings (B-B occlusion + T-017 census head lines), consultant row 9 narrowed to the P-1F-01 head level, send-ready; T-228 lists the junction piece |
+| T-227 (blockwork 3/4) | FAILED on one wall (narrow) | REJECTED 20:14: W16 deducted 4.805 (surround-band crown) vs true arched opening 4.362 m2 (+0.443, 1F-W00 net +3.7 %); 3 other walls AGREE | rework r2 FIRST in lane A (exact fault named in the row); the same misreading sits in merged T-150 / T-175 / T-201: new fix T-238 (gate 1, census of every arched / banded opening, delta ledger, UP-OPEN-ARCH-001); T-211 / T-232 hold W15 / W16 as 4.362 .. 4.805 / 4.650 .. 4.805 until T-238 merges; rows 7 / 8 and the GF-W10 ruling NOT given (3rd run): first items of the 20:49 Checker run |
+| T-017 (independent masonry census) | WORKED (held by the backlog rule, correctly) | 59 / 75 walls within 0.05 m, thickness 71 / 71; 9 corner-square RULE_DIFFERENCE; residual 0.000 m per floor x thickness after named items | hand in at worker 2's 20:39 run (READY now 0); UP-MAS-CORNER-001 input to T-228 |
+| Process | PARTIAL | two same-agent overlaps (Checker 17:52 run 73 min -> 18:50 stand-down; Worker 1 18:21 run 80 min -> 19:19 IDLE): runs longer than the hourly slot; guard worked, no concurrent work | no schedule change (owner 19:00 / 19:45 Checker exception); reported in team health |
+
 ## 2026-10-23 18:20 (lead run)
 
 | Task | Result | Evidence | Decision |

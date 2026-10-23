@@ -1,13 +1,44 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
 Plain words, no task numbers. Measured numbers come from SCOREBOARD.md; anything not measured says so.
-Last update: 2026-10-23 18:20 UTC (Lead). Previous version: 2026-10-23 16:20 UTC. The released numbers did not change
+Last update: 2026-10-23 20:10 UTC (Lead). Previous version: 2026-10-23 18:20 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released default V2.9 + route G untouched). Your measure (17:50):
-whole BOQ lines independently verified, and trades that can be scored. Today: 0 of 8 concrete lines verified as whole
-lines in any state; scored trades: concrete only (candidate compares 1 line, 1.84 %); plaster, paint, floor area, doors,
-windows and blockwork are not yet scored. Pilot, hours 10-12: every agent run started and closed; the checker merged 3
-more pieces and sent none back; 2 wait for it (the candidate step with the verified straps, and blockwork step 3).
-Since 16:20 (newest first):
+whole BOQ lines independently verified, and trades that can be scored. Today: still 0 whole lines verified in any
+trade; two concrete lines (footings, blinding) are now PARTIALLY VERIFIED with every open piece named. Scored trades:
+concrete and now FLOOR AREA (released run 385.63 m2 vs freelancer 409.58 m2, -5.85 % raw; like for like +0.04 m2, a
+development figure: the -23.99 m2 is scope the freelancer counts and the engine does not, item by item); plaster, paint,
+doors, windows, blockwork not yet scored. Pilot, hours 12-14: every run closed; two slots were skipped by design because
+the previous run of the same agent was still working (checker 18:50, structural worker 19:19). The checker merged 4 and
+sent 1 back; nothing waits for it now.
+Since 18:20 (newest first):
+- Footings and blinding as whole lines (checker re-measured every footing outline itself): 25 footings 64.304 m3 =
+  released = both candidates (0.0 %). The freelancer's 65.634 m3 is explained to the cubic metre: +1.960 one footing he
+  prices at its schedule size that the drawing draws differently (held: a designer item, 2.176 .. 2.275 m3), -0.672 one
+  footing type he counts once but the plan draws twice, +0.042 one small footing piece he counts twice (the drawing
+  shows the larger footing owns it; this designer question is now ANSWERED FROM THE DRAWING and leaves the consultant
+  list). Footing blinding 15.179 m3 (checker 0.0 %), of which 0.189 m3 lies beyond the plot line (held, designer item).
+  His 47.055 m3 blinding is a whole-plot plate (15.00 x 31.37 x 0.10), a different rule, not an error. Both lines are
+  PARTIALLY VERIFIED, not verified: the one held footing, the strap blinding and ground-beam blinding (designer items)
+  remain.
+- Floor area is scored for the first time on the released run (see above); the candidate stays held by 0 .. 0.52 m2 at
+  the first-floor stair foot (designer items), never shown as 0. The candidate already floors the three hand-wash spaces,
+  so the 9.348 m2 owner-approved addition is counted once, not twice.
+- Block walls step 2b (checker-verified piece): the masonry above the 1.20 m ground-floor court opening is 2.640 m2
+  (checker 0.0 %); the curved first-floor bay ends are wall, not glazing (+1.48 m2); one of the two opening questions
+  for the consultant is answered from the drawings and leaves the list; the other is narrowed to its head level only.
+- Block walls step 3 SENT BACK for one wall: the arched first-floor window W16 (and its twin W15) was deducted as
+  1.55 x 3.10 = 4.805 m2, reading the top of a 10 cm decorative band around the arch; the real arched opening is
+  4.362 m2 (+0.443 m2 too much deducted per window). The other three walls agreed. The same misreading sits in three
+  merged opening records; the window AREA by your rule is 1.55 x 3.00 = 4.650 m2 (the freelancer is right there).
+  A fix task corrects all of them and checks every other arched or banded opening before plaster, paint, doors and
+  windows go into the candidate.
+- Candidate step 8 merged (checker Gate B): verified straps 3.39 m3 (freelancer 3.39, -0.06 %); columns 34.45 ->
+  33.61 m3 (two planted columns held, five undrawn upper lines shown held).
+Next: plaster and paint go into the candidate (worker 3, 20:59): two more trades become scoreable; the checker re-measures
+the floor-area line room by room as the next whole line that can close on the released run, and rules on the last open
+ground-floor wall; the structural worker takes the roof / wet-room structural tops and then the whole slab line.
+
+Earlier (16:20 -> 18:20):
 - Block walls (your programme, step 2 of 4, checker-verified): the first block wall is now INDEPENDENTLY VERIFIED: a
   ground-floor 20 cm white wall, 4.458 m2 net (the worker had 4.468; the checker's drawn-edge pieces are 0.010 m2 lower).
   A first-floor 20 cm white wall's gross area is verified at 23.223 m2 (net 19.303 m2 waits on one window height being
