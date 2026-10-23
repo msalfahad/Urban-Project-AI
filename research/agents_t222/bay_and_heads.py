@@ -107,7 +107,7 @@ class ArcBand:
 
     def annulus(self, res=4096):
         c = Point(self.centre)
-        return c.buffer(self.r_out, resolution=res).difference(c.buffer(self.r_in, resolution=res))
+        return c.buffer(self.r_out, quad_segs=res).difference(c.buffer(self.r_in, quad_segs=res))
 
     def rel(self, X, Y):
         r = np.hypot(X - self.centre[0], Y - self.centre[1])
@@ -154,7 +154,7 @@ def bay_masonry(arc: ArcBand, straights, glazing, window, extra=(), open_side_r=
     """Drawn masonry in `window` (a shapely polygon): arc band less glazing, the straight bands less the disc inside
     the arc's open-side face (`open_side_r`, default r_in: the bay opens there), plus `extra` drawn regions."""
     rin = arc.r_in if open_side_r is None else open_side_r
-    disc = Point(arc.centre).buffer(rin, resolution=4096)
+    disc = Point(arc.centre).buffer(rin, quad_segs=4096)
     parts = [arc.annulus().difference(glazing)]
     for s in straights:
         parts.append(s.polygon().difference(disc).difference(glazing))
