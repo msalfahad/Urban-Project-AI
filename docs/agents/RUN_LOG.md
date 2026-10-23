@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-23T11:00Z | Worker 3 | STARTED | run session_01MU7hQUCi3GsQHXjDZTUFHN | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-23T10:53Z | Verifier | STARTED | run unknown | repo-attached routine | task state: T-193 (V3.0.7 package), T-208, T-205 READY seen in RUN_LOG | self-check pending
 - 2026-10-23T10:41:41Z | Worker 2 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-23T10:39Z | Worker 1 | SUCCESS | T-205 READY (agents/task-T-205 @ b8ce06ac) | Necks: released V2.9 10.855 m3 vs freelancer 8.805 m3 (+2.0505, +23.3 %) reconciled to 0.000: -1.350 scope he prices but engine holds (6 CN, C10, 5th C), -0.165 his C11 0.40 wide vs printed 0.30, +0.720 his missing C3 + C11 (36 necks drawn), +2.8455 height basis (released top at FFL = finished-as-structural, his 1.50 = excavation-limit number). Drawing-derived: footing top -> GB top (= GF structural slab top, GB billed net of column), h = 2.33 - H - b + d, b and d unprinted -> every neck HELD; lift necks (pit depth, 20X50/25X100 vs schedule 30x) and C8 30X80 vs 30x90 are printed conflicts. No owner question; designer items for the Lead. | self-check codemap PASS, pytest t061 PASS, freeze PASS; Drive read OK; t202 guard red pre-existing on base (T-212), NEW 0; ERS: read, s.2-4 + s.7; problem: none
