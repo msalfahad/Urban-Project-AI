@@ -1,0 +1,39 @@
+{
+ "rooms": 32,
+ "rooms_with_a_crosswalked_wall": 32,
+ "opening_faces": 85,
+ "opening_faces_crosswalked": 83,
+ "faces": 75,
+ "height_codes": {
+  "AGREES": 4,
+  "BAND_EXPLAINED": 38,
+  "BLOCK_HELD": 30,
+  "PLASTER_HELD": 3
+ },
+ "findings": {
+  "HEIGHT_DATUM_SPLIT_ROOF": 18,
+  "BLOCK_HEIGHT_HELD_PLASTER_ESTABLISHED": 12,
+  "MASKED_DATUM_CAUSE": 5,
+  "HEIGHT_DATUM_SPLIT_LEVEL": 2,
+  "SPLIT_FACE_SUMS": 1,
+  "SPLIT_FACE_SUM_DIFFERS": 1,
+  "OPENING_NOT_CROSSWALKED": 2,
+  "ROOM_ASSIGNMENT_DIFFERS": 1,
+  "REGION_NOT_A_CENSUS_SIDE": 1,
+  "SIZE_DIFFERS": 2,
+  "T-128 DEDUCTS A HEIGHT THE MERGED LEDGER HOLDS": 1,
+  "OUTLINE_DIFFERS (arched, T-238)": 2
+ },
+ "reproduced_rooms": 30,
+ "dwg_net_change_m2": {
+  "lo": 46.11,
+  "hi": -9.92
+ },
+ "owner_net_change_m2": {
+  "lo": 32.7,
+  "hi": -7.57
+ },
+ "held_openings_old": 27,
+ "held_openings_new": 11,
+ "applied_to_merged_ledgers": false
+}

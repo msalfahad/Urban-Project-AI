@@ -1,0 +1,95 @@
+room,room_name,t128_opening,t128_class,t128_width_m,census_id,match_basis,candidates,host_wall
+GF-01,dewaneya,W11,window,1.955,W11,id in the T-128 name,W11,GF-W18
+GF-01,dewaneya,W12,window,1.95,W12,id in the T-128 name,W12,GF-W18
+GF-01,dewaneya,D120 entrance,door,1.0,D-GF-01,room + kind + width (0.06),D-GF-01,GF-W06
+GF-01,dewaneya,arch to wash,arch,1.0,A-GF-01,room + kind + width (0.06),A-GF-01,GF-W26
+GF-02,wash by the dewaneya,D315 to W.C.,door,0.8,D-GF-02,room + kind + width (0.06),D-GF-02,GF-W27
+GF-02,wash by the dewaneya,arch to dewaneya,arch,1.0,A-GF-01,room + kind + width (0.06),A-GF-01,GF-W26
+GF-03,W.C. by the dewaneya,D315,door,0.8,D-GF-02,room + kind + width (0.06),D-GF-02,GF-W27
+GF-04,driver room,W04,window,0.6,W04,id in the T-128 name,W04,GF-W04
+GF-04,driver room,d220 entrance,door,0.9,D-GF-03,room + kind + width (0.06),D-GF-03,GF-W04
+GF-04,driver room,D315 to W.C.,door,0.8,D-GF-04,room + kind + width (0.06),D-GF-04,GF-W24
+GF-05,driver W.C.,D315,door,0.8,D-GF-04,room + kind + width (0.06),D-GF-04,GF-W24
+GF-06,kitchen,W08,window,1.501,W08,id in the T-128 name,W08,GF-W04
+GF-06,kitchen,D120,door,0.95,D-GF-05,room + kind + width (0.06),D-GF-05,GF-W17
+GF-07,pantry (open side to the dining),D120,door,1.0,D-GF-06,room + kind + width (0.06),D-GF-06,GF-W05
+GF-07,pantry (open side to the dining),open side to the dining,virtual,4.49,,virtual: no deduction,,-
+GF-07,pantry (open side to the dining),W10,window,1.0,W10,id in the T-128 name,W10,GF-W16
+GF-07,pantry (open side to the dining),W09,window,1.5,W09,id in the T-128 name,W09,GF-W16
+GF-08,open room: dining / entrance / reception / saloon / hall to the master bed room,D120 to stair hall,door,1.0,D-GF-08,room + kind + the other side named in the T-128 label (ST-GF),D-GF-08,GF-W08
+GF-08,open room: dining / entrance / reception / saloon / hall to the master bed room,lift landing door,lift,1.0,L-GF-01,room + kind + width (0.06),L-GF-01,GF-W08
+GF-08,open room: dining / entrance / reception / saloon / hall to the master bed room,open side to the wash lobby,virtual,1.245,,virtual: no deduction,,-
+GF-08,open room: dining / entrance / reception / saloon / hall to the master bed room,D115 to master bed,door,1.0,D-GF-13,room + kind + the other side named in the T-128 label (GF-15),D-GF-13,GF-W28
+GF-08,open room: dining / entrance / reception / saloon / hall to the master bed room,W03 pool glazing band (open-room part),window,1.625,W03,id in the T-128 name,W03,GF-W37
+GF-08,open room: dining / entrance / reception / saloon / hall to the master bed room,W02 saloon glazing,window,6.33,W02,id in the T-128 name,W02,GF-W11
+GF-08,open room: dining / entrance / reception / saloon / hall to the master bed room,open side to the pantry,virtual,4.49,,virtual: no deduction,,-
+GF-08,open room: dining / entrance / reception / saloon / hall to the master bed room,D01 main entrance,main,2.0,D-GF-07,id in the T-128 name,D-GF-07,GF-W15
+GF-15,master bed room,bath door (loose arc),door,0.8,D-GF-14,room + kind + width (0.06),D-GF-14,GF-W30
+GF-15,master bed room,W03 pool glazing band (bed-room part),window,5.106,W03,id in the T-128 name,W03,GF-W37
+GF-15,master bed room,D115,door,1.0,D-GF-13,room + kind + width (0.06),D-GF-13,GF-W28
+GF-16,bath of the master bed room,W05-07,window,0.6,W07,id in the T-128 name + room,W07,GF-W10
+GF-16,bath of the master bed room,bath door (loose arc),door,0.8,D-GF-14,room + kind + width (0.06),D-GF-14,GF-W30
+GF-10,W.C. 175 x 135 by the stair,W05-07,window,0.6,W05,id in the T-128 name + room,W05,GF-W10
+GF-10,W.C. 175 x 135 by the stair,D315,door,0.8,D-GF-10,room + kind + width (0.06),D-GF-10,GF-W29
+GF-11,basin space 110 x 135,D315 to W.C.,door,0.8,D-GF-10,room + kind + width (0.06),D-GF-10,GF-W29
+GF-11,basin space 110 x 135,doorway to the stair hall (no leaf drawn),doorway,0.9,,UNMATCHED: the census row has no sides; width-only candidate(s) P-GF-01 (not taken: width alone does not identify an opening),P-GF-01,-
+GF-12,W.C. core wedge A (289 x 167),D315,door,0.8,D-GF-11,room + kind + width (0.06),D-GF-11,GF-W32
+GF-13,W.C. core wedge B (245 x 167),diagonal face with no wall line (door-closure copy; T-074 wall face),wall,0.796,,wall: no deduction,,-
+GF-13,W.C. core wedge B (245 x 167),W05-07,window,0.6,W06,family label: the one member no other room deducts (room assignment DIFFERS from T-175),W06,GF-W10
+GF-13,W.C. core wedge B (245 x 167),D315,door,0.8,D-GF-12,room + kind + width (0.06),D-GF-12,GF-W32
+GF-14,"wash lobby, 2 basins, with the basin niche",open side to the open room,virtual,1.245,,virtual: no deduction,,-
+GF-14,"wash lobby, 2 basins, with the basin niche",D315 wedge A,door,0.8,D-GF-11,room + kind + the other side named in the T-128 label (GF-12),D-GF-11,GF-W32
+GF-14,"wash lobby, 2 basins, with the basin niche",D315 wedge B,door,0.8,D-GF-12,room + kind + the other side named in the T-128 label (GF-13),D-GF-12,GF-W32
+1F-01,master bed room west 425 x 450,D115 (landing),door,1.0,D-1F-02,room + kind + width (0.06),D-1F-02,1F-W23
+1F-01,master bed room west 425 x 450,D315 to bath,door,0.8,D-1F-01,room + kind + width (0.06),D-1F-01,1F-W11
+1F-01,master bed room west 425 x 450,W14,window,2.45,W14,id in the T-128 name,W14,1F-W05
+1F-04,master bed room 500 x 365,D115,door,1.0,D-1F-03,room + kind + width (0.06),D-1F-03,1F-W12
+1F-04,master bed room 500 x 365,W24,window,1.55,W24,id in the T-128 name,W24,1F-W06
+1F-04,master bed room 500 x 365,D315 to bath,door,0.8,D-1F-04,room + kind + width (0.06),D-1F-04,1F-W23
+1F-10,master bed room 380 x 430,D215,door,0.9,D-1F-08,room + kind + width (0.06),D-1F-08,1F-W13
+1F-10,master bed room 380 x 430,arch120 to the dressing passage,arch,1.0,A-1F-01,room + kind + width (0.06),A-1F-01,1F-W16
+1F-11,master bed room east (curved W17) with its entry,W17,window,3.286,W17,id in the T-128 name,W17,1F-W25
+1F-11,master bed room east (curved W17) with its entry,D315 to bath,door,0.8,D-1F-10,room + kind + width (0.06),D-1F-10,1F-W17
+1F-11,master bed room east (curved W17) with its entry,D215,door,0.9,D-1F-09,room + kind + width (0.06),D-1F-09,1F-W13
+1F-07,laundry,W19-23,window,0.6,W21,id in the T-128 name + room,W21,1F-W10
+1F-07,laundry,D315 to W.C.,door,0.8,D-1F-06,room + kind + width (0.06),D-1F-06,1F-W16
+1F-07,laundry,d220,door,0.9,D-1F-05,room + kind + width (0.06),D-1F-05,1F-W07
+1F-08,W.C. 147 x 180,D315,door,0.8,D-1F-06,room + kind + width (0.06),D-1F-06,1F-W16
+1F-08,W.C. 147 x 180,W19-23,window,0.6,W22,id in the T-128 name + room,W22,1F-W10
+1F-02,bath west upper 245 x 205,W19-23,window,0.6,W19,id in the T-128 name + room,W19,1F-W06
+1F-02,bath west upper 245 x 205,D315,door,0.8,D-1F-01,room + kind + width (0.06),D-1F-01,1F-W11
+1F-03,bath west lower 245 x 205,D315,door,0.8,D-1F-04,room + kind + width (0.06),D-1F-04,1F-W23
+1F-03,bath west lower 245 x 205,W19-23,window,0.6,W20,id in the T-128 name + room,W20,1F-W06
+1F-12,bath east 210 x 225,W18,window,0.5,W18,id in the T-128 name,W18,1F-W00
+1F-12,bath east 210 x 225,D315,door,0.8,D-1F-10,room + kind + width (0.06),D-1F-10,1F-W17
+1F-09,bath by the laundry 200 x 180,W19-23,window,0.6,W23,id in the T-128 name + room,W23,1F-W10
+1F-09,bath by the laundry 200 x 180,D315,door,0.75,D-1F-07,room + kind + width (0.06),D-1F-07,1F-W19
+1F-13,"living + corridor + landing + connector (open zone, outside the shaft box)",lift landing door,lift,1.0,L-1F-01,room + kind + width (0.06),L-1F-01,1F-W07
+1F-13,"living + corridor + landing + connector (open zone, outside the shaft box)",d220 laundry,door,0.9,D-1F-05,room + kind + the other side named in the T-128 label (1F-07),D-1F-05,1F-W07
+1F-13,"living + corridor + landing + connector (open zone, outside the shaft box)",D215 bed 380 x 430,door,0.9,D-1F-08,room + kind + the other side named in the T-128 label (1F-10),D-1F-08,1F-W13
+1F-13,"living + corridor + landing + connector (open zone, outside the shaft box)",D215 bed east,door,0.9,D-1F-09,room + kind + the other side named in the T-128 label (1F-11),D-1F-09,1F-W13
+1F-13,"living + corridor + landing + connector (open zone, outside the shaft box)",W15,window,1.55,W15,id in the T-128 name,W15,1F-W00
+1F-13,"living + corridor + landing + connector (open zone, outside the shaft box)",W16 (twin of W15),window,1.55,W16,id in the T-128 name,W16,1F-W00
+1F-13,"living + corridor + landing + connector (open zone, outside the shaft box)",D115 bed 500 x 365,door,1.0,D-1F-03,room + kind + the other side named in the T-128 label (1F-04),D-1F-03,1F-W12
+1F-13,"living + corridor + landing + connector (open zone, outside the shaft box)",D115 bed west (landing part),door,0.42,D-1F-02,room + kind + the other side named in the T-128 label (1F-01); split face (part of the opening width),D-1F-02,1F-W23
+1F-13,"living + corridor + landing + connector (open zone, outside the shaft box)",open side to the stair shaft box,virtual,2.49,,virtual: no deduction,,-
+2F-03,maid room 300 x 645,d220,door,0.9,D-2F-02,room + kind + width (0.06),D-2F-02,2F-W05
+2F-03,maid room 300 x 645,D315 to W.C.,door,0.8,D-2F-03,room + kind + width (0.06),D-2F-03,2F-W08
+2F-03,maid room 300 x 645,W29,window,1.2,W29,id in the T-128 name,W29,2F-W02
+2F-02,W.C. 300 x 185,W28,window,0.6,W28,id in the T-128 name,W28,2F-W02
+2F-02,W.C. 300 x 185,D315,door,0.8,D-2F-03,room + kind + width (0.06),D-2F-03,2F-W08
+2F-01,2F stair lobby (outside the shaft box),open side to the stair shaft box,virtual,2.491,,virtual: no deduction,,-
+2F-01,2F stair lobby (outside the shaft box),lift landing door,lift,1.0,L-2F-01,room + kind + width (0.06),L-2F-01,2F-W00
+2F-01,2F stair lobby (outside the shaft box),d220 maid,door,0.9,D-2F-02,room + kind + the other side named in the T-128 label (2F-03),D-2F-02,2F-W05
+2F-01,2F stair lobby (outside the shaft box),D26 roof door,door,1.0,D-2F-01,id in the T-128 name,D-2F-01,2F-W03
+ST-GF,"stair shaft, GF part",D120 north door,door,0.9,D-GF-09,room + kind + width (0.06),D-GF-09,GF-W10
+ST-GF,"stair shaft, GF part",doorway to the basin space (no leaf drawn),doorway,0.9,,UNMATCHED: the census row has no sides; width-only candidate(s) P-GF-01 (not taken: width alone does not identify an opening),P-GF-01,-
+ST-GF,"stair shaft, GF part",D120 to the open room,door,1.0,D-GF-08,room + kind + the other side named in the T-128 label (GF-08),D-GF-08,GF-W08
+ST-GF,"stair shaft, GF part",W01,window,1.2,W01,id in the T-128 name,W01,GF-W15
+ST-1F,"stair shaft, 1F part",W13,window,1.2,W13,id in the T-128 name,W13,1F-W04
+ST-1F,"stair shaft, 1F part",north window,window,1.0,W25,room + kind + width (0.06),W25,1F-W10
+ST-1F,"stair shaft, 1F part",open side to the landing (clip),virtual,2.486,,virtual: no deduction,,-
+ST-1F,"stair shaft, 1F part",D115 bed west (shaft part),door,0.58,D-1F-02,door block D115 (1.00) of the room named in the label (1F-01); the census does not name this region as a side; split face (part of the opening width),D-1F-02,1F-W23
+ST-2F,"stair shaft, 2F part (to the roof)",W26 arched,window,1.2,W26,id in the T-128 name,W26,2F-W07
+ST-2F,"stair shaft, 2F part (to the roof)",W27,window,1.0,W27,id in the T-128 name,W27,2F-W02
+ST-2F,"stair shaft, 2F part (to the roof)",open side to the lobby (clip),virtual,2.491,,virtual: no deduction,,-
