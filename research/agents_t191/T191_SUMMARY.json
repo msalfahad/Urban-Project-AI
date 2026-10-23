@@ -1,0 +1,824 @@
+{
+ "wall_h_m": 1.2,
+ "unit_mass": "kg/m = d^2 / 162",
+ "populations": {
+  "R1_deep_end_detail": {
+   "kg_net_range": [
+    839.34,
+    883.59
+   ],
+   "kg_exact_density_range": [
+    838.33,
+    882.52
+   ],
+   "low_reading": {
+    "c_n": 0.08,
+    "hoops": "low",
+    "main_dir": "x"
+   },
+   "high_reading": {
+    "c_n": 0.0,
+    "hoops": "high",
+    "main_dir": "x"
+   },
+   "held_legs": [
+    {
+     "mark": "WV_OUT_LEG",
+     "d": 14,
+     "count": 84,
+     "drawn_minimum_kg": 11.891
+    }
+   ],
+   "laps_kg_range_procurement": [
+    19.07,
+    42.15
+   ],
+   "delta_steps_per_mark": {
+    "WV_OUT": {
+     "d": 14,
+     "S0_rev1_A": 165.027,
+     "S1_height": [
+      170.351,
+      170.351
+     ],
+     "S2_barlines_counts": [
+      145.94,
+      154.071
+     ],
+     "S3_rev2_shapes": [
+      145.94,
+      154.071
+     ]
+    },
+    "WV_IN": {
+     "d": 12,
+     "S0_rev1_A": 107.467,
+     "S1_height": [
+      110.933,
+      110.933
+     ],
+     "S2_barlines_counts": [
+      104.814,
+      105.248
+     ],
+     "S3_rev2_shapes": [
+      130.252,
+      151.632
+     ]
+    },
+    "WH_OUT": {
+     "d": 12,
+     "S0_rev1_A": 88.873,
+     "S1_height": [
+      66.655,
+      77.764
+     ],
+     "S2_barlines_counts": [
+      63.227,
+      73.765
+     ],
+     "S3_rev2_shapes": [
+      63.227,
+      73.765
+     ]
+    },
+    "WH_IN": {
+     "d": 12,
+     "S0_rev1_A": 78.716,
+     "S1_height": [
+      59.037,
+      68.877
+     ],
+     "S2_barlines_counts": [
+      62.77,
+      69.677
+     ],
+     "S3_rev2_shapes": [
+      62.77,
+      69.677
+     ]
+    },
+    "FB_MAIN": {
+     "d": 14,
+     "S0_rev1_A": 94.607,
+     "S1_height": [
+      94.607,
+      94.607
+     ],
+     "S2_barlines_counts": [
+      88.513,
+      88.513
+     ],
+     "S3_rev2_shapes": [
+      88.513,
+      88.513
+     ]
+    },
+    "FB_DIST": {
+     "d": 14,
+     "S0_rev1_A": 79.496,
+     "S1_height": [
+      79.496,
+      79.496
+     ],
+     "S2_barlines_counts": [
+      74.065,
+      74.065
+     ],
+     "S3_rev2_shapes": [
+      74.065,
+      74.065
+     ]
+    },
+    "FT_MAIN": {
+     "d": 14,
+     "S0_rev1_A": 94.607,
+     "S1_height": [
+      94.607,
+      94.607
+     ],
+     "S2_barlines_counts": [
+      88.513,
+      88.513
+     ],
+     "S3_rev2_shapes": [
+      88.513,
+      88.513
+     ]
+    },
+    "FT_DIST": {
+     "d": 14,
+     "S0_rev1_A": 79.496,
+     "S1_height": [
+      79.496,
+      79.496
+     ],
+     "S2_barlines_counts": [
+      74.065,
+      74.065
+     ],
+     "S3_rev2_shapes": [
+      74.065,
+      74.065
+     ]
+    },
+    "RIM": {
+     "d": 16,
+     "S0_rev1_A": 55.863,
+     "S1_height": [
+      55.863,
+      55.863
+     ],
+     "S2_barlines_counts": [
+      55.999,
+      54.644
+     ],
+     "S3_rev2_shapes": [
+      55.999,
+      54.644
+     ]
+    },
+    "CORNER": {
+     "d": 16,
+     "S0_rev1_A": 55.863,
+     "S1_height": [
+      55.863,
+      55.863
+     ],
+     "S2_barlines_counts": [
+      55.999,
+      54.644
+     ],
+     "S3_rev2_shapes": [
+      55.999,
+      54.644
+     ]
+    }
+   },
+   "delta_totals": {
+    "S0_rev1_A": [
+     900.01,
+     900.01
+    ],
+    "S1_height": [
+     866.91,
+     887.86
+    ],
+    "S2_barlines_counts": [
+     813.9,
+     837.2
+    ],
+    "S3_rev2_shapes": [
+     839.34,
+     883.59
+    ]
+   },
+   "readings": [
+    {
+     "c_n": 0.0,
+     "hoops": "low",
+     "main_dir": "x",
+     "kg": 863.1
+    },
+    {
+     "c_n": 0.0,
+     "hoops": "low",
+     "main_dir": "y",
+     "kg": 863.1
+    },
+    {
+     "c_n": 0.0,
+     "hoops": "high",
+     "main_dir": "x",
+     "kg": 883.59
+    },
+    {
+     "c_n": 0.0,
+     "hoops": "high",
+     "main_dir": "y",
+     "kg": 883.59
+    },
+    {
+     "c_n": 0.08,
+     "hoops": "low",
+     "main_dir": "x",
+     "kg": 839.34
+    },
+    {
+     "c_n": 0.08,
+     "hoops": "low",
+     "main_dir": "y",
+     "kg": 839.34
+    },
+    {
+     "c_n": 0.08,
+     "hoops": "high",
+     "main_dir": "x",
+     "kg": 860.34
+    },
+    {
+     "c_n": 0.08,
+     "hoops": "high",
+     "main_dir": "y",
+     "kg": 860.34
+    }
+   ],
+   "marks": {
+    "WV_OUT": {
+     "d": 14,
+     "label": "7ø14/m (section, outer face; bar view: L with a floor leg)",
+     "low": {
+      "count": 84,
+      "m": 120.624,
+      "kg": 145.94,
+      "note": "closed loop P_bar 11.9479 m, N = ceil(P / s); vertical 1.4360 m; floor leg HELD (not dimensioned)"
+     },
+     "high": {
+      "count": 84,
+      "m": 127.344,
+      "kg": 154.071,
+      "note": "closed loop P_bar 11.9479 m, N = ceil(P / s); vertical 1.5160 m; floor leg HELD (not dimensioned)"
+     }
+    },
+    "WV_IN": {
+     "d": 12,
+     "label": "7ø12/m (section, water face; bar view: hook over the wall top, closed box in the base)",
+     "low": {
+      "count": 82,
+      "m": 146.534,
+      "kg": 130.252,
+      "note": "closed loop P_bar 11.6836 m, N = ceil(P / s); vertical 1.4380 m + top hook 0.0370 + box 2 x 0.0370 + 0.2380 m"
+     },
+     "high": {
+      "count": 78,
+      "m": 170.586,
+      "kg": 151.632,
+      "note": "closed loop P_bar 11.1123 m, N = ceil(P / s); vertical 1.5180 m + top hook 0.1170 + box 2 x 0.1170 + 0.3180 m"
+     }
+    },
+    "WH_OUT": {
+     "d": 12,
+     "label": "12/20cm (section, outer face; the ø symbol is not printed, read as ø12 like the water-face label of the same wall)",
+     "low": {
+      "count": 6,
+      "m": 71.1303,
+      "kg": 63.227,
+      "note": "ring P 11.8550 m; hoops over wall_h 1.200 m: 6 .. 7 (this reading 6)"
+     },
+     "high": {
+      "count": 7,
+      "m": 82.9853,
+      "kg": 73.765,
+      "note": "ring P 11.8550 m; hoops over wall_h 1.200 m: 6 .. 7 (this reading 7)"
+     }
+    },
+    "WH_IN": {
+     "d": 12,
+     "label": "ø12/20cm (section, water face)",
+     "low": {
+      "count": 6,
+      "m": 70.6161,
+      "kg": 62.77,
+      "note": "ring P 11.7693 m; hoops over wall_h 1.200 m: 6 .. 7 (this reading 6)"
+     },
+     "high": {
+      "count": 7,
+      "m": 78.3861,
+      "kg": 69.677,
+      "note": "ring P 11.1980 m; hoops over wall_h 1.200 m: 6 .. 7 (this reading 7)"
+     }
+    },
+    "FB_MAIN_X": {
+     "d": 14,
+     "label": "7ø14/m top and bottom (section-line bars)",
+     "low": {
+      "count": 25,
+      "m": 73.1587,
+      "kg": 88.513,
+      "note": "bottom mat, bars along x, 25 chords, ends inside the outer verticals (offset 0.084 m)"
+     },
+     "high": {
+      "count": 25,
+      "m": 73.1587,
+      "kg": 88.513,
+      "note": "bottom mat, bars along x, 25 chords, ends inside the outer verticals (offset 0.084 m)"
+     }
+    },
+    "FT_MAIN_X": {
+     "d": 14,
+     "label": "7ø14/m top and bottom (section-line bars)",
+     "low": {
+      "count": 25,
+      "m": 73.1587,
+      "kg": 88.513,
+      "note": "top mat, bars along x, 25 chords, ends inside the outer verticals (offset 0.084 m)"
+     },
+     "high": {
+      "count": 25,
+      "m": 73.1587,
+      "kg": 88.513,
+      "note": "top mat, bars along x, 25 chords, ends inside the outer verticals (offset 0.084 m)"
+     }
+    },
+    "FB_DIST_Y": {
+     "d": 14,
+     "label": "6ø14/m (dot rows, X leader to both mats)",
+     "low": {
+      "count": 21,
+      "m": 61.2167,
+      "kg": 74.065,
+      "note": "bottom mat, bars along y, 21 chords, ends inside the outer verticals (offset 0.084 m)"
+     },
+     "high": {
+      "count": 21,
+      "m": 61.2167,
+      "kg": 74.065,
+      "note": "bottom mat, bars along y, 21 chords, ends inside the outer verticals (offset 0.084 m)"
+     }
+    },
+    "FT_DIST_Y": {
+     "d": 14,
+     "label": "6ø14/m (dot rows, X leader to both mats)",
+     "low": {
+      "count": 21,
+      "m": 61.2167,
+      "kg": 74.065,
+      "note": "top mat, bars along y, 21 chords, ends inside the outer verticals (offset 0.084 m)"
+     },
+     "high": {
+      "count": 21,
+      "m": 61.2167,
+      "kg": 74.065,
+      "note": "top mat, bars along y, 21 chords, ends inside the outer verticals (offset 0.084 m)"
+     }
+    },
+    "RIM": {
+     "d": 16,
+     "label": "3ø16 at the wall top",
+     "low": {
+      "count": 3,
+      "m": 35.4366,
+      "kg": 55.999,
+      "note": "3 rings spread across the wall between the bar lines, total 35.4366 m"
+     },
+     "high": {
+      "count": 3,
+      "m": 34.5796,
+      "kg": 54.644,
+      "note": "3 rings spread across the wall between the bar lines, total 34.5796 m"
+     }
+    },
+    "CORNER": {
+     "d": 16,
+     "label": "3ø16 at the base / wall corner",
+     "low": {
+      "count": 3,
+      "m": 35.4366,
+      "kg": 55.999,
+      "note": "3 rings spread across the wall between the bar lines, total 35.4366 m"
+     },
+     "high": {
+      "count": 3,
+      "m": 34.5796,
+      "kg": 54.644,
+      "note": "3 rings spread across the wall between the bar lines, total 34.5796 m"
+     }
+    }
+   },
+   "status": "HELD (which population governs: designer item; non-soil cover and hoop end positions not printed; legs and laps listed apart)"
+  },
+  "R2_shallow_end_detail": {
+   "kg_net_range": [
+    583.08,
+    617.96
+   ],
+   "kg_exact_density_range": [
+    582.38,
+    617.22
+   ],
+   "low_reading": {
+    "c_n": 0.08600000000000001,
+    "hoops": "low",
+    "main_dir": "x"
+   },
+   "high_reading": {
+    "c_n": 0.0,
+    "hoops": "high",
+    "main_dir": "x"
+   },
+   "held_legs": [
+    {
+     "mark": "WV_OUT_LEG",
+     "d": 12,
+     "count": 72,
+     "drawn_minimum_kg": 7.552
+    }
+   ],
+   "laps_kg_range_procurement": [
+    12.26,
+    23.23
+   ],
+   "delta_steps_per_mark": {
+    "WV_OUT": {
+     "d": 12,
+     "S0_rev1_A": 103.333,
+     "S1_height": [
+      106.667,
+      106.667
+     ],
+     "S2_barlines_counts": [
+      91.648,
+      97.152
+     ],
+     "S3_rev2_shapes": [
+      91.648,
+      97.152
+     ]
+    },
+    "WV_IN": {
+     "d": 12,
+     "S0_rev1_A": 92.311,
+     "S1_height": [
+      95.289,
+      95.289
+     ],
+     "S2_barlines_counts": [
+      90.375,
+      90.405
+     ],
+     "S3_rev2_shapes": [
+      111.076,
+      130.427
+     ]
+    },
+    "WH_OUT": {
+     "d": 10,
+     "S0_rev1_A": 61.717,
+     "S1_height": [
+      46.288,
+      54.003
+     ],
+     "S2_barlines_counts": [
+      43.987,
+      51.318
+     ],
+     "S3_rev2_shapes": [
+      43.987,
+      51.318
+     ]
+    },
+    "WH_IN": {
+     "d": 10,
+     "S0_rev1_A": 54.664,
+     "S1_height": [
+      40.998,
+      47.831
+     ],
+     "S2_barlines_counts": [
+      43.722,
+      48.356
+     ],
+     "S3_rev2_shapes": [
+      43.722,
+      48.356
+     ]
+    },
+    "FB_MAIN": {
+     "d": 12,
+     "S0_rev1_A": 58.405,
+     "S1_height": [
+      58.405,
+      58.405
+     ],
+     "S2_barlines_counts": [
+      54.452,
+      54.452
+     ],
+     "S3_rev2_shapes": [
+      54.452,
+      54.452
+     ]
+    },
+    "FB_DIST": {
+     "d": 12,
+     "S0_rev1_A": 58.405,
+     "S1_height": [
+      58.405,
+      58.405
+     ],
+     "S2_barlines_counts": [
+      54.452,
+      54.452
+     ],
+     "S3_rev2_shapes": [
+      54.452,
+      54.452
+     ]
+    },
+    "FT_MAIN": {
+     "d": 12,
+     "S0_rev1_A": 58.405,
+     "S1_height": [
+      58.405,
+      58.405
+     ],
+     "S2_barlines_counts": [
+      54.452,
+      54.452
+     ],
+     "S3_rev2_shapes": [
+      54.452,
+      54.452
+     ]
+    },
+    "FT_DIST": {
+     "d": 12,
+     "S0_rev1_A": 58.405,
+     "S1_height": [
+      58.405,
+      58.405
+     ],
+     "S2_barlines_counts": [
+      54.452,
+      54.452
+     ],
+     "S3_rev2_shapes": [
+      54.452,
+      54.452
+     ]
+    },
+    "CORNER": {
+     "d": 16,
+     "S0_rev1_A": 74.484,
+     "S1_height": [
+      74.484,
+      74.484
+     ],
+     "S2_barlines_counts": [
+      74.845,
+      72.904
+     ],
+     "S3_rev2_shapes": [
+      74.845,
+      72.904
+     ]
+    }
+   },
+   "delta_totals": {
+    "S0_rev1_A": [
+     620.13,
+     620.13
+    ],
+    "S1_height": [
+     597.35,
+     611.89
+    ],
+    "S2_barlines_counts": [
+     562.38,
+     577.94
+    ],
+    "S3_rev2_shapes": [
+     583.09,
+     617.96
+    ]
+   },
+   "readings": [
+    {
+     "c_n": 0.0,
+     "hoops": "low",
+     "main_dir": "x",
+     "kg": 603.72
+    },
+    {
+     "c_n": 0.0,
+     "hoops": "low",
+     "main_dir": "y",
+     "kg": 603.72
+    },
+    {
+     "c_n": 0.0,
+     "hoops": "high",
+     "main_dir": "x",
+     "kg": 617.96
+    },
+    {
+     "c_n": 0.0,
+     "hoops": "high",
+     "main_dir": "y",
+     "kg": 617.96
+    },
+    {
+     "c_n": 0.086,
+     "hoops": "low",
+     "main_dir": "x",
+     "kg": 583.08
+    },
+    {
+     "c_n": 0.086,
+     "hoops": "low",
+     "main_dir": "y",
+     "kg": 583.08
+    },
+    {
+     "c_n": 0.086,
+     "hoops": "high",
+     "main_dir": "x",
+     "kg": 597.7
+    },
+    {
+     "c_n": 0.086,
+     "hoops": "high",
+     "main_dir": "y",
+     "kg": 597.7
+    }
+   ],
+   "marks": {
+    "WV_OUT": {
+     "d": 12,
+     "label": "6ø12/m (one section label; bar view: outer L with a floor leg)",
+     "low": {
+      "count": 72,
+      "m": 103.104,
+      "kg": 91.648,
+      "note": "closed loop P_bar 11.9550 m, N = ceil(P / s); vertical 1.4320 m; floor leg HELD (not dimensioned)"
+     },
+     "high": {
+      "count": 72,
+      "m": 109.296,
+      "kg": 97.152,
+      "note": "closed loop P_bar 11.9550 m, N = ceil(P / s); vertical 1.5180 m; floor leg HELD (not dimensioned)"
+     }
+    },
+    "WV_IN": {
+     "d": 12,
+     "label": "6ø12/m (bar view: hook over the wall top, closed box in the base)",
+     "low": {
+      "count": 71,
+      "m": 124.96,
+      "kg": 111.076,
+      "note": "closed loop P_bar 11.7265 m, N = ceil(P / s); vertical 1.4320 m + top hook 0.0320 + box 2 x 0.0320 + 0.2320 m"
+     },
+     "high": {
+      "count": 67,
+      "m": 146.73,
+      "kg": 130.427,
+      "note": "closed loop P_bar 11.1123 m, N = ceil(P / s); vertical 1.5180 m + top hook 0.1180 + box 2 x 0.1180 + 0.3180 m"
+     }
+    },
+    "WH_OUT": {
+     "d": 10,
+     "label": "ø10/20cm (outer face)",
+     "low": {
+      "count": 6,
+      "m": 71.2588,
+      "kg": 43.987,
+      "note": "ring P 11.8765 m; hoops over wall_h 1.200 m: 6 .. 7 (this reading 6)"
+     },
+     "high": {
+      "count": 7,
+      "m": 83.1353,
+      "kg": 51.318,
+      "note": "ring P 11.8765 m; hoops over wall_h 1.200 m: 6 .. 7 (this reading 7)"
+     }
+    },
+    "WH_IN": {
+     "d": 10,
+     "label": "ø10/20cm (water face)",
+     "low": {
+      "count": 6,
+      "m": 70.8303,
+      "kg": 43.722,
+      "note": "ring P 11.8051 m; hoops over wall_h 1.200 m: 6 .. 7 (this reading 6)"
+     },
+     "high": {
+      "count": 7,
+      "m": 78.3361,
+      "kg": 48.356,
+      "note": "ring P 11.1909 m; hoops over wall_h 1.200 m: 6 .. 7 (this reading 7)"
+     }
+    },
+    "FB_MAIN_X": {
+     "d": 12,
+     "label": "6ø12/m top and bottom",
+     "low": {
+      "count": 21,
+      "m": 61.2581,
+      "kg": 54.452,
+      "note": "bottom mat, bars along x, 21 chords, ends inside the outer verticals (offset 0.082 m)"
+     },
+     "high": {
+      "count": 21,
+      "m": 61.2581,
+      "kg": 54.452,
+      "note": "bottom mat, bars along x, 21 chords, ends inside the outer verticals (offset 0.082 m)"
+     }
+    },
+    "FT_MAIN_X": {
+     "d": 12,
+     "label": "6ø12/m top and bottom",
+     "low": {
+      "count": 21,
+      "m": 61.2581,
+      "kg": 54.452,
+      "note": "top mat, bars along x, 21 chords, ends inside the outer verticals (offset 0.082 m)"
+     },
+     "high": {
+      "count": 21,
+      "m": 61.2581,
+      "kg": 54.452,
+      "note": "top mat, bars along x, 21 chords, ends inside the outer verticals (offset 0.082 m)"
+     }
+    },
+    "FB_DIST_Y": {
+     "d": 12,
+     "label": "6ø12/m (dot rows, X leader to both mats)",
+     "low": {
+      "count": 21,
+      "m": 61.2581,
+      "kg": 54.452,
+      "note": "bottom mat, bars along y, 21 chords, ends inside the outer verticals (offset 0.082 m)"
+     },
+     "high": {
+      "count": 21,
+      "m": 61.2581,
+      "kg": 54.452,
+      "note": "bottom mat, bars along y, 21 chords, ends inside the outer verticals (offset 0.082 m)"
+     }
+    },
+    "FT_DIST_Y": {
+     "d": 12,
+     "label": "6ø12/m (dot rows, X leader to both mats)",
+     "low": {
+      "count": 21,
+      "m": 61.2581,
+      "kg": 54.452,
+      "note": "top mat, bars along y, 21 chords, ends inside the outer verticals (offset 0.082 m)"
+     },
+     "high": {
+      "count": 21,
+      "m": 61.2581,
+      "kg": 54.452,
+      "note": "top mat, bars along y, 21 chords, ends inside the outer verticals (offset 0.082 m)"
+     }
+    },
+    "CORNER": {
+     "d": 16,
+     "label": "4ø16 at the base / wall corner",
+     "low": {
+      "count": 4,
+      "m": 47.363,
+      "kg": 74.845,
+      "note": "4 rings spread across the wall between the bar lines, total 47.3630 m"
+     },
+     "high": {
+      "count": 4,
+      "m": 46.1347,
+      "kg": 72.904,
+      "note": "4 rings spread across the wall between the bar lines, total 46.1347 m"
+     }
+    }
+   },
+   "status": "HELD (which population governs: designer item; non-soil cover and hoop end positions not printed; legs and laps listed apart)"
+  }
+ }
+}
