@@ -1,0 +1,1332 @@
+{
+ "schema": "T205_NECK_INPUT_V1",
+ "source_files": {
+  "ST7757 dxf.dxf": "sha256 9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079 (Drive 'Alsenan chalet project')"
+ },
+ "released_register": "research/urban_engine_m4_correctness/st7757_route_g/PROVISIONAL_REGISTER.csv (28 lines, base 10.8555 m3 = released V2.9 necks 10.855)",
+ "necks": [
+  {
+   "id": "NECK:COL:SH10:C11@131730,40428",
+   "type": "C11",
+   "label_handle": "10BF",
+   "outline_handle": "10BA",
+   "released": {
+    "register": "PROVISIONAL_REGISTER",
+    "m3": 0.66
+   },
+   "sections": [
+    {
+     "source": "ST7757 dxf.dxf SH11 'Schedule of Columns' FOUNDATION band (INSERT CGT; for CN the TEXT row, T-075)",
+     "W": 30,
+     "D": 110,
+     "printed": true,
+     "units": "cm"
+    },
+    {
+     "source": "ST7757 dxf.dxf FOUNDATION PLAN S-COL.BON outline 10BA (drawn, no printed size)",
+     "W": 30,
+     "D": 110,
+     "printed": false,
+     "units": "cm"
+    }
+   ],
+   "footing": {
+    "type": "F13",
+    "H": 0.5,
+    "schedule_handle": "2A98",
+    "outline_handle": "1ADB",
+    "underlay": 0.07,
+    "blinding": 0.1,
+    "pit_raft": false,
+    "pit_depth": null
+   }
+  },
+  {
+   "id": "NECK:COL:SH10:C11@133022,37046",
+   "type": "C11",
+   "label_handle": "blk:1684",
+   "outline_handle": "10DD",
+   "released": {
+    "register": "PROVISIONAL_REGISTER",
+    "m3": 0.66
+   },
+   "sections": [
+    {
+     "source": "ST7757 dxf.dxf SH11 'Schedule of Columns' FOUNDATION band (INSERT CGT; for CN the TEXT row, T-075)",
+     "W": 30,
+     "D": 110,
+     "printed": true,
+     "units": "cm"
+    },
+    {
+     "source": "ST7757 dxf.dxf FOUNDATION PLAN S-COL.BON outline 10DD (drawn, no printed size)",
+     "W": 30,
+     "D": 110,
+     "printed": false,
+     "units": "cm"
+    }
+   ],
+   "footing": {
+    "type": "F11",
+    "H": 0.5,
+    "schedule_handle": "1CED",
+    "outline_handle": "1B07",
+    "underlay": 0.07,
+    "blinding": 0.1,
+    "pit_raft": false,
+    "pit_depth": null
+   }
+  },
+  {
+   "id": "NECK:COL:SH10:C1@137485,46080",
+   "type": "C1",
+   "label_handle": "109D",
+   "outline_handle": "1099",
+   "released": {
+    "register": "PROVISIONAL_REGISTER",
+    "m3": 0.2925
+   },
+   "sections": [
+    {
+     "source": "ST7757 dxf.dxf SH11 'Schedule of Columns' FOUNDATION band (INSERT CGT; for CN the TEXT row, T-075)",
+     "W": 30,
+     "D": 50,
+     "printed": true,
+     "units": "cm"
+    },
+    {
+     "source": "ST7757 dxf.dxf COLUMN & AXIS PLAN size text",
+     "W": 20,
+     "D": 50,
+     "printed": true,
+     "units": "cm"
+    },
+    {
+     "source": "ST7757 dxf.dxf FOUNDATION PLAN S-COL.BON outline 1099 (drawn, no printed size)",
+     "W": 20,
+     "D": 50,
+     "printed": false,
+     "units": "cm"
+    }
+   ],
+   "footing": {
+    "type": "FF",
+    "H": 0.55,
+    "schedule_handle": "2B1E",
+    "outline_handle": "1B2B",
+    "underlay": null,
+    "blinding": 0.1,
+    "pit_raft": true,
+    "pit_depth": null
+   }
+  },
+  {
+   "id": "NECK:COL:SH10:C2@133875,50112",
+   "type": "C2",
+   "label_handle": "1675",
+   "outline_handle": "1084",
+   "released": {
+    "register": "PROVISIONAL_REGISTER",
+    "m3": 0.3225
+   },
+   "sections": [
+    {
+     "source": "ST7757 dxf.dxf SH11 'Schedule of Columns' FOUNDATION band (INSERT CGT; for CN the TEXT row, T-075)",
+     "W": 30,
+     "D": 50,
+     "printed": true,
+     "units": "cm"
+    },
+    {
+     "source": "ST7757 dxf.dxf FOUNDATION PLAN S-COL.BON outline 1084 (drawn, no printed size)",
+     "W": 30,
+     "D": 50,
+     "printed": false,
+     "units": "cm"
+    }
+   ],
+   "footing": {
+    "type": "F2",
+    "H": 0.35,
+    "schedule_handle": "1C95",
+    "outline_handle": "165C",
+    "underlay": 0.07,
+    "blinding": 0.1,
+    "pit_raft": false,
+    "pit_depth": null
+   }
+  },
+  {
+   "id": "NECK:COL:SH10:C2@136610,50085",
+   "type": "C2",
+   "label_handle": "1674",
+   "outline_handle": "1087",
+   "released": {
+    "register": "PROVISIONAL_REGISTER",
+    "m3": 0.3225
+   },
+   "sections": [
+    {
+     "source": "ST7757 dxf.dxf SH11 'Schedule of Columns' FOUNDATION band (INSERT CGT; for CN the TEXT row, T-075)",
+     "W": 30,
+     "D": 50,
+     "printed": true,
+     "units": "cm"
+    },
+    {
+     "source": "ST7757 dxf.dxf FOUNDATION PLAN S-COL.BON outline 1087 (drawn, no printed size)",
+     "W": 30,
+     "D": 50,
+     "printed": false,
+     "units": "cm"
+    }
+   ],
+   "footing": {
+    "type": "F2",
+    "H": 0.35,
+    "schedule_handle": "1C95",
+    "outline_handle": "1663",
+    "underlay": 0.07,
+    "blinding": 0.1,
+    "pit_raft": false,
+    "pit_depth": null
+   }
+  },
+  {
+   "id": "NECK:COL:SH10:C2@137427,44773",
+   "type": "C2",
+   "label_handle": "109B",
+   "outline_handle": "1096",
+   "released": {
+    "register": "PROVISIONAL_REGISTER",
+    "m3": 0.2925
+   },
+   "sections": [
+    {
+     "source": "ST7757 dxf.dxf SH11 'Schedule of Columns' FOUNDATION band (INSERT CGT; for CN the TEXT row, T-075)",
+     "W": 30,
+     "D": 50,
+     "printed": true,
+     "units": "cm"
+    },
+    {
+     "source": "ST7757 dxf.dxf COLUMN & AXIS PLAN size text",
+     "W": 20,
+     "D": 50,
+     "printed": true,
+     "units": "cm"
+    },
+    {
+     "source": "ST7757 dxf.dxf FOUNDATION PLAN S-COL.BON outline 1096 (drawn, no printed size)",
+     "W": 20,
+     "D": 50,
+     "printed": false,
+     "units": "cm"
+    }
+   ],
+   "footing": {
+    "type": "FF",
+    "H": 0.55,
+    "schedule_handle": "2B1E",
+    "outline_handle": "1B2B",
+    "underlay": null,
+    "blinding": 0.1,
+    "pit_raft": true,
+    "pit_depth": null
+   }
+  },
+  {
+   "id": "NECK:COL:SH10:C2@138612,46077",
+   "type": "C2",
+   "label_handle": "109C",
+   "outline_handle": "1093",
+   "released": {
+    "register": "PROVISIONAL_REGISTER",
+    "m3": 0.2925
+   },
+   "sections": [
+    {
+     "source": "ST7757 dxf.dxf SH11 'Schedule of Columns' FOUNDATION band (INSERT CGT; for CN the TEXT row, T-075)",
+     "W": 30,
+     "D": 50,
+     "printed": true,
+     "units": "cm"
+    },
+    {
+     "source": "ST7757 dxf.dxf COLUMN & AXIS PLAN size text",
+     "W": 20,
+     "D": 50,
+     "printed": true,
+     "units": "cm"
+    },
+    {
+     "source": "ST7757 dxf.dxf FOUNDATION PLAN S-COL.BON outline 1093 (drawn, no printed size)",
+     "W": 20,
+     "D": 50,
+     "printed": false,
+     "units": "cm"
+    }
+   ],
+   "footing": {
+    "type": "FF",
+    "H": 0.55,
+    "schedule_handle": "2B1E",
+    "outline_handle": "1B2B",
+    "underlay": null,
+    "blinding": 0.1,
+    "pit_raft": true,
+    "pit_depth": null
+   }
+  },
+  {
+   "id": "NECK:COL:SH10:C3@123284,41372",
+   "type": "C3",
+   "label_handle": "168F",
+   "outline_handle": "10B1",
+   "released": {
+    "register": "PROVISIONAL_REGISTER",
+    "m3": 0.33
+   },
+   "sections": [
+    {
+     "source": "ST7757 dxf.dxf SH11 'Schedule of Columns' FOUNDATION band (INSERT CGT; for CN the TEXT row, T-075)",
+     "W": 30,
+     "D": 50,
+     "printed": true,
+     "units": "cm"
+    },
+    {
+     "source": "ST7757 dxf.dxf FOUNDATION PLAN S-COL.BON outline 10B1 (drawn, no printed size)",
+     "W": 30,
+     "D": 50,
+     "printed": false,
+     "units": "cm"
+    }
+   ],
+   "footing": {
+    "type": "F3",
+    "H": 0.3,
+    "schedule_handle": "1CA0",
+    "outline_handle": "166B",
+    "underlay": 0.07,
+    "blinding": 0.1,
+    "pit_raft": false,
+    "pit_depth": null
+   }
+  },
+  {
+   "id": "NECK:COL:SH10:C3@125165,36762",
+   "type": "C3",
+   "label_handle": "1681",
+   "outline_handle": "10AE",
+   "released": {
+    "register": "PROVISIONAL_REGISTER",
+    "m3": 0.315
+   },
+   "sections": [
+    {
+     "source": "ST7757 dxf.dxf SH11 'Schedule of Columns' FOUNDATION band (INSERT CGT; for CN the TEXT row, T-075)",
+     "W": 30,
+     "D": 50,
+     "printed": true,
+     "units": "cm"
+    },
+    {
+     "source": "ST7757 dxf.dxf FOUNDATION PLAN S-COL.BON outline 10AE (drawn, no printed size)",
+     "W": 30,
+     "D": 50,
+     "printed": false,
+     "units": "cm"
+    }
+   ],
+   "footing": {
+    "type": "F15",
+    "H": 0.4,
+    "schedule_handle": "2B13",
+    "outline_handle": "1B2A",
+    "underlay": 0.07,
+    "blinding": 0.1,
+    "pit_raft": false,
+    "pit_depth": null
+   }
+  },
+  {
+   "id": "NECK:COL:SH10:C3@129555,38490",
+   "type": "C3",
+   "label_handle": "168E",
+   "outline_handle": "10C5",
+   "released": {
+    "register": "PROVISIONAL_REGISTER",
+    "m3": 0.33
+   },
+   "sections": [
+    {
+     "source": "ST7757 dxf.dxf SH11 'Schedule of Columns' FOUNDATION band (INSERT CGT; for CN the TEXT row, T-075)",
+     "W": 30,
+     "D": 50,
+     "printed": true,
+     "units": "cm"
+    },
+    {
+     "source": "ST7757 dxf.dxf FOUNDATION PLAN S-COL.BON outline 10C5 (drawn, no printed size)",
+     "W": 30,
+     "D": 50,
+     "printed": false,
+     "units": "cm"
+    }
+   ],
+   "footing": {
+    "type": "F3",
+    "H": 0.3,
+    "schedule_handle": "1CA0",
+    "outline_handle": "166C",
+    "underlay": 0.07,
+    "blinding": 0.1,
+    "pit_raft": false,
+    "pit_depth": null
+   }
+  },
+  {
+   "id": "NECK:COL:SH10:C3@133946,46136",
+   "type": "C3",
+   "label_handle": "10CD",
+   "outline_handle": "10CC",
+   "released": {
+    "register": "PROVISIONAL_REGISTER",
+    "m3": 0.27
+   },
+   "sections": [
+    {
+     "source": "ST7757 dxf.dxf SH11 'Schedule of Columns' FOUNDATION band (INSERT CGT; for CN the TEXT row, T-075)",
+     "W": 30,
+     "D": 50,
+     "printed": true,
+     "units": "cm"
+    },
+    {
+     "source": "ST7757 dxf.dxf FOUNDATION PLAN S-COL.BON outline 10CC (drawn, no printed size)",
+     "W": 30,
+     "D": 50,
+     "printed": false,
+     "units": "cm"
+    }
+   ],
+   "footing": {
+    "type": "F12",
+    "H": 0.7,
+    "schedule_handle": "2A5E",
+    "outline_handle": "1ABF",
+    "underlay": 0.07,
+    "blinding": 0.1,
+    "pit_raft": false,
+    "pit_depth": null
+   }
+  },
+  {
+   "id": "NECK:COL:SH10:C3@141170,36765",
+   "type": "C3",
+   "label_handle": "10E5",
+   "outline_handle": "10E4",
+   "released": {
+    "register": "PROVISIONAL_REGISTER",
+    "m3": 0.3
+   },
+   "sections": [
+    {
+     "source": "ST7757 dxf.dxf SH11 'Schedule of Columns' FOUNDATION band (INSERT CGT; for CN the TEXT row, T-075)",
+     "W": 30,
+     "D": 50,
+     "printed": true,
+     "units": "cm"
+    },
+    {
+     "source": "ST7757 dxf.dxf FOUNDATION PLAN S-COL.BON outline 10E4 (drawn, no printed size)",
+     "W": 30,
+     "D": 50,
+     "printed": false,
+     "units": "cm"
+    }
+   ],
+   "footing": {
+    "type": "F14",
+    "H": 0.5,
+    "schedule_handle": "2AD5",
+    "outline_handle": "1B1A",
+    "underlay": 0.07,
+    "blinding": 0.1,
+    "pit_raft": false,
+    "pit_depth": null
+   }
+  },
+  {
+   "id": "NECK:COL:SH10:C3@150039,43577",
+   "type": "C3",
+   "label_handle": "10A1",
+   "outline_handle": "10A0",
+   "released": {
+    "register": "PROVISIONAL_REGISTER",
+    "m3": 0.3
+   },
+   "sections": [
+    {
+     "source": "ST7757 dxf.dxf SH11 'Schedule of Columns' FOUNDATION band (INSERT CGT; for CN the TEXT row, T-075)",
+     "W": 30,
+     "D": 50,
+     "printed": true,
+     "units": "cm"
+    },
+    {
+     "source": "ST7757 dxf.dxf FOUNDATION PLAN S-COL.BON outline 10A0 (drawn, no printed size)",
+     "W": 30,
+     "D": 50,
+     "printed": false,
+     "units": "cm"
+    }
+   ],
+   "footing": {
+    "type": "F8",
+    "H": 0.5,
+    "schedule_handle": "2AF6",
+    "outline_handle": "1B24",
+    "underlay": 0.07,
+    "blinding": 0.1,
+    "pit_raft": false,
+    "pit_depth": null
+   }
+  },
+  {
+   "id": "NECK:COL:SH10:C4@144340,50189",
+   "type": "C4",
+   "label_handle": "1672",
+   "outline_handle": "10D7",
+   "released": {
+    "register": "PROVISIONAL_REGISTER",
+    "m3": 0.315
+   },
+   "sections": [
+    {
+     "source": "ST7757 dxf.dxf SH11 'Schedule of Columns' FOUNDATION band (INSERT CGT; for CN the TEXT row, T-075)",
+     "W": 30,
+     "D": 50,
+     "printed": true,
+     "units": "cm"
+    },
+    {
+     "source": "ST7757 dxf.dxf FOUNDATION PLAN S-COL.BON outline 10D7 (drawn, no printed size)",
+     "W": 30,
+     "D": 50,
+     "printed": false,
+     "units": "cm"
+    }
+   ],
+   "footing": {
+    "type": "F4",
+    "H": 0.4,
+    "schedule_handle": "1CAB",
+    "outline_handle": "1665",
+    "underlay": 0.07,
+    "blinding": 0.1,
+    "pit_raft": false,
+    "pit_depth": null
+   }
+  },
+  {
+   "id": "NECK:COL:SH10:C4@148342,50109",
+   "type": "C4",
+   "label_handle": "1671",
+   "outline_handle": "108D",
+   "released": {
+    "register": "PROVISIONAL_REGISTER",
+    "m3": 0.315
+   },
+   "sections": [
+    {
+     "source": "ST7757 dxf.dxf SH11 'Schedule of Columns' FOUNDATION band (INSERT CGT; for CN the TEXT row, T-075)",
+     "W": 30,
+     "D": 50,
+     "printed": true,
+     "units": "cm"
+    },
+    {
+     "source": "ST7757 dxf.dxf FOUNDATION PLAN S-COL.BON outline 108D (drawn, no printed size)",
+     "W": 25,
+     "D": 50,
+     "printed": false,
+     "units": "cm"
+    }
+   ],
+   "footing": {
+    "type": "F4",
+    "H": 0.4,
+    "schedule_handle": "1CAB",
+    "outline_handle": "1666",
+    "underlay": 0.07,
+    "blinding": 0.1,
+    "pit_raft": false,
+    "pit_depth": null
+   }
+  },
+  {
+   "id": "NECK:COL:SH10:C5@129305,40458",
+   "type": "C5",
+   "label_handle": "10BE",
+   "outline_handle": "10BD",
+   "released": {
+    "register": "PROVISIONAL_REGISTER",
+    "m3": 0.36
+   },
+   "sections": [
+    {
+     "source": "ST7757 dxf.dxf SH11 'Schedule of Columns' FOUNDATION band (INSERT CGT; for CN the TEXT row, T-075)",
+     "W": 30,
+     "D": 60,
+     "printed": true,
+     "units": "cm"
+    },
+    {
+     "source": "ST7757 dxf.dxf FOUNDATION PLAN S-COL.BON outline 10BD (drawn, no printed size)",
+     "W": 30,
+     "D": 60,
+     "printed": false,
+     "units": "cm"
+    }
+   ],
+   "footing": {
+    "type": "F13",
+    "H": 0.5,
+    "schedule_handle": "2A98",
+    "outline_handle": "1ADB",
+    "underlay": 0.07,
+    "blinding": 0.1,
+    "pit_raft": false,
+    "pit_depth": null
+   }
+  },
+  {
+   "id": "NECK:COL:SH10:C5@140479,50181",
+   "type": "C5",
+   "label_handle": "1673",
+   "outline_handle": "108A",
+   "released": {
+    "register": "PROVISIONAL_REGISTER",
+    "m3": 0.378
+   },
+   "sections": [
+    {
+     "source": "ST7757 dxf.dxf SH11 'Schedule of Columns' FOUNDATION band (INSERT CGT; for CN the TEXT row, T-075)",
+     "W": 30,
+     "D": 60,
+     "printed": true,
+     "units": "cm"
+    },
+    {
+     "source": "ST7757 dxf.dxf FOUNDATION PLAN S-COL.BON outline 108A (drawn, no printed size)",
+     "W": 30,
+     "D": 60,
+     "printed": false,
+     "units": "cm"
+    }
+   ],
+   "footing": {
+    "type": "F5",
+    "H": 0.4,
+    "schedule_handle": "1CB6",
+    "outline_handle": "1664",
+    "underlay": 0.07,
+    "blinding": 0.1,
+    "pit_raft": false,
+    "pit_depth": null
+   }
+  },
+  {
+   "id": "NECK:COL:SH10:C5@144472,38438",
+   "type": "C5",
+   "label_handle": "166F",
+   "outline_handle": "10D3",
+   "released": {
+    "register": "PROVISIONAL_REGISTER",
+    "m3": 0.378
+   },
+   "sections": [
+    {
+     "source": "ST7757 dxf.dxf SH11 'Schedule of Columns' FOUNDATION band (INSERT CGT; for CN the TEXT row, T-075)",
+     "W": 30,
+     "D": 60,
+     "printed": true,
+     "units": "cm"
+    },
+    {
+     "source": "ST7757 dxf.dxf FOUNDATION PLAN S-COL.BON outline 10D3 (drawn, no printed size)",
+     "W": 30,
+     "D": 60,
+     "printed": false,
+     "units": "cm"
+    }
+   ],
+   "footing": {
+    "type": "F5",
+    "H": 0.4,
+    "schedule_handle": "1CB6",
+    "outline_handle": "166D",
+    "underlay": 0.07,
+    "blinding": 0.1,
+    "pit_raft": false,
+    "pit_depth": null
+   }
+  },
+  {
+   "id": "NECK:COL:SH10:C6@134002,42128",
+   "type": "C6",
+   "label_handle": "168D",
+   "outline_handle": "10C2",
+   "released": {
+    "register": "PROVISIONAL_REGISTER",
+    "m3": 0.42
+   },
+   "sections": [
+    {
+     "source": "ST7757 dxf.dxf SH11 'Schedule of Columns' FOUNDATION band (INSERT CGT; for CN the TEXT row, T-075)",
+     "W": 30,
+     "D": 70,
+     "printed": true,
+     "units": "cm"
+    },
+    {
+     "source": "ST7757 dxf.dxf FOUNDATION PLAN S-COL.BON outline 10C2 (drawn, no printed size)",
+     "W": 30,
+     "D": 70,
+     "printed": false,
+     "units": "cm"
+    }
+   ],
+   "footing": {
+    "type": "F6",
+    "H": 0.5,
+    "schedule_handle": "1CC1",
+    "outline_handle": "1B19",
+    "underlay": 0.07,
+    "blinding": 0.1,
+    "pit_raft": false,
+    "pit_depth": null
+   }
+  },
+  {
+   "id": "NECK:COL:SH10:C7@133324,44621",
+   "type": "C7",
+   "label_handle": "10C9",
+   "outline_handle": "10C8",
+   "released": {
+    "register": "PROVISIONAL_REGISTER",
+    "m3": 0.432
+   },
+   "sections": [
+    {
+     "source": "ST7757 dxf.dxf SH11 'Schedule of Columns' FOUNDATION band (INSERT CGT; for CN the TEXT row, T-075)",
+     "W": 30,
+     "D": 80,
+     "printed": true,
+     "units": "cm"
+    },
+    {
+     "source": "ST7757 dxf.dxf FOUNDATION PLAN S-COL.BON outline 10C8 (drawn, no printed size)",
+     "W": 30,
+     "D": 80,
+     "printed": false,
+     "units": "cm"
+    }
+   ],
+   "footing": {
+    "type": "F12",
+    "H": 0.7,
+    "schedule_handle": "2A5E",
+    "outline_handle": "1ABF",
+    "underlay": 0.07,
+    "blinding": 0.1,
+    "pit_raft": false,
+    "pit_depth": null
+   }
+  },
+  {
+   "id": "NECK:COL:SH10:C8@141489,38336",
+   "type": "C8",
+   "label_handle": "10E1",
+   "outline_handle": "10E0",
+   "released": {
+    "register": "PROVISIONAL_REGISTER",
+    "m3": 0.54
+   },
+   "sections": [
+    {
+     "source": "ST7757 dxf.dxf SH11 'Schedule of Columns' FOUNDATION band (INSERT CGT; for CN the TEXT row, T-075)",
+     "W": 30,
+     "D": 90,
+     "printed": true,
+     "units": "cm"
+    },
+    {
+     "source": "ST7757 dxf.dxf COLUMN & AXIS PLAN size text",
+     "W": 30,
+     "D": 80,
+     "printed": true,
+     "units": "cm"
+    },
+    {
+     "source": "ST7757 dxf.dxf FOUNDATION PLAN S-COL.BON outline 10E0 (drawn, no printed size)",
+     "W": 30,
+     "D": 80,
+     "printed": false,
+     "units": "cm"
+    }
+   ],
+   "footing": {
+    "type": "F14",
+    "H": 0.5,
+    "schedule_handle": "2AD5",
+    "outline_handle": "1B1A",
+    "underlay": 0.07,
+    "blinding": 0.1,
+    "pit_raft": false,
+    "pit_depth": null
+   }
+  },
+  {
+   "id": "NECK:COL:SH10:C8@148730,43412",
+   "type": "C8",
+   "label_handle": "1670",
+   "outline_handle": "10D0",
+   "released": {
+    "register": "PROVISIONAL_REGISTER",
+    "m3": 0.54
+   },
+   "sections": [
+    {
+     "source": "ST7757 dxf.dxf SH11 'Schedule of Columns' FOUNDATION band (INSERT CGT; for CN the TEXT row, T-075)",
+     "W": 30,
+     "D": 90,
+     "printed": true,
+     "units": "cm"
+    },
+    {
+     "source": "ST7757 dxf.dxf FOUNDATION PLAN S-COL.BON outline 10D0 (drawn, no printed size)",
+     "W": 30,
+     "D": 90,
+     "printed": false,
+     "units": "cm"
+    }
+   ],
+   "footing": {
+    "type": "F8",
+    "H": 0.5,
+    "schedule_handle": "2AF6",
+    "outline_handle": "1B24",
+    "underlay": 0.07,
+    "blinding": 0.1,
+    "pit_raft": false,
+    "pit_depth": null
+   }
+  },
+  {
+   "id": "NECK:COL:SH10:C9@138589,44775",
+   "type": "C9",
+   "label_handle": "109A",
+   "outline_handle": "1090",
+   "released": {
+    "register": "PROVISIONAL_REGISTER",
+    "m3": 0.585
+   },
+   "sections": [
+    {
+     "source": "ST7757 dxf.dxf SH11 'Schedule of Columns' FOUNDATION band (INSERT CGT; for CN the TEXT row, T-075)",
+     "W": 30,
+     "D": 100,
+     "printed": true,
+     "units": "cm"
+    },
+    {
+     "source": "ST7757 dxf.dxf COLUMN & AXIS PLAN size text",
+     "W": 25,
+     "D": 100,
+     "printed": true,
+     "units": "cm"
+    },
+    {
+     "source": "ST7757 dxf.dxf FOUNDATION PLAN S-COL.BON outline 1090 (drawn, no printed size)",
+     "W": 25,
+     "D": 100,
+     "printed": false,
+     "units": "cm"
+    }
+   ],
+   "footing": {
+    "type": "FF",
+    "H": 0.55,
+    "schedule_handle": "2B1E",
+    "outline_handle": "1B2B",
+    "underlay": null,
+    "blinding": 0.1,
+    "pit_raft": true,
+    "pit_depth": null
+   }
+  },
+  {
+   "id": "NECK:COL:SH10:C9@144230,46259",
+   "type": "C9",
+   "label_handle": "1677",
+   "outline_handle": "10DA",
+   "released": {
+    "register": "PROVISIONAL_REGISTER",
+    "m3": 0.585
+   },
+   "sections": [
+    {
+     "source": "ST7757 dxf.dxf SH11 'Schedule of Columns' FOUNDATION band (INSERT CGT; for CN the TEXT row, T-075)",
+     "W": 30,
+     "D": 100,
+     "printed": true,
+     "units": "cm"
+    },
+    {
+     "source": "ST7757 dxf.dxf FOUNDATION PLAN S-COL.BON outline 10DA (drawn, no printed size)",
+     "W": 30,
+     "D": 100,
+     "printed": false,
+     "units": "cm"
+    }
+   ],
+   "footing": {
+    "type": "F9",
+    "H": 0.55,
+    "schedule_handle": "1CD7",
+    "outline_handle": "180F",
+    "underlay": 0.07,
+    "blinding": 0.1,
+    "pit_raft": false,
+    "pit_depth": null
+   }
+  },
+  {
+   "id": "NECK:COL:SH10:C@119898,42592",
+   "type": "C",
+   "label_handle": "blk:167F",
+   "outline_handle": "10A8",
+   "released": {
+    "register": "PROVISIONAL_REGISTER",
+    "m3": 0.33
+   },
+   "sections": [
+    {
+     "source": "ST7757 dxf.dxf SH11 'Schedule of Columns' FOUNDATION band (INSERT CGT; for CN the TEXT row, T-075)",
+     "W": 30,
+     "D": 50,
+     "printed": true,
+     "units": "cm"
+    },
+    {
+     "source": "ST7757 dxf.dxf FOUNDATION PLAN S-COL.BON outline 10A8 (drawn, no printed size)",
+     "W": 30,
+     "D": 50,
+     "printed": false,
+     "units": "cm"
+    }
+   ],
+   "footing": {
+    "type": "F",
+    "H": 0.3,
+    "schedule_handle": "1C79",
+    "outline_handle": "1668",
+    "underlay": 0.07,
+    "blinding": 0.1,
+    "pit_raft": false,
+    "pit_depth": null
+   }
+  },
+  {
+   "id": "NECK:COL:SH10:C@120004,36736",
+   "type": "C",
+   "label_handle": "blk:1680",
+   "outline_handle": "10AB",
+   "released": {
+    "register": "PROVISIONAL_REGISTER",
+    "m3": 0.33
+   },
+   "sections": [
+    {
+     "source": "ST7757 dxf.dxf SH11 'Schedule of Columns' FOUNDATION band (INSERT CGT; for CN the TEXT row, T-075)",
+     "W": 30,
+     "D": 50,
+     "printed": true,
+     "units": "cm"
+    },
+    {
+     "source": "ST7757 dxf.dxf FOUNDATION PLAN S-COL.BON outline 10AB (drawn, no printed size)",
+     "W": 30,
+     "D": 50,
+     "printed": false,
+     "units": "cm"
+    }
+   ],
+   "footing": {
+    "type": "F",
+    "H": 0.3,
+    "schedule_handle": "1C79",
+    "outline_handle": "1669",
+    "underlay": 0.07,
+    "blinding": 0.1,
+    "pit_raft": false,
+    "pit_depth": null
+   }
+  },
+  {
+   "id": "NECK:COL:SH10:C@122085,43426",
+   "type": "C",
+   "label_handle": "blk:1678",
+   "outline_handle": "10B4",
+   "released": {
+    "register": "PROVISIONAL_REGISTER",
+    "m3": 0.33
+   },
+   "sections": [
+    {
+     "source": "ST7757 dxf.dxf SH11 'Schedule of Columns' FOUNDATION band (INSERT CGT; for CN the TEXT row, T-075)",
+     "W": 30,
+     "D": 50,
+     "printed": true,
+     "units": "cm"
+    },
+    {
+     "source": "ST7757 dxf.dxf FOUNDATION PLAN S-COL.BON outline 10B4 (drawn, no printed size)",
+     "W": 30,
+     "D": 50,
+     "printed": false,
+     "units": "cm"
+    }
+   ],
+   "footing": {
+    "type": "F",
+    "H": 0.3,
+    "schedule_handle": "1C79",
+    "outline_handle": "1667",
+    "underlay": 0.07,
+    "blinding": 0.1,
+    "pit_raft": false,
+    "pit_depth": null
+   }
+  },
+  {
+   "id": "NECK:COL:SH10:C@131290,36755",
+   "type": "C",
+   "label_handle": "blk:1682",
+   "outline_handle": "10B7",
+   "released": {
+    "register": "PROVISIONAL_REGISTER",
+    "m3": 0.33
+   },
+   "sections": [
+    {
+     "source": "ST7757 dxf.dxf SH11 'Schedule of Columns' FOUNDATION band (INSERT CGT; for CN the TEXT row, T-075)",
+     "W": 30,
+     "D": 50,
+     "printed": true,
+     "units": "cm"
+    },
+    {
+     "source": "ST7757 dxf.dxf FOUNDATION PLAN S-COL.BON outline 10B7 (drawn, no printed size)",
+     "W": 30,
+     "D": 40,
+     "printed": false,
+     "units": "cm"
+    }
+   ],
+   "footing": {
+    "type": "F",
+    "H": 0.3,
+    "schedule_handle": "1C79",
+    "outline_handle": "166A",
+    "underlay": 0.07,
+    "blinding": 0.1,
+    "pit_raft": false,
+    "pit_depth": null
+   }
+  },
+  {
+   "id": "NECK:COL:SH10:C10@148899,36778",
+   "type": "C10",
+   "label_handle": "10D4",
+   "outline_handle": "10E8",
+   "released": {
+    "register": "UNRESOLVED_REGISTER",
+    "m3": null
+   },
+   "sections": [
+    {
+     "source": "ST7757 dxf.dxf SH11 'Schedule of Columns' FOUNDATION band (INSERT CGT; for CN the TEXT row, T-075)",
+     "W": 30,
+     "D": 70,
+     "printed": true,
+     "units": "cm"
+    },
+    {
+     "source": "ST7757 dxf.dxf FOUNDATION PLAN S-COL.BON outline 10E8 (drawn, no printed size)",
+     "W": 30,
+     "D": 70,
+     "printed": false,
+     "units": "cm"
+    }
+   ],
+   "footing": {
+    "type": "F10|F",
+    "H": null,
+    "conflict": "open outline 1B1B labelled F10 (2.80x1.40x0.50) and F (0.90x0.80x0.30)",
+    "outline_handle": "1B1B"
+   }
+  },
+  {
+   "id": "NECK:COL:SH10:C@150972,36507",
+   "type": "C",
+   "label_handle": "166E",
+   "outline_handle": "10A4",
+   "released": {
+    "register": "UNRESOLVED_REGISTER",
+    "m3": null
+   },
+   "sections": [
+    {
+     "source": "ST7757 dxf.dxf SH11 'Schedule of Columns' FOUNDATION band (INSERT CGT; for CN the TEXT row, T-075)",
+     "W": 30,
+     "D": 50,
+     "printed": true,
+     "units": "cm"
+    },
+    {
+     "source": "ST7757 dxf.dxf FOUNDATION PLAN S-COL.BON outline 10A4 (drawn, no printed size)",
+     "W": 30,
+     "D": 50,
+     "printed": false,
+     "units": "cm"
+    }
+   ],
+   "footing": {
+    "type": "F10|F",
+    "H": null,
+    "conflict": "open outline 1B1B labelled F10 (2.80x1.40x0.50) and F (0.90x0.80x0.30)",
+    "outline_handle": "1B1B"
+   }
+  },
+  {
+   "id": "NECK:COL:SH10:CN@140890,42630",
+   "type": "CN",
+   "label_handle": "10F5",
+   "outline_handle": "10F6",
+   "released": {
+    "register": "UNRESOLVED_REGISTER",
+    "m3": null
+   },
+   "sections": [
+    {
+     "source": "ST7757 dxf.dxf SH11 'Schedule of Columns' FOUNDATION band (INSERT CGT; for CN the TEXT row, T-075)",
+     "W": 30,
+     "D": 30,
+     "printed": true,
+     "units": "cm"
+    },
+    {
+     "source": "ST7757 dxf.dxf FOUNDATION PLAN S-COL.BON outline 10F6 (drawn, no printed size)",
+     "W": 30,
+     "D": 30,
+     "printed": false,
+     "units": "cm"
+    }
+   ],
+   "footing": {
+    "type": "FN",
+    "H": 0.3,
+    "schedule_handle": "1CF8",
+    "outline_handle": null,
+    "underlay": 0.07,
+    "blinding": 0.1,
+    "pit_raft": false,
+    "pit_depth": null
+   }
+  },
+  {
+   "id": "NECK:COL:SH10:CN@146123,41338",
+   "type": "CN",
+   "label_handle": "10ED",
+   "outline_handle": "10EE",
+   "released": {
+    "register": "UNRESOLVED_REGISTER",
+    "m3": null
+   },
+   "sections": [
+    {
+     "source": "ST7757 dxf.dxf SH11 'Schedule of Columns' FOUNDATION band (INSERT CGT; for CN the TEXT row, T-075)",
+     "W": 30,
+     "D": 30,
+     "printed": true,
+     "units": "cm"
+    },
+    {
+     "source": "ST7757 dxf.dxf FOUNDATION PLAN S-COL.BON outline 10EE (drawn, no printed size)",
+     "W": 30,
+     "D": 30,
+     "printed": false,
+     "units": "cm"
+    }
+   ],
+   "footing": {
+    "type": "FN",
+    "H": 0.3,
+    "schedule_handle": "1CF8",
+    "outline_handle": null,
+    "underlay": 0.07,
+    "blinding": 0.1,
+    "pit_raft": false,
+    "pit_depth": null
+   }
+  },
+  {
+   "id": "NECK:COL:SH10:CN@146847,47309",
+   "type": "CN",
+   "label_handle": "1810",
+   "outline_handle": "180A",
+   "released": {
+    "register": "UNRESOLVED_REGISTER",
+    "m3": null
+   },
+   "sections": [
+    {
+     "source": "ST7757 dxf.dxf SH11 'Schedule of Columns' FOUNDATION band (INSERT CGT; for CN the TEXT row, T-075)",
+     "W": 30,
+     "D": 30,
+     "printed": true,
+     "units": "cm"
+    },
+    {
+     "source": "ST7757 dxf.dxf FOUNDATION PLAN S-COL.BON outline 180A (drawn, no printed size)",
+     "W": 30,
+     "D": 30,
+     "printed": false,
+     "units": "cm"
+    }
+   ],
+   "footing": {
+    "type": "FN",
+    "H": 0.3,
+    "schedule_handle": "1CF8",
+    "outline_handle": "180C",
+    "underlay": 0.07,
+    "blinding": 0.1,
+    "pit_raft": false,
+    "pit_depth": null
+   }
+  },
+  {
+   "id": "NECK:COL:SH10:CN@148005,44815",
+   "type": "CN",
+   "label_handle": "17C9",
+   "outline_handle": "17C5",
+   "released": {
+    "register": "UNRESOLVED_REGISTER",
+    "m3": null
+   },
+   "sections": [
+    {
+     "source": "ST7757 dxf.dxf SH11 'Schedule of Columns' FOUNDATION band (INSERT CGT; for CN the TEXT row, T-075)",
+     "W": 30,
+     "D": 30,
+     "printed": true,
+     "units": "cm"
+    },
+    {
+     "source": "ST7757 dxf.dxf FOUNDATION PLAN S-COL.BON outline 17C5 (drawn, no printed size)",
+     "W": 30,
+     "D": 30,
+     "printed": false,
+     "units": "cm"
+    }
+   ],
+   "footing": {
+    "type": "F8",
+    "H": 0.5,
+    "schedule_handle": "2AF6",
+    "outline_handle": "1B24",
+    "underlay": 0.07,
+    "blinding": 0.1,
+    "pit_raft": false,
+    "pit_depth": null
+   }
+  },
+  {
+   "id": "NECK:COL:SH10:CN@148243,48963",
+   "type": "CN",
+   "label_handle": "17CA",
+   "outline_handle": "17C8",
+   "released": {
+    "register": "UNRESOLVED_REGISTER",
+    "m3": null
+   },
+   "sections": [
+    {
+     "source": "ST7757 dxf.dxf SH11 'Schedule of Columns' FOUNDATION band (INSERT CGT; for CN the TEXT row, T-075)",
+     "W": 30,
+     "D": 30,
+     "printed": true,
+     "units": "cm"
+    },
+    {
+     "source": "ST7757 dxf.dxf FOUNDATION PLAN S-COL.BON outline 17C8 (drawn, no printed size)",
+     "W": 30,
+     "D": 30,
+     "printed": false,
+     "units": "cm"
+    }
+   ],
+   "footing": {
+    "type": "F4",
+    "H": 0.4,
+    "schedule_handle": "1CAB",
+    "outline_handle": "1666",
+    "underlay": 0.07,
+    "blinding": 0.1,
+    "pit_raft": false,
+    "pit_depth": null
+   }
+  },
+  {
+   "id": "NECK:COL:SH10:CN@149929,40462",
+   "type": "CN",
+   "label_handle": "10FD",
+   "outline_handle": "10FE",
+   "released": {
+    "register": "UNRESOLVED_REGISTER",
+    "m3": null
+   },
+   "sections": [
+    {
+     "source": "ST7757 dxf.dxf SH11 'Schedule of Columns' FOUNDATION band (INSERT CGT; for CN the TEXT row, T-075)",
+     "W": 30,
+     "D": 30,
+     "printed": true,
+     "units": "cm"
+    },
+    {
+     "source": "ST7757 dxf.dxf FOUNDATION PLAN S-COL.BON outline 10FE (drawn, no printed size)",
+     "W": 30,
+     "D": 30,
+     "printed": false,
+     "units": "cm"
+    }
+   ],
+   "footing": {
+    "type": "FN",
+    "H": 0.3,
+    "schedule_handle": "1CF8",
+    "outline_handle": null,
+    "underlay": 0.07,
+    "blinding": 0.1,
+    "pit_raft": false,
+    "pit_depth": null
+   }
+  }
+ ]
+}
