@@ -227,4 +227,8 @@ OTHER_REBAR_AWARE = (
     # T-140: the coverage census V2 names STR.REBAR / reinforcement only to report which families' steel is missing
     # (MISSING_DATA, as census V1); it writes no reinforcement quantity and applies no ratio
     "engine/source/coverage_census_v2.py",
+    # T-186 / T-190: the default guard names REINFORCEMENT only as one of the structural trade labels a guarded line may
+    # carry (finding DG-4 FINISHED_AS_STRUCTURAL); it imports only the standard library, writes no reinforcement
+    # quantity, computes no kg and applies no ratio
+    "engine/source/default_guard.py",
 )
