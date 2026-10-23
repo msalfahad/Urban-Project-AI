@@ -1,0 +1,464 @@
+{
+ "curved_room": {
+  "arc": {
+   "arc_lm": 3.51,
+   "outer_radius_m": 1.935,
+   "radius_m": 2.135,
+   "room_side": "R 2.135 (jamb arcs BD1 / BD6 on layer 1 and glazing BD2 on the same radius; BD3 .. BD5 glazing inside it, BCD / BD0 the outer face R 1.935)",
+   "segment_vs_straight_m2": 1.6833,
+   "sense": "inward"
+  },
+  "checks": {
+   "apex = centre x - R = printed 3450": true,
+   "curved wall R - R_outer = printed 200": true,
+   "depth = printed 4000": true,
+   "glazing room-side arc on the wall jamb radius": true,
+   "lobby = printed 1800 x 2100": true,
+   "strip depth = printed 150": true,
+   "width = printed 4200": true
+  },
+  "element": "1F-R3CFCFD curved east room + open passage OP-009 + lobby (one line in the engine)",
+  "engine_line_hand_lm": 22.151,
+  "engine_line_hand_m2": 19.0167,
+  "pairing": {
+   "closed": false,
+   "paired": [],
+   "readings": [
+    {
+     "closes_area": false,
+     "closes_perimeter": false,
+     "d_lm": -0.739,
+     "d_m2": 1.7267,
+     "id": "A drawn arc face R 2.135 + OP-009 strip + lobby, joinery not deducted (engine line)",
+     "lm": 22.151,
+     "m2": 19.0167,
+     "physical": true,
+     "verdict": "NOT A PAIRING"
+    },
+    {
+     "closes_area": false,
+     "closes_perimeter": false,
+     "d_lm": 0.261,
+     "d_m2": 0.6767,
+     "id": "B as A, the lobby joinery 0.50 x 2.10 deducted",
+     "lm": 23.151,
+     "m2": 17.9667,
+     "physical": true,
+     "verdict": "NOT A PAIRING"
+    },
+    {
+     "closes_area": false,
+     "closes_perimeter": false,
+     "d_lm": -6.239,
+     "d_m2": -2.2296,
+     "id": "C room to the arc face only (no strip, no lobby)",
+     "lm": 16.651,
+     "m2": 15.0604,
+     "physical": true,
+     "verdict": "NOT A PAIRING"
+    },
+    {
+     "closes_area": false,
+     "closes_perimeter": false,
+     "d_lm": -5.939,
+     "d_m2": -2.0346,
+     "id": "D room to the arc face + strip",
+     "lm": 16.951,
+     "m2": 15.2554,
+     "physical": true,
+     "verdict": "NOT A PAIRING"
+    },
+    {
+     "closes_area": false,
+     "closes_perimeter": false,
+     "d_lm": -0.99,
+     "d_m2": 3.41,
+     "id": "E straight wall line (arc ignored) + strip + lobby: REFUSED (T-197 R4)",
+     "lm": 21.9,
+     "m2": 20.7,
+     "physical": false,
+     "verdict": "NOT A PAIRING"
+    },
+    {
+     "closes_area": false,
+     "closes_perimeter": false,
+     "d_lm": -1.1211,
+     "d_m2": 3.2006,
+     "id": "F chord between the arc ends + strip + lobby: REFUSED",
+     "lm": 21.7689,
+     "m2": 20.4906,
+     "physical": false,
+     "verdict": "NOT A PAIRING"
+    },
+    {
+     "closes_area": false,
+     "closes_perimeter": false,
+     "d_lm": -2.49,
+     "d_m2": 0.41,
+     "id": "G apex width 3.45 x 4.00 + strip + lobby (printed E6F as a rectangle): REFUSED",
+     "lm": 20.4,
+     "m2": 17.7,
+     "physical": false,
+     "verdict": "NOT A PAIRING"
+    },
+    {
+     "closes_area": false,
+     "closes_perimeter": false,
+     "d_lm": -0.739,
+     "d_m2": 0.0433,
+     "id": "H the arc segment taken off twice (not a drawn element): REFUSED",
+     "lm": 22.151,
+     "m2": 17.3333,
+     "physical": false,
+     "verdict": "NOT A PAIRING"
+    }
+   ],
+   "reference_lm": 22.89,
+   "reference_m2": 17.29
+  },
+  "parts": {
+   "columns": [
+    {
+     "handle": "2FEA",
+     "m2": 0.015
+    },
+    {
+     "handle": "300B",
+     "m2": 0.0175
+    },
+    {
+     "handle": "2FDB",
+     "m2": 0.0425
+    },
+    {
+     "handle": "2FD8",
+     "m2": 0.0
+    }
+   ],
+   "columns_m2": 0.075,
+   "joinery_box_m2": 1.05,
+   "lobby_m2": 3.78,
+   "room_to_arc_m2": 15.1167,
+   "strip_m2": 0.195
+  },
+  "printed": {
+   "apex width E6F": 3.45,
+   "curved wall E7B": 0.2,
+   "depth EAD": 4.0,
+   "lobby F88": 1.8,
+   "lobby FAA": 2.1,
+   "strip F9F": 0.15,
+   "width F4C": 4.2
+  },
+  "residual": {
+   "engine_minus_row_lm": -0.739,
+   "engine_minus_row_m2": 1.7267,
+   "left_after_segment_m2": 0.0434,
+   "of_which_segment_m2": 1.6833,
+   "segment_twice_reading": {
+    "d_lm": -0.739,
+    "d_m2": 0.0433
+   }
+  },
+  "verdict": "ENGINE_RIGHT on geometry (own hand from the printed 4200 / 4000 / 3450 / 200 and the drawn arc R 2.135); the freelancer row 17.29 / 22.89 is UNRESOLVED: no physical reading closes either key, the best area match (segment taken off twice, -0.043 m2) is not a drawn element and fails the perimeter key by +0.739 lm"
+ },
+ "dressing": {
+  "area_m2": 2.97,
+  "faces": "B03 + B04 (west, door OP-019 between) / B00 (east) / B20 (north) / AD4 + AD5 (south, OP-011 between)",
+  "id": "1F-RFFE7AF",
+  "inserts_inside": 0,
+  "inside_any_layer": [
+   "B0A",
+   "BE3"
+  ],
+  "op011_width_m": 1.0,
+  "op019_width_m": 0.8,
+  "outline_lm": 6.9,
+  "proposed": "FLOOR.INTERNAL +2.970 m2 (area DRAWING-CONFIRMED; Checker 22:05 re-measured), class DRY, finish material HELD (URBAN-DRY-FLOOR-PORCELAIN-DEFAULT@v1 would set porcelain once the DRY class is VERIFIED; never borrowed from the bed room)",
+  "released_A": "ARCH.SPACE 2.970 PROVISIONAL 'UNLABELLED_SPACE' (L-7c5a02386f49947cf223), in no floor line",
+  "size_m": [
+   1.65,
+   1.8
+  ],
+  "typing": {
+   "area_m2": 2.97,
+   "area_status": "DRAWING-CONFIRMED",
+   "class": "INTERIOR",
+   "floor_line": "FLOOR.INTERNAL",
+   "id": "1F-RFFE7AF",
+   "joinery": [
+    {
+     "counterpart_above_or_below": false,
+     "handles": [
+      "B0A",
+      "BE3"
+     ],
+     "has_wall_line": false,
+     "layer": "5",
+     "layer_role": "ANNOTATION"
+    }
+   ],
+   "material_status": "HELD",
+   "wet_dry": "DRY",
+   "why": [
+    "box(es) on an annotation / furniture layer, no wall line, nothing above / below: joinery, the floor continues under it (URBAN-FLOOR-FINISH-BEFORE-CABINETRY-METHOD@v1)",
+    "no sanitary fixture, no drain on the drainage plan: DRY",
+    "enclosed, reached only from interior spaces: INTERIOR (UP-SPACE-001); area enters the internal floor line (URBAN-FINISH-QUANTITY-INDEPENDENT-OF-MATERIAL@v1), never ARCH.SPACE only"
+   ]
+  }
+ },
+ "floor_key": {
+  "before_T218_m2": 2.4643,
+  "before_T218_pct": 0.64,
+  "closed": true,
+  "engine_m2": 387.5339,
+  "like_for_like_m2": 1.9443,
+  "like_for_like_pct": 0.5,
+  "parts": [
+   {
+    "id": "GF-OPEN (T-208 like for like) less GF OP-001 0.280 (wall body) and OP-007 0.240 (exterior passage)",
+    "kind": "MEASUREMENT + SCOPE (T-223)",
+    "m2": -0.2923
+   },
+   {
+    "id": "GF-DIWANIYA (T-208 like for like)",
+    "kind": "AS T-208",
+    "m2": 0.1003
+   },
+   {
+    "id": "GF-MASTER (T-208 like for like)",
+    "kind": "AS T-208",
+    "m2": -0.1104
+   },
+   {
+    "id": "GF-DRIVER (T-208 like for like)",
+    "kind": "AS T-208",
+    "m2": 0.005
+   },
+   {
+    "id": "GF-KITCHEN (T-208 like for like)",
+    "kind": "AS T-208",
+    "m2": 0.08
+   },
+   {
+    "id": "GF-BATHS (T-208 like for like)",
+    "kind": "AS T-208",
+    "m2": 0.098
+   },
+   {
+    "id": "GF-HANDWASH (T-208 like for like)",
+    "kind": "AS T-208",
+    "m2": -0.2318
+   },
+   {
+    "id": "1F-LIVING (T-208 like for like)",
+    "kind": "AS T-208",
+    "m2": 0.0194
+   },
+   {
+    "id": "1F-WET (T-208 like for like)",
+    "kind": "AS T-208",
+    "m2": 0.2345
+   },
+   {
+    "id": "2F-MAID (T-208 like for like)",
+    "kind": "AS T-208",
+    "m2": -0.23
+   },
+   {
+    "id": "2F-WC (T-208 like for like)",
+    "kind": "AS T-208",
+    "m2": -0.07
+   },
+   {
+    "id": "1F curved room vs his 17.29 (engine geometry ENGINE_RIGHT; his row not reproducible)",
+    "kind": "UNRESOLVED (freelancer side)",
+    "m2": 1.7267
+   },
+   {
+    "id": "1F west room",
+    "kind": "MEASUREMENT",
+    "m2": 0.05
+   },
+   {
+    "id": "1F 500 x 365 room column notch",
+    "kind": "MEASUREMENT",
+    "m2": -0.035
+   },
+   {
+    "id": "1F porcelain door strips OP-005 / 006 / 020 (engine lines, no row of his)",
+    "kind": "SCOPE (strip measured apart)",
+    "m2": 0.42
+   },
+   {
+    "id": "2F porcelain door strip OP-007 (engine line, no row of his)",
+    "kind": "SCOPE (strip measured apart)",
+    "m2": 0.18
+   },
+   {
+    "id": "1F dressing 2.970 + OP-011 0.150: in the engine key AND in his 'bed room 2' 19.46 (AGREE)",
+    "kind": "AGREE",
+    "m2": 0.0
+   }
+  ],
+  "reference_m2": 385.5896,
+  "residual_m2": -0.0001
+ },
+ "input_sha256_8": "ab54dd55",
+ "released_duplicate_strip_lines": {
+  "duplicates": [
+   {
+    "items": [
+     "FIN.FLOOR.PORCELAIN",
+     "ARCH.THRESHOLD"
+    ],
+    "lines": [
+     "L-2973740849077f193603",
+     "L-891f465afcfe1dec121e"
+    ],
+    "opening_id": "GF-OP-001",
+    "overlap_m2": 0.28
+   }
+  ],
+  "ok": []
+ },
+ "schema": "T223_SUMMARY_V1",
+ "side_passage": {
+  "area_m2": 5.64,
+  "engine_exterior_floor_m2": 5.4,
+  "engine_released_A": {
+   "boundary_wall_strip": "L-2973740849077f193603",
+   "boundary_wall_strip_m2": 0.28,
+   "mouth_strip": "L-686c823304edc2a7ae64",
+   "mouth_strip_m2": 0.24,
+   "space_a": "L-d1894ada6c9ed91bcb4d",
+   "space_a_m2": 1.56,
+   "space_b": "L-7e20189137840959b393",
+   "space_b_m2": 3.6
+  },
+  "faces": "west A2 / A3 (door 19C between), east 9F / A0 / A1 (windows 3BE / 3CB), boundary wall 105 / 106 (86 doubles 105), mouth between the ends of 120 / 15A",
+  "id": "GF side passage (engine faces GF-R7B7A5D 1.560 / GF-RF002DC 3.600)",
+  "missing_in_engine_m2": 0.24,
+  "mouth_lines_any_layer": 0,
+  "not_floor_in_engine_m2": 0.28,
+  "proposed": "out of ARCH.SPACE (internal unallocated) and out of the internal floor key: FLOOR.OUTDOOR side area 5.640 m2 (area DRAWING-CONFIRMED: 1.200 x 4.700 own re-read = T-123), finish porcelain / ceramic by the owner's sides rule (OWNER_RULE_OUTDOOR_FLOORS_2026-10-21: 'sides are never interlock ... part of the house') = ASSUMED - OWNER-APPROVED; the mouth strip OP-007 0.240 is part of it (not an interior doorway strip); the boundary-wall strip OP-001 0.280 is the top of a solid wall (no opening drawn: lines 105 / 106 run the full width), no floor at all",
+  "size_m": [
+   1.2,
+   4.7
+  ],
+  "typing": {
+   "area_m2": 5.64,
+   "area_status": "DRAWING-CONFIRMED",
+   "class": "EXTERIOR",
+   "floor_line": "FLOOR.OUTDOOR",
+   "id": "GF-R7B7A5D + GF-RF002DC + mouth strip OP-007",
+   "joinery": [],
+   "material_status": "by the outdoor floor rule",
+   "wet_dry": null,
+   "why": [
+    "bound EXTERIOR by Q-67 A (condition MET, Checker 2026-10-20 21:05; mouth re-read today: 0 lines on any layer across it) (UP-SPACE-002)"
+   ]
+  }
+ },
+ "sills_to_threshold_m2": 0.55,
+ "strips": [
+  {
+   "floor": "1F",
+   "joins": "3.80 x 4.30 room / dressing (now typed DRY)",
+   "measured_m2": 0.15,
+   "opening": "OP-011",
+   "proposed_item": "FIN.FLOOR.PORCELAIN (doorway strip)",
+   "qty_m2": 0.15,
+   "released_A": {
+    "item": "FIN.FLOOR.PORCELAIN",
+    "line": "L-c2e57836761709440929",
+    "m2": 0.15,
+    "state": "SOURCE_DERIVED"
+   },
+   "rule": "UP-THR-001 dry / floor continues through the opening",
+   "status": "DRAWING-CONFIRMED"
+  },
+  {
+   "floor": "1F",
+   "joins": "living / lift shaft (jambs B96 / B97)",
+   "measured_m2": 0.2,
+   "opening": "OP-007",
+   "proposed_item": "ARCH.THRESHOLD (lift landing)",
+   "qty_m2": null,
+   "released_A": {
+    "item": "FIN.FLOOR.PORCELAIN",
+    "line": "L-51a0d437797dddfb180e",
+    "m2": 0.2,
+    "state": "SOURCE_DERIVED"
+   },
+   "rule": "UP-DOOR-CLS-005 / UP-ELEV-SCHED-001: the landing door and its sill come with the lift",
+   "status": "HELD"
+  },
+  {
+   "floor": "2F",
+   "joins": "stair room / lift shaft",
+   "measured_m2": 0.2,
+   "opening": "OP-002",
+   "proposed_item": "ARCH.THRESHOLD (lift landing)",
+   "qty_m2": null,
+   "released_A": {
+    "item": "FIN.FLOOR.PORCELAIN",
+    "line": "L-22c46d456725a74b5ff7",
+    "m2": 0.2,
+    "state": "SOURCE_DERIVED"
+   },
+   "rule": "UP-DOOR-CLS-005 / UP-ELEV-SCHED-001: the landing door and its sill come with the lift",
+   "status": "HELD"
+  },
+  {
+   "floor": "2F",
+   "joins": "stair room / +9.70 roof",
+   "measured_m2": 0.15,
+   "opening": "OP-001",
+   "proposed_item": "ARCH.THRESHOLD (exterior sill)",
+   "qty_m2": null,
+   "released_A": {
+    "item": "FIN.FLOOR.PORCELAIN",
+    "line": "L-f7dc931e2c059cda77df",
+    "m2": 0.15,
+    "state": "PROVISIONAL"
+   },
+   "rule": "UP-THR-001 dry covers doorways between interior spaces; an exterior sill is by specification",
+   "status": "HELD"
+  },
+  {
+   "floor": "GF",
+   "joins": "side passage mouth (Q-67 A exterior)",
+   "measured_m2": 0.24,
+   "opening": "OP-007",
+   "proposed_item": "FLOOR.OUTDOOR (part of the side passage)",
+   "qty_m2": 0.24,
+   "released_A": {
+    "item": "FIN.FLOOR.PORCELAIN",
+    "line": "L-686c823304edc2a7ae64",
+    "m2": 0.24,
+    "state": "PROVISIONAL"
+   },
+   "rule": "Q-67 A + OWNER_RULE_OUTDOOR_FLOORS sides rule",
+   "status": "ASSUMED - OWNER-APPROVED"
+  },
+  {
+   "floor": "GF",
+   "joins": "side passage / boundary wall body (no opening drawn)",
+   "measured_m2": 0.0,
+   "opening": "OP-001",
+   "proposed_item": "none (no floor)",
+   "qty_m2": null,
+   "released_A": {
+    "item": "FIN.FLOOR.PORCELAIN",
+    "line": "L-2973740849077f193603",
+    "m2": 0.28,
+    "state": "PROVISIONAL",
+    "twin": "L-891f465afcfe1dec121e",
+    "twin_state": "BLOCKED_RFI"
+   },
+   "rule": "UP-SPACE-001 / drawing: the boundary wall (lines 105 / 106, 86) runs the full 1.200 width",
+   "status": "ENGINE DEFECT"
+  }
+ ]
+}

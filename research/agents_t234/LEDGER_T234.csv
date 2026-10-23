@@ -1,0 +1,63 @@
+panel,storey,net_m2,t_m,t_basis,sunken,m3,status,edge_owner,evidence
+GF-015,GF,2.5725,0.16,GENERAL_NOTE,yes,0.411600,DRAWING-CONFIRMED,"beam / column faces (BEAM > SLAB, C1)","B1, 5%%c10/m, 5%%c10/m; hatched ANSI31 scale 2000 = legend 'Sunken slab' (depth of the drop not printed)"
+GF-016,GF,3.3250,0.16,GENERAL_NOTE,yes,0.532000,DRAWING-CONFIRMED,"beam / column faces (BEAM > SLAB, C1)","B4, B1, 5%%c10/m, 5%%c10/m; hatched ANSI31 scale 2000 = legend 'Sunken slab' (depth of the drop not printed)"
+GF-018,GF,2.8875,0.16,GENERAL_NOTE,,0.462000,DRAWING-CONFIRMED,"beam / column faces (BEAM > SLAB, C1)","B16, 5%%c10/m, 5%%c10/m"
+GF-020,GF,1.0534,0.16,GENERAL_NOTE,,0.168544,DRAWING-CONFIRMED,"beam / column faces (BEAM > SLAB, C1)","B7, 5%%c10/m, 5%%C10; north of the pool-court bay, B24 / B7"
+GF-027,GF,5.3100,0.16,GENERAL_NOTE,,0.849600,DRAWING-CONFIRMED,"beam / column faces (BEAM > SLAB, C1)","B3, 5%%c10/m, 5%%c10/m"
+GF-032,GF,12.3205,0.16,GENERAL_NOTE,,1.971280,DRAWING-CONFIRMED,"beam / column faces (BEAM > SLAB, C1)","B8, 6%%c10/m, 5%%c10/m"
+GF-034,GF,0.0875,0.16,GENERAL_NOTE,,0.014000,DRAWING-CONFIRMED,"beam / column faces (BEAM > SLAB, C1)",bay corner outside the B7 ring
+GF-036,GF,0.0488,0.16,GENERAL_NOTE,,0.007808,DRAWING-CONFIRMED,"beam / column faces (BEAM > SLAB, C1)",bay corner outside the B7 ring
+GF-039,GF,8.3043,0.16,GENERAL_NOTE,,1.328688,DRAWING-CONFIRMED,"beam / column faces (BEAM > SLAB, C1)","T.C, B13, 5%%c10/m, 6%%C10/m; T.C turn column at its corner"
+GF-052,GF,4.0794,0.16,GENERAL_NOTE,,0.652704,DRAWING-CONFIRMED,"beam / column faces (BEAM > SLAB, C1)","B11, 5%%c10/m, 5%%c10/m"
+GF-059,GF,0.0665,0.16,GENERAL_NOTE,,0.010640,DRAWING-CONFIRMED,"beam / column faces (BEAM > SLAB, C1)",bay corner outside the B7 ring
+GF-061,GF,0.0315,0.16,GENERAL_NOTE,,0.005040,DRAWING-CONFIRMED,"beam / column faces (BEAM > SLAB, C1)",bay corner outside the B7 ring
+GF-076,GF,1.2993,0.16,GENERAL_NOTE,,0.207888,DRAWING-CONFIRMED,"beam / column faces (BEAM > SLAB, C1)","B1, 5%%c10/m, 5%%C10"
+GF-077,GF,5.3750,0.16,GENERAL_NOTE,,0.860000,DRAWING-CONFIRMED,"beam / column faces (BEAM > SLAB, C1)","B3, 5%%c10/m, 5%%c10/m; 1F arrival landing of the main stair (2.50 x 1.95) = B20 band 0.40 + 1.55 m of this panel (Q-62: slab, not stair)"
+GF-078,GF,11.7000,0.16,TAG,,1.872000,DRAWING-CONFIRMED,"beam / column faces (BEAM > SLAB, C1)","6%%C10/m, 7%%C12/m"
+GF-079,GF,2.8165,0.16,GENERAL_NOTE,,0.450640,DRAWING-CONFIRMED,"beam / column faces (BEAM > SLAB, C1)","B4, 5%%c10/m, 5%%c10/m"
+GF-081,GF,4.1176,0.16,GENERAL_NOTE,yes,0.658816,DRAWING-CONFIRMED,"beam / column faces (BEAM > SLAB, C1)","T.C, B28, B4, 5%%c10/m, 5%%c10/m; hatched ANSI31 scale 2000 = legend 'Sunken slab' (depth of the drop not printed)"
+GF-098,GF,15.5400,0.16,GENERAL_NOTE,,2.486400,DRAWING-CONFIRMED,"beam / column faces (BEAM > SLAB, C1)","D.C, CB4, B1, B1, 6%%C10/m, 7%%C10/m; D.C dead column inside"
+GF-101,GF,5.5444,0.16,GENERAL_NOTE,,0.887104,DRAWING-CONFIRMED,"beam / column faces (BEAM > SLAB, C1)","B1, 5%%c10/m, 5%%c10/m"
+GF-105,GF,6.1402,0.16,GENERAL_NOTE,,0.982432,DRAWING-CONFIRMED,"beam / column faces (BEAM > SLAB, C1)","CB6, 5%%c10/m, 6%%C10/m"
+GF-124,GF,16.2536,0.16,GENERAL_NOTE,,2.600576,DRAWING-CONFIRMED,"beam / column faces (BEAM > SLAB, C1)","CB4, B4, 7%%C10/m, 6%%C10/m"
+GF-126,GF,15.1084,0.16,GENERAL_NOTE,,2.417344,DRAWING-CONFIRMED,"beam / column faces (BEAM > SLAB, C1)","7%%C10/m, 6%%C10/m, 6%%C14/m"
+GF-128,GF,2.0804,0.16,GENERAL_NOTE,yes,0.332864,DRAWING-CONFIRMED,"beam / column faces (BEAM > SLAB, C1)","5%%c10/m, 5%%c10/m; hatched ANSI31 scale 2000 = legend 'Sunken slab' (depth of the drop not printed)"
+GF-134,GF,7.8555,0.16,GENERAL_NOTE,,1.256880,DRAWING-CONFIRMED,"beam / column faces (BEAM > SLAB, C1)",5%%c10/m
+GF-135,GF,18.0000,0.16,GENERAL_NOTE,,2.880000,DRAWING-CONFIRMED,"beam / column faces (BEAM > SLAB, C1)","7%%C10/m, 6%%C10/m, B4, 3%%c16/Top"
+GF-137,GF,13.4850,0.16,GENERAL_NOTE,,2.157600,DRAWING-CONFIRMED,"beam / column faces (BEAM > SLAB, C1)","7%%C10/m, 6%%C10/m"
+GF-139,GF,13.4550,0.16,GENERAL_NOTE,,2.152800,DRAWING-CONFIRMED,"beam / column faces (BEAM > SLAB, C1)","CB5, B1, 7%%C10/m, 6%%C10/m"
+GF-141,GF,7.3009,0.16,TAG,yes,1.168144,DRAWING-CONFIRMED,"beam / column faces (BEAM > SLAB, C1)","B5, 6%%c10/m, 5%%c10/m; hatched ANSI31 scale 2000 = legend 'Sunken slab' (depth of the drop not printed)"
+GF-146,GF,0.4563,0.16,GENERAL_NOTE,,0.073008,DRAWING-CONFIRMED,"beam / column faces (BEAM > SLAB, C1)",wedge between the round-stair flight edge (tread lines stop) and B21
+GF-169,GF,5.0803,0.16,GENERAL_NOTE,,0.812848,DRAWING-CONFIRMED,"beam / column faces (BEAM > SLAB, C1)","5%%c10/m, 5%%c10/m"
+GF-172,GF,2.9374,0.16,GENERAL_NOTE,,0.469984,DRAWING-CONFIRMED,"beam / column faces (BEAM > SLAB, C1)","5%%c10/m, 5%%c10/m"
+GF-173,GF,7.7640,0.16,GENERAL_NOTE,,1.242240,DRAWING-CONFIRMED,"beam / column faces (BEAM > SLAB, C1)","CB3, CB3, 5%%c10/m, 5%%c10/m, B1"
+GF-176,GF,4.2878,0.16,GENERAL_NOTE,,0.686048,DRAWING-CONFIRMED,"beam / column faces (BEAM > SLAB, C1)","CB3, 5%%c10/m, 5%%c10/m"
+1F-018,1F,5.4000,0.16,GENERAL_NOTE,yes,0.864000,DRAWING-CONFIRMED,"beam / column faces (BEAM > SLAB, C1)","B2, 5%%c10/m, 5%%c10/m; hatched ANSI31 scale 2000 = legend 'Sunken slab' (depth of the drop not printed)"
+1F-020,1F,9.5034,0.16,GENERAL_NOTE,,1.520544,DRAWING-CONFIRMED,"beam / column faces (BEAM > SLAB, C1)","B5, 6%%c10/m, 5%%c10/m"
+1F-023,1F,13.8041,0.16,GENERAL_NOTE,,2.208656,DRAWING-CONFIRMED,"beam / column faces (BEAM > SLAB, C1)","B6, 7%%C10/m, 6%%C10/m, P.C 20x50, 8%%C16; P.C 20x50 planted column"
+1F-025,1F,17.7050,0.16,GENERAL_NOTE,,2.832800,DRAWING-CONFIRMED,"beam / column faces (BEAM > SLAB, C1)","B4, CB12, 7%%C10/m, 6%%C10/m"
+1F-041,1F,3.2205,0.16,GENERAL_NOTE,,0.515280,DRAWING-CONFIRMED,"beam / column faces (BEAM > SLAB, C1)","B6, 5%%c10/m, 5%%C10"
+1F-057,1F,4.4135,0.16,GENERAL_NOTE,,0.706160,DRAWING-CONFIRMED,"beam / column faces (BEAM > SLAB, C1)","B6, 5%%c10/m"
+1F-060,1F,0.4674,0.16,GENERAL_NOTE,,0.074784,DRAWING-CONFIRMED,"beam / column faces (BEAM > SLAB, C1)",B4; west dome square corner outside the ring (r 2.4111)
+1F-062,1F,6.4550,0.16,GENERAL_NOTE,,1.032800,DRAWING-CONFIRMED,"beam / column faces (BEAM > SLAB, C1)","B4, 5%%c10/m, 6%%c10/m; 2F arrival landing of the main stair (2.50 x 1.95) = B23 band 0.45 + 1.50 m of this panel (Q-62: slab, not stair)"
+1F-063,1F,4.2148,0.16,GENERAL_NOTE,,0.674368,DRAWING-CONFIRMED,"beam / column faces (BEAM > SLAB, C1)","B1, B11, 5%%c10/m, 5%%c10/m"
+1F-065,1F,2.7619,0.16,GENERAL_NOTE,,0.441904,DRAWING-CONFIRMED,"beam / column faces (BEAM > SLAB, C1)","5%%c10/m, 5%%c10/m"
+1F-073/c0,1F,0.3525,0.16,GENERAL_NOTE,,0.056400,DRAWING-CONFIRMED,"beam / column faces (BEAM > SLAB, C1)",dome square corner outside the ring r 2.4111 (split from 1F-073)
+1F-073/c1,1F,0.3517,0.16,GENERAL_NOTE,,0.056272,DRAWING-CONFIRMED,"beam / column faces (BEAM > SLAB, C1)",dome square corner outside the ring r 2.4111 (split from 1F-073)
+1F-076/c0,1F,0.5823,0.16,GENERAL_NOTE,,0.093168,DRAWING-CONFIRMED,"beam / column faces (BEAM > SLAB, C1)",dome square corner outside the ring r 2.4111 (split from 1F-076)
+1F-076/c1,1F,0.5223,0.16,GENERAL_NOTE,,0.083568,DRAWING-CONFIRMED,"beam / column faces (BEAM > SLAB, C1)",dome square corner outside the ring r 2.4111 (split from 1F-076)
+1F-084,1F,20.8550,0.16,TAG,,3.336800,DRAWING-CONFIRMED,"beam / column faces (BEAM > SLAB, C1)","B18, 8%%C10/m, 7%%C10/m, 3%%c14, 3%%c14, 3%%c14, 3%%c14, T, 16, CB13, CB13"
+1F-086,1F,11.0285,0.16,GENERAL_NOTE,,1.764560,DRAWING-CONFIRMED,"beam / column faces (BEAM > SLAB, C1)","B5, 6%%c10/m, 5%%c10/m"
+1F-088,1F,11.0285,0.16,GENERAL_NOTE,,1.764560,DRAWING-CONFIRMED,"beam / column faces (BEAM > SLAB, C1)","6%%c10/m, 5%%c10/m"
+1F-090,1F,0.4674,0.16,GENERAL_NOTE,,0.074784,DRAWING-CONFIRMED,"beam / column faces (BEAM > SLAB, C1)",west dome square corner outside the ring
+1F-091,1F,0.5818,0.16,GENERAL_NOTE,,0.093088,DRAWING-CONFIRMED,"beam / column faces (BEAM > SLAB, C1)",east dome square corner outside the ring
+1F-092,1F,0.5221,0.16,GENERAL_NOTE,,0.083536,DRAWING-CONFIRMED,"beam / column faces (BEAM > SLAB, C1)",east dome square corner outside the ring
+1F-094,1F,4.6836,0.16,GENERAL_NOTE,,0.749376,DRAWING-CONFIRMED,"beam / column faces (BEAM > SLAB, C1)","5%%c10/m, 5%%c10/m, B6"
+1F-096,1F,4.5573,0.16,GENERAL_NOTE,,0.729168,DRAWING-CONFIRMED,"beam / column faces (BEAM > SLAB, C1)","5%%c10/m, 5%%c10/m"
+2F-011,2F,8.2350,0.18,TAG,,1.482300,DRAWING-CONFIRMED,"beam / column faces (BEAM > SLAB, C1)","B3, B3, 7%%C14/m, 6%%c14/m, (T&B), (T&B), T, 18; water tank, 'T 18 (T&B)'"
+2F-013,2F,5.4000,0.18,TAG,,0.972000,DRAWING-CONFIRMED,"beam / column faces (BEAM > SLAB, C1)","B1, 6%%c12/m, 6%%c12/m, T, 18, (T&B), (T&B); water tank, 'T 18'"
+2F-016,2F,15.0000,0.16,GENERAL_NOTE,,2.400000,DRAWING-CONFIRMED,"beam / column faces (BEAM > SLAB, C1)","B2, B3, B7, 7%%C10/m, 6%%C10/m"
+2F-025,2F,3.2400,0.16,GENERAL_NOTE,,0.518400,DRAWING-CONFIRMED,"beam / column faces (BEAM > SLAB, C1)","B2, B1, 5%%c10/m, 5%%c10/m; closed box (bars 5d10/m both ways), not an opening"
+2F-033,2F,7.2500,0.16,GENERAL_NOTE,,1.160000,DRAWING-CONFIRMED,"beam / column faces (BEAM > SLAB, C1)","B1, B2, 6%%c10/m, 5%%c10/m"
+2F-045,2F,2.1600,0.16,GENERAL_NOTE,,0.345600,DRAWING-CONFIRMED,"beam / column faces (BEAM > SLAB, C1)","5%%c10/m, 5%%c10/m, B1"
+2F-047,2F,3.6000,0.16,GENERAL_NOTE,,0.576000,DRAWING-CONFIRMED,"beam / column faces (BEAM > SLAB, C1)","5%%c10/m, 5%%c10/m, B2"
