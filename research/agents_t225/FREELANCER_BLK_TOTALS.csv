@@ -1,0 +1,17 @@
+workbook,cell_ref,what,value_m2,formula
+"Drive 'Alsenan chalet project' / المبانى.xlsx (freelancer blockwork workbook, sha 873308bb), sheet الكميات",H37,GF external gross,300.875,=SUM(H14:H36)
+"Drive 'Alsenan chalet project' / المبانى.xlsx (freelancer blockwork workbook, sha 873308bb), sheet الكميات",H52,GF external deductions,34.52,=SUM(H41:H51)
+"Drive 'Alsenan chalet project' / المبانى.xlsx (freelancer blockwork workbook, sha 873308bb), sheet الكميات",H54,GF external net,266.355,=H37-H52
+"Drive 'Alsenan chalet project' / المبانى.xlsx (freelancer blockwork workbook, sha 873308bb), sheet الكميات",H80,1F external gross incl. projections row 78,240.9015,=SUM(H63:H78)
+"Drive 'Alsenan chalet project' / المبانى.xlsx (freelancer blockwork workbook, sha 873308bb), sheet الكميات",H91,1F external deductions,34.03,=SUM(H84:H90)
+"Drive 'Alsenan chalet project' / المبانى.xlsx (freelancer blockwork workbook, sha 873308bb), sheet الكميات",H93,1F external net,206.8715,=H80-H91
+"Drive 'Alsenan chalet project' / المبانى.xlsx (freelancer blockwork workbook, sha 873308bb), sheet الكميات",H108,2F external gross,96.255,=SUM(H101:H107)
+"Drive 'Alsenan chalet project' / المبانى.xlsx (freelancer blockwork workbook, sha 873308bb), sheet الكميات",H116,2F external deductions,9.68,=SUM(H111:H115)
+"Drive 'Alsenan chalet project' / المبانى.xlsx (freelancer blockwork workbook, sha 873308bb), sheet الكميات",H118,2F external net,86.575,=H108-H116
+"Drive 'Alsenan chalet project' / المبانى.xlsx (freelancer blockwork workbook, sha 873308bb), sheet الكميات",H121,"external net, all floors",559.8015,=H54+H93+H118
+"Drive 'Alsenan chalet project' / المبانى.xlsx (freelancer blockwork workbook, sha 873308bb), sheet الكميات",H180,15 cm gross incl. fence row 150 and parapet rows 172 / 177 / 178,651.568,=SUM(H133:H178)
+"Drive 'Alsenan chalet project' / المبانى.xlsx (freelancer blockwork workbook, sha 873308bb), sheet الكميات",H194,15 cm deductions,34.32,=SUM(H185:H192)
+"Drive 'Alsenan chalet project' / المبانى.xlsx (freelancer blockwork workbook, sha 873308bb), sheet الكميات",H196,15 cm net,617.248,=H180-H194
+"Drive 'Alsenan chalet project' / المبانى.xlsx (freelancer blockwork workbook, sha 873308bb), sheet الكميات",H218,20 cm gross,93.48,=SUM(H203:H216)
+"Drive 'Alsenan chalet project' / المبانى.xlsx (freelancer blockwork workbook, sha 873308bb), sheet الكميات",H225,20 cm deductions,9.84,=H222+H223
+"Drive 'Alsenan chalet project' / المبانى.xlsx (freelancer blockwork workbook, sha 873308bb), sheet الكميات",H227,20 cm net,83.64,=H218-H225

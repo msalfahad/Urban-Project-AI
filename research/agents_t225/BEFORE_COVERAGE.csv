@@ -1,0 +1,14 @@
+floor,t_m,block_type,walls,length_established_m,length_held_m,gross_source_supported_m2,gross_held_figure_m2 (not a quantity),net_VERIFIED_m2,net_source_supported_m2,net_project_specific_m2,walls_net_held,deductions_on_net_held_walls_m2 (held scope),held_causes,note
+ALL,0.1,ANY,0,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0,0.000,,"no 100 mm wall in the census, the freelancer sheet or the released run: 0 walls (a count, not a held quantity)"
+GF,0.15,BLACK,16,37.788,1.525,91.138,60.887,0.000,51.026,32.632,6,3.520,"annex datum (Q-54 B): GF-W23, GF-W24, GF-W25, GF-W27; held opening: GF-W26, GF-W30",
+GF,0.2,-,1,0.000,0.900,0.000,0.000,0.000,0.000,0.000,1,0.000,no wall band or member bound (glazed line / held strip): GF-H02,
+GF,0.2,BLACK,8,38.720,2.650,62.155,81.882,0.000,62.155,0.000,7,2.200,"annex datum (Q-54 B): GF-W00, GF-W02; beam depth / register conflict: GF-W03; lift tie beam size (ST p.8 n.19): GF-W08, GF-W09, GF-W13, GF-W14",
+GF,0.2,WHITE,14,41.628,7.545,60.035,95.693,0.000,4.459,5.590,11,10.760,"annex datum (Q-54 B): GF-W06, GF-W17, GF-W35; beam depth / register conflict: GF-W10; held opening: GF-W04, GF-W15, GF-W16, GF-W18; no member drawn above: GF-W07, GF-W36; no wall band or member bound (glazed line / held strip): GF-W37",
+GF,0.4,-,1,0.000,0.600,0.000,0.000,0.000,0.000,0.000,1,0.000,no wall band or member bound (glazed line / held strip): GF-H01,
+1F,0.15,BLACK,13,46.017,10.719,113.183,66.307,0.000,52.306,36.733,7,9.240,"beam depth / register conflict: 1F-W11, 1F-W16; held opening: 1F-W14 + 1F-W15; no member drawn above: 1F-W13, 1F-W17, 1F-W18, 1F-W24",
+1F,0.2,BLACK,4,9.620,0.000,35.221,0.000,0.000,23.900,0.000,1,1.980,held opening: 1F-W07,
+1F,0.2,WHITE,8,43.502,6.899,144.143,11.324,0.000,15.833,0.000,5,12.565,"beam depth / register conflict: 1F-W04, 1F-W05; held opening: 1F-W00, 1F-W06, 1F-W10",
+2F,0.15,BLACK,1,3.000,0.000,11.400,0.000,0.000,0.000,9.640,0,0.000,,
+2F,0.15,WHITE,1,7.366,0.534,0.000,27.993,0.000,0.000,0.000,1,2.200,beam depth / register conflict: 2F-W03,
+2F,0.2,BLACK,4,8.504,1.246,28.500,3.817,0.000,21.660,0.000,2,1.980,beam depth / register conflict: 2F-W05; held opening: 2F-W00,
+2F,0.2,WHITE,3,15.033,3.917,21.476,30.040,0.000,21.476,0.000,2,2.040,"beam depth / register conflict: 2F-W02, 2F-W07",

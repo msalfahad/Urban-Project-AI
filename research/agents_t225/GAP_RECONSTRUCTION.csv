@@ -1,0 +1,5 @@
+block_type,t_m,established_gross_m2,all_deductions_m2,established_net_m2,gap_m2 (gross - deductions - net),A: gross of walls with established gross and HELD net,B: deductions on those walls,C: deductions on HELD-gross walls,A - B - C m2,residual_m2 (rounding of 3-decimal rows)
+BLACK,0.15,215.721,29.920,182.337,3.464,1F-W14 + 1F-W15 16.223,-,GF-W24 1.760 + GF-W27 1.760 + 1F-W11 1.760 + 1F-W13 3.960 + 1F-W16 1.760 + 1F-W17 1.760,3.463,0.001
+BLACK,0.2,125.876,6.160,107.715,12.001,1F-W07 11.321 + 2F-W00 6.840,1F-W07 1.980,GF-W08 2.200 + 2F-W05 1.980,12.001,0.000
+WHITE,0.15,0.000,2.200,0.000,-2.200,-,-,2F-W03 2.200,-2.200,0.000
+WHITE,0.2,225.654,27.565,47.358,150.731,GF-W15 28.632 + GF-W16 19.154 + 1F-W00 22.669 + 1F-W06 57.772 + 1F-W10 47.869,GF-W15 2.400 + 1F-W00 5.885,GF-W04 1.980 + GF-W06 2.200 + GF-W10 1.980 + GF-W17 2.200 + 1F-W04 2.760 + 1F-W05 3.920 + 2F-W07 2.040,150.731,-0.000
