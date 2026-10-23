@@ -5,6 +5,64 @@ Daily target (PLAN.md, owner 2026-10-18): at most 5 entries, at least one aimed 
 Each entry: date, what it is (link), licence, what it could improve in the engine or the workflow, risk, verdict
 (ADOPT idea / TRY in sandbox / WATCH / REJECT). Never install or run downloaded code from here; the lead decides.
 
+## FEEDBACK TO LEAD 2026-10-23 (scout one-off run 17:55 UTC, owner fire: R-12, R-09, R-10 only)
+
+Nothing below asks any agent to reprioritise; it is evidence for rows already on the board.
+1. **R-12 / Q-71 footings.** A third published count rule exists (SRIA, Oct 2025): edge bar at s/2 from the edge (never
+   less than cover), count = ceil(full width / s). It is not one of Q-71's options A / B / C: it is C rounded up. On F8
+   bottom short bars it gives 36 (A 35, B 36, C 36.0). Proposed: when Q-71 is next touched, add this rule as a fourth
+   drawing-fact column per row (no recommendation, owner chooses). Expected effect: the owner sees every published rule.
+2. **R-12 / D-57 pool.** D-57 is which bar population (R1 / R2) the flat floor takes, not a notation question: no
+   reference can answer it; it stays a designer item.
+3. **R-10.** Industry practice puts laps at stated positions and staggers them (at least 50 % of bottom bars lapped at the
+   column centreline, SRIA s.3.1); the drawing does not show positions, so splice COUNT from the stock-length formula and
+   lap LENGTH as a 40 d .. 70 d range stay the right output.
+
+## 2026-10-23 (scout one-off run 17:55 UTC): supplements to R-12, R-09, R-10 (owner fire), evidence classes
+
+Supplements the 17:50 entries below (not repeated). Evidence classes: CODE CLAUSE (a clause of a design code read here),
+STANDARD (a named standard, clause not read), PRACTITIONER (industry body, supplier or tool page). No code clause was found
+for any of the three; all evidence is level 4, below the project's own schedule, sections and notes.
+
+### Answer to R-12 (supplement): footings and pool, the third count rule
+
+| What (link) | Evidence class | Content (as read) | Gap it helps | Verdict |
+|---|---|---|---|---|
+| [SRIA Technical Note "Guidelines for Economical Assembly of Reinforcement" (Steel Reinforcement Institute of Australia, Oct 2025)](https://www.sria.com.au/wp-content/uploads/2025/10/Tech-Note-5-24-10-2025-Final-Document.pdf), s.2.4 Recommendation 4 | PRACTITIONER (industry body; AS 3600 context, not Gulf) | "The outermost reinforcement parallel to an exposed edge should be located one-half of the specified spacing" (not less than the cover) from the edge; scheduling hint: number = "width of slab or strip including edge cover" divided by "specified spacing", rounded up (example 52.5 -> 53-N16); "What is more important is that the total number of bars is specified, not just the spacing" | Q-71: a fourth rule beside A / B / C: N = ceil(n x full side). F8 bottom short bars "9 ø 14/m", side 4.00 m: 36 bars (s = 111.1 mm; s/2 = 55.6 mm is under the 70 mm cover, so the edge bars sit at cover and the inner spacing becomes 110.3 mm, closer than printed) | ADOPT-IDEA (as a named drawing-fact column, owner chooses) |
+| [Eurocode Applied table](https://eurocodeapplied.com/design/en1992/reinforcement-quantity-table) (read 17:50) | PRACTITIONER | "bars per meter ... multiplied by the appropriate distribution length and rounded up" | Matches the route's project-only note 22B "rate per metre, rounded up" recorded in Q-71; does not say which length | Information |
+| Arabic-language QS pages (searched "حصر حديد القواعد ... عدد الاسياخ في المتر"): the two candidate pages failed to load or did not cover counting | none | nothing read | no Gulf evidence this run | WATCH |
+| Pool D-57 | n/a | which bar population (R1 / R2) a flat floor takes is a design choice, not a notation | none from references | REJECT as a research question (designer item) |
+
+Summary of published count rules for a rate n per metre over a side W with cover c (s = 1/n): A = ceil(n (W - 2c));
+B = ceil((W - 2c) / s) + 1 (Heaton / BS 8666-style); SRIA = ceil(W / s) with edge bars at max(s/2, c); C = n W kept
+fractional. All agree "/m" is a rate (spacing 1000 / n mm), consistent with the team's DRAWING FACTS (1) in Q-71. Next step
+for the Lead (optional, no reprioritisation): a one-line addition to the Q-71 drawing-facts table, computed by the same
+recount that reproduced A / B / C: the SRIA column for the 20 rows and the five-footing total; evidence class PRACTITIONER.
+
+### Answer to R-09 (supplement): evidence class and the count step
+
+| What (link) | Evidence class | Content | Verdict |
+|---|---|---|---|
+| Table-grid method (17:50 entry) | own method (no source) | rebuild cells from drawn edges; merged cells by missing edges | ADOPT-IDEA |
+| [ricklove/cad-extract](https://github.com/ricklove/cad-extract) | PRACTITIONER (MIT tool; feature list only) | merged-cell and touching-table cases; known silent-duplicate bug | ADOPT-IDEA (test list) |
+| [SRIA Tech Note s.2.4](https://www.sria.com.au/wp-content/uploads/2025/10/Tech-Note-5-24-10-2025-Final-Document.pdf) | PRACTITIONER | the table cell gives the rate; the count rule is a separate, named step | ADOPT-IDEA |
+
+Next step for the Lead: the reader returns (mark, layer, direction, notation kind COUNT / SPACING / RATE, d, n or s) per
+cell and never a bar count; the count is applied afterwards by the rule the owner picks for Q-71, so the reader can merge
+before Q-71 is answered. Tests as in the 17:50 entry plus one cell per notation kind ("8 ø 12", "ø 8/15 cm", "9 ø 14/m").
+
+### Answer to R-10 (supplement): evidence class and lap positions
+
+| What (link) | Evidence class | Content (as read) | Verdict |
+|---|---|---|---|
+| [CRSI Lap Splices](https://www.crsi.org/reinforcing-basics/reinforcing-steel/splicing-bars/lap-splices/) | PRACTITIONER (industry body, citing ACI 318) | ACI 318 requires "the locations and lengths of all lap splices on the structural drawings" | ADOPT-IDEA: no drawn location -> splice positions are not a measured fact |
+| [SRIA Tech Note s.2.5, s.3.1](https://www.sria.com.au/wp-content/uploads/2025/10/Tech-Note-5-24-10-2025-Final-Document.pdf) | PRACTITIONER (AS 3600 context) | "Specify bottom slab bars to be staggered (ie 50% anchored in each support)"; "at least 50% of bottom bars must be lapped by Lsy.tb at the column centreline"; no stock-length guidance | Information: staggering sets positions, not the count, for runs each spliced once |
+| Project note "development length >= 70 d (tension) / 40 d (compression)" | the project's own note (above every reference) | the only lap rule printed | ADOPT-IDEA: lap range 40 d .. 70 d |
+
+Next step for the Lead: as in the 17:50 entry (pieces = ceil((L - lap) / (S - lap)), procurement length L + (pieces - 1)
+lap, range at 40 d and 70 d, ends a separate line); evidence class of the output: PROJECT NOTE for the lap length, own
+arithmetic for the count, NOT PRINTED for positions.
+
 ## FEEDBACK TO LEAD 2026-10-23 (scout run 17:50 UTC)
 
 1. **"run unknown" in STARTED lines.** Problem: about half of today's STARTED lines carry `run unknown` (Worker 1 17:20,

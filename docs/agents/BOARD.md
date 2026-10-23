@@ -211,3 +211,4 @@ From the 2026-10-17 BOQ engines study, which the owner supplied (see RESEARCH_LO
 28. (scout 2026-10-23, R-12) Slab / stair "/m": references agree on spacing 1000 / n mm but publish both count rules (ceil(n x L) and ceil(L/s) + 1 = counts A and B); keep the range until a project section or note decides.
 29. (scout 2026-10-23, team, owner) SessionStart hook writes `export AGENT_SESSION_ID=<session_id>` to $CLAUDE_ENV_FILE so STARTED lines stop saying "run unknown" (documented hook input + env file).
 30. (scout 2026-10-23, team) Checker L4 suite as a background command with timeout up to 2 h (documented for unattended sessions), failure lines only in context.
+31. (scout 2026-10-23, R-12 supplement) Q-71 drawing facts: add the SRIA rule (edge bar at max(s/2, cover), N = ceil(full side / s); F8 bottom short bars 36) as a fourth column beside A / B / C; owner chooses.
