@@ -1,0 +1,517 @@
+{
+ "schema": "T220_SUMMARY_V1",
+ "planted": [
+  {
+   "id": "PC-1F-A",
+   "t119_id": "COL-1F-57",
+   "storey": "1F",
+   "start": "GFRS 329 (S-COL.HAT ANSI35)",
+   "own": "FFRS 66A (SOLID)",
+   "on_reference_beam_register": {
+    "schema": "PLANTED_COLUMN_V1",
+    "id": "PC-1F-A",
+    "storey": "1F",
+    "section": {
+     "status": "AGREE",
+     "why": "",
+     "candidates": [
+      [
+       0.2,
+       0.7000000000000001
+      ]
+     ],
+     "area_lo": 0.14,
+     "area_hi": 0.14
+    },
+    "holds": [],
+    "ownership": [
+     {
+      "pair": "B27 90x85 (BM-GF-048) / PC-1F-A",
+      "result": "PASS",
+      "owner": "B27 90x85 (BM-GF-048)"
+     },
+     {
+      "pair": "B4 20x50 1F (P-C:BEAMS:1F:BAND0002.1) / PC-1F-A",
+      "result": "PASS",
+      "owner": "PC-1F-A"
+     },
+     {
+      "pair": "CB13 30x50 1F (BAND0024.1) / PC-1F-A",
+      "result": "PASS",
+      "owner": "PC-1F-A"
+     },
+     {
+      "pair": "CB11 30x75 1F (BAND0027.1) / PC-1F-A",
+      "result": "PASS",
+      "owner": "PC-1F-A"
+     }
+    ],
+    "bars": "10 x 16 main (GFRS 543 '10%%C16'); links not printed",
+    "base": 5.45,
+    "top": 9.65,
+    "top_owner": "column (members framing in are measured net)",
+    "height_m": 4.2,
+    "solid_m3": [
+     0.5880000000000001,
+     0.5880000000000001
+    ],
+    "solid_upper_bound_m3": null,
+    "owner_method": {
+     "rule": "URBAN-COLUMN-HEIGHT-TO-CONTROLLING-MEMBER@v1 + URBAN-NON-OVERLAPPING-SLAB-BEAM-MODEL@v1",
+     "status": "CALCULATED",
+     "D_ctrl": 0.75,
+     "column_m3": [
+      0.4830000000000001,
+      0.4830000000000001
+     ],
+     "joint_m3": [
+      0.0826,
+      0.0826
+     ],
+     "slab_part_m3": [
+      0.022400000000000003,
+      0.022400000000000003
+     ]
+    },
+    "status": "DRAWING-CONFIRMED",
+    "release": "NOT RELEASED"
+   },
+   "on_released_route_g": {
+    "schema": "PLANTED_COLUMN_V1",
+    "id": "PC-1F-A",
+    "storey": "1F",
+    "section": {
+     "status": "AGREE",
+     "why": "",
+     "candidates": [
+      [
+       0.2,
+       0.7000000000000001
+      ]
+     ],
+     "area_lo": 0.14,
+     "area_hi": 0.14
+    },
+    "holds": [],
+    "ownership": [
+     {
+      "pair": "B27 90x85 (BM-GF-048) / PC-1F-A",
+      "result": "BEAM_LINE_SHORT",
+      "beam_short_m3": [
+       0.11900000000000001,
+       0.11900000000000001
+      ],
+      "owner": "B27 90x85 (BM-GF-048)",
+      "note": "the beam keeps the volume under the column (the element that would lose it); the column still starts on the beam top"
+     },
+     {
+      "pair": "B4 20x50 1F (P-C:BEAMS:1F:BAND0002.1) / PC-1F-A",
+      "result": "PASS",
+      "owner": "PC-1F-A"
+     },
+     {
+      "pair": "CB13 30x50 1F (BAND0024.1) / PC-1F-A",
+      "result": "PASS",
+      "owner": "PC-1F-A"
+     },
+     {
+      "pair": "CB11 30x75 1F (BAND0027.1) / PC-1F-A",
+      "result": "PASS",
+      "owner": "PC-1F-A"
+     }
+    ],
+    "bars": "10 x 16 main (GFRS 543 '10%%C16'); links not printed",
+    "base": 5.45,
+    "top": 9.65,
+    "top_owner": "column (members framing in are measured net)",
+    "height_m": 4.2,
+    "solid_m3": [
+     0.5880000000000001,
+     0.5880000000000001
+    ],
+    "solid_upper_bound_m3": null,
+    "owner_method": {
+     "rule": "URBAN-COLUMN-HEIGHT-TO-CONTROLLING-MEMBER@v1 + URBAN-NON-OVERLAPPING-SLAB-BEAM-MODEL@v1",
+     "status": "CALCULATED",
+     "D_ctrl": 0.75,
+     "column_m3": [
+      0.4830000000000001,
+      0.4830000000000001
+     ],
+     "joint_m3": [
+      0.0826,
+      0.0826
+     ],
+     "slab_part_m3": [
+      0.022400000000000003,
+      0.022400000000000003
+     ]
+    },
+    "status": "DRAWING-CONFIRMED",
+    "release": "NOT RELEASED"
+   }
+  },
+  {
+   "id": "PC-1F-B",
+   "t119_id": "COL-1F-58",
+   "storey": "1F",
+   "start": "GFRS 386 (ANSI35)",
+   "own": "FFRS 69D (SOLID)",
+   "on_reference_beam_register": {
+    "schema": "PLANTED_COLUMN_V1",
+    "id": "PC-1F-B",
+    "storey": "1F",
+    "section": {
+     "status": "AGREE",
+     "why": "",
+     "candidates": [
+      [
+       0.2,
+       0.5
+      ]
+     ],
+     "area_lo": 0.1,
+     "area_hi": 0.1
+    },
+    "holds": [],
+    "ownership": [
+     {
+      "pair": "B26 65x85 (BM-GF-047) / PC-1F-B",
+      "result": "PASS",
+      "owner": "B26 65x85 (BM-GF-047)"
+     },
+     {
+      "pair": "CB12 25x75 1F (BAND0018.1) / PC-1F-B",
+      "result": "PASS",
+      "owner": "PC-1F-B"
+     },
+     {
+      "pair": "CB11 30x75 1F (BAND0027.3) / PC-1F-B",
+      "result": "PASS",
+      "owner": "PC-1F-B"
+     },
+     {
+      "pair": "BM-1F-035 unlabelled projection (BAND0023, HELD, D-26) / PC-1F-B",
+      "result": "PASS",
+      "owner": "PC-1F-B"
+     },
+     {
+      "pair": "BM-1F-038 0.10 strip outside CB12 (HELD, D-26) / PC-1F-B",
+      "result": "PASS",
+      "owner": "PC-1F-B"
+     }
+    ],
+    "bars": "8 x 16 main (GFRS 547 '8%%C16'); links not printed",
+    "base": 5.45,
+    "top": 9.65,
+    "top_owner": "column (members framing in are measured net)",
+    "height_m": 4.2,
+    "solid_m3": [
+     0.42000000000000004,
+     0.42000000000000004
+    ],
+    "solid_upper_bound_m3": null,
+    "owner_method": {
+     "rule": "URBAN-COLUMN-HEIGHT-TO-CONTROLLING-MEMBER@v1 + URBAN-NON-OVERLAPPING-SLAB-BEAM-MODEL@v1",
+     "status": "HELD",
+     "why": "depth of a framing member not printed: column is an UPPER bound, joint a LOWER bound",
+     "column_m3_upper": 0.34500000000000003
+    },
+    "status": "DRAWING-CONFIRMED",
+    "release": "NOT RELEASED"
+   },
+   "on_released_route_g": {
+    "schema": "PLANTED_COLUMN_V1",
+    "id": "PC-1F-B",
+    "storey": "1F",
+    "section": {
+     "status": "AGREE",
+     "why": "",
+     "candidates": [
+      [
+       0.2,
+       0.5
+      ]
+     ],
+     "area_lo": 0.1,
+     "area_hi": 0.1
+    },
+    "holds": [],
+    "ownership": [
+     {
+      "pair": "B26 65x85 (BM-GF-047) / PC-1F-B",
+      "result": "BEAM_LINE_SHORT",
+      "beam_short_m3": [
+       0.085,
+       0.085
+      ],
+      "owner": "B26 65x85 (BM-GF-047)",
+      "note": "the beam keeps the volume under the column (the element that would lose it); the column still starts on the beam top"
+     },
+     {
+      "pair": "CB12 25x75 1F (BAND0018.1) / PC-1F-B",
+      "result": "PASS",
+      "owner": "PC-1F-B"
+     },
+     {
+      "pair": "CB11 30x75 1F (BAND0027.3) / PC-1F-B",
+      "result": "PASS",
+      "owner": "PC-1F-B"
+     },
+     {
+      "pair": "BM-1F-035 unlabelled projection (BAND0023, HELD, D-26) / PC-1F-B",
+      "result": "PASS",
+      "owner": "PC-1F-B"
+     },
+     {
+      "pair": "BM-1F-038 0.10 strip outside CB12 (HELD, D-26) / PC-1F-B",
+      "result": "PASS",
+      "owner": "PC-1F-B"
+     }
+    ],
+    "bars": "8 x 16 main (GFRS 547 '8%%C16'); links not printed",
+    "base": 5.45,
+    "top": 9.65,
+    "top_owner": "column (members framing in are measured net)",
+    "height_m": 4.2,
+    "solid_m3": [
+     0.42000000000000004,
+     0.42000000000000004
+    ],
+    "solid_upper_bound_m3": null,
+    "owner_method": {
+     "rule": "URBAN-COLUMN-HEIGHT-TO-CONTROLLING-MEMBER@v1 + URBAN-NON-OVERLAPPING-SLAB-BEAM-MODEL@v1",
+     "status": "HELD",
+     "why": "depth of a framing member not printed: column is an UPPER bound, joint a LOWER bound",
+     "column_m3_upper": 0.34500000000000003
+    },
+    "status": "DRAWING-CONFIRMED",
+    "release": "NOT RELEASED"
+   }
+  },
+  {
+   "id": "PC-2F",
+   "t119_id": "COL-2F-59",
+   "storey": "2F",
+   "start": "FFRS 77B (ANSI35)",
+   "own": "SFRS 778 (SOLID)",
+   "on_reference_beam_register": {
+    "schema": "PLANTED_COLUMN_V1",
+    "id": "PC-2F",
+    "storey": "2F",
+    "section": {
+     "status": "CONFLICT",
+     "why": "PRINTED_VS_DRAWN (one printed source, no dimension chain)",
+     "candidates": [
+      [
+       0.2,
+       0.5
+      ],
+      [
+       0.2,
+       0.4
+      ]
+     ],
+     "area_lo": 0.08000000000000002,
+     "area_hi": 0.1
+    },
+    "holds": [
+     "SECTION_CONFLICT: PRINTED_VS_DRAWN (one printed source, no dimension chain) (range kept, designer)",
+     "TOP: structural top of the slab above not printed"
+    ],
+    "ownership": [
+     {
+      "pair": "B19 40x75 (BM-1F-025) / PC-2F",
+      "result": "PASS",
+      "owner": "B19 40x75 (BM-1F-025)"
+     },
+     {
+      "pair": "B7 20x75 2F (P-C:BEAMS:2F:BAND0009) / PC-2F",
+      "result": "DOUBLE",
+      "double_m3": 0.059,
+      "owner": "B7 20x75 2F (P-C:BEAMS:2F:BAND0009)",
+      "note": "member billed through the column footprint and a ledger joint for the same volume"
+     }
+    ],
+    "bars": "8 x 16 main (FFRS 77D '8%%C16'); links not printed",
+    "base": 9.65,
+    "top": null,
+    "top_owner": "B7 20x75 2F (P-C:BEAMS:2F:BAND0009)",
+    "height_m": null,
+    "solid_m3": null,
+    "solid_upper_bound_m3": 0.35000000000000003,
+    "owner_method": {
+     "rule": "URBAN-COLUMN-HEIGHT-TO-CONTROLLING-MEMBER@v1 + URBAN-NON-OVERLAPPING-SLAB-BEAM-MODEL@v1",
+     "status": "HELD",
+     "D_ctrl": 0.75,
+     "column_m3": [
+      0.2760000000000001,
+      0.34500000000000003
+     ],
+     "joint_m3": [
+      0.0,
+      0.0
+     ],
+     "note": "joint owned by the member billed through the column (R-CONC-OWN-1)",
+     "why": "structural top above not established: the interval is the finished-level convention, the column inherits the held datum"
+    },
+    "status": "HELD",
+    "release": "NOT RELEASED"
+   },
+   "on_released_route_g": {
+    "schema": "PLANTED_COLUMN_V1",
+    "id": "PC-2F",
+    "storey": "2F",
+    "section": {
+     "status": "CONFLICT",
+     "why": "PRINTED_VS_DRAWN (one printed source, no dimension chain)",
+     "candidates": [
+      [
+       0.2,
+       0.5
+      ],
+      [
+       0.2,
+       0.4
+      ]
+     ],
+     "area_lo": 0.08000000000000002,
+     "area_hi": 0.1
+    },
+    "holds": [
+     "SECTION_CONFLICT: PRINTED_VS_DRAWN (one printed source, no dimension chain) (range kept, designer)",
+     "TOP: structural top of the slab above not printed"
+    ],
+    "ownership": [
+     {
+      "pair": "B19 40x75 (BM-1F-025) / PC-2F",
+      "result": "PASS",
+      "owner": "B19 40x75 (BM-1F-025)"
+     },
+     {
+      "pair": "B7 20x75 2F (P-C:BEAMS:2F:BAND0009) / PC-2F",
+      "result": "DOUBLE",
+      "double_m3": 0.059,
+      "owner": "B7 20x75 2F (P-C:BEAMS:2F:BAND0009)",
+      "note": "member billed through the column footprint and a ledger joint for the same volume"
+     }
+    ],
+    "bars": "8 x 16 main (FFRS 77D '8%%C16'); links not printed",
+    "base": 9.65,
+    "top": null,
+    "top_owner": "B7 20x75 2F (P-C:BEAMS:2F:BAND0009)",
+    "height_m": null,
+    "solid_m3": null,
+    "solid_upper_bound_m3": 0.35000000000000003,
+    "owner_method": {
+     "rule": "URBAN-COLUMN-HEIGHT-TO-CONTROLLING-MEMBER@v1 + URBAN-NON-OVERLAPPING-SLAB-BEAM-MODEL@v1",
+     "status": "HELD",
+     "D_ctrl": 0.75,
+     "column_m3": [
+      0.2760000000000001,
+      0.34500000000000003
+     ],
+     "joint_m3": [
+      0.0,
+      0.0
+     ],
+     "note": "joint owned by the member billed through the column (R-CONC-OWN-1)",
+     "why": "structural top above not established: the interval is the finished-level convention, the column inherits the held datum"
+    },
+    "status": "HELD",
+    "release": "NOT RELEASED"
+   }
+  }
+ ],
+ "released_lines": [
+  {
+   "line": "COL C3 2F on FP 10C5 (NECK:COL:SH10:C3@129555,38490)",
+   "storey": "2F",
+   "released_m3": 0.42,
+   "existence": "NOT_DRAWN",
+   "state": {
+    "m3": null,
+    "status": "NOT_DRAWN",
+    "released_was": 0.42
+   },
+   "evidence": [
+    "DXF SFRS frame: no S-COL.BON / S-COL.HAT within 1.5 m (dome radials and the boundary line only)",
+    "ST7757.pdf p.6 300 dpi at the member: parapet line and dome, no column, no slab",
+    "architectural 2F plan (Pages_05-06 p.5) 200 dpi: +9.70 terrace, parapet only"
+   ],
+   "roof_over": "no 2F roof slab over the position (the 2F roof slab is the central block only, p.6)"
+  },
+  {
+   "line": "COL C3 1F on FP 10E4 (NECK:COL:SH10:C3@141170,36765)",
+   "storey": "1F",
+   "released_m3": 0.42,
+   "existence": "NOT_DRAWN",
+   "state": {
+    "m3": null,
+    "status": "NOT_DRAWN",
+    "released_was": 0.42
+   },
+   "evidence": [
+    "DXF FFRS frame: no outline at the position (1.45 m south of the CB11 slab edge; nearest drawn outline 69A C8)",
+    "ST7757.pdf p.5 300 dpi at the member: outside the CB11 slab edge, nothing drawn",
+    "architectural 1F plan (p7757_arch_sheet04) 200 dpi: +5.50 terrace strip outside the 1F wall, parapet only"
+   ],
+   "roof_over": "no 1F roof slab over the position"
+  },
+  {
+   "line": "COL C3 2F on FP 10E4",
+   "storey": "2F",
+   "released_m3": 0.42,
+   "existence": "NOT_DRAWN",
+   "state": {
+    "m3": null,
+    "status": "NOT_DRAWN",
+    "released_was": 0.42
+   },
+   "evidence": [
+    "DXF SFRS frame: nothing at the position",
+    "ST7757.pdf p.6 300 dpi: nothing",
+    "architectural 2F plan p.5: outside the 2F block, terrace / below"
+   ],
+   "roof_over": "no 2F roof slab over the position"
+  },
+  {
+   "line": "COL C5 2F on FP 10BD (NECK:COL:SH10:C5@129305,40458)",
+   "storey": "2F",
+   "released_m3": 0.42,
+   "existence": "NOT_DRAWN",
+   "state": {
+    "m3": null,
+    "status": "NOT_DRAWN",
+    "released_was": 0.42
+   },
+   "evidence": [
+    "DXF SFRS frame: no outline within 1.5 m",
+    "ST7757.pdf p.6 300 dpi at the member: nothing but the dome and the parapet",
+    "architectural 2F plan p.5: terrace, parapet only"
+   ],
+   "roof_over": "no 2F roof slab over the position"
+  },
+  {
+   "line": "COL C8 2F on FP 10E0 (NECK:COL:SH10:C8@141489,38336)",
+   "storey": "2F",
+   "released_m3": 0.588,
+   "existence": "NOT_DRAWN",
+   "state": {
+    "m3": null,
+    "status": "NOT_DRAWN",
+    "released_was": 0.588
+   },
+   "evidence": [
+    "DXF SFRS frame: nothing at the position (2 entities in a 6 m window)",
+    "ST7757.pdf p.6 300 dpi at the member: the building edge line only",
+    "architectural 2F plan p.5: terrace, parapet only"
+   ],
+   "roof_over": "no 2F roof slab over the position"
+  }
+ ],
+ "totals": {
+  "released_without_member_m3": 2.268,
+  "not_drawn_count": 5
+ }
+}
