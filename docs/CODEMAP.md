@@ -14,15 +14,15 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `data/` | 19 | Registries (owner facts, project rules, trades) and trade rules. Large run data is gitignored. |
 | `docs/` | 72 | Design notes and the generated maps. |
 | `documents/` | 5 |  |
-| `engine/` | 638 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
+| `engine/` | 639 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 2737 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 2744 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 9 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 1394 | pytest suites, one folder per round. |
+| `tests/` | 1396 | pytest suites, one folder per round. |
 | `tools/` | 109 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (254 modules)
@@ -387,7 +387,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `workbooks.py` | 242 | MEDIUM | 0 | REPORTING V3 - workbook layouts (generic over a BOQ_LINES model). |
 | `workbooks_v3b.py` | 308 | MEDIUM | 0 | REPORTING V3b - workbook layouts over the two-view line model (TECHNICAL_QTO / COMMERCIAL_BOQ). |
 
-## `engine/source/` (286 modules)
+## `engine/source/` (287 modules)
 
 | Module | Lines | Risk | Imp | Purpose |
 |---|---|---|---|---|
@@ -467,6 +467,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `digests.py` | 134 | MEDIUM | 4 | URBAN-SRD-1 and URBAN-RGD-1 — identity digests, NOT reconciliation. |
 | `dimension_evidence.py` | 187 | MEDIUM | 4 | DIMENSION EVIDENCE (M9 Phase 2A P2-09a, ARCH_TAKEOFF_V2.1) - read-only: the authored dimensions of a plan, their |
 | `discovery.py` | 260 | MEDIUM | 6 | DRAWING DISCOVERY AND ADMISSION (M9 S6) - what a drawing holds and whether it may be measured, BEFORE any quantity. |
+| `document_register_v1.py` | 314 | MEDIUM | 1 | DOCUMENT_REGISTER_V1 (T-195): one row per issued sheet, and a check that every ledger citation names a sheet that is |
 | `door_feasibility.py` | 619 | MEDIUM | 3 | DOOR FEASIBILITY (M9 Phase 2B-2, ARCH_TAKEOFF_V2.4 only) - for every door: what the drawing shows, what Urban |
 | `door_model.py` | 837 | HIGH | 13 | DOOR MODEL (M9 Phase 2A P2-03 / P2-04, ARCH_TAKEOFF_V2.1 only) - every drawn door swing belongs to exactly one |
 | `door_standards.py` | 671 | MEDIUM | 7 | DOOR STANDARDS AND SCENARIOS (M9 Phase 2B-1, ARCH_TAKEOFF_V2.3 only) - the owner door rules of the knowledge |
@@ -1064,6 +1065,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t186_default_guard/` | 1 |
 | `tests/t189_overlap/` | 1 |
 | `tests/t194_opening_consistency/` | 2 |
+| `tests/t195_document_register/` | 2 |
 | `tests/water_tank_s8_4/` | 3 |
 | `tests/zz_freeze_integrity/` | 2 |
 
@@ -1267,6 +1269,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t186/` | 3 |
 | `research/agents_t189/` | 5 |
 | `research/agents_t194/` | 7 |
+| `research/agents_t195/` | 7 |
 | `research/alsenan_arch_truth_05/` | 28 |
 | `research/alsenan_column_rebar_s3/` | 17 |
 | `research/alsenan_column_rebar_s3_1/` | 15 |

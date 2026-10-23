@@ -1,0 +1,22 @@
+discipline,item,status,sheets,boq_families
+ARCH,site / plot layout with external works,NOT_IN_SET,,"external floors, boundary wall, levels to road (excavation, backfill)"
+ARCH,floor plan per storey,PRESENT,ARCH-03 ARCH-04 ARCH-05,"rooms, walls, finishes, openings"
+ARCH,"roof plan (top roof: falls, drains, parapets, waterproofing)",NOT_IN_SET,,"roof waterproofing, screed to falls, parapet finishes"
+ARCH,elevations (all faces),PRESENT,ARCH-06 ARCH-07 ARCH-08 ARCH-09 ARCH-12,"facades, exterior plaster / paint, openings"
+ARCH,sections (at least two),PRESENT,ARCH-10 ARCH-11 ARCH-12,"storey heights, levels, stair geometry"
+ARCH,door / window schedule,NOT_IN_SET,,opening heights and types (otherwise HELD / ASSUMED)
+ARCH,finishes schedule or specification,NOT_IN_SET,,"floor, wall, ceiling, exterior finish types; waterproofing system"
+ARCH,reflected ceiling plan,NOT_IN_SET,,"false ceilings, gypsum, cornices"
+ARCH,wet-room / kitchen details,NOT_IN_SET,,"wall tile heights, upturns, fixtures"
+ARCH,stair details (architectural),NOT_IN_SET,,"stair finishes, railings"
+ST,foundation plan,PRESENT,ST-02,"footings, excavation"
+ST,column / axis plan,PRESENT,ST-01 ST-09 ST-15,columns
+ST,ground beam plan,PRESENT,ST-03 ST-13,"ground beams, straps"
+ST,slab plans per level,PRESENT,ST-04 ST-05 ST-06 ST-15,"slabs, beams"
+ST,"schedules (columns, footings, beams)",PRESENT,ST-09 ST-10 ST-11 ST-12,bar populations (steel)
+ST,typical details and notes,PRESENT,ST-07 ST-08 ST-13 ST-14 ST-15 ST-16,"covers, laps, lintels, parapets"
+ST,stair structural details,PRESENT,ST-16,stair concrete and steel
+MEP,drainage / sanitary,PRESENT,SAN-01 SAN-02 SAN-03,"wet-room scope, drainage"
+MEP,water supply,NOT_IN_SET,,"plumbing, tanks"
+MEP,electrical,NOT_IN_SET,,electrical
+MEP,air conditioning,NOT_IN_SET,,"ducts, soffits, false ceilings"

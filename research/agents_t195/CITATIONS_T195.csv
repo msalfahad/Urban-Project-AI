@@ -1,0 +1,544 @@
+source,line,citation,basis,resolves_to,verdict,reason
+research/agents_t100/T-100_BLINDING_AND_COLUMNS_BY_HAND.md,12,ST7757 dxf.dxf,FILE,st7757.dxf,FILE_ONLY,whole file st7757.dxf (no page named)
+research/agents_t100/T-100_BLINDING_AND_COLUMNS_BY_HAND.md,13,ST7757.pdf,FILE,st7757.pdf,FILE_ONLY,whole file st7757.pdf (no page named)
+research/agents_t102/README.md,7,ST7757 dxf.dxf,FILE,st7757.dxf,FILE_ONLY,whole file st7757.dxf (no page named)
+research/agents_t102/README.md,48,ST7757.pdf,FILE,st7757.pdf,FILE_ONLY,whole file st7757.pdf (no page named)
+research/agents_t103/T-103_BLOCKWORK_WALL_METRES.md,16,P7757.dxf,FILE,p7757.dxf,FILE_ONLY,whole file p7757.dxf (no page named)
+research/agents_t103/T-103_BLOCKWORK_WALL_METRES.md,17,p7757_arch_sheet03.pdf,FILE_TITLE,ARCH-03,RESOLVED,ARCH-03 'GROUND FLOOR PLAN' (FILE_PIN)
+research/agents_t103/T-103_BLOCKWORK_WALL_METRES.md,40,sheet 03,SHORTHAND,ARCH-03,RESOLVED,ARCH-03 'GROUND FLOOR PLAN' (FILE_PIN)
+research/agents_t103/T-103_BLOCKWORK_WALL_METRES.md,53,p7757_arch_sheet04.pdf,FILE_TITLE,ARCH-04,RESOLVED,ARCH-04 '1st FLOOR PLAN' (FILE_PIN)
+research/agents_t103/T-103_BLOCKWORK_WALL_METRES.md,55,"Pages_05-06, page 5",PART_PAGE,ARCH-05,RESOLVED,ARCH-05 '2nd FLOOR PLAN' (FILE_PIN)
+research/agents_t110/README.md,7,ST7757 dxf.dxf,FILE,st7757.dxf,FILE_ONLY,whole file st7757.dxf (no page named)
+research/agents_t111/FLIGHTS.csv,2,ST7757 p.4,SET_PAGE,ST-04,RESOLVED,"ST-04 'GROUND FLOOR ROOF SLAB (+ sections A-A, C-C, D-D)' (FILE_PIN)"
+research/agents_t111/FLIGHTS.csv,6,ST7757 p.5,SET_PAGE,ST-05,RESOLVED,ST-05 'FIRST FLOOR ROOF SLAB (+ section B-B)' (FILE_PIN)
+research/agents_t111/T-111_STAIR_FLIGHT_LEDGER.md,7,ST7757 dxf.dxf,FILE,st7757.dxf,FILE_ONLY,whole file st7757.dxf (no page named)
+research/agents_t111/T-111_STAIR_FLIGHT_LEDGER.md,7,p7757_arch_sheet10.pdf,FILE_TITLE,ARCH-10,RESOLVED,ARCH-10 'SECTION A-A' (FILE_PIN)
+research/agents_t111/T-111_STAIR_FLIGHT_LEDGER.md,8,Alsenan_Architectural_P7757_Pages_11-12,PART,ARCH p.11-12,PART_ONLY,part pages 11..12 (no page named)
+research/agents_t111/T-111_STAIR_FLIGHT_LEDGER.md,8,p7757_arch_sheet03.pdf,FILE_TITLE,ARCH-03,CONTENT_REVIEW,"context names 1f plan, b-b, section b-b (other sheets), nothing of ARCH-03 'GROUND FLOOR PLAN'"
+research/agents_t111/T-111_STAIR_FLIGHT_LEDGER.md,8,sheet04,SHORTHAND,ARCH-04,RESOLVED,ARCH-04 '1st FLOOR PLAN' (FILE_PIN)
+research/agents_t111/T-111_STAIR_FLIGHT_LEDGER.md,9,ST7757.pdf,FILE,st7757.pdf,FILE_ONLY,whole file st7757.pdf (no page named)
+research/agents_t112/ROOMS_T112.csv,8,sheet 10,SHORTHAND,ARCH-10,RESOLVED,ARCH-10 'SECTION A-A' (FILE_PIN)
+research/agents_t112/ROOMS_T112.csv,9,sheet 10,SHORTHAND,ARCH-10,RESOLVED,ARCH-10 'SECTION A-A' (FILE_PIN)
+research/agents_t112/ROOMS_T112.csv,13,sheet 10,SHORTHAND,ARCH-10,RESOLVED,ARCH-10 'SECTION A-A' (FILE_PIN)
+research/agents_t112/ROOMS_T112.csv,14,sheet 10,SHORTHAND,ARCH-10,RESOLVED,ARCH-10 'SECTION A-A' (FILE_PIN)
+research/agents_t112/ROOMS_T112.csv,15,sheet 10,SHORTHAND,ARCH-10,RESOLVED,ARCH-10 'SECTION A-A' (FILE_PIN)
+research/agents_t112/ROOMS_T112.csv,16,sheet 10,SHORTHAND,ARCH-10,RESOLVED,ARCH-10 'SECTION A-A' (FILE_PIN)
+research/agents_t112/ROOMS_T112.csv,17,sheet 10,SHORTHAND,ARCH-10,RESOLVED,ARCH-10 'SECTION A-A' (FILE_PIN)
+research/agents_t112/T-112_WALL_HEIGHTS_TWO_METHODS.md,17,ST7757 dxf.dxf,FILE,st7757.dxf,FILE_ONLY,whole file st7757.dxf (no page named)
+research/agents_t112/T-112_WALL_HEIGHTS_TWO_METHODS.md,18,P7757.dxf,FILE,p7757.dxf,FILE_ONLY,whole file p7757.dxf (no page named)
+research/agents_t112/T-112_WALL_HEIGHTS_TWO_METHODS.md,18,ST7757 dxf.dxf,FILE,st7757.dxf,FILE_ONLY,whole file st7757.dxf (no page named)
+research/agents_t112/T-112_WALL_HEIGHTS_TWO_METHODS.md,19,p7757_arch_sheet10.pdf,FILE_TITLE,ARCH-10,RESOLVED,ARCH-10 'SECTION A-A' (FILE_PIN)
+research/agents_t112/T-112_WALL_HEIGHTS_TWO_METHODS.md,20,Alsenan_Architectural_P7757_Pages_11-12.pdf p.11,PART_PAGE,ARCH-11,RESOLVED,ARCH-11 'SECTION B-B' (FILE_PIN)
+research/agents_t112/T-112_WALL_HEIGHTS_TWO_METHODS.md,21,P7757.dxf,FILE,p7757.dxf,FILE_ONLY,whole file p7757.dxf (no page named)
+research/agents_t112/T-112_WALL_HEIGHTS_TWO_METHODS.md,21,ST7757 dxf.dxf,FILE,st7757.dxf,FILE_ONLY,whole file st7757.dxf (no page named)
+research/agents_t113/T-113_LIVING_1F_TRACE.md,4,p7757_arch_sheet04.pdf,FILE_TITLE,ARCH-04,RESOLVED,ARCH-04 '1st FLOOR PLAN' (FILE_PIN)
+research/agents_t113/T-113_LIVING_1F_TRACE.md,42,sheet 04,SHORTHAND,ARCH-04,RESOLVED,ARCH-04 '1st FLOOR PLAN' (FILE_PIN)
+research/agents_t114/T-114_ROOF_TRIM_AND_PANTRY.md,4,P7757.dxf,FILE,p7757.dxf,FILE_ONLY,whole file p7757.dxf (no page named)
+research/agents_t114/T-114_ROOF_TRIM_AND_PANTRY.md,5,Alsenan_Architectural_P7757_Pages_05-06 page 1,PART_PAGE,ARCH-05,PART_FILE_PAGE,"page 1 of the part file 05-06 = set page 5 = ARCH-05 '2nd FLOOR PLAN' (page-in-file basis, not set page)"
+research/agents_t114/T-114_ROOF_TRIM_AND_PANTRY.md,6,p7757_arch_sheet03.pdf,FILE_TITLE,ARCH-03,RESOLVED,ARCH-03 'GROUND FLOOR PLAN' (FILE_PIN)
+research/agents_t114/T-114_ROOF_TRIM_AND_PANTRY.md,6,p7757_arch_sheet10.pdf,FILE_TITLE,ARCH-10,RESOLVED,ARCH-10 'SECTION A-A' (FILE_PIN)
+research/agents_t114/T-114_ROOF_TRIM_AND_PANTRY.md,25,P7757.dxf,FILE,p7757.dxf,FILE_ONLY,whole file p7757.dxf (no page named)
+research/agents_t114/T-114_ROOF_TRIM_AND_PANTRY.md,123,sheet 03,SHORTHAND,ARCH-03,RESOLVED,ARCH-03 'GROUND FLOOR PLAN' (FILE_PIN)
+research/agents_t114/T-114_ROOF_TRIM_AND_PANTRY.md,123,sheet 03,SHORTHAND,ARCH-03,RESOLVED,ARCH-03 'GROUND FLOOR PLAN' (FILE_PIN)
+research/agents_t117/T-117_CENTRELINE_VS_HAND.md,4,P7757.dxf,FILE,p7757.dxf,FILE_ONLY,whole file p7757.dxf (no page named)
+research/agents_t119/T-119_COLUMNS_TO_CONTROLLING_MEMBER.md,10,ST7757 dxf.dxf,FILE,st7757.dxf,FILE_ONLY,whole file st7757.dxf (no page named)
+research/agents_t119/T-119_COLUMNS_TO_CONTROLLING_MEMBER.md,11,ST7757.pdf,FILE,st7757.pdf,FILE_ONLY,whole file st7757.pdf (no page named)
+research/agents_t119/T-119_COLUMNS_TO_CONTROLLING_MEMBER.md,16,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t119/T-119_COLUMNS_TO_CONTROLLING_MEMBER.md,32,ST p.6,SET_PAGE,ST-06,CONTENT_REVIEW,"context names schedule (other sheets), nothing of ST-06 'SECOND FLOOR ROOF SLAB'"
+research/agents_t119/T-119_COLUMNS_TO_CONTROLLING_MEMBER.md,33,ST p.5,SET_PAGE,ST-05,RESOLVED,ST-05 'FIRST FLOOR ROOF SLAB (+ section B-B)' (FILE_PIN)
+research/agents_t120/T-120_MEMBRANE_RELEASE_V213.md,66,P7757.dxf,FILE,p7757.dxf,FILE_ONLY,whole file p7757.dxf (no page named)
+research/agents_t122/T-122_LANDING_ONCE_Q66B.md,5,p7757_arch_sheet04.pdf,FILE_TITLE,ARCH-04,RESOLVED,ARCH-04 '1st FLOOR PLAN' (FILE_PIN)
+research/agents_t122/T-122_LANDING_ONCE_Q66B.md,66,sheet 04,SHORTHAND,ARCH-04,RESOLVED,ARCH-04 '1st FLOOR PLAN' (FILE_PIN)
+research/agents_t123/T-123_FACADE_RUN_REVEAL_PASSAGE.md,7,ST7757 dxf.dxf,FILE,st7757.dxf,FILE_ONLY,whole file st7757.dxf (no page named)
+research/agents_t123/T-123_FACADE_RUN_REVEAL_PASSAGE.md,7,p7757_arch_sheet03.pdf,FILE_TITLE,ARCH-03,RESOLVED,ARCH-03 'GROUND FLOOR PLAN' (FILE_PIN)
+research/agents_t123/T-123_FACADE_RUN_REVEAL_PASSAGE.md,8,p7757_arch_sheet04.pdf,FILE_TITLE,ARCH-04,RESOLVED,ARCH-04 '1st FLOOR PLAN' (FILE_PIN)
+research/agents_t123/T-123_FACADE_RUN_REVEAL_PASSAGE.md,42,sheet 03,SHORTHAND,ARCH-03,RESOLVED,ARCH-03 'GROUND FLOOR PLAN' (FILE_PIN)
+research/agents_t123/T-123_FACADE_RUN_REVEAL_PASSAGE.md,64,sheet 03,SHORTHAND,ARCH-03,RESOLVED,ARCH-03 'GROUND FLOOR PLAN' (FILE_PIN)
+research/agents_t123/T-123_LEDGER.csv,14,sheet 03,SHORTHAND,ARCH-03,RESOLVED,ARCH-03 'GROUND FLOOR PLAN' (FILE_PIN)
+research/agents_t125/T-125_MASONRY_CENTRELINE_V2.md,5,P7757.dxf,FILE,p7757.dxf,FILE_ONLY,whole file p7757.dxf (no page named)
+research/agents_t126/T-126_ROUTE_G_SCOPE.md,12,ST7757 dxf.dxf,FILE,st7757.dxf,FILE_ONLY,whole file st7757.dxf (no page named)
+research/agents_t126/T-126_ROUTE_G_SCOPE.md,15,ST7757.dxf,FILE,st7757.dxf,FILE_ONLY,whole file st7757.dxf (no page named)
+research/agents_t126/T-126_ROUTE_G_SCOPE.md,47,ST7757.pdf p.6,SET_PAGE,ST-06,CONTENT_REVIEW,"context names gf plan (other sheets), nothing of ST-06 'SECOND FLOOR ROOF SLAB'"
+research/agents_t127/PLACES.csv,2,sheet 03,SHORTHAND,ARCH-03,RESOLVED,ARCH-03 'GROUND FLOOR PLAN' (FILE_PIN)
+research/agents_t127/T-127_POOL_COURT_SOFFIT.md,9,ST7757 dxf.dxf,FILE,st7757.dxf,FILE_ONLY,whole file st7757.dxf (no page named)
+research/agents_t127/T-127_POOL_COURT_SOFFIT.md,9,p7757_arch_sheet09.pdf,FILE_TITLE,ARCH-09,RESOLVED,ARCH-09 'NORTH EAST ELEVATION' (FILE_PIN)
+research/agents_t127/T-127_POOL_COURT_SOFFIT.md,9,p7757_arch_sheet10.pdf,FILE_TITLE,ARCH-10,RESOLVED,ARCH-10 'SECTION A-A' (FILE_PIN)
+research/agents_t127/T-127_POOL_COURT_SOFFIT.md,10,Alsenan_Architectural_P7757_Pages_11-12.pdf,PART,ARCH p.11-12,PART_ONLY,part pages 11..12 (no page named)
+research/agents_t127/T-127_POOL_COURT_SOFFIT.md,16,sheet 03,SHORTHAND,ARCH-03,RESOLVED,ARCH-03 'GROUND FLOOR PLAN' (FILE_PIN)
+research/agents_t127/T-127_POOL_COURT_SOFFIT.md,107,Sheet 09,SHORTHAND,ARCH-09,RESOLVED,ARCH-09 'NORTH EAST ELEVATION' (FILE_PIN)
+research/agents_t127/T-127_POOL_COURT_SOFFIT.md,107,sheet 10,SHORTHAND,ARCH-10,RESOLVED,ARCH-10 'SECTION A-A' (FILE_PIN)
+research/agents_t128/T-128_PLASTER_PAINT_TWO_METHODS.md,69,p7757_arch_sheet10.pdf,FILE_TITLE,ARCH-10,RESOLVED,ARCH-10 'SECTION A-A' (FILE_PIN)
+research/agents_t128/T-128_R2_PLASTER_PAINT_TWO_METHODS.md,18,P7757.dxf,FILE,p7757.dxf,FILE_ONLY,whole file p7757.dxf (no page named)
+research/agents_t128/T-128_R2_PLASTER_PAINT_TWO_METHODS.md,19,P7757.dxf,FILE,p7757.dxf,FILE_ONLY,whole file p7757.dxf (no page named)
+research/agents_t128/T-128_R3_NOTCH_TRIM.md,5,P7757.dxf,FILE,p7757.dxf,FILE_ONLY,whole file p7757.dxf (no page named)
+research/agents_t128/T-128_R3_NOTCH_TRIM.md,9,P7757.dxf,FILE,p7757.dxf,FILE_ONLY,whole file p7757.dxf (no page named)
+research/agents_t129/T-129_ARRIVALS_ONCE.md,5,Alsenan_Architectural_P7757_Pages_05-06,PART,ARCH p.5-6,PART_ONLY,part pages 5..6 (no page named)
+research/agents_t129/T-129_ARRIVALS_ONCE.md,6,ST7757.pdf,FILE,st7757.pdf,FILE_ONLY,whole file st7757.pdf (no page named)
+research/agents_t129/T-129_ARRIVALS_ONCE.md,6,p7757_arch_sheet10.pdf,FILE_TITLE,ARCH-10,RESOLVED,ARCH-10 'SECTION A-A' (FILE_PIN)
+research/agents_t129/T-129_ARRIVALS_ONCE.md,9,P7757.dxf,FILE,p7757.dxf,FILE_ONLY,whole file p7757.dxf (no page named)
+research/agents_t129/T-129_ARRIVALS_ONCE.md,56,ST7757 p.5,SET_PAGE,ST-05,RESOLVED,ST-05 'FIRST FLOOR ROOF SLAB (+ section B-B)' (FILE_PIN)
+research/agents_t131/T-131_ARCH_V30.md,34,ST7757 dxf.dxf,FILE,st7757.dxf,FILE_ONLY,whole file st7757.dxf (no page named)
+research/agents_t134/T-134_ELEMENT_REGISTER_V0.md,31,ST7757 dxf.dxf,FILE,st7757.dxf,FILE_ONLY,whole file st7757.dxf (no page named)
+research/agents_t135/T-135_STAIR_FLIGHT_ONCE.md,5,ST7757 dxf.dxf,FILE,st7757.dxf,FILE_ONLY,whole file st7757.dxf (no page named)
+research/agents_t137/T-137_MEMBRANE_COVERAGE_PROOF.md,104,P7757.dxf,FILE,p7757.dxf,FILE_ONLY,whole file p7757.dxf (no page named)
+research/agents_t138/T138_MEMBERS.csv,6,ST7757 p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t138/T138_MEMBERS.csv,16,ST7757 p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t138/T138_MEMBERS.csv,21,ST7757 p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t138/T138_MEMBERS.csv,26,ST7757 p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t138/T138_MEMBERS.csv,31,ST7757 p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t138/T138_MEMBERS.csv,36,ST7757 p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t138/T138_MEMBERS.csv,41,ST7757 p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t138/T138_MEMBERS.csv,46,ST7757 p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t138/T138_MEMBERS.csv,51,ST7757 p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t138/T138_MEMBERS.csv,56,ST7757 p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t138/T138_MEMBERS.csv,61,ST7757 p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t138/T138_MEMBERS.csv,81,ST7757 p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t138/T138_MEMBERS.csv,86,ST7757 p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t138/T138_MEMBERS.csv,91,ST7757 p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t138/T138_MEMBERS.csv,96,ST7757 p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t138/T138_MEMBERS.csv,101,ST7757 p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t138/T138_MEMBERS.csv,106,ST7757 p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t138/T138_MEMBERS.csv,116,ST7757 p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t138/T138_MEMBERS.csv,121,ST7757 p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t138/T138_MEMBERS.csv,126,ST7757 p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t138/T138_MEMBERS.csv,131,ST7757 p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t138/T138_MEMBERS.csv,154,ST7757 p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t138/T138_MEMBERS.csv,159,ST7757 p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t138/T138_MEMBERS.csv,164,ST7757 p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t138/T138_MEMBERS.csv,180,ST7757 p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t138/T138_MEMBERS.csv,197,ST7757 p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t138/T138_MEMBERS.csv,207,ST7757 p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t138/T138_MEMBERS.csv,212,ST7757 p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t138/T138_MEMBERS.csv,217,ST7757 p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t138/T138_MEMBERS.csv,222,ST7757 p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t138/T138_MEMBERS.csv,227,ST7757 p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t138/T138_MEMBERS.csv,232,ST7757 p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t138/T138_MEMBERS.csv,237,ST7757 p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t138/T138_MEMBERS.csv,247,ST7757 p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t138/T138_MEMBERS.csv,252,ST7757 p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t138/T138_MEMBERS.csv,257,ST7757 p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t138/T138_MEMBERS.csv,267,ST7757 p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t138/T138_MEMBERS.csv,277,ST7757 p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t138/T138_MEMBERS.csv,282,ST7757 p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t138/T138_MEMBERS.csv,306,ST7757 p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t138/T138_MEMBERS.csv,311,ST7757 p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t138/T138_MEMBERS.csv,316,ST7757 p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t139/PANELS.csv,17,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t139/PANELS.csv,18,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t139/PANELS.csv,20,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t139/PANELS.csv,22,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t139/PANELS.csv,29,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t139/PANELS.csv,34,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t139/PANELS.csv,36,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t139/PANELS.csv,38,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t139/PANELS.csv,41,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t139/PANELS.csv,54,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t139/PANELS.csv,61,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t139/PANELS.csv,63,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t139/PANELS.csv,78,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t139/PANELS.csv,79,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t139/PANELS.csv,81,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t139/PANELS.csv,83,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t139/PANELS.csv,100,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t139/PANELS.csv,103,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t139/PANELS.csv,107,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t139/PANELS.csv,126,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t139/PANELS.csv,128,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t139/PANELS.csv,130,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t139/PANELS.csv,136,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t139/PANELS.csv,137,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t139/PANELS.csv,139,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t139/PANELS.csv,141,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t139/PANELS.csv,148,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t139/PANELS.csv,171,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t139/PANELS.csv,174,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t139/PANELS.csv,175,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t139/PANELS.csv,178,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t139/PANELS.csv,213,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t139/PANELS.csv,215,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t139/PANELS.csv,218,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t139/PANELS.csv,220,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t139/PANELS.csv,236,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t139/PANELS.csv,252,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t139/PANELS.csv,255,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t139/PANELS.csv,257,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t139/PANELS.csv,258,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t139/PANELS.csv,260,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t139/PANELS.csv,268,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t139/PANELS.csv,269,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t139/PANELS.csv,273,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t139/PANELS.csv,274,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t139/PANELS.csv,285,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t139/PANELS.csv,287,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t139/PANELS.csv,289,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t139/PANELS.csv,290,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t139/PANELS.csv,291,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t139/PANELS.csv,293,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t139/PANELS.csv,295,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t139/PANELS.csv,325,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t139/PANELS.csv,334,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t139/PANELS.csv,342,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t139/PANELS.csv,354,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t139/PANELS.csv,356,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t139/T-139_SLABS_PANEL_BY_PANEL.md,6,ST7757 dxf.dxf,FILE,st7757.dxf,FILE_ONLY,whole file st7757.dxf (no page named)
+research/agents_t139/T-139_SLABS_PANEL_BY_PANEL.md,7,ST7757.pdf,FILE,st7757.pdf,FILE_ONLY,whole file st7757.pdf (no page named)
+research/agents_t139/T-139_SLABS_PANEL_BY_PANEL.md,50,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t139/T-139_SLABS_PANEL_BY_PANEL.md,95,ST p.5,SET_PAGE,ST-05,RESOLVED,ST-05 'FIRST FLOOR ROOF SLAB (+ section B-B)' (FILE_PIN)
+research/agents_t139/T-139_SLABS_PANEL_BY_PANEL.md,104,ST p.4,SET_PAGE,ST-04,RESOLVED,"ST-04 'GROUND FLOOR ROOF SLAB (+ sections A-A, C-C, D-D)' (FILE_PIN)"
+research/agents_t139/T-139_SLABS_PANEL_BY_PANEL.md,105,ST p.16,SET_PAGE,ST-16,RESOLVED,"ST-16 'DETAILS: typical (stair beam, stair steel layout / section, opening in beam, ribs)' (FILE_PIN)"
+research/agents_t139/T-139_SLABS_PANEL_BY_PANEL.md,105,ST p.5,SET_PAGE,ST-05,RESOLVED,ST-05 'FIRST FLOOR ROOF SLAB (+ section B-B)' (FILE_PIN)
+research/agents_t140/T-140_COVERAGE_CENSUS_V2.md,30,ST7757 dxf.dxf,FILE,st7757.dxf,FILE_ONLY,whole file st7757.dxf (no page named)
+research/agents_t142/T-142_ARCH_V302.md,7,ST7757 dxf.dxf,FILE,st7757.dxf,FILE_ONLY,whole file st7757.dxf (no page named)
+research/agents_t143/T-143_BLOCKWORK_BY_HAND.md,43,ST7757 dxf.dxf,FILE,st7757.dxf,FILE_ONLY,whole file st7757.dxf (no page named)
+research/agents_t143/T-143_BLOCKWORK_BY_HAND.md,48,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t143/T-143_BLOCKWORK_BY_HAND.md,65,ST7757.pdf,FILE,st7757.pdf,FILE_ONLY,whole file st7757.pdf (no page named)
+research/agents_t143/T-143_BLOCKWORK_BY_HAND.md,73,sheet 10,SHORTHAND,ARCH-10,RESOLVED,ARCH-10 'SECTION A-A' (FILE_PIN)
+research/agents_t143/T143_BLOCK_BY_WALL_RUN.csv,4,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t143/T143_BLOCK_BY_WALL_RUN.csv,10,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t143/T143_BLOCK_BY_WALL_RUN.csv,14,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t143/T143_BLOCK_BY_WALL_RUN.csv,18,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t143/T143_BLOCK_BY_WALL_RUN.csv,18,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t143/T143_BLOCK_BY_WALL_RUN.csv,21,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t143/T143_BLOCK_BY_WALL_RUN.csv,22,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t143/T143_BLOCK_BY_WALL_RUN.csv,23,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t143/T143_BLOCK_BY_WALL_RUN.csv,24,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t143/T143_BLOCK_BY_WALL_RUN.csv,25,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t143/T143_BLOCK_BY_WALL_RUN.csv,26,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t143/T143_BLOCK_BY_WALL_RUN.csv,27,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t143/T143_BLOCK_BY_WALL_RUN.csv,29,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t143/T143_BLOCK_BY_WALL_RUN.csv,30,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t143/T143_BLOCK_BY_WALL_RUN.csv,30,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t143/T143_BLOCK_BY_WALL_RUN.csv,31,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t143/T143_BLOCK_BY_WALL_RUN.csv,33,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t143/T143_BLOCK_BY_WALL_RUN.csv,34,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t143/T143_BLOCK_BY_WALL_RUN.csv,34,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t143/T143_BLOCK_BY_WALL_RUN.csv,34,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t143/T143_BLOCK_BY_WALL_RUN.csv,35,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t143/T143_BLOCK_BY_WALL_RUN.csv,36,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t143/T143_BLOCK_BY_WALL_RUN.csv,36,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t143/T143_BLOCK_BY_WALL_RUN.csv,44,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t143/T143_BLOCK_BY_WALL_RUN.csv,50,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t143/T143_BLOCK_BY_WALL_RUN.csv,50,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t143/T143_BLOCK_BY_WALL_RUN.csv,51,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t143/T143_BLOCK_BY_WALL_RUN.csv,52,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t143/T143_BLOCK_BY_WALL_RUN.csv,53,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t143/T143_BLOCK_BY_WALL_RUN.csv,53,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t143/T143_BLOCK_BY_WALL_RUN.csv,54,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t143/T143_BLOCK_BY_WALL_RUN.csv,54,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t143/T143_BLOCK_BY_WALL_RUN.csv,55,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t143/T143_BLOCK_BY_WALL_RUN.csv,56,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t143/T143_BLOCK_BY_WALL_RUN.csv,57,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t143/T143_BLOCK_BY_WALL_RUN.csv,57,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t143/T143_BLOCK_BY_WALL_RUN.csv,59,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t143/T143_BLOCK_BY_WALL_RUN.csv,61,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t143/T143_BLOCK_BY_WALL_RUN.csv,71,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t144/OPENINGS_T144.csv,18,Pages_05-06 p.6,PART_PAGE,ARCH-06,RESOLVED,ARCH-06 'SOUTH EAST ELEVATION' (FILE_PIN)
+research/agents_t144/OPENINGS_T144.csv,25,Pages_07-08 p.8,PART_PAGE,ARCH-08,RESOLVED,ARCH-08 'NORTH WEST ELEVATION' (FILE_PIN)
+research/agents_t144/OPENINGS_T144.csv,39,Pages_05-06 p.6,PART_PAGE,ARCH-06,RESOLVED,ARCH-06 'SOUTH EAST ELEVATION' (FILE_PIN)
+research/agents_t144/OPENINGS_T144.csv,47,Pages_07-08 p.8,PART_PAGE,ARCH-08,RESOLVED,ARCH-08 'NORTH WEST ELEVATION' (FILE_PIN)
+research/agents_t144/OPENINGS_T144.csv,58,Pages_07-08 p.8,PART_PAGE,ARCH-08,RESOLVED,ARCH-08 'NORTH WEST ELEVATION' (FILE_PIN)
+research/agents_t144/OPENINGS_T144.csv,65,Pages_07-08 p.8,PART_PAGE,ARCH-08,RESOLVED,ARCH-08 'NORTH WEST ELEVATION' (FILE_PIN)
+research/agents_t144/OPENINGS_T144.csv,66,Pages_07-08 p.8,PART_PAGE,ARCH-08,RESOLVED,ARCH-08 'NORTH WEST ELEVATION' (FILE_PIN)
+research/agents_t144/OPENINGS_T144.csv,75,Pages_05-06 p.6,PART_PAGE,ARCH-06,RESOLVED,ARCH-06 'SOUTH EAST ELEVATION' (FILE_PIN)
+research/agents_t144/OPENINGS_T144.csv,77,Pages_05-06 p.6,PART_PAGE,ARCH-06,RESOLVED,ARCH-06 'SOUTH EAST ELEVATION' (FILE_PIN)
+research/agents_t144/OPENINGS_T144.csv,79,Pages_05-06 p.6,PART_PAGE,ARCH-06,RESOLVED,ARCH-06 'SOUTH EAST ELEVATION' (FILE_PIN)
+research/agents_t144/T-144_OPENINGS_FOR_FINISHES.md,26,"Alsenan_Architectural_P7757_Pages_05-06, p.6",PART_PAGE,ARCH-06,RESOLVED,ARCH-06 'SOUTH EAST ELEVATION' (FILE_PIN)
+research/agents_t144/T-144_OPENINGS_FOR_FINISHES.md,27,"Alsenan_Architectural_P7757_Pages_07-08, p.7",PART_PAGE,ARCH-07,RESOLVED,ARCH-07 'SOUTH WEST ELEVATION' (FILE_PIN)
+research/agents_t144/T-144_OPENINGS_FOR_FINISHES.md,28,"Alsenan_Architectural_P7757_Pages_07-08, p.8",PART_PAGE,ARCH-08,RESOLVED,ARCH-08 'NORTH WEST ELEVATION' (FILE_PIN)
+research/agents_t144/T-144_OPENINGS_FOR_FINISHES.md,29,p7757_arch_sheet09,FILE_TITLE,ARCH-09,RESOLVED,ARCH-09 'NORTH EAST ELEVATION' (FILE_PIN)
+research/agents_t144/T-144_OPENINGS_FOR_FINISHES.md,30,p7757_arch_sheet10,FILE_TITLE,ARCH-10,RESOLVED,ARCH-10 'SECTION A-A' (FILE_PIN)
+research/agents_t144/T-144_OPENINGS_FOR_FINISHES.md,31,"Alsenan_Architectural_P7757_Pages_11-12, p.11",PART_PAGE,ARCH-11,RESOLVED,ARCH-11 'SECTION B-B' (FILE_PIN)
+research/agents_t144/T-144_OPENINGS_FOR_FINISHES.md,32,P7757.dxf,FILE,p7757.dxf,FILE_ONLY,whole file p7757.dxf (no page named)
+research/agents_t145/ITEMS.csv,2,ST p.11,SET_PAGE,ST-11,RESOLVED,ST-11 'SCHEDULE OF CONTINUES BEAMS (2 SPAN) x2' (FILE_PIN)
+research/agents_t145/T-145_SLAB_LEFTOVERS.md,6,ST7757 dxf.dxf,FILE,st7757.dxf,FILE_ONLY,whole file st7757.dxf (no page named)
+research/agents_t145/T-145_SLAB_LEFTOVERS.md,7,ST7757.pdf,FILE,st7757.pdf,FILE_ONLY,whole file st7757.pdf (no page named)
+research/agents_t145/T-145_SLAB_LEFTOVERS.md,33,ST p.4,SET_PAGE,ST-04,RESOLVED,"ST-04 'GROUND FLOOR ROOF SLAB (+ sections A-A, C-C, D-D)' (FILE_PIN)"
+research/agents_t145/T-145_SLAB_LEFTOVERS.md,38,ST p.11,SET_PAGE,ST-11,RESOLVED,ST-11 'SCHEDULE OF CONTINUES BEAMS (2 SPAN) x2' (FILE_PIN)
+research/agents_t145/T-145_SLAB_LEFTOVERS.md,53,ST p.4,SET_PAGE,ST-04,RESOLVED,"ST-04 'GROUND FLOOR ROOF SLAB (+ sections A-A, C-C, D-D)' (FILE_PIN)"
+research/agents_t145/T-145_SLAB_LEFTOVERS.md,100,ST p.14,SET_PAGE,ST-14,RESOLVED,"ST-14 'DETAILS: typical (parapet section, lift pit, boundary wall)' (FILE_PIN)"
+research/agents_t147/T-147_CEILINGS_BY_ROOM.md,9,ST7757 dxf.dxf,FILE,st7757.dxf,FILE_ONLY,whole file st7757.dxf (no page named)
+research/agents_t147/T-147_CEILINGS_BY_ROOM.md,9,p7757_arch_sheet03.pdf,FILE_TITLE,ARCH-03,RESOLVED,ARCH-03 'GROUND FLOOR PLAN' (FILE_PIN)
+research/agents_t147/T-147_CEILINGS_BY_ROOM.md,10,p7757_arch_sheet04.pdf,FILE_TITLE,ARCH-04,RESOLVED,ARCH-04 '1st FLOOR PLAN' (FILE_PIN)
+research/agents_t147/T-147_CEILINGS_BY_ROOM.md,54,ST p.4,SET_PAGE,ST-04,RESOLVED,"ST-04 'GROUND FLOOR ROOF SLAB (+ sections A-A, C-C, D-D)' (FILE_PIN)"
+research/agents_t147/T-147_CEILINGS_BY_ROOM.md,55,sheet 04,SHORTHAND,ARCH-04,RESOLVED,ARCH-04 '1st FLOOR PLAN' (FILE_PIN)
+research/agents_t147/T-147_CEILINGS_BY_ROOM.md,63,ST p.5,SET_PAGE,ST-05,RESOLVED,ST-05 'FIRST FLOOR ROOF SLAB (+ section B-B)' (FILE_PIN)
+research/agents_t147/T-147_CEILINGS_BY_ROOM.md,66,ST p.5,SET_PAGE,ST-05,RESOLVED,ST-05 'FIRST FLOOR ROOF SLAB (+ section B-B)' (FILE_PIN)
+research/agents_t147/T-147_CEILINGS_BY_ROOM.md,113,ST p.4,SET_PAGE,ST-04,RESOLVED,"ST-04 'GROUND FLOOR ROOF SLAB (+ sections A-A, C-C, D-D)' (FILE_PIN)"
+research/agents_t150/OPENINGS_T150.csv,2,sheet03,SHORTHAND,ARCH-03,RESOLVED,ARCH-03 'GROUND FLOOR PLAN' (FILE_PIN)
+research/agents_t150/OPENINGS_T150.csv,7,sheet03,SHORTHAND,ARCH-03,RESOLVED,ARCH-03 'GROUND FLOOR PLAN' (FILE_PIN)
+research/agents_t150/OPENINGS_T150.csv,8,Pages_05-06 p.6,PART_PAGE,ARCH-06,RESOLVED,ARCH-06 'SOUTH EAST ELEVATION' (FILE_PIN)
+research/agents_t150/OPENINGS_T150.csv,8,sheet03,SHORTHAND,ARCH-03,RESOLVED,ARCH-03 'GROUND FLOOR PLAN' (FILE_PIN)
+research/agents_t150/OPENINGS_T150.csv,10,sheet03,SHORTHAND,ARCH-03,RESOLVED,ARCH-03 'GROUND FLOOR PLAN' (FILE_PIN)
+research/agents_t150/OPENINGS_T150.csv,16,sheet03,SHORTHAND,ARCH-03,RESOLVED,ARCH-03 'GROUND FLOOR PLAN' (FILE_PIN)
+research/agents_t150/OPENINGS_T150.csv,40,sheet03,SHORTHAND,ARCH-03,RESOLVED,ARCH-03 'GROUND FLOOR PLAN' (FILE_PIN)
+research/agents_t150/OPENINGS_T150.csv,41,sheet03,SHORTHAND,ARCH-03,RESOLVED,ARCH-03 'GROUND FLOOR PLAN' (FILE_PIN)
+research/agents_t150/OPENINGS_T150.csv,47,sheet04,SHORTHAND,ARCH-04,RESOLVED,ARCH-04 '1st FLOOR PLAN' (FILE_PIN)
+research/agents_t150/OPENINGS_T150.csv,48,sheet09,SHORTHAND,ARCH-09,RESOLVED,ARCH-09 'NORTH EAST ELEVATION' (FILE_PIN)
+research/agents_t150/T-150_DOORS_WINDOWS_BOQ.md,56,P7757.dxf,FILE,p7757.dxf,FILE_ONLY,whole file p7757.dxf (no page named)
+research/agents_t150/T-150_DOORS_WINDOWS_BOQ.md,57,p7757_arch_sheet03,FILE_TITLE,ARCH-03,RESOLVED,ARCH-03 'GROUND FLOOR PLAN' (FILE_PIN)
+research/agents_t150/T-150_DOORS_WINDOWS_BOQ.md,58,p7757_arch_sheet04,FILE_TITLE,ARCH-04,RESOLVED,ARCH-04 '1st FLOOR PLAN' (FILE_PIN)
+research/agents_t150/T-150_DOORS_WINDOWS_BOQ.md,172,sheet03,SHORTHAND,ARCH-03,RESOLVED,ARCH-03 'GROUND FLOOR PLAN' (FILE_PIN)
+research/agents_t150/T-150_DOORS_WINDOWS_BOQ.md,174,Pages_05-06 p.6,PART_PAGE,ARCH-06,RESOLVED,ARCH-06 'SOUTH EAST ELEVATION' (FILE_PIN)
+research/agents_t150/T-150_DOORS_WINDOWS_BOQ.md,175,Pages_07-08 p.8,PART_PAGE,ARCH-08,RESOLVED,ARCH-08 'NORTH WEST ELEVATION' (FILE_PIN)
+research/agents_t152/T-152_SLAB_STEEL_BY_POPULATION.md,6,ST7757 dxf.dxf,FILE,st7757.dxf,FILE_ONLY,whole file st7757.dxf (no page named)
+research/agents_t152/T-152_SLAB_STEEL_BY_POPULATION.md,7,ST7757.pdf,FILE,st7757.pdf,FILE_ONLY,whole file st7757.pdf (no page named)
+research/agents_t153/T-153_FLOOR_AREA_BY_SPACE.md,9,p7757_arch_sheet03.pdf,FILE_TITLE,ARCH-03,RESOLVED,ARCH-03 'GROUND FLOOR PLAN' (FILE_PIN)
+research/agents_t153/T-153_FLOOR_AREA_BY_SPACE.md,136,P7757.dxf,FILE,p7757.dxf,FILE_ONLY,whole file p7757.dxf (no page named)
+research/agents_t154/T-154_POOL_COURT_RECONCILIATION.md,9,ST7757 dxf.dxf,FILE,st7757.dxf,FILE_ONLY,whole file st7757.dxf (no page named)
+research/agents_t155/T-155_FOOTING_NOTATION.md,6,ST7757.pdf,FILE,st7757.pdf,FILE_ONLY,whole file st7757.pdf (no page named)
+research/agents_t155/T-155_FOOTING_NOTATION.md,7,ST7757 dxf.dxf,FILE,st7757.dxf,FILE_ONLY,whole file st7757.dxf (no page named)
+research/agents_t155/T-155_FOOTING_NOTATION.md,17,ST7757.pdf,FILE,st7757.pdf,FILE_ONLY,whole file st7757.pdf (no page named)
+research/agents_t155/T-155_FOOTING_NOTATION.md,138,ST7757 dxf.dxf,FILE,st7757.dxf,FILE_ONLY,whole file st7757.dxf (no page named)
+research/agents_t157/AREAS_T157.csv,2,sheet03,SHORTHAND,ARCH-03,RESOLVED,ARCH-03 'GROUND FLOOR PLAN' (FILE_PIN)
+research/agents_t157/AREAS_T157.csv,2,sheet04,SHORTHAND,ARCH-04,RESOLVED,ARCH-04 '1st FLOOR PLAN' (FILE_PIN)
+research/agents_t157/AREAS_T157.csv,3,sheet03,SHORTHAND,ARCH-03,RESOLVED,ARCH-03 'GROUND FLOOR PLAN' (FILE_PIN)
+research/agents_t157/AREAS_T157.csv,3,sheet03,SHORTHAND,ARCH-03,RESOLVED,ARCH-03 'GROUND FLOOR PLAN' (FILE_PIN)
+research/agents_t157/AREAS_T157.csv,3,sheet04,SHORTHAND,ARCH-04,RESOLVED,ARCH-04 '1st FLOOR PLAN' (FILE_PIN)
+research/agents_t157/AREAS_T157.csv,4,sheet03,SHORTHAND,ARCH-03,RESOLVED,ARCH-03 'GROUND FLOOR PLAN' (FILE_PIN)
+research/agents_t157/AREAS_T157.csv,6,sheet03,SHORTHAND,ARCH-03,RESOLVED,ARCH-03 'GROUND FLOOR PLAN' (FILE_PIN)
+research/agents_t157/AREAS_T157.csv,7,sheet04,SHORTHAND,ARCH-04,RESOLVED,ARCH-04 '1st FLOOR PLAN' (FILE_PIN)
+research/agents_t157/AREAS_T157.csv,7,sheet10,SHORTHAND,ARCH-10,RESOLVED,ARCH-10 'SECTION A-A' (FILE_PIN)
+research/agents_t157/AREAS_T157.csv,11,sheet04,SHORTHAND,ARCH-04,RESOLVED,ARCH-04 '1st FLOOR PLAN' (FILE_PIN)
+research/agents_t157/AREAS_T157.csv,11,sheet10,SHORTHAND,ARCH-10,RESOLVED,ARCH-10 'SECTION A-A' (FILE_PIN)
+research/agents_t157/T-157_OUTDOOR_AREAS.md,11,Pages_05-06,PART,ARCH p.5-6,PART_ONLY,part pages 5..6 (no page named)
+research/agents_t157/T-157_OUTDOOR_AREAS.md,11,p7757_arch_sheet03,FILE_TITLE,ARCH-03,RESOLVED,ARCH-03 'GROUND FLOOR PLAN' (FILE_PIN)
+research/agents_t157/T-157_OUTDOOR_AREAS.md,11,p7757_arch_sheet04,FILE_TITLE,ARCH-04,RESOLVED,ARCH-04 '1st FLOOR PLAN' (FILE_PIN)
+research/agents_t157/T-157_OUTDOOR_AREAS.md,12,Pages_07-08,PART,ARCH p.7-8,PART_ONLY,part pages 7..8 (no page named)
+research/agents_t157/T-157_OUTDOOR_AREAS.md,12,Pages_11-12 p.11,PART_PAGE,ARCH-11,RESOLVED,ARCH-11 'SECTION B-B' (FILE_PIN)
+research/agents_t157/T-157_OUTDOOR_AREAS.md,12,p7757_arch_sheet09,FILE_TITLE,ARCH-09,RESOLVED,ARCH-09 'NORTH EAST ELEVATION' (FILE_PIN)
+research/agents_t157/T-157_OUTDOOR_AREAS.md,12,p7757_arch_sheet10,FILE_TITLE,ARCH-10,RESOLVED,ARCH-10 'SECTION A-A' (FILE_PIN)
+research/agents_t157/T-157_OUTDOOR_AREAS.md,31,sheet04,SHORTHAND,ARCH-04,RESOLVED,ARCH-04 '1st FLOOR PLAN' (FILE_PIN)
+research/agents_t157/T-157_OUTDOOR_AREAS.md,35,sheet03,SHORTHAND,ARCH-03,RESOLVED,ARCH-03 'GROUND FLOOR PLAN' (FILE_PIN)
+research/agents_t157/T-157_OUTDOOR_AREAS.md,36,sheet04,SHORTHAND,ARCH-04,RESOLVED,ARCH-04 '1st FLOOR PLAN' (FILE_PIN)
+research/agents_t157/T-157_OUTDOOR_AREAS.md,36,sheet10,SHORTHAND,ARCH-10,RESOLVED,ARCH-10 'SECTION A-A' (FILE_PIN)
+research/agents_t157/T-157_OUTDOOR_AREAS.md,61,sheet04,SHORTHAND,ARCH-04,RESOLVED,ARCH-04 '1st FLOOR PLAN' (FILE_PIN)
+research/agents_t157/T-157_OUTDOOR_AREAS.md,65,sheet04,SHORTHAND,ARCH-04,RESOLVED,ARCH-04 '1st FLOOR PLAN' (FILE_PIN)
+research/agents_t157/T-157_OUTDOOR_AREAS.md,93,sheet10,SHORTHAND,ARCH-10,RESOLVED,ARCH-10 'SECTION A-A' (FILE_PIN)
+research/agents_t157/T-157_OUTDOOR_AREAS.md,95,Sheet04,SHORTHAND,ARCH-04,RESOLVED,ARCH-04 '1st FLOOR PLAN' (FILE_PIN)
+research/agents_t159/FACADE_SIDES_T159.csv,84,sheet 09,SHORTHAND,ARCH-09,RESOLVED,ARCH-09 'NORTH EAST ELEVATION' (FILE_PIN)
+research/agents_t159/FACADE_SIDES_T159.csv,85,sheet 09,SHORTHAND,ARCH-09,RESOLVED,ARCH-09 'NORTH EAST ELEVATION' (FILE_PIN)
+research/agents_t159/FACADE_SIDES_T159.csv,91,sheet 07,SHORTHAND,ARCH-07,RESOLVED,ARCH-07 'SOUTH WEST ELEVATION' (FILE_PIN)
+research/agents_t159/FACADE_SIDES_T159.csv,94,sheet 07,SHORTHAND,ARCH-07,RESOLVED,ARCH-07 'SOUTH WEST ELEVATION' (FILE_PIN)
+research/agents_t159/T-159_FACADE_SIDES.md,10,Alsenan_Architectural_P7757_Pages_07-08.pdf page 1,PART_PAGE,ARCH-07,PART_FILE_PAGE,"page 1 of the part file 07-08 = set page 7 = ARCH-07 'SOUTH WEST ELEVATION' (page-in-file basis, not set page)"
+research/agents_t159/T-159_FACADE_SIDES.md,10,p7757_arch_sheet09.pdf,FILE_TITLE,ARCH-09,RESOLVED,ARCH-09 'NORTH EAST ELEVATION' (FILE_PIN)
+research/agents_t159/T-159_FACADE_SIDES.md,11,p7757_arch_sheet10.pdf,FILE_TITLE,ARCH-10,CONTENT_REVIEW,"context names south west (other sheets), nothing of ARCH-10 'SECTION A-A'"
+research/agents_t159/T-159_FACADE_SIDES.md,11,sheet 07,SHORTHAND,ARCH-07,RESOLVED,ARCH-07 'SOUTH WEST ELEVATION' (FILE_PIN)
+research/agents_t159/T-159_FACADE_SIDES.md,22,sheet 09,SHORTHAND,ARCH-09,RESOLVED,ARCH-09 'NORTH EAST ELEVATION' (FILE_PIN)
+research/agents_t159/T-159_FACADE_SIDES.md,24,sheet 07,SHORTHAND,ARCH-07,RESOLVED,ARCH-07 'SOUTH WEST ELEVATION' (FILE_PIN)
+research/agents_t159/T-159_FACADE_SIDES.md,40,sheet 09,SHORTHAND,ARCH-09,RESOLVED,ARCH-09 'NORTH EAST ELEVATION' (FILE_PIN)
+research/agents_t159/T-159_FACADE_SIDES.md,41,sheet 09,SHORTHAND,ARCH-09,RESOLVED,ARCH-09 'NORTH EAST ELEVATION' (FILE_PIN)
+research/agents_t159/T-159_FACADE_SIDES.md,59,sheet 07,SHORTHAND,ARCH-07,CONTENT_REVIEW,"context names se elevation (other sheets), nothing of ARCH-07 'SOUTH WEST ELEVATION'"
+research/agents_t159/T-159_FACADE_SIDES.md,59,sheet 09,SHORTHAND,ARCH-09,RESOLVED,ARCH-09 'NORTH EAST ELEVATION' (FILE_PIN)
+research/agents_t159/T-159_FACADE_SIDES.md,72,sheet 09,SHORTHAND,ARCH-09,CONTENT_REVIEW,"context names 1f plan, se elevation (other sheets), nothing of ARCH-09 'NORTH EAST ELEVATION'"
+research/agents_t159/T-159_FACADE_SIDES.md,141,sheet 07,SHORTHAND,ARCH-07,RESOLVED,ARCH-07 'SOUTH WEST ELEVATION' (FILE_PIN)
+research/agents_t159/T-159_FACADE_SIDES.md,149,sheet 09,SHORTHAND,ARCH-09,RESOLVED,ARCH-09 'NORTH EAST ELEVATION' (FILE_PIN)
+research/agents_t160/DOMES_INPUT.json,2,ST p.5,SET_PAGE,ST-05,RESOLVED,ST-05 'FIRST FLOOR ROOF SLAB (+ section B-B)' (FILE_PIN)
+research/agents_t160/DOMES_INPUT.json,2,ST p.7,SET_PAGE,ST-07,RESOLVED,ST-07 'DETAIL OF SWIMMING POOL + DETAIL OF DOME' (FILE_PIN)
+research/agents_t160/DOMES_INPUT.json,2,ST7757 dxf.dxf,FILE,st7757.dxf,FILE_ONLY,whole file st7757.dxf (no page named)
+research/agents_t160/DOMES_INPUT.json,5,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t160/DOMES_INPUT.json,9,ST p.5,SET_PAGE,ST-05,RESOLVED,ST-05 'FIRST FLOOR ROOF SLAB (+ section B-B)' (FILE_PIN)
+research/agents_t160/DOMES_INPUT.json,29,ST p.5,SET_PAGE,ST-05,RESOLVED,ST-05 'FIRST FLOOR ROOF SLAB (+ section B-B)' (FILE_PIN)
+research/agents_t160/T-160_DOME_RINGS.md,6,ST7757 dxf.dxf,FILE,st7757.dxf,FILE_ONLY,whole file st7757.dxf (no page named)
+research/agents_t160/T-160_DOME_RINGS.md,7,ST7757.pdf,FILE,st7757.pdf,FILE_ONLY,whole file st7757.pdf (no page named)
+research/agents_t161/IMAGES_T161.csv,2,Pages_05-06 p.6,PART_PAGE,ARCH-06,RESOLVED,ARCH-06 'SOUTH EAST ELEVATION' (FILE_PIN)
+research/agents_t161/IMAGES_T161.csv,2,sheet03,SHORTHAND,ARCH-03,RESOLVED,ARCH-03 'GROUND FLOOR PLAN' (FILE_PIN)
+research/agents_t161/IMAGES_T161.csv,3,Pages_07-08 p.8,PART_PAGE,ARCH-08,RESOLVED,ARCH-08 'NORTH WEST ELEVATION' (FILE_PIN)
+research/agents_t161/IMAGES_T161.csv,3,sheet03,SHORTHAND,ARCH-03,RESOLVED,ARCH-03 'GROUND FLOOR PLAN' (FILE_PIN)
+research/agents_t161/IMAGES_T161.csv,6,sheet03,SHORTHAND,ARCH-03,RESOLVED,ARCH-03 'GROUND FLOOR PLAN' (FILE_PIN)
+research/agents_t161/IMAGES_T161.csv,10,sheet04,SHORTHAND,ARCH-04,RESOLVED,ARCH-04 '1st FLOOR PLAN' (FILE_PIN)
+research/agents_t161/IMAGES_T161.csv,18,sheet03,SHORTHAND,ARCH-03,RESOLVED,ARCH-03 'GROUND FLOOR PLAN' (FILE_PIN)
+research/agents_t161/IMAGES_T161.csv,23,sheet03,SHORTHAND,ARCH-03,RESOLVED,ARCH-03 'GROUND FLOOR PLAN' (FILE_PIN)
+research/agents_t161/IMAGES_T161.csv,24,sheet03,SHORTHAND,ARCH-03,RESOLVED,ARCH-03 'GROUND FLOOR PLAN' (FILE_PIN)
+research/agents_t161/IMAGES_T161.csv,27,sheet03,SHORTHAND,ARCH-03,RESOLVED,ARCH-03 'GROUND FLOOR PLAN' (FILE_PIN)
+research/agents_t161/IMAGES_T161.csv,28,sheet03,SHORTHAND,ARCH-03,RESOLVED,ARCH-03 'GROUND FLOOR PLAN' (FILE_PIN)
+research/agents_t161/T-161_PHOTO_REVIEW.md,15,Alsenan_Architectural_P7757_Pages_05-06,PART,ARCH p.5-6,PART_ONLY,part pages 5..6 (no page named)
+research/agents_t161/T-161_PHOTO_REVIEW.md,16,Alsenan_Architectural_P7757_Pages_07-08,PART,ARCH p.7-8,PART_ONLY,part pages 7..8 (no page named)
+research/agents_t161/T-161_PHOTO_REVIEW.md,17,p7757_arch_sheet03,FILE_TITLE,ARCH-03,RESOLVED,ARCH-03 'GROUND FLOOR PLAN' (FILE_PIN)
+research/agents_t161/T-161_PHOTO_REVIEW.md,30,sheet03,SHORTHAND,ARCH-03,RESOLVED,ARCH-03 'GROUND FLOOR PLAN' (FILE_PIN)
+research/agents_t161/T-161_PHOTO_REVIEW.md,31,sheet03,SHORTHAND,ARCH-03,RESOLVED,ARCH-03 'GROUND FLOOR PLAN' (FILE_PIN)
+research/agents_t161/T-161_PHOTO_REVIEW.md,49,ST p.7,SET_PAGE,ST-07,RESOLVED,ST-07 'DETAIL OF SWIMMING POOL + DETAIL OF DOME' (FILE_PIN)
+research/agents_t161/T-161_PHOTO_REVIEW.md,49,sheet03,SHORTHAND,ARCH-03,CONTENT_REVIEW,"context names 1f plan (other sheets), nothing of ARCH-03 'GROUND FLOOR PLAN'"
+research/agents_t161/T-161_PHOTO_REVIEW.md,55,sheet03,SHORTHAND,ARCH-03,RESOLVED,ARCH-03 'GROUND FLOOR PLAN' (FILE_PIN)
+research/agents_t161/T-161_PHOTO_REVIEW.md,56,sheet03,SHORTHAND,ARCH-03,RESOLVED,ARCH-03 'GROUND FLOOR PLAN' (FILE_PIN)
+research/agents_t161/T-161_PHOTO_REVIEW.md,56,sheet03,SHORTHAND,ARCH-03,RESOLVED,ARCH-03 'GROUND FLOOR PLAN' (FILE_PIN)
+research/agents_t161/T-161_PHOTO_REVIEW.md,58,sheet03,SHORTHAND,ARCH-03,RESOLVED,ARCH-03 'GROUND FLOOR PLAN' (FILE_PIN)
+research/agents_t161/T-161_PHOTO_REVIEW.md,58,sheet03,SHORTHAND,ARCH-03,RESOLVED,ARCH-03 'GROUND FLOOR PLAN' (FILE_PIN)
+research/agents_t161/T-161_PHOTO_REVIEW.md,59,sheet03,SHORTHAND,ARCH-03,RESOLVED,ARCH-03 'GROUND FLOOR PLAN' (FILE_PIN)
+research/agents_t161/T-161_PHOTO_REVIEW.md,61,sheet03,SHORTHAND,ARCH-03,RESOLVED,ARCH-03 'GROUND FLOOR PLAN' (FILE_PIN)
+research/agents_t161/T-161_PHOTO_REVIEW.md,63,sheet03,SHORTHAND,ARCH-03,RESOLVED,ARCH-03 'GROUND FLOOR PLAN' (FILE_PIN)
+research/agents_t161/T-161_PHOTO_REVIEW.md,70,sheet03,SHORTHAND,ARCH-03,RESOLVED,ARCH-03 'GROUND FLOOR PLAN' (FILE_PIN)
+research/agents_t161/T-161_PHOTO_REVIEW.md,85,sheet03,SHORTHAND,ARCH-03,RESOLVED,ARCH-03 'GROUND FLOOR PLAN' (FILE_PIN)
+research/agents_t161/T-161_PHOTO_REVIEW.md,121,sheet03,SHORTHAND,ARCH-03,RESOLVED,ARCH-03 'GROUND FLOOR PLAN' (FILE_PIN)
+research/agents_t161/T-161_PHOTO_REVIEW.md,142,sheet03,SHORTHAND,ARCH-03,RESOLVED,ARCH-03 'GROUND FLOOR PLAN' (FILE_PIN)
+research/agents_t161/T-161_PHOTO_REVIEW.md,143,sheet03,SHORTHAND,ARCH-03,RESOLVED,ARCH-03 'GROUND FLOOR PLAN' (FILE_PIN)
+research/agents_t162/CORNERS_R2_T162.csv,12,ST p.14,SET_PAGE,ST-14,RESOLVED,"ST-14 'DETAILS: typical (parapet section, lift pit, boundary wall)' (FILE_PIN)"
+research/agents_t162/T-162_SIGMA_RECONCILIATION.md,22,sheet 09,SHORTHAND,ARCH-09,RESOLVED,ARCH-09 'NORTH EAST ELEVATION' (FILE_PIN)
+research/agents_t162/T-162_SIGMA_RECONCILIATION.md,39,sheet 07,SHORTHAND,ARCH-07,RESOLVED,ARCH-07 'SOUTH WEST ELEVATION' (FILE_PIN)
+research/agents_t162/T-162_SIGMA_RECONCILIATION.md,94,sheet 10,SHORTHAND,ARCH-10,RESOLVED,ARCH-10 'SECTION A-A' (FILE_PIN)
+research/agents_t162/T-162_SIGMA_RECONCILIATION.md,97,ST7757.pdf page 14,SET_PAGE,ST-14,RESOLVED,"ST-14 'DETAILS: typical (parapet section, lift pit, boundary wall)' (FILE_PIN)"
+research/agents_t162/T-162_SIGMA_RECONCILIATION.md,241,ST p.14,SET_PAGE,ST-14,RESOLVED,"ST-14 'DETAILS: typical (parapet section, lift pit, boundary wall)' (FILE_PIN)"
+research/agents_t162/TERMS_T162.csv,3,sheet 07,SHORTHAND,ARCH-07,RESOLVED,ARCH-07 'SOUTH WEST ELEVATION' (FILE_PIN)
+research/agents_t162/TERMS_T162.csv,5,sheet 07,SHORTHAND,ARCH-07,RESOLVED,ARCH-07 'SOUTH WEST ELEVATION' (FILE_PIN)
+research/agents_t162/TERMS_T162.csv,12,sheet 09,SHORTHAND,ARCH-09,RESOLVED,ARCH-09 'NORTH EAST ELEVATION' (FILE_PIN)
+research/agents_t162/TERMS_T162.csv,13,sheet 09,SHORTHAND,ARCH-09,RESOLVED,ARCH-09 'NORTH EAST ELEVATION' (FILE_PIN)
+research/agents_t164/RAILINGS_T164.csv,2,Pages_05-06 p.5,PART_PAGE,ARCH-05,RESOLVED,ARCH-05 '2nd FLOOR PLAN' (FILE_PIN)
+research/agents_t164/RAILINGS_T164.csv,3,Pages_05-06 p.5,PART_PAGE,ARCH-05,RESOLVED,ARCH-05 '2nd FLOOR PLAN' (FILE_PIN)
+research/agents_t164/RAILINGS_T164.csv,5,sheet04,SHORTHAND,ARCH-04,RESOLVED,ARCH-04 '1st FLOOR PLAN' (FILE_PIN)
+research/agents_t164/RAILINGS_T164.csv,6,sheet04,SHORTHAND,ARCH-04,RESOLVED,ARCH-04 '1st FLOOR PLAN' (FILE_PIN)
+research/agents_t164/RAILINGS_T164.csv,7,sheet04,SHORTHAND,ARCH-04,RESOLVED,ARCH-04 '1st FLOOR PLAN' (FILE_PIN)
+research/agents_t164/RAILINGS_T164.csv,8,sheet03,SHORTHAND,ARCH-03,RESOLVED,ARCH-03 'GROUND FLOOR PLAN' (FILE_PIN)
+research/agents_t164/RAILINGS_T164.csv,8,sheet04,SHORTHAND,ARCH-04,RESOLVED,ARCH-04 '1st FLOOR PLAN' (FILE_PIN)
+research/agents_t164/RAILINGS_T164.csv,9,sheet03,SHORTHAND,ARCH-03,RESOLVED,ARCH-03 'GROUND FLOOR PLAN' (FILE_PIN)
+research/agents_t164/RAILINGS_T164.csv,9,sheet04,SHORTHAND,ARCH-04,RESOLVED,ARCH-04 '1st FLOOR PLAN' (FILE_PIN)
+research/agents_t164/RAILINGS_T164.csv,10,sheet03,SHORTHAND,ARCH-03,RESOLVED,ARCH-03 'GROUND FLOOR PLAN' (FILE_PIN)
+research/agents_t164/RAILINGS_T164.csv,10,sheet04,SHORTHAND,ARCH-04,RESOLVED,ARCH-04 '1st FLOOR PLAN' (FILE_PIN)
+research/agents_t164/RAILINGS_T164.csv,11,sheet03,SHORTHAND,ARCH-03,RESOLVED,ARCH-03 'GROUND FLOOR PLAN' (FILE_PIN)
+research/agents_t164/RAILINGS_T164.csv,11,sheet04,SHORTHAND,ARCH-04,RESOLVED,ARCH-04 '1st FLOOR PLAN' (FILE_PIN)
+research/agents_t164/RAILINGS_T164.csv,12,sheet03,SHORTHAND,ARCH-03,RESOLVED,ARCH-03 'GROUND FLOOR PLAN' (FILE_PIN)
+research/agents_t164/RAILINGS_T164.csv,12,sheet04,SHORTHAND,ARCH-04,RESOLVED,ARCH-04 '1st FLOOR PLAN' (FILE_PIN)
+research/agents_t164/RAILINGS_T164.csv,13,sheet03,SHORTHAND,ARCH-03,RESOLVED,ARCH-03 'GROUND FLOOR PLAN' (FILE_PIN)
+research/agents_t164/RAILINGS_T164.csv,13,sheet04,SHORTHAND,ARCH-04,RESOLVED,ARCH-04 '1st FLOOR PLAN' (FILE_PIN)
+research/agents_t164/RAILINGS_T164.csv,15,sheet10,SHORTHAND,ARCH-10,RESOLVED,ARCH-10 'SECTION A-A' (FILE_PIN)
+research/agents_t164/RAILINGS_T164.csv,16,sheet10,SHORTHAND,ARCH-10,RESOLVED,ARCH-10 'SECTION A-A' (FILE_PIN)
+research/agents_t164/RAILINGS_T164.csv,17,sheet10,SHORTHAND,ARCH-10,RESOLVED,ARCH-10 'SECTION A-A' (FILE_PIN)
+research/agents_t164/RAILINGS_T164.csv,18,sheet10,SHORTHAND,ARCH-10,RESOLVED,ARCH-10 'SECTION A-A' (FILE_PIN)
+research/agents_t164/RAILINGS_T164.csv,19,sheet10,SHORTHAND,ARCH-10,RESOLVED,ARCH-10 'SECTION A-A' (FILE_PIN)
+research/agents_t164/RAILINGS_T164.csv,20,sheet10,SHORTHAND,ARCH-10,RESOLVED,ARCH-10 'SECTION A-A' (FILE_PIN)
+research/agents_t164/RAILINGS_T164.csv,21,sheet10,SHORTHAND,ARCH-10,RESOLVED,ARCH-10 'SECTION A-A' (FILE_PIN)
+research/agents_t164/RAILINGS_T164.csv,22,sheet10,SHORTHAND,ARCH-10,RESOLVED,ARCH-10 'SECTION A-A' (FILE_PIN)
+research/agents_t164/RAILINGS_T164.csv,23,sheet10,SHORTHAND,ARCH-10,RESOLVED,ARCH-10 'SECTION A-A' (FILE_PIN)
+research/agents_t164/RAILINGS_T164.csv,24,sheet10,SHORTHAND,ARCH-10,RESOLVED,ARCH-10 'SECTION A-A' (FILE_PIN)
+research/agents_t164/SHUTTERS_T164.csv,5,sheet03,SHORTHAND,ARCH-03,RESOLVED,ARCH-03 'GROUND FLOOR PLAN' (FILE_PIN)
+research/agents_t164/T-164_RAILINGS_SHUTTERS.md,16,Pages_05-06,PART,ARCH p.5-6,PART_ONLY,part pages 5..6 (no page named)
+research/agents_t164/T-164_RAILINGS_SHUTTERS.md,16,Pages_07-08,PART,ARCH p.7-8,PART_ONLY,part pages 7..8 (no page named)
+research/agents_t164/T-164_RAILINGS_SHUTTERS.md,16,Pages_11-12,PART,ARCH p.11-12,PART_ONLY,part pages 11..12 (no page named)
+research/agents_t164/T-164_RAILINGS_SHUTTERS.md,16,p7757_arch_sheet03,FILE_TITLE,ARCH-03,RESOLVED,ARCH-03 'GROUND FLOOR PLAN' (FILE_PIN)
+research/agents_t164/T-164_RAILINGS_SHUTTERS.md,16,sheet04,SHORTHAND,ARCH-04,CONTENT_REVIEW,"context names 2f plan (other sheets), nothing of ARCH-04 '1st FLOOR PLAN'"
+research/agents_t164/T-164_RAILINGS_SHUTTERS.md,16,sheet09,SHORTHAND,ARCH-09,CONTENT_REVIEW,"context names a-a, section a-a (other sheets), nothing of ARCH-09 'NORTH EAST ELEVATION'"
+research/agents_t164/T-164_RAILINGS_SHUTTERS.md,16,sheet10,SHORTHAND,ARCH-10,RESOLVED,ARCH-10 'SECTION A-A' (FILE_PIN)
+research/agents_t165/T-165_RELEASE_BASELINE.md,47,ST7757 dxf.dxf,FILE,st7757.dxf,FILE_ONLY,whole file st7757.dxf (no page named)
+research/agents_t165/baselines/V29_ROUTEG_NO_PROFILE.json,26,ST7757 dxf.dxf,FILE,st7757.dxf,FILE_ONLY,whole file st7757.dxf (no page named)
+research/agents_t165/baselines/v29_profiled_facts.json,27,P7757.dxf,FILE,p7757.dxf,FILE_ONLY,whole file p7757.dxf (no page named)
+research/agents_t166/T-166_STAIR_POOL_TANK_STEEL.md,6,ST7757.pdf,FILE,st7757.pdf,FILE_ONLY,whole file st7757.pdf (no page named)
+research/agents_t166/T-166_STAIR_POOL_TANK_STEEL.md,9,ST7757 dxf.dxf,FILE,st7757.dxf,FILE_ONLY,whole file st7757.dxf (no page named)
+research/agents_t167/T-167_ARCH_V304.md,37,ST7757 dxf.dxf,FILE,st7757.dxf,FILE_ONLY,whole file st7757.dxf (no page named)
+research/agents_t167/profile_st7757_q17a.json,45,ST7757 p.13,SET_PAGE,ST-13,RESOLVED,"ST-13 'DETAILS: typical (footing, lintel, ground beams for exterior walls)' (FILE_PIN)"
+research/agents_t167/profile_st7757_q17a.json,69,ST7757.pdf p.13,SET_PAGE,ST-13,RESOLVED,"ST-13 'DETAILS: typical (footing, lintel, ground beams for exterior walls)' (FILE_PIN)"
+research/agents_t171/T-171_NOTATION_INVESTIGATION.md,6,ST7757.pdf,FILE,st7757.pdf,FILE_ONLY,whole file st7757.pdf (no page named)
+research/agents_t171/T-171_NOTATION_INVESTIGATION.md,7,ST7757 dxf.dxf,FILE,st7757.dxf,FILE_ONLY,whole file st7757.dxf (no page named)
+research/agents_t171/T-171_NOTATION_INVESTIGATION.md,20,ST p.9,SET_PAGE,ST-09,RESOLVED,"ST-09 'SCHEDULES: Schedule of Columns, Schedule of Footings' (FILE_PIN)"
+research/agents_t171/T-171_NOTATION_INVESTIGATION.md,21,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t171/T-171_NOTATION_INVESTIGATION.md,22,ST p.13,SET_PAGE,ST-13,RESOLVED,"ST-13 'DETAILS: typical (footing, lintel, ground beams for exterior walls)' (FILE_PIN)"
+research/agents_t171/T-171_NOTATION_INVESTIGATION.md,23,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t171/T-171_NOTATION_INVESTIGATION.md,24,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t171/T-171_NOTATION_INVESTIGATION.md,25,ST p.9,SET_PAGE,ST-09,RESOLVED,"ST-09 'SCHEDULES: Schedule of Columns, Schedule of Footings' (FILE_PIN)"
+research/agents_t171/T-171_NOTATION_INVESTIGATION.md,86,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t172/T-172_CORNERS_PARAPETS.md,11,p7757_arch_sheet10.pdf,FILE_TITLE,ARCH-10,RESOLVED,ARCH-10 'SECTION A-A' (FILE_PIN)
+research/agents_t172/T-172_CORNERS_PARAPETS.md,12,p7757_arch_sheet09.pdf,FILE_TITLE,ARCH-09,RESOLVED,ARCH-09 'NORTH EAST ELEVATION' (FILE_PIN)
+research/agents_t172/T-172_CORNERS_PARAPETS.md,19,sheet 10,SHORTHAND,ARCH-10,RESOLVED,ARCH-10 'SECTION A-A' (FILE_PIN)
+research/agents_t172/summary.json,52,sheet 09,SHORTHAND,ARCH-09,RESOLVED,ARCH-09 'NORTH EAST ELEVATION' (FILE_PIN)
+research/agents_t172/summary.json,52,sheet 10,SHORTHAND,ARCH-10,RESOLVED,ARCH-10 'SECTION A-A' (FILE_PIN)
+research/agents_t173/ALSENAN_SHAFT_INPUT.json,7,p7757_arch_sheet03.pdf,FILE_TITLE,ARCH-03,RESOLVED,ARCH-03 'GROUND FLOOR PLAN' (FILE_PIN)
+research/agents_t173/ALSENAN_SHAFT_INPUT.json,8,p7757_arch_sheet04.pdf,FILE_TITLE,ARCH-04,RESOLVED,ARCH-04 '1st FLOOR PLAN' (FILE_PIN)
+research/agents_t173/ALSENAN_SHAFT_INPUT.json,9,Alsenan_Architectural_P7757_Pages_05-06.pdf p.1,PART_PAGE,ARCH-05,PART_FILE_PAGE,"page 1 of the part file 05-06 = set page 5 = ARCH-05 '2nd FLOOR PLAN' (page-in-file basis, not set page)"
+research/agents_t173/ALSENAN_SHAFT_INPUT.json,10,p7757_arch_sheet10.pdf,FILE_TITLE,ARCH-10,RESOLVED,ARCH-10 'SECTION A-A' (FILE_PIN)
+research/agents_t173/ALSENAN_SHAFT_INPUT.json,11,ST7757 dxf.dxf,FILE,st7757.dxf,FILE_ONLY,whole file st7757.dxf (no page named)
+research/agents_t173/T-173_STAIR_SHAFT_WALLS.md,6,p7757_arch_sheet10.pdf,FILE_TITLE,ARCH-10,RESOLVED,ARCH-10 'SECTION A-A' (FILE_PIN)
+research/agents_t173/T-173_STAIR_SHAFT_WALLS.md,7,ST7757 dxf.dxf,FILE,st7757.dxf,FILE_ONLY,whole file st7757.dxf (no page named)
+research/agents_t175/T-175_OPENING_DEDUCTIONS_BY_PHYSICAL_SCOPE.md,47,ST7757.pdf p.13,SET_PAGE,ST-13,RESOLVED,"ST-13 'DETAILS: typical (footing, lintel, ground beams for exterior walls)' (FILE_PIN)"
+research/agents_t175/T-175_OPENING_DEDUCTIONS_BY_PHYSICAL_SCOPE.md,62,P7757.dxf,FILE,p7757.dxf,FILE_ONLY,whole file p7757.dxf (no page named)
+research/agents_t177/T-177_SCOREBOARD_V2_SCRIPT.md,59,P7757.dxf,FILE,p7757.dxf,FILE_ONLY,whole file p7757.dxf (no page named)
+research/agents_t177/T-177_SCOREBOARD_V2_SCRIPT.md,59,ST7757 dxf.dxf,FILE,st7757.dxf,FILE_ONLY,whole file st7757.dxf (no page named)
+research/agents_t181/T-181_OPENINGS_LIKE_FOR_LIKE.md,35,P7757.dxf,FILE,p7757.dxf,FILE_ONLY,whole file p7757.dxf (no page named)
+research/agents_t181/T-181_OPENINGS_LIKE_FOR_LIKE.md,36,ST7757 dxf.dxf,FILE,st7757.dxf,FILE_ONLY,whole file st7757.dxf (no page named)
+research/agents_t183/ALSENAN_POOL_INPUT.json,3,ST p.7,SET_PAGE,ST-07,RESOLVED,ST-07 'DETAIL OF SWIMMING POOL + DETAIL OF DOME' (FILE_PIN)
+research/agents_t183/ALSENAN_POOL_INPUT.json,3,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t183/T-183_POOL_RC.md,8,ST7757.pdf,FILE,st7757.pdf,FILE_ONLY,whole file st7757.pdf (no page named)
+research/agents_t183/T-183_POOL_RC.md,9,ST7757 dxf.dxf,FILE,st7757.dxf,FILE_ONLY,whole file st7757.dxf (no page named)
+research/agents_t183/T-183_POOL_RC.md,11,P7757 dxf.dxf,FILE,p7757.dxf,FILE_ONLY,whole file p7757.dxf (no page named)
+research/agents_t183/T-183_POOL_RC.md,11,p7757_arch_sheet03.pdf,FILE_TITLE,ARCH-03,RESOLVED,ARCH-03 'GROUND FLOOR PLAN' (FILE_PIN)
+research/agents_t184/ALSENAN_STAIR_INPUT.json,5,p7757_arch_sheet03.pdf,FILE_TITLE,ARCH-03,RESOLVED,ARCH-03 'GROUND FLOOR PLAN' (FILE_PIN)
+research/agents_t184/ALSENAN_STAIR_INPUT.json,6,p7757_arch_sheet04.pdf,FILE_TITLE,ARCH-04,RESOLVED,ARCH-04 '1st FLOOR PLAN' (FILE_PIN)
+research/agents_t184/ALSENAN_STAIR_INPUT.json,7,Alsenan_Architectural_P7757_Pages_05-06.pdf page 1,PART_PAGE,ARCH-05,PART_FILE_PAGE,"page 1 of the part file 05-06 = set page 5 = ARCH-05 '2nd FLOOR PLAN' (page-in-file basis, not set page)"
+research/agents_t184/ALSENAN_STAIR_INPUT.json,8,Alsenan_Architectural_P7757_Pages_05-06.pdf page 2,PART_PAGE,ARCH-06,PART_FILE_PAGE,"page 2 of the part file 05-06 = set page 6 = ARCH-06 'SOUTH EAST ELEVATION' (page-in-file basis, not set page)"
+research/agents_t184/ALSENAN_STAIR_INPUT.json,9,p7757_arch_sheet10.pdf,FILE_TITLE,ARCH-10,RESOLVED,ARCH-10 'SECTION A-A' (FILE_PIN)
+research/agents_t184/ALSENAN_STAIR_INPUT.json,10,ST7757.pdf p.3,SET_PAGE,ST-03,RESOLVED,ST-03 'GROUND BEAMS PLAN' (FILE_PIN)
+research/agents_t184/ALSENAN_STAIR_INPUT.json,11,ST7757.pdf p.4,SET_PAGE,ST-04,RESOLVED,"ST-04 'GROUND FLOOR ROOF SLAB (+ sections A-A, C-C, D-D)' (FILE_PIN)"
+research/agents_t184/ALSENAN_STAIR_INPUT.json,12,ST7757.pdf p.5,SET_PAGE,ST-05,RESOLVED,ST-05 'FIRST FLOOR ROOF SLAB (+ section B-B)' (FILE_PIN)
+research/agents_t184/ALSENAN_STAIR_INPUT.json,13,ST7757.pdf p.6,SET_PAGE,ST-06,RESOLVED,ST-06 'SECOND FLOOR ROOF SLAB' (FILE_PIN)
+research/agents_t184/ALSENAN_STAIR_INPUT.json,14,ST7757.pdf p.16,SET_PAGE,ST-16,CONTENT_REVIEW,"context names second floor roof slab (other sheets), nothing of ST-16 'DETAILS: typical (stair beam, stair steel layout / section, opening in beam, ribs)'"
+research/agents_t184/ALSENAN_STAIR_INPUT.json,25,ST p.4,SET_PAGE,ST-04,RESOLVED,"ST-04 'GROUND FLOOR ROOF SLAB (+ sections A-A, C-C, D-D)' (FILE_PIN)"
+research/agents_t184/ALSENAN_STAIR_INPUT.json,25,ST p.5,SET_PAGE,ST-05,RESOLVED,ST-05 'FIRST FLOOR ROOF SLAB (+ section B-B)' (FILE_PIN)
+research/agents_t184/ALSENAN_STAIR_INPUT.json,32,ST p.4,SET_PAGE,ST-04,RESOLVED,"ST-04 'GROUND FLOOR ROOF SLAB (+ sections A-A, C-C, D-D)' (FILE_PIN)"
+research/agents_t184/ALSENAN_STAIR_INPUT.json,34,ST p.6,SET_PAGE,ST-06,RESOLVED,ST-06 'SECOND FLOOR ROOF SLAB' (FILE_PIN)
+research/agents_t184/ALSENAN_STAIR_INPUT.json,125,ST p.16,SET_PAGE,ST-16,RESOLVED,"ST-16 'DETAILS: typical (stair beam, stair steel layout / section, opening in beam, ribs)' (FILE_PIN)"
+research/agents_t184/ALSENAN_STAIR_INPUT.json,125,ST p.4,SET_PAGE,ST-04,CONTENT_REVIEW,"context names stair beam (other sheets), nothing of ST-04 'GROUND FLOOR ROOF SLAB (+ sections A-A, C-C, D-D)'"
+research/agents_t184/ALSENAN_STAIR_INPUT.json,222,ST p.5,SET_PAGE,ST-05,CONTENT_REVIEW,"context names 2f plan (other sheets), nothing of ST-05 'FIRST FLOOR ROOF SLAB (+ section B-B)'"
+research/agents_t184/ALSENAN_STAIR_INPUT.json,335,ST p.5,SET_PAGE,ST-05,RESOLVED,ST-05 'FIRST FLOOR ROOF SLAB (+ section B-B)' (FILE_PIN)
+research/agents_t184/ALSENAN_STAIR_INPUT.json,342,ST p.4,SET_PAGE,ST-04,RESOLVED,"ST-04 'GROUND FLOOR ROOF SLAB (+ sections A-A, C-C, D-D)' (FILE_PIN)"
+research/agents_t184/ALSENAN_STAIR_INPUT.json,380,ST p.4,SET_PAGE,ST-04,RESOLVED,"ST-04 'GROUND FLOOR ROOF SLAB (+ sections A-A, C-C, D-D)' (FILE_PIN)"
+research/agents_t184/T-184_STAIRCASES.md,5,ST7757.pdf,FILE,st7757.pdf,FILE_ONLY,whole file st7757.pdf (no page named)
+research/agents_t184/T-184_STAIRCASES.md,6,P7757.dxf,FILE,p7757.dxf,FILE_ONLY,whole file p7757.dxf (no page named)
+research/agents_t184/T-184_STAIRCASES.md,6,ST7757 dxf.dxf,FILE,st7757.dxf,FILE_ONLY,whole file st7757.dxf (no page named)
+research/agents_t184/T-184_STAIRCASES.md,7,Alsenan_Architectural_P7757_Pages_05-06.pdf,PART,ARCH p.5-6,PART_ONLY,part pages 5..6 (no page named)
+research/agents_t184/T-184_STAIRCASES.md,7,p7757_arch_sheet03.pdf,FILE_TITLE,ARCH-03,RESOLVED,ARCH-03 'GROUND FLOOR PLAN' (FILE_PIN)
+research/agents_t184/T-184_STAIRCASES.md,7,p7757_arch_sheet04.pdf,FILE_TITLE,ARCH-04,RESOLVED,ARCH-04 '1st FLOOR PLAN' (FILE_PIN)
+research/agents_t184/T-184_STAIRCASES.md,8,p7757_arch_sheet10.pdf,FILE_TITLE,ARCH-10,RESOLVED,ARCH-10 'SECTION A-A' (FILE_PIN)
+research/agents_t184/T-184_STAIRCASES.md,30,ST p.6,SET_PAGE,ST-06,RESOLVED,ST-06 'SECOND FLOOR ROOF SLAB' (FILE_PIN)
+research/agents_t184/T-184_STAIRCASES.md,31,ST p.3,SET_PAGE,ST-03,CONTENT_REVIEW,"context names a-a, gf plan, section a-a (other sheets), nothing of ST-03 'GROUND BEAMS PLAN'"
+research/agents_t184/T-184_STAIRCASES.md,32,ST p.5,SET_PAGE,ST-05,RESOLVED,ST-05 'FIRST FLOOR ROOF SLAB (+ section B-B)' (FILE_PIN)
+research/agents_t184/T-184_STAIRCASES.md,33,ST p.3,SET_PAGE,ST-03,RESOLVED,ST-03 'GROUND BEAMS PLAN' (FILE_PIN)
+research/agents_t184/T-184_STAIRCASES.md,36,ST p.5,SET_PAGE,ST-05,RESOLVED,ST-05 'FIRST FLOOR ROOF SLAB (+ section B-B)' (FILE_PIN)
+research/agents_t184/T-184_STAIRCASES.md,40,ST p.4,SET_PAGE,ST-04,RESOLVED,"ST-04 'GROUND FLOOR ROOF SLAB (+ sections A-A, C-C, D-D)' (FILE_PIN)"
+research/agents_t184/T-184_STAIRCASES.md,48,ST7757 p.16,SET_PAGE,ST-16,RESOLVED,"ST-16 'DETAILS: typical (stair beam, stair steel layout / section, opening in beam, ribs)' (FILE_PIN)"
+research/agents_t184/T-184_STAIRCASES.md,104,ST p.4,SET_PAGE,ST-04,RESOLVED,"ST-04 'GROUND FLOOR ROOF SLAB (+ sections A-A, C-C, D-D)' (FILE_PIN)"
+research/agents_t184/T-184_STAIRCASES.md,104,ST p.5,SET_PAGE,ST-05,RESOLVED,ST-05 'FIRST FLOOR ROOF SLAB (+ section B-B)' (FILE_PIN)
+research/agents_t184/T-184_STAIRCASES.md,110,ST p.4,SET_PAGE,ST-04,RESOLVED,"ST-04 'GROUND FLOOR ROOF SLAB (+ sections A-A, C-C, D-D)' (FILE_PIN)"
+research/agents_t185/ALSENAN_DOME_INPUT.json,4,ST7757 dxf.dxf,FILE,st7757.dxf,FILE_ONLY,whole file st7757.dxf (no page named)
+research/agents_t185/ALSENAN_DOME_INPUT.json,5,P7757.dxf,FILE,p7757.dxf,FILE_ONLY,whole file p7757.dxf (no page named)
+research/agents_t185/ALSENAN_DOME_INPUT.json,6,Alsenan_Architectural_P7757_Pages_11-12,PART,ARCH p.11-12,PART_ONLY,part pages 11..12 (no page named)
+research/agents_t185/ALSENAN_DOME_INPUT.json,10,ST p.5,SET_PAGE,ST-05,RESOLVED,ST-05 'FIRST FLOOR ROOF SLAB (+ section B-B)' (FILE_PIN)
+research/agents_t185/ALSENAN_DOME_INPUT.json,11,ST p.7,SET_PAGE,ST-07,RESOLVED,ST-07 'DETAIL OF SWIMMING POOL + DETAIL OF DOME' (FILE_PIN)
+research/agents_t185/ALSENAN_DOME_INPUT.json,30,ST p.5,SET_PAGE,ST-05,RESOLVED,ST-05 'FIRST FLOOR ROOF SLAB (+ section B-B)' (FILE_PIN)
+research/agents_t185/ALSENAN_DOME_INPUT.json,31,ST p.7,SET_PAGE,ST-07,RESOLVED,ST-07 'DETAIL OF SWIMMING POOL + DETAIL OF DOME' (FILE_PIN)
+research/agents_t185/ALSENAN_DOME_INPUT.json,51,ST p.6,SET_PAGE,ST-06,RESOLVED,ST-06 'SECOND FLOOR ROOF SLAB' (FILE_PIN)
+research/agents_t185/T-185_DOME_SCENARIOS.md,14,ST7757 dxf.dxf,FILE,st7757.dxf,FILE_ONLY,whole file st7757.dxf (no page named)
+research/agents_t185/T-185_DOME_SCENARIOS.md,19,Alsenan_Architectural_P7757_Pages_11-12,PART,ARCH p.11-12,PART_ONLY,part pages 11..12 (no page named)
+research/agents_t185/T-185_DOME_SCENARIOS.md,62,ST p.5,SET_PAGE,ST-05,RESOLVED,ST-05 'FIRST FLOOR ROOF SLAB (+ section B-B)' (FILE_PIN)
+research/agents_t185/T-185_DOME_SCENARIOS.md,138,ST p.5,SET_PAGE,ST-05,RESOLVED,ST-05 'FIRST FLOOR ROOF SLAB (+ section B-B)' (FILE_PIN)
+research/agents_t185/T-185_DOME_SCENARIOS.md,145,ST p.5,SET_PAGE,ST-05,RESOLVED,ST-05 'FIRST FLOOR ROOF SLAB (+ section B-B)' (FILE_PIN)
+research/agents_t185/T-185_DOME_SCENARIOS.md,153,ST p.6,SET_PAGE,ST-06,CONTENT_REVIEW,"context names a-a, section a-a (other sheets), nothing of ST-06 'SECOND FLOOR ROOF SLAB'"
+research/agents_t185/T185_LEDGER.json,268,ST p.6,SET_PAGE,ST-06,RESOLVED,ST-06 'SECOND FLOOR ROOF SLAB' (FILE_PIN)
+research/agents_t186/T-186_DEFAULT_GUARD.md,54,ST7757 dxf.dxf,FILE,st7757.dxf,FILE_ONLY,whole file st7757.dxf (no page named)
+research/agents_t186/T-186_DEFAULT_GUARD.md,61,ST7757.pdf p.7,SET_PAGE,ST-07,RESOLVED,ST-07 'DETAIL OF SWIMMING POOL + DETAIL OF DOME' (FILE_PIN)
+research/agents_t186/dev_villa_guard_evidence.json,4,P7757.dxf,FILE,p7757.dxf,FILE_ONLY,whole file p7757.dxf (no page named)
+research/agents_t186/dev_villa_guard_evidence.json,4,ST7757 dxf.dxf,FILE,st7757.dxf,FILE_ONLY,whole file st7757.dxf (no page named)
+research/agents_t186/dev_villa_guard_evidence.json,4,ST7757 dxf.dxf,FILE,st7757.dxf,FILE_ONLY,whole file st7757.dxf (no page named)
+research/agents_t186/dev_villa_guard_evidence.json,4,ST7757 dxf.dxf,FILE,st7757.dxf,FILE_ONLY,whole file st7757.dxf (no page named)
+research/agents_t186/dev_villa_guard_evidence.json,4,ST7757.dxf,FILE,st7757.dxf,FILE_ONLY,whole file st7757.dxf (no page named)
+research/agents_t186/dev_villa_guard_evidence.json,6,ST7757 dxf.dxf,FILE,st7757.dxf,FILE_ONLY,whole file st7757.dxf (no page named)
+research/agents_t186/dev_villa_guard_evidence.json,8,ST7757.pdf,FILE,st7757.pdf,FILE_ONLY,whole file st7757.pdf (no page named)
+research/agents_t186/dev_villa_guard_evidence.json,9,p7757_arch_sheet10.pdf,FILE_TITLE,ARCH-10,RESOLVED,ARCH-10 'SECTION A-A' (FILE_PIN)
+research/agents_t186/dev_villa_guard_evidence.json,10,Alsenan_Architectural_P7757_Pages_11-12,PART,ARCH p.11-12,PART_ONLY,part pages 11..12 (no page named)
+research/agents_t186/dev_villa_guard_evidence.json,13,ST7757.pdf,FILE,st7757.pdf,FILE_ONLY,whole file st7757.pdf (no page named)
+research/agents_t186/dev_villa_guard_evidence.json,15,ST7757 dxf.dxf,FILE,st7757.dxf,FILE_ONLY,whole file st7757.dxf (no page named)
+research/agents_t186/dev_villa_guard_evidence.json,16,ST7757 dxf.dxf,FILE,st7757.dxf,FILE_ONLY,whole file st7757.dxf (no page named)
+research/agents_t186/dev_villa_guard_evidence.json,17,ST7757 dxf.dxf,FILE,st7757.dxf,FILE_ONLY,whole file st7757.dxf (no page named)
+research/agents_t186/dev_villa_guard_evidence.json,18,ST7757.pdf,FILE,st7757.pdf,FILE_ONLY,whole file st7757.pdf (no page named)
+research/agents_t186/dev_villa_guard_evidence.json,19,ST7757 dxf.dxf,FILE,st7757.dxf,FILE_ONLY,whole file st7757.dxf (no page named)
+research/agents_t186/dev_villa_guard_evidence.json,20,ST7757.pdf,FILE,st7757.pdf,FILE_ONLY,whole file st7757.pdf (no page named)
+research/agents_t186/dev_villa_guard_evidence.json,21,ST7757.pdf,FILE,st7757.pdf,FILE_ONLY,whole file st7757.pdf (no page named)
+research/agents_t189/ALSENAN_OVERLAP_INPUT.json,3,ST7757 dxf.dxf,FILE,st7757.dxf,FILE_ONLY,whole file st7757.dxf (no page named)
+research/agents_t189/ALSENAN_OVERLAP_INPUT.json,3,p7757_arch_sheet10.pdf,FILE_TITLE,ARCH-10,RESOLVED,ARCH-10 'SECTION A-A' (FILE_PIN)
+research/agents_t189/ALSENAN_OVERLAP_INPUT.json,6,ST p.4,SET_PAGE,ST-04,RESOLVED,"ST-04 'GROUND FLOOR ROOF SLAB (+ sections A-A, C-C, D-D)' (FILE_PIN)"
+research/agents_t189/ALSENAN_OVERLAP_INPUT.json,14,ST p.5,SET_PAGE,ST-05,RESOLVED,ST-05 'FIRST FLOOR ROOF SLAB (+ section B-B)' (FILE_PIN)
+research/agents_t189/ALSENAN_OVERLAP_INPUT.json,28,ST7757.pdf p.10,SET_PAGE,ST-10,RESOLVED,ST-10 'SCHEDULES: Schedule of Simple Beams' (FILE_PIN)
+research/agents_t189/ALSENAN_OVERLAP_INPUT.json,35,ST7757.pdf p.10,SET_PAGE,ST-10,RESOLVED,ST-10 'SCHEDULES: Schedule of Simple Beams' (FILE_PIN)
+research/agents_t189/ALSENAN_OVERLAP_INPUT.json,40,ST p.8,SET_PAGE,ST-08,RESOLVED,"ST-08 'RECOMMENDATIONS (general notes, raster image)' (FILE_PIN)"
+research/agents_t189/ALSENAN_OVERLAP_INPUT.json,53,ST7757 dxf.dxf,FILE,st7757.dxf,FILE_ONLY,whole file st7757.dxf (no page named)
+research/agents_t189/T-189_OVERLAP_OWNERSHIP.md,6,ST7757 dxf.dxf,FILE,st7757.dxf,FILE_ONLY,whole file st7757.dxf (no page named)
+research/agents_t189/T-189_OVERLAP_OWNERSHIP.md,7,P7757.dxf,FILE,p7757.dxf,FILE_ONLY,whole file p7757.dxf (no page named)
+research/agents_t189/T-189_OVERLAP_OWNERSHIP.md,32,ST p.4,SET_PAGE,ST-04,RESOLVED,"ST-04 'GROUND FLOOR ROOF SLAB (+ sections A-A, C-C, D-D)' (FILE_PIN)"
+research/agents_t189/T-189_OVERLAP_OWNERSHIP.md,32,ST7757.pdf p.10,SET_PAGE,ST-10,RESOLVED,ST-10 'SCHEDULES: Schedule of Simple Beams' (FILE_PIN)
+research/agents_t189/T-189_OVERLAP_OWNERSHIP.md,33,ST p.5,SET_PAGE,ST-05,RESOLVED,ST-05 'FIRST FLOOR ROOF SLAB (+ section B-B)' (FILE_PIN)
+research/agents_t189/T-189_OVERLAP_OWNERSHIP.md,35,ST7757 dxf.dxf,FILE,st7757.dxf,FILE_ONLY,whole file st7757.dxf (no page named)

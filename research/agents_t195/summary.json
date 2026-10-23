@@ -1,0 +1,59 @@
+{
+ "task": "T-195",
+ "drive_folder": "Drive 'Urban BOQ private data' / 'Alsenan chalet project'",
+ "drive_files": 56,
+ "drawing_files": 21,
+ "sheets": {
+  "ARCH": 12,
+  "ST": 16,
+  "SAN": 3
+ },
+ "sheets_total": 31,
+ "revision_printed_on_any_sheet": false,
+ "date_conflicts": [
+  {
+   "set": "ST",
+   "dates": {
+    "May 06, 2025": [
+     "ST-01",
+     "ST-02",
+     "ST-03",
+     "ST-04",
+     "ST-05",
+     "ST-06",
+     "ST-07"
+    ],
+    "May 06, 2026": [
+     "ST-09",
+     "ST-10",
+     "ST-13",
+     "ST-14",
+     "ST-15",
+     "ST-16"
+    ]
+   },
+   "issue": "DIFFERENT_TITLE_BLOCK_DATES_IN_ONE_SET"
+  }
+ ],
+ "folders_scanned": 72,
+ "citations": 543,
+ "verdicts": {
+  "CONTENT_REVIEW": 14,
+  "FILE_ONLY": 101,
+  "PART_FILE_PAGE": 5,
+  "PART_ONLY": 14,
+  "RESOLVED": 409
+ },
+ "missing_from_set": [
+  "site / plot layout with external works",
+  "roof plan (top roof: falls, drains, parapets, waterproofing)",
+  "door / window schedule",
+  "finishes schedule or specification",
+  "reflected ceiling plan",
+  "wet-room / kitchen details",
+  "stair details (architectural)",
+  "water supply",
+  "electrical",
+  "air conditioning"
+ ]
+}
