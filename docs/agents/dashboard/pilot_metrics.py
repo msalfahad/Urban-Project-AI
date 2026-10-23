@@ -58,11 +58,12 @@ def load_schedules(src):
 def slots(rows, lo, hi):
     n, cur = 0, lo.replace(minute=0, second=0, microsecond=0)
     while cur < hi:
-        active = [r for r in rows if r[0] <= cur]
+        # the cron in force at the moment it would fire (a schedule change inside an hour applies from its own time)
+        active = [r for r in rows if r[0] <= cur.replace(minute=r[1])]
         if active:
             _, minute, hours = active[-1]
             fire = cur.replace(minute=minute)
-            if cur.hour in hours and lo <= fire < hi and fire >= active[-1][0]:
+            if cur.hour in hours and lo <= fire < hi:
                 n += 1
         cur += timedelta(hours=1)
     return n
