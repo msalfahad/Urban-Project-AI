@@ -52,6 +52,9 @@ Mortar, full (solid) bedding, per m2 of wall, two independent derivations that m
 - Edge tolerance (named, not added): a wall's end and top courses shift by at most one joint strip per edge: bound
   (L x b + H x j) x t per wall. Alsenan established black walls: 0.2817 m3 against 3.6059 m3 (7.8 %), large because 14
   of the 23 walls are under 3 m long.
+- Independent lay-out check (test): a course-by-course lay-out (bed under every course, head joint after every full unit,
+  end piece and top course cut to fit) differs from the identity by less than that tolerance on 4.00 x 2.00, 5.00 x 3.00,
+  GF-W31 1.279 x 4.265 and 1F-W20 6.125 x 3.996 (5.00 x 3.00 x 0.15: laid 0.1638 vs identity 0.1659 m3).
 - Face-shell bedding (hollow units) needs the shell width (HELD without it). Owner Q-60 / Q-75 text calls the black
   units solid: full bedding.
 

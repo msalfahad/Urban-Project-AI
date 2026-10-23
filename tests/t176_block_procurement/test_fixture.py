@@ -56,6 +56,33 @@ def test_mortar_15_vs_20_cm():
     assert B.units_per_m2("BLACK_40x20") == pytest.approx(12.5)
 
 
+def _laid_mortar_area(L, H, fw=0.39, fh=0.19, j=0.010, b=0.010):
+    """Independent course-by-course lay-out: a bed joint under every course, a head joint after every full unit, the
+    last piece of a course and the top course cut to fit (no closing joint). Returns the joint area (m2 of face)."""
+    piece_len, x = 0.0, 0.0
+    while x + fw <= L + 1e-12:
+        piece_len += fw
+        x += fw
+        if x + j <= L + 1e-12:
+            x += j
+    piece_len += max(0.0, L - x)
+    piece_h, y = 0.0, 0.0
+    while y < H - 1e-12:
+        y += b
+        h = min(fh, H - y)
+        piece_h += max(0.0, h)
+        y += max(0.0, h)
+    return L * H - piece_len * piece_h
+
+
+def test_identity_vs_laid_out_wall_within_the_edge_tolerance():
+    for L, H, t in ((5.00, 3.00, 0.15), (4.00, 2.00, 0.20), (1.279, 4.265, 0.15), (6.125, 3.996, 0.15)):
+        laid = _laid_mortar_area(L, H) * t
+        ident = L * H * B.mortar_per_m2("BLACK_40x20", t)["m3_per_m2"]
+        assert abs(laid - ident) <= B.edge_tolerance_m3(L, H, "BLACK_40x20", t) + 1e-12
+    assert _laid_mortar_area(4.00, 2.00) * 0.20 == pytest.approx(0.118)
+
+
 def test_wall_with_an_opening():
     u = B.installed_units(13.11, "BLACK_40x20", 0.15, AOA)
     assert u["units"] == pytest.approx(163.875)
