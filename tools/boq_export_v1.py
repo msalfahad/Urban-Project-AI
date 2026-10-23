@@ -62,6 +62,7 @@ if __package__ in (None, ""):
 
 from engine.source import boq_line as BL                    # noqa: E402
 
+DEFAULT_GUARD_CLASS = "TOOLING"        # T-212: a read-only export tool; it produces no quantity, so no guard to run
 SCHEMA = "URBAN_BOQ_EXPORT_V1"
 MANIFEST_SCHEMA = "URBAN_BOQ_EXPORT_MANIFEST_V1"
 INVENTORY_SCHEMA = "URBAN_BOQ_EXPORT_INVENTORY_V1"
