@@ -1,0 +1,54 @@
+line,outline,type,status,m3,range_m3,basis
+CONC.FOOTING,165C,F2,AGREE,1.1305,,L x W x H = 1.90 x 1.70 x 0.35 (drawn outline agrees)
+CONC.FOOTING,1663,F2,AGREE,1.1305,,L x W x H = 1.90 x 1.70 x 0.35 (drawn outline agrees)
+CONC.FOOTING,1664,F5,AGREE,2.016,,L x W x H = 2.40 x 2.10 x 0.40 (drawn outline agrees)
+CONC.FOOTING,1665,F4,AGREE,1.76,,L x W x H = 2.20 x 2.00 x 0.40 (drawn outline agrees)
+CONC.FOOTING,1666,F4,AGREE,1.76,,L x W x H = 2.20 x 2.00 x 0.40 (drawn outline agrees)
+CONC.FOOTING,1667,F,AGREE,0.216,,L x W x H = 0.90 x 0.80 x 0.30 (drawn outline agrees)
+CONC.FOOTING,1668,F,AGREE,0.216,,L x W x H = 0.90 x 0.80 x 0.30 (drawn outline agrees)
+CONC.FOOTING,1669,F,AGREE,0.216,,L x W x H = 0.90 x 0.80 x 0.30 (drawn outline agrees)
+CONC.FOOTING,166A,F,AGREE,0.216,,L x W x H = 0.90 x 0.80 x 0.30 (drawn outline agrees)
+CONC.FOOTING,166B,F3,AGREE,0.672,,L x W x H = 1.60 x 1.40 x 0.30 (drawn outline agrees)
+CONC.FOOTING,166C,F3,AGREE,0.672,,L x W x H = 1.60 x 1.40 x 0.30 (drawn outline agrees)
+CONC.FOOTING,166D,F5,AGREE,2.016,,L x W x H = 2.40 x 2.10 x 0.40 (drawn outline agrees)
+CONC.FOOTING,180C,FN,CLIPPED,0.258,,drawn area 0.8600 m2 (schedule 1.00 x 1.00 less the piece owned by 180F) x H 0.30
+CONC.FOOTING,180F,F9,AGREE,5.049,,L x W x H = 3.40 x 2.70 x 0.55 (drawn outline agrees)
+CONC.FOOTING,1ABF,F12,AGREE,9.856,,L x W x H = 4.40 x 3.20 x 0.70 (drawn outline agrees)
+CONC.FOOTING,1ADB,F13,AGREE,5.16,,L x W x H = 4.30 x 2.40 x 0.50 (drawn outline agrees)
+CONC.FOOTING,1B07,F11,AGREE,2.625,,L x W x H = 3.50 x 1.50 x 0.50 (drawn outline agrees)
+CONC.FOOTING,1B19,F6,AGREE,2.86,,L x W x H = 2.60 x 2.20 x 0.50 (drawn outline agrees)
+CONC.FOOTING,1B1A,F14,AGREE,6.27,,L x W x H = 3.80 x 3.30 x 0.50 (drawn outline agrees)
+CONC.FOOTING,1B1B,F+F10,HELD,,"(2.176, 2.275)","one outline, two types: (A) schedule rows separately 2.1760; (B) drawn outline 4.550 m2 x H 0.50 = 2.2750"
+CONC.FOOTING,1B24,F8,AGREE,7.2,,L x W x H = 4.00 x 3.60 x 0.50 (drawn outline agrees)
+CONC.FOOTING,1B2A,F15,AGREE,0.72,,L x W x H = 1.80 x 1.00 x 0.40 (drawn outline agrees)
+CONC.FOOTING,1B2B,FF,AGREE,11.385,,L x W x H = 4.60 x 4.50 x 0.55 (drawn outline agrees)
+CONC.FOOTING,10F0,FN,AGREE,0.3,,L x W x H = 1.00 x 1.00 x 0.30 (drawn outline agrees)
+CONC.FOOTING,10F8,FN,AGREE,0.3,,L x W x H = 1.00 x 1.00 x 0.30 (drawn outline agrees)
+CONC.FOOTING,1100,FN,AGREE,0.3,,L x W x H = 1.00 x 1.00 x 0.30 (drawn outline agrees)
+CONC.BLINDING,165C,F2,AGREE,0.399,,(outline + 0.10 each side) x 0.10
+CONC.BLINDING,1663,F2,AGREE,0.399,,(outline + 0.10 each side) x 0.10
+CONC.BLINDING,1664,F5,AGREE,0.598,,(outline + 0.10 each side) x 0.10
+CONC.BLINDING,1665,F4,AGREE,0.528,,(outline + 0.10 each side) x 0.10
+CONC.BLINDING,1666,F4,AGREE,0.528,,(outline + 0.10 each side) x 0.10
+CONC.BLINDING,1667,F,AGREE,0.11,,(outline + 0.10 each side) x 0.10
+CONC.BLINDING,1668,F,AGREE,0.11,,(outline + 0.10 each side) x 0.10
+CONC.BLINDING,1669,F,AGREE,0.11,,(outline + 0.10 each side) x 0.10
+CONC.BLINDING,166A,F,AGREE,0.11,,(outline + 0.10 each side) x 0.10
+CONC.BLINDING,166B,F3,AGREE,0.288,,(outline + 0.10 each side) x 0.10
+CONC.BLINDING,166C,F3,AGREE,0.288,,(outline + 0.10 each side) x 0.10
+CONC.BLINDING,166D,F5,AGREE,0.598,,(outline + 0.10 each side) x 0.10
+CONC.BLINDING,180C,FN,CLIPPED,0.13,,(outline + 0.10 each side) x 0.10
+CONC.BLINDING,180F,F9,AGREE,1.044,,(outline + 0.10 each side) x 0.10
+CONC.BLINDING,1ABF,F12,AGREE,1.564,,(outline + 0.10 each side) x 0.10
+CONC.BLINDING,1ADB,F13,AGREE,1.17,,(outline + 0.10 each side) x 0.10
+CONC.BLINDING,1B07,F11,AGREE,0.629,,(outline + 0.10 each side) x 0.10
+CONC.BLINDING,1B19,F6,AGREE,0.672,,(outline + 0.10 each side) x 0.10
+CONC.BLINDING,1B1A,F14,AGREE,1.4,,(outline + 0.10 each side) x 0.10
+CONC.BLINDING,1B1B,F+F10,HELD,,,footing HELD
+CONC.BLINDING,1B24,F8,AGREE,1.596,,(outline + 0.10 each side) x 0.10
+CONC.BLINDING,1B2A,F15,AGREE,0.24,,(outline + 0.10 each side) x 0.10
+CONC.BLINDING,1B2B,FF,AGREE,2.256,,(outline + 0.10 each side) x 0.10
+CONC.BLINDING,10F0,FN,AGREE,0.144,,(outline + 0.10 each side) x 0.10
+CONC.BLINDING,10F8,FN,AGREE,0.144,,(outline + 0.10 each side) x 0.10
+CONC.BLINDING,1100,FN,AGREE,0.144,,(outline + 0.10 each side) x 0.10
+CONC.BLINDING,BLINDING-OUTSIDE-BOUNDARY,,HELD,,"(0.0, 0.189)",projection beyond the plot line (designer item)
