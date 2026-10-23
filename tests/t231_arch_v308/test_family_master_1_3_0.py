@@ -55,7 +55,11 @@ def test_1_3_0_checks_clean_and_v308_is_pending_not_merged(docs):
 
 def test_superseded_1_2_0_is_accounted_for_by_1_3_0(docs):
     old, _ = docs
-    assert FMC.newer_registry_modules(old, ROOT).get("engine/source/arch_v308.py") == "1.3.0"
+    # T-211: the newest version that accounts for arch_v308 is the newest registry on the tree carrying the T-231
+    # entry (1.4.0 copies it); 1.3.0 itself must still declare it (asserted on 1.3.0's own content)
+    acc = FMC.newer_registry_modules(old, ROOT).get("engine/source/arch_v308.py")
+    assert acc is not None and FMC._semver(acc) >= FMC._semver("1.3.0")
+    assert any(p["module"] == "engine/source/arch_v308.py" for p in docs[1]["pending_packages"])
     assert FMC.check(old, is_ancestor=FMC.git_is_ancestor) == []
     assert FMC.DEFAULT == NEW
 

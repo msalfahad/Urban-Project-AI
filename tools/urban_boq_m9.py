@@ -2927,6 +2927,13 @@ CANDIDATE_EXTENSIONS_V307 = (V307,)  # its own tuple: the V3.0 .. V3.0.6 method 
 # Opt-in, not the released default; rollback = run ARCH_TAKEOFF_V2.9.
 V308 = "ARCH_TAKEOFF_V3.0.8"
 CANDIDATE_EXTENSIONS_V308 = (V308,)  # its own tuple: the V3.0 .. V3.0.7 method lists stay as they were
+# T-211: ARCH_TAKEOFF_V3.0.9 = the SAME candidate extended again (engine.source.arch_v309): a V3.0.8 run (its V3_0_* ..
+# V3_0_8_* files unchanged) + checker-merged room-by-room internal plaster / paint records (owner manual method of
+# record, drawing-derived beside) replacing the candidate room-face lines of the same rooms, and the guard re-checked,
+# in V3_0_9_* files; every line outside its rows byte-identical to V3.0.8.
+# Opt-in, not the released default; rollback = run ARCH_TAKEOFF_V2.9.
+V309 = "ARCH_TAKEOFF_V3.0.9"
+CANDIDATE_EXTENSIONS_V309 = (V309,)  # its own tuple: the V3.0 .. V3.0.8 method lists stay as they were
 
 
 def _v304_inputs(path, project_id):
@@ -2961,15 +2968,16 @@ def _v304_inputs(path, project_id):
 def cmd_arch(a):
     from engine.source import discovery as DS
     facts = json.loads(Path(a.facts).read_text(encoding="utf-8")) if a.facts else None
-    v308 = a.method == V308                   # T-231: the V3.0.7 run, then its V3.0.8 extension
-    v307 = a.method in (V307, V308)           # T-193: the V3.0.6 run, then its V3.0.7 extension
-    v306 = a.method in (V306, V307, V308)     # T-187: the V3.0.5 run, then its V3.0.6 extension
-    v305 = a.method in (V305, V306, V307, V308)  # T-179: the V3.0.4 run, then its V3.0.5 extension
-    v304 = a.method in (V304, V305, V306, V307, V308)  # T-167: the V3.0.3 run, then its V3.0.4 extension
-    v303 = a.method in (V303, V304, V305, V306, V307, V308)  # T-151: the V3.0.2 run, then its V3.0.3 extension
-    v302 = a.method in (V302, V303, V304, V305, V306, V307, V308)  # T-142: the V3.0.1 run, then its V3.0.2 extension
-    v301 = a.method in (V301, V302, V303, V304, V305, V306, V307, V308)  # T-133: the V3.0 run, then V3.0.1
-    v30 = a.method in (V30, V301, V302, V303, V304, V305, V306, V307, V308)  # T-131: the candidate runs V2.13, integrates
+    v309 = a.method == V309                   # T-211: the V3.0.8 run, then its V3.0.9 extension
+    v308 = a.method in (V308, V309)           # T-231: the V3.0.7 run, then its V3.0.8 extension
+    v307 = a.method in (V307, V308, V309)     # T-193: the V3.0.6 run, then its V3.0.7 extension
+    v306 = a.method in (V306, V307, V308, V309)  # T-187: the V3.0.5 run, then its V3.0.6 extension
+    v305 = a.method in (V305, V306, V307, V308, V309)  # T-179: the V3.0.4 run, then its V3.0.5 extension
+    v304 = a.method in (V304, V305, V306, V307, V308, V309)  # T-167: the V3.0.3 run, then its V3.0.4 extension
+    v303 = a.method in (V303, V304, V305, V306, V307, V308, V309)  # T-151: the V3.0.2 run, then its V3.0.3 extension
+    v302 = a.method in (V302, V303, V304, V305, V306, V307, V308, V309)  # T-142: the V3.0.1 run, then V3.0.2
+    v301 = a.method in (V301, V302, V303, V304, V305, V306, V307, V308, V309)  # T-133: the V3.0 run, then V3.0.1
+    v30 = a.method in (V30, V301, V302, V303, V304, V305, V306, V307, V308, V309)  # T-131: candidate runs V2.13
     if getattr(a, "v302_inputs", None) and not v302:
         raise SystemExit("--v302-inputs needs --method ARCH_TAKEOFF_V3.0.2")
     if getattr(a, "v303_inputs", None) and not v303:
@@ -2984,6 +2992,8 @@ def cmd_arch(a):
         raise SystemExit("--v307-inputs needs --method ARCH_TAKEOFF_V3.0.7")
     if getattr(a, "v308_inputs", None) and not v308:
         raise SystemExit("--v308-inputs needs --method ARCH_TAKEOFF_V3.0.8")
+    if getattr(a, "v309_inputs", None) and not v309:
+        raise SystemExit("--v309-inputs needs --method ARCH_TAKEOFF_V3.0.9")
     if v30:
         a.method = V213
     elif getattr(a, "v30_decisions", None) or getattr(a, "v30_released", None) or getattr(a, "v30_history", None):
@@ -3301,6 +3311,25 @@ def cmd_arch(a):
                                           "v3_0_5_identity": ident5, "v3_0_4_identity": ident4,
                                           "v3_0_3_identity": ident3, "v3_0_2_identity": ident2,
                                           "v3_0_1_identity": ident1, "v3_0_identity": ident}
+                                if v309:
+                                    # T-211: ARCH_TAKEOFF_V3.0.9 files beside the V3_0_8_* files (arch_v309)
+                                    from engine.source import arch_v309 as A309
+                                    inp9 = A309.load_inputs(
+                                        json.loads(Path(a.v309_inputs).read_text(encoding="utf-8"))
+                                        if getattr(a, "v309_inputs", None) else None, room["project_id"])
+                                    l308 = A308.integrate(l307, ch_v8)[0]
+                                    earlier9 = earlier8 | {c["after"]["line_id"] for c in ch_v8
+                                                           if c.get("after") is not None}
+                                    ch_v9, logs_v9 = A309.changes_for(inp9, l308, earlier9)
+                                    names9, ident9, _led9 = A309.write(out, l308, ch_v9, logs_v9, inp9, released)
+                                    svgs += names9
+                                    v30rec = {"method": V309, "extends": V308, "base": V213,
+                                              "released_default": False, "identity": ident9,
+                                              "v3_0_8_identity": ident8, "v3_0_7_identity": ident7,
+                                              "v3_0_6_identity": ident6, "v3_0_5_identity": ident5,
+                                              "v3_0_4_identity": ident4, "v3_0_3_identity": ident3,
+                                              "v3_0_2_identity": ident2, "v3_0_1_identity": ident1,
+                                              "v3_0_identity": ident}
     ev = Counter(ln["evidence_state"] for ln in room["lines"])
     print(json.dumps({"method": a.method, "regions": [{"floor": r["floor"], "state": r["stage_state"],
                                                         "rooms": r.get("space_counts"), "lines": r.get("lines"),
@@ -3436,7 +3465,8 @@ def main(argv=None):
     p.add_argument("--method", required=True,
                    choices=ARCH_METHODS + CANDIDATE_METHODS + CANDIDATE_EXTENSIONS + CANDIDATE_EXTENSIONS_V302 +
                    CANDIDATE_EXTENSIONS_V303 + CANDIDATE_EXTENSIONS_V304 + CANDIDATE_EXTENSIONS_V305 +
-                   CANDIDATE_EXTENSIONS_V306 + CANDIDATE_EXTENSIONS_V307 + CANDIDATE_EXTENSIONS_V308,
+                   CANDIDATE_EXTENSIONS_V306 + CANDIDATE_EXTENSIONS_V307 + CANDIDATE_EXTENSIONS_V308 +
+                   CANDIDATE_EXTENSIONS_V309,
                    help="the versioned architectural takeoff method (no default: the route is opt-in until validated); "
                         "ARCH_TAKEOFF_V2 (S6) adds the drawing admission, unit-relative tolerances, empty-band plan "
                         "regions and the completeness gates (exit 2: admission blocked, 3: completeness failed)")
@@ -3486,6 +3516,10 @@ def main(argv=None):
     p.add_argument("--v308-inputs", help="ARCH_TAKEOFF_V3.0.8 (URBAN_V308_INPUTS_V1): checker-merged structural element "
                                          "records (straps, planted columns) with the candidate lines they supersede, "
                                          "the released member lines no drawing draws (held), and the guard inputs")
+    p.add_argument("--v309-inputs", help="ARCH_TAKEOFF_V3.0.9 (URBAN_V309_INPUTS_V1): checker-merged room wall-finish "
+                                         "records (plaster / paint m2, owner manual method of record, drawing-derived "
+                                         "beside) with the candidate room-face lines they supersede, and the guard "
+                                         "inputs")
     p.add_argument("--v30-history", nargs="+", metavar="METHOD=BOQ_LINES.json",
                    help="ARCH_TAKEOFF_V3.0 with --v30-released: BOQ_LINES.json of the ARCH_TAKEOFF_V2.10 / V2.11 / "
                         "V2.12 runs on the same drawings, so each ledger row names the version that changed its line")
