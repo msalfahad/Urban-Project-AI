@@ -1,0 +1,2001 @@
+{
+ "column_ends": [
+  {
+   "band_width_m": 0.3,
+   "column": "COL:238",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "end": "start",
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (10D0 C8); CAP",
+   "neck_status": "DRAWING-CONFIRMED",
+   "span_id": "107+7CE#1"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:17BD",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "end": "end",
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (17C5 CN); CAP; CAP = FP places it off the beam-plan outline",
+   "neck_status": "DRAWING-CONFIRMED",
+   "span_id": "107+7CE#1"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:228",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "end": "end",
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (10C2 C6); CAP",
+   "neck_status": "DRAWING-CONFIRMED",
+   "span_id": "109+7CB#1"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:228",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "end": "start",
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (10C2 C6); CAP",
+   "neck_status": "DRAWING-CONFIRMED",
+   "span_id": "109+7CB#2"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:234",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "end": "end",
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (10CC C3); CAP",
+   "neck_status": "DRAWING-CONFIRMED",
+   "span_id": "109+7CB#2"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:234",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "end": "start",
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (10CC C3); CAP",
+   "neck_status": "DRAWING-CONFIRMED",
+   "span_id": "109+7CB#3"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:1DC",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "end": "end",
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (1084 C2); CAP",
+   "neck_status": "DRAWING-CONFIRMED",
+   "span_id": "109+7CB#3"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:218",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "end": "start",
+   "n_readings": 1,
+   "neck_note": "T-217 DRAFTING_NOTE (10B7 C): printed (300.0, 500.0) at the CAP place; the beam-plan outline is the drafting copy",
+   "neck_status": "DRAWING-CONFIRMED",
+   "span_id": "10A+7C9#1"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:220",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "end": "end",
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (10BA C11); CAP",
+   "neck_status": "DRAWING-CONFIRMED",
+   "span_id": "10A+7C9#1"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:22C",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "end": "end",
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (10C5 C3); CAP",
+   "neck_status": "DRAWING-CONFIRMED",
+   "span_id": "10B+7D1#1"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:22C",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "end": "start",
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (10C5 C3); CAP",
+   "neck_status": "DRAWING-CONFIRMED",
+   "span_id": "10B+7D1#2"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:223",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "end": "end",
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (10BD C5); CAP",
+   "neck_status": "DRAWING-CONFIRMED",
+   "span_id": "10B+7D1#2"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:238",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "end": "end",
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (10D0 C8); CAP",
+   "neck_status": "DRAWING-CONFIRMED",
+   "span_id": "114+115+7DF#1"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:238",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "end": "start",
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (10D0 C8); CAP",
+   "neck_status": "DRAWING-CONFIRMED",
+   "span_id": "114+115+7DF#2"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:1FC",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "end": "end",
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (10A0 C3); CAP",
+   "neck_status": "DRAWING-CONFIRMED",
+   "span_id": "114+115+7DF#2"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:207",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "end": "start",
+   "n_readings": 1,
+   "neck_note": "T-217 DRAFTING_NOTE (10AB C): printed (300.0, 500.0) at the CAP place = FP; the beam-plan outline is the drafting copy; CAP = FP places it off the beam-plan outline",
+   "neck_status": "DRAWING-CONFIRMED",
+   "span_id": "136+7D5#1"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:204",
+   "double_plan_m2_per_reading": [
+    0.03
+   ],
+   "end": "end",
+   "n_readings": 1,
+   "neck_note": "T-217 DRAFTING_NOTE (10A8 C): printed (300.0, 500.0) at the CAP place = FP; the beam-plan outline is the drafting copy; CAP = FP places it off the beam-plan outline",
+   "neck_status": "DRAWING-CONFIRMED",
+   "span_id": "136+7D5#1"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:214",
+   "double_plan_m2_per_reading": [
+    0.03
+   ],
+   "end": "end",
+   "n_readings": 1,
+   "neck_note": "T-217 DRAFTING_NOTE (10B4 C): printed (300.0, 500.0) at the CAP place = FP; the beam-plan outline is the drafting copy; CAP = FP places it off the beam-plan outline",
+   "neck_status": "DRAWING-CONFIRMED",
+   "span_id": "137+138#1"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:211",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "end": "start",
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (10B1 C3); CAP",
+   "neck_status": "DRAWING-CONFIRMED",
+   "span_id": "13D+7D2#1"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:223",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "end": "end",
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (10BD C5); CAP",
+   "neck_status": "DRAWING-CONFIRMED",
+   "span_id": "13D+7D2#1"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:211",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "end": "end",
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (10B1 C3); CAP",
+   "neck_status": "DRAWING-CONFIRMED",
+   "span_id": "13E+7D6#1"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:211",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "end": "start",
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (10B1 C3); CAP",
+   "neck_status": "DRAWING-CONFIRMED",
+   "span_id": "13E+7D6#2"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:20B",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "end": "start",
+   "n_readings": 1,
+   "neck_note": "T-217 DRAFTING_NOTE (10AE C3): printed (300.0, 500.0) at the CAP place = FP; the beam-plan outline is the drafting copy; CAP = FP places it off the beam-plan outline",
+   "neck_status": "DRAWING-CONFIRMED",
+   "span_id": "13F+7D3#1"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:22C",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "end": "end",
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (10C5 C3); CAP",
+   "neck_status": "DRAWING-CONFIRMED",
+   "span_id": "142+7D8#1"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:220",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "end": "start",
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (10BA C11); CAP",
+   "neck_status": "DRAWING-CONFIRMED",
+   "span_id": "145+7CA#1"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:228",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "end": "end",
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (10C2 C6); CAP",
+   "neck_status": "DRAWING-CONFIRMED",
+   "span_id": "145+7CA#1"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:1F2",
+   "double_plan_m2_per_reading": [
+    0.0,
+    0.03,
+    0.015,
+    0.0
+   ],
+   "end": "end",
+   "n_readings": 4,
+   "neck_note": "T-217 CONFLICT 1096 C2: [(200.0, 500.0), (300.0, 500.0)]; CAP",
+   "neck_status": "CONFLICT",
+   "span_id": "15C+7CC#1"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:1F5",
+   "double_plan_m2_per_reading": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "end": "start",
+   "n_readings": 4,
+   "neck_note": "T-217 CONFLICT 1099 C1: [(200.0, 500.0), (300.0, 500.0)]; CAP",
+   "neck_status": "CONFLICT",
+   "span_id": "15E+15F#1"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:1E0",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "end": "end",
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (1087 C2); CAP",
+   "neck_status": "DRAWING-CONFIRMED",
+   "span_id": "15E+15F#1"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:1DC",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "end": "start",
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (1084 C2); CAP",
+   "neck_status": "DRAWING-CONFIRMED",
+   "span_id": "170+7C3#1"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:1E0",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "end": "end",
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (1087 C2); CAP",
+   "neck_status": "DRAWING-CONFIRMED",
+   "span_id": "170+7C3#1"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:1E0",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "end": "start",
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (1087 C2); CAP",
+   "neck_status": "DRAWING-CONFIRMED",
+   "span_id": "170+7C3#2"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:1E4",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "end": "end",
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (108A C5); CAP",
+   "neck_status": "DRAWING-CONFIRMED",
+   "span_id": "170+7C3#2"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:1E4",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "end": "start",
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (108A C5); CAP",
+   "neck_status": "DRAWING-CONFIRMED",
+   "span_id": "170+7C3#3"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:241",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "end": "end",
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (10D7 C4); CAP",
+   "neck_status": "DRAWING-CONFIRMED",
+   "span_id": "170+7C3#3"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:241",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "end": "start",
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (10D7 C4); CAP",
+   "neck_status": "DRAWING-CONFIRMED",
+   "span_id": "170+7C3#4"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:17C0",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "end": "end",
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (17C8 CN); CAP",
+   "neck_status": "DRAWING-CONFIRMED",
+   "span_id": "170+7C3#4"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:1E4",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "end": "end",
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (108A C5); CAP",
+   "neck_status": "DRAWING-CONFIRMED",
+   "span_id": "176+7E6#1"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:245",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "end": "end",
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (10DA C9); CAP",
+   "neck_status": "DRAWING-CONFIRMED",
+   "span_id": "177+7CD#1"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:245",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "end": "start",
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (10DA C9); CAP",
+   "neck_status": "DRAWING-CONFIRMED",
+   "span_id": "177+7CD#2"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:230",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "end": "end",
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (10C8 C7); CAP",
+   "neck_status": "DRAWING-CONFIRMED",
+   "span_id": "178+7DB#1"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:23C",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "end": "end",
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (10D3 C5); CAP",
+   "neck_status": "DRAWING-CONFIRMED",
+   "span_id": "17B+7E5#1"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:1EF",
+   "double_plan_m2_per_reading": [
+    0.0,
+    0.0,
+    0.0013,
+    0.005
+   ],
+   "end": "start",
+   "n_readings": 4,
+   "neck_note": "T-217 CONFLICT 1093 C2: [(200.0, 500.0), (300.0, 500.0)]; CAP",
+   "neck_status": "CONFLICT",
+   "span_id": "17E+17F#1"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:1E8",
+   "double_plan_m2_per_reading": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "end": "start",
+   "n_readings": 3,
+   "neck_note": "T-217 DRAFTING_NOTE: printed (300.0, 500.0), position not drawn",
+   "neck_status": "HELD",
+   "span_id": "1811+1812#1"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:24D",
+   "double_plan_m2_per_reading": [
+    0.0,
+    0.025,
+    0.0125,
+    0.0
+   ],
+   "end": "end",
+   "n_readings": 4,
+   "neck_note": "T-217 CONFLICT 10E0 C8: [(300.0, 800.0), (300.0, 900.0)]; CAP; CAP = FP places it off the beam-plan outline",
+   "neck_status": "CONFLICT",
+   "span_id": "184+7CF#1"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:24D",
+   "double_plan_m2_per_reading": [
+    0.0,
+    0.0,
+    0.0125,
+    0.025
+   ],
+   "end": "start",
+   "n_readings": 4,
+   "neck_note": "T-217 CONFLICT 10E0 C8: [(300.0, 800.0), (300.0, 900.0)]; CAP; CAP = FP places it off the beam-plan outline",
+   "neck_status": "CONFLICT",
+   "span_id": "184+7CF#2"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:23C",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "end": "end",
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (10D3 C5); CAP",
+   "neck_status": "DRAWING-CONFIRMED",
+   "span_id": "184+7CF#2"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:23C",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "end": "start",
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (10D3 C5); CAP",
+   "neck_status": "DRAWING-CONFIRMED",
+   "span_id": "184+7CF#3"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:230",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "end": "start",
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (10C8 C7); CAP",
+   "neck_status": "DRAWING-CONFIRMED",
+   "span_id": "185+7C7#1"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:218",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "end": "start",
+   "n_readings": 1,
+   "neck_note": "T-217 DRAFTING_NOTE (10B7 C): printed (300.0, 500.0) at the CAP place; the beam-plan outline is the drafting copy",
+   "neck_status": "DRAWING-CONFIRMED",
+   "span_id": "7D0+FC#1"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:249",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "end": "end",
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (10DD C11); CAP",
+   "neck_status": "DRAWING-CONFIRMED",
+   "span_id": "7D0+FC#1"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:249",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "end": "start",
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (10DD C11); CAP",
+   "neck_status": "DRAWING-CONFIRMED",
+   "span_id": "7D0+FC#2"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:251",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "end": "end",
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (10E4 C3); CAP",
+   "neck_status": "DRAWING-CONFIRMED",
+   "span_id": "7D0+FC#2"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:251",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "end": "start",
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (10E4 C3); CAP",
+   "neck_status": "DRAWING-CONFIRMED",
+   "span_id": "7D0+FC#3"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:255",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "end": "end",
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (10E8 C10); CAP",
+   "neck_status": "DRAWING-CONFIRMED",
+   "span_id": "7D0+FC#3"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:255",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "end": "start",
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (10E8 C10); CAP",
+   "neck_status": "DRAWING-CONFIRMED",
+   "span_id": "7D0+FC#4"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:200",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "end": "end",
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (10A4 C); CAP",
+   "neck_status": "DRAWING-CONFIRMED",
+   "span_id": "7D0+FC#4"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:207",
+   "double_plan_m2_per_reading": [
+    0.03
+   ],
+   "end": "start",
+   "n_readings": 1,
+   "neck_note": "T-217 DRAFTING_NOTE (10AB C): printed (300.0, 500.0) at the CAP place = FP; the beam-plan outline is the drafting copy; CAP = FP places it off the beam-plan outline",
+   "neck_status": "DRAWING-CONFIRMED",
+   "span_id": "7D4+F8#1"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:20B",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "end": "end",
+   "n_readings": 1,
+   "neck_note": "T-217 DRAFTING_NOTE (10AE C3): printed (300.0, 500.0) at the CAP place = FP; the beam-plan outline is the drafting copy; CAP = FP places it off the beam-plan outline",
+   "neck_status": "DRAWING-CONFIRMED",
+   "span_id": "7D4+F8#1"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:20B",
+   "double_plan_m2_per_reading": [
+    0.03
+   ],
+   "end": "start",
+   "n_readings": 1,
+   "neck_note": "T-217 DRAFTING_NOTE (10AE C3): printed (300.0, 500.0) at the CAP place = FP; the beam-plan outline is the drafting copy; CAP = FP places it off the beam-plan outline",
+   "neck_status": "DRAWING-CONFIRMED",
+   "span_id": "7D4+F8#2"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:24D",
+   "double_plan_m2_per_reading": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "end": "start",
+   "n_readings": 4,
+   "neck_note": "T-217 CONFLICT 10E0 C8: [(300.0, 800.0), (300.0, 900.0)]; CAP; CAP = FP places it off the beam-plan outline",
+   "neck_status": "CONFLICT",
+   "span_id": "7DC+7DD#1"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:7F5",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "end": "end",
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (10F6 CN); CAP",
+   "neck_status": "DRAWING-CONFIRMED",
+   "span_id": "7DC+7DD#1"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:7F5",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "end": "start",
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (10F6 CN); CAP",
+   "neck_status": "DRAWING-CONFIRMED",
+   "span_id": "7DC+7DD#2"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:200",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "end": "start",
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (10A4 C); CAP",
+   "neck_status": "DRAWING-CONFIRMED",
+   "span_id": "7E0+FD#1"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:809",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "end": "end",
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (10FE CN); CAP",
+   "neck_status": "DRAWING-CONFIRMED",
+   "span_id": "7E0+FD#1"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:809",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "end": "start",
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (10FE CN); CAP",
+   "neck_status": "DRAWING-CONFIRMED",
+   "span_id": "7E0+FD#2"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:1FC",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "end": "end",
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (10A0 C3); CAP",
+   "neck_status": "DRAWING-CONFIRMED",
+   "span_id": "7E0+FD#2"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:228",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "end": "start",
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (10C2 C6); CAP",
+   "neck_status": "DRAWING-CONFIRMED",
+   "span_id": "7E1+7E2#1"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:7ED",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "end": "end",
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (10EE CN); CAP",
+   "neck_status": "DRAWING-CONFIRMED",
+   "span_id": "7E7+7E8#1"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:7ED",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "end": "start",
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (10EE CN); CAP",
+   "neck_status": "DRAWING-CONFIRMED",
+   "span_id": "7E7+7E8#2"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:7F5",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "end": "start",
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (10F6 CN); CAP",
+   "neck_status": "DRAWING-CONFIRMED",
+   "span_id": "7E9+7EA#1"
+  },
+  {
+   "band_width_m": 0.3,
+   "column": "COL:7ED",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "end": "end",
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (10EE CN); CAP",
+   "neck_status": "DRAWING-CONFIRMED",
+   "span_id": "7E9+7EA#1"
+  }
+ ],
+ "free_ends": [
+  {
+   "drawn_end_minus_v2_face_m": 1.0001,
+   "end": "start",
+   "length_to_support_m": 2.9,
+   "refused": [
+    [
+     "FTG:1B2B",
+     "FOOTING outline: no 3-D contact with the beam"
+    ]
+   ],
+   "span_id": "15D+7C8#1",
+   "status": "DRAWING-CONFIRMED",
+   "support": "S-BW 7C2",
+   "support_kind": "WALL",
+   "v2_face_to_face_m": 1.8999,
+   "v2_node": "FOOTING_FACE",
+   "v2_refs": [
+    "FTG:1B2B"
+   ]
+  },
+  {
+   "drawn_end_minus_v2_face_m": 0.0,
+   "end": "start",
+   "length_to_support_m": 5.02,
+   "refused": [],
+   "span_id": "177+7CD#1",
+   "status": "DRAWING-CONFIRMED",
+   "support": "S-BW 7C2",
+   "support_kind": "WALL",
+   "v2_face_to_face_m": 5.02,
+   "v2_node": "GAP_TO_COLUMN",
+   "v2_refs": [
+    "COL:1EC"
+   ]
+  },
+  {
+   "drawn_end_minus_v2_face_m": 1.2999,
+   "end": "end",
+   "length_to_support_m": 3.2278,
+   "refused": [
+    [
+     "FTG:1B2B",
+     "FOOTING outline: no 3-D contact with the beam"
+    ]
+   ],
+   "span_id": "17C+7E3#1",
+   "status": "DRAWING-CONFIRMED",
+   "support": "S-BW 7C2",
+   "support_kind": "WALL",
+   "v2_face_to_face_m": 1.9278,
+   "v2_node": "FOOTING_FACE",
+   "v2_refs": [
+    "FTG:1B2B"
+   ]
+  },
+  {
+   "drawn_end_minus_v2_face_m": 0.0,
+   "end": "end",
+   "length_to_support_m": null,
+   "refused": [],
+   "span_id": "1811+1812#1",
+   "status": "HELD",
+   "support": null,
+   "support_kind": null,
+   "v2_face_to_face_m": 1.3,
+   "v2_node": "FREE_END",
+   "v2_refs": []
+  }
+ ],
+ "gb_footing_plan_overlaps": [
+  {
+   "footing": "1B24",
+   "plan_overlap_m2": 0.1092,
+   "span_id": "107+7CE#1"
+  },
+  {
+   "footing": "1B07",
+   "plan_overlap_m2": 0.36,
+   "span_id": "109+7CB#1"
+  },
+  {
+   "footing": "1B19",
+   "plan_overlap_m2": 0.285,
+   "span_id": "109+7CB#1"
+  },
+  {
+   "footing": "1ABF",
+   "plan_overlap_m2": 0.765,
+   "span_id": "109+7CB#2"
+  },
+  {
+   "footing": "1B19",
+   "plan_overlap_m2": 0.285,
+   "span_id": "109+7CB#2"
+  },
+  {
+   "footing": "165C:F",
+   "plan_overlap_m2": 0.21,
+   "span_id": "109+7CB#3"
+  },
+  {
+   "footing": "1ABF",
+   "plan_overlap_m2": 0.045,
+   "span_id": "109+7CB#3"
+  },
+  {
+   "footing": "166A:F",
+   "plan_overlap_m2": 0.15,
+   "span_id": "10A+7C9#1"
+  },
+  {
+   "footing": "1ADB",
+   "plan_overlap_m2": 0.36,
+   "span_id": "10A+7C9#1"
+  },
+  {
+   "footing": "166C:F",
+   "plan_overlap_m2": 0.165,
+   "span_id": "10B+7D1#1"
+  },
+  {
+   "footing": "166C:F",
+   "plan_overlap_m2": 0.165,
+   "span_id": "10B+7D1#2"
+  },
+  {
+   "footing": "1ADB",
+   "plan_overlap_m2": 0.27,
+   "span_id": "10B+7D1#2"
+  },
+  {
+   "footing": "1B24",
+   "plan_overlap_m2": 0.54,
+   "span_id": "114+115+7DF#1"
+  },
+  {
+   "footing": "1B24",
+   "plan_overlap_m2": 0.3,
+   "span_id": "114+115+7DF#2"
+  },
+  {
+   "footing": "1668:F",
+   "plan_overlap_m2": 0.09,
+   "span_id": "136+7D5#1"
+  },
+  {
+   "footing": "1669:F",
+   "plan_overlap_m2": 0.15,
+   "span_id": "136+7D5#1"
+  },
+  {
+   "footing": "1667:F",
+   "plan_overlap_m2": 0.09,
+   "span_id": "137+138#1"
+  },
+  {
+   "footing": "1668:F",
+   "plan_overlap_m2": 0.15,
+   "span_id": "137+138#1"
+  },
+  {
+   "footing": "166B:F",
+   "plan_overlap_m2": 0.165,
+   "span_id": "13D+7D2#1"
+  },
+  {
+   "footing": "1ADB",
+   "plan_overlap_m2": 0.3601,
+   "span_id": "13D+7D2#1"
+  },
+  {
+   "footing": "166B:F",
+   "plan_overlap_m2": 0.165,
+   "span_id": "13E+7D6#1"
+  },
+  {
+   "footing": "166B:F",
+   "plan_overlap_m2": 0.15,
+   "span_id": "13E+7D6#2"
+  },
+  {
+   "footing": "1B2A",
+   "plan_overlap_m2": 0.21,
+   "span_id": "13F+7D3#1"
+  },
+  {
+   "footing": "166C:F",
+   "plan_overlap_m2": 0.165,
+   "span_id": "142+7D8#1"
+  },
+  {
+   "footing": "1ADB",
+   "plan_overlap_m2": 0.1499,
+   "span_id": "145+7CA#1"
+  },
+  {
+   "footing": "1B19",
+   "plan_overlap_m2": 0.285,
+   "span_id": "145+7CA#1"
+  },
+  {
+   "footing": "1ABF",
+   "plan_overlap_m2": 0.27,
+   "span_id": "15C+7CC#1"
+  },
+  {
+   "footing": "1B2B",
+   "plan_overlap_m2": 0.2701,
+   "span_id": "15C+7CC#1"
+  },
+  {
+   "footing": "1663:F",
+   "plan_overlap_m2": 0.21,
+   "span_id": "15E+15F#1"
+  },
+  {
+   "footing": "1B2B",
+   "plan_overlap_m2": 0.3,
+   "span_id": "15E+15F#1"
+  },
+  {
+   "footing": "1B2B",
+   "plan_overlap_m2": 0.0627,
+   "span_id": "16F+7FF#1"
+  },
+  {
+   "footing": "165C:F",
+   "plan_overlap_m2": 0.21,
+   "span_id": "170+7C3#1"
+  },
+  {
+   "footing": "1663:F",
+   "plan_overlap_m2": 0.21,
+   "span_id": "170+7C3#1"
+  },
+  {
+   "footing": "1663:F",
+   "plan_overlap_m2": 0.21,
+   "span_id": "170+7C3#2"
+  },
+  {
+   "footing": "1664:F",
+   "plan_overlap_m2": 0.27,
+   "span_id": "170+7C3#2"
+  },
+  {
+   "footing": "1664:F",
+   "plan_overlap_m2": 0.27,
+   "span_id": "170+7C3#3"
+  },
+  {
+   "footing": "1665:F",
+   "plan_overlap_m2": 0.255,
+   "span_id": "170+7C3#3"
+  },
+  {
+   "footing": "1665:F",
+   "plan_overlap_m2": 0.255,
+   "span_id": "170+7C3#4"
+  },
+  {
+   "footing": "1666:F",
+   "plan_overlap_m2": 0.165,
+   "span_id": "170+7C3#4"
+  },
+  {
+   "footing": "1665:F",
+   "plan_overlap_m2": 0.0255,
+   "span_id": "175+7DE#1"
+  },
+  {
+   "footing": "180F",
+   "plan_overlap_m2": 0.36,
+   "span_id": "175+7DE#1"
+  },
+  {
+   "footing": "1664:F",
+   "plan_overlap_m2": 0.27,
+   "span_id": "176+7E6#1"
+  },
+  {
+   "footing": "180F",
+   "plan_overlap_m2": 0.36,
+   "span_id": "177+7CD#1"
+  },
+  {
+   "footing": "1B2B",
+   "plan_overlap_m2": 0.4499,
+   "span_id": "177+7CD#1"
+  },
+  {
+   "footing": "180F",
+   "plan_overlap_m2": 0.36,
+   "span_id": "177+7CD#2"
+  },
+  {
+   "footing": "1B24",
+   "plan_overlap_m2": 0.026,
+   "span_id": "177+7CD#2"
+  },
+  {
+   "footing": "1ABF",
+   "plan_overlap_m2": 0.435,
+   "span_id": "178+7DB#1"
+  },
+  {
+   "footing": "166D:F",
+   "plan_overlap_m2": 0.27,
+   "span_id": "17B+7E5#1"
+  },
+  {
+   "footing": "1B2B",
+   "plan_overlap_m2": 0.4574,
+   "span_id": "17E+17F#1"
+  },
+  {
+   "footing": "1666:F",
+   "plan_overlap_m2": 0.255,
+   "span_id": "1811+1812#1"
+  },
+  {
+   "footing": "1664:F",
+   "plan_overlap_m2": 0.0292,
+   "span_id": "182+183#1"
+  },
+  {
+   "footing": "1B1A",
+   "plan_overlap_m2": 0.45,
+   "span_id": "184+7CF#1"
+  },
+  {
+   "footing": "166D:F",
+   "plan_overlap_m2": 0.27,
+   "span_id": "184+7CF#2"
+  },
+  {
+   "footing": "1B1A",
+   "plan_overlap_m2": 0.45,
+   "span_id": "184+7CF#2"
+  },
+  {
+   "footing": "166D:F",
+   "plan_overlap_m2": 0.27,
+   "span_id": "184+7CF#3"
+  },
+  {
+   "footing": "1ABF",
+   "plan_overlap_m2": 0.18,
+   "span_id": "185+7C7#1"
+  },
+  {
+   "footing": "166A:F",
+   "plan_overlap_m2": 0.045,
+   "span_id": "7D0+FC#1"
+  },
+  {
+   "footing": "1B07",
+   "plan_overlap_m2": 0.36,
+   "span_id": "7D0+FC#1"
+  },
+  {
+   "footing": "1B07",
+   "plan_overlap_m2": 0.36,
+   "span_id": "7D0+FC#2"
+  },
+  {
+   "footing": "1B1A",
+   "plan_overlap_m2": 0.54,
+   "span_id": "7D0+FC#2"
+  },
+  {
+   "footing": "1B1A",
+   "plan_overlap_m2": 0.45,
+   "span_id": "7D0+FC#3"
+  },
+  {
+   "footing": "1B1B",
+   "plan_overlap_m2": 0.315,
+   "span_id": "7D0+FC#3"
+  },
+  {
+   "footing": "1B1B",
+   "plan_overlap_m2": 0.36,
+   "span_id": "7D0+FC#4"
+  },
+  {
+   "footing": "1669:F",
+   "plan_overlap_m2": 0.15,
+   "span_id": "7D4+F8#1"
+  },
+  {
+   "footing": "1B2A",
+   "plan_overlap_m2": 0.195,
+   "span_id": "7D4+F8#1"
+  },
+  {
+   "footing": "1B2A",
+   "plan_overlap_m2": 0.225,
+   "span_id": "7D4+F8#2"
+  },
+  {
+   "footing": "1B1A",
+   "plan_overlap_m2": 0.45,
+   "span_id": "7DC+7DD#1"
+  },
+  {
+   "footing": "10F8+10F9+10FA+10FB",
+   "plan_overlap_m2": 0.105,
+   "span_id": "7DC+7DD#1"
+  },
+  {
+   "footing": "10F8+10F9+10FA+10FB",
+   "plan_overlap_m2": 0.105,
+   "span_id": "7DC+7DD#2"
+  },
+  {
+   "footing": "1B1B",
+   "plan_overlap_m2": 0.27,
+   "span_id": "7E0+FD#1"
+  },
+  {
+   "footing": "1100+1101+1102+1103",
+   "plan_overlap_m2": 0.105,
+   "span_id": "7E0+FD#1"
+  },
+  {
+   "footing": "1B24",
+   "plan_overlap_m2": 0.435,
+   "span_id": "7E0+FD#2"
+  },
+  {
+   "footing": "1100+1101+1102+1103",
+   "plan_overlap_m2": 0.105,
+   "span_id": "7E0+FD#2"
+  },
+  {
+   "footing": "1B19",
+   "plan_overlap_m2": 0.285,
+   "span_id": "7E1+7E2#1"
+  },
+  {
+   "footing": "166D:F",
+   "plan_overlap_m2": 0.27,
+   "span_id": "7E7+7E8#1"
+  },
+  {
+   "footing": "10F0+10F1+10F2+10F3",
+   "plan_overlap_m2": 0.105,
+   "span_id": "7E7+7E8#1"
+  },
+  {
+   "footing": "180F",
+   "plan_overlap_m2": 0.36,
+   "span_id": "7E7+7E8#2"
+  },
+  {
+   "footing": "10F0+10F1+10F2+10F3",
+   "plan_overlap_m2": 0.105,
+   "span_id": "7E7+7E8#2"
+  },
+  {
+   "footing": "10F0+10F1+10F2+10F3",
+   "plan_overlap_m2": 0.105,
+   "span_id": "7E9+7EA#1"
+  },
+  {
+   "footing": "10F8+10F9+10FA+10FB",
+   "plan_overlap_m2": 0.105,
+   "span_id": "7E9+7EA#1"
+  }
+ ],
+ "junctions": [
+  {
+   "column": "COL:17BD",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "ends": [
+    "107+7CE#1:end"
+   ],
+   "gap_plan_m2_per_reading": [
+    0.0026
+   ],
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (17C5 CN); CAP; CAP = FP places it off the beam-plan outline",
+   "neck_status": "DRAWING-CONFIRMED"
+  },
+  {
+   "column": "COL:17C0",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "ends": [
+    "170+7C3#4:end"
+   ],
+   "gap_plan_m2_per_reading": [
+    0.0
+   ],
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (17C8 CN); CAP",
+   "neck_status": "DRAWING-CONFIRMED"
+  },
+  {
+   "column": "COL:1DC",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "ends": [
+    "109+7CB#3:end",
+    "170+7C3#1:start"
+   ],
+   "gap_plan_m2_per_reading": [
+    0.0
+   ],
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (1084 C2); CAP",
+   "neck_status": "DRAWING-CONFIRMED"
+  },
+  {
+   "column": "COL:1E0",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "ends": [
+    "15E+15F#1:end",
+    "170+7C3#1:end",
+    "170+7C3#2:start"
+   ],
+   "gap_plan_m2_per_reading": [
+    0.0
+   ],
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (1087 C2); CAP",
+   "neck_status": "DRAWING-CONFIRMED"
+  },
+  {
+   "column": "COL:1E4",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "ends": [
+    "170+7C3#2:end",
+    "170+7C3#3:start",
+    "176+7E6#1:end"
+   ],
+   "gap_plan_m2_per_reading": [
+    0.0
+   ],
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (108A C5); CAP",
+   "neck_status": "DRAWING-CONFIRMED"
+  },
+  {
+   "column": "COL:1E8",
+   "double_plan_m2_per_reading": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "ends": [
+    "1811+1812#1:start"
+   ],
+   "gap_plan_m2_per_reading": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "n_readings": 3,
+   "neck_note": "T-217 DRAFTING_NOTE: printed (300.0, 500.0), position not drawn",
+   "neck_status": "HELD"
+  },
+  {
+   "column": "COL:1EF",
+   "double_plan_m2_per_reading": [
+    0.0,
+    0.0,
+    0.0013,
+    0.005
+   ],
+   "ends": [
+    "17E+17F#1:start"
+   ],
+   "gap_plan_m2_per_reading": [
+    0.0104,
+    0.0104,
+    0.0076,
+    0.0047
+   ],
+   "n_readings": 4,
+   "neck_note": "T-217 CONFLICT 1093 C2: [(200.0, 500.0), (300.0, 500.0)]; CAP",
+   "neck_status": "CONFLICT"
+  },
+  {
+   "column": "COL:1F2",
+   "double_plan_m2_per_reading": [
+    0.0,
+    0.03,
+    0.015,
+    0.0
+   ],
+   "ends": [
+    "15C+7CC#1:end"
+   ],
+   "gap_plan_m2_per_reading": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "n_readings": 4,
+   "neck_note": "T-217 CONFLICT 1096 C2: [(200.0, 500.0), (300.0, 500.0)]; CAP",
+   "neck_status": "CONFLICT"
+  },
+  {
+   "column": "COL:1F5",
+   "double_plan_m2_per_reading": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "ends": [
+    "15E+15F#1:start"
+   ],
+   "gap_plan_m2_per_reading": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "n_readings": 4,
+   "neck_note": "T-217 CONFLICT 1099 C1: [(200.0, 500.0), (300.0, 500.0)]; CAP",
+   "neck_status": "CONFLICT"
+  },
+  {
+   "column": "COL:1FC",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "ends": [
+    "114+115+7DF#2:end",
+    "7E0+FD#2:end"
+   ],
+   "gap_plan_m2_per_reading": [
+    0.0
+   ],
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (10A0 C3); CAP",
+   "neck_status": "DRAWING-CONFIRMED"
+  },
+  {
+   "column": "COL:200",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "ends": [
+    "7D0+FC#4:end",
+    "7E0+FD#1:start"
+   ],
+   "gap_plan_m2_per_reading": [
+    0.0
+   ],
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (10A4 C); CAP",
+   "neck_status": "DRAWING-CONFIRMED"
+  },
+  {
+   "column": "COL:204",
+   "double_plan_m2_per_reading": [
+    0.03
+   ],
+   "ends": [
+    "136+7D5#1:end"
+   ],
+   "gap_plan_m2_per_reading": [
+    0.0
+   ],
+   "n_readings": 1,
+   "neck_note": "T-217 DRAFTING_NOTE (10A8 C): printed (300.0, 500.0) at the CAP place = FP; the beam-plan outline is the drafting copy; CAP = FP places it off the beam-plan outline",
+   "neck_status": "DRAWING-CONFIRMED"
+  },
+  {
+   "column": "COL:207",
+   "double_plan_m2_per_reading": [
+    0.03
+   ],
+   "ends": [
+    "136+7D5#1:start",
+    "7D4+F8#1:start"
+   ],
+   "gap_plan_m2_per_reading": [
+    0.0
+   ],
+   "n_readings": 1,
+   "neck_note": "T-217 DRAFTING_NOTE (10AB C): printed (300.0, 500.0) at the CAP place = FP; the beam-plan outline is the drafting copy; CAP = FP places it off the beam-plan outline",
+   "neck_status": "DRAWING-CONFIRMED"
+  },
+  {
+   "column": "COL:20B",
+   "double_plan_m2_per_reading": [
+    0.03
+   ],
+   "ends": [
+    "13F+7D3#1:start",
+    "7D4+F8#1:end",
+    "7D4+F8#2:start"
+   ],
+   "gap_plan_m2_per_reading": [
+    0.0
+   ],
+   "n_readings": 1,
+   "neck_note": "T-217 DRAFTING_NOTE (10AE C3): printed (300.0, 500.0) at the CAP place = FP; the beam-plan outline is the drafting copy; CAP = FP places it off the beam-plan outline",
+   "neck_status": "DRAWING-CONFIRMED"
+  },
+  {
+   "column": "COL:211",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "ends": [
+    "13D+7D2#1:start",
+    "13E+7D6#1:end",
+    "13E+7D6#2:start"
+   ],
+   "gap_plan_m2_per_reading": [
+    0.03
+   ],
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (10B1 C3); CAP",
+   "neck_status": "DRAWING-CONFIRMED"
+  },
+  {
+   "column": "COL:214",
+   "double_plan_m2_per_reading": [
+    0.03
+   ],
+   "ends": [
+    "137+138#1:end"
+   ],
+   "gap_plan_m2_per_reading": [
+    0.0
+   ],
+   "n_readings": 1,
+   "neck_note": "T-217 DRAFTING_NOTE (10B4 C): printed (300.0, 500.0) at the CAP place = FP; the beam-plan outline is the drafting copy; CAP = FP places it off the beam-plan outline",
+   "neck_status": "DRAWING-CONFIRMED"
+  },
+  {
+   "column": "COL:218",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "ends": [
+    "10A+7C9#1:start",
+    "7D0+FC#1:start"
+   ],
+   "gap_plan_m2_per_reading": [
+    0.0
+   ],
+   "n_readings": 1,
+   "neck_note": "T-217 DRAFTING_NOTE (10B7 C): printed (300.0, 500.0) at the CAP place; the beam-plan outline is the drafting copy",
+   "neck_status": "DRAWING-CONFIRMED"
+  },
+  {
+   "column": "COL:220",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "ends": [
+    "10A+7C9#1:end",
+    "145+7CA#1:start"
+   ],
+   "gap_plan_m2_per_reading": [
+    0.0
+   ],
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (10BA C11); CAP",
+   "neck_status": "DRAWING-CONFIRMED"
+  },
+  {
+   "column": "COL:223",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "ends": [
+    "10B+7D1#2:end",
+    "13D+7D2#1:end"
+   ],
+   "gap_plan_m2_per_reading": [
+    0.0
+   ],
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (10BD C5); CAP",
+   "neck_status": "DRAWING-CONFIRMED"
+  },
+  {
+   "column": "COL:228",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "ends": [
+    "109+7CB#1:end",
+    "109+7CB#2:start",
+    "145+7CA#1:end",
+    "7E1+7E2#1:start"
+   ],
+   "gap_plan_m2_per_reading": [
+    0.0
+   ],
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (10C2 C6); CAP",
+   "neck_status": "DRAWING-CONFIRMED"
+  },
+  {
+   "column": "COL:22C",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "ends": [
+    "10B+7D1#1:end",
+    "10B+7D1#2:start",
+    "142+7D8#1:end"
+   ],
+   "gap_plan_m2_per_reading": [
+    0.0
+   ],
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (10C5 C3); CAP",
+   "neck_status": "DRAWING-CONFIRMED"
+  },
+  {
+   "column": "COL:230",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "ends": [
+    "178+7DB#1:end",
+    "185+7C7#1:start"
+   ],
+   "gap_plan_m2_per_reading": [
+    0.0
+   ],
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (10C8 C7); CAP",
+   "neck_status": "DRAWING-CONFIRMED"
+  },
+  {
+   "column": "COL:234",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "ends": [
+    "109+7CB#2:end",
+    "109+7CB#3:start"
+   ],
+   "gap_plan_m2_per_reading": [
+    0.0
+   ],
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (10CC C3); CAP",
+   "neck_status": "DRAWING-CONFIRMED"
+  },
+  {
+   "column": "COL:238",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "ends": [
+    "107+7CE#1:start",
+    "114+115+7DF#1:end",
+    "114+115+7DF#2:start"
+   ],
+   "gap_plan_m2_per_reading": [
+    0.0
+   ],
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (10D0 C8); CAP",
+   "neck_status": "DRAWING-CONFIRMED"
+  },
+  {
+   "column": "COL:23C",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "ends": [
+    "17B+7E5#1:end",
+    "184+7CF#2:end",
+    "184+7CF#3:start"
+   ],
+   "gap_plan_m2_per_reading": [
+    0.0
+   ],
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (10D3 C5); CAP",
+   "neck_status": "DRAWING-CONFIRMED"
+  },
+  {
+   "column": "COL:241",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "ends": [
+    "170+7C3#3:end",
+    "170+7C3#4:start"
+   ],
+   "gap_plan_m2_per_reading": [
+    0.0
+   ],
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (10D7 C4); CAP",
+   "neck_status": "DRAWING-CONFIRMED"
+  },
+  {
+   "column": "COL:245",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "ends": [
+    "177+7CD#1:end",
+    "177+7CD#2:start"
+   ],
+   "gap_plan_m2_per_reading": [
+    0.0
+   ],
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (10DA C9); CAP",
+   "neck_status": "DRAWING-CONFIRMED"
+  },
+  {
+   "column": "COL:249",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "ends": [
+    "7D0+FC#1:end",
+    "7D0+FC#2:start"
+   ],
+   "gap_plan_m2_per_reading": [
+    0.0
+   ],
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (10DD C11); CAP",
+   "neck_status": "DRAWING-CONFIRMED"
+  },
+  {
+   "column": "COL:24D",
+   "double_plan_m2_per_reading": [
+    0.0,
+    0.025,
+    0.025,
+    0.025
+   ],
+   "ends": [
+    "184+7CF#1:end",
+    "184+7CF#2:start",
+    "7DC+7DD#1:start"
+   ],
+   "gap_plan_m2_per_reading": [
+    0.04,
+    0.04,
+    0.04,
+    0.04
+   ],
+   "n_readings": 4,
+   "neck_note": "T-217 CONFLICT 10E0 C8: [(300.0, 800.0), (300.0, 900.0)]; CAP; CAP = FP places it off the beam-plan outline",
+   "neck_status": "CONFLICT"
+  },
+  {
+   "column": "COL:251",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "ends": [
+    "7D0+FC#2:end",
+    "7D0+FC#3:start"
+   ],
+   "gap_plan_m2_per_reading": [
+    0.0
+   ],
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (10E4 C3); CAP",
+   "neck_status": "DRAWING-CONFIRMED"
+  },
+  {
+   "column": "COL:255",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "ends": [
+    "7D0+FC#3:end",
+    "7D0+FC#4:start"
+   ],
+   "gap_plan_m2_per_reading": [
+    0.0
+   ],
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (10E8 C10); CAP",
+   "neck_status": "DRAWING-CONFIRMED"
+  },
+  {
+   "column": "COL:7ED",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "ends": [
+    "7E7+7E8#1:end",
+    "7E7+7E8#2:start",
+    "7E9+7EA#1:end"
+   ],
+   "gap_plan_m2_per_reading": [
+    0.0
+   ],
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (10EE CN); CAP",
+   "neck_status": "DRAWING-CONFIRMED"
+  },
+  {
+   "column": "COL:7F5",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "ends": [
+    "7DC+7DD#1:end",
+    "7DC+7DD#2:start",
+    "7E9+7EA#1:start"
+   ],
+   "gap_plan_m2_per_reading": [
+    0.0
+   ],
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (10F6 CN); CAP",
+   "neck_status": "DRAWING-CONFIRMED"
+  },
+  {
+   "column": "COL:809",
+   "double_plan_m2_per_reading": [
+    0.0
+   ],
+   "ends": [
+    "7E0+FD#1:end",
+    "7E0+FD#2:start"
+   ],
+   "gap_plan_m2_per_reading": [
+    0.0
+   ],
+   "n_readings": 1,
+   "neck_note": "T-217 AGREE (10FE CN); CAP",
+   "neck_status": "DRAWING-CONFIRMED"
+  }
+ ],
+ "source": {
+  "drive": "Alsenan chalet project / ST7757 dxf.dxf",
+  "sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+  "sheets": "GROUND BEAMS PLAN (bands, columns, S-BW ring); FOUNDATION PLAN (footings, columns)"
+ },
+ "spans": 59,
+ "strap_gb_plan_overlaps": [
+  {
+   "plan_overlap_m2": 0.21,
+   "span_id": "184+7CF#3",
+   "strap": "SB1"
+  },
+  {
+   "plan_overlap_m2": 0.7502,
+   "span_id": "109+7CB#1",
+   "strap": "SB2"
+  },
+  {
+   "plan_overlap_m2": 0.0088,
+   "span_id": "109+7CB#2",
+   "strap": "SB2"
+  },
+  {
+   "plan_overlap_m2": 0.1049,
+   "span_id": "145+7CA#1",
+   "strap": "SB2"
+  },
+  {
+   "plan_overlap_m2": 0.1088,
+   "span_id": "7E1+7E2#1",
+   "strap": "SB2"
+  },
+  {
+   "plan_overlap_m2": 0.1606,
+   "span_id": "13C+7D9#1",
+   "strap": "SB3"
+  },
+  {
+   "plan_overlap_m2": 0.0015,
+   "span_id": "13D+7D2#1",
+   "strap": "SB3"
+  },
+  {
+   "plan_overlap_m2": 0.0533,
+   "span_id": "13E+7D6#1",
+   "strap": "SB3"
+  },
+  {
+   "plan_overlap_m2": 0.2794,
+   "span_id": "13F+7D3#1",
+   "strap": "SB3"
+  },
+  {
+   "plan_overlap_m2": 0.0018,
+   "span_id": "7D4+F8#1",
+   "strap": "SB3"
+  },
+  {
+   "plan_overlap_m2": 0.001,
+   "span_id": "7D4+F8#2",
+   "strap": "SB3"
+  }
+ ]
+}
