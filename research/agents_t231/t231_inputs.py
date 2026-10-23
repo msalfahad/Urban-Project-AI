@@ -19,7 +19,7 @@ STRAP_CONCRETE (T-174, MERGED 984ebbe1, Verifier 2026-10-23 15:06 UTC; owner Q-7
       BAND0003 SB1 1.5925, BAND0019 SB2 1.146382, BAND0002 SB3 0.651535 (= 3.390417), BAND0003:IN_OPEN_FOOTING_OUTLINE
       0 .. 0.402518 (1.15 m x 0.70 x 0.50, column not removed), BAND0019:IN_OPEN_FOOTING_OUTLINE 0 .. 1.406176 (the
       F11 outline is open on the strap side: T-174 closes it by its chord, the face the strap enters; the Checker
-      re-measured that face, y 37,847.956 from outline 1B07; inside it the strap is F11 footing concrete, D 0.50 = H
+      re-measured that face on outline 1B07; inside it the strap is F11 footing concrete, D 0.50 = H
       0.50, counted once in the footing line).
 
 PLANTED_COLUMN (T-220, MERGED 579e613d, Verifier 2026-10-23 15:58 UTC):
@@ -48,7 +48,8 @@ MEMBER_EXISTENCE (T-220, MERGED 579e613d; Checker re-measured 2F C8 on FP 10E0):
   line inputs): they left the released total in V3.0.1, so this version moves no released quantity; it turns the five
   "not applicable" lines into visible HELD lines with D-65 (an absence of a drawn member is not a measured 0). Route ids
   from the T-217 ledger (MERGED 65fef8fa: FP handle -> released line) translated to this run's SH12 frame by the one
-  offset (+75,968 / +14,447) that maps all four FP positions of that ledger onto this run's lines (<= 2 mm; route ids round the label point):
+  offset (+75,968 / +14,447) that maps all four FP positions of that ledger onto this run's lines (within 1 mm, checked
+  at <= 2 mm; route ids round the label point):
       FP 10C5 C3 2F 0.42 / FP 10E4 C3 1F 0.42 / FP 10E4 C3 2F 0.42 / FP 10BD C5 2F 0.42 / FP 10E0 C8 2F 0.588
 
 GUARD: the V3.0.7 guard inputs unchanged (research/agents_t193/t193_inputs.py, evidence version 2, no new record).
