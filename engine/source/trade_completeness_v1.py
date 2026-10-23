@@ -50,8 +50,11 @@ Element statuses (one per trade element; precedence top to bottom)
   INVENTORY_GEOMETRY_ONLY drawn, untagged, no line links it (residual risk: it may be carried unjoined or omitted)
   CONFLICT                no line, and the inventories that cover its storey disagree on whether it exists
   MISSING                 an inventory element with no line and no hold
-  REGISTER_ONLY           in the register or on a line, inside an inventory's storeys, but in no inventory (not in d)
+  REGISTER_ONLY           in the register or on a line, inside an inventory's storeys, but in no inventory (not in d;
+                          decided before the line states: a measured element no inventory finds is a disagreement)
   OUT_OF_INVENTORY_SCOPE  in the register or on a line on a storey no inventory of the trade covers (not in d)
+  Each element row also carries "measurement" (EXCLUDED / VERIFIED / MEASURED / HELD / UNRESOLVED / NONE): what its
+  lines and register entry say, kept beside the inventory status.
   Flags beside the status: duplicated (two additive lines of one trade on the same element, component and unit;
   a never-additive measure pair is not a duplicate; the same label on two storeys is two keys, never a duplicate),
   inventory_agreement AGREED / SINGLE_SOURCE / CONFLICT (with the sources).
@@ -278,7 +281,10 @@ def check(inventories=(), register=(), lines=(), line_links=None, verdicts=(), e
     trade_lines = defaultdict(int)
     by_id = {}
     for ln in lines:
-        by_id[ln["line_id"]] = ln
+        lid = ln["line_id"]
+        if lid in by_id and json.dumps(by_id[lid], sort_keys=True) != json.dumps(ln, sort_keys=True):
+            raise CompletenessError(f"two different lines carry line id {lid}: one would hide the other")
+        by_id[lid] = ln
     for lid in sorted(by_id):
         ln = by_id[lid]
         tr = line_trade(ln)
@@ -356,32 +362,41 @@ def check(inventories=(), register=(), lines=(), line_links=None, verdicts=(), e
                     dup_lines.extend(sorted(ids))
             r = reg[tr].get(k)
             reason = None
+            # what the lines / register say about the element (independent of whether an inventory found it)
             if (tr, k) in excl:
-                status, reason = "EXCLUDED", f"{excl[(tr, k)]['rule_id']}: {excl[(tr, k)].get('basis', '')}".strip()
+                meas, reason = "EXCLUDED", f"{excl[(tr, k)]['rule_id']}: {excl[(tr, k)].get('basis', '')}".strip()
             elif exl and not qty and not held:
-                status, reason = "EXCLUDED", "; ".join(sorted({x.get("notes") or "" for x in exl}))
+                meas, reason = "EXCLUDED", "; ".join(sorted({x.get("notes") or "" for x in exl}))
             elif qty:
-                status = "VERIFIED" if (tr, k) in ver else "MEASURED"
+                meas = "VERIFIED" if (tr, k) in ver else "MEASURED"
             elif held or (r and str(r.get("status", "")).upper() == "HELD"):
                 why = [w for w in (_held_reason(x) for x in held) if w] + ([r["reason"]] if r and r.get("reason") else [])
-                status, reason = ("HELD", "; ".join(sorted(set(why)))) if why else ("UNRESOLVED", "held without a "
-                                                                                    "named reason")
-            elif srcs and not any(v["tagged"] for v in srcs.values()):
+                meas, reason = ("HELD", "; ".join(sorted(set(why)))) if why else ("UNRESOLVED", "held without a "
+                                                                                  "named reason")
+            else:
+                meas = "NONE"
+            # the element status: an element no independent inventory found is REGISTER_ONLY / OUT_OF_INVENTORY_SCOPE
+            # whatever its lines say (an inventory / register disagreement to resolve, never counted in d)
+            if meas == "EXCLUDED":
+                status = "EXCLUDED"
+            elif not srcs:
+                if covered and floor in covered:
+                    status, reason = "REGISTER_ONLY", ("in the register or on a line, in no independent inventory of "
+                                                       "the trade (a misread, an untagged element or an inventory gap)")
+                else:
+                    status, reason = "OUT_OF_INVENTORY_SCOPE", ("no independent inventory of this trade covers "
+                                                                f"storey {floor}")
+            elif meas != "NONE":
+                status = meas
+            elif not any(v["tagged"] for v in srcs.values()):
                 status, reason = "INVENTORY_GEOMETRY_ONLY", GEOMETRY_RISK
-            elif srcs and agree == "CONFLICT":
+            elif agree == "CONFLICT":
                 status = "CONFLICT"
                 reason = (f"found by {sorted(srcs)}, not by {sorted(set(covering) - set(srcs))}: the inventories "
                           "disagree; neither is picked")
-            elif srcs:
-                status = "MISSING"
-            elif covered and floor in covered:
-                status, reason = "REGISTER_ONLY", "in the register or on a line, in no independent inventory"
             else:
-                status, reason = "OUT_OF_INVENTORY_SCOPE", ("no independent inventory of this trade covers storey "
-                                                            f"{floor}")
-            if status == "VERIFIED" and not qty:
-                status = "MEASURED"
-            elements.append({"trade": tr, "key": k, "status": status, "reason": reason,
+                status = "MISSING"
+            elements.append({"trade": tr, "key": k, "status": status, "measurement": meas, "reason": reason,
                              "duplicated": bool(dup_lines), "duplicate_lines": dup_lines,
                              "inventory_agreement": agree, "sources": sorted(srcs),
                              "refs": sorted({str(v["ref"]) for v in srcs.values() if v.get("ref") is not None}),
