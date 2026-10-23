@@ -12,6 +12,26 @@ any sheet; recorded searches in the 'Search' column). Rows 7, 8, 9 NOT YET: draw
 lift details ST p.14, section B-B, roof details; T-222 claimable: P-1F-01 / P-GF-05); each is sent only if those tasks end
 with the item still unresolved, else removed. No row is answerable from the plans on the evidence merged so far.
 
+LEAD SEARCH CONFIRMATION (Lead 2026-10-23 18:20 UTC, from the merged tasks' records and the Checker's verdicts; owner 17:50 (6)):
+- SEND-READY, search complete: row 1 D-16 (structural plan text + dimension chain + outlines vs schedule: two printed sources
+  disagree; T-217 + Checker 13:53 own ST DXF), row 3 pool steps (GF plan, ST p.7, sections; T-183, T-203: absence on every
+  sheet that draws the pool), row 4 D-57 (ST p.7 two-zone pool vs answered Q-26 A: a drawing-vs-owner-decision conflict only
+  the designer can settle), row 5 C-ST-4 (structural stair linework vs architectural plan / section, project-wide; T-184,
+  T-189, T-192), row 6 D-63 (foundation plan vs column schedule; T-205, T-217), row 10 D-12 (note 20 vs architectural wall
+  thicknesses; T-143, T-226), row 11 D-02 / D-27 (schedule blocks vs drawn bands, width only: Checker 18:01 read the schedule
+  blocks itself; depths agree, so wall heights are not affected), row 12 D-65 (ST DXF + PDF at each member and the
+  architectural 1F / 2F plans; T-220, Checker 15:52).
+- HOLD SEND, row 2 D-44: the record covers the structural sheets only (ST p.10 schedule, the ST DXF tank area). The
+  architectural roof plan, elevations and section B-B have not been recorded as searched for the tank enclosure / B15
+  position. Moved back to an investigation step inside T-221 (lane S, second; roof plan, roof details, sections and
+  elevations read on vector geometry). Send only if T-221 records it undrawn on every sheet.
+- HOLD SEND, rows 7 (D-43) and 8 (D-06 / D-17): T-227 READY 18:00 (worker 2) reports both unresolved after reading ST p.14
+  lift details, note 19, section B-B, roof details and elevations; send-ready only after the Checker's Gate A verdict on
+  T-227 confirms that search (queued 18:49).
+- HOLD SEND, row 9 (D-64 / D-60): T-222 (lane A, now first) records every architectural sheet searched for each opening.
+Engineering note on row 2: this is an engineering question for the consultant, not an owner decision (ERS s.2.7); the
+owner sends nothing from this list until each held row is cleared as above.
+
 | # | D | Element | Conflicting / missing evidence (drawing references) | Question to the consultant | BOQ lines held | Search |
 |---|---|---|---|---|---|---|
 | 1 | D-16 | Column C8 | Structural plan prints 30X80 (dimensioned 70 + 10, five 0.80 outlines); column schedule prints 30 x 90 | Which section is built? | CONC.COLUMN reference line (blocks VERIFIED); neck 0.240 .. 0.270 m2, GF 0.900 .. 1.0125 m3, 1F 0.180 .. 0.200 m2 | T-100, T-119, T-217 + Checker own ST DXF re-measure 13:53 |
