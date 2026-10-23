@@ -84,7 +84,7 @@ count a piece twice and are refused. A held end is closed by area, never by exte
   Adverse: junction piece claimed by both walls -> refused; an L corner square in both -> refused; millimetres
   refused; no direction refused; empty masonry -> ValueError ("HELD, never 0"); a wall listed twice refused; masonry
   in no band -> PARTLY_HELD with its area; two crossing through walls refused; a through wall takes the seat.
-- tests/t215_junction_close/test_alsenan_ledger.py (6): every cluster CLOSED, sum t x delta = residual, the G-T108-1
+- tests/t215_junction_close/test_t215_alsenan_ledger.py (6): every cluster CLOSED, sum t x delta = residual, the G-T108-1
   piece assigned once, the bend moves length without changing the total, the column end 0, no change above its old
   bound, EXACT only for one member, no coordinates in the files.
 - `alsenan_t215_ends.py --check` reproduces both CSVs from the private capture (outside the repository): PASS. The V2
