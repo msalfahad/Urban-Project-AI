@@ -37,7 +37,15 @@ Rules checked (every one refuses, none repairs):
     such event (in version order) is 'releases' can never be HELD_IN_CANDIDATE;
   - (r2) the head carries no candidate module newer than the registry's candidate: an engine/source/arch_v30*.py whose
     version is above candidate.method_version means a newer package merged and the registry's as_of is stale
-    (scan_head=False only for synthetic registries checked outside this repository's head).
+    (scan_head=False only for synthetic registries checked outside this repository's head);
+  - (r3, T-231) a package cannot name its own merge commit before the Checker merges it, so a registry version may
+    declare 'pending_packages': a candidate package handed in for Gate B (task, method_version above the candidate's,
+    its module, the 40-hex task commit that adds the module, status READY_FOR_GATE_B, the tasks it integrates, its test
+    folders). A pending package is never a merged package: no family state may name it, it is not in
+    candidate_packages, and it raises no candidate state. A newer module on the head is not stale when THIS registry
+    declares it pending, or when a NEWER registry version on the head (rules/coverage/BOQ_FAMILY_MASTER_x.y.z.json)
+    accounts for it (merged or pending): a superseded version is not the registry of record. The next registry
+    version after the merge moves the package to candidate_packages with its merge commit and verdict.
 
 Read by no engine method and by no run: it changes no quantity, no release state and no default.
 """
@@ -51,7 +59,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT = ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.2.0.json"
+DEFAULT = ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.3.0.json"   # T-231: the registry of record
 # T-212 default-guard property: registry check only, read by no method or run, emits no BOQ quantity of its own
 DEFAULT_GUARD_CLASS = "TOOLING"
 
@@ -88,9 +96,97 @@ def git_is_ancestor(commit, head="HEAD", root=ROOT):
     return r.returncode == 0
 
 
+def _semver(v):
+    try:
+        return tuple(int(x) for x in str(v).split("."))
+    except ValueError:
+        return None
+
+
+def newer_registry_modules(doc, root=ROOT):
+    """{module path: registry version} accounted for (merged or pending) by every registry version on the tree at root
+    that is newer than doc's version."""
+    out = {}
+    mine = _semver(doc.get("version"))
+    d = Path(root) / "rules/coverage"
+    for f in sorted(d.glob("BOQ_FAMILY_MASTER_*.json")) if d.is_dir() and mine else []:
+        try:
+            other = json.loads(f.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            continue
+        ov = _semver(other.get("version"))
+        if ov is None or ov <= mine:
+            continue
+        for p in list(other.get("candidate_packages") or []) + list(other.get("pending_packages") or []):
+            if p.get("module"):
+                out[p["module"]] = other.get("version")
+    return out
+
+
+PENDING_STATUS = "READY_FOR_GATE_B"
+
+
+def check_pending(doc, by_task, mv, root=ROOT, is_ancestor=None):
+    """r3: the pending packages of a registry version. -> (problems, {module: version number})"""
+    bad, mods = [], {}
+    pend = doc.get("pending_packages")
+    if pend is None:
+        return bad, mods
+    if not isinstance(pend, list):
+        return ["pending_packages must be a list"], mods
+    seen = set()
+    for p in pend:
+        t = p.get("task", "?")
+        if not TASK.match(str(t)):
+            bad.append(f"pending package {t}: task id is not T-nnn")
+        if t in by_task:
+            bad.append(f"pending package {t}: also a merged package (a package is pending or merged, never both)")
+        if t in seen:
+            bad.append(f"pending package {t}: listed twice")
+        seen.add(t)
+        vk = version_key(p.get("method_version"))
+        if vk is None:
+            bad.append(f"pending package {t}: method_version {p.get('method_version')!r} is not a candidate version")
+        elif version_key(mv) is not None and vk <= version_key(mv):
+            bad.append(f"pending package {t}: {p.get('method_version')} is not above the candidate {mv}")
+        mod = p.get("module")
+        m = MODULE.match(Path(str(mod)).name) if mod else None
+        if not mod or not (root / mod).is_file() or not m:
+            bad.append(f"pending package {t}: module {mod!r} does not exist or is not a candidate module")
+        elif vk is not None and int(m.group(1) or 0) != vk:
+            bad.append(f"pending package {t}: module {mod} is not the module of {p.get('method_version')}")
+        else:
+            mods[mod] = vk
+        tc = p.get("task_commit", "")
+        if not SHA40.match(str(tc)):
+            bad.append(f"pending package {t}: task_commit {tc!r} is not a full 40-hex sha")
+        elif is_ancestor is not None and not is_ancestor(tc):
+            bad.append(f"pending package {t}: task_commit {tc[:10]} is not on the checked head")
+        if p.get("status") != PENDING_STATUS:
+            bad.append(f"pending package {t}: status must be {PENDING_STATUS} (a pending package is never merged)")
+        if "verdict" in p or "merge_commit" in p:
+            bad.append(f"pending package {t}: carries a verdict / merge commit: a merged package goes to "
+                       "candidate_packages in the next registry version")
+        if not p.get("integrates") or not all(TASK.match(str(x)) for x in p["integrates"]):
+            bad.append(f"pending package {t}: 'integrates' must list the merged input tasks")
+        tests = p.get("tests") or []
+        if not tests:
+            bad.append(f"pending package {t}: no test folder")
+        for d in tests:
+            if not (root / d).is_dir():
+                bad.append(f"pending package {t}: test folder {d} does not exist")
+    for f in doc.get("families", []):
+        named = (f.get("candidate") or {}).get("packages") or []
+        for t in named:
+            if t in seen:
+                bad.append(f"{f.get('code')}: names the pending package {t} (a candidate state needs a merged verdict)")
+    return bad, mods
+
+
 def check(doc, root=ROOT, is_ancestor=None, scan_head=True):
     """Return a list of problems (empty = the candidate states hold). is_ancestor(commit) -> bool, optional.
-    scan_head: refuse when the tree at root carries a candidate module newer than the registry's candidate."""
+    scan_head: refuse when the tree at root carries a candidate module newer than the registry's candidate that neither
+    this registry declares pending nor a newer registry version on the tree accounts for."""
     bad = []
     states = doc.get("candidate_states")
     if tuple(states or ()) != STATES:
@@ -143,9 +239,12 @@ def check(doc, root=ROOT, is_ancestor=None, scan_head=True):
         bad.append(f"candidate.as_of_package {cand.get('as_of_package')!r} is not a listed merged package")
     elif version_key(by_task[cand["as_of_package"]].get("method_version")) != version_key(mv):
         bad.append(f"candidate.as_of_package {cand['as_of_package']} is not the package of {mv}")
+    pbad, pending = check_pending(doc, by_task, mv, root, is_ancestor)
+    bad += pbad
     if scan_head and version_key(mv) is not None:
+        newer = newer_registry_modules(doc, root)
         for n, path in sorted(head_candidate_modules(root).items()):
-            if n > version_key(mv):
+            if n > version_key(mv) and pending.get(path) != n and path not in newer:
                 bad.append(f"the head carries {path} (ARCH_TAKEOFF_V3.0.{n}), newer than the registry's candidate {mv}: "
                            "a newer package merged and the registry's as_of is stale")
 
