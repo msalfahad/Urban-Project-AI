@@ -36,6 +36,18 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
    commit. Decision: board-only handoffs are verified as hand evidence (the verifier re-reads the cited notes), and the
    next task on the topic writes the files (T-117); a run with no line stays a NEEDS FIXING item for the owner's setting.
 
+## 2026-10-23 22:10 (lead run)
+
+| Task | Result | Evidence | Decision |
+|---|---|---|---|
+| T-227 r2 (blockwork 3/4) | WORKED | MERGED ebce3d97 (Checker 21:05): own walk W15 / W16 4.3629 m2 each (crown 3.00), W18 1.080; 1F-W00 net 12.863 SOURCE-SUPPORTED | T-228 PROMOTED (claimable now); W15 / W16 window area stays 4.650 by Q-32 A |
+| T-221 (roof / wet structural tops) | WORKED (zones HELD by design) | MERGED 63f4d90e: +5.50 falls rise 0.190 .. 0.203 m own = worker; its strip area 32.387 NOT verified (Checker own 31.681 finish hatch / 32.721 screed-membrane, HELD by layer); D-44 drawn on no sheet (8 searched) | the layer split goes to T-219 (waterproofing); consultant row 2 (D-44) send-ready; no new task |
+| T-017 (masonry census) | PARTIAL (evidence) | NOT CHECKED 21:05: its D2:nnn references are capture indices, not P7757.dxf handles (gate e) | delay cause EVIDENCE; first in worker 2's next run (handles only); process lesson: every re-measure reference is a handle the Checker can open |
+| T-211 (V3.0.9a plaster / paint, Gate B) | READY | paint 0 -> 166.88 m2 released (2 rooms VERIFIED, 1 ASSUMED - OWNER-APPROVED), 8 HELD ranges 529.47 .. 595.05 m2 + 4 HELD without a figure; 3,527 lines byte-identical | Gate B first in the next Checker run; 9b waits (same files); worker 3 takes T-235 parts (1)-(3) |
+| T-234 (CONC.SLAB whole line) | READY | 60.2804 m3 DRAWING-CONFIRMED, CLOSABLE; released A +1.2710 (NEW defect: 2F 'T 18' tag spread +0.625, 13 non-slab faces +0.646); candidate +0.6388 (the faces); freelancer +0.4630 (+0.77 %) named, 1F lump residual 0.059 UNRESOLVED | second Gate A slot (23:49 at the latest); T-146 now carries the 13 faces after T-234 MERGED; new T-241 CONC.BEAM closure (CB5 band 0.296 m3 in no line); R-SLAB-T-1 lessons row proposed |
+| T-238 (arched-opening fix) | READY | 68 openings censused: W15 / W16 window 4.650 (FREELANCER_RIGHT), finishes 4.363 per face; W26 1.875 (arch, not 1.20 x 1.70); W17 HELD 9.870 .. 11.515 (45 = archivolt?); windows 45.101 vs his 45.481 on 7 (-0.84 %) | gate 1 critical, with T-211 in the next Checker run; W17: the Checker rules the 305 / 45 reading first, owner item only after that (the Q-39 answer quoted a height the question text supplied) |
+| T-180 floor area (Checker) | PARTIAL (line findings) | 20 / 47 pieces VERIFIED 0.0 %; dressing 2.970 m2 in no floor line (scope), sills 0.550 m2 carried as porcelain (class); curved room ENGINE_RIGHT on geometry | T-223 acceptance extended; new T-240 (lane I wiring of both findings) |
+
 ## 2026-10-23 20:10 (lead run)
 
 | Task | Result | Evidence | Decision |

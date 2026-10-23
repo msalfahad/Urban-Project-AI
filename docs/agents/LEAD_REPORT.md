@@ -1,5 +1,76 @@
 # Lead reports to the owner's main chat (newest first, last 3 entries; older in archive/LEAD_REPORT_older.md)
 
+## LEAD REPORT 2026-10-23 22:10 UTC
+
+Repositories: attached Urban-Project-AI checkout (main eafbb0f6, the 21:29 lock-safety fix); `.work` prepared
+AUTOMATICALLY ("setup by auto", 22:11). Working branch head bebd1241 -> 63f4d90e (Checker merges T-227 r2 ebce3d97,
+T-221 63f4d90e; no owner commit on the engine branch). Drive readable: nothing created in the Alsenan folder or the
+private-data folder since 20:00 (no photos, no new drawings). Self-check: codemap PASS, pytest t061 PASS, freeze PASS (0).
+OWNER_SESSION_CHANGES 21:15 / 21:29 (lock-safety fix deployed, T-239 F10 CONFLICT row, T-235 behind T-232): applied, nothing
+undone or duplicated; T-239 sits in lane I after T-232 as written.
+
+PROGRESS (Alsenan, by trade and unit; released unchanged: concrete 92.77 vs freelancer 111.81 m3, -17.03 %, run A).
+WHOLE LINES VERIFIED: 0 in every trade (no change). PARTIALLY VERIFIED: CONC.FOOTING, CONC.BLINDING; FLOOR AREA 20 / 47
+pieces. SCOREABLE TRADES: concrete, floor area (no change); plaster and paint become scoreable if V3.0.9a passes Gate B.
+- CONC.SLAB (m3), first whole-line measure, READY (not yet verified): 62 panels 375.048 m2 = 60.2804 DRAWING-CONFIRMED,
+  CLOSABLE (convention C1: panel between beam faces, beam at full depth; thickness tag on 5, general note 18 on 57; 6
+  opening sets once; 6 sunken panels at full 0.16). Released A 61.5514 (+1.2710, +2.11 %) = NEW engine defect: the 2F
+  'T 18' tank tags spread to the 5 untagged panels of that sheet (+0.625) + 13 non-slab faces (+0.646), residual -0.0002.
+  Candidate V3.0.8 60.9192 (+0.6388 = the 13 faces only). Freelancer 59.8174 (+0.4630, +0.77 %): GF -0.0505 and 2F
+  -0.0431 rule difference, 1F dome corners +0.6156 engine right, 1F lump residual 0.059 UNRESOLVED (no breakdown in his
+  cell). Learned: an untagged panel takes the general note, never a neighbour's tag (R-SLAB-T-1 proposed). Missing: the
+  beam side of the partition (CB5 span-2 band 0.296 m3 in no line) -> T-241.
+- FLOOR AREA (m2), Checker own face-to-face re-measure: 20 / 47 pieces AGREE 0.0 % (138.767 of 385.634 m2 own-measured).
+  The released line cannot close as it stands: +2.970 1F dressing in no floor line (scope; freelancer right on the
+  bedroom row 19.46 = 16.340 + 2.970 + 0.150) and -0.550 sills carried as porcelain (class), net +2.420 (+0.63 %). The
+  curved east room 19.0165 is ENGINE_RIGHT (arc face R 2.135; the freelancer's extra 1.6835 is the straight wall line;
+  0.044 left for T-223 to name). Gate: M2 (gate 1).
+- PLASTER / PAINT (m2), candidate V3.0.9a READY (Gate B): paint 0 -> 166.88 released (2 rooms VERIFIED, 1 ASSUMED - OWNER-
+  APPROVED), 8 rooms HELD 529.47 .. 595.05 with named causes, 4 HELD without a figure (annex G2, 2F shaft, pantry class);
+  plaster the same + jamb lines. Freelancer 1,151 / 1,191 m2 NOT compared (the reference line stays HELD: comparing a
+  partial line would be meaningless).
+- OPENINGS / WINDOWS (m2), arched-opening census READY (68 openings): W15 / W16 window 4.650 each (Q-32 A, freelancer
+  right), finishes deduction 4.363 per face; W26 hole 1.875 (arch), not 1.20 x 1.70 = 2.040; windows on the 7 comparable
+  openings 45.101 vs freelancer 45.481 (-0.84 %, was +3.35 % on 8). W17 HELD 9.870 .. 11.515.
+- BLOCKWORK (m2): step 3 r2 MERGED (W15 / W16 deducted by the true arched outline 4.3629 each, Checker own walk; 1F-W00
+  net 12.863 SOURCE-SUPPORTED); GF-W10 ruled by the Checker (net 47.425 SOURCE-SUPPORTED + a HELD W.C.-stretch increment);
+  register v2 (T-228) now claimable. VERIFIED block net still 4.458 m2 (GF-W07).
+- ROOF / TERRACE build-up: +5.50 falls rise 0.190 .. 0.203 m Checker = worker; strip area HELD by layer (finish hatch
+  31.681 vs screed / membrane 32.721 m2, for the waterproofing task); +13.90 HELD (no outlet drawn); roof tank (D-44)
+  drawn on none of 8 sheets.
+What improved: one more concrete line measured whole and closable; the floor line's two blockers named to the m2; window
+like-for-like from +3.35 % to -0.84 % by reading arches on their opening line. What got worse: nothing measured got
+worse; the released slab carries a defect we did not know of (+2.1 %), reported, not changed (released default untouched).
+
+CLOSE THE LOOP (since 20:10): T-227 r2 WORKED; T-221 WORKED (zones HELD by design); T-017 PARTIAL (references were capture
+indices, not drawing handles: evidence first in worker 2's next run); T-211, T-234, T-238 READY. Decisions on the board:
+T-223 acceptance extended (enclosed-face typing rule, dressing, GF unlabelled 3.600 / 1.560, the three sills); new T-240
+(lane I: dressing in, sills out to ARCH.THRESHOLD HELD), T-241 (CONC.BEAM whole line + slab / beam partition), T-242
+(CONC.GROUND: interior runs closed, exterior on D-35 as a range); T-146 now carries the 13 non-slab faces after T-234;
+T-228 promoted. Element register +8 rows; lessons register +3 rows (dressing scope, slab tag spread, handles not capture
+ids).
+
+VERIFIER QUEUE (4 READY, one above target; backlog rule ON): next run Gate B T-211 + Gate A T-238 (gate 1 critical fix;
+W17 reading ruled by the Checker); following run T-234 (CONC.SLAB, rule whether D-41 still blocks); T-017 after its
+handles; T-180 slot continues floor area (GF batch). Delay causes: T-211 / T-234 / T-238 CHECKER-RUNS, T-017 EVIDENCE;
+none OVERSIZED.
+
+TEAM HEALTH (pilot hours 14-16): every run that ended since 20:10 wrote a final line (Worker 1 20:20 / 21:20, Worker 2
+20:40 / 21:41, Worker 3 21:00, Checker 20:52); all self-checks PASS, 0 refusals, 0 IDLE lock lines. The Checker run that
+STARTED 21:50 (session_01ERWb...) has no final line yet: active (its 22:05 floor note is on the board), within the
+110-minute cap; the next Lead run reports it INCOMPLETE if no final line appears. Rejections since 20:10: 0. Queue check:
+48 actionable rows, 0 flagged, 0 stall checks. Scout: no open request (all answered 17:45).
+
+OWNER PACKAGE: none today. Considered and NOT sent: W17 (the curved arched window over the pool). Worker 2 reads the
+printed '305' as the opening up to its arch and the '45' as a decorative archivolt above it, while the Q-39 question text
+(our own, 19 Oct) told you 3.05 + 0.45 = 3.50 m to the top of the arch, and your answer C (outer arc 3.29 m) repeated
+3.29 x 3.50 = 11.51 m2. Your width rule is not in question. If the Checker confirms the reading, the area by your own rules
+would be 3.29 x 3.00 .. 3.05 = 9.87 .. 10.03 m2 instead of 11.51; because your answer quoted the 3.50 figure, it comes to
+you once, in the section-6 format, after the Checker's ruling, never before. Until then W17 stays HELD 9.870 .. 11.515.
+
+NEEDS FIXING: none.
+
+
 ## LEAD REPORT 2026-10-23 20:10 UTC
 
 Repositories: attached Urban-Project-AI checkout (main ccbe7876); `.work` prepared AUTOMATICALLY ("setup by auto", 20:10).
@@ -167,66 +238,3 @@ a background command with a timeout up to 2 h) needs a Checker prompt change, wh
 L4 packages stay READY 'suite incomplete'. (2) Scout idea 29 (SessionStart hook writes the session id so STARTED lines stop
 saying 'run unknown') is a change on main: main chat. (3) Still open from Q-75: the supplier's black-block face size and
 joint thickness (the supplier list is drafted).
-
-## LEAD REPORT 2026-10-23 16:20 UTC
-
-Repositories: attached Urban-Project-AI checkout (main ccbe7876); `.work` prepared AUTOMATICALLY ("setup by auto", 16:13).
-Working branch head 0a622a86 -> 48e6f08a (checker merges T-212 r2 b5716930, T-215 part 1 8a9b4b48, T-174 984ebbe1, T-176
-41847bff, T-203 r2 40de7c7f, T-220 579e613d, T-225 48e6f08a; no owner commit on the engine branch). Drive readable: nothing
-created in the Alsenan folder or the private-data root since 14:00, no new image, so no photo-review task.
-OWNER_SESSION_CHANGES: two entries since my 14:20 run, both applied, nothing undone or duplicated: 14:20 Q-75 (black blocks
-12.5 / m2 provisional; T-176 merged on it, PROVISIONAL) and 15:45 blockwork resolution programme (T-225 merged; lane A now
-follows your order T-226, T-227, T-222, T-017, then T-228; T-223 / T-219 behind it).
-
-PROGRESS (Alsenan; released unchanged: concrete 92.77 vs freelancer 111.81 m3, -17.03 %, run A; SCOREBOARD v2 checker 15:52:
-verified share 0 / 8 whole concrete reference lines in every state; V3.0.7 compares 1 line, WAPE 1.84 %)
-- BLOCKWORK (m2), MERGED, step 1 of 4: three sources classified (freelancer workbook; older automated run = released run A,
-  which gives wall LENGTH only, every block m2 BLOCKED, so no automated m2 exists; MASONRY_AREA_V1 r2); owner cost record not
-  comparable. Gaps traced to the wall: BLACK 0.15 3.464 m2 = 1F-W14 + W15 16.223 - 12.760 deductions on six walls whose gross
-  is HELD; BLACK 0.20 12.001 = 1F-W07 11.321 + 2F-W00 6.840 - 1.980 - 2.200 - 1.980. Register v1 74 walls = T-108 r2 to
-  0.001 (checker re-added 0.000). Before-coverage net: SOURCE-SUPPORTED 252.817, PROJECT-SPECIFIC 84.595, VERIFIED 0 m2;
-  44 walls HELD (377.943 m2 gross, never 0: annex 9, beam depth 10, held opening 12, no member 6, lift tie beam 4, no band 3).
-  Freelancer like for like on length: 1F internal +1.420 m UNRESOLVED, 2F internal 0.000 m. No 100 mm wall on the drawings.
-- BLOCK UNITS (procurement), MERGED: net 290.052 m2 -> 3,625.65 installed units at 12.5 / m2 (replaces 563 m2 gross x 12.5 =
-  7,040); laying mortar 3.6059 m3 from the joint geometry, checker re-derived course by course; PROVISIONAL (supplier face /
-  joint not on record); waste, cement, sand HELD. Course-grid cut evidence +4.4 % .. +10.8 % (up to +29 % on 1.3 m walls).
-- GF BLOCK ENDS, MERGED: +0.2855 m of 0.15 black wall, gross +1.214 .. +1.241 m2 on 337.412 (range = CB2 width only).
-- STRAPS (m3), MERGED: Q-74 axis lengths SB2 2.2927 / SB3 3.2580 m (owner 2.29 / 3.26 confirmed); strap concrete 3.3905
-  DRAWING-CONFIRMED vs freelancer 3.3925 (-0.06 %), released 3.781 (+11.5 % high, projection basis); SB3 0.40 deep into a 0.30
-  F3: 0.0295 .. 0.1181 m3 HELD; SB3 bars 58.32 kg; SB2 bars HELD (D-38).
-- COLUMNS (m3), MERGED: checker own re-measure 27 -> 29 / 59, all 0.0 %. PC-1F-A 0.588 m3 VERIFIED; PC-1F-B 0.420 HELD
-  (D-26 split); PC-2F HELD (section CONFLICT; its joint under B7 billed twice by T-119: 0.059). 5 released upper lines 2.268
-  m3 NOT_DRAWN (consultant D-65). Route G cuts B27 / B26 at the planted column: short 0.119 / 0.085 m3 (worker, not yet
-  re-measured).
-- COVERAGE REGISTRY 1.2.0 on V3.0.7, MERGED: in-candidate states 13 / 3 / 34 / 49 (pool 7.202 m3, domes 5.081 m3 integrated).
-- GUARD: t202 red guard closed on the working branch (red ~14 h, no quantity effect).
-What improved: 7 verified merges, 0 rejections; strap line now drawing-derived within 0.06 % of the freelancer; both
-blockwork gaps reduced to named walls. What did not move: whole-line verified share 0 / 8; floor area, plaster, paint
-unscored; released numbers. Learned (proposed ERS s.7 rows): (1) an opening deduction carries its host wall's status, never
-deduct from a HELD gross (R-T225-1, T-225, normal + adverse tests in tests/t225_*); (2) a beam is cut only at a member that
-supports it, never at a planted column (T-220 finding -> T-229 builds the rule + tests); (3) an angled strap is measured on
-its axis, a projected length under-measures by the footing corner over-reach (T-174, Q-74).
-
-ENGINEERING QUESTIONS OPENED (ERS s.5, Lead): T-229 beam runs at planted columns / non-supporting members, every slab, joint
-owned once (fixes the PC-2F double joint; first in lane S, gate 1); T-230 strap / tie-beam ends into footings and necks,
-intersection once (SB3 in F3; R-CONC-OWN-1); T-231 candidate V3.0.8 = the checker-verified straps + PC-1F-A, the 5 NOT_DRAWN
-lines HELD in the candidate (priority 1, FIRST in lane I; T-199 formwork / railings moves behind it, same integration files).
-Promoted T-226 / T-227 (blockwork 2 / 3; each writes its own register delta, no shared file). Cross-trade (register +7
-rulings): planted column to CONC.COLUMN, beam continuous; strap formwork must take the axis lengths (T-199); block units are
-procurement, separate from installed m2. Integration readiness: T-231 next Gate B; T-199 after it.
-
-TEAM HEALTH: 14:20 - 16:20 (pilot): 7 / 7 slots STARTED + final SUCCESS (worker 1 14:24, 15:23; worker 2 14:40, 15:42;
-worker 3 15:00; checker 14:52, 15:52); every self-check PASS; 0 refusals; 0 overlap lines; Drive read OK. Ran code: all
-three workers and the checker. Throughput: 7 merges, 0 rejections (the 14:20 hand-in rule worked). Checker 15:52 left the L4
-full suite for T-203 at 20 % (L3 passed, failures so far identical to the working branch): acceptable for an additive
-registry entry, noted. READY 0: backlog rule off. Worker 1's 16:19 slot is
-checked at my next run. Board: TODO S 4 (T-229, T-230, T-221, T-170), A 6 (T-226, T-227, T-222, T-017, T-223,
-T-219) + T-228 queued, I 4 (T-231, T-216, T-168, T-210); queued T-224, T-199 -> T-211 -> T-146. Queue check: 46 actionable
-rows, 0 flagged, 0 stall checks. Self-check PASS (codemap stale none, t061, freeze 0).
-
-OWNER PACKAGE: none today. No new discrepancy meets ERS s.2.7: SB3 / F3 and PC-2F are drawing questions investigated first
-(T-230, T-229); D-65 (5 upper column lines) is a consultant item already on record.
-
-NEEDS FIXING (only the owner): nothing new. Still pending from Q-75: the supplier's black-block face size and joint
-thickness, needed before block units / mortar can leave PROVISIONAL (nothing for the team to try).
-

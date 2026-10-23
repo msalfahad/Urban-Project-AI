@@ -1,3 +1,65 @@
+## LEAD REPORT 2026-10-23 16:20 UTC
+
+Repositories: attached Urban-Project-AI checkout (main ccbe7876); `.work` prepared AUTOMATICALLY ("setup by auto", 16:13).
+Working branch head 0a622a86 -> 48e6f08a (checker merges T-212 r2 b5716930, T-215 part 1 8a9b4b48, T-174 984ebbe1, T-176
+41847bff, T-203 r2 40de7c7f, T-220 579e613d, T-225 48e6f08a; no owner commit on the engine branch). Drive readable: nothing
+created in the Alsenan folder or the private-data root since 14:00, no new image, so no photo-review task.
+OWNER_SESSION_CHANGES: two entries since my 14:20 run, both applied, nothing undone or duplicated: 14:20 Q-75 (black blocks
+12.5 / m2 provisional; T-176 merged on it, PROVISIONAL) and 15:45 blockwork resolution programme (T-225 merged; lane A now
+follows your order T-226, T-227, T-222, T-017, then T-228; T-223 / T-219 behind it).
+
+PROGRESS (Alsenan; released unchanged: concrete 92.77 vs freelancer 111.81 m3, -17.03 %, run A; SCOREBOARD v2 checker 15:52:
+verified share 0 / 8 whole concrete reference lines in every state; V3.0.7 compares 1 line, WAPE 1.84 %)
+- BLOCKWORK (m2), MERGED, step 1 of 4: three sources classified (freelancer workbook; older automated run = released run A,
+  which gives wall LENGTH only, every block m2 BLOCKED, so no automated m2 exists; MASONRY_AREA_V1 r2); owner cost record not
+  comparable. Gaps traced to the wall: BLACK 0.15 3.464 m2 = 1F-W14 + W15 16.223 - 12.760 deductions on six walls whose gross
+  is HELD; BLACK 0.20 12.001 = 1F-W07 11.321 + 2F-W00 6.840 - 1.980 - 2.200 - 1.980. Register v1 74 walls = T-108 r2 to
+  0.001 (checker re-added 0.000). Before-coverage net: SOURCE-SUPPORTED 252.817, PROJECT-SPECIFIC 84.595, VERIFIED 0 m2;
+  44 walls HELD (377.943 m2 gross, never 0: annex 9, beam depth 10, held opening 12, no member 6, lift tie beam 4, no band 3).
+  Freelancer like for like on length: 1F internal +1.420 m UNRESOLVED, 2F internal 0.000 m. No 100 mm wall on the drawings.
+- BLOCK UNITS (procurement), MERGED: net 290.052 m2 -> 3,625.65 installed units at 12.5 / m2 (replaces 563 m2 gross x 12.5 =
+  7,040); laying mortar 3.6059 m3 from the joint geometry, checker re-derived course by course; PROVISIONAL (supplier face /
+  joint not on record); waste, cement, sand HELD. Course-grid cut evidence +4.4 % .. +10.8 % (up to +29 % on 1.3 m walls).
+- GF BLOCK ENDS, MERGED: +0.2855 m of 0.15 black wall, gross +1.214 .. +1.241 m2 on 337.412 (range = CB2 width only).
+- STRAPS (m3), MERGED: Q-74 axis lengths SB2 2.2927 / SB3 3.2580 m (owner 2.29 / 3.26 confirmed); strap concrete 3.3905
+  DRAWING-CONFIRMED vs freelancer 3.3925 (-0.06 %), released 3.781 (+11.5 % high, projection basis); SB3 0.40 deep into a 0.30
+  F3: 0.0295 .. 0.1181 m3 HELD; SB3 bars 58.32 kg; SB2 bars HELD (D-38).
+- COLUMNS (m3), MERGED: checker own re-measure 27 -> 29 / 59, all 0.0 %. PC-1F-A 0.588 m3 VERIFIED; PC-1F-B 0.420 HELD
+  (D-26 split); PC-2F HELD (section CONFLICT; its joint under B7 billed twice by T-119: 0.059). 5 released upper lines 2.268
+  m3 NOT_DRAWN (consultant D-65). Route G cuts B27 / B26 at the planted column: short 0.119 / 0.085 m3 (worker, not yet
+  re-measured).
+- COVERAGE REGISTRY 1.2.0 on V3.0.7, MERGED: in-candidate states 13 / 3 / 34 / 49 (pool 7.202 m3, domes 5.081 m3 integrated).
+- GUARD: t202 red guard closed on the working branch (red ~14 h, no quantity effect).
+What improved: 7 verified merges, 0 rejections; strap line now drawing-derived within 0.06 % of the freelancer; both
+blockwork gaps reduced to named walls. What did not move: whole-line verified share 0 / 8; floor area, plaster, paint
+unscored; released numbers. Learned (proposed ERS s.7 rows): (1) an opening deduction carries its host wall's status, never
+deduct from a HELD gross (R-T225-1, T-225, normal + adverse tests in tests/t225_*); (2) a beam is cut only at a member that
+supports it, never at a planted column (T-220 finding -> T-229 builds the rule + tests); (3) an angled strap is measured on
+its axis, a projected length under-measures by the footing corner over-reach (T-174, Q-74).
+
+ENGINEERING QUESTIONS OPENED (ERS s.5, Lead): T-229 beam runs at planted columns / non-supporting members, every slab, joint
+owned once (fixes the PC-2F double joint; first in lane S, gate 1); T-230 strap / tie-beam ends into footings and necks,
+intersection once (SB3 in F3; R-CONC-OWN-1); T-231 candidate V3.0.8 = the checker-verified straps + PC-1F-A, the 5 NOT_DRAWN
+lines HELD in the candidate (priority 1, FIRST in lane I; T-199 formwork / railings moves behind it, same integration files).
+Promoted T-226 / T-227 (blockwork 2 / 3; each writes its own register delta, no shared file). Cross-trade (register +7
+rulings): planted column to CONC.COLUMN, beam continuous; strap formwork must take the axis lengths (T-199); block units are
+procurement, separate from installed m2. Integration readiness: T-231 next Gate B; T-199 after it.
+
+TEAM HEALTH: 14:20 - 16:20 (pilot): 7 / 7 slots STARTED + final SUCCESS (worker 1 14:24, 15:23; worker 2 14:40, 15:42;
+worker 3 15:00; checker 14:52, 15:52); every self-check PASS; 0 refusals; 0 overlap lines; Drive read OK. Ran code: all
+three workers and the checker. Throughput: 7 merges, 0 rejections (the 14:20 hand-in rule worked). Checker 15:52 left the L4
+full suite for T-203 at 20 % (L3 passed, failures so far identical to the working branch): acceptable for an additive
+registry entry, noted. READY 0: backlog rule off. Worker 1's 16:19 slot is
+checked at my next run. Board: TODO S 4 (T-229, T-230, T-221, T-170), A 6 (T-226, T-227, T-222, T-017, T-223,
+T-219) + T-228 queued, I 4 (T-231, T-216, T-168, T-210); queued T-224, T-199 -> T-211 -> T-146. Queue check: 46 actionable
+rows, 0 flagged, 0 stall checks. Self-check PASS (codemap stale none, t061, freeze 0).
+
+OWNER PACKAGE: none today. No new discrepancy meets ERS s.2.7: SB3 / F3 and PC-2F are drawing questions investigated first
+(T-230, T-229); D-65 (5 upper column lines) is a consultant item already on record.
+
+NEEDS FIXING (only the owner): nothing new. Still pending from Q-75: the supplier's black-block face size and joint
+thickness, needed before block units / mortar can leave PROVISIONAL (nothing for the team to try).
+
 ## LEAD REPORT 2026-10-23 14:20 UTC
 
 Repositories: attached Urban-Project-AI checkout (main ccbe7876); `.work` prepared AUTOMATICALLY ("setup by auto", 14:18).

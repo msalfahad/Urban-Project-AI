@@ -2,56 +2,56 @@
 {
 "agent": "0 MAIN – daily update to you",
 "role": "Your single contact: one daily update with results, problems, ideas and decisions; pilot auditor",
-"cadence": "daily 07:31 Kuwait (04:31 UTC) + pilot check-ins 12:15, 18:15, 00:15, 06:20 UTC",
-"last_run": "2026-10-23T19:05:00Z",
+"cadence": "daily 07:31 Kuwait (04:31 UTC) + pilot check-ins 00:15, 06:20 UTC",
+"last_run": "2026-10-23T21:29:00Z",
 "result": "ok",
-"working_on": "Owner session 19:00: export (end-to-end BOQ), trade completeness and change-log tasks approved; adversarial probe (9 of 20 faults undetected today); Checker overlap exception 19:45",
-"as_of": "2026-10-23T20:25:00Z"
+"working_on": "Lock-safety fix deployed after the 21:11 checker run (all lock tests passed); next: pilot check-in 00:15 UTC and the pilot final report 06:20 UTC",
+"as_of": "2026-10-23T22:20:00Z"
 },
 {
 "agent": "1 LEAD – plans & assigns work",
 "role": "Plans the work, keeps the board, milestones and element register, writes your report",
 "cadence": "pilot: every 2 h at :09 (until 2026-10-24 06:15)",
-"last_run": "2026-10-23T20:10:00Z",
+"last_run": "2026-10-23T22:11:00Z",
 "result": "running",
-"working_on": "Checker queue cleared to 0; arched-window fix and wall-face consistency tasks added; plaster / paint into the candidate next; floor-area line is the checker's next whole line",
-"as_of": "2026-10-23T20:25:00Z"
+"working_on": "Checker queue: plaster / paint package and the arched-opening fix first, whole slab line next; new beam and ground-beam whole-line tasks; floor-line fixes (dressing, sills) planned",
+"as_of": "2026-10-23T22:20:00Z"
 },
 {
 "agent": "2 WORKER 1 – Structural",
 "role": "Structural lane: concrete, rebar by bar population, formwork",
 "cadence": "pilot: hourly at :19",
-"last_run": "2026-10-23T18:21:00Z",
+"last_run": "2026-10-23T21:20:00Z",
 "result": "ok",
-"working_on": "Footings and blinding merged (64.304 m3 and 15.179 m3, checker 0.0 %, both partially verified); next: roof / wet-room structural tops, then the whole slab line",
-"as_of": "2026-10-23T20:25:00Z"
+"working_on": "Whole slab line handed in (60.280 m3 from the drawings, closable); next: trade completeness check, then the beam and ground-beam lines",
+"as_of": "2026-10-23T22:20:00Z"
 },
 {
 "agent": "3 WORKER 2 – Architectural & finishes",
 "role": "Architecture and finishes lane: floors, walls, plaster, paint, tiles, ceilings, openings, waterproofing",
 "cadence": "pilot: hourly at :39",
-"last_run": "2026-10-23T19:41:00Z",
+"last_run": "2026-10-23T21:41:00Z",
 "result": "ok",
-"working_on": "Independent wall census done (hand-in at 20:39); blockwork step 3 sent back for one arched window: rework first, then the arched-opening fix",
-"as_of": "2026-10-23T20:25:00Z"
+"working_on": "Arched-opening fix handed in (68 openings re-read); next: drawing handles for the wall census, then the dressing / unlabelled spaces in the floor line",
+"as_of": "2026-10-23T22:20:00Z"
 },
 {
 "agent": "4 WORKER 3 – Integration into V3.0",
 "role": "Integration lane: wires checker-verified pieces into the one opt-in candidate",
 "cadence": "every 2 h at :59 (even hours)",
-"last_run": "2026-10-23T19:00:00Z",
+"last_run": "2026-10-23T21:00:00Z",
 "result": "ok",
-"working_on": "Floor-area line merged (now scored on the released run); next 20:59: plaster and paint into the candidate",
-"as_of": "2026-10-23T20:25:00Z"
+"working_on": "Plaster and paint package handed in for the checker; next 22:59: the one-command BOQ export (XLSX / CSV)",
+"as_of": "2026-10-23T22:20:00Z"
 },
 {
 "agent": "5 CHECKER – verifies & merges",
 "role": "Checks finished tasks by re-measuring, merges or rejects, keeps the scoreboard",
 "cadence": "pilot: hourly at :49",
-"last_run": "2026-10-23T19:51:00Z",
-"result": "ok",
-"working_on": "19:51 run merged 3 (footings + blinding, floor-area line, block bounds part 2), sent 1 back (arched window); next 20:49: open ground-floor wall ruling, lift / annex search, floor-area whole line",
-"as_of": "2026-10-23T20:25:00Z"
+"last_run": "2026-10-23T21:50:00Z",
+"result": "running",
+"working_on": "Floor area re-measured room by room (20 of 47 pieces, all 0.0 %; two line findings); next: plaster / paint package with the arched-opening fix, then the whole slab line",
+"as_of": "2026-10-23T22:20:00Z"
 },
 {
 "agent": "6 SCOUT – research & feedback to Lead",
@@ -59,16 +59,16 @@
 "cadence": "Sun + Wed 02:50 Kuwait (23:50 UTC)",
 "last_run": "2026-10-23T17:45:00Z",
 "result": "ok",
-"working_on": "Owner one-off run answered the 3 open requests (footing schedules, laps, '/m' notation); next scheduled run 2026-10-24 23:50 UTC",
-"as_of": "2026-10-23T20:25:00Z"
+"working_on": "No open research request; next scheduled run 2026-10-24 23:50 UTC",
+"as_of": "2026-10-23T22:20:00Z"
 },
 {
 "agent": "7 DASHBOARD – refreshes your page",
 "role": "Rewrites the dashboard data from the board",
 "cadence": "every 4 h at :54",
-"last_run": "2026-10-23T16:54:57Z",
+"last_run": "2026-10-23T20:54:25Z",
 "result": "ok",
-"working_on": "Next refresh 20:54 UTC",
-"as_of": "2026-10-23T20:25:00Z"
+"working_on": "Next refresh 00:54 UTC",
+"as_of": "2026-10-23T22:20:00Z"
 }
 ]

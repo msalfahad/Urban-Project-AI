@@ -1,16 +1,36 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
 Plain words, no task numbers. Measured numbers come from SCOREBOARD.md; anything not measured says so.
-Last update: 2026-10-23 20:10 UTC (Lead). Previous version: 2026-10-23 18:20 UTC. The released numbers did not change
+Last update: 2026-10-23 22:10 UTC (Lead). Previous version: 2026-10-23 20:10 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released default V2.9 + route G untouched). Your measure (17:50):
 whole BOQ lines independently verified, and trades that can be scored. Today: still 0 whole lines verified in any
-trade; two concrete lines (footings, blinding) are now PARTIALLY VERIFIED with every open piece named. Scored trades:
-concrete and now FLOOR AREA (released run 385.63 m2 vs freelancer 409.58 m2, -5.85 % raw; like for like +0.04 m2, a
-development figure: the -23.99 m2 is scope the freelancer counts and the engine does not, item by item); plaster, paint,
-doors, windows, blockwork not yet scored. Pilot, hours 12-14: every run closed; two slots were skipped by design because
-the previous run of the same agent was still working (checker 18:50, structural worker 19:19). The checker merged 4 and
-sent 1 back; nothing waits for it now.
-Since 18:20 (newest first):
+trade; footings and blinding PARTIALLY VERIFIED; floor area now 20 of 47 pieces re-measured by the checker (all 0.0 %).
+Scored trades: concrete and floor area (released run 385.63 vs 409.58 m2, -5.85 % raw); plaster, paint, doors, windows,
+blockwork not yet scored (plaster and paint are waiting for the checker now). Pilot, hours 14-16: every run that ended
+wrote its final line; the checker run that started 21:50 is still working. 4 results wait for the checker (target 3).
+Since 20:10 (newest first):
+- Whole slab line measured panel by panel for the first time (62 panels, 375.05 m2): 60.280 m3 from the drawings, and
+  the line can close from the drawings alone (waiting for the checker). The released run has 61.551 m3, +1.271 m3
+  (+2.1 %) too much, for two named reasons: the roof-tank slab thickness (0.18) was applied to five neighbouring panels
+  that carry no thickness tag (+0.625 m3; the general note gives them their thickness), and 13 pieces that are not slab
+  were counted as slab (+0.646 m3). The freelancer's 59.817 m3 is 0.463 m3 (0.8 %) below, explained floor by floor
+  except 0.059 m3 in his first-floor lump figure, which has no breakdown. Not measured yet: the matching beam line.
+- Floor area, checker's own room-by-room re-measure: 20 of 47 pieces agree to 0.0 %. Two findings keep the line from
+  closing as released: a 2.970 m2 dressing room between a first-floor bedroom and its bath is in no floor line (the
+  freelancer is right to include it), and 0.550 m2 of lift-landing / exterior sills are counted as porcelain floor
+  although they are thresholds. Net +2.42 m2 (+0.6 %). The curved first-floor room is measured correctly by the engine
+  (the curve, not the straight wall line, which is where the freelancer's +1.68 m2 comes from).
+- Arched openings re-read on the drawing (68 openings): the two first-floor arched windows are 4.650 m2 each as window
+  area by your rule (the freelancer is right) and 4.363 m2 as the hole in the wall for plaster and paint; one second-
+  floor arched window is 1.875 m2 of hole, not 2.04; windows on the same 7 openings now 45.10 vs his 45.48 m2 (-0.8 %,
+  was +3.4 %). The curved window over the pool stays held (9.87 .. 11.52 m2) until the checker confirms what the 0.45
+  above it is (the arch or a decorative band); if it is a band, you will get one short question, because your earlier
+  answer quoted a height that our own question had supplied.
+- Plaster and paint handed in for the candidate room by room (waiting for the checker): paint 166.88 m2 released on
+  checked rooms, 529.47 .. 595.05 m2 held as ranges with named causes, four pieces held without a figure.
+- Block walls step 3 merged (the arched window now deducted by its true outline: wall net 12.863 m2); the roof / terrace
+  falls are measured from the drawn outlets (0.19 .. 0.20 m rise on the +5.50 terrace), wet-room and sunken tops held.
+Earlier, since 18:20 (newest first):
 - Footings and blinding as whole lines (checker re-measured every footing outline itself): 25 footings 64.304 m3 =
   released = both candidates (0.0 %). The freelancer's 65.634 m3 is explained to the cubic metre: +1.960 one footing he
   prices at its schedule size that the drawing draws differently (held: a designer item, 2.176 .. 2.275 m3), -0.672 one
@@ -34,9 +54,10 @@ Since 18:20 (newest first):
   windows go into the candidate.
 - Candidate step 8 merged (checker Gate B): verified straps 3.39 m3 (freelancer 3.39, -0.06 %); columns 34.45 ->
   33.61 m3 (two planted columns held, five undrawn upper lines shown held).
-Next: plaster and paint go into the candidate (worker 3, 20:59): two more trades become scoreable; the checker re-measures
-the floor-area line room by room as the next whole line that can close on the released run, and rules on the last open
-ground-floor wall; the structural worker takes the roof / wet-room structural tops and then the whole slab line.
+Next: the checker takes plaster / paint in the candidate together with the arched-opening fix (22:49), then the whole
+slab line (23:49 at the latest); the structural worker starts the trade-completeness check and then the beam and
+ground-beam lines as whole lines; the architecture worker types the dressing and the unlabelled ground-floor spaces so
+the floor line can close; the integration worker starts the one-command BOQ export (XLSX / CSV).
 
 Earlier (16:20 -> 18:20):
 - Block walls (your programme, step 2 of 4, checker-verified): the first block wall is now INDEPENDENTLY VERIFIED: a

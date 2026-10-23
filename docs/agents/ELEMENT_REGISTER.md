@@ -46,6 +46,19 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+### Lead 2026-10-23 22:10 (from T-227 r2, T-221 MERGED; T-211, T-234, T-238 READY; Checker T-180 floor batches 21:15 / 22:05; new T-240, T-241, T-242)
+
+| Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |
+|---|---|---|---|---|---|
+| 1F dressing 1F-RFFE7AF (1.650 x 1.800) | floor finish, skirting, ceiling, paint | FLOOR AREA (FLOOR.INTERNAL, dry by the absence of fixtures); never ARCH.SPACE only | area DRAWING-CONFIRMED + Checker re-measured 2.970 m2; material HELD (not printed) | Checker 22:05 | T-223 (typing rule), T-240 (wiring) |
+| Sills 2F OP-001 (exterior, 0.15), 2F OP-002 and 1F OP-007 (lift landings, 0.20) | floor finish, thresholds, doors | ARCH.THRESHOLD (UP-DOOR-CLS-005 / UP-ELEV-SCHED-001), HELD class; NOT the porcelain floor line | geometry Checker-verified, class fails in released A (0.550 m2 carried as floor) | Checker 21:15 / 22:05 | T-240 |
+| Slab panels, all storeys (62 between beam faces) | concrete, formwork, rebar, ceilings | STRUCTURE CONC.SLAB, convention C1 (panel between beam faces, beam at full D); thickness tag, else general note 18, never a neighbour's tag | 60.2804 m3 DRAWING-CONFIRMED, CLOSABLE (worker) | T-234 READY 352925c3 | Checker T-234; D-41 rules fill / forms only (to confirm) |
+| 13 non-slab faces in the slab line (T-139 / T-145 list + GF-062 / GF-106) | concrete | NOT slab: each to the line that owns it (beam / stair / ring) or HELD | +0.6462 m3 too much in released A and V3.0.8 | T-234 READY | T-146 (candidate) after T-234 MERGED; released untouched |
+| Beam band CB5 span 2 (0.296 m3) | concrete | STRUCTURE CONC.BEAM (slab convention C1 leaves it to the beam) | in no line today | T-234 READY | T-241 |
+| Arched opening W26 (2F) | windows, blockwork, plaster, paint, reveals | WINDOW line by Q-32 A (enclosing rectangle on the opening crown) 2.040 kept; masonry / plaster / paint deduct the true outline 1.875 m2 | worker own read; Checker to re-measure | T-238 READY | Checker T-238 |
+| Curved arched window W17 (1F, over the pool) | windows, blockwork, plaster, paint | WINDOW line: width by the owner's Q-39 C (outer arc 3.29), height on the OPENING crown (Q-32 A) | HELD 9.870 .. 11.515 m2 (305 = opening arch, 45 = archivolt? to be ruled by the Checker) | T-238 READY | Checker reading first; owner item only after it |
+| GF unlabelled spaces 3.600 / 1.560 m2 | floor finish | to be typed by the T-223 rule before any line takes them | UNKNOWN class | Checker 22:05 | T-223 |
+
 ### Lead 2026-10-23 20:10 (from T-231 MERGED (Gate B, V3.0.8); T-222, T-233, T-216 READY; T-017 work complete; new T-237)
 
 | Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |
