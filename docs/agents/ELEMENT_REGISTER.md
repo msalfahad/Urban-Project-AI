@@ -46,6 +46,16 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+### Lead 2026-10-23 04:20 (from T-179 r2, T-190, T-192, T-198 MERGED; T-191, T-196 REJECTED; T-187, T-197 READY)
+
+| Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |
+|---|---|---|---|---|---|
+| Candidate line STAIRS:1F:SITE 4.451 m3 (T-196 SITE-b845 'winder approximation'; T-187: 18 lines from one point to r 2.211 m over 360 deg = a DOME outline on the 1F roof, not a stair) | concrete (stairs), concrete (domes), formwork | DOMES (the dome element of T-185 at that centre); the stair trade takes NOTHING from it; the line is HELD MISREAD in V3.0.6 and is RETIRED (not re-labelled) when the verified dome shells replace the dome conventions | HELD MISREAD (T-187 READY, Gate B to confirm) | T-187 handoff; T-185 dome detail ST p.7 | T-193 acceptance: name which dome (DOME-A / DOME-B / tower) the centre is, show the 4.451 is not ALSO counted inside the 7.372 dome convention lines or the 5.081 verified shells (one element, one line) |
+| Column elements of register-v0 on V3.0.5 (about 3 COL elements per physical column: GF C2 12 elements vs 4 drawn; C4 6 vs 2; C3 18 vs 6) | concrete, formwork, rebar, scope crosswalk | COLUMNS: ONE element per physical column per storey, with its engine pieces as components (as POOL-01 base / walls); never merged across storeys | CONFLICT in the register tool (checker T-196 verdict 02:08, own count from ST7757 dxf.dxf, C2 marks x 170 .. 180) | T-196 REJECTED | T-196 r2 finds the cause and collapses; until then no register count of columns (834 elements, HAS_LINE 820) is quoted anywhere |
+| ST-01 1F -> 2F flights MS2-L / MS2-U and the landing MS2-LD (D-T184-1: the candidate folded them away, -2.598 m3 in rev1) | concrete (stairs), beams B20 / B23, formwork | STAIRS for the flight solid outside the beam bands; B20 / B23 own the band (R-CONC-OWN-1 / -1a, T-189 / T-192 MERGED) | MS2-L 1.0334 VERIFIED; MS2-U 1.0014 DRAWING-CONFIRMED; MS2-LD HELD 0.4696 .. 0.4800 | T-192 MERGED 86fd5f42; T-187 READY | Gate B on T-187; stair formwork 43.777 m2 (T-192) uses the same boundaries before T-199 |
+| Openings P-GF-01 / P-1F-01 / P-GF-05 and W01 / W03 datum (census r3) | openings, block deductions, lintels, reveals, plaster | OPENINGS list (ruling 00:20 stands); the census r3 list is now the one list every deducting trade reads | MERGED 57bb0411 (checker W01 1.00 / 3.00, W03 0.00 / 4.30 above FFL, own DXF) | T-198 | heads of the three openings and of the 21 headless windows HELD -> T-201 |
+| Pool base mats (R1 / R2, '/m' mesh) | rebar | REBAR (pool); count A (density) .. B (max spacing + 1) as on every '/m' mesh except where an element's own evidence fixes the meaning (footings, T-171) | HELD (D-57) | checker T-191 verdict 03:58 | T-191 r2 |
+
 ### Lead 2026-10-23 00:20 (from T-181, T-194, T-163 r3, T-195 MERGED; T-179 r1 REJECTED, r2 READY)
 
 | Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |
