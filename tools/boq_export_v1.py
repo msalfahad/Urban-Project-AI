@@ -17,6 +17,9 @@ whose measured_net is 0 while the line shows no input that produces the 0: no gr
 (probe 5b: HELD is never shown as 0); a line that fails boq_line.validate; two lines with one line id; a sealed
 benchmark input (engine.reference_mapping.refuse_if_sealed).
 
+A quantity line whose own bounded_range is open (low < high: a convention range) keeps its net in MEASURED UNVERIFIED
+and its range in open_range_low / open_range_high, counted per group: the range is never dropped.
+
 Quantity state, one column each, never merged (owner 19:45 (0c)): VERIFIED, VERIFIED ZERO, VERIFIED COMPONENT (owner
 20:59), MEASURED UNVERIFIED, HELD (blank quantity + reason + range when bounded), UNMEASURED (blank: an inventory
 element with no line), EXCLUDED (blank + reason). An unknown is an EMPTY cell in CSV and XLSX, never 0.
@@ -82,12 +85,13 @@ OWNER_APPROVED_WORDS = ("ASSUMED - OWNER-APPROVED", "ASSUMED — OWNER-APPROVED"
 
 COLUMNS = ("line_id", "trade", "item_code", "item_en", "item_ar", "floor", "element_id", "unit", "gross",
            "deductions_n", "deductions_total", "net", "quantity_state", "qty_verified", "qty_verified_zero",
-           "qty_verified_component", "qty_measured_unverified", "held_reason", "held_low", "held_high",
+           "qty_verified_component", "qty_measured_unverified", "open_range_low", "open_range_high", "held_reason", "held_low", "held_high",
            "unmeasured_reason", "excluded_reason", "evidence_state", "line_stated_evidence_status",
            "owner_status_class", "verdict_id", "verdict_commit", "checker_qty", "verdict_status", "source_sheets",
            "project_id", "revision_set_sha256", "candidate_version")
 SUMMARY_COLUMNS = ("trade", "item_code", "unit", "line_status", "rows", "verified_rows", "verified_subtotal",
-                   "measured_unverified_sum", "measured_unverified_rows", "held_rows", "held_low", "held_high",
+                   "measured_unverified_sum", "measured_unverified_rows", "open_range_rows", "open_range_components",
+                   "held_rows", "held_low", "held_high",
                    "unmeasured_rows", "excluded_rows", "rows_without_quantity", "held_components",
                    "unmeasured_components", "trade_status", "trade_verified_whole_lines")
 
@@ -307,7 +311,7 @@ def _base_row(ln, pid, rev, cver):
             "element_id": ln["location"].get("element_id"), "unit": ln["unit"], "gross": _num(ln.get("gross")),
             "deductions_n": n, "deductions_total": _num(dtot), "net": None, "quantity_state": None,
             "qty_verified": None, "qty_verified_zero": None, "qty_verified_component": None,
-            "qty_measured_unverified": None, "held_reason": "", "held_low": None, "held_high": None,
+            "qty_measured_unverified": None, "open_range_low": None, "open_range_high": None, "held_reason": "", "held_low": None, "held_high": None,
             "unmeasured_reason": "", "excluded_reason": "", "evidence_state": ln["evidence_state"],
             "line_stated_evidence_status": _stated_status(ln), "owner_status_class": None, "verdict_id": "",
             "verdict_commit": "", "checker_qty": None, "verdict_status": "NONE",
@@ -320,6 +324,9 @@ def _state_row(row, ln):
     if ev in BL.QUANTITY_STATES:
         row["quantity_state"] = MEASURED_UNVERIFIED
         row["net"] = row["qty_measured_unverified"] = _num(ln["measured_net"])
+        br = ln.get("bounded_range") or {}
+        if br.get("low") is not None and br.get("high") is not None and float(br["high"]) - float(br["low"]) > 1e-9:
+            row["open_range_low"], row["open_range_high"] = _num(br["low"]), _num(br["high"])   # never dropped
         row["owner_status_class"] = CLS_PROJECT if _project_specific(ln) else CLS_SOURCE
     elif ev in ("EXCLUDED_WITH_REASON", "NOT_APPLICABLE_WITH_EVIDENCE"):
         row["quantity_state"] = EXCLUDED
@@ -492,7 +499,12 @@ def _summary(rows, groups, whole_ok, completeness, ident, inv_elements, glines):
             "trade": g[0], "item_code": g[1], "unit": g[2], "line_status": status, "rows": len(rs),
             "verified_rows": len(ver_rows), "verified_subtotal": _num(vsub) if ver_rows else None,
             "measured_unverified_sum": _num(sum(r["qty_measured_unverified"] for r in mu)) if mu else None,
-            "measured_unverified_rows": len(mu), "held_rows": len(held),
+            "measured_unverified_rows": len(mu),
+            "open_range_rows": sum(1 for r in rs if r.get("open_range_low") is not None),
+            "open_range_components": "; ".join(
+                f"{r['element_id']} [{_fx(r['open_range_low'])} .. {_fx(r['open_range_high'])}, net {_fx(r['net'])}]"
+                for r in rs if r.get("open_range_low") is not None),
+            "held_rows": len(held),
             "held_low": _num(sum(r["held_low"] for r in bounded)) if bounded else None,
             "held_high": _num(sum(r["held_high"] for r in bounded)) if bounded else None,
             "unmeasured_rows": len(unm), "excluded_rows": len(exc),
@@ -522,7 +534,7 @@ def _cell_text(c, v):
     if v is None:
         return ""
     if isinstance(v, float) or (isinstance(v, int) and c not in ("deductions_n",) and not isinstance(v, bool)):
-        return _fx(v) if c not in ("rows", "verified_rows", "measured_unverified_rows", "held_rows",
+        return _fx(v) if c not in ("rows", "verified_rows", "measured_unverified_rows", "held_rows", "open_range_rows",
                                    "unmeasured_rows", "excluded_rows", "rows_without_quantity",
                                    "deductions_n") else str(v)
     return str(v)

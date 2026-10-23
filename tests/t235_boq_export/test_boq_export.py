@@ -81,6 +81,20 @@ def test_synthetic_villa_rows_states_and_classes(tmp_path):
     assert "none (T-236 not merged)" in m["completeness_input"]
 
 
+def test_open_convention_range_on_a_quantity_line_is_kept(tmp_path):
+    lines = villa() + [ln("STR.CONC.FOOTING", "F10", ev="PROVISIONAL", q=1.96, inputs={"L": 1.4, "B": 1.4, "H": 1.0},
+                          bounded_range={"low": 0.216, "high": 1.96, "basis": "two tags"}),
+                       ln("STR.CONC.FOOTING", "F11", ev="SOURCE_DERIVED", q=0.5, inputs={"L": 1},
+                          bounded_range={"low": 0.5, "high": 0.5, "basis": "degenerate"})]
+    m, rows = run(tmp_path, lines)
+    f10, f11 = by(rows, "F10"), by(rows, "F11")
+    assert (f10["qty_measured_unverified"], f10["open_range_low"], f10["open_range_high"]) == \
+        ("1.960000", "0.216000", "1.960000")
+    assert f11["open_range_low"] == "" and f11["qty_measured_unverified"] == "0.500000"
+    s = {x["item_code"]: x for x in X.read_csv(tmp_path / "o" / "BOQ_TRADE_SUMMARY.csv")}["STR.CONC.FOOTING"]
+    assert s["open_range_rows"] == "1" and s["open_range_components"] == "F10 [0.216000 .. 1.960000, net 1.960000]"
+
+
 def test_canonical_order_and_trade_summary(tmp_path):
     m, rows = run(tmp_path, villa())
     keys = [(r["trade"], r["item_code"], r["floor"], r["element_id"], r["line_id"]) for r in rows]
