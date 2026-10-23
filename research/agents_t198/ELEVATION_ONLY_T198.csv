@@ -1,0 +1,3 @@
+ID,SHEET,FLOOR,WHAT,ON_PLAN,STATUS,IF_THROUGH_WALL,ASK
+E-SE-01..03,SE elevation (P7757.dxf SE frame; Pages_05-06 p.6),1F,"three closed 100 x 100 mm squares (layer 1) 0.80 m apart, 0.29 m above the W14 head",no,UNKNOWN,3 x 0.01 = 0.03 m2 of deduction; possibly a vent / sleeve item,"designer: vent, AC sleeve or ornament?"
+E-FE-01..06,fence elevation (Pages_11-12 p.12),GF,six small squares above W11 / W12,no,UNKNOWN,6 x 0.01 = 0.06 m2 at most; possibly a vent / sleeve item,designer (same question)

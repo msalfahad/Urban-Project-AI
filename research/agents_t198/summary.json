@@ -1,0 +1,64 @@
+{
+ "added": [
+  "P-GF-01",
+  "P-1F-01",
+  "P-GF-05"
+ ],
+ "block_m2_established_delta": 0.0,
+ "census_rows_r2": 65,
+ "census_rows_r3": 68,
+ "elevation_only_unknown": [
+  "E-SE-01..03",
+  "E-FE-01..06"
+ ],
+ "head_soffits_m2_drawing_confirmed": {
+  "P-1F-01": 0.195,
+  "P-GF-01": 0.18,
+  "P-GF-05": 0.24
+ },
+ "method": "census r3 (new file; OPENINGS_T150.csv untouched) + downstream deltas",
+ "new_scope_gaps": {
+  "P-1F-01 masonry above lintel m2 bounds": [
+   0.0,
+   4.992
+  ],
+  "P-1F-01 plaster faces above head m2 upper bounds owner / drawing method": [
+   8.71,
+   10.504
+  ],
+  "P-GF-05 face above head": "UNKNOWN"
+ },
+ "redatumed": [
+  "W01",
+  "W03"
+ ],
+ "released_quantity_moved": false,
+ "t194_existence": {
+  "P-1F-01": "DIFFERS",
+  "P-GF-01": "DIFFERS",
+  "P-GF-05": "DIFFERS"
+ },
+ "task": "T-198",
+ "thresholds_m_l": {
+  "P-GF-05_to_UNKNOWN": -1.2,
+  "after": 41.02,
+  "open_sides_flagged_for_T-175_owner": {
+   "P-GF-02": 1.4,
+   "P-GF-03": 1.0,
+   "P-GF-04": 11.22
+  },
+  "t175_established": 42.22
+ },
+ "windows_pcs": {
+  "freelancer": 29,
+  "held": [
+   "W02"
+  ],
+  "range": [
+   29,
+   30
+  ],
+  "settled": 28,
+  "status": "HELD"
+ }
+}
