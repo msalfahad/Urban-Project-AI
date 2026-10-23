@@ -37,7 +37,8 @@ ENGINE = {
         "blinding": 15.179437,                                    # PROVISIONAL: union under the released footings
         "blinding_bounded": ((4.949374, 9.422514), (0.48, 0.59), (0.377803, 0.771877)),
     },
-    "V3.0.8": {  # candidate ARCH_TAKEOFF_V3.0.8 (T-231 MERGED 3b042470; research/agents_t231/v308_run.py, own run)
+    "V3.0.8": {  # candidate ARCH_TAKEOFF_V3.0.8 (T-231 MERGED 3b042470; research/agents_t231/v308_run.py,
+                 # own run: V3_0_8_BOQ_LINES.csv 57fe219a REPRODUCED)
         "footings_measured": 64.304, "footing_F10_provisional": (0.216, 1.96),
         "straps_measured": 3.3905, "strap_held": ((0.0295, 0.1181), (0.0, 0.385)), "band": 7.2204,
         "blinding": 15.179437,

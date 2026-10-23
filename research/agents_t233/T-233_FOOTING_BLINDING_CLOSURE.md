@@ -13,7 +13,7 @@ by Drive folder and title; entities by DXF handle; sizes, areas and counts only.
 | freelancer RC workbook | (committed rows) | tests/alsenan/registers_b1/FREELANCER_RAW_ROWS.json, footings sheet rows 11-33, 'ورقة1' rows 15 / 17 |
 
 Runs: released baseline A `tools/release_baseline.py run research/agents_t165/baselines/V29_ROUTEG_NO_PROFILE.json`
-on head 17ed6f92: **REPRODUCED**, 1,455 lines, BOQ_LINES.csv b96185d4. Candidate ARCH_TAKEOFF_V3.0.7: `research/agents_t167/v304_run.py` then `research/agents_t193/v307_run.py` on the same copies: V3_0_7_BOQ_LINES.csv **197c5599 REPRODUCED** (= SCOREBOARD v2 16:58). Candidate ARCH_TAKEOFF_V3.0.8 (T-231, merged into the working branch 3b042470 during this run; merged into this task branch): `research/agents_t231/v308_run.py` own run on the same copies (figures in s.5 are the T-231 report rows, matched by the own run where it finished, see the handoff).
+on head 17ed6f92: **REPRODUCED**, 1,455 lines, BOQ_LINES.csv b96185d4. Candidate ARCH_TAKEOFF_V3.0.7: `research/agents_t167/v304_run.py` then `research/agents_t193/v307_run.py` on the same copies: V3_0_7_BOQ_LINES.csv **197c5599 REPRODUCED** (= SCOREBOARD v2 16:58). Candidate ARCH_TAKEOFF_V3.0.8 (T-231, merged into the working branch 3b042470 during this run; merged into this task branch): `research/agents_t231/v308_run.py` own run on the same copies: V3_0_8_BOQ_LINES.csv **57fe219a REPRODUCED** (= T-231); footing 64.304 + 1.96 PROVISIONAL, straps 3.3905 + HELD 0.0295 .. 0.5031, band 7.2204, blinding 15.179437 PROVISIONAL + BOUNDED 5.8072 .. 10.7844.
 Tools: `t233_extract.py` (DXF -> `ALSENAN_FOOTING_INPUT.json`, values only), `footing_line.py` (pure rules),
 `t233_alsenan_check.py` (ledger + summary); tests `tests/t233_footing_line` (20).
 
