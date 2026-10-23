@@ -1,0 +1,98 @@
+{
+ "SCHEMA": "URBAN_SCORER_SET_BINDINGS_V1",
+ "approved_rules": {
+  "Q-06 A": "OWNER_QUESTIONS_ANSWERED.md Q-06 (owner 2026-10-18): basin-only hand-wash spaces are wet areas: porcelain floor, full-height wall porcelain, waterproofing, marble threshold"
+ },
+ "binding_method": "REVIEW_SET_BINDING_V1",
+ "closure_strip_items": [
+  "FIN.FLOOR.PORCELAIN [m2]"
+ ],
+ "keys": [
+  "FLOOR.INTERNAL"
+ ],
+ "scope": "development villa only (project fact file); set ids are the pinned released run's (V29_ROUTEG_NO_PROFILE, BOQ_LINES.csv b96185d4); the V3.0.x candidates are scored beside that run's release report, so the same sets apply",
+ "sets": [
+  {
+   "boundary_confirmation": "T208_BOUNDARY_CONFIRMATIONS.json: ZONE_FROM_DRAWN_LINES",
+   "closure_strip": null,
+   "door_closures": 0,
+   "evidence": {
+    "fixture_symbol": "WASH2 (BASIN), WASH2 (BASIN), WASH (BASIN)",
+    "printed_size": "open side 0.7943 + 1.2557 = 2.050 = printed 205; arm 1.870 / sqrt 2 = 1.322 = printed 132; area 4.7307 m2 from the drawn wall faces (boundary confirmation T208_BOUNDARY_CONFIRMATIONS.json)"
+   },
+   "geometry_status": "DRAWING-CONFIRMED (worker reading; not re-measured by the checker)",
+   "kind": "REVIEW_CLASSIFICATION",
+   "quantities": {
+    "FIN.FLOOR.WET_TILE [m2]": 4.730695,
+    "FIN.WP.FLOOR [m2]": 4.730695,
+    "FIN.WP.WALL_UPTURN [m2]": 1.32864
+   },
+   "rule_id": "Q-06 A",
+   "scenario": "WET_SCOPE",
+   "set_id": "REVIEW_CLASSIFICATION:GF:GF-RDBD4F9",
+   "status": "ASSUMED_OWNER_APPROVED",
+   "subject": "GF-RDBD4F9",
+   "verdict": {
+    "commit": "54cb4c42",
+    "source": "BOARD.md T-208 MERGED 54cb4c42 (verifier 2026-10-23 11:08 UTC, Gate A): Q-06 names exactly these three spaces (9.348 m2), class ASSUMED - OWNER-APPROVED right"
+   }
+  },
+  {
+   "boundary_confirmation": null,
+   "closure_strip": {
+    "item": "FIN.FLOOR.PORCELAIN [m2]",
+    "m2": 0.15
+   },
+   "door_closures": 1,
+   "evidence": {
+    "fixture_symbol": "WASH2 (BASIN), WASH2 (BASIN), WASH (BASIN)",
+    "printed_size": "printed 1.50 x 2.10 less the drawn column notch 0.35 x 0.05 = 3.1325 m2 (checker: printed DIM 1500 x 2100 less the S-COL overlay 0.350 x 0.050, 0.0 %)"
+   },
+   "geometry_status": "VERIFIED (checker re-measure, T-208 verdict)",
+   "kind": "REVIEW_CLASSIFICATION",
+   "quantities": {
+    "FIN.FLOOR.WET_TILE [m2]": 3.1325,
+    "FIN.WP.FLOOR [m2]": 3.1325,
+    "FIN.WP.WALL_UPTURN [m2]": 1.08
+   },
+   "rule_id": "Q-06 A",
+   "scenario": "WET_SCOPE",
+   "set_id": "REVIEW_CLASSIFICATION:GF:GF-R8496F0",
+   "status": "ASSUMED_OWNER_APPROVED",
+   "subject": "GF-R8496F0",
+   "verdict": {
+    "commit": "54cb4c42",
+    "source": "BOARD.md T-208 MERGED 54cb4c42 (verifier 2026-10-23 11:08 UTC, Gate A): Q-06 names exactly these three spaces (9.348 m2), class ASSUMED - OWNER-APPROVED right"
+   }
+  },
+  {
+   "boundary_confirmation": null,
+   "closure_strip": {
+    "item": "FIN.FLOOR.PORCELAIN [m2]",
+    "m2": 0.18
+   },
+   "door_closures": 1,
+   "evidence": {
+    "fixture_symbol": "WASH2 (BASIN)",
+    "printed_size": "printed 1.10 x 1.35 = 1.485 m2 (checker: drawn faces 1.350 x 1.100, 0.0 %)"
+   },
+   "geometry_status": "VERIFIED (checker re-measure, T-208 verdict)",
+   "kind": "REVIEW_CLASSIFICATION",
+   "quantities": {
+    "FIN.FLOOR.WET_TILE [m2]": 1.485,
+    "FIN.WP.FLOOR [m2]": 1.485,
+    "FIN.WP.WALL_UPTURN [m2]": 0.640592
+   },
+   "rule_id": "Q-06 A",
+   "scenario": "WET_SCOPE",
+   "set_id": "REVIEW_CLASSIFICATION:GF:GF-RD36087",
+   "status": "ASSUMED_OWNER_APPROVED",
+   "subject": "GF-RD36087",
+   "verdict": {
+    "commit": "54cb4c42",
+    "source": "BOARD.md T-208 MERGED 54cb4c42 (verifier 2026-10-23 11:08 UTC, Gate A): Q-06 names exactly these three spaces (9.348 m2), class ASSUMED - OWNER-APPROVED right"
+   }
+  }
+ ],
+ "task": "T-216"
+}
