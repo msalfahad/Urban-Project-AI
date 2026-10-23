@@ -1,0 +1,464 @@
+{
+ "schema": "URBAN_T233_FOOTING_INPUT_V1",
+ "source": {
+  "file": "Drive 'Alsenan chalet project' / 'ST7757 dxf.dxf'",
+  "sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+  "frame": "FOUNDATION PLAN",
+  "projection_m": 0.1,
+  "projection_source": "ST7757.pdf p.13 typical isolated footing details: '10 | L x W | 10', '10cm Plain con.'",
+  "thickness_m": 0.1,
+  "underlay": "5 cm screed + 2 cm membrane (T-206 vector read): other trades, not concrete"
+ },
+ "schedule": {
+  "F": {
+   "L": 0.9,
+   "W": 0.8,
+   "H": 0.3,
+   "insert": "1C79"
+  },
+  "F2": {
+   "L": 1.9,
+   "W": 1.7,
+   "H": 0.35,
+   "insert": "1C95"
+  },
+  "F3": {
+   "L": 1.6,
+   "W": 1.4,
+   "H": 0.3,
+   "insert": "1CA0"
+  },
+  "F4": {
+   "L": 2.2,
+   "W": 2.0,
+   "H": 0.4,
+   "insert": "1CAB"
+  },
+  "F5": {
+   "L": 2.4,
+   "W": 2.1,
+   "H": 0.4,
+   "insert": "1CB6"
+  },
+  "F6": {
+   "L": 2.6,
+   "W": 2.2,
+   "H": 0.5,
+   "insert": "1CC1"
+  },
+  "F7": {
+   "L": 3.0,
+   "W": 2.5,
+   "H": 0.5,
+   "insert": "1CCC"
+  },
+  "F9": {
+   "L": 3.4,
+   "W": 2.7,
+   "H": 0.55,
+   "insert": "1CD7"
+  },
+  "F10": {
+   "L": 2.8,
+   "W": 1.4,
+   "H": 0.5,
+   "insert": "1CE2"
+  },
+  "F11": {
+   "L": 3.5,
+   "W": 1.5,
+   "H": 0.5,
+   "insert": "1CED"
+  },
+  "FN": {
+   "L": 1.0,
+   "W": 1.0,
+   "H": 0.3,
+   "insert": "1CF8"
+  },
+  "F12": {
+   "L": 4.4,
+   "W": 3.2,
+   "H": 0.7,
+   "insert": "2A5E"
+  },
+  "F13": {
+   "L": 4.3,
+   "W": 2.4,
+   "H": 0.5,
+   "insert": "2A98"
+  },
+  "F14": {
+   "L": 3.8,
+   "W": 3.3,
+   "H": 0.5,
+   "insert": "2AD5"
+  },
+  "F8": {
+   "L": 4.0,
+   "W": 3.6,
+   "H": 0.5,
+   "insert": "2AF6"
+  },
+  "F15": {
+   "L": 1.8,
+   "W": 1.0,
+   "H": 0.4,
+   "insert": "2B13"
+  },
+  "FF": {
+   "L": 4.6,
+   "W": 4.5,
+   "H": 0.55,
+   "insert": "2B1E"
+  }
+ },
+ "outlines": [
+  {
+   "id": "165C",
+   "source": "INSERT F 165C",
+   "tags": [
+    "F2"
+   ],
+   "a": 1.9,
+   "b": 1.7,
+   "area": 3.23,
+   "clipped_by": [],
+   "blind_m2": 3.99,
+   "blind_outside_m2": 0.0
+  },
+  {
+   "id": "1663",
+   "source": "INSERT F 1663",
+   "tags": [
+    "F2"
+   ],
+   "a": 1.9,
+   "b": 1.7,
+   "area": 3.23,
+   "clipped_by": [],
+   "blind_m2": 3.99,
+   "blind_outside_m2": 0.0
+  },
+  {
+   "id": "1664",
+   "source": "INSERT F 1664",
+   "tags": [
+    "F5"
+   ],
+   "a": 2.1,
+   "b": 2.4,
+   "area": 5.04,
+   "clipped_by": [],
+   "blind_m2": 5.98,
+   "blind_outside_m2": 0.0
+  },
+  {
+   "id": "1665",
+   "source": "INSERT F 1665",
+   "tags": [
+    "F4"
+   ],
+   "a": 2.0,
+   "b": 2.2,
+   "area": 4.4,
+   "clipped_by": [],
+   "blind_m2": 5.28,
+   "blind_outside_m2": 0.0
+  },
+  {
+   "id": "1666",
+   "source": "INSERT F 1666",
+   "tags": [
+    "F4"
+   ],
+   "a": 2.0,
+   "b": 2.2,
+   "area": 4.4,
+   "clipped_by": [],
+   "blind_m2": 5.28,
+   "blind_outside_m2": 0.0
+  },
+  {
+   "id": "1667",
+   "source": "INSERT F 1667",
+   "tags": [
+    "F"
+   ],
+   "a": 0.8,
+   "b": 0.9,
+   "area": 0.72,
+   "clipped_by": [],
+   "blind_m2": 1.1,
+   "blind_outside_m2": 0.0
+  },
+  {
+   "id": "1668",
+   "source": "INSERT F 1668",
+   "tags": [
+    "F"
+   ],
+   "a": 0.9,
+   "b": 0.8,
+   "area": 0.72,
+   "clipped_by": [],
+   "blind_m2": 1.1,
+   "blind_outside_m2": 0.11
+  },
+  {
+   "id": "1669",
+   "source": "INSERT F 1669",
+   "tags": [
+    "F"
+   ],
+   "a": 0.8,
+   "b": 0.9,
+   "area": 0.72,
+   "clipped_by": [],
+   "blind_m2": 1.1,
+   "blind_outside_m2": 0.2
+  },
+  {
+   "id": "166A",
+   "source": "INSERT F 166A",
+   "tags": [
+    "F"
+   ],
+   "a": 0.8,
+   "b": 0.9,
+   "area": 0.72,
+   "clipped_by": [],
+   "blind_m2": 1.1,
+   "blind_outside_m2": 0.11
+  },
+  {
+   "id": "166B",
+   "source": "INSERT F 166B",
+   "tags": [
+    "F3"
+   ],
+   "a": 1.4,
+   "b": 1.6,
+   "area": 2.24,
+   "clipped_by": [],
+   "blind_m2": 2.88,
+   "blind_outside_m2": 0.0
+  },
+  {
+   "id": "166C",
+   "source": "INSERT F 166C",
+   "tags": [
+    "F3"
+   ],
+   "a": 1.6,
+   "b": 1.4,
+   "area": 2.24,
+   "clipped_by": [],
+   "blind_m2": 2.88,
+   "blind_outside_m2": 0.0
+  },
+  {
+   "id": "166D",
+   "source": "INSERT F 166D",
+   "tags": [
+    "F5"
+   ],
+   "a": 2.1,
+   "b": 2.4,
+   "area": 5.04,
+   "clipped_by": [],
+   "blind_m2": 5.98,
+   "blind_outside_m2": 0.0
+  },
+  {
+   "id": "180C",
+   "source": "LWPOLYLINE 180C closed",
+   "tags": [
+    "FN"
+   ],
+   "a": 1.0,
+   "b": 1.0,
+   "area": 0.86,
+   "clipped_by": [
+    "180F"
+   ],
+   "blind_m2": 1.3,
+   "blind_outside_m2": 0.0
+  },
+  {
+   "id": "180F",
+   "source": "LWPOLYLINE 180F closed",
+   "tags": [
+    "F9"
+   ],
+   "a": 2.7,
+   "b": 3.4,
+   "area": 9.18,
+   "clipped_by": [],
+   "blind_m2": 10.44,
+   "blind_outside_m2": 0.0
+  },
+  {
+   "id": "1ABF",
+   "source": "LWPOLYLINE 1ABF closed",
+   "tags": [
+    "F12"
+   ],
+   "a": 3.2,
+   "b": 4.4,
+   "area": 14.08,
+   "clipped_by": [],
+   "blind_m2": 15.64,
+   "blind_outside_m2": 0.0
+  },
+  {
+   "id": "1ADB",
+   "source": "LWPOLYLINE 1ADB closed",
+   "tags": [
+    "F13"
+   ],
+   "a": 2.4,
+   "b": 4.3,
+   "area": 10.32,
+   "clipped_by": [],
+   "blind_m2": 11.7,
+   "blind_outside_m2": 0.0
+  },
+  {
+   "id": "1B07",
+   "source": "LWPOLYLINE 1B07 open",
+   "tags": [
+    "F11"
+   ],
+   "a": 1.5,
+   "b": 3.5,
+   "area": 5.25,
+   "clipped_by": [],
+   "blind_m2": 6.29,
+   "blind_outside_m2": 0.37
+  },
+  {
+   "id": "1B19",
+   "source": "LWPOLYLINE 1B19 open",
+   "tags": [
+    "F6"
+   ],
+   "a": 2.6,
+   "b": 2.2,
+   "area": 5.72,
+   "clipped_by": [],
+   "blind_m2": 6.72,
+   "blind_outside_m2": 0.0
+  },
+  {
+   "id": "1B1A",
+   "source": "LWPOLYLINE 1B1A closed",
+   "tags": [
+    "F14"
+   ],
+   "a": 3.3,
+   "b": 3.8,
+   "area": 12.54,
+   "clipped_by": [],
+   "blind_m2": 14.0,
+   "blind_outside_m2": 0.4
+  },
+  {
+   "id": "1B1B",
+   "source": "LWPOLYLINE 1B1B open",
+   "tags": [
+    "F",
+    "F10"
+   ],
+   "a": 3.25,
+   "b": 1.4,
+   "area": 4.55,
+   "clipped_by": [],
+   "blind_m2": 5.52,
+   "blind_outside_m2": 0.495
+  },
+  {
+   "id": "1B24",
+   "source": "LWPOLYLINE 1B24 closed",
+   "tags": [
+    "F8"
+   ],
+   "a": 3.6,
+   "b": 4.0,
+   "area": 14.4,
+   "clipped_by": [],
+   "blind_m2": 15.96,
+   "blind_outside_m2": 0.38
+  },
+  {
+   "id": "1B2A",
+   "source": "LWPOLYLINE 1B2A closed",
+   "tags": [
+    "F15"
+   ],
+   "a": 1.0,
+   "b": 1.8,
+   "area": 1.8,
+   "clipped_by": [],
+   "blind_m2": 2.4,
+   "blind_outside_m2": 0.2
+  },
+  {
+   "id": "1B2B",
+   "source": "LWPOLYLINE 1B2B closed",
+   "tags": [
+    "FF"
+   ],
+   "a": 4.5,
+   "b": 4.6,
+   "area": 20.7,
+   "clipped_by": [],
+   "blind_m2": 22.56,
+   "blind_outside_m2": 0.0
+  },
+  {
+   "id": "10F0",
+   "source": "4xLINE 10F0+10F1+10F2+10F3",
+   "tags": [
+    "FN"
+   ],
+   "a": 1.0,
+   "b": 1.0,
+   "area": 1.0,
+   "clipped_by": [],
+   "blind_m2": 1.44,
+   "blind_outside_m2": 0.0
+  },
+  {
+   "id": "10F8",
+   "source": "4xLINE 10F8+10F9+10FA+10FB",
+   "tags": [
+    "FN"
+   ],
+   "a": 1.0,
+   "b": 1.0,
+   "area": 1.0,
+   "clipped_by": [],
+   "blind_m2": 1.44,
+   "blind_outside_m2": 0.0
+  },
+  {
+   "id": "1100",
+   "source": "4xLINE 1100+1101+1102+1103",
+   "tags": [
+    "FN"
+   ],
+   "a": 1.0,
+   "b": 1.0,
+   "area": 1.0,
+   "clipped_by": [],
+   "blind_m2": 1.44,
+   "blind_outside_m2": 0.12
+  }
+ ],
+ "unbound_tags": [],
+ "blinding_union_measured_m2": 151.794375,
+ "blinding_sum_measured_m2": 151.99,
+ "blinding_union_all_m2": 157.314375,
+ "band_area_m2": null
+}
