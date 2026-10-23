@@ -17,7 +17,7 @@ conditional_items?, reference_unit?}. An item code in two keys, a key without it
 used twice is an error. Lines whose item code no key names stay UNMAPPED (listed, never false positives).
 
 CLI: python3 -I tools/alsenan_keymap.py --run RUN_DIR --reference BENCHMARK_NORMALISED.json --key-map KEY_MAP.json
-     --out OUT.json [--markdown OUT.md]
+     --out OUT.json [--markdown OUT.md] [--set-bindings SET_BINDINGS.json (T-216 opt-in, see below)]
 T-181 (opt-in, doors and windows in pcs AND m2, URBAN_ALSENAN_OPENINGS_KEY_MAP_V1):
      python3 -I tools/alsenan_keymap.py --openings-register OPENINGS.csv --openings-raw FREELANCER_RAW_ROWS.json
      --openings-key-map T181_OPENINGS_KEY_MAP.json --openings-out OUT.json [--openings-markdown OUT.md]
@@ -71,6 +71,7 @@ def line_status(ln):
 def engine_rows(lines, release_report, key_map_doc):
     """Scorer engine rows + an adapter report (excluded / unmapped counts per item code)."""
     by_item, by_key = load_key_map(key_map_doc)
+    sb = load_set_bindings(key_map_doc.get("set_bindings"))     # T-216 opt-in; None keeps every output unchanged
     rows, excluded, unmapped = [], {}, {}
     for ln in lines:
         code = ln["item_code"]
@@ -96,11 +97,18 @@ def engine_rows(lines, release_report, key_map_doc):
             hit = any(items & set(v) for v in (s.get("by_scenario") or {}).values())
             if hit:
                 unit = S.norm_unit(sorted(items)[0].rsplit("[", 1)[1].rstrip("]"))
-                rows.append({"id": f"COND:{s['set_id']}:{key}", "trade": k["trade"], "unit": unit, "qty": None,
-                             "status": "HELD", "key": key, "surface": f"COND:{s['set_id']}"})
+                row = {"id": f"COND:{s['set_id']}:{key}", "trade": k["trade"], "unit": unit, "qty": None,
+                       "status": "HELD", "key": key, "surface": f"COND:{s['set_id']}"}
+                if sb is not None:
+                    row = bound_set_row(row, s, key, items, sb, subject_key_lines(lines, k, s.get("subject")))
+                    if row is None:              # decided by the subject's own line in these lines: answered once
+                        continue
+                rows.append(row)
                 conditional[key] = conditional.get(key, 0) + 1
     report = {"excluded_lines_by_key": excluded, "conditional_sets_by_key": conditional,
               "unmapped_by_item": [{"item_code": c, "unit": u, "lines": n} for (c, u), n in sorted(unmapped.items())]}
+    if sb is not None:
+        report["set_bindings"] = set_binding_report(rows, sb)
     return rows, report
 
 
@@ -135,6 +143,211 @@ def run(run_dir, normalised_doc, key_map_doc):
     result = S.score(eng, ref)
     result["adapter"] = dict(report, release_report_present=rel is not None, boq_lines=len(lines))
     return result
+
+
+# ---- T-216: review-set bindings as an opt-in key-map path (URBAN_SCORER_SET_BINDINGS_V1) ----
+#
+# Opt-in only: `--set-bindings FILE` puts the file into the key map document in memory under "set_bindings"; without
+# it nothing above changes and every v1 / v2 / v2.1 output stays byte-identical. A binding file settles CONDITIONAL
+# review sets of a run (REVIEW_SET_BINDING_V1, research/agents_t208/review_sets.py) for the keys it names, each through
+# an ANSWERED owner rule and a checker verdict commit. Rules (each is a test in tests/t216_set_bindings):
+# - a bound set answers its key with the bound scenario's key items, status ASSUMED — OWNER-APPROVED
+#   (WORKFLOW_CONTROLS s.4), reported apart from the released lines in adapter["set_bindings"]; the scorer sees a
+#   quantity (class RELEASED, status COMPUTED) so the line can be compared, never a DRAWING-CONFIRMED or VERIFIED one;
+# - a set the file does not bind, or binds HELD, keeps its HELD row: the line stays HELD (never a partial sum, never 0);
+# - refused: a wrong schema, an unknown or unanswered rule, a bound set without a verdict commit and source or without
+#   its evidence (fixture symbol and printed size), a set of another kind than REVIEW_CLASSIFICATION, a bound
+#   scenario that still carries a closure-strip item of a space with a door closure (one physical strip, one line: the
+#   opening's threshold line holds it), and a binding whose quantities are not this run's scenario (stale binding);
+# - a bound scenario that holds none of the key's items keeps the set HELD for that key (missing is never 0);
+# - one floor, one line: when the scored lines already carry the set's space (location room_id = the set's subject)
+#   as released line(s) of the key equal to the bound quantity (a V3.0.x candidate scored beside the base run's
+#   release report, whose wet-room evidence decided the space), the set adds nothing and is listed "decided by own
+#   line"; own lines that are held or of another quantity keep the set HELD (conflict), never summed twice.
+
+SET_BINDINGS_SCHEMA = "URBAN_SCORER_SET_BINDINGS_V1"
+SB_ASSUMED, SB_HELD = "ASSUMED_OWNER_APPROVED", "HELD"
+SB_KIND = "REVIEW_CLASSIFICATION"
+SB_SCORER_STATUS = "COMPUTED"         # scorer class RELEASED = "answers with a quantity"; the evidence is kept apart
+_SB_QTY_TOL = 1e-6
+
+
+def _hexsha(v):
+    s = str(v or "").strip().lower()
+    return 7 <= len(s) <= 40 and all(c in "0123456789abcdef" for c in s)
+
+
+def load_set_bindings(doc):
+    """Validated binding file ({set_id: record} + keys, rules, strip items), or None when no file is given."""
+    if doc is None:
+        return None
+    if doc.get("SCHEMA") != SET_BINDINGS_SCHEMA:
+        raise ValueError(f"set binding schema {doc.get('SCHEMA')!r} is not {SET_BINDINGS_SCHEMA}")
+    keys = list(doc.get("keys") or ())
+    if not keys:
+        raise ValueError("a set binding file names the keys it settles")
+    rules = dict(doc.get("approved_rules") or {})
+    for rid, src in rules.items():
+        if not str(src or "").strip():
+            raise ValueError(f"approved rule {rid!r} has no answered-owner source")
+    strips = tuple(doc.get("closure_strip_items") or ())
+    sets = {}
+    for b in doc.get("sets") or ():
+        sid = b.get("set_id")
+        where = f"binding {sid!r}"
+        if not sid or sid in sets:
+            raise ValueError(f"{where}: set id missing or repeated")
+        if b.get("kind") != SB_KIND:
+            raise ValueError(f"{where}: a {b.get('kind')!r} set is not a wet / dry review set; only {SB_KIND} binds")
+        st = b.get("status")
+        if st == SB_HELD:
+            if not str(b.get("reason") or "").strip():
+                raise ValueError(f"{where}: a HELD binding needs its reason")
+        elif st == SB_ASSUMED:
+            if b.get("rule_id") not in rules:
+                raise ValueError(f"{where}: rule {b.get('rule_id')!r} is not an approved answered owner rule")
+            if not str(b.get("scenario") or "").strip():
+                raise ValueError(f"{where}: no scenario")
+            ev = b.get("evidence") or {}
+            for f in ("fixture_symbol", "printed_size"):
+                if not str(ev.get(f) or "").strip():
+                    raise ValueError(f"{where}: evidence {f} missing")
+            v = b.get("verdict") or {}
+            if not _hexsha(v.get("commit")) or not str(v.get("source") or "").strip():
+                raise ValueError(f"{where}: a binding without a checker verdict commit and its source is refused")
+            q = b.get("quantities")
+            if not isinstance(q, dict) or not q:
+                raise ValueError(f"{where}: no bound quantities")
+            for item, x in q.items():
+                S._qty(x, f"{where} {item}")
+            if int(b.get("door_closures") or 0) > 0 and any(i in q for i in strips):
+                raise ValueError(f"{where}: the bound scenario still carries a closure strip of a space with a door "
+                                 "closure; the opening's threshold line holds it (one strip, one line)")
+            cs = b.get("closure_strip")
+            if cs is not None and (cs.get("item") not in strips or cs.get("m2") is None):
+                raise ValueError(f"{where}: closure strip {cs!r} is not a declared strip item with its m2")
+        else:
+            raise ValueError(f"{where}: status {st!r} is not {SB_ASSUMED} or {SB_HELD}")
+        sets[sid] = b
+    return {"doc": doc, "keys": keys, "sets": sets, "strips": strips, "used": set(), "decided": []}
+
+
+def subject_key_lines(lines, key_entry, subject):
+    """The scored side's own lines of the key's item codes located in the set's subject space (room id)."""
+    if not subject:
+        return []
+    codes = set(key_entry["item_codes"])
+    return [ln for ln in lines if ln["item_code"] in codes and (ln.get("location") or {}).get("room_id") == subject]
+
+
+def bound_set_row(row, scenario_set, key, key_items, sb, own_lines=()):
+    """The scorer row of one CONDITIONAL set holding `key` under a binding file (the HELD row when not bound), or
+    None when the scored side already decides the set's space by its own released line(s) of exactly the bound key
+    quantity (a candidate scored beside the base run's release report: the space is answered once, by its line)."""
+    sid = scenario_set.get("set_id")
+    if key not in sb["keys"]:
+        return row
+    b = sb["sets"].get(sid)
+    if b is None:
+        return dict(row, binding="UNBOUND", binding_reason="no binding for this set: HELD, never dry by default")
+    sb["used"].add(sid)
+    if scenario_set.get("kind") != SB_KIND:
+        raise ValueError(f"binding {sid!r}: the run's set is a {scenario_set.get('kind')!r} set, not {SB_KIND}")
+    if b["status"] == SB_HELD:
+        return dict(row, binding=SB_HELD, binding_reason=b["reason"])
+    run_q = (scenario_set.get("by_scenario") or {}).get(b["scenario"])
+    if run_q is None:
+        raise ValueError(f"binding {sid!r}: the run's set has no {b['scenario']} scenario")
+    want = dict(run_q)
+    cs = b.get("closure_strip")
+    if cs is not None:
+        if abs(float(want.pop(cs["item"], float("nan"))) - float(cs["m2"])) > _SB_QTY_TOL:
+            raise ValueError(f"binding {sid!r}: closure strip {cs['m2']} is not this run's {cs['item']}")
+    q = b["quantities"]
+    if set(q) != set(want) or any(abs(float(q[i]) - float(want[i])) > _SB_QTY_TOL for i in q):
+        raise ValueError(f"binding {sid!r}: bound quantities are not this run's {b['scenario']} scenario "
+                         "(a stale or foreign binding)")
+    present = sorted(i for i in key_items if i in q)
+    if not present:
+        return dict(row, binding=SB_HELD, binding_reason=f"the bound {b['scenario']} scenario holds none of the key's "
+                                                         "items: HELD, never 0")
+    qty = round(sum(float(q[i]) for i in present), 6)
+    if own_lines:
+        st = [line_status(ln) for ln in own_lines]
+        own = [x for x in st if x is not None]
+        ids = sorted(ln["line_id"] for ln in own_lines)
+        if own and all(x[0] == "RELEASED" for x in own) and abs(sum(x[1] for x in own) - qty) <= _SB_QTY_TOL:
+            sb["decided"].append({"set": f"COND:{sid}", "key": key, "line_ids": ids, "qty": qty})
+            return None
+        return dict(row, binding=SB_HELD, binding_reason="the space already has its own line(s) of this key in these "
+                    f"lines ({', '.join(ids)}) that are held or differ from the bound {qty}: conflict, HELD")
+    return dict(row, qty=qty, status=SB_SCORER_STATUS, evidence="ASSUMED — OWNER-APPROVED", binding=SB_ASSUMED,
+                rule_id=b["rule_id"], verdict_commit=b["verdict"]["commit"], scenario=b["scenario"],
+                closure_strip_m2=None if cs is None else float(cs["m2"]),
+                geometry_status=b.get("geometry_status"))
+
+
+def set_binding_report(rows, sb):
+    """Per bound key: released lines, ASSUMED — OWNER-APPROVED sets, held sets / lines, the line total (None while
+    anything holding the key is held), and bindings this run never used."""
+    out = {"schema": SET_BINDINGS_SCHEMA, "task": sb["doc"].get("task"), "keys": {}}
+    for key in sb["keys"]:
+        mine = [r for r in rows if r.get("key") == key]
+        rel = [r for r in mine if not str(r["id"]).startswith("COND:") and r["status"] == "RELEASED"
+               and r["qty"] is not None]
+        held_lines = [r["id"] for r in mine if not str(r["id"]).startswith("COND:") and r not in rel]
+        bound = [r for r in mine if r.get("binding") == SB_ASSUMED]
+        held_sets = [{"set": r["surface"], "reason": r.get("binding_reason") or "HELD"}
+                     for r in mine if str(r["id"]).startswith("COND:") and r.get("binding") != SB_ASSUMED]
+        r_q = round(sum(r["qty"] for r in rel), 6)
+        a_q = round(sum(r["qty"] for r in bound), 6)
+        out["keys"][key] = {
+            "released_lines": len(rel), "released_m2": r_q, "held_lines": held_lines,
+            "assumed_owner_approved_m2": a_q,
+            "bound_sets": [{"set": r["surface"], "qty": r["qty"], "rule_id": r["rule_id"],
+                            "verdict_commit": r["verdict_commit"], "scenario": r["scenario"],
+                            "geometry_status": r.get("geometry_status"),
+                            "closure_strip_not_in_key_m2": r.get("closure_strip_m2")} for r in bound],
+            "held_sets": held_sets,
+            "decided_by_own_line": [d for d in sb["decided"] if d["key"] == key],
+            "line_total": None if (held_lines or held_sets) else round(r_q + a_q, 6)}
+    out["unused_bindings"] = sorted(set(sb["sets"]) - sb["used"])
+    return out
+
+
+def set_bindings_markdown(sides):
+    """The binding column table: [(side label, adapter dict)] -> markdown (released and assumed never merged)."""
+    out = ["", "### Review-set bindings (opt-in; ASSUMED — OWNER-APPROVED kept apart from released lines)", "",
+           "| Side | Key | Released lines | Binding: ASSUMED — OWNER-APPROVED | Bound sets (rule, verdict commit) | "
+           "Held sets / lines | Line total |", "|---|---|---|---|---|---|---|"]
+    for label, ad in sides:
+        rep = (ad or {}).get("set_bindings")
+        if rep is None:
+            continue
+        for key, k in rep["keys"].items():
+            bs = ", ".join(f"{b['set']} {b['qty']:.4f} ({b['rule_id']}, {b['verdict_commit']})"
+                           for b in k["bound_sets"]) or "-"
+            dec = k.get("decided_by_own_line") or []
+            if dec:
+                bs += (f"; {len(dec)} set{'s' if len(dec) != 1 else ''} decided by this side's own released line "
+                       f"(in the released lines, not added again): " + ", ".join(f"{d['set']} {d['qty']:.4f}"
+                                                                                  for d in dec))
+            hs = [f"{h['set']} ({h['reason']})" for h in k["held_sets"]]
+            if k["held_lines"]:
+                hs.append(f"{len(k['held_lines'])} held engine line{'s' if len(k['held_lines']) != 1 else ''}")
+            tot = "HELD (not a partial sum)" if k["line_total"] is None else f"{k['line_total']:.4f}"
+            out.append(f"| {label} | {key} | {k['released_m2']:.4f} on {k['released_lines']} | "
+                       f"{k['assumed_owner_approved_m2']:.4f} on {len(k['bound_sets'])} | {bs} | "
+                       f"{'; '.join(hs) or '-'} | {tot} |")
+        if rep["unused_bindings"]:
+            out.append(f"| {label} | unused bindings | {', '.join(rep['unused_bindings'])} | | | | |")
+    return "\n".join(out) + "\n"
+
+
+def with_set_bindings(key_map_doc, bindings_doc):
+    """The key map document carrying the binding file in memory (the --set-bindings opt-in)."""
+    load_set_bindings(bindings_doc)
+    return dict(key_map_doc, set_bindings=bindings_doc)
 
 
 # ---- T-181: doors and windows like for like, pcs AND m2 (URBAN_ALSENAN_OPENINGS_KEY_MAP_V1) ----
@@ -523,6 +736,9 @@ def main(argv=None):
     # T-182 opt-in: the five-measures table (## SCOREBOARD v2.1); without it the v2 output is unchanged
     ap.add_argument("--v2-five-measures", action="store_true", help="T-182 five-measures layout")
     ap.add_argument("--v2-min-accuracy-scope", type=float, help="minimum scope share for the accuracy column")
+    # T-216 opt-in: review-set bindings (URBAN_SCORER_SET_BINDINGS_V1); without it every output stays byte-identical
+    ap.add_argument("--set-bindings", help=SET_BINDINGS_SCHEMA + " file: bound review sets answer their key "
+                                           "ASSUMED — OWNER-APPROVED, reported apart")
     a = ap.parse_args(argv)
     v2 = [a.v2_markdown, a.v2_label, a.v2_verdicts, a.v2_candidate_lines, a.v2_candidate_label, a.v2_heading,
           a.v2_five_measures or None, a.v2_min_accuracy_scope]
@@ -532,10 +748,14 @@ def main(argv=None):
         ap.error("the --v2-* options need --v2-out")
     if a.v2_out is not None and (a.v2_label is None or a.v2_verdicts is None):
         ap.error("--v2-out needs --v2-label and --v2-verdicts")
-    result = run(a.run, json.loads(Path(a.reference).read_text(encoding="utf-8")),
-                 json.loads(Path(a.key_map).read_text(encoding="utf-8")))
+    km_doc = json.loads(Path(a.key_map).read_text(encoding="utf-8"))
+    if a.set_bindings:
+        km_doc = with_set_bindings(km_doc, json.loads(Path(a.set_bindings).read_text(encoding="utf-8")))
+    result = run(a.run, json.loads(Path(a.reference).read_text(encoding="utf-8")), km_doc)
     Path(a.out).write_text(json.dumps(result, ensure_ascii=False, indent=1), encoding="utf-8")
     md = S.markdown(result)
+    if a.set_bindings:
+        md += set_bindings_markdown([(Path(a.run).name, result["adapter"])])
     if a.markdown:
         Path(a.markdown).write_text(md, encoding="utf-8")
     print(md, end="")
@@ -544,10 +764,15 @@ def main(argv=None):
         five = {} if not a.v2_five_measures else {"layout": V2.LAYOUT_FIVE, "min_scope": (
             V2.MIN_ACCURACY_SCOPE if a.v2_min_accuracy_scope is None else a.v2_min_accuracy_scope)}
         res2 = V2.build(a.run, a.v2_label, json.loads(Path(a.reference).read_text(encoding="utf-8")),
-                        json.loads(Path(a.key_map).read_text(encoding="utf-8")),
+                        km_doc,
                         json.loads(Path(a.v2_verdicts).read_text(encoding="utf-8")),
                         a.v2_candidate_lines, a.v2_candidate_label, **five)
-        print(V2.write(res2, a.v2_out, a.v2_markdown, a.v2_heading), end="")
+        md2 = V2.write(res2, a.v2_out, a.v2_markdown, a.v2_heading)
+        if a.set_bindings:
+            md2 += set_bindings_markdown([(s["label"], s["adapter"]) for s in res2["sides"]])
+            if a.v2_markdown:
+                Path(a.v2_markdown).write_text(md2, encoding="utf-8")
+        print(md2, end="")
     return 0
 
 
