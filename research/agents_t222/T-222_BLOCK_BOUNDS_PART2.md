@@ -1,6 +1,6 @@
 # T-222: block-wall HELD bounds, part 2: the 1F bay basis, P-GF-05 and P-1F-01 (development villa; rule for every villa)
 
-Worker 2, 2026-10-23 18:41 - 20:05 UTC per `date -u`, run session_01Qtfih85hRgtwsK5USREfUo. Lane A, gate 2, blockwork
+Worker 2, 2026-10-23 18:41 - 19:25 UTC per `date -u`, run session_01Qtfih85hRgtwsK5USREfUo. Lane A, gate 2, blockwork
 programme row (BLOCKWORK_RESOLUTION_PROGRAMME.md). Files: research/agents_t222/*, tests/t222_bay_and_heads/* only (no
 engine, rule, registry, frozen or released file changed; T-108 / T-215 / T-226 files untouched; masonry_centreline_v2
 used read-only). ERS: read; s.2 steps 1-4 (element, evidence hierarchy, reconstruction, reconciliation), s.3 (one element
@@ -81,7 +81,8 @@ What is above it (the two T-215 conditions):
     front of the court wall, hiding the wall above +4.70 (R7, R9): an occluding soffit, never the top of this wall
     (`masonry_above` refuses it; it would give 2.220 m2).
 The member on the wall line: the GROUND FLOOR ROOF SLAB draws the B1 band (handles 2AE / 2AF, 0.20 wide) unbroken over the
-opening, its axis on the opening's centre (0.000 m), label B1 over the span; B1 20 x 40 (T-110 schedule row). Soffit
+opening, its axis on the opening's centre (0.000 m), label B1 over the span; B1 20 x 40 (T-110 register BM-GF-031,
+span 1.20 between the two column jambs, schedule row, no section cuts it). Soffit
 +5.45 - 0.40 = +5.05 -> masonry above the lintel 1.20 x (5.05 - 2.85) = **2.640 m2**, 0.528 m3. Evidence hierarchy: two
 project drawings (ST plan + architectural section / plan) and an owner rule (Q-60 A); no fallback height.
 
