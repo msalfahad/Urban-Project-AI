@@ -90,3 +90,33 @@
   conflicts, and the evidence files).
 
 (Older entries trimmed by the Lead 18:20; the last 20 are kept.)
+
+## 2026-10-20 20:10 (lead run)
+
+- **T-120 membrane purchase version V2.13: WORKED (MERGED 2264938, verifier 17:49 run).** Opt-in candidate; the checker
+  re-placed all 39 pieces of the 2F roof itself (17 rolls under Q-58 A, 0 overlaps), pantry 13.50 m2 / 2 rolls, wet 21.
+  Released numbers unchanged by design. Decision: V2.13 is the base of the ONE consolidated candidate V3.0 (T-131, lane I);
+  no V2.14.
+- **T-121 ceilings over outside air: PARTIAL (REJECTED, gate d).** Census reproduced and the passage roofing confirmed,
+  but the pool-court void was the route G face (4.373 m2), not the drawn opening (3.689 m2): PL-03 14.020 -> 14.704 m2,
+  total 45.632 -> 46.316 m2; the gross 18.393 was never measured by hand. Cause: a CAD face used as the "hand check" (the
+  same source twice). Decision: rework T-127 (lane A) with the hand gross from printed dimensions and the Q-68 C finish
+  search.
+- **T-122 1F living floor and landing under Q-66 B: WORKED pending the checker (READY f85fe97).** Porcelain 33.594 ..
+  33.711 m2 (hand 33.713; corrected its own earlier 33.584 / 34.104), landing marble once 4.875, stair marble 44.365; the
+  0.4025 m2 strip is marble in every reading. Every value cites Q-56 / Q-66. Decision: verifier order 1; Q-70 (answered A
+  conditional) and the strip / D-23 -> T-129.
+- **T-123 GF facade under Q-64 B / Q-67: WORKED pending the checker (READY 54425be).** Q-67 condition met on the drawings
+  (nothing across the 1.20 m mouth, far end closed); billable stays 105.887 m until a reveal line holds the 0.100 m (then
+  105.787); passage roofed 5.640 m2 (4.080 under 1F + 1.560 GF roof): confirms T-121, contradicts T-109's "open to sky".
+  New finding: engine passage spaces leave out 0.480 m2 (two 0.20 strips at B5 / B1), cause not traced -> T-131 lists it
+  as a held item. Decision: verifier order 2; then V3.0 carries perimeter / billable apart.
+- **T-124 offcut booked once: WORKED pending the checker (READY a582f32).** New opt-in fold V5 books each leftover once;
+  every released / proven Alsenan count VALID (wet 21, roofs 6 + 8, 2F 17); synthetic V3 claims corrected 1 -> 2 and
+  8 -> 9; one unchosen V4 2F layout (19) held. Decision: verifier order 3; the audit joins V3.0 (no method V2.14).
+- **Team: verifier silent twice (18:49, 19:49: 2-3 minute runs, no STARTED line, no commit) and worker 3 18:59 silent.**
+  Cause NOT KNOWN (no transcript). Decision: READY order written on the board; the fix is the owner's repo-attached
+  migration (P-01); reported under NEEDS FIXING.
+
+Recurring cause 9 (new 20:10): **a CAD face checked against itself.** T-121's "hand" pool void was the engine's own face.
+Every hand check must come from printed dimensions or a separate reading (checker rule 1 of the 20:10 decision).

@@ -91,6 +91,62 @@ Team ids: MERGED T-158, T-186 (PARTIAL: firewall), T-182, T-175, T-173, T-128 r3
 B), T-164; TODO S T-163 r2, T-191, T-192, T-188, T-174; A T-176, T-194, T-195; I T-190 (after T-179), T-181; QUEUED T-187,
 T-193, T-146, T-168, T-170.
 
+## LEAD REPORT 2026-10-23 00:25 UTC
+
+Repositories: attached Urban-Project-AI checkout (main 0bc35c72); `.work` prepared AUTOMATICALLY at start ("setup by
+auto"). Working branch head 9957cc12 -> 06c2b045 (checker merges T-164, T-181, T-194, T-163 r3, T-195; no owner commit on
+the engine branch). Drive readable: no image created in the Alsenan folder since the 27 of 2026-10-21 (newest 22:51 that
+day), so no photo-review task. UrbanProjectsManager not used. OWNER_SESSION_CHANGES: no entry newer than 18:00; nothing
+undone or duplicated.
+
+PROGRESS (Alsenan; released numbers unchanged: released concrete 92.77 vs freelancer 111.81 m3, -17.03 %, run A;
+SCOREBOARD v2 22:00: no measured cell moved; verified share 0 / 8 whole concrete reference lines)
+- DOORS / WINDOWS like for like (m2 and pcs), merged: windows 56.771 m2 DRAWING-CONFIRMED on the 8 with printed heights
+  vs his 54.931 m2 on the same 8 (+1.840 m2, +3.35 %; checker's own DXF chain within 0.12 %); 21 windows HELD (no head),
+  never 0; window count HELD (W02 unclassified, D-53), so the old '29 agree' is withdrawn. Aluminium doors 10.560 m2
+  ASSUMED - OWNER-APPROVED (2.20 m, Q-55 C) vs 12.000 (-1.440 m2 = -0.960 RULE_DIFFERENCE (his 2.40) - 0.480 width
+  (two 0.90 doors)). Scorer path only; no BOQ line moved.
+- OPENING CONSISTENCY (R6), merged: 71 openings, 4 elevations bound, 10 widths agree on two sheets (worst 4.9 mm; checker
+  W14 / W17 0 mm). Material findings: 3 openings missing from the census (P-GF-01 0.90, P-1F-01 1.30, P-GF-05 1.20 on SW),
+  W01 / W03 sill and head on the wrong datum (1.85 / 3.85 listed vs 1.00 / 3.00 above FFL). Effect on block deductions
+  (net 476.21 m2 on 43 walls), lintels, reveals and plaster: NOT YET MEASURED -> T-198 (first in lane A).
+- FORMWORK (m2; a category with no released and no freelancer row), merged r3: S0 dome soffit forms 2 x 24.150 m2
+  (checker from the printed 442 / 190 / 10: 24.1495, 0.00 %); dome-opening band 4.446 m2 moved from slab edges to the
+  ring (one owner); above ground CALCULATED 1,034.420 -> 1,078.274 m2 (+4.2 %); column joint faces 11.878 m2 PARTIALLY
+  VERIFIED (2 / 27); S1 client scenario beside, never in totals. r2 had been rejected for leaking the client change into
+  formwork (0 m2 for the domes).
+- DRAWING REGISTER (R9), merged: 31 sheets (ARCH 12, ST 16, SAN 3), none prints a revision (FILE_PIN by sha256); 543
+  citations in 72 merged folders: 0 outside the register, 0 multi-revision. ST set prints May 2025 on p.1-7 and May 2026
+  on later pages (D-61); not issued: site, top roof, door / window and finishes schedules, RCP, wet-room / stair details,
+  water, electrical, A/C (D-62).
+- CANDIDATE V3.0.5 (rebar; kg): r1 REJECTED (the 22 stair / strip held highs used count A, understated 65.02 kg; the checker
+  owned its own 06:25 miss on the ledger it merged); r2 READY 23:39: stair held 1,039.16 .. 1,443.67 kg, STR.REBAR held
+  15,250.79 .. 21,621.55 kg, candidate quantity lines 10,250.17 kg, beams 65.294 m3; NOT RELEASED.
+- RAILINGS (m), merged 20:21: 38.916 m DRAWING-CONFIRMED (checker RL-02 4.921 / RL-03 7.967 m, 0.0 %).
+What improved: two missing categories (formwork, metalwork) now have checked hand figures; opening and document control
+exist as checks. What got worse: nothing measured got worse; the census lost its '29 agree' (now HELD, honest).
+Missing: any engine line for plaster / paint / formwork / railings (scoreboard cells NOT YET MEASURED until integrated).
+
+TEAM HEALTH: 20:20 - 00:25: 8 closed slots STARTED + final SUCCESS (worker 1: 20:21, 22:20; worker 2: 21:40, 23:40;
+worker 3: 21:01, 23:00; checker: 19:51 -> 21:04, 21:50 -> 22:00; checker 23:51 open with 3 merges committed); every
+self-check PASS; 0 refusals; worker 1 hit one board rebase conflict (resolved). Ran code: all workers and the checker
+(selfcheck + task tests). Problems: (1) the rebar firewall test has been red on the working head since 17:00 (T-186's
+default_guard.py undeclared); every run reports the same single failure; T-190 cannot start before T-179 merges (same
+registry file); kept first in lane I, gate 0 for the checker. (2) The checker stamped two merges 00:35 / 00:50 that it
+made at 00:09-00:20: note on the board to stamp clock time. (3) STALL_CHECK T-176: passed twice by worker 2's
+lowest-gate-first rule (reprioritisation); now waits on T-198 for a real dependency (its net area changes).
+Board: new T-196 (R7 scope vs drawings, lane I), T-197 (R4 curved geometry, lane A), T-198 (census r3, lane A), T-199
+(formwork + railings into the candidate, QUEUED after T-193); T-168 promoted. TODO now S 4 (T-191, T-192, T-188, T-174),
+A 3 (T-198, T-197, T-176 waiting), I 4 (T-190 waiting on T-179, T-196, T-168; chain T-187 / T-193 / T-199 / T-146 queued).
+READY 1. Board archived 510 -> 383 KB (17 rows merged before 22 Oct 12:00, 8 old notes). Register +6 rulings; designer
+list D-59 .. D-62. Lessons rows proposed in FEEDBACK 00:20 (4: range high end on the high count; scenario tag into derived
+trades; listed level needs its datum; file identity when no revision is printed).
+
+OWNER PACKAGE: none today. No item met ENGINEERING_REASONING_STANDARD s.2.7: every finding is a team investigation (T-198,
+T-196, T-197) or a designer item (D-59 .. D-62).
+
+NEEDS FIXING: nothing only the owner can do. (Designer list D-59 .. D-62 to forward when he chooses.)
+
 ## LEAD REPORT 2026-10-22 16:20 UTC
 
 Repositories: attached Urban-Project-AI checkout (main b8ff258f); `.work` was prepared AUTOMATICALLY at start this time

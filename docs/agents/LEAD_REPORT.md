@@ -1,5 +1,78 @@
 # Lead reports to the owner's main chat (newest first, last 3 entries; older in archive/LEAD_REPORT_older.md)
 
+## LEAD REPORT 2026-10-23 10:20 UTC
+
+Repositories: attached Urban-Project-AI checkout (main ccbe7876); `.work` prepared AUTOMATICALLY ("setup by auto", 10:13).
+Working branch head fb3a4623 -> d5df7d1f (checker merges T-108 r2 01eeafd0, T-204 4fbf7627, T-207 e081911c, T-206
+d5df7d1f; no owner commit on the engine branch). Drive readable: nothing created in the Alsenan folder since 08:00 and no
+new image, so no photo-review task. UrbanProjectsManager not used. OWNER_SESSION_CHANGES: no entry since 06:15; the pilot
+rules applied (4 claimable TODO in lanes S and A); nothing undone or duplicated.
+
+PROGRESS (Alsenan; released numbers unchanged: released concrete 92.77 vs freelancer 111.81 m3, -17.03 %, run A;
+SCOREBOARD v2 10:10: no scored cell moved; verified share 0 / 8 whole concrete reference lines, all baselines)
+- CANDIDATE V3.0.7 (m3; NOT RELEASED) READY for Gate B: verified pool base 4.374 + walls 2.828 = 7.202 (1.20 STRUCTURAL,
+  steps HELD 'not drawn, consultant item') and terrace dome shells 2 x 2.541 replace 4 guard-held convention lines;
+  the 1F 'stair' 4.451 m3 retired = DOME-B, which V3.0.5 billed twice. Candidate pool +3.707, domes -2.290 m3. vs
+  freelancer: pool 7.202 vs 12.348 (-41.7 %: his pump room + steps are on no drawing), domes 5.081 + tower HELD vs 6.780.
+- LIFT CORE (m2 / m3): pit drawn and detailed (ST PDF p.14 typical, image-only page): ring 1.600 m2 gross, 1.100 m2 net
+  of the 4 column sections (checker own 0.0 %). Pit depth 'as per lift manufacturer' -> concrete / formwork / bars HELD.
+  Freelancer lift walls 2.400 m3 bill the 0.500 m2 of column sections twice (ENGINE_RIGHT on ownership; his 1.50 m
+  UNRESOLVED). Roof tank: not drawn, HELD, designer item.
+- OPENINGS (m2): W11 / W12 4.290 m2 each between the shutter leaves, VERIFIED (freelancer 7.800 took the frame height:
+  ENGINE_RIGHT). Windows like for like on 28: 88.081 vs 89.681 m2 (-1.78 %, was -2.91 % on 26; development figure).
+  W02 = one opening on every drawing, HELD only on the render. P-GF-05 needs a lintel (beam soffits +4.95 vs head +2.65).
+- BLOCK (m2, m3): engine piece MERGED: established net 337.412 m2 (DC 252.817 + AOA 84.595), 58.366 m3; checker 2F-W08
+  11.400 / 9.640 m2 and GF-W22 2.887 m own = 0.0 %; white units 303.1 / 394.7 (Q-60); black HELD (T-176).
+- FLOOR AREA (m2) READY: the 3 review sets are the GF basin-only hand-wash spaces, WET by Q-06 A: engine 385.634 vs
+  409.58 m2 (-5.85 % raw); his extra scope (garden band, GF stair treads, 2F corridor, 1F stair footprint) 23.990 m2;
+  like for like +0.044 m2 (+0.01 %, not proof). 1F bedrooms -1.379 m2 UNRESOLVED.
+- FOUNDATION LEVELS: the '2' under every footing is a 2 cm membrane (5 / 2 / 10 cm, checker own vector read): footing
+  bottom = formation + 0.17 m (VERIFIED component). Formation and existing ground HELD (Q-21 C). 6 sunken wet-slab panels
+  found, drop not printed. B20 / B23 build-up condition NOT PROVEN.
+- COLUMNS (m3): checker own re-measure 17 -> 23 / 59, all 0.0 %; line PARTIALLY VERIFIED (C8 30x80 vs 30x90, tank
+  columns 3.00 .. 3.80 m HELD on D-44).
+What improved: two windows and the lift pit ring now measured from the drawings; the floor-area line can be scored for
+the first time once the checker passes it; the candidate stops billing one dome twice. What got worse: a guard test went
+red on the working branch with the block merge (no quantity affected; see team health). Learned (3 lessons rows, ERS
+s.7): guard tests must run on the merged head or test a property, not a live snapshot; absence only after every format
+incl. image-only PDF pages; opening size vs frame / fabrication size. Missing: pit depth, tank, sunken-panel drops, floor
+build-up, existing ground level; plaster / paint / formwork / railings engine lines; whole-line VERIFIED still 0 / 8.
+
+ENGINEERING QUESTIONS OPENED (ERS s.5, Lead): T-212 (gate 0) what the guard protects and how to test it without a live
+snapshot; T-213 sunken wet panels (slab drop, step faces, fill, tray, ceiling) - FIRST reconcile the panel set with the
+earlier record D-41 / T-139 (GF 19.396 + 1F 5.400 m2 there, 1F x5 + 2F x1 here: one set under two storey conventions or
+two sets?); T-214 floor build-up FFL -> structural top, drawing-derived beside the owner's Q-43 0.10 m, with the explicit
+challenge that Q-43's 0.10 was given for wall heights and is not a structural datum without evidence (settles the
+T-189 condition and neck tops); T-215 block-wall held bounds (45 deg ends, junction piece once, masonry above leafless
+openings). T-017 independent wall census promoted (T-108 merged). T-170 excavation after T-205: geometry measurable now,
+depth HELD. Cross-trade (register +9 rulings): pit ring vs lift columns (columns stay in CONC.COLUMN), footing membrane +
+protection screed belong to waterproofing (no line known to carry them: lane A scope check next), W11 / W12 shutter
+leaves stay in the shutter census, DOME-B one element. Integration readiness: T-193 ready for Gate B; T-199 next.
+
+TEAM HEALTH: 08:20 - 10:20 (pilot): 7 / 7 slots STARTED + final SUCCESS (worker 1 08:20, 09:20; worker 2 08:40, 09:40;
+worker 3 09:01 -> 10:05; checker 08:51, 09:51); run lock taken and released, 0 IDLE; every self-check PASS; 0 refusals;
+Drive read OK. Ran code: all three workers and the checker. Throughput: 4 merges, 0 rejections; READY 2 now (T-193 Gate
+B, T-208), both 0.3 h. REGRESSION MERGED: tests/t202_guard_sweep::test_guard_host_and_unwired_producers red on the
+working branch since 01eeafd0 (T-108 r2): the T-202 sweep pins its merge window but reads importers on the live tree;
+masonry_area_v1 is a new legitimate importer. No candidate or released method reaches it, no quantity effect (checker
+09:59, owner notified by the checker). This is recurring cause 7 (new module trips a whole-repo guard test) in a new
+form: green on the task head, red only on the merged head. Action: fix row T-212 gate 0 at the top of lane I, claimable
+by the first worker that runs; the VERIFIER QUEUE now requires the guard tests on the head merged with the working
+branch before every merge push. Under PILOT section 6 'a regression merged -> all back' is a rollback trigger: the
+auditor decides at 12:15 (the Lead changes no schedule); in my judgment the cause is a test-design gap, isolated and
+being fixed within the hour, not a sign the faster cadence lowers quality (0 rejections, all re-measures 0.0 %).
+Board: TODO S 4 (T-205, T-213, T-214, T-174), A 4 (T-209, T-215, T-017, T-176), I 4 (T-212, T-168, T-203, T-210) +
+queued T-199 -> T-211 -> T-146, T-170 after T-205. Queue check: 45 actionable rows, 0 flagged, 0 stall checks.
+Self-check PASS (codemap stale none, t061, freeze 0).
+
+OWNER PACKAGE: none today. No finding meets ERS s.2.7: pit depth, tank, sunken-panel drops and floor build-up are
+already designer items (D-43, D-44 / D-52, D-41, D-40 / D-39); nothing needs your judgment.
+
+NEEDS FIXING (only the owner can do): if a site / plot level survey exists for Alsenan, put it in the Alsenan Drive
+folder. Q-21 C makes the excavation at least 1.5 m below the EXISTING ground, and no issued sheet prints that level
+(D-62 lists the site plan as missing), so every excavation depth stays HELD. Main chat / auditor: (1) the 12:15 pilot
+check-in should weigh the guard regression above; (2) carried from 08:20: pilot_metrics.py merged / rejected parser.
+
 ## LEAD REPORT 2026-10-23 08:20 UTC
 
 Repositories: attached Urban-Project-AI checkout (main ccbe7876); `.work` prepared AUTOMATICALLY ("setup by auto", 08:10).
@@ -134,59 +207,3 @@ identity and the pool base-mesh count are team corrections with the drawings in 
 
 NEEDS FIXING: nothing only the owner can do. FYI: T-190 was handed in by the main chat at 00:32 without an
 OWNER_SESSION_CHANGES line (the rule of 2026-10-19 asks for one).
-
-## LEAD REPORT 2026-10-23 00:25 UTC
-
-Repositories: attached Urban-Project-AI checkout (main 0bc35c72); `.work` prepared AUTOMATICALLY at start ("setup by
-auto"). Working branch head 9957cc12 -> 06c2b045 (checker merges T-164, T-181, T-194, T-163 r3, T-195; no owner commit on
-the engine branch). Drive readable: no image created in the Alsenan folder since the 27 of 2026-10-21 (newest 22:51 that
-day), so no photo-review task. UrbanProjectsManager not used. OWNER_SESSION_CHANGES: no entry newer than 18:00; nothing
-undone or duplicated.
-
-PROGRESS (Alsenan; released numbers unchanged: released concrete 92.77 vs freelancer 111.81 m3, -17.03 %, run A;
-SCOREBOARD v2 22:00: no measured cell moved; verified share 0 / 8 whole concrete reference lines)
-- DOORS / WINDOWS like for like (m2 and pcs), merged: windows 56.771 m2 DRAWING-CONFIRMED on the 8 with printed heights
-  vs his 54.931 m2 on the same 8 (+1.840 m2, +3.35 %; checker's own DXF chain within 0.12 %); 21 windows HELD (no head),
-  never 0; window count HELD (W02 unclassified, D-53), so the old '29 agree' is withdrawn. Aluminium doors 10.560 m2
-  ASSUMED - OWNER-APPROVED (2.20 m, Q-55 C) vs 12.000 (-1.440 m2 = -0.960 RULE_DIFFERENCE (his 2.40) - 0.480 width
-  (two 0.90 doors)). Scorer path only; no BOQ line moved.
-- OPENING CONSISTENCY (R6), merged: 71 openings, 4 elevations bound, 10 widths agree on two sheets (worst 4.9 mm; checker
-  W14 / W17 0 mm). Material findings: 3 openings missing from the census (P-GF-01 0.90, P-1F-01 1.30, P-GF-05 1.20 on SW),
-  W01 / W03 sill and head on the wrong datum (1.85 / 3.85 listed vs 1.00 / 3.00 above FFL). Effect on block deductions
-  (net 476.21 m2 on 43 walls), lintels, reveals and plaster: NOT YET MEASURED -> T-198 (first in lane A).
-- FORMWORK (m2; a category with no released and no freelancer row), merged r3: S0 dome soffit forms 2 x 24.150 m2
-  (checker from the printed 442 / 190 / 10: 24.1495, 0.00 %); dome-opening band 4.446 m2 moved from slab edges to the
-  ring (one owner); above ground CALCULATED 1,034.420 -> 1,078.274 m2 (+4.2 %); column joint faces 11.878 m2 PARTIALLY
-  VERIFIED (2 / 27); S1 client scenario beside, never in totals. r2 had been rejected for leaking the client change into
-  formwork (0 m2 for the domes).
-- DRAWING REGISTER (R9), merged: 31 sheets (ARCH 12, ST 16, SAN 3), none prints a revision (FILE_PIN by sha256); 543
-  citations in 72 merged folders: 0 outside the register, 0 multi-revision. ST set prints May 2025 on p.1-7 and May 2026
-  on later pages (D-61); not issued: site, top roof, door / window and finishes schedules, RCP, wet-room / stair details,
-  water, electrical, A/C (D-62).
-- CANDIDATE V3.0.5 (rebar; kg): r1 REJECTED (the 22 stair / strip held highs used count A, understated 65.02 kg; the checker
-  owned its own 06:25 miss on the ledger it merged); r2 READY 23:39: stair held 1,039.16 .. 1,443.67 kg, STR.REBAR held
-  15,250.79 .. 21,621.55 kg, candidate quantity lines 10,250.17 kg, beams 65.294 m3; NOT RELEASED.
-- RAILINGS (m), merged 20:21: 38.916 m DRAWING-CONFIRMED (checker RL-02 4.921 / RL-03 7.967 m, 0.0 %).
-What improved: two missing categories (formwork, metalwork) now have checked hand figures; opening and document control
-exist as checks. What got worse: nothing measured got worse; the census lost its '29 agree' (now HELD, honest).
-Missing: any engine line for plaster / paint / formwork / railings (scoreboard cells NOT YET MEASURED until integrated).
-
-TEAM HEALTH: 20:20 - 00:25: 8 closed slots STARTED + final SUCCESS (worker 1: 20:21, 22:20; worker 2: 21:40, 23:40;
-worker 3: 21:01, 23:00; checker: 19:51 -> 21:04, 21:50 -> 22:00; checker 23:51 open with 3 merges committed); every
-self-check PASS; 0 refusals; worker 1 hit one board rebase conflict (resolved). Ran code: all workers and the checker
-(selfcheck + task tests). Problems: (1) the rebar firewall test has been red on the working head since 17:00 (T-186's
-default_guard.py undeclared); every run reports the same single failure; T-190 cannot start before T-179 merges (same
-registry file); kept first in lane I, gate 0 for the checker. (2) The checker stamped two merges 00:35 / 00:50 that it
-made at 00:09-00:20: note on the board to stamp clock time. (3) STALL_CHECK T-176: passed twice by worker 2's
-lowest-gate-first rule (reprioritisation); now waits on T-198 for a real dependency (its net area changes).
-Board: new T-196 (R7 scope vs drawings, lane I), T-197 (R4 curved geometry, lane A), T-198 (census r3, lane A), T-199
-(formwork + railings into the candidate, QUEUED after T-193); T-168 promoted. TODO now S 4 (T-191, T-192, T-188, T-174),
-A 3 (T-198, T-197, T-176 waiting), I 4 (T-190 waiting on T-179, T-196, T-168; chain T-187 / T-193 / T-199 / T-146 queued).
-READY 1. Board archived 510 -> 383 KB (17 rows merged before 22 Oct 12:00, 8 old notes). Register +6 rulings; designer
-list D-59 .. D-62. Lessons rows proposed in FEEDBACK 00:20 (4: range high end on the high count; scenario tag into derived
-trades; listed level needs its datum; file identity when no revision is printed).
-
-OWNER PACKAGE: none today. No item met ENGINEERING_REASONING_STANDARD s.2.7: every finding is a team investigation (T-198,
-T-196, T-197) or a designer item (D-59 .. D-62).
-
-NEEDS FIXING: nothing only the owner can do. (Designer list D-59 .. D-62 to forward when he chooses.)

@@ -1,11 +1,39 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
 Plain words, no task numbers. Measured numbers come from SCOREBOARD.md; anything not measured says so.
-Last update: 2026-10-23 08:20 UTC (Lead). Previous version: 2026-10-23 04:20 UTC. The released numbers did not change
-(released concrete 92.77 vs 111.81 m3, -17.03 %; released default V2.9 + route G untouched). Your 24 h faster-schedule
-pilot started 06:15: in its first two hours every agent run started and closed, the checker merged 8 pieces and sent
-back 1, and only 1 piece now waits for the checker (0.4 h old).
-Since 04:20 (newest first):
+Last update: 2026-10-23 10:20 UTC (Lead). Previous version: 2026-10-23 08:20 UTC. The released numbers did not change
+(released concrete 92.77 vs 111.81 m3, -17.03 %; released default V2.9 + route G untouched). Pilot, hours 2-4: every
+agent run started and closed; the checker merged 4 more pieces and sent none back; 2 pieces wait for the checker (both
+0.3 h old), one of them the next candidate step. One safety test went red with a merge (no quantity affected): its fix
+is now the first task for whichever worker runs next.
+Since 08:20 (newest first):
+- Next candidate step (step 7) handed to the checker, NOT released: the checker-verified pool (base 4.374 + walls 2.828
+  = 7.202 m3, on the 1.20 m structural height) and the two terrace dome shells (2 x 2.541 m3) replace the convention
+  values; a dome that the engine was billing twice (once as a 'stair' on the first-floor slab sheet) is removed. Effect
+  on the candidate: pool +3.707 m3, domes -2.290 m3. Against the freelancer: pool 7.202 vs 12.348 m3 (-41.7 %; his figure
+  includes a pump room and steps that no drawing shows), domes 5.081 m3 + tower dome held vs his 6.780.
+- Floor area: the 3 spaces that kept the floor-area line unscored are the ground-floor basin-only hand-wash spaces, wet
+  by your answer on hand-wash spaces. With them settled the engine gives 385.634 m2 vs the freelancer's 409.58 m2
+  (-5.85 %); on the same scope (he also counts a garden band, ground-floor stair treads, a second-floor corridor and the
+  first-floor stair footprint: 23.990 m2) the difference is +0.044 m2. Waiting for the checker; a 1.379 m2 gap in the
+  first-floor bedrooms is still unexplained.
+- Lift core: the lift pit IS drawn and detailed (structural PDF typical detail; earlier searches read only the DXF):
+  ring 1.600 m2 gross, 1.100 m2 net of the 4 lift columns. Pit depth is not printed (lift supplier), so its concrete,
+  formwork and steel stay held. The freelancer's lift walls 2.400 m3 count the 4 column sections a second time (engine
+  right on ownership; his 1.50 m height unexplained). Roof water tank: not drawn, held, a designer item.
+- Windows: the two shuttered windows are 4.290 m2 each, measured between the shutter leaves (checker-verified; the
+  freelancer's 7.800 used the frame height). Windows like for like on 28 of 29: 88.081 vs 89.681 m2 (-1.78 %, a
+  development figure). One window's count is settled on every drawing and held only because of a render.
+- Block walls: the engine piece is merged: established net 337.412 m2, 58.366 m3 on the measured walls (white blocks
+  303.1 / 394.7 units by your supplier data), the rest held with named bounds; a task now closes those bounds.
+- Foundation levels: the unread '2' under every footing is a 2 cm membrane (5 cm screed / 2 cm membrane / 10 cm blinding,
+  checker read it from the vector PDF): footing bottom = formation + 0.17 m. The formation itself and the existing ground
+  level are still not printed (your rule: 1.5 m is a minimum below existing ground), so excavation depths stay held.
+  New: 6 lowered wet-room slab panels (every sanitary group sits on one), drop not printed; now a task.
+- Columns re-measured by the checker: 23 of 59, all 0.0 % (line still partially verified).
+Released numbers: unchanged.
+
+Earlier (04:20 -> 08:20):
 - Lift and roof water tank: an element-by-element, storey-by-storey inventory of both drawing sets found that the lift
   core (its footing, walls and pit) and the roof water tank have NO structural BOQ line in any engine state, while the
   freelancer prices the lift walls. The pit depth and walls are not printed (held, never 0). A task now builds their
@@ -241,18 +269,20 @@ Not measured, and paused by your order (Alsenan first).
   development lengths, so a steel ledger is not complete until it has read them.
 
 ## Being worked on now
-- Checker: the block-wall engine piece (its one fix), then one column reference re-measure per run (17 of 59 done), then
-  the next candidate step the moment it arrives.
-- Structural (worker 1): lift core and roof water tank lines from what the drawings print; the neck columns from footing
-  top to ground-beam underside (released 10.855 vs freelancer 8.805 m3 reconciled); structural levels from the PDF
-  sections and each footing; then the angled strap beams; excavation after the levels.
-- Architecture and finishes (worker 2): close the last held openings (one count, two shuttered windows, three leafless
-  openings and what is built above them); settle the three wet / dry review sets so the floor-area line can be scored;
-  wet-room wall tiles room by room on your 3.65 / 3.35 m rule; then black block units.
-- Integration (worker 3): candidate step 7 (verified pool and dome shells in, the dome misread removed), the stricter
-  candidate-diff tool, the coverage registry showing what the candidate carries, and three infrastructure follow-ups;
-  then formwork and railings, then plaster and paint as candidate lines (so their scoreboard lines can finally be scored),
-  then the slab faces.
+- Checker: candidate step 7 (verified pool and dome shells in, the double-billed dome removed) and the floor-area wet /
+  dry settlement first; then one column reference re-measure per run (23 of 59 done).
+- First for whichever worker runs next: repair the safety test that went red with the block-wall merge (it compares a
+  fixed list of merges against the live code; no quantity affected).
+- Structural (worker 1): the neck columns from footing top to ground-beam underside (released 10.855 vs freelancer 8.805
+  m3 reconciled); the 6 lowered wet-room slab panels (area, step, drop; reconciled with the earlier sunken-panel record);
+  the floor build-up between finished floor and structural slab, from the drawings beside your own 0.10 m finishing
+  value; then the angled strap beams; excavation after the necks (depth held until the existing ground level is known).
+- Architecture and finishes (worker 2): wet-room wall tiles room by room on your 3.65 / 3.35 m rule; the block walls'
+  held bounds (45-degree wall ends, what is built above the leafless openings); an independent wall census to check the
+  block engine; then black block units.
+- Integration (worker 3): the safety-test repair if nobody took it, the stricter candidate-diff tool, the coverage
+  registry showing what the candidate carries, three infrastructure follow-ups; then formwork and railings, then plaster
+  and paint as candidate lines, then the slab faces.
 
 ## What is missing
 - Window heads: 3 of 29 windows still held (one count, two shuttered) and three leafless openings (being closed); every door but the main entrance (2.20 m by your Q-55 C, stated as assumed).
@@ -269,10 +299,8 @@ Not measured, and paused by your order (Alsenan first).
 - The Kuwait specification chapters on waterproofing, floors, wall tiles and paint (file too big: parts needed).
 
 ## Waiting for the owner
-- No decision needed today. Nothing the team found since 04:20 meets the standard's conditions for asking you (the lift pit, tank and neck ends are designer / drawing items still under investigation).
-- Designer items to forward when you choose (DESIGNER_CLARIFICATIONS.md): footing bar leg diameter, pool steel (the p.7
-  detail is two-zone, your floor is flat), the three parapet types ST p.14 leaves to the architectural detail, and the
-  earlier D-39 .. D-58; new D-59 .. D-62: nine small squares on two elevations, the 1.20 m south-west opening's head, the two dates in the structural set, and the sheets never issued (site, roof, schedules, ceilings, MEP).
-- For the dome change: the consultant must approve the opening geometry, edge / ring structure, load path, waterproofing
-  upstands and the skylight or open-area system before scenario S1 can be priced as approved (list in progress).
-- Upload the Kuwait specification chapters 07100, 09200, 09300, 09400, 09900 as separate PDFs under 6 MB.
+- No decision needed today. Nothing found since 08:20 meets the standard's conditions for asking you: the pit depth,
+  tank, sunken-panel drops and floor build-up are designer / drawing items already listed for the designer.
+- One thing only you can do, if it exists: a site / plot level survey (existing ground levels). Your rule fixes the
+  excavation as at least 1.5 m below the EXISTING ground, and no issued sheet prints that ground level, so every
+  excavation depth stays held until it is known.

@@ -36,6 +36,35 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
    commit. Decision: board-only handoffs are verified as hand evidence (the verifier re-reads the cited notes), and the
    next task on the topic writes the files (T-117); a run with no line stays a NEEDS FIXING item for the owner's setting.
 
+## 2026-10-23 10:20 (lead run)
+
+- **Worker 1 08:20 -> 08:42**: T-204 MERGED 4fbf7627 (Checker 09:11) -> **WORKED** (lift pit drawn and detailed on ST PDF
+  p.14, missed by the DXF-only search: ring 1.600 m2 gross / 1.100 m2 net of the 4 column sections, checker own 0.0 %;
+  freelancer lift walls 2.400 m3 bill 0.500 m2 of columns twice, ENGINE_RIGHT on ownership; pit depth 'as per lift
+  manufacturer' HELD; roof tank not drawn, HELD). Lessons row added (absence only after every format, incl. image-only PDF).
+- **Worker 2 08:40 -> 09:02**: T-207 MERGED e081911c -> **WORKED** (W11 / W12 4.290 m2 each between the shutter leaves,
+  checker VERIFIED, freelancer 7.800 used the frame height: ENGINE_RIGHT; windows like for like 88.081 vs 89.681 m2 on 28,
+  -1.78 %; W02 one opening on every drawing, HELD on the render only; P-GF-05 needs a lintel). Remaining masonry above
+  the leafless openings -> T-215.
+- **Worker 2 07:40 -> 07:56 / Checker 08:51 -> 09:11**: T-108 r2 MERGED 01eeafd0 -> engineering **WORKED** (2F-W08
+  11.400 / 9.640 m2 and GF-W22 2.887 m own = ledger 0.0 %; established net 337.412 m2, 58.366 m3; junction piece inside a
+  HELD bound, G-T108-1), process **PARTIAL**: the merge turned tests/t202_guard_sweep red on the working branch (Checker
+  09:59 G-T206-2; no quantity effect). Decision: gate-0 fix row T-212 (first in lane I, any worker may claim it); gate b
+  now runs the guard tests on the head MERGED with the working branch (VERIFIER QUEUE 10:20 + lessons row); held bounds
+  -> T-215.
+- **Worker 1 09:20 -> 09:42 / Checker 09:51 -> 09:59**: T-206 MERGED d5df7d1f -> **WORKED** as an investigation (footing
+  underlay 5 / 2 / 10 cm read from the vector PDF, checker own read: footing bottom = formation + 0.17; formation and
+  existing ground still HELD by Q-21 C; 6 sunken wet panels found, drop not printed; B20 / B23 condition NOT PROVEN).
+  Decisions: T-213 (sunken panels, reconciled with T-139 / D-41: GF + 1F there vs 1F + 2F here), T-214 (floor build-up,
+  drawing-derived beside Q-43's 0.10 within its own scope; D-40 / D-39 not duplicated); T-170 now after T-205.
+- **Worker 3 09:01 -> 10:05**: T-193 (V3.0.7) READY -> pending Gate B (first in the 10:49 run). **Worker 2 09:40 ->
+  10:02**: T-208 READY -> pending Gate A (second).
+- Checker T-180 slot: columns 17 -> 23 / 59 own-measured, all 0.0 % (COL-2F-51 / -53, COL-GF-06, COL-GF-15, COL-GF-18,
+  COL-2F-55); line PARTIALLY VERIFIED.
+- **Recurring cause 7 RECURRED** (new module trips a whole-repo guard test the task's own tests do not run): this time the
+  test passed on the task head and failed only on the merged head. Decision above; the Checker's own gate b is part of
+  the fix, not only the worker's.
+
 ## 2026-10-23 08:20 (lead run)
 
 - **Checker 05:51 -> 06:28**: T-187 (Gate B, V3.0.6) MERGED 8a6d604a -> **WORKED** (own reproduction of three runs,
@@ -587,34 +616,3 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
   (STARTED written, 9 min, no claim, no final line) although claimable TODO existed for both (T-127 / T-128 / T-125;
   T-130). Cause NOT KNOWN from the repository. Decision: no board change can fix it; P-01 (owner's Test B + repo-attached
   config) stays the fix; reported under NEEDS FIXING.
-
-## 2026-10-20 20:10 (lead run)
-
-- **T-120 membrane purchase version V2.13: WORKED (MERGED 2264938, verifier 17:49 run).** Opt-in candidate; the checker
-  re-placed all 39 pieces of the 2F roof itself (17 rolls under Q-58 A, 0 overlaps), pantry 13.50 m2 / 2 rolls, wet 21.
-  Released numbers unchanged by design. Decision: V2.13 is the base of the ONE consolidated candidate V3.0 (T-131, lane I);
-  no V2.14.
-- **T-121 ceilings over outside air: PARTIAL (REJECTED, gate d).** Census reproduced and the passage roofing confirmed,
-  but the pool-court void was the route G face (4.373 m2), not the drawn opening (3.689 m2): PL-03 14.020 -> 14.704 m2,
-  total 45.632 -> 46.316 m2; the gross 18.393 was never measured by hand. Cause: a CAD face used as the "hand check" (the
-  same source twice). Decision: rework T-127 (lane A) with the hand gross from printed dimensions and the Q-68 C finish
-  search.
-- **T-122 1F living floor and landing under Q-66 B: WORKED pending the checker (READY f85fe97).** Porcelain 33.594 ..
-  33.711 m2 (hand 33.713; corrected its own earlier 33.584 / 34.104), landing marble once 4.875, stair marble 44.365; the
-  0.4025 m2 strip is marble in every reading. Every value cites Q-56 / Q-66. Decision: verifier order 1; Q-70 (answered A
-  conditional) and the strip / D-23 -> T-129.
-- **T-123 GF facade under Q-64 B / Q-67: WORKED pending the checker (READY 54425be).** Q-67 condition met on the drawings
-  (nothing across the 1.20 m mouth, far end closed); billable stays 105.887 m until a reveal line holds the 0.100 m (then
-  105.787); passage roofed 5.640 m2 (4.080 under 1F + 1.560 GF roof): confirms T-121, contradicts T-109's "open to sky".
-  New finding: engine passage spaces leave out 0.480 m2 (two 0.20 strips at B5 / B1), cause not traced -> T-131 lists it
-  as a held item. Decision: verifier order 2; then V3.0 carries perimeter / billable apart.
-- **T-124 offcut booked once: WORKED pending the checker (READY a582f32).** New opt-in fold V5 books each leftover once;
-  every released / proven Alsenan count VALID (wet 21, roofs 6 + 8, 2F 17); synthetic V3 claims corrected 1 -> 2 and
-  8 -> 9; one unchosen V4 2F layout (19) held. Decision: verifier order 3; the audit joins V3.0 (no method V2.14).
-- **Team: verifier silent twice (18:49, 19:49: 2-3 minute runs, no STARTED line, no commit) and worker 3 18:59 silent.**
-  Cause NOT KNOWN (no transcript). Decision: READY order written on the board; the fix is the owner's repo-attached
-  migration (P-01); reported under NEEDS FIXING.
-
-Recurring cause 9 (new 20:10): **a CAD face checked against itself.** T-121's "hand" pool void was the engine's own face.
-Every hand check must come from printed dimensions or a separate reading (checker rule 1 of the 20:10 decision).
-
