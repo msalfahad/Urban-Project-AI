@@ -1,4 +1,48 @@
 {
+ "candidate_check": {
+  "floor_key_by_item_m2": {
+   "FIN.FLOOR.PORCELAIN": 323.143158,
+   "FIN.FLOOR.WET_TILE": 62.490709
+  },
+  "floor_key_total_m2": 385.633867,
+  "method": "ARCH_TAKEOFF_V2.11 (opt-in; WET_ROOM_EVIDENCE_V1), same drawings, conventions V6, as-of 2026-10-22, no profile / facts / project, engine e081911c, worker 2 run 2026-10-23",
+  "spaces": {
+   "GF-R8496F0": {
+    "decision": "DECIDED_BY_EVIDENCE (ARCH_TAKEOFF_V2.11, WET_ROOM_EVIDENCE_V1 BASIN_ONLY_HAND_WASH; UP-REVIEW-001 closed): the space is measured as its WET_",
+    "evidence_state": "PROVISIONAL",
+    "item_code": "FIN.FLOOR.WET_TILE",
+    "m2": 3.1325
+   },
+   "GF-RA3AD49": {
+    "decision": "ATTACHED_THROUGH_OPEN_PASSAGE: the floor includes 1.36 m2 of unlabelled floor reached only through open passage(s) OP-002 (no door or glazin",
+    "evidence_state": "PROVISIONAL",
+    "item_code": "FIN.FLOOR.PORCELAIN",
+    "m2": 9.630001
+   },
+   "GF-RD36087": {
+    "decision": "DECIDED_BY_EVIDENCE (ARCH_TAKEOFF_V2.11, WET_ROOM_EVIDENCE_V1 BASIN_ONLY_HAND_WASH; UP-REVIEW-001 closed): the space is measured as its WET_",
+    "evidence_state": "PROVISIONAL",
+    "item_code": "FIN.FLOOR.WET_TILE",
+    "m2": 1.485
+   },
+   "GF-RDBD4F9": {
+    "decision": "DECIDED_BY_EVIDENCE (ARCH_TAKEOFF_V2.11, WET_ROOM_EVIDENCE_V1 LABEL_WET; UP-REVIEW-001 closed): the space is measured as its WET_SCOPE scena",
+    "evidence_state": "PROVISIONAL",
+    "item_code": "FIN.FLOOR.WET_TILE",
+    "m2": 4.730695
+   },
+   "GF-STRIP-OP-020": {
+    "evidence_state": "BLOCKED_RFI",
+    "item_code": "ARCH.THRESHOLD",
+    "m2": null
+   },
+   "GF-STRIP-OP-027": {
+    "evidence_state": "BLOCKED_RFI",
+    "item_code": "ARCH.THRESHOLD",
+    "m2": null
+   }
+  }
+ },
  "conditional_sets": [
   {
    "by_scenario": {
@@ -180,13 +224,173 @@
  },
  "lines": [
   {
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "GF",
+   "item_code": "ARCH.THRESHOLD",
+   "line_id": "L-90894abcef5bd0b9fd5d",
+   "measured_net": null,
+   "room_id": "GF-STRIP-OP-020",
+   "room_name_en": "threshold strip OP-020",
+   "unit": "m2"
+  },
+  {
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "GF",
+   "item_code": "ARCH.THRESHOLD",
+   "line_id": "L-5a5ab5f7629caa60e23e",
+   "measured_net": null,
+   "room_id": "GF-STRIP-OP-027",
+   "room_name_en": "threshold strip OP-027",
+   "unit": "m2"
+  },
+  {
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "item_code": "FIN.FLOOR.PORCELAIN",
+   "line_id": "L-7c284600aa3b73d0dac2",
+   "measured_net": 16.34,
+   "room_id": "1F-R0E919A",
+   "room_name_en": "Master bedroom",
+   "unit": "m2"
+  },
+  {
    "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "FIN.FLOOR.PORCELAIN",
+   "line_id": "L-9a22d1b81ee426e86af1",
+   "measured_net": 19.016545,
+   "room_id": "1F-R3CFCFD",
+   "room_name_en": "Master bedroom",
+   "unit": "m2"
+  },
+  {
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "item_code": "FIN.FLOOR.PORCELAIN",
+   "line_id": "L-3086bd9835d361d8dfa6",
+   "measured_net": 44.869353,
+   "room_id": "1F-R78C367",
+   "room_name_en": "Living / saloon",
+   "unit": "m2"
+  },
+  {
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "item_code": "FIN.FLOOR.PORCELAIN",
+   "line_id": "L-b998bb18d763f9d0999a",
+   "measured_net": 19.05,
+   "room_id": "1F-RB72F22",
+   "room_name_en": "Master bedroom",
+   "unit": "m2"
+  },
+  {
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "item_code": "FIN.FLOOR.PORCELAIN",
+   "line_id": "L-135e375eea5da9a5a545",
+   "measured_net": 18.215001,
+   "room_id": "1F-RED0D19",
+   "room_name_en": "Master bedroom",
+   "unit": "m2"
+  },
+  {
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "item_code": "FIN.FLOOR.PORCELAIN",
+   "line_id": "L-8cc7b4c79edf77348781",
+   "measured_net": 0.135,
+   "room_id": "1F-STRIP-OP-005",
+   "room_name_en": "doorway OP-005",
+   "unit": "m2"
+  },
+  {
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "item_code": "FIN.FLOOR.PORCELAIN",
+   "line_id": "L-ff9963470062e827f3f7",
+   "measured_net": 0.135,
+   "room_id": "1F-STRIP-OP-006",
+   "room_name_en": "doorway OP-006",
+   "unit": "m2"
+  },
+  {
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "item_code": "FIN.FLOOR.PORCELAIN",
+   "line_id": "L-51a0d437797dddfb180e",
+   "measured_net": 0.2,
+   "room_id": "1F-STRIP-OP-007",
+   "room_name_en": "doorway OP-007",
+   "unit": "m2"
+  },
+  {
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "item_code": "FIN.FLOOR.PORCELAIN",
+   "line_id": "L-c2e57836761709440929",
+   "measured_net": 0.15,
+   "room_id": "1F-STRIP-OP-011",
+   "room_name_en": "doorway OP-011",
+   "unit": "m2"
+  },
+  {
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "item_code": "FIN.FLOOR.PORCELAIN",
+   "line_id": "L-3187c9c46de1cd9411af",
+   "measured_net": 0.15,
+   "room_id": "1F-STRIP-OP-020",
+   "room_name_en": "doorway OP-020",
+   "unit": "m2"
+  },
+  {
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "2F",
+   "item_code": "FIN.FLOOR.PORCELAIN",
+   "line_id": "L-bda8bbd6e2aafb6484a6",
+   "measured_net": 19.350001,
+   "room_id": "2F-R1DB2D2",
+   "room_name_en": "Maid room",
+   "unit": "m2"
+  },
+  {
+   "evidence_state": "PROVISIONAL",
+   "floor": "2F",
+   "item_code": "FIN.FLOOR.PORCELAIN",
+   "line_id": "L-f7dc931e2c059cda77df",
+   "measured_net": 0.15,
+   "room_id": "2F-STRIP-OP-001",
+   "room_name_en": "doorway OP-001",
+   "unit": "m2"
+  },
+  {
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "2F",
+   "item_code": "FIN.FLOOR.PORCELAIN",
+   "line_id": "L-22c46d456725a74b5ff7",
+   "measured_net": 0.2,
+   "room_id": "2F-STRIP-OP-002",
+   "room_name_en": "doorway OP-002",
+   "unit": "m2"
+  },
+  {
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "2F",
+   "item_code": "FIN.FLOOR.PORCELAIN",
+   "line_id": "L-3d819507767a6ed581ed",
+   "measured_net": 0.18,
+   "room_id": "2F-STRIP-OP-007",
+   "room_name_en": "doorway OP-007",
+   "unit": "m2"
+  },
+  {
+   "evidence_state": "SOURCE_DERIVED",
    "floor": "GF",
    "item_code": "FIN.FLOOR.PORCELAIN",
-   "line_id": "L-83d0c772c8dde5783a3e",
-   "measured_net": 118.733284,
-   "room_id": "GF-RC99C2A",
-   "room_name_en": "Dining + Living / saloon + Pantry + Reception",
+   "line_id": "L-935d597989f516b65879",
+   "measured_net": 7.875,
+   "room_id": "GF-R51E127",
+   "room_name_en": "Driver room",
    "unit": "m2"
   },
   {
@@ -220,36 +424,6 @@
    "unit": "m2"
   },
   {
-   "evidence_state": "SOURCE_DERIVED",
-   "floor": "GF",
-   "item_code": "FIN.FLOOR.PORCELAIN",
-   "line_id": "L-935d597989f516b65879",
-   "measured_net": 7.875,
-   "room_id": "GF-R51E127",
-   "room_name_en": "Driver room",
-   "unit": "m2"
-  },
-  {
-   "evidence_state": "SOURCE_DERIVED",
-   "floor": "GF",
-   "item_code": "FIN.FLOOR.WET_TILE",
-   "line_id": "L-1795ba2716eb8c5d9c16",
-   "measured_net": 3.717683,
-   "room_id": "GF-RD6F891",
-   "room_name_en": "Bathroom / W.C.",
-   "unit": "m2"
-  },
-  {
-   "evidence_state": "SOURCE_DERIVED",
-   "floor": "GF",
-   "item_code": "FIN.FLOOR.WET_TILE",
-   "line_id": "L-9871880b0504baa6a569",
-   "measured_net": 3.375,
-   "room_id": "GF-RB62B55",
-   "room_name_en": "Bathroom / W.C.",
-   "unit": "m2"
-  },
-  {
    "evidence_state": "PROVISIONAL",
    "floor": "GF",
    "item_code": "FIN.FLOOR.PORCELAIN",
@@ -260,43 +434,13 @@
    "unit": "m2"
   },
   {
-   "evidence_state": "SOURCE_DERIVED",
+   "evidence_state": "PROVISIONAL",
    "floor": "GF",
-   "item_code": "FIN.FLOOR.WET_TILE",
-   "line_id": "L-64d205f757e1613de822",
-   "measured_net": 2.675221,
-   "room_id": "GF-RF38DAF",
-   "room_name_en": "Bathroom / W.C.",
-   "unit": "m2"
-  },
-  {
-   "evidence_state": "SOURCE_DERIVED",
-   "floor": "GF",
-   "item_code": "FIN.FLOOR.WET_TILE",
-   "line_id": "L-e0488cdfb539eb07cace",
-   "measured_net": 2.36761,
-   "room_id": "GF-RB28769",
-   "room_name_en": "Bathroom / W.C.",
-   "unit": "m2"
-  },
-  {
-   "evidence_state": "SOURCE_DERIVED",
-   "floor": "GF",
-   "item_code": "FIN.FLOOR.WET_TILE",
-   "line_id": "L-27250ed421b69c5ec7f9",
-   "measured_net": 2.3625,
-   "room_id": "GF-RDF7D28",
-   "room_name_en": "Bathroom / W.C.",
-   "unit": "m2"
-  },
-  {
-   "evidence_state": "SOURCE_DERIVED",
-   "floor": "GF",
-   "item_code": "FIN.FLOOR.WET_TILE",
-   "line_id": "L-662eb372b22c0ec99ef2",
-   "measured_net": 1.95,
-   "room_id": "GF-RFAD3C4",
-   "room_name_en": "Bathroom / W.C.",
+   "item_code": "FIN.FLOOR.PORCELAIN",
+   "line_id": "L-83d0c772c8dde5783a3e",
+   "measured_net": 118.733284,
+   "room_id": "GF-RC99C2A",
+   "room_name_en": "Dining + Living / saloon + Pantry + Reception",
    "unit": "m2"
   },
   {
@@ -400,26 +544,6 @@
    "unit": "m2"
   },
   {
-   "evidence_state": "SOURCE_DERIVED",
-   "floor": "GF",
-   "item_code": "FIN.MARBLE.THRESHOLD",
-   "line_id": "L-efbdc3e93e21a7028742",
-   "measured_net": 0.12,
-   "room_id": "GF-STRIP-OP-017",
-   "room_name_en": "doorway OP-017",
-   "unit": "m2"
-  },
-  {
-   "evidence_state": "SOURCE_DERIVED",
-   "floor": "GF",
-   "item_code": "FIN.MARBLE.THRESHOLD",
-   "line_id": "L-7d95f49cbcd4756e3e5a",
-   "measured_net": 0.12,
-   "room_id": "GF-STRIP-OP-018",
-   "room_name_en": "doorway OP-018",
-   "unit": "m2"
-  },
-  {
    "evidence_state": "PROVISIONAL",
    "floor": "GF",
    "item_code": "FIN.FLOOR.PORCELAIN",
@@ -431,92 +555,12 @@
   },
   {
    "evidence_state": "SOURCE_DERIVED",
-   "floor": "GF",
-   "item_code": "FIN.MARBLE.THRESHOLD",
-   "line_id": "L-8c790f53e86c9fc78648",
-   "measured_net": 0.2,
-   "room_id": "GF-STRIP-OP-025",
-   "room_name_en": "doorway OP-025",
-   "unit": "m2"
-  },
-  {
-   "evidence_state": "SOURCE_DERIVED",
-   "floor": "GF",
-   "item_code": "FIN.MARBLE.THRESHOLD",
-   "line_id": "L-a64674c2b51b232fdd27",
-   "measured_net": 0.12,
-   "room_id": "GF-STRIP-OP-026",
-   "room_name_en": "doorway OP-026",
-   "unit": "m2"
-  },
-  {
-   "evidence_state": "SOURCE_DERIVED",
-   "floor": "1F",
-   "item_code": "FIN.FLOOR.PORCELAIN",
-   "line_id": "L-3086bd9835d361d8dfa6",
-   "measured_net": 44.869353,
-   "room_id": "1F-R78C367",
-   "room_name_en": "Living / saloon",
-   "unit": "m2"
-  },
-  {
-   "evidence_state": "SOURCE_DERIVED",
-   "floor": "1F",
-   "item_code": "FIN.FLOOR.PORCELAIN",
-   "line_id": "L-b998bb18d763f9d0999a",
-   "measured_net": 19.05,
-   "room_id": "1F-RB72F22",
-   "room_name_en": "Master bedroom",
-   "unit": "m2"
-  },
-  {
-   "evidence_state": "PROVISIONAL",
-   "floor": "1F",
-   "item_code": "FIN.FLOOR.PORCELAIN",
-   "line_id": "L-9a22d1b81ee426e86af1",
-   "measured_net": 19.016545,
-   "room_id": "1F-R3CFCFD",
-   "room_name_en": "Master bedroom",
-   "unit": "m2"
-  },
-  {
-   "evidence_state": "SOURCE_DERIVED",
-   "floor": "1F",
-   "item_code": "FIN.FLOOR.PORCELAIN",
-   "line_id": "L-135e375eea5da9a5a545",
-   "measured_net": 18.215001,
-   "room_id": "1F-RED0D19",
-   "room_name_en": "Master bedroom",
-   "unit": "m2"
-  },
-  {
-   "evidence_state": "SOURCE_DERIVED",
-   "floor": "1F",
-   "item_code": "FIN.FLOOR.PORCELAIN",
-   "line_id": "L-7c284600aa3b73d0dac2",
-   "measured_net": 16.34,
-   "room_id": "1F-R0E919A",
-   "room_name_en": "Master bedroom",
-   "unit": "m2"
-  },
-  {
-   "evidence_state": "SOURCE_DERIVED",
    "floor": "1F",
    "item_code": "FIN.FLOOR.WET_TILE",
    "line_id": "L-ec0058123115a06f21bc",
    "measured_net": 10.151,
    "room_id": "1F-R26FA0D",
    "room_name_en": "Laundry",
-   "unit": "m2"
-  },
-  {
-   "evidence_state": "SOURCE_DERIVED",
-   "floor": "1F",
-   "item_code": "FIN.FLOOR.WET_TILE",
-   "line_id": "L-44fc9404aee73dbf047d",
-   "measured_net": 5.0225,
-   "room_id": "1F-R8BDA49",
-   "room_name_en": "Bathroom / W.C.",
    "unit": "m2"
   },
   {
@@ -543,6 +587,26 @@
    "evidence_state": "SOURCE_DERIVED",
    "floor": "1F",
    "item_code": "FIN.FLOOR.WET_TILE",
+   "line_id": "L-96190f5015aa79a6a5ce",
+   "measured_net": 2.646,
+   "room_id": "1F-R52AC05",
+   "room_name_en": "Bathroom / W.C.",
+   "unit": "m2"
+  },
+  {
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "item_code": "FIN.FLOOR.WET_TILE",
+   "line_id": "L-44fc9404aee73dbf047d",
+   "measured_net": 5.0225,
+   "room_id": "1F-R8BDA49",
+   "room_name_en": "Bathroom / W.C.",
+   "unit": "m2"
+  },
+  {
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "item_code": "FIN.FLOOR.WET_TILE",
    "line_id": "L-db09a074630b1c0d27eb",
    "measured_net": 3.5775,
    "room_id": "1F-RED23B8",
@@ -551,11 +615,71 @@
   },
   {
    "evidence_state": "SOURCE_DERIVED",
-   "floor": "1F",
+   "floor": "2F",
    "item_code": "FIN.FLOOR.WET_TILE",
-   "line_id": "L-96190f5015aa79a6a5ce",
-   "measured_net": 2.646,
-   "room_id": "1F-R52AC05",
+   "line_id": "L-a01419871068e5c4f936",
+   "measured_net": 5.55,
+   "room_id": "2F-RE83BED",
+   "room_name_en": "Bathroom / W.C.",
+   "unit": "m2"
+  },
+  {
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "item_code": "FIN.FLOOR.WET_TILE",
+   "line_id": "L-e0488cdfb539eb07cace",
+   "measured_net": 2.36761,
+   "room_id": "GF-RB28769",
+   "room_name_en": "Bathroom / W.C.",
+   "unit": "m2"
+  },
+  {
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "item_code": "FIN.FLOOR.WET_TILE",
+   "line_id": "L-9871880b0504baa6a569",
+   "measured_net": 3.375,
+   "room_id": "GF-RB62B55",
+   "room_name_en": "Bathroom / W.C.",
+   "unit": "m2"
+  },
+  {
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "item_code": "FIN.FLOOR.WET_TILE",
+   "line_id": "L-1795ba2716eb8c5d9c16",
+   "measured_net": 3.717683,
+   "room_id": "GF-RD6F891",
+   "room_name_en": "Bathroom / W.C.",
+   "unit": "m2"
+  },
+  {
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "item_code": "FIN.FLOOR.WET_TILE",
+   "line_id": "L-27250ed421b69c5ec7f9",
+   "measured_net": 2.3625,
+   "room_id": "GF-RDF7D28",
+   "room_name_en": "Bathroom / W.C.",
+   "unit": "m2"
+  },
+  {
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "item_code": "FIN.FLOOR.WET_TILE",
+   "line_id": "L-64d205f757e1613de822",
+   "measured_net": 2.675221,
+   "room_id": "GF-RF38DAF",
+   "room_name_en": "Bathroom / W.C.",
+   "unit": "m2"
+  },
+  {
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "item_code": "FIN.FLOOR.WET_TILE",
+   "line_id": "L-662eb372b22c0ec99ef2",
+   "measured_net": 1.95,
+   "room_id": "GF-RFAD3C4",
    "room_name_en": "Bathroom / W.C.",
    "unit": "m2"
   },
@@ -567,36 +691,6 @@
    "measured_net": 0.12,
    "room_id": "1F-STRIP-OP-004",
    "room_name_en": "doorway OP-004",
-   "unit": "m2"
-  },
-  {
-   "evidence_state": "SOURCE_DERIVED",
-   "floor": "1F",
-   "item_code": "FIN.FLOOR.PORCELAIN",
-   "line_id": "L-8cc7b4c79edf77348781",
-   "measured_net": 0.135,
-   "room_id": "1F-STRIP-OP-005",
-   "room_name_en": "doorway OP-005",
-   "unit": "m2"
-  },
-  {
-   "evidence_state": "SOURCE_DERIVED",
-   "floor": "1F",
-   "item_code": "FIN.FLOOR.PORCELAIN",
-   "line_id": "L-ff9963470062e827f3f7",
-   "measured_net": 0.135,
-   "room_id": "1F-STRIP-OP-006",
-   "room_name_en": "doorway OP-006",
-   "unit": "m2"
-  },
-  {
-   "evidence_state": "SOURCE_DERIVED",
-   "floor": "1F",
-   "item_code": "FIN.FLOOR.PORCELAIN",
-   "line_id": "L-51a0d437797dddfb180e",
-   "measured_net": 0.2,
-   "room_id": "1F-STRIP-OP-007",
-   "room_name_en": "doorway OP-007",
    "unit": "m2"
   },
   {
@@ -622,16 +716,6 @@
   {
    "evidence_state": "SOURCE_DERIVED",
    "floor": "1F",
-   "item_code": "FIN.FLOOR.PORCELAIN",
-   "line_id": "L-c2e57836761709440929",
-   "measured_net": 0.15,
-   "room_id": "1F-STRIP-OP-011",
-   "room_name_en": "doorway OP-011",
-   "unit": "m2"
-  },
-  {
-   "evidence_state": "SOURCE_DERIVED",
-   "floor": "1F",
    "item_code": "FIN.MARBLE.THRESHOLD",
    "line_id": "L-2d6ca5c1d6e22471c775",
    "measured_net": 0.12,
@@ -651,56 +735,6 @@
   },
   {
    "evidence_state": "SOURCE_DERIVED",
-   "floor": "1F",
-   "item_code": "FIN.FLOOR.PORCELAIN",
-   "line_id": "L-3187c9c46de1cd9411af",
-   "measured_net": 0.15,
-   "room_id": "1F-STRIP-OP-020",
-   "room_name_en": "doorway OP-020",
-   "unit": "m2"
-  },
-  {
-   "evidence_state": "SOURCE_DERIVED",
-   "floor": "2F",
-   "item_code": "FIN.FLOOR.PORCELAIN",
-   "line_id": "L-bda8bbd6e2aafb6484a6",
-   "measured_net": 19.350001,
-   "room_id": "2F-R1DB2D2",
-   "room_name_en": "Maid room",
-   "unit": "m2"
-  },
-  {
-   "evidence_state": "SOURCE_DERIVED",
-   "floor": "2F",
-   "item_code": "FIN.FLOOR.WET_TILE",
-   "line_id": "L-a01419871068e5c4f936",
-   "measured_net": 5.55,
-   "room_id": "2F-RE83BED",
-   "room_name_en": "Bathroom / W.C.",
-   "unit": "m2"
-  },
-  {
-   "evidence_state": "PROVISIONAL",
-   "floor": "2F",
-   "item_code": "FIN.FLOOR.PORCELAIN",
-   "line_id": "L-f7dc931e2c059cda77df",
-   "measured_net": 0.15,
-   "room_id": "2F-STRIP-OP-001",
-   "room_name_en": "doorway OP-001",
-   "unit": "m2"
-  },
-  {
-   "evidence_state": "SOURCE_DERIVED",
-   "floor": "2F",
-   "item_code": "FIN.FLOOR.PORCELAIN",
-   "line_id": "L-22c46d456725a74b5ff7",
-   "measured_net": 0.2,
-   "room_id": "2F-STRIP-OP-002",
-   "room_name_en": "doorway OP-002",
-   "unit": "m2"
-  },
-  {
-   "evidence_state": "SOURCE_DERIVED",
    "floor": "2F",
    "item_code": "FIN.MARBLE.THRESHOLD",
    "line_id": "L-63fae73fed4206a053e4",
@@ -711,12 +745,42 @@
   },
   {
    "evidence_state": "SOURCE_DERIVED",
-   "floor": "2F",
-   "item_code": "FIN.FLOOR.PORCELAIN",
-   "line_id": "L-3d819507767a6ed581ed",
-   "measured_net": 0.18,
-   "room_id": "2F-STRIP-OP-007",
-   "room_name_en": "doorway OP-007",
+   "floor": "GF",
+   "item_code": "FIN.MARBLE.THRESHOLD",
+   "line_id": "L-efbdc3e93e21a7028742",
+   "measured_net": 0.12,
+   "room_id": "GF-STRIP-OP-017",
+   "room_name_en": "doorway OP-017",
+   "unit": "m2"
+  },
+  {
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "item_code": "FIN.MARBLE.THRESHOLD",
+   "line_id": "L-7d95f49cbcd4756e3e5a",
+   "measured_net": 0.12,
+   "room_id": "GF-STRIP-OP-018",
+   "room_name_en": "doorway OP-018",
+   "unit": "m2"
+  },
+  {
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "item_code": "FIN.MARBLE.THRESHOLD",
+   "line_id": "L-8c790f53e86c9fc78648",
+   "measured_net": 0.2,
+   "room_id": "GF-STRIP-OP-025",
+   "room_name_en": "doorway OP-025",
+   "unit": "m2"
+  },
+  {
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "item_code": "FIN.MARBLE.THRESHOLD",
+   "line_id": "L-a64674c2b51b232fdd27",
+   "measured_net": 0.12,
+   "room_id": "GF-STRIP-OP-026",
+   "room_name_en": "doorway OP-026",
    "unit": "m2"
   }
  ],

@@ -43,8 +43,9 @@ PAIRS = [
     ("GF-BATHS", "GF", ["GF-RD6F891", "GF-RB62B55", "GF-RF38DAF", "GF-RB28769", "GF-RDF7D28", "GF-RFAD3C4"],
      [44, 45, 46, 47, 49, 50], "six W.C. faces (T-074 per room)", "AGREE (+0.6 %)"),
     ("GF-HANDWASH", "GF", ["COND:GF-RDBD4F9", "COND:GF-R8496F0", "COND:GF-RD36087"], [42, 43, 51],
-     "the three review sets bound WET by Q-06 A (this task); wet tile 9.348 + the two doorless passage strips 0.330 "
-     "(porcelain, PROVISIONAL, UP-THR-001 as the engine applies it)", "AGREE on class; area see SETS_T208.csv"),
+     "the three review sets bound WET by Q-06 A (this task): wet tile 9.348; the two doorless-passage closure strips "
+     "0.330 stay in their own ARCH.THRESHOLD lines (HELD, Q-S6-1), never in this key; his 3 rows 9.58 have no "
+     "dimensions", "AGREE on class; areas ENGINE_RIGHT on printed sizes (SETS_T208.csv)"),
     ("1F-LIVING", "1F", ["1F-R78C367"], [21], "engine living 44.869 = 33.594 porcelain + arrival landing 4.865 (Q-66 B) "
      "+ held strips 0.520 + stair footprint 5.890 (T-153 / T-116 / T-122); scope item S4 taken out first",
      "AGREE after S4 (+0.05 %)"),
@@ -135,7 +136,7 @@ def build():
         sets.append({"set_id": b["set_id"], "subject": b["subject"], "status": b["status"],
                      "scenario": b["scenario"], "rule": b["rule_id"], "reason": b["reason"],
                      "wet_tile_m2": _r(q.get("FIN.FLOOR.WET_TILE [m2]"), 6),
-                     "strip_porcelain_m2": _r(q.get("FIN.FLOOR.PORCELAIN [m2]", 0.0), 6),
+                     "closure_strip_m2_not_in_key": _r((b.get("closure_strip") or {}).get("m2"), 6),
                      "membrane_floor_m2": _r(q.get("FIN.WP.FLOOR [m2]"), 6),
                      "membrane_upturn_m2": _r(q.get("FIN.WP.WALL_UPTURN [m2]"), 6),
                      "boundary_confirmation": "yes" if b.get("boundary_confirmation") else "not needed",
@@ -162,6 +163,17 @@ def build():
         "like_for_like": {"diff_m2": _r(residual), "diff_pct": _r(100 * residual / (f_tot - scope_val["S1"] -
                                                                                      scope_val["S2"] - scope_val["S3"]), 2)},
         "engine_rows_sum_check_m2": _r(e_tot - line["total_m2"], 6),
+        "candidate_check": {"method": inp["candidate_check"]["method"],
+                            "floor_key_total_m2": inp["candidate_check"]["floor_key_total_m2"],
+                            "diff_vs_bound_released_m2": _r(inp["candidate_check"]["floor_key_total_m2"]
+                                                            - line["total_m2"], 6),
+                            "same_three_spaces_wet": all(inp["candidate_check"]["spaces"][b["subject"]]["item_code"]
+                                                         == "FIN.FLOOR.WET_TILE" and abs(inp["candidate_check"][
+                                                             "spaces"][b["subject"]]["m2"] - b["quantities"][
+                                                             "FIN.FLOOR.WET_TILE [m2]"]) < 1e-6
+                                                         for b in doc["bindings"])},
+        "closure_strips_in_threshold_lines": sorted(ln["room_id"] for ln in inp["lines"]
+                                                    if ln["item_code"] == "ARCH.THRESHOLD"),
         "wet": {"engine_released_m2": _r(wet_rel), "engine_with_sets_m2": _r(wet_all), "freelancer_m2": _r(f_wet, 2),
                 "diff_m2": _r(wet_all - f_wet), "kitchen_in_engine_porcelain_m2": _r(eng["GF-RA3AD49"]),
                 "diff_after_kitchen_class_m2": _r(wet_all + eng["GF-RA3AD49"] - f_wet)},

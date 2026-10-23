@@ -22,8 +22,9 @@ KEY = ("FIN.FLOOR.PORCELAIN [m2]", "FIN.FLOOR.WET_TILE [m2]")
 
 
 def room(rid, fixtures=("BASIN", "BASIN"), issue="WET_CLASSIFICATION_REVIEW (UP-WET-002): basin only; "
-         "UNLABELLED_SPACE: no room word", cls="UNLABELLED", codes=(), attached=(), conflict=None):
+         "UNLABELLED_SPACE: no room word", cls="UNLABELLED", codes=(), attached=(), conflict=None, closures=0):
     return {"room_id": rid, "floor": "GF", "class": cls, "codes": list(codes), "attached_cells": list(attached),
+            "door_closures": closures,
             "fixture_conflict": conflict, "issue": issue,
             "evidence": {"fixtures": [{"fixture": f} for f in fixtures]}}
 
@@ -64,6 +65,21 @@ def test_floor_line_hand_total_21_38():
     assert rows == [{"id": "COND:REVIEW_CLASSIFICATION:GF:L:FLOOR.INTERNAL", "key": "FLOOR.INTERNAL", "qty": 3.78,
                      "status": RS.ASSUMED, "rule_id": "Q-06 A", "items_absent_in_scenario": [],
                      "surface": "COND:REVIEW_CLASSIFICATION:GF:L"}]
+
+
+def test_closure_strip_counted_once_in_its_threshold_line():
+    """lobby with a doorless opening closed by a closure strip (door_closures 1): the WET scenario's porcelain 0.18 is
+    that strip, already its own threshold line: key = wet tile 3.60 only; total 14.00 + 3.60 + 3.60 = 21.20."""
+    rr = {"categories": {"CONDITIONAL": {"scenario_sets": [rset("L", LOBBY_WET, LOBBY_DRY)]}}}
+    doc = RS.bind_run(rr, [room("L", closures=1)])
+    b = doc["bindings"][0]
+    assert abs(b["closure_strip"]["m2"] - 0.18) < 1e-9 and "FIN.FLOOR.PORCELAIN [m2]" not in b["quantities"]
+    fl = RS.floor_line(lines(), doc, KEY)
+    assert fl["total_m2"] == 21.2 and fl["assumed_by_item"]["FIN.FLOOR.PORCELAIN [m2]"] == 0.0
+    rows = RS.key_rows(doc, "FLOOR.INTERNAL", KEY)
+    assert rows[0]["qty"] == 3.6 and rows[0]["items_absent_in_scenario"] == ["FIN.FLOOR.PORCELAIN [m2]"]
+    # a DRY binding would keep its porcelain (no closure moved): never applied to a dry scenario
+    assert RS.bind_set(rset("L", LOBBY_WET, LOBBY_DRY), room("L", closures=0))["closure_strip"] is None
 
 
 def test_arabic_hand_wash_code_allowed_but_other_label_held():

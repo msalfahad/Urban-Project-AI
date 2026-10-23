@@ -21,10 +21,13 @@ def test_committed_files_reproduce():
 def test_summary_figures():
     s = json.loads((HERE / "summary.json").read_text(encoding="utf-8"))
     assert s["review_sets"]["count"] == 3 and s["review_sets"]["bound"] == 3 and s["review_sets"]["held"] == []
-    assert s["engine_released_m2"] == 376.2857 and s["engine_assumed_owner_approved_m2"] == 9.6782
-    assert s["engine_total_m2"] == 385.9639 and s["reference_m2"] == 409.58
-    assert s["raw"]["diff_m2"] == -23.6161 and s["scope_items_m2"]["net"] == -23.9904
-    assert s["like_for_like"]["diff_m2"] == 0.3743
+    assert s["engine_released_m2"] == 376.2857 and s["engine_assumed_owner_approved_m2"] == 9.3482
+    assert s["engine_total_m2"] == 385.6339 and s["reference_m2"] == 409.58
+    assert s["raw"]["diff_m2"] == -23.9461 and s["scope_items_m2"]["net"] == -23.9904
+    assert s["like_for_like"]["diff_m2"] == 0.0443
+    # the candidate path (V2.11, wet_room_evidence) floors the same three spaces wet with the same total
+    assert s["candidate_check"]["diff_vs_bound_released_m2"] == 0.0 and s["candidate_check"]["same_three_spaces_wet"]
+    assert s["closure_strips_in_threshold_lines"] == ["GF-STRIP-OP-020", "GF-STRIP-OP-027"]
     assert s["without_boundary_confirmation_total_m2"] is None          # held, never a partial sum
     assert s["wet"]["diff_after_kitchen_class_m2"] == 0.1107
 

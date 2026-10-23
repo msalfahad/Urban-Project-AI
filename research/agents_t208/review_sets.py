@@ -33,6 +33,10 @@ HELD, never a scenario by default (and NEVER dry by default):
   not say a line is a finish boundary) unless a boundary confirmation names that space with its drawing check;
 - the chosen scenario is missing from the set, or the set is not mutually exclusive;
 - a key item is absent from the chosen scenario (that key's row only).
+One physical strip, one line: in a bound WET_SCOPE the porcelain of a space with a door closure is the closure strip of
+its doorless opening, which the run already carries as that opening's own ARCH.THRESHOLD line (finish held, Q-S6-1);
+it is moved to "closure_strip" and never added to the floor key (the candidate path ARCH_TAKEOFF_V2.11 with
+wet_room_evidence gives the same floor: wet tile only).
 Sets of any other kind (e.g. DOOR_OWNER_MINIMUM) are listed as ignored, never bound.
 
 Project-agnostic: no layer, room, coordinate or project name in code. A boundary confirmation is a project fact with
@@ -52,6 +56,7 @@ HELD = "HELD"
 REVIEW_KIND = "REVIEW_CLASSIFICATION"
 QUANTITY_STATES = ("MEASURED", "SOURCE_DERIVED", "PROVISIONAL")      # tools/alsenan_keymap.py, UP-QTY-STATUS-001
 
+STRIP_ITEM = "FIN.FLOOR.PORCELAIN [m2]"
 BASIN = "BASIN"
 NON_BASIN_FIXTURES = ("WC", "SHOWER", "BATH", "URINAL", "BIDET", "KITCHEN_SINK", "WASHING_MACHINE",
                       "KITCHEN_APPLIANCE", "IRONING_BOARD")
@@ -82,7 +87,8 @@ def space_profile(room):
     return {"room_id": room.get("room_id"), "floor": room.get("floor"), "class": room.get("class"),
             "codes": list(room.get("codes") or []), "fixture_kinds": kinds,
             "fixture_conflict": room.get("fixture_conflict"), "attached_cells": list(room.get("attached_cells") or []),
-            "issue_codes": _issue_codes(room.get("issue")), "area_m2": room.get("area_m2")}
+            "issue_codes": _issue_codes(room.get("issue")), "area_m2": room.get("area_m2"),
+            "door_closures": int(room.get("door_closures") or 0)}
 
 
 def _matches(predicate, prof):
@@ -126,10 +132,17 @@ def bind_set(scenario_set, room, rules=ANSWERED_RULES, confirmations=None):
     r = hits[0]
     if r["scenario"] not in (s.get("scenarios") or ()) or r["scenario"] not in (s.get("by_scenario") or {}):
         return _held(s, f"the set has no {r['scenario']} scenario", prof)
+    q = dict(s["by_scenario"][r["scenario"]])
+    strip = None
+    if r["scenario"] == "WET_SCOPE" and prof["door_closures"] and STRIP_ITEM in q:
+        # in a WET scenario the only porcelain is the closure strip of the space's doorless opening; that strip is
+        # the opening's own threshold line (ARCH.THRESHOLD, Q-S6-1 / UP-THR-001), so it is counted once there
+        strip = {"item": STRIP_ITEM, "m2": q.pop(STRIP_ITEM),
+                 "reason": "doorway closure strip: carried by the opening's own threshold line, not the floor key"}
     return {"schema": SCHEMA, "set_id": s["set_id"], "subject": s.get("subject"), "status": ASSUMED,
             "scenario": r["scenario"], "rule_id": r["rule_id"], "source": r["source"],
             "reason": f"{r['predicate']} -> {r['scenario']} by {r['rule_id']}",
-            "boundary_confirmation": conf, "quantities": dict(s["by_scenario"][r["scenario"]]), "profile": prof}
+            "boundary_confirmation": conf, "quantities": q, "closure_strip": strip, "profile": prof}
 
 
 def bind_run(release_report, rooms, rules=ANSWERED_RULES, confirmations=None):
