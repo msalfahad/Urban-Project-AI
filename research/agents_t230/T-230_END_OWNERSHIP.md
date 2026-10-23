@@ -97,6 +97,9 @@ Three ground beams are drawn to the outer face of the RC pit ring (S-BW 7C2, T-2
 face"). GROUND_SYSTEM_SPANS_V2 (and S5 and the T-138 hand ledger, which follow it) ended two of them at the lift footing
 FF outline (FOOTING_FACE, 1B2B) and held the third: but the beam (soffit >= -0.35) and the footing (top <= -0.63) never
 touch, so a footing outline cannot terminate a ground beam.
+Second format: ST7757.pdf p.3 "GROUND BEAMS PLAN" (1:100, rotated 270, read visually at 300 dpi): the lift ring is
+drawn cross-hatched (the RC hatch, T-204) between C1 / C2 / C2 / C9 and every beam reaching the lift stops on the ring's
+outer face; the sheet draws no footing outline there (the FF outline exists only on the foundation plan).
 
 | Span | V2 end / length | Drawn support | Length to the ring face | p.13 class | m3 (0.30 wide) | V2 m3 | change |
 |---|---|---|---|---|---|---|---|
