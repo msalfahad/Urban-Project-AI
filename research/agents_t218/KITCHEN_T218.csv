@@ -1,0 +1,29 @@
+state,line,engine,after_wet_class,change,rule,status
+released,floor finish item,9.6300 m2 PROVISIONAL (FIN.FLOOR.PORCELAIN = dry item),FIN.FLOOR.WET_TILE 9.6300 m2,"class only: floor total unchanged; wet sub-line +9.630, dry -9.630","UP-WET-001 1.1.0 (KITCHEN wet code), Q-30 A",ASSUMED - OWNER-APPROVED
+released,membrane floor,9.6300 m2 SOURCE_DERIVED,9.6300 m2,unchanged,UP-WP-001,DRAWING-CONFIRMED
+released,membrane upturn,2.7000 m2 SOURCE_DERIVED,13.50 lm x 0.20 = 2.70 m2,unchanged; hand 14.50 lm boundary - door 1.00 = 13.50 lm,"Q-35 C walls only, UP-WP-003 1.1.0",DRAWING-CONFIRMED
+released,membrane doorway piece,0.2000 m2 SOURCE_DERIVED,0.20 m2,unchanged (1.00 x 0.20),rules/ UP-WP-003 1.1.0,DRAWING-CONFIRMED
+released,doorway transition,0.000 .. 0.200 m2 BOUNDED_EXPOSURE,0 .. 0.20 m2 HELD,unchanged,UP-WP-DOOR-001 (no detail),HELD
+released,marble threshold OP-025,0.2000 m2 SOURCE_DERIVED,0.20 m2,"unchanged (wall opening 1.00, as every door of the run; 0.90 clear between frame jambs)",UP-THR-001 wet,DRAWING-CONFIRMED
+released,skirting,NOT_APPLICABLE_WITH_EVIDENCE,not applicable,unchanged,UP-CER-004,-
+released,paint,NOT_APPLICABLE_WITH_EVIDENCE,not applicable,unchanged,UP-FIN-PAINT-001,-
+released,wall tile,BLOCKED_RFI,HELD (G2 annex height; T-209 READY: 41.34 m2 owner-manual candidate),unchanged here,"UP-FIN-WALL-001, Q-48 A",HELD
+released,penetrations,BLOCKED_RFI,HELD,unchanged,UP-WP-004,HELD
+released,bed under the tile (m3),dry 3 .. 4 cm: 0.2889 .. 0.3852,wet 4 .. 6 cm: 0.3852 .. 0.5778,+0.0963 .. +0.1926 m3,Q-45 (PROVISIONAL),ASSUMED - OWNER-APPROVED
+released,cement bags (50 kg),2.31 .. 3.08,3.08 .. 4.62,before 5 % waste,G4 8 bags / m3,ASSUMED - OWNER-APPROVED
+released,sand (m3),0.3178 .. 0.4237,0.4237 .. 0.6356,before 5 % waste,G4 1.10 m3 / m3,ASSUMED - OWNER-APPROVED
+released,adhesive bags (20 kg),1.926,1.926,unchanged,Q-45 5 m2 / bag,ASSUMED - OWNER-APPROVED
+candidate_base,floor finish item,9.6300 m2 PROVISIONAL (FIN.FLOOR.PORCELAIN = dry item),FIN.FLOOR.WET_TILE 9.6300 m2,"class only: floor total unchanged; wet sub-line +9.630, dry -9.630","UP-WET-001 1.1.0 (KITCHEN wet code), Q-30 A",ASSUMED - OWNER-APPROVED
+candidate_base,membrane floor,9.6300 m2 SOURCE_DERIVED,9.6300 m2,unchanged,UP-WP-001,DRAWING-CONFIRMED
+candidate_base,membrane upturn,2.7000 m2 SOURCE_DERIVED,13.50 lm x 0.20 = 2.70 m2,unchanged; hand 14.50 lm boundary - door 1.00 = 13.50 lm,"Q-35 C walls only, UP-WP-003 1.1.0",DRAWING-CONFIRMED
+candidate_base,membrane doorway piece,0.2000 m2 SOURCE_DERIVED,0.20 m2,unchanged (1.00 x 0.20),rules/ UP-WP-003 1.1.0,DRAWING-CONFIRMED
+candidate_base,doorway transition,0.000 .. 0.200 m2 BOUNDED_EXPOSURE,0 .. 0.20 m2 HELD,unchanged,UP-WP-DOOR-001 (no detail),HELD
+candidate_base,marble threshold OP-025,0.2000 m2 SOURCE_DERIVED,0.20 m2,"unchanged (wall opening 1.00, as every door of the run; 0.90 clear between frame jambs)",UP-THR-001 wet,DRAWING-CONFIRMED
+candidate_base,skirting,NOT_APPLICABLE_WITH_EVIDENCE,not applicable,unchanged,UP-CER-004,-
+candidate_base,paint,NOT_APPLICABLE_WITH_EVIDENCE,not applicable,unchanged,UP-FIN-PAINT-001,-
+candidate_base,wall tile,BLOCKED_RFI,HELD (G2 annex height; T-209 READY: 41.34 m2 owner-manual candidate),unchanged here,"UP-FIN-WALL-001, Q-48 A",HELD
+candidate_base,penetrations,BLOCKED_RFI,HELD,unchanged,UP-WP-004,HELD
+candidate_base,bed under the tile (m3),dry 3 .. 4 cm: 0.2889 .. 0.3852,wet 4 .. 6 cm: 0.3852 .. 0.5778,+0.0963 .. +0.1926 m3,Q-45 (PROVISIONAL),ASSUMED - OWNER-APPROVED
+candidate_base,cement bags (50 kg),2.31 .. 3.08,3.08 .. 4.62,before 5 % waste,G4 8 bags / m3,ASSUMED - OWNER-APPROVED
+candidate_base,sand (m3),0.3178 .. 0.4237,0.4237 .. 0.6356,before 5 % waste,G4 1.10 m3 / m3,ASSUMED - OWNER-APPROVED
+candidate_base,adhesive bags (20 kg),1.926,1.926,unchanged,Q-45 5 m2 / bag,ASSUMED - OWNER-APPROVED
