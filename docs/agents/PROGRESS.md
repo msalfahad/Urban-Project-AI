@@ -1,9 +1,31 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
 Plain words, no task numbers. Measured numbers come from SCOREBOARD.md; anything not measured says so.
-Last update: 2026-10-23 00:20 UTC (Lead). Previous version: 2026-10-22 20:20 UTC. The released numbers did not change
+Last update: 2026-10-23 04:20 UTC (Lead). Previous version: 2026-10-23 00:20 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released default V2.9 + route G untouched).
-Since 20:20 (newest first):
+Since 00:20 (newest first):
+- Main stair, first to second floor: the candidate had dropped these flights entirely (2.6 m3 lost). They are now back
+  in the next candidate step, waiting for the checker: lower flight 1.0334 m3 (checker-measured), upper flight 1.0014 m3
+  (drawing-confirmed), the landing held at 0.470 .. 0.480 m3. The same step also stops the engine from using a
+  convention where the drawings print a value (pool, domes, the two stairs are held with the printed value named).
+- Found while doing it: a line the engine called a 4.451 m3 'winder stair' on the first floor is in fact a dome outline
+  (18 lines from one centre, radius 2.211 m). It is now held as a misread and will be removed when the checked dome
+  concrete goes in, so the dome is counted once.
+- Stair concrete vs the roof beams is settled at every foot, head and landing: the stair system is 6.6479 m3 (checker
+  re-measured the first riser inside the beam: 0.0 %); still PARTIALLY VERIFIED as you instructed, not all parts measured.
+- Openings: the corrected list (three missing openings added; two windows' sill and head re-read on the floor level,
+  1.00 / 3.00 m, checker's own reading) is merged. 21 windows still have no printed head: a task now reads them from the
+  elevations and sections, and the block-area engine piece (block m2, m3 and white-block counts) can start now.
+- Pool steel: sent back once for one counting fault on the base mesh (the per-metre bar count used only the
+  maximum-spacing meaning, which was proven for footings, not for this mesh; about 14 kg too high at the low end); the
+  walls, rings and outline re-measured exactly. Steel stays held for the designer (two-zone detail vs your flat floor).
+- Scope cross-check (every freelancer row to a drawn element): sent back because the element list counts about three
+  entries per physical column (12 for 4 columns); being fixed before any count from it is used.
+- Checker re-measured 6 more columns from the drawing, all 0.0 % (8 of 59 so far).
+- The safety test that stops steel being counted twice has been green again since 01:52 (it was red for 9 h).
+Released numbers: unchanged (released concrete 92.77 vs 111.81 m3, -17.03 %).
+
+Since 20:20 (to 00:20):
 - Drawing register: all 31 issued sheets listed (architecture 12, structure 16, sanitary 3). No sheet prints a revision,
   so every quantity now cites the exact file it was measured on (file fingerprint); 543 citations in the merged work were
   checked: none points at a sheet outside the set. The structural set carries two dates (May 2025 on pages 1-7, May 2026

@@ -1,3 +1,87 @@
+## LEAD REPORT 2026-10-22 16:20 UTC
+
+Repositories: attached Urban-Project-AI checkout (main b8ff258f); `.work` was prepared AUTOMATICALLY at start this time
+("prepared ... setup by auto": the 15:20 startup fix works for the Lead). Working branch head 6380294 (7 checker merges
+since 12:20: T-184, T-171, T-150 r2, T-167 Gate B, T-172, T-162 r2, T-183 r2; no owner commit on the engine branch). Drive
+readable: no file created in the Alsenan folder since 12:00, so no photo-review task. UrbanProjectsManager not used.
+Owner sessions 15:15 and 15:55 read and applied; nothing undone or duplicated.
+
+PROGRESS (Alsenan; released numbers unchanged: released concrete 92.77 vs freelancer 111.81 m3, -17.03 %, run A)
+- POOL (structure; m3), now checked: concrete 7.202 m3 = base 10.936 m2 x 0.40 = 4.374 + wall ring 2.357 m2 x 1.20 =
+  2.828, upstand 0.15 m above the deck (outer face 1.350 m2 along 8.998 m, inside the 1.20, no extra m3). The checker
+  re-read the cut itself: rim +0.30, finished floor -0.85, structure line -0.90, 0.0 % against the worker. Engine 3.495
+  (-51.5 %), freelancer 12.348 (+71.5 %: pump room 3.480 and steps 0.228 on no drawing; base counted again in his 1.80 m).
+  Your eight conditions: all PASS except (h) steel (R1 860.97 .. 894.43 vs R2 596.17 .. 616.66 kg, designer). Concrete
+  scope VERIFIED; the pool LINE stays PARTIALLY VERIFIED (whole-line rule), so concrete verified share stays 0 / 8.
+  Learned: the architectural cut draws the base 0.15 m against the structural 0.40 m printed: structure governs
+  thickness, architecture governs levels (consultant item).
+- STAIRS (structure; m3), merged: the stair beside the lift IS the dog-leg main stair (GF -> 1F -> 2F); the round stair is
+  GF -> 1F only. Own 6.790 m3 measured + held parts vs freelancer 15.053 vs engine 4.635. Checker re-measured one flight
+  of each: 1.059 and 0.972 m3, 0.0 %; lines PARTIALLY VERIFIED. Freelancer main stair +3.385 closes to 0 (his 5.3 m flight
+  includes the 1.95 m floor landing; 0.28 thickness vs 0.233 drawn); his 'stair 2' 16.4 m run matches no drawing. Found:
+  the engine silently drops the 1F -> 2F flights (-2.598 m3 incl. landing). It goes into the candidate with the default
+  guard (new package, after the next extension).
+- CANDIDATE V3.0.4 merged through Gate B: 84 lines that rested on unprinted profile values are HELD (column necks 10.856
+  m3 -> HELD 3.075 .. 15.375 m3; neck steel 1,428.571 kg blocked; founding depth not printed, your Q-21 C); 3,048 lines
+  byte-identical; candidate concrete WAPE 15.38 % on 3 of 8 compared (unchanged).
+- FOOTING PER-METRE NOTATION (rebar; kg), merged: maximum c/c spacing; 2,769.06 .. 2,829.83 kg HELD only on the
+  unprinted leg diameter (designer). The frozen 874.86 kg footing line is untouched.
+- DOORS / WINDOWS (pcs and m2), merged: windows 56.771 m2 on 8 printed vs freelancer 54.931 (+3.3 %); aluminium doors
+  10.560 vs 12.000 m2 (-12.0 %) = your 2.20 m door height vs his 2.40 (rule difference, not an error).
+- CORNERS / PARAPETS (facade; m.l and m2), merged as one pair: physical, contract (his 1,297.35 m.l), payable half
+  (648.675) and rate kept apart; his parapet third line 140.27 m.l and a 1F 1.70 m height still UNRESOLVED (designer).
+- PLASTER / PAINT (m2), sent back on ONE room: GF master bed 0.02 % (passed); 1F east master contour 22.350 vs the
+  checker's 22.150 m (+0.9 %), owner net 60.19 vs 59.45 m2 (+1.25 %): the room outline slips into the window-frame gap
+  at both ends of the curved glazing. Small rework r3; nothing else re-opened.
+- Waiting for the checker: your stair calculator (9 h), the default-value guard (holds 14.554 m3 and 1,885.36 kg on the
+  released run, finds 3 silent omissions), the five separate scoreboard measures, block openings by physical scope (43
+  walls now carry a net, 476.21 m2 candidate; 28 openings HELD) and the stair-shaft walls (owner manual 142.22 m2 gross
+  beside drawing-derived 171.88 .. 175.14 m2; his 204.42 closes to 0: open south side +20.11 and one unexplained row).
+- Change since 12:20: no released quantity moved; the candidate moved to V3.0.4 (more held, nothing invented); the pool
+  concrete is the first teaching-case element VERIFIED for its concrete scope.
+
+TEAM HEALTH (12:20 - 16:20)
+- Closed slots: worker 1 12:45, 14:30; worker 2 14:08, 16:12; worker 3 12:16 (the 11:01 run, closed), 13:18, 15:57;
+  checker 15:04: 8 of 8 STARTED + SUCCESS, every self-check PASS, every final line `ERS: read` + section. The checker's
+  15:51 run has no final line at 16:20 (scheduler PENDING; 3 merges and 1 rejection already committed): not INCOMPLETE
+  yet. If it is still open at 16:49 the new overlap guard turns that extra run into a no-op (expected behaviour).
+- READY 6 -> 5 (T-158, T-186, T-182, T-175, T-173), all CAPACITY; the stair calculator has waited 9 h because owner
+  slots went first all day; it is now first in the next checker run (your 15:15 order). Rejections since 12:20: 1 of 8
+  verdicts (12.5 %, under the 15 % target).
+- Lead self-check PASS (codemap stale none, t061, freeze 0). One board-commit rebase conflict with the checker's 16:14
+  commit: resolved by re-applying my edits on its version (nothing of its verdict lost); pushed agents/control normally.
+- This run: queue for 2 checker runs; T-179 (V3.0.5) claimable; new T-187 (guard + missing 1F -> 2F flights into the
+  candidate, after T-186 and T-179) and T-188 (element inventory and storey continuity, your review plan R2 / R3);
+  T-128 r3 first in lane A; railings / shutters now backlog-permitted; T-176 waits for the openings verdict; register +7
+  rulings (staircase identity corrected); T-184 checker column filled in the reconciliation file; BOARD.md 484 -> 387 KB
+  (12 rows merged on 21 Oct and 16 old notes moved to the archive unchanged).
+
+Proposed lessons rows (the register is the main chat's file under WORKFLOW_CONTROLS section 10; please enter):
+- 2026-10-22 | Engine drops the 1F -> 2F flights of a stair that spans three storeys (-2.598 m3, T-184) | storey fold in
+  the stair reader: a flight is bound to one storey pair only | An element spanning storeys is listed on every storey it
+  crosses; a storey with no element or line is HELD (every villa) | T-188 (normal: 3-storey stair; adverse: a stair
+  that correctly ends at 1F must not flag) | open (T-187 fix, T-188 check).
+- 2026-10-22 | Room contour +0.200 m at a curved glazing band (1F-11, T-128 r2) | region built from barrier buffers leaks
+  into the glazing-frame cavity at the jambs (length without area) | Contour = drawn face length; a frame cavity is never
+  contour; a polygon spike scan runs over every room (every villa) | T-128 r3 (normal: curved band; adverse: frame cavity at
+  the jamb) | rework r3.
+- 2026-10-22 | Architectural cut draws the pool base 0.15 m vs structural 0.40 m printed (Checker on T-183 r2) | two
+  disciplines draw one element for different purposes | Structure governs member thickness, architecture governs levels and
+  finishes; a disagreement is a consultant item, never averaged (every villa) | T-183 r2 R-POOL-8 test | consultant C10.
+
+OWNER PACKAGE
+No genuine owner decision today (standard 2.7 not met by anything open). The pool steel and the parapet types are
+designer items, listed in DESIGNER_CLARIFICATIONS.md for when you choose to send them.
+
+NEEDS FIXING
+- For the main chat: the five-measure scoreboard writes a `## SCOREBOARD v2.1` heading the dashboard parser does not read
+  yet (adapt the parser when it merges).
+- Still waiting: Kuwait specification chapters 07100, 09200, 09300, 09400, 09900 as PDFs under 6 MB (deferred by you).
+
+Team ids: MERGED T-184, T-171, T-150 r2, T-167 (Gate B), T-172, T-162 r2, T-183 r2; REJECTED T-128 r2 (r3 claimable);
+READY T-158, T-186, T-182, T-175, T-173; TODO S T-185, T-163 r2, T-174, T-188; A T-128 r3, T-164, T-176 (after T-175);
+I T-179, T-178, T-181 (after T-182); QUEUED T-187, T-146, T-168, T-170.
+
 ## LEAD REPORT 2026-10-22 12:20 UTC
 
 Repositories: attached Urban-Project-AI checkout (main 1c559a8) + wrapper; `.work` absent at start again, `setup` by hand
