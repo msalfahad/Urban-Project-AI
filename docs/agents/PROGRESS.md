@@ -1,12 +1,35 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
 Plain words, no task numbers. Measured numbers come from SCOREBOARD.md; anything not measured says so.
-Last update: 2026-10-23 14:20 UTC (Lead). Previous version: 2026-10-23 12:20 UTC. The released numbers did not change
-(released concrete 92.77 vs 111.81 m3, -17.03 %; released default V2.9 + route G untouched). Pilot, hours 6-8: every
-agent run started and closed; the checker merged 5 more pieces and sent 2 back for a small rework (both had been checked
-against an older version of the working branch); 2 pieces wait for the checker (0.2 - 0.4 h old), the safety-test fix
-first.
-Since 12:20 (newest first):
+Last update: 2026-10-23 16:20 UTC (Lead). Previous version: 2026-10-23 14:20 UTC. The released numbers did not change
+(released concrete 92.77 vs 111.81 m3, -17.03 %; released default V2.9 + route G untouched). Pilot, hours 8-10: every
+agent run started and closed; the checker merged 7 more pieces and sent none back; nothing waits for the checker now.
+Since 14:20 (newest first):
+- Block walls (your blockwork programme, step 1 of 4, checker-verified): the freelancer's figures, the older automated
+  run and the current engine were compared wall by wall. The older automated run never produced block m2 (wall lengths
+  only), so there is no automated area to compare. The two open gaps are explained to the wall: black 15 cm 3.464 m2 =
+  two first-floor walls whose openings are deducted while their gross is still held; black 20 cm 12.001 m2 = two walls
+  (first floor, second floor) less three openings. Rule learned: an opening deduction keeps the status of its wall.
+  Of the 74 walls, 252.8 m2 net rest on the drawings, 84.6 m2 are project-specific, none yet independently verified;
+  44 walls are held (377.9 m2 gross, never shown as 0) for named reasons (annex datum, beam depth, held openings, lift
+  tie beam). No 10 cm block wall exists on the drawings. Steps 2 and 3 (wall heights from the drawn beams; annex, lift
+  walls, openings) are next for the architectural worker.
+- Black block units (your 12.5 per m2 provisional rule): 290.05 m2 net -> 3,626 installed blocks (replaces the 563 m2 x
+  12.5 = 7,040 gross figure) and 3.61 m3 laying mortar from the joint geometry; PROVISIONAL until the supplier's block
+  size and joint are on record. Waste, cement and sand stay held (no approved allowance or mix).
+- Angled strap beams (your axis-length rule): your 2.29 / 3.26 m confirmed from the drawing (2.2927 / 3.2580 m); strap
+  concrete 3.39 m3 vs the freelancer's 3.39 (-0.06 %); released 3.78 m3 is too high. One strap is printed deeper than
+  the footing it enters (0.03 .. 0.12 m3 held).
+- Columns: the checker has now measured 29 of 59 columns itself (0.0 %). One planted first-floor column is measured and
+  verified (0.588 m3); the other two stay held (owner split / size conflict). The 5 upper-floor column lines (2.27 m3)
+  are confirmed NOT DRAWN on any slab plan: a consultant item, never priced as drawn.
+- Candidate coverage register: now shows the pool (7.20 m3) and domes (5.08 m3) as integrated in the candidate.
+- Safety test on the working branch is green again (it had been red about 14 h with no quantity effect).
+Next: the verified straps and planted column go into the candidate (step 8) before the formwork / railing step; two new
+structural tasks check where beams are wrongly cut at planted columns (about 0.20 m3 short) and how strap ends overlap
+footings.
+
+Earlier (12:20 -> 14:20):
 - Columns: the checker has now measured 27 of 59 columns itself, all equal to the engine (0.0 %). The column line still
   cannot be called verified: column C8 and the four lift columns are drawn at one size and scheduled at another (C8:
   ground floor 0.900 .. 1.013 m3; lift necks 0.55 vs 0.75 m3 per metre of height) - both are now carried as ranges and

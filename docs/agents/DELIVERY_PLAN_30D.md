@@ -46,7 +46,7 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
-## Status (Lead, 2026-10-23 14:20; re-estimated each run from what merged and was verified)
+## Status (Lead, 2026-10-23 16:20; re-estimated each run from what merged and was verified)
 
 Baseline: the RELEASED baseline is run A (V2.9 + route G, no profile, 1,455 lines), pinned by T-165 (37124da); run B
 (profiled, 1,621 lines) is the comparison base for V3.0.x line pairing. The engineering reasoning standard (owner 08:05)
@@ -56,21 +56,21 @@ WORKFLOW_CONTROLS section 10 (owner 15:15: faster execution, same evidence) gove
 | Plan | Board | State | Note |
 |---|---|---|---|
 | P-01 | owner + auditor | in progress, good | pilot (owner 06:15): 08:20 - 10:20 every slot STARTED + final SUCCESS (worker 1 08:20, 09:20; worker 2 08:40, 09:40; worker 3 09:01 -> 10:05; checker 08:51, 09:51), run lock taken and released, 0 IDLE, every self-check PASS, 0 refusals. ONE regression merged (t202 guard test red since 01eeafd0, no quantity effect): a pilot rollback trigger for the auditor's 12:15 check-in; fix T-212 at the top of the board |
-| P-02 | T-130 r3, T-165, T-140 MERGED; T-203 registry 1.2.0 REJECTED 13:03 (narrow: as_of V3.0.7), r2 first in lane I | DONE (registry, baseline, census V2); candidate-level state in rework | |
+| P-02 | T-130 r3, T-165, T-140 MERGED; T-203 registry 1.2.0 r2 MERGED 40de7c7f (as_of V3.0.7: states 13 / 3 / 34 / 49) | DONE | |
 | P-03 | V3.0.4, V3.0.5 r2, V3.0.6 and V3.0.7 MERGED (V3.0.7 e866328a 11:49, Gate B PASS: verified pool 7.202 + dome shells 5.081 m3 in, DOME-B billed once; verification -> integration 19.6 h for the pool (T-183 merged 22 Oct 16:14) and 17.6 h for the dome shells (T-185 18:15)); next V3.0.8 = T-199 formwork + railings (TODO now); earlier: V3.0.7 READY 10:03, first in the 10:49 checker run; next V3.0.8 formwork + railings (T-199), V3.0.9 plaster / paint (T-211), then slab faces (T-146) | candidate grows by verified pieces only | NOT RELEASED |
 | P-04 | T-132 DONE; T-177 and T-182 (five measures, 50991742) MERGED; T-181 claimable; T-180 slot: pool and 2 stair flights reconciled, 0 / 8 VERIFIED | script DONE; five measures in the checker queue | whole-line rule (owner 11:50) |
 | P-05 | T-126 / T-133 | DONE | |
 | P-06 | T-128 r3 MERGED a6ac2c66 (3 rooms checker 0.0 %); T-173 stair shaft MERGED 8b4d2c83 | hand package DONE; engine line not yet (scoreboard plaster / paint NOT YET MEASURED until a candidate line exists) | integration task to plan once the candidate chain frees lane I |
 | P-07 | T-125, T-143, T-169, T-175, T-194, T-198, T-201, T-207 and T-108 r2 MERGED (01eeafd0: established net 337.412 m2, 58.366 m3, white units 303.1 / 394.7; checker 0.0 % on 2F-W08 / GF-W22) | engine module DONE (unwired); held bounds T-215, independent census T-017, black units T-176 | into the candidate after T-211 |
-| P-08 | populations MERGED; T-171 notation MERGED 701d227 (2,769.06 .. 2,829.83 kg HELD on the unprinted leg diameter); T-174 straps TODO | notation DONE by investigation | |
+| P-08 | populations MERGED; T-171 notation MERGED 701d227 (2,769.06 .. 2,829.83 kg HELD on the unprinted leg diameter); T-174 straps MERGED 984ebbe1 (axis length, 3.3905 m3; SB2 bars HELD D-38); T-230 strap / footing overlap TODO | notation DONE by investigation | |
 | P-09 | T-134 MERGED; register rulings +7 (16:20: staircase identity corrected, shaft walls, opening deductions, pool upstand, 1F-11 curved glazing, default guard, corners pair) | DONE (v0 code); content grows each run | |
-| (Gate B tooling) | T-156, T-202 MERGED; T-212 guard repair r2 READY 13:56, FIRST at 14:49 (gate 0); T-224 slab-step method version queued; T-168 Gate B v2, T-203 registry 1.2.0, T-210 guard follow-ups TODO | | |
+| (Gate B tooling) | T-156, T-202, T-212 r2 (b5716930, red guard closed) MERGED; T-224 slab-step method version queued; T-168 Gate B v2, T-210 guard follow-ups TODO | | |
 | P-10 | T-163 formwork r3 MERGED 659f889f (into the candidate by T-199); T-206 MERGED (footing underlay 5 / 2 / 10 cm VERIFIED; formation and existing ground HELD, Q-21 C); T-170 excavation QUEUED after T-205 (depth HELD until an existing-ground level exists) | formwork hand DONE; excavation geometry next, depth HELD | site level survey not in the set (D-62) |
 | P-11 | T-147, T-159, T-161, T-157, T-150 r2, T-172, T-162 r2, T-164 (390fabf4), T-181 (faa04202) MERGED; T-198 census r3 | ahead of week 3 | |
 | (concrete gap) | T-217 section conflicts MERGED 65fef8fa (C8 / lift group CONFLICT ranges; planted columns + 5 lines -> T-220); T-213 sunken panels MERGED 0ec8c496; T-183 r2 pool MERGED 6380294 (7.202 m3); T-184 staircases MERGED 924c2bd (6.790 m3 measured + held; engine storey loss -2.598 m3); T-185 domes MERGED 94e39ee6 (2 shells 5.081 m3 VERIFIED); T-189 stair / beam ownership MERGED 3369f30e (system 6.675 m3); T-191 pool steel rev2, T-192 stair feet / landings vs slabs | pool, stairs, domes reconstructed; into the candidate via T-187 / T-193 | released numbers unchanged |
 | (review plan R1-R9, owner 15:00) | R1 T-186 MERGED + wired (V3.0.6); R2 + R3 T-188 MERGED fb3a4623 (lift / tank gap -> T-204); R4 T-197 MERGED; R5 T-200 MERGED d699b650 (run 2 -> T-206, necks -> T-205); R6 T-194 + T-198 + T-201 MERGED (closure T-207); R7 T-196 r2 MERGED; R8 in place; R9 T-195 MERGED | 9 of 9 first passes merged | follow-ups on the board |
 
 Day-7 target (2026-10-27): **MET on 2026-10-21 17:40**. Day-14 target (2026-11-03, measurable increase in verified coverage):
-on track (14:20: columns 27 / 59 re-measured, the column line blocked by D-16 / D-63 and the planted columns (T-220); finishes package V3.0.9 grows with wall tiles + kitchen; whole lines still 0 / 8. 10:20: V3.0.7 with the verified pool and dome shells at Gate B; columns 23 / 59 re-measured; floor-area line made scorable (Gate A pending); whole lines still 0 / 8): V3.0.2, V3.0.3 and V3.0.4 merged through Gate B; SCOREBOARD v2 by script (verified share still 0 / 8 whole
+on track (16:20: 7 merges, 0 rejections in 2 h; straps and planted column verified -> candidate step 8 (T-231) first in lane I, then formwork / railings (T-199); blockwork programme step 1 merged, steps 2 / 3 claimable; whole lines still 0 / 8. 14:20: columns 27 / 59 re-measured, the column line blocked by D-16 / D-63 and the planted columns (T-220); finishes package V3.0.9 grows with wall tiles + kitchen; whole lines still 0 / 8. 10:20: V3.0.7 with the verified pool and dome shells at Gate B; columns 23 / 59 re-measured; floor-area line made scorable (Gate A pending); whole lines still 0 / 8): V3.0.2, V3.0.3 and V3.0.4 merged through Gate B; SCOREBOARD v2 by script (verified share still 0 / 8 whole
 reference lines: the day-14 measure is the rise of that share and of coverage; the pool and stair lines are now
 reconstructed and partly re-measured, so CONC.POOL is the first candidate to become whole-line VERIFIED).

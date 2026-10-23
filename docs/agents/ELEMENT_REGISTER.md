@@ -46,6 +46,18 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+### Lead 2026-10-23 16:20 (from T-174, T-176, T-215 part 1, T-220, T-225 MERGED)
+
+| Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |
+|---|---|---|---|---|---|
+| Planted column PC-1F-A (on B27) | concrete, formwork, rebar, beams | STRUCTURE CONC.COLUMN from the beam top (band 0.900) to the soffit; the beam B27 runs THROUGH it and keeps the joint (R-CONC-OWN-1) | 0.588 m3 VERIFIED (Checker own ST DXF 0.0 %) | T-220 MERGED 579e613d | T-231 (integration), T-229 (B27 run) |
+| PC-1F-B, PC-2F (planted) | concrete | STRUCTURE CONC.COLUMN | HELD: PC-1F-B 0.420 solid on the owner split D-26; PC-2F section CONFLICT 0.08 .. 0.10 m2, joint 0.059 under B7 billed DOUBLE by T-119 (count once) | T-220 MERGED | D-26, T-229 |
+| 5 released upper column lines (2.268 m3) | concrete | none until a sheet draws the member | NOT_DRAWN (DXF + PDF + arch plans), consultant item; never a priced line, never a verified 0 | T-220 MERGED (Checker agreed 2F C8 10E0) | D-65, T-231 (HELD in candidate) |
+| Beams B27 / B26 at the planted columns | concrete, formwork, rebar | STRUCTURE beam, continuous through a member it carries; cut only at a supporting member | released route G cuts them at the P.C: short 0.119 / 0.085 m3 (worker figure, not yet re-measured) | T-220 MERGED | T-229 |
+| Strap beams SB1 / SB2 / SB3 | concrete, formwork, rebar, excavation | STRUCTURE strap at the AXIS length (Q-74); the strap / footing overlap owned once (rule pending) | concrete 3.3905 m3 DRAWING-CONFIRMED, SB2 / SB3 VERIFIED (Checker 0.0 %); SB3 0.40 deep into a 0.30 F3 HELD 0.0295 .. 0.1181 m3; SB2 bars HELD D-38; formwork sides 9.449 m2 (OQ-10) | T-174 MERGED 984ebbe1 | T-230, T-231; T-199 (formwork must use the axis lengths) |
+| Black block walls 0.15 / 0.20 (74-wall register v1) | blockwork, plaster, paint, lintels, openings | BLOCKWORK by wall id; an opening deduction carries its host wall's status (R-T225-1) | net SOURCE-SUPPORTED 252.817 / PROJECT-SPECIFIC 84.595 / VERIFIED 0 m2; 44 walls HELD 377.943 m2 gross (never 0) | T-225 MERGED 48e6f08a; T-215 part 1 8a9b4b48 | T-226, T-227, T-222, T-017, T-228 |
+| Black block units and laying mortar (procurement) | blockwork procurement | BLOCKWORK procurement, separate from installed m2 | 3,625.65 installed units, mortar 3.6059 m3 PROVISIONAL (Q-75 12.5 / m2, supplier face + joint not on record); waste, cement, sand HELD | T-176 MERGED 41847bff | supplier data (owner) |
+
 ### Lead 2026-10-23 14:20 (from T-213, T-209, T-214, T-217, T-218 MERGED; T-212 r2, T-215 READY)
 
 | Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |
