@@ -40,6 +40,7 @@ ACCURATE_MODULES = (
     "engine/source/cover_authority.py",         # D1.2 cover basis, straight-run / count directions, cover errata
     "engine/source/footing_rebar_population_v1.py",  # T-136 footing steel by bar population from the schedule (opt-in, not wired)
     "engine/source/ground_system_spans_v2.py",  # T-141 ground-beam span splitter V2 + strap axis lengths (geometry only, no kg; opt-in, not wired)
+    "engine/source/strap_beam_takeoff_v1.py",  # T-174 strap beams at the axis length (Q-74): concrete / bar runs / formwork / excavation; kg only through a passed-in unit mass; opt-in, not wired
     "engine/source/slab_rebar_readiness.py",    # PRE-S7 slab readiness (no kg)
     "engine/source/slab_qto_authority.py",      # AD2 / PRE-S7.1 slab QTO authority lanes (no kg)
     "engine/source/slab_rebar_qto.py",          # S7 restricted project-basis slab rebar QTO (rate density, D^2/162)
