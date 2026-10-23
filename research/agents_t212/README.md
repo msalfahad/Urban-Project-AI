@@ -28,3 +28,22 @@ No candidate or released method reached either module: no quantity effect.
 
 **Limits.** Imports built from computed strings are not followed (P3 matches literal names); the classification of a
 module is a judgement the Checker re-derives from its docstring and importers.
+
+## r2 (Checker 12:55 rejection: gate b on the merged head)
+
+**Miss.** r1 validated on d5df7d1f; V3.0.7 (T-193, merge e866328a) came in afterwards and P1 correctly refused the new,
+unclassified candidate module `engine/source/arch_v307.py` on the merged head.
+
+**Class, from the module.** `arch_v307.py` = **GUARD_HOST**: docstring step 4 "GUARD RE-CHECK"; `changes_for()`
+(line 577) always ends in `guard_changes()`, which runs `DG.guard(...)` (line 487) over the V3.0.6 lines with this
+version's replacements plus the lines it adds; a finding on an added or a replaced line refuses the run. Same limit as
+arch_v306: with no project guard input the guard is not run and only the run log says so (`NO_PROJECT_INPUT`, line
+480). Imports arch_v30 / v302 / v304 / v305 / v306 and default_guard only (lines 60-65): no producer.
+
+**P4 (new, same property).** A GUARD_HOST class is a claim that the module can run the guard: every GUARD_HOST module
+other than `default_guard.py` must reach `default_guard.py` through its own transitive static imports, else a problem.
+Live: arch_v306, arch_v307, tools/urban_boq_m9.py all reach it.
+
+**For the next candidate version (T-199 V3.0.8 and later, lane I):** put `DEFAULT_GUARD_CLASS = "GUARD_HOST"` in the
+new arch_v3xx module itself, so P1 classifies it without editing this folder and P4 holds it to the claim; run
+tests/t212_guard_property on the package head merged with the working branch before READY.

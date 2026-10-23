@@ -132,3 +132,55 @@ def test_adverse_run_time_load_of_a_producer():
     src = _tree(**{cand: 'import importlib\nM = importlib.import_module("engine.source.wallthing_v1")\n'})
     _, problems = GP.check(src, [], TABLE)
     assert any(cand in p and "loads modules at run time" in p for p in problems)
+
+
+# ------------------------------------------------------------------------------------------------ r2 (T-193 merge)
+V307 = "engine/source/arch_v307.py"
+DGM = "engine/source/default_guard.py"
+
+
+def test_live_v307_is_a_guard_host_that_reaches_the_guard(live):
+    rep, _ = live
+    got = {r["path"]: r["class"] for r in rep["changed"]}
+    assert got[V307] == GS.GUARD_HOST                           # merged after the T-202 head (T-193, e866328a)
+    assert rep["guard_hosts"][V307] is True
+    assert all(rep["guard_hosts"].values()), rep["guard_hosts"]  # every GUARD_HOST on the live tree reaches the guard
+    src = (ROOT / V307).read_text(encoding="utf-8")
+    assert "from engine.source import default_guard as DG" in src and "DG.guard(" in src
+
+
+def _guard_tree(**extra):
+    return _tree(**{DGM: "def guard(lines, **kw):\n    return {}\n",
+                    "engine/source/arch_v396.py": "from engine.source import default_guard as DG\n"}, **extra)
+
+
+GT = dict(TABLE, **{DGM: (GS.GUARD_HOST, "the guard"), "engine/source/arch_v396.py": (GS.GUARD_HOST, "x")})
+
+
+def test_adverse_replay_of_the_t193_merge_new_candidate_unclassified():
+    # the r1 miss: a new candidate version merged after the property was written, with no class anywhere
+    cand = "engine/source/arch_v397.py"
+    src = _guard_tree(**{cand: "from engine.source import arch_v396 as A\n"})
+    _, problems = GP.check(src, [("A", cand)], GT)
+    assert any(p.startswith(f"{cand}: added after") for p in problems), problems
+
+
+def test_normal_candidate_declares_guard_host_and_reaches_guard_transitively():
+    cand = "engine/source/arch_v397.py"
+    src = _guard_tree(**{cand: 'DEFAULT_GUARD_CLASS = "GUARD_HOST"\nfrom engine.source import arch_v396 as A\n'})
+    rep, problems = GP.check(src, [("A", cand)], GT)
+    assert problems == [] and rep["guard_hosts"][cand] is True
+
+
+def test_adverse_guard_host_that_cannot_run_the_guard():
+    cand = "engine/source/arch_v397.py"
+    src = _guard_tree(**{cand: 'DEFAULT_GUARD_CLASS = "GUARD_HOST"\nimport math\n'})
+    rep, problems = GP.check(src, [("A", cand)], GT)
+    assert rep["guard_hosts"][cand] is False
+    assert any(p.startswith(f"{cand}: class GUARD_HOST") and "never reach" in p for p in problems), problems
+
+
+def test_adverse_table_guard_host_label_without_guard_import():
+    host = "engine/source/helper.py"                           # "import math" only
+    _, problems = GP.check(_guard_tree(), [], dict(GT, **{host: (GS.GUARD_HOST, "mislabelled")}))
+    assert any(p.startswith(f"{host}: class GUARD_HOST (table)") for p in problems), problems

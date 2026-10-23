@@ -15,7 +15,12 @@ the property the guard exists for, over the tree as it is now:
       method (arch_v*, route_g*, tools/urban_boq_m9.py, ...) or any other class or no class is a problem, reported
       with its import chain;
   P3  no engine/ or tools/ file loads an unwired producer at run time (importlib / __import__ with the producer's
-      dotted name or file stem in a string): the static graph cannot see that edge, so it is refused, not ignored.
+      dotted name or file stem in a string): the static graph cannot see that edge, so it is refused, not ignored;
+  P4  (T-212 r2) a GUARD_HOST class is a claim that the module runs the guard: every GUARD_HOST module other than the
+      guard itself must reach engine/source/default_guard.py through its own (transitive, static) imports, or the
+      class is a problem (a module labelled GUARD_HOST that cannot call the guard would pass P1 and hide an unguarded
+      candidate). A later candidate version (arch_v308 ...) classifies itself with DEFAULT_GUARD_CLASS = "GUARD_HOST"
+      in its own source and is then held to P4.
 
 Imports are resolved statically, INCLUDING relative imports (`from .x import y`, which the T-202 index skips) and the
 bare stem form `import x` used after a sys.path insert (matched conservatively, as guard_sweep does). Limits: imports
@@ -52,7 +57,15 @@ LATER = {
                                          "method or CLI; DG-1 / DG-3 / DG-5 / DG-6 / DG-8 must run when integrated"),
     "engine/source/element_continuity_v1.py": (GS.CHECK_ONLY, "element inventory / storey continuity finding rows "
                                                "(T-188, merge fb3a4623); stdlib only, writes no BOQ quantity"),
+    "engine/source/arch_v307.py": (GS.GUARD_HOST, "ARCH_TAKEOFF_V3.0.7 (T-193, merge e866328a): docstring step 4 "
+                                   "GUARD RE-CHECK; changes_for() always ends in guard_changes(), which runs "
+                                   "DG.guard over the V3.0.6 lines with this version's replacements + the lines it "
+                                   "adds (line 487); a guard finding on an ADDED line or on a REPLACED line refuses "
+                                   "the run; with no project guard input the guard is NOT run and only the run log "
+                                   "says so (state NO_PROJECT_INPUT, line 480), the same limit as arch_v306; imports "
+                                   "arch_v30 / v302 / v304 / v305 / v306 and default_guard only (no producer)"),
 }
+GUARD_MODULE = "engine/source/default_guard.py"
 
 
 # ------------------------------------------------------------------------------------------------ pure core
@@ -191,7 +204,22 @@ def check(sources, changed, table):
             names = {module_names(prod), Path(prod).stem, prod}
             if any(s in names or s.endswith("/" + Path(prod).name) for s in strings):
                 problems.append(f"{f} loads modules at run time and names the unwired producer {prod} in a string")
-    return {"changed": rows, "producers": producers, "closure": closure}, problems
+    # P4 a GUARD_HOST must be able to run the guard
+    hosts = sorted(p for p, (c, _) in cls.items() if c == GS.GUARD_HOST and p != GUARD_MODULE)
+    reach = {}
+    for host in hosts:
+        seen, q = set(), deque([host])
+        while q:
+            cur = q.popleft()
+            for t in sorted(fwd.get(cur, ())):
+                if t not in seen:
+                    seen.add(t)
+                    q.append(t)
+        reach[host] = GUARD_MODULE in seen
+        if not reach[host]:
+            problems.append(f"{host}: class GUARD_HOST ({cls[host][1]}) but its imports never reach {GUARD_MODULE}: "
+                            f"it cannot run the default guard")
+    return {"changed": rows, "producers": producers, "closure": closure, "guard_hosts": reach}, problems
 
 
 def _tree(src):
@@ -242,6 +270,8 @@ def main(argv=None):
         print(f"  {r['status']} {r['path']}: {r['class']} ({r['how']})")
     for p in rep["producers"]:
         print(f"UNWIRED_PRODUCER {p}: importer closure {rep['closure'][p] or 'none'}")
+    for h, ok in rep["guard_hosts"].items():
+        print(f"GUARD_HOST {h}: reaches the default guard {'yes' if ok else 'NO'}")
     for p in problems:
         print("PROBLEM:", p)
     print(f"problems {len(problems)}")
