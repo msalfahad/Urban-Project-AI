@@ -30,12 +30,24 @@
 #   board commit "MESSAGE"        commit every change under docs/agents/ of the board worktree and push agents/control
 #   board check                   pull, then docs/agents/dashboard/queue_check.py: every actionable task has an agent, a
 #                                 queue place and a reason; exit 1 when a row is flagged
+#   lock check [--margin N]       exit 0 only if this session holds its run lock on the remote board, unexpired, with at
+#                                 least N minutes (default 10) of validity left
+#   engine push                   lock check, then push .work/engine HEAD to the engine branch (never forced); the
+#                                 Verifier's only merge-publication path
 # RUN LOCK (owner 2026-10-23, pilot): one run per agent at a time. `board log` with a STARTED line of the Lead, a Worker
 # or the Verifier atomically takes docs/agents/locks/<agent>.lock on agents/control (the lock file and the STARTED line
 # are one commit; a concurrent run's push conflicts on the same file and that run re-checks). A held lock younger than
 # the agent's TTL makes the second run write an IDLE final line and exit 3 ("AGENT_ENV LOCKED"). An older lock is stale
 # and is taken over the same way (the STARTED line says so). The run's final line releases its own lock. `task` and
 # `board commit` refuse to run without the lock this session holds (a run that lost a stale lock cannot claim or merge).
+# LOCK SAFETY (owner 2026-10-23 21:30): every publication re-checks ownership AND validity against the remote lock just
+# before it pushes: token equal, not expired, and at least LOCK_MARGIN_MIN (10) minutes left (a takeover needs an expired
+# lock, so a passing check leaves that much time; this is a margin, not an atomic fence). Guarded paths: `board commit`
+# (before every push attempt), `board log` final lines (SUCCESS refused after the lock is lost or expired: write
+# INCOMPLETE), `task`, `engine push`, and a git pre-push hook installed in this checkout that refuses raw pushes of the
+# engine branch and of agents/task-* without a valid lock, and raw pushes of agents/control by a session that holds a
+# lock record but no longer a valid lock (1-minute margin at push time). Only `board log` pushes (STARTED and final
+# lines) are marked internal; they do their own checks. This is a margin, not a fence (see the residual risk note).
 # T is "engine" (default) or "task-<ID>".
 set -euo pipefail
 
@@ -83,7 +95,7 @@ is_cloud() { [[ "${CLAUDE_CODE_REMOTE:-}" == "true" || "${AGENT_ENV_FORCE:-}" ==
 prepared() { [[ -d "$WORK/engine" && -d "$WORK/board" && -x "$PY" ]]; }
 
 ensure_prepared() {  # self-healing: a session whose SessionStart hook did not run prepares itself here
-  prepared && return 0
+  prepared && { install_push_guard; return 0; }
   is_cloud || return 0
   [[ -n "${AGENT_ENV_IN_SETUP:-}" ]] && return 0
   say "work trees missing: running setup automatically"
@@ -139,6 +151,7 @@ cmd_setup() {
     echo "$req_hash" > "$VENV/.req_hash"
   fi
 
+  install_push_guard
   mkdir -p "$PRIVATE" && chmod 700 "$PRIVATE"
   echo "$(date -u +%Y-%m-%dT%H:%M:%SZ) setup by ${AGENT_ENV_SETUP_BY:-manual}" >> "$WORK/setup.log"
   cmd_status
@@ -253,14 +266,18 @@ open(sys.argv[2],"wb").write(base64.b64decode(raw))' "$src" "$PRIVATE/$name" || 
   fi
 }
 
-board_push() {  # push agents/control; on rejection rebase once and push again
+board_push() {  # push agents/control; on rejection rebase once and push again; the lock is re-checked before each push
   local b="$WORK/board"
+  require_lock; test_pause                     # the pre-push hook re-checks the lock at push time (not internal)
   git -C "$b" push --quiet origin "HEAD:refs/heads/$BOARD_BRANCH" 2>/dev/null && return 0
+  require_lock   # a refused push may be the hook: re-check first so a lost lock dies here, not as a rebase
   git -C "$b" pull --quiet --rebase origin "$BOARD_BRANCH" || die "board rebase failed"
+  require_lock
   git -C "$b" push --quiet origin "HEAD:refs/heads/$BOARD_BRANCH" || die "board push rejected twice"
 }
 
 LOCK_DIR="docs/agents/locks"
+LOCK_MARGIN_MIN=10
 lock_slug() {  # agent name in a run-log line -> lock slug and TTL in minutes (empty: agent not locked)
   case "$1" in
     "Lead") echo "lead 120" ;;
@@ -312,18 +329,93 @@ board_sync() {  # fetch agents/control and move the board worktree to it, keepin
   git -C "$b" reset --quiet --keep "origin/$BOARD_BRANCH" || die "board has local commits or edits that block a sync"
 }
 
-require_lock() {  # the session must hold its agent lock (cloud sessions only; the lock is written by board log STARTED)
-  is_cloud || return 0
-  local held="$WORK/agent_lock"
-  [[ -f "$held" ]] || die "no run lock held: write the STARTED line with board log first (owner 2026-10-23 run lock)"
+lock_state() {  # lock_state MARGIN -> "OK <min left>" | "NOLOCK" | "LOST <holder>" | "EXPIRED" | "MARGIN <min left>"
+  local held="$WORK/agent_lock" margin="${1:-$LOCK_MARGIN_MIN}"
+  [[ -f "$held" ]] || { echo "NOLOCK"; return 0; }
   local slug token
   read -r slug token < "$held"
-  git -C "$WORK/board" fetch --quiet origin "$BOARD_BRANCH"
-  local remote
-  remote="$(git -C "$WORK/board" show "origin/$BOARD_BRANCH:$LOCK_DIR/$slug.lock" 2>/dev/null | python3 -I -c 'import json,sys
-try: print(json.load(sys.stdin)["token"])
-except Exception: print("NONE")')"
-  [[ "$remote" == "$token" ]] || die "run lock lost (held by ${remote}); this run may not claim, merge or commit: end it"
+  git -C "$WORK/board" fetch --quiet origin "$BOARD_BRANCH" || { echo "LOST unreadable"; return 0; }
+  git -C "$WORK/board" show "origin/$BOARD_BRANCH:$LOCK_DIR/$slug.lock" 2>/dev/null | python3 -I -c 'import json,sys,time
+tok, margin = sys.argv[1], float(sys.argv[2])
+try: d = json.load(sys.stdin)
+except Exception: print("LOST NONE"); sys.exit()
+if d.get("token") != tok: print("LOST", d.get("token")); sys.exit()
+left = (d["since_epoch"] + d["ttl_min"] * 60 - time.time()) / 60
+print("EXPIRED" if left <= 0 else ("MARGIN %.1f" % left if left < margin else "OK %.1f" % left))' "$token" "$margin"
+}
+
+require_lock() {  # require_lock [MARGIN]: the session must hold its agent lock, unexpired, with MARGIN minutes left
+  is_cloud || return 0
+  local st
+  st="$(lock_state "${1:-$LOCK_MARGIN_MIN}")"
+  case "$st" in
+    OK*) return 0 ;;
+    NOLOCK) die "no run lock held: write the STARTED line with board log first (owner 2026-10-23 run lock)" ;;
+    LOST*) die "run lock lost (held by ${st#LOST }); this run may not claim, merge or commit: end it" ;;
+    EXPIRED) die "run lock expired; publish nothing: write the final line INCOMPLETE and end" ;;
+    MARGIN*) die "run lock within ${1:-$LOCK_MARGIN_MIN} min of expiry (${st#MARGIN } min left); publish nothing: write the final line INCOMPLETE and end" ;;
+  esac
+}
+
+install_push_guard() {  # git pre-push hook for raw pushes from any worktree of this checkout (idempotent)
+  is_cloud || return 0
+  [[ -d "$ROOT/.git" ]] || return 0
+  local hooks hook mark="# URBAN AGENT_ENV PUSH GUARD"
+  hooks="$(git -C "$ROOT" rev-parse --path-format=absolute --git-common-dir)/hooks"; hook="$hooks/pre-push"
+  [[ "$(git -C "$ROOT" config --get core.hooksPath || true)" == "" ]] || die "core.hooksPath is set; the push guard cannot be installed"
+  if [[ -f "$hook" ]] && ! grep -qF "$mark" "$hook"; then die "a foreign pre-push hook exists; the push guard cannot be installed"; fi
+  mkdir -p "$hooks"
+  local want
+  want="$(cat <<HOOK
+#!/usr/bin/env bash
+$mark (installed by scripts/agent_env.sh; owner 2026-10-23 lock safety)
+[[ "\${AGENT_ENV_INTERNAL_PUSH:-}" == "1" ]] && exit 0
+AE="$ROOT/scripts/agent_env.sh"
+while read -r lref lsha rref rsha; do
+  case "\$rref" in
+    refs/heads/$ENGINE_BRANCH|refs/heads/agents/task-*)
+      bash "\$AE" lock check >&2 || { echo "AGENT_ENV FAIL: push of \$rref refused: no valid run lock" >&2; exit 1; } ;;
+    refs/heads/$BOARD_BRANCH)
+      if [[ -f "$WORK/agent_lock" ]]; then
+        bash "\$AE" lock check --margin 1 >&2 || { echo "AGENT_ENV FAIL: board push refused: run lock lost, expired or within 1 min of expiry" >&2; exit 1; }
+      fi ;;
+  esac
+done
+exit 0
+HOOK
+)"
+  [[ -f "$hook" && "$(cat "$hook")" == "$want" ]] && return 0
+  printf '%s\n' "$want" > "$hook.tmp.$$" && chmod +x "$hook.tmp.$$" && mv -f "$hook.tmp.$$" "$hook"   # rename: a running hook keeps its file
+}
+
+test_pause() {  # test seam: AGENT_ENV_TEST_PAUSE_S=<seconds> sleeps between the lock check and the push (tests only)
+  [[ "${AGENT_ENV_TEST_PAUSE_S:-}" =~ ^[0-9]+$ ]] && sleep "$AGENT_ENV_TEST_PAUSE_S"
+  return 0
+}
+
+cmd_lock() {
+  [[ "${1:-}" == "check" ]] || die "lock needs: check [--margin N]"
+  shift
+  local margin="$LOCK_MARGIN_MIN"
+  if [[ "${1:-}" == "--margin" ]]; then
+    [[ "${2:-}" =~ ^[0-9]+$ ]] || die "--margin needs whole minutes"; margin="$2"
+  fi
+  is_cloud || { say "not a cloud session; no run lock"; return 0; }
+  local st; st="$(lock_state "$margin")"
+  [[ "$st" == OK* ]] || die "run lock not valid: $st"
+  say "run lock valid (${st#OK } min left)"
+}
+
+cmd_engine() {
+  [[ "${1:-}" == "push" && $# -eq 1 ]] || die "engine needs: push"
+  require_lock; test_pause                     # the pre-push hook re-checks the lock at push time
+  git -C "$WORK/engine" push --quiet origin "HEAD:refs/heads/$ENGINE_BRANCH" || die "engine push refused or rejected (never forced)"
+  local st; st="$(lock_state 0)"
+  if [[ "$st" != OK* ]]; then
+    echo "AGENT_ENV INCIDENT: engine push completed but the run lock is now $st; report it in the final line (INCOMPLETE)" >&2
+    exit 4
+  fi
+  say "engine pushed @ $(git -C "$WORK/engine" rev-parse --short HEAD); run lock still valid (${st#OK } min left)"
 }
 
 cmd_board() {
@@ -340,6 +432,10 @@ cmd_board() {
       word="$(cut -d'|' -f3 <<<"$line" | awk '{print toupper($1)}')"
       read -r slug ttl <<<"$(lock_slug "$agent")"
       local attempt lf="$b/$LOCK_DIR/${slug:-none}.lock" held="$WORK/agent_lock"
+      if [[ -n "$slug" && "$word" == "SUCCESS" && -f "$held" ]] && is_cloud; then   # a SUCCESS claim needs a valid lock
+        local fst; fst="$(lock_state 0)"
+        [[ "$fst" == OK* ]] || die "run lock $fst: a SUCCESS final line is refused; write the final line INCOMPLETE (lock $fst) and end"
+      fi
       for attempt in 1 2 3 4; do
         board_sync
         grep -q '^## Entries' "$f" || die "RUN_LOG.md has no \"## Entries\" heading"
@@ -352,7 +448,7 @@ cmd_board() {
             msg="- $(date -u +%Y-%m-%dT%H:%MZ) | $agent | IDLE | none (run lock held by run $tok since $since) | overlap lock: another $agent run is active; no claim, no change, no quantity | lock"
             log_insert "$f" "$msg"; git -C "$b" add docs/agents/RUN_LOG.md
             git -C "$b" commit --quiet -m "Run log: $agent idle (run lock held)"
-            if git -C "$b" push --quiet origin "HEAD:refs/heads/$BOARD_BRANCH" 2>/dev/null; then
+            if AGENT_ENV_INTERNAL_PUSH=1 git -C "$b" push --quiet origin "HEAD:refs/heads/$BOARD_BRANCH" 2>/dev/null; then
               echo "AGENT_ENV LOCKED: another $agent run holds the run lock since $since; an IDLE final line was written; end this run now"
               exit 3
             fi
@@ -372,7 +468,7 @@ cmd_board() {
         log_insert "$f" "$msg"
         git -C "$b" add docs/agents/RUN_LOG.md
         git -C "$b" commit --quiet -m "Run log: ${msg:2:60}"
-        if git -C "$b" push --quiet origin "HEAD:refs/heads/$BOARD_BRANCH" 2>/dev/null; then
+        if AGENT_ENV_INTERNAL_PUSH=1 git -C "$b" push --quiet origin "HEAD:refs/heads/$BOARD_BRANCH" 2>/dev/null; then
           case "$lockop" in
             take*) echo "$slug ${lockop#take }" > "$held"; say "run lock $slug taken" ;;
             release) rm -f "$held"; say "run lock $slug released" ;;
@@ -414,7 +510,9 @@ main() {
     task) check_repo; ensure_prepared; cmd_task "$@" ;;
     decode) check_repo; ensure_prepared; cmd_decode "$@" ;;
     board) check_repo; ensure_prepared; cmd_board "$@" ;;
-    *) sed -n '2,39p' "${BASH_SOURCE[0]}"; [[ -z "$c" ]] || exit 2 ;;
+    lock) check_repo; ensure_prepared; cmd_lock "$@" ;;
+    engine) check_repo; ensure_prepared; cmd_engine "$@" ;;
+    *) sed -n '2,/^set -euo pipefail/{/^set -euo/!p}' "${BASH_SOURCE[0]}"; [[ -z "$c" ]] || exit 2 ;;
   esac
 }
 main "$@"

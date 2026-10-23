@@ -65,5 +65,11 @@ tracked file, commit, branch, board text, test or log. Refer to a file only by i
   `AGENT_ENV LOCKED` (exit 3), another run of the same agent is active: it has already written your IDLE final line;
   end the run at once and do nothing else. `task` and `board commit` refuse without the lock; if they say
   "run lock lost", your run outlived its lock: write the final line (INCOMPLETE, with that text) and end.
+- LOCK SAFETY (owner 2026-10-23 21:30): every publication re-checks the lock just before it pushes (owner, not expired,
+  at least 10 minutes left). The Verifier publishes a merge ONLY with `bash scripts/agent_env.sh engine push`; a raw push
+  of the engine branch or of `agents/task-<ID>` without a valid lock is refused by the checkout's pre-push hook. Never use
+  `--no-verify`, never change `core.hooksPath`, never publish through GitHub tools. If a command says "run lock expired",
+  "within 10 min of expiry" or prints `AGENT_ENV INCIDENT`, publish nothing more: write the final line INCOMPLETE with that
+  text and end (a SUCCESS final line is refused once the lock is lost or expired).
 - A scheduler "succeeded" is not a successful run, and a successful run is not an engineering verification.
 - Engineering verification is recorded only by the Verifier, on the board.

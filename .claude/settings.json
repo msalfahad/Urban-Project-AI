@@ -36,7 +36,17 @@
       "mcp__*__update_file",
       "mcp__*__copy_file",
       "mcp__*__share_file",
-      "mcp__*__trash_file"
+      "mcp__*__trash_file",
+      "Bash(git * --no-verify*)",
+      "Bash(git push --no-verify*)",
+      "Bash(git * core.hooksPath*)",
+      "Bash(*AGENT_ENV_INTERNAL_PUSH*)",
+      "mcp__*__push_files",
+      "mcp__*__create_or_update_file",
+      "mcp__*__delete_file",
+      "mcp__*__merge_pull_request",
+      "mcp__*__create_branch",
+      "mcp__*__update_pull_request_branch"
     ]
   },
   "hooks": {
