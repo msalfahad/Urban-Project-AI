@@ -1,0 +1,1253 @@
+{
+ "method": "NECK_ENDS_V1",
+ "necks_drawn": 36,
+ "released_lines": 28,
+ "released_m3": 10.8555,
+ "released_sum_section_m2": 5.34,
+ "released_basis": "h = FFL +1.00 - (-1.50) - H: top at a FINISHED level (FINISHED_AS_STRUCTURAL), footing underside at -1.50, i.e. a formation at -1.67 with the printed 0.17 underlay + blinding",
+ "freelancer_m3": 8.805,
+ "reconciliation": {
+  "freelancer_m3": 8.805,
+  "released_m3": 10.8555,
+  "difference_m3": 2.0505,
+  "steps": {
+   "scope_not_drawn": [],
+   "scope_engine_held": [
+    {
+     "type": "C",
+     "n": 1,
+     "m3": -0.225
+    },
+    {
+     "type": "C10",
+     "n": 1,
+     "m3": -0.315
+    },
+    {
+     "type": "CN",
+     "n": 6,
+     "m3": -0.81
+    }
+   ],
+   "scope_engine_only": [],
+   "section": [
+    {
+     "type": "C11",
+     "n": 1,
+     "freelancer_m2": 0.44,
+     "printed_m2": 0.33,
+     "m3": -0.165
+    }
+   ],
+   "count": [
+    {
+     "type": "C11",
+     "n": 1,
+     "m3": 0.495
+    },
+    {
+     "type": "C3",
+     "n": 1,
+     "m3": 0.225
+    }
+   ],
+   "height": [
+    {
+     "type": "C",
+     "m3": 0.105
+    },
+    {
+     "type": "C",
+     "m3": 0.105
+    },
+    {
+     "type": "C",
+     "m3": 0.105
+    },
+    {
+     "type": "C",
+     "m3": 0.105
+    },
+    {
+     "type": "C1",
+     "m3": 0.0675
+    },
+    {
+     "type": "C11",
+     "m3": 0.165
+    },
+    {
+     "type": "C11",
+     "m3": 0.165
+    },
+    {
+     "type": "C2",
+     "m3": 0.0975
+    },
+    {
+     "type": "C2",
+     "m3": 0.0975
+    },
+    {
+     "type": "C2",
+     "m3": 0.0675
+    },
+    {
+     "type": "C2",
+     "m3": 0.0675
+    },
+    {
+     "type": "C3",
+     "m3": 0.105
+    },
+    {
+     "type": "C3",
+     "m3": 0.09
+    },
+    {
+     "type": "C3",
+     "m3": 0.105
+    },
+    {
+     "type": "C3",
+     "m3": 0.045
+    },
+    {
+     "type": "C3",
+     "m3": 0.075
+    },
+    {
+     "type": "C3",
+     "m3": 0.075
+    },
+    {
+     "type": "C4",
+     "m3": 0.09
+    },
+    {
+     "type": "C4",
+     "m3": 0.09
+    },
+    {
+     "type": "C5",
+     "m3": 0.09
+    },
+    {
+     "type": "C5",
+     "m3": 0.108
+    },
+    {
+     "type": "C5",
+     "m3": 0.108
+    },
+    {
+     "type": "C6",
+     "m3": 0.105
+    },
+    {
+     "type": "C7",
+     "m3": 0.072
+    },
+    {
+     "type": "C8",
+     "m3": 0.135
+    },
+    {
+     "type": "C8",
+     "m3": 0.135
+    },
+    {
+     "type": "C9",
+     "m3": 0.135
+    },
+    {
+     "type": "C9",
+     "m3": 0.135
+    }
+   ]
+  },
+  "totals_m3": {
+   "scope_not_drawn": 0,
+   "scope_engine_held": -1.35,
+   "scope_engine_only": 0,
+   "section": -0.165,
+   "count": 0.72,
+   "height": 2.8455
+  },
+  "explained_m3": 2.0505,
+  "residual_m3": 0.0
+ },
+ "drawing_derived": {
+  "status": "HELD (every neck): neck top = GB top = ground-floor STRUCTURAL slab top, not printed; footing end = formation + 0.17 + H, formation not printed (Q-21 C; limit AT_MOST -1.50 OPEN)",
+  "length_formula_m": "h = 2.33 - H - b + d  (b = FFL -> slab-top build-up >= 0, d = formation depth below the printed -1.50 limit >= 0; both unprinted)",
+  "groups (what_if at b = d = 0, not a quantity)": {
+   "printed_section": {
+    "n": 23,
+    "released_m3": 8.853,
+    "sum_section_m2": 4.32,
+    "what_if_b0_d0_m3": [
+     8.1186,
+     8.1186
+    ]
+   },
+   "lift_pit_raft": {
+    "n": 4,
+    "released_m3": 1.4625,
+    "sum_section_m2": 0.0,
+    "what_if_b0_d0_m3": null
+   },
+   "section_conflict": {
+    "n": 1,
+    "released_m3": 0.54,
+    "sum_section_m2": 0.0,
+    "what_if_b0_d0_m3": [
+     0.4392,
+     0.4941
+    ]
+   },
+   "engine_held_footing_conflict": {
+    "n": 2,
+    "released_m3": 0.0,
+    "sum_section_m2": 0.36,
+    "what_if_b0_d0_m3": null
+   },
+   "engine_held_neck_only_CN": {
+    "n": 6,
+    "released_m3": 0.0,
+    "sum_section_m2": 0.54,
+    "what_if_b0_d0_m3": [
+     1.0692,
+     1.0692
+    ]
+   }
+  },
+  "per_0.10_m_build_up_m3": -0.534,
+  "per_0.10_m_deeper_formation_m3": 0.534,
+  "released_equivalent": "the released 10.8555 m3 equals d - b = 0.17 m on every neck",
+  "held_codes": {
+   "LEVEL_NOT_PRINTED": 36,
+   "FORMATION_NOT_PRINTED": 30,
+   "SECTION_CONFLICT": 5,
+   "PIT_DEPTH_NOT_PRINTED": 4,
+   "FOOTING_CONFLICT": 2
+  }
+ },
+ "stack_check_neck_vs_gf_column": {
+  "code": "HELD",
+  "volume_m3": null,
+  "why": "neck top GB_TOP and column bottom FFL are different datums and at least one is not printed: GAP or DOUBLE of column area x the unprinted difference"
+ },
+ "rows": [
+  {
+   "neck_id": "NECK:COL:SH10:C11@131730,40428",
+   "type": "C11",
+   "label_handle": "10BF",
+   "outline_handle": "10BA",
+   "section_status": "DRAWING-CONFIRMED",
+   "section_m2": 0.33,
+   "section_range_m2": [
+    0.33,
+    0.33
+   ],
+   "section_note": "",
+   "footing": "F13",
+   "footing_H_m": 0.5,
+   "top_datum": "GB_TOP",
+   "top_m": null,
+   "footing_top_m": null,
+   "printed_stack_m": 0.67,
+   "drawing_status": "HELD",
+   "held_codes": "LEVEL_NOT_PRINTED|FORMATION_NOT_PRINTED",
+   "drawing_length_formula": "1.830 - b + d",
+   "what_if_b0_d0_m3": 0.6039,
+   "released_length_m": 2.0,
+   "released_m3": 0.66,
+   "freelancer_row": 26,
+   "freelancer_section_m2": 0.44,
+   "freelancer_length_m": 1.5
+  },
+  {
+   "neck_id": "NECK:COL:SH10:C11@133022,37046",
+   "type": "C11",
+   "label_handle": "blk:1684",
+   "outline_handle": "10DD",
+   "section_status": "DRAWING-CONFIRMED",
+   "section_m2": 0.33,
+   "section_range_m2": [
+    0.33,
+    0.33
+   ],
+   "section_note": "",
+   "footing": "F11",
+   "footing_H_m": 0.5,
+   "top_datum": "GB_TOP",
+   "top_m": null,
+   "footing_top_m": null,
+   "printed_stack_m": 0.67,
+   "drawing_status": "HELD",
+   "held_codes": "LEVEL_NOT_PRINTED|FORMATION_NOT_PRINTED",
+   "drawing_length_formula": "1.830 - b + d",
+   "what_if_b0_d0_m3": 0.6039,
+   "released_length_m": 2.0,
+   "released_m3": 0.66,
+   "freelancer_row": 26,
+   "freelancer_section_m2": 0.44,
+   "freelancer_length_m": 1.5
+  },
+  {
+   "neck_id": "NECK:COL:SH10:C1@137485,46080",
+   "type": "C1",
+   "label_handle": "109D",
+   "outline_handle": "1099",
+   "section_status": "HELD",
+   "section_m2": null,
+   "section_range_m2": [
+    0.1,
+    0.15
+   ],
+   "section_note": "ST7757 dxf.dxf FOUNDATION PLAN S-COL.BON outline 1099 (drawn, no printed size) 20x50",
+   "footing": "FF",
+   "footing_H_m": 0.55,
+   "top_datum": "GB_TOP",
+   "top_m": null,
+   "footing_top_m": null,
+   "printed_stack_m": null,
+   "drawing_status": "HELD",
+   "held_codes": "SECTION_CONFLICT|LEVEL_NOT_PRINTED|PIT_DEPTH_NOT_PRINTED",
+   "drawing_length_formula": "",
+   "what_if_b0_d0_m3": null,
+   "released_length_m": 1.95,
+   "released_m3": 0.2925,
+   "freelancer_row": 16,
+   "freelancer_section_m2": 0.15,
+   "freelancer_length_m": 1.5
+  },
+  {
+   "neck_id": "NECK:COL:SH10:C2@133875,50112",
+   "type": "C2",
+   "label_handle": "1675",
+   "outline_handle": "1084",
+   "section_status": "DRAWING-CONFIRMED",
+   "section_m2": 0.15,
+   "section_range_m2": [
+    0.15,
+    0.15
+   ],
+   "section_note": "",
+   "footing": "F2",
+   "footing_H_m": 0.35,
+   "top_datum": "GB_TOP",
+   "top_m": null,
+   "footing_top_m": null,
+   "printed_stack_m": 0.52,
+   "drawing_status": "HELD",
+   "held_codes": "LEVEL_NOT_PRINTED|FORMATION_NOT_PRINTED",
+   "drawing_length_formula": "1.980 - b + d",
+   "what_if_b0_d0_m3": 0.297,
+   "released_length_m": 2.15,
+   "released_m3": 0.3225,
+   "freelancer_row": 17,
+   "freelancer_section_m2": 0.15,
+   "freelancer_length_m": 1.5
+  },
+  {
+   "neck_id": "NECK:COL:SH10:C2@136610,50085",
+   "type": "C2",
+   "label_handle": "1674",
+   "outline_handle": "1087",
+   "section_status": "DRAWING-CONFIRMED",
+   "section_m2": 0.15,
+   "section_range_m2": [
+    0.15,
+    0.15
+   ],
+   "section_note": "",
+   "footing": "F2",
+   "footing_H_m": 0.35,
+   "top_datum": "GB_TOP",
+   "top_m": null,
+   "footing_top_m": null,
+   "printed_stack_m": 0.52,
+   "drawing_status": "HELD",
+   "held_codes": "LEVEL_NOT_PRINTED|FORMATION_NOT_PRINTED",
+   "drawing_length_formula": "1.980 - b + d",
+   "what_if_b0_d0_m3": 0.297,
+   "released_length_m": 2.15,
+   "released_m3": 0.3225,
+   "freelancer_row": 17,
+   "freelancer_section_m2": 0.15,
+   "freelancer_length_m": 1.5
+  },
+  {
+   "neck_id": "NECK:COL:SH10:C2@137427,44773",
+   "type": "C2",
+   "label_handle": "109B",
+   "outline_handle": "1096",
+   "section_status": "HELD",
+   "section_m2": null,
+   "section_range_m2": [
+    0.1,
+    0.15
+   ],
+   "section_note": "ST7757 dxf.dxf FOUNDATION PLAN S-COL.BON outline 1096 (drawn, no printed size) 20x50",
+   "footing": "FF",
+   "footing_H_m": 0.55,
+   "top_datum": "GB_TOP",
+   "top_m": null,
+   "footing_top_m": null,
+   "printed_stack_m": null,
+   "drawing_status": "HELD",
+   "held_codes": "SECTION_CONFLICT|LEVEL_NOT_PRINTED|PIT_DEPTH_NOT_PRINTED",
+   "drawing_length_formula": "",
+   "what_if_b0_d0_m3": null,
+   "released_length_m": 1.95,
+   "released_m3": 0.2925,
+   "freelancer_row": 17,
+   "freelancer_section_m2": 0.15,
+   "freelancer_length_m": 1.5
+  },
+  {
+   "neck_id": "NECK:COL:SH10:C2@138612,46077",
+   "type": "C2",
+   "label_handle": "109C",
+   "outline_handle": "1093",
+   "section_status": "HELD",
+   "section_m2": null,
+   "section_range_m2": [
+    0.1,
+    0.15
+   ],
+   "section_note": "ST7757 dxf.dxf FOUNDATION PLAN S-COL.BON outline 1093 (drawn, no printed size) 20x50",
+   "footing": "FF",
+   "footing_H_m": 0.55,
+   "top_datum": "GB_TOP",
+   "top_m": null,
+   "footing_top_m": null,
+   "printed_stack_m": null,
+   "drawing_status": "HELD",
+   "held_codes": "SECTION_CONFLICT|LEVEL_NOT_PRINTED|PIT_DEPTH_NOT_PRINTED",
+   "drawing_length_formula": "",
+   "what_if_b0_d0_m3": null,
+   "released_length_m": 1.95,
+   "released_m3": 0.2925,
+   "freelancer_row": 17,
+   "freelancer_section_m2": 0.15,
+   "freelancer_length_m": 1.5
+  },
+  {
+   "neck_id": "NECK:COL:SH10:C3@123284,41372",
+   "type": "C3",
+   "label_handle": "168F",
+   "outline_handle": "10B1",
+   "section_status": "DRAWING-CONFIRMED",
+   "section_m2": 0.15,
+   "section_range_m2": [
+    0.15,
+    0.15
+   ],
+   "section_note": "",
+   "footing": "F3",
+   "footing_H_m": 0.3,
+   "top_datum": "GB_TOP",
+   "top_m": null,
+   "footing_top_m": null,
+   "printed_stack_m": 0.47,
+   "drawing_status": "HELD",
+   "held_codes": "LEVEL_NOT_PRINTED|FORMATION_NOT_PRINTED",
+   "drawing_length_formula": "2.030 - b + d",
+   "what_if_b0_d0_m3": 0.3045,
+   "released_length_m": 2.2,
+   "released_m3": 0.33,
+   "freelancer_row": 18,
+   "freelancer_section_m2": 0.15,
+   "freelancer_length_m": 1.5
+  },
+  {
+   "neck_id": "NECK:COL:SH10:C3@125165,36762",
+   "type": "C3",
+   "label_handle": "1681",
+   "outline_handle": "10AE",
+   "section_status": "DRAWING-CONFIRMED",
+   "section_m2": 0.15,
+   "section_range_m2": [
+    0.15,
+    0.15
+   ],
+   "section_note": "",
+   "footing": "F15",
+   "footing_H_m": 0.4,
+   "top_datum": "GB_TOP",
+   "top_m": null,
+   "footing_top_m": null,
+   "printed_stack_m": 0.5700000000000001,
+   "drawing_status": "HELD",
+   "held_codes": "LEVEL_NOT_PRINTED|FORMATION_NOT_PRINTED",
+   "drawing_length_formula": "1.930 - b + d",
+   "what_if_b0_d0_m3": 0.2895,
+   "released_length_m": 2.1,
+   "released_m3": 0.315,
+   "freelancer_row": 18,
+   "freelancer_section_m2": 0.15,
+   "freelancer_length_m": 1.5
+  },
+  {
+   "neck_id": "NECK:COL:SH10:C3@129555,38490",
+   "type": "C3",
+   "label_handle": "168E",
+   "outline_handle": "10C5",
+   "section_status": "DRAWING-CONFIRMED",
+   "section_m2": 0.15,
+   "section_range_m2": [
+    0.15,
+    0.15
+   ],
+   "section_note": "",
+   "footing": "F3",
+   "footing_H_m": 0.3,
+   "top_datum": "GB_TOP",
+   "top_m": null,
+   "footing_top_m": null,
+   "printed_stack_m": 0.47,
+   "drawing_status": "HELD",
+   "held_codes": "LEVEL_NOT_PRINTED|FORMATION_NOT_PRINTED",
+   "drawing_length_formula": "2.030 - b + d",
+   "what_if_b0_d0_m3": 0.3045,
+   "released_length_m": 2.2,
+   "released_m3": 0.33,
+   "freelancer_row": 18,
+   "freelancer_section_m2": 0.15,
+   "freelancer_length_m": 1.5
+  },
+  {
+   "neck_id": "NECK:COL:SH10:C3@133946,46136",
+   "type": "C3",
+   "label_handle": "10CD",
+   "outline_handle": "10CC",
+   "section_status": "DRAWING-CONFIRMED",
+   "section_m2": 0.15,
+   "section_range_m2": [
+    0.15,
+    0.15
+   ],
+   "section_note": "",
+   "footing": "F12",
+   "footing_H_m": 0.7,
+   "top_datum": "GB_TOP",
+   "top_m": null,
+   "footing_top_m": null,
+   "printed_stack_m": 0.87,
+   "drawing_status": "HELD",
+   "held_codes": "LEVEL_NOT_PRINTED|FORMATION_NOT_PRINTED",
+   "drawing_length_formula": "1.630 - b + d",
+   "what_if_b0_d0_m3": 0.2445,
+   "released_length_m": 1.8,
+   "released_m3": 0.27,
+   "freelancer_row": 18,
+   "freelancer_section_m2": 0.15,
+   "freelancer_length_m": 1.5
+  },
+  {
+   "neck_id": "NECK:COL:SH10:C3@141170,36765",
+   "type": "C3",
+   "label_handle": "10E5",
+   "outline_handle": "10E4",
+   "section_status": "DRAWING-CONFIRMED",
+   "section_m2": 0.15,
+   "section_range_m2": [
+    0.15,
+    0.15
+   ],
+   "section_note": "",
+   "footing": "F14",
+   "footing_H_m": 0.5,
+   "top_datum": "GB_TOP",
+   "top_m": null,
+   "footing_top_m": null,
+   "printed_stack_m": 0.67,
+   "drawing_status": "HELD",
+   "held_codes": "LEVEL_NOT_PRINTED|FORMATION_NOT_PRINTED",
+   "drawing_length_formula": "1.830 - b + d",
+   "what_if_b0_d0_m3": 0.2745,
+   "released_length_m": 2.0,
+   "released_m3": 0.3,
+   "freelancer_row": 18,
+   "freelancer_section_m2": 0.15,
+   "freelancer_length_m": 1.5
+  },
+  {
+   "neck_id": "NECK:COL:SH10:C3@150039,43577",
+   "type": "C3",
+   "label_handle": "10A1",
+   "outline_handle": "10A0",
+   "section_status": "DRAWING-CONFIRMED",
+   "section_m2": 0.15,
+   "section_range_m2": [
+    0.15,
+    0.15
+   ],
+   "section_note": "",
+   "footing": "F8",
+   "footing_H_m": 0.5,
+   "top_datum": "GB_TOP",
+   "top_m": null,
+   "footing_top_m": null,
+   "printed_stack_m": 0.67,
+   "drawing_status": "HELD",
+   "held_codes": "LEVEL_NOT_PRINTED|FORMATION_NOT_PRINTED",
+   "drawing_length_formula": "1.830 - b + d",
+   "what_if_b0_d0_m3": 0.2745,
+   "released_length_m": 2.0,
+   "released_m3": 0.3,
+   "freelancer_row": 18,
+   "freelancer_section_m2": 0.15,
+   "freelancer_length_m": 1.5
+  },
+  {
+   "neck_id": "NECK:COL:SH10:C4@144340,50189",
+   "type": "C4",
+   "label_handle": "1672",
+   "outline_handle": "10D7",
+   "section_status": "DRAWING-CONFIRMED",
+   "section_m2": 0.15,
+   "section_range_m2": [
+    0.15,
+    0.15
+   ],
+   "section_note": "",
+   "footing": "F4",
+   "footing_H_m": 0.4,
+   "top_datum": "GB_TOP",
+   "top_m": null,
+   "footing_top_m": null,
+   "printed_stack_m": 0.5700000000000001,
+   "drawing_status": "HELD",
+   "held_codes": "LEVEL_NOT_PRINTED|FORMATION_NOT_PRINTED",
+   "drawing_length_formula": "1.930 - b + d",
+   "what_if_b0_d0_m3": 0.2895,
+   "released_length_m": 2.1,
+   "released_m3": 0.315,
+   "freelancer_row": 19,
+   "freelancer_section_m2": 0.15,
+   "freelancer_length_m": 1.5
+  },
+  {
+   "neck_id": "NECK:COL:SH10:C4@148342,50109",
+   "type": "C4",
+   "label_handle": "1671",
+   "outline_handle": "108D",
+   "section_status": "DRAWING-CONFIRMED",
+   "section_m2": 0.15,
+   "section_range_m2": [
+    0.15,
+    0.15
+   ],
+   "section_note": "ST7757 dxf.dxf FOUNDATION PLAN S-COL.BON outline 108D (drawn, no printed size) 25x50",
+   "footing": "F4",
+   "footing_H_m": 0.4,
+   "top_datum": "GB_TOP",
+   "top_m": null,
+   "footing_top_m": null,
+   "printed_stack_m": 0.5700000000000001,
+   "drawing_status": "HELD",
+   "held_codes": "LEVEL_NOT_PRINTED|FORMATION_NOT_PRINTED",
+   "drawing_length_formula": "1.930 - b + d",
+   "what_if_b0_d0_m3": 0.2895,
+   "released_length_m": 2.1,
+   "released_m3": 0.315,
+   "freelancer_row": 19,
+   "freelancer_section_m2": 0.15,
+   "freelancer_length_m": 1.5
+  },
+  {
+   "neck_id": "NECK:COL:SH10:C5@129305,40458",
+   "type": "C5",
+   "label_handle": "10BE",
+   "outline_handle": "10BD",
+   "section_status": "DRAWING-CONFIRMED",
+   "section_m2": 0.18,
+   "section_range_m2": [
+    0.18,
+    0.18
+   ],
+   "section_note": "",
+   "footing": "F13",
+   "footing_H_m": 0.5,
+   "top_datum": "GB_TOP",
+   "top_m": null,
+   "footing_top_m": null,
+   "printed_stack_m": 0.67,
+   "drawing_status": "HELD",
+   "held_codes": "LEVEL_NOT_PRINTED|FORMATION_NOT_PRINTED",
+   "drawing_length_formula": "1.830 - b + d",
+   "what_if_b0_d0_m3": 0.3294,
+   "released_length_m": 2.0,
+   "released_m3": 0.36,
+   "freelancer_row": 20,
+   "freelancer_section_m2": 0.18,
+   "freelancer_length_m": 1.5
+  },
+  {
+   "neck_id": "NECK:COL:SH10:C5@140479,50181",
+   "type": "C5",
+   "label_handle": "1673",
+   "outline_handle": "108A",
+   "section_status": "DRAWING-CONFIRMED",
+   "section_m2": 0.18,
+   "section_range_m2": [
+    0.18,
+    0.18
+   ],
+   "section_note": "",
+   "footing": "F5",
+   "footing_H_m": 0.4,
+   "top_datum": "GB_TOP",
+   "top_m": null,
+   "footing_top_m": null,
+   "printed_stack_m": 0.5700000000000001,
+   "drawing_status": "HELD",
+   "held_codes": "LEVEL_NOT_PRINTED|FORMATION_NOT_PRINTED",
+   "drawing_length_formula": "1.930 - b + d",
+   "what_if_b0_d0_m3": 0.3474,
+   "released_length_m": 2.1,
+   "released_m3": 0.378,
+   "freelancer_row": 20,
+   "freelancer_section_m2": 0.18,
+   "freelancer_length_m": 1.5
+  },
+  {
+   "neck_id": "NECK:COL:SH10:C5@144472,38438",
+   "type": "C5",
+   "label_handle": "166F",
+   "outline_handle": "10D3",
+   "section_status": "DRAWING-CONFIRMED",
+   "section_m2": 0.18,
+   "section_range_m2": [
+    0.18,
+    0.18
+   ],
+   "section_note": "",
+   "footing": "F5",
+   "footing_H_m": 0.4,
+   "top_datum": "GB_TOP",
+   "top_m": null,
+   "footing_top_m": null,
+   "printed_stack_m": 0.5700000000000001,
+   "drawing_status": "HELD",
+   "held_codes": "LEVEL_NOT_PRINTED|FORMATION_NOT_PRINTED",
+   "drawing_length_formula": "1.930 - b + d",
+   "what_if_b0_d0_m3": 0.3474,
+   "released_length_m": 2.1,
+   "released_m3": 0.378,
+   "freelancer_row": 20,
+   "freelancer_section_m2": 0.18,
+   "freelancer_length_m": 1.5
+  },
+  {
+   "neck_id": "NECK:COL:SH10:C6@134002,42128",
+   "type": "C6",
+   "label_handle": "168D",
+   "outline_handle": "10C2",
+   "section_status": "DRAWING-CONFIRMED",
+   "section_m2": 0.21,
+   "section_range_m2": [
+    0.21,
+    0.21
+   ],
+   "section_note": "",
+   "footing": "F6",
+   "footing_H_m": 0.5,
+   "top_datum": "GB_TOP",
+   "top_m": null,
+   "footing_top_m": null,
+   "printed_stack_m": 0.67,
+   "drawing_status": "HELD",
+   "held_codes": "LEVEL_NOT_PRINTED|FORMATION_NOT_PRINTED",
+   "drawing_length_formula": "1.830 - b + d",
+   "what_if_b0_d0_m3": 0.3843,
+   "released_length_m": 2.0,
+   "released_m3": 0.42,
+   "freelancer_row": 21,
+   "freelancer_section_m2": 0.21,
+   "freelancer_length_m": 1.5
+  },
+  {
+   "neck_id": "NECK:COL:SH10:C7@133324,44621",
+   "type": "C7",
+   "label_handle": "10C9",
+   "outline_handle": "10C8",
+   "section_status": "DRAWING-CONFIRMED",
+   "section_m2": 0.24,
+   "section_range_m2": [
+    0.24,
+    0.24
+   ],
+   "section_note": "",
+   "footing": "F12",
+   "footing_H_m": 0.7,
+   "top_datum": "GB_TOP",
+   "top_m": null,
+   "footing_top_m": null,
+   "printed_stack_m": 0.87,
+   "drawing_status": "HELD",
+   "held_codes": "LEVEL_NOT_PRINTED|FORMATION_NOT_PRINTED",
+   "drawing_length_formula": "1.630 - b + d",
+   "what_if_b0_d0_m3": 0.3912,
+   "released_length_m": 1.8,
+   "released_m3": 0.432,
+   "freelancer_row": 22,
+   "freelancer_section_m2": 0.24,
+   "freelancer_length_m": 1.5
+  },
+  {
+   "neck_id": "NECK:COL:SH10:C8@141489,38336",
+   "type": "C8",
+   "label_handle": "10E1",
+   "outline_handle": "10E0",
+   "section_status": "HELD",
+   "section_m2": null,
+   "section_range_m2": [
+    0.24,
+    0.27
+   ],
+   "section_note": "ST7757 dxf.dxf FOUNDATION PLAN S-COL.BON outline 10E0 (drawn, no printed size) 30x80",
+   "footing": "F14",
+   "footing_H_m": 0.5,
+   "top_datum": "GB_TOP",
+   "top_m": null,
+   "footing_top_m": null,
+   "printed_stack_m": 0.67,
+   "drawing_status": "HELD",
+   "held_codes": "SECTION_CONFLICT|LEVEL_NOT_PRINTED|FORMATION_NOT_PRINTED",
+   "drawing_length_formula": "1.830 - b + d",
+   "what_if_b0_d0_m3": [
+    0.4392,
+    0.4941
+   ],
+   "released_length_m": 2.0,
+   "released_m3": 0.54,
+   "freelancer_row": 23,
+   "freelancer_section_m2": 0.27,
+   "freelancer_length_m": 1.5
+  },
+  {
+   "neck_id": "NECK:COL:SH10:C8@148730,43412",
+   "type": "C8",
+   "label_handle": "1670",
+   "outline_handle": "10D0",
+   "section_status": "DRAWING-CONFIRMED",
+   "section_m2": 0.27,
+   "section_range_m2": [
+    0.27,
+    0.27
+   ],
+   "section_note": "",
+   "footing": "F8",
+   "footing_H_m": 0.5,
+   "top_datum": "GB_TOP",
+   "top_m": null,
+   "footing_top_m": null,
+   "printed_stack_m": 0.67,
+   "drawing_status": "HELD",
+   "held_codes": "LEVEL_NOT_PRINTED|FORMATION_NOT_PRINTED",
+   "drawing_length_formula": "1.830 - b + d",
+   "what_if_b0_d0_m3": 0.4941,
+   "released_length_m": 2.0,
+   "released_m3": 0.54,
+   "freelancer_row": 23,
+   "freelancer_section_m2": 0.27,
+   "freelancer_length_m": 1.5
+  },
+  {
+   "neck_id": "NECK:COL:SH10:C9@138589,44775",
+   "type": "C9",
+   "label_handle": "109A",
+   "outline_handle": "1090",
+   "section_status": "HELD",
+   "section_m2": null,
+   "section_range_m2": [
+    0.25,
+    0.3
+   ],
+   "section_note": "ST7757 dxf.dxf FOUNDATION PLAN S-COL.BON outline 1090 (drawn, no printed size) 25x100",
+   "footing": "FF",
+   "footing_H_m": 0.55,
+   "top_datum": "GB_TOP",
+   "top_m": null,
+   "footing_top_m": null,
+   "printed_stack_m": null,
+   "drawing_status": "HELD",
+   "held_codes": "SECTION_CONFLICT|LEVEL_NOT_PRINTED|PIT_DEPTH_NOT_PRINTED",
+   "drawing_length_formula": "",
+   "what_if_b0_d0_m3": null,
+   "released_length_m": 1.95,
+   "released_m3": 0.585,
+   "freelancer_row": 24,
+   "freelancer_section_m2": 0.3,
+   "freelancer_length_m": 1.5
+  },
+  {
+   "neck_id": "NECK:COL:SH10:C9@144230,46259",
+   "type": "C9",
+   "label_handle": "1677",
+   "outline_handle": "10DA",
+   "section_status": "DRAWING-CONFIRMED",
+   "section_m2": 0.3,
+   "section_range_m2": [
+    0.3,
+    0.3
+   ],
+   "section_note": "",
+   "footing": "F9",
+   "footing_H_m": 0.55,
+   "top_datum": "GB_TOP",
+   "top_m": null,
+   "footing_top_m": null,
+   "printed_stack_m": 0.7200000000000001,
+   "drawing_status": "HELD",
+   "held_codes": "LEVEL_NOT_PRINTED|FORMATION_NOT_PRINTED",
+   "drawing_length_formula": "1.780 - b + d",
+   "what_if_b0_d0_m3": 0.534,
+   "released_length_m": 1.95,
+   "released_m3": 0.585,
+   "freelancer_row": 24,
+   "freelancer_section_m2": 0.3,
+   "freelancer_length_m": 1.5
+  },
+  {
+   "neck_id": "NECK:COL:SH10:C@119898,42592",
+   "type": "C",
+   "label_handle": "blk:167F",
+   "outline_handle": "10A8",
+   "section_status": "DRAWING-CONFIRMED",
+   "section_m2": 0.15,
+   "section_range_m2": [
+    0.15,
+    0.15
+   ],
+   "section_note": "",
+   "footing": "F",
+   "footing_H_m": 0.3,
+   "top_datum": "GB_TOP",
+   "top_m": null,
+   "footing_top_m": null,
+   "printed_stack_m": 0.47,
+   "drawing_status": "HELD",
+   "held_codes": "LEVEL_NOT_PRINTED|FORMATION_NOT_PRINTED",
+   "drawing_length_formula": "2.030 - b + d",
+   "what_if_b0_d0_m3": 0.3045,
+   "released_length_m": 2.2,
+   "released_m3": 0.33,
+   "freelancer_row": 27,
+   "freelancer_section_m2": 0.15,
+   "freelancer_length_m": 1.5
+  },
+  {
+   "neck_id": "NECK:COL:SH10:C@120004,36736",
+   "type": "C",
+   "label_handle": "blk:1680",
+   "outline_handle": "10AB",
+   "section_status": "DRAWING-CONFIRMED",
+   "section_m2": 0.15,
+   "section_range_m2": [
+    0.15,
+    0.15
+   ],
+   "section_note": "",
+   "footing": "F",
+   "footing_H_m": 0.3,
+   "top_datum": "GB_TOP",
+   "top_m": null,
+   "footing_top_m": null,
+   "printed_stack_m": 0.47,
+   "drawing_status": "HELD",
+   "held_codes": "LEVEL_NOT_PRINTED|FORMATION_NOT_PRINTED",
+   "drawing_length_formula": "2.030 - b + d",
+   "what_if_b0_d0_m3": 0.3045,
+   "released_length_m": 2.2,
+   "released_m3": 0.33,
+   "freelancer_row": 27,
+   "freelancer_section_m2": 0.15,
+   "freelancer_length_m": 1.5
+  },
+  {
+   "neck_id": "NECK:COL:SH10:C@122085,43426",
+   "type": "C",
+   "label_handle": "blk:1678",
+   "outline_handle": "10B4",
+   "section_status": "DRAWING-CONFIRMED",
+   "section_m2": 0.15,
+   "section_range_m2": [
+    0.15,
+    0.15
+   ],
+   "section_note": "",
+   "footing": "F",
+   "footing_H_m": 0.3,
+   "top_datum": "GB_TOP",
+   "top_m": null,
+   "footing_top_m": null,
+   "printed_stack_m": 0.47,
+   "drawing_status": "HELD",
+   "held_codes": "LEVEL_NOT_PRINTED|FORMATION_NOT_PRINTED",
+   "drawing_length_formula": "2.030 - b + d",
+   "what_if_b0_d0_m3": 0.3045,
+   "released_length_m": 2.2,
+   "released_m3": 0.33,
+   "freelancer_row": 27,
+   "freelancer_section_m2": 0.15,
+   "freelancer_length_m": 1.5
+  },
+  {
+   "neck_id": "NECK:COL:SH10:C@131290,36755",
+   "type": "C",
+   "label_handle": "blk:1682",
+   "outline_handle": "10B7",
+   "section_status": "DRAWING-CONFIRMED",
+   "section_m2": 0.15,
+   "section_range_m2": [
+    0.15,
+    0.15
+   ],
+   "section_note": "ST7757 dxf.dxf FOUNDATION PLAN S-COL.BON outline 10B7 (drawn, no printed size) 30x40",
+   "footing": "F",
+   "footing_H_m": 0.3,
+   "top_datum": "GB_TOP",
+   "top_m": null,
+   "footing_top_m": null,
+   "printed_stack_m": 0.47,
+   "drawing_status": "HELD",
+   "held_codes": "LEVEL_NOT_PRINTED|FORMATION_NOT_PRINTED",
+   "drawing_length_formula": "2.030 - b + d",
+   "what_if_b0_d0_m3": 0.3045,
+   "released_length_m": 2.2,
+   "released_m3": 0.33,
+   "freelancer_row": 27,
+   "freelancer_section_m2": 0.15,
+   "freelancer_length_m": 1.5
+  },
+  {
+   "neck_id": "NECK:COL:SH10:C10@148899,36778",
+   "type": "C10",
+   "label_handle": "10D4",
+   "outline_handle": "10E8",
+   "section_status": "DRAWING-CONFIRMED",
+   "section_m2": 0.21,
+   "section_range_m2": [
+    0.21,
+    0.21
+   ],
+   "section_note": "",
+   "footing": "F10|F",
+   "footing_H_m": null,
+   "top_datum": "GB_TOP",
+   "top_m": null,
+   "footing_top_m": null,
+   "printed_stack_m": null,
+   "drawing_status": "HELD",
+   "held_codes": "LEVEL_NOT_PRINTED|FOOTING_CONFLICT",
+   "drawing_length_formula": "",
+   "what_if_b0_d0_m3": null,
+   "released_length_m": null,
+   "released_m3": null,
+   "freelancer_row": 25,
+   "freelancer_section_m2": 0.21,
+   "freelancer_length_m": 1.5
+  },
+  {
+   "neck_id": "NECK:COL:SH10:C@150972,36507",
+   "type": "C",
+   "label_handle": "166E",
+   "outline_handle": "10A4",
+   "section_status": "DRAWING-CONFIRMED",
+   "section_m2": 0.15,
+   "section_range_m2": [
+    0.15,
+    0.15
+   ],
+   "section_note": "",
+   "footing": "F10|F",
+   "footing_H_m": null,
+   "top_datum": "GB_TOP",
+   "top_m": null,
+   "footing_top_m": null,
+   "printed_stack_m": null,
+   "drawing_status": "HELD",
+   "held_codes": "LEVEL_NOT_PRINTED|FOOTING_CONFLICT",
+   "drawing_length_formula": "",
+   "what_if_b0_d0_m3": null,
+   "released_length_m": null,
+   "released_m3": null,
+   "freelancer_row": 27,
+   "freelancer_section_m2": 0.15,
+   "freelancer_length_m": 1.5
+  },
+  {
+   "neck_id": "NECK:COL:SH10:CN@140890,42630",
+   "type": "CN",
+   "label_handle": "10F5",
+   "outline_handle": "10F6",
+   "section_status": "DRAWING-CONFIRMED",
+   "section_m2": 0.09,
+   "section_range_m2": [
+    0.09,
+    0.09
+   ],
+   "section_note": "",
+   "footing": "FN",
+   "footing_H_m": 0.3,
+   "top_datum": "GB_TOP",
+   "top_m": null,
+   "footing_top_m": null,
+   "printed_stack_m": 0.47,
+   "drawing_status": "HELD",
+   "held_codes": "LEVEL_NOT_PRINTED|FORMATION_NOT_PRINTED",
+   "drawing_length_formula": "2.030 - b + d",
+   "what_if_b0_d0_m3": 0.1827,
+   "released_length_m": null,
+   "released_m3": null,
+   "freelancer_row": 28,
+   "freelancer_section_m2": 0.09,
+   "freelancer_length_m": 1.5
+  },
+  {
+   "neck_id": "NECK:COL:SH10:CN@146123,41338",
+   "type": "CN",
+   "label_handle": "10ED",
+   "outline_handle": "10EE",
+   "section_status": "DRAWING-CONFIRMED",
+   "section_m2": 0.09,
+   "section_range_m2": [
+    0.09,
+    0.09
+   ],
+   "section_note": "",
+   "footing": "FN",
+   "footing_H_m": 0.3,
+   "top_datum": "GB_TOP",
+   "top_m": null,
+   "footing_top_m": null,
+   "printed_stack_m": 0.47,
+   "drawing_status": "HELD",
+   "held_codes": "LEVEL_NOT_PRINTED|FORMATION_NOT_PRINTED",
+   "drawing_length_formula": "2.030 - b + d",
+   "what_if_b0_d0_m3": 0.1827,
+   "released_length_m": null,
+   "released_m3": null,
+   "freelancer_row": 28,
+   "freelancer_section_m2": 0.09,
+   "freelancer_length_m": 1.5
+  },
+  {
+   "neck_id": "NECK:COL:SH10:CN@146847,47309",
+   "type": "CN",
+   "label_handle": "1810",
+   "outline_handle": "180A",
+   "section_status": "DRAWING-CONFIRMED",
+   "section_m2": 0.09,
+   "section_range_m2": [
+    0.09,
+    0.09
+   ],
+   "section_note": "",
+   "footing": "FN",
+   "footing_H_m": 0.3,
+   "top_datum": "GB_TOP",
+   "top_m": null,
+   "footing_top_m": null,
+   "printed_stack_m": 0.47,
+   "drawing_status": "HELD",
+   "held_codes": "LEVEL_NOT_PRINTED|FORMATION_NOT_PRINTED",
+   "drawing_length_formula": "2.030 - b + d",
+   "what_if_b0_d0_m3": 0.1827,
+   "released_length_m": null,
+   "released_m3": null,
+   "freelancer_row": 28,
+   "freelancer_section_m2": 0.09,
+   "freelancer_length_m": 1.5
+  },
+  {
+   "neck_id": "NECK:COL:SH10:CN@148005,44815",
+   "type": "CN",
+   "label_handle": "17C9",
+   "outline_handle": "17C5",
+   "section_status": "DRAWING-CONFIRMED",
+   "section_m2": 0.09,
+   "section_range_m2": [
+    0.09,
+    0.09
+   ],
+   "section_note": "",
+   "footing": "F8",
+   "footing_H_m": 0.5,
+   "top_datum": "GB_TOP",
+   "top_m": null,
+   "footing_top_m": null,
+   "printed_stack_m": 0.67,
+   "drawing_status": "HELD",
+   "held_codes": "LEVEL_NOT_PRINTED|FORMATION_NOT_PRINTED",
+   "drawing_length_formula": "1.830 - b + d",
+   "what_if_b0_d0_m3": 0.1647,
+   "released_length_m": null,
+   "released_m3": null,
+   "freelancer_row": 28,
+   "freelancer_section_m2": 0.09,
+   "freelancer_length_m": 1.5
+  },
+  {
+   "neck_id": "NECK:COL:SH10:CN@148243,48963",
+   "type": "CN",
+   "label_handle": "17CA",
+   "outline_handle": "17C8",
+   "section_status": "DRAWING-CONFIRMED",
+   "section_m2": 0.09,
+   "section_range_m2": [
+    0.09,
+    0.09
+   ],
+   "section_note": "",
+   "footing": "F4",
+   "footing_H_m": 0.4,
+   "top_datum": "GB_TOP",
+   "top_m": null,
+   "footing_top_m": null,
+   "printed_stack_m": 0.5700000000000001,
+   "drawing_status": "HELD",
+   "held_codes": "LEVEL_NOT_PRINTED|FORMATION_NOT_PRINTED",
+   "drawing_length_formula": "1.930 - b + d",
+   "what_if_b0_d0_m3": 0.1737,
+   "released_length_m": null,
+   "released_m3": null,
+   "freelancer_row": 28,
+   "freelancer_section_m2": 0.09,
+   "freelancer_length_m": 1.5
+  },
+  {
+   "neck_id": "NECK:COL:SH10:CN@149929,40462",
+   "type": "CN",
+   "label_handle": "10FD",
+   "outline_handle": "10FE",
+   "section_status": "DRAWING-CONFIRMED",
+   "section_m2": 0.09,
+   "section_range_m2": [
+    0.09,
+    0.09
+   ],
+   "section_note": "",
+   "footing": "FN",
+   "footing_H_m": 0.3,
+   "top_datum": "GB_TOP",
+   "top_m": null,
+   "footing_top_m": null,
+   "printed_stack_m": 0.47,
+   "drawing_status": "HELD",
+   "held_codes": "LEVEL_NOT_PRINTED|FORMATION_NOT_PRINTED",
+   "drawing_length_formula": "2.030 - b + d",
+   "what_if_b0_d0_m3": 0.1827,
+   "released_length_m": null,
+   "released_m3": null,
+   "freelancer_row": 28,
+   "freelancer_section_m2": 0.09,
+   "freelancer_length_m": 1.5
+  }
+ ]
+}

@@ -1,0 +1,16 @@
+group,floor,engine_m2,freelancer_m2,diff_raw_m2,scope_adjustment_m2,diff_like_for_like_m2,engine_ids,freelancer_rows,cause,verdict_proposal
+GF-OPEN,GF,126.0073,147.96,-21.9527,-22.1804,0.2277,GF-RC99C2A GF-RC06FED GF-STRIP-OP-001 GF-STRIP-OP-003 GF-STRIP-OP-005 GF-STRIP-OP-007 GF-STRIP-OP-008 GF-STRIP-OP-009 GF-STRIP-OP-010 GF-STRIP-OP-011 GF-STRIP-OP-012 GF-STRIP-OP-013 GF-STRIP-OP-021,13 15,open space + its doorway strips vs his reception + dining + entrance hall; scope items S1 / S2 below are taken out first (like for like); the pantry 13.500 is inside both,AGREE within 0.2 %
+GF-DIWANIYA,GF,24.9403,24.84,0.1003,0.0,0.1003,GF-R7512EA,16,printed 400 x 630 less the R1.10 corner (T-153),ENGINE_RIGHT (+0.4 %)
+GF-MASTER,GF,16.5496,16.66,-0.1104,0.0,-0.1104,GF-R75FBAE,14,drawn room face,AGREE (-0.7 %)
+GF-DRIVER,GF,7.875,7.87,0.005,0.0,0.005,GF-R51E127,17,printed 1.75 x 4.50,AGREE
+GF-KITCHEN,GF,9.63,9.55,0.08,0.0,0.08,GF-RA3AD49,48,"printed 300 x 270 + 105 x 150 less two piers (T-074); V2.9 floors it as porcelain (dry), he as wet: same area, the class differs (Q-30 A: a kitchen is wet like a bathroom)",area ENGINE_RIGHT (+0.8 %); class FREELANCER_RIGHT vs V2.9
+GF-BATHS,GF,16.448,16.35,0.098,0.0,0.098,GF-RD6F891 GF-RB62B55 GF-RF38DAF GF-RB28769 GF-RDF7D28 GF-RFAD3C4,44 45 46 47 49 50,six W.C. faces (T-074 per room),AGREE (+0.6 %)
+GF-HANDWASH,GF,9.3482,9.58,-0.2318,0.0,-0.2318,COND:GF-RDBD4F9 COND:GF-R8496F0 COND:GF-RD36087,42 43 51,"the three review sets bound WET by Q-06 A (this task): wet tile 9.348; the two doorless-passage closure strips 0.330 stay in their own ARCH.THRESHOLD lines (HELD, Q-S6-1), never in this key; his 3 rows 9.58 have no dimensions",AGREE on class; areas ENGINE_RIGHT on printed sizes (SETS_T208.csv)
+1F-LIVING,1F,44.8694,38.96,5.9094,5.89,0.0194,1F-R78C367,21,engine living 44.869 = 33.594 porcelain + arrival landing 4.865 (Q-66 B) + held strips 0.520 + stair footprint 5.890 (T-153 / T-116 / T-122); scope item S4 taken out first,AGREE after S4 (+0.05 %)
+1F-BEDROOMS,1F,72.6215,74.0,-1.3785,0.0,-1.3785,1F-RB72F22 1F-R3CFCFD 1F-RED0D19 1F-R0E919A,22 23 24 25,"19.050 / 19.017 (curved east room, PROVISIONAL) / 18.215 / 16.340 vs 19.00 / 19.46 / 18.25 / 17.29: the 380 x 430 room's passage and the curved edge (T-086 / T-153)","UNRESOLVED (-1.9 %), as T-153"
+1F-STRIPS,1F,0.77,0.0,0.77,0.0,0.77,1F-STRIP-OP-005 1F-STRIP-OP-006 1F-STRIP-OP-007 1F-STRIP-OP-011 1F-STRIP-OP-020,,"doorway strips of dry doors: engine lines, no freelancer row",RULE_DIFFERENCE (strip measured apart)
+1F-WET,1F,31.1445,30.91,0.2345,0.0,0.2345,1F-R26FA0D 1F-R8BDA49 1F-R48AA46 1F-R48CDA5 1F-RED23B8 1F-R52AC05,55 56 57 58 59 60,laundry + five baths (T-074),AGREE (+0.8 %)
+2F-MAID,2F,19.35,19.58,-0.23,0.0,-0.23,2F-R1DB2D2,28,drawn room face 19.350,UNRESOLVED (-1.2 %)
+2F-STRIPS,2F,0.53,0.0,0.53,0.0,0.53,2F-STRIP-OP-001 2F-STRIP-OP-002 2F-STRIP-OP-007,,"doorway strips: engine lines, no freelancer row",RULE_DIFFERENCE (strip measured apart)
+2F-WC,2F,5.55,5.62,-0.07,0.0,-0.07,2F-RE83BED,63,W.C. face,AGREE (-1.2 %)
+2F-CORRIDOR,2F,0.0,7.7,-7.7,0.0,,,29,"scope item S3: his corridor 7.70 is inside the engine's 2F stair room (landings bound 11.725, FIN.MARBLE.LANDING HELD 0 .. 11.725): T-129 2.500 porcelain + 4.875 arrival marble (Q-70 A)",SCOPE (not in the floor key on the engine side)
