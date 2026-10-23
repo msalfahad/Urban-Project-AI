@@ -22,6 +22,12 @@
    "commit": "b435bed6"},
   {"ref_id": "FIN:الغلاف:15", "kind": "RULE_DIFFERENCE", "scope": "PARTIAL",
    "source": "SCOREBOARD.md note 'Verifier 2026-10-20 (44th run, 18:40)': candidate V2.13 wet floor 85.62 vs freelancer 72.01 m2 RULE_DIFFERENCE Q-37 A; the wet floor is a part of the total-floors reference line",
-   "commit": "f00a527c"}
+   "commit": "f00a527c"},
+  {"ref_id": "RC:ورقة1:17", "kind": "REMEASURE", "scope": "PARTIAL", "method": "CHECKER_REMEASURE_FROM_DRAWING",
+   "source": "BOARD.md T-233 verdict 'Verifier 2026-10-23 (19:51 run)': footing component of CONC.FOOTING, 25 of 26 outlines re-measured from 'ST7757 dxf.dxf' (12 F inserts, 11 S-FOOTINGS polylines, 3 four-LINE FN squares; FT / FTB schedule attributes; FN 180C clipped 0.86 m2 where F9 180F owns 0.40 x 0.35) = released A 25 SOURCE_DERIVED lines 0.0 %; F10 + F outline 1B1B HELD 2.176 .. 2.275 m3 (Q-31 C); straps and boundary band are not in this component",
+   "commit": "a45a84b6", "unit": "m3", "engine_qty": 64.304, "checker_qty": 64.304},
+  {"ref_id": "RC:ورقة1:15", "kind": "REMEASURE", "scope": "PARTIAL", "method": "CHECKER_REMEASURE_FROM_DRAWING",
+   "source": "BOARD.md T-233 verdict 'Verifier 2026-10-23 (19:51 run)': footing blinding = union of the 25 outlines grown 0.10 (ST p.13, T-206 verdict) 151.794 m2 = candidate V3.0.7 / V3.0.8 footing blinding 15.179437 m3 0.0 %; of it 1.890 m2 beyond plot polyline 1658 HELD 0 .. 0.189 m3 (D-14); F10 + F, ground-beam and strap blinding are not in this component",
+   "commit": "a45a84b6", "unit": "m3", "engine_qty": 15.179, "checker_qty": 15.179}
  ]
 }
