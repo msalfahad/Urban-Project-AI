@@ -52,6 +52,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT = ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.2.0.json"
+# T-212 default-guard property: registry check only, read by no method or run, emits no BOQ quantity of its own
+DEFAULT_GUARD_CLASS = "TOOLING"
 
 STATES = ("INTEGRATED_IN_CANDIDATE_AND_TESTED", "HELD_IN_CANDIDATE", "IN_CANDIDATE_BASE_LINES", "NOT_IN_CANDIDATE")
 PACKAGE_BACKED = STATES[:2]
