@@ -1,0 +1,28 @@
+item,quantity,value
+bay,V2 counted strips in the window (m2),0.4222
+bay,drawn masonry in the window (m2),0.55
+bay,glazing sector sweep between the full caps (rad),1.53954
+bay,glazing on the band mid circle between the caps (m),3.133
+bay,ST translation votes (1F columns),20
+bay,CB12 band width (m),0.25
+bay,unassigned masonry (m2),0.0
+bay,1F-W25 physical length incl. stub (m),0.4152
+bay,1F-W25 gross (m2),1.49
+bay,1F-W25 stub already established (m),0.1685
+bay,1F-W25 gross established by T-108 (m2),0.581
+bay,1F-W25 change (m),0.2467
+bay,1F-W25 change (m2),0.909
+bay,1F-W00/W01 change (m),0.1657
+bay,1F-W00/W01 change (m2),0.572
+bay,1F-W14+W15 junction piece (m),0.077
+bay,1F-W14+W15 junction piece (m2),0.302
+P-GF-05,ST translation votes (GF columns),30
+P-GF-05,B1 band width over the opening (m),0.2
+P-GF-05,opening centre offset from the B1 band axis (m),0.0
+P-GF-05,B1 soffit (m),5.05
+P-GF-05,masonry above the lintel (m2),2.64
+P-GF-05,masonry above the lintel (m3 at 0.20),0.528
+P-1F-01,plan gap between P-1F-01's wall and the B-B door wall (m),2.25
+P-1F-01,B-B evidence for P-1F-01,OCCLUDED
+P-1F-01,B-B elements in front,WB-FL0013-FL0014 face;OP-006
+P-1F-01,masonry above the lintel,HELD 0.0 .. 4.992
