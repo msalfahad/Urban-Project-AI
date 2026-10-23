@@ -37,12 +37,18 @@ ENGINE = {
         "blinding": 15.179437,                                    # PROVISIONAL: union under the released footings
         "blinding_bounded": ((4.949374, 9.422514), (0.48, 0.59), (0.377803, 0.771877)),
     },
+    "V3.0.8": {  # candidate ARCH_TAKEOFF_V3.0.8 (T-231 MERGED 3b042470; research/agents_t231/v308_run.py, own run)
+        "footings_measured": 64.304, "footing_F10_provisional": (0.216, 1.96),
+        "straps_measured": 3.3905, "strap_held": ((0.0295, 0.1181), (0.0, 0.385)), "band": 7.2204,
+        "blinding": 15.179437,
+    },
 }
 
 # Strap component (T-230 MERGED 17ed6f92, research/agents_t230: owner method = drawing-derived at e = 0)
 STRAPS = {"measured": 3.3905,
           "held": [("SB3/F3 strap excess", "strap soffit level not printed (D-15 narrowed, T-230)", (0.0295, 0.2683)),
-                   ("SB1/F10+F end", "end ownership waits on F10 + F (Q-31 C): footing depth under the strap", None)]}
+                   ("SB1/F10+F end", "end ownership waits on F10 + F (Q-31 C): A_in 0.770 m2 x [0 .. D 0.50] "
+                    "(V3.0.8 bound, T-231 MERGED 3b042470)", (0.0, 0.385))]}
 # Foundation-level boundary band (T-065, owner Q-28 A PROVISIONAL, NOT RELEASED: section C1 20x60 vs 20x40 and the
 # band / footing levels at each crossing unproven); 91.94 m drawn, 21.45 m inside footings
 BAND = {"measured": 0.0,
@@ -123,6 +129,9 @@ def main(write=True):
             blinding_footing=ENGINE["V3.0.7"]["blinding"],
             blinding_footing_minus_ours_m3=round(ENGINE["V3.0.7"]["blinding"] - bres.measured_m3, 6),
             strap_inside_F10_outline_high=0.402518),
+        engine_V308=dict(
+            line_measured_plus_provisional=round(64.304 + 1.96 + 3.3905 + 7.2204, 6),
+            sb3_high_end=ENGINE["V3.0.8"]["strap_held"][0][1], sb3_high_end_T230=STRAPS["held"][0][2][1]),
     )
     if write:
         with open(HERE / "LEDGER_T233.csv", "w", newline="", encoding="utf-8") as fh:

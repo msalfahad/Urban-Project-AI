@@ -87,3 +87,10 @@ def test_candidate_v307_named_differences():
     assert v["blinding_footing_minus_ours_m3"] == pytest.approx(0.189, abs=1e-5)     # the D-14 part (engine rounds to 1e-6)
     # the SB1 piece inside the unseen F10 outline: engine A carried it, V3.0.7 bounds it 0 .. 0.4025
     assert v["strap_inside_F10_outline_high"] == pytest.approx(0.70 * 0.50 * 1.15, abs=1e-4)
+
+
+def test_candidate_v308_strap_range_behind_t230():
+    v = SUM["engine_V308"]
+    assert v["line_measured_plus_provisional"] == pytest.approx(76.8749, abs=1e-6)
+    # V3.0.8 carries the T-174 SB3 high end 0.1181; T-230 (merged before it) proved one level per strap: 0.2683
+    assert v["sb3_high_end"] == pytest.approx(0.1181) and v["sb3_high_end_T230"] == pytest.approx(0.2683)

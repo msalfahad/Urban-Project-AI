@@ -13,7 +13,7 @@ by Drive folder and title; entities by DXF handle; sizes, areas and counts only.
 | freelancer RC workbook | (committed rows) | tests/alsenan/registers_b1/FREELANCER_RAW_ROWS.json, footings sheet rows 11-33, 'ورقة1' rows 15 / 17 |
 
 Runs: released baseline A `tools/release_baseline.py run research/agents_t165/baselines/V29_ROUTEG_NO_PROFILE.json`
-on head 17ed6f92: **REPRODUCED**, 1,455 lines, BOQ_LINES.csv b96185d4. Candidate ARCH_TAKEOFF_V3.0.7: `research/agents_t167/v304_run.py` then `research/agents_t193/v307_run.py` on the same copies: V3_0_7_BOQ_LINES.csv **197c5599 REPRODUCED** (= SCOREBOARD v2 16:58). V3.0.8 (T-231) is READY, not on the working branch: not run.
+on head 17ed6f92: **REPRODUCED**, 1,455 lines, BOQ_LINES.csv b96185d4. Candidate ARCH_TAKEOFF_V3.0.7: `research/agents_t167/v304_run.py` then `research/agents_t193/v307_run.py` on the same copies: V3_0_7_BOQ_LINES.csv **197c5599 REPRODUCED** (= SCOREBOARD v2 16:58). Candidate ARCH_TAKEOFF_V3.0.8 (T-231, merged into the working branch 3b042470 during this run; merged into this task branch): `research/agents_t231/v308_run.py` own run on the same copies (figures in s.5 are the T-231 report rows, matched by the own run where it finished, see the handoff).
 Tools: `t233_extract.py` (DXF -> `ALSENAN_FOOTING_INPUT.json`, values only), `footing_line.py` (pure rules),
 `t233_alsenan_check.py` (ledger + summary); tests `tests/t233_footing_line` (20).
 
@@ -98,18 +98,22 @@ C10, against its own schedule row, so it is not a reading (rule in `footing_line
    printed readings (2.176, 2.275) lie above its bound. The same miss leaves strap SB1 undeducted inside it: engine SB1
    1.995 = 0.70 x 0.50 x 5.70 m, drawn 7.35 m less 1.65 m in F8 = 5.70 m; with the F10 outline 1.15 m more is inside a
    footing: +0.4025 m3. Both belong to the integration package (opt-in candidate), not to released V2.9.
-4. Engine A blinding: one BOUNDED line 7.2755 .. 16.887 m3 'BLINDING_THICKNESS_NOT_PRINTED': superseded in the
+4. **V3.0.8 carries the superseded SB3 / F3 range**: its held 0.0295 .. 0.1181 m3 is the T-174 range; T-230 (merged
+   before V3.0.8) showed that one straight strap has one level, so the excess runs 0.0295 .. 0.2683 m3 (0.2308 with the
+   soffit not below the footings). A lane I correction (new candidate version), not a quantity this task changes.
+   V3.0.8 otherwise equals the drawing on straps: 3.3905 m3 (SB1 1.5925, SB2 1.1464, SB3 0.6516).
+5. Engine A blinding: one BOUNDED line 7.2755 .. 16.887 m3 'BLINDING_THICKNESS_NOT_PRINTED': superseded in the
    candidate (V3.0.7 EV-BLINDING-T, p.13 '10cm Plain con.'); our 15.179 total equals the candidate line.
 
 ## 5. Line totals vs released A, candidate V3.0.7 and the freelancer (m3)
 
-| Line / component | Drawing (this task) | Released A (b96185d4) | Candidate V3.0.7 | Freelancer | Difference and cause |
+| Line / component | Drawing (this task) | Released A (b96185d4) | Candidate V3.0.7 (V3.0.8 where it differs) | Freelancer | Difference and cause |
 |---|---|---|---|---|---|
 | isolated footings, 25 | **64.304** DRAWING-CONFIRMED | 64.304 | 64.304 (same 25 lines) | 65.634 (with F10 1.960) | A: 0.000 (ENGINE_RIGHT). Freelancer +1.330 = F10 at schedule +1.960 (held here) - one F3 omitted -0.672 (2 drawn) + FN / F9 piece twice +0.042; residual 0.000 |
 | F10 + F | HELD 2.176 .. 2.275 | PROVISIONAL 1.960 (0.216 .. 1.960) | PROVISIONAL 1.960 (0.216 .. 1.960), same line | 1.960 (F10 only; the F pad of this outline in none of his 4 F) | engine bound excludes both readings (finding 3); freelancer below both readings by 0.216 .. 0.315 |
-| straps SB1-SB3 | 3.3905 + HELD (SB3 excess 0.0295 .. 0.2683; SB1 / F10 end) | 3.7809 (2.6494 + 1.1315 PROVISIONAL) | 3.3904 (0.6515 + 1.5925 + 1.1464 PROVISIONAL) + BOUNDED 0 .. 0.4025 (SB1 inside the open F10 outline) and 0 .. 1.4062 (inside open outlines; T-230, merged after V3.0.7, gives the footing that piece at e = 0) | 3.3925 | A +0.3904: SB1 +0.4025 inside the unseen F10 outline, SB2 -0.0155 / SB3 +0.0024 net-plan vs axis, residual 0.001. Freelancer +0.002: axis lengths rounded (2.30 / 3.25 vs 2.294 / 3.259) |
+| straps SB1-SB3 | 3.3905 + HELD (SB3 excess 0.0295 .. 0.2683, T-230; SB1 in F10 + F 0 .. 0.385, V3.0.8 bound) | 3.7809 (2.6494 + 1.1315 PROVISIONAL) | 3.3904 (0.6515 + 1.5925 + 1.1464 PROVISIONAL) [V3.0.8: 3.3905 + HELD 0.0295 .. 0.1181 (SB3) and 0 .. 0.385 (SB1 in F10 + F)] + BOUNDED 0 .. 0.4025 (SB1 inside the open F10 outline) and 0 .. 1.4062 (inside open outlines; T-230, merged after V3.0.7, gives the footing that piece at e = 0) | 3.3925 | A +0.3904: SB1 +0.4025 inside the unseen F10 outline, SB2 -0.0155 / SB3 +0.0024 net-plan vs axis, residual 0.001. Freelancer +0.002: axis lengths rounded (2.30 / 3.25 vs 2.294 / 3.259) |
 | boundary band | HELD 5.639 .. 11.033 (Q-28 A provisional 8.459) | 7.2204 (60.17 m, side 1 lost, T-065) | 7.2204 | 8.604 (71.7 m x 0.20 x 0.60) | T-065: 91.94 m drawn, 70.49 m free; owner Q-28: not released |
-| **CONC.FOOTING line** | **67.6945 measured + HELD** (range 75.54 .. 81.27, SB1 end unbounded) | **77.2653** (1.96 + 1.1315 provisional inside) | **76.8748** (1.96 + 1.1464 provisional inside) + BOUNDED 0 .. 1.8087 | **77.6305** | not comparable as a whole line while held; measured components agree with A on footings to 0.000 |
+| **CONC.FOOTING line** | **67.6945 measured + HELD** (range 75.54 .. 81.66) | **77.2653** (1.96 + 1.1315 provisional inside) | **76.8748** (1.96 + 1.1464 provisional inside) + BOUNDED 0 .. 1.8087 [V3.0.8: 76.8749 (1.96 provisional inside) + HELD 0.0295 .. 0.5031] | **77.6305** | not comparable as a whole line while held; measured components agree with A on footings to 0.000 |
 | footing blinding | **14.990** + HELD 0 .. 0.189 (D-14) + F10 0.5025 .. 0.590 | BOUNDED 7.2755 .. 16.887 (thickness 'not printed') | 15.179437 PROVISIONAL line (incl. the D-14 part) | 47.055 (15.00 x 31.37 x 0.10, whole plot) | candidate = ours + the D-14 part 0.189 exactly (V3.0.7 reproduced: 15.179437); freelancer: a plate under the whole plot no sheet draws (P7 compacted soil under the slab): RULE_DIFFERENCE, basis -32.0 m3 |
 | ground-beam + strap blinding | HELD (9.691 R; straps 0 .. 0.913) | (in the bounded line) | BOUNDED 4.9494 .. 9.4225 (FOOTING_DETAIL_CHOICE_OPEN) + straps 0.3778 .. 0.7719 + F10 0.48 .. 0.59 | (in his plate) | finding 2 |
 | **CONC.BLINDING line** | **14.990 measured + HELD** | BOUNDED | 15.1794 PROVISIONAL + BOUNDED 5.807 .. 10.784 | **47.055** | basis difference, not a count difference |

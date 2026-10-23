@@ -122,8 +122,11 @@
    ],
    [
     "straps:SB1/F10+F end",
-    "end ownership waits on F10 + F (Q-31 C): footing depth under the strap",
-    null
+    "end ownership waits on F10 + F (Q-31 C): A_in 0.770 m2 x [0 .. D 0.50] (V3.0.8 bound, T-231 MERGED 3b042470)",
+    [
+     0.0,
+     0.385
+    ]
    ],
    [
     "boundary band:band B.W",
@@ -215,5 +218,10 @@
   "blinding_footing": 15.179437,
   "blinding_footing_minus_ours_m3": 0.188999,
   "strap_inside_F10_outline_high": 0.402518
+ },
+ "engine_V308": {
+  "line_measured_plus_provisional": 76.8749,
+  "sb3_high_end": 0.1181,
+  "sb3_high_end_T230": 0.2683
  }
 }
