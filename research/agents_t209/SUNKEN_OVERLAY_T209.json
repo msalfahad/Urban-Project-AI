@@ -1,0 +1,476 @@
+{
+ "GF-02": {
+  "room_m2": 3.1325,
+  "under_sunken_m2": 0.0,
+  "share": 0.0,
+  "slab_plan_above": "GF roof slab",
+  "panels": [
+   "275",
+   "276",
+   "280",
+   "287",
+   "298"
+  ]
+ },
+ "GF-03": {
+  "room_m2": 3.375,
+  "under_sunken_m2": 0.0,
+  "share": 0.0,
+  "slab_plan_above": "GF roof slab",
+  "panels": [
+   "275",
+   "276",
+   "280",
+   "287",
+   "298"
+  ]
+ },
+ "GF-05": {
+  "room_m2": 1.95,
+  "under_sunken_m2": 0.0,
+  "share": 0.0,
+  "slab_plan_above": "GF roof slab",
+  "panels": [
+   "275",
+   "276",
+   "280",
+   "287",
+   "298"
+  ]
+ },
+ "GF-06": {
+  "room_m2": 9.6302,
+  "under_sunken_m2": 0.0,
+  "share": 0.0,
+  "slab_plan_above": "GF roof slab",
+  "panels": [
+   "275",
+   "276",
+   "280",
+   "287",
+   "298"
+  ]
+ },
+ "GF-07": {
+  "room_m2": 13.4106,
+  "under_sunken_m2": 5.2573,
+  "share": 0.392,
+  "slab_plan_above": "GF roof slab",
+  "panels": [
+   "275",
+   "276",
+   "280",
+   "287",
+   "298"
+  ]
+ },
+ "GF-10": {
+  "room_m2": 2.3625,
+  "under_sunken_m2": 0.0,
+  "share": 0.0,
+  "slab_plan_above": "GF roof slab",
+  "panels": [
+   "275",
+   "276",
+   "280",
+   "287",
+   "298"
+  ]
+ },
+ "GF-11": {
+  "room_m2": 1.485,
+  "under_sunken_m2": 0.0,
+  "share": 0.0,
+  "slab_plan_above": "GF roof slab",
+  "panels": [
+   "275",
+   "276",
+   "280",
+   "287",
+   "298"
+  ]
+ },
+ "GF-12": {
+  "room_m2": 2.6752,
+  "under_sunken_m2": 0.7316,
+  "share": 0.2735,
+  "slab_plan_above": "GF roof slab",
+  "panels": [
+   "275",
+   "276",
+   "280",
+   "287",
+   "298"
+  ]
+ },
+ "GF-13": {
+  "room_m2": 2.3445,
+  "under_sunken_m2": 1.9335,
+  "share": 0.8247,
+  "slab_plan_above": "GF roof slab",
+  "panels": [
+   "275",
+   "276",
+   "280",
+   "287",
+   "298"
+  ]
+ },
+ "GF-14": {
+  "room_m2": 4.4772,
+  "under_sunken_m2": 0.3623,
+  "share": 0.0809,
+  "slab_plan_above": "GF roof slab",
+  "panels": [
+   "275",
+   "276",
+   "280",
+   "287",
+   "298"
+  ]
+ },
+ "GF-16": {
+  "room_m2": 4.5958,
+  "under_sunken_m2": 2.235,
+  "share": 0.4863,
+  "slab_plan_above": "GF roof slab",
+  "panels": [
+   "275",
+   "276",
+   "280",
+   "287",
+   "298"
+  ]
+ },
+ "GF-01": {
+  "room_m2": 24.9391,
+  "under_sunken_m2": 0.0,
+  "share": 0.0,
+  "slab_plan_above": "GF roof slab",
+  "panels": [
+   "275",
+   "276",
+   "280",
+   "287",
+   "298"
+  ]
+ },
+ "GF-04": {
+  "room_m2": 7.875,
+  "under_sunken_m2": 0.0,
+  "share": 0.0,
+  "slab_plan_above": "GF roof slab",
+  "panels": [
+   "275",
+   "276",
+   "280",
+   "287",
+   "298"
+  ]
+ },
+ "GF-08": {
+  "room_m2": 134.3979,
+  "under_sunken_m2": 3.489,
+  "share": 0.026,
+  "slab_plan_above": "GF roof slab",
+  "panels": [
+   "275",
+   "276",
+   "280",
+   "287",
+   "298"
+  ]
+ },
+ "GF-15": {
+  "room_m2": 16.5567,
+  "under_sunken_m2": 0.0,
+  "share": 0.0,
+  "slab_plan_above": "GF roof slab",
+  "panels": [
+   "275",
+   "276",
+   "280",
+   "287",
+   "298"
+  ]
+ },
+ "ST-GF": {
+  "room_m2": 12.475,
+  "under_sunken_m2": 0.0,
+  "share": 0.0,
+  "slab_plan_above": "GF roof slab",
+  "panels": [
+   "275",
+   "276",
+   "280",
+   "287",
+   "298"
+  ]
+ },
+ "1F-02": {
+  "room_m2": 5.0225,
+  "under_sunken_m2": 0.0,
+  "share": 0.0,
+  "slab_plan_above": "1F roof slab",
+  "panels": [
+   "5BF"
+  ]
+ },
+ "1F-03": {
+  "room_m2": 5.0225,
+  "under_sunken_m2": 0.0,
+  "share": 0.0,
+  "slab_plan_above": "1F roof slab",
+  "panels": [
+   "5BF"
+  ]
+ },
+ "1F-07": {
+  "room_m2": 10.1512,
+  "under_sunken_m2": 5.4,
+  "share": 0.532,
+  "slab_plan_above": "1F roof slab",
+  "panels": [
+   "5BF"
+  ]
+ },
+ "1F-08": {
+  "room_m2": 2.646,
+  "under_sunken_m2": 0.0,
+  "share": 0.0,
+  "slab_plan_above": "1F roof slab",
+  "panels": [
+   "5BF"
+  ]
+ },
+ "1F-09": {
+  "room_m2": 3.5775,
+  "under_sunken_m2": 0.0,
+  "share": 0.0,
+  "slab_plan_above": "1F roof slab",
+  "panels": [
+   "5BF"
+  ]
+ },
+ "1F-12": {
+  "room_m2": 4.725,
+  "under_sunken_m2": 0.0,
+  "share": 0.0,
+  "slab_plan_above": "1F roof slab",
+  "panels": [
+   "5BF"
+  ]
+ },
+ "1F-01": {
+  "room_m2": 19.05,
+  "under_sunken_m2": 0.0,
+  "share": 0.0,
+  "slab_plan_above": "1F roof slab",
+  "panels": [
+   "5BF"
+  ]
+ },
+ "1F-04": {
+  "room_m2": 18.215,
+  "under_sunken_m2": 0.0,
+  "share": 0.0,
+  "slab_plan_above": "1F roof slab",
+  "panels": [
+   "5BF"
+  ]
+ },
+ "1F-10": {
+  "room_m2": 16.34,
+  "under_sunken_m2": 0.0,
+  "share": 0.0,
+  "slab_plan_above": "1F roof slab",
+  "panels": [
+   "5BF"
+  ]
+ },
+ "1F-11": {
+  "room_m2": 18.8288,
+  "under_sunken_m2": 0.0,
+  "share": 0.0,
+  "slab_plan_above": "1F roof slab",
+  "panels": [
+   "5BF"
+  ]
+ },
+ "1F-13": {
+  "room_m2": 63.011,
+  "under_sunken_m2": 0.0,
+  "share": 0.0,
+  "slab_plan_above": "1F roof slab",
+  "panels": [
+   "5BF"
+  ]
+ },
+ "ST-1F": {
+  "room_m2": 12.9725,
+  "under_sunken_m2": 0.0,
+  "share": 0.0,
+  "slab_plan_above": "1F roof slab",
+  "panels": [
+   "5BF"
+  ]
+ },
+ "own_floor": {
+  "1F-02": {
+   "room_m2": 5.0225,
+   "on_sunken_m2": 2.5072,
+   "share": 0.4992,
+   "slab_plan": "GF roof slab"
+  },
+  "1F-03": {
+   "room_m2": 5.0225,
+   "on_sunken_m2": 4.9499,
+   "share": 0.9855,
+   "slab_plan": "GF roof slab"
+  },
+  "1F-07": {
+   "room_m2": 10.1512,
+   "on_sunken_m2": 0.0,
+   "share": 0.0,
+   "slab_plan": "GF roof slab"
+  },
+  "1F-08": {
+   "room_m2": 2.646,
+   "on_sunken_m2": 2.5708,
+   "share": 0.9716,
+   "slab_plan": "GF roof slab"
+  },
+  "1F-09": {
+   "room_m2": 3.5775,
+   "on_sunken_m2": 3.3316,
+   "share": 0.9313,
+   "slab_plan": "GF roof slab"
+  },
+  "1F-12": {
+   "room_m2": 4.725,
+   "on_sunken_m2": 4.1096,
+   "share": 0.8698,
+   "slab_plan": "GF roof slab"
+  },
+  "1F-01": {
+   "room_m2": 19.05,
+   "on_sunken_m2": 1.2252,
+   "share": 0.0643,
+   "slab_plan": "GF roof slab"
+  },
+  "1F-04": {
+   "room_m2": 18.215,
+   "on_sunken_m2": 0.0,
+   "share": 0.0,
+   "slab_plan": "GF roof slab"
+  },
+  "1F-10": {
+   "room_m2": 16.34,
+   "on_sunken_m2": 0.0,
+   "share": 0.0,
+   "slab_plan": "GF roof slab"
+  },
+  "1F-11": {
+   "room_m2": 18.8288,
+   "on_sunken_m2": 0.0,
+   "share": 0.0,
+   "slab_plan": "GF roof slab"
+  },
+  "1F-13": {
+   "room_m2": 63.011,
+   "on_sunken_m2": 0.0,
+   "share": 0.0,
+   "slab_plan": "GF roof slab"
+  },
+  "2F-02": {
+   "room_m2": 5.55,
+   "on_sunken_m2": 5.4,
+   "share": 0.973,
+   "slab_plan": "1F roof slab"
+  },
+  "2F-01": {
+   "room_m2": 5.6258,
+   "on_sunken_m2": 0.0,
+   "share": 0.0,
+   "slab_plan": "1F roof slab"
+  },
+  "2F-03": {
+   "room_m2": 19.35,
+   "on_sunken_m2": 0.0,
+   "share": 0.0,
+   "slab_plan": "1F roof slab"
+  }
+ },
+ "room_above": {
+  "GF-02": {},
+  "GF-03": {},
+  "GF-05": {},
+  "GF-06": {},
+  "GF-07": {
+   "1F-01": 1.0939,
+   "1F-02": 5.0225,
+   "1F-03": 1.586
+  },
+  "GF-10": {
+   "1F-07": 2.3625
+  },
+  "GF-11": {
+   "1F-07": 1.485
+  },
+  "GF-12": {
+   "1F-07": 1.595,
+   "1F-08": 0.7075
+  },
+  "GF-13": {
+   "1F-07": 0.0307,
+   "1F-08": 1.6039,
+   "1F-09": 0.4586
+  },
+  "GF-14": {
+   "1F-07": 2.2894,
+   "1F-09": 0.3693,
+   "1F-10": 1.2646
+  },
+  "GF-16": {
+   "1F-09": 2.3888,
+   "1F-10": 0.4676
+  },
+  "GF-01": {},
+  "GF-04": {},
+  "GF-08": {
+   "1F-04": 18.2094,
+   "1F-07": 1.3878,
+   "1F-10": 7.98,
+   "1F-11": 3.8958,
+   "1F-12": 3.8465,
+   "1F-13": 63.0037
+  },
+  "GF-15": {
+   "1F-10": 5.7116,
+   "1F-11": 8.3624
+  },
+  "1F-02": {},
+  "1F-03": {},
+  "1F-07": {
+   "2F-02": 5.542,
+   "2F-03": 4.4463
+  },
+  "1F-08": {
+   "2F-03": 2.646
+  },
+  "1F-09": {
+   "2F-03": 2.4567
+  },
+  "1F-12": {},
+  "1F-01": {},
+  "1F-04": {},
+  "1F-10": {
+   "2F-03": 5.9226
+  },
+  "1F-11": {},
+  "1F-13": {
+   "2F-01": 5.6217,
+   "2F-03": 1.9174
+  }
+ }
+}

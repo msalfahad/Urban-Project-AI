@@ -1,0 +1,12 @@
+ROOM,FL_M2,LENGTH_M2,HEIGHT_M2,DOORS_M2,WINDOWS_M2,OWN_A_M2,RESIDUAL_M2,CAUSES
+GF-12,22.2,0.042,4.8191,-1.76,-0.0,25.3011,0.0,length 7.414 vs his 7.40 lm; height 3.65 vs his 3.00; openings not deducted by him
+GF-13,20.1,0.33,4.4265,-1.76,-0.48,22.6165,0.0,length 6.810 vs his 6.70 lm; height 3.65 vs his 3.00; openings not deducted by him
+GF-14,28.5,-3.699,5.3735,-3.52,-0.0,26.6545,-0.0001,length 8.267 vs his 9.50 lm; height 3.65 vs his 3.00; openings not deducted by him
+GF-16,22.8,0.075,4.9562,-1.76,-0.48,25.5912,-0.0001,length 7.625 vs his 7.60 lm; height 3.65 vs his 3.00; openings not deducted by him
+1F-02,27.0,0.0,3.15,-1.76,-0.48,27.91,0.0,length 9.000 vs his 9.00 lm; height 3.35 vs his 3.00; openings not deducted by him
+1F-03,26.7,0.3,3.15,-1.76,-0.48,27.91,0.0,length 9.000 vs his 8.90 lm; height 3.35 vs his 3.00; openings not deducted by him
+1F-07,50.55,0.27,5.929,-3.74,-0.48,52.529,0.0,length 16.940 vs his 16.85 lm; height 3.35 vs his 3.00; openings not deducted by him
+1F-08,19.44,0.18,2.289,-1.76,-0.48,19.669,0.0,length 6.540 vs his 6.48 lm; height 3.35 vs his 3.00; openings not deducted by him
+1F-09,22.8,0.0,2.66,-1.65,-0.48,23.33,-0.0,length 7.600 vs his 7.60 lm; height 3.35 vs his 3.00; openings not deducted by him
+1F-12,26.1,0.0,3.045,-1.76,-1.08,26.305,0.0,length 8.700 vs his 8.70 lm; height 3.35 vs his 3.00; openings not deducted by him
+2F-02,29.25,-0.15,3.395,-1.76,-0.48,30.255,0.0,length 9.700 vs his 9.75 lm; height 3.35 vs his 3.00; openings not deducted by him
