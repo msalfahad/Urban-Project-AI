@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-23T21:56Z | Worker 3 | SUCCESS | T-211 READY (integration package V3.0.9a, agents/task-T-211 @ f6aa08f4; integrates T-128, T-173, T-227) | Internal wall plaster / paint now room by room in the candidate: paint 0 -> 166.88 m2 released (2 rooms Checker-VERIFIED, 1 ASSUMED - OWNER-APPROVED) + 8 HELD ranges 529.47 .. 595.05 + 4 HELD without a figure (annex G2, 2F shaft D-T173-1, pantry classification); plaster the same + jamb lines; 26 held-without-figure route lines superseded, 3,527 lines byte-identical, V3.0.7 / V3.0.8 reproduced; 1F living net 109.75 .. 118.29 -> 110.13 .. 114.37 (W15 / W16 as 4.3629 .. 4.805 HELD, T-238). Freelancer 1,151 / 1,191 m2 not compared (reference line stays HELD, compared 0 rightly); V3.0.9b (wet tiles + kitchen) next. ERS: read, s.2.1 + s.2.2 + s.5 WORKER 3 + s.7 row | self-check codemap PASS, pytest t061 PASS, freeze PASS (0); L3 773 passed 0 failed; Drive read OK; problem: none
 - 2026-10-23T21:50Z | Verifier | STARTED | run session_01ERWbNKrxMGirFXWSv8N4VN | repo-attached routine | task state: none READY per RUN_LOG (W1/W2/W3 runs active) | self-check pending
 - 2026-10-23T21:41Z | Worker 2 | STARTED | run session_01V6aB1v7TiYW7cfaZhPSBgA | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-23T21:20Z | Worker 1 | STARTED | run session_01WtJy6f77K5X6JCMyFwWAaQ | repo-attached routine | task state: none yet | self-check pending
