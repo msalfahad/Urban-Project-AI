@@ -1,0 +1,169 @@
+{
+ "schema": "T234_SLAB_LINE_V1",
+ "convention": "C1_PANEL_BETWEEN_BEAM_FACES",
+ "general_note_t_m": 0.16,
+ "panels": 62,
+ "by_storey": {
+  "GF": {
+   "n": 33,
+   "net_m2": 206.6845,
+   "m3": 33.06952
+  },
+  "1F": {
+   "n": 22,
+   "net_m2": 123.4786,
+   "m3": 19.756576
+  },
+  "2F": {
+   "n": 7,
+   "net_m2": 44.885,
+   "m3": 7.4543
+  }
+ },
+ "measured_m3": 60.280396,
+ "held": [],
+ "status": "CLOSABLE",
+ "openings": {
+  "GF lift shaft X 54F/550 (1.80 x 1.80)": [
+   "GF-048",
+   "OUTSIDE_PANELS"
+  ],
+  "GF pool-court void X 42E/42F": [
+   "GF-040",
+   "OUTSIDE_PANELS"
+  ],
+  "GF light well X 2CF..2D2 + 54B/54C (round stair inside)": [
+   "GF-130",
+   "OUTSIDE_PANELS"
+  ],
+  "1F lift shaft X 73F/740 (1.80 x 1.80)": [
+   "1F-036",
+   "OUTSIDE_PANELS"
+  ],
+  "1F west dome radial 604..617 (r 2.2111)": [
+   "1F-073",
+   "OUTSIDE_PANELS"
+  ],
+  "1F east dome radial 64E..661 (r 2.2111)": [
+   "1F-076/1F-077",
+   "OUTSIDE_PANELS"
+  ]
+ },
+ "openings_not_deducted": [],
+ "sunken_m2": 24.7964,
+ "partition": {
+  "GF": "PASS",
+  "1F": "PASS",
+  "2F": "PASS"
+ },
+ "released": {
+  "total": 61.551385,
+  "bounded": [
+   [
+    "1F",
+    "b845e1e78b1f74a8",
+    2.740348,
+    "SLAB_STAIR_ZONE: the west dome square (T-139 s.4: NOT slab)"
+   ]
+  ],
+  "per_floor": {
+   "GF": {
+    "released": 33.489804,
+    "drawing": 33.06952,
+    "diff": 0.420284,
+    "explained": 0.420281,
+    "residual": 3e-06
+   },
+   "1F": {
+    "released": 19.917771,
+    "drawing": 19.756576,
+    "diff": 0.161195,
+    "explained": 0.161438,
+    "residual": -0.000243
+   },
+   "2F": {
+    "released": 8.14381,
+    "drawing": 7.4543,
+    "diff": 0.68951,
+    "explained": 0.68951,
+    "residual": 0.0
+   }
+  }
+ },
+ "freelancer": {
+  "total": 59.81739999999999,
+  "per_floor": {
+   "GF": {
+    "freelancer": 33.12,
+    "drawing": 33.06952,
+    "diff": -0.05048,
+    "components": [
+     [
+      "lump area 207.00 vs 33 panels 206.6845 m2 at 0.16",
+      -0.05048
+     ]
+    ],
+    "residual": 0.0
+   },
+   "1F": {
+    "freelancer": 19.2,
+    "drawing": 19.756576,
+    "diff": 0.556576,
+    "components": [
+     [
+      "eight dome-square corners 3.8475 m2 drawn as slab outside the ring (T-139)",
+      0.6156
+     ],
+     [
+      "lump-area residual (not traceable: one area, no breakdown)",
+      -0.059024
+     ]
+    ],
+    "residual": 0.0
+   },
+   "2F": {
+    "freelancer": 7.497400000000001,
+    "drawing": 7.4543,
+    "diff": -0.0431,
+    "components": [
+     [
+      "panels at 0.16: 31.2500 vs his 31.84 m2",
+      -0.0944
+     ],
+     [
+      "tank panels at 0.18: 13.6350 vs his 13.35 m2",
+      0.0513
+     ]
+    ],
+    "residual": -0.0
+   }
+  }
+ },
+ "candidate": {
+  "total": 60.919217,
+  "bounded": [],
+  "per_floor": {
+   "GF": {
+    "candidate": 33.489804,
+    "drawing": 33.06952,
+    "diff": 0.420284,
+    "explained": 0.42028,
+    "residual": 4e-06
+   },
+   "1F": {
+    "candidate": 19.917771,
+    "drawing": 19.756576,
+    "diff": 0.161195,
+    "explained": 0.161438,
+    "residual": -0.000243
+   },
+   "2F": {
+    "candidate": 7.511642,
+    "drawing": 7.4543,
+    "diff": 0.057342,
+    "explained": 0.057343,
+    "residual": -1e-06
+   }
+  }
+ }
+}
