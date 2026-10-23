@@ -1,0 +1,17 @@
+id,m2,kind
+GF-OPEN (T-208 like for like),0.2277,AS T-208
+GF-DIWANIYA (T-208 like for like),0.1003,AS T-208
+GF-MASTER (T-208 like for like),-0.1104,AS T-208
+GF-DRIVER (T-208 like for like),0.005,AS T-208
+GF-KITCHEN (T-208 like for like),0.08,AS T-208
+GF-BATHS (T-208 like for like),0.098,AS T-208
+GF-HANDWASH (T-208 like for like),-0.2318,AS T-208
+1F-LIVING (T-208 like for like),0.0194,AS T-208
+1F-WET (T-208 like for like),0.2345,AS T-208
+2F-MAID (T-208 like for like),-0.23,AS T-208
+2F-WC (T-208 like for like),-0.07,AS T-208
+1F curved room vs his 17.29,1.7265,UNRESOLVED
+1F west room,0.05,MEASUREMENT
+1F 500 x 365 room column notch,-0.035,MEASUREMENT
+"1F porcelain door strips OP-005 / 006 / 020 (engine lines, no row of his)",0.42,SCOPE (strip measured apart)
+"2F porcelain door strip OP-007 (engine line, no row of his)",0.18,SCOPE (strip measured apart)
