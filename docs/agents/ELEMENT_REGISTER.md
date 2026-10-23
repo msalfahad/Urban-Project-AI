@@ -46,6 +46,22 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+### Lead 2026-10-23 14:20 (from T-213, T-209, T-214, T-217, T-218 MERGED; T-212 r2, T-215 READY)
+
+| Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |
+|---|---|---|---|---|---|
+| Planted columns P.C (3, on beams) | concrete, formwork, rebar, beams | STRUCTURE CONC.COLUMN from the beam top to the soffit above; the beam keeps the junction (R-CONC-OWN-1) | MISSING SCOPE: no line in any state; carry 1.344 .. 1.428 m3 at 4.20 (plan text 20X50 vs drawn 20 x 40) | T-217 MERGED 65fef8fa (Checker 13:53) | T-220 |
+| 5 released upper-storey column lines (2.268 m3) on members their slab plan does not draw | concrete | STRUCTURE CONC.COLUMN only if a sheet draws the member | existence UNKNOWN (never a verified 0) | T-217 MERGED | T-220 |
+| Column C8 at F14 | concrete, formwork, rebar | STRUCTURE CONC.COLUMN / CONC.NECK | CONFLICT range per storey (neck 0.240 .. 0.270 m2; GF 0.900 .. 1.0125 m3; 1F 0.180 .. 0.200 m2), never the larger end | T-217 MERGED (Checker own ST DXF 0.0 %) | D-16 (designer) |
+| Lift column / neck group C1 / C2 / C2 / C9 | concrete, lift pit | STRUCTURE (pit ring net of them, unchanged) | CONFLICT 0.55 vs 0.75 m3/m of height; depth HELD | T-217 MERGED | D-63, D-43 |
+| C4 at F4, C at F, T.C at C9 (drafting notes) | concrete | STRUCTURE: the printed section stands (C4 0.30 x 0.50); the drawn slip is not a volume end | ENGINE_RIGHT | T-217 MERGED | none |
+| Floor build-up FFL -> structural top | structure (datum), floor finishes (bed / screed), necks, beams over stairs | the 0.05 m layer is FLOOR FINISHES; the structural top is a STRUCTURE datum (dry: slab tops +0.95 / +0.25 / +5.45 / +9.65) | dry zones DRAWING-CONFIRMED; wet, sunken (D-41) and roof / terrace (D-39) HELD | T-214 MERGED b29060c2 | T-221 |
+| GF annex kitchen (9.630 m2, 14.50 lm) | floor finish, waterproofing | FLOOR AREA total unchanged; floor item WET_TILE by Q-30 A / UP-WET-001; membrane + upturn 13.50 lm (walls only, Q-35 C) = WATERPROOFING | geometry VERIFIED (Checker 0.0 %), class by owner rule; not yet in any engine state | T-218 MERGED 0a622a86 | T-211 (integration) |
+| Closure strips and thresholds (0.700 m2 of released porcelain: lift landing, exterior sill, held) | floor finish, thresholds | ARCH.THRESHOLD owns every strip; a strip is never also in a floor line (2 latent double counts found) | found, not in any state | T-218 MERGED | T-223 (1F strips), T-211 |
+| Wet-wall tiles (12 rooms) | wall tiles, plaster, paint | WALL TILES (owner method, Q-48 A heights); plaster / paint lines net of the tiled faces | 340.41 m2, 6 rooms HELD | T-209 MERGED 949c2312 | T-211 (integration) |
+| Sunken wet-slab panels (6) | slab concrete, step formwork, fill, waterproofing, ceilings | as ruled 12:20 (one set; storey = floor carried); the opt-in slab-step bound may not bill step concrete on beam-framed panels | outlines VERIFIED (Checker 0.0 %); drop HELD (D-41) | T-213 MERGED 0ec8c496 | T-224 (method), T-221 (wet zones) |
+| GF block-wall ends at 45 deg / columns + junction piece G-T108-1 | blockwork, plaster, paint | BLOCKWORK: each end piece in exactly ONE wall, by drawn faces less columns | closed +0.2855 m of 0.15 black wall (READY, Checker 14:49) | T-215 part 1 READY | T-222 (1F bay, P-1F-01 = D-64, P-GF-05) |
+
 ### Lead 2026-10-23 12:20 (from T-208, T-205, T-193 MERGED; T-212, T-213, T-203, T-209 READY)
 
 | Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |

@@ -1,5 +1,73 @@
 # Lead reports to the owner's main chat (newest first, last 3 entries; older in archive/LEAD_REPORT_older.md)
 
+## LEAD REPORT 2026-10-23 14:20 UTC
+
+Repositories: attached Urban-Project-AI checkout (main ccbe7876); `.work` prepared AUTOMATICALLY ("setup by auto", 14:18).
+Working branch head e866328a -> 0a622a86 (checker merges T-213 0ec8c496, T-209 949c2312, T-214 b29060c2, T-217 65fef8fa,
+T-218 0a622a86; no owner commit on the engine branch). Drive readable: nothing created in the Alsenan folder or the
+private-data root since 12:00, no new image, so no photo-review task. UrbanProjectsManager not used.
+OWNER_SESSION_CHANGES: no entry since 06:15; the auditor's +6 h pilot check-in (12:30) fired no rollback trigger; pilot rule
+(4 claimable TODO in lanes S and A) applied; nothing undone or duplicated.
+
+PROGRESS (Alsenan; released unchanged: concrete 92.77 vs freelancer 111.81 m3, -17.03 %, run A; SCOREBOARD v2 (checker
+13:53 run): verified share 0 / 8 whole concrete reference lines in every state; V3.0.7 concrete compared 1 line, WAPE 1.84 %)
+- COLUMNS (m3), MERGED: checker own re-measure 25 -> 27 / 59, all 0.0 %. Section conflicts as CONFLICT records (26
+  member-storeys): C8 at F14 plan 30X80 (text + dims + five outlines) vs schedule 30 x 90 -> GF 0.900 .. 1.0125 m3; lift
+  necks plan (= printed GR section) 0.55 vs schedule 0.75 m3/m; released 13.194 m3 on those member-storeys vs range
+  11.8665 .. 15.063 m3; 6 drafting notes ENGINE_RIGHT. Missing scope: 3 planted columns (1.344 .. 1.428 m3) in no state;
+  5 released upper lines (2.268 m3) on members their slab plan does not draw: UNKNOWN. So the column line cannot become
+  VERIFIED before the designer answers D-16 / D-63 and the planted columns get a line.
+- FLOOR BUILD-UP (m), MERGED: b = 0.05 m DRAWING-CONFIRMED on every dry floor (vector DWF bands + 400 dpi current-issue
+  scan, checker by two independent methods); slab tops +0.95 / +0.25 / +5.45 / +9.65. Q-43 0.10 is a wall-height
+  allowance, not a datum (residual -0.05 named). Wet, sunken and roof / terrace zones HELD. Necks stay HELD on d alone.
+- FLOOR AREA (m2), MERGED: GF annex kitchen 9.630 m2 / 14.50 lm (checker 0.0 %), WET by Q-30 A: wet 62.49 -> 72.12 vs
+  freelancer 72.01 (+0.15 %); floor total unchanged; like for like +2.464 m2 (+0.64 %) closed to named parts except the
+  curved 1F room +1.727 m2 UNRESOLVED; 2 latent threshold double counts found (0.700 m2 strips). Still NOT YET MEASURED on
+  the scoreboard (scorer path not built).
+- WALL TILES (m2), MERGED: owner method 340.41 on 12 rooms (6 HELD); like for like 308.07 vs 295.44 (+4.28 %), residual 0.
+- SUNKEN PANELS, MERGED: one set of 6 (1F floor 19.3864 + 2F floor 5.400 m2); slab concrete 3.9658 m3 unchanged; step
+  concrete 0; drop HELD (D-41).
+- WAITING FOR THE CHECKER: GF block-wall ends closed from drawn faces +0.2855 m of 0.15 black wall, gross +1.214 .. +1.241
+  m2 on the established 337.412 m2 (range = the CB2 width conflict only); the guard-test fix r2.
+What improved: 5 verified pieces merged; the kitchen wet scope now matches the freelancer within 0.11 m2; the column line's
+blockers are named and measured. What did not move: whole-line verified share 0 / 8; floor area, plaster, paint unscored;
+released numbers. Learned (lessons rows +4, ERS s.7): validate a hand-in on the CURRENT working head; four section sources
+kept apart, a two-source difference is a CONFLICT range; read build-up bands on vector geometry; close a held wall end by
+drawn area in one wall. Missing: roof / wet build-up, sunken drop, pit depth, existing ground, planted columns, candidate
+lines for formwork / railings / plaster / paint / tiles, foundation waterproofing.
+
+ENGINEERING QUESTIONS OPENED (ERS s.5, Lead): T-220 planted columns + the 5 upper column lines (what is built, start / stop
+member, four sources, R-CONC-OWN-1 at the beam; first in lane S); T-221 FFL -> structural top on roof / terrace (falls),
+wet and sunken zones, narrowing D-39 / D-40 / D-41 (unblocks necks b, T-189 owner basis, P-GF-05); T-223 curved 1F room
++1.727 m2 by its arc (never the chord) + 1F dressing / strip (first in lane A); T-222 block bounds part 2 (1F bay,
+P-1F-01 = new designer item D-64, P-GF-05), after T-215; T-224 slab-step bound for beam-framed panels as a new method
+version (queued). Promoted T-219 (foundation / pit waterproofing). T-211 (V3.0.9) now also carries the checker-verified wall
+tiles and the kitchen WET re-code (split a / b if oversized). Cross-trade (register +11 rulings): planted columns to
+CONC.COLUMN beam-top -> soffit (beam keeps the junction); the 0.05 layer to floor finishes, the structural top a structure
+datum; kitchen membrane + 13.50 lm upturn to waterproofing; every strip to ARCH.THRESHOLD only; tiled faces netted from
+plaster / paint. Integration readiness: no Gate B package READY; T-199 (V3.0.8) next in lane I after the registry rework
+and the floor-area scorer path.
+
+TEAM HEALTH: 12:20 - 14:20 (pilot): 7 / 7 slots STARTED + final SUCCESS (worker 1 12:27, 13:23; worker 2 12:41, 13:42;
+worker 3 13:01; checker 12:51, 13:53; Lead 12:11); every self-check PASS; 0 refusals; 0 overlap lines; Drive read OK. Ran
+code: all three workers and the checker. Throughput: 5 merges, 2 narrow rejections (T-212 r1, T-203 r1; rejection share
+2 / 7 this window, both from one cause: validation on a head older than the V3.0.7 merge; hand-in rule tightened on the
+board). READY 2 (oldest 0.4 h): backlog rule off. The red t202 guard has stayed on the working branch about 13 h (since
+01eeafd0, no quantity effect); its r2 fix is first at 14:49. Checker row / scoreboard stamps ran 5 - 28 min ahead of its
+commit times (cosmetic, but the pilot metrics read them): told to stamp with `date -u`. Board: TODO S 4 (T-220, T-174,
+T-221, T-170), A 4 claimable (T-223, T-219, T-017, T-176) + T-222 waiting, I 4 (T-216, T-199, T-168, T-210) + T-203 r2 rework;
+queued T-224, T-211 -> T-146. Queue check: 45 actionable rows, 0 flagged, 0 stall checks. Self-check PASS (codemap stale
+none, t061, freeze 0).
+
+OWNER PACKAGE: none today. No finding meets ERS s.2.7: the column conflicts (D-16, D-63), the P-1F-01 plan / section
+conflict (D-64, new) and the missing levels (D-39 / D-40 / D-41 / D-43) are designer items; nothing needs your judgment.
+
+NEEDS FIXING (only the owner can do): (1) the designer list now has 3 items that block whole reference lines: D-16 (C8),
+D-63 (lift columns / necks) and D-41 (sunken-panel drop); forwarding DESIGNER_CLARIFICATIONS.md section 1 to the
+structural designer is the only way the column and slab lines can become VERIFIED. (2) Carried: a site / plot level
+survey for Alsenan, if one exists, in the Alsenan Drive folder (every excavation depth and the neck term d stay HELD
+without it; D-62).
+
 ## LEAD REPORT 2026-10-23 12:20 UTC
 
 Repositories: attached Urban-Project-AI checkout (main ccbe7876); `.work` prepared AUTOMATICALLY ("setup by auto", 12:10).
@@ -139,70 +207,3 @@ NEEDS FIXING (only the owner can do): if a site / plot level survey exists for A
 folder. Q-21 C makes the excavation at least 1.5 m below the EXISTING ground, and no issued sheet prints that level
 (D-62 lists the site plan as missing), so every excavation depth stays HELD. Main chat / auditor: (1) the 12:15 pilot
 check-in should weigh the guard regression above; (2) carried from 08:20: pilot_metrics.py merged / rejected parser.
-
-## LEAD REPORT 2026-10-23 08:20 UTC
-
-Repositories: attached Urban-Project-AI checkout (main ccbe7876); `.work` prepared AUTOMATICALLY ("setup by auto", 08:10).
-Working branch head 57bb0411 -> fb3a4623 (checker merges T-191 r2 bc0ab0cb, T-197 97cd747e, T-196 r2 f933ef8a,
-T-187 Gate B 8a6d604a, T-201 5dade783, T-200 d699b650, T-202 210ce4f0, T-188 fb3a4623; no owner commit on the engine
-branch). Drive readable: no file created or modified in the Alsenan folder since 04:00 and no new image anywhere, so no
-photo-review task. UrbanProjectsManager not used. OWNER_SESSION_CHANGES: the 06:15 pilot entries read and applied (T-203
-placed in lane I, 4 claimable TODO kept in lanes S and A); nothing undone or duplicated.
-
-PROGRESS (Alsenan; released numbers unchanged: released concrete 92.77 vs freelancer 111.81 m3, -17.03 %, run A;
-SCOREBOARD v2 08:10: no scored cell moved; verified share 0 / 8 whole concrete reference lines, all baselines)
-- CANDIDATE V3.0.6 (m3; NOT RELEASED) MERGED through Gate B: ST-01 1F -> 2F flights restored (V3.0.5 had 0 vs 2.504 ..
-  2.515 m3 drawn: ENGINE WRONG by omission, fixed): MS2-L 1.0334 + MS2-U 1.0014 VERIFIED, MS2-LD HELD 0.4696 .. 0.4800;
-  default guard wired (pool 3.495, domes 7.372, ST-01 GF 2.786, ST-02 1.769 m3 HELD citing the printed value); the 4.451 m3
-  'winder' confirmed by the checker as a dome (20 radial lines, r 2.211 m) and the same dome on the 2F plan: one element,
-  HELD MISREAD, retired in V3.0.7. V3.0.6 concrete vs freelancer on its 1 compared line: +1.84 % (scoreboard).
-- COLUMNS (m3): checker own re-measure 17 / 59, all 0.0 %; line 28.816 .. 29.139 vs his 28.547 stays PARTIALLY VERIFIED
-  (C8 30x80 vs 30x90, tank columns 3.00 .. 3.80 m HELD on D-44).
-- POOL STEEL (kg): rev2 r2 MERGED: base mats A (density) .. B (max spacing): R1 824.89 .. 883.59, R2 572.45 .. 617.96 kg
-  (checker count identical); freelancer 1,500 kg = RULE_DIFFERENCE; line HELD (D-57).
-- WINDOWS (m2 / pcs): heads 8 -> 26 / 29 DRAWING-CONFIRMED from the never-opened vector DWF (same revision as the DXF to
-  6 mm); 5 VERIFIED (7.035 m2, checker 0 mm). On the 18 new: engine 22.730 vs freelancer 26.950 m2 (-15.66 %, ENGINE_RIGHT:
-  he used a flat 2.00 m where 1.50 is drawn). Windows m2 79.501 on 26 + 3 HELD vs his 116.900 (line HELD). +22.73 m2 block
-  deductions, +82.0 m.l reveals downstream.
-- LEVELS (R5): arch and structural +-0.00 are one datum (19 / 20 marks); the ST set prints NO structural level, so every
-  slab top / soffit / beam bottom and the whole foundation chain are HELD. Four known errors re-found: pool wall from the
-  finished floor (+0.05 m, fixed in T-183 r2), W01 / W03 from the court line (-0.85 m, fixed in T-198), necks to the FFL
-  (released 10.855 PROVISIONAL vs freelancer 8.805 m3, -18.9 %: UNRESOLVED), B20 / B23 tops at the FFL (T-189 rev2 holds
-  only if build-up <= 0.289 m: NOT PROVEN).
-- ELEMENT INVENTORY (R2 + R3): NEW: the lift core (FF footing, walls, pit: opening 3.24 m2 drawn, depth / walls not
-  printed) and the roof water tank have NO structural line in any state; the freelancer prices lift walls (RC:S13:11).
-  Pump room NOT DRAWN (his 1.080 + 2.400 m3 comparison-only); ST-02 ends at 1F (correct).
-- BLOCK (m2, m3): engine piece rejected once (gates e + h), r2 READY: established net 358.063 -> 337.412 m2 (-5.8 %),
-  58.366 m3; 2F int 0.15 vs freelancer +0.300 m2 gross (+2.7 %, was +6.1 %); white units 303.1 / 394.7; black HELD.
-- SAFETY: guard sweep of 48 merges: no new failure; ledger explains all 396 failing ids (390 private inputs absent).
-What improved: a lost structural scope is in the candidate and two of its pieces are VERIFIED; 18 window heights moved
-from HELD to drawing-confirmed; one element per physical column. What got worse: nothing measured; two structural
-elements found with no line anywhere (honest find, quantity not yet known). Learned (5 lessons rows, ERS s.7): inventory
-before comparing totals; a finished level never feeds concrete; open every file format before 'not drawn'; red guards
-hide later offenders; the comparison method is never the measurement basis. Missing: lift / tank lines, structural levels,
-necks, plaster / paint / formwork / railings engine lines; whole-line VERIFIED still 0 / 8 (gate 2-3).
-
-ENGINEERING QUESTIONS OPENED (ERS s.5, Lead): T-204 lift core and roof tank (what is built, what is printed, which trade
-owns each part; designer items D-43 / D-44 / D-52 stay designer items); T-205 neck ends (footing top -> ground-beam
-soffit, 2.050 m3 to be reconciled to physical causes); T-206 structural levels from the ST PDF sections (settles the T-189
-build-up condition); T-207 last held openings; T-208 the 3 wet / dry review sets (floor-area line unscored in every state);
-T-209 wet-room wall tiles under Q-48 A; T-210 guard follow-ups; T-211 plaster / paint into the candidate (V3.0.9).
-Cross-trade: lift columns already in CONC.COLUMN (listed, never re-added); V3.0.7 pool takes the VERIFIED 1.20 m, never
-1.15 FINISHED (G-T187-1). Integration readiness: T-193 (V3.0.7) claimable now, inputs T-183 / T-185 VERIFIED.
-
-TEAM HEALTH: 04:20 - 08:20 (pilot from 06:15): 11 / 11 slots STARTED + final SUCCESS (worker 1 04:20, 06:21, 07:21;
-worker 2 05:40, 06:40, 07:40; worker 3 05:01, 07:00; checker 05:51, 06:52, 07:51); run lock taken and released, 0 IDLE /
-overlap lines; every self-check PASS; 0 refusals; Drive read OK. Ran code: all three workers and the checker.
-Throughput: 8 merges (1 Gate B) + 1 rejection (0.11), READY 1 now (T-108 r2, 0.4 h), READY -> verdict about 1 h. Board:
-TODO S 4 (T-204, T-205, T-206, T-174), A 4 (T-207, T-208, T-209, T-176), I 4 (T-193, T-168, T-203, T-210) + queued chain
-T-199 -> T-211 -> T-146 and T-170 after T-206. Queue check: 45 actionable rows, 0 flagged, 0 stall checks. Self-check
-PASS (codemap stale none, t061, freeze 0).
-
-OWNER PACKAGE: none today. No finding meets ERS s.2.7: the lift pit, tank detail and neck ends are drawing / designer items
-still under investigation; nothing needs your judgment yet.
-
-NEEDS FIXING (main chat / auditor, not the owner): pilot_metrics.py over 06:15 -> 08:20 reports merged 0 / rejected 0
-with 12 verdicts, while RUN_LOG shows 8 merges and 1 rejection in the window: its parser misses the checker's current
-final-line format; fix before the 12:15 check-in, or the pilot's '+40 % merged' criterion reads as a failure. The Lead
-edits no dashboard code. Also: `bash scripts/agent_env.sh board check` refuses when the board has uncommitted edits
-("cannot pull with rebase: You have unstaged changes"), so the Lead ran queue_check.py directly before committing.

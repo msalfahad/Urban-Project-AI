@@ -1,11 +1,34 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
 Plain words, no task numbers. Measured numbers come from SCOREBOARD.md; anything not measured says so.
-Last update: 2026-10-23 12:20 UTC (Lead). Previous version: 2026-10-23 10:20 UTC. The released numbers did not change
-(released concrete 92.77 vs 111.81 m3, -17.03 %; released default V2.9 + route G untouched). Pilot, hours 4-6: every
-agent run started and closed; the checker merged 3 more pieces (one of them candidate step 7) and sent none back; 4
-pieces wait for the checker (0.3 - 1.1 h old), the safety-test fix first.
-Since 10:20 (newest first):
+Last update: 2026-10-23 14:20 UTC (Lead). Previous version: 2026-10-23 12:20 UTC. The released numbers did not change
+(released concrete 92.77 vs 111.81 m3, -17.03 %; released default V2.9 + route G untouched). Pilot, hours 6-8: every
+agent run started and closed; the checker merged 5 more pieces and sent 2 back for a small rework (both had been checked
+against an older version of the working branch); 2 pieces wait for the checker (0.2 - 0.4 h old), the safety-test fix
+first.
+Since 12:20 (newest first):
+- Columns: the checker has now measured 27 of 59 columns itself, all equal to the engine (0.0 %). The column line still
+  cannot be called verified: column C8 and the four lift columns are drawn at one size and scheduled at another (C8:
+  ground floor 0.900 .. 1.013 m3; lift necks 0.55 vs 0.75 m3 per metre of height) - both are now carried as ranges and
+  are questions for the structural designer; 3 small columns standing on beams are drawn but are in no BOQ at all (about
+  1.34 .. 1.43 m3), and 5 upper-floor column lines (2.27 m3) sit where the slab plans draw no column. A task now measures
+  the 3 missing columns and checks the 5 lines.
+- Floor build-up: the drawings show a 5 cm layer between the finished floor and the concrete on every dry floor
+  (checker-confirmed on the vector sections and a high-resolution scan). Wet rooms, the lowered wet-room panels and the
+  roof / terraces stay held (their layers and falls are not printed); a task now works those zones.
+- Ground-floor annex kitchen: measured 9.630 m2 (checker 0.0 %); by your answer it is a wet room, so the wet floor total
+  becomes 72.12 m2 vs the freelancer's 72.01 m2 (+0.15 %); the total floor area does not change. Two first-floor bedroom
+  rows were re-paired with the freelancer's (exact match); one curved first-floor room is still 1.727 m2 apart and now has
+  its own task. Two places where a closure strip could be billed twice were found before they reached any BOQ.
+- Wet-room wall tiles (your method, 340.41 m2 on 12 rooms, 6 held) and the lowered wet-room panels (one set of 6) are
+  checker-verified and merged; the wall tiles and the kitchen's wet class go into the candidate with plaster / paint.
+- Block walls: the ground-floor wall ends that were held at 45 degree corners and columns are closed from the drawn wall
+  faces: +1.21 .. +1.24 m2 of black block on the established 337.41 m2 (waiting for the checker). Three bounds remain held:
+  one first-floor bay, the opening between two first-floor walls (the plan and section B-B disagree: a designer question)
+  and the masonry above one ground-floor opening.
+Released numbers: unchanged.
+
+Earlier (10:20 -> 12:20):
 - Candidate step 7 MERGED after the checker's own hand check of all 10 changed lines (0.0 %), NOT released: the
   checker-verified pool base + walls (7.202 m3) and the two terrace dome shells (2 x 2.541 m3) are now in the candidate,
   and the dome it billed twice is billed once. The candidate concrete error on the one line it can compare stays 1.84 %;
