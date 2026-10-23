@@ -36,7 +36,12 @@ Statuses
   documents NOT_ISSUED: a required sheet that is not in the set is a DESIGNER item; the candidate lines and the
           reference rows of the families it feeds are listed with their quantities UNKNOWN, never 0.
 
-Findings: DUPLICATE_ROW (two DETAIL rows on the same element, component and trade: possible double count in the
+One element per physical member (r2): crosswalk() first applies collapse_pieces(): a register element read only by
+steel lines whose route key extends a concrete element's key (same kind, floor and position) is a component of that
+element, not an element (element_register_v0 gives each bar set its own key). A selector never makes a NOT_APPLICABLE
+element (a printed mark not built, by its own line) a member of a row; such elements are listed on the row.
+
+Findings: PIECE_WITHOUT_MEMBER (a steel piece with no concrete element: kept as its own element), DUPLICATE_ROW (two DETAIL rows on the same element, component and trade: possible double count in the
 reference BOQ; rows on DIFFERENT components of one element are an aggregate of that element, counted once), RULING_
 CARRIER_WITHOUT_LINE, ROW_WITHOUT_LINE (an element the reference BOQ prices but no candidate line measures),
 NOT_DRAWN_SCOPE (reference quantity on no drawing, per unit), NOT_DRAWN_PART (one per undrawn part of a drawn row).
@@ -56,13 +61,25 @@ ELEMENT_STATUSES = ("HAS_LINE", "CARRIED_BY_RULING", "MISSING_LINE")
 QUANTITY_STATES = ("MEASURED", "SOURCE_DERIVED", "PROVISIONAL")   # engine/source/boq_line.py QUANTITY_STATES
 
 
+def _route_key(e):
+    """the route G key of a register element ("COL:SH12:C2@x,y|GF" or "...|GF:MAIN"), or None."""
+    k = e.get("engine_key")
+    if isinstance(k, (list, tuple)) and len(k) == 2 and k[0] == "ST":
+        return k[1]
+    return None
+
+
 def build_elements(register=None, extra=()):
     """drawn elements from an element_register_v0 register (its elements) plus ledger elements (extra). Ids must be
-    unique: a ledger element that repeats a register id is refused (one element, one id)."""
+    unique: a ledger element that repeats a register id is refused (one element, one id). Register elements keep
+    their route G key and the item codes of their own lines, so collapse_pieces can tell a steel-only piece."""
     out = {}
     for e in (register or {}).get("elements") or []:
         out[e["id"]] = {"id": e["id"], "kind": e["kind"], "floor": e.get("floor"), "label": e.get("label"),
-                        "source": "ELEMENT_REGISTER_V0", "refs": [], "status": e.get("status")}
+                        "source": "ELEMENT_REGISTER_V0", "refs": [], "status": e.get("status"),
+                        "route_key": _route_key(e),
+                        "line_codes": sorted({b["item_code"] for b in e.get("boq_lines") or []
+                                              if b.get("role") != "HOST"})}
     for e in extra:
         if e["id"] in out:
             raise ValueError(f"element id {e['id']!r} given twice")
@@ -70,6 +87,76 @@ def build_elements(register=None, extra=()):
                         "source": e.get("source") or "LEDGER", "refs": list(e.get("refs") or []),
                         "status": e.get("status")}
     return [out[k] for k in sorted(out)]
+
+
+# a register element read only by structural lines that are not concrete (the steel sets route G keys separately) is a
+# piece of a concrete member, never a member of its own
+STRUCTURAL_PREFIX, CONCRETE_PREFIX = "STR.", "STR.CONC."
+
+
+def collapse_pieces(elements, line_links=None):
+    """r2 (checker T-196 02:08; ELEMENT_REGISTER ruling 'one element per physical column per storey'): ONE element per
+    physical member. element_register_v0 keys a steel line by its concrete key plus the bar set ("COL:SH12:C2@x,y|GF"
+    concrete, "...|GF:MAIN" and "...|GF:TIES" steel), so one column becomes three register elements. A register
+    element whose own lines are all structural non-concrete (steel) lines and whose route key is the route key of another element of the
+    same kind and floor plus trailing segments is a COMPONENT of that element ("steel MAIN", "steel TIES"), never an
+    element of its own. The position segment ("@") and the storey it carries are never stripped, so pieces are never
+    merged across storeys or positions. A steel piece with no concrete element stays its own element and is reported
+    (PIECE_WITHOUT_MEMBER): steel is never silently dropped.
+
+    -> (physical elements, line_links remapped to the physical ids, report). Elements without a route key (ledger
+    elements, architectural pieces) pass through unchanged."""
+    by_key = {}
+    for e in elements:
+        rk = e.get("route_key")
+        if rk and not _is_piece(e):
+            by_key[(e["kind"], e.get("floor"), rk)] = e["id"]
+    parent, orphans = {}, []
+    for e in elements:
+        rk = e.get("route_key")
+        if not (rk and _is_piece(e)):
+            continue
+        hit, segs = None, rk.split(":")
+        for n in range(len(segs) - 1, 0, -1):
+            head = segs[:n]
+            if "@" not in ":".join(head):               # never strip the position segment
+                break
+            hit = by_key.get((e["kind"], e.get("floor"), ":".join(head)))
+            if hit:
+                parent[e["id"]] = (hit, "steel " + ":".join(segs[n:]))
+                break
+        if not hit:
+            orphans.append(e["id"])
+    comps = defaultdict(list)
+    for pid, (hid, comp) in parent.items():
+        comps[hid].append({"id": pid, "component": comp})
+    out = []
+    for e in elements:
+        if e["id"] in parent:
+            continue
+        e = dict(e)
+        if e["id"] in comps:
+            e["components"] = [{"id": e["id"], "component": "concrete"}] + sorted(comps[e["id"]],
+                                                                                 key=lambda c: c["id"])
+        out.append(e)
+    links = None
+    if line_links is not None:
+        links = {}
+        for lid, ids in line_links.items():
+            new = []
+            for i in ids:
+                j = parent[i][0] if i in parent else i
+                if j not in new:
+                    new.append(j)
+            links[lid] = new
+    rep = {"pieces_collapsed": len(parent), "members_with_pieces": len(comps),
+           "piece_without_member": sorted(orphans)}
+    return out, links, rep
+
+
+def _is_piece(e):
+    codes = e.get("line_codes") or []
+    return bool(codes) and all(c.startswith(STRUCTURAL_PREFIX) and not c.startswith(CONCRETE_PREFIX) for c in codes)
 
 
 def register_links(register):
@@ -90,7 +177,9 @@ def _label_base(label):
 
 
 def _select(sel, elements):
-    hit = []
+    """ids of the elements a selector names, and those of them the register marks NOT_APPLICABLE (a printed mark whose
+    own line is NOT_APPLICABLE_WITH_EVIDENCE: not built, so not a member of a reference row; listed, never dropped)."""
+    hit, na = [], []
     for e in elements:
         if e["kind"] != sel.get("kind"):
             continue
@@ -98,19 +187,20 @@ def _select(sel, elements):
             continue
         if "label_base" in sel and _label_base(e.get("label")) != sel["label_base"]:
             continue
-        hit.append(e["id"])
-    return sorted(hit)
+        (na if e.get("status") == "NOT_APPLICABLE" else hit).append(e["id"])
+    return sorted(hit), sorted(na)
 
 
 def _row_refs(entry, elements, by_id):
     """[(element id, component)] named by a map entry, and the ids that exist in no element."""
-    refs, missing = [], []
+    refs, missing, na = [], [], []
     for x in entry.get("elements") or []:
         eid, comp = (x, None) if isinstance(x, str) else (x["id"], x.get("component"))
         (refs if eid in by_id else missing).append((eid, comp))
     if entry.get("select"):
-        refs += [(i, entry.get("component")) for i in _select(entry["select"], elements)]
-    return refs, missing
+        hit, na = _select(entry["select"], elements)
+        refs += [(i, entry.get("component")) for i in hit]
+    return refs, missing, na
 
 
 def classify_rows(rows, row_map, elements):
@@ -138,7 +228,7 @@ def classify_rows(rows, row_map, elements):
         if st == "SCOPE_UNKNOWN":
             out.append(dict(base, status="SCOPE_UNKNOWN", elements=[], reason=entry.get("reason") or "not established"))
             continue
-        refs, missing = _row_refs(entry, elements, by_id)
+        refs, missing, na = _row_refs(entry, elements, by_id)
         if missing or not refs:
             out.append(dict(base, status="SCOPE_UNKNOWN", elements=[e for e, _c in refs],
                             reason="MAP_MISS: " + (", ".join(m for m, _c in missing) if missing
@@ -153,7 +243,7 @@ def classify_rows(rows, row_map, elements):
                           "searched": list(p["searched"]), "reference_qty": p.get("qty")})
         out.append(dict(base, status="DRAWN" if len(ids) == 1 else "AGGREGATE", elements=ids,
                         components=sorted({c for _e, c in refs if c}), basis=entry.get("basis"),
-                        not_drawn_parts=parts))
+                        not_drawn_parts=parts, not_applicable=na))
     return out
 
 
@@ -190,7 +280,10 @@ def classify_elements(elements, line_recs, row_recs, rulings=()):
     out, findings = [], []
     for e in elements:
         rec = {"id": e["id"], "kind": e["kind"], "floor": e.get("floor"), "source": e.get("source"),
+               "label": e.get("label"), "register_status": e.get("status"),
                "lines": sorted(lines_of.get(e["id"], [])), "reference_rows": sorted(rows_of.get(e["id"], []))}
+        if e.get("components"):
+            rec["components"] = e["components"]
         if rec["lines"]:
             rec["status"] = "HAS_LINE"
         elif any(lines_of.get(ru["carried_by"]) for ru in carried.get(e["id"], [])):
@@ -246,6 +339,7 @@ def crosswalk(elements, rows, row_map, lines, line_links, rulings=(), documents=
     elements = sorted(elements, key=lambda e: e["id"])
     if len({e["id"] for e in elements}) != len(elements):
         raise ValueError("element ids repeat")
+    elements, line_links, pieces = collapse_pieces(elements, line_links)      # one element per physical member (r2)
     rows_by_id = {r["row_id"]: r for r in rows}
     if len(rows_by_id) != len(rows):
         raise ValueError("row ids repeat")
@@ -270,8 +364,10 @@ def crosswalk(elements, rows, row_map, lines, line_links, rulings=(), documents=
                              "discipline": p["discipline"], "element": p["element"], "unit": r.get("unit"),
                              "reference_qty": p["reference_qty"]})
     docs = documents_not_issued(documents, line_recs, row_recs)
+    for oid in pieces["piece_without_member"]:
+        findings.append({"finding": "PIECE_WITHOUT_MEMBER", "element": oid})
     rep = {"schema": SCHEMA, "rows": row_recs, "lines": line_recs, "elements": el_recs, "not_issued": docs,
-           "findings": findings}
+           "findings": findings, "pieces": pieces}
     rep["summary"] = summary(rep, rows)
     return rep
 
@@ -287,6 +383,7 @@ def summary(rep, rows=()):
          "elements_missing_by_kind": dict(Counter(e["kind"] for e in rep["elements"]
                                                   if e["status"] == "MISSING_LINE")),
          "not_issued": len(rep["not_issued"]),
+         "pieces_collapsed": (rep.get("pieces") or {}).get("pieces_collapsed", 0),
          "findings": dict(Counter(f["finding"] for f in rep["findings"]))}
     s["all_rows_accounted"] = detail == len(rep["rows"])
     return s

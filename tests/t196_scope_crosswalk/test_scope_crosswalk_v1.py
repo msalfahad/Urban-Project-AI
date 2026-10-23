@@ -243,3 +243,82 @@ def test_duplicate_pair_over_many_elements_is_one_finding():
     dup = [x for x in rep["findings"] if x["finding"] == "DUPLICATE_ROW"]
     assert len(dup) == 1 and dup[0]["rows"] == ["WB:S1:2", "WB:S1:4"]
     assert [e.split("/")[-1] for e in dup[0]["elements"]] == ["F1.1", "F1.2"]
+
+
+# ---- r2 (checker 02:08): one element per physical member per storey ------------------------------------------------
+# Hand expectation: element_register_v0 keys each bar set of a column by its own key, so column C1 GF with one concrete
+# line and two steel lines (MAIN, TIES) gives 3 register COL elements; the crosswalk counts ONE physical column C1 GF
+# with components concrete / steel MAIN / steel TIES. The same mark on 1F is a second, disjoint member. A steel set
+# whose concrete element is absent stays its own element (PIECE_WITHOUT_MEMBER). A printed mark whose concrete line is
+# NOT_APPLICABLE_WITH_EVIDENCE is not a member of the reference row (listed on it).
+
+def steel(key, net=12.0):
+    return line("STR.REBAR", "kg", key, net=net, rev=REV_B)
+
+
+def villa_r2(sx=1.0, storeys=("GF",), orphan=False, not_applicable=False):
+    lines, src = villa(sx)
+    x = int(sx * 1000)
+    lines = [ln for ln in lines if ln["item_code"] != "STR.CONC.COLUMN"]
+    for s in storeys:
+        lines += [line("STR.CONC.COLUMN", "m3", f"U-C:COL:SH2:C1@{x},1000|{s}", floor=s, net=0.4, rev=REV_B),
+                  steel(f"P-S:COL:SH2:C1@{x},1000|{s}:MAIN:D16"), steel(f"P-S:COL:SH2:C1@{x},1000|{s}:TIES:D8")]
+    if orphan:                                   # steel of a column with no concrete line anywhere
+        lines.append(steel(f"P-S:COL:SH2:C1@{int(sx * 5000)},1000|GF:MAIN:D16"))
+    if not_applicable:                           # a second C1 GF printed, not built (its own line says so)
+        lines.append(BL.make_line(project_id=PID, revision_set_sha256=REV_B, item_code="STR.CONC.COLUMN", unit="m3",
+                                  evidence_state="NOT_APPLICABLE_WITH_EVIDENCE",
+                                  element_id=f"U-C:COL:SH2:C1@{int(sx * 8000)},1000|GF", floor="GF", formula="test",
+                                  rule_id="T196", rule_version="test", notes="no column on the slab plan above"))
+    return lines, src
+
+
+def run_r2(**kw):
+    lines, src = villa_r2(**kw)
+    reg = E.build(lines, src, project=PID)
+    links, reasons = X.register_links(reg)
+    rmap = {"WB:S1:8": {"select": {"kind": "COL", "label_base": "C1", "floor": "GF"}, "component": "column"}}
+    return X.crosswalk(X.build_elements(reg, ()), rows(), rmap, lines, links, (), (), reasons), reg, lines
+
+
+def test_r2_one_column_three_engine_lines_is_one_element():
+    rep, reg, lines = run_r2()
+    reg_cols = [e for e in reg["elements"] if e["kind"] == "COL"]
+    assert len(reg_cols) == 3                                   # the register's three pieces (the defect r2 corrects)
+    cols = [e for e in rep["elements"] if e["kind"] == "COL"]
+    assert len(cols) == 1 and cols[0]["floor"] == "GF"
+    assert sorted(c["component"] for c in cols[0]["components"]) == ["concrete", "steel MAIN", "steel TIES"]
+    assert len(cols[0]["lines"]) == 3 and cols[0]["status"] == "HAS_LINE"     # concrete + both steel lines, once each
+    r8 = [r for r in rep["rows"] if r["row_id"] == "WB:S1:8"][0]
+    assert r8["status"] == "DRAWN" and r8["elements"] == [cols[0]["id"]]      # not AGGREGATE of 3
+    assert rep["summary"]["pieces_collapsed"] == 2
+    steel_ids = {ln["line_id"] for ln in lines if ln["item_code"] == "STR.REBAR"}
+    assert all(ln["elements"] == [cols[0]["id"]] for ln in rep["lines"] if ln["line_id"] in steel_ids)
+
+
+def test_r2_two_storeys_of_one_mark_are_two_disjoint_sets():
+    rep, _reg, _l = run_r2(storeys=("GF", "1F"))
+    cols = {e["floor"]: e for e in rep["elements"] if e["kind"] == "COL"}
+    assert set(cols) == {"GF", "1F"}
+    a = {c["id"] for c in cols["GF"]["components"]}
+    b = {c["id"] for c in cols["1F"]["components"]}
+    assert len(a) == 3 and len(b) == 3 and not (a & b)         # never merged across storeys
+    r8 = [r for r in rep["rows"] if r["row_id"] == "WB:S1:8"][0]
+    assert r8["elements"] == [cols["GF"]["id"]]
+
+
+def test_r2_mirror_same_counts_and_orphan_steel_kept():
+    a, _r, _l = run_r2(storeys=("GF", "1F"), orphan=True)
+    b, _r2, _l2 = run_r2(sx=-1.0, storeys=("GF", "1F"), orphan=True)
+    assert a["summary"] == b["summary"]
+    orph = [f for f in a["findings"] if f["finding"] == "PIECE_WITHOUT_MEMBER"]
+    assert len(orph) == 1                                       # steel never silently dropped
+    cols = [e for e in a["elements"] if e["kind"] == "COL"]
+    assert len(cols) == 3 and any(e["id"] == orph[0]["element"] for e in cols)
+
+
+def test_r2_not_applicable_mark_is_listed_not_a_member():
+    rep, _reg, _l = run_r2(not_applicable=True)
+    r8 = [r for r in rep["rows"] if r["row_id"] == "WB:S1:8"][0]
+    assert r8["status"] == "DRAWN" and len(r8["elements"]) == 1 and len(r8["not_applicable"]) == 1
+    assert r8["not_applicable"][0] not in r8["elements"]

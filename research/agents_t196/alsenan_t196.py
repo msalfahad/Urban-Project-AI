@@ -55,6 +55,8 @@ LEDGER = [
     {"id": f"{P}/DOME-TOWER", "kind": "DOME", "floor": "ROOF", "source": "T-185 (MERGED 94e39ee6; architectural "
      "only: elevation 441 / 215, no structural drawing, HELD)", "refs": ["ARCH elevations"]},
 ]
+# the candidate stair line T-187 identified as a dome outline (register ruling 04:20): reported MISREAD, never a stair
+MISREAD_KEY = "P-C:STAIRS:1F:SITE-b845e1e78b1f74a8"
 RAIL_NOT_ELEMENTS = {"RL-11": "no railing drawn (render only, T-161)", "RL-12": "EXCLUDED: none drawn (UP-STAIR-013)"}
 
 
@@ -97,6 +99,12 @@ def ledger_links(lines):
                 abs(float(dims.get("zone_m2") or 0) - 8.3723) < 0.001:
             links[ln["line_id"]] = [f"{P}/ST-02"]
             why[ln["line_id"]] = "T-184: the 8.37 m2 winder region on the ground-beam plan = part of ST-02"
+        elif code == "STR.CONC.STAIR" and k.startswith(MISREAD_KEY):
+            unbound[ln["line_id"]] = (
+                "MISREAD: not a stair. A dome outline on the 1F roof read as a winder region (T-187 finding: 18 lines "
+                "from one point to r 2.211 m over 360 deg; ELEMENT_REGISTER ruling 2026-10-23 04:20: owner trade "
+                "DOMES, the stair trade takes nothing; HELD MISREAD in V3.0.6, retired by T-193 when the verified "
+                f"dome shells replace the dome conventions). Zone {dims.get('zone_m2')} m2, width {dims.get('width_m')} m")
         elif code == "STR.CONC.STAIR" and k.startswith("P-C:STAIRS:"):
             unbound[ln["line_id"]] = (
                 f"stair site region not bound to a staircase: kind {dims.get('kind')}, width {dims.get('width_m')} m, "
@@ -248,6 +256,11 @@ def show(rep, lines):
     un = Counter((ln["item_code"], ln["reason"][:90]) for ln in rep["lines"] if ln["status"] == "UNLINKED")
     for (c, rsn), n in sorted(un.items()):
         print("  UNLINKED", n, c, "-", rsn)
+    print("PIECES", json.dumps(rep["pieces"], sort_keys=True)[:300])
+    for (fl, mark, st, ncomp), n in sorted(columns(rep).items(), key=lambda t: tuple(map(str, t[0]))):
+        print("  COLUMNS", fl, mark, st, "components", ncomp, "elements", n)
+    for k, v in t119_check(rep).items():
+        print("  T119", k, v["t119"], v["crosswalk"], "same" if v["t119"] == v["crosswalk"] else "DIFF")
     print("ELEMENTS", json.dumps(s["elements"], sort_keys=True), "missing by kind",
           json.dumps(s["elements_missing_by_kind"], sort_keys=True))
     for e in rep["elements"]:
@@ -262,7 +275,38 @@ def show(rep, lines):
             print("  ROW", r["row_id"], r["status"], r.get("reason"))
 
 
-CSV_ROWS = ("row_id", "trade", "unit", "qty", "status", "elements", "components", "not_drawn_parts", "reason")
+# data note (checker 02:08): only what the crosswalk needs. His quantity and unit are written only where they ARE the
+# finding (NOT_DRAWN rows and NOT_DRAWN parts: reference quantity on no drawing); every other row carries its id,
+# status, elements and reason only (his values stay in the frozen tests/alsenan/registers_b1 benchmark).
+CSV_ROWS = ("row_id", "status", "elements", "components", "not_applicable", "unit", "qty", "not_drawn_parts", "reason")
+
+
+def _short(e):
+    return e.split("/", 1)[-1] if e.startswith(P) else e.split("/")[-2] + "/" + e.split("/")[-1]
+
+
+def columns(rep):
+    """physical columns per (storey, mark) after the r2 collapse: members (concrete + steel components) and the
+    NOT_APPLICABLE printed marks, for the checker's own count."""
+    out = Counter()
+    for e in rep["elements"]:
+        if e["kind"] == "COL" and e["source"] == "ELEMENT_REGISTER_V0":
+            st = "NOT_APPLICABLE" if e.get("register_status") == "NOT_APPLICABLE" else "MEMBER"
+            out[(e["floor"], X._label_base(e.get("label")), st, len(e.get("components") or [None]))] += 1
+    return out
+
+
+def t119_check(rep):
+    """per (storey, mark): physical columns after the collapse vs the T-119 column ledger (MERGED; one row per drawn
+    column, research/agents_t119/COLUMNS_TO_CONTROLLING_MEMBER.csv). Counts only; foundation necks are not in T-119."""
+    t = Counter((r["storey"], r["mark"]) for r in csv.DictReader(
+        (ROOT / "research/agents_t119/COLUMNS_TO_CONTROLLING_MEMBER.csv").open(encoding="utf-8")))
+    m = Counter()
+    for (fl, mark, st, _c), n in columns(rep).items():
+        if st == "MEMBER" and fl != "FDN":
+            m[(fl, mark)] += n
+    return {f"{fl} {mark}": {"t119": t[(fl, mark)], "crosswalk": m[(fl, mark)]}
+            for fl, mark in sorted(set(t) | set(m), key=lambda k: tuple(map(str, k)))}
 
 
 def rows_csv(rep):
@@ -270,11 +314,13 @@ def rows_csv(rep):
     w = csv.DictWriter(buf, fieldnames=CSV_ROWS, lineterminator="\n")
     w.writeheader()
     for r in rep["rows"]:
-        w.writerow({"row_id": r["row_id"], "trade": r["trade"], "unit": r["unit"],
-                    "qty": None if r["qty"] is None else round(r["qty"], 6), "status": r["status"],
-                    "elements": " ".join(e.split("/", 1)[-1] if e.startswith(P) else e.split("/")[-2] + "/" +
-                                         e.split("/")[-1] for e in r["elements"]),
+        nd = r["status"] == "NOT_DRAWN"
+        w.writerow({"row_id": r["row_id"], "status": r["status"],
+                    "unit": r["unit"] if nd or r.get("not_drawn_parts") else "",
+                    "qty": round(r["qty"], 6) if nd and r["qty"] is not None else "",
+                    "elements": " ".join(_short(e) for e in r["elements"]),
                     "components": " ".join(r.get("components") or []),
+                    "not_applicable": " ".join(_short(e) for e in r.get("not_applicable") or []),
                     "not_drawn_parts": "; ".join(f"{p['part']} ({p['discipline']}) {p['reference_qty']}"
                                                  for p in r.get("not_drawn_parts") or []),
                     "reason": r.get("reason") or r.get("basis") or ""})
@@ -302,7 +348,10 @@ def main(argv=None):
                                                      for e in rep["elements"] if e["source"] != "ELEMENT_REGISTER_V0"},
                     findings=rep["findings"], not_issued=[{k: (len(v) if isinstance(v, list) and k.endswith(
                         ("lines", "rows")) else v) for k, v in d.items()} for d in rep["not_issued"]],
-                    line_bindings=sorted(set(why.values())))
+                    line_bindings=sorted(set(why.values())),
+                    pieces=rep["pieces"], t119_column_check=t119_check(rep),
+                    columns=dict(sorted(sum((Counter({f"{fl} {mark} {st}": n}) for (fl, mark, st, _c), n in
+                                             columns(rep).items()), Counter()).items())))
         (HERE / "summary.json").write_text(json.dumps(summ, indent=1, sort_keys=True) + "\n", encoding="utf-8")
     return 0
 

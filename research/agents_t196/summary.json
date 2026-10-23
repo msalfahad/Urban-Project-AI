@@ -1,7 +1,55 @@
 {
  "all_rows_accounted": true,
+ "columns": {
+  "1F C1 MEMBER": 1,
+  "1F C2 MEMBER": 4,
+  "1F C3 MEMBER": 2,
+  "1F C3 NOT_APPLICABLE": 1,
+  "1F C4 MEMBER": 2,
+  "1F C5 MEMBER": 3,
+  "1F C6 MEMBER": 1,
+  "1F C7 MEMBER": 1,
+  "1F C8 MEMBER": 2,
+  "1F C9 MEMBER": 2,
+  "1F PC MEMBER": 2,
+  "2F C1 MEMBER": 1,
+  "2F C2 MEMBER": 4,
+  "2F C3 MEMBER": 1,
+  "2F C3 NOT_APPLICABLE": 2,
+  "2F C5 MEMBER": 1,
+  "2F C5 NOT_APPLICABLE": 1,
+  "2F C8 NOT_APPLICABLE": 1,
+  "2F C9 MEMBER": 1,
+  "2F PC MEMBER": 1,
+  "FDN C.NECK MEMBER": 5,
+  "FDN C1.NECK MEMBER": 1,
+  "FDN C10.NECK MEMBER": 1,
+  "FDN C11.NECK MEMBER": 2,
+  "FDN C2.NECK MEMBER": 4,
+  "FDN C3.NECK MEMBER": 6,
+  "FDN C4.NECK MEMBER": 2,
+  "FDN C5.NECK MEMBER": 3,
+  "FDN C6.NECK MEMBER": 1,
+  "FDN C7.NECK MEMBER": 1,
+  "FDN C8.NECK MEMBER": 2,
+  "FDN C9.NECK MEMBER": 2,
+  "FDN CN.NECK MEMBER": 6,
+  "GF C MEMBER": 5,
+  "GF C1 MEMBER": 1,
+  "GF C10 MEMBER": 1,
+  "GF C11 MEMBER": 2,
+  "GF C2 MEMBER": 4,
+  "GF C3 MEMBER": 6,
+  "GF C4 MEMBER": 2,
+  "GF C5 MEMBER": 3,
+  "GF C6 MEMBER": 1,
+  "GF C7 MEMBER": 1,
+  "GF C8 MEMBER": 2,
+  "GF C9 MEMBER": 2,
+  "NONE CN MEMBER": 5
+ },
  "elements": {
-  "HAS_LINE": 820,
+  "HAS_LINE": 642,
   "MISSING_LINE": 14
  },
  "elements_missing_by_kind": {
@@ -194,6 +242,7 @@
   "UNLINKED": 1801
  },
  "lines_unlinked_by_reason": {
+  "MISREAD: not a stair. A dome outline on the 1F roof read as a winder region (T-187 finding: 18 lines from one point to r 2.211 m over 360 deg; ELEMENT_REGISTER ruling 2026-10-23 04:20: owner trade DOMES, the stair trade takes nothing; HELD MISREAD in V3.0.6, retired by T-193 when the verified dome shells replace the dome conventions). Zone 17.1272 m2, width 2.2111 m": 1,
   "boundary wall is a later kind (step 3)": 1,
   "element key 'SOFFIT' names no room, opening, wall, roof zone or structural element": 5,
   "facade outlines are a later kind (ELEMENT_REGISTER.md build order step 3)": 13,
@@ -204,7 +253,6 @@
   "route G element key family GROUND_SYSTEM_STEEL is not a register v0 kind": 281,
   "route G element key family SLAB_STEEL is not a register v0 kind": 312,
   "route G element key family STAIR_POOL_TANK_STEEL is not a register v0 kind": 88,
-  "stair site region not bound to a staircase: kind WINDER, width 2.2111 m, zone 17.1272 m2, storey rise 4.2 m; matches no T-184 flight by geometry (ST-01 1F -> 2F = two straight 1.20 m flights + landing): either the ST-01 shaft read as one winder region (the D-T184-1 place) or another drawing; physical element to establish (Lead / Checker)": 1,
   "threshold strip the engine left unattributed (no opening or door assembly names it)": 5
  },
  "not_issued": [
@@ -335,9 +383,15 @@
    "trades": []
   }
  ],
+ "pieces": {
+  "members_with_pieces": 89,
+  "piece_without_member": [],
+  "pieces_collapsed": 178
+ },
+ "pieces_collapsed": 178,
  "rows": {
-  "AGGREGATE": 52,
-  "DRAWN": 15,
+  "AGGREGATE": 39,
+  "DRAWN": 28,
   "NOT_DRAWN": 3,
   "NOT_MAPPED": 421,
   "SCOPE_UNKNOWN": 3
@@ -359,8 +413,8 @@
    "NOT_MAPPED": 29
   },
   "COLUMN": {
-   "AGGREGATE": 37,
-   "DRAWN": 2,
+   "AGGREGATE": 24,
+   "DRAWN": 15,
    "SCOPE_UNKNOWN": 2
   },
   "FLOOR": {
@@ -404,6 +458,136 @@
   },
   "WATERPROOFING": {
    "NOT_MAPPED": 18
+  }
+ },
+ "t119_column_check": {
+  "1F C1": {
+   "crosswalk": 1,
+   "t119": 1
+  },
+  "1F C2": {
+   "crosswalk": 4,
+   "t119": 4
+  },
+  "1F C3": {
+   "crosswalk": 2,
+   "t119": 2
+  },
+  "1F C4": {
+   "crosswalk": 2,
+   "t119": 2
+  },
+  "1F C5": {
+   "crosswalk": 3,
+   "t119": 3
+  },
+  "1F C6": {
+   "crosswalk": 1,
+   "t119": 1
+  },
+  "1F C7": {
+   "crosswalk": 1,
+   "t119": 1
+  },
+  "1F C8": {
+   "crosswalk": 2,
+   "t119": 2
+  },
+  "1F C9": {
+   "crosswalk": 2,
+   "t119": 2
+  },
+  "1F P.C 20x50": {
+   "crosswalk": 0,
+   "t119": 1
+  },
+  "1F P.C 20x70": {
+   "crosswalk": 0,
+   "t119": 1
+  },
+  "1F PC": {
+   "crosswalk": 2,
+   "t119": 0
+  },
+  "2F C1": {
+   "crosswalk": 1,
+   "t119": 1
+  },
+  "2F C2": {
+   "crosswalk": 4,
+   "t119": 4
+  },
+  "2F C3": {
+   "crosswalk": 1,
+   "t119": 1
+  },
+  "2F C5": {
+   "crosswalk": 1,
+   "t119": 1
+  },
+  "2F C9": {
+   "crosswalk": 1,
+   "t119": 1
+  },
+  "2F P.C 20x50": {
+   "crosswalk": 0,
+   "t119": 1
+  },
+  "2F PC": {
+   "crosswalk": 1,
+   "t119": 0
+  },
+  "GF C": {
+   "crosswalk": 5,
+   "t119": 5
+  },
+  "GF C1": {
+   "crosswalk": 1,
+   "t119": 1
+  },
+  "GF C10": {
+   "crosswalk": 1,
+   "t119": 1
+  },
+  "GF C11": {
+   "crosswalk": 2,
+   "t119": 2
+  },
+  "GF C2": {
+   "crosswalk": 4,
+   "t119": 4
+  },
+  "GF C3": {
+   "crosswalk": 6,
+   "t119": 6
+  },
+  "GF C4": {
+   "crosswalk": 2,
+   "t119": 2
+  },
+  "GF C5": {
+   "crosswalk": 3,
+   "t119": 3
+  },
+  "GF C6": {
+   "crosswalk": 1,
+   "t119": 1
+  },
+  "GF C7": {
+   "crosswalk": 1,
+   "t119": 1
+  },
+  "GF C8": {
+   "crosswalk": 2,
+   "t119": 2
+  },
+  "GF C9": {
+   "crosswalk": 2,
+   "t119": 2
+  },
+  "NONE CN": {
+   "crosswalk": 5,
+   "t119": 0
   }
  }
 }
