@@ -1,9 +1,39 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
 Plain words, no task numbers. Measured numbers come from SCOREBOARD.md; anything not measured says so.
-Last update: 2026-10-23 04:20 UTC (Lead). Previous version: 2026-10-23 00:20 UTC. The released numbers did not change
-(released concrete 92.77 vs 111.81 m3, -17.03 %; released default V2.9 + route G untouched).
-Since 00:20 (newest first):
+Last update: 2026-10-23 08:20 UTC (Lead). Previous version: 2026-10-23 04:20 UTC. The released numbers did not change
+(released concrete 92.77 vs 111.81 m3, -17.03 %; released default V2.9 + route G untouched). Your 24 h faster-schedule
+pilot started 06:15: in its first two hours every agent run started and closed, the checker merged 8 pieces and sent
+back 1, and only 1 piece now waits for the checker (0.4 h old).
+Since 04:20 (newest first):
+- Lift and roof water tank: an element-by-element, storey-by-storey inventory of both drawing sets found that the lift
+  core (its footing, walls and pit) and the roof water tank have NO structural BOQ line in any engine state, while the
+  freelancer prices the lift walls. The pit depth and walls are not printed (held, never 0). A task now builds their
+  lines from what the drawings print (first for structure).
+- Levels: the architectural and structural drawings share one zero (19 of 20 level marks coincide), but the structural
+  set prints only finished floor levels, never a structural slab, beam or footing level. So every structural level is
+  held until the structural PDF sections are read (next task). This also exposed that the released neck columns
+  (10.855 m3) run up to the finished floor; the freelancer has 8.805 m3; that 2.05 m3 gap is now its own investigation.
+- Windows: heads and sills of 18 more windows were found in a drawing format nobody had opened (the vector DWF of every
+  sheet): 26 of 29 now drawing-confirmed, 5 checker-verified. On those 18 the freelancer has 26.950 m2 where the drawings
+  give 22.730 m2 (-15.7 %: he used a flat 2.00 m height where 1.50 m is drawn). Still held: one window's count, two
+  shuttered windows and three openings without a leaf.
+- Candidate step 6 merged (still NOT released): the first-to-second-floor stair flights are back (lower 1.0334 and upper
+  1.0014 m3 both checker-VERIFIED, landing held 0.470 .. 0.480 m3), the engine now refuses a convention where the drawings
+  print a value, and the checker confirmed the 4.451 m3 'winder stair' is a dome outline (held as a misread). Next step:
+  the verified pool (7.202 m3) and dome shells (5.081 m3) in, the misread removed.
+- Pool steel: the base-mesh fix passed (R1 824.89 .. 883.59 kg, R2 572.45 .. 617.96 kg, checker count identical); the
+  steel line stays held for the designer (two-zone detail vs your flat floor).
+- Block walls (engine piece): sent back once because it used the hand-measured run where the physical wall run governs
+  (at T-junctions the stem stops on the face); fixed within the hour and back with the checker: established net
+  337.412 m2 (was 358.063, -5.8 %), 58.366 m3 on the measured walls, the rest held with reasons.
+- Scope cross-check fixed: one element per physical column (12 -> 4 for the ground-floor C2 columns).
+- Columns re-measured by the checker from the drawing: 17 of 59 now, all 0.0 % (whole line still partially verified).
+- Safety: a sweep of all 48 merges since yesterday found no new failure; every one of the 396 failing test ids in the
+  full suite is explained (390 need private files never committed). Three small infrastructure follow-ups queued.
+Released numbers: unchanged.
+
+Earlier (00:20 -> 04:20):
 - Main stair, first to second floor: the candidate had dropped these flights entirely (2.6 m3 lost). They are now back
   in the next candidate step, waiting for the checker: lower flight 1.0334 m3 (checker-measured), upper flight 1.0014 m3
   (drawing-confirmed), the landing held at 0.470 .. 0.480 m3. The same step also stops the engine from using a
@@ -211,21 +241,21 @@ Not measured, and paused by your order (Alsenan first).
   development lengths, so a steel ledger is not complete until it has read them.
 
 ## Being worked on now
-- Checker: the fifth candidate extension (steel, dome ring) after its one fix; then the safety-test fix; one standing
-  re-measure slot per run (columns next).
-- Structural (worker 1): pool bar lengths on the verified 1.20 m wall (both pool details side by side), stair feet and
-  landings against the slabs (concrete and formwork on one boundary), the every-element-on-every-storey cross-check, the
-  angled strap beams.
-- Architecture and finishes (worker 2): the corrected opening list (three missing openings, two windows re-levelled, the
-  deduction effects in m2), a check of every curved element measured on its true arc, then black block units on the
-  corrected net area.
-- Integration (worker 3): the safety-test fix, then the guard and the missing upper stair flights into the candidate, the
-  verified pool (7.202 m3) and dome (5.081 m3) concrete, then formwork and railings as new BOQ categories; a scope
-  cross-check (every freelancer row and every BOQ line against a drawn element) and a stricter candidate-diff tool in
-  between.
+- Checker: the block-wall engine piece (its one fix), then one column reference re-measure per run (17 of 59 done), then
+  the next candidate step the moment it arrives.
+- Structural (worker 1): lift core and roof water tank lines from what the drawings print; the neck columns from footing
+  top to ground-beam underside (released 10.855 vs freelancer 8.805 m3 reconciled); structural levels from the PDF
+  sections and each footing; then the angled strap beams; excavation after the levels.
+- Architecture and finishes (worker 2): close the last held openings (one count, two shuttered windows, three leafless
+  openings and what is built above them); settle the three wet / dry review sets so the floor-area line can be scored;
+  wet-room wall tiles room by room on your 3.65 / 3.35 m rule; then black block units.
+- Integration (worker 3): candidate step 7 (verified pool and dome shells in, the dome misread removed), the stricter
+  candidate-diff tool, the coverage registry showing what the candidate carries, and three infrastructure follow-ups;
+  then formwork and railings, then plaster and paint as candidate lines (so their scoreboard lines can finally be scored),
+  then the slab faces.
 
 ## What is missing
-- Window sills / heads for 20 windows and 3 arch openings (designer window schedule asked); every door but the main entrance (2.20 m by your Q-55 C, stated as assumed).
+- Window heads: 3 of 29 windows still held (one count, two shuttered) and three leafless openings (being closed); every door but the main entrance (2.20 m by your Q-55 C, stated as assumed).
 - Ceilings: wet-room board type, cove detail, drop heights at openings, dome openings (designer); bar counts of the 3 planted columns (designer).
 - Block walls: net area on 43 walls (28 openings still held; three openings missing from the list being added), black-block count (being investigated), wall tops under the dome openings and the lift tie beam (designer).
 - Ceilings over outside air: area settled (44.446 m2); the finish has no note on any sheet (specification / designer).
@@ -239,7 +269,7 @@ Not measured, and paused by your order (Alsenan first).
 - The Kuwait specification chapters on waterproofing, floors, wall tiles and paint (file too big: parts needed).
 
 ## Waiting for the owner
-- No decision needed today. Nothing the team found since 20:20 meets the standard's conditions for asking you.
+- No decision needed today. Nothing the team found since 04:20 meets the standard's conditions for asking you (the lift pit, tank and neck ends are designer / drawing items still under investigation).
 - Designer items to forward when you choose (DESIGNER_CLARIFICATIONS.md): footing bar leg diameter, pool steel (the p.7
   detail is two-zone, your floor is flat), the three parapet types ST p.14 leaves to the architectural detail, and the
   earlier D-39 .. D-58; new D-59 .. D-62: nine small squares on two elevations, the 1.20 m south-west opening's head, the two dates in the structural set, and the sheets never issued (site, roof, schedules, ceilings, MEP).

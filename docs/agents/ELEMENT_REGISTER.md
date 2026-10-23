@@ -46,6 +46,18 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+### Lead 2026-10-23 08:20 (from T-187, T-197, T-191 r2, T-196 r2, T-201, T-200, T-202, T-188 MERGED; T-108 r1 REJECTED, r2 READY)
+
+| Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |
+|---|---|---|---|---|---|
+| LIFT-01: FF footing, 4 columns C1 / C2 / C2 / C9, lift walls GF -> roof, pit (opening 3.24 m2), shaft openings in each slab | concrete, block or RC walls, rebar, waterproofing (pit), formwork | STRUCTURE for the FF footing and the pit / RC walls; the 4 columns stay in CONC.COLUMN (listed here, never re-added); lift walls: owner trade decided by what the drawings say they are (RC vs block, D-43 tie beam) | NO LINE in any state (T-188, Checker 08:02); pit depth / walls NOT PRINTED -> HELD, never 0 | T-188 MERGED fb3a4623 | T-204; D-43 |
+| TANK-01: 2F roof water tank (slab T&B, columns C2 / C3 3.00 .. 3.80 m, beam B15 20x120) | concrete, rebar, waterproofing | STRUCTURE (tank slab and walls if drawn); the columns stay in CONC.COLUMN (range HELD on D-44); tank slab steel HELD on D-52 | NO LINE for the tank itself (T-188 confirms T-166); 'WATER TANK PLACE' only, no detail | T-188 MERGED | T-204; D-44, D-52 |
+| Neck columns (every footing) | concrete, formwork, rebar | NECK from the footing top to the ground-beam / ground-slab soffit; the FFL is never a neck end (FINISHED_AS_STRUCTURAL, T-200) | released 10.855 m3 PROVISIONAL vs freelancer 8.805: UNRESOLVED (both ends unprinted) | T-200 MERGED d699b650 | T-205; T-042 B4 RFI |
+| Every level used by a quantity | every trade | LEVEL CHAIN: a named physical datum per level (FFL, structural top, soffit, beam bottom, footing top, formation); the arch and structural +-0.00 are one datum (19 / 20 marks) | DRAWING-CONFIRMED for the FFL chain; every structural level HELD (the ST set prints only FFL marks) | T-200 MERGED | T-206 (ST PDF sections, per-footing chains) |
+| Windows W09 / W10 / W19 / W20 / W24 heights and sills (and 26 / 29 in all) | openings, block deductions, lintels, reveals, plaster, facade | OPENINGS (the list, ruling 00:20 stands) with heads from the vector DWF of every sheet | 5 VERIFIED (7.035 m2), 21 more DRAWING-CONFIRMED; W02, W11 / W12 and the three leafless heads HELD | T-201 MERGED 5dade783 | T-207 |
+| Candidate V3.0.6 default-guard lines (pool 3.495, domes 7.372, ST-01 GF 2.786, ST-02 1.769 m3) | concrete | unchanged rulings; the pool line in V3.0.7 takes the VERIFIED structural 1.20 m wall, never the printed 1.15 FINISHED (G-T187-1) | HELD by the guard in V3.0.6 | T-187 Gate B MERGED 8a6d604a | T-193 |
+| Block wall length on T-junctions | blockwork, plaster | BLOCKWORK: the physical MASONRY_CENTRELINE_V2 run, the T stem stops on the through-wall face (overlap 0); the hand run is a comparison only | rework r2 READY | Checker 07:13 on T-108 r1 | T-108 r2 |
+
 ### Lead 2026-10-23 04:20 (from T-179 r2, T-190, T-192, T-198 MERGED; T-191, T-196 REJECTED; T-187, T-197 READY)
 
 | Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |
