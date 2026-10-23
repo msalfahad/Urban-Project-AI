@@ -2,6 +2,40 @@
 
 Development reference only: tuning against it is allowed, so these numbers never prove product accuracy (MISSION.md).
 
+## SCOREBOARD v2 2026-10-23 20:20 UTC
+
+### CLOSABLE LINES (owner 2026-10-23 17:50; ranked by whether the line can genuinely close from the existing drawings alone, not by the share measured; Checker classification, 20:20 run)
+
+| Rank | Reference line | Unit | Class | What blocks it (named item) | Own-measured so far |
+|---|---|---|---|---|---|
+| 1 | Floor area | m2 | CLOSABLE NOW (state A, opt-in --set-bindings path, T-216 merged bebd1241); candidates CLOSABLE AFTER the 1F living foot-of-flight pieces 0 .. 0.520 m2 are settled | A: no held item; the whole line needs the Checker's re-measure of the 44 released floor lines (376.286 m2) + the 3 bound sets | 3 of 47 pieces (hand-wash sets 3.1325 / 1.485 at T-208, 4.7307 this run) |
+| 2 | Plaster | m2 | CLOSABLE AFTER T-211, and after a fix of the W15 / W16 opening height (Checker 20:14: merged T-150 / T-175 / T-201 carry 4.805 m2, own 4.362 m2 masonry deduction) | lane I plaster / paint package; wall heights (T-227 r2, T-228) | NOT YET MEASURED |
+| 3 | Paint | m2 | as plaster | as plaster | NOT YET MEASURED |
+| 4 | Doors (aluminium) | m2 | CLOSABLE AFTER T-232 | engine answers pcs; D-GF-05 class HELD | T-181 path only |
+| 5 | Windows (aluminium) | m2 | CLOSABLE AFTER T-232, except W02 BLOCKED BY CONSULTANT D-53; W15 / W16 window area is 1.55 x 3.00 = 4.650 each by Q-32 A (own crown 3.00), not 4.805 | engine answers pcs (T-232); W02 count D-53 | 15.615 m2 VERIFIED of 88.081 (28 / 29 openings) |
+| 6 | CONC.BEAM | m3 | CLOSABLE AFTER T-229 integration for the runs; depths BLOCKED BY CONSULTANT D-02 / D-16 / D-63 / D-65 | as 19:05 | 4 of 238 census rows (T-229) |
+| 7 | CONC.FOOTING | m3 | BLOCKED BY CONSULTANT (Q-31 C designer item: F10 + F); also straps SB3 (D-15) and the boundary band C1 (Q-28 A) are in this keyed line | F10 + F 2.176 .. 2.275 m3 HELD | footing component VERIFIED: 25 / 26 outlines 64.304 m3 (T-233, Checker 20:14; FN / F9 D-32 ruled once in F9); straps SB3 0.6516 VERIFIED |
+| 8 | CONC.GROUND | m3 | BLOCKED BY CONSULTANT D-35 | as 19:05 | 3 lift-beam lengths (T-230) |
+| 9 | CONC.BLINDING | m3 | BLOCKED BY CONSULTANT D-15 / D-14; ground-beam blinding on Q-21 C | strap blinding 0 .. 0.913, beyond-plot 0 .. 0.189, F10 + F, ground beams | footing blinding inside the plot 14.990 m3 VERIFIED (T-233, Checker 20:14) |
+| 10 | CONC.SLAB | m3 | BLOCKED BY CONSULTANT D-41 | the slab drop (T-213) | slab panels 1F 19.3864 + 2F 5.400 m2 (T-213) |
+| 11 | CONC.COLUMN | m3 | BLOCKED BY CONSULTANT D-16 (C8), D-65, D-26 (PC-1F-B), D-39 (PC-2F), tank columns | as 19:05 | 31 / 59 |
+| 12 | CONC.POOL | m3 | BLOCKED BY CONSULTANT (steps) | pool steps | base + walls VERIFIED components |
+| 13 | CONC.STAIR_DOME | m3 | BLOCKED BY CONSULTANT (stair winder / waists, tower dome) | curved / winder parts | 2 flights + 2 dome shells VERIFIED components |
+
+Reading: floor area (state A) is the first line that can close from the drawings alone: the T-180 slot moves to it in the next light run (re-measure the 44 released floor lines room by room, batched by floor plan).
+
+| Trade | Unit | Baseline | Ref lines | Coverage % | Compared | WAPE % | Signed % | Verified share % | Held or UNKNOWN | Rule difference share % |
+|---|---|---|---|---|---|---|---|---|---|---|
+| Concrete | m3 | A (released V29_ROUTEG_NO_PROFILE, manifest bca44b32, BOQ_LINES.csv b96185d4; re-run this run, REPRODUCED) | 8 | 100.00 | 3 | 17.03 | -17.03 | 0.00 (0 / 8; 3 partial re-measures not counted; CONC.FOOTING and CONC.BLINDING PARTIALLY VERIFIED this run, footing 64.304 and footing blinding 14.990 m3 components) | 5 ref lines HELD; 205 engine lines: 122 bounded 44.108 .. 113.540 m3 + 83 UNKNOWN (no bound) | 12.50 (1 / 8: blinding) |
+| Concrete | m3 | ARCH_TAKEOFF_V3.0.7 (candidate, 197c5599) | 8 | 100.00 | 1 | 1.84 | 1.84 | 0.00 (0 / 8) | as the 19:05 row | 12.50 (1 / 8: blinding) |
+| Concrete | m3 | ARCH_TAKEOFF_V3.0.8 (candidate, 57fe219a; NOT RELEASED) | 8 | 100.00 | NOT YET MEASURED (scorer not re-run on V3.0.8 by the Checker) | NOT YET MEASURED | NOT YET MEASURED | 0.00 (0 / 8) | as the 19:05 row | 12.50 (1 / 8: blinding) |
+| Floor area | m2 | A (as above) with the opt-in T-216 binding (--set-bindings research/agents_t216/ALSENAN_SET_BINDINGS_T216.json) | 1 | 100.00 | 1 | 5.85 | -5.85 | 0.00 (0 / 1) | 0 ref lines HELD; 9.348 m2 of the 385.634 is ASSUMED — OWNER-APPROVED (Q-06 A, verdict 54cb4c42), own column | NOT YET MEASURED (1 partial rule verdict not counted) |
+| Floor area | m2 | ARCH_TAKEOFF_V3.0.5 .. V3.0.8 (candidates) | 1 | 100.00 | 0 | NOT YET MEASURED | NOT YET MEASURED | 0.00 (0 / 1) | 1 ref line HELD: 1F living foot-of-flight 0 .. 0.520 m2 (bound 379.223 .. 379.743, T-216 worker run; not re-run by the Checker) | NOT YET MEASURED |
+| Blockwork | m2 | wall register v1 + merged deltas (T-225, T-226, T-222) | NOT YET MEASURED | NOT YET MEASURED | 0 | NOT YET MEASURED | NOT YET MEASURED | net VERIFIED 4.458 m2 (GF-W07); P-GF-05 masonry above 2.640 m2 re-measured (component); T-227 nets not merged (REJECTED r2) | as 19:05, plus T-222: bay basis held 0 .. 1.645 m2 -> 0 (SOURCE-SUPPORTED), P-1F-01 masonry above 0 .. 4.992 HELD | NOT YET MEASURED |
+| Plaster, Paint, Doors (aluminium), Windows (aluminium) | m2 | A and V3.0.5 .. V3.0.8 | 1 each | as the 16:58 rows (no line of these trades moved) | as 16:58 | as 16:58 | as 16:58 | as 16:58 (windows 15.615 m2 VERIFIED of the T-181 path) | as 16:58 | as 16:58 |
+
+Sources (Verifier, 19:51 run, run unknown). Merged this run: T-222 769cad40 and T-233 2ecb5bf0 (research only, no engine line), T-216 bebd1241 (opt-in scorer path; released and candidate lines unchanged). Own run of baseline A on bebd1241's parent tree (48a1f83a, REPRODUCED b96185d4) from Drive 'P7757_DXF_COMPRESSED.zip' (P7757.dxf ab54dd55) and 'ST7757 dxf.dxf' (9f9d1179); scorer tools/alsenan_keymap.py with --v2-verdicts (verdict file before this run's 2 PARTIAL records; they count no whole line). The freelancer side is the committed BENCHMARK_NORMALISED.json; tools/alsenan_scoreboard.py and the freelancer workbooks were not re-run this run. Drive read OK. Released default unchanged (V2.9 + route G).
+
 ## SCOREBOARD v2 2026-10-23 19:05 UTC
 
 ### CLOSABLE LINES (owner 2026-10-23 17:50; ranked by whether the line can genuinely close from the existing drawings alone, not by the share measured; Checker's first classification from the held items on record, the Lead confirms each D-number per owner item 6)
