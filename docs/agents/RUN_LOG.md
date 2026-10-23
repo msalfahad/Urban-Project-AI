@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-23T03:51Z | Verifier | STARTED | run session_01KSbKBpMHHoCuGKrbtCyvKG | repo-attached routine | task state: T-191, T-198 READY seen in RUN_LOG | self-check pending
 - 2026-10-23 03:40 UTC | Worker 2 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-23T03:00Z | Worker 3 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-23T02:35Z | Worker 1 | SUCCESS | T-191 READY (agents/task-T-191 827bd8d2) | Pool steel rev2 per bar mark on the verified 1.20 m wall, both p.7 details side by side, HELD (D-57): R1 839.34 .. 883.59 kg net (rev1 900.01, -6.7 .. -1.8 %), R2 583.08 .. 617.96 kg (rev1 620.13); floor legs and ring laps held apart, never 0. Learned: p.7's bar views draw a top hook + base box on the water-face verticals (+25 .. +46 kg R1) and an undimensioned L leg on the outer ones; rings on bar lines are 11.2 .. 11.9 m and always need a closing lap. Freelancer 1,500 kg = RULE_DIFFERENCE. ERS: read, s.2-4 + s.3 notation/shapes + s.7 row. No owner question. | self-check codemap PASS / pytest t061 PASS / freeze PASS; problem: none (Drive read OK: ST7757.pdf)
