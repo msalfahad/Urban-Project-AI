@@ -1,0 +1,272 @@
+{
+ "bedrooms": {
+  "decomposition": {
+   "closed": true,
+   "diff_m2": -1.3785,
+   "engine_m2": 72.6215,
+   "parts": [
+    {
+     "id": "dressing 1F-RFFE7AF HELD outside the key (type), in his bed-room-2 row",
+     "kind": "STATUS",
+     "m2": -2.97
+    },
+    {
+     "id": "arch strip OP-011: engine strip line, his bed-room-2 row",
+     "kind": "SCOPE",
+     "m2": -0.15
+    },
+    {
+     "id": "curved room vs his 17.29",
+     "kind": "UNRESOLVED",
+     "m2": 1.7265
+    },
+    {
+     "id": "west room",
+     "kind": "MEASUREMENT",
+     "m2": 0.05
+    },
+    {
+     "id": "500 x 365 room column notch",
+     "kind": "MEASUREMENT",
+     "m2": -0.035
+    }
+   ],
+   "parts_m2": -1.3785,
+   "reference_m2": 74.0,
+   "residual_m2": -0.0
+  },
+  "old_pairing": {
+   "diff_m2": -1.3785,
+   "engine_key_m2": 72.6215,
+   "freelancer_m2": 74.0
+  }
+ },
+ "floor_key": {
+  "after": {
+   "S5_dressing_and_arch_strip_m2": -3.12,
+   "compared_reference_m2": 382.4696,
+   "engine_total_m2": 384.9339,
+   "like_for_like_m2": 2.4643,
+   "like_for_like_pct": 0.64,
+   "scope_net_m2": -27.1104,
+   "strips_to_held_m2": 0.7
+  },
+  "decomposition": {
+   "closed": true,
+   "diff_m2": 2.4643,
+   "engine_m2": 384.9339,
+   "parts": [
+    {
+     "id": "GF-OPEN (T-208 like for like)",
+     "kind": "AS T-208",
+     "m2": 0.2277
+    },
+    {
+     "id": "GF-DIWANIYA (T-208 like for like)",
+     "kind": "AS T-208",
+     "m2": 0.1003
+    },
+    {
+     "id": "GF-MASTER (T-208 like for like)",
+     "kind": "AS T-208",
+     "m2": -0.1104
+    },
+    {
+     "id": "GF-DRIVER (T-208 like for like)",
+     "kind": "AS T-208",
+     "m2": 0.005
+    },
+    {
+     "id": "GF-KITCHEN (T-208 like for like)",
+     "kind": "AS T-208",
+     "m2": 0.08
+    },
+    {
+     "id": "GF-BATHS (T-208 like for like)",
+     "kind": "AS T-208",
+     "m2": 0.098
+    },
+    {
+     "id": "GF-HANDWASH (T-208 like for like)",
+     "kind": "AS T-208",
+     "m2": -0.2318
+    },
+    {
+     "id": "1F-LIVING (T-208 like for like)",
+     "kind": "AS T-208",
+     "m2": 0.0194
+    },
+    {
+     "id": "1F-WET (T-208 like for like)",
+     "kind": "AS T-208",
+     "m2": 0.2345
+    },
+    {
+     "id": "2F-MAID (T-208 like for like)",
+     "kind": "AS T-208",
+     "m2": -0.23
+    },
+    {
+     "id": "2F-WC (T-208 like for like)",
+     "kind": "AS T-208",
+     "m2": -0.07
+    },
+    {
+     "id": "1F curved room vs his 17.29",
+     "kind": "UNRESOLVED",
+     "m2": 1.7265
+    },
+    {
+     "id": "1F west room",
+     "kind": "MEASUREMENT",
+     "m2": 0.05
+    },
+    {
+     "id": "1F 500 x 365 room column notch",
+     "kind": "MEASUREMENT",
+     "m2": -0.035
+    },
+    {
+     "id": "1F porcelain door strips OP-005 / 006 / 020 (engine lines, no row of his)",
+     "kind": "SCOPE (strip measured apart)",
+     "m2": 0.42
+    },
+    {
+     "id": "2F porcelain door strip OP-007 (engine line, no row of his)",
+     "kind": "SCOPE (strip measured apart)",
+     "m2": 0.18
+    }
+   ],
+   "parts_m2": 2.4642,
+   "reference_m2": 382.4696,
+   "residual_m2": 0.0001
+  },
+  "t208": {
+   "engine_total_m2": 385.6339,
+   "like_for_like_m2": 0.0443
+  }
+ },
+ "inputs": {
+  "candidate_base_boq_lines_sha256": "b0e76965681d7dd222e0c24ad9b9656ab8d72aa84d224681cca1792a0f4b9d80",
+  "released_boq_lines_sha256": "b96185d468524743e600f1992d4e4b2028193ff4a379961bc5686c9662f8c115"
+ },
+ "kitchen": {
+  "attached_cell": {
+   "area_m2": 1.365,
+   "confirmation": "BOUNDARY CONFIRMED (worker reading, DRAWING-CONFIRMED): the attached cell is the printed 1.05 wide entrance of the kitchen (105 x 150): walls on three sides, the service door OP-025 in its outer wall, the +0.30 level mark inside it (the kitchen's own level), and no wall, door, glazing or level step between it and the kitchen; its 'passage' OP-002 is the line from the free end of the 0.50 pier across the 1.00 m to the opposite wall, not a built element. One room, one wet scope (D-C3 checked)",
+   "passages": [
+    "OP-002"
+   ]
+  },
+  "boundary_engine_lm": 14.5,
+  "boundary_hand_lm": 14.5,
+  "engine_runs_lm": {
+   "boundary": 14.5,
+   "column": 1.05,
+   "door": 1.0,
+   "glazing_edge": 0.75,
+   "other": 0.0,
+   "passage": 0.0,
+   "perimeter": 14.5,
+   "wall": 10.95,
+   "window_threshold": 0.75
+  },
+  "findings_candidate_base": [
+   {
+    "finding": "WET_ROOM_FLOORED_DRY",
+    "item": "FIN.FLOOR.PORCELAIN",
+    "qty": 9.630001,
+    "should_be": "FIN.FLOOR.WET_TILE"
+   }
+  ],
+  "findings_released": [
+   {
+    "finding": "WET_ROOM_FLOORED_DRY",
+    "item": "FIN.FLOOR.PORCELAIN",
+    "qty": 9.630001,
+    "should_be": "FIN.FLOOR.WET_TILE"
+   }
+  ],
+  "floor_engine_m2": 9.63,
+  "floor_hand_m2": 9.63,
+  "freelancer": {
+   "class": "WET (his wet tiles sheet and his membrane sheet)",
+   "floor_m2": 9.55,
+   "wall_m2": 43.05,
+   "wp_lm": 14.35,
+   "wp_m2": 9.55
+  },
+  "freelancer_diff": {
+   "boundary_lm": 0.15,
+   "boundary_pct": 1.05,
+   "floor_m2": 0.08,
+   "floor_pct": 0.84
+  },
+  "lexicon_kind": "SERVICE",
+  "owner_scope": "WET",
+  "room_id": "GF-RA3AD49",
+  "upturn_lm_hand": 13.5,
+  "upturn_m2_engine": 2.7,
+  "upturn_m2_hand": 2.7,
+  "wet_floor_key": {
+   "after_m2": 72.1207,
+   "before_m2": 62.4907,
+   "diff_after_m2": 0.1107,
+   "diff_after_pct": 0.15,
+   "dry_porcelain_change_m2": -9.63,
+   "floor_key_total_change_m2": 0.0,
+   "freelancer_m2": 72.01
+  }
+ },
+ "schema": "T218_SUMMARY_V1",
+ "strips": {
+  "by_floor": {
+   "1F": {
+    "engine_porcelain_strips_m2": 0.77,
+    "stay_porcelain_m2": 0.42,
+    "to_held": [
+     "OP-007 ARCH.THRESHOLD (lift landing)",
+     "OP-011 HELD with the space"
+    ],
+    "to_held_m2": 0.35
+   },
+   "2F": {
+    "engine_porcelain_strips_m2": 0.53,
+    "stay_porcelain_m2": 0.18,
+    "to_held": [
+     "OP-001 ARCH.THRESHOLD (exterior sill)",
+     "OP-002 ARCH.THRESHOLD (lift landing)"
+    ],
+    "to_held_m2": 0.35
+   }
+  },
+  "count": 18,
+  "duplicates": [
+   {
+    "items": [
+     "FIN.MARBLE.THRESHOLD",
+     "ARCH.THRESHOLD"
+    ],
+    "lines": [
+     "L-b7d6e0e09fa18b18ac40",
+     "L-91f177317d4956267044"
+    ],
+    "opening_id": "1F:OP-004",
+    "overlap_m2": 0.12
+   },
+   {
+    "items": [
+     "FIN.FLOOR.PORCELAIN",
+     "ARCH.THRESHOLD"
+    ],
+    "lines": [
+     "L-8cc7b4c79edf77348781",
+     "L-88587354596ce8f2eeb6"
+    ],
+    "opening_id": "1F:OP-005",
+    "overlap_m2": 0.135
+   }
+  ]
+ },
+ "task": "T-218"
+}

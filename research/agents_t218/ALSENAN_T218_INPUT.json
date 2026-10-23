@@ -1,0 +1,3647 @@
+{
+ "runs": {
+  "candidate_base": {
+   "boq_lines_sha256": "b0e76965681d7dd222e0c24ad9b9656ab8d72aa84d224681cca1792a0f4b9d80",
+   "kitchen_lines": [
+    {
+     "floor": "GF",
+     "high": null,
+     "item_code": "FIN.FLOOR.PORCELAIN",
+     "line_id": "L-2276cdcc45272b6bee1a",
+     "low": null,
+     "qty": 9.630001,
+     "room_id": "GF-RA3AD49",
+     "rule_id": "UP-CER-001",
+     "state": "PROVISIONAL",
+     "unit": "m2"
+    },
+    {
+     "floor": "GF",
+     "high": null,
+     "item_code": "FIN.CEILING",
+     "line_id": "L-25a7f5fae2c44b14a527",
+     "low": null,
+     "qty": 9.630001,
+     "room_id": "GF-RA3AD49",
+     "rule_id": "ARCH_MEASURE_V3",
+     "state": "PROVISIONAL",
+     "unit": "m2"
+    },
+    {
+     "floor": "GF",
+     "high": null,
+     "item_code": "FIN.SKIRTING",
+     "line_id": "L-9d1c22953966ecd646d6",
+     "low": null,
+     "qty": null,
+     "room_id": "GF-RA3AD49",
+     "rule_id": "UP-CER-004",
+     "state": "NOT_APPLICABLE_WITH_EVIDENCE",
+     "unit": "lm"
+    },
+    {
+     "floor": "GF",
+     "high": null,
+     "item_code": "FIN.WP.FLOOR",
+     "line_id": "L-5e9e0021e70f9869899c",
+     "low": null,
+     "qty": 9.630001,
+     "room_id": "GF-RA3AD49",
+     "rule_id": "UP-WP-001",
+     "state": "SOURCE_DERIVED",
+     "unit": "m2"
+    },
+    {
+     "floor": "GF",
+     "high": null,
+     "item_code": "FIN.WP.DOORWAY",
+     "line_id": "L-659cc66ca4e3eedd7889",
+     "low": null,
+     "qty": 0.2,
+     "room_id": "GF-RA3AD49",
+     "rule_id": "UP-WP-003",
+     "state": "SOURCE_DERIVED",
+     "unit": "m2"
+    },
+    {
+     "floor": "GF",
+     "high": null,
+     "item_code": "FIN.PLASTER",
+     "line_id": "L-31fe171480dd2a20e1a1",
+     "low": null,
+     "qty": null,
+     "room_id": "GF-RA3AD49",
+     "rule_id": "UP-CER-009",
+     "state": "BLOCKED_RFI",
+     "unit": "m2"
+    },
+    {
+     "floor": "GF",
+     "high": null,
+     "item_code": "FIN.WALL.TILE",
+     "line_id": "L-e12e9d27435709d54d86",
+     "low": null,
+     "qty": null,
+     "room_id": "GF-RA3AD49",
+     "rule_id": "UP-CER-009",
+     "state": "BLOCKED_RFI",
+     "unit": "m2"
+    },
+    {
+     "floor": "GF",
+     "high": null,
+     "item_code": "ARCH.WINDOW",
+     "line_id": "L-3893d1e187e3517a39a4",
+     "low": null,
+     "qty": 1.0,
+     "room_id": "GF-RA3AD49",
+     "rule_id": "ARCH_MEASURE_V3",
+     "state": "SOURCE_DERIVED",
+     "unit": "pcs"
+    },
+    {
+     "floor": "GF",
+     "high": null,
+     "item_code": "FIN.MARBLE.THRESHOLD",
+     "line_id": "L-8c790f53e86c9fc78648",
+     "low": null,
+     "qty": 0.2,
+     "room_id": "GF-STRIP-OP-025",
+     "rule_id": "UP-THR-001",
+     "state": "SOURCE_DERIVED",
+     "unit": "m2"
+    },
+    {
+     "floor": "GF",
+     "high": null,
+     "item_code": "FIN.PAINT",
+     "line_id": "L-f928ee2d67e50380db11",
+     "low": null,
+     "qty": null,
+     "room_id": "GF-RA3AD49",
+     "rule_id": "UP-FIN-PAINT-001",
+     "state": "NOT_APPLICABLE_WITH_EVIDENCE",
+     "unit": "m2"
+    },
+    {
+     "floor": "GF",
+     "high": null,
+     "item_code": "FIN.WP.WALL_UPTURN",
+     "line_id": "L-20db8ed5516aff9a7ad8",
+     "low": null,
+     "qty": 2.7,
+     "room_id": "GF-RA3AD49",
+     "rule_id": "UP-WP-003",
+     "state": "SOURCE_DERIVED",
+     "unit": "m2"
+    },
+    {
+     "floor": "GF",
+     "high": 0.2,
+     "item_code": "FIN.WP.DOORWAY_TRANSITION",
+     "line_id": "L-ed2d7b0a35e39a5c0796",
+     "low": 0.0,
+     "qty": null,
+     "room_id": "GF-RA3AD49",
+     "rule_id": "UP-WP-DOOR-001",
+     "state": "BOUNDED_EXPOSURE",
+     "unit": "m2"
+    },
+    {
+     "floor": "GF",
+     "high": null,
+     "item_code": "FIN.WP.PENETRATION",
+     "line_id": "L-3a8faecb5b37e63ee4fc",
+     "low": null,
+     "qty": null,
+     "room_id": "GF-RA3AD49",
+     "rule_id": "UP-WP-004",
+     "state": "BLOCKED_RFI",
+     "unit": "pcs"
+    },
+    {
+     "floor": "GF",
+     "high": null,
+     "item_code": "FIN.WP.DOORWAY_TRANSITION_NR",
+     "line_id": "L-dc393017e0df246b1462",
+     "low": null,
+     "qty": 1.0,
+     "room_id": "GF-RA3AD49",
+     "rule_id": "UP-WP-003",
+     "state": "SOURCE_DERIVED",
+     "unit": "pcs"
+    },
+    {
+     "floor": "GF",
+     "high": null,
+     "item_code": "FIN.WP.MEMBRANE_ROLLS",
+     "line_id": "L-b4366c84f497215c10b6",
+     "low": null,
+     "qty": 2.0,
+     "room_id": "GF-RA3AD49",
+     "rule_id": "UP-WP-LAY-001",
+     "state": "SOURCE_DERIVED",
+     "unit": "pcs"
+    }
+   ],
+   "kitchen_neighbours": [
+    {
+     "class": "UNLABELLED",
+     "codes": [],
+     "floor": "GF",
+     "kind": null,
+     "room_id": "GF-R7B7A5D"
+    }
+   ],
+   "kitchen_rooms": [
+    {
+     "area_m2": 9.630001,
+     "attached_cells": [
+      {
+       "area_m2": 1.365,
+       "passages": [
+        "OP-002"
+       ],
+       "rule": "ATTACHED_THROUGH_OPEN_PASSAGE"
+      }
+     ],
+     "codes": [
+      "KITCHEN"
+     ],
+     "doors": [
+      "OP-025"
+     ],
+     "finish_scope": {
+      "basis": "owner wet area (KITCHEN)",
+      "flags": [],
+      "notes": [],
+      "rule": "UP-WET-001",
+      "scope": "WET"
+     },
+     "floor": "GF",
+     "kind": "SERVICE",
+     "level_m": 0.3,
+     "passages": [],
+     "perimeter_lm": 14.5,
+     "room_id": "GF-RA3AD49",
+     "runs_lm": {
+      "boundary": 14.5,
+      "column": 1.05,
+      "door": 1.0,
+      "glazing_edge": 0.75,
+      "other": 0.0,
+      "passage": 0.0,
+      "perimeter": 14.5,
+      "wall": 10.95,
+      "window_threshold": 0.75
+     },
+     "windows": [
+      "OP-006"
+     ]
+    }
+   ],
+   "method": "ARCH_TAKEOFF_V2.13 (base of V3.0.x, arch_v30.BASE_METHOD)",
+   "openings": [
+    {
+     "floor": "GF",
+     "kind": "DOOR",
+     "opening_id": "OP-025",
+     "rooms": [
+      "GF-RA3AD49",
+      "GF-R7B7A5D"
+     ],
+     "type": "SWING_DOOR",
+     "wall_t_m": 0.2,
+     "width_m": 1.0
+    },
+    {
+     "floor": "1F",
+     "kind": "WINDOW",
+     "opening_id": "OP-001",
+     "rooms": [
+      "1F-R48AA46"
+     ],
+     "type": "WINDOW",
+     "wall_t_m": 0.2,
+     "width_m": 0.6
+    },
+    {
+     "floor": "1F",
+     "kind": "WINDOW",
+     "opening_id": "OP-002",
+     "rooms": [
+      "1F-R8BDA49"
+     ],
+     "type": "WINDOW",
+     "wall_t_m": 0.2,
+     "width_m": 0.6
+    },
+    {
+     "floor": "1F",
+     "kind": "WINDOW",
+     "opening_id": "OP-003",
+     "rooms": [
+      "1F-RED0D19"
+     ],
+     "type": "WINDOW",
+     "wall_t_m": 0.2,
+     "width_m": 1.5523
+    },
+    {
+     "floor": "1F",
+     "kind": "DOOR",
+     "opening_id": "OP-004",
+     "rooms": [
+      "1F-RB72F22",
+      "1F-R48AA46"
+     ],
+     "type": "SWING_DOOR",
+     "wall_t_m": 0.15,
+     "width_m": 0.8
+    },
+    {
+     "floor": "1F",
+     "kind": "DOOR",
+     "opening_id": "OP-005",
+     "rooms": [
+      "1F-R78C367",
+      "1F-R0E919A"
+     ],
+     "type": "SWING_DOOR",
+     "wall_t_m": 0.15,
+     "width_m": 0.9
+    },
+    {
+     "floor": "1F",
+     "kind": "DOOR",
+     "opening_id": "OP-006",
+     "rooms": [
+      "1F-R78C367",
+      "1F-R3CFCFD"
+     ],
+     "type": "SWING_DOOR",
+     "wall_t_m": 0.15,
+     "width_m": 0.9
+    },
+    {
+     "floor": "1F",
+     "kind": "PASSAGE",
+     "opening_id": "OP-007",
+     "rooms": [
+      "1F-R78C367",
+      "1F-RCCB686"
+     ],
+     "type": "PASSAGE_OR_ARCHWAY",
+     "wall_t_m": 0.2,
+     "width_m": 1.0
+    },
+    {
+     "floor": "1F",
+     "kind": "DOOR",
+     "opening_id": "OP-008",
+     "rooms": [
+      "1F-R78C367",
+      "1F-R26FA0D"
+     ],
+     "type": "SWING_DOOR",
+     "wall_t_m": 0.2,
+     "width_m": 0.9
+    },
+    {
+     "floor": "1F",
+     "kind": "PASSAGE",
+     "opening_id": "OP-009",
+     "rooms": [],
+     "type": "PASSAGE_OR_ARCHWAY",
+     "wall_t_m": 0.15,
+     "width_m": 1.3
+    },
+    {
+     "floor": "1F",
+     "kind": "DOOR",
+     "opening_id": "OP-010",
+     "rooms": [
+      "1F-R26FA0D",
+      "1F-R52AC05"
+     ],
+     "type": "SWING_DOOR",
+     "wall_t_m": 0.15,
+     "width_m": 0.8
+    },
+    {
+     "floor": "1F",
+     "kind": "PASSAGE",
+     "opening_id": "OP-011",
+     "rooms": [
+      "1F-R0E919A",
+      "1F-RFFE7AF"
+     ],
+     "type": "PASSAGE_OR_ARCHWAY",
+     "wall_t_m": 0.15,
+     "width_m": 1.0
+    },
+    {
+     "floor": "1F",
+     "kind": "WINDOW",
+     "opening_id": "OP-012",
+     "rooms": [
+      "1F-R78C367"
+     ],
+     "type": "WINDOW",
+     "wall_t_m": 0.2,
+     "width_m": 1.0
+    },
+    {
+     "floor": "1F",
+     "kind": "WINDOW",
+     "opening_id": "OP-013",
+     "rooms": [
+      "1F-R26FA0D"
+     ],
+     "type": "WINDOW",
+     "wall_t_m": 0.2,
+     "width_m": 0.6
+    },
+    {
+     "floor": "1F",
+     "kind": "WINDOW",
+     "opening_id": "OP-014",
+     "rooms": [
+      "1F-R52AC05"
+     ],
+     "type": "WINDOW",
+     "wall_t_m": 0.2,
+     "width_m": 0.6
+    },
+    {
+     "floor": "1F",
+     "kind": "WINDOW",
+     "opening_id": "OP-015",
+     "rooms": [
+      "1F-RED23B8"
+     ],
+     "type": "WINDOW",
+     "wall_t_m": 0.2,
+     "width_m": 0.6
+    },
+    {
+     "floor": "1F",
+     "kind": "WINDOW",
+     "opening_id": "OP-016",
+     "rooms": [
+      "1F-R78C367"
+     ],
+     "type": "WINDOW",
+     "wall_t_m": 0.2,
+     "width_m": 1.5523
+    },
+    {
+     "floor": "1F",
+     "kind": "WINDOW",
+     "opening_id": "OP-017",
+     "rooms": [
+      "1F-R78C367"
+     ],
+     "type": "WINDOW",
+     "wall_t_m": 0.2,
+     "width_m": 1.5523
+    },
+    {
+     "floor": "1F",
+     "kind": "DOOR",
+     "opening_id": "OP-018",
+     "rooms": [
+      "1F-R3CFCFD",
+      "1F-R48CDA5"
+     ],
+     "type": "SWING_DOOR",
+     "wall_t_m": 0.15,
+     "width_m": 0.8
+    },
+    {
+     "floor": "1F",
+     "kind": "DOOR",
+     "opening_id": "OP-019",
+     "rooms": [
+      "1F-RED23B8",
+      "1F-RFFE7AF"
+     ],
+     "type": "SWING_DOOR",
+     "wall_t_m": 0.15,
+     "width_m": 0.8
+    },
+    {
+     "floor": "1F",
+     "kind": "DOOR",
+     "opening_id": "OP-020",
+     "rooms": [
+      "1F-R78C367",
+      "1F-RB72F22"
+     ],
+     "type": "SWING_DOOR",
+     "wall_t_m": 0.15,
+     "width_m": 1.0
+    },
+    {
+     "floor": "1F",
+     "kind": "WINDOW",
+     "opening_id": "OP-021",
+     "rooms": [
+      "1F-R78C367"
+     ],
+     "type": "WINDOW",
+     "wall_t_m": 0.2,
+     "width_m": 1.2
+    },
+    {
+     "floor": "1F",
+     "kind": "WINDOW",
+     "opening_id": "OP-022",
+     "rooms": [
+      "1F-RB72F22"
+     ],
+     "type": "WINDOW",
+     "wall_t_m": 0.2,
+     "width_m": 2.4498
+    },
+    {
+     "floor": "1F",
+     "kind": "WINDOW",
+     "opening_id": "COP-001",
+     "rooms": [
+      "1F-R3CFCFD"
+     ],
+     "type": "WINDOW",
+     "wall_t_m": 0.2,
+     "width_m": 3.2895
+    },
+    {
+     "floor": "2F",
+     "kind": "DOOR",
+     "opening_id": "OP-001",
+     "rooms": [
+      "2F-R4D1B62"
+     ],
+     "type": "SWING_DOOR",
+     "wall_t_m": 0.15,
+     "width_m": 1.0
+    },
+    {
+     "floor": "2F",
+     "kind": "PASSAGE",
+     "opening_id": "OP-002",
+     "rooms": [
+      "2F-R4D1B62",
+      "2F-R2BDCEE"
+     ],
+     "type": "PASSAGE_OR_ARCHWAY",
+     "wall_t_m": 0.2,
+     "width_m": 1.0
+    },
+    {
+     "floor": "2F",
+     "kind": "WINDOW",
+     "opening_id": "OP-003",
+     "rooms": [
+      "2F-R4D1B62"
+     ],
+     "type": "WINDOW",
+     "wall_t_m": 0.2,
+     "width_m": 1.0
+    },
+    {
+     "floor": "2F",
+     "kind": "WINDOW",
+     "opening_id": "OP-004",
+     "rooms": [
+      "2F-RE83BED"
+     ],
+     "type": "WINDOW",
+     "wall_t_m": 0.2,
+     "width_m": 0.6
+    },
+    {
+     "floor": "2F",
+     "kind": "WINDOW",
+     "opening_id": "OP-005",
+     "rooms": [
+      "2F-R1DB2D2"
+     ],
+     "type": "WINDOW",
+     "wall_t_m": 0.2,
+     "width_m": 1.2
+    },
+    {
+     "floor": "2F",
+     "kind": "DOOR",
+     "opening_id": "OP-006",
+     "rooms": [
+      "2F-R1DB2D2",
+      "2F-RE83BED"
+     ],
+     "type": "SWING_DOOR",
+     "wall_t_m": 0.15,
+     "width_m": 0.8
+    },
+    {
+     "floor": "2F",
+     "kind": "DOOR",
+     "opening_id": "OP-007",
+     "rooms": [
+      "2F-R1DB2D2",
+      "2F-R4D1B62"
+     ],
+     "type": "SWING_DOOR",
+     "wall_t_m": 0.2,
+     "width_m": 0.9
+    },
+    {
+     "floor": "2F",
+     "kind": "WINDOW",
+     "opening_id": "OP-008",
+     "rooms": [
+      "2F-R4D1B62"
+     ],
+     "type": "WINDOW",
+     "wall_t_m": 0.2,
+     "width_m": 1.2
+    }
+   ],
+   "upper_floor_area_strips": [
+    {
+     "area_m2": 0.166085,
+     "class": "UNATTRIBUTED",
+     "depth_m": 0.1845,
+     "disposition": "BLOCKED_RFI",
+     "floor": "1F",
+     "opening_ids": [
+      "OP-005"
+     ],
+     "opening_kinds": [
+      "DOOR"
+     ],
+     "opening_width_m": 0.9,
+     "strip_id": "SITE-29faecd848edfdc3"
+    },
+    {
+     "area_m2": 0.135,
+     "class": "THRESHOLD",
+     "depth_m": 0.15,
+     "disposition": "BLOCKED_RFI",
+     "floor": "1F",
+     "opening_ids": [
+      "OP-006"
+     ],
+     "opening_kinds": [
+      "DOOR"
+     ],
+     "opening_width_m": 0.9,
+     "strip_id": "SITE-4fef674d3ff7496a"
+    },
+    {
+     "area_m2": 0.131977,
+     "class": "THRESHOLD",
+     "depth_m": null,
+     "disposition": "BLOCKED_RFI",
+     "floor": "1F",
+     "opening_ids": [],
+     "opening_kinds": [],
+     "opening_width_m": null,
+     "strip_id": "SITE-7d0122ff41500399"
+    },
+    {
+     "area_m2": 0.12,
+     "class": "THRESHOLD",
+     "depth_m": 0.15,
+     "disposition": "BLOCKED_RFI",
+     "floor": "1F",
+     "opening_ids": [
+      "OP-019"
+     ],
+     "opening_kinds": [
+      "DOOR"
+     ],
+     "opening_width_m": 0.8,
+     "strip_id": "SITE-86cb8b9dcdc4b829"
+    },
+    {
+     "area_m2": 0.15,
+     "class": "THRESHOLD",
+     "depth_m": 0.15,
+     "disposition": "BLOCKED_RFI",
+     "floor": "1F",
+     "opening_ids": [
+      "OP-011"
+     ],
+     "opening_kinds": [
+      "PASSAGE"
+     ],
+     "opening_width_m": 1.0,
+     "strip_id": "SITE-8982e4b947f50ce0"
+    },
+    {
+     "area_m2": 0.185778,
+     "class": "THRESHOLD",
+     "depth_m": null,
+     "disposition": "BLOCKED_RFI",
+     "floor": "1F",
+     "opening_ids": [],
+     "opening_kinds": [],
+     "opening_width_m": null,
+     "strip_id": "SITE-974f79bfc62ecd03"
+    },
+    {
+     "area_m2": 0.2,
+     "class": "THRESHOLD",
+     "depth_m": 0.2,
+     "disposition": "BLOCKED_RFI",
+     "floor": "1F",
+     "opening_ids": [
+      "OP-007"
+     ],
+     "opening_kinds": [
+      "PASSAGE"
+     ],
+     "opening_width_m": 1.0,
+     "strip_id": "SITE-a269bf61d6d19c7d"
+    },
+    {
+     "area_m2": 0.15,
+     "class": "THRESHOLD",
+     "depth_m": 0.15,
+     "disposition": "BLOCKED_RFI",
+     "floor": "1F",
+     "opening_ids": [
+      "OP-020"
+     ],
+     "opening_kinds": [
+      "DOOR"
+     ],
+     "opening_width_m": 1.0,
+     "strip_id": "SITE-bcfaaf02aac77ddc"
+    },
+    {
+     "area_m2": 0.18,
+     "class": "THRESHOLD",
+     "depth_m": 0.2,
+     "disposition": "BLOCKED_RFI",
+     "floor": "1F",
+     "opening_ids": [
+      "OP-008"
+     ],
+     "opening_kinds": [
+      "DOOR"
+     ],
+     "opening_width_m": 0.9,
+     "strip_id": "SITE-d24b20228f587d87"
+    },
+    {
+     "area_m2": 0.12,
+     "class": "THRESHOLD",
+     "depth_m": 0.15,
+     "disposition": "BLOCKED_RFI",
+     "floor": "1F",
+     "opening_ids": [
+      "OP-010"
+     ],
+     "opening_kinds": [
+      "DOOR"
+     ],
+     "opening_width_m": 0.8,
+     "strip_id": "SITE-d9abea41a2ec8afe"
+    },
+    {
+     "area_m2": 0.12,
+     "class": "THRESHOLD",
+     "depth_m": 0.15,
+     "disposition": "BLOCKED_RFI",
+     "floor": "1F",
+     "opening_ids": [
+      "OP-018"
+     ],
+     "opening_kinds": [
+      "DOOR"
+     ],
+     "opening_width_m": 0.8,
+     "strip_id": "SITE-f7298606c005c7fd"
+    },
+    {
+     "area_m2": 0.154075,
+     "class": "UNATTRIBUTED",
+     "depth_m": 0.1926,
+     "disposition": "BLOCKED_RFI",
+     "floor": "1F",
+     "opening_ids": [
+      "OP-004"
+     ],
+     "opening_kinds": [
+      "DOOR"
+     ],
+     "opening_width_m": 0.8,
+     "strip_id": "SITE-fd160ff889cc7481"
+    },
+    {
+     "area_m2": 0.18,
+     "class": "THRESHOLD",
+     "depth_m": 0.2,
+     "disposition": "BLOCKED_RFI",
+     "floor": "2F",
+     "opening_ids": [
+      "OP-007"
+     ],
+     "opening_kinds": [
+      "DOOR"
+     ],
+     "opening_width_m": 0.9,
+     "strip_id": "SITE-106c3edab60134bf"
+    },
+    {
+     "area_m2": 0.12,
+     "class": "THRESHOLD",
+     "depth_m": 0.15,
+     "disposition": "BLOCKED_RFI",
+     "floor": "2F",
+     "opening_ids": [
+      "OP-006"
+     ],
+     "opening_kinds": [
+      "DOOR"
+     ],
+     "opening_width_m": 0.8,
+     "strip_id": "SITE-7d236dfa03afae52"
+    },
+    {
+     "area_m2": 0.2,
+     "class": "THRESHOLD",
+     "depth_m": 0.2,
+     "disposition": "BLOCKED_RFI",
+     "floor": "2F",
+     "opening_ids": [
+      "OP-002"
+     ],
+     "opening_kinds": [
+      "PASSAGE"
+     ],
+     "opening_width_m": 1.0,
+     "strip_id": "SITE-a2293f8cbe04a507"
+    },
+    {
+     "area_m2": 0.15,
+     "class": "THRESHOLD",
+     "depth_m": 0.15,
+     "disposition": "BLOCKED_RFI",
+     "floor": "2F",
+     "opening_ids": [
+      "OP-001"
+     ],
+     "opening_kinds": [
+      "DOOR"
+     ],
+     "opening_width_m": 1.0,
+     "strip_id": "SITE-d94bfc03de470f13"
+    }
+   ],
+   "upper_floor_lines": [
+    {
+     "floor": "1F",
+     "high": null,
+     "item_code": "FIN.FLOOR.PORCELAIN",
+     "line_id": "L-3086bd9835d361d8dfa6",
+     "low": null,
+     "qty": 44.869353,
+     "room_id": "1F-R78C367",
+     "rule_id": "UP-CER-001",
+     "state": "SOURCE_DERIVED",
+     "unit": "m2"
+    },
+    {
+     "floor": "1F",
+     "high": null,
+     "item_code": "FIN.FLOOR.PORCELAIN",
+     "line_id": "L-b998bb18d763f9d0999a",
+     "low": null,
+     "qty": 19.05,
+     "room_id": "1F-RB72F22",
+     "rule_id": "UP-CER-001",
+     "state": "SOURCE_DERIVED",
+     "unit": "m2"
+    },
+    {
+     "floor": "1F",
+     "high": null,
+     "item_code": "FIN.FLOOR.PORCELAIN",
+     "line_id": "L-9a22d1b81ee426e86af1",
+     "low": null,
+     "qty": 19.016545,
+     "room_id": "1F-R3CFCFD",
+     "rule_id": "UP-CER-001",
+     "state": "PROVISIONAL",
+     "unit": "m2"
+    },
+    {
+     "floor": "1F",
+     "high": null,
+     "item_code": "FIN.FLOOR.PORCELAIN",
+     "line_id": "L-135e375eea5da9a5a545",
+     "low": null,
+     "qty": 18.215001,
+     "room_id": "1F-RED0D19",
+     "rule_id": "UP-CER-001",
+     "state": "SOURCE_DERIVED",
+     "unit": "m2"
+    },
+    {
+     "floor": "1F",
+     "high": null,
+     "item_code": "FIN.FLOOR.PORCELAIN",
+     "line_id": "L-7c284600aa3b73d0dac2",
+     "low": null,
+     "qty": 16.34,
+     "room_id": "1F-R0E919A",
+     "rule_id": "UP-CER-001",
+     "state": "SOURCE_DERIVED",
+     "unit": "m2"
+    },
+    {
+     "floor": "1F",
+     "high": null,
+     "item_code": "FIN.FLOOR.WET_TILE",
+     "line_id": "L-ec0058123115a06f21bc",
+     "low": null,
+     "qty": 10.151,
+     "room_id": "1F-R26FA0D",
+     "rule_id": "UP-CER-001",
+     "state": "SOURCE_DERIVED",
+     "unit": "m2"
+    },
+    {
+     "floor": "1F",
+     "high": null,
+     "item_code": "FIN.FLOOR.WET_TILE",
+     "line_id": "L-44fc9404aee73dbf047d",
+     "low": null,
+     "qty": 5.0225,
+     "room_id": "1F-R8BDA49",
+     "rule_id": "UP-CER-001",
+     "state": "SOURCE_DERIVED",
+     "unit": "m2"
+    },
+    {
+     "floor": "1F",
+     "high": null,
+     "item_code": "FIN.FLOOR.WET_TILE",
+     "line_id": "L-39e54ae64d245d3cc901",
+     "low": null,
+     "qty": 5.0225,
+     "room_id": "1F-R48AA46",
+     "rule_id": "UP-CER-001",
+     "state": "SOURCE_DERIVED",
+     "unit": "m2"
+    },
+    {
+     "floor": "1F",
+     "high": null,
+     "item_code": "FIN.FLOOR.WET_TILE",
+     "line_id": "L-dd5dfccbec6e63e4cb45",
+     "low": null,
+     "qty": 4.725,
+     "room_id": "1F-R48CDA5",
+     "rule_id": "UP-CER-001",
+     "state": "SOURCE_DERIVED",
+     "unit": "m2"
+    },
+    {
+     "floor": "1F",
+     "high": null,
+     "item_code": "FIN.FLOOR.WET_TILE",
+     "line_id": "L-db09a074630b1c0d27eb",
+     "low": null,
+     "qty": 3.5775,
+     "room_id": "1F-RED23B8",
+     "rule_id": "UP-CER-001",
+     "state": "SOURCE_DERIVED",
+     "unit": "m2"
+    },
+    {
+     "floor": "1F",
+     "high": null,
+     "item_code": "FIN.FLOOR.WET_TILE",
+     "line_id": "L-96190f5015aa79a6a5ce",
+     "low": null,
+     "qty": 2.646,
+     "room_id": "1F-R52AC05",
+     "rule_id": "UP-CER-001",
+     "state": "SOURCE_DERIVED",
+     "unit": "m2"
+    },
+    {
+     "floor": "2F",
+     "high": null,
+     "item_code": "FIN.FLOOR.PORCELAIN",
+     "line_id": "L-bda8bbd6e2aafb6484a6",
+     "low": null,
+     "qty": 19.350001,
+     "room_id": "2F-R1DB2D2",
+     "rule_id": "UP-CER-001",
+     "state": "SOURCE_DERIVED",
+     "unit": "m2"
+    },
+    {
+     "floor": "2F",
+     "high": null,
+     "item_code": "FIN.FLOOR.WET_TILE",
+     "line_id": "L-a01419871068e5c4f936",
+     "low": null,
+     "qty": 5.55,
+     "room_id": "2F-RE83BED",
+     "rule_id": "UP-CER-001",
+     "state": "SOURCE_DERIVED",
+     "unit": "m2"
+    }
+   ],
+   "upper_rooms": [
+    {
+     "area_m2": 75.983002,
+     "attached_cells": [],
+     "codes": [
+      "LIVING"
+     ],
+     "doors": [
+      "OP-005",
+      "OP-006",
+      "OP-008",
+      "OP-020"
+     ],
+     "finish_scope": {
+      "basis": "dry room",
+      "flags": [],
+      "rule": "UP-SKIRT-001",
+      "scope": "DRY"
+     },
+     "floor": "1F",
+     "kind": "DRY",
+     "level_m": 5.5,
+     "passages": [
+      "OP-007"
+     ],
+     "perimeter_lm": 52.44,
+     "room_id": "1F-R78C367",
+     "runs_lm": {
+      "boundary": 52.44,
+      "column": 3.375,
+      "door": 4.7,
+      "glazing_edge": 2.65232,
+      "other": 0.0,
+      "passage": 1.0,
+      "perimeter": 52.44,
+      "wall": 38.06036,
+      "window_threshold": 2.65232
+     },
+     "windows": [
+      "OP-012",
+      "OP-016",
+      "OP-017",
+      "OP-021"
+     ]
+    },
+    {
+     "area_m2": 19.05,
+     "attached_cells": [],
+     "codes": [
+      "MASTER_BEDROOM"
+     ],
+     "doors": [
+      "OP-004",
+      "OP-020"
+     ],
+     "finish_scope": {
+      "basis": "dry room",
+      "flags": [],
+      "rule": "UP-SKIRT-001",
+      "scope": "DRY"
+     },
+     "floor": "1F",
+     "kind": "DRY",
+     "level_m": 5.5,
+     "passages": [],
+     "perimeter_lm": 17.7,
+     "room_id": "1F-RB72F22",
+     "runs_lm": {
+      "boundary": 17.7,
+      "column": 2.0,
+      "door": 1.8,
+      "glazing_edge": 1.224887,
+      "other": 0.0,
+      "passage": 0.0,
+      "perimeter": 17.7,
+      "wall": 11.450226,
+      "window_threshold": 1.224887
+     },
+     "windows": [
+      "OP-022"
+     ]
+    },
+    {
+     "area_m2": 19.016545,
+     "attached_cells": [
+      {
+       "area_m2": 3.76125,
+       "passages": [
+        "OP-009"
+       ],
+       "rule": "ATTACHED_THROUGH_OPEN_PASSAGE"
+      }
+     ],
+     "codes": [
+      "MASTER_BEDROOM"
+     ],
+     "doors": [
+      "OP-006",
+      "OP-018"
+     ],
+     "finish_scope": {
+      "basis": "dry room",
+      "flags": [],
+      "rule": "UP-SKIRT-001",
+      "scope": "DRY"
+     },
+     "floor": "1F",
+     "kind": "DRY",
+     "level_m": 5.5,
+     "passages": [],
+     "perimeter_lm": 22.15067,
+     "room_id": "1F-R3CFCFD",
+     "runs_lm": {
+      "boundary": 22.15067,
+      "column": 1.7,
+      "door": 1.7,
+      "glazing_edge": 1.644749,
+      "other": 0.0,
+      "passage": 0.0,
+      "perimeter": 22.15067,
+      "wall": 15.461172,
+      "window_threshold": 1.644749
+     },
+     "windows": [
+      "COP-001"
+     ]
+    },
+    {
+     "area_m2": 18.215001,
+     "attached_cells": [],
+     "codes": [
+      "MASTER_BEDROOM"
+     ],
+     "doors": [],
+     "finish_scope": {
+      "basis": "dry room",
+      "flags": [],
+      "rule": "UP-SKIRT-001",
+      "scope": "DRY"
+     },
+     "floor": "1F",
+     "kind": "DRY",
+     "level_m": 5.5,
+     "passages": [],
+     "perimeter_lm": 17.4,
+     "room_id": "1F-RED0D19",
+     "runs_lm": {
+      "boundary": 17.4,
+      "column": 0.855866,
+      "door": 1.8,
+      "glazing_edge": 0.77616,
+      "other": 0.0,
+      "passage": 0.0,
+      "perimeter": 17.4,
+      "wall": 13.191814,
+      "window_threshold": 0.77616
+     },
+     "windows": [
+      "OP-003"
+     ]
+    },
+    {
+     "area_m2": 16.34,
+     "attached_cells": [],
+     "codes": [
+      "MASTER_BEDROOM"
+     ],
+     "doors": [
+      "OP-005"
+     ],
+     "finish_scope": {
+      "basis": "dry room",
+      "flags": [],
+      "rule": "UP-SKIRT-001",
+      "scope": "DRY"
+     },
+     "floor": "1F",
+     "kind": "DRY",
+     "level_m": 5.5,
+     "passages": [
+      "OP-011"
+     ],
+     "perimeter_lm": 16.2,
+     "room_id": "1F-R0E919A",
+     "runs_lm": {
+      "boundary": 16.2,
+      "column": 0.5,
+      "door": 0.9,
+      "glazing_edge": 0.0,
+      "other": 0.0,
+      "passage": 1.0,
+      "perimeter": 16.2,
+      "wall": 13.8,
+      "window_threshold": 0.0
+     },
+     "windows": []
+    },
+    {
+     "area_m2": 10.151,
+     "attached_cells": [],
+     "codes": [
+      "LAUNDRY"
+     ],
+     "doors": [
+      "OP-008",
+      "OP-010"
+     ],
+     "finish_scope": {
+      "basis": "owner wet area (LAUNDRY)",
+      "flags": [
+       "WET_SCOPE_PROJECT_CONFIRMATION: LAUNDRY is a wet area where the project scope establishes it"
+      ],
+      "notes": [],
+      "rule": "UP-WET-001",
+      "scope": "WET"
+     },
+     "floor": "1F",
+     "kind": "WET",
+     "level_m": 5.5,
+     "passages": [],
+     "perimeter_lm": 16.94,
+     "room_id": "1F-R26FA0D",
+     "runs_lm": {
+      "boundary": 16.94,
+      "column": 1.35,
+      "door": 1.7,
+      "glazing_edge": 0.3,
+      "other": 0.0,
+      "passage": 0.0,
+      "perimeter": 16.94,
+      "wall": 13.29,
+      "window_threshold": 0.3
+     },
+     "windows": [
+      "OP-013"
+     ]
+    },
+    {
+     "area_m2": 5.0225,
+     "attached_cells": [],
+     "codes": [
+      "BATHROOM"
+     ],
+     "doors": [],
+     "finish_scope": {
+      "basis": "owner wet area (BATHROOM)",
+      "flags": [],
+      "notes": [],
+      "rule": "UP-WET-001",
+      "scope": "WET"
+     },
+     "floor": "1F",
+     "kind": "WET",
+     "level_m": 5.5,
+     "passages": [],
+     "perimeter_lm": 9.0,
+     "room_id": "1F-R8BDA49",
+     "runs_lm": {
+      "boundary": 9.0,
+      "column": 0.219134,
+      "door": 0.8,
+      "glazing_edge": 0.3,
+      "other": 0.0,
+      "passage": 0.0,
+      "perimeter": 9.0,
+      "wall": 7.380866,
+      "window_threshold": 0.3
+     },
+     "windows": [
+      "OP-002"
+     ]
+    },
+    {
+     "area_m2": 5.0225,
+     "attached_cells": [],
+     "codes": [
+      "BATHROOM"
+     ],
+     "doors": [
+      "OP-004"
+     ],
+     "finish_scope": {
+      "basis": "owner wet area (BATHROOM)",
+      "flags": [],
+      "notes": [],
+      "rule": "UP-WET-001",
+      "scope": "WET"
+     },
+     "floor": "1F",
+     "kind": "WET",
+     "level_m": 5.5,
+     "passages": [],
+     "perimeter_lm": 9.0,
+     "room_id": "1F-R48AA46",
+     "runs_lm": {
+      "boundary": 9.0,
+      "column": 0.15,
+      "door": 0.8,
+      "glazing_edge": 0.3,
+      "other": 0.0,
+      "passage": 0.0,
+      "perimeter": 9.0,
+      "wall": 7.45,
+      "window_threshold": 0.3
+     },
+     "windows": [
+      "OP-001"
+     ]
+    },
+    {
+     "area_m2": 4.725,
+     "attached_cells": [],
+     "codes": [
+      "BATHROOM"
+     ],
+     "doors": [
+      "OP-018"
+     ],
+     "finish_scope": {
+      "basis": "owner wet area (BATHROOM)",
+      "flags": [],
+      "notes": [],
+      "rule": "UP-WET-001",
+      "scope": "WET"
+     },
+     "floor": "1F",
+     "kind": "WET",
+     "level_m": 5.5,
+     "passages": [],
+     "perimeter_lm": 8.7,
+     "room_id": "1F-R48CDA5",
+     "runs_lm": {
+      "boundary": 8.7,
+      "column": 0.45,
+      "door": 0.8,
+      "glazing_edge": 0.483651,
+      "other": 0.0,
+      "passage": 0.0,
+      "perimeter": 8.7,
+      "wall": 6.966349,
+      "window_threshold": 0.0
+     },
+     "windows": []
+    },
+    {
+     "area_m2": 3.5775,
+     "attached_cells": [],
+     "codes": [
+      "BATHROOM"
+     ],
+     "doors": [
+      "OP-019"
+     ],
+     "finish_scope": {
+      "basis": "owner wet area (BATHROOM)",
+      "flags": [],
+      "notes": [],
+      "rule": "UP-WET-001",
+      "scope": "WET"
+     },
+     "floor": "1F",
+     "kind": "WET",
+     "level_m": 5.5,
+     "passages": [],
+     "perimeter_lm": 7.6,
+     "room_id": "1F-RED23B8",
+     "runs_lm": {
+      "boundary": 7.6,
+      "column": 0.5,
+      "door": 0.8,
+      "glazing_edge": 0.3,
+      "other": 0.0,
+      "passage": 0.0,
+      "perimeter": 7.6,
+      "wall": 5.7,
+      "window_threshold": 0.3
+     },
+     "windows": [
+      "OP-015"
+     ]
+    },
+    {
+     "area_m2": 3.24,
+     "attached_cells": [],
+     "codes": [
+      "SHAFT"
+     ],
+     "doors": [],
+     "finish_scope": null,
+     "floor": "1F",
+     "kind": "SHAFT",
+     "level_m": 5.5,
+     "passages": [
+      "OP-007"
+     ],
+     "perimeter_lm": 7.2,
+     "room_id": "1F-RCCB686",
+     "runs_lm": {
+      "boundary": 7.2,
+      "column": 0.85,
+      "door": 0.0,
+      "glazing_edge": 0.0,
+      "other": 0.0,
+      "passage": 1.0,
+      "perimeter": 7.2,
+      "wall": 5.35,
+      "window_threshold": 0.0
+     },
+     "windows": []
+    },
+    {
+     "area_m2": 2.97,
+     "attached_cells": [],
+     "codes": [],
+     "doors": [
+      "OP-019"
+     ],
+     "finish_scope": null,
+     "floor": "1F",
+     "kind": null,
+     "level_m": 5.5,
+     "passages": [
+      "OP-011"
+     ],
+     "perimeter_lm": 6.9,
+     "room_id": "1F-RFFE7AF",
+     "runs_lm": {
+      "boundary": 6.9,
+      "column": 0.025,
+      "door": 0.8,
+      "glazing_edge": 0.0,
+      "other": 0.0,
+      "passage": 1.0,
+      "perimeter": 6.9,
+      "wall": 5.075,
+      "window_threshold": 0.0
+     },
+     "windows": []
+    },
+    {
+     "area_m2": 2.646,
+     "attached_cells": [],
+     "codes": [
+      "BATHROOM"
+     ],
+     "doors": [
+      "OP-010"
+     ],
+     "finish_scope": {
+      "basis": "owner wet area (BATHROOM)",
+      "flags": [],
+      "notes": [],
+      "rule": "UP-WET-001",
+      "scope": "WET"
+     },
+     "floor": "1F",
+     "kind": "WET",
+     "level_m": 5.5,
+     "passages": [],
+     "perimeter_lm": 6.54,
+     "room_id": "1F-R52AC05",
+     "runs_lm": {
+      "boundary": 6.54,
+      "column": 0.025,
+      "door": 0.8,
+      "glazing_edge": 0.3,
+      "other": 0.0,
+      "passage": 0.0,
+      "perimeter": 6.54,
+      "wall": 5.115,
+      "window_threshold": 0.3
+     },
+     "windows": [
+      "OP-014"
+     ]
+    },
+    {
+     "area_m2": 19.350001,
+     "attached_cells": [],
+     "codes": [
+      "MAID"
+     ],
+     "doors": [
+      "OP-006",
+      "OP-007"
+     ],
+     "finish_scope": {
+      "basis": "dry room",
+      "flags": [],
+      "rule": "UP-SKIRT-001",
+      "scope": "DRY"
+     },
+     "floor": "2F",
+     "kind": "DRY",
+     "level_m": 9.7,
+     "passages": [],
+     "perimeter_lm": 18.9,
+     "room_id": "2F-R1DB2D2",
+     "runs_lm": {
+      "boundary": 18.9,
+      "column": 1.1,
+      "door": 1.7,
+      "glazing_edge": 0.6,
+      "other": 0.0,
+      "passage": 0.0,
+      "perimeter": 18.9,
+      "wall": 14.9,
+      "window_threshold": 0.6
+     },
+     "windows": [
+      "OP-005"
+     ]
+    },
+    {
+     "area_m2": 18.600001,
+     "attached_cells": [],
+     "codes": [
+      "STAIR"
+     ],
+     "doors": [
+      "OP-001",
+      "OP-007"
+     ],
+     "finish_scope": null,
+     "floor": "2F",
+     "kind": "STAIR",
+     "level_m": 9.7,
+     "passages": [
+      "OP-002"
+     ],
+     "perimeter_lm": 22.0,
+     "room_id": "2F-R4D1B62",
+     "runs_lm": {
+      "boundary": 22.0,
+      "column": 1.5,
+      "door": 1.9,
+      "glazing_edge": 1.1,
+      "other": 0.0,
+      "passage": 1.0,
+      "perimeter": 22.0,
+      "wall": 15.4,
+      "window_threshold": 1.1
+     },
+     "windows": [
+      "OP-003",
+      "OP-008"
+     ]
+    },
+    {
+     "area_m2": 5.55,
+     "attached_cells": [],
+     "codes": [
+      "BATHROOM"
+     ],
+     "doors": [
+      "OP-006"
+     ],
+     "finish_scope": {
+      "basis": "owner wet area (BATHROOM)",
+      "flags": [],
+      "notes": [],
+      "rule": "UP-WET-001",
+      "scope": "WET"
+     },
+     "floor": "2F",
+     "kind": "WET",
+     "level_m": 9.7,
+     "passages": [],
+     "perimeter_lm": 9.7,
+     "room_id": "2F-RE83BED",
+     "runs_lm": {
+      "boundary": 9.7,
+      "column": 0.175,
+      "door": 0.8,
+      "glazing_edge": 0.3,
+      "other": 0.0,
+      "passage": 0.0,
+      "perimeter": 9.7,
+      "wall": 8.125,
+      "window_threshold": 0.3
+     },
+     "windows": [
+      "OP-004"
+     ]
+    },
+    {
+     "area_m2": 3.24,
+     "attached_cells": [],
+     "codes": [
+      "SHAFT"
+     ],
+     "doors": [],
+     "finish_scope": null,
+     "floor": "2F",
+     "kind": "SHAFT",
+     "level_m": 9.7,
+     "passages": [
+      "OP-002"
+     ],
+     "perimeter_lm": 7.2,
+     "room_id": "2F-R2BDCEE",
+     "runs_lm": {
+      "boundary": 7.2,
+      "column": 0.7,
+      "door": 0.0,
+      "glazing_edge": 0.0,
+      "other": 0.0,
+      "passage": 1.0,
+      "perimeter": 7.2,
+      "wall": 5.5,
+      "window_threshold": 0.0
+     },
+     "windows": []
+    }
+   ],
+   "upper_strip_lines": [
+    {
+     "floor": "1F",
+     "high": null,
+     "item_code": "FIN.MARBLE.THRESHOLD",
+     "line_id": "L-b7d6e0e09fa18b18ac40",
+     "low": null,
+     "qty": 0.12,
+     "room_id": "1F-STRIP-OP-004",
+     "rule_id": "UP-THR-001",
+     "state": "SOURCE_DERIVED",
+     "unit": "m2"
+    },
+    {
+     "floor": "1F",
+     "high": null,
+     "item_code": "FIN.FLOOR.PORCELAIN",
+     "line_id": "L-8cc7b4c79edf77348781",
+     "low": null,
+     "qty": 0.135,
+     "room_id": "1F-STRIP-OP-005",
+     "rule_id": "UP-THR-001",
+     "state": "SOURCE_DERIVED",
+     "unit": "m2"
+    },
+    {
+     "floor": "1F",
+     "high": null,
+     "item_code": "FIN.FLOOR.PORCELAIN",
+     "line_id": "L-ff9963470062e827f3f7",
+     "low": null,
+     "qty": 0.135,
+     "room_id": "1F-STRIP-OP-006",
+     "rule_id": "UP-THR-001",
+     "state": "SOURCE_DERIVED",
+     "unit": "m2"
+    },
+    {
+     "floor": "1F",
+     "high": null,
+     "item_code": "FIN.FLOOR.PORCELAIN",
+     "line_id": "L-51a0d437797dddfb180e",
+     "low": null,
+     "qty": 0.2,
+     "room_id": "1F-STRIP-OP-007",
+     "rule_id": "UP-THR-001",
+     "state": "SOURCE_DERIVED",
+     "unit": "m2"
+    },
+    {
+     "floor": "1F",
+     "high": null,
+     "item_code": "FIN.MARBLE.THRESHOLD",
+     "line_id": "L-58c251f99d28d9707430",
+     "low": null,
+     "qty": 0.18,
+     "room_id": "1F-STRIP-OP-008",
+     "rule_id": "UP-THR-001",
+     "state": "SOURCE_DERIVED",
+     "unit": "m2"
+    },
+    {
+     "floor": "1F",
+     "high": null,
+     "item_code": "FIN.MARBLE.THRESHOLD",
+     "line_id": "L-777e7e8b7f71283fce85",
+     "low": null,
+     "qty": 0.12,
+     "room_id": "1F-STRIP-OP-010",
+     "rule_id": "UP-THR-001",
+     "state": "SOURCE_DERIVED",
+     "unit": "m2"
+    },
+    {
+     "floor": "1F",
+     "high": null,
+     "item_code": "FIN.FLOOR.PORCELAIN",
+     "line_id": "L-c2e57836761709440929",
+     "low": null,
+     "qty": 0.15,
+     "room_id": "1F-STRIP-OP-011",
+     "rule_id": "UP-THR-001",
+     "state": "SOURCE_DERIVED",
+     "unit": "m2"
+    },
+    {
+     "floor": "1F",
+     "high": null,
+     "item_code": "FIN.MARBLE.THRESHOLD",
+     "line_id": "L-2d6ca5c1d6e22471c775",
+     "low": null,
+     "qty": 0.12,
+     "room_id": "1F-STRIP-OP-018",
+     "rule_id": "UP-THR-001",
+     "state": "SOURCE_DERIVED",
+     "unit": "m2"
+    },
+    {
+     "floor": "1F",
+     "high": null,
+     "item_code": "FIN.MARBLE.THRESHOLD",
+     "line_id": "L-77f5a3ee595f9c9f9ae1",
+     "low": null,
+     "qty": 0.12,
+     "room_id": "1F-STRIP-OP-019",
+     "rule_id": "UP-THR-001",
+     "state": "SOURCE_DERIVED",
+     "unit": "m2"
+    },
+    {
+     "floor": "1F",
+     "high": null,
+     "item_code": "FIN.FLOOR.PORCELAIN",
+     "line_id": "L-3187c9c46de1cd9411af",
+     "low": null,
+     "qty": 0.15,
+     "room_id": "1F-STRIP-OP-020",
+     "rule_id": "UP-THR-001",
+     "state": "SOURCE_DERIVED",
+     "unit": "m2"
+    },
+    {
+     "floor": "1F",
+     "high": null,
+     "item_code": "ARCH.THRESHOLD",
+     "line_id": "L-dfdda9a6070df376c121",
+     "low": null,
+     "qty": null,
+     "room_id": "1F-STRIP-CLOSURE_D2_3118_D2_417_D2_3118_0",
+     "rule_id": "ARCH_MEASURE_V3",
+     "state": "BLOCKED_RFI",
+     "unit": "m2"
+    },
+    {
+     "floor": "1F",
+     "high": null,
+     "item_code": "ARCH.THRESHOLD",
+     "line_id": "L-2b5964b7aa2587139e3b",
+     "low": null,
+     "qty": null,
+     "room_id": "1F-STRIP-CLOSURE_D2_3122_D2_757_D2_3122_0",
+     "rule_id": "ARCH_MEASURE_V3",
+     "state": "BLOCKED_RFI",
+     "unit": "m2"
+    },
+    {
+     "floor": "1F",
+     "high": null,
+     "item_code": "ARCH.THRESHOLD",
+     "line_id": "L-88587354596ce8f2eeb6",
+     "low": null,
+     "qty": null,
+     "room_id": "1F-STRIP-SITE-29faecd848edfdc3",
+     "rule_id": "ARCH_MEASURE_V3",
+     "state": "BLOCKED_RFI",
+     "unit": "m2"
+    },
+    {
+     "floor": "1F",
+     "high": null,
+     "item_code": "ARCH.THRESHOLD",
+     "line_id": "L-91f177317d4956267044",
+     "low": null,
+     "qty": null,
+     "room_id": "1F-STRIP-SITE-fd160ff889cc7481",
+     "rule_id": "ARCH_MEASURE_V3",
+     "state": "BLOCKED_RFI",
+     "unit": "m2"
+    },
+    {
+     "floor": "2F",
+     "high": null,
+     "item_code": "FIN.FLOOR.PORCELAIN",
+     "line_id": "L-f7dc931e2c059cda77df",
+     "low": null,
+     "qty": 0.15,
+     "room_id": "2F-STRIP-OP-001",
+     "rule_id": "UP-THR-001",
+     "state": "PROVISIONAL",
+     "unit": "m2"
+    },
+    {
+     "floor": "2F",
+     "high": null,
+     "item_code": "FIN.FLOOR.PORCELAIN",
+     "line_id": "L-22c46d456725a74b5ff7",
+     "low": null,
+     "qty": 0.2,
+     "room_id": "2F-STRIP-OP-002",
+     "rule_id": "UP-THR-001",
+     "state": "SOURCE_DERIVED",
+     "unit": "m2"
+    },
+    {
+     "floor": "2F",
+     "high": null,
+     "item_code": "FIN.MARBLE.THRESHOLD",
+     "line_id": "L-63fae73fed4206a053e4",
+     "low": null,
+     "qty": 0.12,
+     "room_id": "2F-STRIP-OP-006",
+     "rule_id": "UP-THR-001",
+     "state": "SOURCE_DERIVED",
+     "unit": "m2"
+    },
+    {
+     "floor": "2F",
+     "high": null,
+     "item_code": "FIN.FLOOR.PORCELAIN",
+     "line_id": "L-3d819507767a6ed581ed",
+     "low": null,
+     "qty": 0.18,
+     "room_id": "2F-STRIP-OP-007",
+     "rule_id": "UP-THR-001",
+     "state": "SOURCE_DERIVED",
+     "unit": "m2"
+    }
+   ]
+  },
+  "released": {
+   "boq_lines_sha256": "b96185d468524743e600f1992d4e4b2028193ff4a379961bc5686c9662f8c115",
+   "kitchen_lines": [
+    {
+     "floor": "GF",
+     "high": null,
+     "item_code": "FIN.FLOOR.PORCELAIN",
+     "line_id": "L-2276cdcc45272b6bee1a",
+     "low": null,
+     "qty": 9.630001,
+     "room_id": "GF-RA3AD49",
+     "rule_id": "UP-CER-001",
+     "state": "PROVISIONAL",
+     "unit": "m2"
+    },
+    {
+     "floor": "GF",
+     "high": null,
+     "item_code": "FIN.CEILING",
+     "line_id": "L-25a7f5fae2c44b14a527",
+     "low": null,
+     "qty": 9.630001,
+     "room_id": "GF-RA3AD49",
+     "rule_id": "ARCH_MEASURE_V3",
+     "state": "PROVISIONAL",
+     "unit": "m2"
+    },
+    {
+     "floor": "GF",
+     "high": null,
+     "item_code": "FIN.SKIRTING",
+     "line_id": "L-9d1c22953966ecd646d6",
+     "low": null,
+     "qty": null,
+     "room_id": "GF-RA3AD49",
+     "rule_id": "UP-CER-004",
+     "state": "NOT_APPLICABLE_WITH_EVIDENCE",
+     "unit": "lm"
+    },
+    {
+     "floor": "GF",
+     "high": null,
+     "item_code": "FIN.WP.FLOOR",
+     "line_id": "L-5e9e0021e70f9869899c",
+     "low": null,
+     "qty": 9.630001,
+     "room_id": "GF-RA3AD49",
+     "rule_id": "UP-WP-001",
+     "state": "SOURCE_DERIVED",
+     "unit": "m2"
+    },
+    {
+     "floor": "GF",
+     "high": null,
+     "item_code": "FIN.WP.DOORWAY",
+     "line_id": "L-659cc66ca4e3eedd7889",
+     "low": null,
+     "qty": 0.2,
+     "room_id": "GF-RA3AD49",
+     "rule_id": "UP-WP-003",
+     "state": "SOURCE_DERIVED",
+     "unit": "m2"
+    },
+    {
+     "floor": "GF",
+     "high": null,
+     "item_code": "FIN.PLASTER",
+     "line_id": "L-31fe171480dd2a20e1a1",
+     "low": null,
+     "qty": null,
+     "room_id": "GF-RA3AD49",
+     "rule_id": "UP-CER-009",
+     "state": "BLOCKED_RFI",
+     "unit": "m2"
+    },
+    {
+     "floor": "GF",
+     "high": null,
+     "item_code": "FIN.WALL.TILE",
+     "line_id": "L-e12e9d27435709d54d86",
+     "low": null,
+     "qty": null,
+     "room_id": "GF-RA3AD49",
+     "rule_id": "UP-CER-009",
+     "state": "BLOCKED_RFI",
+     "unit": "m2"
+    },
+    {
+     "floor": "GF",
+     "high": null,
+     "item_code": "ARCH.WINDOW",
+     "line_id": "L-3893d1e187e3517a39a4",
+     "low": null,
+     "qty": 1.0,
+     "room_id": "GF-RA3AD49",
+     "rule_id": "ARCH_MEASURE_V3",
+     "state": "SOURCE_DERIVED",
+     "unit": "pcs"
+    },
+    {
+     "floor": "GF",
+     "high": null,
+     "item_code": "FIN.MARBLE.THRESHOLD",
+     "line_id": "L-8c790f53e86c9fc78648",
+     "low": null,
+     "qty": 0.2,
+     "room_id": "GF-STRIP-OP-025",
+     "rule_id": "UP-THR-001",
+     "state": "SOURCE_DERIVED",
+     "unit": "m2"
+    },
+    {
+     "floor": "GF",
+     "high": null,
+     "item_code": "FIN.PAINT",
+     "line_id": "L-f928ee2d67e50380db11",
+     "low": null,
+     "qty": null,
+     "room_id": "GF-RA3AD49",
+     "rule_id": "UP-FIN-PAINT-001",
+     "state": "NOT_APPLICABLE_WITH_EVIDENCE",
+     "unit": "m2"
+    },
+    {
+     "floor": "GF",
+     "high": null,
+     "item_code": "FIN.WP.WALL_UPTURN",
+     "line_id": "L-fbab47b937553b5ad4c1",
+     "low": null,
+     "qty": 2.7,
+     "room_id": "GF-RA3AD49",
+     "rule_id": "UP-WP-003",
+     "state": "SOURCE_DERIVED",
+     "unit": "m2"
+    },
+    {
+     "floor": "GF",
+     "high": 0.2,
+     "item_code": "FIN.WP.DOORWAY_TRANSITION",
+     "line_id": "L-ed2d7b0a35e39a5c0796",
+     "low": 0.0,
+     "qty": null,
+     "room_id": "GF-RA3AD49",
+     "rule_id": "UP-WP-DOOR-001",
+     "state": "BOUNDED_EXPOSURE",
+     "unit": "m2"
+    },
+    {
+     "floor": "GF",
+     "high": null,
+     "item_code": "FIN.WP.PENETRATION",
+     "line_id": "L-3a8faecb5b37e63ee4fc",
+     "low": null,
+     "qty": null,
+     "room_id": "GF-RA3AD49",
+     "rule_id": "UP-WP-004",
+     "state": "BLOCKED_RFI",
+     "unit": "pcs"
+    }
+   ],
+   "kitchen_neighbours": [
+    {
+     "class": "UNLABELLED",
+     "codes": [],
+     "floor": "GF",
+     "kind": null,
+     "room_id": "GF-R7B7A5D"
+    }
+   ],
+   "kitchen_rooms": [
+    {
+     "area_m2": 9.630001,
+     "attached_cells": [
+      {
+       "area_m2": 1.365,
+       "passages": [
+        "OP-002"
+       ],
+       "rule": "ATTACHED_THROUGH_OPEN_PASSAGE"
+      }
+     ],
+     "codes": [
+      "KITCHEN"
+     ],
+     "doors": [
+      "OP-025"
+     ],
+     "finish_scope": {
+      "basis": "owner wet area (KITCHEN)",
+      "flags": [],
+      "notes": [],
+      "rule": "UP-WET-001",
+      "scope": "WET"
+     },
+     "floor": "GF",
+     "kind": "SERVICE",
+     "level_m": 0.3,
+     "passages": [],
+     "perimeter_lm": 14.5,
+     "room_id": "GF-RA3AD49",
+     "runs_lm": {
+      "boundary": 14.5,
+      "column": 1.05,
+      "door": 1.0,
+      "glazing_edge": 0.75,
+      "other": 0.0,
+      "passage": 0.0,
+      "perimeter": 14.5,
+      "wall": 10.95,
+      "window_threshold": 0.75
+     },
+     "windows": [
+      "OP-006"
+     ]
+    }
+   ],
+   "method": "ARCH_TAKEOFF_V2.9 + route G (V29_ROUTEG_NO_PROFILE)",
+   "openings": [
+    {
+     "floor": "GF",
+     "kind": "DOOR",
+     "opening_id": "OP-025",
+     "rooms": [
+      "GF-RA3AD49",
+      "GF-R7B7A5D"
+     ],
+     "type": "SWING_DOOR",
+     "wall_t_m": 0.2,
+     "width_m": 1.0
+    },
+    {
+     "floor": "1F",
+     "kind": "WINDOW",
+     "opening_id": "OP-001",
+     "rooms": [
+      "1F-R48AA46"
+     ],
+     "type": "WINDOW",
+     "wall_t_m": 0.2,
+     "width_m": 0.6
+    },
+    {
+     "floor": "1F",
+     "kind": "WINDOW",
+     "opening_id": "OP-002",
+     "rooms": [
+      "1F-R8BDA49"
+     ],
+     "type": "WINDOW",
+     "wall_t_m": 0.2,
+     "width_m": 0.6
+    },
+    {
+     "floor": "1F",
+     "kind": "WINDOW",
+     "opening_id": "OP-003",
+     "rooms": [
+      "1F-RED0D19"
+     ],
+     "type": "WINDOW",
+     "wall_t_m": 0.2,
+     "width_m": 1.5523
+    },
+    {
+     "floor": "1F",
+     "kind": "DOOR",
+     "opening_id": "OP-004",
+     "rooms": [
+      "1F-RB72F22",
+      "1F-R48AA46"
+     ],
+     "type": "SWING_DOOR",
+     "wall_t_m": 0.15,
+     "width_m": 0.8
+    },
+    {
+     "floor": "1F",
+     "kind": "DOOR",
+     "opening_id": "OP-005",
+     "rooms": [
+      "1F-R78C367",
+      "1F-R0E919A"
+     ],
+     "type": "SWING_DOOR",
+     "wall_t_m": 0.15,
+     "width_m": 0.9
+    },
+    {
+     "floor": "1F",
+     "kind": "DOOR",
+     "opening_id": "OP-006",
+     "rooms": [
+      "1F-R78C367",
+      "1F-R3CFCFD"
+     ],
+     "type": "SWING_DOOR",
+     "wall_t_m": 0.15,
+     "width_m": 0.9
+    },
+    {
+     "floor": "1F",
+     "kind": "PASSAGE",
+     "opening_id": "OP-007",
+     "rooms": [
+      "1F-R78C367",
+      "1F-RCCB686"
+     ],
+     "type": "PASSAGE_OR_ARCHWAY",
+     "wall_t_m": 0.2,
+     "width_m": 1.0
+    },
+    {
+     "floor": "1F",
+     "kind": "DOOR",
+     "opening_id": "OP-008",
+     "rooms": [
+      "1F-R78C367",
+      "1F-R26FA0D"
+     ],
+     "type": "SWING_DOOR",
+     "wall_t_m": 0.2,
+     "width_m": 0.9
+    },
+    {
+     "floor": "1F",
+     "kind": "PASSAGE",
+     "opening_id": "OP-009",
+     "rooms": [],
+     "type": "PASSAGE_OR_ARCHWAY",
+     "wall_t_m": 0.15,
+     "width_m": 1.3
+    },
+    {
+     "floor": "1F",
+     "kind": "DOOR",
+     "opening_id": "OP-010",
+     "rooms": [
+      "1F-R26FA0D",
+      "1F-R52AC05"
+     ],
+     "type": "SWING_DOOR",
+     "wall_t_m": 0.15,
+     "width_m": 0.8
+    },
+    {
+     "floor": "1F",
+     "kind": "PASSAGE",
+     "opening_id": "OP-011",
+     "rooms": [
+      "1F-R0E919A",
+      "1F-RFFE7AF"
+     ],
+     "type": "PASSAGE_OR_ARCHWAY",
+     "wall_t_m": 0.15,
+     "width_m": 1.0
+    },
+    {
+     "floor": "1F",
+     "kind": "WINDOW",
+     "opening_id": "OP-012",
+     "rooms": [
+      "1F-R78C367"
+     ],
+     "type": "WINDOW",
+     "wall_t_m": 0.2,
+     "width_m": 1.0
+    },
+    {
+     "floor": "1F",
+     "kind": "WINDOW",
+     "opening_id": "OP-013",
+     "rooms": [
+      "1F-R26FA0D"
+     ],
+     "type": "WINDOW",
+     "wall_t_m": 0.2,
+     "width_m": 0.6
+    },
+    {
+     "floor": "1F",
+     "kind": "WINDOW",
+     "opening_id": "OP-014",
+     "rooms": [
+      "1F-R52AC05"
+     ],
+     "type": "WINDOW",
+     "wall_t_m": 0.2,
+     "width_m": 0.6
+    },
+    {
+     "floor": "1F",
+     "kind": "WINDOW",
+     "opening_id": "OP-015",
+     "rooms": [
+      "1F-RED23B8"
+     ],
+     "type": "WINDOW",
+     "wall_t_m": 0.2,
+     "width_m": 0.6
+    },
+    {
+     "floor": "1F",
+     "kind": "WINDOW",
+     "opening_id": "OP-016",
+     "rooms": [
+      "1F-R78C367"
+     ],
+     "type": "WINDOW",
+     "wall_t_m": 0.2,
+     "width_m": 1.5523
+    },
+    {
+     "floor": "1F",
+     "kind": "WINDOW",
+     "opening_id": "OP-017",
+     "rooms": [
+      "1F-R78C367"
+     ],
+     "type": "WINDOW",
+     "wall_t_m": 0.2,
+     "width_m": 1.5523
+    },
+    {
+     "floor": "1F",
+     "kind": "DOOR",
+     "opening_id": "OP-018",
+     "rooms": [
+      "1F-R3CFCFD",
+      "1F-R48CDA5"
+     ],
+     "type": "SWING_DOOR",
+     "wall_t_m": 0.15,
+     "width_m": 0.8
+    },
+    {
+     "floor": "1F",
+     "kind": "DOOR",
+     "opening_id": "OP-019",
+     "rooms": [
+      "1F-RED23B8",
+      "1F-RFFE7AF"
+     ],
+     "type": "SWING_DOOR",
+     "wall_t_m": 0.15,
+     "width_m": 0.8
+    },
+    {
+     "floor": "1F",
+     "kind": "DOOR",
+     "opening_id": "OP-020",
+     "rooms": [
+      "1F-R78C367",
+      "1F-RB72F22"
+     ],
+     "type": "SWING_DOOR",
+     "wall_t_m": 0.15,
+     "width_m": 1.0
+    },
+    {
+     "floor": "1F",
+     "kind": "WINDOW",
+     "opening_id": "OP-021",
+     "rooms": [
+      "1F-R78C367"
+     ],
+     "type": "WINDOW",
+     "wall_t_m": 0.2,
+     "width_m": 1.2
+    },
+    {
+     "floor": "1F",
+     "kind": "WINDOW",
+     "opening_id": "OP-022",
+     "rooms": [
+      "1F-RB72F22"
+     ],
+     "type": "WINDOW",
+     "wall_t_m": 0.2,
+     "width_m": 2.4498
+    },
+    {
+     "floor": "1F",
+     "kind": "WINDOW",
+     "opening_id": "COP-001",
+     "rooms": [
+      "1F-R3CFCFD"
+     ],
+     "type": "WINDOW",
+     "wall_t_m": 0.2,
+     "width_m": 3.2895
+    },
+    {
+     "floor": "2F",
+     "kind": "DOOR",
+     "opening_id": "OP-001",
+     "rooms": [
+      "2F-R4D1B62"
+     ],
+     "type": "SWING_DOOR",
+     "wall_t_m": 0.15,
+     "width_m": 1.0
+    },
+    {
+     "floor": "2F",
+     "kind": "PASSAGE",
+     "opening_id": "OP-002",
+     "rooms": [
+      "2F-R4D1B62",
+      "2F-R2BDCEE"
+     ],
+     "type": "PASSAGE_OR_ARCHWAY",
+     "wall_t_m": 0.2,
+     "width_m": 1.0
+    },
+    {
+     "floor": "2F",
+     "kind": "WINDOW",
+     "opening_id": "OP-003",
+     "rooms": [
+      "2F-R4D1B62"
+     ],
+     "type": "WINDOW",
+     "wall_t_m": 0.2,
+     "width_m": 1.0
+    },
+    {
+     "floor": "2F",
+     "kind": "WINDOW",
+     "opening_id": "OP-004",
+     "rooms": [
+      "2F-RE83BED"
+     ],
+     "type": "WINDOW",
+     "wall_t_m": 0.2,
+     "width_m": 0.6
+    },
+    {
+     "floor": "2F",
+     "kind": "WINDOW",
+     "opening_id": "OP-005",
+     "rooms": [
+      "2F-R1DB2D2"
+     ],
+     "type": "WINDOW",
+     "wall_t_m": 0.2,
+     "width_m": 1.2
+    },
+    {
+     "floor": "2F",
+     "kind": "DOOR",
+     "opening_id": "OP-006",
+     "rooms": [
+      "2F-R1DB2D2",
+      "2F-RE83BED"
+     ],
+     "type": "SWING_DOOR",
+     "wall_t_m": 0.15,
+     "width_m": 0.8
+    },
+    {
+     "floor": "2F",
+     "kind": "DOOR",
+     "opening_id": "OP-007",
+     "rooms": [
+      "2F-R1DB2D2",
+      "2F-R4D1B62"
+     ],
+     "type": "SWING_DOOR",
+     "wall_t_m": 0.2,
+     "width_m": 0.9
+    },
+    {
+     "floor": "2F",
+     "kind": "WINDOW",
+     "opening_id": "OP-008",
+     "rooms": [
+      "2F-R4D1B62"
+     ],
+     "type": "WINDOW",
+     "wall_t_m": 0.2,
+     "width_m": 1.2
+    }
+   ],
+   "upper_floor_area_strips": [
+    {
+     "area_m2": 0.166085,
+     "class": "UNATTRIBUTED",
+     "depth_m": 0.1845,
+     "disposition": "BLOCKED_RFI",
+     "floor": "1F",
+     "opening_ids": [
+      "OP-005"
+     ],
+     "opening_kinds": [
+      "DOOR"
+     ],
+     "opening_width_m": 0.9,
+     "strip_id": "SITE-29faecd848edfdc3"
+    },
+    {
+     "area_m2": 0.135,
+     "class": "THRESHOLD",
+     "depth_m": 0.15,
+     "disposition": "BLOCKED_RFI",
+     "floor": "1F",
+     "opening_ids": [
+      "OP-006"
+     ],
+     "opening_kinds": [
+      "DOOR"
+     ],
+     "opening_width_m": 0.9,
+     "strip_id": "SITE-4fef674d3ff7496a"
+    },
+    {
+     "area_m2": 0.131977,
+     "class": "THRESHOLD",
+     "depth_m": null,
+     "disposition": "BLOCKED_RFI",
+     "floor": "1F",
+     "opening_ids": [],
+     "opening_kinds": [],
+     "opening_width_m": null,
+     "strip_id": "SITE-7d0122ff41500399"
+    },
+    {
+     "area_m2": 0.12,
+     "class": "THRESHOLD",
+     "depth_m": 0.15,
+     "disposition": "BLOCKED_RFI",
+     "floor": "1F",
+     "opening_ids": [
+      "OP-019"
+     ],
+     "opening_kinds": [
+      "DOOR"
+     ],
+     "opening_width_m": 0.8,
+     "strip_id": "SITE-86cb8b9dcdc4b829"
+    },
+    {
+     "area_m2": 0.15,
+     "class": "THRESHOLD",
+     "depth_m": 0.15,
+     "disposition": "BLOCKED_RFI",
+     "floor": "1F",
+     "opening_ids": [
+      "OP-011"
+     ],
+     "opening_kinds": [
+      "PASSAGE"
+     ],
+     "opening_width_m": 1.0,
+     "strip_id": "SITE-8982e4b947f50ce0"
+    },
+    {
+     "area_m2": 0.185778,
+     "class": "THRESHOLD",
+     "depth_m": null,
+     "disposition": "BLOCKED_RFI",
+     "floor": "1F",
+     "opening_ids": [],
+     "opening_kinds": [],
+     "opening_width_m": null,
+     "strip_id": "SITE-974f79bfc62ecd03"
+    },
+    {
+     "area_m2": 0.2,
+     "class": "THRESHOLD",
+     "depth_m": 0.2,
+     "disposition": "BLOCKED_RFI",
+     "floor": "1F",
+     "opening_ids": [
+      "OP-007"
+     ],
+     "opening_kinds": [
+      "PASSAGE"
+     ],
+     "opening_width_m": 1.0,
+     "strip_id": "SITE-a269bf61d6d19c7d"
+    },
+    {
+     "area_m2": 0.15,
+     "class": "THRESHOLD",
+     "depth_m": 0.15,
+     "disposition": "BLOCKED_RFI",
+     "floor": "1F",
+     "opening_ids": [
+      "OP-020"
+     ],
+     "opening_kinds": [
+      "DOOR"
+     ],
+     "opening_width_m": 1.0,
+     "strip_id": "SITE-bcfaaf02aac77ddc"
+    },
+    {
+     "area_m2": 0.18,
+     "class": "THRESHOLD",
+     "depth_m": 0.2,
+     "disposition": "BLOCKED_RFI",
+     "floor": "1F",
+     "opening_ids": [
+      "OP-008"
+     ],
+     "opening_kinds": [
+      "DOOR"
+     ],
+     "opening_width_m": 0.9,
+     "strip_id": "SITE-d24b20228f587d87"
+    },
+    {
+     "area_m2": 0.12,
+     "class": "THRESHOLD",
+     "depth_m": 0.15,
+     "disposition": "BLOCKED_RFI",
+     "floor": "1F",
+     "opening_ids": [
+      "OP-010"
+     ],
+     "opening_kinds": [
+      "DOOR"
+     ],
+     "opening_width_m": 0.8,
+     "strip_id": "SITE-d9abea41a2ec8afe"
+    },
+    {
+     "area_m2": 0.12,
+     "class": "THRESHOLD",
+     "depth_m": 0.15,
+     "disposition": "BLOCKED_RFI",
+     "floor": "1F",
+     "opening_ids": [
+      "OP-018"
+     ],
+     "opening_kinds": [
+      "DOOR"
+     ],
+     "opening_width_m": 0.8,
+     "strip_id": "SITE-f7298606c005c7fd"
+    },
+    {
+     "area_m2": 0.154075,
+     "class": "UNATTRIBUTED",
+     "depth_m": 0.1926,
+     "disposition": "BLOCKED_RFI",
+     "floor": "1F",
+     "opening_ids": [
+      "OP-004"
+     ],
+     "opening_kinds": [
+      "DOOR"
+     ],
+     "opening_width_m": 0.8,
+     "strip_id": "SITE-fd160ff889cc7481"
+    },
+    {
+     "area_m2": 0.18,
+     "class": "THRESHOLD",
+     "depth_m": 0.2,
+     "disposition": "BLOCKED_RFI",
+     "floor": "2F",
+     "opening_ids": [
+      "OP-007"
+     ],
+     "opening_kinds": [
+      "DOOR"
+     ],
+     "opening_width_m": 0.9,
+     "strip_id": "SITE-106c3edab60134bf"
+    },
+    {
+     "area_m2": 0.12,
+     "class": "THRESHOLD",
+     "depth_m": 0.15,
+     "disposition": "BLOCKED_RFI",
+     "floor": "2F",
+     "opening_ids": [
+      "OP-006"
+     ],
+     "opening_kinds": [
+      "DOOR"
+     ],
+     "opening_width_m": 0.8,
+     "strip_id": "SITE-7d236dfa03afae52"
+    },
+    {
+     "area_m2": 0.2,
+     "class": "THRESHOLD",
+     "depth_m": 0.2,
+     "disposition": "BLOCKED_RFI",
+     "floor": "2F",
+     "opening_ids": [
+      "OP-002"
+     ],
+     "opening_kinds": [
+      "PASSAGE"
+     ],
+     "opening_width_m": 1.0,
+     "strip_id": "SITE-a2293f8cbe04a507"
+    },
+    {
+     "area_m2": 0.15,
+     "class": "THRESHOLD",
+     "depth_m": 0.15,
+     "disposition": "BLOCKED_RFI",
+     "floor": "2F",
+     "opening_ids": [
+      "OP-001"
+     ],
+     "opening_kinds": [
+      "DOOR"
+     ],
+     "opening_width_m": 1.0,
+     "strip_id": "SITE-d94bfc03de470f13"
+    }
+   ],
+   "upper_floor_lines": [
+    {
+     "floor": "1F",
+     "high": null,
+     "item_code": "FIN.FLOOR.PORCELAIN",
+     "line_id": "L-3086bd9835d361d8dfa6",
+     "low": null,
+     "qty": 44.869353,
+     "room_id": "1F-R78C367",
+     "rule_id": "UP-CER-001",
+     "state": "SOURCE_DERIVED",
+     "unit": "m2"
+    },
+    {
+     "floor": "1F",
+     "high": null,
+     "item_code": "FIN.FLOOR.PORCELAIN",
+     "line_id": "L-b998bb18d763f9d0999a",
+     "low": null,
+     "qty": 19.05,
+     "room_id": "1F-RB72F22",
+     "rule_id": "UP-CER-001",
+     "state": "SOURCE_DERIVED",
+     "unit": "m2"
+    },
+    {
+     "floor": "1F",
+     "high": null,
+     "item_code": "FIN.FLOOR.PORCELAIN",
+     "line_id": "L-9a22d1b81ee426e86af1",
+     "low": null,
+     "qty": 19.016545,
+     "room_id": "1F-R3CFCFD",
+     "rule_id": "UP-CER-001",
+     "state": "PROVISIONAL",
+     "unit": "m2"
+    },
+    {
+     "floor": "1F",
+     "high": null,
+     "item_code": "FIN.FLOOR.PORCELAIN",
+     "line_id": "L-135e375eea5da9a5a545",
+     "low": null,
+     "qty": 18.215001,
+     "room_id": "1F-RED0D19",
+     "rule_id": "UP-CER-001",
+     "state": "SOURCE_DERIVED",
+     "unit": "m2"
+    },
+    {
+     "floor": "1F",
+     "high": null,
+     "item_code": "FIN.FLOOR.PORCELAIN",
+     "line_id": "L-7c284600aa3b73d0dac2",
+     "low": null,
+     "qty": 16.34,
+     "room_id": "1F-R0E919A",
+     "rule_id": "UP-CER-001",
+     "state": "SOURCE_DERIVED",
+     "unit": "m2"
+    },
+    {
+     "floor": "1F",
+     "high": null,
+     "item_code": "FIN.FLOOR.WET_TILE",
+     "line_id": "L-ec0058123115a06f21bc",
+     "low": null,
+     "qty": 10.151,
+     "room_id": "1F-R26FA0D",
+     "rule_id": "UP-CER-001",
+     "state": "SOURCE_DERIVED",
+     "unit": "m2"
+    },
+    {
+     "floor": "1F",
+     "high": null,
+     "item_code": "FIN.FLOOR.WET_TILE",
+     "line_id": "L-44fc9404aee73dbf047d",
+     "low": null,
+     "qty": 5.0225,
+     "room_id": "1F-R8BDA49",
+     "rule_id": "UP-CER-001",
+     "state": "SOURCE_DERIVED",
+     "unit": "m2"
+    },
+    {
+     "floor": "1F",
+     "high": null,
+     "item_code": "FIN.FLOOR.WET_TILE",
+     "line_id": "L-39e54ae64d245d3cc901",
+     "low": null,
+     "qty": 5.0225,
+     "room_id": "1F-R48AA46",
+     "rule_id": "UP-CER-001",
+     "state": "SOURCE_DERIVED",
+     "unit": "m2"
+    },
+    {
+     "floor": "1F",
+     "high": null,
+     "item_code": "FIN.FLOOR.WET_TILE",
+     "line_id": "L-dd5dfccbec6e63e4cb45",
+     "low": null,
+     "qty": 4.725,
+     "room_id": "1F-R48CDA5",
+     "rule_id": "UP-CER-001",
+     "state": "SOURCE_DERIVED",
+     "unit": "m2"
+    },
+    {
+     "floor": "1F",
+     "high": null,
+     "item_code": "FIN.FLOOR.WET_TILE",
+     "line_id": "L-db09a074630b1c0d27eb",
+     "low": null,
+     "qty": 3.5775,
+     "room_id": "1F-RED23B8",
+     "rule_id": "UP-CER-001",
+     "state": "SOURCE_DERIVED",
+     "unit": "m2"
+    },
+    {
+     "floor": "1F",
+     "high": null,
+     "item_code": "FIN.FLOOR.WET_TILE",
+     "line_id": "L-96190f5015aa79a6a5ce",
+     "low": null,
+     "qty": 2.646,
+     "room_id": "1F-R52AC05",
+     "rule_id": "UP-CER-001",
+     "state": "SOURCE_DERIVED",
+     "unit": "m2"
+    },
+    {
+     "floor": "2F",
+     "high": null,
+     "item_code": "FIN.FLOOR.PORCELAIN",
+     "line_id": "L-bda8bbd6e2aafb6484a6",
+     "low": null,
+     "qty": 19.350001,
+     "room_id": "2F-R1DB2D2",
+     "rule_id": "UP-CER-001",
+     "state": "SOURCE_DERIVED",
+     "unit": "m2"
+    },
+    {
+     "floor": "2F",
+     "high": null,
+     "item_code": "FIN.FLOOR.WET_TILE",
+     "line_id": "L-a01419871068e5c4f936",
+     "low": null,
+     "qty": 5.55,
+     "room_id": "2F-RE83BED",
+     "rule_id": "UP-CER-001",
+     "state": "SOURCE_DERIVED",
+     "unit": "m2"
+    }
+   ],
+   "upper_rooms": [
+    {
+     "area_m2": 75.983002,
+     "attached_cells": [],
+     "codes": [
+      "LIVING"
+     ],
+     "doors": [
+      "OP-005",
+      "OP-006",
+      "OP-008",
+      "OP-020"
+     ],
+     "finish_scope": {
+      "basis": "dry room",
+      "flags": [],
+      "rule": "UP-SKIRT-001",
+      "scope": "DRY"
+     },
+     "floor": "1F",
+     "kind": "DRY",
+     "level_m": 5.5,
+     "passages": [
+      "OP-007"
+     ],
+     "perimeter_lm": 52.44,
+     "room_id": "1F-R78C367",
+     "runs_lm": {
+      "boundary": 52.44,
+      "column": 3.375,
+      "door": 4.7,
+      "glazing_edge": 2.65232,
+      "other": 0.0,
+      "passage": 1.0,
+      "perimeter": 52.44,
+      "wall": 38.06036,
+      "window_threshold": 2.65232
+     },
+     "windows": [
+      "OP-012",
+      "OP-016",
+      "OP-017",
+      "OP-021"
+     ]
+    },
+    {
+     "area_m2": 19.05,
+     "attached_cells": [],
+     "codes": [
+      "MASTER_BEDROOM"
+     ],
+     "doors": [
+      "OP-004",
+      "OP-020"
+     ],
+     "finish_scope": {
+      "basis": "dry room",
+      "flags": [],
+      "rule": "UP-SKIRT-001",
+      "scope": "DRY"
+     },
+     "floor": "1F",
+     "kind": "DRY",
+     "level_m": 5.5,
+     "passages": [],
+     "perimeter_lm": 17.7,
+     "room_id": "1F-RB72F22",
+     "runs_lm": {
+      "boundary": 17.7,
+      "column": 2.0,
+      "door": 1.8,
+      "glazing_edge": 1.224887,
+      "other": 0.0,
+      "passage": 0.0,
+      "perimeter": 17.7,
+      "wall": 11.450226,
+      "window_threshold": 1.224887
+     },
+     "windows": [
+      "OP-022"
+     ]
+    },
+    {
+     "area_m2": 19.016545,
+     "attached_cells": [
+      {
+       "area_m2": 3.76125,
+       "passages": [
+        "OP-009"
+       ],
+       "rule": "ATTACHED_THROUGH_OPEN_PASSAGE"
+      }
+     ],
+     "codes": [
+      "MASTER_BEDROOM"
+     ],
+     "doors": [
+      "OP-006",
+      "OP-018"
+     ],
+     "finish_scope": {
+      "basis": "dry room",
+      "flags": [],
+      "rule": "UP-SKIRT-001",
+      "scope": "DRY"
+     },
+     "floor": "1F",
+     "kind": "DRY",
+     "level_m": 5.5,
+     "passages": [],
+     "perimeter_lm": 22.15067,
+     "room_id": "1F-R3CFCFD",
+     "runs_lm": {
+      "boundary": 22.15067,
+      "column": 1.7,
+      "door": 1.7,
+      "glazing_edge": 1.644749,
+      "other": 0.0,
+      "passage": 0.0,
+      "perimeter": 22.15067,
+      "wall": 15.461172,
+      "window_threshold": 1.644749
+     },
+     "windows": [
+      "COP-001"
+     ]
+    },
+    {
+     "area_m2": 18.215001,
+     "attached_cells": [],
+     "codes": [
+      "MASTER_BEDROOM"
+     ],
+     "doors": [],
+     "finish_scope": {
+      "basis": "dry room",
+      "flags": [],
+      "rule": "UP-SKIRT-001",
+      "scope": "DRY"
+     },
+     "floor": "1F",
+     "kind": "DRY",
+     "level_m": 5.5,
+     "passages": [],
+     "perimeter_lm": 17.4,
+     "room_id": "1F-RED0D19",
+     "runs_lm": {
+      "boundary": 17.4,
+      "column": 0.855866,
+      "door": 1.8,
+      "glazing_edge": 0.77616,
+      "other": 0.0,
+      "passage": 0.0,
+      "perimeter": 17.4,
+      "wall": 13.191814,
+      "window_threshold": 0.77616
+     },
+     "windows": [
+      "OP-003"
+     ]
+    },
+    {
+     "area_m2": 16.34,
+     "attached_cells": [],
+     "codes": [
+      "MASTER_BEDROOM"
+     ],
+     "doors": [
+      "OP-005"
+     ],
+     "finish_scope": {
+      "basis": "dry room",
+      "flags": [],
+      "rule": "UP-SKIRT-001",
+      "scope": "DRY"
+     },
+     "floor": "1F",
+     "kind": "DRY",
+     "level_m": 5.5,
+     "passages": [
+      "OP-011"
+     ],
+     "perimeter_lm": 16.2,
+     "room_id": "1F-R0E919A",
+     "runs_lm": {
+      "boundary": 16.2,
+      "column": 0.5,
+      "door": 0.9,
+      "glazing_edge": 0.0,
+      "other": 0.0,
+      "passage": 1.0,
+      "perimeter": 16.2,
+      "wall": 13.8,
+      "window_threshold": 0.0
+     },
+     "windows": []
+    },
+    {
+     "area_m2": 10.151,
+     "attached_cells": [],
+     "codes": [
+      "LAUNDRY"
+     ],
+     "doors": [
+      "OP-008",
+      "OP-010"
+     ],
+     "finish_scope": {
+      "basis": "owner wet area (LAUNDRY)",
+      "flags": [
+       "WET_SCOPE_PROJECT_CONFIRMATION: LAUNDRY is a wet area where the project scope establishes it"
+      ],
+      "notes": [],
+      "rule": "UP-WET-001",
+      "scope": "WET"
+     },
+     "floor": "1F",
+     "kind": "WET",
+     "level_m": 5.5,
+     "passages": [],
+     "perimeter_lm": 16.94,
+     "room_id": "1F-R26FA0D",
+     "runs_lm": {
+      "boundary": 16.94,
+      "column": 1.35,
+      "door": 1.7,
+      "glazing_edge": 0.3,
+      "other": 0.0,
+      "passage": 0.0,
+      "perimeter": 16.94,
+      "wall": 13.29,
+      "window_threshold": 0.3
+     },
+     "windows": [
+      "OP-013"
+     ]
+    },
+    {
+     "area_m2": 5.0225,
+     "attached_cells": [],
+     "codes": [
+      "BATHROOM"
+     ],
+     "doors": [],
+     "finish_scope": {
+      "basis": "owner wet area (BATHROOM)",
+      "flags": [],
+      "notes": [],
+      "rule": "UP-WET-001",
+      "scope": "WET"
+     },
+     "floor": "1F",
+     "kind": "WET",
+     "level_m": 5.5,
+     "passages": [],
+     "perimeter_lm": 9.0,
+     "room_id": "1F-R8BDA49",
+     "runs_lm": {
+      "boundary": 9.0,
+      "column": 0.219134,
+      "door": 0.8,
+      "glazing_edge": 0.3,
+      "other": 0.0,
+      "passage": 0.0,
+      "perimeter": 9.0,
+      "wall": 7.380866,
+      "window_threshold": 0.3
+     },
+     "windows": [
+      "OP-002"
+     ]
+    },
+    {
+     "area_m2": 5.0225,
+     "attached_cells": [],
+     "codes": [
+      "BATHROOM"
+     ],
+     "doors": [
+      "OP-004"
+     ],
+     "finish_scope": {
+      "basis": "owner wet area (BATHROOM)",
+      "flags": [],
+      "notes": [],
+      "rule": "UP-WET-001",
+      "scope": "WET"
+     },
+     "floor": "1F",
+     "kind": "WET",
+     "level_m": 5.5,
+     "passages": [],
+     "perimeter_lm": 9.0,
+     "room_id": "1F-R48AA46",
+     "runs_lm": {
+      "boundary": 9.0,
+      "column": 0.15,
+      "door": 0.8,
+      "glazing_edge": 0.3,
+      "other": 0.0,
+      "passage": 0.0,
+      "perimeter": 9.0,
+      "wall": 7.45,
+      "window_threshold": 0.3
+     },
+     "windows": [
+      "OP-001"
+     ]
+    },
+    {
+     "area_m2": 4.725,
+     "attached_cells": [],
+     "codes": [
+      "BATHROOM"
+     ],
+     "doors": [
+      "OP-018"
+     ],
+     "finish_scope": {
+      "basis": "owner wet area (BATHROOM)",
+      "flags": [],
+      "notes": [],
+      "rule": "UP-WET-001",
+      "scope": "WET"
+     },
+     "floor": "1F",
+     "kind": "WET",
+     "level_m": 5.5,
+     "passages": [],
+     "perimeter_lm": 8.7,
+     "room_id": "1F-R48CDA5",
+     "runs_lm": {
+      "boundary": 8.7,
+      "column": 0.45,
+      "door": 0.8,
+      "glazing_edge": 0.483651,
+      "other": 0.0,
+      "passage": 0.0,
+      "perimeter": 8.7,
+      "wall": 6.966349,
+      "window_threshold": 0.0
+     },
+     "windows": []
+    },
+    {
+     "area_m2": 3.5775,
+     "attached_cells": [],
+     "codes": [
+      "BATHROOM"
+     ],
+     "doors": [
+      "OP-019"
+     ],
+     "finish_scope": {
+      "basis": "owner wet area (BATHROOM)",
+      "flags": [],
+      "notes": [],
+      "rule": "UP-WET-001",
+      "scope": "WET"
+     },
+     "floor": "1F",
+     "kind": "WET",
+     "level_m": 5.5,
+     "passages": [],
+     "perimeter_lm": 7.6,
+     "room_id": "1F-RED23B8",
+     "runs_lm": {
+      "boundary": 7.6,
+      "column": 0.5,
+      "door": 0.8,
+      "glazing_edge": 0.3,
+      "other": 0.0,
+      "passage": 0.0,
+      "perimeter": 7.6,
+      "wall": 5.7,
+      "window_threshold": 0.3
+     },
+     "windows": [
+      "OP-015"
+     ]
+    },
+    {
+     "area_m2": 3.24,
+     "attached_cells": [],
+     "codes": [
+      "SHAFT"
+     ],
+     "doors": [],
+     "finish_scope": null,
+     "floor": "1F",
+     "kind": "SHAFT",
+     "level_m": 5.5,
+     "passages": [
+      "OP-007"
+     ],
+     "perimeter_lm": 7.2,
+     "room_id": "1F-RCCB686",
+     "runs_lm": {
+      "boundary": 7.2,
+      "column": 0.85,
+      "door": 0.0,
+      "glazing_edge": 0.0,
+      "other": 0.0,
+      "passage": 1.0,
+      "perimeter": 7.2,
+      "wall": 5.35,
+      "window_threshold": 0.0
+     },
+     "windows": []
+    },
+    {
+     "area_m2": 2.97,
+     "attached_cells": [],
+     "codes": [],
+     "doors": [
+      "OP-019"
+     ],
+     "finish_scope": null,
+     "floor": "1F",
+     "kind": null,
+     "level_m": 5.5,
+     "passages": [
+      "OP-011"
+     ],
+     "perimeter_lm": 6.9,
+     "room_id": "1F-RFFE7AF",
+     "runs_lm": {
+      "boundary": 6.9,
+      "column": 0.025,
+      "door": 0.8,
+      "glazing_edge": 0.0,
+      "other": 0.0,
+      "passage": 1.0,
+      "perimeter": 6.9,
+      "wall": 5.075,
+      "window_threshold": 0.0
+     },
+     "windows": []
+    },
+    {
+     "area_m2": 2.646,
+     "attached_cells": [],
+     "codes": [
+      "BATHROOM"
+     ],
+     "doors": [
+      "OP-010"
+     ],
+     "finish_scope": {
+      "basis": "owner wet area (BATHROOM)",
+      "flags": [],
+      "notes": [],
+      "rule": "UP-WET-001",
+      "scope": "WET"
+     },
+     "floor": "1F",
+     "kind": "WET",
+     "level_m": 5.5,
+     "passages": [],
+     "perimeter_lm": 6.54,
+     "room_id": "1F-R52AC05",
+     "runs_lm": {
+      "boundary": 6.54,
+      "column": 0.025,
+      "door": 0.8,
+      "glazing_edge": 0.3,
+      "other": 0.0,
+      "passage": 0.0,
+      "perimeter": 6.54,
+      "wall": 5.115,
+      "window_threshold": 0.3
+     },
+     "windows": [
+      "OP-014"
+     ]
+    },
+    {
+     "area_m2": 19.350001,
+     "attached_cells": [],
+     "codes": [
+      "MAID"
+     ],
+     "doors": [
+      "OP-006",
+      "OP-007"
+     ],
+     "finish_scope": {
+      "basis": "dry room",
+      "flags": [],
+      "rule": "UP-SKIRT-001",
+      "scope": "DRY"
+     },
+     "floor": "2F",
+     "kind": "DRY",
+     "level_m": 9.7,
+     "passages": [],
+     "perimeter_lm": 18.9,
+     "room_id": "2F-R1DB2D2",
+     "runs_lm": {
+      "boundary": 18.9,
+      "column": 1.1,
+      "door": 1.7,
+      "glazing_edge": 0.6,
+      "other": 0.0,
+      "passage": 0.0,
+      "perimeter": 18.9,
+      "wall": 14.9,
+      "window_threshold": 0.6
+     },
+     "windows": [
+      "OP-005"
+     ]
+    },
+    {
+     "area_m2": 18.600001,
+     "attached_cells": [],
+     "codes": [
+      "STAIR"
+     ],
+     "doors": [
+      "OP-001",
+      "OP-007"
+     ],
+     "finish_scope": null,
+     "floor": "2F",
+     "kind": "STAIR",
+     "level_m": 9.7,
+     "passages": [
+      "OP-002"
+     ],
+     "perimeter_lm": 22.0,
+     "room_id": "2F-R4D1B62",
+     "runs_lm": {
+      "boundary": 22.0,
+      "column": 1.5,
+      "door": 1.9,
+      "glazing_edge": 1.1,
+      "other": 0.0,
+      "passage": 1.0,
+      "perimeter": 22.0,
+      "wall": 15.4,
+      "window_threshold": 1.1
+     },
+     "windows": [
+      "OP-003",
+      "OP-008"
+     ]
+    },
+    {
+     "area_m2": 5.55,
+     "attached_cells": [],
+     "codes": [
+      "BATHROOM"
+     ],
+     "doors": [
+      "OP-006"
+     ],
+     "finish_scope": {
+      "basis": "owner wet area (BATHROOM)",
+      "flags": [],
+      "notes": [],
+      "rule": "UP-WET-001",
+      "scope": "WET"
+     },
+     "floor": "2F",
+     "kind": "WET",
+     "level_m": 9.7,
+     "passages": [],
+     "perimeter_lm": 9.7,
+     "room_id": "2F-RE83BED",
+     "runs_lm": {
+      "boundary": 9.7,
+      "column": 0.175,
+      "door": 0.8,
+      "glazing_edge": 0.3,
+      "other": 0.0,
+      "passage": 0.0,
+      "perimeter": 9.7,
+      "wall": 8.125,
+      "window_threshold": 0.3
+     },
+     "windows": [
+      "OP-004"
+     ]
+    },
+    {
+     "area_m2": 3.24,
+     "attached_cells": [],
+     "codes": [
+      "SHAFT"
+     ],
+     "doors": [],
+     "finish_scope": null,
+     "floor": "2F",
+     "kind": "SHAFT",
+     "level_m": 9.7,
+     "passages": [
+      "OP-002"
+     ],
+     "perimeter_lm": 7.2,
+     "room_id": "2F-R2BDCEE",
+     "runs_lm": {
+      "boundary": 7.2,
+      "column": 0.7,
+      "door": 0.0,
+      "glazing_edge": 0.0,
+      "other": 0.0,
+      "passage": 1.0,
+      "perimeter": 7.2,
+      "wall": 5.5,
+      "window_threshold": 0.0
+     },
+     "windows": []
+    }
+   ],
+   "upper_strip_lines": [
+    {
+     "floor": "1F",
+     "high": null,
+     "item_code": "FIN.MARBLE.THRESHOLD",
+     "line_id": "L-b7d6e0e09fa18b18ac40",
+     "low": null,
+     "qty": 0.12,
+     "room_id": "1F-STRIP-OP-004",
+     "rule_id": "UP-THR-001",
+     "state": "SOURCE_DERIVED",
+     "unit": "m2"
+    },
+    {
+     "floor": "1F",
+     "high": null,
+     "item_code": "FIN.FLOOR.PORCELAIN",
+     "line_id": "L-8cc7b4c79edf77348781",
+     "low": null,
+     "qty": 0.135,
+     "room_id": "1F-STRIP-OP-005",
+     "rule_id": "UP-THR-001",
+     "state": "SOURCE_DERIVED",
+     "unit": "m2"
+    },
+    {
+     "floor": "1F",
+     "high": null,
+     "item_code": "FIN.FLOOR.PORCELAIN",
+     "line_id": "L-ff9963470062e827f3f7",
+     "low": null,
+     "qty": 0.135,
+     "room_id": "1F-STRIP-OP-006",
+     "rule_id": "UP-THR-001",
+     "state": "SOURCE_DERIVED",
+     "unit": "m2"
+    },
+    {
+     "floor": "1F",
+     "high": null,
+     "item_code": "FIN.FLOOR.PORCELAIN",
+     "line_id": "L-51a0d437797dddfb180e",
+     "low": null,
+     "qty": 0.2,
+     "room_id": "1F-STRIP-OP-007",
+     "rule_id": "UP-THR-001",
+     "state": "SOURCE_DERIVED",
+     "unit": "m2"
+    },
+    {
+     "floor": "1F",
+     "high": null,
+     "item_code": "FIN.MARBLE.THRESHOLD",
+     "line_id": "L-58c251f99d28d9707430",
+     "low": null,
+     "qty": 0.18,
+     "room_id": "1F-STRIP-OP-008",
+     "rule_id": "UP-THR-001",
+     "state": "SOURCE_DERIVED",
+     "unit": "m2"
+    },
+    {
+     "floor": "1F",
+     "high": null,
+     "item_code": "FIN.MARBLE.THRESHOLD",
+     "line_id": "L-777e7e8b7f71283fce85",
+     "low": null,
+     "qty": 0.12,
+     "room_id": "1F-STRIP-OP-010",
+     "rule_id": "UP-THR-001",
+     "state": "SOURCE_DERIVED",
+     "unit": "m2"
+    },
+    {
+     "floor": "1F",
+     "high": null,
+     "item_code": "FIN.FLOOR.PORCELAIN",
+     "line_id": "L-c2e57836761709440929",
+     "low": null,
+     "qty": 0.15,
+     "room_id": "1F-STRIP-OP-011",
+     "rule_id": "UP-THR-001",
+     "state": "SOURCE_DERIVED",
+     "unit": "m2"
+    },
+    {
+     "floor": "1F",
+     "high": null,
+     "item_code": "FIN.MARBLE.THRESHOLD",
+     "line_id": "L-2d6ca5c1d6e22471c775",
+     "low": null,
+     "qty": 0.12,
+     "room_id": "1F-STRIP-OP-018",
+     "rule_id": "UP-THR-001",
+     "state": "SOURCE_DERIVED",
+     "unit": "m2"
+    },
+    {
+     "floor": "1F",
+     "high": null,
+     "item_code": "FIN.MARBLE.THRESHOLD",
+     "line_id": "L-77f5a3ee595f9c9f9ae1",
+     "low": null,
+     "qty": 0.12,
+     "room_id": "1F-STRIP-OP-019",
+     "rule_id": "UP-THR-001",
+     "state": "SOURCE_DERIVED",
+     "unit": "m2"
+    },
+    {
+     "floor": "1F",
+     "high": null,
+     "item_code": "FIN.FLOOR.PORCELAIN",
+     "line_id": "L-3187c9c46de1cd9411af",
+     "low": null,
+     "qty": 0.15,
+     "room_id": "1F-STRIP-OP-020",
+     "rule_id": "UP-THR-001",
+     "state": "SOURCE_DERIVED",
+     "unit": "m2"
+    },
+    {
+     "floor": "1F",
+     "high": null,
+     "item_code": "ARCH.THRESHOLD",
+     "line_id": "L-dfdda9a6070df376c121",
+     "low": null,
+     "qty": null,
+     "room_id": "1F-STRIP-CLOSURE_D2_3118_D2_417_D2_3118_0",
+     "rule_id": "ARCH_MEASURE_V3",
+     "state": "BLOCKED_RFI",
+     "unit": "m2"
+    },
+    {
+     "floor": "1F",
+     "high": null,
+     "item_code": "ARCH.THRESHOLD",
+     "line_id": "L-2b5964b7aa2587139e3b",
+     "low": null,
+     "qty": null,
+     "room_id": "1F-STRIP-CLOSURE_D2_3122_D2_757_D2_3122_0",
+     "rule_id": "ARCH_MEASURE_V3",
+     "state": "BLOCKED_RFI",
+     "unit": "m2"
+    },
+    {
+     "floor": "1F",
+     "high": null,
+     "item_code": "ARCH.THRESHOLD",
+     "line_id": "L-88587354596ce8f2eeb6",
+     "low": null,
+     "qty": null,
+     "room_id": "1F-STRIP-SITE-29faecd848edfdc3",
+     "rule_id": "ARCH_MEASURE_V3",
+     "state": "BLOCKED_RFI",
+     "unit": "m2"
+    },
+    {
+     "floor": "1F",
+     "high": null,
+     "item_code": "ARCH.THRESHOLD",
+     "line_id": "L-91f177317d4956267044",
+     "low": null,
+     "qty": null,
+     "room_id": "1F-STRIP-SITE-fd160ff889cc7481",
+     "rule_id": "ARCH_MEASURE_V3",
+     "state": "BLOCKED_RFI",
+     "unit": "m2"
+    },
+    {
+     "floor": "2F",
+     "high": null,
+     "item_code": "FIN.FLOOR.PORCELAIN",
+     "line_id": "L-f7dc931e2c059cda77df",
+     "low": null,
+     "qty": 0.15,
+     "room_id": "2F-STRIP-OP-001",
+     "rule_id": "UP-THR-001",
+     "state": "PROVISIONAL",
+     "unit": "m2"
+    },
+    {
+     "floor": "2F",
+     "high": null,
+     "item_code": "FIN.FLOOR.PORCELAIN",
+     "line_id": "L-22c46d456725a74b5ff7",
+     "low": null,
+     "qty": 0.2,
+     "room_id": "2F-STRIP-OP-002",
+     "rule_id": "UP-THR-001",
+     "state": "SOURCE_DERIVED",
+     "unit": "m2"
+    },
+    {
+     "floor": "2F",
+     "high": null,
+     "item_code": "FIN.MARBLE.THRESHOLD",
+     "line_id": "L-63fae73fed4206a053e4",
+     "low": null,
+     "qty": 0.12,
+     "room_id": "2F-STRIP-OP-006",
+     "rule_id": "UP-THR-001",
+     "state": "SOURCE_DERIVED",
+     "unit": "m2"
+    },
+    {
+     "floor": "2F",
+     "high": null,
+     "item_code": "FIN.FLOOR.PORCELAIN",
+     "line_id": "L-3d819507767a6ed581ed",
+     "low": null,
+     "qty": 0.18,
+     "room_id": "2F-STRIP-OP-007",
+     "rule_id": "UP-THR-001",
+     "state": "SOURCE_DERIVED",
+     "unit": "m2"
+    }
+   ]
+  }
+ },
+ "schema": "T218_INPUT_V1"
+}

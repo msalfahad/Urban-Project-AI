@@ -1,0 +1,370 @@
+{
+ "project": "development villa (Alsenan); values in metres measured on the drawings; references are Drive folder / file title, view and level only; no coordinate or drawing content copied",
+ "units": "m",
+ "floors": [
+  {
+   "floor_id": "GF",
+   "ffl": {
+    "kind": "FFL",
+    "value": 1.0,
+    "ref": "P7757 / ST SH08 level marks +1.00 (T-200 DRAWING-CONFIRMED)"
+   },
+   "zones": [
+    {
+     "zone_id": "GF-DRY",
+     "type": "DRY",
+     "evidence": [
+      {
+       "source": "DRAWN_VECTOR",
+       "thickness": 0.05,
+       "cut_zone_type": "DRY",
+       "ref": "Drive 'Alsenan chalet project' / the architectural .dwf (DWF 6 model-space plot 2026-04-26), read with research/agents_t214/section_bands.py: SECTION A-A +1.00 line 0.050, hatch 0.049..0.200; SECTION B-B +1.00 line 0.050, hatch 0.049..0.199"
+      },
+      {
+       "source": "DRAWN_CURRENT_ISSUE",
+       "thickness": 0.048,
+       "cut_zone_type": "DRY",
+       "ref": "Drive 'Alsenan chalet project' / p7757_arch_sheet10.pdf (current issue, SECTION A-A), rendered 400 dpi, band profile 6.35 mm per px at 1:100: GF band 23.0 / 7.5 px = 0.146 / 0.048 m"
+      },
+      {
+       "source": "DRAWN_CURRENT_ISSUE",
+       "thickness": 0.048,
+       "cut_zone_type": "DRY",
+       "ref": "Drive 'Alsenan chalet project' / Alsenan_Architectural_P7757_Pages_11-12.pdf p.11 (current issue, SECTION B-B), rendered 400 dpi, 6.35 mm per px at 1:100: GF band 23.5 / 7.5 px = 0.149 / 0.048 m"
+      }
+     ],
+     "owner_items": [
+      {
+       "rule": "Q-43",
+       "scope": "WALL_HEIGHT_ALLOWANCE",
+       "lo": 0.1,
+       "ref": "owner Q-43 (2026-10-19 21:40): '- 0.10 m floor finishing' inside the plaster / paint wall-height formula"
+      },
+      {
+       "rule": "Q-45 dry bed",
+       "scope": "MORTAR_BED",
+       "lo": 0.03,
+       "hi": 0.043,
+       "parts_missing": [
+        "tile thickness (not given by the owner, not printed)"
+       ],
+       "ref": "owner Q-45 (2026-10-19 21:40): regular floors 3-4 cm cement mix + adhesive (BSCO-type, layer up to 3 mm) + tile"
+      }
+     ]
+    },
+    {
+     "zone_id": "GF-WET",
+     "type": "WET",
+     "evidence": [
+      {
+       "source": "DRAWN_VECTOR",
+       "thickness": 0.05,
+       "cut_zone_type": "DRY",
+       "ref": "Drive 'Alsenan chalet project' / the architectural .dwf (DWF 6 model-space plot 2026-04-26), read with research/agents_t214/section_bands.py: the GF dry band (no section cuts a GF wet room in this reading)"
+      }
+     ],
+     "owner_items": [
+      {
+       "rule": "Q-45 wet bed",
+       "scope": "MORTAR_BED",
+       "lo": 0.04,
+       "hi": 0.063,
+       "parts_missing": [
+        "tile thickness",
+        "membrane thickness",
+        "fall over the room (1 % per m)"
+       ],
+       "ref": "owner Q-45: bathrooms 4-6 cm + adhesive (up to 3 mm) + tile; bathroom falls 1 % per m; Q-41: bathrooms cement bed only, no separate screed"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "floor_id": "ANNEX",
+   "ffl": {
+    "kind": "FFL",
+    "value": 0.3,
+    "ref": "P7757 401, 403, 405, 4AC (T-200)"
+   },
+   "zones": [
+    {
+     "zone_id": "ANNEX-DRY",
+     "type": "DRY",
+     "evidence": [
+      {
+       "source": "DRAWN_VECTOR",
+       "thickness": 0.05,
+       "cut_zone_type": "DRY",
+       "ref": "Drive 'Alsenan chalet project' / the architectural .dwf (DWF 6 model-space plot 2026-04-26), read with research/agents_t214/section_bands.py: SECTION B-B +0.30 line 0.050, hatch 0.050..0.200"
+      },
+      {
+       "source": "DRAWN_CURRENT_ISSUE",
+       "thickness": 0.048,
+       "cut_zone_type": "DRY",
+       "ref": "Drive 'Alsenan chalet project' / Alsenan_Architectural_P7757_Pages_11-12.pdf p.11 (current issue, SECTION B-B), rendered 400 dpi, 6.35 mm per px at 1:100: annex +0.30 band 23.5 / 7.5 px = 0.149 / 0.048 m"
+      }
+     ],
+     "owner_items": [
+      {
+       "rule": "Q-43",
+       "scope": "WALL_HEIGHT_ALLOWANCE",
+       "lo": 0.1,
+       "ref": "owner Q-43 (2026-10-19 21:40): '- 0.10 m floor finishing' inside the plaster / paint wall-height formula"
+      },
+      {
+       "rule": "Q-45 dry bed",
+       "scope": "MORTAR_BED",
+       "lo": 0.03,
+       "hi": 0.043,
+       "parts_missing": [
+        "tile thickness (not given by the owner, not printed)"
+       ],
+       "ref": "owner Q-45 (2026-10-19 21:40): regular floors 3-4 cm cement mix + adhesive (BSCO-type, layer up to 3 mm) + tile"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "floor_id": "1F",
+   "ffl": {
+    "kind": "FFL",
+    "value": 5.5,
+    "ref": "P7757 D1B, D16, ...; SECTION A-A (T-200)"
+   },
+   "zones": [
+    {
+     "zone_id": "1F-DRY",
+     "type": "DRY",
+     "evidence": [
+      {
+       "source": "DRAWN_VECTOR",
+       "thickness": 0.049,
+       "cut_zone_type": "DRY",
+       "ref": "Drive 'Alsenan chalet project' / the architectural .dwf (DWF 6 model-space plot 2026-04-26), read with research/agents_t214/section_bands.py: SECTION A-A +5.50 line 0.049 over 8.60 m of the cut, hatch 0.049..0.199; SECTION B-B +5.50 line 0.049, hatch 0.049..0.199"
+      },
+      {
+       "source": "DRAWN_CURRENT_ISSUE",
+       "thickness": 0.051,
+       "cut_zone_type": "DRY",
+       "ref": "Drive 'Alsenan chalet project' / p7757_arch_sheet10.pdf (current issue, SECTION A-A), rendered 400 dpi, band profile 6.35 mm per px at 1:100: 1F band 23.5 / 8.0 px = 0.149 / 0.051 m"
+      },
+      {
+       "source": "DRAWN_CURRENT_ISSUE",
+       "thickness": 0.051,
+       "cut_zone_type": "DRY",
+       "ref": "Drive 'Alsenan chalet project' / Alsenan_Architectural_P7757_Pages_11-12.pdf p.11 (current issue, SECTION B-B), rendered 400 dpi, 6.35 mm per px at 1:100: 1F band 23.5 / 8.0 px = 0.149 / 0.051 m"
+      }
+     ],
+     "owner_items": [
+      {
+       "rule": "Q-43",
+       "scope": "WALL_HEIGHT_ALLOWANCE",
+       "lo": 0.1,
+       "ref": "owner Q-43 (2026-10-19 21:40): '- 0.10 m floor finishing' inside the plaster / paint wall-height formula"
+      },
+      {
+       "rule": "Q-45 dry bed",
+       "scope": "MORTAR_BED",
+       "lo": 0.03,
+       "hi": 0.043,
+       "parts_missing": [
+        "tile thickness (not given by the owner, not printed)"
+       ],
+       "ref": "owner Q-45 (2026-10-19 21:40): regular floors 3-4 cm cement mix + adhesive (BSCO-type, layer up to 3 mm) + tile"
+      }
+     ]
+    },
+    {
+     "zone_id": "1F-SUNKEN",
+     "type": "SUNKEN",
+     "sunken_drop": null,
+     "evidence": [],
+     "owner_items": [
+      {
+       "rule": "Q-45 wet bed",
+       "scope": "MORTAR_BED",
+       "lo": 0.04,
+       "hi": 0.063,
+       "parts_missing": [
+        "tile thickness",
+        "membrane thickness",
+        "fall over the room (1 % per m)"
+       ],
+       "ref": "owner Q-45: bathrooms 4-6 cm + adhesive (up to 3 mm) + tile; bathroom falls 1 % per m; Q-41: bathrooms cement bed only, no separate screed"
+      }
+     ],
+     "note": "5 panels, DXF HATCH 275 / 276 / 280 / 287 / 298 (T-206, T-213); drop printed nowhere (D-41)"
+    },
+    {
+     "zone_id": "1F-TERRACE-ROOF",
+     "type": "ROOF",
+     "printed_falls": true,
+     "evidence": [],
+     "owner_items": [],
+     "note": "sea-side terrace strips +5.50 (GF roofs): sanitary-7757 'SLOPE 1%'; Q-41 screed over the membrane, thickness HELD (D-39)"
+    }
+   ]
+  },
+  {
+   "floor_id": "2F",
+   "ffl": {
+    "kind": "FFL",
+    "value": 9.7,
+    "ref": "P7757 1352, 134E, 1350; SECTION A-A (T-200)"
+   },
+   "zones": [
+    {
+     "zone_id": "2F-DRY",
+     "type": "DRY",
+     "evidence": [
+      {
+       "source": "DRAWN_VECTOR",
+       "thickness": 0.05,
+       "cut_zone_type": "DRY",
+       "ref": "Drive 'Alsenan chalet project' / the architectural .dwf (DWF 6 model-space plot 2026-04-26), read with research/agents_t214/section_bands.py: SECTION A-A +9.70 line 0.050 over 7.10 m of the cut, hatch 0.050..0.200; SECTION B-B +9.70 line 0.050, hatch 0.049..0.200"
+      },
+      {
+       "source": "DRAWN_CURRENT_ISSUE",
+       "thickness": 0.051,
+       "cut_zone_type": "DRY",
+       "ref": "Drive 'Alsenan chalet project' / p7757_arch_sheet10.pdf (current issue, SECTION A-A), rendered 400 dpi, band profile 6.35 mm per px at 1:100: 2F band 23.0 / 8.0 px = 0.146 / 0.051 m"
+      },
+      {
+       "source": "DRAWN_CURRENT_ISSUE",
+       "thickness": 0.051,
+       "cut_zone_type": "DRY",
+       "ref": "Drive 'Alsenan chalet project' / Alsenan_Architectural_P7757_Pages_11-12.pdf p.11 (current issue, SECTION B-B), rendered 400 dpi, 6.35 mm per px at 1:100: 2F band 24.0 / 8.0 px = 0.152 / 0.051 m"
+      }
+     ],
+     "owner_items": [
+      {
+       "rule": "Q-43",
+       "scope": "WALL_HEIGHT_ALLOWANCE",
+       "lo": 0.1,
+       "ref": "owner Q-43 (2026-10-19 21:40): '- 0.10 m floor finishing' inside the plaster / paint wall-height formula"
+      },
+      {
+       "rule": "Q-45 dry bed",
+       "scope": "MORTAR_BED",
+       "lo": 0.03,
+       "hi": 0.043,
+       "parts_missing": [
+        "tile thickness (not given by the owner, not printed)"
+       ],
+       "ref": "owner Q-45 (2026-10-19 21:40): regular floors 3-4 cm cement mix + adhesive (BSCO-type, layer up to 3 mm) + tile"
+      }
+     ]
+    },
+    {
+     "zone_id": "2F-SUNKEN",
+     "type": "SUNKEN",
+     "sunken_drop": null,
+     "evidence": [],
+     "owner_items": [
+      {
+       "rule": "Q-45 wet bed",
+       "scope": "MORTAR_BED",
+       "lo": 0.04,
+       "hi": 0.063,
+       "parts_missing": [
+        "tile thickness",
+        "membrane thickness",
+        "fall over the room (1 % per m)"
+       ],
+       "ref": "owner Q-45: bathrooms 4-6 cm + adhesive (up to 3 mm) + tile; bathroom falls 1 % per m; Q-41: bathrooms cement bed only, no separate screed"
+      }
+     ],
+     "note": "HATCH 5BF (T-206, T-213; D-41)"
+    },
+    {
+     "zone_id": "2F-TERRACE-ROOF",
+     "type": "ROOF",
+     "printed_falls": true,
+     "evidence": [
+      {
+       "source": "DRAWN_VECTOR",
+       "thickness": 0.05,
+       "cut_zone_type": "ROOF",
+       "constant_layer": true,
+       "ref": "Drive 'Alsenan chalet project' / the architectural .dwf (DWF 6 model-space plot 2026-04-26), read with research/agents_t214/section_bands.py: the +9.70 band, the same constant 0.05 layer on the cut"
+      }
+     ],
+     "owner_items": [],
+     "note": "1F-roof terrace +9.70 outside the penthouse: sanitary-7757 'SLOPE 1%' four arrows (Q-45 slope check)"
+    }
+   ]
+  },
+  {
+   "floor_id": "ROOF",
+   "ffl": {
+    "kind": "FINISHED_ROOF",
+    "value": 13.9,
+    "ref": "SECTION A-A marker +13.90 (T-200)"
+   },
+   "zones": [
+    {
+     "zone_id": "MAIN-ROOF",
+     "type": "ROOF",
+     "printed_falls": false,
+     "evidence": [
+      {
+       "source": "DRAWN_VECTOR",
+       "thickness": 0.05,
+       "cut_zone_type": "ROOF",
+       "constant_layer": true,
+       "ref": "Drive 'Alsenan chalet project' / the architectural .dwf (DWF 6 model-space plot 2026-04-26), read with research/agents_t214/section_bands.py: SECTION A-A +13.90 line 0.050, hatch 0.050..0.200"
+      }
+     ],
+     "owner_items": [],
+     "note": "no slope printed: owner Q-45 falls 0.5 % per m apply; Q-41 screed over membrane, thickness HELD (D-39); top roof parked (Q-34)"
+    }
+   ]
+  },
+  {
+   "floor_id": "ANNEX-ROOF",
+   "ffl": {
+    "kind": "FINISHED_ROOF",
+    "value": 4.3,
+    "ref": "P7757 D20 (T-200)"
+   },
+   "zones": [
+    {
+     "zone_id": "ANNEX-ROOF",
+     "type": "ROOF",
+     "printed_falls": true,
+     "evidence": [
+      {
+       "source": "DRAWN_VECTOR",
+       "thickness": 0.05,
+       "cut_zone_type": "ROOF",
+       "constant_layer": true,
+       "ref": "Drive 'Alsenan chalet project' / the architectural .dwf (DWF 6 model-space plot 2026-04-26), read with research/agents_t214/section_bands.py: SECTION B-B +4.30 line 0.050, hatch 0.049..0.199"
+      }
+     ],
+     "owner_items": [],
+     "note": "sanitary-7757 'SLOPE 1%' on the annex roof"
+    }
+   ]
+  }
+ ],
+ "conditions": [
+  {
+   "condition_id": "T189-B20",
+   "floor_id": "1F",
+   "zone_id": "1F-DRY",
+   "max_build_up": 0.289,
+   "min_build_up": -0.167,
+   "ref": "research/agents_t189/T-189_OVERLAP_OWNERSHIP.md s.2: MS1-U head inside B20 unchanged for an offset 0.289 m down .. 0.167 m up"
+  },
+  {
+   "condition_id": "T189-B23",
+   "floor_id": "2F",
+   "zone_id": "2F-DRY",
+   "max_build_up": 0.289,
+   "min_build_up": -0.167,
+   "ref": "research/agents_t189/T-189_OVERLAP_OWNERSHIP.md s.2: MS2-U head inside B23, same margins"
+  }
+ ]
+}

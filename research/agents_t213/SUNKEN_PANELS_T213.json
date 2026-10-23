@@ -1,0 +1,768 @@
+{
+ "panels": [
+  {
+   "handle": "275",
+   "sheet": "GF roof slab",
+   "floor_carried": "1F",
+   "area_m2": 3.325,
+   "area_status": "DRAWING-CONFIRMED",
+   "perimeter_m": 7.3,
+   "P_ext_m": 5.55,
+   "P_shared_m": 1.75,
+   "shared_with": {
+    "276": 1.75
+   },
+   "shared_gap_m": {
+    "276": 0.2
+   },
+   "bbox_m": [
+    1.9,
+    1.75
+   ],
+   "region_loops": 1,
+   "annotation_islands": [
+    [
+     0.5016,
+     "5%%c10/m"
+    ],
+    [
+     0.5016,
+     "5%%c10/m"
+    ],
+    [
+     0.3118,
+     "B4"
+    ],
+    [
+     0.2732,
+     "B1"
+    ]
+   ],
+   "unexplained_voids": [],
+   "boundary_beams": "B1, B4 (+ the beam between 275 / 276)",
+   "t_m": 0.16,
+   "t_source": "ST7757.pdf p.8 general note 18 (slab 16 cm unless stated); no other thickness printed in the panel",
+   "drop_m": null,
+   "drop_status": "HELD (no sheet prints it; designer item D-41)",
+   "quantities": {
+    "slab_concrete_m3": {
+     "value": 0.532,
+     "status": "DRAWING-CONFIRMED",
+     "formula": "A x t = 3.3250 x 0.16",
+     "missing": [],
+     "basis": "panel lowered at full thickness (t printed for the panel); volume independent of d"
+    },
+    "soffit_form_m2": {
+     "value": 3.325,
+     "status": "DRAWING-CONFIRMED",
+     "formula": "A (area unchanged; soffit lower by d)",
+     "missing": []
+    },
+    "step_concrete_extra_m3": {
+     "value": 0.0,
+     "status": "DRAWING-CONFIRMED",
+     "formula": "step = side of the bounding beams (h unchanged)",
+     "missing": [],
+     "basis": "hatch = T-139 beam / column-face polygon (5 of 6 exact, 298 -0.0100 m2); beams per BEAMS"
+    },
+    "step_riser_form_m2": {
+     "value": null,
+     "status": "HELD",
+     "formula": "P_ext x d = 5.5500 x d",
+     "missing": [
+      "drop d"
+     ]
+    },
+    "beam_side_form_adjust_m2": {
+     "value": null,
+     "status": "HELD",
+     "formula": "-(P_ext x d) = -5.5500 x d",
+     "missing": [
+      "drop d"
+     ]
+    },
+    "shared_edge_riser_m2": {
+     "value": null,
+     "status": "HELD",
+     "formula": "P_shared x d = 1.7500 x d (only if the shared beam top stays at the normal slab top)",
+     "missing": [
+      "drop d",
+      "shared beam top level"
+     ]
+    },
+    "fill_buildup_m3_laneA": {
+     "value": null,
+     "status": "HELD",
+     "formula": "A x d = 3.3250 x d (gross; lane A nets wall footprints, splits bed / fill)",
+     "missing": [
+      "drop d"
+     ]
+    },
+    "waterproof_upturn_m2_laneA": {
+     "value": null,
+     "status": "HELD",
+     "formula": "P_ext x d = 5.5500 x d",
+     "missing": [
+      "drop d"
+     ]
+    },
+    "ceiling_below_level_drop_m": {
+     "value": null,
+     "status": "HELD",
+     "formula": "d",
+     "missing": [
+      "drop d"
+     ]
+    },
+    "net_formwork_change_m2": {
+     "value": 0.0,
+     "status": "DRAWING-CONFIRMED",
+     "formula": "riser (+P_ext x d) + beam side (-P_ext x d) = 0 by geometry, any d",
+     "missing": []
+    }
+   }
+  },
+  {
+   "handle": "276",
+   "sheet": "GF roof slab",
+   "floor_carried": "1F",
+   "area_m2": 2.5725,
+   "area_status": "DRAWING-CONFIRMED",
+   "perimeter_m": 6.44,
+   "P_ext_m": 4.69,
+   "P_shared_m": 1.75,
+   "shared_with": {
+    "275": 1.75
+   },
+   "shared_gap_m": {
+    "275": 0.2
+   },
+   "bbox_m": [
+    1.47,
+    1.75
+   ],
+   "region_loops": 1,
+   "annotation_islands": [
+    [
+     0.5016,
+     "5%%c10/m"
+    ],
+    [
+     0.5016,
+     "5%%c10/m"
+    ],
+    [
+     0.2732,
+     "B1"
+    ]
+   ],
+   "unexplained_voids": [],
+   "boundary_beams": "B1 (+ the beam between 275 / 276)",
+   "t_m": 0.16,
+   "t_source": "ST7757.pdf p.8 general note 18 (slab 16 cm unless stated); no other thickness printed in the panel",
+   "drop_m": null,
+   "drop_status": "HELD (no sheet prints it; designer item D-41)",
+   "quantities": {
+    "slab_concrete_m3": {
+     "value": 0.4116,
+     "status": "DRAWING-CONFIRMED",
+     "formula": "A x t = 2.5725 x 0.16",
+     "missing": [],
+     "basis": "panel lowered at full thickness (t printed for the panel); volume independent of d"
+    },
+    "soffit_form_m2": {
+     "value": 2.5725,
+     "status": "DRAWING-CONFIRMED",
+     "formula": "A (area unchanged; soffit lower by d)",
+     "missing": []
+    },
+    "step_concrete_extra_m3": {
+     "value": 0.0,
+     "status": "DRAWING-CONFIRMED",
+     "formula": "step = side of the bounding beams (h unchanged)",
+     "missing": [],
+     "basis": "hatch = T-139 beam / column-face polygon (5 of 6 exact, 298 -0.0100 m2); beams per BEAMS"
+    },
+    "step_riser_form_m2": {
+     "value": null,
+     "status": "HELD",
+     "formula": "P_ext x d = 4.6900 x d",
+     "missing": [
+      "drop d"
+     ]
+    },
+    "beam_side_form_adjust_m2": {
+     "value": null,
+     "status": "HELD",
+     "formula": "-(P_ext x d) = -4.6900 x d",
+     "missing": [
+      "drop d"
+     ]
+    },
+    "shared_edge_riser_m2": {
+     "value": null,
+     "status": "HELD",
+     "formula": "P_shared x d = 1.7500 x d (only if the shared beam top stays at the normal slab top)",
+     "missing": [
+      "drop d",
+      "shared beam top level"
+     ]
+    },
+    "fill_buildup_m3_laneA": {
+     "value": null,
+     "status": "HELD",
+     "formula": "A x d = 2.5725 x d (gross; lane A nets wall footprints, splits bed / fill)",
+     "missing": [
+      "drop d"
+     ]
+    },
+    "waterproof_upturn_m2_laneA": {
+     "value": null,
+     "status": "HELD",
+     "formula": "P_ext x d = 4.6900 x d",
+     "missing": [
+      "drop d"
+     ]
+    },
+    "ceiling_below_level_drop_m": {
+     "value": null,
+     "status": "HELD",
+     "formula": "d",
+     "missing": [
+      "drop d"
+     ]
+    },
+    "net_formwork_change_m2": {
+     "value": 0.0,
+     "status": "DRAWING-CONFIRMED",
+     "formula": "riser (+P_ext x d) + beam side (-P_ext x d) = 0 by geometry, any d",
+     "missing": []
+    }
+   }
+  },
+  {
+   "handle": "280",
+   "sheet": "GF roof slab",
+   "floor_carried": "1F",
+   "area_m2": 7.3009,
+   "area_status": "DRAWING-CONFIRMED",
+   "perimeter_m": 11.6255,
+   "P_ext_m": 8.6418,
+   "P_shared_m": 2.9838,
+   "shared_with": {
+    "287": 2.9838
+   },
+   "shared_gap_m": {
+    "287": 0.9
+   },
+   "bbox_m": [
+    3.543,
+    3.0
+   ],
+   "region_loops": 2,
+   "annotation_islands": [
+    [
+     0.5023,
+     "INSERT:t"
+    ],
+    [
+     0.5016,
+     "5%%c10/m"
+    ],
+    [
+     0.4981,
+     "6%%c10/m"
+    ],
+    [
+     0.3054,
+     "B5"
+    ]
+   ],
+   "unexplained_voids": [],
+   "boundary_beams": "B1, B5, CB5, B27 (oblique, shared with 287)",
+   "t_m": 0.16,
+   "t_source": "panel tag INSERT 't' = 'T 16' inside the panel (ST DXF / ST7757.pdf p.4)",
+   "drop_m": null,
+   "drop_status": "HELD (no sheet prints it; designer item D-41)",
+   "quantities": {
+    "slab_concrete_m3": {
+     "value": 1.1681,
+     "status": "DRAWING-CONFIRMED",
+     "formula": "A x t = 7.3009 x 0.16",
+     "missing": [],
+     "basis": "panel lowered at full thickness (t printed for the panel); volume independent of d"
+    },
+    "soffit_form_m2": {
+     "value": 7.3009,
+     "status": "DRAWING-CONFIRMED",
+     "formula": "A (area unchanged; soffit lower by d)",
+     "missing": []
+    },
+    "step_concrete_extra_m3": {
+     "value": 0.0,
+     "status": "DRAWING-CONFIRMED",
+     "formula": "step = side of the bounding beams (h unchanged)",
+     "missing": [],
+     "basis": "hatch = T-139 beam / column-face polygon (5 of 6 exact, 298 -0.0100 m2); beams per BEAMS"
+    },
+    "step_riser_form_m2": {
+     "value": null,
+     "status": "HELD",
+     "formula": "P_ext x d = 8.6418 x d",
+     "missing": [
+      "drop d"
+     ]
+    },
+    "beam_side_form_adjust_m2": {
+     "value": null,
+     "status": "HELD",
+     "formula": "-(P_ext x d) = -8.6418 x d",
+     "missing": [
+      "drop d"
+     ]
+    },
+    "shared_edge_riser_m2": {
+     "value": null,
+     "status": "HELD",
+     "formula": "P_shared x d = 2.9838 x d (only if the shared beam top stays at the normal slab top)",
+     "missing": [
+      "drop d",
+      "shared beam top level"
+     ]
+    },
+    "fill_buildup_m3_laneA": {
+     "value": null,
+     "status": "HELD",
+     "formula": "A x d = 7.3009 x d (gross; lane A nets wall footprints, splits bed / fill)",
+     "missing": [
+      "drop d"
+     ]
+    },
+    "waterproof_upturn_m2_laneA": {
+     "value": null,
+     "status": "HELD",
+     "formula": "P_ext x d = 8.6418 x d",
+     "missing": [
+      "drop d"
+     ]
+    },
+    "ceiling_below_level_drop_m": {
+     "value": null,
+     "status": "HELD",
+     "formula": "d",
+     "missing": [
+      "drop d"
+     ]
+    },
+    "net_formwork_change_m2": {
+     "value": 0.0,
+     "status": "DRAWING-CONFIRMED",
+     "formula": "riser (+P_ext x d) + beam side (-P_ext x d) = 0 by geometry, any d",
+     "missing": []
+    }
+   }
+  },
+  {
+   "handle": "287",
+   "sheet": "GF roof slab",
+   "floor_carried": "1F",
+   "area_m2": 2.0804,
+   "area_status": "DRAWING-CONFIRMED",
+   "perimeter_m": 7.0778,
+   "P_ext_m": 4.1268,
+   "P_shared_m": 2.951,
+   "shared_with": {
+    "280": 2.951
+   },
+   "shared_gap_m": {
+    "280": 0.9
+   },
+   "bbox_m": [
+    1.752,
+    2.374
+   ],
+   "region_loops": 1,
+   "annotation_islands": [
+    [
+     0.5016,
+     "5%%c10/m"
+    ],
+    [
+     0.5016,
+     "5%%c10/m"
+    ]
+   ],
+   "unexplained_voids": [],
+   "boundary_beams": "B1, CB4, B27 (shared with 280)",
+   "t_m": 0.16,
+   "t_source": "ST7757.pdf p.8 general note 18 (slab 16 cm unless stated); no other thickness printed in the panel",
+   "drop_m": null,
+   "drop_status": "HELD (no sheet prints it; designer item D-41)",
+   "quantities": {
+    "slab_concrete_m3": {
+     "value": 0.3329,
+     "status": "DRAWING-CONFIRMED",
+     "formula": "A x t = 2.0804 x 0.16",
+     "missing": [],
+     "basis": "panel lowered at full thickness (t printed for the panel); volume independent of d"
+    },
+    "soffit_form_m2": {
+     "value": 2.0804,
+     "status": "DRAWING-CONFIRMED",
+     "formula": "A (area unchanged; soffit lower by d)",
+     "missing": []
+    },
+    "step_concrete_extra_m3": {
+     "value": 0.0,
+     "status": "DRAWING-CONFIRMED",
+     "formula": "step = side of the bounding beams (h unchanged)",
+     "missing": [],
+     "basis": "hatch = T-139 beam / column-face polygon (5 of 6 exact, 298 -0.0100 m2); beams per BEAMS"
+    },
+    "step_riser_form_m2": {
+     "value": null,
+     "status": "HELD",
+     "formula": "P_ext x d = 4.1268 x d",
+     "missing": [
+      "drop d"
+     ]
+    },
+    "beam_side_form_adjust_m2": {
+     "value": null,
+     "status": "HELD",
+     "formula": "-(P_ext x d) = -4.1268 x d",
+     "missing": [
+      "drop d"
+     ]
+    },
+    "shared_edge_riser_m2": {
+     "value": null,
+     "status": "HELD",
+     "formula": "P_shared x d = 2.9510 x d (only if the shared beam top stays at the normal slab top)",
+     "missing": [
+      "drop d",
+      "shared beam top level"
+     ]
+    },
+    "fill_buildup_m3_laneA": {
+     "value": null,
+     "status": "HELD",
+     "formula": "A x d = 2.0804 x d (gross; lane A nets wall footprints, splits bed / fill)",
+     "missing": [
+      "drop d"
+     ]
+    },
+    "waterproof_upturn_m2_laneA": {
+     "value": null,
+     "status": "HELD",
+     "formula": "P_ext x d = 4.1268 x d",
+     "missing": [
+      "drop d"
+     ]
+    },
+    "ceiling_below_level_drop_m": {
+     "value": null,
+     "status": "HELD",
+     "formula": "d",
+     "missing": [
+      "drop d"
+     ]
+    },
+    "net_formwork_change_m2": {
+     "value": 0.0,
+     "status": "DRAWING-CONFIRMED",
+     "formula": "riser (+P_ext x d) + beam side (-P_ext x d) = 0 by geometry, any d",
+     "missing": []
+    }
+   }
+  },
+  {
+   "handle": "298",
+   "sheet": "GF roof slab",
+   "floor_carried": "1F",
+   "area_m2": 4.1076,
+   "area_status": "DRAWING-CONFIRMED",
+   "perimeter_m": 8.8426,
+   "P_ext_m": 8.8426,
+   "P_shared_m": 0,
+   "shared_with": {},
+   "shared_gap_m": {},
+   "bbox_m": [
+    2.2,
+    1.98
+   ],
+   "region_loops": 2,
+   "annotation_islands": [
+    [
+     0.5016,
+     "5%%c10/m"
+    ],
+    [
+     0.5016,
+     "5%%c10/m"
+    ],
+    [
+     0.3118,
+     "B4"
+    ],
+    [
+     0.2732,
+     "B28"
+    ],
+    [
+     0.1283,
+     "T.C"
+    ]
+   ],
+   "unexplained_voids": [],
+   "boundary_beams": "B4, B17, B28 (+ column at the B28 corner)",
+   "t_m": 0.16,
+   "t_source": "ST7757.pdf p.8 general note 18 (slab 16 cm unless stated); no other thickness printed in the panel",
+   "drop_m": null,
+   "drop_status": "HELD (no sheet prints it; designer item D-41)",
+   "quantities": {
+    "slab_concrete_m3": {
+     "value": 0.6572,
+     "status": "DRAWING-CONFIRMED",
+     "formula": "A x t = 4.1076 x 0.16",
+     "missing": [],
+     "basis": "panel lowered at full thickness (t printed for the panel); volume independent of d"
+    },
+    "soffit_form_m2": {
+     "value": 4.1076,
+     "status": "DRAWING-CONFIRMED",
+     "formula": "A (area unchanged; soffit lower by d)",
+     "missing": []
+    },
+    "step_concrete_extra_m3": {
+     "value": 0.0,
+     "status": "DRAWING-CONFIRMED",
+     "formula": "step = side of the bounding beams (h unchanged)",
+     "missing": [],
+     "basis": "hatch = T-139 beam / column-face polygon (5 of 6 exact, 298 -0.0100 m2); beams per BEAMS"
+    },
+    "step_riser_form_m2": {
+     "value": null,
+     "status": "HELD",
+     "formula": "P_ext x d = 8.8426 x d",
+     "missing": [
+      "drop d"
+     ]
+    },
+    "beam_side_form_adjust_m2": {
+     "value": null,
+     "status": "HELD",
+     "formula": "-(P_ext x d) = -8.8426 x d",
+     "missing": [
+      "drop d"
+     ]
+    },
+    "shared_edge_riser_m2": {
+     "value": null,
+     "status": "HELD",
+     "formula": "P_shared x d = 0.0000 x d (only if the shared beam top stays at the normal slab top)",
+     "missing": [
+      "drop d",
+      "shared beam top level"
+     ]
+    },
+    "fill_buildup_m3_laneA": {
+     "value": null,
+     "status": "HELD",
+     "formula": "A x d = 4.1076 x d (gross; lane A nets wall footprints, splits bed / fill)",
+     "missing": [
+      "drop d"
+     ]
+    },
+    "waterproof_upturn_m2_laneA": {
+     "value": null,
+     "status": "HELD",
+     "formula": "P_ext x d = 8.8426 x d",
+     "missing": [
+      "drop d"
+     ]
+    },
+    "ceiling_below_level_drop_m": {
+     "value": null,
+     "status": "HELD",
+     "formula": "d",
+     "missing": [
+      "drop d"
+     ]
+    },
+    "net_formwork_change_m2": {
+     "value": 0.0,
+     "status": "DRAWING-CONFIRMED",
+     "formula": "riser (+P_ext x d) + beam side (-P_ext x d) = 0 by geometry, any d",
+     "missing": []
+    }
+   }
+  },
+  {
+   "handle": "5BF",
+   "sheet": "1F roof slab",
+   "floor_carried": "2F",
+   "area_m2": 5.4,
+   "area_status": "DRAWING-CONFIRMED",
+   "perimeter_m": 9.6,
+   "P_ext_m": 9.6,
+   "P_shared_m": 0,
+   "shared_with": {},
+   "shared_gap_m": {},
+   "bbox_m": [
+    1.8,
+    3.0
+   ],
+   "region_loops": 1,
+   "annotation_islands": [
+    [
+     0.5016,
+     "5%%c10/m"
+    ],
+    [
+     0.5016,
+     "5%%c10/m"
+    ],
+    [
+     0.3054,
+     "B2"
+    ]
+   ],
+   "unexplained_voids": [],
+   "boundary_beams": "B2",
+   "t_m": 0.16,
+   "t_source": "ST7757.pdf p.8 general note 18 (slab 16 cm unless stated); no other thickness printed in the panel",
+   "drop_m": null,
+   "drop_status": "HELD (no sheet prints it; designer item D-41)",
+   "quantities": {
+    "slab_concrete_m3": {
+     "value": 0.864,
+     "status": "DRAWING-CONFIRMED",
+     "formula": "A x t = 5.4000 x 0.16",
+     "missing": [],
+     "basis": "panel lowered at full thickness (t printed for the panel); volume independent of d"
+    },
+    "soffit_form_m2": {
+     "value": 5.4,
+     "status": "DRAWING-CONFIRMED",
+     "formula": "A (area unchanged; soffit lower by d)",
+     "missing": []
+    },
+    "step_concrete_extra_m3": {
+     "value": 0.0,
+     "status": "DRAWING-CONFIRMED",
+     "formula": "step = side of the bounding beams (h unchanged)",
+     "missing": [],
+     "basis": "hatch = T-139 beam / column-face polygon (5 of 6 exact, 298 -0.0100 m2); beams per BEAMS"
+    },
+    "step_riser_form_m2": {
+     "value": null,
+     "status": "HELD",
+     "formula": "P_ext x d = 9.6000 x d",
+     "missing": [
+      "drop d"
+     ]
+    },
+    "beam_side_form_adjust_m2": {
+     "value": null,
+     "status": "HELD",
+     "formula": "-(P_ext x d) = -9.6000 x d",
+     "missing": [
+      "drop d"
+     ]
+    },
+    "shared_edge_riser_m2": {
+     "value": null,
+     "status": "HELD",
+     "formula": "P_shared x d = 0.0000 x d (only if the shared beam top stays at the normal slab top)",
+     "missing": [
+      "drop d",
+      "shared beam top level"
+     ]
+    },
+    "fill_buildup_m3_laneA": {
+     "value": null,
+     "status": "HELD",
+     "formula": "A x d = 5.4000 x d (gross; lane A nets wall footprints, splits bed / fill)",
+     "missing": [
+      "drop d"
+     ]
+    },
+    "waterproof_upturn_m2_laneA": {
+     "value": null,
+     "status": "HELD",
+     "formula": "P_ext x d = 9.6000 x d",
+     "missing": [
+      "drop d"
+     ]
+    },
+    "ceiling_below_level_drop_m": {
+     "value": null,
+     "status": "HELD",
+     "formula": "d",
+     "missing": [
+      "drop d"
+     ]
+    },
+    "net_formwork_change_m2": {
+     "value": 0.0,
+     "status": "DRAWING-CONFIRMED",
+     "formula": "riser (+P_ext x d) + beam side (-P_ext x d) = 0 by geometry, any d",
+     "missing": []
+    }
+   }
+  }
+ ],
+ "t139_match": {
+  "pairs": [
+   [
+    "GF-141",
+    "280",
+    7.3009,
+    7.3009,
+    0.0
+   ],
+   [
+    "1F-018",
+    "5BF",
+    5.4,
+    5.4,
+    0.0
+   ],
+   [
+    "GF-081",
+    "298",
+    4.1176,
+    4.1076,
+    -0.01
+   ],
+   [
+    "GF-016",
+    "275",
+    3.325,
+    3.325,
+    0.0
+   ],
+   [
+    "GF-015",
+    "276",
+    2.5725,
+    2.5725,
+    0.0
+   ],
+   [
+    "GF-128",
+    "287",
+    2.0804,
+    2.0804,
+    0.0
+   ]
+  ],
+  "unmatched_t139": [],
+  "unmatched_dxf": []
+ },
+ "totals": {
+  "1F": 19.3864,
+  "2F": 5.4
+ }
+}
