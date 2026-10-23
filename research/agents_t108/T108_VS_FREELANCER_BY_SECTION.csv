@@ -1,0 +1,10 @@
+floor,section,walls,engine_gross_known_m2,engine_held_length_m (incl. held ends),fl_gross_m2,d_gross_m2,d_gross_pct,"engine_net_established_m2 (DC+AOA, walls with a net)",same_walls_gross_m2,engine_walls_net_held,fl_deduction_m2,fl_net_m2,like_for_like
+GF,EXTERNAL,16,250.059,7.545,300.875,-50.816,-16.9 %,72.204,74.404,12,34.52,266.355,"NO: held length > 0 (held is missing, not 0)"
+GF,INTERNAL 0.15,16,152.025,2.687,181.720,-29.695,-16.3 %,83.658,91.138,6,13.92,167.8,"NO: held length > 0 (held is missing, not 0)"
+GF,INTERNAL 0.20,6,49.707,2.850,32.800,16.907,+51.5 %,0.000,0.000,6,not split,,"NO: held length > 0 (held is missing, not 0)"
+1F,EXTERNAL,8,155.468,7.376,199.651,-44.183,-22.1 %,15.833,15.833,5,34.03,165.621,"NO: held length > 0 (held is missing, not 0)"
+1F,INTERNAL 0.15,13,179.491,10.719,211.418,-31.927,-15.1 %,89.040,96.960,7,16.32,195.098,"NO: held length > 0 (held is missing, not 0)"
+1F,INTERNAL 0.20,4,35.221,0.000,30.340,4.881,+16.1 %,23.900,23.900,1,not split,,gross yes; net only on walls with a net
+2F,EXTERNAL,4,79.509,4.451,96.255,-16.746,-17.4 %,21.476,21.476,3,9.68,86.575,"NO: held length > 0 (held is missing, not 0)"
+2F,INTERNAL 0.15,1,11.400,0.000,11.100,0.300,+2.7 %,9.640,11.400,0,4.08,7.02,gross yes; net only on walls with a net
+2F,INTERNAL 0.20,4,32.317,1.246,30.340,1.977,+6.5 %,21.660,21.660,2,not split,,"NO: held length > 0 (held is missing, not 0)"
