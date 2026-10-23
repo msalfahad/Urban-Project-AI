@@ -46,6 +46,19 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+### Lead 2026-10-23 20:10 (from T-231 MERGED (Gate B, V3.0.8); T-222, T-233, T-216 READY; T-017 work complete; new T-237)
+
+| Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |
+|---|---|---|---|---|---|
+| Footing FN (clipped piece) against footing F9 (D-32) | concrete, blinding, rebar | STRUCTURE CONC.FOOTING: F9 (0.55 deep) owns the 0.40 x 0.35 intersection; FN carries 3 full + 1 clipped piece 1.158 m3 | DRAWING-CONFIRMED by worker 1 (FN outline notched exactly on the F9 outline, one bottom stack, R-CONC-OWN-1); freelancer bills the piece twice (+0.042 m3) | T-233 READY a45a84b6 | Checker T-233 verdict: if confirmed, D-32 leaves the designer list (drawings answered it) |
+| Blinding under FN / F9 | concrete | STRUCTURE CONC.BLINDING, one layer (union of projections) | -0.196 m3 overlap counted once; footing blinding 14.990 m3 + D-14 0 .. 0.189 HELD | T-233 READY | D-14 (8 footings on the plot line) |
+| Footing F10 + F | concrete, blinding | STRUCTURE CONC.FOOTING | HELD 2.176 .. 2.275 m3 (Q-31 C designer item), never 0; engine F10 'no outline found' | T-233 READY | Q-31 C; keeps CONC.FOOTING PARTIALLY VERIFIED at best |
+| GF hand-wash spaces (3) floor | floor finishes, wet / dry review | FLOOR AREA: the candidate's own line where one exists; the released-state binding 9.348 m2 (ASSUMED - OWNER-APPROVED, Q-06 A) only where no equal line exists | answered once, no 9.348 double count | T-216 READY 48a1f83a | Checker T-216 |
+| 1F concave bay ends (1F-W25 basis) | blockwork, plaster, paint | BLOCKWORK, white 0.20, wall between the full caps and the straight walls | +0.4124 m / +1.481 m2; HELD 0 .. 0.4769 m -> 0 | T-222 READY 1381d693 | Checker T-222; census cannot read the curved bay (T-017 NOT READ) |
+| Masonry above opening P-GF-05 | blockwork, plaster, paint, lintel | BLOCKWORK (band between the lintel and the B1 soffit) | 2.640 m2 (HELD 2.232 .. 2.700 closed) | T-222 READY | Checker T-222 |
+| Block-wall corner squares (9 walls) | blockwork, plaster | BLOCKWORK, ONE wall per corner square by the drawn faces (UP-MAS-CORNER-001 proposed); total length per floor unchanged | RULE_DIFFERENCE between the census and the T-108 r2 ledger, same plan area | T-017 work complete (31add6c0), READY withheld | T-228 adopts one convention and states it |
+| Wall faces shared by blockwork and plaster / paint | blockwork, plaster, paint, openings | each trade keeps its own line; ONE height per wall face and ONE opening id per deduction across both trades | not yet checked across trades | T-128 r3 (plaster), T-226 / T-227 (block heights), T-201 / T-207 (heads) | T-237 (new, lane A) before the plaster / paint whole line is re-measured |
+
 ### Lead 2026-10-23 18:20 (from T-229, T-226, T-230 MERGED; T-227, T-231 READY; new T-233, T-234)
 
 | Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |

@@ -29,6 +29,21 @@ LEAD SEARCH CONFIRMATION (Lead 2026-10-23 18:20 UTC, from the merged tasks' reco
   lift details, note 19, section B-B, roof details and elevations; send-ready only after the Checker's Gate A verdict on
   T-227 confirms that search (queued 18:49).
 - HOLD SEND, row 9 (D-64 / D-60): T-222 (lane A, now first) records every architectural sheet searched for each opening.
+
+LEAD UPDATE 2026-10-23 20:10 UTC (Checker 20:14 verdicts on T-222 MERGED 769cad40, T-227 REJECTED, T-233 MERGED 2ecb5bf0):
+- Row 9 NARROWED, SEND-READY as P-1F-01 head level ONLY. P-GF-05 (D-60) is REMOVED: the drawings answer it (head +2.65 on
+  the SW elevation, B1 soffit +5.05, masonry above 2.640 m2; Checker own re-measure 0.0 %). P-1F-01 'conflict' (D-64):
+  Lead decision WITHDRAWN on two independent readings (T-222: section B-B shows the doors of a wall 2.25 m in front, so
+  B-B is occluded there, not in conflict; T-017 raw-linework census: a 1.30 m passage with head lines drawn on both
+  faces). What stays unprinted on every sheet (T-222 search list R15: 12 architectural sheets incl. A-A / B-B, elevations,
+  door / window schedules) is its HEAD LEVEL: masonry above 0 .. 4.992 m2 HELD. Question: "Head level of the 1.30 m
+  passage P-1F-01 (1F, between 1F-W14 and W15)?"
+- Rows 7 (D-43) and 8 (D-06 / D-17) STILL NOT YET: the Checker's 20:14 run rejected T-227 on another point (arched
+  W16 deduction) and did not confirm the lift / annex searches (capacity); its own search found no 'TIE' / 'LIFT' text
+  in the ST DXF; note 19 is on the image-only ST p.8, not re-read. Decided in the T-227 r2 verdict.
+- Row 2 (D-44) still HELD for T-221 (lane S, now FIRST).
+- D-32 (FN against F9) is NOT a consultant item: RULED from the drawing by T-233 and the Checker (F9 owns the 0.40 x 0.35
+  piece once; FN drawn notched).
 Engineering note on row 2: this is an engineering question for the consultant, not an owner decision (ERS s.2.7); the
 owner sends nothing from this list until each held row is cleared as above.
 
