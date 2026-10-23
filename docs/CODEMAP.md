@@ -14,15 +14,15 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `data/` | 19 | Registries (owner facts, project rules, trades) and trade rules. Large run data is gitignored. |
 | `docs/` | 72 | Design notes and the generated maps. |
 | `documents/` | 5 |  |
-| `engine/` | 647 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
+| `engine/` | 648 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 2886 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 2896 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 10 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 1463 | pytest suites, one folder per round. |
+| `tests/` | 1470 | pytest suites, one folder per round. |
 | `tools/` | 110 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (254 modules)
@@ -387,7 +387,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `workbooks.py` | 242 | MEDIUM | 0 | REPORTING V3 - workbook layouts (generic over a BOQ_LINES model). |
 | `workbooks_v3b.py` | 308 | MEDIUM | 0 | REPORTING V3b - workbook layouts over the two-view line model (TECHNICAL_QTO / COMMERCIAL_BOQ). |
 
-## `engine/source/` (295 modules)
+## `engine/source/` (296 modules)
 
 | Module | Lines | Risk | Imp | Purpose |
 |---|---|---|---|---|
@@ -645,6 +645,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `stair_scenario_checks.py` | 215 | CRITICAL | 1 | STAIR SCENARIO CHECKS - what a proposed riser count implies against a printed level, how it is set out on site, |
 | `stair_steps_concrete.py` | 409 | MEDIUM | 1 | STAIR CONCRETE V1 - the concrete of a stair as SEPARATE lines: steps, sloping waist slab, intermediate landings, stair |
 | `storey_vocab.py` | 140 | MEDIUM | 3 | STOREY VOCABULARY V1 (T-029) - which storey a floor-plan title names, bilingual, ordered by level (generic). |
+| `strap_beam_takeoff_v1.py` | 440 | MEDIUM | 1 | STRAP_BEAM_TAKEOFF_V1 - strap beams (also oblique ones) measured from the drawing, one geometry per trade. |
 | `struct_n10.py` | 306 | MEDIUM | 2 | STRUCTURAL N10 (Phase N10) - formwork contact faces, excavation footprints and a reinforcement audit, read from the |
 | `structural_authority.py` | 142 | MEDIUM | 2 | SOURCE AUTHORITY MODEL (generic, project-independent). |
 | `structural_census.py` | 356 | CRITICAL | 1 | STRUCTURAL_CENSUS_V1 - source rules + occurrence census, before any reinforcement calculation. |
@@ -1064,6 +1065,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t171_bar_population/` | 1 |
 | `tests/t172_edges/` | 1 |
 | `tests/t173_shaft/` | 1 |
+| `tests/t174_strap_takeoff/` | 2 |
 | `tests/t175_opening_scope/` | 2 |
 | `tests/t177_scoreboard_v2/` | 1 |
 | `tests/t178_lessons/` | 1 |
@@ -1095,8 +1097,10 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t207_openings_closure/` | 2 |
 | `tests/t208_floor_review_sets/` | 2 |
 | `tests/t209_wet_wall_tiles/` | 2 |
+| `tests/t212_guard_property/` | 1 |
 | `tests/t213_sunken_panels/` | 2 |
 | `tests/t214_floor_buildup/` | 2 |
+| `tests/t215_junction_close/` | 2 |
 | `tests/t217_section_conflict/` | 2 |
 | `tests/t218_floor_residuals/` | 2 |
 | `tests/water_tank_s8_4/` | 3 |
@@ -1292,6 +1296,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t171/` | 2 |
 | `research/agents_t172/` | 8 |
 | `research/agents_t173/` | 5 |
+| `research/agents_t174/` | 3 |
 | `research/agents_t175/` | 7 |
 | `research/agents_t177/` | 2 |
 | `research/agents_t178/` | 2 |
@@ -1324,8 +1329,10 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t207/` | 7 |
 | `research/agents_t208/` | 8 |
 | `research/agents_t209/` | 9 |
+| `research/agents_t212/` | 2 |
 | `research/agents_t213/` | 4 |
 | `research/agents_t214/` | 6 |
+| `research/agents_t215/` | 5 |
 | `research/agents_t217/` | 7 |
 | `research/agents_t218/` | 10 |
 | `research/alsenan_arch_truth_05/` | 28 |
