@@ -27,7 +27,7 @@ def test_counts(res):
     assert res["released_lines_bound"] == res["released_lines_total"] == 89
     sc = res["status_counts"]
     assert sc["FOUNDATION CONFLICT"] == 5 and sc["FOUNDATION DRAFTING_NOTE"] == 6 and sc["FOUNDATION AGREE"] == 25
-    assert sc["GF CONFLICT"] == 9 and sc["1F CONFLICT"] == 11 and sc["2F CONFLICT"] == 2
+    assert sc["GF CONFLICT"] == 8 and sc["GF AGREE"] == 22 and sc["1F CONFLICT"] == 11 and sc["2F CONFLICT"] == 2
 
 
 def test_c8_at_f14_is_printed_vs_printed_on_the_neck(res):
@@ -56,3 +56,22 @@ def test_released_lines_unchanged_and_existence_findings(res):
     assert lift == pytest.approx(1.4625)
     ex = res["released_lines_on_members_not_drawn_on_that_storey"]
     assert len(ex["lines"]) == 5 and ex["m3"] == pytest.approx(2.268) and ex["status"].startswith("UNKNOWN")
+
+
+def test_slab_plan_binds_only_the_solid_column_under_the_slab(res):
+    # adverse: at the T.C 324 two outlines sit on neck 10DA (C9 at F9): 322 0.20 x 1.00 hatched ANSI35 = the turned
+    # 1F column starting on the slab, 37A 0.25 x 1.00 SOLID = the GF column; taking the nearer pattern outline gave a
+    # false GF CONFLICT
+    r = row(res, "10DA", "GF")
+    assert r["status"] == "AGREE" and "GFRS 37A" in r["candidates"] and "322" not in r["candidates"]
+    assert row(res, "10DA", "1F")["status"] == "CONFLICT"          # FFRS 667 0.20 x 1.00 vs 1ST 20 x 90
+
+
+def test_planted_columns_have_no_line_and_are_never_zero(res):
+    pc = {m["member"]: m for m in res["planted_columns"]["members"]}
+    assert set(pc) == {"PC:329", "PC:386", "PC:77B"}
+    assert pc["PC:329"]["status"] == "AGREE" and pc["PC:329"]["governing_m"] == (0.2, 0.7)
+    assert pc["PC:77B"]["status"] == "DRAFTING_NOTE" and pc["PC:77B"]["range_m2"] == [0.08, 0.1]
+    assert all(m["released_line"] is None for m in pc.values())
+    assert res["planted_columns"]["missing_m3_at_released_height_4.20"] == pytest.approx([1.428, 1.428])
+    assert res["outlines_not_over_a_neck"] == {"GFRS": [], "FFRS": [], "SFRS": []}

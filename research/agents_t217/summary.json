@@ -13,20 +13,20 @@
   "FOUNDATION AGREE": 25,
   "FOUNDATION CONFLICT": 5,
   "FOUNDATION DRAFTING_NOTE": 6,
-  "GF AGREE": 21,
-  "GF CONFLICT": 9
+  "GF AGREE": 22,
+  "GF CONFLICT": 8
  },
  "conflict_impact_by_storey": {
   "GF": {
-   "n": 9,
-   "released_m3": 5.5125,
+   "n": 8,
+   "released_m3": 4.3875,
    "range_at_released_height_m3": [
-    4.41,
-    5.5125
+    3.51,
+    4.3875
    ],
    "range_per_m_m3": [
-    0.98,
-    1.225
+    0.78,
+    0.975
    ],
    "members": [
     "C 10A4 (F10|F)",
@@ -36,8 +36,7 @@
     "C 10B7 (F)",
     "C3 10A0 (F8)",
     "C3 10AE (F15)",
-    "C8 10E0 (F14)",
-    "C9 10DA (F9)"
+    "C8 10E0 (F14)"
    ]
   },
   "FOUNDATION": {
@@ -144,85 +143,170 @@
   ],
   "m3": 2.268
  },
- "outlines_not_over_a_neck": {
-  "status": "UNKNOWN (drawn S-COL.BON outlines with no mark and no released line; element continuity T-188)",
-  "by_slab_plan": {
-   "GFRS": [
-    {
-     "handle": "31B",
-     "section_m": [
-      0.2,
-      0.9
-     ],
-     "area_m2": 0.18
-    },
-    {
-     "handle": "329",
-     "section_m": [
-      0.2,
-      0.7
-     ],
-     "area_m2": 0.14
-    },
-    {
-     "handle": "37A",
-     "section_m": [
-      0.25,
-      1.0
-     ],
-     "area_m2": 0.25
-    },
-    {
-     "handle": "386",
-     "section_m": [
-      0.2,
-      0.5
-     ],
-     "area_m2": 0.1
-    }
-   ],
-   "FFRS": [
-    {
-     "handle": "66A",
-     "section_m": [
-      0.2,
-      0.7
-     ],
-     "area_m2": 0.14
-    },
-    {
-     "handle": "69D",
-     "section_m": [
-      0.2,
-      0.5
-     ],
-     "area_m2": 0.1
-    },
-    {
-     "handle": "77B",
-     "section_m": [
-      0.2,
-      0.4
-     ],
-     "area_m2": 0.08
-    }
-   ],
-   "SFRS": [
-    {
-     "handle": "778",
-     "section_m": [
-      0.2,
-      0.4
-     ],
-     "area_m2": 0.08
-    }
-   ]
+ "planted_columns": {
+  "evidence": "legend 'Planted column (P.C)'; start outline hatched ANSI35 on the slab it stands on, SOLID on the plan of its own storey; P.C size text with leader",
+  "members": [
+   {
+    "member": "PC:329",
+    "storey": "1F",
+    "status": "AGREE",
+    "basis": "ALL_SOURCES_AGREE",
+    "range_m2": [
+     0.14,
+     0.14
+    ],
+    "governing_m": [
+     0.2,
+     0.7
+    ],
+    "released_line": null,
+    "line_status": "NO LINE IN ANY STATE (missing scope)",
+    "at_4.20_m3": [
+     0.588,
+     0.588
+    ],
+    "candidates": [
+     {
+      "section_m": [
+       0.2,
+       0.7
+      ],
+      "sources": [
+       "DRAWN:GFRS 329 (starts here)",
+       "DRAWN:FFRS 66A",
+       "TEXT:GFRS 544 'P.C'"
+      ]
+     }
+    ]
+   },
+   {
+    "member": "PC:386",
+    "storey": "1F",
+    "status": "AGREE",
+    "basis": "ALL_SOURCES_AGREE",
+    "range_m2": [
+     0.1,
+     0.1
+    ],
+    "governing_m": [
+     0.2,
+     0.5
+    ],
+    "released_line": null,
+    "line_status": "NO LINE IN ANY STATE (missing scope)",
+    "at_4.20_m3": [
+     0.42,
+     0.42
+    ],
+    "candidates": [
+     {
+      "section_m": [
+       0.2,
+       0.5
+      ],
+      "sources": [
+       "DRAWN:GFRS 386 (starts here)",
+       "DRAWN:FFRS 69D",
+       "TEXT:GFRS 548 'P.C'"
+      ]
+     }
+    ]
+   },
+   {
+    "member": "PC:77B",
+    "storey": "2F",
+    "status": "DRAFTING_NOTE",
+    "basis": "DRAWING_PRINTS_THE_SECTION",
+    "range_m2": [
+     0.08,
+     0.1
+    ],
+    "governing_m": [
+     0.2,
+     0.5
+    ],
+    "released_line": null,
+    "line_status": "NO LINE IN ANY STATE (missing scope)",
+    "at_4.20_m3": [
+     0.42,
+     0.42
+    ],
+    "candidates": [
+     {
+      "section_m": [
+       0.2,
+       0.4
+      ],
+      "sources": [
+       "DRAWN:FFRS 77B (starts here)",
+       "DRAWN:SFRS 778"
+      ]
+     },
+     {
+      "section_m": [
+       0.2,
+       0.5
+      ],
+      "sources": [
+       "TEXT:FFRS 77C 'P.C'"
+      ]
+     }
+    ]
+   }
+  ],
+  "missing_m3_at_released_height_4.20": [
+   1.428,
+   1.428
+  ]
+ },
+ "slab_plan_notes": [
+  {
+   "sheet": "GFRS",
+   "handle": "31F",
+   "kind": "T.C",
+   "W_cm": null,
+   "D_cm": null
   },
-  "area_m2_by_slab_plan": {
-   "GFRS": 0.67,
-   "FFRS": 0.32,
-   "SFRS": 0.08
+  {
+   "sheet": "GFRS",
+   "handle": "324",
+   "kind": "T.C",
+   "W_cm": null,
+   "D_cm": null
+  },
+  {
+   "sheet": "GFRS",
+   "handle": "38A",
+   "kind": "D.C",
+   "W_cm": null,
+   "D_cm": null
+  },
+  {
+   "sheet": "GFRS",
+   "handle": "544",
+   "kind": "P.C",
+   "W_cm": 20,
+   "D_cm": 70
+  },
+  {
+   "sheet": "GFRS",
+   "handle": "548",
+   "kind": "P.C",
+   "W_cm": 20,
+   "D_cm": 50
+  },
+  {
+   "sheet": "FFRS",
+   "handle": "77C",
+   "kind": "P.C",
+   "W_cm": 20,
+   "D_cm": 50
   }
+ ],
+ "outlines_not_over_a_neck": {
+  "GFRS": [],
+  "FFRS": [],
+  "SFRS": []
  },
  "rows": [
   {
@@ -2252,18 +2336,18 @@
    "footing": "F9",
    "pit_raft": false,
    "existence": "DRAWN",
-   "status": "CONFLICT",
-   "basis": "PRINTED_VS_DRAWN",
-   "candidates": "0.20x1.00 [DRAWN:GFRS 322] | 0.25x1.00 [SCHEDULE:CGT 1DD2 GR]",
-   "candidate_range_m2": "0.2000..0.2500",
-   "per_m_m3": "0.2000..0.2500",
+   "status": "AGREE",
+   "basis": "ALL_SOURCES_AGREE",
+   "candidates": "0.25x1.00 [SCHEDULE:CGT 1DD2 GR, DRAWN:GFRS 37A]",
+   "candidate_range_m2": "0.2500..0.2500",
+   "per_m_m3": "0.2500..0.2500",
    "drawn_matches_band": "",
    "released_line": "P-C:COL:SH12:C9@183316,44994|GF",
    "released_section_m": "0.25x1.00",
    "released_height_m": 4.5,
    "released_m3": 1.125,
-   "at_released_height_m3": "0.9000..1.1250",
-   "evidence": "schedule only prints (0.25, 1.0); the drawing draws [(0.2, 1.0)] and prints no size (X6)"
+   "at_released_height_m3": "1.1250..1.1250",
+   "evidence": ""
   },
   {
    "member": "10DA",

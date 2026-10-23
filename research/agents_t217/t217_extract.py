@@ -58,6 +58,18 @@ def extract(path: Path) -> dict:
     for r in rects:  # position on the FOUNDATION PLAN
         n = [k for k, v in FRAME_INDEX.items() if v == r["fr"]][0]
         r["fx"], r["fy"] = r["cx"] + n * PITCH, r["cy"]
+    # column hatch inside each outline: SOLID = the member of this plan's storey (the column under the slab);
+    # a pattern (ANSI35, legend 'Planted column (P.C)' / the turned part of a 'T.C') = a member that STARTS on this slab
+    hatches = []
+    for e in msp.query('HATCH[layer=="S-COL.HAT"]'):
+        b = bbox.extents([e])
+        if b.has_data:
+            hatches.append((b.center.x, b.center.y, b.size.x, b.size.y, e.dxf.pattern_name))
+    for r in rects:
+        pats = {h[4] for h in hatches if abs(h[0] - r["cx"]) <= r["w"] / 2 + 5 and abs(h[1] - r["cy"]) <= r["d"] / 2 + 5
+                and h[2] <= r["w"] + 10 and h[3] <= r["d"] + 10}
+        r["hatch"] = "SOLID" if pats == {"SOLID"} else ("PATTERN" if pats and "SOLID" not in pats else
+                                                          ("NONE" if not pats else "MIXED"))
     dims = []
     for d in msp.query("DIMENSION"):
         a, b = d.dxf.get("defpoint2"), d.dxf.get("defpoint3")
@@ -75,8 +87,15 @@ def extract(path: Path) -> dict:
         m = re.fullmatch(r"(\d+)\s*[xX]\s*(\d+)", t)
         if m:
             sizes.append({"W": int(m[1]), "D": int(m[2]), "h": h, "x": p.x, "y": p.y})
+    notes = []
     for e in msp.query("TEXT MTEXT"):
         take(e, e.dxf.handle)
+        fr = FRAME_INDEX.get(round((FP_CENTRE_X - e.dxf.insert.x) / PITCH))
+        t = _txt(e).strip()
+        m = re.fullmatch(r"(P\.C|T\.C|D\.C|C\.S|F\.C)\s*(?:(\d+)\s*[xX]\s*(\d+))?", t)
+        if fr in ("GFRS", "FFRS", "SFRS") and m:
+            notes.append({"sheet": fr, "handle": e.dxf.handle, "kind": m[1], "W_cm": int(m[2]) if m[2] else None,
+                          "D_cm": int(m[3]) if m[3] else None, "x": e.dxf.insert.x, "y": e.dxf.insert.y})
     for i in msp.query("INSERT"):
         for v in i.virtual_entities():
             if v.dxftype() in ("TEXT", "MTEXT"):
@@ -90,7 +109,7 @@ def extract(path: Path) -> dict:
     # CN: neck-only text row of the schedule (T-075): 30 x 30, FOUNDATION only
     schedule.setdefault("CN", {"handle": "TEXT row (T-075)", "bands": {"FOU": {"W": 30, "D": 30}, "GR": None,
                                                                          "1ST": None, "2ND": None}})
-    return {"rects": rects, "dims": dims, "labels": labels, "sizes": sizes, "schedule": schedule}
+    return {"rects": rects, "dims": dims, "labels": labels, "sizes": sizes, "schedule": schedule, "notes": notes}
 
 
 def _one_to_one(items_a, items_b, dist):
@@ -153,14 +172,15 @@ def build(path: Path) -> dict:
         inst = {"id": n["id"], "mark": n["type"], "fp_label_handle": n["label_handle"], "fp_outline": f["h"],
                 "footing": n["footing"].get("type"), "pit_raft": bool(n["footing"].get("pit_raft")), "storeys": {}}
         for fr in ("FP", "CAP", "GBP", "GFRS", "FFRS", "SFRS"):
-            cand = by[fr]
+            cand = by[fr] if fr in ("FP", "CAP", "GBP") else [r for r in by[fr] if r["hatch"] == "SOLID"]
             b = min(cand, key=lambda r: math.hypot(r["fx"] - f["fx"], r["fy"] - f["fy"]))
             dd = math.hypot(b["fx"] - f["fx"], b["fy"] - f["fy"])
             st = inst["storeys"].setdefault(STOREY[fr], {"drawn": [], "texts": [], "dims": []})
             if dd > MATCH_TOL:
                 st.setdefault("not_drawn_on", []).append(fr)
                 continue
-            st["drawn"].append({"sheet": fr, "handle": b["h"], "W_mm": min(b["w"], b["d"]), "D_mm": max(b["w"], b["d"])})
+            st["drawn"].append({"sheet": fr, "handle": b["h"], "W_mm": min(b["w"], b["d"]), "D_mm": max(b["w"], b["d"]),
+                                "hatch": b["hatch"]})
             pdm, used = printed_dims(b, ex["dims"])
             if pdm["X"] and pdm["Y"]:
                 st["dims"].append({"sheet": fr, "handles": used["X"] + used["Y"],
@@ -174,12 +194,38 @@ def build(path: Path) -> dict:
                                         "W_cm": ci["text"]["W"], "D_cm": ci["text"]["D"]})
         instances.append(inst)
     claimed = {d["handle"] for i in instances for s in i["storeys"].values() for d in s["drawn"]}
-    extra = {fr: [{"handle": r["h"], "W_mm": min(r["w"], r["d"]), "D_mm": max(r["w"], r["d"])}
-                  for r in sorted(by[fr], key=lambda r: r["h"]) if r["h"] not in claimed] for fr in ("GFRS", "FFRS", "SFRS")}
+    # members with no neck: a PATTERN outline (starts on this slab) + the SOLID outline at the same place on the plan
+    # of the storey above + the P.C size text whose leader ends there (bound to the nearest PATTERN outline)
+    nxt = {"GFRS": "FFRS", "FFRS": "SFRS", "SFRS": None}
+    planted = []
+    for fr in ("GFRS", "FFRS"):
+        pcs = [n for n in ex["notes"] if n["sheet"] == fr and n["kind"] == "P.C"]
+        starts = [r for r in by[fr] if r["hatch"] == "PATTERN"]
+        P2S = _one_to_one(pcs, starts, lambda n, r: math.hypot(r["cx"] - n["x"], r["cy"] - n["y"]))
+        pc_for = {starts[j]["h"]: pcs[i] for i, (j, _) in P2S.items()}
+        for r in starts:
+            above = [a for a in by[nxt[fr]] if a["hatch"] == "SOLID"
+                     and math.hypot(a["fx"] - r["fx"], a["fy"] - r["fy"]) <= MATCH_TOL]
+            neck = min(fp, key=lambda f: math.hypot(f["fx"] - r["fx"], f["fy"] - r["fy"]))
+            on_neck = math.hypot(neck["fx"] - r["fx"], neck["fy"] - r["fy"]) <= MATCH_TOL
+            pc = pc_for.get(r["h"])
+            planted.append({"start_sheet": fr, "start_handle": r["h"], "W_mm": min(r["w"], r["d"]),
+                            "D_mm": max(r["w"], r["d"]), "storey": STOREY[nxt[fr]],
+                            "on_neck": neck["h"] if on_neck else None,
+                            "pc_text": ({"handle": pc["handle"], "W_cm": pc["W_cm"], "D_cm": pc["D_cm"]} if pc else None),
+                            "own_outline": ({"sheet": nxt[fr], "handle": above[0]["h"], "W_mm": min(above[0]["w"], above[0]["d"]),
+                                             "D_mm": max(above[0]["w"], above[0]["d"])} if above else None)})
+    in_planted = {p["own_outline"]["handle"] for p in planted if p["own_outline"]} | {p["start_handle"] for p in planted}
+    extra = {fr: [{"handle": r["h"], "W_mm": min(r["w"], r["d"]), "D_mm": max(r["w"], r["d"]), "hatch": r["hatch"]}
+                  for r in sorted(by[fr], key=lambda r: r["h"]) if r["h"] not in claimed and r["h"] not in in_planted]
+             for fr in ("GFRS", "FFRS", "SFRS")}
+    notes_out = [{k: v for k, v in n.items() if k not in ("x", "y")} for n in ex["notes"]]
     return {"schema": "T217_SECTION_INPUT_V1",
             "source_file": {"ST7757 dxf.dxf": f"sha256 {SHA} (Drive 'Alsenan chalet project')"},
             "binding": "FP label -> outline from research/agents_t205/ALSENAN_NECK_INPUT.json (T-205, merged 5f40dfdb)",
             "schedule": ex["schedule"], "instances": instances,
+            "members_starting_on_a_slab": planted,
+            "slab_plan_notes": notes_out,
             "outlines_not_over_a_neck": extra,
             "counts": {k: len(v) for k, v in by.items()}}
 

@@ -135,9 +135,29 @@ def summarise(rows, data, rel):
     rel_bound = {r["released_line"] for r in rows if r["released_line"]}
     not_drawn_released = [{"member": r["member"], "mark": r["mark"], "storey": r["storey"], "line": r["released_line"],
                            "m3": r["released_m3"]} for r in rows if r["status"] == "NOT_DRAWN" and r["released_line"]]
-    extra = {fr: [{"handle": x["handle"], "section_m": [x["W_mm"] / 1000, x["D_mm"] / 1000],
-                   "area_m2": round(x["W_mm"] * x["D_mm"] / 1e6, 6)} for x in v]
-             for fr, v in data["outlines_not_over_a_neck"].items()}
+    planted = []
+    H_REL = {"1F": 4.20, "2F": 4.20}   # released storey column height convention (route G profile), information only
+    for p in data["members_starting_on_a_slab"]:
+        if p["on_neck"]:
+            continue                     # turned part (T.C) of a column that has a neck: already a row of that member
+        src = [{"kind": "DRAWN", "W": p["W_mm"], "D": p["D_mm"], "units": "mm",
+                "ref": f"{p['start_sheet']} {p['start_handle']} (starts here)"}]
+        if p["own_outline"]:
+            o = p["own_outline"]
+            src.append({"kind": "DRAWN", "W": o["W_mm"], "D": o["D_mm"], "units": "mm", "ref": f"{o['sheet']} {o['handle']}"})
+        if p["pc_text"]:
+            t = p["pc_text"]
+            src.append({"kind": "TEXT", "W": t["W_cm"], "D": t["D_cm"], "units": "cm",
+                        "ref": f"{p['start_sheet']} {t['handle']} 'P.C'"})
+        rec = SC.classify("PC:" + p["start_handle"], p["storey"], src)
+        h = H_REL[p["storey"]]
+        planted.append({"member": "PC:" + p["start_handle"], "storey": p["storey"], "status": rec.status,
+                        "basis": rec.basis, "range_m2": list(rec.range_m2), "governing_m": rec.governing,
+                        "released_line": None, "line_status": "NO LINE IN ANY STATE (missing scope)",
+                        "at_4.20_m3": (list(rec.volume_m3(h)) if rec.status != "HELD" else None),
+                        "candidates": [{"section_m": list(c["section_m"]), "sources": c["sources"]} for c in rec.candidates]})
+    miss_lo = round(sum(x["at_4.20_m3"][0] for x in planted if x["at_4.20_m3"]), 6)
+    miss_hi = round(sum(x["at_4.20_m3"][1] for x in planted if x["at_4.20_m3"]), 6)
     return {
         "method": SC.METHOD, "rule": SC.RULE,
         "instances": len(data["instances"]), "member_storey_rows": len(rows),
@@ -148,10 +168,13 @@ def summarise(rows, data, rel):
             "status": "UNKNOWN (existence; the slab plan of that storey draws neither outline nor hatch there)",
             "lines": not_drawn_released,
             "m3": round(sum(x["m3"] for x in not_drawn_released), 6)},
-        "outlines_not_over_a_neck": {
-            "status": "UNKNOWN (drawn S-COL.BON outlines with no mark and no released line; element continuity T-188)",
-            "by_slab_plan": extra,
-            "area_m2_by_slab_plan": {fr: round(sum(x["area_m2"] for x in v), 6) for fr, v in extra.items()}},
+        "planted_columns": {
+            "evidence": "legend 'Planted column (P.C)'; start outline hatched ANSI35 on the slab it stands on, SOLID on "
+                        "the plan of its own storey; P.C size text with leader",
+            "members": planted,
+            "missing_m3_at_released_height_4.20": [miss_lo, miss_hi]},
+        "slab_plan_notes": data["slab_plan_notes"],
+        "outlines_not_over_a_neck": data["outlines_not_over_a_neck"],
         "rows": rows,
     }
 

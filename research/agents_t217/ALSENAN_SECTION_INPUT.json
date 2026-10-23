@@ -267,19 +267,22 @@
        "sheet": "FP",
        "handle": "10A4",
        "W_mm": 300,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       },
       {
        "sheet": "CAP",
        "handle": "840",
        "W_mm": 300,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       },
       {
        "sheet": "GBP",
        "handle": "200",
        "W_mm": 300,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       }
      ],
      "texts": [
@@ -311,7 +314,8 @@
        "sheet": "GFRS",
        "handle": "347",
        "W_mm": 200,
-       "D_mm": 400
+       "D_mm": 400,
+       "hatch": "SOLID"
       }
      ],
      "texts": [],
@@ -350,19 +354,22 @@
        "sheet": "FP",
        "handle": "10A8",
        "W_mm": 300,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       },
       {
        "sheet": "CAP",
        "handle": "844",
        "W_mm": 300,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       },
       {
        "sheet": "GBP",
        "handle": "204",
        "W_mm": 300,
-       "D_mm": 400
+       "D_mm": 400,
+       "hatch": "SOLID"
       }
      ],
      "texts": [
@@ -394,7 +401,8 @@
        "sheet": "GFRS",
        "handle": "34A",
        "W_mm": 200,
-       "D_mm": 400
+       "D_mm": 400,
+       "hatch": "SOLID"
       }
      ],
      "texts": [],
@@ -433,19 +441,22 @@
        "sheet": "FP",
        "handle": "10AB",
        "W_mm": 300,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       },
       {
        "sheet": "CAP",
        "handle": "849",
        "W_mm": 300,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       },
       {
        "sheet": "GBP",
        "handle": "207",
        "W_mm": 300,
-       "D_mm": 400
+       "D_mm": 400,
+       "hatch": "SOLID"
       }
      ],
      "texts": [
@@ -477,7 +488,8 @@
        "sheet": "GFRS",
        "handle": "34D",
        "W_mm": 200,
-       "D_mm": 400
+       "D_mm": 400,
+       "hatch": "SOLID"
       }
      ],
      "texts": [],
@@ -516,19 +528,22 @@
        "sheet": "FP",
        "handle": "10B4",
        "W_mm": 300,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       },
       {
        "sheet": "CAP",
        "handle": "856",
        "W_mm": 300,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       },
       {
        "sheet": "GBP",
        "handle": "214",
        "W_mm": 300,
-       "D_mm": 400
+       "D_mm": 400,
+       "hatch": "SOLID"
       }
      ],
      "texts": [
@@ -560,7 +575,8 @@
        "sheet": "GFRS",
        "handle": "356",
        "W_mm": 200,
-       "D_mm": 400
+       "D_mm": 400,
+       "hatch": "SOLID"
       }
      ],
      "texts": [],
@@ -599,19 +615,22 @@
        "sheet": "FP",
        "handle": "10B7",
        "W_mm": 300,
-       "D_mm": 400
+       "D_mm": 400,
+       "hatch": "SOLID"
       },
       {
        "sheet": "CAP",
        "handle": "85B",
        "W_mm": 300,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       },
       {
        "sheet": "GBP",
        "handle": "218",
        "W_mm": 300,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       }
      ],
      "texts": [
@@ -643,7 +662,8 @@
        "sheet": "GFRS",
        "handle": "359",
        "W_mm": 200,
-       "D_mm": 400
+       "D_mm": 400,
+       "hatch": "SOLID"
       }
      ],
      "texts": [],
@@ -682,19 +702,22 @@
        "sheet": "FP",
        "handle": "1099",
        "W_mm": 200,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       },
       {
        "sheet": "CAP",
        "handle": "837",
        "W_mm": 200,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       },
       {
        "sheet": "GBP",
        "handle": "1F5",
        "W_mm": 200,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       }
      ],
      "texts": [
@@ -726,7 +749,8 @@
        "sheet": "GFRS",
        "handle": "341",
        "W_mm": 200,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       }
      ],
      "texts": [],
@@ -738,7 +762,8 @@
        "sheet": "FFRS",
        "handle": "682",
        "W_mm": 200,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       }
      ],
      "texts": [],
@@ -750,7 +775,8 @@
        "sheet": "SFRS",
        "handle": "421",
        "W_mm": 200,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       }
      ],
      "texts": [],
@@ -773,19 +799,22 @@
        "sheet": "FP",
        "handle": "10E8",
        "W_mm": 300,
-       "D_mm": 700
+       "D_mm": 700,
+       "hatch": "SOLID"
       },
       {
        "sheet": "CAP",
        "handle": "88D",
        "W_mm": 300,
-       "D_mm": 700
+       "D_mm": 700,
+       "hatch": "SOLID"
       },
       {
        "sheet": "GBP",
        "handle": "255",
        "W_mm": 300,
-       "D_mm": 700
+       "D_mm": 700,
+       "hatch": "SOLID"
       }
      ],
      "texts": [
@@ -817,7 +846,8 @@
        "sheet": "GFRS",
        "handle": "371",
        "W_mm": 250,
-       "D_mm": 700
+       "D_mm": 700,
+       "hatch": "SOLID"
       }
      ],
      "texts": [],
@@ -856,19 +886,22 @@
        "sheet": "FP",
        "handle": "10BA",
        "W_mm": 300,
-       "D_mm": 1100
+       "D_mm": 1100,
+       "hatch": "SOLID"
       },
       {
        "sheet": "CAP",
        "handle": "85E",
        "W_mm": 300,
-       "D_mm": 1100
+       "D_mm": 1100,
+       "hatch": "SOLID"
       },
       {
        "sheet": "GBP",
        "handle": "220",
        "W_mm": 300,
-       "D_mm": 1100
+       "D_mm": 1100,
+       "hatch": "SOLID"
       }
      ],
      "texts": [
@@ -900,7 +933,8 @@
        "sheet": "GFRS",
        "handle": "35C",
        "W_mm": 250,
-       "D_mm": 1100
+       "D_mm": 1100,
+       "hatch": "SOLID"
       }
      ],
      "texts": [],
@@ -939,19 +973,22 @@
        "sheet": "FP",
        "handle": "10DD",
        "W_mm": 300,
-       "D_mm": 1100
+       "D_mm": 1100,
+       "hatch": "SOLID"
       },
       {
        "sheet": "CAP",
        "handle": "883",
        "W_mm": 300,
-       "D_mm": 1100
+       "D_mm": 1100,
+       "hatch": "SOLID"
       },
       {
        "sheet": "GBP",
        "handle": "249",
        "W_mm": 300,
-       "D_mm": 1100
+       "D_mm": 1100,
+       "hatch": "SOLID"
       }
      ],
      "texts": [
@@ -982,7 +1019,8 @@
        "sheet": "GFRS",
        "handle": "37D",
        "W_mm": 250,
-       "D_mm": 1100
+       "D_mm": 1100,
+       "hatch": "SOLID"
       }
      ],
      "texts": [],
@@ -1021,19 +1059,22 @@
        "sheet": "FP",
        "handle": "1084",
        "W_mm": 300,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       },
       {
        "sheet": "CAP",
        "handle": "817",
        "W_mm": 300,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       },
       {
        "sheet": "GBP",
        "handle": "1DC",
        "W_mm": 300,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       }
      ],
      "texts": [
@@ -1065,7 +1106,8 @@
        "sheet": "GFRS",
        "handle": "32C",
        "W_mm": 200,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       }
      ],
      "texts": [],
@@ -1077,7 +1119,8 @@
        "sheet": "FFRS",
        "handle": "66D",
        "W_mm": 200,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       }
      ],
      "texts": [],
@@ -1089,7 +1132,8 @@
        "sheet": "SFRS",
        "handle": "40F",
        "W_mm": 200,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       }
      ],
      "texts": [],
@@ -1112,19 +1156,22 @@
        "sheet": "FP",
        "handle": "1087",
        "W_mm": 300,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       },
       {
        "sheet": "CAP",
        "handle": "821",
        "W_mm": 300,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       },
       {
        "sheet": "GBP",
        "handle": "1E0",
        "W_mm": 300,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       }
      ],
      "texts": [
@@ -1156,7 +1203,8 @@
        "sheet": "GFRS",
        "handle": "32F",
        "W_mm": 200,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       }
      ],
      "texts": [],
@@ -1168,7 +1216,8 @@
        "sheet": "FFRS",
        "handle": "670",
        "W_mm": 200,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       }
      ],
      "texts": [],
@@ -1180,7 +1229,8 @@
        "sheet": "SFRS",
        "handle": "412",
        "W_mm": 200,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       }
      ],
      "texts": [],
@@ -1203,19 +1253,22 @@
        "sheet": "FP",
        "handle": "1093",
        "W_mm": 200,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       },
       {
        "sheet": "CAP",
        "handle": "831",
        "W_mm": 200,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       },
       {
        "sheet": "GBP",
        "handle": "1EF",
        "W_mm": 200,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       }
      ],
      "texts": [
@@ -1247,7 +1300,8 @@
        "sheet": "GFRS",
        "handle": "33B",
        "W_mm": 200,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       }
      ],
      "texts": [],
@@ -1259,7 +1313,8 @@
        "sheet": "FFRS",
        "handle": "67C",
        "W_mm": 200,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       }
      ],
      "texts": [],
@@ -1271,7 +1326,8 @@
        "sheet": "SFRS",
        "handle": "41B",
        "W_mm": 200,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       }
      ],
      "texts": [],
@@ -1294,19 +1350,22 @@
        "sheet": "FP",
        "handle": "1096",
        "W_mm": 200,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       },
       {
        "sheet": "CAP",
        "handle": "834",
        "W_mm": 200,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       },
       {
        "sheet": "GBP",
        "handle": "1F2",
        "W_mm": 200,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       }
      ],
      "texts": [
@@ -1338,7 +1397,8 @@
        "sheet": "GFRS",
        "handle": "33E",
        "W_mm": 200,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       }
      ],
      "texts": [],
@@ -1350,7 +1410,8 @@
        "sheet": "FFRS",
        "handle": "67F",
        "W_mm": 200,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       }
      ],
      "texts": [],
@@ -1362,7 +1423,8 @@
        "sheet": "SFRS",
        "handle": "41E",
        "W_mm": 200,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       }
      ],
      "texts": [],
@@ -1385,19 +1447,22 @@
        "sheet": "FP",
        "handle": "10A0",
        "W_mm": 300,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       },
       {
        "sheet": "CAP",
        "handle": "83C",
        "W_mm": 300,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       },
       {
        "sheet": "GBP",
        "handle": "1FC",
        "W_mm": 300,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       }
      ],
      "texts": [
@@ -1417,7 +1482,8 @@
        "sheet": "GFRS",
        "handle": "344",
        "W_mm": 200,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       }
      ],
      "texts": [],
@@ -1456,19 +1522,22 @@
        "sheet": "FP",
        "handle": "10AE",
        "W_mm": 300,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       },
       {
        "sheet": "CAP",
        "handle": "84C",
        "W_mm": 300,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       },
       {
        "sheet": "GBP",
        "handle": "20B",
        "W_mm": 300,
-       "D_mm": 400
+       "D_mm": 400,
+       "hatch": "SOLID"
       }
      ],
      "texts": [
@@ -1500,7 +1569,8 @@
        "sheet": "GFRS",
        "handle": "350",
        "W_mm": 200,
-       "D_mm": 400
+       "D_mm": 400,
+       "hatch": "SOLID"
       }
      ],
      "texts": [],
@@ -1539,19 +1609,22 @@
        "sheet": "FP",
        "handle": "10B1",
        "W_mm": 300,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       },
       {
        "sheet": "CAP",
        "handle": "853",
        "W_mm": 300,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       },
       {
        "sheet": "GBP",
        "handle": "211",
        "W_mm": 300,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       }
      ],
      "texts": [
@@ -1583,7 +1656,8 @@
        "sheet": "GFRS",
        "handle": "353",
        "W_mm": 250,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       }
      ],
      "texts": [],
@@ -1622,19 +1696,22 @@
        "sheet": "FP",
        "handle": "10C5",
        "W_mm": 300,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       },
       {
        "sheet": "CAP",
        "handle": "868",
        "W_mm": 300,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       },
       {
        "sheet": "GBP",
        "handle": "22C",
        "W_mm": 300,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       }
      ],
      "texts": [
@@ -1666,7 +1743,8 @@
        "sheet": "GFRS",
        "handle": "365",
        "W_mm": 250,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       }
      ],
      "texts": [],
@@ -1678,7 +1756,8 @@
        "sheet": "FFRS",
        "handle": "68B",
        "W_mm": 200,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       }
      ],
      "texts": [],
@@ -1709,19 +1788,22 @@
        "sheet": "FP",
        "handle": "10CC",
        "W_mm": 300,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       },
       {
        "sheet": "CAP",
        "handle": "870",
        "W_mm": 300,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       },
       {
        "sheet": "GBP",
        "handle": "234",
        "W_mm": 300,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       }
      ],
      "texts": [
@@ -1753,7 +1835,8 @@
        "sheet": "GFRS",
        "handle": "36B",
        "W_mm": 250,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       }
      ],
      "texts": [],
@@ -1765,7 +1848,8 @@
        "sheet": "FFRS",
        "handle": "691",
        "W_mm": 250,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       }
      ],
      "texts": [],
@@ -1777,7 +1861,8 @@
        "sheet": "SFRS",
        "handle": "424",
        "W_mm": 250,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       }
      ],
      "texts": [],
@@ -1800,19 +1885,22 @@
        "sheet": "FP",
        "handle": "10E4",
        "W_mm": 300,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       },
       {
        "sheet": "CAP",
        "handle": "88A",
        "W_mm": 300,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       },
       {
        "sheet": "GBP",
        "handle": "251",
        "W_mm": 300,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       }
      ],
      "texts": [
@@ -1844,7 +1932,8 @@
        "sheet": "GFRS",
        "handle": "383",
        "W_mm": 250,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       }
      ],
      "texts": [],
@@ -1883,19 +1972,22 @@
        "sheet": "FP",
        "handle": "108D",
        "W_mm": 250,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       },
       {
        "sheet": "CAP",
        "handle": "82A",
        "W_mm": 250,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       },
       {
        "sheet": "GBP",
        "handle": "1E8",
        "W_mm": 250,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       }
      ],
      "texts": [
@@ -1927,7 +2019,8 @@
        "sheet": "GFRS",
        "handle": "335",
        "W_mm": 250,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       }
      ],
      "texts": [],
@@ -1939,7 +2032,8 @@
        "sheet": "FFRS",
        "handle": "676",
        "W_mm": 250,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       }
      ],
      "texts": [],
@@ -1970,19 +2064,22 @@
        "sheet": "FP",
        "handle": "10D7",
        "W_mm": 300,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       },
       {
        "sheet": "CAP",
        "handle": "87C",
        "W_mm": 300,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       },
       {
        "sheet": "GBP",
        "handle": "241",
        "W_mm": 300,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       }
      ],
      "texts": [
@@ -2014,7 +2111,8 @@
        "sheet": "GFRS",
        "handle": "377",
        "W_mm": 250,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       }
      ],
      "texts": [],
@@ -2026,7 +2124,8 @@
        "sheet": "FFRS",
        "handle": "697",
        "W_mm": 250,
-       "D_mm": 500
+       "D_mm": 500,
+       "hatch": "SOLID"
       }
      ],
      "texts": [],
@@ -2057,19 +2156,22 @@
        "sheet": "FP",
        "handle": "108A",
        "W_mm": 300,
-       "D_mm": 600
+       "D_mm": 600,
+       "hatch": "SOLID"
       },
       {
        "sheet": "CAP",
        "handle": "826",
        "W_mm": 300,
-       "D_mm": 600
+       "D_mm": 600,
+       "hatch": "SOLID"
       },
       {
        "sheet": "GBP",
        "handle": "1E4",
        "W_mm": 300,
-       "D_mm": 600
+       "D_mm": 600,
+       "hatch": "SOLID"
       }
      ],
      "texts": [
@@ -2101,7 +2203,8 @@
        "sheet": "GFRS",
        "handle": "332",
        "W_mm": 250,
-       "D_mm": 600
+       "D_mm": 600,
+       "hatch": "SOLID"
       }
      ],
      "texts": [],
@@ -2113,7 +2216,8 @@
        "sheet": "FFRS",
        "handle": "673",
        "W_mm": 250,
-       "D_mm": 600
+       "D_mm": 600,
+       "hatch": "SOLID"
       }
      ],
      "texts": [],
@@ -2125,7 +2229,8 @@
        "sheet": "SFRS",
        "handle": "415",
        "W_mm": 200,
-       "D_mm": 600
+       "D_mm": 600,
+       "hatch": "SOLID"
       }
      ],
      "texts": [],
@@ -2148,19 +2253,22 @@
        "sheet": "FP",
        "handle": "10BD",
        "W_mm": 300,
-       "D_mm": 600
+       "D_mm": 600,
+       "hatch": "SOLID"
       },
       {
        "sheet": "CAP",
        "handle": "862",
        "W_mm": 300,
-       "D_mm": 600
+       "D_mm": 600,
+       "hatch": "SOLID"
       },
       {
        "sheet": "GBP",
        "handle": "223",
        "W_mm": 300,
-       "D_mm": 600
+       "D_mm": 600,
+       "hatch": "SOLID"
       }
      ],
      "texts": [
@@ -2192,7 +2300,8 @@
        "sheet": "GFRS",
        "handle": "35F",
        "W_mm": 250,
-       "D_mm": 600
+       "D_mm": 600,
+       "hatch": "SOLID"
       }
      ],
      "texts": [],
@@ -2204,7 +2313,8 @@
        "sheet": "FFRS",
        "handle": "685",
        "W_mm": 200,
-       "D_mm": 600
+       "D_mm": 600,
+       "hatch": "SOLID"
       }
      ],
      "texts": [],
@@ -2235,19 +2345,22 @@
        "sheet": "FP",
        "handle": "10D3",
        "W_mm": 300,
-       "D_mm": 600
+       "D_mm": 600,
+       "hatch": "SOLID"
       },
       {
        "sheet": "CAP",
        "handle": "878",
        "W_mm": 300,
-       "D_mm": 600
+       "D_mm": 600,
+       "hatch": "SOLID"
       },
       {
        "sheet": "GBP",
        "handle": "23C",
        "W_mm": 300,
-       "D_mm": 600
+       "D_mm": 600,
+       "hatch": "SOLID"
       }
      ],
      "texts": [
@@ -2279,7 +2392,8 @@
        "sheet": "GFRS",
        "handle": "374",
        "W_mm": 250,
-       "D_mm": 600
+       "D_mm": 600,
+       "hatch": "SOLID"
       }
      ],
      "texts": [],
@@ -2291,7 +2405,8 @@
        "sheet": "FFRS",
        "handle": "694",
        "W_mm": 250,
-       "D_mm": 600
+       "D_mm": 600,
+       "hatch": "SOLID"
       }
      ],
      "texts": [],
@@ -2322,19 +2437,22 @@
        "sheet": "FP",
        "handle": "10C2",
        "W_mm": 300,
-       "D_mm": 700
+       "D_mm": 700,
+       "hatch": "SOLID"
       },
       {
        "sheet": "CAP",
        "handle": "865",
        "W_mm": 300,
-       "D_mm": 700
+       "D_mm": 700,
+       "hatch": "SOLID"
       },
       {
        "sheet": "GBP",
        "handle": "228",
        "W_mm": 300,
-       "D_mm": 700
+       "D_mm": 700,
+       "hatch": "SOLID"
       }
      ],
      "texts": [
@@ -2366,7 +2484,8 @@
        "sheet": "GFRS",
        "handle": "362",
        "W_mm": 250,
-       "D_mm": 700
+       "D_mm": 700,
+       "hatch": "SOLID"
       }
      ],
      "texts": [],
@@ -2378,7 +2497,8 @@
        "sheet": "FFRS",
        "handle": "688",
        "W_mm": 250,
-       "D_mm": 700
+       "D_mm": 700,
+       "hatch": "SOLID"
       }
      ],
      "texts": [],
@@ -2409,19 +2529,22 @@
        "sheet": "FP",
        "handle": "10C8",
        "W_mm": 300,
-       "D_mm": 800
+       "D_mm": 800,
+       "hatch": "SOLID"
       },
       {
        "sheet": "CAP",
        "handle": "86C",
        "W_mm": 300,
-       "D_mm": 800
+       "D_mm": 800,
+       "hatch": "SOLID"
       },
       {
        "sheet": "GBP",
        "handle": "230",
        "W_mm": 300,
-       "D_mm": 800
+       "D_mm": 800,
+       "hatch": "SOLID"
       }
      ],
      "texts": [
@@ -2452,7 +2575,8 @@
        "sheet": "GFRS",
        "handle": "368",
        "W_mm": 250,
-       "D_mm": 800
+       "D_mm": 800,
+       "hatch": "SOLID"
       }
      ],
      "texts": [],
@@ -2464,7 +2588,8 @@
        "sheet": "FFRS",
        "handle": "68E",
        "W_mm": 250,
-       "D_mm": 800
+       "D_mm": 800,
+       "hatch": "SOLID"
       }
      ],
      "texts": [],
@@ -2495,19 +2620,22 @@
        "sheet": "FP",
        "handle": "10D0",
        "W_mm": 300,
-       "D_mm": 900
+       "D_mm": 900,
+       "hatch": "SOLID"
       },
       {
        "sheet": "CAP",
        "handle": "873",
        "W_mm": 300,
-       "D_mm": 900
+       "D_mm": 900,
+       "hatch": "SOLID"
       },
       {
        "sheet": "GBP",
        "handle": "238",
        "W_mm": 300,
-       "D_mm": 900
+       "D_mm": 900,
+       "hatch": "SOLID"
       }
      ],
      "texts": [
@@ -2539,7 +2667,8 @@
        "sheet": "GFRS",
        "handle": "36E",
        "W_mm": 250,
-       "D_mm": 900
+       "D_mm": 900,
+       "hatch": "SOLID"
       }
      ],
      "texts": [],
@@ -2551,7 +2680,8 @@
        "sheet": "FFRS",
        "handle": "664",
        "W_mm": 200,
-       "D_mm": 900
+       "D_mm": 900,
+       "hatch": "SOLID"
       }
      ],
      "texts": [],
@@ -2582,19 +2712,22 @@
        "sheet": "FP",
        "handle": "10E0",
        "W_mm": 300,
-       "D_mm": 800
+       "D_mm": 800,
+       "hatch": "SOLID"
       },
       {
        "sheet": "CAP",
        "handle": "886",
        "W_mm": 300,
-       "D_mm": 800
+       "D_mm": 800,
+       "hatch": "SOLID"
       },
       {
        "sheet": "GBP",
        "handle": "24D",
        "W_mm": 300,
-       "D_mm": 800
+       "D_mm": 800,
+       "hatch": "SOLID"
       }
      ],
      "texts": [
@@ -2626,7 +2759,8 @@
        "sheet": "GFRS",
        "handle": "380",
        "W_mm": 250,
-       "D_mm": 800
+       "D_mm": 800,
+       "hatch": "SOLID"
       }
      ],
      "texts": [],
@@ -2638,7 +2772,8 @@
        "sheet": "FFRS",
        "handle": "69A",
        "W_mm": 250,
-       "D_mm": 800
+       "D_mm": 800,
+       "hatch": "SOLID"
       }
      ],
      "texts": [],
@@ -2669,19 +2804,22 @@
        "sheet": "FP",
        "handle": "1090",
        "W_mm": 250,
-       "D_mm": 1000
+       "D_mm": 1000,
+       "hatch": "SOLID"
       },
       {
        "sheet": "CAP",
        "handle": "82E",
        "W_mm": 250,
-       "D_mm": 1000
+       "D_mm": 1000,
+       "hatch": "SOLID"
       },
       {
        "sheet": "GBP",
        "handle": "1EC",
        "W_mm": 250,
-       "D_mm": 1000
+       "D_mm": 1000,
+       "hatch": "SOLID"
       }
      ],
      "texts": [
@@ -2713,7 +2851,8 @@
        "sheet": "GFRS",
        "handle": "338",
        "W_mm": 250,
-       "D_mm": 1000
+       "D_mm": 1000,
+       "hatch": "SOLID"
       }
      ],
      "texts": [],
@@ -2725,7 +2864,8 @@
        "sheet": "FFRS",
        "handle": "679",
        "W_mm": 250,
-       "D_mm": 1000
+       "D_mm": 1000,
+       "hatch": "SOLID"
       }
      ],
      "texts": [],
@@ -2737,7 +2877,8 @@
        "sheet": "SFRS",
        "handle": "418",
        "W_mm": 200,
-       "D_mm": 700
+       "D_mm": 700,
+       "hatch": "SOLID"
       }
      ],
      "texts": [],
@@ -2760,19 +2901,22 @@
        "sheet": "FP",
        "handle": "10DA",
        "W_mm": 300,
-       "D_mm": 1000
+       "D_mm": 1000,
+       "hatch": "SOLID"
       },
       {
        "sheet": "CAP",
        "handle": "880",
        "W_mm": 300,
-       "D_mm": 1000
+       "D_mm": 1000,
+       "hatch": "SOLID"
       },
       {
        "sheet": "GBP",
        "handle": "245",
        "W_mm": 300,
-       "D_mm": 1000
+       "D_mm": 1000,
+       "hatch": "SOLID"
       }
      ],
      "texts": [
@@ -2802,9 +2946,10 @@
      "drawn": [
       {
        "sheet": "GFRS",
-       "handle": "322",
-       "W_mm": 200,
-       "D_mm": 1000
+       "handle": "37A",
+       "W_mm": 250,
+       "D_mm": 1000,
+       "hatch": "SOLID"
       }
      ],
      "texts": [],
@@ -2816,7 +2961,8 @@
        "sheet": "FFRS",
        "handle": "667",
        "W_mm": 200,
-       "D_mm": 1000
+       "D_mm": 1000,
+       "hatch": "SOLID"
       }
      ],
      "texts": [],
@@ -2847,19 +2993,22 @@
        "sheet": "FP",
        "handle": "10EE",
        "W_mm": 300,
-       "D_mm": 300
+       "D_mm": 300,
+       "hatch": "NONE"
       },
       {
        "sheet": "CAP",
        "handle": "88F",
        "W_mm": 300,
-       "D_mm": 300
+       "D_mm": 300,
+       "hatch": "NONE"
       },
       {
        "sheet": "GBP",
        "handle": "7ED",
        "W_mm": 300,
-       "D_mm": 300
+       "D_mm": 300,
+       "hatch": "NONE"
       }
      ],
      "texts": [
@@ -2924,19 +3073,22 @@
        "sheet": "FP",
        "handle": "10F6",
        "W_mm": 300,
-       "D_mm": 300
+       "D_mm": 300,
+       "hatch": "NONE"
       },
       {
        "sheet": "CAP",
        "handle": "892",
        "W_mm": 300,
-       "D_mm": 300
+       "D_mm": 300,
+       "hatch": "NONE"
       },
       {
        "sheet": "GBP",
        "handle": "7F5",
        "W_mm": 300,
-       "D_mm": 300
+       "D_mm": 300,
+       "hatch": "NONE"
       }
      ],
      "texts": [
@@ -3001,19 +3153,22 @@
        "sheet": "FP",
        "handle": "10FE",
        "W_mm": 300,
-       "D_mm": 300
+       "D_mm": 300,
+       "hatch": "NONE"
       },
       {
        "sheet": "CAP",
        "handle": "895",
        "W_mm": 300,
-       "D_mm": 300
+       "D_mm": 300,
+       "hatch": "NONE"
       },
       {
        "sheet": "GBP",
        "handle": "809",
        "W_mm": 300,
-       "D_mm": 300
+       "D_mm": 300,
+       "hatch": "NONE"
       }
      ],
      "texts": [
@@ -3080,19 +3235,22 @@
        "sheet": "FP",
        "handle": "17C5",
        "W_mm": 300,
-       "D_mm": 300
+       "D_mm": 300,
+       "hatch": "NONE"
       },
       {
        "sheet": "CAP",
        "handle": "17CC",
        "W_mm": 300,
-       "D_mm": 300
+       "D_mm": 300,
+       "hatch": "NONE"
       },
       {
        "sheet": "GBP",
        "handle": "17BD",
        "W_mm": 300,
-       "D_mm": 300
+       "D_mm": 300,
+       "hatch": "NONE"
       }
      ],
      "texts": [
@@ -3157,19 +3315,22 @@
        "sheet": "FP",
        "handle": "17C8",
        "W_mm": 300,
-       "D_mm": 300
+       "D_mm": 300,
+       "hatch": "NONE"
       },
       {
        "sheet": "CAP",
        "handle": "17CF",
        "W_mm": 300,
-       "D_mm": 300
+       "D_mm": 300,
+       "hatch": "NONE"
       },
       {
        "sheet": "GBP",
        "handle": "17C0",
        "W_mm": 300,
-       "D_mm": 300
+       "D_mm": 300,
+       "hatch": "NONE"
       }
      ],
      "texts": [
@@ -3224,13 +3385,15 @@
        "sheet": "FP",
        "handle": "180A",
        "W_mm": 300,
-       "D_mm": 300
+       "D_mm": 300,
+       "hatch": "NONE"
       },
       {
        "sheet": "GBP",
        "handle": "17BA",
        "W_mm": 300,
-       "D_mm": 300
+       "D_mm": 300,
+       "hatch": "NONE"
       }
      ],
      "texts": [],
@@ -3266,53 +3429,143 @@
    }
   }
  ],
- "outlines_not_over_a_neck": {
-  "GFRS": [
-   {
-    "handle": "31B",
+ "members_starting_on_a_slab": [
+  {
+   "start_sheet": "GFRS",
+   "start_handle": "31B",
+   "W_mm": 200,
+   "D_mm": 900,
+   "storey": "1F",
+   "on_neck": "10D0",
+   "pc_text": null,
+   "own_outline": {
+    "sheet": "FFRS",
+    "handle": "664",
     "W_mm": 200,
     "D_mm": 900
-   },
-   {
-    "handle": "329",
-    "W_mm": 200,
-    "D_mm": 700
-   },
-   {
-    "handle": "37A",
-    "W_mm": 250,
-    "D_mm": 1000
-   },
-   {
-    "handle": "386",
-    "W_mm": 200,
-    "D_mm": 500
    }
-  ],
-  "FFRS": [
-   {
+  },
+  {
+   "start_sheet": "GFRS",
+   "start_handle": "322",
+   "W_mm": 200,
+   "D_mm": 1000,
+   "storey": "1F",
+   "on_neck": "10DA",
+   "pc_text": null,
+   "own_outline": {
+    "sheet": "FFRS",
+    "handle": "667",
+    "W_mm": 200,
+    "D_mm": 1000
+   }
+  },
+  {
+   "start_sheet": "GFRS",
+   "start_handle": "329",
+   "W_mm": 200,
+   "D_mm": 700,
+   "storey": "1F",
+   "on_neck": null,
+   "pc_text": {
+    "handle": "544",
+    "W_cm": 20,
+    "D_cm": 70
+   },
+   "own_outline": {
+    "sheet": "FFRS",
     "handle": "66A",
     "W_mm": 200,
     "D_mm": 700
+   }
+  },
+  {
+   "start_sheet": "GFRS",
+   "start_handle": "386",
+   "W_mm": 200,
+   "D_mm": 500,
+   "storey": "1F",
+   "on_neck": null,
+   "pc_text": {
+    "handle": "548",
+    "W_cm": 20,
+    "D_cm": 50
    },
-   {
+   "own_outline": {
+    "sheet": "FFRS",
     "handle": "69D",
     "W_mm": 200,
     "D_mm": 500
-   },
-   {
-    "handle": "77B",
-    "W_mm": 200,
-    "D_mm": 400
    }
-  ],
-  "SFRS": [
-   {
+  },
+  {
+   "start_sheet": "FFRS",
+   "start_handle": "77B",
+   "W_mm": 200,
+   "D_mm": 400,
+   "storey": "2F",
+   "on_neck": null,
+   "pc_text": {
+    "handle": "77C",
+    "W_cm": 20,
+    "D_cm": 50
+   },
+   "own_outline": {
+    "sheet": "SFRS",
     "handle": "778",
     "W_mm": 200,
     "D_mm": 400
    }
-  ]
+  }
+ ],
+ "slab_plan_notes": [
+  {
+   "sheet": "GFRS",
+   "handle": "31F",
+   "kind": "T.C",
+   "W_cm": null,
+   "D_cm": null
+  },
+  {
+   "sheet": "GFRS",
+   "handle": "324",
+   "kind": "T.C",
+   "W_cm": null,
+   "D_cm": null
+  },
+  {
+   "sheet": "GFRS",
+   "handle": "38A",
+   "kind": "D.C",
+   "W_cm": null,
+   "D_cm": null
+  },
+  {
+   "sheet": "GFRS",
+   "handle": "544",
+   "kind": "P.C",
+   "W_cm": 20,
+   "D_cm": 70
+  },
+  {
+   "sheet": "GFRS",
+   "handle": "548",
+   "kind": "P.C",
+   "W_cm": 20,
+   "D_cm": 50
+  },
+  {
+   "sheet": "FFRS",
+   "handle": "77C",
+   "kind": "P.C",
+   "W_cm": 20,
+   "D_cm": 50
+  }
+ ],
+ "outlines_not_over_a_neck": {
+  "GFRS": [],
+  "FFRS": [],
+  "SFRS": []
  },
  "counts": {
   "FP": 36,
