@@ -1,0 +1,26 @@
+{
+ "input": "ALSENAN_T197_INPUT.json",
+ "issues_by_scenario": {
+  "CANDIDATE_V304_PLUS_RING": {
+   "BASIS_UNNAMED": 2,
+   "DOUBLE_ARC": 4,
+   "PARTIAL": 2
+  },
+  "CANDIDATE_V305": {
+   "BASIS_UNNAMED": 2,
+   "PARTIAL": 2
+  },
+  "FREELANCER_INFORMATION": {
+   "BASIS_UNNAMED": 1
+  },
+  "LEDGERS_MERGED": {
+   "BASIS_UNNAMED": 3,
+   "OVER_OUTLINE": 1
+  },
+  "RELEASED_V29_ROUTEG": {
+   "BASIS_UNNAMED": 2,
+   "PARTIAL": 3
+  }
+ },
+ "method": "CURVED_GEOMETRY_CHECK_V1"
+}

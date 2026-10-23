@@ -1,0 +1,392 @@
+[
+ {
+  "arcs": [
+   {
+    "chord": 2.973645,
+    "length": 3.289498,
+    "piece_id": "BD2",
+    "r": 2.135,
+    "role": "OUTER",
+    "side": null,
+    "sweep_deg": 88.27839
+   },
+   {
+    "chord": 2.691719,
+    "length": 2.976663,
+    "piece_id": "BCE",
+    "r": 1.935,
+    "role": "INNER",
+    "side": null,
+    "sweep_deg": 88.139658
+   }
+  ],
+  "area_candidates": {},
+  "curved": true,
+  "element_id": "W17",
+  "kind": "OPENING",
+  "length_candidates": {
+   "ARC:INNER": 2.976663,
+   "ARC:OUTER": 3.289498,
+   "CHORD:INNER": 2.691719,
+   "CHORD:OUTER": 2.973645
+  },
+  "ref": "P7757.dxf 1F plan: ARC BD2 (layer W, r 2135) outer glazing arc; ARC BCE (layer 5, r 1935) wall-face arc between the jamb ends (T-194)"
+ },
+ {
+  "arcs": [
+   {
+    "chord": 0.176772,
+    "length": 0.176822,
+    "piece_id": "BD1",
+    "r": 2.135,
+    "role": "FACE",
+    "side": "OUT",
+    "sweep_deg": 4.745275
+   },
+   {
+    "chord": 2.973645,
+    "length": 3.289498,
+    "piece_id": "BD2",
+    "r": 2.135,
+    "role": "FACE",
+    "side": "OUT",
+    "sweep_deg": 88.27839
+   },
+   {
+    "chord": 0.043441,
+    "length": 0.043442,
+    "piece_id": "BD6",
+    "r": 2.135,
+    "role": "FACE",
+    "side": "OUT",
+    "sweep_deg": 1.16583
+   }
+  ],
+  "area_candidates": {
+   "CHORD:AREA": 20.325219,
+   "TRUE:AREA": 19.091545
+  },
+  "curved": true,
+  "element_id": "1F-11",
+  "kind": "ROOM_CONTOUR",
+  "length_candidates": {
+   "ARC:FACE": 22.15067,
+   "CHORD:FACE": 21.834765,
+   "STRAIGHT:FACE": 18.640908
+  },
+  "ref": "P7757.dxf 1F plan: east master bed room + entry, layer 1 / W faces by handle (Checker T-128 r3 verdict 2026-10-22 18:05), door gaps virtual"
+ },
+ {
+  "arcs": [
+   {
+    "chord": 3.5,
+    "length": 5.497787,
+    "piece_id": "7C6.2",
+    "r": 1.75,
+    "role": "OUTER",
+    "side": "IN",
+    "sweep_deg": -180.0
+   },
+   {
+    "chord": 3.1,
+    "length": 4.869469,
+    "piece_id": "7C5.2",
+    "r": 1.55,
+    "role": "INNER",
+    "side": "OUT",
+    "sweep_deg": -180.0
+   }
+  ],
+  "area_candidates": {
+   "CHORD:AREA": 1.32,
+   "TRUE:AREA": 2.356726
+  },
+  "curved": true,
+  "element_id": "POOL-GF-WALL",
+  "kind": "POOL_WALL",
+  "length_candidates": {
+   "ARC:CENTRELINE": 11.783628,
+   "ARC:INNER": 11.069469,
+   "ARC:OUTER": 12.497787,
+   "CHORD:CENTRELINE": 9.9,
+   "CHORD:INNER": 9.3,
+   "CHORD:OUTER": 10.5,
+   "STRAIGHT:INNER": 6.2,
+   "STRAIGHT:OUTER": 7.0
+  },
+  "ref": "ST7757 dxf.dxf ground beams plan, layer S-BW: LWPOLYLINE 7C6 (outer D), 7C5 (water D); walls 20 (ST p.7)"
+ },
+ {
+  "arcs": [
+   {
+    "chord": 3.5,
+    "length": 5.497787,
+    "piece_id": "B7C6.2",
+    "r": 1.75,
+    "role": "OUTER",
+    "side": "IN",
+    "sweep_deg": -180.0
+   }
+  ],
+  "area_candidates": {
+   "CHORD:AREA": 6.125,
+   "TRUE:AREA": 10.935564
+  },
+  "curved": true,
+  "element_id": "POOL-GF-BASE",
+  "kind": "POOL_WALL",
+  "length_candidates": {
+   "ARC:OUTER": 12.497787,
+   "CHORD:OUTER": 10.5,
+   "STRAIGHT:OUTER": 7.0
+  },
+  "ref": "ST7757 dxf.dxf layer S-BW: LWPOLYLINE 7C6 (outer D = base footprint, T-183 r2)"
+ },
+ {
+  "arcs": [
+   {
+    "chord": 1.332283,
+    "length": 1.349842,
+    "piece_id": "o",
+    "r": 2.411091,
+    "role": "OUTER",
+    "side": "IN",
+    "sweep_deg": 32.07687
+   },
+   {
+    "chord": 1.22177,
+    "length": 1.237873,
+    "piece_id": "i",
+    "r": 2.211092,
+    "role": "INNER",
+    "side": "OUT",
+    "sweep_deg": 32.07687
+   }
+  ],
+  "area_candidates": {
+   "CHORD:AREA": 0.245464,
+   "TRUE:AREA": 0.258772
+  },
+  "curved": true,
+  "element_id": "DOME-1F-W-BAND-NE",
+  "kind": "RING",
+  "length_candidates": {
+   "ARC:CENTRELINE": 1.293858,
+   "ARC:FACE": 0.4,
+   "ARC:INNER": 1.237873,
+   "ARC:OUTER": 1.349842,
+   "CHORD:CENTRELINE": 1.277027,
+   "CHORD:INNER": 1.22177,
+   "CHORD:OUTER": 1.332283
+  },
+  "ref": "route G 1F slab overlay arc band under ARC 600 (one of BAND0033..0036; identified by its sector area, T-179 s.5.1)"
+ },
+ {
+  "arcs": [
+   {
+    "chord": 1.554489,
+    "length": 1.582754,
+    "piece_id": "o",
+    "r": 2.411091,
+    "role": "OUTER",
+    "side": "IN",
+    "sweep_deg": 37.611658
+   },
+   {
+    "chord": 1.425544,
+    "length": 1.451465,
+    "piece_id": "i",
+    "r": 2.211092,
+    "role": "INNER",
+    "side": "OUT",
+    "sweep_deg": 37.611658
+   }
+  ],
+  "area_candidates": {
+   "CHORD:AREA": 0.282095,
+   "TRUE:AREA": 0.303422
+  },
+  "curved": true,
+  "element_id": "DOME-1F-W-BAND-NW",
+  "kind": "RING",
+  "length_candidates": {
+   "ARC:CENTRELINE": 1.51711,
+   "ARC:FACE": 0.4,
+   "ARC:INNER": 1.451465,
+   "ARC:OUTER": 1.582754,
+   "CHORD:CENTRELINE": 1.490016,
+   "CHORD:INNER": 1.425544,
+   "CHORD:OUTER": 1.554489
+  },
+  "ref": "route G 1F slab overlay arc band under ARC 601 (one of BAND0033..0036; identified by its sector area, T-179 s.5.1)"
+ },
+ {
+  "arcs": [
+   {
+    "chord": 1.554489,
+    "length": 1.582754,
+    "piece_id": "o",
+    "r": 2.411091,
+    "role": "OUTER",
+    "side": "IN",
+    "sweep_deg": 37.611658
+   },
+   {
+    "chord": 1.425544,
+    "length": 1.451465,
+    "piece_id": "i",
+    "r": 2.211092,
+    "role": "INNER",
+    "side": "OUT",
+    "sweep_deg": 37.611658
+   }
+  ],
+  "area_candidates": {
+   "CHORD:AREA": 0.282095,
+   "TRUE:AREA": 0.303422
+  },
+  "curved": true,
+  "element_id": "DOME-1F-W-BAND-SW",
+  "kind": "RING",
+  "length_candidates": {
+   "ARC:CENTRELINE": 1.51711,
+   "ARC:FACE": 0.4,
+   "ARC:INNER": 1.451465,
+   "ARC:OUTER": 1.582754,
+   "CHORD:CENTRELINE": 1.490016,
+   "CHORD:INNER": 1.425544,
+   "CHORD:OUTER": 1.554489
+  },
+  "ref": "route G 1F slab overlay arc band under ARC 602 (one of BAND0033..0036; identified by its sector area, T-179 s.5.1)"
+ },
+ {
+  "arcs": [
+   {
+    "chord": 1.332283,
+    "length": 1.349842,
+    "piece_id": "o",
+    "r": 2.411091,
+    "role": "OUTER",
+    "side": "IN",
+    "sweep_deg": 32.07687
+   },
+   {
+    "chord": 1.22177,
+    "length": 1.237873,
+    "piece_id": "i",
+    "r": 2.211092,
+    "role": "INNER",
+    "side": "OUT",
+    "sweep_deg": 32.07687
+   }
+  ],
+  "area_candidates": {
+   "CHORD:AREA": 0.245464,
+   "TRUE:AREA": 0.258772
+  },
+  "curved": true,
+  "element_id": "DOME-1F-W-BAND-SE",
+  "kind": "RING",
+  "length_candidates": {
+   "ARC:CENTRELINE": 1.293858,
+   "ARC:FACE": 0.4,
+   "ARC:INNER": 1.237873,
+   "ARC:OUTER": 1.349842,
+   "CHORD:CENTRELINE": 1.277027,
+   "CHORD:INNER": 1.22177,
+   "CHORD:OUTER": 1.332283
+  },
+  "ref": "route G 1F slab overlay arc band under ARC 603 (one of BAND0033..0036; identified by its sector area, T-179 s.5.1)"
+ },
+ {
+  "arcs": [
+   {
+    "chord": 1.332283,
+    "length": 1.349842,
+    "piece_id": "ONE",
+    "r": 2.411091,
+    "role": "OUTER",
+    "side": "IN",
+    "sweep_deg": 32.07687
+   },
+   {
+    "chord": 2.346485,
+    "length": 2.473452,
+    "piece_id": "INE",
+    "r": 2.211092,
+    "role": "INNER",
+    "side": "OUT",
+    "sweep_deg": 64.094299
+   },
+   {
+    "chord": 1.554489,
+    "length": 1.582754,
+    "piece_id": "ONW",
+    "r": 2.411091,
+    "role": "OUTER",
+    "side": "IN",
+    "sweep_deg": 37.611658
+   },
+   {
+    "chord": 2.621176,
+    "length": 2.805647,
+    "piece_id": "INW",
+    "r": 2.211092,
+    "role": "INNER",
+    "side": "OUT",
+    "sweep_deg": 72.702441
+   },
+   {
+    "chord": 1.554489,
+    "length": 1.582754,
+    "piece_id": "OSW",
+    "r": 2.411091,
+    "role": "OUTER",
+    "side": "IN",
+    "sweep_deg": 37.611658
+   },
+   {
+    "chord": 2.621176,
+    "length": 2.805647,
+    "piece_id": "ISW",
+    "r": 2.211092,
+    "role": "INNER",
+    "side": "OUT",
+    "sweep_deg": 72.702441
+   },
+   {
+    "chord": 1.332283,
+    "length": 1.349842,
+    "piece_id": "OSE",
+    "r": 2.411091,
+    "role": "OUTER",
+    "side": "IN",
+    "sweep_deg": 32.07687
+   },
+   {
+    "chord": 2.346485,
+    "length": 2.473452,
+    "piece_id": "ISE",
+    "r": 2.211092,
+    "role": "INNER",
+    "side": "OUT",
+    "sweep_deg": 64.094299
+   }
+  ],
+  "area_candidates": {
+   "CHORD:AREA": 3.681973,
+   "TRUE:AREA": 1.510479
+  },
+  "curved": true,
+  "element_id": "DOME-1F-W-RING",
+  "kind": "RING",
+  "length_candidates": {
+   "ARC:FACE": 5.654416,
+   "ARC:INNER": 10.558199,
+   "ARC:OUTER": 5.865194,
+   "CHORD:INNER": 9.935322,
+   "CHORD:OUTER": 5.773543
+  },
+  "ref": "ST7757 dxf.dxf p.5: ARC 600..603 (r 2411.09, outer, drawn between the framing faces), ARC 5FE / 5FF (r 2211.09, inner); in-bay ring = 4 pieces between the faces (T-160, BM-1F-028 B4 20 x 50)"
+ }
+]
