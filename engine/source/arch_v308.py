@@ -119,7 +119,7 @@ WAITING.update({
     "BEAMS_AT_PLANTED_COLUMNS": "the carrying beams cut at the planted columns by route G (short under the column) are "
                                 "T-229's (merged, rule proposal R-BEAM-CONT-1); their lines are NOT changed here",
     "STRAP_STEEL_FORMWORK_EXCAVATION": "strap bars at the axis run, side formwork and excavation (T-174 ledger) are a "
-                                       "later package (rebar / formwork / earthworks lines, T-199 for formwork)",
+                                       "later package (bar / formwork / earthworks lines, T-199 for formwork)",
 })
 
 

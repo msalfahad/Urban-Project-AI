@@ -433,3 +433,10 @@ def test_guard_re_check_runs_over_the_v308_view():
 def test_adverse_guard_refuses_a_drawn_part_no_line_carries():
     with pytest.raises(A308.InputsError, match="carried by no line"):
         run(inputs(guard=guard(inventory_parts=("CONCRETE", "IN_FOOTING"))))
+
+
+def test_module_names_no_reinforcement_word():
+    # the rebar product firewall (tests/structural_comparison_engine) declares every engine module naming reinforcement;
+    # the candidate integration module carries concrete only and names none
+    src = (ROOT / "engine/source/arch_v308.py").read_text(encoding="utf-8").lower()
+    assert not any(w in src for w in ("rebar", "bbs", "reinforc"))
