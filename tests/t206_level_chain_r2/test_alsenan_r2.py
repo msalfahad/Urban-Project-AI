@@ -106,3 +106,17 @@ def test_written_summary_matches_a_fresh_run():
     assert s["r2"]["summary"] == A.run()["summary"]
     assert json.loads((ROOT / "research" / "agents_t206" / "ALSENAN_LEVEL_INPUT_R2.json").read_text(
         encoding="utf-8")) == A.build_r2()
+
+
+def test_sunken_registration_record_and_helpers():
+    sys.path.insert(0, str(ROOT / "research" / "agents_t206"))
+    import t206_sunken_registration as R
+    reg = json.loads((ROOT / "research" / "agents_t206" / "SUNKEN_REGISTRATION.json").read_text(encoding="utf-8"))
+    assert len(reg["1F"]["sunken_panels"]) == 5 and len(reg["2F"]["sunken_panels"]) == 1
+    for storey in ("1F", "2F"):     # every wet fixture group under a sunken panel, every panel over fixtures
+        assert all(f["under_sunken_panel"] for f in reg[storey]["fixture_groups"])
+        assert all(p["fixture_groups_overlapping"] for p in reg[storey]["sunken_panels"])
+    # helpers: two fixtures 0.3 m apart group, 1.0 m apart do not; overlap tolerance 0.3 m
+    assert len(R._group([[0, 0, 1, 1], [1.3, 0, 2, 1]], 0.4)) == 1
+    assert len(R._group([[0, 0, 1, 1], [2.0, 0, 3, 1]], 0.4)) == 2
+    assert R._overlap([0, 0, 1, 1], [1.2, 0, 2, 1]) and not R._overlap([0, 0, 1, 1], [1.5, 0, 2, 1])

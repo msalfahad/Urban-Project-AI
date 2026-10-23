@@ -88,9 +88,13 @@ of the B20 / B23 stair-head lines: as T-189 rev2, conditional; HELD-reason LEVEL
 The slab legend (p.3-p.6) has a "Sunken slab." hatch (lines 7.1 pt apart; "Cantilever-portion." 2.8 pt, "Bearing wall."
 3.2 pt). On the plans: 5 sunken panels on the GF roof slab (= 1F floor) and 1 on the 1F roof slab (= 2F floor); in the
 DXF they are HATCH ANSI31 scale 2000 on layer S-HAT.BAT (handles 275, 276, 280, 287, 298; 5BF), the cantilever hatch
-ANSI31 scale 800. Each lies under a room with a floor drain on sanitary-7757.pdf (hand registration on the 31.37 x 15.00
-plot frame, within about 0.5 m): two north 1F wet rooms, the south-west 1F wet rooms, the east 1F wet room, the 2F
-maid-room wet room. The 1F laundry has a floor drain but no sunken hatch. The sanitary sheets run the branches "B.T.T.S."
+ANSI31 scale 800. Registration (vector, reproducible: `t206_sunken_registration.py <private folder>` ->
+`SUNKEN_REGISTRATION.json`, plot metres from each sheet's own 31.37 x 15.00 frame): on the 1F the sunken hatch groups
+cover all 7 groups of sanitary fixtures (blue) of sanitary sheet 2 (north wet rooms u 19.9 .. 23.5 m, east wet room
+u 27.4 .. 29.9 m, south-west wet rooms u 10.8 .. 15.3 m), on the 2F the one panel (u 17.9 .. 19.7, v 1.7 .. 4.7 m)
+covers both fixture groups of sheet 3 (maid-room wet room); no fixture group lies outside a sunken panel and no
+sunken panel is without fixtures. (The PDF splits DXF 276 in two by a beam line and joins 280 / 287: 5 PDF groups on the
+1F = the 5 DXF hatches.) The 1F laundry has a floor drain but no sunken hatch. The sanitary sheets run the branches "B.T.T.S."
 (below the slab) and "T/B" (to below), so the drop is for the wet-room build-up / falls, not for pipes inside the slab.
 **No sheet prints the drop** (no text, level or dimension inside or beside any sunken hatch, no section through one).
 

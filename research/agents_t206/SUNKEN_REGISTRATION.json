@@ -1,0 +1,201 @@
+{
+ "1F": {
+  "st_page": 4,
+  "sanitary_sheet": 2,
+  "sunken_panels": [
+   {
+    "extent_m": [
+     19.9,
+     1.75,
+     21.29,
+     2.25
+    ],
+    "hatch_lines": 5,
+    "median_gap_pt": 7.1,
+    "fixture_groups_overlapping": [
+     0,
+     1
+    ]
+   },
+   {
+    "extent_m": [
+     21.57,
+     1.75,
+     23.47,
+     3.5
+    ],
+    "hatch_lines": 15,
+    "median_gap_pt": 7.0,
+    "fixture_groups_overlapping": [
+     1,
+     2
+    ]
+   },
+   {
+    "extent_m": [
+     20.33,
+     2.43,
+     21.37,
+     3.5
+    ],
+    "hatch_lines": 5,
+    "median_gap_pt": 7.1,
+    "fixture_groups_overlapping": [
+     0,
+     1
+    ]
+   },
+   {
+    "extent_m": [
+     27.42,
+     5.97,
+     29.87,
+     7.95
+    ],
+    "hatch_lines": 27,
+    "median_gap_pt": 1.8,
+    "fixture_groups_overlapping": [
+     3,
+     4,
+     5
+    ]
+   },
+   {
+    "extent_m": [
+     10.8,
+     10.3,
+     15.31,
+     13.5
+    ],
+    "hatch_lines": 52,
+    "median_gap_pt": 7.1,
+    "fixture_groups_overlapping": [
+     6
+    ]
+   }
+  ],
+  "fixture_groups": [
+   {
+    "extent_m": [
+     19.9,
+     1.7,
+     20.9,
+     3.3
+    ],
+    "fixture_paths": 80,
+    "filled_orange_nearby": 0,
+    "under_sunken_panel": true
+   },
+   {
+    "extent_m": [
+     21.52,
+     1.7,
+     22.31,
+     3.34
+    ],
+    "fixture_paths": 99,
+    "filled_orange_nearby": 0,
+    "under_sunken_panel": true
+   },
+   {
+    "extent_m": [
+     22.83,
+     1.7,
+     23.23,
+     2.36
+    ],
+    "fixture_paths": 24,
+    "filled_orange_nearby": 0,
+    "under_sunken_panel": true
+   },
+   {
+    "extent_m": [
+     28.39,
+     5.85,
+     29.43,
+     6.44
+    ],
+    "fixture_paths": 32,
+    "filled_orange_nearby": 0,
+    "under_sunken_panel": true
+   },
+   {
+    "extent_m": [
+     28.88,
+     7.16,
+     29.67,
+     7.95
+    ],
+    "fixture_paths": 43,
+    "filled_orange_nearby": 0,
+    "under_sunken_panel": true
+   },
+   {
+    "extent_m": [
+     27.78,
+     7.29,
+     28.18,
+     7.95
+    ],
+    "fixture_paths": 24,
+    "filled_orange_nearby": 0,
+    "under_sunken_panel": true
+   },
+   {
+    "extent_m": [
+     10.8,
+     10.94,
+     15.05,
+     13.18
+    ],
+    "fixture_paths": 202,
+    "filled_orange_nearby": 0,
+    "under_sunken_panel": true
+   }
+  ]
+ },
+ "2F": {
+  "st_page": 5,
+  "sanitary_sheet": 3,
+  "sunken_panels": [
+   {
+    "extent_m": [
+     17.9,
+     1.7,
+     19.7,
+     4.7
+    ],
+    "hatch_lines": 17,
+    "median_gap_pt": 7.1,
+    "fixture_groups_overlapping": [
+     0,
+     1
+    ]
+   }
+  ],
+  "fixture_groups": [
+   {
+    "extent_m": [
+     17.9,
+     2.5,
+     19.75,
+     3.38
+    ],
+    "fixture_paths": 43,
+    "filled_orange_nearby": 0,
+    "under_sunken_panel": true
+   },
+   {
+    "extent_m": [
+     17.9,
+     3.82,
+     18.4,
+     4.46
+    ],
+    "fixture_paths": 56,
+    "filled_orange_nearby": 0,
+    "under_sunken_panel": true
+   }
+  ]
+ }
+}
