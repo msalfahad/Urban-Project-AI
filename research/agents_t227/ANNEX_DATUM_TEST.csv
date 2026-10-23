@@ -1,0 +1,10 @@
+source,what it shows,verdict
+SECTION B-B (Pages_11-12 p.1),"the +4.30 marker apex sits on the TOP line of a thin unhatched layer laid over the hatched roof band (same drawing as T-214's 0.050 / 0.200 band, read again this run at 500 dpi); +4.30 is the finished-roof line, the hatched structure lies below it",NOT THE SLAB
+"ST7757 dxf.dxf, all text (nested)","no structural level of any slab (only the architect's FFL marks +0.15 / +0.30 / +1.00 / +9.70 copied on the ground-beam plan), no '+4.30', no roof build-up; note 18: slab 0.16 'unless stated' (thickness only, no level)",SILENT
+ST7757.pdf p.1-16 (T-206 read all 16; p.8 re-read this run),"no S.S.L / T.O.S of the annex roof; the only S.S.L values are the N.T.S. stair template of p.16 (not a project datum, T-206)",SILENT
+roof build-up / roof detail,no roof detail in the architectural set (Pages_11-12 p.2 is the fence; P7757.dxf has no roof / insulation / waterproofing text); the only 'INSULATION MEMBRANE' text in ST7757 dxf.dxf is a foundation detail,SILENT
+sanitary-7757.pdf (T-214 citation),"SLOPE 1 % printed on the +4.30 annex roof: the build-up varies, so a constant drawn 0.05 cannot be the roof build-up (T-214 CONSTANT_LAYER_VS_FALLS, MERGED b29060c2)",NOT THE SLAB
+elevations (T-063 / T-200 DRAWING-CONFIRMED),"+4.30 roof and parapet +4.80 ('480', 0.50 parapet) on the same convention as the +5.50 / +9.70 terraces, which are finished levels (T-200)",FINISHED LEVEL
+annex door / window heads (T-201),"W04 / W08 heads +2.80 (2.50 above +0.30): they fix the openings, not the slab (1.50 m below +4.30 with the lintel and masonry between)",SILENT
+"annex floor (T-214, MERGED)",drawn dry layer 0.05 under +0.30: floor slab top +0.25 DRAWING-CONFIRMED,FLOOR ONLY
+UP-MAS-DATUM-001 on the readings,floor: R3 DRAWING-CONFIRMED slab top 0.25; roof: R3 HELD (CONSTANT_LAYER_VS_FALLS: a constant drawn layer is not a roof build-up (falls printed)),HELD

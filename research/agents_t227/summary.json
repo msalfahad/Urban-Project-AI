@@ -1,0 +1,67 @@
+{
+ "package": "T-227",
+ "inputs": {
+  "register_v1": "research/agents_t225/BLOCKWORK_WALL_REGISTER_V1.csv",
+  "heads": [
+   "research/agents_t201/HEADS_T201.csv",
+   "research/agents_t207/CLOSURE_T207.csv"
+  ]
+ },
+ "delta_rows": 32,
+ "nets_newly_source_supported": {
+  "GF-W16": 15.404,
+  "1F-W00": 11.979,
+  "1F-W06": 54.487,
+  "1F-W10": 44.929
+ },
+ "nets_newly_source_supported_total_m2": 126.799,
+ "deductions_added_m2": {
+  "GF-W04": "4.710",
+  "GF-W10": "3.420",
+  "GF-W16": "3.750",
+  "GF-W18": "8.580",
+  "1F-W00": "10.690",
+  "1F-W06": "3.285",
+  "1F-W10": "2.940",
+  "2F-W02": "3.780"
+ },
+ "net_source_supported_total_before_after_m2": [
+  252.815,
+  379.614
+ ],
+ "annex": {
+  "walls": [
+   "GF-W00",
+   "GF-W02",
+   "GF-W04",
+   "GF-W06",
+   "GF-W17",
+   "GF-W18",
+   "GF-W23",
+   "GF-W24",
+   "GF-W25",
+   "GF-W26",
+   "GF-W27",
+   "GF-W35",
+   "GF-W36"
+  ],
+  "storey_test": "HELD",
+  "roof_rule": "CONSTANT_LAYER_VS_FALLS: a constant drawn layer is not a roof build-up (falls printed)",
+  "floor_slab_top_m": 0.25,
+  "gross_figure_m2_not_a_quantity": 167.53,
+  "sensitivity_m2_per_cm_b_roof": 0.4783
+ },
+ "lift_tie_beam": {
+  "applies": true,
+  "status": "HELD",
+  "strip_m2": null,
+  "reason": "tie beam required; section not printed: strip 5.500 m x depth HELD"
+ },
+ "lift_openings": {
+  "status": "HELD",
+  "height_m": null,
+  "basis": "no printed / drawn height; owner fallback scope INTERNAL_DOOR does not cover LIFT_LANDING"
+ },
+ "dome_pieces_m": 10.29,
+ "verified_by_checker_m2": 0.0
+}
