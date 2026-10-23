@@ -1,0 +1,33 @@
+{
+ "SCHEMA": "T191_POOL_STEEL_INPUT_V1",
+ "source": "printed / drawn values only. Structure: Drive 'Alsenan chalet project' / ST7757.pdf p.7 DETAIL OF SWIMMING POOL (N.I.S.): section labels and the exploded bar views under it (re-read at 300 dpi this run); p.8 note 9 (development / tie length 70 d tension, 40 d compression), note 22 (cover 7 cm in contact with soil; 2.5 cm columns / beams / slabs; walls not listed). Geometry and levels: the checker-merged T-183 r2 ledger (outer D back 3.50, sides 1.75, half circle r 1.75; walls 0.20; base 0.40; rim +0.30, structure line -0.90, finished floor -0.85, build-up 0.05), cited, not re-derived. Owner Q-26 A (flat floor: the sloped-zone bars of p.7 are not used).",
+ "unit": "m",
+ "outline": {"kind": "D", "r": 1.75, "b": 1.75},
+ "wall_t": 0.20, "base_t": 0.40,
+ "levels": {"rim": 0.30, "base_top_structural": -0.90, "finished_floor": -0.85, "floor_buildup": 0.05},
+ "soil_cover": 0.07,
+ "nonsoil_cover": null,
+ "main_dirs": ["x", "y"],
+ "lap_d_factors": [40, 70],
+ "populations": {
+  "R1_deep_end_detail": {
+   "WV_OUT": {"n_per_m": 7, "d": 14, "shape": "L_LEG_FLOOR_BOTTOM", "label": "7ø14/m (section, outer face; bar view: L with a floor leg)"},
+   "WV_IN": {"n_per_m": 7, "d": 12, "shape": "TOP_HOOK_BOTTOM_BOX", "label": "7ø12/m (section, water face; bar view: hook over the wall top, closed box in the base)"},
+   "WH_OUT": {"s": 0.20, "d": 12, "label": "12/20cm (section, outer face; the ø symbol is not printed, read as ø12 like the water-face label of the same wall)"},
+   "WH_IN": {"s": 0.20, "d": 12, "label": "ø12/20cm (section, water face)"},
+   "F_MAIN": {"n_per_m": 7, "d": 14, "label": "7ø14/m top and bottom (section-line bars)"},
+   "F_DIST": {"n_per_m": 6, "d": 14, "label": "6ø14/m (dot rows, X leader to both mats)"},
+   "RIM": {"count": 3, "d": 16, "label": "3ø16 at the wall top"},
+   "CORNER": {"count": 3, "d": 16, "label": "3ø16 at the base / wall corner"}
+  },
+  "R2_shallow_end_detail": {
+   "WV_OUT": {"n_per_m": 6, "d": 12, "shape": "L_LEG_FLOOR_BOTTOM", "label": "6ø12/m (one section label; bar view: outer L with a floor leg)"},
+   "WV_IN": {"n_per_m": 6, "d": 12, "shape": "TOP_HOOK_BOTTOM_BOX", "label": "6ø12/m (bar view: hook over the wall top, closed box in the base)"},
+   "WH_OUT": {"s": 0.20, "d": 10, "label": "ø10/20cm (outer face)"},
+   "WH_IN": {"s": 0.20, "d": 10, "label": "ø10/20cm (water face)"},
+   "F_MAIN": {"n_per_m": 6, "d": 12, "label": "6ø12/m top and bottom"},
+   "F_DIST": {"n_per_m": 6, "d": 12, "label": "6ø12/m (dot rows, X leader to both mats)"},
+   "CORNER": {"count": 4, "d": 16, "label": "4ø16 at the base / wall corner"}
+  }
+ }
+}
