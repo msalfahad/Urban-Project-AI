@@ -1,10 +1,39 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
 Plain words, no task numbers. Measured numbers come from SCOREBOARD.md; anything not measured says so.
-Last update: 2026-10-23 16:20 UTC (Lead). Previous version: 2026-10-23 14:20 UTC. The released numbers did not change
-(released concrete 92.77 vs 111.81 m3, -17.03 %; released default V2.9 + route G untouched). Pilot, hours 8-10: every
-agent run started and closed; the checker merged 7 more pieces and sent none back; nothing waits for the checker now.
-Since 14:20 (newest first):
+Last update: 2026-10-23 18:20 UTC (Lead). Previous version: 2026-10-23 16:20 UTC. The released numbers did not change
+(released concrete 92.77 vs 111.81 m3, -17.03 %; released default V2.9 + route G untouched). Your measure (17:50):
+whole BOQ lines independently verified, and trades that can be scored. Today: 0 of 8 concrete lines verified as whole
+lines in any state; scored trades: concrete only (candidate compares 1 line, 1.84 %); plaster, paint, floor area, doors,
+windows and blockwork are not yet scored. Pilot, hours 10-12: every agent run started and closed; the checker merged 3
+more pieces and sent none back; 2 wait for it (the candidate step with the verified straps, and blockwork step 3).
+Since 16:20 (newest first):
+- Block walls (your programme, step 2 of 4, checker-verified): the first block wall is now INDEPENDENTLY VERIFIED: a
+  ground-floor 20 cm white wall, 4.458 m2 net (the worker had 4.468; the checker's drawn-edge pieces are 0.010 m2 lower).
+  A first-floor 20 cm white wall's gross area is verified at 23.223 m2 (net 19.303 m2 waits on one window height being
+  re-measured). The other three walls the step raised keep their status (drawing-supported or held): the checker
+  re-measured the beam depths but not every piece. Total wall length did not change (the new area is height on length
+  already in the census, as your main chat checked). One wall's net (47.4 m2 with the window heads found this morning)
+  waits for the checker's ruling at 18:49. Step 3 (annex, lift walls, remaining window heads) is ready: it gives a
+  figure to four more walls (+126.8 m2 net drawing-supported) and finds the annex roof and the lift tie beam undrawn on
+  every sheet it read.
+- Beams at the planted columns (checker-verified): the two first-floor beams that carry planted columns are 4.19 and
+  4.09 m3 drawn, against 3.34 and 3.79 m3 released plus held (they were cut at the planted column); across 127 beam
+  pieces, 1.82 m3 of drawn beam concrete is in no line and 0.28 m3 is billed twice. Not yet in any BOQ (a later candidate step).
+- Strap and ground-beam ends (checker-verified): three ground beams the released run stops at the lift footing in fact
+  run to the lift pit wall (+0.28 .. +0.39 m3); one deep strap entering a shallower footing holds 0.03 .. 0.27 m3 (a
+  designer item); every intersection is now owned by exactly one element.
+- Candidate step 8 is ready for the checker: verified straps at 3.39 m3 (freelancer 3.39, -0.06 %); released columns
+  in the candidate 34.45 -> 33.61 m3 (two planted columns held, five undrawn upper lines shown held); it found the three
+  planted columns were already in a route line, so they replace it rather than being added twice.
+- Consultant list: 8 of 12 rows are ready to send (each a printed conflict or an element no sheet draws); 4 are held
+  back until a search finishes (tank beam: architectural sheets not yet recorded as searched; lift tie beam and annex
+  roof: waiting for the checker on step 3; two openings: the next architectural task).
+Next: the checker takes the candidate step, then blockwork step 3; plaster and paint go into the candidate right after
+(two more trades become scoreable); the structural worker starts the first two concrete lines that need no consultant
+answer (footings and blinding), then the roof / wet-room structural tops and the whole slab line.
+
+Earlier (14:20 -> 16:20):
 - Block walls (your blockwork programme, step 1 of 4, checker-verified): the freelancer's figures, the older automated
   run and the current engine were compared wall by wall. The older automated run never produced block m2 (wall lengths
   only), so there is no automated area to compare. The two open gaps are explained to the wall: black 15 cm 3.464 m2 =
@@ -337,20 +366,19 @@ Not measured, and paused by your order (Alsenan first).
   development lengths, so a steel ledger is not complete until it has read them.
 
 ## Being worked on now
-- Checker: candidate step 7 (verified pool and dome shells in, the double-billed dome removed) and the floor-area wet /
-  dry settlement first; then one column reference re-measure per run (23 of 59 done).
-- First for whichever worker runs next: repair the safety test that went red with the block-wall merge (it compares a
-  fixed list of merges against the live code; no quantity affected).
-- Structural (worker 1): the neck columns from footing top to ground-beam underside (released 10.855 vs freelancer 8.805
-  m3 reconciled); the 6 lowered wet-room slab panels (area, step, drop; reconciled with the earlier sunken-panel record);
-  the floor build-up between finished floor and structural slab, from the drawings beside your own 0.10 m finishing
-  value; then the angled strap beams; excavation after the necks (depth held until the existing ground level is known).
-- Architecture and finishes (worker 2): wet-room wall tiles room by room on your 3.65 / 3.35 m rule; the block walls'
-  held bounds (45-degree wall ends, what is built above the leafless openings); an independent wall census to check the
-  block engine; then black block units.
-- Integration (worker 3): the safety-test repair if nobody took it, the stricter candidate-diff tool, the coverage
-  registry showing what the candidate carries, three infrastructure follow-ups; then formwork and railings, then plaster
-  and paint as candidate lines, then the slab faces.
+- Checker (18:49): candidate step 8 (verified straps and planted columns into the candidate) first, then blockwork step 3
+  (re-measure every wall it raises; confirm the lift tie beam and annex roof are undrawn on every sheet, which decides two
+  consultant rows), and the ruling on one ground-floor wall's net (47.4 m2 with this morning's window heads); then the
+  column re-measure (31 of 59 done) and the closable-lines table you asked for.
+- Structural (worker 1): footings and blinding as whole lines, every footing once (the first concrete lines that need no
+  consultant answer); then the roof / wet-room structural tops (also: does any architectural sheet show whether the tank
+  beam stands up or hangs down); then the whole slab line, every panel once; excavation last (depth held until the
+  existing ground level is known).
+- Architecture and finishes (worker 2): the remaining block-wall held bounds (two openings with no head; decides one
+  consultant row); an independent wall census to check the block engine; the curved first-floor room; foundation and pit
+  waterproofing; then the blockwork resolution ledger (step 4).
+- Integration (worker 3): after step 8 merges, plaster and paint (and the verified wet-wall tiles and kitchen floor) into
+  the candidate, then the floor-area line scored, then doors and windows in pcs AND m2, then formwork and railings.
 
 ## What is missing
 - Window heads: 3 of 29 windows still held (one count, two shuttered) and three leafless openings (being closed); every door but the main entrance (2.20 m by your Q-55 C, stated as assumed).
@@ -369,6 +397,9 @@ Not measured, and paused by your order (Alsenan first).
 ## Waiting for the owner
 - No decision needed today. Nothing found since 08:20 meets the standard's conditions for asking you: the pit depth,
   tank, sunken-panel drops and floor build-up are designer / drawing items already listed for the designer.
+- Consultant list (draft): rows 1, 3, 4, 5, 6, 10, 11, 12 are ready for you to send; hold rows 2 (tank beam), 7 (lift
+  tie beam), 8 (annex roof) and 9 (two openings) until the searches named in the list finish (expected within the next
+  checker and worker runs).
 - One thing only you can do, if it exists: a site / plot level survey (existing ground levels). Your rule fixes the
   excavation as at least 1.5 m below the EXISTING ground, and no issued sheet prints that ground level, so every
   excavation depth stays held until it is known.

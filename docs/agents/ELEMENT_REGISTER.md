@@ -46,6 +46,21 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+### Lead 2026-10-23 18:20 (from T-229, T-226, T-230 MERGED; T-227, T-231 READY; new T-233, T-234)
+
+| Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |
+|---|---|---|---|---|---|
+| Beams B27 / B26 at the planted columns | concrete, formwork, rebar | STRUCTURE CONC.BEAM, continuous through the planted column (R-BEAM-CONT-1 proposed); joint owned by the beam | B27 4.1927, B26 4.0898 m3 drawing-derived (Checker +0.02 / +0.13 %); released route G short; census: 1.818 m3 drawn beam concrete in no line, 0.278 m3 billed twice | T-229 MERGED 3803684e | lane I package after T-199; T-234 matches the slab / beam convention |
+| Ground beams ending at the lift pit ring (3 ends) | concrete, formwork, rebar | STRUCTURE CONC.GROUND, to the ring's outer face (the footing below never meets the beam) | 2.900 / 3.228 / 5.020 m DRAWING-CONFIRMED, Checker 0.0 %; depth reused (PARTIALLY VERIFIED) | T-230 MERGED 17ed6f92 | lane I package; ring S-BW owner = lift structure (T-204) |
+| Strap SB3 into footing F3 | concrete | STRUCTURE strap at one soffit level; excess owned once | HELD 0.0295 .. 0.2683 m3 + neck 0.0046 (narrowed D-15), never 0 | T-230 MERGED | D-15 |
+| Exterior ground-beam ends in printed 0.50 necks (4) | concrete | STRUCTURE neck (CONC.NECK) owns the overlap; the beam stops at the neck face | 0.120 m2 plan DRAWING-CONFIRMED, m3 HELD on D-35 | T-230 MERGED | D-35 |
+| Isolated footings and blinding (all types) | concrete, waterproofing (membrane 2 cm + screed 5 cm underlay), excavation | STRUCTURE CONC.FOOTING (plan x H) and CONC.BLINDING (0.10 extent); the underlay is WATERPROOFING (T-219), never concrete; excavation separate (T-170, depth HELD) | not yet re-measured as a whole line | T-206 MERGED (underlay 0.07 VERIFIED) | T-233 (S), T-219 (A) |
+| Slab panels, every storey | concrete, formwork, waterproofing, finishes | STRUCTURE CONC.SLAB; slab / beam edge owned by the same convention as CONC.BEAM (one owner, checked by the T-189 overlap test); sunken panels at full depth, fill / upturn other lines | pieces merged (T-213, T-192, T-193), whole line not re-measured | T-213 MERGED 0ec8c496 | T-234 (S); roof / wet structural tops T-221 |
+| Block wall GF-W07 (white 0.20) | blockwork, plaster, paint | BLOCKWORK by wall id | net 4.458 m2 VERIFIED (Checker drawn-edge pieces; worker 4.468) | T-226 MERGED a04f8e21 | T-228 carries 4.458 |
+| Block wall 1F-W05 (white 0.20) | blockwork, plaster, paint, windows | BLOCKWORK | gross 23.223 VERIFIED; net 19.303 SOURCE-SUPPORTED (W14 height not re-measured) | T-226 MERGED | T-228 |
+| Block wall GF-W10 (white 0.20) | blockwork, windows, doors | BLOCKWORK | gross 50.845 SOURCE-SUPPORTED (2 / 4 pieces re-measured); net HELD; with T-201 heads 47.425 PROJECT-SPECIFIC pending the Checker's ruling and the W.C. slab level | T-226 MERGED; T226_BRIDGE | Checker 18:49 (with T-227) |
+| Water tank and beam B15 20 x 120 | concrete, waterproofing | STRUCTURE (beam, tank columns) | upstand / downstand not shown on the structural sheets; architectural sheets not yet recorded as searched | consultant pack row 2 | T-221 search, then D-44 |
+
 ### Lead 2026-10-23 16:20 (from T-174, T-176, T-215 part 1, T-220, T-225 MERGED)
 
 | Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |

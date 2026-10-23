@@ -36,6 +36,17 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
    commit. Decision: board-only handoffs are verified as hand evidence (the verifier re-reads the cited notes), and the
    next task on the topic writes the files (T-117); a run with no line stays a NEEDS FIXING item for the owner's setting.
 
+## 2026-10-23 18:20 (lead run)
+
+| Task | Result | Evidence | Decision |
+|---|---|---|---|
+| T-229 (beam runs at planted columns) | WORKED | MERGED 3803684e; Checker own B27 4.1927 vs 4.1918 m3 (+0.02 %), B26 +0.13 %; census 1.818 m3 unbilled, 0.278 m3 billed twice | R-BEAM-CONT-1 PROPOSED; wiring is a later lane I package (after T-231 / T-211 / T-232 / T-199, owner order); slab / beam ownership carried into T-234 |
+| T-226 (blockwork 2/4) | PARTIAL (by the owner's rule, not a fault) | MERGED a04f8e21; GF-W07 4.458 m2 VERIFIED (first VERIFIED block net; worker 4.468, -0.23 %, cause: sampled piece boundary), 1F-W05 gross 23.223 VERIFIED (worker -0.13 %, cause: last 0.10 m under B23 spread at mean height), net 19.303 SOURCE-SUPPORTED; GF-W10 2 / 4 pieces; D-12 census and column-cut audit not re-measured; the owner's 18:00 GF-W10 ruling (T-201 heads -> 47.425) not given | GF-W10 ruling queued for the 18:49 Checker run with T-227; T-228 carries 4.458 (not 4.468) and 19.303; lesson row (3) accepted (sampled height piece) |
+| T-230 (strap / GB ends) | WORKED | MERGED 17ed6f92; Checker own lift-ring ends 2.900 / 3.228 / 5.020 m 0.0 %, SB3 / F3 0.0295 .. 0.2683 m3 HELD (D-15 narrowed), drafting double 0.030 m2 = worker; board text quoted raw coordinates | standing BOARD TEXT rule written (handles and printed values only); ground-beam end corrections wait for a lane I package; T-233 takes the footing side of these intersections as ruled |
+| T-227 (blockwork 3/4) | READY | 4 nets newly SOURCE-SUPPORTED (+126.8 m2 with a figure), annex 13 rows HELD on Q-54 B test, lift tie beam HELD | Checker 18:49 (second, after T-231); decides consultant rows 7 / 8 |
+| T-231 (V3.0.8 Gate B) | READY | straps 3.3905 m3, columns released 34.446 -> 33.606, planted columns already carried by route G (superseded, not added) | Checker 18:49 FIRST; then T-211 |
+| Scout R-09 / R-10 / R-12 (owner one-off) | WORKED | answers + supplements in RESEARCH_LOG 17:50 / 17:55; all PRACTITIONER level | R-12: slab / stair '/m' keeps the A..B range until a project note decides (no task: no project evidence to read); R-10 splice formula (idea 27) used by the next steel procurement task, not now (concrete whole lines first, owner 17:50); R-09 grid reader (idea 26) stays an idea; idea 29 (session id hook) and idea 30 (L4 suite in the background, up to 2 h) need the owner's main chat: NEEDS FIXING (idea 30 is how the complete-suite rule can be met in one Checker run) |
+
 ## 2026-10-23 16:20 (lead run)
 
 | Task | Result | Evidence | Decision |
