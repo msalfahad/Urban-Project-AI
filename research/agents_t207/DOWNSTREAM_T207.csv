@@ -1,0 +1,14 @@
+opening,line,unit,before,before_status,after,after_status,delta,note
+W11,opening m2 (w x h),m2,,HELD,4.290,DRAWING-CONFIRMED,,
+W11,block deduction (Q-73 / T-175),m2,,HELD,4.290,DRAWING-CONFIRMED,,"whole opening inside the drawn wall face (outline top 3.05 above the view's ground line, wall face above it); the host's B9 soffit check needs the sill datum (HELD), the deduction does not"
+W11,finish deduction face A (INTERNAL_PLASTER_PAINT),m2,,HELD,4.290,DRAWING-CONFIRMED,,
+W11,finish deduction face B (EXTERNAL_PLASTER_PAINT),m2,,HELD,4.290,DRAWING-CONFIRMED,,
+W11,reveal (2 jambs + head + sill; UP-REVEAL-001 via OPENING_SCOPE_V1),m.l,,HELD,8.300,DRAWING-CONFIRMED,,"reveal depth HELD (frame position), as T-175"
+W11,lintel need,status,,HELD,,HELD,,head above the dewaneya FFL not established (no printed level on the fence elevation): the B9 soffit check is not made; row L2
+W12,opening m2 (w x h),m2,,HELD,4.290,DRAWING-CONFIRMED,,
+W12,block deduction (Q-73 / T-175),m2,,HELD,4.290,DRAWING-CONFIRMED,,"whole opening inside the drawn wall face (outline top 3.05 above the view's ground line, wall face above it); the host's B9 soffit check needs the sill datum (HELD), the deduction does not"
+W12,finish deduction face A (INTERNAL_PLASTER_PAINT),m2,,HELD,4.290,DRAWING-CONFIRMED,,
+W12,finish deduction face B (EXTERNAL_PLASTER_PAINT),m2,,HELD,4.290,DRAWING-CONFIRMED,,
+W12,reveal (2 jambs + head + sill; UP-REVEAL-001 via OPENING_SCOPE_V1),m.l,,HELD,8.300,DRAWING-CONFIRMED,,"reveal depth HELD (frame position), as T-175"
+W12,lintel need,status,,HELD,,HELD,,head above the dewaneya FFL not established (no printed level on the fence elevation): the B9 soffit check is not made; row L2
+GF-W18,net block m2 of the dewaneya street run (W11 + W12 deducted),m2,,HELD (bounds 7.150 .. 19.825),11.245,HELD,,"gross PROVISIONAL in T-143 (annex datum HELD (owner Q-54 B): heights on the printed marks, PROVISIONAL)"
