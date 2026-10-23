@@ -1,0 +1,182 @@
+opening,line,unit,before,before_status,after,after_status,delta,note
+W07,opening m2 (w x h),m2,,HELD,0.480,DRAWING-CONFIRMED,,
+W07,block deduction (Q-73 / T-175),m2,,HELD,0.480,DRAWING-CONFIRMED,,
+W07,finish deduction face A (WALL_TILE),m2,,HELD,0.480,DRAWING-CONFIRMED,,
+W07,finish deduction face B (EXTERNAL_PLASTER_PAINT),m2,,HELD,0.480,DRAWING-CONFIRMED,,
+W07,reveal (2 jambs + head + sill for a window; UP-REVEAL-001 via OPENING_SCOPE_V1),m.l,,HELD,2.800,DRAWING-CONFIRMED,,
+W07,lintel need (head vs member soffit of the host run),status,,HELD,,HELD,,"the lintel length = width + two bearings; the schedule prints a MINIMUM bearing only and the masonry each side limits it: the face (not masonry) is listed as a candidate for the lintel line, not deducted here; row L1"
+W07,"masonry above the head, LOWER BOUND (lowest member soffit along the host run - head)",m,,HELD,1.250,DRAWING-CONFIRMED,,lintel needed (S8.6 schedule row binds by width)
+W07,"face above the head per side, LOWER BOUND (width x masonry above), inside the room / facade faces",m2,,HELD,0.750,DRAWING-CONFIRMED,,"already inside the T-128 / T-162 gross faces; listed for the Checker, not an additional quantity"
+W06,opening m2 (w x h),m2,,HELD,0.480,DRAWING-CONFIRMED,,
+W06,block deduction (Q-73 / T-175),m2,,HELD,0.480,DRAWING-CONFIRMED,,
+W06,finish deduction face A (WALL_TILE),m2,,HELD,0.480,DRAWING-CONFIRMED,,
+W06,finish deduction face B (EXTERNAL_PLASTER_PAINT),m2,,HELD,0.480,DRAWING-CONFIRMED,,
+W06,reveal (2 jambs + head + sill for a window; UP-REVEAL-001 via OPENING_SCOPE_V1),m.l,,HELD,2.800,DRAWING-CONFIRMED,,
+W06,lintel need (head vs member soffit of the host run),status,,HELD,,HELD,,"the lintel length = width + two bearings; the schedule prints a MINIMUM bearing only and the masonry each side limits it: the face (not masonry) is listed as a candidate for the lintel line, not deducted here; row L1"
+W06,"masonry above the head, LOWER BOUND (lowest member soffit along the host run - head)",m,,HELD,1.250,DRAWING-CONFIRMED,,lintel needed (S8.6 schedule row binds by width)
+W06,"face above the head per side, LOWER BOUND (width x masonry above), inside the room / facade faces",m2,,HELD,0.750,DRAWING-CONFIRMED,,"already inside the T-128 / T-162 gross faces; listed for the Checker, not an additional quantity"
+W05,opening m2 (w x h),m2,,HELD,0.480,DRAWING-CONFIRMED,,
+W05,block deduction (Q-73 / T-175),m2,,HELD,0.480,DRAWING-CONFIRMED,,
+W05,finish deduction face A (WALL_TILE),m2,,HELD,0.480,DRAWING-CONFIRMED,,
+W05,finish deduction face B (EXTERNAL_PLASTER_PAINT),m2,,HELD,0.480,DRAWING-CONFIRMED,,
+W05,reveal (2 jambs + head + sill for a window; UP-REVEAL-001 via OPENING_SCOPE_V1),m.l,,HELD,2.800,DRAWING-CONFIRMED,,
+W05,lintel need (head vs member soffit of the host run),status,,HELD,,HELD,,"the lintel length = width + two bearings; the schedule prints a MINIMUM bearing only and the masonry each side limits it: the face (not masonry) is listed as a candidate for the lintel line, not deducted here; row L1"
+W05,"masonry above the head, LOWER BOUND (lowest member soffit along the host run - head)",m,,HELD,1.250,DRAWING-CONFIRMED,,lintel needed (S8.6 schedule row binds by width)
+W05,"face above the head per side, LOWER BOUND (width x masonry above), inside the room / facade faces",m2,,HELD,0.750,DRAWING-CONFIRMED,,"already inside the T-128 / T-162 gross faces; listed for the Checker, not an additional quantity"
+W08,opening m2 (w x h),m2,,HELD,2.250,DRAWING-CONFIRMED,,
+W08,block deduction (Q-73 / T-175),m2,,HELD,2.250,DRAWING-CONFIRMED,,
+W08,finish deduction face A (INTERNAL_PLASTER_PAINT),m2,,HELD,2.250,DRAWING-CONFIRMED,,
+W08,finish deduction face B (EXTERNAL_PLASTER_PAINT),m2,,HELD,2.250,DRAWING-CONFIRMED,,
+W08,reveal (2 jambs + head + sill for a window; UP-REVEAL-001 via OPENING_SCOPE_V1),m.l,,HELD,6.000,DRAWING-CONFIRMED,,
+W08,lintel need (head vs member soffit of the host run),status,,HELD,,HELD,,"the lintel length = width + two bearings; the schedule prints a MINIMUM bearing only and the masonry each side limits it: the face (not masonry) is listed as a candidate for the lintel line, not deducted here; row L2"
+W08,"masonry above the head, LOWER BOUND (lowest member soffit along the host run - head)",m,,HELD,0.750,DRAWING-CONFIRMED,,lintel needed (S8.6 schedule row binds by width)
+W08,"face above the head per side, LOWER BOUND (width x masonry above), inside the room / facade faces",m2,,HELD,1.125,DRAWING-CONFIRMED,,"already inside the T-128 / T-162 gross faces; listed for the Checker, not an additional quantity"
+W04,opening m2 (w x h),m2,,HELD,0.480,DRAWING-CONFIRMED,,
+W04,block deduction (Q-73 / T-175),m2,,HELD,0.480,DRAWING-CONFIRMED,,
+W04,finish deduction face A (INTERNAL_PLASTER_PAINT),m2,,HELD,0.480,DRAWING-CONFIRMED,,
+W04,finish deduction face B (EXTERNAL_PLASTER_PAINT),m2,,HELD,0.480,DRAWING-CONFIRMED,,
+W04,reveal (2 jambs + head + sill for a window; UP-REVEAL-001 via OPENING_SCOPE_V1),m.l,,HELD,2.800,DRAWING-CONFIRMED,,
+W04,lintel need (head vs member soffit of the host run),status,,HELD,,HELD,,"the lintel length = width + two bearings; the schedule prints a MINIMUM bearing only and the masonry each side limits it: the face (not masonry) is listed as a candidate for the lintel line, not deducted here; row L1"
+W04,"masonry above the head, LOWER BOUND (lowest member soffit along the host run - head)",m,,HELD,0.750,DRAWING-CONFIRMED,,lintel needed (S8.6 schedule row binds by width)
+W04,"face above the head per side, LOWER BOUND (width x masonry above), inside the room / facade faces",m2,,HELD,0.450,DRAWING-CONFIRMED,,"already inside the T-128 / T-162 gross faces; listed for the Checker, not an additional quantity"
+P-GF-05,opening m2 (w x h),m2,,HELD,3.000,DRAWING-CONFIRMED,,
+P-GF-05,block deduction (Q-73 / T-175),m2,,NOT_APPLICABLE,,NOT_APPLICABLE,,"host is NONE: no masonry is built in this line, nothing to deduct from"
+P-GF-05,finish deduction face A (NONE),m2,,NOT_APPLICABLE,,NOT_APPLICABLE,,
+P-GF-05,finish deduction face B (NONE),m2,,NOT_APPLICABLE,,NOT_APPLICABLE,,
+P-GF-05,reveal (2 jambs + head + sill for a window; UP-REVEAL-001 via OPENING_SCOPE_V1),m.l,,HELD,6.200,DRAWING-CONFIRMED,,
+P-GF-05,lintel need (head vs member soffit of the host run),status,,NOT_APPLICABLE,,NOT_APPLICABLE,,
+P-GF-05,"masonry above the head, LOWER BOUND (lowest member soffit along the host run - head)",m,,HELD,,HELD,,member soffit of the host run not established (T-143)
+W23,opening m2 (w x h),m2,,HELD,0.480,DRAWING-CONFIRMED,,
+W23,block deduction (Q-73 / T-175),m2,,HELD,0.480,DRAWING-CONFIRMED,,
+W23,finish deduction face A (WALL_TILE),m2,,HELD,0.480,DRAWING-CONFIRMED,,
+W23,finish deduction face B (EXTERNAL_PLASTER_PAINT),m2,,HELD,0.480,DRAWING-CONFIRMED,,
+W23,reveal (2 jambs + head + sill for a window; UP-REVEAL-001 via OPENING_SCOPE_V1),m.l,,HELD,2.800,DRAWING-CONFIRMED,,
+W23,lintel need (head vs member soffit of the host run),status,,HELD,,HELD,,"the lintel length = width + two bearings; the schedule prints a MINIMUM bearing only and the masonry each side limits it: the face (not masonry) is listed as a candidate for the lintel line, not deducted here; row L1"
+W23,"masonry above the head, LOWER BOUND (lowest member soffit along the host run - head)",m,,HELD,1.200,DRAWING-CONFIRMED,,lintel needed (S8.6 schedule row binds by width)
+W23,"face above the head per side, LOWER BOUND (width x masonry above), inside the room / facade faces",m2,,HELD,0.720,DRAWING-CONFIRMED,,"already inside the T-128 / T-162 gross faces; listed for the Checker, not an additional quantity"
+W22,opening m2 (w x h),m2,,HELD,0.480,DRAWING-CONFIRMED,,
+W22,block deduction (Q-73 / T-175),m2,,HELD,0.480,DRAWING-CONFIRMED,,
+W22,finish deduction face A (WALL_TILE),m2,,HELD,0.480,DRAWING-CONFIRMED,,
+W22,finish deduction face B (EXTERNAL_PLASTER_PAINT),m2,,HELD,0.480,DRAWING-CONFIRMED,,
+W22,reveal (2 jambs + head + sill for a window; UP-REVEAL-001 via OPENING_SCOPE_V1),m.l,,HELD,2.800,DRAWING-CONFIRMED,,
+W22,lintel need (head vs member soffit of the host run),status,,HELD,,HELD,,"the lintel length = width + two bearings; the schedule prints a MINIMUM bearing only and the masonry each side limits it: the face (not masonry) is listed as a candidate for the lintel line, not deducted here; row L1"
+W22,"masonry above the head, LOWER BOUND (lowest member soffit along the host run - head)",m,,HELD,1.200,DRAWING-CONFIRMED,,lintel needed (S8.6 schedule row binds by width)
+W22,"face above the head per side, LOWER BOUND (width x masonry above), inside the room / facade faces",m2,,HELD,0.720,DRAWING-CONFIRMED,,"already inside the T-128 / T-162 gross faces; listed for the Checker, not an additional quantity"
+W21,opening m2 (w x h),m2,,HELD,0.480,DRAWING-CONFIRMED,,
+W21,block deduction (Q-73 / T-175),m2,,HELD,0.480,DRAWING-CONFIRMED,,
+W21,finish deduction face A (WALL_TILE),m2,,HELD,0.480,DRAWING-CONFIRMED,,
+W21,finish deduction face B (EXTERNAL_PLASTER_PAINT),m2,,HELD,0.480,DRAWING-CONFIRMED,,
+W21,reveal (2 jambs + head + sill for a window; UP-REVEAL-001 via OPENING_SCOPE_V1),m.l,,HELD,2.800,DRAWING-CONFIRMED,,
+W21,lintel need (head vs member soffit of the host run),status,,HELD,,HELD,,"the lintel length = width + two bearings; the schedule prints a MINIMUM bearing only and the masonry each side limits it: the face (not masonry) is listed as a candidate for the lintel line, not deducted here; row L1"
+W21,"masonry above the head, LOWER BOUND (lowest member soffit along the host run - head)",m,,HELD,1.200,DRAWING-CONFIRMED,,lintel needed (S8.6 schedule row binds by width)
+W21,"face above the head per side, LOWER BOUND (width x masonry above), inside the room / facade faces",m2,,HELD,0.720,DRAWING-CONFIRMED,,"already inside the T-128 / T-162 gross faces; listed for the Checker, not an additional quantity"
+W25,opening m2 (w x h),m2,,HELD,1.500,DRAWING-CONFIRMED,,
+W25,block deduction (Q-73 / T-175),m2,,HELD,1.500,DRAWING-CONFIRMED,,
+W25,finish deduction face A (INTERNAL_PLASTER_PAINT),m2,,HELD,1.500,DRAWING-CONFIRMED,,
+W25,finish deduction face B (EXTERNAL_PLASTER_PAINT),m2,,HELD,1.500,DRAWING-CONFIRMED,,
+W25,reveal (2 jambs + head + sill for a window; UP-REVEAL-001 via OPENING_SCOPE_V1),m.l,,HELD,5.000,DRAWING-CONFIRMED,,
+W25,lintel need (head vs member soffit of the host run),status,,HELD,,HELD,,"the lintel length = width + two bearings; the schedule prints a MINIMUM bearing only and the masonry each side limits it: the face (not masonry) is listed as a candidate for the lintel line, not deducted here; row L1"
+W25,"masonry above the head, LOWER BOUND (lowest member soffit along the host run - head)",m,,HELD,2.200,DRAWING-CONFIRMED,,lintel needed (S8.6 schedule row binds by width)
+W25,"face above the head per side, LOWER BOUND (width x masonry above), inside the room / facade faces",m2,,HELD,2.200,DRAWING-CONFIRMED,,"already inside the T-128 / T-162 gross faces; listed for the Checker, not an additional quantity"
+W29,opening m2 (w x h),m2,,HELD,1.800,DRAWING-CONFIRMED,,
+W29,block deduction (Q-73 / T-175),m2,,HELD,1.800,DRAWING-CONFIRMED,,
+W29,finish deduction face A (INTERNAL_PLASTER_PAINT),m2,,HELD,1.800,DRAWING-CONFIRMED,,
+W29,finish deduction face B (EXTERNAL_PLASTER_PAINT),m2,,HELD,1.800,DRAWING-CONFIRMED,,
+W29,reveal (2 jambs + head + sill for a window; UP-REVEAL-001 via OPENING_SCOPE_V1),m.l,,HELD,5.400,DRAWING-CONFIRMED,,
+W29,lintel need (head vs member soffit of the host run),status,,HELD,,HELD,,"the lintel length = width + two bearings; the schedule prints a MINIMUM bearing only and the masonry each side limits it: the face (not masonry) is listed as a candidate for the lintel line, not deducted here; row L2"
+W29,"masonry above the head, LOWER BOUND (lowest member soffit along the host run - head)",m,,HELD,0.950,DRAWING-CONFIRMED,,lintel needed (S8.6 schedule row binds by width)
+W29,"face above the head per side, LOWER BOUND (width x masonry above), inside the room / facade faces",m2,,HELD,1.140,DRAWING-CONFIRMED,,"already inside the T-128 / T-162 gross faces; listed for the Checker, not an additional quantity"
+W28,opening m2 (w x h),m2,,HELD,0.480,DRAWING-CONFIRMED,,
+W28,block deduction (Q-73 / T-175),m2,,HELD,0.480,DRAWING-CONFIRMED,,
+W28,finish deduction face A (WALL_TILE),m2,,HELD,0.480,DRAWING-CONFIRMED,,
+W28,finish deduction face B (EXTERNAL_PLASTER_PAINT),m2,,HELD,0.480,DRAWING-CONFIRMED,,
+W28,reveal (2 jambs + head + sill for a window; UP-REVEAL-001 via OPENING_SCOPE_V1),m.l,,HELD,2.800,DRAWING-CONFIRMED,,
+W28,lintel need (head vs member soffit of the host run),status,,HELD,,HELD,,"the lintel length = width + two bearings; the schedule prints a MINIMUM bearing only and the masonry each side limits it: the face (not masonry) is listed as a candidate for the lintel line, not deducted here; row L1"
+W28,"masonry above the head, LOWER BOUND (lowest member soffit along the host run - head)",m,,HELD,0.950,DRAWING-CONFIRMED,,lintel needed (S8.6 schedule row binds by width)
+W28,"face above the head per side, LOWER BOUND (width x masonry above), inside the room / facade faces",m2,,HELD,0.570,DRAWING-CONFIRMED,,"already inside the T-128 / T-162 gross faces; listed for the Checker, not an additional quantity"
+W27,opening m2 (w x h),m2,,HELD,1.500,DRAWING-CONFIRMED,,
+W27,block deduction (Q-73 / T-175),m2,,HELD,1.500,DRAWING-CONFIRMED,,
+W27,finish deduction face A (INTERNAL_PLASTER_PAINT),m2,,HELD,1.500,DRAWING-CONFIRMED,,
+W27,finish deduction face B (EXTERNAL_PLASTER_PAINT),m2,,HELD,1.500,DRAWING-CONFIRMED,,
+W27,reveal (2 jambs + head + sill for a window; UP-REVEAL-001 via OPENING_SCOPE_V1),m.l,,HELD,5.000,DRAWING-CONFIRMED,,
+W27,lintel need (head vs member soffit of the host run),status,,HELD,,HELD,,"the lintel length = width + two bearings; the schedule prints a MINIMUM bearing only and the masonry each side limits it: the face (not masonry) is listed as a candidate for the lintel line, not deducted here; row L1"
+W27,"masonry above the head, LOWER BOUND (lowest member soffit along the host run - head)",m,,HELD,1.950,DRAWING-CONFIRMED,,lintel needed (S8.6 schedule row binds by width)
+W27,"face above the head per side, LOWER BOUND (width x masonry above), inside the room / facade faces",m2,,HELD,1.950,DRAWING-CONFIRMED,,"already inside the T-128 / T-162 gross faces; listed for the Checker, not an additional quantity"
+W19,opening m2 (w x h),m2,,HELD,0.480,DRAWING-CONFIRMED,,
+W19,block deduction (Q-73 / T-175),m2,,HELD,0.480,DRAWING-CONFIRMED,,
+W19,finish deduction face A (WALL_TILE),m2,,HELD,0.480,DRAWING-CONFIRMED,,
+W19,finish deduction face B (EXTERNAL_PLASTER_PAINT),m2,,HELD,0.480,DRAWING-CONFIRMED,,
+W19,reveal (2 jambs + head + sill for a window; UP-REVEAL-001 via OPENING_SCOPE_V1),m.l,,HELD,2.800,DRAWING-CONFIRMED,,
+W19,lintel need (head vs member soffit of the host run),status,,HELD,,HELD,,"the lintel length = width + two bearings; the schedule prints a MINIMUM bearing only and the masonry each side limits it: the face (not masonry) is listed as a candidate for the lintel line, not deducted here; row L1"
+W19,"masonry above the head, LOWER BOUND (lowest member soffit along the host run - head)",m,,HELD,0.950,DRAWING-CONFIRMED,,lintel needed (S8.6 schedule row binds by width)
+W19,"face above the head per side, LOWER BOUND (width x masonry above), inside the room / facade faces",m2,,HELD,0.570,DRAWING-CONFIRMED,,"already inside the T-128 / T-162 gross faces; listed for the Checker, not an additional quantity"
+W20,opening m2 (w x h),m2,,HELD,0.480,DRAWING-CONFIRMED,,
+W20,block deduction (Q-73 / T-175),m2,,HELD,0.480,DRAWING-CONFIRMED,,
+W20,finish deduction face A (WALL_TILE),m2,,HELD,0.480,DRAWING-CONFIRMED,,
+W20,finish deduction face B (EXTERNAL_PLASTER_PAINT),m2,,HELD,0.480,DRAWING-CONFIRMED,,
+W20,reveal (2 jambs + head + sill for a window; UP-REVEAL-001 via OPENING_SCOPE_V1),m.l,,HELD,2.800,DRAWING-CONFIRMED,,
+W20,lintel need (head vs member soffit of the host run),status,,HELD,,HELD,,"the lintel length = width + two bearings; the schedule prints a MINIMUM bearing only and the masonry each side limits it: the face (not masonry) is listed as a candidate for the lintel line, not deducted here; row L1"
+W20,"masonry above the head, LOWER BOUND (lowest member soffit along the host run - head)",m,,HELD,0.950,DRAWING-CONFIRMED,,lintel needed (S8.6 schedule row binds by width)
+W20,"face above the head per side, LOWER BOUND (width x masonry above), inside the room / facade faces",m2,,HELD,0.570,DRAWING-CONFIRMED,,"already inside the T-128 / T-162 gross faces; listed for the Checker, not an additional quantity"
+W24,opening m2 (w x h),m2,,HELD,2.325,DRAWING-CONFIRMED,,
+W24,block deduction (Q-73 / T-175),m2,,HELD,2.325,DRAWING-CONFIRMED,,
+W24,finish deduction face A (INTERNAL_PLASTER_PAINT),m2,,HELD,2.325,DRAWING-CONFIRMED,,
+W24,finish deduction face B (EXTERNAL_PLASTER_PAINT),m2,,HELD,2.325,DRAWING-CONFIRMED,,
+W24,reveal (2 jambs + head + sill for a window; UP-REVEAL-001 via OPENING_SCOPE_V1),m.l,,HELD,6.100,DRAWING-CONFIRMED,,
+W24,lintel need (head vs member soffit of the host run),status,,HELD,,HELD,,"the lintel length = width + two bearings; the schedule prints a MINIMUM bearing only and the masonry each side limits it: the face (not masonry) is listed as a candidate for the lintel line, not deducted here; row L2"
+W24,"masonry above the head, LOWER BOUND (lowest member soffit along the host run - head)",m,,HELD,0.950,DRAWING-CONFIRMED,,lintel needed (S8.6 schedule row binds by width)
+W24,"face above the head per side, LOWER BOUND (width x masonry above), inside the room / facade faces",m2,,HELD,1.472,DRAWING-CONFIRMED,,"already inside the T-128 / T-162 gross faces; listed for the Checker, not an additional quantity"
+W10,opening m2 (w x h),m2,,HELD,1.500,DRAWING-CONFIRMED,,
+W10,block deduction (Q-73 / T-175),m2,,HELD,1.500,DRAWING-CONFIRMED,,
+W10,finish deduction face A (INTERNAL_PLASTER_PAINT),m2,,HELD,1.500,DRAWING-CONFIRMED,,
+W10,finish deduction face B (EXTERNAL_PLASTER_PAINT),m2,,HELD,1.500,DRAWING-CONFIRMED,,
+W10,reveal (2 jambs + head + sill for a window; UP-REVEAL-001 via OPENING_SCOPE_V1),m.l,,HELD,5.000,DRAWING-CONFIRMED,,
+W10,lintel need (head vs member soffit of the host run),status,,HELD,,HELD,,"the lintel length = width + two bearings; the schedule prints a MINIMUM bearing only and the masonry each side limits it: the face (not masonry) is listed as a candidate for the lintel line, not deducted here; row L1"
+W10,"masonry above the head, LOWER BOUND (lowest member soffit along the host run - head)",m,,HELD,1.250,DRAWING-CONFIRMED,,lintel needed (S8.6 schedule row binds by width)
+W10,"face above the head per side, LOWER BOUND (width x masonry above), inside the room / facade faces",m2,,HELD,1.250,DRAWING-CONFIRMED,,"already inside the T-128 / T-162 gross faces; listed for the Checker, not an additional quantity"
+W09,opening m2 (w x h),m2,,HELD,2.250,DRAWING-CONFIRMED,,
+W09,block deduction (Q-73 / T-175),m2,,HELD,2.250,DRAWING-CONFIRMED,,
+W09,finish deduction face A (INTERNAL_PLASTER_PAINT),m2,,HELD,2.250,DRAWING-CONFIRMED,,
+W09,finish deduction face B (EXTERNAL_PLASTER_PAINT),m2,,HELD,2.250,DRAWING-CONFIRMED,,
+W09,reveal (2 jambs + head + sill for a window; UP-REVEAL-001 via OPENING_SCOPE_V1),m.l,,HELD,6.000,DRAWING-CONFIRMED,,
+W09,lintel need (head vs member soffit of the host run),status,,HELD,,HELD,,"the lintel length = width + two bearings; the schedule prints a MINIMUM bearing only and the masonry each side limits it: the face (not masonry) is listed as a candidate for the lintel line, not deducted here; row L2"
+W09,"masonry above the head, LOWER BOUND (lowest member soffit along the host run - head)",m,,HELD,1.250,DRAWING-CONFIRMED,,lintel needed (S8.6 schedule row binds by width)
+W09,"face above the head per side, LOWER BOUND (width x masonry above), inside the room / facade faces",m2,,HELD,1.875,DRAWING-CONFIRMED,,"already inside the T-128 / T-162 gross faces; listed for the Checker, not an additional quantity"
+W02,opening m2 (w x h),m2,,HELD,,HELD,,
+W02,block deduction (Q-73 / T-175),m2,,NOT_APPLICABLE,,NOT_APPLICABLE,,"host is GLAZED: no masonry is built in this line, nothing to deduct from"
+W02,finish deduction face A (INTERNAL_PLASTER_PAINT),m2,,NOT_APPLICABLE,,NOT_APPLICABLE,,
+W02,finish deduction face B (EXTERNAL_PLASTER_PAINT),m2,,NOT_APPLICABLE,,NOT_APPLICABLE,,
+W02,reveal (2 jambs + head + sill for a window; UP-REVEAL-001 via OPENING_SCOPE_V1),m.l,,HELD,,HELD,,
+W02,lintel need (head vs member soffit of the host run),status,,NOT_APPLICABLE,,NOT_APPLICABLE,,
+W16,opening m2 (w x h),m2,,HELD,4.805,DRAWING-CONFIRMED,,
+W16,block deduction (Q-73 / T-175),m2,,HELD,4.805,DRAWING-CONFIRMED,,
+W16,finish deduction face A (INTERNAL_PLASTER_PAINT),m2,,HELD,4.805,DRAWING-CONFIRMED,,
+W16,finish deduction face B (EXTERNAL_PLASTER_PAINT),m2,,HELD,4.805,DRAWING-CONFIRMED,,
+W16,reveal (2 jambs + head + sill for a window; UP-REVEAL-001 via OPENING_SCOPE_V1),m.l,,HELD,9.300,DRAWING-CONFIRMED,,
+W16,lintel need (head vs member soffit of the host run),status,,HELD,,HELD,,"the lintel length = width + two bearings; the schedule prints a MINIMUM bearing only and the masonry each side limits it: the face (not masonry) is listed as a candidate for the lintel line, not deducted here; row L2"
+W16,"masonry above the head, LOWER BOUND (lowest member soffit along the host run - head)",m,,HELD,0.350,DRAWING-CONFIRMED,,lintel needed (S8.6 schedule row binds by width)
+W16,"face above the head per side, LOWER BOUND (width x masonry above), inside the room / facade faces",m2,,HELD,0.542,DRAWING-CONFIRMED,,"already inside the T-128 / T-162 gross faces; listed for the Checker, not an additional quantity"
+W11,opening m2 (w x h),m2,,HELD,,HELD,,
+W11,block deduction (Q-73 / T-175),m2,,HELD,,HELD,,width or height not established: deduction HELD (never 0)
+W11,finish deduction face A (INTERNAL_PLASTER_PAINT),m2,,HELD,,HELD,,
+W11,finish deduction face B (EXTERNAL_PLASTER_PAINT),m2,,HELD,,HELD,,
+W11,reveal (2 jambs + head + sill for a window; UP-REVEAL-001 via OPENING_SCOPE_V1),m.l,,HELD,,HELD,,
+W11,lintel need (head vs member soffit of the host run),status,,HELD,,HELD,,head height or member soffit not established: whether a lintel is needed is open; row L2
+W12,opening m2 (w x h),m2,,HELD,,HELD,,
+W12,block deduction (Q-73 / T-175),m2,,HELD,,HELD,,width or height not established: deduction HELD (never 0)
+W12,finish deduction face A (INTERNAL_PLASTER_PAINT),m2,,HELD,,HELD,,
+W12,finish deduction face B (EXTERNAL_PLASTER_PAINT),m2,,HELD,,HELD,,
+W12,reveal (2 jambs + head + sill for a window; UP-REVEAL-001 via OPENING_SCOPE_V1),m.l,,HELD,,HELD,,
+W12,lintel need (head vs member soffit of the host run),status,,HELD,,HELD,,head height or member soffit not established: whether a lintel is needed is open; row L2
+P-GF-01,opening m2 (w x h),m2,,HELD,,HELD,,
+P-GF-01,block deduction (Q-73 / T-175),m2,,HELD,,HELD,,width or height not established: deduction HELD (never 0)
+P-GF-01,finish deduction face A (INTERNAL_PLASTER_PAINT),m2,,HELD,,HELD,,
+P-GF-01,finish deduction face B (INTERNAL_PLASTER_PAINT),m2,,HELD,,HELD,,
+P-GF-01,reveal (2 jambs + head + sill for a window; UP-REVEAL-001 via OPENING_SCOPE_V1),m.l,,HELD,,HELD,,
+P-GF-01,lintel need (head vs member soffit of the host run),status,,HELD,,HELD,,head height or member soffit not established: whether a lintel is needed is open; row L1
+P-1F-01,opening m2 (w x h),m2,,HELD,,HELD,,
+P-1F-01,block deduction (Q-73 / T-175),m2,,NOT_APPLICABLE,,NOT_APPLICABLE,,the opening lies outside the measured gross run (gap already excluded): deducting it again would be a double deduction
+P-1F-01,finish deduction face A (INTERNAL_PLASTER_PAINT),m2,,HELD,,HELD,,
+P-1F-01,finish deduction face B (INTERNAL_PLASTER_PAINT),m2,,HELD,,HELD,,
+P-1F-01,reveal (2 jambs + head + sill for a window; UP-REVEAL-001 via OPENING_SCOPE_V1),m.l,,HELD,,HELD,,
+P-1F-01,lintel need (head vs member soffit of the host run),status,,NOT_APPLICABLE,,NOT_APPLICABLE,,

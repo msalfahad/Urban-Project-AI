@@ -1,0 +1,470 @@
+{
+ "project": "development villa (Alsenan); references are Drive folder / file title + layer / handle only; no drawing content copied",
+ "base_system": "ARCH",
+ "units": "m",
+ "zero_relations": [],
+ "zero_fit": {
+  "result": "DRAWING-CONFIRMED",
+  "offset_m": 0.0,
+  "matched": 19,
+  "of": 20,
+  "method": "LEVEL_CHAIN_V1.zero_relation_from_marks on the 20 level marks of ST7757 SH08 (ground-beam plan) and the 20 of the P7757 GF plan (LEVEL layer): one plan translation puts 19 structural marks on architectural marks with the same text (+-0.00, +0.15, +0.30, +1.00); the 20th (+-0.00 block LEL, plot boundary) has no partner",
+  "ref": "Drive 'Alsenan chalet project' / ST7757 dxf.dxf SH08 LEVEL handles 1A9..1CD + block LEL; P7757_DXF_COMPRESSED.zip LEVEL handles 394..4AE, A74"
+ },
+ "chains": [
+  {
+   "chain_id": "GF-EXT-F8",
+   "family": "FOUNDATION",
+   "storey": "GF",
+   "element": "exterior ground beam over footing F8 (typical: no footing has a printed founding level)"
+  },
+  {
+   "chain_id": "GF-FLOOR",
+   "family": "FLOOR",
+   "storey": "GF",
+   "element": "ground-bearing slab T=10cm (ST SH08) (ground-bearing: no beam link)",
+   "links": [
+    [
+     "FFL",
+     "SLAB_TOP",
+     "FLOOR_BUILD_UP"
+    ],
+    [
+     "SLAB_TOP",
+     "SLAB_SOFFIT",
+     "SLAB_THICKNESS"
+    ]
+   ]
+  },
+  {
+   "chain_id": "1F-FLOOR",
+   "family": "FLOOR",
+   "storey": "1F",
+   "element": "GF roof slab = 1F floor (ST SH06); B20 at the stair"
+  },
+  {
+   "chain_id": "2F-FLOOR",
+   "family": "FLOOR",
+   "storey": "2F",
+   "element": "1F roof slab = 2F floor and terrace (ST SH04); B23 at the stair"
+  },
+  {
+   "chain_id": "2F-ROOF",
+   "family": "ROOF",
+   "storey": "2F",
+   "element": "2F roof (ST SH02 penthouse slab)"
+  },
+  {
+   "chain_id": "ANNEX-FLOOR",
+   "family": "FLOOR",
+   "storey": "ANNEX",
+   "element": "annex floor: ground-bearing slab T=10cm (ST SH08, annex callout)",
+   "links": [
+    [
+     "FFL",
+     "SLAB_TOP",
+     "FLOOR_BUILD_UP"
+    ],
+    [
+     "SLAB_TOP",
+     "SLAB_SOFFIT",
+     "SLAB_THICKNESS"
+    ]
+   ]
+  },
+  {
+   "chain_id": "ANNEX-ROOF",
+   "family": "ROOF",
+   "storey": "ANNEX",
+   "element": "annex roof"
+  },
+  {
+   "chain_id": "POOL",
+   "family": "POOL",
+   "storey": "COURT",
+   "element": "swimming pool (T-183 r2 element)"
+  }
+ ],
+ "datums": [
+  {
+   "chain_id": "GF-EXT-F8",
+   "kind": "FFL",
+   "value": 1.0,
+   "status": "DRAWING-CONFIRMED",
+   "ref": "P7757_DXF_COMPRESSED.zip LEVEL '+1.00' handles A74, 411, 40F, 413; p7757_arch_sheet10.pdf SECTION A-A marker"
+  },
+  {
+   "chain_id": "GF-EXT-F8",
+   "kind": "FFL",
+   "value": 1.0,
+   "status": "DRAWING-CONFIRMED",
+   "ref": "ST7757 dxf.dxf SH08 LEVEL '+1.00' handles 1CD, 1C0, 1BE, 1C2 (same positions as the P7757 marks: the architectural level, not a structural one)"
+  },
+  {
+   "chain_id": "GF-EXT-F8",
+   "kind": "FINISHED_GROUND",
+   "value": 0.15,
+   "status": "DRAWING-CONFIRMED",
+   "ref": "P7757_DXF_COMPRESSED.zip LEVEL '+0.15' (courts, 6 marks); elevation chain base of DIMENSION 2A72"
+  },
+  {
+   "chain_id": "GF-EXT-F8",
+   "kind": "EXISTING_GROUND",
+   "value": 0.0,
+   "status": "DRAWING-CONFIRMED",
+   "ref": "P7757 LEVEL '+-0.00' (block LEL, plot boundary, 6); ST7757 SH08 the same 6; SECTION A-A both ends"
+  },
+  {
+   "chain_id": "GF-EXT-F8",
+   "kind": "FORMATION",
+   "value": -1.5,
+   "bound": "AT_MOST",
+   "status": "DRAWING-CONFIRMED",
+   "ref": "ST7757 dxf.dxf SH11 boxed note 1 (SHX Arabic + TEXT '1.5'): excavation level not less than 1.5 m below the existing plot level; ST7757.pdf p.9"
+  },
+  {
+   "chain_id": "GF-EXT-F8",
+   "kind": "FOOTING_BOTTOM",
+   "value": null,
+   "status": "HELD",
+   "ref": "ST7757.pdf p.8 note 12: founding level confirmed on site by the contractor and supervising engineer (no value); owner Q-21 C"
+  },
+  {
+   "chain_id": "GF-FLOOR",
+   "kind": "FFL",
+   "value": 1.0,
+   "status": "DRAWING-CONFIRMED",
+   "ref": "P7757 LEVEL '+1.00'; SECTION A-A; NORTH EAST ELEVATION cut (p7757_arch_sheet09.pdf)"
+  },
+  {
+   "chain_id": "1F-FLOOR",
+   "kind": "FFL",
+   "value": 5.5,
+   "status": "DRAWING-CONFIRMED",
+   "ref": "P7757 LEVEL '+5.50' handles D1B, D16, D1D, D18, 1251; DIMENSION 29D0 5500; SECTION A-A marker"
+  },
+  {
+   "chain_id": "2F-FLOOR",
+   "kind": "FFL",
+   "value": 9.7,
+   "status": "DRAWING-CONFIRMED",
+   "ref": "P7757 LEVEL '+9.70' handles 1352, 134E, 1350; DIMENSION 29FC 8700 above +1.00; SECTION A-A marker"
+  },
+  {
+   "chain_id": "2F-FLOOR",
+   "kind": "FFL",
+   "value": 9.7,
+   "status": "DRAWING-CONFIRMED",
+   "ref": "ST7757 dxf.dxf SH02 LEVEL '+9.70' handles 3F6, 3F4 (on the 1F-roof terrace beside the penthouse slab: the architectural level)"
+  },
+  {
+   "chain_id": "2F-ROOF",
+   "kind": "FINISHED_ROOF",
+   "value": 13.9,
+   "status": "DRAWING-CONFIRMED",
+   "ref": "p7757_arch_sheet10.pdf SECTION A-A marker '+13.90' on the top line of the drawn roof band; P7757 DIMENSION 2A0A 4200 above +9.70 (no level text in the DXF)"
+  },
+  {
+   "chain_id": "2F-ROOF",
+   "kind": "PARAPET_TOP",
+   "value": 14.4,
+   "status": "DRAWING-CONFIRMED",
+   "ref": "P7757 DIMENSION 2A18 500 above +13.90; SECTION A-A '50'"
+  },
+  {
+   "chain_id": "ANNEX-FLOOR",
+   "kind": "FFL",
+   "value": 0.3,
+   "status": "DRAWING-CONFIRMED",
+   "ref": "P7757 LEVEL '+0.30' handles 401, 403, 405, 4AC; ST7757 SH08 1B0, 1B2, 1B4, 1C9"
+  },
+  {
+   "chain_id": "ANNEX-ROOF",
+   "kind": "FINISHED_ROOF",
+   "value": 4.3,
+   "status": "DRAWING-CONFIRMED",
+   "ref": "P7757 LEVEL '+4.30' handle D20 and layer-5 244B; DIMENSION 24AE 4000 above +0.30; NORTH EAST ELEVATION marker"
+  },
+  {
+   "chain_id": "ANNEX-ROOF",
+   "kind": "PARAPET_TOP",
+   "value": 4.8,
+   "status": "DRAWING-CONFIRMED",
+   "ref": "P7757 DIMENSION 24BC 500 above +4.30"
+  },
+  {
+   "chain_id": "POOL",
+   "kind": "POOL_RIM",
+   "value": 0.3,
+   "status": "VERIFIED",
+   "ref": "P7757 NW elevation cut, layer-1 caps over both walls (T-183 r2; Checker 2026-10-22 16:14)"
+  },
+  {
+   "chain_id": "POOL",
+   "kind": "POOL_FINISHED_FLOOR",
+   "value": -0.85,
+   "status": "VERIFIED",
+   "ref": "P7757 NW elevation cut, layer-5 line at the end of DIMENSION 2E5E 1150.0 (T-183 r2)"
+  },
+  {
+   "chain_id": "POOL",
+   "kind": "POOL_BASE_TOP",
+   "value": -0.9,
+   "status": "VERIFIED",
+   "ref": "P7757 NW elevation cut, layer-1 structure line over the hatched shell (T-183 r2)"
+  },
+  {
+   "chain_id": "POOL",
+   "kind": "POOL_BASE_UNDERSIDE",
+   "value": -1.05,
+   "status": "DRAWING-CONFIRMED",
+   "ref": "P7757 NW elevation cut: the architectural cut draws the base 0.15 thick (-0.90 .. -1.05; T-183 r2 note: the structural detail governs the RC thickness)"
+  },
+  {
+   "chain_id": "POOL",
+   "kind": "EXISTING_GROUND",
+   "value": 0.0,
+   "status": "DRAWING-CONFIRMED",
+   "ref": "existing plot level +-0.00 (P7757 / ST7757 SH08 block LEL marks; the SH11 excavation note measures from it)"
+  }
+ ],
+ "layers": [
+  {
+   "chain_id": "GF-EXT-F8",
+   "layer": "GB_TOP_BELOW_SLAB_TOP",
+   "thickness": 0.0,
+   "status": "DRAWING-CONFIRMED",
+   "ref": "ST7757.pdf p.13 'Ground Beams for exterior walls': top labelled 'Ground Floor slab level' (a name, no value)"
+  },
+  {
+   "chain_id": "GF-EXT-F8",
+   "layer": "FOOTING_DEPTH",
+   "thickness": 0.5,
+   "status": "DRAWING-CONFIRMED",
+   "ref": "ST7757 dxf.dxf SH11 footing schedule F8 depth 50 (T-042)"
+  },
+  {
+   "chain_id": "GF-EXT-F8",
+   "layer": "BLINDING_THICKNESS",
+   "thickness": 0.1,
+   "status": "DRAWING-CONFIRMED",
+   "ref": "ST7757.pdf p.13 '10cm Plain con.' under both footing details"
+  },
+  {
+   "chain_id": "GF-EXT-F8",
+   "layer": "FLOOR_BUILD_UP",
+   "thickness": 0.1,
+   "status": "ASSUMED — OWNER-APPROVED",
+   "method": "OWNER_MANUAL",
+   "ref": "owner Q-43 (2026-10-19): '0.10 floor finishing' in the plaster / paint wall-height method; finish heights only, never a structural datum"
+  },
+  {
+   "chain_id": "GF-FLOOR",
+   "layer": "SLAB_THICKNESS",
+   "thickness": 0.1,
+   "status": "DRAWING-CONFIRMED",
+   "ref": "ST7757 dxf.dxf SH08 callout 'T=10cm' (ground slab)"
+  },
+  {
+   "chain_id": "GF-FLOOR",
+   "layer": "FLOOR_BUILD_UP",
+   "thickness": 0.1,
+   "status": "ASSUMED — OWNER-APPROVED",
+   "method": "OWNER_MANUAL",
+   "ref": "owner Q-43 (finish heights only)"
+  },
+  {
+   "chain_id": "ANNEX-FLOOR",
+   "layer": "SLAB_THICKNESS",
+   "thickness": 0.1,
+   "status": "DRAWING-CONFIRMED",
+   "ref": "ST7757 dxf.dxf SH08 callout 'T=10cm' (annex; T-042: two callouts, main house and annex)"
+  },
+  {
+   "chain_id": "1F-FLOOR",
+   "layer": "SLAB_THICKNESS",
+   "thickness": 0.16,
+   "status": "DRAWING-CONFIRMED",
+   "ref": "ST7757 dxf.dxf SH12 S-NOTE 'all slabs 16 cm unless stated otherwise'; ST7757.pdf p.8 note 18"
+  },
+  {
+   "chain_id": "1F-FLOOR",
+   "layer": "BEAM_DEPTH",
+   "thickness": 0.75,
+   "status": "DRAWING-CONFIRMED",
+   "ref": "ST7757.pdf p.10 simple-beam schedule B20 40 x 75 (T-189)"
+  },
+  {
+   "chain_id": "1F-FLOOR",
+   "layer": "FLOOR_BUILD_UP",
+   "thickness": 0.1,
+   "status": "ASSUMED — OWNER-APPROVED",
+   "method": "OWNER_MANUAL",
+   "ref": "owner Q-43 (finish heights only)"
+  },
+  {
+   "chain_id": "2F-FLOOR",
+   "layer": "SLAB_THICKNESS",
+   "thickness": 0.16,
+   "status": "DRAWING-CONFIRMED",
+   "ref": "ST7757 dxf.dxf SH12 S-NOTE 'all slabs 16 cm unless stated otherwise'"
+  },
+  {
+   "chain_id": "2F-FLOOR",
+   "layer": "BEAM_DEPTH",
+   "thickness": 0.75,
+   "status": "DRAWING-CONFIRMED",
+   "ref": "ST7757.pdf p.10 B23 45 x 75 (T-189)"
+  },
+  {
+   "chain_id": "2F-FLOOR",
+   "layer": "FLOOR_BUILD_UP",
+   "thickness": 0.1,
+   "status": "ASSUMED — OWNER-APPROVED",
+   "method": "OWNER_MANUAL",
+   "ref": "owner Q-43 (finish heights only)"
+  },
+  {
+   "chain_id": "2F-ROOF",
+   "layer": "SLAB_THICKNESS",
+   "thickness": 0.16,
+   "status": "DRAWING-CONFIRMED",
+   "ref": "ST7757 dxf.dxf SH12 S-NOTE 'all slabs 16 cm unless stated otherwise'"
+  },
+  {
+   "chain_id": "ANNEX-ROOF",
+   "layer": "SLAB_THICKNESS",
+   "thickness": 0.16,
+   "status": "DRAWING-CONFIRMED",
+   "ref": "ST7757 dxf.dxf SH12 S-NOTE 'all slabs 16 cm unless stated otherwise'"
+  },
+  {
+   "chain_id": "POOL",
+   "layer": "FINISHED_DEPTH",
+   "thickness": 1.15,
+   "status": "VERIFIED",
+   "ref": "P7757 DIMENSION 2E5E 1150.0; owner Q-26 A"
+  },
+  {
+   "chain_id": "POOL",
+   "layer": "BASE_THICKNESS",
+   "thickness": 0.4,
+   "status": "VERIFIED",
+   "ref": "ST7757 dxf.dxf SH01 DETAIL OF SWIMMING POOL / ST7757.pdf p.7 base 40 (T-183 r2)"
+  },
+  {
+   "chain_id": "POOL",
+   "layer": "UNDERLAY",
+   "thickness": 0.1,
+   "status": "DRAWING-CONFIRMED",
+   "ref": "ST7757.pdf p.7 pool detail: 0.05 + 0.05 under the base (T-183 r2 formation build-up)"
+  },
+  {
+   "chain_id": "POOL",
+   "layer": "BLINDING_THICKNESS",
+   "thickness": 0.1,
+   "status": "DRAWING-CONFIRMED",
+   "ref": "ST7757.pdf p.7 pool detail 10 cm plain concrete (T-183 r2)"
+  }
+ ],
+ "uses": [
+  {
+   "use_id": "A1-POOL-WALL-r1",
+   "quantity": "pool RC wall height (T-183 r1, superseded)",
+   "chain_id": "POOL",
+   "needs": "POOL_BASE_TOP",
+   "used": {
+    "kind": "POOL_FINISHED_FLOOR"
+   },
+   "ref": "T-183 r1 (Checker 2026-10-22 12:05: 2.710 vs 2.828 m3)"
+  },
+  {
+   "use_id": "A1-POOL-WALL-r2",
+   "quantity": "pool RC wall height (T-183 r2, merged)",
+   "chain_id": "POOL",
+   "needs": "POOL_BASE_TOP",
+   "used": {
+    "kind": "POOL_BASE_TOP"
+   },
+   "ref": "T-183 r2 MERGED 6380294"
+  },
+  {
+   "use_id": "A2-SILL-W01-r1",
+   "quantity": "W01 / W03 sill and head above floor (T-194 census before T-198)",
+   "chain_id": "GF-EXT-F8",
+   "needs": "FFL",
+   "measured_from": {
+    "chain_id": "GF-EXT-F8",
+    "kind": "FINISHED_GROUND"
+   },
+   "must_be_from": {
+    "chain_id": "GF-EXT-F8",
+    "kind": "FFL"
+   },
+   "ref": "T-194 / T-198: DIMENSION 2A72 1850 read from the +0.15 ground line"
+  },
+  {
+   "use_id": "A2-SILL-W01-r3",
+   "quantity": "W01 / W03 sill and head above floor (T-198 census r3, merged)",
+   "chain_id": "GF-EXT-F8",
+   "needs": "FFL",
+   "measured_from": {
+    "chain_id": "GF-EXT-F8",
+    "kind": "FFL"
+   },
+   "must_be_from": {
+    "chain_id": "GF-EXT-F8",
+    "kind": "FFL"
+   },
+   "ref": "T-198 MERGED 57bb0411"
+  },
+  {
+   "use_id": "A3-NECK-TOP",
+   "quantity": "column-neck top (route G profile NECK_TOP_LEVEL_M)",
+   "chain_id": "GF-EXT-F8",
+   "needs": "GB_TOP",
+   "used": {
+    "value": 1.0
+   },
+   "ref": "research/agents_t167/profile_st7757_q17a.json NECK_TOP_LEVEL_M 1.0 ('GF level +1.00')"
+  },
+  {
+   "use_id": "A3-NECK-FOOT",
+   "quantity": "column-neck bottom (footing top)",
+   "chain_id": "GF-EXT-F8",
+   "needs": "FOOTING_TOP",
+   "used": {
+    "kind": "FOOTING_TOP"
+   },
+   "ref": "owner Q-21 C; research/agents_t042 part B"
+  },
+  {
+   "use_id": "A4-STAIR-B20",
+   "quantity": "ST-01 MS1-U head inside B20 (beam top level)",
+   "chain_id": "1F-FLOOR",
+   "needs": "SLAB_TOP",
+   "used": {
+    "kind": "FFL"
+   },
+   "margin": {
+    "up": 0.167,
+    "down": 0.289
+   },
+   "ref": "research/agents_t189/T-189_OVERLAP_OWNERSHIP.md s.2: B20 +4.75 .. +5.50 (top at the FFL); margins 0.167 up / 0.289 down"
+  },
+  {
+   "use_id": "A4-STAIR-B23",
+   "quantity": "ST-01 MS2-U head inside B23 (beam top level)",
+   "chain_id": "2F-FLOOR",
+   "needs": "SLAB_TOP",
+   "used": {
+    "kind": "FFL"
+   },
+   "margin": {
+    "up": 0.167,
+    "down": 0.289
+   },
+   "ref": "research/agents_t189/T-189_OVERLAP_OWNERSHIP.md s.2: B23 +8.95 .. +9.70 (top at the FFL)"
+  }
+ ]
+}
