@@ -1,0 +1,539 @@
+{
+ "gb_double_confirmed_m3": [
+  0,
+  0
+ ],
+ "gb_double_confirmed_plan_m2": 0,
+ "gb_double_exterior_m3": [
+  0.096,
+  0.114
+ ],
+ "gb_footing": {
+  "footing_top_at_most_m": -0.63,
+  "gb_soffit_at_least_m": -0.35,
+  "intersection_m3": 0.0,
+  "plan_overlap_m2": 19.925,
+  "plan_overlaps": 80,
+  "spans": 51,
+  "vertical_gap_at_least_m": 0.28
+ },
+ "junctions_nonzero": [
+  {
+   "column": "COL:17BD",
+   "depths_m": [
+    0.8,
+    0.95
+   ],
+   "double_m3": [
+    0.0,
+    0.0
+   ],
+   "double_plan_m2": [
+    0.0,
+    0.0
+   ],
+   "ends": [
+    "107+7CE#1:end"
+   ],
+   "gap_m3": [
+    0.0021,
+    0.0025
+   ],
+   "gap_plan_m2": [
+    0.0026,
+    0.0026
+   ],
+   "neck": "T-217 AGREE (17C5 CN); CAP; CAP = FP places it off the beam-plan outline",
+   "status": "HELD (depth candidates / exterior bottom D-35)"
+  },
+  {
+   "column": "COL:1EF",
+   "depths_m": [
+    0.3,
+    0.4
+   ],
+   "double_m3": [
+    0.0,
+    0.002
+   ],
+   "double_plan_m2": [
+    0.0,
+    0.005
+   ],
+   "ends": [
+    "17E+17F#1:start"
+   ],
+   "gap_m3": [
+    0.0014,
+    0.0042
+   ],
+   "gap_plan_m2": [
+    0.0047,
+    0.0104
+   ],
+   "neck": "T-217 CONFLICT 1093 C2: [(200.0, 500.0), (300.0, 500.0)]; CAP",
+   "status": "CONFLICT (T-217 section) + depth candidates"
+  },
+  {
+   "column": "COL:1F2",
+   "depths_m": [
+    0.3,
+    0.4
+   ],
+   "double_m3": [
+    0.0,
+    0.012
+   ],
+   "double_plan_m2": [
+    0.0,
+    0.03
+   ],
+   "ends": [
+    "15C+7CC#1:end"
+   ],
+   "gap_m3": [
+    0.0,
+    0.0
+   ],
+   "gap_plan_m2": [
+    0.0,
+    0.0
+   ],
+   "neck": "T-217 CONFLICT 1096 C2: [(200.0, 500.0), (300.0, 500.0)]; CAP",
+   "status": "CONFLICT (T-217 section) + depth candidates"
+  },
+  {
+   "column": "COL:204",
+   "depths_m": [
+    0.8,
+    0.95
+   ],
+   "double_m3": [
+    0.024,
+    0.0285
+   ],
+   "double_plan_m2": [
+    0.03,
+    0.03
+   ],
+   "ends": [
+    "136+7D5#1:end"
+   ],
+   "gap_m3": [
+    0.0,
+    0.0
+   ],
+   "gap_plan_m2": [
+    0.0,
+    0.0
+   ],
+   "neck": "T-217 DRAFTING_NOTE (10A8 C): printed (300.0, 500.0) at the CAP place = FP; the beam-plan outline is the drafting copy; CAP = FP places it off the beam-plan outline",
+   "status": "HELD (depth candidates / exterior bottom D-35)"
+  },
+  {
+   "column": "COL:207",
+   "depths_m": [
+    0.8,
+    0.95
+   ],
+   "double_m3": [
+    0.024,
+    0.0285
+   ],
+   "double_plan_m2": [
+    0.03,
+    0.03
+   ],
+   "ends": [
+    "136+7D5#1:start",
+    "7D4+F8#1:start"
+   ],
+   "gap_m3": [
+    0.0,
+    0.0
+   ],
+   "gap_plan_m2": [
+    0.0,
+    0.0
+   ],
+   "neck": "T-217 DRAFTING_NOTE (10AB C): printed (300.0, 500.0) at the CAP place = FP; the beam-plan outline is the drafting copy; CAP = FP places it off the beam-plan outline",
+   "status": "HELD (depth candidates / exterior bottom D-35)"
+  },
+  {
+   "column": "COL:20B",
+   "depths_m": [
+    0.8,
+    0.95
+   ],
+   "double_m3": [
+    0.024,
+    0.0285
+   ],
+   "double_plan_m2": [
+    0.03,
+    0.03
+   ],
+   "ends": [
+    "13F+7D3#1:start",
+    "7D4+F8#1:end",
+    "7D4+F8#2:start"
+   ],
+   "gap_m3": [
+    0.0,
+    0.0
+   ],
+   "gap_plan_m2": [
+    0.0,
+    0.0
+   ],
+   "neck": "T-217 DRAFTING_NOTE (10AE C3): printed (300.0, 500.0) at the CAP place = FP; the beam-plan outline is the drafting copy; CAP = FP places it off the beam-plan outline",
+   "status": "HELD (depth candidates / exterior bottom D-35)"
+  },
+  {
+   "column": "COL:211",
+   "depths_m": [
+    0.3,
+    0.4,
+    0.8,
+    0.95
+   ],
+   "double_m3": [
+    0.0,
+    0.0
+   ],
+   "double_plan_m2": [
+    0.0,
+    0.0
+   ],
+   "ends": [
+    "13D+7D2#1:start",
+    "13E+7D6#1:end",
+    "13E+7D6#2:start"
+   ],
+   "gap_m3": [
+    0.009,
+    0.0285
+   ],
+   "gap_plan_m2": [
+    0.03,
+    0.03
+   ],
+   "neck": "T-217 AGREE (10B1 C3); CAP",
+   "status": "HELD (depth candidates / exterior bottom D-35)"
+  },
+  {
+   "column": "COL:214",
+   "depths_m": [
+    0.8,
+    0.95
+   ],
+   "double_m3": [
+    0.024,
+    0.0285
+   ],
+   "double_plan_m2": [
+    0.03,
+    0.03
+   ],
+   "ends": [
+    "137+138#1:end"
+   ],
+   "gap_m3": [
+    0.0,
+    0.0
+   ],
+   "gap_plan_m2": [
+    0.0,
+    0.0
+   ],
+   "neck": "T-217 DRAFTING_NOTE (10B4 C): printed (300.0, 500.0) at the CAP place = FP; the beam-plan outline is the drafting copy; CAP = FP places it off the beam-plan outline",
+   "status": "HELD (depth candidates / exterior bottom D-35)"
+  },
+  {
+   "column": "COL:24D",
+   "depths_m": [
+    0.4
+   ],
+   "double_m3": [
+    0.0,
+    0.01
+   ],
+   "double_plan_m2": [
+    0.0,
+    0.025
+   ],
+   "ends": [
+    "184+7CF#1:end",
+    "184+7CF#2:start",
+    "7DC+7DD#1:start"
+   ],
+   "gap_m3": [
+    0.016,
+    0.016
+   ],
+   "gap_plan_m2": [
+    0.04,
+    0.04
+   ],
+   "neck": "T-217 CONFLICT 10E0 C8: [(300.0, 800.0), (300.0, 900.0)]; CAP; CAP = FP places it off the beam-plan outline",
+   "status": "CONFLICT (T-217 section)"
+  }
+ ],
+ "junctions_total": 34,
+ "junctions_zero": 25,
+ "policy": {
+  "guard_class": "UNWIRED_PRODUCER",
+  "policy_id": "END_OWNERSHIP_V1",
+  "rule": "R-CONC-OWN-1 (T-189) applied to strap / ground-beam ends; proposed R-END-OWN-1 (T-230)",
+  "statement": "A strap end inside a footing is footing concrete up to the footing's own depth; the part of the strap outside the footing's depth is the strap's, except inside the neck footprint above the footing top (neck). One strap soffit level per strap: every end is evaluated at the same level. A ground beam is billed net of the PRINTED neck section (not a drafting outline); a plan overlap with a footing is no intersection when the solids are separated vertically, and a footing outline never terminates a ground beam."
+ },
+ "ring_ends": [
+  {
+   "D_new_m": 0.4,
+   "L_to_support_m": 2.9,
+   "L_v2_m": 1.8999,
+   "bars": "9 T14 (3 top, 3 + 3 bottom), straight run",
+   "bars_lb_kg": 31.578,
+   "delta_m3": [
+    0.177,
+    0.12
+   ],
+   "end": "start",
+   "m3_new": 0.348,
+   "m3_v2": [
+    0.171,
+    0.228
+   ],
+   "refused": [
+    [
+     "FTG:1B2B",
+     "FOOTING outline: no 3-D contact with the beam"
+    ]
+   ],
+   "sides_m2": 2.32,
+   "sides_m2_v2": [
+    1.1399,
+    1.5199
+   ],
+   "span_id": "15D+7C8#1",
+   "status": "DRAWING-CONFIRMED",
+   "support": "S-BW 7C2",
+   "v2_node": "FOOTING_FACE",
+   "v2_refs": [
+    "FTG:1B2B"
+   ],
+   "v2_status": "RELEASED"
+  },
+  {
+   "D_new_m": 0.6,
+   "L_to_support_m": 5.02,
+   "L_v2_m": 5.02,
+   "bars": "9 T16 (3 top, 3 + 3 bottom), straight run",
+   "bars_lb_kg": 71.396,
+   "delta_m3": [
+    0.0
+   ],
+   "end": "start",
+   "m3_new": 0.9036,
+   "m3_v2": [
+    0.9036
+   ],
+   "refused": [],
+   "sides_m2": 6.024,
+   "sides_m2_v2": [
+    6.024
+   ],
+   "span_id": "177+7CD#1",
+   "status": "DRAWING-CONFIRMED",
+   "support": "S-BW 7C2",
+   "v2_node": "GAP_TO_COLUMN",
+   "v2_refs": [
+    "COL:1EC"
+   ],
+   "v2_status": "HELD"
+  },
+  {
+   "D_new_m": 0.4,
+   "L_to_support_m": 3.2278,
+   "L_v2_m": 1.9278,
+   "bars": "9 T14 (3 top, 3 + 3 bottom), straight run",
+   "bars_lb_kg": 35.147,
+   "delta_m3": [
+    0.2138,
+    0.156
+   ],
+   "end": "end",
+   "m3_new": 0.3873,
+   "m3_v2": [
+    0.1735,
+    0.2313
+   ],
+   "refused": [
+    [
+     "FTG:1B2B",
+     "FOOTING outline: no 3-D contact with the beam"
+    ]
+   ],
+   "sides_m2": 2.5822,
+   "sides_m2_v2": [
+    1.1567,
+    1.5422
+   ],
+   "span_id": "17C+7E3#1",
+   "status": "DRAWING-CONFIRMED",
+   "support": "S-BW 7C2",
+   "v2_node": "FOOTING_FACE",
+   "v2_refs": [
+    "FTG:1B2B"
+   ],
+   "v2_status": "RELEASED"
+  },
+  {
+   "L_to_support_m": null,
+   "L_v2_m": 1.3,
+   "end": "end",
+   "refused": [],
+   "span_id": "1811+1812#1",
+   "status": "HELD",
+   "support": null,
+   "v2_node": "FREE_END",
+   "v2_refs": [],
+   "v2_status": "HELD"
+  }
+ ],
+ "strap_gb": {
+  "plan_overlap_m2": 1.6803,
+  "plan_overlaps": [
+   {
+    "plan_overlap_m2": 0.21,
+    "span_id": "184+7CF#3",
+    "strap": "SB1"
+   },
+   {
+    "plan_overlap_m2": 0.7502,
+    "span_id": "109+7CB#1",
+    "strap": "SB2"
+   },
+   {
+    "plan_overlap_m2": 0.0088,
+    "span_id": "109+7CB#2",
+    "strap": "SB2"
+   },
+   {
+    "plan_overlap_m2": 0.1049,
+    "span_id": "145+7CA#1",
+    "strap": "SB2"
+   },
+   {
+    "plan_overlap_m2": 0.1088,
+    "span_id": "7E1+7E2#1",
+    "strap": "SB2"
+   },
+   {
+    "plan_overlap_m2": 0.1606,
+    "span_id": "13C+7D9#1",
+    "strap": "SB3"
+   },
+   {
+    "plan_overlap_m2": 0.0015,
+    "span_id": "13D+7D2#1",
+    "strap": "SB3"
+   },
+   {
+    "plan_overlap_m2": 0.0533,
+    "span_id": "13E+7D6#1",
+    "strap": "SB3"
+   },
+   {
+    "plan_overlap_m2": 0.2794,
+    "span_id": "13F+7D3#1",
+    "strap": "SB3"
+   },
+   {
+    "plan_overlap_m2": 0.0018,
+    "span_id": "7D4+F8#1",
+    "strap": "SB3"
+   },
+   {
+    "plan_overlap_m2": 0.001,
+    "span_id": "7D4+F8#2",
+    "strap": "SB3"
+   }
+  ]
+ },
+ "strap_level": {
+  "SB2": {
+   "D": 0.5,
+   "e_at_min_m": 0.0,
+   "e_range_m": [
+    -0.5,
+    0.5
+   ],
+   "ends": [
+    [
+     "F11 (1B07)",
+     0.5,
+     1.2228,
+     0.0
+    ],
+    [
+     "F6 (1B19)",
+     0.5,
+     1.4764,
+     0.21
+    ]
+   ],
+   "excess_at_e0_m3": 0.0,
+   "excess_min_m3": 0.0,
+   "excess_sup_monolithic_m3": 1.3496,
+   "excess_sup_soffit_not_below_m3": 1.3496,
+   "exposure_per_0_10_m_of_e_m3": 0.2699,
+   "neck_at_e0_m3": 0.0
+  },
+  "SB3": {
+   "D": 0.4,
+   "e_at_min_m": 0.0,
+   "e_range_m": [
+    -0.4,
+    0.3
+   ],
+   "ends": [
+    [
+     "F15 (1B2A)",
+     0.4,
+     0.3755,
+     0.0242
+    ],
+    [
+     "F3 (166B)",
+     0.3,
+     0.2953,
+     0.0463
+    ]
+   ],
+   "excess_at_e0_m3": 0.0295,
+   "excess_min_m3": 0.0295,
+   "excess_sup_monolithic_m3": 0.2683,
+   "excess_sup_soffit_not_below_m3": 0.2308,
+   "exposure_per_0_10_m_of_e_m3": 0.0671,
+   "neck_at_e0_m3": 0.0046
+  }
+ },
+ "strap_top": [
+  {
+   "strap": "SB1",
+   "strap_top_at_e0_at_most_m": -0.83,
+   "strap_top_monolithic_bound_m": -0.33
+  },
+  {
+   "strap": "SB2",
+   "strap_top_at_e0_at_most_m": -0.83,
+   "strap_top_monolithic_bound_m": -0.33
+  },
+  {
+   "strap": "SB3",
+   "strap_top_at_e0_at_most_m": -0.93,
+   "strap_top_monolithic_bound_m": -0.63
+  }
+ ]
+}

@@ -1,0 +1,227 @@
+{
+ "footing_rows": 26,
+ "by_type": {
+  "F": [
+   4,
+   0.864
+  ],
+  "F11": [
+   1,
+   2.625
+  ],
+  "F12": [
+   1,
+   9.856
+  ],
+  "F13": [
+   1,
+   5.16
+  ],
+  "F14": [
+   1,
+   6.27
+  ],
+  "F15": [
+   1,
+   0.72
+  ],
+  "F2": [
+   2,
+   2.261
+  ],
+  "F3": [
+   2,
+   1.344
+  ],
+  "F4": [
+   2,
+   3.52
+  ],
+  "F5": [
+   2,
+   4.032
+  ],
+  "F6": [
+   1,
+   2.86
+  ],
+  "F8": [
+   1,
+   7.2
+  ],
+  "F9": [
+   1,
+   5.049
+  ],
+  "FF": [
+   1,
+   11.385
+  ],
+  "FN": [
+   4,
+   1.158
+  ]
+ },
+ "not_drawn_types": [
+  "F7"
+ ],
+ "footings_measured_m3": 64.304,
+ "footings_held": [
+  [
+   "1B1B",
+   "one outline, two types: (A) schedule rows separately 2.1760; (B) drawn outline 4.550 m2 x H 0.50 = 2.2750",
+   [
+    2.176,
+    2.275
+   ]
+  ]
+ ],
+ "blinding": {
+  "measured_m3": 14.990438,
+  "plan_sum_m2": 151.99,
+  "overlap_once_m2": 0.195625,
+  "outside_m2": 1.89,
+  "net_m2": 149.904375,
+  "held": [
+   [
+    "1B1B",
+    "follows its footing (HELD)",
+    [
+     0.5025,
+     0.59
+    ]
+   ],
+   [
+    "BLINDING-OUTSIDE-BOUNDARY",
+    "projection beyond the plot line (designer item)",
+    [
+     0.0,
+     0.189
+    ]
+   ]
+  ]
+ },
+ "conc_footing": {
+  "measured_m3": 67.6945,
+  "held": [
+   [
+    "isolated footings:1B1B",
+    "one outline, two types: (A) schedule rows separately 2.1760; (B) drawn outline 4.550 m2 x H 0.50 = 2.2750",
+    [
+     2.176,
+     2.275
+    ]
+   ],
+   [
+    "straps:SB3/F3 strap excess",
+    "strap soffit level not printed (D-15 narrowed, T-230)",
+    [
+     0.0295,
+     0.2683
+    ]
+   ],
+   [
+    "straps:SB1/F10+F end",
+    "end ownership waits on F10 + F (Q-31 C): A_in 0.770 m2 x [0 .. D 0.50] (V3.0.8 bound, T-231 MERGED 3b042470)",
+    [
+     0.0,
+     0.385
+    ]
+   ],
+   [
+    "boundary band:band B.W",
+    "Q-28 A provisional 8.459 (net, 0.20 x 0.60); section C1 and crossing levels open",
+    [
+     5.639,
+     11.033
+    ]
+   ]
+  ],
+  "verdict": "NOT CLOSABLE: boundary band; isolated footings; straps"
+ },
+ "conc_blinding": {
+  "measured_m3": 14.990438,
+  "held": [
+   [
+    "footing blinding:1B1B",
+    "follows its footing (HELD)",
+    [
+     0.5025,
+     0.59
+    ]
+   ],
+   [
+    "footing blinding:BLINDING-OUTSIDE-BOUNDARY",
+    "projection beyond the plot line (designer item)",
+    [
+     0.0,
+     0.189
+    ]
+   ],
+   [
+    "ground-beam / strap blinding:ground-beam blinding",
+    "T-100: R 9.691 / L 5.534; L refuted in 3-D by T-230 levels for the drawn beams; detail selection (two-beam detail) waits on the formation (Q-21 C)",
+    [
+     9.691,
+     9.691
+    ]
+   ],
+   [
+    "ground-beam / strap blinding:strap blinding",
+    "D-15: none printed under straps",
+    [
+     0.0,
+     0.913
+    ]
+   ]
+  ],
+  "verdict": "NOT CLOSABLE: footing blinding; ground-beam / strap blinding"
+ },
+ "freelancer": {
+  "isolated_m3": 65.634,
+  "straps_m3": 3.3925,
+  "band_m3": 8.604,
+  "line_m3": 77.6305,
+  "blinding_m3": 47.055,
+  "blinding_basis": [
+   15,
+   31.37,
+   0.1
+  ]
+ },
+ "reconcile_isolated": {
+  "diff_m3": 1.33,
+  "F10_at_schedule": 1.96,
+  "F3_second_outline": -0.672,
+  "FN_clip_counted_twice": 0.042,
+  "explained_m3": 1.33,
+  "residual_m3": 0.0
+ },
+ "engine_A": {
+  "footings_measured": 64.304,
+  "footings_diff_m3": 0.0,
+  "straps_total": 3.7809,
+  "straps_diff_m3": 0.3904,
+  "band": 7.2204,
+  "F10_provisional": [
+   0.216,
+   1.96
+  ],
+  "line_total": 77.2653,
+  "blinding_bounded": [
+   7.2755,
+   16.887
+  ]
+ },
+ "engine_V307": {
+  "line_total": 76.874817,
+  "blinding_footing": 15.179437,
+  "blinding_footing_minus_ours_m3": 0.188999,
+  "strap_inside_F10_outline_high": 0.402518
+ },
+ "engine_V308": {
+  "line_measured_plus_provisional": 76.8749,
+  "sb3_high_end": 0.1181,
+  "sb3_high_end_T230": 0.2683
+ }
+}

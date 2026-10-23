@@ -1,0 +1,4 @@
+floor,status,strip_union_m2,sum_run_x_t_m2,diff_m2,tolerance_m2,listed_m2,listed,junctions_L,junctions_T,junctions_held,held_junction_max_lm
+GF,PASS_WITH_LISTED_PIECES,25.002474,24.886272,0.116202,0.0144,0.119132,WB-FL0028-FL0029 0.12 m2 (0.3 lm); WB-FL0048-FL0049 -0.000868 m2 (-0.0058 lm),19,29,6,1.0265
+1F,PASS,20.480664,20.480664,-0.0,0.005,0,,20,26,0,0.0000
+2F,PASS,7.375,7.375,0.0,0.0018,0,,12,5,0,0.0000
