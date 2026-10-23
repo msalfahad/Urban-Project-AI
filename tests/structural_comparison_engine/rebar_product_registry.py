@@ -237,4 +237,8 @@ OTHER_REBAR_AWARE = (
     # carry (finding DG-4 FINISHED_AS_STRUCTURAL); it imports only the standard library, writes no reinforcement
     # quantity, computes no kg and applies no ratio
     "engine/source/default_guard.py",
+    # T-236: the trade completeness check names REBAR / STR.REBAR only as one principal trade row and one item-code
+    # mapping (an element-count check); it imports only the standard library, reads no bar, writes no reinforcement
+    # quantity, computes no kg and applies no ratio
+    "engine/source/trade_completeness_v1.py",
 )
