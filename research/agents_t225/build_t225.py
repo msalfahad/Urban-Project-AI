@@ -50,8 +50,9 @@ def inputs():
     t215 = {r["row_id"]: r for r in rd("research/agents_t215/T215_ROW_EFFECT.csv")}
     v2 = rd("research/agents_t108/T108_V2_RUN_LENGTHS.csv")
     v29 = rd("research/agents_t225/V29_RUN_A_MASONRY_LINES.csv")
+    v29b = rd("research/agents_t225/V29_RUN_A_WALL_BANDS.csv")
     raw = json.loads((ROOT / "tests/alsenan/registers_b1/FREELANCER_RAW_ROWS.json").read_text(encoding="utf-8"))
-    return t108, t143, hosts, t176, t215, v2, v29, raw
+    return t108, t143, hosts, t176, t215, v2, v29, v29b, raw
 
 
 # ------------------------------------------------------------------------------------------------ freelancer
@@ -326,6 +327,61 @@ def three_way_thickness(t108, v2, v29):
     return out
 
 
+def run_a_bands(bands, v2, t108):
+    """Run A wall bands against the engine's V2 runs of the same band id (T-125 / T-169 physical module): band gross =
+    V2 architectural run + columns run A measures through + remainder; engine physical - run A's both-faces length =
+    openings the engine keeps in the run (Q-73) + residual."""
+    V = defaultdict(list)
+    for r in v2:
+        V[(r["floor"], r["run_id"].split("#")[0].replace("BAY|", ""))].append(r)
+    rows_of = defaultdict(list)
+    for r in t108:
+        for run in [x for x in r["v2_runs"].split(";") if x]:
+            rows_of[(r["floor"], run)].append(r["row_id"])
+    seen, out, tot = set(), [], defaultdict(lambda: defaultdict(float))
+    for a in bands:
+        runs = V.get((a["floor"], a["wall_id"]), [])
+        seen.update((r["floor"], r["run_id"]) for r in runs)
+        arch = sum(f(r["arch_run_m"]) for r in runs if not r["run_id"].startswith("BAY|"))
+        bay = sum(f(r["arch_run_m"]) for r in runs if r["run_id"].startswith("BAY|"))
+        phys = sum(f(r["physical_q69b_m"]) for r in runs)
+        ops = sum(f(x.split(":")[-1]) for r in runs for x in r["openings_in_run"].split("; ")
+                  if x.count(":") == 2 and not x.startswith("GLAZED"))
+        cols, g, n = f(a["columns_in_wall_lm"]), f(a["gross_lm"]), f(a["net_lm"])
+        rem = g - arch - bay - cols
+        if not runs:
+            why = "band with no V2 run (a drawn stub; the engine row takes it from its V2 bay run)"
+        elif abs(rem) <= 0.05:
+            why = "band = V2 run + columns in wall" if cols else "agrees"
+        elif rem > 0 and n + 0.05 < arch:
+            why = ("band extent beyond the drawn wall pieces (run A joins collinear pieces across gaps with no wall "
+                   "faces; its own both-faces length is below the V2 run)") if rem > 1.0 else "end convention (+)"
+        else:
+            why = "end convention (V2 stem to the face / corner, run A band end)"
+        ids = sorted({x for r in runs for x in rows_of.get((r["floor"], r["run_id"]), [])})
+        row = {"floor": a["floor"], "band": a["wall_id"], "t_m": a["family"], "kind": a["kind"],
+               "runA_gross_lm": R3(g), "runA_both_faces_lm (released)": R3(n), "runA_columns_in_wall_lm": R3(cols),
+               "v2_runs": ";".join(r["run_id"] for r in runs), "engine_rows": ";".join(ids),
+               "v2_arch_run_m": R3(arch + bay), "engine_physical_m": R3(phys),
+               "d_gross_minus_v2_arch_m": R3(g - arch - bay), "of_which_columns_m": R3(cols), "remainder_m": R3(rem),
+               "openings_kept_in_engine_run_m (Q-73)": R3(ops),
+               "residual_physical_minus_both_faces_minus_openings_m": R3(phys - n - ops), "class": why}
+        out.append(row)
+        t = tot[(a["floor"], a["family"])]
+        for k, v in (("g", g), ("n", n), ("cols", cols), ("arch", arch + bay), ("phys", phys), ("ops", ops), ("rem", rem)):
+            t[k] += v
+    for r in v2:
+        if (r["floor"], r["run_id"]) not in seen:
+            out.append({"floor": r["floor"], "band": r["run_id"], "t_m": r["t_m"], "class": "V2 run with no run A band"})
+    summ = []
+    for (fl, fam), t in sorted(tot.items(), key=lambda kv: ("GF1F2F".index(kv[0][0]), kv[0][1])):
+        summ.append({"floor": fl, "t_m": fam, "runA_gross_lm": R3(t["g"]), "v2_arch_run_m": R3(t["arch"]),
+                     "d_m": R3(t["g"] - t["arch"]), "columns_in_wall_m": R3(t["cols"]),
+                     "remainder_m": R3(t["rem"]), "runA_both_faces_lm": R3(t["n"]), "engine_physical_m": R3(t["phys"]),
+                     "openings_in_engine_run_m": R3(t["ops"]), "residual_m": R3(t["phys"] - t["n"] - t["ops"])})
+    return out, summ
+
+
 def gap_table(t108):
     out = []
     for ty, t in (("BLACK", "0.15"), ("BLACK", "0.2"), ("WHITE", "0.15"), ("WHITE", "0.2")):
@@ -384,7 +440,8 @@ def to_csv(rows, cols=None):
 
 
 def build():
-    t108, t143, hosts, t176, t215, v2, v29, raw = inputs()
+    t108, t143, hosts, t176, t215, v2, v29, v29b, raw = inputs()
+    bands, bsum = run_a_bands(v29b, v2, t108)
     fr, ftot = freelancer_rows(raw)
     reg = register(t108, t143, hosts, t176, t215)
     cov = coverage(t108, reg)
@@ -424,6 +481,8 @@ def build():
         "THREE_WAY_BY_FLOOR_SECTION.csv": to_csv(sec),
         "THREE_WAY_BY_FLOOR_THICKNESS_TYPE.csv": to_csv(thk),
         "GAP_RECONSTRUCTION.csv": to_csv(gp),
+        "RUN_A_VS_ENGINE_BY_BAND.csv": to_csv(bands, list(bands[0].keys())),
+        "RUN_A_VS_ENGINE_BY_FLOOR_THICKNESS.csv": to_csv(bsum),
         "BLOCKWORK_WALL_REGISTER_V1.csv": to_csv(reg),
         "BEFORE_COVERAGE.csv": to_csv(cov),
         "summary.json": json.dumps(summary, indent=1, ensure_ascii=False, sort_keys=False) + "\n",

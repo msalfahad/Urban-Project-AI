@@ -1,6 +1,6 @@
 # T-225: blockwork resolution 1/4: sources, three-way reconciliation, wall register v1, before-coverage
 
-Worker 2, 2026-10-23 15:46 - 16:40 UTC, lane A, gate 1 (owner programme BLOCKWORK_RESOLUTION_PROGRAMME.md, 15:45).
+Worker 2, 2026-10-23 15:46 - 16:10 UTC, lane A, gate 1 (owner programme BLOCKWORK_RESOLUTION_PROGRAMME.md, 15:45).
 Base: working head 41847bff. **No quantity changed**: every figure is read from merged ledgers (T-108 r2
 MASONRY_AREA_V1 r2 01eeafd0, T-143, T-175, T-176 41847bff, T-215 8a9b4b48). Released default unchanged (V2.9 + route G).
 Development villa; not an accuracy claim. Drawings and workbooks are cited by Drive folder and title only.
@@ -60,12 +60,29 @@ Like-for-like is possible on almost nothing, and that is the finding: the three 
   External and internal 15 cm: not like for like while held length remains (held is missing, not 0).
 - **Older automated (run A) vs engine** (THREE_WAY_BY_FLOOR_THICKNESS_TYPE.csv): run A has lengths only; its block m2
   is BLOCKED_RFI on every line (MASONRY_HEIGHT_NOT_IN_THE_DRAWING), so **m2 is NOT COMPARABLE** (held is not 0) and
-  black / white is NOT COMPARABLE (run A has no type). Length, in units: 0.15 m walls agree with the engine's V2
-  architectural run within +0.236 (GF), +0.268 (1F), +0.200 m (2F); at 0.20 m run A's band run is longer by 27.200 (GF),
-  9.180 (1F), 3.750 m (2F), and at 0.40 m by 0.800 m: UNRESOLVED residual (not traced in this package; candidates are
-  bands through embedded columns (D-12, 19 walls) and junction pieces; for the independent census T-017). Run A's
-  *released* length (both faces drawn, 216.931 lm) is shorter than the engine's physical length by 0 .. 24.739 m per
-  floor and thickness (0 only at 0.40 m): it drops every run with one face undrawn.
+  black / white is NOT COMPARABLE (run A has no type). **Length, reconciled band by band** (run A's ARCH_WALLS bands
+  carry the same band ids as the engine's V2 runs; RUN_A_VS_ENGINE_BY_BAND.csv, RUN_A_VS_ENGINE_BY_FLOOR_THICKNESS.csv):
+
+  | Floor / t | Run A band gross | Engine V2 arch run | d | = columns run A measures through | + remainder | Run A both faces (released) | Engine physical | openings the engine keeps in the run (Q-73) | residual |
+  |---|---|---|---|---|---|---|---|---|---|
+  | GF 0.15 | 39.078 | 37.788 | +1.289 | 1.090 | +0.200 | 30.335 | 37.788 | 5.997 | 1.457 |
+  | GF 0.20 | 124.975 | 96.775 | +28.200 | 11.160 | +17.040 | 66.704 | 90.443 | 21.210 | 2.529 |
+  | GF 0.40 | 1.400 | 0.600 | +0.800 | 0.800 | 0.000 | 0.600 | 0.600 | 0 | 0 |
+  | 1F 0.15 | 56.467 | 56.736 | -0.268 | 1.700 | -1.968 | 44.260 | 56.736 | 10.100 | 2.376 |
+  | 1F 0.20 | 72.779 | 63.599 | +9.180 | 8.817 | +0.362 | 44.032 | 60.020 | 14.207 | 1.781 |
+  | 2F 0.15 | 10.700 | 10.900 | -0.200 | 0 | -0.200 | 8.700 | 10.900 | 1.800 | 0.400 |
+  | 2F 0.20 | 32.450 | 28.700 | +3.750 | 3.500 | +0.250 | 22.300 | 28.700 | 5.900 | 0.500 |
+
+  Causes: (i) run A measures each band THROUGH the columns standing in it (27.067 m in all); the physical run stops at
+  the column faces (a column is concrete, not block: Q-69 B, T-125 verified): ENGINE_RIGHT for block length; (ii) GF
+  0.20 remainder 17.040 m: band WB-FL0007-FL0008 alone 13.270 m (run A's band is one 17.57 m collinear line joining the
+  two drawn pieces GF-W02 1.65 + GF-W03 2.65 m across a stretch with no wall faces, its own both-faces length 4.15 m
+  confirms; ENGINE_RIGHT), WB-FL0001-FL0002 1.650 and WB-FL0017-FL0018 1.600 m (same kind), 0.520 m end conventions;
+  (iii) the 0.15 m remainders -1.968 .. +0.200 m are end conventions (the V2 stem runs to the face of the wall it meets,
+  run A's band stops at the band end), within T-125's verified convention. Run A's *released* length (both faces drawn,
+  216.931 lm) is shorter than the engine's physical length by the openings the engine keeps in the run (Q-73 deducts
+  their area later) plus a residual of 0 .. 2.529 m per floor and thickness (junction pieces and one-face-drawn
+  stretches): named, UNRESOLVED at piece level, for the independent census T-017.
 - **100 mm**: no 100 mm wall in the engine census, the freelancer's sheet or run A (a count of 0 walls, not a quantity).
 
 ## 3. Why established gross - deductions is not the net (owner item 6): reproduced wall by wall
@@ -127,6 +144,8 @@ member bound 3 (1.600 m held length) -> T-227. Independently VERIFIED net: 0 m2 
    11.10), row 222 (3 x 1.00 x 2.40 = 7.20 deduction), and the cover cells H37 300.875, H196 617.248, H227 83.64.
 3. Re-run run A (`tools/release_baseline.py run research/agents_t165/baselines/V29_ROUTEG_NO_PROFILE.json`) and
    `extract_v29.py <run> --check`: 7 ARCH.WALL_RUN lines, 216.931 lm released, 21 block lines BLOCKED_RFI.
+4. Band WB-FL0007-FL0008 on the GF plan (P7757.dxf): run A's 17.57 m band vs the two drawn pieces GF-W02 1.65 + GF-W03
+   2.65 m; and one column-in-wall band (WB-FL0001-FL0002: 30.80 = 26.37 + 2.78 columns + 1.65).
 
 ## 7. Lessons row proposed (ERS s.7)
 
@@ -138,4 +157,5 @@ in the held scope (any villa) | tests/t225_wall_register (fixture T225-F: normal
 
 Files: `extract_v29.py`, `build_t225.py` (`--check`), `register_v1.py`, SOURCES.csv, FREELANCER_BLK_LINES.csv,
 FREELANCER_BLK_TOTALS.csv, THREE_WAY_BY_FLOOR_SECTION.csv, THREE_WAY_BY_FLOOR_THICKNESS_TYPE.csv, GAP_RECONSTRUCTION.csv,
-BLOCKWORK_WALL_REGISTER_V1.csv, BEFORE_COVERAGE.csv, V29_RUN_A_MASONRY_LINES.csv, summary.json; tests/t225_wall_register.
+RUN_A_VS_ENGINE_BY_BAND.csv, RUN_A_VS_ENGINE_BY_FLOOR_THICKNESS.csv, BLOCKWORK_WALL_REGISTER_V1.csv, BEFORE_COVERAGE.csv,
+V29_RUN_A_MASONRY_LINES.csv, V29_RUN_A_WALL_BANDS.csv, summary.json; tests/t225_wall_register.

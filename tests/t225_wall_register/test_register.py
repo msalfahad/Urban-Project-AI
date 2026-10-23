@@ -177,3 +177,20 @@ def test_no_client_names_or_cover_text_in_outputs():
             text = p.read_text(encoding="utf-8")
             for c in cover:
                 assert c not in text, (p.name, c)
+
+
+def test_run_a_lengths_reconciled_band_by_band():
+    s = {(r["floor"], r["t_m"]): r for r in _csv(HERE / "RUN_A_VS_ENGINE_BY_FLOOR_THICKNESS.csv")}
+    for r in s.values():                                       # band gross = V2 arch run + columns + remainder
+        assert float(r["runA_gross_lm"]) == pytest.approx(
+            float(r["v2_arch_run_m"]) + float(r["columns_in_wall_m"]) + float(r["remainder_m"]), abs=0.002)
+        assert float(r["engine_physical_m"]) == pytest.approx(  # physical = both faces + openings kept + residual
+            float(r["runA_both_faces_lm"]) + float(r["openings_in_engine_run_m"]) + float(r["residual_m"]), abs=0.002)
+    gf = s[("GF", "0.20")]
+    assert (gf["d_m"], gf["columns_in_wall_m"], gf["remainder_m"]) == ("28.200", "11.160", "17.040")
+    assert s[("GF", "0.40")]["remainder_m"] in ("0.000", "-0.000")
+    b = {(r["floor"], r["band"]): r for r in _csv(HERE / "RUN_A_VS_ENGINE_BY_BAND.csv")}
+    w = b[("GF", "WB-FL0007-FL0008")]
+    assert w["remainder_m"] == "13.270" and w["engine_rows"] == "GF-W02;GF-W03" and "beyond the drawn" in w["class"]
+    assert sum(float(r["runA_columns_in_wall_lm"] or 0) for r in b.values()) == pytest.approx(27.067, abs=0.001)
+    assert b[("2F", "WB-FL0002-FL0003")]["engine_rows"] == "2F-W03"   # band ids repeat per floor: never mixed
