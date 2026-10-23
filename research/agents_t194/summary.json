@@ -1,0 +1,217 @@
+{
+ "method": "OPENING_CONSISTENCY_V1",
+ "openings": 71,
+ "issues": 78,
+ "issue_codes": {
+  "ELEVATION_ONLY": 9,
+  "HEAD_LIST_DIFFERS": 2,
+  "HEAD_NOT_PRINTED": 59,
+  "MISSING_FROM_LIST": 3,
+  "NOT_IN_PLAN": 1,
+  "SILL_LIST_DIFFERS": 2,
+  "WIDTH_NOT_PRINTED": 1,
+  "WIDTH_ONLY_IN_LIST": 1
+ },
+ "verdicts": {
+  "EXISTENCE": {
+   "AGREES": 67,
+   "DIFFERS": 4
+  },
+  "WIDTH": {
+   "NOT_COMPARABLE": 59,
+   "NOT_SHOWN": 2,
+   "AGREES": 10
+  },
+  "SILL": {
+   "NOT_SHOWN": 62,
+   "NOT_COMPARABLE": 9
+  },
+  "HEAD": {
+   "NOT_SHOWN": 62,
+   "NOT_COMPARABLE": 9
+  },
+  "KIND": {
+   "NOT_COMPARABLE": 37,
+   "AGREES": 33,
+   "NOT_SHOWN": 1
+  }
+ },
+ "binding": [
+  {
+   "facade": "NE",
+   "code": "BOUND",
+   "detail": "1F at 12.077 m -> W19"
+  },
+  {
+   "facade": "NE",
+   "code": "BOUND",
+   "detail": "1F at 13.554 m -> W20"
+  },
+  {
+   "facade": "NE",
+   "code": "BOUND",
+   "detail": "1F at 17.272 m -> W24"
+  },
+  {
+   "facade": "NE",
+   "code": "BOUND",
+   "detail": "2F at 16.348 m -> D-2F-01"
+  },
+  {
+   "facade": "NE",
+   "code": "ORIENTATION",
+   "detail": "mirrored=False offset=-12.077"
+  },
+  {
+   "facade": "NW",
+   "code": "BOUND",
+   "detail": "1F at 2.071 m -> W15"
+  },
+  {
+   "facade": "NW",
+   "code": "BOUND",
+   "detail": "1F at 4.117 m -> W16"
+  },
+  {
+   "facade": "NW",
+   "code": "BOUND",
+   "detail": "1F at 7.242 m -> W18"
+  },
+  {
+   "facade": "NW",
+   "code": "BOUND",
+   "detail": "1F at 9.618 m -> W17"
+  },
+  {
+   "facade": "NW",
+   "code": "ORIENTATION",
+   "detail": "mirrored=False offset=-2.071"
+  },
+  {
+   "facade": "SE",
+   "code": "BOUND",
+   "detail": "GF at 1.850 m -> W01"
+  },
+  {
+   "facade": "SE",
+   "code": "BOUND",
+   "detail": "1F at 1.850 m -> W13"
+  },
+  {
+   "facade": "SE",
+   "code": "BOUND",
+   "detail": "2F at 1.850 m -> W26"
+  },
+  {
+   "facade": "SE",
+   "code": "BOUND",
+   "detail": "1F at 6.757 m -> W14"
+  },
+  {
+   "facade": "SE",
+   "code": "ORIENTATION",
+   "detail": "mirrored=False offset=-1.85"
+  },
+  {
+   "facade": "SE-FENCE",
+   "code": "BINDING_NOT_POSSIBLE",
+   "detail": "no position on one side"
+  },
+  {
+   "facade": "SE-FENCE",
+   "code": "ORIENTATION",
+   "detail": "mirrored=None offset=None"
+  },
+  {
+   "facade": "SW",
+   "code": "BOUND",
+   "detail": "GF at 11.661 m -> W07"
+  },
+  {
+   "facade": "SW",
+   "code": "BOUND",
+   "detail": "GF at 13.277 m -> W06"
+  },
+  {
+   "facade": "SW",
+   "code": "BOUND",
+   "detail": "GF at 15.771 m -> W05"
+  },
+  {
+   "facade": "SW",
+   "code": "BOUND",
+   "detail": "GF at 17.249 m -> D-GF-09"
+  },
+  {
+   "facade": "SW",
+   "code": "BOUND",
+   "detail": "GF at 3.972 m -> SX-03"
+  },
+  {
+   "facade": "SW",
+   "code": "BOUND",
+   "detail": "GF at 22.953 m -> P-GF-05"
+  },
+  {
+   "facade": "SW",
+   "code": "BOUND",
+   "detail": "GF at 25.077 m -> W08"
+  },
+  {
+   "facade": "SW",
+   "code": "BOUND",
+   "detail": "GF at 27.155 m -> D-GF-03"
+  },
+  {
+   "facade": "SW",
+   "code": "BOUND",
+   "detail": "GF at 28.032 m -> W04"
+  },
+  {
+   "facade": "SW",
+   "code": "BOUND",
+   "detail": "GF at 33.389 m -> D-GF-01"
+  },
+  {
+   "facade": "SW",
+   "code": "BOUND",
+   "detail": "1F at 11.661 m -> W23"
+  },
+  {
+   "facade": "SW",
+   "code": "BOUND",
+   "detail": "1F at 13.277 m -> W22"
+  },
+  {
+   "facade": "SW",
+   "code": "BOUND",
+   "detail": "1F at 15.771 m -> W21"
+  },
+  {
+   "facade": "SW",
+   "code": "BOUND",
+   "detail": "1F at 17.249 m -> W25"
+  },
+  {
+   "facade": "SW",
+   "code": "BOUND",
+   "detail": "2F at 13.578 m -> W29"
+  },
+  {
+   "facade": "SW",
+   "code": "BOUND",
+   "detail": "2F at 15.771 m -> W28"
+  },
+  {
+   "facade": "SW",
+   "code": "BOUND",
+   "detail": "2F at 17.249 m -> W27"
+  },
+  {
+   "facade": "SW",
+   "code": "ORIENTATION",
+   "detail": "mirrored=False offset=-3.977"
+  }
+ ],
+ "head_not_printed_covered_by_q55c": 26
+}
