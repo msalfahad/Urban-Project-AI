@@ -1,0 +1,2484 @@
+{
+ "schema": "T229_ALSENAN_SUMMARY_V1",
+ "module": "BEAM_SUPPORT_V1",
+ "source_dxf_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+ "counts": {
+  "GF": {
+   "pieces": 65,
+   "supports": 30,
+   "carried": 4
+  },
+  "1F": {
+   "pieces": 43,
+   "supports": 20,
+   "carried": 1
+  },
+  "2F": {
+   "pieces": 19,
+   "supports": 9,
+   "carried": 0
+  }
+ },
+ "rings_not_cut_checked": [
+  "1F:BAND0033",
+  "1F:BAND0034",
+  "1F:BAND0035",
+  "1F:BAND0036",
+  "GF:BAND0049",
+  "GF:BAND0050",
+  "GF:BAND0051",
+  "GF:BAND0052",
+  "GF:BAND0053"
+ ],
+ "census": {
+  "cuts": 36,
+  "ends": 182,
+  "under": 11,
+  "rows": 238,
+  "by_class": {
+   "CUT_AT_CARRIED": 2,
+   "DOUBLE": 9,
+   "DOUBLE_PARTIAL": 6,
+   "END_AT_BEAM": 71,
+   "END_AT_JUNCTION_OWNER": 15,
+   "END_AT_OVER_SUPPORT": 1,
+   "END_AT_PROJECTION": 1,
+   "END_AT_SUPPORT": 73,
+   "END_FREE": 3,
+   "END_SHORT_AT_CARRIED": 2,
+   "END_SHORT_OBLIQUE": 15,
+   "END_SHORT_OF_MEMBER": 1,
+   "PASS": 5,
+   "PROJECTION_CUT": 2,
+   "SUPPORT_CUT": 22,
+   "SUPPORT_CUT_BESIDE": 10
+  }
+ },
+ "short": {
+  "cut_at_carried_m3": 0.5581,
+  "beside_support_m3": 0.476,
+  "end_short_at_carried_m3": 0.2425,
+  "end_short_of_member_m3": 0.0289,
+  "end_short_oblique_m3": 0.512,
+  "total_confirmed_m3": 1.8175
+ },
+ "held": {
+  "gaps": [
+   {
+    "a": "GF:BAND0031.1",
+    "b": "GF:BAND0031.2",
+    "cls": "PROJECTION_CUT",
+    "bound_m3": null,
+    "plan_m2": 0.1598
+   },
+   {
+    "a": "1F:BAND0013.1",
+    "b": "1F:BAND0013.2",
+    "cls": "PROJECTION_CUT",
+    "bound_m3": null,
+    "plan_m2": 0.1598
+   },
+   {
+    "a": "1F:BAND0026.1",
+    "b": "1F:BAND0026.2",
+    "cls": "SUPPORT_CUT_BESIDE",
+    "bound_m3": null,
+    "plan_m2": 0.0595
+   }
+  ],
+  "ends": [
+   {
+    "piece": "1F:BAND0031.1",
+    "cls": "END_AT_PROJECTION"
+   }
+  ]
+ },
+ "double": {
+  "released_m3": 0.2778,
+  "ledger_t119_m3": 0.3378,
+  "lines": [
+   {
+    "outline": "322",
+    "piece": "GF:BAND0037.1",
+    "mark": "B16",
+    "column": null,
+    "share": 0.3766,
+    "released_column_m3": null,
+    "ledger": [
+     "COL-GF-09"
+    ],
+    "released": {
+     "result": "PASS",
+     "double_m3": 0.0
+    }
+   },
+   {
+    "outline": "322",
+    "piece": "GF:BAND0042",
+    "mark": "B21",
+    "column": null,
+    "share": 0.3433,
+    "released_column_m3": null,
+    "ledger": [
+     "COL-GF-09"
+    ],
+    "released": {
+     "result": "PASS",
+     "double_m3": 0.0
+    }
+   },
+   {
+    "outline": "347",
+    "piece": "GF:BAND0041.1",
+    "mark": "CB1",
+    "column": "C",
+    "share": 1.0,
+    "released_column_m3": 0.45,
+    "ledger": [
+     "COL-GF-24"
+    ],
+    "released": {
+     "result": "DOUBLE",
+     "double_m3": 0.06
+    },
+    "ledger_t119": {
+     "result": "DOUBLE",
+     "double_m3": 0.06
+    }
+   },
+   {
+    "outline": "34A",
+    "piece": "GF:BAND0028",
+    "mark": "B9",
+    "column": "C",
+    "share": 0.495,
+    "released_column_m3": 0.45,
+    "ledger": [
+     "COL-GF-16"
+    ],
+    "released": {
+     "result": "DOUBLE_PARTIAL",
+     "double_m3": 0.0297
+    },
+    "ledger_t119": {
+     "result": "DOUBLE_PARTIAL",
+     "double_m3": 0.0297
+    }
+   },
+   {
+    "outline": "34D",
+    "piece": "GF:BAND0014",
+    "mark": "CB7",
+    "column": "C",
+    "share": 0.5016,
+    "released_column_m3": 0.45,
+    "ledger": [
+     "COL-GF-28"
+    ],
+    "released": {
+     "result": "DOUBLE_PARTIAL",
+     "double_m3": 0.0301
+    },
+    "ledger_t119": {
+     "result": "DOUBLE_PARTIAL",
+     "double_m3": 0.0301
+    }
+   },
+   {
+    "outline": "350",
+    "piece": "GF:BAND0014",
+    "mark": "CB7",
+    "column": "C3",
+    "share": 0.996,
+    "released_column_m3": 0.5625,
+    "ledger": [
+     "COL-GF-29"
+    ],
+    "released": {
+     "result": "DOUBLE",
+     "double_m3": 0.0598
+    },
+    "ledger_t119": {
+     "result": "DOUBLE",
+     "double_m3": 0.0598
+    }
+   },
+   {
+    "outline": "356",
+    "piece": "GF:BAND0027",
+    "mark": "B2",
+    "column": "C",
+    "share": 0.9927,
+    "released_column_m3": 0.45,
+    "ledger": [
+     "COL-GF-15"
+    ],
+    "released": {
+     "result": "DOUBLE",
+     "double_m3": 0.0318
+    },
+    "ledger_t119": {
+     "result": "DOUBLE",
+     "double_m3": 0.0318
+    }
+   },
+   {
+    "outline": "359",
+    "piece": "GF:BAND0039",
+    "mark": "CB8",
+    "column": "C",
+    "share": 0.9994,
+    "released_column_m3": 0.45,
+    "ledger": [
+     "COL-GF-30"
+    ],
+    "released": {
+     "result": "DOUBLE",
+     "double_m3": 0.06
+    },
+    "ledger_t119": {
+     "result": "DOUBLE",
+     "double_m3": 0.06
+    }
+   },
+   {
+    "outline": "667",
+    "piece": "1F:BAND0030.1",
+    "mark": "B19",
+    "column": "C9",
+    "share": 0.0436,
+    "released_column_m3": 0.756,
+    "ledger": [
+     "COL-1F-39"
+    ],
+    "released": {
+     "result": "DOUBLE_PARTIAL",
+     "double_m3": 0.0065
+    },
+    "ledger_t119": {
+     "result": "DOUBLE_PARTIAL",
+     "double_m3": 0.0065
+    }
+   },
+   {
+    "outline": "77B",
+    "piece": "1F:BAND0030.1",
+    "mark": "B19",
+    "column": null,
+    "share": 0.9781,
+    "released_column_m3": null,
+    "ledger": [],
+    "released": {
+     "result": "PASS",
+     "double_m3": 0.0
+    }
+   },
+   {
+    "outline": "778",
+    "piece": "2F:BAND0009",
+    "mark": "B7",
+    "column": null,
+    "share": 0.9989,
+    "released_column_m3": null,
+    "ledger": [
+     "COL-2F-59"
+    ],
+    "released": {
+     "result": "PASS",
+     "double_m3": 0.0
+    },
+    "ledger_t119": {
+     "result": "DOUBLE",
+     "double_m3": 0.0599
+    },
+    "record_t220": {
+     "result": "PASS",
+     "double_m3": 0.0
+    }
+   }
+  ]
+ },
+ "beams": [
+  {
+   "beam": "1F B1 (BAND0008)",
+   "pieces": [
+    "1F:BAND0008"
+   ],
+   "released_m3": 0.1286,
+   "route_g_held_pieces": [],
+   "route_g_held_m3": null,
+   "held_resolved_here": false,
+   "short_m3": 0.0011,
+   "drawing_derived_m3": 0.1297,
+   "status": "DRAWING-CONFIRMED",
+   "causes": [
+    "END_SHORT_OBLIQUE 0.0011"
+   ]
+  },
+  {
+   "beam": "1F B19 (BAND0030)",
+   "pieces": [
+    "1F:BAND0030.1"
+   ],
+   "released_m3": 1.6012,
+   "route_g_held_pieces": [],
+   "route_g_held_m3": null,
+   "held_resolved_here": false,
+   "short_m3": 0.0289,
+   "drawing_derived_m3": 1.6301,
+   "status": "DRAWING-CONFIRMED",
+   "causes": [
+    "END_SHORT_OF_MEMBER 0.0289"
+   ]
+  },
+  {
+   "beam": "1F B23 (BAND0031)",
+   "pieces": [
+    "1F:BAND0031.1",
+    "1F:BAND0031.2"
+   ],
+   "released_m3": 1.1138,
+   "route_g_held_pieces": [
+    "1F:BAND0031.1"
+   ],
+   "route_g_held_m3": 1.0125,
+   "held_resolved_here": false,
+   "short_m3": 0.1196,
+   "drawing_derived_m3": null,
+   "status": "HELD (route G hold at a real support stays; the short adds to whichever span)",
+   "causes": [
+    "SUPPORT_CUT_BESIDE 0.1196"
+   ]
+  },
+  {
+   "beam": "1F B25 (BAND0032)",
+   "pieces": [
+    "1F:BAND0032"
+   ],
+   "released_m3": 2.8361,
+   "route_g_held_pieces": [],
+   "route_g_held_m3": null,
+   "held_resolved_here": false,
+   "short_m3": 0.0139,
+   "drawing_derived_m3": 2.85,
+   "status": "DRAWING-CONFIRMED",
+   "causes": [
+    "END_SHORT_OBLIQUE 0.0139"
+   ]
+  },
+  {
+   "beam": "1F B6 (BAND0009)",
+   "pieces": [
+    "1F:BAND0009"
+   ],
+   "released_m3": 0.5519,
+   "route_g_held_pieces": [],
+   "route_g_held_m3": null,
+   "held_resolved_here": false,
+   "short_m3": 0.001,
+   "drawing_derived_m3": 0.553,
+   "status": "DRAWING-CONFIRMED",
+   "causes": [
+    "END_SHORT_OBLIQUE 0.0010"
+   ]
+  },
+  {
+   "beam": "1F CB11 (BAND0027)",
+   "pieces": [
+    "1F:BAND0027.1",
+    "1F:BAND0027.2",
+    "1F:BAND0027.3"
+   ],
+   "released_m3": 2.8481,
+   "route_g_held_pieces": [],
+   "route_g_held_m3": null,
+   "held_resolved_here": false,
+   "short_m3": 0.0532,
+   "drawing_derived_m3": 2.9013,
+   "status": "DRAWING-CONFIRMED",
+   "causes": [
+    "SUPPORT_CUT_BESIDE 0.0303",
+    "SUPPORT_CUT_BESIDE 0.0230"
+   ]
+  },
+  {
+   "beam": "1F CB12 (BAND0018)",
+   "pieces": [
+    "1F:BAND0018.1",
+    "1F:BAND0018.2"
+   ],
+   "released_m3": 1.9969,
+   "route_g_held_pieces": [],
+   "route_g_held_m3": null,
+   "held_resolved_here": false,
+   "short_m3": 0.0248,
+   "drawing_derived_m3": 2.0216,
+   "status": "DRAWING-CONFIRMED",
+   "causes": [
+    "SUPPORT_CUT_BESIDE 0.0248"
+   ]
+  },
+  {
+   "beam": "1F CB13 (BAND0024)",
+   "pieces": [
+    "1F:BAND0024.1",
+    "1F:BAND0024.2"
+   ],
+   "released_m3": 0.9225,
+   "route_g_held_pieces": [],
+   "route_g_held_m3": null,
+   "held_resolved_here": false,
+   "short_m3": 0.0177,
+   "drawing_derived_m3": 0.9402,
+   "status": "DRAWING-CONFIRMED",
+   "causes": [
+    "SUPPORT_CUT_BESIDE 0.0177"
+   ]
+  },
+  {
+   "beam": "GF B1 (BAND0009)",
+   "pieces": [
+    "GF:BAND0009"
+   ],
+   "released_m3": 0.2039,
+   "route_g_held_pieces": [],
+   "route_g_held_m3": null,
+   "held_resolved_here": false,
+   "short_m3": 0.0016,
+   "drawing_derived_m3": 0.2055,
+   "status": "DRAWING-CONFIRMED",
+   "causes": [
+    "END_SHORT_OBLIQUE 0.0016"
+   ]
+  },
+  {
+   "beam": "GF B11 (BAND0001)",
+   "pieces": [
+    "GF:BAND0001"
+   ],
+   "released_m3": 0.6831,
+   "route_g_held_pieces": [],
+   "route_g_held_m3": null,
+   "held_resolved_here": false,
+   "short_m3": 0.0034,
+   "drawing_derived_m3": 0.6866,
+   "status": "DRAWING-CONFIRMED",
+   "causes": [
+    "END_SHORT_OBLIQUE 0.0034"
+   ]
+  },
+  {
+   "beam": "GF B13 (BAND0034)",
+   "pieces": [
+    "GF:BAND0034.1"
+   ],
+   "released_m3": 0.9426,
+   "route_g_held_pieces": [],
+   "route_g_held_m3": null,
+   "held_resolved_here": false,
+   "short_m3": 0.0097,
+   "drawing_derived_m3": 0.9523,
+   "status": "DRAWING-CONFIRMED",
+   "causes": [
+    "END_SHORT_OBLIQUE 0.0048",
+    "END_SHORT_OBLIQUE 0.0049"
+   ]
+  },
+  {
+   "beam": "GF B17 (BAND0044)",
+   "pieces": [
+    "GF:BAND0044.1"
+   ],
+   "released_m3": 1.7212,
+   "route_g_held_pieces": [],
+   "route_g_held_m3": null,
+   "held_resolved_here": false,
+   "short_m3": 0.0442,
+   "drawing_derived_m3": 1.7655,
+   "status": "DRAWING-CONFIRMED",
+   "causes": [
+    "END_SHORT_OBLIQUE 0.0442"
+   ]
+  },
+  {
+   "beam": "GF B20 (BAND0043)",
+   "pieces": [
+    "GF:BAND0043.1",
+    "GF:BAND0043.2"
+   ],
+   "released_m3": 0.99,
+   "route_g_held_pieces": [
+    "GF:BAND0043.1"
+   ],
+   "route_g_held_m3": 0.9,
+   "held_resolved_here": false,
+   "short_m3": 0.09,
+   "drawing_derived_m3": null,
+   "status": "HELD (route G hold at a real support stays; the short adds to whichever span)",
+   "causes": [
+    "SUPPORT_CUT_BESIDE 0.0900"
+   ]
+  },
+  {
+   "beam": "GF B21 (BAND0042)",
+   "pieces": [
+    "GF:BAND0042"
+   ],
+   "released_m3": 2.5246,
+   "route_g_held_pieces": [],
+   "route_g_held_m3": null,
+   "held_resolved_here": false,
+   "short_m3": 0.0188,
+   "drawing_derived_m3": 2.5433,
+   "status": "DRAWING-CONFIRMED",
+   "causes": [
+    "END_SHORT_OBLIQUE 0.0095",
+    "END_SHORT_OBLIQUE 0.0093"
+   ]
+  },
+  {
+   "beam": "GF B24 (BAND0046)",
+   "pieces": [
+    "GF:BAND0046.1",
+    "GF:BAND0046.2"
+   ],
+   "released_m3": 1.3313,
+   "route_g_held_pieces": [
+    "GF:BAND0046.2"
+   ],
+   "route_g_held_m3": 0.5625,
+   "held_resolved_here": false,
+   "short_m3": 0.0949,
+   "drawing_derived_m3": null,
+   "status": "HELD (route G hold at a real support stays; the short adds to whichever span)",
+   "causes": [
+    "SUPPORT_CUT_BESIDE 0.0949"
+   ]
+  },
+  {
+   "beam": "GF B26 (BAND0047)",
+   "pieces": [
+    "GF:BAND0047.1",
+    "GF:BAND0047.2"
+   ],
+   "released_m3": 3.1039,
+   "route_g_held_pieces": [
+    "GF:BAND0047.1"
+   ],
+   "route_g_held_m3": 0.6832,
+   "held_resolved_here": true,
+   "short_m3": 0.2975,
+   "drawing_derived_m3": 4.0846,
+   "status": "DRAWING-CONFIRMED",
+   "causes": [
+    "CUT_AT_CARRIED 0.1163",
+    "END_SHORT_AT_CARRIED 0.1812"
+   ]
+  },
+  {
+   "beam": "GF B27 (BAND0048)",
+   "pieces": [
+    "GF:BAND0048.1",
+    "GF:BAND0048.2"
+   ],
+   "released_m3": 2.5025,
+   "route_g_held_pieces": [
+    "GF:BAND0048.2"
+   ],
+   "route_g_held_m3": 0.8406,
+   "held_resolved_here": true,
+   "short_m3": 0.8487,
+   "drawing_derived_m3": 4.1918,
+   "status": "DRAWING-CONFIRMED",
+   "causes": [
+    "CUT_AT_CARRIED 0.4418",
+    "END_SHORT_OBLIQUE 0.1787",
+    "END_SHORT_OBLIQUE 0.2282"
+   ]
+  },
+  {
+   "beam": "GF B28 (BAND0035)",
+   "pieces": [
+    "GF:BAND0035.1"
+   ],
+   "released_m3": 0.1509,
+   "route_g_held_pieces": [],
+   "route_g_held_m3": null,
+   "held_resolved_here": false,
+   "short_m3": 0.0612,
+   "drawing_derived_m3": 0.2121,
+   "status": "DRAWING-CONFIRMED",
+   "causes": [
+    "END_SHORT_AT_CARRIED 0.0612"
+   ]
+  },
+  {
+   "beam": "GF B29 (BAND0008)",
+   "pieces": [
+    "GF:BAND0008"
+   ],
+   "released_m3": 1.264,
+   "route_g_held_pieces": [],
+   "route_g_held_m3": null,
+   "held_resolved_here": false,
+   "short_m3": 0.0024,
+   "drawing_derived_m3": 1.2664,
+   "status": "DRAWING-CONFIRMED",
+   "causes": [
+    "END_SHORT_OBLIQUE 0.0024"
+   ]
+  },
+  {
+   "beam": "GF B4 (BAND0010)",
+   "pieces": [
+    "GF:BAND0010"
+   ],
+   "released_m3": 0.3413,
+   "route_g_held_pieces": [],
+   "route_g_held_m3": null,
+   "held_resolved_here": false,
+   "short_m3": 0.0016,
+   "drawing_derived_m3": 0.3429,
+   "status": "DRAWING-CONFIRMED",
+   "causes": [
+    "END_SHORT_OBLIQUE 0.0016"
+   ]
+  },
+  {
+   "beam": "GF B5 (BAND0017)",
+   "pieces": [
+    "GF:BAND0017"
+   ],
+   "released_m3": 0.3543,
+   "route_g_held_pieces": [],
+   "route_g_held_m3": null,
+   "held_resolved_here": false,
+   "short_m3": 0.0074,
+   "drawing_derived_m3": 0.3617,
+   "status": "DRAWING-CONFIRMED",
+   "causes": [
+    "END_SHORT_OBLIQUE 0.0074"
+   ]
+  },
+  {
+   "beam": "GF CB1 (BAND0041)",
+   "pieces": [
+    "GF:BAND0041.1",
+    "GF:BAND0041.2"
+   ],
+   "released_m3": 3.2812,
+   "route_g_held_pieces": [],
+   "route_g_held_m3": null,
+   "held_resolved_here": false,
+   "short_m3": 0.0575,
+   "drawing_derived_m3": 3.3388,
+   "status": "DRAWING-CONFIRMED",
+   "causes": [
+    "SUPPORT_CUT_BESIDE 0.0575"
+   ]
+  },
+  {
+   "beam": "GF CB8 (BAND0040)",
+   "pieces": [
+    "GF:BAND0040.1",
+    "GF:BAND0040.2"
+   ],
+   "released_m3": 2.7214,
+   "route_g_held_pieces": [],
+   "route_g_held_m3": null,
+   "held_resolved_here": false,
+   "short_m3": 0.0184,
+   "drawing_derived_m3": 2.7397,
+   "status": "DRAWING-CONFIRMED",
+   "causes": [
+    "SUPPORT_CUT_BESIDE 0.0184"
+   ]
+  }
+ ],
+ "t110_compare": {
+  "B27": {
+   "member": "BM-GF-048",
+   "t110_m3": 3.7872,
+   "this_m3": 4.1918
+  },
+  "B26": {
+   "member": "BM-GF-047",
+   "t110_m3": 3.9048,
+   "this_m3": 4.0846
+  }
+ },
+ "gaps": [
+  {
+   "storey": "GF",
+   "a": "GF:BAND0019.1",
+   "b": "GF:BAND0019.2",
+   "mark_a": "CB3",
+   "mark_b": "MULTIPLE_MARKS",
+   "length_m": 0.7996,
+   "width_m": 0.1999,
+   "area_m2": 0.15984,
+   "support_share": 0.9999,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0,
+   "depth_m": null,
+   "edges_continuous": true,
+   "members": [
+    [
+     "380",
+     "COLUMN_BELOW",
+     0.9999
+    ]
+   ],
+   "under_support_m2": 0.159824016,
+   "under_carried_m2": 0.0,
+   "other_beam_m2": 0.0,
+   "beside_m2": 1.5983999999996668e-05,
+   "cls": "SUPPORT_CUT",
+   "status": "PASS",
+   "short_m3": 0.0,
+   "residual_m2": 1.5983999999996668e-05,
+   "reason": "cut at a member that supports the beam; the support owns the footprint"
+  },
+  {
+   "storey": "GF",
+   "a": "GF:BAND0019.2",
+   "b": "GF:BAND0019.3",
+   "mark_a": "MULTIPLE_MARKS",
+   "mark_b": "CB3",
+   "length_m": 0.5997,
+   "width_m": 0.1999,
+   "area_m2": 0.11988,
+   "support_share": 0.9977,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0,
+   "depth_m": null,
+   "edges_continuous": true,
+   "members": [
+    [
+     "374",
+     "COLUMN_BELOW",
+     0.9977
+    ]
+   ],
+   "under_support_m2": 0.11960427600000001,
+   "under_carried_m2": 0.0,
+   "other_beam_m2": 0.0,
+   "beside_m2": 0.0002757239999999911,
+   "cls": "SUPPORT_CUT",
+   "status": "PASS",
+   "short_m3": 0.0,
+   "residual_m2": 0.0002757239999999911,
+   "reason": "cut at a member that supports the beam; the support owns the footprint"
+  },
+  {
+   "storey": "GF",
+   "a": "GF:BAND0020.1",
+   "b": "GF:BAND0020.2",
+   "mark_a": "B1",
+   "mark_b": "B2",
+   "length_m": 0.4981,
+   "width_m": 0.1999,
+   "area_m2": 0.09957,
+   "support_share": 0.9968,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0,
+   "depth_m": 0.4,
+   "edges_continuous": true,
+   "members": [
+    [
+     "36B",
+     "COLUMN_BELOW",
+     0.9968
+    ]
+   ],
+   "under_support_m2": 0.099251376,
+   "under_carried_m2": 0.0,
+   "other_beam_m2": 0.0,
+   "beside_m2": 0.00031862400000000346,
+   "cls": "SUPPORT_CUT",
+   "status": "PASS",
+   "short_m3": 0.0,
+   "residual_m2": 0.00031862400000000346,
+   "reason": "cut at a member that supports the beam; the support owns the footprint"
+  },
+  {
+   "storey": "GF",
+   "a": "GF:BAND0021.1",
+   "b": "GF:BAND0021.2",
+   "mark_a": "CB4",
+   "mark_b": "CB4",
+   "length_m": 0.7014,
+   "width_m": 0.1999,
+   "area_m2": 0.14021,
+   "support_share": 0.998,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0,
+   "depth_m": 0.5,
+   "edges_continuous": true,
+   "members": [
+    [
+     "362",
+     "COLUMN_BELOW",
+     0.998
+    ]
+   ],
+   "under_support_m2": 0.13992958,
+   "under_carried_m2": 0.0,
+   "other_beam_m2": 0.0,
+   "beside_m2": 0.00028042000000000344,
+   "cls": "SUPPORT_CUT",
+   "status": "PASS",
+   "short_m3": 0.0,
+   "residual_m2": 0.00028042000000000344,
+   "reason": "cut at a member that supports the beam; the support owns the footprint"
+  },
+  {
+   "storey": "GF",
+   "a": "GF:BAND0023.1",
+   "b": "GF:BAND0023.2",
+   "mark_a": "B1",
+   "mark_b": "B3",
+   "length_m": 0.4981,
+   "width_m": 0.1999,
+   "area_m2": 0.09957,
+   "support_share": 0.9943,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0,
+   "depth_m": 0.4,
+   "edges_continuous": true,
+   "members": [
+    [
+     "33B",
+     "COLUMN_BELOW",
+     0.9943
+    ]
+   ],
+   "under_support_m2": 0.099002451,
+   "under_carried_m2": 0.0,
+   "other_beam_m2": 0.0,
+   "beside_m2": 0.0005675490000000005,
+   "cls": "SUPPORT_CUT",
+   "status": "PASS",
+   "short_m3": 0.0,
+   "residual_m2": 0.0005675490000000005,
+   "reason": "cut at a member that supports the beam; the support owns the footprint"
+  },
+  {
+   "storey": "GF",
+   "a": "GF:BAND0029.1",
+   "b": "GF:BAND0029.2",
+   "mark_a": "CB6",
+   "mark_b": "CB6",
+   "length_m": 0.5015,
+   "width_m": 0.1999,
+   "area_m2": 0.10024,
+   "support_share": 0.9935,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0,
+   "depth_m": 0.75,
+   "edges_continuous": true,
+   "members": [
+    [
+     "353",
+     "COLUMN_BELOW",
+     0.9935
+    ]
+   ],
+   "under_support_m2": 0.09958844,
+   "under_carried_m2": 0.0,
+   "other_beam_m2": 0.0,
+   "beside_m2": 0.0006515599999999955,
+   "cls": "SUPPORT_CUT",
+   "status": "PASS",
+   "short_m3": 0.0,
+   "residual_m2": 0.0006515599999999955,
+   "reason": "cut at a member that supports the beam; the support owns the footprint"
+  },
+  {
+   "storey": "GF",
+   "a": "GF:BAND0029.2",
+   "b": "GF:BAND0029.3",
+   "mark_a": "CB6",
+   "mark_b": "B1",
+   "length_m": 0.2507,
+   "width_m": 0.1999,
+   "area_m2": 0.05012,
+   "support_share": 0.9923,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0,
+   "depth_m": null,
+   "edges_continuous": true,
+   "members": [
+    [
+     "35F",
+     "COLUMN_BELOW",
+     0.9923
+    ]
+   ],
+   "under_support_m2": 0.049734075999999995,
+   "under_carried_m2": 0.0,
+   "other_beam_m2": 0.0,
+   "beside_m2": 0.00038592400000000276,
+   "cls": "SUPPORT_CUT",
+   "status": "PASS",
+   "short_m3": 0.0,
+   "residual_m2": 0.00038592400000000276,
+   "reason": "cut at a member that supports the beam; the support owns the footprint"
+  },
+  {
+   "storey": "GF",
+   "a": "GF:BAND0029.3",
+   "b": "GF:BAND0029.4",
+   "mark_a": "B1",
+   "mark_b": "B1",
+   "length_m": 1.1012,
+   "width_m": 0.1999,
+   "area_m2": 0.22013,
+   "support_share": 0.9984,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0,
+   "depth_m": 0.4,
+   "edges_continuous": true,
+   "members": [
+    [
+     "35C",
+     "COLUMN_BELOW",
+     0.9984
+    ]
+   ],
+   "under_support_m2": 0.21977779199999997,
+   "under_carried_m2": 0.0,
+   "other_beam_m2": 0.0,
+   "beside_m2": 0.0003522080000000205,
+   "cls": "SUPPORT_CUT",
+   "status": "PASS",
+   "short_m3": 0.0,
+   "residual_m2": 0.0003522080000000205,
+   "reason": "cut at a member that supports the beam; the support owns the footprint"
+  },
+  {
+   "storey": "GF",
+   "a": "GF:BAND0031.1",
+   "b": "GF:BAND0031.2",
+   "mark_a": "UNBOUND",
+   "mark_b": "UNBOUND",
+   "length_m": 0.7996,
+   "width_m": 0.1999,
+   "area_m2": 0.15984,
+   "support_share": 0.001,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0,
+   "depth_m": null,
+   "edges_continuous": true,
+   "members": [
+    [
+     "368",
+     "COLUMN_BELOW",
+     0.001
+    ]
+   ],
+   "under_support_m2": 0.00015984000000000001,
+   "under_carried_m2": 0.0,
+   "other_beam_m2": 0.0,
+   "beside_m2": 0.15968016000000002,
+   "cls": "PROJECTION_CUT",
+   "status": "HELD",
+   "short_m3": null,
+   "reason": "outer projection strip, section not printed: plan kept, volume HELD (never 0)"
+  },
+  {
+   "storey": "GF",
+   "a": "GF:BAND0033.1",
+   "b": "GF:BAND0033.2",
+   "mark_a": "B1",
+   "mark_b": "CB5",
+   "length_m": 0.4981,
+   "width_m": 0.1999,
+   "area_m2": 0.09958,
+   "support_share": 1.0,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0,
+   "depth_m": 0.4,
+   "edges_continuous": true,
+   "members": [
+    [
+     "365",
+     "COLUMN_BELOW",
+     1.0
+    ]
+   ],
+   "under_support_m2": 0.09958,
+   "under_carried_m2": 0.0,
+   "other_beam_m2": 0.0,
+   "beside_m2": 0.0,
+   "cls": "SUPPORT_CUT",
+   "status": "PASS",
+   "short_m3": 0.0,
+   "residual_m2": 0.0,
+   "reason": "cut at a member that supports the beam; the support owns the footprint"
+  },
+  {
+   "storey": "GF",
+   "a": "GF:BAND0036.1",
+   "b": "GF:BAND0036.2",
+   "mark_a": "CB2",
+   "mark_b": "CB2",
+   "length_m": 0.5997,
+   "width_m": 0.2507,
+   "area_m2": 0.15034,
+   "support_share": 0.9893,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0,
+   "depth_m": 0.5,
+   "edges_continuous": true,
+   "members": [
+    [
+     "332",
+     "COLUMN_BELOW",
+     0.9893
+    ]
+   ],
+   "under_support_m2": 0.148731362,
+   "under_carried_m2": 0.0,
+   "other_beam_m2": 0.0,
+   "beside_m2": 0.0016086379999999956,
+   "cls": "SUPPORT_CUT",
+   "status": "PASS",
+   "short_m3": 0.0,
+   "residual_m2": 0.0016086379999999956,
+   "reason": "cut at a member that supports the beam; the support owns the footprint"
+  },
+  {
+   "storey": "GF",
+   "a": "GF:BAND0040.1",
+   "b": "GF:BAND0040.2",
+   "mark_a": "CB8",
+   "mark_b": "CB8",
+   "length_m": 0.5015,
+   "width_m": 0.2981,
+   "area_m2": 0.14948,
+   "support_share": 0.8362,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0,
+   "depth_m": 0.75,
+   "edges_continuous": true,
+   "members": [
+    [
+     "383",
+     "COLUMN_BELOW",
+     0.8362
+    ]
+   ],
+   "under_support_m2": 0.12499517600000001,
+   "under_carried_m2": 0.0,
+   "other_beam_m2": 0.0,
+   "beside_m2": 0.02448482399999999,
+   "cls": "SUPPORT_CUT_BESIDE",
+   "status": "BEAM_SHORT",
+   "short_m3": 0.01836361799999999,
+   "reason": "beam wider than its support: the part beside the support inside the drawn beam width is billed by no line; the beam keeps it (R-CONC-OWN-1)"
+  },
+  {
+   "storey": "GF",
+   "a": "GF:BAND0041.1",
+   "b": "GF:BAND0041.2",
+   "mark_a": "CB1",
+   "mark_b": "CB1",
+   "length_m": 0.5015,
+   "width_m": 0.3523,
+   "area_m2": 0.17668,
+   "support_share": 0.566,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0,
+   "depth_m": 0.75,
+   "edges_continuous": true,
+   "members": [
+    [
+     "344",
+     "COLUMN_BELOW",
+     0.566
+    ]
+   ],
+   "under_support_m2": 0.10000087999999999,
+   "under_carried_m2": 0.0,
+   "other_beam_m2": 0.0,
+   "beside_m2": 0.07667912000000002,
+   "cls": "SUPPORT_CUT_BESIDE",
+   "status": "BEAM_SHORT",
+   "short_m3": 0.05750934000000001,
+   "reason": "beam wider than its support: the part beside the support inside the drawn beam width is billed by no line; the beam keeps it (R-CONC-OWN-1)"
+  },
+  {
+   "storey": "GF",
+   "a": "GF:BAND0043.1",
+   "b": "GF:BAND0043.2",
+   "mark_a": "B20",
+   "mark_b": "B20",
+   "length_m": 0.7996,
+   "width_m": 0.3998,
+   "area_m2": 0.31968,
+   "support_share": 0.6246,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0,
+   "depth_m": 0.75,
+   "edges_continuous": true,
+   "members": [
+    [
+     "368",
+     "COLUMN_BELOW",
+     0.6246
+    ]
+   ],
+   "under_support_m2": 0.19967212800000003,
+   "under_carried_m2": 0.0,
+   "other_beam_m2": 0.0,
+   "beside_m2": 0.12000787199999999,
+   "cls": "SUPPORT_CUT_BESIDE",
+   "status": "BEAM_SHORT",
+   "short_m3": 0.090005904,
+   "reason": "beam wider than its support: the part beside the support inside the drawn beam width is billed by no line; the beam keeps it (R-CONC-OWN-1)"
+  },
+  {
+   "storey": "GF",
+   "a": "GF:BAND0046.1",
+   "b": "GF:BAND0046.2",
+   "mark_a": "B24",
+   "mark_b": "B24",
+   "length_m": 0.5014,
+   "width_m": 0.5015,
+   "area_m2": 0.25145,
+   "support_share": 0.4968,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0,
+   "depth_m": 0.75,
+   "edges_continuous": true,
+   "members": [
+    [
+     "335",
+     "COLUMN_BELOW",
+     0.4968
+    ]
+   ],
+   "under_support_m2": 0.12492036000000001,
+   "under_carried_m2": 0.0,
+   "other_beam_m2": 0.0,
+   "beside_m2": 0.12652964,
+   "cls": "SUPPORT_CUT_BESIDE",
+   "status": "BEAM_SHORT",
+   "short_m3": 0.09489723,
+   "reason": "beam wider than its support: the part beside the support inside the drawn beam width is billed by no line; the beam keeps it (R-CONC-OWN-1)"
+  },
+  {
+   "storey": "GF",
+   "a": "GF:BAND0047.1",
+   "b": "GF:BAND0047.2",
+   "mark_a": "B26",
+   "mark_b": "B26",
+   "length_m": 0.2102,
+   "width_m": 0.6507,
+   "area_m2": 0.13678,
+   "support_share": 0.0,
+   "carried_share": 0.7301,
+   "other_beam_share": 0.0,
+   "depth_m": 0.85,
+   "edges_continuous": true,
+   "members": [
+    [
+     "386",
+     "CARRIED_COLUMN",
+     0.7301
+    ]
+   ],
+   "under_support_m2": 0.0,
+   "under_carried_m2": 0.09986307800000001,
+   "other_beam_m2": 0.0,
+   "beside_m2": 0.036916922000000005,
+   "cls": "CUT_AT_CARRIED",
+   "status": "BEAM_SHORT",
+   "short_m3": 0.116263,
+   "reason": "cut refused: the member starts ON the beam (it does not support it); the beam is continuous under it and owns the whole gap (R-BEAM-CONT-1, R-CONC-OWN-1)"
+  },
+  {
+   "storey": "GF",
+   "a": "GF:BAND0048.1",
+   "b": "GF:BAND0048.2",
+   "mark_a": "B27",
+   "mark_b": "B27",
+   "length_m": 0.5768,
+   "width_m": 0.9012,
+   "area_m2": 0.51982,
+   "support_share": 0.0,
+   "carried_share": 0.2693,
+   "other_beam_share": 0.0,
+   "depth_m": 0.85,
+   "edges_continuous": true,
+   "members": [
+    [
+     "329",
+     "CARRIED_COLUMN",
+     0.2693
+    ]
+   ],
+   "under_support_m2": 0.0,
+   "under_carried_m2": 0.13998752599999997,
+   "other_beam_m2": 0.0,
+   "beside_m2": 0.379832474,
+   "cls": "CUT_AT_CARRIED",
+   "status": "BEAM_SHORT",
+   "short_m3": 0.44184699999999993,
+   "reason": "cut refused: the member starts ON the beam (it does not support it); the beam is continuous under it and owns the whole gap (R-BEAM-CONT-1, R-CONC-OWN-1)"
+  },
+  {
+   "storey": "1F",
+   "a": "1F:BAND0001.1",
+   "b": "1F:BAND0001.2",
+   "mark_a": "B3",
+   "mark_b": "CB9",
+   "length_m": 0.1996,
+   "width_m": 0.2017,
+   "area_m2": 0.04026,
+   "support_share": 0.9919,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0,
+   "depth_m": null,
+   "edges_continuous": true,
+   "members": [
+    [
+     "670",
+     "COLUMN_BELOW",
+     0.9919
+    ]
+   ],
+   "under_support_m2": 0.039933894,
+   "under_carried_m2": 0.0,
+   "other_beam_m2": 0.0,
+   "beside_m2": 0.0003261059999999996,
+   "cls": "SUPPORT_CUT",
+   "status": "PASS",
+   "short_m3": 0.0,
+   "residual_m2": 0.0003261059999999996,
+   "reason": "cut at a member that supports the beam; the support owns the footprint"
+  },
+  {
+   "storey": "1F",
+   "a": "1F:BAND0001.2",
+   "b": "1F:BAND0001.3",
+   "mark_a": "CB9",
+   "mark_b": "CB9",
+   "length_m": 0.5989,
+   "width_m": 0.2018,
+   "area_m2": 0.12086,
+   "support_share": 0.9957,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0,
+   "depth_m": 0.5,
+   "edges_continuous": true,
+   "members": [
+    [
+     "673",
+     "COLUMN_BELOW",
+     0.9957
+    ]
+   ],
+   "under_support_m2": 0.120340302,
+   "under_carried_m2": 0.0,
+   "other_beam_m2": 0.0,
+   "beside_m2": 0.000519697999999999,
+   "cls": "SUPPORT_CUT",
+   "status": "PASS",
+   "short_m3": 0.0,
+   "residual_m2": 0.000519697999999999,
+   "reason": "cut at a member that supports the beam; the support owns the footprint"
+  },
+  {
+   "storey": "1F",
+   "a": "1F:BAND0001.3",
+   "b": "1F:BAND0001.4",
+   "mark_a": "CB9",
+   "mark_b": "CB9",
+   "length_m": 0.5002,
+   "width_m": 0.2018,
+   "area_m2": 0.10094,
+   "support_share": 0.9947,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0,
+   "depth_m": 0.5,
+   "edges_continuous": true,
+   "members": [
+    [
+     "697",
+     "COLUMN_BELOW",
+     0.9947
+    ]
+   ],
+   "under_support_m2": 0.100405018,
+   "under_carried_m2": 0.0,
+   "other_beam_m2": 0.0,
+   "beside_m2": 0.0005349820000000033,
+   "cls": "SUPPORT_CUT",
+   "status": "PASS",
+   "short_m3": 0.0,
+   "residual_m2": 0.0005349820000000033,
+   "reason": "cut at a member that supports the beam; the support owns the footprint"
+  },
+  {
+   "storey": "1F",
+   "a": "1F:BAND0005.1",
+   "b": "1F:BAND0005.2",
+   "mark_a": "B2",
+   "mark_b": "B2",
+   "length_m": 0.5002,
+   "width_m": 0.2018,
+   "area_m2": 0.10094,
+   "support_share": 0.9937,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0,
+   "depth_m": 0.4,
+   "edges_continuous": true,
+   "members": [
+    [
+     "691",
+     "COLUMN_BELOW",
+     0.9937
+    ]
+   ],
+   "under_support_m2": 0.100304078,
+   "under_carried_m2": 0.0,
+   "other_beam_m2": 0.0,
+   "beside_m2": 0.0006359219999999971,
+   "cls": "SUPPORT_CUT",
+   "status": "PASS",
+   "short_m3": 0.0,
+   "residual_m2": 0.0006359219999999971,
+   "reason": "cut at a member that supports the beam; the support owns the footprint"
+  },
+  {
+   "storey": "1F",
+   "a": "1F:BAND0007.1",
+   "b": "1F:BAND0007.2",
+   "mark_a": "B1",
+   "mark_b": "B2",
+   "length_m": 0.5002,
+   "width_m": 0.1996,
+   "area_m2": 0.09984,
+   "support_share": 0.9982,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0,
+   "depth_m": 0.4,
+   "edges_continuous": true,
+   "members": [
+    [
+     "67C",
+     "COLUMN_BELOW",
+     0.9982
+    ]
+   ],
+   "under_support_m2": 0.099660288,
+   "under_carried_m2": 0.0,
+   "other_beam_m2": 0.0,
+   "beside_m2": 0.00017971199999999854,
+   "cls": "SUPPORT_CUT",
+   "status": "PASS",
+   "short_m3": 0.0,
+   "residual_m2": 0.00017971199999999854,
+   "reason": "cut at a member that supports the beam; the support owns the footprint"
+  },
+  {
+   "storey": "1F",
+   "a": "1F:BAND0013.1",
+   "b": "1F:BAND0013.2",
+   "mark_a": "UNBOUND",
+   "mark_b": "UNBOUND",
+   "length_m": 0.8006,
+   "width_m": 0.1996,
+   "area_m2": 0.1598,
+   "support_share": 0.0018,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0,
+   "depth_m": null,
+   "edges_continuous": true,
+   "members": [
+    [
+     "68E",
+     "COLUMN_BELOW",
+     0.0018
+    ]
+   ],
+   "under_support_m2": 0.00028764,
+   "under_carried_m2": 0.0,
+   "other_beam_m2": 0.0,
+   "beside_m2": 0.15951236,
+   "cls": "PROJECTION_CUT",
+   "status": "HELD",
+   "short_m3": null,
+   "reason": "outer projection strip, section not printed: plan kept, volume HELD (never 0)"
+  },
+  {
+   "storey": "1F",
+   "a": "1F:BAND0018.1",
+   "b": "1F:BAND0018.2",
+   "mark_a": "CB12",
+   "mark_b": "CB12",
+   "length_m": 0.8994,
+   "width_m": 0.2511,
+   "area_m2": 0.22584,
+   "support_share": 0.7965,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0573,
+   "depth_m": 0.75,
+   "edges_continuous": true,
+   "members": [
+    [
+     "664",
+     "COLUMN_BELOW",
+     0.7965
+    ]
+   ],
+   "under_support_m2": 0.17988156,
+   "under_carried_m2": 0.0,
+   "other_beam_m2": 0.012940632,
+   "beside_m2": 0.03301780800000002,
+   "cls": "SUPPORT_CUT_BESIDE",
+   "status": "BEAM_SHORT",
+   "short_m3": 0.024763356000000014,
+   "reason": "beam wider than its support: the part beside the support inside the drawn beam width is billed by no line; the beam keeps it (R-CONC-OWN-1)"
+  },
+  {
+   "storey": "1F",
+   "a": "1F:BAND0024.1",
+   "b": "1F:BAND0024.2",
+   "mark_a": "CB13",
+   "mark_b": "CB13",
+   "length_m": 0.6997,
+   "width_m": 0.3005,
+   "area_m2": 0.21026,
+   "support_share": 0.8319,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0,
+   "depth_m": 0.5,
+   "edges_continuous": true,
+   "members": [
+    [
+     "688",
+     "COLUMN_BELOW",
+     0.8319
+    ]
+   ],
+   "under_support_m2": 0.174915294,
+   "under_carried_m2": 0.0,
+   "other_beam_m2": 0.0,
+   "beside_m2": 0.035344706000000004,
+   "cls": "SUPPORT_CUT_BESIDE",
+   "status": "BEAM_SHORT",
+   "short_m3": 0.017672353000000002,
+   "reason": "beam wider than its support: the part beside the support inside the drawn beam width is billed by no line; the beam keeps it (R-CONC-OWN-1)"
+  },
+  {
+   "storey": "1F",
+   "a": "1F:BAND0026.1",
+   "b": "1F:BAND0026.2",
+   "mark_a": "UNBOUND",
+   "mark_b": "UNBOUND",
+   "length_m": 0.5989,
+   "width_m": 0.2984,
+   "area_m2": 0.17871,
+   "support_share": 0.6672,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0,
+   "depth_m": null,
+   "edges_continuous": true,
+   "members": [
+    [
+     "685",
+     "COLUMN_BELOW",
+     0.6672
+    ]
+   ],
+   "under_support_m2": 0.11923531200000001,
+   "under_carried_m2": 0.0,
+   "other_beam_m2": 0.0,
+   "beside_m2": 0.059474688,
+   "cls": "SUPPORT_CUT_BESIDE",
+   "status": "HELD",
+   "short_m3": null,
+   "bound_m3": null,
+   "reason": "the beam's width is a printed / drawn CONFLICT: the part beside the support exists only on the wider reading (HELD on the designer answer)"
+  },
+  {
+   "storey": "1F",
+   "a": "1F:BAND0027.1",
+   "b": "1F:BAND0027.2",
+   "mark_a": "CB11",
+   "mark_b": "CB11",
+   "length_m": 0.7985,
+   "width_m": 0.3005,
+   "area_m2": 0.23995,
+   "support_share": 0.8319,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0,
+   "depth_m": 0.75,
+   "edges_continuous": true,
+   "members": [
+    [
+     "69A",
+     "COLUMN_BELOW",
+     0.8319
+    ]
+   ],
+   "under_support_m2": 0.199614405,
+   "under_carried_m2": 0.0,
+   "other_beam_m2": 0.0,
+   "beside_m2": 0.040335595,
+   "cls": "SUPPORT_CUT_BESIDE",
+   "status": "BEAM_SHORT",
+   "short_m3": 0.03025169625,
+   "reason": "beam wider than its support: the part beside the support inside the drawn beam width is billed by no line; the beam keeps it (R-CONC-OWN-1)"
+  },
+  {
+   "storey": "1F",
+   "a": "1F:BAND0027.2",
+   "b": "1F:BAND0027.3",
+   "mark_a": "CB11",
+   "mark_b": "CB11",
+   "length_m": 0.601,
+   "width_m": 0.3005,
+   "area_m2": 0.1806,
+   "support_share": 0.8305,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0,
+   "depth_m": 0.75,
+   "edges_continuous": true,
+   "members": [
+    [
+     "694",
+     "COLUMN_BELOW",
+     0.8305
+    ]
+   ],
+   "under_support_m2": 0.14998830000000002,
+   "under_carried_m2": 0.0,
+   "other_beam_m2": 0.0,
+   "beside_m2": 0.03061169999999999,
+   "cls": "SUPPORT_CUT_BESIDE",
+   "status": "BEAM_SHORT",
+   "short_m3": 0.022958774999999994,
+   "reason": "beam wider than its support: the part beside the support inside the drawn beam width is billed by no line; the beam keeps it (R-CONC-OWN-1)"
+  },
+  {
+   "storey": "1F",
+   "a": "1F:BAND0031.1",
+   "b": "1F:BAND0031.2",
+   "mark_a": "B23",
+   "mark_b": "B23",
+   "length_m": 0.8007,
+   "width_m": 0.4486,
+   "area_m2": 0.35917,
+   "support_share": 0.556,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0,
+   "depth_m": 0.75,
+   "edges_continuous": true,
+   "members": [
+    [
+     "68E",
+     "COLUMN_BELOW",
+     0.556
+    ]
+   ],
+   "under_support_m2": 0.19969852000000002,
+   "under_carried_m2": 0.0,
+   "other_beam_m2": 0.0,
+   "beside_m2": 0.15947147999999997,
+   "cls": "SUPPORT_CUT_BESIDE",
+   "status": "BEAM_SHORT",
+   "short_m3": 0.11960360999999997,
+   "reason": "beam wider than its support: the part beside the support inside the drawn beam width is billed by no line; the beam keeps it (R-CONC-OWN-1)"
+  },
+  {
+   "storey": "2F",
+   "a": "2F:BAND0001.1",
+   "b": "2F:BAND0001.2",
+   "mark_a": "B3",
+   "mark_b": "B8",
+   "length_m": 0.2004,
+   "width_m": 0.2004,
+   "area_m2": 0.04016,
+   "support_share": 0.9978,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0,
+   "depth_m": null,
+   "edges_continuous": true,
+   "members": [
+    [
+     "412",
+     "COLUMN_BELOW",
+     0.9978
+    ]
+   ],
+   "under_support_m2": 0.040071648,
+   "under_carried_m2": 0.0,
+   "other_beam_m2": 0.0,
+   "beside_m2": 8.835199999999988e-05,
+   "cls": "SUPPORT_CUT",
+   "status": "PASS",
+   "short_m3": 0.0,
+   "residual_m2": 8.835199999999988e-05,
+   "reason": "cut at a member that supports the beam; the support owns the footprint"
+  },
+  {
+   "storey": "2F",
+   "a": "2F:BAND0001.2",
+   "b": "2F:BAND0001.3",
+   "mark_a": "B8",
+   "mark_b": "B8",
+   "length_m": 0.6004,
+   "width_m": 0.2004,
+   "area_m2": 0.12031,
+   "support_share": 0.9974,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0,
+   "depth_m": 0.75,
+   "edges_continuous": true,
+   "members": [
+    [
+     "415",
+     "COLUMN_BELOW",
+     0.9974
+    ]
+   ],
+   "under_support_m2": 0.119997194,
+   "under_carried_m2": 0.0,
+   "other_beam_m2": 0.0,
+   "beside_m2": 0.0003128059999999988,
+   "cls": "SUPPORT_CUT",
+   "status": "PASS",
+   "short_m3": 0.0,
+   "residual_m2": 0.0003128059999999988,
+   "reason": "cut at a member that supports the beam; the support owns the footprint"
+  },
+  {
+   "storey": "2F",
+   "a": "2F:BAND0006.1",
+   "b": "2F:BAND0006.2",
+   "mark_a": "B15",
+   "mark_b": "B15",
+   "length_m": 0.4997,
+   "width_m": 0.2004,
+   "area_m2": 0.10014,
+   "support_share": 0.9999,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0,
+   "depth_m": 1.2,
+   "edges_continuous": true,
+   "members": [
+    [
+     "424",
+     "COLUMN_BELOW",
+     0.9999
+    ]
+   ],
+   "under_support_m2": 0.100129986,
+   "under_carried_m2": 0.0,
+   "other_beam_m2": 0.0,
+   "beside_m2": 1.0014000000002632e-05,
+   "cls": "SUPPORT_CUT",
+   "status": "PASS",
+   "short_m3": 0.0,
+   "residual_m2": 1.0014000000002632e-05,
+   "reason": "cut at a member that supports the beam; the support owns the footprint"
+  },
+  {
+   "storey": "2F",
+   "a": "2F:BAND0007.1",
+   "b": "2F:BAND0007.2",
+   "mark_a": "B2",
+   "mark_b": "B2",
+   "length_m": 0.1995,
+   "width_m": 0.2004,
+   "area_m2": 0.03998,
+   "support_share": 0.9977,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0,
+   "depth_m": 0.4,
+   "edges_continuous": true,
+   "members": [
+    [
+     "418",
+     "COLUMN_BELOW",
+     0.9977
+    ]
+   ],
+   "under_support_m2": 0.039888046,
+   "under_carried_m2": 0.0,
+   "other_beam_m2": 0.0,
+   "beside_m2": 9.195399999999826e-05,
+   "cls": "SUPPORT_CUT",
+   "status": "PASS",
+   "short_m3": 0.0,
+   "residual_m2": 9.195399999999826e-05,
+   "reason": "cut at a member that supports the beam; the support owns the footprint"
+  },
+  {
+   "storey": "2F",
+   "a": "2F:BAND0008.1",
+   "b": "2F:BAND0008.2",
+   "mark_a": "B1",
+   "mark_b": "B1",
+   "length_m": 0.7001,
+   "width_m": 0.1995,
+   "area_m2": 0.13967,
+   "support_share": 0.9986,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0,
+   "depth_m": 0.4,
+   "edges_continuous": true,
+   "members": [
+    [
+     "418",
+     "COLUMN_BELOW",
+     0.9986
+    ]
+   ],
+   "under_support_m2": 0.139474462,
+   "under_carried_m2": 0.0,
+   "other_beam_m2": 0.0,
+   "beside_m2": 0.0001955379999999951,
+   "cls": "SUPPORT_CUT",
+   "status": "PASS",
+   "short_m3": 0.0,
+   "residual_m2": 0.0001955379999999951,
+   "reason": "cut at a member that supports the beam; the support owns the footprint"
+  },
+  {
+   "storey": "2F",
+   "a": "2F:BAND0008.2",
+   "b": "2F:BAND0008.3",
+   "mark_a": "B1",
+   "mark_b": "B3",
+   "length_m": 0.4997,
+   "width_m": 0.1995,
+   "area_m2": 0.09969,
+   "support_share": 0.9995,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0,
+   "depth_m": 0.4,
+   "edges_continuous": true,
+   "members": [
+    [
+     "41B",
+     "COLUMN_BELOW",
+     0.9995
+    ]
+   ],
+   "under_support_m2": 0.09964015500000001,
+   "under_carried_m2": 0.0,
+   "other_beam_m2": 0.0,
+   "beside_m2": 4.984499999999281e-05,
+   "cls": "SUPPORT_CUT",
+   "status": "PASS",
+   "short_m3": 0.0,
+   "residual_m2": 4.984499999999281e-05,
+   "reason": "cut at a member that supports the beam; the support owns the footprint"
+  },
+  {
+   "storey": "2F",
+   "a": "2F:BAND0011.1",
+   "b": "2F:BAND0011.2",
+   "mark_a": "B1",
+   "mark_b": "B1",
+   "length_m": 0.5006,
+   "width_m": 0.2004,
+   "area_m2": 0.10032,
+   "support_share": 0.9962,
+   "carried_share": 0.0,
+   "other_beam_share": 0.0,
+   "depth_m": 0.4,
+   "edges_continuous": true,
+   "members": [
+    [
+     "41E",
+     "COLUMN_BELOW",
+     0.9962
+    ]
+   ],
+   "under_support_m2": 0.099938784,
+   "under_carried_m2": 0.0,
+   "other_beam_m2": 0.0,
+   "beside_m2": 0.00038121600000000366,
+   "cls": "SUPPORT_CUT",
+   "status": "PASS",
+   "short_m3": 0.0,
+   "residual_m2": 0.00038121600000000366,
+   "reason": "cut at a member that supports the beam; the support owns the footprint"
+  }
+ ],
+ "ends": [
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0001",
+   "mark": "B11",
+   "end": 0,
+   "touch": "BEAM",
+   "members": [
+    [
+     "GF:BAND0034.1",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.75,
+   "side_beams": [
+    "GF:BAND0034.1"
+   ],
+   "beyond_area_m2": 0.0046,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0439,
+    0.0022
+   ],
+   "beyond_edge_cover": [
+    0.991,
+    1.0
+   ],
+   "cls": "END_SHORT_OBLIQUE",
+   "status": "BEAM_SHORT",
+   "short_m3": 0.00345,
+   "reason": "the drawn beam runs on past the billed face to the member it frames into; no line bills it, the beam keeps it (R-BEAM-CONT-1, R-CONC-OWN-1)"
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0008",
+   "mark": "B29",
+   "end": 1,
+   "touch": "BEAM",
+   "members": [
+    [
+     "GF:BAND0042",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.75,
+   "side_beams": [
+    "GF:BAND0042"
+   ],
+   "beyond_area_m2": 0.00321,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0319,
+    0.0002
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ],
+   "cls": "END_SHORT_OBLIQUE",
+   "status": "BEAM_SHORT",
+   "short_m3": 0.0024075,
+   "reason": "the drawn beam runs on past the billed face to the member it frames into; no line bills it, the beam keeps it (R-BEAM-CONT-1, R-CONC-OWN-1)"
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0009",
+   "mark": "B1",
+   "end": 1,
+   "touch": "BEAM",
+   "members": [
+    [
+     "GF:BAND0034.1",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.4,
+   "side_beams": [
+    "GF:BAND0034.1"
+   ],
+   "beyond_area_m2": 0.00411,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0414,
+    0.0
+   ],
+   "beyond_edge_cover": [
+    0.995,
+    1.0
+   ],
+   "cls": "END_SHORT_OBLIQUE",
+   "status": "BEAM_SHORT",
+   "short_m3": 0.001644,
+   "reason": "the drawn beam runs on past the billed face to the member it frames into; no line bills it, the beam keeps it (R-BEAM-CONT-1, R-CONC-OWN-1)"
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0010",
+   "mark": "B4",
+   "end": 0,
+   "touch": "BEAM",
+   "members": [
+    [
+     "GF:BAND0042",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.5,
+   "side_beams": [
+    "GF:BAND0042"
+   ],
+   "beyond_area_m2": 0.0032,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0319,
+    0.0002
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ],
+   "cls": "END_SHORT_OBLIQUE",
+   "status": "BEAM_SHORT",
+   "short_m3": 0.0016,
+   "reason": "the drawn beam runs on past the billed face to the member it frames into; no line bills it, the beam keeps it (R-BEAM-CONT-1, R-CONC-OWN-1)"
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0017",
+   "mark": "B5",
+   "end": 1,
+   "touch": "BEAM",
+   "members": [
+    [
+     "GF:BAND0048.1",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.5,
+   "side_beams": [
+    "GF:BAND0048.1"
+   ],
+   "beyond_area_m2": 0.01472,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.1471,
+    0.0001
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ],
+   "cls": "END_SHORT_OBLIQUE",
+   "status": "BEAM_SHORT",
+   "short_m3": 0.00736,
+   "reason": "the drawn beam runs on past the billed face to the member it frames into; no line bills it, the beam keeps it (R-BEAM-CONT-1, R-CONC-OWN-1)"
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0034.1",
+   "mark": "B13",
+   "end": 0,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "338",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": 0.75,
+   "beyond_area_m2": 0.00642,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0,
+    0.0518
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ],
+   "cls": "END_SHORT_OBLIQUE",
+   "status": "BEAM_SHORT",
+   "short_m3": 0.004815,
+   "reason": "the drawn beam runs on past the billed face to the member it frames into; no line bills it, the beam keeps it (R-BEAM-CONT-1, R-CONC-OWN-1)"
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0034.1",
+   "mark": "B13",
+   "end": 1,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "37A",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": 0.75,
+   "beyond_area_m2": 0.00653,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0244,
+    0.0519
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ],
+   "cls": "END_SHORT_OBLIQUE",
+   "status": "BEAM_SHORT",
+   "short_m3": 0.0048975,
+   "reason": "the drawn beam runs on past the billed face to the member it frames into; no line bills it, the beam keeps it (R-BEAM-CONT-1, R-CONC-OWN-1)"
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0035.1",
+   "mark": "B28",
+   "end": 0,
+   "touch": "CARRIED",
+   "members": [
+    [
+     "31B",
+     "CARRIED_COLUMN"
+    ]
+   ],
+   "depth_m": 0.75,
+   "beyond_area_m2": 0.08163,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.3255,
+    0.3255
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    0.998
+   ],
+   "cls": "END_SHORT_AT_CARRIED",
+   "status": "BEAM_SHORT",
+   "short_m3": 0.0612225,
+   "reason": "the drawn beam runs on past the billed face to the member it frames into; no line bills it, the beam keeps it (R-BEAM-CONT-1, R-CONC-OWN-1)"
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0038.1",
+   "mark": "CA",
+   "end": 1,
+   "touch": "NONE",
+   "members": [],
+   "depth_m": 0.5,
+   "beyond_area_m2": 0.23848,
+   "beyond_closed": false,
+   "beyond_side_t_m": [
+    0.8,
+    0.8
+   ],
+   "beyond_edge_cover": [
+    0.001,
+    0.001
+   ],
+   "cls": "END_FREE",
+   "status": "PASS",
+   "short_m3": 0.0
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0041.1",
+   "mark": "CB1",
+   "end": 0,
+   "touch": "OVER_SUPPORT",
+   "members": [],
+   "depth_m": 0.75,
+   "over_support": [
+    "347"
+   ],
+   "side_beams": [
+    "GF:BAND0015"
+   ],
+   "beyond_area_m2": 0.28184,
+   "beyond_closed": false,
+   "beyond_side_t_m": [
+    0.8,
+    0.8
+   ],
+   "beyond_edge_cover": [
+    0.0,
+    0.0
+   ],
+   "cls": "END_AT_OVER_SUPPORT",
+   "status": "PASS",
+   "short_m3": 0.0
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0042",
+   "mark": "B21",
+   "end": 0,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "322",
+     "CARRIED_COLUMN"
+    ],
+    [
+     "37A",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": 0.75,
+   "beyond_area_m2": 0.01265,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0,
+    0.0633
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ],
+   "cls": "END_SHORT_OBLIQUE",
+   "status": "BEAM_SHORT",
+   "short_m3": 0.0094875,
+   "reason": "the drawn beam runs on past the billed face to the member it frames into; no line bills it, the beam keeps it (R-BEAM-CONT-1, R-CONC-OWN-1)"
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0042",
+   "mark": "B21",
+   "end": 1,
+   "touch": "BEAM",
+   "members": [
+    [
+     "GF:BAND0019.3",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.75,
+   "side_beams": [
+    "GF:BAND0019.3"
+   ],
+   "beyond_area_m2": 0.01238,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0,
+    0.0626
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    0.996
+   ],
+   "cls": "END_SHORT_OBLIQUE",
+   "status": "BEAM_SHORT",
+   "short_m3": 0.009285,
+   "reason": "the drawn beam runs on past the billed face to the member it frames into; no line bills it, the beam keeps it (R-BEAM-CONT-1, R-CONC-OWN-1)"
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0044.1",
+   "mark": "B17",
+   "end": 0,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "37A",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": 0.75,
+   "beyond_area_m2": 0.05896,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.3016,
+    0.2791
+   ],
+   "beyond_edge_cover": [
+    0.993,
+    1.0
+   ],
+   "cls": "END_SHORT_OBLIQUE",
+   "status": "BEAM_SHORT",
+   "short_m3": 0.044219999999999995,
+   "reason": "the drawn beam runs on past the billed face to the member it frames into; no line bills it, the beam keeps it (R-BEAM-CONT-1, R-CONC-OWN-1)"
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0047.2",
+   "mark": "B26",
+   "end": 1,
+   "touch": "CARRIED",
+   "members": [
+    [
+     "31B",
+     "CARRIED_COLUMN"
+    ]
+   ],
+   "depth_m": 0.85,
+   "side_beams": [
+    "GF:BAND0010"
+   ],
+   "beyond_area_m2": 0.21322,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.336,
+    0.3193
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ],
+   "cls": "END_SHORT_AT_CARRIED",
+   "status": "BEAM_SHORT",
+   "short_m3": 0.18123699999999998,
+   "reason": "the drawn beam runs on past the billed face to the member it frames into; no line bills it, the beam keeps it (R-BEAM-CONT-1, R-CONC-OWN-1)"
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0048.1",
+   "mark": "B27",
+   "end": 0,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "35C",
+     "COLUMN_BELOW"
+    ],
+    [
+     "GF:BAND0029.4",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.85,
+   "side_beams": [
+    "GF:BAND0029.4"
+   ],
+   "beyond_area_m2": 0.21023,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0,
+    0.5534
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ],
+   "cls": "END_SHORT_OBLIQUE",
+   "status": "BEAM_SHORT",
+   "short_m3": 0.1786955,
+   "reason": "the drawn beam runs on past the billed face to the member it frames into; no line bills it, the beam keeps it (R-BEAM-CONT-1, R-CONC-OWN-1)"
+  },
+  {
+   "storey": "GF",
+   "piece": "GF:BAND0048.2",
+   "mark": "B27",
+   "end": 1,
+   "touch": "SUPPORT",
+   "members": [
+    [
+     "37D",
+     "COLUMN_BELOW"
+    ]
+   ],
+   "depth_m": 0.85,
+   "side_beams": [
+    "GF:BAND0039"
+   ],
+   "beyond_area_m2": 0.26843,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0664,
+    0.6255
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ],
+   "cls": "END_SHORT_OBLIQUE",
+   "status": "BEAM_SHORT",
+   "short_m3": 0.2281655,
+   "reason": "the drawn beam runs on past the billed face to the member it frames into; no line bills it, the beam keeps it (R-BEAM-CONT-1, R-CONC-OWN-1)"
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0008",
+   "mark": "B1",
+   "end": 1,
+   "touch": "BEAM",
+   "members": [
+    [
+     "77B",
+     "CARRIED_COLUMN"
+    ],
+    [
+     "1F:BAND0030.1",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.4,
+   "side_beams": [
+    "1F:BAND0030.1"
+   ],
+   "beyond_area_m2": 0.00272,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0257,
+    0.0016
+   ],
+   "beyond_edge_cover": [
+    0.982,
+    1.0
+   ],
+   "cls": "END_SHORT_OBLIQUE",
+   "status": "BEAM_SHORT",
+   "short_m3": 0.0010880000000000002,
+   "reason": "the drawn beam runs on past the billed face to the member it frames into; no line bills it, the beam keeps it (R-BEAM-CONT-1, R-CONC-OWN-1)"
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0009",
+   "mark": "B6",
+   "end": 0,
+   "touch": "BEAM",
+   "members": [
+    [
+     "77B",
+     "CARRIED_COLUMN"
+    ],
+    [
+     "1F:BAND0030.1",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.5,
+   "side_beams": [
+    "1F:BAND0030.1"
+   ],
+   "beyond_area_m2": 0.0021,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0225,
+    0.0
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ],
+   "cls": "END_SHORT_OBLIQUE",
+   "status": "BEAM_SHORT",
+   "short_m3": 0.00105,
+   "reason": "the drawn beam runs on past the billed face to the member it frames into; no line bills it, the beam keeps it (R-BEAM-CONT-1, R-CONC-OWN-1)"
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0014",
+   "mark": "UNBOUND",
+   "end": 0,
+   "touch": "NONE",
+   "members": [],
+   "depth_m": null,
+   "beyond_area_m2": 0.16144,
+   "beyond_closed": false,
+   "beyond_side_t_m": [
+    0.8,
+    0.8
+   ],
+   "beyond_edge_cover": [
+    0.0,
+    0.0
+   ],
+   "cls": "END_FREE",
+   "status": "PASS",
+   "short_m3": 0.0
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0023",
+   "mark": "UNBOUND",
+   "end": 1,
+   "touch": "NONE",
+   "members": [],
+   "depth_m": null,
+   "beyond_area_m2": 0.2404,
+   "beyond_closed": false,
+   "beyond_side_t_m": [
+    0.8,
+    0.8
+   ],
+   "beyond_edge_cover": [
+    0.001,
+    0.126
+   ],
+   "cls": "END_FREE",
+   "status": "PASS",
+   "short_m3": 0.0
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0030.1",
+   "mark": "B19",
+   "end": 0,
+   "touch": "NONE",
+   "members": [],
+   "depth_m": 0.75,
+   "beyond_area_m2": 0.03848,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.072,
+    0.1203
+   ],
+   "beyond_edge_cover": [
+    1.0,
+    1.0
+   ],
+   "cls": "END_SHORT_OF_MEMBER",
+   "status": "BEAM_SHORT",
+   "short_m3": 0.02886,
+   "reason": "the drawn beam runs on past the billed face to the member it frames into; no line bills it, the beam keeps it (R-BEAM-CONT-1, R-CONC-OWN-1)"
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0031.1",
+   "mark": "B23",
+   "end": 0,
+   "touch": "PROJECTION",
+   "members": [
+    [
+     "1F:BAND0014",
+     "PROJECTION"
+    ]
+   ],
+   "depth_m": 0.75,
+   "side_beams": [
+    "1F:BAND0026.2",
+    "1F:BAND0013.1"
+   ],
+   "cls": "END_AT_PROJECTION",
+   "status": "HELD",
+   "short_m3": null,
+   "reason": "outer projection strip, section not printed (D-26)"
+  },
+  {
+   "storey": "1F",
+   "piece": "1F:BAND0032",
+   "mark": "B25",
+   "end": 1,
+   "touch": "BEAM",
+   "members": [
+    [
+     "1F:BAND0030.1",
+     "BEAM"
+    ]
+   ],
+   "depth_m": 0.75,
+   "side_beams": [
+    "1F:BAND0030.1"
+   ],
+   "beyond_area_m2": 0.0185,
+   "beyond_closed": true,
+   "beyond_side_t_m": [
+    0.0668,
+    0.0003
+   ],
+   "beyond_edge_cover": [
+    0.995,
+    1.0
+   ],
+   "cls": "END_SHORT_OBLIQUE",
+   "status": "BEAM_SHORT",
+   "short_m3": 0.013874999999999998,
+   "reason": "the drawn beam runs on past the billed face to the member it frames into; no line bills it, the beam keeps it (R-BEAM-CONT-1, R-CONC-OWN-1)"
+  }
+ ]
+}
