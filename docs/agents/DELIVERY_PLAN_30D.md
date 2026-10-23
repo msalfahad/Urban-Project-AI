@@ -46,7 +46,7 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
-## Status (Lead, 2026-10-22 20:20; re-estimated each run from what merged and was verified)
+## Status (Lead, 2026-10-23 00:20; re-estimated each run from what merged and was verified)
 
 Baseline: the RELEASED baseline is run A (V2.9 + route G, no profile, 1,455 lines), pinned by T-165 (37124da); run B
 (profiled, 1,621 lines) is the comparison base for V3.0.x line pairing. The engineering reasoning standard (owner 08:05)
@@ -55,20 +55,20 @@ WORKFLOW_CONTROLS section 10 (owner 15:15: faster execution, same evidence) gove
 
 | Plan | Board | State | Note |
 |---|---|---|---|
-| P-01 | owner + auditor | in progress, improving | 16:20 - 20:20: 9 closed slots STARTED + final SUCCESS (worker 1 2, worker 2 2, worker 3 2, checker 3 incl. the 16:49 extra run); checker 19:51 open at 20:20 (2 merges committed); every self-check PASS; 0 refusals except one classifier refusal of a combined check + merge command (17:52, re-run split) |
+| P-01 | owner + auditor | in progress, improving | 20:20 - 00:20: 8 closed slots STARTED + final SUCCESS (worker 1 2, worker 2 2, worker 3 2, checker 2: 19:51 closed 21:04, 21:50 closed 22:00); checker 23:51 open at 00:20 (3 merges committed); every self-check PASS; 0 refusals; one board rebase conflict (worker 1 20:21, resolved) |
 | P-02 | T-130 r3, T-165, T-140 MERGED | DONE (registry, baseline, census V2) | |
-| P-03 | V3.0.4 MERGED (Gate B cf5819c); T-179 V3.0.5 READY 18:25 (Gate B; candidate rebar quantity lines 12,834.52 -> 10,250.17 kg with the route slab provisional 2,584.35 superseded, held 15,250.79 .. 21,556.50 kg; NOT RELEASED; beams 64.820 -> 65.294 m3; pool steel blocked); chain T-190 (firewall fix) -> T-187 V3.0.6 (guard + missing upper stair flights, T-189 ledger rev2) -> T-193 V3.0.7 (verified pool 7.202 + dome shells 5.081 m3) -> T-146 | V3.0.5 at the checker | integrates: T-152, T-166, T-160 / T-186, T-184, T-189 / T-183, T-185 |
+| P-03 | V3.0.4 MERGED (Gate B cf5819c); T-179 V3.0.5 r1 REJECTED 21:04 (stair range high end on count A, -65.02 kg), r2 READY 23:39 (held 15,250.79 .. 21,621.55 kg; candidate rebar quantity lines 10,250.17 kg; beams 65.294 m3; NOT RELEASED); chain T-190 (firewall fix) -> T-187 V3.0.6 -> T-193 V3.0.7 (verified pool 7.202 + dome shells 5.081 m3) -> T-199 V3.0.8 (formwork + railings, missing categories) -> T-146; T-168 Gate B tool v2 promoted | V3.0.5 r2 at the checker | integrates: T-152, T-166, T-160 / T-186, T-184, T-189 / T-183, T-185 / T-163, T-164 |
 | P-04 | T-132 DONE; T-177 and T-182 (five measures, 50991742) MERGED; T-181 claimable; T-180 slot: pool and 2 stair flights reconciled, 0 / 8 VERIFIED | script DONE; five measures in the checker queue | whole-line rule (owner 11:50) |
 | P-05 | T-126 / T-133 | DONE | |
 | P-06 | T-128 r3 MERGED a6ac2c66 (3 rooms checker 0.0 %); T-173 stair shaft MERGED 8b4d2c83 | hand package DONE; engine line not yet (scoreboard plaster / paint NOT YET MEASURED until a candidate line exists) | integration task to plan once the candidate chain frees lane I |
-| P-07 | T-125, T-143, T-169, T-175 (b903360c) MERGED; T-176 units claimable (first in lane A); T-194 opening consistency; T-108 QUEUED | net block candidate on 43 walls | 43 walls carry a net (476.21 m2 candidate), 28 openings HELD |
+| P-07 | T-125, T-143, T-169, T-175 (b903360c) MERGED; T-194 opening consistency MERGED (3 openings missing from the list); T-198 census r3 first in lane A, T-176 units after it; T-108 QUEUED | net block candidate on 43 walls | 43 walls carry a net (476.21 m2 candidate), 28 openings HELD |
 | P-08 | populations MERGED; T-171 notation MERGED 701d227 (2,769.06 .. 2,829.83 kg HELD on the unprinted leg diameter); T-174 straps TODO | notation DONE by investigation | |
 | P-09 | T-134 MERGED; register rulings +7 (16:20: staircase identity corrected, shaft walls, opening deductions, pool upstand, 1F-11 curved glazing, default guard, corners pair) | DONE (v0 code); content grows each run | |
 | (Gate B tooling) | T-156 MERGED; T-168 QUEUED (after T-182, same scorer) | | |
-| P-10 | T-163 formwork r2 FIRST in lane S now; T-170 excavation levels QUEUED | started; first figures not yet verified | |
-| P-11 | T-147, T-159, T-161, T-157, T-150 r2, T-172, T-162 r2 MERGED; T-164 railings / shutters READY 20:11 (38.916 lm DRAWING-CONFIRMED, shutters 6 leaves) | ahead of week 3 | |
+| P-10 | T-163 formwork r3 MERGED 659f889f (above ground calculated 1,078.274 m2; dome soffits checker 0.00 %; joint faces PARTIALLY VERIFIED 2 / 27); into the candidate by T-199; T-170 excavation levels QUEUED | formwork hand package DONE; excavation not started | |
+| P-11 | T-147, T-159, T-161, T-157, T-150 r2, T-172, T-162 r2, T-164 (390fabf4), T-181 (faa04202) MERGED; T-198 census r3 | ahead of week 3 | |
 | (concrete gap) | T-183 r2 pool MERGED 6380294 (7.202 m3); T-184 staircases MERGED 924c2bd (6.790 m3 measured + held; engine storey loss -2.598 m3); T-185 domes MERGED 94e39ee6 (2 shells 5.081 m3 VERIFIED); T-189 stair / beam ownership MERGED 3369f30e (system 6.675 m3); T-191 pool steel rev2, T-192 stair feet / landings vs slabs | pool, stairs, domes reconstructed; into the candidate via T-187 / T-193 | released numbers unchanged |
-| (review plan R1-R9, owner 15:00) | R1 = T-186 MERGED (wiring T-187, firewall fix T-190); R2 + R3 = T-188 TODO; R6 = T-194 TODO; R9 = T-195 TODO; R7 partly inside T-188 | started | |
+| (review plan R1-R9, owner 15:00) | R1 = T-186 MERGED (wiring T-187, firewall fix T-190); R2 + R3 = T-188 TODO; R4 = T-197 TODO; R6 = T-194 MERGED; R7 = T-196 TODO; R9 = T-195 MERGED; R5 = T-170 QUEUED; R8 in place (scenario rule) | 2 of 9 merged, 1 in place | |
 
 Day-7 target (2026-10-27): **MET on 2026-10-21 17:40**. Day-14 target (2026-11-03, measurable increase in verified coverage):
 on track: V3.0.2, V3.0.3 and V3.0.4 merged through Gate B; SCOREBOARD v2 by script (verified share still 0 / 8 whole

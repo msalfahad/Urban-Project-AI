@@ -46,6 +46,17 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+### Lead 2026-10-23 00:20 (from T-181, T-194, T-163 r3, T-195 MERGED; T-179 r1 REJECTED, r2 READY)
+
+| Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |
+|---|---|---|---|---|---|
+| Dome-opening band of the slab at each terrace dome (0.16 m slab-edge band, 4.446 m2 of edge form; 1.689 m2 at DOME-A) | formwork, concrete, slab edges | the DOME RING owns the face (formwork and concrete); the slab-edge chain stops at the ring (slab edges 31.058 -> 26.612 m2) | T-163 r3 MERGED 659f889f (checker narrow re-check) | ST p.7 dome detail, T-185 ring | integration with formwork lines: T-199 |
+| Dome shell soffit form (S0, 2 terrace domes, 2 x 24.150 m2 intrados above the ring-top plane) | formwork, ceilings, waterproofing | FORMWORK (structure); the ring below the springing plane is its own HELD line, never added to the shell | T-163 r3 MERGED; checker own p.7 printed 442 / 190 / 10: 24.1495 m2 (0.00 %) | ST p.7 | S1 client scenario shown beside, never in totals (ScenarioLeak guard) |
+| Opening P-GF-05 (1.20 m, GF SW) and P-GF-01 (0.90), P-1F-01 (1.30) | openings, block deductions, lintels, reveals, plaster / paint | OPENINGS (the list); every deducting trade reads the opening from the list, never re-derives it | DRAWN (SW elevation / plans); head of P-GF-05 HELD (D-60) | T-194 MERGED 4f2678c5 | T-198 census r3 with the downstream deltas; T-176 waits on it |
+| Window count (29 in the freelancer and the T-150 list) | openings, scoreboard | OPENINGS; the count is HELD while W02 is unclassified (D-53), never shown as AGREE | HELD (checker T-181 verdict faa04202) | T-181 MERGED | T-198 states the reason on the list |
+| Curved openings (W17 and every arc opening) | openings, block, facade, plaster | OPENINGS; each line names its width basis: outer arc, face arc or projected chord (W17: 3.2895 / 2.977 / 2.6917 m); an elevation dimension is a chord | DRAWING-CONFIRMED (checker 0 mm on W17 NW 2691.5) | T-194; proposed UP-OPEN-CONSIST-001 | T-197 checks every curved element family |
+| Every drawing sheet (31: ARCH 12, ST 16, SAN 3) | every trade | DOCUMENT REGISTER (T-195): a quantity cites set + page; no printed revision -> FILE_PIN by sha256 | T-195 MERGED 06c2b045 | proposed UP-DOCREG-001 | D-61 (two dates in ST), D-62 (sheets not issued); scope cross-check T-196 |
+
 ### Lead 2026-10-22 20:20 (from T-189, T-178, T-185, T-175, T-173, T-128 r3, T-186, T-182 MERGED; T-179 and T-164 READY)
 
 | Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |

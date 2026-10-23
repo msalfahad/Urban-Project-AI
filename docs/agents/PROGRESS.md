@@ -1,28 +1,32 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
 Plain words, no task numbers. Measured numbers come from SCOREBOARD.md; anything not measured says so.
-Last update: 2026-10-22 20:20 UTC (Lead). Previous version: 2026-10-22 16:20 UTC. The released numbers did not change
+Last update: 2026-10-23 00:20 UTC (Lead). Previous version: 2026-10-22 20:20 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released default V2.9 + route G untouched).
-Since 16:20 (newest first):
-- Stair inside the roof beams: the main stair's upper flights pass through two beams (0.40 x 0.75 and 0.45 x 0.75 m over
-  3.30 m). The released run already bills both beams at full depth over the stair (checker re-measured both, 0.0 %), so
-  the stair ledger had counted that concrete a second time: the two upper flights drop 1.055 -> 0.998 and 1.059 -> 1.001
-  m3, the staircase system 6.790 -> 6.675 m3 (0.863 of it still held on the riser-count conflict). New rule: the element
-  billed through a junction at full section owns the overlap. A reusable overlap check (owned volumes must add up to the
-  union) is merged; next it checks every stair foot and landing against the slabs.
-- Domes: the two terrace domes measured from the printed detail, 2 x 2.541 = 5.081 m3, VERIFIED by the checker; the
-  engine's 7.372 m3 rests on a convention where the drawing prints the values (+2.291 too much); tower dome, rings and
-  bars held; your client's no-dome request stays a separate scenario, never released.
-- Plaster / paint: the one-room fix passed (first-floor east master 59.45 m2 net, 0.0 %); block opening deductions by
-  physical scope merged (43 walls now carry a net, 476.21 m2 candidate, 28 openings held); stair-shaft walls merged;
-  your stair calculator merged; the default-value guard merged.
-- Railings and shutters (a category missing from every BOQ so far) handed in: 38.916 m of railings drawn and measured,
-  the main stair's inner balustrade held, 6 shutter leaves (area held); the freelancer has only one 'internal railing'
-  row of 18.95 m.
-- One problem found and being fixed: the guard's merge broke a repository-wide safety test (a module that touches steel
-  must be registered); no quantity is affected; fix first in the integration lane.
-- The fifth candidate extension (checked slab and stair steel, the dome ring) is with the checker; the pool steel stays
-  out of it until its bar lengths are redone on the verified 1.20 m wall.
+Since 20:20 (newest first):
+- Drawing register: all 31 issued sheets listed (architecture 12, structure 16, sanitary 3). No sheet prints a revision,
+  so every quantity now cites the exact file it was measured on (file fingerprint); 543 citations in the merged work were
+  checked: none points at a sheet outside the set. The structural set carries two dates (May 2025 on pages 1-7, May 2026
+  on the later pages): which is the issue date is a designer item. Not issued at all: site plan, top-roof plan, door /
+  window and finishes schedules, reflected ceiling plan, wet-room and stair details, water, electrical and A/C drawings.
+- Openings checked plan = elevation = section: 71 openings, 10 widths agree on two independent sheets (worst 4.9 mm).
+  Found: three openings missing from the opening list (0.90 m, 1.30 m and a 1.20 m opening drawn on the south-west
+  elevation), and the list's sill / head for two windows taken on the wrong level base (e.g. 1.85 / 3.85 where the
+  elevation gives 1.00 / 3.00 above the finished floor). No quantity moved yet; the list is being corrected and the
+  effect on block, lintel and plaster deductions measured.
+- Formwork (a category no BOQ has, the freelancer included): the two terrace dome soffits now carried from the checked
+  dome detail (2 x 24.150 m2, checker 0.00 %); above-ground formwork calculated 1,078.274 m2 (+4.2 % from that), held
+  parts listed; your client's no-dome request is shown beside it and never mixed in.
+- Doors / windows now scored like for like (pieces vs pieces, m2 vs m2): windows 56.771 m2 on the 8 openings with
+  printed heights vs his 54.931 m2 on the same 8 (+3.35 %), 21 windows held (no printed head), the window count held
+  until one disputed window is classified; aluminium doors 10.560 m2 on your 2.20 m door height vs his 12.0 m2 (-12 %, a
+  rule difference: he used 2.40 m, plus two 0.90 m doors).
+- Fifth candidate extension (checked slab / stair steel and the dome ring) rejected once by the checker for one fault
+  (the stair bar range used the low bar count at both ends, 65 kg too low at the top of the range), fixed and back with
+  the checker; still NOT RELEASED.
+Earlier (20:20 report): stair inside the roof beams (beams own the junction, staircase system 6.675 m3); terrace domes
+5.081 m3 VERIFIED (engine convention +2.291 too much); plaster / paint one-room fix passed; block opening deductions by
+physical scope; railings 38.916 m drawn and measured (now merged, checker 0.0 % on two runs).
 Earlier today: Your pool (teaching case) is now reconstructed and checked: the checker re-read the cut itself and confirmed the concrete
 wall is 1.20 m (rim to the structure line; your 1.15 m is the finished water depth) and the 0.15 m upstand above the deck
 (1.350 m2 outer face along 8.998 m). Pool concrete 7.202 m3 (base 4.374 + walls 2.828) VERIFIED for the concrete scope;
@@ -39,8 +43,7 @@ onto them, and the fourth candidate extension (84 lines that rested on values th
 e.g. the column necks 10.856 m3 -> held 3.075 .. 15.375 m3 because the founding depth is not printed).
 Sent back: plaster / paint on one room only (first-floor east master: the room outline slips into the window-frame gap at
 both ends of the curved glazing, +0.200 m of wall, owner net +1.25 %); everything else in it stands.
-Next for structure: the dome scenarios (three concrete domes in the approved design; your client's no-dome request shown
-separately, not released), then the formwork rework.
+Next for structure: the pool bar lengths on the verified 1.20 m wall, then the stair feet and landings against the slabs.
 
 ## Where we are on the five gates
 | Gate | In plain words | Due | Done so far | State |
@@ -186,19 +189,23 @@ Not measured, and paused by your order (Alsenan first).
   development lengths, so a steel ledger is not complete until it has read them.
 
 ## Being worked on now
-- Checker: the fifth candidate extension (slab / stair steel, dome ring) and the railings; then the safety-test fix.
-- Structural (worker 1): the formwork rework (beams running through a column), the pool bar lengths redone on the
-  verified 1.20 m wall (both pool details side by side), the stair feet and landings against the slabs, then the
-  every-element-on-every-storey cross-check and the angled strap beams.
-- Architecture and finishes (worker 2): black block units from the checked net block area, a plan = elevation = schedule
-  check of every opening, then a register of every drawing sheet and its revision.
-- Integration (worker 3): the safety-test fix, doors / windows in pieces AND m2 on the scoreboard, then the guard and the
-  missing upper stair flights into the candidate, then the verified pool (7.202 m3) and dome (5.081 m3) concrete.
+- Checker: the fifth candidate extension (steel, dome ring) after its one fix; then the safety-test fix; one standing
+  re-measure slot per run (columns next).
+- Structural (worker 1): pool bar lengths on the verified 1.20 m wall (both pool details side by side), stair feet and
+  landings against the slabs (concrete and formwork on one boundary), the every-element-on-every-storey cross-check, the
+  angled strap beams.
+- Architecture and finishes (worker 2): the corrected opening list (three missing openings, two windows re-levelled, the
+  deduction effects in m2), a check of every curved element measured on its true arc, then black block units on the
+  corrected net area.
+- Integration (worker 3): the safety-test fix, then the guard and the missing upper stair flights into the candidate, the
+  verified pool (7.202 m3) and dome (5.081 m3) concrete, then formwork and railings as new BOQ categories; a scope
+  cross-check (every freelancer row and every BOQ line against a drawn element) and a stricter candidate-diff tool in
+  between.
 
 ## What is missing
 - Window sills / heads for 20 windows and 3 arch openings (designer window schedule asked); every door but the main entrance (2.20 m by your Q-55 C, stated as assumed).
 - Ceilings: wet-room board type, cove detail, drop heights at openings, dome openings (designer); bar counts of the 3 planted columns (designer).
-- Block walls: net area on 32 of 75 walls (28 openings still held), black-block count (being investigated), wall tops under the dome openings and the lift tie beam (designer).
+- Block walls: net area on 43 walls (28 openings still held; three openings missing from the list being added), black-block count (being investigated), wall tops under the dome openings and the lift tie beam (designer).
 - Ceilings over outside air: area settled (44.446 m2); the finish has no note on any sheet (specification / designer).
 - Slab under the main-stair winders (0.23 .. 0.25 m3) in no line yet; 16 beam pieces the drawings contradict or leave unmarked (designer list).
 - Roof levels and roof build-up (rooms under a roof), decor-ceiling levels and floor build-up, sunken-slab drops: three new
@@ -210,11 +217,10 @@ Not measured, and paused by your order (Alsenan first).
 - The Kuwait specification chapters on waterproofing, floors, wall tiles and paint (file too big: parts needed).
 
 ## Waiting for the owner
-- No decision needed today. The per-metre notation was settled from the drawings by the team (only the unprinted leg
-  diameter stays a designer item); the stair-shaft walls are investigated and waiting for the checker; black block units are an investigation in work.
+- No decision needed today. Nothing the team found since 20:20 meets the standard's conditions for asking you.
 - Designer items to forward when you choose (DESIGNER_CLARIFICATIONS.md): footing bar leg diameter, pool steel (the p.7
   detail is two-zone, your floor is flat), the three parapet types ST p.14 leaves to the architectural detail, and the
-  earlier D-39 .. D-58.
+  earlier D-39 .. D-58; new D-59 .. D-62: nine small squares on two elevations, the 1.20 m south-west opening's head, the two dates in the structural set, and the sheets never issued (site, roof, schedules, ceilings, MEP).
 - For the dome change: the consultant must approve the opening geometry, edge / ring structure, load path, waterproofing
   upstands and the skylight or open-area system before scenario S1 can be priced as approved (list in progress).
 - Upload the Kuwait specification chapters 07100, 09200, 09300, 09400, 09900 as separate PDFs under 6 MB.

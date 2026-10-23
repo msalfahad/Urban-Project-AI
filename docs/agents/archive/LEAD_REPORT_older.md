@@ -1,3 +1,73 @@
+## LEAD REPORT 2026-10-22 12:20 UTC
+
+Repositories: attached Urban-Project-AI checkout (main 1c559a8) + wrapper; `.work` absent at start again, `setup` by hand
+worked, `board log` / `board commit` worked, no refusal. Working branch head 130e2e3 (3 checker merges since 08:20: T-140,
+T-169, T-177; no owner-session commit). Drive readable: no file created in the Alsenan folder since 08:00, so no photo-review
+task. UrbanProjectsManager not used. Owner sessions 09:05, 09:15, 09:40 and 11:50 read and applied; nothing undone or duplicated.
+
+PROGRESS (Alsenan; released numbers unchanged: released concrete 92.77 vs freelancer 111.81 m3, -17.03 %, run A)
+- POOL SHELL (your teaching case; structure; m3). Checker's own measurement: base 10.9356 m2 (outer D, hatch 10.935) x 0.40
+  printed = 4.374 VERIFIED; wall ring 2.3568 m2 (curved part 1.0367 measured) x 1.200 = 2.828 DRAWING-CONFIRMED; shell
+  7.202 m3. Engine 3.495 (-3.707, -51.5 %: half the ring read, convention 0.25 / 1.60 in place of the printed 0.40 and the
+  drawn height). Freelancer 12.348 (+5.146, +71.5 %: pump room 3.480 and steps 0.228 drawn nowhere, wall height 1.80 counts
+  the base again, a 0.25 m wall on no drawing). Your eight conditions: a, b, d, e, f, g PASS; c FAIL; h geometry PASS,
+  steel HELD (two-zone detail vs your flat floor: designer). Line = PARTIALLY VERIFIED; verified share concrete restated
+  0 / 8 (whole-line rule). What was learned: your 1.15 m is the FINISHED water depth over a drawn 50 mm build-up; the
+  structure line gives a 1.20 m concrete wall (worker's 2.710 -> 2.828 m3, -4.2 % on the walls) and the wall rises 0.15 m
+  above the deck finish (outer formwork / waterproofing / finish missing). Rework r2 is exactly those two faults + an
+  adverse test; then the pool line can be re-judged. Not a question for you: the drawings settle it (standard 2.7 not met).
+- SCOREBOARD v2 is now produced by a merged script (130e2e3) and reproduces the checker's hand table: concrete WAPE 17.03 %
+  released A / 15.38 % candidate V3.0.3 on 3 of 8 compared (unchanged); plaster, paint, floor area 1 reference line each,
+  HELD, NOT YET MEASURED; doors / windows NOT YET MEASURED in m2 (engine counts pieces; the pcs AND m2 task is queued).
+- FORMWORK (missing category; m2): sent back. Bay GF-032 and the shaft faces 0.0 %, but column joint faces on COL-GF-19
+  own 1.004 vs 1.124 m2 (+12.0 %): a beam running through the column, flush with one face, was counted across the full
+  face width. The 14.224 m2 joint line and the 288.711 m2 beam sides are NOT VERIFIED until the 30 columns are re-run.
+- FOOTING "PER METRE" NOTATION (rebar; kg), investigation done, waiting for the checker: "/m" = maximum c/c spacing; edge
+  bars inside the boxed legs; N = ceil(L_eff / s) + 1 gives 2,769.06 .. 2,829.83 kg, HELD only on the unprinted leg
+  diameter (designer). The old A / B / C figures 2,742.51 / 2,836.40 / 2,797.81 were each built on a wrong count.
+- CORNERS / PARAPETS (facade; m.l and m2), waiting for the checker as one pair: physical corners 576.872 m.l measured
+  + 32.200 ASSUMED (your door height) + HELD vs his 1,297.35 m.l (contract), payable half 648.675 and your 1.25 KWD rate
+  kept as separate columns, never m2; parapet top 26.801 m2, inner faces 94.431 .. 99.534 m2; his parapet third line
+  140.27 m.l and a 1F 1.70 m height UNRESOLVED (ST p.14 leaves three parapet types to the architectural detail: designer).
+- Merged and checked 0.0 %: the wall-stub fix (free-end doorway GF-W29 physical 0.553 m), the coverage census V2.
+- Change since 08:20: no released or candidate quantity moved; verified share stays 0 / 8; two hand results rejected for
+  exact, small faults; scoring is now reproducible by script.
+
+TEAM HEALTH (08:20 - 12:20)
+- Closed slots: worker 1 08:32, 10:38; worker 2 10:09, 11:53; worker 3 09:24; checker 10:24, 12:07: 7 of 7 STARTED +
+  SUCCESS, every self-check PASS (codemap, t061, freeze 0), every final line carries `ERS: read` + section. Worker 3's 11:01
+  run (T-167 V3.0.4, claimed 11:08) has no final line yet and the scheduler shows it still running: not counted as
+  INCOMPLETE; re-checked next run. Worker 1's 12:19 slot had not logged STARTED by 12:20.
+- The checker clears 3 items per run while owner slots come first; READY stays at 6 (> 3). Doors / windows has waited 4
+  checker runs (CAPACITY); the footing notation 2 (gate 1: it is ranked second in the next run and may not slip again).
+- Lead self-check PASS (codemap stale none, t061, freeze 0). This run: queue for 3 checker runs (pool rework first when it
+  lands, else the column concrete line re-measured whole in the standing slot); lane orders (S: staircases, pool rework,
+  formwork rework, domes, straps; A: openings, shaft, units; I: V3.0.4, default guard, scoreboard five measures, doors /
+  windows pcs + m2, lessons into tests); T-049 superseded (its "dome part closed" text withdrawn: domes stay in S0); T-170
+  and T-168 queued; register +5 rulings (pool shell with the structural vs finished height, staircases / lift-shaft owner
+  split, domes S0 / S1 / S2, column joint faces, corners / parapets one element two tasks); lessons register +3 rows
+  (finished depth vs structure line; through-beam joint faces; re-read owner corrections before READY) and 2 statuses.
+
+Proposed lessons rows (already entered in ENGINEERING_REASONING_STANDARD section 7): pool wall height to the structure
+line, never a finished depth (T-183 r2 test); a face covered by a framing member counts that member's width only (T-163 r2
+test); a handoff is checked against every owner correction newer than its claim (T-162 r2).
+
+OWNER PACKAGE
+No genuine owner decision today (standard 2.7 not met by anything open). Your 1.15 m pool depth is not being overruled:
+it stays the finished water depth (water-face finish line); the concrete takes the 1.20 m the section draws.
+
+NEEDS FIXING
+- Small, for the main chat: the start-up hook still does not prepare `.work` in repo-attached sessions (every agent ran
+  `setup` by hand; nothing lost).
+- Checker capacity: with owner slots first it clears about 3 items a run, so READY sits at 6. If you want READY under 3 by
+  tomorrow, one more checker slot a day would do it (a scheduling change only you / the main chat can make).
+- Still waiting: Kuwait specification chapters 07100, 09200, 09300, 09400, 09900 as PDFs under 6 MB; designer items when you
+  choose to send them.
+
+Team ids: MERGED T-140, T-169, T-177; REJECTED T-162 r1 (reworked), T-183, T-163 (r2 claimable); READY T-171, T-150 r2,
+T-172, T-162 r2, T-128 r2, T-158; CLAIMED T-167; TODO S T-184, T-185, T-174 (+ T-183 r2, T-163 r2), A T-175, T-173, T-176,
+T-164 (not permitted), I T-186, T-182, T-181, T-178; QUEUED T-179, T-146, T-168, T-170; SUPERSEDED T-049.
+
 ## LEAD REPORT 2026-10-22 08:20 UTC
 
 Repositories: attached Urban-Project-AI checkout (main 1c559a8) + wrapper; `.work` absent at start again, `setup` by hand
