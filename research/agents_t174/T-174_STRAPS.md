@@ -44,6 +44,14 @@ crossings to 0.1 mm; the chord is collinear with the face, so the module merges 
 
 SB1 (control, orthogonal): F8 bottom y 42,297.96 - F10 + F top y 37,747.96 = **4,550.0 mm**; axis = projection.
 
+**Second drawing (ST7757.pdf p.2 "FOUNDATION PLAN", 1:100, page rotated 270; vector paths read with pymupdf, scale
+28.3465 pt/m checked on the strap edges: SB2 edges 144.76 / 150.27 pt = 5.1053 / 5.2999 m, SB3 133.06 / 135.65 pt =
+4.6964 / 4.7850 m, all four 28.35 pt/m):** SB2 faces at x 272.92 (F11) / 336.64 (F6) pt: 63.72 pt = 2.2479 m rise, edge
+cos 0.98149 / 0.98143 -> axis **2.2903 m** (DXF 2.2927: -2.4 mm, -0.10 %); SB3 faces at x 258.76 (F15, a 51.00 pt =
+1.80 m line) / 345.16 (F3, 45.36 pt = 1.60 m) pt: 86.40 pt = 3.0480 m, cos 0.93612 / 0.93594 -> axis **3.2563 m** (DXF
+3.2580: -1.7 mm, -0.05 %). The residual is the PDF coordinate quantisation (0.04 pt = 1.4 mm per point, two faces);
+same geometry, same faces, same footings (labels C11/F11, C6/F6, C3/F3, F15 on the sheet). The DXF governs the value.
+
 **Cause of the released / S5 short lengths (1.829 / 2.838 m)**: the frozen S5 register measures the gap between the two
 footings' PROJECTIONS on the strap axis. On an oblique strap a footing corner beside the strap projects further along the
 axis than the face the strap actually crosses:
