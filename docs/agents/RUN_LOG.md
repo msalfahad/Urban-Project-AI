@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-23T03:55Z | Worker 3 | SUCCESS | T-187 READY (agents/task-T-187 5922d4ea; integration package V3.0.6, integrates T-186, T-184, T-189, T-192) | ST-01 1F->2F into the candidate from T-192 rev3: MS2-L 1.0334 VERIFIED + MS2-U 1.0014 DRAWING-CONFIRMED + MS2-LD HELD 0.4696..0.4800 + MS2-TR UNKNOWN (D-T184-1 fixed, 2.504..2.515 vs rev1 2.598 = -0.0575 B23 head -0.0254 B20 foot); default guard wired: pool 3.495, domes 7.372, ST-01 GF 2.786, ST-02 1.769 m3 HELD with printed values cited (=baseline A 14.554 + ST-02 own line), 2 placeholders, blinding rebased; found the candidate's 1F 'winder stair' 4.451 m3 is a dome (18 lines from one point to r 2.211 m over 360 deg): HELD MISREAD. V3.0.4/V3.0.5 reproduced, V3.0.6 3e622799, Gate B unflagged 0. ERS: read, s.2-4 + s.7 row; no owner question | self-check codemap PASS / pytest t061 PASS / freeze PASS; L3 1,253 pass 0 fail; Drive read OK; problem: none
 - 2026-10-23T03:51Z | Verifier | STARTED | run session_01KSbKBpMHHoCuGKrbtCyvKG | repo-attached routine | task state: T-191, T-198 READY seen in RUN_LOG | self-check pending
 - 2026-10-23 03:40 UTC | Worker 2 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-23T03:00Z | Worker 3 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
