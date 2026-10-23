@@ -2,6 +2,46 @@
 
 Development reference only: tuning against it is allowed, so these numbers never prove product accuracy (MISSION.md).
 
+## SCOREBOARD v2 2026-10-23 22:55 UTC
+
+### CLOSABLE LINES (owner 2026-10-23 17:50; ranked by whether the line can genuinely close from the existing drawings alone; Checker classification, 22:55 run)
+
+| Rank | Reference line | Unit | Class | What blocks it (named item) | Own-measured so far |
+|---|---|---|---|---|---|
+| 1 | Floor area | m2 | CLOSABLE AFTER a lane I fix of two named line findings (A as released can never be VERIFIED): the 1F dressing 1F-RFFE7AF 2.970 m2 enclosed dry interior carried only as ARCH.SPACE (scope), and the lift-landing / exterior sills 1F OP-007 0.200 + 2F OP-001 0.150 + 2F OP-002 0.200 carried as porcelain (class, T-218 / UP-THR-001); candidates also on the 1F foot-of-flight 0 .. 0.520 | the remaining 27 pieces (1F living 44.869; GF 23 lines incl. the GF unlabelled spaces 3.600 / 1.560 to classify; 2F OP-001 / OP-002 class) | PARTIALLY VERIFIED 20 / 47 pieces, 138.767 m2 own = engine 0.0 % on every agreeing piece (3 sets + 2F + all 1F rooms except the living) |
+| 2 | Plaster | m2 | CLOSABLE AFTER the V3.0.9 held ranges close: heads not printed (T-237 crosswalk with merged T-201 / T-207 heads), W15 / W16 (T-238 MERGED 242e50b2: wire 4.3629), G2 annex height, D-T173-1 2F shaft, pantry wet / dry, the dressing faces (no record) and V3.0.9b wet rooms | T-211 V3.0.9a MERGED 55fc11ec: 3 rooms released 166.879 m2 (geometry Checker re-measured), 8 ranges, 4 without a figure | 3 room faces re-measured (GF-15, 1F-01, 1F-11) |
+| 3 | Paint | m2 | as plaster | as plaster | as plaster |
+| 4 | Doors (aluminium) | m2 | CLOSABLE AFTER T-232 | engine answers pcs; D-GF-05 class HELD | T-181 path only |
+| 5 | Windows (aluminium) | m2 | CLOSABLE AFTER T-232 and the owner item on W17 (Q-39 reading: 305 = opening crown, 45 = archivolt, Checker 22:50), W02 BLOCKED BY CONSULTANT D-53 | W17 HELD 9.870 .. 11.515 | 15.615 m2 VERIFIED of 88.081 (28 / 29 openings) + W15 / W16 / W26 outlines re-measured |
+| 6 | CONC.BEAM | m3 | CLOSABLE AFTER T-229 integration for the runs; depths BLOCKED BY CONSULTANT D-02 / D-16 / D-63 / D-65 | as 21:15 | 4 of 238 census rows (T-229) |
+| 7 | CONC.FOOTING | m3 | BLOCKED BY CONSULTANT (Q-31 C: F10 + F, T-239); straps SB3 (D-15), band C1 (Q-28 A) | F10 + F 2.176 .. 2.275 m3 HELD | footing component VERIFIED 25 / 26 outlines 64.304 m3 |
+| 8 | CONC.GROUND | m3 | BLOCKED BY CONSULTANT D-35 | as 21:15 | 3 lift-beam lengths (T-230) |
+| 9 | CONC.BLINDING | m3 | BLOCKED BY CONSULTANT D-15 / D-14; ground-beam layer Q-21 C | as 21:15 | footing layer 14.990 m3 VERIFIED |
+| 10 | CONC.SLAB | m3 | BLOCKED BY CONSULTANT D-41 until T-234 (READY) is checked (Lead: rule whether D-41 still blocks) | the slab drop | slab panels 1F 19.3864 + 2F 5.400 m2 (T-213) |
+| 11 | CONC.COLUMN | m3 | BLOCKED BY CONSULTANT D-16 (C8), D-65, D-26, D-39, tank columns | as 21:15 | 31 / 59 |
+| 12 | CONC.POOL | m3 | BLOCKED BY CONSULTANT (steps) | pool steps | base + walls VERIFIED components |
+| 13 | CONC.STAIR_DOME | m3 | BLOCKED BY CONSULTANT (stair winder / waists, tower dome) | curved / winder parts | 2 flights + 2 dome shells VERIFIED components |
+
+Reading: floor area stays the highest closable line; next T-180 batch = GF (23 lines, classify the GF unlabelled spaces like the dressing) and the 1F living.
+
+| Trade | Unit | Baseline | Ref lines | Coverage % | Compared | WAPE % | Signed % | Verified share % | Held or UNKNOWN | Rule difference share % |
+|---|---|---|---|---|---|---|---|---|---|---|
+| CONCRETE | m3 | A (released V29_ROUTEG_NO_PROFILE), manifest b9e6b4b9, BOQ_LINES.csv b96185d4 | 8 | 100.00 | 3 | 17.03 | -17.03 | 0.00 (0 / 8); 5 partial re-measures not counted | 5 ref lines HELD; 205 engine lines: 122 bounded 44.108 .. 113.540 m3 + 83 UNKNOWN (no bound) | 12.50 (1 / 8) |
+| CONCRETE | m3 | ARCH_TAKEOFF_V3.0.9 (candidate, 63b350cf; NOT RELEASED), V3_0_9_BOQ_LINES.json 1dee622c, V3_0_9_BOQ_LINES.csv 63b350cf | 8 | 100.00 | 1 | 1.84 | 1.84 | 0.00 (0 / 8); 5 partial re-measures not counted | 7 ref lines HELD; 84 engine lines: 67 bounded 22.669 .. 48.314 m3 + 17 UNKNOWN (no bound); 17 more excluded with reason | 12.50 (1 / 8) |
+| DOORS | m2 | A (released V29_ROUTEG_NO_PROFILE), manifest b9e6b4b9, BOQ_LINES.csv b96185d4 | 1 | 0.00 | 0 | NOT YET MEASURED | NOT YET MEASURED | 0.00 (0 / 1) | NOT YET MEASURED (unit refused: the engine answers DOORS.ALUMINIUM in pcs, the reference in m2) | NOT YET MEASURED |
+| DOORS | m2 | ARCH_TAKEOFF_V3.0.9 (candidate, 63b350cf; NOT RELEASED), V3_0_9_BOQ_LINES.json 1dee622c, V3_0_9_BOQ_LINES.csv 63b350cf | 1 | 0.00 | 0 | NOT YET MEASURED | NOT YET MEASURED | 0.00 (0 / 1) | NOT YET MEASURED (unit refused: the engine answers DOORS.ALUMINIUM in pcs, the reference in m2) | NOT YET MEASURED |
+| FLOOR_AREA | m2 | A (released V29_ROUTEG_NO_PROFILE), manifest b9e6b4b9, BOQ_LINES.csv b96185d4 | 1 | 100.00 | 1 | 5.85 | -5.85 | 0.00 (0 / 1; PARTIALLY VERIFIED 20 / 47 pieces, 138.767 m2 own-measured (Checker 21:15 + 22:05); line as released NOT closable: +2.970 dressing scope missing, 0.550 thresholds carried as floor) | 0 ref lines HELD; 9.348 m2 of the 385.634 is ASSUMED — OWNER-APPROVED (Q-06 A, 54cb4c42), own column | NOT YET MEASURED (1 partial rule verdict not counted) |
+| FLOOR_AREA | m2 | ARCH_TAKEOFF_V3.0.9 (candidate, 63b350cf; NOT RELEASED), V3_0_9_BOQ_LINES.json 1dee622c, V3_0_9_BOQ_LINES.csv 63b350cf | 1 | 100.00 | 0 | NOT YET MEASURED | NOT YET MEASURED | 0.00 (0 / 1) | 1 ref line HELD; 1 engine line: 1 bounded 38.459 .. 38.979 m2 | NOT YET MEASURED (1 partial rule verdict not counted) |
+| PAINT | m2 | A (released V29_ROUTEG_NO_PROFILE), manifest b9e6b4b9, BOQ_LINES.csv b96185d4 | 1 | 100.00 | 0 | NOT YET MEASURED | NOT YET MEASURED | 0.00 (0 / 1) | 1 ref line HELD; 13 engine lines: 13 UNKNOWN (no bound); 14 more excluded with reason | NOT YET MEASURED (1 partial rule verdict not counted) |
+| PAINT | m2 | ARCH_TAKEOFF_V3.0.9 (candidate, 63b350cf; NOT RELEASED), V3_0_9_BOQ_LINES.json 1dee622c, V3_0_9_BOQ_LINES.csv 63b350cf | 1 | 100.00 | 0 | NOT YET MEASURED | NOT YET MEASURED | 0.00 (0 / 1) | 1 ref line HELD; 12 engine lines: 8 bounded 529.467 .. 595.048 m2 + 4 UNKNOWN (no bound); 30 more excluded with reason | NOT YET MEASURED (1 partial rule verdict not counted) |
+| PLASTER | m2 | A (released V29_ROUTEG_NO_PROFILE), manifest b9e6b4b9, BOQ_LINES.csv b96185d4 | 1 | 100.00 | 0 | NOT YET MEASURED | NOT YET MEASURED | 0.00 (0 / 1) | 1 ref line HELD; 29 engine lines: 2 bounded 2.360 .. 2.600 m2 + 27 UNKNOWN (no bound) | NOT YET MEASURED (1 partial rule verdict not counted) |
+| PLASTER | m2 | ARCH_TAKEOFF_V3.0.9 (candidate, 63b350cf; NOT RELEASED), V3_0_9_BOQ_LINES.json 1dee622c, V3_0_9_BOQ_LINES.csv 63b350cf | 1 | 100.00 | 0 | NOT YET MEASURED | NOT YET MEASURED | 0.00 (0 / 1) | 1 ref line HELD; 31 engine lines: 10 bounded 531.827 .. 597.648 m2 + 21 UNKNOWN (no bound); 13 more excluded with reason | NOT YET MEASURED (1 partial rule verdict not counted) |
+| WINDOWS | m2 | A (released V29_ROUTEG_NO_PROFILE), manifest b9e6b4b9, BOQ_LINES.csv b96185d4 | 1 | 0.00 | 0 | NOT YET MEASURED | NOT YET MEASURED | 0.00 (0 / 1) | NOT YET MEASURED (unit refused: the engine answers WINDOWS.ALUMINIUM in pcs, the reference in m2) | NOT YET MEASURED |
+| WINDOWS | m2 | ARCH_TAKEOFF_V3.0.9 (candidate, 63b350cf; NOT RELEASED), V3_0_9_BOQ_LINES.json 1dee622c, V3_0_9_BOQ_LINES.csv 63b350cf | 1 | 0.00 | 0 | NOT YET MEASURED | NOT YET MEASURED | 0.00 (0 / 1) | NOT YET MEASURED (unit refused: the engine answers WINDOWS.ALUMINIUM in pcs, the reference in m2) | NOT YET MEASURED |
+| BLOCKWORK | m2 | wall register v1 + merged deltas (T-225, T-226, T-222, T-227 r2; T-238 research only) | NOT YET MEASURED | NOT YET MEASURED | 0 | NOT YET MEASURED | NOT YET MEASURED | net VERIFIED 4.458 m2 (GF-W07) as at 21:15; W26 masonry deduction 1.8745 m2 re-measured (T-238, 22:50) | as at 21:15 | NOT YET MEASURED |
+
+Sources (Verifier, 21:50 run, session_01ERWbNKrxMGirFXWSv8N4VN): table produced by tools/alsenan_keymap.py on the engine head 242e50b2 (run A = own re-run of tools/release_baseline.py V29_ROUTEG_NO_PROFILE, REPRODUCED 1,455 lines, BOQ_LINES.csv b96185d4; candidate = own V3.0.9 run, V3_0_9_BOQ_LINES.csv 63b350cf; verdicts research/agents_t177/CHECKER_VERDICTS_DEV_VILLA.json; --set-bindings research/agents_t216/ALSENAN_SET_BINDINGS_T216.json); the FLOOR_AREA A verified cell and the BLOCKWORK row are added by hand from the Checker verdicts on BOARD.md (21:15, 22:05, 22:50). Merged this run: T-211 55fc11ec (V3.0.9a, candidate only), T-238 242e50b2 (research only). V3.0.9 replaces V3.0.8 as the candidate row (V3.0.8 concrete rows unchanged: STRUCTURAL 0 on the changed rows). Drive read OK (P7757_DXF_COMPRESSED.zip, ST7757 dxf.dxf). Released default unchanged (V2.9 + route G).
+
 ## SCOREBOARD v2 2026-10-23 21:15 UTC
 
 ### CLOSABLE LINES (owner 2026-10-23 17:50; ranked by whether the line can genuinely close from the existing drawings alone, not by the share measured; Checker classification, 21:15 run)
