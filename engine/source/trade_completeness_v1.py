@@ -68,8 +68,9 @@ completeness is "n/a" (d = 0), never 100 %.
 
 Each in its own table with n / d; accuracy only in its own table; no combined percentage is ever written.
 
-Deductions (every line that states a gross): gross - sum(deductions) + sum(additions) = measured_net within net_tol;
-each opening id at most once per face (in one line, and across the lines of one trade on the same element and face);
+Deductions (every line that states a gross): gross - sum(deductions) + sum(additions) = measured_net within net_tol
+(an amount is 'area' or the line's unit key, e.g. {"m2": .., "what": ..}; a deduction names its opening id or says
+'what' it is, else DEDUCTION_UNNAMED); each opening id at most once per face (in one line, and across the lines of one trade on the same element and face);
 every opening id in the opening census when one is given. A breach is REFUSED with the reasons; reconcile_line raises.
 
 Nothing here names a project, a sheet, a layer or a coordinate; stdlib only.
@@ -176,26 +177,38 @@ def _pct(n, d):
 
 
 # ------------------------------------------------------------------------------------------------ deductions
+def _amount(item, unit):
+    """a deduction / addition amount: 'area' (synthetic and ledger form) or the line's own unit key ('m2', 'lm', 'm3',
+    the canonical-line form {"m2": .., "what": ..}); None when neither is a number."""
+    for k in ("area", unit, "qty"):
+        if _num(item.get(k)):
+            return item[k]
+    return None
+
+
 def _deduction_problems(line, opening_census, net_tol):
     probs = []
     seen = set()
     total_d = 0.0
+    unit = line.get("unit")
     for d in line.get("deductions") or []:
         oid = d.get("opening")
         face = d.get("face")
         if oid is None:
-            probs.append("DEDUCTION_WITHOUT_OPENING_ID")
+            if not d.get("what"):
+                probs.append("DEDUCTION_UNNAMED")
         else:
             if (oid, face) in seen:
                 probs.append(f"DEDUCTION_REPEATED:{oid}" + (f"@{face}" if face is not None else ""))
             seen.add((oid, face))
             if opening_census is not None and oid not in opening_census:
                 probs.append(f"OPENING_NOT_IN_CENSUS:{oid}")
-        if not _num(d.get("area")):
-            probs.append(f"DEDUCTION_UNQUANTIFIED:{oid}")
+        a = _amount(d, unit)
+        if a is None:
+            probs.append(f"DEDUCTION_UNQUANTIFIED:{oid if oid is not None else d.get('what')}")
         else:
-            total_d += d["area"]
-    total_a = sum(a["area"] for a in line.get("additions") or [] if _num(a.get("area")))
+            total_d += a
+    total_a = sum(x for x in (_amount(a, unit) for a in line.get("additions") or []) if x is not None)
     gross, net = line.get("gross"), line.get("measured_net")
     if _num(gross) and _num(net) and not any(p.startswith("DEDUCTION_UNQUANTIFIED") for p in probs):
         if abs(gross - total_d + total_a - net) > net_tol:

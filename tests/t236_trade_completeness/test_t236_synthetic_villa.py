@@ -290,3 +290,18 @@ def test_line_trade_mapping():
 def test_policy_record_and_guard_class():
     p = TC.policy_record()
     assert p["default_guard_class"] == "CHECK_ONLY" and len(p["principal_trades"]) == len(TC.PRINCIPAL_TRADES)
+
+
+def test_canonical_deduction_form_unit_key_and_what():
+    ok = BL.make_line(project_id="P", revision_set_sha256=REV, item_code="FIN.FLOOR.PORCELAIN", unit="m2",
+                      evidence_state="SOURCE_DERIVED", measured_net=11.8, element_id="GF/HALL", formula="g-d",
+                      rule_id="R", rule_version="1", gross=12.0, deductions=[{"m2": 0.2, "what": "column"}])
+    bad = BL.make_line(project_id="P", revision_set_sha256=REV, item_code="FIN.SKIRTING", unit="lm",
+                       evidence_state="SOURCE_DERIVED", measured_net=9.0, element_id="GF/HALL", formula="g-d",
+                       rule_id="R", rule_version="1", gross=10.0, deductions=[{"lm": 0.9}])
+    assert TC.reconcile_line(ok) is ok
+    rep = TC.check(lines=[ok, bad])
+    st = {r["line_id"]: (r["status"], r["problems"]) for r in rep["deductions"]}
+    assert st[ok["line_id"]] == ("RECONCILED", [])
+    assert st[bad["line_id"]][0] == "REFUSED"
+    assert st[bad["line_id"]][1] == ["DEDUCTION_UNNAMED", "NET_MISMATCH:gross 10 - deductions 0.9 + additions 0 != net 9"]
