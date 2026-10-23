@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-23T11:17:37Z | Worker 2 | SUCCESS | T-212 READY (agents/task-T-212 @ b1a77e06) | Gate-0 fix: t202 guard sweep now reads importers at its pinned head d699b650 (table identical to SWEEP.md; t202 green unedited); new live property check research/agents_t212 (every module after d699b650 classified; unwired-producer importer closure only producers, relative imports resolved; no run-time load): live problems 0, the red edge is masonry_area_v1 -> opening_scope_v1 (producer->producer, allowed). Full suite on b1a77e06: known_failures NEW 0 / KNOWN 396; no quantity effect. ERS: read, s.4 | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-10-23T11:00Z | Worker 3 | STARTED | run session_01MU7hQUCi3GsQHXjDZTUFHN | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-23T10:53Z | Verifier | STARTED | run unknown | repo-attached routine | task state: T-193 (V3.0.7 package), T-208, T-205 READY seen in RUN_LOG | self-check pending
 - 2026-10-23T10:41:41Z | Worker 2 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
