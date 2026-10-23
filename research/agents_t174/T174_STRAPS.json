@@ -1,0 +1,540 @@
+[
+ {
+  "B_m": 0.7,
+  "D_m": 0.5,
+  "axis_angle_deg": 90.0,
+  "axis_unit": [
+   0.0,
+   -1.0
+  ],
+  "bars": {
+   "groups": [
+    {
+     "anchorage_kg": {
+      "range": [
+       14.159,
+       24.778
+      ],
+      "status": "HELD"
+     },
+     "anchorage_two_ends_m_each_bar": {
+      "range": [
+       1.28,
+       2.24
+      ],
+      "status": "HELD"
+     },
+     "count": 7,
+     "dia_mm": 16,
+     "kg_lb": 50.331,
+     "kg_per_m": 1.580247,
+     "position": "BOTTOM",
+     "run_basis": "between the footing faces along the strap axis",
+     "run_lb_m": 4.55,
+     "status": "DRAWING-CONFIRMED",
+     "total_run_lb_m": 31.85
+    },
+    {
+     "anchorage_kg": {
+      "range": [
+       37.44,
+       65.52
+      ],
+      "status": "HELD"
+     },
+     "anchorage_two_ends_m_each_bar": {
+      "range": [
+       1.44,
+       2.52
+      ],
+      "status": "HELD"
+     },
+     "count": 13,
+     "dia_mm": 18,
+     "kg_lb": 118.3,
+     "kg_per_m": 2.0,
+     "position": "TOP",
+     "run_basis": "between the footing faces along the strap axis",
+     "run_lb_m": 4.55,
+     "status": "DRAWING-CONFIRMED",
+     "total_run_lb_m": 59.15
+    }
+   ],
+   "links": {
+    "count_range": [
+     36.4,
+     38
+    ],
+    "dia_mm": 8,
+    "note": "'n per m' meaning not established for straps (per element type, Q-71): A = n x run, B = ceil(run x n) + 1; link developed length not computed",
+    "per_m": 8,
+    "status": "HELD"
+   }
+  },
+  "concrete": {
+   "check_B_x_axis_m2": 3.185,
+   "formula": "plan area of the B-wide strip outside both footing outlines x D",
+   "plan_area_outside_m2": 3.185,
+   "status": "DRAWING-CONFIRMED",
+   "volume_m3": 1.5925
+  },
+  "concrete_in_footings": [
+   {
+    "A_in_m2": 1.155,
+    "H_m": 0.5,
+    "column_area_removed_m2": 0.0,
+    "drawn_run_inside_mean_m": 1.65,
+    "footing": "F8 (1B24)",
+    "note": "D 0.50 <= H 0.50: the strap inside the outline is footing concrete (counted once, in the footing line)",
+    "owner": "FOOTING",
+    "status": "DRAWING-CONFIRMED",
+    "volume_m3": 0.0
+   },
+   {
+    "A_in_m2": 0.77,
+    "H_m": null,
+    "column_area_removed_m2": 0.035,
+    "drawn_run_inside_mean_m": 1.1501,
+    "footing": "F10+F (1B1B)",
+    "note": "strap depth or footing thickness not printed",
+    "status": "HELD"
+   }
+  ],
+  "drawn_width_m": 0.7,
+  "end_footing": "F10+F (1B1B)",
+  "excavation": {
+   "depth": "HELD (formation not printed, owner Q-21 C)",
+   "note": "the trench between the footing pits is shorter than the run between the footing outlines by the pits' working space; never the concrete section, never 0",
+   "status": "HELD",
+   "trench_run_upper_bound_m": 4.55,
+   "volume_m3": null,
+   "width_min_m": 0.7,
+   "working_space": "not printed"
+  },
+  "family": "STRAP_BEAM",
+  "flags": [
+   "SAME_FACE_BOTH_ENDS: both strap edges cross one straight face of each footing, so the plan area outside the footings = B x the axis length exactly"
+  ],
+  "footing_face_covered": [
+   {
+    "chord_on_face_m": 0.7,
+    "covered_m2": 0.35,
+    "footing": "F8 (1B24)",
+    "for": "footing side formwork (deduction by the footing formwork owner, not applied here)"
+   },
+   {
+    "chord_on_face_m": 0.7,
+    "covered_m2": null,
+    "footing": "F10+F (1B1B)",
+    "for": "footing side formwork (deduction by the footing formwork owner, not applied here)"
+   }
+  ],
+  "formwork": {
+   "below_ground": {
+    "EARTH_CAST_m2": 0.0,
+    "FORMED_m2": 4.55,
+    "decision": "formed or earth-cast sides below ground (owner OQ-10): two alternatives, never summed, not chosen here"
+   },
+   "ends": "none (cast against the footings)",
+   "side_faces_m2": 4.55,
+   "side_runs_m": [
+    4.55,
+    4.55
+   ],
+   "soffit": {
+    "candidates_m2": [
+     0.0,
+     3.185
+    ],
+    "note": "cast on blinding or formed: no strap section is printed",
+    "status": "HELD"
+   },
+   "status": "DRAWING-CONFIRMED",
+   "top": "none"
+  },
+  "held": [],
+  "lengths": {
+   "axis_face_to_face_m": 4.55,
+   "basis": "AXIS_FACE_TO_FACE (Q-74 A); projection gap = axis - the two corner over-reaches, not a built length",
+   "corner_overreach_m": [
+    0.0,
+    0.0
+   ],
+   "edge_face_to_face_m": [
+    4.55,
+    4.55
+   ],
+   "projection_gap_m": 4.55
+  },
+  "mark": "SB1",
+  "policy": "STRAP_BEAM_TAKEOFF_V1",
+  "rule_ids": [
+   "Q-74 (owner 2026-10-22, confirmed final): strap concrete at the beam-axis length between the footing faces",
+   "UP-QTY-STATUS-001"
+  ],
+  "start_footing": "F8 (1B24)",
+  "status": "DRAWING-CONFIRMED",
+  "strap_id": "SB1"
+ },
+ {
+  "B_m": 1.0,
+  "D_m": 0.5,
+  "axis_angle_deg": 101.076,
+  "axis_unit": [
+   -0.192116,
+   0.981372
+  ],
+  "bars": {
+   "groups": [
+    {
+     "anchorage_kg": {
+      "range": [
+       20.227,
+       35.398
+      ],
+      "status": "HELD"
+     },
+     "anchorage_two_ends_m_each_bar": {
+      "range": [
+       1.28,
+       2.24
+      ],
+      "status": "HELD"
+     },
+     "count": 10,
+     "dia_mm": 16,
+     "kg_lb": 36.23,
+     "kg_per_m": 1.580247,
+     "position": "BOTTOM",
+     "run_basis": "between the footing faces along the strap axis",
+     "run_lb_m": 2.2927,
+     "status": "DRAWING-CONFIRMED",
+     "total_run_lb_m": 22.9271
+    },
+    {
+     "anchorage_kg": {
+      "range": [
+       57.6,
+       100.8
+      ],
+      "status": "HELD"
+     },
+     "anchorage_two_ends_m_each_bar": {
+      "range": [
+       1.44,
+       2.52
+      ],
+      "status": "HELD"
+     },
+     "count": 20,
+     "dia_mm": 18,
+     "kg_lb": 91.708,
+     "kg_per_m": 2.0,
+     "position": "TOP",
+     "run_basis": "between the footing faces along the strap axis",
+     "run_lb_m": 2.2927,
+     "status": "DRAWING-CONFIRMED",
+     "total_run_lb_m": 45.8542
+    }
+   ],
+   "links": {
+    "count_range": [
+     22.927,
+     24
+    ],
+    "dia_mm": 8,
+    "note": "'n per m' meaning not established for straps (per element type, Q-71): A = n x run, B = ceil(run x n) + 1; link developed length not computed",
+    "per_m": 10,
+    "status": "HELD"
+   }
+  },
+  "concrete": {
+   "check_B_x_axis_m2": 2.2927,
+   "formula": "plan area of the B-wide strip outside both footing outlines x D",
+   "plan_area_outside_m2": 2.2927,
+   "status": "DRAWING-CONFIRMED",
+   "volume_m3": 1.1464
+  },
+  "concrete_in_footings": [
+   {
+    "A_in_m2": 1.2228,
+    "H_m": 0.5,
+    "column_area_removed_m2": 0.0,
+    "drawn_run_inside_mean_m": 1.2228,
+    "footing": "F11 (1B07)",
+    "note": "D 0.50 <= H 0.50: the strap inside the outline is footing concrete (counted once, in the footing line)",
+    "owner": "FOOTING",
+    "status": "DRAWING-CONFIRMED",
+    "volume_m3": 0.0
+   },
+   {
+    "A_in_m2": 1.4764,
+    "H_m": 0.5,
+    "column_area_removed_m2": 0.21,
+    "drawn_run_inside_mean_m": 1.6864,
+    "footing": "F6 (1B19)",
+    "note": "D 0.50 <= H 0.50: the strap inside the outline is footing concrete (counted once, in the footing line)",
+    "owner": "FOOTING",
+    "status": "DRAWING-CONFIRMED",
+    "volume_m3": 0.0
+   }
+  ],
+  "drawn_width_m": 0.9871,
+  "end_footing": "F6 (1B19)",
+  "excavation": {
+   "depth": "HELD (formation not printed, owner Q-21 C)",
+   "note": "the trench between the footing pits is shorter than the run between the footing outlines by the pits' working space; never the concrete section, never 0",
+   "status": "HELD",
+   "trench_run_upper_bound_m": 2.2927,
+   "volume_m3": null,
+   "width_min_m": 1.0,
+   "working_space": "not printed"
+  },
+  "family": "STRAP_BEAM",
+  "flags": [
+   "DRAWN_WIDTH_DIFFERS: drawn 0.987 m vs printed 1.000 m (printed governs)",
+   "SAME_FACE_BOTH_ENDS: both strap edges cross one straight face of each footing, so the plan area outside the footings = B x the axis length exactly"
+  ],
+  "footing_face_covered": [
+   {
+    "chord_on_face_m": 1.019,
+    "covered_m2": 0.5095,
+    "footing": "F11 (1B07)",
+    "for": "footing side formwork (deduction by the footing formwork owner, not applied here)"
+   },
+   {
+    "chord_on_face_m": 1.019,
+    "covered_m2": 0.5095,
+    "footing": "F6 (1B19)",
+    "for": "footing side formwork (deduction by the footing formwork owner, not applied here)"
+   }
+  ],
+  "formwork": {
+   "below_ground": {
+    "EARTH_CAST_m2": 0.0,
+    "FORMED_m2": 2.2927,
+    "decision": "formed or earth-cast sides below ground (owner OQ-10): two alternatives, never summed, not chosen here"
+   },
+   "ends": "none (cast against the footings)",
+   "side_faces_m2": 2.2927,
+   "side_runs_m": [
+    2.2927,
+    2.2927
+   ],
+   "soffit": {
+    "candidates_m2": [
+     0.0,
+     2.2927
+    ],
+    "note": "cast on blinding or formed: no strap section is printed",
+    "status": "HELD"
+   },
+   "status": "DRAWING-CONFIRMED",
+   "top": "none"
+  },
+  "held": [],
+  "lengths": {
+   "axis_face_to_face_m": 2.2927,
+   "basis": "AXIS_FACE_TO_FACE (Q-74 A); projection gap = axis - the two corner over-reaches, not a built length",
+   "corner_overreach_m": [
+    0.2911,
+    0.173
+   ],
+   "edge_face_to_face_m": [
+    2.2927,
+    2.2927
+   ],
+   "projection_gap_m": 1.8287
+  },
+  "mark": "SB2",
+  "policy": "STRAP_BEAM_TAKEOFF_V1",
+  "rule_ids": [
+   "Q-74 (owner 2026-10-22, confirmed final): strap concrete at the beam-axis length between the footing faces",
+   "UP-QTY-STATUS-001"
+  ],
+  "start_footing": "F11 (1B07)",
+  "status": "DRAWING-CONFIRMED",
+  "strap_id": "SB2"
+ },
+ {
+  "B_m": 0.5,
+  "D_m": 0.4,
+  "axis_angle_deg": 110.582,
+  "axis_unit": [
+   -0.351551,
+   0.936169
+  ],
+  "bars": {
+   "groups": [
+    {
+     "anchorage_kg": {
+      "range": [
+       10.114,
+       17.699
+      ],
+      "status": "HELD"
+     },
+     "anchorage_two_ends_m_each_bar": {
+      "range": [
+       1.28,
+       2.24
+      ],
+      "status": "HELD"
+     },
+     "count": 5,
+     "dia_mm": 16,
+     "kg_lb": 25.742,
+     "kg_per_m": 1.580247,
+     "position": "BOTTOM",
+     "run_basis": "between the footing faces along the strap axis",
+     "run_lb_m": 3.258,
+     "status": "DRAWING-CONFIRMED",
+     "total_run_lb_m": 16.2898
+    },
+    {
+     "anchorage_kg": {
+      "range": [
+       14.4,
+       25.2
+      ],
+      "status": "HELD"
+     },
+     "anchorage_two_ends_m_each_bar": {
+      "range": [
+       1.44,
+       2.52
+      ],
+      "status": "HELD"
+     },
+     "count": 5,
+     "dia_mm": 18,
+     "kg_lb": 32.58,
+     "kg_per_m": 2.0,
+     "position": "TOP",
+     "run_basis": "between the footing faces along the strap axis",
+     "run_lb_m": 3.258,
+     "status": "DRAWING-CONFIRMED",
+     "total_run_lb_m": 16.2898
+    }
+   ],
+   "links": {
+    "count_range": [
+     22.806,
+     24
+    ],
+    "dia_mm": 8,
+    "note": "'n per m' meaning not established for straps (per element type, Q-71): A = n x run, B = ceil(run x n) + 1; link developed length not computed",
+    "per_m": 7,
+    "status": "HELD"
+   }
+  },
+  "concrete": {
+   "check_B_x_axis_m2": 1.629,
+   "formula": "plan area of the B-wide strip outside both footing outlines x D",
+   "plan_area_outside_m2": 1.629,
+   "status": "DRAWING-CONFIRMED",
+   "volume_m3": 0.6516
+  },
+  "concrete_in_footings": [
+   {
+    "A_in_m2": 0.3755,
+    "H_m": 0.4,
+    "column_area_removed_m2": 0.0242,
+    "drawn_run_inside_mean_m": 0.7995,
+    "footing": "F15 (1B2A)",
+    "note": "D 0.40 <= H 0.40: the strap inside the outline is footing concrete (counted once, in the footing line)",
+    "owner": "FOOTING",
+    "status": "DRAWING-CONFIRMED",
+    "volume_m3": 0.0
+   },
+   {
+    "A_in_m2": 0.2953,
+    "H_m": 0.3,
+    "column_area_removed_m2": 0.0463,
+    "drawn_run_inside_mean_m": 0.6832,
+    "footing": "F3 (166B)",
+    "note": "D 0.40 > H 0.30: strap concrete above / below the footing inside its outline; low end = the strap spans the full footing thickness, high end = no vertical overlap; the strap level against the footing is not printed",
+    "range_m3": [
+     0.0295,
+     0.1181
+    ],
+    "status": "HELD"
+   }
+  ],
+  "drawn_width_m": 0.5022,
+  "end_footing": "F3 (166B)",
+  "excavation": {
+   "depth": "HELD (formation not printed, owner Q-21 C)",
+   "note": "the trench between the footing pits is shorter than the run between the footing outlines by the pits' working space; never the concrete section, never 0",
+   "status": "HELD",
+   "trench_run_upper_bound_m": 3.258,
+   "volume_m3": null,
+   "width_min_m": 0.5,
+   "working_space": "not printed"
+  },
+  "family": "STRAP_BEAM",
+  "flags": [
+   "SAME_FACE_BOTH_ENDS: both strap edges cross one straight face of each footing, so the plan area outside the footings = B x the axis length exactly"
+  ],
+  "footing_face_covered": [
+   {
+    "chord_on_face_m": 0.5341,
+    "covered_m2": 0.2136,
+    "footing": "F15 (1B2A)",
+    "for": "footing side formwork (deduction by the footing formwork owner, not applied here)"
+   },
+   {
+    "chord_on_face_m": 0.5341,
+    "covered_m2": 0.1602,
+    "footing": "F3 (166B)",
+    "for": "footing side formwork (deduction by the footing formwork owner, not applied here)"
+   }
+  ],
+  "formwork": {
+   "below_ground": {
+    "EARTH_CAST_m2": 0.0,
+    "FORMED_m2": 2.6064,
+    "decision": "formed or earth-cast sides below ground (owner OQ-10): two alternatives, never summed, not chosen here"
+   },
+   "ends": "none (cast against the footings)",
+   "side_faces_m2": 2.6064,
+   "side_runs_m": [
+    3.258,
+    3.258
+   ],
+   "soffit": {
+    "candidates_m2": [
+     0.0,
+     1.629
+    ],
+    "note": "cast on blinding or formed: no strap section is printed",
+    "status": "HELD"
+   },
+   "status": "DRAWING-CONFIRMED",
+   "top": "none"
+  },
+  "held": [],
+  "lengths": {
+   "axis_face_to_face_m": 3.258,
+   "basis": "AXIS_FACE_TO_FACE (Q-74 A); projection gap = axis - the two corner over-reaches, not a built length",
+   "corner_overreach_m": [
+    0.2176,
+    0.2026
+   ],
+   "edge_face_to_face_m": [
+    3.258,
+    3.258
+   ],
+   "projection_gap_m": 2.8377
+  },
+  "mark": "SB3",
+  "policy": "STRAP_BEAM_TAKEOFF_V1",
+  "rule_ids": [
+   "Q-74 (owner 2026-10-22, confirmed final): strap concrete at the beam-axis length between the footing faces",
+   "UP-QTY-STATUS-001"
+  ],
+  "start_footing": "F15 (1B2A)",
+  "status": "DRAWING-CONFIRMED",
+  "strap_id": "SB3"
+ }
+]
