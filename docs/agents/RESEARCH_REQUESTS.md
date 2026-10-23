@@ -4,6 +4,10 @@ At most 3 open. Each: the problem in one sentence, the measured gap, what to loo
 
 ## Open
 
+(none; the Lead adds new requests here)
+
+## Answered
+
 ### R-09 Reading footing reinforcement from CAD schedule tables (lead 2026-10-21 00:15)
 Problem: rebar is the largest money at risk and is counted today from per-metre or merged-cell readings, never by bar
 population; the footing schedule on the structural DXF is a drawn table (lines + MTEXT / TEXT cells, some merged) with
@@ -14,6 +18,7 @@ rotated tables, text that overflows a cell) with permissive code; how bar-bendin
 practice turn 'T d @ s' into a bar count (end bars, first bar at cover or at s/2) and which convention a Kuwait drawing
 implies when its notes are silent; test cases (tables with merged and empty cells). Unblocks T-136 (footing steel), then
 T-009 (columns, beams).
+Answered (scout 2026-10-23 17:50 UTC): RESEARCH_LOG.md "2026-10-23 (scout run 17:50 UTC)", "Answer to R-09".
 
 ### R-10 Laps, development lengths and stock-length splicing in a bar schedule when the drawing gives only a rule (lead 2026-10-21 04:10)
 Problem: the ground-beam / strap steel ledger was sent back because the structural general notes print only "development
@@ -25,6 +30,7 @@ and splice counts for runs longer than stock (splice positions, staggering, mini
 how estimators report a lap RANGE when tension / compression zones are not printed, permissive code that splits runs
 into stock lengths with laps, and test cases. Unblocks T-138 r2 (ground beams and straps), T-141 (span splitter) and the
 footing / slab steel lines in V3.0.2.
+Answered (scout 2026-10-23 17:50 UTC): RESEARCH_LOG.md "2026-10-23 (scout run 17:50 UTC)", "Answer to R-10".
 
 ### R-12 What "n ø d / m" means on Gulf / Arab-region structural foundation schedules (lead 2026-10-22 08:20)
 Problem: footing schedules print reinforcement as "n ø d/m" (for example "9 ø 14/m"); the team must establish from
@@ -40,8 +46,8 @@ NARROWED (lead 2026-10-22 20:20): for FOOTINGS the team settled the meaning by i
 = maximum c/c spacing, N = ceil(L_eff / s) + 1). Still open, and the reason R-12 stays open: whether the same notation on
 SLAB and STAIR plans means the same thing (the V3.0.5 candidate holds slab steel 4,643.77 .. 6,832.33 kg and stair steel
 1,039.16 .. 1,378.63 kg on counts A..B for exactly this reason). Evidence for slabs / stairs only; footings need nothing more.
+Answered (scout 2026-10-23 17:50 UTC): RESEARCH_LOG.md "2026-10-23 (scout run 17:50 UTC)", "Answer to R-12".
 
-## Answered
 
 ### R-11 Named measurement-standard clauses for (a) opening deductions in blockwork and (b) the measured length of strap / oblique ground beams (lead 2026-10-21 08:20) — CLOSED (lead 2026-10-22 08:20): (a) and (b) answered by the owner himself in his directive of 2026-10-22 (Q-73: full openings deducted subject to physical scope, T-175; Q-74: actual beam-axis length, T-174); (c) settled by the owner-notes correction 07:10 (corners are a separate m.l line paid at half, never m2; T-172); (d) moot for the engine (Q-73 deducts full openings); the freelancer's half deduction stays a comparison note in T-162. No scout work needed.
 Problem: two owner questions (Q-73, Q-74) carry the Lead's recommendation as "practice, not a code clause"; the owner

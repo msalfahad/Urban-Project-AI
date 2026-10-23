@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-23T17:50Z | Research scout | SUCCESS | R-09, R-10, R-12 answered | SessionStart hook input carries session_id and CLAUDE_ENV_FILE persists it, so STARTED lines can stop saying 'run unknown' (owner to wire); slab/stair '/m' references give both count rules A and B, so the range stays until project evidence | none
 - 2026-10-23T17:50Z | Worker 1 | SUCCESS | T-230 READY (agents/task-T-230 @ 3779bcdf) | Strap / ground-beam ends, one owner per intersection: straps = owner Q-74 method at e = 0 (3.3905 vs freelancer 3.3925 m3, -0.06 %); one strap = one soffit level, so SB3 / F3 excess HELD 0.0295 .. 0.2683 m3 (T-174 0.1181 high end used two levels) + 0.0046 neck; 3 ground beams ended by V2 at the lift footing outline actually run to the RC pit ring (+0.276 .. +0.391 m3, 177+7CD 0.9036 m3 un-held at 5.02 m), 4 exterior beam ends billed 0.10 m into printed 0.50 necks (0.096 .. 0.114 m3 double), beam beside C3 / C8 / CN in no line (+0.027 .. +0.047 m3); 80 GB / footing plan overlaps = 0 in 3-D. Missing: strap soffit level (narrow D-15), exterior beam depth D-35. ERS: read, s.2 / s.3 / s.4 applied | self-check codemap PASS, pytest t061 PASS, freeze PASS; Drive read OK; problem: none
 - 2026-10-23T17:41Z | Worker 2 | STARTED | run session_01Co2Tn7JVW17h4gsuRMDJKS | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-23T17:20Z | Worker 1 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending

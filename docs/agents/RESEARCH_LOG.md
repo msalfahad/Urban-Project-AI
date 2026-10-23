@@ -5,6 +5,95 @@ Daily target (PLAN.md, owner 2026-10-18): at most 5 entries, at least one aimed 
 Each entry: date, what it is (link), licence, what it could improve in the engine or the workflow, risk, verdict
 (ADOPT idea / TRY in sandbox / WATCH / REJECT). Never install or run downloaded code from here; the lead decides.
 
+## FEEDBACK TO LEAD 2026-10-23 (scout run 17:50 UTC)
+
+1. **"run unknown" in STARTED lines.** Problem: about half of today's STARTED lines carry `run unknown` (Worker 1 17:20,
+   Worker 3 16:59, Verifier 16:51, 15:52), so an unclosed run cannot be traced to its session. Evidence: RUN_LOG 12:41-17:41.
+   Change: the existing SessionStart hook reads `session_id` from its stdin JSON (documented common input field) and appends
+   `export AGENT_SESSION_ID=<id>` to `$CLAUDE_ENV_FILE`; `agent_env.sh board log` fills the field from it. Effect: every run
+   line names its session; the run lock can key on it. Who: owner (main / settings / hook are outside the team's write rights).
+2. **L4 full suite left at 20 %** (Checker 15:52, T-203). Change: start the suite with `run_in_background` and an explicit
+   `timeout` (documented: up to 2 h for an unattended session; foreground Bash caps at 10 min) and read its output file at the
+   end of the run; give the result only the failure lines (documented PreToolUse output-filter pattern / a subagent). Effect:
+   an L4 verdict that belongs to a finished run, less context per Checker run. Who: Lead (prompt wording in the Checker's
+   task row); hook form: owner.
+3. **Splice / lap weight on runs over 12 m (R-10).** Change: one pure function `pieces = ceil((L - lap) / (S - lap))`,
+   `splices = pieces - 1`, procurement length `L + splices x lap`, computed twice (lap = 40 d and 70 d from the printed note)
+   and reported as a RANGE; ends (development) a separate line. Effect: T-138 r2 / T-141 get a procurement weight without
+   choosing a zone. Who: Lead (task).
+4. **Slab / stair "/m" (R-12).** Published tables treat "n bars per metre" as spacing s = 1000 / n mm (same as T-171), but
+   the published count rules differ: "n x distribution length, rounded up" (no +1) vs "(L - 2c) / s, round up, + 1". These are
+   exactly counts A and B. Change: keep the A..B range; close it only with project evidence (a slab section or detail that
+   draws the bars at an edge), never with a reference. Who: Lead.
+5. **Footing schedule tables (R-09).** Change: build own table-grid code from DXF LINE / LWPOLYLINE edges (method below);
+   use the MIT `cad-extract` feature list as the test list (merged cells, three-sided boxes, touching tables). Who: Lead (task
+   for T-136).
+
+## 2026-10-23 (scout run 17:50 UTC): 3 requests answered (R-09, R-10, R-12), 2 team findings
+
+Read: RESEARCH_REQUESTS, LEAD_REPORT 16:20 / 14:20, RUN_LOG top 40, FEEDBACK top, RUN_LEDGER totals (55 / 55 SUCCESS since
+22 Oct 14:30; 0 refusals today), OWNER_SESSION_CHANGES top 5. Drive not opened (not needed). Nothing installed or run.
+
+### Answer to R-09: footing reinforcement from drawn CAD schedule tables
+
+| What (link) | Licence | Maturity | Security | Gap it helps | Verdict |
+|---|---|---|---|---|---|
+| [ricklove/cad-extract](https://github.com/ricklove/cad-extract): DXF import, table and cell detection, text located in cells, "partition tables that touch", "three-sided boxes"; merged row cells identified, but merged rows/columns in pattern extraction unfinished and a known bug "duplicates values without indicating the merge" | MIT | 5 stars, 34 commits, .NET (inferred), no releases | Do not run; read the feature list only | Gives the case list a table reader must pass, and the exact failure mode B4 risks (a merged value copied or lost silently) | ADOPT-IDEA (test list), REJECT as a dependency |
+| [IG-11-Kuiil/cad-data-extractor](https://github.com/IG-11-Kuiil/cad-data-extractor): ezdxf + LibreDWG extraction to JSON with entity handles; no table rebuilding; runs `dwg2dxf` as a subprocess | Own licence not stated (LibreDWG GPLv3 as external exe) | 3 commits, 0 stars | Subprocess execution | Nothing the engine lacks | REJECT |
+| [Aspose.CAD reading tables](https://docs.aspose.com/cad/ja/net/developer-guide/how-to/work-with-file/reading-of-tables-from-dwg-dxf): reads TABLE entities only (load, get table entities, read values); a schedule drawn as lines + text is not a TABLE | Commercial | Mature | Closed .NET | Only for ACAD_TABLE entities | REJECT (cost; wrong case) |
+| [Heaton rebar guide](https://heatonmanufacturing.co.uk/rebar-calculator-bar-quantity-and-cost/) (cites BS 8666 for scheduling): effective length = finished length - 2 x cover; "Number of bars = (Effective span / Spacing) + 1"; "Round up to the next whole bar" | Facts only | Supplier guide (level 4 evidence) | n/a | 'T d @ s' count, convention B | ADOPT-IDEA (as one named convention, with T-171's ceil(L_eff/s)+1) |
+
+Method (own code, ezdxf already pinned): (1) collect horizontal / vertical segments from LINE and exploded LWPOLYLINE /
+INSERT virtual entities inside the table's bounding frame, rotate into the frame axis if the frame is rotated; (2) snap x of
+verticals and y of horizontals to a 1 mm grid -> grid lines X[], Y[]; (3) atomic cell (i, j) = rectangle between consecutive
+grid lines; the edge between two neighbouring atomic cells EXISTS if drawn segments cover >= 95 % of its length; (4) union-find
+over missing edges -> merged cells (each a set of atomic cells); (5) assign each TEXT / MTEXT by its insertion point (and
+for MTEXT the text box) to exactly one merged cell; text whose box crosses a cell edge is OVERFLOW, reported, never split;
+(6) row/column headers from row 0 / column 0; a value is read for (footing mark, column) only if exactly one cell covers it.
+Every merged cell is reported with its span, so a footing whose rebar cell spans two marks is shown as shared, and an empty
+cell is EMPTY, never 0 (fixes B4). Tests: own synthetic DXFs: plain 3 x 4 grid; one vertical merge; one horizontal merge;
+empty cell; MTEXT wider than its cell; table rotated 90 deg; two tables touching; a three-sided last row. Next step for the
+Lead: task "schedule-table grid reader, check-only" on the synthetic fixtures, then the footing schedule; compare with the
+T-171 ledger cell by cell.
+
+### Answer to R-10: laps and stock-length splicing when the drawing gives only a rule
+
+| What (link) | Licence | Maturity | Security | Gap it helps | Verdict |
+|---|---|---|---|---|---|
+| [CRSI, Lap Splices](https://www.crsi.org/reinforcing-basics/reinforcing-steel/splicing-bars/lap-splices/): under ACI 318 the engineer must show "the locations and lengths of all lap splices on the structural drawings"; bars of different sizes: tension lap = larger of the smaller bar's lap and the larger bar's development length | Facts | Industry body | n/a | Where the drawing does not show splice locations, their position is not a measured fact: the estimate is a range | ADOPT-IDEA |
+| [HardHatCalc lap splice calculator](https://hardhatcalc.com/calculators/structural/rebar-lap-splice-calculator): lap = ld x class factor (A 1.0, B 1.3); example 60 ft wall, 20 ft bars, "two splices" per run, "add the lap splice length to every joint"; states splices staggered so no more than half the bars lap at one point | Facts (calculator site, level 4; its staggering statement is not checked against the code text) | Web tool | n/a | Splice count per run; total length = run + laps | WATCH (example ignores that each lap eats stock length) |
+| [Heaton rebar guide](https://heatonmanufacturing.co.uk/rebar-calculator-bar-quantity-and-cost/): stock "typically 6 m or 12 m"; laps commonly 40-50 d in tension; laps excluded from its bar count | Facts | Supplier guide | n/a | Confirms laps are a separate line on top of the net count | Information |
+
+Method (derived here, own code): a run of length L with stock S and lap l needs `k = ceil((L - l) / (S - l))` pieces
+(each joint consumes l of stock), `k - 1` splices, procurement length `L + (k - 1) l`. With the project note only
+(70 d tension / 40 d compression) report both: for the 18.57 m run on 12 m stock, T16: 1 splice either way, 19.21 .. 19.69 m
+per bar line (T12 19.05 .. 19.41, T20 19.37 .. 19.97). Staggering changes WHERE splices go, not their count, when every bar
+in the run is spliced once; it changes the count only if staggering forces extra cut pieces, which the drawing does not
+show: leave it out and say so. End development lengths are a separate line (never merged with splices). Tests: L <= S
+(0 splices), L = S exactly, L = 2S - l (boundary, 1 splice), L = 2S - l + 0.001 (2 splices), l >= S (refuse). Next step: T-141
+span splitter calls this function and writes net kg, lap kg low / high, and the zone status "NOT PRINTED".
+
+### Answer to R-12: "n ø d / m" on slab and stair plans
+
+| What (link) | Licence | Maturity | Security | Gap it helps | Verdict |
+|---|---|---|---|---|---|
+| [Eurocode Applied, distributed reinforcement table (EN 1992)](https://eurocodeapplied.com/design/en1992/reinforcement-quantity-table): columns "Bar Spacing (cm)" and "Bars per meter" (5.0 cm = 20.00 bars/m, so s = 100 / n cm); results written as "25.1cm => 3.98 bars/m"; Note 2: "The number of reinforcement bars per meter of length should be multiplied by the appropriate distribution length and rounded up" | Facts (level 4) | Maintained design site | n/a | Same meaning as T-171 (per-metre = spacing 1/n), but a DIFFERENT count rule: ceil(n x L), no +1 (count A) | ADOPT-IDEA (name both rules) |
+| [Next Day Steel, rebar spacing](https://nextdaysteel.co.uk/pages/rebar-spacing-determination): UK notation "T16-200" = T16 at 200 mm centres; "per metre" used for steel area only, As = (1000 / s) x bar area | Facts | Supplier page | n/a | Shows "/m" in UK practice is an area/density, consistent with s = 1000/n | Information |
+| Searched Arabic / Gulf sources (Arabic query "تسليح البلاطة ... / م"; one Syrian university exam key read: no "/m" notation in it) | n/a | n/a | n/a | No Kuwait / Gulf source found this run | WATCH (no evidence) |
+
+Answer: no reference found that gives slab / stair "/m" a meaning other than a density with spacing 1000 / n mm. The two
+published count rules, ceil(n x L) and ceil((L - 2c) / s) + 1, are the team's counts A and B, so the reference evidence does
+not choose between them. Next step for the Lead: keep slabs 4,643.77 .. 6,832.33 kg and stairs 1,039.16 .. 1,378.63 kg as
+ranges; close them only from project evidence: a slab or stair section that draws bars to an edge (first bar at cover or at
+s/2), or a general note; if none exists, it is a designer question (DESIGNER_CLARIFICATIONS), not an owner one.
+
+### Team findings (Claude Code documentation)
+
+| What (link) | Documented behaviour (quoted) | Gap it helps | Verdict |
+|---|---|---|---|
+| [Hooks: common input fields, SessionStart, CLAUDE_ENV_FILE](https://code.claude.com/docs/en/hooks) | Every hook receives `session_id` "Current session identifier"; "SessionStart hooks have access to the `CLAUDE_ENV_FILE` environment variable, which provides a file path where you can persist environment variables for the shell commands Claude runs later in the session"; "Use append (`>>`)"; SessionStart plain-text stdout is added to Claude's context | `run unknown` in STARTED lines; run lock keyed on a real session id | ADOPT-IDEA (owner edits the hook / agent_env.sh on main) |
+| [Tools reference: Bash timeouts, background commands](https://code.claude.com/docs/en/tools-reference) and [Manage costs](https://code.claude.com/docs/en/costs) | Foreground default 2 min, ceiling "ten minutes out of the box"; in unattended / cloud sessions a background command "gets 30 minutes, or the `timeout` Claude passes with `run_in_background`, up to a maximum of 2 hours"; on reaching it Claude Code stops it and "Claude can start the command again with a longer `timeout`". Costs page: a PreToolUse hook can rewrite a `pytest` command to keep only failure lines; delegate test runs to subagents; "Aim to keep CLAUDE.md under 200 lines" | Checker L4 suite stopped at 20 %; per-run context | TRY-IN-SANDBOX (one Checker run with the suite in the background, timeout 7200000 ms) |
+
 ## 2026-10-20 (scout run 23:55 UTC): 3 requests answered (R-06, R-07, R-08), 1 new finding
 
 Private repo urban-boq-private-data could not be attached (no add_repo / list_repos tool in this session); Drive "Alsenan
