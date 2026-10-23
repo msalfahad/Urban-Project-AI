@@ -8,7 +8,8 @@ Delta steps per mark (kg; low / high ends of rev2):
     S1  the verified height only: verticals base underside -> rim 1.60 m, hoops over the wall above the base top
         1.20 m (6 .. 7), still face to face and rev1's counts
     S2  bar lines and the counting meaning: centrelines at the printed soil cover / bounded non-soil cover, hoops
-        inside the verticals, mesh with an edge bar each side (N = ceil(L_eff / s) + 1), loops N = ceil(P / s)
+        inside the verticals, loops N = ceil(P / s); base mats as the HELD count range A (density, ceil(n x L_eff))
+        .. B (max spacing, ceil(L_eff / s) + 1), low end on A, high end on B (r2, D-T191-2)
     S3  = rev2: the drawn shapes (water-face verticals: top hook + closed box in the base)
 """
 
@@ -65,13 +66,14 @@ def run():
     summary = {"wall_h_m": wh, "unit_mass": led["unit_mass"], "populations": {}}
     csv_rows = []
     for name, pop in inp["populations"].items():
-        rg = S.population_range(pop, outer, wt, bt, wh, cs, g["c_n"], main_dirs=g["main_dirs"])
+        rg = S.population_range(pop, outer, wt, bt, wh, cs, g["c_n"], main_dirs=g["main_dirs"],
+                                mesh_counts=g["mesh_counts"])
         ends = {"low": rg["low"], "high": rg["high"]}
         straight = {k: dict(v, shape="STRAIGHT") if k == "WV_IN" else v for k, v in pop.items()}
         s2 = {}
         for e, rd in ends.items():
             rows, _ = S.population_rows(straight, outer, wt, bt, wh, cs, rd["c_n"], hoops=rd["hoops"],
-                                        main_dir=rd["main_dir"])
+                                        main_dir=rd["main_dir"], mesh_count=rd["mesh_count"])
             s2[e] = _by_base(rows)
         s3 = {e: _by_base(rd["rows"]) for e, rd in ends.items()}
         steps = {}
@@ -103,7 +105,8 @@ def run():
                                         "laps_kg_range_procurement": p["laps_kg_range_procurement"],
                                         "delta_steps_per_mark": steps, "delta_totals": tot,
                                         "readings": [{"c_n": round(r["c_n"], 3), "hoops": r["hoops"],
-                                                      "main_dir": r["main_dir"], "kg": round(r["kg"], 2)}
+                                                      "main_dir": r["main_dir"], "mesh_count": r["mesh_count"],
+                                                      "kg": round(r["kg"], 2)}
                                                      for r in rg["readings"]],
                                         "marks": p["marks"], "status": p["status"]}
     with open(HERE / "T191_STEEL.csv", "w", newline="", encoding="utf-8") as f:

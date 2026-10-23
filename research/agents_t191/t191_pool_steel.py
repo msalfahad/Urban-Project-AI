@@ -14,10 +14,20 @@ PHYSICAL ELEMENT.  An open RC tank: walls (two curtains) standing on an RC base 
             direction carries the main bars is read from the plan or, when not marked, both assignments are carried)
     RIM     printed count of rings at the wall top     CORNER  printed count of rings at the base / wall corner
 
-NOTATION MEANING (ENGINEERING_REASONING_STANDARD s.3, T-171 for the same drawing set's notation): "n ø d/m" = bars
-of ø d at a centre-to-centre spacing not exceeding 1/n m; "ø d/s cm" = the same with s printed.  Counts:
-    closed loop (wall verticals round the ring):  N = ceil(P_bar / s)            (no ends; spacing <= s everywhere)
-    open run with an edge bar at each end (mesh): N = ceil(L_eff / s) + 1,  L_eff = extent - d (centre to centre)
+NOTATION MEANING (ENGINEERING_REASONING_STANDARD s.3).  "n ø d/m" is read two ways until the ELEMENT's own evidence
+settles it: density (n bars per metre of width) or maximum c/c spacing 1/n (T-171 proved the second for FOOTINGS only;
+r2, D-T191-2: that meaning is not carried to the pool base without the pool's own evidence; ST p.7 / p.8 print none:
+no mesh spacing dimension, no edge-bar position, no note defining '/m'; p.7 itself uses both notations, 'n ø d/m' on
+the pool and 'ø12MM/15cm' on the dome, which shows two notations, not which count the first one means).  "ø d/s cm"
+prints a spacing.  Counts:
+    closed loop (wall verticals round the ring):  N = ceil(P_bar / s)            (no ends: both meanings agree)
+    open run (mesh), L_eff = extent - d (bar centre to bar centre across the bar-end outline):
+        count A (density)      = ceil(n x L_eff)          (= ceil(L_eff / s))
+        count B (max spacing)  = ceil(L_eff / s) + 1      (an edge bar each side)
+        carried as a HELD range A .. B: low end on A, high end on B (HIGH_FROM_COUNT_B, the merged T-179 slab /
+        stair convention); density on the bar-end extent E = L_eff + d gives ceil(n E), which lies in [A, B]
+        because n d < 1, so the range covers it.  An input may fix one meaning only with a cited evidence string
+        (mesh_count_meaning MAX_SPACING / DENSITY + mesh_count_evidence); without the evidence it is refused.
     hoops over the wall height H (end positions not dimensioned): N in [ceil(H / s), ceil(H / s) + 1]
         low  = the top / bottom line is taken by the rim bars / top mat (bars between them),
         high = a hoop at both ends of H (T-171 form with L_eff = H).  A held count range carries its HIGH count at
@@ -220,13 +230,31 @@ def count_hoops(height, s):
     return k, k + 1
 
 
-def mesh(outline, direction, s, d_mm):
-    """bars parallel to `direction` spread across `outline` (the bar-end outline) at spacing <= s, an edge bar at
-    each side: positions d/2 .. E - d/2 evenly; returns (count, total metres, positions)"""
+MESH_COUNTS = ("A", "B")
+MESH_MEANING = {"DENSITY": ("A",), "MAX_SPACING": ("B",), None: MESH_COUNTS}
+
+
+def count_mesh(l_eff, s):
+    """(A, B): A = density count ceil(L_eff / s) = ceil(n x L_eff), B = maximum-spacing count A + 1"""
+    if not l_eff > 0:
+        raise PoolSteelError("L_eff must be positive")
+    return _ceil(l_eff / s), count_open_run(l_eff, s)
+
+
+def mesh(outline, direction, s, d_mm, count="B"):
+    """bars parallel to `direction` spread across `outline` (the bar-end outline), count A or B (see NOTATION
+    MEANING); the bars are spread evenly between the outermost positions d/2 .. E - d/2 (edge bars at the bar
+    ends under either count: the outline is the same, only the number of bars differs); returns (count, total
+    metres, positions)"""
     E = outline.extent_across(direction)
     d = d_mm / 1000.0
     l_eff = E - d
-    n = count_open_run(l_eff, s)
+    a, b = count_mesh(l_eff, s)
+    if count not in MESH_COUNTS:
+        raise PoolSteelError(f"mesh count is 'A' or 'B', got {count!r}")
+    n = a if count == "A" else b
+    if n < 2:
+        raise PoolSteelError("a mesh needs at least two bars")
     pos = [d / 2 + k * l_eff / (n - 1) for k in range(n)]
     return n, sum(outline.chord(direction, p) for p in pos), pos
 
@@ -287,8 +315,9 @@ def _bar(mark, label, d, count, length=None, metres=None, status=DRAWING_CONFIRM
             "status": status, "note": note}
 
 
-def population_rows(pop, outer, wall_t, base_t, wall_h, c_s, c_n, *, hoops="high", main_dir="x"):
-    """rows of one population for ONE reading (c_n, hoop count end, main-bar direction) + held items."""
+def population_rows(pop, outer, wall_t, base_t, wall_h, c_s, c_n, *, hoops="high", main_dir="x", mesh_count="B"):
+    """rows of one population for ONE reading (c_n, hoop count end, main-bar direction, mesh count A / B) + held
+    items."""
     if wall_h is None:
         raise PoolSteelError("wall height HELD: no bar population")
     if c_s is None:
@@ -345,11 +374,14 @@ def population_rows(pop, outer, wall_t, base_t, wall_h, c_s, c_n, *, hoops="high
         spec = pop.get(key)
         if not spec:
             continue
-        n, m, _ = mesh(mesh_out, dirn, spacing_of(spec), spec["d"])
+        s_ = spacing_of(spec)
+        n, m, _ = mesh(mesh_out, dirn, s_, spec["d"], count=mesh_count)
+        a, b = count_mesh(mesh_out.extent_across(dirn) - spec["d"] / 1000.0, s_)
         for layer in ("BOTTOM", "TOP"):
             rows.append(_bar(f"F{layer[0]}_{key[2:]}_{dirn.upper()}", spec.get("label", ""), spec["d"], n,
-                             metres=m, note=f"{layer.lower()} mat, bars along {dirn}, {n} chords, ends inside the "
-                                            f"outer verticals (offset {c_s + d_vo:.3f} m)"))
+                             metres=m, status=HELD + "_COUNT_RANGE" if a != b else DRAWING_CONFIRMED,
+                             note=f"{layer.lower()} mat, bars along {dirn}, count {mesh_count} = {n} chords "
+                                  f"(A {a} .. B {b}), ends inside the outer verticals (offset {c_s + d_vo:.3f} m)"))
     for key in ("RIM", "CORNER"):
         spec = pop.get(key)
         if not spec:
@@ -374,19 +406,34 @@ def c_n_max(pop, wall_t, c_s):
     return cm
 
 
-def population_range(pop, outer, wall_t, base_t, wall_h, c_s, c_n=None, *, main_dirs=("x", "y")):
+def mesh_counts_for(meaning=None, evidence=None):
+    """the mesh count readings carried: both (A .. B) unless the element's own evidence fixes the meaning"""
+    if meaning not in MESH_MEANING:
+        raise PoolSteelError(f"unknown mesh count meaning {meaning!r}")
+    if meaning is not None and not (isinstance(evidence, str) and evidence.strip()):
+        raise PoolSteelError("a mesh count meaning is fixed only with this element's own cited evidence "
+                             "(ERS s.3: a meaning proven for another element type is not carried over)")
+    return MESH_MEANING[meaning]
+
+
+def population_range(pop, outer, wall_t, base_t, wall_h, c_s, c_n=None, *, main_dirs=("x", "y"),
+                     mesh_counts=MESH_COUNTS):
     """every reading (c_n at both bounds if not printed, hoop count low / high, both main-bar directions if the
-    plan does not mark it) -> per-mark low / high kg and total low / high; the high end carries the high counts."""
+    plan does not mark it, mesh count A / B unless fixed) -> per-mark low / high kg and total low / high; the low
+    end carries the low counts and the high end the high counts (HIGH_FROM_COUNT_B)."""
     cns = [c_n] if c_n is not None else [0.0, c_n_max(pop, wall_t, c_s)]
     readings = []
-    for cn, hp, md in itertools.product(cns, ("low", "high"), main_dirs):
-        rows, held = population_rows(pop, outer, wall_t, base_t, wall_h, c_s, cn, hoops=hp, main_dir=md)
-        readings.append({"c_n": cn, "hoops": hp, "main_dir": md, "rows": rows, "held": held,
+    for cn, hp, md, mc in itertools.product(cns, ("low", "high"), main_dirs, mesh_counts):
+        rows, held = population_rows(pop, outer, wall_t, base_t, wall_h, c_s, cn, hoops=hp, main_dir=md,
+                                     mesh_count=mc)
+        readings.append({"c_n": cn, "hoops": hp, "main_dir": md, "mesh_count": mc, "rows": rows, "held": held,
                          "kg": sum(r["kg"] for r in rows)})
     lo = min(readings, key=lambda r: r["kg"])
     hi = max(readings, key=lambda r: r["kg"])
-    if hi["hoops"] != "high":
-        raise PoolSteelError("HIGH_FROM_COUNT_B: the high end must carry the high hoop count")
+    if hi["hoops"] != "high" or hi["mesh_count"] != max(mesh_counts):
+        raise PoolSteelError("HIGH_FROM_COUNT_B: the high end must carry the high hoop and mesh counts")
+    if lo["hoops"] != "low" or lo["mesh_count"] != min(mesh_counts):
+        raise PoolSteelError("the low end must carry the low hoop and mesh counts")
     return {"low": lo, "high": hi, "readings": readings}
 
 
@@ -423,7 +470,8 @@ def load(inp):
     return {"outer": outer, "wall_t": to_m(inp["wall_t"], u), "base_t": to_m(inp["base_t"], u), "wall_h": wh,
             "c_s": to_m(inp.get("soil_cover"), u),
             "c_n": None if inp.get("nonsoil_cover") is None else to_m(inp["nonsoil_cover"], u),
-            "main_dirs": tuple(inp.get("main_dirs", ("x", "y"))), "lap_d_factors": inp.get("lap_d_factors")}
+            "main_dirs": tuple(inp.get("main_dirs", ("x", "y"))), "lap_d_factors": inp.get("lap_d_factors"),
+            "mesh_counts": mesh_counts_for(inp.get("mesh_count_meaning"), inp.get("mesh_count_evidence"))}
 
 
 def ledger(inp):
@@ -434,7 +482,7 @@ def ledger(inp):
             out["populations"][name] = {"status": HELD, "kg": None, "basis": "wall height HELD (finished depth only)"}
             continue
         rg = population_range(pop, g["outer"], g["wall_t"], g["base_t"], g["wall_h"], g["c_s"], g["c_n"],
-                              main_dirs=g["main_dirs"])
+                              main_dirs=g["main_dirs"], mesh_counts=g["mesh_counts"])
         lo, hi = rg["low"], rg["high"]
         marks = {}
         for end, rd in (("low", lo), ("high", hi)):
@@ -446,15 +494,16 @@ def ledger(inp):
             "kg_low": round(lo["kg"], 2), "kg_high": round(hi["kg"], 2),
             "kg_exact_density_low": round(sum(r["kg_exact_density"] for r in lo["rows"]), 2),
             "kg_exact_density_high": round(sum(r["kg_exact_density"] for r in hi["rows"]), 2),
-            "low_reading": {k: lo[k] for k in ("c_n", "hoops", "main_dir")},
-            "high_reading": {k: hi[k] for k in ("c_n", "hoops", "main_dir")},
+            "low_reading": {k: lo[k] for k in ("c_n", "hoops", "main_dir", "mesh_count")},
+            "high_reading": {k: hi[k] for k in ("c_n", "hoops", "main_dir", "mesh_count")},
             "marks": marks,
             "held_legs": [{"mark": h["mark"], "d": h["d"], "count": h["count"],
                            "drawn_minimum_kg": round(h["drawn_minimum_kg"], 3)} for h in legs],
             "laps_kg_range_procurement": None if g["lap_d_factors"] is None else
             [round(x, 2) for x in lap_range(hi["held"], g["lap_d_factors"])],
-            "status": "HELD (which population governs: designer item; non-soil cover and hoop end positions "
-                      "not printed; legs and laps listed apart)"}
+            "status": "HELD (which population governs: designer item; non-soil cover, hoop end positions and "
+                      "the base-mat count meaning of '/m' (A density .. B max spacing) not printed; legs and laps "
+                      "listed apart)"}
     return out
 
 
@@ -465,6 +514,8 @@ def check():
     o = Outline("RECT", a=4.0, b=3.0)
     assert count_closed_loop(o.perimeter(), 0.2) == 70                  # 14.0 / 0.2 exactly
     assert count_open_run(2.986, 0.2) == 16                               # ceil(14.93) + 1
+    assert count_mesh(2.986, 0.2) == (15, 16)                             # open mesh: A != B
+    assert _ceil(7 * 11.947884) == count_closed_loop(11.947884, 1 / 7) == 84   # closed loop: both meanings agree
     assert count_hoops(1.20, 0.20) == (6, 7)
     assert ring_laps(11.0, 0.84) == 1 and ring_laps(11.5, 0.84) == 2
     try:
