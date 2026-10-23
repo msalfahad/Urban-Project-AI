@@ -1,0 +1,9 @@
+id,m2,lm,d_m2,d_lm,closes_area,closes_perimeter,physical,verdict
+"A drawn arc face R 2.135 + OP-009 strip + lobby, joinery not deducted (engine line)",19.0167,22.151,1.7267,-0.739,False,False,True,NOT A PAIRING
+"B as A, the lobby joinery 0.50 x 2.10 deducted",17.9667,23.151,0.6767,0.261,False,False,True,NOT A PAIRING
+"C room to the arc face only (no strip, no lobby)",15.0604,16.651,-2.2296,-6.239,False,False,True,NOT A PAIRING
+D room to the arc face + strip,15.2554,16.951,-2.0346,-5.939,False,False,True,NOT A PAIRING
+E straight wall line (arc ignored) + strip + lobby: REFUSED (T-197 R4),20.7,21.9,3.41,-0.99,False,False,False,NOT A PAIRING
+F chord between the arc ends + strip + lobby: REFUSED,20.4906,21.7689,3.2006,-1.1211,False,False,False,NOT A PAIRING
+G apex width 3.45 x 4.00 + strip + lobby (printed E6F as a rectangle): REFUSED,17.7,20.4,0.41,-2.49,False,False,False,NOT A PAIRING
+H the arc segment taken off twice (not a drawn element): REFUSED,17.3333,22.151,0.0433,-0.739,False,False,False,NOT A PAIRING
