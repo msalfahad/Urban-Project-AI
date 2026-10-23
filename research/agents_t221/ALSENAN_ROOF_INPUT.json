@@ -1,0 +1,31 @@
+{
+  "project": "development villa (Drive folder 'Alsenan chalet project'); not an accuracy claim",
+  "units": "m",
+  "note": "Roof outlines in LOCAL metres, origin at the inner corner of each roof nearest its south-west outlet, x along the long (street -> sea) side, y across. Measured on the architectural DWF plan views (inner parapet faces / outer wall faces, model mm / 1000; the plot boundary measures 31.370 x 14.999 on the same view) and outlets placed at the drawn corner outlets of the sanitary sheets. Sources by Drive title / view only.",
+  "fall": {"value": 0.01, "status": "DRAWING-CONFIRMED (printed 'SLOPE 1%')", "ref": "sanitary-7757.pdf p.2 (1st floor drainage plan: annex roof +4.30 two arrows, +5.50 strip two arrows) and p.3 (2nd floor drainage plan: +9.70 roof, arrows to three outlets)"},
+  "owner_fall_fallback": {"value": 0.005, "rule": "Q-45 (owner 2026-10-19 21:40) as read by the Lead 2026-10-20 10:20: 0.5 % only where no slope is printed", "scope": "SLOPE_ONLY"},
+  "roofs": [
+    {"zone_id": "ROOF-970", "name": "first-floor roof terraces around the 2F block, finished +9.70",
+     "outline": [[0, 0], [18.87, 0], [18.87, 11.801], [12.3, 11.801], [12.3, 5.0], [4.125, 5.0], [4.125, 7.099], [0, 7.099]],
+     "outlets": [[0, 0], [18.87, 0], [18.87, 11.801]],
+     "outline_ref": "architectural .dwf, 2nd.FLOOR PLAN 1:100 (ROOF +9.70 hatch extent, parapet inner faces, 2F block outer faces)",
+     "outlets_ref": "sanitary-7757.pdf p.3: RWP 4 T/B at the three corners (SW, SE, NE)",
+     "scope_note": "the two drawn domes (R 2.21) stand inside this outline; dome scenarios per T-185; neither contains the far point"},
+    {"zone_id": "TERRACE-550", "name": "ground-floor roof strips south and sea side of the 1F, finished +5.50",
+     "outline": [[0, 0], [18.972, 0], [18.972, 7.701], [17.771, 7.701], [17.771, 1.302], [0, 1.302]],
+     "outlets": [[18.972, 0]],
+     "outline_ref": "architectural .dwf, 1st.FLOOR PLAN 1:100 (+5.50 strips between the 1F faces and the boundary / roof edge)",
+     "outlets_ref": "sanitary-7757.pdf p.2: one RWP 4 T/B at the south-east corner; arrows 'SLOPE 1%' along both legs"},
+    {"zone_id": "ROOF-430", "name": "annex roof, finished +4.30",
+     "outline_arc_corner": {"from": [2.9, 6.302], "to": [4.001, 5.201], "centre": [2.9, 5.201], "radius": 1.101},
+     "outline": [[0, 0], [10.201, 0], [10.201, 4.5], [4.001, 4.5], [4.001, 5.201], "ARC", [2.9, 6.302], [0, 6.302]],
+     "outlets": [[0, 0]],
+     "outline_ref": "architectural .dwf, 1st.FLOOR PLAN 1:100 (ROOF +4.30 hatch extent, rounded north-west return R 1.10)",
+     "outlets_ref": "sanitary-7757.pdf p.2: one RWP 4 T/B at the south-west corner; 'SLOPE 1%' along the south and west edges"},
+    {"zone_id": "ROOF-1390", "name": "main roof over the 2F block, finished +13.90",
+     "outline": null, "outlets": [],
+     "outline_ref": "ST7757.pdf p.6 (second floor roof slab) and SECTION A-A / B-B",
+     "outlets_ref": "no outlet drawn on any sheet: sanitary-7757.pdf has GF / 1F / 2F drainage plans only; the architectural set has no top-roof plan (D-62)"}
+  ],
+  "parapet_rule": {"upstand_above_slab_m": 0.30, "text": "MUST BE MORE THAN THE HEIGHT OF ROOF FINISHING", "ref": "ST7757.pdf p.14 'TYPICAL DETAIL OF PARAPET SECTION.'"}
+}
