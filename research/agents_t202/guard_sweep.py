@@ -136,41 +136,66 @@ def _module_names(path):
 _INDEX = {}
 
 
-def import_index(scopes=("engine", "tools")):
+def _sources(scopes, rev=None):
+    """[(file, source text)] of every .py file under `scopes`: the live tree when rev is None, else the files as they
+    are AT commit `rev` (git ls-tree + one `git cat-file --batch`), so a pinned window stays reproducible after later
+    merges (T-212: the T-202 snapshot read the live tree and went red when T-108 r2 added a legitimate importer)."""
+    if rev is None:
+        return [(str(f.relative_to(ROOT)), f.read_text(encoding="utf-8", errors="ignore"))
+                for d in scopes for f in sorted((ROOT / d).rglob("*.py"))]
+    files = [p for p in git("ls-tree", "-r", "--name-only", rev, "--", *scopes).splitlines() if p.endswith(".py")]
+    if not files:
+        return []
+    blob = subprocess.run(["git", "-C", str(ROOT), "cat-file", "--batch"], check=True, capture_output=True,
+                          input="".join(f"{rev}:{p}\n" for p in files).encode("utf-8")).stdout
+    out, i = [], 0
+    for p in files:
+        nl = blob.index(b"\n", i)
+        head = blob[i:nl].split()
+        if len(head) != 3 or head[1] != b"blob":
+            raise RuntimeError(f"git cat-file: unexpected header {blob[i:nl]!r} for {rev}:{p}")
+        size = int(head[2])
+        out.append((p, blob[nl + 1:nl + 1 + size].decode("utf-8", errors="ignore")))
+        i = nl + 1 + size + 1
+    return out
+
+
+def import_index(scopes=("engine", "tools"), rev=None):
     """{file: set of imported names} for every engine/ and tools/ file; `import a.b` -> 'a.b', `from a import b` ->
-    'a' and 'a.b' (absolute imports only). Parsed once per process."""
-    key = tuple(scopes)
+    'a' and 'a.b' (absolute imports only). rev=None reads the live tree, a commit reads the tree at that commit.
+    Parsed once per process and rev."""
+    key = (tuple(scopes), rev)
     if key not in _INDEX:
         idx = {}
-        for d in scopes:
-            for f in sorted((ROOT / d).rglob("*.py")):
-                src = f.read_text(encoding="utf-8", errors="ignore")
-                if "import" not in src:
-                    continue
-                try:
-                    tree = ast.parse(src)
-                except SyntaxError:
-                    continue
-                names = set()
-                for n in ast.walk(tree):
-                    if isinstance(n, ast.Import):
-                        names |= {a.name for a in n.names}
-                    elif isinstance(n, ast.ImportFrom) and not n.level and n.module:
-                        names.add(n.module)
-                        names |= {f"{n.module}.{a.name}" for a in n.names}
-                idx[str(f.relative_to(ROOT))] = names
+        for f, src in _sources(scopes, rev):
+            if "import" not in src:
+                continue
+            try:
+                tree = ast.parse(src)
+            except SyntaxError:
+                continue
+            names = set()
+            for n in ast.walk(tree):
+                if isinstance(n, ast.Import):
+                    names |= {a.name for a in n.names}
+                elif isinstance(n, ast.ImportFrom) and not n.level and n.module:
+                    names.add(n.module)
+                    names |= {f"{n.module}.{a.name}" for a in n.names}
+            idx[f] = names
         _INDEX[key] = idx
     return _INDEX[key]
 
 
-def importers(path, scopes=("engine", "tools")):
-    """engine/ and tools/ files that import `path` (static AST: import x / from pkg import x / from x import ...)."""
+def importers(path, scopes=("engine", "tools"), rev=None):
+    """engine/ and tools/ files that import `path` (static AST: import x / from pkg import x / from x import ...), on
+    the live tree (rev=None) or on the tree at commit `rev`."""
     target = _module_names(path)
-    return sorted(f for f, names in import_index(scopes).items() if f != path and names & target)
+    return sorted(f for f, names in import_index(scopes, rev).items() if f != path and names & target)
 
 
 def sweep(base=BASE, head=HEAD):
-    """-> (rows, problems). One row per module (latest merge that touched it last), merges listed per module."""
+    """-> (rows, problems). One row per module (latest merge that touched it last), merges listed per module.
+    Importers are read on the tree AT `head` (T-212), so the window's table does not change with later merges."""
     reg = registry()
     mods, problems = {}, []
     for sha, when, subj, is_merge, files in window(base, head):
@@ -197,7 +222,7 @@ def sweep(base=BASE, head=HEAD):
         if g is None:
             problems.append(f"{path}: no default-guard classification in GUARD")
         rows.append({"path": path, "touched": m["touched"], "exists": exists, "names_rebar": rebar,
-                     "registry": rc_txt, "importers": importers(path) if exists else [],
+                     "registry": rc_txt, "importers": importers(path, rev=head) if exists else [],
                      "guard": g[0] if g else "UNCLASSIFIED", "guard_why": g[1] if g else ""})
     stale = sorted(set(GUARD) - set(mods))
     if stale:
