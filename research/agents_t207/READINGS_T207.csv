@@ -1,0 +1,37 @@
+item,quantity,value,unit,source,note
+W11,plan_width_printed,1.95,m,"GF plan chain 83 / 195 / 115 / 195 / 81 (sheet03; DWF GF plan text '195')",census r3 width
+W12,plan_width_printed,1.95,m,same chain,census r3 width
+W11,plan_symbol_length,1956,mm,DWF GROUND FLOOR PLAN (vector): four glazing lines end to end,no inset return; no shutter drawn on the plan
+W12,plan_symbol_length,1954,mm,DWF GROUND FLOOR PLAN (vector),
+W11-W12,plan_centre_spacing,3100,mm,DWF GROUND FLOOR PLAN (vector),centre of W11 symbol to centre of W12 symbol
+W11,jamb_left_x,0,mm,DWF FENCE ELEVATION (vector),x relative to W11's left jamb = inner edge of its left shutter leaf
+W11,jamb_right_x,1969,mm,DWF FENCE ELEVATION (vector),inner edge of its right shutter leaf
+W12,jamb_left_x,3101,mm,DWF FENCE ELEVATION (vector),
+W12,jamb_right_x,5067,mm,DWF FENCE ELEVATION (vector),
+W11,leaf_left_x,-497;0,mm,DWF FENCE ELEVATION (vector),louvred leaf drawn BESIDE the left jamb (outer edge 497 mm left of the jamb)
+W11,leaf_right_x,1969;2466,mm,DWF FENCE ELEVATION (vector),louvred leaf beside the right jamb
+W12,leaf_left_x,2604;3101,mm,DWF FENCE ELEVATION (vector),
+W12,leaf_right_x,5067;5565,mm,DWF FENCE ELEVATION (vector),
+W11,outline_bottom_y,849,mm,DWF FENCE ELEVATION (vector),"y above the view's ground line (no printed level on this view: datum NOT printed)"
+W11,outline_top_y,3050,mm,DWF FENCE ELEVATION (vector),outline and both leaves share the top and bottom lines
+W12,outline_bottom_y,849,mm,DWF FENCE ELEVATION (vector),identical to W11 (to 1 mm)
+W12,outline_top_y,3050,mm,DWF FENCE ELEVATION (vector),
+W11,frame,89;940;1928;2957,mm,DWF FENCE ELEVATION (vector),"aluminium frame x0;y0;x1;y1 (1.839 x 2.017, 89-93 mm inside the outline on all four sides); glazing bars inside"
+W12,frame,3190;940;5029;2957,mm,DWF FENCE ELEVATION (vector),same frame
+W11-W12,issue_check_x_residuals,0.1;9.2;-8.4;-2.5;-6.8;2.4;0.5;5.5,mm,"current issue Alsenan_Architectural_P7757_Pages_11-12 p.12 (400 dpi scan, drawing turned 90 deg): line centres of the 8 leaf / jamb edges fitted to the DWF by one scale + offset (fitted scale 0.9974)","order: W11 leaf L outer, W11 jamb L, W11 jamb R, W11 leaf R outer, W12 leaf L outer, W12 jamb L, W12 jamb R, W12 leaf R outer"
+W11-W12,issue_check_height,2206;853,mm,same scan (4 leaves read),"outline height 346.5 px and ground line to sill 134 px at 6.35 mm / px / 0.9974; DWF 2201 / 849 (5 / 4 mm)"
+W02,plan_transverse_lines_in_span,0,nr,"DWF GROUND FLOOR PLAN and P7757.dxf GF plan (layer W): four glazing lines continuous over 6.232 m between the 50 mm jamb returns (outer 6.331 / 6.332 m)",no mullion or pier line
+W02,arch_column_overlay_in_span,0,nr,"P7757.dxf GF plan layer S-COL.BON",overlay columns 0.168 m beyond the north end and 0.500 m beyond the south end only
+W02,structural_columns_in_span,CN,mark,"ST7757 dxf COLUMN & AXIS PLAN: C3 300x500 and C 300x500 at the ends (7.900 m apart = the overlay pair), CN 300x300 at 2.950 .. 3.250 m from W02's south end","Schedule of Columns row CN: GROUND FLOOR / 1st / 2nd struck out = foundation neck only (research/alsenan_column_rebar_s3 EV-002; research/agents_t097)"
+W02,nw_elevation,SECTIONAL,view,DWF NORTH WEST ELEVATION and P7757.dxf NW frame (current issue),the saloon is drawn cut (hatched +1.00 floor and +5.50 slab; cut end walls 7.50 apart); W02's face is not drawn on any elevation
+W02,section_cut_count,1,nr,"DWF SECTION B-B (T-201 reading: cut 0.205 m from the north end, glazing +1.00 .. +3.20)",one opening at the cut; says nothing about the rest of the span
+W02,render_count,2,nr,"T-161 F23 (Drive photos I06 / I07 / I10 / I11 / I12, renders)",design intent; DIFFERS
+P-GF-05,head_level,2.65,m,T-201 HEADS (Checker MERGED 5dade783),2.50 above the +0.15 paving
+P-GF-05,member_over,B1,mark,"research/alsenan_lintels_s8_6 05_BEAM_OVERLAP_AUDIT (BM-GF_ROOF-B1-BL004, FULL, b 200)",schedule h 0.40 (T-143 members)
+P-GF-05,gf_roof_slab_drawn,5.30;5.50,m,"DWF SECTION B-B: slab lines 4.301 / 4.500 m above the +1.00 floor line (structure drawn, levels not printed)",slab soffit +5.30
+P-GF-05,deepest_drawn_gf_roof_beam_soffit,4.95,m,"DWF SECTION B-B at W02 (T-201 reading): hatched beam +4.95 .. +5.30",lowest member soffit drawn anywhere under the GF roof
+P-GF-05,member_soffit_t143_basis,5.10,m,"T-143 B1 h 0.40 under the printed +5.50 (CALCULATED, structural top HELD T-200 / T-206)",candidate for the masonry height only
+P-GF-05,face_above_head_drawn_to,4.71,m,DWF SOUTH WEST ELEVATION (vector; T-201 'face above the head to +4.70'),a band +4.71 .. +4.91 then the 1F body; no line in the face between the head and +4.71
+P-GF-05,finishes_either_side,side passage (porcelain / ceramic) | court (interlock),text,"OWNER_RULE_OUTDOOR_FLOORS_2026-10-21 (sides never interlock; court interlock); both at +0.15 (plan marks, T-198)",no door; no level change
+P-GF-01,head,,m,"no sheet draws it (T-201: A-A and B-B do not show the wall; no elevation)",member over: B2 (S8.6 BM-GF_ROOF-B2-BL028)
+P-1F-01,head,,m,"no sheet draws it (T-201: B-B shows two leafed 0.90 doors on that line, not the 1.30 doorless opening)",S8.6 LT-OP-1F-021 L2 150 x 200 released under no member

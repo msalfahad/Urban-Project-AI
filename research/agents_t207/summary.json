@@ -1,0 +1,53 @@
+{
+ "task": "T-207",
+ "development_villa": true,
+ "accuracy_claim": "none (development villa)",
+ "windows_total_in_census": 29,
+ "windows_height_DRAWING_CONFIRMED_before": 26,
+ "windows_height_DRAWING_CONFIRMED_after": 28,
+ "windows_newly_established": [
+  "W11",
+  "W12"
+ ],
+ "windows_still_held": [
+  "W02"
+ ],
+ "like_for_like_W11_W12": {
+  "n": 2,
+  "engine_m2": 8.58,
+  "freelancer_m2": 7.8,
+  "diff_m2": 0.78,
+  "diff_pct_of_freelancer": 10.0
+ },
+ "like_for_like_after": {
+  "n": 28,
+  "engine_m2": 88.081,
+  "freelancer_m2": 89.681,
+  "diff_m2": -1.6,
+  "diff_pct_of_freelancer": -1.78
+ },
+ "freelancer_windows_total_m2": 116.9,
+ "W02": {
+  "drawn_count": 1,
+  "status": "HELD",
+  "candidates": [
+   1,
+   2
+  ],
+  "area_on_drawn_count_m2": 13.926,
+  "freelancer_m2": 27.219
+ },
+ "windows_pcs": {
+  "drawn": 29,
+  "with_render_count": 30,
+  "status": "HELD",
+  "freelancer": 29
+ },
+ "W11_W12_pair_binding": "BOUND",
+ "W11_W12_current_issue": "AGREES (max edge offset 0.009 m over 10 edges)",
+ "other_T175_openings_changed_by_this_rerun": [],
+ "tolerances_m": {
+  "binding": 0.02,
+  "current_issue_overlay": 0.04
+ }
+}
