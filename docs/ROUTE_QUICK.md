@@ -19,7 +19,7 @@ Details per topic: `docs/ROUTING.md`. Risk is a validation guide, never a reason
 | [rebar](ROUTING.md#rebar) | rebar, reinforcement, bar, steel, bbs | `engine/source/accurate_boq_rebar.py`, `engine/source/rebar_unit_mass.py` | CRITICAL | 0 | 8 / 0 | 0 / 4 |
 | [formwork](ROUTING.md#formwork) | formwork, shuttering, form work | `engine/source/struct_n10.py` | MEDIUM | 0 | 2 / 0 | 0 / 2 |
 | [excavation](ROUTING.md#excavation) | excavation, excavate, backfill, earthwork, dig | `engine/source/struct_n10.py` | MEDIUM | 0 | 2 / 0 | 0 / 2 |
-| [boq_output](ROUTING.md#boq_output) | boq, total, release, report, export | `tools/urban_boq_m9.py`, `engine/source/delta_release.py` | CRITICAL | 11 | 6 / 1 | 0 / 7 |
+| [boq_output](ROUTING.md#boq_output) | boq, total, release, report, export | `tools/urban_boq_m9.py`, `engine/source/boq_line.py` | CRITICAL | 11 | 6 / 1 | 0 / 7 |
 
 Risk: CRITICAL = frozen code or engineering authority; HIGH = geometry, CAD, units, rooms, walls, release, aggregation or
 widely imported; MEDIUM = local engine logic; LOW = docs and tooling. Validation levels L1-L4 are in `docs/ROUTING.md`.
