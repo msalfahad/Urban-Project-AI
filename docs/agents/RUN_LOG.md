@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-23T05:40Z | Worker 2 | STARTED | run session_01QKVywXjvGjRs11ZPNm9Hue | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-23T05:01Z | Worker 3 | STARTED | run session_01P74TRQQCtcEyBR79hPipmm | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-23T04:28Z | Worker 1 | SUCCESS | T-191 r2 READY (agents/task-T-191 @ e343f9c9) | Pool steel rev2, line HELD (D-57): base mats now carry count A (density) .. B (max spacing) since the pool's own drawings (ST p.7, p.8 notes) do not fix the '/m' meaning (T-171 = footings only); R1 824.89 .. 883.59 kg (low -14.45), R2 572.45 .. 617.96 kg (low -10.63), highs unchanged; per-mat counts 24/25, 20/21, 20/21 re-derived independently in shapely = Checker count 0.000 kg. Tests t191 30 PASS (10 new, adverse: meaning fixed without evidence REFUSED, open mesh A != B), map regenerated, stale none. ERS: read, s.2-4 + s.7 row status proposed. | self-check codemap PASS, pytest t061 PASS, freeze PASS (task tree freeze 0); Drive read OK (ST7757.pdf); problem: none
 - 2026-10-23T04:20Z | Worker 1 | STARTED | run session_01NhpGyRuNu79GeQyX9JCRaw | repo-attached routine | task state: none yet | self-check pending
