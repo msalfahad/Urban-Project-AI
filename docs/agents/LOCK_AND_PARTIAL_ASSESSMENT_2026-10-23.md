@@ -78,3 +78,30 @@ outlines can be measured from the plan; whether the beam is cast with the footin
 (foundation plan + p.13 details) should narrow it before escalation. D-14 (blinding past the plot line), D-15 (blinding
 under straps) and Q-21 C (formation arrangement) are not answerable from the existing sheets (the drawings are silent or
 the question is construction practice).
+
+## 5. Footing population from the PDF, F10 readings and blinding reconciliation (owner 2026-10-23 21:30)
+
+PDF foundation plan (ST sheet 2, a plot, read visually by the main chat; independent of the DXF): footing tags F 4
+(two on the street side, two on the south boundary), F2 2, F3 2, F4 2, F5 2, F6, F8, F9, F11, F12, F13, F14, F15, FF 1 each,
+FN 4 (three free-standing, one on the east boundary) = 25, plus ONE outline at the south-east corner carrying two tags
+(F10 with C10 and F with C). F7 is not on the plan (unused in the schedule). Total 26 outlines: equal to the Checker's
+DXF table. Columns marked CN on F4 and F8 sit on those footings (no FN of their own). The population is now confirmed from
+two independent sources; sizes from the printed schedule (section 4); the footing component 64.304 m3 is reproduced from
+the PDF alone.
+
+F10 + F: one outline, two tags. Readings: (a) schedule rows as two pads 2.80 x 1.40 x 0.50 + 0.90 x 0.80 x 0.30 = 1.960 +
+0.216 = 2.176 m3; (b) the drawn outline 3.25 x 1.40 at the F10 depth 0.50 = 2.275 m3. The candidate's range 0.216 .. 1.960
+is F alone .. F10 alone and contains neither reading (cause: one tag per outline). T-239 corrects it to a CONFLICT 2.176
+.. 2.275, HELD (Q-31 C).
+
+| Blinding scope | Quantity (m3) | Status | Overlap rule | Double-count check |
+|---|---|---|---|---|
+| 25 footings, inside the plot | 14.990 | VERIFIED (Checker 20:14) | union of outlines + 0.10 (FN / F9 overlap 0.196 m2 once) | one layer, counted once |
+| 25 footings, projection beyond the plot line (8 footings on it) | 0 .. 0.189 | HELD (D-14) | same union, clipped by the plot polyline | inside the 15.179 candidate figure, not added elsewhere |
+| F10 + F | 0.552 (outline + 0.10) .. 0.590 (two pads + 0.10), before the D-14 clip | HELD (Q-31 C, T-239) | follows its footing | candidate excludes it; released V2.9 carries 0.480 (F10 alone): reported, not changed |
+| Ground beams | 5.534 (union: none under footing blinding) .. 9.691 (own layer, also over 41.57 m2 of footing blinding) | HELD (Q-21 C) | the 41.57 m2 is exactly the double-count question | reading L excludes the overlap, reading R bills a second layer by the beam detail; never mixed |
+| Straps SB1 / SB2 / SB3 | 0.913 ((B + 0.20) x clear length 4.55 / 2.294 / 3.259 m) | HELD (D-15) | clear length between footings | no overlap with the footing layer by construction; re-check the clear lengths against T-230 strap ends |
+| Boundary-wall bases (band C1) | not measured | UNMEASURED (Q-28 A, count not printed) | - | must be an export row, never omitted |
+| Pool | with the pool line | owned by the pool line | - | not in the footing or beam layers |
+
+Freelancer 47.055 m3 is one plate under the whole plot (15.00 x 31.37 x 0.10); no sheet draws it; comparison only.
