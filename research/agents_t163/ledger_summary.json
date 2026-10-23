@@ -1,0 +1,90 @@
+{
+ "dome_scenarios": {
+  "S0_CALCULATED": 48.299,
+  "S0_HELD_LINES": 9,
+  "S1_NOT_RELEASED_M2": 8.783
+ },
+ "floors": {
+  "1F": {
+   "beam_sides_E": 109.884,
+   "beam_sides_G": 93.475,
+   "beam_soffit_E": 34.242,
+   "beam_soffit_G": 34.065,
+   "edge_G": 8.667,
+   "held_len_m": {
+    "BEAM_SIDE_HELD_LEN": 4.813,
+    "BEAM_SIDE_HELD_LEN:HELD_EDGE": 12.926,
+    "BEAM_SIDE_HELD_LEN:RING_MIX": 24.734,
+    "BEAM_SIDE_HELD_LEN:STAIR": 9.3,
+    "EDGE_HELD_LEN:RING_MIX": 6.666,
+    "JOINT_HELD_LEN": 1.7,
+    "JOINT_HELD_LEN:HELD_EDGE": 3.017,
+    "JOINT_HELD_LEN:RING_MIX": 0.7,
+    "JOINT_HELD_LEN:STAIR": 2.1,
+    "JUNCTION_HELD_LEN": 2.2
+   },
+   "held_soffit_sides": 5.935,
+   "joint_G": 4.454,
+   "slab_soffit": 123.479
+  },
+  "2F": {
+   "beam_sides_E": 30.339,
+   "beam_sides_G": 27.746,
+   "beam_soffit_E": 7.904,
+   "beam_soffit_G": 7.824,
+   "edge_G": 4.025,
+   "held_len_m": {
+    "BEAM_SIDE_HELD_LEN": 10.561,
+    "BEAM_SIDE_HELD_LEN:DRAFT": 0.75,
+    "BEAM_SIDE_HELD_LEN:HELD_EDGE": 3.85,
+    "JOINT_HELD_LEN": 0.799,
+    "JOINT_HELD_LEN:DRAFT": 0.5,
+    "JOINT_HELD_LEN:HELD_EDGE": 0.5,
+    "JUNCTION_HELD_LEN": 2.4
+   },
+   "held_soffit_sides": 1.406,
+   "joint_G": 0.926,
+   "slab_soffit": 44.885
+  },
+  "GF": {
+   "beam_sides_E": 187.103,
+   "beam_sides_G": 166.46,
+   "beam_soffit_E": 55.738,
+   "beam_soffit_G": 55.966,
+   "edge_G": 13.92,
+   "held_len_m": {
+    "BEAM_SIDE_HELD_LEN": 3.908,
+    "BEAM_SIDE_HELD_LEN:DRAFT": 0.75,
+    "BEAM_SIDE_HELD_LEN:HELD_EDGE": 8.593,
+    "BEAM_SIDE_HELD_LEN:RING_MIX": 6.463,
+    "BEAM_SIDE_HELD_LEN:STAIR": 32.075,
+    "BEAM_SIDE_HELD_LEN:UNMATCHED": 3.632,
+    "EDGE_HELD_LEN:RING_MIX": 1.215,
+    "EDGE_HELD_LEN:STAIR": 2.35,
+    "JOINT_HELD_LEN": 0.55,
+    "JOINT_HELD_LEN:DRAFT": 0.5,
+    "JOINT_HELD_LEN:HELD_EDGE": 1.301,
+    "JOINT_HELD_LEN:STAIR": 2.726,
+    "JOINT_HELD_LEN:UNMATCHED": 0.475,
+    "JUNCTION_HELD_LEN": 4.964,
+    "UNMATCHED_LEN": 4.87
+   },
+   "held_soffit_sides": 26.887,
+   "joint_G": 6.498,
+   "slab_soffit": 206.684
+  }
+ },
+ "rule": "r3",
+ "totals": {
+  "ABOVE_HELD_HI": 277.365,
+  "ABOVE_HELD_LO": 221.507,
+  "ABOVE_HELD_UNQUANTIFIED_LINES": 17.0,
+  "BELOW_HELD_HI": 227.118,
+  "BELOW_HELD_LO": 162.64,
+  "BELOW_HELD_UNQUANTIFIED_LINES": 34.0,
+  "E_CALCULATED": 802.658,
+  "G_CALCULATED": 1078.274,
+  "OQ10_EARTH_CAST": 0.0,
+  "OQ10_FORMED": 103.14
+ }
+}
