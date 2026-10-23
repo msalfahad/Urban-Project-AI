@@ -1,6 +1,6 @@
 # T-207: openings closure, census r4 (development villa; rules for every villa)
 
-Worker 2, 2026-10-23 08:45 - 09:45 UTC, run session_01V4o7VuZonSwGCVYMcAjm9h. Lane A, gate 1. Files: research/agents_t207/*
+Worker 2, 2026-10-23 08:41 - 09:10 UTC, run session_01V4o7VuZonSwGCVYMcAjm9h. Lane A, gate 1. Files: research/agents_t207/*
 and tests/t207_openings_closure/* only (no engine, rule, registry, frozen or released file changed; T-198 / T-201 / T-175
 files untouched). ERS: read; s.2 steps 1-4, s.3 (build before deduct; a notation / a drawn line typed before its
 arithmetic; physical vs procurement), s.4 (rule + test), s.7 row below. Drawings are cited by Drive title / page; no
@@ -60,7 +60,7 @@ only a neck there?
 
 **P-GF-05 (side-passage mouth, court wall line).** Head +2.65 (T-201, merged). The member over it is GF-roof beam B1
 (S8.6 beam audit, b 0.20, schedule h 0.40). Section B-B draws the GF-roof slab at +5.30 .. +5.50 and its deepest beam
-soffit at +4.95: no GF-roof member comes within 2.30 m of the head, so the head is not a beam soffit: a lintel spans it
+soffit at +4.95 (every hatched band under the slab read: beam stubs to +4.95 at the court wall, the stair-hall wall and W02; the only lower band, +4.05 .. +4.25 in the entrance wall, is a lintel over an opening, not a roof member): no GF-roof member comes within 2.30 m of the head, so the head is not a beam soffit: a lintel spans it
 (Q-HEAD-UNDER-BEAM resolved for this opening). Above the lintel (+2.85) the SW elevation draws the face to +4.71; B1's
 soffit is +5.10 on T-143's calculated basis (structural top HELD, T-200 / T-206): masonry 2.232 .. 2.700 m2 candidates,
 HELD; it is in no T-143 run (the open side was split out), so it is a scope item, never a deduction. Its threshold: no
