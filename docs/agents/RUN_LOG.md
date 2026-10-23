@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-23T09:51Z | Verifier | STARTED | run unknown | repo-attached routine | task state: T-206 READY seen in RUN_LOG | self-check pending
 - 2026-10-23 09:42 UTC | Worker 1 | SUCCESS | T-206 READY @ 6dbcafb3 (level chain run 2) | Footing underlay read: the unread '2' under every isolated footing is a 2 cm membrane (5 / 2 / 10 chain, vector-checked) -> footing top = formation + 0.17 + H for 16 types; formation still HELD (Q-21 C, 1.5 m = limit / design basis); released necks imply formation -1.67 (0.17 below the minimum): necks 10.855 vs freelancer 8.805 m3 still UNRESOLVED (T-205). NEW element: 6 sunken wet-slab panels (1F x5, 2F x1, every sanitary fixture group under one), drop not printed -> HELD. No structural level printed in any sheet; T-189 B20/B23 condition NOT PROVEN. No quantity changed, no owner question. ERS: read, s.2-4 + s.3 notation-before-arithmetic applied. | self-check codemap PASS, t061 PASS, freeze PASS; problem: tests/t202_guard_sweep::test_guard_host_and_unwired_producers red on the working head e081911c too (masonry_area_v1 imports masonry_centreline_v2, T-108 merge) -> lane I / T-210
 - 2026-10-23T09:40Z | Worker 2 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-23 09:20 UTC | Worker 1 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
