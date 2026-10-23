@@ -61,6 +61,99 @@
    }
   ],
   "CONCRETE.NECK": [],
+  "CONCRETE.SLAB": [
+   {
+    "duplicate_lines": [],
+    "key": "1F:SLAB#23",
+    "reason": "in the register or on a line, in no independent inventory of the trade (a misread, an untagged element or an inventory gap)",
+    "refs": [],
+    "status": "REGISTER_ONLY"
+   },
+   {
+    "duplicate_lines": [],
+    "key": "1F:SLAB#24",
+    "reason": "in the register or on a line, in no independent inventory of the trade (a misread, an untagged element or an inventory gap)",
+    "refs": [],
+    "status": "REGISTER_ONLY"
+   },
+   {
+    "duplicate_lines": [],
+    "key": "1F:SLAB#25",
+    "reason": "in the register or on a line, in no independent inventory of the trade (a misread, an untagged element or an inventory gap)",
+    "refs": [],
+    "status": "REGISTER_ONLY"
+   },
+   {
+    "duplicate_lines": [],
+    "key": "1F:SLAB#26",
+    "reason": "in the register or on a line, in no independent inventory of the trade (a misread, an untagged element or an inventory gap)",
+    "refs": [],
+    "status": "REGISTER_ONLY"
+   },
+   {
+    "duplicate_lines": [],
+    "key": "2F:SLAB#8",
+    "reason": "in the register or on a line, in no independent inventory of the trade (a misread, an untagged element or an inventory gap)",
+    "refs": [],
+    "status": "REGISTER_ONLY"
+   },
+   {
+    "duplicate_lines": [],
+    "key": "2F:SLAB#9",
+    "reason": "in the register or on a line, in no independent inventory of the trade (a misread, an untagged element or an inventory gap)",
+    "refs": [],
+    "status": "REGISTER_ONLY"
+   },
+   {
+    "duplicate_lines": [],
+    "key": "GF:SLAB#34",
+    "reason": "in the register or on a line, in no independent inventory of the trade (a misread, an untagged element or an inventory gap)",
+    "refs": [],
+    "status": "REGISTER_ONLY"
+   },
+   {
+    "duplicate_lines": [],
+    "key": "GF:SLAB#35",
+    "reason": "in the register or on a line, in no independent inventory of the trade (a misread, an untagged element or an inventory gap)",
+    "refs": [],
+    "status": "REGISTER_ONLY"
+   },
+   {
+    "duplicate_lines": [],
+    "key": "GF:SLAB#36",
+    "reason": "in the register or on a line, in no independent inventory of the trade (a misread, an untagged element or an inventory gap)",
+    "refs": [],
+    "status": "REGISTER_ONLY"
+   },
+   {
+    "duplicate_lines": [],
+    "key": "GF:SLAB#37",
+    "reason": "in the register or on a line, in no independent inventory of the trade (a misread, an untagged element or an inventory gap)",
+    "refs": [],
+    "status": "REGISTER_ONLY"
+   },
+   {
+    "duplicate_lines": [],
+    "key": "GF:SLAB#38",
+    "reason": "in the register or on a line, in no independent inventory of the trade (a misread, an untagged element or an inventory gap)",
+    "refs": [],
+    "status": "REGISTER_ONLY"
+   },
+   {
+    "duplicate_lines": [],
+    "key": "GF:SLAB#39",
+    "reason": "in the register or on a line, in no independent inventory of the trade (a misread, an untagged element or an inventory gap)",
+    "refs": [],
+    "status": "REGISTER_ONLY"
+   },
+   {
+    "duplicate_lines": [],
+    "key": "GF:SLAB#40",
+    "reason": "in the register or on a line, in no independent inventory of the trade (a misread, an untagged element or an inventory gap)",
+    "refs": [],
+    "status": "REGISTER_ONLY"
+   }
+  ],
   "DOORS": [],
   "WINDOWS": [
    {
@@ -144,7 +237,6 @@
   "CONCRETE.BEAM": "T-241 beam table per storey (T-229 CENSUS.csv binds route G bands: engine-derived, not used)",
   "CONCRETE.BLINDING": "T-233 CONC.BLINDING rows (one per footing pad; not joined: the engine bills blinding as one line per plan, not per pad)",
   "CONCRETE.GROUND_BEAM": "T-242 ground-beam table",
-  "CONCRETE.SLAB": "T-234 LEDGER_T234.csv (READY 352925c3, not merged)",
   "CONCRETE.STRAP": "T-242 / T-174 strap census",
   "FLOOR_FINISH": "a room census from the printed room labels",
   "FORMWORK": "no formwork line exists in any run",
@@ -510,26 +602,26 @@
   },
   {
    "agreement_conflict": 0,
-   "completeness_n_d": "0 / 0",
+   "completeness_n_d": "62 / 62",
    "conflict": 0,
    "duplicated": 0,
    "excluded": 0,
-   "found": 0,
+   "found": 62,
    "geometry_only": 0,
    "held": 0,
-   "inventory_sources": "",
+   "inventory_sources": "T-234 slab panels between beam faces (LEDGER_T234.csv, MERGED 3224f68a) (CENSUS)",
    "lines": 75,
-   "measured": 0,
+   "measured": 62,
    "missing": 0,
    "out_of_inventory_scope": 0,
    "principal": true,
-   "register_only": 0,
-   "status": "NO_INDEPENDENT_INVENTORY",
+   "register_only": 13,
+   "status": "GAPS",
    "trade": "CONCRETE.SLAB",
-   "unlinked_lines": 75,
+   "unlinked_lines": 0,
    "unresolved": 0,
    "verified": 0,
-   "verified_n_d": "0 / 0"
+   "verified_n_d": "0 / 62"
   },
   {
    "agreement_conflict": 0,

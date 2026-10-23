@@ -54,6 +54,7 @@ none built from the engine's register):
 | Trade | Inventory (d) | Source | Join to the BOQ |
 |---|---|---|---|
 | CONCRETE.FOOTING | 26 outlines | T-233 LEDGER_T233.csv (FOUNDATION PLAN outlines by handle) | mark count per storey (the engine id prints the type, not the handle) |
+| CONCRETE.SLAB | 62 panels = GF 33 + 1F 22 + 2F 7 | T-234 LEDGER_T234.csv (merged into the working head 3224f68a during this run) | count per storey (the ledger names panels, the engine names faces by band) |
 | CONCRETE.NECK | 36 | T-217 LEDGER_T217.csv, FOUNDATION, DRAWN | EXACT: one solved plan translation (75968, 14448) maps 36 / 36 ledger ids onto this run's ids |
 | CONCRETE.COLUMN | 59 = GF 30 + 1F 20 (18 + 2 planted) + 2F 9 (8 + 1 planted) | T-217 ledger GF / 1F / 2F DRAWN + T-220 members starting on a slab (the two over necks 10D0 / 10DA are the ledger's C8 / C9, not counted twice) | EXACT 56 / 56 by the same translation; planted records by printed handle (GFRS 329 / 386, FFRS 77B) |
 | DOORS | 27 = GF 14 + 1F 10 + 2F 3 | T-198 OPENINGS_T198.csv KIND DOOR | EXACT by engine token (DOOR-<storey>-<hash>) |
@@ -62,6 +63,7 @@ none built from the engine's register):
 | Trade | V2.9 completeness | V2.9 verified | V3.0.8 completeness | V3.0.8 verified | Status / gaps |
 |---|---|---|---|---|---|
 | CONCRETE.FOOTING | 25 / 26 (96.15 %) | 0 / 26 | 25 / 26 (96.15 %) | 0 / 26 | 1 MISSING by label + 1 REGISTER_ONLY (one footing, see F1) |
+| CONCRETE.SLAB | 62 / 62 | 0 / 62 | 62 / 62 | 0 / 62 | 13 REGISTER_ONLY faces: GF 7, 1F 4, 2F 2 (F8) |
 | CONCRETE.NECK | 36 / 36 (28 measured + 8 held) | 0 / 36 | 36 / 36 (36 held) | 0 / 36 | complete against the inventory |
 | CONCRETE.COLUMN | 59 / 59 | 0 / 59 | 59 / 59 (57 + 2 held) | 0 / 59 | 5 REGISTER_ONLY (F2), 5 OUT_OF_INVENTORY_SCOPE (F3) |
 | DOORS | 27 / 27 (17 lines + 10 held) | 0 / 27 | 27 / 27 | 0 / 27 | 10 doors held in the engine's door schedule, no BOQ line (F4) |
@@ -103,6 +105,10 @@ accuracy figure is written (accuracy table compared 0 / 0 in this run; the score
   under one reading and not under the other ... a separate range line") but not listed as a deduction, so the line's
   own record cannot be re-derived. Quantity not judged; traceability defect: the reading-dependent length belongs in the
   deduction list (or the net). The other 75 (V2.9) / 77 (V3.0.8) gross / deduction / net lines reconcile within 0.001.
+- **F8 slab faces beyond the drawn panels (both runs).** 75 CONC.SLAB lines against 62 drawn panels: 13 faces in no
+  panel of the independent ledger (GF 7, 1F 4, 2F 2). The count equals T-234's own 13 non-slab faces (+0.6388 m3 in
+  V3.0.8: GF 0.4203, 1F 0.1614, 2F 0.0573), found here without reading T-234's face list: an independent count
+  confirmation, not a re-measure. Which faces they are is T-234's ledger, not this count.
 - **F7 storey datums.** FFL GF +1.00 (P7757 LEVEL, ST SH08, section A-A), 1F +5.50, 2F +9.70 (P7757 and ST SH02) agree
   on every sheet that prints them (T-206 r2 datums); ANNEX +0.30 is read from one print in the adapter. Probe 6 finds
   no sheet-to-sheet conflict on this villa.
@@ -112,10 +118,10 @@ accuracy figure is written (accuracy table compared 0 / 0 in this run; the score
 - The footing join is a mark count: it says how many of a type are missing, not which outline.
 - T-198 was seeded from the engine's opening list and corrected by drawing reads (three openings added): an opening
   that BOTH missed is not excluded. Doors / windows completeness is against that census, not a fresh tag read.
-- Beams, slabs, ground beams, straps, masonry, finishes, stairs, railings, rebar: no merged independent inventory on
-  the working head (T-229 binds route G bands, so it is engine-derived and not used; T-234 and T-017 are READY, not
-  merged). Their rows are present with the next source named; nothing there is called complete.
+- The slab join is a count per storey: it confirms how many faces exceed the panels, not which.
+- Beams, ground beams, straps, masonry, finishes, stairs, railings, rebar: no merged independent inventory on
+  the working head (T-229 binds route G bands, so it is engine-derived and not used; T-017 is READY, not merged). Their rows are present with the next source named; nothing there is called complete.
 
 ## 6. Lessons register row (ERS s.7, proposed)
 
-| 2026-10-23 | 5 released column lines (2.268 m3) on storeys whose plan draws no member, 2 drawn windows (29.331 m2) and a footing identity were invisible to every existing check | The crosswalk and the census took their elements from the engine's own register, so an element the engine never produced, or produced where nothing is drawn, could not appear as a gap | Completeness is measured against an inventory built WITHOUT the engine (printed schedules, plan tags, outlines by handle, censuses), joined to the BOQ by an exact key where one exists (a solved, verified plan translation or a printed handle) and by a stated count join otherwise; completeness, verified share and accuracy are three tables, never one figure (every villa, every principal trade) | tests/t236_trade_completeness (probes 1b / 2 / 3 / 6 / 9 strict-xfail history; synthetic villa with every injection; metamorphic) | PROPOSED (T-236) |
+| 2026-10-23 | 5 released column lines (2.268 m3) on storeys whose plan draws no member, 2 drawn windows (29.331 m2), 13 slab faces beyond the drawn panels and a footing identity were invisible to every existing check | The crosswalk and the census took their elements from the engine's own register, so an element the engine never produced, or produced where nothing is drawn, could not appear as a gap | Completeness is measured against an inventory built WITHOUT the engine (printed schedules, plan tags, outlines by handle, censuses), joined to the BOQ by an exact key where one exists (a solved, verified plan translation or a printed handle) and by a stated count join otherwise; completeness, verified share and accuracy are three tables, never one figure (every villa, every principal trade) | tests/t236_trade_completeness (probes 1b / 2 / 3 / 6 / 9 strict-xfail history; synthetic villa with every injection; metamorphic) | PROPOSED (T-236) |

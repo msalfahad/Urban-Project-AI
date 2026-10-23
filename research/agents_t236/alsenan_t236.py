@@ -15,6 +15,9 @@ Independent inventories (each built from the drawings without the engine's eleme
                     CAP / GBP; T-217 MERGED 65fef8fa, Checker 13:53)
   CONCRETE.COLUMN   the same ledger, storeys GF / 1F / 2F, existence DRAWN on that storey's roof-slab plan (a
                     SCHEDULE_TYPE_ONLY row is a type printed in the schedule, not drawn on the plan: not an element)
+  CONCRETE.SLAB     research/agents_t234/LEDGER_T234.csv: one row per slab panel between beam faces (T-234 MERGED 3224f68a);
+                    joined by COUNT per storey (the ledger names panels, the engine names faces by band: how many
+                    faces each storey carries beyond the panels, never which; T-234 names them)
   DOORS / WINDOWS   research/agents_t198/OPENINGS_T198.csv KIND DOOR / WINDOW (census r3, MERGED; residual risk named:
                     the census was seeded from the engine's opening list and then corrected by drawing reads, so an
                     opening that BOTH missed is not excluded by it)
@@ -53,7 +56,6 @@ from tools import trade_completeness as R  # noqa: E402
 STOREY = {"FOUNDATION": "FDN", "GF": "GF", "1F": "1F", "2F": "2F"}
 NEXT_SOURCE = {
     "CONCRETE.BEAM": "T-241 beam table per storey (T-229 CENSUS.csv binds route G bands: engine-derived, not used)",
-    "CONCRETE.SLAB": "T-234 LEDGER_T234.csv (READY 352925c3, not merged)",
     "CONCRETE.GROUND_BEAM": "T-242 ground-beam table", "CONCRETE.STRAP": "T-242 / T-174 strap census",
     "CONCRETE.BLINDING": "T-233 CONC.BLINDING rows (one per footing pad; not joined: the engine bills blinding as one "
                          "line per plan, not per pad)",
@@ -91,6 +93,17 @@ def _parse(eid):
     if not m:
         return None
     return (m["kind"], m["sheet"], m["mark"], int(m["x"]), int(m["y"]), m["st"])
+
+
+def slab_inventory():
+    rows = _csv("research/agents_t234/LEDGER_T234.csv")
+    n = Counter()
+    els = []
+    for r in sorted(rows, key=lambda r: (r["storey"], r["panel"])):
+        n[r["storey"]] += 1
+        els.append({"floor": r["storey"], "label": f"SLAB#{n[r['storey']]}", "ref": f"panel {r['panel']}"})
+    return {"source": "T-234 slab panels between beam faces (LEDGER_T234.csv, MERGED 3224f68a)", "basis": "CENSUS",
+            "trade": "CONCRETE.SLAB", "floors": sorted(n), "elements": els}
 
 
 def column_inventories():
@@ -224,6 +237,7 @@ def door_register(path, tokens):
 
 def build_input(lines, door_schedule=None):
     finv = footing_inventory()
+    sinv = slab_inventory()
     cinv, named = column_inventories()
     offsets, offset_log = solve_offsets(named, [ln["location"]["element_id"] for ln in lines])
     oinv, tokens, census_ids = opening_inventories()
@@ -256,6 +270,10 @@ def build_input(lines, door_schedule=None):
                 links[ln["line_id"]] = hit
                 exact[tr] += 1
                 continue
+        if tr == "CONCRETE.SLAB":                          # COUNT per storey: how many faces, never which
+            n[(tr, st)] += 1
+            links[ln["line_id"]] = [f"{st}:SLAB#{n[(tr, st)]}"]
+            continue
         if tr in MARK_RE:
             if tr != "CONCRETE.COLUMN":
                 st = "FDN"
@@ -280,7 +298,7 @@ def build_input(lines, door_schedule=None):
                 k = f"{st}:?{ln['line_id'][-8:]}"            # no census row names this engine element
         if k:
             links[ln["line_id"]] = [k]
-    return {"inventories": [finv] + cinv + oinv, "lines": lines, "line_links": links,
+    return {"inventories": [finv, sinv] + cinv + oinv, "lines": lines, "line_links": links,
             "register": door_register(door_schedule, tokens), "opening_census": census_ids,
             "levels": storey_levels()}, {"unbound": dict(unbound), "exact_join": dict(exact), "offsets": offset_log}
 
@@ -322,7 +340,8 @@ def main(argv=None):
                                   "duplicate_lines": e["duplicate_lines"]}
                                  for e in rep["elements"] if e["trade"] == t and
                                  (e["status"] in ("MISSING", "REGISTER_ONLY", "CONFLICT", "UNRESOLVED") or e["duplicated"])]
-                             for t in ("CONCRETE.FOOTING", "CONCRETE.NECK", "CONCRETE.COLUMN", "DOORS", "WINDOWS")}}
+                             for t in ("CONCRETE.FOOTING", "CONCRETE.SLAB", "CONCRETE.NECK", "CONCRETE.COLUMN", "DOORS",
+                                       "WINDOWS")}}
         (out / "SUMMARY.json").write_text(json.dumps(summ, indent=1, sort_keys=True, ensure_ascii=False), encoding="utf-8")
     return 0
 
