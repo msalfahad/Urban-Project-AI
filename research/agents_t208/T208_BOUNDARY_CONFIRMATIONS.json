@@ -1,0 +1,13 @@
+{
+ "schema": "URBAN_REVIEW_SET_BOUNDARY_CONFIRMATION_V1",
+ "task": "T-208",
+ "scope": "development villa only (project fact file, never a general rule); room ids are the pinned released run's (spec research/agents_t165/baselines/V29_ROUTEG_NO_PROFILE.json, BOQ_LINES.csv b96185d4)",
+ "confirmations": {
+  "GF-RDBD4F9": {
+   "condition": "ZONE_FROM_DRAWN_LINES",
+   "checked": "the one drawn non-wall line is the open side of the hand-wash lobby toward the ground-floor open space: it runs on the wall-face line of the 0.15 m wall it continues (the closed part of the same edge is that wall), so it is an opening line, not a free finish line inside a room; the outline agrees with the two printed dimensions inside the space: bottom 794.3 + 1255.7 = 2050 mm = printed 205, arm width between the two 45-degree wall faces (y - x = 230 and y - x = 2100 in the space's local mm) = 1870 / sqrt 2 = 1322 mm = printed 132; no doorless cell attached (attached_cells empty); the only texts inside are the WASH fixture block's own labels, no room word",
+   "source": "Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip (P7757.dxf sha256 ab54dd55...), ground-floor plan, read by worker 2 on 2026-10-23 (render of the plan around the space and the outline vertices of ARCH_ROOMS.json)",
+   "status": "DRAWING-CONFIRMED (worker reading, not yet independently verified)"
+  }
+ }
+}

@@ -1,0 +1,45 @@
+{
+ "engine_assumed_owner_approved_m2": 9.6782,
+ "engine_released_m2": 376.2857,
+ "engine_rows_sum_check_m2": -6.7e-05,
+ "engine_total_m2": 385.9639,
+ "freelancer_rows_sum_m2": 409.58,
+ "key": "FLOOR.INTERNAL",
+ "like_for_like": {
+  "diff_m2": 0.3743,
+  "diff_pct": 0.1
+ },
+ "raw": {
+  "diff_m2": -23.6161,
+  "diff_pct": -5.77,
+  "wape_pct": 5.77
+ },
+ "reference_id": "FIN:الغلاف:15",
+ "reference_m2": 409.58,
+ "review_sets": {
+  "bound": 3,
+  "count": 3,
+  "held": [],
+  "ignored_non_floor_sets": [
+   "DOOR_OWNER_MINIMUM"
+  ],
+  "rule": "Q-06 A"
+ },
+ "scope_items_m2": {
+  "S1_garden_band": 13.986,
+  "S2_GF_round_stair_treads": 8.1944,
+  "S3_2F_corridor": 7.7,
+  "S4_1F_stair_footprint": 5.89,
+  "net": -23.9904
+ },
+ "task": "T-208",
+ "wet": {
+  "diff_after_kitchen_class_m2": 0.1107,
+  "diff_m2": -9.5193,
+  "engine_released_m2": 53.1425,
+  "engine_with_sets_m2": 62.4907,
+  "freelancer_m2": 72.01,
+  "kitchen_in_engine_porcelain_m2": 9.63
+ },
+ "without_boundary_confirmation_total_m2": null
+}
