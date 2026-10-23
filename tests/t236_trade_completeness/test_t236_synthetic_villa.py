@@ -282,6 +282,8 @@ def test_line_trade_mapping():
                           "trade": "MASONRY"}) == "MASONRY.150"
     assert TC.line_trade({"item_code": "MAS.BLOCK", "subtrade": None, "calculation": {"inputs": {}},
                           "trade": "MASONRY"}) == "MASONRY.UNSTATED"
+    assert TC.line_trade({"item_code": "ARCH.WALL_PANEL", "trade": "MASONRY", "physical_element": "walls t=0.20",
+                          "calculation": {"inputs": {}}}) == "MASONRY.200"
     assert TC.line_trade({"item_code": "STR.CONC.STRAP", "trade": "CONCRETE"}) == "CONCRETE.STRAP"
     assert TC.line_trade({"item_code": "DOOR.INTERNAL.PVC", "trade": "OPENINGS"}) == "DOORS"
     assert TC.line_trade({"item_code": "ARCH.PASSAGE", "trade": "OPENINGS"}) == "OTHER:OPENINGS"

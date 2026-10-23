@@ -79,6 +79,7 @@ Nothing here names a project, a sheet, a layer or a coordinate; stdlib only.
 from __future__ import annotations
 
 import json
+import re
 from collections import defaultdict
 
 SCHEMA = "URBAN_TRADE_COMPLETENESS_V1"
@@ -120,8 +121,12 @@ def element_key(floor, label):
     return f"{floor}:{label}"
 
 
+_T_RE = re.compile(r"\bt\s*=\s*(\d+(?:\.\d+)?)")
+
+
 def _thickness(line):
-    for v in (line.get("subtrade"), (line.get("calculation") or {}).get("inputs", {}).get("thickness_mm"),
+    pe = _T_RE.search(str(line.get("physical_element") or ""))
+    for v in ((pe.group(1) if pe else None), line.get("subtrade"), (line.get("calculation") or {}).get("inputs", {}).get("thickness_mm"),
               (line.get("calculation") or {}).get("inputs", {}).get("thickness")):
         if v is None:
             continue
@@ -139,15 +144,16 @@ def _thickness(line):
 
 
 def line_trade(line):
-    """the principal trade id of a canonical line; a block line with no stated thickness is MASONRY.UNSTATED (reported,
-    never put in a thickness it does not state); any other unmapped line keeps 'OTHER:<boq trade>'."""
+    """the principal trade id of a canonical line; a masonry line takes its thickness from its physical element
+    ('walls t=0.15'), its subtrade or its inputs, and with none stated is MASONRY.UNSTATED (reported, never put in a
+    thickness it does not state); any other unmapped line keeps 'OTHER:<boq trade>'."""
     code = line.get("item_code") or ""
     if code.startswith("STR.CONC."):
         fam = code[len("STR.CONC."):]
         return f"CONCRETE.{fam}" if fam in CONCRETE_FAMILIES else "CONCRETE.OTHER"
     if code.startswith("STR.REBAR"):
         return "REBAR"
-    if code in ("MAS.BLOCK", "ARCH.WALL_RUN"):
+    if code in ("MAS.BLOCK", "ARCH.WALL_RUN") or line.get("trade") == "MASONRY":
         return _thickness(line) or "MASONRY.UNSTATED"
     if code in ("ARCH.DOOR",) or code.startswith("DOOR."):
         return "DOORS"
@@ -310,7 +316,8 @@ def check(inventories=(), register=(), lines=(), line_links=None, verdicts=(), e
         # deductions
         if ln.get("deductions") or ln.get("gross") is not None:
             probs, td, ta = _deduction_problems(ln, oc, net_tol)
-            line_rows.append({"line_id": lid, "trade": tr, "keys": sorted(k for k, _c in lk), "gross": _r(ln.get("gross")),
+            line_rows.append({"line_id": lid, "trade": tr, "item_code": ln.get("item_code"), "unit": ln.get("unit"),
+                              "keys": sorted(k for k, _c in lk), "gross": _r(ln.get("gross")),
                               "deductions": _r(td), "additions": _r(ta), "net": _r(ln.get("measured_net")),
                               "openings": sorted({str(d.get("opening")) for d in ln.get("deductions") or []}),
                               "status": "REFUSED" if probs else ("RECONCILED" if _num(ln.get("gross")) and
@@ -435,7 +442,8 @@ def check(inventories=(), register=(), lines=(), line_links=None, verdicts=(), e
             status = "NOT_MEASURED"
         elif not inv[tr]:
             status = "NO_INDEPENDENT_INVENTORY"
-        elif c["MISSING"] or c["CONFLICT"] or c["UNRESOLVED"] or c["INVENTORY_GEOMETRY_ONLY"] or c["DUPLICATED"]:
+        elif c["MISSING"] or c["CONFLICT"] or c["UNRESOLVED"] or c["INVENTORY_GEOMETRY_ONLY"] or c["DUPLICATED"] or \
+                c["REGISTER_ONLY"]:
             status = "GAPS"
         else:
             status = "COMPLETE_AGAINST_INVENTORY"
