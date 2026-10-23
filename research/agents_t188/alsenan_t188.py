@@ -118,7 +118,20 @@ ELEMENTS = [
      "searched": {"STRUCT": SEARCH_ST},
      "detail": {"state": "NONE", "ref": "p.7, p.14, p.15, p.16 searched: no tank wall, base, opening or member "
                                         "(T-166 s.4)"}},
-]
+] + [
+    # the two voids in the 1F floor (own read this run). The architectural set prints exactly two 'VOID' labels, both on
+    # the 1st FLOOR PLAN; the structural set prints exactly two, both in the GROUND FLOOR ROOF SLAB frame (= the 1F
+    # floor). The pair is 7.745 / 6.369 m apart in the architecture and 7.744 / 6.369 m in the structure: one
+    # translation maps both, i.e. both disciplines draw the same two openings. Neither set prints 'VOID' on the 2F plan
+    # or the 1F roof slab: the voids end at 1F (label search of both sets; the slab panels above are T-139's).
+    {"id": f"VOID-1F-{k}", "kind": "VOID", "place": f"1F floor opening {k} (near the master bedroom labels)",
+     "occupies": ["1F"], "occupies_ref": "1F plan level +5.50 beside the label; GF roof slab sheet",
+     "presence": [pr("1F", "ARCH", f"ARCH 1st.FLOOR PLAN 'VOID' label {k} (P7757.dxf ab54dd55, layer 5)"),
+                  pr("1F", "STRUCT", f"ST GROUND FLOOR ROOF SLAB 'VOID' label {k} (ST7757 dxf.dxf, layer 5)")],
+     "searched": {"ARCH": "P7757.dxf text search: 2 'VOID' labels, both on the 1F plan",
+                  "STRUCT": "ST7757 dxf.dxf text search: 2 'VOID' labels, both on the GF roof slab"},
+     "ends": {"ref": "no 'VOID' on the 2F plan or the 1F roof slab sheet (text search of both sets)"}}
+    for k in ("a", "b")]
 
 # lines per BOQ state. 'storey' is the storey of this inventory (route G prints GROUND for GF on some lines; the
 # engine label is kept in ref).

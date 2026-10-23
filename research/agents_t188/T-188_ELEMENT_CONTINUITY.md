@@ -8,7 +8,7 @@ of absence), s.3 (geometric scope before numbers; a notation / shape typed from 
 
 Files: `engine/source/element_continuity_v1.py` (stdlib only, imports no engine module), `research/agents_t188/
 alsenan_t188.py` (development-villa inventory, three BOQ states), `FINDINGS_T188.csv`, `summary.json`,
-`tests/t188_element_continuity/` (villa K synthetic hand truth + adverse cases; development-villa cases), 39 tests.
+`tests/t188_element_continuity/` (villa K synthetic hand truth + adverse cases; development-villa cases), 40 tests.
 Repeat: `python3 -I research/agents_t188/alsenan_t188.py [--write]`.
 
 Sources: merged ledgers with checker verdicts, cited per element (T-184 924c2bd stairs, T-183 r2 6380294 pool, T-185
@@ -17,7 +17,9 @@ freelancer row ids, S8.6 / pre-S8 / S8.1A lift evidence) plus this run's own tex
 "Alsenan chalet project", sha 9f9d1179, private copy only): sheet titles (FOUNDATION PLAN, GROUND BEAMS PLAN, GROUND /
 FIRST / SECOND FLOOR ROOF SLAB, DETAIL OF SWIMMING POOL, DETAIL OF DOME), the lift footing mark FF (text 1676) under
 four column marks C1 / C2 / C2 / C9, and "WATER TANK PLACE" (text 1A85) on the second-floor roof slab. No other text on
-the structural set names a lift, pit or tank. Quantities are not re-derived here (none is produced).
+the structural set names a lift, pit or tank. Also own read of P7757.dxf (from P7757_DXF_COMPRESSED.zip, sha ab54dd55):
+exactly two 'VOID' labels, both on the 1st.FLOOR PLAN; the structural set prints exactly two, both in the GROUND FLOOR
+ROOF SLAB frame, with the same spacing (7.745 / 6.369 m vs 7.744 / 6.369 m). Quantities are not re-derived here (none is produced).
 
 ## 1. Result in engineering terms (findings, not quantities)
 
@@ -36,6 +38,7 @@ Per element, three BOQ states: A = released V2.9 + route G; V305 = candidate V3.
 | POOL-01 | steps NOT DRAWN (consultant item) | same | same | owner 16:45: an absence of evidence, never a verified zero |
 | pump room (freelancer RC:S17:13 walls, RC:S17:15 floor) | NOT DRAWN | NOT DRAWN | NOT DRAWN | case 3 reproduced: listed, no quantity, never 0 (his 1.080 + 2.400 m3 stay comparison-only) |
 | LIFT-01, occupies FDN .. 2F | pit HELD (opening 3.24 m2 and FF base drawn; depth / walls not printed), NO BOQ LINE (HELD), end above 2F not evidenced (REVIEW) | same | same | NEW: the lift has no structural BOQ line in any state while the freelancer prices lift walls (RC:S13:11); pit concrete HELD (designer item) |
+| VOID-1F-a / VOID-1F-b, 1F floor openings | none | none | none | both disciplines draw both voids at matching places; neither set prints a void at 2F: they end at 1F (no flag, correct) |
 | TANK-01 on the +13.90 roof | NO structural detail, NO BOQ LINE (HELD) | same | same | NEW (confirms T-166): the tank place and its T&B roof panels are drawn; walls / base nowhere; the panels are slab lines, not tank lines |
 
 Counts (summary.json): A 19 findings (HELD 9, REVIEW 7, NOT_DRAWN 3), V305 20 (HELD 10, REVIEW 7, NOT_DRAWN 3), V306 17 (HELD 7, REVIEW 7, NOT_DRAWN 3). No finding carries
@@ -66,7 +69,7 @@ Absence needs a declared search: without it the finding is NOT_SEARCHED (UNKNOWN
 - R-CONT-1: an element that spans storeys has a drawing and (where its kind needs one) a line on every storey its levels
   give; a missing storey is HELD, never folded into another storey's line.
 
-## 4. Tests (tests/t188_element_continuity, 39 pass)
+## 4. Tests (tests/t188_element_continuity, 40 pass)
 
 Villa K (3 storeys over a foundation, other names, plan places in metres): hand truth of 15 findings (module docstring
 of villa_k.py); stair folded storey normal vs adverse; a held placeholder accounts for a storey and keeps its state; a
@@ -77,7 +80,8 @@ without a search = NOT_SEARCHED; lift without pit vs pit drawn vs pit HELD; misr
 line; trade not allowed; reference row on no drawing; optional vs required component not drawn; ambiguous binding;
 void needs no line; 10 input guards (unknown kind / storey / discipline / detail state, missing refs, xy without
 tolerance, duplicate id, element and element_any, duplicate storeys). Development villa: the four known cases, the
-misread on the candidates only, lift / tank / lobby flight per state, committed CSV current.
+misread on the candidates only, lift / tank / lobby flight per state, the two voids joined and ending at 1F,
+committed CSV current.
 
 ## 5. Who is right (verdict proposals)
 
@@ -89,9 +93,10 @@ misread on the candidates only, lift / tank / lobby flight per state, committed 
 
 ## 6. Not done / uncertain
 
-Voids, shafts, parapets, ramps and columns are supported by the module and tested on villa K but NOT inventoried on the
-development villa this run (ST p.4 prints two 'VOID' labels; columns wait for the register's one-element-per-storey
-rework T-196 r2). Which convention line is DOME-A vs DOME-B is not established (route lines carry no place). The tank's
+Shafts, parapets, ramps and columns are supported by the module and tested on villa K but NOT inventoried on the
+development villa this run (the ST-01 shaft walls are lane A WALL elements inside per-floor wall aggregates, not bound per
+element; columns wait for the register's one-element-per-storey rework T-196 r2). The voids' end at 1F rests on a label
+search of both sets plus the slab panels above (T-139), not on a section cut. Which convention line is DOME-A vs DOME-B is not established (route lines carry no place). The tank's
 architectural sheets were not searched (kind does not require them). Pool rows A / V3.0.5 line ids without a route
 prefix are descriptors (the ledgers cite those lines by item, floor and figure). Designer items raised: tower dome
 structure; lift pit depth / walls / base level; tank walls / base; access to the tank (C-ST-4, T-184).

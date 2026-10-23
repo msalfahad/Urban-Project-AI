@@ -61,5 +61,12 @@ def test_lift_tank_and_lobby_flight(state):
     assert len(lobby) == (0 if state == "V306" else 1)
 
 
+def test_two_voids_join_both_disciplines_and_end_at_1f():
+    for s in RES:
+        assert rows(s, el="VOID-1F-a") == [] and rows(s, el="VOID-1F-b") == []
+    row = next(r for r in RES["A"]["elements"] if r["element"] == "VOID-1F-a")
+    assert row["occupies"] == ["1F"] and row["disciplines"]["ARCH"] and row["disciplines"]["STRUCT"]
+
+
 def test_committed_csv_is_current():
     assert (ROOT / "research/agents_t188/FINDINGS_T188.csv").read_text(encoding="utf-8") == T.findings_csv(RES)
