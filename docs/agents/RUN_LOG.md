@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-23 00:12 UTC | Lead | STARTED | run unknown | repo-attached routine | task state: board | report pending
 - 2026-10-23T00:01Z | Worker 2 | SUCCESS | T-195 READY (6c225209) | Document / revision register phase 1: 31 sheets (ARCH 12, ST 16, SAN 3) from 56 Drive files; no sheet prints a revision (FILE_PIN by sha256; Drive copies = SOURCE_MANIFEST); ST title-block dates 2025 (p.1-7) vs 2026 (p.9-16) UNKNOWN; citation check 543 citations in 72 merged folders: 0 not-in-register / 0 multi-revision, 5 page-in-file part citations (right sheet); missing from set: site, roof plan, door/window + finishes schedules, RCP, wet-room / stair arch details, water, electrical, A/C. No quantity moves. ERS: read, s.2-s.4 applied (rule UP-DOCREG-001 + lessons row proposed) | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none (firewall test fails only on pre-existing default_guard.py, T-190)
 - 2026-10-22T23:51Z | Verifier | STARTED | run session_01AjDjYjQwyHzquBanqjG7YM | repo-attached routine | task state: T-179 r2 (Gate B V3.0.5 r2), T-163 r3, T-194 READY seen in RUN_LOG | self-check pending
 - 2026-10-22T23:40Z | Worker 2 | STARTED | run session_01LQKbLesDfPm7PzP7JS1Fbw | repo-attached routine | task state: none yet | self-check pending
