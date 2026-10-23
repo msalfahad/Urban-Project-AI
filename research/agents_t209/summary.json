@@ -1,0 +1,92 @@
+{
+ "task": "T-209",
+ "rooms": 18,
+ "method_a": {
+  "rooms_assumed_owner_approved": [
+   "GF-07",
+   "GF-12",
+   "GF-13",
+   "GF-14",
+   "GF-16",
+   "1F-02",
+   "1F-03",
+   "1F-07",
+   "1F-08",
+   "1F-09",
+   "1F-12",
+   "2F-02"
+  ],
+  "net_m2": 340.4134,
+  "held_rooms": [
+   "GF-02",
+   "GF-03",
+   "GF-05",
+   "GF-06",
+   "GF-10",
+   "GF-11"
+  ],
+  "held_candidate_net_m2": 96.85,
+  "q48_rough_m2": 325.7461,
+  "over_door_band_m2": 14.6675
+ },
+ "method_b": {
+  "drawing_confirmed_rooms": [
+   "1F-08"
+  ],
+  "net_m2": [
+   22.5466,
+   23.2006
+  ],
+  "held_rooms": [
+   "GF-02",
+   "GF-03",
+   "GF-05",
+   "GF-06",
+   "GF-07",
+   "GF-10",
+   "GF-11",
+   "GF-12",
+   "GF-13",
+   "GF-14",
+   "GF-16",
+   "1F-02",
+   "1F-03",
+   "1F-07",
+   "1F-09",
+   "1F-12",
+   "2F-02"
+  ]
+ },
+ "freelancer": {
+  "total_m2": 433.83,
+  "stated_total_m2": 433.83,
+  "matched_rooms_m2": 295.44
+ },
+ "like_for_like": {
+  "rooms": 11,
+  "own_a_m2": 308.0713,
+  "freelancer_m2": 295.44,
+  "length_m2": -2.652,
+  "height_m2": 43.1933,
+  "doors_m2": -22.99,
+  "windows_m2": -4.92,
+  "max_abs_residual_m2": 5e-05,
+  "diff_m2": 12.6313,
+  "diff_pct": 4.28
+ },
+ "materials_method_a": {
+  "mortar_m3": 6.8083,
+  "mortar_m3_with_waste": 7.1487,
+  "cement_bags_owner": 54.4661,
+  "cement_bags_owner_with_waste": 57.1895,
+  "sand_m3_owner": 7.4891,
+  "sand_m3_owner_with_waste": 7.8635,
+  "cement_bags_theory": 52.1568,
+  "sand_m3_theory": 7.244,
+  "adhesive_bags": 68.0827,
+  "cement_bags_owner_buy": 55,
+  "cement_bags_owner_with_waste_buy": 58,
+  "adhesive_bags_buy": 69,
+  "status": "PROVISIONAL (Q-45 B practice values; G4 owner 8 bags / 1.10 m3, theory beside)"
+ }
+}
