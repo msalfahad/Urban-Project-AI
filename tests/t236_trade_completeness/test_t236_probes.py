@@ -1,7 +1,7 @@
 """T-236 regression baseline (owner 2026-10-23 19:45 (3)): the ADVERSARIAL_PROBE_2026-10-23.md probes 1b, 2, 3, 6 and 9
 ported as tests. Synthetic data only (villa "synthetic-villa-t236-probe", no client drawing).
 
-History contract: in the FIRST commit of T-236 every test below carries a strict xfail marker and fails on the merged
+History contract: in the FIRST commit of T-236 (5ebe0410) every test below carried a strict xfail marker and fails on the merged
 working head (the existing modules do not detect the fault: probe 1b / 2 / 9 through scope_crosswalk_v1, probe 3 through
 boq_line, probe 6 has no sheet-to-sheet level check at all); the fix commit (engine/source/trade_completeness_v1.py)
 removes each marker so the test passes. Each test first restates the probe's "actual today" on the existing module
@@ -18,8 +18,6 @@ Hand expectations:
 """
 
 from __future__ import annotations
-
-import pytest
 
 from engine.source import boq_line as BL
 from engine.source import scope_crosswalk_v1 as XW
@@ -47,7 +45,6 @@ def _links(lines):
     return {ln["line_id"]: [f"FDN:{ln['location']['element_id']}"] for ln in lines}
 
 
-@pytest.mark.xfail(strict=True, reason='ADVERSARIAL_PROBE 1b: fixed by T-236')
 def test_probe_1b_element_absent_from_register_and_boq_is_missing():
     els = [{"id": f"F{i}", "kind": "FOOTING", "floor": "FDN", "label": f"F{i}", "source": "ELEMENT_REGISTER_V0"}
            for i in range(1, 5)]
@@ -63,7 +60,6 @@ def test_probe_1b_element_absent_from_register_and_boq_is_missing():
     assert [k for k, s in st.items() if s == "MISSING"] == ["FDN:F5"]
 
 
-@pytest.mark.xfail(strict=True, reason='ADVERSARIAL_PROBE 2: fixed by T-236')
 def test_probe_2_one_element_on_two_lines_is_duplicated():
     lines = [_line(f"F{i}", 1.0 + i / 10) for i in range(1, 6)] + [_line("F1", 1.1, rule="R-T2")]
     tot = BL.totals(lines, by=("trade",))
@@ -74,7 +70,6 @@ def test_probe_2_one_element_on_two_lines_is_duplicated():
     assert dup == ["FDN:F1"]
 
 
-@pytest.mark.xfail(strict=True, reason='ADVERSARIAL_PROBE 3: fixed by T-236')
 def test_probe_3_one_opening_deducted_twice_is_refused():
     ln = BL.make_line(project_id="PX", revision_set_sha256=REV, item_code="MAS.BLOCK", unit="m2",
                       evidence_state="MEASURED", measured_net=6.8, element_id="W1", gross=10.0,
@@ -87,7 +82,6 @@ def test_probe_3_one_opening_deducted_twice_is_refused():
     assert row["problems"] == ["DEDUCTION_REPEATED:W05"]
 
 
-@pytest.mark.xfail(strict=True, reason='ADVERSARIAL_PROBE 6: fixed by T-236')
 def test_probe_6_storey_level_printed_differently_on_two_sheets_is_conflict():
     TC = _tc()
     rep = TC.check(levels=[{"sheet": "ARCH sheet 03", "storey": "GF", "datum": "FFL", "level_m": 1.00},
@@ -96,7 +90,6 @@ def test_probe_6_storey_level_printed_differently_on_two_sheets_is_conflict():
     assert len(conf) == 1 and conf[0]["storey"] == "GF" and conf[0]["datum"] == "FFL"
 
 
-@pytest.mark.xfail(strict=True, reason='ADVERSARIAL_PROBE 9: fixed by T-236')
 def test_probe_9_whole_trade_absent_still_gets_a_row():
     lines = [_line(f"F{i}", 1.0) for i in range(1, 6)]
     r = XW.crosswalk([], [{"row_id": "P1", "trade": "PAINT", "unit": "m2", "qty": 900, "row_kind": "DETAIL"}], {},
