@@ -120,7 +120,10 @@ accuracy figure is written (accuracy table compared 0 / 0 in this run; the score
   that BOTH missed is not excluded. Doors / windows completeness is against that census, not a fresh tag read.
 - The slab join is a count per storey: it confirms how many faces exceed the panels, not which.
 - Beams, ground beams, straps, masonry, finishes, stairs, railings, rebar: no merged independent inventory on
-  the working head (T-229 binds route G bands, so it is engine-derived and not used; T-017 is READY, not merged). Their rows are present with the next source named; nothing there is called complete.
+  the working head (T-229 binds route G bands, so it is engine-derived and not used). T-017's masonry census merged
+  (345f408b) at the end of this run; it is per wall, while both BOQs carry masonry only as storey x thickness aggregate
+  lines (MAS.BLOCK BLOCKED_RFI, GF / 1F / 2F x 0.15 / 0.20), so no wall key exists to join: next, the block-wall
+  register V2 (T-228). Their rows are present with the next source named; nothing there is called complete.
 
 ## 6. Lessons register row (ERS s.7, proposed)
 

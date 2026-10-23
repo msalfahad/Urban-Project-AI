@@ -59,7 +59,9 @@ NEXT_SOURCE = {
     "CONCRETE.GROUND_BEAM": "T-242 ground-beam table", "CONCRETE.STRAP": "T-242 / T-174 strap census",
     "CONCRETE.BLINDING": "T-233 CONC.BLINDING rows (one per footing pad; not joined: the engine bills blinding as one "
                          "line per plan, not per pad)",
-    "MASONRY.100": "T-017 masonry census (READY, not merged)", "MASONRY.150": "T-017", "MASONRY.200": "T-017",
+    "MASONRY.100": "T-017 masonry census (merged 345f408b after this run's report): per-wall, while the BOQ's masonry "
+                   "lines are storey x thickness aggregates (MAS.BLOCK BLOCKED_RFI) with no wall key; join via the "
+                   "block-wall register V2 (T-228)", "MASONRY.150": "as MASONRY.100", "MASONRY.200": "as MASONRY.100",
     "PLASTER": "a room-face census independent of the room model", "PAINT": "as PLASTER",
     "FLOOR_FINISH": "a room census from the printed room labels", "CEILING": "as FLOOR_FINISH",
     "WALL_FINISH": "a wet-room wall-face census", "WATERPROOFING": "a wet-room / roof zone census",
