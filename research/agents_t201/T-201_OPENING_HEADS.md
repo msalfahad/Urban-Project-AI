@@ -1,6 +1,6 @@
 # T-201: opening heads and sills for the openings the drawings leave undimensioned (development villa; rule for every villa)
 
-Worker 2, 2026-10-23 05:40 - 06:45 UTC, run session_01QKVywXjvGjRs11ZPNm9Hue. Lane A, gate 1, backlog-permitted. Files:
+Worker 2, 2026-10-23 05:40 - 06:20 UTC, run session_01QKVywXjvGjRs11ZPNm9Hue. Lane A, gate 1, backlog-permitted. Files:
 research/agents_t201/* and tests/t201_heads/* only (no engine file, rule file, registry, frozen method or released
 quantity changed). ERS: read; s.2 steps 1-4 (element, evidence hierarchy, reconstruction, reconciliation), s.3 (a
 notation's datum before its arithmetic; build before deduct), s.4 (rule + test), s.7 row below. Development villa, not
