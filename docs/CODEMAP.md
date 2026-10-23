@@ -14,15 +14,15 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `data/` | 19 | Registries (owner facts, project rules, trades) and trade rules. Large run data is gitignored. |
 | `docs/` | 72 | Design notes and the generated maps. |
 | `documents/` | 5 |  |
-| `engine/` | 646 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
+| `engine/` | 647 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 2807 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 2828 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 9 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 1429 | pytest suites, one folder per round. |
+| `tests/` | 1437 | pytest suites, one folder per round. |
 | `tools/` | 109 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (254 modules)
@@ -387,7 +387,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `workbooks.py` | 242 | MEDIUM | 0 | REPORTING V3 - workbook layouts (generic over a BOQ_LINES model). |
 | `workbooks_v3b.py` | 308 | MEDIUM | 0 | REPORTING V3b - workbook layouts over the two-view line model (TECHNICAL_QTO / COMMERCIAL_BOQ). |
 
-## `engine/source/` (294 modules)
+## `engine/source/` (295 modules)
 
 | Module | Lines | Risk | Imp | Purpose |
 |---|---|---|---|---|
@@ -522,6 +522,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `lintel_qto.py` | 218 | CRITICAL | 4 | LINTEL QTO - schedule binding, lintel geometry, bar lengths and counts for masonry-wall lintels (generic). |
 | `lintel_release_audit.py` | 151 | HIGH | 1 | LINTEL RELEASE AUDIT - whether a released lintel's bearing, end supports and measurement have authority (generic). |
 | `marble_thresholds.py` | 125 | MEDIUM | 2 | MARBLE THRESHOLDS (R8.15) - a door threshold whose whole strip is a separate MARBLE_THRESHOLD trade element. |
+| `masonry_area_v1.py` | 288 | MEDIUM | 1 | MASONRY_AREA_V1 (T-108): block wall area, volume and installed white-block units per wall run, from the member above. |
 | `masonry_centreline.py` | 461 | MEDIUM | 3 | MASONRY CENTRELINE RUN (T-027, MASONRY_CENTRELINE_V1) - the masonry run of one floor per wall thickness, measured |
 | `masonry_centreline_v2.py` | 880 | MEDIUM | 2 | MASONRY CENTRELINE RUN V2 (T-125, MASONRY_CENTRELINE_V2) - the masonry run of one floor per wall thickness on the |
 | `material_result.py` | 168 | MEDIUM | 7 | MATERIAL RESULT (M9 S1) - what a layout consumes, kept apart from the net BOQ quantity (generic; stdlib). |
@@ -552,7 +553,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `opening_omission_guard.py` | 497 | MEDIUM | 1 | OPENING OMISSION GUARD (T-077): every drawn window and door appears once - MEASURED by the engine, or HELD with |
 | `opening_register.py` | 143 | MEDIUM | 2 | OPENING REGISTER (RC1) - one record per physical opening occurrence, with the authority of every attribute. |
 | `opening_reveals.py` | 106 | MEDIUM | 4 | OPENING REVEAL SURFACES (R8.14) - the jambs and soffit of an opening as their own surfaces, each owned once. |
-| `opening_scope_v1.py` | 269 | MEDIUM | 1 | OPENING_SCOPE_V1 (T-175): one opening, several physical consequences, each deducted only from what is built. |
+| `opening_scope_v1.py` | 269 | MEDIUM | 2 | OPENING_SCOPE_V1 (T-175): one opening, several physical consequences, each deducted only from what is built. |
 | `owner_claims.py` | 242 | HIGH | 12 | OWNER / SOURCE CLAIMS BOUND TO SOURCE IDENTITY (R8.10). |
 | `owner_facts.py` | 144 | HIGH | 15 | OWNER PHYSICAL FACTS (R8.12) - a generic authority type, kept apart from owner CLAIMS (owner_claims). |
 | `owner_finish_scope.py` | 262 | MEDIUM | 9 | OWNER FINISH SCOPE (M9 Phase 2B-1, ARCH_TAKEOFF_V2.3 only) - the owner wet-area scope and the surfaces V2.2 left as |
@@ -1035,6 +1036,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t102_section_cut_binding/` | 1 |
 | `tests/t104_wall_frames/` | 1 |
 | `tests/t106_skirting_audit/` | 1 |
+| `tests/t108_masonry_area/` | 2 |
 | `tests/t109_facade_passage/` | 1 |
 | `tests/t116_stair_floor_residue/` | 1 |
 | `tests/t120_membrane_release_v213/` | 1 |
@@ -1085,6 +1087,8 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t200_level_chain/` | 2 |
 | `tests/t201_heads/` | 3 |
 | `tests/t202_guard_sweep/` | 1 |
+| `tests/t204_lift_tank/` | 2 |
+| `tests/t207_openings_closure/` | 2 |
 | `tests/water_tank_s8_4/` | 3 |
 | `tests/zz_freeze_integrity/` | 2 |
 
@@ -1221,6 +1225,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t105/` | 4 |
 | `research/agents_t106/` | 2 |
 | `research/agents_t107/` | 1 |
+| `research/agents_t108/` | 8 |
 | `research/agents_t109/` | 2 |
 | `research/agents_t110/` | 10 |
 | `research/agents_t111/` | 6 |
@@ -1302,6 +1307,8 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t200/` | 4 |
 | `research/agents_t201/` | 10 |
 | `research/agents_t202/` | 6 |
+| `research/agents_t204/` | 6 |
+| `research/agents_t207/` | 7 |
 | `research/alsenan_arch_truth_05/` | 28 |
 | `research/alsenan_column_rebar_s3/` | 17 |
 | `research/alsenan_column_rebar_s3_1/` | 15 |

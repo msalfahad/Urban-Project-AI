@@ -1,0 +1,8 @@
+state,review,code,status,element,storey,lines,why
+V306,R2,COMPONENT_HELD,HELD,LIFT-01,,,"PIT: drawn, pit depth, pit walls and pit base level not printed (pre-S8 LIFT_PIT_AND_WALLS BLOCKED_NEEDS_AUTHORITY; FF legs drawn, not dimensioned: ELEMENT_REGISTER)"
+V306,R2,NO_BOQ_LINE,HELD,LIFT-01,,,"drawn, but no STRUCTURE line carries it: held, never 0"
+V306,R2,NO_BOQ_LINE,HELD,TANK-01,,,"drawn, but no STRUCTURE line carries it: held, never 0"
+V306,R2,NO_STRUCTURAL_DETAIL,HELD,TANK-01,,,no structural detail fixes its geometry: the concrete / steel stays HELD (designer item)
+V306,R3,END_NOT_EVIDENCED,REVIEW,LIFT-01,2F,,"occupies up to 2F; no drawing is cited showing that it does not continue to ROOF (a lower plan never implies continuation, nor its end)"
+V306+T204,R2,COMPONENT_HELD,HELD,LIFT-01,,,"PIT: drawn, pit walls DRAWN in plan (net ring 1.10 m2); pit depth not printed ('as per lift manufacturer')"
+V306+T204,R2,NO_STRUCTURAL_DETAIL,HELD,TANK-01,,,no structural detail fixes its geometry: the concrete / steel stays HELD (designer item)

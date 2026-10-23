@@ -1,0 +1,105 @@
+{
+ "continuity_counts": {
+  "V306": {
+   "by_code": {
+    "BINDING_AMBIGUOUS REVIEW": 2,
+    "COMPONENT_HELD HELD": 1,
+    "COMPONENT_NOT_DRAWN NOT_DRAWN": 1,
+    "END_NOT_EVIDENCED REVIEW": 1,
+    "KIND_MISMATCH HELD": 1,
+    "NOT_DRAWN NOT_DRAWN": 2,
+    "NO_BOQ_LINE HELD": 2,
+    "NO_STRUCTURAL_COUNTERPART HELD": 1,
+    "NO_STRUCTURAL_DETAIL HELD": 2,
+    "TYPICAL_DETAIL_ONLY REVIEW": 4
+   },
+   "by_status": {
+    "HELD": 7,
+    "NOT_DRAWN": 3,
+    "REVIEW": 7
+   },
+   "elements": 12,
+   "findings": 17,
+   "lines": 14,
+   "reference_rows": 11
+  },
+  "V306+T204": {
+   "by_code": {
+    "BINDING_AMBIGUOUS REVIEW": 2,
+    "COMPONENT_HELD HELD": 1,
+    "COMPONENT_NOT_DRAWN NOT_DRAWN": 1,
+    "KIND_MISMATCH HELD": 1,
+    "NOT_DRAWN NOT_DRAWN": 2,
+    "NO_STRUCTURAL_COUNTERPART HELD": 1,
+    "NO_STRUCTURAL_DETAIL HELD": 2,
+    "TYPICAL_DETAIL_ONLY REVIEW": 4
+   },
+   "by_status": {
+    "HELD": 5,
+    "NOT_DRAWN": 3,
+    "REVIEW": 6
+   },
+   "elements": 12,
+   "findings": 14,
+   "lines": 22,
+   "reference_rows": 11
+  }
+ },
+ "continuity_lift_tank": {
+  "V306": [
+   "LIFT-01:COMPONENT_HELD:HELD",
+   "LIFT-01:END_NOT_EVIDENCED:REVIEW",
+   "LIFT-01:NO_BOQ_LINE:HELD",
+   "TANK-01:NO_BOQ_LINE:HELD",
+   "TANK-01:NO_STRUCTURAL_DETAIL:HELD"
+  ],
+  "V306+T204": [
+   "LIFT-01:COMPONENT_HELD:HELD",
+   "TANK-01:NO_STRUCTURAL_DETAIL:HELD"
+  ]
+ },
+ "freelancer_reconciliation": {
+  "at_his_height_column_part_m3": 0.75,
+  "at_his_height_net_m3": 1.65,
+  "closes": true,
+  "column_sections_in_ring_m2": 0.5,
+  "drawn_gross_ring_m2": 1.6,
+  "drawn_height": "HELD (not printed: lift manufacturer)",
+  "drawn_net_ring_m2": 1.1,
+  "freelancer_m3": 2.4,
+  "his_height_m": 1.5,
+  "his_plan_m2": 1.6,
+  "plan_difference_m2": 0.0,
+  "verdict": "plan scope: AGREE (8.00 m centreline x 0.20 = the drawn ring 1.60 m2); ownership: ENGINE RIGHT on 0.50 m2 x h (the four lift columns stand in the ring band and his neck rows also bill C1 x1, C2 x4 (2 of them the lift's), C9 x2 (1 the lift's) at 1.50 m: at his height 0.750 m3 counted twice, R-CONC-OWN-1); height: UNRESOLVED (his 1.50 m is his neck height, not printed; p.14 leaves the pit depth to the lift manufacturer)"
+ },
+ "lift": {
+  "column_in_ring_m2": 0.5,
+  "envelope_m2": 4.89,
+  "envelope_outline_m": 8.9,
+  "face_run_inner_m": 5.5,
+  "face_run_outer_m": 5.5,
+  "held": 9,
+  "measured": 15,
+  "net_centreline_m": 5.5,
+  "ring_gross_m2": 1.6,
+  "ring_net_m2": 1.1
+ },
+ "lift_findings": [
+  {
+   "code": "TYPICAL_DETAIL",
+   "column": null,
+   "status": "REVIEW",
+   "why": "pit geometry from a typical detail (ST7757.pdf p.14 DETAIL OF LIFT WITH ISOLATED FOOTING (WITHOUT BASEMENT), typical): arrangement and bars, the 'as per' dimensions stay open"
+  }
+ ],
+ "tank": {
+  "held": 3,
+  "listed": 2,
+  "measured": 0
+ },
+ "tank_missing": [
+  "walls",
+  "base",
+  "cover"
+ ]
+}
