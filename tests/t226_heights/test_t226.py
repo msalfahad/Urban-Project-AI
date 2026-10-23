@@ -104,6 +104,21 @@ def test_mirror_and_rotation_invariant_gross():
     assert g1["gross_m2"] == pytest.approx(2.0 * 3.00 + 1.0 * 3.44) == g2["gross_m2"]
 
 
+def test_r7_merged_beam_column_face_is_split_by_the_column_below():
+    assert H.split_face(True, True, "X1") == "COLUMN"           # inside the column below: concrete, no block
+    assert H.split_face(False, True, "X1") == "BEAM"            # beside a narrower column, under the band
+    assert H.split_face(False, True, None) == "BEAM_UNLABELLED"  # adverse: band without a mark stays R2
+    assert H.split_face(False, False) == "NONE"
+
+
+def test_alsenan_gf_w07_end_under_cb1():
+    """GF-W07 east end: 0.98 m under B1 (h 4.10) + 0.12 m under CB1 H 75 (h 3.75), scaled to the 1.10 m run."""
+    d = {r["wall_id"]: r for r in _csv(HERE / "register_delta.csv")}
+    hw = (0.98 * 4.10 + 0.12 * 3.75) / 1.10
+    assert float(d["GF-W07"]["gross_m2"]) == pytest.approx(1.10 * hw, abs=0.0015)
+    assert float(d["GF-W07"]["net_m2"]) == pytest.approx(1.10 * hw, abs=0.0015)     # no opening in the run
+
+
 # ------------------------------------------------------------------------------------------------ D-12
 def test_d12_range_never_chosen_and_product_flag():
     r = H.d12_range(10.0, 0.20, 0.25, "BLACK")
@@ -141,7 +156,7 @@ def test_alsenan_pipeline_and_register_unchanged_baseline():
 
 def test_alsenan_delta_only_r4_walls_and_held_stay_held():
     d = {r["wall_id"]: r for r in _csv(HERE / "register_delta.csv")}
-    assert set(d) == {"GF-W10", "1F-W05", "1F-W11", "1F-W16"}
+    assert set(d) == {"GF-W07", "GF-W10", "1F-W05", "1F-W11", "1F-W16"}
     pr = _csv(HERE / "PIECE_RESOLUTION.csv")
     closed = {r["wall_id"] for r in pr if r["rule"] == "R4"}
     assert set(d) == closed
@@ -149,7 +164,7 @@ def test_alsenan_delta_only_r4_walls_and_held_stay_held():
         if r["rule"] != "R4":
             assert r["status"] == "HELD" and r["height_m"] == ""       # never a default height
     v1 = {r["wall_id"]: r for r in _csv(ROOT / "research/agents_t225/BLOCKWORK_WALL_REGISTER_V1.csv")}
-    for w in ("GF-W03", "GF-W36", "GF-W07", "1F-W04", "2F-W02", "2F-W03", "2F-W05", "2F-W07"):
+    for w in ("GF-W03", "GF-W36", "1F-W04", "2F-W02", "2F-W03", "2F-W05", "2F-W07"):
         assert w not in d and v1[w]["gross_class"] == "HELD"
     # 1F-W05: hand check 5.98 m x 3.70 + 0.22 m x 3.45 over 6.20 sampled, scaled to 6.30 m; less W14 3.920
     w5 = d["1F-W05"]

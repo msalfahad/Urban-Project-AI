@@ -14,8 +14,9 @@ Evidence read this run (cited by Drive folder and title only; no drawing content
   20 / 120; roof-slab plans around each held piece (labels, band edges, column boxes).
   P7757.dxf (sha ab54dd55): wall bands in the ST frame (T-108 translations GF 202.33 / 841.64, 1F 208.46 / 841.64 m:
   GF-W36 lies on the 0.50 m band north of the CB6 column, 1F-W05 under the CB10 band, GF-W07 ends at the CB1 column).
-  Alsenan_Architectural_P7757_Pages_11-12.pdf p.1 SECTION B-B and p7757_arch_sheet10.pdf SECTION A-A: the cuts hatch
-  masonry and concrete alike and outline no beam separately: R6, not a depth source (neither confirms nor contradicts).
+  Alsenan_Architectural_P7757_Pages_11-12.pdf p.1 SECTION B-B: cuts the 1F end walls (CB10 end by the section marks
+  in P7757.dxf); a solid head band 0.49 .. 0.51 m from the roof-slab top (scaled, not printed) corroborates CB10 H 50.
+  p7757_arch_sheet10.pdf SECTION A-A and B-B cut none of CB2 / B6 (section marks mapped into the ST frame).
 
 Usage: python3 -I research/agents_t226/alsenan_t226.py [--check]
 """
@@ -57,11 +58,13 @@ PIECES = [
     dict(wall="GF-W10", member="BM-GF-055", mark="CB2", kind="BEAM", length=3.36, marks=["CB2"], width_conflict=True,
          sources=[{"kind": "SCHEDULE", "depth_m": 0.50}], evidence="as above (span 2)"),
     dict(wall="1F-W05", member="BM-1F-031", mark="CB10", kind="BEAM", length=3.68, marks=["CB10"], width_conflict=True,
-         sources=[{"kind": "SCHEDULE", "depth_m": 0.50}, {"kind": "ARCH_SECTION_NO_OUTLINE", "depth_m": None}],
+         sources=[{"kind": "SCHEDULE", "depth_m": 0.50}],
          evidence=f"{ST}: continuous-beam schedule row CB10 B 25 / H 50 (2 spans 3.0 / 4.1); FIRST FLOOR ROOF SLAB band "
                   "0.30 drawn (T-110 CONFLICT D-02 on width only); the 0.20 wall lies inside the band over its whole "
-                  "run; section B-B (Alsenan_Architectural_P7757_Pages_11-12.pdf p.1) cuts this end wall but outlines "
-                  "no beam: R6, not a depth source"),
+                  "run; section B-B (Alsenan_Architectural_P7757_Pages_11-12.pdf p.1) cuts the 1F end walls and draws "
+                  "at both ends a solid head band continuous with the roof slab, 0.49 .. 0.51 m from the slab top "
+                  "(scaled at 300 dpi, scale checked on the 4.20 m storey; not a printed dimension): corroborates "
+                  "H 50, not used as the source"),
     dict(wall="1F-W05", member="BM-1F-031", mark="CB10", kind="BEAM", length=2.30, marks=["CB10"], width_conflict=True,
          sources=[{"kind": "SCHEDULE", "depth_m": 0.50}], evidence="as above (span 1)"),
     dict(wall="1F-W11", member="BM-1F-031", mark="CB10", kind="BEAM", length=0.12, marks=["CB10"], width_conflict=True,
@@ -102,14 +105,17 @@ PIECES = [
                   "B7 arc, closed by a line at the arc start; collinear with B4 (south of CB6); no text of its own; the "
                   "wall band lies exactly under it. NEW: this 0.50 m beam piece is in no T-110 register record "
                   "(concrete 0.20 x 0.50 x 0.50 .. 0.75 = 0.050 .. 0.075 m3 in no line): lane S"),
-    # column-edge piece (CONFLICT of column outline between the disciplines), not 'nothing drawn'
-    dict(wall="GF-W07", member="CB1 band / column box", mark="(column edge)", kind="BEAM", length=0.12, marks=["CB1"],
-         sources=[], width_conflict=False,
-         evidence=f"{ST}: the wall's east end: the architecture draws the column 0.20 wide, the structure draws the "
-                  "CB1 band and its column box 0.35 wide (0.14 m more on the wall side); the 0.12 m "
-                  "stretch is block under CB1 (H 75) if the architecture governs, concrete column if the structure "
-                  "does: column-outline CONFLICT (T-217 rule: kept apart, never picked)",
-         conflict_bound=(0.0, 0.75)),
+    # the east-end stretch between the column face and the CB1 band edge: a beam IS drawn above (T-139 merged the
+    # band and the column into one face 'BEAM_OR_COLUMN'); the column below CB1 there is 200 x 500 (T-229 MERGED,
+    # support outline 344 'COLUMN_BELOW', SUPPORT_CUT_BESIDE: the 0.35 beam is wider than its column) = the
+    # architecture's 0.20 x 0.50 column outline: the stretch is block under CB1
+    dict(wall="GF-W07", member="BM-GF-042", mark="CB1", kind="BEAM", length=0.12, marks=["CB1"], width_conflict=False,
+         sources=[{"kind": "SCHEDULE", "depth_m": 0.75}], form="FACE", face="BEAM_OR_COLUMN face GF-104",
+         evidence=f"{ST}: continuous-beam schedule row CB1 B 35 / H 75 (spans 7.5 / 5.7); GROUND FLOOR ROOF SLAB: the wall's "
+                  "east end runs 0.12 m under the 0.35 CB1 band before the column face; the column below CB1 is "
+                  "200 x 500 (T-229 merged: CB1 wider than its column) = the architectural column outline; T-139 had "
+                  "merged band + column into one 'BEAM_OR_COLUMN' face, so 'nothing to stop at' was a face-class "
+                  "artefact, not an absent member"),
 ]
 DOME = [("1F-W11", 4.01), ("1F-W13", 2.98), ("1F-W13", 1.40), ("1F-W17", 0.44), ("1F-W18", 0.44), ("1F-W24", 1.02)]
 
@@ -135,7 +141,13 @@ def resolve_all():
 def rewrite(s, closed):
     """Rewrite the closed pieces of one T-143 'members_above' string from CONFLICT to their printed depth; every other
     piece is left exactly as merged."""
-    for mid, mark, d, h in closed:
+    for mid, mark, d, h, face in closed:
+        if face:
+            pat = re.compile(re.escape(face) + r" above \(T-139\): no beam or slab underside to stop at: (\d+\.\d+) m -> h HELD")
+            s, n = pat.subn(lambda m: f"{mark} {mid} b 0.35 h {d} [CALCULATED]: {m.group(1)} m -> h {h:.2f}", s)
+            if n == 0:
+                raise SystemExit(f"closed face piece {face} not found")
+            continue
         pat = re.compile(re.escape(mark) + r" " + re.escape(mid) + r" b (?:(?! BM-).)*?\[CONFLICT\]: (?:(?! BM-).)*?: "
                          r"(\d+\.\d+) m -> h HELD \(candidate [\d.]+\)")
         s, n = pat.subn(lambda m: f"{mark} {mid} b width-CONFLICT h {d} [CALCULATED]: {m.group(1)} m -> h {h:.2f}", s)
@@ -163,7 +175,7 @@ def closed_by_string(res):
     for p in res:
         if p["res"]["rule"] == "R4":
             s = t143[p["wall"]]["members_above"]
-            k = (p["member"], p["mark"], p["res"]["depth_m"], p["res"]["height_m"])
+            k = (p["member"], p["mark"], p["res"]["depth_m"], p["res"]["height_m"], p.get("face"))
             if k not in patch[s]:
                 patch[s].append(k)
     return dict(patch), t143
@@ -264,7 +276,7 @@ def build():
         "pipeline_reproduces_T108_BY_WALL": before_txt == (ROOT / "research/agents_t108/T108_BY_WALL.csv").read_text(encoding="utf-8"),
         "builder_reproduces_register_v1": same_v1,
         "pieces": len(PIECES), "pieces_closed_R4": sum(1 for p in res if p["res"]["rule"] == "R4"),
-        "pieces_held": {k: sum(1 for p in res if p["res"]["rule"] == k) for k in ("R2", "R3", "CONFLICT (column outline)")},
+        "pieces_held": {k: sum(1 for p in res if p["res"]["rule"] == k) for k in ("R1", "R2", "R3", "R5", "R6")},
         "dome_pieces_T227": len(DOME),
         "walls_changed": [d["wall_id"] for d in delta],
         "net_established_m2": {s: {"before": est(before, s), "after": est(after, s)} for s in RV.ESTABLISHED},

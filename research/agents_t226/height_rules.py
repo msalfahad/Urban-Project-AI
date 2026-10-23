@@ -18,6 +18,9 @@ Rule UP-MAS-HPIECE-001 (proposed, T-226; any villa). Which drawn evidence closes
   R5  one mark whose printed depths disagree (schedule vs section) -> CONFLICT range, HELD.
   R6  a drawing that does not outline the member separately (an architectural section hatching masonry and concrete
       alike) is NOT a depth source: it neither confirms nor contradicts a printed depth and is refused as one.
+  R7  a slab-plan face that merges a beam band and the column under it ('BEAM_OR_COLUMN') is not 'nothing drawn':
+      the stretch inside the column-BELOW outline is column (no block; cut from the run), the stretch under the band
+      beside the column is under that beam (R4 on its mark); only a stretch under neither is R1.
 
 Rule UP-MAS-D12-001 (proposed, T-226; any villa). A wall run with a column inside it, where the architecture prints
 one thickness and a structural note asks for the column thickness: gross m2 is unchanged (the column stretch is
@@ -119,6 +122,18 @@ def resolve_piece(piece, storey_m):
     return {"status": DC, "height_m": h(ds[0]), "bounds_m": None, "rule": "R4", "depth_m": ds[0],
             "why": f"{f2f} - {ds[0]} (one mark, printed depth agrees on every source)" + (f"; {note}" if note else ""),
             "dependency": note}
+
+
+def split_face(in_column_below, under_band, mark=None):
+    """R7: what sits over a stretch that a merged beam / column face covers. Returns 'COLUMN' (no block there),
+    'BEAM' (under the band of `mark`: resolve with R4) or 'NONE' (R1)."""
+    if in_column_below:
+        return "COLUMN"
+    if under_band:
+        if not mark:
+            return "BEAM_UNLABELLED"          # R2
+        return "BEAM"
+    return "NONE"
 
 
 # ------------------------------------------------------------------------------------------------ D-12
