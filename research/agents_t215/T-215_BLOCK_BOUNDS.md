@@ -1,6 +1,6 @@
 # T-215: block-wall HELD bounds closed from the drawings, part 1: the GF 45 deg and column ends (development villa)
 
-Worker 2, 2026-10-23 13:41 - 14:25 UTC, run session_01Q2V7fPynCjJRtDTxJMf6Eb. Lane A, gate 2. Files: research/agents_t215/*,
+Worker 2, 2026-10-23 13:41 - 14:20 UTC, run session_01Q2V7fPynCjJRtDTxJMf6Eb. Lane A, gate 2. Files: research/agents_t215/*,
 tests/t215_junction_close/* only (no engine, rule, registry, frozen or released file changed; T-108 files untouched).
 ERS: read; s.2 steps 1-4 (element, evidence, first-principles reconstruction, reconciliation), s.3 (one element counted
 once; physical vs procurement), s.4 (rule + test), s.7 row below. Drawings cited by Drive title and DXF handle only; no
@@ -103,8 +103,12 @@ count a piece twice and are refused. A held end is closed by area, never by exte
   section read (DWF), not the plan; same method then applies to the stub ends.
 - 1F-W14 + W15 with P-1F-01 (net 10.971 .. 16.223 m2) and P-1F-01 masonry above its lintel 0 .. 4.992 m2: head drawn
   on no sheet (T-201 / T-207 re-checked; section B-B draws two leafed doors there: a drawing conflict for the designer).
-- P-GF-05 masonry above the lintel 2.232 .. 2.700 m2: B1 soffit level at the opening (SW elevation face to +4.70, section
-  B-B beam stubs to +4.95 at the court wall, T-143 calculated +5.10 with the structural top HELD, T-200 / T-206 / T-214).
+- P-GF-05 masonry above the lintel 2.232 .. 2.700 m2: B1 soffit level at the opening. New since T-108: T-214 (MERGED
+  b29060c2 while this run worked) prints the 1F DRY structural top +5.45 (DRAWING-CONFIRMED), so B1 (0.40) would soffit
+  at +5.05 and the masonry be 1.20 x (5.05 - 2.85) = 2.640 m2 IF the zone over P-GF-05 is 1F dry floor; it stays HELD
+  until (a) the zone over the opening is read (1F dry floor vs GF-roof terrace, whose build-up T-214 holds) and (b) the
+  section B-B beam stub drawn to +4.95 at the court wall is reconciled with 5.05 (0.10 m = a 0.50 deep member or a
+  different beam). Next piece; not an owner question.
 - CB2 width (BM-GF-055, existing T-110 CONFLICT): 0.013 m2 on GF-W22 and 0.014 m2 on GF-W34 stay a range until the
   designer answers the CB2 item; not an owner question.
 
