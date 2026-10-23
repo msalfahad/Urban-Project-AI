@@ -64,7 +64,15 @@ RELEASED = {
     # (engine/source/slab_engine.py 'uniform' rule) although general note 18 gives them 0.16
     "thickness_spread": [("2F", 31.25, 0.18, NOTE_T)],
 }
-CANDIDATE = None   # filled from the V3.0.8 run (see summary 'candidate'); None = not reproduced in this run
+# ---- candidate ARCH_TAKEOFF_V3.0.7 / V3.0.8 (research/agents_t167/v304_run.py + research/agents_t231/v308_run.py, own
+# run: V3_0_7_BOQ_LINES.csv 197c5599 and V3_0_8_BOQ_LINES.csv 57fe219a REPRODUCED; every V3.0.x carries the same
+# STR.CONC.SLAB lines). The M4 project profile gives the untagged 2F panels 0.16 (no spread), the west dome square line
+# is gone; the same 13 non-slab faces are still slab lines (T-146 QUEUED), the two 2F ones at 0.16.
+CANDIDATE = {
+    "per_floor": {"GF": 33.489804, "1F": 19.917771, "2F": 7.511642},
+    "bounded": [],
+    "not_slab_faces_2F_t": 0.16,
+}
 
 
 def load_panels():
@@ -131,6 +139,12 @@ def main(write=True):
         rel[fl] = dict(released=RELEASED["per_floor"][fl], drawing=hand[fl], components=comps,
                        **SL.reconcile(RELEASED["per_floor"][fl], hand[fl], comps))
     rel_total = sum(RELEASED["per_floor"].values())
+    cand = {}
+    for fl in ("GF", "1F", "2F"):
+        comps = [("%s %s (not slab)" % (f[1], f[5]), f[2] * (CANDIDATE["not_slab_faces_2F_t"] if fl == "2F" else f[3]))
+                 for f in RELEASED["not_slab_faces"] if f[0] == fl]
+        cand[fl] = dict(candidate=CANDIDATE["per_floor"][fl], drawing=hand[fl],
+                        **SL.reconcile(CANDIDATE["per_floor"][fl], hand[fl], comps))
     # freelancer vs drawing, per floor (his lump areas)
     t16 = {fl: sum(p["area_m2"] for p in panels if p["storey"] == fl and p["t_m"] == 0.16) for fl in hand}
     t18 = {fl: sum(p["area_m2"] for p in panels if p["storey"] == fl and p["t_m"] == 0.18) for fl in hand}
@@ -170,7 +184,10 @@ def main(write=True):
                                                               components=[(c, round(m, 6)) for c, m in v["components"]],
                                                               residual=round(v["residual_m3"], 6))
                                                       for k, v in fre.items()}),
-        candidate=CANDIDATE,
+        candidate=dict(total=round(sum(CANDIDATE["per_floor"].values()), 6), bounded=CANDIDATE["bounded"],
+                       per_floor={k: dict(candidate=v["candidate"], drawing=round(v["drawing"], 6),
+                                          diff=round(v["diff_m3"], 6), explained=round(v["explained_m3"], 6),
+                                          residual=round(v["residual_m3"], 6)) for k, v in cand.items()}),
     )
     if not write:
         return summary, rows_out, line, part

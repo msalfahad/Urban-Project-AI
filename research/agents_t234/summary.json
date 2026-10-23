@@ -139,5 +139,31 @@
    }
   }
  },
- "candidate": null
+ "candidate": {
+  "total": 60.919217,
+  "bounded": [],
+  "per_floor": {
+   "GF": {
+    "candidate": 33.489804,
+    "drawing": 33.06952,
+    "diff": 0.420284,
+    "explained": 0.42028,
+    "residual": 4e-06
+   },
+   "1F": {
+    "candidate": 19.917771,
+    "drawing": 19.756576,
+    "diff": 0.161195,
+    "explained": 0.161438,
+    "residual": -0.000243
+   },
+   "2F": {
+    "candidate": 7.511642,
+    "drawing": 7.4543,
+    "diff": 0.057342,
+    "explained": 0.057343,
+    "residual": -1e-06
+   }
+  }
+ }
 }

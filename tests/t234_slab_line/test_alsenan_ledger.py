@@ -64,3 +64,11 @@ def test_freelancer_reconciled():
     assert SUM["measured_m3"] - fr["total"] == pytest.approx(0.462996, abs=1e-5)
     for fl, v in fr["per_floor"].items():
         assert abs(v["residual"]) < 1e-9, fl
+
+
+def test_candidate_reconciled_no_spread():
+    c = SUM["candidate"]
+    assert c["total"] == pytest.approx(60.919217, abs=1e-6) and c["bounded"] == []
+    assert c["total"] - SUM["measured_m3"] == pytest.approx(0.638821, abs=1e-5)   # the 13 non-slab faces only
+    for fl, v in c["per_floor"].items():
+        assert abs(v["residual"]) < 5e-4, fl

@@ -15,7 +15,7 @@ claim. Drawings named by Drive folder and title; entities by DXF handle; areas, 
 Runs: T-139 `slab_faces.py` + `slab_ledger.py` on the Drive copy: **PANELS.csv byte-identical** to the merged file
 (62 panels, 375.0481 m2, 60.2804 m3). Released baseline A `tools/release_baseline.py run
 research/agents_t165/baselines/V29_ROUTEG_NO_PROFILE.json` on the working head 63f4d90e: **REPRODUCED**, 1,455 lines,
-BOQ_LINES.csv b96185d4. Candidate V3.0.8: see section 5 (row 'candidate').
+BOQ_LINES.csv b96185d4. Candidate: `research/agents_t167/v304_run.py` then `research/agents_t231/v308_run.py` on the same copies: V3_0_7_BOQ_LINES.csv 197c5599 and V3_0_8_BOQ_LINES.csv 57fe219a **REPRODUCED** (= T-231).
 Files: `slab_line.py` (pure rules), `t234_alsenan_check.py` (ledger + summary from committed inputs),
 `LEDGER_T234.csv` (62 panels), `summary.json`; tests `tests/t234_slab_line` (32).
 
@@ -87,9 +87,11 @@ Files: `slab_line.py` (pure rules), `t234_alsenan_check.py` (ledger + summary fr
 | 2F roof | 7.4543 | 8.1438 | +0.6895: **the two tank tags 'T 18' spread to the five untagged panels (SHEET_UNIFORM, 31.25 m2 x 0.02) +0.6250**; break mark 0.0156 + 0.10 strip west of B15 0.0489 at 0.18 | 7.4974 | -0.0431: panels at 0.16 31.25 vs his 31.84 m2 (-0.0944); tank panels 13.635 vs his 13.35 m2 (+0.0513) |
 | **CONC.SLAB** | **60.2804** | **61.5514** (+ BOUNDED 2.7403) | **+1.2710 (+2.11 %)**: tag spread 0.6250, 13 named faces that are not slab 0.6462, residual -0.0002 | **59.8174** | **+0.4630 (+0.77 %)**, every storey reconciled to named causes; 1F lump residual -0.0590 named |
 
-Candidate V3.0.7 / V3.0.8: see the 'candidate' entry of summary.json (filled when this run reproduced it; otherwise
-the Checker runs `research/agents_t231/v308_run.py` and reads STR.CONC.SLAB). T-146 (slab faces released only with slab
-evidence) is QUEUED, so no candidate version has moved a slab face yet.
+Candidate V3.0.7 / V3.0.8 (own run: V3_0_7 197c5599, V3_0_8 57fe219a REPRODUCED; all V3.0.x carry identical
+STR.CONC.SLAB lines): **60.9192 m3** = GF 33.4898 + 1F 19.9178 + 2F 7.5116; no bounded line (the west dome square is
+retired). Candidate - drawing = **+0.6388 (+1.06 %)**: the same 13 non-slab faces (GF 0.4203, 1F 0.1614, 2F 0.0573 at
+0.16), residual -0.0002. The candidate's M4 project profile (ST7757_M4) gives the untagged 2F panels 0.16, so the tag
+spread is a released / no-profile defect; the faces wait on T-146 (QUEUED). Candidate vs freelancer +1.1018 (+1.84 %).
 
 Engine finding (new, every villa): **route G spreads a panel tag to every untagged panel of its sheet when all tags on
 the sheet are equal** (engine/source/slab_engine.py 'uniform' -> SHEET_UNIFORM), although the set's general note gives
@@ -103,9 +105,10 @@ compared against the M5 panel table (60.966), not the released BOQ run, and so d
 |---|---|
 | 62 panels 60.2804 m3 | DRAWING-CONFIRMED, CLOSABLE: no HELD component inside STR.CONC.SLAB; every opening once; every sunken panel at full t |
 | released A 61.5514 | ENGINE_WRONG on 2F thickness (+0.6250, tag spread) and on 13 faces that are not slab (+0.6462); ENGINE_RIGHT on the 62 panels' areas (within 0.002 m2 each) |
-| released bounded 2.7403 (1F) | NOT SLAB (west dome square; T-139 s.4); retire from the slab line in the candidate |
+| released bounded 2.7403 (1F) | NOT SLAB (west dome square; T-139 s.4); already retired in the candidate |
+| candidate V3.0.8 60.9192 | ENGINE_WRONG on the 13 non-slab faces (+0.6388); ENGINE_RIGHT on the 62 panels and on 2F thickness (M4 profile) |
 | freelancer 59.8174 | GF / 2F RULE_DIFFERENCE within 0.6 % (lump areas); 1F ENGINE_RIGHT on the eight dome-square corners (drawn slab), lump residual 0.059 m3 UNRESOLVED (no breakdown in his cell) |
-| CONC.SLAB whole line | CLOSABLE at 60.2804 (C1) once the Checker re-measures every panel; the integration (lane I, T-146) removes the 13 non-slab faces and the 2F spread together |
+| CONC.SLAB whole line | CLOSABLE at 60.2804 (C1) once the Checker re-measures every panel; the integration (lane I, T-146) removes the 13 non-slab faces (candidate 60.9192 -> 60.2804); the released no-profile 2F spread is a route G rule fix (new rule version) |
 
 Checker re-measure list (whole line): every SLAB row of LEDGER_T234.csv against ST p.4 / p.5 / p.6 (T-139 face ids;
 the five register-derived panels GF-032 / GF-137 / GF-098 / 1F-084 / 2F-013 first); the 2F tags 7B3 / 7B4 and
