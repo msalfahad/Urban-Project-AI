@@ -1,0 +1,89 @@
+{
+ "SCHEMA": "T192_JUNCTION_INPUT_V1",
+ "note": "Drawing readings only (development villa, Drive 'Alsenan chalet project'): ST7757 dxf.dxf (sha 9f9d1179, mm, values / 1000), read this run with ezdxf (handles cited). Frames: ST-01 in the GF ROOF SLAB sheet frame (ST p.4); the FIRST FLOOR ROOF SLAB sheet (ST p.5) is mapped onto it by +38.724 m in x (shaft east wall 5D4 x 21.069 -> 296 x 59.793; west wall 5E3 18.569 -> 284 57.293; y identical); ST-02 in the GF ROOF SLAB frame; ST-03 in the GROUND BEAMS sheet frame (ST p.3). Levels: the stair's printed / sectioned levels, the beams and slabs on the same reference (as T-189; sensitivity in the report). Quantities of the T-184 / T-189 ledgers are taken from research/agents_t189/T189_STAIR_LEDGER_REV2.json (rev2, kept unchanged).",
+ "frame_offsets_m": {"ST_P5_to_ST_P4_x": 38.724, "ST_P3_to_ST_P4_x": -38.725},
+ "st01": {
+  "MS1-U": {"sheet": "ST p.4", "first_riser_y": 48.448, "last_riser_y": 45.148, "string_x": [58.593, 59.793],
+            "direction": [0, -1], "z0": 3.50, "riser": 0.166667, "going": 0.30, "goings": 11, "n_triangles": 12, "waist": 0.16,
+            "handles": "25B .. 459 (12 lines, layer 2); S-OPENING 25A x 58.593; wall 296 x 59.793",
+            "ledger_rev2_m3": 0.997552},
+  "MS2-L": {"sheet": "ST p.5 (mapped)", "first_riser_y": 45.198, "last_riser_y": 48.498, "string_x": [57.293, 58.493],
+            "direction": [0, 1], "z0": 5.50, "riser": 0.168, "going": 0.30, "goings": 11, "n_triangles": 12, "waist": 0.16,
+            "handles": "12 riser lines 646 (y 45.198), 645, 640, 641, 642, 643, 63C, 63D, 63E, 63F, 631, 632 (y 48.498) at 0.300, x 18.569 .. 19.719 (layer 2); string = wall 5E3 x 18.569 to S-OPENING 62D x 19.769 (1.20); mapped +38.724",
+            "ledger_rev2_m3": 1.058893, "ledger_gross_m3": 1.089064, "q62_top_wedge_m3": 0.030171},
+  "MS2-U": {"sheet": "ST p.5 (mapped)", "first_riser_y": 48.448, "last_riser_y": 45.148, "string_x": [58.593, 59.793],
+            "direction": [0, -1], "z0": 7.684, "riser": 0.168, "going": 0.30, "goings": 11, "n_triangles": 12, "waist": 0.16,
+            "handles": "62F (48.448) .. 644 (45.448), 12th riser hidden in the B23 band (T-189)", "ledger_rev2_m3": 1.001373},
+  "MS1-L": {"status": "HELD (C-ST-4)", "sheet_first_riser_y": {"ST p.4 west lane": 45.198, "ST p.3 west lane": 45.798},
+            "string_x": [57.293, 58.493], "z0": 1.00,
+            "handles": "ST p.4 45A (45.198) .. 25E (48.498), 12 lines x 57.293 .. 58.443; ST p.3 112 (45.798) .. 10F (47.598)",
+            "ledger_rev2_m3": 0.863029, "held_range_m3": [0.863, 1.055]},
+  "landings": {
+   "MS1-LD": {"x": [58.593, 59.793], "y": [48.448, 49.648], "top": 3.50, "t": 0.16, "ledger_m3": 0.2304,
+              "handles": "first riser 25B y 48.448; north B3 band 279 y 49.648"},
+   "MS2-LD east": {"x": [58.593, 59.793], "y": [48.448, 49.648], "top": 7.684, "t": 0.16,
+                   "handles": "62F y 48.448 (mapped x 19.869 .. 21.069)"},
+   "MS2-LD west": {"x": [57.293, 58.593], "y": [48.498, 49.648], "top": 7.516, "t": 0.16,
+                   "handles": "MS2-L last riser 632 y 48.498; closing riser line 5E2 x 19.869 (48.498 .. 49.648); B3 band 5C0 y 49.648; mapped",
+                   "note": "drawn 1.30 x 1.15 (incl. the 0.10 well strip); the ledger row MS2-LD 0.480 = 2.50 x 1.20 x 0.16 is NOT changed here (PARTLY VERIFIED, Checker 17:18)"},
+   "MS2-LD ledger_m3": 0.48
+  },
+  "beams": {
+   "B20 span 2": {"x": [56.493, 59.793], "y": [44.948, 45.348], "top": 5.50, "depth": 0.75, "width": 0.40,
+                  "handles": "458 (y 44.948) / 2C6 (y 45.348), x 52.693 .. 59.793; INSERT b20",
+                  "released_A": "L-ffef.. no; beam line P-C:BEAMS:GF:BAND0043.2 0.990 m3 (T-189)", "billed_through": true},
+   "B23 span 2": {"x": [56.493, 59.793], "y": [44.898, 45.348], "top": 9.70, "depth": 0.75, "width": 0.45,
+                  "handles": "5E4 / 5E1 (mapped)", "released_A": "P-C:BEAMS:1F:BAND0031.2 1.11375 m3 (T-189)", "billed_through": true}
+  },
+  "slabs": {
+   "GF-077 (part under the 1F arrival)": {"x": [57.293, 59.793], "y": [43.398, 44.948], "top": 5.50, "t": 0.16,
+        "source": "T-139 PANELS.csv GF-077; 1F arrival 2.50 x 1.95 = B20 0.40 + 1.55"},
+   "1F-062 (part under the 2F arrival)": {"x": [57.293, 59.793], "y": [43.398, 44.898], "top": 9.70, "t": 0.16,
+        "source": "T-139 PANELS.csv 1F-062; 2F arrival = B23 0.45 + 1.50"}
+  },
+  "columns": {
+   "COL-1F-36": {"storey": "1F (+5.50 -> +9.70)", "mark": "C3", "drawn_x": [57.093, 57.343], "y": [46.148, 46.648],
+                 "drawn": "0.25 x 0.50 (S-COL.BON 691, x 18.369 .. 18.619 mapped)", "schedule_section": "0.20 x 0.50 (T-119 COL-1F-36)",
+                 "position_of_scheduled_section": "not established (centre 18.494 on the sheet; flush with the wall back 18.369 gives no projection)",
+                 "z": [5.50, 9.70], "billed_A": false, "billed_V304": false, "ledger": "T-119 r2 full interval 4.2 m (col 3.80 + joint 0.40)"},
+   "COL-GF-06": {"storey": "GF (+1.00 -> +5.50)", "mark": "C3", "drawn_x": [57.093, 57.343], "y": [46.148, 46.648],
+                 "drawn": "0.25 x 0.50 (S-COL.BON 36B); schedule 0.25 x 0.50 (T-119 COL-GF-06)", "z": [1.00, 5.50],
+                 "into": "MS1-L (HELD)", "billed_A": false}
+  }
+ },
+ "st01b_d1": {"first_riser_y": 48.448, "last_riser_y": 47.548, "string_x": [58.643, 59.793], "z0": 0.30, "riser": 0.175,
+              "going": 0.30, "goings": 3, "n_triangles": 4, "waist": null, "ledger_m3": 0.126,
+              "handles": "ST p.3 1C4 (48.448), 1C5, 1C6, 1C7 (47.548), x 97.368 .. 98.518; LEVEL 1C9 '+0.30', 1C2 '+1.00'",
+              "arrival_floor": "the ST-01 shaft floor at +1.00: face 2.40 x 4.80 = 11.52 m2 between the ground beams 7CB / 15F / 7CC / 7C3 (ST p.3), no slab bar label, no thickness: in NO released ground-slab line (baseline A SLAB_FACES: 25 ground faces, none 11.52)"},
+ "st03_e1": {"sheet": "ST p.3", "first_riser_x": 93.268, "last_riser_x": 94.468, "y": [41.248, 44.048], "direction": [1, 0],
+             "z0": 0.15, "riser": 0.17, "going": 0.30, "goings": 4, "n_triangles": 5, "waist": null, "ledger_m3": 0.357,
+             "handles": "18A (93.268), 189, 188, 17A, 179 (94.468), layer 2, 2.80 long; LEVEL 1B8 '+0.15'",
+             "gb_band": {"x": [94.418, 94.718], "y": [41.248, 45.048], "handles": "178 / 7DB", "levels": null,
+                         "billed_A": "no (route G ground beams: 59 lines, measured 0, UNBOUND exposures)"},
+             "ground_slab_face": {"x": [94.718, 95.818], "y": [41.248, 45.048], "top": 1.00, "t": 0.10,
+                                  "released_A": "L-83e4f6fa87db7452e2d2 STR.CONC.GROUND_SLAB 0.418 m3 (face SITE-67b20a045d91a15c 4.18 m2 x 0.10 sheet uniform)"}},
+ "st02": {
+  "RS-S": {"sheet": "ST p.4", "first_riser_x": 63.963, "last_riser_x": 66.963, "y": [38.048, 39.248], "direction": [1, 0],
+           "z0": 2.9286, "riser": 0.160714, "going": 0.30, "goings": 10, "n_triangles": 11, "waist": 0.16,
+           "handles": "2BA (63.963) .. 2C4 (66.963), 11 lines y 38.048 .. 39.198; S-OPENING 2D0 y 39.248"},
+  "RS-LD": {"x": [66.963, 68.113], "top": 4.6964, "t": 0.16, "handles": "east string 289 x 68.113; column S-COL.BON 374 x 67.563 .. 68.163, y 37.848 .. 38.098 (corner 0.55 x 0.05 = 0.0275 m2 inside the landing, deducted in T-184)"},
+  "RS-A": {"first_riser_y": 39.248, "last_riser_y": 40.448, "x": [66.963, 68.113], "z0": 4.6964, "riser": 0.160714,
+           "going": 0.30, "goings": 4, "n_triangles": 5, "waist": 0.16, "width_ledger": 1.25,
+           "handles": "2C8 (39.248) .. 315 (40.448)",
+           "head": "arrival plate C-T1 (slab, T-139) beyond y 40.448; the nearest full-depth band B29 (2CE / 463, y 41.998 .. 42.198) is 1.55 m away; the diagonal band B21 (433 / 434) passes the east string 289 (x 68.113) at y 40.452: corner touch, no band across the last riser line"},
+  "hidden_pairs": "layer 5 double lines 0.10 apart: 535 / 536 (y 38.573 / 38.673, across RS-S: beam CA, T-184 CA-JUNCTION HELD 0 .. 0.09) and 2CC / 2CD (x 67.488 / 67.588, y 38.048 .. 41.998, across RS-LD, RS-A and the plate: no mark, no schedule row)"
+ },
+ "released_lines": {
+  "STAIR_GF": {"line": "L-ffef7b38f37ffa75bc3a (P-C:SCOPE:STAIRS:GF:CC-7390ea1139:FLIGHTS; V3.0.4 L-7863355dfcb68a681d2d)", "m3": 2.7859805860857927,
+               "range": [2.091406246729973, 3.1882745972607633],
+               "runs": "FLIGHT plan 3.795 = 1.15 x 3.30, 12 risers, base 1.071 (x2); WINDER 2.3303 m2 base 0.6439",
+               "readings": {"riser_m": [0.15, 0.165, 0.18], "waist_m": [0.15, 0.175, 0.2]}, "width": 1.15,
+               "east_run": "x 58.643 .. 59.793, y 45.148 .. 48.448 (MS1-U): last 0.20 inside B20"},
+  "STAIR_GROUND_ST02": {"line": "L-496d997d755b6367a169", "m3": 0.9005718529491811},
+  "STAIR_GROUND_ST03": {"line": "L-5493f3e0cc5801512838", "m3": 0.9482674779781379},
+  "GROUND_SLAB_STAIR_ZONE": {"line": "L-507f96568d2bbe8899dd", "status": "BOUNDED_EXPOSURE 0 .. 0.837 (SLAB_STAIR_ZONE, face SITE-4df8fcd99d130701 8.372 m2): not billed"},
+  "COLUMNS_GF": "30 lines BLOCKED_RFI STOREY_HEIGHT_NOT_PRINTED: no column concrete billed in A"
+ },
+ "formwork_T163_r3": {"stairs_m2": 44.533, "MS1-U_waist_soffit": 4.53, "MS2-L_waist_soffit": 4.539, "MS2-U_waist_soffit": 4.539,
+                      "basis": "waist m3 / t = width x sloped length between the first and the last riser line (research/agents_t163/FORMWORK_LINES.csv)"}
+}

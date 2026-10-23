@@ -1,0 +1,259 @@
+{
+ "schema": "T192_STAIR_LEDGER_REV3",
+ "supersedes": "research/agents_t189/T189_STAIR_LEDGER_REV2.json (rev2, kept unchanged)",
+ "rule": "R-CONC-OWN-1 (research/agents_t189/R-CONC-OWN-1.json, proposed) + R-CONC-OWN-1a foot / knee / column corollaries (research/agents_t192/R-CONC-OWN-1a.json, proposed)",
+ "st01_rows": [
+  {
+   "piece": "MS1-L",
+   "gross_m3": 0.863029,
+   "q62_wedge_m3": 0.0,
+   "head_in_full_depth_beam_m3": 0.0,
+   "rev1_net_m3": 0.863029,
+   "rev2_net_m3": 0.863029,
+   "status": "HELD",
+   "why": "owner 18:00 (4): structural GF roof slab plan draws 12 straight riser lines (16 with the winders) vs architectural plan 10 + section A-A 15: consultant item C-ST-4; candidate 0.863 (section) .. 1.055 (structural plan), Checker 17:18",
+   "held_range_m3": [
+    0.863,
+    1.055
+   ],
+   "rev3_net_m3": 0.863029,
+   "rev3_change_m3": 0.0
+  },
+  {
+   "piece": "MS1-U",
+   "gross_m3": 1.084813,
+   "q62_wedge_m3": 0.03,
+   "head_in_full_depth_beam_m3": 0.057261,
+   "rev1_net_m3": 1.054813,
+   "rev2_net_m3": 0.997552,
+   "status": "DRAWING-CONFIRMED",
+   "why": "rev2 = Checker quantity 0.9976 (17:18, D-CHK-T180-1); Checker to confirm on rev2",
+   "held_range_m3": null,
+   "rev3_net_m3": 0.997552,
+   "rev3_change_m3": 0.0
+  },
+  {
+   "piece": "MS2-L",
+   "gross_m3": 1.089064,
+   "q62_wedge_m3": 0.030171,
+   "head_in_full_depth_beam_m3": 0.0,
+   "rev1_net_m3": 1.058893,
+   "rev2_net_m3": 1.058893,
+   "status": "DRAWING-CONFIRMED",
+   "why": "rev2 1.0589 was VERIFIED (Checker 15:00) on the owner formula; rev3 deducts the waist below the 1F floor inside B20 (first riser line 646 y 45.198 is 0.15 m inside the band, R-CONC-OWN-1 foot corollary): Checker to re-measure",
+   "held_range_m3": null,
+   "rev3_net_m3": 1.033445,
+   "rev3_change_m3": -0.025448,
+   "foot_in_full_depth_beam_m3": 0.025448
+  },
+  {
+   "piece": "MS2-U",
+   "gross_m3": 1.089064,
+   "q62_wedge_m3": 0.03024,
+   "head_in_full_depth_beam_m3": 0.057451,
+   "rev1_net_m3": 1.058824,
+   "rev2_net_m3": 1.001373,
+   "status": "DRAWING-CONFIRMED",
+   "why": "rev2 = Checker quantity 1.0014 (17:18, D-CHK-T180-1); Checker to confirm on rev2",
+   "held_range_m3": null,
+   "rev3_net_m3": 1.001373,
+   "rev3_change_m3": 0.0
+  },
+  {
+   "piece": "MS1-LD",
+   "gross_m3": 0.2304,
+   "q62_wedge_m3": 0.0,
+   "head_in_full_depth_beam_m3": 0.0,
+   "rev1_net_m3": 0.2304,
+   "rev2_net_m3": 0.2304,
+   "status": "VERIFIED",
+   "why": "Checker 17:18: 0.2304",
+   "held_range_m3": null,
+   "rev3_net_m3": 0.2304,
+   "rev3_change_m3": 0.0
+  },
+  {
+   "piece": "MS2-LD",
+   "gross_m3": 0.48,
+   "q62_wedge_m3": 0.0,
+   "head_in_full_depth_beam_m3": 0.0,
+   "rev1_net_m3": 0.48,
+   "rev2_net_m3": 0.48,
+   "status": "PARTLY VERIFIED",
+   "why": "east half 0.240 VERIFIED, west half 0.2304 .. 0.240 not verified (Checker 17:18)",
+   "held_range_m3": null,
+   "rev3_net_m3": 0.48,
+   "rev3_change_m3": 0.0
+  }
+ ],
+ "st01_rev2_m3": 4.6312,
+ "st01_rev3_m3": 4.6058,
+ "st01_change_m3": -0.0254,
+ "other_stairs_rev2_m3": {
+  "ST-01b": 0.126,
+  "ST-02": 1.5611,
+  "ST-03": 0.357
+ },
+ "other_stairs_rev3_m3": {
+  "ST-01b": 0.126,
+  "ST-02": 1.5611,
+  "ST-03": 0.355
+ },
+ "st03_change": {
+  "m3": -0.001983,
+  "why": "E1 arrival wedge (5th triangle, x 94.468 .. 94.768) inside the released ground-slab line L-83e4f6fa87db7452e2d2 (face 4.18 m2 from x 94.718) over its last 0.05 m: slab owns (Q-62 A cond)"
+ },
+ "staircase_system_rev2_m3": 6.6754,
+ "staircase_system_rev3_m3": 6.6479,
+ "staircase_system_rev3_not_held_m3": 5.7849,
+ "drawing_derived_not_in_owner_method": {
+  "knees": [
+   {
+    "id": "KNEE-MS2L-TOP",
+    "m3": 0.039242,
+    "where": "under MS2-LD west, beyond the MS2-L last riser line"
+   },
+   {
+    "id": "KNEE-RSS-TOP",
+    "m3": 0.037169,
+    "where": "under RS-LD beyond the RS-S last riser line"
+   },
+   {
+    "id": "KNEE-RSA-TOP",
+    "m3": 0.038754,
+    "where": "under the arrival plate C-T1"
+   },
+   {
+    "id": "KNEE-MS1U-BOTTOM",
+    "m3": -0.000573,
+    "where": "MS1-U foot under MS1-LD (not built)"
+   },
+   {
+    "id": "KNEE-MS2U-BOTTOM",
+    "m3": -0.000586,
+    "where": "MS2-U foot under MS2-LD east (not built)"
+   },
+   {
+    "id": "KNEE-RSA-BOTTOM",
+    "m3": -0.00054,
+    "where": "RS-A foot under RS-LD (not built)"
+   }
+  ],
+  "net_m3": 0.1135,
+  "status": "DRAWING-DERIVED (owner manual method Q-47 A stops the waist at the first / last riser line; shown side by side, NOT added to the owner-method ledger, NOT released)"
+ },
+ "held_unchanged": [
+  {
+   "id": "MS1-T",
+   "candidate_m3": [
+    0.12,
+    0.13
+   ],
+   "why": "Q-51 cond: well strip 0.10 x 1.20 unassigned, no soffit drawn"
+  },
+  {
+   "id": "MS1-T-SLAB",
+   "candidate_m3": [
+    0.2304,
+    0.2496
+   ],
+   "why": "soffit not drawn (horizontal projection 1.44 .. 1.56 m2 x 0.16)"
+  },
+  {
+   "id": "MS2-TR",
+   "candidate_m3": null,
+   "why": "landing levels scaled, not printed"
+  },
+  {
+   "id": "B3-WITH-STAIR",
+   "candidate_m3": null,
+   "why": "owner Q-61 (2): HOLD, never duplicate concrete"
+  },
+  {
+   "id": "D1-WAIST",
+   "candidate_m3": null,
+   "why": "no thickness printed; on fill"
+  },
+  {
+   "id": "RS-C",
+   "candidate_m3": [
+    0.33,
+    0.33
+   ],
+   "why": "owner Q-50 / Q-51: curved parts HELD (CAD tread areas 4.1077 m2)"
+  },
+  {
+   "id": "RS-C-SOFFIT",
+   "candidate_m3": null,
+   "why": "not drawn (Q-51 step 5); see the walking-line indication in the report, not a quantity"
+  },
+  {
+   "id": "CA-JUNCTION",
+   "candidate_m3": [
+    0.0,
+    0.09
+   ],
+   "why": "CA level not stated"
+  },
+  {
+   "id": "E1-WAIST",
+   "candidate_m3": null,
+   "why": "not in a slab panel, no thickness printed"
+  }
+ ],
+ "undetermined": [
+  {
+   "id": "COL-1F-36 x MS2-L",
+   "exposure_m3": [
+    0.0,
+    0.006684
+   ],
+   "why": "drawn 0.25 x 0.50 projects 0.05 into the west lane over y 46.148 .. 46.648; the schedule section is 0.20 x 0.50 (T-119) and its position is not established; columns are billed by no line in A or V3.0.4 (BLOCKED_RFI), so the stair keeps it now; owner COLUMN once T-119 lines are wired"
+  },
+  {
+   "id": "COL-GF-06 x MS1-L",
+   "exposure_m3": null,
+   "why": "0.25 x 0.50 drawn = scheduled, 0.05 projection; MS1-L HELD"
+  },
+  {
+   "id": "E1 head x GB band",
+   "exposure_m3": [
+    0.0,
+    0.0714
+   ],
+   "why": "last riser line 179 (x 94.468) 0.05 inside the 0.30 ground beam band 178 / 7DB; ground-beam lines are not billed in A (UNBOUND exposures); top level not printed: stair keeps it until a GB line bills through"
+  },
+  {
+   "id": "D1 head / MS1-L foot x ST-01 shaft floor",
+   "exposure_m3": null,
+   "why": "the shaft floor at +1.00 / +0.30 (face 11.52 m2 on ST p.3) is in no ground-slab line and prints no slab: scope UNKNOWN (lane A / Lead), never 0; the D1 arrival wedge (0.0315) stays in the stair"
+  },
+  {
+   "id": "RS-LD / RS-A x hidden pair 2CC / 2CD",
+   "exposure_m3": null,
+   "why": "layer-5 double line 0.10 apart across the corner landing, RS-A and the plate: no mark, no schedule"
+  }
+ ],
+ "system_status": "PARTIALLY VERIFIED (owner 16:45); rev3 pieces DRAWING-CONFIRMED until the Checker re-measures",
+ "released_line_corrections": [
+  {
+   "line": "L-ffef7b38f37ffa75bc3a (P-C:SCOPE:STAIRS:GF:CC-7390ea1139:FLIGHTS; V3.0.4 L-7863355dfcb68a681d2d)",
+   "change_m3": -0.0586,
+   "range_change_m3": [
+    -0.0674,
+    -0.0501
+   ],
+   "why": "its east run (MS1-U) is measured to the last riser line 0.20 inside B20, billed in full by P-C:BEAMS:GF:BAND0043.2: by its own profile (straight_flight, 12 risers, width 1.15) the part inside the band; lane I: deduct in any V3.0.x stair line or replace the line by ledger rev3"
+  },
+  {
+   "line": "L-83e4f6fa87db7452e2d2 (ground slab 0.418) vs L-5493f3e0cc5801512838 (E1 0.948)",
+   "change_m3": 0.0,
+   "why": "engine E1 run is plumb-cut at the last riser line (x 94.468), 0.25 short of the slab face: no double in A; the ledger rev3 E1 carries the slab-owned 0.0020 deduction"
+  },
+  {
+   "line": "L-507f96568d2bbe8899dd (ground-slab stair zone, BOUNDED_EXPOSURE) vs L-496d997d755b6367a169 (ST-02)",
+   "change_m3": 0.0,
+   "why": "not billed together in A; if the exposure is ever released it must be net of the stair line measuring the same 8.37 m2 zone"
+  }
+ ]
+}
