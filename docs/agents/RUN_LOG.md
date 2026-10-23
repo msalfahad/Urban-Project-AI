@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-23T08:51Z | Verifier | STARTED | run unknown | repo-attached routine | task state: T-204 READY seen in RUN_LOG | self-check pending
 - 2026-10-23 08:42 UTC | Worker 1 | SUCCESS | T-204 READY (agents/task-T-204 @ 0b79e917) | Lift pit is drawn and detailed (ST PDF p.14 typical, missed by the DXF-only search): ring 1.600 m2 gross, 1.100 m2 net of the 4 lift column sections; freelancer lift walls 2.400 m3 = 1.650 at his 1.50 m + 0.750 m3 double-billed with his neck rows (ENGINE_RIGHT on ownership), pit height not printed (lift supplier) -> concrete / formwork / bars HELD; new fixed scope membrane 47.430 m2, board 26.730 m2, screed 1.035 m3 DRAWING-CONFIRMED; roof tank not drawn -> HELD placeholders + designer item; continuity findings 17 -> 14; 30 tests, known_failures NEW 0; ERS: read, s.2-4 + s.7 | self-check codemap PASS / pytest t061 PASS / freeze PASS; problem: none
 - 2026-10-23T08:40Z | Worker 2 | STARTED | run session_01V4o7VuZonSwGCVYMcAjm9h | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-23 08:20 UTC | Worker 1 | STARTED | run session_01TrD4ZC8tzQkC75rT9mpWBS | repo-attached routine | task state: none yet | self-check pending
