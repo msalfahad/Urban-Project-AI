@@ -1,0 +1,109 @@
+{
+ "package": "T-238",
+ "census_rows": 71,
+ "census_openings": 68,
+ "codes": {
+  "ARCH_DRAWN_NOT_DIMENSIONED": 1,
+  "ARCH_READ_AS_RECTANGLE": 1,
+  "BAND_CROWN_READ_AS_HEAD": 2,
+  "CURVED_ON_PLAN": 1,
+  "FEATURE_NOT_AN_OPENING": 2,
+  "HELD_ELSEWHERE": 10,
+  "NOT_DRAWN": 1,
+  "RECT_ON_OPENING_LINE": 52,
+  "UNBOUND_FEATURE": 1
+ },
+ "outlines": {
+  "W15": {
+   "status": "DRAWING-CONFIRMED",
+   "width_m": 1.5523,
+   "spring_m": 2.1609,
+   "crown_m": 3.0,
+   "arch_segment_m2": 1.0088,
+   "masonry_deduction_m2": 4.3632,
+   "window_area_q32a_m2": 4.65,
+   "reveal_lm": 8.3984,
+   "arch_length_m": 2.5243,
+   "band_crown_m": 3.101
+  },
+  "W16": {
+   "status": "DRAWING-CONFIRMED",
+   "width_m": 1.5523,
+   "spring_m": 2.1609,
+   "crown_m": 3.0,
+   "arch_segment_m2": 1.0088,
+   "masonry_deduction_m2": 4.3632,
+   "window_area_q32a_m2": 4.65,
+   "reveal_lm": 8.3984,
+   "arch_length_m": 2.5243,
+   "band_crown_m": 3.101
+  },
+  "W26": {
+   "status": "DRAWING-CONFIRMED",
+   "width_m": 1.2,
+   "spring_m": 1.05,
+   "crown_m": 1.7,
+   "arch_segment_m2": 0.6147,
+   "masonry_deduction_m2": 1.8747,
+   "window_area_q32a_m2": 2.04,
+   "reveal_lm": 5.2709,
+   "arch_length_m": 1.9709,
+   "band_crown_m": 1.7495
+  },
+  "A-GF-01": {
+   "status": "SOURCE-SUPPORTED PENDING INDEPENDENT CHECK",
+   "width_m": 1.0,
+   "spring_m": 2.2,
+   "crown_m": 2.4992,
+   "arch_segment_m2": 0.2131,
+   "masonry_deduction_m2": 2.4131,
+   "window_area_q32a_m2": 2.4992,
+   "reveal_lm": 5.6239,
+   "arch_length_m": 1.2239,
+   "band_crown_m": null
+  }
+ },
+ "W17": {
+  "opening_crown_m": [
+   3.0,
+   3.0505
+  ],
+  "archivolt_crown_m": 3.5043,
+  "window_HELD_m2": [
+   9.87,
+   11.515
+  ],
+  "finish_deduction_upper_m2": 10.0239
+ },
+ "windows": {
+  "windows_T150_established_8_before_m2": 56.771,
+  "windows_same_7_after_m2 (W17 to HELD)": 45.101,
+  "freelancer_same_8_m2": 54.931,
+  "freelancer_same_7_m2": 45.481,
+  "engine_vs_freelancer_7": [
+   -0.38,
+   -0.84
+  ],
+  "W16_T201_window_before_after_m2": [
+   4.805,
+   4.65
+  ],
+  "W17_window_HELD_range_m2": [
+   9.87,
+   11.515
+  ],
+  "W17_freelancer_m2": 9.45
+ },
+ "delta_rows": 30,
+ "finish_deduction_change_m2_per_face": {
+  "W15": -0.442,
+  "W16": -0.442,
+  "W26": -0.165
+ },
+ "masonry_deduction_change_m2": {
+  "W26 (2F-W07, net HELD)": -0.165,
+  "W15 / W16 (1F-W00)": "applied by T-227 r2 (merged)"
+ },
+ "released_change": "none (nothing released; the delta is for lane I: T-211 / T-232 / T-237)",
+ "verified_by_checker_m2": 0.0
+}
