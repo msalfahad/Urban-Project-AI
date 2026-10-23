@@ -5,8 +5,13 @@ P7757_DXF_COMPRESSED.zip) made by research/agents_t125/alsenan_v2_dump.py, and t
 Every face is named by its DXF handle; no coordinate is written. Writes research/agents_t215/T215_ENDS.csv (numbers and
 ids only). `--check` recomputes and compares with the committed file.
 
+Also reads ST7757 dxf.dxf (Drive "Alsenan chalet project") for the member above each closed piece: the GROUND FLOOR
+ROOF SLAB plan is placed on the architectural plan by one translation found from the column outlines (S-COL.BON, every
+architectural GF column matched, residual printed); beam faces by handle, sizes from the T-110 member register.
+
 Usage (Python 3.11):
-    python3 -I research/agents_t215/alsenan_t215_ends.py <scratch>/t125_inputs.pkl <scratch>/t125_v2.json [--check]
+    python3 -I research/agents_t215/alsenan_t215_ends.py <scratch>/t125_inputs.pkl <scratch>/t125_v2.json <ST7757.dxf>
+        [--check]
 """
 from __future__ import annotations
 
@@ -56,6 +61,70 @@ CLUSTERS = [
 ]
 
 
+# Owner Q-60 A: block height = storey height - depth of the member above. GF storey 4.50 (T-108 / T-143); the GF roof
+# slab over these junctions is 0.16 (ST p.8 note 18; T-139 panels GF-015 / 016 / 027 / 039 / 052, T-143 rows).
+GF_STOREY, GF_SLAB = 4.50, 0.16
+# Members above, per cluster: (label, ST face handles (two parallel faces), extent handles or None, depth m, cases).
+# CB2 (BM-GF-055) is a T-110 CONFLICT: schedule width 0.20 vs drawn 0.25 (owner Q-61 C(1): never pick). Case
+# "drawn" uses both drawn faces; case "schedule-flush-out" a 0.20 band on the drawn outer face, which leaves the
+# 0.05 m strip under the slab. Any other placement of a 0.20 band lies between the two.
+MEMBERS = {
+    "J-A": [("CB2 BM-GF-055 0.5 deep", ("278", "274"), 0.50, "CB2"),
+            ("B3 BM-GF-024 0.20 x 0.40", ("291", "28E"), 0.40, None)],
+    "J-D": [("B1 / B3 band on the GF-W13 line 0.40 deep", ("291", "28E"), 0.40, None)],
+}
+
+
+def st_translation(st_doc, cols_arch_m):
+    """One translation ST -> architectural plan from the column outlines: every architectural column matched to an
+    ST column of the same size; returns (dx, dy) in metres and the worst residual (m)."""
+    import numpy as np
+    from collections import Counter
+    sc = []
+    for e in st_doc.modelspace().query('LWPOLYLINE[layer=="S-COL.BON"]'):
+        p = np.array([(x * K, y * K) for x, y, *_ in e.get_points()])
+        if len(p) >= 3:
+            sc.append((p.mean(0), tuple(np.round(p.max(0) - p.min(0), 3))))
+    ac = [(np.array(q).mean(0), tuple(np.round(np.array(q).max(0) - np.array(q).min(0), 3))) for q in cols_arch_m]
+    votes = Counter()
+    for a, sa in ac:
+        for c, ss in sc:
+            if sa == ss or sa == ss[::-1]:
+                votes[tuple(np.round(c - a, 3))] += 1
+    (tx, ty), n = votes.most_common(1)[0]
+    t = np.array((tx, ty))
+    res = max(min(np.linalg.norm(c - (a + t)) for c, _ in sc) for a, _ in ac)
+    if n != len(ac) or res > 0.005:
+        raise ValueError(f"column match {n} / {len(ac)}, residual {res:.4f} m: no single translation")
+    return t, res
+
+
+def member_polys(st_doc, cid, t, case):
+    """Member bands of a cluster in architectural metres for one CB2 case."""
+    from shapely.geometry import Polygon
+    out = []
+    for label, (h1, h2), depth, flag in MEMBERS.get(cid, ()):
+        e1, e2 = st_doc.entitydb[h1], st_doc.entitydb[h2]
+        a1, b1 = e1.dxf.start, e1.dxf.end
+        a2, b2 = e2.dxf.start, e2.dxf.end
+        pts = [(a1.x, a1.y), (b1.x, b1.y), (b2.x, b2.y), (a2.x, a2.y)]
+        if abs(a1.y - b1.y) < 1 and abs(a2.y - b2.y) < 1:          # horizontal band: overlap of the two faces in x
+            x0 = max(min(a1.x, b1.x), min(a2.x, b2.x))
+            x1 = min(max(a1.x, b1.x), max(a2.x, b2.x))
+            y1f, y2f = a1.y, a2.y
+            if flag == "CB2" and case == "schedule-flush-out":
+                y1f = y2f - 200.0 if y2f > y1f else y2f + 200.0
+            pts = [(x0, y1f), (x1, y1f), (x1, y2f), (x0, y2f)]
+        elif abs(a1.x - b1.x) < 1 and abs(a2.x - b2.x) < 1:        # vertical band: overlap in y
+            y0 = max(min(a1.y, b1.y), min(a2.y, b2.y))
+            y1 = min(max(a1.y, b1.y), max(a2.y, b2.y))
+            pts = [(a1.x, y0), (a1.x, y1), (a2.x, y1), (a2.x, y0)]
+        else:
+            raise ValueError(f"{label}: faces not axis-parallel; give the band explicitly")
+        out.append((Polygon([(x * K - t[0], y * K - t[1]) for x, y in pts]), GF_STOREY - depth))
+    return out
+
+
 def _seg(index, h):
     s = index[h]
     return ((s["a"][0] * K, s["a"][1] * K), (s["b"][0] * K, s["b"][1] * K))
@@ -97,13 +166,16 @@ def cut_by_columns(p0, d, s0, s1, cols, arch):
     return a, b
 
 
-def build(pkl, v2json):
+def build(pkl, v2json, stdxf):
+    import ezdxf
+    st_doc = ezdxf.readfile(stdxf)
     cap = pickle.load(open(pkl, "rb"))["floors"]["GF"]
     v2 = json.load(open(v2json))["floors"]["GF"]["v2"]
     assert abs(cap["unit_m"] - K) < 1e-12
     index = {s["id"]: s for s in cap["ents"]["segments"]}
     recs = {w["wall_id"]: w for w in cap["walls"]}
     cols = [[(x, y) for x, y in q] for q in cap["columns_m"]]
+    t, res = st_translation(st_doc, cols)
     rows = []
     for c in CLUSTERS:
         walls, meta = [], {}
@@ -138,6 +210,11 @@ def build(pkl, v2json):
                     faces += [(q[i], q[(i + 1) % len(q)]) for i in range(len(q))]
         M = J.masonry_from_faces(faces, walls, closing, columns=colp)
         r = J.close_junction(M, walls)
+        dm2 = {}
+        for case in ("drawn", "schedule-flush-out"):
+            g = J.gross_change(walls, r, member_polys(st_doc, c["id"], t, case), GF_STOREY - GF_SLAB)
+            for k, v in g.items():
+                dm2.setdefault(k, []).append(v)
         for wid, v in r["walls"].items():
             run = next(x for x in v2["runs"] if x["run_id"] == meta[wid])
             rows.append({"cluster": c["id"], "row_id": wid, "v2_run": meta[wid], "t_m": f"{v['t_m']:.2f}",
@@ -149,6 +226,9 @@ def build(pkl, v2json):
                          "cluster_masonry_m2": f"{r['masonry_m2']:.6f}",
                          "cluster_residual_m2": f"{r['residual_m2']:.6f}",
                          "cluster_unassigned_m2": f"{r['unassigned_m2']:.6f}", "status": r["status"],
+                         "d_gross_m2_lo": f"{min(dm2[wid]):+.4f}", "d_gross_m2_hi": f"{max(dm2[wid]):+.4f}",
+                         "members_above": "; ".join(m[0] for m in MEMBERS.get(c["id"], ())) or "slab 0.16 only",
+                         "st_fit_residual_mm": f"{res * 1000:.1f}",
                          "what": c["what"]})
     return rows
 
@@ -159,32 +239,30 @@ def _in(q, p):
 
 
 def row_effect(rows):
-    """Per T-108 row: the closed length change, and the gross m2 change at the member above the end piece. The member
-    over the end piece was not sampled by T-143 (it sampled the band only): a row with ONE member height along its run
-    gets that height (EXACT); a row with several gets the range of its own members (BOUNDED, never the weighted mean)."""
-    import re
-    t143 = {r["row_id"]: r for r in csv.DictReader(open(ROOT / "research/agents_t143/T143_BLOCK_BY_WALL_RUN.csv",
-                                                       encoding="utf-8"))}
+    """Per T-108 row: the closed length change and the gross m2 change, both from the drawings: the closed piece's area
+    from the plan faces, its height from the member drawn above it on the ST GF roof-slab plan (owner Q-60 A). EXACT
+    when every case agrees; BOUNDED only by a named member CONFLICT (CB2 width, Q-61 C(1)); never a weighted mean."""
     t108 = {r["row_id"]: r for r in csv.DictReader(open(ROOT / "research/agents_t108/T108_BY_WALL.csv",
                                                        encoding="utf-8"))}
     acc = {}
     for r in rows:
-        acc.setdefault(r["row_id"], 0.0)
-        acc[r["row_id"]] += float(r["delta_m"])
+        a = acc.setdefault(r["row_id"], [0.0, 0.0, 0.0])
+        a[0] += float(r["delta_m"])
+        a[1] += float(r["d_gross_m2_lo"])
+        a[2] += float(r["d_gross_m2_hi"])
     out = []
     for rid in sorted(acc):
-        hs = sorted({float(h) for h in re.findall(r"-> h ([0-9.]+)", t143[rid]["members_above"])})
-        d = acc[rid]
-        lo, hi = sorted((d * hs[0], d * hs[-1]))
+        d, lo, hi = acc[rid]
         b = t108[rid]
+        exact = abs(hi - lo) < 5e-5
         out.append({"row_id": rid, "t_m": b["t_m"], "block_type": b["block_type"],
-                    "t108_physical_m": b["physical_length_m"], "t108_held_end_max_m": BOUND[rid] and f"{BOUND[rid]:.3f}" or "",
+                    "t108_physical_m": b["physical_length_m"],
+                    "t108_held_end_max_m": f"{BOUND[rid]:.3f}" if BOUND[rid] else "",
                     "delta_m": f"{d:+.4f}", "closed_length_m": f"{float(b['physical_length_m']) + d:.4f}",
                     "length_status": "DRAWING-CONFIRMED (plan faces; held bound closed)",
-                    "member_heights_m": " / ".join(f"{h:.2f}" for h in hs),
                     "d_gross_m2_min": f"{lo:+.4f}", "d_gross_m2_max": f"{hi:+.4f}",
-                    "m2_status": "EXACT (one member along the run)" if len(hs) == 1 else
-                                 "BOUNDED (member over the end piece not sampled)",
+                    "m2_status": "DRAWING-CONFIRMED (member above read on the ST slab plan)" if exact else
+                                 "BOUNDED (CB2 width CONFLICT 0.20 schedule / 0.25 drawn, Q-61 C(1))",
                     "d_m3_min": f"{lo * float(b['t_m']):+.4f}", "d_m3_max": f"{hi * float(b['t_m']):+.4f}",
                     "t108_net_status": b["net_status"]})
     return out
@@ -202,9 +280,10 @@ def main(argv=None):
     ap = argparse.ArgumentParser()
     ap.add_argument("pkl")
     ap.add_argument("v2json")
+    ap.add_argument("stdxf")
     ap.add_argument("--check", action="store_true")
     a = ap.parse_args(argv)
-    rows = build(a.pkl, a.v2json)
+    rows = build(a.pkl, a.v2json, a.stdxf)
     txt, txt2 = render(rows), render(row_effect(rows))
     if a.check:
         ok = OUT.read_text(encoding="utf-8") == txt and OUT_ROWS.read_text(encoding="utf-8") == txt2

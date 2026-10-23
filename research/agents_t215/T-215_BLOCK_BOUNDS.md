@@ -1,6 +1,6 @@
 # T-215: block-wall HELD bounds closed from the drawings, part 1: the GF 45 deg and column ends (development villa)
 
-Worker 2, 2026-10-23 13:41 - 15:00 UTC, run session_01Q2V7fPynCjJRtDTxJMf6Eb. Lane A, gate 2. Files: research/agents_t215/*,
+Worker 2, 2026-10-23 13:41 - 14:25 UTC, run session_01Q2V7fPynCjJRtDTxJMf6Eb. Lane A, gate 2. Files: research/agents_t215/*,
 tests/t215_junction_close/* only (no engine, rule, registry, frozen or released file changed; T-108 files untouched).
 ERS: read; s.2 steps 1-4 (element, evidence, first-principles reconstruction, reconciliation), s.3 (one element counted
 once; physical vs procurement), s.4 (rule + test), s.7 row below. Drawings cited by Drive title and DXF handle only; no
@@ -15,27 +15,31 @@ HELD**, and the Checker's G-T108-1 junction piece (GF-W22 / GF-W34, about 0.150 
 **All eight are closed from the drawn faces: +0.2855 m of 0.15 black wall that the runs did not count (0.0428 m2 of
 masonry in plan), each piece assigned to exactly one wall; 0 m stays HELD at these ends.**
 
-| Row | T-108 length | HELD bound | Closed length | Change | Member(s) over the run | Gross m2 change | m2 status |
+| Row | T-108 length | HELD bound | Closed length | Change | Member over the closed piece (ST GF roof slab) | Gross m2 change | m2 status |
 |---|---|---|---|---|---|---|---|
-| GF-W13 (0.20) | 0.700 | 0 .. 0.200 | 0.700 | 0 (the end is the column, concrete) | B1 4.10 | 0 | EXACT |
-| GF-W20 | 1.018 | 0 .. 0.137 | 0.981 | -0.037 (Y node) | slab 4.34 | -0.161 | EXACT |
-| GF-W21 | 1.024 | 0 .. 0.137 | 0.993 | -0.031 (bend) | slab 4.34 | -0.135 | EXACT |
-| GF-W22 | 2.887 | none (piece sat in W34's) | 2.982 | +0.095 (junction piece, G-T108-1) | slab 4.34 / B1 4.10 | +0.390 .. +0.413 | BOUNDED |
-| GF-W31 | 1.279 | 0 .. 0.137 | 1.321 | +0.042 (Y node) | slab 4.34 / B4 4.00 | +0.166 .. +0.181 | BOUNDED |
-| GF-W32 | 2.842 | 0 .. 0.278 | 2.968 | +0.116 (Y node) +0.011 (column end) | slab 4.34 / B1 4.10 / B11 3.75 | +0.473 .. +0.547 | BOUNDED |
-| GF-W33 | 1.256 | 0 .. 0.217 | 1.287 | +0.031 (bend) | slab 4.34 | +0.135 | EXACT |
-| GF-W34 | 2.355 | 0 .. 0.256 | 2.415 | +0.060 (junction piece, G-T108-1) | slab 4.34 / B3 4.10 | +0.244 .. +0.259 | BOUNDED |
-| **GF, 0.15 black** | | **1.362 m HELD** | | **+0.2855 m** | | **+1.113 .. +1.239 m2** (m3 +0.167 .. +0.186) | |
+| GF-W13 (0.20) | 0.700 | 0 .. 0.200 | 0.700 | 0 (the end is the column, concrete) | - | 0 | DRAWING-CONFIRMED |
+| GF-W20 | 1.018 | 0 .. 0.137 | 0.981 | -0.037 (Y node) | slab 0.16 -> h 4.34 | -0.161 | DRAWING-CONFIRMED |
+| GF-W21 | 1.024 | 0 .. 0.137 | 0.993 | -0.031 (bend) | slab 4.34 | -0.135 | DRAWING-CONFIRMED |
+| GF-W22 | 2.887 | none (piece sat in W34's) | 2.982 | +0.095 (junction piece, G-T108-1) | slab 4.34; CB2 4.00 over the last 0.049 m if 0.25 wide | +0.400 .. +0.413 | BOUNDED: CB2 CONFLICT |
+| GF-W31 | 1.279 | 0 .. 0.137 | 1.321 | +0.042 (Y node) | slab 4.34 | +0.181 | DRAWING-CONFIRMED |
+| GF-W32 | 2.842 | 0 .. 0.278 | 2.968 | +0.116 (Y node) +0.011 (column end) | slab 4.34 (the column sliver the run counted sat under B1 4.10) | +0.549 | DRAWING-CONFIRMED |
+| GF-W33 | 1.256 | 0 .. 0.217 | 1.287 | +0.031 (bend) | slab 4.34 | +0.135 | DRAWING-CONFIRMED |
+| GF-W34 | 2.355 | 0 .. 0.256 | 2.415 | +0.060 (junction piece, G-T108-1) | slab 4.34; CB2 as GF-W22 | +0.245 .. +0.259 | BOUNDED: CB2 CONFLICT |
+| **GF, 0.15 black** | | **1.362 m HELD** | | **+0.2855 m** | | **+1.214 .. +1.241 m2** (m3 +0.182 .. +0.186) | |
 
 Length: DRAWING-CONFIRMED (both faces drawn on the wall layer of P7757.dxf; the bound is closed, not narrowed).
-Gross m2: EXACT where the run has one member above it (Q-60 A height); BOUNDED by the run's own member heights where it
-has several, because T-143 sampled the member above along the band only and the end piece lies beyond the band: the
-member over the end piece is the remaining cause (one read of the GF roof-slab plan of ST7757 dxf.dxf at each end).
-Never the weighted mean. Effect on T-108's established net 337.412 m2 (DC 252.817 + AOA 84.595): **+1.113 .. +1.239
-m2** (DC rows W20 / W21 / W22 / W31 / W33 / W34 +0.640 .. +0.692; AOA row W32 +0.473 .. +0.547), not applied to the
-ledger here (T-108 files untouched; Worker 3 integrates). White / black split: every closed row is BLACK (inner wall,
-Q-60 fallback, ASSUMED — OWNER-APPROVED, no block note on any sheet, T-107); white 0.20 established net unchanged
-47.359 m2 (303.1 / 394.7 units); black units stay with T-176.
+Height (owner Q-60 A): from the member drawn over each closed piece on the GROUND FLOOR ROOF SLAB plan of ST7757 dxf.dxf,
+placed on the architectural plan by one translation that matches all 30 GF columns (S-COL.BON outlines, residual 0.6
+mm); member sizes from the T-110 register (B1 / B3 0.20 x 0.40, CB2 0.50 deep); storey 4.50, slab 0.16 (T-108 / T-143).
+The m2 is the integral of that height over the closed piece's plan area / t, less the same over the strip the run
+already counted (so a counted sliver under a beam or in a column is corrected too). Only the CB2 width CONFLICT
+(BM-GF-055: schedule 0.20, drawn 0.25; owner Q-61 C(1): never pick) leaves a range, 0.027 m2 wide: the drawn 0.25 band's
+inner face lies 0.049 m inside the north wall's face, over the G-T108-1 piece. Effect on T-108's established net
+337.412 m2 (DC 252.817 + AOA 84.595): **+1.214 .. +1.241 m2** (DC rows W20 / W21 / W22 / W31 / W33 / W34 +0.665 ..
++0.692; AOA row W32 +0.549), m3 +0.182 .. +0.186; not applied to the ledger here (T-108 files untouched; Worker 3
+integrates). White / black split: every closed row is BLACK (inner wall, Q-60 fallback, ASSUMED — OWNER-APPROVED, no
+block note on any sheet, T-107); white 0.20 established net unchanged 47.359 m2 (303.1 / 394.7 units); black units stay
+with T-176.
 
 Engine vs freelancer: GF internal 0.15 (his 181.720 m2 gross) is still not like-for-like while other held length
 remains in that section (T-108 s.3: 2.687 m held incl. 1.162 m of these ends -> now 1.525 m; GF internal 0.20: 2.850 ->
@@ -78,16 +82,19 @@ count a piece twice and are refused. A held end is closed by area, never by exte
 
 ## 4. Tests and validation
 
-- tests/t215_junction_close/test_junction_close.py (13): villa T215-F, NOT Alsenan, hand truth in the docstring: F1 L
+- tests/t215_junction_close/test_junction_close.py (16): villa T215-F, NOT Alsenan, hand truth in the docstring: F1 L
   corner 0.700 m2 -> 2.000 / 1.500 m, deltas -0.100 / +0.100; F2 T + 45 deg stem under a through wall: 0.295000 m2,
   junction piece 0.020607 m2; F3 end in a column -> 0; unequal thickness; mirror, 90 deg and 30 deg + shift invariance.
   Adverse: junction piece claimed by both walls -> refused; an L corner square in both -> refused; millimetres
   refused; no direction refused; empty masonry -> ValueError ("HELD, never 0"); a wall listed twice refused; masonry
   in no band -> PARTLY_HELD with its area; two crossing through walls refused; a through wall takes the seat.
-- tests/t215_junction_close/test_t215_alsenan_ledger.py (6): every cluster CLOSED, sum t x delta = residual, the G-T108-1
+- tests/t215_junction_close/test_t215_alsenan_ledger.py (7): every cluster CLOSED, sum t x delta = residual, the G-T108-1
   piece assigned once, the bend moves length without changing the total, the column end 0, no change above its old
   bound, EXACT only for one member, no coordinates in the files.
-- `alsenan_t215_ends.py --check` reproduces both CSVs from the private capture (outside the repository): PASS. The V2
+- tests also cover the height step (5 more): the identity sum = integral over the masonry less the counted strips, a
+  piece with no member drawn and no slab given -> HELD (ValueError), the deepest member governs where two overlap.
+- `alsenan_t215_ends.py --check` reproduces both CSVs from the private capture and ST7757 dxf.dxf (outside the
+  repository): PASS. The V2
   capture reproduces T-108's run lengths (`t108_v2_lengths.py --check` PASS on the same capture).
 
 ## 5. Not closed in this run (stay HELD with their bounds; never 0)
@@ -98,7 +105,8 @@ count a piece twice and are refused. A held end is closed by area, never by exte
   on no sheet (T-201 / T-207 re-checked; section B-B draws two leafed doors there: a drawing conflict for the designer).
 - P-GF-05 masonry above the lintel 2.232 .. 2.700 m2: B1 soffit level at the opening (SW elevation face to +4.70, section
   B-B beam stubs to +4.95 at the court wall, T-143 calculated +5.10 with the structural top HELD, T-200 / T-206 / T-214).
-- The member over each closed end piece on the four BOUNDED rows (one ST7757 dxf.dxf GF roof-slab read per end).
+- CB2 width (BM-GF-055, existing T-110 CONFLICT): 0.013 m2 on GF-W22 and 0.014 m2 on GF-W34 stay a range until the
+  designer answers the CB2 item; not an owner question.
 
 ## 6. For the Checker (re-measure from the drawing)
 
@@ -106,6 +114,9 @@ count a piece twice and are refused. A held end is closed by area, never by exte
    the masonry between GF-W22's east-face top, the north face and GF-W34's faces; expected unmeasured 0.0232 m2,
    GF-W22 +0.095 / GF-W34 +0.060 m by the band rule (or by your own once-only split; the total is the check).
 2. J-D: GF-W32's faces D2:795 / D2:799 end on the column outline D2:12173 (0.20 x 0.50); GF-W13's top is that column.
+3. Member over the J-A piece: ST7757 dxf.dxf GROUND FLOOR ROOF SLAB, CB2 band faces handle 278 (inner, drawn 0.25) /
+   274 (outer), B3 band 291 / 28E stopping on 278; translation from the 30 GF column outlines (one vote, 0.6 mm). J-B,
+   J-C and J-D's GF-W32 piece lie under no beam face (nearest: handle 428, B11, 0.186 m from J-C): slab 0.16.
 
 ## 7. Lessons-register row (proposed, s.7)
 

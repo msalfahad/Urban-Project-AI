@@ -22,6 +22,10 @@ Engineering basis (ERS s.2 steps 1-3; s.3 'one element, counted once'):
   4. CLOSE: per wall, delta = share / t - the length the run already counts inside the same window. The cluster
      residual (masonry area - sum t x counted length) is the unmeasured piece; a set of extra lengths claimed by another
      method (a hand run, another wall's bound) whose area exceeds it counts a piece twice and is refused (`check_claims`).
+  5. HEIGHT (owner Q-60 A): the gross m2 change = (integral of the block height over the wall's share - over the strip
+     its run already counts) / t, the height being storey - depth of the member drawn above each point (the deepest
+     where two overlap), the slab height elsewhere; with no member and no slab given the piece is HELD
+     (`gross_change`, `height_integral`).
 
 Units: metres only; a thickness outside 0.05 .. 0.60 m (for example millimetres) raises ValueError.
 No drawing data in this file; callers pass geometry read at run time.
@@ -188,10 +192,51 @@ def close_junction(masonry, walls):
         out["walls"][w.wall_id] = {"t_m": t, "share_m2": share, "share_len_m": share / t, "counted_len_m": cl,
                                    "delta_m": share / t - cl}
     out["residual_m2"] = masonry.area - counted
+    out["_regions"] = regions
     out["status"] = "CLOSED" if unassigned <= AREA_TOL else "PARTLY_HELD"
     s = sum(v["share_m2"] for v in out["walls"].values())
     if abs(s + unassigned - masonry.area) > AREA_TOL:
         raise ValueError("partition does not add up to the drawn masonry")
+    return out
+
+
+def counted_strip(w: Wall) -> Polygon:
+    """The full-width piece the run already counts inside the window (from its counted end to the window cut)."""
+    u, n = _frame(w.check())
+    h = float(w.t_m) / 2
+    return Polygon([(w.node[0] + u[0] * s + n[0] * o, w.node[1] + u[1] * s + n[1] * o)
+                    for s, o in ((w.counted_s, -h), (w.window_s, -h), (w.window_s, h), (w.counted_s, h))])
+
+
+def height_integral(region, members, default_h):
+    """Integral of the block height over a plan region (m3 of wall volume per metre of thickness): height = storey
+    height - depth of the member above (owner Q-60 A). `members`: [(polygon, height_m)] (a point under several takes the
+    LOWEST height: the deepest member sits on the wall); outside every member the slab height `default_h`; None ->
+    ValueError (a piece with no member drawn above is HELD, never defaulted)."""
+    if region.is_empty:
+        return 0.0
+    tot, left = 0.0, region
+    for poly, h in sorted(members, key=lambda m: m[1]):
+        part = left.intersection(poly)
+        if part.area > 0:
+            tot += part.area * float(h)
+            left = left.difference(poly)
+    if left.area > AREA_TOL:
+        if default_h is None:
+            raise ValueError("part of the piece has no member drawn above it: HELD")
+        tot += left.area * float(default_h)
+    return tot
+
+
+def gross_change(walls, result, members, default_h):
+    """Per wall: gross block m2 change = (integral of h over its share - over its counted strip) / t, so the area and
+    the height of the closed piece both come from the drawings."""
+    out = {}
+    for w in walls:
+        t = float(w.t_m)
+        a = height_integral(result["_regions"][w.wall_id], members, default_h)
+        b = height_integral(counted_strip(w), members, default_h)
+        out[w.wall_id] = (a - b) / t
     return out
 
 

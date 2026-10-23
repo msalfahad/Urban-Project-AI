@@ -43,6 +43,11 @@ def test_bend_moves_length_without_changing_the_total():
     assert b["GF-W21"] == pytest.approx(-b["GF-W33"], abs=1e-4)
 
 
+def test_structural_plan_placed_by_one_translation():
+    for r in rows("T215_ENDS.csv"):
+        assert float(r["st_fit_residual_mm"]) <= 5.0
+
+
 def test_column_end_closes_at_zero():
     d = {r["row_id"]: float(r["delta_m"]) for r in rows("T215_ENDS.csv") if r["cluster"] == "J-D"}
     assert d["GF-W13"] == 0.0
@@ -58,9 +63,14 @@ def test_row_effect_matches_the_ends_and_never_exceeds_the_old_bound():
         assert float(r["closed_length_m"]) == pytest.approx(float(r["t108_physical_m"]) + d, abs=1e-4)
         if r["t108_held_end_max_m"]:
             assert d <= float(r["t108_held_end_max_m"]) + 1e-9, r["row_id"]
-        hs = [float(h) for h in r["member_heights_m"].split(" / ")]
-        assert r["m2_status"].startswith("EXACT") == (len(hs) == 1)
-        assert float(r["d_gross_m2_min"]) <= float(r["d_gross_m2_max"])
+        lo, hi = float(r["d_gross_m2_min"]), float(r["d_gross_m2_max"])
+        assert lo <= hi
+        # a range only from a named member conflict; otherwise one drawing-confirmed value
+        assert r["m2_status"].startswith("DRAWING-CONFIRMED") == (abs(hi - lo) < 5e-5)
+        if abs(hi - lo) >= 5e-5:
+            assert "CONFLICT" in r["m2_status"]
+        # never more wall than the storey height over the moved length (plus the counted-strip correction at a column)
+        assert abs(hi) <= 4.50 * abs(d) + 0.01
 
 
 def test_no_coordinates_or_client_text_in_the_ledger():

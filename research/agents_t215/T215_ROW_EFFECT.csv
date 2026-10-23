@@ -1,9 +1,9 @@
-row_id,t_m,block_type,t108_physical_m,t108_held_end_max_m,delta_m,closed_length_m,length_status,member_heights_m,d_gross_m2_min,d_gross_m2_max,m2_status,d_m3_min,d_m3_max,t108_net_status
-GF-W13,0.2,BLACK,0.700,0.200,+0.0000,0.7000,DRAWING-CONFIRMED (plan faces; held bound closed),4.10,+0.0000,+0.0000,EXACT (one member along the run),+0.0000,+0.0000,HELD
-GF-W20,0.15,BLACK,1.018,0.137,-0.0370,0.9810,DRAWING-CONFIRMED (plan faces; held bound closed),4.34,-0.1606,-0.1606,EXACT (one member along the run),-0.0241,-0.0241,DRAWING-CONFIRMED
-GF-W21,0.15,BLACK,1.024,0.137,-0.0311,0.9929,DRAWING-CONFIRMED (plan faces; held bound closed),4.34,-0.1350,-0.1350,EXACT (one member along the run),-0.0202,-0.0202,DRAWING-CONFIRMED
-GF-W22,0.15,BLACK,2.887,,+0.0952,2.9822,DRAWING-CONFIRMED (plan faces; held bound closed),4.10 / 4.34,+0.3903,+0.4132,BOUNDED (member over the end piece not sampled),+0.0585,+0.0620,DRAWING-CONFIRMED
-GF-W31,0.15,BLACK,1.279,0.137,+0.0416,1.3206,DRAWING-CONFIRMED (plan faces; held bound closed),4.00 / 4.34,+0.1664,+0.1805,BOUNDED (member over the end piece not sampled),+0.0250,+0.0271,DRAWING-CONFIRMED
-GF-W32,0.15,BLACK,2.842,0.278,+0.1261,2.9681,DRAWING-CONFIRMED (plan faces; held bound closed),3.75 / 4.10 / 4.34,+0.4729,+0.5473,BOUNDED (member over the end piece not sampled),+0.0709,+0.0821,ASSUMED — OWNER-APPROVED
-GF-W33,0.15,BLACK,1.256,0.217,+0.0311,1.2871,DRAWING-CONFIRMED (plan faces; held bound closed),4.34,+0.1350,+0.1350,EXACT (one member along the run),+0.0202,+0.0202,DRAWING-CONFIRMED
-GF-W34,0.15,BLACK,2.355,0.256,+0.0596,2.4146,DRAWING-CONFIRMED (plan faces; held bound closed),4.10 / 4.34,+0.2444,+0.2587,BOUNDED (member over the end piece not sampled),+0.0367,+0.0388,DRAWING-CONFIRMED
+row_id,t_m,block_type,t108_physical_m,t108_held_end_max_m,delta_m,closed_length_m,length_status,d_gross_m2_min,d_gross_m2_max,m2_status,d_m3_min,d_m3_max,t108_net_status
+GF-W13,0.2,BLACK,0.700,0.200,+0.0000,0.7000,DRAWING-CONFIRMED (plan faces; held bound closed),+0.0000,+0.0000,DRAWING-CONFIRMED (member above read on the ST slab plan),+0.0000,+0.0000,HELD
+GF-W20,0.15,BLACK,1.018,0.137,-0.0370,0.9810,DRAWING-CONFIRMED (plan faces; held bound closed),-0.1606,-0.1606,DRAWING-CONFIRMED (member above read on the ST slab plan),-0.0241,-0.0241,DRAWING-CONFIRMED
+GF-W21,0.15,BLACK,1.024,0.137,-0.0311,0.9929,DRAWING-CONFIRMED (plan faces; held bound closed),-0.1349,-0.1349,DRAWING-CONFIRMED (member above read on the ST slab plan),-0.0202,-0.0202,DRAWING-CONFIRMED
+GF-W22,0.15,BLACK,2.887,,+0.0952,2.9822,DRAWING-CONFIRMED (plan faces; held bound closed),+0.4003,+0.4131,"BOUNDED (CB2 width CONFLICT 0.20 schedule / 0.25 drawn, Q-61 C(1))",+0.0600,+0.0620,DRAWING-CONFIRMED
+GF-W31,0.15,BLACK,1.279,0.137,+0.0416,1.3206,DRAWING-CONFIRMED (plan faces; held bound closed),+0.1806,+0.1806,DRAWING-CONFIRMED (member above read on the ST slab plan),+0.0271,+0.0271,DRAWING-CONFIRMED
+GF-W32,0.15,BLACK,2.842,0.278,+0.1261,2.9681,DRAWING-CONFIRMED (plan faces; held bound closed),+0.5493,+0.5493,DRAWING-CONFIRMED (member above read on the ST slab plan),+0.0824,+0.0824,ASSUMED — OWNER-APPROVED
+GF-W33,0.15,BLACK,1.256,0.217,+0.0311,1.2871,DRAWING-CONFIRMED (plan faces; held bound closed),+0.1348,+0.1348,DRAWING-CONFIRMED (member above read on the ST slab plan),+0.0202,+0.0202,DRAWING-CONFIRMED
+GF-W34,0.15,BLACK,2.355,0.256,+0.0596,2.4146,DRAWING-CONFIRMED (plan faces; held bound closed),+0.2448,+0.2587,"BOUNDED (CB2 width CONFLICT 0.20 schedule / 0.25 drawn, Q-61 C(1))",+0.0367,+0.0388,DRAWING-CONFIRMED

@@ -161,3 +161,36 @@ def test_through_wall_takes_the_overlap():
     M = box(-0.5, 0.0, 0.5, 0.2).union(box(-0.075, -0.9, 0.075, 0.0))
     r = J.close_junction(M, [T, S])
     assert r["walls"]["S"]["share_len_m"] == pytest.approx(0.9, abs=1e-9)
+
+
+def test_height_of_the_closed_piece_from_the_member_above():
+    # F2 with a 0.20 beam (0.40 deep, storey 4.50 -> h 4.10) lying over y -0.05 .. 0.15 (arbitrary placement); slab
+    # elsewhere 4.34. Hand: the unmeasured piece (0.020607 m2) splits at y = -0.05: above it A's rectangle 0.15 x 0.05
+    # = 0.0075 plus B's triangle 0.112132 x 0.10 / 2 - (0.112132 x 0.05 ... ) -> checked through the identity below.
+    from shapely.geometry import box
+    walls, faces, closing = f2()
+    r = J.close_junction(J.masonry_from_faces(faces, walls, closing), walls)
+    beam = [(box(-1, -0.05, 2, 0.15), 4.10)]
+    g = J.gross_change(walls, r, beam, 4.34)
+    # identity: total change = integral of h over the masonry less over the counted strips, / t
+    tot_share = J.height_integral(r["_regions"]["A"], beam, 4.34) + J.height_integral(r["_regions"]["B"], beam, 4.34)
+    tot_cnt = sum(J.height_integral(J.counted_strip(w), beam, 4.34) for w in walls)
+    assert sum(g.values()) * 0.15 == pytest.approx(tot_share - tot_cnt, abs=1e-12)
+    # A's counted strip ends at y = -0.10, so its whole closed piece (-0.10 .. 0) lies half under the beam
+    assert 4.10 * 0.0 < sum(g.values()) < 4.34 * 0.137377 + 1e-9
+    assert sum(g.values()) > 4.10 * 0.137377 - 1e-9
+
+
+def test_piece_with_no_member_drawn_is_held_never_defaulted():
+    from shapely.geometry import box
+    walls, faces, closing = f2()
+    r = J.close_junction(J.masonry_from_faces(faces, walls, closing), walls)
+    with pytest.raises(ValueError, match="HELD"):
+        J.gross_change(walls, r, [(box(-1, -0.05, 2, 0.15), 4.10)], None)
+
+
+def test_deepest_member_governs_where_two_overlap():
+    from shapely.geometry import box
+    region = box(0, 0, 1, 0.15)
+    h = J.height_integral(region, [(box(0, 0, 0.5, 1), 4.10), (box(0.3, 0, 0.6, 1), 3.75)], 4.34)
+    assert h == pytest.approx(0.15 * (0.3 * 4.10 + 0.3 * 3.75 + 0.4 * 4.34), abs=1e-12)
