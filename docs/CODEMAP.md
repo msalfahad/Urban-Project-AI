@@ -14,16 +14,16 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `data/` | 19 | Registries (owner facts, project rules, trades) and trade rules. Large run data is gitignored. |
 | `docs/` | 72 | Design notes and the generated maps. |
 | `documents/` | 5 |  |
-| `engine/` | 650 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
+| `engine/` | 651 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 3015 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 3021 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 12 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 1510 | pytest suites, one folder per round. |
-| `tools/` | 110 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
+| `tests/` | 1514 | pytest suites, one folder per round. |
+| `tools/` | 111 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (254 modules)
 
@@ -387,7 +387,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `workbooks.py` | 242 | MEDIUM | 0 | REPORTING V3 - workbook layouts (generic over a BOQ_LINES model). |
 | `workbooks_v3b.py` | 308 | MEDIUM | 0 | REPORTING V3b - workbook layouts over the two-view line model (TECHNICAL_QTO / COMMERCIAL_BOQ). |
 
-## `engine/source/` (298 modules)
+## `engine/source/` (299 modules)
 
 | Module | Lines | Risk | Imp | Purpose |
 |---|---|---|---|---|
@@ -428,7 +428,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `blocker_remediation.py` | 74 | MEDIUM | 1 | BLOCKER_REMEDIATION_ENGINE (generic). |
 | `boq_canonical.py` | 134 | MEDIUM | 2 | CANONICAL BOQ ITEM MODEL (RC1) - one payable identity per physical measurement item. |
 | `boq_evidence.py` | 43 | MEDIUM | 1 | BOQ EVIDENCE MAPPING (R8.20) - which release blockers can change a quantity. |
-| `boq_line.py` | 386 | HIGH | 45 | CANONICAL BOQ LINE (M9 S1) - one payable physical measurement per line, bilingual, traceable (generic; stdlib only). |
+| `boq_line.py` | 386 | HIGH | 47 | CANONICAL BOQ LINE (M9 S1) - one payable physical measurement per line, bilingual, traceable (generic; stdlib only). |
 | `boq_reconcile.py` | 172 | CRITICAL | 2 | GENERIC BOQ RECONCILIATION (M7) - a frozen engine run against a reference bill of quantities, by family and |
 | `boq_report.py` | 94 | HIGH | 5 | BOQ REPORT LAYER (R8.19) - a PRESENTATION layer over evidence rows. It calculates NOTHING. |
 | `cad_guards.py` | 188 | MEDIUM | 3 | CAD / SOURCE GUARDS learnt from blind donor runs (generic). |
@@ -614,7 +614,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `schedule_grammar.py` | 98 | CRITICAL | 7 | SCHEDULE_GRAMMAR - reinforcement text grammar and schedule-cell provenance for machine-readable (attributed) |
 | `schedule_reader.py` | 352 | CRITICAL | 5 | SCHEDULE READER (M2) - structural schedules from attribute rows or text tables, without a project profile (generic). |
 | `schedule_table.py` | 181 | MEDIUM | 3 | SCHEDULE TABLE READER (V1) - a drawn schedule (grid lines + values) as rows and cells, fail closed. |
-| `scope_crosswalk_v1.py` | 397 | MEDIUM | 1 | SCOPE CROSSWALK V1 (T-196; residential review R7, PROJECT_UNDERSTANDING_ASSESSMENT s.6): BOQ scope against the |
+| `scope_crosswalk_v1.py` | 397 | MEDIUM | 2 | SCOPE CROSSWALK V1 (T-196; residential review R7, PROJECT_UNDERSTANDING_ASSESSMENT s.6): BOQ scope against the |
 | `scope_quantities.py` | 1377 | CRITICAL | 4 | SCOPE QUANTITIES (M8) - the scope a completeness finding locates, measured from the drawn plan or bounded by a |
 | `section_binding.py` | 461 | MEDIUM | 3 | SECTION BINDING V1 (T-013) - bind the level bands of sections / elevations to the plan floors, and report per floor |
 | `semantic_zones.py` | 169 | MEDIUM | 4 | PHYSICAL SPACE != SEMANTIC ZONE != TRADE MEASUREMENT REGION (R8.9). |
@@ -670,6 +670,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `topology_digest.py` | 79 | HIGH | 1 | TOPOLOGY RESULT DIGEST (RC1 final) - one sha256 over the certified topology OUTPUT of a run. |
 | `topology_policy.py` | 159 | HIGH | 9 | TOPOLOGY_TOLERANCE_POLICY (R8.8) - frozen BEFORE any room total of any project was looked at. |
 | `traceability.py` | 124 | MEDIUM | 2 | BOQ TRACEABILITY (M9 Phase 2B-3, ARCH_TAKEOFF_V2.5 only) - one chain per BOQ line: |
+| `trade_completeness_v1.py` | 536 | MEDIUM | 3 | TRADE COMPLETENESS V1 (T-236; owner 2026-10-23 19:00 trade completeness rules 1-6, acceptance 19:45): for every |
 | `trade_dependency.py` | 132 | MEDIUM | 2 | TRADE_DEPENDENCY_MATRIX - which evidence a trade quantity needs, and how a physical space that holds several |
 | `trade_regions.py` | 234 | MEDIUM | 5 | TRADE TREATMENT ASSIGNMENT AND TRADE MATERIALITY (R8.10). |
 | `trade_strips.py` | 163 | MEDIUM | 8 | STRIP ALLOCATION AUDIT (R8.13) - a door threshold or an open-passage strip is never silently absorbed into, or |
@@ -709,7 +710,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `shx_arabic.py` | 359 | HIGH | 1 | SHX ARABIC TEXT INTAKE - Arabic notes and labels drawn with legacy SHX fonts (TEXT, MTEXT, ATTRIB). |
 | `unit_evidence.py` | 139 | HIGH | 2 | Deterministic unit / scale EVIDENCE from a D1 (LibreDWG JSON) decode — R8.3 §16. |
 
-## `tools/` (103 modules)
+## `tools/` (104 modules)
 
 | Module | Lines | Risk | Imp | Purpose |
 |---|---|---|---|---|
@@ -809,6 +810,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `synthetic_villa.py` | 603 | CRITICAL | 11 | SYNTHETIC VILLA (M2) - structural DXF drawings generated from a design spec, with ground truth from the SPEC. |
 | `synthetic_villa_m6.py` | 698 | CRITICAL | 5 | SYNTHETIC VILLA M6 - completeness cases drawn onto the M2 synthetic villa, with the truth of what was drawn. |
 | `synthetic_villa_m8.py` | 211 | CRITICAL | 6 | SYNTHETIC VILLA M8 - the M6 completeness villa with the DESIGN of every scope element it draws, so that the |
+| `trade_completeness.py` | 106 | MEDIUM | 1 | Trade completeness runner (T-236): engine/source/trade_completeness_v1.check() on one project's input file. |
 | `urban_boq_m2.py` | 603 | CRITICAL | 18 | URBAN BOQ M2 - the one-command BOQ with ROUTE G, the generic engine, on top of the frozen M1 pipeline. |
 | `urban_boq_m9.py` | 3543 | HIGH | 46 | URBAN BOQ M9 (S1) - canonical BOQ lines, room material plans and the room-by-room workbook, on top of route G. |
 | `urban_intake.py` | 225 | CRITICAL | 27 | URBAN INTAKE (M2) - one drawing file -> a plain, source-pointed geometry record for the generic engine. |
@@ -1121,6 +1123,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t231_arch_v308/` | 2 |
 | `tests/t233_footing_line/` | 2 |
 | `tests/t234_slab_line/` | 2 |
+| `tests/t236_trade_completeness/` | 3 |
 | `tests/t238_arch_census/` | 1 |
 | `tests/water_tank_s8_4/` | 3 |
 | `tests/zz_freeze_integrity/` | 2 |
@@ -1370,6 +1373,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t231/` | 4 |
 | `research/agents_t233/` | 7 |
 | `research/agents_t234/` | 5 |
+| `research/agents_t236/` | 6 |
 | `research/agents_t238/` | 6 |
 | `research/alsenan_arch_truth_05/` | 28 |
 | `research/alsenan_column_rebar_s3/` | 17 |
