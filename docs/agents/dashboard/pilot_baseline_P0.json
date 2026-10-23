@@ -194,13 +194,13 @@
  "secondary": {
   "handins": 36,
   "verdicts": 53,
-  "merged": 29,
-  "rejected": 6,
-  "rejection_share": 0.113,
-  "ready_to_verdict_h_avg": 3.7,
+  "merged": 35,
+  "rejected": 9,
+  "rejection_share": 0.17,
+  "ready_to_verdict_h_avg": 3.6,
   "per_day": {
    "handins": 36.0,
-   "merged": 29.0
+   "merged": 35.0
   }
  },
  "runs": {

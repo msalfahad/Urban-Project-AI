@@ -156,10 +156,16 @@ def measure(src, lo, hi):
                 ready_at[re.sub(r"\s+", " ", tid)] = at
         if agent == "Verifier" and word in ("SUCCESS", "OK", "BLOCKED") and lo <= at < hi:
             for tid in dict.fromkeys(re.sub(r"\s+", " ", x) for x in re.findall(TID + r"(?:\s*r\d+)?", field)):
-                pos = msg.find(tid.split(" ")[0])
-                before = msg[:pos] if pos >= 0 else ""
-                r, g = before.rfind("REJECT"), before.rfind("MERGED")
-                kind = "REJECTED" if r > g else ("MERGED" if g > r else "CHECKED")
+                # newer form: the verdict follows the id in the task field ("T-193 Gate B MERGED e866..., T-208 MERGED ...")
+                after = re.search(re.escape(tid.split(" ")[0]) + r"\b([^,;]*?)(?=,|;|\bT-\d|$)", field)
+                seg = after.group(1) if after else ""
+                if "REJECT" in seg or "MERGED" in seg:
+                    kind = "REJECTED" if "REJECT" in seg else "MERGED"
+                else:  # older form: "MERGED T-137 (...), T-111 (...); REJECTED T-138 (...)" in the message
+                    pos = msg.find(tid.split(" ")[0])
+                    before = msg[:pos] if pos >= 0 else ""
+                    r, g = before.rfind("REJECT"), before.rfind("MERGED")
+                    kind = "REJECTED" if r > g else ("MERGED" if g > r else "CHECKED")
                 verdicts.append((at, tid, kind, ready_at.get(tid) or ready_at.get(tid.split(" ")[0])))
     handins = sum(1 for at, a, w, f, m in ev if lo <= at < hi and a.startswith("Worker") and w in ("SUCCESS", "OK") and "READY" in f)
     merged = [v for v in verdicts if v[2] == "MERGED"]
