@@ -219,6 +219,83 @@ Since 14:30 UTC (agents moving one by one to the repo-attached way of working): 
 Every INCOMPLETE and BLOCKED run happened before 14:30 under the old clone-based prompts. Previous day: 64 % SUCCESS.
 Checker output in the window: 23 merges, 5 rejections, each with gate and evidence.
 
+## 2026-10-22 04:31 to 2026-10-23 04:31 UTC (daily audit 2026-10-23, written 05:00)
+
+Cadence: workers and Checker every 2 h (Checker also 16:49 from 22 Oct 15:07), Lead every 4 h. Rows are generated from
+RUN_LOG.md (current + archive): each STARTED line paired with that agent's next final line. Scout: no slot in the window.
+Dashboard (no RUN_LOG line by design): scheduled task records the last run only. Run lock (agent_env.sh, live from about
+00:50 on 23 Oct): every one of the 9 runs since then took the lock with its STARTED line and released it with its final
+line; no IDLE (overlap) line, no takeover.
+
+| Slot start (UTC) | Agent | Status | Evidence |
+|---|---|---|---|
+| 10-22 05:02 | Worker 3 | SUCCESS | STARTED 05:02, final 05:11; T-169 READY (a0deb19) |
+| 10-22 05:40 | Worker 2 | SUCCESS | STARTED 05:40, final 05:46; T-150 r2 READY (d4a22b0) |
+| 10-22 05:51 | Verifier | SUCCESS | STARTED 05:51, final 06:23; T-151 (Gate B slice a), T-166, T-160, T-165 |
+| 10-22 06:21 | Worker 1 | SUCCESS | STARTED 06:21, final 07:22; T-158 READY (b64778b) |
+| 10-22 07:00 | Worker 3 | SUCCESS | STARTED 07:00, final 07:43; T-151 r2 READY (34765d8), integration package V3.0.3 |
+| 10-22 07:42 | Worker 2 | SUCCESS | STARTED 07:42, final 08:08; T-128 r2 READY (8710bb1, rework of REJECTED, backlog-permitted) |
+| 10-22 07:51 | Verifier | SUCCESS | STARTED 07:51, final 08:17; T-132, T-151 r2 (Gate B a-c), T-157, T-140 |
+| 10-22 08:14 | Lead | SUCCESS | STARTED 08:14, final 08:40; board |
+| 10-22 08:19 | Worker 1 | SUCCESS | STARTED 08:19, final 08:32; T-171 READY (a0b23b0) |
+| 10-22 09:01 | Worker 3 | SUCCESS | STARTED 09:01, final 09:24; T-177 READY (d02b05c) + T-140 rework merged (3244b35) |
+| 10-22 09:42 | Worker 2 | SUCCESS | STARTED 09:42, final 10:09; T-172 READY (d7f81ef) |
+| 10-22 09:52 | Verifier | SUCCESS | STARTED 09:52, final 10:24; T-140, T-169, T-162, T-180 (pool) |
+| 10-22 10:20 | Worker 1 | SUCCESS | STARTED 10:20, final 10:38; T-183 READY (8beaa6a) |
+| 10-22 11:01 | Worker 3 | SUCCESS | STARTED 11:01, final 12:16; T-167 READY (a2b8c0f; integration package ARCH_TAKEOFF_V3.0.4) |
+| 10-22 11:41 | Worker 2 | SUCCESS | STARTED 11:41, final 11:53; T-162 r2 READY (a5bd25c) |
+| 10-22 11:51 | Verifier | SUCCESS | STARTED 11:51, final 12:07; T-183, T-177, T-163 (+ T-180 pool slot, SCOREBOARD v2 12:05) |
+| 10-22 12:13 | Lead | SUCCESS | STARTED 12:13, final 12:17; board |
+| 10-22 12:23 | Worker 1 | SUCCESS | STARTED 12:23, final 12:45; T-184 READY (9fbedc4) |
+| 10-22 13:01 | Worker 3 | SUCCESS | STARTED 13:01, final 13:18; T-186 READY (agents/task-T-186 2e8bf5c; default guard, unwired) |
+| 10-22 13:42 | Worker 2 | SUCCESS | STARTED 13:42, final 14:08; T-175 READY (agents/task-T-175 d3e11eb) |
+| 10-22 13:52 | Verifier | SUCCESS | STARTED 13:52, final 15:04; T-184, T-171, T-150 r2, T-167 (Gate B) + T-180 stair slot |
+| 10-22 14:21 | Worker 1 | SUCCESS | STARTED 14:21, final 14:30; T-183 r2 READY (c046645) |
+| 10-22 15:03 | Worker 3 | SUCCESS | STARTED 15:03, final 15:57; T-182 READY (7074fab, tooling only, no quantity change) |
+| 10-22 15:41 | Worker 2 | SUCCESS | STARTED 15:41, final 16:12; T-173 READY (006acbd, backlog-permitted investigation of Q-72) |
+| 10-22 15:51 | Verifier | SUCCESS | STARTED 15:51, final 16:30; T-172, T-162 r2 (pair), T-183 r2 (T-180 slot), T-128 r2, T-158 |
+| 10-22 16:12 | Lead | SUCCESS | STARTED 16:12, final 16:20; board |
+| 10-22 16:21 | Worker 1 | SUCCESS | STARTED 16:21, final 16:35; T-185 READY (agents/task-T-185 ac35911) |
+| 10-22 16:52 | Verifier | SUCCESS | STARTED 16:52, final 17:20; T-186, T-182, T-175, T-173 + T-180 slot (ST-01 flights) |
+| 10-22 17:00 | Worker 3 | SUCCESS | STARTED 17:00, final 18:26; T-179 READY (Gate B integration package ARCH_TAKEOFF_V3.0.5, 4b5cdce; integrates T-152, T- |
+| 10-22 17:40 | Worker 2 | SUCCESS | STARTED 17:40, final 17:51; T-128 r3 READY (37c9fc4b, agents/task-T-128) |
+| 10-22 17:52 | Verifier | SUCCESS | STARTED 17:52, final 18:01; T-128 r3, T-185 (+ T-180 slot: domes) |
+| 10-22 18:21 | Worker 1 | SUCCESS | STARTED 18:21, final 19:11; T-189 READY agents/task-T-189 @ b8730b23 |
+| 10-22 19:01 | Worker 3 | SUCCESS | STARTED 19:01, final 19:09; T-178 READY (agents/task-T-178 684fbbe4) |
+| 10-22 19:40 | Worker 2 | SUCCESS | STARTED 19:40, final 20:11; T-164 READY d849ca4a |
+| 10-22 19:51 | Verifier | SUCCESS | STARTED 19:51, final 21:04; T-189, T-178, T-164 MERGED; T-179 Gate B REJECTED |
+| 10-22 20:11 | Lead | SUCCESS | STARTED 20:11, final 20:21; board |
+| 10-22 20:21 | Worker 1 | SUCCESS | STARTED 20:21, final 20:40; T-163 r2 READY (agents/task-T-163-r2 @ bc34f9aa) |
+| 10-22 21:01 | Worker 3 | SUCCESS | STARTED 21:01, final 22:00; T-181 READY (agents/task-T-181 04b138c9) |
+| 10-22 21:40 | Worker 2 | SUCCESS | STARTED 21:40, final 22:12; T-194 READY (agents/task-T-194 @ 5ca59773) |
+| 10-22 21:50 | Verifier | SUCCESS | STARTED 21:50, final 22:00; T-181 MERGED, T-163 r2 REJECTED |
+| 10-22 22:20 | Worker 1 | SUCCESS | STARTED 22:20, final 22:27; T-163 r3 READY (agents/task-T-163-r3 @ fa390ca2) |
+| 10-22 23:00 | Worker 3 | SUCCESS | STARTED 23:00, final 23:39; T-179 r2 READY (agents/task-T-179 @ 85bba0ff, Gate B integration package V3.0.5 r2) |
+| 10-22 23:40 | Worker 2 | SUCCESS | STARTED 23:40, final 00:01; T-195 READY (6c225209) |
+| 10-22 23:51 | Verifier | SUCCESS | STARTED 23:51, final 01:15; T-179 r2 (Gate B PASS) MERGED 90d0b769, T-163 r3 MERGED 659f889f, T-194 MERGED 4f2678c5, T |
+| 10-23 00:12 | Lead | SUCCESS | STARTED 00:12, final 00:21; board |
+| 10-23 00:20 | Worker 1 | SUCCESS | STARTED 00:20, final 00:46; T-192 READY 9549eff5 |
+| 10-23 01:00 | Worker 3 | SUCCESS | STARTED 01:00, final 01:52; T-196 READY (agents/task-T-196 @ 59f433ee) |
+| 10-23 01:40 | Worker 2 | SUCCESS | STARTED 01:40, final 02:02; T-198 READY (agents/task-T-198 @ 2d7ec661) |
+| 10-23 01:51 | Verifier | SUCCESS | STARTED 01:51, final 02:04; T-190 MERGED 465e0015, T-192 MERGED 86fd5f42, T-196 REJECTED, T-180 slot CONC.COLUMN 3 col |
+| 10-23 02:20 | Worker 1 | SUCCESS | STARTED 02:20, final 02:35; T-191 READY (agents/task-T-191 827bd8d2) |
+| 10-23 03:00 | Worker 3 | SUCCESS | STARTED 03:00, final 03:55; T-187 READY (agents/task-T-187 5922d4ea; integration package V3.0.6, integrates T-186, T-1 |
+| 10-23 03:40 | Worker 2 | SUCCESS | STARTED 03:40, final 04:02; T-197 READY (agents/task-T-197 @ 2df8ffd1) |
+| 10-23 03:51 | Verifier | SUCCESS | STARTED 03:51, final 04:03; T-198 MERGED 57bb0411, T-191 REJECTED, T-180 slot CONC.COLUMN 3 columns |
+| 10-23 04:11 | Lead | SUCCESS | STARTED 04:11, final 04:17; board |
+| 10-23 04:20 | Worker 1 | SUCCESS | STARTED 04:20, final 04:28; T-191 r2 READY (agents/task-T-191 @ e343f9c9) |
+
+**Totals, 55 slots scheduled (pilot_metrics.py slot count), 55 STARTED lines, 55 paired with a final line:**
+
+| Status | Runs | Share |
+|---|---|---|
+| SUCCESS | 55 | 100 % |
+| BLOCKED | 0 | 0 % |
+| FAILED | 0 | 0 % |
+| INCOMPLETE | 0 | 0 % |
+
+Previous day: 82 % SUCCESS (61 slots with evidence); since 22 Oct 14:30 every slot has been STARTED + SUCCESS.
+
 ## Refused commands (today, from RUN_LOG; exact refusal reasons)
 
 | Refusal reason | Command (as the agents report it) | Agents |

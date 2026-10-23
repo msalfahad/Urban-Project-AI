@@ -1,0 +1,267 @@
+{
+ "window": [
+  "2026-10-22T05:00Z",
+  "2026-10-23T05:00Z"
+ ],
+ "days": 1.0,
+ "primary": {
+  "verified_reference_lines": {
+   "scoreboard_at": "2026-10-23 01:10",
+   "rows": [
+    {
+     "trade": "Concrete",
+     "unit": "m3",
+     "baseline": "A",
+     "verified": 0,
+     "of": 8
+    },
+    {
+     "trade": "Concrete",
+     "unit": "m3",
+     "baseline": "ARCH_TAKEOFF_V3.0.3",
+     "verified": 0,
+     "of": 8
+    },
+    {
+     "trade": "Concrete",
+     "unit": "m3",
+     "baseline": "ARCH_TAKEOFF_V3.0.4",
+     "verified": 0,
+     "of": 8
+    },
+    {
+     "trade": "Concrete",
+     "unit": "m3",
+     "baseline": "ARCH_TAKEOFF_V3.0.5",
+     "verified": 0,
+     "of": 8
+    },
+    {
+     "trade": "Plaster",
+     "unit": "m2",
+     "baseline": "A",
+     "verified": 0,
+     "of": 1
+    },
+    {
+     "trade": "Plaster",
+     "unit": "m2",
+     "baseline": "ARCH_TAKEOFF_V3.0.3",
+     "verified": 0,
+     "of": 1
+    },
+    {
+     "trade": "Plaster",
+     "unit": "m2",
+     "baseline": "ARCH_TAKEOFF_V3.0.4",
+     "verified": 0,
+     "of": 1
+    },
+    {
+     "trade": "Plaster",
+     "unit": "m2",
+     "baseline": "ARCH_TAKEOFF_V3.0.5",
+     "verified": 0,
+     "of": 1
+    },
+    {
+     "trade": "Paint",
+     "unit": "m2",
+     "baseline": "A",
+     "verified": 0,
+     "of": 1
+    },
+    {
+     "trade": "Paint",
+     "unit": "m2",
+     "baseline": "ARCH_TAKEOFF_V3.0.3",
+     "verified": 0,
+     "of": 1
+    },
+    {
+     "trade": "Paint",
+     "unit": "m2",
+     "baseline": "ARCH_TAKEOFF_V3.0.4",
+     "verified": 0,
+     "of": 1
+    },
+    {
+     "trade": "Paint",
+     "unit": "m2",
+     "baseline": "ARCH_TAKEOFF_V3.0.5",
+     "verified": 0,
+     "of": 1
+    },
+    {
+     "trade": "Floor area",
+     "unit": "m2",
+     "baseline": "A",
+     "verified": 0,
+     "of": 1
+    },
+    {
+     "trade": "Floor area",
+     "unit": "m2",
+     "baseline": "ARCH_TAKEOFF_V3.0.3",
+     "verified": 0,
+     "of": 1
+    },
+    {
+     "trade": "Floor area",
+     "unit": "m2",
+     "baseline": "ARCH_TAKEOFF_V3.0.4",
+     "verified": 0,
+     "of": 1
+    },
+    {
+     "trade": "Floor area",
+     "unit": "m2",
+     "baseline": "ARCH_TAKEOFF_V3.0.5",
+     "verified": 0,
+     "of": 1
+    },
+    {
+     "trade": "Doors (aluminium)",
+     "unit": "m2",
+     "baseline": "A",
+     "verified": 0,
+     "of": 1
+    },
+    {
+     "trade": "Doors (aluminium)",
+     "unit": "m2",
+     "baseline": "ARCH_TAKEOFF_V3.0.3",
+     "verified": 0,
+     "of": 1
+    },
+    {
+     "trade": "Doors (aluminium)",
+     "unit": "m2",
+     "baseline": "ARCH_TAKEOFF_V3.0.4",
+     "verified": 0,
+     "of": 1
+    },
+    {
+     "trade": "Doors (aluminium)",
+     "unit": "m2",
+     "baseline": "ARCH_TAKEOFF_V3.0.5",
+     "verified": 0,
+     "of": 1
+    },
+    {
+     "trade": "Windows (aluminium)",
+     "unit": "m2",
+     "baseline": "A",
+     "verified": 0,
+     "of": 1
+    },
+    {
+     "trade": "Windows (aluminium)",
+     "unit": "m2",
+     "baseline": "ARCH_TAKEOFF_V3.0.3",
+     "verified": 0,
+     "of": 1
+    },
+    {
+     "trade": "Windows (aluminium)",
+     "unit": "m2",
+     "baseline": "ARCH_TAKEOFF_V3.0.4",
+     "verified": 0,
+     "of": 1
+    },
+    {
+     "trade": "Windows (aluminium)",
+     "unit": "m2",
+     "baseline": "ARCH_TAKEOFF_V3.0.5",
+     "verified": 0,
+     "of": 1
+    }
+   ]
+  },
+  "verified_pieces_integrated": [
+   "T-152",
+   "T-160",
+   "T-166"
+  ],
+  "gate_b_packages_merged": [
+   "T-151",
+   "T-167",
+   "T-179"
+  ],
+  "integration_latency_h_avg": 20.6,
+  "packages_naming_inputs": 1
+ },
+ "secondary": {
+  "handins": 36,
+  "verdicts": 53,
+  "merged": 29,
+  "rejected": 6,
+  "rejection_share": 0.113,
+  "ready_to_verdict_h_avg": 3.7,
+  "per_day": {
+   "handins": 36.0,
+   "merged": 29.0
+  }
+ },
+ "runs": {
+  "agents": {
+   "Lead": {
+    "slots": 6,
+    "started": 6,
+    "closed": 6,
+    "success": 6,
+    "idle": 0,
+    "failed": 0,
+    "unclosed": 0
+   },
+   "Worker 1": {
+    "slots": 12,
+    "started": 12,
+    "closed": 12,
+    "success": 12,
+    "idle": 0,
+    "failed": 0,
+    "unclosed": 0
+   },
+   "Worker 2": {
+    "slots": 12,
+    "started": 12,
+    "closed": 12,
+    "success": 12,
+    "idle": 0,
+    "failed": 0,
+    "unclosed": 0
+   },
+   "Worker 3": {
+    "slots": 12,
+    "started": 12,
+    "closed": 12,
+    "success": 12,
+    "idle": 0,
+    "failed": 0,
+    "unclosed": 0
+   },
+   "Verifier": {
+    "slots": 13,
+    "started": 13,
+    "closed": 13,
+    "success": 13,
+    "idle": 0,
+    "failed": 0,
+    "unclosed": 0
+   }
+  },
+  "total": {
+   "slots": 55,
+   "started": 55,
+   "closed": 55,
+   "success": 55,
+   "idle": 0,
+   "failed": 0,
+   "unclosed": 0
+  },
+  "closure_share": 1.0,
+  "success_per_slot": 1.0,
+  "idle_share_of_closed": 0.0
+ }
+}
