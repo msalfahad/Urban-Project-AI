@@ -1,0 +1,161 @@
+{
+ "task": "T-201",
+ "development_villa": true,
+ "accuracy_claim": "none (development villa)",
+ "windows_total_in_census": 29,
+ "windows_height_DRAWING_CONFIRMED_before": 8,
+ "windows_height_DRAWING_CONFIRMED_after": 26,
+ "windows_newly_established": [
+  "W04",
+  "W05",
+  "W06",
+  "W07",
+  "W08",
+  "W09",
+  "W10",
+  "W16",
+  "W19",
+  "W20",
+  "W21",
+  "W22",
+  "W23",
+  "W24",
+  "W25",
+  "W27",
+  "W28",
+  "W29"
+ ],
+ "windows_still_held": [
+  "W02",
+  "W11",
+  "W12"
+ ],
+ "like_for_like_before (same openings, engine vs freelancer)": {
+  "n": 8,
+  "engine_m2": 56.771,
+  "freelancer_m2": 54.931,
+  "diff_m2": 1.84,
+  "diff_pct_of_freelancer": 3.35
+ },
+ "like_for_like_newly_established": {
+  "n": 18,
+  "engine_m2": 22.73,
+  "freelancer_m2": 26.95,
+  "diff_m2": -4.22,
+  "diff_pct_of_freelancer": -15.66
+ },
+ "like_for_like_after": {
+  "n": 26,
+  "engine_m2": 79.501,
+  "freelancer_m2": 81.881,
+  "diff_m2": -2.38,
+  "diff_pct_of_freelancer": -2.91
+ },
+ "other_openings": {
+  "P-GF-05": {
+   "status": "DRAWING-CONFIRMED",
+   "height_m": 2.5,
+   "area_m2": 3.0,
+   "why": ""
+  },
+  "P-GF-01": {
+   "status": "HELD",
+   "height_m": null,
+   "area_m2": null,
+   "why": "the opening exists on the plan but no sheet draws its head"
+  },
+  "P-1F-01": {
+   "status": "HELD",
+   "height_m": null,
+   "area_m2": null,
+   "why": "the opening exists on the plan but no sheet draws its head"
+  }
+ },
+ "W02": {
+  "SILL_LEVEL_M": 1.0,
+  "HEAD_LEVEL_M": 3.2,
+  "HEIGHT_M": 2.2,
+  "STATUS": "HELD",
+  "WHY": "height drawn at the cut; width / count held: T-161 F23: rendered as two windows with a pier (count 1 vs 2 not settled); designer D-53 (besides D-45 height)"
+ },
+ "block_runs_moved": [
+  {
+   "wall": "GF-W04",
+   "gross_m2": "19.012",
+   "deducted_before_m2": "1.980",
+   "deducted_after_m2": "4.710",
+   "net_before_m2": "10.207 .. 17.032",
+   "net_after_m2": "14.302",
+   "held_after": "",
+   "s5_after": "HELD"
+  },
+  {
+   "wall": "GF-W10",
+   "gross_m2": "23.543",
+   "deducted_before_m2": "1.980",
+   "deducted_after_m2": "3.420",
+   "net_before_m2": "",
+   "net_after_m2": "",
+   "held_after": "",
+   "s5_after": "HELD"
+  },
+  {
+   "wall": "GF-W16",
+   "gross_m2": "19.154",
+   "deducted_before_m2": "0.000",
+   "deducted_after_m2": "3.750",
+   "net_before_m2": "9.779 .. 19.154",
+   "net_after_m2": "15.404",
+   "held_after": "",
+   "s5_after": "DRAWING-CONFIRMED"
+  },
+  {
+   "wall": "1F-W00",
+   "gross_m2": "22.932",
+   "deducted_before_m2": "5.885",
+   "deducted_after_m2": "10.690",
+   "net_before_m2": "11.700 .. 17.047",
+   "net_after_m2": "12.242",
+   "held_after": "",
+   "s5_after": "DRAWING-CONFIRMED"
+  },
+  {
+   "wall": "1F-W06",
+   "gross_m2": "57.772",
+   "deducted_before_m2": "0.000",
+   "deducted_after_m2": "3.285",
+   "net_before_m2": "48.285 .. 57.772",
+   "net_after_m2": "54.487",
+   "held_after": "",
+   "s5_after": "DRAWING-CONFIRMED"
+  },
+  {
+   "wall": "1F-W10",
+   "gross_m2": "47.869",
+   "deducted_before_m2": "0.000",
+   "deducted_after_m2": "2.940",
+   "net_before_m2": "37.509 .. 47.869",
+   "net_after_m2": "44.929",
+   "held_after": "",
+   "s5_after": "DRAWING-CONFIRMED"
+  },
+  {
+   "wall": "2F-W02",
+   "gross_m2": "21.818",
+   "deducted_before_m2": "0.000",
+   "deducted_after_m2": "3.780",
+   "net_before_m2": "",
+   "net_after_m2": "",
+   "held_after": "",
+   "s5_after": "HELD"
+  }
+ ],
+ "reveal_m_l_newly_DRAWING_CONFIRMED": {
+  "n": 19,
+  "m": 82.0
+ },
+ "tolerances_m": {
+  "binding": 0.02,
+  "current_issue_overlay": 0.04
+ }
+}
