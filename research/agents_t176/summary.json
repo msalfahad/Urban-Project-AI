@@ -1,0 +1,76 @@
+{
+ "method": "BLOCK_PROCUREMENT_V1",
+ "input": "MASONRY_AREA_V1 r2 (T-108 r2 MERGED 01eeafd0): T108_BY_WALL.csv",
+ "params": {
+  "cutting_waste": {
+   "value": null,
+   "source": "no approved source (owner 2026-10-23: configurable, evidence-based)"
+  },
+  "breakage": {
+   "value": null,
+   "source": "no approved source"
+  },
+  "mortar_waste": {
+   "value": null,
+   "source": "no approved source for block laying mortar"
+  },
+  "dry_factor": {
+   "value": 1.33,
+   "source": "Q-53 C owner method 2026-10-20 12:02 (dry factor 1.33; not universal)"
+  },
+  "cement_kg_m3": {
+   "value": 1440.0,
+   "source": "Q-53 C owner method (cement 1440 kg/m3)"
+  },
+  "bag_kg": {
+   "value": 50.0,
+   "source": "Q-45 B / Q-53 C (50 kg bag)"
+  },
+  "mix": {
+   "value": null,
+   "source": "block laying mortar mix: printed on no Alsenan sheet (T-091 census), no owner answer; Q-45 B 1:4 is the mortar behind wall tiles (another element)"
+  },
+  "white_joint_m": {
+   "value": null,
+   "source": "thin-bed joint not given (Q-60: adhesive coverage HELD)"
+  },
+  "shell_width_m": {
+   "value": null,
+   "source": "face-shell width not given (hollow units only)"
+  }
+ },
+ "black": {
+  "net_established_m2": 290.052,
+  "installed_units": 3625.65,
+  "mortar_wet_m3": 3.6059,
+  "mortar_edge_tolerance_m3": 0.2817,
+  "gross_m2 of walls whose net is HELD": 247.277,
+  "by_t (net status of the area; units / mortar status ASSUMED — OWNER-APPROVED via Q-75)": {
+   "0.15": {
+    "DRAWING-CONFIRMED": {
+     "net_m2": 103.332,
+     "installed_units": 1291.65,
+     "mortar_wet_m3": 1.1431
+    },
+    "ASSUMED — OWNER-APPROVED": {
+     "net_m2": 79.005,
+     "installed_units": 987.562,
+     "mortar_wet_m3": 0.874
+    }
+   },
+   "0.20": {
+    "DRAWING-CONFIRMED": {
+     "net_m2": 107.715,
+     "installed_units": 1346.437,
+     "mortar_wet_m3": 1.5888
+    }
+   }
+  }
+ },
+ "thickness_census_gross_m2 (MASONRY_AREA_V1 rows)": {
+  "0.15": 370.908,
+  "0.20": 574.286,
+  "0.40": 0.0
+ },
+ "rows": 100
+}

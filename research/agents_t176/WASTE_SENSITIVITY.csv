@@ -1,0 +1,22 @@
+parameter_set,parameter_source,block_type,t_m,product,net_status,status,installed_units,ordered_units (NOT RELEASED),white_pallets (NOT RELEASED)
+cutting 0.03 + breakage 0.00,illustrative low end of the owner skill range 3-8 % (DEFAULT/CONFIRM),BLACK,0.15,BLACK_40x20,ASSUMED — OWNER-APPROVED,ASSUMED — OWNER-APPROVED,987.562,1018,
+cutting 0.03 + breakage 0.00,illustrative low end of the owner skill range 3-8 % (DEFAULT/CONFIRM),BLACK,0.15,BLACK_40x20,DRAWING-CONFIRMED,ASSUMED — OWNER-APPROVED,1291.650,1331,
+cutting 0.03 + breakage 0.00,illustrative low end of the owner skill range 3-8 % (DEFAULT/CONFIRM),BLACK,0.20,BLACK_40x20,DRAWING-CONFIRMED,ASSUMED — OWNER-APPROVED,1346.437,1387,
+cutting 0.03 + breakage 0.00,illustrative low end of the owner skill range 3-8 % (DEFAULT/CONFIRM),WHITE,0.20,WHITE_60x20,ASSUMED — OWNER-APPROVED,ASSUMED — OWNER-APPROVED,46.583,48,1
+cutting 0.03 + breakage 0.00,illustrative low end of the owner skill range 3-8 % (DEFAULT/CONFIRM),WHITE,0.20,WHITE_60x20,DRAWING-CONFIRMED,ASSUMED — OWNER-APPROVED,348.067,359,5
+cutting 0.03 + breakage 0.00,illustrative low end of the owner skill range 3-8 % (DEFAULT/CONFIRM),WHITE,0.20,WHITE_62.5x25,ASSUMED — OWNER-APPROVED,ASSUMED — OWNER-APPROVED,35.776,37,1
+cutting 0.03 + breakage 0.00,illustrative low end of the owner skill range 3-8 % (DEFAULT/CONFIRM),WHITE,0.20,WHITE_62.5x25,DRAWING-CONFIRMED,ASSUMED — OWNER-APPROVED,267.315,276,5
+cutting 0.05 + breakage 0.00,owner skill quantity-takeoff-rules 2.1 DEFAULT/CONFIRM (not approved),BLACK,0.15,BLACK_40x20,ASSUMED — OWNER-APPROVED,ASSUMED — OWNER-APPROVED,987.562,1037,
+cutting 0.05 + breakage 0.00,owner skill quantity-takeoff-rules 2.1 DEFAULT/CONFIRM (not approved),BLACK,0.15,BLACK_40x20,DRAWING-CONFIRMED,ASSUMED — OWNER-APPROVED,1291.650,1357,
+cutting 0.05 + breakage 0.00,owner skill quantity-takeoff-rules 2.1 DEFAULT/CONFIRM (not approved),BLACK,0.20,BLACK_40x20,DRAWING-CONFIRMED,ASSUMED — OWNER-APPROVED,1346.437,1414,
+cutting 0.05 + breakage 0.00,owner skill quantity-takeoff-rules 2.1 DEFAULT/CONFIRM (not approved),WHITE,0.20,WHITE_60x20,ASSUMED — OWNER-APPROVED,ASSUMED — OWNER-APPROVED,46.583,49,1
+cutting 0.05 + breakage 0.00,owner skill quantity-takeoff-rules 2.1 DEFAULT/CONFIRM (not approved),WHITE,0.20,WHITE_60x20,DRAWING-CONFIRMED,ASSUMED — OWNER-APPROVED,348.067,366,5
+cutting 0.05 + breakage 0.00,owner skill quantity-takeoff-rules 2.1 DEFAULT/CONFIRM (not approved),WHITE,0.20,WHITE_62.5x25,ASSUMED — OWNER-APPROVED,ASSUMED — OWNER-APPROVED,35.776,38,1
+cutting 0.05 + breakage 0.00,owner skill quantity-takeoff-rules 2.1 DEFAULT/CONFIRM (not approved),WHITE,0.20,WHITE_62.5x25,DRAWING-CONFIRMED,ASSUMED — OWNER-APPROVED,267.315,281,5
+cutting 0.08 + breakage 0.00,illustrative high end of the owner skill range 3-8 % (DEFAULT/CONFIRM),BLACK,0.15,BLACK_40x20,ASSUMED — OWNER-APPROVED,ASSUMED — OWNER-APPROVED,987.562,1067,
+cutting 0.08 + breakage 0.00,illustrative high end of the owner skill range 3-8 % (DEFAULT/CONFIRM),BLACK,0.15,BLACK_40x20,DRAWING-CONFIRMED,ASSUMED — OWNER-APPROVED,1291.650,1395,
+cutting 0.08 + breakage 0.00,illustrative high end of the owner skill range 3-8 % (DEFAULT/CONFIRM),BLACK,0.20,BLACK_40x20,DRAWING-CONFIRMED,ASSUMED — OWNER-APPROVED,1346.437,1455,
+cutting 0.08 + breakage 0.00,illustrative high end of the owner skill range 3-8 % (DEFAULT/CONFIRM),WHITE,0.20,WHITE_60x20,ASSUMED — OWNER-APPROVED,ASSUMED — OWNER-APPROVED,46.583,51,1
+cutting 0.08 + breakage 0.00,illustrative high end of the owner skill range 3-8 % (DEFAULT/CONFIRM),WHITE,0.20,WHITE_60x20,DRAWING-CONFIRMED,ASSUMED — OWNER-APPROVED,348.067,376,5
+cutting 0.08 + breakage 0.00,illustrative high end of the owner skill range 3-8 % (DEFAULT/CONFIRM),WHITE,0.20,WHITE_62.5x25,ASSUMED — OWNER-APPROVED,ASSUMED — OWNER-APPROVED,35.776,39,1
+cutting 0.08 + breakage 0.00,illustrative high end of the owner skill range 3-8 % (DEFAULT/CONFIRM),WHITE,0.20,WHITE_62.5x25,DRAWING-CONFIRMED,ASSUMED — OWNER-APPROVED,267.315,289,5
