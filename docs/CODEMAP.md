@@ -18,11 +18,11 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 3158 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 3175 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 15 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 1571 | pytest suites, one folder per round. |
+| `tests/` | 1575 | pytest suites, one folder per round. |
 | `tools/` | 112 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (254 modules)
@@ -643,7 +643,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `stair_flight_once_v1.py` | 313 | MEDIUM | 1 | STAIR FLIGHT ONCE V1 - each stair flight is measured on ONE storey: a flight drawn again on the plan above is listed, |
 | `stair_floor_residue.py` | 371 | MEDIUM | 3 | STAIR FLOOR RESIDUE V1 - the floor finish of a room face that holds stair flights, a stair well or a stair opening. |
 | `stair_generic.py` | 65 | MEDIUM | 1 | STAIR (M2, generic, light) - one straight flight from a floor-to-floor rise and a COUNTED riser number: geometry, |
-| `stair_geometry.py` | 336 | CRITICAL | 7 | STAIR GEOMETRY - stair flights, landings and winders from drawn treads and stated levels (generic). |
+| `stair_geometry.py` | 336 | CRITICAL | 8 | STAIR GEOMETRY - stair flights, landings and winders from drawn treads and stated levels (generic). |
 | `stair_measure.py` | 119 | CRITICAL | 3 | STAIR MEASURE (M4) - structural stair quantities from the drawn treads of a stair zone (generic; stdlib + |
 | `stair_riser_schedule.py` | 155 | CRITICAL | 2 | STAIR RISER SCHEDULE - riser counts from drawn lines, uniform finished risers, finished and structural levels, |
 | `stair_rule_calculator.py` | 290 | MEDIUM | 1 | STAIR RULE CALCULATOR - the owner stair rule UP-STAIR-015 (URBAN_RULES 1.6.0, owner 2026-10-21): riser / tread |
@@ -1145,9 +1145,10 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t252_beam_ledger_r2/` | 2 |
 | `tests/t253_boundary_court/` | 2 |
 | `tests/t256_column_evidence/` | 2 |
+| `tests/t258_stair_dome_line/` | 2 |
 | `tests/t260_alu_door_evidence/` | 3 |
+| `tests/t262_opening_rooms/` | 3 |
 | `tests/t264_formwork_r4/` | 2 |
-| `tests/t265_gb_bar_population/` | 2 |
 | `tests/t269_floor_blockers/` | 1 |
 | `tests/water_tank_s8_4/` | 3 |
 | `tests/zz_freeze_integrity/` | 2 |
@@ -1415,9 +1416,10 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t252/` | 8 |
 | `research/agents_t253/` | 7 |
 | `research/agents_t256/` | 7 |
+| `research/agents_t258/` | 8 |
 | `research/agents_t260/` | 7 |
+| `research/agents_t262/` | 14 |
 | `research/agents_t264/` | 7 |
-| `research/agents_t265/` | 5 |
 | `research/agents_t269/` | 4 |
 | `research/alsenan_arch_truth_05/` | 28 |
 | `research/alsenan_column_rebar_s3/` | 17 |
