@@ -81,3 +81,33 @@ so the 0.16 / 0.30 default feeds no current quantity and option C changes none. 
 landings. Open points put to the owner the same day (agents do not decide them): S-5 definition of "sufficiently
 defined" and partial definition; S-6 going granularity (interval vs grid); S-7 the applicable Kuwait limits (max
 risers per flight, headroom, landing depth, handrail height, 2R + G); S-8 a drawn stair that breaks a requirement.
+
+### S-5 .. S-8 ANSWERED by the owner (main chat, 2026-10-24 10:56; essentials in the owner's words)
+
+- S-5: approved with TWO levels, preliminary layout sufficiency and final BOQ sufficiency. "Riser count plus going alone
+  does not establish a complete, constructible or fully measurable staircase. Reconcile finished levels, flights,
+  landings, plan boundaries and all quantity-specific structural/finishing inputs."
+- S-6: approved. "Calculate continuous feasible going intervals within the owner-preferred 280-300 mm range, not an
+  arbitrary discrete grid. Show proposed alternatives but never treat them as approved automatically."
+- S-7: sources named by the owner: Kuwait Municipality private-housing stair provisions (baladia.gov.kw construction
+  system page, private / model housing), the building regulations and amendments including Ministerial Decision
+  288/2024, and the Kuwait Universal Design Code (applicability to the private-villa stair to be established separately).
+  "Do not automatically apply different building-type or accessibility requirements to private villas. Record the
+  controlling source, clause, version, applicability and exceptions. Until verified, report CODE NOT VERIFIED."
+- S-8: approved. "Preserve drawn geometry for measurement, but flag any verified mandatory-code conflict for designer
+  review. Distinguish mandatory-code conflicts from deviations from owner preferences. Do not certify an unresolved
+  conflict as compliant."
+- Correction 1: "Do not assume every landing replaces exactly one going. Derive actual goings and landing footprints from
+  each flight configuration."
+- Correction 2: "HELD quantities remain blank in the BOQ. Alternative design quantity ranges belong in a separate scenario
+  report, not the measured/procurement quantity column."
+
+Code source register (main chat, 10:56): NO clause verified. baladia.gov.kw and kuwait.un.org are denied by this
+environment's network policy; secondary reports (press) do not give stair clauses and are not authorities. Every code
+check reports CODE NOT VERIFIED with the source row below until a clause text is read from the official document.
+
+| Source | Issuer | Version | Stair clauses read | Applicability to a private villa | Status |
+|---|---|---|---|---|---|
+| Private / model housing building requirements (construction system page) | Kuwait Municipality | current page; amendments incl. MD 288/2024 (press: Table 1 ratios / setbacks) | none | the controlling source if it has stair clauses | CODE NOT VERIFIED |
+| Building works regulation (تنظيم أعمال البناء) and amendments | Kuwait Municipality | as published | none | general; chapter for private housing to be identified | CODE NOT VERIFIED |
+| Kuwait Universal Design Code | issuing body to be confirmed (copy hosted by UN Kuwait) | October 2017 | none | a search excerpt of its scope suggests private houses are excluded with a qualifier that was cut off; not established | NOT APPLIED until established |
