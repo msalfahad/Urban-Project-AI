@@ -128,3 +128,31 @@ check reports CODE NOT VERIFIED with the source row below until a clause text is
 - Kuwait Municipality and Kuwait Fire Force stair requirements: CODE NOT VERIFIED until the official provisions are
   obtained and reviewed. Building type comes from the project manifest; if it is not recorded, applicability is not
   decided (CODE NOT VERIFIED), never assumed.
+
+## 5. T-267 adversarial acceptance tests (main chat, 2026-10-24; each must fail on the wrong logic it names)
+
+| # | Fixture | Must hold | Catches |
+|---|---|---|---|
+| A1 | drawn flight, N risers, top tread drawn as a separate tread before the landing (N goings) | goings = N from the drawn treads | a hardcoded N - 1 |
+| A2 | drawn flight, N risers, the landing is the top tread (N - 1 goings) | N - 1, with the evidence that shows it | the converse |
+| A3 | landing with a step inside it (split-level landing) | two landing surfaces, one extra riser, levels from the drawing | one flat landing assumed |
+| A4 | quarter landing with a chamfered corner, and one notched by a column | area = drawn polygon (shapely), differs from width x width | rectangle formula |
+| A5 | half landing on a U-stair with an unequal gap and a curved edge | area = drawn polygon | fixed half-landing formula |
+| A6 | landing polygon touching tread polygons and the floor slab | union area = sum (no overlap); a floor-level landing goes to the floor finish, not the stair | double count |
+| A7 | drawn winders, fully dimensioned | tread areas from the drawn polygons, no walking-line constant used | invented offset |
+| A8 | drawn winders, a dimension missing | winder geometry and its marble HELD / UNSUPPORTED; other flights still measured | invented design / whole stair blocked |
+| A9 | undrawn stair that would only fit with winders | no winder alternative generated; reported UNSUPPORTED | winder generation |
+| A10 | static check: the module has no walking-line default and no winder generator | grep-level test on the source | hidden default |
+| A11 | MAXIMUM available run: 7.56 m then 8.40 m | the longer run never removes an alternative | monotonicity broken |
+| A12 | MANDATORY fixed run 7.56 m vs 8.40 m, 4.48 m, 28 risers | 7.56 -> going 280 feasible; 8.40 -> going 311 infeasible for 28 (29 risers, 300 feasible) | monotonicity wrongly assumed for a fixed run |
+| A13 | 4.48 m, 28 x 160 mm, straight vs U with a drawn landing | fit, goings count, landing polygon and headroom reported as four separate results | combined pass |
+| A14 | slab edge over the stair | headroom passes for one going and fails for another | one per-stair headroom check |
+| A15 | concrete inputs complete, marble finish unknown, handrail sides unknown, no rebar detail | concrete releasable; marble, handrail, rebar HELD each with its own missing-evidence list | all-or-nothing release |
+| A16 | marble inputs complete, waist thickness unknown | marble releasable, concrete HELD | the converse |
+| A17 | scenario report generated vs not generated | measured export bytes identical; scenario file has its own schema; the export loader refuses a scenario row | scenario leakage |
+| A18 | HELD line | blank quantity cell, never 0, never a range | 0 / range in the export |
+| A19 | private villa (manifest building type = private house) | no Universal Design Code stair check emitted; UDC scope cited | UDC enforced on a villa |
+| A20 | dwelling development with public areas | UDC "may apply" for the public areas only, reported CODE NOT VERIFIED, not enforced | applied to the private units |
+| A21 | building type missing from the manifest | applicability not decided, CODE NOT VERIFIED | assumed private house |
+| A22 | any run | the word COMPLIANT never appears; "no conflict found against verified clauses ..." only | certification |
+| A23 | frozen stair modules and the V2.9 / V3.0.12 outputs before and after | byte-identical; freeze check 0 differing | frozen or released change |
