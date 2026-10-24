@@ -73,7 +73,8 @@ Deductions (every line that states a gross): gross - sum(deductions) + sum(addit
 'what' it is, else DEDUCTION_UNNAMED); each opening id at most once per face (in one line, and across the lines of one trade on the same element and face);
 every opening id in the opening census when one is given. A breach is REFUSED with the reasons; reconcile_line raises.
 
-Nothing here names a project, a sheet, a layer or a coordinate; stdlib only.
+Nothing here names a project, a sheet, a layer or a coordinate; stdlib only, plus the item master (boq_line.ITEMS) for
+the railing codes (T-251).
 """
 
 from __future__ import annotations
@@ -81,6 +82,8 @@ from __future__ import annotations
 import json
 import re
 from collections import defaultdict
+
+from engine.source.boq_line import ITEMS as _ITEM_MASTER     # the declared item master (stdlib only, no producer)
 
 SCHEMA = "URBAN_TRADE_COMPLETENESS_V1"
 POLICY_ID = "TRADE_COMPLETENESS_V1"
@@ -111,6 +114,11 @@ MASONRY_THICKNESS = {"100": "MASONRY.100", "150": "MASONRY.150", "200": "MASONRY
 TRADE_MAP = {"PLASTER": "PLASTER", "PAINT": "PAINT", "FLOOR_FINISH": "FLOOR_FINISH", "WALL_FINISH": "WALL_FINISH",
              "CEILING": "CEILING", "WATERPROOFING": "WATERPROOFING", "STAIR_FINISH": "STAIRS", "RAILING": "RAILINGS",
              "FORMWORK": "FORMWORK", "REINFORCEMENT": "REBAR"}
+# T-251: the railing item codes are read from the item master (engine/source/boq_line.py ITEMS, trade RAILING) at import
+# time, never written here as literals: a CHECK names a family it may have to report as missing without looking, to the
+# family-master guard (tests/t130_family_master), like a module that measures it. Today: the stair guardrail and the
+# wall-mounted handrail (the latter NOT_IMPLEMENTED in BOQ_FAMILY_MASTER 1.1.0 .. 1.4.0).
+RAILING_CODES = frozenset(c for c, row in _ITEM_MASTER.items() if row[2] == "RAILING")
 
 
 class CompletenessError(ValueError):
@@ -162,7 +170,7 @@ def line_trade(line):
     if code.startswith("FIN.MARBLE.TREAD") or code.startswith("FIN.MARBLE.RISER") or \
             code.startswith("FIN.MARBLE.LANDING") or code.startswith("FIN.STAIR."):
         return "STAIRS"
-    if code in ("FIN.RAILING", "FIN.HANDRAIL"):
+    if code in RAILING_CODES:
         return "RAILINGS"
     if code.startswith("FIN.WP."):
         return "WATERPROOFING"
@@ -530,6 +538,6 @@ def policy_record():
             "element_statuses": list(ELEMENT_STATUSES)}
 
 
-__all__ = ["SCHEMA", "POLICY_ID", "DEFAULT_GUARD_CLASS", "PRINCIPAL_TRADES", "INVENTORY_BASES", "ELEMENT_STATUSES",
+__all__ = ["SCHEMA", "POLICY_ID", "DEFAULT_GUARD_CLASS", "PRINCIPAL_TRADES", "RAILING_CODES", "INVENTORY_BASES", "ELEMENT_STATUSES",
            "CompletenessError", "element_key", "line_trade", "reconcile_line", "check", "reference_line_rows", "dumps",
            "policy_record"]
