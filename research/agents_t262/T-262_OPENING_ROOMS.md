@@ -115,9 +115,9 @@ by ROOM_ROW; T-209 hosts per the T-128 walk). The room words are hand text in th
 (`alsenan_t237.py`, name / width match) and T-209's window ids per room. So no frozen or engine file needs a new
 version; the check lives beside the census as research (`opening_rooms.py`), any villa.
 
-Not checked here (named limit): the V3.0.10 window lines key each window to the ENGINE's own room of its
-ARCH_OPENING (t232_inputs.py WINDOW_ROOM); that room is geometric in the engine, but its id is not crosswalked to the
-T-128 rooms in this run. The freelancer's per-room wet-tile metres for the two west baths (T-209 FL_LM 9.0 / 8.9) are
+The V3.0.10 window lines key each window to the ENGINE's own room of its ARCH_OPENING (t232_inputs.py
+WINDOW_ROOM): crosswalked to the T-128 rooms in part 2 (section 10, 2026-10-24 second run): every engine room agrees
+with the geometric join. The freelancer's per-room wet-tile metres for the two west baths (T-209 FL_LM 9.0 / 8.9) are
 joined by name too; his workbook has no geometry, so which bath each of his rows is cannot be established from it.
 
 ## 6. Lane I proposal (nothing applied; room level only, trade totals unchanged)
@@ -161,3 +161,44 @@ tests `tests/t262_opening_rooms` (with URBAN_P7757_DXF set, the rebuild test run
   (W19 / W20, D-1F-01 / D-1F-04, T-237, T-209) | a room name is a label, not a location | join openings to rooms by
   the drawn opening line and the room regions on both faces; a name may only be checked against that (any villa) |
   tests/t262_opening_rooms (wrong-room label refused, door with one side refused, region over a strip found)".
+
+## 10. Part 2: the engine's own room of each opening (2026-10-24, second worker-2 run)
+
+Question: the candidate's window lines (V3.0.10 .. V3.0.12, t232_inputs.py WINDOW_ROOM) and the engine's door
+classes (UP-DOOR-CLS-003, a wet room on one side) read the ENGINE's room of an opening, not the census label. Is that
+room the one the drawing puts the opening in?
+
+Method (`engine_rooms_t262.py`, any villa): the released ARCH_TAKEOFF_V2.9 arch run on P7757.dxf (tools/urban_boq_m9.py
+arch, conventions V6, route G profile M4, facts as research/agents_t131; scratch only) gives every engine room's
+polygon and the door / window / passage ids it names; each engine room is crosswalked by AREA to the T-128 r3 regions
+of part 1 (overlap at least 50 % of the reference room or of the engine room; R-T262-4 proposed); the engine's room of
+an opening = every engine room naming the census ENGINE_REF id on that floor; compared with ROOMS_GEO of part 1.
+
+Result (59 openings; ENGINE_ROOMS_T262.csv, ENGINE_ROOM_XWALK_T262.csv, CANDIDATE_WINDOW_ROOM_T262.csv):
+
+| Verdict | Openings |
+|---|---|
+| AGREE (one engine room per geometric room) | 29 |
+| AGREE_COARSER (an engine open-plan face spans two T-128 rooms: GF-07 + GF-08, 1F-13 + ST-1F, 2F-01 + ST-2F) | 17 |
+| AGREE_PLUS_UNREFERENCED (the engine also names a small UNLABELLED space where part 1 found no room: 1.56, 2.97, 3.60 m2) | 4 + 1 coarser |
+| ENGINE_WRONG_ROOM / ENGINE_SIDE_MISSING | **0** |
+| NO_ENGINE_OPENING (the 5 doors held in the engine's door schedule only, D-GF-15, W03, W18 missed by V2.9) | 8 |
+
+- The five census labels part 1 found wrong are RIGHT in the engine: W06 -> GF-13 (wedge B); W19 -> 1F-03 (west bath),
+  W20 -> 1F-02 (east bath); D-1F-01 -> 1F-01 + 1F-03. D-1F-04 is not in the engine's room model (door schedule only),
+  so its room is the geometric one of part 1.
+- All 27 candidate WINDOW_ROOM ids are this run's rooms naming that opening (27 / 27 SAME: room id = hash of the face
+  id, the same face model in V2.9 and the candidate).
+- Effect: 0.000 m2 / 0 pcs on every trade; the window lines and door classes of the candidate already sit in the
+  geometric rooms; only the research census labels (and the T-237 / T-209 name joins of part 1) carry the swap.
+- The UNLABELLED spaces (side-passage pocket by D-GF-05 / W10, a pocket outside W09, the dressing-passage pocket by
+  D-1F-07 / A-1F-01) are not T-128 rooms; they are listed with class and area, never counted as a room match.
+- Statuses: identity DRAWING-CONFIRMED (engine geometry vs part-1 geometry, two independent region builders); no
+  quantity changed, VERIFIED or released. Verdict proposal: ENGINE_RIGHT for the engine's room of W06, W19, W20,
+  D-1F-01 (census labels wrong).
+- Reproduce: `capture_t262.py <P7757.dxf> --out <s>/cap.pkl`; the V2.9 arch run to `<s>/v29`; then
+  `engine_rooms_t262.py <s>/cap.pkl <s>/v29/ARCH_ROOMS.json --out <s>/eng` (CSV byte-identical to the committed ones).
+  Tests: tests/t262_opening_rooms/test_t262_engine_rooms.py (non-villa fixture with mirror and 37 / -90 deg rotation,
+  open-plan coarser, outdoors pocket, wrong room / missing side / pocket-only / sliver refused).
+- Lesson (ERS s.7, proposed): two independent region builders agreeing on an opening's room is the check a name join
+  can never give; a name in a census is checked against the engine's face model, not the other way round.
