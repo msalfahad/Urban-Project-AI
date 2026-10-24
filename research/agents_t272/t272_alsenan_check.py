@@ -4,13 +4,16 @@ geometry (committed ledgers only; no private file is read here). Development vil
 Drawing facts (own read this run, Drive "Alsenan chalet project" / "ST7757.pdf", 100 + 400 dpi):
   p.13 'Ground Beams. for exterior walls' (1:20): 30 wide, depth 'FOLLOW ARCH.' (D 0.95 settled by T-253, Checker
        CONFIRMED); ONE closed link 'ø8/15cm', 2 vertical legs (the 'X' at mid-depth is the side-bar leader, not a
-       cross-tie), corners drawn bent, ONE hook drawn at the top right corner turning into the core (a 135-degree
-       shape, angle not printed), tail not dimensioned; no spacing zones, no first-stirrup position, no beam
+       cross-tie), corners drawn as curves, a hook PAIR drawn at the top right corner (two short S-REIN.D strokes
+       turning into the core: a 135-degree shape, angle not printed), tails not dimensioned; no spacing zones, no first-stirrup position, no beam
        elevation for ground beams anywhere on pp.13-14.
   p.14 'TYPICAL BOUNDARY WALL' section A-A (N.I.S): upper G.B 20 x 40, 'ø8/20 STIRRUPS' (unit not written on the
        label; every dimension on the sheet is in cm: '40', '20 x 30', '130x80x30'), link drawn as a closed rectangle
-       with sharp corners and NO hook or overlap; 20 x 30 boundary columns pass through the band (count / positions
+       with sharp corners and NO hook or overlap (vector: 4 straight strokes, the long sides shared with the column
+       bars that run through the band); 20 x 30 boundary columns pass through the band (count / positions
        'SEE ARCH PLAN', none drawn on either plan: M4, T-065 / T-253).
+  p.13 'TYP. DETAIL OF ISOLATED FOOTING' (right) draws a ground beam in elevation: links at a regular pitch, the first
+       about 0.57 pitch from each column face (undimensioned, not to scale; P8-N03 'do not scale'): QA only.
   p.8 note 22: cover >= 2.5 cm beams, >= 7 cm against soil (minimums); no bend, hook, link-closure or fabrication
        note anywhere (D1.1 source search, 4055 DXF texts + OCR pp.9-16, re-confirmed visually on pp.13-14 here).
 Owner AD-4 (2026-10-08): hook angle = drawn shape only; hook extension BLOCKED unless the project dimensions it; code

@@ -8,7 +8,9 @@ villa, not an accuracy claim. Drawings named by Drive folder and title only; mem
 | Input | Read for |
 |---|---|
 | Drive "Alsenan chalet project" / "ST7757.pdf" p.13 (100 + 400 dpi, own read this run) | 'Ground Beams. for exterior walls' 1:20: 30 wide, 'FOLLOW ARCH.'; ONE closed link 'ø8/15cm' with 2 vertical legs (the X at mid-depth is the '2ø12/30cm' side-bar leader, not a cross-tie); corners drawn bent; ONE hook drawn at the top right corner turning into the core (135-degree shape), tail not dimensioned. No zone, no first-stirrup position, no ground-beam elevation |
-| same, p.14 section A-A (400 dpi, own read) | upper G.B 20 x 40, 'ø8/20 STIRRUPS' (unit not on the label; every dimension on the sheet is cm), link drawn as a CLOSED RECTANGLE WITH SHARP CORNERS AND NO HOOK OR OVERLAP; the 20 x 30 boundary columns pass through the band ('SEE ARCH PLAN', none drawn on either plan: M4) |
+| same, p.13 vector strokes (layer S-REIN.D, own read) | exterior link: 4 corners drawn as curves, TWO short hook strokes at one corner (a hook pair, 135-degree shape), no dimension on any of them |
+| same, p.13 'TYP. DETAIL OF ISOLATED FOOTING' (right), ground beam drawn in ELEVATION through a column | links drawn at a regular pitch (34.0 pt), the first link on each side drawn 19.3 / 19.4 pt from the column face = about 0.57 of the drawn pitch; undimensioned, no link label in this detail, typical / not to scale, P8-N03 'do not scale': a drawn pattern only (QA), not an end rule |
+| same, p.14 section A-A (400 dpi + vector strokes, own read) | upper G.B 20 x 40, 'ø8/20 STIRRUPS' (unit not on the label; every dimension on the sheet is cm), link drawn as a CLOSED RECTANGLE WITH SHARP CORNERS AND NO HOOK OR OVERLAP; the 20 x 30 boundary columns pass through the band ('SEE ARCH PLAN', none drawn on either plan: M4) |
 | same, p.8 note 22 | cover >= 2.5 cm beams, >= 7 cm against soil: MINIMUMS |
 | research/d1_1_stirrup_authority_audit (frozen) | channel-by-channel source search: 0 radius / diameter dimensions in the DXF, no bend / hook / closure / fabrication text on any sheet; re-confirmed visually here on pp.13-14 |
 | research/ad1_authority_decisions AD-4 (owner, 2026-10-08) | hook angle = drawn shape only; hook extension BLOCKED unless the project dimensions it; code hook values QA only |
@@ -38,7 +40,7 @@ the supporting face). Concrete axis, longitudinal bars and stirrups are three di
 | bend radius | drawn bent, not dimensioned | drawn sharp | NOT PRINTED (P8-N03: do not scale) |
 | hook angle | 135-degree shape drawn | no hook drawn | SHAPE ONLY / NOT DRAWN |
 | hook tail | not dimensioned | - | NOT PRINTED (AD-4 BLOCKED) |
-| closure | hooks drawn | **none drawn**: designer item | - / FLAG |
+| closure | hook pair drawn (2 strokes at one corner) | **none drawn** (vector: 4 straight strokes, the long sides shared with the column bars running through): designer item | - / FLAG |
 | end rule | not printed | not printed | NOT PRINTED |
 
 Cut length: **HELD** on both families (4 facets exterior, 5 boundary). Mass: **HELD**. Never 0.
@@ -54,6 +56,10 @@ Over a clear span L at spacing s (gaps never above s):
   HELD (ERS s.3: notation meaning before arithmetic; lessons 2026-10-23: a reading is established per element type).
 - Curved ring: the spacing radius is not printed, so the envelope runs from the inner-face arc (2.25 m x 2.5364 rad =
   5.7068 m) to the outer-face arc (6.4678 m); T-265 counted on the centreline 6.0873 m.
+- Second drawing checked: the typical isolated-footing detail on p.13 draws a ground beam in elevation with its
+  first link about 0.57 of a pitch from each column face (vector strokes, undimensioned, not to scale). It neither
+  prints an end rule nor matches the s / 2 reading exactly (0.57 s gives counts between low and the s / 2 reading);
+  under P8-N03 it is QA only. It confirms the end rule is a designer item, not a reading.
 
 | Runs | Length (m) | Count low | half-s reading (= T-265 A) | high | T-265 range | Status |
 |---|---|---|---|---|---|---|
