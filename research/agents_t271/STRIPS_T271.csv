@@ -1,0 +1,30 @@
+STRIP,FLOOR,OPENING,KIND,FLOOR_ITEM,M2,SIDES,CEILING,STATUS
+GF-STRIP-OP-001,GF,OP-001,PASSAGE,FIN.FLOOR.PORCELAIN,0.28,Unnamed space,UNKNOWN: passage strip - wall-opening head or open-zone ceiling not decided by this ledger,UNKNOWN
+GF-STRIP-OP-003,GF,OP-003,PASSAGE,FIN.FLOOR.PORCELAIN,2.244,Dining + Living / saloon + Pantry + Reception | Garden / yard / court | Dining + Garden / yard / court + Living / saloon + Pantry + Reception | Unnamed space | Dining + Living / saloon + Pantry + Reception | Unnamed space,UNKNOWN: passage strip - wall-opening head or open-zone ceiling not decided by this ledger,UNKNOWN
+GF-STRIP-OP-005,GF,OP-005,DOOR,FIN.FLOOR.PORCELAIN,0.18,Driver room,"none: under a door head (the head soffit is the opening reveal, plaster / paint jamb-and-head line)",DRAWING-CONFIRMED
+GF-STRIP-OP-007,GF,OP-007,PASSAGE,FIN.FLOOR.PORCELAIN,0.24,Unnamed space,UNKNOWN: passage strip - wall-opening head or open-zone ceiling not decided by this ledger,UNKNOWN
+GF-STRIP-OP-008,GF,OP-008,DOOR,FIN.FLOOR.PORCELAIN,0.2,Dining + Living / saloon + Pantry + Reception,"none: under a door head (the head soffit is the opening reveal, plaster / paint jamb-and-head line)",DRAWING-CONFIRMED
+GF-STRIP-OP-009,GF,OP-009,DOOR,FIN.FLOOR.PORCELAIN,0.2,Majlis / diwaniya,"none: under a door head (the head soffit is the opening reveal, plaster / paint jamb-and-head line)",DRAWING-CONFIRMED
+GF-STRIP-OP-010,GF,OP-010,DOOR,FIN.FLOOR.PORCELAIN,0.2,Dining + Living / saloon + Pantry + Reception | Stair,"none: under a door head (the head soffit is the opening reveal, plaster / paint jamb-and-head line)",DRAWING-CONFIRMED
+GF-STRIP-OP-011,GF,OP-011,PASSAGE,FIN.FLOOR.PORCELAIN,0.2,Dining + Living / saloon + Pantry + Reception | Shaft / duct,UNKNOWN: passage strip - wall-opening head or open-zone ceiling not decided by this ledger,UNKNOWN
+GF-STRIP-OP-012,GF,OP-012,DOOR,FIN.FLOOR.PORCELAIN,0.15,Dining + Living / saloon + Pantry + Reception | Master bedroom,"none: under a door head (the head soffit is the opening reveal, plaster / paint jamb-and-head line)",DRAWING-CONFIRMED
+GF-STRIP-OP-013,GF,OP-013,DOOR,FIN.FLOOR.PORCELAIN,0.18,Stair,"none: under a door head (the head soffit is the opening reveal, plaster / paint jamb-and-head line)",DRAWING-CONFIRMED
+GF-STRIP-OP-017,GF,OP-017,DOOR,FIN.MARBLE.THRESHOLD,0.12,Unnamed space | Bathroom / W.C.,"none: under a door head (the head soffit is the opening reveal, plaster / paint jamb-and-head line)",DRAWING-CONFIRMED
+GF-STRIP-OP-018,GF,OP-018,DOOR,FIN.MARBLE.THRESHOLD,0.12,Unnamed space | Bathroom / W.C.,"none: under a door head (the head soffit is the opening reveal, plaster / paint jamb-and-head line)",DRAWING-CONFIRMED
+GF-STRIP-OP-021,GF,OP-021,DOOR,FIN.FLOOR.PORCELAIN,0.4,Dining + Living / saloon + Pantry + Reception,"none: under a door head (the head soffit is the opening reveal, plaster / paint jamb-and-head line)",DRAWING-CONFIRMED
+GF-STRIP-OP-025,GF,OP-025,DOOR,FIN.MARBLE.THRESHOLD,0.2,Kitchen | Unnamed space,"none: under a door head (the head soffit is the opening reveal, plaster / paint jamb-and-head line)",DRAWING-CONFIRMED
+GF-STRIP-OP-026,GF,OP-026,DOOR,FIN.MARBLE.THRESHOLD,0.12,Driver room | Bathroom / W.C.,"none: under a door head (the head soffit is the opening reveal, plaster / paint jamb-and-head line)",DRAWING-CONFIRMED
+1F-STRIP-OP-004,1F,OP-004,DOOR,FIN.MARBLE.THRESHOLD,0.12,Master bedroom | Bathroom / W.C.,"none: under a door head (the head soffit is the opening reveal, plaster / paint jamb-and-head line)",DRAWING-CONFIRMED
+1F-STRIP-OP-005,1F,OP-005,DOOR,FIN.FLOOR.PORCELAIN,0.135,Living / saloon | Master bedroom,"none: under a door head (the head soffit is the opening reveal, plaster / paint jamb-and-head line)",DRAWING-CONFIRMED
+1F-STRIP-OP-006,1F,OP-006,DOOR,FIN.FLOOR.PORCELAIN,0.135,Living / saloon | Master bedroom,"none: under a door head (the head soffit is the opening reveal, plaster / paint jamb-and-head line)",DRAWING-CONFIRMED
+1F-STRIP-OP-007,1F,OP-007,PASSAGE,FIN.FLOOR.PORCELAIN,0.2,Living / saloon | Shaft / duct,UNKNOWN: passage strip - wall-opening head or open-zone ceiling not decided by this ledger,UNKNOWN
+1F-STRIP-OP-008,1F,OP-008,DOOR,FIN.MARBLE.THRESHOLD,0.18,Living / saloon | Laundry,"none: under a door head (the head soffit is the opening reveal, plaster / paint jamb-and-head line)",DRAWING-CONFIRMED
+1F-STRIP-OP-010,1F,OP-010,DOOR,FIN.MARBLE.THRESHOLD,0.12,Laundry | Bathroom / W.C.,"none: under a door head (the head soffit is the opening reveal, plaster / paint jamb-and-head line)",DRAWING-CONFIRMED
+1F-STRIP-OP-011,1F,OP-011,PASSAGE,FIN.FLOOR.PORCELAIN,0.15,Master bedroom | Unnamed space,UNKNOWN: passage strip - wall-opening head or open-zone ceiling not decided by this ledger,UNKNOWN
+1F-STRIP-OP-018,1F,OP-018,DOOR,FIN.MARBLE.THRESHOLD,0.12,Master bedroom | Bathroom / W.C.,"none: under a door head (the head soffit is the opening reveal, plaster / paint jamb-and-head line)",DRAWING-CONFIRMED
+1F-STRIP-OP-019,1F,OP-019,DOOR,FIN.MARBLE.THRESHOLD,0.12,Bathroom / W.C. | Unnamed space,"none: under a door head (the head soffit is the opening reveal, plaster / paint jamb-and-head line)",DRAWING-CONFIRMED
+1F-STRIP-OP-020,1F,OP-020,DOOR,FIN.FLOOR.PORCELAIN,0.15,Living / saloon | Master bedroom,"none: under a door head (the head soffit is the opening reveal, plaster / paint jamb-and-head line)",DRAWING-CONFIRMED
+2F-STRIP-OP-001,2F,OP-001,DOOR,FIN.FLOOR.PORCELAIN,0.15,Stair,"none: under a door head (the head soffit is the opening reveal, plaster / paint jamb-and-head line)",DRAWING-CONFIRMED
+2F-STRIP-OP-002,2F,OP-002,PASSAGE,FIN.FLOOR.PORCELAIN,0.2,Stair | Shaft / duct,UNKNOWN: passage strip - wall-opening head or open-zone ceiling not decided by this ledger,UNKNOWN
+2F-STRIP-OP-006,2F,OP-006,DOOR,FIN.MARBLE.THRESHOLD,0.12,Maid room | Bathroom / W.C.,"none: under a door head (the head soffit is the opening reveal, plaster / paint jamb-and-head line)",DRAWING-CONFIRMED
+2F-STRIP-OP-007,2F,OP-007,DOOR,FIN.FLOOR.PORCELAIN,0.18,Maid room | Stair,"none: under a door head (the head soffit is the opening reveal, plaster / paint jamb-and-head line)",DRAWING-CONFIRMED
