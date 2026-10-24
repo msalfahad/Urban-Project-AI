@@ -7,6 +7,7 @@ conflicts with something you planned, say so in your report to the main chat ins
 
 | UTC time | What changed | Where | Why |
 |---|---|---|---|
+| 2026-10-24 23:57 | OWNER: downgrade-only record rules; unsupported-basis rule on the four named quantities and future confirmed cases; RFI package held for Lead verification and priority split; structural revision UNCONFIRMED disclosure in T-245; order unchanged | BOARD.md (note, T-245), CLARIFICATIONS_CONSULTANT_2026-10-24.md | Owner's words in the main chat |
 | 2026-10-24 23:53 | OWNER: Q-76 answered A (9.870 m2 opening area; D-53 open); T-245 (f) wrong-basis lines HELD / CONFLICT in the contractual view; Scout reduced priority (no pause); consolidated RFI package | OWNER_QUESTIONS.md (Q-76), BOARD.md (note, T-245, T-255), CLARIFICATIONS_CONSULTANT_2026-10-24.md | Owner's words in the main chat |
 | 2026-10-24 23:49 | OWNER: integration-first cycle; T-245 first in lane I after T-270 with extended acceptance (genuine identity, real export, verdicts preserved, tonnes default as part 2); Checker to populate V2 verdicts; first export = internal review candidate; reporting metrics; consolidated decision register (Q-76 only open) | BOARD.md (note, T-245, T-254, T-255, T-266), DECISION_REGISTER.md | Owner's words in the main chat |
 | 2026-10-24 18:38 | OWNER: T-273 kept in its queue; acceptance clarifications (detailing categories, column laps reconciled first / 0.640990 t scenario only, splice boundary tests) | OWNER_RULE_REBAR_2026-10-24.md s.6, BOARD.md (T-273) | Owner's words in the main chat |

@@ -1,4 +1,6 @@
-# Consolidated designer / consultant RFI package, Alsenan (owner 2026-10-24; DRAFT for the owner to send)
+# Consolidated designer / consultant RFI package, Alsenan (owner 2026-10-24; DRAFT, NOT TO BE SENT YET)
+
+OWNER 23:57: do not send. LEAD: verify every row against all drawings, schedules and sections, remove any the sources answer, and split into (1) PRIORITY RFIs that each unlock a complete BOQ line (name the line) and (2) REMAINING unresolved questions; keep each row's drawing reference, missing / conflicting information, affected quantity and the clarification required.
 
 Main chat, 2026-10-24 23:55 UTC. SUPERSEDES CLARIFICATIONS_CONSULTANT_2026-10-23.md (its 12 rows are carried here with
 their status). Source register: DESIGNER_CLARIFICATIONS.md (D-nn rows, each raised by a task that read the sheets named
