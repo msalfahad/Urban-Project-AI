@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-24T22:51Z | Verifier | STARTED | run unknown | repo-attached routine | task state: READY T-276 r2, T-277 (per run log) | self-check pending
 - 2026-10-24T22:40Z | Worker 2 | STARTED | run session_011LY2B5o2NM1MWBUeycWuwx | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-24T22:25Z | Worker 2 | SUCCESS | T-276 r2 READY @ 9931a9d0 (buried-concrete liquid WP, narrow rework of the Checker 20:59 rejection) | Root cause fixed for every villa: bands were built from edge-line overlaps (square cut at the shorter edge) and sub-mm offsets were members; now each member closes on its carrier per edge (8 Alsenan band ends closed, 0 open) and owners < 1 mm are refused. Ring ARC 158 building face 5.9029 m (Checker 5.9055, -0.04 %) = 5.0175 m2; COL:255 face -> neck HELD; same rule found 182+183 corner (-0.2167 m2). WP.BURIED ground-beam faces DC 45.468 m2 (r1 46.521, -1.053, residual 0 vs Checker own reading); freelancer no row, engine no line; necks DC 16.560 m2 on 13; no owner question | self-check codemap PASS, pytest t061 PASS, freeze PASS; full suite NEW 0 / KNOWN 376 (private inputs absent + 20 identical on base 42e32cf3); Drive read OK; problem: none
 - 2026-10-24T22:21Z | Worker 1 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
