@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-24T23:20Z | Worker 1 | IDLE | none (run lock held by run 20261024T222043-439-7391 since 2026-10-24T22:20Z) | overlap lock: another Worker 1 run is active; no claim, no change, no quantity | lock
 - 2026-10-24T23:00Z | Worker 3 | STARTED | run session_01Xbv4JauboZCUcWn1djrByz | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-24T22:51Z | Verifier | STARTED | run unknown | repo-attached routine | task state: READY T-276 r2, T-277 (per run log) | self-check pending
 - 2026-10-24T22:40Z | Worker 2 | STARTED | run session_011LY2B5o2NM1MWBUeycWuwx | repo-attached routine | task state: none yet | self-check pending
