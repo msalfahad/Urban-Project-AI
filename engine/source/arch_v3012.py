@@ -73,7 +73,7 @@ HELD_STATUS = ("HELD", "UNKNOWN")
 LIVE_EVIDENCE = A307.LIVE_EVIDENCE
 MAX_RUN_M3 = 50.0                       # one beam run above this is a unit slip (cm / mm given as m), refused
 TOL_M3 = 1e-6                           # a record recomputed from its own base and adjustments
-TOL_KEEP_M3 = 1.000001e-4               # a kept line equals its ledger run: both may be 4-decimal roundings of one measure
+TOL_KEEP_M3 = 1.000001e-4               # a kept line = its ledger run: both may be 4-decimal roundings of one measure
 InputsError = A307.InputsError
 _num = A307._num
 
@@ -108,7 +108,8 @@ PIECES = {
                         "UP-QTY-STATUS-001"],
         "owner_manual_method": "manual QS slab take-off: plan area between the faces of the carrying beams per panel x "
                                "the printed (tag) or general-note thickness, openings deducted once",
-        "drawing_method": "the slab ledger's panel partition of each slab sheet: a face is slab only with slab evidence "
+        "drawing_method": "the slab ledger's panel partition of each slab sheet: a face is slab only with slab "
+                          "evidence "
                           "(tag, bars, or bounded by beam faces); band, ring, strip, box and junction faces belong to "
                           "the beam lane, drafting marks to no line"},
     "DEFAULT_GUARD": A307.PIECES["DEFAULT_GUARD"],
@@ -118,9 +119,10 @@ WAITING.update({
     "BEAM_HELD_DESIGNER_ITEMS": "the beam runs held by designer items D-02 / D-27 (width CONFLICT), D-04 (unlabelled "
                                 "spans), D-05 / D-26 (projection strips and boxes) stay HELD as ranges (or with no "
                                 "value where no depth is printed) until the designer answers; never 0",
-    "BEAM_FORMWORK_REBAR_OF_CHANGED_RUNS": "formwork and reinforcement of the beam runs whose concrete changed here "
-                                           "(trapezoid ends, the drawn void ring, the continuous runs) are later "
-                                           "packages (formwork T-199, rebar T-009); their lines are not changed here",
+    "BEAM_FORMWORK_AND_STEEL_OF_CHANGED_RUNS": "formwork and bar steel of the beam runs whose concrete changed "
+                                               "here (trapezoid ends, the drawn void ring, the continuous runs) are "
+                                               "later packages (formwork T-199, bar steel T-009); their lines are "
+                                               "not changed here",
     "SLAB_NO_PROFILE_TAG_SPREAD": "the released route's spread of a panel tag to untagged panels of a sheet is a "
                                   "released / no-profile rule fix (R-SLAB-T-1, a new rule version); the candidate's "
                                   "profile already gives untagged panels the general note thickness",
@@ -478,7 +480,8 @@ def beam_changes(pc, lines, earlier_changed=()):
                      "kept": _r(kept_value), "superseded_value": _r(sup_value),
                      "superseded_bounded": [_r(sup_low), _r(sup_high)],
                      "conflict": [_r(c_lo + kept_conf[0]), _r(c_hi + kept_conf[1])],
-                     "held": [_r(h_lo + kept_held[0]), _r(h_hi + kept_held[1])], "held_no_value": sorted(h_none + kept_none)}
+                     "held": [_r(h_lo + kept_held[0]), _r(h_hi + kept_held[1])],
+                     "held_no_value": sorted(h_none + kept_none)}
     for k, v in (pc.get("declared_totals") or {}).items():
         got = log["totals"].get(k)
         if k == "held_no_value":
@@ -526,7 +529,8 @@ def slab_changes(pc, lines, earlier_changed=(), touched=()):
         home = (f"beam run {h['run']} of this package" if h["kind"] == "BEAM_RUN" else
                 f"no concrete ({h['evidence']})")
         why = f"face {f['face']} is not slab: {f['why']}; home: {home}"
-        note = (f"{METHOD}: NOT SLAB - {A302._q(A30._qty(ln))} {ln['unit']} leaves the slab line ({src['task']}, MERGED "
+        note = (f"{METHOD}: NOT SLAB - {A302._q(A30._qty(ln))} {ln['unit']} leaves the slab line ({src['task']}, "
+                f"MERGED "
                 f"{src['merge_commit']}): {why}; figure kept as information, never summed")
         codes = ["SLAB_FACE_NOT_SLAB", f"HOME_{h['kind']}"] + ([f"COUNTED_BY {h['run']}"] if h["kind"] == "BEAM_RUN"
                                                               else [])
