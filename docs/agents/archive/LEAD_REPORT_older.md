@@ -1,3 +1,63 @@
+## LEAD REPORT 2026-10-24 12:15 UTC
+
+Repositories: attached Urban-Project-AI checkout (main eafbb0f6); `.work` prepared AUTOMATICALLY ("setup by auto",
+12:10). Working branch 768ff1d6 -> 3bd09b62 (five Checker merges via 'engine push'); no owner commit on the engine
+branch. Drive readable: nothing created in the Alsenan folder since 10:00, no new images (no photo review task).
+Self-check: codemap PASS, pytest t061 PASS, freeze PASS (0). OWNER_SESSION_CHANGES: two entries since my last run
+(10:28 S-4 option C with clarification; 10:56 S-5 .. S-8 + two corrections: goings per flight configuration, HELD BLANK
+in the BOQ with scenarios in a separate report): read, both already in T-267's row and the stair rule file; nothing
+undone. Applied the 10:56 'HELD = BLANK' correction to the new integration row T-270 and the T-258 queue item.
+
+PROGRESS (Alsenan, by trade and unit; released unchanged: concrete 92.77 vs freelancer 111.81 m3, -17.03 %, run A).
+WHOLE LINES VERIFIED: candidate 1 / 13 (CONC.SLAB), released 0 / 13; no change this run. Nothing got worse.
+- DOORS aluminium (m2 / pcs; T-260 MERGED c6732efe): Checker's own both-face widths D-GF-01 / -05 / -06 1.000 m,
+  D-GF-09 0.900 m (the 1.00 m is the block frame), class ALUMINIUM x3 from the side spaces (court; side passage open on
+  plan + SW elevation, Q-67 A; +1.00 landing). Line after integration 12.760 m2 / 6 pcs vs freelancer 12.000 (+6.33 %):
+  heights -1.000 (Q-55 C, ASSUMED — OWNER-APPROVED), widths -0.440, count +2.200 (his 4 GF vs 5 drawn, ENGINE_RIGHT);
+  residual 0. CLOSABLE AFTER T-268 (one integration run): the expected second whole line.
+- BLOCKWORK (m2; T-228 r2 MERGED bf4dd2a9): stair-shaft pieces under 'B3 (With Stair)' held on all three storeys;
+  established net 494.189 -> 449.260 m2 (-44.929, -9.1 %): metres moved to HELD with their item, none dropped; 39 / 76
+  walls held-net. VERIFIED net still only GF-W07 4.458 m2 (+ GF-W10 eastern pieces 39.1525 Checker own).
+- WATERPROOFING foundation (T-219 MERGED de7c1c4c; a scope in no engine line and no freelancer row): Checker own footing
+  membrane 109.85 m2 (24 sizes x tag count), screed 5.4925 m3; pit membrane 47.43 / board 26.73 m2 / screed 1.035 m3
+  (= worker 0.000). HELD: F10 / F 4.55 .. 4.64 m2, pit walls (depth), footing sides (liquid 80.04 vs sheet 93.03 m2 by
+  the formation-selected detail), procurement (product not printed). Line PARTIALLY VERIFIED; into the candidate: T-270.
+- CONC.GROUND main-house exterior (m3; Checker T-180 slot 12:10): own 17 / 17 runs 15.9692 vs 15.9600 (+0.06 %): 15 runs
+  exact, ring arc +0.0123 m2 (+0.67 %, end-closure convention, named), stub -0.0026 m2 (gap strip not found).
+  Component PARTIALLY VERIFIED 16 / 17; line BLOCKED BY CONSULTANT (D-33 / D-34 / D-35 annex / M4).
+- FLOOR AREA (m2; T-240 WP1 pushed, not handed in): internal floor 340.7645 -> 342.6645 (+1.900, +0.56 %): dressing
+  2.970 in, three sills 0.550 to ARCH.THRESHOLD HELD, side passage 5.640 to one outdoor line; GF OP-003 found carried
+  twice (porcelain 2.244 + blocked threshold) -> WP2.
+- PLASTER / PAINT (T-250 MERGED 47390c9b): every face tied to its wall; W03 room side 6.7294 m (= T-128 6.731); no m2
+  change. Export tooling (T-235 r2 MERGED): a line reads VERIFIED only with a whole-line V2 record + a completeness
+  record; the real export stays refused until one project identity exists (T-245).
+- Learned (lessons register +3, one closed): scope is inventoried from every layer of each printed section detail,
+  never from the freelancer's rows; an opening width is the clear jamb distance on both faces, never the frame line; an
+  arc member ending in a neck closes on the neck face (to become a rule in T-254). T-228 sibling rule closed (MERGED).
+
+ENGINEERING DECISIONS THIS RUN (ERS s.5 Lead). (1) T-268 PROMOTED and first in lane I (closable-line rule 10:02 (a)); it
+applies the Checker's rulings, not the worker's proposal; the D-GF-09 width reaches the GF-W10 deduction only once,
+through T-261 / T-244. (2) New T-270 (gate 2, lane I): foundation / pit waterproofing as its own line family; blinding
+15.179 m3 stays STRUCTURE (no double count); HELD parts BLANK. (3) T-261 PROMOTED (register v2 merged). (4) T-254's
+acceptance extended with the Checker's two open points (stub strip shown or dropped; ring end rule + test). (5) WIP
+LIMIT for worker 1: three evidence-complete branches (T-258, T-264, T-265) and none READY, each re-merge costing a run
+when the head moves; no new claim until all three are handed in (T-258 first, it blocks T-266). (6) Cross-trade: the 17
+exterior ground-beam runs feed concrete, formwork (T-264: faces above N.G. 47.663 m2), rebar (T-265) and the coating
+(T-263): all four must read the Checker-verified run lengths; register row added.
+
+TEAM HEALTH. Since 10:15: Checker 2 runs (09:50 -> 11:01 SUCCESS, 11:51 -> 12:08 SUCCESS; 10:51 overlap guard, correct);
+Worker 3 11:01 -> 11:48 SUCCESS; Worker 2 10:40 -> 11:28 SUCCESS, 11:40 open (T-269, scheduler PENDING); Worker 1
+09:20 -> 10:31 SUCCESS, 10:20 IDLE (lock, correct), 11:21 open (T-265 evidence 12:06). Every closed run carries a
+self-check PASS line; no refusal, no unclosed run older than its window. Throughput: 5 merged / 0 rejected in 2 h; READY
+0 now (backlog cleared). Risk: worker 1 work-in-progress (above). Queue check: 49 actionable rows, 0 flagged, 0 stall
+checks.
+
+OWNER PACKAGE: none new. Open with you: Q-76 (curved first-floor window height, A 9.87 / B 11.51 m2; recommendation A).
+Your stair answers S-4 .. S-8 are recorded; no agent will ask them again.
+
+NEEDS FIXING (owner only): none new. The consultant / designer list (D-33 / D-34 / D-35, D-16, D-53, D-66) still holds
+CONC.GROUND, CONC.COLUMN and the windows line; the existing-ground survey still holds every excavation depth.
+
 ## LEAD REPORT 2026-10-24 10:15 UTC
 
 Repositories: attached Urban-Project-AI checkout (main eafbb0f6); `.work` prepared AUTOMATICALLY ("setup by auto",

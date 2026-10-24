@@ -36,6 +36,17 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
    commit. Decision: board-only handoffs are verified as hand evidence (the verifier re-reads the cited notes), and the
    next task on the topic writes the files (T-117); a run with no line stays a NEEDS FIXING item for the owner's setting.
 
+## 2026-10-24 18:15 (lead run; covers 16:15 - 18:15)
+
+| Task | Result | Evidence | Decision |
+|---|---|---|---|
+| T-263 buried-concrete liquid waterproofing | WORKED | MERGED c0ab564d (Verifier 17:59): 35.404 m2 DRAWING-CONFIRMED, own 7E9+7EA#1 2.535, 7E0+FD#1 2.8475, F12 top 13.690 agree; missing category in engine and freelancer | T-276 (remaining faces), T-270 scope extended (integration); lessons row |
+| T-261 r2 blockwork split | PARTIAL | REJECTED 17:00: 7 / 9 rising walls agree own; 1F-W18 / 1F-W24 carried register gross on non-drawn extents | r3 CLAIMED 17:41 with the exact fault |
+| T-272 ground-beam stirrups | PARTIAL | REJECTED 17:04: shape / hooks / cover agree; count envelope assumed links through crossing beams, ring as one run | TODO r2 narrow; lessons row |
+| T-267 r1 stair finish-level module | PARTIAL (unchanged) | REJECTED 16:07 narrow (manifest); not reclaimed in two worker 1 runs | row set to TODO r2 (claim rule cause, see below), first in lanes S and I |
+| T-240 floor area V3.0.14 | handed in (READY 17:52, Gate B) | internal 340.765 -> 380.364 m2 vs released 385.634 (-1.37 %), 3,643 / 3,680 lines byte-identical | Gate B next; the +39.6 m2 step to be reconciled piece by piece |
+| Worker 1 lane order | process fault | claimed T-273 17:27 while two narrow reworks (status REJECTED) were first in lane S | rework rows now TODO rN (lessons row); T-273 continues |
+
 ## 2026-10-24 14:15 (lead run)
 
 | Task | Result | Evidence | Decision |
@@ -385,30 +396,4 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
   checker item in the queue.
 - Lane S / A had no claimable new piece after T-189 / T-164 except reworks: added T-191, T-192 (S), T-194, T-195 (A, owner
   review plan R6 / R9), T-193 (I); T-176 and T-181 claimable (T-175, T-182 merged). Queue check 0 flagged.
-
-## 2026-10-22 16:20 (lead run)
-
-- **Checker 13:52 SUCCESS (15:04)**: T-184 MERGED -> **WORKED** (staircases: ST-01 = stair beside the lift GF -> 2F, ST-02 =
-  round stair GF -> 1F; own flights MS2-L 1.059 / RS-S 0.972 m3 = ledger 0.0 %; engine storey loss D-T184-1 -2.598 m3
-  confirmed in code). Decision: the fix enters the candidate through new T-187 (with the default guard), after T-179; the
-  storey-continuity check becomes T-188 (owner review plan R2 / R3). T-171 MERGED -> **WORKED** (per-metre = max spacing;
-  kg HELD on the unprinted leg diameter only). T-150 r2 MERGED -> **WORKED** (W14 0.0 %). T-167 Gate B PASS -> **WORKED**
-  (V3.0.4: 84 profile-based lines HELD, 3,048 byte-identical, 2 random lines OK, 0 defects). Decision: T-179 TODO now.
-- **Checker 15:51 (open at 16:20)**: T-172 + T-162 r2 MERGED as one pair -> **WORKED**. T-183 r2 MERGED 16:14 ->
-  **WORKED** (condition (c) 1.200 m and the upstand 1.350 m2 re-read by the Checker from the cut, 0.0 %; concrete scope
-  VERIFIED, line PARTIALLY VERIFIED on the held steel; side finding: the architectural cut draws the base 0.15 vs the
-  structural 0.40: structure governs thickness, architecture the levels, consultant item C10). T-128 r2 REJECTED ->
-  **PARTIAL**: GF master bed 0.02 %, but 1F-11 contour 22.350 vs 22.150 m (+0.9 %; owner net +1.25 %) from a polygon leak
-  into the glazing-frame cavity at both W17 jambs, plus the jamb fillet arcs mislabelled VIRTUAL. Decision: rework r3
-  exactly as the Checker listed (first in lane A); everything else in r2 stands.
-- **Worker 1 12:23 / 14:21**: T-184 READY (above) and T-183 r2 READY in an 11-minute run (small exact rework; fine).
-- **Worker 2 13:42 / 15:41**: T-175 READY (43 walls carry a net, 28 openings HELD; 2 openings missing from the T-150
-  census found) and T-173 READY (shaft walls: owner manual 142.22 gross beside drawing-derived 171.88 .. 175.14 m2; his
-  204.42 closes to 0). Decision: T-176 waits for the T-175 verdict (needs its net area); T-164 made backlog-permitted.
-- **Worker 3 13:01 / 15:03**: T-186 READY (default guard; on baseline A it holds 14.554 m3 and 1,885.36 kg and finds 3
-  silent omissions) and T-182 READY (five measures as opt-in v2.1 layout; dashboard parser not yet reading the v2.1
-  heading: main chat). Decision: both in checker RUN 1 (unblock T-187 and T-181).
-- **Owner session 15:15 / 15:55** applied, nothing undone: T-185 first in lane S; T-183 r2 first for the Checker (done);
-  WORKFLOW_CONTROLS section 10 file ownership respected (the standard's lessons register is the main chat's file now: the
-  Lead proposes rows in its report instead of editing it).
 

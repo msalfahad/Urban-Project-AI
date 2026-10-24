@@ -1,13 +1,35 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
 Plain words, no task numbers. Measured numbers come from SCOREBOARD.md; anything not measured says so.
-Last update: 2026-10-24 16:15 UTC (Lead). Previous version: 2026-10-24 14:15 UTC. The released numbers did not change
-(released concrete 92.77 vs 111.81 m3, -17.03 %; released default V2.9 + route G untouched). Your measure (17:50):
-whole BOQ lines independently verified, and trades that can be scored. Still 1 whole line verified in the candidate
-(the concrete slab, 60.28 m3), 0 released. The aluminium doors line is now IN the candidate: 12.76 m2 / 6 doors, nothing
-held, pieces and widths verified, the 2.20 m heights on your approved rule (so the line is partially verified, 2 of 3
-measures). No new question for you; the curved first-floor window question is still open. One small thing only you can
-do: record the fingerprints of two sealed reference files (see "Waiting for the owner").
+Last update: 2026-10-24 18:15 UTC (Lead). Previous version: 2026-10-24 16:15 UTC. The released numbers did not change
+(released concrete 92.77 vs 111.81 m3, -17.03 %; released default V2.9 + route G untouched). Your measure: whole BOQ
+lines independently verified, and trades that can be scored. Still 1 whole line verified in the candidate (the concrete
+slab, 60.28 m3), 0 released; the aluminium doors line stays partially verified (2 of 3 measures). No new question for
+you; the curved first-floor window question is still open, and the fingerprints of two sealed reference files are still
+yours to record (see "Waiting for the owner").
+
+Since 16:15 (newest first; one piece checked and merged, two sent back for narrow fixes, one integration handed in):
+- Waterproofing of buried concrete: a scope nobody carried. The structural detail asks for two coats of liquid
+  waterproofing on every concrete surface in contact with earth. Neither the engine nor the freelancer has a line for
+  it. Measured face by face from the sections: 35.40 m2 of ground-beam faces (11.34 m2 on the interior beams, 24.06 m2
+  on the house side of the outer beams; their outside faces stand above natural ground and are not coated). The checker
+  re-measured two runs himself and agrees. Footing tops and necks stay held until the foundation level is settled (your
+  earlier answer path); the boundary beam stays held on the note's scope. Not yet in the candidate: queued after the
+  floor-area step.
+- Block walls, checked by the checker himself: 16 of the 37 walls with a settled net area are now re-measured, and
+  95.63 m2 of the 449.26 m2 settled net is verified (67.57 m2 two hours ago). One wall cannot settle from the drawings:
+  the beam over its end is drawn 25 cm wide but scheduled 20 cm (a 0.02 m2 difference on that wall, but the same kind of
+  conflict changes beam concrete and formwork), so it goes to the designer list and every beam is now being compared
+  drawn-against-schedule.
+- Block-wall blockers settled from the drawings: second hand-in, 7 of 9 walls agree with the checker; two walls took a
+  wall-register height over a length where no beam or slab edge is drawn. Being fixed now.
+- Ground-beam stirrups: shape, hooks and cover agree with the checker, but the link count assumed links continue
+  through crossing beams. Sent back to count per drawn span between supports; count and weight stay held, never 0.
+- Floor area in the candidate: the next step is handed in (internal floor 380.36 m2 vs the released 385.63 m2, -1.4 %,
+  every m2 named; under-stair, a band, the pantry doorway zone and part of the pantry still held). The checker takes it
+  next.
+- Team: one worker skipped two small fixes because they were labelled "rejected" rather than "to do"; corrected, and
+  every fix the Lead orders is now labelled "to do".
 
 Since 14:15 (newest first; three pieces checked and merged, two sent back for narrow fixes):
 - Block walls, checked by the checker himself: 9 of the 37 walls with a settled net area are now re-measured from the

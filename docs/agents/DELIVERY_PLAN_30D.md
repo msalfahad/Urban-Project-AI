@@ -46,7 +46,14 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
-## Status (Lead, 2026-10-24 12:15; re-estimated each run from what merged and was verified)
+## Status (Lead, 2026-10-24 18:15; re-estimated each run from what merged and was verified)
+
+Lead 2026-10-24 18:15: since 16:15 the Checker merged T-263 (buried-concrete liquid waterproofing, a missing BOQ
+category: 35.404 m2 DRAWING-CONFIRMED, PARTIALLY VERIFIED) and rejected 2 narrow (T-261 r2 blockwork split, T-272
+stirrup count); T-240 floor area V3.0.14 READY for Gate B. Verified whole lines unchanged: 1 / 13 candidate (CONC.SLAB),
+0 / 13 released. Blockwork verified share 67.574 -> 95.633 of 449.260 m2. Week-1 target (27 Oct, one verified improvement
+through the integrated pipeline) is met by Doors ALU in V3.0.13 and, once Gate B passes, floor area V3.0.14; week-2 (3 Nov)
+on track for floor area and doors, waterproofing integration (T-270) added; rebar laps / t in work (T-273).
 
 Lead 2026-10-24 16:15: since 14:15 the Checker merged T-265 (ground-beam main + side bars, structural), T-268 (Gate B:
 Doors aluminium into candidate V3.0.13, 12.760 m2 / 6 pcs, nothing held) and T-168 (Gate B tool v2), and rejected 2

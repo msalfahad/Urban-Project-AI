@@ -46,6 +46,17 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+### Lead 2026-10-24 18:15 (from T-263 MERGED; T-261 r2 / T-272 REJECTED narrow; T-240 READY; Checker blockwork light runs 17:07 - 18:04; new T-276, T-277)
+
+| Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |
+|---|---|---|---|---|---|
+| Ground-beam buried faces (interior runs both faces; main-house exterior runs inner face only; outer face sits above natural ground at the soffit) | waterproofing (liquid, WP.BURIED), concrete ground system (read only), formwork (faces read only) | WATERPROOFING WP.BURIED_LIQUID per face; footing sides / underlay / lift pit stay FOUNDATION_WP (T-219), never also a buried-face coat; soffits on 10 cm plain concrete and plinth faces EXCLUDED by name | 35.404 m2 DRAWING-CONFIRMED (11.342 interior + 24.063 exterior inner); 2 runs / 3 faces 5.3825 m2 Checker-own; line PARTIALLY VERIFIED | T-263 MERGED c0ab564d | T-276 (remaining faces), T-270 (into the candidate) |
+| Footing tops and necks (buried part) | waterproofing, concrete footings / necks | WATERPROOFING per face, area net of the necks; neck faces only once the neck height is settled | HELD (formation Q-21 C); F12 top 13.690 m2 single reading Checker-own | T-263 | answered-decision path Q-21 C; no new question |
+| Beam CB2 (GF slab plan) over block wall GF-W19 | CONC.BEAM, formwork, blockwork (height), plaster / paint | CONC.BEAM owns the member; BLOCKWORK takes its height from the soffit; width CONFLICT: drawn 0.25 m vs schedule W 20, never the larger | CONFLICT; GF-W19 8.595 .. 8.612 m2 PARTIALLY VERIFIED (length + deductions own) | Checker T-180 18:04 | designer item (Lead consultant list); T-277 census of every drawn-vs-scheduled width |
+| Block walls VERIFIED whole (+ 17:07 / 18:04): 2F-W01 6.840, 1F-W09 6.840, 1F-W21 7.410, 1F-W02 2.660, GF-W21 4.309 m2 (+ the ten earlier) | blockwork, plaster / paint, opening deductions | BLOCKWORK | VERIFIED 95.633 of established net 449.260 m2 at register values (10 walls); own-corrected 1F-W20 24.507, 1F-W22 20.402, GF-W16 15.436 (register to correct); 16 / 37 net walls own-measured | Checker 17:07 / 18:04 | T-274 (piece-sum flags 1F-W20, 1F-W22, 1F-W08, GF-W19, GF-W21) |
+| Block walls 1F-W18 and 1F-W24 (split by T-261 r2) | blockwork, CONC.SLAB corner 1F-076 / c0 | BLOCKWORK; a piece takes only a drawn member extent; register gross on a non-drawn extent refused (EXTENT_UNNAMED) | 1F-W18 own 17.856 on 4.7355 m (+0.4645 m at 4.04 -> 19.733 whole); 1F-W24 own 5.540, 1.0577 held | T-261 r2 REJECTED 17:00 | T-261 r3 (worker 2, CLAIMED 17:41) |
+| Ground-beam stirrups (22 merged runs) | rebar | REBAR; count per drawn clear span; ring split at column 17BA on its drawn faces (inner 6.2675 / outer 6.380 m) | HELD (count, cut length, mass; never 0); boundary link closure undrawn = designer item | T-272 REJECTED 17:04 | T-272 r2 |
+
 ### Lead 2026-10-24 16:15 (from T-265, T-268, T-168 MERGED; T-261 / T-267 REJECTED narrow; Checker blockwork light runs 15:27 - 16:04; new T-274, T-275)
 
 | Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |
