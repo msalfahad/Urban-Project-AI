@@ -783,6 +783,526 @@
    }
   ]
  },
+ "slab_panels": [
+  {
+   "arch_room": {
+    "class": "MIXED",
+    "level_m": 1.0,
+    "name_en": "Dining + Living / saloon + Pantry + Reception"
+   },
+   "arch_room_cover": 1.0,
+   "bordering_runs": [
+    "114+115+7DF#1",
+    "114+115+7DF#2",
+    "184+7CF#3",
+    "7E0+FD#1",
+    "7E0+FD#2",
+    "7E7+7E8#1",
+    "7E7+7E8#2"
+   ],
+   "level_marks": [
+    "+1.00"
+   ],
+   "panel_id": "GS-01",
+   "plan_m2": 24.505
+  },
+  {
+   "arch_room": {
+    "class": "ROOM",
+    "level_m": 0.3,
+    "name_en": "Majlis / diwaniya"
+   },
+   "arch_room_cover": 1.0,
+   "bordering_runs": [
+    "136+7D5#1",
+    "137+138#1",
+    "13E+7D6#1",
+    "13E+7D6#2",
+    "7D4+F8#1",
+    "ARC:139+13A"
+   ],
+   "level_marks": [
+    "+0.30"
+   ],
+   "panel_id": "GS-02",
+   "plan_m2": 22.9653
+  },
+  {
+   "arch_room": {
+    "class": "MIXED",
+    "level_m": 1.0,
+    "name_en": "Dining + Living / saloon + Pantry + Reception"
+   },
+   "arch_room_cover": 1.0,
+   "bordering_runs": [
+    "177+7CD#1",
+    "177+7CD#2",
+    "7DC+7DD#2",
+    "7E7+7E8#2",
+    "7E9+7EA#1"
+   ],
+   "level_marks": [],
+   "panel_id": "GS-03",
+   "plan_m2": 14.8931
+  },
+  {
+   "arch_room": {
+    "class": "MIXED",
+    "level_m": 1.0,
+    "name_en": "Dining + Living / saloon + Pantry + Reception"
+   },
+   "arch_room_cover": 1.0,
+   "bordering_runs": [
+    "184+7CF#2",
+    "184+7CF#3",
+    "7DC+7DD#1",
+    "7E7+7E8#1",
+    "7E9+7EA#1"
+   ],
+   "level_marks": [],
+   "panel_id": "GS-04",
+   "plan_m2": 14.8931
+  },
+  {
+   "arch_room": {
+    "class": "MIXED",
+    "level_m": 1.0,
+    "name_en": "Dining + Living / saloon + Pantry + Reception"
+   },
+   "arch_room_cover": 0.9532,
+   "bordering_runs": [
+    "109+7CB#1",
+    "17D+7E4#1",
+    "7D0+FC#1",
+    "7D0+FC#2",
+    "7E1+7E2#1"
+   ],
+   "level_marks": [],
+   "panel_id": "GS-05",
+   "plan_m2": 14.5258
+  },
+  {
+   "arch_room": {
+    "class": "MIXED",
+    "level_m": 1.0,
+    "name_en": "Dining + Living / saloon + Pantry + Reception"
+   },
+   "arch_room_cover": 1.0,
+   "bordering_runs": [
+    "177+7CD#1",
+    "17C+7E3#1",
+    "7DC+7DD#1",
+    "7DC+7DD#2",
+    "7E1+7E2#1"
+   ],
+   "level_marks": [],
+   "panel_id": "GS-06",
+   "plan_m2": 11.9236
+  },
+  {
+   "arch_room": {
+    "class": "MIXED",
+    "level_m": 1.0,
+    "name_en": "Dining + Living / saloon + Pantry + Reception"
+   },
+   "arch_room_cover": 0.8915,
+   "bordering_runs": [
+    "109+7CB#1",
+    "10A+7C9#1",
+    "145+7CA#1",
+    "7D0+FC#1"
+   ],
+   "level_marks": [
+    "+1.00"
+   ],
+   "panel_id": "GS-07",
+   "plan_m2": 11.61
+  },
+  {
+   "arch_room": {
+    "class": "ROOM",
+    "level_m": 0.0,
+    "name_en": "Stair"
+   },
+   "arch_room_cover": 1.0,
+   "bordering_runs": [
+    "109+7CB#2",
+    "109+7CB#3",
+    "15C+7CC#1",
+    "15E+15F#1",
+    "170+7C3#1"
+   ],
+   "level_marks": [
+    "+0.30",
+    "+1.00"
+   ],
+   "panel_id": "GS-08",
+   "plan_m2": 11.52
+  },
+  {
+   "arch_room": {
+    "class": "MIXED",
+    "level_m": 1.0,
+    "name_en": "Dining + Living / saloon + Pantry + Reception"
+   },
+   "arch_room_cover": 1.0,
+   "bordering_runs": [
+    "109+7CB#2",
+    "15C+7CC#1",
+    "17C+7E3#1",
+    "7E1+7E2#1"
+   ],
+   "level_marks": [
+    "+1.00"
+   ],
+   "panel_id": "GS-09",
+   "plan_m2": 10.9742
+  },
+  {
+   "arch_room": {
+    "class": "ROOM",
+    "level_m": 0.0,
+    "name_en": "Master bedroom"
+   },
+   "arch_room_cover": 1.0,
+   "bordering_runs": [
+    "170+7C3#3",
+    "170+7C3#4",
+    "175+7DE#1",
+    "177+7CD#1",
+    "177+7CD#2",
+    "ARC:157+158"
+   ],
+   "level_marks": [],
+   "panel_id": "GS-10",
+   "plan_m2": 10.9064
+  },
+  {
+   "arch_room": {
+    "class": "MIXED",
+    "level_m": 1.0,
+    "name_en": "Dining + Living / saloon + Pantry + Reception"
+   },
+   "arch_room_cover": 1.0,
+   "bordering_runs": [
+    "17D+7E4#1",
+    "184+7CF#1",
+    "7DC+7DD#1",
+    "7E1+7E2#1"
+   ],
+   "level_marks": [],
+   "panel_id": "GS-11",
+   "plan_m2": 8.3723
+  },
+  {
+   "arch_room": {
+    "class": "ROOM",
+    "level_m": 0.0,
+    "name_en": "Garden / yard / court"
+   },
+   "arch_room_cover": 1.0,
+   "bordering_runs": [
+    "17B+7E5#1",
+    "17D+7E4#1",
+    "184+7CF#1",
+    "184+7CF#2",
+    "7D0+FC#2",
+    "7D0+FC#3"
+   ],
+   "level_marks": [],
+   "panel_id": "GS-12",
+   "plan_m2": 8.124
+  },
+  {
+   "arch_room": {
+    "class": "ROOM",
+    "level_m": 0.3,
+    "name_en": "Driver room"
+   },
+   "arch_room_cover": 1.0,
+   "bordering_runs": [
+    "13D+7D2#1",
+    "13F+7D3#1",
+    "140+7D7#1",
+    "7D4+F8#2"
+   ],
+   "level_marks": [
+    "+0.30"
+   ],
+   "panel_id": "GS-13",
+   "plan_m2": 6.88
+  },
+  {
+   "arch_room": {
+    "class": "ROOM",
+    "level_m": 0.3,
+    "name_en": "Kitchen"
+   },
+   "arch_room_cover": 1.0,
+   "bordering_runs": [
+    "10B+7D1#2",
+    "13D+7D2#1",
+    "140+7D7#1",
+    "142+7D8#1"
+   ],
+   "level_marks": [],
+   "panel_id": "GS-14",
+   "plan_m2": 6.86
+  },
+  {
+   "arch_room": {
+    "class": "MIXED",
+    "level_m": 1.0,
+    "name_en": "Dining + Living / saloon + Pantry + Reception"
+   },
+   "arch_room_cover": 1.0,
+   "bordering_runs": [
+    "17B+7E5#1",
+    "184+7CF#3",
+    "7D0+FC#3",
+    "7D0+FC#4",
+    "7E0+FD#1"
+   ],
+   "level_marks": [],
+   "panel_id": "GS-15",
+   "plan_m2": 6.0
+  },
+  {
+   "arch_room": null,
+   "arch_room_cover": 0.0,
+   "bordering_runs": [
+    "109+7CB#2",
+    "145+7CA#1",
+    "178+7DB#1",
+    "185+7C7#1"
+   ],
+   "level_marks": [],
+   "panel_id": "GS-16",
+   "plan_m2": 4.18
+  },
+  {
+   "arch_room": {
+    "class": "ROOM",
+    "level_m": 0.0,
+    "name_en": "Bathroom / W.C."
+   },
+   "arch_room_cover": 0.9812,
+   "bordering_runs": [
+    "170+7C3#3",
+    "175+7DE#1",
+    "176+7E6#1",
+    "180+181#1",
+    "180D+180E#1"
+   ],
+   "level_marks": [],
+   "panel_id": "GS-17",
+   "plan_m2": 3.5976
+  },
+  {
+   "arch_room": {
+    "class": "ROOM",
+    "level_m": 0.0,
+    "name_en": "Master bedroom"
+   },
+   "arch_room_cover": 0.9588,
+   "bordering_runs": [
+    "175+7DE#1",
+    "176+7E6#1",
+    "177+7CD#1",
+    "180D+180E#1"
+   ],
+   "level_marks": [],
+   "panel_id": "GS-18",
+   "plan_m2": 3.255
+  },
+  {
+   "arch_room": {
+    "class": "ROOM",
+    "level_m": 0.0,
+    "name_en": "Bathroom / W.C."
+   },
+   "arch_room_cover": 1.0,
+   "bordering_runs": [
+    "13C+7D9#1",
+    "13E+7D6#1",
+    "13F+7D3#1",
+    "7D4+F8#1"
+   ],
+   "level_marks": [],
+   "panel_id": "GS-19",
+   "plan_m2": 3.1175
+  },
+  {
+   "arch_room": {
+    "class": "UNLABELLED",
+    "level_m": 0.0,
+    "name_en": "Unnamed space"
+   },
+   "arch_room_cover": 0.9991,
+   "bordering_runs": [
+    "176+7E6#1",
+    "177+7CD#1",
+    "17E+17F#1"
+   ],
+   "level_marks": [],
+   "panel_id": "GS-20",
+   "plan_m2": 2.7453
+  },
+  {
+   "arch_room": {
+    "class": "UNLABELLED",
+    "level_m": 0.0,
+    "name_en": "Unnamed space"
+   },
+   "arch_room_cover": 1.0,
+   "bordering_runs": [
+    "13C+7D9#1",
+    "13D+7D2#1",
+    "13E+7D6#1",
+    "13F+7D3#1"
+   ],
+   "level_marks": [],
+   "panel_id": "GS-21",
+   "plan_m2": 2.6825
+  },
+  {
+   "arch_room": {
+    "class": "ROOM",
+    "level_m": 0.0,
+    "name_en": "Bathroom / W.C."
+   },
+   "arch_room_cover": 0.991,
+   "bordering_runs": [
+    "15D+7C8#1",
+    "170+7C3#2",
+    "17E+17F#1",
+    "182+183#1"
+   ],
+   "level_marks": [],
+   "panel_id": "GS-22",
+   "plan_m2": 2.2851
+  },
+  {
+   "arch_room": {
+    "class": "MIXED",
+    "level_m": 1.0,
+    "name_en": "Dining + Living / saloon + Pantry + Reception"
+   },
+   "arch_room_cover": 0.9885,
+   "bordering_runs": [
+    "107+7CE#1",
+    "114+115+7DF#1",
+    "177+7CD#2",
+    "7E7+7E8#2",
+    "ARC:157+158"
+   ],
+   "level_marks": [],
+   "panel_id": "GS-23",
+   "plan_m2": 2.082
+  },
+  {
+   "arch_room": {
+    "class": "ROOM",
+    "level_m": 0.0,
+    "name_en": "Bathroom / W.C."
+   },
+   "arch_room_cover": 1.0,
+   "bordering_runs": [
+    "15D+7C8#1",
+    "15E+15F#1",
+    "16F+7FF#1",
+    "170+7C3#2"
+   ],
+   "level_marks": [],
+   "panel_id": "GS-24",
+   "plan_m2": 2.0625
+  },
+  {
+   "arch_room": {
+    "class": "ROOM",
+    "level_m": 0.0,
+    "name_en": "Bathroom / W.C."
+   },
+   "arch_room_cover": 0.9807,
+   "bordering_runs": [
+    "170+7C3#2",
+    "176+7E6#1",
+    "17E+17F#1",
+    "182+183#1"
+   ],
+   "level_marks": [],
+   "panel_id": "GS-25",
+   "plan_m2": 1.749
+  },
+  {
+   "arch_room": {
+    "class": "ROOM",
+    "level_m": 0.0,
+    "name_en": "Bathroom / W.C."
+   },
+   "arch_room_cover": 1.0,
+   "bordering_runs": [
+    "140+7D7#1",
+    "141+7DA#1",
+    "142+7D8#1",
+    "7D4+F8#2"
+   ],
+   "level_marks": [],
+   "panel_id": "GS-26",
+   "plan_m2": 1.44
+  },
+  {
+   "arch_room": {
+    "class": "UNLABELLED",
+    "level_m": 0.0,
+    "name_en": "Unnamed space"
+   },
+   "arch_room_cover": 1.0,
+   "bordering_runs": [
+    "15E+15F#1",
+    "16F+7FF#1"
+   ],
+   "level_marks": [],
+   "panel_id": "GS-27",
+   "plan_m2": 1.1875
+  },
+  {
+   "arch_room": {
+    "class": "ROOM",
+    "level_m": 0.3,
+    "name_en": "Kitchen"
+   },
+   "arch_room_cover": 1.0,
+   "bordering_runs": [
+    "10B+7D1#1",
+    "141+7DA#1",
+    "142+7D8#1",
+    "7D4+F8#2"
+   ],
+   "level_marks": [
+    "+0.30"
+   ],
+   "panel_id": "GS-28",
+   "plan_m2": 1.14
+  },
+  {
+   "arch_room": {
+    "class": "UNLABELLED",
+    "level_m": 0.0,
+    "name_en": "Unnamed space"
+   },
+   "arch_room_cover": 1.0,
+   "bordering_runs": [
+    "176+7E6#1",
+    "180+181#1",
+    "180D+180E#1"
+   ],
+   "level_marks": [],
+   "panel_id": "GS-29",
+   "plan_m2": 0.1556
+  }
+ ],
+ "slab_panels_solid_m2": 73.8316,
  "source": {
   "arch_walls": "ARCH_WALLS.json of release_baseline V29_ROUTEG_NO_PROFILE (REPRODUCED b96185d4)",
   "architectural_sha256": "ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4",
@@ -856,6 +1376,12 @@
     "107",
     "7CE"
    ],
+   "panels_by_side_m2": {
+    "A": [],
+    "B": [
+     "GS-23"
+    ]
+   },
    "part": "MAIN",
    "span_from_m": 0.0,
    "span_id": "107+7CE#1",
@@ -929,6 +1455,14 @@
     "109",
     "7CB"
    ],
+   "panels_by_side_m2": {
+    "A": [
+     "GS-05"
+    ],
+    "B": [
+     "GS-07"
+    ]
+   },
    "part": "MAIN",
    "span_from_m": 0.0,
    "span_id": "109+7CB#1",
@@ -1010,6 +1544,15 @@
     "109",
     "7CB"
    ],
+   "panels_by_side_m2": {
+    "A": [
+     "GS-08",
+     "GS-09"
+    ],
+    "B": [
+     "GS-16"
+    ]
+   },
    "part": "MAIN",
    "span_from_m": 5.1,
    "span_id": "109+7CB#2",
@@ -1101,6 +1644,12 @@
     "109",
     "7CB"
    ],
+   "panels_by_side_m2": {
+    "A": [
+     "GS-08"
+    ],
+    "B": []
+   },
    "part": "MAIN",
    "span_from_m": 10.0,
    "span_id": "109+7CB#3",
@@ -1181,6 +1730,12 @@
     "10A",
     "7C9"
    ],
+   "panels_by_side_m2": {
+    "A": [
+     "GS-07"
+    ],
+    "B": []
+   },
    "part": "MAIN",
    "span_from_m": 0.0,
    "span_id": "10A+7C9#1",
@@ -1263,6 +1818,12 @@
     "10B",
     "7D1"
    ],
+   "panels_by_side_m2": {
+    "A": [],
+    "B": [
+     "GS-28"
+    ]
+   },
    "part": "ANNEX",
    "span_from_m": 0.3,
    "span_id": "10B+7D1#1",
@@ -1344,6 +1905,12 @@
     "10B",
     "7D1"
    ],
+   "panels_by_side_m2": {
+    "A": [],
+    "B": [
+     "GS-14"
+    ]
+   },
    "part": "ANNEX",
    "span_from_m": 2.0,
    "span_id": "10B+7D1#2",
@@ -1421,6 +1988,14 @@
     "115",
     "7DF"
    ],
+   "panels_by_side_m2": {
+    "A": [
+     "GS-01"
+    ],
+    "B": [
+     "GS-23"
+    ]
+   },
    "part": "MAIN",
    "span_from_m": -0.0,
    "span_id": "114+115+7DF#1",
@@ -1506,6 +2081,12 @@
     "115",
     "7DF"
    ],
+   "panels_by_side_m2": {
+    "A": [
+     "GS-01"
+    ],
+    "B": []
+   },
    "part": "MAIN",
    "span_from_m": 3.225,
    "span_id": "114+115+7DF#2",
@@ -1586,6 +2167,12 @@
     "136",
     "7D5"
    ],
+   "panels_by_side_m2": {
+    "A": [
+     "GS-02"
+    ],
+    "B": []
+   },
    "part": "ANNEX",
    "span_from_m": 0.0,
    "span_id": "136+7D5#1",
@@ -1667,6 +2254,12 @@
     "137",
     "138"
    ],
+   "panels_by_side_m2": {
+    "A": [
+     "GS-02"
+    ],
+    "B": []
+   },
    "part": "ANNEX",
    "span_from_m": 0.3,
    "span_id": "137+138#1",
@@ -1751,6 +2344,14 @@
     "13C",
     "7D9"
    ],
+   "panels_by_side_m2": {
+    "A": [
+     "GS-19"
+    ],
+    "B": [
+     "GS-21"
+    ]
+   },
    "part": "ANNEX",
    "span_from_m": -0.0,
    "span_id": "13C+7D9#1",
@@ -1831,6 +2432,13 @@
     "13D",
     "7D2"
    ],
+   "panels_by_side_m2": {
+    "A": [
+     "GS-13",
+     "GS-14"
+    ],
+    "B": []
+   },
    "part": "ANNEX",
    "span_from_m": 0.6,
    "span_id": "13D+7D2#1",
@@ -1920,6 +2528,15 @@
     "13E",
     "7D6"
    ],
+   "panels_by_side_m2": {
+    "A": [
+     "GS-19",
+     "GS-21"
+    ],
+    "B": [
+     "GS-02"
+    ]
+   },
    "part": "ANNEX",
    "span_from_m": 0.0,
    "span_id": "13E+7D6#1",
@@ -2009,6 +2626,12 @@
     "13E",
     "7D6"
    ],
+   "panels_by_side_m2": {
+    "A": [],
+    "B": [
+     "GS-02"
+    ]
+   },
    "part": "ANNEX",
    "span_from_m": 4.6,
    "span_id": "13E+7D6#2",
@@ -2091,6 +2714,15 @@
     "13F",
     "7D3"
    ],
+   "panels_by_side_m2": {
+    "A": [
+     "GS-13"
+    ],
+    "B": [
+     "GS-19",
+     "GS-21"
+    ]
+   },
    "part": "ANNEX",
    "span_from_m": 0.0,
    "span_id": "13F+7D3#1",
@@ -2176,6 +2808,14 @@
     "140",
     "7D7"
    ],
+   "panels_by_side_m2": {
+    "A": [
+     "GS-14"
+    ],
+    "B": [
+     "GS-13"
+    ]
+   },
    "part": "ANNEX",
    "span_from_m": 0.0,
    "span_id": "140+7D7#1",
@@ -2263,6 +2903,14 @@
     "141",
     "7DA"
    ],
+   "panels_by_side_m2": {
+    "A": [
+     "GS-28"
+    ],
+    "B": [
+     "GS-26"
+    ]
+   },
    "part": "ANNEX",
    "span_from_m": 0.0,
    "span_id": "141+7DA#1",
@@ -2344,6 +2992,15 @@
     "142",
     "7D8"
    ],
+   "panels_by_side_m2": {
+    "A": [
+     "GS-26",
+     "GS-28"
+    ],
+    "B": [
+     "GS-14"
+    ]
+   },
    "part": "ANNEX",
    "span_from_m": -0.0,
    "span_id": "142+7D8#1",
@@ -2432,6 +3089,14 @@
     "145",
     "7CA"
    ],
+   "panels_by_side_m2": {
+    "A": [
+     "GS-07"
+    ],
+    "B": [
+     "GS-16"
+    ]
+   },
    "part": "MAIN",
    "span_from_m": 1.1,
    "span_id": "145+7CA#1",
@@ -2520,6 +3185,14 @@
     "15C",
     "7CC"
    ],
+   "panels_by_side_m2": {
+    "A": [
+     "GS-09"
+    ],
+    "B": [
+     "GS-08"
+    ]
+   },
    "part": "MAIN",
    "span_from_m": -0.0,
    "span_id": "15C+7CC#1",
@@ -2603,6 +3276,14 @@
     "15D",
     "7C8"
    ],
+   "panels_by_side_m2": {
+    "A": [
+     "GS-22"
+    ],
+    "B": [
+     "GS-24"
+    ]
+   },
    "part": "MAIN",
    "span_from_m": 1.0001,
    "span_id": "15D+7C8#1",
@@ -2690,6 +3371,15 @@
     "15E",
     "15F"
    ],
+   "panels_by_side_m2": {
+    "A": [
+     "GS-24",
+     "GS-27"
+    ],
+    "B": [
+     "GS-08"
+    ]
+   },
    "part": "MAIN",
    "span_from_m": 0.0,
    "span_id": "15E+15F#1",
@@ -2777,6 +3467,14 @@
     "16F",
     "7FF"
    ],
+   "panels_by_side_m2": {
+    "A": [
+     "GS-27"
+    ],
+    "B": [
+     "GS-24"
+    ]
+   },
    "part": "MAIN",
    "span_from_m": -0.0,
    "span_id": "16F+7FF#1",
@@ -2858,6 +3556,12 @@
     "170",
     "7C3"
    ],
+   "panels_by_side_m2": {
+    "A": [
+     "GS-08"
+    ],
+    "B": []
+   },
    "part": "MAIN",
    "span_from_m": -0.0,
    "span_id": "170+7C3#1",
@@ -2940,6 +3644,13 @@
     "170",
     "7C3"
    ],
+   "panels_by_side_m2": {
+    "A": [
+     "GS-24",
+     "GS-25"
+    ],
+    "B": []
+   },
    "part": "MAIN",
    "span_from_m": 2.7,
    "span_id": "170+7C3#2",
@@ -3029,6 +3740,12 @@
     "170",
     "7C3"
    ],
+   "panels_by_side_m2": {
+    "A": [
+     "GS-17"
+    ],
+    "B": []
+   },
    "part": "MAIN",
    "span_from_m": 6.67,
    "span_id": "170+7C3#3",
@@ -3114,6 +3831,12 @@
     "170",
     "7C3"
    ],
+   "panels_by_side_m2": {
+    "A": [
+     "GS-10"
+    ],
+    "B": []
+   },
    "part": "MAIN",
    "span_from_m": 10.52,
    "span_id": "170+7C3#4",
@@ -3194,6 +3917,15 @@
     "175",
     "7DE"
    ],
+   "panels_by_side_m2": {
+    "A": [
+     "GS-10"
+    ],
+    "B": [
+     "GS-17",
+     "GS-18"
+    ]
+   },
    "part": "MAIN",
    "span_from_m": 0.0,
    "span_id": "175+7DE#1",
@@ -3279,6 +4011,16 @@
     "176",
     "7E6"
    ],
+   "panels_by_side_m2": {
+    "A": [
+     "GS-17",
+     "GS-18"
+    ],
+    "B": [
+     "GS-20",
+     "GS-25"
+    ]
+   },
    "part": "MAIN",
    "span_from_m": 0.0,
    "span_id": "176+7E6#1",
@@ -3391,6 +4133,16 @@
     "177",
     "7CD"
    ],
+   "panels_by_side_m2": {
+    "A": [
+     "GS-03",
+     "GS-06"
+    ],
+    "B": [
+     "GS-18",
+     "GS-20"
+    ]
+   },
    "part": "MAIN",
    "span_from_m": -0.0,
    "span_id": "177+7CD#1",
@@ -3490,6 +4242,15 @@
     "177",
     "7CD"
    ],
+   "panels_by_side_m2": {
+    "A": [
+     "GS-03",
+     "GS-23"
+    ],
+    "B": [
+     "GS-10"
+    ]
+   },
    "part": "MAIN",
    "span_from_m": 6.02,
    "span_id": "177+7CD#2",
@@ -3568,6 +4329,12 @@
     "178",
     "7DB"
    ],
+   "panels_by_side_m2": {
+    "A": [
+     "GS-16"
+    ],
+    "B": []
+   },
    "part": "MAIN",
    "span_from_m": 0.0,
    "span_id": "178+7DB#1",
@@ -3643,6 +4410,14 @@
     "17B",
     "7E5"
    ],
+   "panels_by_side_m2": {
+    "A": [
+     "GS-15"
+    ],
+    "B": [
+     "GS-12"
+    ]
+   },
    "part": "MAIN",
    "span_from_m": 0.0,
    "span_id": "17B+7E5#1",
@@ -3717,6 +4492,14 @@
     "17C",
     "7E3"
    ],
+   "panels_by_side_m2": {
+    "A": [
+     "GS-06"
+    ],
+    "B": [
+     "GS-09"
+    ]
+   },
    "part": "MAIN",
    "span_from_m": -0.0,
    "span_id": "17C+7E3#1",
@@ -3792,6 +4575,14 @@
     "17D",
     "7E4"
    ],
+   "panels_by_side_m2": {
+    "A": [
+     "GS-11"
+    ],
+    "B": [
+     "GS-05"
+    ]
+   },
    "part": "MAIN",
    "span_from_m": 0.0,
    "span_id": "17D+7E4#1",
@@ -3878,6 +4669,14 @@
     "17E",
     "17F"
    ],
+   "panels_by_side_m2": {
+    "A": [
+     "GS-20"
+    ],
+    "B": [
+     "GS-22"
+    ]
+   },
    "part": "MAIN",
    "span_from_m": 0.0399,
    "span_id": "17E+17F#1",
@@ -3968,6 +4767,14 @@
     "180",
     "181"
    ],
+   "panels_by_side_m2": {
+    "A": [
+     "GS-29"
+    ],
+    "B": [
+     "GS-17"
+    ]
+   },
    "part": "MAIN",
    "span_from_m": 0.0,
    "span_id": "180+181#1",
@@ -4043,6 +4850,14 @@
     "180D",
     "180E"
    ],
+   "panels_by_side_m2": {
+    "A": [
+     "GS-18"
+    ],
+    "B": [
+     "GS-17"
+    ]
+   },
    "part": "MAIN",
    "span_from_m": -0.0,
    "span_id": "180D+180E#1",
@@ -4121,6 +4936,10 @@
     "1811",
     "1812"
    ],
+   "panels_by_side_m2": {
+    "A": [],
+    "B": []
+   },
    "part": "MAIN",
    "span_from_m": -0.0,
    "span_id": "1811+1812#1",
@@ -4204,6 +5023,14 @@
     "182",
     "183"
    ],
+   "panels_by_side_m2": {
+    "A": [
+     "GS-22"
+    ],
+    "B": [
+     "GS-25"
+    ]
+   },
    "part": "MAIN",
    "span_from_m": 0.0,
    "span_id": "182+183#1",
@@ -4286,6 +5113,14 @@
     "184",
     "7CF"
    ],
+   "panels_by_side_m2": {
+    "A": [
+     "GS-12"
+    ],
+    "B": [
+     "GS-11"
+    ]
+   },
    "part": "MAIN",
    "span_from_m": -0.0,
    "span_id": "184+7CF#1",
@@ -4366,6 +5201,14 @@
     "184",
     "7CF"
    ],
+   "panels_by_side_m2": {
+    "A": [
+     "GS-12"
+    ],
+    "B": [
+     "GS-04"
+    ]
+   },
    "part": "MAIN",
    "span_from_m": 3.82,
    "span_id": "184+7CF#2",
@@ -4440,6 +5283,14 @@
     "184",
     "7CF"
    ],
+   "panels_by_side_m2": {
+    "A": [
+     "GS-15"
+    ],
+    "B": [
+     "GS-01"
+    ]
+   },
    "part": "MAIN",
    "span_from_m": 7.07,
    "span_id": "184+7CF#3",
@@ -4531,6 +5382,12 @@
     "185",
     "7C7"
    ],
+   "panels_by_side_m2": {
+    "A": [
+     "GS-16"
+    ],
+    "B": []
+   },
    "part": "MAIN",
    "span_from_m": 0.8,
    "span_id": "185+7C7#1",
@@ -4611,6 +5468,12 @@
     "7D0",
     "FC"
    ],
+   "panels_by_side_m2": {
+    "A": [],
+    "B": [
+     "GS-07"
+    ]
+   },
    "part": "MAIN",
    "span_from_m": -0.0,
    "span_id": "7D0+FC#1",
@@ -4696,6 +5559,13 @@
     "7D0",
     "FC"
    ],
+   "panels_by_side_m2": {
+    "A": [],
+    "B": [
+     "GS-05",
+     "GS-12"
+    ]
+   },
    "part": "MAIN",
    "span_from_m": 4.075,
    "span_id": "7D0+FC#2",
@@ -4781,6 +5651,13 @@
     "7D0",
     "FC"
    ],
+   "panels_by_side_m2": {
+    "A": [],
+    "B": [
+     "GS-12",
+     "GS-15"
+    ]
+   },
    "part": "MAIN",
    "span_from_m": 10.32,
    "span_id": "7D0+FC#3",
@@ -4868,6 +5745,12 @@
     "7D0",
     "FC"
    ],
+   "panels_by_side_m2": {
+    "A": [],
+    "B": [
+     "GS-15"
+    ]
+   },
    "part": "MAIN",
    "span_from_m": 17.37,
    "span_id": "7D0+FC#4",
@@ -4948,6 +5831,12 @@
     "7D4",
     "F8"
    ],
+   "panels_by_side_m2": {
+    "A": [],
+    "B": [
+     "GS-02"
+    ]
+   },
    "part": "ANNEX",
    "span_from_m": 0.03,
    "span_id": "7D4+F8#1",
@@ -5033,6 +5922,13 @@
     "7D4",
     "F8"
    ],
+   "panels_by_side_m2": {
+    "A": [],
+    "B": [
+     "GS-13",
+     "GS-26"
+    ]
+   },
    "part": "ANNEX",
    "span_from_m": 5.88,
    "span_id": "7D4+F8#2",
@@ -5115,6 +6011,14 @@
     "7DC",
     "7DD"
    ],
+   "panels_by_side_m2": {
+    "A": [
+     "GS-04"
+    ],
+    "B": [
+     "GS-11"
+    ]
+   },
    "part": "MAIN",
    "span_from_m": 0.0,
    "span_id": "7DC+7DD#1",
@@ -5193,6 +6097,14 @@
     "7DC",
     "7DD"
    ],
+   "panels_by_side_m2": {
+    "A": [
+     "GS-03"
+    ],
+    "B": [
+     "GS-06"
+    ]
+   },
    "part": "MAIN",
    "span_from_m": 3.825,
    "span_id": "7DC+7DD#2",
@@ -5273,6 +6185,12 @@
     "7E0",
     "FD"
    ],
+   "panels_by_side_m2": {
+    "A": [],
+    "B": [
+     "GS-01"
+    ]
+   },
    "part": "MAIN",
    "span_from_m": 0.5,
    "span_id": "7E0+FD#1",
@@ -5358,6 +6276,12 @@
     "7E0",
     "FD"
    ],
+   "panels_by_side_m2": {
+    "A": [],
+    "B": [
+     "GS-01"
+    ]
+   },
    "part": "MAIN",
    "span_from_m": 4.15,
    "span_id": "7E0+FD#2",
@@ -5431,6 +6355,16 @@
     "7E1",
     "7E2"
    ],
+   "panels_by_side_m2": {
+    "A": [
+     "GS-05",
+     "GS-11"
+    ],
+    "B": [
+     "GS-06",
+     "GS-09"
+    ]
+   },
    "part": "MAIN",
    "span_from_m": -0.0,
    "span_id": "7E1+7E2#1",
@@ -5513,6 +6447,14 @@
     "7E7",
     "7E8"
    ],
+   "panels_by_side_m2": {
+    "A": [
+     "GS-01"
+    ],
+    "B": [
+     "GS-04"
+    ]
+   },
    "part": "MAIN",
    "span_from_m": 0.0,
    "span_id": "7E7+7E8#1",
@@ -5586,6 +6528,15 @@
     "7E7",
     "7E8"
    ],
+   "panels_by_side_m2": {
+    "A": [
+     "GS-01",
+     "GS-23"
+    ],
+    "B": [
+     "GS-03"
+    ]
+   },
    "part": "MAIN",
    "span_from_m": 3.825,
    "span_id": "7E7+7E8#2",
@@ -5664,6 +6615,14 @@
     "7E9",
     "7EA"
    ],
+   "panels_by_side_m2": {
+    "A": [
+     "GS-04"
+    ],
+    "B": [
+     "GS-03"
+    ]
+   },
    "part": "MAIN",
    "span_from_m": -0.0,
    "span_id": "7E9+7EA#1",

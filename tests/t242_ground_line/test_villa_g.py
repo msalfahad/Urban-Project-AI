@@ -91,6 +91,14 @@ def test_classification_sources():
     assert GL.classify("UNKNOWN", "UNK/UNK", "NOWALL", "EXT")[0] == GL.CANDIDATES    # S3 alone: not exterior
     assert GL.classify(GL.EXTERIOR, "weak", "NOWALL", "EXT_OR_INT")[0] == GL.CANDIDATES
     assert GL.classify("UNKNOWN", "UNK/UNK", GL.INTERIOR, "INT")[0] == GL.INTERIOR
+    # S4: architectural rooms on both sides make an unmarked, wall-less beam interior; a room-less enclosed panel on
+    # the only side that is not printed outside makes it a court beam (no slab either side)
+    assert GL.s4_reading([1.0], [0.95]) == "BOTH_INDOOR"
+    assert GL.s4_reading([], [0.0]) == "OUTDOOR_ONLY"
+    assert GL.s4_reading([1.0], []) is None
+    assert GL.classify("UNKNOWN", "UNK/IN", "NOWALL", "EXT_OR_INT", "BOTH_INDOOR")[0] == GL.INTERIOR
+    assert GL.classify(GL.EXTERIOR, "weak", "NOWALL", "EXT_OR_INT", "OUTDOOR_ONLY")[0] == GL.COURT
+    assert GL.classify(GL.EXTERIOR, "strong", GL.EXTERIOR, "EXT", "BOTH_INDOOR")[0] == GL.EXTERIOR   # S1 printed wins
 
 
 # ---------------------------------------------------------------------------------------------- adverse cases

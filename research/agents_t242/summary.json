@@ -8,14 +8,14 @@
   "level_texts_same_value": 14
  },
  "classification": {
-  "CANDIDATES": 4,
-  "COURT": 1,
-  "EXTERIOR": 27,
-  "INTERIOR": 29
+  "CANDIDATES": 0,
+  "COURT": 3,
+  "EXTERIOR": 26,
+  "INTERIOR": 32
  },
  "components": {
   "boundary_gb": {
-   "band_length_m": 44.2796,
+   "band_length_m": 44.07,
    "band_m2": 8.814,
    "calculated_m3": 0.0,
    "held_high_m3": 3.5256,
@@ -28,35 +28,45 @@
    "calculated_m3": 0,
    "calculated_runs": 0,
    "conflict_runs": 0,
-   "held_high_m3": 3.754125,
-   "held_low_m3": 1.49925,
+   "held_high_m3": 1.41,
+   "held_low_m3": 0.627,
    "held_no_value": [],
-   "held_runs": 5,
-   "runs": 5
+   "held_runs": 3,
+   "runs": 3
   },
   "exterior": {
    "calculated_m3": 0,
    "calculated_runs": 0,
    "conflict_runs": 9,
-   "held_high_m3": 18.358946,
-   "held_low_m3": 14.475166,
+   "held_high_m3": 18.187946,
+   "held_low_m3": 14.331166,
    "held_no_value": [],
-   "held_runs": 27,
-   "runs": 27
+   "held_runs": 26,
+   "runs": 26
   },
   "ground_slab": {
-   "status": "NOT_MEASURED",
-   "why": "keyed STR.CONC.GROUND_SLAB; not re-measured in T-242"
+   "beam_column_ring_solid_m2": 73.8316,
+   "calculated_m2": 204.3284,
+   "calculated_m3": 20.43284,
+   "calculated_runs": 27,
+   "conflict_runs": 0,
+   "held_high_m3": 1.2304,
+   "held_low_m3": 0.0,
+   "held_no_value": [],
+   "held_runs": 2,
+   "panels_m2": 216.6324,
+   "runs": 29,
+   "status": "MEASURED"
   },
   "interior": {
-   "calculated_m3": 1.74036,
-   "calculated_runs": 4,
+   "calculated_m3": 2.26836,
+   "calculated_runs": 5,
    "conflict_runs": 2,
-   "held_high_m3": 10.205532,
-   "held_low_m3": 9.369008,
+   "held_high_m3": 10.736532,
+   "held_low_m3": 9.767258,
    "held_no_value": [],
-   "held_runs": 25,
-   "runs": 29
+   "held_runs": 27,
+   "runs": 32
   }
  },
  "d34_information_most_specific_title": null,
@@ -67,9 +77,9 @@
    "runs": 9
   },
   "HELD (main house: D-35)": {
-   "high_m3": 16.131,
-   "low_m3": 13.584,
-   "runs": 18
+   "high_m3": 15.96,
+   "low_m3": 13.44,
+   "runs": 17
   }
  },
  "freelancer": {
@@ -87,14 +97,14 @@
   "transverse_m3": 19.979999999999997
  },
  "freelancer_reconciliation_boundary": {
-  "drawn_length_m": 44.2796,
+  "drawn_length_m": 44.07,
   "drawn_m3": 3.5256,
   "drawn_section_m2": 0.08,
   "his_length_m": 42,
   "his_m3": 7.56,
   "his_section_m2": 0.18,
-  "length_effect_m3": -0.4103,
-  "section_effect_m3": 4.428
+  "length_effect_m3": -0.3726,
+  "section_effect_m3": 4.407
  },
  "freelancer_reconciliation_building_beams": {
   "his_length_m": 211,
@@ -102,18 +112,18 @@
   "length_effect_m3": 3.558,
   "note": "his - ours = length (his lengths run through the supports: the drawn bands sum 200.04 m + curved) + section (his 0.30 x 0.60 on every beam vs the printed 0.30 / 0.40 / 0.60 interior and FOLLOW ARCH. exterior depths); the end pieces are inside 'ours'",
   "our_face_to_face_length_m": 191.2336,
-  "ours_high_m3": 34.059,
-  "ours_low_m3": 27.0838,
+  "ours_high_m3": 32.6028,
+  "ours_low_m3": 26.9938,
   "residual_high_m3": -8.4e-05,
-  "residual_low_m3": -6.3e-05,
-  "section_effect_high_m3": 7.3383,
-  "section_effect_low_m3": 0.3631
+  "residual_low_m3": -3.8e-05,
+  "section_effect_high_m3": 7.4283,
+  "section_effect_low_m3": 1.8192
  },
  "interior_split": {
   "CALCULATED": {
-   "high_m3": 1.7404,
-   "low_m3": 1.7404,
-   "runs": 4
+   "high_m3": 2.2684,
+   "low_m3": 2.2684,
+   "runs": 5
   },
   "D-33": {
    "high_m3": 6.5919,
@@ -121,14 +131,14 @@
    "runs": 12
   },
   "D-33+D-34": {
-   "high_m3": 1.6738,
-   "low_m3": 1.1771,
-   "runs": 4
+   "high_m3": 1.9258,
+   "low_m3": 1.3661,
+   "runs": 5
   },
   "D-34": {
-   "high_m3": 1.2435,
-   "low_m3": 0.9236,
-   "runs": 7
+   "high_m3": 1.5225,
+   "low_m3": 1.1328,
+   "runs": 8
   },
   "NECK-SECTION CONFLICT (T-217)": {
    "high_m3": 0.6964,
@@ -152,11 +162,11 @@
  },
  "line_closable": false,
  "line_not_closable_because": [
-  "interior: 25 held runs",
-  "exterior: 27 held runs",
-  "court_or_candidates: 5 held runs",
+  "interior: 27 held runs",
+  "exterior: 26 held runs",
+  "court_or_candidates: 3 held runs",
   "boundary_gb: 1 held runs",
-  "ground_slab: not measured here"
+  "ground_slab: 2 held runs"
  ],
  "partition": {
   "arcs_net_m2": 2.368,

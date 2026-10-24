@@ -24,6 +24,7 @@ import ground_line as GL  # noqa: E402
 # printed datums (merged level chain, values only)
 GF_TOP = {"MAIN": 0.95, "ANNEX": 0.25}    # GF structural slab tops: FFL +1.00 / +0.30 less the 0.05 build-up (T-214)
 OUTER_GROUND = (0.00, 0.15)               # 'Outer Normal ground level': existing +-0.00 or the court +0.15 (T-206 / T-214)
+GS_T = 0.10                               # ground slab 'T=10cm' (T-206 level chain R2, DRAWING-CONFIRMED)
 BOUNDARY_GB_DEPTH = 0.40                  # p.14 TYPICAL BOUNDARY WALL: plan 'GROUND BEAM (20x40)', section A-A '40'
 # lift-pit ring ends (T-230 MERGED, Checker 18:01 own 2.900 / 3.228 / 5.020 m)
 LIFT_END = {"15D+7C8#1": 2.900, "17C+7E3#1": 3.228, "177+7CD#1": 5.020}
@@ -119,6 +120,9 @@ def main(write=False):
     adj_notes.setdefault("7D4+F8#2", []).append(f"corner square with 10B+7D1 {corner[0]['plan_m2']:.4f} m2 "
                                                 "(billed by no span; this run owns it)")
 
+    pcover = {p["panel_id"]: p["arch_room_cover"] for p in inp["slab_panels"]}
+    garden = [p for p in inp["slab_panels"] if (p["arch_room"] or {}).get("name_en", "").startswith("Garden")]
+    garden_runs = {rid for p in garden for rid in p["bordering_runs"]}
     rows, runs = [], {"interior": [], "exterior": [], "other": []}
     for s in inp["spans"]:
         sid = s["span_id"]
@@ -128,7 +132,9 @@ def main(write=False):
         s2 = s2_of(s["S2_walls"])
         det = t138.get(t141[sid]["hand_occurrence"]) if sid in t141 else None
         s3 = s3_of(det)
-        kind, why = GL.classify(s1, s1s, s2, s3)
+        s4 = GL.s4_reading([pcover[x] for x in s["panels_by_side_m2"]["A"]],
+                           [pcover[x] for x in s["panels_by_side_m2"]["B"]])
+        kind, why = GL.classify(s1, s1s, s2, s3, s4)
         L = LIFT_END.get(sid, s["face_to_face_m"])
         if sid in LIFT_END:
             classes = literal_titles(L)
@@ -163,10 +169,12 @@ def main(write=False):
         rows.append({"run": sid, "component": "GB-" + kind, "part": s["part"], "direction": s["direction"],
                      "b_m": s["width_m"], "L_m": round(L, 4), "length_basis": basis,
                      "titles": "+".join(c[4:] for c in classes), "S1": f"{s1} ({s1s})", "S2": s2,
-                     "S3": f"{s3} ({det})", "class_why": why, "d33_tees": "; ".join(t["band_id"] for t in
+                     "S3": f"{s3} ({det})", "S4": s4 or "", "class_why": why, "d33_tees": "; ".join(t["band_id"] for t in
                                                                                    s["tees_mid_span"]),
                      "end_adjust_m2": f"{ea[0]:+.4f}..{ea[1]:+.4f}" if ea != (0.0, 0.0) else "",
-                     "end_notes": "; ".join(adj_notes.get(sid, [])), "status": r["status"],
+                     "end_notes": "; ".join(adj_notes.get(sid, []) + (
+                         ["borders the 'Garden / yard / court' panel: exterior if it is open (D-35)"]
+                         if sid in garden_runs and kind == GL.INTERIOR else [])), "status": r["status"],
                      "value_m3": "" if r["value_m3"] is None else f"{r['value_m3']:.4f}",
                      "low_m3": "" if r["low_m3"] is None else f"{r['low_m3']:.4f}",
                      "high_m3": "" if r["high_m3"] is None else f"{r['high_m3']:.4f}",
@@ -198,7 +206,9 @@ def main(write=False):
 
     # boundary-wall ground beam at natural ground (p.14)
     bw_area = sum(b["plan_m2"] for b in inp["boundary_bands"])
-    bw_len = sum(b["plan_m2"] / b["width_m"] for b in inp["boundary_bands"])
+    # centre-line length at the printed width 0.20 (p.14 '20x40'; drawn 0.20, T-065): the 8-vertex band 7FE has
+    # corners, so area / printed width is its centre-line length
+    bw_len = sum(b["plan_m2"] / 0.20 for b in inp["boundary_bands"])
     if any(b["overlap_spans_m2"] or b["overlap_columns_m2"] for b in inp["boundary_bands"]):
         raise SystemExit("boundary band overlaps a building beam / column: own it once first")
     bw_solid = round(bw_area * BOUNDARY_GB_DEPTH, 6)
@@ -214,12 +224,49 @@ def main(write=False):
                  "status": bw["status"], "value_m3": "", "low_m3": "", "high_m3": f"{bw_solid:.4f}",
                  "reasons": bw["reasons"][0]})
 
+    # ground slab (STR.CONC.GROUND_SLAB): the panels between the ground-beam faces (C1), 0.10 thick ('T=10cm',
+    # T-206 DRAWING-CONFIRMED); a panel is slab when it carries a floor-level mark or lies inside the architectural
+    # GF rooms; a panel in no room, or in the room the architectural plan names 'Garden / yard / court', is HELD
+    slab_runs = []
+    for k, pnl in enumerate(inp["slab_panels"], start=1):
+        name = (pnl["arch_room"] or {}).get("name_en") or ""
+        cov = pnl["arch_room_cover"]
+        marks_in = [m for m in pnl["level_marks"] if any(x in GL.INSIDE_LEVELS for x in m.split("/"))]
+        pid = pnl["panel_id"]
+        if name.startswith("Garden") or (not marks_in and (cov is None or cov < 0.1)):
+            why = ("the architectural plan names it 'Garden / yard / court': whether it is floored is not printed"
+                   if name.startswith("Garden") else "enclosed by ground beams but in no architectural GF room and "
+                   "carries no floor level (outdoor stair court side): slab not established")
+            r = {"run_id": pid, "status": GL.HELD, "value_m3": None, "low_m3": 0.0,
+                 "high_m3": round(pnl["plan_m2"] * GS_T, 6), "reasons": [why]}
+        elif marks_in or (cov is not None and cov >= 0.9):
+            r = {"run_id": pid, "status": GL.CALCULATED, "value_m3": round(pnl["plan_m2"] * GS_T, 6),
+                 "low_m3": round(pnl["plan_m2"] * GS_T, 6), "high_m3": round(pnl["plan_m2"] * GS_T, 6), "reasons": []}
+        else:
+            r = {"run_id": pid, "status": GL.HELD, "value_m3": None, "low_m3": 0.0,
+                 "high_m3": round(pnl["plan_m2"] * GS_T, 6), "reasons": [f"room cover {cov}: partly indoor"]}
+        slab_runs.append(r)
+        rows.append({"run": pid, "component": "GROUND SLAB panel", "part": "", "direction": "-", "b_m": "",
+                     "L_m": "", "length_basis": f"panel {pnl['plan_m2']:.4f} m2 between the beam faces x {GS_T}",
+                     "titles": "T=10cm", "S1": "/".join(pnl["level_marks"]), "S2": f"room cover {cov}",
+                     "S3": name, "class_why": "bordered by " + ", ".join(pnl["bordering_runs"]), "d33_tees": "",
+                     "end_adjust_m2": "", "end_notes": ("stair hall: the +0.30 lobby step to +1.00 is the stair's "
+                                                        "(T-184), the slab is 0.10 under both levels"
+                                                        if "+0.30" in pnl["level_marks"] and "+1.00" in pnl["level_marks"]
+                                                        else ""),
+                     "status": r["status"], "value_m3": "" if r["value_m3"] is None else f"{r['value_m3']:.4f}",
+                     "low_m3": f"{r['low_m3']:.4f}", "high_m3": f"{r['high_m3']:.4f}", "reasons": " | ".join(r["reasons"])})
+    slab_comp = dict(GL.component_total(slab_runs), status="MEASURED",
+                     panels_m2=round(sum(p["plan_m2"] for p in inp["slab_panels"]), 4),
+                     calculated_m2=round(sum(p["plan_m2"] for p, r in zip(inp["slab_panels"], slab_runs)
+                                             if r["status"] == GL.CALCULATED), 4),
+                     beam_column_ring_solid_m2=inp["slab_panels_solid_m2"])
     comp = {"interior": GL.component_total(runs["interior"]), "exterior": GL.component_total(runs["exterior"]),
             "court_or_candidates": GL.component_total(runs["other"]),
             "boundary_gb": {"runs": 1, "calculated_m3": 0.0, "held_runs": 1, "held_low_m3": None,
                             "held_high_m3": bw_solid, "held_no_value": [], "band_m2": round(bw_area, 4),
                             "band_length_m": round(bw_len, 4)},
-            "ground_slab": {"status": "NOT_MEASURED", "why": "keyed STR.CONC.GROUND_SLAB; not re-measured in T-242"}}
+            "ground_slab": slab_comp}
     closable, why_not = GL.line_closable(comp)
 
     # the interior component split by what holds it
@@ -284,8 +331,9 @@ def main(write=False):
     recon["residual_low_m3"] = round(recon["his_m3"] - b_hi - recon["length_effect_m3"] - recon["section_effect_low_m3"], 6)
     recon["residual_high_m3"] = round(recon["his_m3"] - b_lo - recon["length_effect_m3"] - recon["section_effect_high_m3"], 6)
     bw_recon = {"his_m3": fl["E15"], "his_length_m": fl["C15"], "his_section_m2": fl["B15"] * fl["D15"],
-                "drawn_m3": bw_solid, "drawn_length_m": round(bw_len, 4), "drawn_section_m2": 0.08,
-                "section_effect_m3": round(bw_len * (fl["B15"] * fl["D15"] - 0.08), 4),
+                "drawn_m3": bw_solid, "drawn_length_m": round(bw_len, 4),
+                "drawn_section_m2": round(bw_solid / bw_len, 5),
+                "section_effect_m3": round(bw_len * fl["B15"] * fl["D15"] - bw_solid, 4),
                 "length_effect_m3": round((fl["C15"] - bw_len) * fl["B15"] * fl["D15"], 4)}
     # D-34 information only: the most specific p.13 title on the face-to-face basis (NOT applied, NOT released)
     d34_reading = 0.0

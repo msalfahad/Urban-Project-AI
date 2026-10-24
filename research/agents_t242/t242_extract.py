@@ -63,6 +63,7 @@ def main():
     ap.add_argument("structural")
     ap.add_argument("architectural")
     ap.add_argument("arch_walls")
+    ap.add_argument("--arch-rooms", help="ARCH_ROOMS.json of the same baseline run (ground-slab panels)")
     ap.add_argument("--out", default=HERE)
     a = ap.parse_args()
     import ezdxf
@@ -332,6 +333,56 @@ def main():
             "band_drawn_m": r4((b["t1"] - b["t0"]) / 1000.0),
             "S1_probes": probes, "S2_walls": over})
 
+    # ---- ground-slab panels: the areas enclosed by the ground-beam strips, columns and the lift ring (slab between
+    # the beam faces, convention C1 as T-234 / T-241); each with its level marks, the architectural GF room cover and
+    # the runs that border it
+    panels = []
+    solid = unary_union(list(strip_full.values()) + [v["poly"] for v in arc_polys.values()] +
+                        list(col_poly.values()) + [P for _, P in ring]).buffer(5).buffer(-5)
+    rooms = []
+    if a.arch_rooms:
+        for rm in json.load(open(a.arch_rooms, encoding="utf-8"))["rooms"]:
+            if rm["floor"] == "GF":
+                rooms.append((rm["class"], rm.get("name_en"), rm.get("level_m"),
+                              Polygon([(x + DX, y + DY) for x, y in rm["polygon"]]).buffer(0)))
+    room_u = unary_union([q for *_, q in rooms]) if rooms else None
+    for g in getattr(solid, "geoms", [solid]):
+        for rr in g.interiors:
+            P = Polygon(rr)
+            if P.area < 0.05e6:
+                continue
+            ms = sorted({t for q, t in marks if P.contains(q)})
+            border = sorted(sid for sid, Q in span_poly.items() if Q.distance(P) < 2.0) + \
+                sorted(k for k, v in arc_polys.items() if v["poly"].distance(P) < 2.0)
+            cover = None if room_u is None else r4(P.intersection(room_u).area / P.area)
+            main_room = None
+            if rooms:
+                best = max(rooms, key=lambda t: t[3].intersection(P).area)
+                if best[3].intersection(P).area > 0.3 * P.area:
+                    main_room = {"class": best[0], "name_en": best[1], "level_m": best[2]}
+            panels.append({"plan_m2": r4(P.area / 1e6), "level_marks": ms, "arch_room_cover": cover,
+                           "arch_room": main_room, "bordering_runs": border, "_poly": P})
+    panels.sort(key=lambda d: (-d["plan_m2"], d["bordering_runs"]))
+    for k, pnl in enumerate(panels, start=1):
+        pnl["panel_id"] = f"GS-{k:02d}"
+    # which panel lies on which side of each straight span: a 0.05 m strip just outside each band face over the
+    # middle 80 % of the span
+    ppolys = [(pnl["panel_id"], pnl.pop("_poly")) for pnl in panels]
+    side_panels = {}
+    for sp in out["spans"]:
+        b = B[sp["band_id"]]
+        lo, hi = sorted((b["lo_off"], b["hi_off"]))
+        ta = sp["start"]["face_station_m"] * 1000.0
+        tb = sp["end"]["face_station_m"] * 1000.0
+        t0, t1 = ta + 0.1 * (tb - ta), tb - 0.1 * (tb - ta)
+        res_ = {}
+        for side, (o0, o1) in (("A", (lo - 60.0, lo - 10.0)), ("B", (hi + 10.0, hi + 60.0))):
+            Sx = Polygon(EO.band_slab(tuple(b["u"]), o0, o1, t0, t1))
+            res_[side] = sorted({a_ for a_, P in ppolys if P.intersection(Sx).area > 0.25 * Sx.area})
+        side_panels[sp["span_id"]] = res_
+
+    for row in span_rows:
+        row["panels_by_side_m2"] = side_panels[row["span_id"]]
     arc_rows = []
     for k, v in arc_polys.items():
         net = arcs_net[k]
@@ -384,7 +435,8 @@ def main():
                           "column_centroid_residual_note": "architectural columns are drawn 0.20 / 0.25 wide inside "
                                                             "the wall, the structural ones 0.30: centroids differ by "
                                                             "half the width difference (<= 0.05 m in each axis)"},
-            "spans": span_rows, "arc_bands": arc_rows, "boundary_bands": boun_rows,
+            "spans": span_rows, "arc_bands": arc_rows, "boundary_bands": boun_rows, "slab_panels": panels,
+            "slab_panels_solid_m2": r4(solid.area / 1e6),
             "partition": {"drawn_band_strips_m2": r4(drawn.area / 1e6), "spans_m2": r4(spans_u.area / 1e6),
                           "span_sum_m2": r4(sum(P.area for P in span_poly.values()) / 1e6),
                           "columns_in_strips_m2": r4(drawn.intersection(cols_u).area / 1e6),

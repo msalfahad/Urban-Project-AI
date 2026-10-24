@@ -93,16 +93,40 @@ def s1_reading(side_a, side_b):
     return "UNKNOWN", f"{a}/{b}"
 
 
-def classify(s1, s1_strength, s2, s3):
+def s4_reading(side_a, side_b, indoor=0.5, outdoor=0.1):
+    """S4, the slab panels on each side of a run: the architectural GF room cover of each (1.0 = wholly in rooms).
+
+    BOTH_INDOOR: a panel in rooms on each side; OUTDOOR_ONLY: a panel in no room on one side and none in rooms on the
+    other; None otherwise (a side without an enclosed panel tells nothing)."""
+    def side(cs):
+        if any(c is not None and c >= indoor for c in cs):
+            return "IN"
+        if any(c is not None and c < outdoor for c in cs):
+            return "OUT"
+        return None
+    a, b = side(side_a), side(side_b)
+    if a == "IN" and b == "IN":
+        return "BOTH_INDOOR"
+    if "OUT" in (a, b) and "IN" not in (a, b):
+        return "OUTDOOR_ONLY"
+    return None
+
+
+def classify(s1, s1_strength, s2, s3, s4=None):
     """Combine three independent readings into EXTERIOR / INTERIOR / COURT / CANDIDATES.
 
     s1: EXTERIOR / INTERIOR / COURT / UNKNOWN (level marks of the structural sheet, the printed evidence);
     s2: EXTERIOR / INTERIOR / NOWALL (the architectural GF wall on the beam and whether one side is EXTERIOR);
-    s3: EXT / EXT_OR_INT / INT / UNKNOWN (the pre-S5 register's two geometric outline tests, T-138 record).
+    s3: EXT / EXT_OR_INT / INT / UNKNOWN (the pre-S5 register's two geometric outline tests, T-138 record);
+    s4: BOTH_INDOOR / OUTDOOR_ONLY / None (architectural GF room cover of the slab panels the run borders).
     A reading the printed levels contradict never wins; one source alone never classifies an exterior beam.
     """
     if s1 == COURT:
         return COURT, "S1: outside ground on both sides"
+    if s1 == EXTERIOR and s4 == "OUTDOOR_ONLY":
+        return COURT, "S1 outside on one side + S4 the enclosed panel on the other side is in no room"
+    if s1 in (INTERIOR, "UNKNOWN") and s4 == "BOTH_INDOOR" and s2 != EXTERIOR:
+        return INTERIOR, "S4 rooms on both sides; no outside side"
     if s1 == EXTERIOR and s1_strength == "strong" and (s2 == EXTERIOR or s3 in ("EXT", "EXT_OR_INT")):
         return EXTERIOR, "S1 strong + S2/S3"
     if s1 == EXTERIOR and (s2 == EXTERIOR or s3 == "EXT"):
