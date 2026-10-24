@@ -1,0 +1,27 @@
+{
+  "task": "T-261",
+  "base_register": "research/agents_t228 (T-228 r2, MERGED bf4dd2a9)",
+  "blockers": 41,
+  "split": 10,
+  "settled_whole": 1,
+  "still_held": 30,
+  "established_net_v2_m2": 449.26,
+  "split_established_added_m2": 176.3023,
+  "established_net_proposed_m2": 625.562,
+  "split_established_added_m3": 31.6275,
+  "by_wall": {
+    "GF-W10": 39.1525,
+    "1F-W10": 36.929,
+    "2F-W02": 9.6915,
+    "1F-W04": 7.845,
+    "2F-W03": 25.885,
+    "2F-W07": 6.225,
+    "2F-W05": 3.8,
+    "1F-W18": 19.7326,
+    "1F-W24": 5.5401,
+    "1F-W13": 16.8073,
+    "1F-W17": 4.6943
+  },
+  "applied_to_register": false,
+  "released_default": "V2.9 + route G (unchanged)"
+}
