@@ -22,7 +22,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `rules/` | 13 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 1527 | pytest suites, one folder per round. |
+| `tests/` | 1528 | pytest suites, one folder per round. |
 | `tools/` | 112 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (254 modules)
@@ -429,7 +429,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `blocker_remediation.py` | 74 | MEDIUM | 1 | BLOCKER_REMEDIATION_ENGINE (generic). |
 | `boq_canonical.py` | 134 | MEDIUM | 2 | CANONICAL BOQ ITEM MODEL (RC1) - one payable identity per physical measurement item. |
 | `boq_evidence.py` | 43 | MEDIUM | 1 | BOQ EVIDENCE MAPPING (R8.20) - which release blockers can change a quantity. |
-| `boq_line.py` | 386 | HIGH | 52 | CANONICAL BOQ LINE (M9 S1) - one payable physical measurement per line, bilingual, traceable (generic; stdlib only). |
+| `boq_line.py` | 386 | HIGH | 54 | CANONICAL BOQ LINE (M9 S1) - one payable physical measurement per line, bilingual, traceable (generic; stdlib only). |
 | `boq_reconcile.py` | 172 | CRITICAL | 2 | GENERIC BOQ RECONCILIATION (M7) - a frozen engine run against a reference bill of quantities, by family and |
 | `boq_report.py` | 94 | HIGH | 5 | BOQ REPORT LAYER (R8.19) - a PRESENTATION layer over evidence rows. It calculates NOTHING. |
 | `cad_guards.py` | 188 | MEDIUM | 3 | CAD / SOURCE GUARDS learnt from blind donor runs (generic). |
@@ -671,7 +671,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `topology_digest.py` | 79 | HIGH | 1 | TOPOLOGY RESULT DIGEST (RC1 final) - one sha256 over the certified topology OUTPUT of a run. |
 | `topology_policy.py` | 159 | HIGH | 9 | TOPOLOGY_TOLERANCE_POLICY (R8.8) - frozen BEFORE any room total of any project was looked at. |
 | `traceability.py` | 124 | MEDIUM | 2 | BOQ TRACEABILITY (M9 Phase 2B-3, ARCH_TAKEOFF_V2.5 only) - one chain per BOQ line: |
-| `trade_completeness_v1.py` | 536 | MEDIUM | 3 | TRADE COMPLETENESS V1 (T-236; owner 2026-10-23 19:00 trade completeness rules 1-6, acceptance 19:45): for every |
+| `trade_completeness_v1.py` | 544 | MEDIUM | 4 | TRADE COMPLETENESS V1 (T-236; owner 2026-10-23 19:00 trade completeness rules 1-6, acceptance 19:45): for every |
 | `trade_dependency.py` | 132 | MEDIUM | 2 | TRADE_DEPENDENCY_MATRIX - which evidence a trade quantity needs, and how a physical space that holds several |
 | `trade_regions.py` | 234 | MEDIUM | 5 | TRADE TREATMENT ASSIGNMENT AND TRADE MATERIALITY (R8.10). |
 | `trade_strips.py` | 163 | MEDIUM | 8 | STRIP ALLOCATION AUDIT (R8.13) - a door threshold or an open-passage strip is never silently absorbed into, or |
@@ -1127,7 +1127,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t233_footing_line/` | 2 |
 | `tests/t234_slab_line/` | 2 |
 | `tests/t235_boq_export/` | 2 |
-| `tests/t236_trade_completeness/` | 3 |
+| `tests/t236_trade_completeness/` | 4 |
 | `tests/t237_face_consistency/` | 1 |
 | `tests/t238_arch_census/` | 1 |
 | `tests/t241_beam_line/` | 2 |
