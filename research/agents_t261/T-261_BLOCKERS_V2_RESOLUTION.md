@@ -3,9 +3,60 @@
 Worker 2, claim 2026-10-24 13:41 UTC, lane A, gate 2. Base: working head 991f85fa (T-228 r2 MERGED bf4dd2a9 is an
 ancestor). Register v2 (research/agents_t228) is READ ONLY: nothing is applied, no BOQ line moves, released default stays
 V2.9 + route G. Drawings cited by Drive title and entity handle only; no coordinate, image or client name is committed.
+**r2 (worker 2, 2026-10-24 15:41 UTC), after the Checker's 15:10 rejection** (gate f / h: three '(closed to census)'
+pieces put census length under a member that does not span it): see section 0. Everything else in this report is r1
+and unchanged unless section 0 says so.
 ERS: read; s.2.1 (each piece is its own physical element), s.2.2 evidence hierarchy (plan geometry by handle, ST
 schedule / frames, Checker figures), s.3 build before deduct (an opening is deducted only from the piece it physically
 pierces), s.4 rule + test, s.7 row below.
+
+## 0. r2: the three re-measured walls (rule R-T261-1 point 7)
+
+Cause of the rejection (own reading, agrees with the Checker): r1 took the established length of 1F-W04, 2F-W07 and
+2F-W03 as census minus register v2's held length and booked it under one member, so the pieces closed to the census
+but 0.077 m (1F-W04), 0.041 m (2F-W07) and 0.196 m net (2F-W03, where the three band pieces were also not the drawn
+2.500 / 1.800 / 3.000) stood under members that do not span there. Physical element first: what does each census metre
+stand under? Re-measured this run face to face on BOTH drawings (Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip
+P7757.dxf ab54dd55 and 'ST7757 dxf.dxf' 9f9d1179; the arch storey frames and the ST roof-slab frames draw the same
+column outlines, corner and mid columns of each wall agree to 0.001 m, so no frame mapping is needed):
+
+- **The census convention, found**: each V2 census runs from a column face to the CENTRELINE of the perpendicular wall
+  at the far end (2F-W03: centreline to centreline). 1F-W04 3.600 = 2.700 (columns 2FE1 / 3005) + 0.900 (3005 face to
+  the centreline of the wall with faces B6C / C24); 2F-W07 5.725 = 2.700 (2F63 / 2F78) + 3.025 (2F78 face to the
+  centreline of 2F-W03, outer face 12E6); 2F-W03 7.900 = 2F-W07 centreline to the east wall centreline (faces 1292 /
+  1291). So the excess over the drawn spans is the corner overlap of a centreline census, real blockwork in that
+  convention (two walls' half-overlaps make the corner square exactly once), standing under whatever member spans the
+  corner.
+- **1F-W04** (0.20 white): B2 BM-1F-006 2.700 x 3.80 (ST 66D / 691 faces) | BM-1F-032 0.800 HELD (691 to the band end;
+  register v2 carried 0.823 from T-226) | 0.100 m corner inside the B23 band (faces 5E4 / 5E1, 0.450 m wide; B23 45x75
+  printed, section B-B): 4.20 - 0.75 = 3.45, ESTABLISHED (the perpendicular wall stands under the same B23). W13 0.750
+  .. 1.950 m from the 2FE1 face (C5A .. C5C), inside B2. Net 10.260 + 0.345 - 2.760 = **7.845** (r1 7.7926; at 2.700
+  alone 7.500).
+- **2F-W07** (0.20 white): B15 BM-2F-007 2.700 x 3.00 (40F / 424 = 2F63 / 2F78) | BM-2F-016 2.900 HELD (424 to the top
+  band inner face 393) | 0.125 m corner where BM-2F-016 meets the top band HELD (soffit the deeper of B2 0.40 and an
+  unprinted member). W26 0.750 .. 1.950 m from the 2F63 face (12CF .. 12D1), inside B15. Net 8.100 - 1.875 =
+  **6.225** (r1 6.348, -0.123 = the Checker's figure).
+- **2F-W03** (0.15 white): west corner 0.100 inside the BM-2F-016 band HELD | B2 BM-2F-004 2.500 (inner face 393) |
+  junction 0.200 where the unlabelled BM-2F-018 frames in (3A1 / 39E) HELD | B1 BM-2F-005 1.800 (394) | junction 0.200
+  at BM-2F-017 (39C / 399) HELD | B2 BM-2F-006 3.000 (395; r1 3.196 was a census closure) | east corner 0.100 inside
+  the B7 band (39B / 39A; B7 20x75 BM-2F-011 runs 6.6 m through the corner): 3.45, ESTABLISHED. D-2F-01 (12BA) 0.416
+  .. 1.416 m from the inner face of the west band, inside BM-2F-004. Net 7.300 x 3.80 + 0.100 x 3.45 - 2.200 =
+  **25.885** (r1 25.7908). Held 0.600 m (r1 0.534 m: the two junctions are 0.200 drawn, not 0.267).
+- **Effect of r2**: split total 149.289 -> **149.3125 m2** (+0.0235; 1F-W04 +0.0524, 2F-W03 +0.0942, 2F-W07 -0.1230),
+  m3 27.389 (unchanged to 0.0001); established net proposed 598.549 -> **598.5725 m2** (+33.24 % on 449.260). Every
+  value stays SOURCE-SUPPORTED PENDING INDEPENDENT CHECK; nothing is applied to register v2.
+- **Rule R-T261-1 point 7** (new in r2, research rule, never merged before): an established member / slab piece names
+  the drawn face-to-face extent of its member and its source and is never longer (OVER_MEMBER; no extent:
+  EXTENT_UNNAMED); census length beyond the drawn faces is its own piece under the member that actually spans it,
+  established only where that member's depth is printed, else HELD. The r1 test that compared these three walls' gross
+  with register v2's gross (it encoded the defect) is replaced by a stricter one (pieces = drawn extents, hand truth
+  per wall); 1F-W18 / 1F-W24, which use register v2's merged pieces, keep the v2 comparison.
+- **Lessons row (proposed)**: 2026-10-24 | three split walls put 0.041 .. 0.196 m of census under members that do not
+  span it (-0.123 .. +0.094 m2 per wall) | the established length was census minus held, not the drawn member extent;
+  the census runs to the far wall's centreline | a member piece is the member's drawn extent; the census corner overlap
+  is its own piece under the member over the corner (any villa) | tests/t261_blocker_split (normal: corner under a
+  printed deeper band, mirrored; adverse: closed-to-census piece OVER_MEMBER, no extent, corner under an unprinted band
+  HELD not 0) | PROPOSED.
 
 ## 1. The engineering question and the answer
 
@@ -35,12 +86,12 @@ For each blocker: is the missing item printed on another sheet? Searched this ru
 | GF-W10 | 0.20 W | CB2 3.470 + CB2 3.350 (4.00), B24 3.550 (3.75): Checker's own pieces | W05, W06, W07 (3 x 0.480) | 40.5925 | 1.440 | **39.1525** | stair-foot piece 2.500 m on the printed +0.30 landing with D-GF-09 (8.270); W.C. stretch 0 .. 0.945 |
 | 1F-W10 | 0.20 W | CB9 3.470 / 3.350 / 3.550 (3.70) | W21, W22, W23 (3 x 0.480) | 38.369 | 1.440 | **36.929** | B3 shaft piece 2.500 m with W25 1.500 (9.500 - 1.500 = 8.000) |
 | 2F-W02 | 0.20 W | B8 3.470 (3.45) | W28 0.480, W29 1.800 | 11.9715 | 2.280 | **9.6915** | B3 shaft piece with W27 (8.000); length residual 0.097 m (0.335); BM-2F-015 0.933 m (3.219 .. 3.545) |
-| 1F-W04 | 0.20 W | B2 2.777 (3.80) | W13 2.760 | 10.5526 | 2.760 | **7.7926** | BM-1F-032 0.823 m (depth not printed, D-04) |
-| 2F-W03 | 0.15 W | B2 2.430 + B1 1.740 + B2 3.196 (3.80) | D-2F-01 2.200 | 27.9908 | 2.200 | **25.7908** | BM-2F-017 / -018 2 x 0.267 m (1.015 each) |
-| 2F-W07 | 0.20 W | B15 2.741 (3.00) | W26 1.875 (arched outline, T-238) | 8.2230 | 1.875 | **6.3480** | BM-2F-016 2.984 m (8.952 .. 11.339) |
+| 1F-W04 (r2) | 0.20 W | B2 2.700 (3.80) + corner 0.100 under B23 (3.45) | W13 2.760 | 10.605 | 2.760 | **7.845** | BM-1F-032 0.800 m (3.040 at most; depth not printed, D-04) |
+| 2F-W03 (r2) | 0.15 W | B2 2.500 + B1 1.800 + B2 3.000 (3.80) + east corner 0.100 under B7 (3.45) | D-2F-01 2.200 | 28.085 | 2.200 | **25.885** | junctions BM-2F-018 / -017 2 x 0.200 m (0.760 at most each); west corner 0.100 m (0.300 .. 0.380) |
+| 2F-W07 (r2) | 0.20 W | B15 2.700 (3.00) | W26 1.875 (arched outline, T-238) | 8.100 | 1.875 | **6.225** | BM-2F-016 2.900 m (8.700 .. 11.020); corner 0.125 m (0.375 .. 0.475) |
 | 1F-W18 | 0.15 B | B5 + slab 1F-057 + B6 (register 17.934) | none | 17.934 | 0 | **17.934** | dome-opening piece 0.439 m, top not drawn |
 | 1F-W24 | 0.15 B | slab 1F-094 + B6 (register 5.651) | none | 5.651 | 0 | **5.651** | dome-opening piece 1.024 m, top not drawn |
-| **Total** | | | | | | **149.289** (27.389 m3) | |
+| **Total** | | | | | | **149.3125** (27.389 m3; r1 149.289) | |
 
 How the assignment was read (Checker: re-measure from these, never these numbers as expected):
 - SL-1 line (GF-W10 / 1F-W10 / 2F-W02): the plan draws the same column outlines on every storey frame (S-COL.BON GF
@@ -50,7 +101,7 @@ How the assignment was read (Checker: re-measure from these, never these numbers
   (3FC / 3FB, CDE / CDD); D-GF-09 1.453 .. 2.353 (outer-face gap 2B8 / 2B9, the 0.900 Checker width), W25 / W27 1.400
   .. 2.400 (CEB / CEA, 134B / 134A) of the 2.500 shaft piece. W25 and W27 are the shaft windows; they go with the
   HELD piece.
-- 1F-W04 / 2F-W07 (walls along y) and 2F-W03: the T-110 member positions (ST frames, metres) mapped onto the plan frame
+- (r1, superseded by section 0 for these three walls) 1F-W04 / 2F-W07 (walls along y) and 2F-W03: the T-110 member positions (ST frames, metres) mapped onto the plan frame
   with the SL-1 B3 member as the common point (checked on two storeys, one constant 0.05 m band offset): W13 (C5A ..
   C5C) lies inside B2 BM-1F-006, 1.000 m clear of BM-1F-032; W26 (12CF .. 12D1) inside B15 BM-2F-007, 0.55 m clear of
   BM-2F-016; D-2F-01 (D115 block 12BA) inside B2 BM-2F-004, 0.83 m clear of the nearer unlabelled piece.
@@ -63,16 +114,16 @@ this run), GF-W03 (two marks on one span, D-03, and no printed base under the ST
 
 ## 3. Effect (net installed blockwork, development villa; proposed, nothing applied)
 
-Established net 449.260 -> **598.549 m2 (+149.289, +33.2 %)**, m3 80.674 -> 108.063 (+27.389); VERIFIED 4.458 and
+(r2 figures) Established net 449.260 -> **598.5725 m2 (+149.3125, +33.2 %)**, m3 80.674 -> 108.063 (+27.389); VERIFIED 4.458 and
 PROJECT-SPECIFIC 85.144 unchanged; the 149.289 is SOURCE-SUPPORTED PENDING INDEPENDENT CHECK until the Checker
 re-measures every split wall (programme s.5). Walls with no established part: 39 -> 31 of 76; the eight split walls
 keep a HELD increment (figures above, never 0). By floor x thickness x type: T261_COVERAGE.csv (GF 0.20 white +39.153;
-1F 0.20 white +44.722; 1F 0.15 black +23.585; 2F 0.20 white +16.040; 2F 0.15 white +25.791).
+1F 0.20 white +44.774; 1F 0.15 black +23.585; 2F 0.20 white +15.9165; 2F 0.15 white +25.885).
 
 Against the freelancer (comparison column only, never a target; not like for like while walls are held):
-GF external 94.706 -> 133.859 vs his 266.355; 1F external 103.967 -> 148.689 vs his 165.621 (his includes 41.25 m2 of
+GF external 94.706 -> 133.859 vs his 266.355; 1F external 103.967 -> 148.741 vs his 165.621 (his includes 41.25 m2 of
 projections with no wall run); 1F internal 0.15 89.039 -> 112.624 vs his 195.098 (his includes 66.00 m2 of parapet);
-2F external 21.476 -> 63.306 vs his 86.575. No per-wall freelancer row: verdict proposals RULE_DIFFERENCE (piece
+2F external 21.476 -> 63.278 vs his 86.575. No per-wall freelancer row: verdict proposals RULE_DIFFERENCE (piece
 heights by printed member, Q-60 A, vs his one height per floor) on the split walls; no total verdict while a wall in the
 section is held (ERS s.7, an equal total is never agreement).
 
@@ -98,7 +149,7 @@ No owner question: none meets ERS s.2.7 (designer / consultant items or an exist
   goes to the one piece its two jambs lie in; a straddling opening leaves the wall wholly HELD; pieces close to the
   census length (a residual is its own HELD piece); a finish / freelancer / default / bare storey height is refused; the
   HELD increment is never 0.
-- **tests/t261_blocker_split** (18): villa N (not Alsenan; hand truth in the docstring: wall under beams of two depths
+- **tests/t261_blocker_split** (r2: 23; r1 18 plus villa N7 rule 7 normal / mirrored / adverse, one r1 Alsenan test replaced by a stricter one, section 0): villa N (not Alsenan; hand truth in the docstring: wall under beams of two depths
   14.000 + 11.375 - 1.800 = 23.575 with a no-beam piece HELD, also mirrored; stair-foot piece on a raised landing HELD,
   13.520 established) + adverse (finish / freelancer / default / storey height refused, height with no source refused,
   HELD shown as 0 refused, held piece dropped -> NOT_CLOSED, millimetres, duplicate and unknown pieces, straddling

@@ -36,6 +36,35 @@ SS = "SOURCE-SUPPORTED PENDING INDEPENDENT CHECK"
 SL1_EVID = (f"{ARCH}: column outlines S-COL.BON GF 2F7E / 2F81 / 2F84 / 2FC9, 1F 2FE1 / 2FE4 / 2FE7 / 300B, "
             "2F 2F63 / 2F66 / 2F69 (same plan position on each storey frame)")
 
+SL1_EXT = "column faces S-COL.BON on the SL-1 line (SL1_EVID); the CB9 / B8 band runs face to face over the same spans"
+V2_EXT = ("register v2 established pieces of this run (T-228 r2 MERGED bf4dd2a9, Checker 11:59), used as merged; not "
+          "re-derived here")
+# r2 (Checker 2026-10-24 15:10): the three walls below were re-measured face to face on both drawings. Frames: the arch
+# plan storey frames and the ST roof-slab frames carry the same column outlines (corner and mid columns of each wall
+# match to 0.001 m), so a face on one is a face on the other. Each census (V2 run) runs column face -> centreline of the
+# perpendicular wall at the far end (2F-W03: centreline -> centreline), so the census exceeds the drawn spans by the
+# corner overlap; that overlap is its own piece under the member that actually spans it (rule 7).
+R2_1F04 = (f"{ARCH}: corner column 2FE1 and column 3005 faces 2.700 m apart (W13 glazing C5A / C5B / C5C 0.750 .. 1.950 m "
+           f"from the 2FE1 face); 3005 face -> centreline of the perpendicular wall (faces B6C / C24) 0.900 m; {ST}: "
+           "1F roof slab, column outlines 66D / 691 (2.700 m, B2 BM-1F-006 band 5C6 / 5E3), 691 -> band end 0.800 m "
+           "(BM-1F-032), then 0.100 m inside the B23 band (faces 5E4 / 5E1, B23 45x75 BM-1F-026, section B-B) under "
+           "which the perpendicular wall stands")
+R2_2F07 = (f"{ARCH}: corner column 2F63 and column 2F78 faces 2.700 m apart (W26 glazing 12CF / 12D0 / 12D1 0.750 .. "
+           f"1.950 m from the 2F63 face); 2F78 face -> centreline of 2F-W03 (outer face 12E6) 3.025 m; {ST}: 2F roof "
+           "slab, column outlines 40F / 424 (2.700 m, B15 BM-2F-007 band 397 / 3AD), 424 -> inner face 393 of the top "
+           "band 2.900 m (BM-2F-016), then 0.125 m in the corner where the west band (BM-2F-016) meets the top band")
+R2_2F03 = (f"{ARCH}: census = centreline of 2F-W07 -> centreline of the east wall (faces 1292 / 1291) 7.900 m; door "
+           f"D-2F-01 block D115 12BA jambs 0.416 .. 1.416 m from the inner face of the west band; {ST}: 2F roof slab, "
+           "top band inner faces 393 (B2 BM-2F-004 2.500 m), 394 (B1 BM-2F-005 1.800 m), 395 (B2 BM-2F-006 3.000 m), "
+           "interrupted by the 0.200 m framing-in faces of BM-2F-018 (3A1 / 39E) and BM-2F-017 (39C / 399); end bands "
+           "west 397 / 3AD (BM-2F-016) and east 39B / 39A (B7 20x75 BM-2F-011, 6.6 m through the corner), 0.100 m of "
+           "each inside the census")
+
+R2_SETTLED = ("r2: pieces re-measured face to face (rule 7): each established piece = the drawn extent of the member "
+              "above it; the census corner overlap is its own piece under the member that spans it (established only "
+              "where that member's depth is printed: B23 45x75 / B7 20x75 -> 4.20 - 0.75 = 3.45); openings by drawn "
+              "jambs (R-T261-1)")
+
 WALLS = {
     "GF-W10": dict(
         census=12.870,
@@ -68,9 +97,9 @@ WALLS = {
                               "floor-level member printed; base / top = the +3.50 and about +7.6 landing members "
                               "(R-T228-3, F3)",
                     held_figure_m2="2.500 x 3.80 = 9.500 - W25 1.500 = 8.000 on the +5.50 basis"),
-            P.Piece("E1 CB9 span 1", 3.470, 3.70, "member"),
-            P.Piece("E2 CB9 span 2", 3.350, 3.70, "member"),
-            P.Piece("E3 CB9 span 3", 3.550, 3.70, "member"),
+            P.Piece("E1 CB9 span 1", 3.470, 3.70, "member", drawn_extent_m=3.470, extent_source=SL1_EXT),
+            P.Piece("E2 CB9 span 2", 3.350, 3.70, "member", drawn_extent_m=3.350, extent_source=SL1_EXT),
+            P.Piece("E3 CB9 span 3", 3.550, 3.70, "member", drawn_extent_m=3.550, extent_source=SL1_EXT),
         ],
         openings=[
             P.Opening("W25", "SF B3 (With Stair)", 1.400, 2.400, 1.500),
@@ -88,7 +117,7 @@ WALLS = {
             P.Piece("SF B3", 2.500, 3.80, "member", top_is_stair_member=True,
                     held_item="SL-1 shaft piece: no floor at +9.70 on the stair-wall line (A-A sheet10; R-T228-3, F4)",
                     held_figure_m2="2.500 x 3.80 = 9.500 - W27 1.500 = 8.000"),
-            P.Piece("E1 B8", 3.470, 3.45, "member"),
+            P.Piece("E1 B8", 3.470, 3.45, "member", drawn_extent_m=3.470, extent_source=SL1_EXT),
             P.Piece("R length residual", 0.097, None,
                     held_item="0.097 m between the drawn faces (2.500 + 3.470) and the ledger pieces "
                               "(B3 2.500 + B8 3.567); location not established (T-017 census AGREE 7.000)",
@@ -110,54 +139,72 @@ WALLS = {
     "1F-W04": dict(
         census=3.600,
         pieces=[
-            P.Piece("E B2 (closed to census)", 2.777, 3.80, "member"),
-            P.Piece("H BM-1F-032", 0.823, None,
-                    held_item="unlabelled span from the B23 face to the column (T-110 BM-1F-032, D-04): depth not "
+            P.Piece("E B2 BM-1F-006", 2.700, 3.80, "member", drawn_extent_m=2.700,
+                    extent_source="column faces 2FE1 / 3005 (arch) = 66D / 691 (ST)"),
+            P.Piece("H BM-1F-032", 0.800, None,
+                    held_item="unlabelled span from the B23 band face to the column (T-110 BM-1F-032, D-04): depth not "
                               "printed (Q-61 C(4))",
-                    held_figure_m2="0.823 m; T-226 bound 3.040 on 0.80 m at the only candidate B2 H40"),
+                    held_figure_m2="0.800 x 3.80 = 3.040 at the only candidate B2 H40 (T-226 bound), not a quantity"),
+            P.Piece("E corner under B23 BM-1F-026", 0.100, 3.45, "member", drawn_extent_m=0.450,
+                    extent_source="B23 band faces 5E4 / 5E1 (0.450 m), B23 45x75 printed (section B-B); 1F 4.20 - 0.75"),
         ],
-        openings=[P.Opening("W13", "E B2 (closed to census)", 0.750, 1.950, 2.760)],
+        openings=[P.Opening("W13", "E B2 BM-1F-006", 0.750, 1.950, 2.760)],
         extra_held="",
-        handles=(f"W13 glazing C5A / C5B / C5C (axis Y) lies inside the B2 BM-1F-006 extent (2.70 m) and clear of "
-                 f"BM-1F-032 (0.80 m) by 1.000 m; {ST} FFRS B2 20x40, 1F 4.20 - 0.40 = 3.80"),
+        handles=R2_1F04 + f"; {ST} FFRS B2 20x40, 1F 4.20 - 0.40 = 3.80",
+        settled=R2_SETTLED,
         class_="SS"),
     "2F-W03": dict(
         census=7.900,
         pieces=[
-            P.Piece("E B2 BM-2F-004", 2.430, 3.80, "member"),
-            P.Piece("E B1 BM-2F-005", 1.740, 3.80, "member"),
-            P.Piece("E B2 BM-2F-006 (closed to census)", 3.196, 3.80, "member"),
-            P.Piece("H BM-2F-018", 0.267, None,
-                    held_item="unlabelled vertical piece below the column (T-110 BM-2F-018, D-04): depth not printed",
-                    held_figure_m2="0.267 x 3.80 = 1.015 at the only candidate B1"),
-            P.Piece("H BM-2F-017", 0.267, None,
-                    held_item="unlabelled vertical piece below the column (T-110 BM-2F-017, D-04): depth not printed",
-                    held_figure_m2="0.267 x 3.80 = 1.015 at the only candidate B1"),
+            P.Piece("H west corner in the BM-2F-016 band", 0.100, None,
+                    held_item="0.100 m of the census inside the west band (BM-2F-016, unlabelled, D-04): depth not "
+                              "printed (Q-61 C(4))",
+                    held_figure_m2="0.100 x 3.00 .. 3.80 = 0.300 .. 0.380 (B15 H120 / 20x40 candidates), not a quantity"),
+            P.Piece("E B2 BM-2F-004", 2.500, 3.80, "member", drawn_extent_m=2.500, extent_source="ST inner face 393"),
+            P.Piece("H junction BM-2F-018", 0.200, None,
+                    held_item="0.200 m where the unlabelled BM-2F-018 frames into the band (D-04): the soffit is the "
+                              "deeper of B2 / B1 (0.40) and a member whose depth is not printed",
+                    held_figure_m2="0.200 x 3.80 = 0.760 at most (band 0.40 printed), not a quantity"),
+            P.Piece("E B1 BM-2F-005", 1.800, 3.80, "member", drawn_extent_m=1.800, extent_source="ST inner face 394"),
+            P.Piece("H junction BM-2F-017", 0.200, None,
+                    held_item="0.200 m where the unlabelled BM-2F-017 frames into the band (D-04): the soffit is the "
+                              "deeper of B1 / B2 (0.40) and a member whose depth is not printed",
+                    held_figure_m2="0.200 x 3.80 = 0.760 at most (band 0.40 printed), not a quantity"),
+            P.Piece("E B2 BM-2F-006", 3.000, 3.80, "member", drawn_extent_m=3.000, extent_source="ST inner face 395"),
+            P.Piece("E east corner under B7 BM-2F-011", 0.100, 3.45, "member", drawn_extent_m=0.200,
+                    extent_source="ST east band faces 39B / 39A (0.200 m), B7 20x75 printed, 6.6 m through the corner; "
+                                  "2F 4.20 - 0.75"),
         ],
         openings=[P.Opening("D-2F-01", "E B2 BM-2F-004", 0.416, 1.416, 2.200)],
         extra_held="",
-        handles=(f"D-2F-01 door block D115 insert 12BA (1.000 m extent) inside the B2 BM-2F-004 extent, 0.83 m and "
-                 f"2.83 m clear of the two unlabelled pieces; {ST} SFRS B1 / B2 20x40, 2F 4.20 - 0.40 = 3.80"),
+        handles=R2_2F03 + f"; {ST} SFRS B1 / B2 20x40, 2F 4.20 - 0.40 = 3.80",
+        settled=R2_SETTLED,
         class_="SS"),
     "2F-W07": dict(
         census=5.725,
         pieces=[
-            P.Piece("E B15 (closed to census)", 2.741, 3.00, "member"),
-            P.Piece("H BM-2F-016", 2.984, None,
+            P.Piece("E B15 BM-2F-007", 2.700, 3.00, "member", drawn_extent_m=2.700,
+                    extent_source="column faces 2F63 / 2F78 (arch) = 40F / 424 (ST)"),
+            P.Piece("H BM-2F-016", 2.900, None,
                     held_item="west band south span (T-110 BM-2F-016, D-04): B15 printed on the north span only; "
                               "depth not printed (candidates B15 H120 or a 20x40 type, Q-61 C(4))",
-                    held_figure_m2="2.984 x 3.00 .. 3.80 = 8.952 .. 11.339"),
+                    held_figure_m2="2.900 x 3.00 .. 3.80 = 8.700 .. 11.020, not a quantity"),
+            P.Piece("H south corner in the BM-2F-016 band", 0.125, None,
+                    held_item="0.125 m of the census in the corner where BM-2F-016 meets the top band: soffit the "
+                              "deeper of B2 (0.40) and BM-2F-016 (depth not printed)",
+                    held_figure_m2="0.125 x 3.00 .. 3.80 = 0.375 .. 0.475, not a quantity"),
         ],
-        openings=[P.Opening("W26", "E B15 (closed to census)", 0.749, 1.949, 1.875)],
+        openings=[P.Opening("W26", "E B15 BM-2F-007", 0.750, 1.950, 1.875)],
         extra_held="",
-        handles=(f"W26 glazing 12CF / 12D0 / 12D1 (axis Y) inside the B15 BM-2F-007 extent (2.70 m) and 0.55 m clear "
-                 f"of BM-2F-016; deduction 1.875 = true arched outline (T-238, Checker 22:50); {ST} SFRS B15 20x120, "
-                 "2F 4.20 - 1.20 = 3.00"),
+        handles=R2_2F07 + f"; deduction 1.875 = true arched outline (T-238, Checker 22:50); {ST} SFRS B15 20x120, "
+                          "2F 4.20 - 1.20 = 3.00",
+        settled=R2_SETTLED,
         class_="SS"),
     "1F-W18": dict(
         census=5.200,
         pieces=[
-            P.Piece("E B5 + slab 1F-057 + B6 (register gross 17.934)", 4.761, round(17.934 / 4.761, 6), "member"),
+            P.Piece("E B5 + slab 1F-057 + B6 (register gross 17.934)", 4.761, round(17.934 / 4.761, 6), "member",
+                    drawn_extent_m=4.761, extent_source=V2_EXT),
             P.Piece("H dome opening 1F-076", 0.439, None,
                     held_item="under the open dome ring (T-139 face 1F-076): top of wall not drawn; DETAIL OF DOME "
                               "(1A18, '(N.I.S)' 1A19) prints ring bars only (3%%c16 1A47, 3%%c18 1A4B, 8%%c8/m 1A29)",
@@ -170,7 +217,8 @@ WALLS = {
     "1F-W24": dict(
         census=2.450,
         pieces=[
-            P.Piece("E slab 1F-094 + B6 (register gross 5.651)", 1.426, round(5.651 / 1.426, 6), "member"),
+            P.Piece("E slab 1F-094 + B6 (register gross 5.651)", 1.426, round(5.651 / 1.426, 6), "member",
+                    drawn_extent_m=1.426, extent_source=V2_EXT),
             P.Piece("H dome opening 1F-073", 1.024, None,
                     held_item="under the open dome ring (T-139 face 1F-073): top of wall not drawn; dome detail N.I.S. "
                               "prints no ring depth",
@@ -238,9 +286,10 @@ def build():
             if d["extra_held"]:
                 hf += "; " + d["extra_held"]
             row.update(t261_verdict="SPLIT: part established, rest STILL-HELD",
-                       settled_item=("opening-to-piece assignment from the drawn jambs and the drawn column / band "
-                                     "faces (R-T261-1); the established pieces' heights are those already in register "
-                                     "v2 / the Checker's own figure"),
+                       settled_item=d.get("settled") or ("opening-to-piece assignment from the drawn jambs and the "
+                                                        "drawn column / band faces (R-T261-1); the established pieces' "
+                                                        "heights are those already in register v2 / the Checker's own "
+                                                        "figure"),
                        established_gross_m2=f"{s.established_gross_m2:.4f}",
                        established_deductions_m2=f"{s.established_deductions_m2:.4f}",
                        established_net_m2=f"{s.established_m2:.4f}", established_class=d["class_"],

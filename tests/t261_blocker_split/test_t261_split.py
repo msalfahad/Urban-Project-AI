@@ -11,6 +11,12 @@ Fixture villa N (NOT Alsenan), storey basis +0.00, slab top +4.00 above every pi
      the storey basis is NOT a quantity) + T 4.000 m under beam 20x50 (h 3.50 = 14.000); window 0.60 x 0.80 = 0.480
      in T -> established 13.520, S HELD.
   N3 straddle: a window whose jambs 3.80 .. 4.40 m cross the A / B face -> no split, wall wholly HELD.
+  N7 (rule 7, r2): 0.20 wall, census 5.300 m = column face -> centreline of a perpendicular wall at the far end:
+     D 5.000 m under beam BD 20x50 drawn 5.000 m between the column faces -> h 3.50 -> 17.500
+     E 0.300 m corner overlap inside a perpendicular band 0.60 m wide, beam BE 60x75 printed -> h 3.25 -> 0.975
+     window 1.00 x 1.20 = 1.200 in D -> established 17.500 + 0.975 - 1.200 = 17.275
+     adverse: D stretched to 5.300 'closed to census' under BD drawn 5.000 -> OVER_MEMBER; D with no drawn extent ->
+     EXTENT_UNNAMED; E under an unlabelled band (depth not printed) -> E HELD, established 16.300, never 0.
 """
 from __future__ import annotations
 
@@ -30,7 +36,8 @@ import build_t261 as B   # noqa: E402
 
 
 def n1(order=1):
-    ps = [P.Piece("A", 4.000, 3.50, "member"), P.Piece("B", 3.500, 3.25, "member"),
+    ps = [P.Piece("A", 4.000, 3.50, "member", drawn_extent_m=4.000, extent_source="N faces"),
+          P.Piece("B", 3.500, 3.25, "member", drawn_extent_m=3.500, extent_source="N faces"),
           P.Piece("C", 2.500, None, held_item="no member drawn above", held_figure_m2="2.500 m, height not drawn")]
     ops = [P.Opening("NW1", "A", 0.50, 1.70, 1.800), P.Opening("ND1", "C", 0.80, 1.70, 1.980)]
     if order < 0:   # mirrored plan: pieces listed from the other end, jambs measured from the other face
@@ -55,7 +62,7 @@ def test_villa_n1_two_beam_depths_and_no_beam(order):
 def test_villa_n2_stair_foot_on_raised_landing_held():
     ps = [P.Piece("S", 2.000, 4.10, "member", base_is_storey_basis=False, top_is_stair_member=True,
                   held_figure_m2="2.000 x 4.10 = 8.200 on the storey basis"),
-          P.Piece("T", 4.000, 3.50, "member")]
+          P.Piece("T", 4.000, 3.50, "member", drawn_extent_m=4.000, extent_source="N faces")]
     s = P.split_wall("N2", ps, [P.Opening("w", "T", 1.0, 1.6, 0.480)], 6.000)
     assert s.established_m2 == pytest.approx(13.520, abs=1e-4)
     assert s.held_pieces == ["S"]
@@ -64,7 +71,8 @@ def test_villa_n2_stair_foot_on_raised_landing_held():
 
 
 def test_stair_member_with_floor_member_printed_is_established():
-    p = P.Piece("S", 2.0, 3.5, "member", top_is_stair_member=True, floor_member_with_stair=True)
+    p = P.Piece("S", 2.0, 3.5, "member", top_is_stair_member=True, floor_member_with_stair=True, drawn_extent_m=2.0,
+                extent_source="N faces")
     assert P.piece_established(p) == (True, "")
     q = P.Piece("S", 2.0, 3.5, "member", top_is_stair_member=True)
     assert P.piece_established(q)[0] is False
@@ -89,6 +97,45 @@ def test_adverse_height_with_no_source_refused():
     with pytest.raises(P.SplitError) as e:
         P.split_wall("N5", [P.Piece("A", 4.0, 3.5, "")], [], 4.0)
     assert e.value.code == "BAD_SOURCE"
+
+
+def n7(e_height=3.25, d_len=5.000, d_extent=5.000, d_src="N7 column faces"):
+    return [P.Piece("D", d_len, 3.50, "member", drawn_extent_m=d_extent, extent_source=d_src),
+            P.Piece("E", 0.300, e_height, "member" if e_height else "", drawn_extent_m=0.600,
+                    extent_source="N7 perpendicular band faces", held_item="band depth not printed",
+                    held_figure_m2="0.300 x 3.25 .. 3.50, not a quantity")]
+
+
+@pytest.mark.parametrize("mirror", [False, True])
+def test_villa_n7_corner_overlap_is_its_own_piece(mirror):
+    ps = n7()
+    op = P.Opening("NW7", "D", 1.00, 2.00, 1.200) if not mirror else P.Opening("NW7", "D", 5.000 - 2.00, 5.000 - 1.00, 1.200)
+    s = P.split_wall("N7", list(reversed(ps)) if mirror else ps, [op], 5.300)
+    assert s.status == "ESTABLISHED" and s.established_m2 == pytest.approx(17.275, abs=1e-4)
+    assert s.established_gross_m2 == pytest.approx(17.500 + 0.975, abs=1e-4)
+
+
+def test_adverse_closed_to_census_over_the_member_refused():
+    with pytest.raises(P.SplitError) as e:     # the rejected r1 pattern: census length put under a shorter member
+        P.split_wall("N7", [P.Piece("D", 5.300, 3.50, "member", drawn_extent_m=5.000, extent_source="N7 faces")], [], 5.300)
+    assert e.value.code == "OVER_MEMBER"
+    with pytest.raises(P.SplitError) as e:
+        P.split_wall("N7", n7(d_extent=None), [], 5.300)
+    assert e.value.code == "EXTENT_UNNAMED"
+    with pytest.raises(P.SplitError) as e:
+        P.split_wall("N7", n7(d_src=""), [], 5.300)
+    assert e.value.code == "EXTENT_UNNAMED"
+    with pytest.raises(P.SplitError) as e:
+        P.split_wall("N7", n7(d_extent=5000.0), [], 5.300)
+    assert e.value.code == "UNITS"
+
+
+def test_corner_under_an_unprinted_member_stays_held_not_zero():
+    ps = n7(e_height=None)
+    s = P.split_wall("N7", ps, [P.Opening("NW7", "D", 1.00, 2.00, 1.200)], 5.300)
+    assert s.status == "SPLIT" and s.held_pieces == ["E"]
+    assert s.established_m2 == pytest.approx(16.300, abs=1e-4)
+    assert "HELD increment" in P.wall_total_text(s, ps[1].held_figure_m2)
 
 
 def test_adverse_held_shown_as_zero_refused():
@@ -156,13 +203,36 @@ def test_alsenan_stair_line_pieces_stay_held_with_their_openings():
         assert r["gross_m2"] == "" and r["held_figure_not_a_quantity"] not in ("", "0", "0.000")
 
 
-def test_alsenan_split_gross_matches_register_v2_within_rounding():
+def test_alsenan_split_gross_matches_register_v2_where_v2_pieces_are_used():
     v2 = {r["wall_id"]: r for r in csv.DictReader(open(ROOT / "research/agents_t228/BLOCKWORK_WALL_REGISTER_V2.csv",
                                                        newline="", encoding="utf-8"))}
     bl = {r["wall_id"]: r for r in rows("T261_BLOCKERS.csv")}
-    for w in ("1F-W04", "2F-W03", "2F-W07", "1F-W18", "1F-W24"):
+    for w in ("1F-W18", "1F-W24"):        # established pieces taken from register v2 as merged
         assert float(bl[w]["established_gross_m2"]) == pytest.approx(float(v2[w]["gross_m2"]), abs=0.003)
+    for w in ("1F-W04", "2F-W03", "2F-W07"):
         assert float(bl[w]["established_deductions_m2"]) == pytest.approx(float(v2[w]["deductions_m2"]), abs=1e-4)
+
+
+def test_alsenan_r2_pieces_are_drawn_member_extents_not_census_closures():
+    """Checker 2026-10-24 15:10: B2 (1F-W04) and B15 (2F-W07) are drawn 2.700 m face to face; 2F-W03's band spans
+    re-derived from the ST inner faces (2.500 / 1.800 / 3.000) with the 0.200 framing-in junctions and the census corner
+    overlaps as their own pieces. Hand truth (m2): 1F-W04 2.700 x 3.80 + 0.100 x 3.45 (B23 45x75) - 2.760 = 7.845;
+    2F-W03 7.300 x 3.80 + 0.100 x 3.45 (B7 20x75) - 2.200 = 25.885; 2F-W07 2.700 x 3.00 - 1.875 = 6.225."""
+    sp = rows("T261_SPLIT.csv")
+    assert not any("closed to census" in r["piece"] for r in sp)
+    for w, census in (("1F-W04", 3.600), ("2F-W03", 7.900), ("2F-W07", 5.725)):
+        assert sum(float(r["length_m"]) for r in sp if r["wall_id"] == w) == pytest.approx(census, abs=1e-6)
+    est = {(r["wall_id"], r["piece"]): float(r["length_m"]) for r in sp if r["piece_status"] != "HELD"}
+    assert est[("1F-W04", "E B2 BM-1F-006")] == 2.700 and est[("2F-W07", "E B15 BM-2F-007")] == 2.700
+    assert est[("2F-W03", "E B2 BM-2F-006")] == 3.000
+    bw = json.loads((HERE / "summary.json").read_text(encoding="utf-8"))["by_wall"]
+    assert bw["1F-W04"] == pytest.approx(2.700 * 3.80 + 0.100 * 3.45 - 2.760, abs=1e-4)
+    assert bw["2F-W03"] == pytest.approx(7.300 * 3.80 + 0.100 * 3.45 - 2.200, abs=1e-4)
+    assert bw["2F-W07"] == pytest.approx(2.700 * 3.00 - 1.875, abs=1e-4)
+    for w in B.WALLS:                     # rule 7 on every established member piece of the run
+        for pc in B.WALLS[w]["pieces"]:
+            if P.piece_established(pc)[0] and pc.source in ("member", "slab"):
+                assert pc.length_m <= pc.drawn_extent_m + P.TOL and pc.extent_source
 
 
 def test_alsenan_every_still_held_blocker_names_its_item_and_no_coordinates():

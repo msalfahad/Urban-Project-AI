@@ -22,6 +22,12 @@ increment', BLOCKWORK_RESOLUTION_PROGRAMME.md s.2 / s.5, ERS s.3 'build before d
   5. The pieces close to the wall's census length (gross_from_pieces lesson, Checker 2026-10-23 18:01): a residual
      length between the pieces and the census is itself a HELD piece with its cause named, never spread over the pieces.
   6. Lengths are metres; a value above 100 m on a villa wall is a millimetre slip and is refused (UNITS).
+  7. (r2, after the Checker's 2026-10-24 15:10 rejection) An established 'member' or 'slab' piece names the drawn extent
+     of the member it stands under (face to face on the drawing, with its source) and is never longer than that
+     extent (OVER_MEMBER); a member piece with no named extent is refused (EXTENT_UNNAMED). Census length beyond the
+     drawn faces (a corner or junction overlap of a centreline census) is its own piece under whatever member actually
+     spans it there: established only when that member's depth is printed, otherwise HELD; never stretched onto a
+     neighbouring member to close the census.
 """
 from __future__ import annotations
 
@@ -49,6 +55,8 @@ class Piece:
     floor_member_with_stair: bool = False   # a floor-level member printed beside the stair mark
     held_item: str = ""                     # the exact missing item when the piece is HELD
     held_figure_m2: str = ""                # text figure / bound for a HELD piece ('not a quantity')
+    drawn_extent_m: float | None = None     # rule 7: drawn face-to-face extent of the member above
+    extent_source: str = ""                 # rule 7: where that extent is drawn (handles / merged register)
 
 
 @dataclass
@@ -93,6 +101,14 @@ def piece_established(p: Piece) -> tuple[bool, str]:
         return False, p.held_item or "top member is a stair member with no floor-level member printed (R-T228-3)"
     if p.height_m <= 0:
         raise SplitError("NEGATIVE", f"{p.pid}: height {p.height_m}")
+    if p.source in ("member", "slab"):
+        if p.drawn_extent_m is None or not p.extent_source:
+            raise SplitError("EXTENT_UNNAMED", f"{p.pid}: an established {p.source} piece names the drawn extent of "
+                                               "its member and its source (rule 7)")
+        _check_len(p.drawn_extent_m, f"{p.pid} drawn extent")
+        if p.length_m > p.drawn_extent_m + TOL:
+            raise SplitError("OVER_MEMBER", f"{p.pid}: {p.length_m:.3f} m under a member drawn {p.drawn_extent_m:.3f} m "
+                                            "face to face; the excess is its own piece (rule 7)")
     return True, ""
 
 
