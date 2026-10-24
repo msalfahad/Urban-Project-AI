@@ -26,6 +26,11 @@ Fixture villa N (NOT Alsenan), storey basis +0.00, slab top +4.00 above every pi
      adverse: F carried from an earlier register as gross / weighted height ('register v2 ... not re-derived', the
      rejected r2 pattern) -> EXTENT_UNNAMED; a census-remainder extent -> EXTENT_UNNAMED; K at the storey height 4.00
      ('storey') -> BAD_SOURCE.
+  N9 (rule 9, r3): 0.15 partition, census 4.000 m: P 1.500 slab (h 3.84) | Q 0.400 band 40x75 (h 3.25) | R 2.100 slab
+     (h 3.84); door 0.90 x 2.20 = 1.980 with jambs 1.200 .. 2.100 m from P's start (P 0.300 + Q 0.400 + R 0.200):
+     every soffit above the 2.20 head -> established 1.500 x 3.84 + 0.400 x 3.25 + 2.100 x 3.84 - 1.980 = 13.144;
+     mirrored (R first, jambs from R's start 1.900 .. 2.800) the same. Adverse -> STRADDLE (wall wholly HELD): no head;
+     head without its source; Q HELD; Q's soffit 2.20 (not above the head); a jamb before P's start.
 """
 from __future__ import annotations
 
@@ -321,3 +326,61 @@ def test_alsenan_r3_1f_w18_and_1f_w24_from_drawn_extents():
     assert len(held) == 1 and held[0]["gross_m2"] == "" and held[0]["held_figure_not_a_quantity"]
     bl = {r["wall_id"]: r for r in rows("T261_BLOCKERS.csv")}
     assert bl["1F-W18"]["t261_verdict"].startswith("SETTLED") and bl["1F-W18"]["wall_net_text"] == "19.7326"
+
+
+def n9(q_h=3.25, q_src="member"):
+    return [P.Piece("P", 1.500, 3.84, "slab", drawn_extent_m=1.500, extent_source="N9 slab panel S1"),
+            P.Piece("Q", 0.400, q_h, q_src if q_h else "", drawn_extent_m=0.400, extent_source="N9 band faces, 40x75",
+                    held_item="band depth not printed", held_figure_m2="0.400 x 3.25 .. 3.84, not a quantity"),
+            P.Piece("R", 2.100, 3.84, "slab", drawn_extent_m=2.100, extent_source="N9 slab panel S2")]
+
+
+@pytest.mark.parametrize("mirror", [False, True])
+def test_villa_n9_door_spanning_established_pieces_below_every_soffit(mirror):
+    ps = n9()
+    if mirror:
+        ps = list(reversed(ps))
+        op = P.Opening("ND9", "R", 4.000 - 2.100 - 0.0, 4.000 - 1.200, 1.980, head_m=2.20, head_source="printed head")
+    else:
+        op = P.Opening("ND9", "P", 1.200, 2.100, 1.980, head_m=2.20, head_source="printed head")
+    s = P.split_wall("N9", ps, [op], 4.000)
+    assert s.status == "ESTABLISHED"
+    assert s.established_m2 == pytest.approx(1.500 * 3.84 + 0.400 * 3.25 + 2.100 * 3.84 - 1.980, abs=1e-4)  # 13.144
+    assert s.spanning == [("ND9", ["R", "Q", "P"] if mirror else ["P", "Q", "R"])]
+
+
+@pytest.mark.parametrize("case", ["no_head", "no_source", "q_held", "q_low", "jamb_before"])
+def test_adverse_spanning_opening_without_the_conditions_stays_straddle(case):
+    ps = n9(q_h=None) if case == "q_held" else n9(q_h=2.20) if case == "q_low" else n9()
+    kw = dict(head_m=2.20, head_source="printed head")
+    if case == "no_head":
+        kw = {}
+    if case == "no_source":
+        kw = dict(head_m=2.20)
+    a, b = (-0.100, 0.800) if case == "jamb_before" else (1.200, 2.100)
+    s = P.split_wall("N9", ps, [P.Opening("ND9", "P", a, b, 1.980, **kw)], 4.000)
+    assert s.status == "STRADDLE" and s.established_m2 is None
+    assert P.wall_total_text(s, "13.144 figure").startswith("HELD")
+
+
+def test_alsenan_r3_next_item_1f_w13_and_1f_w17():
+    """Own re-measure (ST 1F roof slab crossings of each wall centreline; arch faces and door gaps by handle).
+    1F-W13 (8.225): slab 1F-063 1.455 x 4.04 + B1 0.200 x 3.80 + slab 1F-065 1.59782 x 4.04 + B25 0.550 x 3.45
+      + slab corner c0 0.4735 x 4.04 + [ring 0.29026 | opening 2.89466 with D-1F-09 | ring 0.29025 HELD]
+      + slab corner c1 0.42351 x 4.04 + CB12 0.050 x 3.45 - D-1F-08 1.980 (spans 1F-065 / B25 / c0, head 2.20)
+      = 18.7873 - 1.980 = 16.8073.
+    1F-W17 (2.100): [opening 0.46158 | ring 0.00294 HELD] + B6 0.250 x 3.70 + slab 1F-057 1.01048 x 4.04
+      + B4 0.200 x 3.70 + slab 1F-025 0.175 x 4.04 - D-1F-10 1.760 (spans 1F-057 / B4 / 1F-025) = 4.6943."""
+    bw = json.loads((HERE / "summary.json").read_text(encoding="utf-8"))["by_wall"]
+    w13 = (1.455 * 4.04 + 0.200 * 3.80 + 1.59782 * 4.04 + 0.550 * 3.45 + 0.4735 * 4.04 + 0.42351 * 4.04
+           + 0.050 * 3.45 - 1.980)
+    w17 = 0.250 * 3.70 + 1.01048 * 4.04 + 0.200 * 3.70 + 0.175 * 4.04 - 1.760
+    assert bw["1F-W13"] == pytest.approx(w13, abs=1e-4) and bw["1F-W17"] == pytest.approx(w17, abs=1e-4)
+    sp = rows("T261_SPLIT.csv")
+    for w, census in (("1F-W13", 8.225), ("1F-W17", 2.100)):
+        assert sum(float(r["length_m"]) for r in sp if r["wall_id"] == w) == pytest.approx(census, abs=1e-4)
+    held = {(r["wall_id"], r["piece"]): r for r in sp if r["piece_status"] == "HELD"}
+    assert "D-1F-09" in held[("1F-W13", "H east dome opening 1F-077")]["openings"]
+    assert all(r["gross_m2"] == "" and r["held_figure_not_a_quantity"] for r in held.values())
+    # the east ring has no B4 label: its pieces stay HELD (Q-44 A named), never established from the west label
+    assert ("1F-W13", "H east ring west crossing") in held and ("1F-W17", "H east ring sliver") in held

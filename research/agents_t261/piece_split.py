@@ -32,6 +32,12 @@ increment', BLOCKWORK_RESOLUTION_PROGRAMME.md s.2 / s.5, ERS s.3 'build before d
      split, inherited or new: an extent taken from an earlier register (its gross or weighted height carried onto a
      length), a census remainder or any extent that is not re-derived on the drawing is not a drawn extent and is
      refused (EXTENT_UNNAMED, markers in INHERITED_EXTENT_MARKERS). A piece's extent names its band / slab handles.
+  9. (r3, refines point 3) An opening whose jambs run on from the piece they start in into the NEXT pieces (in list
+     order) is deducted once from the established part when, and only when, its head height is given with its source
+     (a printed head or an answered owner decision, e.g. Q-55 C) and every piece it spans is ESTABLISHED with a height
+     above that head: the opening is then a rectangle wholly below every soffit it passes under, so its area does not
+     depend on how the wall is cut. Otherwise (no head, a spanned piece HELD, a soffit at or below the head, a jamb
+     before the start piece) the wall stays wholly HELD (STRADDLE), as in point 3.
 """
 from __future__ import annotations
 
@@ -73,6 +79,8 @@ class Opening:
     jamb_a_m: float     # offsets from the piece's start face
     jamb_b_m: float
     area_m2: float
+    head_m: float | None = None      # rule 9: head height above the storey basis, with its source
+    head_source: str = ""
 
 
 @dataclass
@@ -85,6 +93,7 @@ class Split:
     held_openings: list = field(default_factory=list)
     status: str = ""
     why: str = ""
+    spanning: list = field(default_factory=list)   # rule 9: (opening id, [piece ids]) deducted across pieces
 
 
 def _check_len(v: float, what: str):
@@ -144,6 +153,7 @@ def split_wall(wall_id: str, pieces: list[Piece], openings: list[Opening], censu
         est[p.pid] = ok
         if not ok:
             reasons[p.pid] = why
+    spanning = []
     for o in openings:
         if o.piece not in by_id:
             raise SplitError("UNKNOWN_PIECE", f"{o.oid} -> {o.piece}")
@@ -153,9 +163,12 @@ def split_wall(wall_id: str, pieces: list[Piece], openings: list[Opening], censu
         if o.area_m2 <= 0:
             raise SplitError("NEGATIVE", f"{o.oid} area {o.area_m2}")
         if a < -TOL or b > p.length_m + TOL:
-            return Split(wall_id, None, 0.0, 0.0, [p.pid for p in pieces if not est[p.pid]], [o.oid], "STRADDLE",
-                         f"{o.oid} jambs {a:.3f} .. {b:.3f} m leave piece {p.pid} (0 .. {p.length_m:.3f}): no split "
-                         "without the head geometry; the wall stays wholly HELD")
+            span, why = _span(o, a, b, pieces, est)
+            if span is None:
+                return Split(wall_id, None, 0.0, 0.0, [p.pid for p in pieces if not est[p.pid]], [o.oid], "STRADDLE",
+                             f"{o.oid} jambs {a:.3f} .. {b:.3f} m leave piece {p.pid} (0 .. {p.length_m:.3f}): {why}; "
+                             "the wall stays wholly HELD")
+            spanning.append((o.oid, span))
     held = [p for p in pieces if not est[p.pid]]
     gross = sum(p.length_m * p.height_m for p in pieces if est[p.pid])
     ded = sum(o.area_m2 for o in openings if est[by_id[o.piece].pid])
@@ -168,7 +181,31 @@ def split_wall(wall_id: str, pieces: list[Piece], openings: list[Opening], censu
     status = "SPLIT" if held else "ESTABLISHED"
     why = "; ".join(f"{k}: {v}" for k, v in reasons.items())
     return Split(wall_id, round(gross - ded, 4), round(gross, 4), round(ded, 4), [p.pid for p in held], held_ops,
-                 status, why)
+                 status, why, spanning)
+
+
+def _span(o: Opening, a: float, b: float, pieces: list, est: dict):
+    """Rule 9: the consecutive pieces an opening covers from its start piece, or (None, why)."""
+    if a < -TOL:
+        return None, "a jamb lies before its start piece (offsets are measured from that piece's start face)"
+    if o.head_m is None or not o.head_source:
+        return None, "no head height with its source: no split without the head geometry"
+    _check_len(o.head_m, f"{o.oid} head")
+    idx = [p.pid for p in pieces].index(o.piece)
+    start, span = 0.0, []
+    for p in pieces[idx:]:
+        if start >= b - TOL:
+            break
+        span.append(p)
+        start += p.length_m
+    if start < b - TOL:
+        return None, "the opening runs past the last piece"
+    for p in span:
+        if not est[p.pid]:
+            return None, f"it spans HELD piece {p.pid}"
+        if p.height_m <= o.head_m + TOL:
+            return None, f"piece {p.pid} soffit {p.height_m:.3f} m is not above the head {o.head_m:.3f} m"
+    return [p.pid for p in span], ""
 
 
 def wall_total_text(s: Split, held_figure: str) -> str:

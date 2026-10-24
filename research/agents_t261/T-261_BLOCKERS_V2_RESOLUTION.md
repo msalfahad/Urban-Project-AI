@@ -40,9 +40,33 @@ the opening: it lies in the flat slab corner of the dome square outside the ring
 underside; no reason was found why a cast corner slab would not close a partition top (it is the same slab type as
 1F-057). Both agree with the Checker's 17:00 own figures (19.733 whole / 5.540 + HELD 1.0577).
 
-Effect (proposed, nothing applied): split / settled established 153.1125 (r2) -> 154.8007 m2 on 9 walls (8 split +
-1F-W18 settled whole), m3 28.149 -> 28.402; established net 449.260 -> 604.061 m2 proposed. The 7 walls the Checker
-agreed are unchanged.
+Effect of the two corrections alone: split / settled established 153.1125 (r2) -> 154.8007 m2 on 9 walls. The 7 walls
+the Checker agreed are unchanged.
+
+**Next item, same topic (the r2 LIMITS line): 1F-W13 and 1F-W17**, the two dome-face walls whose doors r1 / r2 had not
+located. Same method: every crossing of the wall centreline on the ST 1F roof slab, door gaps from the arch faces.
+
+| Wall | Pieces (west -> east / south -> north), m | Established m2 | Held |
+|---|---|---|---|
+| 1F-W13 (0.15 black, 8.225 = west wall centreline -> external wall face B68) | slab 1F-063 1.455 x 4.04; B1 (5CE / 5CB, 6D0, SBT 1E5C 20x40) 0.200 x 3.80; slab 1F-065 1.59782 x 4.04; B25 (6C0 / 6BF, 6D1, SBT 1F75 55x75) 0.550 x 3.45; slab corner 1F-076/c0 0.4735 x 4.04 (6BF -> arc 64A); slab corner c1 0.42351 x 4.04 (arc 64D -> 5DF); CB12 (5DF, 6DD, C-BEAM2 2469 25x75) 0.050 x 3.45 | 18.7873 - D-1F-08 1.980 = **16.8073** | east ring 0.29026 + 0.29025 (no B4 label on the east circle; Q-44 A named), opening 2.89466 with D-1F-09 |
+| 1F-W17 (0.15 black, 2.100 = 1F-W13 N face -> north wall face C0C) | B6 (6D2 / 6D3) 0.250 x 3.70; slab 1F-057 1.01048 x 4.04; B4 (6B3 / 6B4, 6B5, SBT 1E8E 20x50) 0.200 x 3.70; slab 1F-025 0.175 x 4.04 | 6.4543 - D-1F-10 1.760 = **4.6943** | opening 0.46158, ring sliver 0.00294 |
+
+Doors: D-1F-08 (block D215 C18, gap 0.900) runs from slab 1F-065 across B25 into slab corner c0 (0.01495 m); D-1F-10
+(D315 C12, gap 0.800) across slab 1F-057, B4 and slab 1F-025 (0.06574 m). Each is a rectangle whose head (2.20 m, Q-55 C
+ASSUMED - OWNER-APPROVED, as register v2's deductions) is below every soffit it passes (lowest 3.45), so its area does not
+depend on the cut: new point 9 deducts it once from the established part; without a head, across a held piece or under
+a soffit at or below the head the wall stays wholly HELD (point 3). Any real head up to 3.45 m keeps the split valid;
+only the door area would change. D-1F-09 lies wholly in the held opening piece. The T-143 'dome' pieces of 1F-W13
+(2.98 / 1.40 m) were a slab corner, the east ring and the opening, as for 1F-W18.
+1F-W11 not split (said why in T261_BLOCKERS.csv): its door is inside the west opening, 3.86053 of 4.250 m is under the
+opening, and two of the small end pieces need the CB10 width CONFLICT / a label first (under 1 m2 at stake).
+
+Effect (proposed, nothing applied): split / settled established 153.1125 (r2) -> 176.3023 m2 on 11 walls (10 split +
+1F-W18 whole), m3 28.149 -> 31.628; established net 449.260 -> 625.562 m2 proposed; walls with no established part
+30 -> 28 / 76. Freelancer (comparison only, not like for like: his one height per floor and his 66.00 parapet in this group): 1F
+internal 0.15 black, established 89.039 (v2) -> 135.813 m2 proposed vs his 195.098 m2 (-59.285, -30.4 %, while 7 walls
+of the group still carry held pieces); RULE_DIFFERENCE on the split walls (piece heights by printed member, Q-60 A),
+no section verdict while walls are held.
 
 Rule R-T261-1 point 8 (any villa): rule 7 holds for every established member / slab piece of a split, inherited or new;
 an extent taken from an earlier register (gross or weighted height carried onto a length), a census remainder or any

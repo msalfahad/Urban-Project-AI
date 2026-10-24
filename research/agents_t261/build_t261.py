@@ -279,6 +279,93 @@ WALLS = {
         settled=("r3: pieces from the drawn slab / band extents over the centreline (rule 8; register v2's gross 5.651 "
                  "on 1.426 m withdrawn); the dome-opening piece is 1.05766 m (r2 1.024)"),
         class_="SS"),
+    "1F-W13": dict(
+        census=8.225,
+        pieces=[
+            P.Piece("E slab 1F-063", 1.455, 4.04, "slab", drawn_extent_m=1.455,
+                    extent_source="T-234 slab panel 1F-063 (DRAWING-CONFIRMED) on the centreline from the west "
+                                  "perpendicular wall to B1 band face 5CE (no ST line between); t 0.16; 1F 4.20 - 0.16"),
+            P.Piece("E B1 BM-1F-010", 0.200, 3.80, "member", drawn_extent_m=0.200,
+                    extent_source="ST B1 band 5CE / 5CB (label 6D0 rot 90), 0.200 m across the wall; SBT 1E5C B1 20x40; "
+                                  "1F 4.20 - 0.40"),
+            P.Piece("E slab 1F-065", 1.59782, 4.04, "slab", drawn_extent_m=1.59782,
+                    extent_source="T-234 slab panel 1F-065 (DRAWING-CONFIRMED) from B1 face 5CB to B25 face 6C0; t 0.16"),
+            P.Piece("E B25 BM-1F-027", 0.550, 3.45, "member", drawn_extent_m=0.550,
+                    extent_source="ST B25 band 6C0 / 6BF (label 6D1 rot 90), 0.550 m across the wall; SBT 1F75 B25 "
+                                  "55x75; 1F 4.20 - 0.75"),
+            P.Piece("E slab corner 1F-076/c0", 0.4735, 4.04, "slab", drawn_extent_m=0.4735,
+                    extent_source="T-234 slab panel 1F-076/c0 (dome square corner outside the ring, DRAWING-CONFIRMED) "
+                                  "from B25 face 6BF to the ring outer arc 64A (r 2.411); t 0.16"),
+            P.Piece("H east ring west crossing", 0.29026, None,
+                    held_item="ring band between arcs 64A (r 2.411) and 649 (r 2.211) of the east dome: no B4 label on "
+                              "the east circle (B4 1828 / 1829 label the west ring only); its size rests on Q-44 A "
+                              "(owner: B4 0.20 x 0.50 round each opening), an approved fallback for lane I / the Checker "
+                              "to apply as ASSUMED - OWNER-APPROVED, not a printed depth",
+                    held_figure_m2="0.29026 x 3.70 = 1.0740 at Q-44 A B4, not a quantity"),
+            P.Piece("H east dome opening 1F-077", 2.89466, None,
+                    held_item="inside the east dome opening (circle 649 r 2.211, S-OPENING 656 .. 65A): the top of the "
+                              "wall is not drawn (T-227: designer); D-1F-09 lies wholly here",
+                    held_figure_m2="2.89466 m, height not drawn; D-1F-09 1.980 inside"),
+            P.Piece("H east ring east crossing", 0.29025, None,
+                    held_item="ring band between arcs 649 and 64D (r 2.411): no B4 label on the east circle (Q-44 A as "
+                              "above)",
+                    held_figure_m2="0.29025 x 3.70 = 1.0739 at Q-44 A B4, not a quantity"),
+            P.Piece("E slab corner 1F-076/c1", 0.42351, 4.04, "slab", drawn_extent_m=0.42351,
+                    extent_source="T-234 slab panel 1F-076/c1 (DRAWING-CONFIRMED) from the ring outer arc 64D to CB12 "
+                                  "face 5DF; t 0.16"),
+            P.Piece("E CB12 BM-1F-017", 0.050, 3.45, "member", drawn_extent_m=0.250,
+                    extent_source="ST CB12 band 5DF / 5DE (label 6DD rot 90 on this span, T-110 BM-1F-017), 0.250 m; "
+                                  "the partition's last 0.050 m to the external wall face lies under it; C-BEAM2 2469 "
+                                  "CB12 25x75; 1F 4.20 - 0.75"),
+        ],
+        openings=[
+            P.Opening("D-1F-08", "E slab 1F-065", 1.26277, 2.16277, 1.980, head_m=2.20,
+                      head_source="Q-55 C 2.20 m (ASSUMED - OWNER-APPROVED; deduction 0.90 x 2.20 as register v2)"),
+            P.Opening("D-1F-09", "H east dome opening 1F-077", 0.09573, 0.99573, 1.980),
+        ],
+        extra_held="",
+        handles=(f"{ARCH}: faces AF9 / AFA / AFB (south) and AD8 / AD9 / B1D / B1C / B1B (north), 0.15; census 8.225 = "
+                 "centreline of the west wall (AFB / AD8 ends) -> inner face B68 / B69 of the external wall; door "
+                 "D-1F-08 block D215 C18 gap AFB / AFA 0.900, D-1F-09 block D215 BEF gap AFA / AF9 0.900; "
+                 f"{ST}: 1F roof slab (frame by column 2FDB = 667); crossings of the centreline 5CE, 5CB, 6C0, 6BF, "
+                 "64A, 649, 649, 64D, 5DF; B11 band 5C3 / 6C1 runs beside the wall 0.050 m off its south face (not "
+                 "over it)"),
+        settled=("r3 (next item, same topic): pieces from the drawn crossings of the wall centreline (rule 8); the "
+                 "T-143 'dome' pieces 2.98 / 1.40 m are a slab corner, the east ring and the opening; D-1F-08 spans "
+                 "slab 1F-065 / B25 / slab corner c0, all soffits above its 2.20 m head (rule 9); D-1F-09 is in the "
+                 "held opening piece"),
+        class_="SS"),
+    "1F-W17": dict(
+        census=2.100,
+        pieces=[
+            P.Piece("H east dome opening 1F-077", 0.46158, None,
+                    held_item="from the 1F-W13 north face to circle 649 (r 2.211) the centreline is inside the east "
+                              "dome opening: top of wall not drawn (T-227: designer)",
+                    held_figure_m2="0.46158 m, height not drawn"),
+            P.Piece("H east ring sliver", 0.00294, None,
+                    held_item="0.00294 m between circle 649 and B6 face 6D2: east ring band, no B4 label (Q-44 A)",
+                    held_figure_m2="0.00294 x 3.70 = 0.0109 at Q-44 A B4, not a quantity"),
+            P.Piece("E B6 band", 0.250, 3.70, "member", drawn_extent_m=0.250,
+                    extent_source="ST B6 band 6D2 / 6D3 (label 6D4), 0.250 m across the wall; SBT 1EA4 B6 25x50"),
+            P.Piece("E slab 1F-057", 1.01048, 4.04, "slab", drawn_extent_m=1.01048,
+                    extent_source="T-234 slab panel 1F-057 (DRAWING-CONFIRMED) from B6 face 6D3 to B4 face 6B3; t 0.16"),
+            P.Piece("E B4 BM-1F-014", 0.200, 3.70, "member", drawn_extent_m=0.200,
+                    extent_source="ST B4 band 6B3 / 6B4 (label 6B5), 0.200 m across the wall; SBT 1E8E B4 20x50"),
+            P.Piece("E slab 1F-025", 0.175, 4.04, "slab", drawn_extent_m=0.175,
+                    extent_source="T-234 slab panel 1F-025 (DRAWING-CONFIRMED) from B4 face 6B4 to the north wall face "
+                                  "C0C; t 0.16"),
+        ],
+        openings=[
+            P.Opening("D-1F-10", "E slab 1F-057", 0.47622, 1.27622, 1.760, head_m=2.20,
+                      head_source="Q-55 C 2.20 m (ASSUMED - OWNER-APPROVED; deduction 0.80 x 2.20 as register v2)"),
+        ],
+        extra_held="",
+        handles=(f"{ARCH}: faces C0F / C10 and C0D / C0E (0.15); census 2.100 = 1F-W13 north face B1B / B1C -> south "
+                 "face C0C of the north wall; door D-1F-10 block D315 C12 gap C0F / C10 0.800; "
+                 f"{ST}: 1F roof slab; crossings of the centreline 649, 6D2, 6D3, 6B3, 6B4"),
+        settled=("r3 (next item, same topic): pieces from the drawn crossings (rule 8); D-1F-10 spans slab 1F-057 / B4 "
+                 "/ slab 1F-025, all soffits above its 2.20 m head (rule 9)"),
+        class_="SS"),
 }
 
 SEARCHED = {
@@ -325,7 +412,9 @@ def build():
                 height_m="" if (pc.height_m is None or not ok) else f"{pc.height_m:.4f}",
                 piece_status=SS if ok else "HELD",
                 gross_m2=f"{pc.length_m * pc.height_m:.4f}" if ok else "",
-                openings="; ".join(f"{o.oid} {o.jamb_a_m:.3f}..{o.jamb_b_m:.3f} m {o.area_m2:.3f}" for o in ops),
+                openings="; ".join(f"{o.oid} {o.jamb_a_m:.3f}..{o.jamb_b_m:.3f} m {o.area_m2:.3f}"
+                                   + (f" (spans {' > '.join(dict(s.spanning)[o.oid])}; head {o.head_m:.2f} {o.head_source})"
+                                      if o.oid in dict(s.spanning) else "") for o in ops),
                 deductions_m2=f"{sum(o.area_m2 for o in ops):.4f}" if ok else "",
                 held_item="" if ok else why, held_figure_not_a_quantity="" if ok else pc.held_figure_m2,
                 evidence=d["handles"] + " | " + SL1_EVID if wid in ("GF-W10", "1F-W10", "2F-W02") else d["handles"]))
@@ -377,10 +466,14 @@ def _searched(b, wid):
                 "1.980 belongs to the held piece; no split proposed: the mapped member extents (B1 BM-2F-009 1.00 m, "
                 "BM-2F-017 1.40 m) leave 0.70 m of the 2.250 m run under neither member (re-measure first). "
                 + SEARCHED["beam depth / register conflict"])
-    if wid in ("1F-W11", "1F-W13", "1F-W17"):
-        return ("no split proposed: the door(s) " + {"1F-W11": "D-1F-01 (0.80 m) against 0.240 m of established pieces",
-                                                     "1F-W13": "D-1F-08 / D-1F-09", "1F-W17": "D-1F-10"}[wid]
-                + " were not located against the dome-face pieces this run. " + SEARCHED["no member drawn above"])
+    if wid == "1F-W11":
+        return (f"r3: re-read on {ST}: D-1F-01 (block D315 C2B, gap C27 / C28 0.800) lies wholly inside the west dome "
+                "opening (arc 5FF r 2.211); of 4.250 m, 3.86053 m are under the opening, 0.23947 m under the B4 ring "
+                "(labels 1828 / 1829, ring merges into the bands at arcs 602 / 603) and 0.150 m under the end bands "
+                "5E8 (CB10, width CONFLICT schedule 0.25 vs drawn: decides whether the 0.100 m stands under CB10 or "
+                "the slab corner / ring) and 5C7 / 6AF (0.050 m, label not attributed this run); no split proposed: the "
+                "established part would be under 1 m2 and two of its pieces need the CONFLICT / label first. "
+                + SEARCHED["no member drawn above"])
     if wid == "GF-W03":
         return "two marks CB3 20x75 / 'B3 (With Stair)' 1826 / 1827 on one span (D-03) and the GF base under the ST-02 " \
                "flight not printed (R-T228-3 SL-2, Verifier 11:59); not re-searched"
@@ -440,7 +533,7 @@ def outputs():
 
 
 WALLS_T = {"2F-W05": 0.2, "GF-W10": 0.2, "1F-W10": 0.2, "2F-W02": 0.2, "1F-W04": 0.2, "2F-W03": 0.15, "2F-W07": 0.2, "1F-W18": 0.15,
-           "1F-W24": 0.15}
+           "1F-W24": 0.15, "1F-W13": 0.15, "1F-W17": 0.15}
 
 
 def main(argv=None):
