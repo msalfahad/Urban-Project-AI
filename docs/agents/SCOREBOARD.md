@@ -2,9 +2,9 @@
 
 Development reference only: tuning against it is allowed, so these numbers never prove product accuracy (MISSION.md).
 
-## SCOREBOARD v2 2026-10-24 01:15 UTC
+## SCOREBOARD v2 2026-10-24 01:12 UTC
 
-### CLOSABLE LINES (owner 2026-10-23 17:50; ranked by whether the line can genuinely close from the existing drawings alone; Checker classification, 01:15)
+### CLOSABLE LINES (owner 2026-10-23 17:50; ranked by whether the line can genuinely close from the existing drawings alone; Checker classification, 01:12)
 
 | Rank | Reference line | Unit | Class | What blocks it (named item) | Own-measured so far |
 |---|---|---|---|---|---|
@@ -22,7 +22,7 @@ Development reference only: tuning against it is allowed, so these numbers never
 | 12 | CONC.POOL | m3 | as 22:55 | as 22:55 | as 22:55 |
 | 13 | CONC.STAIR_DOME | m3 | as 22:55 | as 22:55 | as 22:55 |
 
-Reading (01:15, run session_01JNtnMkGEXPUgA3oPkjRUUh): no merge this run; released A re-run by the Checker on 1cc1a153: REPRODUCED (1,455 lines, BOQ_LINES.csv b96185d4), so every quantity cell is RESTATED from 00:15 except the floor-area Verified share and CLOSABLE row 2 (T-180 slot: all 47 floor pieces re-measured). Earlier reading (00:15): no rank change. This run merged four research / tool pieces (T-236 54ae8b5f, T-235 r1 d7d232b9, T-241 f0250164, T-237 1cc1a153); none changes a released or candidate line, so every quantity cell below is RESTATED from 23:36; the CONC.BEAM and plaster rows of the CLOSABLE table carry the new evidence. T-236 now reports trade completeness against engine-free inventories (footings 25 / 26, Checker recount 26 elements / 27 tags 00:10) in its own table, never mixed with these accuracy cells.
+Reading (01:12, run session_01JNtnMkGEXPUgA3oPkjRUUh): no merge this run; released A re-run by the Checker on 1cc1a153: REPRODUCED (1,455 lines, BOQ_LINES.csv b96185d4), so every quantity cell is RESTATED from 00:15 except the floor-area Verified share and CLOSABLE row 2 (T-180 slot: all 47 floor pieces re-measured). Earlier reading (00:15): no rank change. This run merged four research / tool pieces (T-236 54ae8b5f, T-235 r1 d7d232b9, T-241 f0250164, T-237 1cc1a153); none changes a released or candidate line, so every quantity cell below is RESTATED from 23:36; the CONC.BEAM and plaster rows of the CLOSABLE table carry the new evidence. T-236 now reports trade completeness against engine-free inventories (footings 25 / 26, Checker recount 26 elements / 27 tags 00:10) in its own table, never mixed with these accuracy cells.
 
 | Trade | Unit | Baseline | Ref lines | Coverage % | Compared | WAPE % | Signed % | Verified share % | Held or UNKNOWN | Rule difference share % |
 |---|---|---|---|---|---|---|---|---|---|---|
