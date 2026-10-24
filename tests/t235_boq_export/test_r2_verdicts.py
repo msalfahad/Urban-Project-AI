@@ -29,9 +29,6 @@ PID, REV = "SYNTH-VILLA-9", "9" * 64
 CVER = "ARCH_TAKEOFF_V3.0.TEST"
 FOOT = ("CONCRETE", "STR.CONC.FOOTING", "m3")
 
-pytestmark = pytest.mark.xfail(strict=True, reason="T-235 r2 regression baseline: no V2 schema / validator / helper / "
-                                                         "--verdicts-v2 / T-236 report input on the merged head")
-
 
 def ln(code, eid, ev="MEASURED", q=None, unit="m3", floor="FDN", **kw):
     return BL.make_line(project_id=kw.pop("project_id", PID), revision_set_sha256=kw.pop("revision_set_sha256", REV),
@@ -313,3 +310,24 @@ def test_cli_export_with_v2_records_is_byte_identical_twice(tmp_path):
                 "--completeness", str(rp), "--code-commit", "abc"])
     for f in ("BOQ.csv", "BOQ.xlsx", "BOQ_TRADE_SUMMARY.csv", "EXPORT_MANIFEST.json"):
         assert (tmp_path / "a" / f).read_bytes() == (tmp_path / "b" / f).read_bytes(), f
+
+
+def test_cli_verdict_add_by_item_code_with_the_checker_lock(tmp_path):
+    lines = villa()
+    lp = tmp_path / "L.json"
+    lp.write_text(BL.dumps(lines), encoding="utf-8")
+    lock = tmp_path / "checker.lock"
+    lock.write_text(json.dumps({"agent": "Verifier", "token": "20261024T085003-464-21325"}), encoding="utf-8")
+    vp = tmp_path / "V.json"
+    args = ["verdict-add", "--lines", str(lp), "--candidate-version", CVER, "--item-code", "STR.CONC.FOOTING",
+            "--scope", "WHOLE", "--checker-qty", "4.01", "--evidence", "S-02=F1 1.50x1.00x0.80",
+            "--lock-file", str(lock), "--verdict-commit", "c0ffee12", "--time", "2026-10-24T10:00:00Z", "--out", str(vp)]
+    assert X.main(args) == 0
+    rec = json.loads(vp.read_text(encoding="utf-8"))["verdicts"][0]
+    assert rec["line_ids"] == sorted(foot_ids(lines)) and rec["checker"]["run_token"] == "20261024T085003-464-21325"
+    assert rec == add(lines, foot_ids(lines), 4.01, run_token="20261024T085003-464-21325",
+                      evidence=[{"sheet": "S-02", "printed_value": "F1 1.50x1.00x0.80"}])
+    lock.write_text(json.dumps({"agent": "Worker 3", "token": "t"}), encoding="utf-8")
+    with pytest.raises(X.ExportError, match="routine"):
+        X.main(args[:-1] + [str(tmp_path / "W.json")])
+    assert not (tmp_path / "W.json").exists()
