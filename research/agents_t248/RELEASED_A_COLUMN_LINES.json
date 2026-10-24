@@ -1,0 +1,1757 @@
+{
+ "schema": "T248_RELEASED_A_V1",
+ "baseline": "V29_ROUTEG_NO_PROFILE",
+ "boq_lines_csv_sha256": "b96185d468524743e600f1992d4e4b2028193ff4a379961bc5686c9662f8c115",
+ "counts": {
+  "STR.CONC.COLUMN|1F|BLOCKED_RFI": 22,
+  "STR.CONC.COLUMN|2F|BLOCKED_RFI": 22,
+  "STR.CONC.COLUMN|GF|BLOCKED_RFI": 30,
+  "STR.CONC.COLUMN|UNKNOWN|BLOCKED_RFI": 8,
+  "STR.CONC.NECK|FOUNDATION|BLOCKED_RFI": 1,
+  "STR.CONC.NECK|FOUNDATION|BOUNDED_EXPOSURE": 35
+ },
+ "lines": [
+  {
+   "line_id": "L-8d1298fa7d67b3503d83",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "1F",
+   "mark": "C1",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-0fc4391ef12f967a2fa9",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "1F",
+   "mark": "C2",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-3881e70e6d69d2d71832",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "1F",
+   "mark": "C2",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-9e96c89e3130ccc1333c",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "1F",
+   "mark": "C2",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-a0fd6588e0b1e1405ae6",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "1F",
+   "mark": "C2",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-14a013bcc287438610f9",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "1F",
+   "mark": "C3",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-3ddec54210309d3bfcb8",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "1F",
+   "mark": "C3",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-55b61e3cf7afa12bc972",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "1F",
+   "mark": "C3",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-643ed8130199d4395668",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "1F",
+   "mark": "C3",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-aa76a8f6c4ee77b41eab",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "1F",
+   "mark": "C3",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-dfc896180819ba4593c0",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "1F",
+   "mark": "C3",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-1148f6ae74cbae86dbed",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "1F",
+   "mark": "C4",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-392cafdc40c93a874601",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "1F",
+   "mark": "C4",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-14e60611ac851d3d4afb",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "1F",
+   "mark": "C5",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-857a7dc304df33f80f99",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "1F",
+   "mark": "C5",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-e305c2f3a6a26abd9785",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "1F",
+   "mark": "C5",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-44c6f66e2da1c98824cc",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "1F",
+   "mark": "C6",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.2,
+    0.6
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-f91a7d276a6de542a836",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "1F",
+   "mark": "C7",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.2,
+    0.8
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-45f7ff2b4ff57a664403",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "1F",
+   "mark": "C8",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.2,
+    0.9
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-ca4cbaf4ebc5531980c5",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "1F",
+   "mark": "C8",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.2,
+    0.9
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-9881ba7effb0ebd3e5a1",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "1F",
+   "mark": "C9",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.2,
+    0.9
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-d10b343e153549c32652",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "1F",
+   "mark": "C9",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.2,
+    0.9
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-0f6a5926c9b74cfccac8",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "2F",
+   "mark": "C1",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-791a2cdb8b12df889db4",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "2F",
+   "mark": "C2",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-853f0852a4dded35aecf",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "2F",
+   "mark": "C2",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-ebc83351666a5f17efa0",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "2F",
+   "mark": "C2",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-f709e20f15ffedb6dcc5",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "2F",
+   "mark": "C2",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-4b59350927d8ce7187a5",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "2F",
+   "mark": "C3",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-7aad12a2b52d0d89e6d3",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "2F",
+   "mark": "C3",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-aa73e0c5b9289aa99670",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "2F",
+   "mark": "C3",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-b303a6913d32b7f2f2ce",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "2F",
+   "mark": "C3",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-bf77a4bc15b799a2607e",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "2F",
+   "mark": "C3",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-ed2635dbd950b1a62419",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "2F",
+   "mark": "C3",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-34b0e7b7ac22d5d51617",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "2F",
+   "mark": "C4",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-59ce3151d16fea6d217e",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "2F",
+   "mark": "C4",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-883042546e226945ad19",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "2F",
+   "mark": "C5",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-a73924c27e86b1b7e7b3",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "2F",
+   "mark": "C5",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-f18336516378e8c5e71d",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "2F",
+   "mark": "C5",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-b8b654df3ddba64c8785",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "2F",
+   "mark": "C6",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-1112b84b66ee3734b2a5",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "2F",
+   "mark": "C7",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.2,
+    0.6
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-ca8bcb3671d717732f98",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "2F",
+   "mark": "C8",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.2,
+    0.7000000000000001
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-dfc56006c48b9fdb7e23",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "2F",
+   "mark": "C8",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.2,
+    0.7000000000000001
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-5f71228bb7333fa05985",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "2F",
+   "mark": "C9",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.2,
+    0.7000000000000001
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-ea2c198df34b13564318",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "2F",
+   "mark": "C9",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.2,
+    0.7000000000000001
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-248026e310320a7a7e3d",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "GF",
+   "mark": "C",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-9e7205f8a6e719d329b7",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "GF",
+   "mark": "C",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-a3f1829900a94b831cac",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "GF",
+   "mark": "C",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-a407f0535d9df1032be6",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "GF",
+   "mark": "C",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-ce7753472b0ff3ee745f",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "GF",
+   "mark": "C",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-ab8492c82b54af0cfb51",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "GF",
+   "mark": "C1",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-b3337ea0c02ccfcfebcb",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "GF",
+   "mark": "C10",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.25,
+    0.7000000000000001
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-60718e10aeca46281165",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "GF",
+   "mark": "C11",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.25,
+    1.1
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-ed4398851b1b7dd0af1b",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "GF",
+   "mark": "C11",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.25,
+    1.1
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-190dd0c933a67f9f2a7e",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "GF",
+   "mark": "C2",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-3fd4fbfeb09a9b2f34e2",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "GF",
+   "mark": "C2",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-41b69816ea96472a34e9",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "GF",
+   "mark": "C2",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-af74283212cd2fc59f97",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "GF",
+   "mark": "C2",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-0852c1f302ac7786cc6e",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "GF",
+   "mark": "C3",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.25,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-357cddcd22a3196dfd2c",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "GF",
+   "mark": "C3",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.25,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-4a4771c94dbbc12b5d6e",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "GF",
+   "mark": "C3",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.25,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-68b899a765c29da49e2f",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "GF",
+   "mark": "C3",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.25,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-8a7e0bde3a7a1e7ea73d",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "GF",
+   "mark": "C3",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.25,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-e3a304e08f9a15edf308",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "GF",
+   "mark": "C3",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.25,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-989627ab76bae55673ad",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "GF",
+   "mark": "C4",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.25,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-db3299d33179ea7e9d3a",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "GF",
+   "mark": "C4",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.25,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-2437ffadfffaad0fc8d8",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "GF",
+   "mark": "C5",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.25,
+    0.6
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-b83f8967d56899d96470",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "GF",
+   "mark": "C5",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.25,
+    0.6
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-d2190965209f5d736e04",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "GF",
+   "mark": "C5",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.25,
+    0.6
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-400252f6fb22920950d2",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "GF",
+   "mark": "C6",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.25,
+    0.7000000000000001
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-9d09557e66703bca46c1",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "GF",
+   "mark": "C7",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.25,
+    0.8
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-b7892915a74ba1abde14",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "GF",
+   "mark": "C8",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.25,
+    0.9
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-f33beef46d1c1c14ac13",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "GF",
+   "mark": "C8",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.25,
+    0.9
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-a15c7b158cab2eb7ea94",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "GF",
+   "mark": "C9",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.25,
+    1.0
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-fdb8c73c48a5cf62c936",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "GF",
+   "mark": "C9",
+   "state": "BLOCKED_RFI",
+   "rfi": "STOREY_HEIGHT_NOT_PRINTED",
+   "section_m": [
+    0.25,
+    1.0
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-131bb30192eed9697fb7",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "UNKNOWN",
+   "mark": "CN",
+   "state": "BLOCKED_RFI",
+   "rfi": "TYPE_NOT_IN_SCHEDULE",
+   "section_m": null,
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-131fd694b961c9bd2d2f",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "UNKNOWN",
+   "mark": "CN",
+   "state": "BLOCKED_RFI",
+   "rfi": "TYPE_NOT_IN_SCHEDULE",
+   "section_m": null,
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-76772c46992b1f32a0d3",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "UNKNOWN",
+   "mark": "CN",
+   "state": "BLOCKED_RFI",
+   "rfi": "TYPE_NOT_IN_SCHEDULE",
+   "section_m": null,
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-e62fa362573990ea523f",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "UNKNOWN",
+   "mark": "CN",
+   "state": "BLOCKED_RFI",
+   "rfi": "TYPE_NOT_IN_SCHEDULE",
+   "section_m": null,
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-fd5ef978992d48b8c5ab",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "UNKNOWN",
+   "mark": "CN",
+   "state": "BLOCKED_RFI",
+   "rfi": "TYPE_NOT_IN_SCHEDULE",
+   "section_m": null,
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-700a7df4f67a7ff3b487",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "UNKNOWN",
+   "mark": "PC",
+   "state": "BLOCKED_RFI",
+   "rfi": "PLANTED_COLUMN_STOREY",
+   "section_m": [
+    0.2,
+    0.7000000000000001
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-cb6f2001880789fca066",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "UNKNOWN",
+   "mark": "PC",
+   "state": "BLOCKED_RFI",
+   "rfi": "PLANTED_COLUMN_STOREY",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-d62f3cee68949ac0dc43",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "UNKNOWN",
+   "mark": "PC",
+   "state": "BLOCKED_RFI",
+   "rfi": "PLANTED_COLUMN_STOREY",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-4d48a354c587719b2716",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "C",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "NECK_HEIGHT",
+   "section_m": [
+    0.3,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.075,
+    0.375
+   ]
+  },
+  {
+   "line_id": "L-76dfa1cd34743aa0409e",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "C",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "NECK_HEIGHT",
+   "section_m": [
+    0.3,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.075,
+    0.375
+   ]
+  },
+  {
+   "line_id": "L-9ac69b5730033342c2c3",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "C",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "NECK_SECTION_OR_FOOTING",
+   "section_m": [
+    0.3,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.075,
+    0.375
+   ]
+  },
+  {
+   "line_id": "L-df6c1f20c4c74c8119e3",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "C",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "NECK_HEIGHT",
+   "section_m": [
+    0.3,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.075,
+    0.375
+   ]
+  },
+  {
+   "line_id": "L-f3280bb4897244b2f071",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "C",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "NECK_HEIGHT",
+   "section_m": [
+    0.3,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.075,
+    0.375
+   ]
+  },
+  {
+   "line_id": "L-13381e5a4a28ca72a2b4",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "C1",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "NECK_HEIGHT",
+   "section_m": [
+    0.3,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.075,
+    0.375
+   ]
+  },
+  {
+   "line_id": "L-8d88ff54eac5921e1307",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "C10",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "NECK_SECTION_OR_FOOTING",
+   "section_m": [
+    0.3,
+    0.7000000000000001
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.10500000000000001,
+    0.525
+   ]
+  },
+  {
+   "line_id": "L-7ed2406c6b850ca1526c",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "C11",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "NECK_HEIGHT",
+   "section_m": [
+    0.3,
+    1.1
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.165,
+    0.8250000000000001
+   ]
+  },
+  {
+   "line_id": "L-868dbb0acd3e97399e36",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "C11",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "NECK_HEIGHT",
+   "section_m": [
+    0.3,
+    1.1
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.165,
+    0.8250000000000001
+   ]
+  },
+  {
+   "line_id": "L-0e08b2b894ac6bf89899",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "C2",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "NECK_HEIGHT",
+   "section_m": [
+    0.3,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.075,
+    0.375
+   ]
+  },
+  {
+   "line_id": "L-1bcdb18fc730d9eb3063",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "C2",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "NECK_HEIGHT",
+   "section_m": [
+    0.3,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.075,
+    0.375
+   ]
+  },
+  {
+   "line_id": "L-742e3d6828fc91bbbdc1",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "C2",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "NECK_HEIGHT",
+   "section_m": [
+    0.3,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.075,
+    0.375
+   ]
+  },
+  {
+   "line_id": "L-7e7b31d4558d20bf4b1d",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "C2",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "NECK_HEIGHT",
+   "section_m": [
+    0.3,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.075,
+    0.375
+   ]
+  },
+  {
+   "line_id": "L-2e219d931ef5225ce125",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "C3",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "NECK_HEIGHT",
+   "section_m": [
+    0.3,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.075,
+    0.375
+   ]
+  },
+  {
+   "line_id": "L-3365df2d0a82fc17034e",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "C3",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "NECK_HEIGHT",
+   "section_m": [
+    0.3,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.075,
+    0.375
+   ]
+  },
+  {
+   "line_id": "L-7f8d967183bdf3c76477",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "C3",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "NECK_HEIGHT",
+   "section_m": [
+    0.3,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.075,
+    0.375
+   ]
+  },
+  {
+   "line_id": "L-b63e5605077e0ce76746",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "C3",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "NECK_HEIGHT",
+   "section_m": [
+    0.3,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.075,
+    0.375
+   ]
+  },
+  {
+   "line_id": "L-c6ae1b14b7610fa69c01",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "C3",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "NECK_HEIGHT",
+   "section_m": [
+    0.3,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.075,
+    0.375
+   ]
+  },
+  {
+   "line_id": "L-f1e16a297e2ff6719ca9",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "C3",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "NECK_HEIGHT",
+   "section_m": [
+    0.3,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.075,
+    0.375
+   ]
+  },
+  {
+   "line_id": "L-007aeb975e625b72e25b",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "C4",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "NECK_HEIGHT",
+   "section_m": [
+    0.3,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.075,
+    0.375
+   ]
+  },
+  {
+   "line_id": "L-4afb6b20ba1d9039b6b9",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "C4",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "NECK_HEIGHT",
+   "section_m": [
+    0.3,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.075,
+    0.375
+   ]
+  },
+  {
+   "line_id": "L-648a9dbe792d6cb6cc4c",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "C5",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "NECK_HEIGHT",
+   "section_m": [
+    0.3,
+    0.6
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.09,
+    0.44999999999999996
+   ]
+  },
+  {
+   "line_id": "L-ba05a9b946393fbf61c1",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "C5",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "NECK_HEIGHT",
+   "section_m": [
+    0.3,
+    0.6
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.09,
+    0.44999999999999996
+   ]
+  },
+  {
+   "line_id": "L-cf8d1ff1b20fcf6af9b3",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "C5",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "NECK_HEIGHT",
+   "section_m": [
+    0.3,
+    0.6
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.09,
+    0.44999999999999996
+   ]
+  },
+  {
+   "line_id": "L-9995c042a10f24081054",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "C6",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "NECK_HEIGHT",
+   "section_m": [
+    0.3,
+    0.7000000000000001
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.10500000000000001,
+    0.525
+   ]
+  },
+  {
+   "line_id": "L-ab506ba0449dd199317a",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "C7",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "NECK_HEIGHT",
+   "section_m": [
+    0.3,
+    0.8
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.12,
+    0.6
+   ]
+  },
+  {
+   "line_id": "L-2b016518901643968356",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "C8",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "NECK_HEIGHT",
+   "section_m": [
+    0.3,
+    0.9
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.135,
+    0.675
+   ]
+  },
+  {
+   "line_id": "L-e8fab6a7239a7c16bb74",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "C8",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "NECK_HEIGHT",
+   "section_m": [
+    0.3,
+    0.9
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.135,
+    0.675
+   ]
+  },
+  {
+   "line_id": "L-74bb73505c5a74eb0cfc",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "C9",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "NECK_HEIGHT",
+   "section_m": [
+    0.3,
+    1.0
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.15,
+    0.75
+   ]
+  },
+  {
+   "line_id": "L-b5f2db94a07adc12936f",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "C9",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "NECK_HEIGHT",
+   "section_m": [
+    0.3,
+    1.0
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.15,
+    0.75
+   ]
+  },
+  {
+   "line_id": "L-200f5b7973df2310940d",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "CN",
+   "state": "BLOCKED_RFI",
+   "rfi": "NECK_SECTION_OR_FOOTING",
+   "section_m": [
+    null,
+    null
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-70b0dd14e32682786e02",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "CN",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "NECK_SECTION_OR_FOOTING",
+   "section_m": [
+    null,
+    null
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.045,
+    0.22499999999999998
+   ]
+  },
+  {
+   "line_id": "L-7bb3d529caa9ba048f17",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "CN",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "NECK_SECTION_OR_FOOTING",
+   "section_m": [
+    null,
+    null
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.045,
+    0.22499999999999998
+   ]
+  },
+  {
+   "line_id": "L-d7654722f2d99fc903cb",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "CN",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "NECK_SECTION_OR_FOOTING",
+   "section_m": [
+    null,
+    null
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.045,
+    0.22499999999999998
+   ]
+  },
+  {
+   "line_id": "L-dc970096f9520749d988",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "CN",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "NECK_SECTION_OR_FOOTING",
+   "section_m": [
+    null,
+    null
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.045,
+    0.22499999999999998
+   ]
+  },
+  {
+   "line_id": "L-ee8613967d3cb78f1eff",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "CN",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "NECK_SECTION_OR_FOOTING",
+   "section_m": [
+    null,
+    null
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.045,
+    0.22499999999999998
+   ]
+  }
+ ]
+}

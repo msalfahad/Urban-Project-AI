@@ -1,0 +1,323 @@
+{
+ "closable_vs_route_g": {
+  "differ": [],
+  "drawing": 18.3465,
+  "members": 28,
+  "no_route_g_line": [
+   "FFRS:66A",
+   "FFRS:69D"
+  ],
+  "route_g_on_them": 17.3385
+ },
+ "columns_all_storeys": {
+  "CONFLICT": [
+   15,
+   8.034,
+   10.119
+  ],
+  "DRAWING-CONFIRMED": [
+   28,
+   18.3465
+  ],
+  "HELD": [
+   16,
+   1.2375,
+   6.8125,
+   14
+  ],
+  "UNKNOWN": [
+   5
+  ]
+ },
+ "components_by_storey": {
+  "1F": {
+   "CONFLICT": [
+    11,
+    5.964,
+    7.644
+   ],
+   "DRAWING-CONFIRMED": [
+    9,
+    4.284
+   ],
+   "HELD": [
+    0,
+    0.0,
+    0.0,
+    0
+   ],
+   "UNKNOWN": [
+    1
+   ]
+  },
+  "2F": {
+   "CONFLICT": [
+    0,
+    0.0,
+    0.0
+   ],
+   "DRAWING-CONFIRMED": [
+    0,
+    0.0
+   ],
+   "HELD": [
+    9,
+    0.0,
+    3.155,
+    9
+   ],
+   "UNKNOWN": [
+    4
+   ]
+  },
+  "FOUNDATION": {
+   "CONFLICT": [
+    0,
+    0.0,
+    0.0
+   ],
+   "DRAWING-CONFIRMED": [
+    0,
+    0.0
+   ],
+   "HELD": [
+    36,
+    9.2568,
+    0.0,
+    36
+   ],
+   "UNKNOWN": [
+    0
+   ]
+  },
+  "GF": {
+   "CONFLICT": [
+    4,
+    2.07,
+    2.475
+   ],
+   "DRAWING-CONFIRMED": [
+    19,
+    14.0625
+   ],
+   "HELD": [
+    7,
+    1.2375,
+    3.6575,
+    5
+   ],
+   "UNKNOWN": [
+    0
+   ]
+  }
+ },
+ "convention": "C1 (T-234 / T-241): slab panels stop at column faces, beams billed to the column face (NET); the column owns its footprint from its base datum to the slab top; a beam billed THROUGH owns its piece (PC-2F under B7)",
+ "footing_identity_1B1B": {
+  "closed": false,
+  "extent_m": [
+   3.25,
+   1.4
+  ],
+  "layer": "S-FOOTINGS",
+  "neck_outlines_inside": [
+   "10A4",
+   "10E8"
+  ],
+  "open_gap_m": 0.7,
+  "outline": "1B1B",
+  "tags_inside": [
+   {
+    "handle": "10A5",
+    "text": "F"
+   },
+   {
+    "handle": "168B",
+    "text": "F10"
+   }
+  ]
+ },
+ "freelancer": {
+  "1F": 7.728,
+  "2F": 3.381,
+  "FOUNDATION": 8.805,
+  "GF": 17.4375,
+  "lift_walls": {
+   "b": 0.2,
+   "h": 1.5,
+   "l": 8,
+   "m3": 2.4,
+   "row": 11
+  },
+  "line": 39.7515
+ },
+ "inventory": {
+  "by_storey": {
+   "1F": 20,
+   "2F": 9,
+   "GF": 30
+  },
+  "columns": 59,
+  "necks": 36,
+  "not_drawn_route_g_lines": [
+   "NOT_DRAWN:10BD:2F",
+   "NOT_DRAWN:10C5:2F",
+   "NOT_DRAWN:10E0:2F",
+   "NOT_DRAWN:10E4:1F",
+   "NOT_DRAWN:10E4:2F"
+  ],
+  "t217_reproduced_from_drive": true
+ },
+ "method": "COLUMN_LINE_V1",
+ "necks": {
+  "CONFLICT": [
+   0,
+   0.0,
+   0.0
+  ],
+  "DRAWING-CONFIRMED": [
+   0,
+   0.0
+  ],
+  "HELD": [
+   36,
+   9.2568,
+   0.0,
+   36
+  ],
+  "UNKNOWN": [
+   0
+  ]
+ },
+ "ownership_check": [],
+ "reconcile_freelancer": {
+  "1F": {
+   "count": 0.828,
+   "drawing": [
+    10.248,
+    11.928
+   ],
+   "freelancer": 7.728,
+   "height_basis": [
+    1.83,
+    2.13
+   ],
+   "residual_hi": 0.0,
+   "residual_lo": 0.0,
+   "section": [
+    -0.138,
+    1.242
+   ]
+  },
+  "2F": {
+   "count": 0.0,
+   "drawing": [
+    null,
+    null
+   ],
+   "freelancer": 3.381,
+   "height_basis": [
+    null,
+    null
+   ],
+   "residual_hi": null,
+   "residual_lo": null,
+   "section": [
+    -0.207,
+    0.01725
+   ]
+  },
+  "FOUNDATION": {
+   "count": 0.885,
+   "drawing": [
+    null,
+    null
+   ],
+   "freelancer": 8.805,
+   "height_basis": [
+    null,
+    null
+   ],
+   "residual_hi": null,
+   "residual_lo": null,
+   "section": [
+    -0.675,
+    -0.33
+   ]
+  },
+  "GF": {
+   "count": -0.5625,
+   "drawing": [
+    null,
+    20.195
+   ],
+   "freelancer": 17.4375,
+   "height_basis": [
+    null,
+    3.32
+   ],
+   "residual_hi": 0.0,
+   "residual_lo": null,
+   "section": [
+    -0.73125,
+    0.0
+   ]
+  }
+ },
+ "released_double_joints_now_column_owned": {
+  "FFRS:667": "CONFLICT",
+  "GFRS:347": "CONFLICT",
+  "GFRS:34A": "HELD",
+  "GFRS:34D": "HELD",
+  "GFRS:350": "HELD",
+  "GFRS:356": "HELD",
+  "GFRS:359": "CONFLICT"
+ },
+ "route_g_register_m3": {
+  "1F": 9.66,
+  "2F": 5.376,
+  "FOUNDATION": 10.8555,
+  "GF": 20.25
+ },
+ "route_g_unbound_lines": [],
+ "rule": "R-COLUMN-LINE-1 (proposed, T-248)",
+ "schema": "T248_COLUMN_LINE_V1",
+ "slab_sheet_partition": {
+  "band_overlap": {
+   "FFRS:667": 0.009,
+   "GFRS:347": 0.08,
+   "GFRS:34A": 0.0401,
+   "GFRS:34D": 0.0401,
+   "GFRS:350": 0.0797,
+   "GFRS:356": 0.0799,
+   "GFRS:359": 0.0799,
+   "SFRS:778": 0.0799
+  },
+  "note": "band_overlap = face-level estimate (min of the face's column and band shares): it identifies the outlines a band crosses; the joint m2 are T-241's polygon values (GF 0.4401, 1F 0.0090, 2F 0.0799)",
+  "slab_overlap": {},
+  "solid_outlines": 59,
+  "uncovered": {
+   "FFRS:670": 0.026,
+   "FFRS:673": 0.003,
+   "FFRS:676": 0.0125,
+   "FFRS:679": 0.025,
+   "FFRS:691": 0.0025,
+   "FFRS:697": 0.0025,
+   "GFRS:338": 0.005,
+   "GFRS:353": 0.045,
+   "GFRS:35C": 0.0055,
+   "GFRS:35F": 0.0547,
+   "GFRS:362": 0.0035,
+   "GFRS:365": 0.0025,
+   "GFRS:36B": 0.0025,
+   "GFRS:36E": 0.0556,
+   "GFRS:374": 0.0056,
+   "GFRS:37A": 0.05,
+   "GFRS:37D": 0.0115,
+   "GFRS:380": 0.004,
+   "SFRS:412": 0.026,
+   "SFRS:418": 0.0057,
+   "SFRS:424": 0.0025
+  }
+ },
+ "stack_check_neck_to_gf_column": []
+}
