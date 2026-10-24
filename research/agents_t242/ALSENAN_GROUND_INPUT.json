@@ -1,0 +1,5684 @@
+{
+ "alignment": {
+  "architectural_columns": 30,
+  "column_centroid_residual_mm_max": 70.7,
+  "column_centroid_residual_note": "architectural columns are drawn 0.20 / 0.25 wide inside the wall, the structural ones 0.30: centroids differ by half the width difference (<= 0.05 m in each axis)",
+  "level_text_residual_mm": 0.0,
+  "level_texts_paired": 14,
+  "level_texts_same_value": 14
+ },
+ "arc_bands": [
+  {
+   "S1_probes": [
+    {
+     "at": 0.25,
+     "level": "+0.30",
+     "side": "inside"
+    },
+    {
+     "at": 0.25,
+     "level": "+0.15",
+     "side": "outside"
+    },
+    {
+     "at": 0.5,
+     "level": "+0.30",
+     "side": "inside"
+    },
+    {
+     "at": 0.5,
+     "level": "+0.15",
+     "side": "outside"
+    },
+    {
+     "at": 0.75,
+     "level": "+0.30",
+     "side": "inside"
+    },
+    {
+     "at": 0.75,
+     "level": "+0.15",
+     "side": "outside"
+    }
+   ],
+   "arc_band": "ARC:139+13A",
+   "deducted_straight_and_columns_m2": 0.0,
+   "drawn_plan_m2": 0.5419,
+   "net_plan_m2": 0.5419,
+   "part": "ANNEX",
+   "r_in_m": 1.0,
+   "r_out_m": 1.3,
+   "sweep_in_deg": 90.0,
+   "sweep_out_deg": 90.0,
+   "touches": [
+    "COL:214",
+    "13E+7D6#2"
+   ],
+   "width_m": 0.3
+  },
+  {
+   "S1_probes": [
+    {
+     "at": 0.25,
+     "level": "NO_MARK",
+     "side": "inside"
+    },
+    {
+     "at": 0.25,
+     "level": "NO_MARK",
+     "side": "outside"
+    },
+    {
+     "at": 0.5,
+     "level": "NO_MARK",
+     "side": "inside"
+    },
+    {
+     "at": 0.5,
+     "level": "NO_MARK",
+     "side": "outside"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "inside"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "outside"
+    }
+   ],
+   "arc_band": "ARC:157+158",
+   "deducted_straight_and_columns_m2": 0.1553,
+   "drawn_plan_m2": 1.9815,
+   "net_plan_m2": 1.8262,
+   "part": "MAIN",
+   "r_in_m": 2.25,
+   "r_out_m": 2.55,
+   "sweep_in_deg": 167.236,
+   "sweep_out_deg": 150.0858,
+   "touches": [
+    "COL:17BA",
+    "COL:17BD",
+    "COL:17C0",
+    "170+7C3#4",
+    "177+7CD#2"
+   ],
+   "width_m": 0.3
+  }
+ ],
+ "boundary_bands": [
+  {
+   "handle": "7FC",
+   "overlap_band_strips_m2": 0.0,
+   "overlap_columns_m2": 0.0,
+   "overlap_spans_m2": 0.0,
+   "plan_m2": 0.23,
+   "rect_sides_m": [
+    0.2,
+    1.15
+   ],
+   "vertices": 4,
+   "width_m": 0.2
+  },
+  {
+   "handle": "7FE",
+   "overlap_band_strips_m2": 0.0,
+   "overlap_columns_m2": 0.0,
+   "overlap_spans_m2": 0.0,
+   "plan_m2": 8.344,
+   "rect_sides_m": [
+    8.3,
+    31.37
+   ],
+   "vertices": 8,
+   "width_m": 0.199
+  },
+  {
+   "handle": "810",
+   "overlap_band_strips_m2": 0.0,
+   "overlap_columns_m2": 0.0,
+   "overlap_spans_m2": 0.0,
+   "plan_m2": 0.24,
+   "rect_sides_m": [
+    0.2,
+    1.2
+   ],
+   "vertices": 4,
+   "width_m": 0.2
+  }
+ ],
+ "partition": {
+  "arcs_net_m2": 2.368,
+  "columns_in_strips_m2": 4.6437,
+  "drawn_band_strips_m2": 62.1441,
+  "lift_ring_in_strips_m2": 0.0,
+  "span_column_overlaps": [
+   {
+    "column": "COL:17BD",
+    "plan_m2": 0.0,
+    "span_id": "107+7CE#1"
+   },
+   {
+    "column": "COL:228",
+    "plan_m2": 0.0,
+    "span_id": "109+7CB#1"
+   },
+   {
+    "column": "COL:234",
+    "plan_m2": 0.0,
+    "span_id": "109+7CB#2"
+   },
+   {
+    "column": "COL:1DC",
+    "plan_m2": 0.0,
+    "span_id": "109+7CB#3"
+   },
+   {
+    "column": "COL:220",
+    "plan_m2": 0.0,
+    "span_id": "10A+7C9#1"
+   },
+   {
+    "column": "COL:22C",
+    "plan_m2": 0.0,
+    "span_id": "10B+7D1#1"
+   },
+   {
+    "column": "COL:223",
+    "plan_m2": 0.0,
+    "span_id": "10B+7D1#2"
+   },
+   {
+    "column": "COL:204",
+    "plan_m2": 0.0,
+    "span_id": "136+7D5#1"
+   },
+   {
+    "column": "COL:211",
+    "plan_m2": 0.0,
+    "span_id": "13E+7D6#1"
+   },
+   {
+    "column": "COL:1E0",
+    "plan_m2": 0.0,
+    "span_id": "15E+15F#1"
+   },
+   {
+    "column": "COL:1E4",
+    "plan_m2": 0.0,
+    "span_id": "176+7E6#1"
+   },
+   {
+    "column": "COL:230",
+    "plan_m2": 0.0,
+    "span_id": "178+7DB#1"
+   },
+   {
+    "column": "COL:23C",
+    "plan_m2": 0.0,
+    "span_id": "17B+7E5#1"
+   },
+   {
+    "column": "COL:7F5",
+    "plan_m2": 0.0,
+    "span_id": "7DC+7DD#1"
+   },
+   {
+    "column": "COL:809",
+    "plan_m2": 0.0,
+    "span_id": "7E0+FD#1"
+   },
+   {
+    "column": "COL:1FC",
+    "plan_m2": 0.0,
+    "span_id": "7E0+FD#2"
+   },
+   {
+    "column": "COL:7ED",
+    "plan_m2": 0.0,
+    "span_id": "7E7+7E8#1"
+   }
+  ],
+  "span_span_doubles": [
+   {
+    "a": "13D+7D2#1",
+    "b": "13F+7D3#1",
+    "plan_m2": 0.0
+   },
+   {
+    "a": "13D+7D2#1",
+    "b": "140+7D7#1",
+    "plan_m2": 0.0
+   },
+   {
+    "a": "141+7DA#1",
+    "b": "142+7D8#1",
+    "plan_m2": 0.0
+   },
+   {
+    "a": "15D+7C8#1",
+    "b": "170+7C3#2",
+    "plan_m2": 0.0
+   },
+   {
+    "a": "170+7C3#3",
+    "b": "175+7DE#1",
+    "plan_m2": 0.0
+   },
+   {
+    "a": "170+7C3#3",
+    "b": "176+7E6#1",
+    "plan_m2": 0.0
+   },
+   {
+    "a": "177+7CD#1",
+    "b": "7DC+7DD#2",
+    "plan_m2": 0.0
+   },
+   {
+    "a": "177+7CD#2",
+    "b": "7E7+7E8#2",
+    "plan_m2": 0.0
+   },
+   {
+    "a": "17C+7E3#1",
+    "b": "7E1+7E2#1",
+    "plan_m2": 0.0
+   }
+  ],
+  "span_sum_m2": 54.3119,
+  "spans_m2": 54.3118,
+  "unbilled_pieces": [
+   {
+    "in_bands": [
+     "17C+7E3"
+    ],
+    "plan_m2": 0.39,
+    "touches_columns": [],
+    "touches_spans": [
+     "17C+7E3#1"
+    ]
+   },
+   {
+    "in_bands": [
+     "15D+7C8"
+    ],
+    "plan_m2": 0.3,
+    "touches_columns": [],
+    "touches_spans": [
+     "15D+7C8#1",
+     "16F+7FF#1"
+    ]
+   },
+   {
+    "in_bands": [
+     "10B+7D1"
+    ],
+    "plan_m2": 0.09,
+    "touches_columns": [],
+    "touches_spans": [
+     "10B+7D1#1",
+     "7D4+F8#2"
+    ]
+   },
+   {
+    "in_bands": [
+     "13D+7D2",
+     "13E+7D6"
+    ],
+    "plan_m2": 0.03,
+    "touches_columns": [
+     "COL:211"
+    ],
+    "touches_spans": [
+     "13E+7D6#1",
+     "13E+7D6#2"
+    ]
+   },
+   {
+    "in_bands": [
+     "17E+17F"
+    ],
+    "plan_m2": 0.0096,
+    "touches_columns": [
+     "COL:1EF"
+    ],
+    "touches_spans": [
+     "17E+17F#1"
+    ]
+   },
+   {
+    "in_bands": [
+     "17E+17F"
+    ],
+    "plan_m2": 0.0008,
+    "touches_columns": [
+     "COL:1EF"
+    ],
+    "touches_spans": [
+     "17E+17F#1"
+    ]
+   },
+   {
+    "in_bands": [
+     "136+7D5"
+    ],
+    "plan_m2": 0.0,
+    "touches_columns": [
+     "COL:207"
+    ],
+    "touches_spans": [
+     "136+7D5#1"
+    ]
+   },
+   {
+    "in_bands": [
+     "10B+7D1"
+    ],
+    "plan_m2": 0.0,
+    "touches_columns": [
+     "COL:22C"
+    ],
+    "touches_spans": [
+     "10B+7D1#2"
+    ]
+   },
+   {
+    "in_bands": [
+     "13F+7D3"
+    ],
+    "plan_m2": 0.0,
+    "touches_columns": [
+     "COL:20B"
+    ],
+    "touches_spans": [
+     "13F+7D3#1",
+     "7D4+F8#1"
+    ]
+   },
+   {
+    "in_bands": [
+     "13E+7D6"
+    ],
+    "plan_m2": 0.0,
+    "touches_columns": [],
+    "touches_spans": [
+     "13E+7D6#1",
+     "7D4+F8#1"
+    ]
+   },
+   {
+    "in_bands": [
+     "140+7D7"
+    ],
+    "plan_m2": 0.0,
+    "touches_columns": [],
+    "touches_spans": [
+     "140+7D7#1",
+     "7D4+F8#2"
+    ]
+   },
+   {
+    "in_bands": [
+     "141+7DA"
+    ],
+    "plan_m2": 0.0,
+    "touches_columns": [],
+    "touches_spans": [
+     "141+7DA#1",
+     "7D4+F8#2"
+    ]
+   },
+   {
+    "in_bands": [
+     "178+7DB"
+    ],
+    "plan_m2": 0.0,
+    "touches_columns": [],
+    "touches_spans": [
+     "145+7CA#1",
+     "178+7DB#1"
+    ]
+   },
+   {
+    "in_bands": [
+     "109+7CB"
+    ],
+    "plan_m2": 0.0,
+    "touches_columns": [
+     "COL:234"
+    ],
+    "touches_spans": [
+     "109+7CB#3"
+    ]
+   },
+   {
+    "in_bands": [
+     "175+7DE"
+    ],
+    "plan_m2": 0.0,
+    "touches_columns": [],
+    "touches_spans": [
+     "175+7DE#1",
+     "177+7CD#1"
+    ]
+   },
+   {
+    "in_bands": [
+     "107+7CE"
+    ],
+    "plan_m2": 0.0,
+    "touches_columns": [
+     "COL:238"
+    ],
+    "touches_spans": [
+     "107+7CE#1",
+     "114+115+7DF#1"
+    ]
+   },
+   {
+    "in_bands": [
+     "7E0+FD"
+    ],
+    "plan_m2": 0.0,
+    "touches_columns": [
+     "COL:809"
+    ],
+    "touches_spans": [
+     "7E0+FD#2"
+    ]
+   },
+   {
+    "in_bands": [
+     "7E0+FD"
+    ],
+    "plan_m2": 0.0,
+    "touches_columns": [
+     "COL:200"
+    ],
+    "touches_spans": [
+     "7E0+FD#1"
+    ]
+   },
+   {
+    "in_bands": [
+     "7D0+FC"
+    ],
+    "plan_m2": 0.0,
+    "touches_columns": [
+     "COL:255"
+    ],
+    "touches_spans": [
+     "7D0+FC#3",
+     "7D0+FC#4"
+    ]
+   },
+   {
+    "in_bands": [
+     "109+7CB"
+    ],
+    "plan_m2": 0.0,
+    "touches_columns": [],
+    "touches_spans": [
+     "109+7CB#1",
+     "7D0+FC#1"
+    ]
+   },
+   {
+    "in_bands": [
+     "109+7CB"
+    ],
+    "plan_m2": 0.0,
+    "touches_columns": [
+     "COL:228"
+    ],
+    "touches_spans": [
+     "109+7CB#2"
+    ]
+   },
+   {
+    "in_bands": [
+     "10A+7C9"
+    ],
+    "plan_m2": 0.0,
+    "touches_columns": [
+     "COL:218"
+    ],
+    "touches_spans": [
+     "10A+7C9#1"
+    ]
+   },
+   {
+    "in_bands": [
+     "7DC+7DD"
+    ],
+    "plan_m2": 0.0,
+    "touches_columns": [
+     "COL:7F5"
+    ],
+    "touches_spans": [
+     "7DC+7DD#2",
+     "7E9+7EA#1"
+    ]
+   },
+   {
+    "in_bands": [
+     "176+7E6"
+    ],
+    "plan_m2": 0.0,
+    "touches_columns": [],
+    "touches_spans": [
+     "176+7E6#1",
+     "177+7CD#1"
+    ]
+   },
+   {
+    "in_bands": [
+     "15E+15F"
+    ],
+    "plan_m2": 0.0,
+    "touches_columns": [
+     "COL:1F5"
+    ],
+    "touches_spans": [
+     "15E+15F#1"
+    ]
+   },
+   {
+    "in_bands": [
+     "7E7+7E8"
+    ],
+    "plan_m2": 0.0,
+    "touches_columns": [
+     "COL:7ED"
+    ],
+    "touches_spans": [
+     "7E7+7E8#2",
+     "7E9+7EA#1"
+    ]
+   },
+   {
+    "in_bands": [
+     "7E7+7E8"
+    ],
+    "plan_m2": 0.0,
+    "touches_columns": [],
+    "touches_spans": [
+     "184+7CF#3",
+     "7E7+7E8#1"
+    ]
+   },
+   {
+    "in_bands": [
+     "17D+7E4"
+    ],
+    "plan_m2": 0.0,
+    "touches_columns": [],
+    "touches_spans": [
+     "17D+7E4#1",
+     "7D0+FC#2"
+    ]
+   },
+   {
+    "in_bands": [
+     "17D+7E4"
+    ],
+    "plan_m2": 0.0,
+    "touches_columns": [],
+    "touches_spans": [
+     "17D+7E4#1",
+     "7E1+7E2#1"
+    ]
+   },
+   {
+    "in_bands": [
+     "17B+7E5"
+    ],
+    "plan_m2": 0.0,
+    "touches_columns": [],
+    "touches_spans": [
+     "17B+7E5#1",
+     "7D0+FC#3"
+    ]
+   },
+   {
+    "in_bands": [
+     "7DC+7DD"
+    ],
+    "plan_m2": 0.0,
+    "touches_columns": [
+     "COL:24D"
+    ],
+    "touches_spans": [
+     "184+7CF#1",
+     "7DC+7DD#1"
+    ]
+   },
+   {
+    "in_bands": [
+     "182+183"
+    ],
+    "plan_m2": 0.0,
+    "touches_columns": [],
+    "touches_spans": [
+     "17E+17F#1",
+     "182+183#1"
+    ]
+   },
+   {
+    "in_bands": [
+     "182+183"
+    ],
+    "plan_m2": 0.0,
+    "touches_columns": [],
+    "touches_spans": [
+     "170+7C3#2",
+     "182+183#1"
+    ]
+   },
+   {
+    "in_bands": [
+     "180+181"
+    ],
+    "plan_m2": 0.0,
+    "touches_columns": [],
+    "touches_spans": [
+     "176+7E6#1",
+     "180+181#1"
+    ]
+   }
+  ],
+  "unpaired_face_pieces": [
+   {
+    "handle": "107",
+    "piece_m": 0.265,
+    "reason": "NO_PARTNER"
+   },
+   {
+    "handle": "109",
+    "piece_m": 0.3,
+    "reason": "NO_PARTNER"
+   },
+   {
+    "handle": "10A",
+    "piece_m": 0.3,
+    "reason": "NO_PARTNER"
+   },
+   {
+    "handle": "10B",
+    "piece_m": 0.3,
+    "reason": "NO_PARTNER"
+   },
+   {
+    "handle": "136",
+    "piece_m": 0.3,
+    "reason": "NO_PARTNER"
+   },
+   {
+    "handle": "13D",
+    "piece_m": 0.3,
+    "reason": "NO_PARTNER"
+   },
+   {
+    "handle": "170",
+    "piece_m": 0.3,
+    "reason": "NO_PARTNER"
+   },
+   {
+    "handle": "170",
+    "piece_m": 0.3,
+    "reason": "NO_PARTNER"
+   },
+   {
+    "handle": "177",
+    "piece_m": 0.2191,
+    "reason": "NO_PARTNER"
+   },
+   {
+    "handle": "17E",
+    "piece_m": 0.3,
+    "reason": "NO_PARTNER"
+   },
+   {
+    "handle": "17F",
+    "piece_m": 0.2202,
+    "reason": "NO_PARTNER"
+   },
+   {
+    "handle": "181",
+    "piece_m": 0.3,
+    "reason": "NO_PARTNER"
+   },
+   {
+    "handle": "181",
+    "piece_m": 0.1896,
+    "reason": "NO_PARTNER"
+   },
+   {
+    "handle": "1812",
+    "piece_m": 0.5,
+    "reason": "NO_PARTNER"
+   },
+   {
+    "handle": "182",
+    "piece_m": 0.0699,
+    "reason": "NO_PARTNER"
+   },
+   {
+    "handle": "7D0",
+    "piece_m": 0.2,
+    "reason": "NO_PARTNER"
+   },
+   {
+    "handle": "7D4",
+    "piece_m": 0.07,
+    "reason": "NO_PARTNER"
+   },
+   {
+    "handle": "F8",
+    "piece_m": 0.3,
+    "reason": "NO_PARTNER"
+   }
+  ]
+ },
+ "source": {
+  "arch_walls": "ARCH_WALLS.json of release_baseline V29_ROUTEG_NO_PROFILE (REPRODUCED b96185d4)",
+  "architectural_sha256": "ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4",
+  "drive": "Alsenan chalet project / ST7757 dxf.dxf + P7757_DXF_COMPRESSED.zip (P7757.dxf)",
+  "structural_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079"
+ },
+ "spans": [
+  {
+   "S1_probes": [
+    {
+     "at": 0.25,
+     "level": "+0.15",
+     "side": "A"
+    },
+    {
+     "at": 0.25,
+     "level": "NO_MARK",
+     "side": "B"
+    },
+    {
+     "at": 0.5,
+     "level": "+0.15",
+     "side": "A"
+    },
+    {
+     "at": 0.5,
+     "level": "NO_MARK",
+     "side": "B"
+    },
+    {
+     "at": 0.75,
+     "level": "+0.15",
+     "side": "A"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "B"
+    }
+   ],
+   "S2_walls": [
+    {
+     "exterior_side": true,
+     "kind": "EXTERNAL",
+     "overlap_m": 0.3639,
+     "wall": "WB-FL0057-FL0058"
+    }
+   ],
+   "band_drawn_m": 0.39,
+   "band_id": "107+7CE",
+   "centreline_m": 0.6639,
+   "class_centreline": [
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "class_face_to_face": [
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "class_state": "CANDIDATES",
+   "direction": "Y",
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:17BD"
+    ]
+   },
+   "end_candidates": {},
+   "face_to_face_m": 0.3639,
+   "handles": [
+    "107",
+    "7CE"
+   ],
+   "part": "MAIN",
+   "span_from_m": 0.0,
+   "span_id": "107+7CE#1",
+   "span_to_m": 0.3639,
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:238"
+    ]
+   },
+   "tees_mid_span": [],
+   "v2_flags": [],
+   "v2_held": [],
+   "v2_status": "RELEASED",
+   "width_m": 0.3
+  },
+  {
+   "S1_probes": [
+    {
+     "at": 0.25,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.25,
+     "level": "+1.00",
+     "side": "B"
+    },
+    {
+     "at": 0.5,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.5,
+     "level": "+1.00",
+     "side": "B"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.75,
+     "level": "+1.00",
+     "side": "B"
+    }
+   ],
+   "S2_walls": [],
+   "band_drawn_m": 12.9,
+   "band_id": "109+7CB",
+   "centreline_m": 4.9,
+   "class_centreline": [
+    "P13-GB-LT5M"
+   ],
+   "class_face_to_face": [
+    "P13-GB-LT5M"
+   ],
+   "class_state": "ONE",
+   "direction": "Y",
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:228"
+    ]
+   },
+   "end_candidates": {},
+   "face_to_face_m": 4.4,
+   "handles": [
+    "109",
+    "7CB"
+   ],
+   "part": "MAIN",
+   "span_from_m": 0.0,
+   "span_id": "109+7CB#1",
+   "span_to_m": 4.4,
+   "start": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "7D0+FC"
+    ]
+   },
+   "tees_mid_span": [],
+   "v2_flags": [],
+   "v2_held": [],
+   "v2_status": "RELEASED",
+   "width_m": 0.3
+  },
+  {
+   "S1_probes": [
+    {
+     "at": 0.25,
+     "level": "+1.00",
+     "side": "A"
+    },
+    {
+     "at": 0.25,
+     "level": "NO_MARK",
+     "side": "B"
+    },
+    {
+     "at": 0.5,
+     "level": "+1.00",
+     "side": "A"
+    },
+    {
+     "at": 0.5,
+     "level": "NO_MARK",
+     "side": "B"
+    },
+    {
+     "at": 0.75,
+     "level": "+0.30/+1.00",
+     "side": "A"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "B"
+    }
+   ],
+   "S2_walls": [
+    {
+     "exterior_side": true,
+     "kind": "EXTERNAL",
+     "overlap_m": 4.4,
+     "wall": "WB-FL0078-FL0079"
+    }
+   ],
+   "band_drawn_m": 12.9,
+   "band_id": "109+7CB",
+   "centreline_m": 5.0,
+   "class_centreline": [
+    "P13-GB-GT5M",
+    "P13-GB-LT5M"
+   ],
+   "class_face_to_face": [
+    "P13-GB-LT5M"
+   ],
+   "class_state": "ONE",
+   "direction": "Y",
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:234"
+    ]
+   },
+   "end_candidates": {},
+   "face_to_face_m": 4.4,
+   "handles": [
+    "109",
+    "7CB"
+   ],
+   "part": "MAIN",
+   "span_from_m": 5.1,
+   "span_id": "109+7CB#2",
+   "span_to_m": 9.5,
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:228"
+    ]
+   },
+   "tees_mid_span": [
+    {
+     "band_id": "15C+7CC",
+     "station_m": 7.95
+    },
+    {
+     "band_id": "185+7C7",
+     "station_m": 8.55
+    }
+   ],
+   "v2_flags": [
+    "LENGTH_BASIS_CHANGES_CLASS face-to-face ['P13-GB-LT5M'] vs centreline ['P13-GB-GT5M', 'P13-GB-LT5M']"
+   ],
+   "v2_held": [],
+   "v2_status": "RELEASED",
+   "width_m": 0.3
+  },
+  {
+   "S1_probes": [
+    {
+     "at": 0.25,
+     "level": "+0.30/+1.00",
+     "side": "A"
+    },
+    {
+     "at": 0.25,
+     "level": "+0.15",
+     "side": "B"
+    },
+    {
+     "at": 0.5,
+     "level": "+0.30/+1.00",
+     "side": "A"
+    },
+    {
+     "at": 0.5,
+     "level": "+0.15",
+     "side": "B"
+    },
+    {
+     "at": 0.75,
+     "level": "+0.30/+1.00",
+     "side": "A"
+    },
+    {
+     "at": 0.75,
+     "level": "+0.15",
+     "side": "B"
+    }
+   ],
+   "S2_walls": [
+    {
+     "exterior_side": true,
+     "kind": "EXTERNAL",
+     "overlap_m": 2.7,
+     "wall": "WB-FL0078-FL0079"
+    }
+   ],
+   "band_drawn_m": 12.9,
+   "band_id": "109+7CB",
+   "centreline_m": 3.2,
+   "class_centreline": [
+    "P13-GB-LT5M"
+   ],
+   "class_face_to_face": [
+    "P13-GB-LT5M"
+   ],
+   "class_state": "ONE",
+   "direction": "Y",
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:1DC"
+    ]
+   },
+   "end_candidates": {},
+   "face_to_face_m": 2.7,
+   "handles": [
+    "109",
+    "7CB"
+   ],
+   "part": "MAIN",
+   "span_from_m": 10.0,
+   "span_id": "109+7CB#3",
+   "span_to_m": 12.7,
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:234"
+    ]
+   },
+   "tees_mid_span": [],
+   "v2_flags": [],
+   "v2_held": [],
+   "v2_status": "RELEASED",
+   "width_m": 0.3
+  },
+  {
+   "S1_probes": [
+    {
+     "at": 0.25,
+     "level": "+1.00",
+     "side": "A"
+    },
+    {
+     "at": 0.25,
+     "level": "+0.15",
+     "side": "B"
+    },
+    {
+     "at": 0.5,
+     "level": "+1.00",
+     "side": "A"
+    },
+    {
+     "at": 0.5,
+     "level": "+0.15",
+     "side": "B"
+    },
+    {
+     "at": 0.75,
+     "level": "+1.00",
+     "side": "A"
+    },
+    {
+     "at": 0.75,
+     "level": "+0.15",
+     "side": "B"
+    }
+   ],
+   "S2_walls": [
+    {
+     "exterior_side": false,
+     "kind": "INTERNAL",
+     "overlap_m": 4.3,
+     "wall": "WB-FL0081-FL0082"
+    }
+   ],
+   "band_drawn_m": 4.6,
+   "band_id": "10A+7C9",
+   "centreline_m": 4.6,
+   "class_centreline": [
+    "P13-GB-LT5M"
+   ],
+   "class_face_to_face": [
+    "P13-GB-LT5M"
+   ],
+   "class_state": "ONE",
+   "direction": "Y",
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:220"
+    ]
+   },
+   "end_candidates": {},
+   "face_to_face_m": 4.3,
+   "handles": [
+    "10A",
+    "7C9"
+   ],
+   "part": "MAIN",
+   "span_from_m": 0.0,
+   "span_id": "10A+7C9#1",
+   "span_to_m": 4.3,
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:218"
+    ]
+   },
+   "tees_mid_span": [],
+   "v2_flags": [],
+   "v2_held": [],
+   "v2_status": "RELEASED",
+   "width_m": 0.3
+  },
+  {
+   "S1_probes": [
+    {
+     "at": 0.25,
+     "level": "+0.15",
+     "side": "A"
+    },
+    {
+     "at": 0.25,
+     "level": "+0.30",
+     "side": "B"
+    },
+    {
+     "at": 0.5,
+     "level": "+0.15",
+     "side": "A"
+    },
+    {
+     "at": 0.5,
+     "level": "+0.30",
+     "side": "B"
+    },
+    {
+     "at": 0.75,
+     "level": "+0.15",
+     "side": "A"
+    },
+    {
+     "at": 0.75,
+     "level": "+0.30",
+     "side": "B"
+    }
+   ],
+   "S2_walls": [
+    {
+     "exterior_side": false,
+     "kind": "INTERNAL",
+     "overlap_m": 1.2,
+     "wall": "WB-FL0083-FL0084"
+    }
+   ],
+   "band_drawn_m": 4.6,
+   "band_id": "10B+7D1",
+   "centreline_m": 1.6,
+   "class_centreline": [
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "class_face_to_face": [
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "class_state": "CANDIDATES",
+   "direction": "Y",
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:22C"
+    ]
+   },
+   "end_candidates": {},
+   "face_to_face_m": 1.2,
+   "handles": [
+    "10B",
+    "7D1"
+   ],
+   "part": "ANNEX",
+   "span_from_m": 0.3,
+   "span_id": "10B+7D1#1",
+   "span_to_m": 1.5,
+   "start": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "7D4+F8"
+    ]
+   },
+   "tees_mid_span": [],
+   "v2_flags": [],
+   "v2_held": [],
+   "v2_status": "RELEASED",
+   "width_m": 0.3
+  },
+  {
+   "S1_probes": [
+    {
+     "at": 0.25,
+     "level": "+0.15",
+     "side": "A"
+    },
+    {
+     "at": 0.25,
+     "level": "NO_MARK",
+     "side": "B"
+    },
+    {
+     "at": 0.5,
+     "level": "+0.15",
+     "side": "A"
+    },
+    {
+     "at": 0.5,
+     "level": "NO_MARK",
+     "side": "B"
+    },
+    {
+     "at": 0.75,
+     "level": "+0.15",
+     "side": "A"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "B"
+    }
+   ],
+   "S2_walls": [
+    {
+     "exterior_side": false,
+     "kind": "INTERNAL",
+     "overlap_m": 2.3,
+     "wall": "WB-FL0083-FL0084"
+    }
+   ],
+   "band_drawn_m": 4.6,
+   "band_id": "10B+7D1",
+   "centreline_m": 2.85,
+   "class_centreline": [
+    "P13-GB-LT5M"
+   ],
+   "class_face_to_face": [
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "class_state": "CANDIDATES",
+   "direction": "Y",
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:223"
+    ]
+   },
+   "end_candidates": {},
+   "face_to_face_m": 2.3,
+   "handles": [
+    "10B",
+    "7D1"
+   ],
+   "part": "ANNEX",
+   "span_from_m": 2.0,
+   "span_id": "10B+7D1#2",
+   "span_to_m": 4.3,
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:22C"
+    ]
+   },
+   "tees_mid_span": [],
+   "v2_flags": [
+    "LENGTH_BASIS_CHANGES_CLASS face-to-face ['P13-GB-LT2_5M', 'P13-GB-LT5M'] vs centreline ['P13-GB-LT5M']"
+   ],
+   "v2_held": [],
+   "v2_status": "RELEASED",
+   "width_m": 0.3
+  },
+  {
+   "S1_probes": [
+    {
+     "at": 0.25,
+     "level": "+1.00",
+     "side": "A"
+    },
+    {
+     "at": 0.25,
+     "level": "NO_MARK",
+     "side": "B"
+    },
+    {
+     "at": 0.5,
+     "level": "+1.00",
+     "side": "A"
+    },
+    {
+     "at": 0.5,
+     "level": "NO_MARK",
+     "side": "B"
+    },
+    {
+     "at": 0.75,
+     "level": "+1.00",
+     "side": "A"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "B"
+    }
+   ],
+   "S2_walls": [],
+   "band_drawn_m": 4.225,
+   "band_id": "114+115+7DF",
+   "centreline_m": 2.925,
+   "class_centreline": [
+    "P13-GB-LT5M"
+   ],
+   "class_face_to_face": [
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "class_state": "CANDIDATES",
+   "direction": "X",
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:238"
+    ]
+   },
+   "end_candidates": {},
+   "face_to_face_m": 2.325,
+   "handles": [
+    "114",
+    "115",
+    "7DF"
+   ],
+   "part": "MAIN",
+   "span_from_m": -0.0,
+   "span_id": "114+115+7DF#1",
+   "span_to_m": 2.325,
+   "start": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "7E7+7E8"
+    ]
+   },
+   "tees_mid_span": [],
+   "v2_flags": [
+    "LENGTH_BASIS_CHANGES_CLASS face-to-face ['P13-GB-LT2_5M', 'P13-GB-LT5M'] vs centreline ['P13-GB-LT5M']"
+   ],
+   "v2_held": [],
+   "v2_status": "RELEASED",
+   "width_m": 0.3
+  },
+  {
+   "S1_probes": [
+    {
+     "at": 0.25,
+     "level": "+1.00",
+     "side": "A"
+    },
+    {
+     "at": 0.25,
+     "level": "+0.15",
+     "side": "B"
+    },
+    {
+     "at": 0.5,
+     "level": "+1.00",
+     "side": "A"
+    },
+    {
+     "at": 0.5,
+     "level": "+0.15",
+     "side": "B"
+    },
+    {
+     "at": 0.75,
+     "level": "+1.00",
+     "side": "A"
+    },
+    {
+     "at": 0.75,
+     "level": "+0.15",
+     "side": "B"
+    }
+   ],
+   "S2_walls": [
+    {
+     "exterior_side": true,
+     "kind": "EXTERNAL",
+     "overlap_m": 1.0,
+     "wall": "WB-FL0023-FL0024"
+    }
+   ],
+   "band_drawn_m": 4.225,
+   "band_id": "114+115+7DF",
+   "centreline_m": 1.6,
+   "class_centreline": [
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "class_face_to_face": [
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "class_state": "CANDIDATES",
+   "direction": "X",
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:1FC"
+    ]
+   },
+   "end_candidates": {},
+   "face_to_face_m": 1.0,
+   "handles": [
+    "114",
+    "115",
+    "7DF"
+   ],
+   "part": "MAIN",
+   "span_from_m": 3.225,
+   "span_id": "114+115+7DF#2",
+   "span_to_m": 4.225,
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:238"
+    ]
+   },
+   "tees_mid_span": [],
+   "v2_flags": [],
+   "v2_held": [],
+   "v2_status": "RELEASED",
+   "width_m": 0.3
+  },
+  {
+   "S1_probes": [
+    {
+     "at": 0.25,
+     "level": "+0.30",
+     "side": "A"
+    },
+    {
+     "at": 0.25,
+     "level": "BEYOND",
+     "side": "B"
+    },
+    {
+     "at": 0.5,
+     "level": "+0.30",
+     "side": "A"
+    },
+    {
+     "at": 0.5,
+     "level": "BEYOND",
+     "side": "B"
+    },
+    {
+     "at": 0.75,
+     "level": "+0.30",
+     "side": "A"
+    },
+    {
+     "at": 0.75,
+     "level": "BEYOND",
+     "side": "B"
+    }
+   ],
+   "S2_walls": [
+    {
+     "exterior_side": true,
+     "kind": "EXTERNAL",
+     "overlap_m": 6.0,
+     "wall": "WB-FL0097-FL0098"
+    }
+   ],
+   "band_drawn_m": 6.4,
+   "band_id": "136+7D5",
+   "centreline_m": 6.35,
+   "class_centreline": [
+    "P13-GB-GT5M"
+   ],
+   "class_face_to_face": [
+    "P13-GB-GT5M"
+   ],
+   "class_state": "ONE",
+   "direction": "Y",
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:204"
+    ]
+   },
+   "end_candidates": {},
+   "face_to_face_m": 6.0,
+   "handles": [
+    "136",
+    "7D5"
+   ],
+   "part": "ANNEX",
+   "span_from_m": 0.0,
+   "span_id": "136+7D5#1",
+   "span_to_m": 6.0,
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:207"
+    ]
+   },
+   "tees_mid_span": [],
+   "v2_flags": [],
+   "v2_held": [],
+   "v2_status": "RELEASED",
+   "width_m": 0.3
+  },
+  {
+   "S1_probes": [
+    {
+     "at": 0.25,
+     "level": "+0.30",
+     "side": "A"
+    },
+    {
+     "at": 0.25,
+     "level": "+0.15",
+     "side": "B"
+    },
+    {
+     "at": 0.5,
+     "level": "+0.30",
+     "side": "A"
+    },
+    {
+     "at": 0.5,
+     "level": "+0.15",
+     "side": "B"
+    },
+    {
+     "at": 0.75,
+     "level": "+0.30",
+     "side": "A"
+    },
+    {
+     "at": 0.75,
+     "level": "+0.15",
+     "side": "B"
+    }
+   ],
+   "S2_walls": [
+    {
+     "exterior_side": true,
+     "kind": "EXTERNAL",
+     "overlap_m": 2.4,
+     "wall": "WB-FL0020-FL0021"
+    }
+   ],
+   "band_drawn_m": 3.1,
+   "band_id": "137+138",
+   "centreline_m": 2.75,
+   "class_centreline": [
+    "P13-GB-LT5M"
+   ],
+   "class_face_to_face": [
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "class_state": "CANDIDATES",
+   "direction": "X",
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:214"
+    ]
+   },
+   "end_candidates": {},
+   "face_to_face_m": 2.4,
+   "handles": [
+    "137",
+    "138"
+   ],
+   "part": "ANNEX",
+   "span_from_m": 0.3,
+   "span_id": "137+138#1",
+   "span_to_m": 2.7,
+   "start": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "136+7D5"
+    ]
+   },
+   "tees_mid_span": [],
+   "v2_flags": [
+    "LENGTH_BASIS_CHANGES_CLASS face-to-face ['P13-GB-LT2_5M', 'P13-GB-LT5M'] vs centreline ['P13-GB-LT5M']"
+   ],
+   "v2_held": [],
+   "v2_status": "RELEASED",
+   "width_m": 0.3
+  },
+  {
+   "S1_probes": [
+    {
+     "at": 0.25,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.25,
+     "level": "NO_MARK",
+     "side": "B"
+    },
+    {
+     "at": 0.5,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.5,
+     "level": "NO_MARK",
+     "side": "B"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "B"
+    }
+   ],
+   "S2_walls": [
+    {
+     "exterior_side": false,
+     "kind": "INTERNAL",
+     "overlap_m": 0.6264,
+     "wall": "WB-FL0010-FL0011"
+    }
+   ],
+   "band_drawn_m": 1.45,
+   "band_id": "13C+7D9",
+   "centreline_m": 1.75,
+   "class_centreline": [
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "class_face_to_face": [
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "class_state": "CANDIDATES",
+   "direction": "X",
+   "end": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "13F+7D3"
+    ]
+   },
+   "end_candidates": {},
+   "face_to_face_m": 1.45,
+   "handles": [
+    "13C",
+    "7D9"
+   ],
+   "part": "ANNEX",
+   "span_from_m": -0.0,
+   "span_id": "13C+7D9#1",
+   "span_to_m": 1.45,
+   "start": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "13E+7D6"
+    ]
+   },
+   "tees_mid_span": [],
+   "v2_flags": [],
+   "v2_held": [],
+   "v2_status": "RELEASED",
+   "width_m": 0.3
+  },
+  {
+   "S1_probes": [
+    {
+     "at": 0.25,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.25,
+     "level": "+0.15",
+     "side": "B"
+    },
+    {
+     "at": 0.5,
+     "level": "+0.30",
+     "side": "A"
+    },
+    {
+     "at": 0.5,
+     "level": "+0.15",
+     "side": "B"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.75,
+     "level": "+0.15",
+     "side": "B"
+    }
+   ],
+   "S2_walls": [
+    {
+     "exterior_side": true,
+     "kind": "EXTERNAL",
+     "overlap_m": 5.8,
+     "wall": "WB-FL0017-FL0018"
+    }
+   ],
+   "band_drawn_m": 6.4,
+   "band_id": "13D+7D2",
+   "centreline_m": 6.2,
+   "class_centreline": [
+    "P13-GB-GT5M"
+   ],
+   "class_face_to_face": [
+    "P13-GB-GT5M"
+   ],
+   "class_state": "ONE",
+   "direction": "X",
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:223"
+    ]
+   },
+   "end_candidates": {},
+   "face_to_face_m": 5.8,
+   "handles": [
+    "13D",
+    "7D2"
+   ],
+   "part": "ANNEX",
+   "span_from_m": 0.6,
+   "span_id": "13D+7D2#1",
+   "span_to_m": 6.4,
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:211"
+    ]
+   },
+   "tees_mid_span": [
+    {
+     "band_id": "13F+7D3",
+     "station_m": 1.9
+    },
+    {
+     "band_id": "140+7D7",
+     "station_m": 3.8
+    }
+   ],
+   "v2_flags": [],
+   "v2_held": [],
+   "v2_status": "RELEASED",
+   "width_m": 0.3
+  },
+  {
+   "S1_probes": [
+    {
+     "at": 0.25,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.25,
+     "level": "+0.30",
+     "side": "B"
+    },
+    {
+     "at": 0.5,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.5,
+     "level": "+0.30",
+     "side": "B"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.75,
+     "level": "+0.30",
+     "side": "B"
+    }
+   ],
+   "S2_walls": [
+    {
+     "exterior_side": false,
+     "kind": "INTERNAL",
+     "overlap_m": 4.3,
+     "wall": "WB-FL0095-FL0096"
+    }
+   ],
+   "band_drawn_m": 5.1,
+   "band_id": "13E+7D6",
+   "centreline_m": 4.6,
+   "class_centreline": [
+    "P13-GB-LT5M"
+   ],
+   "class_face_to_face": [
+    "P13-GB-LT5M"
+   ],
+   "class_state": "ONE",
+   "direction": "Y",
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:211"
+    ]
+   },
+   "end_candidates": {},
+   "face_to_face_m": 4.3,
+   "handles": [
+    "13E",
+    "7D6"
+   ],
+   "part": "ANNEX",
+   "span_from_m": 0.0,
+   "span_id": "13E+7D6#1",
+   "span_to_m": 4.3,
+   "start": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "7D4+F8"
+    ]
+   },
+   "tees_mid_span": [
+    {
+     "band_id": "13C+7D9",
+     "station_m": 2.3
+    }
+   ],
+   "v2_flags": [
+    "PARTIAL_WIDTH_SUPPORT COL:211: covers 0.67 of the band width"
+   ],
+   "v2_held": [],
+   "v2_status": "RELEASED",
+   "width_m": 0.3
+  },
+  {
+   "S1_probes": [
+    {
+     "at": 0.25,
+     "level": "+0.15",
+     "side": "A"
+    },
+    {
+     "at": 0.25,
+     "level": "+0.30",
+     "side": "B"
+    },
+    {
+     "at": 0.5,
+     "level": "+0.15",
+     "side": "A"
+    },
+    {
+     "at": 0.5,
+     "level": "+0.30",
+     "side": "B"
+    },
+    {
+     "at": 0.75,
+     "level": "+0.15",
+     "side": "A"
+    },
+    {
+     "at": 0.75,
+     "level": "+0.30",
+     "side": "B"
+    }
+   ],
+   "S2_walls": [
+    {
+     "exterior_side": true,
+     "kind": "EXTERNAL",
+     "overlap_m": 0.5,
+     "wall": "WB-FL0094-FL0096"
+    }
+   ],
+   "band_drawn_m": 5.1,
+   "band_id": "13E+7D6",
+   "centreline_m": 0.65,
+   "class_centreline": [
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "class_face_to_face": [
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "class_state": "CANDIDATES",
+   "direction": "Y",
+   "end": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "ARC:139+13A/1"
+    ]
+   },
+   "end_candidates": {},
+   "face_to_face_m": 0.5,
+   "handles": [
+    "13E",
+    "7D6"
+   ],
+   "part": "ANNEX",
+   "span_from_m": 4.6,
+   "span_id": "13E+7D6#2",
+   "span_to_m": 5.1,
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:211"
+    ]
+   },
+   "tees_mid_span": [],
+   "v2_flags": [
+    "PARTIAL_WIDTH_SUPPORT COL:211: covers 0.67 of the band width"
+   ],
+   "v2_held": [],
+   "v2_status": "RELEASED",
+   "width_m": 0.3
+  },
+  {
+   "S1_probes": [
+    {
+     "at": 0.25,
+     "level": "+0.30",
+     "side": "A"
+    },
+    {
+     "at": 0.25,
+     "level": "NO_MARK",
+     "side": "B"
+    },
+    {
+     "at": 0.5,
+     "level": "+0.30",
+     "side": "A"
+    },
+    {
+     "at": 0.5,
+     "level": "NO_MARK",
+     "side": "B"
+    },
+    {
+     "at": 0.75,
+     "level": "+0.30",
+     "side": "A"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "B"
+    }
+   ],
+   "S2_walls": [
+    {
+     "exterior_side": false,
+     "kind": "INTERNAL",
+     "overlap_m": 4.3,
+     "wall": "WB-FL0092-FL0093"
+    }
+   ],
+   "band_drawn_m": 4.3,
+   "band_id": "13F+7D3",
+   "centreline_m": 4.6,
+   "class_centreline": [
+    "P13-GB-LT5M"
+   ],
+   "class_face_to_face": [
+    "P13-GB-LT5M"
+   ],
+   "class_state": "ONE",
+   "direction": "Y",
+   "end": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "13D+7D2"
+    ]
+   },
+   "end_candidates": {},
+   "face_to_face_m": 4.3,
+   "handles": [
+    "13F",
+    "7D3"
+   ],
+   "part": "ANNEX",
+   "span_from_m": 0.0,
+   "span_id": "13F+7D3#1",
+   "span_to_m": 4.3,
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:20B"
+    ]
+   },
+   "tees_mid_span": [
+    {
+     "band_id": "13C+7D9",
+     "station_m": 2.3
+    }
+   ],
+   "v2_flags": [],
+   "v2_held": [],
+   "v2_status": "RELEASED",
+   "width_m": 0.3
+  },
+  {
+   "S1_probes": [
+    {
+     "at": 0.25,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.25,
+     "level": "+0.30",
+     "side": "B"
+    },
+    {
+     "at": 0.5,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.5,
+     "level": "+0.30",
+     "side": "B"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.75,
+     "level": "+0.30",
+     "side": "B"
+    }
+   ],
+   "S2_walls": [
+    {
+     "exterior_side": false,
+     "kind": "INTERNAL",
+     "overlap_m": 4.3,
+     "wall": "WB-FL0089-FL0090"
+    }
+   ],
+   "band_drawn_m": 4.3,
+   "band_id": "140+7D7",
+   "centreline_m": 4.6,
+   "class_centreline": [
+    "P13-GB-LT5M"
+   ],
+   "class_face_to_face": [
+    "P13-GB-LT5M"
+   ],
+   "class_state": "ONE",
+   "direction": "Y",
+   "end": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "13D+7D2"
+    ]
+   },
+   "end_candidates": {},
+   "face_to_face_m": 4.3,
+   "handles": [
+    "140",
+    "7D7"
+   ],
+   "part": "ANNEX",
+   "span_from_m": 0.0,
+   "span_id": "140+7D7#1",
+   "span_to_m": 4.3,
+   "start": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "7D4+F8"
+    ]
+   },
+   "tees_mid_span": [
+    {
+     "band_id": "142+7D8",
+     "station_m": 1.35
+    }
+   ],
+   "v2_flags": [],
+   "v2_held": [],
+   "v2_status": "RELEASED",
+   "width_m": 0.3
+  },
+  {
+   "S1_probes": [
+    {
+     "at": 0.25,
+     "level": "+0.30",
+     "side": "A"
+    },
+    {
+     "at": 0.25,
+     "level": "NO_MARK",
+     "side": "B"
+    },
+    {
+     "at": 0.5,
+     "level": "+0.30",
+     "side": "A"
+    },
+    {
+     "at": 0.5,
+     "level": "NO_MARK",
+     "side": "B"
+    },
+    {
+     "at": 0.75,
+     "level": "+0.30",
+     "side": "A"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "B"
+    }
+   ],
+   "S2_walls": [
+    {
+     "exterior_side": false,
+     "kind": "INTERNAL",
+     "overlap_m": 1.2,
+     "wall": "WB-FL0086-FL0087"
+    }
+   ],
+   "band_drawn_m": 1.2,
+   "band_id": "141+7DA",
+   "centreline_m": 1.5,
+   "class_centreline": [
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "class_face_to_face": [
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "class_state": "CANDIDATES",
+   "direction": "Y",
+   "end": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "142+7D8"
+    ]
+   },
+   "end_candidates": {},
+   "face_to_face_m": 1.2,
+   "handles": [
+    "141",
+    "7DA"
+   ],
+   "part": "ANNEX",
+   "span_from_m": 0.0,
+   "span_id": "141+7DA#1",
+   "span_to_m": 1.2,
+   "start": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "7D4+F8"
+    ]
+   },
+   "tees_mid_span": [],
+   "v2_flags": [],
+   "v2_held": [],
+   "v2_status": "RELEASED",
+   "width_m": 0.3
+  },
+  {
+   "S1_probes": [
+    {
+     "at": 0.25,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.25,
+     "level": "NO_MARK",
+     "side": "B"
+    },
+    {
+     "at": 0.5,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.5,
+     "level": "NO_MARK",
+     "side": "B"
+    },
+    {
+     "at": 0.75,
+     "level": "+0.30",
+     "side": "A"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "B"
+    }
+   ],
+   "S2_walls": [
+    {
+     "exterior_side": false,
+     "kind": "INTERNAL",
+     "overlap_m": 2.45,
+     "wall": "WB-FL0007-FL0008"
+    }
+   ],
+   "band_drawn_m": 2.45,
+   "band_id": "142+7D8",
+   "centreline_m": 2.75,
+   "class_centreline": [
+    "P13-GB-LT5M"
+   ],
+   "class_face_to_face": [
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "class_state": "CANDIDATES",
+   "direction": "X",
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:22C"
+    ]
+   },
+   "end_candidates": {},
+   "face_to_face_m": 2.45,
+   "handles": [
+    "142",
+    "7D8"
+   ],
+   "part": "ANNEX",
+   "span_from_m": -0.0,
+   "span_id": "142+7D8#1",
+   "span_to_m": 2.45,
+   "start": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "140+7D7"
+    ]
+   },
+   "tees_mid_span": [
+    {
+     "band_id": "141+7DA",
+     "station_m": 1.35
+    }
+   ],
+   "v2_flags": [
+    "LENGTH_BASIS_CHANGES_CLASS face-to-face ['P13-GB-LT2_5M', 'P13-GB-LT5M'] vs centreline ['P13-GB-LT5M']"
+   ],
+   "v2_held": [],
+   "v2_status": "RELEASED",
+   "width_m": 0.3
+  },
+  {
+   "S1_probes": [
+    {
+     "at": 0.25,
+     "level": "+1.00",
+     "side": "A"
+    },
+    {
+     "at": 0.25,
+     "level": "+0.15",
+     "side": "B"
+    },
+    {
+     "at": 0.5,
+     "level": "+1.00",
+     "side": "A"
+    },
+    {
+     "at": 0.5,
+     "level": "NO_MARK",
+     "side": "B"
+    },
+    {
+     "at": 0.75,
+     "level": "+1.00",
+     "side": "A"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "B"
+    }
+   ],
+   "S2_walls": [
+    {
+     "exterior_side": true,
+     "kind": "EXTERNAL",
+     "overlap_m": 1.9,
+     "wall": "WB-FL0017-FL0018"
+    }
+   ],
+   "band_drawn_m": 3.0,
+   "band_id": "145+7CA",
+   "centreline_m": 2.6,
+   "class_centreline": [
+    "P13-GB-LT5M"
+   ],
+   "class_face_to_face": [
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "class_state": "CANDIDATES",
+   "direction": "X",
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:228"
+    ]
+   },
+   "end_candidates": {},
+   "face_to_face_m": 1.9,
+   "handles": [
+    "145",
+    "7CA"
+   ],
+   "part": "MAIN",
+   "span_from_m": 1.1,
+   "span_id": "145+7CA#1",
+   "span_to_m": 3.0,
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:220"
+    ]
+   },
+   "tees_mid_span": [
+    {
+     "band_id": "178+7DB",
+     "station_m": 1.75
+    }
+   ],
+   "v2_flags": [
+    "LENGTH_BASIS_CHANGES_CLASS face-to-face ['P13-GB-LT2_5M', 'P13-GB-LT5M'] vs centreline ['P13-GB-LT5M']"
+   ],
+   "v2_held": [],
+   "v2_status": "RELEASED",
+   "width_m": 0.3
+  },
+  {
+   "S1_probes": [
+    {
+     "at": 0.25,
+     "level": "+1.00",
+     "side": "A"
+    },
+    {
+     "at": 0.25,
+     "level": "+0.30/+1.00",
+     "side": "B"
+    },
+    {
+     "at": 0.5,
+     "level": "+1.00",
+     "side": "A"
+    },
+    {
+     "at": 0.5,
+     "level": "+0.30/+1.00",
+     "side": "B"
+    },
+    {
+     "at": 0.75,
+     "level": "+1.00",
+     "side": "A"
+    },
+    {
+     "at": 0.75,
+     "level": "+0.30/+1.00",
+     "side": "B"
+    }
+   ],
+   "S2_walls": [
+    {
+     "exterior_side": false,
+     "kind": "INTERNAL",
+     "overlap_m": 2.4,
+     "wall": "WB-FL0025-FL0026"
+    }
+   ],
+   "band_drawn_m": 2.4,
+   "band_id": "15C+7CC",
+   "centreline_m": 2.65,
+   "class_centreline": [
+    "P13-GB-LT5M"
+   ],
+   "class_face_to_face": [
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "class_state": "CANDIDATES",
+   "direction": "X",
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:1F2"
+    ]
+   },
+   "end_candidates": {},
+   "face_to_face_m": 2.4,
+   "handles": [
+    "15C",
+    "7CC"
+   ],
+   "part": "MAIN",
+   "span_from_m": -0.0,
+   "span_id": "15C+7CC#1",
+   "span_to_m": 2.4,
+   "start": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "109+7CB"
+    ]
+   },
+   "tees_mid_span": [],
+   "v2_flags": [
+    "LENGTH_BASIS_CHANGES_CLASS face-to-face ['P13-GB-LT2_5M', 'P13-GB-LT5M'] vs centreline ['P13-GB-LT5M']"
+   ],
+   "v2_held": [],
+   "v2_status": "RELEASED",
+   "width_m": 0.3
+  },
+  {
+   "S1_probes": [
+    {
+     "at": 0.25,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.25,
+     "level": "NO_MARK",
+     "side": "B"
+    },
+    {
+     "at": 0.5,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.5,
+     "level": "NO_MARK",
+     "side": "B"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "B"
+    }
+   ],
+   "S2_walls": [
+    {
+     "exterior_side": false,
+     "kind": "INTERNAL",
+     "overlap_m": 1.8871,
+     "wall": "WB-FL0070-FL0072"
+    }
+   ],
+   "band_drawn_m": 2.9,
+   "band_id": "15D+7C8",
+   "centreline_m": 4.2999,
+   "class_centreline": [
+    "P13-GB-LT5M"
+   ],
+   "class_face_to_face": [
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "class_state": "CANDIDATES",
+   "direction": "Y",
+   "end": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "170+7C3"
+    ]
+   },
+   "end_candidates": {},
+   "face_to_face_m": 1.8999,
+   "handles": [
+    "15D",
+    "7C8"
+   ],
+   "part": "MAIN",
+   "span_from_m": 1.0001,
+   "span_id": "15D+7C8#1",
+   "span_to_m": 2.9,
+   "start": {
+    "kind": "FOOTING_FACE",
+    "refs": [
+     "FTG:1B2B"
+    ]
+   },
+   "tees_mid_span": [
+    {
+     "band_id": "16F+7FF",
+     "station_m": 1.1
+    }
+   ],
+   "v2_flags": [
+    "LENGTH_BASIS_CHANGES_CLASS face-to-face ['P13-GB-LT2_5M', 'P13-GB-LT5M'] vs centreline ['P13-GB-LT5M']"
+   ],
+   "v2_held": [],
+   "v2_status": "RELEASED",
+   "width_m": 0.3
+  },
+  {
+   "S1_probes": [
+    {
+     "at": 0.25,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.25,
+     "level": "+0.30/+1.00",
+     "side": "B"
+    },
+    {
+     "at": 0.5,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.5,
+     "level": "+0.30/+1.00",
+     "side": "B"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.75,
+     "level": "+0.30/+1.00",
+     "side": "B"
+    }
+   ],
+   "S2_walls": [
+    {
+     "exterior_side": false,
+     "kind": "INTERNAL",
+     "overlap_m": 2.7,
+     "wall": "WB-FL0076-FL0077"
+    }
+   ],
+   "band_drawn_m": 3.0,
+   "band_id": "15E+15F",
+   "centreline_m": 3.2,
+   "class_centreline": [
+    "P13-GB-LT5M"
+   ],
+   "class_face_to_face": [
+    "P13-GB-LT5M"
+   ],
+   "class_state": "ONE",
+   "direction": "Y",
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:1E0"
+    ]
+   },
+   "end_candidates": {},
+   "face_to_face_m": 2.7,
+   "handles": [
+    "15E",
+    "15F"
+   ],
+   "part": "MAIN",
+   "span_from_m": 0.0,
+   "span_id": "15E+15F#1",
+   "span_to_m": 2.7,
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:1F5"
+    ]
+   },
+   "tees_mid_span": [
+    {
+     "band_id": "16F+7FF",
+     "station_m": 1.1
+    }
+   ],
+   "v2_flags": [],
+   "v2_held": [],
+   "v2_status": "RELEASED",
+   "width_m": 0.3
+  },
+  {
+   "S1_probes": [
+    {
+     "at": 0.25,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.25,
+     "level": "NO_MARK",
+     "side": "B"
+    },
+    {
+     "at": 0.5,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.5,
+     "level": "NO_MARK",
+     "side": "B"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "B"
+    }
+   ],
+   "S2_walls": [
+    {
+     "exterior_side": false,
+     "kind": "INTERNAL",
+     "overlap_m": 0.5,
+     "wall": "WB-FL0038-FL0039"
+    }
+   ],
+   "band_drawn_m": 1.25,
+   "band_id": "16F+7FF",
+   "centreline_m": 1.55,
+   "class_centreline": [
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "class_face_to_face": [
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "class_state": "CANDIDATES",
+   "direction": "X",
+   "end": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "15D+7C8"
+    ]
+   },
+   "end_candidates": {},
+   "face_to_face_m": 1.25,
+   "handles": [
+    "16F",
+    "7FF"
+   ],
+   "part": "MAIN",
+   "span_from_m": -0.0,
+   "span_id": "16F+7FF#1",
+   "span_to_m": 1.25,
+   "start": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "15E+15F"
+    ]
+   },
+   "tees_mid_span": [],
+   "v2_flags": [],
+   "v2_held": [],
+   "v2_status": "RELEASED",
+   "width_m": 0.3
+  },
+  {
+   "S1_probes": [
+    {
+     "at": 0.25,
+     "level": "+0.30/+1.00",
+     "side": "A"
+    },
+    {
+     "at": 0.25,
+     "level": "+0.15",
+     "side": "B"
+    },
+    {
+     "at": 0.5,
+     "level": "+0.30/+1.00",
+     "side": "A"
+    },
+    {
+     "at": 0.5,
+     "level": "+0.15",
+     "side": "B"
+    },
+    {
+     "at": 0.75,
+     "level": "+0.30/+1.00",
+     "side": "A"
+    },
+    {
+     "at": 0.75,
+     "level": "+0.15",
+     "side": "B"
+    }
+   ],
+   "S2_walls": [
+    {
+     "exterior_side": true,
+     "kind": "EXTERNAL",
+     "overlap_m": 2.4,
+     "wall": "WB-FL0041-FL0042"
+    }
+   ],
+   "band_drawn_m": 13.77,
+   "band_id": "170+7C3",
+   "centreline_m": 2.7,
+   "class_centreline": [
+    "P13-GB-LT5M"
+   ],
+   "class_face_to_face": [
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "class_state": "CANDIDATES",
+   "direction": "X",
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:1E0"
+    ]
+   },
+   "end_candidates": {},
+   "face_to_face_m": 2.4,
+   "handles": [
+    "170",
+    "7C3"
+   ],
+   "part": "MAIN",
+   "span_from_m": -0.0,
+   "span_id": "170+7C3#1",
+   "span_to_m": 2.4,
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:1DC"
+    ]
+   },
+   "tees_mid_span": [],
+   "v2_flags": [
+    "LENGTH_BASIS_CHANGES_CLASS face-to-face ['P13-GB-LT2_5M', 'P13-GB-LT5M'] vs centreline ['P13-GB-LT5M']"
+   ],
+   "v2_held": [],
+   "v2_status": "RELEASED",
+   "width_m": 0.3
+  },
+  {
+   "S1_probes": [
+    {
+     "at": 0.25,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.25,
+     "level": "+0.15",
+     "side": "B"
+    },
+    {
+     "at": 0.5,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.5,
+     "level": "+0.15",
+     "side": "B"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.75,
+     "level": "+0.15",
+     "side": "B"
+    }
+   ],
+   "S2_walls": [
+    {
+     "exterior_side": true,
+     "kind": "EXTERNAL",
+     "overlap_m": 3.37,
+     "wall": "WB-FL0041-FL0042"
+    }
+   ],
+   "band_drawn_m": 13.77,
+   "band_id": "170+7C3",
+   "centreline_m": 3.82,
+   "class_centreline": [
+    "P13-GB-LT5M"
+   ],
+   "class_face_to_face": [
+    "P13-GB-LT5M"
+   ],
+   "class_state": "ONE",
+   "direction": "X",
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:1E4"
+    ]
+   },
+   "end_candidates": {},
+   "face_to_face_m": 3.37,
+   "handles": [
+    "170",
+    "7C3"
+   ],
+   "part": "MAIN",
+   "span_from_m": 2.7,
+   "span_id": "170+7C3#2",
+   "span_to_m": 6.07,
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:1E0"
+    ]
+   },
+   "tees_mid_span": [
+    {
+     "band_id": "15D+7C8",
+     "station_m": 4.1
+    },
+    {
+     "band_id": "182+183",
+     "station_m": 4.508
+    }
+   ],
+   "v2_flags": [],
+   "v2_held": [],
+   "v2_status": "RELEASED",
+   "width_m": 0.3
+  },
+  {
+   "S1_probes": [
+    {
+     "at": 0.25,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.25,
+     "level": "+0.15",
+     "side": "B"
+    },
+    {
+     "at": 0.5,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.5,
+     "level": "+0.15",
+     "side": "B"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.75,
+     "level": "+0.15",
+     "side": "B"
+    }
+   ],
+   "S2_walls": [
+    {
+     "exterior_side": true,
+     "kind": "EXTERNAL",
+     "overlap_m": 3.35,
+     "wall": "WB-FL0041-FL0042"
+    }
+   ],
+   "band_drawn_m": 13.77,
+   "band_id": "170+7C3",
+   "centreline_m": 3.9,
+   "class_centreline": [
+    "P13-GB-LT5M"
+   ],
+   "class_face_to_face": [
+    "P13-GB-LT5M"
+   ],
+   "class_state": "ONE",
+   "direction": "X",
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:241"
+    ]
+   },
+   "end_candidates": {},
+   "face_to_face_m": 3.35,
+   "handles": [
+    "170",
+    "7C3"
+   ],
+   "part": "MAIN",
+   "span_from_m": 6.67,
+   "span_id": "170+7C3#3",
+   "span_to_m": 10.02,
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:1E4"
+    ]
+   },
+   "tees_mid_span": [
+    {
+     "band_id": "175+7DE",
+     "station_m": 9.05
+    }
+   ],
+   "v2_flags": [],
+   "v2_held": [],
+   "v2_status": "RELEASED",
+   "width_m": 0.3
+  },
+  {
+   "S1_probes": [
+    {
+     "at": 0.25,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.25,
+     "level": "+0.15",
+     "side": "B"
+    },
+    {
+     "at": 0.5,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.5,
+     "level": "+0.15",
+     "side": "B"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.75,
+     "level": "+0.15",
+     "side": "B"
+    }
+   ],
+   "S2_walls": [
+    {
+     "exterior_side": true,
+     "kind": "EXTERNAL",
+     "overlap_m": 3.25,
+     "wall": "WB-FL0041-FL0042"
+    }
+   ],
+   "band_drawn_m": 13.77,
+   "band_id": "170+7C3",
+   "centreline_m": 3.65,
+   "class_centreline": [
+    "P13-GB-LT5M"
+   ],
+   "class_face_to_face": [
+    "P13-GB-LT5M"
+   ],
+   "class_state": "ONE",
+   "direction": "X",
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:17C0"
+    ]
+   },
+   "end_candidates": {},
+   "face_to_face_m": 3.25,
+   "handles": [
+    "170",
+    "7C3"
+   ],
+   "part": "MAIN",
+   "span_from_m": 10.52,
+   "span_id": "170+7C3#4",
+   "span_to_m": 13.77,
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:241"
+    ]
+   },
+   "tees_mid_span": [],
+   "v2_flags": [],
+   "v2_held": [],
+   "v2_status": "RELEASED",
+   "width_m": 0.3
+  },
+  {
+   "S1_probes": [
+    {
+     "at": 0.25,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.25,
+     "level": "NO_MARK",
+     "side": "B"
+    },
+    {
+     "at": 0.5,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.5,
+     "level": "NO_MARK",
+     "side": "B"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "B"
+    }
+   ],
+   "S2_walls": [
+    {
+     "exterior_side": false,
+     "kind": "INTERNAL",
+     "overlap_m": 1.9,
+     "wall": "WB-FL0059-FL0060"
+    }
+   ],
+   "band_drawn_m": 3.75,
+   "band_id": "175+7DE",
+   "centreline_m": 4.05,
+   "class_centreline": [
+    "P13-GB-LT5M"
+   ],
+   "class_face_to_face": [
+    "P13-GB-LT5M"
+   ],
+   "class_state": "ONE",
+   "direction": "Y",
+   "end": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "170+7C3"
+    ]
+   },
+   "end_candidates": {},
+   "face_to_face_m": 3.75,
+   "handles": [
+    "175",
+    "7DE"
+   ],
+   "part": "MAIN",
+   "span_from_m": 0.0,
+   "span_id": "175+7DE#1",
+   "span_to_m": 3.75,
+   "start": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "177+7CD"
+    ]
+   },
+   "tees_mid_span": [
+    {
+     "band_id": "180D+180E",
+     "station_m": 1.7
+    }
+   ],
+   "v2_flags": [],
+   "v2_held": [],
+   "v2_status": "RELEASED",
+   "width_m": 0.3
+  },
+  {
+   "S1_probes": [
+    {
+     "at": 0.25,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.25,
+     "level": "NO_MARK",
+     "side": "B"
+    },
+    {
+     "at": 0.5,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.5,
+     "level": "NO_MARK",
+     "side": "B"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "B"
+    }
+   ],
+   "S2_walls": [
+    {
+     "exterior_side": false,
+     "kind": "INTERNAL",
+     "overlap_m": 3.75,
+     "wall": "WB-FL0063-FL0064"
+    }
+   ],
+   "band_drawn_m": 3.75,
+   "band_id": "176+7E6",
+   "centreline_m": 4.05,
+   "class_centreline": [
+    "P13-GB-LT5M"
+   ],
+   "class_face_to_face": [
+    "P13-GB-LT5M"
+   ],
+   "class_state": "ONE",
+   "direction": "Y",
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:1E4"
+    ]
+   },
+   "end_candidates": {},
+   "face_to_face_m": 3.75,
+   "handles": [
+    "176",
+    "7E6"
+   ],
+   "part": "MAIN",
+   "span_from_m": 0.0,
+   "span_id": "176+7E6#1",
+   "span_to_m": 3.75,
+   "start": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "177+7CD"
+    ]
+   },
+   "tees_mid_span": [
+    {
+     "band_id": "17E+17F",
+     "station_m": 2.3857
+    },
+    {
+     "band_id": "180+181",
+     "station_m": 2.4114
+    },
+    {
+     "band_id": "180D+180E",
+     "station_m": 1.7
+    }
+   ],
+   "v2_flags": [],
+   "v2_held": [],
+   "v2_status": "RELEASED",
+   "width_m": 0.3
+  },
+  {
+   "S1_probes": [
+    {
+     "at": 0.25,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.25,
+     "level": "NO_MARK",
+     "side": "B"
+    },
+    {
+     "at": 0.5,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.5,
+     "level": "NO_MARK",
+     "side": "B"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "B"
+    }
+   ],
+   "S2_walls": [
+    {
+     "exterior_side": false,
+     "kind": "INTERNAL",
+     "overlap_m": 3.7643,
+     "wall": "WB-FL0030-FL0031"
+    }
+   ],
+   "band_drawn_m": 7.5567,
+   "band_id": "177+7CD",
+   "centreline_m": 5.52,
+   "class_centreline": [
+    "P13-GB-GT5M"
+   ],
+   "class_face_to_face": [
+    "P13-GB-GT5M"
+   ],
+   "class_state": "ONE",
+   "direction": "X",
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:245"
+    ]
+   },
+   "end_candidates": {
+    "start:band_end": {
+     "class": [
+      "P13-GB-GT5M"
+     ],
+     "face_to_face_m": 5.02
+    },
+    "start:column_face COL:1EC": {
+     "class": [
+      "P13-GB-LT5M"
+     ],
+     "face_to_face_m": 4.97
+    },
+    "start:footing_face FTG:1B2B": {
+     "class": [
+      "P13-GB-LT5M"
+     ],
+     "face_to_face_m": 3.5202
+    }
+   },
+   "face_to_face_m": 5.02,
+   "handles": [
+    "177",
+    "7CD"
+   ],
+   "part": "MAIN",
+   "span_from_m": -0.0,
+   "span_id": "177+7CD#1",
+   "span_to_m": 5.02,
+   "start": {
+    "kind": "GAP_TO_COLUMN",
+    "refs": [
+     "COL:1EC"
+    ]
+   },
+   "tees_mid_span": [
+    {
+     "band_id": "175+7DE",
+     "station_m": 4.45
+    },
+    {
+     "band_id": "176+7E6",
+     "station_m": 2.05
+    },
+    {
+     "band_id": "7DC+7DD",
+     "station_m": 2.27
+    }
+   ],
+   "v2_flags": [
+    "END_CANDIDATES_CHANGE_CLASS: start:band_end 5.02 m ['P13-GB-GT5M']; start:column_face COL:1EC 4.97 m ['P13-GB-LT5M']; start:footing_face FTG:1B2B 3.5202 m ['P13-GB-LT5M']"
+   ],
+   "v2_held": [
+    "GAP_TO_COLUMN at the start: the band stops 0.050 m short of ['COL:1EC']; which face is the support is not printed"
+   ],
+   "v2_status": "HELD",
+   "width_m": 0.3
+  },
+  {
+   "S1_probes": [
+    {
+     "at": 0.25,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.25,
+     "level": "NO_MARK",
+     "side": "B"
+    },
+    {
+     "at": 0.5,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.5,
+     "level": "NO_MARK",
+     "side": "B"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "B"
+    }
+   ],
+   "S2_walls": [
+    {
+     "exterior_side": false,
+     "kind": "INTERNAL",
+     "overlap_m": 1.5367,
+     "wall": "WB-FL0030-FL0031"
+    }
+   ],
+   "band_drawn_m": 7.5567,
+   "band_id": "177+7CD",
+   "centreline_m": 2.0367,
+   "class_centreline": [
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "class_face_to_face": [
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "class_state": "CANDIDATES",
+   "direction": "X",
+   "end": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "ARC:157+158/2"
+    ]
+   },
+   "end_candidates": {},
+   "face_to_face_m": 1.5367,
+   "handles": [
+    "177",
+    "7CD"
+   ],
+   "part": "MAIN",
+   "span_from_m": 6.02,
+   "span_id": "177+7CD#2",
+   "span_to_m": 7.5567,
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:245"
+    ]
+   },
+   "tees_mid_span": [
+    {
+     "band_id": "7E7+7E8",
+     "station_m": 6.795
+    }
+   ],
+   "v2_flags": [],
+   "v2_held": [],
+   "v2_status": "RELEASED",
+   "width_m": 0.3
+  },
+  {
+   "S1_probes": [
+    {
+     "at": 0.25,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.25,
+     "level": "+0.15",
+     "side": "B"
+    },
+    {
+     "at": 0.5,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.5,
+     "level": "+0.15",
+     "side": "B"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.75,
+     "level": "+0.15",
+     "side": "B"
+    }
+   ],
+   "S2_walls": [],
+   "band_drawn_m": 3.8,
+   "band_id": "178+7DB",
+   "centreline_m": 4.1,
+   "class_centreline": [
+    "P13-GB-LT5M"
+   ],
+   "class_face_to_face": [
+    "P13-GB-LT5M"
+   ],
+   "class_state": "ONE",
+   "direction": "Y",
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:230"
+    ]
+   },
+   "end_candidates": {},
+   "face_to_face_m": 3.8,
+   "handles": [
+    "178",
+    "7DB"
+   ],
+   "part": "MAIN",
+   "span_from_m": 0.0,
+   "span_id": "178+7DB#1",
+   "span_to_m": 3.8,
+   "start": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "145+7CA"
+    ]
+   },
+   "tees_mid_span": [],
+   "v2_flags": [],
+   "v2_held": [],
+   "v2_status": "RELEASED",
+   "width_m": 0.3
+  },
+  {
+   "S1_probes": [
+    {
+     "at": 0.25,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.25,
+     "level": "NO_MARK",
+     "side": "B"
+    },
+    {
+     "at": 0.5,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.5,
+     "level": "NO_MARK",
+     "side": "B"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "B"
+    }
+   ],
+   "S2_walls": [],
+   "band_drawn_m": 1.2,
+   "band_id": "17B+7E5",
+   "centreline_m": 1.5,
+   "class_centreline": [
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "class_face_to_face": [
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "class_state": "CANDIDATES",
+   "direction": "Y",
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:23C"
+    ]
+   },
+   "end_candidates": {},
+   "face_to_face_m": 1.2,
+   "handles": [
+    "17B",
+    "7E5"
+   ],
+   "part": "MAIN",
+   "span_from_m": 0.0,
+   "span_id": "17B+7E5#1",
+   "span_to_m": 1.2,
+   "start": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "7D0+FC"
+    ]
+   },
+   "tees_mid_span": [],
+   "v2_flags": [],
+   "v2_held": [],
+   "v2_status": "RELEASED",
+   "width_m": 0.3
+  },
+  {
+   "S1_probes": [
+    {
+     "at": 0.25,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.25,
+     "level": "+1.00",
+     "side": "B"
+    },
+    {
+     "at": 0.5,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.5,
+     "level": "+1.00",
+     "side": "B"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.75,
+     "level": "+1.00",
+     "side": "B"
+    }
+   ],
+   "S2_walls": [],
+   "band_drawn_m": 3.2277,
+   "band_id": "17C+7E3",
+   "centreline_m": 4.3278,
+   "class_centreline": [
+    "P13-GB-LT5M"
+   ],
+   "class_face_to_face": [
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "class_state": "CANDIDATES",
+   "direction": "Y",
+   "end": {
+    "kind": "FOOTING_FACE",
+    "refs": [
+     "FTG:1B2B"
+    ]
+   },
+   "end_candidates": {},
+   "face_to_face_m": 1.9278,
+   "handles": [
+    "17C",
+    "7E3"
+   ],
+   "part": "MAIN",
+   "span_from_m": -0.0,
+   "span_id": "17C+7E3#1",
+   "span_to_m": 1.9279,
+   "start": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "7E1+7E2"
+    ]
+   },
+   "tees_mid_span": [],
+   "v2_flags": [
+    "LENGTH_BASIS_CHANGES_CLASS face-to-face ['P13-GB-LT2_5M', 'P13-GB-LT5M'] vs centreline ['P13-GB-LT5M']"
+   ],
+   "v2_held": [],
+   "v2_status": "RELEASED",
+   "width_m": 0.3
+  },
+  {
+   "S1_probes": [
+    {
+     "at": 0.25,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.25,
+     "level": "NO_MARK",
+     "side": "B"
+    },
+    {
+     "at": 0.5,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.5,
+     "level": "NO_MARK",
+     "side": "B"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "B"
+    }
+   ],
+   "S2_walls": [],
+   "band_drawn_m": 4.2723,
+   "band_id": "17D+7E4",
+   "centreline_m": 4.5723,
+   "class_centreline": [
+    "P13-GB-LT5M"
+   ],
+   "class_face_to_face": [
+    "P13-GB-LT5M"
+   ],
+   "class_state": "ONE",
+   "direction": "Y",
+   "end": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "7E1+7E2"
+    ]
+   },
+   "end_candidates": {},
+   "face_to_face_m": 4.2723,
+   "handles": [
+    "17D",
+    "7E4"
+   ],
+   "part": "MAIN",
+   "span_from_m": 0.0,
+   "span_id": "17D+7E4#1",
+   "span_to_m": 4.2722,
+   "start": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "7D0+FC"
+    ]
+   },
+   "tees_mid_span": [
+    {
+     "band_id": "184+7CF",
+     "station_m": 1.35
+    }
+   ],
+   "v2_flags": [],
+   "v2_held": [],
+   "v2_status": "RELEASED",
+   "width_m": 0.3
+  },
+  {
+   "S1_probes": [
+    {
+     "at": 0.25,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.25,
+     "level": "NO_MARK",
+     "side": "B"
+    },
+    {
+     "at": 0.5,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.5,
+     "level": "NO_MARK",
+     "side": "B"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "B"
+    }
+   ],
+   "S2_walls": [
+    {
+     "exterior_side": false,
+     "kind": "INTERNAL",
+     "overlap_m": 2.427,
+     "wall": "WB-FL0048-FL0049"
+    }
+   ],
+   "band_drawn_m": 2.4668,
+   "band_id": "17E+17F",
+   "centreline_m": 3.0365,
+   "class_centreline": [
+    "P13-GB-LT5M"
+   ],
+   "class_face_to_face": [
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "class_state": "CANDIDATES",
+   "direction": "OBLIQUE",
+   "end": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "176+7E6"
+    ]
+   },
+   "end_candidates": {},
+   "face_to_face_m": 2.4269,
+   "handles": [
+    "17E",
+    "17F"
+   ],
+   "part": "MAIN",
+   "span_from_m": 0.0399,
+   "span_id": "17E+17F#1",
+   "span_to_m": 2.4669,
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:1EF"
+    ]
+   },
+   "tees_mid_span": [
+    {
+     "band_id": "182+183",
+     "station_m": 1.878
+    }
+   ],
+   "v2_flags": [
+    "PARTIAL_WIDTH_SUPPORT COL:1EF: covers 0.27 of the band width",
+    "LENGTH_BASIS_CHANGES_CLASS face-to-face ['P13-GB-LT2_5M', 'P13-GB-LT5M'] vs centreline ['P13-GB-LT5M']"
+   ],
+   "v2_held": [],
+   "v2_status": "RELEASED",
+   "width_m": 0.3
+  },
+  {
+   "S1_probes": [
+    {
+     "at": 0.25,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.25,
+     "level": "NO_MARK",
+     "side": "B"
+    },
+    {
+     "at": 0.5,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.5,
+     "level": "NO_MARK",
+     "side": "B"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "B"
+    }
+   ],
+   "S2_walls": [
+    {
+     "exterior_side": false,
+     "kind": "INTERNAL",
+     "overlap_m": 0.789,
+     "wall": "WB-FL0100-FL0101"
+    }
+   ],
+   "band_drawn_m": 0.789,
+   "band_id": "180+181",
+   "centreline_m": 1.5132,
+   "class_centreline": [
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "class_face_to_face": [
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "class_state": "CANDIDATES",
+   "direction": "OBLIQUE",
+   "end": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "180D+180E"
+    ]
+   },
+   "end_candidates": {},
+   "face_to_face_m": 0.789,
+   "handles": [
+    "180",
+    "181"
+   ],
+   "part": "MAIN",
+   "span_from_m": 0.0,
+   "span_id": "180+181#1",
+   "span_to_m": 0.789,
+   "start": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "176+7E6"
+    ]
+   },
+   "tees_mid_span": [],
+   "v2_flags": [],
+   "v2_held": [],
+   "v2_status": "RELEASED",
+   "width_m": 0.3
+  },
+  {
+   "S1_probes": [
+    {
+     "at": 0.25,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.25,
+     "level": "NO_MARK",
+     "side": "B"
+    },
+    {
+     "at": 0.5,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.5,
+     "level": "NO_MARK",
+     "side": "B"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "B"
+    }
+   ],
+   "S2_walls": [],
+   "band_drawn_m": 2.1,
+   "band_id": "180D+180E",
+   "centreline_m": 2.4,
+   "class_centreline": [
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "class_face_to_face": [
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "class_state": "CANDIDATES",
+   "direction": "X",
+   "end": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "175+7DE"
+    ]
+   },
+   "end_candidates": {},
+   "face_to_face_m": 2.1,
+   "handles": [
+    "180D",
+    "180E"
+   ],
+   "part": "MAIN",
+   "span_from_m": -0.0,
+   "span_id": "180D+180E#1",
+   "span_to_m": 2.1,
+   "start": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "176+7E6"
+    ]
+   },
+   "tees_mid_span": [
+    {
+     "band_id": "180+181",
+     "station_m": 0.5614
+    }
+   ],
+   "v2_flags": [],
+   "v2_held": [],
+   "v2_status": "RELEASED",
+   "width_m": 0.3
+  },
+  {
+   "S1_probes": [
+    {
+     "at": 0.25,
+     "level": "+0.15",
+     "side": "A"
+    },
+    {
+     "at": 0.25,
+     "level": "+0.15",
+     "side": "B"
+    },
+    {
+     "at": 0.5,
+     "level": "+0.15",
+     "side": "A"
+    },
+    {
+     "at": 0.5,
+     "level": "+0.15",
+     "side": "B"
+    },
+    {
+     "at": 0.75,
+     "level": "+0.15",
+     "side": "A"
+    },
+    {
+     "at": 0.75,
+     "level": "+0.15",
+     "side": "B"
+    }
+   ],
+   "S2_walls": [],
+   "band_drawn_m": 1.3,
+   "band_id": "1811+1812",
+   "centreline_m": 1.55,
+   "class_centreline": [
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "class_face_to_face": [
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "class_state": "CANDIDATES",
+   "direction": "X",
+   "end": {
+    "kind": "FREE_END",
+    "refs": []
+   },
+   "end_candidates": {},
+   "face_to_face_m": 1.3,
+   "handles": [
+    "1811",
+    "1812"
+   ],
+   "part": "MAIN",
+   "span_from_m": -0.0,
+   "span_id": "1811+1812#1",
+   "span_to_m": 1.3,
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:1E8"
+    ]
+   },
+   "tees_mid_span": [],
+   "v2_flags": [],
+   "v2_held": [
+    "FREE_END at the end: no column, band or footing; the support is not established"
+   ],
+   "v2_status": "HELD",
+   "width_m": 0.3
+  },
+  {
+   "S1_probes": [
+    {
+     "at": 0.25,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.25,
+     "level": "NO_MARK",
+     "side": "B"
+    },
+    {
+     "at": 0.5,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.5,
+     "level": "NO_MARK",
+     "side": "B"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "B"
+    }
+   ],
+   "S2_walls": [
+    {
+     "exterior_side": false,
+     "kind": "INTERNAL",
+     "overlap_m": 2.0732,
+     "wall": "WB-FL0102-FL0103"
+    }
+   ],
+   "band_drawn_m": 2.0732,
+   "band_id": "182+183",
+   "centreline_m": 2.5854,
+   "class_centreline": [
+    "P13-GB-LT5M"
+   ],
+   "class_face_to_face": [
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "class_state": "CANDIDATES",
+   "direction": "OBLIQUE",
+   "end": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "17E+17F"
+    ]
+   },
+   "end_candidates": {},
+   "face_to_face_m": 2.0732,
+   "handles": [
+    "182",
+    "183"
+   ],
+   "part": "MAIN",
+   "span_from_m": 0.0,
+   "span_id": "182+183#1",
+   "span_to_m": 2.0732,
+   "start": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "170+7C3"
+    ]
+   },
+   "tees_mid_span": [],
+   "v2_flags": [
+    "LENGTH_BASIS_CHANGES_CLASS face-to-face ['P13-GB-LT2_5M', 'P13-GB-LT5M'] vs centreline ['P13-GB-LT5M']"
+   ],
+   "v2_held": [],
+   "v2_status": "RELEASED",
+   "width_m": 0.3
+  },
+  {
+   "S1_probes": [
+    {
+     "at": 0.25,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.25,
+     "level": "NO_MARK",
+     "side": "B"
+    },
+    {
+     "at": 0.5,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.5,
+     "level": "NO_MARK",
+     "side": "B"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "B"
+    }
+   ],
+   "S2_walls": [
+    {
+     "exterior_side": false,
+     "kind": "INTERNAL",
+     "overlap_m": 3.02,
+     "wall": "WB-FL0007-FL0008"
+    }
+   ],
+   "band_drawn_m": 12.07,
+   "band_id": "184+7CF",
+   "centreline_m": 3.57,
+   "class_centreline": [
+    "P13-GB-LT5M"
+   ],
+   "class_face_to_face": [
+    "P13-GB-LT5M"
+   ],
+   "class_state": "ONE",
+   "direction": "X",
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:24D"
+    ]
+   },
+   "end_candidates": {},
+   "face_to_face_m": 3.02,
+   "handles": [
+    "184",
+    "7CF"
+   ],
+   "part": "MAIN",
+   "span_from_m": -0.0,
+   "span_id": "184+7CF#1",
+   "span_to_m": 3.02,
+   "start": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "17D+7E4"
+    ]
+   },
+   "tees_mid_span": [],
+   "v2_flags": [],
+   "v2_held": [],
+   "v2_status": "RELEASED",
+   "width_m": 0.3
+  },
+  {
+   "S1_probes": [
+    {
+     "at": 0.25,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.25,
+     "level": "NO_MARK",
+     "side": "B"
+    },
+    {
+     "at": 0.5,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.5,
+     "level": "NO_MARK",
+     "side": "B"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "B"
+    }
+   ],
+   "S2_walls": [
+    {
+     "exterior_side": false,
+     "kind": "INTERNAL",
+     "overlap_m": 2.65,
+     "wall": "WB-FL0007-FL0008"
+    }
+   ],
+   "band_drawn_m": 12.07,
+   "band_id": "184+7CF",
+   "centreline_m": 3.35,
+   "class_centreline": [
+    "P13-GB-LT5M"
+   ],
+   "class_face_to_face": [
+    "P13-GB-LT5M"
+   ],
+   "class_state": "ONE",
+   "direction": "X",
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:23C"
+    ]
+   },
+   "end_candidates": {},
+   "face_to_face_m": 2.65,
+   "handles": [
+    "184",
+    "7CF"
+   ],
+   "part": "MAIN",
+   "span_from_m": 3.82,
+   "span_id": "184+7CF#2",
+   "span_to_m": 6.47,
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:24D"
+    ]
+   },
+   "tees_mid_span": [],
+   "v2_flags": [],
+   "v2_held": [],
+   "v2_status": "RELEASED",
+   "width_m": 0.3
+  },
+  {
+   "S1_probes": [
+    {
+     "at": 0.25,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.25,
+     "level": "+1.00",
+     "side": "B"
+    },
+    {
+     "at": 0.5,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.5,
+     "level": "+1.00",
+     "side": "B"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.75,
+     "level": "+1.00",
+     "side": "B"
+    }
+   ],
+   "S2_walls": [],
+   "band_drawn_m": 12.07,
+   "band_id": "184+7CF",
+   "centreline_m": 5.45,
+   "class_centreline": [
+    "P13-GB-GT5M"
+   ],
+   "class_face_to_face": [
+    "P13-GB-GT5M",
+    "P13-GB-LT5M"
+   ],
+   "class_state": "ON_LIMIT",
+   "direction": "X",
+   "end": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "7E0+FD"
+    ]
+   },
+   "end_candidates": {},
+   "face_to_face_m": 5.0,
+   "handles": [
+    "184",
+    "7CF"
+   ],
+   "part": "MAIN",
+   "span_from_m": 7.07,
+   "span_id": "184+7CF#3",
+   "span_to_m": 12.07,
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:23C"
+    ]
+   },
+   "tees_mid_span": [
+    {
+     "band_id": "7E7+7E8",
+     "station_m": 7.695
+    }
+   ],
+   "v2_flags": [
+    "LENGTH_BASIS_CHANGES_CLASS face-to-face ['P13-GB-GT5M', 'P13-GB-LT5M'] vs centreline ['P13-GB-GT5M']"
+   ],
+   "v2_held": [
+    "ON_LIMIT: 5.000 m meets no printed title; candidates ['P13-GB-GT5M', 'P13-GB-LT5M']"
+   ],
+   "v2_status": "HELD",
+   "width_m": 0.3
+  },
+  {
+   "S1_probes": [
+    {
+     "at": 0.25,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.25,
+     "level": "+0.15",
+     "side": "B"
+    },
+    {
+     "at": 0.5,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.5,
+     "level": "+0.15",
+     "side": "B"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.75,
+     "level": "+0.15",
+     "side": "B"
+    }
+   ],
+   "S2_walls": [
+    {
+     "exterior_side": true,
+     "kind": "EXTERNAL",
+     "overlap_m": 0.6,
+     "wall": "WB-FL0028-FL0029"
+    }
+   ],
+   "band_drawn_m": 1.4,
+   "band_id": "185+7C7",
+   "centreline_m": 1.15,
+   "class_centreline": [
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "class_face_to_face": [
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "class_state": "CANDIDATES",
+   "direction": "X",
+   "end": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "109+7CB"
+    ]
+   },
+   "end_candidates": {},
+   "face_to_face_m": 0.6,
+   "handles": [
+    "185",
+    "7C7"
+   ],
+   "part": "MAIN",
+   "span_from_m": 0.8,
+   "span_id": "185+7C7#1",
+   "span_to_m": 1.4,
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:230"
+    ]
+   },
+   "tees_mid_span": [],
+   "v2_flags": [],
+   "v2_held": [],
+   "v2_status": "RELEASED",
+   "width_m": 0.3
+  },
+  {
+   "S1_probes": [
+    {
+     "at": 0.25,
+     "level": "BEYOND",
+     "side": "A"
+    },
+    {
+     "at": 0.25,
+     "level": "+1.00",
+     "side": "B"
+    },
+    {
+     "at": 0.5,
+     "level": "BEYOND",
+     "side": "A"
+    },
+    {
+     "at": 0.5,
+     "level": "+1.00",
+     "side": "B"
+    },
+    {
+     "at": 0.75,
+     "level": "BEYOND",
+     "side": "A"
+    },
+    {
+     "at": 0.75,
+     "level": "+1.00",
+     "side": "B"
+    }
+   ],
+   "S2_walls": [
+    {
+     "exterior_side": true,
+     "kind": "EXTERNAL",
+     "overlap_m": 2.975,
+     "wall": "WB-FL0001-FL0002"
+    }
+   ],
+   "band_drawn_m": 18.87,
+   "band_id": "7D0+FC",
+   "centreline_m": 3.775,
+   "class_centreline": [
+    "P13-GB-LT5M"
+   ],
+   "class_face_to_face": [
+    "P13-GB-LT5M"
+   ],
+   "class_state": "ONE",
+   "direction": "X",
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:249"
+    ]
+   },
+   "end_candidates": {},
+   "face_to_face_m": 2.975,
+   "handles": [
+    "7D0",
+    "FC"
+   ],
+   "part": "MAIN",
+   "span_from_m": -0.0,
+   "span_id": "7D0+FC#1",
+   "span_to_m": 2.975,
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:218"
+    ]
+   },
+   "tees_mid_span": [
+    {
+     "band_id": "109+7CB",
+     "station_m": 2.65
+    }
+   ],
+   "v2_flags": [],
+   "v2_held": [],
+   "v2_status": "RELEASED",
+   "width_m": 0.3
+  },
+  {
+   "S1_probes": [
+    {
+     "at": 0.25,
+     "level": "BEYOND",
+     "side": "A"
+    },
+    {
+     "at": 0.25,
+     "level": "NO_MARK",
+     "side": "B"
+    },
+    {
+     "at": 0.5,
+     "level": "BEYOND",
+     "side": "A"
+    },
+    {
+     "at": 0.5,
+     "level": "NO_MARK",
+     "side": "B"
+    },
+    {
+     "at": 0.75,
+     "level": "BEYOND",
+     "side": "A"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "B"
+    }
+   ],
+   "S2_walls": [
+    {
+     "exterior_side": true,
+     "kind": "EXTERNAL",
+     "overlap_m": 5.745,
+     "wall": "WB-FL0001-FL0002"
+    }
+   ],
+   "band_drawn_m": 18.87,
+   "band_id": "7D0+FC",
+   "centreline_m": 6.545,
+   "class_centreline": [
+    "P13-GB-GT5M"
+   ],
+   "class_face_to_face": [
+    "P13-GB-GT5M"
+   ],
+   "class_state": "ONE",
+   "direction": "X",
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:251"
+    ]
+   },
+   "end_candidates": {},
+   "face_to_face_m": 5.745,
+   "handles": [
+    "7D0",
+    "FC"
+   ],
+   "part": "MAIN",
+   "span_from_m": 4.075,
+   "span_id": "7D0+FC#2",
+   "span_to_m": 9.82,
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:249"
+    ]
+   },
+   "tees_mid_span": [
+    {
+     "band_id": "17D+7E4",
+     "station_m": 6.35
+    }
+   ],
+   "v2_flags": [],
+   "v2_held": [],
+   "v2_status": "RELEASED",
+   "width_m": 0.3
+  },
+  {
+   "S1_probes": [
+    {
+     "at": 0.25,
+     "level": "BEYOND",
+     "side": "A"
+    },
+    {
+     "at": 0.25,
+     "level": "NO_MARK",
+     "side": "B"
+    },
+    {
+     "at": 0.5,
+     "level": "BEYOND",
+     "side": "A"
+    },
+    {
+     "at": 0.5,
+     "level": "NO_MARK",
+     "side": "B"
+    },
+    {
+     "at": 0.75,
+     "level": "BEYOND",
+     "side": "A"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "B"
+    }
+   ],
+   "S2_walls": [
+    {
+     "exterior_side": true,
+     "kind": "EXTERNAL",
+     "overlap_m": 6.35,
+     "wall": "WB-FL0001-FL0002"
+    }
+   ],
+   "band_drawn_m": 18.87,
+   "band_id": "7D0+FC",
+   "centreline_m": 6.95,
+   "class_centreline": [
+    "P13-GB-GT5M"
+   ],
+   "class_face_to_face": [
+    "P13-GB-GT5M"
+   ],
+   "class_state": "ONE",
+   "direction": "X",
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:255"
+    ]
+   },
+   "end_candidates": {},
+   "face_to_face_m": 6.35,
+   "handles": [
+    "7D0",
+    "FC"
+   ],
+   "part": "MAIN",
+   "span_from_m": 10.32,
+   "span_id": "7D0+FC#3",
+   "span_to_m": 16.67,
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:251"
+    ]
+   },
+   "tees_mid_span": [
+    {
+     "band_id": "17B+7E5",
+     "station_m": 13.42
+    }
+   ],
+   "v2_flags": [],
+   "v2_held": [],
+   "v2_status": "RELEASED",
+   "width_m": 0.3
+  },
+  {
+   "S1_probes": [
+    {
+     "at": 0.25,
+     "level": "BEYOND",
+     "side": "A"
+    },
+    {
+     "at": 0.25,
+     "level": "NO_MARK",
+     "side": "B"
+    },
+    {
+     "at": 0.5,
+     "level": "BEYOND",
+     "side": "A"
+    },
+    {
+     "at": 0.5,
+     "level": "NO_MARK",
+     "side": "B"
+    },
+    {
+     "at": 0.75,
+     "level": "BEYOND",
+     "side": "A"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "B"
+    }
+   ],
+   "S2_walls": [
+    {
+     "exterior_side": true,
+     "kind": "EXTERNAL",
+     "overlap_m": 1.2,
+     "wall": "WB-FL0001-FL0002"
+    }
+   ],
+   "band_drawn_m": 18.87,
+   "band_id": "7D0+FC",
+   "centreline_m": 1.7,
+   "class_centreline": [
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "class_face_to_face": [
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "class_state": "CANDIDATES",
+   "direction": "X",
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:200"
+    ]
+   },
+   "end_candidates": {},
+   "face_to_face_m": 1.2,
+   "handles": [
+    "7D0",
+    "FC"
+   ],
+   "part": "MAIN",
+   "span_from_m": 17.37,
+   "span_id": "7D0+FC#4",
+   "span_to_m": 18.57,
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:255"
+    ]
+   },
+   "tees_mid_span": [],
+   "v2_flags": [],
+   "v2_held": [],
+   "v2_status": "RELEASED",
+   "width_m": 0.3
+  },
+  {
+   "S1_probes": [
+    {
+     "at": 0.25,
+     "level": "BEYOND",
+     "side": "A"
+    },
+    {
+     "at": 0.25,
+     "level": "+0.30",
+     "side": "B"
+    },
+    {
+     "at": 0.5,
+     "level": "BEYOND",
+     "side": "A"
+    },
+    {
+     "at": 0.5,
+     "level": "+0.30",
+     "side": "B"
+    },
+    {
+     "at": 0.75,
+     "level": "BEYOND",
+     "side": "A"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "B"
+    }
+   ],
+   "S2_walls": [
+    {
+     "exterior_side": true,
+     "kind": "EXTERNAL",
+     "overlap_m": 5.45,
+     "wall": "WB-FL0001-FL0002"
+    }
+   ],
+   "band_drawn_m": 10.13,
+   "band_id": "7D4+F8",
+   "centreline_m": 5.85,
+   "class_centreline": [
+    "P13-GB-GT5M"
+   ],
+   "class_face_to_face": [
+    "P13-GB-GT5M"
+   ],
+   "class_state": "ONE",
+   "direction": "X",
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:20B"
+    ]
+   },
+   "end_candidates": {},
+   "face_to_face_m": 5.45,
+   "handles": [
+    "7D4",
+    "F8"
+   ],
+   "part": "ANNEX",
+   "span_from_m": 0.03,
+   "span_id": "7D4+F8#1",
+   "span_to_m": 5.48,
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:207"
+    ]
+   },
+   "tees_mid_span": [
+    {
+     "band_id": "13E+7D6",
+     "station_m": 3.88
+    }
+   ],
+   "v2_flags": [],
+   "v2_held": [],
+   "v2_status": "RELEASED",
+   "width_m": 0.3
+  },
+  {
+   "S1_probes": [
+    {
+     "at": 0.25,
+     "level": "BEYOND",
+     "side": "A"
+    },
+    {
+     "at": 0.25,
+     "level": "+0.30",
+     "side": "B"
+    },
+    {
+     "at": 0.5,
+     "level": "BEYOND",
+     "side": "A"
+    },
+    {
+     "at": 0.5,
+     "level": "NO_MARK",
+     "side": "B"
+    },
+    {
+     "at": 0.75,
+     "level": "BEYOND",
+     "side": "A"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "B"
+    }
+   ],
+   "S2_walls": [
+    {
+     "exterior_side": true,
+     "kind": "EXTERNAL",
+     "overlap_m": 4.25,
+     "wall": "WB-FL0001-FL0002"
+    }
+   ],
+   "band_drawn_m": 10.13,
+   "band_id": "7D4+F8",
+   "centreline_m": 4.6,
+   "class_centreline": [
+    "P13-GB-LT5M"
+   ],
+   "class_face_to_face": [
+    "P13-GB-LT5M"
+   ],
+   "class_state": "ONE",
+   "direction": "X",
+   "end": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "10B+7D1"
+    ]
+   },
+   "end_candidates": {},
+   "face_to_face_m": 4.25,
+   "handles": [
+    "7D4",
+    "F8"
+   ],
+   "part": "ANNEX",
+   "span_from_m": 5.88,
+   "span_id": "7D4+F8#2",
+   "span_to_m": 10.13,
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:20B"
+    ]
+   },
+   "tees_mid_span": [
+    {
+     "band_id": "140+7D7",
+     "station_m": 7.53
+    },
+    {
+     "band_id": "141+7DA",
+     "station_m": 9.03
+    }
+   ],
+   "v2_flags": [],
+   "v2_held": [],
+   "v2_status": "RELEASED",
+   "width_m": 0.3
+  },
+  {
+   "S1_probes": [
+    {
+     "at": 0.25,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.25,
+     "level": "NO_MARK",
+     "side": "B"
+    },
+    {
+     "at": 0.5,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.5,
+     "level": "NO_MARK",
+     "side": "B"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "B"
+    }
+   ],
+   "S2_walls": [],
+   "band_drawn_m": 7.35,
+   "band_id": "7DC+7DD",
+   "centreline_m": 3.825,
+   "class_centreline": [
+    "P13-GB-LT5M"
+   ],
+   "class_face_to_face": [
+    "P13-GB-LT5M"
+   ],
+   "class_state": "ONE",
+   "direction": "Y",
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:7F5"
+    ]
+   },
+   "end_candidates": {},
+   "face_to_face_m": 3.525,
+   "handles": [
+    "7DC",
+    "7DD"
+   ],
+   "part": "MAIN",
+   "span_from_m": 0.0,
+   "span_id": "7DC+7DD#1",
+   "span_to_m": 3.525,
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:24D"
+    ]
+   },
+   "tees_mid_span": [
+    {
+     "band_id": "7E1+7E2",
+     "station_m": 2.9223
+    }
+   ],
+   "v2_flags": [],
+   "v2_held": [],
+   "v2_status": "RELEASED",
+   "width_m": 0.3
+  },
+  {
+   "S1_probes": [
+    {
+     "at": 0.25,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.25,
+     "level": "NO_MARK",
+     "side": "B"
+    },
+    {
+     "at": 0.5,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.5,
+     "level": "NO_MARK",
+     "side": "B"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "B"
+    }
+   ],
+   "S2_walls": [],
+   "band_drawn_m": 7.35,
+   "band_id": "7DC+7DD",
+   "centreline_m": 3.825,
+   "class_centreline": [
+    "P13-GB-LT5M"
+   ],
+   "class_face_to_face": [
+    "P13-GB-LT5M"
+   ],
+   "class_state": "ONE",
+   "direction": "Y",
+   "end": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "177+7CD"
+    ]
+   },
+   "end_candidates": {},
+   "face_to_face_m": 3.525,
+   "handles": [
+    "7DC",
+    "7DD"
+   ],
+   "part": "MAIN",
+   "span_from_m": 3.825,
+   "span_id": "7DC+7DD#2",
+   "span_to_m": 7.35,
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:7F5"
+    ]
+   },
+   "tees_mid_span": [],
+   "v2_flags": [],
+   "v2_held": [],
+   "v2_status": "RELEASED",
+   "width_m": 0.3
+  },
+  {
+   "S1_probes": [
+    {
+     "at": 0.25,
+     "level": "BEYOND",
+     "side": "A"
+    },
+    {
+     "at": 0.25,
+     "level": "NO_MARK",
+     "side": "B"
+    },
+    {
+     "at": 0.5,
+     "level": "BEYOND",
+     "side": "A"
+    },
+    {
+     "at": 0.5,
+     "level": "+1.00",
+     "side": "B"
+    },
+    {
+     "at": 0.75,
+     "level": "BEYOND",
+     "side": "A"
+    },
+    {
+     "at": 0.75,
+     "level": "+1.00",
+     "side": "B"
+    }
+   ],
+   "S2_walls": [
+    {
+     "exterior_side": true,
+     "kind": "EXTERNAL",
+     "overlap_m": 3.35,
+     "wall": "WB-FL0055-FL0056"
+    }
+   ],
+   "band_drawn_m": 7.9,
+   "band_id": "7E0+FD",
+   "centreline_m": 3.75,
+   "class_centreline": [
+    "P13-GB-LT5M"
+   ],
+   "class_face_to_face": [
+    "P13-GB-LT5M"
+   ],
+   "class_state": "ONE",
+   "direction": "Y",
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:809"
+    ]
+   },
+   "end_candidates": {},
+   "face_to_face_m": 3.35,
+   "handles": [
+    "7E0",
+    "FD"
+   ],
+   "part": "MAIN",
+   "span_from_m": 0.5,
+   "span_id": "7E0+FD#1",
+   "span_to_m": 3.85,
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:200"
+    ]
+   },
+   "tees_mid_span": [
+    {
+     "band_id": "184+7CF",
+     "station_m": 1.65
+    }
+   ],
+   "v2_flags": [],
+   "v2_held": [],
+   "v2_status": "RELEASED",
+   "width_m": 0.3
+  },
+  {
+   "S1_probes": [
+    {
+     "at": 0.25,
+     "level": "BEYOND",
+     "side": "A"
+    },
+    {
+     "at": 0.25,
+     "level": "+1.00",
+     "side": "B"
+    },
+    {
+     "at": 0.5,
+     "level": "BEYOND",
+     "side": "A"
+    },
+    {
+     "at": 0.5,
+     "level": "+1.00",
+     "side": "B"
+    },
+    {
+     "at": 0.75,
+     "level": "BEYOND",
+     "side": "A"
+    },
+    {
+     "at": 0.75,
+     "level": "+1.00",
+     "side": "B"
+    }
+   ],
+   "S2_walls": [
+    {
+     "exterior_side": true,
+     "kind": "EXTERNAL",
+     "overlap_m": 3.25,
+     "wall": "WB-FL0055-FL0056"
+    }
+   ],
+   "band_drawn_m": 7.9,
+   "band_id": "7E0+FD",
+   "centreline_m": 3.65,
+   "class_centreline": [
+    "P13-GB-LT5M"
+   ],
+   "class_face_to_face": [
+    "P13-GB-LT5M"
+   ],
+   "class_state": "ONE",
+   "direction": "Y",
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:1FC"
+    ]
+   },
+   "end_candidates": {},
+   "face_to_face_m": 3.25,
+   "handles": [
+    "7E0",
+    "FD"
+   ],
+   "part": "MAIN",
+   "span_from_m": 4.15,
+   "span_id": "7E0+FD#2",
+   "span_to_m": 7.4,
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:809"
+    ]
+   },
+   "tees_mid_span": [],
+   "v2_flags": [],
+   "v2_held": [],
+   "v2_status": "RELEASED",
+   "width_m": 0.3
+  },
+  {
+   "S1_probes": [
+    {
+     "at": 0.25,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.25,
+     "level": "+1.00",
+     "side": "B"
+    },
+    {
+     "at": 0.5,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.5,
+     "level": "+1.00",
+     "side": "B"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "B"
+    }
+   ],
+   "S2_walls": [],
+   "band_drawn_m": 6.72,
+   "band_id": "7E1+7E2",
+   "centreline_m": 7.02,
+   "class_centreline": [
+    "P13-GB-GT5M"
+   ],
+   "class_face_to_face": [
+    "P13-GB-GT5M"
+   ],
+   "class_state": "ONE",
+   "direction": "X",
+   "end": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "7DC+7DD"
+    ]
+   },
+   "end_candidates": {},
+   "face_to_face_m": 6.72,
+   "handles": [
+    "7E1",
+    "7E2"
+   ],
+   "part": "MAIN",
+   "span_from_m": -0.0,
+   "span_id": "7E1+7E2#1",
+   "span_to_m": 6.72,
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:228"
+    ]
+   },
+   "tees_mid_span": [
+    {
+     "band_id": "17C+7E3",
+     "station_m": 3.55
+    },
+    {
+     "band_id": "17D+7E4",
+     "station_m": 3.55
+    }
+   ],
+   "v2_flags": [],
+   "v2_held": [],
+   "v2_status": "RELEASED",
+   "width_m": 0.3
+  },
+  {
+   "S1_probes": [
+    {
+     "at": 0.25,
+     "level": "+1.00",
+     "side": "A"
+    },
+    {
+     "at": 0.25,
+     "level": "NO_MARK",
+     "side": "B"
+    },
+    {
+     "at": 0.5,
+     "level": "+1.00",
+     "side": "A"
+    },
+    {
+     "at": 0.5,
+     "level": "NO_MARK",
+     "side": "B"
+    },
+    {
+     "at": 0.75,
+     "level": "+1.00",
+     "side": "A"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "B"
+    }
+   ],
+   "S2_walls": [],
+   "band_drawn_m": 7.35,
+   "band_id": "7E7+7E8",
+   "centreline_m": 3.825,
+   "class_centreline": [
+    "P13-GB-LT5M"
+   ],
+   "class_face_to_face": [
+    "P13-GB-LT5M"
+   ],
+   "class_state": "ONE",
+   "direction": "Y",
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:7ED"
+    ]
+   },
+   "end_candidates": {},
+   "face_to_face_m": 3.525,
+   "handles": [
+    "7E7",
+    "7E8"
+   ],
+   "part": "MAIN",
+   "span_from_m": 0.0,
+   "span_id": "7E7+7E8#1",
+   "span_to_m": 3.525,
+   "start": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "184+7CF"
+    ]
+   },
+   "tees_mid_span": [],
+   "v2_flags": [],
+   "v2_held": [],
+   "v2_status": "RELEASED",
+   "width_m": 0.3
+  },
+  {
+   "S1_probes": [
+    {
+     "at": 0.25,
+     "level": "+1.00",
+     "side": "A"
+    },
+    {
+     "at": 0.25,
+     "level": "NO_MARK",
+     "side": "B"
+    },
+    {
+     "at": 0.5,
+     "level": "+1.00",
+     "side": "A"
+    },
+    {
+     "at": 0.5,
+     "level": "NO_MARK",
+     "side": "B"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "B"
+    }
+   ],
+   "S2_walls": [],
+   "band_drawn_m": 7.35,
+   "band_id": "7E7+7E8",
+   "centreline_m": 3.825,
+   "class_centreline": [
+    "P13-GB-LT5M"
+   ],
+   "class_face_to_face": [
+    "P13-GB-LT5M"
+   ],
+   "class_state": "ONE",
+   "direction": "Y",
+   "end": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "177+7CD"
+    ]
+   },
+   "end_candidates": {},
+   "face_to_face_m": 3.525,
+   "handles": [
+    "7E7",
+    "7E8"
+   ],
+   "part": "MAIN",
+   "span_from_m": 3.825,
+   "span_id": "7E7+7E8#2",
+   "span_to_m": 7.35,
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:7ED"
+    ]
+   },
+   "tees_mid_span": [
+    {
+     "band_id": "114+115+7DF",
+     "station_m": 5.95
+    }
+   ],
+   "v2_flags": [],
+   "v2_held": [],
+   "v2_status": "RELEASED",
+   "width_m": 0.3
+  },
+  {
+   "S1_probes": [
+    {
+     "at": 0.25,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.25,
+     "level": "NO_MARK",
+     "side": "B"
+    },
+    {
+     "at": 0.5,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.5,
+     "level": "NO_MARK",
+     "side": "B"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "A"
+    },
+    {
+     "at": 0.75,
+     "level": "NO_MARK",
+     "side": "B"
+    }
+   ],
+   "S2_walls": [],
+   "band_drawn_m": 4.225,
+   "band_id": "7E9+7EA",
+   "centreline_m": 4.525,
+   "class_centreline": [
+    "P13-GB-LT5M"
+   ],
+   "class_face_to_face": [
+    "P13-GB-LT5M"
+   ],
+   "class_state": "ONE",
+   "direction": "X",
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:7ED"
+    ]
+   },
+   "end_candidates": {},
+   "face_to_face_m": 4.225,
+   "handles": [
+    "7E9",
+    "7EA"
+   ],
+   "part": "MAIN",
+   "span_from_m": -0.0,
+   "span_id": "7E9+7EA#1",
+   "span_to_m": 4.225,
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:7F5"
+    ]
+   },
+   "tees_mid_span": [],
+   "v2_flags": [],
+   "v2_held": [],
+   "v2_status": "RELEASED",
+   "width_m": 0.3
+  }
+ ]
+}
