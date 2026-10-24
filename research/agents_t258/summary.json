@@ -1,0 +1,186 @@
+{
+ "schema": "T258_SUMMARY",
+ "rule": "STAIR_DOME_LINE_V1",
+ "components": 46,
+ "by_class": {
+  "CLOSABLE": 13,
+  "CONFLICT": 1,
+  "HELD": 11,
+  "UNKNOWN": 1,
+  "OWNED_ELSEWHERE": 14,
+  "BESIDE": 6
+ },
+ "totals": {
+  "closable": {
+   "VERIFIED": 8.344131,
+   "DRAWING-CONFIRMED": 0.950617,
+   "ASSUMED — OWNER-APPROVED": 1.561137
+  },
+  "closable_total": 10.855885,
+  "conflict": [
+   0.863029,
+   1.054813
+  ],
+  "held_low": 0.3504,
+  "held_high": 0.4696,
+  "held_open": [
+   "ST01-MS2-TR",
+   "ST01b-D1-WAIST",
+   "ST03-E1-WAIST",
+   "ST02-RS-C",
+   "ST02-RS-C-SOFFIT",
+   "DOME-A-DRUM",
+   "DOME-B-DRUM",
+   "DOME-3-SHELL"
+  ],
+  "unknown": [
+   "ST02-2CC"
+  ],
+  "owned_elsewhere": {
+   "BEAM": 0.140161,
+   "SLAB": 0.0,
+   "GROUND_SLAB": 0.001983,
+   "COLUMN": 0.0044,
+   "GROUND_BEAM": 0.0
+  },
+  "beside": 0.113466,
+  "by_element": {
+   "ST-01": {
+    "closable": 3.732369,
+    "conflict": [
+     0.863029,
+     1.054813
+    ],
+    "held_open": [
+     "ST01-MS2-TR"
+    ]
+   },
+   "ST-01b": {
+    "closable": 0.126,
+    "conflict": [
+     0.0,
+     0.0
+    ],
+    "held_open": [
+     "ST01b-D1-WAIST"
+    ]
+   },
+   "ST-03": {
+    "closable": 0.355017,
+    "conflict": [
+     0.0,
+     0.0
+    ],
+    "held_open": [
+     "ST03-E1-WAIST"
+    ]
+   },
+   "ST-02": {
+    "closable": 1.561137,
+    "conflict": [
+     0.0,
+     0.0
+    ],
+    "held_open": [
+     "ST02-RS-C",
+     "ST02-RS-C-SOFFIT",
+     "ST02-2CC"
+    ]
+   },
+   "DOME-A": {
+    "closable": 2.540681,
+    "conflict": [
+     0.0,
+     0.0
+    ],
+    "held_open": [
+     "DOME-A-DRUM"
+    ]
+   },
+   "DOME-B": {
+    "closable": 2.540681,
+    "conflict": [
+     0.0,
+     0.0
+    ],
+    "held_open": [
+     "DOME-B-DRUM"
+    ]
+   },
+   "DOME-3": {
+    "closable": 0.0,
+    "conflict": [
+     0.0,
+     0.0
+    ],
+    "held_open": [
+     "DOME-3-SHELL"
+    ]
+   }
+  },
+  "line_closable": false
+ },
+ "retired_readings": [
+  {
+   "reading": "MS2-LD 2.50 x 1.20 (0.480)",
+   "accepted": false,
+   "overlap_with_flight_m2": 0.06,
+   "overlap_with_flight_m3": 0.0096,
+   "well_end_m2": 0.005,
+   "well_end_m3": 0.0008,
+   "why": "the 2.50 x 1.20 reading starts the whole landing at the MS2-U first riser line 62F; the west half starts at the MS2-L last riser line 632, 0.05 m further north (S-OPENING 633 closes the well at the 62F line; 631 / 632 at 0.300): the 0.05 x 1.20 strip is the MS2-L last going, already in MS2-L, and the 0.05 x 0.10 well end belongs to the held turn junction MS2-TR"
+  }
+ ],
+ "reconciliation": {
+  "ST01": {
+   "freelancer": 8.1312,
+   "flights": {
+    "his": 7.1232,
+    "length_5_3_vs_drawn_sloped": 2.275333,
+    "thickness_0_28_vs_drawn_equivalent": 0.812307,
+    "own_owner_method": 4.035559,
+    "heads_and_foot_owned_by_beams": -0.140161,
+    "own_after_ownership": 3.895398,
+    "of_which_MS1L_reading_A_held": 0.863029,
+    "residual": 0.0
+   },
+   "landings": {
+    "his": 1.008,
+    "area_5_04_vs_drawn": 0.133,
+    "thickness_0_20_vs_T16": 0.175,
+    "own": 0.7,
+    "residual": 0.0
+   }
+  },
+  "ST02": {
+   "freelancer": 5.5104,
+   "own_closable": 1.561137,
+   "his_length_on_no_drawing_m": 5.536823,
+   "his_length_on_no_drawing_m3": 1.860373,
+   "remaining": 2.08889,
+   "remaining_is": "the 12 curved treads, the helicoid waist, the CA junction (all HELD, no value) and his flat 0.28 m (T 16 printed): UNRESOLVED until Q-50 / Q-51 and C-ST-3 close"
+  },
+  "ST03": {
+   "freelancer": 1.4112,
+   "own_closable": 0.355017,
+   "his_run_1_8_vs_drawn_1_2_m3": 0.4704,
+   "his_0_28_on_the_drawn_run_vs_drawn_steps": 0.5838,
+   "slab_owned": 0.001983,
+   "residual": -0.0,
+   "note": "the second term is his 0.28 m 'slab + step' over steps only: the waist is HELD (not printed), so this term is not an error size"
+  },
+  "ST01b": {
+   "freelancer": null,
+   "own_closable": 0.126
+  },
+  "DOMES": {
+   "freelancer": 6.78,
+   "own_closable": 5.081361,
+   "third_dome_his": 2.26,
+   "area_22_6_vs_mid_surface": -0.561361,
+   "residual": 0.0,
+   "note": "third dome HELD (no structure), not compared; his typed 22.6 m2 vs drawn mid-surface"
+  },
+  "total_freelancer": 21.8328
+ }
+}

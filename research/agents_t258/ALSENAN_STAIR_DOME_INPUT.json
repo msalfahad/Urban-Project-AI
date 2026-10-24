@@ -1,0 +1,69 @@
+{
+ "schema": "T258_ALSENAN_STAIR_DOME_INPUT",
+ "project": "development villa (Drive 'Alsenan chalet project'); drawings named by Drive title, entities by DXF handle; printed values, lengths only (no coordinates)",
+ "drawings": {
+  "ST": "'ST7757 dxf.dxf' sha256 9f9d1179... (= manifest); p.3 ground-beam plan, p.4 GF roof slab plan (frame 'GFRS'), p.5 1F roof slab plan ('FFRS'), p.6 2F roof slab plan, p.7 DETAIL OF DOME, p.16 typical stair section (N.T.S., reinforcement only, R-STAIR-TYP-1)",
+  "STPDF": "'ST7757.pdf' same sheets (p.4 / p.5 'T 16' stair panels, p.7 dome detail 442 / 190 / 10, p.16 typical)",
+  "ARCH": "'P7757_DXF_COMPRESSED.zip' -> P7757.dxf sha256 ab54dd55... (= manifest); p7757_arch_sheet03.pdf (GF), p7757_arch_sheet04.pdf (1F), p7757_arch_sheet10.pdf (section A-A), Alsenan_Architectural_P7757_Pages_05-06 (2F plan, SE elevation), Pages_11-12 p.1 (section B-B)"
+ },
+ "unit": "m",
+ "flights": {
+  "MS1-U": {"stair": "ST-01", "n_steps": 12, "r": 0.166667, "g": 0.30, "goings": 11, "w": 1.20, "t": 0.16, "wedges": [null], "head_a": 0.20,
+            "src": "ST p.4 east-lane riser lines 25B .. 459 (12 at 0.300; first at the landing edge 279 - 1.20, last 0.20 inside the B20 band 458 / 2C6), 'T 16' (Q-47 A), r 4.50 / 27 (section A-A, Q-46 A)",
+            "evidence": "VERIFIED", "verified_by": "Checker own 0.9976 (2026-10-22 17:18, D-CHK-T180-1), adopted in ledger rev2 (T-189 MERGED 3369f30e)", "head_member": "B20 (P-C:BEAMS:GF:BAND0043.2, 0.40 x 0.75 x 3.30 = 0.990)"},
+  "MS2-L": {"stair": "ST-01", "n_steps": 12, "r": 0.168, "g": 0.30, "goings": 11, "w": 1.20, "t": 0.16, "wedges": [0.16], "foot_a": 0.15,
+            "src": "ST p.5 west-lane riser lines 646 .. 632 (12 at 0.300, 3.300), first 0.15 inside the B20 band (stair-side face 2C6 on p.4), 'T 16', r 4.20 / 25 (section A-A)",
+            "evidence": "VERIFIED", "verified_by": "Checker 2026-10-22 15:00 (1.0589 owner formula) + 2026-10-23 01:57 (foot 0.025448, T-192 MERGED 86fd5f42) + T-187 Gate B", "foot_member": "B20"},
+  "MS2-U": {"stair": "ST-01", "n_steps": 12, "r": 0.168, "g": 0.30, "goings": 11, "w": 1.20, "t": 0.16, "wedges": [null], "head_a": 0.20,
+            "src": "ST p.5 east-lane riser lines 62F .. 644 (11 drawn + the arrival line from the identical p.4 line 459 and the section count), last 0.20 inside B23 (5E4 / 5E1, 45 x 75), 'T 16'",
+            "evidence": "VERIFIED", "verified_by": "Checker own 1.001374 (T-187 Gate B, 2026-10-23 06:24)", "head_member": "B23 (P-C:BEAMS:1F:BAND0031.2, 0.45 x 0.75 x 3.30 = 1.11375)"},
+  "RS-S": {"stair": "ST-02", "n_steps": 11, "r": 0.160714, "g": 0.30, "goings": 10, "w": 1.20, "t": 0.16, "wedges": [0.16],
+           "src": "ST p.4 round-stair straight flight: 11 tread lines at 0.300 (3.000), width 1.20 (B3 'With Stair' / column face to the VOID edge), 'T 16'; riser 4.50 / 28 from the plan count (Q-50 A cond, no section)",
+           "evidence": "ASSUMED — OWNER-APPROVED", "verified_by": "geometry Checker own 0.9716 gross (T-184 MERGED 924c2bd, 2026-10-22 15:00); riser basis Q-50 A cond", "wedge_into": "RS-LD"},
+  "RS-A": {"stair": "ST-02", "n_steps": 5, "r": 0.160714, "g": 0.30, "goings": 4, "w": 1.25, "t": 0.16, "wedges": [0.16],
+           "src": "ARCH 1F 5 riser lines, DXF dimension 1250, '+5.50' at the arrival plate C-T1 (T 0.16, note 18); riser Q-50 A cond",
+           "evidence": "ASSUMED — OWNER-APPROVED", "verified_by": "not re-measured by the Checker (T-184 CALCULATED)", "wedge_into": "plate C-T1"}
+ },
+ "flight_conflicts": {
+  "MS1-L": {"stair": "ST-01", "blocker": "C-ST-4 (designer): the structural GF roof slab plan draws 12 straight riser lines 45A .. 25E + 3 winder lines 2F6 / 2F4 / 2F5 + closing line 2F3 (16 to the landing; 28 GF -> 1F with MS1-U) against the architectural GF plan 10 straight + section A-A 15 to +3.50 (27 GF -> 1F, Q-46 A); owner 2026-10-22 18:00 (4): HELD",
+            "readings": {"A_section_and_arch_plan": {"n_steps": 9, "r": 0.166667, "g": 0.30, "goings": 9, "w": 1.20, "t": 0.16},
+                         "B_structural_plan": {"n_steps": 11, "r": 0.166667, "g": 0.30, "goings": 11, "w": 1.20, "t": 0.16}}}
+ },
+ "landings": {
+  "MS1-LD": {"stair": "ST-01", "length": 1.20, "width": 1.20, "t": 0.16, "level": "+3.50 (section A-A)",
+             "src": "ST p.4: east of the closing line 2F3 to the shaft wall 296 (1.20), from the MS1-U first riser line 25B to the north edge 279 (1.20); 'T 16'",
+             "evidence": "VERIFIED", "verified_by": "Checker 2026-10-22 17:18 (0.2304)"},
+  "MS2-LD-W": {"stair": "ST-01", "length": 1.30, "width": 1.15, "t": 0.16, "level": "+7.516 = 5.50 + 12 x 0.168 (section A-A count)",
+               "src": "ST p.5 (own read this run): west wall 5E3 to the step line 5E2 (1.30 incl. the 0.10 well width), from the MS2-L last riser line 632 to the north edge 5C0 (1.15); 'T 16' panel, '8 d16/m' TEXT 747",
+               "evidence": "DRAWING-CONFIRMED", "verified_by": "same reading as the Checker's own west half (T-187 Gate B: 1.495 m2 -> 0.2392)"},
+  "MS2-LD-E": {"stair": "ST-01", "length": 1.20, "width": 1.20, "t": 0.16, "level": "+7.684 = 9.70 - 12 x 0.168",
+               "src": "ST p.5 (own read this run): step line 5E2 to the shaft wall 5D4 (1.20), from the MS2-U first riser line 62F to 5C0 (1.20)",
+               "evidence": "DRAWING-CONFIRMED", "verified_by": "same reading as the Checker's own east half (T-187 Gate B: 0.2304); the earlier '0.240' of 2026-10-22 17:18 is superseded by that read"},
+  "RS-LD": {"stair": "ST-02", "length": 1.25, "width": 1.15, "t": 0.16, "deduct_m2": 0.0275, "level": "+4.696 (Q-50 A cond riser)",
+            "src": "T-111 / T-184 DXF corner landing 1.25 x 1.15 less the column 374 corner 0.55 x 0.05",
+            "evidence": "ASSUMED — OWNER-APPROVED", "verified_by": "not re-measured by the Checker"}
+ },
+ "retired_readings": {
+  "MS2-LD 2.50 x 1.20 (0.480)": {"landing_from": 0.0, "flight_last_riser": 0.05, "flight_width": 1.20, "well_width": 0.10,
+      "why": "the 2.50 x 1.20 reading starts the whole landing at the MS2-U first riser line 62F; the west half starts at the MS2-L last riser line 632, 0.05 m further north (S-OPENING 633 closes the well at the 62F line; 631 / 632 at 0.300): the 0.05 x 1.20 strip is the MS2-L last going, already in MS2-L, and the 0.05 x 0.10 well end belongs to the held turn junction MS2-TR"}
+ },
+ "steps_only": {
+  "D1": {"stair": "ST-01b", "n_steps": 4, "r": 0.175, "g": 0.30, "w": 1.20, "src": "ARCH GF 4 solid riser lines in the shaft under the half landing, section A-A 4 risers, ST p.3 '+0.30'", "evidence": "DRAWING-CONFIRMED"},
+  "E1": {"stair": "ST-03", "n_steps": 5, "r": 0.17, "g": 0.30, "w": 2.80, "slab_owned_m3": 0.001983,
+         "src": "ARCH GF 5 riser lines, dimension 2800; section B-B 5 risers; ST p.3 4 lines 18A .. 179, no slab panel; the arrival wedge's last 0.05 m inside the ground-slab face (T-192: 1/2 x 0.05 x 0.02833 x 2.80)",
+         "evidence": "DRAWING-CONFIRMED"}
+ },
+ "domes": {
+  "DOME-A": {"chord": 4.42, "rise": 1.90, "t": 0.10, "src": "ST p.7 DETAIL OF DOME DIM 1A38 '442', 1A6D '190', 19B1 '10' (shell arcs 182B / 182E concentric); ST p.5 west dome (ring arcs 5FE / 5FF r 2.2111)", "evidence": "VERIFIED", "verified_by": "Checker 2026-10-22 18:15 (T-185 MERGED 94e39ee6) + V3.0.7 Gate B (e866328a)"},
+  "DOME-B": {"chord": 4.42, "rise": 1.90, "t": 0.10, "src": "same detail; ST p.5 east dome (closed circle 649 r 2.2111)", "evidence": "VERIFIED", "verified_by": "same"}
+ },
+ "freelancer": {
+  "workbook": "RC workbook, sheet 'السلم' (committed cells tests/alsenan/registers_b1/FREELANCER_RAW_ROWS.json)",
+  "main_flights": {"cell": "G20", "m3": 7.1232, "formula": "4 x 1.2 x 5.3 x 0.28"},
+  "main_landings": {"cell": "G21", "m3": 1.008, "formula": "3 x 1.2 x 1.4 x 0.20"},
+  "stair_2": {"cell": "G12", "m3": 5.5104, "formula": "1.2 x 16.4 x 0.28"},
+  "entrance": {"cell": "G11", "m3": 1.4112, "formula": "1.8 x 2.8 x 0.28"},
+  "domes": {"cell": "G13", "m3": 6.78, "formula": "3 x 22.6 x 0.10"},
+  "total": {"cell": "B25 (= 'ورقة1'!E22, key CONC.STAIR_DOME)", "m3": 21.8328}
+ }
+}
