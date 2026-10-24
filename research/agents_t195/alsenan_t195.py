@@ -10,17 +10,27 @@ Inputs:
     where the manifest lists the file).
   - the merged research folders research/agents_t1* named in PINNED_FOLDERS (all of them were added on or after
     2026-10-20; list pinned at the working branch faa04202 so that later merges do not change this result).
+  - T-243: the folder list alone did not pin the CONTENT: a later merge that edits a file inside a pinned folder
+    (T-233 / T-234 appended rows to research/agents_t177/CHECKER_VERDICTS_DEV_VILLA.json) changed the scan. The
+    scanned files are now pinned one by one in INPUTS_T195.csv (path, bytes, sha256, git blob id at PIN_COMMIT),
+    written by `--write-inputs` from git, never by hand. A file whose current bytes still match its sha256 is read
+    from the working tree; a file a later merge changed is read from its pinned git blob and its sha256 re-checked;
+    if neither is possible the build stops (InputUnavailable): it never scans a different text silently. Files added
+    after the pin (new files in a pinned folder, new folders) are not inputs of the snapshot; `--live` sees them.
 
-Usage: python3 -I research/agents_t195/alsenan_t195.py [--check] [--live]
-  --check  rebuild in memory and compare with the committed files (exit 1 on a difference)
-  --live   scan every research/agents_t1* folder present now (not the pinned list) and print the error verdicts
+Usage: python3 -I research/agents_t195/alsenan_t195.py [--check] [--live] [--write-inputs]
+  --check         rebuild in memory and compare with the committed files (exit 1 on a difference)
+  --live          scan every research/agents_t1* folder present now (not the pinned list) and print the error verdicts
+  --write-inputs  (re)write INPUTS_T195.csv from the git tree of PIN_COMMIT
 """
 from __future__ import annotations
 
 import csv
 import io
 import json
+import hashlib
 import re
+import subprocess
 import sys
 from pathlib import Path
 
@@ -257,10 +267,72 @@ PINNED_FOLDERS = [
     "agents_t186", "agents_t189",
 ]
 EXTS = (".md", ".csv", ".json", ".txt")
+PIN_COMMIT = "faa04202"          # research/ at faa04202 = research/ at the T-195 commit 22397715 (no research change)
+INPUTS = "INPUTS_T195.csv"
+INPUT_COLS = ["path", "bytes", "sha256", "git_blob"]
+
+
+class InputUnavailable(RuntimeError):
+    """A pinned input changed after the pin and its pinned bytes cannot be read back (no git object, sha mismatch)."""
+
+
+def _git(*args, cwd=ROOT) -> bytes:
+    return subprocess.run(["git", *args], cwd=cwd, check=True, capture_output=True).stdout
+
+
+def write_inputs(commit=PIN_COMMIT, folders=PINNED_FOLDERS):
+    """The pinned input list, in the scan order of `scan` (folder order, then sorted path), from the git tree."""
+    rows = []
+    for d in folders:
+        listing = _git("ls-tree", "-r", commit, "--", f"research/{d}/").decode("utf-8").splitlines()
+        entries = []
+        for ln in listing:
+            meta, path = ln.split("\t", 1)
+            mode, kind, blob = meta.split()
+            if kind == "blob" and Path(path).suffix.lower() in EXTS:
+                entries.append((Path(path), blob))
+        for path, blob in sorted(entries):
+            data = _git("cat-file", "blob", blob)
+            rows.append({"path": path.as_posix(), "bytes": len(data), "sha256": hashlib.sha256(data).hexdigest(),
+                         "git_blob": blob})
+    return _csv(rows, INPUT_COLS)
+
+
+def pinned_inputs(root=ROOT, manifest=None):
+    """[(path, text, origin)] of the pinned inputs; origin WORKTREE or GIT_BLOB (a later merge changed the file)."""
+    manifest = HERE / INPUTS if manifest is None else manifest
+    out = []
+    for r in csv.DictReader(io.StringIO(Path(manifest).read_text(encoding="utf-8"))):
+        f = Path(root) / r["path"]
+        data = f.read_bytes() if f.is_file() else None
+        origin = "WORKTREE"
+        if data is None or hashlib.sha256(data).hexdigest() != r["sha256"]:
+            origin = "GIT_BLOB"
+            try:
+                data = _git("cat-file", "blob", r["git_blob"])
+            except (OSError, subprocess.CalledProcessError) as e:
+                raise InputUnavailable(f"{r['path']}: changed after the pin and git blob {r['git_blob']} not "
+                                       f"readable ({e.__class__.__name__})") from None
+            if hashlib.sha256(data).hexdigest() != r["sha256"]:
+                raise InputUnavailable(f"{r['path']}: git blob {r['git_blob']} does not match the pinned sha256")
+        text = data.decode("utf-8", errors="replace").replace("\r\n", "\n").replace("\r", "\n")  # = read_text
+        out.append((r["path"], text, origin))
+    return out
+
+
+def _scan_texts(texts, reg):
+    rows = []
+    for rel, text in texts:
+        for c in find_citations(text, RULES, rel):
+            v, why, key = check_citation(c, reg, RULES)
+            rows.append({"source": rel, "line": c.line, "citation": c.raw.strip(), "basis": c.basis,
+                         "resolves_to": key or "", "verdict": v, "reason": why})
+    return rows
 
 
 def scan(folders, reg):
-    rows = []
+    """Live scan of the folders as they are now (used by --live)."""
+    texts = []
     for d in folders:
         base = ROOT / "research" / d
         if not base.is_dir():
@@ -268,13 +340,8 @@ def scan(folders, reg):
         for f in sorted(base.rglob("*")):
             if f.suffix.lower() not in EXTS or not f.is_file():
                 continue
-            text = f.read_text(encoding="utf-8", errors="replace")
-            rel = f.relative_to(ROOT).as_posix()
-            for c in find_citations(text, RULES, rel):
-                v, why, key = check_citation(c, reg, RULES)
-                rows.append({"source": rel, "line": c.line, "citation": c.raw.strip(), "basis": c.basis,
-                             "resolves_to": key or "", "verdict": v, "reason": why})
-    return rows
+            texts.append((f.relative_to(ROOT).as_posix(), f.read_text(encoding="utf-8", errors="replace")))
+    return _scan_texts(texts, reg)
 
 
 def _csv(rows, cols):
@@ -286,7 +353,9 @@ def _csv(rows, cols):
     return buf.getvalue()
 
 
-def build(folders=PINNED_FOLDERS):
+def build(folders=PINNED_FOLDERS, root=None):
+    """folders = PINNED_FOLDERS: the committed snapshot, from the pinned inputs (INPUTS_T195.csv) under `root`
+    (default the repository); any other list: a live scan (--live)."""
     reg = build_register()
     sheet_rows = [{
         "sheet_key": s.key, "discipline": s.discipline, "drawing_title": s.drawing_title, "scale": s.scale,
@@ -300,7 +369,10 @@ def build(folders=PINNED_FOLDERS):
                   "carries": what} for t, i, b, k, h, what in DRIVE_FILES]
     file_rows.append({"drive_title": PHOTOS[1], "drive_id": f"{PHOTOS[0]} files (ids: T-161)", "bytes": "",
                       "kind": PHOTOS[2], "sha256": "", "carries": PHOTOS[3]})
-    cites = scan(folders, reg)
+    if folders is PINNED_FOLDERS:
+        cites = _scan_texts([(p, t) for p, t, _ in pinned_inputs(ROOT if root is None else root)], reg)
+    else:
+        cites = scan(folders, reg)
     missing = missing_sheets(reg, {"ARCH": "ARCH", "ST": "ST", "SAN": "MEP"})
     dates = date_consistency(reg)
     counts = {}
@@ -336,10 +408,21 @@ def main(argv=None):
             print(f"{c['verdict']}: {c['source']}:{c['line']} {c['citation']!r} {c['reason']}")
         print(f"{len(folders)} folders, {len(cites)} citations, {len(bad)} error verdicts")
         return 0
-    out, _ = build()
+    if "--write-inputs" in argv:
+        (HERE / INPUTS).write_text(write_inputs(), encoding="utf-8")
+        print(f"{INPUTS} written from {PIN_COMMIT}")
+        return 0
+    try:
+        out, _ = build()
+    except InputUnavailable as e:
+        print(f"differs: pinned input unavailable: {e}")
+        return 1
     if "--check" in argv:
         diff = [n for n, t in out.items() if not (HERE / n).is_file() or (HERE / n).read_text(encoding="utf-8") != t]
+        drift = [p for p, _, o in pinned_inputs() if o == "GIT_BLOB"]
         print("differs: " + (", ".join(diff) if diff else "none"))
+        print(f"pinned inputs changed after {PIN_COMMIT} (read from their pinned git blobs): {len(drift)}"
+              + ("".join(f"\n  {p}" for p in drift)))
         return 1 if diff else 0
     for n, t in out.items():
         (HERE / n).write_text(t, encoding="utf-8")
