@@ -1,0 +1,2870 @@
+{
+ "lines": [
+  {
+   "dims": {},
+   "element_id": "HL:DOME_RING:DOME-1F-E:RING:RING_BEAM_IN_BAY",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "1F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-ab37afa17f2ac5b0efd1",
+   "range": null,
+   "value": null
+  },
+  {
+   "dims": {},
+   "element_id": "HL:DOME_RING:DOME-1F-W:RING:RING_BEAM_B4_IN_BAY",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-48b7d139bff681199543",
+   "range": null,
+   "value": 0.7552
+  },
+  {
+   "dims": {
+    "depth_m": 0.4,
+    "length_m": 2.5,
+    "net_plan_m2": 0.5,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:1F:BAND0001.1",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-2f97020ab26bff341fe4",
+   "range": null,
+   "value": 0.2
+  },
+  {
+   "dims": {
+    "depth_m": 0.5,
+    "length_m": 3.47,
+    "net_plan_m2": 0.694,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:1F:BAND0001.2",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-1a37f7e858c8c96bd5f6",
+   "range": null,
+   "value": 0.347
+  },
+  {
+   "dims": {
+    "depth_m": 0.5,
+    "length_m": 3.35,
+    "net_plan_m2": 0.67,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:1F:BAND0001.3",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-fce03d2bd6dae64f2641",
+   "range": null,
+   "value": 0.335
+  },
+  {
+   "dims": {
+    "depth_m": 0.5,
+    "length_m": 3.55,
+    "net_plan_m2": 0.71,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:1F:BAND0001.4",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-7a4d5364c39aa3fe5850",
+   "range": null,
+   "value": 0.355
+  },
+  {
+   "dims": {
+    "depth_m": 0.5,
+    "length_m": 3.8117,
+    "net_plan_m2": 0.76235,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:1F:BAND0002.1",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-02ee97d409df4b3a501b",
+   "range": null,
+   "value": 0.381173
+  },
+  {
+   "dims": {
+    "depth_m": 0.5,
+    "length_m": 4.3,
+    "net_plan_m2": 0.86,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:1F:BAND0003",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-7687818e1bd5d4a520e3",
+   "range": null,
+   "value": 0.43
+  },
+  {
+   "dims": {
+    "depth_m": 0.75,
+    "length_m": 4.7478,
+    "net_plan_m2": 0.94956,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:1F:BAND0004",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-415cfcdd1d775ee6251c",
+   "range": null,
+   "value": 0.712173
+  },
+  {
+   "dims": {
+    "depth_m": 0.4,
+    "length_m": 2.7,
+    "net_plan_m2": 0.54,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:1F:BAND0005.2",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-e0e1fc258cc7a68fdf6c",
+   "range": null,
+   "value": 0.216
+  },
+  {
+   "dims": {
+    "depth_m": 0.75,
+    "length_m": 1.8,
+    "net_plan_m2": 0.36,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:1F:BAND0006",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-b3c87fd2cd7cc45c329a",
+   "range": null,
+   "value": 0.27
+  },
+  {
+   "dims": {
+    "depth_m": 0.4,
+    "length_m": 0.7,
+    "net_plan_m2": 0.14,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:1F:BAND0007.1",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-dadbee5aad44a7afbb0d",
+   "range": null,
+   "value": 0.056
+  },
+  {
+   "dims": {
+    "depth_m": 0.4,
+    "length_m": 3.0,
+    "net_plan_m2": 0.6,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:1F:BAND0007.2",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-a4a61b29934bbed25f3b",
+   "range": null,
+   "value": 0.24
+  },
+  {
+   "dims": {
+    "depth_m": 0.4,
+    "length_m": 1.6075,
+    "net_plan_m2": 0.3215,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:1F:BAND0008",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-9443048ca0068df887fd",
+   "range": null,
+   "value": 0.1286
+  },
+  {
+   "dims": {
+    "depth_m": 0.5,
+    "length_m": 4.4153,
+    "net_plan_m2": 0.88307,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:1F:BAND0009",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-214990618888129f0e73",
+   "range": null,
+   "value": 0.551918
+  },
+  {
+   "dims": {
+    "depth_m": 0.4,
+    "length_m": 2.7,
+    "net_plan_m2": 0.54,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:1F:BAND0010.1",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-9d4f3289050a31f13951",
+   "range": null,
+   "value": 0.216
+  },
+  {
+   "dims": {
+    "depth_m": 0.75,
+    "length_m": 1.2,
+    "net_plan_m2": 0.24,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:1F:BAND0011.1",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-4299f559bf9509418385",
+   "range": null,
+   "value": 0.18
+  },
+  {
+   "dims": {
+    "depth_m": 0.4,
+    "length_m": 1.8,
+    "net_plan_m2": 0.36,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:1F:BAND0012",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-34ccc6d35e46cb3763d7",
+   "range": null,
+   "value": 0.144
+  },
+  {
+   "dims": {
+    "depth_m": 0.5,
+    "length_m": 4.1,
+    "net_plan_m2": 0.82,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:1F:BAND0015",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-28458292be2e750a481f",
+   "range": null,
+   "value": 0.41
+  },
+  {
+   "dims": {
+    "depth_m": 0.5,
+    "length_m": 3.475,
+    "net_plan_m2": 0.695,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:1F:BAND0016",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-8661fc82d8f1289926c4",
+   "range": null,
+   "value": 0.3475
+  },
+  {
+   "dims": {
+    "depth_m": 0.5,
+    "length_m": 4.85,
+    "net_plan_m2": 0.97,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:1F:BAND0017",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-785ce1a08953de7d421e",
+   "range": null,
+   "value": 0.485
+  },
+  {
+   "dims": {
+    "depth_m": 0.75,
+    "length_m": 5.625,
+    "net_plan_m2": 1.40625,
+    "width_m": 0.25
+   },
+   "element_id": "P-C:BEAMS:1F:BAND0018.1",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-843a4efc32911917c1b3",
+   "range": null,
+   "value": 1.054687
+  },
+  {
+   "dims": {
+    "depth_m": 0.75,
+    "length_m": 5.025,
+    "net_plan_m2": 1.25625,
+    "width_m": 0.25
+   },
+   "element_id": "P-C:BEAMS:1F:BAND0018.2",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-76d0bad3c40bd8cedca2",
+   "range": null,
+   "value": 0.942188
+  },
+  {
+   "dims": {
+    "depth_m": 0.5,
+    "length_m": 4.1,
+    "net_plan_m2": 1.025,
+    "width_m": 0.25
+   },
+   "element_id": "P-C:BEAMS:1F:BAND0019",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-f2d545c87e8586cde8af",
+   "range": null,
+   "value": 0.5125
+  },
+  {
+   "dims": {
+    "depth_m": 0.5,
+    "length_m": 4.4222,
+    "net_plan_m2": 1.10555,
+    "width_m": 0.25
+   },
+   "element_id": "P-C:BEAMS:1F:BAND0020",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-651a3d191bc4cb07cc1d",
+   "range": null,
+   "value": 0.552773
+  },
+  {
+   "dims": {
+    "depth_m": 0.5,
+    "length_m": 4.3722,
+    "net_plan_m2": 1.09305,
+    "width_m": 0.25
+   },
+   "element_id": "P-C:BEAMS:1F:BAND0021",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-263b1a04a36fc0e8eee1",
+   "range": null,
+   "value": 0.546523
+  },
+  {
+   "dims": {
+    "depth_m": 0.5,
+    "length_m": 4.1,
+    "net_plan_m2": 1.025,
+    "width_m": 0.25
+   },
+   "element_id": "P-C:BEAMS:1F:BAND0022",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-5225bc5777a370ad9f04",
+   "range": null,
+   "value": 0.5125
+  },
+  {
+   "dims": {
+    "depth_m": 0.5,
+    "length_m": 3.0,
+    "net_plan_m2": 0.9,
+    "width_m": 0.3
+   },
+   "element_id": "P-C:BEAMS:1F:BAND0024.1",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-88b59970210b00aeb7e9",
+   "range": null,
+   "value": 0.45
+  },
+  {
+   "dims": {
+    "depth_m": 0.5,
+    "length_m": 3.15,
+    "net_plan_m2": 0.945,
+    "width_m": 0.3
+   },
+   "element_id": "P-C:BEAMS:1F:BAND0024.2",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-e910cc0865d6434c55f9",
+   "range": null,
+   "value": 0.4725
+  },
+  {
+   "dims": {
+    "depth_m": 0.75,
+    "length_m": 6.7083,
+    "net_plan_m2": 2.01248,
+    "width_m": 0.3
+   },
+   "element_id": "P-C:BEAMS:1F:BAND0027.1",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-26bacc28eebf2e1b8ce3",
+   "range": null,
+   "value": 1.50936
+  },
+  {
+   "dims": {
+    "depth_m": 0.75,
+    "length_m": 2.65,
+    "net_plan_m2": 0.795,
+    "width_m": 0.3
+   },
+   "element_id": "P-C:BEAMS:1F:BAND0027.2",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-476f46e54b5c7a11b5e8",
+   "range": null,
+   "value": 0.59625
+  },
+  {
+   "dims": {
+    "depth_m": 0.75,
+    "length_m": 3.3,
+    "net_plan_m2": 0.99,
+    "width_m": 0.3
+   },
+   "element_id": "P-C:BEAMS:1F:BAND0027.3",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-780b8142b030c0108b6b",
+   "range": null,
+   "value": 0.7425
+  },
+  {
+   "dims": {
+    "depth_m": 0.75,
+    "length_m": 6.3,
+    "net_plan_m2": 2.205,
+    "width_m": 0.35
+   },
+   "element_id": "P-C:BEAMS:1F:BAND0028",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-c9aa7efd6862439d6079",
+   "range": null,
+   "value": 1.65375
+  },
+  {
+   "dims": {
+    "depth_m": 0.75,
+    "length_m": 5.3375,
+    "net_plan_m2": 2.13498,
+    "width_m": 0.4
+   },
+   "element_id": "P-C:BEAMS:1F:BAND0030.1",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-3d3ce4aa90c859b26257",
+   "range": null,
+   "value": 1.601237
+  },
+  {
+   "dims": {
+    "depth_m": 0.75,
+    "length_m": 3.3,
+    "net_plan_m2": 1.485,
+    "width_m": 0.45
+   },
+   "element_id": "P-C:BEAMS:1F:BAND0031.2",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-5ca0573b64ee1cb22e0e",
+   "range": null,
+   "value": 1.11375
+  },
+  {
+   "dims": {
+    "depth_m": 0.75,
+    "length_m": 6.8754,
+    "net_plan_m2": 3.78145,
+    "width_m": 0.55
+   },
+   "element_id": "P-C:BEAMS:1F:BAND0032",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-c61717e270f3d71796f1",
+   "range": null,
+   "value": 2.836088
+  },
+  {
+   "dims": {
+    "depth_m": 0.5,
+    "length_m": 1.2939,
+    "net_plan_m2": 0.25877,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:1F:BAND0033",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "floor": "1F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-6c2431a0e85743363539",
+   "range": null,
+   "value": null
+  },
+  {
+   "dims": {
+    "depth_m": 0.5,
+    "length_m": 1.5171,
+    "net_plan_m2": 0.30342,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:1F:BAND0034",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "floor": "1F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-da308c65a6ada316bf55",
+   "range": null,
+   "value": null
+  },
+  {
+   "dims": {
+    "depth_m": 0.4,
+    "length_m": 0.8,
+    "net_plan_m2": 0.16,
+    "width_m": 0.2
+   },
+   "element_id": "U-C:BEAMS:1F:BAND0005.1",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "1F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-f83c4a469845c7e14dfa",
+   "range": [
+    0.064,
+    0.192
+   ],
+   "value": null
+  },
+  {
+   "dims": {
+    "length_m": 4.325,
+    "net_plan_m2": 0.865,
+    "width_m": 0.2
+   },
+   "element_id": "U-C:BEAMS:1F:BAND0013",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "1F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-2040e4170f459248d34a",
+   "range": [
+    0.346,
+    1.038
+   ],
+   "value": null
+  },
+  {
+   "dims": {
+    "length_m": 7.5,
+    "net_plan_m2": 1.5,
+    "width_m": 0.2
+   },
+   "element_id": "U-C:BEAMS:1F:BAND0014",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "1F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-a9d5e7dc22013e24d691",
+   "range": [
+    0.6,
+    1.8
+   ],
+   "value": null
+  },
+  {
+   "dims": {
+    "length_m": 0.9,
+    "net_plan_m2": 0.27,
+    "width_m": 0.3
+   },
+   "element_id": "U-C:BEAMS:1F:BAND0023",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "1F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-bb49e831f053bd30a6ce",
+   "range": [
+    0.135,
+    0.2025
+   ],
+   "value": null
+  },
+  {
+   "dims": {
+    "length_m": 4.5094,
+    "net_plan_m2": 1.35283,
+    "width_m": 0.3
+   },
+   "element_id": "U-C:BEAMS:1F:BAND0025",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "1F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-ceb5a8cbf13d9200cff9",
+   "range": [
+    0.676416,
+    1.014624
+   ],
+   "value": null
+  },
+  {
+   "dims": {
+    "length_m": 2.3,
+    "net_plan_m2": 0.69,
+    "width_m": 0.3
+   },
+   "element_id": "U-C:BEAMS:1F:BAND0026.1",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "1F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-6a61a7d641bf95bf13d2",
+   "range": [
+    0.345,
+    0.5175
+   ],
+   "value": null
+  },
+  {
+   "dims": {
+    "length_m": 3.65,
+    "net_plan_m2": 1.095,
+    "width_m": 0.3
+   },
+   "element_id": "U-C:BEAMS:1F:BAND0026.2",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "1F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-101775b3c1673c97268e",
+   "range": [
+    0.5475,
+    0.82125
+   ],
+   "value": null
+  },
+  {
+   "dims": {
+    "length_m": 0.6,
+    "net_plan_m2": 0.24,
+    "width_m": 0.4
+   },
+   "element_id": "U-C:BEAMS:1F:BAND0029",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "1F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-1d01d5645bcfd950bd1e",
+   "range": [
+    0.18,
+    0.18
+   ],
+   "value": null
+  },
+  {
+   "dims": {
+    "depth_m": 0.75,
+    "length_m": 3.0,
+    "net_plan_m2": 1.35,
+    "width_m": 0.45
+   },
+   "element_id": "U-C:BEAMS:1F:BAND0031.1",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "1F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-46373f10a013808edd31",
+   "range": [
+    1.0125,
+    1.0125
+   ],
+   "value": null
+  },
+  {
+   "dims": {
+    "length_m": 1.5171,
+    "net_plan_m2": 0.30342,
+    "width_m": 0.2
+   },
+   "element_id": "U-C:BEAMS:1F:BAND0035",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "floor": "1F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-3a17a20c4f2e839923e5",
+   "range": null,
+   "value": null
+  },
+  {
+   "dims": {
+    "length_m": 1.2939,
+    "net_plan_m2": 0.25877,
+    "width_m": 0.2
+   },
+   "element_id": "U-C:BEAMS:1F:BAND0036",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "floor": "1F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-0c5956de58fe1d66269b",
+   "range": null,
+   "value": null
+  },
+  {
+   "dims": {
+    "depth_m": 0.4,
+    "length_m": 2.5,
+    "net_plan_m2": 0.5,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:2F:BAND0001.1",
+   "evidence_state": "PROVISIONAL",
+   "floor": "2F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-c484802154b46ed37908",
+   "range": null,
+   "value": 0.2
+  },
+  {
+   "dims": {
+    "depth_m": 0.75,
+    "length_m": 3.47,
+    "net_plan_m2": 0.694,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:2F:BAND0001.2",
+   "evidence_state": "PROVISIONAL",
+   "floor": "2F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-84768dadb07330d74cbd",
+   "range": null,
+   "value": 0.5205
+  },
+  {
+   "dims": {
+    "depth_m": 0.4,
+    "length_m": 2.45,
+    "net_plan_m2": 0.49,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:2F:BAND0002",
+   "evidence_state": "PROVISIONAL",
+   "floor": "2F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-46f3fb2ab0f763994f26",
+   "range": null,
+   "value": 0.196
+  },
+  {
+   "dims": {
+    "depth_m": 0.4,
+    "length_m": 2.5,
+    "net_plan_m2": 0.5,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:2F:BAND0003",
+   "evidence_state": "PROVISIONAL",
+   "floor": "2F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-bcfa6dddf762d6cf0fb3",
+   "range": null,
+   "value": 0.2
+  },
+  {
+   "dims": {
+    "depth_m": 0.4,
+    "length_m": 1.8,
+    "net_plan_m2": 0.36,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:2F:BAND0004",
+   "evidence_state": "PROVISIONAL",
+   "floor": "2F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-b835f51602e05704c045",
+   "range": null,
+   "value": 0.144
+  },
+  {
+   "dims": {
+    "depth_m": 0.4,
+    "length_m": 3.0,
+    "net_plan_m2": 0.6,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:2F:BAND0005",
+   "evidence_state": "PROVISIONAL",
+   "floor": "2F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-2999807a87e55d057be3",
+   "range": null,
+   "value": 0.24
+  },
+  {
+   "dims": {
+    "depth_m": 1.2,
+    "length_m": 2.7,
+    "net_plan_m2": 0.54,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:2F:BAND0006.2",
+   "evidence_state": "PROVISIONAL",
+   "floor": "2F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-713bc64aaa210610e7fe",
+   "range": null,
+   "value": 0.648
+  },
+  {
+   "dims": {
+    "depth_m": 0.4,
+    "length_m": 1.8,
+    "net_plan_m2": 0.36,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:2F:BAND0007.1",
+   "evidence_state": "PROVISIONAL",
+   "floor": "2F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-13031ccc9cc57a0f3465",
+   "range": null,
+   "value": 0.144
+  },
+  {
+   "dims": {
+    "depth_m": 0.4,
+    "length_m": 3.0,
+    "net_plan_m2": 0.6,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:2F:BAND0007.2",
+   "evidence_state": "PROVISIONAL",
+   "floor": "2F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-b2efc69ac20dee663880",
+   "range": null,
+   "value": 0.24
+  },
+  {
+   "dims": {
+    "depth_m": 0.4,
+    "length_m": 1.0,
+    "net_plan_m2": 0.2,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:2F:BAND0008.2",
+   "evidence_state": "PROVISIONAL",
+   "floor": "2F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-1caceb74f8c279933a14",
+   "range": null,
+   "value": 0.08
+  },
+  {
+   "dims": {
+    "depth_m": 0.4,
+    "length_m": 3.0,
+    "net_plan_m2": 0.6,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:2F:BAND0008.3",
+   "evidence_state": "PROVISIONAL",
+   "floor": "2F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-03f1399ed0091428743e",
+   "range": null,
+   "value": 0.24
+  },
+  {
+   "dims": {
+    "depth_m": 0.75,
+    "length_m": 6.6,
+    "net_plan_m2": 1.32,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:2F:BAND0009",
+   "evidence_state": "PROVISIONAL",
+   "floor": "2F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-f4a95b8019ae333d81ae",
+   "range": null,
+   "value": 0.99
+  },
+  {
+   "dims": {
+    "depth_m": 0.4,
+    "length_m": 2.7,
+    "net_plan_m2": 0.54,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:2F:BAND0010.1",
+   "evidence_state": "PROVISIONAL",
+   "floor": "2F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-6499eb01de0a455a6341",
+   "range": null,
+   "value": 0.216
+  },
+  {
+   "dims": {
+    "depth_m": 0.4,
+    "length_m": 1.2,
+    "net_plan_m2": 0.24,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:2F:BAND0011.2",
+   "evidence_state": "PROVISIONAL",
+   "floor": "2F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-ae4fced6f2202c9543af",
+   "range": null,
+   "value": 0.096
+  },
+  {
+   "dims": {
+    "depth_m": 0.4,
+    "length_m": 1.8,
+    "net_plan_m2": 0.36,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:2F:BAND0012",
+   "evidence_state": "PROVISIONAL",
+   "floor": "2F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-23275eb03f41ddcace97",
+   "range": null,
+   "value": 0.144
+  },
+  {
+   "dims": {
+    "depth_m": 0.75,
+    "length_m": 1.13,
+    "net_plan_m2": 0.226,
+    "width_m": 0.2
+   },
+   "element_id": "U-C:BEAMS:2F:BAND0001.3",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "2F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-fe51546ae9e36f7f6f83",
+   "range": [
+    0.0904,
+    0.2712
+   ],
+   "value": null
+  },
+  {
+   "dims": {
+    "depth_m": 1.2,
+    "length_m": 3.1,
+    "net_plan_m2": 0.62,
+    "width_m": 0.2
+   },
+   "element_id": "U-C:BEAMS:2F:BAND0006.1",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "2F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-d62d2fcf3d0023ad1ad1",
+   "range": [
+    0.248,
+    0.744
+   ],
+   "value": null
+  },
+  {
+   "dims": {
+    "depth_m": 0.4,
+    "length_m": 1.4,
+    "net_plan_m2": 0.28,
+    "width_m": 0.2
+   },
+   "element_id": "U-C:BEAMS:2F:BAND0008.1",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "2F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-dc8cbfc119d006ff3927",
+   "range": [
+    0.112,
+    0.336
+   ],
+   "value": null
+  },
+  {
+   "dims": {
+    "depth_m": 0.4,
+    "length_m": 1.4,
+    "net_plan_m2": 0.28,
+    "width_m": 0.2
+   },
+   "element_id": "U-C:BEAMS:2F:BAND0011.1",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "2F",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-7c3edce23ec8faa3d674",
+   "range": [
+    0.112,
+    0.336
+   ],
+   "value": null
+  },
+  {
+   "dims": {
+    "depth_m": 0.75,
+    "length_m": 4.5541,
+    "net_plan_m2": 0.91081,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:GF:BAND0001",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-23d7404a04ff428d8ce4",
+   "range": null,
+   "value": 0.68311
+  },
+  {
+   "dims": {
+    "depth_m": 0.4,
+    "length_m": 1.47,
+    "net_plan_m2": 0.294,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:GF:BAND0002",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-12a43a865f2d2f54f201",
+   "range": null,
+   "value": 0.1176
+  },
+  {
+   "dims": {
+    "depth_m": 0.75,
+    "length_m": 3.5201,
+    "net_plan_m2": 0.70403,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:GF:BAND0003",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-1b8482692e3f18c505d4",
+   "range": null,
+   "value": 0.528021
+  },
+  {
+   "dims": {
+    "depth_m": 0.5,
+    "length_m": 3.75,
+    "net_plan_m2": 0.75,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:GF:BAND0004",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-d70e4b8d2e812cd863f4",
+   "range": null,
+   "value": 0.375
+  },
+  {
+   "dims": {
+    "depth_m": 0.4,
+    "length_m": 1.75,
+    "net_plan_m2": 0.35,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:GF:BAND0005",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-0cbe4442d020b25140ee",
+   "range": null,
+   "value": 0.14
+  },
+  {
+   "dims": {
+    "depth_m": 0.4,
+    "length_m": 3.3,
+    "net_plan_m2": 0.66,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:GF:BAND0007",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-baee6107bcb8f1b0a6c0",
+   "range": null,
+   "value": 0.264
+  },
+  {
+   "dims": {
+    "depth_m": 0.75,
+    "length_m": 6.7412,
+    "net_plan_m2": 1.34825,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:GF:BAND0008",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-0c3b2e0c90803e80ee4a",
+   "range": null,
+   "value": 1.26398
+  },
+  {
+   "dims": {
+    "depth_m": 0.4,
+    "length_m": 2.5484,
+    "net_plan_m2": 0.50969,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:GF:BAND0009",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-badaf920abfb445461f3",
+   "range": null,
+   "value": 0.203875
+  },
+  {
+   "dims": {
+    "depth_m": 0.5,
+    "length_m": 3.4159,
+    "net_plan_m2": 0.68267,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:GF:BAND0010",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-1007809ce9e48d745e9b",
+   "range": null,
+   "value": 0.341334
+  },
+  {
+   "dims": {
+    "depth_m": 0.5,
+    "length_m": 1.9799,
+    "net_plan_m2": 0.39597,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:GF:BAND0011",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-daca46a09caaa7139045",
+   "range": null,
+   "value": 0.197986
+  },
+  {
+   "dims": {
+    "depth_m": 0.5,
+    "length_m": 4.5,
+    "net_plan_m2": 0.9,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:GF:BAND0012",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-11c12069bf067c21c799",
+   "range": null,
+   "value": 0.45
+  },
+  {
+   "dims": {
+    "depth_m": 0.4,
+    "length_m": 1.2,
+    "net_plan_m2": 0.24,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:GF:BAND0013",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-ee0d081dc810d310a4ab",
+   "range": null,
+   "value": 0.096
+  },
+  {
+   "dims": {
+    "depth_m": 0.75,
+    "length_m": 11.8,
+    "net_plan_m2": 2.36,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:GF:BAND0014",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-be1623fd14be134adf77",
+   "range": null,
+   "value": 1.77
+  },
+  {
+   "dims": {
+    "depth_m": 0.4,
+    "length_m": 1.1448,
+    "net_plan_m2": 0.22896,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:GF:BAND0015",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-2f85d9047ea71f6b0b14",
+   "range": null,
+   "value": 0.091584
+  },
+  {
+   "dims": {
+    "depth_m": 0.4,
+    "length_m": 2.5,
+    "net_plan_m2": 0.5,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:GF:BAND0016",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-71144bbcfce0b1dbbdef",
+   "range": null,
+   "value": 0.2
+  },
+  {
+   "dims": {
+    "depth_m": 0.5,
+    "length_m": 3.5432,
+    "net_plan_m2": 0.70863,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:GF:BAND0017",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-9d43cdd44074ede259d2",
+   "range": null,
+   "value": 0.354316
+  },
+  {
+   "dims": {
+    "depth_m": 0.5,
+    "length_m": 2.8907,
+    "net_plan_m2": 0.57813,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:GF:BAND0018",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-a8cf2eaeb3f58c3d6f62",
+   "range": null,
+   "value": 0.289066
+  },
+  {
+   "dims": {
+    "depth_m": 0.75,
+    "length_m": 3.02,
+    "net_plan_m2": 0.604,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:GF:BAND0019.1",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-c9044bed39bc76ca6b2f",
+   "range": null,
+   "value": 0.453
+  },
+  {
+   "dims": {
+    "depth_m": 0.75,
+    "length_m": 3.1888,
+    "net_plan_m2": 0.63775,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:GF:BAND0019.3",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-c42aa4d2b8d8aa456a2c",
+   "range": null,
+   "value": 0.478314
+  },
+  {
+   "dims": {
+    "depth_m": 0.4,
+    "length_m": 0.8,
+    "net_plan_m2": 0.16,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:GF:BAND0020.1",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-c254e0d17c22fcae49fe",
+   "range": null,
+   "value": 0.064
+  },
+  {
+   "dims": {
+    "depth_m": 0.4,
+    "length_m": 2.7,
+    "net_plan_m2": 0.54,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:GF:BAND0020.2",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-a2bc431068c8113f71eb",
+   "range": null,
+   "value": 0.216
+  },
+  {
+   "dims": {
+    "depth_m": 0.5,
+    "length_m": 2.3744,
+    "net_plan_m2": 0.47488,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:GF:BAND0021.1",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-8d78cd03485b9a909f2c",
+   "range": null,
+   "value": 0.237438
+  },
+  {
+   "dims": {
+    "depth_m": 0.5,
+    "length_m": 3.2,
+    "net_plan_m2": 0.64,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:GF:BAND0021.2",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-5f15221db7e0251cffe1",
+   "range": null,
+   "value": 0.32
+  },
+  {
+   "dims": {
+    "depth_m": 0.75,
+    "length_m": 1.8,
+    "net_plan_m2": 0.36,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:GF:BAND0022",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-9c4ad8b13b08f7063722",
+   "range": null,
+   "value": 0.27
+  },
+  {
+   "dims": {
+    "depth_m": 0.4,
+    "length_m": 0.7,
+    "net_plan_m2": 0.14,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:GF:BAND0023.1",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-300800076840dab01c49",
+   "range": null,
+   "value": 0.056
+  },
+  {
+   "dims": {
+    "depth_m": 0.4,
+    "length_m": 2.95,
+    "net_plan_m2": 0.59,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:GF:BAND0023.2",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-fd0852ad2cbea736b300",
+   "range": null,
+   "value": 0.236
+  },
+  {
+   "dims": {
+    "depth_m": 0.4,
+    "length_m": 2.7,
+    "net_plan_m2": 0.54,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:GF:BAND0024.1",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-5d6f86944074e7c8a2b6",
+   "range": null,
+   "value": 0.216
+  },
+  {
+   "dims": {
+    "depth_m": 0.75,
+    "length_m": 1.2,
+    "net_plan_m2": 0.24,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:GF:BAND0025.1",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-4f30f08b15e9ab008e7a",
+   "range": null,
+   "value": 0.18
+  },
+  {
+   "dims": {
+    "depth_m": 0.4,
+    "length_m": 1.8,
+    "net_plan_m2": 0.36,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:GF:BAND0026",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-c82e9ff1d51c005f29d8",
+   "range": null,
+   "value": 0.144
+  },
+  {
+   "dims": {
+    "depth_m": 0.4,
+    "length_m": 2.9,
+    "net_plan_m2": 0.58,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:GF:BAND0027",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-71cc94c1eab0c88c5651",
+   "range": null,
+   "value": 0.232
+  },
+  {
+   "dims": {
+    "depth_m": 0.75,
+    "length_m": 6.3,
+    "net_plan_m2": 1.26,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:GF:BAND0028",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-505a6eace0b02918b144",
+   "range": null,
+   "value": 0.945
+  },
+  {
+   "dims": {
+    "depth_m": 0.75,
+    "length_m": 4.0,
+    "net_plan_m2": 0.8,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:GF:BAND0029.1",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-75a0d6b933218568f685",
+   "range": null,
+   "value": 0.6
+  },
+  {
+   "dims": {
+    "depth_m": 0.75,
+    "length_m": 5.85,
+    "net_plan_m2": 1.17,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:GF:BAND0029.2",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-6bdfcf21ebb29773436e",
+   "range": null,
+   "value": 0.8775
+  },
+  {
+   "dims": {
+    "depth_m": 0.4,
+    "length_m": 1.2,
+    "net_plan_m2": 0.24,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:GF:BAND0029.3",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-2cf19b552884b0f3dd5f",
+   "range": null,
+   "value": 0.096
+  },
+  {
+   "dims": {
+    "depth_m": 0.4,
+    "length_m": 1.9,
+    "net_plan_m2": 0.37848,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:GF:BAND0029.4",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-39779d6e8cbcc6ac2bae",
+   "range": null,
+   "value": 0.151391
+  },
+  {
+   "dims": {
+    "depth_m": 0.5,
+    "length_m": 4.45,
+    "net_plan_m2": 0.89,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:GF:BAND0030.1",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-8a51458e17f147aaf7ed",
+   "range": null,
+   "value": 0.445
+  },
+  {
+   "dims": {
+    "depth_m": 0.4,
+    "length_m": 0.95,
+    "net_plan_m2": 0.19,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:GF:BAND0032",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-6873e8f788bfcd4f9031",
+   "range": null,
+   "value": 0.076
+  },
+  {
+   "dims": {
+    "depth_m": 0.4,
+    "length_m": 1.3,
+    "net_plan_m2": 0.26,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:GF:BAND0033.1",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-bb486e98db90bc7604ad",
+   "range": null,
+   "value": 0.104
+  },
+  {
+   "dims": {
+    "depth_m": 0.4,
+    "length_m": 2.3,
+    "net_plan_m2": 0.46,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:GF:BAND0033.2",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-ed3cf93a185c88b4ab5a",
+   "range": null,
+   "value": 0.184
+  },
+  {
+   "dims": {
+    "depth_m": 0.75,
+    "length_m": 5.0272,
+    "net_plan_m2": 1.25679,
+    "width_m": 0.25
+   },
+   "element_id": "P-C:BEAMS:GF:BAND0034.1",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-bdd670522797d290cfc8",
+   "range": null,
+   "value": 0.942592
+  },
+  {
+   "dims": {
+    "depth_m": 0.75,
+    "length_m": 0.8049,
+    "net_plan_m2": 0.20122,
+    "width_m": 0.25
+   },
+   "element_id": "P-C:BEAMS:GF:BAND0035.1",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-b0fca34e9c0d513f04b4",
+   "range": null,
+   "value": 0.150911
+  },
+  {
+   "dims": {
+    "depth_m": 0.5,
+    "length_m": 3.47,
+    "net_plan_m2": 0.8675,
+    "width_m": 0.25
+   },
+   "element_id": "P-C:BEAMS:GF:BAND0036.1",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-c4dede481c6942169efb",
+   "range": null,
+   "value": 0.347
+  },
+  {
+   "dims": {
+    "depth_m": 0.5,
+    "length_m": 3.35,
+    "net_plan_m2": 0.8375,
+    "width_m": 0.25
+   },
+   "element_id": "P-C:BEAMS:GF:BAND0036.2",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-f0b99e38ba2508d5e530",
+   "range": null,
+   "value": 0.335
+  },
+  {
+   "dims": {
+    "depth_m": 0.75,
+    "length_m": 3.85,
+    "net_plan_m2": 1.155,
+    "width_m": 0.3
+   },
+   "element_id": "P-C:BEAMS:GF:BAND0037",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-89718e85f0f24c9cc08c",
+   "range": null,
+   "value": 0.86625
+  },
+  {
+   "dims": {
+    "depth_m": 0.5,
+    "length_m": 1.15,
+    "net_plan_m2": 0.345,
+    "width_m": 0.3
+   },
+   "element_id": "P-C:BEAMS:GF:BAND0038",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-c914cb3a65e76883a827",
+   "range": null,
+   "value": 0.1725
+  },
+  {
+   "dims": {
+    "depth_m": 0.75,
+    "length_m": 3.4502,
+    "net_plan_m2": 1.03507,
+    "width_m": 0.3
+   },
+   "element_id": "P-C:BEAMS:GF:BAND0039",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-3a54b132ba356e2c33b2",
+   "range": null,
+   "value": 0.776299
+  },
+  {
+   "dims": {
+    "depth_m": 0.75,
+    "length_m": 5.745,
+    "net_plan_m2": 1.7235,
+    "width_m": 0.3
+   },
+   "element_id": "P-C:BEAMS:GF:BAND0040.1",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-e8161a45ef148d024b43",
+   "range": null,
+   "value": 1.292625
+  },
+  {
+   "dims": {
+    "depth_m": 0.75,
+    "length_m": 6.35,
+    "net_plan_m2": 1.905,
+    "width_m": 0.3
+   },
+   "element_id": "P-C:BEAMS:GF:BAND0040.2",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-b6b4eb28a8001c2af2dd",
+   "range": null,
+   "value": 1.42875
+  },
+  {
+   "dims": {
+    "depth_m": 0.75,
+    "length_m": 7.4,
+    "net_plan_m2": 2.59,
+    "width_m": 0.35
+   },
+   "element_id": "P-C:BEAMS:GF:BAND0041.1",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-4b9adc1de4ac3322d1b2",
+   "range": null,
+   "value": 1.9425
+  },
+  {
+   "dims": {
+    "depth_m": 0.75,
+    "length_m": 5.1,
+    "net_plan_m2": 1.785,
+    "width_m": 0.35
+   },
+   "element_id": "P-C:BEAMS:GF:BAND0041.2",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-063f82c3fc9cae961f3f",
+   "range": null,
+   "value": 1.33875
+  },
+  {
+   "dims": {
+    "depth_m": 0.75,
+    "length_m": 7.4802,
+    "net_plan_m2": 2.99209,
+    "width_m": 0.4
+   },
+   "element_id": "P-C:BEAMS:GF:BAND0042",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-e3a49262090ff5aa44b1",
+   "range": null,
+   "value": 2.524572
+  },
+  {
+   "dims": {
+    "depth_m": 0.75,
+    "length_m": 3.3,
+    "net_plan_m2": 1.32,
+    "width_m": 0.4
+   },
+   "element_id": "P-C:BEAMS:GF:BAND0043.2",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-d06033aa8d5f29aef490",
+   "range": null,
+   "value": 0.99
+  },
+  {
+   "dims": {
+    "depth_m": 0.75,
+    "length_m": 5.1,
+    "net_plan_m2": 2.295,
+    "width_m": 0.45
+   },
+   "element_id": "P-C:BEAMS:GF:BAND0044.1",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-3f8d27e15652fd66b74c",
+   "range": null,
+   "value": 1.72125
+  },
+  {
+   "dims": {
+    "depth_m": 0.75,
+    "length_m": 7.8,
+    "net_plan_m2": 3.9,
+    "width_m": 0.5
+   },
+   "element_id": "P-C:BEAMS:GF:BAND0045",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-7ca10403edee7eb03ce5",
+   "range": null,
+   "value": 2.925
+  },
+  {
+   "dims": {
+    "depth_m": 0.75,
+    "length_m": 3.55,
+    "net_plan_m2": 1.775,
+    "width_m": 0.5
+   },
+   "element_id": "P-C:BEAMS:GF:BAND0046.1",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-aac2d80323d6e18f79d9",
+   "range": null,
+   "value": 1.33125
+  },
+  {
+   "dims": {
+    "depth_m": 0.85,
+    "length_m": 5.6179,
+    "net_plan_m2": 3.65164,
+    "width_m": 0.65
+   },
+   "element_id": "P-C:BEAMS:GF:BAND0047.2",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-84a58bf3db82ab2b271c",
+   "range": null,
+   "value": 3.103896
+  },
+  {
+   "dims": {
+    "depth_m": 0.85,
+    "length_m": 3.2713,
+    "net_plan_m2": 2.94413,
+    "width_m": 0.9
+   },
+   "element_id": "P-C:BEAMS:GF:BAND0048.1",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-f82084a0c5320e7c8a5d",
+   "range": null,
+   "value": 2.502512
+  },
+  {
+   "dims": {
+    "depth_m": 0.75,
+    "length_m": 1.885,
+    "net_plan_m2": 0.37699,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:GF:BAND0049",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-5bc1baae70fcc325abea",
+   "range": null,
+   "value": 0.282743
+  },
+  {
+   "dims": {
+    "depth_m": 0.75,
+    "length_m": 0.6158,
+    "net_plan_m2": 0.12316,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:GF:BAND0050",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-2f22d0aa400b1bd87f43",
+   "range": null,
+   "value": 0.092372
+  },
+  {
+   "dims": {
+    "depth_m": 0.75,
+    "length_m": 0.4765,
+    "net_plan_m2": 0.0953,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:GF:BAND0051",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-e71aa8f1d37bf3b2ae49",
+   "range": null,
+   "value": 0.071472
+  },
+  {
+   "dims": {
+    "depth_m": 0.75,
+    "length_m": 0.3485,
+    "net_plan_m2": 0.06969,
+    "width_m": 0.2
+   },
+   "element_id": "P-C:BEAMS:GF:BAND0052",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-c6fccf7cde9636d5a0f6",
+   "range": null,
+   "value": 0.052269
+  },
+  {
+   "dims": {
+    "length_m": 1.7,
+    "net_plan_m2": 0.34,
+    "width_m": 0.2
+   },
+   "element_id": "U-C:BEAMS:GF:BAND0006",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-c88a0d4e7df0794f0a1d",
+   "range": [
+    0.136,
+    0.408
+   ],
+   "value": null
+  },
+  {
+   "dims": {
+    "length_m": 2.65,
+    "net_plan_m2": 0.53,
+    "width_m": 0.2
+   },
+   "element_id": "U-C:BEAMS:GF:BAND0019.2",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-be987a7d34d641f84860",
+   "range": [
+    0.212,
+    0.636
+   ],
+   "value": null
+  },
+  {
+   "dims": {
+    "depth_m": 0.5,
+    "length_m": 0.5,
+    "net_plan_m2": 0.1,
+    "width_m": 0.2
+   },
+   "element_id": "U-C:BEAMS:GF:BAND0030.2",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-efd3f7806bf10b6a8e98",
+   "range": [
+    0.04,
+    0.12
+   ],
+   "value": null
+  },
+  {
+   "dims": {
+    "length_m": 4.325,
+    "net_plan_m2": 0.865,
+    "width_m": 0.2
+   },
+   "element_id": "U-C:BEAMS:GF:BAND0031",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-8ea41770d5d3f5cda1d7",
+   "range": [
+    0.346,
+    1.038
+   ],
+   "value": null
+  },
+  {
+   "dims": {
+    "depth_m": 0.75,
+    "length_m": 3.0,
+    "net_plan_m2": 1.2,
+    "width_m": 0.4
+   },
+   "element_id": "U-C:BEAMS:GF:BAND0043.1",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-bf1b65a73a022801df9c",
+   "range": [
+    0.9,
+    0.9
+   ],
+   "value": null
+  },
+  {
+   "dims": {
+    "depth_m": 0.75,
+    "length_m": 1.5,
+    "net_plan_m2": 0.75,
+    "width_m": 0.5
+   },
+   "element_id": "U-C:BEAMS:GF:BAND0046.2",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-e2cd38b5f20d2b331d5c",
+   "range": [
+    0.5625,
+    0.5625
+   ],
+   "value": null
+  },
+  {
+   "dims": {
+    "depth_m": 0.85,
+    "length_m": 1.2366,
+    "net_plan_m2": 0.80382,
+    "width_m": 0.65
+   },
+   "element_id": "U-C:BEAMS:GF:BAND0047.1",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-eabf62332ad696c33010",
+   "range": [
+    0.683248,
+    0.683248
+   ],
+   "value": null
+  },
+  {
+   "dims": {
+    "depth_m": 0.85,
+    "length_m": 1.1027,
+    "net_plan_m2": 0.98898,
+    "width_m": 0.9
+   },
+   "element_id": "U-C:BEAMS:GF:BAND0048.2",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-128a9951bede06b9ff0f",
+   "range": [
+    0.84063,
+    0.84063
+   ],
+   "value": null
+  },
+  {
+   "dims": {
+    "length_m": 0.4377,
+    "net_plan_m2": 0.08755,
+    "width_m": 0.2
+   },
+   "element_id": "U-C:BEAMS:GF:BAND0053",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "GF",
+   "item_code": "STR.CONC.BEAM",
+   "line_id": "L-e019aa51fc2dbb56b8b0",
+   "range": [
+    0.035018,
+    0.105055
+   ],
+   "value": null
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:1F:SITE-099b3363738e8f6d",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-d44c5050e83961c571db",
+   "range": null,
+   "value": 2.20865
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:1F:SITE-0a53f612664d3cf6",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-427f3499df72e84f700d",
+   "range": null,
+   "value": 0.749374
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:1F:SITE-0e91aeecfe22e08b",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-8e5c2f484172e9259455",
+   "range": null,
+   "value": 0.056324
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:1F:SITE-0e9b0c4e2c51ecc2",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-df7ef6ffd5da8e1e9418",
+   "range": null,
+   "value": 0.729167
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:1F:SITE-1847ba557d0991ce",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-8586e34ce4717efb4e36",
+   "range": null,
+   "value": 0.674369
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:1F:SITE-2e3a01f998f4e488",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-038456ade3eb09b43bb8",
+   "range": null,
+   "value": 0.074772
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:1F:SITE-323e81ae12039d01",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-193eabb70dbbd7b9b798",
+   "range": null,
+   "value": 1.0328
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:1F:SITE-398ad7de9cd54a5a",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-2f6e26eb87c794452551",
+   "range": null,
+   "value": 0.015882
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:1F:SITE-4ac8f85d424b4f0f",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-d624ff4e772d75ebb20f",
+   "range": null,
+   "value": 1.764553
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:1F:SITE-516a3b7ae454a85c",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-4baffcb95570ca418d0c",
+   "range": null,
+   "value": 0.864
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:1F:SITE-5b33730ec36fa67a",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-683900f927474df70227",
+   "range": null,
+   "value": 0.093075
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:1F:SITE-765e648e6f1c5d22",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-bde4aa4648e5b6f0b67d",
+   "range": null,
+   "value": 0.083518
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:1F:SITE-7d0ae6284372b473",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-af41a42f8504dd178716",
+   "range": null,
+   "value": 0.515274
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:1F:SITE-954c733066cf20e8",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-ee20c11a155ca588335f",
+   "range": null,
+   "value": 0.013861
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:1F:SITE-97f1b67f08f56f05",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-b41477e3593134b8c4b0",
+   "range": null,
+   "value": 0.441905
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:1F:SITE-a0b63a7e47e5d9a3",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-fb9a2ac1d861b37db720",
+   "range": null,
+   "value": 0.074772
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:1F:SITE-b1fdbf122e7d8a5b",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-7a83b8f273dea348e19e",
+   "range": null,
+   "value": 0.083518
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:1F:SITE-cab3f5a253608203",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-db44466cc89e4968448f",
+   "range": null,
+   "value": 1.520549
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:1F:SITE-cdaabd40e66141bf",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-578ddf276a2e214a3945",
+   "range": null,
+   "value": 1.764553
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:1F:SITE-d0ed586d1bfd5d55",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-3b73c9e2ed0cbe3eb446",
+   "range": null,
+   "value": 0.056324
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:1F:SITE-d4a3945595cf359e",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-e79f12c2c021010426db",
+   "range": null,
+   "value": 3.3368
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:1F:SITE-d50e79d29e4c7ca8",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-8843faaf6b256bc4b840",
+   "range": null,
+   "value": 0.09922
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:1F:SITE-db44cdd415cfe47b",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-916cf0fe632402045078",
+   "range": null,
+   "value": 0.032475
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:1F:SITE-e12037595b4a20b0",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-326b2c83d8ec682ba992",
+   "range": null,
+   "value": 0.706161
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:1F:SITE-ec94bbd491600b92",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-7e132c398bac4f1ae67b",
+   "range": null,
+   "value": 0.093075
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:1F:SITE-fe6e4edfb9e9df0d",
+   "evidence_state": "PROVISIONAL",
+   "floor": "1F",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-657e6e2cba5a0d0d9d95",
+   "range": null,
+   "value": 2.8328
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:2F:SITE-29936e52e9c9bb32",
+   "evidence_state": "PROVISIONAL",
+   "floor": "2F",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-a615e1aa2e180544ecbb",
+   "range": null,
+   "value": 0.5184
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:2F:SITE-33c2a6eeca9700cc",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "2F",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-3c5c1927b90b042ab1c8",
+   "range": null,
+   "value": 1.4823
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:2F:SITE-3ddef6eb3b8c73b0",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "2F",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-5793c62a6b332f624288",
+   "range": null,
+   "value": 0.972
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:2F:SITE-3ec9bc2fe28ad7a4",
+   "evidence_state": "PROVISIONAL",
+   "floor": "2F",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-9b80d99c11772f4b3024",
+   "range": null,
+   "value": 2.4
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:2F:SITE-6d9a092e74ae2689",
+   "evidence_state": "PROVISIONAL",
+   "floor": "2F",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-05a66015a9196923301d",
+   "range": null,
+   "value": 0.013861
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:2F:SITE-9020cd1f745a1792",
+   "evidence_state": "PROVISIONAL",
+   "floor": "2F",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-378a77a134c2799f98f2",
+   "range": null,
+   "value": 0.043482
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:2F:SITE-d475d4d7db56ceb9",
+   "evidence_state": "PROVISIONAL",
+   "floor": "2F",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-60e491cb9ecfb81d545b",
+   "range": null,
+   "value": 0.576
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:2F:SITE-f9f3066dd0714584",
+   "evidence_state": "PROVISIONAL",
+   "floor": "2F",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-8d583451399826560679",
+   "range": null,
+   "value": 1.16
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:2F:SITE-fbb544778990fa6f",
+   "evidence_state": "PROVISIONAL",
+   "floor": "2F",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-10e7860e28bea5750c9e",
+   "range": null,
+   "value": 0.3456
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:GF:SITE-07449b4153668c8d",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-154189764660999e4896",
+   "range": null,
+   "value": 1.256877
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:GF:SITE-16f91341e0f732a4",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-276e1da76e74e462c053",
+   "range": null,
+   "value": 0.010634
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:GF:SITE-26def7f328877275",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-abe0c36f94dba208300f",
+   "range": null,
+   "value": 1.168145
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:GF:SITE-27d346650efea44d",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-f075f5f26155b3e6d2ed",
+   "range": null,
+   "value": 0.013996
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:GF:SITE-27f409e788c6f9b6",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-a90fa92da4bf33be57f0",
+   "range": null,
+   "value": 1.971278
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:GF:SITE-2dbba82c438ab0ce",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-3027c28d061657ae2100",
+   "range": null,
+   "value": 1.871994
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:GF:SITE-31ad625352b355ef",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-8ffe95ad42d5967263a4",
+   "range": null,
+   "value": 0.019784
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:GF:SITE-42f76fb1678805bf",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-00e79bf1cdb584521505",
+   "range": null,
+   "value": 0.020455
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:GF:SITE-44af98e5eab04d7e",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-ecb42e3e295fb67fbc38",
+   "range": null,
+   "value": 0.86
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:GF:SITE-4726d126cc4122e8",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-d340a7f437e25aa46a4e",
+   "range": null,
+   "value": 0.450642
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:GF:SITE-49da859eb75708ae",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-fddb4eda34df524271e6",
+   "range": null,
+   "value": 0.078393
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:GF:SITE-4ae4d64b898754c1",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-c1807dde80fa21936c24",
+   "range": null,
+   "value": 0.013861
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:GF:SITE-4f47929de07c8d28",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-490d0916fbd4f1d22b0e",
+   "range": null,
+   "value": 0.812849
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:GF:SITE-5870887b5dbc8980",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-c544aa98e09609150e4d",
+   "range": null,
+   "value": 0.532
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:GF:SITE-589b71acf3c10a8d",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-901bcd0b3b31e3e128d5",
+   "range": null,
+   "value": 0.137174
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:GF:SITE-5a8e4288eccd1c64",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-0e36c1f66b2f8e455147",
+   "range": null,
+   "value": 2.417342
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:GF:SITE-5a9ae654c8652281",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-ca3b500d27b26dc43c8d",
+   "range": null,
+   "value": 2.4864
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:GF:SITE-616ccd770e57ec39",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-f7d4ebb244caf3d1b1d9",
+   "range": null,
+   "value": 0.032214
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:GF:SITE-73b98c9a67697884",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-c38321cc0db7733d0623",
+   "range": null,
+   "value": 2.600575
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:GF:SITE-7854bfa9d31e5b60",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-c18e5714727c841ee613",
+   "range": null,
+   "value": 0.073005
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:GF:SITE-7c4ce9d23b066d40",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-336fd302a6c60a4cabd4",
+   "range": null,
+   "value": 0.16855
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:GF:SITE-7f162a92f2b3b727",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-c7239507b7c0210f8875",
+   "range": null,
+   "value": 0.652696
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:GF:SITE-82e1ee2eac94000c",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-236a39c38ef9dfb7aecf",
+   "range": null,
+   "value": 0.462
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:GF:SITE-850b776ade14170d",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-7117723666e439340d84",
+   "range": null,
+   "value": 0.4116
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:GF:SITE-85224b7aeee85ea1",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-70830345ffdabc4cf7d5",
+   "range": null,
+   "value": 0.658817
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:GF:SITE-8602708d92a6d40c",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-a9a5b156266859be6bd7",
+   "range": null,
+   "value": 0.982453
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:GF:SITE-93dce4266079f867",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-1f5115950eb4d71fe32a",
+   "range": null,
+   "value": 1.24224
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:GF:SITE-9a417857220d140f",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-0a3620f1b2a632c613e1",
+   "range": null,
+   "value": 2.1528
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:GF:SITE-a04b447bba7d8bde",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-afcd1d5abea806226e06",
+   "range": null,
+   "value": 0.686049
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:GF:SITE-a4d30775bfa402a8",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-e5c487323cb2095c291b",
+   "range": null,
+   "value": 0.207894
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:GF:SITE-a7153521aaefd4d4",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-5afc5b2e3ad6efb3f96f",
+   "range": null,
+   "value": 0.887103
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:GF:SITE-ab900a6b8b4408b3",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-356bd4c1362c3e2be37d",
+   "range": null,
+   "value": 0.00781
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:GF:SITE-c3f49750964868d6",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-8b2a9850c1641f342be7",
+   "range": null,
+   "value": 0.1184
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:GF:SITE-cb5c64b64858ac02",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-4ed1b164e5f54d3725b4",
+   "range": null,
+   "value": 0.469985
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:GF:SITE-d76005d1fd7fcc81",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-10667ae035e57e29d02c",
+   "range": null,
+   "value": 2.1576
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:GF:SITE-daa7c0ea8fafe84f",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-91d531604bfe28a9fec1",
+   "range": null,
+   "value": 0.005045
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:GF:SITE-e11cc59fff811038",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-e798f0822848fd82b022",
+   "range": null,
+   "value": 0.8496
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:GF:SITE-f3855bd4dd8297b3",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-3d01af6227b13bc7c1f4",
+   "range": null,
+   "value": 2.88
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:GF:SITE-f71c9ea78970474d",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-07e302ec4efdfa48ed22",
+   "range": null,
+   "value": 1.328675
+  },
+  {
+   "dims": {},
+   "element_id": "P-C:SLABS:GF:SITE-f945be5158a99f81",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "STR.CONC.SLAB",
+   "line_id": "L-84ca57fea5c1db2a0076",
+   "range": null,
+   "value": 0.332868
+  }
+ ],
+ "schema": "T146_CANDIDATE_V3011_BEAM_SLAB_V1",
+ "source": "V3_0_11_BOQ_LINES.json",
+ "source_sha256": "47c9a84e7a460559443b130e3f154828f6337e3fc1dad342674ce4f7206244fa"
+}
