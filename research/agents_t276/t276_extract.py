@@ -7,6 +7,11 @@ spans, columns, arcs, lift ring and slab panels are rebuilt EXACTLY as T-242 (ME
 (research/agents_t242/t242_extract.py, structural part only), and the panel ids GS-nn are checked against the merged
 ALSENAN_GROUND_INPUT.json (same area and same bordering runs, else the run stops).
 
+r2 (Checker 2026-10-24 20:59): the T-242 strips are the OVERLAP of each band's two edge lines; the traced solid closes
+every band end on its carrier's drawn face on each edge (face_trace.close_band_ends), drops sub-mm drafting offsets as
+members (SNAP_TOL 1 mm), is closed by 0.5 mm only and walked in 1 mm steps; T-242's panels are reproduced from T-242's
+own construction first and then mapped by id onto the r2 solid (area changes listed).
+
 What it adds: every vertical face of the buried ground-beam system is traced ONCE. The plan union of the drawn concrete
 (band strips + curved bands + columns on the ground-beam plan + lift ring) is the solid; its boundary is every face that
 can have earth against it: the boundary of each slab-panel hole (faces against the fill under a panel) and the outer
@@ -36,7 +41,7 @@ spec = importlib.util.spec_from_file_location("r141", os.path.join(ROOT, "resear
 R = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(R)
 
-STEP_MM = 5.0
+STEP_MM = 1.0      # r2: 1 mm steps (r1: 5 mm) so a junction is resolved to 1 mm
 
 
 def r4(v):
@@ -97,18 +102,10 @@ def main():
             eo, ei = ei, eo
         P = Polygon(arc_pts(eo) + list(reversed(arc_pts(ei)))).buffer(0)
         arc_polys[f"ARC:{h_out}+{h_in}"] = {"poly": P, "outer": eo, "inner": ei}
-    strip_full = {}
+    strip_t242 = {}
     for bid, b in B.items():
         lo, hi = sorted((b["lo_off"], b["hi_off"]))
-        strip_full[bid] = Polygon(EO.band_slab(tuple(b["u"]), lo, hi, b["t0"], b["t1"]))
-    span_poly, span_meta = {}, {}
-    for sp in out["spans"]:
-        b = B[sp["band_id"]]
-        lo, hi = sorted((b["lo_off"], b["hi_off"]))
-        ta, tb = sp["start"]["face_station_m"] * 1000.0, sp["end"]["face_station_m"] * 1000.0
-        span_poly[sp["span_id"]] = Polygon(EO.band_slab(tuple(b["u"]), lo, hi, ta, tb))
-        span_meta[sp["span_id"]] = {"band": sp["band_id"], "lo": lo, "hi": hi, "ta": min(ta, tb), "tb": max(ta, tb),
-                                    "L": sp["lengths"]["face_to_face_m"]}
+        strip_t242[bid] = Polygon(EO.band_slab(tuple(b["u"]), lo, hi, b["t0"], b["t1"]))
     col_poly = {"COL:" + i: Polygon(p).buffer(0) for i, p, _ in cols}
     ring = []
     for e in msp.query("LWPOLYLINE[layer=='S-BW']"):
@@ -116,6 +113,58 @@ def main():
         if R.inb(*pts[0], GBP):
             ring.append((e.dxf.handle, Polygon(pts).buffer(0)))
     cols_u = unary_union(list(col_poly.values()))
+
+    # ---- r2: every band closed on its carrier's drawn face on each of its own edges (FT.close_band_ends). The T-242
+    # strip is the overlap of the two edge lines; where they end at different stations the drawn concrete beyond the
+    # square cut is restored when it is enclosed by the band's own edges and other drawn concrete.
+    carriers_fixed = [v["poly"] for v in arc_polys.values()] + list(col_poly.values()) + [P for _, P in ring]
+    strip_full, band_ends, side_ext = {}, {}, {}
+    for bid, b in B.items():
+        u, n = EO.band_frame(tuple(b["u"]))
+        lo, hi = sorted((b["lo_off"], b["hi_off"]))
+        iv = {"A": [], "B": []}
+        for h in b["handles"]:
+            e = lines1[h]
+            p0, p1 = tuple(e.dxf.start)[:2], tuple(e.dxf.end)[:2]
+            off = p0[0] * n[0] + p0[1] * n[1]
+            side = "A" if abs(off - lo) <= FT.FACE_TOL else ("B" if abs(off - hi) <= FT.FACE_TOL else None)
+            if side is None:
+                raise SystemExit(f"band {bid}: line {h} on neither face")
+            iv[side].append((p0[0] * u[0] + p0[1] * u[1], p1[0] * u[0] + p1[1] * u[1]))
+        ea = FT.side_interval(iv["A"], b["t0"], b["t1"])
+        eb = FT.side_interval(iv["B"], b["t0"], b["t1"])
+        side_ext[bid] = {"A": ea, "B": eb}
+        others = unary_union([P for k, P in strip_t242.items() if k != bid] + carriers_fixed)
+        ends = FT.close_band_ends(u, lo, hi, b["t0"], b["t1"], ea, eb, others, reach=abs(hi - lo))
+        band_ends[bid] = ends
+        strip_full[bid] = unary_union([strip_t242[bid]] + [r["poly"] for r in ends if r["status"] == "CLOSED"])
+    exts = [(bid, r["end"], r["poly"]) for bid, ends in band_ends.items() for r in ends if r["status"] == "CLOSED"]
+    for i, (b1, e1, p1) in enumerate(exts):
+        for b2, e2, p2 in exts[i + 1:]:
+            if p1.intersection(p2).area > 1.0:
+                raise SystemExit(f"band end closures overlap: {b1} {e1} / {b2} {e2}")
+
+    span_poly, span_meta = {}, {}
+    for sp in out["spans"]:
+        b = B[sp["band_id"]]
+        lo, hi = sorted((b["lo_off"], b["hi_off"]))
+        ta, tb = sp["start"]["face_station_m"] * 1000.0, sp["end"]["face_station_m"] * 1000.0
+        ta, tb = min(ta, tb), max(ta, tb)
+        P = Polygon(EO.band_slab(tuple(b["u"]), lo, hi, ta, tb))
+        st = {"A": [ta, tb], "B": [ta, tb]}
+        attached = []
+        for r in band_ends[sp["band_id"]]:
+            at = b["t0"] if r["end"] == "start" else b["t1"]
+            if r["status"] != "CLOSED" or abs((ta if r["end"] == "start" else tb) - at) > FT.SNAP_TOL:
+                continue
+            P = unary_union([P, r["poly"]])
+            for side in ("A", "B"):
+                st[side][0 if r["end"] == "start" else 1] = r["closed"][side]
+            attached.append(r["end"])
+        span_poly[sp["span_id"]] = P
+        span_meta[sp["span_id"]] = {"band": sp["band_id"], "lo": lo, "hi": hi, "ta": ta, "tb": tb,
+                                    "side_t": {k: tuple(v) for k, v in st.items()}, "closed_ends": attached,
+                                    "L": sp["lengths"]["face_to_face_m"]}
     arcs_net = {k: v["poly"].difference(unary_union(list(strip_full.values()))).difference(cols_u)
                 for k, v in arc_polys.items()}
     drawn = unary_union(list(strip_full.values()) + [v["poly"] for v in arc_polys.values()])
@@ -123,9 +172,14 @@ def main():
     ring_u = unary_union([P for _, P in ring])
     rest = drawn.difference(spans_u).difference(cols_u).difference(unary_union(list(arcs_net.values()))) \
         .difference(ring_u)
-    pieces = {}
+    pieces, slivers = {}, []
     for g in getattr(rest, "geoms", [rest]):
         if g.is_empty or g.area < 1.0:
+            continue
+        if FT.is_sliver(g):     # r2: a drafting offset thinner than SNAP_TOL is not a member; its faces go to the
+            slivers.append({"plan_mm2": round(g.area, 1), "half_perimeter_m": r4(g.length / 2000.0),   # member it
+                            "against": sorted(c for c, Q in col_poly.items() if Q.distance(g) < 1.0) +  # lies against
+                            sorted(s for s, P in span_poly.items() if P.distance(g) < 1.0)})
             continue
         in_bands = sorted(bid for bid, P in strip_full.items() if P.intersection(g).area > 0.5 * g.area)
         near_c = sorted(c for c, Q in col_poly.items() if Q.distance(g) < 1.0)
@@ -137,28 +191,49 @@ def main():
         pieces[k2] = {"poly": g, "in_bands": in_bands, "touches_columns": near_c, "touches_spans": near_s,
                       "plan_m2": r4(g.area / 1e6)}
 
-    # ---- slab panels (T-242: holes of the solid >= 0.05 m2, ids by area, then bordering runs)
-    solid = unary_union(list(strip_full.values()) + [v["poly"] for v in arc_polys.values()] +
-                        list(col_poly.values()) + [P for _, P in ring]).buffer(5).buffer(-5)
-    panels, small_holes = [], []
-    for g in getattr(solid, "geoms", [solid]):
-        for rr in g.interiors:
-            P = Polygon(rr)
-            if P.area < 0.05e6:
-                small_holes.append(r4(P.area / 1e6))
-                continue
-            border = sorted(sid for sid, Q in span_poly.items() if Q.distance(P) < 2.0) + \
-                sorted(k for k, v in arc_polys.items() if v["poly"].distance(P) < 2.0)
-            panels.append({"plan_m2": r4(P.area / 1e6), "bordering_runs": border, "poly": P})
-    panels.sort(key=lambda d: (-d["plan_m2"], d["bordering_runs"]))
-    for k, pnl in enumerate(panels, start=1):
-        pnl["panel_id"] = f"GS-{k:02d}"
+    # ---- slab panels (T-242: holes of the solid >= 0.05 m2, ids by area, then bordering runs). First the T-242
+    # construction itself (overlap strips, T-242 span rectangles), which must reproduce every merged panel; then the
+    # r2 solid (closed band ends): each panel keeps its T-242 id (largest common area), its area change is listed.
+    span_rect = {sid: Polygon(EO.band_slab(tuple(B[m["band"]]["u"]), m["lo"], m["hi"], m["ta"], m["tb"]))
+                 for sid, m in span_meta.items()}
+
+    def holes_of(strips, spans, close_mm):
+        sol = unary_union(list(strips.values()) + [v["poly"] for v in arc_polys.values()] +
+                          list(col_poly.values()) + [P for _, P in ring]).buffer(close_mm).buffer(-close_mm)
+        pn, sm = [], []
+        for g in getattr(sol, "geoms", [sol]):
+            for rr in g.interiors:
+                P = Polygon(rr)
+                if P.area < 0.05e6:
+                    sm.append(r4(P.area / 1e6))
+                    continue
+                border = sorted(sid for sid, Q in spans.items() if Q.distance(P) < 2.0) + \
+                    sorted(k for k, v in arc_polys.items() if v["poly"].distance(P) < 2.0)
+                pn.append({"plan_m2": r4(P.area / 1e6), "bordering_runs": border, "poly": P})
+        pn.sort(key=lambda d: (-d["plan_m2"], d["bordering_runs"]))
+        return sol, pn, sm
+
+    _, panels242, _ = holes_of(strip_t242, span_rect, 5.0)     # T-242's own 5 mm closing
     merged = json.load(open(os.path.join(ROOT, "research/agents_t242/ALSENAN_GROUND_INPUT.json"), encoding="utf-8"))
     mp = {p["panel_id"]: p for p in merged["slab_panels"]}
-    for pnl in panels:
+    for k, pnl in enumerate(panels242, start=1):
+        pnl["panel_id"] = f"GS-{k:02d}"
         m = mp.get(pnl["panel_id"])
         if not m or abs(m["plan_m2"] - pnl["plan_m2"]) > 1e-4 or m["bordering_runs"] != pnl["bordering_runs"]:
             raise SystemExit(f"panel {pnl['panel_id']} does not reproduce the merged T-242 panel")
+    # r2: the traced solid is closed only by SNAP_TOL / 2 (gaps below 1 mm are drafting offsets); T-242's 5 mm closing
+    # filled the acute wedge where a face meets another at a shallow angle (ring ARC 158 on LINE 7C3: ~25 mm of arc)
+    solid, panels, small_holes = holes_of(strip_full, span_poly, FT.SNAP_TOL / 2.0)
+    panel_change = []
+    for pnl in panels:
+        best = max(panels242, key=lambda q: q["poly"].intersection(pnl["poly"]).area)
+        pnl["panel_id"] = best["panel_id"]
+        if abs(best["plan_m2"] - pnl["plan_m2"]) > 1e-6:
+            panel_change.append({"panel": best["panel_id"], "t242_m2": best["plan_m2"], "r2_m2": pnl["plan_m2"],
+                                 "change_m2": r4(pnl["plan_m2"] - best["plan_m2"])})
+    if sorted(p["panel_id"] for p in panels) != sorted(p["panel_id"] for p in panels242):
+        raise SystemExit("closing the band ends changed the panel set (a panel merged, split or vanished)")
+    panels.sort(key=lambda d: d["panel_id"])
 
     # ---- owners: every drawn member a face step can belong to
     owners = []
@@ -172,6 +247,7 @@ def main():
         owners.append(("PIECE", k, d["poly"]))
     for h, P in ring:
         owners.append(("LIFT_RING", "S-BW:" + h, P))
+    FT.check_owners(owners)
     tree = STRtree([o[2] for o in owners])
 
     # which drawn LINE is the face of each side of each band (by its offset from the band axis frame)
@@ -195,7 +271,7 @@ def main():
         if kind == "SPAN":
             m = span_meta[oid]
             u, n = EO.band_frame(tuple(B[m["band"]]["u"]))
-            return {"u": u, "n": n, "lo": m["lo"], "hi": m["hi"], "ta": m["ta"], "tb": m["tb"]}
+            return {"u": u, "n": n, "lo": m["lo"], "hi": m["hi"], "ta": m["ta"], "tb": m["tb"], "side_t": m["side_t"]}
         if kind == "ARC":
             v = arc_polys[oid]
             return {"centre": (v["outer"].dxf.center[0], v["outer"].dxf.center[1]), "r_out": v["outer"].dxf.radius,
@@ -219,24 +295,38 @@ def main():
     # framing into the column face: concrete against concrete) and which part is free (on a panel / outer boundary)
     col_contacts = {}
     fp_cols = [(i, Polygon(p).buffer(0)) for i, p, _ in R.outlines(msp, "S-COL.BON", FP)]
+    from shapely.geometry.polygon import orient
     for cid, Q in sorted(col_poly.items()):
-        ls = LineString(list(Q.exterior.coords))
+        ls = LineString(list(orient(Q, 1.0).exterior.coords))      # counter-clockwise: outward normal on the right
         L = ls.length
         nstep = max(1, int(math.ceil(L / STEP_MM)))
         acc = {}
         for k in range(nstep):
             s0, s1 = L * k / nstep, L * (k + 1) / nstep
             pt = ls.interpolate((s0 + s1) / 2.0)
+            pa, pb = ls.interpolate(max(0.0, s0 - 0.01)), ls.interpolate(min(L, s1 + 0.01))
+            dx, dy = pb.x - pa.x, pb.y - pa.y
+            dn = math.hypot(dx, dy) or 1.0
+            # r2: a perimeter step is covered when the point SNAP_TOL outside the column face lies within SNAP_TOL / 2
+            # of another member (r1: any member within 2 mm of the face, which gave 2 mm extra cover at each corner)
+            po = Point(pt.x + dy / dn * FT.SNAP_TOL, pt.y - dx / dn * FT.SNAP_TOL)
             best = None
-            for i in tree.query(pt.buffer(3.0)):
+            for i in tree.query(po.buffer(FT.SNAP_TOL)):
                 kind, oid, P = owners[i]
                 if kind == "COLUMN" and oid == cid:
                     continue
-                d = P.distance(pt)
-                if d <= 2.0 and (best is None or d < best[0]):
+                d = P.distance(po)
+                if d <= FT.SNAP_TOL / 2.0 and (best is None or d < best[0]):
                     best = (d, kind, oid)
-            if best is None:
-                inside_panel = next((p["panel_id"] for p in panels if p["poly"].buffer(3.0).contains(pt)), None)
+            if best is None and solid.contains(po):     # a sub-mm wedge the traced solid closes: the nearest member
+                idx, _ = tree.query_nearest(po, return_distance=True, exclusive=False, all_matches=True)
+                cand = sorted((owners[i] for i in idx if owners[i][1] != cid),
+                              key=lambda o: (o[2].distance(po), FT.KIND_ORDER.index(o[0]), o[1]))
+                if not cand:
+                    cand = sorted((o for o in owners if o[1] != cid), key=lambda o: o[2].distance(po))
+                best = (cand[0][2].distance(po), cand[0][0], cand[0][1])
+            if best is None:                             # free: the side the face looks into, as the trace has it
+                inside_panel = next((p["panel_id"] for p in panels if p["poly"].contains(po)), None)
                 key = ("FREE", inside_panel or "OUTER")
             else:
                 key = (best[1], best[2])
@@ -255,11 +345,12 @@ def main():
     for sid, m in sorted(span_meta.items()):
         u, n = EO.band_frame(tuple(B[m["band"]]["u"]))
         for side, off, sgn in (("A", m["lo"], -1.0), ("B", m["hi"], 1.0)):
-            L = m["tb"] - m["ta"]
+            s_a, s_b = m["side_t"][side]
+            L = s_b - s_a
             nstep = max(1, int(math.ceil(L / STEP_MM)))
             acc = {}
             for k in range(nstep):
-                t = m["ta"] + L * (k + 0.5) / nstep
+                t = s_a + L * (k + 0.5) / nstep
                 o = off + sgn * 3.0
                 pt = Point(t * u[0] + o * n[0], t * u[1] + o * n[1])
                 hit = None
@@ -273,6 +364,16 @@ def main():
                     hit = f"PANEL:{pi[0]}" if pi else ("OUTER" if not solid.contains(pt) else "SMALL_HOLE")
                 acc[hit] = acc.get(hit, 0.0) + L / nstep
             side_cover[f"{sid}|{side}"] = {k: r4(v / 1000.0) for k, v in sorted(acc.items())}
+
+    def span_ends(sid, m):
+        """Each span end: its two edge stations relative to the span's own end station (mm) and whether it is
+        CLOSED on its carrier (equal stations, or a band-end closure attached)."""
+        out_e = {}
+        for k, e in ((0, "start"), (1, "end")):
+            a, b = m["side_t"]["A"][k], m["side_t"]["B"][k]
+            out_e[e] = {"edge_offset_mm": round(b - a, 1),
+                        "closed": abs(b - a) <= FT.SNAP_TOL or e in m["closed_ends"]}
+        return out_e
 
     rows = []
     for bd in boundaries:
@@ -288,9 +389,22 @@ def main():
     data = {"source": {"drive": "Alsenan chalet project / ST7757 dxf.dxf", "structural_sha256": R.DXF_SHA,
                        "t242_panels_reproduced": len(panels), "step_mm": STEP_MM},
             "small_holes_m2": small_holes,
+            "snap_tol_mm": FT.SNAP_TOL,
+            "band_end_closures": [
+                {"band": bid, "end": r["end"], "status": r["status"],
+                 "edge_stations_offset_mm": round(r["stations"]["B"] - r["stations"]["A"], 1),
+                 "ray_gap_mm": {k: round(v, 1) for k, v in r.get("ray_gap", {}).items()},
+                 "restored_plan_m2": r4(r["area"] / 1e6),
+                 "free_length_m": None if r["free_len"] is None else r4(r["free_len"] / 1000.0),
+                 "attached_to_spans": sorted(sid for sid, m in span_meta.items()
+                                             if m["band"] == bid and r["end"] in m["closed_ends"])}
+                for bid, ends in sorted(band_ends.items()) for r in ends if r["status"] != "NONE"],
+            "slivers_not_members": slivers,
+            "panel_area_change_vs_t242": panel_change,
             "pieces": {k: {kk: vv for kk, vv in d.items() if kk != "poly"} for k, d in sorted(pieces.items())},
             "boundaries": boundaries, "faces": rows, "column_contacts": col_contacts, "span_side_cover": side_cover,
-            "spans": {sid: {"band": m["band"], "face_to_face_m": m["L"]} for sid, m in sorted(span_meta.items())}}
+            "spans": {sid: {"band": m["band"], "face_to_face_m": m["L"], "ends": span_ends(sid, m)}
+                      for sid, m in sorted(span_meta.items())}}
     with open(os.path.join(a.out, "ALSENAN_FACE_TRACE.json"), "w", encoding="utf-8") as f:
         json.dump(data, f, indent=1, sort_keys=True)
     print(len(panels), "panels reproduced;", len(outers), "outer boundaries;", len(rows), "face rows;",

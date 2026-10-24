@@ -58,6 +58,19 @@ def check_closure(boundary_id, boundary_length, pieces):
     return s
 
 
+def check_end_face(span_id, ends):
+    """r2 (T-276, Checker 2026-10-24 20:59): a span END face is admitted only at an end that is CLOSED: both edges end
+    at the same station (a free end or a square carrier face) or the band-end closure was applied. An end whose two
+    edges stop at different stations but was cut square at the shorter edge invents an earth pocket and an end face:
+    refused."""
+    bad = [e for e, v in ends.items() if not v["closed"]]
+    if bad:
+        raise RefusedError(f"{span_id}: end face on a square cut at the shorter edge ({', '.join(bad)}: edges "
+                           f"{', '.join(str(ends[e]['edge_offset_mm']) for e in bad)} mm apart); the member must "
+                           "close on its carrier's drawn face on each of its own edges")
+    return True
+
+
 def refuse_run_length(run_id, side, run_L, traced_L):
     """The run's face-to-face length on a side whose traced earth face is shorter is refused (tee / column cover)."""
     if float(run_L) > float(traced_L) + RUN_LENGTH_TOL_M:

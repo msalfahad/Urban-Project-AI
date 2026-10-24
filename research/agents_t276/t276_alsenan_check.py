@@ -74,6 +74,8 @@ def main(write=False):
                 continue
             if k == "SPAN":
                 mem = span_member(m)
+                if f["face"] == "END":
+                    F.check_end_face(m, trace["spans"][m]["ends"])
                 face = "end face" if f["face"] == "END" else f"side {f['face']} (LINE {f.get('face_line_handle')})"
                 per_side.setdefault((m, f["face"]), 0.0)
                 per_side[(m, f["face"])] += f["length_m"]
