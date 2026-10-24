@@ -1,5 +1,37 @@
 # Older Lead feedback entries (moved from FEEDBACK.md to keep the last 20; newest first)
 
+## 2026-10-22 04:20 (lead run)
+
+- **Checker 00:38 / 02:45 / 04:02 SUCCESS**: 11 merged since 00:20 (T-155 r2, T-142 Gate B, T-139 r2, T-152, T-125, T-143,
+  T-147, T-154, T-159, T-161; T-155 counted at 23:53), 2 rejected (T-128, T-150). It cleared every item queued for it, in order.
+- **T-142 V3.0.2: WORKED (MERGED 5de8657, Gate B PASS)**: one evidence-text defect D4, fixed inside T-151.
+- **T-152 slab steel, T-139 r2 slabs, T-155 r2: WORKED (MERGED)**.
+- **T-125 MASONRY_CENTRELINE_V2: PARTIAL (MERGED, defect D-T125-1)**: a 0.053 m jamb stub absorbed into a free-end doorway.
+  Decision: new T-169 (lane A, permitted) before T-108.
+- **T-143 block by hand: PARTIAL by design (MERGED)**: 214.36 m2 PROVISIONAL counted HELD by the checker; net on Q-73, black
+  count on Q-75. Decision: the checker's status mapping binds T-108; nothing else.
+- **T-147 ceilings: PARTIAL by design (MERGED)**: drawing-derived bulkheads 175.76 m2 HELD (D-40), coves / wet board HELD.
+  No action beyond the designer list.
+- **T-154, T-159, T-161: WORKED (MERGED)**. T-161 defect D-T161-1 (main door must be HELD after its own DIFFERS finding) and
+  the checker's observation on T-159 (0.200 m projecting outline outside the SE faces) -> T-150 r2 and T-164.
+- **T-128 plaster / paint both methods: FAILED (gate e)**: walked the straight court line, not the curved glazing (+1.7 % on
+  the checker's room); one door with two widths. Decision: T-128 r2 rework with the exact faults (permitted).
+- **T-150 doors / windows: FAILED (gate f)**: W16 kept as INFERRED 4.805 m2 (not a s.5 status), main door not HELD after the
+  render finding. My 00:20 register line kept the main door as printed: that was wrong under WORKFLOW_CONTROLS s.8;
+  corrected. Decision: T-150 r2 (permitted), four exact faults.
+- **T-165 release baseline: WORKED pending** (both runs reproduced, provenance traced). Decision: Lead RULING, released
+  baseline = run A (no profile), run B = comparison base; new T-167 (V3.0.4 holds candidate lines resting on DIFFERENT /
+  NOT_PRINTED profile values; Q-17 A data file = spec C) and T-168 (Gate B tool checks manifests).
+- **T-151 V3.0.3 steel package: WORKED pending Gate B, OVERSIZED** (1,880 structural rows). Decision: three Gate B slices.
+- **T-157 outdoor areas: WORKED pending**: porch floor 10.680 vs the owner's "about 19.181" = the soffit over porch + entrance
+  stair (19.220); yard like for like -0.37 %. Decisions: register rulings; thresholds HELD to the designer (D-55), riser
+  flag D-56 (no owner question).
+- **T-160 dome rings, T-166 stair / pool / tank steel: WORKED pending**. Pool population vs the flat floor -> D-57.
+- **T-162 exterior Sigma: WORKED pending**: corners in m.l (457.095 measured vs his 1,297.35); conversion is the owner's own
+  flagged item -> OWNER PACKAGE (not a numbered question: 5 are open).
+- **Pool concrete** is now the largest single concrete gap (3.50 vs 12.35 m3). Decision: T-049 promoted (hand ledger first).
+- **Excavation / backfill** missing: T-170 builds the level chain Q-21 C requires first.
+
 ## 2026-10-22 00:20 (lead run)
 
 - **Checker 20:33 / 22:16 SUCCESS, 23:51 running**: 7 merged since 20:20 (T-119 r2, T-130 r3, T-134, T-156, T-149, T-144,

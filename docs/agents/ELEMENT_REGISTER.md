@@ -46,6 +46,17 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+### Lead 2026-10-24 10:15 (from T-146 + T-247 MERGED, T-228 REJECTED, T-260 / T-262 evidence; new T-268, T-269)
+
+| Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |
+|---|---|---|---|---|---|
+| Slab panels, 62 (GF 33.0695 / 1F 19.7566 / 2F 7.4543 m3) | concrete slab, beams (soffits, bands), formwork, rebar, finishes above / below | CONC.SLAB for the 62 panels only; the 13 non-slab faces go to CONC.BEAM or to no concrete line, once | VERIFIED as a WHOLE line in the candidate (60.2801 vs Checker 60.2804 m3) | T-146 + T-247 MERGED 768ff1d6 (Gate B 09:37) | release is the owner's; released A 61.5514 DISCREPANCY +2.11 % (R-SLAB-T-1 2F tag spread +0.625, 13 faces +0.646) |
+| Stair-shaft wall pieces under 'B3 (With Stair)': GF-W10 stair-foot 2.500 m, 1F-W10 B3 2.500 m, 2F-W02 B3 2.500 m (same plan position on GFRS 6B6 / FFRS 6B8) | blockwork, plaster, paint, stair concrete | BLOCKWORK (wall face) where a floor exists at that storey; none of the three has a printed slab cut on the stair-wall line | HELD (no slab cut at +5.50 / +9.70 on section A-A sheet10; landing members +3.50 printed, about +7.6 scaled) | Verifier 09:59 on T-228 | T-228 r2 (sibling test); the stair geometry owner is CONC.STAIR_DOME (T-258 / T-267) |
+| GF-W10 three eastern pieces (CB9) | blockwork, plaster, paint | BLOCKWORK | Checker own 40.5925 - 1.440 = 39.1525 m2 on the +1.00 basis; W.C. stretch 0 .. 0.945 m2 HELD | Verifier 09:59 | T-228 r2 carries it as its own figure |
+| Aluminium doors D-GF-01, D-GF-05, D-GF-06 (class) and D-GF-09 (width 0.90 vs block frame 1.00) | doors, blockwork deduction, plaster / paint deduction | DOORS (aluminium m2 and pcs); the same width deducts once in blockwork and once per finish face | evidence complete (worker 1): class ALUMINIUM x3, width 0.90 both faces; Checker ruling pending | T-260 (hand-in now, owner 10:02 (c)) | T-268 closes the line in the candidate; a ruled width change goes to T-261 / T-244 as a deduction change, never twice |
+| Openings W06 (GF-13 wedge B), W19 + D-1F-01 (1F-03), W20 + D-1F-04 (1F-02) | doors / windows, per-room plaster / paint / skirting / tiles | the opening line keeps the m2; per-room deductions follow the jamb-geometry room | LABEL_WRONG x5 (0.000 m2 today: equal pairs) | T-262 evidence complete | T-262 hand-in after T-228 r2 |
+| 1F living floor piece (stair-opening residue) and GF pantry pieces RC99C2A / RC06FED | floor area, stair (treads / winders), wet-floor class | FLOOR AREA (finish) with the stair opening / treads excluded once; pantry = wet floor (Q-37 A) | 1F living own 38.458 .. 38.978 m2 (spread 0.520) HELD; pantry pieces blocked by the tread rule | Checker floor-area closure 01:12 / 03:26 | T-269 (evidence), T-240 WP3 (integration) |
+
 ### Lead 2026-10-24 08:15 (from T-253, T-210, T-256 MERGED; T-250, T-219 READY; T-258 evidence complete; new T-262 .. T-266)
 
 | Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |

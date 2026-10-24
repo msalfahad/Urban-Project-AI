@@ -5,53 +5,53 @@
 "cadence": "daily 07:31 Kuwait (04:31 UTC)",
 "last_run": "2026-10-24T04:31:23Z",
 "result": "ok",
-"working_on": "Daily update fired 04:31 UTC; pilot end report recorded 06:30 UTC (cadence after the pilot is your decision)",
-"as_of": "2026-10-24T08:20:00Z"
+"working_on": "Daily update fired 04:31 UTC; owner session 10:02 recorded the stair finish-level rule and the workflow approval (closable lines first, split under 60 min, one extra whole-line hand-in per worker)",
+"as_of": "2026-10-24T10:20:00Z"
 },
 {
 "agent": "1 LEAD – plans & assigns work",
 "role": "Plans the work, keeps the board, milestones and element register, writes your report",
 "cadence": "every 2 h at :09 (pilot cadence still set)",
-"last_run": "2026-10-24T08:10:25Z",
+"last_run": "2026-10-24T10:10:25Z",
 "result": "running",
-"working_on": "Boundary ground beam and absent columns fixed into the next candidate step; new tasks: openings linked to rooms by geometry, buried-concrete waterproofing, formwork for changed members, ground-beam reinforcement, stairs correction in the candidate",
-"as_of": "2026-10-24T08:20:00Z"
+"working_on": "First whole line verified (slab, in the candidate); next closable lines put first: floor area (4 short steps) then aluminium doors; block-wall register rework first in the architectural lane",
+"as_of": "2026-10-24T10:20:00Z"
 },
 {
 "agent": "2 WORKER 1 – Structural",
 "role": "Structural lane: concrete, rebar by bar population, formwork",
 "cadence": "hourly at :19 (pilot cadence still set)",
-"last_run": "2026-10-24T07:19:29Z",
+"last_run": "2026-10-24T09:19:19Z",
 "result": "running",
-"working_on": "Evidence for the 4 held aluminium doors (claimed 07:27); stairs and domes split complete (10.856 m3 closable), hand-in when the checker queue drops below 3",
-"as_of": "2026-10-24T08:20:00Z"
+"working_on": "Formwork for the changed members (claimed 09:24); next: hand in the aluminium-door evidence (the one extra whole-line hand-in), stairs / domes split when the queue allows",
+"as_of": "2026-10-24T10:20:00Z"
 },
 {
 "agent": "3 WORKER 2 – Architectural & finishes",
 "role": "Architecture and finishes lane: floors, walls, plaster, paint, tiles, ceilings, openings, waterproofing",
 "cadence": "hourly at :39 (pilot cadence still set)",
-"last_run": "2026-10-24T07:39:31Z",
-"result": "ok",
-"working_on": "Foundation and lift-pit waterproofing handed in 07:54; next: openings linked to rooms by geometry",
-"as_of": "2026-10-24T08:20:00Z"
+"last_run": "2026-10-24T09:39:44Z",
+"result": "running",
+"working_on": "Openings linked to rooms by geometry: evidence complete (5 wrong labels, no total change); next: narrow rework of the block-wall register",
+"as_of": "2026-10-24T10:20:00Z"
 },
 {
 "agent": "4 WORKER 3 – Integration into V3.0",
 "role": "Integration lane: wires checker-verified pieces into the one opt-in candidate",
 "cadence": "every 2 h at :59 (even hours UTC)",
-"last_run": "2026-10-24T07:00:01Z",
-"result": "running",
-"working_on": "Slab / beam move into the candidate (claimed 07:01): the slab line is the closest to a first fully verified line",
-"as_of": "2026-10-24T08:20:00Z"
+"last_run": "2026-10-24T08:59:58Z",
+"result": "ok",
+"working_on": "Verdict / export tool r2 handed in 09:58 (a line reads verified only with a whole-line record and a completeness record); next: floor-area line into the candidate, step 1 of 4",
+"as_of": "2026-10-24T10:20:00Z"
 },
 {
 "agent": "5 CHECKER – verifies & merges",
 "role": "Checks finished tasks by re-measuring, merges or rejects, keeps the scoreboard",
 "cadence": "hourly at :49 (pilot cadence still set)",
-"last_run": "2026-10-24T07:49:33Z",
-"result": "ok",
-"working_on": "Merged 3 since 06:15 (boundary ground beam, test infrastructure, column evidence), 0 rejected; 07:49 slot idle on the overlap guard; next: block-wall register",
-"as_of": "2026-10-24T08:20:00Z"
+"last_run": "2026-10-24T09:49:56Z",
+"result": "running",
+"working_on": "Merged the slab / beam package 09:37: slab line verified whole in the candidate; sent back the block-wall register 09:59 (one stair-shaft piece); next: door rulings, wall-face crosswalk, foundation waterproofing",
+"as_of": "2026-10-24T10:20:00Z"
 },
 {
 "agent": "6 SCOUT – research & feedback to Lead",
@@ -60,15 +60,15 @@
 "last_run": "2026-10-23T17:45:13Z",
 "result": "ok",
 "working_on": "No open research request; next run 2026-10-24 23:50 UTC",
-"as_of": "2026-10-24T08:20:00Z"
+"as_of": "2026-10-24T10:20:00Z"
 },
 {
 "agent": "7 DASHBOARD – refreshes your page",
 "role": "Rewrites the dashboard data from the board",
 "cadence": "every 4 h at :54",
-"last_run": "2026-10-24T04:55:02Z",
+"last_run": "2026-10-24T08:54:51Z",
 "result": "ok",
 "working_on": "Next refresh 08:54 UTC",
-"as_of": "2026-10-24T08:20:00Z"
+"as_of": "2026-10-24T10:20:00Z"
 }
 ]

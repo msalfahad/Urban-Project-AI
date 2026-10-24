@@ -1,3 +1,57 @@
+## LEAD REPORT 2026-10-24 04:15 UTC
+
+Repositories: attached Urban-Project-AI checkout (main eafbb0f6); `.work` prepared AUTOMATICALLY ("setup by auto",
+04:10). Working branch 9455a63d -> a0cd9bbc (T-232) -> 2a2d15af (T-249) -> 567dc972 (T-248), all Checker merges; no
+owner commit on the engine branch. Drive readable: nothing new in the Alsenan folder or the private-data root since
+00:00, no new images (no photo review task). Self-check: codemap PASS, pytest t061 PASS, freeze PASS (0).
+OWNER_SESSION_CHANGES: no entry since 21:29.
+
+PROGRESS (Alsenan, by trade and unit; released unchanged: concrete 92.77 vs freelancer 111.81 m3, -17.03 %, run A).
+WHOLE LINES VERIFIED: 0 in every trade (no change). PARTIALLY VERIFIED: CONC.FOOTING, CONC.BLINDING, CONC.BEAM,
+CONC.GROUND, CONC.COLUMN (new). SCOREABLE TRADES: concrete, floor area, and doors / windows in the candidate (new).
+- CONC.COLUMN (m3): ledger MERGED 567dc972. Checker own re-measure of all 28 closable columns (outline on 'ST7757 dxf.dxf'
+  AND the printed Schedule of Columns, ST p.9; mark identity by his own registration): 18.3465 m3 (GF 14.0625 + 1F
+  4.284), 0.0 % on 28 / 28 = VERIFIED AS A COMPONENT. Inside it: 2 planted 1F columns 1.008 m3 standing on the GF roof
+  slab, omitted by route G (released, frozen: unchanged) and over-held in V3.0.9 -> T-254 takes the component. Still
+  open: CONFLICT 15 = 8.034 .. 10.119 (D-16 / D-63 / D-64) -> new T-256; HELD 16 (D-39 roof datum, Q-54 B annex, D-44,
+  CB5 levels); UNKNOWN 5 (D-65); necks HELD >= 9.2568 (Q-21 C) vs freelancer 8.805 (his 1.50 m limit used as a length).
+- DOORS / WINDOWS (pcs, m2): V3.0.10 MERGED a0cd9bbc through Gate B. Windows 76.256 m2 DRAWING-CONFIRMED on 27 vs
+  freelancer 80.231 on the same 27: -3.975 m2 (-4.95 %), residual 0 (heights only). W03 28.251 = freelancer (AGREE),
+  W18 1.080 vs his 0.48 (+0.600 ENGINE_RIGHT on the printed 500 x 2160). HELD: W17 9.870 .. 11.515 (Q-76), W02 pcs 1 .. 2
+  (D-53), 7 doors; ALU doors 4.180 + 1.980 .. 8.800 HELD vs 12.000. Scoreboard rows 'unit refused' -> coverage 100, HELD.
+  CORRECTION of my 02:10 report: W18 / W03 are INSIDE the 27 of V3.0.10 (the +29.331 m2 'in no line' was true for
+  V3.0.8 only); T-255 now checks only that block and plaster / paint deduct them once.
+- CONC.BEAM (m3): Checker re-measured the 2 upstands (B20 / B23 0.120 each, AGREE): every CALCULATED run of the 140-run
+  ledger is now Checker-measured (110 within 1 %, 2 corrections). Ledger r2 READY: 66.0161 -> 66.3206 (+0.3045; Checker
+  +0.3049, the 0.0004 is the ring area 0.6664 vs 0.6668 m2, settled at Gate A); vs freelancer 65.966 +0.54 % (by mark:
+  CB4 / B4 through-support RULE_DIFFERENCE, B7 his 7.38 m row UNRESOLVED). HELD 4.128 .. 8.568, CONFLICT 5.145 .. 6.111.
+- FLOOR AREA (m2): unchanged 32 / 47 VERIFIED; Checker confirmed the 15 blocked pieces are all named in T-240 (15 / 15).
+- What got worse: nothing. The t130 guard is still red until T-251 merges (READY, no quantity affected).
+
+ENGINEERING QUESTIONS DEFINED THIS RUN (ERS s.5 Lead): T-256 which printed source supports which section / height for
+each of the 15 CONFLICT columns, whether a third source settles any, and absence proof for the 5 UNKNOWN lines; T-255
+re-scoped to 'is each window's wall area deducted once per trade, and which width (opening 4.473 vs glazing 6.57 for
+W03) each trade deducts'; T-254 extended with the verified column component. Cross-trade: GF B7 ring takes the slab's
+band-53 piece 0.0322 m3 with it (once); upstand parapets start at the upstand top (masonry, once). Lessons register +3
+(gap claims name the version measured; planted columns start on their slab; check modules read codes from the registry).
+Element register +6 (incl. the W18 / W03 correction).
+
+TEAM HEALTH. Since 02:10 every run that started wrote a final line except two still open: Worker 3 (STARTED 03:00,
+T-239 claimed 03:05, lock to 06:00) and the Checker (STARTED 03:51, T-251; 04:02 note written). Worker 1 02:20 ->
+SUCCESS 03:51 (T-252), 03:20 IDLE on the overlap lock; Worker 2 02:40 -> SUCCESS 03:46 (T-251), 03:39 IDLE on the lock;
+Checker 02:50 -> SUCCESS 03:21 (T-248 merged + 2 T-180 slots). The two IDLE slots are the run lock working as designed
+(previous runs over 60 min), not failures. Every self-check PASS; 0 refusals. Classified: T-232 WORKED, T-249 WORKED,
+T-248 WORKED (line PARTIAL by design: decisions T-254, T-256). READY 2 (T-251, T-252), delay cause CHECKER-RUNS; backlog
+rule off. Queue check: 49 actionable rows, 0 flagged, 0 stall checks. TODO 9: S 3 (T-253, T-256, T-170), A 3 (T-228,
+T-250, T-219), I 3 claimable (T-168, T-210, T-235 r2 after T-239) + T-239 CLAIMED + 11 QUEUED serial integration rows.
+Pilot ends 06:15 UTC; no schedule touched.
+
+OWNER PACKAGE: nothing new today. Q-76 (W17 height basis, section 6 format, sent 00:10) is still unanswered; W17 stays
+HELD 9.870 .. 11.515 m2, never the larger end. The column conflicts (D-16 / D-63 / D-64 / D-65) are designer items:
+T-256 narrows them to column ids before they go on the consultant list.
+
+NEEDS FIXING (owner only): none.
+
 ## LEAD REPORT 2026-10-24 02:10 UTC
 
 Repositories: attached Urban-Project-AI checkout (main eafbb0f6); `.work` prepared AUTOMATICALLY ("setup by auto",

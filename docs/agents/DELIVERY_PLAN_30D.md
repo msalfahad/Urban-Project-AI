@@ -46,7 +46,17 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
-## Status (Lead, 2026-10-24 08:15; re-estimated each run from what merged and was verified)
+## Status (Lead, 2026-10-24 10:15; re-estimated each run from what merged and was verified)
+
+Lead 2026-10-24 10:15: since 08:15 the Checker merged the T-146 + T-247 Gate B package (V3.0.12, 768ff1d6) and
+rejected T-228 (blockwork register v2, narrow r2). WEEK-1 TARGET MET 3 days early: 'one verified improvement through
+the integrated pipeline' = CONC.SLAB WHOLE LINE VERIFIED in the candidate (60.2801 vs Checker 60.2804 m3; not released,
+release is the owner's). Verified whole lines 1 / 13 (candidate), 0 / 13 released. READY 3 (T-250, T-219, T-235).
+Owner workflow approval 10:02 applied: P-03 lane I now ranks by closable lines: floor area (T-240, split WP1-WP4, Week-2
+candidate for the second whole line if the Checker's 47 pieces all agree), then aluminium doors (T-260 evidence ->
+T-268), then the non-closable corrections T-254 / T-266. Week-2 target 'measurable increase in verified coverage':
+on track if floor area or doors closes by 3 Nov. Windows (Q-76 owner, D-53 designer) and every remaining concrete line
+(consultant items) cannot close from the drawings alone. No milestone re-dated.
 
 Lead 2026-10-24 08:15: since 06:15 the Checker merged 3 (T-253 boundary / exterior ground beams, T-210 guard
 follow-ups, T-256 column evidence), rejected 0; READY 3 (T-228 blockwork register v2, T-250 face crosswalk, T-219

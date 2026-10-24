@@ -1,14 +1,35 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
 Plain words, no task numbers. Measured numbers come from SCOREBOARD.md; anything not measured says so.
-Last update: 2026-10-24 08:15 UTC (Lead). Previous version: 2026-10-24 06:15 UTC. The released numbers did not change
+Last update: 2026-10-24 10:15 UTC (Lead). Previous version: 2026-10-24 08:15 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released default V2.9 + route G untouched). Your measure (17:50):
-whole BOQ lines independently verified, and trades that can be scored. Today: still 0 whole lines verified in any
-trade. PARTIALLY VERIFIED: footings, blinding, beams, ground beams, columns. The slab line (the closest to a first
-whole verified line) is being moved into the candidate now. No new question for you; the curved first-floor window
-question is still open.
+whole BOQ lines independently verified, and trades that can be scored. Today: FIRST WHOLE LINE VERIFIED, in the
+candidate (not released): the concrete slab line, 60.28 m3, equal to the checker's own measure of all 62 slab panels.
+So concrete in the candidate is 1 of 8 lines verified whole; every other trade still 0. PARTIALLY VERIFIED: footings,
+blinding, beams, ground beams, columns. No new question for you; the curved first-floor window question is still open,
+and your stair-design question (undrawn stairs: which riser / going values) is with you from the main chat.
 
-Since 06:15 (newest first):
+Since 08:15 (newest first):
+- Concrete slab: the slab / beam move into the candidate passed the checker's full integration check. The candidate
+  slab line is 60.2801 m3 against his own 62-panel measure 60.2804 m3 (a difference of 0.3 litres): the whole line is
+  VERIFIED. Against the freelancer's 59.82 m3 it is +0.77 % (first floor: the engine is right at the dome corners; ground
+  and second floor: a rule difference). The released run still says 61.55 m3 (+2.11 %): that stays a known discrepancy
+  until you decide to release a method that carries the candidate line. Beams moved in with it: 66.32 m3 measured, plus
+  5.14 .. 6.11 m3 where two drawings disagree and 3.23 .. 7.67 m3 held on designer items, plus 5 runs with no figure.
+- Block walls: the wall register was sent back. The checker found that a 2.5 m stretch of a first-floor wall stands
+  under the stair-shaft beam (printed "B3 (With Stair)"), where there is no first floor on that line; the same package
+  had already held the identical stretch on the ground floor, but not its twin upstairs. A narrow fix (hold that piece,
+  keep the rest) is first in the architectural lane; the team also adds a check so a finding on one floor is applied to
+  the same printed condition on every floor.
+- Openings to rooms: the geometric check is complete (59 openings, both sides of every one settled): 5 were linked to
+  the wrong room by name; no total changes (the rooms involved have equal deductions), but room-by-room lines now
+  follow the drawing. Waiting to hand in.
+- Your workflow approval (10:02) is applied: the next lines that can close are worked first. Next: floor area (the
+  remaining pieces are named and split into four short steps), then aluminium doors (the evidence for the 4 held doors
+  is complete and goes to the checker now as the one extra hand-in allowed). Windows stay blocked on your W17 answer
+  and one designer item.
+
+Earlier, since 06:15 (newest first):
 - Ground beams: the checker measured the boundary ground beam himself from the drawing (5 runs, 44.07 m, 20 x 40 cm at
   natural ground): 3.53 m3, the same to the litre. Neither our released run nor the candidate has it today (a real
   omission); the freelancer has it at a bigger section (7.56 m3). He also confirmed, from five printed level marks, that

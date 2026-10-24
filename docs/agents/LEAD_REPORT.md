@@ -1,5 +1,73 @@
 # Lead reports to the owner's main chat (newest first, last 3 entries; older in archive/LEAD_REPORT_older.md)
 
+## LEAD REPORT 2026-10-24 10:15 UTC
+
+Repositories: attached Urban-Project-AI checkout (main eafbb0f6); `.work` prepared AUTOMATICALLY ("setup by auto",
+10:10). Working branch 74c966b1 -> 768ff1d6 (Checker merge of the T-146 + T-247 Gate B package via 'engine push'); no
+owner commit on the engine branch. Drive readable: nothing created or modified in the Alsenan folder or the private-data
+root since 08:00, no new images (no photo review task). Self-check: codemap PASS, pytest t061 PASS, freeze PASS (0).
+OWNER_SESSION_CHANGES: one entry since my last run (10:02: stair finish-level rule + T-267, S-4 asked by the main chat;
+workflow approval (a) closable lines first, (b) split < 60 min with one final reconciliation package, (c) one extra
+whole-line hand-in per worker, (d) monitoring / revert; worker timestamp rule): read and applied, nothing undone.
+
+PROGRESS (Alsenan, by trade and unit; released unchanged: concrete 92.77 vs freelancer 111.81 m3, -17.03 %, run A).
+WHOLE LINES VERIFIED: candidate 1 / 13 (CONC.SLAB, NEW), released 0 / 13. PARTIALLY VERIFIED: CONC.FOOTING, BLINDING,
+BEAM, GROUND, COLUMN. Nothing got worse.
+- CONC.SLAB (m3, Gate B T-146 + T-247 MERGED 768ff1d6, 09:37): candidate V3.0.12 60.2801 = Checker 62 panels 60.2804
+  (-0.0005 %): WHOLE LINE VERIFIED, NOT RELEASED. vs freelancer 59.8174: +0.77 % (1F +0.5563 ENGINE_RIGHT dome-square
+  corners; GF -0.0505 / 2F -0.0431 RULE_DIFFERENCE). Cause of the closure: 13 non-slab faces (+0.639 m3) moved to their
+  owner line (beam) or out of concrete, once. Released A 61.5514 stays a DISCREPANCY (+2.11 %: 2F tag spread R-SLAB-T-1
+  +0.625, the same 13 faces +0.646) until the owner releases a method carrying the candidate line.
+- CONC.BEAM (m3): r2 ledger now IN the candidate: measured 66.3179 (= r2 66.3206 less the ring overlap 0.0026, once) +
+  CONFLICT 5.1448 .. 6.1110 (7 runs) + HELD 3.228 .. 7.6685 + 5 runs with no value (never 0); vs freelancer 65.9659
+  +0.53 % on the measured part (not agreement by storey). PARTIALLY VERIFIED; the rest is BLOCKED BY CONSULTANT
+  (D-27, D-02, D-26, D-04, D-05, Q-61 C(3)).
+- BLOCKWORK (m2, T-228 REJECTED 09:59): the register carried 1F-W10's 2.500 m piece under 'B3 (With Stair)' (FFRS 6B8 =
+  GFRS 6B6, same plan position; section A-A: no slab cut at +5.50 / +9.70 on that line) in an established net 44.929 m2,
+  while it HELD the identical GF piece. Correct state: 1F-W10 HELD (three CB9 pieces 38.369 m2 gross in the bounds
+  text), GF-W10 eastern pieces 39.1525 m2 (Checker own, +1.00 basis) + W.C. 0 .. 0.945 HELD. Narrow r2 queued first.
+- OPENINGS (T-262 evidence complete, not handed in): 59 openings joined by jamb geometry, 118 / 118 sides; 5 labels
+  WRONG (W06 -> GF-13; W19 + D-1F-01 -> 1F-03; W20 + D-1F-04 -> 1F-02); 0.000 m2 change (equal pairs swap).
+- DOORS (aluminium, m2; T-260 evidence complete): D-GF-01 / -05 / -06 ALUMINIUM, D-GF-09 0.90 m both faces; if the
+  Checker rules all four the candidate line goes 4.180 released + 1.980 .. 8.800 HELD -> 12.760 m2 / 6 pcs.
+- What was learned (lessons register +2): a finding about a printed member condition is applied to every sibling on
+  every storey frame before hand-in; a line closes when its faces are owned by the member that owns the volume.
+
+ENGINEERING DECISIONS THIS RUN (ERS s.5 Lead). (1) Owner workflow 10:02 applied. (a) Lane I re-ordered by closable
+line: floor area (rank 2) FIRST via T-240, then doors (T-268, new), then the non-closable corrections T-254 / T-266
+(CONC.GROUND and CONC.COLUMN cannot close without the consultant; the candidate is not released, so the delay releases
+nothing unverified). (b) T-240 split into WP1 (dressing 2.970 in, 3 sills 0.550 to thresholds HELD, side passage 5.640
+to the outdoor key, 0.280 strip out), WP2 (9 GF strips 4.124 threshold class, pantry Q-37 A), WP3 (1F living stair
+residue / T-116 union only where a Checker verdict covers it), WP4 = the one Gate B reconciliation hand-in (47 / 47
+pieces). (c) Extra hand-in: worker 1 = T-260 (the only blockers of the doors line), worker 3 = T-240 WP4; T-258 and
+T-262 do not qualify (CONC.STAIR_DOME cannot close; T-262 moves no line). (2) T-228 classified FAILED: narrow r2 exactly
+as the Verifier scoped + a sibling test over every '(With Stair)' member on every storey frame. (3) New T-269 (lane A,
+gate 1, one run): the floor-area blockers the drawings can settle (1F living spread 0.520 m2 between 38.458 and 38.978,
+GF pantry tread pieces). (4) New T-268 (lane I, gate 1, one run): doors line closed in the candidate from the Checker's
+rulings, ruled widths feeding the block / plaster deductions once. (5) T-267 (owner) placed in lane S after T-265.
+Cross-trade: stair-shaft wall pieces are BLOCKWORK only where a floor exists at that storey; ruled door widths deduct
+once in blockwork and once per finish face. Element register +6, lessons register +2.
+
+TEAM HEALTH. Since 08:15: Worker 1 08:20 IDLE (lock held by the 07:20 run: by design), 07:20 -> SUCCESS 08:36 (T-260
+evidence complete, T-258 re-validated), 09:20 open (T-264 claimed 09:24); Worker 2 08:41 -> SUCCESS 09:31 (T-262
+evidence complete; full suite unfinished on 2 CPUs: honest 'not handed in'), 09:41 open; Worker 3 07:01 -> SUCCESS 08:20
+(T-146 + T-247 READY), 09:00 -> SUCCESS 09:14 (T-235 r2 READY); Checker 08:51 -> SUCCESS 09:42 (Gate B PASS, T-228
+started), 09:50 open (T-228 REJECTED 09:59). Every closed run wrote STARTED and a final line; every self-check PASS;
+0 refusals; 0 failed; 0 unclosed runs (the three open runs started inside their slots). Board hygiene: T-235's row says
+'09:58' for a 09:14 RUN_LOG hand-in (worker clock again; the owner's 10:02 date -u rule now covers workers; noted).
+Classified: T-146 + T-247 WORKED, T-228 FAILED (rework decided). READY 3 = target (T-250 CAPACITY 3.4 h, passed over
+twice -> first standing piece; T-219 CAPACITY passed over twice; T-235 CAPACITY). Queue check: 53 actionable rows, 0
+flagged, 0 stall checks. TODO 10: S 3 (T-265, T-267, T-170) + T-264 / T-258 / T-260 CLAIMED; A 3 (T-228 r2, T-263, T-269)
++ T-262 CLAIMED, T-261 QUEUED; I 4 (T-240, T-257, T-168 + T-235 READY), T-268 / T-254 / T-266 and 7 more QUEUED.
+
+OWNER PACKAGE: nothing new today. Q-76 (W17 height basis, section 6 format, sent 00:10) still unanswered: W17 stays
+HELD 9.870 .. 11.515 m2, never the larger end; with designer D-53 it is the only thing keeping the windows line from
+closing. S-4 (undrawn stair design values) was asked by the main chat at 10:02; agents do not ask it again.
+DECISION AVAILABLE TO YOU (not blocking): releasing the verified slab line means releasing a method version that carries
+it; nothing on the board waits for it.
+
+NEEDS FIXING (owner only): none.
+
 ## LEAD REPORT 2026-10-24 08:15 UTC
 
 Repositories: attached Urban-Project-AI checkout (main eafbb0f6); `.work` prepared AUTOMATICALLY ("setup by auto",
@@ -129,59 +197,5 @@ not touch any schedule: cadence after the pilot is your decision (your main chat
 
 OWNER PACKAGE: nothing new today. Q-76 (W17 height basis, section 6 format, sent 00:10) is still unanswered; W17 stays
 HELD 9.870 .. 11.515 m2, never the larger end. Q-31 C (the F10 + F footing) is a designer item already on the list.
-
-NEEDS FIXING (owner only): none.
-
-## LEAD REPORT 2026-10-24 04:15 UTC
-
-Repositories: attached Urban-Project-AI checkout (main eafbb0f6); `.work` prepared AUTOMATICALLY ("setup by auto",
-04:10). Working branch 9455a63d -> a0cd9bbc (T-232) -> 2a2d15af (T-249) -> 567dc972 (T-248), all Checker merges; no
-owner commit on the engine branch. Drive readable: nothing new in the Alsenan folder or the private-data root since
-00:00, no new images (no photo review task). Self-check: codemap PASS, pytest t061 PASS, freeze PASS (0).
-OWNER_SESSION_CHANGES: no entry since 21:29.
-
-PROGRESS (Alsenan, by trade and unit; released unchanged: concrete 92.77 vs freelancer 111.81 m3, -17.03 %, run A).
-WHOLE LINES VERIFIED: 0 in every trade (no change). PARTIALLY VERIFIED: CONC.FOOTING, CONC.BLINDING, CONC.BEAM,
-CONC.GROUND, CONC.COLUMN (new). SCOREABLE TRADES: concrete, floor area, and doors / windows in the candidate (new).
-- CONC.COLUMN (m3): ledger MERGED 567dc972. Checker own re-measure of all 28 closable columns (outline on 'ST7757 dxf.dxf'
-  AND the printed Schedule of Columns, ST p.9; mark identity by his own registration): 18.3465 m3 (GF 14.0625 + 1F
-  4.284), 0.0 % on 28 / 28 = VERIFIED AS A COMPONENT. Inside it: 2 planted 1F columns 1.008 m3 standing on the GF roof
-  slab, omitted by route G (released, frozen: unchanged) and over-held in V3.0.9 -> T-254 takes the component. Still
-  open: CONFLICT 15 = 8.034 .. 10.119 (D-16 / D-63 / D-64) -> new T-256; HELD 16 (D-39 roof datum, Q-54 B annex, D-44,
-  CB5 levels); UNKNOWN 5 (D-65); necks HELD >= 9.2568 (Q-21 C) vs freelancer 8.805 (his 1.50 m limit used as a length).
-- DOORS / WINDOWS (pcs, m2): V3.0.10 MERGED a0cd9bbc through Gate B. Windows 76.256 m2 DRAWING-CONFIRMED on 27 vs
-  freelancer 80.231 on the same 27: -3.975 m2 (-4.95 %), residual 0 (heights only). W03 28.251 = freelancer (AGREE),
-  W18 1.080 vs his 0.48 (+0.600 ENGINE_RIGHT on the printed 500 x 2160). HELD: W17 9.870 .. 11.515 (Q-76), W02 pcs 1 .. 2
-  (D-53), 7 doors; ALU doors 4.180 + 1.980 .. 8.800 HELD vs 12.000. Scoreboard rows 'unit refused' -> coverage 100, HELD.
-  CORRECTION of my 02:10 report: W18 / W03 are INSIDE the 27 of V3.0.10 (the +29.331 m2 'in no line' was true for
-  V3.0.8 only); T-255 now checks only that block and plaster / paint deduct them once.
-- CONC.BEAM (m3): Checker re-measured the 2 upstands (B20 / B23 0.120 each, AGREE): every CALCULATED run of the 140-run
-  ledger is now Checker-measured (110 within 1 %, 2 corrections). Ledger r2 READY: 66.0161 -> 66.3206 (+0.3045; Checker
-  +0.3049, the 0.0004 is the ring area 0.6664 vs 0.6668 m2, settled at Gate A); vs freelancer 65.966 +0.54 % (by mark:
-  CB4 / B4 through-support RULE_DIFFERENCE, B7 his 7.38 m row UNRESOLVED). HELD 4.128 .. 8.568, CONFLICT 5.145 .. 6.111.
-- FLOOR AREA (m2): unchanged 32 / 47 VERIFIED; Checker confirmed the 15 blocked pieces are all named in T-240 (15 / 15).
-- What got worse: nothing. The t130 guard is still red until T-251 merges (READY, no quantity affected).
-
-ENGINEERING QUESTIONS DEFINED THIS RUN (ERS s.5 Lead): T-256 which printed source supports which section / height for
-each of the 15 CONFLICT columns, whether a third source settles any, and absence proof for the 5 UNKNOWN lines; T-255
-re-scoped to 'is each window's wall area deducted once per trade, and which width (opening 4.473 vs glazing 6.57 for
-W03) each trade deducts'; T-254 extended with the verified column component. Cross-trade: GF B7 ring takes the slab's
-band-53 piece 0.0322 m3 with it (once); upstand parapets start at the upstand top (masonry, once). Lessons register +3
-(gap claims name the version measured; planted columns start on their slab; check modules read codes from the registry).
-Element register +6 (incl. the W18 / W03 correction).
-
-TEAM HEALTH. Since 02:10 every run that started wrote a final line except two still open: Worker 3 (STARTED 03:00,
-T-239 claimed 03:05, lock to 06:00) and the Checker (STARTED 03:51, T-251; 04:02 note written). Worker 1 02:20 ->
-SUCCESS 03:51 (T-252), 03:20 IDLE on the overlap lock; Worker 2 02:40 -> SUCCESS 03:46 (T-251), 03:39 IDLE on the lock;
-Checker 02:50 -> SUCCESS 03:21 (T-248 merged + 2 T-180 slots). The two IDLE slots are the run lock working as designed
-(previous runs over 60 min), not failures. Every self-check PASS; 0 refusals. Classified: T-232 WORKED, T-249 WORKED,
-T-248 WORKED (line PARTIAL by design: decisions T-254, T-256). READY 2 (T-251, T-252), delay cause CHECKER-RUNS; backlog
-rule off. Queue check: 49 actionable rows, 0 flagged, 0 stall checks. TODO 9: S 3 (T-253, T-256, T-170), A 3 (T-228,
-T-250, T-219), I 3 claimable (T-168, T-210, T-235 r2 after T-239) + T-239 CLAIMED + 11 QUEUED serial integration rows.
-Pilot ends 06:15 UTC; no schedule touched.
-
-OWNER PACKAGE: nothing new today. Q-76 (W17 height basis, section 6 format, sent 00:10) is still unanswered; W17 stays
-HELD 9.870 .. 11.515 m2, never the larger end. The column conflicts (D-16 / D-63 / D-64 / D-65) are designer items:
-T-256 narrows them to column ids before they go on the consultant list.
 
 NEEDS FIXING (owner only): none.

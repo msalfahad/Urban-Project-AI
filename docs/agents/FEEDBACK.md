@@ -36,6 +36,17 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
    commit. Decision: board-only handoffs are verified as hand evidence (the verifier re-reads the cited notes), and the
    next task on the topic writes the files (T-117); a run with no line stays a NEEDS FIXING item for the owner's setting.
 
+## 2026-10-24 10:15 (lead run)
+
+| Task | Result | Evidence | Decision |
+|---|---|---|---|
+| T-146 + T-247 slab / beam partition (Gate B, V3.0.12) | WORKED | MERGED 768ff1d6 (Verifier 09:37): candidate CONC.SLAB 60.2801 = Checker 62 panels 60.2804 m3 (-0.0005 %) -> first WHOLE LINE VERIFIED in the candidate (not released); vs freelancer 59.8174 +0.77 % (1F dome corners ENGINE_RIGHT, GF / 2F RULE_DIFFERENCE); CONC.BEAM r2 in, measured 66.3179 + CONFLICT 5.1448 .. 6.1110 + HELD 3.228 .. 7.6685 + 5 runs no value | release of the slab line is the owner's (released A 61.5514 stays a DISCREPANCY +2.11 %); lane I now goes to the next closable line: floor area (T-240 split WP1-WP4), then doors (T-268) |
+| T-228 blockwork register v2 | FAILED (REJECTED, gate e + h) | Verifier 09:59: 1F-W10's B3 piece 2.500 m sits under a member printed 'B3 (With Stair)' on the FFRS frame (= GF-W10's stair-foot piece the package itself HELD as F1); v2 carried it in an established net 44.929 on a floor that does not exist on that line | narrow r2 (TODO r2, worker 2 first): 1F-W10 HELD by R-T228-2 (CB9 pieces 38.369 m2 gross in the bounds text), 2F-W02 B3 confirmed HELD, GF-W10 eastern pieces 39.1525 + W.C. 0 .. 0.945 HELD; plus a sibling test over every '(With Stair)' member on every storey frame |
+| T-235 r2 + part (4) V2 verdict schema / export | READY (not yet classified) | handoff 09:14 / row 09:58: a line reads VERIFIED only with a COUNTED WHOLE V2 record + a passing completeness record; 12 broken bindings refused | Gate A 6th (backlog-permitted infrastructure) |
+| T-262 opening-to-room by geometry | evidence complete, not handed in (suite unfinished, READY at target) | worker 2 09:31: 59 openings, 118 / 118 sides; 5 WRONG labels (W06 in GF-13; W19 + D-1F-01 in 1F-03, W20 + D-1F-04 in 1F-02); 0.000 m2 change (equal pairs) | after T-228 r2: full suite on 768ff1d6, READY when READY <= 2 |
+| T-260 aluminium doors evidence | evidence complete, not handed in | worker 1 08:36: D-GF-01 / -05 / -06 class ALUMINIUM, D-GF-09 0.90 on both faces; 12.760 m2 / 6 pcs if ruled | hand in NOW as worker 1's one whole-line closure (owner 10:02 (c)); integration T-268 |
+| T-258 stairs / domes closable split | evidence complete, not handed in | re-validated 08:34 on 74c966b1; head moved to 768ff1d6 | not a whole-line closure: normal rule, hand in at READY <= 2 after a re-merge |
+
 ## 2026-10-24 08:15 (lead run)
 
 | Task | Result | Evidence | Decision |
@@ -431,35 +442,3 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
 - **Recurring cause 9 (new)**: worker board rows carry clock times 40-60 min ahead of their own RUN_LOG lines (T-128 r2 row
   "09:05" written 08:08; T-150 r2 "06:35" vs 05:46; T-163 "05:20" vs 04:44; T-169 "05:52" vs 05:11). No quantity affected.
   Decision: report to the main chat (prompt wording "UTC time" should say "from `date -u`").
-
-## 2026-10-22 04:20 (lead run)
-
-- **Checker 00:38 / 02:45 / 04:02 SUCCESS**: 11 merged since 00:20 (T-155 r2, T-142 Gate B, T-139 r2, T-152, T-125, T-143,
-  T-147, T-154, T-159, T-161; T-155 counted at 23:53), 2 rejected (T-128, T-150). It cleared every item queued for it, in order.
-- **T-142 V3.0.2: WORKED (MERGED 5de8657, Gate B PASS)**: one evidence-text defect D4, fixed inside T-151.
-- **T-152 slab steel, T-139 r2 slabs, T-155 r2: WORKED (MERGED)**.
-- **T-125 MASONRY_CENTRELINE_V2: PARTIAL (MERGED, defect D-T125-1)**: a 0.053 m jamb stub absorbed into a free-end doorway.
-  Decision: new T-169 (lane A, permitted) before T-108.
-- **T-143 block by hand: PARTIAL by design (MERGED)**: 214.36 m2 PROVISIONAL counted HELD by the checker; net on Q-73, black
-  count on Q-75. Decision: the checker's status mapping binds T-108; nothing else.
-- **T-147 ceilings: PARTIAL by design (MERGED)**: drawing-derived bulkheads 175.76 m2 HELD (D-40), coves / wet board HELD.
-  No action beyond the designer list.
-- **T-154, T-159, T-161: WORKED (MERGED)**. T-161 defect D-T161-1 (main door must be HELD after its own DIFFERS finding) and
-  the checker's observation on T-159 (0.200 m projecting outline outside the SE faces) -> T-150 r2 and T-164.
-- **T-128 plaster / paint both methods: FAILED (gate e)**: walked the straight court line, not the curved glazing (+1.7 % on
-  the checker's room); one door with two widths. Decision: T-128 r2 rework with the exact faults (permitted).
-- **T-150 doors / windows: FAILED (gate f)**: W16 kept as INFERRED 4.805 m2 (not a s.5 status), main door not HELD after the
-  render finding. My 00:20 register line kept the main door as printed: that was wrong under WORKFLOW_CONTROLS s.8;
-  corrected. Decision: T-150 r2 (permitted), four exact faults.
-- **T-165 release baseline: WORKED pending** (both runs reproduced, provenance traced). Decision: Lead RULING, released
-  baseline = run A (no profile), run B = comparison base; new T-167 (V3.0.4 holds candidate lines resting on DIFFERENT /
-  NOT_PRINTED profile values; Q-17 A data file = spec C) and T-168 (Gate B tool checks manifests).
-- **T-151 V3.0.3 steel package: WORKED pending Gate B, OVERSIZED** (1,880 structural rows). Decision: three Gate B slices.
-- **T-157 outdoor areas: WORKED pending**: porch floor 10.680 vs the owner's "about 19.181" = the soffit over porch + entrance
-  stair (19.220); yard like for like -0.37 %. Decisions: register rulings; thresholds HELD to the designer (D-55), riser
-  flag D-56 (no owner question).
-- **T-160 dome rings, T-166 stair / pool / tank steel: WORKED pending**. Pool population vs the flat floor -> D-57.
-- **T-162 exterior Sigma: WORKED pending**: corners in m.l (457.095 measured vs his 1,297.35); conversion is the owner's own
-  flagged item -> OWNER PACKAGE (not a numbered question: 5 are open).
-- **Pool concrete** is now the largest single concrete gap (3.50 vs 12.35 m3). Decision: T-049 promoted (hand ledger first).
-- **Excavation / backfill** missing: T-170 builds the level chain Q-21 C requires first.
