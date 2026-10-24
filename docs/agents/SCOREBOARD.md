@@ -16,7 +16,7 @@ Development reference only: tuning against it is allowed, so these numbers never
 | 6 | Windows (aluminium) | m2 | as 07:30 | Q-76, D-53 | as 07:30 |
 | 7 | CONC.BEAM | m3 | BLOCKED BY CONSULTANT for the remainder: the r2 ledger is now IN the candidate (T-247 MERGED 768ff1d6): measured 66.3179 (= r2 66.3206 less the ring overlap 0.0026 removed once), CONFLICT 5.1448 .. 6.1110 on 7 runs (B29, CB2 x2, B21, B6, CB10 x2), HELD 3.228 .. 7.6685 + 5 runs with no value | D-27, D-02, D-26, D-04, D-05, Q-61 C(3) east 1F ring | PARTIALLY VERIFIED: every CALCULATED run own-measured (T-180 batches + 05:37); 09:38 own again B27 4.1907 .. 4.1929 / B26 4.0898 / B21 2.2635 .. 2.5464 (CONFLICT) / CB5 span 2 0.2960 |
 | 8 | CONC.FOOTING | m3 | as 07:30 | as 07:30 | as 07:30 |
-| 9 | CONC.GROUND | m3 | as 07:30 | as 07:30 | as 07:30 |
+| 9 | CONC.GROUND | m3 | BLOCKED BY CONSULTANT D-33 / D-34 / D-35 annex / M4 (as 07:30; main exterior 15.960 DRAWING-CONFIRMED, not yet in the candidate: T-254) | D-33 tees (17 runs), D-34 title basis (13 runs), D-35 annex depth (9 runs), M4 boundary columns; integration T-254 | interior component 5 runs 2.2683 m3 VERIFIED as a component (01:21); boundary band 5 / 5 runs = 3.5256 (07:30); main exterior 17 / 17 runs own-measured (12:10): own 15.9692 vs 15.9600 m3 (+0.06 %), 15 runs exact, ring +0.67 % (end convention named), stub 107+7CE -0.0026 m2 strip unconfirmed -> PARTIALLY VERIFIED 16 / 17; line 0 / 1 |
 | 10 | CONC.BLINDING | m3 | as 07:30 | as 07:30 | as 07:30 |
 | 11 | CONC.COLUMN | m3 | as 07:30 (07:52 note) | as 07:30 | as 07:30 |
 | 12 | CONC.POOL | m3 | as 22:55 | as 22:55 | as 22:55 |
