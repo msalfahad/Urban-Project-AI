@@ -2962,6 +2962,15 @@ CANDIDATE_EXTENSIONS_V3012 = (V3012,)  # its own tuple: the V3.0 .. V3.0.11 meth
 # line outside its rows byte-identical to V3.0.12. Opt-in, not the released default; rollback = run ARCH_TAKEOFF_V2.9.
 V3013 = "ARCH_TAKEOFF_V3.0.13"
 CANDIDATE_EXTENSIONS_V3013 = (V3013,)  # its own tuple: the V3.0 .. V3.0.12 method lists stay as they were
+# T-240 (WP1 .. WP4): ARCH_TAKEOFF_V3.0.14 = the SAME candidate extended again (engine.source.arch_v3014): a V3.0.13 run
+# (its V3_0_* .. V3_0_13_* files unchanged) + ONE floor-scope piece: one strip / face, one line, by its physical class (an
+# enclosed interior face enters the floor line, lift-landing / exterior sills leave it for ONE held threshold line, an
+# exterior side passage leaves the internal key, a wall top is no floor, an edge line with no opening is placed part by
+# part, a piece bound WET moves to the wet line, a range settled by a checker verdict takes one value, a lowest-storey
+# tread union is placed flight by flight), with the guard re-checked, in V3_0_14_* files; every line outside its
+# rows byte-identical to V3.0.13. Opt-in, not the released default; rollback = run ARCH_TAKEOFF_V2.9.
+V3014 = "ARCH_TAKEOFF_V3.0.14"
+CANDIDATE_EXTENSIONS_V3014 = (V3014,)  # its own tuple: the V3.0 .. V3.0.13 method lists stay as they were
 
 
 def _v304_inputs(path, project_id):
@@ -2996,20 +3005,21 @@ def _v304_inputs(path, project_id):
 def cmd_arch(a):
     from engine.source import discovery as DS
     facts = json.loads(Path(a.facts).read_text(encoding="utf-8")) if a.facts else None
-    v3013 = a.method == V3013                 # T-268: the V3.0.12 run, then its V3.0.13 extension
-    v3012 = a.method in (V3012, V3013)          # T-146 + T-247: the V3.0.11 run, then its V3.0.12 extension
-    v3011 = a.method in (V3011, V3012, V3013)        # T-239: the V3.0.10 run, then its V3.0.11 extension
-    v3010 = a.method in (V3010, V3011, V3012, V3013)        # T-232: the V3.0.9 run, then its V3.0.10 extension
-    v309 = a.method in (V309, V3010, V3011, V3012, V3013)          # T-211: the V3.0.8 run, then its V3.0.9 extension
-    v308 = a.method in (V308, V309, V3010, V3011, V3012, V3013)    # T-231: the V3.0.7 run, then its V3.0.8 extension
-    v307 = a.method in (V307, V308, V309, V3010, V3011, V3012, V3013)  # T-193: the V3.0.6 run, then its V3.0.7 extension
-    v306 = a.method in (V306, V307, V308, V309, V3010, V3011, V3012, V3013)  # T-187: the V3.0.5 run, then its V3.0.6 extension
-    v305 = a.method in (V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013)  # T-179: the V3.0.4 run, then its V3.0.5 extension
-    v304 = a.method in (V304, V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013)  # T-167: the V3.0.3 run, then V3.0.4
-    v303 = a.method in (V303, V304, V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013)  # T-151: the V3.0.2 run, then V3.0.3
-    v302 = a.method in (V302, V303, V304, V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013)  # T-142: V3.0.1 run, then V3.0.2
-    v301 = a.method in (V301, V302, V303, V304, V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013)  # T-133: V3.0, then V3.0.1
-    v30 = a.method in (V30, V301, V302, V303, V304, V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013)  # T-131: runs V2.13
+    v3014 = a.method == V3014                 # T-240: the V3.0.13 run, then its V3.0.14 extension
+    v3013 = a.method in (V3013, V3014)          # T-268: the V3.0.12 run, then its V3.0.13 extension
+    v3012 = a.method in (V3012, V3013, V3014)          # T-146 + T-247: the V3.0.11 run, then its V3.0.12 extension
+    v3011 = a.method in (V3011, V3012, V3013, V3014)        # T-239: the V3.0.10 run, then its V3.0.11 extension
+    v3010 = a.method in (V3010, V3011, V3012, V3013, V3014)        # T-232: the V3.0.9 run, then its V3.0.10 extension
+    v309 = a.method in (V309, V3010, V3011, V3012, V3013, V3014)          # T-211: the V3.0.8 run, then its V3.0.9 extension
+    v308 = a.method in (V308, V309, V3010, V3011, V3012, V3013, V3014)    # T-231: the V3.0.7 run, then its V3.0.8 extension
+    v307 = a.method in (V307, V308, V309, V3010, V3011, V3012, V3013, V3014)  # T-193: the V3.0.6 run, then its V3.0.7 extension
+    v306 = a.method in (V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014)  # T-187: the V3.0.5 run, then its V3.0.6 extension
+    v305 = a.method in (V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014)  # T-179: the V3.0.4 run, then its V3.0.5 extension
+    v304 = a.method in (V304, V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014)  # T-167: the V3.0.3 run, then V3.0.4
+    v303 = a.method in (V303, V304, V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014)  # T-151: the V3.0.2 run, then V3.0.3
+    v302 = a.method in (V302, V303, V304, V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014)  # T-142: V3.0.1 run, then V3.0.2
+    v301 = a.method in (V301, V302, V303, V304, V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014)  # T-133: V3.0, then V3.0.1
+    v30 = a.method in (V30, V301, V302, V303, V304, V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014)  # T-131: runs V2.13
     if getattr(a, "v302_inputs", None) and not v302:
         raise SystemExit("--v302-inputs needs --method ARCH_TAKEOFF_V3.0.2")
     if getattr(a, "v303_inputs", None) and not v303:
@@ -3034,6 +3044,8 @@ def cmd_arch(a):
         raise SystemExit("--v3012-inputs needs --method ARCH_TAKEOFF_V3.0.12")
     if getattr(a, "v3013_inputs", None) and not v3013:
         raise SystemExit("--v3013-inputs needs --method ARCH_TAKEOFF_V3.0.13")
+    if getattr(a, "v3014_inputs", None) and not v3014:
+        raise SystemExit("--v3014-inputs needs --method ARCH_TAKEOFF_V3.0.14")
     if v30:
         a.method = V213
     elif getattr(a, "v30_decisions", None) or getattr(a, "v30_released", None) or getattr(a, "v30_history", None):
@@ -3442,6 +3454,22 @@ def cmd_arch(a):
                                                     svgs += names13
                                                     v30rec = dict(v30rec, method=V3013, extends=V3012,
                                                                   identity=ident13, v3_0_12_identity=ident12)
+                                                    if v3014:
+                                                        # T-240: ARCH_TAKEOFF_V3.0.14 files beside the V3_0_13_* files
+                                                        from engine.source import arch_v3014 as A3014
+                                                        inp14 = A3014.load_inputs(
+                                                            json.loads(Path(a.v3014_inputs).read_text(encoding="utf-8"))
+                                                            if getattr(a, "v3014_inputs", None) else None,
+                                                            room["project_id"])
+                                                        l3013 = A3013.integrate(l3012, ch_v13)[0]
+                                                        earlier14 = earlier13 | {c["after"]["line_id"] for c in ch_v13
+                                                                                 if c.get("after") is not None}
+                                                        ch_v14, logs_v14 = A3014.changes_for(inp14, l3013, earlier14)
+                                                        names14, ident14, _led14 = A3014.write(out, l3013, ch_v14,
+                                                                                               logs_v14, inp14, released)
+                                                        svgs += names14
+                                                        v30rec = dict(v30rec, method=V3014, extends=V3013,
+                                                                      identity=ident14, v3_0_13_identity=ident13)
     ev = Counter(ln["evidence_state"] for ln in room["lines"])
     print(json.dumps({"method": a.method, "regions": [{"floor": r["floor"], "state": r["stage_state"],
                                                         "rooms": r.get("space_counts"), "lines": r.get("lines"),
@@ -3579,7 +3607,8 @@ def main(argv=None):
                    CANDIDATE_EXTENSIONS_V303 + CANDIDATE_EXTENSIONS_V304 + CANDIDATE_EXTENSIONS_V305 +
                    CANDIDATE_EXTENSIONS_V306 + CANDIDATE_EXTENSIONS_V307 + CANDIDATE_EXTENSIONS_V308 +
                    CANDIDATE_EXTENSIONS_V309 + CANDIDATE_EXTENSIONS_V3010 +
-                   CANDIDATE_EXTENSIONS_V3011 + CANDIDATE_EXTENSIONS_V3012 + CANDIDATE_EXTENSIONS_V3013,
+                   CANDIDATE_EXTENSIONS_V3011 + CANDIDATE_EXTENSIONS_V3012 + CANDIDATE_EXTENSIONS_V3013 +
+                   CANDIDATE_EXTENSIONS_V3014,
                    help="the versioned architectural takeoff method (no default: the route is opt-in until validated); "
                         "ARCH_TAKEOFF_V2 (S6) adds the drawing admission, unit-relative tolerances, empty-band plan "
                         "regions and the completeness gates (exit 2: admission blocked, 3: completeness failed)")
@@ -3636,6 +3665,11 @@ def main(argv=None):
     p.add_argument("--v3010-inputs", help="ARCH_TAKEOFF_V3.0.10 (URBAN_V3010_INPUTS_V1): checker-merged opening "
                                           "records (doors / windows: pcs AND m2 from one opening list) with the "
                                           "candidate door / window lines they supersede, and the guard inputs")
+    p.add_argument("--v3014-inputs", help="ARCH_TAKEOFF_V3.0.14 (URBAN_V3014_INPUTS_V1): the checker-merged floor-scope "
+                                          "records (an interior face into the floor line, sills to one held "
+                                          "threshold line, an exterior passage out of the internal key, a wall top "
+                                          "retired, an edge line with no opening placed part by part, a piece bound "
+                                          "wet moved to the wet line), and the guard inputs")
     p.add_argument("--v3013-inputs", help="ARCH_TAKEOFF_V3.0.13 (URBAN_V3013_INPUTS_V1): the checker-ruled doors (class "
                                           "and width per door, the checker run that ruled it) that leave the held "
                                           "door lines for the settled pcs and m2 lines of their class, and the guard "
