@@ -5,53 +5,53 @@
 "cadence": "daily 07:31 Kuwait (04:31 UTC)",
 "last_run": "2026-10-24T04:31:23Z",
 "result": "ok",
-"working_on": "Daily update fired 04:31 UTC; owner sessions 14:23 and 15:31 recorded the reinforcement unit (metric tons) and lap rules",
-"as_of": "2026-10-24T18:20:00Z"
+"working_on": "Daily update fired 04:31 UTC; main-chat session 18:38 recorded your lap / ton acceptance points; next update 04:31 UTC",
+"as_of": "2026-10-24T20:18:00Z"
 },
 {
 "agent": "1 LEAD – plans & assigns work",
 "role": "Plans the work, keeps the board, milestones and element register, writes your report",
 "cadence": "every 2 h at :09 (pilot cadence still set)",
-"last_run": "2026-10-24T18:10:00Z",
+"last_run": "2026-10-24T20:10:00Z",
 "result": "running",
-"working_on": "Since 16:15: buried-concrete waterproofing merged (35.40 m2, a scope nobody carried); block-wall split and stirrup count sent back narrow; floor-area step in the candidate handed in; two skipped fixes relabelled 'to do'; new tasks: remaining buried faces, beam width drawn vs schedule",
-"as_of": "2026-10-24T18:20:00Z"
+"working_on": "Since 18:15: floor area and block-wall split merged; stirrup count passed; laps / tons and ceilings sent back narrow; waterproofing into the candidate unblocked; new: scoring key for typed spaces, settled block walls into the candidate",
+"as_of": "2026-10-24T20:18:00Z"
 },
 {
 "agent": "2 WORKER 1 – Structural",
 "role": "Structural lane: concrete, rebar by bar population, formwork",
 "cadence": "hourly at :19 (pilot cadence still set)",
-"last_run": "2026-10-24T17:21:00Z",
-"result": "running",
-"working_on": "Stirrups handed in 16:34 (sent back 17:04, narrow); now laps and metric tons (claimed 17:27); next: stair manifest fix and stirrup count fix",
-"as_of": "2026-10-24T18:20:00Z"
+"last_run": "2026-10-24T19:20:00Z",
+"result": "ok",
+"working_on": "Stirrup count r2 handed in 19:35 (passed by the checker 19:59); next run 20:19: laps and tons rework with your acceptance points",
+"as_of": "2026-10-24T20:18:00Z"
 },
 {
 "agent": "3 WORKER 2 – Architectural & finishes",
 "role": "Architecture and finishes lane: floors, walls, plaster, paint, tiles, ceilings, openings, waterproofing",
 "cadence": "hourly at :39 (pilot cadence still set)",
-"last_run": "2026-10-24T17:39:24Z",
+"last_run": "2026-10-24T19:39:42Z",
 "result": "running",
-"working_on": "Buried-concrete waterproofing merged 17:59; block-wall split rework r3 (claimed 17:41): two walls' pieces from drawn member extents",
-"as_of": "2026-10-24T18:20:00Z"
+"working_on": "Ceilings handed in 19:28 (sent back narrow 19:59: light-well opening); now the remaining buried-concrete faces (claimed 19:47)",
+"as_of": "2026-10-24T20:18:00Z"
 },
 {
 "agent": "4 WORKER 3 – Integration into V3.0",
 "role": "Integration lane: wires checker-verified pieces into the one opt-in candidate",
 "cadence": "every 2 h at :59 (even hours UTC)",
-"last_run": "2026-10-24T17:00:05Z",
+"last_run": "2026-10-24T18:59:47Z",
 "result": "ok",
-"working_on": "Floor area V3.0.14 handed in 17:52 for the checker (internal 380.36 m2 vs released 385.63, -1.4 %); next run 18:59: stair manifest fix or tooling while it waits",
-"as_of": "2026-10-24T18:20:00Z"
+"working_on": "Stair-file registration fix handed in 19:38 (with the checker); next run 20:59: foundation and buried-concrete waterproofing into the candidate",
+"as_of": "2026-10-24T20:18:00Z"
 },
 {
 "agent": "5 CHECKER – verifies & merges",
 "role": "Checks finished tasks by re-measuring, merges or rejects, keeps the scoreboard",
 "cadence": "hourly at :49 (pilot cadence still set)",
-"last_run": "2026-10-24T17:49:27Z",
+"last_run": "2026-10-24T19:49:29Z",
 "result": "running",
-"working_on": "16:51 run rejected the block-wall split r2 and the stirrup count (narrow), verified 4 walls; 17:49 run merged buried-concrete waterproofing and verified 2 more walls (95.63 m2 verified); next: floor-area Gate B",
-"as_of": "2026-10-24T18:20:00Z"
+"working_on": "18:49 run merged the floor area (Gate B) and the block-wall split (11 / 11 walls own); 19:49 run: ceilings sent back narrow, stirrup count passed, stair-file fix in check",
+"as_of": "2026-10-24T20:18:00Z"
 },
 {
 "agent": "6 SCOUT – research & feedback to Lead",
@@ -60,7 +60,7 @@
 "last_run": "2026-10-23T17:45:13Z",
 "result": "ok",
 "working_on": "No open research request; next run 2026-10-24 23:50 UTC",
-"as_of": "2026-10-24T18:20:00Z"
+"as_of": "2026-10-24T20:18:00Z"
 },
 {
 "agent": "7 DASHBOARD – refreshes your page",
@@ -69,6 +69,6 @@
 "last_run": "2026-10-24T16:55:02Z",
 "result": "ok",
 "working_on": "Refreshed 16:55; next 20:54 UTC",
-"as_of": "2026-10-24T18:20:00Z"
+"as_of": "2026-10-24T20:18:00Z"
 }
 ]
