@@ -217,3 +217,13 @@ def test_t263_guards_still_bind():
         W.refuse_coat_height(0.95, run, {"side": "PANEL", "panel_state": "FILL"})   # coat over the slab zone
     with pytest.raises(W.RefusedError):
         W.refuse_coat_height(0.30, run, {"side": "PANEL", "panel_state": "HELD"})   # held panel face
+
+
+def test_soffit_on_blinding_never_counted():
+    # the trace walks the PLAN boundary only (side faces); a soffit cast on the printed blinding stays a named exclusion
+    rows = W.gb_run_rows({"id": "S1a", "L": 4.2, "b": 0.3, "top": TOP, "depth": 0.95, "slab_t": SLAB,
+                          "natural_ground": NG, "faces": [{"side": "OUTSIDE"}, {"side": "PANEL", "panel_state": "FILL"}]})
+    soffit = [r for r in rows if r.face == "soffit"][0]
+    assert soffit.status == W.EXCLUDED and soffit.qty is None and soffit.readings["face_m2"] == pytest.approx(1.26)
+    with pytest.raises(F.RefusedError):
+        F.face_row("S1a", "SOFFIT", "soffit", "PANEL", "FILL", 4.2, EXT)
