@@ -19,6 +19,10 @@ panel is slab (R-STAIR-LAND-1, T-184). Dome shell: the exact solid between conce
 rise and thickness (T-185); a dome without a structural detail is HELD.
 
 Units: every length input carries a unit ('m', 'cm', 'mm'); anything else is refused.
+
+r2 (T-258, Verifier 2026-10-24 12:58 / 13:10): check_arrivals (R-STAIR-ARRIVAL-1: every flight's arrival wedge has
+exactly one treatment) and resolve_lane_width (R-STAIR-LANE-1: a width is the structural lane, never an architectural
+dimension reaching past the slab edge). Both proposed rules; nothing here is wired into a method.
 """
 
 from __future__ import annotations
@@ -127,15 +131,19 @@ def shell_m3(chord, rise, t):
 # ---------------------------------------------------------------- one component record
 
 def component(cid, element, part, cls, evidence, owner_line, value=None, readings=None, bound=None, region=None,
-              source="", blocker="", geometry_drawn=True, floor_level_landing=False, note=""):
-    """Build and check one record. `region` names the physical piece (two records with one region = a double count)."""
+              source="", blocker="", geometry_drawn=True, floor_level_landing=False, note="", is_flight=False,
+              arrival=None):
+    """Build and check one record. `region` names the physical piece (two records with one region = a double count).
+    `is_flight` marks a flight or a run of steps; its `arrival` (see arrival()) states the one treatment of the step
+    triangle beyond its top riser line (R-STAIR-ARRIVAL-1, checked by check_arrivals)."""
     if cls not in CLASSES:
         raise LedgerError(f"{cid}: class {cls!r}")
     if evidence not in EVIDENCE:
         raise LedgerError(f"{cid}: evidence {evidence!r}")
     rec = dict(id=cid, element=element, part=part, cls=cls, evidence=evidence, owner_line=owner_line,
                value=value, readings=readings, bound=bound, region=region or cid, source=source, blocker=blocker,
-               geometry_drawn=geometry_drawn, floor_level_landing=floor_level_landing, note=note)
+               geometry_drawn=geometry_drawn, floor_level_landing=floor_level_landing, note=note,
+               is_flight=is_flight, arrival=arrival)
     check_component(rec)
     return rec
 
@@ -249,3 +257,84 @@ def resolve_landing_edge(landing_from, flight_last_riser, flight_width):
     if overlap > TOL:
         return dict(accepted=False, overlap_len=overlap, overlap_m2=overlap * flight_width)
     return dict(accepted=True, overlap_len=0.0, overlap_m2=0.0)
+
+
+# ---------------------------------------------------------------- T-258 r2: arrival wedges and structural lane widths
+
+ARRIVAL_KINDS = ("DEDUCTED", "OWNED_ELSEWHERE", "HELD_JUNCTION", "CONTINUES")
+
+
+def arrival(kind, into, rows=(), value=None, note=""):
+    """The one treatment of a flight's ARRIVAL WEDGE (the step triangle beyond its top riser line, inside whatever it
+    arrives into):
+        DEDUCTED         the wedge (or its part inside the receiving plate / member) is taken out of the flight value
+                         by Q-62 A cond; `value` = the m3 deducted (> 0); the receiver (a stair landing, a slab plate or
+                         a beam billed through) carries it once
+        OWNED_ELSEWHERE  the wedge lies inside a member of another line (ground slab, ground beam) listed as its own
+                         OWNED_ELSEWHERE row(s) in `rows` (valued, or an exposure with no value while unbilled)
+        HELD_JUNCTION    the flight arrives into a HELD / CONFLICT / UNKNOWN component (`rows`): the wedge is inside
+                         that held part, never released
+        CONTINUES        no wedge exists: the flight runs on into the next flight `into` with no landing between"""
+    return dict(kind=kind, into=into, rows=tuple(rows), value=value, note=note)
+
+
+def check_arrivals(components):
+    """R-STAIR-ARRIVAL-1 (T-258 r2, proposed; any villa): every flight's arrival wedge has exactly ONE treatment
+    (arrival()), each referenced row exists with the class the treatment needs, and no wedge row serves two flights.
+    A flight that arrives into a floor with no treatment (its top triangle silently carried as stair concrete, or
+    silently dropped) is refused. Returns one record per flight for the ledger."""
+    by_id = {c["id"]: c for c in components}
+    used = {}
+    out = []
+    for c in components:
+        if not c.get("is_flight"):
+            continue
+        cid, a = c["id"], c.get("arrival")
+        if a is None:
+            raise LedgerError(f"{cid}: flight with no arrival-wedge treatment (the triangle beyond its top riser line "
+                              "is neither deducted, owned elsewhere, held, nor shown continuing)")
+        if a["kind"] not in ARRIVAL_KINDS:
+            raise LedgerError(f"{cid}: arrival kind {a['kind']!r} not one of {ARRIVAL_KINDS}")
+        if not a["into"]:
+            raise LedgerError(f"{cid}: arrival names what the flight arrives into")
+        for r in a["rows"]:
+            if r not in by_id:
+                raise LedgerError(f"{cid}: arrival row {r} is not in the ledger (wedge row missing)")
+            if r in used:
+                raise LedgerError(f"{cid}: arrival row {r} already serves {used[r]}: one wedge, one flight")
+            used[r] = cid
+        if a["kind"] == "DEDUCTED":
+            if a["value"] is None or a["value"] <= 0:
+                raise LedgerError(f"{cid}: a DEDUCTED arrival wedge carries the m3 deducted (> 0)")
+        elif a["kind"] == "OWNED_ELSEWHERE":
+            if not a["rows"]:
+                raise LedgerError(f"{cid}: an arrival wedge owned elsewhere lists its OWNED_ELSEWHERE row(s)")
+            for r in a["rows"]:
+                rc = by_id[r]
+                if rc["cls"] != "OWNED_ELSEWHERE" or rc["owner_line"] in THIS_LINE:
+                    raise LedgerError(f"{cid}: arrival row {r} is {rc['cls']} / {rc['owner_line']}, not another line")
+            valued = sum(by_id[r]["value"] for r in a["rows"] if by_id[r]["value"] is not None)
+            if a["value"] is not None and abs(valued - a["value"]) > TOL:
+                raise LedgerError(f"{cid}: arrival value {a['value']:.6f} differs from its rows {valued:.6f}")
+        elif a["kind"] == "HELD_JUNCTION":
+            if not a["rows"] or any(by_id[r]["cls"] not in ("HELD", "CONFLICT", "UNKNOWN") for r in a["rows"]):
+                raise LedgerError(f"{cid}: a held junction names the HELD / CONFLICT / UNKNOWN row it arrives into")
+        elif a["kind"] == "CONTINUES":
+            nxt = by_id.get(a["into"])
+            if nxt is None or not nxt.get("is_flight"):
+                raise LedgerError(f"{cid}: CONTINUES into {a['into']}, which is not a flight in the ledger")
+        out.append(dict(flight=cid, kind=a["kind"], into=a["into"], rows=list(a["rows"]), value=a["value"],
+                        note=a["note"]))
+    return out
+
+
+def resolve_lane_width(declared, lane_from, lane_to):
+    """R-STAIR-LANE-1 (T-258 r2, proposed; any villa): a flight's or landing's width is the STRUCTURAL lane, from the
+    opening / slab edge to the wall or band face, read on the structural sheet. A width larger than that lane (e.g. an
+    architectural dimension reaching the outer face of a balustrade band past the slab edge) overlaps the slab panel
+    by (declared - lane) per metre of run: refused, the overlap returned for the record."""
+    lane = abs(lane_to - lane_from)
+    over = declared - lane
+    if over > TOL:
+        return dict(accepted=False, lane=lane, overlap_width=over)
+    return dict(accepted=True, lane=lane, overlap_width=0.0)

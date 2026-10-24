@@ -7,6 +7,11 @@ committed). ERS s.2.1-2.4, s.3, s.4 A/B/C, s.7 applied; the T-248 pattern (closa
 measurement method: every value is the owner formula already merged (Q-19, Q-47 A, Q-62 A cond, R-CONC-OWN-1 / -1a,
 R-STAIR-LAND-1, T-185 shell solid), recomputed from its printed primitives by `t258_stair_dome_line.py`.
 
+**r2 (worker 1, 2026-10-24 13:20 UTC, run session_01NQkkU25zpTgFi4W4BSbqbD), narrow, on the Verifier's 12:58 rejection
+(gate e / f) and 13:10 note; section 10 gives the changes. Closable component 10.855885 -> 10.805258 m3 (-0.050627,
+-0.47 %): D1 arrival wedge into ground slab GS-08 -0.025714, RS-LD on the structural lane -0.009200, RS-A on the lane
+-0.015712.** The tables below carry the r2 values.
+
 ## 0. Inputs and runs (own, this task)
 
 | Input (Drive "Alsenan chalet project") | sha256 | Read for |
@@ -21,8 +26,8 @@ own, MS2-LD both halves own), T-193 Gate B (e866328a: dome shells in the candida
 DOME-B), T-234 slab ledger (3224f68a: arrival landings in GF-077 / 1F-062, stair zones out), T-248 columns (567dc972).
 
 Files: `t258_stair_dome_line.py` (STAIR_DOME_LINE_V1, pure rules, stdlib), `ALSENAN_STAIR_DOME_INPUT.json` (printed
-primitives + handles + the freelancer cells), `t258_alsenan_check.py` -> `LEDGER_T258.csv` (46 rows) + `summary.json`,
-`t258_extract.py` (private DXF -> lengths, for the Checker); tests `tests/t258_stair_dome_line` (19: Villa D hand
+primitives + handles + the freelancer cells), `t258_alsenan_check.py` -> `LEDGER_T258.csv` (47 rows, r2) + `summary.json`,
+`t258_extract.py` (private DXF -> lengths, for the Checker); tests `tests/t258_stair_dome_line` (26 in r2: Villa D hand
 fixture + adverse + Alsenan pinned).
 
 ## 1. The physical elements and the line (ERS s.2.1)
@@ -56,19 +61,20 @@ slab (R-STAIR-LAND-1); the dome ring is a beam-line member (T-241 / T-252 bands)
 | | heads in B20 / B23, MS2-L foot in B20 | OWNED_ELSEWHERE BEAM | 0.057261 + 0.057451 + 0.025448 | T-189 / T-192 | counted once in B20 0.990 / B23 1.11375 |
 | | 1F / 2F floor-arrival landings | OWNED_ELSEWHERE SLAB | (slab) | T-234 GF-077 + B20, 1F-062 + B23 | - |
 | | 'B3 (With Stair)' | OWNED_ELSEWHERE BEAM (HELD) | - | p.4 / p.5 | Q-61 (2) |
-| | shaft floor 11.52 m2 | OWNED_ELSEWHERE GROUND_SLAB (UNKNOWN) | - | p.3 '+0.30' | scope (lane A / Lead) |
+| | stair-hall floor 11.52 m2 = ground slab panel GS-08 (T=10cm, +0.30 / +1.00) | OWNED_ELSEWHERE GROUND_SLAB DRAWING-CONFIRMED | listed, not valued (1.152 billed in T-242) | p.3 7CB / 15F / 7CC / 7C3 | - (r2: supersedes 'scope UNKNOWN') |
 | | column 691 into the MS2-L lane | OWNED_ELSEWHERE COLUMN (HELD) | exposure 0 .. 0.006684 inside MS2-L | p.5 691 | T-248 CONFLICT (D-16): deducted from MS2-L when it closes |
-| ST-01b | D1 steps | CLOSABLE DRAWING-CONFIRMED | 0.126000 | ARCH GF 4 risers, section A-A, p.3 '+0.30' | - |
+| ST-01b | D1 steps (4 triangles 0.126 less the arrival part inside GS-08) | CLOSABLE DRAWING-CONFIRMED | 0.100286 | p.3 1C4 / 1C5 / 1C6 / 1C7, lane 1C3 -> 15F 1.20; ARCH GF 4 risers; section A-A | - |
+| | D1 arrival wedge inside ground slab GS-08 (top 0.10) | OWNED_ELSEWHERE GROUND_SLAB DRAWING-CONFIRMED | 0.025714 | strip beyond 1C7 inside GS-08 (T-242), no ground beam across 1C7 | - (r2) |
 | | D1 waist / support | HELD (no bound) | - | | no thickness printed |
 | ST-02 | RS-C 12 curved treads | HELD (no bound) | - (0.330 information only) | p.4 CC-13011ac02f | Q-50 / Q-51 |
 | | RS-C helicoid waist | HELD (no bound) | - | | not drawn (Q-51 step 5, C-ST-3) |
 | | RS-S straight flight | CLOSABLE ASSUMED — OWNER-APPROVED | 0.942732 | p.4 11 tread lines, w 1.20, T 16 | riser 4.50 / 28 by Q-50 A cond; geometry Checker own 0.9716 gross |
-| | RS-LD corner landing +4.696 | CLOSABLE ASSUMED — OWNER-APPROVED | 0.225600 | 1.25 x 1.15 less column 374 corner | Q-50 A cond (level) |
-| | RS-A short flight to +5.50 | CLOSABLE ASSUMED — OWNER-APPROVED | 0.392805 | ARCH 1F 5 risers, 1250 | Q-50 A cond; not Checker re-measured |
+| | RS-LD corner landing +4.696 | CLOSABLE ASSUMED — OWNER-APPROVED | 0.216400 | p.4 2C4 -> 289 1.150 x 283 -> 2C8 1.200 less column 374 corner 0.0275 | Q-50 A cond (level); geometry Checker own 13:10 |
+| | RS-A short flight to +5.50 | CLOSABLE ASSUMED — OWNER-APPROVED | 0.377093 | p.4 2C8 .. 315 (5 at 0.300), lane 2CF -> 289 1.200 | Q-50 A cond (riser); geometry Checker own 13:10 |
 | | column 374 corner | OWNED_ELSEWHERE COLUMN | 0.004400 | p.4 374 | - |
 | | CA junction | HELD | 0 .. 0.09 | p.4 535 / 536 | CA level not stated |
 | | hidden pair 2CC / 2CD | UNKNOWN | - | p.4 layer 5 | designer (no mark) |
-| ST-03 | E1 steps (net of the slab-owned wedge 0.001983) | CLOSABLE DRAWING-CONFIRMED | 0.355017 | ARCH GF 5 risers 2800, section B-B, p.3 18A .. 179 | - |
+| ST-03 | E1 steps (net of the slab-owned wedge 0.001983) | CLOSABLE DRAWING-CONFIRMED | 0.355017 | ARCH GF 5 risers 2800, section B-B, p.3 5 riser lines 18A / 189 / 188 / 17A / 179 | - (slab owner GS-16 is HELD in T-242: if dropped, 0.001983 returns to E1) |
 | | E1 waist / support | HELD (no bound) | - | | not printed |
 | | E1 last riser in the GB band | OWNED_ELSEWHERE GROUND_BEAM (HELD) | exposure 0 .. 0.0714 inside the steps | p.3 178 / 7DB | GB levels (T-242 / T-253) |
 | DOME-A / B | shell 442 / 190 / 10 | CLOSABLE VERIFIED | 2 x 2.540681 | p.7 DIM 1A38 / 1A6D / 19B1, arcs 182B / 182E | - (Checker 22-10 18:15, V3.0.7 Gate B) |
@@ -81,16 +87,16 @@ slab (R-STAIR-LAND-1); the dome ring is a beam-line member (T-241 / T-252 bands)
 
 | Component | m3 |
 |---|---|
-| **CLOSABLE** | **10.855885** = VERIFIED 8.344131 (MS1-LD, MS1-U, MS2-L, MS2-U, 2 shells) + DRAWING-CONFIRMED 0.950617 (MS2-LD W / E, D1, E1 steps) + ASSUMED — OWNER-APPROVED 1.561137 (ST-02 RS-S / RS-LD / RS-A, Q-50 A cond) |
-| of which stairs / domes | 5.774523 / 5.081362 |
+| **CLOSABLE** | **10.805258** = VERIFIED 8.344131 (MS1-LD, MS1-U, MS2-L, MS2-U, 2 shells) + DRAWING-CONFIRMED 0.924903 (MS2-LD W / E, D1, E1 steps) + ASSUMED — OWNER-APPROVED 1.536225 (ST-02 RS-S / RS-LD / RS-A, Q-50 A cond) |
+| of which stairs / domes | 5.723896 / 5.081362 |
 | CONFLICT | MS1-L 0.863029 .. 1.054813 |
 | HELD with a bound | 0.3504 .. 0.4696 (MS1-T, MS1-T-SLAB, CA) |
 | HELD / UNKNOWN with no value | 9: MS2-TR, D1 waist, E1 waist, RS-C, RS-C soffit, 2CC, 2 drums, DOME-3 |
-| owned by other lines (listed, not summed) | beam 0.140161, ground slab 0.001983, column 0.0044, slab (arrival landings, plate) |
+| owned by other lines (listed, not summed) | beam 0.140161, ground slab 0.027697 (D1 arrival 0.025714 in GS-08 + E1 tip 0.001983), column 0.0044, slab (arrival landings, plate), GS-08 listed unvalued |
 
 The line does **not** close as a whole (`line_closable` false): it is BLOCKED BY CONSULTANT on C-ST-3 / C-ST-4 (winder
 turn, MS1-L riser count, MS2-TR, curved flight), the unprinted waists of D1 / E1 and the tower dome / drums, plus the
-owner-approved Q-50 A cond riser on ST-02. The closable component 10.855885 m3 is what the Checker can re-measure now.
+owner-approved Q-50 A cond riser on ST-02. The closable component 10.805258 m3 is what the Checker can re-measure now.
 
 ## 3. The one conflict this task closes: ST-01 upper half landing MS2-LD 0.4696 .. 0.480 -> 0.4696
 
@@ -116,11 +122,11 @@ each from its own flight edge (`resolve_landing_edge`).
 |---|---|---|---|---|---|
 | ST-01 flights | G20 4 x 1.2 x 5.3 x 0.28 | 7.1232 | closable 3.032369 + MS1-L CONFLICT 0.863 .. 1.055 | length 4 x 5.3 = 21.2 m vs drawn sloped 14.428 m +2.275333; 0.28 vs drawn equivalent 0.2331 +0.812307; heads / foot billed in B20 / B23 +0.140161 (beam line) | **0.000** at MS1-L reading A |
 | ST-01 landings | G21 3 x 1.2 x 1.4 x 0.20 | 1.008 | 0.700000 (MS1-LD + MS2-LD W + E) | area 5.04 vs drawn 4.375 m2 +0.133; 0.20 vs T 16 +0.175 | **0.000** |
-| ST-02 | G12 1.2 x 16.4 x 0.28 | 5.5104 | closable 1.561137 (Q-50 A cond) + held curved part | 5.537 m of his 16.4 m on no drawing (outer string sloped 10.863) +1.860373 | 2.088890 = curved treads + helicoid waist + CA (HELD, no value) and his flat 0.28 (T 16 printed): **UNRESOLVED** until Q-50 / Q-51 / C-ST-3 |
+| ST-02 | G12 1.2 x 16.4 x 0.28 | 5.5104 | closable 1.536225 (Q-50 A cond) + held curved part | 5.537 m of his 16.4 m on no drawing (outer string sloped 10.863) +1.860373 | 2.113802 = curved treads + helicoid waist + CA (HELD, no value) and his flat 0.28 (T 16 printed): **UNRESOLVED** until Q-50 / Q-51 / C-ST-3 |
 | ST-03 | G11 1.8 x 2.8 x 0.28 | 1.4112 | 0.355017 steps (+ 0.001983 slab) + waist HELD | run 1.8 vs drawn 1.2 m +0.4704; his 0.28 over the drawn run vs steps only +0.5838 (not an error size: the waist is held) | **0.000** (the waist decides how much of +0.5838 is real) |
-| ST-01b | none | - | 0.126 | his sheet has no lobby flight | hand found |
+| ST-01b | none | - | 0.100286 (+ 0.025714 in GS-08) | his sheet has no lobby flight | hand found |
 | Domes | G13 3 x 22.6 x 0.10 | 6.78 | 5.081362 + DOME-3 HELD | third dome 2.26 (HELD, not compared); typed 22.6 vs mid-surface 25.402 m2 -0.561361 | **0.000** |
-| **Line** | B25 | **21.8328** | closable 10.855885 + CONFLICT + HELD | not comparable as a total (held parts have no value) | by component above |
+| **Line** | B25 | **21.8328** | closable 10.805258 + CONFLICT + HELD | not comparable as a total (held parts have no value) | by component above |
 
 ## 5. Engine sides (m3; NOT RELEASED candidate vs this ledger)
 
@@ -128,11 +134,11 @@ each from its own flight edge (`resolve_landing_edge`).
 |---|---|---|---|---|
 | ST-01 GF -> 1F | 2.786 (route line, conventions) | BLOCKED (2.786 information) | MS1-LD 0.2304 + MS1-U 0.997552 VERIFIED; MS1-L CONFLICT; turn HELD | candidate under-releases 1.227952 m3 of VERIFIED components (integration gap, lane I) |
 | ST-01 1F -> 2F | 0 (D-T184-1 omission) | MS2-L 1.033445 + MS2-U 1.001373 released, MS2-LD HELD 0.4696 .. 0.480 | 1.033444 + 1.001373 + **0.4696** | equal on the flights; MS2-LD closes (s.3) |
-| ST-01b | none | placeholder (blocked) | 0.126 DRAWING-CONFIRMED + waist HELD | ENGINE omission (small) |
-| ST-02 | 0.901 (8.37 m2 winder region) | BLOCKED (0.901 information) | 1.561137 ASSUMED — OWNER-APPROVED + curved part HELD | candidate holds what Q-50 A cond already approves (1.561137) |
+| ST-01b | none | placeholder (blocked) | 0.100286 DRAWING-CONFIRMED + waist HELD (arrival 0.025714 is GS-08's) | ENGINE omission (small) |
+| ST-02 | 0.901 (8.37 m2 winder region) | BLOCKED (0.901 information) | 1.536225 ASSUMED — OWNER-APPROVED + curved part HELD | candidate holds what Q-50 A cond already approves (1.536225) |
 | **ST-03** | 0.948267 | **0.948267 RELEASED** | **0.355017** steps + waist HELD | **ENGINE_WRONG basis: the released line is 4 x 1/2 x 0.165 x 0.30 x 2.80 + 0.175 x 2.80 x hypot(1.20, 0.66) = 0.2772 + 0.6711: a convention riser 0.165 (drawn 0.85 / 5 = 0.170) and a convention waist 0.175 that no drawing prints (T-187: 'ST-03 prints no waist: not flagged'); should be 0.355017 DRAWING-CONFIRMED + waist HELD: -0.593250 m3 released** |
 | Domes | 7.372 (rise = radius, 0.12) | 5.081362 released (2 VERIFIED shells) + DOME-3 blocked | 5.081362 + DOME-3 HELD | equal |
-| Item total released | 12.007 | 8.064447 (stairs 2.983085 + domes 5.081362) | closable 10.855885 | a lane I package taking this ledger: -0.593250 (ST-03) + 0.4696 (MS2-LD) + 1.227952 (ST-01 GF) + 0.126 (D1) + 1.561137 (ST-02) = **+2.791438** |
+| Item total released | 12.007 | 8.064447 (stairs 2.983085 + domes 5.081362) | closable 10.805258 | a lane I package taking this ledger: -0.593250 (ST-03) + 0.4696 (MS2-LD) + 1.227952 (ST-01 GF) + 0.100286 (D1) + 1.536225 (ST-02) = **+2.740811** |
 
 Candidate figures from the own V3.0.11 run (bb5466b0, `CANDIDATE_V3011_STAIR_DOME_LINES.json`): released with a value
 L-67e4b0485135f84acc46 MS2-L 1.033445 and L-bb0e57b1948175a3d5b8 MS2-U 1.001373 (SOURCE_DERIVED), L-061e18cf35a4b6b33d68
@@ -149,11 +155,11 @@ sheet prints (= 4 step triangles 0.2772 + waist 0.175 x 2.80 x 1.36953 = 0.6711)
 
 | Item | Proposal |
 |---|---|
-| closable component 10.855885 m3 (13 components) | CLOSABLE: VERIFIED 8.344131 (citations in s.2) + DRAWING-CONFIRMED 0.950617 to re-measure (s.8) + ASSUMED — OWNER-APPROVED 1.561137 (Q-50 A cond, geometry partly Checker-verified) |
+| closable component 10.805258 m3 (13 components) | CLOSABLE: VERIFIED 8.344131 (citations in s.2) + DRAWING-CONFIRMED 0.924903 to re-measure (s.8) + ASSUMED — OWNER-APPROVED 1.536225 (Q-50 A cond riser; ST-02 geometry Checker own) |
 | MS2-LD | DRAWING-CONFIRMED 0.4696 (CONFLICT closed by the flight edge; 0.480 a double count of 0.0096 with MS2-L) |
 | MS1-L | CONFLICT 0.863029 .. 1.054813 (C-ST-4), never one end |
 | ST-03 candidate 0.948267 | ENGINE_WRONG (convention riser and waist released): HELD waist, steps 0.355017 |
-| ST-01 GF / ST-02 / D1 in the candidate | ENGINE over-holds VERIFIED / DRAWING-CONFIRMED / owner-approved components (1.227952 + 1.561137 + 0.126) |
+| ST-01 GF / ST-02 / D1 in the candidate | ENGINE over-holds VERIFIED / DRAWING-CONFIRMED / owner-approved components (1.227952 + 1.536225 + 0.100286) |
 | freelancer ST-01 8.1312 | RULE_DIFFERENCE + FREELANCER length (5.3 m includes the floor landing) and thickness (0.28 / 0.20 vs T 16); reconciled to 0.000 |
 | freelancer ST-02 5.5104 | UNRESOLVED (curved part held; 5.537 m of his run on no drawing) |
 | freelancer ST-03 1.4112 | FREELANCER run 1.8 vs drawn 1.2 m (ENGINE_RIGHT on geometry, +0.4704); thickness UNRESOLVED (waist not printed) |
@@ -176,7 +182,7 @@ Test: tests/t258_stair_dome_line (Villa D: dog-leg with the landing partly insid
 head in a floor beam, winder and curved flight held, floor landing in the slab, dome shell; adverse: landing in both slab
 and stair refused, winder released without drawn geometry refused, a missing waist as 0 refused (three forms), CONFLICT
 collapse / wrong range refused, landing edge overlap refused, owned-elsewhere naming the stair refused; units m / cm /
-mm, unknown unit refused, metamorphic order; Alsenan pinned: 46 rows, classes, closable 10.855885, Checker figures
+mm, unknown unit refused, metamorphic order; Alsenan pinned: 47 rows (r2), classes, closable 10.805258, Checker figures
 reproduced, MS2-LD 0.4696 + 0.0096 + 0.0008 = 0.480, freelancer ST-01 / ST-03 / domes reconciled to 0.000; the candidate ST-03 line = straight_flight(5, 0.165, 0.30, 2.80, 0.175)).
 Lessons rows (proposed): (1) 2026-10-24 | the ST-01 upper half landing was HELD over two readings 0.4696 .. 0.480 for a
 day | the larger reading started the landing on the other flight's first riser line, overlapping the arriving flight's
@@ -193,7 +199,9 @@ flagged'), so a convention with NO printed value passes | a dimension the drawin
 
 1. MS2-LD both halves (DRAWING-CONFIRMED): p.5 632 / 5C0 / 5E3 / 5E2 (1.150 x 1.300) and 62F / 5C0 / 5E2 / 5D4 (1.200 x
    1.200); 632 vs 62F 0.050; 633 on the 62F line; `python3 -I research/agents_t258/t258_extract.py <ST dxf>`.
-2. D1 steps 4 x 1/2 x 0.175 x 0.30 x 1.20 = 0.126 (ARCH GF 4 riser lines, section A-A 4 risers, p.3 '+0.30').
+2. D1 steps 4 x 1/2 x 0.175 x 0.30 x 1.20 = 0.126 (p.3 1C4 .. 1C7, lane 1C3 -> 15F 1.20, '+0.30' / '+1.00'), less the
+   arrival part inside GS-08 (7CB / 15F / 7CC / 7C3, 2.40 x 4.80, T=10cm): 0.0315 x (1 - (0.075 / 0.175)^2) = 0.025714
+   -> 0.100286; no layer-1 band crosses the 1C7 line (s.10).
 3. E1 steps 5 x 1/2 x 0.17 x 0.30 x 2.80 = 0.357 less the slab-owned 0.001983 (T-192, Checker-verified) = 0.355017 (p.3
    18A .. 179, ARCH 2800, section B-B 5 risers).
 4. The candidate ST-03 line 0.948267: its riser 0.165 and waist 0.175 against the drawn 0.170 and the unprinted waist.
@@ -201,6 +209,51 @@ flagged'), so a convention with NO printed value passes | a dimension the drawin
 
 ## 9. Not done / uncertain
 
-- ST-02 RS-A and RS-LD were not re-measured by the Checker; they stay ASSUMED — OWNER-APPROVED on the conditional riser.
+- ST-02 RS-A and RS-LD: geometry now the Checker's own (13:10); they stay ASSUMED — OWNER-APPROVED on the conditional
+  riser (Q-50 A cond).
+- Levels: the D1 split takes the printed floor levels as slab tops (no finish build-up printed on p.3), the same
+  convention as every merged stair / slab row; a printed finish would move the split, never the 0.126 total.
 - Formwork (T-163 r3 / T-192 43.777 m2), rebar (ST-01 294.73 .. 337.71 kg, shell bars 298.34 .. 432.93 kg / dome) are
   other lines; nothing released.
+
+## 10. r2 changes (Verifier 2026-10-24 12:58 rejection + 13:10 note)
+
+Own reads on 'ST7757 dxf.dxf' (9f9d1179 = manifest), ground-beam plan p.3 and GF roof slab plan p.4, by handle:
+
+1. **D1 arrival wedge (gate e / f).** p.3: riser lines 1C4 / 1C5 / 1C6 / 1C7 at 0.300, each 1.150; '+0.30' (1C9) north
+   of 1C4, '+1.00' (1C2) south of 1C7; lane = layer-5 edge 1C3 -> band face 15F = 1.200. The 4th triangle lies beyond the
+   top riser 1C7 in the strip 1.20 x 0.30. The only layer-1 lines near it are the east band 15F / 15E (along the lane),
+   7CB (west), 7C3 / 170 (north) and 15C / 7CC (south): no ground beam across 1C7. The strip lies wholly inside the
+   T-242 ground slab panel **GS-08** = 7CB -> 15F 2.40 x 7CC -> 7C3 4.80 = 11.52 m2, 'T=10cm', levels +0.30 / +1.00
+   (MERGED 9455a63d, Checker-verified 01:21): the physical owner exists and its depth is printed, so the wedge is not
+   HELD. Q-62 A cond with a plate thinner than the riser (the T-111 / T-184 rule used for MS2-L): slab's part
+   0.0315 x (1 - (0.075 / 0.175)^2) = **0.025714 OWNED_ELSEWHERE GROUND_SLAB**; the sliver 0.005786 below the slab
+   soffit stays with the steps; **D1 steps 0.100286** (0.126 = 0.100286 + 0.025714, nothing lost, nothing twice).
+   The stair-hall floor row (T-192 s.9 'scope UNKNOWN') is superseded by GS-08 and listed unvalued, so the D1 part is
+   not listed twice.
+2. **Sibling check (R-STAIR-ARRIVAL-1, proposed, any villa):** every flight's arrival wedge has exactly one treatment
+   (`check_arrivals`): DEDUCTED (MS1-U into B20, MS2-L into the 0.16 plate MS2-LD-W, MS2-U into B23, RS-S into RS-LD,
+   RS-A into plate C-T1), OWNED_ELSEWHERE (D1 into GS-08; E1 slab tip + GB-band exposure), HELD_JUNCTION (MS1-L into the
+   held winder turn) or CONTINUES (RS-C into RS-S, no landing). A flight with no treatment, a missing wedge row, a row
+   serving two flights, a DEDUCTED wedge with no value, a value that differs from its rows: refused (tests).
+   Finding: E1's slab owner is T-242 **GS-16 (4.180 m2), HELD in the ground line** (in no room, no level mark); released
+   A carries it, so the 0.001983 deduction stands; if GS-16 is dropped the 0.001983 returns to E1 (noted on the row).
+3. **E1 source text:** 5 riser lines 18A / 189 / 188 / 17A / 179 at 0.300 (run 1.200), each 2.800 (own); quantity
+   unchanged (0.355017).
+4. **ST-02 on the structural lane (Verifier 13:10, R-STAIR-LANE-1 proposed, any villa):** RS-LD = 2C4 -> 289 1.150 x
+   283 -> 2C8 1.200 less column 374 inside it (0.55 x 0.05 = 0.0275) = 1.3525 m2 x 0.16 = **0.216400** (was 0.225600,
+   -0.009200, -4.1 %); RS-A lane = S-OPENING 2CF -> slab edge 289 = 1.200 (riser lines 2C8 .. 315 1.150 + the 0.05 gap)
+   -> **0.377093** (was 0.392805 on the architectural 1250, -0.015712, -4.0 %). Cause: the 1250 reaches the balustrade
+   band's outer face past 289; that 0.05 strip is slab / 1F floor (T-269 D-23). `resolve_lane_width` refuses a width
+   wider than the structural lane (retired readings in summary.json).
+5. **Effect:** closable 10.855885 -> **10.805258** m3 (-0.050627, -0.47 %), inside the Verifier's 10.799473 .. 10.830973
+   (the lower end took the whole wedge out; the slab owns only its top 0.10). Freelancer: ST-02 residual 2.088890 ->
+   2.113802 (closable part smaller, still UNRESOLVED on the curved part); ST-01 / ST-03 / domes still reconcile to 0.000;
+   candidate comparison +2.791438 -> +2.740811.
+
+Lessons row (proposed): 2026-10-24 | the lobby flight D1 carried its arrival wedge as stair while E1's was split | the
+wedge treatment was written per flight, not checked for every flight | every flight's arrival wedge gets exactly one
+treatment (deducted, owned elsewhere, held junction, continues), checked over the whole ledger; a width is the structural
+lane, never an architectural dimension past the slab edge | t258 test_flight_arriving_into_a_floor_with_no_wedge_row_refused,
+test_every_flight_has_exactly_one_arrival_treatment, test_structural_lane_width, test_round_stair_on_the_structural_lane |
+PROPOSED.

@@ -40,7 +40,10 @@ def build(data):
           for k, v in mc["readings"].items()}
     out.append(C("ST01-MS1-L", "ST-01", "GF -> turn lower flight (straight part)", "CONFLICT", "HELD", "STAIR",
                  readings=rd, bound=[min(rd.values()), max(rd.values())], blocker=mc["blocker"],
-                 source="ST p.4 45A .. 25E, 2F6 / 2F4 / 2F5 / 2F3; ARCH GF; section A-A"))
+                 source="ST p.4 45A .. 25E, 2F6 / 2F4 / 2F5 / 2F3; ARCH GF; section A-A", is_flight=True,
+                 arrival=SD.arrival("HELD_JUNCTION", "winder turn MS1-T", rows=["ST01-MS1-T"],
+                                    note="the straight part arrives into the held winders: its top triangle is inside "
+                                         "the held turn, never released")))
     out.append(C("ST01-MS1-T", "ST-01", "winder turn treads", "HELD", "HELD", "STAIR", bound=[0.12, 0.13],
                  blocker="Q-51 cond: well strip 0.10 x 1.20 unassigned; C-ST-3 no winder detail (soffit not drawn)",
                  geometry_drawn=False, source="ST p.4 winder lines 2F6 / 2F4 / 2F5, closing line 2F3"))
@@ -57,10 +60,13 @@ def build(data):
         f = fl[fid]
         p = SD.flight_m3(f["n_steps"], f["r"], f["g"], f["goings"], f["w"], f["t"], wedges=f["wedges"],
                          head_a=f.get("head_a"), foot_a=f.get("foot_a"))
+        into = f["head_member"].split(" (")[0] + " (head, billed through)" if f.get("head_member") else \
+            "half landing plate ST01-MS2-LD-W (T 0.16)"
         out.append(C(f"ST01-{fid}", "ST-01", "flight (owner method, net)", "CLOSABLE", f["evidence"], "STAIR",
                      value=p["net"], source=f["src"], note=f"{f['verified_by']}; steps {p['steps']:.6f} + waist "
                      f"{p['waist']:.6f} - Q-62 wedge {p['wedges']:.6f} - owned elsewhere "
-                     f"{p['head_owned_elsewhere'] + p['foot_owned_elsewhere']:.6f}"))
+                     f"{p['head_owned_elsewhere'] + p['foot_owned_elsewhere']:.6f}", is_flight=True,
+                     arrival=SD.arrival("DEDUCTED", into, value=p["wedges"])))
         if p["head_owned_elsewhere"]:
             out.append(C(f"ST01-{fid}-HEAD", "ST-01", f"{fid} head inside {f['head_member']}", "OWNED_ELSEWHERE",
                          "VERIFIED", "BEAM", value=p["head_owned_elsewhere"], source=f["src"],
@@ -86,9 +92,12 @@ def build(data):
     out.append(C("ST01-B3", "ST-01", "'B3 (With Stair)' members at the landings' north edges", "OWNED_ELSEWHERE",
                  "HELD", "BEAM", value=None, source="ST p.4 / p.5 'B3 (With Stair)'; p.16 typical stair beam",
                  note="owner Q-61 (2): HOLD in the beam line, never duplicated with flight concrete"))
-    out.append(C("ST01-SHAFT-FLOOR", "ST-01", "shaft floor at +1.00 / +0.30 (11.52 m2, no slab printed)",
-                 "OWNED_ELSEWHERE", "UNKNOWN", "GROUND_SLAB", value=None, source="ST p.3 '+0.30' in the shaft",
-                 note="scope UNKNOWN for the ground-slab line (T-192 s.9), never 0, never stair"))
+    sf = data["shaft_floor"]
+    out.append(C("ST01-SHAFT-FLOOR", "ST-01", f"stair-hall floor at +0.30 / +1.00 = ground slab panel {sf['panel']}",
+                 "OWNED_ELSEWHERE", "DRAWING-CONFIRMED", "GROUND_SLAB", value=None, region="SLAB:GS-08",
+                 source=sf["src"], note="r2: the T-192 s.9 'scope UNKNOWN' is superseded by T-242 GS-08 "
+                 f"({sf['m2']} m2 x {sf['t']} = {sf['m3']} m3, billed there; listed here, not valued, so the D1 "
+                 "arrival part ST01b-D1-SLAB inside it is not listed twice); never stair"))
     out.append(C("ST01-COL691", "ST-01", "column 691 (1F C3) 0.05 into the MS2-L lane", "OWNED_ELSEWHERE", "HELD",
                  "COLUMN", value=None, region="COL:691xMS2-L",
                  source="ST p.5 S-COL.BON 691 (drawn 0.25) vs schedule 0.20 x 0.50",
@@ -98,19 +107,44 @@ def build(data):
     # ---------------- ST-01b lobby flight and ST-03 entrance (steps drawn, waist not printed)
     for sid, el in (("D1", "ST-01b"), ("E1", "ST-03")):
         s = data["steps_only"][sid]
-        v = SD.steps_m3(s["n_steps"], s["r"], s["g"], s["w"]) - s.get("slab_owned_m3", 0.0)
-        out.append(C(f"{el.replace('-', '')}-{sid}-STEPS", el, "steps", "CLOSABLE", s["evidence"], "STAIR", value=v,
-                     source=s["src"]))
+        pre = el.replace('-', '')
+        gross = SD.steps_m3(s["n_steps"], s["r"], s["g"], s["w"])
+        if "arrival_into" in s:
+            # r2 (Verifier 12:58): the top triangle beyond the last riser line lies inside the +1.00 ground slab panel;
+            # Q-62 A cond with the printed slab T: the part inside the slab is the slab's, the sliver below its soffit
+            # stays with the steps (the T-111 / T-184 plate rule, as MS2-L into its 0.16 plate)
+            ai = s["arrival_into"]
+            owned = SD.wedge_in_plate_m3(s["r"], s["g"], s["w"], ai["t"])
+            arr = SD.arrival("OWNED_ELSEWHERE", f"ground slab panel {ai['panel']} at +1.00 (T {ai['t']})",
+                             rows=[f"{pre}-{sid}-SLAB"], value=owned,
+                             note=f"sliver below the slab soffit {SD.wedge_m3(s['r'], s['g'], s['w']) - owned:.6f} "
+                                  "stays in the steps")
+        else:
+            owned = s.get("slab_owned_m3", 0.0)
+            arr = SD.arrival("OWNED_ELSEWHERE", "ground slab face (tip) + ground-beam band 178 / 7DB",
+                             rows=[f"{pre}-{sid}-SLAB", f"{pre}-{sid}-GB"], value=owned,
+                             note="slab tip deducted; the GB band part is an unvalued exposure kept in the steps")
+        out.append(C(f"{pre}-{sid}-STEPS", el, "steps", "CLOSABLE", s["evidence"], "STAIR", value=gross - owned,
+                     source=s["src"], is_flight=True, arrival=arr,
+                     note=f"{s['n_steps']} triangles {gross:.6f} - arrival part owned elsewhere {owned:.6f}"))
         try:
             SD.flight_m3(s["n_steps"], s["r"], s["g"], s["n_steps"] - 1, s["w"], None)
         except SD.LedgerError as e:
             why = str(e)
         out.append(C(f"{el.replace('-', '')}-{sid}-WAIST", el, "waist / support under the steps", "HELD", "HELD", "STAIR",
                      bound=None, blocker=f"no thickness or support printed ({why})", source=s["src"]))
-        if s.get("slab_owned_m3"):
-            out.append(C(f"{el.replace('-', '')}-{sid}-SLAB", el, "arrival wedge inside the ground slab face",
+        if "arrival_into" in s:
+            ai = s["arrival_into"]
+            out.append(C(f"{pre}-{sid}-SLAB", el, f"arrival wedge inside ground slab panel {ai['panel']} (top "
+                         f"{ai['t']} m)", "OWNED_ELSEWHERE", "DRAWING-CONFIRMED", "GROUND_SLAB", value=owned,
+                         region=f"SLAB:{ai['panel']}:{sid}-ARRIVAL", source=ai["src"],
+                         note="Q-62 A cond (plate thinner than the riser): 1/2 r g w x (1 - ((r - T) / r)^2); "
+                              "billed once, in the slab panel"))
+        elif s.get("slab_owned_m3"):
+            out.append(C(f"{pre}-{sid}-SLAB", el, "arrival wedge inside the ground slab face",
                          "OWNED_ELSEWHERE", "VERIFIED", "GROUND_SLAB", value=s["slab_owned_m3"],
-                         source="T-192 (Checker 2026-10-23 01:57 own 0.001983)", note="Q-62 A cond: slab owns"))
+                         source="T-192 (Checker 2026-10-23 01:57 own 0.001983)",
+                         note="Q-62 A cond: slab owns; " + s.get("slab_panel", "")))
     out.append(C("ST03-E1-GB", "ST-03", "last riser 0.05 inside the ground-beam band 178 / 7DB", "OWNED_ELSEWHERE",
                  "HELD", "GROUND_BEAM", value=None, source="ST p.3",
                  note="exposure 0 .. 0.0714 m3 stays in the steps until a ground-beam line bills through (levels "
@@ -119,7 +153,9 @@ def build(data):
     # ---------------- ST-02 round reception stair (GF +1.00 -> 1F +5.50)
     out.append(C("ST02-RS-C", "ST-02", "12 curved treads +1.00 -> +2.929", "HELD", "HELD", "STAIR", bound=None,
                  geometry_drawn=False, blocker="owner Q-50 / Q-51: curved parts HELD; CAD tread areas 4.1077 m2, "
-                 "candidate steps 0.330 is information only", source="ST p.4 arcs / lines CC-13011ac02f; ARCH GF"))
+                 "candidate steps 0.330 is information only", source="ST p.4 arcs / lines CC-13011ac02f; ARCH GF",
+                 is_flight=True, arrival=SD.arrival("CONTINUES", "ST02-RS-S",
+                                                    note="no landing between the curved and the straight flight")))
     out.append(C("ST02-RS-C-SOFFIT", "ST-02", "helicoid waist under the curved treads", "HELD", "HELD", "STAIR",
                  bound=None, geometry_drawn=False, blocker="not drawn (Q-51 step 5, C-ST-3)", source="ST p.4"))
     for fid in ("RS-S", "RS-A"):
@@ -127,7 +163,8 @@ def build(data):
         p = SD.flight_m3(f["n_steps"], f["r"], f["g"], f["goings"], f["w"], f["t"], wedges=f["wedges"])
         out.append(C(f"ST02-{fid}", "ST-02", f"flight, wedge into {f['wedge_into']}", "CLOSABLE", f["evidence"],
                      "STAIR", value=p["net"], source=f["src"], note=f"{f['verified_by']}; steps {p['steps']:.6f} + "
-                     f"waist {p['waist']:.6f} - wedge {p['wedges']:.6f}"))
+                     f"waist {p['waist']:.6f} - wedge {p['wedges']:.6f}", is_flight=True,
+                     arrival=SD.arrival("DEDUCTED", f["wedge_into"] + " (T 0.16)", value=p["wedges"])))
     L = data["landings"]["RS-LD"]
     out.append(C("ST02-RS-LD", "ST-02", f"corner landing {L['level']}", "CLOSABLE", L["evidence"], "STAIR",
                  value=SD.landing_m3(L["length"], L["width"], L["t"], L["deduct_m2"]), source=L["src"],
@@ -170,7 +207,25 @@ def build(data):
 
 def retired(data):
     out = []
+    fl = data["flights"]
     for k, r in data["retired_readings"].items():
+        if r["type"] == "lane_width":
+            res = SD.resolve_lane_width(r["declared"], r["lane_from"], r["lane_to"])
+            el = r["element"]
+            if el in fl:
+                f = fl[el]
+                lane_v = SD.flight_m3(f["n_steps"], f["r"], f["g"], f["goings"], res["lane"], f["t"],
+                                      wedges=f["wedges"])["net"]
+                decl_v = SD.flight_m3(f["n_steps"], f["r"], f["g"], f["goings"], r["declared"], f["t"],
+                                      wedges=f["wedges"])["net"]
+            else:
+                L = data["landings"][el]
+                lane_v = SD.landing_m3(r["length"], res["lane"], L["t"], L["deduct_m2"])
+                decl_v = SD.landing_m3(r["length"], r["declared"], L["t"], L["deduct_m2"])
+            out.append(dict(reading=k, accepted=res["accepted"], structural_lane_m=res["lane"],
+                            overlap_width_m=res["overlap_width"], overlap_with_slab_m3=decl_v - lane_v,
+                            value_on_declared_m3=decl_v, value_on_lane_m3=lane_v, why=r["why"]))
+            continue
         res = SD.resolve_landing_edge(r["landing_from"], r["flight_last_riser"], r["flight_width"])
         well = r["flight_last_riser"] * r["well_width"]
         out.append(dict(reading=k, accepted=res["accepted"], overlap_with_flight_m2=res["overlap_m2"],
@@ -255,8 +310,9 @@ def rows(comps):
 
 def summary(data):
     comps = build(data)
-    slab_regions = ("SLAB:GF-077+B20", "SLAB:1F-062+B23", "SLAB:C-T1")
+    slab_regions = ("SLAB:GF-077+B20", "SLAB:1F-062+B23", "SLAB:C-T1", "SLAB:GS-08")
     SD.check_line(comps, slab_regions)
+    arrivals = SD.check_arrivals(comps)
     t = SD.totals(comps)
     r = {k: (round(x, 6) if isinstance(x, float) else x) for k, x in t.items()}
     r["closable"] = {k: round(x, 6) for k, x in t["closable"].items()}
@@ -266,7 +322,7 @@ def summary(data):
                                held_open=e["held_open"]) for k, e in t["by_element"].items()}
     return dict(schema="T258_SUMMARY", rule=SD.SCHEMA, components=len(comps),
                 by_class={c: sum(1 for x in comps if x["cls"] == c) for c in SD.CLASSES}, totals=r,
-                retired_readings=retired(data), reconciliation=reconcile(data, comps)), comps
+                retired_readings=retired(data), arrivals=arrivals, reconciliation=reconcile(data, comps)), comps
 
 
 def _round(o):

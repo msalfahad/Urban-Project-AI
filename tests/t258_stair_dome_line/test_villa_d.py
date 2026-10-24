@@ -179,3 +179,92 @@ def test_owned_elsewhere_must_name_another_line():
         SD.component("X", "ST-D", "x", "OWNED_ELSEWHERE", "VERIFIED", "STAIR", value=0.01)
     with pytest.raises(SD.LedgerError, match="owned by"):
         SD.component("X", "ST-D", "x", "CLOSABLE", "VERIFIED", "BEAM", value=0.01, source="plan")
+
+
+# ---------------- r2 (Verifier 2026-10-24 12:58 / 13:10): arrival wedges, structural lane width
+#
+# Villa D entrance steps E: 3 riser lines r 0.15, g 0.28, w 1.50, arriving into a ground slab T 0.10 at the upper floor.
+#   triangles 3 x 1/2 x 0.15 x 0.28 x 1.50 = 0.0945; the 3rd is the arrival wedge 0.0315 beyond the top riser line;
+#   inside the slab (T 0.10 < r): 0.0315 x (1 - (0.05 / 0.15)^2) = 0.0315 x 8/9 = 0.028 (slab's);
+#   sliver below the slab soffit 0.0035 stays with the steps -> steps 0.0945 - 0.028 = 0.0665
+
+def entrance(arrival_kind="OWNED_ELSEWHERE", with_row=True):
+    C = SD.component
+    owned = SD.wedge_in_plate_m3(0.15, 0.28, 1.50, 0.10)
+    arr = None if arrival_kind is None else SD.arrival(arrival_kind, "ground slab T 0.10", rows=["E-SLAB"],
+                                                       value=owned)
+    out = [C("E", "ST-E", "entrance steps", "CLOSABLE", "DRAWING-CONFIRMED", "STAIR",
+             value=SD.steps_m3(3, 0.15, 0.28, 1.50) - owned, source="plan + section", is_flight=True, arrival=arr)]
+    if with_row:
+        out.append(C("E-SLAB", "ST-E", "arrival wedge in the ground slab", "OWNED_ELSEWHERE", "DRAWING-CONFIRMED",
+                     "GROUND_SLAB", value=owned, region="SLAB:E-ARR"))
+    return out
+
+
+def villa_d_with_arrivals():
+    comps = villa_d()
+    l1 = SD.flight_m3(10, R, G, 9, W, T, wedges=[0.15], foot_a=0.10)
+    u1 = SD.flight_m3(10, R, G, 9, W, T, wedges=[None], head_a=0.10)
+    for c in comps:
+        if c["id"] == "L1":
+            c.update(is_flight=True, arrival=SD.arrival("DEDUCTED", "half landing LD (T 0.15)", value=l1["wedges"]))
+        if c["id"] == "U1":
+            c.update(is_flight=True, arrival=SD.arrival("DEDUCTED", "floor beam (head)", value=u1["wedges"]))
+        if c["id"] == "C":
+            c.update(is_flight=True, arrival=SD.arrival("HELD_JUNCTION", "winder turn W", rows=["W"]))
+    return comps + entrance()
+
+
+def test_arrival_wedge_hand_values_and_one_treatment_each():
+    assert SD.wedge_in_plate_m3(0.15, 0.28, 1.50, 0.10) == pytest.approx(0.028, abs=1e-12)
+    assert SD.wedge_m3(0.15, 0.28, 1.50) - SD.wedge_in_plate_m3(0.15, 0.28, 1.50, 0.10) == pytest.approx(0.0035)
+    comps = villa_d_with_arrivals()
+    assert SD.check_line(comps, SLAB)
+    rec = {r["flight"]: r for r in SD.check_arrivals(comps)}
+    assert set(rec) == {"L1", "U1", "C", "E"}
+    assert rec["E"]["kind"] == "OWNED_ELSEWHERE" and rec["E"]["value"] == pytest.approx(0.028)
+    t = SD.totals(comps)
+    assert t["closable_total"] == pytest.approx(2.6409528 + 0.0665, abs=1e-6)
+    assert t["owned_elsewhere"]["GROUND_SLAB"] == pytest.approx(0.028, abs=1e-9)
+    # steps + the slab's part re-add to the drawn triangles: nothing lost, nothing twice
+    by = {c["id"]: c for c in comps}
+    assert by["E"]["value"] + by["E-SLAB"]["value"] == pytest.approx(0.0945, abs=1e-12)
+
+
+def test_flight_arriving_into_a_floor_with_no_wedge_row_refused():
+    with pytest.raises(SD.LedgerError, match="no arrival-wedge treatment"):
+        SD.check_arrivals(entrance(arrival_kind=None, with_row=False))
+    with pytest.raises(SD.LedgerError, match="wedge row missing"):
+        SD.check_arrivals(entrance(with_row=False))
+    # one wedge row cannot serve two flights
+    two = entrance() + [SD.component("E2", "ST-E", "second flight", "CLOSABLE", "DRAWING-CONFIRMED", "STAIR",
+                                     value=0.05, source="plan", is_flight=True,
+                                     arrival=SD.arrival("OWNED_ELSEWHERE", "same slab", rows=["E-SLAB"]))]
+    with pytest.raises(SD.LedgerError, match="one wedge, one flight"):
+        SD.check_arrivals(two)
+    with pytest.raises(SD.LedgerError, match="DEDUCTED"):
+        SD.check_arrivals([SD.component("F", "ST-E", "flight", "CLOSABLE", "DRAWING-CONFIRMED", "STAIR", value=0.5,
+                                        source="plan", is_flight=True, arrival=SD.arrival("DEDUCTED", "landing"))])
+    with pytest.raises(SD.LedgerError, match="not a flight"):
+        SD.check_arrivals([SD.component("F", "ST-E", "flight", "CLOSABLE", "DRAWING-CONFIRMED", "STAIR", value=0.5,
+                                        source="plan", is_flight=True, arrival=SD.arrival("CONTINUES", "LD"))])
+    # an arrival 'owned elsewhere' whose row is a stair row is not owned elsewhere
+    bad = entrance(with_row=False) + [SD.component("E-SLAB", "ST-E", "wedge", "HELD", "HELD", "STAIR", bound=None,
+                                                   blocker="slab T not printed")]
+    with pytest.raises(SD.LedgerError, match="not another line"):
+        SD.check_arrivals(bad)
+    # the value claimed must equal its rows
+    off = entrance()
+    off[0]["arrival"] = SD.arrival("OWNED_ELSEWHERE", "slab", rows=["E-SLAB"], value=0.0315)
+    with pytest.raises(SD.LedgerError, match="differs from its rows"):
+        SD.check_arrivals(off)
+
+
+def test_structural_lane_width():
+    ok = SD.resolve_lane_width(1.00, 0.0, 1.00)
+    assert ok["accepted"] is True and ok["overlap_width"] == 0.0
+    # adverse: an architectural 1.05 reaching past the slab edge overlaps the slab panel by 0.05 per metre of run
+    r = SD.resolve_lane_width(1.05, 0.0, 1.00)
+    assert r["accepted"] is False and r["overlap_width"] == pytest.approx(0.05)
+    assert SD.resolve_lane_width(1.00, 1.00, 0.0)["lane"] == pytest.approx(1.00)   # mirrored faces
+    assert SD.resolve_lane_width(SD.to_m(1000, "mm"), 0.0, SD.to_m(100, "cm"))["accepted"] is True
