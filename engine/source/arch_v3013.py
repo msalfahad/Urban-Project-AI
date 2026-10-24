@@ -19,7 +19,16 @@ building. Four kinds of plan piece were in the wrong line (checker-merged T-223 
                 FLOOR.OUTDOOR); a piece the engine never measured is added only as the stated difference between the
                 drawn area and the retired pieces (named, never silent);
   NO_FLOOR      a 'strip' that is no opening at all (a wall drawn on a non-wall layer read as a gap) and any twin
-                line on the same strip are retired: no floor, no threshold.
+                line on the same strip are retired: no floor, no threshold;
+  TO_WET        (WP2) a dry floor piece classed WET by a binding rule or decision (a pantry with a drain: Q-37 A)
+                moves to the wet floor line, area unchanged: a whole line is retired and carried by one wet line; a
+                part of a line moves only with its closure (the printed box less every other named piece in it, within
+                TOL_CLOSURE) and the dry line keeps the rest;
+  NO_OPENING_SPLIT (WP2) a 'strip' that is an edge line carried across an open zone (no opening anywhere along it):
+                the strip and its threshold twin are retired and its area is placed part by part where it physically
+                lies: COUNTED_IN a TO_OUTDOOR record whose stated missing piece it is (counted once there), NO_FLOOR (a
+                wall top), TO_WET (wet floor by a decision) or HELD_WITH (a held zone: area kept, never 0, outside the
+                internal line). The parts must add up to the carried strip.
 Every area is recomputed from the record's printed dimensions and must equal the stated area; every retired line must
 carry exactly the figure the record states (the replaced figure is the one the line carries).
 
@@ -68,8 +77,11 @@ POLICY_ID = "URBAN_BOQ_T240_ARCH_V3_0_13"
 LEDGER_SCHEMA = "URBAN_V3013_INTEGRATION_LEDGER_V1"
 INPUTS_SCHEMA = "URBAN_V3013_INPUTS_V1"
 ROLLBACK = A30.ROLLBACK
-KINDS = ("ENTER_FLOOR", "TO_THRESHOLD", "TO_OUTDOOR", "NO_FLOOR")
+KINDS = ("ENTER_FLOOR", "TO_THRESHOLD", "TO_OUTDOOR", "NO_FLOOR", "TO_WET", "NO_OPENING_SPLIT")
 FLOOR_ITEMS = A30.FLOOR_ITEMS                       # the finished internal floor items
+DRY_ITEM, WET_ITEM = "FIN.FLOOR.PORCELAIN", "FIN.FLOOR.WET_TILE"
+SPLIT_TO = ("COUNTED_IN", "NO_FLOOR", "TO_WET", "HELD_WITH")
+TOL_CLOSURE = 1e-3                      # an engine-geometry part vs its printed box less the named pieces
 SPACE_ITEM = "ARCH.SPACE"                           # space floor area (finish to be confirmed)
 THRESHOLD_ITEM = "ARCH.THRESHOLD"
 FLOOR_KEYS = ("FLOOR.INTERNAL", "FLOOR.OUTDOOR")
@@ -108,9 +120,12 @@ PIECES = {
 }
 WAITING = dict(A3012.WAITING)
 WAITING.update({
-    "FLOOR_WP2_GF_STRIP_CLASS": "T-240 WP2: the T-218 doorway-strip class on the 9 GF strips (4.124 m2; GF OP-003 "
-                                "has no opening) and the Q-37 A wet class on the GF pantry pieces; until then those "
-                                "lines stay as V3.0.12 carries them",
+    "FLOOR_PANTRY_DOORWAY_ZONE": "the pantry's doorway-zone piece (about 1.10 m2 inside the printed 4.50 x 3.00 box, "
+                                 "an RFI line in the candidate) stays as carried: held stays held; its wet class "
+                                 "applies when its own RFI closes",
+    "FLOOR_PANTRY_PART_RECHECK": "T-240 WP2 moves the pantry part of the open dining / living face to the wet line on "
+                                 "the engine face geometry clipped to the printed pantry box (closure in the inputs); "
+                                 "the Checker's figure of that part differs and is re-measured at WP4",
     "FLOOR_WP3_STAIR_RESIDUE": "T-240 WP3: the 1F living stair residue and the T-116 tread / winder union, applied "
                                "only where a Checker verdict covers it, else HELD naming T-269",
     "FLOOR_WP4_LINE_RECONCILIATION": "T-240 WP4: the candidate floor line against the Checker's 47 pieces piece by "
@@ -227,10 +242,86 @@ def _check_record(rec):
             raise InputsError(f"record {rid}: material_status one of {MATERIAL_STATUS}")
         if rec["material_status"] != "HELD" and not rec.get("material_source"):
             raise InputsError(f"record {rid}: a material that is not HELD names its source")
+    elif k == "TO_WET":
+        if not rec.get("decision"):
+            raise InputsError(f"record {rid}: a floor piece is classed WET only by a binding rule or decision (name "
+                              "it); unbound its class stays as carried")
+        _line_ref(rid, rec.get("line") or {}, "line", (DRY_ITEM,))
+        mv = rec.get("move_m2")
+        if not (_num(mv) and mv > 0):
+            raise InputsError(f"record {rid}: move_m2 > 0 (the wet part of the line; missing is never 0)")
+        if rec.get("whole") is True:
+            if not A308._same(float(mv), rec["line"].get("carried")):
+                raise InputsError(f"record {rid}: a whole-line move moves exactly the carried figure")
+        else:
+            cl = rec.get("closure") or {}
+            if not (_num(cl.get("box_m2")) and cl["box_m2"] > 0 and isinstance(cl.get("terms"), dict)):
+                raise InputsError(f"record {rid}: a part of a line moves only with its closure: the printed box "
+                                  "area and every other named piece in it")
+            if abs(float(cl["box_m2"]) - sum(float(v) for v in cl["terms"].values()) - float(mv)) > TOL_CLOSURE:
+                raise InputsError(f"record {rid}: the part {mv} does not close the printed box {cl['box_m2']} with "
+                                  f"the named pieces (residual above {TOL_CLOSURE} m2 is never absorbed)")
+            if not (_num(rec["line"].get("carried")) and float(mv) < float(rec["line"]["carried"])):
+                raise InputsError(f"record {rid}: a part is smaller than the line it leaves")
+        if rec.get("area_status") not in ("VERIFIED", "DRAWING-CONFIRMED"):
+            raise InputsError(f"record {rid}: area_status VERIFIED or DRAWING-CONFIRMED")
+    elif k == "NO_OPENING_SPLIT":
+        x = rec.get("line") or {}
+        _line_ref(rid, x, "line", FLOOR_ITEMS)
+        if rec.get("twin") is not None:
+            _line_ref(rid, rec["twin"], "twin", (THRESHOLD_ITEM,))
+        parts = rec.get("parts") or ()
+        if not parts:
+            raise InputsError(f"record {rid}: a strip with no opening is split into the named places it lies in")
+        tot, names = 0.0, set()
+        for i, p in enumerate(parts):
+            pn = p.get("part")
+            if not pn or pn in names:
+                raise InputsError(f"record {rid}: parts[{i}] names its part, once")
+            names.add(pn)
+            a = area_of(dict(p, id=f"{rid}:{pn}"))
+            tot += a
+            to = p.get("to")
+            if to not in SPLIT_TO:
+                raise InputsError(f"record {rid} part {pn}: to one of {SPLIT_TO}")
+            if to == "COUNTED_IN" and not p.get("record"):
+                raise InputsError(f"record {rid} part {pn}: COUNTED_IN names the record whose line counts it")
+            if to == "TO_WET" and not p.get("decision"):
+                raise InputsError(f"record {rid} part {pn}: a wet part names its binding rule or decision")
+            if to == "HELD_WITH" and not (p.get("held_with") and p.get("why")):
+                raise InputsError(f"record {rid} part {pn}: a held part names what it waits with and why (never 0)")
+            if to == "NO_FLOOR" and not p.get("why"):
+                raise InputsError(f"record {rid} part {pn}: a part with no floor says why")
+        if not (_num(x.get("carried")) and abs(tot - float(x["carried"])) <= TOL_M2 * 10):
+            raise InputsError(f"record {rid}: the parts {_r(tot)} != the carried strip {x.get('carried')}: every "
+                              "part of the strip is placed, none twice")
     else:   # NO_FLOOR
         _line_ref(rid, rec.get("line") or {}, "line", FLOOR_ITEMS)
         if rec.get("twin") is not None:
             _line_ref(rid, rec["twin"], "twin", (THRESHOLD_ITEM,))
+
+
+def _check_counted_in(recs, p):
+    """a NO_OPENING_SPLIT part COUNTED_IN another record: that record is a TO_OUTDOOR of the same piece whose stated
+    missing piece is exactly this part (so the area is counted once, in that line, and the strip leaves nothing)."""
+    by = {r["id"]: r for r in recs}
+    for rec in recs:
+        if rec["kind"] != "NO_OPENING_SPLIT":
+            continue
+        for part in rec["parts"]:
+            if part["to"] != "COUNTED_IN":
+                continue
+            tgt = by.get(part["record"])
+            if tgt is None or tgt["kind"] != "TO_OUTDOOR":
+                raise InputsError(f"piece {p}: record {rec['id']} part {part['part']}: COUNTED_IN names a TO_OUTDOOR "
+                                  f"record of the same piece ({part['record']!r} is not one)")
+            miss = float((tgt.get("missing") or {}).get("m2") or 0.0)
+            if abs(miss - float(part["area_m2"])) > TOL_M2 * 10:
+                raise InputsError(f"piece {p}: record {rec['id']} part {part['part']} ({part['area_m2']} m2) is not "
+                                  f"the missing piece {miss} m2 that {tgt['id']} adds: counted twice or lost")
+            if (tgt.get("missing") or {}).get("carried_by") != rec["id"]:
+                raise InputsError(f"piece {p}: {tgt['id']} names the line that carried its missing piece "
+                                  f"(carried_by {rec['id']})")
 
 
 def load_inputs(doc, project_id=None):
@@ -277,6 +368,7 @@ def load_inputs(doc, project_id=None):
                 if key in named:
                     raise InputsError(f"piece {p}: line {key} is named by two records (one strip, one line)")
                 named.add(key)
+        _check_counted_in(recs, p)
     g = doc.get("guard")
     if g is not None:
         A307.load_inputs({"schema": A307.INPUTS_SCHEMA, "project": doc.get("project"), "guard": g}, project_id)
@@ -352,7 +444,8 @@ def scope_changes(pc, lines, earlier_changed=()):
     changes, touched = [], set()
     log = {"piece": "FLOOR_SCOPE", "state": "RUN", "source": src, "sources": pc.get("sources") or [], "records": [],
            "totals": {"floor_internal_in_m2": 0.0, "floor_internal_out_m2": 0.0, "threshold_m2": 0.0,
-                      "outdoor_m2": 0.0, "no_floor_m2": 0.0}}
+                      "outdoor_m2": 0.0, "no_floor_m2": 0.0, "dry_to_wet_m2": 0.0, "held_with_m2": 0.0,
+                      "counted_in_m2": 0.0}}
 
     def take(x, rid):
         ln = _find(lines, x, rid)
@@ -496,6 +589,117 @@ def scope_changes(pc, lines, earlier_changed=()):
             log["totals"]["outdoor_m2"] += area
             entry.update(outdoor_line=nl["line_id"], retired=retired_ids, area_m2=_r(area),
                          floor_internal_delta_m2=_r(-out_m2), missing=miss or None)
+        elif k == "TO_WET":
+            x = rec["line"]
+            ln, cq = take(x, rid)
+            if not live(ln):
+                raise InputsError(f"record {rid}: line {x['element_id']} is not live ({ln['evidence_state']}); a held "
+                                  "or retired piece is not reclassed here")
+            mv = float(rec["move_m2"])
+            ev = ln["evidence_state"] if ln["evidence_state"] in ("MEASURED", "SOURCE_DERIVED", "PROVISIONAL") \
+                else "SOURCE_DERIVED"
+            why = f"WET by {rec['decision']}: {x['why']}"
+            if rec.get("whole"):
+                retire(ln, rid, why, f"{METHOD}: WET - {A302._q(A30._qty(ln))} m2 leaves the dry porcelain line for the "
+                                     f"wet floor line of {rid} ({rec['decision']}); figure kept as information, never "
+                                     "summed", verif, ["TO_WET", "WHOLE_LINE"], ref)
+                kept = None
+            else:
+                after = copy.deepcopy(ln)
+                kept = float(cq) - mv
+                calc = dict(after.get("calculation") or {})
+                calc["formula"] = (f"{_r(float(cq), 6)} - {_r(mv, 6)} (wet part, {rec['decision']}) = {_r(kept, 6)} m2 "
+                                   "dry porcelain")[:400]
+                calc["inputs"] = dict(calc.get("inputs") or {}, floor_scope_v3013=_scope_rec(
+                    rec, mv, floor_key="FLOOR.INTERNAL", part="DRY_REMAINDER", was=A30._qty(ln), kept_m2=_r(kept),
+                    closure=rec.get("closure"), area_basis=rec.get("area_basis")))
+                after.update(measured_net=_r(kept), gross=_r(kept), calculation=calc)
+                A305._note(after, f"{METHOD}: the wet part {_r(mv, 4)} m2 ({rec['decision']}) leaves this dry line for "
+                                  f"the wet floor line of {rid}; V3.0.12 figure {A302._q(A30._qty(ln))} replaced")
+                changes.append(A305._change(
+                    "FLOOR_SCOPE", "REPLACE", ln, after, drawing_reference=ref, held=[], downstream=[],
+                    verification=verif, evidence_status=rec["area_status"], codes=["TO_WET", "DRY_REMAINDER"]
+                    + (["EARLIER_CHANGE"] if ln["line_id"] in earlier else []), why=why))
+            eid = f"HL:FLOOR_SCOPE:WET:{fl}:{rid}"
+            nl = _new_line(pid, rev, docs, WET_ITEM, fl, eid, ev, value=mv,
+                           formula=(f"{_r(mv, 6)} m2 wet floor ({rec['decision']}); from {x['element_id']}"
+                                    + ("" if rec.get("whole") else " (part, closure in inputs)")),
+                           inputs=_scope_rec(rec, mv, floor_key="FLOOR.INTERNAL", decision=rec["decision"],
+                                             from_line=ln["line_id"], whole=bool(rec.get("whole")),
+                                             closure=rec.get("closure"), area_basis=rec.get("area_basis"),
+                                             area_status=rec["area_status"]),
+                           notes=f"{METHOD}: wet floor of {rid} ({rec['decision']}); area from {x['element_id']} "
+                                 "unchanged, class only")
+            if nl["line_id"] in have:
+                raise ValueError(f"{METHOD}: an added wet line repeats a V3.0.12 line id")
+            changes.append(A305._change(
+                "FLOOR_SCOPE", "ADD", None, nl, drawing_reference=ref, held=[], downstream=list(
+                    rec.get("downstream") or []), verification=verif, evidence_status=rec["area_status"],
+                codes=["TO_WET", "NEW_LINE"], why=why, guard_element={"element_id": eid, "part": "WHOLE"}))
+            log["totals"]["dry_to_wet_m2"] += mv
+            entry.update(line_id=ln["line_id"], wet_line=nl["line_id"], moved_m2=_r(mv), dry_kept_m2=_r(kept),
+                         floor_internal_delta_m2=0.0)
+        elif k == "NO_OPENING_SPLIT":
+            x = rec["line"]
+            ln, cq = take(x, rid)
+            out_m2 = float(cq) if live(ln) and _num(cq) else 0.0
+            retire(ln, rid, f"no opening: {x['why']}",
+                   f"{METHOD}: NO OPENING - {A302._q(A30._qty(ln))} m2 is split into the places it lies in (record "
+                   f"{rid}); figure kept as information, never summed", verif, ["NO_OPENING_SPLIT", "ENGINE_DEFECT"],
+                   ref)
+            retired_ids = [ln["line_id"]]
+            if rec.get("twin"):
+                tw, _ = take(rec["twin"], rid)
+                retire(tw, rid, f"no opening: {rec['twin']['why']}",
+                       f"{METHOD}: NO OPENING - the threshold twin of a strip that is no opening (record {rid})", verif,
+                       ["NO_OPENING_SPLIT", "TWIN"], ref)
+                retired_ids.append(tw["line_id"])
+            parts_out, in_m2 = [], 0.0
+            for part in rec["parts"]:
+                pa = area_of(dict(part, id=f"{rid}:{part['part']}"))
+                to = part["to"]
+                pe = {"part": part["part"], "to": to, "area_m2": _r(pa)}
+                if to in ("TO_WET", "HELD_WITH"):
+                    eid = f"HL:FLOOR_SCOPE:{to}:{fl}:{rid}:{part['part']}"
+                    sc = _scope_rec(dict(rec, dims=part["dims"]), pa, part=part["part"], to=to, from_line=ln["line_id"],
+                                    floor_key="FLOOR.INTERNAL" if to == "TO_WET" else None,
+                                    decision=part.get("decision"), held_with=part.get("held_with"),
+                                    why=part.get("why"))
+                    fml = " + ".join(f"{a} x {b}" for a, b in part["dims"]) + f" = {_r(pa, 4)} m2"
+                    if to == "TO_WET":
+                        nl = _new_line(pid, rev, docs, WET_ITEM, fl, eid, "SOURCE_DERIVED", value=pa,
+                                       formula=fml + f" wet floor ({part['decision']}), part of a strip with no opening",
+                                       inputs=sc, notes=f"{METHOD}: part {part['part']} of {x['element_id']} (no "
+                                                        f"opening) is wet floor ({part['decision']})")
+                        in_m2 += pa
+                        held = []
+                    else:
+                        q = f"part {part['part']} of {x['element_id']} waits with {part['held_with']}: {part['why']}"
+                        nl = _new_line(pid, rev, docs, SPACE_ITEM, fl, eid, "BOUNDED_EXPOSURE",
+                                       rng={"low": _r(pa), "high": _r(pa), "basis": q[:300]},
+                                       formula=fml + f" HELD with {part['held_with']} (never 0)", inputs=sc,
+                                       rfi={"question": q[:900], "unlocks": eid},
+                                       notes=f"{METHOD}: part {part['part']} of a strip with no opening; HELD with "
+                                             f"{part['held_with']}, area kept, outside the internal floor line")
+                        held = [{"what": f"{x['element_id']} part {part['part']}", "why": q, "range": [_r(pa), _r(pa)]}]
+                        log["totals"]["held_with_m2"] += pa
+                    if nl["line_id"] in have:
+                        raise ValueError(f"{METHOD}: an added split line repeats a V3.0.12 line id")
+                    changes.append(A305._change(
+                        "FLOOR_SCOPE", "ADD", None, nl, drawing_reference=ref, held=held, downstream=[],
+                        verification=verif, evidence_status="HELD" if held else "DRAWING-CONFIRMED",
+                        codes=["NO_OPENING_SPLIT", to, "NEW_LINE"], why=f"no opening: {x['why']}",
+                        guard_element={"element_id": eid, "part": "WHOLE"}))
+                    pe["line"] = nl["line_id"]
+                elif to == "COUNTED_IN":
+                    pe["record"] = part["record"]
+                    log["totals"]["counted_in_m2"] += pa
+                else:
+                    log["totals"]["no_floor_m2"] += pa
+                parts_out.append(pe)
+            log["totals"]["floor_internal_out_m2"] += out_m2
+            log["totals"]["floor_internal_in_m2"] += in_m2
+            entry.update(retired=retired_ids, parts=parts_out, floor_internal_delta_m2=_r(in_m2 - out_m2))
         else:   # NO_FLOOR
             out_m2, retired_ids = 0.0, []
             for x in [rec["line"]] + ([rec["twin"]] if rec.get("twin") else []):
@@ -615,13 +819,27 @@ def check_floor_scope(lines):
         elif k == "TO_OUTDOOR":
             if sc.get("floor_key") != "FLOOR.OUTDOOR" or ln["item_code"] in FLOOR_ITEMS:
                 raise InputsError(f"line {ln['line_id']}: an exterior face is never in the internal floor line")
+        elif k == "TO_WET":
+            if ln["evidence_state"] == "NOT_APPLICABLE_WITH_EVIDENCE":
+                continue
+            if not _live(ln) or ln["item_code"] not in FLOOR_ITEMS or float(ln["measured_net"]) <= 0:
+                raise InputsError(f"line {ln['line_id']}: a wet move leaves two live floor lines (wet + dry rest)")
+            if sc.get("part") != "DRY_REMAINDER" and ln["item_code"] != WET_ITEM:
+                raise InputsError(f"line {ln['line_id']}: the moved part is on the wet floor line")
+        elif k == "NO_OPENING_SPLIT" and sc.get("to") == "TO_WET":
+            if not _live(ln) or ln["item_code"] != WET_ITEM:
+                raise InputsError(f"line {ln['line_id']}: a wet part of a split strip is live wet floor")
+        elif k == "NO_OPENING_SPLIT" and sc.get("to") == "HELD_WITH":
+            br = ln.get("bounded_range") or {}
+            if ln["evidence_state"] != "BOUNDED_EXPOSURE" or not (_num(br.get("low")) and br["low"] > 0):
+                raise InputsError(f"line {ln['line_id']}: a held part keeps its area (never 0, never released)")
     return n
 
 
 def floor_line(lines):
     """the internal floor-area line of a run: live FIN.FLOOR.* lines + live space lines typed FLOOR.INTERNAL; the
     outdoor key, the held thresholds and the untyped spaces apart. -> {by_floor, totals}"""
-    out = {"internal": {}, "outdoor": {}, "threshold_held": {}, "space_untyped": {}}
+    out = {"internal": {}, "outdoor": {}, "threshold_held": {}, "space_untyped": {}, "space_held": {}}
 
     def add(key, fl, v):
         out[key][fl] = _r(out[key].get(fl, 0.0) + float(v), 6)
@@ -637,6 +855,9 @@ def floor_line(lines):
                 ln["measured_net"])
         elif ln["item_code"] == THRESHOLD_ITEM and ln["evidence_state"] == "BOUNDED_EXPOSURE" and sc:
             add("threshold_held", fl, (ln.get("bounded_range") or {}).get("high") or 0.0)
+        elif (ln["item_code"] == SPACE_ITEM and ln["evidence_state"] == "BOUNDED_EXPOSURE" and isinstance(sc, dict)
+              and sc.get("to") == "HELD_WITH"):
+            add("space_held", fl, (ln.get("bounded_range") or {}).get("high") or 0.0)
     return {k: dict(v, total=_r(sum(v.values()), 6)) for k, v in out.items()}
 
 
