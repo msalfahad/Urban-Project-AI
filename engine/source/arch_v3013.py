@@ -449,7 +449,8 @@ def scope_changes(pc, lines, earlier_changed=()):
                     "FLOOR_SCOPE", "ADD", None, nl, drawing_reference=ref,
                     held=[{"what": f"{THRESHOLD_ITEM} {rec['opening']} {fl}", "why": q, "range": [_r(area), _r(area)]}],
                     downstream=[], verification=verif, evidence_status="HELD",
-                    codes=["TO_THRESHOLD", rec["class"], "NEW_LINE"], why=why))
+                    codes=["TO_THRESHOLD", rec["class"], "NEW_LINE"], why=why,
+                    guard_element={"element_id": eid, "part": "WHOLE"}))   # the guard re-check carries it as drawn
                 tid = nl["line_id"]
             out_m2 = float(cq) if live(ln) and _num(cq) else 0.0
             log["totals"]["floor_internal_out_m2"] += out_m2
@@ -490,7 +491,7 @@ def scope_changes(pc, lines, earlier_changed=()):
                 evidence_status=rec.get("area_status") or "DRAWING-CONFIRMED",
                 codes=["TO_OUTDOOR", "FLOOR.OUTDOOR", "NEW_LINE"] + (["MISSING_PIECE_NAMED"] if miss.get("m2")
                                                                      else []),
-                why=f"exterior by {rec['decision']}"))
+                why=f"exterior by {rec['decision']}", guard_element={"element_id": eid, "part": "WHOLE"}))
             log["totals"]["floor_internal_out_m2"] += out_m2
             log["totals"]["outdoor_m2"] += area
             entry.update(outdoor_line=nl["line_id"], retired=retired_ids, area_m2=_r(area),
@@ -667,6 +668,7 @@ def integrate(l3012, v3013_changes):
         BL.validate(ln)
     A3011.check_conflicts(out)
     A3010.check_same_openings(out)
+    A3012.check_partition(out)
     check_floor_scope(out)
     by12 = {ln["line_id"]: ln for ln in l3012}
     touched = set(rep) | {a["line_id"] for a in adds}
@@ -802,5 +804,5 @@ def policy_record():
 
 
 __all__ = ["METHOD", "PIECES", "WAITING", "DEFAULT_GUARD_CLASS", "KINDS", "load_inputs", "area_of", "scope_changes",
-           "changes_for", "integrate", "strip_duplicates", "check_one_strip_one_line", "check_floor_scope", "floor_line", "ledger_rows",
-           "diff_rows", "write", "InputsError"]
+           "changes_for", "integrate", "strip_duplicates", "check_one_strip_one_line", "check_floor_scope",
+           "floor_line", "ledger_rows", "diff_rows", "write", "InputsError"]

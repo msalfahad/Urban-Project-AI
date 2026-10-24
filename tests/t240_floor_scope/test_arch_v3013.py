@@ -173,6 +173,15 @@ def test_ledger_and_diff_rows():
     assert sum(1 for d in diff if d["vs_v3_0_12"] == "SAME") == 3
 
 
+def test_added_lines_carry_their_guard_element():
+    """the V3.0.7 guard re-check maps every added line to a register element (arch_v307._carried_map)."""
+    _ls, _out, ch, _l, _i = run()
+    adds = [c for c in ch if c["action"] == "ADD"]
+    assert len(adds) == 2
+    for c in adds:
+        assert c["guard_element"] == {"element_id": c["after"]["location"]["element_id"], "part": "WHOLE"}
+
+
 def test_write_files(tmp_path):
     ls = l3012()
     inp = A.load_inputs(inputs(), PID)
