@@ -1,0 +1,151 @@
+{
+ "policy": "STIRRUP_CLOSURE_V1",
+ "inputs": [
+  "research/agents_t265/LEDGER_T265.csv",
+  "research/agents_t242/ALSENAN_GROUND_INPUT.json (ring radii)",
+  "research/agents_t272/CLEAR_SPANS_T272R2.json (r2 drawn clear spans, ring sweeps)"
+ ],
+ "unit_mass": {
+  "method": "D2_OVER_162",
+  "d8_kg_per_m": 0.395062
+ },
+ "exterior": {
+  "runs": 17,
+  "length_m": 55.9912,
+  "count_envelope": [
+   333,
+   392
+  ],
+  "half_spacing_reading": 364,
+  "t265_range": [
+   380,
+   397
+  ],
+  "r1_through_envelope_superseded": [
+   361,
+   400
+  ],
+  "runs_split_by_framing_beams": [
+   "109+7CB#2",
+   "145+7CA#1",
+   "170+7C3#2",
+   "170+7C3#3",
+   "7D0+FC#1",
+   "7D0+FC#2",
+   "7D0+FC#3",
+   "7E0+FD#1"
+  ],
+  "count_status": "HELD (end rule not printed)",
+  "cut_length_status": "HELD",
+  "cut_length_held": [
+   "cover printed as a minimum only: b - 2c is an upper envelope of the link, not its size",
+   "bend radius / mandrel not printed",
+   "hook angle drawn, not printed",
+   "hook extension (tail) not printed (owner AD-4: blocked unless the project dimensions it)"
+  ],
+  "kg": null,
+  "kg_status": "HELD",
+  "qa_kg_at_high_count_no_hooks": 351.232
+ },
+ "boundary": {
+  "runs": 5,
+  "length_m": 44.07,
+  "count_status": "HELD (M4 columns; end rule)",
+  "no_column_reading": [
+   217,
+   227
+  ],
+  "cut_length_status": "HELD",
+  "cut_length_held": [
+   "closure: no hook or overlap drawn on the closed link (designer item)",
+   "cover printed as a minimum only: b - 2c is an upper envelope of the link, not its size",
+   "bend radius / mandrel not printed",
+   "hook angle not printed",
+   "hook extension (tail) not printed (owner AD-4: blocked unless the project dimensions it)"
+  ],
+  "kg": null,
+  "kg_status": "HELD",
+  "qa_kg_at_no_column_high_count_no_hooks": 86.809
+ },
+ "design_flags": {
+  "GB_EXTERIOR": [],
+  "BOUNDARY_GB": [
+   "closed link drawn with no closure (no hook, no overlap): designer item"
+  ]
+ },
+ "ring": {
+  "r_in_m": 2.25,
+  "r_out_m": 2.55,
+  "t265_centreline_arc_m": 6.0873,
+  "split_at": [
+   "COL:17BA",
+   "COL:17BD"
+  ],
+  "radial_sweeps": [
+   {
+    "sweep_deg": 66.43,
+    "inner_arc_m": 2.6087,
+    "outer_arc_m": 2.9566
+   },
+   {
+    "sweep_deg": 72.36,
+    "inner_arc_m": 2.8416,
+    "outer_arc_m": 3.2205
+   }
+  ],
+  "count_envelope": [
+   35,
+   44
+  ],
+  "drawn_face_pieces_net_of_column_outlines_m": {
+   "inner": [
+    3.2108,
+    3.2108
+   ],
+   "outer": [
+    2.9751,
+    3.2988
+   ]
+  },
+  "face_reading": {
+   "inner": [
+    42,
+    46
+   ],
+   "outer": [
+    40,
+    44
+   ]
+  },
+  "column_outline_on_arc_m": {
+   "inner": {
+    "COL:17BA": {
+     "deg": 3.2444,
+     "arc_m": 0.1274
+    },
+    "COL:17BD": {
+     "deg": 0.2174,
+     "arc_m": 0.0085
+    },
+    "COL:17C0": {
+     "deg": 0.2174,
+     "arc_m": 0.0085
+    }
+   },
+   "outer": {
+    "COL:17BA": {
+     "deg": 6.7839,
+     "arc_m": 0.3019
+    },
+    "COL:17BD": {
+     "deg": 2.3113,
+     "arc_m": 0.1029
+    }
+   }
+  },
+  "drawn_arc_m": {
+   "inner": 6.5674,
+   "outer": 6.6797
+  }
+ }
+}
