@@ -1,4 +1,82 @@
 {
+ "candidate_V309": {
+  "baseline": "ARCH_TAKEOFF_V3.0.9 candidate (NOT RELEASED)",
+  "boq_lines_csv_sha256": "63b350cf270110bf76f86f2f6da5ea515bf8ba796bbd7f6917a1050c469d600f",
+  "by_floor_state": {
+   "STR.CONC.COLUMN|1F|BLOCKED_RFI": [
+    2,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "STR.CONC.COLUMN|1F|NOT_APPLICABLE_WITH_EVIDENCE": [
+    2,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "STR.CONC.COLUMN|1F|PROVISIONAL": [
+    18,
+    9.24,
+    9.24,
+    9.24
+   ],
+   "STR.CONC.COLUMN|1F|SOURCE_DERIVED": [
+    1,
+    0.588,
+    0.0,
+    0.0
+   ],
+   "STR.CONC.COLUMN|2F|BLOCKED_RFI": [
+    5,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "STR.CONC.COLUMN|2F|NOT_APPLICABLE_WITH_EVIDENCE": [
+    1,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "STR.CONC.COLUMN|2F|PROVISIONAL": [
+    8,
+    3.528,
+    3.528,
+    3.528
+   ],
+   "STR.CONC.COLUMN|GF|PROVISIONAL": [
+    30,
+    20.25,
+    20.25,
+    20.25
+   ],
+   "STR.CONC.COLUMN|UNKNOWN|BLOCKED_RFI": [
+    2,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "STR.CONC.COLUMN|UNKNOWN|BOUNDED_EXPOSURE": [
+    3,
+    0.0,
+    1.134,
+    3.483
+   ],
+   "STR.CONC.NECK|FOUNDATION|BLOCKED_RFI": [
+    1,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "STR.CONC.NECK|FOUNDATION|BOUNDED_EXPOSURE": [
+    35,
+    0.0,
+    3.075,
+    15.375
+   ]
+  }
+ },
  "closable_vs_route_g": {
   "differ": [],
   "drawing": 18.3465,
@@ -260,6 +338,48 @@
    "section": [
     -0.73125,
     0.0
+   ]
+  }
+ },
+ "released_A": {
+  "baseline": "V29_ROUTEG_NO_PROFILE",
+  "boq_lines_csv_sha256": "b96185d468524743e600f1992d4e4b2028193ff4a379961bc5686c9662f8c115",
+  "by_floor_state": {
+   "STR.CONC.COLUMN|1F|BLOCKED_RFI": [
+    22,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "STR.CONC.COLUMN|2F|BLOCKED_RFI": [
+    22,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "STR.CONC.COLUMN|GF|BLOCKED_RFI": [
+    30,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "STR.CONC.COLUMN|UNKNOWN|BLOCKED_RFI": [
+    8,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "STR.CONC.NECK|FOUNDATION|BLOCKED_RFI": [
+    1,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "STR.CONC.NECK|FOUNDATION|BOUNDED_EXPOSURE": [
+    35,
+    0.0,
+    3.075,
+    15.375
    ]
   }
  },

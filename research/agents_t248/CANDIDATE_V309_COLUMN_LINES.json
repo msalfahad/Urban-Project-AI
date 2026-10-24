@@ -1,0 +1,1791 @@
+{
+ "schema": "T248_RELEASED_A_V1",
+ "baseline": "ARCH_TAKEOFF_V3.0.9 candidate (NOT RELEASED)",
+ "boq_lines_csv_sha256": "63b350cf270110bf76f86f2f6da5ea515bf8ba796bbd7f6917a1050c469d600f",
+ "counts": {
+  "STR.CONC.COLUMN|1F|BLOCKED_RFI": 2,
+  "STR.CONC.COLUMN|1F|NOT_APPLICABLE_WITH_EVIDENCE": 2,
+  "STR.CONC.COLUMN|1F|PROVISIONAL": 18,
+  "STR.CONC.COLUMN|1F|SOURCE_DERIVED": 1,
+  "STR.CONC.COLUMN|2F|BLOCKED_RFI": 5,
+  "STR.CONC.COLUMN|2F|NOT_APPLICABLE_WITH_EVIDENCE": 1,
+  "STR.CONC.COLUMN|2F|PROVISIONAL": 8,
+  "STR.CONC.COLUMN|GF|PROVISIONAL": 30,
+  "STR.CONC.COLUMN|UNKNOWN|BLOCKED_RFI": 2,
+  "STR.CONC.COLUMN|UNKNOWN|BOUNDED_EXPOSURE": 3,
+  "STR.CONC.NECK|FOUNDATION|BLOCKED_RFI": 1,
+  "STR.CONC.NECK|FOUNDATION|BOUNDED_EXPOSURE": 35
+ },
+ "lines": [
+  {
+   "line_id": "L-2ac3c9b3b4c2221a0299",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "1F",
+   "mark": "",
+   "state": "SOURCE_DERIVED",
+   "rfi": "",
+   "section_m": null,
+   "measured_net": 0.588,
+   "bounded": null
+  },
+  {
+   "line_id": "L-31a0424bd0efcc93efba",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "1F",
+   "mark": "",
+   "state": "BLOCKED_RFI",
+   "rfi": "planted column PC-1F-B: solid 0.10 x 4.20 = 0.420 m3 drawing-derived (GFRS 386 -> FFRS 69D, text 548 'P.C 20x50', on B26 65x85), but the owner split is HELD: two framing projections of unprinted depth touch it (D-26), so the column part is an upper bound (<= 0.345) and the joint a lower bound (>= 0.059)",
+   "section_m": null,
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-322d1a1a7d9504e9cbc6",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "1F",
+   "mark": "C1",
+   "state": "PROVISIONAL",
+   "rfi": "",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": 0.42000000000000004,
+   "bounded": [
+    0.42000000000000004,
+    0.42000000000000004
+   ]
+  },
+  {
+   "line_id": "L-6f56016cd0282ebad28a",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "1F",
+   "mark": "C2",
+   "state": "PROVISIONAL",
+   "rfi": "",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": 0.42000000000000004,
+   "bounded": [
+    0.42000000000000004,
+    0.42000000000000004
+   ]
+  },
+  {
+   "line_id": "L-734dc85d1a4ffbde5655",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "1F",
+   "mark": "C2",
+   "state": "PROVISIONAL",
+   "rfi": "",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": 0.42000000000000004,
+   "bounded": [
+    0.42000000000000004,
+    0.42000000000000004
+   ]
+  },
+  {
+   "line_id": "L-99451ab1afb179bfb75c",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "1F",
+   "mark": "C2",
+   "state": "PROVISIONAL",
+   "rfi": "",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": 0.42000000000000004,
+   "bounded": [
+    0.42000000000000004,
+    0.42000000000000004
+   ]
+  },
+  {
+   "line_id": "L-9a33d59e28a53df74b18",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "1F",
+   "mark": "C2",
+   "state": "PROVISIONAL",
+   "rfi": "",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": 0.42000000000000004,
+   "bounded": [
+    0.42000000000000004,
+    0.42000000000000004
+   ]
+  },
+  {
+   "line_id": "L-99e7e45631f6ddf3c7e2",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "1F",
+   "mark": "C3",
+   "state": "BLOCKED_RFI",
+   "rfi": "MEMBER NOT DRAWN: C3 1F on FP 10E4: no 1F roof slab over the position; the storey's slab plan draws no member there (T-217 SOLID / ANSI35 convention), the architectural plans show a terrace with a parapet ('CHECK ARCHITECTURAL DETAIL OF PARAPET': a parapet stub is possible); consultant item D-65 (never a verified 0; the line returns only on a drawing or a consultant answer)",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-a2c6fa502bd864cf5da2",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "1F",
+   "mark": "C3",
+   "state": "PROVISIONAL",
+   "rfi": "",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": 0.42000000000000004,
+   "bounded": [
+    0.42000000000000004,
+    0.42000000000000004
+   ]
+  },
+  {
+   "line_id": "L-cc702b8541c15fdfd98c",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "1F",
+   "mark": "C3",
+   "state": "PROVISIONAL",
+   "rfi": "",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": 0.42000000000000004,
+   "bounded": [
+    0.42000000000000004,
+    0.42000000000000004
+   ]
+  },
+  {
+   "line_id": "L-8f8ad257d9b2cb9e027f",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "1F",
+   "mark": "C4",
+   "state": "PROVISIONAL",
+   "rfi": "",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": 0.42000000000000004,
+   "bounded": [
+    0.42000000000000004,
+    0.42000000000000004
+   ]
+  },
+  {
+   "line_id": "L-e112e2add2f8979a6c39",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "1F",
+   "mark": "C4",
+   "state": "PROVISIONAL",
+   "rfi": "",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": 0.42000000000000004,
+   "bounded": [
+    0.42000000000000004,
+    0.42000000000000004
+   ]
+  },
+  {
+   "line_id": "L-291ba2ddf4bbe4f14cf7",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "1F",
+   "mark": "C5",
+   "state": "PROVISIONAL",
+   "rfi": "",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": 0.42000000000000004,
+   "bounded": [
+    0.42000000000000004,
+    0.42000000000000004
+   ]
+  },
+  {
+   "line_id": "L-831f6fe3de133294bb8f",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "1F",
+   "mark": "C5",
+   "state": "PROVISIONAL",
+   "rfi": "",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": 0.42000000000000004,
+   "bounded": [
+    0.42000000000000004,
+    0.42000000000000004
+   ]
+  },
+  {
+   "line_id": "L-c677b628a776d3b87b02",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "1F",
+   "mark": "C5",
+   "state": "PROVISIONAL",
+   "rfi": "",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": 0.42000000000000004,
+   "bounded": [
+    0.42000000000000004,
+    0.42000000000000004
+   ]
+  },
+  {
+   "line_id": "L-a87ea657a42a311cb851",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "1F",
+   "mark": "C6",
+   "state": "PROVISIONAL",
+   "rfi": "",
+   "section_m": [
+    0.2,
+    0.6
+   ],
+   "measured_net": 0.504,
+   "bounded": [
+    0.504,
+    0.504
+   ]
+  },
+  {
+   "line_id": "L-85809d3db52bb93dfe96",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "1F",
+   "mark": "C7",
+   "state": "PROVISIONAL",
+   "rfi": "",
+   "section_m": [
+    0.2,
+    0.8
+   ],
+   "measured_net": 0.6720000000000002,
+   "bounded": [
+    0.6720000000000002,
+    0.6720000000000002
+   ]
+  },
+  {
+   "line_id": "L-1dc713c83bf62e525ff2",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "1F",
+   "mark": "C8",
+   "state": "PROVISIONAL",
+   "rfi": "",
+   "section_m": [
+    0.2,
+    0.9
+   ],
+   "measured_net": 0.7560000000000001,
+   "bounded": [
+    0.7560000000000001,
+    0.7560000000000001
+   ]
+  },
+  {
+   "line_id": "L-1ec3dfd936e83b658b2c",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "1F",
+   "mark": "C8",
+   "state": "PROVISIONAL",
+   "rfi": "",
+   "section_m": [
+    0.2,
+    0.9
+   ],
+   "measured_net": 0.7560000000000001,
+   "bounded": [
+    0.7560000000000001,
+    0.7560000000000001
+   ]
+  },
+  {
+   "line_id": "L-4aed92c117a7ab1c90ee",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "1F",
+   "mark": "C9",
+   "state": "PROVISIONAL",
+   "rfi": "",
+   "section_m": [
+    0.2,
+    0.9
+   ],
+   "measured_net": 0.7560000000000001,
+   "bounded": [
+    0.7560000000000001,
+    0.7560000000000001
+   ]
+  },
+  {
+   "line_id": "L-755eb56b55e86301b488",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "1F",
+   "mark": "C9",
+   "state": "PROVISIONAL",
+   "rfi": "",
+   "section_m": [
+    0.2,
+    0.9
+   ],
+   "measured_net": 0.7560000000000001,
+   "bounded": [
+    0.7560000000000001,
+    0.7560000000000001
+   ]
+  },
+  {
+   "line_id": "L-0150ab4aa84219c2580a",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "1F",
+   "mark": "PC",
+   "state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "rfi": "",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-7712297e25ba5241ad72",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "1F",
+   "mark": "PC",
+   "state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "rfi": "",
+   "section_m": [
+    0.2,
+    0.7000000000000001
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-541c7e565bb93ecdb78b",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "2F",
+   "mark": "",
+   "state": "BLOCKED_RFI",
+   "rfi": "planted column PC-2F: section CONFLICT 0.08 .. 0.10 m2 (text 77C 'P.C 20x50' vs outlines 77B / 778 0.20 x 0.40, no dimension chain, no schedule row); it stops at the soffit of B7 20x75, which is billed through it and owns the joint (R-CONC-OWN-1); the roof structural top is not printed (D-39)",
+   "section_m": null,
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-d79d17d14f39d5148cb8",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "2F",
+   "mark": "C1",
+   "state": "PROVISIONAL",
+   "rfi": "",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": 0.42000000000000004,
+   "bounded": [
+    0.42000000000000004,
+    0.42000000000000004
+   ]
+  },
+  {
+   "line_id": "L-0ede77cfd0badc4c7d62",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "2F",
+   "mark": "C2",
+   "state": "PROVISIONAL",
+   "rfi": "",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": 0.42000000000000004,
+   "bounded": [
+    0.42000000000000004,
+    0.42000000000000004
+   ]
+  },
+  {
+   "line_id": "L-26f6b6f2365c72e42291",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "2F",
+   "mark": "C2",
+   "state": "PROVISIONAL",
+   "rfi": "",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": 0.42000000000000004,
+   "bounded": [
+    0.42000000000000004,
+    0.42000000000000004
+   ]
+  },
+  {
+   "line_id": "L-33a9b7728781fcba12e2",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "2F",
+   "mark": "C2",
+   "state": "PROVISIONAL",
+   "rfi": "",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": 0.42000000000000004,
+   "bounded": [
+    0.42000000000000004,
+    0.42000000000000004
+   ]
+  },
+  {
+   "line_id": "L-919a5749ef79759e01ca",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "2F",
+   "mark": "C2",
+   "state": "PROVISIONAL",
+   "rfi": "",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": 0.42000000000000004,
+   "bounded": [
+    0.42000000000000004,
+    0.42000000000000004
+   ]
+  },
+  {
+   "line_id": "L-2bf336912a62859834b3",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "2F",
+   "mark": "C3",
+   "state": "BLOCKED_RFI",
+   "rfi": "MEMBER NOT DRAWN: C3 2F on FP 10E4: no 2F roof slab over the position; the storey's slab plan draws no member there (T-217 SOLID / ANSI35 convention), the architectural plans show a terrace with a parapet ('CHECK ARCHITECTURAL DETAIL OF PARAPET': a parapet stub is possible); consultant item D-65 (never a verified 0; the line returns only on a drawing or a consultant answer)",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-c10e2945d582b5a03126",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "2F",
+   "mark": "C3",
+   "state": "PROVISIONAL",
+   "rfi": "",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": 0.42000000000000004,
+   "bounded": [
+    0.42000000000000004,
+    0.42000000000000004
+   ]
+  },
+  {
+   "line_id": "L-eb3bd5ba496a207f04f7",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "2F",
+   "mark": "C3",
+   "state": "BLOCKED_RFI",
+   "rfi": "MEMBER NOT DRAWN: C3 2F on FP 10C5: no 2F roof slab over the position (the 2F roof slab is the central block only, p.6); the storey's slab plan draws no member there (T-217 SOLID / ANSI35 convention), the architectural plans show a terrace with a parapet ('CHECK ARCHITECTURAL DETAIL OF PARAPET': a parapet stub is possible); consultant item D-65 (never a verified 0; the line returns only on a drawing or a consultant answer)",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-7d98b1c0ac80787d0b51",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "2F",
+   "mark": "C5",
+   "state": "BLOCKED_RFI",
+   "rfi": "MEMBER NOT DRAWN: C5 2F on FP 10BD: no 2F roof slab over the position; the storey's slab plan draws no member there (T-217 SOLID / ANSI35 convention), the architectural plans show a terrace with a parapet ('CHECK ARCHITECTURAL DETAIL OF PARAPET': a parapet stub is possible); consultant item D-65 (never a verified 0; the line returns only on a drawing or a consultant answer)",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-bc01297b1c4a4c45a15f",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "2F",
+   "mark": "C5",
+   "state": "PROVISIONAL",
+   "rfi": "",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": 0.42000000000000004,
+   "bounded": [
+    0.42000000000000004,
+    0.42000000000000004
+   ]
+  },
+  {
+   "line_id": "L-73e82692ffb24059d95b",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "2F",
+   "mark": "C8",
+   "state": "BLOCKED_RFI",
+   "rfi": "MEMBER NOT DRAWN: C8 2F on FP 10E0: no 2F roof slab over the position; the storey's slab plan draws no member there (T-217 SOLID / ANSI35 convention), the architectural plans show a terrace with a parapet ('CHECK ARCHITECTURAL DETAIL OF PARAPET': a parapet stub is possible); consultant item D-65 (never a verified 0; the line returns only on a drawing or a consultant answer)",
+   "section_m": [
+    0.2,
+    0.7000000000000001
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-53f223b06db14ac41d47",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "2F",
+   "mark": "C9",
+   "state": "PROVISIONAL",
+   "rfi": "",
+   "section_m": [
+    0.2,
+    0.7000000000000001
+   ],
+   "measured_net": 0.5880000000000001,
+   "bounded": [
+    0.5880000000000001,
+    0.5880000000000001
+   ]
+  },
+  {
+   "line_id": "L-f78be17ff75ad44202d9",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "2F",
+   "mark": "PC",
+   "state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "rfi": "",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-43dae3d6dfec957b26a8",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "GF",
+   "mark": "C",
+   "state": "PROVISIONAL",
+   "rfi": "",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": 0.45,
+   "bounded": [
+    0.45,
+    0.45
+   ]
+  },
+  {
+   "line_id": "L-9cb26d86575a92694880",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "GF",
+   "mark": "C",
+   "state": "PROVISIONAL",
+   "rfi": "",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": 0.45,
+   "bounded": [
+    0.45,
+    0.45
+   ]
+  },
+  {
+   "line_id": "L-9f5a647014bbf83359f9",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "GF",
+   "mark": "C",
+   "state": "PROVISIONAL",
+   "rfi": "",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": 0.45,
+   "bounded": [
+    0.45,
+    0.45
+   ]
+  },
+  {
+   "line_id": "L-c0b3340a906c2c7650f8",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "GF",
+   "mark": "C",
+   "state": "PROVISIONAL",
+   "rfi": "",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": 0.45,
+   "bounded": [
+    0.45,
+    0.45
+   ]
+  },
+  {
+   "line_id": "L-e6c1c9a7feec10f64975",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "GF",
+   "mark": "C",
+   "state": "PROVISIONAL",
+   "rfi": "",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": 0.45,
+   "bounded": [
+    0.45,
+    0.45
+   ]
+  },
+  {
+   "line_id": "L-fa1c346855c5040632a5",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "GF",
+   "mark": "C1",
+   "state": "PROVISIONAL",
+   "rfi": "",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": 0.45,
+   "bounded": [
+    0.45,
+    0.45
+   ]
+  },
+  {
+   "line_id": "L-90ed3048543112eb4be1",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "GF",
+   "mark": "C10",
+   "state": "PROVISIONAL",
+   "rfi": "",
+   "section_m": [
+    0.25,
+    0.7000000000000001
+   ],
+   "measured_net": 0.7875000000000001,
+   "bounded": [
+    0.7875000000000001,
+    0.7875000000000001
+   ]
+  },
+  {
+   "line_id": "L-689abc61dfc445f60224",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "GF",
+   "mark": "C11",
+   "state": "PROVISIONAL",
+   "rfi": "",
+   "section_m": [
+    0.25,
+    1.1
+   ],
+   "measured_net": 1.2375,
+   "bounded": [
+    1.2375,
+    1.2375
+   ]
+  },
+  {
+   "line_id": "L-f169ec8deb0f70fe2681",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "GF",
+   "mark": "C11",
+   "state": "PROVISIONAL",
+   "rfi": "",
+   "section_m": [
+    0.25,
+    1.1
+   ],
+   "measured_net": 1.2375,
+   "bounded": [
+    1.2375,
+    1.2375
+   ]
+  },
+  {
+   "line_id": "L-8a88f805c490b970d754",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "GF",
+   "mark": "C2",
+   "state": "PROVISIONAL",
+   "rfi": "",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": 0.45,
+   "bounded": [
+    0.45,
+    0.45
+   ]
+  },
+  {
+   "line_id": "L-8b751f06280405a6b658",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "GF",
+   "mark": "C2",
+   "state": "PROVISIONAL",
+   "rfi": "",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": 0.45,
+   "bounded": [
+    0.45,
+    0.45
+   ]
+  },
+  {
+   "line_id": "L-a8abdc061090a72e84a4",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "GF",
+   "mark": "C2",
+   "state": "PROVISIONAL",
+   "rfi": "",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": 0.45,
+   "bounded": [
+    0.45,
+    0.45
+   ]
+  },
+  {
+   "line_id": "L-bcefe951cf96fb351bf8",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "GF",
+   "mark": "C2",
+   "state": "PROVISIONAL",
+   "rfi": "",
+   "section_m": [
+    0.2,
+    0.5
+   ],
+   "measured_net": 0.45,
+   "bounded": [
+    0.45,
+    0.45
+   ]
+  },
+  {
+   "line_id": "L-26491bc55abff7518911",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "GF",
+   "mark": "C3",
+   "state": "PROVISIONAL",
+   "rfi": "",
+   "section_m": [
+    0.25,
+    0.5
+   ],
+   "measured_net": 0.5625,
+   "bounded": [
+    0.5625,
+    0.5625
+   ]
+  },
+  {
+   "line_id": "L-694a75c84dd6e4bb4491",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "GF",
+   "mark": "C3",
+   "state": "PROVISIONAL",
+   "rfi": "",
+   "section_m": [
+    0.25,
+    0.5
+   ],
+   "measured_net": 0.5625,
+   "bounded": [
+    0.5625,
+    0.5625
+   ]
+  },
+  {
+   "line_id": "L-7d70692d03102a2dc306",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "GF",
+   "mark": "C3",
+   "state": "PROVISIONAL",
+   "rfi": "",
+   "section_m": [
+    0.25,
+    0.5
+   ],
+   "measured_net": 0.5625,
+   "bounded": [
+    0.5625,
+    0.5625
+   ]
+  },
+  {
+   "line_id": "L-8de64040a1c3ae6cf137",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "GF",
+   "mark": "C3",
+   "state": "PROVISIONAL",
+   "rfi": "",
+   "section_m": [
+    0.25,
+    0.5
+   ],
+   "measured_net": 0.5625,
+   "bounded": [
+    0.5625,
+    0.5625
+   ]
+  },
+  {
+   "line_id": "L-96a9079f54bc9bae6482",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "GF",
+   "mark": "C3",
+   "state": "PROVISIONAL",
+   "rfi": "",
+   "section_m": [
+    0.25,
+    0.5
+   ],
+   "measured_net": 0.5625,
+   "bounded": [
+    0.5625,
+    0.5625
+   ]
+  },
+  {
+   "line_id": "L-fad18af6e7139a5e99d1",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "GF",
+   "mark": "C3",
+   "state": "PROVISIONAL",
+   "rfi": "",
+   "section_m": [
+    0.25,
+    0.5
+   ],
+   "measured_net": 0.5625,
+   "bounded": [
+    0.5625,
+    0.5625
+   ]
+  },
+  {
+   "line_id": "L-d2e900a1b15cef2a913f",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "GF",
+   "mark": "C4",
+   "state": "PROVISIONAL",
+   "rfi": "",
+   "section_m": [
+    0.25,
+    0.5
+   ],
+   "measured_net": 0.5625,
+   "bounded": [
+    0.5625,
+    0.5625
+   ]
+  },
+  {
+   "line_id": "L-d9530ea806606b886fc9",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "GF",
+   "mark": "C4",
+   "state": "PROVISIONAL",
+   "rfi": "",
+   "section_m": [
+    0.25,
+    0.5
+   ],
+   "measured_net": 0.5625,
+   "bounded": [
+    0.5625,
+    0.5625
+   ]
+  },
+  {
+   "line_id": "L-84bf7fb482a98fdbe482",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "GF",
+   "mark": "C5",
+   "state": "PROVISIONAL",
+   "rfi": "",
+   "section_m": [
+    0.25,
+    0.6
+   ],
+   "measured_net": 0.6749999999999999,
+   "bounded": [
+    0.6749999999999999,
+    0.6749999999999999
+   ]
+  },
+  {
+   "line_id": "L-8df3988123e987fa87f9",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "GF",
+   "mark": "C5",
+   "state": "PROVISIONAL",
+   "rfi": "",
+   "section_m": [
+    0.25,
+    0.6
+   ],
+   "measured_net": 0.6749999999999999,
+   "bounded": [
+    0.6749999999999999,
+    0.6749999999999999
+   ]
+  },
+  {
+   "line_id": "L-ae51e56262137366926b",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "GF",
+   "mark": "C5",
+   "state": "PROVISIONAL",
+   "rfi": "",
+   "section_m": [
+    0.25,
+    0.6
+   ],
+   "measured_net": 0.6749999999999999,
+   "bounded": [
+    0.6749999999999999,
+    0.6749999999999999
+   ]
+  },
+  {
+   "line_id": "L-173531a454ee3e9d3317",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "GF",
+   "mark": "C6",
+   "state": "PROVISIONAL",
+   "rfi": "",
+   "section_m": [
+    0.25,
+    0.7000000000000001
+   ],
+   "measured_net": 0.7875000000000001,
+   "bounded": [
+    0.7875000000000001,
+    0.7875000000000001
+   ]
+  },
+  {
+   "line_id": "L-a2cb6d533860e6f37b3e",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "GF",
+   "mark": "C7",
+   "state": "PROVISIONAL",
+   "rfi": "",
+   "section_m": [
+    0.25,
+    0.8
+   ],
+   "measured_net": 0.9,
+   "bounded": [
+    0.9,
+    0.9
+   ]
+  },
+  {
+   "line_id": "L-0b7c92233a525c8b42f2",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "GF",
+   "mark": "C8",
+   "state": "PROVISIONAL",
+   "rfi": "",
+   "section_m": [
+    0.25,
+    0.9
+   ],
+   "measured_net": 1.0125,
+   "bounded": [
+    1.0125,
+    1.0125
+   ]
+  },
+  {
+   "line_id": "L-4c4496579e5bfa20ae9f",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "GF",
+   "mark": "C8",
+   "state": "PROVISIONAL",
+   "rfi": "",
+   "section_m": [
+    0.25,
+    0.9
+   ],
+   "measured_net": 1.0125,
+   "bounded": [
+    1.0125,
+    1.0125
+   ]
+  },
+  {
+   "line_id": "L-7b41af5790ea7ad5156e",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "GF",
+   "mark": "C9",
+   "state": "PROVISIONAL",
+   "rfi": "",
+   "section_m": [
+    0.25,
+    1.0
+   ],
+   "measured_net": 1.125,
+   "bounded": [
+    1.125,
+    1.125
+   ]
+  },
+  {
+   "line_id": "L-c41f79b9171044490619",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "GF",
+   "mark": "C9",
+   "state": "PROVISIONAL",
+   "rfi": "",
+   "section_m": [
+    0.25,
+    1.0
+   ],
+   "measured_net": 1.125,
+   "bounded": [
+    1.125,
+    1.125
+   ]
+  },
+  {
+   "line_id": "L-0d4cd54cb397f210d1fd",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "UNKNOWN",
+   "mark": "CN",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "TYPE_NOT_IN_SCHEDULE",
+   "section_m": null,
+   "measured_net": null,
+   "bounded": [
+    0.378,
+    1.161
+   ]
+  },
+  {
+   "line_id": "L-1850e27801a200419510",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "UNKNOWN",
+   "mark": "CN",
+   "state": "BLOCKED_RFI",
+   "rfi": "TYPE_NOT_IN_SCHEDULE",
+   "section_m": null,
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-53a35abf19b1d8807f38",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "UNKNOWN",
+   "mark": "CN",
+   "state": "BLOCKED_RFI",
+   "rfi": "TYPE_NOT_IN_SCHEDULE",
+   "section_m": null,
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-d33f749864d96dd236f0",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "UNKNOWN",
+   "mark": "CN",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "TYPE_NOT_IN_SCHEDULE",
+   "section_m": null,
+   "measured_net": null,
+   "bounded": [
+    0.378,
+    1.161
+   ]
+  },
+  {
+   "line_id": "L-de9383f76f000503e1d7",
+   "item_code": "STR.CONC.COLUMN",
+   "floor": "UNKNOWN",
+   "mark": "CN",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "TYPE_NOT_IN_SCHEDULE",
+   "section_m": null,
+   "measured_net": null,
+   "bounded": [
+    0.378,
+    1.161
+   ]
+  },
+  {
+   "line_id": "L-314946394d849141dda2",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "C",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "NECK_SECTION_OR_FOOTING",
+   "section_m": [
+    0.3,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.075,
+    0.375
+   ]
+  },
+  {
+   "line_id": "L-53d0b6af1a801c3db58e",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "C",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "PROFILE_VALUE_NOT_USABLE: this quantity moves when the profile value(s) the Q-17 A project data file (project_data_st7757_t064.json) does not make usable are removed (no single value moves it alone: NO_SINGLE_VALUE): CB_SUPPORT_BAR_EXTENT_FRAC (project data file status HELD, audit class DIFFERENT (0.22 Ln and 0.3 Ln2 both printed): T-044 class DIFFERENT: a second extent '0.3 Ln2' is printed beside 0.22; which bars take which extent is not settled (rebar only; no concrete line uses it)); CB_SUPPORT_BAR_SPAN_BASIS (project data file status HELD, audit class NOT_PRINTED (Ln carries no axis / face note): T-044 class NOT_PRINTED: axis-to-axis is a reading of where the dimension lines end (rebar only; no concrete line uses it)); FOUNDING_DEPTH_M (project data file status HELD, audit class PRINTED as a minimum (excavation level, base / low 1.50); high NOT_PRINTED; owner Q-21 C: founding datum u",
+   "section_m": [
+    0.3,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.075,
+    0.375
+   ]
+  },
+  {
+   "line_id": "L-734ff1a78bbe6b7eb4c3",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "C",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "PROFILE_VALUE_NOT_USABLE: this quantity moves when the profile value(s) the Q-17 A project data file (project_data_st7757_t064.json) does not make usable are removed (no single value moves it alone: NO_SINGLE_VALUE): CB_SUPPORT_BAR_EXTENT_FRAC (project data file status HELD, audit class DIFFERENT (0.22 Ln and 0.3 Ln2 both printed): T-044 class DIFFERENT: a second extent '0.3 Ln2' is printed beside 0.22; which bars take which extent is not settled (rebar only; no concrete line uses it)); CB_SUPPORT_BAR_SPAN_BASIS (project data file status HELD, audit class NOT_PRINTED (Ln carries no axis / face note): T-044 class NOT_PRINTED: axis-to-axis is a reading of where the dimension lines end (rebar only; no concrete line uses it)); FOUNDING_DEPTH_M (project data file status HELD, audit class PRINTED as a minimum (excavation level, base / low 1.50); high NOT_PRINTED; owner Q-21 C: founding datum u",
+   "section_m": [
+    0.3,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.075,
+    0.375
+   ]
+  },
+  {
+   "line_id": "L-85df35f17a205f919aa6",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "C",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "PROFILE_VALUE_NOT_USABLE: this quantity moves when the profile value(s) the Q-17 A project data file (project_data_st7757_t064.json) does not make usable are removed (no single value moves it alone: NO_SINGLE_VALUE): CB_SUPPORT_BAR_EXTENT_FRAC (project data file status HELD, audit class DIFFERENT (0.22 Ln and 0.3 Ln2 both printed): T-044 class DIFFERENT: a second extent '0.3 Ln2' is printed beside 0.22; which bars take which extent is not settled (rebar only; no concrete line uses it)); CB_SUPPORT_BAR_SPAN_BASIS (project data file status HELD, audit class NOT_PRINTED (Ln carries no axis / face note): T-044 class NOT_PRINTED: axis-to-axis is a reading of where the dimension lines end (rebar only; no concrete line uses it)); FOUNDING_DEPTH_M (project data file status HELD, audit class PRINTED as a minimum (excavation level, base / low 1.50); high NOT_PRINTED; owner Q-21 C: founding datum u",
+   "section_m": [
+    0.3,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.075,
+    0.375
+   ]
+  },
+  {
+   "line_id": "L-bd741a3faf2318dd8409",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "C",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "PROFILE_VALUE_NOT_USABLE: this quantity moves when the profile value(s) the Q-17 A project data file (project_data_st7757_t064.json) does not make usable are removed (no single value moves it alone: NO_SINGLE_VALUE): CB_SUPPORT_BAR_EXTENT_FRAC (project data file status HELD, audit class DIFFERENT (0.22 Ln and 0.3 Ln2 both printed): T-044 class DIFFERENT: a second extent '0.3 Ln2' is printed beside 0.22; which bars take which extent is not settled (rebar only; no concrete line uses it)); CB_SUPPORT_BAR_SPAN_BASIS (project data file status HELD, audit class NOT_PRINTED (Ln carries no axis / face note): T-044 class NOT_PRINTED: axis-to-axis is a reading of where the dimension lines end (rebar only; no concrete line uses it)); FOUNDING_DEPTH_M (project data file status HELD, audit class PRINTED as a minimum (excavation level, base / low 1.50); high NOT_PRINTED; owner Q-21 C: founding datum u",
+   "section_m": [
+    0.3,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.075,
+    0.375
+   ]
+  },
+  {
+   "line_id": "L-12f3d8b9375cac407bca",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "C1",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "PROFILE_VALUE_NOT_USABLE: this quantity moves when the profile value(s) the Q-17 A project data file (project_data_st7757_t064.json) does not make usable are removed (no single value moves it alone: NO_SINGLE_VALUE): CB_SUPPORT_BAR_EXTENT_FRAC (project data file status HELD, audit class DIFFERENT (0.22 Ln and 0.3 Ln2 both printed): T-044 class DIFFERENT: a second extent '0.3 Ln2' is printed beside 0.22; which bars take which extent is not settled (rebar only; no concrete line uses it)); CB_SUPPORT_BAR_SPAN_BASIS (project data file status HELD, audit class NOT_PRINTED (Ln carries no axis / face note): T-044 class NOT_PRINTED: axis-to-axis is a reading of where the dimension lines end (rebar only; no concrete line uses it)); FOUNDING_DEPTH_M (project data file status HELD, audit class PRINTED as a minimum (excavation level, base / low 1.50); high NOT_PRINTED; owner Q-21 C: founding datum u",
+   "section_m": [
+    0.3,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.075,
+    0.375
+   ]
+  },
+  {
+   "line_id": "L-bbad8cdb4d26986776a6",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "C10",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "NECK_SECTION_OR_FOOTING",
+   "section_m": [
+    0.3,
+    0.7000000000000001
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.10500000000000001,
+    0.525
+   ]
+  },
+  {
+   "line_id": "L-132cf60588a44f6af9d6",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "C11",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "PROFILE_VALUE_NOT_USABLE: this quantity moves when the profile value(s) the Q-17 A project data file (project_data_st7757_t064.json) does not make usable are removed (no single value moves it alone: NO_SINGLE_VALUE): CB_SUPPORT_BAR_EXTENT_FRAC (project data file status HELD, audit class DIFFERENT (0.22 Ln and 0.3 Ln2 both printed): T-044 class DIFFERENT: a second extent '0.3 Ln2' is printed beside 0.22; which bars take which extent is not settled (rebar only; no concrete line uses it)); CB_SUPPORT_BAR_SPAN_BASIS (project data file status HELD, audit class NOT_PRINTED (Ln carries no axis / face note): T-044 class NOT_PRINTED: axis-to-axis is a reading of where the dimension lines end (rebar only; no concrete line uses it)); FOUNDING_DEPTH_M (project data file status HELD, audit class PRINTED as a minimum (excavation level, base / low 1.50); high NOT_PRINTED; owner Q-21 C: founding datum u",
+   "section_m": [
+    0.3,
+    1.1
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.165,
+    0.825
+   ]
+  },
+  {
+   "line_id": "L-b4c234c8a3873239f67f",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "C11",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "PROFILE_VALUE_NOT_USABLE: this quantity moves when the profile value(s) the Q-17 A project data file (project_data_st7757_t064.json) does not make usable are removed (no single value moves it alone: NO_SINGLE_VALUE): CB_SUPPORT_BAR_EXTENT_FRAC (project data file status HELD, audit class DIFFERENT (0.22 Ln and 0.3 Ln2 both printed): T-044 class DIFFERENT: a second extent '0.3 Ln2' is printed beside 0.22; which bars take which extent is not settled (rebar only; no concrete line uses it)); CB_SUPPORT_BAR_SPAN_BASIS (project data file status HELD, audit class NOT_PRINTED (Ln carries no axis / face note): T-044 class NOT_PRINTED: axis-to-axis is a reading of where the dimension lines end (rebar only; no concrete line uses it)); FOUNDING_DEPTH_M (project data file status HELD, audit class PRINTED as a minimum (excavation level, base / low 1.50); high NOT_PRINTED; owner Q-21 C: founding datum u",
+   "section_m": [
+    0.3,
+    1.1
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.165,
+    0.825
+   ]
+  },
+  {
+   "line_id": "L-3f7b9501a902579e7406",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "C2",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "PROFILE_VALUE_NOT_USABLE: this quantity moves when the profile value(s) the Q-17 A project data file (project_data_st7757_t064.json) does not make usable are removed (no single value moves it alone: NO_SINGLE_VALUE): CB_SUPPORT_BAR_EXTENT_FRAC (project data file status HELD, audit class DIFFERENT (0.22 Ln and 0.3 Ln2 both printed): T-044 class DIFFERENT: a second extent '0.3 Ln2' is printed beside 0.22; which bars take which extent is not settled (rebar only; no concrete line uses it)); CB_SUPPORT_BAR_SPAN_BASIS (project data file status HELD, audit class NOT_PRINTED (Ln carries no axis / face note): T-044 class NOT_PRINTED: axis-to-axis is a reading of where the dimension lines end (rebar only; no concrete line uses it)); FOUNDING_DEPTH_M (project data file status HELD, audit class PRINTED as a minimum (excavation level, base / low 1.50); high NOT_PRINTED; owner Q-21 C: founding datum u",
+   "section_m": [
+    0.3,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.075,
+    0.375
+   ]
+  },
+  {
+   "line_id": "L-5aec8a0055215ee5a711",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "C2",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "PROFILE_VALUE_NOT_USABLE: this quantity moves when the profile value(s) the Q-17 A project data file (project_data_st7757_t064.json) does not make usable are removed (no single value moves it alone: NO_SINGLE_VALUE): CB_SUPPORT_BAR_EXTENT_FRAC (project data file status HELD, audit class DIFFERENT (0.22 Ln and 0.3 Ln2 both printed): T-044 class DIFFERENT: a second extent '0.3 Ln2' is printed beside 0.22; which bars take which extent is not settled (rebar only; no concrete line uses it)); CB_SUPPORT_BAR_SPAN_BASIS (project data file status HELD, audit class NOT_PRINTED (Ln carries no axis / face note): T-044 class NOT_PRINTED: axis-to-axis is a reading of where the dimension lines end (rebar only; no concrete line uses it)); FOUNDING_DEPTH_M (project data file status HELD, audit class PRINTED as a minimum (excavation level, base / low 1.50); high NOT_PRINTED; owner Q-21 C: founding datum u",
+   "section_m": [
+    0.3,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.075,
+    0.375
+   ]
+  },
+  {
+   "line_id": "L-8eb74a02fcf5ae4465f8",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "C2",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "PROFILE_VALUE_NOT_USABLE: this quantity moves when the profile value(s) the Q-17 A project data file (project_data_st7757_t064.json) does not make usable are removed (no single value moves it alone: NO_SINGLE_VALUE): CB_SUPPORT_BAR_EXTENT_FRAC (project data file status HELD, audit class DIFFERENT (0.22 Ln and 0.3 Ln2 both printed): T-044 class DIFFERENT: a second extent '0.3 Ln2' is printed beside 0.22; which bars take which extent is not settled (rebar only; no concrete line uses it)); CB_SUPPORT_BAR_SPAN_BASIS (project data file status HELD, audit class NOT_PRINTED (Ln carries no axis / face note): T-044 class NOT_PRINTED: axis-to-axis is a reading of where the dimension lines end (rebar only; no concrete line uses it)); FOUNDING_DEPTH_M (project data file status HELD, audit class PRINTED as a minimum (excavation level, base / low 1.50); high NOT_PRINTED; owner Q-21 C: founding datum u",
+   "section_m": [
+    0.3,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.075,
+    0.375
+   ]
+  },
+  {
+   "line_id": "L-dd6d11415961b554e906",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "C2",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "PROFILE_VALUE_NOT_USABLE: this quantity moves when the profile value(s) the Q-17 A project data file (project_data_st7757_t064.json) does not make usable are removed (no single value moves it alone: NO_SINGLE_VALUE): CB_SUPPORT_BAR_EXTENT_FRAC (project data file status HELD, audit class DIFFERENT (0.22 Ln and 0.3 Ln2 both printed): T-044 class DIFFERENT: a second extent '0.3 Ln2' is printed beside 0.22; which bars take which extent is not settled (rebar only; no concrete line uses it)); CB_SUPPORT_BAR_SPAN_BASIS (project data file status HELD, audit class NOT_PRINTED (Ln carries no axis / face note): T-044 class NOT_PRINTED: axis-to-axis is a reading of where the dimension lines end (rebar only; no concrete line uses it)); FOUNDING_DEPTH_M (project data file status HELD, audit class PRINTED as a minimum (excavation level, base / low 1.50); high NOT_PRINTED; owner Q-21 C: founding datum u",
+   "section_m": [
+    0.3,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.075,
+    0.375
+   ]
+  },
+  {
+   "line_id": "L-48f2e06e5c946eb1e5a7",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "C3",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "PROFILE_VALUE_NOT_USABLE: this quantity moves when the profile value(s) the Q-17 A project data file (project_data_st7757_t064.json) does not make usable are removed (no single value moves it alone: NO_SINGLE_VALUE): CB_SUPPORT_BAR_EXTENT_FRAC (project data file status HELD, audit class DIFFERENT (0.22 Ln and 0.3 Ln2 both printed): T-044 class DIFFERENT: a second extent '0.3 Ln2' is printed beside 0.22; which bars take which extent is not settled (rebar only; no concrete line uses it)); CB_SUPPORT_BAR_SPAN_BASIS (project data file status HELD, audit class NOT_PRINTED (Ln carries no axis / face note): T-044 class NOT_PRINTED: axis-to-axis is a reading of where the dimension lines end (rebar only; no concrete line uses it)); FOUNDING_DEPTH_M (project data file status HELD, audit class PRINTED as a minimum (excavation level, base / low 1.50); high NOT_PRINTED; owner Q-21 C: founding datum u",
+   "section_m": [
+    0.3,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.075,
+    0.375
+   ]
+  },
+  {
+   "line_id": "L-4ec473f7c0c712919823",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "C3",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "PROFILE_VALUE_NOT_USABLE: this quantity moves when the profile value(s) the Q-17 A project data file (project_data_st7757_t064.json) does not make usable are removed (no single value moves it alone: NO_SINGLE_VALUE): CB_SUPPORT_BAR_EXTENT_FRAC (project data file status HELD, audit class DIFFERENT (0.22 Ln and 0.3 Ln2 both printed): T-044 class DIFFERENT: a second extent '0.3 Ln2' is printed beside 0.22; which bars take which extent is not settled (rebar only; no concrete line uses it)); CB_SUPPORT_BAR_SPAN_BASIS (project data file status HELD, audit class NOT_PRINTED (Ln carries no axis / face note): T-044 class NOT_PRINTED: axis-to-axis is a reading of where the dimension lines end (rebar only; no concrete line uses it)); FOUNDING_DEPTH_M (project data file status HELD, audit class PRINTED as a minimum (excavation level, base / low 1.50); high NOT_PRINTED; owner Q-21 C: founding datum u",
+   "section_m": [
+    0.3,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.075,
+    0.375
+   ]
+  },
+  {
+   "line_id": "L-516989b817e0ccc7cb80",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "C3",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "PROFILE_VALUE_NOT_USABLE: this quantity moves when the profile value(s) the Q-17 A project data file (project_data_st7757_t064.json) does not make usable are removed (no single value moves it alone: NO_SINGLE_VALUE): CB_SUPPORT_BAR_EXTENT_FRAC (project data file status HELD, audit class DIFFERENT (0.22 Ln and 0.3 Ln2 both printed): T-044 class DIFFERENT: a second extent '0.3 Ln2' is printed beside 0.22; which bars take which extent is not settled (rebar only; no concrete line uses it)); CB_SUPPORT_BAR_SPAN_BASIS (project data file status HELD, audit class NOT_PRINTED (Ln carries no axis / face note): T-044 class NOT_PRINTED: axis-to-axis is a reading of where the dimension lines end (rebar only; no concrete line uses it)); FOUNDING_DEPTH_M (project data file status HELD, audit class PRINTED as a minimum (excavation level, base / low 1.50); high NOT_PRINTED; owner Q-21 C: founding datum u",
+   "section_m": [
+    0.3,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.075,
+    0.375
+   ]
+  },
+  {
+   "line_id": "L-ae1bd9cb228d57594e46",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "C3",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "PROFILE_VALUE_NOT_USABLE: this quantity moves when the profile value(s) the Q-17 A project data file (project_data_st7757_t064.json) does not make usable are removed (no single value moves it alone: NO_SINGLE_VALUE): CB_SUPPORT_BAR_EXTENT_FRAC (project data file status HELD, audit class DIFFERENT (0.22 Ln and 0.3 Ln2 both printed): T-044 class DIFFERENT: a second extent '0.3 Ln2' is printed beside 0.22; which bars take which extent is not settled (rebar only; no concrete line uses it)); CB_SUPPORT_BAR_SPAN_BASIS (project data file status HELD, audit class NOT_PRINTED (Ln carries no axis / face note): T-044 class NOT_PRINTED: axis-to-axis is a reading of where the dimension lines end (rebar only; no concrete line uses it)); FOUNDING_DEPTH_M (project data file status HELD, audit class PRINTED as a minimum (excavation level, base / low 1.50); high NOT_PRINTED; owner Q-21 C: founding datum u",
+   "section_m": [
+    0.3,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.075,
+    0.375
+   ]
+  },
+  {
+   "line_id": "L-dd3c32e4340e7a823a6e",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "C3",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "PROFILE_VALUE_NOT_USABLE: this quantity moves when the profile value(s) the Q-17 A project data file (project_data_st7757_t064.json) does not make usable are removed (no single value moves it alone: NO_SINGLE_VALUE): CB_SUPPORT_BAR_EXTENT_FRAC (project data file status HELD, audit class DIFFERENT (0.22 Ln and 0.3 Ln2 both printed): T-044 class DIFFERENT: a second extent '0.3 Ln2' is printed beside 0.22; which bars take which extent is not settled (rebar only; no concrete line uses it)); CB_SUPPORT_BAR_SPAN_BASIS (project data file status HELD, audit class NOT_PRINTED (Ln carries no axis / face note): T-044 class NOT_PRINTED: axis-to-axis is a reading of where the dimension lines end (rebar only; no concrete line uses it)); FOUNDING_DEPTH_M (project data file status HELD, audit class PRINTED as a minimum (excavation level, base / low 1.50); high NOT_PRINTED; owner Q-21 C: founding datum u",
+   "section_m": [
+    0.3,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.075,
+    0.375
+   ]
+  },
+  {
+   "line_id": "L-f54b7b2acf11ebd2a585",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "C3",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "PROFILE_VALUE_NOT_USABLE: this quantity moves when the profile value(s) the Q-17 A project data file (project_data_st7757_t064.json) does not make usable are removed (no single value moves it alone: NO_SINGLE_VALUE): CB_SUPPORT_BAR_EXTENT_FRAC (project data file status HELD, audit class DIFFERENT (0.22 Ln and 0.3 Ln2 both printed): T-044 class DIFFERENT: a second extent '0.3 Ln2' is printed beside 0.22; which bars take which extent is not settled (rebar only; no concrete line uses it)); CB_SUPPORT_BAR_SPAN_BASIS (project data file status HELD, audit class NOT_PRINTED (Ln carries no axis / face note): T-044 class NOT_PRINTED: axis-to-axis is a reading of where the dimension lines end (rebar only; no concrete line uses it)); FOUNDING_DEPTH_M (project data file status HELD, audit class PRINTED as a minimum (excavation level, base / low 1.50); high NOT_PRINTED; owner Q-21 C: founding datum u",
+   "section_m": [
+    0.3,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.075,
+    0.375
+   ]
+  },
+  {
+   "line_id": "L-05a99150a85e9185ae48",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "C4",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "PROFILE_VALUE_NOT_USABLE: this quantity moves when the profile value(s) the Q-17 A project data file (project_data_st7757_t064.json) does not make usable are removed (no single value moves it alone: NO_SINGLE_VALUE): CB_SUPPORT_BAR_EXTENT_FRAC (project data file status HELD, audit class DIFFERENT (0.22 Ln and 0.3 Ln2 both printed): T-044 class DIFFERENT: a second extent '0.3 Ln2' is printed beside 0.22; which bars take which extent is not settled (rebar only; no concrete line uses it)); CB_SUPPORT_BAR_SPAN_BASIS (project data file status HELD, audit class NOT_PRINTED (Ln carries no axis / face note): T-044 class NOT_PRINTED: axis-to-axis is a reading of where the dimension lines end (rebar only; no concrete line uses it)); FOUNDING_DEPTH_M (project data file status HELD, audit class PRINTED as a minimum (excavation level, base / low 1.50); high NOT_PRINTED; owner Q-21 C: founding datum u",
+   "section_m": [
+    0.3,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.075,
+    0.375
+   ]
+  },
+  {
+   "line_id": "L-46f2b70254f074885dfc",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "C4",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "PROFILE_VALUE_NOT_USABLE: this quantity moves when the profile value(s) the Q-17 A project data file (project_data_st7757_t064.json) does not make usable are removed (no single value moves it alone: NO_SINGLE_VALUE): CB_SUPPORT_BAR_EXTENT_FRAC (project data file status HELD, audit class DIFFERENT (0.22 Ln and 0.3 Ln2 both printed): T-044 class DIFFERENT: a second extent '0.3 Ln2' is printed beside 0.22; which bars take which extent is not settled (rebar only; no concrete line uses it)); CB_SUPPORT_BAR_SPAN_BASIS (project data file status HELD, audit class NOT_PRINTED (Ln carries no axis / face note): T-044 class NOT_PRINTED: axis-to-axis is a reading of where the dimension lines end (rebar only; no concrete line uses it)); FOUNDING_DEPTH_M (project data file status HELD, audit class PRINTED as a minimum (excavation level, base / low 1.50); high NOT_PRINTED; owner Q-21 C: founding datum u",
+   "section_m": [
+    0.3,
+    0.5
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.075,
+    0.375
+   ]
+  },
+  {
+   "line_id": "L-486cd9a0bf52e4b32abb",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "C5",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "PROFILE_VALUE_NOT_USABLE: this quantity moves when the profile value(s) the Q-17 A project data file (project_data_st7757_t064.json) does not make usable are removed (no single value moves it alone: NO_SINGLE_VALUE): CB_SUPPORT_BAR_EXTENT_FRAC (project data file status HELD, audit class DIFFERENT (0.22 Ln and 0.3 Ln2 both printed): T-044 class DIFFERENT: a second extent '0.3 Ln2' is printed beside 0.22; which bars take which extent is not settled (rebar only; no concrete line uses it)); CB_SUPPORT_BAR_SPAN_BASIS (project data file status HELD, audit class NOT_PRINTED (Ln carries no axis / face note): T-044 class NOT_PRINTED: axis-to-axis is a reading of where the dimension lines end (rebar only; no concrete line uses it)); FOUNDING_DEPTH_M (project data file status HELD, audit class PRINTED as a minimum (excavation level, base / low 1.50); high NOT_PRINTED; owner Q-21 C: founding datum u",
+   "section_m": [
+    0.3,
+    0.6
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.09,
+    0.45
+   ]
+  },
+  {
+   "line_id": "L-5efd9ac69d4cfd9b9a6e",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "C5",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "PROFILE_VALUE_NOT_USABLE: this quantity moves when the profile value(s) the Q-17 A project data file (project_data_st7757_t064.json) does not make usable are removed (no single value moves it alone: NO_SINGLE_VALUE): CB_SUPPORT_BAR_EXTENT_FRAC (project data file status HELD, audit class DIFFERENT (0.22 Ln and 0.3 Ln2 both printed): T-044 class DIFFERENT: a second extent '0.3 Ln2' is printed beside 0.22; which bars take which extent is not settled (rebar only; no concrete line uses it)); CB_SUPPORT_BAR_SPAN_BASIS (project data file status HELD, audit class NOT_PRINTED (Ln carries no axis / face note): T-044 class NOT_PRINTED: axis-to-axis is a reading of where the dimension lines end (rebar only; no concrete line uses it)); FOUNDING_DEPTH_M (project data file status HELD, audit class PRINTED as a minimum (excavation level, base / low 1.50); high NOT_PRINTED; owner Q-21 C: founding datum u",
+   "section_m": [
+    0.3,
+    0.6
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.09,
+    0.45
+   ]
+  },
+  {
+   "line_id": "L-c1e802184591eac927cf",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "C5",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "PROFILE_VALUE_NOT_USABLE: this quantity moves when the profile value(s) the Q-17 A project data file (project_data_st7757_t064.json) does not make usable are removed (no single value moves it alone: NO_SINGLE_VALUE): CB_SUPPORT_BAR_EXTENT_FRAC (project data file status HELD, audit class DIFFERENT (0.22 Ln and 0.3 Ln2 both printed): T-044 class DIFFERENT: a second extent '0.3 Ln2' is printed beside 0.22; which bars take which extent is not settled (rebar only; no concrete line uses it)); CB_SUPPORT_BAR_SPAN_BASIS (project data file status HELD, audit class NOT_PRINTED (Ln carries no axis / face note): T-044 class NOT_PRINTED: axis-to-axis is a reading of where the dimension lines end (rebar only; no concrete line uses it)); FOUNDING_DEPTH_M (project data file status HELD, audit class PRINTED as a minimum (excavation level, base / low 1.50); high NOT_PRINTED; owner Q-21 C: founding datum u",
+   "section_m": [
+    0.3,
+    0.6
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.09,
+    0.45
+   ]
+  },
+  {
+   "line_id": "L-efe50185c0da4244e158",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "C6",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "PROFILE_VALUE_NOT_USABLE: this quantity moves when the profile value(s) the Q-17 A project data file (project_data_st7757_t064.json) does not make usable are removed (no single value moves it alone: NO_SINGLE_VALUE): CB_SUPPORT_BAR_EXTENT_FRAC (project data file status HELD, audit class DIFFERENT (0.22 Ln and 0.3 Ln2 both printed): T-044 class DIFFERENT: a second extent '0.3 Ln2' is printed beside 0.22; which bars take which extent is not settled (rebar only; no concrete line uses it)); CB_SUPPORT_BAR_SPAN_BASIS (project data file status HELD, audit class NOT_PRINTED (Ln carries no axis / face note): T-044 class NOT_PRINTED: axis-to-axis is a reading of where the dimension lines end (rebar only; no concrete line uses it)); FOUNDING_DEPTH_M (project data file status HELD, audit class PRINTED as a minimum (excavation level, base / low 1.50); high NOT_PRINTED; owner Q-21 C: founding datum u",
+   "section_m": [
+    0.3,
+    0.7000000000000001
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.105,
+    0.525
+   ]
+  },
+  {
+   "line_id": "L-995eca94ba8dc09a028f",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "C7",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "PROFILE_VALUE_NOT_USABLE: this quantity moves when the profile value(s) the Q-17 A project data file (project_data_st7757_t064.json) does not make usable are removed (no single value moves it alone: NO_SINGLE_VALUE): CB_SUPPORT_BAR_EXTENT_FRAC (project data file status HELD, audit class DIFFERENT (0.22 Ln and 0.3 Ln2 both printed): T-044 class DIFFERENT: a second extent '0.3 Ln2' is printed beside 0.22; which bars take which extent is not settled (rebar only; no concrete line uses it)); CB_SUPPORT_BAR_SPAN_BASIS (project data file status HELD, audit class NOT_PRINTED (Ln carries no axis / face note): T-044 class NOT_PRINTED: axis-to-axis is a reading of where the dimension lines end (rebar only; no concrete line uses it)); FOUNDING_DEPTH_M (project data file status HELD, audit class PRINTED as a minimum (excavation level, base / low 1.50); high NOT_PRINTED; owner Q-21 C: founding datum u",
+   "section_m": [
+    0.3,
+    0.8
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.12,
+    0.6
+   ]
+  },
+  {
+   "line_id": "L-15b8ad39d6b2250c9546",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "C8",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "PROFILE_VALUE_NOT_USABLE: this quantity moves when the profile value(s) the Q-17 A project data file (project_data_st7757_t064.json) does not make usable are removed (no single value moves it alone: NO_SINGLE_VALUE): CB_SUPPORT_BAR_EXTENT_FRAC (project data file status HELD, audit class DIFFERENT (0.22 Ln and 0.3 Ln2 both printed): T-044 class DIFFERENT: a second extent '0.3 Ln2' is printed beside 0.22; which bars take which extent is not settled (rebar only; no concrete line uses it)); CB_SUPPORT_BAR_SPAN_BASIS (project data file status HELD, audit class NOT_PRINTED (Ln carries no axis / face note): T-044 class NOT_PRINTED: axis-to-axis is a reading of where the dimension lines end (rebar only; no concrete line uses it)); FOUNDING_DEPTH_M (project data file status HELD, audit class PRINTED as a minimum (excavation level, base / low 1.50); high NOT_PRINTED; owner Q-21 C: founding datum u",
+   "section_m": [
+    0.3,
+    0.9
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.135,
+    0.675
+   ]
+  },
+  {
+   "line_id": "L-fc622ff340ac65a544e3",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "C8",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "PROFILE_VALUE_NOT_USABLE: this quantity moves when the profile value(s) the Q-17 A project data file (project_data_st7757_t064.json) does not make usable are removed (no single value moves it alone: NO_SINGLE_VALUE): CB_SUPPORT_BAR_EXTENT_FRAC (project data file status HELD, audit class DIFFERENT (0.22 Ln and 0.3 Ln2 both printed): T-044 class DIFFERENT: a second extent '0.3 Ln2' is printed beside 0.22; which bars take which extent is not settled (rebar only; no concrete line uses it)); CB_SUPPORT_BAR_SPAN_BASIS (project data file status HELD, audit class NOT_PRINTED (Ln carries no axis / face note): T-044 class NOT_PRINTED: axis-to-axis is a reading of where the dimension lines end (rebar only; no concrete line uses it)); FOUNDING_DEPTH_M (project data file status HELD, audit class PRINTED as a minimum (excavation level, base / low 1.50); high NOT_PRINTED; owner Q-21 C: founding datum u",
+   "section_m": [
+    0.3,
+    0.9
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.135,
+    0.675
+   ]
+  },
+  {
+   "line_id": "L-953e87a3e9d0425d404e",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "C9",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "PROFILE_VALUE_NOT_USABLE: this quantity moves when the profile value(s) the Q-17 A project data file (project_data_st7757_t064.json) does not make usable are removed (no single value moves it alone: NO_SINGLE_VALUE): CB_SUPPORT_BAR_EXTENT_FRAC (project data file status HELD, audit class DIFFERENT (0.22 Ln and 0.3 Ln2 both printed): T-044 class DIFFERENT: a second extent '0.3 Ln2' is printed beside 0.22; which bars take which extent is not settled (rebar only; no concrete line uses it)); CB_SUPPORT_BAR_SPAN_BASIS (project data file status HELD, audit class NOT_PRINTED (Ln carries no axis / face note): T-044 class NOT_PRINTED: axis-to-axis is a reading of where the dimension lines end (rebar only; no concrete line uses it)); FOUNDING_DEPTH_M (project data file status HELD, audit class PRINTED as a minimum (excavation level, base / low 1.50); high NOT_PRINTED; owner Q-21 C: founding datum u",
+   "section_m": [
+    0.3,
+    1.0
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.15,
+    0.75
+   ]
+  },
+  {
+   "line_id": "L-b21cbf6560f613b39bf0",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "C9",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "PROFILE_VALUE_NOT_USABLE: this quantity moves when the profile value(s) the Q-17 A project data file (project_data_st7757_t064.json) does not make usable are removed (no single value moves it alone: NO_SINGLE_VALUE): CB_SUPPORT_BAR_EXTENT_FRAC (project data file status HELD, audit class DIFFERENT (0.22 Ln and 0.3 Ln2 both printed): T-044 class DIFFERENT: a second extent '0.3 Ln2' is printed beside 0.22; which bars take which extent is not settled (rebar only; no concrete line uses it)); CB_SUPPORT_BAR_SPAN_BASIS (project data file status HELD, audit class NOT_PRINTED (Ln carries no axis / face note): T-044 class NOT_PRINTED: axis-to-axis is a reading of where the dimension lines end (rebar only; no concrete line uses it)); FOUNDING_DEPTH_M (project data file status HELD, audit class PRINTED as a minimum (excavation level, base / low 1.50); high NOT_PRINTED; owner Q-21 C: founding datum u",
+   "section_m": [
+    0.3,
+    1.0
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.15,
+    0.75
+   ]
+  },
+  {
+   "line_id": "L-15d9da9b17fd373553f0",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "CN",
+   "state": "BLOCKED_RFI",
+   "rfi": "NECK_SECTION_OR_FOOTING",
+   "section_m": [
+    null,
+    null
+   ],
+   "measured_net": null,
+   "bounded": null
+  },
+  {
+   "line_id": "L-1a9e469651c32cce9b97",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "CN",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "NECK_SECTION_OR_FOOTING",
+   "section_m": [
+    null,
+    null
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.045,
+    0.22499999999999998
+   ]
+  },
+  {
+   "line_id": "L-34346cb438bffee6acec",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "CN",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "NECK_SECTION_OR_FOOTING",
+   "section_m": [
+    null,
+    null
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.045,
+    0.22499999999999998
+   ]
+  },
+  {
+   "line_id": "L-4ef35980fbb54366703d",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "CN",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "NECK_SECTION_OR_FOOTING",
+   "section_m": [
+    null,
+    null
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.045,
+    0.22499999999999998
+   ]
+  },
+  {
+   "line_id": "L-6a2040e0fe0bf7391b9c",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "CN",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "NECK_SECTION_OR_FOOTING",
+   "section_m": [
+    null,
+    null
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.045,
+    0.22499999999999998
+   ]
+  },
+  {
+   "line_id": "L-c8c07db4ac0d54d89bbf",
+   "item_code": "STR.CONC.NECK",
+   "floor": "FOUNDATION",
+   "mark": "CN",
+   "state": "BOUNDED_EXPOSURE",
+   "rfi": "NECK_SECTION_OR_FOOTING",
+   "section_m": [
+    null,
+    null
+   ],
+   "measured_net": null,
+   "bounded": [
+    0.045,
+    0.22499999999999998
+   ]
+  }
+ ]
+}

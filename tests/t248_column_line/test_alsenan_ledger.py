@@ -129,3 +129,20 @@ def test_neck_only_members_take_the_zone_of_their_neighbours():
     assert all(v["zone"] == "MAIN" and v["other_zones_outside"] for v in z.values())
     cn = [r for r in ROWS if r["storey"] == "FOUNDATION" and r["mark"] == "CN"]
     assert len(cn) == 6 and all(r["top_lo"] == r["top_hi"] == 0.95 for r in cn)
+
+
+def test_candidate_v309_digest_pinned_and_reconciled_by_storey():
+    c = SUM["candidate_V309"]["by_floor_state"]
+    assert c["STR.CONC.COLUMN|GF|PROVISIONAL"][:2] == [30, pytest.approx(20.25)]
+    assert c["STR.CONC.COLUMN|1F|PROVISIONAL"][:2] == [18, pytest.approx(9.24)]
+    assert c["STR.CONC.COLUMN|1F|SOURCE_DERIVED"][:2] == [1, pytest.approx(0.588)]
+    assert c["STR.CONC.COLUMN|2F|PROVISIONAL"][:2] == [8, pytest.approx(3.528)]
+    blocked = sum(v[0] for k, v in c.items() if k.startswith("STR.CONC.COLUMN") and k.endswith("BLOCKED_RFI"))
+    assert blocked == 9
+    # GF: the candidate = route G on all 30 = closable 14.0625 + CONFLICT at the schedule end 2.475 + held at 4.50 3.7125
+    gf = [r for r in ROWS if r["storey"] == "GF"]
+    assert sum(r["route_g_m3"] for r in gf) == pytest.approx(20.25)
+    assert sum(r["route_g_m3"] for r in gf if r["status"] == "HELD") == pytest.approx(3.7125)
+    # 2F: the candidate's 3.528 on the 8 drawn members rests on the finished roof +13.90 (4.20 FFL to finished roof)
+    f2 = [r for r in ROWS if r["storey"] == "2F" and r["status"] == "HELD" and r["route_g_m3"] is not None]
+    assert len(f2) == 8 and sum(r["route_g_m3"] for r in f2) == pytest.approx(3.528)

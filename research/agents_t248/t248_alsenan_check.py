@@ -339,6 +339,21 @@ def slab_sheet_partition():
     return out
 
 
+def side_digest(name):
+    """Per floor x item x state: lines, measured, bounded low / high of a committed values-only run digest."""
+    d = json.loads((HERE / name).read_text(encoding="utf-8"))
+    out = defaultdict(lambda: [0, 0.0, 0.0, 0.0])
+    for ln in d["lines"]:
+        k = f"{ln['item_code']}|{ln['floor']}|{ln['state']}"
+        o = out[k]
+        o[0] += 1
+        o[1] = round(o[1] + (ln["measured_net"] or 0.0), 6)
+        if ln["bounded"]:
+            o[2] = round(o[2] + (ln["bounded"][0] or 0.0), 6)
+            o[3] = round(o[3] + (ln["bounded"][1] or 0.0), 6)
+    return {"baseline": d["baseline"], "boq_lines_csv_sha256": d["boq_lines_csv_sha256"], "by_floor_state": dict(sorted(out.items()))}
+
+
 def summarise(rows, stack, unused, inp, fl, ft):  # noqa: C901
     def comp(sel):
         return CL.components([r for r in rows if sel(r)])
@@ -377,6 +392,8 @@ def summarise(rows, stack, unused, inp, fl, ft):  # noqa: C901
          "released_double_joints_now_column_owned": joints,
          "slab_sheet_partition": slab_sheet_partition(),
          "footing_identity_1B1B": inp["footing_identity"],
+         "released_A": side_digest("RELEASED_A_COLUMN_LINES.json"),
+         "candidate_V309": side_digest("CANDIDATE_V309_COLUMN_LINES.json"),
          "freelancer": ft,
          "reconcile_freelancer": {st: reconcile_storey(rows, fl, st) for st in ("FOUNDATION", "GF", "1F", "2F")}}
     return s

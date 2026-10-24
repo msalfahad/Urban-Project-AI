@@ -16,12 +16,13 @@ Runs: released baseline A `tools/release_baseline.py run research/agents_t165/ba
 the working head cebb269b: **REPRODUCED**, 1,455 lines, BOQ_LINES.csv b96185d4 (digest of its column / neck lines:
 `RELEASED_A_COLUMN_LINES.json`, values only). Route G provisional register: the committed
 research/urban_engine_m4_correctness/st7757_route_g/PROVISIONAL_REGISTER.csv (89 column / neck m3 lines). Candidate:
-see section 4 (V3.0.8 figures from the Checker's scoreboard row; own V3.0.4 -> V3.0.9 chain started, see section 8).
+own run `research/agents_t167/v304_run.py` then `research/agents_t211/v309_run.py` on the same copies: V3_0_8_BOQ_LINES.csv
+57fe219a (= the Checker's reproduced V3.0.8) and **V3_0_9_BOQ_LINES.csv 63b350cf** (digest `CANDIDATE_V309_COLUMN_LINES.json`).
 
 Files: `t248_column_line.py` (COLUMN_LINE_V1, pure rules, stdlib), `t248_extract.py` (private DXF -> values-only
 `ALSENAN_COLUMN_INPUT.json`), `t248_released_a.py` (run A digest), `t248_alsenan_check.py` -> `LEDGER_T248.csv`
 (100 rows: 59 columns, 36 necks, 5 route G lines on members no plan draws), `BY_MARK_T248.csv` (storey x mark vs his
-rows), `summary.json`; tests `tests/t248_column_line` (26: Villa K hand fixture + adverse + Alsenan ledger pinned).
+rows), `summary.json`; tests `tests/t248_column_line` (27: Villa K hand fixture + adverse + Alsenan ledger pinned).
 
 ## 1. The physical element and the convention (ERS s.2.1, s.3)
 
@@ -107,7 +108,7 @@ UNRESOLVED under owner Q-31 C (HELD 2.176 .. 2.275, T-233), the identity no long
 | **Drawing (this task)** | 18.3465 closable + CONFLICT 8.034 .. 10.119 + HELD 16 (bounds above) + UNKNOWN 5 | HELD, >= 9.2568 (32) | HELD | closable component 18.3465; nothing else is a value |
 | Released A (V29_ROUTEG_NO_PROFILE, b96185d4) | **82 lines, all BLOCKED_RFI, no quantity** (GF 30 / 1F 22 / 2F 22 'STOREY_HEIGHT_NOT_PRINTED'; 5 CN 'TYPE_NOT_IN_SCHEDULE'; 3 P.C 'PLANTED_COLUMN_STOREY') | 35 BOUNDED 3.075 .. 15.375 + 1 BLOCKED | none | HELD (the scoreboard's 'ref line HELD') |
 | Route G provisional register (not released) | 61 lines 35.286 (GF 20.250 / 1F 9.660 / 2F 5.376) | 28 lines 10.8555 (high 13.5255) | none | 46.1415 |
-| Candidate V3.0.8 (Checker's scoreboard row, 57fe219a; not an own run) | established 33.606 + blocked 9 (PC-1F-B, PC-2F, 5 x D-65) | as V2.9 + route G necks | none | not re-derived here |
+| Candidate V3.0.9 (own run, 63b350cf; column / neck lines identical to V3.0.8 57fe219a) | **33.606** PROVISIONAL / SOURCE_DERIVED (GF 30 lines 20.250; 1F 18 lines 9.240 + PC-1F-A 0.588; 2F 8 lines 3.528) + 9 BLOCKED (PC-1F-B, PC-2F, 5 x D-65, 2 CN) + 3 CN BOUNDED 1.134 .. 3.483 | 35 BOUNDED 3.075 .. 15.375 + 1 BLOCKED | none | NOT RELEASED |
 | Freelancer | GF 17.4375 / 1F 7.728 / 2F 3.381 = 28.5465 | 8.805 | 2.40 | **39.7515** |
 
 **Drawing vs route G, member by member.** The 28 closable columns equal their route G lines exactly where a line
@@ -119,6 +120,15 @@ top is unprinted). UNKNOWN: route G carries 2.268 on five members no plan draws 
 for the candidate, T-236 F2). Released A, for its part, inventories 22 1F and 22 2F lines (every schedule type at every
 neck) where the plans draw 20 and 9: 4 + 14 BLOCKED lines on members not drawn on that storey (no quantity, but the
 count is wrong) and the 3 P.C lines with no storey.
+
+**Drawing vs candidate V3.0.9, by storey** (the candidate = route G less the five D-65 lines, plus PC-1F-A):
+
+| Storey | Candidate | Same members, drawing | Named causes |
+|---|---|---|---|
+| GF | 20.250 (30) | DC 14.0625 (19, equal) + CONFLICT 2.070 .. 2.475 (4) + HELD 7 | CONFLICT taken at the schedule (upper) end (-0.405 .. 0); the 7 annex / boundary columns PROVISIONAL at 4.50 = 3.7125 on an unprinted annex roof (Q-54 B, D-39) and a two-level base: HELD in the drawing (annex-only <= 2.2275 with no low end, boundary 1.2375 .. 1.4300) |
+| 1F | 9.828 (18 + PC-1F-A) | DC 4.284 (9) + CONFLICT 5.964 .. 7.644 (11) | CONFLICT at the schedule (lower) end (0 .. +1.680); PC-1F-B BLOCKED in the candidate (its D-26 hold is the owner split's, T-220) while its solid 0.420 is DRAWING-CONFIRMED |
+| 2F | 3.528 (8) | HELD 9 (<= 3.155 on 7; tank columns open) | the candidate's 4.20 m runs FFL +9.70 to the FINISHED roof +13.90: FINISHED_AS_STRUCTURAL at the top; PC-2F BLOCKED in both |
+| UNKNOWN storey | 3 CN BOUNDED 1.134 .. 3.483 + 2 BLOCKED | none: CN is a neck-only mark (T-217 / T-075), its six necks are in the neck component | a column line on a mark no slab plan draws (T-236 F3 out of inventory scope): never valued |
 
 **Drawing vs freelancer, by storey and mark** (BY_MARK_T248.csv; he prices type x count x (interval - 0.75)):
 
@@ -144,6 +154,8 @@ lift necks)**: his flat 1.50 (the p.9 excavation-limit number, T-205) cannot be 
 | 10 of them held in the owner split (D_ctrl of a held framing member: 6 D_SETTLED, 4 D_OPEN) | ENGINE / ledger: the solid closes, the owner split stays HELD for those 10 (joint vs column line), RULE: R-COLUMN-LINE-1 |
 | 15 CONFLICT, 8.034 .. 10.119 | UNRESOLVED (designer D-16, D-63, D-64 proposed): never the schedule end, never the larger end |
 | 16 HELD | UNRESOLVED on D-39 (2F roof, annex roof), Q-54 B, D-44, the annex / main boundary (new designer item proposed below) |
+| candidate V3.0.9 2F 3.528 (8 lines) and GF annex / boundary 3.7125 (7) | ENGINE_WRONG basis: PROVISIONAL on an unprinted roof top (2F: FFL to the finished +13.90; annex +4.30) and on a two-level base; should be HELD with the bounds above |
+| candidate PC-1F-B BLOCKED | ENGINE over-holds: the solid 0.420 is DRAWING-CONFIRMED; only the owner split waits on D-26 |
 | 5 route G lines not drawn (2.268) | ENGINE_RIGHT for V3.0.8 (held), route G / released A over-inventory |
 | 2 planted columns 1.008 m3 | ENGINE omission in route G (no line); DRAWING-CONFIRMED here |
 | necks | UNRESOLVED (formation, Q-21 C); **FREELANCER_WRONG on height**: his 8.805 lies below the drawing's lower bound 9.2568 on 32 necks; released A BOUNDED 3.075 .. 15.375 is consistent with the bound (route G 10.8555 too) |
@@ -196,9 +208,8 @@ another side wrong before the value is known (any villa) | test_components (neck
 
 ## 8. Not done / uncertain
 
-- Candidate V3.0.8 / V3.0.9 column lines are quoted from the Checker's scoreboard row (V3.0.8 reproduced 57fe219a),
-  not from an own candidate run; an own V3.0.4 -> V3.0.9 chain was started and is reported in the handoff only if it
-  finished.
+- The candidate is compared by storey, mark and state (its element ids carry another frame offset than route G's, so
+  no member-by-member join was made); the per-storey equalities above are exact.
 - The GF / 1F tops under terrace bays rest on the one-plate reading of the slab plans (T-220, merged): D-39 also asks
   whether a roof slab steps down from the adjacent floor slab; a step would change those columns (named, not applied).
 - The 21 outline parts outside the slab-sheet face partition (0.3511 m2) are not traced one by one.
