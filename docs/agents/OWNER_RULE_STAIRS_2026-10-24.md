@@ -110,4 +110,21 @@ check reports CODE NOT VERIFIED with the source row below until a clause text is
 |---|---|---|---|---|---|
 | Private / model housing building requirements (construction system page) | Kuwait Municipality | current page; amendments incl. MD 288/2024 (press: Table 1 ratios / setbacks) | none | the controlling source if it has stair clauses | CODE NOT VERIFIED |
 | Building works regulation (تنظيم أعمال البناء) and amendments | Kuwait Municipality | as published | none | general; chapter for private housing to be identified | CODE NOT VERIFIED |
-| Kuwait Universal Design Code | issuing body to be confirmed (copy hosted by UN Kuwait) | October 2017 | none | a search excerpt of its scope suggests private houses are excluded with a qualifier that was cut off; not established | NOT APPLIED until established |
+| Kuwait Universal Design Code | as printed on the document (official copy hosted by UN Kuwait: kuwait.un.org/sites/default/files/2021-06/Kuwait%20Universal%20Design%20Code.pdf) | October 2017 | Section 4 (printed page 10), scope: does not apply to private houses; its provisions may apply to public areas of dwelling developments (owner reading, 13:50) | NOT APPLICABLE to an ordinary private villa, subject to any later applicable legislation; may apply to public areas of a dwelling development | SOURCE-VERIFIED SCOPE STATEMENT (read by the owner; main chat re-read pending, host denied here); its stair dimensions are never enforced on a private villa |
+
+### S-9 and further corrections (owner, main chat, 2026-10-24 13:50; essentials in the owner's words)
+
+- S-9: "Do not generate winder stairs (درج مروحة) or assume a walking-line offset. If winders are explicitly drawn and
+  sufficiently dimensioned, measure the actual geometry. If required information is missing, mark the affected geometry
+  or quantities HELD/UNSUPPORTED, rather than inventing a design."
+- (1) "Do not universally assume each flight has risers minus one goings. Derive actual tread surfaces, elevation changes
+  and landing transitions from the drawings. Use N-1 only where that configuration is demonstrated."
+- (2) "Do not assume quarter landings are always width x width or half landings have a fixed rectangular formula.
+  Measure their actual polygons."
+- (3) "Distinguish optional maximum available run from mandatory fixed run when testing feasibility monotonicity."
+- (4) "Release BOQ quantities individually according to their own required evidence. A staircase may have verified
+  concrete but HELD marble, reinforcement or handrails."
+- (5) "Keep design-scenario quantity ranges entirely separate from measured BOQ exports."
+- Kuwait Municipality and Kuwait Fire Force stair requirements: CODE NOT VERIFIED until the official provisions are
+  obtained and reviewed. Building type comes from the project manifest; if it is not recorded, applicability is not
+  decided (CODE NOT VERIFIED), never assumed.
