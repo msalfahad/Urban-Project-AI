@@ -55,3 +55,29 @@ a landing finished 50 between treads finished 30 gives 140 then 180 (stair_riser
   alternatives reported; (C) report every count / going combination inside the ranges and leave the choice to the
   designer, quantities HELD until chosen. Main chat recommendation: (C) for design, (A)'s values only as a
   PROVISIONAL planning figure, because a range is not a value.
+
+### S-4 ANSWERED by the owner (main chat, 2026-10-24 10:28): option C, with clarification (owner's words, essentials)
+
+When the approved drawings do not sufficiently define a staircase:
+1. Evaluate feasible riser counts giving finished risers within the owner-preferred 15 - 17 cm range.
+2. Evaluate going dimensions within 28 - 30 cm.
+3. Use actual floor-to-floor finished levels, available horizontal run, stairwell boundaries, landings, headroom and
+   applicable requirements to eliminate infeasible alternatives.
+4. Present the remaining alternatives, with geometry, footprint, alignment, quantities and reasons for recommendation.
+5. Do not automatically select an alternative or promote its quantities to VERIFIED.
+6. Keep affected BOQ quantities HELD until the designer / owner approves the required design information.
+7. The previous 16 cm riser / 30 cm going combination may be shown only as a clearly labeled illustrative scenario,
+   not as a hidden measurement default.
+8. Where approved drawings define the staircase, use the drawn dimensions and flag any conflicts. Do not replace them
+   with owner preferences.
+
+Architecture: the T-267 wrapper is approved "provided it preserves the frozen modules and existing BOQ quantities".
+Additional validation: a 4.48 m floor-to-floor example with 28 risers of 16 cm, demonstrating that the engine separately
+checks horizontal fit, number of goings, landing geometry and headroom.
+
+Main chat check (10:28): no BOQ pipeline imports stair_rule_calculator (only its tests t158 and the t202 guard sweep),
+so the 0.16 / 0.30 default feeds no current quantity and option C changes none. 4.48 m: feasible counts 27 (165.9 mm),
+28 (160.0), 29 (154.5); straight-flight goings 26 / 27 / 28, runs 7.28 - 7.80 / 7.56 - 8.10 / 7.84 - 8.40 m before
+landings. Open points put to the owner the same day (agents do not decide them): S-5 definition of "sufficiently
+defined" and partial definition; S-6 going granularity (interval vs grid); S-7 the applicable Kuwait limits (max
+risers per flight, headroom, landing depth, handrail height, 2R + G); S-8 a drawn stair that breaks a requirement.
