@@ -98,3 +98,28 @@ The 37.5 MB full architectural set (two Drive copies) and parts 03-04 / 09-10 ar
 identity rests on title + size and on the single-sheet files. ST p.8 (raster) date not read. CONTENT_REVIEW is a
 keyword heuristic (title phrases only); it found no defect here. The checklist is engineering practice, not a Kuwait
 regulation (deferred by the owner).
+
+## 9. T-243 (2026-10-24): the snapshot now names its inputs
+
+Root cause of the red `test_committed_files_reproduce` (first red after the T-233 merge 2ecb5bf0, 2026-10-23 20:11;
+still red on 1cc1a153): the folder list was pinned, the file CONTENT was not. T-233 (2ecb5bf0) and T-234 (3224f68a)
+appended 3 Checker verdict rows to `research/agents_t177/CHECKER_VERDICTS_DEV_VILLA.json`, a living ledger inside a
+pinned folder; a fresh scan found 6 more citations (549 vs 543: FILE_ONLY 101 -> 104, RESOLVED 409 -> 412; no error
+verdict), so CITATIONS_T195.csv and summary.json no longer reproduced. It was the only pinned file changed after
+faa04202 (`git diff --stat faa04202 HEAD` over the 72 pinned folders); the committed outputs reproduce byte for byte
+from the faa04202 tree (checked by `git archive`).
+
+Fix (tool-written, outputs unchanged): `INPUTS_T195.csv` lists the 203 scanned files (path, bytes, sha256, git blob id)
+in scan order, written by `alsenan_t195.py --write-inputs` from the git tree of PIN_COMMIT faa04202 (same file set and
+order as the original rglob scan, checked). The build reads a file from the working tree only while its sha256 still
+matches; otherwise from its pinned git blob, re-checking the sha256; if that is impossible it stops with
+InputUnavailable (`--check` exits 1), never scanning another text silently. Files added after the pin are not inputs
+of the snapshot; `--live` still scans everything present now. The committed five outputs are unchanged (no regeneration).
+
+Tests (tests/t195_document_register, 22 -> 28): manifest = tool output; the real drifted ledger read from its blob;
+normal: an unrelated new file / new folder citing a non-existent sheet leaves the check green; a pinned file edited
+later is read from its blob; adverse: a cited sheet's revision changed (ST-08 -> REV B) makes the check fail; a pinned
+input whose blob is missing or wrong is refused.
+
+Lesson (proposed s.7 row): a committed snapshot test must name its inputs by content (sha256 / blob), not by folder or
+file name; a folder list is not a pin while other tasks keep appending to files inside it.
