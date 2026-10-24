@@ -298,3 +298,36 @@ def test_piece_without_a_checker_merged_source_is_refused():
     p["pieces"][0]["source"] = dict(src(), merge_commit=None)
     with pytest.raises(A.InputsError, match="merge_commit"):
         A.load_inputs(p, PID)
+
+
+def _with_downstream(eid, why="depends on the outline"):
+    lines = l3010()
+    dl = next(ln for ln in lines if ln["location"]["element_id"] == eid)
+    r = record()
+    r["footing"] = dict(r["footing"], downstream=[{"line_id": dl["line_id"], "element_id": eid, "why": why}])
+    return r, lines
+
+
+def test_downstream_held_line_is_named_and_left_as_it_is():
+    lines = l3010()
+    lines.append(line("FRP:K-OUT-7:ALL", "STR.REBAR", ev="BLOCKED_RFI"))
+    dl = lines[-1]
+    r = record()
+    r["footing"] = dict(r["footing"], downstream=[{"line_id": dl["line_id"], "element_id": "FRP:K-OUT-7:ALL",
+                                                   "why": "bars of which type"}])
+    by, ch, *_ = run(inputs(r), lines=lines)
+    assert A30.line_sha(by["FRP:K-OUT-7:ALL"]) == A30.line_sha(dl)
+    assert ch[0]["downstream"][0]["line_id"] == dl["line_id"]
+
+
+def test_released_downstream_of_a_conflict_is_refused():
+    r, lines = _with_downstream("P-C:COLS:GF:C1")              # a live line named as resting on the outline
+    with pytest.raises(A.InputsError, match="never released"):
+        run(inputs(r), lines=lines)
+
+
+def test_downstream_entry_without_its_line_is_refused():
+    r = record()
+    r["footing"] = dict(r["footing"], downstream=["the rebar"])
+    with pytest.raises(A.InputsError, match="downstream entry"):
+        A.load_inputs(inputs(r), PID)

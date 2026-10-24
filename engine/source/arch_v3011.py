@@ -192,6 +192,10 @@ def _check_line_ref(rec, comp):
                               "it carries now)")
     if c.get("unit", "m3") != "m3":
         raise InputsError(f"outline {oid} {comp}: unit m3")
+    for d in c.get("downstream") or ():
+        if not (isinstance(d, dict) and d.get("line_id") and d.get("element_id") and d.get("why")):
+            raise InputsError(f"outline {oid} {comp}: a downstream entry names the dependent line (line_id, "
+                              "element_id) and why it depends on this outline")
 
 
 def load_inputs(doc, project_id=None):
@@ -331,6 +335,16 @@ def record_changes(inputs, lines, earlier_changed=()):
                     raise InputsError(f"outline {oid} {comp}: line {c['element_id']} carries {cq}, the inputs state "
                                       f"{c['carried']}: the replaced figure must be the one the line carries")
                 cview = view
+                byid = {x["line_id"]: x for x in lines}
+                for d in c.get("downstream") or ():
+                    dl = byid.get(d["line_id"])
+                    if dl is None or (dl.get("location") or {}).get("element_id") != d["element_id"]:
+                        raise InputsError(f"outline {oid} {comp}: downstream line {d['element_id']} is not in the "
+                                          "candidate under that line id")
+                    if dl["evidence_state"] in LIVE_EVIDENCE:
+                        raise InputsError(f"outline {oid} {comp}: downstream line {d['element_id']} is released "
+                                          f"({dl['evidence_state']}) while the outline it depends on is a CONFLICT: "
+                                          "a quantity resting on a held element is never released")
                 after, lo, hi = _conflict_line(ln, oid, comp, got[comp], rec, src, cview)
                 live = ln["evidence_state"] in LIVE_EVIDENCE and ln.get("measured_net") is not None
                 moved = -float(ln["measured_net"]) if live else 0.0
