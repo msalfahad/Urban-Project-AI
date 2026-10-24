@@ -1,0 +1,184 @@
+{
+ "$id": "urban-projects/URBAN_CHECKER_VERDICT_V2",
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "description": "One Checker verdict bound to the exact exported BOQ line(s) it re-measured (owner 2026-10-23 19:45 (0)). The sole authority for VERIFIED in tools/boq_export_v1.py: a record whose binding differs from the exported line is STALE; checker vs engine above 1 % is a DISCREPANCY (the line is HELD); only scope WHOLE plus a passing completeness record makes a line VERIFIED; COMPONENT records never add up to a VERIFIED line. Records live in a URBAN_CHECKER_VERDICT_V2_SET file {schema, verdicts: [records sorted by verdict_id]}.",
+ "properties": {
+  "boq_lines_sha256": {
+   "pattern": "^[0-9a-f]{64}$",
+   "type": "string"
+  },
+  "candidate_version": {
+   "minLength": 1,
+   "type": "string"
+  },
+  "checker": {
+   "properties": {
+    "routine": {
+     "description": "Checker / Verifier (run-lock agent)",
+     "type": "string"
+    },
+    "run_token": {
+     "minLength": 1,
+     "type": "string"
+    },
+    "verdict_commit": {
+     "pattern": "^[0-9a-f]{6,40}$",
+     "type": "string"
+    }
+   },
+   "required": [
+    "run_token",
+    "routine",
+    "verdict_commit"
+   ],
+   "type": "object"
+  },
+  "checker_qty": {
+   "description": "the Checker's own re-measure from the drawing",
+   "minimum": 0,
+   "type": "number"
+  },
+  "element_scope": {
+   "description": "sorted element ids of the bound lines; count = len(ids)",
+   "properties": {
+    "count": {
+     "minimum": 1,
+     "type": "integer"
+    },
+    "ids": {
+     "items": {
+      "minLength": 1,
+      "type": "string"
+     },
+     "minItems": 1,
+     "type": "array",
+     "uniqueItems": true
+    }
+   },
+   "required": [
+    "ids",
+    "count"
+   ],
+   "type": "object"
+  },
+  "engine_qty": {
+   "description": "sum of measured_net of the bound lines (the exported quantity)",
+   "minimum": 0,
+   "type": "number"
+  },
+  "evidence": {
+   "items": {
+    "anyOf": [
+     {
+      "required": [
+       "printed_value"
+      ]
+     },
+     {
+      "required": [
+       "printed"
+      ]
+     },
+     {
+      "required": [
+       "value"
+      ]
+     }
+    ],
+    "properties": {
+     "printed": {
+      "minLength": 1,
+      "type": "string"
+     },
+     "printed_value": {
+      "minLength": 1,
+      "type": "string"
+     },
+     "sheet": {
+      "minLength": 1,
+      "type": "string"
+     },
+     "value": {
+      "minLength": 1,
+      "type": "string"
+     }
+    },
+    "required": [
+     "sheet"
+    ],
+    "type": "object"
+   },
+   "minItems": 1,
+   "type": "array"
+  },
+  "line_ids": {
+   "items": {
+    "minLength": 1,
+    "type": "string"
+   },
+   "minItems": 1,
+   "type": "array",
+   "uniqueItems": true
+  },
+  "notes": {
+   "type": "string"
+  },
+  "project_id": {
+   "minLength": 1,
+   "type": "string"
+  },
+  "revision_set_sha256": {
+   "pattern": "^[0-9a-f]{64}$",
+   "type": "string"
+  },
+  "schema": {
+   "const": "URBAN_CHECKER_VERDICT_V2"
+  },
+  "scope": {
+   "enum": [
+    "WHOLE",
+    "PARTIAL",
+    "COMPONENT"
+   ]
+  },
+  "time": {
+   "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}(:\\d{2}(\\.\\d+)?)?Z$",
+   "type": "string"
+  },
+  "unit": {
+   "enum": [
+    "m2",
+    "lm",
+    "m3",
+    "kg",
+    "t",
+    "pcs",
+    "item",
+    "m"
+   ]
+  },
+  "verdict_id": {
+   "minLength": 1,
+   "type": "string"
+  }
+ },
+ "required": [
+  "schema",
+  "verdict_id",
+  "project_id",
+  "revision_set_sha256",
+  "candidate_version",
+  "boq_lines_sha256",
+  "line_ids",
+  "element_scope",
+  "unit",
+  "engine_qty",
+  "checker_qty",
+  "evidence",
+  "checker",
+  "scope",
+  "time"
+ ],
+ "title": "URBAN_CHECKER_VERDICT_V2",
+ "type": "object"
+}
