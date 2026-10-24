@@ -227,8 +227,12 @@ def wp3_records():
                               "459, 289 (frame 2FE7 / 3008 = 332 / 374)",
          "verified_by": CHECKER_T269 + "; Checker 2026-10-24 00:58 own face 75.9831 = engine, own floor 38.4576 .. "
                         "38.9776 = candidate bound -0.0009 at both ends",
-         "line": _ref("1F-R78C367:floor", POR, "1F", [38.458536, 38.978536],
-                      "the 1F living / corridor / landing face carried as a range on two held stair strips"),
+         "line": dict(_ref("1F-R78C367:floor", POR, "1F", [38.458536, 38.978536],
+                           "the 1F living / corridor / landing face carried as a range on two held stair strips"),
+                      earlier_change="ARCH_TAKEOFF_V3.0 piece STAIR_FLOOR_RESIDUE (T-116, merge 5592692) set this "
+                                     "line to the range 38.458536 .. 38.978536 on the two held strips D-13 0.4025 / "
+                                     "D-23 0.1175; this record settles exactly those two strips (T-269, Checker "
+                                     "13:03) and keeps every other piece of that reading"),
          "pieces": [
              {"piece": "D-13 tread", "dims": [[1.15, 0.30]], "area_m2": 0.345, "to": "NOT_FLOOR",
               "why": "the 11th tread of the arriving flight MS1-U: stair (tread marble), never floor",
