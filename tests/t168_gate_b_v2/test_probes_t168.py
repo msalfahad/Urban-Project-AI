@@ -2,8 +2,8 @@
 docs/agents/ADVERSARIAL_PROBE_2026-10-23.md (board branch), ported to pytest on a synthetic villa (SYN-GB-V2; no client
 drawing, no sealed file: the "sealed" bytes below are made up here and registered in a temporary registry only).
 
-The first commit of T-168 adds these tests as strict xfail (they fail on the merged head, where tools/v30_gate_b_v2.py
-only delegates to the T-156 tool); the fix commit removes the xfail markers. Each expectation is the probe's own
+The first commit of T-168 (76b44a38) added these tests as strict xfail (they failed on the merged head, where
+tools/v30_gate_b_v2.py only delegated to the T-156 tool); the fix commit removed the xfail markers. Each expectation is the probe's own
 "Expected" column:
   4a  beam B1 (a COUNTED V2 verdict) +1 % volume      -> flagged for review (VERIFIED_CHANGED)
   4c  blockwork W0 (COUNTED) net +4 %, non-structural -> flagged (VERIFIED_CHANGED)
@@ -27,7 +27,6 @@ from engine.source import boq_line as BL
 PX, PY = "SYN-GB-V2", "SYN-OTHER"
 REV_A, REV_B = "a" * 64, "b" * 64
 SPEC_BEFORE = "SYN-CANDIDATE-1"
-FIXED = "probe port (T-168 first commit): fails on the merged head; the fix commit removes this marker"
 
 
 def G2():
@@ -65,7 +64,6 @@ def row_of(doc, eid):
     return [r for r in doc["rows"] if r["element_id"] == eid][0]
 
 
-@pytest.mark.xfail(strict=True, reason=FIXED)
 def test_probe_4a_verified_beam_moves_one_percent_is_flagged():
     before = [line(f"B{i}", 2.0, code="STR.CONC.BEAM") for i in range(1, 201)]
     after = copy.deepcopy(before)
@@ -78,7 +76,6 @@ def test_probe_4a_verified_beam_moves_one_percent_is_flagged():
     assert r["verdict_carry"] == "STALE" and doc["summary"]["status"] == "REVIEW_REQUIRED"
 
 
-@pytest.mark.xfail(strict=True, reason=FIXED)
 def test_probe_4c_verified_blockwork_moves_four_percent_is_flagged():
     wl = [line(f"W{i}", 10.0, code="MAS.BLOCK", unit="m2") for i in range(200)]
     wa = copy.deepcopy(wl)
@@ -91,7 +88,6 @@ def test_probe_4c_verified_blockwork_moves_four_percent_is_flagged():
     assert doc["summary"]["per_rule"]["VERIFIED_CHANGED"]["only_this_rule"] == 1
 
 
-@pytest.mark.xfail(strict=True, reason=FIXED)
 def test_probe_7_after_side_mixing_two_revision_sets_is_refused():
     base = [line(f"F{i}", 1.0 + i / 10) for i in range(1, 6)]
     after = copy.deepcopy(base)
@@ -101,7 +97,6 @@ def test_probe_7_after_side_mixing_two_revision_sets_is_refused():
     assert "REVISION_MIX" in ex.value.codes
 
 
-@pytest.mark.xfail(strict=True, reason=FIXED)
 def test_probe_8_verified_change_is_tied_to_the_change_log(tmp_path):
     before = [line(f"F{i}", 2.0) for i in range(1, 4)]
     after = copy.deepcopy(before)
@@ -122,7 +117,6 @@ def test_probe_8_verified_change_is_tied_to_the_change_log(tmp_path):
     assert doc["summary"]["verified_changed_unlogged"] == 0
 
 
-@pytest.mark.xfail(strict=True, reason=FIXED)
 def test_probe_10_line_of_another_project_is_refused():
     base = [line(f"F{i}", 1.0 + i / 10) for i in range(1, 6)]
     after = base + [line("F9", 3.0, project=PY, rev=REV_B)]
@@ -131,7 +125,6 @@ def test_probe_10_line_of_another_project_is_refused():
     assert "PROJECT_MIX" in ex.value.codes
 
 
-@pytest.mark.xfail(strict=True, reason=FIXED)
 def test_probe_12b_renamed_copy_of_a_sealed_file_is_refused_by_sha256(tmp_path):
     sealed = b'{"synthetic": "sealed benchmark stand-in, made up by the test"}\n'
     reg = {"schema": "URBAN_SEALED_REGISTRY_V1", "entries": [
