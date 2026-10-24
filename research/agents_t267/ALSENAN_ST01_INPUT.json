@@ -1,0 +1,1075 @@
+{
+ "schema": "T267_ALSENAN_ST01_INPUT_V1",
+ "project": "development villa (Drive folder 'Alsenan chalet project'); dimensions, counts and levels only, no coordinates, names or drawing content; every value below is already in the merged research of T-184 / T-214 / T-258",
+ "sources": {
+  "levels": "FFL GF +1.00, 1F +5.50, 2F +9.70 (research/agents_t184/ALSENAN_STAIR_INPUT.json floor_levels; architectural plans / section A-A)",
+  "F0_F1": "0.05 m dry-floor build-up FFL -> slab top, DRAWING-CONFIRMED on sections A-A / B-B (research/agents_t214/T-214_FLOOR_BUILDUP.md s.1, MERGED b29060c2)",
+  "counts": "section A-A 27 risers GF -> 1F, 25 risers 1F -> 2F (owner Q-46 A); structural GF roof slab plan draws 16 to the landing = 28 GF -> 1F (T-258 C-ST-4, designer item, owner 2026-10-22 18:00 (4): HELD)",
+  "flights": "going 0.30, width 1.20, waist 'T 16' (Q-47 A) (T-184 input; T-258 ledger)",
+  "landings": "MS1-LD 1.20 x 1.20 at +3.50 (VERIFIED, T-258); MS2-LD-W 1.30 x 1.15 at +7.516 and MS2-LD-E 1.20 x 1.20 at +7.684 (DRAWING-CONFIRMED, T-258): a split-level half landing",
+  "winders": "MS1-T: 5 risers on section A-A, 4 wedges on the plans, no winder outline dimensioned and no soffit drawn (T-184 / T-258 C-ST-3): polygons HELD",
+  "tread_finish": "printed nowhere (stair finish build-up not on any section; S8.7B: no drawing supports a 200 / 100 build-up): drawing reading HELD; owner rule UP-STAIR-006 0.030 m shown beside as ASSUMED - OWNER-APPROVED",
+  "stair_finish_material": "not printed on the sheets read; owner answers Q-53 / Q-66 treat the stair as marble (owner method only)",
+  "rail_sides": "not established (rails are a separate census, T-164): HELD",
+  "building_type": "not recorded in a project manifest: applicability not decided",
+  "governs": "owner Q-46 A: the section A-A counts (27, 25) govern the riser count; the structural plan's MS1-L reading stays a designer item C-ST-4, so MS1-L is HELD"
+ },
+ "runs": {
+  "DRAWING": {
+   "GF_1F": {
+    "floor_bottom_finish_mm": 50.0,
+    "floor_top_finish_mm": 50.0,
+    "arrival_nosing_mm": null,
+    "nosing": {
+     "specified": false
+    },
+    "bar_detail": "ST7757.pdf p.16 TYPICAL STEEL LAYOUT - STAIR SECTION (bar takeoff not in this module)",
+    "building_type": null,
+    "stair_id": "ST-01 GF->1F",
+    "ffl_bottom_mm": 1000.0,
+    "ffl_top_mm": 5500.0,
+    "surfaces": [
+     {
+      "id": "L1",
+      "kind": "TREAD",
+      "flight": "MS1-L",
+      "finish_mm": null,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "L2",
+      "kind": "TREAD",
+      "flight": "MS1-L",
+      "finish_mm": null,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "L3",
+      "kind": "TREAD",
+      "flight": "MS1-L",
+      "finish_mm": null,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "L4",
+      "kind": "TREAD",
+      "flight": "MS1-L",
+      "finish_mm": null,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "L5",
+      "kind": "TREAD",
+      "flight": "MS1-L",
+      "finish_mm": null,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "L6",
+      "kind": "TREAD",
+      "flight": "MS1-L",
+      "finish_mm": null,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "L7",
+      "kind": "TREAD",
+      "flight": "MS1-L",
+      "finish_mm": null,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "L8",
+      "kind": "TREAD",
+      "flight": "MS1-L",
+      "finish_mm": null,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "L9",
+      "kind": "TREAD",
+      "flight": "MS1-L",
+      "finish_mm": null,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "W1",
+      "kind": "WINDER",
+      "flight": "MS1-T",
+      "finish_mm": null,
+      "polygon": null
+     },
+     {
+      "id": "W2",
+      "kind": "WINDER",
+      "flight": "MS1-T",
+      "finish_mm": null,
+      "polygon": null
+     },
+     {
+      "id": "W3",
+      "kind": "WINDER",
+      "flight": "MS1-T",
+      "finish_mm": null,
+      "polygon": null
+     },
+     {
+      "id": "W4",
+      "kind": "WINDER",
+      "flight": "MS1-T",
+      "finish_mm": null,
+      "polygon": null
+     },
+     {
+      "id": "W5",
+      "kind": "WINDER",
+      "flight": "MS1-T",
+      "finish_mm": null,
+      "polygon": null
+     },
+     {
+      "id": "MS1-LD",
+      "kind": "LANDING",
+      "finish_mm": null,
+      "polygon": [
+       [
+        0.0,
+        0.0
+       ],
+       [
+        1200.0,
+        0.0
+       ],
+       [
+        1200.0,
+        1200.0
+       ],
+       [
+        0.0,
+        1200.0
+       ]
+      ],
+      "thickness_mm": 160.0
+     },
+     {
+      "id": "U1",
+      "kind": "TREAD",
+      "flight": "MS1-U",
+      "finish_mm": null,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "U2",
+      "kind": "TREAD",
+      "flight": "MS1-U",
+      "finish_mm": null,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "U3",
+      "kind": "TREAD",
+      "flight": "MS1-U",
+      "finish_mm": null,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "U4",
+      "kind": "TREAD",
+      "flight": "MS1-U",
+      "finish_mm": null,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "U5",
+      "kind": "TREAD",
+      "flight": "MS1-U",
+      "finish_mm": null,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "U6",
+      "kind": "TREAD",
+      "flight": "MS1-U",
+      "finish_mm": null,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "U7",
+      "kind": "TREAD",
+      "flight": "MS1-U",
+      "finish_mm": null,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "U8",
+      "kind": "TREAD",
+      "flight": "MS1-U",
+      "finish_mm": null,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "U9",
+      "kind": "TREAD",
+      "flight": "MS1-U",
+      "finish_mm": null,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "U10",
+      "kind": "TREAD",
+      "flight": "MS1-U",
+      "finish_mm": null,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "U11",
+      "kind": "TREAD",
+      "flight": "MS1-U",
+      "finish_mm": null,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     }
+    ],
+    "flights": {
+     "MS1-L": {
+      "waist_mm": 160.0,
+      "width_mm": 1200.0,
+      "rail_sides": null,
+      "run_mm": null,
+      "run_type": "RUN_TYPE_UNKNOWN",
+      "conflict": "C-ST-4: structural plan 12 straight riser lines vs architectural plan 10 (designer item; owner 2026-10-22 18:00 (4): HELD)"
+     },
+     "MS1-T": {
+      "waist_mm": 160.0,
+      "width_mm": 1200.0,
+      "rail_sides": null,
+      "run_mm": null,
+      "run_type": "RUN_TYPE_UNKNOWN"
+     },
+     "MS1-U": {
+      "waist_mm": 160.0,
+      "width_mm": 1200.0,
+      "rail_sides": null,
+      "run_mm": null,
+      "run_type": "RUN_TYPE_UNKNOWN"
+     }
+    },
+    "stair_finish": null,
+    "riser_counts": {
+     "SECTION_AA (Q-46 A)": 27,
+     "STRUCTURAL_PLAN_P4 (C-ST-4)": 28
+    },
+    "riser_count_governs": "SECTION_AA (Q-46 A)"
+   },
+   "1F_2F": {
+    "floor_bottom_finish_mm": 50.0,
+    "floor_top_finish_mm": 50.0,
+    "arrival_nosing_mm": null,
+    "nosing": {
+     "specified": false
+    },
+    "bar_detail": "ST7757.pdf p.16 TYPICAL STEEL LAYOUT - STAIR SECTION (bar takeoff not in this module)",
+    "building_type": null,
+    "stair_id": "ST-01 1F->2F",
+    "ffl_bottom_mm": 5500.0,
+    "ffl_top_mm": 9700.0,
+    "surfaces": [
+     {
+      "id": "L1",
+      "kind": "TREAD",
+      "flight": "MS2-L",
+      "finish_mm": null,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "L2",
+      "kind": "TREAD",
+      "flight": "MS2-L",
+      "finish_mm": null,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "L3",
+      "kind": "TREAD",
+      "flight": "MS2-L",
+      "finish_mm": null,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "L4",
+      "kind": "TREAD",
+      "flight": "MS2-L",
+      "finish_mm": null,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "L5",
+      "kind": "TREAD",
+      "flight": "MS2-L",
+      "finish_mm": null,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "L6",
+      "kind": "TREAD",
+      "flight": "MS2-L",
+      "finish_mm": null,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "L7",
+      "kind": "TREAD",
+      "flight": "MS2-L",
+      "finish_mm": null,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "L8",
+      "kind": "TREAD",
+      "flight": "MS2-L",
+      "finish_mm": null,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "L9",
+      "kind": "TREAD",
+      "flight": "MS2-L",
+      "finish_mm": null,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "L10",
+      "kind": "TREAD",
+      "flight": "MS2-L",
+      "finish_mm": null,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "L11",
+      "kind": "TREAD",
+      "flight": "MS2-L",
+      "finish_mm": null,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "MS2-LD-W",
+      "kind": "LANDING",
+      "finish_mm": null,
+      "polygon": [
+       [
+        0.0,
+        0.0
+       ],
+       [
+        1300.0,
+        0.0
+       ],
+       [
+        1300.0,
+        1150.0
+       ],
+       [
+        0.0,
+        1150.0
+       ]
+      ],
+      "thickness_mm": 160.0
+     },
+     {
+      "id": "MS2-LD-E",
+      "kind": "LANDING",
+      "finish_mm": null,
+      "polygon": [
+       [
+        1300.0,
+        0.0
+       ],
+       [
+        2500.0,
+        0.0
+       ],
+       [
+        2500.0,
+        1200.0
+       ],
+       [
+        1300.0,
+        1200.0
+       ]
+      ],
+      "thickness_mm": 160.0
+     },
+     {
+      "id": "U1",
+      "kind": "TREAD",
+      "flight": "MS2-U",
+      "finish_mm": null,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "U2",
+      "kind": "TREAD",
+      "flight": "MS2-U",
+      "finish_mm": null,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "U3",
+      "kind": "TREAD",
+      "flight": "MS2-U",
+      "finish_mm": null,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "U4",
+      "kind": "TREAD",
+      "flight": "MS2-U",
+      "finish_mm": null,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "U5",
+      "kind": "TREAD",
+      "flight": "MS2-U",
+      "finish_mm": null,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "U6",
+      "kind": "TREAD",
+      "flight": "MS2-U",
+      "finish_mm": null,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "U7",
+      "kind": "TREAD",
+      "flight": "MS2-U",
+      "finish_mm": null,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "U8",
+      "kind": "TREAD",
+      "flight": "MS2-U",
+      "finish_mm": null,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "U9",
+      "kind": "TREAD",
+      "flight": "MS2-U",
+      "finish_mm": null,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "U10",
+      "kind": "TREAD",
+      "flight": "MS2-U",
+      "finish_mm": null,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "U11",
+      "kind": "TREAD",
+      "flight": "MS2-U",
+      "finish_mm": null,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     }
+    ],
+    "flights": {
+     "MS2-L": {
+      "waist_mm": 160.0,
+      "width_mm": 1200.0,
+      "rail_sides": null,
+      "run_mm": null,
+      "run_type": "RUN_TYPE_UNKNOWN"
+     },
+     "MS2-U": {
+      "waist_mm": 160.0,
+      "width_mm": 1200.0,
+      "rail_sides": null,
+      "run_mm": null,
+      "run_type": "RUN_TYPE_UNKNOWN"
+     }
+    },
+    "stair_finish": null,
+    "riser_counts": {
+     "SECTION_AA (Q-46 A)": 25
+    }
+   }
+  },
+  "OWNER_RULE_UP_STAIR_006": {
+   "GF_1F": {
+    "floor_bottom_finish_mm": 50.0,
+    "floor_top_finish_mm": 50.0,
+    "arrival_nosing_mm": null,
+    "nosing": {
+     "specified": false
+    },
+    "bar_detail": "ST7757.pdf p.16 TYPICAL STEEL LAYOUT - STAIR SECTION (bar takeoff not in this module)",
+    "building_type": null,
+    "stair_id": "ST-01 GF->1F",
+    "ffl_bottom_mm": 1000.0,
+    "ffl_top_mm": 5500.0,
+    "surfaces": [
+     {
+      "id": "L1",
+      "kind": "TREAD",
+      "flight": "MS1-L",
+      "finish_mm": 30.0,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "L2",
+      "kind": "TREAD",
+      "flight": "MS1-L",
+      "finish_mm": 30.0,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "L3",
+      "kind": "TREAD",
+      "flight": "MS1-L",
+      "finish_mm": 30.0,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "L4",
+      "kind": "TREAD",
+      "flight": "MS1-L",
+      "finish_mm": 30.0,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "L5",
+      "kind": "TREAD",
+      "flight": "MS1-L",
+      "finish_mm": 30.0,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "L6",
+      "kind": "TREAD",
+      "flight": "MS1-L",
+      "finish_mm": 30.0,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "L7",
+      "kind": "TREAD",
+      "flight": "MS1-L",
+      "finish_mm": 30.0,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "L8",
+      "kind": "TREAD",
+      "flight": "MS1-L",
+      "finish_mm": 30.0,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "L9",
+      "kind": "TREAD",
+      "flight": "MS1-L",
+      "finish_mm": 30.0,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "W1",
+      "kind": "WINDER",
+      "flight": "MS1-T",
+      "finish_mm": 30.0,
+      "polygon": null
+     },
+     {
+      "id": "W2",
+      "kind": "WINDER",
+      "flight": "MS1-T",
+      "finish_mm": 30.0,
+      "polygon": null
+     },
+     {
+      "id": "W3",
+      "kind": "WINDER",
+      "flight": "MS1-T",
+      "finish_mm": 30.0,
+      "polygon": null
+     },
+     {
+      "id": "W4",
+      "kind": "WINDER",
+      "flight": "MS1-T",
+      "finish_mm": 30.0,
+      "polygon": null
+     },
+     {
+      "id": "W5",
+      "kind": "WINDER",
+      "flight": "MS1-T",
+      "finish_mm": 30.0,
+      "polygon": null
+     },
+     {
+      "id": "MS1-LD",
+      "kind": "LANDING",
+      "finish_mm": 30.0,
+      "polygon": [
+       [
+        0.0,
+        0.0
+       ],
+       [
+        1200.0,
+        0.0
+       ],
+       [
+        1200.0,
+        1200.0
+       ],
+       [
+        0.0,
+        1200.0
+       ]
+      ],
+      "thickness_mm": 160.0
+     },
+     {
+      "id": "U1",
+      "kind": "TREAD",
+      "flight": "MS1-U",
+      "finish_mm": 30.0,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "U2",
+      "kind": "TREAD",
+      "flight": "MS1-U",
+      "finish_mm": 30.0,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "U3",
+      "kind": "TREAD",
+      "flight": "MS1-U",
+      "finish_mm": 30.0,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "U4",
+      "kind": "TREAD",
+      "flight": "MS1-U",
+      "finish_mm": 30.0,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "U5",
+      "kind": "TREAD",
+      "flight": "MS1-U",
+      "finish_mm": 30.0,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "U6",
+      "kind": "TREAD",
+      "flight": "MS1-U",
+      "finish_mm": 30.0,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "U7",
+      "kind": "TREAD",
+      "flight": "MS1-U",
+      "finish_mm": 30.0,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "U8",
+      "kind": "TREAD",
+      "flight": "MS1-U",
+      "finish_mm": 30.0,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "U9",
+      "kind": "TREAD",
+      "flight": "MS1-U",
+      "finish_mm": 30.0,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "U10",
+      "kind": "TREAD",
+      "flight": "MS1-U",
+      "finish_mm": 30.0,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "U11",
+      "kind": "TREAD",
+      "flight": "MS1-U",
+      "finish_mm": 30.0,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     }
+    ],
+    "flights": {
+     "MS1-L": {
+      "waist_mm": 160.0,
+      "width_mm": 1200.0,
+      "rail_sides": null,
+      "run_mm": null,
+      "run_type": "RUN_TYPE_UNKNOWN",
+      "conflict": "C-ST-4: structural plan 12 straight riser lines vs architectural plan 10 (designer item; owner 2026-10-22 18:00 (4): HELD)"
+     },
+     "MS1-T": {
+      "waist_mm": 160.0,
+      "width_mm": 1200.0,
+      "rail_sides": null,
+      "run_mm": null,
+      "run_type": "RUN_TYPE_UNKNOWN"
+     },
+     "MS1-U": {
+      "waist_mm": 160.0,
+      "width_mm": 1200.0,
+      "rail_sides": null,
+      "run_mm": null,
+      "run_type": "RUN_TYPE_UNKNOWN"
+     }
+    },
+    "stair_finish": {
+     "material": "MARBLE",
+     "source": "owner answers Q-53 / Q-66 (ASSUMED - OWNER-APPROVED)"
+    },
+    "riser_counts": {
+     "SECTION_AA (Q-46 A)": 27,
+     "STRUCTURAL_PLAN_P4 (C-ST-4)": 28
+    },
+    "riser_count_governs": "SECTION_AA (Q-46 A)"
+   },
+   "1F_2F": {
+    "floor_bottom_finish_mm": 50.0,
+    "floor_top_finish_mm": 50.0,
+    "arrival_nosing_mm": null,
+    "nosing": {
+     "specified": false
+    },
+    "bar_detail": "ST7757.pdf p.16 TYPICAL STEEL LAYOUT - STAIR SECTION (bar takeoff not in this module)",
+    "building_type": null,
+    "stair_id": "ST-01 1F->2F",
+    "ffl_bottom_mm": 5500.0,
+    "ffl_top_mm": 9700.0,
+    "surfaces": [
+     {
+      "id": "L1",
+      "kind": "TREAD",
+      "flight": "MS2-L",
+      "finish_mm": 30.0,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "L2",
+      "kind": "TREAD",
+      "flight": "MS2-L",
+      "finish_mm": 30.0,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "L3",
+      "kind": "TREAD",
+      "flight": "MS2-L",
+      "finish_mm": 30.0,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "L4",
+      "kind": "TREAD",
+      "flight": "MS2-L",
+      "finish_mm": 30.0,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "L5",
+      "kind": "TREAD",
+      "flight": "MS2-L",
+      "finish_mm": 30.0,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "L6",
+      "kind": "TREAD",
+      "flight": "MS2-L",
+      "finish_mm": 30.0,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "L7",
+      "kind": "TREAD",
+      "flight": "MS2-L",
+      "finish_mm": 30.0,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "L8",
+      "kind": "TREAD",
+      "flight": "MS2-L",
+      "finish_mm": 30.0,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "L9",
+      "kind": "TREAD",
+      "flight": "MS2-L",
+      "finish_mm": 30.0,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "L10",
+      "kind": "TREAD",
+      "flight": "MS2-L",
+      "finish_mm": 30.0,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "L11",
+      "kind": "TREAD",
+      "flight": "MS2-L",
+      "finish_mm": 30.0,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "MS2-LD-W",
+      "kind": "LANDING",
+      "finish_mm": 30.0,
+      "polygon": [
+       [
+        0.0,
+        0.0
+       ],
+       [
+        1300.0,
+        0.0
+       ],
+       [
+        1300.0,
+        1150.0
+       ],
+       [
+        0.0,
+        1150.0
+       ]
+      ],
+      "thickness_mm": 160.0
+     },
+     {
+      "id": "MS2-LD-E",
+      "kind": "LANDING",
+      "finish_mm": 30.0,
+      "polygon": [
+       [
+        1300.0,
+        0.0
+       ],
+       [
+        2500.0,
+        0.0
+       ],
+       [
+        2500.0,
+        1200.0
+       ],
+       [
+        1300.0,
+        1200.0
+       ]
+      ],
+      "thickness_mm": 160.0
+     },
+     {
+      "id": "U1",
+      "kind": "TREAD",
+      "flight": "MS2-U",
+      "finish_mm": 30.0,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "U2",
+      "kind": "TREAD",
+      "flight": "MS2-U",
+      "finish_mm": 30.0,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "U3",
+      "kind": "TREAD",
+      "flight": "MS2-U",
+      "finish_mm": 30.0,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "U4",
+      "kind": "TREAD",
+      "flight": "MS2-U",
+      "finish_mm": 30.0,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "U5",
+      "kind": "TREAD",
+      "flight": "MS2-U",
+      "finish_mm": 30.0,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "U6",
+      "kind": "TREAD",
+      "flight": "MS2-U",
+      "finish_mm": 30.0,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "U7",
+      "kind": "TREAD",
+      "flight": "MS2-U",
+      "finish_mm": 30.0,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "U8",
+      "kind": "TREAD",
+      "flight": "MS2-U",
+      "finish_mm": 30.0,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "U9",
+      "kind": "TREAD",
+      "flight": "MS2-U",
+      "finish_mm": 30.0,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "U10",
+      "kind": "TREAD",
+      "flight": "MS2-U",
+      "finish_mm": 30.0,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     },
+     {
+      "id": "U11",
+      "kind": "TREAD",
+      "flight": "MS2-U",
+      "finish_mm": 30.0,
+      "going_mm": 300.0,
+      "width_mm": 1200.0
+     }
+    ],
+    "flights": {
+     "MS2-L": {
+      "waist_mm": 160.0,
+      "width_mm": 1200.0,
+      "rail_sides": null,
+      "run_mm": null,
+      "run_type": "RUN_TYPE_UNKNOWN"
+     },
+     "MS2-U": {
+      "waist_mm": 160.0,
+      "width_mm": 1200.0,
+      "rail_sides": null,
+      "run_mm": null,
+      "run_type": "RUN_TYPE_UNKNOWN"
+     }
+    },
+    "stair_finish": {
+     "material": "MARBLE",
+     "source": "owner answers Q-53 / Q-66 (ASSUMED - OWNER-APPROVED)"
+    },
+    "riser_counts": {
+     "SECTION_AA (Q-46 A)": 25
+    }
+   }
+  }
+ }
+}

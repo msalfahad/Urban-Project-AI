@@ -1,0 +1,119 @@
+{
+ "rule_set": "URBAN_RULES",
+ "version": "1.7.0",
+ "base": {
+  "rule_set": "URBAN_RULES",
+  "version": "1.6.0",
+  "file": "rules/owner_decisions/URBAN_RULES_1.6.0.json"
+ },
+ "rule": "an overlay over URBAN_RULES 1.6.0: an OWNER_APPROVED record replaces the record with the same rule_id or adds a new rule; the 1.4.0, 1.5.0 and 1.6.0 files are never edited; frozen results keep the version they were computed with. engine/source/rule_store.py does not resolve 1.6.0 or 1.7.0 yet (registering them is part of the integration path); no method reads this file today",
+ "records": [
+  {
+   "rule_id": "UP-STAIR-016",
+   "version": "1.0.0",
+   "supersedes": null,
+   "status": "OWNER_APPROVED",
+   "approval": {
+    "by": "owner (Urban Projects)",
+    "on": "2026-10-24",
+    "source": "owner main chat 2026-10-24 10:02 (method), S-4 answered 10:28 (option C with clarification), S-5 .. S-8 answered 10:56, S-9 and corrections 13:50, final clarifications 13:53; recorded in docs/agents/OWNER_RULE_STAIRS_2026-10-24.md sections 1 - 6 on agents/control"
+   },
+   "rule_name": "Stair finish-level method, owner preference ranges as checks, and design scenarios for undefined stairs",
+   "names": {
+    "ar": [
+     "القائم",
+     "النايم",
+     "البسطة",
+     "بيت الدرج",
+     "منسوب الخرسانة",
+     "منسوب التشطيب",
+     "سماكة التشطيب",
+     "درج رخام",
+     "بروز الدرج"
+    ],
+    "en": [
+     "riser",
+     "going / tread",
+     "landing",
+     "stairwell",
+     "structural concrete level",
+     "finished floor level (FFL)",
+     "finishing build-up",
+     "marble stair finishing",
+     "stair projection"
+    ]
+   },
+   "trade": "MARBLE",
+   "scope": "STAIR",
+   "rule_kind": "MEASUREMENT_RULE",
+   "default_or_mandatory": "CHECK",
+   "project_override_allowed": true,
+   "country_context": "KUWAIT",
+   "owner_confirmed": true,
+   "inputs": {
+    "ffl_bottom / ffl_top": "finished floor levels; the riser basis is FFL to FFL (S-3, unchanged)",
+    "F0 / F1": "finishing build-up above the structural slab at the lower / upper floor, from the drawings or approved details; otherwise HELD (never 10 cm, never 0)",
+    "S_i": "finish above structural tread / landing i, from the drawings or approved details; UP-STAIR-006 (0.030 m tread finish unless drawing / specification / owner) is unchanged",
+    "surfaces": "drawn treads and landings in the order of ascent; goings and landing footprints derived from each flight configuration"
+   },
+   "calculation_method": [
+    "1 intended finished riser R = (FFL_top - FFL_bottom) / risers, uniform",
+    "2 concrete level under a surface = its finished level - its finish; riser i concrete = R + S(i-1) - S(i); first = R + F0 - S1; last = R + S(last tread) - F1 (sign convention checked by the main chat, section 2)",
+    "3 never hardcode 25 / 15 / 5 or 26 / 16 / 6; never assume equal floor and stair finishes",
+    "4 count actual goings per flight from the drawn tread surfaces, never risers minus one unless the configuration demonstrates it; a landing is never a going and its footprint is its drawn polygon",
+    "5 checks on a drawn stair: finished riser 150 - 170 mm, going 280 - 300 mm (owner preferences, not defaults, not mandatory requirements); a value outside is a finding, never a change (S-8, UP-STAIR-002)",
+    "6 undrawn or insufficiently defined stair (S-4 C, S-5): evaluate riser counts in 150 - 170 and continuous going intervals in 280 - 300 (S-6), eliminate by FFL rise, available run (FIXED / MAXIMUM; RUN_TYPE_UNKNOWN gives scenarios only), stairwell, landings, headroom and verified requirements; present remaining alternatives; never auto-select; affected BOQ quantities HELD; 0.16 / 0.30 only as a labelled illustrative scenario",
+    "7 no generated winders, no assumed off-axis offset (S-9); drawn and dimensioned winders measured from their geometry, otherwise HELD / UNSUPPORTED",
+    "8 BOQ quantities (concrete, bars, formwork, marble treads / risers m2 and pieces, landing marble, nosing, rail along the slope by side) from ONE stair geometry, each released on its own evidence; HELD = blank; scenario ranges in a separate report"
+   ],
+   "boq_outputs": [
+    "per-riser finished / structural levels and heights, each HELD where a finish is unknown",
+    "per-flight riser and going counts with the configuration evidence",
+    "findings PROJECTION, MISALIGNED_TOP, EXTRA_OR_MISSING_STEP, LANDING_DEPTH, HEADROOM, ARCH_STRUCT_DISAGREE, OUTSIDE_OWNER_PREFERENCE",
+    "component lines with their own status; a separate design-scenario report"
+   ],
+   "relations": {
+    "UP-STAIR-002": "unchanged: drawn counts govern; the new ranges are checks on drawn stairs",
+    "UP-STAIR-015": "unchanged in URBAN_RULES 1.6.0; its 0.16 / 0.30 values become an illustrative scenario only for undefined stairs (S-4 point 7); the check limits for drawn stairs are this record's ranges",
+    "UP-STAIR-009": "unchanged diagnostic range 0.155 - 0.165, not a limit",
+    "UP-STAIR-003 / UP-STAIR-006": "unchanged: visible riser = riser - build-up of the surface it rises onto; 0.030 m tread finish unless drawing / specification / owner",
+    "S-3": "unchanged: floor height = FFL to FFL"
+   },
+   "open_points": [
+    {
+     "id": "S-4",
+     "status": "ANSWERED",
+     "answer": "option C with the 8-point clarification (2026-10-24 10:28)"
+    },
+    {
+     "id": "S-5",
+     "status": "ANSWERED",
+     "answer": "two levels: preliminary layout sufficiency and final BOQ sufficiency"
+    },
+    {
+     "id": "S-6",
+     "status": "ANSWERED",
+     "answer": "continuous going intervals, not a grid; alternatives never approved automatically"
+    },
+    {
+     "id": "S-7",
+     "status": "ANSWERED",
+     "answer": "sources named (Kuwait Municipality private housing incl. MD 288/2024, building regulations, Kuwait Universal Design Code); no clause verified: CODE NOT VERIFIED; Universal Design Code s.4 excludes private houses (owner reading 13:50)"
+    },
+    {
+     "id": "S-8",
+     "status": "ANSWERED",
+     "answer": "drawn geometry preserved; verified mandatory conflicts flagged for designer review, distinct from owner-preference deviations; no certification"
+    },
+    {
+     "id": "S-9",
+     "status": "ANSWERED",
+     "answer": "no generated winders, no off-axis offset; drawn dimensioned winders measured, else HELD / UNSUPPORTED"
+    }
+   ],
+   "statuses": "SOFTWARE_VERIFIED, QUANTITY_VERIFIED and CODE_NOT_VERIFIED are reported separately (owner 13:53); no regulatory-compliance claim while CODE_NOT_VERIFIED",
+   "implementation": "engine/source/stair_finish_levels_v1.py (T-267; UNWIRED_PRODUCER, read by no method)",
+   "acceptance": "OWNER_RULE_STAIRS_2026-10-24.md section 5 (A1 - A23 + A12b) and the owner's 15 tests: tests/t267_stair_finish_levels"
+  }
+ ]
+}
