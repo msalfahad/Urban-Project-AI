@@ -1,0 +1,152 @@
+{
+ "arc_dimensions_mm": [
+  167.2
+ ],
+ "crosswalk": {
+  "DOOR": {
+   "AGREE": [
+    "D-1F-01",
+    "D-1F-02",
+    "D-1F-03",
+    "D-1F-04",
+    "D-1F-05",
+    "D-1F-06",
+    "D-1F-07",
+    "D-1F-08",
+    "D-1F-09",
+    "D-1F-10",
+    "D-2F-01",
+    "D-2F-02",
+    "D-2F-03",
+    "D-GF-01",
+    "D-GF-02",
+    "D-GF-03",
+    "D-GF-04",
+    "D-GF-05",
+    "D-GF-06",
+    "D-GF-07",
+    "D-GF-08",
+    "D-GF-09",
+    "D-GF-10",
+    "D-GF-11",
+    "D-GF-12",
+    "D-GF-13",
+    "D-GF-14",
+    "D-GF-15"
+   ],
+   "EXTRA_IN_LIST": [],
+   "MISSING_FROM_LIST": []
+  },
+  "WINDOW": {
+   "AGREE": [
+    "W01",
+    "W02",
+    "W03",
+    "W04",
+    "W05",
+    "W06",
+    "W07",
+    "W08",
+    "W09",
+    "W10",
+    "W11",
+    "W12",
+    "W13",
+    "W14",
+    "W15",
+    "W16",
+    "W17",
+    "W18",
+    "W19",
+    "W20",
+    "W21",
+    "W22",
+    "W23",
+    "W24",
+    "W25",
+    "W26",
+    "W27",
+    "W28",
+    "W29"
+   ],
+   "EXTRA_IN_LIST": [],
+   "MISSING_FROM_LIST": []
+  }
+ },
+ "doors_by_floor": {
+  "1F": 10,
+  "2F": 3,
+  "GF": 14
+ },
+ "dxf_opening_tags_found": 0,
+ "elevation_binding": {
+  "NE": {
+   "ambiguous": [],
+   "bound": 3,
+   "features": 3,
+   "offset_m": 15.79,
+   "unbound": []
+  },
+  "NW": {
+   "ambiguous": [],
+   "bound": 4,
+   "features": 4,
+   "offset_m": -1.2,
+   "unbound": []
+  },
+  "SE": {
+   "ambiguous": [],
+   "bound": 4,
+   "features": 4,
+   "offset_m": 13.5,
+   "unbound": []
+  },
+  "SW": {
+   "ambiguous": [],
+   "bound": 12,
+   "features": 12,
+   "offset_m": 18.808,
+   "unbound": []
+  }
+ },
+ "id_binding": {
+  "engine_position": 57,
+  "unbound": 0,
+  "unique_attribute": 2
+ },
+ "nw_dimensions_mm": {
+  "W03_height_4300": [
+   "F28",
+   "2E7A"
+  ],
+  "W18_head_2160.7": [
+   "2EFA"
+  ],
+  "W18_sill_839.3": [
+   "2EEC"
+  ],
+  "W18_width_500": [
+   "696",
+   "11ED",
+   "2485",
+   "24BC",
+   "29DE",
+   "2A18",
+   "2D8D"
+  ]
+ },
+ "plan_symbols": {
+  "arches": 2,
+  "doors": 27,
+  "gates": 1,
+  "windows": 29
+ },
+ "schedule_issued": false,
+ "task": "T-249",
+ "windows_by_floor": {
+  "1F": 13,
+  "2F": 4,
+  "GF": 12
+ },
+ "windows_with_elevation": 23
+}

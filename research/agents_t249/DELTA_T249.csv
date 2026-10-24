@@ -1,0 +1,9 @@
+OPENING,FLOOR,CONSEQUENCE,LINE,UNIT,IN_V29,IN_V308,DELTA,STATUS,SOURCE,NOTE
+W18,1F,window supply line,WINDOWS (aluminium) m2,m2,absent,absent,+1.080,DRAWING-CONFIRMED,"0.50 x 2.16: plan glazing symbol 0.500 (this inventory) = NW DIMENSION 500 (printed 50); NW 839.3 / 2160.7 from +5.50 (printed 84 / 216, T-083 / T-194); rectangular, Q-32 A not engaged",carry into the T-232 window line
+W18,1F,window supply line,WINDOWS (aluminium) pcs,nr,absent,absent,+1,DRAWING-CONFIRMED,"one plan glazing symbol, one NW elevation window",
+W18,1F,blockwork deduction,1F-W00 net block m2,m2,n/a (research),n/a (research),0.000,DRAWING-CONFIRMED,T-175 T175_OPENING_CONSEQUENCES.csv already deducts 1.080 from host 1F-W00,no new delta: the masonry ledger knew the window; only the window line did not
+W18,1F,finishes deduction,1F bath wall tile / external plaster-paint,m2,n/a (research),n/a (research),0.000,DRAWING-CONFIRMED,"T-175 face A WALL_TILE 1.080, face B EXTERNAL_PLASTER_PAINT 1.080; T-128 r3 1F-12 W18 0.50 sill 0.84",no new delta
+W03,GF,window supply line,WINDOWS (aluminium) m2,m2,absent,absent,+28.251,DRAWING-CONFIRMED,"6.57 (printed 657 on sheet03; owner Q-38 A names it the governing width) x 4.30 (NW DIMENSION 4300 from +1.00, printed 430); the plan symbol is the curved glazed band (glass lines 6.66 .. 6.79 m, record only)",carry into the T-232 window line
+W03,GF,window supply line,WINDOWS (aluminium) pcs,nr,absent,absent,+1,DRAWING-CONFIRMED,one curved glazing symbol on the GF plan; NW elevation draws it (T-194),
+W03,GF,blockwork deduction,GF-W37 (glazed line),m2,n/a,n/a,0.000,NOT_APPLICABLE,"T-175: host is GLAZED, no masonry built in this line, nothing to deduct",build before deduct (ERS s.3)
+W03,GF,finishes deduction,GF-08 / GF-15 plaster-paint,m,n/a (research),n/a (research),HELD,HELD,T-128 r3 room-side split 1.625 + 5.106 = 6.731 m vs drawn room-face arc 6.5675 m (Verifier 00:12),T-250 owns the room-side developed line; not settled here

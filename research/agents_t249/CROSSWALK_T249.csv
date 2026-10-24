@@ -1,0 +1,69 @@
+CENSUS_ID,CENSUS_KIND,FLOOR,T198_LIST,T236_INVENTORY,T232_INPUT,INVENTORY_T249,STATUS,NOTE
+D-GF-01,DOOR,GF,yes,yes,yes (T-198 ids),yes,AGREE,
+D-GF-02,DOOR,GF,yes,yes,yes (T-198 ids),yes,AGREE,
+D-GF-03,DOOR,GF,yes,yes,yes (T-198 ids),yes,AGREE,
+D-GF-04,DOOR,GF,yes,yes,yes (T-198 ids),yes,AGREE,
+D-GF-05,DOOR,GF,yes,yes,yes (T-198 ids),yes,AGREE,
+D-GF-06,DOOR,GF,yes,yes,yes (T-198 ids),yes,AGREE,
+D-GF-07,DOOR,GF,yes,yes,yes (T-198 ids),yes,AGREE,
+D-GF-08,DOOR,GF,yes,yes,yes (T-198 ids),yes,AGREE,
+D-GF-09,DOOR,GF,yes,yes,yes (T-198 ids),yes,AGREE,
+D-GF-10,DOOR,GF,yes,yes,yes (T-198 ids),yes,AGREE,
+D-GF-11,DOOR,GF,yes,yes,yes (T-198 ids),yes,AGREE,
+D-GF-12,DOOR,GF,yes,yes,yes (T-198 ids),yes,AGREE,
+D-GF-13,DOOR,GF,yes,yes,yes (T-198 ids),yes,AGREE,
+D-GF-14,DOOR,GF,yes,yes,yes (T-198 ids),yes,AGREE,
+D-GF-15,GATE,GF,yes,no (kind not counted),no,yes,AGREE,
+D-1F-01,DOOR,1F,yes,yes,yes (T-198 ids),yes,AGREE,
+D-1F-02,DOOR,1F,yes,yes,yes (T-198 ids),yes,AGREE,
+D-1F-03,DOOR,1F,yes,yes,yes (T-198 ids),yes,AGREE,
+D-1F-04,DOOR,1F,yes,yes,yes (T-198 ids),yes,AGREE,
+D-1F-05,DOOR,1F,yes,yes,yes (T-198 ids),yes,AGREE,
+D-1F-06,DOOR,1F,yes,yes,yes (T-198 ids),yes,AGREE,
+D-1F-07,DOOR,1F,yes,yes,yes (T-198 ids),yes,AGREE,
+D-1F-08,DOOR,1F,yes,yes,yes (T-198 ids),yes,AGREE,
+D-1F-09,DOOR,1F,yes,yes,yes (T-198 ids),yes,AGREE,
+D-1F-10,DOOR,1F,yes,yes,yes (T-198 ids),yes,AGREE,
+D-2F-01,DOOR,2F,yes,yes,yes (T-198 ids),yes,AGREE,
+D-2F-02,DOOR,2F,yes,yes,yes (T-198 ids),yes,AGREE,
+D-2F-03,DOOR,2F,yes,yes,yes (T-198 ids),yes,AGREE,
+W01,WINDOW,GF,yes,yes,yes (T-198 ids),yes,AGREE,
+W02,WINDOW,GF,yes,yes,yes (T-198 ids),yes,AGREE,
+W03,WINDOW,GF,yes,yes,yes (T-198 ids),yes,AGREE,"in the census and drawn on plan + elevation, but in NO window line of V2.9 or V3.0.8 (T-236 F5): the engine produced no opening record for it"
+W04,WINDOW,GF,yes,yes,yes (T-198 ids),yes,AGREE,
+W05,WINDOW,GF,yes,yes,yes (T-198 ids),yes,AGREE,
+W06,WINDOW,GF,yes,yes,yes (T-198 ids),yes,AGREE,
+W07,WINDOW,GF,yes,yes,yes (T-198 ids),yes,AGREE,
+W08,WINDOW,GF,yes,yes,yes (T-198 ids),yes,AGREE,
+W09,WINDOW,GF,yes,yes,yes (T-198 ids),yes,AGREE,
+W10,WINDOW,GF,yes,yes,yes (T-198 ids),yes,AGREE,
+W11,WINDOW,GF,yes,yes,yes (T-198 ids),yes,AGREE,
+W12,WINDOW,GF,yes,yes,yes (T-198 ids),yes,AGREE,
+W13,WINDOW,1F,yes,yes,yes (T-198 ids),yes,AGREE,
+W14,WINDOW,1F,yes,yes,yes (T-198 ids),yes,AGREE,
+W15,WINDOW,1F,yes,yes,yes (T-198 ids),yes,AGREE,
+W16,WINDOW,1F,yes,yes,yes (T-198 ids),yes,AGREE,
+W17,WINDOW,1F,yes,yes,yes (T-198 ids),yes,AGREE,
+W18,WINDOW,1F,yes,yes,yes (T-198 ids),yes,AGREE,"in the census and drawn on plan + elevation, but in NO window line of V2.9 or V3.0.8 (T-236 F5): the engine produced no opening record for it"
+W19,WINDOW,1F,yes,yes,yes (T-198 ids),yes,AGREE,
+W20,WINDOW,1F,yes,yes,yes (T-198 ids),yes,AGREE,
+W21,WINDOW,1F,yes,yes,yes (T-198 ids),yes,AGREE,
+W22,WINDOW,1F,yes,yes,yes (T-198 ids),yes,AGREE,
+W23,WINDOW,1F,yes,yes,yes (T-198 ids),yes,AGREE,
+W24,WINDOW,1F,yes,yes,yes (T-198 ids),yes,AGREE,
+W25,WINDOW,1F,yes,yes,yes (T-198 ids),yes,AGREE,
+W26,WINDOW,2F,yes,yes,yes (T-198 ids),yes,AGREE,
+W27,WINDOW,2F,yes,yes,yes (T-198 ids),yes,AGREE,
+W28,WINDOW,2F,yes,yes,yes (T-198 ids),yes,AGREE,
+W29,WINDOW,2F,yes,yes,yes (T-198 ids),yes,AGREE,
+SX-01,OPENING,GF,yes,no (kind not counted),no,no,NOT_IN_SCOPE,"leafless / unglazed gap (passage, lift, filling, unresolved): no plan symbol of its own; existence rests on T-175 / T-194 wall-gap reads, outside this inventory (named limit)"
+SX-03,OPENING,GF,yes,no (kind not counted),no,no,NOT_IN_SCOPE,"leafless / unglazed gap (passage, lift, filling, unresolved): no plan symbol of its own; existence rests on T-175 / T-194 wall-gap reads, outside this inventory (named limit)"
+A-GF-01,OPENING,GF,yes,no (kind not counted),no,yes,AGREE,arch block on the plan
+A-1F-01,OPENING,1F,yes,no (kind not counted),no,yes,AGREE,arch block on the plan
+L-GF-01,LIFT,GF,yes,no (kind not counted),no,no,NOT_IN_SCOPE,"leafless / unglazed gap (passage, lift, filling, unresolved): no plan symbol of its own; existence rests on T-175 / T-194 wall-gap reads, outside this inventory (named limit)"
+L-1F-01,LIFT,1F,yes,no (kind not counted),no,no,NOT_IN_SCOPE,"leafless / unglazed gap (passage, lift, filling, unresolved): no plan symbol of its own; existence rests on T-175 / T-194 wall-gap reads, outside this inventory (named limit)"
+L-2F-01,LIFT,2F,yes,no (kind not counted),no,no,NOT_IN_SCOPE,"leafless / unglazed gap (passage, lift, filling, unresolved): no plan symbol of its own; existence rests on T-175 / T-194 wall-gap reads, outside this inventory (named limit)"
+U-01,UNRESOLVED,GF,yes,no (kind not counted),no,no,NOT_IN_SCOPE,"leafless / unglazed gap (passage, lift, filling, unresolved): no plan symbol of its own; existence rests on T-175 / T-194 wall-gap reads, outside this inventory (named limit)"
+P-GF-01,OPENING,GF,yes,no (kind not counted),no,no,NOT_IN_SCOPE,"leafless / unglazed gap (passage, lift, filling, unresolved): no plan symbol of its own; existence rests on T-175 / T-194 wall-gap reads, outside this inventory (named limit)"
+P-1F-01,OPENING,1F,yes,no (kind not counted),no,no,NOT_IN_SCOPE,"leafless / unglazed gap (passage, lift, filling, unresolved): no plan symbol of its own; existence rests on T-175 / T-194 wall-gap reads, outside this inventory (named limit)"
+P-GF-05,OPENING,GF,yes,no (kind not counted),no,no,NOT_IN_SCOPE,"leafless / unglazed gap (passage, lift, filling, unresolved): no plan symbol of its own; existence rests on T-175 / T-194 wall-gap reads, outside this inventory (named limit)"
