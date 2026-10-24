@@ -18,12 +18,12 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 3185 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 3187 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 16 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 1581 | pytest suites, one folder per round. |
-| `tools/` | 112 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
+| `tests/` | 1584 | pytest suites, one folder per round. |
+| `tools/` | 113 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (254 modules)
 
@@ -186,7 +186,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `rebar_sanity_qa.py` | 29 | MEDIUM | 3 | kg/m3 QA helper - production-layer sanity check, not the reinforcement quantity. |
 | `recall_matrix.py` | 112 | MEDIUM | 2 | E100 — three recalls, two denominators, and no silent switch between them. |
 | `reconcile.py` | 214 | MEDIUM | 2 | E30 — Benchmark Reconciler. |
-| `reference_mapping.py` | 237 | HIGH | 18 | E72 — a reference may only be opened where it maps to ONE space. |
+| `reference_mapping.py` | 237 | HIGH | 19 | E72 — a reference may only be opened where it maps to ONE space. |
 | `region_boundary.py` | 272 | MEDIUM | 5 | E90 — turn a pixel region into an ordered rectilinear ring of runs. |
 | `release.py` | 161 | HIGH | 4 | E33 — Exception routing and release control. |
 | `release_blocker.py` | 174 | HIGH | 1 | E83 — when release recall stays at zero, WHICH dependency is holding it. |
@@ -432,7 +432,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `blocker_remediation.py` | 74 | MEDIUM | 1 | BLOCKER_REMEDIATION_ENGINE (generic). |
 | `boq_canonical.py` | 134 | MEDIUM | 2 | CANONICAL BOQ ITEM MODEL (RC1) - one payable identity per physical measurement item. |
 | `boq_evidence.py` | 43 | MEDIUM | 1 | BOQ EVIDENCE MAPPING (R8.20) - which release blockers can change a quantity. |
-| `boq_line.py` | 386 | HIGH | 60 | CANONICAL BOQ LINE (M9 S1) - one payable physical measurement per line, bilingual, traceable (generic; stdlib only). |
+| `boq_line.py` | 386 | HIGH | 62 | CANONICAL BOQ LINE (M9 S1) - one payable physical measurement per line, bilingual, traceable (generic; stdlib only). |
 | `boq_reconcile.py` | 172 | CRITICAL | 2 | GENERIC BOQ RECONCILIATION (M7) - a frozen engine run against a reference bill of quantities, by family and |
 | `boq_report.py` | 94 | HIGH | 5 | BOQ REPORT LAYER (R8.19) - a PRESENTATION layer over evidence rows. It calculates NOTHING. |
 | `cad_guards.py` | 188 | MEDIUM | 3 | CAD / SOURCE GUARDS learnt from blind donor runs (generic). |
@@ -714,7 +714,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `shx_arabic.py` | 359 | HIGH | 1 | SHX ARABIC TEXT INTAKE - Arabic notes and labels drawn with legacy SHX fonts (TEXT, MTEXT, ATTRIB). |
 | `unit_evidence.py` | 139 | HIGH | 2 | Deterministic unit / scale EVIDENCE from a D1 (LibreDWG JSON) decode — R8.3 §16. |
 
-## `tools/` (105 modules)
+## `tools/` (106 modules)
 
 | Module | Lines | Risk | Imp | Purpose |
 |---|---|---|---|---|
@@ -741,7 +741,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `audit_cad_source.py` | 155 | MEDIUM | 2 | Representation audit of an authored CAD source. No measurement. |
 | `audit_dwf_source.py` | 175 | MEDIUM | 0 | Structural audit of a DWF package. Representation only, no geometry read. |
 | `audit_submission_set.py` | 133 | MEDIUM | 1 | Per-page representation census of a multi-sheet source. No measurement. |
-| `boq_export_v1.py` | 1183 | MEDIUM | 3 | BOQ EXPORT V1 (task T-235, hand-in r1) - ONE command that writes a candidate BOQ as BOQ.xlsx + BOQ.csv + |
+| `boq_export_v1.py` | 1183 | MEDIUM | 4 | BOQ EXPORT V1 (task T-235, hand-in r1) - ONE command that writes a candidate BOQ as BOQ.xlsx + BOQ.csv + |
 | `campaign.py` | 245 | MEDIUM | 1 | Run and review a project marketing campaign (A17 + E21). |
 | `codemap.py` | 937 | MEDIUM | 0 | CODE MAP - the navigation layer for Claude Code (and people): where code, rules, tests and known defects live. |
 | `compare_source_provenance.py` | 301 | MEDIUM | 1 | Did a transformation destroy vector information, or recompress a scan? |
@@ -796,7 +796,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `pdf_evidence.py` | 446 | MEDIUM | 1 | PDF EVIDENCE (M3) - typical-detail evidence from a drawing PDF: native text first, then the vector check, then |
 | `phase0_audit.py` | 94 | MEDIUM | 0 | Phase 0 CLI: audit a BOQ/takeoff Excel, and optionally test-write the result. |
 | `read_document_text.py` | 77 | MEDIUM | 0 | Read AR-00's vector-outline text once, and cache every answer. |
-| `release_baseline.py` | 446 | HIGH | 2 | RELEASE BASELINE RUNNER (T-165): one pinned definition of a baseline run of the released architectural method + route |
+| `release_baseline.py` | 446 | HIGH | 3 | RELEASE BASELINE RUNNER (T-165): one pinned definition of a baseline run of the released architectural method + route |
 | `run_cad_pipeline.py` | 574 | MEDIUM | 2 | One CAD run: decode, normalize, profile, localise, measure, freeze. |
 | `run_e1.py` | 877 | MEDIUM | 0 | E1 — align the frozen A18 reading to exact CAD geometry, then freeze. |
 | `run_e1_1.py` | 1359 | MEDIUM | 0 | E1.1 — CAD entity role and region ownership correction, then freeze. |
@@ -821,7 +821,8 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `urban_intake.py` | 225 | CRITICAL | 27 | URBAN INTAKE (M2) - one drawing file -> a plain, source-pointed geometry record for the generic engine. |
 | `urban_project_run.py` | 321 | CRITICAL | 1 | URBAN PROJECT RUN (M7) - one manifest per project; the blind protocol enforced by the tool, not remembered. |
 | `urban_structural_boq.py` | 602 | CRITICAL | 3 | URBAN STRUCTURAL BOQ (M1) - one command from a drawing set to a planning BOQ, an exception report, Excel and PDF. |
-| `v30_gate_b.py` | 408 | MEDIUM | 1 | V3.0 GATE B AUTOMATED CHECKS (T-156) for the Checker: a line-by-line before / after BOQ diff with the hand-check |
+| `v30_gate_b.py` | 408 | MEDIUM | 3 | V3.0 GATE B AUTOMATED CHECKS (T-156) for the Checker: a line-by-line before / after BOQ diff with the hand-check |
+| `v30_gate_b_v2.py` | 1022 | MEDIUM | 2 | V3.0 GATE B v2 (T-168): the Gate B diff of tools/v30_gate_b.py (T-156, kept unchanged and still usable) run against |
 | `wall_v2_diagnostic.py` | 231 | MEDIUM | 1 | Wall extraction V2 — measure the representation, then rebuild the graph. |
 
 `tools/run_e1_2.py` symbols: def layer_roles (L120-146), def prepare (L149-155), def ground_floor (L158-168), class IntervalPrim (L173-206), def interval_prims (L209-221), def boundary_role_of (L224-231), def interpret (L236-278), def build_candidates (L302-344), def build_sandbox (L349-413), def code_hashes (L416-423), def source_crops (L494-515), def candidate_overlays (L518-573), def phase_geometry (L607-777), def phase_v2_inputs (L982-1027), def release_decision (L1054-1132), def phase_finalize (L1137-1479), def main (L1605-1630)
@@ -1073,6 +1074,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t164_railings/` | 1 |
 | `tests/t165_release_baseline/` | 1 |
 | `tests/t167_arch_v304/` | 1 |
+| `tests/t168_gate_b_v2/` | 2 |
 | `tests/t171_bar_population/` | 1 |
 | `tests/t172_edges/` | 1 |
 | `tests/t173_shaft/` | 1 |
@@ -1344,6 +1346,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t165/` | 6 |
 | `research/agents_t166/` | 4 |
 | `research/agents_t167/` | 6 |
+| `research/agents_t168/` | 2 |
 | `research/agents_t169/` | 4 |
 | `research/agents_t171/` | 2 |
 | `research/agents_t172/` | 8 |
