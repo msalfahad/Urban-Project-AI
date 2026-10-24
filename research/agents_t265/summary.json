@@ -1,0 +1,72 @@
+{
+ "policy": "GB_BAR_POPULATION_V1",
+ "inputs": [
+  "research/agents_t253/LEDGER_T253.csv"
+ ],
+ "tb_reading": {
+  "reading": "PER_LAYER_BY_LEADER",
+  "top": [
+   [
+    2,
+    14
+   ]
+  ],
+  "bottom": [
+   [
+    3,
+    16
+   ]
+  ],
+  "rejected": [
+   [
+    "LITERAL_BOTH_LAYERS",
+    "every label in both layers does not fit the section width 0.20 m at cover 0.025 m"
+   ]
+  ]
+ },
+ "lengths_m": {
+  "boundary_band": 44.07,
+  "main_exterior": 55.9912,
+  "annex_conflict": 29.7063
+ },
+ "families": {
+  "BOUNDARY_GB": {
+   "released_lower_bound_kg": 315.564,
+   "by_component_kg": {
+    "TOP": 106.639,
+    "BOTTOM_ROW_1": 208.925
+   },
+   "held": 11
+  },
+  "GB_EXTERIOR": {
+   "released_lower_bound_kg": 995.396,
+   "by_component_kg": {
+    "TOP": 265.438,
+    "BOTTOM_ROW_1": 265.438,
+    "BOTTOM_ROW_2": 265.438,
+    "SIDE": 199.082
+   },
+   "held": 26
+  },
+  "GB_COURT": {
+   "released_lower_bound_kg": null,
+   "by_component_kg": {},
+   "held": 3
+  },
+  "PAVING": {
+   "released_lower_bound_kg": null,
+   "by_component_kg": {},
+   "held": 0
+  }
+ },
+ "annex_reading_if_p13_applied_kg": {
+  "top_bottom_depth_invariant": 422.49,
+  "status": "HELD (CONFLICT: not a quantity)"
+ },
+ "boundary_bottom_fits": {
+  "cover_0.025": true,
+  "cover_0.07_soil": false,
+  "note": "3 d16 cannot stand in 0.20 m at the note-22 soil cover 7 cm: designer item; the printed count is kept (counts and lengths do not depend on cover)"
+ },
+ "literal_tb_both_layers_kg_rejected": 631.126
+}
