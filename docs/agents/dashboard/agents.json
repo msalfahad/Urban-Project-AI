@@ -5,62 +5,62 @@
 "cadence": "daily 07:31 Kuwait (04:31 UTC) + pilot check-ins 00:15, 06:20 UTC",
 "last_run": "2026-10-23T21:29:00Z",
 "result": "ok",
-"working_on": "Lock-safety fix deployed after the 21:11 checker run (all lock tests passed); next: pilot check-in 00:15 UTC and the pilot final report 06:20 UTC",
-"as_of": "2026-10-23T22:20:00Z"
+"working_on": "Pilot check-in +18 h due 00:15 UTC, pilot final report 06:20 UTC, daily update 04:31 UTC",
+"as_of": "2026-10-24T00:20:00Z"
 },
 {
 "agent": "1 LEAD – plans & assigns work",
 "role": "Plans the work, keeps the board, milestones and element register, writes your report",
 "cadence": "pilot: every 2 h at :09 (until 2026-10-24 06:15)",
-"last_run": "2026-10-23T22:11:00Z",
+"last_run": "2026-10-24T00:10:00Z",
 "result": "running",
-"working_on": "Checker queue: plaster / paint package and the arched-opening fix first, whole slab line next; new beam and ground-beam whole-line tasks; floor-line fixes (dressing, sills) planned",
-"as_of": "2026-10-23T22:20:00Z"
+"working_on": "9 checked results classified; lane I order for the four lines that can close (slab, floor area, plaster / paint, doors / windows); new tasks for the red register check, columns, the window tag list, face lengths, export identity; one owner question (curved pool window)",
+"as_of": "2026-10-24T00:20:00Z"
 },
 {
 "agent": "2 WORKER 1 – Structural",
 "role": "Structural lane: concrete, rebar by bar population, formwork",
 "cadence": "pilot: hourly at :19",
-"last_run": "2026-10-23T21:20:00Z",
+"last_run": "2026-10-23T23:21:00Z",
 "result": "ok",
-"working_on": "Whole slab line handed in (60.280 m3 from the drawings, closable); next: trade completeness check, then the beam and ground-beam lines",
-"as_of": "2026-10-23T22:20:00Z"
+"working_on": "Beam whole line handed in and merged (66.016 m3 measured + conflict and held ranges); next: ground beams, then columns and necks as whole lines",
+"as_of": "2026-10-24T00:20:00Z"
 },
 {
 "agent": "3 WORKER 2 – Architectural & finishes",
 "role": "Architecture and finishes lane: floors, walls, plaster, paint, tiles, ceilings, openings, waterproofing",
 "cadence": "pilot: hourly at :39",
-"last_run": "2026-10-23T21:41:00Z",
+"last_run": "2026-10-23T23:43:00Z",
 "result": "ok",
-"working_on": "Arched-opening fix handed in (68 openings re-read); next: drawing handles for the wall census, then the dressing / unlabelled spaces in the floor line",
-"as_of": "2026-10-23T22:20:00Z"
+"working_on": "Wall-face cross-check merged (75 faces, 0 double deductions); next: fix the red drawing-register check, then the window list from the drawn tags",
+"as_of": "2026-10-24T00:20:00Z"
 },
 {
 "agent": "4 WORKER 3 – Integration into V3.0",
 "role": "Integration lane: wires checker-verified pieces into the one opt-in candidate",
-"cadence": "every 2 h at :59 (even hours)",
-"last_run": "2026-10-23T21:00:00Z",
+"cadence": "every 2 h at :59 (even hours UTC)",
+"last_run": "2026-10-23T22:59:39Z",
 "result": "ok",
-"working_on": "Plaster and paint package handed in for the checker; next 22:59: the one-command BOQ export (XLSX / CSV)",
-"as_of": "2026-10-23T22:20:00Z"
+"working_on": "BOQ export tool merged (real candidate refused on two project identities); next 00:59: doors and windows in pcs and m2 into the candidate",
+"as_of": "2026-10-24T00:20:00Z"
 },
 {
 "agent": "5 CHECKER – verifies & merges",
 "role": "Checks finished tasks by re-measuring, merges or rejects, keeps the scoreboard",
 "cadence": "pilot: hourly at :49",
-"last_run": "2026-10-23T21:50:00Z",
-"result": "running",
-"working_on": "Floor area re-measured room by room (20 of 47 pieces, all 0.0 %; two line findings); next: plaster / paint package with the arched-opening fix, then the whole slab line",
-"as_of": "2026-10-23T22:20:00Z"
+"last_run": "2026-10-23T23:52:00Z",
+"result": "ok",
+"working_on": "9 merged in the last two runs, 0 rejected; nothing waiting: finishes the floor-area re-measure, then beams storey by storey",
+"as_of": "2026-10-24T00:20:00Z"
 },
 {
 "agent": "6 SCOUT – research & feedback to Lead",
 "role": "Research and methods: Claude Code features, market tools, measurement standards",
 "cadence": "Sun + Wed 02:50 Kuwait (23:50 UTC)",
-"last_run": "2026-10-23T17:45:00Z",
+"last_run": "2026-10-23T17:50:00Z",
 "result": "ok",
-"working_on": "No open research request; next scheduled run 2026-10-24 23:50 UTC",
-"as_of": "2026-10-23T22:20:00Z"
+"working_on": "No open research request",
+"as_of": "2026-10-24T00:20:00Z"
 },
 {
 "agent": "7 DASHBOARD – refreshes your page",
@@ -69,6 +69,6 @@
 "last_run": "2026-10-23T20:54:25Z",
 "result": "ok",
 "working_on": "Next refresh 00:54 UTC",
-"as_of": "2026-10-23T22:20:00Z"
+"as_of": "2026-10-24T00:20:00Z"
 }
 ]

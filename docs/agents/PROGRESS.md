@@ -1,14 +1,47 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
 Plain words, no task numbers. Measured numbers come from SCOREBOARD.md; anything not measured says so.
-Last update: 2026-10-23 22:10 UTC (Lead). Previous version: 2026-10-23 20:10 UTC. The released numbers did not change
+Last update: 2026-10-24 00:10 UTC (Lead). Previous version: 2026-10-23 22:10 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released default V2.9 + route G untouched). Your measure (17:50):
 whole BOQ lines independently verified, and trades that can be scored. Today: still 0 whole lines verified in any
-trade; footings and blinding PARTIALLY VERIFIED; floor area now 20 of 47 pieces re-measured by the checker (all 0.0 %).
-Scored trades: concrete and floor area (released run 385.63 vs 409.58 m2, -5.85 % raw); plaster, paint, doors, windows,
-blockwork not yet scored (plaster and paint are waiting for the checker now). Pilot, hours 14-16: every run that ended
-wrote its final line; the checker run that started 21:50 is still working. 4 results wait for the checker (target 3).
-Since 20:10 (newest first):
+trade. PARTIALLY VERIFIED: footings, blinding, beams (new); floor area 26 of 47 pieces re-measured by the checker (all
+0.0 %). The whole slab line is now re-measured by the checker panel by panel (60.280 m3, 0.0 % against the worker): it
+closes as soon as the candidate drops the 13 pieces that are not slab. Scored trades: concrete and floor area; plaster
+and paint are now in the candidate but stay unscored until their held ranges close (comparing a partial line with the
+freelancer's whole line would mean nothing). Pilot, hours 16-18: every run wrote its final line, 9 results checked and
+merged in two checker runs, 0 sent back; nothing waits for the checker now. ONE QUESTION FOR YOU today (the curved
+window over the pool, below).
+Since 22:10 (newest first):
+- Beams as a whole line, every one of 140 beam runs once: 66.016 m3 measured from the drawings, plus 5.145 .. 6.111 m3
+  where the schedule width and the drawn width disagree (designer items) and 4.163 .. 8.673 m3 held (depths not
+  printed), never shown as 0. The released run has 64.820 m3; the difference is closed to named causes (two first-floor
+  beams the released run cuts at planted columns +2.670, held pieces by their printed sections +2.408, one beam band
+  the released run counts as slab +0.296, beam / slab joints counted twice once removed, a ring beam +0.474, and the
+  conflicting widths now shown as ranges -5.022). The freelancer's 65.966 m3 is within 0.08 % of the released total,
+  but that is a coincidence: 6 beam marks (9.883 m3) are missing from his sheet and are offset by lengths he takes
+  through the supports. The checker re-measured three beams himself (0.0 %): the beam line is PARTIALLY VERIFIED.
+- Completeness against drawn inventories that do not come from the engine: footings 25 of 26 drawn (one pair carries
+  two tags on one outline: being read), slab panels 62 of 62, column necks 36 of 36, columns 59 of 59 (the released
+  run still carries 2.268 m3 on 5 upper columns that no storey plan draws; the candidate holds them), doors 27 of 27,
+  windows 27 of 29: two windows (1.08 m2 and the 28.25 m2 ground-floor pool glass wall) are in no window line of either
+  run. The window list itself was built from the engine's own opening list, so it will be redone from the drawn tags.
+- Plaster and paint are in the candidate for the first time (checker passed it): 166.88 m2 of paint on rooms the checker
+  measured himself, 8 rooms held as ranges with named causes. A cross-check of every wall face between the block,
+  plaster and window records (75 faces) found 0 double deductions and narrows the drawing net to 1,449.99 .. 1,560.92 m2
+  (held openings 27 -> 11); it is not in the candidate yet. Three items stay held: the room side of the curved pool
+  glass wall, one wedge-shaped wall and 18 faces under the first-floor roof whose two height readings disagree.
+- The curved first-floor room is measured right by the engine (19.017 m2 on the curve, checker 19.0165); the small
+  dressing room goes into the floor line, the ground-floor side passage (5.64 m2) is outside, the sills are thresholds.
+- The arched-opening fix is merged (two first-floor arched windows 4.650 m2 each as window, 4.363 m2 as hole in the
+  wall; one second-floor arched window 1.875 m2 as hole). The checker confirmed what the 0.45 m above the curved window
+  over the pool is: a separate decorative band, not the window. That makes one of your earlier answers rest on a
+  height our own question gave you: the question is below.
+- The one-command BOQ export (spreadsheet + CSV + manifest, every quantity state in its own column, unknown = empty
+  cell, never 0) is merged; on the real candidate it refuses, correctly, because the structural and architectural
+  drawing sets carry two different project identities: a fix is first in line after the doors / windows step.
+- One check on the working branch has been red since at least yesterday 21:00 (the drawing-register test: its saved
+  output no longer reproduces). No quantity depends on it; it is now the first task of the architecture worker.
+Earlier, 20:10 -> 22:10 (newest first):
 - Whole slab line measured panel by panel for the first time (62 panels, 375.05 m2): 60.280 m3 from the drawings, and
   the line can close from the drawings alone (waiting for the checker). The released run has 61.551 m3, +1.271 m3
   (+2.1 %) too much, for two named reasons: the roof-tank slab thickness (0.18) was applied to five neighbouring panels
@@ -54,10 +87,12 @@ Earlier, since 18:20 (newest first):
   windows go into the candidate.
 - Candidate step 8 merged (checker Gate B): verified straps 3.39 m3 (freelancer 3.39, -0.06 %); columns 34.45 ->
   33.61 m3 (two planted columns held, five undrawn upper lines shown held).
-Next: the checker takes plaster / paint in the candidate together with the arched-opening fix (22:49), then the whole
-slab line (23:49 at the latest); the structural worker starts the trade-completeness check and then the beam and
-ground-beam lines as whole lines; the architecture worker types the dressing and the unlabelled ground-floor spaces so
-the floor line can close; the integration worker starts the one-command BOQ export (XLSX / CSV).
+Next (from 00:19): the integration worker puts doors and windows into the candidate in pieces AND m2 (with the arched
+window fix; the curved pool window held until you answer), then one footing conflict, the single project identity for
+the export, and the slab / beam split (which closes the slab line); the architecture worker fixes the red check first,
+then rebuilds the window list from the drawn tags; the structural worker closes the ground beams and then the columns
+and necks as whole lines; while nothing waits for it, the checker finishes re-measuring the floor area (21 pieces left)
+and starts the beams storey by storey.
 
 Earlier (16:20 -> 18:20):
 - Block walls (your programme, step 2 of 4, checker-verified): the first block wall is now INDEPENDENTLY VERIFIED: a
@@ -418,19 +453,19 @@ Not measured, and paused by your order (Alsenan first).
   development lengths, so a steel ledger is not complete until it has read them.
 
 ## Being worked on now
-- Checker (18:49): candidate step 8 (verified straps and planted columns into the candidate) first, then blockwork step 3
-  (re-measure every wall it raises; confirm the lift tie beam and annex roof are undrawn on every sheet, which decides two
-  consultant rows), and the ruling on one ground-floor wall's net (47.4 m2 with this morning's window heads); then the
-  column re-measure (31 of 59 done) and the closable-lines table you asked for.
-- Structural (worker 1): footings and blinding as whole lines, every footing once (the first concrete lines that need no
-  consultant answer); then the roof / wet-room structural tops (also: does any architectural sheet show whether the tank
-  beam stands up or hangs down); then the whole slab line, every panel once; excavation last (depth held until the
-  existing ground level is known).
-- Architecture and finishes (worker 2): the remaining block-wall held bounds (two openings with no head; decides one
-  consultant row); an independent wall census to check the block engine; the curved first-floor room; foundation and pit
-  waterproofing; then the blockwork resolution ledger (step 4).
-- Integration (worker 3): after step 8 merges, plaster and paint (and the verified wet-wall tiles and kitchen floor) into
-  the candidate, then the floor-area line scored, then doors and windows in pcs AND m2, then formwork and railings.
+(Lead 2026-10-24 00:10)
+- Checker: nothing waits for it; it finishes the floor-area re-measure (21 pieces left, the first-floor living room
+  first), then re-measures the beams storey by storey and re-counts the columns; any fix or candidate step that is handed
+  in goes first.
+- Structural (worker 1): ground beams as a whole line (inside runs close from the drawings; outside runs held as a range
+  on the one designer item), then columns and necks as a whole line (59 + 36, every joint with footings, beams and slabs
+  once); excavation last (depth held until the existing ground level is known).
+- Architecture and finishes (worker 2): the red drawing-register check first; then the window and door list rebuilt from
+  the drawn tags (so completeness no longer leans on the engine); the block-wall resolution ledger; the room-face lengths
+  and the three held plaster items; foundation and pit waterproofing.
+- Integration (worker 3, one step every 2 h, now the bottleneck): doors and windows in pcs AND m2; the footing with two
+  tags as a conflict; one project identity so the export runs on the real candidate; the slab / beam split; the floor
+  fixes; plaster / paint narrowed by the face cross-check; skirting deductions listed.
 
 ## What is missing
 - Window heads: 3 of 29 windows still held (one count, two shuttered) and three leafless openings (being closed); every door but the main entrance (2.20 m by your Q-55 C, stated as assumed).
@@ -447,8 +482,14 @@ Not measured, and paused by your order (Alsenan first).
 - The Kuwait specification chapters on waterproofing, floors, wall tiles and paint (file too big: parts needed).
 
 ## Waiting for the owner
-- No decision needed today. Nothing found since 08:20 meets the standard's conditions for asking you: the pit depth,
-  tank, sunken-panel drops and floor build-up are designer / drawing items already listed for the designer.
+- ONE decision today (question Q-76 in the owner questions): the curved first-floor window over the pool. Your earlier
+  answer took the width on the outer curve (3.29 m, not in question) and repeated our question's height 3.50 m. On the
+  drawing the 3.05 m ends at the top of the window's own arch (the glass stops at 3.00 m) and the 0.45 m above it is a
+  separate decorative band on the wall. A: 3.29 x 3.00 = 9.87 m2 (the same rule as the other arched windows; our
+  recommendation); B: keep 3.29 x 3.50 = 11.51 m2. Difference 1.64 m2 of window; walls, plaster and paint are not
+  affected. Until you answer it stays held at 9.87 .. 11.51 m2.
+- Nothing else found since 22:10 meets the standard's conditions for asking you: the beam widths and depths, the
+  outside ground-beam depth and the column items are designer items already on the designer list.
 - Consultant list (draft): rows 1, 3, 4, 5, 6, 10, 11, 12 are ready for you to send; hold rows 2 (tank beam), 7 (lift
   tie beam), 8 (annex roof) and 9 (two openings) until the searches named in the list finish (expected within the next
   checker and worker runs).

@@ -46,6 +46,22 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+### Lead 2026-10-24 00:10 (from T-211, T-238, T-234, T-017, T-223, T-236, T-235 r1, T-241, T-237 MERGED; new T-243 .. T-250; owner item Q-76)
+
+| Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |
+|---|---|---|---|---|---|
+| Slab panels, all storeys (62 between beam faces) | concrete, formwork, rebar, ceilings | STRUCTURE CONC.SLAB, C1 (panel between beam faces, beam at full depth); thickness tag, else general note 18, never a neighbour's tag | 60.2804 m3 re-measured WHOLE by the Checker (23:01, 0.000 %); engine lines DISCREPANCY (candidate +0.6388, released +1.2710) | T-234 MERGED 3224f68a | T-146 (+ T-247 one package); D-41 rules fill / forms only (Checker: does not block the slab solid) |
+| Beam band CB5 span 2 (0.296 m3) | concrete, slab | STRUCTURE CONC.BEAM (C1); the slab side 0.1184 leaves the slab line | Checker own 0.296 = ledger 0.0 %; released bills it as slab (ENGINE_WRONG) | T-241 MERGED f0250164 | T-146 + T-247 |
+| Beams, all runs (140 runs, C1) | concrete, formwork, ceilings (soffits), blockwork (wall tops) | STRUCTURE CONC.BEAM; joints with slabs once (7 double joints 0.2787 m3 removed once) | PARTIALLY VERIFIED: measured 66.016 SOURCE-SUPPORTED + CONFLICT 5.145 .. 6.111 (D-02 / D-27) + HELD 4.163 .. 8.673 (+4 with no depth, D-26) | T-241 MERGED | T-247; Checker beam batch per storey; consultant D-02 / D-27 / D-26 |
+| Columns (59) and necks (36) | concrete, formwork, blockwork (walls containing columns, D-12), rebar | STRUCTURE CONC.COLUMN; a planted column belongs to the column line on its beam; 5 columns no storey plan draws are NOT released (candidate holds them) | inventory 59 / 59, necks 36 / 36 (T-236); Checker 31 / 59 own | T-236 MERGED 54ae8b5f | T-248 (whole line); released 2.268 m3 on the 5 undrawn columns stays a released defect until the owner switches the default |
+| Footing pair with identity 1B1B (one outline, two tags?) | concrete, blinding, rebar | STRUCTURE CONC.FOOTING; counted once | UNRESOLVED (Verifier 00:10: 27 tags / 26 elements) | T-236 | T-248 (d) |
+| Windows W18 (1.080 m2) and W03 (28.251 m2, Q-38 A) | windows, blockwork, plaster, paint | WINDOW line (each once); masonry / finishes deduct the hole | in no window line of either run (T-236) | T-236 MERGED; Verifier 00:12 W03 6.5675 m on ARC 201 = Q-38 A 6.57 | T-232 (wire with sources) / T-249 (tag inventory) |
+| W17 curved arched window (1F over the pool) | windows, blockwork, plaster, paint | WINDOW line: width Q-39 C outer arc 3.29; height on the OPENING crown (Q-32 A) pending the owner; the 0.45 archivolt is WALL (moulding), owner trade blockwork / finishes | HELD 9.870 .. 11.515 m2; Checker 22:50 confirmed '305' = opening crown, '45' = archivolt | T-238 MERGED 242e50b2 | owner Q-76 |
+| W03 curved wall, room side | plaster, paint, windows | FINISHES deduct the room-side developed line, not the glass line; window line keeps Q-38 A 6.57 | split 1.625 + 5.106 = 6.731 lies on no face line: HELD / UNRESOLVED | T-237 MERGED 1cc1a153 | T-250 (b) |
+| 1F roof-datum faces (18) and W06 wedge | plaster, paint, blockwork | one datum per face (lessons 2026-10-24); wall height and finish height derived from it | HELD | T-237 | T-250 (c)-(d) |
+| GF side passage 3.600 / 1.560 (5.640 m2) and the 0.280 strip on the layer-5 wall | floor finish, outdoor floors | OUTDOOR FLOORS (Q-67 A, exterior); the 0.280 strip is wall, no floor | Checker 23:13 (T-223 MERGED 48d1d846) | T-223 | T-240 |
+| Skirting nets (9 lines, window thresholds 13.569 lm) | skirting, doors, windows | FIN.SKIRTING lists every deduction with its opening id | traceability defect, quantity not judged | T-236 | T-246 |
+
 ### Lead 2026-10-23 22:10 (from T-227 r2, T-221 MERGED; T-211, T-234, T-238 READY; Checker T-180 floor batches 21:15 / 22:05; new T-240, T-241, T-242)
 
 | Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |

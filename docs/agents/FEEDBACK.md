@@ -36,6 +36,21 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
    commit. Decision: board-only handoffs are verified as hand evidence (the verifier re-reads the cited notes), and the
    next task on the topic writes the files (T-117); a run with no line stays a NEEDS FIXING item for the owner's setting.
 
+## 2026-10-24 00:10 (lead run)
+
+| Task | Result | Evidence | Decision |
+|---|---|---|---|
+| T-211 V3.0.9a plaster / paint | WORKED | Gate B PASS 55fc11ec (Verifier 22:42: L4 to the end, NEW 1 = t195 pre-existing; 6 released lines by hand 0.0 %) | integrated; part 4 deltas next as T-244 (after T-250 evidence) |
+| T-238 arched-opening fix | WORKED | Gate A PASS 242e50b2 (W26 1.8745, W17 reading confirmed) | DELTA_T238 wired by T-232; W17 -> owner Q-76 (ERS 2.7, section 6) |
+| T-234 CONC.SLAB whole line | WORKED | MERGED 3224f68a; Checker own 62 panels 60.2804 m3 = worker 0.000 %; D-41 does not block the solid | engine side closes with T-146 (+ T-247 one package) |
+| T-017 masonry census | WORKED | MERGED 345f408b after the handle evidence (hex lookup reproduces both corner conventions) | corner rule UP-MAS-CORNER-001 + oblique junctions go into T-228 |
+| T-223 floor typing | WORKED | MERGED 48d1d846; curved room 19.0165 own = engine; side passage 5.640 exterior | T-240 carries dressing, sills, side passage, 0.280 strip |
+| T-236 trade completeness | PARTIAL | MERGED 54ae8b5f; footing 1B1B identity UNRESOLVED; window inventory seeded from the engine (named limit); W18 / W03 29.331 m2 in no line; skirting 13.569 lm unlisted | T-248 (d) footing identity; T-249 tag inventory; T-232 W18 / W03; T-246 skirting listing |
+| T-235 r1 BOQ export | PARTIAL | MERGED d7d232b9 (tool right on synthetic and adverse cases); real candidate export refused: two identities | T-245 identity fix; r2 + part (4) stays TODO |
+| T-241 CONC.BEAM whole line | PARTIAL | MERGED f0250164; Checker own B25 / B22 / CB5 span 2 0.0 %; CONFLICT and HELD items are designer items D-02 / D-27 / D-26 | T-247 integration; Checker beam batch per storey (T-180 slot); consultant rows unchanged |
+| T-237 wall-face crosswalk | PARTIAL | MERGED 1cc1a153; W03 room-side line, W06 wedge, 18 roof-datum faces HELD; face length per wall missing | T-250 evidence; T-244 integration |
+| t195 document-register check | FAILED (on the working branch) | red since at least 63f4d90e (Verifier 22:42); Lead re-run 00:13 on 1cc1a153: 1 failed / 21 passed | T-243 gate 0 fix, first in lane A |
+
 ## 2026-10-23 22:10 (lead run)
 
 | Task | Result | Evidence | Decision |

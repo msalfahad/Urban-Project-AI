@@ -261,6 +261,37 @@ STATUS (main chat 2026-10-22, owner directive section 8): reopened as INVESTIGAT
 OWNER DECISION 2026-10-23 14:15 (owner's words in the main chat): "Keep the 12.5 blocks/m² nominal-module calculation as a provisional rule for standard 40 × 20 cm face modules, subject to supplier confirmation of actual dimensions and joint thickness. Full door/window opening deduction is already an Urban Projects owner rule. Do not reopen it without a documented conflict. Separate net BOQ blockwork area from procurement block counts, cutting waste, mortar, cement and sand. Independently verify the mortar calculation against actual joint geometry before promoting its quantities to VERIFIED. Do not hardcode 5% waste. Keep procurement waste configurable and evidence-based. Please check whether the 563 m² gross wall area includes openings or duplicated wall segments, and distinguish 100, 150 and 200 mm blockwork by type." -> the 40 x 20 module (12.5 / m2) is a PROVISIONAL owner rule (ASSUMED — OWNER-APPROVED, provisional) for standard 40 x 20 face modules; it becomes final only with the supplier's actual block dimensions and joint thickness (a data item for the team, not an owner decision). Opening deduction (Q-73) is settled and not reopened. Waste is a configurable, evidence-based parameter, never a hardcoded 5 %.
 MAIN-CHAT CHECK 2026-10-23 14:20 (owner's request): the 563 m2 was the T-143 hand GROSS (black 0.15 350.71 + 0.20 212.58) BEFORE openings, and it carried the T-stem double count (stems to the through-wall centreline, 2.70 m3 in all types); 146.22 m2 of it PROVISIONAL (annex datum Q-54 B, lift tie beam). Superseded by MASONRY_AREA_V1 r2 (T-108 r2, checker MERGED 01eeafd0 09:11; stems stop on the face): black gross 554.49 m2 = 0.15: 342.91 (DRAWING-CONFIRMED 215.72, HELD 127.19) + 0.20: 211.58 (DC 125.88, HELD 85.70); established opening deductions on black 36.08 m2 (0.15: 29.92, 0.20: 6.16); black net established 290.05 m2 (0.15: 103.33 DC + 79.00 ASSUMED - OWNER-APPROVED; 0.20: 107.72 DC), the rest of the black walls net HELD. 100 mm: no 0.10 m run in the census (thicknesses found 0.15, 0.20 and one 0.40 band HELD); D-12 (walls containing columns at column thickness) still open on 19 rows.
 
+### Q-76 Curved window over the pool: does its window area stop at the top of the opening (3.00 m) or include the 0.45 m decorative band above it? (lead 2026-10-24 00:10, today's owner package; from worker 2's arched-opening census and the checker's own reading 2026-10-23 22:50; T-238, T-232; ERS 2.7: the application of an answered owner rule rests on a height our own question supplied)
+
+THE PROBLEM (Issue): your Q-39 answer C fixed the WIDTH of the curved first-floor window over the pool on the outer
+arc, 3.29 m, and repeated our question's height: 3.29 x 3.50 = 11.51 m2. The 3.50 came from our own question text,
+which read the elevation's '305 + 45' as the height to the top of the arch. Read on the drawing, that is not so: the
+'305' runs from the +5.50 floor to the top of the window's own arch, and the '45' runs from there to the top of a
+second, separate arch that stands 0.40 m clear of the window on the wall face: a decorative band (archivolt), not
+glass, not frame. Your width rule is not in question; only the height our question put into your example.
+WHERE TO LOOK (Evidence): Drive "Alsenan chalet project", P7757_DXF_COMPRESSED.zip (P7757.dxf), the NORTH WEST elevation,
+the arched window on the first floor over the pool (the elevation prints it 269 wide on the chord, '305' and '45' high).
+Follow the '305' dimension: it ends on the outer line of the window's own arch (+8.55; the inner line, where the glass
+stops, is at +8.50, i.e. 3.00 m above the +5.50 floor). Follow the '45': it ends on the outer line of a second arch
+(+9.005) drawn 0.40 m outside the first, with nothing between them but wall.
+INVESTIGATION: worker 2 read both arch pairs on the drawing; the checker re-read them himself (22:50) and CONFIRMED the
+reading. The same reading already settled the two first-floor arched windows W15 / W16 under your Q-32 A (window area =
+width x height to the opening crown, 1.55 x 3.00 = 4.650 m2; the freelancer is right there), and their wall deduction
+(the true arched hole, 4.363 m2) is separate.
+THE OPTIONS (Alternatives; width 3.29 m outer arc in both, your Q-39 C):
+(A) Height to the window's own arch, as Q-32 A for every other arched window: 3.29 x 3.00 = 9.87 m2 (the outer line of
+    the same arch, 3.05, would give 10.03 m2; the checker reads the glass stopping at 3.00).
+(B) Keep the 3.50 of your Q-39 example, the band included: 3.29 x 3.50 = 11.51 m2.
+QUANTITY IMPACT: A is 1.64 m2 less window area than B (about 1.4 % of the freelancer's 116.9 m2 of windows). The freelancer
+has 3.15 x 3.00 = 9.45 m2 for this window (his width differs; his height agrees with A). Blockwork, plaster and paint
+deduct the true arched hole whichever you choose; only the window line changes.
+RECOMMENDATION: A. The 0.45 m band is wall with a moulding on it, not part of the window that is made and installed; A
+applies your own Q-32 A rule exactly as on the other arched windows, and B would price 1.64 m2 of aluminium and glass
+that the drawing does not show. Practice, not a code clause.
+STATUS: the window stays HELD 9.870 .. 11.515 m2 (never the larger end) until you answer.
+NEXT ACTION (continues without you): doors and windows go into the candidate in pieces and m2 with this window shown as
+held; every other window line continues. Waits on: the windows line of Alsenan becoming closable (T-232, T-238).
+
 ## Answered (index; full problem, options and evidence in OWNER_QUESTIONS_ANSWERED.md)
 
 Every Answer below binds every agent. One line per question, newest first; grep OWNER_QUESTIONS_ANSWERED.md for the Q- id when your task touches it. When a question is answered, the Lead moves its full entry to OWNER_QUESTIONS_ANSWERED.md and adds its line here.

@@ -46,7 +46,17 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
-## Status (Lead, 2026-10-23 22:10; re-estimated each run from what merged and was verified)
+## Status (Lead, 2026-10-24 00:10; re-estimated each run from what merged and was verified)
+
+Lead 2026-10-24 00:10: since 22:10 the Checker merged 9 (T-211 Gate B V3.0.9a, T-238, T-234, T-017, T-223, T-236,
+T-235 r1, T-241, T-237), rejected 0; READY 0. Verified whole lines still 0 / 13 on the closable table; the next four
+lines that can close do so through lane I (CONC.SLAB T-146, floor area T-240, plaster / paint T-244, doors / windows
+T-232), so lane I (one package per 2 h) is now the delivery bottleneck: its serial order is on the board, and the two
+pieces it can ship together (T-146 + T-247, one slab / beam partition) are named. P-03: V3.0.9a merged (plaster / paint
+into the candidate; verification -> integration for the three checker rooms within 24 h). P-04: CONC.SLAB re-measured
+whole. P-06: hand package DONE, candidate DONE for V3.0.9a, part 4 deltas next (T-244). Export (T-235 r1) merged; the
+real-candidate export waits on one project identity (T-245). Gate 0 fix T-243 (a test red since at least 63f4d90e)
+first in lane A. Day-14 on track; no milestone re-dated.
 
 Baseline: the RELEASED baseline is run A (V2.9 + route G, no profile, 1,455 lines), pinned by T-165 (37124da); run B
 (profiled, 1,621 lines) is the comparison base for V3.0.x line pairing. The engineering reasoning standard (owner 08:05)
