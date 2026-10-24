@@ -1,17 +1,44 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
 Plain words, no task numbers. Measured numbers come from SCOREBOARD.md; anything not measured says so.
-Last update: 2026-10-24 00:10 UTC (Lead). Previous version: 2026-10-23 22:10 UTC. The released numbers did not change
+Last update: 2026-10-24 02:10 UTC (Lead). Previous version: 2026-10-24 00:10 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released default V2.9 + route G untouched). Your measure (17:50):
 whole BOQ lines independently verified, and trades that can be scored. Today: still 0 whole lines verified in any
-trade. PARTIALLY VERIFIED: footings, blinding, beams (new); floor area 26 of 47 pieces re-measured by the checker (all
-0.0 %). The whole slab line is now re-measured by the checker panel by panel (60.280 m3, 0.0 % against the worker): it
-closes as soon as the candidate drops the 13 pieces that are not slab. Scored trades: concrete and floor area; plaster
-and paint are now in the candidate but stay unscored until their held ranges close (comparing a partial line with the
-freelancer's whole line would mean nothing). Pilot, hours 16-18: every run wrote its final line, 9 results checked and
-merged in two checker runs, 0 sent back; nothing waits for the checker now. ONE QUESTION FOR YOU today (the curved
-window over the pool, below).
-Since 22:10 (newest first):
+trade. PARTIALLY VERIFIED: footings, blinding, beams (now every calculated beam run re-measured by the checker except 3
+upstands), ground beams (new: 5 interior runs); floor area: the checker has now re-measured ALL 47 pieces himself, 32
+agree to 0.0 %, the other 15 are blocked by named classification items. Scored trades: concrete and floor area. Doors
+and windows are about to become scoreable in the candidate (waiting for the checker). One test on the working branch
+went red after a checked merge (no quantity depends on it): its fix is first for the architecture worker. No new
+question for you; the curved pool window question from 00:10 is still open.
+Since 00:10 (newest first):
+- Columns as a whole line (waiting for the checker): 59 columns and 36 necks, each once. 28 columns close from the
+  drawings, 18.35 m3; 15 have a schedule vs drawing conflict (8.03 .. 10.12 m3, designer items); 16 are held (roof
+  level of the top storey and the annex not printed). Necks are held at no less than 9.26 m3 on 32 of them, which is
+  already above the freelancer's 8.81 m3 (he used the 1.50 m limit as the neck length). The checker counted the 59
+  columns himself from the drawing, a second way: the count agrees. Found: the candidate carries the top-storey columns
+  up to the FINISHED roof and the annex columns at an assumed 4.50 m; both must be held, a fix is queued.
+- Doors and windows by pieces AND m2 in the candidate (waiting for the checker): windows 76.26 m2 on 27 windows against
+  the freelancer's 80.23 m2 on the same 27 (-3.98 m2, -4.95 %, fully explained), the curved pool window held at 9.87 ..
+  11.52 m2 (your open question), aluminium doors 4.18 m2 plus 1.98 .. 8.80 m2 held, against his 12.00.
+- Window and door list built from the drawings alone (not from the engine): 29 windows, 27 doors, 1 gate, 2 arches;
+  every one found again on the other side. Two windows (1.08 m2 and the 28.25 m2 ground-floor pool glass wall) are drawn
+  but in no window line of either run: they go into the candidate next (+2 pieces, +29.33 m2; the pool wall then
+  agrees with the freelancer exactly).
+- Ground beams as a whole line: only 5 interior runs carry a single printed section; those 2.268 m3 are checked by the
+  checker face to face. The rest wait on designer answers (tee sections, section titles, the exterior depth printed as
+  'follow architecture'), held as 13.44 .. 15.96 m3 for the exterior, never 0. Found: the candidate counts 24 exterior
+  beams (11.93 m3) at the interior depth, which the drawings do not support (fix queued); a boundary ground beam
+  (up to 3.53 m3) is in no line of either run (being measured).
+- Beams: the checker re-measured every calculated beam run storey by storey; all agree except two places where the
+  ledger is short by 0.305 m3 (a ring beam around the ground-floor dome void taken as straight pieces, and two beam ends
+  on a slanting beam). A correction is queued before the beam line goes into the candidate.
+- Floor area: all 47 pieces now re-measured by the checker; 32 agree to 0.0 %. The 15 others need three classification
+  fixes (9 doorway strips 4.12 m2, the pantry as a wet floor by your rule, the landing at the foot of the first-floor
+  stair) besides the dressing room and sills already found; these are now one integration step.
+- The red drawing-register test is fixed and merged. A second test (the family register guard) went red when the
+  completeness check was merged at 00:10: the check names the handrail item, which the guard reserves for code that
+  measures it. No quantity is affected; the fix is first in line and every hand-in now runs the full test suite.
+Earlier, 22:10 -> 00:10 (newest first):
 - Beams as a whole line, every one of 140 beam runs once: 66.016 m3 measured from the drawings, plus 5.145 .. 6.111 m3
   where the schedule width and the drawn width disagree (designer items) and 4.163 .. 8.673 m3 held (depths not
   printed), never shown as 0. The released run has 64.820 m3; the difference is closed to named causes (two first-floor

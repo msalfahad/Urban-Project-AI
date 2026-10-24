@@ -36,6 +36,17 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
    commit. Decision: board-only handoffs are verified as hand evidence (the verifier re-reads the cited notes), and the
    next task on the topic writes the files (T-117); a run with no line stays a NEEDS FIXING item for the owner's setting.
 
+## 2026-10-24 02:10 (lead run)
+
+| Task | Result | Evidence | Decision |
+|---|---|---|---|
+| T-243 t195 gate-0 fix | WORKED | Gate A PASS cebb269b (Verifier 01:15: root cause re-derived, inputs pinned by sha256 + git blob, 203 files; t195 28 / 28) | none; lessons row adopted (a snapshot test names its inputs by content) |
+| T-242 CONC.GROUND whole line | PARTIAL | Gate A PASS 9455a63d (Verifier 01:21: interior 5 runs 2.2683 m3 re-measured face to face = ledger; line BLOCKED BY CONSULTANT D-33 / D-34 / D-35 / M4) | the drawing-settleable rest (boundary G.B at N.G. <= 3.5256 m3 in no line, court runs, annex CONFLICT, consultant rows narrowed to runs) -> T-253 (lane S); the candidate releasing 24 exterior beams 11.93 m3 at the interior depth -> T-254 (lane I, gate 1) |
+| T-236 trade completeness (merged 00:10) | FAILED (gate, after merge) | t130_family_master red on 1cc1a153 and 9455a63d (Verifier 01:15 / 02:14): FIN.HANDRAIL literal at trade_completeness_v1.py:165 | gate-0 fix T-251 FIRST in lane A; RECURRING CAUSE 7 again (a new engine/source module trips a whole-repo guard its own tests do not run): every hand-in now runs the FULL suite on the merged head, and the Checker's Gate A includes every guard folder that scans engine/source (t130, t186, t202, t212) |
+| T-232 doors / windows pcs + m2 (Gate B) | pending | READY 02:00 | Checker next (Gate B); W18 / W03 carried by T-255 |
+| T-249 opening inventory from the drawings | pending | READY 01:59 (row stamp 02:55 typo) | Gate A next; W18 / W03 +29.331 m2 -> T-255 |
+| T-248 CONC.COLUMN + necks whole line | pending | READY 02:13 | Gate A the run after; candidate columns on unprinted heights (2F to finished roof, annex at 4.50) -> T-254 |
+
 ## 2026-10-24 00:10 (lead run)
 
 | Task | Result | Evidence | Decision |

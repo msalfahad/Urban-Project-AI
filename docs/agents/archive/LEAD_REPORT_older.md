@@ -1,3 +1,89 @@
+## LEAD REPORT 2026-10-23 20:10 UTC
+
+Repositories: attached Urban-Project-AI checkout (main ccbe7876); `.work` prepared AUTOMATICALLY ("setup by auto", 20:10).
+Working branch 17ed6f92 -> 3b042470 (T-231, Checker 17:52 run) -> the 19:51 run's merges T-222 769cad40, T-233 2ecb5bf0,
+T-216 bebd1241; no owner commit on the engine branch. Drive readable: nothing created in the Alsenan folder or the
+private-data root since 18:00, no new image, so no photo-review task. OWNER_SESSION_CHANGES: one entry since 18:20 (19:00:
+T-235 / T-236 / T-168 extension, standing rules, adversarial probe, T-233 rules D-32): applied, nothing undone or
+duplicated (T-235 / T-236 placed in the lane orders exactly where the owner put them; the queue check had flagged both
+NOT_QUEUED, now 0). The pilot log's 19:45 Checker overlap exception is noted; no schedule touched.
+
+PROGRESS (Alsenan, by trade and unit; released unchanged: concrete 92.77 vs freelancer 111.81 m3, -17.03 %, run A).
+WHOLE LINES VERIFIED: 0 in every trade (no change). PARTIALLY VERIFIED, new: CONC.FOOTING and CONC.BLINDING.
+SCOREABLE TRADES: concrete and now FLOOR AREA (was concrete only); plaster, paint, doors, windows, blockwork not yet.
+- FOOTINGS (m3): 25 footings 64.304 = released A = V3.0.7 = V3.0.8, Checker own read of all 26 outlines 0.0 %. Freelancer
+  65.634 reconciled to 0.000: +1.960 F10 at schedule size (drawing conflict, HELD 2.176 .. 2.275, Q-31 C), -0.672 F3
+  counted once where two are drawn (freelancer wrong), +0.042 the FN piece inside F9 counted twice (freelancer wrong).
+  D-32 RULED FROM THE DRAWING (FN drawn notched; F9 owns 0.40 x 0.35 once): removed from the designer list. Line stays
+  PARTIALLY VERIFIED: F10 + F (Q-31 C), strap SB3 in F3 (D-15), boundary band C1 (Q-28 A).
+- BLINDING (m3): footing blinding union 15.179 = candidate (0.0 %), 14.990 inside the plot VERIFIED, 0 .. 0.189 beyond the
+  plot line HELD (D-14); strap blinding 0.913 (D-15) and ground-beam blinding (Q-21 C) open. Freelancer 47.055 = a
+  whole-plot plate 15.00 x 31.37 x 0.10: RULE_DIFFERENCE, not compared as an error. Both records are in the Checker's
+  verdict file (owner 19:00 (3) met: first whole-line re-measures a script can count).
+- FLOOR AREA (m2): run A COMPARED for the first time: 385.634 (376.286 released + 9.348 ASSUMED - OWNER-APPROVED, Q-06 A,
+  own column) vs freelancer 409.58 = -5.85 % raw; -23.990 is scope S1-S4 named item by item; like for like +0.044
+  (+0.01 %, a development figure, not accuracy). Completeness beside it: 1 / 1 reference line compared, 0 / 1 verified.
+  V3.0.5 .. V3.0.8 stay HELD by 0 .. 0.520 m2 (1F stair foot, D-13 / D-23), never shown as 0.
+- BLOCKWORK (m2): P-GF-05 masonry above 2.640 (Checker 0.0 %; D-60 answered by the drawings); 1F bay ends +1.481 and the
+  1F-W14+W15 junction +0.302 SOURCE-SUPPORTED. Step 3 REJECTED on one wall: arched W16 deducted 4.805 vs the true opening
+  4.362 (+0.443 m2 per window; 1F-W00 net 11.979 overstated in deduction by >= 3.7 %); GF-W16 15.404, 1F-W06 54.487,
+  1F-W10 44.929 deductions AGREE. VERIFIED block net still 4.458 m2 (GF-W07). Independent census (T-017): 59 / 75 walls
+  within 0.05 m of the ledger, thickness 71 / 71, residual 0.000 m per floor and thickness after named items.
+- WINDOWS (m2): W15 / W16 window area by Q-32 A = 1.55 x 3.00 = 4.650 each (FREELANCER_RIGHT), not 4.805: three merged
+  ledgers carry 4.805; fix T-238 before any of plaster / paint / doors / windows integrates them.
+- CANDIDATE V3.0.8 MERGED (Gate B): straps 3.3905 m3 (freelancer 3.3925, -0.06 %), columns 34.446 -> 33.606 (2 planted
+  columns HELD, 5 undrawn lines visible HELD).
+What improved: floor area scoreable; two concrete lines partially verified with every open piece named; first whole-line
+records in the verdict file; one designer item and one consultant row answered from the drawings. What got worse: a
+merged opening height was wrong in three ledgers (found by the Checker's own polygon, not by a worker or a test).
+Learned (ERS s.7, 3 rows written: 2 ADOPTED, 1 PROPOSED): (1) an opening's height is read on the opening line, a
+surround band is a wall-face element; masonry deducts the true arched outline, the window keeps Q-32 A; (2) a footing
+drawn notched where a deeper footing lies is the intersection drawn once, the deeper footing owns it; (3) a review set
+already answered by an equal line of the same run is never bound a second time.
+Missing: plaster / paint / doors / windows / blockwork as scored lines; any whole line VERIFIED; supplier block face and
+joint (Q-75); existing ground level (excavation).
+
+ENGINEERING QUESTIONS OPENED (ERS s.5, Lead):
+- T-238 (lane A, gate 1 FIX): which openings carry an arch, surround band, moulding or stepped reveal, and was each read
+  on its opening line? Delta ledger (never editing merged files), old / new / cause per line for window m2, masonry and
+  plaster / paint deductions; rule UP-OPEN-ARCH-001; adverse tests (band crown as head, width x crown for masonry, chord
+  for arc). Blocks only the W15 / W16 lines of T-211 / T-232 (held 4.362 .. 4.805 / 4.650 .. 4.805 meanwhile).
+- T-237 (lane A, gate 1): cross-trade wall faces: plaster / paint was measured before the blockwork heights and the
+  window heads were fixed; one height per wall face and one opening id per deduction across blockwork, plaster and paint
+  (closes the owner probe's fault 3 on real data); all 32 rooms crosswalked, mismatches in m and m2 with cause.
+Cross-trade (register +8 rulings): F9 owns the FN piece; blinding one layer under overlapping footings; hand-wash spaces
+floored once; bay ends and P-GF-05 masonry owned by blockwork; corner squares one wall each (UP-MAS-CORNER-001 proposed);
+wall faces shared by blockwork / plaster / paint keep one height and one opening id (T-237).
+Integration readiness: T-211 (V3.0.9 plaster / paint) claimable now and first in lane I (worker 3, 20:59); T-232 after it;
+T-235 export tool may run in parallel (new file); T-199 after T-232.
+
+CONSULTANT LIST (owner 17:50 (6), updated in CLARIFICATIONS_CONSULTANT_2026-10-23.md): row 9 NARROWED and send-ready as
+"head level of the 1.30 m passage P-1F-01" (P-GF-05 removed: answered by the drawings; the plan / B-B 'conflict' withdrawn
+on two independent readings); rows 7 / 8 still NOT YET (the Checker rejected T-227 on another point and did not confirm the
+lift / annex searches: first in its 20:49 run); row 2 still with T-221 (now first in lane S); D-32 never needed sending.
+
+TEAM HEALTH: 18:20 - 20:10 (pilot): 6 slots closed with a final line (worker 2 18:40 SUCCESS, 19:41 INCOMPLETE = correct
+backlog hold; worker 3 19:00 SUCCESS; worker 1 18:21 SUCCESS at 19:41; checker 17:52 SUCCESS at 19:05; checker 18:50
+stood down by the overlap guard), worker 1 19:19 IDLE (lock held by its 18:21 run, 80 min long), checker 19:51 running
+(verdicts committed 20:13). Every self-check PASS; 0 refusals; Drive read OK. Ran code: all three workers and the checker.
+Throughput: 4 merges (incl. 1 Gate B), 1 rejection (a reading error, narrow rework). Overlaps: 2 same-agent stand-downs,
+both because a run lasted longer than its hourly slot; the guard worked, no concurrent work (owner exception for the
+Checker recorded 19:45). READY now 0 (from 4 at 20:05): backlog rule off; T-017 is handed in at 20:39. The GF-W10 ruling
+the owner asked for at 18:00 has now missed 3 Checker runs: it is item (1) of the 20:49 run with explicit capacity.
+Board: lane S 4 claimable (T-221, T-234, T-236, T-170); lane A rework T-227 r2 + hand-in T-017 + 5 TODO (T-238, T-223,
+T-237, T-219) + T-228 queued; lane I T-211 (claimable), T-235, T-168, T-210 + T-232 / T-199 / T-224 / T-146 queued.
+Queue check: 45 actionable rows, 0 flagged, 0 stall checks. Self-check PASS (codemap stale none, t061, freeze 0).
+
+OWNER PACKAGE: none today. No discrepancy meets ERS s.2.7: the W15 / W16 difference is a reading error with a rule
+difference between trades that the owner's own rules already settle (Q-32 A window area, Q-73 actual opening for
+masonry); F10 + F, D-14, D-15 are designer items already on record.
+
+NEEDS FIXING (only the owner / main chat can do it): unchanged from 18:20: (1) the complete-suite rule inside one Checker
+run (Scout idea 30, run the L4 suite as a background command up to 2 h: a Checker prompt change); today's 19:51 run did
+finish every L2 suite, so only L4 packages (Gate B) are at risk; (2) Scout idea 29, session id in STARTED lines (main);
+(3) Q-75 supplier black-block face and joint. New observation for the pilot review: hourly agents whose runs last 70-80
+min lose the next slot (2 today); not a fault, but it caps throughput below the hourly cadence.
+
 ## LEAD REPORT 2026-10-23 18:20 UTC
 
 Repositories: attached Urban-Project-AI checkout (main ccbe7876); `.work` prepared AUTOMATICALLY ("setup by auto", 18:11).

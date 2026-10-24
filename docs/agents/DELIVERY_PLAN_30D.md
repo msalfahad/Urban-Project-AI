@@ -46,7 +46,18 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
-## Status (Lead, 2026-10-24 00:10; re-estimated each run from what merged and was verified)
+## Status (Lead, 2026-10-24 02:10; re-estimated each run from what merged and was verified)
+
+Lead 2026-10-24 02:10: since 00:10 the Checker merged 2 (T-243 gate-0 fix, T-242 CONC.GROUND ledger), rejected 0; READY 3
+(T-232 Gate B doors / windows pcs + m2, T-249 drawn opening inventory, T-248 CONC.COLUMN whole line). Verified whole
+lines still 0 / 13. A merged check module (T-236) turned the t130 registry guard red: gate-0 fix T-251 first in lane A;
+recurring cause 7 answered with a full-suite rule on every hand-in. CONC.GROUND moved to BLOCKED BY CONSULTANT
+(D-33 / D-34 / D-35) except the boundary beam and the court / annex evidence (T-253); the candidate's unprinted depths
+and heights (24 exterior ground beams, 2F and annex columns) become HELD in T-254. Lane I serial order: T-239, T-254,
+T-255 (W18 / W03), T-245, T-146 + T-247 (takes the T-252 beam ledger r2), T-240 (floor-area class items added), T-244,
+T-246, T-199. P-04: floor area fully re-measured (32 / 47 VERIFIED pieces), CONC.BEAM every calculated run re-measured.
+Day-14 (27 Oct) on track for 'one verified improvement through the pipeline' only if T-146 or T-240 merges by then:
+lane I is the bottleneck (one package per 2 h); no milestone re-dated.
 
 Lead 2026-10-24 00:10: since 22:10 the Checker merged 9 (T-211 Gate B V3.0.9a, T-238, T-234, T-017, T-223, T-236,
 T-235 r1, T-241, T-237), rejected 0; READY 0. Verified whole lines still 0 / 13 on the closable table; the next four

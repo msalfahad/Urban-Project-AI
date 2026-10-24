@@ -46,6 +46,20 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+### Lead 2026-10-24 02:10 (from T-243, T-242 MERGED; T-232, T-249, T-248 READY; Checker T-180 beam batches 01:24 .. 02:12 and column re-count 01:29; new T-251 .. T-255)
+
+| Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |
+|---|---|---|---|---|---|
+| Interior ground beams, 5 runs with one printed section and no tee | ground-beam concrete, slab on grade, blinding | GROUND BEAM concrete, face to face between supports (C1) | VERIFIED as a component 2.2683 m3 (Checker 01:21) | T-242; ST p.13 30 x 40 | the other 27 interior runs HELD on D-33 / D-34 / T-217 |
+| Exterior ground beams (26 runs: 17 main, annex, court) | ground-beam concrete, boundary wall, fence footing | GROUND BEAM concrete; depth 'FOLLOW ARCH.' not printed | HELD 13.44 .. 15.96 m3 (main), annex CONFLICT | T-242; D-35 | V3.0.9 releases 24 of them 11.93 m3 at the interior depth: ENGINE_WRONG basis -> T-254 |
+| Boundary ground beam at N.G. (ST p.14, 20 x 40) | ground-beam concrete, boundary / fence works | GROUND BEAM concrete (not fence, not court wall) until T-253 shows a shared part | in NO line of A or the candidate, <= 3.5256 m3 | T-242 finding | T-253 measures it; T-254 adds the line |
+| Members ending on an oblique carrier (CB4 span 1, B4 GF-017 on the B27 east face) | beam concrete | BEAM: each member ends on the carrier's face on BOTH of its own faces | DRAWING-CONFIRMED +0.0209 m3 (Checker 02:02) | R-CONC-OWN-1 | T-252 ledger r2 |
+| GF void ring B7 (around the dome void) | beam concrete, slab concrete, soffit | BEAM ring between its own drawn arcs; the 0.2925 m2 overlap with the slab face counted once | DRAWING-CONFIRMED 0.6668 m2 x 0.75 = 0.5001 m3 vs ledger 0.3743 m2 (+0.2840 m3) (Checker 02:08) | owner Q-44 A; non-overlapping model | T-252 (ledger), T-247 (integration) |
+| Columns, population 59 (GF 30 / 1F 20 / 2F 9) | column concrete, slab, beams, rebar | COLUMN owns its footprint base -> slab top (C1) | population AGREES from a second engine-free reading (Checker 01:29); quantities: closable 28 = 18.3465 m3, CONFLICT 15, HELD 16 (T-248, READY) | T-236, T-248 | sections / heights D-16, D-63, D-64, D-39, D-44, D-65; frame bounded by its title block, never a coordinate window |
+| 2F columns (9) and annex columns (7) in the candidate | column concrete | COLUMN | candidate V3.0.9 releases 2F to the FINISHED roof +13.90 and annex at 4.50 m PROVISIONAL: should be HELD (D-39, Q-54 B) | T-248 finding | T-254 after T-248 merges |
+| Windows W18 (1.080 m2) and W03 (28.251 m2, GF curved pool glass wall) | windows, block deduction, plaster / paint deduction, facade | OPENINGS own count and size; block and finishes deduct once under their own rule | drawn, in NO window line of V2.9 or V3.0.x (T-236, T-249) | T-249 drawn inventory (29 / 27 / 1 gate / 2 arches) | T-255 integrates after T-232 + T-249 merge; W03 room-side plaster line with T-250 |
+| GF doorway strips (9 pieces, 4.124 m2) and GF pantry pieces | floor finish, thresholds, waterproofing | FLOOR by the T-218 strip class (no opening at GF OP-003); pantry WET by Q-37 A | re-measured by the Checker (01:12), class not applied in A / candidate | T-218, Q-37 A | T-240 (scope added this run) |
+
 ### Lead 2026-10-24 00:10 (from T-211, T-238, T-234, T-017, T-223, T-236, T-235 r1, T-241, T-237 MERGED; new T-243 .. T-250; owner item Q-76)
 
 | Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |
