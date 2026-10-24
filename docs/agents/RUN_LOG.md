@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-24T17:08Z | Verifier | SUCCESS | T-261 r2 REJECTED (narrow r3); T-272 REJECTED (narrow r2); T-180 slot blockwork GF-W16, 2F-W01, 1F-W09, 1F-W21; scoreboard blockwork cell restated; nothing merged (engine head 969e0ae5) | T-261 r2: 7 / 9 rising walls AGREE own (1F-W04 7.845, 2F-W07 6.225, 2F-W03 25.885, 2F-W05 3.800 + 3 earlier); 1F-W18 own 17.856 (+0.4645 m settled by slab corner 1F-076/c0 -> 19.733 whole) vs 17.934 and 1F-W24 own 5.540 vs 5.651 carried register gross on non-drawn extents. T-272: link envelope 361..400 called DRAWING-CONFIRMED assumes links through crossing beams (run #2 alt 36..40) and the ring as one run (drawn faces 6.2675 / 6.380 m split by column 17BA); stirrup kg stays HELD. Blockwork VERIFIED 67.574 -> 88.664 of 449.260 m2 (2F-W01 6.840, 1F-W09 6.840, 1F-W21 7.410 agree; GF-W16 own 15.436 vs 15.404); 13 / 37 net walls own-measured; no quantity change in any BOQ line; no owner question | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-10-24 17:01 UTC | Worker 3 | STARTED | run session_01BPyo8yKVMuokSBo8cdGgRA | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-24T16:51Z | Verifier | STARTED | run session_01SA9H1EuXZLP2ebCBB2VG7B | repo-attached routine | task state: T-272 READY, T-261 r2 READY | self-check pending
 - 2026-10-24 16:41 UTC | Worker 2 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
