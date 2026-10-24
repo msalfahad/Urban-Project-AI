@@ -86,3 +86,19 @@ def test_freelancer_reconciliation(run):
     f = json.loads((HERE / "ALSENAN_STAIR_DOME_INPUT.json").read_text(encoding="utf-8"))["freelancer"]
     parts = sum(f[k]["m3"] for k in ("main_flights", "main_landings", "stair_2", "entrance", "domes"))
     assert parts == pytest.approx(f["total"]["m3"], abs=1e-4)
+
+
+def test_candidate_entrance_line_is_two_conventions():
+    """The candidate releases ST-03 at the engine's own straight_flight(5, 0.165, 0.30, 2.80, 0.175): a convention riser
+    (drawn 0.85 / 5 = 0.170) and a waist no sheet prints; the drawing closes only the steps."""
+    sys.path.insert(0, str(ROOT))
+    from engine.source import stair_geometry as SG
+    d = json.loads((HERE / "CANDIDATE_V3011_STAIR_DOME_LINES.json").read_text(encoding="utf-8"))
+    by = {r["line_id"]: r for r in d["lines"]}
+    st03 = by["L-061e18cf35a4b6b33d68"]
+    assert st03["state"] == "PROVISIONAL"
+    conv = SG.straight_flight(5, 0.165, 0.30, 2.80, 0.175)["STAIR_CONCRETE_VOLUME"]
+    assert float(st03["measured_net"]) == pytest.approx(conv, abs=1e-9)
+    assert d["released_with_value_m3"] == pytest.approx(8.064447, abs=1e-6)
+    s, c = A.summary(A.load())
+    assert c and s["totals"]["closable_total"] - d["released_with_value_m3"] == pytest.approx(2.791438, abs=2e-6)

@@ -12,7 +12,7 @@ R-STAIR-LAND-1, T-185 shell solid), recomputed from its printed primitives by `t
 | Input (Drive "Alsenan chalet project") | sha256 | Read for |
 |---|---|---|
 | "ST7757 dxf.dxf" | 9f9d1179... (= manifest) | own re-read of the ST-01 half landings and flight edges on p.4 / p.5 by handle (`t258_extract.py`, lengths only): the MS2-LD conflict closes (s.3) |
-| "P7757_DXF_COMPRESSED.zip" -> P7757.dxf | ab54dd55... (= manifest) | the candidate run (s.5) |
+| "P7757_DXF_COMPRESSED.zip" -> P7757.dxf | ab54dd55... (= manifest) | the candidate run (s.5): `research/agents_t167/v304_run.py` then `research/agents_t239/v3011_run.py` (Python 3.11.17, engine 3c9b1484): V3.0.4 d86de34a, V3.0.7 197c5599, V3.0.10 ab4a973c and **V3_0_11_BOQ_LINES.csv bb5466b0 = the T-239 Gate B file, REPRODUCED**; stair / dome lines digested in `CANDIDATE_V3011_STAIR_DOME_LINES.json` (14 lines, values only) |
 | freelancer RC workbook | committed cells | tests/alsenan/registers_b1/FREELANCER_RAW_ROWS.json, sheet 'السلم' G11 / G12 / G13 / G20 / G21, B25 = 'ورقة1'!E22 21.8328 (key CONC.STAIR_DOME, items STR.CONC.STAIR + STR.CONC.DOME) |
 
 Merged evidence built on and cited, not re-derived (WORKFLOW_CONTROLS s.10 item 5): T-184 inventory (924c2bd), T-189
@@ -22,7 +22,7 @@ DOME-B), T-234 slab ledger (3224f68a: arrival landings in GF-077 / 1F-062, stair
 
 Files: `t258_stair_dome_line.py` (STAIR_DOME_LINE_V1, pure rules, stdlib), `ALSENAN_STAIR_DOME_INPUT.json` (printed
 primitives + handles + the freelancer cells), `t258_alsenan_check.py` -> `LEDGER_T258.csv` (46 rows) + `summary.json`,
-`t258_extract.py` (private DXF -> lengths, for the Checker); tests `tests/t258_stair_dome_line` (18: Villa D hand
+`t258_extract.py` (private DXF -> lengths, for the Checker); tests `tests/t258_stair_dome_line` (19: Villa D hand
 fixture + adverse + Alsenan pinned).
 
 ## 1. The physical elements and the line (ERS s.2.1)
@@ -132,13 +132,18 @@ each from its own flight edge (`resolve_landing_edge`).
 | ST-02 | 0.901 (8.37 m2 winder region) | BLOCKED (0.901 information) | 1.561137 ASSUMED — OWNER-APPROVED + curved part HELD | candidate holds what Q-50 A cond already approves (1.561137) |
 | **ST-03** | 0.948267 | **0.948267 RELEASED** | **0.355017** steps + waist HELD | **ENGINE_WRONG basis: the released line is 4 x 1/2 x 0.165 x 0.30 x 2.80 + 0.175 x 2.80 x hypot(1.20, 0.66) = 0.2772 + 0.6711: a convention riser 0.165 (drawn 0.85 / 5 = 0.170) and a convention waist 0.175 that no drawing prints (T-187: 'ST-03 prints no waist: not flagged'); should be 0.355017 DRAWING-CONFIRMED + waist HELD: -0.593250 m3 released** |
 | Domes | 7.372 (rise = radius, 0.12) | 5.081362 released (2 VERIFIED shells) + DOME-3 blocked | 5.081362 + DOME-3 HELD | equal |
-| Item total released | 12.007 | 8.064447 (stairs 2.983085 + domes 5.081362) | closable 10.855885 | a lane I package taking this ledger: -0.593250 (ST-03) + 0.4696 (MS2-LD) + 1.227952 (ST-01 GF) + 0.126 (D1) + 1.561137 (ST-02) = **+2.791439** |
+| Item total released | 12.007 | 8.064447 (stairs 2.983085 + domes 5.081362) | closable 10.855885 | a lane I package taking this ledger: -0.593250 (ST-03) + 0.4696 (MS2-LD) + 1.227952 (ST-01 GF) + 0.126 (D1) + 1.561137 (ST-02) = **+2.791438** |
 
-Candidate figures are those recorded by the merged Gate B verdicts of V3.0.6 / V3.0.7 (T-187 8a6d604a, T-193 e866328a:
-'STR.CONC.STAIR released 2.983085 unchanged, held 0.4696 .. 0.4800'); the V3.0.8 .. V3.0.11 reports (T-231, T-211,
-T-232, T-239) name no STR.CONC.STAIR / STR.CONC.DOME line among their changed rows. The ST-03
-composition is re-derived here from the line's own engine figure 0.9482675 (T-184 input `engine_baseline_A`): 0.2772 +
-0.6711 = 0.9483 (the profile reading of 4 goings at 0.30 with riser 0.165, waist 0.175).
+Candidate figures from the own V3.0.11 run (bb5466b0, `CANDIDATE_V3011_STAIR_DOME_LINES.json`): released with a value
+L-67e4b0485135f84acc46 MS2-L 1.033445 and L-bb0e57b1948175a3d5b8 MS2-U 1.001373 (SOURCE_DERIVED), L-061e18cf35a4b6b33d68
+ST-03 0.948267 (PROVISIONAL), L-8ea34765d16b54898140 / L-fffa895ed96b9d6a682c shells 2 x 2.540681 = 8.064447; MS2-LD
+L-2416e65f053a14199cfc BOUNDED 0.4696 .. 0.48; BLOCKED_RFI: ST-01 GF L-7863355dfcb68a681d2d, MS2-TR, two ground lines,
+DOME-3; 3 retired / superseded lines NOT_APPLICABLE_WITH_EVIDENCE (the 1F dome-as-stair and the two convention domes).
+Same figures as the merged V3.0.6 / V3.0.7 Gate B records (T-187, T-193). The ST-03
+composition is reproduced EXACTLY by the engine's own function: `engine/source/stair_geometry.straight_flight(5, 0.165,
+0.30, 2.80, 0.175)['STAIR_CONCRETE_VOLUME']` = 0.9482675 = the line (T-184 input `engine_baseline_A`): five risers at a
+convention 0.165 (rise 0.825 against the printed +0.15 -> +1.00 = 0.85, i.e. 0.170) and a convention waist 0.175 that no
+sheet prints (= 4 step triangles 0.2772 + waist 0.175 x 2.80 x 1.36953 = 0.6711).
 
 ## 6. Verdict proposals (for the Checker)
 
@@ -172,7 +177,7 @@ head in a floor beam, winder and curved flight held, floor landing in the slab, 
 and stair refused, winder released without drawn geometry refused, a missing waist as 0 refused (three forms), CONFLICT
 collapse / wrong range refused, landing edge overlap refused, owned-elsewhere naming the stair refused; units m / cm /
 mm, unknown unit refused, metamorphic order; Alsenan pinned: 46 rows, classes, closable 10.855885, Checker figures
-reproduced, MS2-LD 0.4696 + 0.0096 + 0.0008 = 0.480, freelancer ST-01 / ST-03 / domes reconciled to 0.000).
+reproduced, MS2-LD 0.4696 + 0.0096 + 0.0008 = 0.480, freelancer ST-01 / ST-03 / domes reconciled to 0.000; the candidate ST-03 line = straight_flight(5, 0.165, 0.30, 2.80, 0.175)).
 Lessons rows (proposed): (1) 2026-10-24 | the ST-01 upper half landing was HELD over two readings 0.4696 .. 0.480 for a
 day | the larger reading started the landing on the other flight's first riser line, overlapping the arriving flight's
 last going by 0.05 m | a landing starts at the arriving flight's own last riser line; two flights arriving at different
@@ -197,7 +202,5 @@ flagged'), so a convention with NO printed value passes | a dimension the drawin
 ## 9. Not done / uncertain
 
 - ST-02 RS-A and RS-LD were not re-measured by the Checker; they stay ASSUMED — OWNER-APPROVED on the conditional riser.
-- The candidate run of this session (V3.0.11 on the Drive copies) did not finish inside the run; the candidate column
-  rests on the merged Gate B records named in s.5.
 - Formwork (T-163 r3 / T-192 43.777 m2), rebar (ST-01 294.73 .. 337.71 kg, shell bars 298.34 .. 432.93 kg / dome) are
   other lines; nothing released.
