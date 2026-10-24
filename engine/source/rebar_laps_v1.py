@@ -35,6 +35,8 @@ from __future__ import annotations
 import hashlib
 import json
 import math
+from decimal import Decimal, InvalidOperation
+from fractions import Fraction
 
 from engine.source import bbs_optimiser as BB
 from engine.source import rebar_unit_mass as RUM
@@ -95,6 +97,69 @@ def count_invariance(run_m, stock_m):
     return {"count": n0, "lap_max_m": round(stock_m - (run_m - stock_m) / n0, 9)}
 
 
+def length_exact_m(value, unit="m"):
+    """a length as an exact rational in metres, from what was READ: a decimal text ('22.80'), an integer of mm
+    (22800, unit 'mm'), a Decimal or a float (taken at its shortest repr, so 22.8 is 22.8, never 22.800000000000001).
+    Raises on a negative, non-finite or unparseable value and on an unknown unit (a cm value read as m is refused)."""
+    if unit not in ("m", "mm"):
+        raise LapError(f"unknown length unit {unit!r} (m or mm only)")
+    if isinstance(value, bool):
+        raise LapError("a boolean is not a length")
+    try:
+        if isinstance(value, float):
+            if not math.isfinite(value):
+                raise LapError(f"length {value!r} not finite")
+            dec = Decimal(repr(value))
+        else:
+            dec = Decimal(str(value).strip())
+    except InvalidOperation as e:
+        raise LapError(f"length {value!r} not a number") from e
+    if not dec.is_finite() or dec < 0:
+        raise LapError(f"length {value!r} not a finite non-negative number")
+    q = Fraction(dec)
+    return q / 1000 if unit == "mm" else q
+
+
+def lap_count_exact(run, lap, stock, unit="m"):
+    """the owner formula in exact rational arithmetic (no float tolerance): laps = 0 if L <= S, else
+    ceil((L - S) / (S - lap)); lap >= S BLOCKED. Inputs as read (text, mm integer, Decimal or float) in one unit.
+    The exact boundary L = S + k (S - lap) gives k laps, L a hair above it gives k + 1 (owner s.6.3)."""
+    L, S = length_exact_m(run, unit), length_exact_m(stock, unit)
+    if S <= 0:
+        raise LapError("stock length not given")
+    if L <= S:
+        return 0
+    if lap is None:
+        raise LapError("a run longer than the stock needs a lap length to count its splices")
+    lp = length_exact_m(lap, unit)
+    if lp >= S:
+        raise LapError(f"lap {lp} m not shorter than the stock {S} m: BLOCKED")
+    q = (L - S) / (S - lp)
+    return -((-q.numerator) // q.denominator)                       # exact ceil of a Fraction
+
+
+# ------------------------------------------------------------------------------------------------ categories
+# owner 2026-10-24 18:38 s.6.1: five SEPARATE detailing categories; a source printed for one is never applied as another
+ANCHORAGE_CAT, LAP_CAT, STARTER_CAT, HOOK_CAT, COUPLER_CAT = (
+    "ANCHORAGE_DEVELOPMENT", "LAP_SPLICE", "STARTER_BARS", "HOOK_BEND", "MECHANICAL_COUPLER")
+DETAILING_CATEGORIES = (ANCHORAGE_CAT, LAP_CAT, STARTER_CAT, HOOK_CAT, COUPLER_CAT)
+# the column ledger's component names -> category (column_rebar C_ANCH / C_LAP / C_STARTER; ties carry HOOK_1 / HOOK_2)
+LEDGER_COMPONENT_CATEGORY = {"ANCHORAGE": ANCHORAGE_CAT, "LAP": LAP_CAT, "STARTER": STARTER_CAT,
+                             "HOOK_1": HOOK_CAT, "HOOK_2": HOOK_CAT, "COUPLER": COUPLER_CAT}
+SPLICE_LAP, SPLICE_COUPLER = "LAP", "COUPLER"
+
+
+def classify_detail(item):
+    """the detailing category of a printed source or a ledger component: item {"category"} (one of
+    DETAILING_CATEGORIES) or {"component"} (a ledger component name). Unknown -> LapError (never guessed)."""
+    cat = item.get("category")
+    if cat is None and item.get("component") is not None:
+        cat = LEDGER_COMPONENT_CATEGORY.get(item["component"])
+    if cat not in DETAILING_CATEGORIES:
+        raise LapError(f"detailing category of {item!r} not established (one of {', '.join(DETAILING_CATEGORIES)})")
+    return cat
+
+
 def frozen_with_laps(L, d_mm, lap_d, stock_m):
     """the FROZEN continuous_beams._with_laps (D-T273-01), reproduced for the before / after comparison only."""
     if L <= stock_m:
@@ -127,6 +192,13 @@ def resolve_lap(group, authorities, *, convention_allowed=False):
     zone not printed, or no authority)."""
     d = None if group.get("dia_mm") is None else group["dia_mm"] / 1000.0
     findings = []
+    # s.6.1: a source printed for another detailing category (anchorage / development, starter bars, hook / bend,
+    # coupler) is never a lap-splice authority, whatever group it names
+    other_cat = [a for a in authorities if a.get("category") is not None and classify_detail(a) != LAP_CAT]
+    for a in other_cat:
+        findings.append(f"CATEGORY_MISMATCH: {a['tier']} {a.get('ref')} is a {a['category']} source, not a lap-splice "
+                        f"rule: not applied as a lap")
+    authorities = [a for a in authorities if a not in other_cat]
     governing = [a for a in authorities if a.get("governs")]
     for a in authorities:
         if a.get("tier") not in TIERS:
@@ -194,6 +266,13 @@ def lap_row(group, *, stock_m, stock_ref, lap, unit_mass_cfg):
                        f"components; a second lap is refused")
     if group.get("length_includes_laps"):
         raise LapError(f"{group['element']}: the bar length already includes its laps (BBS); a lap on top is refused")
+    if group.get("detail_category") is not None and \
+            classify_detail({"category": group["detail_category"]}) not in (LAP_CAT, COUPLER_CAT):
+        raise LapError(f"{group['element']}: a {group['detail_category']} length is its own category, never a lap row")
+    if group.get("splice_type", SPLICE_LAP) == SPLICE_COUPLER:
+        return _coupler_row(group, stock_m=stock_m, stock_ref=stock_ref, unit_mass_cfg=unit_mass_cfg)
+    if group.get("splice_type", SPLICE_LAP) != SPLICE_LAP:
+        raise LapError(f"{group['element']}: splice type {group.get('splice_type')!r} not LAP or COUPLER")
     kgm = None if group.get("dia_mm") is None else RUM.kg_per_m(group["dia_mm"], unit_mass_cfg)
     bars, run = group.get("bars"), group.get("run_m")
     net_kg = None if bars is None or run is None or kgm is None else bars * run * kgm
@@ -249,6 +328,35 @@ def lap_row(group, *, stock_m, stock_ref, lap, unit_mass_cfg):
     return _with_t(row)
 
 
+def _coupler_row(group, *, stock_m, stock_ref, unit_mass_cfg):
+    """a run spliced by MECHANICAL COUPLERS (s.6.1: its own category): no overlap, so no lap steel; the splice count is
+    the number of stock joints, ceil(L / S) - 1 (the form that is WRONG for laps, D-T273-01, is right here because a
+    coupler consumes no bar length), and the couplers are pieces, never kg. Coupler type / size from a print or HELD."""
+    kgm = None if group.get("dia_mm") is None else RUM.kg_per_m(group["dia_mm"], unit_mass_cfg)
+    bars, run = group.get("bars"), group.get("run_m")
+    net_kg = None if bars is None or run is None or kgm is None else bars * run * kgm
+    row = {"element": group["element"], "floor": group.get("floor"), "type": group.get("bar_type"),
+           "dia_mm": group.get("dia_mm"), "bars": bars, "net_length_m": run, "lap_per_splice_m": None,
+           "lap_min_m": None, "splices_per_bar": None, "splices": None, "added_length_m": None, "net_kg": net_kg,
+           "lap_kg": None, "installed_kg": None, "count_status": None, "lap_status": "NOT_APPLICABLE (coupler)",
+           "status": None, "count_valid_up_to_lap_m": None, "lap_basis": "MECHANICAL_COUPLER: no lap length",
+           "lap_ref": None, "stock_m": stock_m, "stock_ref": stock_ref, "drawing_ref": group.get("ref"),
+           "findings": [], "unit_mass": RUM.describe(unit_mass_cfg), "category": COUPLER_CAT,
+           "couplers_pcs": None, "coupler_ref": group.get("coupler_ref")}
+    if run is None or bars is None or group.get("continuity") != "CONTINUOUS":
+        row.update(count_status=HELD, status=HELD)
+        row["findings"].append("run, bars or continuity not established: the coupler count waits on it")
+        return _with_t(row)
+    joints = 0 if run <= stock_m + 1e-9 else math.ceil(run / stock_m - 1e-12) - 1
+    row.update(splices_per_bar=joints, splices=joints * bars, couplers_pcs=joints * bars, added_length_m=0.0,
+               lap_kg=0.0, count_status=DRAWING_CONFIRMED if group.get("run_status") == DRAWING_CONFIRMED else HELD)
+    row["installed_kg"] = net_kg if group.get("run_status") == DRAWING_CONFIRMED else None
+    row["status"] = NOT_REQUIRED if joints == 0 else (DRAWING_CONFIRMED if group.get("coupler_ref") else HELD)
+    if joints and not group.get("coupler_ref"):
+        row["findings"].append("coupler type / size not printed: couplers HELD as pieces (never a lap substitute)")
+    return _with_t(row)
+
+
 def _t(kg):
     return None if kg is None else round(kg / 1000.0, T_DECIMALS)
 
@@ -281,12 +389,15 @@ def totals(rows):
 
 def policy_record():
     rec = {"policy_id": POLICY_ID, "method_id": METHOD_ID, "tiers": list(TIERS),
+           "detailing_categories": list(DETAILING_CATEGORIES),
+           "count_exact": "lap_count_exact: the same formula in exact rationals from text / mm integers / floats",
+           "coupler": "MECHANICAL_COUPLER runs: joints = ceil(L / S) - 1, no lap steel, couplers as pieces",
            "owner_convention": {"id": OWNER_CONVENTION_ID, "factors_d": OWNER_CONVENTION_D, "status": PROVISIONAL},
            "count": "laps = 0 if L <= S else ceil((L - S) / (S - lap)); lap >= S BLOCKED (bbs_optimiser.split_run)",
            "defect": "D-T273-01: continuous_beams._with_laps n = ceil(L / S) - 1 (frozen; corrected here as a new "
                      "method version, never in place)",
            "never": ["a default lap length", "a 'not less than' value used as the lap", "a second column lap or "
-                     "starter", "a lap on an anchorage or a BBS length that contains it", "laps summed from rounded t",
+                     "starter", "a lap on an anchorage or a BBS length that contains it", "laps summed from rounded t", "a source of another detailing category used as a lap",
                      "a held lap shown as 0"]}
     rec["digest"] = hashlib.sha256(json.dumps(rec, sort_keys=True).encode()).hexdigest()
     return rec

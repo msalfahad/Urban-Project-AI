@@ -134,3 +134,75 @@ tests/t273_rebar_laps (23.8 / 24 / 35 m: frozen fails, V2 right; lap = stock BLO
 - Interior ground-beam families (7D4 / F8 10.10 m, no lap under 12 m stock), straps, footings, pool, stairs: not in
   this row's scope beyond the T-138 r2 statement; footing / pool / stair bars are shorter than the stock in the merged
   ledgers.
+
+## 9. r2 (owner acceptance s.6, 2026-10-24 18:38; Verifier 18:59 narrow r2). Reported in the three owner parts
+
+### 9.1 Software verification (what the code does, tested; not a quantity)
+
+- s.6.3 boundary set, 12 m stock, 1.2 m lap: 12.00 / 12.01 / 22.80 / 22.81 m -> 0 / 1 / 1 / 2 laps, asserted for the float
+  literal, the mm integer (12000 / 12010 / 22800 / 22810, in float and in exact form), the decimal text ('22.80') and
+  Decimal; the lap also from 75 x 16 mm computed, not typed. New `lap_count_exact` (rebar_laps_v1.py) evaluates the owner
+  formula in exact rationals (Fraction from Decimal; a float at its shortest repr), so 22.80 m sits exactly on the
+  boundary 12 + (12 - 1.2) and returns 1, 22.81 returns 2; second boundary 33.60 / 33.61 -> 2 / 3. Frozen
+  continuous_beams form gives 0 / 1 / 1 / 1: 22.81 -> 1 catches D-T273-01. Refused: negative, non-numeric, NaN / inf,
+  boolean, unit 'cm', lap >= stock, a run over the stock without a lap.
+- s.6.1 five separate categories: ANCHORAGE_DEVELOPMENT, LAP_SPLICE, STARTER_BARS, HOOK_BEND, MECHANICAL_COUPLER
+  (`classify_detail`; unknown category refused, never guessed; column ledger names mapped: LAP / STARTER / ANCHORAGE /
+  HOOK_1 / HOOK_2 / COUPLER). A source tagged with any category other than LAP_SPLICE is never a lap authority
+  (`resolve_lap` finding CATEGORY_MISMATCH, lap HELD), even when it names the group; a HOOK_BEND / ANCHORAGE / STARTER
+  length offered as a lap row is refused. Couplers are their own row (`splice_type` COUPLER): joints = ceil(L / S) - 1
+  (the form that is wrong for laps is right for couplers, which consume no bar length), no lap steel (0.0 kg, not HELD:
+  physically none), couplers counted as pieces, HELD while the coupler type is not printed, count HELD (never 0) while
+  continuity is not established. Villa G 26.000 m 4 T16: 2 joints per bar, 8 couplers, net 164.345679 kg = installed;
+  24.000 m: 1 coupler joint vs 2 lap splices.
+- Alsenan: note 9 now carries category STARTER_BARS, p.15 temperature note LAP_SPLICE; no row status changed (63 rows:
+  35 HELD, 28 NOT_REQUIRED, 0 released; only the finding text names the category).
+- Tests: tests/t273_rebar_laps 91 (57 r1 + 34 r2).
+
+### 9.2 Drawing-based quantity verification: the 54 column laps and their starters (s.6.2), BEFORE any new lap
+
+Read only (research/alsenan_column_rebar_s3, not edited); `t273r2_column_reconciliation.py` ->
+`COLUMN_LAP_STARTER_RECONCILIATION_T273R2.json`, every check per chain.
+- Ledger content: 56 LAP rows = 54 PROVISIONAL + 2 LOWER_BOUND (496.986 kg at 40 D), all `LAP_TOP` (a splice above a
+  storey joint; no base lap exists); 36 STARTER rows = 29 PROVISIONAL + 5 BLOCKED + 2 LOWER_BOUND; 30 FOUNDATION LAP rows
+  (288.897 kg) all on chains that also carry a STARTER; the 6 other starter chains stop at the foundation (ANCHORAGE).
+- Where each bar starts (from the S3 build, column_rebar._main_parts + the S3 interval basis): FOUNDATION MAIN_CORE =
+  GF FFL +1.00 minus a footing underside at -1.50 minus H, i.e. it starts AT THE FOOTING TOP (-1.50 + H) and ends at
+  GF FFL; STARTER = (H - 70 cover) + 300 foot + 40 D projection ABOVE the footing top; LAP_TOP = the lower bar's
+  40 D extension above each FFL; upper cores FFL -> FFL.
+- Result per chain: footing-top lap zone [footing top, +40 D] = starter projection + foundation core = 2 layers, core
+  inside the footing 0 mm, for all 31 chains with a known footing (5 BLOCKED starters: footing type unresolved, zone
+  HELD with them); storey joints [FFL, +40 D] = LAP_TOP extension + core above = 2 layers, for all 56 LAP rows; lap bars
+  never exceed the bars below / above, lap diameter = the upper bar. NO DOUBLE COUNT: the lap-zone steel is counted
+  exactly twice everywhere, never three times. Hand check COLPOS-X01-Y01 (F, H 0.30, 8 T16): footing top -1.20, core
+  2.20 m from -1.20 to +1.00, starter 230 + 300 + 640 = 1,170 mm, projection 8 x 0.64 x 256 / 162 = 8.081 kg per layer.
+- The two splices are different physical joints: the starter-to-column splice at the footing top (carried by the
+  STARTER projection, 278.836 kg on 31 chains) and the foundation-to-GF splice at GF FFL (the 30 FOUNDATION LAP rows).
+  Both stay PROVISIONAL (40 D = note 9's compression minimum), nothing released.
+- 70 D scenario (s.6.2: a SCENARIO, never an addition): STR-COL-026's +640.99 kg = LAP +372.736 kg + ANCHORAGE
+  +268.243 kg (640.979 from the rounded row kg; two s.6.1 categories in one figure); the starter projection (also
+  40 D, and note 9 is literally the starter-bar note) is NOT in it: +209.127 kg at 70 D. Labelled apart, not added.
+- FINDING F-T273R2-01 (no ledger edit): the FOUNDATION cores are labelled LOWER_BOUND on 'founding level <= -1.50'
+  taken as the footing UNDERSIDE; T-206 r2 (MERGED) prints footing bottom = formation + 0.17 (5 screed + 2 membrane + 10
+  blinding) and the formation as 'not less than 1.5 m below the existing plot level' (Q-21 C, existing-ground datum
+  HELD). The ledger's 2.50 - H implies a formation at -1.67; with the formation at its printed limit (on +-0.00) each
+  core is 0.17 m shorter: -74.381 kg over 31 chains. So the LOWER_BOUND label is a convention, not a bound of the
+  printed geometry; the lap zones are unaffected (the core still starts at the footing top). For the Lead: a column-
+  ledger rework item, same datum family as the necks (T-205 / T-170).
+
+### 9.3 Unresolved structural detailing (designer items; nothing chosen)
+
+- Column splices: tension / compression zone of each splice not printed; note 9 is a starter-bar development MINIMUM
+  ('not less than'), the 40 D in the ledger is its compression value, PROVISIONAL; no lap schedule.
+- Ground-beam and beam laps: no schedule, detail or note names them: every lap length HELD (r1 rows unchanged).
+- Hooks / bends: column tie hooks stay in the column ledger (HOOK_1 / HOOK_2, PROVISIONAL); ground-beam stirrup hooks
+  HELD (T-272). Couplers: none printed on Alsenan; none assumed.
+- Formation / existing-ground datum (Q-21 C): HELD; it governs the foundation core length (F-T273R2-01).
+
+### 9.4 Lessons-register row r2 (proposed)
+
+| Lesson | Scope | Provenance | Test |
+|---|---|---|---|
+| A lap zone holds two bars: check per chain where each bar's NET length starts before adding any lap (starter projection + core from the footing top = twice; a core from the footing bottom or a base lap beside a starter = three times) | every villa | T-273 r2, s.6.2 | test_r2: Alsenan 31 + 56 zones twice; synthetic core-from-bottom and base-lap caught |
+| Splice boundaries are exact: evaluate the owner formula in rationals from the read text / mm integers; a coupler joint count ceil(L / S) - 1 is not a lap count | every villa | T-273 r2, s.6.3 / s.6.1 | test_r2 boundary set in four input forms; coupler 24 m |
+| A note is applied only in its own detailing category (anchorage, lap, starter, hook / bend, coupler) | every villa | owner s.6.1 | CATEGORY_MISMATCH tests |

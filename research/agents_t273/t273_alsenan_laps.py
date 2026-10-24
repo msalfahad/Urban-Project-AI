@@ -35,9 +35,11 @@ STOCK_M, STOCK_REF = 12.0, "URBAN-REBAR-NET-AND-PROCUREMENT@v1 stock_length_m (O
 UNIT_MASS = {"method": "D2_OVER_162", "authority": "as T-265 / T-138 (d^2 / 162)", "selected_by": "project"}
 
 NOTE9 = {"tier": RL.NOTE, "tension_d": 70, "compression_d": 40, "kind": RL.MINIMUM, "governs": False,
-         "ref": "ST7757.pdf p.8 note 9 (starter bars only)"}
+         "ref": "ST7757.pdf p.8 note 9 (starter bars only)",
+         "category": RL.STARTER_CAT}          # r2 (owner s.6.1): starter development, never a general lap rule
 P15 = {"tier": RL.NOTE, "lap_d": 40, "kind": RL.EXACT, "governs": True,
-       "ref": "ST7757.pdf p.15 temperature note 1 (temperature bars only)"}
+       "ref": "ST7757.pdf p.15 temperature note 1 (temperature bars only)",
+       "category": RL.LAP_CAT}
 CHAINS = {   # T-138 r2: bars continue through the interior columns (p.13); runs that form each chain in T-265
     "GB-CHAIN-7D0/FC": {"runs": ("7D0+FC#1", "7D0+FC#2", "7D0+FC#3", "7D0+FC#4"), "L_m": 18.570,
                         "through_columns_m": (1.10, 0.50, 0.70)},

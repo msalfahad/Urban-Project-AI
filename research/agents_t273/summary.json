@@ -201,8 +201,17 @@
  ],
  "policy": {
   "count": "laps = 0 if L <= S else ceil((L - S) / (S - lap)); lap >= S BLOCKED (bbs_optimiser.split_run)",
+  "count_exact": "lap_count_exact: the same formula in exact rationals from text / mm integers / floats",
+  "coupler": "MECHANICAL_COUPLER runs: joints = ceil(L / S) - 1, no lap steel, couplers as pieces",
   "defect": "D-T273-01: continuous_beams._with_laps n = ceil(L / S) - 1 (frozen; corrected here as a new method version, never in place)",
-  "digest": "fce680c9e5eebe44daea509e618d890193d945bb752fd8af6ac83eb73d2e7827",
+  "detailing_categories": [
+   "ANCHORAGE_DEVELOPMENT",
+   "LAP_SPLICE",
+   "STARTER_BARS",
+   "HOOK_BEND",
+   "MECHANICAL_COUPLER"
+  ],
+  "digest": "2aaecf1bf1e3caf9f67e261483b7ff2d3001ac10b31359a4f45de118aa8ce78d",
   "method_id": "CONTINUOUS_BEAM_LAPS_V2",
   "never": [
    "a default lap length",
@@ -210,6 +219,7 @@
    "a second column lap or starter",
    "a lap on an anchorage or a BBS length that contains it",
    "laps summed from rounded t",
+   "a source of another detailing category used as a lap",
    "a held lap shown as 0"
   ],
   "owner_convention": {
