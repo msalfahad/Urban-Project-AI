@@ -46,6 +46,17 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+### Lead 2026-10-24 12:15 (from T-219, T-250, T-260, T-228 r2, T-235 r2 MERGED; T-180 CONC.GROUND exterior slot; T-240 WP1; new T-270)
+
+| Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |
+|---|---|---|---|---|---|
+| Aluminium doors D-GF-01, D-GF-05, D-GF-06 (class) and D-GF-09 (width) | doors, blockwork deduction, plaster / paint deduction | DOORS ALUMINIUM (m2 and pcs); widths 1.000 / 1.000 / 1.000 / 0.900 m on both wall faces; D-GF-09 0.900 deducts once in blockwork (GF-W10) and once per finish face | VERIFIED as Checker rulings (11:55); height 2.20 ASSUMED — OWNER-APPROVED Q-55 C | T-260 MERGED c6732efe | T-268 closes the line (12.760 m2 / 6 pcs expected); deduction change only through T-261 / T-244 |
+| Footing underlay membrane (2 cm, on 24 footing outlines) + 5 cm protection screed | waterproofing, concrete blinding, excavation | WATERPROOFING (membrane m2, screed m3 / m2); the 10 cm blinding stays CONC.BLINDING (STRUCTURE), never both | VERIFIED pieces 109.85 m2 / 5.4925 m3; F10 / F 4.55 .. 4.64 m2 HELD; footing sides HELD (detail by formation: liquid 80.04 vs sheet 93.03 m2) | T-219 MERGED de7c1c4c (Verifier 10:40) | T-270 integration; T-263 buried-concrete coating |
+| Lift pit layers: membrane 47.43 m2, protection board 26.73 m2, screed 1.035 m3 | waterproofing, concrete pit slab / walls | WATERPROOFING | VERIFIED (= worker 0.000); pit walls HELD (pit depth) | T-219 MERGED | T-270 |
+| Main-house exterior ground beams, 17 runs incl. ring arc 157+158 and stub 107+7CE | concrete ground system, formwork (exterior faces above N.G.), rebar, buried-concrete waterproofing | CONC.GROUND (volume); formwork, rebar and coating read the SAME 17 runs at the Checker-verified lengths, never their own | own 17 / 17: 15.9692 vs 15.9600 m3 (+0.06 %), PARTIALLY VERIFIED 16 / 17 (stub strip 0.0026 m2 unconfirmed); ring +0.67 % = end-closure convention | Verifier 12:10 T-180 slot | T-254 (strip shown or dropped, ring end rule); cross-trade users T-264 / T-265 / T-263 |
+| Stair-shaft wall pieces under 'B3 (With Stair)' (GF-W10, 1F-W10, 2F-W02) | blockwork, plaster, paint, stair concrete | BLOCKWORK where a slab cut is printed at that storey; none printed | HELD x3 (sibling rule R-T228-3 applied) | T-228 r2 MERGED bf4dd2a9 | T-261 settles from the drawings or names the designer item |
+| GF OP-003 strip (porcelain 2.244 m2 and a blocked threshold, same strip) | floor area, threshold | ONE line only: the strip is either floor finish or threshold by UP-DOOR-CLS-005 / T-218, never both | DOUBLE CARRIED in V3.0.12 (found by worker 3) | T-240 WP1 handoff 11:48 | T-240 WP2 removes the twin |
+
 ### Lead 2026-10-24 10:15 (from T-146 + T-247 MERGED, T-228 REJECTED, T-260 / T-262 evidence; new T-268, T-269)
 
 | Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |

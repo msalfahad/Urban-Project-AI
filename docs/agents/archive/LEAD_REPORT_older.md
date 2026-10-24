@@ -1,3 +1,63 @@
+## LEAD REPORT 2026-10-24 06:15 UTC
+
+Repositories: attached Urban-Project-AI checkout (main eafbb0f6); `.work` prepared AUTOMATICALLY ("setup by auto",
+06:10). Working branch 567dc972 -> fee98d9a (T-251) -> b37be82d (T-252) -> 3c9b1484 (T-239), all Checker merges via
+'engine push'; no owner commit on the engine branch. Drive readable: nothing created in the Alsenan folder or the
+private-data root since 04:00, no new images (no photo review task). Self-check: codemap PASS, pytest t061 PASS, freeze
+PASS (0). OWNER_SESSION_CHANGES: no entry since 2026-10-23 21:29. Board commit hit one rebase conflict (the Checker's
+T-239 MERGED row landed during this run): resolved by hand, the Checker's rows kept, nothing lost.
+
+PROGRESS (Alsenan, by trade and unit; released unchanged: concrete 92.77 vs freelancer 111.81 m3, -17.03 %, run A).
+WHOLE LINES VERIFIED: 0 / 13 (no change). PARTIALLY VERIFIED: CONC.FOOTING, CONC.BLINDING, CONC.BEAM, CONC.GROUND,
+CONC.COLUMN. SCOREABLE TRADES: concrete, floor area, doors / windows (candidate). Nothing got worse.
+- CONC.FOOTING / BLINDING (m3, candidate V3.0.11 MERGED 3c9b1484, Gate B): the open outline 1B1B carries two tags
+  (F10 + F): HELD CONFLICT of both drawing readings, rows separately 2.176 vs outline at the tagged depth 2.275 m3
+  (was PROVISIONAL 1.960 = F10 alone); blinding HELD 0.552 .. 0.590. Released-in-candidate footing 66.264 -> 64.304 m3
+  = exactly the 25 footings the Checker verified one by one. Freelancer 1.960 sits 0.216 .. 0.315 below both readings:
+  UNRESOLVED (designer item Q-31 C, already open). D-14 plot-line clip of that blinding still not applied (named).
+- CONC.BEAM (m3): ledger r2 MERGED b37be82d: 66.0161 -> 66.3206 (+0.3045) = Checker's own re-measure; the 0.0004 m3
+  item settled on the drawn ring 0.666406 m2 (arcs + exact segments; the Checker withdrew his 0.66676, not averaged).
+  vs freelancer 65.966: +0.3547 (+0.54 %), NOT agreement: CB4 / B4 through a column = RULE_DIFFERENCE (column owns its
+  footprint), his B7 7.38 m row has no location = UNRESOLVED. HELD 4.128 .. 8.568, CONFLICT 5.145 .. 6.111 unchanged.
+- CONC.GROUND (m3, READY, not yet checked): boundary G.B at N.G. 5 runs 44.07 m x 0.20 x 0.40 = 3.5256 DRAWING-CONFIRMED
+  proposal (absent in released A and every candidate; freelancer 7.56 = section +4.200, length -0.166); D-35 for the
+  main house read from 5 printed readings as outer ground = natural +-0.00 -> 16 runs + ring 15.960 m3 proposal; annex
+  literal 0.25 m (2.228) stays CONFLICT; court 3 runs HELD 0.627 .. 1.410. Counts only after the Checker's own reading.
+- BLOCKWORK (m2, READY, not yet checked): register v2 established net 337.410 -> 494.189 (+46.5 %), VERIFIED net 4.458
+  (GF-W07), gross VERIFIED 101.236 on 4 walls; 38 walls held, 40 blockers each with its missing item. New: GF-W10 has
+  a 2.500 m stair-foot piece on a printed +0.30 landing (HELD for the Checker); W.C. stretch 1.350 m (0 .. 0.945 m2).
+- CONC.SLAB (m3): unchanged, Checker 60.2804 on 62 panels; candidate 60.9192 (+0.6388 = the 13 non-slab faces).
+- What was learned: an outline with two footing tags is a conflict whose range is exactly its readings; a member ends
+  on the carrier face per drawn edge and a curved member is the region between its own drawn edges; fixing the first
+  cause of a red test can expose a second (lessons register +3).
+
+ENGINEERING DECISIONS THIS RUN (ERS s.5 Lead): (1) lane I order: the slab / beam partition (T-146 + T-247 as one
+package) moves ahead of T-254 / T-255: CONC.SLAB is the only line that can become a whole verified line now, and the
+beam r2 it needs merged at 05:37; it also meets the Week-1 target (27 Oct) if it passes Gate B by 26 Oct. Cross-trade:
+ring B7 whole in the beam, released band-53 slab piece 0.0322 m3 out, route-band overlap 0.0026 m3 removed once.
+(2) The T-210 proposal to re-scope the K1 stdlib-only assertion is REFUSED (narrowing an assertion is weakening a test);
+declarations through the test's own by_design list, module by module, after the Checker accepts the record (T-257);
+pymupdf stays unregistered (AGPL, already decided in PLAN_READER). (3) New investigations: T-258 stairs + domes, the
+closable component vs named blockers (owner 22 Oct: the staircase system stays partial until every part is checked);
+T-260 evidence for the 4 held aluminium doors (CLOSABLE row 5); T-261 block-wall blockers another drawing settles
+(after T-228). Element register +7; lessons register +3 (T-239, T-252, T-210), T-251 row closed.
+
+TEAM HEALTH. Since 04:15: Worker 1 04:20 -> SUCCESS 05:13 (T-253 READY), 05:20 open (T-256 claimed 05:24); Worker 2 04:40
+-> SUCCESS 05:04 (T-228 READY), 05:40 open (T-250 claimed 05:47); Worker 3 03:00 -> SUCCESS 04:45 (T-239 READY), 05:01
+-> SUCCESS 06:04 (T-210 READY); Checker 03:51 -> SUCCESS 04:21 (T-251), 04:51 -> SUCCESS 06:13 (T-252, T-239), 05:51
+IDLE on the overlap guard (by design, not a failure). Every closed run wrote STARTED and a final line; every self-check
+PASS; 0 refusals; 0 failed. Classified: T-251 WORKED, T-252 WORKED, T-239 WORKED. READY 3 (= target): T-253, T-228,
+T-210, all CHECKER-RUNS; backlog rule off. Queue check: 50 actionable rows, 0 flagged, 0 stall checks. TODO 7 (below
+the 8-12 band because lane I is serial: 9 integration rows QUEUED behind T-146 + T-247): S 2 (T-258, T-170) + T-256
+CLAIMED; A 2 (T-260, T-219) + T-250 CLAIMED, T-261 QUEUED; I 3 (T-146 + T-247 package, T-235 r2, T-168), T-257 QUEUED.
+PILOT: the window ended 06:15 UTC; the schedules still show the pilot cadence (Worker 2 hourly at :39 at 06:15); I did
+not touch any schedule: cadence after the pilot is your decision (your main chat's 06:20 check-in).
+
+OWNER PACKAGE: nothing new today. Q-76 (W17 height basis, section 6 format, sent 00:10) is still unanswered; W17 stays
+HELD 9.870 .. 11.515 m2, never the larger end. Q-31 C (the F10 + F footing) is a designer item already on the list.
+
+NEEDS FIXING (owner only): none.
+
 ## LEAD REPORT 2026-10-24 04:15 UTC
 
 Repositories: attached Urban-Project-AI checkout (main eafbb0f6); `.work` prepared AUTOMATICALLY ("setup by auto",

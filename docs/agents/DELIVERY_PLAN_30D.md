@@ -46,7 +46,16 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
-## Status (Lead, 2026-10-24 10:15; re-estimated each run from what merged and was verified)
+## Status (Lead, 2026-10-24 12:15; re-estimated each run from what merged and was verified)
+
+Lead 2026-10-24 12:15: since 10:15 the Checker merged 5 Gate A tasks (T-219 foundation / pit waterproofing, T-250
+face crosswalk, T-260 aluminium-door rulings, T-228 r2 blockwork register v2, T-235 r2 verdict / export tooling),
+rejected 0; READY 0. Verified whole lines still 1 / 13 in the candidate (CONC.SLAB), 0 / 13 released. Week-2 target
+(3 Nov, 'measurable increase in verified coverage'): the Doors aluminium line is now closable in ONE integration run
+(T-268, worker 3 12:59 -> Gate B about 13:49): on track to be the SECOND whole line today; floor area follows on T-240
+WP2 .. WP4 (WP1 pushed). P-11 missing scope: foundation waterproofing now verified in pieces -> T-270 into the
+candidate. P-05 / P-08: CONC.GROUND exterior component 16 / 17 own-measured (+0.06 %); the line stays BLOCKED BY
+CONSULTANT. Risk: worker 1 holds three evidence-complete hand-ins (WIP limit set). No milestone re-dated.
 
 Lead 2026-10-24 10:15: since 08:15 the Checker merged the T-146 + T-247 Gate B package (V3.0.12, 768ff1d6) and
 rejected T-228 (blockwork register v2, narrow r2). WEEK-1 TARGET MET 3 days early: 'one verified improvement through

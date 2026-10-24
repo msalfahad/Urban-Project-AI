@@ -1,5 +1,65 @@
 # Lead reports to the owner's main chat (newest first, last 3 entries; older in archive/LEAD_REPORT_older.md)
 
+## LEAD REPORT 2026-10-24 12:15 UTC
+
+Repositories: attached Urban-Project-AI checkout (main eafbb0f6); `.work` prepared AUTOMATICALLY ("setup by auto",
+12:10). Working branch 768ff1d6 -> 3bd09b62 (five Checker merges via 'engine push'); no owner commit on the engine
+branch. Drive readable: nothing created in the Alsenan folder since 10:00, no new images (no photo review task).
+Self-check: codemap PASS, pytest t061 PASS, freeze PASS (0). OWNER_SESSION_CHANGES: two entries since my last run
+(10:28 S-4 option C with clarification; 10:56 S-5 .. S-8 + two corrections: goings per flight configuration, HELD BLANK
+in the BOQ with scenarios in a separate report): read, both already in T-267's row and the stair rule file; nothing
+undone. Applied the 10:56 'HELD = BLANK' correction to the new integration row T-270 and the T-258 queue item.
+
+PROGRESS (Alsenan, by trade and unit; released unchanged: concrete 92.77 vs freelancer 111.81 m3, -17.03 %, run A).
+WHOLE LINES VERIFIED: candidate 1 / 13 (CONC.SLAB), released 0 / 13; no change this run. Nothing got worse.
+- DOORS aluminium (m2 / pcs; T-260 MERGED c6732efe): Checker's own both-face widths D-GF-01 / -05 / -06 1.000 m,
+  D-GF-09 0.900 m (the 1.00 m is the block frame), class ALUMINIUM x3 from the side spaces (court; side passage open on
+  plan + SW elevation, Q-67 A; +1.00 landing). Line after integration 12.760 m2 / 6 pcs vs freelancer 12.000 (+6.33 %):
+  heights -1.000 (Q-55 C, ASSUMED — OWNER-APPROVED), widths -0.440, count +2.200 (his 4 GF vs 5 drawn, ENGINE_RIGHT);
+  residual 0. CLOSABLE AFTER T-268 (one integration run): the expected second whole line.
+- BLOCKWORK (m2; T-228 r2 MERGED bf4dd2a9): stair-shaft pieces under 'B3 (With Stair)' held on all three storeys;
+  established net 494.189 -> 449.260 m2 (-44.929, -9.1 %): metres moved to HELD with their item, none dropped; 39 / 76
+  walls held-net. VERIFIED net still only GF-W07 4.458 m2 (+ GF-W10 eastern pieces 39.1525 Checker own).
+- WATERPROOFING foundation (T-219 MERGED de7c1c4c; a scope in no engine line and no freelancer row): Checker own footing
+  membrane 109.85 m2 (24 sizes x tag count), screed 5.4925 m3; pit membrane 47.43 / board 26.73 m2 / screed 1.035 m3
+  (= worker 0.000). HELD: F10 / F 4.55 .. 4.64 m2, pit walls (depth), footing sides (liquid 80.04 vs sheet 93.03 m2 by
+  the formation-selected detail), procurement (product not printed). Line PARTIALLY VERIFIED; into the candidate: T-270.
+- CONC.GROUND main-house exterior (m3; Checker T-180 slot 12:10): own 17 / 17 runs 15.9692 vs 15.9600 (+0.06 %): 15 runs
+  exact, ring arc +0.0123 m2 (+0.67 %, end-closure convention, named), stub -0.0026 m2 (gap strip not found).
+  Component PARTIALLY VERIFIED 16 / 17; line BLOCKED BY CONSULTANT (D-33 / D-34 / D-35 annex / M4).
+- FLOOR AREA (m2; T-240 WP1 pushed, not handed in): internal floor 340.7645 -> 342.6645 (+1.900, +0.56 %): dressing
+  2.970 in, three sills 0.550 to ARCH.THRESHOLD HELD, side passage 5.640 to one outdoor line; GF OP-003 found carried
+  twice (porcelain 2.244 + blocked threshold) -> WP2.
+- PLASTER / PAINT (T-250 MERGED 47390c9b): every face tied to its wall; W03 room side 6.7294 m (= T-128 6.731); no m2
+  change. Export tooling (T-235 r2 MERGED): a line reads VERIFIED only with a whole-line V2 record + a completeness
+  record; the real export stays refused until one project identity exists (T-245).
+- Learned (lessons register +3, one closed): scope is inventoried from every layer of each printed section detail,
+  never from the freelancer's rows; an opening width is the clear jamb distance on both faces, never the frame line; an
+  arc member ending in a neck closes on the neck face (to become a rule in T-254). T-228 sibling rule closed (MERGED).
+
+ENGINEERING DECISIONS THIS RUN (ERS s.5 Lead). (1) T-268 PROMOTED and first in lane I (closable-line rule 10:02 (a)); it
+applies the Checker's rulings, not the worker's proposal; the D-GF-09 width reaches the GF-W10 deduction only once,
+through T-261 / T-244. (2) New T-270 (gate 2, lane I): foundation / pit waterproofing as its own line family; blinding
+15.179 m3 stays STRUCTURE (no double count); HELD parts BLANK. (3) T-261 PROMOTED (register v2 merged). (4) T-254's
+acceptance extended with the Checker's two open points (stub strip shown or dropped; ring end rule + test). (5) WIP
+LIMIT for worker 1: three evidence-complete branches (T-258, T-264, T-265) and none READY, each re-merge costing a run
+when the head moves; no new claim until all three are handed in (T-258 first, it blocks T-266). (6) Cross-trade: the 17
+exterior ground-beam runs feed concrete, formwork (T-264: faces above N.G. 47.663 m2), rebar (T-265) and the coating
+(T-263): all four must read the Checker-verified run lengths; register row added.
+
+TEAM HEALTH. Since 10:15: Checker 2 runs (09:50 -> 11:01 SUCCESS, 11:51 -> 12:08 SUCCESS; 10:51 overlap guard, correct);
+Worker 3 11:01 -> 11:48 SUCCESS; Worker 2 10:40 -> 11:28 SUCCESS, 11:40 open (T-269, scheduler PENDING); Worker 1
+09:20 -> 10:31 SUCCESS, 10:20 IDLE (lock, correct), 11:21 open (T-265 evidence 12:06). Every closed run carries a
+self-check PASS line; no refusal, no unclosed run older than its window. Throughput: 5 merged / 0 rejected in 2 h; READY
+0 now (backlog cleared). Risk: worker 1 work-in-progress (above). Queue check: 49 actionable rows, 0 flagged, 0 stall
+checks.
+
+OWNER PACKAGE: none new. Open with you: Q-76 (curved first-floor window height, A 9.87 / B 11.51 m2; recommendation A).
+Your stair answers S-4 .. S-8 are recorded; no agent will ask them again.
+
+NEEDS FIXING (owner only): none new. The consultant / designer list (D-33 / D-34 / D-35, D-16, D-53, D-66) still holds
+CONC.GROUND, CONC.COLUMN and the windows line; the existing-ground survey still holds every excavation depth.
+
 ## LEAD REPORT 2026-10-24 10:15 UTC
 
 Repositories: attached Urban-Project-AI checkout (main eafbb0f6); `.work` prepared AUTOMATICALLY ("setup by auto",
@@ -139,63 +199,3 @@ HELD 9.870 .. 11.515 m2, never the larger end. The column band question (D-66) a
 consultant pack, not owner decisions.
 
 NEEDS FIXING (owner only): none. (Pilot cadence after 06:15 remains your decision; nothing on the board depends on it.)
-
-## LEAD REPORT 2026-10-24 06:15 UTC
-
-Repositories: attached Urban-Project-AI checkout (main eafbb0f6); `.work` prepared AUTOMATICALLY ("setup by auto",
-06:10). Working branch 567dc972 -> fee98d9a (T-251) -> b37be82d (T-252) -> 3c9b1484 (T-239), all Checker merges via
-'engine push'; no owner commit on the engine branch. Drive readable: nothing created in the Alsenan folder or the
-private-data root since 04:00, no new images (no photo review task). Self-check: codemap PASS, pytest t061 PASS, freeze
-PASS (0). OWNER_SESSION_CHANGES: no entry since 2026-10-23 21:29. Board commit hit one rebase conflict (the Checker's
-T-239 MERGED row landed during this run): resolved by hand, the Checker's rows kept, nothing lost.
-
-PROGRESS (Alsenan, by trade and unit; released unchanged: concrete 92.77 vs freelancer 111.81 m3, -17.03 %, run A).
-WHOLE LINES VERIFIED: 0 / 13 (no change). PARTIALLY VERIFIED: CONC.FOOTING, CONC.BLINDING, CONC.BEAM, CONC.GROUND,
-CONC.COLUMN. SCOREABLE TRADES: concrete, floor area, doors / windows (candidate). Nothing got worse.
-- CONC.FOOTING / BLINDING (m3, candidate V3.0.11 MERGED 3c9b1484, Gate B): the open outline 1B1B carries two tags
-  (F10 + F): HELD CONFLICT of both drawing readings, rows separately 2.176 vs outline at the tagged depth 2.275 m3
-  (was PROVISIONAL 1.960 = F10 alone); blinding HELD 0.552 .. 0.590. Released-in-candidate footing 66.264 -> 64.304 m3
-  = exactly the 25 footings the Checker verified one by one. Freelancer 1.960 sits 0.216 .. 0.315 below both readings:
-  UNRESOLVED (designer item Q-31 C, already open). D-14 plot-line clip of that blinding still not applied (named).
-- CONC.BEAM (m3): ledger r2 MERGED b37be82d: 66.0161 -> 66.3206 (+0.3045) = Checker's own re-measure; the 0.0004 m3
-  item settled on the drawn ring 0.666406 m2 (arcs + exact segments; the Checker withdrew his 0.66676, not averaged).
-  vs freelancer 65.966: +0.3547 (+0.54 %), NOT agreement: CB4 / B4 through a column = RULE_DIFFERENCE (column owns its
-  footprint), his B7 7.38 m row has no location = UNRESOLVED. HELD 4.128 .. 8.568, CONFLICT 5.145 .. 6.111 unchanged.
-- CONC.GROUND (m3, READY, not yet checked): boundary G.B at N.G. 5 runs 44.07 m x 0.20 x 0.40 = 3.5256 DRAWING-CONFIRMED
-  proposal (absent in released A and every candidate; freelancer 7.56 = section +4.200, length -0.166); D-35 for the
-  main house read from 5 printed readings as outer ground = natural +-0.00 -> 16 runs + ring 15.960 m3 proposal; annex
-  literal 0.25 m (2.228) stays CONFLICT; court 3 runs HELD 0.627 .. 1.410. Counts only after the Checker's own reading.
-- BLOCKWORK (m2, READY, not yet checked): register v2 established net 337.410 -> 494.189 (+46.5 %), VERIFIED net 4.458
-  (GF-W07), gross VERIFIED 101.236 on 4 walls; 38 walls held, 40 blockers each with its missing item. New: GF-W10 has
-  a 2.500 m stair-foot piece on a printed +0.30 landing (HELD for the Checker); W.C. stretch 1.350 m (0 .. 0.945 m2).
-- CONC.SLAB (m3): unchanged, Checker 60.2804 on 62 panels; candidate 60.9192 (+0.6388 = the 13 non-slab faces).
-- What was learned: an outline with two footing tags is a conflict whose range is exactly its readings; a member ends
-  on the carrier face per drawn edge and a curved member is the region between its own drawn edges; fixing the first
-  cause of a red test can expose a second (lessons register +3).
-
-ENGINEERING DECISIONS THIS RUN (ERS s.5 Lead): (1) lane I order: the slab / beam partition (T-146 + T-247 as one
-package) moves ahead of T-254 / T-255: CONC.SLAB is the only line that can become a whole verified line now, and the
-beam r2 it needs merged at 05:37; it also meets the Week-1 target (27 Oct) if it passes Gate B by 26 Oct. Cross-trade:
-ring B7 whole in the beam, released band-53 slab piece 0.0322 m3 out, route-band overlap 0.0026 m3 removed once.
-(2) The T-210 proposal to re-scope the K1 stdlib-only assertion is REFUSED (narrowing an assertion is weakening a test);
-declarations through the test's own by_design list, module by module, after the Checker accepts the record (T-257);
-pymupdf stays unregistered (AGPL, already decided in PLAN_READER). (3) New investigations: T-258 stairs + domes, the
-closable component vs named blockers (owner 22 Oct: the staircase system stays partial until every part is checked);
-T-260 evidence for the 4 held aluminium doors (CLOSABLE row 5); T-261 block-wall blockers another drawing settles
-(after T-228). Element register +7; lessons register +3 (T-239, T-252, T-210), T-251 row closed.
-
-TEAM HEALTH. Since 04:15: Worker 1 04:20 -> SUCCESS 05:13 (T-253 READY), 05:20 open (T-256 claimed 05:24); Worker 2 04:40
--> SUCCESS 05:04 (T-228 READY), 05:40 open (T-250 claimed 05:47); Worker 3 03:00 -> SUCCESS 04:45 (T-239 READY), 05:01
--> SUCCESS 06:04 (T-210 READY); Checker 03:51 -> SUCCESS 04:21 (T-251), 04:51 -> SUCCESS 06:13 (T-252, T-239), 05:51
-IDLE on the overlap guard (by design, not a failure). Every closed run wrote STARTED and a final line; every self-check
-PASS; 0 refusals; 0 failed. Classified: T-251 WORKED, T-252 WORKED, T-239 WORKED. READY 3 (= target): T-253, T-228,
-T-210, all CHECKER-RUNS; backlog rule off. Queue check: 50 actionable rows, 0 flagged, 0 stall checks. TODO 7 (below
-the 8-12 band because lane I is serial: 9 integration rows QUEUED behind T-146 + T-247): S 2 (T-258, T-170) + T-256
-CLAIMED; A 2 (T-260, T-219) + T-250 CLAIMED, T-261 QUEUED; I 3 (T-146 + T-247 package, T-235 r2, T-168), T-257 QUEUED.
-PILOT: the window ended 06:15 UTC; the schedules still show the pilot cadence (Worker 2 hourly at :39 at 06:15); I did
-not touch any schedule: cadence after the pilot is your decision (your main chat's 06:20 check-in).
-
-OWNER PACKAGE: nothing new today. Q-76 (W17 height basis, section 6 format, sent 00:10) is still unanswered; W17 stays
-HELD 9.870 .. 11.515 m2, never the larger end. Q-31 C (the F10 + F footing) is a designer item already on the list.
-
-NEEDS FIXING (owner only): none.

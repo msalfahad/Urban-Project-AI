@@ -1,13 +1,32 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
 Plain words, no task numbers. Measured numbers come from SCOREBOARD.md; anything not measured says so.
-Last update: 2026-10-24 10:15 UTC (Lead). Previous version: 2026-10-24 08:15 UTC. The released numbers did not change
+Last update: 2026-10-24 12:15 UTC (Lead). Previous version: 2026-10-24 10:15 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released default V2.9 + route G untouched). Your measure (17:50):
-whole BOQ lines independently verified, and trades that can be scored. Today: FIRST WHOLE LINE VERIFIED, in the
-candidate (not released): the concrete slab line, 60.28 m3, equal to the checker's own measure of all 62 slab panels.
-So concrete in the candidate is 1 of 8 lines verified whole; every other trade still 0. PARTIALLY VERIFIED: footings,
-blinding, beams, ground beams, columns. No new question for you; the curved first-floor window question is still open,
-and your stair-design question (undrawn stairs: which riser / going values) is with you from the main chat.
+whole BOQ lines independently verified, and trades that can be scored. Still 1 whole line verified in the candidate
+(the concrete slab, 60.28 m3), 0 released. The next one is one step away: the aluminium doors line (the checker has now
+ruled all four doors that held it). No new question for you; the curved first-floor window question is still open.
+
+Since 10:15 (newest first; five pieces checked and merged, none sent back):
+- Aluminium doors: the checker measured the four held doors himself on both wall faces: three are aluminium (they open
+  to the court, the open side passage and the outdoor landing) and the fourth is 0.90 m wide, not the 1.00 m of its block
+  frame. The line becomes 12.76 m2 / 6 doors against the freelancer's 12.00 m2 (+6.3 %, explained door by door: your
+  2.20 m height rule takes 1.00 m2 off, the widths 0.44 m2, and he counts one ground-floor door fewer than the drawing
+  shows, +2.20 m2: engine right). It goes into the candidate in the next integration step; then it can close as a whole.
+- Block walls: the wall register passed after one fix. Three wall pieces under the stair shaft are now held on every
+  floor (no floor slab is drawn there at the upper storeys), so the area measured with confidence drops 494.19 -> 449.26
+  m2 (-9.1 %). Nothing is lost: those metres are held with the reason, not dropped. 39 of 76 walls still have a held net.
+- Foundation waterproofing (a scope missing from the engine AND from the freelancer): the checker measured it himself:
+  membrane under the 24 footings 109.85 m2 with a 5 cm protection screed 5.49 m3, and the lift-pit layers (membrane 47.43
+  m2, board 26.73 m2, screed 1.04 m3). Still held: one footing pair, the pit walls and the footing sides (which detail
+  applies depends on the formation). It goes into the candidate as its own lines next.
+- Plaster / paint: every room face is now tied to its wall on the drawing (no quantity change; it settles which room
+  each opening belongs to).
+- Outer ground beams of the main house: the checker measured all 17 runs himself: 15.969 vs 15.960 m3 (+0.06 %); one
+  tiny 0.003 m2 strip is unconfirmed, so this part is 16 of 17. The ground-beam line as a whole still waits for the
+  consultant.
+- Floor area: the first of four integration steps is done (internal floor 340.76 -> 342.66 m2, +0.56 %: the dressing room
+  added, three sills moved out to thresholds); one strip was found counted twice and is fixed in step two.
 
 Since 08:15 (newest first):
 - Concrete slab: the slab / beam move into the candidate passed the checker's full integration check. The candidate
@@ -558,7 +577,17 @@ Not measured, and paused by your order (Alsenan first).
   development lengths, so a steel ledger is not complete until it has read them.
 
 ## Being worked on now
-(Lead 2026-10-24 04:15)
+(Lead 2026-10-24 12:15)
+- Checker: the aluminium doors step into the candidate first (it can close a whole line), then the stairs / domes
+  closable split, the opening-to-room check, the formwork update and the ground-beam bars as they arrive.
+- Structural (worker 1): hand in its three finished pieces one by one (stairs / domes, formwork, ground-beam bars)
+  before starting anything new; then your stair finish-level method.
+- Architecture and finishes (worker 2): hand in the opening-to-room check; the first-floor living and pantry floor
+  pieces; then the coating of all buried concrete and the remaining wall blockers.
+- Integration (worker 3): aluminium doors line, then floor area steps 2 - 4, then foundation waterproofing, then the
+  ground-beam / column corrections.
+
+(Lead 2026-10-24 04:15, superseded)
 - Checker: the family-register test fix first, then the beam correction; then the next integration step; in between
   it re-measures neck sections and the conflicting columns, and the remaining first-floor stair flights.
 - Structural (worker 1): the boundary ground beam and the court / annex ground beams from the drawings; then the 15
