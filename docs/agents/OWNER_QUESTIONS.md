@@ -291,6 +291,7 @@ that the drawing does not show. Practice, not a code clause.
 STATUS: the window stays HELD 9.870 .. 11.515 m2 (never the larger end) until you answer.
 NEXT ACTION (continues without you): doors and windows go into the candidate in pieces and m2 with this window shown as
 held; every other window line continues. Waits on: the windows line of Alsenan becoming closable (T-232, T-238).
+Answer: A (owner, main chat 2026-10-24 23:53 UTC), his words (essentials): "Approve Option A, subject to the drawing evidence you described. Use the confirmed opening dimensions 3.29 m x 3.00 m = 9.870 m2 for the applicable window/opening measurement. Exclude the separate 0.45 m decorative wall band from the window quantity. The 3.50 m in Q-39 was an example, not a universal window-height rule. Preserve the distinction between opening area, aluminium assembly area and net glass area. Follow the approved BOQ measurement basis. Do not use this decision to resolve D-53 automatically. W02's one-window-versus-two-window classification remains subject to the actual drawing or designer evidence." LEAD: move this entry to OWNER_QUESTIONS_ANSWERED.md and add the index line.
 
 ## Answered (index; full problem, options and evidence in OWNER_QUESTIONS_ANSWERED.md)
 

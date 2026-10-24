@@ -1,5 +1,7 @@
 # Consultant / designer clarification list, Alsenan (owner 2026-10-23, main chat 17:50 UTC; DRAFT for the owner to send)
 
+SUPERSEDED (main chat 2026-10-24 23:53): the consolidated package is CLARIFICATIONS_CONSULTANT_2026-10-24.md; this file is kept as history.
+
 Owner rule (2026-10-23): before an item is sent, every available drawing, section, schedule and note has been searched;
 each item states the conflicting evidence and the BOQ lines it holds; nothing the drawings already answer is asked.
 Source register: DESIGNER_CLARIFICATIONS.md (D-nn rows, each raised by a task that read the sheets named there). Column
