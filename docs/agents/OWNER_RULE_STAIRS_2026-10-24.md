@@ -156,3 +156,20 @@ check reports CODE NOT VERIFIED with the source row below until a clause text is
 | A21 | building type missing from the manifest | applicability not decided, CODE NOT VERIFIED | assumed private house |
 | A22 | any run | the word COMPLIANT never appears; "no conflict found against verified clauses ..." only | certification |
 | A23 | frozen stair modules and the V2.9 / V3.0.12 outputs before and after | byte-identical; freeze check 0 differing | frozen or released change |
+
+## 6. Final clarifications (owner, main chat, 2026-10-24 13:53; architecture, S-9 and A1 - A23 approved subject to these)
+
+1. Regulatory verification does not block software verification. Three separate statuses:
+   SOFTWARE_VERIFIED (implementation and tests independently accepted by the Checker), QUANTITY_VERIFIED (project
+   quantities independently reconciled against the drawings), CODE_NOT_VERIFIED (applicable provisions not established).
+   No regulatory-compliance claim while CODE_NOT_VERIFIED. Official code verification is a separate required step before
+   any compliance claim; it does not block completion of the non-regulatory module.
+2. Unknown run type: never read an undimensioned or unqualified run as a maximum. RUN_TYPE_UNKNOWN when the drawing does
+   not establish fixed, maximum or otherwise constrained. Labeled planning scenarios may be shown; they never become
+   verified design geometry or BOQ quantities. (Supersedes the main chat's earlier suggestion to record it as maximum.)
+   Test A11 / A12 add a case A12b: run type not established -> RUN_TYPE_UNKNOWN, scenarios only, no feasible design and
+   no quantity released.
+3. Passing A1 - A23 is SOFTWARE_VERIFIED only. It does not establish Alsenan's stair concrete, marble, reinforcement or
+   handrail quantities; each needs its own independent drawing reconciliation before QUANTITY_VERIFIED.
+4. T-267 stays behind the critical export and completeness work; frozen modules, released V2.9 and existing quantity
+   baselines preserved. No new task rows for this.
