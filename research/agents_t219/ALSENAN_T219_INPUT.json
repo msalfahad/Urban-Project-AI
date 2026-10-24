@@ -1,0 +1,47 @@
+{
+ "schema": "URBAN_T219_FOUNDATION_WP_INPUT_V1",
+ "note": "Values only; no client data, no sheet coordinates. Drive 'Alsenan chalet project' files named by title.",
+ "underlay_chain": {
+  "screed_t": 0.05,
+  "membrane_t": 0.02,
+  "blinding_t": 0.10,
+  "membrane_extent": "FOOTING_OUTLINE",
+  "membrane_product": null,
+  "source": "ST7757.pdf p.13 both typical isolated-footing details: chain '5cm Screed' / membrane ('Water proofing membrane' right, 'Insulation membrane' left) dimensioned 2 / '10cm Plain con.' (T-206 vector read 5.0 / 1.95 / 10.0 cm, Checker 09:59 VERIFIED); screed and membrane end at the footing faces (right detail, read again this run at 300 dpi: the blinding alone projects '10 | L x W | 10'); no product, thickness-to-product or lap printed"
+ },
+ "side_details": {
+  "single": "LIQUID_2_LAYERS",
+  "double": "SHEET_MEMBRANE",
+  "selected": null,
+  "why_held": "governing detail not selected: p.13 right detail (upper ground beam to footing less than 2.5 m) draws 'Two layers liquid water proofing to be applied to all surface in contact with earth' on the footing sides (perimeter x H); p.13 left detail (more than 2.5 m) draws the 'Insulation membrane' down the footing sides to the blinding (perimeter x (H + 0.05 + 0.02)); the level difference depends on the formation level, HELD (owner Q-21 C; T-206: single-beam detail unless the formation is below about -1.67)"
+ },
+ "clips": [
+  {"outline": "180C", "notch_x_m": 0.40, "notch_y_m": 0.35, "source": "T-233 (FN 180C notched 0.40 x 0.35 where F9 180F lies; one footing-bottom stack, T-206)"}
+ ],
+ "contacts": [
+  {"outline": "180C", "with": "F9 180F (clip faces 0.40 + 0.35)", "face_length_m": 0.75, "height_m": 0.30, "status": "DRAWING-CONFIRMED", "note": "FN 0.30 against F9 0.55 on one bottom stack: FN face covered over its own depth"},
+  {"outline": "180F", "with": "FN 180C (clip faces 0.40 + 0.35)", "face_length_m": 0.75, "height_m": 0.30, "status": "DRAWING-CONFIRMED", "note": "F9 face covered by FN over FN's 0.30; the 0.25 above stays in contact with earth"},
+  {"outline": "1B24", "with": "SB1 end (70 x 50, orthogonal)", "face_length_m": 0.70, "height_m": 0.50, "status": "CONDITIONAL e=0 (T-230: strap level not printed; D = H)"},
+  {"outline": "1B07", "with": "SB2 end (100 x 50, 101.08 deg)", "width_m": 1.00, "oblique_cos": 0.981360, "face_length_m": null, "height_m": 0.50, "status": "CONDITIONAL e=0 (T-230); width D-38 (off-sheet 80 x 50 row)"},
+  {"outline": "1B19", "with": "SB2 end (100 x 50, 101.08 deg)", "width_m": 1.00, "oblique_cos": 0.981360, "face_length_m": null, "height_m": 0.50, "status": "CONDITIONAL e=0 (T-230); width D-38"},
+  {"outline": "1B2A", "with": "SB3 end (50 x 40, 110.57 deg)", "width_m": 0.50, "oblique_cos": 0.936244, "face_length_m": null, "height_m": 0.40, "status": "CONDITIONAL e=0 (T-230)"},
+  {"outline": "166B", "with": "SB3 end (50 x 40, 110.57 deg) into F3 0.30", "width_m": 0.50, "oblique_cos": 0.936244, "face_length_m": null, "height_m": 0.40, "status": "HELD (T-230: SB3 / F3 level range)"}
+ ],
+ "lift": {
+  "id": "LIFT-01",
+  "exclude_outlines": ["1B2B"],
+  "base_a_m": 4.60,
+  "base_b_m": 4.50,
+  "H": 0.55,
+  "screed_t": 0.05,
+  "pit_height_m": null,
+  "board_printed": true,
+  "envelope_points_m": [[0.0, 0.0], [2.25, 0.0], [2.25, 1.0], [2.2, 1.0], [2.2, 2.2], [0.0, 2.2]],
+  "source": "ST7757.pdf p.14 'DETAIL OF LIFT WITH ISOLATED FOOTING (WITHOUT BASEMENT)' (membrane under the screed, up the base and screed sides, over the base top outside the pit walls, up the outer wall faces; protection board on sides, top and walls; '5cm Screed'; pit depth 'As Per Lift Manufactures recommendations'); 'ST7757 dxf.dxf' own read this run: FF 1B2B 4.600 x 4.500 = 20.700 m2, ring outer 10EB 2.200 x 2.200 = 4.840 m2, C9 1090 0.250 x 1.000 projecting 0.050 beyond the ring over 1.000 m (envelope 4.890 m2, perimeter 8.900 m); FF depth 0.55 (schedule insert 2B1E)"
+ },
+ "freelancer": {
+  "searched": "tests/alsenan/registers_b1/FREELANCER_RAW_ROWS.json, all 6 workbooks (FIN incl. sheet 'العازل' rows 9-51 and the cover rows 27-30; RC sheet 'القواعد' rows 8-36; BLK, PLS, PNT, ALU)",
+  "rows": [],
+  "result": "no row for a foundation membrane, a protection screed under footings, footing side waterproofing, liquid waterproofing of buried concrete, or any lift-pit membrane / board / screed; his waterproofing is wet areas 72.01 m2 + 144.61 lm and roofs 285 m2 + 194 lm only; his 'العاديه' 15 x 31.37 x 0.10 = 47.055 m3 is a blinding plate (STRUCTURE, T-233 RULE_DIFFERENCE), not an underlay"
+ }
+}

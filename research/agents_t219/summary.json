@@ -1,0 +1,228 @@
+{
+ "freelancer": {
+  "result": "no row for a foundation membrane, a protection screed under footings, footing side waterproofing, liquid waterproofing of buried concrete, or any lift-pit membrane / board / screed; his waterproofing is wet areas 72.01 m2 + 144.61 lm and roofs 285 m2 + 194 lm only; his 'العاديه' 15 x 31.37 x 0.10 = 47.055 m3 is a blinding plate (STRUCTURE, T-233 RULE_DIFFERENCE), not an underlay",
+  "rows": [],
+  "searched": "tests/alsenan/registers_b1/FREELANCER_RAW_ROWS.json, all 6 workbooks (FIN incl. sheet 'العازل' rows 9-51 and the cover rows 27-30; RC sheet 'القواعد' rows 8-36; BLK, PLS, PNT, ALU)"
+ },
+ "membrane_by_type": {
+  "F": [
+   4,
+   2.88
+  ],
+  "F11": [
+   1,
+   5.25
+  ],
+  "F12": [
+   1,
+   14.08
+  ],
+  "F13": [
+   1,
+   10.32
+  ],
+  "F14": [
+   1,
+   12.54
+  ],
+  "F15": [
+   1,
+   1.8
+  ],
+  "F2": [
+   2,
+   6.46
+  ],
+  "F3": [
+   2,
+   4.48
+  ],
+  "F4": [
+   2,
+   8.8
+  ],
+  "F5": [
+   2,
+   10.08
+  ],
+  "F6": [
+   1,
+   5.72
+  ],
+  "F8": [
+   1,
+   14.4
+  ],
+  "F9": [
+   1,
+   9.18
+  ],
+  "FN": [
+   4,
+   3.86
+  ]
+ },
+ "method": "FOUNDATION_WP_V1",
+ "outlines": 25,
+ "side_readings_sum_m2": {
+  "double:SHEET_MEMBRANE": 93.033788,
+  "single:LIQUID_2_LAYERS": 80.037171
+ },
+ "sources": {
+  "chain": "ST7757.pdf p.13 both typical isolated-footing details: chain '5cm Screed' / membrane ('Water proofing membrane' right, 'Insulation membrane' left) dimensioned 2 / '10cm Plain con.' (T-206 vector read 5.0 / 1.95 / 10.0 cm, Checker 09:59 VERIFIED); screed and membrane end at the footing faces (right detail, read again this run at 300 dpi: the blinding alone projects '10 | L x W | 10'); no product, thickness-to-product or lap printed",
+  "lift": "ST7757.pdf p.14 'DETAIL OF LIFT WITH ISOLATED FOOTING (WITHOUT BASEMENT)' (membrane under the screed, up the base and screed sides, over the base top outside the pit walls, up the outer wall faces; protection board on sides, top and walls; '5cm Screed'; pit depth 'As Per Lift Manufactures recommendations'); 'ST7757 dxf.dxf' own read this run: FF 1B2B 4.600 x 4.500 = 20.700 m2, ring outer 10EB 2.200 x 2.200 = 4.840 m2, C9 1090 0.250 x 1.000 projecting 0.050 beyond the ring over 1.000 m (envelope 4.890 m2, perimeter 8.900 m); FF depth 0.55 (schedule insert 2B1E)",
+  "t233_input_sha_prefix": "9f9d1179"
+ },
+ "totals": {
+  "SCREED.FOOTING_PROTECTION|m2": {
+   "held": [
+    "FTG:1B1B"
+   ],
+   "held_high": 4.64,
+   "held_low": 4.55,
+   "held_open": false,
+   "measured": 109.85,
+   "measured_n": 24
+  },
+  "SCREED.FOOTING_PROTECTION|m3": {
+   "held": [
+    "FTG:1B1B"
+   ],
+   "held_high": 0.232,
+   "held_low": 0.2275,
+   "held_open": false,
+   "measured": 5.4925,
+   "measured_n": 24
+  },
+  "SCREED.LIFT_PIT_BASE|m2": {
+   "held": [],
+   "held_high": 0.0,
+   "held_low": 0.0,
+   "held_open": false,
+   "measured": 20.7,
+   "measured_n": 1
+  },
+  "SCREED.LIFT_PIT_BASE|m3": {
+   "held": [],
+   "held_high": 0.0,
+   "held_low": 0.0,
+   "held_open": false,
+   "measured": 1.035,
+   "measured_n": 1
+  },
+  "WP.FOOTING_MEMBRANE_PROCUREMENT|rolls": {
+   "held": [
+    "FTG:165C",
+    "FTG:1663",
+    "FTG:1664",
+    "FTG:1665",
+    "FTG:1666",
+    "FTG:1667",
+    "FTG:1668",
+    "FTG:1669",
+    "FTG:166A",
+    "FTG:166B",
+    "FTG:166C",
+    "FTG:166D",
+    "FTG:180C",
+    "FTG:180F",
+    "FTG:1ABF",
+    "FTG:1ADB",
+    "FTG:1B07",
+    "FTG:1B19",
+    "FTG:1B1A",
+    "FTG:1B1B",
+    "FTG:1B24",
+    "FTG:1B2A",
+    "FTG:10F0",
+    "FTG:10F8",
+    "FTG:1100"
+   ],
+   "held_high": null,
+   "held_low": null,
+   "held_open": true,
+   "measured": 0.0,
+   "measured_n": 0
+  },
+  "WP.FOOTING_MEMBRANE|m2": {
+   "held": [
+    "FTG:1B1B"
+   ],
+   "held_high": 4.64,
+   "held_low": 4.55,
+   "held_open": false,
+   "measured": 109.85,
+   "measured_n": 24
+  },
+  "WP.FOOTING_SIDES|m2": {
+   "held": [
+    "FTG:165C",
+    "FTG:1663",
+    "FTG:1664",
+    "FTG:1665",
+    "FTG:1666",
+    "FTG:1667",
+    "FTG:1668",
+    "FTG:1669",
+    "FTG:166A",
+    "FTG:166B",
+    "FTG:166C",
+    "FTG:166D",
+    "FTG:180C",
+    "FTG:180F",
+    "FTG:1ABF",
+    "FTG:1ADB",
+    "FTG:1B07",
+    "FTG:1B19",
+    "FTG:1B1A",
+    "FTG:1B1B",
+    "FTG:1B24",
+    "FTG:1B2A",
+    "FTG:10F0",
+    "FTG:10F8",
+    "FTG:1100"
+   ],
+   "held_high": null,
+   "held_low": null,
+   "held_open": true,
+   "measured": 0.0,
+   "measured_n": 0
+  },
+  "WP.LIFT_PIT_BOARD_FIXED|m2": {
+   "held": [],
+   "held_high": 0.0,
+   "held_low": 0.0,
+   "held_open": false,
+   "measured": 26.73,
+   "measured_n": 1
+  },
+  "WP.LIFT_PIT_BOARD_WALLS|m2": {
+   "held": [
+    "LIFT:LIFT-01"
+   ],
+   "held_high": null,
+   "held_low": null,
+   "held_open": true,
+   "measured": 0.0,
+   "measured_n": 0
+  },
+  "WP.LIFT_PIT_MEMBRANE_FIXED|m2": {
+   "held": [],
+   "held_high": 0.0,
+   "held_low": 0.0,
+   "held_open": false,
+   "measured": 47.43,
+   "measured_n": 1
+  },
+  "WP.LIFT_PIT_MEMBRANE_WALLS|m2": {
+   "held": [
+    "LIFT:LIFT-01"
+   ],
+   "held_high": null,
+   "held_low": null,
+   "held_open": true,
+   "measured": 0.0,
+   "measured_n": 0
+  }
+ }
+}
