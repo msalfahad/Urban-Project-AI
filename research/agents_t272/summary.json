@@ -1,0 +1,68 @@
+{
+ "policy": "STIRRUP_CLOSURE_V1",
+ "inputs": [
+  "research/agents_t265/LEDGER_T265.csv",
+  "research/agents_t242/ALSENAN_GROUND_INPUT.json (ring radii)"
+ ],
+ "unit_mass": {
+  "method": "D2_OVER_162",
+  "d8_kg_per_m": 0.395062
+ },
+ "exterior": {
+  "runs": 17,
+  "length_m": 55.9912,
+  "count_envelope": [
+   361,
+   400
+  ],
+  "half_spacing_reading": 380,
+  "t265_range": [
+   380,
+   397
+  ],
+  "count_status": "HELD (end rule not printed)",
+  "cut_length_status": "HELD",
+  "cut_length_held": [
+   "cover printed as a minimum only: b - 2c is an upper envelope of the link, not its size",
+   "bend radius / mandrel not printed",
+   "hook angle drawn, not printed",
+   "hook extension (tail) not printed (owner AD-4: blocked unless the project dimensions it)"
+  ],
+  "kg": null,
+  "kg_status": "HELD",
+  "qa_kg_at_high_count_no_hooks": 358.4
+ },
+ "boundary": {
+  "runs": 5,
+  "length_m": 44.07,
+  "count_status": "HELD (M4 columns; end rule)",
+  "no_column_reading": [
+   217,
+   227
+  ],
+  "cut_length_status": "HELD",
+  "cut_length_held": [
+   "closure: no hook or overlap drawn on the closed link (designer item)",
+   "cover printed as a minimum only: b - 2c is an upper envelope of the link, not its size",
+   "bend radius / mandrel not printed",
+   "hook angle not printed",
+   "hook extension (tail) not printed (owner AD-4: blocked unless the project dimensions it)"
+  ],
+  "kg": null,
+  "kg_status": "HELD",
+  "qa_kg_at_no_column_high_count_no_hooks": 86.809
+ },
+ "design_flags": {
+  "GB_EXTERIOR": [],
+  "BOUNDARY_GB": [
+   "closed link drawn with no closure (no hook, no overlap): designer item"
+  ]
+ },
+ "ring": {
+  "r_in_m": 2.25,
+  "r_out_m": 2.55,
+  "centreline_arc_m": 6.0873,
+  "inner_arc_m": 5.7068,
+  "outer_arc_m": 6.4678
+ }
+}
