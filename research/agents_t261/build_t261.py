@@ -200,6 +200,30 @@ WALLS = {
                           "2F 4.20 - 1.20 = 3.00",
         settled=R2_SETTLED,
         class_="SS"),
+    "2F-W05": dict(
+        census=2.250,
+        pieces=[
+            P.Piece("E B1 BM-2F-009", 1.000, 3.80, "member", drawn_extent_m=1.000,
+                    extent_source="column faces 2F6F / 2F6C (arch) = 41B / 418 (ST), B1 20x40 printed on the span"),
+            P.Piece("H BM-2F-017", 1.200, None,
+                    held_item="unlabelled vertical piece from column 418 to the top band inner face 393 (T-110 "
+                              "BM-2F-017, D-04): depth not printed (Q-61 C(4))",
+                    held_figure_m2="1.200 x 3.00 .. 3.80 = 3.600 .. 4.560 less D-2F-02 1.980, not a quantity"),
+            P.Piece("H junction in the top band", 0.050, None,
+                    held_item="0.050 m from the top band inner face to the inner face of 2F-W03, where BM-2F-017 "
+                              "frames into the band: soffit the deeper of B1 / B2 (0.40) and BM-2F-017 (not printed)",
+                    held_figure_m2="0.050 x 3.80 = 0.190 at most, not a quantity"),
+        ],
+        openings=[P.Opening("D-2F-02", "H BM-2F-017", 0.248, 1.148, 1.980)],
+        extra_held="",
+        handles=(f"{ARCH}: columns 2F6F / 2F6C faces 1.000 m apart (no opening between them); census = 1.000 + 2F6C "
+                 "face -> inner face of 2F-W03 (line 1283 / 1284) 1.250 m (the 0.700 m column is not in the census); "
+                 "door D-2F-02 block d220 12C2 frame 0.248 .. 1.148 m from the 2F6C face; "
+                 f"{ST}: 2F roof slab, B1 BM-2F-009 between 41B / 418, BM-2F-017 418 -> 393 1.200 m"),
+        settled=("r2: the r1 '0.70 m under neither member' is column 2F6C, which the census does not include; the B1 "
+                 "piece between the column faces carries no opening, D-2F-02 lies wholly in the BM-2F-017 piece "
+                 "(rule 7 + R-T261-1)"),
+        class_="SS"),
     "1F-W18": dict(
         census=5.200,
         pieces=[
@@ -379,7 +403,7 @@ def outputs():
             "summary.json": json.dumps(summ, indent=2) + "\n"}
 
 
-WALLS_T = {"GF-W10": 0.2, "1F-W10": 0.2, "2F-W02": 0.2, "1F-W04": 0.2, "2F-W03": 0.15, "2F-W07": 0.2, "1F-W18": 0.15,
+WALLS_T = {"2F-W05": 0.2, "GF-W10": 0.2, "1F-W10": 0.2, "2F-W02": 0.2, "1F-W04": 0.2, "2F-W03": 0.15, "2F-W07": 0.2, "1F-W18": 0.15,
            "1F-W24": 0.15}
 
 

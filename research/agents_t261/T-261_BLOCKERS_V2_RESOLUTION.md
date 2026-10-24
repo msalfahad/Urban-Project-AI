@@ -42,8 +42,18 @@ column outlines, corner and mid columns of each wall agree to 0.001 m, so no fra
   the B7 band (39B / 39A; B7 20x75 BM-2F-011 runs 6.6 m through the corner): 3.45, ESTABLISHED. D-2F-01 (12BA) 0.416
   .. 1.416 m from the inner face of the west band, inside BM-2F-004. Net 7.300 x 3.80 + 0.100 x 3.45 - 2.200 =
   **25.885** (r1 25.7908). Held 0.600 m (r1 0.534 m: the two junctions are 0.200 drawn, not 0.267).
-- **Effect of r2**: split total 149.289 -> **149.3125 m2** (+0.0235; 1F-W04 +0.0524, 2F-W03 +0.0942, 2F-W07 -0.1230),
-  m3 27.389 (unchanged to 0.0001); established net proposed 598.549 -> **598.5725 m2** (+33.24 % on 449.260). Every
+- **2F-W05 (new in r2, the next wall of the same topic; 0.20 black, internal)**: r1 left it unsplit because "0.70 m of
+  the 2.250 m run lies under neither member". Re-measured: that 0.70 m is column 2F6C (= ST 418), which the census does
+  NOT include: census 2.250 = 1.000 (columns 2F6F / 2F6C faces, B1 BM-2F-009 20x40 printed between 41B / 418) + 1.250
+  (2F6C face to the inner face of 2F-W03, lines 1283 / 1284). Pieces: B1 1.000 x 3.80 ESTABLISHED, no opening in it |
+  BM-2F-017 1.200 HELD (418 to the band inner face 393; depth not printed, D-04) with door D-2F-02 (d220 12C2, frame
+  0.248 .. 1.148 m from the 2F6C face, wholly inside it) | 0.050 m in the top band where BM-2F-017 frames in, HELD.
+  Net established **3.800** + HELD increment (1.200 x 3.00 .. 3.80 less 1.980; 0.050 x 3.80 at most). Register v2
+  carried 3.817 gross on 1.0045 m (census minus its held 1.246): the same closed-to-census pattern, 0.017 m2 above the
+  drawn piece.
+- **Effect of r2**: split total 149.289 -> **153.1125 m2** (the three corrected walls +0.0235: 1F-W04 +0.0524, 2F-W03
+  +0.0942, 2F-W07 -0.1230; 2F-W05 +3.800), m3 27.389 -> 28.149; established net proposed 598.549 -> **602.3725 m2**
+  (+34.08 % on 449.260); split walls 8 -> 9, still-held blockers 33 -> 32, walls with no established part 31 -> 30 / 76. Every
   value stays SOURCE-SUPPORTED PENDING INDEPENDENT CHECK; nothing is applied to register v2.
 - **Rule R-T261-1 point 7** (new in r2, research rule, never merged before): an established member / slab piece names
   the drawn face-to-face extent of its member and its source and is never longer (OVER_MEMBER; no extent:
@@ -91,7 +101,8 @@ For each blocker: is the missing item printed on another sheet? Searched this ru
 | 2F-W07 (r2) | 0.20 W | B15 2.700 (3.00) | W26 1.875 (arched outline, T-238) | 8.100 | 1.875 | **6.225** | BM-2F-016 2.900 m (8.700 .. 11.020); corner 0.125 m (0.375 .. 0.475) |
 | 1F-W18 | 0.15 B | B5 + slab 1F-057 + B6 (register 17.934) | none | 17.934 | 0 | **17.934** | dome-opening piece 0.439 m, top not drawn |
 | 1F-W24 | 0.15 B | slab 1F-094 + B6 (register 5.651) | none | 5.651 | 0 | **5.651** | dome-opening piece 1.024 m, top not drawn |
-| **Total** | | | | | | **149.3125** (27.389 m3; r1 149.289) | |
+| 2F-W05 (r2, new) | 0.20 B | B1 1.000 (3.80) between column faces | none | 3.800 | 0 | **3.800** | BM-2F-017 1.200 m with D-2F-02 1.980 (3.600 .. 4.560 gross); junction 0.050 m (0.190 at most) |
+| **Total** | | | | | | **153.1125** (28.149 m3; r1 149.289 on 8 walls) | |
 
 How the assignment was read (Checker: re-measure from these, never these numbers as expected):
 - SL-1 line (GF-W10 / 1F-W10 / 2F-W02): the plan draws the same column outlines on every storey frame (S-COL.BON GF
@@ -107,18 +118,17 @@ How the assignment was read (Checker: re-measure from these, never these numbers
   BM-2F-016; D-2F-01 (D115 block 12BA) inside B2 BM-2F-004, 0.83 m clear of the nearer unlabelled piece.
 - 1F-W18 / 1F-W24: no opening in the run (T-175 hosts; T-249 inventory).
 
-Not split (each says why in T261_BLOCKERS.csv): 2F-W05 (door D-2F-02, d220 block 12C2, lies under the unlabelled
-BM-2F-017, so its 1.980 belongs to the held piece; but the mapped member extents leave 0.70 m of the 2.250 m run
-under neither member: re-measure first), 1F-W11 / 1F-W13 / 1F-W17 (doors not located against the dome-face pieces
+Not split (each says why in T261_BLOCKERS.csv): 1F-W11 / 1F-W13 / 1F-W17 (doors not located against the dome-face pieces
 this run), GF-W03 (two marks on one span, D-03, and no printed base under the ST-02 flight).
 
 ## 3. Effect (net installed blockwork, development villa; proposed, nothing applied)
 
-(r2 figures) Established net 449.260 -> **598.5725 m2 (+149.3125, +33.2 %)**, m3 80.674 -> 108.063 (+27.389); VERIFIED 4.458 and
-PROJECT-SPECIFIC 85.144 unchanged; the 149.289 is SOURCE-SUPPORTED PENDING INDEPENDENT CHECK until the Checker
-re-measures every split wall (programme s.5). Walls with no established part: 39 -> 31 of 76; the eight split walls
+(r2 figures) Established net 449.260 -> **602.3725 m2 (+153.1125, +34.1 %)**, m3 80.674 -> 108.823 (+28.149); VERIFIED 4.458 and
+PROJECT-SPECIFIC 85.144 unchanged (register v2 as merged; the Checker's 15:27 2F-W04 VERIFIED ruling is outside these
+walls); the 153.1125 is SOURCE-SUPPORTED PENDING INDEPENDENT CHECK until the Checker
+re-measures every split wall (programme s.5). Walls with no established part: 39 -> 30 of 76; the nine split walls
 keep a HELD increment (figures above, never 0). By floor x thickness x type: T261_COVERAGE.csv (GF 0.20 white +39.153;
-1F 0.20 white +44.774; 1F 0.15 black +23.585; 2F 0.20 white +15.9165; 2F 0.15 white +25.885).
+1F 0.20 white +44.774; 1F 0.15 black +23.585; 2F 0.20 white +15.9165; 2F 0.20 black +3.800; 2F 0.15 white +25.885).
 
 Against the freelancer (comparison column only, never a target; not like for like while walls are held):
 GF external 94.706 -> 133.859 vs his 266.355; 1F external 103.967 -> 148.741 vs his 165.621 (his includes 41.25 m2 of
@@ -127,14 +137,14 @@ projections with no wall run); 1F internal 0.15 89.039 -> 112.624 vs his 195.098
 heights by printed member, Q-60 A, vs his one height per floor) on the split walls; no total verdict while a wall in the
 section is held (ERS s.7, an equal total is never agreement).
 
-## 4. Still HELD (33 blockers + the held pieces of the 8 split walls)
+## 4. Still HELD (32 blockers + the held pieces of the 9 split walls)
 
 | Cause | Walls | Exact missing item | Who |
 |---|---|---|---|
 | annex datum (Q-54 B) | GF-W00, W02, W04, W06, W17, W18, W23, W24, W25, W27, W35 | annex roof slab top / build-up | designer D-39; owner Q-54 B HOLD |
 | lift tie beam | GF-W08, W09, W13, W14 | b x h of the lift tie beam (ST PDF p.8 note 19; not in the DXF) | consultant D-43 |
 | held opening head | GF-W15, W26, W30, 1F-W07, 1F-W14+W15, 1F-W16, 2F-W00 | head / size drawn on no sheet | designer / consultant |
-| beam depth | GF-W03 (D-03), 2F-W05 (+ the D-04 pieces of the split walls) | depth of an unlabelled span | designer D-04 / Q-61 C |
+| beam depth | GF-W03 (D-03) (+ the D-04 pieces of the split walls, 2F-W05 now split in r2) | depth of an unlabelled span | designer D-04 / Q-61 C |
 | dome opening | 1F-W11, 1F-W13, 1F-W17, GF-W36 (+ 1F-W18 / 1F-W24 pieces) | top of wall under the open ring (dome detail N.I.S.) | designer (S0); client request S1 not issued |
 | stair shaft (R-T228-3) | pieces of GF-W10, 1F-W10, 2F-W02 | stair landing members on the shaft line; the +0.30 base is printed | lane S (stair detail) |
 | strips / increments | GF-H01, GF-H02, GF-W37; GF-W22 / GF-W34 (0 .. 0.013 / 0 .. 0.014) | material / base / top; CB2 width | designer |

@@ -220,7 +220,7 @@ def test_alsenan_r2_pieces_are_drawn_member_extents_not_census_closures():
     2F-W03 7.300 x 3.80 + 0.100 x 3.45 (B7 20x75) - 2.200 = 25.885; 2F-W07 2.700 x 3.00 - 1.875 = 6.225."""
     sp = rows("T261_SPLIT.csv")
     assert not any("closed to census" in r["piece"] for r in sp)
-    for w, census in (("1F-W04", 3.600), ("2F-W03", 7.900), ("2F-W07", 5.725)):
+    for w, census in (("1F-W04", 3.600), ("2F-W03", 7.900), ("2F-W07", 5.725), ("2F-W05", 2.250)):
         assert sum(float(r["length_m"]) for r in sp if r["wall_id"] == w) == pytest.approx(census, abs=1e-6)
     est = {(r["wall_id"], r["piece"]): float(r["length_m"]) for r in sp if r["piece_status"] != "HELD"}
     assert est[("1F-W04", "E B2 BM-1F-006")] == 2.700 and est[("2F-W07", "E B15 BM-2F-007")] == 2.700
@@ -229,6 +229,10 @@ def test_alsenan_r2_pieces_are_drawn_member_extents_not_census_closures():
     assert bw["1F-W04"] == pytest.approx(2.700 * 3.80 + 0.100 * 3.45 - 2.760, abs=1e-4)
     assert bw["2F-W03"] == pytest.approx(7.300 * 3.80 + 0.100 * 3.45 - 2.200, abs=1e-4)
     assert bw["2F-W07"] == pytest.approx(2.700 * 3.00 - 1.875, abs=1e-4)
+    # 2F-W05 (r2): B1 1.000 between column faces x 3.80, no opening in it; D-2F-02 wholly in the held BM-2F-017 piece
+    assert bw["2F-W05"] == pytest.approx(1.000 * 3.80, abs=1e-4)
+    held = {(r["wall_id"], r["piece"]): r for r in sp if r["piece_status"] == "HELD"}
+    assert "D-2F-02" in held[("2F-W05", "H BM-2F-017")]["openings"]
     for w in B.WALLS:                     # rule 7 on every established member piece of the run
         for pc in B.WALLS[w]["pieces"]:
             if P.piece_established(pc)[0] and pc.source in ("member", "slab"):
