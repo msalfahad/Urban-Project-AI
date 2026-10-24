@@ -18,7 +18,10 @@ For each blocker: is the missing item printed on another sheet? Searched this ru
   only in the PDF note 19: consultant D-43), and the DETAIL OF DOME (1A18, '(N.I.S)' 1A19) prints ring bars only
   (3%%c16 1A47, 3%%c18 1A4B, 8%%c8/m 1A29, 2%%c14/20cm 1A37, %%C12MM/15cm 1A0E), no ring size or level. Annex datum
   (owner Q-54 B HOLD), the seven undrawn opening heads (T-201 searched every sheet incl. the DWF), the CB2 width
-  CONFLICT and the glazed strips stay as T-227 / T-228 named them.
+  CONFLICT and the glazed strips stay as T-227 / T-228 named them. The GF-W10 W.C. stretch (F2): Drive 'Alsenan
+  chalet project' / sanitary-7757.pdf p.1 (GROUND FLOOR DRAINAGE PLAN 1:100, image-only, rendered and read this run)
+  draws the W.C. beside the stair with its WC, basin and floor drains (FD 4" / 3") but prints no level in it: only
+  +0.30 at the stair foot and +1.00 in the hall. The W.C. floor level stays HELD (0 .. 0.945 m2).
 - **What the drawings DO settle is which part of each wall is already established.** Eight held-net walls carry a
   held piece (a stair-shaft piece, an unlabelled span, a dome-opening piece) beside pieces whose heights are printed.
   The register could not form any net on them because one opening list was booked against the whole wall. Assigning
