@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-24T10:20Z | Worker 1 | IDLE | none (run lock held by run 20261024T091946-436-17038 since 2026-10-24T09:19Z) | overlap lock: another Worker 1 run is active; no claim, no change, no quantity | lock
 - 2026-10-24 10:17 UTC | Lead | SUCCESS | board | Since 08:15: T-146+T-247 Gate B MERGED 768ff1d6 WORKED (CONC.SLAB 60.2801 = Checker 60.2804 m3: FIRST WHOLE LINE VERIFIED in candidate, not released; vs freelancer +0.77 %); T-228 REJECTED -> narrow r2 + sibling test; owner workflow 10:02 applied: lane I T-240 first, split WP1-WP4; T-260 extra whole-line hand-in (owner c); new T-268 (doors line closure), T-269 (floor-area blockers); READY 3 (T-250, T-219 CAPACITY passed over twice -> first; T-235); register +6, lessons +2; Drive read OK, no new files or photos; ERS: read, s.5 Lead + s.7 applied; queue check: 53 actionable rows, 0 flagged, 0 stall checks | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-10-24 10:11 UTC | Lead | STARTED | run session_01DiNraNcSDfbNB97fVCTALQ | repo-attached routine | task state: board | report pending
 - 2026-10-24T09:50Z | Verifier | STARTED | run session_014fMZeeWT2awWEEU1TD22Bq | repo-attached routine | task state: READY T-228, T-250, T-219, T-235 (per board) | self-check pending
