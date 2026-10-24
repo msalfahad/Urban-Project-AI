@@ -48,6 +48,16 @@ Re-estimate after each week from what actually merged into V3.0 and was verified
 
 ## Status (Lead, 2026-10-24 12:15; re-estimated each run from what merged and was verified)
 
+Lead 2026-10-24 14:15: since 12:15 the Checker merged 4 Gate A tasks (T-264 formwork r4, T-269 floor-area blockers,
+T-258 r2 stairs / domes closable split, T-262 opening-to-room by geometry) and rejected 1 (T-258 r1, fixed in 54 min);
+READY 1 (T-265 ground-beam rebar, structural). Verified whole lines still 1 / 13 in the candidate (CONC.SLAB), 0 / 13
+released. Week-2 target (3 Nov): the Doors aluminium line is in integration now (T-268, claimed 13:03; Gate B in the
+next Checker runs): still on track to be the second whole line today, PARTIALLY VERIFIED 2 / 3 on the heights (Q-55 C
+owner-approved). Floor area: the 1F living blocker closed (38.6335 m2 own); T-240 WP2 .. WP4 follow T-268. P-08: ground-
+beam top / bottom steel at Gate A; stirrups / side bars / laps are T-272 (prints only). P-11: ceilings (no line in any
+run) re-queued as T-271 on the merged evidence. Risk: lane I stays serial (one package per worker 3 run); every closable
+row now waits on it or on consultant items. No milestone re-dated.
+
 Lead 2026-10-24 12:15: since 10:15 the Checker merged 5 Gate A tasks (T-219 foundation / pit waterproofing, T-250
 face crosswalk, T-260 aluminium-door rulings, T-228 r2 blockwork register v2, T-235 r2 verdict / export tooling),
 rejected 0; READY 0. Verified whole lines still 1 / 13 in the candidate (CONC.SLAB), 0 / 13 released. Week-2 target

@@ -1,11 +1,33 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
 Plain words, no task numbers. Measured numbers come from SCOREBOARD.md; anything not measured says so.
-Last update: 2026-10-24 12:15 UTC (Lead). Previous version: 2026-10-24 10:15 UTC. The released numbers did not change
+Last update: 2026-10-24 14:15 UTC (Lead). Previous version: 2026-10-24 12:15 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released default V2.9 + route G untouched). Your measure (17:50):
 whole BOQ lines independently verified, and trades that can be scored. Still 1 whole line verified in the candidate
-(the concrete slab, 60.28 m3), 0 released. The next one is one step away: the aluminium doors line (the checker has now
-ruled all four doors that held it). No new question for you; the curved first-floor window question is still open.
+(the concrete slab, 60.28 m3), 0 released. The aluminium doors line is being put into the candidate now; once the
+checker passes it, it closes as a whole (its door heights stay your approved 2.20 m rule, so pieces and widths are
+verified, heights are approved-assumed). No new question for you; the curved first-floor window question is still open.
+
+Since 12:15 (newest first; four pieces checked and merged, one sent back once and fixed within the hour):
+- Who owns which opening: three openings were tied to the wrong room by name (two bathrooms swapped). The checker
+  re-traced the rooms from the wall geometry: the quantities were already right (0.000 m2 change in every trade), and the
+  rule is now that an opening belongs to the room its jambs bound, never to a name.
+- Stairs and domes: the closable part is now one settled figure, 10.805 m3 (8.344 verified, 0.925 confirmed on the
+  drawing, 1.536 on your approved rules). The first hand-in was sent back: where the ground-floor flight lands, a small
+  wedge (0.03 m3) sat inside the ground slab and was counted nowhere. The fix gives 0.026 m3 to the slab and keeps 0.006
+  m3 in the stair. The rest of the stair / dome line still waits for the structural consultant (curved stair, unprinted
+  waists, one dome).
+- First-floor living room floor: the checker confirmed 38.63 m2 himself. The released run says 44.87 m2 (6.24 m2 too
+  much: it counted stair and landing areas as floor); the freelancer has 38.96 m2 (-0.84 %). Of the round-stair treads
+  over the pantry, 2.07 m2 is floor (under the flights above); 6.12 m2 stays held until the curved stair's structure is
+  drawn.
+- Formwork: the update for the members changed since the last formwork pass agrees with the checker's own lengths
+  (ring beam, boundary beam, 47.66 m2 of outer ground-beam faces above ground). Formwork has no freelancer row to compare.
+- Ground-beam steel: handed in for checking: the boundary beam at least 315.6 kg (2 bars top, 3 bottom, read layer by
+  layer from the drawn bars), the outer main-house beams 796.3 kg top and bottom bars. Stirrups and side bars are held:
+  no bend or hook length is printed, and the engine will not assume one.
+- New work queued: interior ceilings (no ceiling quantity exists yet in any run; your gypsum-ceiling rule applies) and
+  the ground-beam stirrups / side bars, measured only from what the drawings print.
 
 Since 10:15 (newest first; five pieces checked and merged, none sent back):
 - Aluminium doors: the checker measured the four held doors himself on both wall faces: three are aluminium (they open

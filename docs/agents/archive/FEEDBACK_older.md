@@ -1,5 +1,30 @@
 # Older Lead feedback entries (moved from FEEDBACK.md to keep the last 20; newest first)
 
+## 2026-10-22 12:20 (lead run)
+
+- **Checker 11:51 SUCCESS (12:07)**: owner 11:50 item first. T-183 pool REJECTED -> **PARTIAL**: base 10.9356 m2 x 0.40 =
+  4.374 m3 VERIFIED, ring, curved part, no pump room and no steps in any document all AGREED; one real fault: the 1.15 m
+  finished water depth used as the RC wall height (structure line gives 1.20: walls 2.828 not 2.710 m3, pool 7.202 not
+  7.084, -1.6 %) and a 0.15 m upstand denied. Decision: rework r2 (exact two faults + adverse test), second in lane S after
+  T-184 (owner order); lessons row added. T-177 MERGED -> **WORKED** (scoreboard v2 by script; checker reproduced baseline A
+  b96185d4 and the held column by hand). T-163 formwork REJECTED -> **PARTIAL**: bay GF-032 and shaft faces 0.0 %; column
+  joint faces +12.0 % on COL-GF-19 (through / flush beam taken at full face width, oblique B27). Decision: rework r2, third in
+  lane S; joint line 14.224 m2 and beam sides 288.711 m2 NOT VERIFIED meanwhile; lessons row added.
+- **Checker 09:52 SUCCESS (10:24)**: T-140 MERGED -> **WORKED** (head merge only). T-169 MERGED -> **WORKED** (GF-W29 0.553 m
+  = engine 0.0 %). T-162 r1 REJECTED -> **FAILED** on gate h (corners in m2 after the 07:10 correction; parapets not split):
+  reworked by worker 2 as r2 (READY 11:53, corners one m.l line, payable half kept apart). T-180 pool slot: causes in m3
+  handed to T-183.
+- **Worker 1 08:32 / 10:38**: T-171 READY (notation = maximum c/c spacing; 2,769.06 .. 2,829.83 kg HELD on the unprinted leg
+  diameter; Q-71 option arithmetic shown wrong in two of three) and T-183 READY (above). Both within the standard (element,
+  reconciliation, rule, test, lessons row). No owner question raised: correct under 2.7.
+- **Worker 2 10:09 / 11:53**: T-172 READY (parapets and corners as physical items; his 1,297.35 m.l reconciled cell by cell
+  to 271.962 m.l of parapet arrises etc.; payable 648.675 and the 1.25 KWD rate kept apart) and T-162 r2 READY. Decision:
+  checked as ONE pair (T-172 owns the physical items; register 12:20).
+- **Worker 3 09:01 SUCCESS; 11:01 STARTED, no final line yet** (scheduler PENDING, T-167 CLAIMED 11:08): still running at
+  12:20, not yet an INCOMPLETE run; re-check at the next Lead run.
+- **Owner session 09:05 / 09:40 / 11:50** applied, nothing undone: T-184 first in lane S, T-049 marked SUPERSEDED (pool by
+  T-183, domes stay in S0 by T-185; its "dome part closed" text withdrawn), T-186 first claimable in lane I after T-167.
+
 ## 2026-10-22 08:20 (lead run)
 
 - **Checker 07:51 SUCCESS (finished 08:17, during this Lead run)**: T-132 SCOREBOARD v2 written (concrete WAPE A 17.03 % / V3.0.3

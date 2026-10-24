@@ -36,6 +36,18 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
    commit. Decision: board-only handoffs are verified as hand evidence (the verifier re-reads the cited notes), and the
    next task on the topic writes the files (T-117); a run with no line stays a NEEDS FIXING item for the owner's setting.
 
+## 2026-10-24 14:15 (lead run)
+
+| Task | Result | Evidence | Decision |
+|---|---|---|---|
+| T-264 formwork r4 | WORKED | MERGED 90203feb (Verifier 13:00): own ring B7 arcs, boundary 7FE#2 6.480, exterior outer faces 47.663 m2 = Checker 12:10 run lengths; no quantity moved | none; formwork stays research until T-199 integrates it |
+| T-269 floor-area blockers | WORKED | MERGED 991f85fa (13:03): 1F living 38.6335 m2 own-VERIFIED (released A 44.8694 = +6.2359 ENGINE_WRONG; freelancer 38.96, -0.84 %); F3 + F4 2.070 floor, F1 + F2 6.1244 HELD (ST-02 undrawn) | T-240 WP2 / WP3 carry it; designer item for ST-02 stays with the stair consultant items; lessons row added |
+| T-258 stairs / domes closure | FAILED r1 -> WORKED r2 (54 min) | r1 REJECTED 13:03: D1 arrival wedge 0.0315 m3 into the +1.00 slab neither deducted nor listed (gate e / f); r2 MERGED b1b72a50 (13:57): 0.025714 slab / 0.005786 stair, closable component 10.805259 m3 | T-266 now waits only on T-254; lessons row added (arrival treatment once per flight) |
+| T-262 opening-to-room by geometry | WORKED | MERGED c8dba740 (14:00): W06 wedge 1.994 m2 with door 320, W19 + D-1F-01 west bath 4.658 m2, W20 + D-1F-04 east bath; name join swapped, 0.000 m2 every trade = ENGINE_RIGHT | no follow-up; geometric join is the rule (lessons row) |
+| T-265 ground-beam rebar | handed in (READY 14:13 @ 4353552a) | boundary G.B 315.56 kg lower bound, exterior top / bottom 796.32 kg, side bars 199.08 and stirrups HELD | Gate A next (structural); new T-272 closes stirrups / side bars / laps from prints only |
+| T-180 slot | nothing measurable left on CLOSABLE rows (Verifier 14:02) | every CLOSABLE row waits on lane I or consultant items | light runs go to the blockwork register v2 SS walls (verified share ahead of T-261) |
+| Overlap IDLE lines (worker 1 12:20, worker 2 12:39) | team health, not a failure | the 11:20 / 11:40 runs still held their locks; each run takes > 1 h | no action (cadence is the owner's); each IDLE line carried its reason |
+
 ## 2026-10-24 12:15 (lead run)
 
 | Task | Result | Evidence | Decision |
@@ -400,27 +412,3 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
   WORKFLOW_CONTROLS section 10 file ownership respected (the standard's lessons register is the main chat's file now: the
   Lead proposes rows in its report instead of editing it).
 
-## 2026-10-22 12:20 (lead run)
-
-- **Checker 11:51 SUCCESS (12:07)**: owner 11:50 item first. T-183 pool REJECTED -> **PARTIAL**: base 10.9356 m2 x 0.40 =
-  4.374 m3 VERIFIED, ring, curved part, no pump room and no steps in any document all AGREED; one real fault: the 1.15 m
-  finished water depth used as the RC wall height (structure line gives 1.20: walls 2.828 not 2.710 m3, pool 7.202 not
-  7.084, -1.6 %) and a 0.15 m upstand denied. Decision: rework r2 (exact two faults + adverse test), second in lane S after
-  T-184 (owner order); lessons row added. T-177 MERGED -> **WORKED** (scoreboard v2 by script; checker reproduced baseline A
-  b96185d4 and the held column by hand). T-163 formwork REJECTED -> **PARTIAL**: bay GF-032 and shaft faces 0.0 %; column
-  joint faces +12.0 % on COL-GF-19 (through / flush beam taken at full face width, oblique B27). Decision: rework r2, third in
-  lane S; joint line 14.224 m2 and beam sides 288.711 m2 NOT VERIFIED meanwhile; lessons row added.
-- **Checker 09:52 SUCCESS (10:24)**: T-140 MERGED -> **WORKED** (head merge only). T-169 MERGED -> **WORKED** (GF-W29 0.553 m
-  = engine 0.0 %). T-162 r1 REJECTED -> **FAILED** on gate h (corners in m2 after the 07:10 correction; parapets not split):
-  reworked by worker 2 as r2 (READY 11:53, corners one m.l line, payable half kept apart). T-180 pool slot: causes in m3
-  handed to T-183.
-- **Worker 1 08:32 / 10:38**: T-171 READY (notation = maximum c/c spacing; 2,769.06 .. 2,829.83 kg HELD on the unprinted leg
-  diameter; Q-71 option arithmetic shown wrong in two of three) and T-183 READY (above). Both within the standard (element,
-  reconciliation, rule, test, lessons row). No owner question raised: correct under 2.7.
-- **Worker 2 10:09 / 11:53**: T-172 READY (parapets and corners as physical items; his 1,297.35 m.l reconciled cell by cell
-  to 271.962 m.l of parapet arrises etc.; payable 648.675 and the 1.25 KWD rate kept apart) and T-162 r2 READY. Decision:
-  checked as ONE pair (T-172 owns the physical items; register 12:20).
-- **Worker 3 09:01 SUCCESS; 11:01 STARTED, no final line yet** (scheduler PENDING, T-167 CLAIMED 11:08): still running at
-  12:20, not yet an INCOMPLETE run; re-check at the next Lead run.
-- **Owner session 09:05 / 09:40 / 11:50** applied, nothing undone: T-184 first in lane S, T-049 marked SUPERSEDED (pool by
-  T-183, domes stay in S0 by T-185; its "dome part closed" text withdrawn), T-186 first claimable in lane I after T-167.

@@ -22,8 +22,8 @@
 "role": "Structural lane: concrete, rebar by bar population, formwork",
 "cadence": "hourly at :19 (pilot cadence still set)",
 "last_run": "2026-10-24T13:19:59Z",
-"result": "running",
-"working_on": "Stairs / domes split and formwork update merged; handing in the ground-beam bars (evidence complete, branch refreshed 13:48); next: Gate B tool v2, then the stair finish-level module",
+"result": "ok",
+"working_on": "Stairs / domes split and formwork update merged; ground-beam bars handed in 14:13 for checking; next: Gate B tool v2, then the stair finish-level module",
 "as_of": "2026-10-24T14:30:00Z"
 },
 {

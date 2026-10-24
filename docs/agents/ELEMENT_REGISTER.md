@@ -46,6 +46,17 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+### Lead 2026-10-24 14:15 (from T-264, T-269, T-258 r2, T-262 MERGED; T-265 READY; new T-271, T-272)
+
+| Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |
+|---|---|---|---|---|---|
+| Stair D1 arrival strip inside ground slab GS-08 (T = 10 cm) | stair concrete, ground slab concrete, floor finish | CONC.SLAB / ground slab owns 0.025714 m3 (plate thinner than riser, Q-62 A cond); stair keeps 0.005786; listed in both, deducted once | VERIFIED (Checker 14:02 own) | T-258 r2 MERGED b1b72a50 | T-266 carries it into the candidate (after T-254) |
+| 1F living floor piece and its stair-edge strips D-13 (0.4025 m2) and D-23 (0.1175 m2) | floor area / porcelain, stair marble, skirting | D-13: STAIR (0.345, 11th tread of MS1-U) + FLOOR (0.0575 landing nosing); D-23: FLOOR; piece 38.6335 m2 | VERIFIED (Checker 13:03 own) | T-269 MERGED 991f85fa | T-240 WP2 / WP3 into the candidate; stair marble reads the 0.345 once |
+| GF round-stair treads F1 + F2 (6.1244 m2) and F3 + F4 (2.070 m2) over the pantry | floor area, stair marble, stair concrete | F3 + F4: FLOOR (under overhead flights); F1 + F2: HELD until ST-02 structure is drawn | F3 + F4 DRAWING-CONFIRMED; F1 + F2 HELD (designer item proposed) | T-269 MERGED | class Q-37 A in T-240 WP2; designer item for ST-02 |
+| Openings W06 (wedge room 1.994 m2 with door 320), W19 + D-1F-01 (west bath 4.658 m2), W20 + D-1F-04 (east bath) | doors, windows, blockwork deduction, plaster / paint / tile deduction | the room whose polygon the jamb faces bound (geometric join); quantities unchanged | VERIFIED as assignments (Checker 14:00) | T-262 MERGED c8dba740 | none; any later census join uses geometry |
+| Ground-beam steel: boundary G.B (44.07 m) and the 17 main-house exterior runs | rebar, concrete ground system, formwork | REBAR reads the SAME runs at the Checker-verified lengths (12:10); stirrups / side bars / laps are T-272's, never a default | READY (T-265): top / bottom populations proposed, stirrups and side bars HELD | T-265 READY 4353552a | Gate A (55.99 m vs Checker run lengths to reconcile); T-272 |
+| Interior ceilings by room (decor gypsum, MR board, bulkheads, coves) | ceilings, paint, CONC.BEAM (bulkhead depths), floor area (room polygon) | CEILINGS line family (new); bulkhead depth read from the CONC.BEAM r2 record, never re-measured as concrete; ceiling area is not the floor area | not measured in any BOQ line (T-147 PARTIAL research) | T-147 MERGED d54cfac | T-271 |
+
 ### Lead 2026-10-24 12:15 (from T-219, T-250, T-260, T-228 r2, T-235 r2 MERGED; T-180 CONC.GROUND exterior slot; T-240 WP1; new T-270)
 
 | Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |
