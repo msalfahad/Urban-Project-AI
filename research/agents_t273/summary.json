@@ -1,0 +1,304 @@
+{
+ "column_already_carried": [
+  {
+   "component": "ANCHORAGE",
+   "kg": 86.871,
+   "kg_at_70d": 152.025,
+   "release_state": "LOWER_BOUND",
+   "rows": 10
+  },
+  {
+   "component": "ANCHORAGE",
+   "kg": 270.791,
+   "kg_at_70d": 473.88,
+   "release_state": "PROVISIONAL",
+   "rows": 49
+  },
+  {
+   "component": "LAP",
+   "kg": 20.203,
+   "kg_at_70d": 35.355,
+   "release_state": "LOWER_BOUND",
+   "rows": 2
+  },
+  {
+   "component": "LAP",
+   "kg": 476.783,
+   "kg_at_70d": 834.367,
+   "release_state": "PROVISIONAL",
+   "rows": 54
+  },
+  {
+   "component": "STARTER",
+   "kg": 0.0,
+   "kg_at_70d": 0.0,
+   "release_state": "BLOCKED",
+   "rows": 5
+  },
+  {
+   "component": "STARTER",
+   "kg": 41.984,
+   "kg_at_70d": 0.0,
+   "release_state": "LOWER_BOUND",
+   "rows": 2
+  },
+  {
+   "component": "STARTER",
+   "kg": 539.306,
+   "kg_at_70d": 0.0,
+   "release_state": "PROVISIONAL",
+   "rows": 29
+  }
+ ],
+ "column_lap_rule": {
+  "alternatives_D": [
+   70
+  ],
+  "current_D": 40,
+  "rule_id": "P8-N09",
+  "state": "UNRESOLVED",
+  "why": "the printed note gives starter development 40D (compression) / 70D (tension); column splice laps take the compression value provisionally"
+ },
+ "convention_reading": [
+  {
+   "element": "GB-CHAIN-7D0/FC TOP",
+   "kg": 4.551111,
+   "lap_m_60d": 0.96,
+   "splices": 3,
+   "status": "INFORMATION ONLY (not a quantity)",
+   "t": 0.004551
+  },
+  {
+   "element": "GB-CHAIN-7D0/FC BOTTOM_ROW_1",
+   "kg": 4.551111,
+   "lap_m_60d": 0.96,
+   "splices": 3,
+   "status": "INFORMATION ONLY (not a quantity)",
+   "t": 0.004551
+  },
+  {
+   "element": "GB-CHAIN-7D0/FC BOTTOM_ROW_2",
+   "kg": 4.551111,
+   "lap_m_60d": 0.96,
+   "splices": 3,
+   "status": "INFORMATION ONLY (not a quantity)",
+   "t": 0.004551
+  },
+  {
+   "element": "GB-CHAIN-170/7C3 TOP",
+   "kg": 4.551111,
+   "lap_m_60d": 0.96,
+   "splices": 3,
+   "status": "INFORMATION ONLY (not a quantity)",
+   "t": 0.004551
+  },
+  {
+   "element": "GB-CHAIN-170/7C3 BOTTOM_ROW_1",
+   "kg": 4.551111,
+   "lap_m_60d": 0.96,
+   "splices": 3,
+   "status": "INFORMATION ONLY (not a quantity)",
+   "t": 0.004551
+  },
+  {
+   "element": "GB-CHAIN-170/7C3 BOTTOM_ROW_2",
+   "kg": 4.551111,
+   "lap_m_60d": 0.96,
+   "splices": 3,
+   "status": "INFORMATION ONLY (not a quantity)",
+   "t": 0.004551
+  },
+  {
+   "element": "7FE#1 TOP",
+   "kg": 4.065185,
+   "lap_m_60d": 0.84,
+   "splices": 4,
+   "status": "INFORMATION ONLY (not a quantity)",
+   "t": 0.004065
+  },
+  {
+   "element": "7FE#1 BOTTOM_ROW_1",
+   "kg": 9.102222,
+   "lap_m_60d": 0.96,
+   "splices": 6,
+   "status": "INFORMATION ONLY (not a quantity)",
+   "t": 0.009102
+  }
+ ],
+ "frozen_vs_v2": [
+  {
+   "d_mm": 16,
+   "difference_m": 0.0,
+   "lap_d": 60,
+   "lap_m": 0.96,
+   "laps_frozen": 0,
+   "laps_v2": 0,
+   "length_frozen_m": 8.708,
+   "length_v2_m": 8.708,
+   "run_m": 8.708,
+   "stock_m": 12.0
+  },
+  {
+   "d_mm": 16,
+   "difference_m": 0.0,
+   "lap_d": 60,
+   "lap_m": 0.96,
+   "laps_frozen": 0,
+   "laps_v2": 0,
+   "length_frozen_m": 12.0,
+   "length_v2_m": 12.0,
+   "run_m": 12.0,
+   "stock_m": 12.0
+  },
+  {
+   "d_mm": 16,
+   "difference_m": 0.0,
+   "lap_d": 60,
+   "lap_m": 0.96,
+   "laps_frozen": 1,
+   "laps_v2": 1,
+   "length_frozen_m": 12.97,
+   "length_v2_m": 12.97,
+   "run_m": 12.01,
+   "stock_m": 12.0
+  },
+  {
+   "d_mm": 16,
+   "difference_m": 0.96,
+   "lap_d": 60,
+   "lap_m": 0.96,
+   "laps_frozen": 1,
+   "laps_v2": 2,
+   "length_frozen_m": 24.76,
+   "length_v2_m": 25.72,
+   "run_m": 23.8,
+   "stock_m": 12.0
+  },
+  {
+   "d_mm": 16,
+   "difference_m": 0.96,
+   "lap_d": 60,
+   "lap_m": 0.96,
+   "laps_frozen": 1,
+   "laps_v2": 2,
+   "length_frozen_m": 24.96,
+   "length_v2_m": 25.92,
+   "run_m": 24.0,
+   "stock_m": 12.0
+  },
+  {
+   "d_mm": 16,
+   "difference_m": 0.96,
+   "lap_d": 60,
+   "lap_m": 0.96,
+   "laps_frozen": 2,
+   "laps_v2": 3,
+   "length_frozen_m": 36.92,
+   "length_v2_m": 37.88,
+   "run_m": 35.0,
+   "stock_m": 12.0
+  }
+ ],
+ "policy": {
+  "count": "laps = 0 if L <= S else ceil((L - S) / (S - lap)); lap >= S BLOCKED (bbs_optimiser.split_run)",
+  "count_exact": "lap_count_exact: the same formula in exact rationals from text / mm integers / floats",
+  "coupler": "MECHANICAL_COUPLER runs: joints = ceil(L / S) - 1, no lap steel, couplers as pieces",
+  "defect": "D-T273-01: continuous_beams._with_laps n = ceil(L / S) - 1 (frozen; corrected here as a new method version, never in place)",
+  "detailing_categories": [
+   "ANCHORAGE_DEVELOPMENT",
+   "LAP_SPLICE",
+   "STARTER_BARS",
+   "HOOK_BEND",
+   "MECHANICAL_COUPLER"
+  ],
+  "digest": "2aaecf1bf1e3caf9f67e261483b7ff2d3001ac10b31359a4f45de118aa8ce78d",
+  "method_id": "CONTINUOUS_BEAM_LAPS_V2",
+  "never": [
+   "a default lap length",
+   "a 'not less than' value used as the lap",
+   "a second column lap or starter",
+   "a lap on an anchorage or a BBS length that contains it",
+   "laps summed from rounded t",
+   "a source of another detailing category used as a lap",
+   "a held lap shown as 0"
+  ],
+  "owner_convention": {
+   "factors_d": {
+    "BEAM": 60,
+    "COLUMN": 40,
+    "FOOTING": 60,
+    "GROUND_BEAM": 60,
+    "RETAINING_WALL": 60,
+    "SLAB": 60,
+    "WALL": 40
+   },
+   "id": "OWNER-LAP-CONVENTION-2026-10-24 (proposal, PROVISIONAL)",
+   "status": "PROVISIONAL"
+  },
+  "policy_id": "REBAR_LAPS_V1",
+  "tiers": [
+   "DRAWING_LAP_SCHEDULE",
+   "APPROVED_DETAIL",
+   "DRAWING_NOTE",
+   "OWNER_CONVENTION"
+  ]
+ },
+ "status_counts": {
+  "HELD": 35,
+  "NOT_REQUIRED": 28
+ },
+ "totals": {
+  "HELD": {
+   "lap_kg": 0.0,
+   "lap_rows_without_kg": [
+    "GB-CHAIN-7D0/FC TOP",
+    "GB-CHAIN-7D0/FC BOTTOM_ROW_1",
+    "GB-CHAIN-7D0/FC BOTTOM_ROW_2",
+    "GB-CHAIN-170/7C3 TOP",
+    "GB-CHAIN-170/7C3 BOTTOM_ROW_1",
+    "GB-CHAIN-170/7C3 BOTTOM_ROW_2",
+    "145+7CA#1 TOP",
+    "145+7CA#1 BOTTOM_ROW_1",
+    "145+7CA#1 BOTTOM_ROW_2",
+    "145+7CA#1 SIDE",
+    "170+7C3#1 SIDE",
+    "170+7C3#2 SIDE",
+    "170+7C3#3 SIDE",
+    "170+7C3#4 SIDE",
+    "7D0+FC#1 SIDE",
+    "7D0+FC#2 SIDE",
+    "7D0+FC#3 SIDE",
+    "7D0+FC#4 SIDE",
+    "7FC#1 TOP",
+    "7FC#1 BOTTOM_ROW_1",
+    "7FE#1 TOP",
+    "7FE#1 BOTTOM_ROW_1",
+    "7FE#2 TOP",
+    "7FE#2 BOTTOM_ROW_1",
+    "7FE#3 TOP",
+    "7FE#3 BOTTOM_ROW_1",
+    "810#1 TOP",
+    "810#1 BOTTOM_ROW_1",
+    "ARC:157+158 TOP",
+    "ARC:157+158 BOTTOM_ROW_1",
+    "ARC:157+158 BOTTOM_ROW_2",
+    "ARC:157+158 SIDE",
+    "SLAB TEMPERATURE BARS (94 blocked S7 items)",
+    "SLAB MAIN-BAR TRANSITIONS d10 (73 blocked S7 items)",
+    "SLAB MAIN-BAR TRANSITIONS d12 (1 blocked S7 items)"
+   ],
+   "lap_t": 0.0,
+   "net_kg": 1019.3371851851853,
+   "net_t": 1.019337,
+   "rows": 35
+  },
+  "NOT_REQUIRED": {
+   "lap_kg": 0.0,
+   "lap_rows_without_kg": [],
+   "lap_t": 0.0,
+   "net_kg": 344.247111111111,
+   "net_t": 0.344247,
+   "rows": 28
+  }
+ }
+}
