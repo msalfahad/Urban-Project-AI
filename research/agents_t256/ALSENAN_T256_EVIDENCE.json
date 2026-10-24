@@ -1,0 +1,1657 @@
+{
+ "arch_column_layers": [
+  "S-COL.BON"
+ ],
+ "arch_column_outlines_total": 59,
+ "arch_vs_structural_column_layer": {
+  "1F": {
+   "arch_outlines": 20,
+   "matched": 20,
+   "same_size": 20,
+   "spread_mm": 0.0,
+   "st_outlines": 21
+  },
+  "2F": {
+   "arch_outlines": 9,
+   "matched": 9,
+   "same_size": 9,
+   "spread_mm": 0.0,
+   "st_outlines": 9
+  },
+  "GF": {
+   "arch_outlines": 30,
+   "matched": 30,
+   "same_size": 29,
+   "spread_mm": 0.0,
+   "st_outlines": 33
+  }
+ },
+ "members": [
+  {
+   "arch_dims_both_points_on_faces": [],
+   "arch_dims_one_point_on_a_face": 1,
+   "arch_outline_copies": [
+    {
+     "D_mm": 400,
+     "W_mm": 200,
+     "handle": "2F99",
+     "layer": "S-COL.BON",
+     "same_size": true
+    }
+   ],
+   "arch_wall_lines_through_member_mm_from_face": [
+    [
+     "x",
+     0
+    ],
+    [
+     "x",
+     200
+    ],
+    [
+     "y",
+     0
+    ],
+    [
+     "y",
+     200
+    ]
+   ],
+   "drawn_mm": [
+    200,
+    400
+   ],
+   "foundation_cap_dims_mm": [
+    [
+     300,
+     500,
+     "D1E",
+     "D2D",
+     "D01",
+     "D0F"
+    ]
+   ],
+   "foundation_cap_text_cm": [
+    [
+     30,
+     50,
+     "105C"
+    ]
+   ],
+   "gr_band_cm": [
+    20,
+    50
+   ],
+   "kind": "COLUMN",
+   "mark": "C",
+   "member": "GFRS:347",
+   "neck": "10A4",
+   "pdf_agrees_with_dxf": true,
+   "pdf_plot_mm": [
+    199,
+    398
+   ],
+   "schedule_band": "GR",
+   "schedule_cm": [
+    20,
+    50
+   ],
+   "schedule_handle": "1D03",
+   "slab_plan_text_or_dim_at_member": 0,
+   "storey": "GF"
+  },
+  {
+   "arch_dims_both_points_on_faces": [],
+   "arch_dims_one_point_on_a_face": 0,
+   "arch_outline_copies": [
+    {
+     "D_mm": 200,
+     "W_mm": 400,
+     "handle": "2FAB",
+     "layer": "S-COL.BON",
+     "same_size": true
+    }
+   ],
+   "arch_wall_lines_through_member_mm_from_face": [
+    [
+     "x",
+     0
+    ],
+    [
+     "x",
+     200
+    ],
+    [
+     "y",
+     0
+    ],
+    [
+     "y",
+     200
+    ]
+   ],
+   "drawn_mm": [
+    400,
+    200
+   ],
+   "foundation_cap_dims_mm": [
+    [
+     300,
+     500,
+     "B64",
+     "B72",
+     "B81",
+     "B90"
+    ]
+   ],
+   "foundation_cap_text_cm": [
+    [
+     30,
+     50,
+     "100D"
+    ]
+   ],
+   "gr_band_cm": [
+    20,
+    50
+   ],
+   "kind": "COLUMN",
+   "mark": "C",
+   "member": "GFRS:359",
+   "neck": "10B7",
+   "pdf_agrees_with_dxf": true,
+   "pdf_plot_mm": [
+    402,
+    199
+   ],
+   "schedule_band": "GR",
+   "schedule_cm": [
+    20,
+    50
+   ],
+   "schedule_handle": "1D03",
+   "slab_plan_text_or_dim_at_member": 0,
+   "storey": "GF"
+  },
+  {
+   "arch_dims_both_points_on_faces": [],
+   "arch_dims_one_point_on_a_face": 2,
+   "arch_outline_copies": [
+    {
+     "D_mm": 500,
+     "W_mm": 200,
+     "handle": "2F96",
+     "layer": "S-COL.BON",
+     "same_size": true
+    }
+   ],
+   "arch_wall_lines_through_member_mm_from_face": [
+    [
+     "x",
+     0
+    ],
+    [
+     "x",
+     200
+    ],
+    [
+     "y",
+     500
+    ]
+   ],
+   "drawn_mm": [
+    200,
+    500
+   ],
+   "foundation_cap_dims_mm": [],
+   "foundation_cap_text_cm": [
+    [
+     30,
+     50,
+     "1070"
+    ]
+   ],
+   "gr_band_cm": [
+    25,
+    50
+   ],
+   "kind": "COLUMN",
+   "mark": "C3",
+   "member": "GFRS:344",
+   "neck": "10A0",
+   "pdf_agrees_with_dxf": true,
+   "pdf_plot_mm": [
+    199,
+    500
+   ],
+   "schedule_band": "GR",
+   "schedule_cm": [
+    25,
+    50
+   ],
+   "schedule_handle": "1D5A",
+   "slab_plan_text_or_dim_at_member": 0,
+   "storey": "GF"
+  },
+  {
+   "arch_dims_both_points_on_faces": [],
+   "arch_dims_one_point_on_a_face": 3,
+   "arch_outline_copies": [
+    {
+     "D_mm": 500,
+     "W_mm": 250,
+     "handle": "3005",
+     "layer": "S-COL.BON",
+     "same_size": true
+    }
+   ],
+   "arch_wall_lines_through_member_mm_from_face": [
+    [
+     "x",
+     0
+    ],
+    [
+     "x",
+     200
+    ]
+   ],
+   "drawn_mm": [
+    250,
+    500
+   ],
+   "foundation_cap_dims_mm": [
+    [
+     300,
+     500,
+     "9E0",
+     "9EF",
+     "9C3",
+     "9D2"
+    ]
+   ],
+   "foundation_cap_text_cm": [
+    [
+     30,
+     50,
+     "1060"
+    ]
+   ],
+   "gr_band_cm": [
+    25,
+    50
+   ],
+   "kind": "COLUMN",
+   "mark": "C3",
+   "member": "FFRS:691",
+   "neck": "10CC",
+   "pdf_agrees_with_dxf": true,
+   "pdf_plot_mm": [
+    250,
+    504
+   ],
+   "schedule_band": "1ST",
+   "schedule_cm": [
+    20,
+    50
+   ],
+   "schedule_handle": "1D5A",
+   "slab_plan_text_or_dim_at_member": 0,
+   "storey": "1F"
+  },
+  {
+   "arch_dims_both_points_on_faces": [],
+   "arch_dims_one_point_on_a_face": 0,
+   "arch_outline_copies": [
+    {
+     "D_mm": 250,
+     "W_mm": 500,
+     "handle": "2FEA",
+     "layer": "S-COL.BON",
+     "same_size": true
+    }
+   ],
+   "arch_wall_lines_through_member_mm_from_face": [
+    [
+     "x",
+     300
+    ],
+    [
+     "x",
+     500
+    ],
+    [
+     "y",
+     50
+    ],
+    [
+     "y",
+     250
+    ]
+   ],
+   "drawn_mm": [
+    500,
+    250
+   ],
+   "foundation_cap_dims_mm": [
+    [
+     300,
+     500,
+     "898",
+     "8AB",
+     "8B9",
+     "8C8"
+    ]
+   ],
+   "foundation_cap_text_cm": [
+    [
+     30,
+     50,
+     "1068"
+    ]
+   ],
+   "gr_band_cm": [
+    25,
+    50
+   ],
+   "kind": "COLUMN",
+   "mark": "C4",
+   "member": "FFRS:676",
+   "neck": "108D",
+   "pdf_agrees_with_dxf": true,
+   "pdf_plot_mm": [
+    500,
+    250
+   ],
+   "schedule_band": "1ST",
+   "schedule_cm": [
+    20,
+    50
+   ],
+   "schedule_handle": "1D6E",
+   "slab_plan_text_or_dim_at_member": 0,
+   "storey": "1F"
+  },
+  {
+   "arch_dims_both_points_on_faces": [],
+   "arch_dims_one_point_on_a_face": 0,
+   "arch_outline_copies": [
+    {
+     "D_mm": 250,
+     "W_mm": 500,
+     "handle": "300B",
+     "layer": "S-COL.BON",
+     "same_size": true
+    }
+   ],
+   "arch_wall_lines_through_member_mm_from_face": [
+    [
+     "x",
+     0
+    ],
+    [
+     "x",
+     150
+    ],
+    [
+     "y",
+     50
+    ],
+    [
+     "y",
+     250
+    ]
+   ],
+   "drawn_mm": [
+    500,
+    250
+   ],
+   "foundation_cap_dims_mm": [
+    [
+     300,
+     500,
+     "8D7",
+     "8E5",
+     "8F4",
+     "903"
+    ]
+   ],
+   "foundation_cap_text_cm": [
+    [
+     30,
+     50,
+     "1066"
+    ]
+   ],
+   "gr_band_cm": [
+    25,
+    50
+   ],
+   "kind": "COLUMN",
+   "mark": "C4",
+   "member": "FFRS:697",
+   "neck": "10D7",
+   "pdf_agrees_with_dxf": true,
+   "pdf_plot_mm": [
+    500,
+    250
+   ],
+   "schedule_band": "1ST",
+   "schedule_cm": [
+    20,
+    50
+   ],
+   "schedule_handle": "1D6E",
+   "slab_plan_text_or_dim_at_member": 0,
+   "storey": "1F"
+  },
+  {
+   "arch_dims_both_points_on_faces": [],
+   "arch_dims_one_point_on_a_face": 1,
+   "arch_outline_copies": [
+    {
+     "D_mm": 250,
+     "W_mm": 600,
+     "handle": "2FE7",
+     "layer": "S-COL.BON",
+     "same_size": true
+    }
+   ],
+   "arch_wall_lines_through_member_mm_from_face": [
+    [
+     "x",
+     0
+    ],
+    [
+     "x",
+     150
+    ],
+    [
+     "y",
+     50
+    ],
+    [
+     "y",
+     250
+    ]
+   ],
+   "drawn_mm": [
+    600,
+    250
+   ],
+   "foundation_cap_dims_mm": [
+    [
+     300,
+     600,
+     "912",
+     "93F",
+     "921",
+     "930"
+    ]
+   ],
+   "foundation_cap_text_cm": [
+    [
+     30,
+     60,
+     "106A"
+    ]
+   ],
+   "gr_band_cm": [
+    25,
+    60
+   ],
+   "kind": "COLUMN",
+   "mark": "C5",
+   "member": "FFRS:673",
+   "neck": "108A",
+   "pdf_agrees_with_dxf": true,
+   "pdf_plot_mm": [
+    601,
+    250
+   ],
+   "schedule_band": "1ST",
+   "schedule_cm": [
+    20,
+    50
+   ],
+   "schedule_handle": "1D82",
+   "slab_plan_text_or_dim_at_member": 0,
+   "storey": "1F"
+  },
+  {
+   "arch_dims_both_points_on_faces": [],
+   "arch_dims_one_point_on_a_face": 0,
+   "arch_outline_copies": [
+    {
+     "D_mm": 600,
+     "W_mm": 200,
+     "handle": "2FF9",
+     "layer": "S-COL.BON",
+     "same_size": true
+    }
+   ],
+   "arch_wall_lines_through_member_mm_from_face": [
+    [
+     "x",
+     0
+    ],
+    [
+     "x",
+     200
+    ]
+   ],
+   "drawn_mm": [
+    200,
+    600
+   ],
+   "foundation_cap_dims_mm": [
+    [
+     300,
+     600,
+     "BE9",
+     "BF8",
+     "BDA",
+     "C07"
+    ]
+   ],
+   "foundation_cap_text_cm": [
+    [
+     30,
+     60,
+     "1011"
+    ]
+   ],
+   "gr_band_cm": [
+    25,
+    60
+   ],
+   "kind": "COLUMN",
+   "mark": "C5",
+   "member": "FFRS:685",
+   "neck": "10BD",
+   "pdf_agrees_with_dxf": true,
+   "pdf_plot_mm": [
+    199,
+    601
+   ],
+   "schedule_band": "1ST",
+   "schedule_cm": [
+    20,
+    50
+   ],
+   "schedule_handle": "1D82",
+   "slab_plan_text_or_dim_at_member": 0,
+   "storey": "1F"
+  },
+  {
+   "arch_dims_both_points_on_faces": [],
+   "arch_dims_one_point_on_a_face": 1,
+   "arch_outline_copies": [
+    {
+     "D_mm": 250,
+     "W_mm": 600,
+     "handle": "3008",
+     "layer": "S-COL.BON",
+     "same_size": true
+    }
+   ],
+   "arch_wall_lines_through_member_mm_from_face": [
+    [
+     "y",
+     0
+    ],
+    [
+     "y",
+     200
+    ]
+   ],
+   "drawn_mm": [
+    600,
+    250
+   ],
+   "foundation_cap_dims_mm": [
+    [
+     300,
+     600,
+     "F8B",
+     "FBA",
+     "F9A",
+     "FA9"
+    ]
+   ],
+   "foundation_cap_text_cm": [
+    [
+     30,
+     60,
+     "101D"
+    ]
+   ],
+   "gr_band_cm": [
+    25,
+    60
+   ],
+   "kind": "COLUMN",
+   "mark": "C5",
+   "member": "FFRS:694",
+   "neck": "10D3",
+   "pdf_agrees_with_dxf": true,
+   "pdf_plot_mm": [
+    601,
+    250
+   ],
+   "schedule_band": "1ST",
+   "schedule_cm": [
+    20,
+    50
+   ],
+   "schedule_handle": "1D82",
+   "slab_plan_text_or_dim_at_member": 0,
+   "storey": "1F"
+  },
+  {
+   "arch_dims_both_points_on_faces": [],
+   "arch_dims_one_point_on_a_face": 0,
+   "arch_outline_copies": [
+    {
+     "D_mm": 700,
+     "W_mm": 250,
+     "handle": "2FFC",
+     "layer": "S-COL.BON",
+     "same_size": true
+    }
+   ],
+   "arch_wall_lines_through_member_mm_from_face": [
+    [
+     "x",
+     50
+    ],
+    [
+     "x",
+     200
+    ]
+   ],
+   "drawn_mm": [
+    250,
+    700
+   ],
+   "foundation_cap_dims_mm": [
+    [
+     300,
+     700,
+     "C5F",
+     "C6E",
+     "C50",
+     "C7D"
+    ]
+   ],
+   "foundation_cap_text_cm": [
+    [
+     30,
+     70,
+     "1015"
+    ]
+   ],
+   "gr_band_cm": [
+    25,
+    70
+   ],
+   "kind": "COLUMN",
+   "mark": "C6",
+   "member": "FFRS:688",
+   "neck": "10C2",
+   "pdf_agrees_with_dxf": true,
+   "pdf_plot_mm": [
+    250,
+    698
+   ],
+   "schedule_band": "1ST",
+   "schedule_cm": [
+    20,
+    60
+   ],
+   "schedule_handle": "1D96",
+   "slab_plan_text_or_dim_at_member": 0,
+   "storey": "1F"
+  },
+  {
+   "arch_dims_both_points_on_faces": [],
+   "arch_dims_one_point_on_a_face": 0,
+   "arch_outline_copies": [
+    {
+     "D_mm": 250,
+     "W_mm": 800,
+     "handle": "3002",
+     "layer": "S-COL.BON",
+     "same_size": true
+    }
+   ],
+   "arch_wall_lines_through_member_mm_from_face": [
+    [
+     "y",
+     50
+    ],
+    [
+     "y",
+     250
+    ]
+   ],
+   "drawn_mm": [
+    800,
+    250
+   ],
+   "foundation_cap_dims_mm": [
+    [
+     300,
+     800,
+     "9FE",
+     "A0D",
+     "A1B"
+    ]
+   ],
+   "foundation_cap_text_cm": [
+    [
+     30,
+     80,
+     "105E"
+    ]
+   ],
+   "gr_band_cm": [
+    25,
+    80
+   ],
+   "kind": "COLUMN",
+   "mark": "C7",
+   "member": "FFRS:68E",
+   "neck": "10C8",
+   "pdf_agrees_with_dxf": true,
+   "pdf_plot_mm": [
+    800,
+    250
+   ],
+   "schedule_band": "1ST",
+   "schedule_cm": [
+    20,
+    80
+   ],
+   "schedule_handle": "1DAA",
+   "slab_plan_text_or_dim_at_member": 0,
+   "storey": "1F"
+  },
+  {
+   "arch_dims_both_points_on_faces": [],
+   "arch_dims_one_point_on_a_face": 0,
+   "arch_outline_copies": [
+    {
+     "D_mm": 250,
+     "W_mm": 800,
+     "handle": "2FD2",
+     "layer": "S-COL.BON",
+     "same_size": true
+    }
+   ],
+   "arch_wall_lines_through_member_mm_from_face": [
+    [
+     "y",
+     0
+    ],
+    [
+     "y",
+     200
+    ]
+   ],
+   "drawn_mm": [
+    800,
+    250
+   ],
+   "foundation_cap_dims_mm": [
+    [
+     300,
+     800,
+     "FC8",
+     "FD7",
+     "FE5",
+     "FF4"
+    ]
+   ],
+   "foundation_cap_text_cm": [
+    [
+     30,
+     80,
+     "101B"
+    ]
+   ],
+   "gr_band_cm": [
+    25,
+    90
+   ],
+   "kind": "COLUMN",
+   "mark": "C8",
+   "member": "GFRS:380",
+   "neck": "10E0",
+   "pdf_agrees_with_dxf": true,
+   "pdf_plot_mm": [
+    800,
+    250
+   ],
+   "schedule_band": "GR",
+   "schedule_cm": [
+    25,
+    90
+   ],
+   "schedule_handle": "1DBE",
+   "slab_plan_text_or_dim_at_member": 0,
+   "storey": "GF"
+  },
+  {
+   "arch_dims_both_points_on_faces": [],
+   "arch_dims_one_point_on_a_face": 0,
+   "arch_outline_copies": [
+    {
+     "D_mm": 250,
+     "W_mm": 800,
+     "handle": "300E",
+     "layer": "S-COL.BON",
+     "same_size": true
+    }
+   ],
+   "arch_wall_lines_through_member_mm_from_face": [
+    [
+     "y",
+     0
+    ],
+    [
+     "y",
+     200
+    ]
+   ],
+   "drawn_mm": [
+    800,
+    250
+   ],
+   "foundation_cap_dims_mm": [
+    [
+     300,
+     800,
+     "FC8",
+     "FD7",
+     "FE5",
+     "FF4"
+    ]
+   ],
+   "foundation_cap_text_cm": [
+    [
+     30,
+     80,
+     "101B"
+    ]
+   ],
+   "gr_band_cm": [
+    25,
+    90
+   ],
+   "kind": "COLUMN",
+   "mark": "C8",
+   "member": "FFRS:69A",
+   "neck": "10E0",
+   "pdf_agrees_with_dxf": true,
+   "pdf_plot_mm": [
+    800,
+    250
+   ],
+   "schedule_band": "1ST",
+   "schedule_cm": [
+    20,
+    90
+   ],
+   "schedule_handle": "1DBE",
+   "slab_plan_text_or_dim_at_member": 0,
+   "storey": "1F"
+  },
+  {
+   "arch_dims_both_points_on_faces": [],
+   "arch_dims_one_point_on_a_face": 2,
+   "arch_outline_copies": [
+    {
+     "D_mm": 1000,
+     "W_mm": 250,
+     "handle": "2FED",
+     "layer": "S-COL.BON",
+     "same_size": true
+    }
+   ],
+   "arch_wall_lines_through_member_mm_from_face": [
+    [
+     "x",
+     0
+    ],
+    [
+     "x",
+     200
+    ],
+    [
+     "y",
+     0
+    ],
+    [
+     "y",
+     200
+    ]
+   ],
+   "drawn_mm": [
+    250,
+    1000
+   ],
+   "foundation_cap_dims_mm": [
+    [
+     250,
+     1000,
+     "EF6",
+     "F05",
+     "ED9",
+     "EE7"
+    ]
+   ],
+   "foundation_cap_text_cm": [
+    [
+     25,
+     100,
+     "1076"
+    ]
+   ],
+   "gr_band_cm": [
+    25,
+    100
+   ],
+   "kind": "COLUMN",
+   "mark": "C9",
+   "member": "FFRS:679",
+   "neck": "1090",
+   "pdf_agrees_with_dxf": true,
+   "pdf_plot_mm": [
+    250,
+    999
+   ],
+   "schedule_band": "1ST",
+   "schedule_cm": [
+    20,
+    90
+   ],
+   "schedule_handle": "1DD2",
+   "slab_plan_text_or_dim_at_member": 0,
+   "storey": "1F"
+  },
+  {
+   "arch_dims_both_points_on_faces": [],
+   "arch_dims_one_point_on_a_face": 0,
+   "arch_outline_copies": [
+    {
+     "D_mm": 1000,
+     "W_mm": 200,
+     "handle": "2FDB",
+     "layer": "S-COL.BON",
+     "same_size": true
+    }
+   ],
+   "arch_wall_lines_through_member_mm_from_face": [
+    [
+     "x",
+     0
+    ],
+    [
+     "x",
+     150
+    ],
+    [
+     "y",
+     375
+    ],
+    [
+     "y",
+     525
+    ]
+   ],
+   "drawn_mm": [
+    200,
+    1000
+   ],
+   "foundation_cap_dims_mm": [
+    [
+     300,
+     1000,
+     "DB5",
+     "DC3",
+     "DD1",
+     "DE0"
+    ]
+   ],
+   "foundation_cap_text_cm": [
+    [
+     30,
+     100,
+     "106C"
+    ]
+   ],
+   "gr_band_cm": [
+    25,
+    100
+   ],
+   "kind": "TURNED",
+   "mark": "C9",
+   "member": "FFRS:667",
+   "neck": "10DA",
+   "pdf_agrees_with_dxf": true,
+   "pdf_plot_mm": [
+    199,
+    1003
+   ],
+   "schedule_band": "1ST",
+   "schedule_cm": [
+    20,
+    90
+   ],
+   "schedule_handle": "1DD2",
+   "slab_plan_text_or_dim_at_member": 0,
+   "storey": "1F"
+  }
+ ],
+ "not_drawn_lines": [
+  {
+   "column_below_on_FFRS": [
+    "685"
+   ],
+   "line": "NOT_DRAWN:10BD:2F",
+   "mark": "C5",
+   "neck": "10BD",
+   "route_g_m3": 0.42,
+   "searched": {
+    "ST dxf SFRS (column layers + texts, 0.6 m)": "ABSENT",
+    "ST pdf p.6 (filled outlines, 0.6 m)": "ABSENT",
+    "architectural dxf 2F plan (S-COL.BON, 0.6 m)": "ABSENT"
+   },
+   "start_symbol_on_FFRS": false,
+   "storey": "2F",
+   "texts_within_0.6m_on_SFRS": 0
+  },
+  {
+   "column_below_on_FFRS": [
+    "68B"
+   ],
+   "line": "NOT_DRAWN:10C5:2F",
+   "mark": "C3",
+   "neck": "10C5",
+   "route_g_m3": 0.42,
+   "searched": {
+    "ST dxf SFRS (column layers + texts, 0.6 m)": "ABSENT",
+    "ST pdf p.6 (filled outlines, 0.6 m)": "ABSENT",
+    "architectural dxf 2F plan (S-COL.BON, 0.6 m)": "ABSENT"
+   },
+   "start_symbol_on_FFRS": false,
+   "storey": "2F",
+   "texts_within_0.6m_on_SFRS": 0
+  },
+  {
+   "column_below_on_FFRS": [
+    "69A"
+   ],
+   "line": "NOT_DRAWN:10E0:2F",
+   "mark": "C8",
+   "neck": "10E0",
+   "route_g_m3": 0.588,
+   "searched": {
+    "ST dxf SFRS (column layers + texts, 0.6 m)": "ABSENT",
+    "ST pdf p.6 (filled outlines, 0.6 m)": "ABSENT",
+    "architectural dxf 2F plan (S-COL.BON, 0.6 m)": "ABSENT"
+   },
+   "start_symbol_on_FFRS": false,
+   "storey": "2F",
+   "texts_within_0.6m_on_SFRS": 0
+  },
+  {
+   "column_below_on_GFRS": [
+    "383"
+   ],
+   "line": "NOT_DRAWN:10E4:1F",
+   "mark": "C3",
+   "neck": "10E4",
+   "route_g_m3": 0.42,
+   "searched": {
+    "ST dxf FFRS (column layers + texts, 0.6 m)": "ABSENT",
+    "ST pdf p.5 (filled outlines, 0.6 m)": "ABSENT",
+    "architectural dxf 1F plan (S-COL.BON, 0.6 m)": "ABSENT"
+   },
+   "start_symbol_on_GFRS": false,
+   "storey": "1F",
+   "texts_within_0.6m_on_FFRS": 0
+  },
+  {
+   "column_below_on_FFRS": [],
+   "line": "NOT_DRAWN:10E4:2F",
+   "mark": "C3",
+   "neck": "10E4",
+   "route_g_m3": 0.42,
+   "searched": {
+    "ST dxf SFRS (column layers + texts, 0.6 m)": "ABSENT",
+    "ST pdf p.6 (filled outlines, 0.6 m)": "ABSENT",
+    "architectural dxf 2F plan (S-COL.BON, 0.6 m)": "ABSENT"
+   },
+   "start_symbol_on_FFRS": false,
+   "storey": "2F",
+   "texts_within_0.6m_on_SFRS": 0
+  }
+ ],
+ "pdf": {
+  "pages": 16,
+  "scale": "1:100 (1 pt = 35.28 mm)",
+  "status": "RUN",
+  "storeys": {
+   "1F": {
+    "dxf_outlines": 21,
+    "dxf_outlines_with_an_agreeing_plot_fill": 20,
+    "dxf_outlines_without_a_plot_fill": [
+     "77B"
+    ],
+    "fills": 24,
+    "fills_not_on_a_dxf_column": [
+     [
+      305,
+      296
+     ],
+     [
+      305,
+      301
+     ],
+     [
+      800,
+      792
+     ],
+     [
+      800,
+      796
+     ]
+    ],
+    "page": 5,
+    "registration_votes": 20,
+    "rows": {
+     "664": {
+      "D_mm": 897,
+      "W_mm": 203,
+      "agrees_with_dxf_within_10mm": true
+     },
+     "667": {
+      "D_mm": 1003,
+      "W_mm": 199,
+      "agrees_with_dxf_within_10mm": true
+     },
+     "66A": {
+      "D_mm": 199,
+      "W_mm": 703,
+      "agrees_with_dxf_within_10mm": true
+     },
+     "66D": {
+      "D_mm": 500,
+      "W_mm": 199,
+      "agrees_with_dxf_within_10mm": true
+     },
+     "670": {
+      "D_mm": 500,
+      "W_mm": 199,
+      "agrees_with_dxf_within_10mm": true
+     },
+     "673": {
+      "D_mm": 250,
+      "W_mm": 601,
+      "agrees_with_dxf_within_10mm": true
+     },
+     "676": {
+      "D_mm": 250,
+      "W_mm": 500,
+      "agrees_with_dxf_within_10mm": true
+     },
+     "679": {
+      "D_mm": 999,
+      "W_mm": 250,
+      "agrees_with_dxf_within_10mm": true
+     },
+     "67C": {
+      "D_mm": 504,
+      "W_mm": 203,
+      "agrees_with_dxf_within_10mm": true
+     },
+     "67F": {
+      "D_mm": 500,
+      "W_mm": 199,
+      "agrees_with_dxf_within_10mm": true
+     },
+     "682": {
+      "D_mm": 504,
+      "W_mm": 199,
+      "agrees_with_dxf_within_10mm": true
+     },
+     "685": {
+      "D_mm": 601,
+      "W_mm": 199,
+      "agrees_with_dxf_within_10mm": true
+     },
+     "688": {
+      "D_mm": 698,
+      "W_mm": 250,
+      "agrees_with_dxf_within_10mm": true
+     },
+     "68B": {
+      "D_mm": 500,
+      "W_mm": 199,
+      "agrees_with_dxf_within_10mm": true
+     },
+     "68E": {
+      "D_mm": 250,
+      "W_mm": 800,
+      "agrees_with_dxf_within_10mm": true
+     },
+     "691": {
+      "D_mm": 504,
+      "W_mm": 250,
+      "agrees_with_dxf_within_10mm": true
+     },
+     "694": {
+      "D_mm": 250,
+      "W_mm": 601,
+      "agrees_with_dxf_within_10mm": true
+     },
+     "697": {
+      "D_mm": 250,
+      "W_mm": 500,
+      "agrees_with_dxf_within_10mm": true
+     },
+     "69A": {
+      "D_mm": 250,
+      "W_mm": 800,
+      "agrees_with_dxf_within_10mm": true
+     },
+     "69D": {
+      "D_mm": 199,
+      "W_mm": 500,
+      "agrees_with_dxf_within_10mm": true
+     },
+     "77B": null
+    }
+   },
+   "2F": {
+    "dxf_outlines": 9,
+    "dxf_outlines_with_an_agreeing_plot_fill": 9,
+    "dxf_outlines_without_a_plot_fill": [],
+    "fills": 15,
+    "fills_not_on_a_dxf_column": [
+     [
+      119,
+      148
+     ],
+     [
+      119,
+      148
+     ],
+     [
+      123,
+      148
+     ],
+     [
+      123,
+      152
+     ],
+     [
+      800,
+      792
+     ],
+     [
+      800,
+      792
+     ]
+    ],
+    "page": 6,
+    "registration_votes": 9,
+    "rows": {
+     "40F": {
+      "D_mm": 500,
+      "W_mm": 199,
+      "agrees_with_dxf_within_10mm": true
+     },
+     "412": {
+      "D_mm": 500,
+      "W_mm": 199,
+      "agrees_with_dxf_within_10mm": true
+     },
+     "415": {
+      "D_mm": 199,
+      "W_mm": 601,
+      "agrees_with_dxf_within_10mm": true
+     },
+     "418": {
+      "D_mm": 698,
+      "W_mm": 203,
+      "agrees_with_dxf_within_10mm": true
+     },
+     "41B": {
+      "D_mm": 504,
+      "W_mm": 203,
+      "agrees_with_dxf_within_10mm": true
+     },
+     "41E": {
+      "D_mm": 500,
+      "W_mm": 199,
+      "agrees_with_dxf_within_10mm": true
+     },
+     "421": {
+      "D_mm": 504,
+      "W_mm": 199,
+      "agrees_with_dxf_within_10mm": true
+     },
+     "424": {
+      "D_mm": 504,
+      "W_mm": 250,
+      "agrees_with_dxf_within_10mm": true
+     },
+     "778": {
+      "D_mm": 402,
+      "W_mm": 199,
+      "agrees_with_dxf_within_10mm": true
+     }
+    }
+   },
+   "GF": {
+    "dxf_outlines": 34,
+    "dxf_outlines_with_an_agreeing_plot_fill": 30,
+    "dxf_outlines_without_a_plot_fill": [
+     "329",
+     "386"
+    ],
+    "fills": 40,
+    "fills_not_on_a_dxf_column": [
+     [
+      301,
+      305
+     ],
+     [
+      301,
+      305
+     ],
+     [
+      301,
+      305
+     ],
+     [
+      305,
+      301
+     ],
+     [
+      305,
+      301
+     ],
+     [
+      305,
+      301
+     ],
+     [
+      796,
+      792
+     ],
+     [
+      800,
+      792
+     ],
+     [
+      800,
+      792
+     ],
+     [
+      800,
+      796
+     ]
+    ],
+    "page": 4,
+    "registration_votes": 31,
+    "rows": {
+     "31B": {
+      "D_mm": 250,
+      "W_mm": 902,
+      "agrees_with_dxf_within_10mm": false
+     },
+     "322": {
+      "D_mm": 250,
+      "W_mm": 1003,
+      "agrees_with_dxf_within_10mm": false
+     },
+     "329": null,
+     "32C": {
+      "D_mm": 500,
+      "W_mm": 199,
+      "agrees_with_dxf_within_10mm": true
+     },
+     "32F": {
+      "D_mm": 500,
+      "W_mm": 199,
+      "agrees_with_dxf_within_10mm": true
+     },
+     "332": {
+      "D_mm": 250,
+      "W_mm": 601,
+      "agrees_with_dxf_within_10mm": true
+     },
+     "335": {
+      "D_mm": 250,
+      "W_mm": 500,
+      "agrees_with_dxf_within_10mm": true
+     },
+     "338": {
+      "D_mm": 999,
+      "W_mm": 250,
+      "agrees_with_dxf_within_10mm": true
+     },
+     "33B": {
+      "D_mm": 504,
+      "W_mm": 203,
+      "agrees_with_dxf_within_10mm": true
+     },
+     "33E": {
+      "D_mm": 500,
+      "W_mm": 199,
+      "agrees_with_dxf_within_10mm": true
+     },
+     "341": {
+      "D_mm": 504,
+      "W_mm": 199,
+      "agrees_with_dxf_within_10mm": true
+     },
+     "344": {
+      "D_mm": 500,
+      "W_mm": 199,
+      "agrees_with_dxf_within_10mm": true
+     },
+     "347": {
+      "D_mm": 398,
+      "W_mm": 199,
+      "agrees_with_dxf_within_10mm": true
+     },
+     "34A": {
+      "D_mm": 398,
+      "W_mm": 199,
+      "agrees_with_dxf_within_10mm": true
+     },
+     "34D": {
+      "D_mm": 199,
+      "W_mm": 398,
+      "agrees_with_dxf_within_10mm": true
+     },
+     "350": {
+      "D_mm": 199,
+      "W_mm": 398,
+      "agrees_with_dxf_within_10mm": true
+     },
+     "353": {
+      "D_mm": 250,
+      "W_mm": 500,
+      "agrees_with_dxf_within_10mm": true
+     },
+     "356": {
+      "D_mm": 199,
+      "W_mm": 402,
+      "agrees_with_dxf_within_10mm": true
+     },
+     "359": {
+      "D_mm": 199,
+      "W_mm": 402,
+      "agrees_with_dxf_within_10mm": true
+     },
+     "35C": {
+      "D_mm": 250,
+      "W_mm": 1101,
+      "agrees_with_dxf_within_10mm": true
+     },
+     "35F": {
+      "D_mm": 601,
+      "W_mm": 250,
+      "agrees_with_dxf_within_10mm": true
+     },
+     "362": {
+      "D_mm": 698,
+      "W_mm": 250,
+      "agrees_with_dxf_within_10mm": true
+     },
+     "365": {
+      "D_mm": 500,
+      "W_mm": 250,
+      "agrees_with_dxf_within_10mm": true
+     },
+     "368": {
+      "D_mm": 250,
+      "W_mm": 800,
+      "agrees_with_dxf_within_10mm": true
+     },
+     "36B": {
+      "D_mm": 504,
+      "W_mm": 250,
+      "agrees_with_dxf_within_10mm": true
+     },
+     "36E": {
+      "D_mm": 250,
+      "W_mm": 902,
+      "agrees_with_dxf_within_10mm": true
+     },
+     "371": {
+      "D_mm": 250,
+      "W_mm": 703,
+      "agrees_with_dxf_within_10mm": true
+     },
+     "374": {
+      "D_mm": 250,
+      "W_mm": 601,
+      "agrees_with_dxf_within_10mm": true
+     },
+     "377": {
+      "D_mm": 250,
+      "W_mm": 500,
+      "agrees_with_dxf_within_10mm": true
+     },
+     "37A": {
+      "D_mm": 250,
+      "W_mm": 1003,
+      "agrees_with_dxf_within_10mm": true
+     },
+     "37D": {
+      "D_mm": 250,
+      "W_mm": 1101,
+      "agrees_with_dxf_within_10mm": true
+     },
+     "380": {
+      "D_mm": 250,
+      "W_mm": 800,
+      "agrees_with_dxf_within_10mm": true
+     },
+     "383": {
+      "D_mm": 250,
+      "W_mm": 500,
+      "agrees_with_dxf_within_10mm": true
+     },
+     "386": null
+    }
+   }
+  }
+ },
+ "schedule_type_table": {
+  "C": {
+   "band_1ST_printed": false,
+   "band_2ND_printed": false,
+   "drawn_1F": 0,
+   "drawn_2F": 0
+  },
+  "C1": {
+   "band_1ST_printed": true,
+   "band_2ND_printed": true,
+   "drawn_1F": 1,
+   "drawn_2F": 1
+  },
+  "C10": {
+   "band_1ST_printed": false,
+   "band_2ND_printed": false,
+   "drawn_1F": 0,
+   "drawn_2F": 0
+  },
+  "C11": {
+   "band_1ST_printed": false,
+   "band_2ND_printed": false,
+   "drawn_1F": 0,
+   "drawn_2F": 0
+  },
+  "C2": {
+   "band_1ST_printed": true,
+   "band_2ND_printed": true,
+   "drawn_1F": 4,
+   "drawn_2F": 4
+  },
+  "C3": {
+   "band_1ST_printed": true,
+   "band_2ND_printed": true,
+   "drawn_1F": 2,
+   "drawn_2F": 1
+  },
+  "C4": {
+   "band_1ST_printed": true,
+   "band_2ND_printed": true,
+   "drawn_1F": 2,
+   "drawn_2F": 0
+  },
+  "C5": {
+   "band_1ST_printed": true,
+   "band_2ND_printed": true,
+   "drawn_1F": 3,
+   "drawn_2F": 1
+  },
+  "C6": {
+   "band_1ST_printed": true,
+   "band_2ND_printed": true,
+   "drawn_1F": 1,
+   "drawn_2F": 0
+  },
+  "C7": {
+   "band_1ST_printed": true,
+   "band_2ND_printed": true,
+   "drawn_1F": 1,
+   "drawn_2F": 0
+  },
+  "C8": {
+   "band_1ST_printed": true,
+   "band_2ND_printed": true,
+   "drawn_1F": 2,
+   "drawn_2F": 0
+  },
+  "C9": {
+   "band_1ST_printed": true,
+   "band_2ND_printed": true,
+   "drawn_1F": 2,
+   "drawn_2F": 1
+  }
+ },
+ "schema": "T256_COLUMN_EVIDENCE_INPUT_V1",
+ "sources": {
+  "P7757_DXF_COMPRESSED.zip -> P7757.dxf": "ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4",
+  "ST7757 dxf.dxf": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+  "ST7757.pdf": "74da1523f05eb3c6a4fe3ddebaef2c3d841891f003efc03bc32a3fb4553337e3"
+ }
+}
