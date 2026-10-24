@@ -1,0 +1,51 @@
+{
+ "boundaries": 32,
+ "boundary_length_m": 422.2075,
+ "gb_faces_drawing_confirmed": {
+  "by_kind": {
+   "ARC": [
+    2,
+    5.017465
+   ],
+   "EXTERIOR MAIN": [
+    18,
+    29.178205
+   ],
+   "INTERIOR": [
+    10,
+    10.49256
+   ],
+   "PIECE": [
+    2,
+    0.77997
+   ]
+  },
+  "m2": 45.4682,
+  "pieces": 32
+ },
+ "gb_faces_excluded_above_ground": {
+  "length_m": 51.771,
+  "pieces": 17
+ },
+ "gb_faces_held": {
+  "length_m": 244.2827,
+  "pieces": 118
+ },
+ "lift_ring_faces_excluded_m": 14.9997,
+ "method": "BURIED_WP_V1 + R-WP-BURIED-1.1 (traced faces)",
+ "neck_deduction": {
+  "dc_m2": 16.560385,
+  "dc_necks": 13,
+  "excluded_lift": 4,
+  "held_necks": 19
+ },
+ "neck_faces_in_beam_zone_m": 33.3488,
+ "sources": {
+  "t205": "5f40dfdb",
+  "t242": "9455a63d",
+  "t253": "dff9cb79",
+  "t263": "c0ab564d",
+  "trace": "ALSENAN_FACE_TRACE.json (ST7757 dxf.dxf 9f9d1179)"
+ },
+ "t263_dc_m2": 35.404365
+}
