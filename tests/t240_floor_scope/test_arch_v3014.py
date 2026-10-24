@@ -1,4 +1,4 @@
-"""T-240 WP1: ARCH_TAKEOFF_V3.0.13, the SAME opt-in candidate as V3.0 .. V3.0.12 extended (engine.source.arch_v3013):
+"""T-240 WP1: ARCH_TAKEOFF_V3.0.14, the SAME opt-in candidate as V3.0 .. V3.0.13 extended (engine.source.arch_v3014):
 one strip / face, one line, by its physical class. Synthetic data only (no client drawing).
 
 VILLA K-240 (not the development villa), hand values:
@@ -29,11 +29,11 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
 
 from engine.source import arch_v30 as A30                      # noqa: E402
-from engine.source import arch_v3013 as A                      # noqa: E402
+from engine.source import arch_v3014 as A                      # noqa: E402
 from engine.source import boq_line as BL                       # noqa: E402
 
 AP = pytest.approx
-PID = "synthetic-v3013-villa-k240"
+PID = "synthetic-v3014-villa-k240"
 DOCS = [{"file": "K-ARCH.dxf", "sha256": "4" * 64}]
 POR, SP, THR = "FIN.FLOOR.PORCELAIN", "ARCH.SPACE", "ARCH.THRESHOLD"
 
@@ -46,7 +46,7 @@ def line(eid, item, floor, q=1.0, ev="SOURCE_DERIVED", unit="m2"):
                         rfi={"question": "q", "unlocks": eid} if held else None)
 
 
-def l3012():
+def l3013():
     return [line("1F-RBED", POR, "1F", 30.0),
             line("1F-RKDR", SP, "1F", 2.94, "PROVISIONAL"),
             line("1F-STRIP-OP-031", POR, "1F", 0.22),
@@ -105,7 +105,7 @@ def inputs(recs=None, declared=None):
 
 
 def run(recs=None, lines=None, declared=None):
-    ls = lines if lines is not None else l3012()
+    ls = lines if lines is not None else l3013()
     inp = A.load_inputs(inputs(recs, declared), PID)
     ch, logs = A.changes_for(inp, ls)
     out, ident = A.integrate(ls, ch)
@@ -123,7 +123,7 @@ def test_hand_values_and_floor_line():
     b = by_eid(out)
     d = b[("1F-RKDR", SP)]
     assert d["evidence_state"] == "SOURCE_DERIVED" and d["measured_net"] == AP(2.94)
-    sc = d["calculation"]["inputs"]["floor_scope_v3013"]
+    sc = d["calculation"]["inputs"]["floor_scope_v3014"]
     assert sc["floor_key"] == "FLOOR.INTERNAL" and sc["material_status"] == "HELD" and sc["wet_dry"] == "DRY"
     for e in ("1F-STRIP-OP-031", "2F-STRIP-OP-041", "GF-STRIP-OP-051", "GF-STRIP-OP-052"):
         assert b[(e, POR)]["evidence_state"] == "NOT_APPLICABLE_WITH_EVIDENCE"
@@ -136,7 +136,7 @@ def test_hand_values_and_floor_line():
     assert b[("GF-THR-OP-052", THR)]["evidence_state"] == "NOT_APPLICABLE_WITH_EVIDENCE"
     od = b[("HL:FLOOR_SCOPE:OUTDOOR:GF:PASSAGE", SP)]
     assert od["measured_net"] == AP(6.5)
-    assert od["calculation"]["inputs"]["floor_scope_v3013"]["floor_key"] == "FLOOR.OUTDOOR"
+    assert od["calculation"]["inputs"]["floor_scope_v3014"]["floor_key"] == "FLOOR.OUTDOOR"
     f12, f13 = A.floor_line(ls), A.floor_line(out)
     assert f12["internal"]["total"] == AP(30.0 + 0.22 + 0.135 + 0.26 + 0.30 + 4.2)
     assert f13["internal"]["total"] == AP(30.0 + 2.94 + 4.2)
@@ -146,7 +146,7 @@ def test_hand_values_and_floor_line():
     assert ident["replaced"] == 9 and ident["added"] == 2 and ident["outside_rows"] == 3
     chk = A.check_one_strip_one_line(out, {c["after"]["line_id"] for c in ch})
     assert chk == {"strips": 2, "pre_existing_duplicates": []}   # OP-031, OP-041 by their threshold lines only
-    assert A.check_one_strip_one_line(ls)["strips"] == 4         # V3.0.12: four porcelain strips (twins named apart)
+    assert A.check_one_strip_one_line(ls)["strips"] == 4         # V3.0.13: four porcelain strips (twins named apart)
 
 
 
@@ -169,8 +169,8 @@ def test_ledger_and_diff_rows():
     held = [r for r in rows if r["item_code"] == THR and r["evidence_status"] == "HELD"]
     assert len(held) == 2
     diff = A.diff_rows(ls, out, ls)
-    assert sum(1 for d in diff if d["vs_v3_0_12"] == "ADDED") == 2
-    assert sum(1 for d in diff if d["vs_v3_0_12"] == "SAME") == 3
+    assert sum(1 for d in diff if d["vs_v3_0_13"] == "ADDED") == 2
+    assert sum(1 for d in diff if d["vs_v3_0_13"] == "SAME") == 3
 
 
 def test_added_lines_carry_their_guard_element():
@@ -183,16 +183,16 @@ def test_added_lines_carry_their_guard_element():
 
 
 def test_write_files(tmp_path):
-    ls = l3012()
+    ls = l3013()
     inp = A.load_inputs(inputs(), PID)
     ch, logs = A.changes_for(inp, ls)
     names, ident, led = A.write(tmp_path, ls, ch, logs, inp, ls)
-    assert "V3_0_13_BOQ_LINES.json" in names and (tmp_path / "V3_0_13_DIFF.csv").exists()
+    assert "V3_0_14_BOQ_LINES.json" in names and (tmp_path / "V3_0_14_DIFF.csv").exists()
     assert led["integration_package"] is False and ident["opening_strips"] == 2   # the two thresholds
 
 
 def test_no_inputs_changes_nothing():
-    ls = l3012()
+    ls = l3013()
     ch, logs = A.changes_for(None, ls)
     assert ch == [] and logs[0]["state"] == "NO_PROJECT_INPUT"
     out, ident = A.integrate(ls, ch)
@@ -258,7 +258,7 @@ def test_sill_in_floor_and_threshold_refused():
 def test_untouched_duplicate_is_named_not_hidden():
     """a strip carried twice that this version does not touch (a wall-top strip with its twin, left for a later
     package) is returned as a named finding; the same pair touched by this version is refused."""
-    ls = l3012()
+    ls = l3013()
     for ln in ls:
         if ln["location"]["element_id"] == "GF-THR-OP-052":
             ln["location"]["element_id"] = "GF-STRIP-OP-052:unattributed strip"
@@ -284,7 +284,7 @@ def test_outdoor_never_internal():
     ls, out, *_ = run()
     bad = copy.deepcopy(out)
     for ln in bad:
-        sc = ln["calculation"]["inputs"].get("floor_scope_v3013")
+        sc = ln["calculation"]["inputs"].get("floor_scope_v3014")
         if isinstance(sc, dict) and sc.get("kind") == "TO_OUTDOOR":
             sc["floor_key"] = "FLOOR.INTERNAL"
     with pytest.raises(A.InputsError, match="never in the internal floor line"):
@@ -297,7 +297,7 @@ def test_declared_total_mismatch_refused():
 
 
 def test_earlier_change_needs_naming():
-    ls = l3012()
+    ls = l3013()
     lid = next(ln["line_id"] for ln in ls if ln["location"]["element_id"] == "1F-STRIP-OP-031")
     inp = A.load_inputs(inputs(), PID)
     with pytest.raises(A.InputsError, match="earlier candidate version"):
@@ -313,4 +313,4 @@ def test_wrong_schema_and_project_refused():
 
 def test_policy_record_not_default():
     p = A.policy_record()
-    assert p["released_default"] is False and p["extends"] == "ARCH_TAKEOFF_V3.0.12"
+    assert p["released_default"] is False and p["extends"] == "ARCH_TAKEOFF_V3.0.13"

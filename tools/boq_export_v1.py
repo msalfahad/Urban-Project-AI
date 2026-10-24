@@ -31,9 +31,34 @@ HELD); a WHOLE verdict needs the group's complete line and element scope and a p
 (T-236: inventory count = element scope count, MISSING 0, DUPLICATED 0, HELD 0) before any row reads VERIFIED;
 COMPONENT verdicts make single rows VERIFIED COMPONENT and never add up to a VERIFIED line. Records of the V1 file
 (URBAN_SCOREBOARD_CHECKER_VERDICTS_V1), the line's own evidence_state / evidence_status and board text never make a
-row VERIFIED: V1 records are shown in the verdict column as V1_NOT_BINDING. r1 (this hand-in) offers no CLI input for
-V2 records and no completeness input: the export shows VERIFIED 0 by construction; r2 adds the V2 schema file, its
-validator, the CLI flag and the 'verdict add' helper.
+row VERIFIED: V1 records are shown in the verdict column as V1_NOT_BINDING. Without --verdicts-v2 AND --completeness
+the export shows VERIFIED 0 by construction.
+
+r2 (V2 verdicts). The record schema is URBAN_CHECKER_VERDICT_V2 (schema_document(); published as
+research/agents_t235/URBAN_CHECKER_VERDICT_V2.schema.json, a test keeps the two equal); a verdict file is a
+URBAN_CHECKER_VERDICT_V2_SET {"schema", "verdicts": [records sorted by verdict_id]}. validate_v2() checks one record's
+form (every binding field present and well formed, the routine a Checker / Verifier); bind_verdict() then checks it
+against the exported line. The Checker never types the binding: 'verdict add' fills project, revision set, candidate
+version, BOQ_LINES sha256, unit, engine qty and element scope from the candidate lines; the Checker types line ids (or
+one item code), scope, checker qty, evidence and its run identity. A record that binds nothing in this export is listed
+in the manifest (v2_verdicts) with its status, never dropped.
+
+    python3 -I tools/boq_export_v1.py verdict-add --lines V3_0_x_BOQ_LINES.json --candidate-version V
+        (--line-ids ID,ID,.. | --item-code CODE [--unit U]) --scope WHOLE|PARTIAL|COMPONENT --checker-qty Q
+        --evidence "SHEET=PRINTED VALUE" [--evidence ..] (--lock-file docs/agents/locks/checker.lock |
+        --run-token T --routine Verifier) --verdict-commit SHA [--time ISO-UTC] --out VERDICTS_V2.json
+    python3 -I tools/boq_export_v1.py verdict-validate VERDICTS_V2.json          exit 1 on any problem
+
+Part (4) (completeness from T-236). --completeness takes the merged T-236 report (tools/trade_completeness.py
+TRADE_COMPLETENESS.json, schema URBAN_TRADE_COMPLETENESS_V1; its reference_line_rows() per trade). The report carries no
+project id, so it is bound by its line ids: a report naming any line id this BOQ does not carry is refused. Per BOQ
+line (trade, item, unit) the record passes only when its lines map to ONE principal trade (line_trade), that trade maps
+to this one BOQ line, every line of it is in the report and linked, the trade is COMPLETE_AGAINST_INVENTORY with
+missing / duplicated / held / conflict / geometry-only / unresolved / register-only / out-of-scope all 0, no refused
+deduction, and inventory count = element scope count; else the summary names each blocker. The report's MISSING,
+CONFLICT and geometry-only elements become UNMEASURED rows (in the trade's one BOQ line, or under the principal trade id
+with a blank item when the trade maps to none or several), and a principal trade with no line and no inventory is one
+UNMEASURED row: nothing is absent. --inventory (V1) and --completeness are one inventory each: both together refused.
 
 Owner status class per row (BLOCKWORK_RESOLUTION_PROGRAMME s.2): VERIFIED (a bound counted verdict); PROJECT-SPECIFIC
 (a quantity that rests on an owner-approved input: the line states "ASSUMED - OWNER-APPROVED", material state
@@ -55,15 +80,19 @@ import csv
 import hashlib
 import io
 import json
+import re
 import subprocess
 import sys
 from collections import defaultdict
+from datetime import datetime, timezone
 from pathlib import Path
 
+ROOT = Path(__file__).resolve().parents[1]
 if __package__ in (None, ""):
-    sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+    sys.path.insert(0, str(ROOT))
 
 from engine.source import boq_line as BL                    # noqa: E402
+from engine.source import trade_completeness_v1 as TC       # noqa: E402  (stdlib-only check module, T-236)
 
 DEFAULT_GUARD_CLASS = "TOOLING"        # T-212: a read-only export tool; it produces no quantity, so no guard to run
 SCHEMA = "URBAN_BOQ_EXPORT_V1"
@@ -72,6 +101,19 @@ INVENTORY_SCHEMA = "URBAN_BOQ_EXPORT_INVENTORY_V1"
 V1_VERDICTS_SCHEMA = "URBAN_SCOREBOARD_CHECKER_VERDICTS_V1"
 V2_VERDICT_SCHEMA = "URBAN_CHECKER_VERDICT_V2"
 COMPLETENESS_SCHEMA = "URBAN_LINE_COMPLETENESS_V1"
+V2_SET_SCHEMA = "URBAN_CHECKER_VERDICT_V2_SET"
+V2_REQUIRED = ("schema", "verdict_id", "project_id", "revision_set_sha256", "candidate_version", "boq_lines_sha256",
+               "line_ids", "element_scope", "unit", "engine_qty", "checker_qty", "evidence", "checker", "scope", "time")
+V2_SCOPES = ("WHOLE", "PARTIAL", "COMPONENT")
+CHECKER_ROUTINES = ("CHECKER", "VERIFIER")      # the run-lock agent names of the Checker (docs/agents/locks)
+_SHA_RE = re.compile(r"^[0-9a-f]{64}$")
+_COMMIT_RE = re.compile(r"^[0-9a-f]{6,40}$")
+_TIME_RE = re.compile(r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}(:\d{2}(\.\d+)?)?Z$")
+PRINTED_KEYS = ("printed_value", "printed", "value")
+# T-236 element statuses that are an inventory element with no BOQ line (shown as UNMEASURED rows)
+REPORT_UNMEASURED = ("MISSING", "CONFLICT", "INVENTORY_GEOMETRY_ONLY")
+REPORT_BLOCKERS = ("missing", "duplicated", "held", "conflict", "geometry_only", "unresolved", "register_only",
+                   "out_of_inventory_scope")
 DISCREPANCY_REL = 0.01          # WORKFLOW_CONTROLS s.1
 QTY_MATCH_TOL = 0.0005          # tools/scoreboard_v2.py QTY_MATCH_TOL: the verdict's engine qty must be this line's
 DEC = 6                         # fixed decimals of every quantity written
@@ -93,7 +135,7 @@ SUMMARY_COLUMNS = ("trade", "item_code", "unit", "line_status", "rows", "verifie
                    "measured_unverified_sum", "measured_unverified_rows", "open_range_rows", "open_range_components",
                    "held_rows", "held_low", "held_high",
                    "unmeasured_rows", "excluded_rows", "rows_without_quantity", "held_components",
-                   "unmeasured_components", "trade_status", "trade_verified_whole_lines")
+                   "unmeasured_components", "trade_status", "trade_verified_whole_lines", "completeness")
 
 
 class ExportError(ValueError):
@@ -239,14 +281,220 @@ def v1_verdict_refs(v1_doc, key_map_doc):
     return {k: sorted(v) for k, v in out.items()}
 
 
+def schema_document():
+    """the URBAN_CHECKER_VERDICT_V2 record schema (JSON Schema 2020-12 form; the published schema file equals it)."""
+    s = {"type": "string", "minLength": 1}
+    sha = {"type": "string", "pattern": _SHA_RE.pattern}
+    qty = {"type": "number", "minimum": 0}
+    return {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "urban-projects/URBAN_CHECKER_VERDICT_V2",
+        "title": V2_VERDICT_SCHEMA,
+        "description": ("One Checker verdict bound to the exact exported BOQ line(s) it re-measured (owner 2026-10-23 "
+                        "19:45 (0)). The sole authority for VERIFIED in tools/boq_export_v1.py: a record whose binding "
+                        "differs from the exported line is STALE; checker vs engine above 1 % is a DISCREPANCY (the line "
+                        "is HELD); only scope WHOLE plus a passing completeness record makes a line VERIFIED; COMPONENT "
+                        "records never add up to a VERIFIED line. Records live in a " + V2_SET_SCHEMA + " file "
+                        "{schema, verdicts: [records sorted by verdict_id]}."),
+        "type": "object",
+        "required": list(V2_REQUIRED),
+        "properties": {
+            "schema": {"const": V2_VERDICT_SCHEMA},
+            "verdict_id": s,
+            "project_id": s,
+            "revision_set_sha256": sha,
+            "candidate_version": s,
+            "boq_lines_sha256": sha,
+            "line_ids": {"type": "array", "minItems": 1, "uniqueItems": True, "items": s},
+            "element_scope": {"type": "object", "required": ["ids", "count"],
+                              "properties": {"ids": {"type": "array", "minItems": 1, "uniqueItems": True, "items": s},
+                                             "count": {"type": "integer", "minimum": 1}},
+                              "description": "sorted element ids of the bound lines; count = len(ids)"},
+            "unit": {"enum": list(BL.UNITS)},
+            "engine_qty": qty | {"description": "sum of measured_net of the bound lines (the exported quantity)"},
+            "checker_qty": qty | {"description": "the Checker's own re-measure from the drawing"},
+            "evidence": {"type": "array", "minItems": 1,
+                         "items": {"type": "object", "required": ["sheet"],
+                                   "properties": {"sheet": s, "printed_value": s, "printed": s, "value": s},
+                                   "anyOf": [{"required": [k]} for k in PRINTED_KEYS]}},
+            "checker": {"type": "object", "required": ["run_token", "routine", "verdict_commit"],
+                        "properties": {"run_token": s,
+                                       "routine": {"type": "string", "description": "Checker / Verifier (run-lock agent)"},
+                                       "verdict_commit": {"type": "string", "pattern": _COMMIT_RE.pattern}}},
+            "scope": {"enum": list(V2_SCOPES)},
+            "time": {"type": "string", "pattern": _TIME_RE.pattern},
+            "notes": {"type": "string"}}}
+
+
+def _isnum(x):
+    return isinstance(x, (int, float)) and not isinstance(x, bool)
+
+
+def validate_v2(v):
+    """-> [problem text] for one record's form (empty: well formed). Binding to the export is bind_verdict's job."""
+    if not isinstance(v, dict):
+        return ["record: not an object"]
+    p = []
+    if v.get("schema") != V2_VERDICT_SCHEMA:
+        p.append(f"schema: {v.get('schema')!r} is not {V2_VERDICT_SCHEMA}")
+    for k in V2_REQUIRED:
+        if v.get(k) in (None, "", [], {}):
+            p.append(f"{k}: required")
+    for k in ("verdict_id", "project_id", "candidate_version"):
+        if k in v and not (isinstance(v[k], str) and v[k].strip()):
+            p.append(f"{k}: a non-empty text")
+    for k in ("revision_set_sha256", "boq_lines_sha256"):
+        if v.get(k) not in (None, "") and not (isinstance(v[k], str) and _SHA_RE.match(v[k])):
+            p.append(f"{k}: 64 lower-case hex characters")
+    ids = v.get("line_ids")
+    if ids not in (None, []):
+        if not isinstance(ids, list) or not all(isinstance(x, str) and x for x in ids):
+            p.append("line_ids: a list of line id texts")
+        elif len(set(ids)) != len(ids):
+            p.append("line_ids: a line id listed twice")
+    sc = v.get("element_scope")
+    if sc not in (None, {}):
+        els = sc.get("ids") if isinstance(sc, dict) else None
+        if not isinstance(els, list) or not els or not all(isinstance(x, str) and x for x in els):
+            p.append("element_scope: ids is a non-empty list of element id texts")
+        elif len(set(els)) != len(els):
+            p.append("element_scope: an element id listed twice")
+        elif not (isinstance(sc.get("count"), int) and not isinstance(sc.get("count"), bool)
+                  and sc["count"] == len(els)):
+            p.append(f"element_scope: count {sc.get('count')!r} is not the {len(els)} ids listed")
+    if v.get("unit") not in (None, "") and v["unit"] not in BL.UNITS:
+        p.append(f"unit: {v['unit']!r} is not one of {BL.UNITS}")
+    for k in ("engine_qty", "checker_qty"):
+        if k in v and v[k] is not None and not (_isnum(v[k]) and v[k] >= 0):
+            p.append(f"{k}: a non-negative number")
+    ev = v.get("evidence")
+    if ev not in (None, []):
+        if not isinstance(ev, list) or not all(
+                isinstance(e, dict) and isinstance(e.get("sheet"), str) and e["sheet"].strip()
+                and any(e.get(k) not in (None, "") for k in PRINTED_KEYS) for e in ev):
+            p.append("evidence: every entry names its sheet and the printed value read there")
+    ch = v.get("checker")
+    if ch not in (None, {}):
+        if not isinstance(ch, dict) or not all(isinstance(ch.get(k), str) and ch[k].strip()
+                                               for k in ("run_token", "routine", "verdict_commit")):
+            p.append("checker: run_token, routine and verdict_commit are required")
+        else:
+            if not any(ch["routine"].strip().upper().startswith(r) for r in CHECKER_ROUTINES):
+                p.append(f"checker.routine: {ch['routine']!r} is not the Checker (a verdict is the Checker's alone)")
+            if not _COMMIT_RE.match(ch["verdict_commit"]):
+                p.append("checker.verdict_commit: a commit sha (6 to 40 hex characters)")
+    if v.get("scope") not in (None, "") and v["scope"] not in V2_SCOPES:
+        p.append(f"scope: {v['scope']!r} is not one of {V2_SCOPES}")
+    if v.get("time") not in (None, "") and not (isinstance(v["time"], str) and _TIME_RE.match(v["time"])):
+        p.append("time: ISO 8601 UTC, e.g. 2026-10-24T10:00:00Z")
+    return p
+
+
+def _set_problems(doc):
+    if not isinstance(doc, dict) or doc.get("schema") != V2_SET_SCHEMA:
+        return [f"set: schema is not {V2_SET_SCHEMA}"]
+    vs = doc.get("verdicts")
+    if not isinstance(vs, list):
+        return ["set: verdicts is a list"]
+    ids = [str(v.get("verdict_id")) for v in vs if isinstance(v, dict)]
+    dup = sorted({i for i in ids if ids.count(i) > 1})
+    return [f"set: verdict id {i} listed twice" for i in dup]
+
+
+def validate_v2_set(doc):
+    """-> [problem text] for a whole verdict file: the set's form plus each record's (prefixed by its verdict id)."""
+    p = _set_problems(doc)
+    if any(x.startswith(("set: schema", "set: verdicts")) for x in p):
+        return p
+    for i, v in enumerate(doc["verdicts"]):
+        vid = v.get("verdict_id") if isinstance(v, dict) and v.get("verdict_id") else f"#{i}"
+        p += [f"{vid}: {x}" for x in validate_v2(v)]
+    return p
+
+
+def lines_sha256(lines):
+    """sha256 of the canonical bytes of a line list (engine/source/boq_line.dumps), as a candidate writes them."""
+    return sha256_bytes(BL.dumps(lines).encode("utf-8"))
+
+
+def verdict_add(lines, *, candidate_version, boq_lines_sha256, line_ids, scope, checker_qty, evidence, run_token,
+                routine, verdict_commit, time, verdict_id=None, notes=None):
+    """-> one URBAN_CHECKER_VERDICT_V2 record whose binding is filled from the candidate lines (the Checker types
+    only line ids, scope, checker qty, evidence and its own run identity). Refused (ExportError): an unknown or
+    repeated line id, a held / excluded line (no quantity to confirm), lines of two units, two project ids or revision
+    sets, COMPONENT over more than one line, a record that fails validate_v2 (e.g. a routine that is not the Checker)."""
+    for ln in lines:
+        BL.validate(ln)
+    pid, rev = identity(lines)
+    by_id = {ln["line_id"]: ln for ln in lines}
+    ids = list(line_ids)
+    if len(set(ids)) != len(ids):
+        raise ExportError("a line id listed twice")
+    if not ids:
+        raise ExportError("no line id: a verdict binds at least one line")
+    unknown = sorted(set(ids) - set(by_id))
+    if unknown:
+        raise ExportError(f"unknown line id(s) {unknown[:3]}: not in this candidate")
+    sel = [by_id[i] for i in sorted(ids)]
+    for ln in sel:
+        if ln["evidence_state"] not in BL.QUANTITY_STATES + ("NOT_APPLICABLE_WITH_EVIDENCE",):
+            raise ExportError(f"{ln['line_id']}: a {ln['evidence_state']} line is not measured: no quantity for a "
+                              "verdict to confirm")
+    units = sorted({ln["unit"] for ln in sel})
+    if len(units) != 1:
+        raise ExportError(f"lines of more than one unit {units}: one verdict, one unit")
+    if scope == "COMPONENT" and len(sel) != 1:
+        raise ExportError("a COMPONENT verdict binds exactly one line")
+    els = sorted(str(ln["location"]["element_id"]) for ln in sel)
+    rec = {"schema": V2_VERDICT_SCHEMA, "project_id": pid, "revision_set_sha256": rev,
+           "candidate_version": candidate_version, "boq_lines_sha256": boq_lines_sha256,
+           "line_ids": sorted(ids), "element_scope": {"ids": els, "count": len(els)}, "unit": units[0],
+           "engine_qty": _num(sum(float(ln["measured_net"] or 0.0) for ln in sel)),
+           "checker_qty": _num(checker_qty) if _isnum(checker_qty) else checker_qty,
+           "evidence": [dict(sorted(e.items())) for e in evidence],
+           "checker": {"run_token": run_token, "routine": routine, "verdict_commit": verdict_commit},
+           "scope": scope, "time": time}
+    if notes:
+        rec["notes"] = notes
+    rec["verdict_id"] = verdict_id or "V2-" + sha256_bytes(json.dumps(rec, sort_keys=True, ensure_ascii=False)
+                                                           .encode("utf-8"))[:16]
+    probs = validate_v2(rec)
+    if probs:
+        raise ExportError("; ".join(probs))
+    return dict(sorted(rec.items()))
+
+
+def _dump_set(doc):
+    return json.dumps(doc, indent=1, sort_keys=True, ensure_ascii=False) + "\n"
+
+
+def verdict_set_append(path, rec):
+    """add one valid record to a URBAN_CHECKER_VERDICT_V2_SET file (created when absent); records sorted by id;
+    a verdict id already in the file is refused (a correction is a new record with its own id)."""
+    probs = validate_v2(rec)
+    if probs:
+        raise ExportError("; ".join(probs))
+    p = Path(path)
+    if p.exists():
+        doc, _sha = _load_json(p)
+        sp = _set_problems(doc)
+        if sp:
+            raise ExportError(f"{p.name}: " + "; ".join(sp))
+    else:
+        doc = {"schema": V2_SET_SCHEMA, "verdicts": []}
+    if any(v.get("verdict_id") == rec["verdict_id"] for v in doc["verdicts"]):
+        raise ExportError(f"verdict id {rec['verdict_id']} is already in {p.name} (a correction is a new record)")
+    doc["verdicts"] = sorted(doc["verdicts"] + [rec], key=lambda v: str(v.get("verdict_id")))
+    p.write_text(_dump_set(doc), encoding="utf-8")
+    return doc
+
+
 def bind_verdict(v, ident, group_lines, group_elements):
     """status of one V2 record against the exported group: COUNTED, or why not (never raises for a stale record)."""
     pid, rev, cver, bsha = ident
-    if v.get("schema") != V2_VERDICT_SCHEMA:
+    if not isinstance(v, dict) or v.get("schema") != V2_VERDICT_SCHEMA:
         return "NOT_V2"
-    need = ("verdict_id", "project_id", "revision_set_sha256", "candidate_version", "boq_lines_sha256", "line_ids",
-            "element_scope", "unit", "engine_qty", "checker_qty", "evidence", "checker", "scope", "time")
-    if any(v.get(k) in (None, "", [], {}) for k in need):
+    if validate_v2(v):
         return "BINDING_INCOMPLETE"
     ch = v["checker"] or {}
     if not all(ch.get(k) for k in ("run_token", "routine", "verdict_commit")):
@@ -299,7 +547,156 @@ def completeness_passes(rec, ident, gkey, group_elements):
     if (rec.get("trade"), rec.get("item_code"), rec.get("unit")) != gkey:
         return False
     return (rec.get("inventory_count") == len(group_elements) == rec.get("element_scope_count")
-            and rec.get("missing") == 0 and rec.get("duplicated") == 0 and rec.get("held") == 0)
+            and rec.get("missing") == 0 and rec.get("duplicated") == 0 and rec.get("held") == 0
+            and not rec.get("blockers"))
+
+
+def _report_line_ids(report):
+    ids = set()
+    for e in report.get("elements") or []:
+        ids |= set(e.get("lines") or [])
+    ids |= {d.get("line_id") for d in report.get("deductions") or []}
+    for v in (report.get("unlinked_lines") or {}).values():
+        ids |= set(v)
+    ids.discard(None)
+    return ids
+
+
+def report_check(report, lines):
+    """the T-236 report must be about THIS line set: schema, and no line id this BOQ does not carry (refused)."""
+    if not isinstance(report, dict) or report.get("schema") != TC.SCHEMA:
+        raise ExportError(f"completeness report schema {report.get('schema') if isinstance(report, dict) else None!r} "
+                          f"is not {TC.SCHEMA} (tools/trade_completeness.py TRADE_COMPLETENESS.json)")
+    known = {ln["line_id"] for ln in lines}
+    foreign = sorted(_report_line_ids(report) - known)
+    if foreign:
+        raise ExportError(f"completeness report names {len(foreign)} line id(s) this BOQ does not carry "
+                          f"(e.g. {foreign[0]}): it was computed on other lines (refused)")
+
+
+def report_unmeasured_rows(report, lines, pid, rev, cver):
+    """UNMEASURED rows from the T-236 report: each MISSING / CONFLICT / geometry-only element (placed in its trade's
+    one BOQ line, else under the principal trade id with a blank item) and one row per principal trade with no line and
+    no independent inventory. -> (rows, {group: set(element ids)})."""
+    gt = defaultdict(set)                                 # principal trade -> BOQ line groups of its lines
+    carried = set()
+    for ln in lines:
+        gt[TC.line_trade(ln)].add((str(ln["trade"]), ln["item_code"], ln["unit"]))
+        carried.add((str(ln["trade"]), ln["item_code"], ln["unit"], str(ln["location"].get("floor")),
+                     str(ln["location"].get("element_id"))))
+    rows, inv = [], defaultdict(set)
+    added = defaultdict(int)
+
+    def _row(trade, code, unit, floor, eid, reason, source):
+        if code in BL.ITEMS:
+            en, ar = BL.ITEMS[code][0], BL.ITEMS[code][1]
+        else:
+            en, ar = trade, ""
+        return {c: None for c in COLUMNS} | {
+            "line_id": "", "trade": trade, "item_code": code, "item_en": en, "item_ar": ar, "floor": floor,
+            "element_id": eid, "unit": unit, "deductions_n": 0, "quantity_state": UNMEASURED, "held_reason": "",
+            "unmeasured_reason": reason, "excluded_reason": "", "evidence_state": "", "line_stated_evidence_status": "",
+            "owner_status_class": CLS_HELD, "verdict_id": "", "verdict_commit": "", "verdict_status": "NONE",
+            "source_sheets": source, "project_id": pid, "revision_set_sha256": rev, "candidate_version": cver}
+
+    for e in sorted(report.get("elements") or [], key=lambda x: (x["trade"], x["key"])):
+        if e["status"] not in REPORT_UNMEASURED or e.get("lines"):
+            continue
+        tr = e["trade"]
+        floor, label = e["key"].split(":", 1) if ":" in e["key"] else ("", e["key"])
+        g = sorted(gt.get(tr, ()))
+        trade, code, unit = g[0] if len(g) == 1 else (tr, "", "")
+        if (trade, code, unit, floor, label) in carried:
+            continue                                      # a line carries it unlinked: the completeness blocker says so
+        why = f"T-236 {e['status']} ({tr}): inventory element with no BOQ line"
+        if e.get("reason"):
+            why += f"; {e['reason']}"
+        src = "; ".join(e.get("sources") or []) + (f" [{'; '.join(e['refs'])}]" if e.get("refs") else "")
+        rows.append(_row(trade, code, unit, floor, label, why, src))
+        inv[(trade, code, unit)].add(label)
+        added[tr] += 1
+    for t in report.get("trades") or []:
+        tr = t["trade"]
+        if t.get("principal") and t.get("status") == "NOT_MEASURED" and not t.get("found") and not added[tr] \
+                and not gt.get(tr):
+            rows.append(_row(tr, "", "", "", "", f"principal trade {tr} with no line and no independent inventory "
+                             "(T-236 NOT_MEASURED): scope not established", ""))
+    return rows, inv
+
+
+def completeness_from_report(report, lines, groups_lines, group_elements, ident):
+    """{group: URBAN_LINE_COMPLETENESS_V1 record derived from the T-236 report, with its blockers}."""
+    pid, rev, _c, _b = ident
+    trades = {t["trade"]: t for t in report.get("trades") or []}
+    in_report = _report_line_ids(report)
+    lt = defaultdict(set)                                 # principal trade -> line ids
+    gt = defaultdict(set)                                 # principal trade -> groups
+    for g, ls in groups_lines.items():
+        for ln in ls:
+            lt[TC.line_trade(ln)].add(ln["line_id"])
+            gt[TC.line_trade(ln)].add(g)
+    els_by_trade = defaultdict(list)
+    for e in report.get("elements") or []:
+        els_by_trade[e["trade"]].append(e)
+    refused = defaultdict(set)
+    for d in report.get("deductions") or []:
+        if d.get("status") == "REFUSED":
+            refused[d.get("line_id")].add(";".join(d.get("problems") or []))
+    out = {}
+    for g, ls in groups_lines.items():
+        if not ls:
+            continue
+        trs = sorted({TC.line_trade(ln) for ln in ls})
+        blockers = []
+        rec = {"schema": COMPLETENESS_SCHEMA, "source": TC.SCHEMA, "project_id": pid, "revision_set_sha256": rev,
+               "trade": g[0], "item_code": g[1], "unit": g[2], "principal_trade": ";".join(trs),
+               "element_scope_count": len(group_elements.get(g, ())), "inventory_count": None,
+               "missing": None, "duplicated": None, "held": None}
+        if len(trs) != 1:
+            blockers.append(f"LINE MAPS TO {len(trs)} PRINCIPAL TRADES {trs}")
+        else:
+            tr = trs[0]
+            row = trades.get(tr)
+            if row is None:
+                blockers.append(f"TRADE {tr} NOT IN THE REPORT")
+            else:
+                if len(gt[tr]) > 1:
+                    blockers.append(f"TRADE {tr} SPANS {len(gt[tr])} BOQ LINES: its completeness is not this line's")
+                gone = sorted(lt[tr] - in_report)
+                if gone:
+                    blockers.append(f"LINES NOT IN THE REPORT {len(gone)}")
+                unl = (report.get("unlinked_lines") or {}).get(tr) or []
+                if unl:
+                    blockers.append(f"UNLINKED LINES {len(unl)}")
+                for k in REPORT_BLOCKERS:
+                    if row.get(k):
+                        blockers.append(f"{k.upper()} {row[k]}")
+                if row.get("status") != "COMPLETE_AGAINST_INVENTORY":
+                    blockers.append(f"STATUS {row.get('status')}")
+                bad = sorted(lid for lid in lt[tr] if lid in refused)
+                if bad:
+                    blockers.append(f"DEDUCTION REFUSED {len(bad)}")
+                n_inv = sum(1 for e in els_by_trade[tr] if e.get("sources"))     # found + excluded with sources
+                rec.update(inventory_count=n_inv, missing=row.get("missing"), duplicated=row.get("duplicated"),
+                           held=row.get("held"))
+                if n_inv != rec["element_scope_count"]:
+                    blockers.append(f"INVENTORY {n_inv} != ELEMENT SCOPE {rec['element_scope_count']}")
+        rec["blockers"] = blockers
+        out[g] = rec
+    return out
+
+
+def completeness_text(rec, ok):
+    if rec is None:
+        return ""
+    if ok:
+        return (f"PASS ({rec.get('principal_trade') or rec.get('trade')}: inventory {rec['inventory_count']} = element "
+                f"scope {rec['element_scope_count']}, missing 0, duplicated 0, held 0)")
+    why = list(rec.get("blockers") or [])
+    if not why:
+        why = [f"inventory {rec.get('inventory_count')} / scope {rec.get('element_scope_count')}, missing "
+               f"{rec.get('missing')}, duplicated {rec.get('duplicated')}, held {rec.get('held')}"]
+    return "FAIL: " + "; ".join(why)
 
 
 # ---- rows -----------------------------------------------------------------------------------------------------------
@@ -344,11 +741,16 @@ def _state_row(row, ln):
 
 
 def build(lines, *, candidate_version, boq_lines_sha256, v1_doc=None, key_map_doc=None, inventory_doc=None,
-          v2_records=(), completeness=None, expect_project=None, expect_revision_set=None):
-    """-> {"rows": [...canonical order], "summary": [...], "trades": [...], "identity": {...}, "counts": {...}}.
-    v2_records / completeness: r1 accepts them only here (tests); the CLI passes none -> VERIFIED 0 by construction."""
+          v2_records=(), completeness=None, completeness_report=None, expect_project=None, expect_revision_set=None):
+    """-> {"rows": [...canonical order], "summary": [...], "trades": [...], "identity": {...}, "counts": {...},
+    "v2_verdicts": [{verdict_id, status}]}. completeness: {group: URBAN_LINE_COMPLETENESS_V1 record};
+    completeness_report: the T-236 report (part (4)), from which those records and the UNMEASURED rows are derived."""
     if not candidate_version:
         raise ExportError("the candidate version is stated, never read from a file name")
+    if inventory_doc is not None and completeness_report is not None:
+        raise ExportError("--inventory (V1) and --completeness (T-236): one inventory per export, not two (refused)")
+    if completeness is not None and completeness_report is not None:
+        raise ExportError("completeness records and a completeness report together: one source (refused)")
     seen = set()
     for ln in lines:
         BL.validate(ln)
@@ -398,11 +800,23 @@ def build(lines, *, candidate_version, boq_lines_sha256, v1_doc=None, key_map_do
                 "source_sheets": str(e.get("source") or ""), "project_id": pid, "revision_set_sha256": rev,
                 "candidate_version": candidate_version})
 
+    # part (4): the T-236 report: refused when about other lines; its unmeasured elements become rows
+    if completeness_report is not None:
+        report_check(completeness_report, lines)
+        extra, inv_from_report = report_unmeasured_rows(completeness_report, lines, pid, rev, candidate_version)
+        rows.extend(extra)
+        for g, els in inv_from_report.items():
+            inv_elements[g] |= els
+
     # groups (the owner's BOQ line = trade + item + unit)
     groups = defaultdict(list)
     for r in rows:
         groups[group_key(r)].append(r)
     glines = {g: [by_line[r["line_id"]][1] for r in rs if r["line_id"]] for g, rs in groups.items()}
+    g_elements = {g: sorted({str(ln["location"]["element_id"]) for ln in glines[g]} | inv_elements.get(g, set()))
+                  for g in groups}
+    if completeness_report is not None:
+        completeness = completeness_from_report(completeness_report, lines, glines, g_elements, ident)
 
     # V1 references (shown only)
     v1 = v1_verdict_refs(v1_doc, key_map_doc)
@@ -414,14 +828,21 @@ def build(lines, *, candidate_version, boq_lines_sha256, v1_doc=None, key_map_do
 
     # V2 bound verdicts
     whole_ok = {}
+    v2_status = []
     for v in sorted(v2_records or (), key=lambda x: str(x.get("verdict_id"))):
-        ids = set(v.get("line_ids") or ())
+        ids = set(v.get("line_ids") or ()) if isinstance(v.get("line_ids"), list) else set()
         hit = [g for g, ls in glines.items() if ids & {ln["line_id"] for ln in ls}]
-        if len(hit) != 1:
-            continue                                  # a record on no line or across groups binds nothing here
+        if len(hit) != 1:                             # a record on no line or across groups binds nothing: listed
+            why = "NO_LINE_IN_THIS_EXPORT" if not hit else f"ACROSS_{len(hit)}_BOQ_LINES"
+            if validate_v2(v):
+                why = "BINDING_INCOMPLETE; " + why
+            v2_status.append({"verdict_id": str(v.get("verdict_id")), "status": why})
+            continue
         g = hit[0]
-        g_el = sorted({str(ln["location"]["element_id"]) for ln in glines[g]} | inv_elements.get(g, set()))
+        g_el = g_elements[g]
         st = bind_verdict(v, ident, glines[g], g_el)
+        v2_status.append({"verdict_id": str(v.get("verdict_id")), "status": f"{st} ({v.get('scope')})",
+                          "item_code": g[1], "unit": g[2]})
         for lid in sorted(ids):
             if lid not in by_line:
                 continue
@@ -443,11 +864,13 @@ def build(lines, *, candidate_version, boq_lines_sha256, v1_doc=None, key_map_do
             whole_ok[g] = v
 
     for g, v in whole_ok.items():
-        g_el = sorted({str(ln["location"]["element_id"]) for ln in glines[g]} | inv_elements.get(g, set()))
-        if not completeness_passes((completeness or {}).get(g), ident, g, g_el):
+        if not completeness_passes((completeness or {}).get(g), ident, g, g_elements[g]):
             for r in groups[g]:
                 if r["line_id"] in set(v["line_ids"]):
                     r["verdict_status"] = "COUNTED (WHOLE; completeness record missing or failing: not VERIFIED)"
+            for s in v2_status:
+                if s["verdict_id"] == str(v.get("verdict_id")):
+                    s["status"] = "COUNTED (WHOLE; completeness record missing or failing: not VERIFIED)"
             continue
         for r in groups[g]:
             if r["quantity_state"] == EXCLUDED and r["evidence_state"] == "NOT_APPLICABLE_WITH_EVIDENCE":
@@ -467,15 +890,22 @@ def build(lines, *, candidate_version, boq_lines_sha256, v1_doc=None, key_map_do
     rows.sort(key=sort_key)
     if len(rows) != len(lines) + sum(1 for r in rows if r["quantity_state"] == UNMEASURED):
         raise ExportError("row count differs from lines + unmeasured elements: a row was dropped (refused)")
-    summary, trades = _summary(rows, groups, whole_ok, completeness, ident, inv_elements, glines)
+    comp_text = {}
+    for g in groups:
+        rec = (completeness or {}).get(g)
+        comp_text[g] = completeness_text(rec, completeness_passes(rec, ident, g, g_elements[g]))
+    summary, trades = _summary(rows, groups, whole_ok, completeness, ident, inv_elements, glines, comp_text)
     counts = {s: sum(1 for r in rows if r["quantity_state"] == s) for s in QSTATES}
     return {"schema": SCHEMA, "rows": rows, "summary": summary, "trades": trades, "counts": counts,
             "identity": {"project_id": pid, "revision_set_sha256": rev, "candidate_version": candidate_version,
                          "boq_lines_sha256": boq_lines_sha256},
-            "completeness_input": "none (T-236 not merged): no line can read VERIFIED" if not completeness else "given"}
+            "v2_verdicts": v2_status,
+            "completeness_input": ("T-236 report (URBAN_TRADE_COMPLETENESS_V1)" if completeness_report is not None
+                                   else "records given" if completeness
+                                   else "none given: no line can read VERIFIED")}
 
 
-def _summary(rows, groups, whole_ok, completeness, ident, inv_elements, glines):
+def _summary(rows, groups, whole_ok, completeness, ident, inv_elements, glines, comp_text=None):
     out = []
     for g in sorted(groups):
         rs = sorted(groups[g], key=sort_key)
@@ -513,7 +943,7 @@ def _summary(rows, groups, whole_ok, completeness, ident, inv_elements, glines):
                                                                    if r["held_low"] is not None else " [no range]")
                                          for r in held),
             "unmeasured_components": "; ".join(str(r["element_id"]) for r in unm),
-            "trade_status": "", "trade_verified_whole_lines": ""})
+            "trade_status": "", "trade_verified_whole_lines": "", "completeness": (comp_text or {}).get(g, "")})
     trades = []
     for t in sorted({s["trade"] for s in out}):
         ss = [s for s in out if s["trade"] == t]
@@ -604,6 +1034,8 @@ def export(lines, out_dir, *, candidate_version, boq_lines_sha256, input_sha256=
         ("verified_rule", "VERIFIED only from a bound V2 verdict + passing completeness record; V1 never"))]
     for k in sorted(res["counts"]):
         mrows.append({"key": f"rows {k}", "value": str(res["counts"][k])})
+    for s in res["v2_verdicts"]:
+        mrows.append({"key": f"verdict {s['verdict_id']}", "value": s["status"]})
     xlsx_write(out / "BOQ.xlsx", res["rows"], res["summary"], mrows)
     manifest = {"schema": MANIFEST_SCHEMA, "export_schema": SCHEMA, "identity": ident, "code_commit": code_commit,
                 "inputs_sha256": dict(sorted((input_sha256 or {}).items())),
@@ -611,6 +1043,7 @@ def export(lines, out_dir, *, candidate_version, boq_lines_sha256, input_sha256=
                             for f in ("BOQ.csv", "BOQ.xlsx", "BOQ_TRADE_SUMMARY.csv")},
                 "row_counts": res["counts"] | {"total": len(res["rows"])},
                 "trades": res["trades"], "completeness_input": res["completeness_input"],
+                "v2_verdicts": res["v2_verdicts"],
                 "semantic_sha256": semantic_sha256(res["rows"])}
     (out / "EXPORT_MANIFEST.json").write_text(json.dumps(manifest, indent=1, sort_keys=True, ensure_ascii=False) + "\n",
                                               encoding="utf-8")
@@ -636,7 +1069,76 @@ def _load_json(path):
     return json.loads(b.decode("utf-8")), sha256_bytes(b)
 
 
+def _parse_evidence(items):
+    out = []
+    for it in items or []:
+        if "=" not in it:
+            raise ExportError(f"--evidence {it!r}: write SHEET=PRINTED VALUE")
+        sheet, val = it.split("=", 1)
+        out.append({"sheet": sheet.strip(), "printed_value": val.strip()})
+    return out
+
+
+def main_verdict_add(argv):
+    ap = argparse.ArgumentParser(prog="boq_export_v1.py verdict-add",
+                                 description="add one URBAN_CHECKER_VERDICT_V2 record, binding filled from the lines")
+    ap.add_argument("--lines", required=True)
+    ap.add_argument("--candidate-version", required=True)
+    sel = ap.add_mutually_exclusive_group(required=True)
+    sel.add_argument("--line-ids", help="comma-separated line ids")
+    sel.add_argument("--item-code", help="every line of this item code (one unit; see --unit)")
+    ap.add_argument("--unit")
+    ap.add_argument("--scope", required=True, choices=V2_SCOPES)
+    ap.add_argument("--checker-qty", required=True, type=float)
+    ap.add_argument("--evidence", action="append", required=True, help="SHEET=PRINTED VALUE (repeat)")
+    ap.add_argument("--lock-file", help="the Checker's run lock (docs/agents/locks/checker.lock): token + routine")
+    ap.add_argument("--run-token")
+    ap.add_argument("--routine")
+    ap.add_argument("--verdict-commit", required=True)
+    ap.add_argument("--time", help="ISO 8601 UTC (default: now)")
+    ap.add_argument("--verdict-id")
+    ap.add_argument("--notes")
+    ap.add_argument("--out", required=True, help="the URBAN_CHECKER_VERDICT_V2_SET file to append to")
+    a = ap.parse_args(argv)
+    lines, lsha = _load_json(a.lines)
+    if isinstance(lines, dict):
+        raise ExportError("--lines must be a list of canonical lines (V3_0_x_BOQ_LINES.json)")
+    if a.line_ids:
+        ids = [x.strip() for x in a.line_ids.split(",") if x.strip()]
+    else:
+        ids = [ln["line_id"] for ln in lines if ln["item_code"] == a.item_code and (a.unit is None or ln["unit"] == a.unit)]
+    token, routine = a.run_token, a.routine
+    if a.lock_file:
+        lk, _s = _load_json(a.lock_file)
+        token, routine = token or lk.get("token"), routine or lk.get("agent")
+    rec = verdict_add(lines, candidate_version=a.candidate_version, boq_lines_sha256=lsha, line_ids=ids, scope=a.scope,
+                      checker_qty=a.checker_qty, evidence=_parse_evidence(a.evidence), run_token=token or "",
+                      routine=routine or "", verdict_commit=a.verdict_commit,
+                      time=a.time or datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+                      verdict_id=a.verdict_id, notes=a.notes)
+    verdict_set_append(a.out, rec)
+    print(json.dumps(rec, indent=1, sort_keys=True, ensure_ascii=False))
+    return 0
+
+
+def main_verdict_validate(argv):
+    ap = argparse.ArgumentParser(prog="boq_export_v1.py verdict-validate")
+    ap.add_argument("file")
+    a = ap.parse_args(argv)
+    doc, _s = _load_json(a.file)
+    probs = validate_v2_set(doc)
+    for p in probs:
+        print(p)
+    print(f"{len(doc.get('verdicts') or []) if isinstance(doc, dict) else 0} record(s), {len(probs)} problem(s)")
+    return 1 if probs else 0
+
+
 def main(argv=None):
+    argv = list(sys.argv[1:] if argv is None else argv)
+    if argv and argv[0] == "verdict-add":
+        return main_verdict_add(argv[1:])
+    if argv and argv[0] == "verdict-validate":
+        return main_verdict_validate(argv[1:])
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     ap.add_argument("--lines", required=True)
     ap.add_argument("--candidate-version", required=True)
@@ -644,6 +1146,8 @@ def main(argv=None):
     ap.add_argument("--verdicts-v1")
     ap.add_argument("--key-map")
     ap.add_argument("--inventory")
+    ap.add_argument("--verdicts-v2", help="a URBAN_CHECKER_VERDICT_V2_SET file")
+    ap.add_argument("--completeness", help="the T-236 report TRADE_COMPLETENESS.json")
     ap.add_argument("--expect-project")
     ap.add_argument("--expect-revision-set")
     ap.add_argument("--code-commit")
@@ -653,12 +1157,20 @@ def main(argv=None):
         raise ExportError("--lines must be a list of canonical lines (V3_0_x_BOQ_LINES.json)")
     shas = {"lines": lsha}
     docs = {}
-    for k, p in (("verdicts_v1", a.verdicts_v1), ("key_map", a.key_map), ("inventory", a.inventory)):
+    for k, p in (("verdicts_v1", a.verdicts_v1), ("key_map", a.key_map), ("inventory", a.inventory),
+                 ("verdicts_v2", a.verdicts_v2), ("completeness", a.completeness)):
         if p:
             docs[k], shas[k] = _load_json(p)
+    v2 = ()
+    if "verdicts_v2" in docs:
+        sp = _set_problems(docs["verdicts_v2"])
+        if sp:
+            raise ExportError("--verdicts-v2: " + "; ".join(sp))
+        v2 = docs["verdicts_v2"]["verdicts"]
     m = export(lines, a.out, candidate_version=a.candidate_version, boq_lines_sha256=lsha, input_sha256=shas,
                code_commit=_code_commit(a.code_commit), v1_doc=docs.get("verdicts_v1"),
-               key_map_doc=docs.get("key_map"), inventory_doc=docs.get("inventory"),
+               key_map_doc=docs.get("key_map"), inventory_doc=docs.get("inventory"), v2_records=v2,
+               completeness_report=docs.get("completeness"),
                expect_project=a.expect_project, expect_revision_set=a.expect_revision_set)
     print(json.dumps({"outputs": m["outputs"], "row_counts": m["row_counts"],
                       "trades": [{k: t[k] for k in ("trade", "status", "verified_whole_lines", "lines")}

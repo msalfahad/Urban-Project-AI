@@ -37,10 +37,10 @@ Risk **CRITICAL** (recommended validation L4). Ask about: cad, dwg, dxf, block, 
 
 **Open first:**
 
-- `engine/source/cad/kernel_ezdxf.py` (348 lines, HIGH; imported by 11 directly, 101 transitively, SHARED)
+- `engine/source/cad/kernel_ezdxf.py` (348 lines, HIGH; imported by 11 directly, 102 transitively, SHARED)
 - `engine/source/cad/kernel.py` (365 lines, HIGH; imported by 17 directly, 30 transitively, SHARED)
 - `engine/source/cad/libredwg_map.py` (489 lines, HIGH; imported by 10 directly, 25 transitively, SHARED)
-- `tools/urban_intake.py` (225 lines, CRITICAL, frozen; imported by 27 directly, 91 transitively, SHARED)
+- `tools/urban_intake.py` (225 lines, CRITICAL, frozen; imported by 27 directly, 92 transitively, SHARED)
 
 **Depends on:** `engine/source/findings.py`, `engine/source/observations.py`, `engine/source/capability.py`, `engine/source/decoder_pins.py`, `engine/source/realised.py`, `engine/source/cad/affine.py`, `engine/source/cad/kernel_ocs.py`, `engine/source/digests.py`
 
@@ -67,7 +67,7 @@ Risk **HIGH** (recommended validation L3). Ask about: unit, insunits, millimet, 
 
 **Open first:**
 
-- `engine/source/frame.py` (1076 lines, HIGH; imported by 15 directly, 88 transitively, SHARED)
+- `engine/source/frame.py` (1076 lines, HIGH; imported by 15 directly, 89 transitively, SHARED)
 
 **Depends on:** `engine/source/findings.py`
 
@@ -94,7 +94,7 @@ Risk **HIGH** (recommended validation L3). Ask about: room, space, zone, closure
 
 - `engine/source/arch_rooms.py` (2250 lines, HIGH; imported by 39 directly, 132 transitively, SHARED)
 - `engine/source/arch_plan.py` (478 lines, HIGH; imported by 19 directly, 139 transitively, SHARED)
-- `engine/source/space_model.py` (196 lines, MEDIUM; imported by 3 directly, 54 transitively)
+- `engine/source/space_model.py` (196 lines, MEDIUM; imported by 3 directly, 55 transitively)
 - `engine/source/owner_finish_scope.py` (262 lines, MEDIUM; imported by 9 directly, 96 transitively)
 - `engine/source/waterproofing_system.py` (998 lines, HIGH; imported by 10 directly, 93 transitively, SHARED)
 - `engine/source/arch_v211.py` (659 lines, MEDIUM; imported by 6 directly, 82 transitively)
@@ -164,9 +164,9 @@ Risk **HIGH** (recommended validation L3). Ask about: door, opening, doorway, th
 
 **Open first:**
 
-- `engine/source/door_standards.py` (671 lines, MEDIUM; imported by 7 directly, 57 transitively)
-- `engine/source/door_feasibility.py` (619 lines, MEDIUM; imported by 3 directly, 54 transitively)
-- `engine/source/door_model.py` (837 lines, HIGH; imported by 13 directly, 59 transitively, SHARED)
+- `engine/source/door_standards.py` (671 lines, MEDIUM; imported by 7 directly, 58 transitively)
+- `engine/source/door_feasibility.py` (619 lines, MEDIUM; imported by 3 directly, 55 transitively)
+- `engine/source/door_model.py` (837 lines, HIGH; imported by 13 directly, 60 transitively, SHARED)
 - `engine/source/owner_finish_scope.py` (262 lines, MEDIUM; imported by 9 directly, 96 transitively)
 
 **Depends on:** `engine/source/knowledge.py`, `engine/source/arch_rooms.py`, `engine/source/boq_line.py`, `engine/source/member_detection.py`
@@ -319,7 +319,7 @@ Risk **CRITICAL** (recommended validation L4). Ask about: stair, railing, riser,
 
 **Open first:**
 
-- `engine/source/stair_geometry.py` (336 lines, CRITICAL, frozen; imported by 7 directly, 181 transitively)
+- `engine/source/stair_geometry.py` (336 lines, CRITICAL, frozen; imported by 8 directly, 182 transitively)
 - `engine/source/stair_measure.py` (119 lines, CRITICAL, frozen; imported by 3 directly, 115 transitively)
 - `engine/source/arch_measure.py` (1165 lines, HIGH; imported by 20 directly, 90 transitively, SHARED)
 
@@ -437,9 +437,9 @@ Risk **MEDIUM** (recommended validation L2). Ask about: formwork, shuttering, fo
 
 **BOQ capability** (exact registry statuses): NOT_IMPLEMENTED 2. Only INTEGRATED_AND_TESTED counts as supported; a module or a synthetic test is not real-villa validation.
 
-**Validation:** L1 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_n10`
-L2 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_n10 tests/t163_formwork`
-L3 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_n10 tests/t163_formwork` + freeze check
+**Validation:** L1 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/t264_formwork_r4`
+L2 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/t264_formwork_r4 tests/m9_n10 tests/t163_formwork`
+L3 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/t264_formwork_r4 tests/m9_n10 tests/t163_formwork` + freeze check
 L4 full suite + freeze check (see above)
 
 **Known defects** (2 unresolved of 3):
@@ -483,11 +483,11 @@ Risk **CRITICAL** (recommended validation L4). Ask about: boq, total, release, r
 
 **Open first:**
 
-- `tools/urban_boq_m9.py` (3671 lines, HIGH; imported by 46 directly, 52 transitively, SHARED)
-- `engine/source/boq_line.py` (386 lines, HIGH; imported by 61 directly, 133 transitively, SHARED)
+- `tools/urban_boq_m9.py` (3671 lines, HIGH; imported by 46 directly, 53 transitively, SHARED)
+- `engine/source/boq_line.py` (386 lines, HIGH; imported by 62 directly, 136 transitively, SHARED)
 - `engine/source/delta_release.py` (159 lines, CRITICAL, frozen; imported by 37 directly, 37 transitively, SHARED)
 - `engine/source/knowledge.py` (289 lines, HIGH; imported by 32 directly, 147 transitively, SHARED)
-- `engine/source/door_standards.py` (671 lines, MEDIUM; imported by 7 directly, 57 transitively)
+- `engine/source/door_standards.py` (671 lines, MEDIUM; imported by 7 directly, 58 transitively)
 - `engine/source/project_rules.py` (748 lines, MEDIUM; imported by 5 directly, 95 transitively)
 
 **Depends on:** `engine/source/door_model.py`, `engine/source/owner_finish_scope.py`, `engine/boq_room_workbook.py`, `engine/source/arch_completeness.py`, `engine/source/arch_floor.py`, `engine/source/arch_measure.py`, `engine/source/arch_plan.py`, `engine/source/arch_rooms.py`, `engine/source/arch_v211.py`, `engine/source/arch_v212.py`

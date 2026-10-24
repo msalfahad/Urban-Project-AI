@@ -1,4 +1,4 @@
-"""T-240 WP2: ARCH_TAKEOFF_V3.0.13 kinds TO_WET and NO_OPENING_SPLIT (+ TO_THRESHOLD on ground-floor exterior sills).
+"""T-240 WP2: ARCH_TAKEOFF_V3.0.14 kinds TO_WET and NO_OPENING_SPLIT (+ TO_THRESHOLD on ground-floor exterior sills).
 Synthetic data only (no client drawing).
 
 VILLA K-240 ground floor (not the development villa), hand values:
@@ -27,11 +27,11 @@ import pytest
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
 
-from engine.source import arch_v3013 as A                      # noqa: E402
+from engine.source import arch_v3014 as A                      # noqa: E402
 from engine.source import boq_line as BL                       # noqa: E402
 
 AP = pytest.approx
-PID = "synthetic-v3013-villa-k240-gf"
+PID = "synthetic-v3014-villa-k240-gf"
 DOCS = [{"file": "K-ARCH.dxf", "sha256": "4" * 64}]
 POR, WET, SP, THR = "FIN.FLOOR.PORCELAIN", "FIN.FLOOR.WET_TILE", "ARCH.SPACE", "ARCH.THRESHOLD"
 DEC = "owner decision K-37 A (scullery wet within its printed box)"

@@ -1,0 +1,49 @@
+{
+ "aluminium_line_m2": {
+  "after_held": [],
+  "after_if_ruled": 12.76,
+  "before_held_range": [
+   1.98,
+   8.8
+  ],
+  "before_released": 4.18,
+  "pcs_after_if_ruled": 6,
+  "pcs_before": [
+   2,
+   6
+  ],
+  "settled_here": 8.58
+ },
+ "cross_trade": "widths equal the census T-198 for all four (1.00 / 1.00 / 1.00 / 0.90): block / plaster / paint deductions (T-175, T-228 GF-W10 at 0.90) unchanged",
+ "freelancer": {
+  "diff_m2": 0.76,
+  "diff_pct": 6.33,
+  "m2": 12.0,
+  "pcs": 5,
+  "reconciliation_his_to_ours": {
+   "count_drawn_5_GF_vs_his_4": 2.2,
+   "heights_Q55C_2.20_vs_2.40": -1.0,
+   "residual": 0.0,
+   "widths_drawn_jambs": -0.44
+  }
+ },
+ "method": "DOOR_CLASS_WIDTH_EVIDENCE_V1",
+ "other_lines_if_ruled": {
+  "MAIN_ENTRANCE_held_m2": [
+   5.0,
+   5.0
+  ],
+  "MAIN_ENTRANCE_pcs": 1,
+  "PVC_GF_held_m2": [
+   4.554,
+   5.28
+  ]
+ },
+ "settled": [
+  "D-GF-01",
+  "D-GF-05",
+  "D-GF-06",
+  "D-GF-09"
+ ],
+ "still_held": []
+}

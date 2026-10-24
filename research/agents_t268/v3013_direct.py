@@ -1,8 +1,8 @@
-"""T-240 WP1: the V3.0.13 step alone on a finished V3.0.12 run (research code, read-only; for iteration and for the
+"""T-268: the V3.0.13 step alone on a finished V3.0.12 run (research code, read-only; for iteration and for the
 Checker's quick re-run). It calls the same module functions as tools/urban_boq_m9.py `arch --method
 ARCH_TAKEOFF_V3.0.13` (engine.source.arch_v3013.load_inputs / changes_for / write).
 
-    python3 -I research/agents_t240/v3013_direct.py <run>/v3012 --released <t167>/v29/BOQ_LINES.json --out <dir>
+    python3 -I research/agents_t268/v3013_direct.py <run>/v3012 --released <t167>/v29/BOQ_LINES.json --out <dir>
 """
 
 from __future__ import annotations
@@ -17,7 +17,7 @@ HERE = Path(__file__).resolve().parent
 for p in (ROOT, HERE, ROOT / "research" / "agents_t131", ROOT / "research" / "agents_t193"):
     sys.path.insert(0, str(p))
 
-import t240_inputs as L13  # noqa: E402
+import t268_inputs as L13  # noqa: E402
 
 
 def _lines(p):
@@ -55,10 +55,10 @@ def main(argv=None):
     print("identity:", json.dumps(ident, indent=1))
     for lg in logs:
         print(lg["piece"], json.dumps({k: lg.get(k) for k in ("state", "totals", "records", "held_live_new",
-                                                             "findings_by_code")}, indent=1))
+                                                             "findings_by_code", "rulings", "lines")}, indent=1))
     r = json.loads((out / "V3_0_13_RUN.json").read_text(encoding="utf-8"))
-    print("floor line V3.0.12:", json.dumps(r["floor_line_v3_0_12"]))
-    print("floor line V3.0.13:", json.dumps(r["floor_line_v3_0_13"]))
+    print("doors V3.0.12:", json.dumps(r["doors_v3_0_12"]))
+    print("doors V3.0.13:", json.dumps(r["doors_v3_0_13"]))
     for k, v in r["totals_moved_by_code"].items():
         print(f"{k:28s} V3.0.12 {v['v3_0_12']} | V3.0.13 {v['v3_0_13']}")
     return 0

@@ -1,4 +1,4 @@
-"""T-240 WP1 (V3.0.13): the project inputs of ARCH_TAKEOFF_V3.0.13 (URBAN_V3013_INPUTS_V1) for the development villa.
+"""T-240 WP1 (V3.0.14): the project inputs of ARCH_TAKEOFF_V3.0.14 (URBAN_V3014_INPUTS_V1) for the development villa.
 Research code; it reads the checker-merged T-223 / T-218 ledgers as committed and changes none of their quantities. No
 coordinates, no names, no drawing content: references are P7757.dxf entity handles (hex) or printed dimensions, as the
 merged ledgers give them.
@@ -222,6 +222,6 @@ def inputs(project_id):
                            "Verifier 2026-10-23 14:30 UTC (Gate A PASS)")],
           "records": records(), "declared": DECLARED}
     sys.path.insert(0, str(ROOT / "research/agents_t193"))
-    import t193_inputs as L7   # noqa: E402  (the V3.0.7 guard inputs, unchanged, as V3.0.8 .. V3.0.12)
+    import t193_inputs as L7   # noqa: E402  (the V3.0.7 guard inputs, unchanged, as V3.0.8 .. V3.0.13)
     g = dict(L7.inputs(project_id)["guard"], new_records=[])
-    return {"schema": "URBAN_V3013_INPUTS_V1", "project": project_id, "pieces": [pc], "guard": g}
+    return {"schema": "URBAN_V3014_INPUTS_V1", "project": project_id, "pieces": [pc], "guard": g}

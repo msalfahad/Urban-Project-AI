@@ -54,7 +54,7 @@ def test_1_7_0_checks_clean_and_v3012_is_pending_not_merged(docs):
 def test_1_6_0_is_accounted_for_by_1_7_0(docs):
     old, _ = docs
     # the newest version that accounts for arch_v3012 is the newest registry on the tree carrying the T-146 entry (a
-    # later version copies it) (T-240: 1.8.0); 1.7.0 itself must still declare it (asserted on 1.7.0's own content)
+    # later version copies it) (T-268: 1.8.0); 1.7.0 itself must still declare it (asserted on 1.7.0's own content)
     acc = FMC.newer_registry_modules(old, ROOT).get("engine/source/arch_v3012.py")
     assert acc is not None and FMC._semver(acc) >= FMC._semver("1.7.0")
     assert any(p["module"] == "engine/source/arch_v3012.py" for p in docs[1]["pending_packages"])
@@ -65,7 +65,7 @@ def test_adverse_dropping_the_v3012_entry_is_stale(docs, monkeypatch):
     _, new = docs
     bad = copy.deepcopy(new)
     bad["pending_packages"] = bad["pending_packages"][:-1]
-    # a newer registry on the tree (T-240: 1.8.0) copies the T-146 entry and so accounts for arch_v3012; the adverse
+    # a newer registry on the tree (T-268: 1.8.0) copies the T-146 entry and so accounts for arch_v3012; the adverse
     # case is judged as on the head this file was written for (no newer registry version), where the drop must be stale
     monkeypatch.setattr(FMC, "newer_registry_modules", lambda doc, root=ROOT: {})
     probs = FMC.check(bad, root=ROOT, is_ancestor=FMC.git_is_ancestor)

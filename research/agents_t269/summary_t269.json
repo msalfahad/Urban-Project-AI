@@ -1,0 +1,163 @@
+{
+ "inputs": {
+  "arch_sha256_8": "ab54dd55",
+  "st_sha256_8": "9f9d1179"
+ },
+ "handles": {
+  "east_risers_L2": [
+   "A93",
+   "A94",
+   "A9E",
+   "AA0",
+   "A9F",
+   "A9D",
+   "AA4",
+   "AA3",
+   "AA2",
+   "AA1",
+   "ABD"
+  ],
+  "east_nosings_L5": [
+   "A92",
+   "A95",
+   "AA5",
+   "AA6",
+   "AA7",
+   "AA8",
+   "AA9",
+   "AAA",
+   "AAB",
+   "AAC",
+   "ABE"
+  ],
+  "landing_dim_1950": "10DF",
+  "stair_width_dim_2500": "D25",
+  "west_landing_nosing_L5": "AC0",
+  "st_east_riser_at_landing_edge": "459",
+  "st_east_risers": [
+   "459",
+   "270",
+   "264",
+   "265",
+   "266",
+   "267",
+   "260",
+   "262",
+   "263",
+   "261",
+   "25C",
+   "25B"
+  ],
+  "col_pair_arch": [
+   "2FE7",
+   "3008"
+  ],
+  "col_pair_st": [
+   "332",
+   "374"
+  ],
+  "band_faces_L5": [
+   "AF5",
+   "AF6"
+  ],
+  "band_top_L5": "D23",
+  "stair_west_edge_L5": "B75",
+  "st_slab_edge_L1": "289",
+  "col_at_band_arch": "3008",
+  "pantry_box_L5": [
+   "B3",
+   "AD"
+  ]
+ },
+ "section_count_ms1_u": 12,
+ "d13_foot_strip_1f": {
+  "status": "DERIVED",
+  "tread_m2": 0.345,
+  "landing_band_m2": 0.0575,
+  "strip_m2": 0.4025,
+  "going": 0.3,
+  "nosing_m": 0.05,
+  "missing_risers": 1,
+  "drawn_risers": 11,
+  "flight_width_m": 1.15,
+  "landing_edge_to_top_riser_m": 0.0
+ },
+ "st_corroboration": {
+  "frame_pair_residual_mm": 0.0,
+  "st_east_riser_lines": 12,
+  "st_east_goings_m": [
+   0.3
+  ],
+  "st_459_minus_arch_landing_edge_mm": -0.0
+ },
+ "d23_side_band_1f": {
+  "status": "ON_SLAB",
+  "floor_m2": 0.1175,
+  "slab_edge_on": "flight side",
+  "band_m2": 0.1175
+ },
+ "gf_pantry_and_round_stair": {
+  "RC99C2A": {
+   "face_m2": 126.9286,
+   "pantry_box_part_m2": 8.955,
+   "treads_in_face_m2": 8.194412,
+   "treads_in_pantry_part_m2": 0.0,
+   "nearest_tread_to_pantry_box_m": 3.858,
+   "flights": [
+    {
+     "flight": "F1",
+     "m2": 4.094412,
+     "status": "HELD",
+     "reason": "drawn below the cut: floor under it depends on the stair structure (section)"
+    },
+    {
+     "flight": "F2",
+     "m2": 2.03,
+     "status": "HELD",
+     "reason": "drawn below the cut: floor under it depends on the stair structure (section)"
+    },
+    {
+     "flight": "F3",
+     "m2": 1.035,
+     "status": "FLOOR_UNDER_OVERHEAD",
+     "floor_m2": 1.035
+    },
+    {
+     "flight": "F4",
+     "m2": 1.035,
+     "status": "FLOOR_UNDER_OVERHEAD",
+     "floor_m2": 1.035
+    }
+   ],
+   "floor_under_overhead_m2": 2.07,
+   "held_below_cut_m2": 6.124412,
+   "closed_segments_under_flights": 4
+  },
+  "RC06FED": {
+   "face_m2": 2.8,
+   "treads_in_piece_m2": 0.0,
+   "flights_inside": 0
+  },
+  "solid_lines_inside_flight": {
+   "F1": 12,
+   "F2": 10,
+   "F3": 0,
+   "F4": 0
+  },
+  "engine_also_drawn_on": {
+   "F1": [
+    "2",
+    "5"
+   ],
+   "F2": [
+    "2"
+   ],
+   "F3": [
+    "2"
+   ],
+   "F4": [
+    "2"
+   ]
+  }
+ }
+}

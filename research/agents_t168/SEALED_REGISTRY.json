@@ -1,0 +1,30 @@
+{
+ "schema": "URBAN_SEALED_REGISTRY_V1",
+ "purpose": "Identity of every sealed benchmark (owner 2026-10-23 19:45: identity and the sealed guard by project id + sha256, never by file name; hashes only in the repository, never the files). Read by tools/v30_gate_b_v2.py guard_inputs / guard_projects. A SEALED_FILE is refused by its sha256 whatever its name (a renamed copy too); its names are refused as well (the older name guard, engine/reference_mapping.py SEALED, kept). A SEALED_PROJECT refuses every input whose project id is that id (a sealed test villa before its one use). An entry whose sha256 is null is NOT recorded in the repository: it is guarded by name only until the owner records its sha256 here (a new entry or a corrected one is a reviewed commit; nothing here is ever removed).",
+ "entries": [
+  {
+   "kind": "SEALED_FILE",
+   "project_id": "23010",
+   "sha256": "e8d43f65eece9ab24f53012e922a252cf4bb1bff00cd673d96260612b26fdd0d",
+   "names": ["site_benchmark.json"],
+   "label": "project 23010 site benchmark",
+   "source": "research/environment_recovery/RECOVERY_MANIFEST.json (expected_sha256 of data/golden/23010/site_benchmark.json, identity source runs/golden/23010_MANIFEST.json)"
+  },
+  {
+   "kind": "SEALED_FILE",
+   "project_id": "P7757",
+   "sha256": null,
+   "names": ["P7757_area_takeoff_benchmark.pdf"],
+   "label": "P7757 architect's printed area take-off",
+   "source": "engine/reference_mapping.py SEALED; research/environment_recovery/RECOVERY_MANIFEST.json gives expected_sha256 null: sha256 not recorded in the repository (owner to record)"
+  },
+  {
+   "kind": "SEALED_FILE",
+   "project_id": "BENCHMARK_PROJECT_01",
+   "sha256": null,
+   "names": ["QORTUBA_BENCHMARK_SEAL.json", "QORTUBA_FINAL_PRE_PRICING_TAKEOFF.json"],
+   "label": "Qortuba PA08 sealed take-off (REV_OLD) and its seal",
+   "source": "URBAN_PROJECTS_CLAUDE_HANDOFF.md section 16.1 (the seal records a 16-hex digest f15e31bc6da05504, not a sha256): sha256 not recorded in the repository (owner to record)"
+  }
+ ]
+}

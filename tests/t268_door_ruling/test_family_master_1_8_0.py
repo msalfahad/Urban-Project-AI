@@ -1,4 +1,4 @@
-"""T-240 WP1: BOQ_FAMILY_MASTER 1.8.0 = 1.7.0 + the pending ARCH_TAKEOFF_V3.0.13 package (rule r3 of
+"""BOQ_FAMILY_MASTER 1.8.0 = 1.7.0 + the pending ARCH_TAKEOFF_V3.0.13 package (rule r3 of
 tools/family_master_candidate.py). Normal: 1.8.0 equals its builder, copies every 1.7.0 field (the T-231 / T-211 / T-232
 / T-239 / T-146 pending entries included), checks clean on this head; 1.7.0 still checks clean because 1.8.0 accounts for
 the newer module. Adverse: a 1.8.0 that drops the V3.0.13 entry leaves the module unaccounted (stale); a pending entry
@@ -14,7 +14,7 @@ import pytest
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
-sys.path.insert(0, str(ROOT / "research" / "agents_t240"))
+sys.path.insert(0, str(ROOT / "research" / "agents_t268"))
 
 from tools import family_master_candidate as FMC  # noqa: E402
 
@@ -45,15 +45,15 @@ def test_1_8_0_checks_clean_and_v3013_is_pending_not_merged(docs):
     assert FMC.check(new, is_ancestor=FMC.git_is_ancestor) == []
     p = new["pending_packages"][-1]
     assert (p["task"], p["method_version"], p["module"], p["status"]) == (
-        "T-240", "ARCH_TAKEOFF_V3.0.13", "engine/source/arch_v3013.py", "READY_FOR_GATE_B")
-    assert p["integrates"] == ["T-223", "T-218"]
+        "T-268", "ARCH_TAKEOFF_V3.0.13", "engine/source/arch_v3013.py", "READY_FOR_GATE_B")
+    assert p["integrates"] == ["T-260"]
     assert "merge_commit" not in p and "verdict" not in p
-    assert all("T-240" not in (f["candidate"].get("packages") or []) for f in new["families"])
+    assert all("T-268" not in (f["candidate"].get("packages") or []) for f in new["families"])
 
 
 def test_1_7_0_is_accounted_for_by_1_8_0(docs):
     old, _ = docs
-    # the newest version that accounts for arch_v3013 is the newest registry on the tree carrying the T-240 entry (a
+    # the newest version that accounts for arch_v3013 is the newest registry on the tree carrying the T-268 entry (a
     # later version copies it); 1.8.0 itself must still declare it (asserted on 1.8.0's own content)
     acc = FMC.newer_registry_modules(old, ROOT).get("engine/source/arch_v3013.py")
     assert acc is not None and FMC._semver(acc) >= FMC._semver("1.8.0")
@@ -65,7 +65,7 @@ def test_adverse_dropping_the_v3013_entry_is_stale(docs, monkeypatch):
     _, new = docs
     bad = copy.deepcopy(new)
     bad["pending_packages"] = bad["pending_packages"][:-1]
-    # a newer registry on the tree copies the T-240 entry and so accounts for arch_v3013; the adverse
+    # a newer registry on the tree copies the T-268 entry and so accounts for arch_v3013; the adverse
     # case is judged as on the head this file was written for (no newer registry version), where the drop must be stale
     monkeypatch.setattr(FMC, "newer_registry_modules", lambda doc, root=ROOT: {})
     probs = FMC.check(bad, root=ROOT, is_ancestor=FMC.git_is_ancestor)
@@ -75,5 +75,5 @@ def test_adverse_dropping_the_v3013_entry_is_stale(docs, monkeypatch):
 def test_adverse_a_family_naming_the_pending_package_is_refused(docs):
     _, new = docs
     bad = copy.deepcopy(new)
-    bad["families"][0]["candidate"]["packages"] = list(bad["families"][0]["candidate"].get("packages") or []) + ["T-240"]
-    assert any("T-240" in p for p in FMC.check(bad, root=ROOT, is_ancestor=FMC.git_is_ancestor))
+    bad["families"][0]["candidate"]["packages"] = list(bad["families"][0]["candidate"].get("packages") or []) + ["T-268"]
+    assert any("T-268" in p for p in FMC.check(bad, root=ROOT, is_ancestor=FMC.git_is_ancestor))

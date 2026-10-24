@@ -2,7 +2,7 @@
  "master": "URBAN_BOQ_FAMILY_MASTER",
  "version": "1.8.0",
  "supersedes": "1.7.0 (kept unchanged on disk; every family, count, released-configuration field and the T-231 / T-211 / T-232 / T-239 / T-146 pending entries copied unchanged)",
- "source": "1.1.0 + a candidate-level state per family re-derived from the merged ARCH_TAKEOFF_V3.0 .. V3.0.7 candidate packages (task T-203, pilot 2026-10-23 prerequisite 6; builder research/agents_t203/build_master_1_2_0.py; check tools/family_master_candidate.py) | 1.3.0 (T-231): 1.2.0 + pending_packages (rule r3 of tools/family_master_candidate.py): ARCH_TAKEOFF_V3.0.8 handed in for Gate B; no family state changes until it merges | 1.4.0 (T-211): 1.3.0 + pending ARCH_TAKEOFF_V3.0.9 (rule r3 of tools/family_master_candidate.py) handed in for Gate B; no family state changes until it merges | 1.5.0 (T-232): 1.4.0 + pending ARCH_TAKEOFF_V3.0.10 (rule r3 of tools/family_master_candidate.py) handed in for Gate B; no family state changes until it merges | 1.6.0 (T-239): 1.5.0 + pending ARCH_TAKEOFF_V3.0.11 (rule r3 of tools/family_master_candidate.py) handed in for Gate B; no family state changes until it merges | 1.7.0 (T-146 + T-247): 1.6.0 + pending ARCH_TAKEOFF_V3.0.12 (rule r3 of tools/family_master_candidate.py) handed in for Gate B; no family state changes until it merges | 1.8.0 (T-240 WP1): 1.7.0 + pending ARCH_TAKEOFF_V3.0.13 (rule r3 of tools/family_master_candidate.py); no family state changes until it merges",
+ "source": "1.1.0 + a candidate-level state per family re-derived from the merged ARCH_TAKEOFF_V3.0 .. V3.0.7 candidate packages (task T-203, pilot 2026-10-23 prerequisite 6; builder research/agents_t203/build_master_1_2_0.py; check tools/family_master_candidate.py) | 1.3.0 (T-231): 1.2.0 + pending_packages (rule r3 of tools/family_master_candidate.py): ARCH_TAKEOFF_V3.0.8 handed in for Gate B; no family state changes until it merges | 1.4.0 (T-211): 1.3.0 + pending ARCH_TAKEOFF_V3.0.9 (rule r3 of tools/family_master_candidate.py) handed in for Gate B; no family state changes until it merges | 1.5.0 (T-232): 1.4.0 + pending ARCH_TAKEOFF_V3.0.10 (rule r3 of tools/family_master_candidate.py) handed in for Gate B; no family state changes until it merges | 1.6.0 (T-239): 1.5.0 + pending ARCH_TAKEOFF_V3.0.11 (rule r3 of tools/family_master_candidate.py) handed in for Gate B; no family state changes until it merges | 1.7.0 (T-146 + T-247): 1.6.0 + pending ARCH_TAKEOFF_V3.0.12 (rule r3 of tools/family_master_candidate.py) handed in for Gate B; no family state changes until it merges | 1.8.0 (T-268): 1.7.0 + pending ARCH_TAKEOFF_V3.0.13 (rule r3 of tools/family_master_candidate.py); no family state changes until it merges",
  "loaded_by": "nothing: engine/source/rule_store.py keeps 1.0.0 and engine/source/coverage_census_v2.py reads 1.1.0, so no run, census or quantity changes with this file",
  "capability_states": [
   "INTEGRATED_AND_TESTED",
@@ -5457,24 +5457,23 @@
    "task_commit": "c27370b0bed62859fcdd6c9ae2ec73674912b50a"
   },
   {
-   "task": "T-240",
+   "task": "T-268",
    "method_version": "ARCH_TAKEOFF_V3.0.13",
    "module": "engine/source/arch_v3013.py",
    "status": "READY_FOR_GATE_B",
    "integrates": [
-    "T-223",
-    "T-218"
+    "T-260"
    ],
    "tests": [
-    "tests/t240_floor_scope"
+    "tests/t268_door_ruling"
    ],
    "changes_families_by_item_code": [
-    "FIN.FLOOR.PORCELAIN",
-    "ARCH.SPACE",
-    "ARCH.THRESHOLD"
+    "DOOR.EXTERNAL.ALUMINIUM",
+    "DOOR.INTERNAL.PVC",
+    "DOOR.MAIN_ENTRANCE"
    ],
-   "note": "T-240 work package 1 of 4 (research/agents_t240/T-240_WP1.md): one strip / face, one line - the 1F dressing into the internal floor line, three sills to held thresholds, the GF side passage to the outdoor key, a wall-top strip retired; the Gate B hand-in is WP4; names no family until merged",
-   "task_commit": "c472944ca2776b1732fe25e0f42f6b7df5a5d54e"
+   "note": "T-268 (research/agents_t268/T-268_DOOR_RULING.md): the four doors the Checker ruled on T-260 (MERGED c6732efe) leave the held door lines for the settled aluminium pcs and m2 lines (12.760 m2, 6 pcs); every other line byte-identical; names no family until merged",
+   "task_commit": "90f701d95d72657c454061134aa9178d8754400f"
   }
  ]
 }

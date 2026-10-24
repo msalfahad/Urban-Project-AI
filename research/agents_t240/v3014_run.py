@@ -1,12 +1,13 @@
-"""T-240 WP1 read-only run: ARCH_TAKEOFF_V3.0.13 on the development villa's Drive copies (the architectural DXF from
+"""T-240 WP1 .. WP2 read-only run: ARCH_TAKEOFF_V3.0.14 on the development villa's Drive copies (the architectural DXF from
 P7757_DXF_COMPRESSED.zip and the structural "ST7757 dxf.dxf"). Every output goes to --out (outside the repository);
 printed: item codes, units, states, quantities and engine ids only (no coordinates, no names).
 
-    python3 -I research/agents_t240/v3013_run.py <plan.dxf> <structural.dxf> --out <scratch>/t240 \
+    python3 -I research/agents_t240/v3014_run.py <plan.dxf> <structural.dxf> --out <scratch>/t240 \
         --t167 <dir of a finished research/agents_t167/v304_run.py run on the same drawings>
 
-As research/agents_t146/v3012_run.py (its inputs unchanged) with --method ARCH_TAKEOFF_V3.0.13 and --v3013-inputs
-(t240_inputs.py); the V3_0_5_* .. V3_0_12_* files of this run are V3.0.5 .. V3.0.12 reproduced.
+As research/agents_t146/v3012_run.py (its inputs unchanged) with --method ARCH_TAKEOFF_V3.0.14 and --v3014-inputs
+(t240_inputs.py), after the merged V3.0.13 door piece with --v3013-inputs (research/agents_t268/t268_inputs.py,
+unchanged); the V3_0_5_* .. V3_0_13_* files of this run are V3.0.5 .. V3.0.13 reproduced.
 """
 
 from __future__ import annotations
@@ -21,7 +22,8 @@ HERE = Path(__file__).resolve().parent
 for p in (ROOT, ROOT / "research" / "agents_t131", ROOT / "research" / "agents_t142", ROOT / "research" / "agents_t151",
           ROOT / "research" / "agents_t167", ROOT / "research" / "agents_t179", ROOT / "research" / "agents_t187",
           ROOT / "research" / "agents_t193", ROOT / "research" / "agents_t231", ROOT / "research" / "agents_t211",
-          ROOT / "research" / "agents_t232", ROOT / "research" / "agents_t239", ROOT / "research" / "agents_t146", HERE):
+          ROOT / "research" / "agents_t232", ROOT / "research" / "agents_t239", ROOT / "research" / "agents_t146",
+          ROOT / "research" / "agents_t268", HERE):
     sys.path.insert(0, str(p))
 
 import alsenan_v30_run as T131  # noqa: E402
@@ -34,7 +36,8 @@ import t231_inputs as L8        # noqa: E402
 import t232_inputs as L10       # noqa: E402
 import t239_inputs as L11       # noqa: E402
 import t146_inputs as L12       # noqa: E402
-import t240_inputs as L13       # noqa: E402
+import t268_inputs as L13       # noqa: E402
+import t240_inputs as L14       # noqa: E402
 import v302_run as T142         # noqa: E402
 
 M4 = ROOT / "research/urban_engine_m4_correctness/profile_st7757_m4.json"
@@ -69,6 +72,7 @@ def main(argv=None):
     (out / "v3011_inputs.json").write_text(json.dumps(L11.inputs(T131.PID), ensure_ascii=False), encoding="utf-8")
     (out / "v3012_inputs.json").write_text(json.dumps(L12.inputs(T131.PID), ensure_ascii=False), encoding="utf-8")
     (out / "v3013_inputs.json").write_text(json.dumps(L13.inputs(T131.PID), ensure_ascii=False), encoding="utf-8")
+    (out / "v3014_inputs.json").write_text(json.dumps(L14.inputs(T131.PID), ensure_ascii=False), encoding="utf-8")
     extra = ["--v30-released", str(src / "v29" / "BOQ_LINES.json"), "--v30-history"] + hist + [
         "--v30-decisions", str(out / "decisions.json"), "--v302-inputs", str(out / "v302_inputs.json"),
         "--v303-inputs", str(out / "v303_inputs.json"), "--v304-inputs", str(src / "v304_inputs.json"),
@@ -76,17 +80,17 @@ def main(argv=None):
         "--v307-inputs", str(out / "v307_inputs.json"), "--v308-inputs", str(out / "v308_inputs.json"),
         "--v309-inputs", str(out / "v309_inputs.json"), "--v3010-inputs", str(out / "v3010_inputs.json"),
         "--v3011-inputs", str(out / "v3011_inputs.json"), "--v3012-inputs", str(out / "v3012_inputs.json"),
-        "--v3013-inputs", str(out / "v3013_inputs.json")]
-    M.main(["arch", "--out", str(out / "v3013"), "--method", "ARCH_TAKEOFF_V3.0.13"] + common + extra)
-    run = json.loads((out / "v3013" / "V3_0_13_RUN.json").read_text(encoding="utf-8"))
+        "--v3013-inputs", str(out / "v3013_inputs.json"), "--v3014-inputs", str(out / "v3014_inputs.json")]
+    M.main(["arch", "--out", str(out / "v3014"), "--method", "ARCH_TAKEOFF_V3.0.14"] + common + extra)
+    run = json.loads((out / "v3014" / "V3_0_14_RUN.json").read_text(encoding="utf-8"))
     print("identity:", json.dumps(run["identity"], indent=1))
     print("evidence status:", run["evidence_status_counts"])
     for lg in run["piece_logs"]:
         print(lg["piece"], json.dumps({k: lg.get(k) for k in ("state", "totals", "held_live_new")}, indent=1))
     for k, v in run["totals_moved_by_code"].items():
-        print(f"{k:28s} V3.0.12 {v['v3_0_12']} | V3.0.13 {v['v3_0_13']}")
-    print("floor line V3.0.12:", json.dumps(run["floor_line_v3_0_12"]))
+        print(f"{k:28s} V3.0.13 {v['v3_0_13']} | V3.0.14 {v['v3_0_14']}")
     print("floor line V3.0.13:", json.dumps(run["floor_line_v3_0_13"]))
+    print("floor line V3.0.14:", json.dumps(run["floor_line_v3_0_14"]))
     return 0
 
 
