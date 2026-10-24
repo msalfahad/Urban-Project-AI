@@ -1,0 +1,263 @@
+change,element,floor,item,r3_status,r3_m2,r3_held,r4_status,r4_m2,r4_held,calc_delta_m2,cause,refs
+CHANGED,FOOTING,FDN,F10 (+ the F pad drawn in its outline) sides FORMED,HELD,,4.200 .. 5.220,HELD,,4.650 .. 5.220,0.0,T-239 multi-tag outline range,
+CHANGED,FOOTING,FDN,FN 180C / F9 notch (0.40 x 0.35): faces cast against each other FORMED,HELD,,-0.450 .. 0.000,ALTERNATIVE,-0.45,,-0.45,T-233 notch settled,
+NEW,STRAP,FDN,"SB1 70 x 50 sides FORMED (axis length, Q-74)",,,,ALTERNATIVE,4.55,,4.55,T-174 MERGED 984ebbe1,ST p.10 SB1; T-174
+NEW,STRAP,FDN,"SB1 70 x 50 sides EARTH_CAST (axis length, Q-74)",,,,ALTERNATIVE,0.0,,0.0,T-174 MERGED 984ebbe1,ST p.10 SB1; T-174
+NEW,STRAP,FDN,SB1 soffit,,,,HELD,,0.000 .. 3.185,0.0,T-174,T-174
+NEW,FOOTING,FDN,"F8 (1B24) side covered by SB1 (chord 0.7000 x min(D, H)) FORMED",,,,ALTERNATIVE,-0.35,,-0.35,T-174,F8 (1B24)
+NEW,FOOTING,FDN,F10+F (1B1B) side covered by SB1 (chord 0.7000) FORMED,,,,HELD,,-0.350 .. -0.210,0.0,T-174 / T-239,F10+F (1B1B)
+NEW,STRAP,FDN,"SB2 100 x 50 sides FORMED (axis length, Q-74)",,,,ALTERNATIVE,2.2927,,2.2927,T-174 MERGED 984ebbe1,ST p.10 SB2; T-174
+NEW,STRAP,FDN,"SB2 100 x 50 sides EARTH_CAST (axis length, Q-74)",,,,ALTERNATIVE,0.0,,0.0,T-174 MERGED 984ebbe1,ST p.10 SB2; T-174
+NEW,STRAP,FDN,SB2 soffit,,,,HELD,,0.000 .. 2.293,0.0,T-174,T-174
+NEW,FOOTING,FDN,"F11 (1B07) side covered by SB2 (chord 1.0190 x min(D, H)) FORMED",,,,ALTERNATIVE,-0.5095,,-0.5095,T-174,F11 (1B07)
+NEW,FOOTING,FDN,"F6 (1B19) side covered by SB2 (chord 1.0190 x min(D, H)) FORMED",,,,ALTERNATIVE,-0.5095,,-0.5095,T-174,F6 (1B19)
+NEW,STRAP,FDN,"SB3 50 x 40 sides FORMED (axis length, Q-74)",,,,ALTERNATIVE,2.6064,,2.6064,T-174 MERGED 984ebbe1,ST p.10 SB3; T-174
+NEW,STRAP,FDN,"SB3 50 x 40 sides EARTH_CAST (axis length, Q-74)",,,,ALTERNATIVE,0.0,,0.0,T-174 MERGED 984ebbe1,ST p.10 SB3; T-174
+NEW,STRAP,FDN,SB3 soffit,,,,HELD,,0.000 .. 1.629,0.0,T-174,T-174
+NEW,FOOTING,FDN,"F15 (1B2A) side covered by SB3 (chord 0.5341 x min(D, H)) FORMED",,,,ALTERNATIVE,-0.2136,,-0.2136,T-174,F15 (1B2A)
+NEW,FOOTING,FDN,"F3 (166B) side covered by SB3 (chord 0.5341 x min(D, H)) FORMED",,,,ALTERNATIVE,-0.1602,,-0.1602,T-174,F3 (166B)
+REMOVED,FOOTING,FDN,SB1 ends against F10 / F8 sides (same-pour contact),HELD,,-0.700 .. 0.000,,,,0.0,T-174: straps on their axis length; covered footing faces by chord,
+REMOVED,FOOTING,FDN,SB2 ends against F11 / F6 sides (same-pour contact),HELD,,-1.000 .. 0.000,,,,0.0,T-174: straps on their axis length; covered footing faces by chord,
+REMOVED,FOOTING,FDN,SB3 ends against F15 / F3 sides (same-pour contact),HELD,,-0.350 .. 0.000,,,,0.0,T-174: straps on their axis length; covered footing faces by chord,
+NEW,GROUND_BEAM,GF,span 107+7CE#1 L 0.3639 side A (outside) above N.G.,,,,CALCULATED,0.345705,,0.345705,T-253 exterior main: D = +0.95 - outer N.G. +-0.00 (DRAWING-CONFIRMED),T-242 run 107+7CE#1 (handles 107+7CE)
+NEW,GROUND_BEAM,GF,span 107+7CE#1 L 0.3639 side B (GS-23) FORMED,,,,ALTERNATIVE,0.345705,,0.345705,T-253 exterior main: D = +0.95 - outer N.G. +-0.00 (DRAWING-CONFIRMED),T-242 run 107+7CE#1 (handles 107+7CE)
+NEW,GROUND_BEAM,GF,span 107+7CE#1 side B EARTH_CAST,,,,ALTERNATIVE,0.0,,0.0,T-253 exterior main: D = +0.95 - outer N.G. +-0.00 (DRAWING-CONFIRMED),T-242 run 107+7CE#1 (handles 107+7CE)
+NEW,GROUND_BEAM,GF,span 109+7CB#1 L 4.4000 D 0.40 sides FORMED,,,,ALTERNATIVE,3.52,,3.52,"p.13 title from the face-to-face length, one section (T-242)",T-242 run 109+7CB#1 (handles 109+7CB)
+NEW,GROUND_BEAM,GF,span 109+7CB#1 sides EARTH_CAST,,,,ALTERNATIVE,0.0,,0.0,"p.13 title from the face-to-face length, one section (T-242)",T-242 run 109+7CB#1 (handles 109+7CB)
+NEW,GROUND_BEAM,GF,"span 109+7CB#2 L 4.4000 side A (GS-08, GS-09) FORMED",,,,ALTERNATIVE,4.18,,4.18,T-253 exterior main: D = +0.95 - outer N.G. +-0.00 (DRAWING-CONFIRMED),T-242 run 109+7CB#2 (handles 109+7CB)
+NEW,GROUND_BEAM,GF,span 109+7CB#2 side A EARTH_CAST,,,,ALTERNATIVE,0.0,,0.0,T-253 exterior main: D = +0.95 - outer N.G. +-0.00 (DRAWING-CONFIRMED),T-242 run 109+7CB#2 (handles 109+7CB)
+NEW,GROUND_BEAM,GF,span 109+7CB#2 L 4.4000 side B (GS-16) FORMED,,,,ALTERNATIVE,4.18,,4.18,T-253 exterior main: D = +0.95 - outer N.G. +-0.00 (DRAWING-CONFIRMED),T-242 run 109+7CB#2 (handles 109+7CB)
+NEW,GROUND_BEAM,GF,span 109+7CB#2 side B EARTH_CAST (panel not established),,,,HELD,,0.000 .. 4.180,0.0,T-253 exterior main: D = +0.95 - outer N.G. +-0.00 (DRAWING-CONFIRMED),T-242 run 109+7CB#2 (handles 109+7CB)
+NEW,GROUND_BEAM,GF,span 109+7CB#3 L 2.7000 side A (GS-08) FORMED,,,,ALTERNATIVE,2.565,,2.565,T-253 exterior main: D = +0.95 - outer N.G. +-0.00 (DRAWING-CONFIRMED),T-242 run 109+7CB#3 (handles 109+7CB)
+NEW,GROUND_BEAM,GF,span 109+7CB#3 side A EARTH_CAST,,,,ALTERNATIVE,0.0,,0.0,T-253 exterior main: D = +0.95 - outer N.G. +-0.00 (DRAWING-CONFIRMED),T-242 run 109+7CB#3 (handles 109+7CB)
+NEW,GROUND_BEAM,GF,span 109+7CB#3 L 2.7000 side B (outside) above N.G.,,,,CALCULATED,2.565,,2.565,T-253 exterior main: D = +0.95 - outer N.G. +-0.00 (DRAWING-CONFIRMED),T-242 run 109+7CB#3 (handles 109+7CB)
+NEW,GROUND_BEAM,GF,span 10A+7C9#1 L 4.3000 side A (GS-07) FORMED,,,,ALTERNATIVE,4.085,,4.085,T-253 exterior main: D = +0.95 - outer N.G. +-0.00 (DRAWING-CONFIRMED),T-242 run 10A+7C9#1 (handles 10A+7C9)
+NEW,GROUND_BEAM,GF,span 10A+7C9#1 side A EARTH_CAST,,,,ALTERNATIVE,0.0,,0.0,T-253 exterior main: D = +0.95 - outer N.G. +-0.00 (DRAWING-CONFIRMED),T-242 run 10A+7C9#1 (handles 10A+7C9)
+NEW,GROUND_BEAM,GF,span 10A+7C9#1 L 4.3000 side B (outside) above N.G.,,,,CALCULATED,4.085,,4.085,T-253 exterior main: D = +0.95 - outer N.G. +-0.00 (DRAWING-CONFIRMED),T-242 run 10A+7C9#1 (handles 10A+7C9)
+NEW,GROUND_BEAM,GF,span 10B+7D1#1 L 1.2000 sides (annex exterior),,,,HELD,,,0.0,T-253 annex exterior CONFLICT: literal 0.25 (levels) vs the printed section (no depth): no value adopted,T-242 run 10B+7D1#1 (handles 10B+7D1)
+NEW,GROUND_BEAM,GF,span 10B+7D1#2 L 2.3000 sides (annex exterior),,,,HELD,,,0.0,T-253 annex exterior CONFLICT: literal 0.25 (levels) vs the printed section (no depth): no value adopted,T-242 run 10B+7D1#2 (handles 10B+7D1)
+NEW,GROUND_BEAM,GF,span 114+115+7DF#1 L 2.3250 sides FORMED,,,,HELD,,1.395 .. 1.860,0.0,D-34 title / length basis 0.30 / 0.40,T-242 run 114+115+7DF#1 (handles 114+115+7DF)
+NEW,GROUND_BEAM,GF,span 114+115+7DF#2 L 1.0000 side A (GS-01) FORMED,,,,ALTERNATIVE,0.95,,0.95,T-253 exterior main: D = +0.95 - outer N.G. +-0.00 (DRAWING-CONFIRMED),T-242 run 114+115+7DF#2 (handles 114+115+7DF)
+NEW,GROUND_BEAM,GF,span 114+115+7DF#2 side A EARTH_CAST,,,,ALTERNATIVE,0.0,,0.0,T-253 exterior main: D = +0.95 - outer N.G. +-0.00 (DRAWING-CONFIRMED),T-242 run 114+115+7DF#2 (handles 114+115+7DF)
+NEW,GROUND_BEAM,GF,span 114+115+7DF#2 L 1.0000 side B (outside) above N.G.,,,,CALCULATED,0.95,,0.95,T-253 exterior main: D = +0.95 - outer N.G. +-0.00 (DRAWING-CONFIRMED),T-242 run 114+115+7DF#2 (handles 114+115+7DF)
+NEW,GROUND_BEAM,GF,span 136+7D5#1 L 6.0000 sides (annex exterior),,,,HELD,,,0.0,T-253 annex exterior CONFLICT: literal 0.25 (levels) vs the printed section (no depth): no value adopted,T-242 run 136+7D5#1 (handles 136+7D5)
+NEW,GROUND_BEAM,GF,span 137+138#1 L 2.4000 sides (annex exterior),,,,HELD,,,0.0,T-253 annex exterior CONFLICT: literal 0.25 (levels) vs the printed section (no depth): no value adopted,T-242 run 137+138#1 (handles 137+138)
+NEW,GROUND_BEAM,GF,span 13C+7D9#1 L 1.4500 sides FORMED,,,,HELD,,0.870 .. 1.160,0.0,D-34 title / length basis 0.30 / 0.40,T-242 run 13C+7D9#1 (handles 13C+7D9)
+NEW,GROUND_BEAM,GF,span 13D+7D2#1 L 5.8000 sides (annex exterior),,,,HELD,,,0.0,T-253 annex exterior CONFLICT: literal 0.25 (levels) vs the printed section (no depth): no value adopted,T-242 run 13D+7D2#1 (handles 13D+7D2)
+NEW,GROUND_BEAM,GF,span 13E+7D6#1 L 4.3000 sides FORMED,,,,HELD,,3.440 .. 3.440,0.0,D-33: printed class only (the section 'with concentrated load' is not printed),T-242 run 13E+7D6#1 (handles 13E+7D6)
+NEW,GROUND_BEAM,GF,span 13E+7D6#2 L 0.5000 sides (annex exterior),,,,HELD,,,0.0,T-253 annex exterior CONFLICT: literal 0.25 (levels) vs the printed section (no depth): no value adopted,T-242 run 13E+7D6#2 (handles 13E+7D6)
+NEW,GROUND_BEAM,GF,span 13F+7D3#1 L 4.3000 sides FORMED,,,,HELD,,3.440 .. 3.440,0.0,D-33: printed class only (the section 'with concentrated load' is not printed),T-242 run 13F+7D3#1 (handles 13F+7D3)
+NEW,GROUND_BEAM,GF,span 140+7D7#1 L 4.3000 sides FORMED,,,,HELD,,3.440 .. 3.440,0.0,D-33: printed class only (the section 'with concentrated load' is not printed),T-242 run 140+7D7#1 (handles 140+7D7)
+NEW,GROUND_BEAM,GF,span 141+7DA#1 L 1.2000 sides FORMED,,,,HELD,,0.720 .. 0.960,0.0,D-34 title / length basis 0.30 / 0.40,T-242 run 141+7DA#1 (handles 141+7DA)
+NEW,GROUND_BEAM,GF,span 142+7D8#1 L 2.4500 sides FORMED,,,,HELD,,1.470 .. 1.960,0.0,D-34 title / length basis 0.30 / 0.40; D-33 concentrated load,T-242 run 142+7D8#1 (handles 142+7D8)
+NEW,GROUND_BEAM,GF,span 145+7CA#1 L 1.9000 side A (GS-07) FORMED,,,,ALTERNATIVE,1.805,,1.805,T-253 exterior main: D = +0.95 - outer N.G. +-0.00 (DRAWING-CONFIRMED),T-242 run 145+7CA#1 (handles 145+7CA)
+NEW,GROUND_BEAM,GF,span 145+7CA#1 side A EARTH_CAST,,,,ALTERNATIVE,0.0,,0.0,T-253 exterior main: D = +0.95 - outer N.G. +-0.00 (DRAWING-CONFIRMED),T-242 run 145+7CA#1 (handles 145+7CA)
+NEW,GROUND_BEAM,GF,span 145+7CA#1 L 1.9000 side B (GS-16) FORMED,,,,ALTERNATIVE,1.805,,1.805,T-253 exterior main: D = +0.95 - outer N.G. +-0.00 (DRAWING-CONFIRMED),T-242 run 145+7CA#1 (handles 145+7CA)
+NEW,GROUND_BEAM,GF,span 145+7CA#1 side B EARTH_CAST (panel not established),,,,HELD,,0.000 .. 1.805,0.0,T-253 exterior main: D = +0.95 - outer N.G. +-0.00 (DRAWING-CONFIRMED),T-242 run 145+7CA#1 (handles 145+7CA)
+NEW,GROUND_BEAM,GF,span 15C+7CC#1 L 2.4000 sides FORMED,,,,HELD,,1.440 .. 1.920,0.0,D-34 title / length basis 0.30 / 0.40,T-242 run 15C+7CC#1 (handles 15C+7CC)
+NEW,GROUND_BEAM,GF,span 15D+7C8#1 L 2.9000 sides FORMED,,,,HELD,,2.320 .. 2.320,0.0,D-33: printed class only (the section 'with concentrated load' is not printed),T-242 run 15D+7C8#1 (handles 15D+7C8)
+NEW,GROUND_BEAM,GF,span 15E+15F#1 L 2.7000 sides FORMED,,,,HELD,,2.160 .. 2.160,0.0,D-33: printed class only (the section 'with concentrated load' is not printed),T-242 run 15E+15F#1 (handles 15E+15F)
+NEW,GROUND_BEAM,GF,span 16F+7FF#1 L 1.2500 sides FORMED,,,,HELD,,0.750 .. 1.000,0.0,D-34 title / length basis 0.30 / 0.40,T-242 run 16F+7FF#1 (handles 16F+7FF)
+NEW,GROUND_BEAM,GF,span 170+7C3#1 L 2.4000 side A (GS-08) FORMED,,,,ALTERNATIVE,2.28,,2.28,T-253 exterior main: D = +0.95 - outer N.G. +-0.00 (DRAWING-CONFIRMED),T-242 run 170+7C3#1 (handles 170+7C3)
+NEW,GROUND_BEAM,GF,span 170+7C3#1 side A EARTH_CAST,,,,ALTERNATIVE,0.0,,0.0,T-253 exterior main: D = +0.95 - outer N.G. +-0.00 (DRAWING-CONFIRMED),T-242 run 170+7C3#1 (handles 170+7C3)
+NEW,GROUND_BEAM,GF,span 170+7C3#1 L 2.4000 side B (outside) above N.G.,,,,CALCULATED,2.28,,2.28,T-253 exterior main: D = +0.95 - outer N.G. +-0.00 (DRAWING-CONFIRMED),T-242 run 170+7C3#1 (handles 170+7C3)
+NEW,GROUND_BEAM,GF,"span 170+7C3#2 L 3.3700 side A (GS-24, GS-25) FORMED",,,,ALTERNATIVE,3.2015,,3.2015,T-253 exterior main: D = +0.95 - outer N.G. +-0.00 (DRAWING-CONFIRMED),T-242 run 170+7C3#2 (handles 170+7C3)
+NEW,GROUND_BEAM,GF,span 170+7C3#2 side A EARTH_CAST,,,,ALTERNATIVE,0.0,,0.0,T-253 exterior main: D = +0.95 - outer N.G. +-0.00 (DRAWING-CONFIRMED),T-242 run 170+7C3#2 (handles 170+7C3)
+NEW,GROUND_BEAM,GF,span 170+7C3#2 L 3.3700 side B (outside) above N.G.,,,,CALCULATED,3.2015,,3.2015,T-253 exterior main: D = +0.95 - outer N.G. +-0.00 (DRAWING-CONFIRMED),T-242 run 170+7C3#2 (handles 170+7C3)
+NEW,GROUND_BEAM,GF,span 170+7C3#3 L 3.3500 side A (GS-17) FORMED,,,,ALTERNATIVE,3.1825,,3.1825,T-253 exterior main: D = +0.95 - outer N.G. +-0.00 (DRAWING-CONFIRMED),T-242 run 170+7C3#3 (handles 170+7C3)
+NEW,GROUND_BEAM,GF,span 170+7C3#3 side A EARTH_CAST,,,,ALTERNATIVE,0.0,,0.0,T-253 exterior main: D = +0.95 - outer N.G. +-0.00 (DRAWING-CONFIRMED),T-242 run 170+7C3#3 (handles 170+7C3)
+NEW,GROUND_BEAM,GF,span 170+7C3#3 L 3.3500 side B (outside) above N.G.,,,,CALCULATED,3.1825,,3.1825,T-253 exterior main: D = +0.95 - outer N.G. +-0.00 (DRAWING-CONFIRMED),T-242 run 170+7C3#3 (handles 170+7C3)
+NEW,GROUND_BEAM,GF,span 170+7C3#4 L 3.2500 side A (GS-10) FORMED,,,,ALTERNATIVE,3.0875,,3.0875,T-253 exterior main: D = +0.95 - outer N.G. +-0.00 (DRAWING-CONFIRMED),T-242 run 170+7C3#4 (handles 170+7C3)
+NEW,GROUND_BEAM,GF,span 170+7C3#4 side A EARTH_CAST,,,,ALTERNATIVE,0.0,,0.0,T-253 exterior main: D = +0.95 - outer N.G. +-0.00 (DRAWING-CONFIRMED),T-242 run 170+7C3#4 (handles 170+7C3)
+NEW,GROUND_BEAM,GF,span 170+7C3#4 L 3.2500 side B (outside) above N.G.,,,,CALCULATED,3.0875,,3.0875,T-253 exterior main: D = +0.95 - outer N.G. +-0.00 (DRAWING-CONFIRMED),T-242 run 170+7C3#4 (handles 170+7C3)
+NEW,GROUND_BEAM,GF,span 175+7DE#1 L 3.7500 sides FORMED,,,,HELD,,3.000 .. 3.000,0.0,D-33: printed class only (the section 'with concentrated load' is not printed),T-242 run 175+7DE#1 (handles 175+7DE)
+NEW,GROUND_BEAM,GF,span 176+7E6#1 L 3.7500 sides FORMED,,,,HELD,,3.000 .. 3.000,0.0,D-33: printed class only (the section 'with concentrated load' is not printed),T-242 run 176+7E6#1 (handles 176+7E6)
+NEW,GROUND_BEAM,GF,span 177+7CD#1 L 5.0200 sides FORMED,,,,HELD,,6.024 .. 6.024,0.0,D-33: printed class only (the section 'with concentrated load' is not printed),T-242 run 177+7CD#1 (handles 177+7CD)
+NEW,GROUND_BEAM,GF,span 177+7CD#2 L 1.5367 sides FORMED,,,,HELD,,0.922 .. 1.229,0.0,D-34 title / length basis 0.30 / 0.40; D-33 concentrated load,T-242 run 177+7CD#2 (handles 177+7CD)
+NEW,GROUND_BEAM,GF,span 178+7DB#1 L 3.8000 sides FORMED,,,,HELD,,3.040 .. 7.220,0.0,"T-253 court run: section not established, candidates 0.40 / 0.95",T-242 run 178+7DB#1 (handles 178+7DB)
+NEW,GROUND_BEAM,GF,span 17B+7E5#1 L 1.2000 sides FORMED,,,,HELD,,0.720 .. 0.960,0.0,D-34 title / length basis 0.30 / 0.40,T-242 run 17B+7E5#1 (handles 17B+7E5)
+NEW,GROUND_BEAM,GF,span 17C+7E3#1 L 3.2280 D 0.40 sides FORMED,,,,ALTERNATIVE,2.5824,,2.5824,"p.13 title from the face-to-face length, one section (T-242)",T-242 run 17C+7E3#1 (handles 17C+7E3)
+NEW,GROUND_BEAM,GF,span 17C+7E3#1 sides EARTH_CAST,,,,ALTERNATIVE,0.0,,0.0,"p.13 title from the face-to-face length, one section (T-242)",T-242 run 17C+7E3#1 (handles 17C+7E3)
+NEW,GROUND_BEAM,GF,span 17D+7E4#1 L 4.2723 sides FORMED,,,,HELD,,3.418 .. 3.418,0.0,D-33: printed class only (the section 'with concentrated load' is not printed),T-242 run 17D+7E4#1 (handles 17D+7E4)
+NEW,GROUND_BEAM,GF,span 17E+17F#1 L 2.4269 sides FORMED,,,,HELD,,1.456 .. 1.942,0.0,D-34 title / length basis 0.30 / 0.40; D-33 concentrated load,T-242 run 17E+17F#1 (handles 17E+17F)
+NEW,GROUND_BEAM,GF,span 180+181#1 L 0.7890 sides FORMED,,,,HELD,,0.473 .. 0.631,0.0,D-34 title / length basis 0.30 / 0.40,T-242 run 180+181#1 (handles 180+181)
+NEW,GROUND_BEAM,GF,span 180D+180E#1 L 2.1000 sides FORMED,,,,HELD,,1.260 .. 1.680,0.0,D-34 title / length basis 0.30 / 0.40; D-33 concentrated load,T-242 run 180D+180E#1 (handles 180D+180E)
+NEW,GROUND_BEAM,GF,span 1811+1812#1 L 1.3000 sides FORMED,,,,HELD,,0.780 .. 1.040,0.0,"T-253 court run: section not established, candidates 0.30 / 0.40",T-242 run 1811+1812#1 (handles 1811+1812)
+NEW,GROUND_BEAM,GF,span 182+183#1 L 2.0732 sides FORMED,,,,HELD,,1.244 .. 1.659,0.0,D-34 title / length basis 0.30 / 0.40,T-242 run 182+183#1 (handles 182+183)
+NEW,GROUND_BEAM,GF,span 184+7CF#1 L 3.0200 sides FORMED,,,,HELD,,2.456 .. 2.523,0.0,end piece at the neck depends on a printed section conflict (T-217): +0.0150..+0.0400,T-242 run 184+7CF#1 (handles 184+7CF)
+NEW,GROUND_BEAM,GF,span 184+7CF#2 L 2.6500 sides FORMED,,,,HELD,,2.053 .. 2.120,0.0,end piece at the neck depends on a printed section conflict (T-217): -0.0250..+0.0000,T-242 run 184+7CF#2 (handles 184+7CF)
+NEW,GROUND_BEAM,GF,span 184+7CF#3 L 5.0000 sides FORMED,,,,HELD,,4.000 .. 6.000,0.0,D-34 title / length basis 0.40 / 0.60; D-33 concentrated load,T-242 run 184+7CF#3 (handles 184+7CF)
+NEW,GROUND_BEAM,GF,span 185+7C7#1 L 0.6000 sides FORMED,,,,HELD,,0.360 .. 1.140,0.0,"T-253 court run: section not established, candidates 0.30 / 0.40 / 0.95",T-242 run 185+7C7#1 (handles 185+7C7)
+NEW,GROUND_BEAM,GF,span 7D0+FC#1 L 2.9750 side A (outside) above N.G.,,,,CALCULATED,2.82625,,2.82625,T-253 exterior main: D = +0.95 - outer N.G. +-0.00 (DRAWING-CONFIRMED),T-242 run 7D0+FC#1 (handles 7D0+FC)
+NEW,GROUND_BEAM,GF,span 7D0+FC#1 L 2.9750 side B (GS-07) FORMED,,,,ALTERNATIVE,2.82625,,2.82625,T-253 exterior main: D = +0.95 - outer N.G. +-0.00 (DRAWING-CONFIRMED),T-242 run 7D0+FC#1 (handles 7D0+FC)
+NEW,GROUND_BEAM,GF,span 7D0+FC#1 side B EARTH_CAST,,,,ALTERNATIVE,0.0,,0.0,T-253 exterior main: D = +0.95 - outer N.G. +-0.00 (DRAWING-CONFIRMED),T-242 run 7D0+FC#1 (handles 7D0+FC)
+NEW,GROUND_BEAM,GF,span 7D0+FC#2 L 5.7450 side A (outside) above N.G.,,,,CALCULATED,5.45775,,5.45775,T-253 exterior main: D = +0.95 - outer N.G. +-0.00 (DRAWING-CONFIRMED),T-242 run 7D0+FC#2 (handles 7D0+FC)
+NEW,GROUND_BEAM,GF,"span 7D0+FC#2 L 5.7450 side B (GS-05, GS-12) FORMED",,,,ALTERNATIVE,5.45775,,5.45775,T-253 exterior main: D = +0.95 - outer N.G. +-0.00 (DRAWING-CONFIRMED),T-242 run 7D0+FC#2 (handles 7D0+FC)
+NEW,GROUND_BEAM,GF,span 7D0+FC#2 side B EARTH_CAST (panel not established),,,,HELD,,0.000 .. 5.458,0.0,T-253 exterior main: D = +0.95 - outer N.G. +-0.00 (DRAWING-CONFIRMED),T-242 run 7D0+FC#2 (handles 7D0+FC)
+NEW,GROUND_BEAM,GF,span 7D0+FC#3 L 6.3500 side A (outside) above N.G.,,,,CALCULATED,6.0325,,6.0325,T-253 exterior main: D = +0.95 - outer N.G. +-0.00 (DRAWING-CONFIRMED),T-242 run 7D0+FC#3 (handles 7D0+FC)
+NEW,GROUND_BEAM,GF,"span 7D0+FC#3 L 6.3500 side B (GS-12, GS-15) FORMED",,,,ALTERNATIVE,6.0325,,6.0325,T-253 exterior main: D = +0.95 - outer N.G. +-0.00 (DRAWING-CONFIRMED),T-242 run 7D0+FC#3 (handles 7D0+FC)
+NEW,GROUND_BEAM,GF,span 7D0+FC#3 side B EARTH_CAST (panel not established),,,,HELD,,0.000 .. 6.032,0.0,T-253 exterior main: D = +0.95 - outer N.G. +-0.00 (DRAWING-CONFIRMED),T-242 run 7D0+FC#3 (handles 7D0+FC)
+NEW,GROUND_BEAM,GF,span 7D0+FC#4 L 1.2000 side A (outside) above N.G.,,,,CALCULATED,1.14,,1.14,T-253 exterior main: D = +0.95 - outer N.G. +-0.00 (DRAWING-CONFIRMED),T-242 run 7D0+FC#4 (handles 7D0+FC)
+NEW,GROUND_BEAM,GF,span 7D0+FC#4 L 1.2000 side B (GS-15) FORMED,,,,ALTERNATIVE,1.14,,1.14,T-253 exterior main: D = +0.95 - outer N.G. +-0.00 (DRAWING-CONFIRMED),T-242 run 7D0+FC#4 (handles 7D0+FC)
+NEW,GROUND_BEAM,GF,span 7D0+FC#4 side B EARTH_CAST,,,,ALTERNATIVE,0.0,,0.0,T-253 exterior main: D = +0.95 - outer N.G. +-0.00 (DRAWING-CONFIRMED),T-242 run 7D0+FC#4 (handles 7D0+FC)
+NEW,GROUND_BEAM,GF,span 7D4+F8#1 L 5.4500 sides (annex exterior),,,,HELD,,,0.0,T-253 annex exterior CONFLICT: literal 0.25 (levels) vs the printed section (no depth): no value adopted,T-242 run 7D4+F8#1 (handles 7D4+F8)
+NEW,GROUND_BEAM,GF,span 7D4+F8#2 L 4.2500 sides (annex exterior),,,,HELD,,,0.0,T-253 annex exterior CONFLICT: literal 0.25 (levels) vs the printed section (no depth): no value adopted,T-242 run 7D4+F8#2 (handles 7D4+F8)
+NEW,GROUND_BEAM,GF,span 7DC+7DD#1 L 3.5250 sides FORMED,,,,HELD,,2.820 .. 2.820,0.0,D-33: printed class only (the section 'with concentrated load' is not printed),T-242 run 7DC+7DD#1 (handles 7DC+7DD)
+NEW,GROUND_BEAM,GF,span 7DC+7DD#2 L 3.5250 D 0.40 sides FORMED,,,,ALTERNATIVE,2.82,,2.82,"p.13 title from the face-to-face length, one section (T-242)",T-242 run 7DC+7DD#2 (handles 7DC+7DD)
+NEW,GROUND_BEAM,GF,span 7DC+7DD#2 sides EARTH_CAST,,,,ALTERNATIVE,0.0,,0.0,"p.13 title from the face-to-face length, one section (T-242)",T-242 run 7DC+7DD#2 (handles 7DC+7DD)
+NEW,GROUND_BEAM,GF,span 7E0+FD#1 L 3.3500 side A (outside) above N.G.,,,,CALCULATED,3.1825,,3.1825,T-253 exterior main: D = +0.95 - outer N.G. +-0.00 (DRAWING-CONFIRMED),T-242 run 7E0+FD#1 (handles 7E0+FD)
+NEW,GROUND_BEAM,GF,span 7E0+FD#1 L 3.3500 side B (GS-01) FORMED,,,,ALTERNATIVE,3.1825,,3.1825,T-253 exterior main: D = +0.95 - outer N.G. +-0.00 (DRAWING-CONFIRMED),T-242 run 7E0+FD#1 (handles 7E0+FD)
+NEW,GROUND_BEAM,GF,span 7E0+FD#1 side B EARTH_CAST,,,,ALTERNATIVE,0.0,,0.0,T-253 exterior main: D = +0.95 - outer N.G. +-0.00 (DRAWING-CONFIRMED),T-242 run 7E0+FD#1 (handles 7E0+FD)
+NEW,GROUND_BEAM,GF,span 7E0+FD#2 L 3.2500 side A (outside) above N.G.,,,,CALCULATED,3.0875,,3.0875,T-253 exterior main: D = +0.95 - outer N.G. +-0.00 (DRAWING-CONFIRMED),T-242 run 7E0+FD#2 (handles 7E0+FD)
+NEW,GROUND_BEAM,GF,span 7E0+FD#2 L 3.2500 side B (GS-01) FORMED,,,,ALTERNATIVE,3.0875,,3.0875,T-253 exterior main: D = +0.95 - outer N.G. +-0.00 (DRAWING-CONFIRMED),T-242 run 7E0+FD#2 (handles 7E0+FD)
+NEW,GROUND_BEAM,GF,span 7E0+FD#2 side B EARTH_CAST,,,,ALTERNATIVE,0.0,,0.0,T-253 exterior main: D = +0.95 - outer N.G. +-0.00 (DRAWING-CONFIRMED),T-242 run 7E0+FD#2 (handles 7E0+FD)
+NEW,GROUND_BEAM,GF,span 7E1+7E2#1 L 6.7200 sides FORMED,,,,HELD,,8.064 .. 8.064,0.0,D-33: printed class only (the section 'with concentrated load' is not printed),T-242 run 7E1+7E2#1 (handles 7E1+7E2)
+NEW,GROUND_BEAM,GF,span 7E7+7E8#1 L 3.5250 D 0.40 sides FORMED,,,,ALTERNATIVE,2.82,,2.82,"p.13 title from the face-to-face length, one section (T-242)",T-242 run 7E7+7E8#1 (handles 7E7+7E8)
+NEW,GROUND_BEAM,GF,span 7E7+7E8#1 sides EARTH_CAST,,,,ALTERNATIVE,0.0,,0.0,"p.13 title from the face-to-face length, one section (T-242)",T-242 run 7E7+7E8#1 (handles 7E7+7E8)
+NEW,GROUND_BEAM,GF,span 7E7+7E8#2 L 3.5250 sides FORMED,,,,HELD,,2.820 .. 2.820,0.0,D-33: printed class only (the section 'with concentrated load' is not printed),T-242 run 7E7+7E8#2 (handles 7E7+7E8)
+NEW,GROUND_BEAM,GF,span 7E9+7EA#1 L 4.2250 D 0.40 sides FORMED,,,,ALTERNATIVE,3.38,,3.38,"p.13 title from the face-to-face length, one section (T-242)",T-242 run 7E9+7EA#1 (handles 7E9+7EA)
+NEW,GROUND_BEAM,GF,span 7E9+7EA#1 sides EARTH_CAST,,,,ALTERNATIVE,0.0,,0.0,"p.13 title from the face-to-face length, one section (T-242)",T-242 run 7E9+7EA#1 (handles 7E9+7EA)
+NEW,GROUND_BEAM,GF,span ARC:139+13A L 1.8063 sides (annex exterior),,,,HELD,,,0.0,T-253 annex exterior CONFLICT: literal 0.25 (levels) vs the printed section (no depth): no value adopted,T-242 run ARC:139+13A (handles 139+13A)
+NEW,GROUND_BEAM,GF,"ARC:157+158 inner face (pool-court side, R 2.25 x 167.236 deg), above N.G.",,,,CALCULATED,6.239008,,6.239008,T-242 / T-253 ring on its arcs,ARC 157 (R 2.25); T-242 run ARC:157+158 (handles 157+158)
+NEW,GROUND_BEAM,GF,"ARC:157+158 outer face (rooms side, R 2.55 x 150.086 deg net of the column outlines 17BA 0.300 / 17BD 0.102) FORMED",,,,ALTERNATIVE,5.963657,,5.963657,T-242 / T-253 ring on its arcs,"ARC 158 (R 2.55), columns 17BA / 17BD"
+NEW,GROUND_BEAM,GF,ARC:157+158 outer face EARTH_CAST,,,,ALTERNATIVE,0.0,,0.0,T-242 / T-253,
+NEW,GROUND_BEAM,GF,"tee: 15C+7CC#1 ends on 109+7CB#2 side A (cover 0.30 x min(D_in, D)) FORMED",,,,HELD,,-0.120 .. -0.090,0.0,tee cover,T-242 tees_mid_span / span ends
+NEW,GROUND_BEAM,GF,"tee: 185+7C7#1 ends on 109+7CB#2 side B (cover 0.30 x min(D_in, D)) FORMED",,,,HELD,,-0.285 .. -0.090,0.0,tee cover,T-242 tees_mid_span / span ends
+NEW,GROUND_BEAM,GF,"tee: 13C+7D9#1 ends on 13E+7D6#1 (cover 0.30 x min(D_in, D)) FORMED",,,,HELD,,-0.120 .. -0.090,0.0,tee cover,T-242 tees_mid_span / span ends
+NEW,GROUND_BEAM,GF,"tee: 13C+7D9#1 ends on 13F+7D3#1 (cover 0.30 x min(D_in, D)) FORMED",,,,HELD,,-0.120 .. -0.090,0.0,tee cover,T-242 tees_mid_span / span ends
+NEW,GROUND_BEAM,GF,"tee: 142+7D8#1 ends on 140+7D7#1 (cover 0.30 x min(D_in, D)) FORMED",,,,HELD,,-0.120 .. -0.090,0.0,tee cover,T-242 tees_mid_span / span ends
+NEW,GROUND_BEAM,GF,"tee: 141+7DA#1 ends on 142+7D8#1 (cover 0.30 x min(D_in, D)) FORMED",,,,HELD,,-0.120 .. -0.090,0.0,tee cover,T-242 tees_mid_span / span ends
+NEW,GROUND_BEAM,GF,"tee: 178+7DB#1 ends on 145+7CA#1 side B (cover 0.30 x min(D_in, D)) FORMED",,,,HELD,,-0.285 .. -0.120,0.0,tee cover,T-242 tees_mid_span / span ends
+NEW,GROUND_BEAM,GF,"tee: 16F+7FF#1 ends on 15D+7C8#1 (cover 0.30 x min(D_in, D)) FORMED",,,,HELD,,-0.120 .. -0.090,0.0,tee cover,T-242 tees_mid_span / span ends
+NEW,GROUND_BEAM,GF,"tee: 16F+7FF#1 ends on 15E+15F#1 (cover 0.30 x min(D_in, D)) FORMED",,,,HELD,,-0.120 .. -0.090,0.0,tee cover,T-242 tees_mid_span / span ends
+NEW,GROUND_BEAM,GF,"tee: 15D+7C8#1 ends on 170+7C3#2 side A (cover 0.30 x min(D_in, D)) FORMED",,,,HELD,,-0.120 .. -0.120,0.0,tee cover,T-242 tees_mid_span / span ends
+NEW,GROUND_BEAM,GF,"tee: 182+183#1 ends on 170+7C3#2 side A (cover 0.30 x min(D_in, D)) FORMED",,,,HELD,,-0.120 .. -0.090,0.0,tee cover,T-242 tees_mid_span / span ends
+NEW,GROUND_BEAM,GF,"tee: 175+7DE#1 ends on 170+7C3#3 side A (cover 0.30 x min(D_in, D)) FORMED",,,,HELD,,-0.120 .. -0.120,0.0,tee cover,T-242 tees_mid_span / span ends
+NEW,GROUND_BEAM,GF,"tee: 180D+180E#1 ends on 175+7DE#1 (cover 0.30 x min(D_in, D)) FORMED",,,,HELD,,-0.120 .. -0.090,0.0,tee cover,T-242 tees_mid_span / span ends
+NEW,GROUND_BEAM,GF,"tee: 17E+17F#1 ends on 176+7E6#1 (cover 0.30 x min(D_in, D)) FORMED",,,,HELD,,-0.120 .. -0.090,0.0,tee cover,T-242 tees_mid_span / span ends
+NEW,GROUND_BEAM,GF,"tee: 180+181#1 ends on 176+7E6#1 (cover 0.30 x min(D_in, D)) FORMED",,,,HELD,,-0.120 .. -0.090,0.0,tee cover,T-242 tees_mid_span / span ends
+NEW,GROUND_BEAM,GF,"tee: 180D+180E#1 ends on 176+7E6#1 (cover 0.30 x min(D_in, D)) FORMED",,,,HELD,,-0.120 .. -0.090,0.0,tee cover,T-242 tees_mid_span / span ends
+NEW,GROUND_BEAM,GF,"tee: 175+7DE#1 ends on 177+7CD#1 (cover 0.30 x min(D_in, D)) FORMED",,,,HELD,,-0.120 .. -0.120,0.0,tee cover,T-242 tees_mid_span / span ends
+NEW,GROUND_BEAM,GF,"tee: 176+7E6#1 ends on 177+7CD#1 (cover 0.30 x min(D_in, D)) FORMED",,,,HELD,,-0.120 .. -0.120,0.0,tee cover,T-242 tees_mid_span / span ends
+NEW,GROUND_BEAM,GF,"tee: 7DC+7DD#2 ends on 177+7CD#1 (cover 0.30 x min(D_in, D)) FORMED",,,,HELD,,-0.120 .. -0.120,0.0,tee cover,T-242 tees_mid_span / span ends
+NEW,GROUND_BEAM,GF,"tee: 7E7+7E8#2 ends on 177+7CD#2 (cover 0.30 x min(D_in, D)) FORMED",,,,HELD,,-0.120 .. -0.120,0.0,tee cover,T-242 tees_mid_span / span ends
+NEW,GROUND_BEAM,GF,"tee: 184+7CF#1 ends on 17D+7E4#1 (cover 0.30 x min(D_in, D)) FORMED",,,,HELD,,-0.120 .. -0.120,0.0,tee cover,T-242 tees_mid_span / span ends
+NEW,GROUND_BEAM,GF,"tee: 182+183#1 ends on 17E+17F#1 (cover 0.30 x min(D_in, D)) FORMED",,,,HELD,,-0.120 .. -0.090,0.0,tee cover,T-242 tees_mid_span / span ends
+NEW,GROUND_BEAM,GF,"tee: 180+181#1 ends on 180D+180E#1 (cover 0.30 x min(D_in, D)) FORMED",,,,HELD,,-0.120 .. -0.090,0.0,tee cover,T-242 tees_mid_span / span ends
+NEW,GROUND_BEAM,GF,"tee: 7E7+7E8#1 ends on 184+7CF#3 (cover 0.30 x min(D_in, D)) FORMED",,,,HELD,,-0.120 .. -0.120,0.0,tee cover,T-242 tees_mid_span / span ends
+NEW,GROUND_BEAM,GF,"tee: 109+7CB#1 ends on 7D0+FC#1 side B (cover 0.30 x min(D_in, D)) FORMED",,,,ALTERNATIVE,-0.12,,-0.12,tee cover,T-242 tees_mid_span / span ends
+NEW,GROUND_BEAM,GF,"tee: 17D+7E4#1 ends on 7D0+FC#2 side B (cover 0.30 x min(D_in, D)) FORMED",,,,HELD,,-0.120 .. -0.120,0.0,tee cover,T-242 tees_mid_span / span ends
+NEW,GROUND_BEAM,GF,"tee: 17B+7E5#1 ends on 7D0+FC#3 side B (cover 0.30 x min(D_in, D)) FORMED",,,,HELD,,-0.120 .. -0.090,0.0,tee cover,T-242 tees_mid_span / span ends
+NEW,GROUND_BEAM,GF,"tee: 7E1+7E2#1 ends on 7DC+7DD#1 (cover 0.30 x min(D_in, D)) FORMED",,,,HELD,,-0.120 .. -0.120,0.0,tee cover,T-242 tees_mid_span / span ends
+NEW,GROUND_BEAM,GF,"tee: 184+7CF#3 ends on 7E0+FD#1 side B (cover 0.30 x min(D_in, D)) FORMED",,,,HELD,,-0.180 .. -0.120,0.0,tee cover,T-242 tees_mid_span / span ends
+NEW,GROUND_BEAM,GF,"tee: 17C+7E3#1 ends on 7E1+7E2#1 (cover 0.30 x min(D_in, D)) FORMED",,,,HELD,,-0.120 .. -0.120,0.0,tee cover,T-242 tees_mid_span / span ends
+NEW,GROUND_BEAM,GF,"tee: 17D+7E4#1 ends on 7E1+7E2#1 (cover 0.30 x min(D_in, D)) FORMED",,,,HELD,,-0.120 .. -0.120,0.0,tee cover,T-242 tees_mid_span / span ends
+NEW,GROUND_BEAM,GF,"tee: 114+115+7DF#1 ends on 7E7+7E8#2 (cover 0.30 x min(D_in, D)) FORMED",,,,HELD,,-0.120 .. -0.090,0.0,tee cover,T-242 tees_mid_span / span ends
+NEW,GROUND_BEAM,GF,"tee: 177+7CD#2 ends on ARC:157+158 side outer (cover 0.30 x min(D_in, D)) FORMED",,,,HELD,,-0.120 .. -0.090,0.0,tee cover,T-242 tees_mid_span / span ends
+REMOVED,GROUND_BEAM,GF,span 107+7CE#1 L 0.364 exterior sides FORMED,HELD,,,,,,0.0,"T-242 / T-253 / T-230: ground-beam runs re-based (lengths, classes, exterior D 0.95, arcs)",
+REMOVED,GROUND_BEAM,GF,span 109+7CB#1 L 4.400 exterior sides FORMED,HELD,,,,,,0.0,"T-242 / T-253 / T-230: ground-beam runs re-based (lengths, classes, exterior D 0.95, arcs)",
+REMOVED,GROUND_BEAM,GF,span 109+7CB#2 L 4.400 exterior sides FORMED,HELD,,,,,,0.0,"T-242 / T-253 / T-230: ground-beam runs re-based (lengths, classes, exterior D 0.95, arcs)",
+REMOVED,GROUND_BEAM,GF,span 109+7CB#3 L 2.700 exterior sides FORMED,HELD,,,,,,0.0,"T-242 / T-253 / T-230: ground-beam runs re-based (lengths, classes, exterior D 0.95, arcs)",
+REMOVED,GROUND_BEAM,GF,span 10A+7C9#1 L 4.300 exterior sides FORMED,HELD,,,,,,0.0,"T-242 / T-253 / T-230: ground-beam runs re-based (lengths, classes, exterior D 0.95, arcs)",
+REMOVED,GROUND_BEAM,GF,span 10B+7D1#1 L 1.200 exterior sides FORMED,HELD,,,,,,0.0,"T-242 / T-253 / T-230: ground-beam runs re-based (lengths, classes, exterior D 0.95, arcs)",
+REMOVED,GROUND_BEAM,GF,span 10B+7D1#2 L 2.300 exterior sides FORMED,HELD,,,,,,0.0,"T-242 / T-253 / T-230: ground-beam runs re-based (lengths, classes, exterior D 0.95, arcs)",
+REMOVED,GROUND_BEAM,GF,span 114+115+7DF#1 L 2.325 exterior sides FORMED,HELD,,,,,,0.0,"T-242 / T-253 / T-230: ground-beam runs re-based (lengths, classes, exterior D 0.95, arcs)",
+REMOVED,GROUND_BEAM,GF,span 114+115+7DF#2 L 1.000 exterior sides FORMED,HELD,,,,,,0.0,"T-242 / T-253 / T-230: ground-beam runs re-based (lengths, classes, exterior D 0.95, arcs)",
+REMOVED,GROUND_BEAM,GF,span 136+7D5#1 L 6.000 exterior sides FORMED,HELD,,,,,,0.0,"T-242 / T-253 / T-230: ground-beam runs re-based (lengths, classes, exterior D 0.95, arcs)",
+REMOVED,GROUND_BEAM,GF,span 137+138#1 L 2.400 exterior sides FORMED,HELD,,,,,,0.0,"T-242 / T-253 / T-230: ground-beam runs re-based (lengths, classes, exterior D 0.95, arcs)",
+REMOVED,GROUND_BEAM,GF,span 13C+7D9#1 L 1.450 sides FORMED,HELD,,0.870 .. 1.160,,,,0.0,"T-242 / T-253 / T-230: ground-beam runs re-based (lengths, classes, exterior D 0.95, arcs)",
+REMOVED,GROUND_BEAM,GF,span 13D+7D2#1 L 5.800 exterior sides FORMED,HELD,,,,,,0.0,"T-242 / T-253 / T-230: ground-beam runs re-based (lengths, classes, exterior D 0.95, arcs)",
+REMOVED,GROUND_BEAM,GF,span 13E+7D6#1 L 4.300 sides FORMED,HELD,,3.440 .. 3.440,,,,0.0,"T-242 / T-253 / T-230: ground-beam runs re-based (lengths, classes, exterior D 0.95, arcs)",
+REMOVED,GROUND_BEAM,GF,span 13E+7D6#2 L 0.500 sides FORMED,HELD,,0.300 .. 0.400,,,,0.0,"T-242 / T-253 / T-230: ground-beam runs re-based (lengths, classes, exterior D 0.95, arcs)",
+REMOVED,GROUND_BEAM,GF,span 13F+7D3#1 L 4.300 sides FORMED,HELD,,3.440 .. 3.440,,,,0.0,"T-242 / T-253 / T-230: ground-beam runs re-based (lengths, classes, exterior D 0.95, arcs)",
+REMOVED,GROUND_BEAM,GF,span 140+7D7#1 L 4.300 sides FORMED,HELD,,3.440 .. 3.440,,,,0.0,"T-242 / T-253 / T-230: ground-beam runs re-based (lengths, classes, exterior D 0.95, arcs)",
+REMOVED,GROUND_BEAM,GF,span 141+7DA#1 L 1.200 sides FORMED,HELD,,0.720 .. 0.960,,,,0.0,"T-242 / T-253 / T-230: ground-beam runs re-based (lengths, classes, exterior D 0.95, arcs)",
+REMOVED,GROUND_BEAM,GF,span 142+7D8#1 L 2.450 sides FORMED,HELD,,1.470 .. 1.960,,,,0.0,"T-242 / T-253 / T-230: ground-beam runs re-based (lengths, classes, exterior D 0.95, arcs)",
+REMOVED,GROUND_BEAM,GF,span 145+7CA#1 L 1.900 exterior sides FORMED,HELD,,,,,,0.0,"T-242 / T-253 / T-230: ground-beam runs re-based (lengths, classes, exterior D 0.95, arcs)",
+REMOVED,GROUND_BEAM,GF,span 15C+7CC#1 L 2.400 sides FORMED,HELD,,1.440 .. 1.920,,,,0.0,"T-242 / T-253 / T-230: ground-beam runs re-based (lengths, classes, exterior D 0.95, arcs)",
+REMOVED,GROUND_BEAM,GF,span 15D+7C8#1 L 1.900 sides FORMED,HELD,,1.140 .. 1.520,,,,0.0,"T-242 / T-253 / T-230: ground-beam runs re-based (lengths, classes, exterior D 0.95, arcs)",
+REMOVED,GROUND_BEAM,GF,span 15E+15F#1 L 2.700 sides FORMED,HELD,,2.160 .. 2.160,,,,0.0,"T-242 / T-253 / T-230: ground-beam runs re-based (lengths, classes, exterior D 0.95, arcs)",
+REMOVED,GROUND_BEAM,GF,span 16F+7FF#1 L 1.250 sides FORMED,HELD,,0.750 .. 1.000,,,,0.0,"T-242 / T-253 / T-230: ground-beam runs re-based (lengths, classes, exterior D 0.95, arcs)",
+REMOVED,GROUND_BEAM,GF,span 170+7C3#1 L 2.400 exterior sides FORMED,HELD,,,,,,0.0,"T-242 / T-253 / T-230: ground-beam runs re-based (lengths, classes, exterior D 0.95, arcs)",
+REMOVED,GROUND_BEAM,GF,span 170+7C3#2 L 3.370 exterior sides FORMED,HELD,,,,,,0.0,"T-242 / T-253 / T-230: ground-beam runs re-based (lengths, classes, exterior D 0.95, arcs)",
+REMOVED,GROUND_BEAM,GF,span 170+7C3#3 L 3.350 exterior sides FORMED,HELD,,,,,,0.0,"T-242 / T-253 / T-230: ground-beam runs re-based (lengths, classes, exterior D 0.95, arcs)",
+REMOVED,GROUND_BEAM,GF,span 170+7C3#4 L 3.250 exterior sides FORMED,HELD,,,,,,0.0,"T-242 / T-253 / T-230: ground-beam runs re-based (lengths, classes, exterior D 0.95, arcs)",
+REMOVED,GROUND_BEAM,GF,span 175+7DE#1 L 3.750 sides FORMED,HELD,,3.000 .. 3.000,,,,0.0,"T-242 / T-253 / T-230: ground-beam runs re-based (lengths, classes, exterior D 0.95, arcs)",
+REMOVED,GROUND_BEAM,GF,span 176+7E6#1 L 3.750 sides FORMED,HELD,,3.000 .. 3.000,,,,0.0,"T-242 / T-253 / T-230: ground-beam runs re-based (lengths, classes, exterior D 0.95, arcs)",
+REMOVED,GROUND_BEAM,GF,span 177+7CD#1 L 4.970 sides FORMED,HELD,,5.964 .. 5.964,,,,0.0,"T-242 / T-253 / T-230: ground-beam runs re-based (lengths, classes, exterior D 0.95, arcs)",
+REMOVED,GROUND_BEAM,GF,span 177+7CD#2 L 1.537 sides FORMED,HELD,,0.922 .. 1.229,,,,0.0,"T-242 / T-253 / T-230: ground-beam runs re-based (lengths, classes, exterior D 0.95, arcs)",
+REMOVED,GROUND_BEAM,GF,span 178+7DB#1 L 3.800 exterior sides FORMED,HELD,,,,,,0.0,"T-242 / T-253 / T-230: ground-beam runs re-based (lengths, classes, exterior D 0.95, arcs)",
+REMOVED,GROUND_BEAM,GF,span 17B+7E5#1 L 1.200 sides FORMED,HELD,,0.720 .. 0.960,,,,0.0,"T-242 / T-253 / T-230: ground-beam runs re-based (lengths, classes, exterior D 0.95, arcs)",
+REMOVED,GROUND_BEAM,GF,span 17C+7E3#1 L 1.928 sides FORMED,HELD,,1.157 .. 1.542,,,,0.0,"T-242 / T-253 / T-230: ground-beam runs re-based (lengths, classes, exterior D 0.95, arcs)",
+REMOVED,GROUND_BEAM,GF,span 17D+7E4#1 L 4.272 sides FORMED,HELD,,3.418 .. 3.418,,,,0.0,"T-242 / T-253 / T-230: ground-beam runs re-based (lengths, classes, exterior D 0.95, arcs)",
+REMOVED,GROUND_BEAM,GF,span 17E+17F#1 L 2.427 sides FORMED,HELD,,1.456 .. 1.942,,,,0.0,"T-242 / T-253 / T-230: ground-beam runs re-based (lengths, classes, exterior D 0.95, arcs)",
+REMOVED,GROUND_BEAM,GF,span 180+181#1 L 0.789 sides FORMED,HELD,,0.473 .. 0.631,,,,0.0,"T-242 / T-253 / T-230: ground-beam runs re-based (lengths, classes, exterior D 0.95, arcs)",
+REMOVED,GROUND_BEAM,GF,span 180D+180E#1 L 2.100 exterior sides FORMED,HELD,,,,,,0.0,"T-242 / T-253 / T-230: ground-beam runs re-based (lengths, classes, exterior D 0.95, arcs)",
+REMOVED,GROUND_BEAM,GF,span 1811+1812#1 L 1.300 exterior sides FORMED,HELD,,,,,,0.0,"T-242 / T-253 / T-230: ground-beam runs re-based (lengths, classes, exterior D 0.95, arcs)",
+REMOVED,GROUND_BEAM,GF,span 182+183#1 L 2.073 sides FORMED,HELD,,1.244 .. 1.659,,,,0.0,"T-242 / T-253 / T-230: ground-beam runs re-based (lengths, classes, exterior D 0.95, arcs)",
+REMOVED,GROUND_BEAM,GF,span 184+7CF#1 L 3.020 sides FORMED,HELD,,2.416 .. 2.416,,,,0.0,"T-242 / T-253 / T-230: ground-beam runs re-based (lengths, classes, exterior D 0.95, arcs)",
+REMOVED,GROUND_BEAM,GF,span 184+7CF#2 L 2.650 D 0.40 sides FORMED,ALTERNATIVE,2.12,,,,,-2.12,"T-242 / T-253 / T-230: ground-beam runs re-based (lengths, classes, exterior D 0.95, arcs)",
+REMOVED,GROUND_BEAM,GF,span 184+7CF#3 L 5.000 sides FORMED,HELD,,4.000 .. 6.000,,,,0.0,"T-242 / T-253 / T-230: ground-beam runs re-based (lengths, classes, exterior D 0.95, arcs)",
+REMOVED,GROUND_BEAM,GF,span 185+7C7#1 L 0.600 exterior sides FORMED,HELD,,,,,,0.0,"T-242 / T-253 / T-230: ground-beam runs re-based (lengths, classes, exterior D 0.95, arcs)",
+REMOVED,GROUND_BEAM,GF,span 7D0+FC#1 L 2.975 exterior sides FORMED,HELD,,,,,,0.0,"T-242 / T-253 / T-230: ground-beam runs re-based (lengths, classes, exterior D 0.95, arcs)",
+REMOVED,GROUND_BEAM,GF,span 7D0+FC#2 L 5.745 exterior sides FORMED,HELD,,,,,,0.0,"T-242 / T-253 / T-230: ground-beam runs re-based (lengths, classes, exterior D 0.95, arcs)",
+REMOVED,GROUND_BEAM,GF,span 7D0+FC#3 L 6.350 exterior sides FORMED,HELD,,,,,,0.0,"T-242 / T-253 / T-230: ground-beam runs re-based (lengths, classes, exterior D 0.95, arcs)",
+REMOVED,GROUND_BEAM,GF,span 7D0+FC#4 L 1.200 exterior sides FORMED,HELD,,,,,,0.0,"T-242 / T-253 / T-230: ground-beam runs re-based (lengths, classes, exterior D 0.95, arcs)",
+REMOVED,GROUND_BEAM,GF,span 7D4+F8#1 L 5.450 exterior sides FORMED,HELD,,,,,,0.0,"T-242 / T-253 / T-230: ground-beam runs re-based (lengths, classes, exterior D 0.95, arcs)",
+REMOVED,GROUND_BEAM,GF,span 7D4+F8#2 L 4.250 exterior sides FORMED,HELD,,,,,,0.0,"T-242 / T-253 / T-230: ground-beam runs re-based (lengths, classes, exterior D 0.95, arcs)",
+REMOVED,GROUND_BEAM,GF,span 7DC+7DD#1 L 3.525 sides FORMED,HELD,,2.820 .. 2.820,,,,0.0,"T-242 / T-253 / T-230: ground-beam runs re-based (lengths, classes, exterior D 0.95, arcs)",
+REMOVED,GROUND_BEAM,GF,span 7DC+7DD#2 L 3.525 D 0.40 sides FORMED,ALTERNATIVE,2.82,,,,,-2.82,"T-242 / T-253 / T-230: ground-beam runs re-based (lengths, classes, exterior D 0.95, arcs)",
+REMOVED,GROUND_BEAM,GF,span 7E0+FD#1 L 3.350 exterior sides FORMED,HELD,,,,,,0.0,"T-242 / T-253 / T-230: ground-beam runs re-based (lengths, classes, exterior D 0.95, arcs)",
+REMOVED,GROUND_BEAM,GF,span 7E0+FD#2 L 3.250 exterior sides FORMED,HELD,,,,,,0.0,"T-242 / T-253 / T-230: ground-beam runs re-based (lengths, classes, exterior D 0.95, arcs)",
+REMOVED,GROUND_BEAM,GF,span 7E1+7E2#1 L 6.720 sides FORMED,HELD,,8.064 .. 8.064,,,,0.0,"T-242 / T-253 / T-230: ground-beam runs re-based (lengths, classes, exterior D 0.95, arcs)",
+REMOVED,GROUND_BEAM,GF,span 7E7+7E8#1 L 3.525 D 0.40 sides FORMED,ALTERNATIVE,2.82,,,,,-2.82,"T-242 / T-253 / T-230: ground-beam runs re-based (lengths, classes, exterior D 0.95, arcs)",
+REMOVED,GROUND_BEAM,GF,span 7E7+7E8#2 L 3.525 sides FORMED,HELD,,2.820 .. 2.820,,,,0.0,"T-242 / T-253 / T-230: ground-beam runs re-based (lengths, classes, exterior D 0.95, arcs)",
+REMOVED,GROUND_BEAM,GF,span 7E9+7EA#1 L 4.225 D 0.40 sides FORMED,ALTERNATIVE,3.38,,,,,-3.38,"T-242 / T-253 / T-230: ground-beam runs re-based (lengths, classes, exterior D 0.95, arcs)",
+REMOVED,GROUND_BEAM,GF,tee junctions: carrier side covered by the end of a released span (FORMED only),ALTERNATIVE,-0.24,,,,,0.24,"T-242 / T-253 / T-230: ground-beam runs re-based (lengths, classes, exterior D 0.95, arcs)",
+REMOVED,GROUND_BEAM,GF,"curved band A-139/13A (annex quarter circle, 1.731 m, EXT)",HELD,,,,,,0.0,"T-242 / T-253 / T-230: ground-beam runs re-based (lengths, classes, exterior D 0.95, arcs)",
+REMOVED,GROUND_BEAM,GF,"curved band A-157/158 round the pool (about 7.0 m, EXT)",HELD,,,,,,0.0,"T-242 / T-253 / T-230: ground-beam runs re-based (lengths, classes, exterior D 0.95, arcs)",
+REMOVED,GROUND_BEAM,GF,span 145/7CA second piece (S5 0.40 + 2.30),NOT_APPLICABLE,,,,,,0.0,"T-242 / T-253 / T-230: ground-beam runs re-based (lengths, classes, exterior D 0.95, arcs)",
+REMOVED,STRAP,FDN,"SB1 70 x 50 sides FORMED, L candidates 4.550",HELD,,4.550 .. 4.550,,,,0.0,T-174: straps on their axis length; covered footing faces by chord,
+REMOVED,STRAP,FDN,"SB2 100 x 50 sides FORMED, L candidates 2.293 / 1.828",HELD,,1.828 .. 2.293,,,,0.0,T-174: straps on their axis length; covered footing faces by chord,
+REMOVED,STRAP,FDN,"SB3 50 x 40 sides FORMED, L candidates 3.258 / 2.838",HELD,,2.270 .. 2.606,,,,0.0,T-174: straps on their axis length; covered footing faces by chord,
+NEW,BOUNDARY,GF,"boundary G.B 20 x 40 at N.G., 5 runs 44.07 m, two faces FORMED",,,,ALTERNATIVE,35.256,,35.256,T-253 DRAWING-CONFIRMED,S-BOUN 7FE / 7FC / 810; ST p.14 A-A
+NEW,BOUNDARY,GF,"boundary G.B 20 x 40 at N.G., 5 runs 44.07 m, two faces EARTH_CAST",,,,ALTERNATIVE,0.0,,0.0,T-253 DRAWING-CONFIRMED,S-BOUN 7FE / 7FC / 810; ST p.14 A-A
+NEW,BOUNDARY,GF,boundary G.B run 810#1 west end face (against annex beam 10B or the brick under it),,,,HELD,,0.000 .. 0.080,0.0,T-253 810#1 end HELD,810; 10B
+NEW,BOUNDARY,GF,boundary columns 20 x 30 through the G.B: line split only,,,,INFO,,,0.0,T-253 M4,ST p.14 'SEE ARCH PLAN'
+REMOVED,BOUNDARY,GF,"M3 boundary-wall ground beam 20 x 40 at N.G. level, 44.07 m, sides FORMED",HELD,,35.256 .. 35.256,,,,0.0,T-253: boundary G.B concrete DRAWING-CONFIRMED -> OQ-10 pair,
+CHANGED,COLUMN,GF,COL-GF-14 C3 0.25 x 0.50 shaft to the controlling soffit h 3.75,CALCULATED,5.626,,HELD,,5.251 .. 5.626,-5.626,T-248 / T-256 section CONFLICT,
+CHANGED,COLUMN,GF,COL-GF-23 C8 0.25 x 0.90 shaft to the controlling soffit h 3.33 .. 3.75,HELD,,7.667 .. 8.626,HELD,,7.000 .. 8.626,0.0,T-248 / T-256 section CONFLICT,
+CHANGED,COLUMN,GF,COL-GF-24 C 0.20 x 0.50 shaft to the controlling soffit h 3.75,CALCULATED,5.25,,HELD,,4.500 .. 5.250,-5.25,T-248 / T-256 section CONFLICT,
+CHANGED,COLUMN,GF,COL-GF-30 C 0.20 x 0.50 shaft to the controlling soffit h 3.75,CALCULATED,5.25,,HELD,,4.500 .. 5.250,-5.25,T-248 / T-256 section CONFLICT,
+CHANGED,COLUMN,1F,COL-1F-31 C4 0.20 x 0.50 shaft to the controlling soffit h 3.45,CALCULATED,4.83,,HELD,,4.830 .. 5.175,-4.83,T-248 / T-256 section CONFLICT,
+CHANGED,COLUMN,1F,COL-1F-32 C5 0.20 x 0.50 shaft to the controlling soffit h 3.70,CALCULATED,5.18,,HELD,,5.180 .. 6.290,-5.18,T-248 / T-256 section CONFLICT,
+CHANGED,COLUMN,1F,COL-1F-33 C4 0.20 x 0.50 shaft to the controlling soffit h 3.70,CALCULATED,5.18,,HELD,,5.180 .. 5.550,-5.18,T-248 / T-256 section CONFLICT,
+CHANGED,COLUMN,1F,COL-1F-36 C3 0.20 x 0.50 shaft to the controlling soffit h 3.80,HELD,,5.320 .. 5.320,HELD,,5.320 .. 5.700,0.0,T-248 / T-256 section CONFLICT,
+CHANGED,COLUMN,1F,COL-1F-39 C9 0.20 x 0.90 shaft to the controlling soffit h 3.45,CALCULATED,7.59,,HELD,,7.590 .. 8.280,-7.59,T-248 / T-256 section CONFLICT,
+CHANGED,COLUMN,1F,COL-1F-40 C7 0.20 x 0.80 shaft to the controlling soffit h 3.45,HELD,,6.900 .. 6.900,HELD,,6.900 .. 7.245,0.0,T-248 / T-256 section CONFLICT,
+CHANGED,COLUMN,1F,COL-1F-41 C9 0.20 x 0.90 shaft to the controlling soffit h 3.45,CALCULATED,7.59,,HELD,,7.590 .. 8.625,-7.59,T-248 / T-256 section CONFLICT,
+CHANGED,COLUMN,1F,COL-1F-44 C6 0.20 x 0.60 shaft to the controlling soffit h 3.70,CALCULATED,5.92,,HELD,,5.920 .. 7.030,-5.92,T-248 / T-256 section CONFLICT,
+CHANGED,COLUMN,1F,COL-1F-45 C5 0.20 x 0.50 shaft to the controlling soffit h 3.70,HELD,,5.180 .. 5.180,HELD,,5.180 .. 5.920,0.0,T-248 / T-256 section CONFLICT,
+CHANGED,COLUMN,1F,COL-1F-47 C5 0.20 x 0.50 shaft to the controlling soffit h 3.45,CALCULATED,4.83,,HELD,,4.830 .. 5.865,-4.83,T-248 / T-256 section CONFLICT,
+CHANGED,COLUMN,1F,COL-1F-48 C8 0.20 x 0.90 shaft to the controlling soffit h 3.07 .. 3.45,HELD,,6.747 .. 7.590,HELD,,6.440 .. 7.590,0.0,T-248 / T-256 section CONFLICT,
+CHANGED,COLUMN,2F,COL-2F-51 C2 0.20 x 0.50 shaft to the controlling soffit h 3.45,CALCULATED,4.83,,HELD,, .. 4.830,-4.83,T-248 D-39 roof datum,
+CHANGED,COLUMN,2F,COL-2F-53 C1 0.20 x 0.50 shaft to the controlling soffit h 3.80,CALCULATED,5.32,,HELD,, .. 5.320,-5.32,T-248 D-39 roof datum,
+CHANGED,COLUMN,2F,COL-2F-54 C2 0.20 x 0.50 shaft to the controlling soffit h 3.80,CALCULATED,5.32,,HELD,, .. 5.320,-5.32,T-248 D-39 roof datum,
+CHANGED,COLUMN,1F,COL-1F-57 P.C 20x70 0.20 x 0.70 shaft to the controlling soffit h 3.45,HELD,,6.210 .. 6.210,CALCULATED,6.21,,6.21,T-248 planted column from its slab top,
+CHANGED,COLUMN,1F,COL-1F-58 P.C 20x50 0.20 x 0.50 shaft to the controlling soffit h 3.45,HELD,,4.830 .. 4.830,HELD,,4.830 .. 4.830,0.0,T-248 cause updated,
+CHANGED,COLUMN,2F,COL-2F-59 P.C 20x50 0.20 x 0.50 shaft to the controlling soffit h 3.45,HELD,,4.830 .. 4.830,HELD,,4.140 .. 4.830,0.0,T-248 cause updated,
+REMOVED,COLUMN,1F,undrawn column 1F C3 (one of 3 on the engine),NOT_APPLICABLE,0.0,,,,,0.0,"T-256 NOT_PRESENT (R-COLUMN-EVIDENCE-1): the line leaves with its source, never a 0 line",
+REMOVED,COLUMN,2F,undrawn column 2F C3 (a),NOT_APPLICABLE,0.0,,,,,0.0,"T-256 NOT_PRESENT (R-COLUMN-EVIDENCE-1): the line leaves with its source, never a 0 line",
+REMOVED,COLUMN,2F,undrawn column 2F C3 (b),NOT_APPLICABLE,0.0,,,,,0.0,"T-256 NOT_PRESENT (R-COLUMN-EVIDENCE-1): the line leaves with its source, never a 0 line",
+REMOVED,COLUMN,2F,undrawn column 2F C5,NOT_APPLICABLE,0.0,,,,,0.0,"T-256 NOT_PRESENT (R-COLUMN-EVIDENCE-1): the line leaves with its source, never a 0 line",
+REMOVED,COLUMN,2F,undrawn column 2F C8,NOT_APPLICABLE,0.0,,,,,0.0,"T-256 NOT_PRESENT (R-COLUMN-EVIDENCE-1): the line leaves with its source, never a 0 line",
+CHANGED,BEAM,GF,GF roof slab (p.4) beam soffits,CALCULATED,55.966,,CALCULATED,56.357303,,0.391303,T-252 R-BEAM-CURVED-AREA-2: ring B7 soffit,
+CHANGED,BEAM,GF,GF roof slab (p.4) beam sides below the slab,CALCULATED,166.46,,CALCULATED,171.368085,,4.908085,T-252 ring B7 sides on its arcs,
+REMOVED,BEAM,GF,GF roof slab (p.4) beam_side faces next to RING_MIX (6.463 m),HELD,,0.000 .. 3.813,,,,0.0,"T-252: the RING_MIX face is split into ring (B7, measured) and void; nothing held",
+REMOVED,SLAB_EDGE,GF,GF roof slab (p.4) edge faces next to RING_MIX (1.215 m),HELD,,0.000 .. 0.194,,,,0.0,"T-252: the RING_MIX face is split into ring (B7, measured) and void; nothing held",
+CHANGED,JOINT,GF,"GF roof slab (p.4) column joint faces, 3 DRAWING-CONFIRMED columns whose stated section cannot be placed on the drawn faces",HELD,,1.003 .. 1.180,HELD,,0.885 .. 1.180,0.0,T-256 section CONFLICT joints,
+CHANGED,SLAB_EDGE,GF,GF roof slab (p.4) slab-thickness band at every free edge (plate perimeter and openings),CALCULATED,13.92,,CALCULATED,15.055032,,1.135032,T-252 void band owned by the ring / CB1,
+CHANGED,JOINT,1F,"1F roof slab (p.5) column joint faces left open by beams, 12 DRAWING-CONFIRMED columns at the STATED section (column face to slab / outside: D_ctrl - t; under a shallower beam: D_ctrl - D_beam; the beam's own width only)",CALCULATED,4.454,,CALCULATED,2.214828,,-2.239172,T-248 / T-256 joints,
+NEW,JOINT,1F,"1F column joint faces of 7 section-CONFLICT columns (COL-1F-31, COL-1F-32, COL-1F-33, COL-1F-39, COL-1F-41, COL-1F-44, COL-1F-47)",,,,HELD,,3.006 .. 3.496,0.0,T-248 / T-256 section CONFLICT,
+CHANGED,JOINT,1F,1F roof slab (p.5) joint faces of HELD columns,HELD,,1.859 .. 1.859,HELD,,1.092 .. 1.092,0.0,T-248 planted column released from the held joints,
+CHANGED,SLAB_EDGE,GF,"pool-court void (3.690 m2 inside the B7 ring), slab-thickness band",HELD,,1.090 .. 1.210,OWNED_BY_OTHER_LINE,,,0.0,T-252: pool-court band owned by the ring / CB1,
