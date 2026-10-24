@@ -1,15 +1,38 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
 Plain words, no task numbers. Measured numbers come from SCOREBOARD.md; anything not measured says so.
-Last update: 2026-10-24 06:15 UTC (Lead). Previous version: 2026-10-24 04:15 UTC. The released numbers did not change
+Last update: 2026-10-24 08:15 UTC (Lead). Previous version: 2026-10-24 06:15 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released default V2.9 + route G untouched). Your measure (17:50):
 whole BOQ lines independently verified, and trades that can be scored. Today: still 0 whole lines verified in any
-trade. PARTIALLY VERIFIED: footings, blinding, beams, ground beams, columns. Closest to a first whole verified line:
-the slabs (the checker measured all 62 panels himself, 60.28 m3; the candidate is 0.64 m3 higher because of 13 pieces
-that belong to beams and edges): that move is now the next integration step. The red family-register test is fixed
-and green. No new question for you; the curved first-floor window question is still open.
+trade. PARTIALLY VERIFIED: footings, blinding, beams, ground beams, columns. The slab line (the closest to a first
+whole verified line) is being moved into the candidate now. No new question for you; the curved first-floor window
+question is still open.
 
-Since 04:15 (newest first):
+Since 06:15 (newest first):
+- Ground beams: the checker measured the boundary ground beam himself from the drawing (5 runs, 44.07 m, 20 x 40 cm at
+  natural ground): 3.53 m3, the same to the litre. Neither our released run nor the candidate has it today (a real
+  omission); the freelancer has it at a bigger section (7.56 m3). He also confirmed, from five printed level marks, that
+  the outer ground around the main house is natural ground +-0.00 (the +0.15 in the courts is paving): that makes the
+  main-house exterior ground beams 0.95 m deep, 15.96 m3, drawing-confirmed (he measured 6 of the 17 runs himself; the
+  rest rest on geometry he verified earlier). The annex depth still conflicts between two prints and stays a range.
+  Checked and merged; going into the candidate next after the slab move.
+- Columns: the 15 columns whose drawn size differs from the schedule stay a range (8.03 .. 10.12 m3): no third
+  drawing settles any of them; they go to the designer (two under the existing item, 13 under a new one). Five upper
+  columns that the released run carries (2.27 m3) are drawn on no floor plan at all: they will be removed from the
+  candidate as "not present", never shown as 0. Checked and merged.
+- Test-infrastructure follow-ups: checked and merged; nothing in the quantities moved.
+- Handed in, waiting for the checker: waterproofing under the footings, drawn on the structural sections but in no BOQ
+  line and no freelancer row (membrane 109.85 m2 + protective screed 5.49 m3, plus the lift-pit layers); the wall-face
+  crosswalk for plaster / paint (every metre of the 465.39 m room perimeter placed on its wall); the block-wall
+  register (oldest, first in the checker's next run).
+- Found: four windows / doors are linked to the wrong room by name (no total changes today, but room-by-room
+  deductions would be wrong): a geometric fix is now first in the architectural lane. The candidate also releases one
+  stair flight computed on a standard riser and waist that no drawing prints, while it holds stair parts the checker
+  already verified: a correction is queued behind the stairs check.
+- New work: waterproofing of all buried concrete (drawn, not yet measured), formwork for the members that changed,
+  and ground-beam reinforcement by bar count.
+
+Earlier, since 04:15 (newest first):
 - Footings in the candidate: one footing drawn as a single outline but labelled with two schedule types is now held as
   a range of both drawing readings (2.18 .. 2.28 m3) instead of one label's value; the freelancer's 1.96 m3 sits below
   both (designer question already open). The candidate's released footings are now exactly the 25 footings the checker

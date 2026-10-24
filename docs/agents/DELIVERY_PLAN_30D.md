@@ -46,7 +46,17 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
-## Status (Lead, 2026-10-24 06:15; re-estimated each run from what merged and was verified)
+## Status (Lead, 2026-10-24 08:15; re-estimated each run from what merged and was verified)
+
+Lead 2026-10-24 08:15: since 06:15 the Checker merged 3 (T-253 boundary / exterior ground beams, T-210 guard
+follow-ups, T-256 column evidence), rejected 0; READY 3 (T-228 blockwork register v2, T-250 face crosswalk, T-219
+foundation waterproofing); T-258 (stairs / domes closable split) evidence complete, waiting for READY <= 2. Verified
+whole lines still 0 / 13. P-03: the slab / beam package (T-146 + T-247) is being built (claimed 07:01) and stays the
+Week-1 path (27 Oct: on track if it passes Gate B by 26 Oct). P-05 / P-08 / P-10: CONC.GROUND gained a drawing-confirmed
+boundary beam (3.5256 m3, missing in both runs) and a confirmed outer-ground datum; candidate fix T-254 now has every
+input merged; formwork r4 (T-264) and ground-beam rebar (T-265) added for the changed members. P-11 / missing scope:
+foundation waterproofing handed in (T-219), buried-concrete coat added (T-263). Drawing interpretation: opening-to-room
+by geometry (T-262, gate 1). No milestone re-dated.
 
 Lead 2026-10-24 06:15: since 04:15 the Checker merged 3 (T-251 gate-0 fix, T-252 CONC.BEAM r2, T-239 Gate B V3.0.11
 footing two-tag CONFLICT), rejected 0; READY 3 (T-253 boundary / exterior ground beams, T-228 blockwork register v2,

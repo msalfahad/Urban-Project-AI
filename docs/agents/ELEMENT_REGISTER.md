@@ -46,6 +46,21 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+### Lead 2026-10-24 08:15 (from T-253, T-210, T-256 MERGED; T-250, T-219 READY; T-258 evidence complete; new T-262 .. T-266)
+
+| Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |
+|---|---|---|---|---|---|
+| Boundary ground beam G.B at N.G. (p.14, 20 x 40), 5 runs 44.07 m (outlines 7FE / 7FC / 810) | concrete ground beam, fence / court-wall footing, blockwork above, formwork, rebar, buried-concrete waterproofing | CONC.GROUND (one line; the boundary wall above is BLOCKWORK) | DRAWING-CONFIRMED 3.5256 m3 (Checker 07:20 own 8.8140 m2 x 0.40, 0.0 %); beam-line share HELD 0.024 m3 per undrawn 20 x 30 column (M4) | T-253 MERGED dff9cb79 | ENGINE omission in A and V3.0.11 -> T-254; formwork T-264; rebar T-265 (or no rebar line if p.14 prints plain concrete); coat T-263 |
+| Main-house exterior ground beams, 16 runs + ring, depth 0.95 (structural top +0.95 - outer ground +-0.00) | concrete ground beam, blockwork plinth, external plaster plinth, formwork, waterproofing | CONC.GROUND | DRAWING-CONFIRMED proposal 15.960 m3; 6 / 17 runs Checker own-measured (6.5180 m3), 11 on the T-242 geometry he verified 01:21 | T-253 MERGED; D-35 read on 5 printed readings | not VERIFIED until every run is own-measured (T-180 slot); annex literal 0.25 m CONFLICT (2.228) and court 3 runs HELD 0.627 .. 1.410 stay |
+| Five upper column lines (10E4 at 1F / 2F, 10C5, 10BD, 10E0 at 2F) | concrete column, formwork, rebar | none (NOT_PRESENT) | DRAWING-CONFIRMED absence (Checker 07:52, 5 / 5 positions searched) | T-256 MERGED 74c966b1; D-65 confirmation only | remove 2.268 m3 from the candidate (T-254), never a 0 line; their formwork leaves with them (T-264) |
+| Fifteen CONFLICT columns (GF RS 347, 359, 344, 380; 1F RS 691, 676, 697, 673, 694, 685, 688, 68E, 69A, 679, 667) | concrete column, formwork, rebar | CONC.COLUMN | CONFLICT 8.034 .. 10.119 m3 (both readings, never the larger end) | T-256 MERGED (15 / 15 outlines Checker own) | D-16 (380, 69A) and NEW D-66 (the other 13) |
+| Footing underlay: 2 cm membrane + 5 cm protection screed under each footing outline (ST p.13) | waterproofing, concrete footing, blinding | WATERPROOFING (membrane m2 and screed m3 as their own lines); the 10 cm blinding stays CONC.BLINDING | DRAWING-CONFIRMED proposal 109.85 m2 + 5.4925 m3 on 24 outlines; F10 / F 4.55 .. 4.64 m2 HELD (1B1B conflict) | T-219 READY 07:54 | footing sides liquid 80.04 vs sheet 93.03 m2 HELD (formation-selected detail); procurement HELD (product not printed) |
+| Waterproofing of all buried concrete (ground-beam faces, necks, footing sides, pit walls) | waterproofing, concrete, backfill | WATERPROOFING | UNMEASURED (no line in any state; drawn per T-219) | T-219 finding | T-263; the underlay face is never also a side coat |
+| Opening -> room assignment (W06 in GF-13 wedge B; W19, W20; west-bath doors) | doors / windows, plaster, paint, skirting, tiles, wet-room scope | the opening's own line (DOORS / WINDOWS) holds the m2; each per-room deduction reads the room by jamb geometry | LABEL_WRONG on 4+ openings (no trade total moves today) | T-250 READY | T-262 (geometric join, a check over every opening) |
+| GF-16 room region over two wall strips | floor area, plaster, paint, skirting | FLOOR AREA / the wall face once | one face counted twice (equal lengths, so 0 m2 today, to be shown per trade) | T-250 READY | T-262 |
+| Stair flight ST-03 (candidate V3.0.11) | concrete stair, finishes (treads / risers), formwork | CONC.STAIR_DOME | candidate RELEASES 0.948 m3 on a convention riser 0.165 / waist 0.175 (no print): ENGINE_WRONG basis; steps HELD until printed | T-258 evidence (CLAIMED, hand-in pending) | T-266 after T-258 MERGED |
+| Landing piece MS2-LD | concrete stair, concrete slab | CONC.STAIR_DOME (R-CONC-OWN-1) | 0.4696 m3 (the 0.0096 m3 that overlapped the verified flight removed once) | T-258 evidence | Checker Gate A on T-258 |
+
 ### Lead 2026-10-24 06:15 (from T-252, T-239 MERGED; T-253, T-228, T-210 READY; new T-258, T-260, T-261)
 
 | Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |
