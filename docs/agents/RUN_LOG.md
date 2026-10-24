@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-24T17:50Z | Verifier | STARTED | run session_01S2cXP6gaRrvZ1fMZeQn1Uv | repo-attached routine | task state: T-263 READY (per run log) | self-check pending
 - 2026-10-24T17:39:50Z | Worker 2 | STARTED | run session_01Ju18YGrQP25tmhmoL7YDZR | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-24T17:21Z | Worker 1 | STARTED | run session_01Fpb22Ztk6ccHgMx1KuMekd | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-24 17:15 UTC | Worker 2 | SUCCESS | T-263 READY @ 2d6ebfa9 (buried-concrete liquid waterproofing, per face) | Ground-beam buried faces 35.404 m2 DRAWING-CONFIRMED (interior 11.342 + main exterior inner faces 24.063) vs freelancer no row and engine no line (-35.404 m2 each, missing category); 14 main exterior outer faces EXCLUDED (soffit at natural ground: plinth faces), soffits on blinding excluded; footing tops 104.72..104.75 m2 and necks 55.6..55.8 m2/m HELD (Q-21 C formation / neck height); boundary G.B, straps HELD on note scope; T-219 faces not counted twice. Learned: 'in contact with earth' is a per-face height, not 'all buried members'. ERS: read, s.2 / s.3 / s.4 / s.7 applied. | self-check codemap PASS, pytest t061 PASS, freeze PASS; full suite NEW 0 after map rebuild (KNOWN 395); problem: none
