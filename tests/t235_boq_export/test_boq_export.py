@@ -78,7 +78,7 @@ def test_synthetic_villa_rows_states_and_classes(tmp_path):
         ("MEASURED UNVERIFIED", "0.000000", "4.000000")
     assert {r["project_id"] for r in rows} == {PID} and {r["candidate_version"] for r in rows} == {CVER}
     assert all(r["verdict_status"] == "NONE" for r in rows)
-    assert "none (T-236 not merged)" in m["completeness_input"]
+    assert "none given" in m["completeness_input"]
 
 
 def test_open_convention_range_on_a_quantity_line_is_kept(tmp_path):
