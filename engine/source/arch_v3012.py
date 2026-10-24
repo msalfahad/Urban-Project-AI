@@ -73,7 +73,7 @@ HELD_STATUS = ("HELD", "UNKNOWN")
 LIVE_EVIDENCE = A307.LIVE_EVIDENCE
 MAX_RUN_M3 = 50.0                       # one beam run above this is a unit slip (cm / mm given as m), refused
 TOL_M3 = 1e-6                           # a record recomputed from its own base and adjustments
-TOL_KEEP_M3 = 6e-5                      # a kept line equals its ledger run (the ledger rounds some runs to 4 decimals)
+TOL_KEEP_M3 = 1.000001e-4               # a kept line equals its ledger run: both may be 4-decimal roundings of one measure
 InputsError = A307.InputsError
 _num = A307._num
 
