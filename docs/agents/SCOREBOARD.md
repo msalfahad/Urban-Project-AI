@@ -3,6 +3,7 @@
 Development reference only: tuning against it is allowed, so these numbers never prove product accuracy (MISSION.md).
 
 ## SCOREBOARD v2 2026-10-24 18:46 UTC
+Restatement 2026-10-24 21:00 UTC (Verifier run unknown, lock checker): merged T-273 r2 42e32cf3 (unwired lap module + research; every lap length / lap kg HELD or PROVISIONAL, 0 released); T-276 REJECTED narrow r2 (WP.BURIED faces, research, no line). NO quantity in released A or candidate V3.0.14 changed: every scored cell stands as computed at 18:46 on d07af773 (alsenan_scoreboard.py not re-run: no line moved). REBAR row: column LAP / STARTER zones own-checked 20:58 (31 chains + 56 joints, each lap zone counted exactly twice, no double count; column kg PROVISIONAL, not scored). Drive read OK this run ('ST7757 dxf.dxf' 9f9d1179).
 Restatement 2026-10-24 20:26 UTC (Verifier run session_01X75qj8eyC7AUBM5HFe4YBE): merged T-267 r2 e7eaee64 (unwired stair module + rule store registration) and T-272 r2 ba626832 (research); NO quantity in released A or candidate V3.0.14 changed, so every scored cell below stands as computed at 18:46 on d07af773 (alsenan_scoreboard.py not re-run: no line moved); REBAR row added (HELD, not scored); FLOOR_AREA keying-gap note kept until T-278; blockwork VERIFIED 95.633 of the established net 449.260 m2 (T-261 split 625.562 is a proposal, not applied). Drive read OK this run.
 
 ### CLOSABLE LINES (owner 2026-10-23 17:50; ranked by whether the line can genuinely close from the existing drawings alone; Checker classification, 04:20; rows 1 / 7 09:39; row 5 15:24; row 2 18:44)
