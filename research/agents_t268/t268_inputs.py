@@ -86,7 +86,14 @@ def piece():
     rulings = [ruling(oid, c[oid], led[oid]) for oid in sorted(RULED)]
     # declared after the ruling, per code over every floor (the V3.0.10 totals with the four doors moved)
     tot = {ALU: {"pcs": {"settled": 6.0, "held": [0.0, 0.0], "no_figure": 0},
-                 "m2": {"released": 12.76, "bounded": [0.0, 0.0], "unquantified": 0}}}
+                 "m2": {"released": 12.76, "bounded": [0.0, 0.0], "unquantified": 0}},
+           # PVC: D-GF-05 / D-GF-06 leave the GF held line (each [0, 2.200] there); D-GF-02 / -10 / -14 and D-1F-03 /
+           # -04 stay held on their width review (V3.0.10 13.640 -> 9.240 high, low 8.030 unchanged)
+           PVC: {"pcs": {"settled": 15.0, "held": [5.0, 5.0], "no_figure": 0},
+                 "m2": {"released": 28.6, "bounded": [8.03, 9.24], "unquantified": 0}},
+           # MAIN: D-GF-01 leaves ([0, 2.200]); D-GF-07 stays HELD 2.00 x 2.50 = 5.000 (designer D-53)
+           MAIN: {"pcs": {"settled": 0.0, "held": [1.0, 1.0], "no_figure": 0},
+                  "m2": {"released": 0.0, "bounded": [5.0, 5.0], "unquantified": 0}}}
     return {"piece": "DOOR_RULING", "item_codes": CODES, "source": _src_t260(),
             "sources": [L10._src("T-198")], "base": {"task": L10.SRC["T-198"][1], "merge_commit": L10.SRC["T-198"][2]},
             # the source the V3.0.10 door lines were written from (T-232 MERGED a0cd9bbc, its opening piece source)
