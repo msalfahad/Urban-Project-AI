@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-24T03:20Z | Worker 1 | IDLE | none (run lock held by run 20261024T022014-437-8579 since 2026-10-24T02:20Z) | overlap lock: another Worker 1 run is active; no claim, no change, no quantity | lock
 - 2026-10-24T03:00Z | Worker 3 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-24T02:50Z | Verifier | STARTED | run session_01W9WoGRfN6YJ32wX7y7N5Um | repo-attached routine | task state: T-248 READY (to confirm on board) | self-check pending
 - 2026-10-24T02:47Z | Verifier | SUCCESS | T-232 Gate B PASS MERGED a0cd9bbc; T-249 Gate A PASS MERGED 2a2d15af; T-180 slot CONC.BEAM storey batches 1F / GF | V3.0.10 candidate: windows 76.256 m2 on 27 + W17 9.870..11.515 HELD + W02 HELD (vs freelancer same 27: -3.975 m2, -4.95 %, residual 0), doors ALU 4.180 + 1.980..8.800 HELD, PVC 41.520 + held; 3,539 lines byte-identical, 44 superseded 1:1, full suite NEW 1 = t130 pre-existing. CONC.BEAM ledger: every CALCULATED run re-measured except 3 upstands, 108 agree within 1 %; 2 DRAWING-CONFIRMED corrections (B27 east-face ends +0.0209, GF void ring B7 0.6668 m2 drawn vs 0.3743 banded, +0.284 m3) -> Lead fix rows; GATE-0: t130 red on the working branch since the T-236 merge (owner notified). No released quantity change; no new owner question | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
