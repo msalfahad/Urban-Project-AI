@@ -46,7 +46,16 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
-## Status (Lead, 2026-10-24 18:15; re-estimated each run from what merged and was verified)
+## Status (Lead, 2026-10-24 20:15; re-estimated each run from what merged and was verified)
+
+Lead 2026-10-24 20:15: since 18:15 the Checker merged T-240 (Gate B, floor area V3.0.14 internal 380.364 m2 vs released
+385.634, -1.37 %; NOT VERIFIED as a whole, held pieces named) and T-261 r3 (blockwork split, 11 / 11 walls Checker own,
+register proposal 449.260 -> 625.562 m2 not applied); passed T-272 r2 (links per drawn clear span, merge after T-267 r2);
+rejected 2 narrow (T-273 r1 against the owner's 18:38 acceptance, after the hand-in; T-271 r1 light-well opening 23.237
+vs the slab plan's 16.005 m2). Integration chain unblocked: T-270 (WATERPROOFING.FOUNDATION + WP.BURIED) first in lane I,
+then T-278 (scoring key for 7.8925 m2 typed spaces), then T-279 (established blockwork walls into the candidate, after
+T-274). Week 1 (by 27 Oct, one verified improvement through the pipeline) stays met (CONC.SLAB, Doors ALU 2 / 3); week 2
+(3 Nov, measurable verified coverage): blockwork 95.633 m2 verified, waterproofing next into the candidate. No slip.
 
 Lead 2026-10-24 18:15: since 16:15 the Checker merged T-263 (buried-concrete liquid waterproofing, a missing BOQ
 category: 35.404 m2 DRAWING-CONFIRMED, PARTIALLY VERIFIED) and rejected 2 narrow (T-261 r2 blockwork split, T-272

@@ -36,6 +36,19 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
    commit. Decision: board-only handoffs are verified as hand evidence (the verifier re-reads the cited notes), and the
    next task on the topic writes the files (T-117); a run with no line stays a NEEDS FIXING item for the owner's setting.
 
+## 2026-10-24 20:15 (lead run; covers 18:15 - 20:15)
+
+| Task | Result | Evidence | Decision |
+|---|---|---|---|
+| T-240 floor area V3.0.14 (Gate B) | WORKED | MERGED d07af773 (Verifier 18:44): 37 changed rows by hand, pantry wet 8.955 own, full suite NEW 0; internal 380.364 vs released 385.634 m2 (-1.37 %), NOT VERIFIED as a whole | T-278 (key map misses 7.8925 m2 typed spaces); T-270 unblocked, first in lane I |
+| T-261 r3 blockwork split | WORKED | MERGED 164b189f (Verifier 18:56): 11 / 11 rising walls own (1F-W13 16.8073, 1F-W17 4.6943, 1F-W18 19.7326, 1F-W24 5.5401 + 1.0577 held) | T-274 promoted TODO; T-279 (walls into the candidate) queued after T-274 + T-270 |
+| T-273 r1 laps + metric ton | PARTIAL | REJECTED narrow 18:59 against owner s.6 (18:38, after the 18:26 hand-in, not a worker fault): boundary tests 12.00 / 12.01 / 22.80 / 22.81 m at 1.2 m, 30 FOUNDATION LAP rows 288.897 kg vs STARTER 40 D on the same chains not reconciled, detailing categories | TODO r2; row was UNCLEAR_STATUS (note before the status word): fixed, first in lane S |
+| T-272 r2 ground-beam links | WORKED | Gate A PASS 19:59: Checker own 7E0+FD#1 19 .. 23, 7D0+FC#2 36 .. 40, ring 35 .. 44 by radial admissibility (his 40 .. 45 withdrawn); count / mass HELD | merge after T-267 r2 (in the Checker run 19:51); lessons row |
+| T-271 r1 ceilings r2 | PARTIAL | REJECTED narrow 19:59: light-well no-ceiling taken as face GF-130 23.237 where the slab plan's S-OPENING is 16.005 m2 (= released engine); bulkhead CB6 1.200 agrees | TODO r2 (files research/agents_t271 + tests/t271_*); lessons row |
+| T-267 r2 stair manifest | handed in (READY 19:38) | manifest +1 AUTHORED entry, full suite NEW 0 | in the Checker run 19:51 (critical dependency, never delayed > 2 runs) |
+| T-276 buried faces r2 | in work (CLAIMED 19:47) | worker 2 | Gate A when READY; feeds T-270 as a later delta |
+| Row stamps | process fault | T-272 READY stamp 20:05 written by 19:35-19:59; worker 3 run-log 19:40 committed 19:36 | lessons row (stamp = `date -u` at writing); watch |
+
 ## 2026-10-24 18:15 (lead run; covers 16:15 - 18:15)
 
 | Task | Result | Evidence | Decision |
@@ -366,34 +379,3 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
   trade (formwork 0 for the domes) -> a scenario tag carries into every derived trade (ScenarioLeak guard, t163); (3)
   T-194: a listed sill / head is a notation without its datum until bound to a level-marker block (t194); (4) T-195: a set
   with no printed revision is controlled by file identity; cite set + page, not part-file page (t195).
-
-## 2026-10-22 20:20 (lead run)
-
-- **Checker 15:51 (closed 16:30)**: T-158 MERGED 16:28 -> **WORKED** (owner stair rule UP-STAIR-015 in overlay URBAN_RULES
-  1.6.0 + unwired calculator; owner table 6 / 6; L4 396 = 396 same ids).
-- **Checker 16:52 SUCCESS (17:20)**: T-186 MERGED -> **PARTIAL**: guard right (villa Q ring 3.883573, pool 10.865210 m3
-  re-derived), but the merge 18b12176 broke a whole-repo gate: `test_every_rebar_module_in_engine_is_declared` fails on
-  the working head (default_guard.py undeclared; Lead re-ran it 20:15). Recurring cause 7 REPEATED (first T-097 / T-056 on
-  2026-10-20): the row's acceptance did not name the firewall test and the Checker's gate b ran only the impact-level
-  folders. Decision: fix task T-190 at the top of lane I (after T-179, same registry file) with a known-failure register;
-  every new-module row now names the firewall test (T-194 does); the queue note tells the Checker to run it in gate b.
-  T-182 MERGED -> **WORKED** (five measures, default layout unchanged). T-175 MERGED -> **WORKED** (own DXF deductions
-  3.520 / 3.960 m2, 0.0 %). T-173 MERGED -> **WORKED** (W face own 66.049 vs 66.15 m2, -0.16 %; D-T173-1 roof panel T 18,
-  below 1 %; open south side ENGINE_RIGHT). T-180 slot found the stair / beam double count D-CHK-T180-1 (-0.115 m3) ->
-  owner made it T-189.
-- **Checker 17:52 SUCCESS (18:01)**: T-128 r3 MERGED -> **WORKED** (1F-11 contour 22.1507 vs 22.149 m, owner net 59.45 m2,
-  0.0 %; a third room 0.0 %). T-185 MERGED -> **WORKED** (2 terrace dome shells 5.081 m3 VERIFIED; engine 7.372 ENGINE
-  WRONG +2.291; tower dome, rings, shell bars HELD). Decision: verified pool + dome concrete into the candidate as T-193.
-- **Worker 3 17:00 -> 18:26**: T-179 READY (V3.0.5 Gate B package; rebar quantity lines 12,834.52 -> 10,250.17 kg with the
-  route slab provisional superseded; beams 64.820 -> 65.294 m3, west ring double count removed). Finding: pool steel
-  BLOCKED because T-166 lengths stand on the 1.15 m finished depth while T-183 r2 verified 1.20. Decision: T-191 (pool
-  bar populations rev2 on the verified geometry). New lesson: a verified change must flag every ledger derived from it.
-- **Checker 19:51 (open at 20:20)**: T-189 MERGED 20:25 (B20 / B23 own 0.990 / 1.11375 m3, 0.0 %) -> **WORKED**;
-  follow-ups (route G stair line into B20 about 0.065 m3, flight feet and landings vs slabs) -> T-192, now claimable.
-  T-178 MERGED 20:35 -> **WORKED** (7 lessons, each with a broken variant failing). T-179 still in the run.
-- **Worker 2 19:40 -> 20:11**: T-164 READY (railings 38.916 lm DRAWING-CONFIRMED, shutters 6 leaves, m2 HELD; GF sea strip
-  RL-04 conflicts with the T-162 parapet chain). Decision: register ruling (HELD in both, quantity in neither) and a
-  checker item in the queue.
-- Lane S / A had no claimable new piece after T-189 / T-164 except reworks: added T-191, T-192 (S), T-194, T-195 (A, owner
-  review plan R6 / R9), T-193 (I); T-176 and T-181 claimable (T-175, T-182 merged). Queue check 0 flagged.
-

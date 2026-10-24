@@ -1,12 +1,39 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
 Plain words, no task numbers. Measured numbers come from SCOREBOARD.md; anything not measured says so.
-Last update: 2026-10-24 18:15 UTC (Lead). Previous version: 2026-10-24 16:15 UTC. The released numbers did not change
+Last update: 2026-10-24 20:15 UTC (Lead). Previous version: 2026-10-24 18:15 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released default V2.9 + route G untouched). Your measure: whole BOQ
 lines independently verified, and trades that can be scored. Still 1 whole line verified in the candidate (the concrete
-slab, 60.28 m3), 0 released; the aluminium doors line stays partially verified (2 of 3 measures). No new question for
-you; the curved first-floor window question is still open, and the fingerprints of two sealed reference files are still
-yours to record (see "Waiting for the owner").
+slab, 60.28 m3), 0 released. No new question for you; the curved first-floor window question is still open, and the
+fingerprints of two sealed reference files are still yours to record (see "Waiting for the owner").
+
+Since 18:15 (newest first; two pieces checked and merged, one checked and passed waiting for its merge, two sent back
+for narrow fixes):
+- Ceilings, rebuilt room by room on the checked floor pieces: 362.28 m2 of flat decorative ceiling against 403.16 m2 in
+  the released run (-10.1 %) and the freelancer's 409.58 m2 (-11.6 %), plus 29.24 m2 of beam bulkhead faces by your
+  manual method. Sent back narrow: over the ground-floor light well the work deducted 23.24 m2 as "no ceiling", but the
+  slab plan opens only 16.01 m2 there (the released engine's figure, to the millimetre); the other 7.23 m2 is drawn slab
+  with its own bar text. Being fixed: each of those strips classified by what is under it. Lesson recorded: an area
+  bounded by beams is not an opening; the opening is what the slab plan marks as one.
+- Ground-beam stirrups, second hand-in: links are now counted between the faces that support them, never through a
+  crossing beam. The checker re-measured three runs and the curved ring from the drawing himself and agrees (ring 35 to
+  44 links; the checker withdrew his own earlier 40 to 45, which used a fixed allowance at the columns). The whole
+  count stays a held range (333 to 392 links on the outer beams) and the steel weight stays held, because the hook
+  tail and bend are not printed. Passed; merged after the stair file below.
+- Block-wall blockers settled from the drawings: merged. 11 walls re-measured by the checker, all agree to the
+  millimetre. The settled net area would rise from 449.26 to 625.56 m2, but nothing is applied to the BOQ yet: the wall
+  register first has to make every wall's height pieces add up to its length, then the walls go into the candidate.
+- Floor area in the candidate: merged. The candidate's internal floor area is 380.36 m2 against 385.63 m2 in the released
+  run (-1.37 %; the released run counts 6.24 m2 of stair footprint as living room). The scoreboard currently scores it
+  at 372.47 m2, because its key does not yet pick up the dressing room and the arrival landing (7.89 m2): a scoring gap,
+  not a quantity error; a fix is queued.
+- Reinforcement laps and tons: the lap count method and the export in metric tons agree with the checker, but your
+  acceptance points (the four boundary lengths at a 1.2 m lap as tests, the column laps against their starter bars, the
+  five detailing categories) arrived after the hand-in; sent back narrow to add them. Every lap length stays held (no
+  drawing names it for the beam bars); the effect on Alsenan is 0.000 t.
+- Stair finish-level file: the one missing registration was added and is with the checker now.
+- Nothing new on Drive since the last report; no new photos.
+
 
 Since 16:15 (newest first; one piece checked and merged, two sent back for narrow fixes, one integration handed in):
 - Waterproofing of buried concrete: a scope nobody carried. The structural detail asks for two coats of liquid
@@ -646,7 +673,19 @@ Not measured, and paused by your order (Alsenan first).
   development lengths, so a steel ledger is not complete until it has read them.
 
 ## Being worked on now
-(Lead 2026-10-24 16:15)
+(Lead 2026-10-24 20:15)
+- Checker: merges the stair file registration and the stirrup count (both passed or in check now); then the laps / tons
+  rework, the ceilings fix and the remaining buried-concrete faces as they arrive; the foundation waterproofing step
+  into the candidate goes first when it is handed in.
+- Structural (worker 1): laps and tons with your acceptance points (next run); then beams drawn wider or narrower than
+  their schedule, every one; excavation levels last.
+- Architecture and finishes (worker 2): the remaining buried-concrete faces (in work); the ceilings fix over the light
+  well; then the wall-register check that every wall's height pieces add up to its length.
+- Integration (worker 3): foundation waterproofing and the buried-concrete coat into the candidate (now unblocked);
+  then the scoring key for the dressing room and landing; later the settled block walls into the candidate, once the
+  register check is merged.
+
+(Lead 2026-10-24 16:15, superseded)
 - Checker: the next floor-area step into the candidate, the block-wall blockers fix and the stair method fix as they
   arrive; in between it keeps re-measuring the settled block walls, largest first.
 - Structural (worker 1): the one-line fix to the stair method; then ground-beam stirrups / side bars from the prints;

@@ -46,6 +46,16 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+### Lead 2026-10-24 20:15 (from T-240 / T-261 r3 MERGED; T-271 REJECTED narrow; T-272 r2 Gate A PASS; T-267 r2 / T-276 in work; new T-278)
+
+| Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |
+|---|---|---|---|---|---|
+| GF-roof slab opening over the light well (S-OPENING outline with opening cross + VOID tag, 5.820 x 2.750) | CONC.SLAB (deduction), FIN.CEILING (no ceiling), formwork (soffit deduction), floor finish of 1F (no floor) | CONC.SLAB defines the opening; every other trade deducts the SAME 16.005 m2 outline once, never the member-bounded face GF-130 23.237 | 16.005 m2 DRAWING-CONFIRMED (Checker own = released engine to the mm) | Verifier 19:59 (T-271 r1 verdict) | T-271 r2: the round-stair part inside it stated once |
+| Slab strips beside that opening (east strip 1.581 + south band 5.651 = 7.232 m2: bar text '8 dia 16/m', thickness tag, '(With Stair)' band, small shaft cross 54B / 54C) | CONC.SLAB, FIN.CEILING, stair soffits (round / straight), shaft opening | CONC.SLAB owns the slab; FIN.CEILING classifies by what is below (decor ceiling, stair soffit, shaft) with a status each; never 'no ceiling' where slab is drawn | CLASSIFICATION OPEN (slab DRAWING-CONFIRMED; ceiling class per piece not yet) | Verifier 19:59 | T-271 r2 |
+| Ring ground beam, arc between columns (inner 6.5674 m / outer 6.6797 m, split at 17BA) | rebar links, CONC.GROUND, waterproofing (buried faces) | REBAR counts links per radially admissible arc (section between drawn faces clear of every column outline): 35 .. 44; CONC.GROUND owns the volume; WP.BURIED the faces (T-276) | count HELD 35 .. 44 (Checker own = worker); exterior total HELD 333 .. 392; mass HELD, never 0 | T-272 r2 Gate A PASS 19:59 | merge after T-267 r2; cut length (hook tail / bend unprinted) HELD |
+| Block walls of the T-261 split (11 rising walls incl. 1F-W13 16.8073, 1F-W17 4.6943, 1F-W18 19.7326 whole, 1F-W24 5.5401 + 1.0577 HELD) | blockwork, opening deductions (rule 9: an opening spanning established pieces deducted once) | BLOCKWORK | split MERGED 164b189f, 11 / 11 Checker own; register proposal 449.260 -> 625.562 m2 NOT APPLIED (no BOQ line moved) | T-261 r3 MERGED | T-274 (height pieces close the census length) then a register version through lane I |
+| Floor-area typed spaces (1F dressing 2.970, 1F arrival landing 4.9225 = 7.8925 m2) | FLOOR.INTERNAL (candidate line), scoreboard key map | FLOOR.INTERNAL in V3.0.14 (T-240 MERGED d07af773); the key map must key each typed-space line once | in the candidate 380.364 m2; the key map T001B scores 372.4715 (gap 7.8925, keying only) | Verifier 18:44 / scoreboard 18:46 | T-278 (key-map version) |
+
 ### Lead 2026-10-24 18:15 (from T-263 MERGED; T-261 r2 / T-272 REJECTED narrow; T-240 READY; Checker blockwork light runs 17:07 - 18:04; new T-276, T-277)
 
 | Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |

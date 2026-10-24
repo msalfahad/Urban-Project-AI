@@ -1,5 +1,37 @@
 # Older Lead feedback entries (moved from FEEDBACK.md to keep the last 20; newest first)
 
+## 2026-10-22 20:20 (lead run)
+
+- **Checker 15:51 (closed 16:30)**: T-158 MERGED 16:28 -> **WORKED** (owner stair rule UP-STAIR-015 in overlay URBAN_RULES
+  1.6.0 + unwired calculator; owner table 6 / 6; L4 396 = 396 same ids).
+- **Checker 16:52 SUCCESS (17:20)**: T-186 MERGED -> **PARTIAL**: guard right (villa Q ring 3.883573, pool 10.865210 m3
+  re-derived), but the merge 18b12176 broke a whole-repo gate: `test_every_rebar_module_in_engine_is_declared` fails on
+  the working head (default_guard.py undeclared; Lead re-ran it 20:15). Recurring cause 7 REPEATED (first T-097 / T-056 on
+  2026-10-20): the row's acceptance did not name the firewall test and the Checker's gate b ran only the impact-level
+  folders. Decision: fix task T-190 at the top of lane I (after T-179, same registry file) with a known-failure register;
+  every new-module row now names the firewall test (T-194 does); the queue note tells the Checker to run it in gate b.
+  T-182 MERGED -> **WORKED** (five measures, default layout unchanged). T-175 MERGED -> **WORKED** (own DXF deductions
+  3.520 / 3.960 m2, 0.0 %). T-173 MERGED -> **WORKED** (W face own 66.049 vs 66.15 m2, -0.16 %; D-T173-1 roof panel T 18,
+  below 1 %; open south side ENGINE_RIGHT). T-180 slot found the stair / beam double count D-CHK-T180-1 (-0.115 m3) ->
+  owner made it T-189.
+- **Checker 17:52 SUCCESS (18:01)**: T-128 r3 MERGED -> **WORKED** (1F-11 contour 22.1507 vs 22.149 m, owner net 59.45 m2,
+  0.0 %; a third room 0.0 %). T-185 MERGED -> **WORKED** (2 terrace dome shells 5.081 m3 VERIFIED; engine 7.372 ENGINE
+  WRONG +2.291; tower dome, rings, shell bars HELD). Decision: verified pool + dome concrete into the candidate as T-193.
+- **Worker 3 17:00 -> 18:26**: T-179 READY (V3.0.5 Gate B package; rebar quantity lines 12,834.52 -> 10,250.17 kg with the
+  route slab provisional superseded; beams 64.820 -> 65.294 m3, west ring double count removed). Finding: pool steel
+  BLOCKED because T-166 lengths stand on the 1.15 m finished depth while T-183 r2 verified 1.20. Decision: T-191 (pool
+  bar populations rev2 on the verified geometry). New lesson: a verified change must flag every ledger derived from it.
+- **Checker 19:51 (open at 20:20)**: T-189 MERGED 20:25 (B20 / B23 own 0.990 / 1.11375 m3, 0.0 %) -> **WORKED**;
+  follow-ups (route G stair line into B20 about 0.065 m3, flight feet and landings vs slabs) -> T-192, now claimable.
+  T-178 MERGED 20:35 -> **WORKED** (7 lessons, each with a broken variant failing). T-179 still in the run.
+- **Worker 2 19:40 -> 20:11**: T-164 READY (railings 38.916 lm DRAWING-CONFIRMED, shutters 6 leaves, m2 HELD; GF sea strip
+  RL-04 conflicts with the T-162 parapet chain). Decision: register ruling (HELD in both, quantity in neither) and a
+  checker item in the queue.
+- Lane S / A had no claimable new piece after T-189 / T-164 except reworks: added T-191, T-192 (S), T-194, T-195 (A, owner
+  review plan R6 / R9), T-193 (I); T-176 and T-181 claimable (T-175, T-182 merged). Queue check 0 flagged.
+
+
+
 ## 2026-10-22 12:20 (lead run)
 
 - **Checker 11:51 SUCCESS (12:07)**: owner 11:50 item first. T-183 pool REJECTED -> **PARTIAL**: base 10.9356 m2 x 0.40 =
