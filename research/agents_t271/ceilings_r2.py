@@ -116,6 +116,52 @@ def overlay(room, slab_faces, domes=(), edge_tol=EDGE_TOL, min_piece=0.005):
     return rec
 
 
+def split_structural_void(face, openings, stairs=(), min_part=0.0005):
+    """R-CEIL-R2-1 amended (r2b, Verifier 2026-10-24 19:59): a structural face bounded by beam / column / edge linework
+    is NOT a slab opening because it holds an opening tag. The opening is only the outline the slab plan marks as one
+    (opening-layer outline with its X diagonals and / or VOID tag); a stair drawn below the slab (hidden treads) is a
+    stair zone; everything else inside the face is SLAB and stays a ceiling candidate, classified by what is below it.
+
+    face: shapely polygon of the structural face (one storey's slab plan, metres).
+    openings: [(label, outline_polygon, marks)] in priority order; marks = shapely points (X diagonal midpoints, tag
+        insertion points) that must lie inside the label's own opening part, else the outline is not an opening.
+    stairs: shapely polygons of the stair footprint drawn under the slab (flights, landings, the flight edge strips).
+    Returns [(label, cls, polygon)] with cls STAIR / OPENING / SLAB; the parts are disjoint and sum to the face
+    (residual checked to 1e-6 m2). Raises LedgerError on a mark outside its opening or a part that would be counted
+    twice or an outline without marks. Nothing is dropped: a SLAB remainder above min_part m2 is always returned."""
+    from shapely.ops import unary_union
+    if face.is_empty or face.area <= 0:
+        raise LedgerError("empty structural face")
+    taken = None
+    parts = []
+    st = unary_union([s for s in stairs]) if stairs else None
+    if st is not None and not st.is_empty:
+        sp = face.intersection(st)
+        if sp.area > min_part:
+            parts.append(("stair zone (treads drawn under the slab)", "STAIR", sp))
+            taken = sp
+    for label, outline, marks in openings:
+        op = face.intersection(outline)
+        if taken is not None:
+            op = op.difference(taken)
+        if op.area <= min_part:
+            raise LedgerError(f"{label}: the outline has no area inside the face once the stair zone is removed")
+        for m in marks or ():
+            if not op.buffer(1e-6).contains(m):
+                raise LedgerError(f"{label}: opening mark at {m.wkt} is not inside its opening part")
+        if not marks:
+            raise LedgerError(f"{label}: no X / VOID mark - an outline without its mark is not an opening")
+        parts.append((label, "OPENING", op))
+        taken = op if taken is None else unary_union([taken, op])
+    rest = face if taken is None else face.difference(taken)
+    if rest.area > min_part:
+        parts.append(("slab drawn (no opening outline, no stair): ceiling candidate by what is below", "SLAB", rest))
+    tot = sum(p.area for _, _, p in parts)
+    if abs(tot - face.area) > 1e-6:
+        raise LedgerError(f"void split does not close: parts {tot:.6f} vs face {face.area:.6f} m2")
+    return parts
+
+
 # --------------------------------------------------------------------------------------------------- ledger part
 def _depth(s):
     vals = set()

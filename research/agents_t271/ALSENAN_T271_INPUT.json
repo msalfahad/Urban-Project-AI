@@ -25,6 +25,76 @@
    841.6415
   ]
  },
+ "void_split_r2b": {
+  "face": "GF-130",
+  "face_m2": 23.237125,
+  "lw_outline_m2": 16.005,
+  "lw_outline_size_m": [
+   5.82,
+   2.75
+  ],
+  "arc_r_m": [
+   1.5305,
+   2.7805
+  ],
+  "flight_top_above_2D0_m": 1.2,
+  "handles": {
+   "top": "2CE",
+   "east": "2CF",
+   "bottom": "2D0",
+   "west": "28A",
+   "south": "283",
+   "x1": "2D1",
+   "x2": "2D2",
+   "tag": "2D3",
+   "arc_out": "2DD",
+   "arc_in": "2DE",
+   "px1": "54B",
+   "px2": "54C",
+   "south_last": "2C4",
+   "east_first": "2C8",
+   "east_top": "315",
+   "east_edge": "289"
+  },
+  "parts": [
+   {
+    "part": "stair zone (treads drawn under the slab)",
+    "cls": "STAIR",
+    "m2": 7.402476,
+    "in_lw_outline_m2": 2.379112,
+    "in_south_band_m2": 4.333364,
+    "in_east_strip_m2": 0.69,
+    "id": "GF-130/STAIR"
+   },
+   {
+    "part": "pocket between the walls and the stair's outer arc (S-OPENING X 54B / 54C)",
+    "cls": "OPENING",
+    "m2": 1.550919,
+    "in_lw_outline_m2": 0.233408,
+    "in_south_band_m2": 1.317511,
+    "in_east_strip_m2": 0.0,
+    "id": "GF-130/POCKET"
+   },
+   {
+    "part": "light well (S-OPENING outline 2CE / 2CF / 2D0 / 28A, X 2D1 / 2D2, VOID tag 2D3)",
+    "cls": "OPENING",
+    "m2": 13.39248,
+    "in_lw_outline_m2": 13.39248,
+    "in_south_band_m2": 0.0,
+    "in_east_strip_m2": 0.0,
+    "id": "GF-130/LW"
+   },
+   {
+    "part": "slab drawn (no opening outline, no stair): ceiling candidate by what is below",
+    "cls": "SLAB",
+    "m2": 0.891251,
+    "in_lw_outline_m2": 0.0,
+    "in_south_band_m2": 1e-06,
+    "in_east_strip_m2": 0.89125,
+    "id": "GF-130/SLAB"
+   }
+  ]
+ },
  "faces": [
   {
    "area_m2": 8.955001,
@@ -79,9 +149,9 @@
    "perimeter_m": 54.205904,
    "above": {
     "BEAM_OR_COLUMN": 13.926071,
-    "SLAB": 72.25462,
-    "VOID+STAIR": 23.237125,
-    "STAIR": 2.451142,
+    "SLAB": 73.145871,
+    "STAIR": 9.853618,
+    "OPENING": 14.943399,
     "BEAM": 4.693256,
     "BEAM_HELD": 1.375625
    },
@@ -413,10 +483,22 @@
    ],
    "openings": [
     {
-     "slab_face": "GF-130",
-     "cls": "VOID+STAIR",
-     "m2": 23.237125,
-     "edge_in_room_m": 18.32
+     "slab_face": "GF-130/STAIR",
+     "cls": "STAIR",
+     "m2": 7.402476,
+     "edge_in_room_m": 18.9707
+    },
+    {
+     "slab_face": "GF-130/POCKET",
+     "cls": "OPENING",
+     "m2": 1.550919,
+     "edge_in_room_m": 6.5144
+    },
+    {
+     "slab_face": "GF-130/LW",
+     "cls": "OPENING",
+     "m2": 13.39248,
+     "edge_in_room_m": 16.7861
     },
     {
      "slab_face": "GF-131",
@@ -437,7 +519,7 @@
      "edge_in_room_m": 5.45
     }
    ],
-   "covered_m2": 117.937839,
+   "covered_m2": 117.93784,
    "face": "GF-RC99C2A/open",
    "floor": "GF",
    "kind": "DRY",

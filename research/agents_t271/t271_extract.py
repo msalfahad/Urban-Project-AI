@@ -12,7 +12,10 @@ LEDGER_T252.csv, live rows only). Writes ONLY areas, lengths, ids, marks and sta
 The GF open face GF-RC99C2A is split at the pantry box (west of the layer-5 line pair B3 / AD of the architectural
 plan, the line the Checker 01:12 and T-269 used: pantry WET by owner Q-37 A) before the overlay.
 
-Usage: python -I t271_extract.py <v29.pkl> <st_faces.json> <align.json> <arch.dxf> <out.json>"""
+r2b: the GF-roof face GF-130 (class VOID+STAIR) is split by void_split() on the structural drawing (6th argument)
+into light well / pocket / stair zone / slab before the overlay (Verifier 2026-10-24 19:59).
+
+Usage: python -I t271_extract.py <v29.pkl> <st_faces.json> <align.json> <arch.dxf> <out.json> <structural.dxf>"""
 import csv
 import json
 import math
@@ -98,6 +101,72 @@ def r2_status(rows):
     return s, "/".join(deps)
 
 
+# r2b (Verifier 2026-10-24 19:59): the GF-roof slab face GF-130 (T-139 class VOID+STAIR, 23.237 m2) is a STRUCTURAL face
+# (layers 1 / 5 / S-COL.BON / S-BEAM linework), not the opening. Split it by what the slab plan itself draws:
+#   light well   = the S-OPENING outline top 2CE / east 2CF / bottom 2D0 / west 28A, with its X 2D1 / 2D2 and VOID tag 2D3
+#   pocket       = the corner between the walls 28A / 283 and the stair's outer arc 2DD, with its own S-OPENING X 54B / 54C
+#   stair zone   = the round flight between the S-OPENING arcs 2DE (inner) / 2DD (outer) from 176 deg to 270 deg, the
+#                  straight flight under the slab (HIDDEN layer-2 treads 2BA .. 2C4, south edge 283, top 2D0 level), the
+#                  quarter landing and the east flight (HIDDEN treads 2C8 .. 315, east edge 289), its edge strip to 2CF
+#   slab         = the rest (the slab plan draws slab there): a ceiling candidate, classified by what is below it
+VOID_FACE = "GF-130"
+VOID_H = {"top": "2CE", "east": "2CF", "bottom": "2D0", "west": "28A", "south": "283", "x1": "2D1", "x2": "2D2",
+          "tag": "2D3", "arc_out": "2DD", "arc_in": "2DE", "px1": "54B", "px2": "54C", "south_last": "2C4",
+          "east_first": "2C8", "east_top": "315", "east_edge": "289"}
+
+
+def _ent(doc, h, t):
+    e = doc.entitydb.get(h)
+    if e is None or e.dxftype() != t:
+        raise SystemExit(f"handle {h}: not a {t} in the structural drawing")
+    return e
+
+
+def void_split(st_doc, face):
+    """GF-130 -> [(label, cls, polygon)] by ceilings_r2.split_structural_void, from the handles in VOID_H (metres)."""
+    from shapely.geometry import box as _box
+    k = 0.001
+    L = {n: _ent(st_doc, h, "LINE") for n, h in VOID_H.items() if n not in ("tag", "arc_out", "arc_in")}
+    tag = _ent(st_doc, VOID_H["tag"], "INSERT")
+    ao, ai = _ent(st_doc, VOID_H["arc_out"], "ARC"), _ent(st_doc, VOID_H["arc_in"], "ARC")
+    if (ao.dxf.center - ai.dxf.center).magnitude > 1e-6:
+        raise SystemExit("the stair arcs 2DD / 2DE are not concentric")
+    cx, cy = ao.dxf.center.x * k, ao.dxf.center.y * k
+    ro, ri = ao.dxf.radius * k, ai.dxf.radius * k
+    a0 = min(ao.dxf.start_angle, ai.dxf.start_angle)          # 176.0: the flight's west end
+    x = lambda n, end="start": getattr(L[n].dxf, end).x * k   # noqa: E731
+    y = lambda n, end="start": getattr(L[n].dxf, end).y * k   # noqa: E731
+    xw, xe, yt, yb, ys = x("west"), x("east"), y("top"), y("bottom"), y("south")
+    lw = _box(xw, yb, xe, yt)                                  # S-OPENING light-well outline (16.005 m2)
+    big = 10.0
+    wedge = Polygon([(cx, cy)] + [(cx + big * math.cos(math.radians(a)), cy + big * math.sin(math.radians(a)))
+                                  for a in (a0, (a0 + 270) / 2, 270)])
+    ring = Point(cx, cy).buffer(ro, 1024).difference(Point(cx, cy).buffer(ri, 1024)).intersection(wedge)
+    x_last, y_e0, y_top, x_edge = x("south_last"), y("east_first"), y("east_top"), x("east_edge")
+    if abs(y_e0 - yb) > 0.001 or not (xe < x_last < x_edge) or not (yb < y_top < yt):
+        raise SystemExit("stair handles do not frame the east flight as read (2C8 at the 2D0 level, 2C4 east of 2CF)")
+    stairs = [ring, _box(cx, ys, x_last, yb), _box(x_last, ys, x_edge, y_top), _box(xe, yb, x_last, y_top)]
+    pocket = _box(xw, ys, cx, cy).difference(Point(cx, cy).buffer(ro, 1024))
+    mid = lambda n: Point((x(n) + x(n, "end")) / 2, (y(n) + y(n, "end")) / 2)  # noqa: E731
+    parts = CR.split_structural_void(
+        face, [("pocket between the walls and the stair's outer arc (S-OPENING X 54B / 54C)", pocket,
+                [mid("px1"), mid("px2")]),
+               ("light well (S-OPENING outline 2CE / 2CF / 2D0 / 28A, X 2D1 / 2D2, VOID tag 2D3)", lw,
+                [mid("x1"), mid("x2"), Point(tag.dxf.insert.x * k, tag.dxf.insert.y * k)])],
+        stairs)
+    band = _box(xw - 1, ys - 1, xe + 1, yb)                    # south band below the light-well bottom 2D0
+    strip = _box(xe, yb, xe + 1, yt + 1)                       # east strip beyond the light-well east edge 2CF
+    rep = []
+    for lab, c, p in parts:
+        rep.append({"part": lab, "cls": c, "m2": round(p.area, 6), "in_lw_outline_m2": round(p.intersection(lw).area, 6),
+                    "in_south_band_m2": round(p.intersection(band).area, 6),
+                    "in_east_strip_m2": round(p.intersection(strip).area, 6)})
+    info = {"face": VOID_FACE, "face_m2": round(face.area, 6), "lw_outline_m2": round(lw.area, 6),
+            "lw_outline_size_m": [round(xe - xw, 4), round(yt - yb, 4)], "arc_r_m": [round(ri, 4), round(ro, 4)],
+            "flight_top_above_2D0_m": round(y_top - yb, 4), "handles": VOID_H, "parts": rep}
+    return parts, info
+
+
 def face_geom(room):
     g = Polygon(room["polygon_m"])
     g = g if g.is_valid else g.buffer(0)
@@ -125,6 +194,22 @@ def main(argv=None):
         pts += [(e.dxf.start.x * 0.001, e.dxf.start.y * 0.001), (e.dxf.end.x * 0.001, e.dxf.end.y * 0.001)]
     xb = pts[0][0]
     ylo, yhi = min(p[1] for p in pts), max(p[1] for p in pts)
+    st_doc = ezdxf.readfile(a[5])
+    vsplit = None
+    gf = []
+    for f in SF["GF"]:
+        if f["id"] != VOID_FACE:
+            gf.append(f)
+            continue
+        parts, vsplit = void_split(st_doc, wkt.loads(f["wkt"]))
+        for i, (lab, c, p) in enumerate(parts):
+            sid = f"{VOID_FACE}/{'POCKET' if 'pocket' in lab else 'LW' if 'light well' in lab else c}"
+            gf.append({"id": sid, "wkt": p.wkt})
+            cls[sid] = c
+            vsplit["parts"][i]["id"] = sid
+    if vsplit is None:
+        raise SystemExit(f"{VOID_FACE} not among the GF slab faces")
+    SF = dict(SF, GF=gf)
     pieces = []
     for room in A["rooms"]:
         g0 = face_geom(room)
@@ -177,7 +262,7 @@ def main(argv=None):
     json.dump({"inputs": {"v29_faces": len(A["rooms"]), "pieces": len(out)}, "pantry_split": {"face": PANTRY_FACE, "lines": PANTRY_LINES},
                "basis": "ARCH_TAKEOFF_V2.9 floor faces x T-139 roof-slab faces (translation fit)",
                "align_m": {k: [round(v[0], 4), round(v[1], 4)] for k, v in AL.items()},
-               "faces": out, "strips": strips}, open(a[4], "w"), indent=1)
+               "void_split_r2b": vsplit, "faces": out, "strips": strips}, open(a[4], "w"), indent=1)
     for r in out:
         print(r["face"], r["kind"], r["area_m2"], r["engine_face_area_m2"], "cov", r["covered_m2"], r["above"])
 
