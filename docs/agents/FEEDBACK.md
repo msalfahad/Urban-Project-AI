@@ -36,6 +36,19 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
    commit. Decision: board-only handoffs are verified as hand evidence (the verifier re-reads the cited notes), and the
    next task on the topic writes the files (T-117); a run with no line stays a NEEDS FIXING item for the owner's setting.
 
+## 2026-10-24 22:15 (lead run; covers 20:15 - 22:15)
+
+| Task | Result | Evidence | Decision |
+|---|---|---|---|
+| T-267 r2 stair rule store registration | WORKED | MERGED e7eaee64 (Verifier 20:24): full suite on d2135e30 to the end NEW 0 / KNOWN 395 / ABSENT 1; manifest sha = own sha of 1.7.0; SOFTWARE_VERIFIED, QUANTITY none, CODE_NOT_VERIFIED | closed; T-281 builds stair soffits on it (read-only) |
+| T-272 r2 ground-beam links | WORKED | MERGED ba626832 (Verifier 20:24): links per drawn clear span; count 333 .. 392 and mass HELD, never 0 | lessons row CLOSED; cut length stays HELD (hook tail / bend unprinted, designer list) |
+| T-273 r2 laps + metric ton | WORKED | MERGED 42e32cf3 (Verifier 20:58): boundary set 0 / 1 / 1 / 2 at 1.2 m in 4 input forms; 31 starter chains + 56 joints, each lap zone counted exactly twice; five categories; all laps HELD / PROVISIONAL, 0 released | NEW T-280 from finding F-T273R2-01 (core lower bound ignores the 0.17 m underlay, -74.381 kg at the formation limit) |
+| T-271 r2b ceilings, GF light well | WORKED | MERGED 789ebbb4 (Verifier 21:58): GF-130 23.2371 = light well 13.392 + pocket 1.552 + stair zone 7.402 (HELD stair soffit) + slab 0.891, every part within 0.0014 m2; R2 decor 363.173 vs released 403.163 (-9.92 %), freelancer 409.58 (-11.33 %), not verified as a whole | NEW T-281 (stair soffits), T-283 (ceilings r3 integration-ready + hidden-stair test), T-284 (ceiling integration, QUEUED) |
+| T-276 r1 buried faces traced | PARTIAL | REJECTED narrow 20:59: band 177 + 7CD cut square at the shorter edge -> 0.3708 m of false ring earth face + spurious end faces; COL:255 0.052 mm sliver taken as a 0.5948 m2 beam face; DC total <= 45.611 vs 46.521 m2, HELD; three checked runs agree to 0.03 % | TODO r2 claimed 21:45 (worker 2); cross-trade: NEW T-282 (the same check on formwork r4); lessons row |
+| T-270 WP foundation into V3.0.15 | handed in (READY 21:58, Gate B) | 3,680 lines byte-identical + 19 added; 11 held lines BLANK | Gate B first; Lead challenge: the 35.404 m2 buried sub-line contains faces T-276 r1 showed are not earth faces |
+| T-277 beam width census | handed in (READY 21:59, Gate A) | 137 runs: 105 AGREE / 7 CONFLICT = D-02 + D-27 exactly; CONC.BEAM drawn 5.4421 vs schedule 5.7665 m3 (-0.3244) | Gate A next; worker full suite not run to the end (10-min shell): Checker runs the level's suite |
+| Checker T-180 slot 1F-W00 | finding | own net 12.935 vs register 12.863 m2: W18 deducted over 0.0327 m already inside column 2FD8 (0.0706 m2 removed twice); length ruled 6.571 m | added to T-274 acceptance (part-in-masonry deduction + register-wide jamb scan); T-279 carries 1F-W00 only after it |
+
 ## 2026-10-24 20:15 (lead run; covers 18:15 - 20:15)
 
 | Task | Result | Evidence | Decision |
@@ -345,37 +358,3 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
 - **Recurring cause 9 (new): worker clock stamps in rows** (T-197 '04:40' written at 04:02, T-187 '04:10' at 03:55):
   harmless today, but the dashboard's READY-age measure reads them. Decision: queue note asks for `date -u` stamps.
 
-## 2026-10-23 00:20 (lead run)
-
-- **Checker 19:51 SUCCESS (21:04)**: T-164 MERGED -> **WORKED** (RL-02 4.921 / RL-03 7.967 m own DXF, 0.0 %; RL-04 kept
-  HELD in both chains). T-179 r1 (Gate B V3.0.5) REJECTED -> **PARTIAL**: runs reproduced, west ring 0.7552 m3 confirmed,
-  but 22 stair / strip held highs used count A at both ends (-65.02 kg) and codemap stale. The checker named its own 06:25
-  miss (it merged the T-166 ledger with that fault). Decision: r2 by worker 3 (done 23:39, READY); lesson row below.
-- **Worker 3 21:01 -> 22:00**: T-181 MERGED 21:56 -> **WORKED** (doors / windows like for like, windows 56.771 vs 54.931
-  m2 on the same 8, +3.35 %; window pcs set HELD by the checker: W02 unclassified). Decision: T-150's '29 AGREE' becomes
-  HELD in the census r3 (T-198).
-- **Worker 1 20:21 -> 20:40**: T-163 r2 REJECTED 22:00 -> **PARTIAL** (column joint fix verified, -0.06 %, but dome shell
-  formwork set to 0 on the client change and the dome-opening band counted in both slab edges and the ring). r3 (22:20 ->
-  22:27) MERGED 00:10 -> **WORKED** (S0 soffit 2 x 24.150 m2 checker 0.00 %; band owned by the ring; ScenarioLeak guard +
-  adverse tests). Register ruling 00:20.
-- **Worker 2 21:40 -> 22:12**: T-194 MERGED 00:09 -> **WORKED** (R6: 71 openings, all four elevations bound; checker own
-  W14 / W17 0 mm). Findings become work: T-198 (three openings missing from the list, W01 / W03 levels on the wrong datum,
-  windows pcs HELD) and D-59 / D-60; T-176 now waits on T-198 (its net area changes).
-- **Worker 2 23:40 -> 00:01**: T-195 MERGED 00:50 (checker stamp) -> **WORKED** (R9: 31 sheets, 0 citation outside the
-  register; no revision printed anywhere). Decision: D-61 (two dates in the ST set) and D-62 (sheets not issued) to the
-  designer list; scope cross-check R7 opened as T-196 (lane I).
-- **Worker 3 23:00 -> 23:39**: T-179 r2 READY (fixed count B high end, +65.04 kg; NOT RELEASED); first in the checker's
-  open run. Lane I chain T-190 -> T-187 -> T-193 -> T-199 waits on this merge; T-168 promoted so worker 3 has claimable
-  non-chain work.
-- **Firewall test**: still red on the working head since the T-186 merge (17:00; every run since reports the same single
-  failure). It cannot be fixed before T-179 merges (same registry file). Decision: unchanged, T-190 first in lane I; the
-  checker treats it as gate 0 the moment it is READY. Recurring cause 7 holds; every new-module row carries the firewall
-  test in its acceptance.
-- **STALL_CHECK T-176**: worker 2 passed it twice by its lowest-gate-first rule (gate 3 vs the gate-1 review rows): a
-  reprioritisation, not a failure; it now waits on T-198 for a real dependency.
-- Lessons rows proposed (standard s.7; the main chat owns the register): (1) T-179 r1: a held count A .. B gives a range
-  whose high end uses count B; a ledger copying one count into both ends is a wrong range, not a narrow one -> check the
-  high end against the high count (tests in t179 ledgers); (2) T-163 r2: a client-change scenario leaked into a derived
-  trade (formwork 0 for the domes) -> a scenario tag carries into every derived trade (ScenarioLeak guard, t163); (3)
-  T-194: a listed sill / head is a notation without its datum until bound to a level-marker block (t194); (4) T-195: a set
-  with no printed revision is controlled by file identity; cite set + page, not part-file page (t195).

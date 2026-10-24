@@ -46,9 +46,21 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
-## Status (Lead, 2026-10-24 20:15; re-estimated each run from what merged and was verified)
+## Status (Lead, 2026-10-24 22:15; re-estimated each run from what merged and was verified)
 
-Lead 2026-10-24 20:15: since 18:15 the Checker merged T-240 (Gate B, floor area V3.0.14 internal 380.364 m2 vs released
+Lead 2026-10-24 22:15: since 20:15 the Checker merged 4 (T-267 r2 rule store 1.7.0; T-272 r2 ground-beam links, count /
+mass HELD; T-273 r2 laps + t with the owner's s.6 acceptance, every lap HELD, 0.000 t on Alsenan; T-271 r2b ceilings, GF
+light well split to 0.0014 m2, R2 decor 363.173 m2 DRAWING-CONFIRMED, not verified as a whole) and rejected 1 narrow
+(T-276 r1 buried faces: square cut at a curved carrier + sub-mm sliver, total HELD <= 45.611 m2). Handed in: T-270
+(Gate B, V3.0.15 WATERPROOFING.FOUNDATION, a scope missing in released A and in the freelancer BOQ) and T-277 (beam
+width census, 7 / 137 conflicts = D-02 + D-27). Verified whole lines unchanged: candidate 1 / 13, released 0 / 13.
+Week 1 target (one verified improvement through the integrated pipeline by 27 Oct) is met by CONC.SLAB; the week-2 target
+(measurable increase in verified coverage by 3 Nov) depends on T-270 Gate B, T-274 -> T-279 (blockwork into the
+candidate) and T-283 -> T-284 (ceilings into the candidate). New this run: T-280 (core datum), T-281 (stair soffits,
+missing scope), T-282 (formwork faces at curved / oblique carriers), T-283, T-284. Risk: lane I is serial (one package per
+2 h); T-279 and T-284 queue behind T-274 / T-283.
+
+(previous) Lead 2026-10-24 20:15: since 18:15 the Checker merged T-240 (Gate B, floor area V3.0.14 internal 380.364 m2 vs released
 385.634, -1.37 %; NOT VERIFIED as a whole, held pieces named) and T-261 r3 (blockwork split, 11 / 11 walls Checker own,
 register proposal 449.260 -> 625.562 m2 not applied); passed T-272 r2 (links per drawn clear span, merge after T-267 r2);
 rejected 2 narrow (T-273 r1 against the owner's 18:38 acceptance, after the hand-in; T-271 r1 light-well opening 23.237

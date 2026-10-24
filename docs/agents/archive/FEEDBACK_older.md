@@ -1,5 +1,40 @@
 # Older Lead feedback entries (moved from FEEDBACK.md to keep the last 20; newest first)
 
+## 2026-10-23 00:20 (lead run)
+
+- **Checker 19:51 SUCCESS (21:04)**: T-164 MERGED -> **WORKED** (RL-02 4.921 / RL-03 7.967 m own DXF, 0.0 %; RL-04 kept
+  HELD in both chains). T-179 r1 (Gate B V3.0.5) REJECTED -> **PARTIAL**: runs reproduced, west ring 0.7552 m3 confirmed,
+  but 22 stair / strip held highs used count A at both ends (-65.02 kg) and codemap stale. The checker named its own 06:25
+  miss (it merged the T-166 ledger with that fault). Decision: r2 by worker 3 (done 23:39, READY); lesson row below.
+- **Worker 3 21:01 -> 22:00**: T-181 MERGED 21:56 -> **WORKED** (doors / windows like for like, windows 56.771 vs 54.931
+  m2 on the same 8, +3.35 %; window pcs set HELD by the checker: W02 unclassified). Decision: T-150's '29 AGREE' becomes
+  HELD in the census r3 (T-198).
+- **Worker 1 20:21 -> 20:40**: T-163 r2 REJECTED 22:00 -> **PARTIAL** (column joint fix verified, -0.06 %, but dome shell
+  formwork set to 0 on the client change and the dome-opening band counted in both slab edges and the ring). r3 (22:20 ->
+  22:27) MERGED 00:10 -> **WORKED** (S0 soffit 2 x 24.150 m2 checker 0.00 %; band owned by the ring; ScenarioLeak guard +
+  adverse tests). Register ruling 00:20.
+- **Worker 2 21:40 -> 22:12**: T-194 MERGED 00:09 -> **WORKED** (R6: 71 openings, all four elevations bound; checker own
+  W14 / W17 0 mm). Findings become work: T-198 (three openings missing from the list, W01 / W03 levels on the wrong datum,
+  windows pcs HELD) and D-59 / D-60; T-176 now waits on T-198 (its net area changes).
+- **Worker 2 23:40 -> 00:01**: T-195 MERGED 00:50 (checker stamp) -> **WORKED** (R9: 31 sheets, 0 citation outside the
+  register; no revision printed anywhere). Decision: D-61 (two dates in the ST set) and D-62 (sheets not issued) to the
+  designer list; scope cross-check R7 opened as T-196 (lane I).
+- **Worker 3 23:00 -> 23:39**: T-179 r2 READY (fixed count B high end, +65.04 kg; NOT RELEASED); first in the checker's
+  open run. Lane I chain T-190 -> T-187 -> T-193 -> T-199 waits on this merge; T-168 promoted so worker 3 has claimable
+  non-chain work.
+- **Firewall test**: still red on the working head since the T-186 merge (17:00; every run since reports the same single
+  failure). It cannot be fixed before T-179 merges (same registry file). Decision: unchanged, T-190 first in lane I; the
+  checker treats it as gate 0 the moment it is READY. Recurring cause 7 holds; every new-module row carries the firewall
+  test in its acceptance.
+- **STALL_CHECK T-176**: worker 2 passed it twice by its lowest-gate-first rule (gate 3 vs the gate-1 review rows): a
+  reprioritisation, not a failure; it now waits on T-198 for a real dependency.
+- Lessons rows proposed (standard s.7; the main chat owns the register): (1) T-179 r1: a held count A .. B gives a range
+  whose high end uses count B; a ledger copying one count into both ends is a wrong range, not a narrow one -> check the
+  high end against the high count (tests in t179 ledgers); (2) T-163 r2: a client-change scenario leaked into a derived
+  trade (formwork 0 for the domes) -> a scenario tag carries into every derived trade (ScenarioLeak guard, t163); (3)
+  T-194: a listed sill / head is a notation without its datum until bound to a level-marker block (t194); (4) T-195: a set
+  with no printed revision is controlled by file identity; cite set + page, not part-file page (t195).
+
 ## 2026-10-22 20:20 (lead run)
 
 - **Checker 15:51 (closed 16:30)**: T-158 MERGED 16:28 -> **WORKED** (owner stair rule UP-STAIR-015 in overlay URBAN_RULES

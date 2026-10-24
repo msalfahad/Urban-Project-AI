@@ -1,11 +1,37 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
 Plain words, no task numbers. Measured numbers come from SCOREBOARD.md; anything not measured says so.
-Last update: 2026-10-24 20:15 UTC (Lead). Previous version: 2026-10-24 18:15 UTC. The released numbers did not change
+Last update: 2026-10-24 22:15 UTC (Lead). Previous version: 2026-10-24 20:15 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released default V2.9 + route G untouched). Your measure: whole BOQ
 lines independently verified, and trades that can be scored. Still 1 whole line verified in the candidate (the concrete
 slab, 60.28 m3), 0 released. No new question for you; the curved first-floor window question is still open, and the
 fingerprints of two sealed reference files are still yours to record (see "Waiting for the owner").
+
+Since 20:15 (newest first; four pieces checked and merged, one sent back for a narrow fix, two handed in):
+- Ceilings, ground-floor light well: fixed and merged. The checker split the 23.24 m2 face himself and agrees to
+  0.001 m2: 13.39 m2 is the open light well, 1.55 m2 a small shaft (no ceiling), 0.89 m2 ordinary slab, and 7.40 m2 is
+  the underside of the upper stair flights and landing, which is a stair soffit, not a decorative ceiling. Flat
+  decorative ceiling now 363.17 m2 against 403.16 m2 in the released run (-9.9 %) and the freelancer's 409.58 m2
+  (-11.3 %); not verified as a whole yet (first-floor rooms, domes and second floor not re-checked). Stair soffits are a
+  scope no line carries yet: new work measures them flight by flight.
+- Reinforcement laps and tons: merged with your acceptance points (the four boundary lengths at a 1.2 m lap, every
+  column lap checked against its starter bars with no double count, the five detailing categories). Every lap stays
+  held; effect on Alsenan 0.000 t. The worker found that the lower bound of the column cores starts from the
+  excavation level instead of the footing top (the 17 cm of blinding and screed is ignored, about 74 kg): a new
+  correction task.
+- Ground-beam stirrups and the stair finish-level registration: merged (counts and weights stay held).
+- Buried-concrete waterproofing, traced face by face: sent back narrow. The trace found 46.52 m2 of buried faces, but
+  where a straight beam frames into the curved ring it cut the beam square and counted 0.37 m of ring face that is
+  actually against concrete, and it took a 0.05 mm drawing offset beside a column as a beam face (0.59 m2). Held until
+  fixed (at most 45.61 m2 on what the checker checked). The same drawing situation can mislead formwork, so the
+  formwork ledger gets the same check.
+- Block walls, checked by the checker himself: one first-floor wall nets 12.935 m2 against the register's 12.863 m2; the
+  register deducts a window over its full width although 3 cm of it lies inside a column already taken out of the wall.
+  The register fix is next in the queue.
+- Handed in, with the checker next: foundation and lift-pit waterproofing into the candidate (a scope missing in the
+  released run and in the freelancer's BOQ), and the census of beams drawn wider or narrower than their schedule (7 of
+  137 runs conflict, all already on the designer list; beam concrete 5.44 m3 drawn vs 5.77 m3 scheduled on those runs).
+- Nothing new on Drive since the last report; no new photos.
 
 Since 18:15 (newest first; two pieces checked and merged, one checked and passed waiting for its merge, two sent back
 for narrow fixes):
@@ -673,7 +699,18 @@ Not measured, and paused by your order (Alsenan first).
   development lengths, so a steel ledger is not complete until it has read them.
 
 ## Being worked on now
-(Lead 2026-10-24 20:15)
+(Lead 2026-10-24 22:15)
+- Checker: foundation waterproofing into the candidate first (with a challenge: part of the 35.40 m2 buried-coat
+  figure it carries includes faces that are not against earth), then the drawn-vs-scheduled beam census, then the
+  buried-faces fix when it arrives; in between, block walls and first-floor ceilings.
+- Structural (worker 1): formwork faces where beams end on curved or angled members; stair soffits flight by flight;
+  the column-core datum correction; excavation levels last.
+- Architecture and finishes (worker 2): the buried-faces fix (in work); the wall register (height pieces add up to the
+  length, windows deducted only where they sit in the wall); ceilings made ready for the candidate.
+- Integration (worker 3): the scoring key for the dressing room and landing; two small tooling tasks; then the settled
+  block walls and later the ceilings into the candidate.
+
+(Lead 2026-10-24 20:15, superseded)
 - Checker: merges the stair file registration and the stirrup count (both passed or in check now); then the laps / tons
   rework, the ceilings fix and the remaining buried-concrete faces as they arrive; the foundation waterproofing step
   into the candidate goes first when it is handed in.
@@ -721,6 +758,7 @@ Not measured, and paused by your order (Alsenan first).
 - Ceilings: wet-room board type, cove detail, drop heights at openings, dome openings (designer); bar counts of the 3 planted columns (designer).
 - Block walls: net area on 43 walls (28 openings still held; three openings missing from the list being added), black-block count (being investigated), wall tops under the dome openings and the lift tie beam (designer).
 - Ceilings over outside air: area settled (44.446 m2); the finish has no note on any sheet (specification / designer).
+- Stair soffits (underside of flights and landings, 7.40 m2 seen from the ground floor alone) in no line yet (being measured).
 - Slab under the main-stair winders (0.23 .. 0.25 m3) in no line yet; 16 beam pieces the drawings contradict or leave unmarked (designer list).
 - Roof levels and roof build-up (rooms under a roof), decor-ceiling levels and floor build-up, sunken-slab drops: three new
   designer requests (D-39, D-40, D-41).

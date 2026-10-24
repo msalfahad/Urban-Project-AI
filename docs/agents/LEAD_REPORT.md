@@ -1,5 +1,73 @@
 # Lead reports to the owner's main chat (newest first, last 3 entries; older in archive/LEAD_REPORT_older.md)
 
+## LEAD REPORT 2026-10-24 22:15 UTC
+
+Repositories: attached Urban-Project-AI checkout (main eafbb0f6); `.work` prepared AUTOMATICALLY ("setup by auto",
+22:09). Working branch 164b189f -> 789ebbb4 (four Checker merges via 'engine push': T-267 r2 e7eaee64, T-272 r2 ba626832,
+T-273 r2 42e32cf3, T-271 r2b 789ebbb4); no owner commit on the engine branch. Drive readable: nothing created or modified
+in the project folders since 20:00, no new images (no photo review task). Self-check: codemap PASS, pytest t061 PASS,
+freeze PASS (0). OWNER_SESSION_CHANGES: no entry since 18:38; nothing undone or duplicated.
+
+PROGRESS (Alsenan, by trade and unit; released unchanged: concrete 92.77 vs freelancer 111.81 m3, -17.03 %, run A).
+WHOLE LINES VERIFIED: candidate 1 / 13 (CONC.SLAB), released 0 / 13; no change. Nothing got worse.
+- CEILINGS (m2; T-271 r2b MERGED 789ebbb4): GF-130 23.2371 = light well 13.392 + shaft pocket 1.552 (no ceiling) + stair
+  zone 7.402 (upper flights + landing seen from GF: STAIR SOFFIT, HELD) + slab 0.891; Checker own polygonize, every part
+  within 0.0014 m2. R2 horizontal decor 363.173 vs released 403.163 (-9.92 %) vs freelancer 409.58 (-11.33 %),
+  DRAWING-CONFIRMED research ledger, not VERIFIED as a whole (1F, domes, 2F not re-checked). Who is right: light well
+  ENGINE_RIGHT 16.005 / FREELANCER_WRONG; pocket 1.318 both wrong; stair zone RULE_DIFFERENCE pending a stair soffit line.
+  Missing scope found: stair soffits (no line in engine or freelancer) -> T-281, T-283, T-284.
+- REBAR laps + t (T-273 r2 MERGED 42e32cf3): boundary set 12.00 / 12.01 / 22.80 / 22.81 m -> 0 / 1 / 1 / 2 laps at 1.2 m in
+  4 input forms; 31 starter chains + 56 joints, each lap zone counted exactly twice (no double count); five detailing
+  categories. Every lap HELD / PROVISIONAL, 0 released; Alsenan effect 0.000 t. Finding: column-core lower bound runs
+  from formation, ignoring the VERIFIED 0.17 m underlay (-74.381 kg at the formation limit) -> T-280.
+- REBAR ground-beam links (T-272 r2 MERGED ba626832): count HELD 333 .. 392 exterior, mass HELD, never 0.
+- WATERPROOFING, buried concrete (m2; T-276 r1 REJECTED narrow 20:59): traced 46.521 m2 DRAWING-CONFIRMED claimed; Checker
+  own: band 177 + 7CD frames into ring ARC 158, so 0.3708 m of the 'ring earth face' is against concrete (ring face 5.0197
+  vs 5.3030 m2, -5.3 %) and COL:255's 0.052 mm offset is a column face (0.5948 m2 to the neck line); total HELD <= 45.611 m2;
+  three other runs agree to 0.03 %. Engine and freelancer both have no line (omission). r2 in work.
+- WATERPROOFING foundation family into the candidate (T-270 READY, Gate B): V3.0.15 adds footing membrane 109.850 m2 +
+  screed 109.850 m2 / 5.4925 m3, lift pit membrane 47.430 / board 26.730 / screed 20.700 m2 (VERIFIED pieces), buried
+  liquid 35.404 m2 (DRAWING-CONFIRMED, partial); 3,680 lines byte-identical. Lead challenge to the Checker: the 35.404
+  contains faces T-276 r1 showed are not earth faces (-1.516 m2 under tees / beside the court); it may not be carried as
+  a confirmed total.
+- CONC.BEAM width (m3; T-277 READY, Gate A): 137 runs 105 AGREE / 7 CONFLICT = exactly D-02 + D-27; on those runs drawn
+  5.4421 vs scheduled 5.7665 m3 (-0.3244, -5.6 %), soffit 8.7140 vs 9.0072 m2; carried as CONFLICT, both readings.
+- BLOCKWORK (m2; Checker T-180 slot): 1F-W00 own net 12.935 vs register 12.863 (-0.071 m2, -0.55 %): W18 deducted over
+  0.0327 m already inside column 2FD8 (0.0706 m2 removed twice); length ruled 6.571 m. VERIFIED share unchanged 95.633 of
+  established 449.260 m2. -> T-274 acceptance.
+- Missing: windows line (Q-76 yours, D-53 designer), stair soffits (new), lap lengths (no print), excavation depths
+  (survey), buried-face remainder (T-276 r2).
+- Learned (lessons register +3, 2 closed): a member ends on its carrier's face on each of its own edges and a sub-mm
+  offset is not a member; an opening is deducted by its part inside the counted masonry; a bar length starts at the
+  physical datum on the verified level chain. Closed: slab opening = what the slab plan marks; links per radial span.
+
+ENGINEERING DECISIONS THIS RUN (ERS s.5 Lead). (1) Classified: T-267 r2, T-272 r2, T-273 r2, T-271 r2b WORKED; T-276 r1
+PARTIAL (narrow r2 in work); T-270, T-277 handed in. (2) NEW T-280 (lane S, gate 3, core datum on the level chain),
+T-281 (lane S, gate 2, stair soffits per flight / landing, missing scope), T-282 (lane S, gate 2, formwork faces at
+curved / oblique carriers: the T-276 cause in another trade), T-283 (lane A, gate 2, ceilings r3 integration-ready +
+the Checker's hidden-stair test), T-284 (lane I, QUEUED, ceilings into the candidate). (3) T-274 acceptance extended
+(part-in-masonry deduction, 1F-W00 length ruling, register-wide jamb scan); T-279 carries 1F-W00 only after it.
+(4) T-278 promoted first in lane I. (5) Register +6 elements (GF stair zone, shaft pocket, ring / band junction, COL:255,
+1F-W00 W18, column cores).
+
+TEAM HEALTH. Since 20:15: Checker 20:50 -> 21:05 SUCCESS (T-273 merged, T-276 rejected, 1F-W00 slot), 21:51 -> 22:04
+SUCCESS (T-271 merged, 1F-W00 ruled); earlier 19:51 run closed 20:23 SUCCESS (T-267, T-272 merged); Worker 1 20:20 ->
+20:44 SUCCESS (T-273 r2), 21:21 -> 22:00 SUCCESS (T-277); Worker 2 20:40 -> 21:14 SUCCESS (T-271 r2b), 21:40 open (T-276
+r2, within its hour); Worker 3 21:01 -> 21:53 SUCCESS (T-270). Every closed run self-check PASS; no refusal, no IDLE, no
+unclosed run. Worker 1's T-277 full suite did not finish (10-minute shell limit): Checker runs the level's suite before
+merge. Throughput: 4 merged, 1 rejected narrow in 2 h; READY 2. Queue check: 49 actionable rows, 0 flagged, 0 stall checks.
+
+OWNER PACKAGE: none new. Open with you: Q-76 (curved first-floor window height, A 9.87 / B 11.51 m2; recommendation A).
+
+NEEDS FIXING (owner only): (1) Unchanged: the wrapper's 'run' command allows only tools/alsenan_scoreboard.py and
+tools/alsenan_keymap.py; research scripts run with the venv python directly. Add a research-script entry to
+scripts/agent_env.sh on main, or confirm direct venv python in a task worktree is allowed. (2) The full test suite does
+not finish inside one 10-minute worker shell (worker 1, 22:00): a chunked full-suite entry in the wrapper would let
+workers hand in with an L4 result. (3) Unchanged: sha256 of the P7757 printed take-off and of the Qortuba seal / PA08
+take-off. (4) Consultant / designer list: CB2 drawn 0.25 vs scheduled W 20, D-02 / D-27 beam widths (now one census), the
+boundary ground-beam link drawn without closure, D-33 / D-34 / D-35, D-16, D-53, D-66, C-ST-3 / C-ST-4, ST-02; a site
+level survey if it exists.
+
 ## LEAD REPORT 2026-10-24 20:15 UTC
 
 Repositories: attached Urban-Project-AI checkout (main eafbb0f6); `.work` prepared AUTOMATICALLY ("setup by auto",
@@ -123,69 +191,4 @@ Qortuba seal / PA08 take-off (agents may not open sealed files; the Gate B v2 gu
 (2) Consultant / designer list, now with CB2 drawn 0.25 vs scheduled W 20 (GF slab plan) and the boundary ground-beam link
 drawn without closure, besides D-33 / D-34 / D-35, D-16, D-53, D-66, C-ST-3 / C-ST-4, ST-02; and a site level survey if
 it exists.
-
-## LEAD REPORT 2026-10-24 16:15 UTC
-
-Repositories: attached Urban-Project-AI checkout (main eafbb0f6); `.work` prepared AUTOMATICALLY ("setup by auto",
-16:10). Working branch c8dba740 -> 969e0ae5 (three Checker merges via 'engine push'); no owner commit on the engine
-branch. Drive readable: nothing created or modified in the project folders since 14:00, no new images (no photo review
-task). Self-check: codemap PASS, pytest t061 PASS, freeze PASS (0). OWNER_SESSION_CHANGES: two entries since my last run
-(14:23 reinforcement BOQ unit = metric ton + 40 d / 60 d lap proposal; 15:31 T-273 approved, Alsenan lap authority per
-bar group, D-T273-01 confirmed with 0.000 t impact): applied, nothing undone, T-273 not duplicated (promoted to TODO).
-
-PROGRESS (Alsenan, by trade and unit; released unchanged: concrete 92.77 vs freelancer 111.81 m3, -17.03 %, run A).
-WHOLE LINES VERIFIED: candidate 1 / 13 (CONC.SLAB), released 0 / 13; no change. Nothing got worse.
-- DOORS aluminium (m2 / pcs; T-268 Gate B MERGED d1d09601): candidate V3.0.13 12.760 m2 / 6 pcs, nothing held (was
-  4.180 + HELD 1.980 .. 8.800). vs freelancer 12.000 m2: +0.760 m2 (+6.33 %) = heads -1.000 RULE_DIFFERENCE, widths
-  -0.440 + one door he omits +2.200 ENGINE_RIGHT. PARTIALLY VERIFIED 2 / 3: pcs and widths VERIFIED, heights 2.20 m
-  ASSUMED — OWNER-APPROVED (Q-55 C). 8 lines changed by hand-checked diff, 3,655 byte-identical.
-- REBAR ground beams (kg; T-265 MERGED dd08d6b2): boundary G.B 44.07 m 315.56 kg lower bound ('(T&B)' per layer, re-derived
-  by the Checker from the dots; literal 631 kg does not fit 134 mm); main-house exterior 17 runs 995.40 kg (796.32 top /
-  bottom + 199.08 side bars) VERIFIED, every run = Checker's own length (ring -0.041 m end convention). Stirrups and laps
-  HELD (no printed hook / lap). Freelancer kg / m3 lump = RULE_DIFFERENCE, no %. BOQ unit will be t (owner 14:23) at the
-  export boundary only (T-273).
-- BLOCKWORK (m2; Checker light runs 15:27 - 16:04): established net 449.260 m2 unchanged; VERIFIED 4.458 -> 67.574 m2
-  (2F-W04 21.476, 1F-W03 14.400, 2F-W06 14.820, 1F-W08 12.420 = register to the mm); net walls own-measured 9 / 37; line
-  NOT VERIFIED (39 / 76 walls held-net). NEW FINDING: 1F-W20 own 24.507 vs register 24.477 (-0.030 m2), 1F-W22 own 20.402 vs
-  20.419 (+0.017): the register's height pieces do not sum to the census length (B19 skewed 0.403 m taken 0.46; B4 0.125 m
-  missed; 1F-W08 pieces 3.40 on 3.600 m). Held at register until T-274. Blockers split (T-261 r1): +149.289 m2 / 27.389 m3
-  SOURCE-SUPPORTED proposed (net 449.260 -> 598.549); REJECTED narrow: 3 / 8 walls agree to the mm, but census remainders
-  were closed into the neighbouring beam piece (1F-W04: own 7.500 vs 7.7926, -0.2926 m2, -3.8 %).
-- STAIRS finish levels (T-267 r1, REJECTED narrow, no quantity): the Checker re-derived every formula level by level:
-  Alsenan GF -> 1F 27 risers R 166.667: first 186.667, last 146.667, closure 4,500 mm; 1F -> 2F 188 / 148 mm; owner
-  examples exact. Fault: URBAN_RULES 1.7.0 not registered in RULES_MANIFEST (NEW failure in tests/m9_kb).
-- CHECKER TOOL (T-168 MERGED 969e0ae5): Gate B v2 pinned by sha256; real-data acceptance V3.0.2 -> V3.0.3 1,880 changed /
-  0 unflagged = T-151; V3.0.12 -> V3.0.13 8 changed / 0 unflagged.
-- Missing: windows line (Q-76 yours, D-53 designer), ceilings (T-271), ground-beam stirrups (T-272), laps (T-273),
-  excavation depths (survey).
-- Learned (lessons register +4): height pieces must close the wall length; a census remainder takes the member drawn
-  over it; a new rule file is registered in its manifest in the same commit; comparisons are pinned by sha256.
-
-ENGINEERING DECISIONS THIS RUN (ERS s.5 Lead). (1) Classified: T-265 WORKED, T-268 WORKED, T-168 WORKED, T-261 r1 PARTIAL
-(rework in progress, exact fault named), T-267 r1 PARTIAL (narrow r2, formulas need no redo). (2) T-272 narrowed to
-stirrups; laps of every element to T-273 (owner lap authority 15:31), so no lap can be measured twice. (3) T-273 promoted
-to TODO: T-235 r2 merged before your 14:23 unit decision and did not take the t display, so t stays in T-273; T-168 and
-its regression baseline are merged; order in lane S: T-267 r2, T-272, T-273, T-170. (4) New T-274 (lane A, after T-261
-r2): register height pieces must close the census length; corrected 1F-W20 / 1F-W22; sibling check over 76 walls;
-normal + adverse fixture. (5) New T-275 (lane I, backlog-permitted): the sha256 sealed guard into the scoreboard /
-census tooling (export left to T-273; release_baseline only as a proposal, its test is not weakened). (6) Checker light
-runs keep re-measuring SS block walls and list every wall whose pieces do not close (T-274's input). (7) Every hand-in
-now runs the test folders that scan what it touched (a rule file: tests/m9_kb).
-
-TEAM HEALTH. Since 14:15: Checker 2 runs (14:51 -> 15:31 SUCCESS: 3 merged, 1 rejected; 15:51 -> 16:08 SUCCESS: 1
-rejected, 3 walls verified); Worker 1 14:20 -> 15:03 SUCCESS (T-168), 15:20 -> 16:05 SUCCESS (T-267 hand-in); Worker 2
-13:40 -> 14:50 SUCCESS (T-261), 14:39 IDLE (lock, correct), 15:41 open (T-261 r2, within its lock); Worker 3 12:59 ->
-14:26 SUCCESS (T-268), 15:01 open (T-240 WP2b, lock to 18:01, progress pushed 15:55). Every closed run has a self-check
-PASS line; no refusal. Watch: worker 1 could not finish the full suite inside its run (18 % in 20 min on 2 cores): the
-Checker runs it at Gate A; if this repeats, the T-267 class of NEW failure shows the targeted folders must include the
-folders that scan the touched directory. Throughput: 3 merged / 2 rejected (both narrow) in 2 h; READY 0. Queue check:
-46 actionable rows, 0 flagged, 0 stall checks.
-
-OWNER PACKAGE: none new. Open with you: Q-76 (curved first-floor window height, A 9.87 / B 11.51 m2; recommendation A).
-
-NEEDS FIXING (owner only): (1) NEW, an action not a decision: the sha256 of the P7757 printed take-off and of the
-Qortuba seal / PA08 take-off. The agents may not open sealed files to compute it, so the Gate B v2 guard protects them by
-name only (the 23010 site benchmark is protected by sha256). Record the two hashes on the board or give them to the main
-chat. Tried: nothing further is possible without opening the sealed files. (2) Unchanged: the consultant / designer list
-(D-33 / D-34 / D-35, D-16, D-53, D-66, the stair items C-ST-3 / C-ST-4, ST-02), and a site level survey if it exists.
 
