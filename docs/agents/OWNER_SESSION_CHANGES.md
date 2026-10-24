@@ -7,6 +7,7 @@ conflicts with something you planned, say so in your report to the main chat ins
 
 | UTC time | What changed | Where | Why |
 |---|---|---|---|
+| 2026-10-24 14:23 | OWNER: reinforcement BOQ unit = metric ton (decision); 40 d / 60 d lap method proposed (under assessment, no task yet) | OWNER_RULE_REBAR_2026-10-24.md, BOARD.md note | Owner's words in the main chat |
 | 2026-10-24 13:53 | OWNER: T-267 final clarifications: three separate statuses (software / quantity / code), RUN_TYPE_UNKNOWN (test A12b), tests are not project accuracy, workflow preserved | OWNER_RULE_STAIRS_2026-10-24.md s.6, BOARD.md (note, T-267) | Owner's words in the main chat |
 | 2026-10-24 13:50 | OWNER: S-9 (no generated winders, no walking-line offset), five corrections (drawn goings, landing polygons, fixed vs maximum run, per-quantity release, scenario separation); Universal Design Code s.4 scope registered (private houses excluded) | OWNER_RULE_STAIRS_2026-10-24.md s.4, BOARD.md (note, T-267) | Owner's words in the main chat |
 | 2026-10-24 10:56 | OWNER: S-5..S-8 answered, two corrections (goings per configuration; HELD blank, scenarios in a separate report); code source register opened, all CODE NOT VERIFIED (official hosts denied by network policy) | OWNER_RULE_STAIRS_2026-10-24.md s.4, BOARD.md (note, T-267) | Owner's words in the main chat |
