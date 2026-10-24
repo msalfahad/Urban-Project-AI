@@ -2,7 +2,7 @@
  "master": "URBAN_BOQ_FAMILY_MASTER",
  "version": "1.9.0",
  "supersedes": "1.8.0 (kept unchanged on disk; every family, count, released-configuration field and the T-231 / T-211 / T-232 / T-239 / T-146 / T-268 pending entries copied unchanged)",
- "source": "1.1.0 + a candidate-level state per family re-derived from the merged ARCH_TAKEOFF_V3.0 .. V3.0.7 candidate packages (task T-203, pilot 2026-10-23 prerequisite 6; builder research/agents_t203/build_master_1_2_0.py; check tools/family_master_candidate.py) | 1.3.0 (T-231): 1.2.0 + pending_packages (rule r3 of tools/family_master_candidate.py): ARCH_TAKEOFF_V3.0.8 handed in for Gate B; no family state changes until it merges | 1.4.0 (T-211): 1.3.0 + pending ARCH_TAKEOFF_V3.0.9 (rule r3 of tools/family_master_candidate.py) handed in for Gate B; no family state changes until it merges | 1.5.0 (T-232): 1.4.0 + pending ARCH_TAKEOFF_V3.0.10 (rule r3 of tools/family_master_candidate.py) handed in for Gate B; no family state changes until it merges | 1.6.0 (T-239): 1.5.0 + pending ARCH_TAKEOFF_V3.0.11 (rule r3 of tools/family_master_candidate.py) handed in for Gate B; no family state changes until it merges | 1.7.0 (T-146 + T-247): 1.6.0 + pending ARCH_TAKEOFF_V3.0.12 (rule r3 of tools/family_master_candidate.py) handed in for Gate B; no family state changes until it merges | 1.8.0 (T-268): 1.7.0 + pending ARCH_TAKEOFF_V3.0.13 (rule r3 of tools/family_master_candidate.py); no family state changes until it merges | 1.9.0 (T-240 WP1 .. WP2): 1.8.0 + pending ARCH_TAKEOFF_V3.0.14 (rule r3 of tools/family_master_candidate.py); no family state changes until it merges",
+ "source": "1.1.0 + a candidate-level state per family re-derived from the merged ARCH_TAKEOFF_V3.0 .. V3.0.7 candidate packages (task T-203, pilot 2026-10-23 prerequisite 6; builder research/agents_t203/build_master_1_2_0.py; check tools/family_master_candidate.py) | 1.3.0 (T-231): 1.2.0 + pending_packages (rule r3 of tools/family_master_candidate.py): ARCH_TAKEOFF_V3.0.8 handed in for Gate B; no family state changes until it merges | 1.4.0 (T-211): 1.3.0 + pending ARCH_TAKEOFF_V3.0.9 (rule r3 of tools/family_master_candidate.py) handed in for Gate B; no family state changes until it merges | 1.5.0 (T-232): 1.4.0 + pending ARCH_TAKEOFF_V3.0.10 (rule r3 of tools/family_master_candidate.py) handed in for Gate B; no family state changes until it merges | 1.6.0 (T-239): 1.5.0 + pending ARCH_TAKEOFF_V3.0.11 (rule r3 of tools/family_master_candidate.py) handed in for Gate B; no family state changes until it merges | 1.7.0 (T-146 + T-247): 1.6.0 + pending ARCH_TAKEOFF_V3.0.12 (rule r3 of tools/family_master_candidate.py) handed in for Gate B; no family state changes until it merges | 1.8.0 (T-268): 1.7.0 + pending ARCH_TAKEOFF_V3.0.13 (rule r3 of tools/family_master_candidate.py); no family state changes until it merges | 1.9.0 (T-240 WP1 .. WP4): 1.8.0 + pending ARCH_TAKEOFF_V3.0.14 (rule r3 of tools/family_master_candidate.py); no family state changes until it merges",
  "loaded_by": "nothing: engine/source/rule_store.py keeps 1.0.0 and engine/source/coverage_census_v2.py reads 1.1.0, so no run, census or quantity changes with this file",
  "capability_states": [
   "INTEGRATED_AND_TESTED",
@@ -5482,7 +5482,8 @@
    "status": "READY_FOR_GATE_B",
    "integrates": [
     "T-223",
-    "T-218"
+    "T-218",
+    "T-269"
    ],
    "tests": [
     "tests/t240_floor_scope"
@@ -5493,7 +5494,7 @@
     "ARCH.SPACE",
     "ARCH.THRESHOLD"
    ],
-   "note": "T-240 work packages 1 .. 2 of 4 (research/agents_t240/T-240_WP1.md, T-240_WP2.md): one strip / face, one line - the 1F dressing into the internal floor line, nine sills / landings to held thresholds, the GF side passage to the outdoor key, a wall-top strip retired, the GF edge line with no opening placed part by part, the pantry wet (Q-37 A); the Gate B hand-in is WP4; names no family until merged",
+   "note": "T-240 work packages 1 .. 4 (research/agents_t240/T-240_WP1.md, T-240_WP2.md, T-240_WP3_WP4.md): one strip / face, one line - the 1F dressing into the internal floor line, nine sills / landings to held thresholds, the GF side passage to the outdoor key, a wall-top strip retired, the GF edge line with no opening placed part by part, the pantry wet (Q-37 A), the 1F living range settled to one value with its landing kept once (Q-66 B), the GF tread union placed flight by flight (T-269); the Gate B integration package; names no family until merged",
    "task_commit": "f95189bf125fda37940d26db0974d948a0ca0bdf"
   }
  ]

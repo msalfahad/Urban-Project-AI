@@ -1,4 +1,4 @@
-"""T-240 WP1 .. WP2 (renumbered after T-268 merged V3.0.13 / 1.8.0): build rules/coverage/BOQ_FAMILY_MASTER_1.9.0.json
+"""T-240 WP1 .. WP4 (renumbered after T-268 merged V3.0.13 / 1.8.0): build rules/coverage/BOQ_FAMILY_MASTER_1.9.0.json
 = 1.8.0 (never edited) + the pending
 ARCH_TAKEOFF_V3.0.14 package (tools/family_master_candidate.py rule r3).
 
@@ -31,13 +31,15 @@ NEW = ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.9.0.json"
 TASK_COMMIT = sys.argv[sys.argv.index("--task-commit") + 1] if "--task-commit" in sys.argv else None
 PENDING = {
     "task": "T-240", "method_version": "ARCH_TAKEOFF_V3.0.14", "module": "engine/source/arch_v3014.py",
-    "status": FMC.PENDING_STATUS, "integrates": ["T-223", "T-218"],
+    "status": FMC.PENDING_STATUS, "integrates": ["T-223", "T-218", "T-269"],
     "tests": ["tests/t240_floor_scope"],
     "changes_families_by_item_code": ["FIN.FLOOR.PORCELAIN", "FIN.FLOOR.WET_TILE", "ARCH.SPACE", "ARCH.THRESHOLD"],
-    "note": "T-240 work packages 1 .. 2 of 4 (research/agents_t240/T-240_WP1.md, T-240_WP2.md): one strip / face, "
-            "one line - the 1F dressing into the internal floor line, nine sills / landings to held thresholds, the GF "
-            "side passage to the outdoor key, a wall-top strip retired, the GF edge line with no opening placed part "
-            "by part, the pantry wet (Q-37 A); the Gate B hand-in is WP4; names no family until merged",
+    "note": "T-240 work packages 1 .. 4 (research/agents_t240/T-240_WP1.md, T-240_WP2.md, T-240_WP3_WP4.md): one "
+            "strip / face, one line - the 1F dressing into the internal floor line, nine sills / landings to held "
+            "thresholds, the GF side passage to the outdoor key, a wall-top strip retired, the GF edge line with no "
+            "opening placed part by part, the pantry wet (Q-37 A), the 1F living range settled to one value with its "
+            "landing kept once (Q-66 B), the GF tread union placed flight by flight (T-269); the Gate B integration "
+            "package; names no family until merged",
 }
 
 
@@ -47,7 +49,7 @@ def build(task_commit):
     new["version"] = "1.9.0"
     new["supersedes"] = ("1.8.0 (kept unchanged on disk; every family, count, released-configuration field and the "
                          "T-231 / T-211 / T-232 / T-239 / T-146 / T-268 pending entries copied unchanged)")
-    new["source"] = (str(old.get("source", "")) + " | 1.9.0 (T-240 WP1 .. WP2): 1.8.0 + pending ARCH_TAKEOFF_V3.0.14 "
+    new["source"] = (str(old.get("source", "")) + " | 1.9.0 (T-240 WP1 .. WP4): 1.8.0 + pending ARCH_TAKEOFF_V3.0.14 "
                      "(rule r3 of tools/family_master_candidate.py); no family state changes until it merges")
     new["pending_packages"] = list(old.get("pending_packages") or []) + [dict(PENDING, task_commit=task_commit)]
     return new

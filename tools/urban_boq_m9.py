@@ -2962,11 +2962,12 @@ CANDIDATE_EXTENSIONS_V3012 = (V3012,)  # its own tuple: the V3.0 .. V3.0.11 meth
 # line outside its rows byte-identical to V3.0.12. Opt-in, not the released default; rollback = run ARCH_TAKEOFF_V2.9.
 V3013 = "ARCH_TAKEOFF_V3.0.13"
 CANDIDATE_EXTENSIONS_V3013 = (V3013,)  # its own tuple: the V3.0 .. V3.0.12 method lists stay as they were
-# T-240 (WP1 .. WP2): ARCH_TAKEOFF_V3.0.14 = the SAME candidate extended again (engine.source.arch_v3014): a V3.0.13 run
+# T-240 (WP1 .. WP4): ARCH_TAKEOFF_V3.0.14 = the SAME candidate extended again (engine.source.arch_v3014): a V3.0.13 run
 # (its V3_0_* .. V3_0_13_* files unchanged) + ONE floor-scope piece: one strip / face, one line, by its physical class (an
 # enclosed interior face enters the floor line, lift-landing / exterior sills leave it for ONE held threshold line, an
 # exterior side passage leaves the internal key, a wall top is no floor, an edge line with no opening is placed part by
-# part, a piece bound WET moves to the wet line), with the guard re-checked, in V3_0_14_* files; every line outside its
+# part, a piece bound WET moves to the wet line, a range settled by a checker verdict takes one value, a lowest-storey
+# tread union is placed flight by flight), with the guard re-checked, in V3_0_14_* files; every line outside its
 # rows byte-identical to V3.0.13. Opt-in, not the released default; rollback = run ARCH_TAKEOFF_V2.9.
 V3014 = "ARCH_TAKEOFF_V3.0.14"
 CANDIDATE_EXTENSIONS_V3014 = (V3014,)  # its own tuple: the V3.0 .. V3.0.13 method lists stay as they were

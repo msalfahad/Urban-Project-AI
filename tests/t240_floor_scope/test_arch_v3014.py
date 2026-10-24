@@ -188,7 +188,7 @@ def test_write_files(tmp_path):
     ch, logs = A.changes_for(inp, ls)
     names, ident, led = A.write(tmp_path, ls, ch, logs, inp, ls)
     assert "V3_0_14_BOQ_LINES.json" in names and (tmp_path / "V3_0_14_DIFF.csv").exists()
-    assert led["integration_package"] is False and ident["opening_strips"] == 2   # the two thresholds
+    assert led["integration_package"] is True and ident["opening_strips"] == 2   # the two thresholds
 
 
 def test_no_inputs_changes_nothing():

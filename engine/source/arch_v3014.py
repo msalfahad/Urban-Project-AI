@@ -1,6 +1,6 @@
-"""ARCH_TAKEOFF_V3.0.14 (T-240, work packages 1 .. 2 of 4; renumbered from V3.0.13 after T-268 merged as V3.0.13, the
-door-ruling piece this version extends): the SAME opt-in BOQ candidate as ARCH_TAKEOFF_V3.0 .. V3.0.13
-(engine.source.arch_v30, arch_v301 .. arch_v3013), extended with ONE floor-scope piece: every strip and face of the
+"""ARCH_TAKEOFF_V3.0.14 (T-240, work packages 1 .. 4, the Gate B integration package; renumbered from V3.0.13 after
+T-268 merged as V3.0.13, the door-ruling piece this version extends): the SAME opt-in BOQ candidate as
+ARCH_TAKEOFF_V3.0 .. V3.0.13 (engine.source.arch_v30, arch_v301 .. arch_v3013), extended with ONE floor-scope piece: every strip and face of the
 internal floor line belongs to exactly one line, by its physical class. Not a new method family and not the released
 default (owner management decision 2026-10-20 sections 2 and 5); rollback is running the released ARCH_TAKEOFF_V2.9.
 
@@ -30,6 +30,17 @@ building. Four kinds of plan piece were in the wrong line (checker-merged T-223 
                 lies: COUNTED_IN a TO_OUTDOOR record whose stated missing piece it is (counted once there), NO_FLOOR (a
                 wall top), TO_WET (wet floor by a decision) or HELD_WITH (a held zone: area kept, never 0, outside the
                 internal line). The parts must add up to the carried strip.
+  SETTLE_RANGE  (WP3) a floor line carried as a range [low, high] on held pieces (stair strips) that a checker verdict
+                settled from the drawings: every held piece is placed FLOOR or NOT_FLOOR by its own drawn evidence,
+                the pieces add up to high - low, the line takes ONE value = low + the FLOOR pieces (never the larger end
+                by default); a part of the face with another finish by a binding decision (an arrival landing in
+                marble, Q-66 B) leaves the finish line as its own internal space line (area from named terms, counted
+                once, the finish line keeps the rest; a residual above TOL_CLOSURE is never absorbed);
+  UNDER_STAIR   (WP3) on the LOWEST storey, the tread union a face figure deducts is placed flight by flight by how
+                the plan draws it: a flight drawn overhead only with nothing closed under it leaves floor under it (a
+                new line in the face's own finish item, the face line unchanged and still net of every tread); a
+                flight drawn below the cut is HELD until a section / structural detail fixes where its soffit leaves
+                the floor (area kept, never 0, outside the internal line). The flights add up to the deducted union.
 Every area is recomputed from the record's printed dimensions and must equal the stated area; every retired line must
 carry exactly the figure the record states (the replaced figure is the one the line carries).
 
@@ -79,7 +90,10 @@ POLICY_ID = "URBAN_BOQ_T240_ARCH_V3_0_14"
 LEDGER_SCHEMA = "URBAN_V3014_INTEGRATION_LEDGER_V1"
 INPUTS_SCHEMA = "URBAN_V3014_INPUTS_V1"
 ROLLBACK = A30.ROLLBACK
-KINDS = ("ENTER_FLOOR", "TO_THRESHOLD", "TO_OUTDOOR", "NO_FLOOR", "TO_WET", "NO_OPENING_SPLIT")
+KINDS = ("ENTER_FLOOR", "TO_THRESHOLD", "TO_OUTDOOR", "NO_FLOOR", "TO_WET", "NO_OPENING_SPLIT", "SETTLE_RANGE",
+         "UNDER_STAIR")
+SETTLE_TO = ("FLOOR", "NOT_FLOOR")                  # WP3: a held piece of a bounded floor line, settled by a verdict
+FLIGHT_DRAWN = ("OVERHEAD_ONLY", "BELOW_CUT")       # WP3: how a flight on the lowest storey is drawn on its plan
 FLOOR_ITEMS = A30.FLOOR_ITEMS                       # the finished internal floor items
 DRY_ITEM, WET_ITEM = "FIN.FLOOR.PORCELAIN", "FIN.FLOOR.WET_TILE"
 SPLIT_TO = ("COUNTED_IN", "NO_FLOOR", "TO_WET", "HELD_WITH")
@@ -128,11 +142,15 @@ WAITING.update({
     "FLOOR_PANTRY_PART_RECHECK": "T-240 WP2 moves the pantry part of the open dining / living face to the wet line on "
                                  "the engine face geometry clipped to the printed pantry box (closure in the inputs); "
                                  "the Checker's figure of that part differs and is re-measured at WP4",
-    "FLOOR_WP3_STAIR_RESIDUE": "T-240 WP3: the 1F living stair residue and the T-116 tread / winder union, applied "
-                               "only where a Checker verdict covers it, else HELD naming T-269",
-    "FLOOR_WP4_LINE_RECONCILIATION": "T-240 WP4: the candidate floor line against the Checker's 47 pieces piece by "
-                                     "piece (Gate B); whole line VERIFIED only if 47 / 47 agree and nothing in the "
-                                     "key is HELD",
+    "FLOOR_UNDER_STAIR_BELOW_CUT": "the floor under round-stair flights drawn below the cut on the lowest storey "
+                                   "stays HELD (area kept) until a section or structural detail of that stair fixes "
+                                   "where its soffit leaves the floor (designer item proposed by T-269)",
+    "FLOOR_LANDING_MARBLE_LINE": "T-122: the marble line of an arrival landing split out of a porcelain face under "
+                                 "Q-66 B (printed vs drawn area, RULE_DIFFERENCE named) is the marble trade's wiring "
+                                 "piece; it reads the split-out space line's area once",
+    "FLOOR_LINE_WHOLE_VERIFICATION": "the whole floor-area line becomes VERIFIED only when every piece is checker-"
+                                     "verified and nothing in its scope is HELD: Gate B of this package re-measures "
+                                     "the pieces it moves; the held pieces it names stay held",
     "FLOOR_MATERIAL_UNTYPED_FACES": "the finish material of a face entered by ENTER_FLOOR stays HELD until a material "
                                     "rule binds its class (the DRY class rests on the absence of fixtures and the "
                                     "drainage-plan read); never borrowed from the neighbouring room",
@@ -297,10 +315,138 @@ def _check_record(rec):
         if not (_num(x.get("carried")) and abs(tot - float(x["carried"])) <= TOL_M2 * 10):
             raise InputsError(f"record {rid}: the parts {_r(tot)} != the carried strip {x.get('carried')}: every "
                               "part of the strip is placed, none twice")
+    elif k == "SETTLE_RANGE":
+        _check_settle(rec)
+    elif k == "UNDER_STAIR":
+        _check_under_stair(rec)
     else:   # NO_FLOOR
         _line_ref(rid, rec.get("line") or {}, "line", FLOOR_ITEMS)
         if rec.get("twin") is not None:
             _line_ref(rid, rec["twin"], "twin", (THRESHOLD_ITEM,))
+
+
+def _terms_area(rid, what, t):
+    """an area given as named signed terms (a printed box less / plus named pieces); every term named, sum > 0."""
+    if not (isinstance(t, dict) and t):
+        raise InputsError(f"record {rid} {what}: terms is a dict of named signed areas (m2)")
+    for n, v in t.items():
+        if not n or not _num(v) or abs(v) > MAX_DIM_M * MAX_DIM_M:
+            raise InputsError(f"record {rid} {what}: term {n!r} = {v!r} is not a named area in m2 (unit slip?)")
+    tot = sum(float(v) for v in t.values())
+    if tot <= 0:
+        raise InputsError(f"record {rid} {what}: the terms add to {_r(tot)} (an area > 0; missing is never 0)")
+    return tot
+
+
+def _check_settle(rec):
+    """SETTLE_RANGE (WP3): a floor line carried as a range [low, high] whose held pieces a checker verdict settled
+    from the drawings. Every held piece is named with its printed dimensions and placed FLOOR or NOT_FLOOR; the held
+    pieces add up to high - low; the value is low + the FLOOR pieces. A part of the settled face with another finish
+    (split_out) leaves the line by its binding decision, with its area from named terms; the line keeps the rest."""
+    rid = rec["id"]
+    x = rec.get("line") or {}
+    _line_ref(rid, x, "line", FLOOR_ITEMS)
+    c = x.get("carried")
+    if not (isinstance(c, (list, tuple)) and len(c) == 2 and all(_num(v) for v in c) and 0 < c[0] < c[1]):
+        raise InputsError(f"record {rid}: a settled line carries a range [low, high] with 0 < low < high (a live "
+                          "figure is not settled here)")
+    if rec.get("area_status") not in ("VERIFIED", "DRAWING-CONFIRMED"):
+        raise InputsError(f"record {rid}: area_status VERIFIED or DRAWING-CONFIRMED")
+    pieces = rec.get("pieces") or ()
+    if not pieces:
+        raise InputsError(f"record {rid}: the held pieces of the range are named, each settled")
+    names, held, floor = set(), 0.0, 0.0
+    for i, p in enumerate(pieces):
+        pn = p.get("piece")
+        if not pn or pn in names:
+            raise InputsError(f"record {rid}: pieces[{i}] names its piece, once")
+        names.add(pn)
+        a = area_of(dict(p, id=f"{rid}:{pn}"))
+        if p.get("to") not in SETTLE_TO:
+            raise InputsError(f"record {rid} piece {pn}: to one of {SETTLE_TO} (a piece still open is not settled: "
+                              "the line stays a range)")
+        if not (p.get("why") and p.get("evidence")):
+            raise InputsError(f"record {rid} piece {pn}: the drawn evidence and why it is {p['to']} are stated")
+        held += a
+        floor += a if p["to"] == "FLOOR" else 0.0
+    if abs(held - (float(c[1]) - float(c[0]))) > TOL_M2 * 10:
+        raise InputsError(f"record {rid}: the settled pieces {_r(held)} != the carried range width "
+                          f"{_r(float(c[1]) - float(c[0]))}: every held piece is settled, none twice")
+    v = rec.get("value_m2")
+    if not (_num(v) and abs(float(c[0]) + floor - float(v)) <= TOL_M2 * 10):
+        raise InputsError(f"record {rid}: value_m2 {v} != low {c[0]} + the FLOOR pieces {_r(floor)}")
+    so = rec.get("split_out")
+    if so is not None:
+        for f in ("part", "decision", "material", "material_status", "material_source", "area_status"):
+            if not so.get(f):
+                raise InputsError(f"record {rid} split_out: {f} is required (a part with another finish leaves the "
+                                  "line only by a binding decision, its area named)")
+        if so["material_status"] not in MATERIAL_STATUS or so["area_status"] not in ("VERIFIED", "DRAWING-CONFIRMED"):
+            raise InputsError(f"record {rid} split_out: material_status one of {MATERIAL_STATUS}, area_status "
+                              "VERIFIED or DRAWING-CONFIRMED")
+        a = _terms_area(rid, "split_out", so.get("terms"))
+        if not (_num(so.get("area_m2")) and abs(float(so["area_m2"]) - a) <= TOL_M2):
+            raise InputsError(f"record {rid} split_out: area_m2 {so.get('area_m2')} != its terms {_r(a)}")
+        if a >= float(v):
+            raise InputsError(f"record {rid} split_out: a part is smaller than the settled face")
+        k = so.get("kept_m2")
+        if not (_num(k) and abs(float(v) - a - float(k)) <= TOL_CLOSURE):
+            raise InputsError(f"record {rid} split_out: kept_m2 {k} != the settled value {v} - the part {_r(a)} (a "
+                              f"residual above {TOL_CLOSURE} m2 is never absorbed)")
+        if abs(float(v) - a - float(k)) > TOL_M2 and not so.get("residual_why"):
+            raise InputsError(f"record {rid} split_out: the residual {_r(float(v) - a - float(k))} m2 is named "
+                              "(residual_why)")
+
+
+def _check_under_stair(rec):
+    """UNDER_STAIR (WP3): on the LOWEST storey, a floor line whose figure deducts the tread union of a stair. Each
+    flight is placed by how its plan draws it: drawn only overhead with nothing closed under it -> the floor runs
+    under it (FLOOR, the face's own finish); drawn below the cut -> HELD until a section or structural detail fixes
+    where the soffit leaves the floor (area kept, never 0). The flights add up to the deducted union; the face line
+    itself is not changed (its figure stays net of every tread)."""
+    rid = rec["id"]
+    if rec.get("lowest_storey") is not True:
+        raise InputsError(f"record {rid}: only on the lowest storey (above it the space under a flight is the "
+                          "storey below)")
+    x = rec.get("face") or {}
+    _line_ref(rid, x, "face", FLOOR_ITEMS)
+    if not (_num(x.get("carried")) and x["carried"] > 0):
+        raise InputsError(f"record {rid}: the face line carries a live figure")
+    d = rec.get("deducted_m2")
+    if not (_num(d) and d > 0):
+        raise InputsError(f"record {rid}: deducted_m2 (the tread union the face figure deducts) > 0")
+    if rec.get("area_status") not in ("VERIFIED", "DRAWING-CONFIRMED"):
+        raise InputsError(f"record {rid}: area_status VERIFIED or DRAWING-CONFIRMED")
+    fl = rec.get("flights") or ()
+    if not fl:
+        raise InputsError(f"record {rid}: the flights of the union are named")
+    names, tot, n_floor = set(), 0.0, 0
+    for i, f in enumerate(fl):
+        fn = f.get("flight")
+        if not fn or fn in names:
+            raise InputsError(f"record {rid}: flights[{i}] names its flight, once")
+        names.add(fn)
+        if not (_num(f.get("area_m2")) and f["area_m2"] > 0):
+            raise InputsError(f"record {rid} flight {fn}: area_m2 > 0 (the flight's part of the union)")
+        tot += float(f["area_m2"])
+        if f.get("drawn") not in FLIGHT_DRAWN or not f.get("evidence"):
+            raise InputsError(f"record {rid} flight {fn}: drawn one of {FLIGHT_DRAWN}, with its drawn evidence")
+        if f.get("to") == "FLOOR":
+            if f["drawn"] != "OVERHEAD_ONLY" or f.get("closed_under") is not False:
+                raise InputsError(f"record {rid} flight {fn}: FLOOR only under a flight drawn overhead only with "
+                                  "nothing closed under it (closed_under False)")
+            n_floor += 1
+        elif f.get("to") == "HELD":
+            if not f.get("why"):
+                raise InputsError(f"record {rid} flight {fn}: a held flight says what it waits on (never 0)")
+        else:
+            raise InputsError(f"record {rid} flight {fn}: to FLOOR or HELD")
+        if f["drawn"] == "BELOW_CUT" and f.get("to") != "HELD":
+            raise InputsError(f"record {rid} flight {fn}: a flight drawn below the cut is HELD")
+    if abs(tot - float(d)) > TOL_M2 * 10:
+        raise InputsError(f"record {rid}: the flights {_r(tot)} != the deducted union {d}: every tread placed once")
+    if rec.get("material_from_neighbour"):
+        raise InputsError(f"record {rid}: a material borrowed from another room is refused (D-C3)")
 
 
 def _check_counted_in(recs, p):
@@ -340,7 +486,14 @@ def load_inputs(doc, project_id=None):
                        line {floor item, ...}, twin {ARCH.THRESHOLD, ...} (optional)
         TO_OUTDOOR   + dims, area_m2, decision, material_status (+ material_source), lines [...],
                        missing {m2, why}
-        NO_FLOOR     + line {floor item, ...}, twin {ARCH.THRESHOLD, ...} (optional)"""
+        NO_FLOOR     + line {floor item, ...}, twin {ARCH.THRESHOLD, ...} (optional)
+        TO_WET       + decision, move_m2, whole | closure {box_m2, terms}, area_status, line {dry floor item, ...}
+        NO_OPENING_SPLIT + line, twin (optional), parts [{part, dims, area_m2, to, ...}]
+        SETTLE_RANGE + line {floor item, carried [low, high]}, value_m2, area_status, pieces [{piece, dims, area_m2,
+                       to FLOOR | NOT_FLOOR, why, evidence}], split_out {part, terms, area_m2, kept_m2, decision,
+                       material, material_status, material_source, area_status} (optional)
+        UNDER_STAIR  + lowest_storey True, face {floor item, carried}, deducted_m2, area_status, flights [{flight,
+                       area_m2, drawn OVERHEAD_ONLY | BELOW_CUT, closed_under, to FLOOR | HELD, why, evidence}]"""
     if doc is None:
         return None
     if doc.get("schema") != INPUTS_SCHEMA:
@@ -447,7 +600,8 @@ def scope_changes(pc, lines, earlier_changed=()):
     log = {"piece": "FLOOR_SCOPE", "state": "RUN", "source": src, "sources": pc.get("sources") or [], "records": [],
            "totals": {"floor_internal_in_m2": 0.0, "floor_internal_out_m2": 0.0, "threshold_m2": 0.0,
                       "outdoor_m2": 0.0, "no_floor_m2": 0.0, "dry_to_wet_m2": 0.0, "held_with_m2": 0.0,
-                      "counted_in_m2": 0.0}}
+                      "counted_in_m2": 0.0, "settled_m2": 0.0,
+                      "under_stair_floor_m2": 0.0, "under_stair_held_m2": 0.0}}
 
     def take(x, rid):
         ln = _find(lines, x, rid)
@@ -703,6 +857,128 @@ def scope_changes(pc, lines, earlier_changed=()):
             log["totals"]["floor_internal_out_m2"] += out_m2
             log["totals"]["floor_internal_in_m2"] += in_m2
             entry.update(retired=retired_ids, parts=parts_out, floor_internal_delta_m2=_r(in_m2 - out_m2))
+        elif k == "SETTLE_RANGE":
+            x = rec["line"]
+            ln, cq = take(x, rid)
+            if ln["evidence_state"] != "BOUNDED_EXPOSURE":
+                raise InputsError(f"record {rid}: line {x['element_id']} is {ln['evidence_state']}; only a bounded "
+                                  "line is settled here")
+            v = float(rec["value_m2"])
+            so = rec.get("split_out")
+            kept = float(so["kept_m2"]) if so else v
+            after = copy.deepcopy(ln)
+            calc = dict(after.get("calculation") or {})
+            pz = "; ".join(f"{p['piece']} {_r(area_of(dict(p, id=rid)), 4)} {p['to']}" for p in rec["pieces"])
+            calc["formula"] = (f"{_r(float(cq[0]), 6)} (low) + the pieces settled FLOOR = {_r(v, 6)} m2 [{pz}]"
+                               + (f"; less {so['part']} {_r(float(so['area_m2']), 6)} ({so['decision']}) = "
+                                  f"{_r(kept, 6)} m2" if so else ""))[:400]
+            calc["inputs"] = dict(calc.get("inputs") or {}, floor_scope_v3014=_scope_rec(
+                rec, v, floor_key="FLOOR.INTERNAL", part="SETTLED", was=A30._qty(ln), value_m2=_r(v), kept_m2=_r(kept),
+                pieces=rec["pieces"], area_status=rec["area_status"],
+                split_out={k2: so.get(k2) for k2 in ("part", "area_m2", "terms", "decision", "material",
+                                                     "residual_why")} if so else None))
+            ev = "SOURCE_DERIVED"
+            after.update(evidence_state=ev, measured_net=_r(kept), gross=_r(kept), bounded_range=None, rfi=None,
+                         calculation=calc)
+            A305._note(after, f"{METHOD}: range {A302._q(A30._qty(ln))} SETTLED to {_r(v, 4)} m2 {rec['area_status']} "
+                              f"({src['task']}, MERGED {src['merge_commit']}: every held piece placed from the drawings)"
+                              + (f"; {so['part']} {_r(float(so['area_m2']), 4)} m2 leaves this line ({so['decision']})"
+                                 if so else ""))
+            down = list(rec.get("downstream") or [])
+            changes.append(A305._change(
+                "FLOOR_SCOPE", "REPLACE", ln, after, drawing_reference=ref, held=[], downstream=down,
+                verification=verif, evidence_status=rec["area_status"], codes=["SETTLE_RANGE", "ONE_VALUE"]
+                + (["SPLIT_OUT"] if so else []) + (["EARLIER_CHANGE"] if ln["line_id"] in earlier else []),
+                why=x["why"]))
+            split_line = None
+            if so:
+                eid = f"HL:FLOOR_SCOPE:SPLIT_OUT:{fl}:{rid}:{so['part']}"
+                ms = so["material_status"]
+                nl = _new_line(pid, rev, docs, SPACE_ITEM, fl, eid, ev, value=float(so["area_m2"]),
+                               formula=(" + ".join(f"{n} {_r(t, 6)}" for n, t in so["terms"].items())
+                                        + f" = {_r(float(so['area_m2']), 4)} m2 floor ({so['material']}, "
+                                          f"{so['decision']})"),
+                               inputs=_scope_rec(dict(rec, dims=None), float(so["area_m2"]), floor_key="FLOOR.INTERNAL",
+                                                 part="SPLIT_OUT", from_line=ln["line_id"], terms=so["terms"],
+                                                 decision=so["decision"], material=so["material"],
+                                                 material_status=ms, material_source=so["material_source"],
+                                                 area_status=so["area_status"], material_line=so.get("material_line")),
+                               material_state="PROJECT_OWNER_FACT" if ms == "ASSUMED - OWNER-APPROVED" else "BY_SPEC",
+                               notes=f"{METHOD}: {so['part']} of {x['element_id']} - floor area in the internal line "
+                                     f"(counted once, here), finish {so['material']} ({so['decision']}; "
+                                     f"{ms}); never also in {x['item_code']}")
+                if nl["line_id"] in have:
+                    raise ValueError(f"{METHOD}: an added split line repeats a V3.0.13 line id")
+                changes.append(A305._change(
+                    "FLOOR_SCOPE", "ADD", None, nl, drawing_reference=ref, held=[],
+                    downstream=list(so.get("downstream") or []), verification=verif,
+                    evidence_status=so["area_status"], codes=["SETTLE_RANGE", "SPLIT_OUT", "NEW_LINE"],
+                    why=f"{so['part']}: {so['decision']}", guard_element={"element_id": eid, "part": "WHOLE"}))
+                split_line = nl["line_id"]
+            log["totals"]["floor_internal_in_m2"] += v       # a range was in no internal figure; the face enters whole
+            log["totals"]["settled_m2"] += v
+            entry.update(line_id=ln["line_id"], was=A30._qty(ln), value_m2=_r(v), kept_m2=_r(kept),
+                         split_line=split_line, floor_internal_delta_m2=_r(v))
+        elif k == "UNDER_STAIR":
+            x = rec["face"]
+            face = _find(lines, x, rid)
+            fq = _check_carried(face, x, rid)
+            if not live(face):
+                raise InputsError(f"record {rid}: face line {x['element_id']} is not live")
+            fl_m2 = sum(float(f["area_m2"]) for f in rec["flights"] if f["to"] == "FLOOR")
+            hd_m2 = sum(float(f["area_m2"]) for f in rec["flights"] if f["to"] == "HELD")
+            fz = "; ".join(f"{f['flight']} {_r(float(f['area_m2']), 4)} {f['drawn']} -> {f['to']}"
+                           for f in rec["flights"])
+            added = []
+            if fl_m2 > 0:
+                eid = f"HL:FLOOR_SCOPE:UNDER_STAIR:{fl}:{rid}"
+                nl = _new_line(pid, rev, docs, x["item_code"], fl, eid, "SOURCE_DERIVED", value=fl_m2,
+                               formula=(f"{_r(fl_m2, 6)} m2 floor under the flights drawn overhead only, out of the "
+                                        f"{_r(float(rec['deducted_m2']), 6)} m2 tread union {x['element_id']} deducts "
+                                        f"[{fz}]"),
+                               inputs=_scope_rec(dict(rec, dims=None), fl_m2, floor_key="FLOOR.INTERNAL",
+                                                 part="UNDER_STAIR_FLOOR", face_line=face["line_id"], face_m2=_r(fq),
+                                                 deducted_m2=rec["deducted_m2"], flights=rec["flights"],
+                                                 area_status=rec["area_status"]),
+                               notes=f"{METHOD}: the floor of {x['element_id']} runs under the overhead flights (same "
+                                     f"face, its own finish {x['item_code']}); the face line stays net of every tread")
+                if nl["line_id"] in have:
+                    raise ValueError(f"{METHOD}: an added under-stair line repeats a V3.0.13 line id")
+                changes.append(A305._change(
+                    "FLOOR_SCOPE", "ADD", None, nl, drawing_reference=ref, held=[],
+                    downstream=list(rec.get("downstream") or []), verification=verif,
+                    evidence_status=rec["area_status"], codes=["UNDER_STAIR", "FLOOR", "NEW_LINE"],
+                    why=f"lowest storey: floor under overhead flights ({x['element_id']})",
+                    guard_element={"element_id": eid, "part": "WHOLE"}))
+                added.append(nl["line_id"])
+            if hd_m2 > 0:
+                eid = f"HL:FLOOR_SCOPE:UNDER_STAIR_HELD:{fl}:{rid}"
+                q = "; ".join(f"{f['flight']} {_r(float(f['area_m2']), 4)} m2: {f['why']}" for f in rec["flights"]
+                              if f["to"] == "HELD")
+                nl = _new_line(pid, rev, docs, SPACE_ITEM, fl, eid, "BOUNDED_EXPOSURE",
+                               rng={"low": _r(hd_m2), "high": _r(hd_m2), "basis": ("under flights drawn below the cut, "
+                                                                                 "HELD: " + q)[:300]},
+                               formula=f"{_r(hd_m2, 6)} m2 under the flights drawn below the cut, HELD (never 0) [{fz}]",
+                               inputs=_scope_rec(dict(rec, dims=None), hd_m2, floor_key=None, part="UNDER_STAIR_HELD",
+                                                 to="HELD", face_line=face["line_id"], flights=rec["flights"],
+                                                 why=q[:600]),
+                               rfi={"question": q[:900], "unlocks": eid},
+                               notes=f"{METHOD}: under-stair of {x['element_id']} HELD, area kept, outside the internal "
+                                     "floor line")
+                if nl["line_id"] in have:
+                    raise ValueError(f"{METHOD}: an added under-stair line repeats a V3.0.13 line id")
+                changes.append(A305._change(
+                    "FLOOR_SCOPE", "ADD", None, nl, drawing_reference=ref,
+                    held=[{"what": f"under-stair of {x['element_id']} {fl}", "why": q, "range": [_r(hd_m2), _r(hd_m2)]}],
+                    downstream=[], verification=verif, evidence_status="HELD",
+                    codes=["UNDER_STAIR", "HELD", "NEW_LINE"], why="flights drawn below the cut",
+                    guard_element={"element_id": eid, "part": "WHOLE"}))
+                added.append(nl["line_id"])
+                log["totals"]["under_stair_held_m2"] += hd_m2
+            log["totals"]["floor_internal_in_m2"] += fl_m2
+            log["totals"]["under_stair_floor_m2"] += fl_m2
+            entry.update(face_line=face["line_id"], face_m2=_r(fq), floor_m2=_r(fl_m2), held_m2=_r(hd_m2),
+                         added=added, floor_internal_delta_m2=_r(fl_m2))
         else:   # NO_FLOOR
             out_m2, retired_ids = 0.0, []
             for x in [rec["line"]] + ([rec["twin"]] if rec.get("twin") else []):
@@ -836,6 +1112,23 @@ def check_floor_scope(lines):
             br = ln.get("bounded_range") or {}
             if ln["evidence_state"] != "BOUNDED_EXPOSURE" or not (_num(br.get("low")) and br["low"] > 0):
                 raise InputsError(f"line {ln['line_id']}: a held part keeps its area (never 0, never released)")
+        elif k == "SETTLE_RANGE":
+            if not _live(ln) or sc.get("floor_key") != "FLOOR.INTERNAL":
+                raise InputsError(f"line {ln['line_id']}: a settled line is live in FLOOR.INTERNAL (one value)")
+            want = sc["area_m2"] if sc.get("part") == "SPLIT_OUT" else sc.get("kept_m2")
+            if want is None or abs(float(ln["measured_net"]) - float(want)) > TOL_M2 * 10:
+                raise InputsError(f"line {ln['line_id']}: a settled line carries its settled figure")
+            if (sc.get("part") == "SPLIT_OUT") != (ln["item_code"] == SPACE_ITEM):
+                raise InputsError(f"line {ln['line_id']}: the split-out part is its own space line, the rest stays on "
+                                  "the finish line")
+        elif k == "UNDER_STAIR":
+            br = ln.get("bounded_range") or {}
+            if sc.get("part") == "UNDER_STAIR_FLOOR":
+                if not _live(ln) or ln["item_code"] not in FLOOR_ITEMS:
+                    raise InputsError(f"line {ln['line_id']}: the floor under overhead flights is a live floor line")
+            elif ln["evidence_state"] != "BOUNDED_EXPOSURE" or not (_num(br.get("low")) and br["low"] > 0):
+                raise InputsError(f"line {ln['line_id']}: the under-stair held part keeps its area (never 0, never "
+                                  "released)")
     return n
 
 
@@ -859,7 +1152,7 @@ def floor_line(lines):
         elif ln["item_code"] == THRESHOLD_ITEM and ln["evidence_state"] == "BOUNDED_EXPOSURE" and sc:
             add("threshold_held", fl, (ln.get("bounded_range") or {}).get("high") or 0.0)
         elif (ln["item_code"] == SPACE_ITEM and ln["evidence_state"] == "BOUNDED_EXPOSURE" and isinstance(sc, dict)
-              and sc.get("to") == "HELD_WITH"):
+              and sc.get("to") in ("HELD_WITH", "HELD")):
             add("space_held", fl, (ln.get("bounded_range") or {}).get("high") or 0.0)
     return {k: dict(v, total=_r(sum(v.values()), 6)) for k, v in out.items()}
 
@@ -993,8 +1286,8 @@ def write(out, l3013, v3014_changes, logs, inputs, released_lines=None):
                  pre_existing_strip_duplicates=strips["pre_existing_duplicates"])
     led = {"schema": LEDGER_SCHEMA, "method": METHOD, "extends": EXTENDS, "candidate": CANDIDATE,
            "base": A30.BASE_METHOD, "released": A30.RELEASED_METHOD, "released_default": False, "rows": rows,
-           "waiting_pieces": WAITING, "integration_package": False,
-           "work_package": "T-240 WP1 .. WP2 of 4 (progress; the Gate B hand-in is WP4)"}
+           "waiting_pieces": WAITING, "integration_package": True,
+           "work_package": "T-240 WP1 .. WP4 (the one Gate B integration package of the floor-area line)"}
     t12, t13 = A304.code_totals(l3013), A304.code_totals(l3014)
     moved = {k: {"v3_0_13": t12.get(k), "v3_0_14": t13.get(k)} for k in sorted(set(t12) | set(t13))
              if t12.get(k) != t13.get(k)}
