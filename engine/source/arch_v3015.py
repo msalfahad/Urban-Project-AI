@@ -366,7 +366,8 @@ def wp_changes(pc, lines):
                      "range": None, "scenario": ("V3_0_15_SCENARIOS.json#" + r["id"]) if r.get("scenario") else None}]
         changes.append(A305._change("FOUNDATION_WP", "ADD", None, ln, drawing_reference=r.get("printed") or src["file"],
                                     held=held, downstream=list(r.get("downstream") or ()), verification=verif,
-                                    evidence_status=evs, codes=["NEW_FAMILY", r["state"]]))
+                                    evidence_status=evs, codes=["NEW_FAMILY", r["state"]],
+                                    guard_element={"element_id": ln["location"]["element_id"], "part": "WHOLE"}))
         key = f"{r['item_code']} {r['unit']}"
         t = log["totals"].setdefault(key, {"released": 0.0, "held_lines": 0})
         if r["state"] == "RELEASED":

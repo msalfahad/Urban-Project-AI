@@ -329,3 +329,15 @@ def test_development_villa_inputs_pinned_to_the_checker_figures():
                                              "double_sheet_P_x_H_plus_0_07": 93.033788}
     bur = [r for r in pc["records"] if r["id"] == "BURIED-GB"][0]
     assert bur["verified_by"] is None and bur["partial_check"]["m2_or_unit"] == 5.3825 and len(bur["components"]) == 21
+
+
+def test_every_added_line_carries_its_guard_element():
+    # the guard re-check (arch_v307.guard_changes) maps each added line to a drawn element: refused without it (the
+    # development-villa run failed on exactly this before the fix)
+    _l, ch, *_ = run()
+    adds = [c for c in ch if c["action"] == "ADD"]
+    assert adds and all(c["guard_element"] == {"element_id": c["after"]["location"]["element_id"], "part": "WHOLE"}
+                        for c in adds)
+    from engine.source import arch_v307 as A307
+    m = A307._carried_map([], adds)
+    assert set(m) == {c["after"]["line_id"] for c in adds}
