@@ -1,0 +1,255 @@
+{
+ "against": "T-264 formwork r4 (FORMWORK_LINES_R4.csv), ground-beam side rows; no BOQ line changed",
+ "agrees": 106,
+ "changed": [
+  [
+   "10B+7D1#1",
+   "A",
+   0.3,
+   "DRAWING-CONFIRMED"
+  ],
+  [
+   "13E+7D6#1",
+   "B",
+   0.15,
+   "DRAWING-CONFIRMED"
+  ],
+  [
+   "13E+7D6#2",
+   "B",
+   0.15,
+   "DRAWING-CONFIRMED"
+  ],
+  [
+   "13E+7D6#2",
+   "END",
+   0.0017,
+   "HELD"
+  ],
+  [
+   "15D+7C8#1",
+   "B",
+   -0.0501,
+   "HELD"
+  ],
+  [
+   "15D+7C8#1",
+   "END",
+   0.3,
+   "DRAWING-CONFIRMED"
+  ],
+  [
+   "15E+15F#1",
+   "END",
+   0.1,
+   "DRAWING-CONFIRMED"
+  ],
+  [
+   "170+7C3#4",
+   "B",
+   0.3,
+   "DRAWING-CONFIRMED"
+  ],
+  [
+   "170+7C3#4",
+   "END",
+   0.2318,
+   "DRAWING-CONFIRMED"
+  ],
+  [
+   "177+7CD#1",
+   "END",
+   0.3,
+   "DRAWING-CONFIRMED"
+  ],
+  [
+   "177+7CD#2",
+   "A",
+   0.2191,
+   "DRAWING-CONFIRMED"
+  ],
+  [
+   "17C+7E3#1",
+   "END",
+   0.3,
+   "DRAWING-CONFIRMED"
+  ],
+  [
+   "17E+17F#1",
+   "A",
+   0.2601,
+   "DRAWING-CONFIRMED"
+  ],
+  [
+   "17E+17F#1",
+   "B",
+   0.3399,
+   "DRAWING-CONFIRMED"
+  ],
+  [
+   "180+181#1",
+   "B",
+   0.6,
+   "DRAWING-CONFIRMED"
+  ],
+  [
+   "1811+1812#1",
+   "A",
+   0.5,
+   "DRAWING-CONFIRMED"
+  ],
+  [
+   "1811+1812#1",
+   "END",
+   0.0972,
+   "DRAWING-CONFIRMED"
+  ],
+  [
+   "1811+1812#1",
+   "END",
+   0.3,
+   "DRAWING-CONFIRMED"
+  ],
+  [
+   "182+183#1",
+   "A",
+   0.0699,
+   "DRAWING-CONFIRMED"
+  ],
+  [
+   "7D4+F8#2",
+   "A",
+   0.3,
+   "DRAWING-CONFIRMED"
+  ]
+ ],
+ "closed_on_carrier": [
+  {
+   "closed_m": 0.1104,
+   "end": "end",
+   "member": "180+181",
+   "side": "B"
+  },
+  {
+   "closed_m": 0.2301,
+   "end": "start",
+   "member": "182+183",
+   "side": "A"
+  }
+ ],
+ "ring": {
+  "cover_width_drawn_m": 0.3715,
+  "cover_width_r4_m": 0.3,
+  "framing_arc_m": 0.3715,
+  "inner_r4_m": 6.5674,
+  "inner_traced_m": 6.5674,
+  "outer_r4_m": 6.2775,
+  "outer_traced_m": 5.9056,
+  "outer_traced_plus_framing_m": 6.2771,
+  "ring_end_piece": 0.3226
+ },
+ "rows": 126,
+ "schema": "T282_FORMWORK_EDGE_DELTA",
+ "slivers": [
+  {
+   "along_m": 0.7,
+   "band_id": "7D0+FC",
+   "below_snap": true,
+   "column": "COL:255",
+   "column_face_inside_band": false,
+   "offset_mm": -0.052,
+   "side": "A"
+  },
+  {
+   "along_m": 0.7,
+   "band_id": "7D0+FC",
+   "below_snap": true,
+   "column": "COL:255",
+   "column_face_inside_band": true,
+   "offset_mm": -0.052,
+   "side": "B"
+  }
+ ],
+ "snap_mm": 1.0,
+ "tee_widths_not_0_30": [
+  {
+   "gap_m": 0.1278,
+   "side": "A",
+   "span_id": "109+7CB#1"
+  },
+  {
+   "gap_m": 0.1,
+   "side": "B",
+   "span_id": "109+7CB#1"
+  },
+  {
+   "gap_m": 0.1,
+   "side": "B",
+   "span_id": "114+115+7DF#1"
+  },
+  {
+   "gap_m": 0.1628,
+   "side": "A",
+   "span_id": "15D+7C8#1"
+  },
+  {
+   "gap_m": 0.2499,
+   "side": "B",
+   "span_id": "15D+7C8#1"
+  },
+  {
+   "gap_m": 0.5615,
+   "side": "A",
+   "span_id": "170+7C3#2"
+  },
+  {
+   "gap_m": 0.13,
+   "side": "A",
+   "span_id": "170+7C3#3"
+  },
+  {
+   "gap_m": 0.4243,
+   "side": "A",
+   "span_id": "176+7E6#1"
+  },
+  {
+   "gap_m": 0.4243,
+   "side": "B",
+   "span_id": "176+7E6#1"
+  },
+  {
+   "gap_m": 0.4243,
+   "side": "B",
+   "span_id": "180D+180E#1"
+  }
+ ],
+ "totals": {
+  "delta_m2": {
+   "DRAWING-CONFIRMED CALC": [
+    0.285,
+    0.285
+   ],
+   "DRAWING-CONFIRMED FORMED": [
+    0.3402,
+    0.3402
+   ],
+   "DRAWING-CONFIRMED HELD": [
+    1.1159,
+    1.3545
+   ],
+   "DRAWING-CONFIRMED no depth (annex CONFLICT): m only": 0.75,
+   "HELD HELD": [
+    -0.02,
+    -0.02
+   ],
+   "HELD no depth (annex CONFLICT): m only": 0.0017
+  },
+  "delta_m_by_status": {
+   "DRAWING-CONFIRMED": 3.189,
+   "DRAWING-CONFIRMED_END": 1.629,
+   "HELD": -0.0501,
+   "HELD_END": 0.0017
+  }
+ },
+ "unattributed": []
+}

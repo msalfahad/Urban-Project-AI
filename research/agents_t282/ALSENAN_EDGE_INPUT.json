@@ -1,0 +1,5973 @@
+{
+ "arc_framing": [
+  {
+   "R_m": 1.0,
+   "arc_between_m": 0.0,
+   "carrier": "ARC:139+13A/1",
+   "carrier_arc": "13A",
+   "chord_between_m": 0.0,
+   "deg_A": 0.0,
+   "deg_B": 0.0,
+   "end": "end",
+   "r_hit_A_m": 1.3,
+   "r_hit_B_m": 1.0,
+   "span_id": "13E+7D6#2"
+  },
+  {
+   "R_m": 2.55,
+   "arc_between_m": 0.3715,
+   "carrier": "ARC:157+158/2",
+   "carrier_arc": "158",
+   "chord_between_m": 0.3712,
+   "deg_A": 220.318,
+   "deg_B": 211.971,
+   "end": "end",
+   "r_hit_A_m": 2.5501,
+   "r_hit_B_m": 2.5496,
+   "span_id": "177+7CD#2"
+  }
+ ],
+ "schema": "T282_EDGE_INPUT",
+ "sliver_window_mm": 5.0,
+ "slivers": [
+  {
+   "along_m": 0.7,
+   "band_id": "7D0+FC",
+   "below_snap": true,
+   "column": "COL:255",
+   "column_face_inside_band": false,
+   "offset_mm": -0.052,
+   "side": "A"
+  },
+  {
+   "along_m": 0.7,
+   "band_id": "7D0+FC",
+   "below_snap": true,
+   "column": "COL:255",
+   "column_face_inside_band": true,
+   "offset_mm": -0.052,
+   "side": "B"
+  }
+ ],
+ "snap_mm": 1.0,
+ "source": {
+  "drive": "Alsenan chalet project / ST7757 dxf.dxf",
+  "structural_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079"
+ },
+ "spans": [
+  {
+   "band_id": "107+7CE",
+   "edges": {
+    "A": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 0.655,
+     "drawn_to_m": 0.655,
+     "edge_handle": "107",
+     "ends": {
+      "end": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:17BD",
+       "drawn_end_m": 0.655,
+       "drawn_minus_face_mm": 291.1,
+       "how": "COLUMN",
+       "square_m": 0.3639,
+       "station_m": 0.3639,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": 0.0,
+       "carrier": "COL:238",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": -0.0,
+       "how": "COLUMN",
+       "square_m": 0.0,
+       "station_m": 0.0,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 0.3639,
+     "offset_dev_mm": 0.0
+    },
+    "B": {
+     "drawn_from_m": -0.0,
+     "drawn_line_m": 0.39,
+     "drawn_to_m": 0.39,
+     "edge_handle": "7CE",
+     "ends": {
+      "end": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:17BD",
+       "drawn_end_m": 0.39,
+       "drawn_minus_face_mm": 26.1,
+       "how": "COLUMN",
+       "square_m": 0.3639,
+       "station_m": 0.3639,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "carrier": "COL:238",
+       "drawn_end_m": -0.0,
+       "drawn_end_touches": [
+        "114+115+7DF",
+        "FTG:1B24"
+       ],
+       "how": "the named carrier does not reach this edge",
+       "square_m": 0.0,
+       "station_m": null,
+       "status": "NOT_REACHED"
+      }
+     },
+     "length_m": null,
+     "offset_dev_mm": 0.0
+    }
+   },
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:17BD"
+    ]
+   },
+   "face_to_face_m": 0.3639,
+   "span_id": "107+7CE#1",
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:238"
+    ]
+   },
+   "width_m": 0.3
+  },
+  {
+   "band_id": "109+7CB",
+   "edges": {
+    "A": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 12.9,
+     "drawn_to_m": 12.9,
+     "edge_handle": "7CB",
+     "ends": {
+      "end": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:228",
+       "drawn_end_m": 12.9,
+       "drawn_minus_face_mm": 8500.0,
+       "how": "COLUMN",
+       "square_m": 4.4,
+       "station_m": 4.4,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": 0.0,
+       "carrier": "7D0+FC",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": -0.0,
+       "how": "BAND",
+       "square_m": 0.0,
+       "station_m": 0.0,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 4.4,
+     "offset_dev_mm": 0.0
+    },
+    "B": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 13.2,
+     "drawn_to_m": 13.2,
+     "edge_handle": "109",
+     "ends": {
+      "end": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:228",
+       "drawn_end_m": 13.2,
+       "drawn_minus_face_mm": 8800.0,
+       "how": "COLUMN",
+       "square_m": 4.4,
+       "station_m": 4.4,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": 0.0,
+       "carrier": "7D0+FC",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": -0.0,
+       "how": "BAND",
+       "square_m": 0.0,
+       "station_m": 0.0,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 4.4,
+     "offset_dev_mm": 0.0
+    }
+   },
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:228"
+    ]
+   },
+   "face_to_face_m": 4.4,
+   "span_id": "109+7CB#1",
+   "start": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "7D0+FC"
+    ]
+   },
+   "width_m": 0.3
+  },
+  {
+   "band_id": "109+7CB",
+   "edges": {
+    "A": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 12.9,
+     "drawn_to_m": 12.9,
+     "edge_handle": "7CB",
+     "ends": {
+      "end": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:234",
+       "drawn_end_m": 12.9,
+       "drawn_minus_face_mm": 3400.0,
+       "how": "COLUMN",
+       "square_m": 9.5,
+       "station_m": 9.5,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": 0.0,
+       "carrier": "COL:228",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": 5100.0,
+       "how": "COLUMN",
+       "square_m": 5.1,
+       "station_m": 5.1,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 4.4,
+     "offset_dev_mm": 0.0
+    },
+    "B": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 13.2,
+     "drawn_to_m": 13.2,
+     "edge_handle": "109",
+     "ends": {
+      "end": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:234",
+       "drawn_end_m": 13.2,
+       "drawn_minus_face_mm": 3700.0,
+       "how": "COLUMN",
+       "square_m": 9.5,
+       "station_m": 9.5,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": 0.0,
+       "carrier": "COL:228",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": 5100.0,
+       "how": "COLUMN",
+       "square_m": 5.1,
+       "station_m": 5.1,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 4.4,
+     "offset_dev_mm": 0.0
+    }
+   },
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:234"
+    ]
+   },
+   "face_to_face_m": 4.4,
+   "span_id": "109+7CB#2",
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:228"
+    ]
+   },
+   "width_m": 0.3
+  },
+  {
+   "band_id": "109+7CB",
+   "edges": {
+    "A": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 12.9,
+     "drawn_to_m": 12.9,
+     "edge_handle": "7CB",
+     "ends": {
+      "end": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:1DC",
+       "drawn_end_m": 12.9,
+       "drawn_minus_face_mm": 200.0,
+       "how": "COLUMN",
+       "square_m": 12.7,
+       "station_m": 12.7,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": 0.0,
+       "carrier": "COL:234",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": 10000.0,
+       "how": "COLUMN",
+       "square_m": 10.0,
+       "station_m": 10.0,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 2.7,
+     "offset_dev_mm": 0.0
+    },
+    "B": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 13.2,
+     "drawn_to_m": 13.2,
+     "edge_handle": "109",
+     "ends": {
+      "end": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:1DC",
+       "drawn_end_m": 13.2,
+       "drawn_minus_face_mm": 500.0,
+       "how": "COLUMN",
+       "square_m": 12.7,
+       "station_m": 12.7,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": 0.0,
+       "carrier": "COL:234",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": 10000.0,
+       "how": "COLUMN",
+       "square_m": 10.0,
+       "station_m": 10.0,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 2.7,
+     "offset_dev_mm": 0.0
+    }
+   },
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:1DC"
+    ]
+   },
+   "face_to_face_m": 2.7,
+   "span_id": "109+7CB#3",
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:234"
+    ]
+   },
+   "width_m": 0.3
+  },
+  {
+   "band_id": "10A+7C9",
+   "edges": {
+    "A": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 4.6,
+     "drawn_to_m": 4.6,
+     "edge_handle": "7C9",
+     "ends": {
+      "end": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:220",
+       "drawn_end_m": 4.6,
+       "drawn_minus_face_mm": 300.0,
+       "how": "COLUMN",
+       "square_m": 4.3,
+       "station_m": 4.3,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": 0.0,
+       "carrier": "COL:218",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": -0.0,
+       "how": "COLUMN",
+       "square_m": 0.0,
+       "station_m": 0.0,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 4.3,
+     "offset_dev_mm": 0.0
+    },
+    "B": {
+     "drawn_from_m": -0.3,
+     "drawn_line_m": 4.9,
+     "drawn_to_m": 4.6,
+     "edge_handle": "10A",
+     "ends": {
+      "end": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:220",
+       "drawn_end_m": 4.6,
+       "drawn_minus_face_mm": 300.0,
+       "how": "COLUMN",
+       "square_m": 4.3,
+       "station_m": 4.3,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": 0.0,
+       "carrier": "COL:218",
+       "drawn_end_m": -0.3,
+       "drawn_minus_face_mm": 300.0,
+       "how": "COLUMN",
+       "square_m": 0.0,
+       "station_m": 0.0,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 4.3,
+     "offset_dev_mm": 0.0
+    }
+   },
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:220"
+    ]
+   },
+   "face_to_face_m": 4.3,
+   "span_id": "10A+7C9#1",
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:218"
+    ]
+   },
+   "width_m": 0.3
+  },
+  {
+   "band_id": "10B+7D1",
+   "edges": {
+    "A": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 4.9,
+     "drawn_to_m": 4.9,
+     "edge_handle": "10B",
+     "ends": {
+      "end": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:22C",
+       "drawn_end_m": 4.9,
+       "drawn_minus_face_mm": 3400.0,
+       "how": "COLUMN",
+       "square_m": 1.5,
+       "station_m": 1.5,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": 0.299,
+       "carrier": "7D4+F8",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": 1.0,
+       "how": "BAND",
+       "square_m": 0.3,
+       "station_m": 0.001,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 1.499,
+     "offset_dev_mm": 0.0
+    },
+    "B": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 4.6,
+     "drawn_to_m": 4.6,
+     "edge_handle": "7D1",
+     "ends": {
+      "end": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:22C",
+       "drawn_end_m": 4.6,
+       "drawn_minus_face_mm": 3100.0,
+       "how": "COLUMN",
+       "square_m": 1.5,
+       "station_m": 1.5,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": 0.0,
+       "carrier": "7D4+F8",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": 300.0,
+       "how": "BAND",
+       "square_m": 0.3,
+       "station_m": 0.3,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 1.2,
+     "offset_dev_mm": 0.0
+    }
+   },
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:22C"
+    ]
+   },
+   "face_to_face_m": 1.2,
+   "span_id": "10B+7D1#1",
+   "start": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "7D4+F8"
+    ]
+   },
+   "width_m": 0.3
+  },
+  {
+   "band_id": "10B+7D1",
+   "edges": {
+    "A": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 4.9,
+     "drawn_to_m": 4.9,
+     "edge_handle": "10B",
+     "ends": {
+      "end": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:223",
+       "drawn_end_m": 4.9,
+       "drawn_minus_face_mm": 600.0,
+       "how": "COLUMN",
+       "square_m": 4.3,
+       "station_m": 4.3,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": 0.0,
+       "carrier": "COL:22C",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": 2000.0,
+       "how": "COLUMN",
+       "square_m": 2.0,
+       "station_m": 2.0,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 2.3,
+     "offset_dev_mm": 0.0
+    },
+    "B": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 4.6,
+     "drawn_to_m": 4.6,
+     "edge_handle": "7D1",
+     "ends": {
+      "end": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:223",
+       "drawn_end_m": 4.6,
+       "drawn_minus_face_mm": 300.0,
+       "how": "COLUMN",
+       "square_m": 4.3,
+       "station_m": 4.3,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": 0.0,
+       "carrier": "COL:22C",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": 2000.0,
+       "how": "COLUMN",
+       "square_m": 2.0,
+       "station_m": 2.0,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 2.3,
+     "offset_dev_mm": 0.0
+    }
+   },
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:223"
+    ]
+   },
+   "face_to_face_m": 2.3,
+   "span_id": "10B+7D1#2",
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:22C"
+    ]
+   },
+   "width_m": 0.3
+  },
+  {
+   "band_id": "114+115+7DF",
+   "edges": {
+    "A": {
+     "drawn_from_m": -0.0,
+     "drawn_line_m": 4.225,
+     "drawn_to_m": 4.225,
+     "edge_handle": "114",
+     "ends": {
+      "end": {
+       "beyond_square_m": 0.0,
+       "carrier": "COL:238",
+       "drawn_end_m": 4.225,
+       "drawn_minus_face_mm": 1900.0,
+       "how": "COLUMN",
+       "square_m": 2.325,
+       "station_m": 2.325,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": -0.0,
+       "carrier": "7E7+7E8",
+       "drawn_end_m": -0.0,
+       "drawn_minus_face_mm": 0.0,
+       "how": "BAND",
+       "square_m": -0.0,
+       "station_m": -0.0,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 2.325,
+     "offset_dev_mm": 0.0
+    },
+    "B": {
+     "drawn_from_m": 3.225,
+     "drawn_line_m": 1.0,
+     "drawn_to_m": 4.225,
+     "edge_handle": "115",
+     "ends": {
+      "end": {
+       "beyond_square_m": 0.0,
+       "carrier": "COL:238",
+       "drawn_end_m": 4.225,
+       "drawn_minus_face_mm": 1900.0,
+       "how": "COLUMN",
+       "square_m": 2.325,
+       "station_m": 2.325,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": -0.0,
+       "carrier": "7E7+7E8",
+       "drawn_end_m": 3.225,
+       "drawn_minus_face_mm": -3225.0,
+       "how": "BAND",
+       "square_m": -0.0,
+       "station_m": -0.0,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 2.325,
+     "offset_dev_mm": 0.0
+    }
+   },
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:238"
+    ]
+   },
+   "face_to_face_m": 2.325,
+   "span_id": "114+115+7DF#1",
+   "start": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "7E7+7E8"
+    ]
+   },
+   "width_m": 0.3
+  },
+  {
+   "band_id": "114+115+7DF",
+   "edges": {
+    "A": {
+     "drawn_from_m": -0.0,
+     "drawn_line_m": 4.225,
+     "drawn_to_m": 4.225,
+     "edge_handle": "114",
+     "ends": {
+      "end": {
+       "beyond_square_m": 0.0,
+       "carrier": "COL:1FC",
+       "drawn_end_m": 4.225,
+       "drawn_minus_face_mm": 0.0,
+       "how": "COLUMN",
+       "square_m": 4.225,
+       "station_m": 4.225,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:238",
+       "drawn_end_m": -0.0,
+       "drawn_minus_face_mm": 3225.0,
+       "how": "COLUMN",
+       "square_m": 3.225,
+       "station_m": 3.225,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 1.0,
+     "offset_dev_mm": 0.0
+    },
+    "B": {
+     "drawn_from_m": 3.225,
+     "drawn_line_m": 1.0,
+     "drawn_to_m": 4.225,
+     "edge_handle": "115",
+     "ends": {
+      "end": {
+       "beyond_square_m": 0.0,
+       "carrier": "COL:1FC",
+       "drawn_end_m": 4.225,
+       "drawn_minus_face_mm": 0.0,
+       "how": "COLUMN",
+       "square_m": 4.225,
+       "station_m": 4.225,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:238",
+       "drawn_end_m": 3.225,
+       "drawn_minus_face_mm": -0.0,
+       "how": "COLUMN",
+       "square_m": 3.225,
+       "station_m": 3.225,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 1.0,
+     "offset_dev_mm": 0.0
+    }
+   },
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:1FC"
+    ]
+   },
+   "face_to_face_m": 1.0,
+   "span_id": "114+115+7DF#2",
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:238"
+    ]
+   },
+   "width_m": 0.3
+  },
+  {
+   "band_id": "136+7D5",
+   "edges": {
+    "A": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 6.4,
+     "drawn_to_m": 6.4,
+     "edge_handle": "7D5",
+     "ends": {
+      "end": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:204",
+       "drawn_end_m": 6.4,
+       "drawn_minus_face_mm": 400.0,
+       "how": "COLUMN",
+       "square_m": 6.0,
+       "station_m": 6.0,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": 0.0,
+       "carrier": "COL:207",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": 0.0,
+       "how": "COLUMN",
+       "square_m": 0.0,
+       "station_m": 0.0,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 6.0,
+     "offset_dev_mm": 0.0
+    },
+    "B": {
+     "drawn_from_m": -0.3,
+     "drawn_line_m": 6.7,
+     "drawn_to_m": 6.4,
+     "edge_handle": "136",
+     "ends": {
+      "end": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:204",
+       "drawn_end_m": 6.4,
+       "drawn_minus_face_mm": 400.0,
+       "how": "COLUMN",
+       "square_m": 6.0,
+       "station_m": 6.0,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": 0.0,
+       "carrier": "COL:207",
+       "drawn_end_m": -0.3,
+       "drawn_minus_face_mm": 300.0,
+       "how": "COLUMN",
+       "square_m": 0.0,
+       "station_m": 0.0,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 6.0,
+     "offset_dev_mm": 0.0
+    }
+   },
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:204"
+    ]
+   },
+   "face_to_face_m": 6.0,
+   "span_id": "136+7D5#1",
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:207"
+    ]
+   },
+   "width_m": 0.3
+  },
+  {
+   "band_id": "137+138",
+   "edges": {
+    "A": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 3.1,
+     "drawn_to_m": 3.1,
+     "edge_handle": "138",
+     "ends": {
+      "end": {
+       "beyond_square_m": 0.0,
+       "carrier": "COL:214",
+       "drawn_end_m": 3.1,
+       "drawn_minus_face_mm": 400.0,
+       "how": "COLUMN",
+       "square_m": 2.7,
+       "station_m": 2.7,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": -0.0,
+       "carrier": "136+7D5",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": 300.0,
+       "how": "BAND",
+       "square_m": 0.3,
+       "station_m": 0.3,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 2.4,
+     "offset_dev_mm": 0.0
+    },
+    "B": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 3.1,
+     "drawn_to_m": 3.1,
+     "edge_handle": "137",
+     "ends": {
+      "end": {
+       "beyond_square_m": 0.0,
+       "carrier": "COL:214",
+       "drawn_end_m": 3.1,
+       "drawn_minus_face_mm": 400.0,
+       "how": "COLUMN",
+       "square_m": 2.7,
+       "station_m": 2.7,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": -0.0,
+       "carrier": "136+7D5",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": 300.0,
+       "how": "BAND",
+       "square_m": 0.3,
+       "station_m": 0.3,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 2.4,
+     "offset_dev_mm": 0.0
+    }
+   },
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:214"
+    ]
+   },
+   "face_to_face_m": 2.4,
+   "span_id": "137+138#1",
+   "start": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "136+7D5"
+    ]
+   },
+   "width_m": 0.3
+  },
+  {
+   "band_id": "13C+7D9",
+   "edges": {
+    "A": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 1.45,
+     "drawn_to_m": 1.45,
+     "edge_handle": "13C",
+     "ends": {
+      "end": {
+       "beyond_square_m": 0.0,
+       "carrier": "13F+7D3",
+       "drawn_end_m": 1.45,
+       "drawn_minus_face_mm": 0.0,
+       "how": "BAND",
+       "square_m": 1.45,
+       "station_m": 1.45,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": -0.0,
+       "carrier": "13E+7D6",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": -0.0,
+       "how": "BAND",
+       "square_m": -0.0,
+       "station_m": 0.0,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 1.45,
+     "offset_dev_mm": 0.0
+    },
+    "B": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 1.45,
+     "drawn_to_m": 1.45,
+     "edge_handle": "7D9",
+     "ends": {
+      "end": {
+       "beyond_square_m": 0.0,
+       "carrier": "13F+7D3",
+       "drawn_end_m": 1.45,
+       "drawn_minus_face_mm": 0.0,
+       "how": "BAND",
+       "square_m": 1.45,
+       "station_m": 1.45,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": -0.0,
+       "carrier": "13E+7D6",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": -0.0,
+       "how": "BAND",
+       "square_m": -0.0,
+       "station_m": 0.0,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 1.45,
+     "offset_dev_mm": 0.0
+    }
+   },
+   "end": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "13F+7D3"
+    ]
+   },
+   "face_to_face_m": 1.45,
+   "span_id": "13C+7D9#1",
+   "start": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "13E+7D6"
+    ]
+   },
+   "width_m": 0.3
+  },
+  {
+   "band_id": "13D+7D2",
+   "edges": {
+    "A": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 6.4,
+     "drawn_to_m": 6.4,
+     "edge_handle": "7D2",
+     "ends": {
+      "end": {
+       "beyond_square_m": 0.0,
+       "carrier": "COL:223",
+       "drawn_end_m": 6.4,
+       "drawn_minus_face_mm": 0.0,
+       "how": "COLUMN",
+       "square_m": 6.4,
+       "station_m": 6.4,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:211",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": 600.0,
+       "how": "COLUMN",
+       "square_m": 0.6,
+       "station_m": 0.6,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 5.8,
+     "offset_dev_mm": 0.0
+    },
+    "B": {
+     "drawn_from_m": -0.0,
+     "drawn_line_m": 6.7,
+     "drawn_to_m": 6.7,
+     "edge_handle": "13D",
+     "ends": {
+      "end": {
+       "beyond_square_m": 0.0,
+       "carrier": "COL:223",
+       "drawn_end_m": 6.7,
+       "drawn_minus_face_mm": 300.0,
+       "how": "COLUMN",
+       "square_m": 6.4,
+       "station_m": 6.4,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:211",
+       "drawn_end_m": -0.0,
+       "drawn_minus_face_mm": 600.0,
+       "how": "COLUMN",
+       "square_m": 0.6,
+       "station_m": 0.6,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 5.8,
+     "offset_dev_mm": 0.0
+    }
+   },
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:223"
+    ]
+   },
+   "face_to_face_m": 5.8,
+   "span_id": "13D+7D2#1",
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:211"
+    ]
+   },
+   "width_m": 0.3
+  },
+  {
+   "band_id": "13E+7D6",
+   "edges": {
+    "A": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 5.1,
+     "drawn_to_m": 5.1,
+     "edge_handle": "13E",
+     "ends": {
+      "end": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:211",
+       "drawn_end_m": 5.1,
+       "drawn_minus_face_mm": 800.0,
+       "how": "COLUMN",
+       "square_m": 4.3,
+       "station_m": 4.3,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": 0.0,
+       "carrier": "7D4+F8",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": -0.0,
+       "how": "BAND",
+       "square_m": 0.0,
+       "station_m": 0.0,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 4.3,
+     "offset_dev_mm": 0.0
+    },
+    "B": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 5.1,
+     "drawn_to_m": 5.1,
+     "edge_handle": "7D6",
+     "ends": {
+      "end": {
+       "carrier": "COL:211",
+       "drawn_end_m": 5.1,
+       "drawn_end_touches": [
+        "ARC:139+13A/1",
+        "FTG:166B:F"
+       ],
+       "how": "the named carrier does not reach this edge",
+       "square_m": 4.3,
+       "station_m": null,
+       "status": "NOT_REACHED"
+      },
+      "start": {
+       "beyond_square_m": 0.0,
+       "carrier": "7D4+F8",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": -0.0,
+       "how": "BAND",
+       "square_m": 0.0,
+       "station_m": 0.0,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": null,
+     "offset_dev_mm": 0.0
+    }
+   },
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:211"
+    ]
+   },
+   "face_to_face_m": 4.3,
+   "span_id": "13E+7D6#1",
+   "start": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "7D4+F8"
+    ]
+   },
+   "width_m": 0.3
+  },
+  {
+   "band_id": "13E+7D6",
+   "edges": {
+    "A": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 5.1,
+     "drawn_to_m": 5.1,
+     "edge_handle": "13E",
+     "ends": {
+      "end": {
+       "beyond_square_m": -0.0,
+       "carrier": "ARC:139+13A/1",
+       "drawn_end_m": 5.1,
+       "drawn_minus_face_mm": 0.0,
+       "how": "ARC_BAND",
+       "square_m": 5.1,
+       "station_m": 5.1,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": 0.0,
+       "carrier": "COL:211",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": 4600.0,
+       "how": "COLUMN",
+       "square_m": 4.6,
+       "station_m": 4.6,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 0.5,
+     "offset_dev_mm": 0.0
+    },
+    "B": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 5.1,
+     "drawn_to_m": 5.1,
+     "edge_handle": "7D6",
+     "ends": {
+      "end": {
+       "beyond_square_m": -0.0,
+       "carrier": "ARC:139+13A/1",
+       "drawn_end_m": 5.1,
+       "drawn_minus_face_mm": 0.0,
+       "how": "ARC_BAND",
+       "square_m": 5.1,
+       "station_m": 5.1,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "carrier": "COL:211",
+       "drawn_end_m": 0.0,
+       "drawn_end_touches": [
+        "7D4+F8"
+       ],
+       "how": "the named carrier does not reach this edge",
+       "square_m": 4.6,
+       "station_m": null,
+       "status": "NOT_REACHED"
+      }
+     },
+     "length_m": null,
+     "offset_dev_mm": 0.0
+    }
+   },
+   "end": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "ARC:139+13A/1"
+    ]
+   },
+   "face_to_face_m": 0.5,
+   "span_id": "13E+7D6#2",
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:211"
+    ]
+   },
+   "width_m": 0.3
+  },
+  {
+   "band_id": "13F+7D3",
+   "edges": {
+    "A": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 4.3,
+     "drawn_to_m": 4.3,
+     "edge_handle": "7D3",
+     "ends": {
+      "end": {
+       "beyond_square_m": -0.0,
+       "carrier": "13D+7D2",
+       "drawn_end_m": 4.3,
+       "drawn_minus_face_mm": 0.0,
+       "how": "BAND",
+       "square_m": 4.3,
+       "station_m": 4.3,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": 0.0,
+       "carrier": "COL:20B",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": -0.0,
+       "how": "COLUMN",
+       "square_m": 0.0,
+       "station_m": -0.0,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 4.3,
+     "offset_dev_mm": 0.0
+    },
+    "B": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 4.3,
+     "drawn_to_m": 4.3,
+     "edge_handle": "13F",
+     "ends": {
+      "end": {
+       "beyond_square_m": -0.0,
+       "carrier": "13D+7D2",
+       "drawn_end_m": 4.3,
+       "drawn_minus_face_mm": -0.0,
+       "how": "BAND",
+       "square_m": 4.3,
+       "station_m": 4.3,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": 0.0,
+       "carrier": "COL:20B",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": -0.0,
+       "how": "COLUMN",
+       "square_m": 0.0,
+       "station_m": 0.0,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 4.3,
+     "offset_dev_mm": 0.0
+    }
+   },
+   "end": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "13D+7D2"
+    ]
+   },
+   "face_to_face_m": 4.3,
+   "span_id": "13F+7D3#1",
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:20B"
+    ]
+   },
+   "width_m": 0.3
+  },
+  {
+   "band_id": "140+7D7",
+   "edges": {
+    "A": {
+     "drawn_from_m": -0.0,
+     "drawn_line_m": 4.3,
+     "drawn_to_m": 4.3,
+     "edge_handle": "7D7",
+     "ends": {
+      "end": {
+       "beyond_square_m": -0.0,
+       "carrier": "13D+7D2",
+       "drawn_end_m": 4.3,
+       "drawn_minus_face_mm": 0.0,
+       "how": "BAND",
+       "square_m": 4.3,
+       "station_m": 4.3,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": 0.0,
+       "carrier": "7D4+F8",
+       "drawn_end_m": -0.0,
+       "drawn_minus_face_mm": 0.0,
+       "how": "BAND",
+       "square_m": 0.0,
+       "station_m": -0.0,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 4.3,
+     "offset_dev_mm": 0.0
+    },
+    "B": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 4.3,
+     "drawn_to_m": 4.3,
+     "edge_handle": "140",
+     "ends": {
+      "end": {
+       "beyond_square_m": -0.0,
+       "carrier": "13D+7D2",
+       "drawn_end_m": 4.3,
+       "drawn_minus_face_mm": 0.0,
+       "how": "BAND",
+       "square_m": 4.3,
+       "station_m": 4.3,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": 0.0,
+       "carrier": "7D4+F8",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": -0.0,
+       "how": "BAND",
+       "square_m": 0.0,
+       "station_m": 0.0,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 4.3,
+     "offset_dev_mm": 0.0
+    }
+   },
+   "end": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "13D+7D2"
+    ]
+   },
+   "face_to_face_m": 4.3,
+   "span_id": "140+7D7#1",
+   "start": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "7D4+F8"
+    ]
+   },
+   "width_m": 0.3
+  },
+  {
+   "band_id": "141+7DA",
+   "edges": {
+    "A": {
+     "drawn_from_m": -0.0,
+     "drawn_line_m": 1.2,
+     "drawn_to_m": 1.2,
+     "edge_handle": "141",
+     "ends": {
+      "end": {
+       "beyond_square_m": -0.0,
+       "carrier": "142+7D8",
+       "drawn_end_m": 1.2,
+       "drawn_minus_face_mm": -0.0,
+       "how": "BAND",
+       "square_m": 1.2,
+       "station_m": 1.2,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": 0.0,
+       "carrier": "7D4+F8",
+       "drawn_end_m": -0.0,
+       "drawn_minus_face_mm": -0.0,
+       "how": "BAND",
+       "square_m": 0.0,
+       "station_m": -0.0,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 1.2,
+     "offset_dev_mm": 0.0
+    },
+    "B": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 1.2,
+     "drawn_to_m": 1.2,
+     "edge_handle": "7DA",
+     "ends": {
+      "end": {
+       "beyond_square_m": -0.0,
+       "carrier": "142+7D8",
+       "drawn_end_m": 1.2,
+       "drawn_minus_face_mm": -0.0,
+       "how": "BAND",
+       "square_m": 1.2,
+       "station_m": 1.2,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": 0.0,
+       "carrier": "7D4+F8",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": 0.0,
+       "how": "BAND",
+       "square_m": 0.0,
+       "station_m": 0.0,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 1.2,
+     "offset_dev_mm": -0.0
+    }
+   },
+   "end": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "142+7D8"
+    ]
+   },
+   "face_to_face_m": 1.2,
+   "span_id": "141+7DA#1",
+   "start": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "7D4+F8"
+    ]
+   },
+   "width_m": 0.3
+  },
+  {
+   "band_id": "142+7D8",
+   "edges": {
+    "A": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 2.45,
+     "drawn_to_m": 2.45,
+     "edge_handle": "142",
+     "ends": {
+      "end": {
+       "beyond_square_m": 0.0,
+       "carrier": "COL:22C",
+       "drawn_end_m": 2.45,
+       "drawn_minus_face_mm": 0.0,
+       "how": "COLUMN",
+       "square_m": 2.45,
+       "station_m": 2.45,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": -0.0,
+       "carrier": "140+7D7",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": 0.0,
+       "how": "BAND",
+       "square_m": -0.0,
+       "station_m": 0.0,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 2.45,
+     "offset_dev_mm": 0.0
+    },
+    "B": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 2.45,
+     "drawn_to_m": 2.45,
+     "edge_handle": "7D8",
+     "ends": {
+      "end": {
+       "beyond_square_m": 0.0,
+       "carrier": "COL:22C",
+       "drawn_end_m": 2.45,
+       "drawn_minus_face_mm": 0.0,
+       "how": "COLUMN",
+       "square_m": 2.45,
+       "station_m": 2.45,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": -0.0,
+       "carrier": "140+7D7",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": -0.0,
+       "how": "BAND",
+       "square_m": -0.0,
+       "station_m": 0.0,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 2.45,
+     "offset_dev_mm": 0.0
+    }
+   },
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:22C"
+    ]
+   },
+   "face_to_face_m": 2.45,
+   "span_id": "142+7D8#1",
+   "start": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "140+7D7"
+    ]
+   },
+   "width_m": 0.3
+  },
+  {
+   "band_id": "145+7CA",
+   "edges": {
+    "A": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 3.0,
+     "drawn_to_m": 3.0,
+     "edge_handle": "7CA",
+     "ends": {
+      "end": {
+       "carrier": "COL:228",
+       "drawn_end_m": 3.0,
+       "drawn_end_touches": [
+        "109+7CB",
+        "FTG:1B19"
+       ],
+       "how": "the named carrier does not reach this edge",
+       "square_m": 3.0,
+       "station_m": null,
+       "status": "NOT_REACHED"
+      },
+      "start": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:220",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": 1100.0,
+       "how": "COLUMN",
+       "square_m": 1.1,
+       "station_m": 1.1,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": null,
+     "offset_dev_mm": 0.0
+    },
+    "B": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 3.0,
+     "drawn_to_m": 3.0,
+     "edge_handle": "145",
+     "ends": {
+      "end": {
+       "beyond_square_m": 0.0,
+       "carrier": "COL:228",
+       "drawn_end_m": 3.0,
+       "drawn_minus_face_mm": 0.0,
+       "how": "COLUMN",
+       "square_m": 3.0,
+       "station_m": 3.0,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:220",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": 1100.0,
+       "how": "COLUMN",
+       "square_m": 1.1,
+       "station_m": 1.1,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 1.9,
+     "offset_dev_mm": 0.0
+    }
+   },
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:228"
+    ]
+   },
+   "face_to_face_m": 1.9,
+   "span_id": "145+7CA#1",
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:220"
+    ]
+   },
+   "width_m": 0.3
+  },
+  {
+   "band_id": "15C+7CC",
+   "edges": {
+    "A": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 2.4,
+     "drawn_to_m": 2.4,
+     "edge_handle": "15C",
+     "ends": {
+      "end": {
+       "beyond_square_m": 0.0,
+       "carrier": "COL:1F2",
+       "drawn_end_m": 2.4,
+       "drawn_minus_face_mm": 0.0,
+       "how": "COLUMN",
+       "square_m": 2.4,
+       "station_m": 2.4,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": -0.0,
+       "carrier": "109+7CB",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": -0.0,
+       "how": "BAND",
+       "square_m": -0.0,
+       "station_m": 0.0,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 2.4,
+     "offset_dev_mm": 0.0
+    },
+    "B": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 2.4,
+     "drawn_to_m": 2.4,
+     "edge_handle": "7CC",
+     "ends": {
+      "end": {
+       "beyond_square_m": 0.0,
+       "carrier": "COL:1F2",
+       "drawn_end_m": 2.4,
+       "drawn_minus_face_mm": 0.0,
+       "how": "COLUMN",
+       "square_m": 2.4,
+       "station_m": 2.4,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": -0.0,
+       "carrier": "109+7CB",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": -0.0,
+       "how": "BAND",
+       "square_m": -0.0,
+       "station_m": 0.0,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 2.4,
+     "offset_dev_mm": 0.0
+    }
+   },
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:1F2"
+    ]
+   },
+   "face_to_face_m": 2.4,
+   "span_id": "15C+7CC#1",
+   "start": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "109+7CB"
+    ]
+   },
+   "width_m": 0.3
+  },
+  {
+   "band_id": "15D+7C8",
+   "edges": {
+    "A": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 2.9,
+     "drawn_to_m": 2.9,
+     "edge_handle": "7C8",
+     "ends": {
+      "end": {
+       "beyond_square_m": -0.0,
+       "carrier": "170+7C3",
+       "drawn_end_m": 2.9,
+       "drawn_minus_face_mm": 0.0,
+       "how": "BAND",
+       "square_m": 2.9,
+       "station_m": 2.9,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": 0.0,
+       "carrier": "FTG:1B2B",
+       "how": "FOOTING_FACE",
+       "square_m": 1.0001,
+       "station_m": 1.0001,
+       "status": "V2_STATION_FOOTING_FACE"
+      }
+     },
+     "length_m": 1.8999,
+     "offset_dev_mm": 0.0
+    },
+    "B": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 2.9,
+     "drawn_to_m": 2.9,
+     "edge_handle": "15D",
+     "ends": {
+      "end": {
+       "beyond_square_m": -0.0,
+       "carrier": "170+7C3",
+       "drawn_end_m": 2.9,
+       "drawn_minus_face_mm": -0.0,
+       "how": "BAND",
+       "square_m": 2.9,
+       "station_m": 2.9,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": 0.0,
+       "carrier": "FTG:1B2B",
+       "how": "FOOTING_FACE",
+       "square_m": 1.0001,
+       "station_m": 1.0001,
+       "status": "V2_STATION_FOOTING_FACE"
+      }
+     },
+     "length_m": 1.8999,
+     "offset_dev_mm": 0.0
+    }
+   },
+   "end": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "170+7C3"
+    ]
+   },
+   "face_to_face_m": 1.8999,
+   "span_id": "15D+7C8#1",
+   "start": {
+    "kind": "FOOTING_FACE",
+    "refs": [
+     "FTG:1B2B"
+    ]
+   },
+   "width_m": 0.3
+  },
+  {
+   "band_id": "15E+15F",
+   "edges": {
+    "A": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 3.0,
+     "drawn_to_m": 3.0,
+     "edge_handle": "15E",
+     "ends": {
+      "end": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:1E0",
+       "drawn_end_m": 3.0,
+       "drawn_minus_face_mm": 300.0,
+       "how": "COLUMN",
+       "square_m": 2.7,
+       "station_m": 2.7,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "carrier": "COL:1F5",
+       "drawn_end_m": 0.0,
+       "drawn_end_touches": [
+        "FTG:1B2B"
+       ],
+       "how": "the named carrier does not reach this edge",
+       "square_m": 0.0,
+       "station_m": null,
+       "status": "NOT_REACHED"
+      }
+     },
+     "length_m": null,
+     "offset_dev_mm": 0.0
+    },
+    "B": {
+     "drawn_from_m": -0.0,
+     "drawn_line_m": 3.0,
+     "drawn_to_m": 3.0,
+     "edge_handle": "15F",
+     "ends": {
+      "end": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:1E0",
+       "drawn_end_m": 3.0,
+       "drawn_minus_face_mm": 300.0,
+       "how": "COLUMN",
+       "square_m": 2.7,
+       "station_m": 2.7,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": 0.0,
+       "carrier": "COL:1F5",
+       "drawn_end_m": -0.0,
+       "drawn_minus_face_mm": -0.0,
+       "how": "COLUMN",
+       "square_m": 0.0,
+       "station_m": -0.0,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 2.7,
+     "offset_dev_mm": -0.0
+    }
+   },
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:1E0"
+    ]
+   },
+   "face_to_face_m": 2.7,
+   "span_id": "15E+15F#1",
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:1F5"
+    ]
+   },
+   "width_m": 0.3
+  },
+  {
+   "band_id": "16F+7FF",
+   "edges": {
+    "A": {
+     "drawn_from_m": -0.0,
+     "drawn_line_m": 1.25,
+     "drawn_to_m": 1.25,
+     "edge_handle": "7FF",
+     "ends": {
+      "end": {
+       "beyond_square_m": 0.0,
+       "carrier": "15D+7C8",
+       "drawn_end_m": 1.25,
+       "drawn_minus_face_mm": 0.0,
+       "how": "BAND",
+       "square_m": 1.25,
+       "station_m": 1.25,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": -0.0,
+       "carrier": "15E+15F",
+       "drawn_end_m": -0.0,
+       "drawn_minus_face_mm": -0.0,
+       "how": "BAND",
+       "square_m": -0.0,
+       "station_m": -0.0,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 1.25,
+     "offset_dev_mm": 0.0
+    },
+    "B": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 1.25,
+     "drawn_to_m": 1.25,
+     "edge_handle": "16F",
+     "ends": {
+      "end": {
+       "beyond_square_m": 0.0,
+       "carrier": "15D+7C8",
+       "drawn_end_m": 1.25,
+       "drawn_minus_face_mm": 0.0,
+       "how": "BAND",
+       "square_m": 1.25,
+       "station_m": 1.25,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": -0.0,
+       "carrier": "15E+15F",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": -0.0,
+       "how": "BAND",
+       "square_m": -0.0,
+       "station_m": 0.0,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 1.25,
+     "offset_dev_mm": 0.0
+    }
+   },
+   "end": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "15D+7C8"
+    ]
+   },
+   "face_to_face_m": 1.25,
+   "span_id": "16F+7FF#1",
+   "start": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "15E+15F"
+    ]
+   },
+   "width_m": 0.3
+  },
+  {
+   "band_id": "170+7C3",
+   "edges": {
+    "A": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 13.77,
+     "drawn_to_m": 13.77,
+     "edge_handle": "7C3",
+     "ends": {
+      "end": {
+       "beyond_square_m": 0.0,
+       "carrier": "COL:1E0",
+       "drawn_end_m": 13.77,
+       "drawn_minus_face_mm": 11370.0,
+       "how": "COLUMN",
+       "square_m": 2.4,
+       "station_m": 2.4,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:1DC",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": -0.0,
+       "how": "COLUMN",
+       "square_m": -0.0,
+       "station_m": 0.0,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 2.4,
+     "offset_dev_mm": 0.0
+    },
+    "B": {
+     "drawn_from_m": -0.3,
+     "drawn_line_m": 14.37,
+     "drawn_to_m": 14.07,
+     "edge_handle": "170",
+     "ends": {
+      "end": {
+       "beyond_square_m": 0.0,
+       "carrier": "COL:1E0",
+       "drawn_end_m": 14.07,
+       "drawn_minus_face_mm": 11670.0,
+       "how": "COLUMN",
+       "square_m": 2.4,
+       "station_m": 2.4,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:1DC",
+       "drawn_end_m": -0.3,
+       "drawn_minus_face_mm": 300.0,
+       "how": "COLUMN",
+       "square_m": -0.0,
+       "station_m": -0.0,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 2.4,
+     "offset_dev_mm": 0.0
+    }
+   },
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:1E0"
+    ]
+   },
+   "face_to_face_m": 2.4,
+   "span_id": "170+7C3#1",
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:1DC"
+    ]
+   },
+   "width_m": 0.3
+  },
+  {
+   "band_id": "170+7C3",
+   "edges": {
+    "A": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 13.77,
+     "drawn_to_m": 13.77,
+     "edge_handle": "7C3",
+     "ends": {
+      "end": {
+       "beyond_square_m": 0.0,
+       "carrier": "COL:1E4",
+       "drawn_end_m": 13.77,
+       "drawn_minus_face_mm": 7700.0,
+       "how": "COLUMN",
+       "square_m": 6.07,
+       "station_m": 6.07,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:1E0",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": 2700.0,
+       "how": "COLUMN",
+       "square_m": 2.7,
+       "station_m": 2.7,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 3.37,
+     "offset_dev_mm": 0.0
+    },
+    "B": {
+     "drawn_from_m": -0.3,
+     "drawn_line_m": 14.37,
+     "drawn_to_m": 14.07,
+     "edge_handle": "170",
+     "ends": {
+      "end": {
+       "beyond_square_m": 0.0,
+       "carrier": "COL:1E4",
+       "drawn_end_m": 14.07,
+       "drawn_minus_face_mm": 8000.0,
+       "how": "COLUMN",
+       "square_m": 6.07,
+       "station_m": 6.07,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:1E0",
+       "drawn_end_m": -0.3,
+       "drawn_minus_face_mm": 3000.0,
+       "how": "COLUMN",
+       "square_m": 2.7,
+       "station_m": 2.7,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 3.37,
+     "offset_dev_mm": 0.0
+    }
+   },
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:1E4"
+    ]
+   },
+   "face_to_face_m": 3.37,
+   "span_id": "170+7C3#2",
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:1E0"
+    ]
+   },
+   "width_m": 0.3
+  },
+  {
+   "band_id": "170+7C3",
+   "edges": {
+    "A": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 13.77,
+     "drawn_to_m": 13.77,
+     "edge_handle": "7C3",
+     "ends": {
+      "end": {
+       "beyond_square_m": 0.0,
+       "carrier": "COL:241",
+       "drawn_end_m": 13.77,
+       "drawn_minus_face_mm": 3750.0,
+       "how": "COLUMN",
+       "square_m": 10.02,
+       "station_m": 10.02,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:1E4",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": 6670.0,
+       "how": "COLUMN",
+       "square_m": 6.67,
+       "station_m": 6.67,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 3.35,
+     "offset_dev_mm": 0.0
+    },
+    "B": {
+     "drawn_from_m": -0.3,
+     "drawn_line_m": 14.37,
+     "drawn_to_m": 14.07,
+     "edge_handle": "170",
+     "ends": {
+      "end": {
+       "beyond_square_m": 0.0,
+       "carrier": "COL:241",
+       "drawn_end_m": 14.07,
+       "drawn_minus_face_mm": 4050.0,
+       "how": "COLUMN",
+       "square_m": 10.02,
+       "station_m": 10.02,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:1E4",
+       "drawn_end_m": -0.3,
+       "drawn_minus_face_mm": 6970.0,
+       "how": "COLUMN",
+       "square_m": 6.67,
+       "station_m": 6.67,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 3.35,
+     "offset_dev_mm": 0.0
+    }
+   },
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:241"
+    ]
+   },
+   "face_to_face_m": 3.35,
+   "span_id": "170+7C3#3",
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:1E4"
+    ]
+   },
+   "width_m": 0.3
+  },
+  {
+   "band_id": "170+7C3",
+   "edges": {
+    "A": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 13.77,
+     "drawn_to_m": 13.77,
+     "edge_handle": "7C3",
+     "ends": {
+      "end": {
+       "beyond_square_m": 0.0,
+       "carrier": "COL:17C0",
+       "drawn_end_m": 13.77,
+       "drawn_minus_face_mm": 0.0,
+       "how": "COLUMN",
+       "square_m": 13.77,
+       "station_m": 13.77,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:241",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": 10520.0,
+       "how": "COLUMN",
+       "square_m": 10.52,
+       "station_m": 10.52,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 3.25,
+     "offset_dev_mm": 0.0
+    },
+    "B": {
+     "drawn_from_m": -0.3,
+     "drawn_line_m": 14.37,
+     "drawn_to_m": 14.07,
+     "edge_handle": "170",
+     "ends": {
+      "end": {
+       "carrier": "COL:17C0",
+       "drawn_end_m": 14.07,
+       "drawn_end_touches": [
+        "COL:1E8",
+        "FTG:1666:F"
+       ],
+       "how": "the named carrier does not reach this edge",
+       "square_m": 13.77,
+       "station_m": null,
+       "status": "NOT_REACHED"
+      },
+      "start": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:241",
+       "drawn_end_m": -0.3,
+       "drawn_minus_face_mm": 10820.0,
+       "how": "COLUMN",
+       "square_m": 10.52,
+       "station_m": 10.52,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": null,
+     "offset_dev_mm": 0.0
+    }
+   },
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:17C0"
+    ]
+   },
+   "face_to_face_m": 3.25,
+   "span_id": "170+7C3#4",
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:241"
+    ]
+   },
+   "width_m": 0.3
+  },
+  {
+   "band_id": "175+7DE",
+   "edges": {
+    "A": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 3.75,
+     "drawn_to_m": 3.75,
+     "edge_handle": "7DE",
+     "ends": {
+      "end": {
+       "beyond_square_m": -0.0,
+       "carrier": "170+7C3",
+       "drawn_end_m": 3.75,
+       "drawn_minus_face_mm": -0.0,
+       "how": "BAND",
+       "square_m": 3.75,
+       "station_m": 3.75,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": 0.0,
+       "carrier": "177+7CD",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": -0.0,
+       "how": "BAND",
+       "square_m": 0.0,
+       "station_m": 0.0,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 3.75,
+     "offset_dev_mm": 0.0
+    },
+    "B": {
+     "drawn_from_m": -0.0,
+     "drawn_line_m": 3.75,
+     "drawn_to_m": 3.75,
+     "edge_handle": "175",
+     "ends": {
+      "end": {
+       "beyond_square_m": -0.0,
+       "carrier": "170+7C3",
+       "drawn_end_m": 3.75,
+       "drawn_minus_face_mm": -0.0,
+       "how": "BAND",
+       "square_m": 3.75,
+       "station_m": 3.75,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": 0.0,
+       "carrier": "177+7CD",
+       "drawn_end_m": -0.0,
+       "drawn_minus_face_mm": -0.0,
+       "how": "BAND",
+       "square_m": 0.0,
+       "station_m": -0.0,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 3.75,
+     "offset_dev_mm": 0.0
+    }
+   },
+   "end": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "170+7C3"
+    ]
+   },
+   "face_to_face_m": 3.75,
+   "span_id": "175+7DE#1",
+   "start": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "177+7CD"
+    ]
+   },
+   "width_m": 0.3
+  },
+  {
+   "band_id": "176+7E6",
+   "edges": {
+    "A": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 3.75,
+     "drawn_to_m": 3.75,
+     "edge_handle": "176",
+     "ends": {
+      "end": {
+       "carrier": "COL:1E4",
+       "drawn_end_m": 3.75,
+       "drawn_end_touches": [
+        "170+7C3",
+        "FTG:1664:F"
+       ],
+       "how": "the named carrier does not reach this edge",
+       "square_m": 3.75,
+       "station_m": null,
+       "status": "NOT_REACHED"
+      },
+      "start": {
+       "beyond_square_m": 0.0,
+       "carrier": "177+7CD",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": -0.0,
+       "how": "BAND",
+       "square_m": 0.0,
+       "station_m": 0.0,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": null,
+     "offset_dev_mm": 0.0
+    },
+    "B": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 3.75,
+     "drawn_to_m": 3.75,
+     "edge_handle": "7E6",
+     "ends": {
+      "end": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:1E4",
+       "drawn_end_m": 3.75,
+       "drawn_minus_face_mm": 0.0,
+       "how": "COLUMN",
+       "square_m": 3.75,
+       "station_m": 3.75,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": 0.0,
+       "carrier": "177+7CD",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": -0.0,
+       "how": "BAND",
+       "square_m": 0.0,
+       "station_m": 0.0,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 3.75,
+     "offset_dev_mm": 0.0
+    }
+   },
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:1E4"
+    ]
+   },
+   "face_to_face_m": 3.75,
+   "span_id": "176+7E6#1",
+   "start": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "177+7CD"
+    ]
+   },
+   "width_m": 0.3
+  },
+  {
+   "band_id": "177+7CD",
+   "edges": {
+    "A": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 7.7758,
+     "drawn_to_m": 7.7758,
+     "edge_handle": "177",
+     "ends": {
+      "end": {
+       "beyond_square_m": 0.0,
+       "carrier": "COL:245",
+       "drawn_end_m": 7.7758,
+       "drawn_minus_face_mm": 2755.8,
+       "how": "COLUMN",
+       "square_m": 5.02,
+       "station_m": 5.02,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": 0.0,
+       "carrier": "COL:1EC",
+       "how": "GAP_TO_COLUMN",
+       "square_m": -0.0,
+       "station_m": -0.0,
+       "status": "V2_STATION_GAP_TO_COLUMN"
+      }
+     },
+     "length_m": 5.02,
+     "offset_dev_mm": 0.0
+    },
+    "B": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 7.5567,
+     "drawn_to_m": 7.5567,
+     "edge_handle": "7CD",
+     "ends": {
+      "end": {
+       "beyond_square_m": 0.0,
+       "carrier": "COL:245",
+       "drawn_end_m": 7.5567,
+       "drawn_minus_face_mm": 2536.7,
+       "how": "COLUMN",
+       "square_m": 5.02,
+       "station_m": 5.02,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": 0.0,
+       "carrier": "COL:1EC",
+       "how": "GAP_TO_COLUMN",
+       "square_m": -0.0,
+       "station_m": -0.0,
+       "status": "V2_STATION_GAP_TO_COLUMN"
+      }
+     },
+     "length_m": 5.02,
+     "offset_dev_mm": 0.0
+    }
+   },
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:245"
+    ]
+   },
+   "face_to_face_m": 5.02,
+   "span_id": "177+7CD#1",
+   "start": {
+    "kind": "GAP_TO_COLUMN",
+    "refs": [
+     "COL:1EC"
+    ]
+   },
+   "width_m": 0.3
+  },
+  {
+   "band_id": "177+7CD",
+   "edges": {
+    "A": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 7.7758,
+     "drawn_to_m": 7.7758,
+     "edge_handle": "177",
+     "ends": {
+      "end": {
+       "beyond_square_m": 0.219,
+       "carrier": "ARC:157+158/2",
+       "drawn_end_m": 7.7758,
+       "drawn_minus_face_mm": 0.1,
+       "how": "ARC_BAND",
+       "square_m": 7.5567,
+       "station_m": 7.7757,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:245",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": 6020.0,
+       "how": "COLUMN",
+       "square_m": 6.02,
+       "station_m": 6.02,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 1.7557,
+     "offset_dev_mm": 0.0
+    },
+    "B": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 7.5567,
+     "drawn_to_m": 7.5567,
+     "edge_handle": "7CD",
+     "ends": {
+      "end": {
+       "beyond_square_m": 0.0005,
+       "carrier": "ARC:157+158/2",
+       "drawn_end_m": 7.5567,
+       "drawn_minus_face_mm": -0.5,
+       "how": "ARC_BAND",
+       "square_m": 7.5567,
+       "station_m": 7.5572,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:245",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": 6020.0,
+       "how": "COLUMN",
+       "square_m": 6.02,
+       "station_m": 6.02,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 1.5372,
+     "offset_dev_mm": 0.0
+    }
+   },
+   "end": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "ARC:157+158/2"
+    ]
+   },
+   "face_to_face_m": 1.5367,
+   "span_id": "177+7CD#2",
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:245"
+    ]
+   },
+   "width_m": 0.3
+  },
+  {
+   "band_id": "178+7DB",
+   "edges": {
+    "A": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 3.8,
+     "drawn_to_m": 3.8,
+     "edge_handle": "7DB",
+     "ends": {
+      "end": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:230",
+       "drawn_end_m": 3.8,
+       "drawn_minus_face_mm": 0.0,
+       "how": "COLUMN",
+       "square_m": 3.8,
+       "station_m": 3.8,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": 0.0,
+       "carrier": "145+7CA",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": -0.0,
+       "how": "BAND",
+       "square_m": 0.0,
+       "station_m": 0.0,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 3.8,
+     "offset_dev_mm": 0.0
+    },
+    "B": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 3.8,
+     "drawn_to_m": 3.8,
+     "edge_handle": "178",
+     "ends": {
+      "end": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:230",
+       "drawn_end_m": 3.8,
+       "drawn_minus_face_mm": 0.0,
+       "how": "COLUMN",
+       "square_m": 3.8,
+       "station_m": 3.8,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": 0.0,
+       "carrier": "145+7CA",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": -0.0,
+       "how": "BAND",
+       "square_m": 0.0,
+       "station_m": 0.0,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 3.8,
+     "offset_dev_mm": 0.0
+    }
+   },
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:230"
+    ]
+   },
+   "face_to_face_m": 3.8,
+   "span_id": "178+7DB#1",
+   "start": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "145+7CA"
+    ]
+   },
+   "width_m": 0.3
+  },
+  {
+   "band_id": "17B+7E5",
+   "edges": {
+    "A": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 1.2,
+     "drawn_to_m": 1.2,
+     "edge_handle": "17B",
+     "ends": {
+      "end": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:23C",
+       "drawn_end_m": 1.2,
+       "drawn_minus_face_mm": 0.0,
+       "how": "COLUMN",
+       "square_m": 1.2,
+       "station_m": 1.2,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": 0.0,
+       "carrier": "7D0+FC",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": -0.0,
+       "how": "BAND",
+       "square_m": 0.0,
+       "station_m": 0.0,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 1.2,
+     "offset_dev_mm": 0.0
+    },
+    "B": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 1.2,
+     "drawn_to_m": 1.2,
+     "edge_handle": "7E5",
+     "ends": {
+      "end": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:23C",
+       "drawn_end_m": 1.2,
+       "drawn_minus_face_mm": -0.0,
+       "how": "COLUMN",
+       "square_m": 1.2,
+       "station_m": 1.2,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": 0.0,
+       "carrier": "7D0+FC",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": -0.0,
+       "how": "BAND",
+       "square_m": 0.0,
+       "station_m": 0.0,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 1.2,
+     "offset_dev_mm": 0.0
+    }
+   },
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:23C"
+    ]
+   },
+   "face_to_face_m": 1.2,
+   "span_id": "17B+7E5#1",
+   "start": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "7D0+FC"
+    ]
+   },
+   "width_m": 0.3
+  },
+  {
+   "band_id": "17C+7E3",
+   "edges": {
+    "A": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 3.2277,
+     "drawn_to_m": 3.2277,
+     "edge_handle": "17C",
+     "ends": {
+      "end": {
+       "beyond_square_m": 0.0,
+       "carrier": "FTG:1B2B",
+       "how": "FOOTING_FACE",
+       "square_m": 1.9279,
+       "station_m": 1.9279,
+       "status": "V2_STATION_FOOTING_FACE"
+      },
+      "start": {
+       "beyond_square_m": -0.0,
+       "carrier": "7E1+7E2",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": -0.0,
+       "how": "BAND",
+       "square_m": -0.0,
+       "station_m": -0.0,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 1.9279,
+     "offset_dev_mm": 0.0
+    },
+    "B": {
+     "drawn_from_m": -0.0,
+     "drawn_line_m": 3.2277,
+     "drawn_to_m": 3.2277,
+     "edge_handle": "7E3",
+     "ends": {
+      "end": {
+       "beyond_square_m": 0.0,
+       "carrier": "FTG:1B2B",
+       "how": "FOOTING_FACE",
+       "square_m": 1.9279,
+       "station_m": 1.9279,
+       "status": "V2_STATION_FOOTING_FACE"
+      },
+      "start": {
+       "beyond_square_m": -0.0,
+       "carrier": "7E1+7E2",
+       "drawn_end_m": -0.0,
+       "drawn_minus_face_mm": -0.0,
+       "how": "BAND",
+       "square_m": -0.0,
+       "station_m": -0.0,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 1.9279,
+     "offset_dev_mm": 0.0
+    }
+   },
+   "end": {
+    "kind": "FOOTING_FACE",
+    "refs": [
+     "FTG:1B2B"
+    ]
+   },
+   "face_to_face_m": 1.9278,
+   "span_id": "17C+7E3#1",
+   "start": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "7E1+7E2"
+    ]
+   },
+   "width_m": 0.3
+  },
+  {
+   "band_id": "17D+7E4",
+   "edges": {
+    "A": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 4.2723,
+     "drawn_to_m": 4.2723,
+     "edge_handle": "17D",
+     "ends": {
+      "end": {
+       "beyond_square_m": 0.0,
+       "carrier": "7E1+7E2",
+       "drawn_end_m": 4.2723,
+       "drawn_minus_face_mm": 0.0,
+       "how": "BAND",
+       "square_m": 4.2722,
+       "station_m": 4.2723,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": 0.0,
+       "carrier": "7D0+FC",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": 0.0,
+       "how": "BAND",
+       "square_m": 0.0,
+       "station_m": 0.0,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 4.2723,
+     "offset_dev_mm": 0.0
+    },
+    "B": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 4.2723,
+     "drawn_to_m": 4.2723,
+     "edge_handle": "7E4",
+     "ends": {
+      "end": {
+       "beyond_square_m": 0.0,
+       "carrier": "7E1+7E2",
+       "drawn_end_m": 4.2723,
+       "drawn_minus_face_mm": 0.0,
+       "how": "BAND",
+       "square_m": 4.2722,
+       "station_m": 4.2723,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": 0.0,
+       "carrier": "7D0+FC",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": 0.0,
+       "how": "BAND",
+       "square_m": 0.0,
+       "station_m": 0.0,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 4.2723,
+     "offset_dev_mm": -0.0
+    }
+   },
+   "end": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "7E1+7E2"
+    ]
+   },
+   "face_to_face_m": 4.2723,
+   "span_id": "17D+7E4#1",
+   "start": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "7D0+FC"
+    ]
+   },
+   "width_m": 0.3
+  },
+  {
+   "band_id": "17E+17F",
+   "edges": {
+    "A": {
+     "drawn_from_m": -0.2202,
+     "drawn_line_m": 2.687,
+     "drawn_to_m": 2.4668,
+     "edge_handle": "17F",
+     "ends": {
+      "end": {
+       "beyond_square_m": -0.001,
+       "carrier": "176+7E6",
+       "drawn_end_m": 2.4668,
+       "drawn_minus_face_mm": 1.0,
+       "how": "BAND",
+       "square_m": 2.4669,
+       "station_m": 2.4658,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": 0.2591,
+       "carrier": "COL:1EF",
+       "drawn_end_m": -0.2202,
+       "drawn_minus_face_mm": 1.0,
+       "how": "COLUMN",
+       "square_m": 0.0399,
+       "station_m": -0.2192,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 2.685,
+     "offset_dev_mm": 0.0
+    },
+    "B": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 2.7668,
+     "drawn_to_m": 2.7668,
+     "edge_handle": "17E",
+     "ends": {
+      "end": {
+       "beyond_square_m": 0.299,
+       "carrier": "176+7E6",
+       "drawn_end_m": 2.7668,
+       "drawn_minus_face_mm": 1.0,
+       "how": "BAND",
+       "square_m": 2.4669,
+       "station_m": 2.7658,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": 0.0389,
+       "carrier": "COL:1EF",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": 1.0,
+       "how": "COLUMN",
+       "square_m": 0.0399,
+       "station_m": 0.001,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 2.7648,
+     "offset_dev_mm": -0.0
+    }
+   },
+   "end": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "176+7E6"
+    ]
+   },
+   "face_to_face_m": 2.4269,
+   "span_id": "17E+17F#1",
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:1EF"
+    ]
+   },
+   "width_m": 0.3
+  },
+  {
+   "band_id": "180+181",
+   "edges": {
+    "A": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 0.789,
+     "drawn_to_m": 0.789,
+     "edge_handle": "180",
+     "ends": {
+      "end": {
+       "beyond_square_m": -0.001,
+       "carrier": "180D+180E",
+       "drawn_end_m": 0.789,
+       "drawn_minus_face_mm": 1.0,
+       "how": "BAND",
+       "square_m": 0.789,
+       "station_m": 0.788,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": -0.001,
+       "carrier": "176+7E6",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": 1.0,
+       "how": "BAND",
+       "square_m": 0.0,
+       "station_m": 0.001,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 0.787,
+     "offset_dev_mm": 0.0
+    },
+    "B": {
+     "drawn_from_m": -0.3,
+     "drawn_line_m": 1.2786,
+     "drawn_to_m": 0.9786,
+     "edge_handle": "181",
+     "ends": {
+      "end": {
+       "beyond_square_m": 0.299,
+       "carrier": "180D+180E",
+       "drawn_end_m": 0.9786,
+       "drawn_minus_face_mm": -109.4,
+       "how": "BAND",
+       "square_m": 0.789,
+       "station_m": 1.088,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": 0.299,
+       "carrier": "176+7E6",
+       "drawn_end_m": -0.3,
+       "drawn_minus_face_mm": 1.0,
+       "how": "BAND",
+       "square_m": 0.0,
+       "station_m": -0.299,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 1.387,
+     "offset_dev_mm": 0.0
+    }
+   },
+   "end": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "180D+180E"
+    ]
+   },
+   "face_to_face_m": 0.789,
+   "span_id": "180+181#1",
+   "start": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "176+7E6"
+    ]
+   },
+   "width_m": 0.3
+  },
+  {
+   "band_id": "180D+180E",
+   "edges": {
+    "A": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 2.1,
+     "drawn_to_m": 2.1,
+     "edge_handle": "180E",
+     "ends": {
+      "end": {
+       "beyond_square_m": 0.0,
+       "carrier": "175+7DE",
+       "drawn_end_m": 2.1,
+       "drawn_minus_face_mm": 0.0,
+       "how": "BAND",
+       "square_m": 2.1,
+       "station_m": 2.1,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": -0.0,
+       "carrier": "176+7E6",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": -0.0,
+       "how": "BAND",
+       "square_m": -0.0,
+       "station_m": 0.0,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 2.1,
+     "offset_dev_mm": 0.0
+    },
+    "B": {
+     "drawn_from_m": -0.0,
+     "drawn_line_m": 2.1,
+     "drawn_to_m": 2.1,
+     "edge_handle": "180D",
+     "ends": {
+      "end": {
+       "beyond_square_m": 0.0,
+       "carrier": "175+7DE",
+       "drawn_end_m": 2.1,
+       "drawn_minus_face_mm": 0.0,
+       "how": "BAND",
+       "square_m": 2.1,
+       "station_m": 2.1,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": -0.0,
+       "carrier": "176+7E6",
+       "drawn_end_m": -0.0,
+       "drawn_minus_face_mm": -0.0,
+       "how": "BAND",
+       "square_m": -0.0,
+       "station_m": -0.0,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 2.1,
+     "offset_dev_mm": 0.0
+    }
+   },
+   "end": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "175+7DE"
+    ]
+   },
+   "face_to_face_m": 2.1,
+   "span_id": "180D+180E#1",
+   "start": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "176+7E6"
+    ]
+   },
+   "width_m": 0.3
+  },
+  {
+   "band_id": "1811+1812",
+   "edges": {
+    "A": {
+     "drawn_from_m": -0.5,
+     "drawn_line_m": 1.8,
+     "drawn_to_m": 1.3,
+     "edge_handle": "1812",
+     "ends": {
+      "end": {
+       "beyond_square_m": 0.0,
+       "carrier": "",
+       "how": "FREE_END",
+       "square_m": 1.3,
+       "station_m": 1.3,
+       "status": "V2_STATION_FREE_END"
+      },
+      "start": {
+       "carrier": "COL:1E8",
+       "drawn_end_m": -0.5,
+       "drawn_end_touches": [
+        "COL:17C0",
+        "FTG:1666:F"
+       ],
+       "how": "the named carrier does not reach this edge",
+       "square_m": -0.0,
+       "station_m": null,
+       "status": "NOT_REACHED"
+      }
+     },
+     "length_m": null,
+     "offset_dev_mm": -0.0
+    },
+    "B": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 1.3,
+     "drawn_to_m": 1.3,
+     "edge_handle": "1811",
+     "ends": {
+      "end": {
+       "beyond_square_m": 0.0,
+       "carrier": "",
+       "how": "FREE_END",
+       "square_m": 1.3,
+       "station_m": 1.3,
+       "status": "V2_STATION_FREE_END"
+      },
+      "start": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:1E8",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": -0.0,
+       "how": "COLUMN",
+       "square_m": -0.0,
+       "station_m": 0.0,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 1.3,
+     "offset_dev_mm": 0.0
+    }
+   },
+   "end": {
+    "kind": "FREE_END",
+    "refs": []
+   },
+   "face_to_face_m": 1.3,
+   "span_id": "1811+1812#1",
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:1E8"
+    ]
+   },
+   "width_m": 0.3
+  },
+  {
+   "band_id": "182+183",
+   "edges": {
+    "A": {
+     "drawn_from_m": -0.0699,
+     "drawn_line_m": 2.1431,
+     "drawn_to_m": 2.0732,
+     "edge_handle": "182",
+     "ends": {
+      "end": {
+       "beyond_square_m": 0.0,
+       "carrier": "17E+17F",
+       "drawn_end_m": 2.0732,
+       "drawn_minus_face_mm": 0.0,
+       "how": "BAND",
+       "square_m": 2.0732,
+       "station_m": 2.0732,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": 0.299,
+       "carrier": "170+7C3",
+       "drawn_end_m": -0.0699,
+       "drawn_minus_face_mm": -229.1,
+       "how": "BAND",
+       "square_m": 0.0,
+       "station_m": -0.299,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 2.3722,
+     "offset_dev_mm": 0.0
+    },
+    "B": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 2.0732,
+     "drawn_to_m": 2.0732,
+     "edge_handle": "183",
+     "ends": {
+      "end": {
+       "beyond_square_m": 0.0,
+       "carrier": "17E+17F",
+       "drawn_end_m": 2.0732,
+       "drawn_minus_face_mm": 0.0,
+       "how": "BAND",
+       "square_m": 2.0732,
+       "station_m": 2.0732,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": -0.001,
+       "carrier": "170+7C3",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": 1.0,
+       "how": "BAND",
+       "square_m": 0.0,
+       "station_m": 0.001,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 2.0722,
+     "offset_dev_mm": 0.0
+    }
+   },
+   "end": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "17E+17F"
+    ]
+   },
+   "face_to_face_m": 2.0732,
+   "span_id": "182+183#1",
+   "start": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "170+7C3"
+    ]
+   },
+   "width_m": 0.3
+  },
+  {
+   "band_id": "184+7CF",
+   "edges": {
+    "A": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 12.07,
+     "drawn_to_m": 12.07,
+     "edge_handle": "184",
+     "ends": {
+      "end": {
+       "beyond_square_m": 0.0,
+       "carrier": "COL:24D",
+       "drawn_end_m": 12.07,
+       "drawn_minus_face_mm": 9050.0,
+       "how": "COLUMN",
+       "square_m": 3.02,
+       "station_m": 3.02,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": -0.0,
+       "carrier": "17D+7E4",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": -0.0,
+       "how": "BAND",
+       "square_m": -0.0,
+       "station_m": -0.0,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 3.02,
+     "offset_dev_mm": 0.0
+    },
+    "B": {
+     "drawn_from_m": -0.0,
+     "drawn_line_m": 12.07,
+     "drawn_to_m": 12.07,
+     "edge_handle": "7CF",
+     "ends": {
+      "end": {
+       "beyond_square_m": 0.0,
+       "carrier": "COL:24D",
+       "drawn_end_m": 12.07,
+       "drawn_minus_face_mm": 9050.0,
+       "how": "COLUMN",
+       "square_m": 3.02,
+       "station_m": 3.02,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": -0.0,
+       "carrier": "17D+7E4",
+       "drawn_end_m": -0.0,
+       "drawn_minus_face_mm": -0.0,
+       "how": "BAND",
+       "square_m": -0.0,
+       "station_m": -0.0,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 3.02,
+     "offset_dev_mm": 0.0
+    }
+   },
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:24D"
+    ]
+   },
+   "face_to_face_m": 3.02,
+   "span_id": "184+7CF#1",
+   "start": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "17D+7E4"
+    ]
+   },
+   "width_m": 0.3
+  },
+  {
+   "band_id": "184+7CF",
+   "edges": {
+    "A": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 12.07,
+     "drawn_to_m": 12.07,
+     "edge_handle": "184",
+     "ends": {
+      "end": {
+       "beyond_square_m": 0.0,
+       "carrier": "COL:23C",
+       "drawn_end_m": 12.07,
+       "drawn_minus_face_mm": 5600.0,
+       "how": "COLUMN",
+       "square_m": 6.47,
+       "station_m": 6.47,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:24D",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": 3820.0,
+       "how": "COLUMN",
+       "square_m": 3.82,
+       "station_m": 3.82,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 2.65,
+     "offset_dev_mm": 0.0
+    },
+    "B": {
+     "drawn_from_m": -0.0,
+     "drawn_line_m": 12.07,
+     "drawn_to_m": 12.07,
+     "edge_handle": "7CF",
+     "ends": {
+      "end": {
+       "beyond_square_m": 0.0,
+       "carrier": "COL:23C",
+       "drawn_end_m": 12.07,
+       "drawn_minus_face_mm": 5600.0,
+       "how": "COLUMN",
+       "square_m": 6.47,
+       "station_m": 6.47,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:24D",
+       "drawn_end_m": -0.0,
+       "drawn_minus_face_mm": 3820.0,
+       "how": "COLUMN",
+       "square_m": 3.82,
+       "station_m": 3.82,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 2.65,
+     "offset_dev_mm": 0.0
+    }
+   },
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:23C"
+    ]
+   },
+   "face_to_face_m": 2.65,
+   "span_id": "184+7CF#2",
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:24D"
+    ]
+   },
+   "width_m": 0.3
+  },
+  {
+   "band_id": "184+7CF",
+   "edges": {
+    "A": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 12.07,
+     "drawn_to_m": 12.07,
+     "edge_handle": "184",
+     "ends": {
+      "end": {
+       "beyond_square_m": 0.0,
+       "carrier": "7E0+FD",
+       "drawn_end_m": 12.07,
+       "drawn_minus_face_mm": 0.0,
+       "how": "BAND",
+       "square_m": 12.07,
+       "station_m": 12.07,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:23C",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": 7070.0,
+       "how": "COLUMN",
+       "square_m": 7.07,
+       "station_m": 7.07,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 5.0,
+     "offset_dev_mm": 0.0
+    },
+    "B": {
+     "drawn_from_m": -0.0,
+     "drawn_line_m": 12.07,
+     "drawn_to_m": 12.07,
+     "edge_handle": "7CF",
+     "ends": {
+      "end": {
+       "beyond_square_m": 0.0,
+       "carrier": "7E0+FD",
+       "drawn_end_m": 12.07,
+       "drawn_minus_face_mm": 0.0,
+       "how": "BAND",
+       "square_m": 12.07,
+       "station_m": 12.07,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:23C",
+       "drawn_end_m": -0.0,
+       "drawn_minus_face_mm": 7070.0,
+       "how": "COLUMN",
+       "square_m": 7.07,
+       "station_m": 7.07,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 5.0,
+     "offset_dev_mm": 0.0
+    }
+   },
+   "end": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "7E0+FD"
+    ]
+   },
+   "face_to_face_m": 5.0,
+   "span_id": "184+7CF#3",
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:23C"
+    ]
+   },
+   "width_m": 0.3
+  },
+  {
+   "band_id": "185+7C7",
+   "edges": {
+    "A": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 1.4,
+     "drawn_to_m": 1.4,
+     "edge_handle": "7C7",
+     "ends": {
+      "end": {
+       "beyond_square_m": 0.0,
+       "carrier": "109+7CB",
+       "drawn_end_m": 1.4,
+       "drawn_minus_face_mm": 0.0,
+       "how": "BAND",
+       "square_m": 1.4,
+       "station_m": 1.4,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:230",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": 800.0,
+       "how": "COLUMN",
+       "square_m": 0.8,
+       "station_m": 0.8,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 0.6,
+     "offset_dev_mm": 0.0
+    },
+    "B": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 1.4,
+     "drawn_to_m": 1.4,
+     "edge_handle": "185",
+     "ends": {
+      "end": {
+       "beyond_square_m": 0.0,
+       "carrier": "109+7CB",
+       "drawn_end_m": 1.4,
+       "drawn_minus_face_mm": 0.0,
+       "how": "BAND",
+       "square_m": 1.4,
+       "station_m": 1.4,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:230",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": 800.0,
+       "how": "COLUMN",
+       "square_m": 0.8,
+       "station_m": 0.8,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 0.6,
+     "offset_dev_mm": 0.0
+    }
+   },
+   "end": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "109+7CB"
+    ]
+   },
+   "face_to_face_m": 0.6,
+   "span_id": "185+7C7#1",
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:230"
+    ]
+   },
+   "width_m": 0.3
+  },
+  {
+   "band_id": "7D0+FC",
+   "edges": {
+    "A": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 18.87,
+     "drawn_to_m": 18.87,
+     "edge_handle": "FC",
+     "ends": {
+      "end": {
+       "beyond_square_m": 0.0,
+       "carrier": "COL:249",
+       "drawn_end_m": 18.87,
+       "drawn_minus_face_mm": 15895.0,
+       "how": "COLUMN",
+       "square_m": 2.975,
+       "station_m": 2.975,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:218",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": 0.0,
+       "how": "COLUMN",
+       "square_m": -0.0,
+       "station_m": 0.0,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 2.975,
+     "offset_dev_mm": 0.0
+    },
+    "B": {
+     "drawn_from_m": -0.2,
+     "drawn_line_m": 19.07,
+     "drawn_to_m": 18.87,
+     "edge_handle": "7D0",
+     "ends": {
+      "end": {
+       "beyond_square_m": 0.0,
+       "carrier": "COL:249",
+       "drawn_end_m": 18.87,
+       "drawn_minus_face_mm": 15895.0,
+       "how": "COLUMN",
+       "square_m": 2.975,
+       "station_m": 2.975,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:218",
+       "drawn_end_m": -0.2,
+       "drawn_minus_face_mm": 200.0,
+       "how": "COLUMN",
+       "square_m": -0.0,
+       "station_m": 0.0,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 2.975,
+     "offset_dev_mm": 0.0
+    }
+   },
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:249"
+    ]
+   },
+   "face_to_face_m": 2.975,
+   "span_id": "7D0+FC#1",
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:218"
+    ]
+   },
+   "width_m": 0.3
+  },
+  {
+   "band_id": "7D0+FC",
+   "edges": {
+    "A": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 18.87,
+     "drawn_to_m": 18.87,
+     "edge_handle": "FC",
+     "ends": {
+      "end": {
+       "beyond_square_m": 0.0,
+       "carrier": "COL:251",
+       "drawn_end_m": 18.87,
+       "drawn_minus_face_mm": 9050.0,
+       "how": "COLUMN",
+       "square_m": 9.82,
+       "station_m": 9.82,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:249",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": 4075.0,
+       "how": "COLUMN",
+       "square_m": 4.075,
+       "station_m": 4.075,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 5.745,
+     "offset_dev_mm": 0.0
+    },
+    "B": {
+     "drawn_from_m": -0.2,
+     "drawn_line_m": 19.07,
+     "drawn_to_m": 18.87,
+     "edge_handle": "7D0",
+     "ends": {
+      "end": {
+       "beyond_square_m": 0.0,
+       "carrier": "COL:251",
+       "drawn_end_m": 18.87,
+       "drawn_minus_face_mm": 9050.0,
+       "how": "COLUMN",
+       "square_m": 9.82,
+       "station_m": 9.82,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:249",
+       "drawn_end_m": -0.2,
+       "drawn_minus_face_mm": 4275.0,
+       "how": "COLUMN",
+       "square_m": 4.075,
+       "station_m": 4.075,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 5.745,
+     "offset_dev_mm": 0.0
+    }
+   },
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:251"
+    ]
+   },
+   "face_to_face_m": 5.745,
+   "span_id": "7D0+FC#2",
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:249"
+    ]
+   },
+   "width_m": 0.3
+  },
+  {
+   "band_id": "7D0+FC",
+   "edges": {
+    "A": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 18.87,
+     "drawn_to_m": 18.87,
+     "edge_handle": "FC",
+     "ends": {
+      "end": {
+       "beyond_square_m": 0.0,
+       "carrier": "COL:255",
+       "drawn_end_m": 18.87,
+       "drawn_minus_face_mm": 2200.0,
+       "how": "COLUMN",
+       "square_m": 16.67,
+       "station_m": 16.67,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:251",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": 10320.0,
+       "how": "COLUMN",
+       "square_m": 10.32,
+       "station_m": 10.32,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 6.35,
+     "offset_dev_mm": 0.0
+    },
+    "B": {
+     "drawn_from_m": -0.2,
+     "drawn_line_m": 19.07,
+     "drawn_to_m": 18.87,
+     "edge_handle": "7D0",
+     "ends": {
+      "end": {
+       "beyond_square_m": 0.0,
+       "carrier": "COL:255",
+       "drawn_end_m": 18.87,
+       "drawn_minus_face_mm": 2200.0,
+       "how": "COLUMN",
+       "square_m": 16.67,
+       "station_m": 16.67,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:251",
+       "drawn_end_m": -0.2,
+       "drawn_minus_face_mm": 10520.0,
+       "how": "COLUMN",
+       "square_m": 10.32,
+       "station_m": 10.32,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 6.35,
+     "offset_dev_mm": 0.0
+    }
+   },
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:255"
+    ]
+   },
+   "face_to_face_m": 6.35,
+   "span_id": "7D0+FC#3",
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:251"
+    ]
+   },
+   "width_m": 0.3
+  },
+  {
+   "band_id": "7D0+FC",
+   "edges": {
+    "A": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 18.87,
+     "drawn_to_m": 18.87,
+     "edge_handle": "FC",
+     "ends": {
+      "end": {
+       "beyond_square_m": 0.0,
+       "carrier": "COL:200",
+       "drawn_end_m": 18.87,
+       "drawn_minus_face_mm": 300.0,
+       "how": "COLUMN",
+       "square_m": 18.57,
+       "station_m": 18.57,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:255",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": 17370.0,
+       "how": "COLUMN",
+       "square_m": 17.37,
+       "station_m": 17.37,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 1.2,
+     "offset_dev_mm": 0.0
+    },
+    "B": {
+     "drawn_from_m": -0.2,
+     "drawn_line_m": 19.07,
+     "drawn_to_m": 18.87,
+     "edge_handle": "7D0",
+     "ends": {
+      "end": {
+       "beyond_square_m": 0.0,
+       "carrier": "COL:200",
+       "drawn_end_m": 18.87,
+       "drawn_minus_face_mm": 300.0,
+       "how": "COLUMN",
+       "square_m": 18.57,
+       "station_m": 18.57,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:255",
+       "drawn_end_m": -0.2,
+       "drawn_minus_face_mm": 17570.0,
+       "how": "COLUMN",
+       "square_m": 17.37,
+       "station_m": 17.37,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 1.2,
+     "offset_dev_mm": 0.0
+    }
+   },
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:200"
+    ]
+   },
+   "face_to_face_m": 1.2,
+   "span_id": "7D0+FC#4",
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:255"
+    ]
+   },
+   "width_m": 0.3
+  },
+  {
+   "band_id": "7D4+F8",
+   "edges": {
+    "A": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 10.43,
+     "drawn_to_m": 10.43,
+     "edge_handle": "F8",
+     "ends": {
+      "end": {
+       "beyond_square_m": 0.0,
+       "carrier": "COL:20B",
+       "drawn_end_m": 10.43,
+       "drawn_minus_face_mm": 4950.0,
+       "how": "COLUMN",
+       "square_m": 5.48,
+       "station_m": 5.48,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:207",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": 30.0,
+       "how": "COLUMN",
+       "square_m": 0.03,
+       "station_m": 0.03,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 5.45,
+     "offset_dev_mm": 0.0
+    },
+    "B": {
+     "drawn_from_m": -0.07,
+     "drawn_line_m": 10.2,
+     "drawn_to_m": 10.13,
+     "edge_handle": "7D4",
+     "ends": {
+      "end": {
+       "beyond_square_m": 0.0,
+       "carrier": "COL:20B",
+       "drawn_end_m": 10.13,
+       "drawn_minus_face_mm": 4650.0,
+       "how": "COLUMN",
+       "square_m": 5.48,
+       "station_m": 5.48,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:207",
+       "drawn_end_m": -0.07,
+       "drawn_minus_face_mm": 100.0,
+       "how": "COLUMN",
+       "square_m": 0.03,
+       "station_m": 0.03,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 5.45,
+     "offset_dev_mm": 0.0
+    }
+   },
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:20B"
+    ]
+   },
+   "face_to_face_m": 5.45,
+   "span_id": "7D4+F8#1",
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:207"
+    ]
+   },
+   "width_m": 0.3
+  },
+  {
+   "band_id": "7D4+F8",
+   "edges": {
+    "A": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 10.43,
+     "drawn_to_m": 10.43,
+     "edge_handle": "F8",
+     "ends": {
+      "end": {
+       "beyond_square_m": 0.0,
+       "carrier": "10B+7D1",
+       "drawn_end_m": 10.43,
+       "drawn_minus_face_mm": 300.0,
+       "how": "BAND",
+       "square_m": 10.13,
+       "station_m": 10.13,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:20B",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": 5880.0,
+       "how": "COLUMN",
+       "square_m": 5.88,
+       "station_m": 5.88,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 4.25,
+     "offset_dev_mm": 0.0
+    },
+    "B": {
+     "drawn_from_m": -0.07,
+     "drawn_line_m": 10.2,
+     "drawn_to_m": 10.13,
+     "edge_handle": "7D4",
+     "ends": {
+      "end": {
+       "beyond_square_m": 0.0,
+       "carrier": "10B+7D1",
+       "drawn_end_m": 10.13,
+       "drawn_minus_face_mm": 0.0,
+       "how": "BAND",
+       "square_m": 10.13,
+       "station_m": 10.13,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:20B",
+       "drawn_end_m": -0.07,
+       "drawn_minus_face_mm": 5950.0,
+       "how": "COLUMN",
+       "square_m": 5.88,
+       "station_m": 5.88,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 4.25,
+     "offset_dev_mm": 0.0
+    }
+   },
+   "end": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "10B+7D1"
+    ]
+   },
+   "face_to_face_m": 4.25,
+   "span_id": "7D4+F8#2",
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:20B"
+    ]
+   },
+   "width_m": 0.3
+  },
+  {
+   "band_id": "7DC+7DD",
+   "edges": {
+    "A": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 7.35,
+     "drawn_to_m": 7.35,
+     "edge_handle": "7DD",
+     "ends": {
+      "end": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:7F5",
+       "drawn_end_m": 7.35,
+       "drawn_minus_face_mm": 3825.0,
+       "how": "COLUMN",
+       "square_m": 3.525,
+       "station_m": 3.525,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": 0.0,
+       "carrier": "COL:24D",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": -0.0,
+       "how": "COLUMN",
+       "square_m": 0.0,
+       "station_m": 0.0,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 3.525,
+     "offset_dev_mm": 0.0
+    },
+    "B": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 7.35,
+     "drawn_to_m": 7.35,
+     "edge_handle": "7DC",
+     "ends": {
+      "end": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:7F5",
+       "drawn_end_m": 7.35,
+       "drawn_minus_face_mm": 3825.0,
+       "how": "COLUMN",
+       "square_m": 3.525,
+       "station_m": 3.525,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": 0.0,
+       "carrier": "COL:24D",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": -0.0,
+       "how": "COLUMN",
+       "square_m": 0.0,
+       "station_m": 0.0,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 3.525,
+     "offset_dev_mm": 0.0
+    }
+   },
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:7F5"
+    ]
+   },
+   "face_to_face_m": 3.525,
+   "span_id": "7DC+7DD#1",
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:24D"
+    ]
+   },
+   "width_m": 0.3
+  },
+  {
+   "band_id": "7DC+7DD",
+   "edges": {
+    "A": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 7.35,
+     "drawn_to_m": 7.35,
+     "edge_handle": "7DD",
+     "ends": {
+      "end": {
+       "beyond_square_m": -0.0,
+       "carrier": "177+7CD",
+       "drawn_end_m": 7.35,
+       "drawn_minus_face_mm": 0.0,
+       "how": "BAND",
+       "square_m": 7.35,
+       "station_m": 7.35,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": 0.0,
+       "carrier": "COL:7F5",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": 3825.0,
+       "how": "COLUMN",
+       "square_m": 3.825,
+       "station_m": 3.825,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 3.525,
+     "offset_dev_mm": 0.0
+    },
+    "B": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 7.35,
+     "drawn_to_m": 7.35,
+     "edge_handle": "7DC",
+     "ends": {
+      "end": {
+       "beyond_square_m": -0.0,
+       "carrier": "177+7CD",
+       "drawn_end_m": 7.35,
+       "drawn_minus_face_mm": 0.0,
+       "how": "BAND",
+       "square_m": 7.35,
+       "station_m": 7.35,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": 0.0,
+       "carrier": "COL:7F5",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": 3825.0,
+       "how": "COLUMN",
+       "square_m": 3.825,
+       "station_m": 3.825,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 3.525,
+     "offset_dev_mm": 0.0
+    }
+   },
+   "end": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "177+7CD"
+    ]
+   },
+   "face_to_face_m": 3.525,
+   "span_id": "7DC+7DD#2",
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:7F5"
+    ]
+   },
+   "width_m": 0.3
+  },
+  {
+   "band_id": "7E0+FD",
+   "edges": {
+    "A": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 7.9,
+     "drawn_to_m": 7.9,
+     "edge_handle": "FD",
+     "ends": {
+      "end": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:809",
+       "drawn_end_m": 7.9,
+       "drawn_minus_face_mm": 4050.0,
+       "how": "COLUMN",
+       "square_m": 3.85,
+       "station_m": 3.85,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": 0.0,
+       "carrier": "COL:200",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": 500.0,
+       "how": "COLUMN",
+       "square_m": 0.5,
+       "station_m": 0.5,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 3.35,
+     "offset_dev_mm": 0.0
+    },
+    "B": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 7.9,
+     "drawn_to_m": 7.9,
+     "edge_handle": "7E0",
+     "ends": {
+      "end": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:809",
+       "drawn_end_m": 7.9,
+       "drawn_minus_face_mm": 4050.0,
+       "how": "COLUMN",
+       "square_m": 3.85,
+       "station_m": 3.85,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": 0.0,
+       "carrier": "COL:200",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": 500.0,
+       "how": "COLUMN",
+       "square_m": 0.5,
+       "station_m": 0.5,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 3.35,
+     "offset_dev_mm": 0.0
+    }
+   },
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:809"
+    ]
+   },
+   "face_to_face_m": 3.35,
+   "span_id": "7E0+FD#1",
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:200"
+    ]
+   },
+   "width_m": 0.3
+  },
+  {
+   "band_id": "7E0+FD",
+   "edges": {
+    "A": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 7.9,
+     "drawn_to_m": 7.9,
+     "edge_handle": "FD",
+     "ends": {
+      "end": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:1FC",
+       "drawn_end_m": 7.9,
+       "drawn_minus_face_mm": 500.0,
+       "how": "COLUMN",
+       "square_m": 7.4,
+       "station_m": 7.4,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": 0.0,
+       "carrier": "COL:809",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": 4150.0,
+       "how": "COLUMN",
+       "square_m": 4.15,
+       "station_m": 4.15,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 3.25,
+     "offset_dev_mm": 0.0
+    },
+    "B": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 7.9,
+     "drawn_to_m": 7.9,
+     "edge_handle": "7E0",
+     "ends": {
+      "end": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:1FC",
+       "drawn_end_m": 7.9,
+       "drawn_minus_face_mm": 500.0,
+       "how": "COLUMN",
+       "square_m": 7.4,
+       "station_m": 7.4,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": 0.0,
+       "carrier": "COL:809",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": 4150.0,
+       "how": "COLUMN",
+       "square_m": 4.15,
+       "station_m": 4.15,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 3.25,
+     "offset_dev_mm": 0.0
+    }
+   },
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:1FC"
+    ]
+   },
+   "face_to_face_m": 3.25,
+   "span_id": "7E0+FD#2",
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:809"
+    ]
+   },
+   "width_m": 0.3
+  },
+  {
+   "band_id": "7E1+7E2",
+   "edges": {
+    "A": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 6.72,
+     "drawn_to_m": 6.72,
+     "edge_handle": "7E1",
+     "ends": {
+      "end": {
+       "beyond_square_m": 0.0,
+       "carrier": "7DC+7DD",
+       "drawn_end_m": 6.72,
+       "drawn_minus_face_mm": 0.0,
+       "how": "BAND",
+       "square_m": 6.72,
+       "station_m": 6.72,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "carrier": "COL:228",
+       "drawn_end_m": 0.0,
+       "drawn_end_touches": [
+        "109+7CB",
+        "FTG:1B19"
+       ],
+       "how": "the named carrier does not reach this edge",
+       "square_m": -0.0,
+       "station_m": null,
+       "status": "NOT_REACHED"
+      }
+     },
+     "length_m": null,
+     "offset_dev_mm": 0.0
+    },
+    "B": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 6.72,
+     "drawn_to_m": 6.72,
+     "edge_handle": "7E2",
+     "ends": {
+      "end": {
+       "beyond_square_m": 0.0,
+       "carrier": "7DC+7DD",
+       "drawn_end_m": 6.72,
+       "drawn_minus_face_mm": 0.0,
+       "how": "BAND",
+       "square_m": 6.72,
+       "station_m": 6.72,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:228",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": 0.0,
+       "how": "COLUMN",
+       "square_m": -0.0,
+       "station_m": 0.0,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 6.72,
+     "offset_dev_mm": 0.0
+    }
+   },
+   "end": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "7DC+7DD"
+    ]
+   },
+   "face_to_face_m": 6.72,
+   "span_id": "7E1+7E2#1",
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:228"
+    ]
+   },
+   "width_m": 0.3
+  },
+  {
+   "band_id": "7E7+7E8",
+   "edges": {
+    "A": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 7.35,
+     "drawn_to_m": 7.35,
+     "edge_handle": "7E8",
+     "ends": {
+      "end": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:7ED",
+       "drawn_end_m": 7.35,
+       "drawn_minus_face_mm": 3825.0,
+       "how": "COLUMN",
+       "square_m": 3.525,
+       "station_m": 3.525,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": 0.0,
+       "carrier": "184+7CF",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": -0.0,
+       "how": "BAND",
+       "square_m": 0.0,
+       "station_m": -0.0,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 3.525,
+     "offset_dev_mm": 0.0
+    },
+    "B": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 7.35,
+     "drawn_to_m": 7.35,
+     "edge_handle": "7E7",
+     "ends": {
+      "end": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:7ED",
+       "drawn_end_m": 7.35,
+       "drawn_minus_face_mm": 3825.0,
+       "how": "COLUMN",
+       "square_m": 3.525,
+       "station_m": 3.525,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": 0.0,
+       "carrier": "184+7CF",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": 0.0,
+       "how": "BAND",
+       "square_m": 0.0,
+       "station_m": 0.0,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 3.525,
+     "offset_dev_mm": 0.0
+    }
+   },
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:7ED"
+    ]
+   },
+   "face_to_face_m": 3.525,
+   "span_id": "7E7+7E8#1",
+   "start": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "184+7CF"
+    ]
+   },
+   "width_m": 0.3
+  },
+  {
+   "band_id": "7E7+7E8",
+   "edges": {
+    "A": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 7.35,
+     "drawn_to_m": 7.35,
+     "edge_handle": "7E8",
+     "ends": {
+      "end": {
+       "beyond_square_m": -0.0,
+       "carrier": "177+7CD",
+       "drawn_end_m": 7.35,
+       "drawn_minus_face_mm": 0.0,
+       "how": "BAND",
+       "square_m": 7.35,
+       "station_m": 7.35,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": 0.0,
+       "carrier": "COL:7ED",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": 3825.0,
+       "how": "COLUMN",
+       "square_m": 3.825,
+       "station_m": 3.825,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 3.525,
+     "offset_dev_mm": 0.0
+    },
+    "B": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 7.35,
+     "drawn_to_m": 7.35,
+     "edge_handle": "7E7",
+     "ends": {
+      "end": {
+       "beyond_square_m": -0.0,
+       "carrier": "177+7CD",
+       "drawn_end_m": 7.35,
+       "drawn_minus_face_mm": 0.0,
+       "how": "BAND",
+       "square_m": 7.35,
+       "station_m": 7.35,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": 0.0,
+       "carrier": "COL:7ED",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": 3825.0,
+       "how": "COLUMN",
+       "square_m": 3.825,
+       "station_m": 3.825,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 3.525,
+     "offset_dev_mm": 0.0
+    }
+   },
+   "end": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "177+7CD"
+    ]
+   },
+   "face_to_face_m": 3.525,
+   "span_id": "7E7+7E8#2",
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:7ED"
+    ]
+   },
+   "width_m": 0.3
+  },
+  {
+   "band_id": "7E9+7EA",
+   "edges": {
+    "A": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 4.225,
+     "drawn_to_m": 4.225,
+     "edge_handle": "7EA",
+     "ends": {
+      "end": {
+       "beyond_square_m": 0.0,
+       "carrier": "COL:7ED",
+       "drawn_end_m": 4.225,
+       "drawn_minus_face_mm": 0.0,
+       "how": "COLUMN",
+       "square_m": 4.225,
+       "station_m": 4.225,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:7F5",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": -0.0,
+       "how": "COLUMN",
+       "square_m": -0.0,
+       "station_m": 0.0,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 4.225,
+     "offset_dev_mm": -0.0
+    },
+    "B": {
+     "drawn_from_m": 0.0,
+     "drawn_line_m": 4.225,
+     "drawn_to_m": 4.225,
+     "edge_handle": "7E9",
+     "ends": {
+      "end": {
+       "beyond_square_m": 0.0,
+       "carrier": "COL:7ED",
+       "drawn_end_m": 4.225,
+       "drawn_minus_face_mm": 0.0,
+       "how": "COLUMN",
+       "square_m": 4.225,
+       "station_m": 4.225,
+       "status": "CARRIER_FACE"
+      },
+      "start": {
+       "beyond_square_m": -0.0,
+       "carrier": "COL:7F5",
+       "drawn_end_m": 0.0,
+       "drawn_minus_face_mm": -0.0,
+       "how": "COLUMN",
+       "square_m": -0.0,
+       "station_m": 0.0,
+       "status": "CARRIER_FACE"
+      }
+     },
+     "length_m": 4.225,
+     "offset_dev_mm": 0.0
+    }
+   },
+   "end": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:7ED"
+    ]
+   },
+   "face_to_face_m": 4.225,
+   "span_id": "7E9+7EA#1",
+   "start": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:7F5"
+    ]
+   },
+   "width_m": 0.3
+  }
+ ],
+ "traced": {
+  "arcs": [
+   {
+    "R_m": 1.3,
+    "arc": "139",
+    "arc_band": "ARC:139+13A/1",
+    "deg_pieces": [
+     [
+      0.0,
+      89.9
+     ]
+    ],
+    "length_m": 2.0398
+   },
+   {
+    "R_m": 1.0,
+    "arc": "13A",
+    "arc_band": "ARC:139+13A/1",
+    "deg_pieces": [
+     [
+      0.1,
+      90.0
+     ]
+    ],
+    "length_m": 1.5691
+   },
+   {
+    "R_m": 2.25,
+    "arc": "157",
+    "arc_band": "ARC:157+158/2",
+    "deg_pieces": [
+     [
+      96.382,
+      263.618
+     ]
+    ],
+    "length_m": 6.5674
+   },
+   {
+    "R_m": 2.55,
+    "arc": "158",
+    "arc_band": "ARC:157+158/2",
+    "deg_pieces": [
+     [
+      109.75,
+      176.628
+     ],
+     [
+      183.372,
+      211.966
+     ],
+     [
+      220.32,
+      257.542
+     ]
+    ],
+    "length_m": 5.9056
+   }
+  ],
+  "boundary_total_m": 423.5484,
+  "closed_on_carrier": [
+   {
+    "closed_m": 0.1104,
+    "end": "end",
+    "member": "180+181",
+    "side": "B"
+   },
+   {
+    "closed_m": 0.2301,
+    "end": "start",
+    "member": "182+183",
+    "side": "A"
+   }
+  ],
+  "columns": [
+   {
+    "column": "COL:17BA",
+    "length_m": 0.309
+   },
+   {
+    "column": "COL:17BD",
+    "length_m": 0.3461
+   },
+   {
+    "column": "COL:17C0",
+    "length_m": 0.4614
+   },
+   {
+    "column": "COL:1DC",
+    "length_m": 1.0
+   },
+   {
+    "column": "COL:1E0",
+    "length_m": 0.7
+   },
+   {
+    "column": "COL:1E4",
+    "length_m": 1.03
+   },
+   {
+    "column": "COL:1E8",
+    "length_m": 0.7473
+   },
+   {
+    "column": "COL:1EC",
+    "length_m": 2.5
+   },
+   {
+    "column": "COL:1EF",
+    "length_m": 0.9757
+   },
+   {
+    "column": "COL:1F2",
+    "length_m": 1.1
+   },
+   {
+    "column": "COL:1F5",
+    "length_m": 1.2
+   },
+   {
+    "column": "COL:1FC",
+    "length_m": 1.0
+   },
+   {
+    "column": "COL:200",
+    "length_m": 1.0
+   },
+   {
+    "column": "COL:204",
+    "length_m": 0.8
+   },
+   {
+    "column": "COL:207",
+    "length_m": 0.8
+   },
+   {
+    "column": "COL:20B",
+    "length_m": 0.5
+   },
+   {
+    "column": "COL:211",
+    "length_m": 0.6
+   },
+   {
+    "column": "COL:214",
+    "length_m": 0.8
+   },
+   {
+    "column": "COL:218",
+    "length_m": 1.0
+   },
+   {
+    "column": "COL:220",
+    "length_m": 2.2
+   },
+   {
+    "column": "COL:223",
+    "length_m": 1.2
+   },
+   {
+    "column": "COL:228",
+    "length_m": 1.0277
+   },
+   {
+    "column": "COL:22C",
+    "length_m": 0.7
+   },
+   {
+    "column": "COL:230",
+    "length_m": 1.6
+   },
+   {
+    "column": "COL:234",
+    "length_m": 1.0
+   },
+   {
+    "column": "COL:238",
+    "length_m": 1.6
+   },
+   {
+    "column": "COL:23C",
+    "length_m": 0.9
+   },
+   {
+    "column": "COL:241",
+    "length_m": 1.0
+   },
+   {
+    "column": "COL:245",
+    "length_m": 2.0
+   },
+   {
+    "column": "COL:249",
+    "length_m": 2.2
+   },
+   {
+    "column": "COL:24D",
+    "length_m": 1.3
+   },
+   {
+    "column": "COL:251",
+    "length_m": 1.0
+   },
+   {
+    "column": "COL:255",
+    "length_m": 1.4001
+   },
+   {
+    "column": "COL:7ED",
+    "length_m": 0.3
+   },
+   {
+    "column": "COL:7F5",
+    "length_m": 0.3
+   },
+   {
+    "column": "COL:809",
+    "length_m": 0.6
+   }
+  ],
+  "end_artefacts_m": [
+   0.000104,
+   0.000104,
+   0.0,
+   0.0
+  ],
+  "ends": [
+   {
+    "end_kind": "BEAM_JUNCTION",
+    "length_m": 0.0017,
+    "span_id": "13E+7D6#2"
+   },
+   {
+    "end_kind": "FOOTING_FACE",
+    "length_m": 0.3,
+    "span_id": "15D+7C8#1"
+   },
+   {
+    "end_kind": "COLUMN",
+    "length_m": 0.1,
+    "span_id": "15E+15F#1"
+   },
+   {
+    "end_kind": "COLUMN",
+    "length_m": 0.2318,
+    "span_id": "170+7C3#4"
+   },
+   {
+    "end_kind": "GAP_TO_COLUMN",
+    "length_m": 0.3,
+    "span_id": "177+7CD#1"
+   },
+   {
+    "end_kind": "FOOTING_FACE",
+    "length_m": 0.3,
+    "span_id": "17C+7E3#1"
+   },
+   {
+    "end_kind": "COLUMN",
+    "length_m": 0.0972,
+    "span_id": "1811+1812#1"
+   },
+   {
+    "end_kind": "FREE_END",
+    "length_m": 0.3,
+    "span_id": "1811+1812#1"
+   },
+   {
+    "end_kind": "ARC_END",
+    "length_m": 0.0023,
+    "span_id": "ARC:139+13A/1"
+   },
+   {
+    "end_kind": "ARC_END",
+    "length_m": 0.3226,
+    "span_id": "ARC:157+158/2"
+   }
+  ],
+  "gaps": [
+   {
+    "gap_m": 0.1278,
+    "side": "A",
+    "span_id": "109+7CB#1"
+   },
+   {
+    "gap_m": 0.1,
+    "side": "B",
+    "span_id": "109+7CB#1"
+   },
+   {
+    "gap_m": 0.3,
+    "side": "A",
+    "span_id": "109+7CB#2"
+   },
+   {
+    "gap_m": 0.3,
+    "side": "B",
+    "span_id": "109+7CB#2"
+   },
+   {
+    "gap_m": 0.1,
+    "side": "B",
+    "span_id": "114+115+7DF#1"
+   },
+   {
+    "gap_m": 0.3,
+    "side": "A",
+    "span_id": "13D+7D2#1"
+   },
+   {
+    "gap_m": 0.3,
+    "side": "A",
+    "span_id": "13D+7D2#1"
+   },
+   {
+    "gap_m": 0.3,
+    "side": "A",
+    "span_id": "13E+7D6#1"
+   },
+   {
+    "gap_m": 0.3,
+    "side": "B",
+    "span_id": "13F+7D3#1"
+   },
+   {
+    "gap_m": 0.3,
+    "side": "A",
+    "span_id": "140+7D7#1"
+   },
+   {
+    "gap_m": 0.3,
+    "side": "A",
+    "span_id": "142+7D8#1"
+   },
+   {
+    "gap_m": 0.3,
+    "side": "B",
+    "span_id": "145+7CA#1"
+   },
+   {
+    "gap_m": 0.1628,
+    "side": "A",
+    "span_id": "15D+7C8#1"
+   },
+   {
+    "gap_m": 0.2499,
+    "side": "B",
+    "span_id": "15D+7C8#1"
+   },
+   {
+    "gap_m": 0.3,
+    "side": "A",
+    "span_id": "15E+15F#1"
+   },
+   {
+    "gap_m": 0.5615,
+    "side": "A",
+    "span_id": "170+7C3#2"
+   },
+   {
+    "gap_m": 0.13,
+    "side": "A",
+    "span_id": "170+7C3#3"
+   },
+   {
+    "gap_m": 0.3,
+    "side": "A",
+    "span_id": "170+7C3#3"
+   },
+   {
+    "gap_m": 0.3,
+    "side": "B",
+    "span_id": "175+7DE#1"
+   },
+   {
+    "gap_m": 0.3,
+    "side": "A",
+    "span_id": "176+7E6#1"
+   },
+   {
+    "gap_m": 0.4243,
+    "side": "A",
+    "span_id": "176+7E6#1"
+   },
+   {
+    "gap_m": 0.4243,
+    "side": "B",
+    "span_id": "176+7E6#1"
+   },
+   {
+    "gap_m": 0.3,
+    "side": "A",
+    "span_id": "177+7CD#1"
+   },
+   {
+    "gap_m": 0.3,
+    "side": "B",
+    "span_id": "177+7CD#1"
+   },
+   {
+    "gap_m": 0.3,
+    "side": "B",
+    "span_id": "177+7CD#1"
+   },
+   {
+    "gap_m": 0.3,
+    "side": "A",
+    "span_id": "177+7CD#2"
+   },
+   {
+    "gap_m": 0.3,
+    "side": "A",
+    "span_id": "17D+7E4#1"
+   },
+   {
+    "gap_m": 0.3,
+    "side": "B",
+    "span_id": "17E+17F#1"
+   },
+   {
+    "gap_m": 0.4243,
+    "side": "B",
+    "span_id": "180D+180E#1"
+   },
+   {
+    "gap_m": 0.3,
+    "side": "B",
+    "span_id": "184+7CF#3"
+   },
+   {
+    "gap_m": 0.3,
+    "side": "B",
+    "span_id": "7D0+FC#1"
+   },
+   {
+    "gap_m": 0.3,
+    "side": "B",
+    "span_id": "7D0+FC#2"
+   },
+   {
+    "gap_m": 0.3,
+    "side": "B",
+    "span_id": "7D0+FC#3"
+   },
+   {
+    "gap_m": 0.3,
+    "side": "B",
+    "span_id": "7D4+F8#1"
+   },
+   {
+    "gap_m": 0.3,
+    "side": "B",
+    "span_id": "7D4+F8#2"
+   },
+   {
+    "gap_m": 0.3,
+    "side": "B",
+    "span_id": "7D4+F8#2"
+   },
+   {
+    "gap_m": 0.3,
+    "side": "B",
+    "span_id": "7DC+7DD#1"
+   },
+   {
+    "gap_m": 0.3,
+    "side": "B",
+    "span_id": "7E0+FD#1"
+   },
+   {
+    "gap_m": 0.3,
+    "side": "A",
+    "span_id": "7E1+7E2#1"
+   },
+   {
+    "gap_m": 0.3,
+    "side": "B",
+    "span_id": "7E1+7E2#1"
+   },
+   {
+    "gap_m": 0.3,
+    "side": "A",
+    "span_id": "7E7+7E8#2"
+   }
+  ],
+  "held": [],
+  "others": [
+   {
+    "length_m": 10.5,
+    "owner": "LIFT:7C6"
+   }
+  ],
+  "pieces_beyond": [
+   {
+    "m": 0.2995,
+    "side": "B",
+    "span_id": "170+7C3#4",
+    "where": "BEYOND_SQUARE"
+   },
+   {
+    "m": 0.0005,
+    "side": "B",
+    "span_id": "170+7C3#4",
+    "where": "BEYOND_SQUARE"
+   },
+   {
+    "m": 0.5,
+    "side": "A",
+    "span_id": "1811+1812#1",
+    "where": "BEYOND_SQUARE"
+   },
+   {
+    "m": 0.2191,
+    "side": "A",
+    "span_id": "177+7CD#2",
+    "where": "BEYOND_SQUARE"
+   },
+   {
+    "m": 0.3,
+    "side": "B",
+    "span_id": "180+181#1",
+    "where": "BEYOND_SQUARE"
+   },
+   {
+    "m": 0.3,
+    "side": "B",
+    "span_id": "180+181#1",
+    "where": "BEYOND_SQUARE"
+   },
+   {
+    "m": 1.2999,
+    "side": "B",
+    "span_id": "17C+7E3#1",
+    "where": "BEYOND_SQUARE"
+   },
+   {
+    "m": 1.2999,
+    "side": "A",
+    "span_id": "17C+7E3#1",
+    "where": "BEYOND_SQUARE"
+   },
+   {
+    "m": 0.2601,
+    "side": "A",
+    "span_id": "17E+17F#1",
+    "where": "BEYOND_SQUARE"
+   },
+   {
+    "m": 0.0399,
+    "side": "B",
+    "span_id": "17E+17F#1",
+    "where": "BEYOND_SQUARE"
+   },
+   {
+    "m": 0.0699,
+    "side": "A",
+    "span_id": "182+183#1",
+    "where": "BEYOND_SQUARE"
+   },
+   {
+    "m": 1.0001,
+    "side": "A",
+    "span_id": "15D+7C8#1",
+    "where": "BEYOND_SQUARE"
+   },
+   {
+    "m": 0.95,
+    "side": "B",
+    "span_id": "15D+7C8#1",
+    "where": "BEYOND_SQUARE"
+   },
+   {
+    "m": 0.3,
+    "side": "B",
+    "span_id": "17E+17F#1",
+    "where": "BEYOND_SQUARE"
+   },
+   {
+    "m": 0.3,
+    "side": "A",
+    "span_id": "10B+7D1#1",
+    "where": "BEYOND_SQUARE"
+   },
+   {
+    "m": 0.3,
+    "side": "A",
+    "span_id": "7D4+F8#2",
+    "where": "BEYOND_SQUARE"
+   },
+   {
+    "m": 0.15,
+    "side": "B",
+    "span_id": "13E+7D6#1",
+    "where": "BESIDE_SUPPORT"
+   },
+   {
+    "m": 0.15,
+    "side": "B",
+    "span_id": "13E+7D6#2",
+    "where": "BESIDE_SUPPORT"
+   }
+  ],
+  "sides": [
+   {
+    "length_m": 0.3639,
+    "side": "A",
+    "span_id": "107+7CE#1"
+   },
+   {
+    "length_m": 0.3639,
+    "side": "B",
+    "span_id": "107+7CE#1"
+   },
+   {
+    "length_m": 4.2723,
+    "side": "A",
+    "span_id": "109+7CB#1"
+   },
+   {
+    "length_m": 4.3,
+    "side": "B",
+    "span_id": "109+7CB#1"
+   },
+   {
+    "length_m": 4.1,
+    "side": "A",
+    "span_id": "109+7CB#2"
+   },
+   {
+    "length_m": 4.1,
+    "side": "B",
+    "span_id": "109+7CB#2"
+   },
+   {
+    "length_m": 2.7,
+    "side": "A",
+    "span_id": "109+7CB#3"
+   },
+   {
+    "length_m": 2.7,
+    "side": "B",
+    "span_id": "109+7CB#3"
+   },
+   {
+    "length_m": 4.3,
+    "side": "A",
+    "span_id": "10A+7C9#1"
+   },
+   {
+    "length_m": 4.3,
+    "side": "B",
+    "span_id": "10A+7C9#1"
+   },
+   {
+    "length_m": 1.5,
+    "side": "A",
+    "span_id": "10B+7D1#1"
+   },
+   {
+    "length_m": 1.2,
+    "side": "B",
+    "span_id": "10B+7D1#1"
+   },
+   {
+    "length_m": 2.3,
+    "side": "A",
+    "span_id": "10B+7D1#2"
+   },
+   {
+    "length_m": 2.3,
+    "side": "B",
+    "span_id": "10B+7D1#2"
+   },
+   {
+    "length_m": 2.325,
+    "side": "A",
+    "span_id": "114+115+7DF#1"
+   },
+   {
+    "length_m": 2.225,
+    "side": "B",
+    "span_id": "114+115+7DF#1"
+   },
+   {
+    "length_m": 1.0,
+    "side": "A",
+    "span_id": "114+115+7DF#2"
+   },
+   {
+    "length_m": 1.0,
+    "side": "B",
+    "span_id": "114+115+7DF#2"
+   },
+   {
+    "length_m": 6.0,
+    "side": "A",
+    "span_id": "136+7D5#1"
+   },
+   {
+    "length_m": 6.0,
+    "side": "B",
+    "span_id": "136+7D5#1"
+   },
+   {
+    "length_m": 2.4,
+    "side": "A",
+    "span_id": "137+138#1"
+   },
+   {
+    "length_m": 2.4,
+    "side": "B",
+    "span_id": "137+138#1"
+   },
+   {
+    "length_m": 1.45,
+    "side": "A",
+    "span_id": "13C+7D9#1"
+   },
+   {
+    "length_m": 1.45,
+    "side": "B",
+    "span_id": "13C+7D9#1"
+   },
+   {
+    "length_m": 5.2,
+    "side": "A",
+    "span_id": "13D+7D2#1"
+   },
+   {
+    "length_m": 5.8,
+    "side": "B",
+    "span_id": "13D+7D2#1"
+   },
+   {
+    "length_m": 4.0,
+    "side": "A",
+    "span_id": "13E+7D6#1"
+   },
+   {
+    "length_m": 4.45,
+    "side": "B",
+    "span_id": "13E+7D6#1"
+   },
+   {
+    "length_m": 0.5,
+    "side": "A",
+    "span_id": "13E+7D6#2"
+   },
+   {
+    "length_m": 0.65,
+    "side": "B",
+    "span_id": "13E+7D6#2"
+   },
+   {
+    "length_m": 4.3,
+    "side": "A",
+    "span_id": "13F+7D3#1"
+   },
+   {
+    "length_m": 4.0,
+    "side": "B",
+    "span_id": "13F+7D3#1"
+   },
+   {
+    "length_m": 4.0,
+    "side": "A",
+    "span_id": "140+7D7#1"
+   },
+   {
+    "length_m": 4.3,
+    "side": "B",
+    "span_id": "140+7D7#1"
+   },
+   {
+    "length_m": 1.2,
+    "side": "A",
+    "span_id": "141+7DA#1"
+   },
+   {
+    "length_m": 1.2,
+    "side": "B",
+    "span_id": "141+7DA#1"
+   },
+   {
+    "length_m": 2.15,
+    "side": "A",
+    "span_id": "142+7D8#1"
+   },
+   {
+    "length_m": 2.45,
+    "side": "B",
+    "span_id": "142+7D8#1"
+   },
+   {
+    "length_m": 1.9,
+    "side": "A",
+    "span_id": "145+7CA#1"
+   },
+   {
+    "length_m": 1.6,
+    "side": "B",
+    "span_id": "145+7CA#1"
+   },
+   {
+    "length_m": 2.4,
+    "side": "A",
+    "span_id": "15C+7CC#1"
+   },
+   {
+    "length_m": 2.4,
+    "side": "B",
+    "span_id": "15C+7CC#1"
+   },
+   {
+    "length_m": 2.7373,
+    "side": "A",
+    "span_id": "15D+7C8#1"
+   },
+   {
+    "length_m": 2.6,
+    "side": "B",
+    "span_id": "15D+7C8#1"
+   },
+   {
+    "length_m": 2.4,
+    "side": "A",
+    "span_id": "15E+15F#1"
+   },
+   {
+    "length_m": 2.7,
+    "side": "B",
+    "span_id": "15E+15F#1"
+   },
+   {
+    "length_m": 1.25,
+    "side": "A",
+    "span_id": "16F+7FF#1"
+   },
+   {
+    "length_m": 1.25,
+    "side": "B",
+    "span_id": "16F+7FF#1"
+   },
+   {
+    "length_m": 2.4,
+    "side": "A",
+    "span_id": "170+7C3#1"
+   },
+   {
+    "length_m": 2.4,
+    "side": "B",
+    "span_id": "170+7C3#1"
+   },
+   {
+    "length_m": 2.8085,
+    "side": "A",
+    "span_id": "170+7C3#2"
+   },
+   {
+    "length_m": 3.37,
+    "side": "B",
+    "span_id": "170+7C3#2"
+   },
+   {
+    "length_m": 2.92,
+    "side": "A",
+    "span_id": "170+7C3#3"
+   },
+   {
+    "length_m": 3.35,
+    "side": "B",
+    "span_id": "170+7C3#3"
+   },
+   {
+    "length_m": 3.25,
+    "side": "A",
+    "span_id": "170+7C3#4"
+   },
+   {
+    "length_m": 3.55,
+    "side": "B",
+    "span_id": "170+7C3#4"
+   },
+   {
+    "length_m": 3.75,
+    "side": "A",
+    "span_id": "175+7DE#1"
+   },
+   {
+    "length_m": 3.45,
+    "side": "B",
+    "span_id": "175+7DE#1"
+   },
+   {
+    "length_m": 3.0257,
+    "side": "A",
+    "span_id": "176+7E6#1"
+   },
+   {
+    "length_m": 3.3257,
+    "side": "B",
+    "span_id": "176+7E6#1"
+   },
+   {
+    "length_m": 4.72,
+    "side": "A",
+    "span_id": "177+7CD#1"
+   },
+   {
+    "length_m": 4.42,
+    "side": "B",
+    "span_id": "177+7CD#1"
+   },
+   {
+    "length_m": 1.4558,
+    "side": "A",
+    "span_id": "177+7CD#2"
+   },
+   {
+    "length_m": 1.5367,
+    "side": "B",
+    "span_id": "177+7CD#2"
+   },
+   {
+    "length_m": 3.8,
+    "side": "A",
+    "span_id": "178+7DB#1"
+   },
+   {
+    "length_m": 3.8,
+    "side": "B",
+    "span_id": "178+7DB#1"
+   },
+   {
+    "length_m": 1.2,
+    "side": "A",
+    "span_id": "17B+7E5#1"
+   },
+   {
+    "length_m": 1.2,
+    "side": "B",
+    "span_id": "17B+7E5#1"
+   },
+   {
+    "length_m": 3.2277,
+    "side": "A",
+    "span_id": "17C+7E3#1"
+   },
+   {
+    "length_m": 3.2277,
+    "side": "B",
+    "span_id": "17C+7E3#1"
+   },
+   {
+    "length_m": 3.9723,
+    "side": "A",
+    "span_id": "17D+7E4#1"
+   },
+   {
+    "length_m": 4.2723,
+    "side": "B",
+    "span_id": "17D+7E4#1"
+   },
+   {
+    "length_m": 2.687,
+    "side": "A",
+    "span_id": "17E+17F#1"
+   },
+   {
+    "length_m": 2.4668,
+    "side": "B",
+    "span_id": "17E+17F#1"
+   },
+   {
+    "length_m": 0.789,
+    "side": "A",
+    "span_id": "180+181#1"
+   },
+   {
+    "length_m": 1.389,
+    "side": "B",
+    "span_id": "180+181#1"
+   },
+   {
+    "length_m": 2.1,
+    "side": "A",
+    "span_id": "180D+180E#1"
+   },
+   {
+    "length_m": 1.6757,
+    "side": "B",
+    "span_id": "180D+180E#1"
+   },
+   {
+    "length_m": 1.8,
+    "side": "A",
+    "span_id": "1811+1812#1"
+   },
+   {
+    "length_m": 1.3,
+    "side": "B",
+    "span_id": "1811+1812#1"
+   },
+   {
+    "length_m": 2.1431,
+    "side": "A",
+    "span_id": "182+183#1"
+   },
+   {
+    "length_m": 2.0732,
+    "side": "B",
+    "span_id": "182+183#1"
+   },
+   {
+    "length_m": 3.02,
+    "side": "A",
+    "span_id": "184+7CF#1"
+   },
+   {
+    "length_m": 3.02,
+    "side": "B",
+    "span_id": "184+7CF#1"
+   },
+   {
+    "length_m": 2.65,
+    "side": "A",
+    "span_id": "184+7CF#2"
+   },
+   {
+    "length_m": 2.65,
+    "side": "B",
+    "span_id": "184+7CF#2"
+   },
+   {
+    "length_m": 5.0,
+    "side": "A",
+    "span_id": "184+7CF#3"
+   },
+   {
+    "length_m": 4.7,
+    "side": "B",
+    "span_id": "184+7CF#3"
+   },
+   {
+    "length_m": 0.6,
+    "side": "A",
+    "span_id": "185+7C7#1"
+   },
+   {
+    "length_m": 0.6,
+    "side": "B",
+    "span_id": "185+7C7#1"
+   },
+   {
+    "length_m": 2.975,
+    "side": "A",
+    "span_id": "7D0+FC#1"
+   },
+   {
+    "length_m": 2.675,
+    "side": "B",
+    "span_id": "7D0+FC#1"
+   },
+   {
+    "length_m": 5.745,
+    "side": "A",
+    "span_id": "7D0+FC#2"
+   },
+   {
+    "length_m": 5.445,
+    "side": "B",
+    "span_id": "7D0+FC#2"
+   },
+   {
+    "length_m": 6.35,
+    "side": "A",
+    "span_id": "7D0+FC#3"
+   },
+   {
+    "length_m": 6.05,
+    "side": "B",
+    "span_id": "7D0+FC#3"
+   },
+   {
+    "length_m": 1.2,
+    "side": "A",
+    "span_id": "7D0+FC#4"
+   },
+   {
+    "length_m": 1.2,
+    "side": "B",
+    "span_id": "7D0+FC#4"
+   },
+   {
+    "length_m": 5.45,
+    "side": "A",
+    "span_id": "7D4+F8#1"
+   },
+   {
+    "length_m": 5.15,
+    "side": "B",
+    "span_id": "7D4+F8#1"
+   },
+   {
+    "length_m": 4.55,
+    "side": "A",
+    "span_id": "7D4+F8#2"
+   },
+   {
+    "length_m": 3.65,
+    "side": "B",
+    "span_id": "7D4+F8#2"
+   },
+   {
+    "length_m": 3.525,
+    "side": "A",
+    "span_id": "7DC+7DD#1"
+   },
+   {
+    "length_m": 3.225,
+    "side": "B",
+    "span_id": "7DC+7DD#1"
+   },
+   {
+    "length_m": 3.525,
+    "side": "A",
+    "span_id": "7DC+7DD#2"
+   },
+   {
+    "length_m": 3.525,
+    "side": "B",
+    "span_id": "7DC+7DD#2"
+   },
+   {
+    "length_m": 3.35,
+    "side": "A",
+    "span_id": "7E0+FD#1"
+   },
+   {
+    "length_m": 3.05,
+    "side": "B",
+    "span_id": "7E0+FD#1"
+   },
+   {
+    "length_m": 3.25,
+    "side": "A",
+    "span_id": "7E0+FD#2"
+   },
+   {
+    "length_m": 3.25,
+    "side": "B",
+    "span_id": "7E0+FD#2"
+   },
+   {
+    "length_m": 6.42,
+    "side": "A",
+    "span_id": "7E1+7E2#1"
+   },
+   {
+    "length_m": 6.42,
+    "side": "B",
+    "span_id": "7E1+7E2#1"
+   },
+   {
+    "length_m": 3.525,
+    "side": "A",
+    "span_id": "7E7+7E8#1"
+   },
+   {
+    "length_m": 3.525,
+    "side": "B",
+    "span_id": "7E7+7E8#1"
+   },
+   {
+    "length_m": 3.225,
+    "side": "A",
+    "span_id": "7E7+7E8#2"
+   },
+   {
+    "length_m": 3.525,
+    "side": "B",
+    "span_id": "7E7+7E8#2"
+   },
+   {
+    "length_m": 4.225,
+    "side": "A",
+    "span_id": "7E9+7EA#1"
+   },
+   {
+    "length_m": 4.225,
+    "side": "B",
+    "span_id": "7E9+7EA#1"
+   }
+  ],
+  "unattributed": []
+ }
+}

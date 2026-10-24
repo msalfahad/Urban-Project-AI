@@ -438,8 +438,8 @@ Risk **MEDIUM** (recommended validation L2). Ask about: formwork, shuttering, fo
 **BOQ capability** (exact registry statuses): NOT_IMPLEMENTED 2. Only INTEGRATED_AND_TESTED counts as supported; a module or a synthetic test is not real-villa validation.
 
 **Validation:** L1 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/t264_formwork_r4`
-L2 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/t264_formwork_r4 tests/m9_n10 tests/t163_formwork`
-L3 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/t264_formwork_r4 tests/m9_n10 tests/t163_formwork` + freeze check
+L2 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/t264_formwork_r4 tests/t282_formwork_edges tests/m9_n10 tests/t163_formwork`
+L3 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/t264_formwork_r4 tests/t282_formwork_edges tests/m9_n10 tests/t163_formwork` + freeze check
 L4 full suite + freeze check (see above)
 
 **Known defects** (2 unresolved of 3):

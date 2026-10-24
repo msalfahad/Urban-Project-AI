@@ -1,0 +1,127 @@
+span_id,side,r4_L_m,walk_m,traced_m,gaps_m,traced_plus_gaps_m,delta_m,r4_kind,D_lo,D_hi,delta_m2_lo,delta_m2_hi,status,cause
+107+7CE#1,A,0.3639,0.3639,0.3639,0,0.3639,0.0,CALC,0.95,0.95,0.0,0.0,AGREES,both methods = the r4 length
+107+7CE#1,B,0.3639,,0.3639,0,0.3639,0.0,FORMED,0.95,0.95,0.0,0.0,AGREES,both methods = the r4 length
+109+7CB#1,A,4.4,4.4,4.2723,0.1278,4.4001,0.0001,FORMED,0.4,0.4,0.0,0.0,AGREES,both methods = the r4 length
+109+7CB#1,B,4.4,4.4,4.3,0.1,4.4,0.0,FORMED,0.4,0.4,0.0,0.0,AGREES,both methods = the r4 length
+109+7CB#2,A,4.4,4.4,4.1,0.3,4.4,0.0,FORMED,0.95,0.95,0.0,0.0,AGREES,both methods = the r4 length
+109+7CB#2,B,4.4,4.4,4.1,0.3,4.4,0.0,FORMED,0.95,0.95,0.0,0.0,AGREES,both methods = the r4 length
+109+7CB#3,A,2.7,2.7,2.7,0,2.7,0.0,FORMED,0.95,0.95,0.0,0.0,AGREES,both methods = the r4 length
+109+7CB#3,B,2.7,2.7,2.7,0,2.7,0.0,CALC,0.95,0.95,0.0,0.0,AGREES,both methods = the r4 length
+10A+7C9#1,A,4.3,4.3,4.3,0,4.3,0.0,FORMED,0.95,0.95,0.0,0.0,AGREES,both methods = the r4 length
+10A+7C9#1,B,4.3,4.3,4.3,0,4.3,0.0,CALC,0.95,0.95,0.0,0.0,AGREES,both methods = the r4 length
+10B+7D1#1,A,1.2,1.499,1.5,0,1.5,0.3,CONFLICT,,,,,DRAWING-CONFIRMED,both methods: the edge closes on its carrier's drawn face +0.3000 m from the r4 station (the r4 span is cut square at one station)
+10B+7D1#1,B,1.2,1.2,1.2,0,1.2,0.0,CONFLICT,,,,,AGREES,both methods = the r4 length
+10B+7D1#2,A,2.3,2.3,2.3,0,2.3,0.0,CONFLICT,,,,,AGREES,both methods = the r4 length
+10B+7D1#2,B,2.3,2.3,2.3,0,2.3,0.0,CONFLICT,,,,,AGREES,both methods = the r4 length
+114+115+7DF#1,A,2.325,2.325,2.325,0,2.325,0.0,HELD,0.3,0.4,0.0,0.0,AGREES,both methods = the r4 length
+114+115+7DF#1,B,2.325,2.325,2.225,0.1,2.325,0.0,HELD,0.3,0.4,0.0,0.0,AGREES,both methods = the r4 length
+114+115+7DF#2,A,1.0,1.0,1.0,0,1.0,0.0,FORMED,0.95,0.95,0.0,0.0,AGREES,both methods = the r4 length
+114+115+7DF#2,B,1.0,1.0,1.0,0,1.0,0.0,CALC,0.95,0.95,0.0,0.0,AGREES,both methods = the r4 length
+136+7D5#1,A,6.0,6.0,6.0,0,6.0,0.0,CONFLICT,,,,,AGREES,both methods = the r4 length
+136+7D5#1,B,6.0,6.0,6.0,0,6.0,0.0,CONFLICT,,,,,AGREES,both methods = the r4 length
+137+138#1,A,2.4,2.4,2.4,0,2.4,0.0,CONFLICT,,,,,AGREES,both methods = the r4 length
+137+138#1,B,2.4,2.4,2.4,0,2.4,0.0,CONFLICT,,,,,AGREES,both methods = the r4 length
+13C+7D9#1,A,1.45,1.45,1.45,0,1.45,0.0,HELD,0.3,0.4,0.0,0.0,AGREES,both methods = the r4 length
+13C+7D9#1,B,1.45,1.45,1.45,0,1.45,0.0,HELD,0.3,0.4,0.0,0.0,AGREES,both methods = the r4 length
+13D+7D2#1,A,5.8,5.8,5.2,0.6,5.8,0.0,CONFLICT,,,,,AGREES,both methods = the r4 length
+13D+7D2#1,B,5.8,5.8,5.8,0,5.8,0.0,CONFLICT,,,,,AGREES,both methods = the r4 length
+13E+7D6#1,A,4.3,4.3,4.0,0.3,4.3,0.0,HELD,0.4,0.4,0.0,0.0,AGREES,both methods = the r4 length
+13E+7D6#1,B,4.3,,4.45,0,4.45,0.15,HELD,0.4,0.4,0.06,0.06,DRAWING-CONFIRMED,the carrier V2 names (COL:211) does not reach this edge (partial-width support); the edge runs on beside it to ARC:139+13A/1
+13E+7D6#2,A,0.5,0.5,0.5,0,0.5,0.0,CONFLICT,,,,,AGREES,both methods = the r4 length
+13E+7D6#2,B,0.5,,0.65,0,0.65,0.15,CONFLICT,,,,,DRAWING-CONFIRMED,the carrier V2 names (COL:211) does not reach this edge (partial-width support); the edge runs on beside it to 7D4+F8
+13E+7D6#2,END,0.0,,0.0017,0.0,0.0017,0.0017,CONFLICT,,,,,HELD,"end piece at a BEAM_JUNCTION end, not settled"
+13F+7D3#1,A,4.3,4.3,4.3,0,4.3,0.0,HELD,0.4,0.4,0.0,0.0,AGREES,both methods = the r4 length
+13F+7D3#1,B,4.3,4.3,4.0,0.3,4.3,0.0,HELD,0.4,0.4,0.0,0.0,AGREES,both methods = the r4 length
+140+7D7#1,A,4.3,4.3,4.0,0.3,4.3,0.0,HELD,0.4,0.4,0.0,0.0,AGREES,both methods = the r4 length
+140+7D7#1,B,4.3,4.3,4.3,0,4.3,0.0,HELD,0.4,0.4,0.0,0.0,AGREES,both methods = the r4 length
+141+7DA#1,A,1.2,1.2,1.2,0,1.2,0.0,HELD,0.3,0.4,0.0,0.0,AGREES,both methods = the r4 length
+141+7DA#1,B,1.2,1.2,1.2,0,1.2,0.0,HELD,0.3,0.4,0.0,0.0,AGREES,both methods = the r4 length
+142+7D8#1,A,2.45,2.45,2.15,0.3,2.45,0.0,HELD,0.3,0.4,0.0,0.0,AGREES,both methods = the r4 length
+142+7D8#1,B,2.45,2.45,2.45,0,2.45,0.0,HELD,0.3,0.4,0.0,0.0,AGREES,both methods = the r4 length
+145+7CA#1,A,1.9,,1.9,0,1.9,0.0,FORMED,0.95,0.95,0.0,0.0,AGREES,both methods = the r4 length
+145+7CA#1,B,1.9,1.9,1.6,0.3,1.9,0.0,FORMED,0.95,0.95,0.0,0.0,AGREES,both methods = the r4 length
+15C+7CC#1,A,2.4,2.4,2.4,0,2.4,0.0,HELD,0.3,0.4,0.0,0.0,AGREES,both methods = the r4 length
+15C+7CC#1,B,2.4,2.4,2.4,0,2.4,0.0,HELD,0.3,0.4,0.0,0.0,AGREES,both methods = the r4 length
+15D+7C8#1,A,2.9,1.8999,2.7373,0.1628,2.9001,0.0001,HELD,0.4,0.4,0.0,0.0,AGREES,both methods = the r4 length
+15D+7C8#1,B,2.9,1.8999,2.6,0.2499,2.8499,-0.0501,HELD,0.4,0.4,-0.02,-0.02,HELD,walk 1.8999 vs traced 2.8499 differ: not settled by the drawing reading
+15D+7C8#1,END,0.0,,0.3,0.0,0.3,0.3,HELD,0.4,0.4,0.12,0.12,DRAWING-CONFIRMED,free end face (FOOTING_FACE end): the band stops with nothing drawn against it; in no r4 row
+15E+15F#1,A,2.7,,2.4,0.3,2.7,0.0,HELD,0.4,0.4,0.0,0.0,AGREES,both methods = the r4 length
+15E+15F#1,B,2.7,2.7,2.7,0,2.7,0.0,HELD,0.4,0.4,0.0,0.0,AGREES,both methods = the r4 length
+15E+15F#1,END,0.0,,0.1,0.0,0.1,0.1,HELD,0.4,0.4,0.04,0.04,DRAWING-CONFIRMED,end beside a partial-width column: the part of the band's drawn end the column does not cover; in no r4 row
+16F+7FF#1,A,1.25,1.25,1.25,0,1.25,0.0,HELD,0.3,0.4,0.0,0.0,AGREES,both methods = the r4 length
+16F+7FF#1,B,1.25,1.25,1.25,0,1.25,0.0,HELD,0.3,0.4,0.0,0.0,AGREES,both methods = the r4 length
+170+7C3#1,A,2.4,2.4,2.4,0,2.4,0.0,FORMED,0.95,0.95,0.0,0.0,AGREES,both methods = the r4 length
+170+7C3#1,B,2.4,2.4,2.4,0,2.4,0.0,CALC,0.95,0.95,0.0,0.0,AGREES,both methods = the r4 length
+170+7C3#2,A,3.37,3.37,2.8085,0.5615,3.37,0.0,FORMED,0.95,0.95,0.0,0.0,AGREES,both methods = the r4 length
+170+7C3#2,B,3.37,3.37,3.37,0,3.37,0.0,CALC,0.95,0.95,0.0,0.0,AGREES,both methods = the r4 length
+170+7C3#3,A,3.35,3.35,2.92,0.43,3.35,0.0,FORMED,0.95,0.95,0.0,0.0,AGREES,both methods = the r4 length
+170+7C3#3,B,3.35,3.35,3.35,0,3.35,0.0,CALC,0.95,0.95,0.0,0.0,AGREES,both methods = the r4 length
+170+7C3#4,A,3.25,3.25,3.25,0,3.25,0.0,FORMED,0.95,0.95,0.0,0.0,AGREES,both methods = the r4 length
+170+7C3#4,B,3.25,,3.55,0,3.55,0.3,CALC,0.95,0.95,0.285,0.285,DRAWING-CONFIRMED,the carrier V2 names (COL:17C0) does not reach this edge (partial-width support); the edge runs on beside it to COL:1E8
+170+7C3#4,END,0.0,,0.2318,0.0,0.2318,0.2318,FORMED,0.95,0.95,0.2202,0.2202,DRAWING-CONFIRMED,end beside a partial-width column: the part of the band's drawn end the column does not cover; in no r4 row
+175+7DE#1,A,3.75,3.75,3.75,0,3.75,0.0,HELD,0.4,0.4,0.0,0.0,AGREES,both methods = the r4 length
+175+7DE#1,B,3.75,3.75,3.45,0.3,3.75,0.0,HELD,0.4,0.4,0.0,0.0,AGREES,both methods = the r4 length
+176+7E6#1,A,3.75,,3.0257,0.7243,3.75,0.0,HELD,0.4,0.4,0.0,0.0,AGREES,both methods = the r4 length
+176+7E6#1,B,3.75,3.75,3.3257,0.4243,3.75,0.0,HELD,0.4,0.4,0.0,0.0,AGREES,both methods = the r4 length
+177+7CD#1,A,5.02,5.02,4.72,0.3,5.02,0.0,HELD,0.6,0.6,0.0,0.0,AGREES,both methods = the r4 length
+177+7CD#1,B,5.02,5.02,4.42,0.6,5.02,0.0,HELD,0.6,0.6,0.0,0.0,AGREES,both methods = the r4 length
+177+7CD#1,END,0.0,,0.3,0.0,0.3,0.3,HELD,0.6,0.6,0.18,0.18,DRAWING-CONFIRMED,free end face (GAP_TO_COLUMN end): the band stops with nothing drawn against it; in no r4 row
+177+7CD#2,A,1.5367,1.7557,1.4558,0.3,1.7558,0.2191,HELD,0.3,0.4,0.0657,0.0876,DRAWING-CONFIRMED,both methods: the edge closes on its carrier's drawn face +0.2191 m from the r4 station (the r4 span is cut square at one station)
+177+7CD#2,B,1.5367,1.5372,1.5367,0,1.5367,0.0,HELD,0.3,0.4,0.0,0.0,AGREES,both methods = the r4 length
+178+7DB#1,A,3.8,3.8,3.8,0,3.8,0.0,HELD,0.4,0.95,0.0,0.0,AGREES,both methods = the r4 length
+178+7DB#1,B,3.8,3.8,3.8,0,3.8,0.0,HELD,0.4,0.95,0.0,0.0,AGREES,both methods = the r4 length
+17B+7E5#1,A,1.2,1.2,1.2,0,1.2,0.0,HELD,0.3,0.4,0.0,0.0,AGREES,both methods = the r4 length
+17B+7E5#1,B,1.2,1.2,1.2,0,1.2,0.0,HELD,0.3,0.4,0.0,0.0,AGREES,both methods = the r4 length
+17C+7E3#1,A,3.228,1.9279,3.2277,0,3.2277,-0.0003,FORMED,0.4,0.4,-0.0001,-0.0001,AGREES,both methods = the r4 length
+17C+7E3#1,B,3.228,1.9279,3.2277,0,3.2277,-0.0003,FORMED,0.4,0.4,-0.0001,-0.0001,AGREES,both methods = the r4 length
+17C+7E3#1,END,0.0,,0.3,0.0,0.3,0.3,FORMED,0.4,0.4,0.12,0.12,DRAWING-CONFIRMED,free end face (FOOTING_FACE end): the band stops with nothing drawn against it; in no r4 row
+17D+7E4#1,A,4.2723,4.2723,3.9723,0.3,4.2723,0.0,HELD,0.4,0.4,0.0,0.0,AGREES,both methods = the r4 length
+17D+7E4#1,B,4.2723,4.2723,4.2723,0,4.2723,0.0,HELD,0.4,0.4,0.0,0.0,AGREES,both methods = the r4 length
+17E+17F#1,A,2.4269,2.685,2.687,0,2.687,0.2601,HELD,0.3,0.4,0.078,0.104,DRAWING-CONFIRMED,both methods: the edge closes on its carrier's drawn face +0.2601 m from the r4 station (the r4 span is cut square at one station)
+17E+17F#1,B,2.4269,2.7648,2.4668,0.3,2.7668,0.3399,HELD,0.3,0.4,0.102,0.136,DRAWING-CONFIRMED,both methods: the edge closes on its carrier's drawn face +0.3399 m from the r4 station (the r4 span is cut square at one station)
+180+181#1,A,0.789,0.787,0.789,0,0.789,0.0,HELD,0.3,0.4,0.0,0.0,AGREES,both methods = the r4 length
+180+181#1,B,0.789,1.387,1.389,0,1.389,0.6,HELD,0.3,0.4,0.18,0.24,DRAWING-CONFIRMED,both methods: the edge closes on its carrier's drawn face +0.6000 m from the r4 station (the r4 span is cut square at one station); drawn line stops 0.1104 m short of the carrier: closed on it (R-FACE-END-1)
+180D+180E#1,A,2.1,2.1,2.1,0,2.1,0.0,HELD,0.3,0.4,0.0,0.0,AGREES,both methods = the r4 length
+180D+180E#1,B,2.1,2.1,1.6757,0.4243,2.1,0.0,HELD,0.3,0.4,0.0,0.0,AGREES,both methods = the r4 length
+1811+1812#1,A,1.3,,1.8,0,1.8,0.5,HELD,0.3,0.4,0.15,0.2,DRAWING-CONFIRMED,the carrier V2 names (COL:1E8) does not reach this edge (partial-width support); the edge runs on beside it to COL:17C0
+1811+1812#1,B,1.3,1.3,1.3,0,1.3,0.0,HELD,0.3,0.4,0.0,0.0,AGREES,both methods = the r4 length
+1811+1812#1,END,0.0,,0.0972,0.0,0.0972,0.0972,HELD,0.3,0.4,0.0292,0.0389,DRAWING-CONFIRMED,end beside a partial-width column: the part of the band's drawn end the column does not cover; in no r4 row
+1811+1812#1,END,0.0,,0.3,0.0,0.3,0.3,HELD,0.3,0.4,0.09,0.12,DRAWING-CONFIRMED,free end face (FREE_END end): the band stops with nothing drawn against it; in no r4 row
+182+183#1,A,2.0732,2.3722,2.1431,0,2.1431,0.0699,HELD,0.3,0.4,0.021,0.028,DRAWING-CONFIRMED,the edge meets another drawn member 0.2291 m before the carrier V2 names (walk 2.3722): no face there (traced); drawn line stops 0.2301 m short of the carrier: closed on it (R-FACE-END-1)
+182+183#1,B,2.0732,2.0722,2.0732,0,2.0732,0.0,HELD,0.3,0.4,0.0,0.0,AGREES,both methods = the r4 length
+184+7CF#1,A,3.02,3.02,3.02,0,3.02,0.0,HELD,0.4066,0.4177,0.0,0.0,AGREES,both methods = the r4 length
+184+7CF#1,B,3.02,3.02,3.02,0,3.02,0.0,HELD,0.4066,0.4177,0.0,0.0,AGREES,both methods = the r4 length
+184+7CF#2,A,2.65,2.65,2.65,0,2.65,0.0,HELD,0.3874,0.4,0.0,0.0,AGREES,both methods = the r4 length
+184+7CF#2,B,2.65,2.65,2.65,0,2.65,0.0,HELD,0.3874,0.4,0.0,0.0,AGREES,both methods = the r4 length
+184+7CF#3,A,5.0,5.0,5.0,0,5.0,0.0,HELD,0.4,0.6,0.0,0.0,AGREES,both methods = the r4 length
+184+7CF#3,B,5.0,5.0,4.7,0.3,5.0,0.0,HELD,0.4,0.6,0.0,0.0,AGREES,both methods = the r4 length
+185+7C7#1,A,0.6,0.6,0.6,0,0.6,0.0,HELD,0.3,0.95,0.0,0.0,AGREES,both methods = the r4 length
+185+7C7#1,B,0.6,0.6,0.6,0,0.6,0.0,HELD,0.3,0.95,0.0,0.0,AGREES,both methods = the r4 length
+7D0+FC#1,A,2.975,2.975,2.975,0,2.975,0.0,CALC,0.95,0.95,0.0,0.0,AGREES,both methods = the r4 length
+7D0+FC#1,B,2.975,2.975,2.675,0.3,2.975,0.0,FORMED,0.95,0.95,0.0,0.0,AGREES,both methods = the r4 length
+7D0+FC#2,A,5.745,5.745,5.745,0,5.745,0.0,CALC,0.95,0.95,0.0,0.0,AGREES,both methods = the r4 length
+7D0+FC#2,B,5.745,5.745,5.445,0.3,5.745,0.0,FORMED,0.95,0.95,0.0,0.0,AGREES,both methods = the r4 length
+7D0+FC#3,A,6.35,6.35,6.35,0,6.35,0.0,CALC,0.95,0.95,0.0,0.0,AGREES,both methods = the r4 length
+7D0+FC#3,B,6.35,6.35,6.05,0.3,6.35,0.0,FORMED,0.95,0.95,0.0,0.0,AGREES,both methods = the r4 length
+7D0+FC#4,A,1.2,1.2,1.2,0,1.2,0.0,CALC,0.95,0.95,0.0,0.0,AGREES,both methods = the r4 length
+7D0+FC#4,B,1.2,1.2,1.2,0,1.2,0.0,FORMED,0.95,0.95,0.0,0.0,AGREES,both methods = the r4 length
+7D4+F8#1,A,5.45,5.45,5.45,0,5.45,0.0,CONFLICT,,,,,AGREES,both methods = the r4 length
+7D4+F8#1,B,5.45,5.45,5.15,0.3,5.45,0.0,CONFLICT,,,,,AGREES,both methods = the r4 length
+7D4+F8#2,A,4.25,4.25,4.55,0,4.55,0.3,CONFLICT,,,,,DRAWING-CONFIRMED,corner: the drawn edge line runs 0.3000 m past the carrier's near face to the outer corner (the carrier's end lies on this face line)
+7D4+F8#2,B,4.25,4.25,3.65,0.6,4.25,0.0,CONFLICT,,,,,AGREES,both methods = the r4 length
+7DC+7DD#1,A,3.525,3.525,3.525,0,3.525,0.0,HELD,0.4,0.4,0.0,0.0,AGREES,both methods = the r4 length
+7DC+7DD#1,B,3.525,3.525,3.225,0.3,3.525,0.0,HELD,0.4,0.4,0.0,0.0,AGREES,both methods = the r4 length
+7DC+7DD#2,A,3.525,3.525,3.525,0,3.525,0.0,FORMED,0.4,0.4,0.0,0.0,AGREES,both methods = the r4 length
+7DC+7DD#2,B,3.525,3.525,3.525,0,3.525,0.0,FORMED,0.4,0.4,0.0,0.0,AGREES,both methods = the r4 length
+7E0+FD#1,A,3.35,3.35,3.35,0,3.35,0.0,CALC,0.95,0.95,0.0,0.0,AGREES,both methods = the r4 length
+7E0+FD#1,B,3.35,3.35,3.05,0.3,3.35,0.0,FORMED,0.95,0.95,0.0,0.0,AGREES,both methods = the r4 length
+7E0+FD#2,A,3.25,3.25,3.25,0,3.25,0.0,CALC,0.95,0.95,0.0,0.0,AGREES,both methods = the r4 length
+7E0+FD#2,B,3.25,3.25,3.25,0,3.25,0.0,FORMED,0.95,0.95,0.0,0.0,AGREES,both methods = the r4 length
+7E1+7E2#1,A,6.72,,6.42,0.3,6.72,0.0,HELD,0.6,0.6,0.0,0.0,AGREES,both methods = the r4 length
+7E1+7E2#1,B,6.72,6.72,6.42,0.3,6.72,0.0,HELD,0.6,0.6,0.0,0.0,AGREES,both methods = the r4 length
+7E7+7E8#1,A,3.525,3.525,3.525,0,3.525,0.0,FORMED,0.4,0.4,0.0,0.0,AGREES,both methods = the r4 length
+7E7+7E8#1,B,3.525,3.525,3.525,0,3.525,0.0,FORMED,0.4,0.4,0.0,0.0,AGREES,both methods = the r4 length
+7E7+7E8#2,A,3.525,3.525,3.225,0.3,3.525,0.0,HELD,0.4,0.4,0.0,0.0,AGREES,both methods = the r4 length
+7E7+7E8#2,B,3.525,3.525,3.525,0,3.525,0.0,HELD,0.4,0.4,0.0,0.0,AGREES,both methods = the r4 length
+7E9+7EA#1,A,4.225,4.225,4.225,0,4.225,0.0,FORMED,0.4,0.4,0.0,0.0,AGREES,both methods = the r4 length
+7E9+7EA#1,B,4.225,4.225,4.225,0,4.225,0.0,FORMED,0.4,0.4,0.0,0.0,AGREES,both methods = the r4 length
