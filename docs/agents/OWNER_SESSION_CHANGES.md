@@ -7,6 +7,7 @@ conflicts with something you planned, say so in your report to the main chat ins
 
 | UTC time | What changed | Where | Why |
 |---|---|---|---|
+| 2026-10-24 06:30 | PILOT END report recorded (PILOT_2026-10-23.md s.6a O3, s.7 final row); no schedule changed; pilot crons stay until the owner's decision | PILOT_2026-10-23.md | Pilot rule (report at 06:20) |
 | 2026-10-23 21:29 | LOCK-SAFETY FIX DEPLOYED to main eafbb0f6 after the 21:11 Checker final line (all lock and autosetup tests passed); Checker prompt step 7 now 'engine push' only | main: scripts/agent_env.sh, scripts/test_agent_env_runlock.sh, CLAUDE.md, .claude/settings.json; Checker scheduled task; LOCK_AND_PARTIAL_ASSESSMENT s.6 | Owner's words in the main chat |
 | 2026-10-23 21:15 | OWNER APPROVAL lock-safety fix (deploy after the active Checker run, all tests first); T-239 F10 CONFLICT correction row; PDF footing recount; blinding reconciliation; T-235 stays behind T-232 | BOARD.md, LOCK_AND_PARTIAL_ASSESSMENT_2026-10-23.md s.5 | Owner's words in the main chat |
 | 2026-10-23 20:59 | OWNER APPROVAL of the Checker 110-minute and Gate B + one task rules; lock-ownership assessment and probe (fix awaiting the owner's go); verified partial quantities kept traceable in T-235 with a partial footing-line export test; Lead asked for an F10 range row, a Q-28 drawing search and a PDF tag count | BOARD.md, LOCK_AND_PARTIAL_ASSESSMENT_2026-10-23.md, dashboard/lock_probe_2026-10-23.sh | Owner's words in the main chat |
