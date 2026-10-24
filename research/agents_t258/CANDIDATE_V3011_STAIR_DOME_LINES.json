@@ -1,0 +1,133 @@
+{
+ "schema": "T258_CANDIDATE_V3011_STAIR_DOME_LINES",
+ "run": "research/agents_t167/v304_run.py then research/agents_t239/v3011_run.py on the Drive copies (P7757.dxf ab54dd55, ST7757 dxf 9f9d1179), Python 3.11.17, engine 3c9b1484; V3_0_11_BOQ_LINES.csv sha256 bb5466b0 (= T-239 Gate B), V3_0_7 197c5599, V3_0_10 ab4a973c reproduced",
+ "lines": [
+  {
+   "line_id": "L-14f885e95132fa0cedec",
+   "floor": "1F",
+   "item_code": "STR.CONC.STAIR",
+   "state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_low": null,
+   "bounded_high": null
+  },
+  {
+   "line_id": "L-b6b0354b7842f0ed6e41",
+   "floor": "GROUND",
+   "item_code": "STR.CONC.STAIR",
+   "state": "BLOCKED_RFI",
+   "measured_net": null,
+   "bounded_low": null,
+   "bounded_high": null
+  },
+  {
+   "line_id": "L-33769fb181e11dca13cc",
+   "floor": "2F",
+   "item_code": "STR.CONC.DOME",
+   "state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_low": null,
+   "bounded_high": null
+  },
+  {
+   "line_id": "L-004e8e9fd032cb0aeb72",
+   "floor": "2F",
+   "item_code": "STR.CONC.DOME",
+   "state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_low": null,
+   "bounded_high": null
+  },
+  {
+   "line_id": "L-7863355dfcb68a681d2d",
+   "floor": "GF",
+   "item_code": "STR.CONC.STAIR",
+   "state": "BLOCKED_RFI",
+   "measured_net": null,
+   "bounded_low": null,
+   "bounded_high": null
+  },
+  {
+   "line_id": "L-061e18cf35a4b6b33d68",
+   "floor": "GROUND",
+   "item_code": "STR.CONC.STAIR",
+   "state": "PROVISIONAL",
+   "measured_net": "0.9482674779781379",
+   "bounded_low": "0.6116168477474295",
+   "bounded_high": "1.0860799346671572"
+  },
+  {
+   "line_id": "L-67e4b0485135f84acc46",
+   "floor": "1F",
+   "item_code": "STR.CONC.STAIR",
+   "state": "SOURCE_DERIVED",
+   "measured_net": "1.033445",
+   "bounded_low": null,
+   "bounded_high": null
+  },
+  {
+   "line_id": "L-bb0e57b1948175a3d5b8",
+   "floor": "1F",
+   "item_code": "STR.CONC.STAIR",
+   "state": "SOURCE_DERIVED",
+   "measured_net": "1.001373",
+   "bounded_low": null,
+   "bounded_high": null
+  },
+  {
+   "line_id": "L-2416e65f053a14199cfc",
+   "floor": "1F",
+   "item_code": "STR.CONC.STAIR",
+   "state": "BOUNDED_EXPOSURE",
+   "measured_net": null,
+   "bounded_low": "0.4696",
+   "bounded_high": "0.48"
+  },
+  {
+   "line_id": "L-659243ed9fc2831c3ae8",
+   "floor": "1F",
+   "item_code": "STR.CONC.STAIR",
+   "state": "BLOCKED_RFI",
+   "measured_net": null,
+   "bounded_low": null,
+   "bounded_high": null
+  },
+  {
+   "line_id": "L-821032bc04a0b0d02133",
+   "floor": "GROUND",
+   "item_code": "STR.CONC.STAIR",
+   "state": "BLOCKED_RFI",
+   "measured_net": null,
+   "bounded_low": null,
+   "bounded_high": null
+  },
+  {
+   "line_id": "L-d5401fa8986900c66c37",
+   "floor": "2F",
+   "item_code": "STR.CONC.DOME",
+   "state": "BLOCKED_RFI",
+   "measured_net": null,
+   "bounded_low": null,
+   "bounded_high": null
+  },
+  {
+   "line_id": "L-8ea34765d16b54898140",
+   "floor": "2F",
+   "item_code": "STR.CONC.DOME",
+   "state": "SOURCE_DERIVED",
+   "measured_net": "2.540681",
+   "bounded_low": null,
+   "bounded_high": null
+  },
+  {
+   "line_id": "L-fffa895ed96b9d6a682c",
+   "floor": "2F",
+   "item_code": "STR.CONC.DOME",
+   "state": "SOURCE_DERIVED",
+   "measured_net": "2.540681",
+   "bounded_low": null,
+   "bounded_high": null
+  }
+ ],
+ "released_with_value_m3": 8.064447
+}

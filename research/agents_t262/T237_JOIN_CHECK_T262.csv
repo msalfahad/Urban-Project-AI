@@ -1,0 +1,84 @@
+T237_ROOM,T128_OPENING,CENSUS_ID,T237_MATCH_BASIS,T237_HOST_WALL,GEO_ROOMS_OF_CENSUS_ID,RESULT
+GF-01,W11,W11,id in the T-128 name,GF-W18,GF-01,AGREE
+GF-01,W12,W12,id in the T-128 name,GF-W18,GF-01,AGREE
+GF-01,D120 entrance,D-GF-01,room + kind + width (0.06),GF-W06,GF-01,AGREE
+GF-01,arch to wash,A-GF-01,room + kind + width (0.06),GF-W26,GF-01 GF-02,AGREE
+GF-02,D315 to W.C.,D-GF-02,room + kind + width (0.06),GF-W27,GF-02 GF-03,AGREE
+GF-02,arch to dewaneya,A-GF-01,room + kind + width (0.06),GF-W26,GF-01 GF-02,AGREE
+GF-03,D315,D-GF-02,room + kind + width (0.06),GF-W27,GF-02 GF-03,AGREE
+GF-04,W04,W04,id in the T-128 name,GF-W04,GF-04,AGREE
+GF-04,d220 entrance,D-GF-03,room + kind + width (0.06),GF-W04,GF-04,AGREE
+GF-04,D315 to W.C.,D-GF-04,room + kind + width (0.06),GF-W24,GF-04 GF-05,AGREE
+GF-05,D315,D-GF-04,room + kind + width (0.06),GF-W24,GF-04 GF-05,AGREE
+GF-06,W08,W08,id in the T-128 name,GF-W04,GF-06,AGREE
+GF-06,D120,D-GF-05,room + kind + width (0.06),GF-W17,GF-06,AGREE
+GF-07,D120,D-GF-06,room + kind + width (0.06),GF-W05,GF-07,AGREE
+GF-07,W10,W10,id in the T-128 name,GF-W16,GF-07,AGREE
+GF-07,W09,W09,id in the T-128 name,GF-W16,GF-07,AGREE
+GF-08,D120 to stair hall,D-GF-08,room + kind + the other side named in the T-128 label (ST-GF),GF-W08,GF-08 ST-GF,AGREE
+GF-08,lift landing door,L-GF-01,room + kind + width (0.06),GF-W08,,NOT_IN_INVENTORY
+GF-08,D115 to master bed,D-GF-13,room + kind + the other side named in the T-128 label (GF-15),GF-W28,GF-08 GF-15,AGREE
+GF-08,W03 pool glazing band (open-room part),W03,id in the T-128 name,GF-W37,GF-08 GF-15,AGREE
+GF-08,W02 saloon glazing,W02,id in the T-128 name,GF-W11,GF-08,AGREE
+GF-08,D01 main entrance,D-GF-07,id in the T-128 name,GF-W15,GF-08,AGREE
+GF-15,bath door (loose arc),D-GF-14,room + kind + width (0.06),GF-W30,GF-15 GF-16,AGREE
+GF-15,W03 pool glazing band (bed-room part),W03,id in the T-128 name,GF-W37,GF-08 GF-15,AGREE
+GF-15,D115,D-GF-13,room + kind + width (0.06),GF-W28,GF-08 GF-15,AGREE
+GF-16,W05-07,W07,id in the T-128 name + room,GF-W10,GF-16,AGREE
+GF-16,bath door (loose arc),D-GF-14,room + kind + width (0.06),GF-W30,GF-15 GF-16,AGREE
+GF-10,W05-07,W05,id in the T-128 name + room,GF-W10,GF-10,AGREE
+GF-10,D315,D-GF-10,room + kind + width (0.06),GF-W29,GF-10 GF-11,AGREE
+GF-11,D315 to W.C.,D-GF-10,room + kind + width (0.06),GF-W29,GF-10 GF-11,AGREE
+GF-12,D315,D-GF-11,room + kind + width (0.06),GF-W32,GF-12 GF-14,AGREE
+GF-13,W05-07,W06,family label: the one member no other room deducts (room assignment DIFFERS from T-175),GF-W10,GF-13,AGREE
+GF-13,D315,D-GF-12,room + kind + width (0.06),GF-W32,GF-13 GF-14,AGREE
+GF-14,D315 wedge A,D-GF-11,room + kind + the other side named in the T-128 label (GF-12),GF-W32,GF-12 GF-14,AGREE
+GF-14,D315 wedge B,D-GF-12,room + kind + the other side named in the T-128 label (GF-13),GF-W32,GF-13 GF-14,AGREE
+1F-01,D115 (landing),D-1F-02,room + kind + width (0.06),1F-W23,1F-01 1F-13 ST-1F,AGREE
+1F-01,D315 to bath,D-1F-01,room + kind + width (0.06),1F-W11,1F-01 1F-03,AGREE
+1F-01,W14,W14,id in the T-128 name,1F-W05,1F-01,AGREE
+1F-04,D115,D-1F-03,room + kind + width (0.06),1F-W12,1F-04 1F-13,AGREE
+1F-04,W24,W24,id in the T-128 name,1F-W06,1F-04,AGREE
+1F-04,D315 to bath,D-1F-04,room + kind + width (0.06),1F-W23,1F-02 1F-04,AGREE
+1F-10,D215,D-1F-08,room + kind + width (0.06),1F-W13,1F-10 1F-13,AGREE
+1F-10,arch120 to the dressing passage,A-1F-01,room + kind + width (0.06),1F-W16,1F-10,AGREE
+1F-11,W17,W17,id in the T-128 name,1F-W25,1F-11,AGREE
+1F-11,D315 to bath,D-1F-10,room + kind + width (0.06),1F-W17,1F-11 1F-12,AGREE
+1F-11,D215,D-1F-09,room + kind + width (0.06),1F-W13,1F-11 1F-13,AGREE
+1F-07,W19-23,W21,id in the T-128 name + room,1F-W10,1F-07,AGREE
+1F-07,D315 to W.C.,D-1F-06,room + kind + width (0.06),1F-W16,1F-07 1F-08,AGREE
+1F-07,d220,D-1F-05,room + kind + width (0.06),1F-W07,1F-07 1F-13,AGREE
+1F-08,D315,D-1F-06,room + kind + width (0.06),1F-W16,1F-07 1F-08,AGREE
+1F-08,W19-23,W22,id in the T-128 name + room,1F-W10,1F-08,AGREE
+1F-02,W19-23,W19,id in the T-128 name + room,1F-W06,1F-03,JOIN_WRONG
+1F-02,D315,D-1F-01,room + kind + width (0.06),1F-W11,1F-01 1F-03,JOIN_WRONG
+1F-03,D315,D-1F-04,room + kind + width (0.06),1F-W23,1F-02 1F-04,JOIN_WRONG
+1F-03,W19-23,W20,id in the T-128 name + room,1F-W06,1F-02,JOIN_WRONG
+1F-12,W18,W18,id in the T-128 name,1F-W00,1F-12,AGREE
+1F-12,D315,D-1F-10,room + kind + width (0.06),1F-W17,1F-11 1F-12,AGREE
+1F-09,W19-23,W23,id in the T-128 name + room,1F-W10,1F-09,AGREE
+1F-09,D315,D-1F-07,room + kind + width (0.06),1F-W19,1F-09,AGREE
+1F-13,lift landing door,L-1F-01,room + kind + width (0.06),1F-W07,,NOT_IN_INVENTORY
+1F-13,d220 laundry,D-1F-05,room + kind + the other side named in the T-128 label (1F-07),1F-W07,1F-07 1F-13,AGREE
+1F-13,D215 bed 380 x 430,D-1F-08,room + kind + the other side named in the T-128 label (1F-10),1F-W13,1F-10 1F-13,AGREE
+1F-13,D215 bed east,D-1F-09,room + kind + the other side named in the T-128 label (1F-11),1F-W13,1F-11 1F-13,AGREE
+1F-13,W15,W15,id in the T-128 name,1F-W00,1F-13,AGREE
+1F-13,W16 (twin of W15),W16,id in the T-128 name,1F-W00,1F-13,AGREE
+1F-13,D115 bed 500 x 365,D-1F-03,room + kind + the other side named in the T-128 label (1F-04),1F-W12,1F-04 1F-13,AGREE
+1F-13,D115 bed west (landing part),D-1F-02,room + kind + the other side named in the T-128 label (1F-01); split face (part of the opening width),1F-W23,1F-01 1F-13 ST-1F,AGREE
+2F-03,d220,D-2F-02,room + kind + width (0.06),2F-W05,2F-01 2F-03,AGREE
+2F-03,D315 to W.C.,D-2F-03,room + kind + width (0.06),2F-W08,2F-02 2F-03,AGREE
+2F-03,W29,W29,id in the T-128 name,2F-W02,2F-03,AGREE
+2F-02,W28,W28,id in the T-128 name,2F-W02,2F-02,AGREE
+2F-02,D315,D-2F-03,room + kind + width (0.06),2F-W08,2F-02 2F-03,AGREE
+2F-01,lift landing door,L-2F-01,room + kind + width (0.06),2F-W00,,NOT_IN_INVENTORY
+2F-01,d220 maid,D-2F-02,room + kind + the other side named in the T-128 label (2F-03),2F-W05,2F-01 2F-03,AGREE
+2F-01,D26 roof door,D-2F-01,id in the T-128 name,2F-W03,2F-01,AGREE
+ST-GF,D120 north door,D-GF-09,room + kind + width (0.06),GF-W10,ST-GF,AGREE
+ST-GF,D120 to the open room,D-GF-08,room + kind + the other side named in the T-128 label (GF-08),GF-W08,GF-08 ST-GF,AGREE
+ST-GF,W01,W01,id in the T-128 name,GF-W15,ST-GF,AGREE
+ST-1F,W13,W13,id in the T-128 name,1F-W04,ST-1F,AGREE
+ST-1F,north window,W25,room + kind + width (0.06),1F-W10,ST-1F,AGREE
+ST-1F,D115 bed west (shaft part),D-1F-02,door block D115 (1.00) of the room named in the label (1F-01); the census does not name this region as a side; split face (part of the opening width),1F-W23,1F-01 1F-13 ST-1F,AGREE
+ST-2F,W26 arched,W26,id in the T-128 name,2F-W07,ST-2F,AGREE
+ST-2F,W27,W27,id in the T-128 name,2F-W02,ST-2F,AGREE

@@ -1,0 +1,104 @@
+{
+ "agree_open_zone": [
+  "D-1F-02",
+  "D-1F-03"
+ ],
+ "by_kind": {
+  "DOOR": 27,
+  "GATE": 1,
+  "OPENING": 2,
+  "WINDOW": 29
+ },
+ "census_label_verdicts": {
+  "AGREE": 51,
+  "AGREE_OPEN_ZONE": 2,
+  "LABEL_INCOMPLETE": 1,
+  "LABEL_WRONG": 5
+ },
+ "door_pair": {
+  "N/A": 29,
+  "TWO_SIDES": 30
+ },
+ "drawing": "Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip -> P7757.dxf (sha ab54dd55)",
+ "flags": {
+  "D-GF-14": "REVEAL_IN_REGION:GF-16",
+  "W03": "NO_ROOM_RUN_IN_LINE:GF-15|GF-15:0.1m@0.2m"
+ },
+ "label_incomplete": [
+  "W03"
+ ],
+ "label_wrong": [
+  "W06",
+  "D-1F-01",
+  "D-1F-04",
+  "W19",
+  "W20"
+ ],
+ "multi_room_sides": [
+  "W03:MULTI_ROOM:GF-08=0.2826 GF-15=0.7174",
+  "D-1F-02:MULTI_ROOM:1F-13=0.4444 ST-1F=0.5556"
+ ],
+ "openings_joined": 59,
+ "region_overlaps": [
+  {
+   "HANDLES": "2DD 2DE",
+   "KIND": "WALL_STRIP",
+   "OVERLAP_M2": 0.3,
+   "ROOM": "GF-16"
+  },
+  {
+   "HANDLES": "2E5 2E7",
+   "KIND": "WALL_STRIP",
+   "OVERLAP_M2": 0.0418,
+   "ROOM": "GF-16"
+  },
+  {
+   "HANDLES": "324 325",
+   "KIND": "WALL_STRIP",
+   "OVERLAP_M2": 0.1805,
+   "ROOM": "GF-16"
+  },
+  {
+   "HANDLES": "334",
+   "KIND": "OPENING_REVEAL",
+   "OVERLAP_M2": "",
+   "ROOM": "GF-16"
+  }
+ ],
+ "side_states": {
+  "A": {
+   "ESTABLISHED": 59
+  },
+  "B": {
+   "ESTABLISHED": 57,
+   "MULTI_ROOM": 2
+  }
+ },
+ "t128_differs": [],
+ "t128_rooms": {
+  "AGREE": 32
+ },
+ "t209_windows": {
+  "AGREE": 11,
+  "ID_IN_WRONG_ROOM": 2
+ },
+ "t209_wrong": [
+  "1F-02:W19",
+  "1F-03:W20"
+ ],
+ "t237_join": {
+  "AGREE": 76,
+  "JOIN_WRONG": 4,
+  "NOT_IN_INVENTORY": 3
+ },
+ "t237_join_wrong": [
+  "1F-02:W19",
+  "1F-02:D-1F-01",
+  "1F-03:D-1F-04",
+  "1F-03:W20"
+ ],
+ "task": "T-262",
+ "walked_area_m2": {
+  "GF-16": 4.4203
+ }
+}
