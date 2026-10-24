@@ -1,0 +1,443 @@
+{
+ "arc_ground_beam": {
+  "inner": {
+   "R_m": 2.250011,
+   "handle": "157",
+   "inside_columns_m": {
+    "17BA": 0.0,
+    "17BD": 1e-05,
+    "17C0": 1e-05
+   },
+   "length_m": 6.567377,
+   "sweep_deg": 167.236
+  },
+  "outer": {
+   "R_m": 2.55,
+   "handle": "158",
+   "inside_columns_m": {
+    "17BA": 0.30018,
+    "17BD": 0.10199,
+    "17C0": 0.0
+   },
+   "length_m": 6.679704,
+   "sweep_deg": 150.0858
+  }
+ },
+ "oblique_ends": {
+  "BM-GF-017#BAND0018": {
+   "edge_len_m": {
+    "27D": 2.89066,
+    "282": 3.03827
+   },
+   "faces": {
+    "GF-124": {
+     "face_m2": 16.253591,
+     "kind": "SLAB",
+     "member": null,
+     "on_edge_m": {
+      "27D": 0.0,
+      "282": 3.03827
+     }
+    },
+    "GF-153": {
+     "face_m2": 0.592893,
+     "kind": "BEAM",
+     "member": "BM-GF-017",
+     "on_edge_m": {
+      "27D": 2.89066,
+      "282": 3.03827
+     }
+    },
+    "GF-172": {
+     "face_m2": 2.937403,
+     "kind": "SLAB",
+     "member": null,
+     "on_edge_m": {
+      "27D": 2.89066,
+      "282": 0.0
+     }
+    }
+   }
+  },
+  "BM-GF-021#BAND0021.1": {
+   "edge_len_m": {
+    "285": 6.54537,
+    "288": 6.27438
+   },
+   "faces": {
+    "GF-077": {
+     "face_m2": 5.375,
+     "kind": "SLAB",
+     "member": null,
+     "on_edge_m": {
+      "285": 1.751,
+      "288": 0.0
+     }
+    },
+    "GF-098": {
+     "face_m2": 15.54,
+     "kind": "SLAB",
+     "member": null,
+     "on_edge_m": {
+      "285": 0.0,
+      "288": 3.701
+     }
+    },
+    "GF-099": {
+     "face_m2": 0.64,
+     "kind": "BEAM",
+     "member": "BM-GF-021",
+     "on_edge_m": {
+      "285": 3.201,
+      "288": 3.201
+     }
+    },
+    "GF-100": {
+     "face_m2": 0.66,
+     "kind": "BEAM",
+     "member": "BM-GF-007",
+     "on_edge_m": {
+      "285": 0.202,
+      "288": 0.0
+     }
+    },
+    "GF-107": {
+     "face_m2": 0.084,
+     "kind": "COLUMN",
+     "member": "COL-GF-17",
+     "on_edge_m": {
+      "285": 0.14397,
+      "288": 0.702
+     }
+    },
+    "GF-121": {
+     "face_m2": 0.365239,
+     "kind": "BEAM",
+     "member": "BM-GF-031",
+     "on_edge_m": {
+      "285": 0.0,
+      "288": 0.202
+     }
+    },
+    "GF-122": {
+     "face_m2": 0.056,
+     "kind": "COLUMN",
+     "member": "COL-GF-17",
+     "on_edge_m": {
+      "285": 0.562,
+      "288": 0.00397
+     }
+    },
+    "GF-123": {
+     "face_m2": 0.0315,
+     "kind": "COLUMN",
+     "member": "COL-GF-17",
+     "on_edge_m": {
+      "285": 0.56397,
+      "288": 0.0
+     }
+    },
+    "GF-124": {
+     "face_m2": 16.253591,
+     "kind": "SLAB",
+     "member": null,
+     "on_edge_m": {
+      "285": 3.89837,
+      "288": 0.0
+     }
+    },
+    "GF-128": {
+     "face_m2": 2.080424,
+     "kind": "SLAB",
+     "member": null,
+     "on_edge_m": {
+      "285": 0.0,
+      "288": 2.37538
+     }
+    },
+    "GF-129": {
+     "face_m2": 0.501975,
+     "kind": "BEAM",
+     "member": "BM-GF-021",
+     "on_edge_m": {
+      "285": 2.64637,
+      "288": 2.37538
+     }
+    }
+   }
+  }
+ },
+ "planted_col_1f_57": {
+  "Dctrl": "0.75",
+  "drawn": "0.70x0.20",
+  "faces": {
+   "E": [
+    [
+     "BEAM",
+     "BM-1F-023",
+     0.2,
+     0.0
+    ]
+   ],
+   "N": [
+    [
+     "BEAM",
+     "BM-1F-022",
+     0.3,
+     0.25
+    ],
+    [
+     "SLAB",
+     "1F-094",
+     0.388,
+     0.59
+    ],
+    [
+     "BEAM",
+     "BM-1F-023",
+     0.012,
+     0.0
+    ]
+   ],
+   "S": [
+    [
+     "OUT",
+     "",
+     0.7,
+     0.59
+    ]
+   ],
+   "W": [
+    [
+     "SLAB",
+     "1F-094",
+     0.0,
+     0.59
+    ],
+    [
+     "BEAM",
+     "BM-1F-003",
+     0.2,
+     0.25
+    ]
+   ]
+  },
+  "id": "COL-1F-57",
+  "joint_drawn_m2": 0.766928,
+  "joint_stated_hi": 0.7669283418423184,
+  "joint_stated_lo": 0.7669283418423184,
+  "note": "",
+  "r3_walk_acc": {
+   "EDGE_BAND|1F-101": 0.112,
+   "JOINT_FACE|1F-101": 0.766928
+  },
+  "section": "0.20x0.70",
+  "stated_status": "CALCULATED"
+ },
+ "r3_totals": {
+  "ABOVE_HELD_HI": 277.365,
+  "ABOVE_HELD_LO": 221.507,
+  "ABOVE_HELD_UNQUANTIFIED_LINES": 17.0,
+  "BELOW_HELD_HI": 227.118,
+  "BELOW_HELD_LO": 162.64,
+  "BELOW_HELD_UNQUANTIFIED_LINES": 34.0,
+  "E_CALCULATED": 802.658,
+  "G_CALCULATED": 1078.274,
+  "OQ10_EARTH_CAST": 0.0,
+  "OQ10_FORMED": 103.14
+ },
+ "schema": "T264_R4_INPUT",
+ "source_dxf_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+ "units": "m",
+ "void_ring": {
+  "marks": [
+   "46E",
+   "46F",
+   "470",
+   "471"
+  ],
+  "pieces": {
+   "outer": [
+    {
+     "R_m": 1.935,
+     "beyond_D": null,
+     "beyond_face": "GF-034",
+     "beyond_kind": "SLAB",
+     "beyond_member": null,
+     "handle": "2EE",
+     "kind": "arc",
+     "length_m": 0.649374,
+     "sweep_deg": 19.2281
+    },
+    {
+     "R_m": null,
+     "beyond_D": 0.75,
+     "beyond_face": "GF-033",
+     "beyond_kind": "BEAM",
+     "beyond_member": "BM-GF-003",
+     "handle": "46D",
+     "kind": "line",
+     "length_m": 1.713476,
+     "sweep_deg": null
+    },
+    {
+     "R_m": 1.935,
+     "beyond_D": null,
+     "beyond_face": "GF-059",
+     "beyond_kind": "SLAB",
+     "beyond_member": null,
+     "handle": "2EF",
+     "kind": "arc",
+     "length_m": 0.565316,
+     "sweep_deg": 16.7391
+    },
+    {
+     "R_m": null,
+     "beyond_D": 0.75,
+     "beyond_face": "GF-058",
+     "beyond_kind": "BEAM",
+     "beyond_member": "BM-GF-044",
+     "handle": "42D",
+     "kind": "line",
+     "length_m": 1.128523,
+     "sweep_deg": null
+    },
+    {
+     "R_m": 1.75,
+     "beyond_D": null,
+     "beyond_face": "GF-061",
+     "beyond_kind": "SLAB",
+     "beyond_member": null,
+     "handle": "312",
+     "kind": "arc",
+     "length_m": 0.369576,
+     "sweep_deg": 12.1001
+    },
+    {
+     "R_m": null,
+     "beyond_D": 0.75,
+     "beyond_face": "GF-104",
+     "beyond_kind": "BEAM",
+     "beyond_member": "BM-GF-042",
+     "handle": "2A9",
+     "kind": "line",
+     "length_m": 2.1,
+     "sweep_deg": null
+    },
+    {
+     "R_m": 1.75,
+     "beyond_D": null,
+     "beyond_face": "GF-036",
+     "beyond_kind": "SLAB",
+     "beyond_member": null,
+     "handle": "313",
+     "kind": "arc",
+     "length_m": 0.464258,
+     "sweep_deg": 15.2
+    },
+    {
+     "R_m": null,
+     "beyond_D": 0.75,
+     "beyond_face": "GF-019",
+     "beyond_kind": "BEAM",
+     "beyond_member": "BM-GF-006",
+     "handle": "437",
+     "kind": "line",
+     "length_m": 0.996787,
+     "sweep_deg": null
+    }
+   ],
+   "void": [
+    {
+     "R_m": 1.735,
+     "beyond_D": null,
+     "beyond_face": null,
+     "beyond_kind": "VOID",
+     "beyond_member": null,
+     "handle": "2F0",
+     "kind": "arc",
+     "length_m": 2.674973,
+     "sweep_deg": 88.337
+    },
+    {
+     "R_m": 0.689893,
+     "beyond_D": null,
+     "beyond_face": null,
+     "beyond_kind": "VOID",
+     "beyond_member": null,
+     "handle": "318",
+     "kind": "arc",
+     "length_m": 0.92332,
+     "sweep_deg": 76.682
+    },
+    {
+     "R_m": 1.55,
+     "beyond_D": null,
+     "beyond_face": null,
+     "beyond_kind": "VOID",
+     "beyond_member": null,
+     "handle": "310",
+     "kind": "arc",
+     "length_m": 0.682708,
+     "sweep_deg": 25.2363
+    },
+    {
+     "R_m": null,
+     "beyond_D": 0.75,
+     "beyond_face": "GF-104",
+     "beyond_kind": "BEAM",
+     "beyond_member": "BM-GF-042",
+     "handle": "2A9",
+     "kind": "line",
+     "length_m": 1.330413,
+     "sweep_deg": null
+    },
+    {
+     "R_m": 1.55,
+     "beyond_D": null,
+     "beyond_face": null,
+     "beyond_kind": "VOID",
+     "beyond_member": null,
+     "handle": "311",
+     "kind": "arc",
+     "length_m": 0.864076,
+     "sweep_deg": 31.9406
+    },
+    {
+     "R_m": 0.510424,
+     "beyond_D": null,
+     "beyond_face": null,
+     "beyond_kind": "VOID",
+     "beyond_member": null,
+     "handle": "317",
+     "kind": "arc",
+     "length_m": 0.61846,
+     "sweep_deg": 69.423
+    }
+   ]
+  },
+  "r3": {
+   "ring_mix_face_area_m2": 4.081408,
+   "ring_mix_len_by_face": {
+    "GF-019": 0.53771,
+    "GF-033": 1.72151,
+    "GF-034": 0.649373,
+    "GF-035": 1.143166,
+    "GF-056": 0.626227,
+    "GF-059": 0.565315,
+    "GF-060": 1.095646,
+    "GF-104": 1.33872
+   },
+   "side_m2": {
+    "GF-035": 0.270842,
+    "GF-060": 0.215133
+   },
+   "soffit_m2": {
+    "GF-035": 0.146348,
+    "GF-060": 0.128755
+   }
+  },
+  "ring_m2": 0.666408,
+  "void_m2": 3.690116
+ }
+}

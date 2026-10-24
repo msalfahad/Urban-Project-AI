@@ -1,0 +1,81 @@
+{
+ "counts": {
+  "delta": 262,
+  "r3": 283,
+  "r4": 361
+ },
+ "delta": {
+  "ABOVE_HELD_HI": 71.178,
+  "ABOVE_HELD_LO": 48.529,
+  "ABOVE_HELD_NO_LOW_END_LINES": 3.0,
+  "ABOVE_HELD_UNQUANTIFIED_LINES": 0.0,
+  "BELOW_CALCULATED": 47.663,
+  "BELOW_HELD_HI": -9.469,
+  "BELOW_HELD_LO": -36.822,
+  "BELOW_HELD_UNQUANTIFIED_LINES": -22.0,
+  "E_CALCULATED": 0.0,
+  "G_CALCULATED": -62.311,
+  "OQ10_EARTH_CAST": 0.0,
+  "OQ10_FORMED": 105.972
+ },
+ "oblique_ends": {
+  "BM-GF-017#BAND0018": {
+   "edges": {
+    "27D": 2.89066,
+    "282": 3.03827
+   },
+   "face": [
+    "GF-153"
+   ]
+  },
+  "BM-GF-021#BAND0021.1": {
+   "edges": {
+    "285": 6.54537,
+    "288": 6.27438
+   },
+   "face": [
+    "GF-099",
+    "GF-129"
+   ]
+  }
+ },
+ "ring_b7": {
+  "cb1_void_face_m": 1.330413,
+  "d_band": 1.135032,
+  "d_side": 4.908085,
+  "d_soffit": 0.391303,
+  "outer_slab_arcs_m": 2.048523,
+  "r3_side": 0.485975,
+  "r3_soffit": 0.275103,
+  "soffit": 0.666406,
+  "void_arcs_m": 5.763538
+ },
+ "rule": "r4 = r3 (T-163 MERGED 659f889f) + the delta of FORMWORK_DELTA_R3_R4",
+ "schema": "T264_FORMWORK_R4",
+ "totals_r3": {
+  "ABOVE_HELD_HI": 277.365,
+  "ABOVE_HELD_LO": 221.507,
+  "ABOVE_HELD_UNQUANTIFIED_LINES": 17.0,
+  "BELOW_HELD_HI": 227.118,
+  "BELOW_HELD_LO": 162.64,
+  "BELOW_HELD_UNQUANTIFIED_LINES": 34.0,
+  "E_CALCULATED": 802.658,
+  "G_CALCULATED": 1078.274,
+  "OQ10_EARTH_CAST": 0.0,
+  "OQ10_FORMED": 103.14
+ },
+ "totals_r4": {
+  "ABOVE_HELD_HI": 348.543,
+  "ABOVE_HELD_LO": 270.036,
+  "ABOVE_HELD_NO_LOW_END_LINES": 3.0,
+  "ABOVE_HELD_UNQUANTIFIED_LINES": 17.0,
+  "BELOW_CALCULATED": 47.663,
+  "BELOW_HELD_HI": 217.649,
+  "BELOW_HELD_LO": 125.818,
+  "BELOW_HELD_UNQUANTIFIED_LINES": 12.0,
+  "E_CALCULATED": 802.658,
+  "G_CALCULATED": 1015.963,
+  "OQ10_EARTH_CAST": 0.0,
+  "OQ10_FORMED": 209.112
+ }
+}
