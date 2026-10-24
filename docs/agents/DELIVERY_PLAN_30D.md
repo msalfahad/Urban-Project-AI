@@ -48,6 +48,14 @@ Re-estimate after each week from what actually merged into V3.0 and was verified
 
 ## Status (Lead, 2026-10-24 12:15; re-estimated each run from what merged and was verified)
 
+Lead 2026-10-24 16:15: since 14:15 the Checker merged T-265 (ground-beam main + side bars, structural), T-268 (Gate B:
+Doors aluminium into candidate V3.0.13, 12.760 m2 / 6 pcs, nothing held) and T-168 (Gate B tool v2), and rejected 2
+narrow (T-261 blockwork split r1, T-267 stair module r1: both in rework). READY 0. Verified whole lines still 1 / 13 in
+the candidate (CONC.SLAB); Doors ALU is the second line closed in the candidate but PARTIALLY VERIFIED 2 / 3 (heights
+Q-55 C owner-approved), so it does not count as a whole verified line; 0 / 13 released. Blockwork verified share
+4.458 -> 67.574 of 449.260 m2 established net (Checker light runs, 9 / 37 net walls). Week-2 target (3 Nov) on track for
+floor area (T-240 WP2b in work) and doors; rebar is now on the owner's t unit (T-273 TODO). Next milestone 27 Oct.
+
 Lead 2026-10-24 14:15: since 12:15 the Checker merged 4 Gate A tasks (T-264 formwork r4, T-269 floor-area blockers,
 T-258 r2 stairs / domes closable split, T-262 opening-to-room by geometry) and rejected 1 (T-258 r1, fixed in 54 min);
 READY 1 (T-265 ground-beam rebar, structural). Verified whole lines still 1 / 13 in the candidate (CONC.SLAB), 0 / 13

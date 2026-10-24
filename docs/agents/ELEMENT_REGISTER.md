@@ -46,6 +46,17 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+### Lead 2026-10-24 16:15 (from T-265, T-268, T-168 MERGED; T-261 / T-267 REJECTED narrow; Checker blockwork light runs 15:27 - 16:04; new T-274, T-275)
+
+| Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |
+|---|---|---|---|---|---|
+| Ground-beam steel: boundary G.B (44.07 m) and the 17 main-house exterior runs | rebar, concrete ground system, formwork | REBAR at the Checker-verified run lengths; top / bottom + side bars measured; STIRRUPS are T-272's, LAPS of every element are T-273's (owner 15:31 lap authority), never both | boundary 315.56 kg lower bound + exterior 995.40 kg (796.32 top / bottom + 199.08 side) VERIFIED; stirrups / laps HELD | T-265 MERGED dd08d6b2 | T-272 (stirrups), T-273 (laps, t at export) |
+| Block wall 1F-W20 (0.15, 6.125 m) under slab 1F-023, beam B19 (skewed 6.9 deg) and slab 1F-063 | blockwork, plaster / paint (face height), CONC.SLAB / CONC.BEAM (depths read only) | BLOCKWORK; height per length from the member over it: 5.722 m at 4.04 + 0.403 m at 3.45 | own 24.507 m2 (Checker 15:59); register 24.477 held (pieces sum 6.21 m on 6.125) | T-180 slot 15:59 | T-274 corrects the register |
+| Block wall 1F-W22 (0.15, 5.075 m) under B4 0.125 m, slab 1F-084 4.850 m, CB11 0.100 m | blockwork, plaster / paint | BLOCKWORK; same rule | own 20.402 m2 (Checker 15:59); register 20.419 held (B4 strip missed) | T-180 slot 15:59 | T-274 |
+| Block walls VERIFIED whole: GF-W07 4.458, 2F-W04 21.476, 1F-W03 14.400, 2F-W06 14.820, 1F-W08 12.420 m2 (+ earlier) | blockwork, plaster / paint, opening deductions (none on these) | BLOCKWORK | VERIFIED 67.574 of established net 449.260 m2 (9 / 37 net walls own-measured) | Checker 15:27 - 16:04 | remaining SS 296.542 m2 in light runs |
+| Block walls 1F-W04 and 2F-W07 ends beyond the B2 / B15 pieces (2.700 m drawn between column faces) | blockwork, CONC.BEAM (BM-1F-032 unlabelled, B23) | BLOCKWORK; a census remainder takes the height of the member drawn over it (0.800 m under BM-1F-032 HELD, 0.100 m under B23 at 3.45), never closed into the neighbouring piece | 1F-W04 established 7.500 m2 (Checker own), remainder HELD | T-261 REJECTED 15:10 | T-261 r2 (worker 2, in work) |
+| Doors aluminium (D-GF-01 / -05 / -06 1.000, D-GF-09 0.900, + 2 settled) | doors, blockwork / plaster deductions | DOORS ALU line in candidate V3.0.13: 12.760 m2 / 6 pcs, nothing held | PARTIALLY VERIFIED 2 / 3 (pcs, widths VERIFIED; heads 2.20 ASSUMED — OWNER-APPROVED Q-55 C) | T-268 MERGED d1d09601 | D-GF-09 deduction reaches the walls via T-261 / T-244 once |
+
 ### Lead 2026-10-24 14:15 (from T-264, T-269, T-258 r2, T-262 MERGED; T-265 READY; new T-271, T-272)
 
 | Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |

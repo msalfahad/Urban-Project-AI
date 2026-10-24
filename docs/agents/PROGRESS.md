@@ -1,12 +1,37 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
 Plain words, no task numbers. Measured numbers come from SCOREBOARD.md; anything not measured says so.
-Last update: 2026-10-24 14:15 UTC (Lead). Previous version: 2026-10-24 12:15 UTC. The released numbers did not change
+Last update: 2026-10-24 16:15 UTC (Lead). Previous version: 2026-10-24 14:15 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released default V2.9 + route G untouched). Your measure (17:50):
 whole BOQ lines independently verified, and trades that can be scored. Still 1 whole line verified in the candidate
-(the concrete slab, 60.28 m3), 0 released. The aluminium doors line is being put into the candidate now; once the
-checker passes it, it closes as a whole (its door heights stay your approved 2.20 m rule, so pieces and widths are
-verified, heights are approved-assumed). No new question for you; the curved first-floor window question is still open.
+(the concrete slab, 60.28 m3), 0 released. The aluminium doors line is now IN the candidate: 12.76 m2 / 6 doors, nothing
+held, pieces and widths verified, the 2.20 m heights on your approved rule (so the line is partially verified, 2 of 3
+measures). No new question for you; the curved first-floor window question is still open. One small thing only you can
+do: record the fingerprints of two sealed reference files (see "Waiting for the owner").
+
+Since 14:15 (newest first; three pieces checked and merged, two sent back for narrow fixes):
+- Block walls, checked by the checker himself: 9 of the 37 walls with a settled net area are now re-measured from the
+  drawings, and 67.57 m2 of the 449.26 m2 settled net is now verified (it was 4.46 m2 two hours ago). Seven walls agree
+  to the millimetre. On two first-floor walls the wall register is off by -0.030 m2 and +0.017 m2: its height pieces do
+  not add up to the wall's own length (one beam strip taken as 0.46 m where the drawing gives 0.403 m, one 0.125 m
+  strip missed). Tiny in area, but it is a rule fault, so a correction with a check over all 76 walls is queued.
+- Block-wall blockers settled from the drawings: the hand-in would add 149.3 m2 of wall whose height and openings the
+  drawings already print (settled net 449.3 -> 598.5 m2). Sent back once: on two walls the leftover length at the end of
+  the wall was given the height of the neighbouring beam instead of the beam actually over it (-0.29 m2 on one wall).
+  Being fixed now.
+- Aluminium doors line: in the candidate at 12.76 m2 / 6 doors vs the freelancer's 12.00 m2 (+6.3 %, explained door by
+  door; your 2.20 m height rule, the measured widths, and one door he did not count).
+- Ground-beam steel: checked and merged: boundary beam at least 315.6 kg and the outer main-house beams 995.4 kg
+  (796.3 kg top / bottom bars + 199.1 kg side bars; all 17 runs agree with the checker's own lengths). Stirrups and laps
+  stay held: no bend, hook or lap length is printed for them, and none is assumed.
+- Checking tool: comparisons between two candidate versions are now pinned to the exact drawing files by fingerprint,
+  never by file name; a change in an already-verified line is flagged.
+- Your stair finish-level method (first riser, last riser, finishes on every surface): the module is built and the
+  checker confirmed every formula by hand, level by level (your examples and Alsenan: 186.667 / 166.667 / 146.667 mm on
+  the ground-to-first flight, 188 / 148 mm upstairs). Sent back for one housekeeping fault only: the new rule file was
+  not added to the rule list the repository checks. No quantity changed.
+- Your reinforcement decisions (tons in the final BOQ, laps only from the governing drawing note) are now a task in the
+  structural lane, after the stair method fix.
 
 Since 12:15 (newest first; four pieces checked and merged, one sent back once and fixed within the hour):
 - Who owns which opening: three openings were tied to the wrong room by name (two bathrooms swapped). The checker
@@ -599,7 +624,17 @@ Not measured, and paused by your order (Alsenan first).
   development lengths, so a steel ledger is not complete until it has read them.
 
 ## Being worked on now
-(Lead 2026-10-24 12:15)
+(Lead 2026-10-24 16:15)
+- Checker: the next floor-area step into the candidate, the block-wall blockers fix and the stair method fix as they
+  arrive; in between it keeps re-measuring the settled block walls, largest first.
+- Structural (worker 1): the one-line fix to the stair method; then ground-beam stirrups / side bars from the prints;
+  then laps and tons (your 14:23 / 15:31 decisions); excavation levels last.
+- Architecture and finishes (worker 2): block-wall blockers fix (in work); coating of all buried concrete; ceilings;
+  then the wall-register height check over all 76 walls.
+- Integration (worker 3): floor area step 2 (in work), then foundation waterproofing, then the ground-beam / column
+  corrections; a small tooling task (the fingerprint guard into the scoreboard) for an empty lane.
+
+(Lead 2026-10-24 12:15, superseded)
 - Checker: the aluminium doors step into the candidate first (it can close a whole line), then the stairs / domes
   closable split, the opening-to-room check, the formwork update and the ground-beam bars as they arrive.
 - Structural (worker 1): hand in its three finished pieces one by one (stairs / domes, formwork, ground-beam bars)
@@ -646,6 +681,10 @@ Not measured, and paused by your order (Alsenan first).
 - Consultant list (draft): rows 1, 3, 4, 5, 6, 10, 11, 12 are ready for you to send; hold rows 2 (tank beam), 7 (lift
   tie beam), 8 (annex roof) and 9 (two openings) until the searches named in the list finish (expected within the next
   checker and worker runs).
+- One small action, no decision: the two sealed reference take-offs (the Alsenan printed take-off and the second
+  sealed benchmark) are protected only by file name, because the agents may not open sealed files to fingerprint them.
+  If you record their SHA-256 fingerprints on the board (or tell the main chat), the checker's tool protects them by
+  content. Until then only the site benchmark is protected by fingerprint.
 - One thing only you can do, if it exists: a site / plot level survey (existing ground levels). Your rule fixes the
   excavation as at least 1.5 m below the EXISTING ground, and no issued sheet prints that ground level, so every
   excavation depth stays held until it is known.
