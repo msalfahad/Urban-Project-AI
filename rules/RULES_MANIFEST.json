@@ -32,6 +32,10 @@
    "kind": "AUTHORED",
    "sha256": "17422419ccbc3e88dd5487f62a5719521b5bc7544f5b20faeeb27298053c0fa7"
   },
+  "coverage/BOQ_FAMILY_MASTER_1.8.0.json": {
+   "kind": "AUTHORED",
+   "sha256": "eeacbc8d585d474b06a436fa9869eb46fc284bdddf8677f388bf363563530215"
+  },
   "materials/URBAN_MATERIAL_SPECS_1.0.0.json": {
    "kind": "AUTHORED",
    "sha256": "a16ccec3c7e1ef0fc5734d533032bf6d405b30a54b5a1eca0462d8b28851d0c1"
