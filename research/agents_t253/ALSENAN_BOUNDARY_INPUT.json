@@ -1,0 +1,270 @@
+{
+ "boundary_bands": [
+  {
+   "band_area_from_runs_m2": 0.23,
+   "handle": "7FC",
+   "openings_drawn_across": [],
+   "overlap_columns_m2": 0.0,
+   "overlap_pool_m2": 0.0,
+   "plan_m2": 0.23,
+   "runs": [
+    {
+     "axis": "Y",
+     "corners_owned": 0,
+     "ends": [
+      {
+       "face_m": 0.2,
+       "kind": "COLUMN",
+       "refs": [
+        "1FC"
+       ]
+      },
+      {
+       "face_m": 0.2,
+       "kind": "POOL_WALL",
+       "refs": [
+        "7C6"
+       ]
+      }
+     ],
+     "length_m": 1.15,
+     "run_id": "7FC#1"
+    }
+   ],
+   "width_m": 0.2
+  },
+  {
+   "band_area_from_runs_m2": 8.344,
+   "handle": "7FE",
+   "openings_drawn_across": [
+    {
+     "extent_along_run_m": 0.9,
+     "handle": "102",
+     "layer": "2",
+     "type": "LINE"
+    },
+    {
+     "extent_along_run_m": 2.5,
+     "handle": "13B",
+     "layer": "2",
+     "type": "LWPOLYLINE"
+    },
+    {
+     "extent_along_run_m": 0.447,
+     "handle": "1AA",
+     "layer": "D",
+     "type": "LWPOLYLINE"
+    }
+   ],
+   "overlap_columns_m2": 0.0,
+   "overlap_pool_m2": 0.0,
+   "plan_m2": 8.344,
+   "runs": [
+    {
+     "axis": "X",
+     "corners_owned": 2,
+     "ends": [
+      {
+       "kind": "CORNER",
+       "refs": []
+      },
+      {
+       "kind": "CORNER",
+       "refs": []
+      }
+     ],
+     "length_m": 31.37,
+     "run_id": "7FE#1"
+    },
+    {
+     "axis": "Y",
+     "corners_owned": 0,
+     "ends": [
+      {
+       "face_m": 0.2,
+       "kind": "COLUMN+GROUND_BEAM_FACE",
+       "refs": [
+        "137",
+        "204"
+       ]
+      },
+      {
+       "kind": "CORNER",
+       "refs": []
+      }
+     ],
+     "length_m": 8.1,
+     "run_id": "7FE#2"
+    },
+    {
+     "axis": "Y",
+     "corners_owned": 0,
+     "ends": [
+      {
+       "face_m": 0.2,
+       "kind": "POOL_WALL",
+       "refs": [
+        "7C6"
+       ]
+      },
+      {
+       "kind": "CORNER",
+       "refs": []
+      }
+     ],
+     "length_m": 2.25,
+     "run_id": "7FE#3"
+    }
+   ],
+   "width_m": 0.2
+  },
+  {
+   "band_area_from_runs_m2": 0.24,
+   "handle": "810",
+   "openings_drawn_across": [],
+   "overlap_columns_m2": 0.0,
+   "overlap_pool_m2": 0.0,
+   "plan_m2": 0.24,
+   "runs": [
+    {
+     "axis": "X",
+     "corners_owned": 0,
+     "ends": [
+      {
+       "face_m": 0.2,
+       "kind": "GROUND_BEAM_FACE",
+       "refs": [
+        "10B"
+       ]
+      },
+      {
+       "face_m": 0.2,
+       "kind": "COLUMN+GROUND_BEAM_FACE",
+       "refs": [
+        "10A",
+        "218"
+       ]
+      }
+     ],
+     "length_m": 1.2,
+     "run_id": "810#1"
+    }
+   ],
+   "width_m": 0.2
+  }
+ ],
+ "columns_drawn_in_bands": 0,
+ "ground_beam_lines_ending_on_boundary": [
+  {
+   "boundary_band": "810",
+   "kind": "CORNER_CONTACT",
+   "line": "10A",
+   "line_m": 4.9
+  },
+  {
+   "boundary_band": "810",
+   "kind": "CORNER_CONTACT",
+   "line": "10B",
+   "line_m": 4.9
+  },
+  {
+   "boundary_band": "7FE",
+   "kind": "CORNER_CONTACT",
+   "line": "136",
+   "line_m": 6.7
+  },
+  {
+   "boundary_band": "7FE",
+   "kind": "CORNER_CONTACT",
+   "line": "137",
+   "line_m": 3.1
+  },
+  {
+   "boundary_band": "7FE",
+   "kind": "END_ON_FACE",
+   "line": "1811",
+   "line_m": 1.3
+  },
+  {
+   "boundary_band": "7FE",
+   "kind": "END_ON_FACE",
+   "line": "1812",
+   "line_m": 1.8
+  },
+  {
+   "boundary_band": "810",
+   "kind": "CORNER_CONTACT",
+   "line": "F8",
+   "line_m": 10.43
+  },
+  {
+   "boundary_band": "7FC",
+   "kind": "CORNER_CONTACT",
+   "line": "FD",
+   "line_m": 7.9
+  }
+ ],
+ "level_blocks_pm000": [
+  {
+   "distance_to_plot_m": 1.2861,
+   "handle": "18B",
+   "outside_plot": true,
+   "text": "+-0.00"
+  },
+  {
+   "distance_to_plot_m": 1.2861,
+   "handle": "1CE",
+   "outside_plot": true,
+   "text": "+-0.00"
+  },
+  {
+   "distance_to_plot_m": 1.2861,
+   "handle": "1CF",
+   "outside_plot": true,
+   "text": "+-0.00"
+  },
+  {
+   "distance_to_plot_m": 0.8089,
+   "handle": "1D0",
+   "outside_plot": true,
+   "text": "+-0.00"
+  },
+  {
+   "distance_to_plot_m": 0.5865,
+   "handle": "1D1",
+   "outside_plot": true,
+   "text": "+-0.00"
+  },
+  {
+   "distance_to_plot_m": 0.8089,
+   "handle": "1D2",
+   "outside_plot": true,
+   "text": "+-0.00"
+  }
+ ],
+ "level_texts_inside": [
+  "+0.15",
+  "+0.15",
+  "+0.15",
+  "+0.15",
+  "+0.15",
+  "+0.15",
+  "+0.30",
+  "+0.30",
+  "+0.30",
+  "+0.30",
+  "+1.00",
+  "+1.00",
+  "+1.00",
+  "+1.00"
+ ],
+ "plot_outline_m": [
+  31.37,
+  15.0
+ ],
+ "source": {
+  "drive": "Alsenan chalet project / ST7757 dxf.dxf",
+  "sheet": "GROUND BEAMS PLAN (p.3)",
+  "structural_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079"
+ }
+}

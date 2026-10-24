@@ -1,0 +1,278 @@
+{
+ "schema": "URBAN_K1_BOUNDARY_DECISIONS_V1",
+ "task": "T-210 (a)",
+ "head_scanned": "fee98d9a",
+ "scope": "every engine/source module importing a third-party package outside the by_design exceptions of tests/r8_1/test_r8_1_boundaries.py::test_k1_is_stdlib_only_in_r8_1 (read from the test by k1_boundary.py)",
+ "rule": "a new offender fails tests/t210_guard_followups (UNRECORDED) until its record is added here; the K1 tests themselves are unchanged",
+ "decisions": {
+  "ALLOWED_OUTSIDE_K1": "registered (B-5) package in a module that is not K1 and not reached from the K1 core; the stdlib-only assertion names it only because its scope is all of engine/source",
+  "OUTSIDE_K2_GATE": "registered (B-5) ezdxf in a module other than the K2 route kernel_ezdxf.py; K1 is still independent of it (the K1 core reaches no such module) but the register's role for ezdxf ('D2/K2 route only') is not kept",
+  "NOT_REGISTERED_HOLD": "package outside the B-5 dependency register; registering it needs a decision the record names (here: licence), so the two B-5 / B-6 ids stay failing until a fix"
+ },
+ "records": [
+  {
+   "module": "engine/source/arch_v213.py",
+   "packages": [
+    "shapely"
+   ],
+   "import_style": "top",
+   "role": "ARCH_TAKEOFF_V2.13 opt-in method (membrane purchase; T-120)",
+   "decision": "ALLOWED_OUTSIDE_K1",
+   "why": "shapely is in the B-5 register and requirements.txt (shapely==2.2.0); the module is not K1 and no K1 core module reaches it (checked by k1_boundary.py)",
+   "fix_proposal": "Lead / owner decision (a test change; never done by a worker): option 1, recommended: scope the stdlib-only assertion of test_k1_is_stdlib_only_in_r8_1 to the K1 kernel (its EXPECTED_MODULES list), leaving every other engine/source module to the B-5 register and to this record's completeness check; option 2: add this file with {'shapely'} to the test's by_design, citing this record. No module change either way."
+  },
+  {
+   "module": "engine/source/arch_v30.py",
+   "packages": [
+    "ezdxf"
+   ],
+   "import_style": "nested",
+   "role": "ARCH_TAKEOFF_V3.0 opt-in candidate: reads the structural DXF (ezdxf.readfile) for the strap / footing outline pieces",
+   "decision": "OUTSIDE_K2_GATE",
+   "why": "ezdxf is registered (B-5, ezdxf==1.4.4) with the role 'D2/K2 route only'; this module imports it outside kernel_ezdxf.py, so test_k1_is_independent_of_ezdxf and test_k1_does_not_import_ezdxf fail on it; K1 itself stays independent of ezdxf (no K1 core module reaches this one)",
+   "fix_proposal": "next version of the module (never edited in place) takes the structural DXF document from the K2 route engine/source/cad/kernel_ezdxf.py instead of importing ezdxf itself, proven byte-identical on its tests and on the candidate run that uses it; until then: decision of the Lead whether ezdxf readers outside K2 are allowed (then the register role and the two 'K1 does not import ezdxf' tests need the Lead's wording)"
+  },
+  {
+   "module": "engine/source/arch_v302.py",
+   "packages": [
+    "ezdxf"
+   ],
+   "import_style": "nested",
+   "role": "ARCH_TAKEOFF_V3.0.2 candidate: reads footing-schedule block attributes (ezdxf.readfile, INSERT attribs)",
+   "decision": "OUTSIDE_K2_GATE",
+   "why": "ezdxf is registered (B-5, ezdxf==1.4.4) with the role 'D2/K2 route only'; this module imports it outside kernel_ezdxf.py, so test_k1_is_independent_of_ezdxf and test_k1_does_not_import_ezdxf fail on it; K1 itself stays independent of ezdxf (no K1 core module reaches this one)",
+   "fix_proposal": "next version of the module (never edited in place) takes the structural DXF document from the K2 route engine/source/cad/kernel_ezdxf.py instead of importing ezdxf itself, proven byte-identical on its tests and on the candidate run that uses it; until then: decision of the Lead whether ezdxf readers outside K2 are allowed (then the register role and the two 'K1 does not import ezdxf' tests need the Lead's wording)"
+  },
+  {
+   "module": "engine/source/beam_binding_v2.py",
+   "packages": [
+    "shapely"
+   ],
+   "import_style": "nested",
+   "role": "BEAM_BINDING_V2 policy piece (T-085), read by beam_section_cut_binding and concrete_ledger_v3",
+   "decision": "ALLOWED_OUTSIDE_K1",
+   "why": "shapely is in the B-5 register and requirements.txt (shapely==2.2.0); the module is not K1 and no K1 core module reaches it (checked by k1_boundary.py)",
+   "fix_proposal": "Lead / owner decision (a test change; never done by a worker): option 1, recommended: scope the stdlib-only assertion of test_k1_is_stdlib_only_in_r8_1 to the K1 kernel (its EXPECTED_MODULES list), leaving every other engine/source module to the B-5 register and to this record's completeness check; option 2: add this file with {'shapely'} to the test's by_design, citing this record. No module change either way."
+  },
+  {
+   "module": "engine/source/concrete_ledger_v3.py",
+   "packages": [
+    "ezdxf"
+   ],
+   "import_style": "nested",
+   "role": "CONCRETE_LEDGER_V3 method piece: reads DIMENSION and LWPOLYLINE (vertices_in_wcs) of a section DXF",
+   "decision": "OUTSIDE_K2_GATE",
+   "why": "ezdxf is registered (B-5, ezdxf==1.4.4) with the role 'D2/K2 route only'; this module imports it outside kernel_ezdxf.py, so test_k1_is_independent_of_ezdxf and test_k1_does_not_import_ezdxf fail on it; K1 itself stays independent of ezdxf (no K1 core module reaches this one)",
+   "fix_proposal": "next version of the module (never edited in place) takes the section DXF document from the K2 route engine/source/cad/kernel_ezdxf.py instead of importing ezdxf itself, proven byte-identical on its tests and on the candidate run that uses it; until then: decision of the Lead whether ezdxf readers outside K2 are allowed (then the register role and the two 'K1 does not import ezdxf' tests need the Lead's wording)"
+  },
+  {
+   "module": "engine/source/concrete_overlap_ownership.py",
+   "packages": [
+    "numpy"
+   ],
+   "import_style": "top",
+   "role": "CONCRETE_OVERLAP_OWNERSHIP_V1 check (T-189): half-space polytopes with numpy arrays; produces no quantity",
+   "decision": "ALLOWED_OUTSIDE_K1",
+   "why": "numpy is in the B-5 register and requirements.txt (numpy==2.4.6); the module is not K1 and no K1 core module reaches it (checked by k1_boundary.py)",
+   "fix_proposal": "Lead / owner decision (a test change; never done by a worker): option 1, recommended: scope the stdlib-only assertion of test_k1_is_stdlib_only_in_r8_1 to the K1 kernel (its EXPECTED_MODULES list), leaving every other engine/source module to the B-5 register and to this record's completeness check; option 2: add this file with {'numpy'} to the test's by_design, citing this record. No module change either way."
+  },
+  {
+   "module": "engine/source/element_register_v0.py",
+   "packages": [
+    "shapely"
+   ],
+   "import_style": "nested",
+   "role": "ELEMENT_REGISTER_V0 tooling (T-134): reads run outputs, no quantity",
+   "decision": "ALLOWED_OUTSIDE_K1",
+   "why": "shapely is in the B-5 register and requirements.txt (shapely==2.2.0); the module is not K1 and no K1 core module reaches it (checked by k1_boundary.py)",
+   "fix_proposal": "Lead / owner decision (a test change; never done by a worker): option 1, recommended: scope the stdlib-only assertion of test_k1_is_stdlib_only_in_r8_1 to the K1 kernel (its EXPECTED_MODULES list), leaving every other engine/source module to the B-5 register and to this record's completeness check; option 2: add this file with {'shapely'} to the test's by_design, citing this record. No module change either way."
+  },
+  {
+   "module": "engine/source/exterior_spaces.py",
+   "packages": [
+    "shapely"
+   ],
+   "import_style": "top",
+   "role": "EXTERIOR_SPACES method piece (T-071) read by ARCH_TAKEOFF_V2.11 / V2.12",
+   "decision": "ALLOWED_OUTSIDE_K1",
+   "why": "shapely is in the B-5 register and requirements.txt (shapely==2.2.0); the module is not K1 and no K1 core module reaches it (checked by k1_boundary.py)",
+   "fix_proposal": "Lead / owner decision (a test change; never done by a worker): option 1, recommended: scope the stdlib-only assertion of test_k1_is_stdlib_only_in_r8_1 to the K1 kernel (its EXPECTED_MODULES list), leaving every other engine/source module to the B-5 register and to this record's completeness check; option 2: add this file with {'shapely'} to the test's by_design, citing this record. No module change either way."
+  },
+  {
+   "module": "engine/source/facade_passage_walls.py",
+   "packages": [
+    "shapely"
+   ],
+   "import_style": "top",
+   "role": "FACADE_PASSAGE_WALLS_V1 check piece (T-109) read by ARCH_TAKEOFF_V3.0",
+   "decision": "ALLOWED_OUTSIDE_K1",
+   "why": "shapely is in the B-5 register and requirements.txt (shapely==2.2.0); the module is not K1 and no K1 core module reaches it (checked by k1_boundary.py)",
+   "fix_proposal": "Lead / owner decision (a test change; never done by a worker): option 1, recommended: scope the stdlib-only assertion of test_k1_is_stdlib_only_in_r8_1 to the K1 kernel (its EXPECTED_MODULES list), leaving every other engine/source module to the B-5 register and to this record's completeness check; option 2: add this file with {'shapely'} to the test's by_design, citing this record. No module change either way."
+  },
+  {
+   "module": "engine/source/masonry_centreline.py",
+   "packages": [
+    "shapely"
+   ],
+   "import_style": "nested",
+   "role": "MASONRY_CENTRELINE_V1 (T-027) unwired; read by masonry_centreline_v2",
+   "decision": "ALLOWED_OUTSIDE_K1",
+   "why": "shapely is in the B-5 register and requirements.txt (shapely==2.2.0); the module is not K1 and no K1 core module reaches it (checked by k1_boundary.py)",
+   "fix_proposal": "Lead / owner decision (a test change; never done by a worker): option 1, recommended: scope the stdlib-only assertion of test_k1_is_stdlib_only_in_r8_1 to the K1 kernel (its EXPECTED_MODULES list), leaving every other engine/source module to the B-5 register and to this record's completeness check; option 2: add this file with {'shapely'} to the test's by_design, citing this record. No module change either way."
+  },
+  {
+   "module": "engine/source/masonry_centreline_v2.py",
+   "packages": [
+    "shapely"
+   ],
+   "import_style": "nested",
+   "role": "MASONRY_CENTRELINE_V2 (T-125) unwired producer of wall-run lengths",
+   "decision": "ALLOWED_OUTSIDE_K1",
+   "why": "shapely is in the B-5 register and requirements.txt (shapely==2.2.0); the module is not K1 and no K1 core module reaches it (checked by k1_boundary.py)",
+   "fix_proposal": "Lead / owner decision (a test change; never done by a worker): option 1, recommended: scope the stdlib-only assertion of test_k1_is_stdlib_only_in_r8_1 to the K1 kernel (its EXPECTED_MODULES list), leaving every other engine/source module to the B-5 register and to this record's completeness check; option 2: add this file with {'shapely'} to the test's by_design, citing this record. No module change either way."
+  },
+  {
+   "module": "engine/source/membrane_coverage_proof_v1.py",
+   "packages": [
+    "shapely"
+   ],
+   "import_style": "top",
+   "role": "MEMBRANE_COVERAGE_PROOF_V1 checker piece (T-137), read by ARCH_TAKEOFF_V3.0.2",
+   "decision": "ALLOWED_OUTSIDE_K1",
+   "why": "shapely is in the B-5 register and requirements.txt (shapely==2.2.0); the module is not K1 and no K1 core module reaches it (checked by k1_boundary.py)",
+   "fix_proposal": "Lead / owner decision (a test change; never done by a worker): option 1, recommended: scope the stdlib-only assertion of test_k1_is_stdlib_only_in_r8_1 to the K1 kernel (its EXPECTED_MODULES list), leaving every other engine/source module to the B-5 register and to this record's completeness check; option 2: add this file with {'shapely'} to the test's by_design, citing this record. No module change either way."
+  },
+  {
+   "module": "engine/source/membrane_cutting_plan.py",
+   "packages": [
+    "shapely"
+   ],
+   "import_style": "mixed",
+   "role": "MEMBRANE_CUTTING_PLAN_V1 opt-in (T-089)",
+   "decision": "ALLOWED_OUTSIDE_K1",
+   "why": "shapely is in the B-5 register and requirements.txt (shapely==2.2.0); the module is not K1 and no K1 core module reaches it (checked by k1_boundary.py)",
+   "fix_proposal": "Lead / owner decision (a test change; never done by a worker): option 1, recommended: scope the stdlib-only assertion of test_k1_is_stdlib_only_in_r8_1 to the K1 kernel (its EXPECTED_MODULES list), leaving every other engine/source module to the B-5 register and to this record's completeness check; option 2: add this file with {'shapely'} to the test's by_design, citing this record. No module change either way."
+  },
+  {
+   "module": "engine/source/membrane_fold_v2.py",
+   "packages": [
+    "shapely"
+   ],
+   "import_style": "top",
+   "role": "MEMBRANE_FOLD_V2 opt-in strip method (T-076), read by V2.11 .. V2.13",
+   "decision": "ALLOWED_OUTSIDE_K1",
+   "why": "shapely is in the B-5 register and requirements.txt (shapely==2.2.0); the module is not K1 and no K1 core module reaches it (checked by k1_boundary.py)",
+   "fix_proposal": "Lead / owner decision (a test change; never done by a worker): option 1, recommended: scope the stdlib-only assertion of test_k1_is_stdlib_only_in_r8_1 to the K1 kernel (its EXPECTED_MODULES list), leaving every other engine/source module to the B-5 register and to this record's completeness check; option 2: add this file with {'shapely'} to the test's by_design, citing this record. No module change either way."
+  },
+  {
+   "module": "engine/source/membrane_fold_v3.py",
+   "packages": [
+    "shapely"
+   ],
+   "import_style": "top",
+   "role": "MEMBRANE_FOLD_V3 (T-096), read by V2.12, V2.13, V3.0.1",
+   "decision": "ALLOWED_OUTSIDE_K1",
+   "why": "shapely is in the B-5 register and requirements.txt (shapely==2.2.0); the module is not K1 and no K1 core module reaches it (checked by k1_boundary.py)",
+   "fix_proposal": "Lead / owner decision (a test change; never done by a worker): option 1, recommended: scope the stdlib-only assertion of test_k1_is_stdlib_only_in_r8_1 to the K1 kernel (its EXPECTED_MODULES list), leaving every other engine/source module to the B-5 register and to this record's completeness check; option 2: add this file with {'shapely'} to the test's by_design, citing this record. No module change either way."
+  },
+  {
+   "module": "engine/source/membrane_fold_v4.py",
+   "packages": [
+    "shapely"
+   ],
+   "import_style": "mixed",
+   "role": "MEMBRANE_FOLD_V4 opt-in (T-104)",
+   "decision": "ALLOWED_OUTSIDE_K1",
+   "why": "shapely is in the B-5 register and requirements.txt (shapely==2.2.0); the module is not K1 and no K1 core module reaches it (checked by k1_boundary.py)",
+   "fix_proposal": "Lead / owner decision (a test change; never done by a worker): option 1, recommended: scope the stdlib-only assertion of test_k1_is_stdlib_only_in_r8_1 to the K1 kernel (its EXPECTED_MODULES list), leaving every other engine/source module to the B-5 register and to this record's completeness check; option 2: add this file with {'shapely'} to the test's by_design, citing this record. No module change either way."
+  },
+  {
+   "module": "engine/source/membrane_fold_v5.py",
+   "packages": [
+    "shapely"
+   ],
+   "import_style": "top",
+   "role": "MEMBRANE_FOLD_V5 opt-in (T-124), read by V3.0.1",
+   "decision": "ALLOWED_OUTSIDE_K1",
+   "why": "shapely is in the B-5 register and requirements.txt (shapely==2.2.0); the module is not K1 and no K1 core module reaches it (checked by k1_boundary.py)",
+   "fix_proposal": "Lead / owner decision (a test change; never done by a worker): option 1, recommended: scope the stdlib-only assertion of test_k1_is_stdlib_only_in_r8_1 to the K1 kernel (its EXPECTED_MODULES list), leaving every other engine/source module to the B-5 register and to this record's completeness check; option 2: add this file with {'shapely'} to the test's by_design, citing this record. No module change either way."
+  },
+  {
+   "module": "engine/source/opening_area.py",
+   "packages": [
+    "ezdxf"
+   ],
+   "import_style": "nested",
+   "role": "OPENING_AREA_V1 method piece (T-078): the caller passes the ezdxf document; the module imports ezdxf.path lazily to flatten curves in read_view",
+   "decision": "OUTSIDE_K2_GATE",
+   "why": "ezdxf is registered (B-5, ezdxf==1.4.4) with the role 'D2/K2 route only'; this module imports it outside kernel_ezdxf.py, so test_k1_is_independent_of_ezdxf and test_k1_does_not_import_ezdxf fail on it; K1 itself stays independent of ezdxf (no K1 core module reaches this one)",
+   "fix_proposal": "next version of the module (never edited in place) takes the curve flattening (ezdxf.path) from the K2 route engine/source/cad/kernel_ezdxf.py instead of importing ezdxf itself, proven byte-identical on its tests and on the candidate run that uses it; until then: decision of the Lead whether ezdxf readers outside K2 are allowed (then the register role and the two 'K1 does not import ezdxf' tests need the Lead's wording)"
+  },
+  {
+   "module": "engine/source/opening_height_pdf.py",
+   "packages": [
+    "pymupdf"
+   ],
+   "import_style": "nested",
+   "role": "OPENING_HEIGHT_PDF method piece (T-082): reads words and vectors of a PDF page (lazy pymupdf); not wired into a released method",
+   "decision": "NOT_REGISTERED_HOLD",
+   "why": "PyMuPDF is AGPL-3.0 / commercial (requirements.txt licence note by the Lead; PLAN_READER.md: never PyMuPDF); registering it would make the engine/source dependency register accept an AGPL library, which is a licence decision, not a test fix. Not registered: the two B-5 / B-6 ids (r8_0, r8_1) stay in the known-failures ledger",
+   "fix_proposal": "OPENING_HEIGHT_PDF_V2 (a new version; V1 never edited) reading the page through a reader under a permissive licence registered in B-5 first (pypdf 6.19.0 BSD is already pinned; pypdfium2 / pdfplumber per PLAN_READER.md), proven to give the same words and segments as V1 on its tests and on the vector elevation sheets it was built for; registering PyMuPDF instead needs the owner's licence decision"
+  },
+  {
+   "module": "engine/source/plot_edge_members.py",
+   "packages": [
+    "ezdxf"
+   ],
+   "import_style": "nested",
+   "role": "PLOT_EDGE_MEMBERS_V1 method piece read by ARCH_TAKEOFF_V3.0: lazy ezdxf.xclip to detect clipped inserts (HELD)",
+   "decision": "OUTSIDE_K2_GATE",
+   "why": "ezdxf is registered (B-5, ezdxf==1.4.4) with the role 'D2/K2 route only'; this module imports it outside kernel_ezdxf.py, so test_k1_is_independent_of_ezdxf and test_k1_does_not_import_ezdxf fail on it; K1 itself stays independent of ezdxf (no K1 core module reaches this one)",
+   "fix_proposal": "next version of the module (never edited in place) takes the XCLIP test (ezdxf.xclip) from the K2 route engine/source/cad/kernel_ezdxf.py instead of importing ezdxf itself, proven byte-identical on its tests and on the candidate run that uses it; until then: decision of the Lead whether ezdxf readers outside K2 are allowed (then the register role and the two 'K1 does not import ezdxf' tests need the Lead's wording)"
+  },
+  {
+   "module": "engine/source/room_census_guard.py",
+   "packages": [
+    "shapely"
+   ],
+   "import_style": "nested",
+   "role": "ROOM_CENSUS_GUARD (T-099) check: every face reported once",
+   "decision": "ALLOWED_OUTSIDE_K1",
+   "why": "shapely is in the B-5 register and requirements.txt (shapely==2.2.0); the module is not K1 and no K1 core module reaches it (checked by k1_boundary.py)",
+   "fix_proposal": "Lead / owner decision (a test change; never done by a worker): option 1, recommended: scope the stdlib-only assertion of test_k1_is_stdlib_only_in_r8_1 to the K1 kernel (its EXPECTED_MODULES list), leaving every other engine/source module to the B-5 register and to this record's completeness check; option 2: add this file with {'shapely'} to the test's by_design, citing this record. No module change either way."
+  },
+  {
+   "module": "engine/source/room_label_guard.py",
+   "packages": [
+    "shapely"
+   ],
+   "import_style": "nested",
+   "role": "ROOM_LABEL_GUARD (T-061) method piece read by V2.11 / V2.12; its test is in every self-check",
+   "decision": "ALLOWED_OUTSIDE_K1",
+   "why": "shapely is in the B-5 register and requirements.txt (shapely==2.2.0); the module is not K1 and no K1 core module reaches it (checked by k1_boundary.py)",
+   "fix_proposal": "Lead / owner decision (a test change; never done by a worker): option 1, recommended: scope the stdlib-only assertion of test_k1_is_stdlib_only_in_r8_1 to the K1 kernel (its EXPECTED_MODULES list), leaving every other engine/source module to the B-5 register and to this record's completeness check; option 2: add this file with {'shapely'} to the test's by_design, citing this record. No module change either way."
+  },
+  {
+   "module": "engine/source/stair_flight_once_v1.py",
+   "packages": [
+    "shapely"
+   ],
+   "import_style": "top",
+   "role": "STAIR_FLIGHT_ONCE_V1 opt-in, unwired",
+   "decision": "ALLOWED_OUTSIDE_K1",
+   "why": "shapely is in the B-5 register and requirements.txt (shapely==2.2.0); the module is not K1 and no K1 core module reaches it (checked by k1_boundary.py)",
+   "fix_proposal": "Lead / owner decision (a test change; never done by a worker): option 1, recommended: scope the stdlib-only assertion of test_k1_is_stdlib_only_in_r8_1 to the K1 kernel (its EXPECTED_MODULES list), leaving every other engine/source module to the B-5 register and to this record's completeness check; option 2: add this file with {'shapely'} to the test's by_design, citing this record. No module change either way."
+  },
+  {
+   "module": "engine/source/stair_floor_residue.py",
+   "packages": [
+    "shapely"
+   ],
+   "import_style": "top",
+   "role": "STAIR_FLOOR_RESIDUE_V1 piece read by ARCH_TAKEOFF_V3.0",
+   "decision": "ALLOWED_OUTSIDE_K1",
+   "why": "shapely is in the B-5 register and requirements.txt (shapely==2.2.0); the module is not K1 and no K1 core module reaches it (checked by k1_boundary.py)",
+   "fix_proposal": "Lead / owner decision (a test change; never done by a worker): option 1, recommended: scope the stdlib-only assertion of test_k1_is_stdlib_only_in_r8_1 to the K1 kernel (its EXPECTED_MODULES list), leaving every other engine/source module to the B-5 register and to this record's completeness check; option 2: add this file with {'shapely'} to the test's by_design, citing this record. No module change either way."
+  }
+ ]
+}

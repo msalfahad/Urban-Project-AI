@@ -1,0 +1,317 @@
+{
+ "basis_count": {
+  "PRINTED_VS_DRAWN": 15
+ },
+ "by_storey": {
+  "1F": {
+   "m3": [
+    5.964,
+    7.644
+   ],
+   "n": 11,
+   "plate_transfer_schedule_reading_m3": -0.064
+  },
+  "GF": {
+   "m3": [
+    2.07,
+    2.475
+   ],
+   "n": 4,
+   "plate_transfer_schedule_reading_m3": 0.0144
+  }
+ },
+ "conflict_m3": [
+  8.034,
+  10.119
+ ],
+ "conflict_members": 15,
+ "differs_in": {
+  "long side": 5,
+  "short side": 5,
+  "short side+long side": 5
+ },
+ "drawn_equals_gr_band_1F": 8,
+ "equals_t248": true,
+ "existence": {
+  "lines": [
+   {
+    "action": "REMOVE_LINE",
+    "column_below": [
+     "685"
+    ],
+    "line": "NOT_DRAWN:10BD:2F",
+    "m3": null,
+    "mark": "C5",
+    "neck": "10BD",
+    "route_g_m3": 0.42,
+    "searched": {
+     "architectural plan of the storey": "ABSENT",
+     "plot of the storey plan": "ABSENT",
+     "storey structural plan": "ABSENT",
+     "structural plan below (start / stop symbol)": "ABSENT"
+    },
+    "status": "NOT_PRESENT",
+    "storey": "2F",
+    "why": [
+     "absent on every sheet that could draw it; only a type-table band suggests it"
+    ]
+   },
+   {
+    "action": "REMOVE_LINE",
+    "column_below": [
+     "68B"
+    ],
+    "line": "NOT_DRAWN:10C5:2F",
+    "m3": null,
+    "mark": "C3",
+    "neck": "10C5",
+    "route_g_m3": 0.42,
+    "searched": {
+     "architectural plan of the storey": "ABSENT",
+     "plot of the storey plan": "ABSENT",
+     "storey structural plan": "ABSENT",
+     "structural plan below (start / stop symbol)": "ABSENT"
+    },
+    "status": "NOT_PRESENT",
+    "storey": "2F",
+    "why": [
+     "absent on every sheet that could draw it; only a type-table band suggests it"
+    ]
+   },
+   {
+    "action": "REMOVE_LINE",
+    "column_below": [
+     "69A"
+    ],
+    "line": "NOT_DRAWN:10E0:2F",
+    "m3": null,
+    "mark": "C8",
+    "neck": "10E0",
+    "route_g_m3": 0.588,
+    "searched": {
+     "architectural plan of the storey": "ABSENT",
+     "plot of the storey plan": "ABSENT",
+     "storey structural plan": "ABSENT",
+     "structural plan below (start / stop symbol)": "ABSENT"
+    },
+    "status": "NOT_PRESENT",
+    "storey": "2F",
+    "why": [
+     "absent on every sheet that could draw it; only a type-table band suggests it"
+    ]
+   },
+   {
+    "action": "REMOVE_LINE",
+    "column_below": [
+     "383"
+    ],
+    "line": "NOT_DRAWN:10E4:1F",
+    "m3": null,
+    "mark": "C3",
+    "neck": "10E4",
+    "route_g_m3": 0.42,
+    "searched": {
+     "architectural plan of the storey": "ABSENT",
+     "plot of the storey plan": "ABSENT",
+     "storey structural plan": "ABSENT",
+     "structural plan below (start / stop symbol)": "ABSENT"
+    },
+    "status": "NOT_PRESENT",
+    "storey": "1F",
+    "why": [
+     "absent on every sheet that could draw it; only a type-table band suggests it"
+    ]
+   },
+   {
+    "action": "REMOVE_LINE",
+    "column_below": [],
+    "line": "NOT_DRAWN:10E4:2F",
+    "m3": null,
+    "mark": "C3",
+    "neck": "10E4",
+    "route_g_m3": 0.42,
+    "searched": {
+     "architectural plan of the storey": "ABSENT",
+     "plot of the storey plan": "ABSENT",
+     "storey structural plan": "ABSENT",
+     "structural plan below (start / stop symbol)": "ABSENT"
+    },
+    "status": "NOT_PRESENT",
+    "storey": "2F",
+    "why": [
+     "absent on every sheet that could draw it; only a type-table band suggests it"
+    ]
+   }
+  ],
+  "route_g_m3_on_them": 2.268,
+  "status_count": {
+   "EXISTS": 0,
+   "NOT_PRESENT": 5,
+   "UNKNOWN": 0
+  },
+  "type_table_2ND_band_types_without_a_2F_member": [
+   "C4",
+   "C6",
+   "C7",
+   "C8"
+  ]
+ },
+ "independence": {
+  "arch_column_layers": [
+   "S-COL.BON"
+  ],
+  "arch_column_outlines_total": 59,
+  "arch_copy_same_on_all_15": true,
+  "arch_face_to_face_dims_on_the_15": 0,
+  "arch_vs_structural": {
+   "1F": {
+    "arch_outlines": 20,
+    "matched": 20,
+    "same_size": 20,
+    "spread_mm": 0.0,
+    "st_outlines": 21
+   },
+   "2F": {
+    "arch_outlines": 9,
+    "matched": 9,
+    "same_size": 9,
+    "spread_mm": 0.0,
+    "st_outlines": 9
+   },
+   "GF": {
+    "arch_outlines": 30,
+    "matched": 30,
+    "same_size": 29,
+    "spread_mm": 0.0,
+    "st_outlines": 33
+   }
+  },
+  "pdf_plot_same_as_dxf_on_all_15": true,
+  "pdf_storeys": {
+   "1F": {
+    "dxf_outlines": 21,
+    "dxf_outlines_with_an_agreeing_plot_fill": 20,
+    "dxf_outlines_without_a_plot_fill": [
+     "77B"
+    ],
+    "fills": 24,
+    "fills_not_on_a_dxf_column": [
+     [
+      305,
+      296
+     ],
+     [
+      305,
+      301
+     ],
+     [
+      800,
+      792
+     ],
+     [
+      800,
+      796
+     ]
+    ],
+    "page": 5,
+    "registration_votes": 20
+   },
+   "2F": {
+    "dxf_outlines": 9,
+    "dxf_outlines_with_an_agreeing_plot_fill": 9,
+    "dxf_outlines_without_a_plot_fill": [],
+    "fills": 15,
+    "fills_not_on_a_dxf_column": [
+     [
+      119,
+      148
+     ],
+     [
+      119,
+      148
+     ],
+     [
+      123,
+      148
+     ],
+     [
+      123,
+      152
+     ],
+     [
+      800,
+      792
+     ],
+     [
+      800,
+      792
+     ]
+    ],
+    "page": 6,
+    "registration_votes": 9
+   },
+   "GF": {
+    "dxf_outlines": 34,
+    "dxf_outlines_with_an_agreeing_plot_fill": 30,
+    "dxf_outlines_without_a_plot_fill": [
+     "329",
+     "386"
+    ],
+    "fills": 40,
+    "fills_not_on_a_dxf_column": [
+     [
+      301,
+      305
+     ],
+     [
+      301,
+      305
+     ],
+     [
+      301,
+      305
+     ],
+     [
+      305,
+      301
+     ],
+     [
+      305,
+      301
+     ],
+     [
+      305,
+      301
+     ],
+     [
+      796,
+      792
+     ],
+     [
+      800,
+      792
+     ],
+     [
+      800,
+      792
+     ],
+     [
+      800,
+      796
+     ]
+    ],
+    "page": 4,
+    "registration_votes": 31
+   }
+  },
+  "slab_plan_prints_at_the_15": 0
+ },
+ "method": "COLUMN_EVIDENCE_V1",
+ "rule": "R-COLUMN-EVIDENCE-1 (proposed)",
+ "status_count": {
+  "AGREE": 0,
+  "CONFLICT": 15,
+  "HELD": 0,
+  "SETTLED": 0
+ }
+}
