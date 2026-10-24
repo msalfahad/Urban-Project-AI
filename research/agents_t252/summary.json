@@ -1,0 +1,223 @@
+{
+ "schema": "T252_BEAM_LEDGER_R2",
+ "module": "BEAM_LEDGER_R2",
+ "rules": [
+  "R-BEAM-END-OBLIQUE-2",
+  "R-BEAM-CURVED-AREA-2"
+ ],
+ "revises": "T241_BEAM_LINE_V1 (merged)",
+ "convention": "C1_PANEL_BETWEEN_BEAM_FACES",
+ "source_dxf_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+ "runs_r1": 140,
+ "runs_live": 137,
+ "superseded": [
+  "BM-GF-017#BAND0018",
+  "BM-GF-021#BAND0021.1",
+  "BM-GF-050#BAND0050",
+  "BM-GF-051#BAND0051",
+  "BM-GF-052#BAND0052",
+  "BM-GF-060#BAND0053"
+ ],
+ "added": [
+  "BM-GF-017#BAND0018.r2",
+  "BM-GF-021#BAND0021.1.r2",
+  "BM-GF-050.r2#RING-B7"
+ ],
+ "by_storey": {
+  "GF": {
+   "n": 69,
+   "measured_m3": 39.331525,
+   "conflict_n": 4,
+   "conflict_low": 3.958479,
+   "conflict_high": 4.66528,
+   "held_n": 6,
+   "held_low": 0.909,
+   "held_high": 1.926,
+   "held_no_value": [
+    "BM-GF-061"
+   ],
+   "superseded": 6
+  },
+  "1F": {
+   "n": 48,
+   "measured_m3": 22.690573,
+   "conflict_n": 3,
+   "conflict_low": 1.18635,
+   "conflict_high": 1.44573,
+   "held_n": 9,
+   "held_low": 2.6567,
+   "held_high": 4.9552,
+   "held_no_value": [
+    "BM-1F-037",
+    "BM-1F-038"
+   ],
+   "superseded": 0
+  },
+  "2F": {
+   "n": 20,
+   "measured_m3": 4.2985,
+   "conflict_n": 0,
+   "conflict_low": 0.0,
+   "conflict_high": 0.0,
+   "held_n": 5,
+   "held_low": 0.562,
+   "held_high": 1.687,
+   "held_no_value": [
+    "BM-2F-019#2F-031"
+   ],
+   "superseded": 0
+  }
+ },
+ "measured_m3_r1": 66.016058,
+ "measured_m3": 66.320598,
+ "delta_m3": 0.30454,
+ "delta_explained": [
+  [
+   "R-BEAM-END-OBLIQUE-2: B4 BM-GF-017#BAND0018 end on the B27 east face, both edges",
+   0.007376
+  ],
+  [
+   "R-BEAM-END-OBLIQUE-2: CB4 BM-GF-021#BAND0021.1 end on the B27 east face, both edges",
+   0.013548
+  ],
+  [
+   "R-BEAM-CURVED-AREA-2: GF void ring B7 from its drawn edges replaces bands 50 / 51 / 52",
+   0.283605
+  ]
+ ],
+ "residual_m3": 1.1e-05,
+ "conflict": [
+  5.144829,
+  6.11101
+ ],
+ "held": [
+  4.1277,
+  8.5682
+ ],
+ "held_r1": [
+  4.1627,
+  8.6732
+ ],
+ "held_no_value": [
+  "BM-GF-061",
+  "BM-1F-037",
+  "BM-1F-038",
+  "BM-2F-019#2F-031"
+ ],
+ "oblique_end_checks": [
+  {
+   "run": "BM-GF-017#BAND0018",
+   "mark": "B4",
+   "billed_length_m": 2.8907,
+   "La_m": 2.89066,
+   "Lb_m": 3.03827,
+   "result": "ONE_FACE_END",
+   "delta_length_m": 0.07376,
+   "delta_m3": 0.007376,
+   "edges": [
+    "27D",
+    "282"
+   ],
+   "carrier": "325",
+   "start": "460"
+  },
+  {
+   "run": "BM-GF-021#BAND0021.1",
+   "mark": "CB4",
+   "billed_length_m": 2.3744,
+   "La_m": 2.37438,
+   "Lb_m": 2.64537,
+   "result": "ONE_FACE_END",
+   "delta_length_m": 0.13548,
+   "delta_m3": 0.013548,
+   "edges": [
+    "288",
+    "285"
+   ],
+   "carrier": "325",
+   "start": "362"
+  }
+ ],
+ "void_ring": {
+  "area_m2": 0.666406,
+  "polygon_check_m2": 0.666408,
+  "parts_m2": [
+   0.12873,
+   0.14633,
+   0.39135
+  ],
+  "replaced_band_m2": 0.37428,
+  "missed_m2": 0.29213,
+  "sliver_residual_m2": 0.00342,
+  "slab_ledger_in_ring_m2": 0,
+  "t139_faces": {
+   "GF-035": 0.14633,
+   "GF-040": 0.39134,
+   "GF-060": 0.12873
+  },
+  "m3": 0.499805,
+  "r1_measured_m3": 0.2162,
+  "r1_held": [
+   0.035,
+   0.105
+  ],
+  "delta_measured_m3": 0.283605
+ },
+ "released": {
+  "measured": 64.8196,
+  "per_floor": {
+   "GF": 39.138,
+   "1F": 21.3831,
+   "2F": 4.2985
+  }
+ },
+ "freelancer": {
+  "per_floor": {
+   "GF": 42.882875,
+   "1F": 17.027,
+   "2F": 6.056000000000001
+  },
+  "total": 65.965875
+ },
+ "marks_moved": [
+  {
+   "storey": "GF",
+   "mark": "B4",
+   "cls": "BOTH",
+   "runs": 6,
+   "mine_low": 2.1073,
+   "mine_high": 2.1073,
+   "conflict_runs": 0,
+   "his_rows": 5,
+   "his_m3": 2.145,
+   "his_length_m": 21.45,
+   "r1_low": 2.1
+  },
+  {
+   "storey": "GF",
+   "mark": "B7",
+   "cls": "BOTH",
+   "runs": 4,
+   "mine_low": 1.2175,
+   "mine_high": 1.2175,
+   "conflict_runs": 0,
+   "his_rows": 2,
+   "his_m3": 1.572,
+   "his_length_m": 10.48,
+   "r1_low": 0.9339
+  },
+  {
+   "storey": "GF",
+   "mark": "CB4",
+   "cls": "BOTH",
+   "runs": 2,
+   "mine_low": 0.571,
+   "mine_high": 0.571,
+   "conflict_runs": 0,
+   "his_rows": 1,
+   "his_m3": 0.655,
+   "his_length_m": 6.55,
+   "r1_low": 0.5574
+  }
+ ]
+}
