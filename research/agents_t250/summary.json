@@ -1,0 +1,41 @@
+{
+ "task": "T-250",
+ "inputs": {
+  "t143": "research/agents_t143/T143_BLOCK_BY_WALL_RUN.csv",
+  "reg": "research/agents_t225/BLOCKWORK_WALL_REGISTER_V1.csv",
+  "t017": "research/agents_t017/T017_WALL_AGREEMENT.csv",
+  "t237": "research/agents_t237/FACES_T237.csv",
+  "t237f": "research/agents_t237/FINDINGS_T237.csv",
+  "walk": "research/agents_t128/walk_r3.json",
+  "t128o": "research/agents_t128/OPENINGS_T128_R3.csv",
+  "t128r": "research/agents_t128/ROOMS_T128_R3.csv",
+  "t175": "research/agents_t175/T175_OPENING_HOSTS.csv",
+  "t249": "research/agents_t249/OPENINGS_T249.csv"
+ },
+ "wall_sides": 142,
+ "wall_sides_closed": 142,
+ "max_abs_residual_m": 0.0,
+ "room_faces_on_straight_walls": 158,
+ "walls_with_a_room_face": 68,
+ "rooms": 32,
+ "room_closure_max_abs_m": 0.0013,
+ "face_m_total": 394.684,
+ "finish_m_total": 318.521,
+ "off_wall_line_m_total": 70.698,
+ "t237_faces": 75,
+ "t237_faces_found": 69,
+ "roof_datum_faces": 18,
+ "roof_datum_m_total": 49.669,
+ "curved": {
+  "W03": {
+   "developed_room_side_m": "6.7264 .. 6.7384",
+   "t128_walked_m": 6.731,
+   "finish_vs_window_m": "+0.1564 .. +0.1684"
+  },
+  "W17": {
+   "developed_room_side_m": "3.2895 .. 3.2895",
+   "t128_walked_m": 3.286,
+   "finish_vs_window_m": ""
+  }
+ }
+}

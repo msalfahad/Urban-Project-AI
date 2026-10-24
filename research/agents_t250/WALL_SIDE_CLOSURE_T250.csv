@@ -1,0 +1,143 @@
+floor,wall_id,run_id,t_m,side,span_m,v2_arch_run_m,register_length_m,t017_census_arch_run_m,room_face_m,rooms,junction_m,junction_with,column_m,no_room_m,room_face_past_run_end_m,residual_m,status,face_reading
+GF,GF-W00,WB-FL0001-FL0002#1,0.2,+,10.23,9.9,9.900,9.8000,9.63,GF-01 3.830; GF-03 1.500; GF-04 1.750; GF-05 1.500; GF-06 1.050,0.6,WB-FL0086-FL0087 0.150; WB-FL0089-FL0090 0.150; WB-FL0092-FL0093 0.150; WB-FL0095-FL0096 0.150,0.0,0.0,0.03,0.0,CLOSED,room face 9.630 of 10.230; inside WB-FL0086-FL0087 0.150 (L / T end or crossing wall); inside WB-FL0089-FL0090 0.150 (L / T end or crossing wall); inside WB-FL0092-FL0093 0.150 (L / T end or crossing wall); inside WB-FL0095-FL0096 0.150 (L / T end or crossing wall)
+GF,GF-W01,WB-FL0001-FL0002#2,0.2,+,19.17,16.47,16.470,16.4700,16.7,GF-07 2.990; GF-08 13.710,0.2,WB-FL0081-FL0082 0.200,2.27,0.0,0.001,-0.0,CLOSED,room face 16.700 of 19.170; inside WB-FL0081-FL0082 0.200 (L / T end or crossing wall); column outline 2.270 (column proud of the face: its faces are off this line)
+GF,GF-W00,WB-FL0001-FL0002#1,0.2,-,10.23,9.9,9.900,9.8000,0,,0,,0.0,10.23,0,-0.0,CLOSED,"NO ROOM ON THIS SIDE (exterior, court, shaft or an unwalked space)"
+GF,GF-W01,WB-FL0001-FL0002#2,0.2,-,19.17,16.47,16.470,16.4700,0,,0,,0.7,18.47,0,-0.0,CLOSED,"NO ROOM ON THIS SIDE (exterior, court, shaft or an unwalked space); column outline 0.700 (column proud of the face: its faces are off this line)"
+GF,GF-W02,WB-FL0007-FL0008#1,0.2,+,1.65,1.65,1.650,1.5750,1.65,GF-06 1.650,0,,0.0,0.0,0.004,-0.0,CLOSED,ROOM FACE OVER THE WHOLE RUN
+GF,GF-W03,WB-FL0007-FL0008#2,0.2,+,2.65,2.65,2.650,2.6500,2.65,GF-08 2.650,0,,0.0,0.0,0.005,-0.0,CLOSED,ROOM FACE OVER THE WHOLE RUN
+GF,GF-W02,WB-FL0007-FL0008#1,0.2,-,1.65,1.65,1.650,1.5750,1.5,GF-05 1.500,0.15,WB-FL0086-FL0087 0.150,0.0,0.0,0.0,-0.0,CLOSED,room face 1.500 of 1.650; inside WB-FL0086-FL0087 0.150 (L / T end or crossing wall)
+GF,GF-W03,WB-FL0007-FL0008#2,0.2,-,2.65,2.65,2.650,2.6500,2.65,GF-08 2.650,0,,0.0,0.0,0.06,-0.0,CLOSED,ROOM FACE OVER THE WHOLE RUN
+GF,GF-W27,WB-FL0010-FL0011,0.15,+,0.626,1.5,1.500,1.5000,0.626,GF-02 0.626,0,,0.0,0.0,0.034,0.0,CLOSED,ROOM FACE OVER THE WHOLE RUN
+GF,GF-W27,WB-FL0010-FL0011,0.15,-,0.626,1.5,1.500,1.5000,0.626,GF-03 0.626,0,,0.0,0.0,0.029,0.0,CLOSED,ROOM FACE OVER THE WHOLE RUN
+GF,GF-W04,WB-FL0017-FL0018#1,0.2,+,6.4,5.85,5.850,5.8500,0,,0.005,,0.545,5.85,0,0.0,CLOSED,"NO ROOM ON THIS SIDE (exterior, court, shaft or an unwalked space); column outline 0.545 (column proud of the face: its faces are off this line)"
+GF,GF-W05,WB-FL0017-FL0018#2,0.2,+,3.0,1.9,1.900,1.9000,0,,0.005,,1.1,1.895,0,-0.0,CLOSED,"NO ROOM ON THIS SIDE (exterior, court, shaft or an unwalked space); column outline 1.100 (column proud of the face: its faces are off this line)"
+GF,GF-W04,WB-FL0017-FL0018#1,0.2,-,6.4,5.85,5.850,5.8500,5.56,GF-02 1.155; GF-04 1.750; GF-06 2.655,0.505,WB-FL0083-FL0084 0.205; WB-FL0089-FL0090 0.150; WB-FL0092-FL0093 0.150,0.335,0.0,0,0.0,CLOSED,room face 5.560 of 6.400; inside WB-FL0083-FL0084 0.205 (L / T end or crossing wall); inside WB-FL0089-FL0090 0.150 (L / T end or crossing wall); inside WB-FL0092-FL0093 0.150 (L / T end or crossing wall); column outline 0.335 (column proud of the face: its faces are off this line)
+GF,GF-W05,WB-FL0017-FL0018#2,0.2,-,3.0,1.9,1.900,1.9000,1.905,GF-07 1.905,0.205,WB-FL0081-FL0082 0.205,0.89,0.0,0.03,-0.0,CLOSED,room face 1.905 of 3.000; inside WB-FL0081-FL0082 0.205 (L / T end or crossing wall); column outline 0.890 (column proud of the face: its faces are off this line)
+GF,GF-W06,WB-FL0020-FL0021,0.2,+,2.9,2.5,2.500,2.5000,0,,0,,0.4,2.5,0,-0.0,CLOSED,"NO ROOM ON THIS SIDE (exterior, court, shaft or an unwalked space); column outline 0.400 (column proud of the face: its faces are off this line)"
+GF,GF-W06,WB-FL0020-FL0021,0.2,-,2.9,2.5,2.500,2.5000,2.9,GF-01 2.900,0,,0.0,0.0,0.031,0.0,CLOSED,ROOM FACE OVER THE WHOLE RUN
+GF,GF-W07,WB-FL0023-FL0024,0.2,+,1.8,1.1,1.100,1.1000,0,,0.005,,0.695,1.1,0,0.0,CLOSED,"NO ROOM ON THIS SIDE (exterior, court, shaft or an unwalked space); column outline 0.695 (column proud of the face: its faces are off this line)"
+GF,GF-W07,WB-FL0023-FL0024,0.2,-,1.8,1.1,1.100,1.1000,1.105,GF-08 1.105,0,,0.695,0.0,0,0.0,CLOSED,room face 1.105 of 1.800; column outline 0.695 (column proud of the face: its faces are off this line)
+GF,GF-W08,WB-FL0025-FL0026,0.2,+,4.5,4.3,4.300,4.3000,2.5,ST-GF 2.500,0.21,WB-FL0076-FL0077 0.205,0.0,1.79,0,0.0,CLOSED,room face 2.500 of 4.500; inside WB-FL0076-FL0077 0.205 (L / T end or crossing wall); no room 1.790
+GF,GF-W08,WB-FL0025-FL0026,0.2,-,4.5,4.3,4.300,4.3000,4.5,GF-08 4.500,0,,0.0,0.0,0.031,0.0,CLOSED,ROOM FACE OVER THE WHOLE RUN
+GF,GF-H01,WB-FL0028-FL0029,0.4,+,1.4,0.6,0.600,0.6000,0,,0.005,,0.8,0.595,0,0.0,CLOSED,NO ROOM FACE; column outline 0.800 (column proud of the face: its faces are off this line)
+GF,GF-H01,WB-FL0028-FL0029,0.4,-,1.4,0.6,0.600,0.6000,0,,0.005,,0.0,1.395,0,0.0,CLOSED,"NO ROOM ON THIS SIDE (exterior, court, shaft or an unwalked space)"
+GF,GF-W28,WB-FL0030-FL0031,0.15,+,6.527,5.527,5.527,5.5272,5.382,GF-08 0.005; GF-14 0.790; GF-15 4.587,0.15,WB-FL0063-FL0064 0.150,0.995,0.0,0.037,0.0,CLOSED,room face 5.382 of 6.527; inside WB-FL0063-FL0064 0.150 (L / T end or crossing wall); column outline 0.995 (column proud of the face: its faces are off this line)
+GF,GF-W28,WB-FL0030-FL0031,0.15,-,6.527,5.527,5.527,5.5272,6.527,GF-08 6.527,0,,0.0,0.0,0.034,0.0,CLOSED,ROOM FACE OVER THE WHOLE RUN
+GF,GF-W09,WB-FL0032-FL0033,0.2,+,1.8,1.8,1.800,1.8000,1.655,GF-11 1.355; GF-12 0.300,0.145,WB-FL0070-FL0072 0.145,0.0,0.0,0.03,-0.0,CLOSED,room face 1.655 of 1.800; inside WB-FL0070-FL0072 0.145 (L / T end or crossing wall)
+GF,GF-W09,WB-FL0032-FL0033,0.2,-,1.8,1.8,1.800,1.8000,0,,0.01,,0.0,1.79,0,-0.0,CLOSED,"NO ROOM ON THIS SIDE (exterior, court, shaft or an unwalked space)"
+GF,GF-W29,WB-FL0038-FL0039,0.15,+,0.5,1.35,1.350,1.3500,0.5,GF-10 0.500,0,,0.0,0.0,0.03,-0.0,CLOSED,ROOM FACE OVER THE WHOLE RUN
+GF,GF-W29,WB-FL0038-FL0039,0.15,-,0.5,1.35,1.350,1.3500,0.5,GF-11 0.500,0,,0.0,0.0,0.031,-0.0,CLOSED,ROOM FACE OVER THE WHOLE RUN
+GF,GF-W10,WB-FL0041-FL0042,0.2,+,14.17,12.87,12.870,12.8700,0,,0,,1.3,12.87,0,-0.0,CLOSED,"NO ROOM ON THIS SIDE (exterior, court, shaft or an unwalked space); column outline 1.300 (column proud of the face: its faces are off this line)"
+GF,GF-W10,WB-FL0041-FL0042,0.2,-,14.17,12.87,12.870,12.8700,12.315,GF-10 1.355; GF-13 1.875; GF-15 4.335; GF-16 2.250; ST-GF 2.500,0.355,WB-FL0063-FL0064 0.155; WB-FL0076-FL0077 0.200,1.06,0.44,0,-0.0,CLOSED,room face 12.315 of 14.170; inside WB-FL0063-FL0064 0.155 (L / T end or crossing wall); inside WB-FL0076-FL0077 0.200 (L / T end or crossing wall); column outline 1.060 (column proud of the face: its faces are off this line); no room 0.440
+GF,GF-W33,WB-FL0046-FL0047,0.15,+,1.256,1.256,1.256,1.2560,1.256,GF-14 1.256,0,,0.0,0.0,0.059,-0.0,CLOSED,ROOM FACE OVER THE WHOLE RUN
+GF,GF-W33,WB-FL0046-FL0047,0.15,-,1.256,1.256,1.256,1.2560,1.256,GF-15 1.256,0,,0.0,0.0,0.025,-0.0,CLOSED,ROOM FACE OVER THE WHOLE RUN
+GF,GF-W32,WB-FL0048-FL0049,0.15,+,2.847,2.842,2.842,2.8072,2.667,GF-12 1.726; GF-13 0.941,0.155,WB-FL0102-FL0103 0.155,0.0,0.025,0.054,0.0,CLOSED,room face 2.667 of 2.847; inside WB-FL0102-FL0103 0.155 (L / T end or crossing wall); no room 0.025
+GF,GF-W32,WB-FL0048-FL0049,0.15,-,2.847,2.842,2.842,2.8072,2.847,GF-14 2.847,0,,0.0,0.0,0.034,-0.0,CLOSED,ROOM FACE OVER THE WHOLE RUN
+GF,GF-W11,WB-FL0055-FL0056,0.2,+,7.5,7.0,0.668,0.6684,7.5,GF-08 7.500,0,,0.0,0.0,0.001,0.0,CLOSED,ROOM FACE OVER THE WHOLE RUN
+GF,GF-W11,WB-FL0055-FL0056,0.2,-,7.5,7.0,0.668,0.6684,0,,0,,0.0,7.5,0,0.0,CLOSED,"NO ROOM ON THIS SIDE (exterior, court, shaft or an unwalked space)"
+GF,GF-W12,WB-FL0057-FL0058,0.2,+,0.45,0.45,0.450,0.4500,0.45,GF-08 0.450,0,,0.0,0.0,0.06,0.0,CLOSED,ROOM FACE OVER THE WHOLE RUN
+GF,GF-W12,WB-FL0057-FL0058,0.2,-,0.45,0.45,0.450,0.4500,0,,0.005,,0.0,0.445,0,0.0,CLOSED,"NO ROOM ON THIS SIDE (exterior, court, shaft or an unwalked space)"
+GF,GF-W19,WB-FL0059-FL0060,0.15,+,2.0,2.0,2.000,2.0750,0,,0.005,,0.0,1.995,0,0.0,CLOSED,"NO ROOM ON THIS SIDE (exterior, court, shaft or an unwalked space)"
+GF,GF-W19,WB-FL0059-FL0060,0.15,-,2.0,2.0,2.000,2.0750,2.0,GF-15 2.000,0,,0.0,0.0,0.03,0.0,CLOSED,ROOM FACE OVER THE WHOLE RUN
+GF,GF-W21,WB-FL0063-FL0064#1,0.15,+,1.024,1.024,1.024,0.9618,1.024,GF-14 1.024,0,,0.0,0.0,0.023,0.0,CLOSED,ROOM FACE OVER THE WHOLE RUN
+GF,GF-W20,WB-FL0063-FL0064#2,0.15,+,1.018,1.018,1.018,0.8935,0.873,GF-13 0.873,0.005,,0.045,0.095,0,-0.0,CLOSED,room face 0.873 of 1.018; column outline 0.045 (column proud of the face: its faces are off this line); no room 0.095
+GF,GF-W21,WB-FL0063-FL0064#1,0.15,-,1.024,1.024,1.024,0.9618,0.959,GF-15 0.959,0.065,WB-FL0046-FL0047 0.065,0.0,0.0,0,0.0,CLOSED,room face 0.959 of 1.024; inside WB-FL0046-FL0047 0.065 (L / T end or crossing wall)
+GF,GF-W20,WB-FL0063-FL0064#2,0.15,-,1.018,1.018,1.018,0.8935,1.018,GF-16 1.018,0,,0.0,0.0,0.028,-0.0,CLOSED,ROOM FACE OVER THE WHOLE RUN
+GF,GF-W13,WB-FL0068-FL0069,0.2,+,1.8,0.7,0.700,0.7000,0,,0.01,,1.09,0.7,0,-0.0,CLOSED,NO ROOM FACE; column outline 1.090 (column proud of the face: its faces are off this line)
+GF,GF-W13,WB-FL0068-FL0069,0.2,-,1.8,0.7,0.700,0.7000,1.005,GF-08 0.200; GF-14 0.805,0,,0.795,0.0,0.028,-0.0,CLOSED,room face 1.005 of 1.800; column outline 0.795 (column proud of the face: its faces are off this line)
+GF,GF-W22,WB-FL0070-FL0072,0.15,+,2.887,2.887,2.887,2.8873,2.737,GF-10 1.636; GF-11 1.101,0.15,WB-FL0038-FL0039 0.150,0.0,0.0,0.03,0.0,CLOSED,room face 2.737 of 2.887; inside WB-FL0038-FL0039 0.150 (L / T end or crossing wall)
+GF,GF-W22,WB-FL0070-FL0072,0.15,-,2.887,2.887,2.887,2.8873,2.887,GF-12 2.887,0,,0.0,0.0,0,0.0,CLOSED,ROOM FACE OVER THE WHOLE RUN
+GF,GF-W14,WB-FL0076-FL0077,0.2,+,5.0,3.9,3.900,3.9000,5.0,ST-GF 5.000,0,,0.0,0.0,0.002,0.0,CLOSED,ROOM FACE OVER THE WHOLE RUN
+GF,GF-W14,WB-FL0076-FL0077,0.2,-,5.0,3.9,3.900,3.9000,2.86,GF-10 1.755; GF-11 1.105,0.21,WB-FL0032-FL0033 0.205,0.0,1.93,0.002,0.0,CLOSED,room face 2.860 of 5.000; inside WB-FL0032-FL0033 0.205 (L / T end or crossing wall); no room 1.930
+GF,GF-W15,WB-FL0078-FL0079,0.2,+,8.4,7.1,7.100,7.1000,0,,0.415,WB-FL0028-FL0029 0.410,1.295,6.69,0,-0.0,CLOSED,"NO ROOM ON THIS SIDE (exterior, court, shaft or an unwalked space); inside WB-FL0028-FL0029 0.410 (L / T end or crossing wall); column outline 1.295 (column proud of the face: its faces are off this line)"
+GF,GF-W15,WB-FL0078-FL0079,0.2,-,8.4,7.1,7.100,7.1000,7.215,GF-08 2.705; ST-GF 4.510,0.2,WB-FL0025-FL0026 0.200,0.985,0.0,0,-0.0,CLOSED,room face 7.215 of 8.400; inside WB-FL0025-FL0026 0.200 (L / T end or crossing wall); column outline 0.985 (column proud of the face: its faces are off this line)
+GF,GF-W16,WB-FL0081-FL0082,0.2,+,4.5,4.45,4.450,4.4500,0,,0.22,WB-FL0007-FL0008 0.210,0.045,4.235,0,0.0,CLOSED,"NO ROOM ON THIS SIDE (exterior, court, shaft or an unwalked space); inside WB-FL0007-FL0008 0.210 (L / T end or crossing wall); column outline 0.045 (column proud of the face: its faces are off this line)"
+GF,GF-W16,WB-FL0081-FL0082,0.2,-,4.5,4.45,4.450,4.4500,4.455,GF-07 4.455,0.005,,0.04,0.0,0.0,0.0,CLOSED,room face 4.455 of 4.500; column outline 0.040 (column proud of the face: its faces are off this line)
+GF,GF-W17,WB-FL0083-FL0084,0.2,+,4.5,3.7,3.700,3.8000,3.61,GF-06 3.610,0.21,WB-FL0007-FL0008 0.205,0.68,0.0,0.0,0.0,CLOSED,room face 3.610 of 4.500; inside WB-FL0007-FL0008 0.205 (L / T end or crossing wall); column outline 0.680 (column proud of the face: its faces are off this line)
+GF,GF-W17,WB-FL0083-FL0084,0.2,-,4.5,3.7,3.700,3.8000,0,,0.22,WB-FL0007-FL0008 0.210,0.0,4.28,0,0.0,CLOSED,"NO ROOM ON THIS SIDE (exterior, court, shaft or an unwalked space); inside WB-FL0007-FL0008 0.210 (L / T end or crossing wall)"
+GF,GF-W23,WB-FL0086-FL0087,0.15,+,1.3,1.3,1.300,1.4000,1.3,GF-05 1.300,0,,0.0,0.0,0.002,-0.0,CLOSED,ROOM FACE OVER THE WHOLE RUN
+GF,GF-W23,WB-FL0086-FL0087,0.15,-,1.3,1.3,1.300,1.4000,1.3,GF-06 1.300,0,,0.0,0.0,0.031,-0.0,CLOSED,ROOM FACE OVER THE WHOLE RUN
+GF,GF-W24,WB-FL0089-FL0090,0.15,+,4.5,4.5,4.500,4.5000,4.5,GF-04 4.500,0,,0.0,0.0,0.002,-0.0,CLOSED,ROOM FACE OVER THE WHOLE RUN
+GF,GF-W24,WB-FL0089-FL0090,0.15,-,4.5,4.5,4.500,4.5000,4.3,GF-05 1.300; GF-06 3.000,0.2,WB-FL0007-FL0008 0.200,0.0,0.0,0.001,-0.0,CLOSED,room face 4.300 of 4.500; inside WB-FL0007-FL0008 0.200 (L / T end or crossing wall)
+GF,GF-W25,WB-FL0092-FL0093,0.15,+,4.5,4.5,4.500,4.5000,4.35,GF-02 2.100; GF-03 2.250,0.15,WB-FL0010-FL0011 0.150,0.0,0.0,0,0.0,CLOSED,room face 4.350 of 4.500; inside WB-FL0010-FL0011 0.150 (L / T end or crossing wall)
+GF,GF-W25,WB-FL0092-FL0093,0.15,-,4.5,4.5,4.500,4.5000,4.5,GF-04 4.500,0,,0.0,0.0,0.002,-0.0,CLOSED,ROOM FACE OVER THE WHOLE RUN
+GF,GF-W36,WB-FL0094-FL0096,0.2,+,0.5,0.5,0.500,0.5000,0.5,GF-01 0.500,0,,0.0,0.0,0.06,0.0,CLOSED,ROOM FACE OVER THE WHOLE RUN
+GF,GF-W36,WB-FL0094-FL0096,0.2,-,0.5,0.5,0.500,0.5000,0,,0.005,,0.0,0.495,0,0.0,CLOSED,"NO ROOM ON THIS SIDE (exterior, court, shaft or an unwalked space)"
+GF,GF-W26,WB-FL0095-FL0096,0.15,+,4.5,4.45,4.450,4.4500,4.5,GF-01 4.500,0,,0.0,0.0,0.031,-0.0,CLOSED,ROOM FACE OVER THE WHOLE RUN
+GF,GF-W26,WB-FL0095-FL0096,0.15,-,4.5,4.45,4.450,4.4500,4.315,GF-02 2.060; GF-03 2.255,0,,0.045,0.14,0,0.0,CLOSED,room face 4.315 of 4.500; column outline 0.045 (column proud of the face: its faces are off this line); no room 0.140
+GF,GF-W18,WB-FL0097-FL0098,0.2,+,6.3,6.1,6.100,6.1000,0,,0,,0.2,6.1,0,-0.0,CLOSED,"NO ROOM ON THIS SIDE (exterior, court, shaft or an unwalked space); column outline 0.200 (column proud of the face: its faces are off this line)"
+GF,GF-W18,WB-FL0097-FL0098,0.2,-,6.3,6.1,6.100,6.1000,6.3,GF-01 6.300,0,,0.0,0.0,0.003,-0.0,CLOSED,ROOM FACE OVER THE WHOLE RUN
+GF,GF-W31,WB-FL0100-FL0101,0.15,+,1.279,1.279,1.279,1.2786,1.279,GF-14 1.279,0,,0.0,0.0,0.032,-0.0,CLOSED,ROOM FACE OVER THE WHOLE RUN
+GF,GF-W31,WB-FL0100-FL0101,0.15,-,1.279,1.279,1.279,1.2786,0,,0.005,,0.0,1.274,0,-0.0,CLOSED,"NO ROOM ON THIS SIDE (exterior, court, shaft or an unwalked space)"
+GF,GF-W34,WB-FL0102-FL0103,0.15,+,2.355,2.355,2.355,2.3552,2.355,GF-12 2.355,0,,0.0,0.0,0.001,0.0,CLOSED,ROOM FACE OVER THE WHOLE RUN
+GF,GF-W34,WB-FL0102-FL0103,0.15,-,2.355,2.355,2.355,2.3552,1.565,GF-13 1.565,0.005,,0.0,0.785,0.009,0.0,CLOSED,room face 1.565 of 2.355; no room 0.785
+1F,1F-W06,WB-FL0002-FL0003,0.2,+,18.87,16.47,16.470,16.4700,17.05,1F-02 2.055; 1F-03 2.050; 1F-04 3.655; 1F-13 9.290,0.3,WB-FL0063-FL0065 0.150; WB-FL0078-FL0079 0.150,1.52,0.0,0.001,0.0,CLOSED,room face 17.050 of 18.870; inside WB-FL0063-FL0065 0.150 (L / T end or crossing wall); inside WB-FL0078-FL0079 0.150 (L / T end or crossing wall); column outline 1.520 (column proud of the face: its faces are off this line)
+1F,1F-W06,WB-FL0002-FL0003,0.2,-,18.87,16.47,16.470,16.4700,0,,0,,0.0,18.87,0,-0.0,CLOSED,"NO ROOM ON THIS SIDE (exterior, court, shaft or an unwalked space)"
+1F,1F-W11,WB-FL0006-FL0007,0.15,+,4.25,4.25,4.250,4.2500,4.25,1F-01 4.250,0,,0.0,0.0,0.0,0.0,CLOSED,ROOM FACE OVER THE WHOLE RUN
+1F,1F-W11,WB-FL0006-FL0007,0.15,-,4.25,4.25,4.250,4.2500,4.1,1F-02 2.050; 1F-03 2.050,0.15,WB-FL0078-FL0079 0.150,0.0,0.0,0,0.0,CLOSED,room face 4.100 of 4.250; inside WB-FL0078-FL0079 0.150 (L / T end or crossing wall)
+1F,1F-W12,WB-FL0011-FL0012,0.15,+,2.561,3.725,3.725,3.7250,2.561,1F-13 2.561,0,,0.0,0.0,0.059,0.0,CLOSED,ROOM FACE OVER THE WHOLE RUN
+1F,1F-W12,WB-FL0011-FL0012,0.15,-,2.561,3.725,3.725,3.7250,2.561,1F-04 2.561,0,,0.0,0.0,0.03,0.0,CLOSED,ROOM FACE OVER THE WHOLE RUN
+1F,1F-W13,WB-FL0013-FL0014,0.15,+,8.15,8.225,8.225,8.2250,7.85,1F-10 3.800; 1F-11 1.800; 1F-12 2.250,0.3,WB-FL0043-FL0044 0.150; WB-FL0046-FL0047 0.150,0.0,0.0,0.002,0.0,CLOSED,room face 7.850 of 8.150; inside WB-FL0043-FL0044 0.150 (L / T end or crossing wall); inside WB-FL0046-FL0047 0.150 (L / T end or crossing wall)
+1F,1F-W13,WB-FL0013-FL0014,0.15,-,8.15,8.225,8.225,8.2250,8.15,1F-13 8.150,0,,0.0,0.0,0.031,0.0,CLOSED,ROOM FACE OVER THE WHOLE RUN
+1F,1F-W07,WB-FL0016-FL0018,0.2,+,3.47,3.22,3.220,3.2200,1.425,1F-07 1.425,0.215,WB-FL0059-FL0061 0.210,0.04,1.79,0,0.0,CLOSED,room face 1.425 of 3.470; inside WB-FL0059-FL0061 0.210 (L / T end or crossing wall); column outline 0.040 (column proud of the face: its faces are off this line); no room 1.790
+1F,1F-W07,WB-FL0016-FL0018,0.2,-,3.47,3.22,3.220,3.2200,3.47,1F-13 3.470,0,,0.0,0.0,0.031,0.0,CLOSED,ROOM FACE OVER THE WHOLE RUN
+1F,1F-W08,WB-FL0020-FL0021,0.2,+,4.2,3.6,3.600,3.5000,0,,0.005,,0.8,3.395,0,0.0,CLOSED,"NO ROOM ON THIS SIDE (exterior, court, shaft or an unwalked space); column outline 0.800 (column proud of the face: its faces are off this line)"
+1F,1F-W08,WB-FL0020-FL0021,0.2,-,4.2,3.6,3.600,3.5000,3.41,1F-01 3.410,0,,0.79,0.0,0.03,0.0,CLOSED,room face 3.410 of 4.200; column outline 0.790 (column proud of the face: its faces are off this line)
+1F,1F-W14 + 1F-W15,WB-FL0022-FL0023,0.15,+,4.066,4.016,4.016,,2.725,1F-11 2.725,0.005,,0.04,1.295,0.0,-0.0,CLOSED,room face 2.725 of 4.066; column outline 0.040 (column proud of the face: its faces are off this line); no room 1.295
+1F,1F-W14 + 1F-W15,WB-FL0022-FL0023,0.15,-,4.066,4.016,4.016,,2.57,1F-11 0.455; 1F-12 2.115,0.16,WB-FL0043-FL0044 0.155,0.04,1.295,0.03,-0.0,CLOSED,room face 2.570 of 4.066; inside WB-FL0043-FL0044 0.155 (L / T end or crossing wall); column outline 0.040 (column proud of the face: its faces are off this line); no room 1.295
+1F,1F-W09,WB-FL0024-FL0025,0.2,+,1.8,1.8,1.800,1.8000,1.8,1F-07 1.800,0,,0.0,0.0,0.03,-0.0,CLOSED,ROOM FACE OVER THE WHOLE RUN
+1F,1F-W09,WB-FL0024-FL0025,0.2,-,1.8,1.8,1.800,1.8000,0,,0.01,,0.0,1.79,0,-0.0,CLOSED,"NO ROOM ON THIS SIDE (exterior, court, shaft or an unwalked space)"
+1F,1F-W16,WB-FL0027-FL0028#1,0.15,+,1.47,5.42,5.420,5.4950,1.47,1F-08 1.470,0,,0.0,0.0,0.002,-0.0,CLOSED,ROOM FACE OVER THE WHOLE RUN
+1F,1F-W16,WB-FL0027-FL0028#1,0.15,+,3.8,5.42,5.420,5.4950,2.0,1F-09 2.000,0.16,WB-FL0050-FL0051 0.155,0.0,1.64,0.001,0.0,CLOSED,room face 2.000 of 3.800; inside WB-FL0050-FL0051 0.155 (L / T end or crossing wall); no room 1.640
+1F,1F-W16,WB-FL0027-FL0028#1,0.15,-,1.47,5.42,5.420,5.4950,1.47,1F-07 1.470,0,,0.0,0.0,0.03,-0.0,CLOSED,ROOM FACE OVER THE WHOLE RUN
+1F,1F-W16,WB-FL0027-FL0028#1,0.15,-,3.8,5.42,5.420,5.4950,3.8,1F-10 3.800,0,,0.0,0.0,0.002,0.0,CLOSED,ROOM FACE OVER THE WHOLE RUN
+1F,1F-W10,WB-FL0030-FL0031,0.2,+,14.47,12.87,12.870,12.8700,0,,0,,1.6,12.87,0,-0.0,CLOSED,"NO ROOM ON THIS SIDE (exterior, court, shaft or an unwalked space); column outline 1.600 (column proud of the face: its faces are off this line)"
+1F,1F-W10,WB-FL0030-FL0031,0.2,-,14.47,12.87,12.870,12.8700,10.935,1F-07 1.850; 1F-08 1.470; 1F-09 1.555; 1F-11 3.560; ST-1F 2.500,0.825,WB-FL0046-FL0047 0.160; WB-FL0050-FL0051 0.155; WB-FL0054-FL0055 0.155; WB-FL0059-FL0060 0.150; WB-FL0068-FL0070 0.200,1.07,1.64,0.001,0.0,CLOSED,room face 10.935 of 14.470; inside WB-FL0046-FL0047 0.160 (L / T end or crossing wall); inside WB-FL0050-FL0051 0.155 (L / T end or crossing wall); inside WB-FL0054-FL0055 0.155 (L / T end or crossing wall); inside WB-FL0059-FL0060 0.150 (L / T end or crossing wall); inside WB-FL0068-FL0070 0.200 (L / T end or crossing wall); column outline 1.070 (column proud of the face: its faces are off this line); no room 1.640
+1F,1F-W00,WB-FL0041-FL0042#1,0.2,+,7.471,6.571,6.571,6.5500,7.301,1F-12 2.100; 1F-13 5.201,0.15,WB-FL0013-FL0014 0.150,0.0,0.02,0,0.0,CLOSED,room face 7.301 of 7.471; inside WB-FL0013-FL0014 0.150 (L / T end or crossing wall); no room 0.020
+1F,1F-W01,WB-FL0041-FL0042#2,0.2,+,0.871,0.821,0.821,0.8252,0.826,1F-11 0.826,0.005,,0.04,0.0,0.026,-0.0,CLOSED,room face 0.826 of 0.871; column outline 0.040 (column proud of the face: its faces are off this line)
+1F,1F-W00,WB-FL0041-FL0042#1,0.2,-,7.471,6.571,6.571,6.5500,0,,0,,0.9,6.571,0,0.0,CLOSED,"NO ROOM ON THIS SIDE (exterior, court, shaft or an unwalked space); column outline 0.900 (column proud of the face: its faces are off this line)"
+1F,1F-W01,WB-FL0041-FL0042#2,0.2,-,0.871,0.821,0.821,0.8252,0,,0,,0.05,0.821,0,-0.0,CLOSED,"NO ROOM ON THIS SIDE (exterior, court, shaft or an unwalked space); column outline 0.050 (column proud of the face: its faces are off this line)"
+1F,1F-W17,WB-FL0043-FL0044,0.15,+,2.1,2.1,2.100,2.1000,2.1,1F-11 2.100,0,,0.0,0.0,0.031,-0.0,CLOSED,ROOM FACE OVER THE WHOLE RUN
+1F,1F-W17,WB-FL0043-FL0044,0.15,-,2.1,2.1,2.100,2.1000,2.1,1F-12 2.100,0,,0.0,0.0,0.001,-0.0,CLOSED,ROOM FACE OVER THE WHOLE RUN
+1F,1F-W18,WB-FL0046-FL0047,0.15,+,6.25,5.2,5.200,5.2000,4.3,1F-10 4.300,0.16,WB-FL0027-FL0028 0.155,0.0,1.79,0.002,0.0,CLOSED,room face 4.300 of 6.250; inside WB-FL0027-FL0028 0.155 (L / T end or crossing wall); no room 1.790
+1F,1F-W18,WB-FL0046-FL0047,0.15,-,6.25,5.2,5.200,5.2000,5.215,1F-11 5.215,0.165,WB-FL0022-FL0023 0.160,0.87,0.0,0,0.0,CLOSED,room face 5.215 of 6.250; inside WB-FL0022-FL0023 0.160 (L / T end or crossing wall); column outline 0.870 (column proud of the face: its faces are off this line)
+1F,1F-W19,WB-FL0050-FL0051,0.15,+,1.8,1.8,1.800,1.8000,1.8,1F-09 1.800,0,,0.0,0.0,0.001,-0.0,CLOSED,ROOM FACE OVER THE WHOLE RUN
+1F,1F-W19,WB-FL0050-FL0051,0.15,-,1.8,1.8,1.800,1.8000,0,,0.01,,0.0,1.79,0,-0.0,CLOSED,"NO ROOM ON THIS SIDE (exterior, court, shaft or an unwalked space)"
+1F,1F-W20,WB-FL0054-FL0055#1,0.15,+,4.3,4.375,6.125,6.1250,4.1,1F-07 3.050; 1F-13 1.050,0.2,WB-FL0016-FL0018 0.200,0.0,0.0,0.029,0.0,CLOSED,room face 4.100 of 4.300; inside WB-FL0016-FL0018 0.200 (L / T end or crossing wall)
+1F,1F-W20,WB-FL0054-FL0055#2,0.15,+,1.8,1.75,6.125,6.1250,1.8,1F-08 1.800,0,,0.0,0.0,0,-0.0,CLOSED,ROOM FACE OVER THE WHOLE RUN
+1F,1F-W20,WB-FL0054-FL0055#1,0.15,-,4.3,4.375,6.125,6.1250,4.3,1F-10 4.300,0,,0.0,0.0,0.002,0.0,CLOSED,ROOM FACE OVER THE WHOLE RUN
+1F,1F-W20,WB-FL0054-FL0055#2,0.15,-,1.8,1.75,6.125,6.1250,1.755,1F-09 1.755,0.005,,0.04,0.0,0,-0.0,CLOSED,room face 1.755 of 1.800; column outline 0.040 (column proud of the face: its faces are off this line)
+1F,1F-W21,WB-FL0059-FL0060,0.15,+,1.95,1.95,1.950,1.8750,1.95,1F-07 1.950,0,,0.0,0.0,0.003,-0.0,CLOSED,ROOM FACE OVER THE WHOLE RUN
+1F,1F-W21,WB-FL0059-FL0060,0.15,-,1.95,1.95,1.950,1.8750,1.8,1F-08 1.800,0.15,WB-FL0027-FL0028 0.150,0.0,0.0,0.001,-0.0,CLOSED,room face 1.800 of 1.950; inside WB-FL0027-FL0028 0.150 (L / T end or crossing wall)
+1F,1F-W02,WB-FL0059-FL0061,0.2,+,1.8,0.7,0.700,0.7000,0,,0.01,,0.0,1.79,0,0.0,CLOSED,"NO ROOM ON THIS SIDE (exterior, court, shaft or an unwalked space)"
+1F,1F-W02,WB-FL0059-FL0061,0.2,-,1.8,0.7,0.700,0.7000,1.005,1F-07 1.005,0.005,,0.79,0.0,0.03,-0.0,CLOSED,room face 1.005 of 1.800; column outline 0.790 (column proud of the face: its faces are off this line)
+1F,1F-W22,WB-FL0063-FL0065,0.15,+,5.0,5.075,5.075,5.0750,5.0,1F-04 5.000,0,,0.0,0.0,0.001,0.0,CLOSED,ROOM FACE OVER THE WHOLE RUN
+1F,1F-W22,WB-FL0063-FL0065,0.15,-,5.0,5.075,5.075,5.0750,5.0,1F-13 5.000,0,,0.0,0.0,0.03,0.0,CLOSED,ROOM FACE OVER THE WHOLE RUN
+1F,1F-W03,WB-FL0068-FL0070,0.2,+,5.0,3.9,3.900,3.9000,5.0,ST-1F 5.000,0,,0.0,0.0,0.032,0.0,CLOSED,ROOM FACE OVER THE WHOLE RUN
+1F,1F-W03,WB-FL0068-FL0070,0.2,-,5.0,3.9,3.900,3.9000,3.0,1F-07 3.000,0.21,WB-FL0024-FL0025 0.205,0.59,1.2,0,0.0,CLOSED,room face 3.000 of 5.000; inside WB-FL0024-FL0025 0.205 (L / T end or crossing wall); column outline 0.590 (column proud of the face: its faces are off this line); no room 1.200
+1F,1F-W23,WB-FL0074-FL0075,0.15,+,6.22,6.4,6.400,6.4000,5.375,1F-01 3.805; 1F-02 1.570,0.15,WB-FL0006-FL0007 0.150,0.695,0.0,0.032,0.0,CLOSED,room face 5.375 of 6.220; inside WB-FL0006-FL0007 0.150 (L / T end or crossing wall); column outline 0.695 (column proud of the face: its faces are off this line)
+1F,1F-W23,WB-FL0074-FL0075,0.15,-,6.22,6.4,6.400,6.4000,5.38,1F-04 3.430; 1F-13 1.250; ST-1F 0.700,0,,0.695,0.145,0.06,0.0,CLOSED,room face 5.380 of 6.220; column outline 0.695 (column proud of the face: its faces are off this line); no room 0.145
+1F,1F-W04,WB-FL0074-FL0076,0.2,+,4.3,3.6,3.600,3.7000,0,,0.005,,0.0,4.295,0,-0.0,CLOSED,"NO ROOM ON THIS SIDE (exterior, court, shaft or an unwalked space)"
+1F,1F-W04,WB-FL0074-FL0076,0.2,-,4.3,3.6,3.600,3.7000,3.81,ST-1F 3.810,0,,0.49,0.0,0.028,0.0,CLOSED,room face 3.810 of 4.300; column outline 0.490 (column proud of the face: its faces are off this line)
+1F,1F-W24,WB-FL0078-FL0079,0.15,+,2.45,2.45,2.450,2.4500,2.45,1F-03 2.450,0,,0.0,0.0,0,-0.0,CLOSED,ROOM FACE OVER THE WHOLE RUN
+1F,1F-W24,WB-FL0078-FL0079,0.15,-,2.45,2.45,2.450,2.4500,2.45,1F-02 2.450,0,,0.0,0.0,0,-0.0,CLOSED,ROOM FACE OVER THE WHOLE RUN
+1F,1F-W05,WB-FL0082-FL0083,0.2,+,7.1,6.3,6.300,6.3000,0,,0,,0.0,7.1,0,0.0,CLOSED,"NO ROOM ON THIS SIDE (exterior, court, shaft or an unwalked space)"
+1F,1F-W05,WB-FL0082-FL0083,0.2,-,7.1,6.3,6.300,6.3000,6.95,1F-01 4.500; 1F-03 2.450,0.15,WB-FL0006-FL0007 0.150,0.0,0.0,0.0,0.0,CLOSED,room face 6.950 of 7.100; inside WB-FL0006-FL0007 0.150 (L / T end or crossing wall)
+2F,2F-W03,WB-FL0002-FL0003,0.15,+,7.7,7.9,7.900,7.9000,7.5,2F-01 4.500; 2F-03 3.000,0.2,WB-FL0024-FL0026 0.200,0.0,0.0,0,0.0,CLOSED,room face 7.500 of 7.700; inside WB-FL0024-FL0026 0.200 (L / T end or crossing wall)
+2F,2F-W03,WB-FL0002-FL0003,0.15,-,7.7,7.9,7.900,7.9000,0,,0,,0.0,7.7,0,0.0,CLOSED,"NO ROOM ON THIS SIDE (exterior, court, shaft or an unwalked space)"
+2F,2F-W00,WB-FL0004-FL0005,0.2,+,1.8,1.8,1.800,1.8000,0,,0.01,,0.0,1.79,0,-0.0,CLOSED,"NO ROOM ON THIS SIDE (exterior, court, shaft or an unwalked space)"
+2F,2F-W00,WB-FL0004-FL0005,0.2,-,1.8,1.8,1.800,1.8000,1.8,2F-01 1.800,0,,0.0,0.0,0.031,-0.0,CLOSED,ROOM FACE OVER THE WHOLE RUN
+2F,2F-W01,WB-FL0006-FL0007,0.2,+,1.8,1.8,1.800,1.8000,1.8,2F-02 1.800,0,,0.0,0.0,0.03,0.0,CLOSED,ROOM FACE OVER THE WHOLE RUN
+2F,2F-W01,WB-FL0006-FL0007,0.2,-,1.8,1.8,1.800,1.8000,0,,0.01,,0.0,1.79,0,0.0,CLOSED,"NO ROOM ON THIS SIDE (exterior, court, shaft or an unwalked space)"
+2F,2F-W02,WB-FL0010-FL0011,0.2,+,7.7,7.0,7.000,7.0000,0,,0,,0.8,6.9,0,0.0,CLOSED,"NO ROOM ON THIS SIDE (exterior, court, shaft or an unwalked space); column outline 0.800 (column proud of the face: its faces are off this line)"
+2F,2F-W02,WB-FL0010-FL0011,0.2,-,7.7,7.0,7.000,7.0000,7.345,2F-02 1.850; 2F-03 3.000; ST-2F 2.495,0.355,WB-FL0024-FL0025 0.150; WB-FL0031-FL0032 0.205,0.0,0.0,0.002,-0.0,CLOSED,room face 7.345 of 7.700; inside WB-FL0024-FL0025 0.150 (L / T end or crossing wall); inside WB-FL0031-FL0032 0.205 (L / T end or crossing wall)
+2F,2F-W04,WB-FL0020-FL0021,0.2,+,6.45,6.225,6.225,6.2250,6.45,2F-03 6.450,0,,0.0,0.0,0.002,0.0,CLOSED,ROOM FACE OVER THE WHOLE RUN
+2F,2F-W04,WB-FL0020-FL0021,0.2,-,6.45,6.225,6.225,6.2250,0,,0,,0.4,6.05,0,0.0,CLOSED,"NO ROOM ON THIS SIDE (exterior, court, shaft or an unwalked space); column outline 0.400 (column proud of the face: its faces are off this line)"
+2F,2F-W08,WB-FL0024-FL0025,0.15,+,3.0,3.0,3.000,3.0000,3.0,2F-02 3.000,0,,0.0,0.0,0.003,0.0,CLOSED,ROOM FACE OVER THE WHOLE RUN
+2F,2F-W08,WB-FL0024-FL0025,0.15,-,3.0,3.0,3.000,3.0000,3.0,2F-03 3.000,0,,0.0,0.0,0.03,0.0,CLOSED,ROOM FACE OVER THE WHOLE RUN
+2F,2F-W05,WB-FL0024-FL0026,0.2,+,3.25,2.25,2.250,2.2500,1.25,2F-01 1.250,0.21,WB-FL0004-FL0005 0.205,0.0,1.79,0.002,0.0,CLOSED,room face 1.250 of 3.250; inside WB-FL0004-FL0005 0.205 (L / T end or crossing wall); no room 1.790
+2F,2F-W05,WB-FL0024-FL0026,0.2,-,3.25,2.25,2.250,2.2500,3.25,2F-03 3.250,0,,0.0,0.0,0.032,0.0,CLOSED,ROOM FACE OVER THE WHOLE RUN
+2F,2F-W06,WB-FL0031-FL0032,0.2,+,5.0,3.9,3.900,3.9000,5.0,ST-2F 5.000,0,,0.0,0.0,0.031,0.0,CLOSED,ROOM FACE OVER THE WHOLE RUN
+2F,2F-W06,WB-FL0031-FL0032,0.2,-,5.0,3.9,3.900,3.9000,3.0,2F-02 3.000,0.21,WB-FL0006-FL0007 0.205,0.59,1.2,0,0.0,CLOSED,room face 3.000 of 5.000; inside WB-FL0006-FL0007 0.205 (L / T end or crossing wall); column outline 0.590 (column proud of the face: its faces are off this line); no room 1.200
+2F,2F-W07,WB-FL0035-FL0036,0.2,+,6.45,5.725,5.725,5.7250,0,,0,,0.0,6.45,0,0.0,CLOSED,"NO ROOM ON THIS SIDE (exterior, court, shaft or an unwalked space)"
+2F,2F-W07,WB-FL0035-FL0036,0.2,-,6.45,5.725,5.725,5.7250,5.96,2F-01 1.250; ST-2F 4.710,0,,0.49,0.0,0.002,0.0,CLOSED,room face 5.960 of 6.450; column outline 0.490 (column proud of the face: its faces are off this line)
