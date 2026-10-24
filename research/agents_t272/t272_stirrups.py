@@ -200,6 +200,64 @@ def curved_count_envelope(theta_rad, r_in, r_out, spacing, spacing_radius=None):
                      "from the inner-face arc (low) to the outer-face arc (high)"}
 
 
+def clear_pieces(length_m, footprints):
+    """Drawn clear spans of one run between its end faces and the footprints [(from_m, to_m)] of the beams that
+    frame into it or cross it (r2, Checker 2026-10-24: no link continues through a crossing / tee ground beam unless
+    a print shows it). Overlapping footprints merge; a footprint outside the run is refused."""
+    if not (isinstance(length_m, (int, float)) and length_m > 0):
+        raise StirrupInputError("run length must be positive")
+    pieces, cur = [], 0.0
+    for a, b in sorted(footprints):
+        if a < -EPS or b > length_m + EPS or b <= a:
+            raise StirrupInputError(f"footprint {(a, b)!r} is not inside the run 0 .. {length_m}")
+        if a > cur + EPS:
+            pieces.append(round(a - cur, 6))
+        cur = max(cur, b)
+    if length_m > cur + EPS:
+        pieces.append(round(length_m - cur, 6))
+    return pieces
+
+
+def pieces_envelope(pieces, spacing):
+    """Count envelope over several drawn clear spans of one run, each counted on its own (faces as end ties .. a
+    link at each face); the half-spacing reading summed beside. HELD unless an end rule is printed."""
+    if not pieces:
+        raise StirrupInputError("no clear span")
+    envs = [count_envelope([(p, spacing)]) for p in pieces]
+    return {"length_m": round(sum(pieces), 6), "pieces_m": list(pieces), "low": sum(e["low"] for e in envs),
+            "half_spacing_reading": sum(e["half_spacing_reading"] for e in envs),
+            "high": sum(e["high"] for e in envs), "count": None, "status": HELD,
+            "basis": f"{len(pieces)} drawn clear span(s) between supporting faces (end faces and crossing / tee beam "
+                     "faces; no link through a crossing beam unless printed); end rule not printed: count HELD "
+                     "inside [low, high]"}
+
+
+def ring_envelope(radial_pieces, spacing, face_pieces=None):
+    """Curved run split at its supports. radial_pieces: [{'inner_arc_m', 'outer_arc_m'}] = the sweeps where a radial
+    link section (inner face to outer face) crosses no support; low on the inner-face arcs, high on the outer-face
+    arcs (the leg the spacing is measured on is not printed). face_pieces (optional, {'inner': [...], 'outer':
+    [...]}): the drawn face arcs net of the support outlines, reported as a reading beside (they include sweeps where
+    only one face exists, i.e. where a radial link would cross a support)."""
+    if not radial_pieces:
+        raise StirrupInputError("no radial sweep")
+    for p in radial_pieces:
+        if not (0 < p["inner_arc_m"] < p["outer_arc_m"]):
+            raise StirrupInputError("each sweep needs 0 < inner arc < outer arc")
+    low = sum(count_envelope([(p["inner_arc_m"], spacing)])["low"] for p in radial_pieces)
+    high = sum(count_envelope([(p["outer_arc_m"], spacing)])["high"] for p in radial_pieces)
+    out = {"length_m": None, "low": low, "high": high, "count": None, "status": HELD, "half_spacing_reading": None,
+           "radial_pieces": radial_pieces,
+           "basis": f"curved run split at its supports into {len(radial_pieces)} radial sweep(s); spacing leg and end "
+                    "rule not printed: count HELD from the inner-face arcs (low) to the outer-face arcs (high)"}
+    if face_pieces:
+        rd = {}
+        for side in ("inner", "outer"):
+            envs = [count_envelope([(x, spacing)]) for x in face_pieces[side]]
+            rd[side] = [sum(e["low"] for e in envs), sum(e["high"] for e in envs)]
+        out["face_reading"] = rd
+    return out
+
+
 # ----------------------------------------------------------------------------------------------- cut length
 def cut_length(shape):
     """Cut length (m) of one closed rectangular link, or None with the HELD facets named.

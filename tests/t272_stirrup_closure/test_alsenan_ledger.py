@@ -1,4 +1,5 @@
-"""T-272 Alsenan stirrup ledger (committed inputs only: the merged T-265 ledger and the T-242 ring radii). Re-runs the
+"""T-272 Alsenan stirrup ledger (committed inputs only: the merged T-265 ledger, the T-242 ring radii and the r2
+drawn clear spans CLEAR_SPANS_T272R2.json, values only). Re-runs the
 check without writing and pins the engineering results; the committed LEDGER_T272.csv / summary.json equal a fresh run."""
 from __future__ import annotations
 
@@ -23,24 +24,34 @@ def test_scope_is_the_t265_runs():
     assert SUM["boundary"]["runs"] == 5 and SUM["boundary"]["length_m"] == pytest.approx(44.07, abs=1e-4)
 
 
-def test_exterior_count_envelope_and_t265_reading():
+def test_exterior_count_envelope_per_clear_span():
     e = SUM["exterior"]
-    assert e["count_envelope"] == [361, 400]
-    assert e["half_spacing_reading"] == 380 == e["t265_range"][0]     # T-265 A = the half-spacing reading
+    assert e["count_envelope"] == [333, 392]                          # r2: per drawn clear span, ring on sweeps
+    assert e["r1_through_envelope_superseded"] == [361, 400]          # r1: links through framing beams (refused)
+    assert e["half_spacing_reading"] == 364
     assert e["t265_range"] == [380, 397]
     assert e["count_status"].startswith("HELD")
+    assert len(e["runs_split_by_framing_beams"]) == 8
 
 
 def test_one_run_by_hand():
-    r = [x for x in ROWS if x["run"] == "7D0+FC#2"][0]                  # 5.745 / 0.15 = 38.3
-    assert (r["count_low"], r["count_half_spacing_reading"], r["count_high"]) == (38, 39, 40)
+    r = [x for x in ROWS if x["run"] == "7D0+FC#2"][0]    # tee 17D+7E4: 2.125 / 0.15 = 14.17, 3.32 / 0.15 = 22.13
+    assert r["clear_pieces_m"] == "2.1250 + 3.3200" and r["split_by"] == "17D+7E4"
+    assert (r["count_low"], r["count_half_spacing_reading"], r["count_high"]) == (36, 38, 40)   # Checker 36 .. 40
+    assert (r["r1_through_low"], r["r1_through_high"]) == (38, 40)
+    o = [x for x in ROWS if x["run"] == "170+7C3#2"][0]   # 15D+7C8 + oblique 182+183 merge into one support zone
+    assert o["clear_pieces_m"] == "1.2500 + 1.5585" and (o["count_low"], o["count_high"]) == (18, 22)
     assert r["qa_sharp_perimeter_m"] == pytest.approx(2 * (0.242 + 0.892), abs=1e-9)
 
 
-def test_ring_counted_on_face_arcs():
+def test_ring_split_at_column_on_radial_sweeps():
     r = [x for x in ROWS if x["run"] == C.RING][0]
-    assert (r["count_low"], r["count_high"]) == (38, 45)                 # 5.7068 / 0.15 -> 39 - 1; 6.4678 -> 44 + 1
-    assert SUM["ring"]["inner_arc_m"] == pytest.approx(5.7068, abs=1e-4)
+    # sweeps 66.43 / 72.36 deg: inner 2.6087 + 2.8416 -> (18 - 1) + (19 - 1); outer 2.9566 + 3.2205 -> (20 + 1) + (22 + 1)
+    assert (r["count_low"], r["count_high"]) == (35, 44)
+    ring = SUM["ring"]
+    assert ring["split_at"] == ["COL:17BA", "COL:17BD"]
+    assert ring["face_reading"] == {"inner": [42, 46], "outer": [40, 44]}
+    assert ring["drawn_arc_m"] == {"inner": 6.5674, "outer": 6.6797}
 
 
 def test_every_mass_is_held_never_zero():
@@ -58,7 +69,7 @@ def test_boundary_link_has_no_drawn_closure_and_no_count():
 
 
 def test_qa_reading_is_labelled_and_separate():
-    assert SUM["exterior"]["qa_kg_at_high_count_no_hooks"] == pytest.approx(358.4, abs=0.01)
+    assert SUM["exterior"]["qa_kg_at_high_count_no_hooks"] == pytest.approx(351.232, abs=0.001)
     assert all(r["qa_status"] == S.QA_ONLY for r in ROWS)
 
 
