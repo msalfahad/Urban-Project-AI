@@ -1,0 +1,75 @@
+{
+ "package": "T-228",
+ "v1": {
+  "gross HELD": 377.943,
+  "gross SOURCE-SUPPORTED PENDING INDEPENDENT CHECK": 567.251,
+  "gross_figure": 945.194,
+  "held_length": 36.535,
+  "length": 287.713,
+  "net PROJECT-SPECIFIC": 84.595,
+  "net SOURCE-SUPPORTED PENDING INDEPENDENT CHECK": 252.815,
+  "net_m3 established": 58.365,
+  "walls": 74.0,
+  "walls_net_held": 44.0
+ },
+ "v2": {
+  "gross HELD": 427.923,
+  "gross SOURCE-SUPPORTED PENDING INDEPENDENT CHECK": 473.272,
+  "gross VERIFIED": 101.236,
+  "gross_figure": 1002.431,
+  "held_length": 23.134,
+  "length": 289.688,
+  "net PROJECT-SPECIFIC": 85.144,
+  "net SOURCE-SUPPORTED PENDING INDEPENDENT CHECK": 359.658,
+  "net VERIFIED": 4.458,
+  "net_m3 established": 80.674,
+  "walls": 76.0,
+  "walls_net_held": 39.0
+ },
+ "changes": 59,
+ "changes_by_source": {
+  "T-226": 5,
+  "T-227": 32,
+  "T-215": 8,
+  "T-222": 4,
+  "T-238": 1,
+  "T-017": 0,
+  "RULING T-226 18:01": 2,
+  "RULING GF-W10 21:15": 1,
+  "RULING T-108 09:11": 1,
+  "RULING T-143": 1
+ },
+ "walls_net_newly_established": [
+  "GF-W07",
+  "GF-W16",
+  "1F-W00",
+  "1F-W05",
+  "1F-W06",
+  "1F-W00/W01 BAY-ENDS",
+  "GF P-GF-05 ABOVE-LINTEL"
+ ],
+ "walls_verified_net": [
+  "GF-W07"
+ ],
+ "walls_verified_gross": [
+  "GF-W01",
+  "GF-W07",
+  "1F-W05",
+  "2F-W08"
+ ],
+ "length_changes_listed_m": {
+  "GF-W20": -0.037,
+  "GF-W21": -0.031,
+  "GF-W22": 0.095,
+  "GF-W31": 0.042,
+  "GF-W32": 0.126,
+  "GF-W33": 0.031,
+  "GF-W34": 0.06,
+  "1F-W14 + 1F-W15": 0.077,
+  "1F-W25": 0.246,
+  "1F-W00/W01 BAY-ENDS": 0.166,
+  "GF P-GF-05 ABOVE-LINTEL": 1.2
+ },
+ "length_identity_residual_m": 0.0,
+ "blockers": 41
+}
