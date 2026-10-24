@@ -1,0 +1,57 @@
+{
+ "schema": "T277_SUMMARY_V1",
+ "rules": [
+  "R-BEAM-WIDTH-CENSUS-1",
+  "R-BEAM-WIDTH-CONSEQ-1"
+ ],
+ "labels": 119,
+ "labels_by_sheet": {
+  "GF": 66,
+  "1F": 38,
+  "2F": 15
+ },
+ "label_classes": {
+  "1F AGREE": 34,
+  "1F AMBIGUOUS": 1,
+  "1F CONFLICT": 3,
+  "2F AGREE": 15,
+  "GF AGREE": 62,
+  "GF CONFLICT": 4
+ },
+ "label_class_totals": {
+  "AGREE": 111,
+  "CONFLICT": 7,
+  "AMBIGUOUS": 1
+ },
+ "runs": 137,
+ "run_classes": {
+  "AGREE": 105,
+  "NO_STATION": 5,
+  "NO_SCHEDULE": 18,
+  "CONFLICT": 7,
+  "NO_BAND": 2
+ },
+ "schedule_marks": 47,
+ "schedule_duplicates": [
+  "SB2"
+ ],
+ "conflict_runs": 7,
+ "conc_m3_drawn": 5.44207,
+ "conc_m3_schedule": 5.766456,
+ "fw_soffit_m2_drawn": 8.71398,
+ "fw_soffit_m2_schedule": 9.007215,
+ "blockwork_m2_change_low": -0.017,
+ "blockwork_m2_change_high": 0.034,
+ "align": {
+  "GF": {
+   "matched": 30,
+   "arch_columns": 30,
+   "resid_m": 0.0
+  },
+  "1F": {
+   "matched": 20,
+   "arch_columns": 20,
+   "resid_m": 0.0
+  }
+ }
+}
