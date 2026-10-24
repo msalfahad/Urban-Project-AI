@@ -216,7 +216,7 @@ def wp3_records():
     kept once under Q-66 B, and the GF round-stair tread union placed flight by flight (T-269 R-T269-3)."""
     return [
         {"id": "1F-LIVING-SETTLED", "kind": "SETTLE_RANGE", "floor": "1F", "area_status": "VERIFIED",
-         "value_m2": 38.6335,
+         "value_m2": 38.633536,
          "evidence": "the two held strips of the range, settled from the drawings by T-269 and own-re-measured by the "
                      "Checker: D-13 (1.15 x 0.35 foot of the arriving flight MS1-U) = the 11th tread 1.15 x 0.30 "
                      "(stair) + the landing nosing over the top riser 1.15 x 0.05 (floor): ST7757 draws 12 risers in "
@@ -227,7 +227,7 @@ def wp3_records():
                               "459, 289 (frame 2FE7 / 3008 = 332 / 374)",
          "verified_by": CHECKER_T269 + "; Checker 2026-10-24 00:58 own face 75.9831 = engine, own floor 38.4576 .. "
                         "38.9776 = candidate bound -0.0009 at both ends",
-         "line": _ref("1F-R78C367:floor", POR, "1F", [38.4585, 38.9785],
+         "line": _ref("1F-R78C367:floor", POR, "1F", [38.458536, 38.978536],
                       "the 1F living / corridor / landing face carried as a range on two held stair strips"),
          "pieces": [
              {"piece": "D-13 tread", "dims": [[1.15, 0.30]], "area_m2": 0.345, "to": "NOT_FLOOR",
@@ -243,7 +243,7 @@ def wp3_records():
              "part": "landing", "decision": Q66B, "material": "marble (stair landing, with the stair, once)",
              "material_status": "ASSUMED - OWNER-APPROVED",
              "material_source": "OWNER_QUESTIONS_ANSWERED.md Q-66 B (2026-10-20)", "area_status": "VERIFIED",
-             "area_m2": 4.9225, "kept_m2": 33.711,
+             "area_m2": 4.9225, "kept_m2": 33.711036,
              "terms": {"printed landing 2.50 x 1.95 (DIMENSION 2500 x 1950)": 4.875,
                        "less the well end 0.20 x 0.05 (layer-5 line closes the well 0.05 inside the printed edge)":
                            -0.01,
@@ -252,13 +252,16 @@ def wp3_records():
                             "(T-122): the marble line of THIS landing (printed 4.875 vs drawn 4.9225, RULE_DIFFERENCE "
                             "0.0475, T-122 / T-269) is the marble trade's wiring (WAITING T-122) and reads this line's "
                             "area once; unchanged here",
-                            "porcelain materials (tile / adhesive / grout) reading 1F-R78C367 recompute from 33.711"]},
+                            "porcelain materials (tile / adhesive / grout) reading 1F-R78C367 recompute from 33.711036"]},
          "downstream": ["stair marble: D-13 tread 0.345 m2 is the 11th tread of MS1-U (tread marble reads it once, "
                         "T-269); not added to any line here"]},
         {"id": "GF-RC99C2A-UNDER-STAIR", "kind": "UNDER_STAIR", "floor": "GF", "lowest_storey": True,
-         "area_status": "DRAWING-CONFIRMED", "deducted_m2": 8.1944,
-         "evidence": "the GF open face carries porcelain 118.7333 = face 126.9277 less the drawn tread union of the "
-                     "four GF flights of ST-02 8.1944 (Checker 01:12 own face partition); placed flight by flight by "
+         "area_status": "DRAWING-CONFIRMED", "deducted_m2": 8.194412,
+         "evidence": "the GF open face carries porcelain 118.733284 = face 126.927696 less the drawn tread union of "
+                     "the four GF flights of ST-02 8.194412 (the line's own deduction; Checker 01:12 own face "
+                     "partition 126.9277 = 118.7333 + 8.1944); union shares F1 4.094412 (tread line 4.094413), F2 "
+                     "2.030 = its part inside the face (T-269 summary; tread line 2.070), F3 / F4 1.035; "
+                     "placed flight by flight by "
                      "how the GF plan draws it (T-269 R-T269-3): F3 / F4 dashed overhead only (layer 2, no solid line "
                      "inside, nothing closed under: 13B, 13F, 140, 141, 144 - 146), F1 / F2 drawn below the cut (12 / 10 "
                      "solid lines inside); no flight lies in the pantry box (0.000 m2)",
@@ -269,7 +272,7 @@ def wp3_records():
          "face": _ref("GF-RC99C2A:floor", POR, "GF", 118.733284,
                       "the open dining / living face, net of the whole tread union of the stair rising from it"),
          "flights": [
-             {"flight": "F1", "area_m2": 4.0944, "drawn": "BELOW_CUT", "to": "HELD",
+             {"flight": "F1", "area_m2": 4.094412, "drawn": "BELOW_CUT", "to": "HELD",
               "why": "drawn below the cut (12 solid lines): floor under it depends on ST-02's structure, which no sheet "
                      "draws (no section, Q-50); designer item proposed by T-269",
               "evidence": "12 solid stair lines inside the flight outline"},
@@ -285,10 +288,10 @@ def wp3_records():
     ]
 
 
-DECLARED = {"floor_internal_in_m2": 44.2735, "floor_internal_out_m2": 4.674, "threshold_m2": 1.91, "outdoor_m2": 5.64,
+DECLARED = {"floor_internal_in_m2": 44.273536, "floor_internal_out_m2": 4.674, "threshold_m2": 1.91, "outdoor_m2": 5.64,
             "no_floor_m2": 0.32, "dry_to_wet_m2": 11.754868, "held_with_m2": 1.364, "counted_in_m2": 0.24,
-            "settled_m2": 38.6335, "under_stair_floor_m2": 2.07, "under_stair_held_m2": 6.1244,
-            "floor_internal_delta_m2": 39.5995}
+            "settled_m2": 38.633536, "under_stair_floor_m2": 2.07, "under_stair_held_m2": 6.124412,
+            "floor_internal_delta_m2": 39.599536}
 
 
 def inputs(project_id):
