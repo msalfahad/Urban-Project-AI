@@ -1,0 +1,553 @@
+{
+ "policy_id": "STAIR_FINISH_LEVELS_V1",
+ "reconciliation_t258": [
+  {
+   "flight": "MS1-U",
+   "frozen_straight_flight_m3": 1.054812,
+   "residual_m3": -1e-06,
+   "t258_net_m3": 0.997552,
+   "t258_net_plus_owned_m3": 1.054813,
+   "t258_owned_elsewhere_m3": 0.057261,
+   "t267_gross_m3": 1.054812
+  },
+  {
+   "flight": "MS2-L",
+   "frozen_straight_flight_m3": 1.058824,
+   "residual_m3": -6.8e-05,
+   "t258_net_m3": 1.033444,
+   "t258_net_plus_owned_m3": 1.058892,
+   "t258_owned_elsewhere_m3": 0.025448,
+   "t267_gross_m3": 1.058824
+  },
+  {
+   "flight": "MS2-U",
+   "frozen_straight_flight_m3": 1.058824,
+   "residual_m3": -0.0,
+   "t258_net_m3": 1.001373,
+   "t258_net_plus_owned_m3": 1.058824,
+   "t258_owned_elsewhere_m3": 0.057451,
+   "t267_gross_m3": 1.058824
+  }
+ ],
+ "runs": {
+  "DRAWING": {
+   "1F_2F": {
+    "closure": null,
+    "code": "CODE_NOT_VERIFIED",
+    "code_applicability_decided": false,
+    "findings": [],
+    "finished_riser_mm": 168.0,
+    "first_last_missing": [
+     "finish of L1",
+     "finish of U11"
+    ],
+    "first_last_status": [
+     "HELD",
+     "HELD"
+    ],
+    "first_structural_riser_mm": null,
+    "flights": [
+     {
+      "configuration": "LAST_RISER_ONTO_NEXT_LEVEL",
+      "flight": "MS2-L",
+      "goings": 11,
+      "risers": 12,
+      "run_change_mm_at_280_300": [
+       -220.0,
+       0.0
+      ]
+     },
+     {
+      "configuration": "LAST_RISER_ONTO_NEXT_LEVEL",
+      "flight": "MS2-U",
+      "goings": 11,
+      "risers": 12,
+      "run_change_mm_at_280_300": [
+       -220.0,
+       0.0
+      ]
+     }
+    ],
+    "last_structural_riser_mm": null,
+    "lines": [
+     {
+      "component": "CONCRETE",
+      "part": "flight MS2-L",
+      "quantity": null,
+      "status": "HELD",
+      "unit": "m3"
+     },
+     {
+      "component": "CONCRETE",
+      "part": "flight MS2-U",
+      "quantity": null,
+      "status": "HELD",
+      "unit": "m3"
+     },
+     {
+      "component": "CONCRETE",
+      "part": "landing MS2-LD-W",
+      "quantity": 0.2392,
+      "status": "MEASURED",
+      "unit": "m3"
+     },
+     {
+      "component": "CONCRETE",
+      "part": "landing MS2-LD-E",
+      "quantity": 0.2304,
+      "status": "MEASURED",
+      "unit": "m3"
+     },
+     {
+      "component": "MARBLE_LANDING",
+      "part": "MS2-LD-W",
+      "quantity": null,
+      "status": "HELD",
+      "unit": "m2"
+     },
+     {
+      "component": "MARBLE_LANDING",
+      "part": "MS2-LD-E",
+      "quantity": null,
+      "status": "HELD",
+      "unit": "m2"
+     },
+     {
+      "component": "HANDRAIL",
+      "part": "flight MS2-L",
+      "quantity": null,
+      "status": "HELD",
+      "unit": "m"
+     },
+     {
+      "component": "HANDRAIL",
+      "part": "flight MS2-U",
+      "quantity": null,
+      "status": "HELD",
+      "unit": "m"
+     },
+     {
+      "component": "BARS",
+      "part": "all",
+      "quantity": null,
+      "status": "HELD",
+      "unit": "kg"
+     }
+    ],
+    "marble_tread_held": [
+     "L1",
+     "L10",
+     "L11",
+     "L2",
+     "L3",
+     "L4",
+     "L5",
+     "L6",
+     "L7",
+     "L8",
+     "L9",
+     "U1",
+     "U10",
+     "U11",
+     "U2",
+     "U3",
+     "U4",
+     "U5",
+     "U6",
+     "U7",
+     "U8",
+     "U9"
+    ],
+    "marble_tread_m2_measured": 0,
+    "risers": 25
+   },
+   "GF_1F": {
+    "closure": null,
+    "code": "CODE_NOT_VERIFIED",
+    "code_applicability_decided": false,
+    "findings": [
+     "EXTRA_OR_MISSING_STEP"
+    ],
+    "finished_riser_mm": 166.667,
+    "first_last_missing": [
+     "finish of L1",
+     "finish of U11"
+    ],
+    "first_last_status": [
+     "HELD",
+     "HELD"
+    ],
+    "first_structural_riser_mm": null,
+    "flights": [
+     {
+      "configuration": "LAST_RISER_ONTO_NEXT_LEVEL",
+      "flight": "MS1-L",
+      "goings": 9,
+      "risers": 9,
+      "run_change_mm_at_280_300": [
+       -180.0,
+       0.0
+      ]
+     },
+     {
+      "configuration": "LAST_RISER_ONTO_NEXT_LEVEL",
+      "flight": "MS1-T",
+      "goings": 5,
+      "risers": 6,
+      "run_change_mm_at_280_300": null
+     },
+     {
+      "configuration": "LAST_RISER_ONTO_NEXT_LEVEL",
+      "flight": "MS1-U",
+      "goings": 11,
+      "risers": 12,
+      "run_change_mm_at_280_300": [
+       -220.0,
+       0.0
+      ]
+     }
+    ],
+    "last_structural_riser_mm": null,
+    "lines": [
+     {
+      "component": "CONCRETE",
+      "part": "flight MS1-L",
+      "quantity": null,
+      "status": "HELD",
+      "unit": "m3"
+     },
+     {
+      "component": "CONCRETE",
+      "part": "flight MS1-T",
+      "quantity": null,
+      "status": "HELD",
+      "unit": "m3"
+     },
+     {
+      "component": "CONCRETE",
+      "part": "flight MS1-U",
+      "quantity": null,
+      "status": "HELD",
+      "unit": "m3"
+     },
+     {
+      "component": "CONCRETE",
+      "part": "landing MS1-LD",
+      "quantity": 0.2304,
+      "status": "MEASURED",
+      "unit": "m3"
+     },
+     {
+      "component": "MARBLE_LANDING",
+      "part": "MS1-LD",
+      "quantity": null,
+      "status": "HELD",
+      "unit": "m2"
+     },
+     {
+      "component": "HANDRAIL",
+      "part": "flight MS1-L",
+      "quantity": null,
+      "status": "HELD",
+      "unit": "m"
+     },
+     {
+      "component": "HANDRAIL",
+      "part": "flight MS1-T",
+      "quantity": null,
+      "status": "UNSUPPORTED",
+      "unit": "m"
+     },
+     {
+      "component": "HANDRAIL",
+      "part": "flight MS1-U",
+      "quantity": null,
+      "status": "HELD",
+      "unit": "m"
+     },
+     {
+      "component": "BARS",
+      "part": "all",
+      "quantity": null,
+      "status": "HELD",
+      "unit": "kg"
+     }
+    ],
+    "marble_tread_held": [
+     "L1",
+     "L2",
+     "L3",
+     "L4",
+     "L5",
+     "L6",
+     "L7",
+     "L8",
+     "L9",
+     "U1",
+     "U10",
+     "U11",
+     "U2",
+     "U3",
+     "U4",
+     "U5",
+     "U6",
+     "U7",
+     "U8",
+     "U9",
+     "W1",
+     "W2",
+     "W3",
+     "W4",
+     "W5"
+    ],
+    "marble_tread_m2_measured": 0,
+    "risers": 27
+   }
+  },
+  "OWNER_RULE_UP_STAIR_006": {
+   "1F_2F": {
+    "closure": {
+     "closes": true,
+     "same_level_concrete_steps_mm": 0.0,
+     "slab_to_slab_mm": 4200.0,
+     "sum_structural_risers_mm": 4200.0
+    },
+    "code": "CODE_NOT_VERIFIED",
+    "code_applicability_decided": false,
+    "findings": [],
+    "finished_riser_mm": 168.0,
+    "first_last_missing": [],
+    "first_last_status": [
+     "MEASURED",
+     "MEASURED"
+    ],
+    "first_structural_riser_mm": 188.0,
+    "flights": [
+     {
+      "configuration": "LAST_RISER_ONTO_NEXT_LEVEL",
+      "flight": "MS2-L",
+      "goings": 11,
+      "risers": 12,
+      "run_change_mm_at_280_300": [
+       -220.0,
+       0.0
+      ]
+     },
+     {
+      "configuration": "LAST_RISER_ONTO_NEXT_LEVEL",
+      "flight": "MS2-U",
+      "goings": 11,
+      "risers": 12,
+      "run_change_mm_at_280_300": [
+       -220.0,
+       0.0
+      ]
+     }
+    ],
+    "last_structural_riser_mm": 148.0,
+    "lines": [
+     {
+      "component": "CONCRETE",
+      "part": "flight MS2-L",
+      "quantity": 1.058824,
+      "status": "MEASURED",
+      "unit": "m3"
+     },
+     {
+      "component": "CONCRETE",
+      "part": "flight MS2-U",
+      "quantity": 1.058824,
+      "status": "MEASURED",
+      "unit": "m3"
+     },
+     {
+      "component": "CONCRETE",
+      "part": "landing MS2-LD-W",
+      "quantity": 0.2392,
+      "status": "MEASURED",
+      "unit": "m3"
+     },
+     {
+      "component": "CONCRETE",
+      "part": "landing MS2-LD-E",
+      "quantity": 0.2304,
+      "status": "MEASURED",
+      "unit": "m3"
+     },
+     {
+      "component": "MARBLE_LANDING",
+      "part": "MS2-LD-W",
+      "quantity": 1.495,
+      "status": "MEASURED",
+      "unit": "m2"
+     },
+     {
+      "component": "MARBLE_LANDING",
+      "part": "MS2-LD-E",
+      "quantity": 1.44,
+      "status": "MEASURED",
+      "unit": "m2"
+     },
+     {
+      "component": "HANDRAIL",
+      "part": "flight MS2-L",
+      "quantity": null,
+      "status": "HELD",
+      "unit": "m"
+     },
+     {
+      "component": "HANDRAIL",
+      "part": "flight MS2-U",
+      "quantity": null,
+      "status": "HELD",
+      "unit": "m"
+     },
+     {
+      "component": "BARS",
+      "part": "all",
+      "quantity": null,
+      "status": "HELD",
+      "unit": "kg"
+     }
+    ],
+    "marble_tread_held": [],
+    "marble_tread_m2_measured": 7.92,
+    "risers": 25
+   },
+   "GF_1F": {
+    "closure": {
+     "closes": true,
+     "same_level_concrete_steps_mm": 0.0,
+     "slab_to_slab_mm": 4500.0,
+     "sum_structural_risers_mm": 4500.0
+    },
+    "code": "CODE_NOT_VERIFIED",
+    "code_applicability_decided": false,
+    "findings": [
+     "EXTRA_OR_MISSING_STEP"
+    ],
+    "finished_riser_mm": 166.667,
+    "first_last_missing": [],
+    "first_last_status": [
+     "MEASURED",
+     "MEASURED"
+    ],
+    "first_structural_riser_mm": 186.667,
+    "flights": [
+     {
+      "configuration": "LAST_RISER_ONTO_NEXT_LEVEL",
+      "flight": "MS1-L",
+      "goings": 9,
+      "risers": 9,
+      "run_change_mm_at_280_300": [
+       -180.0,
+       0.0
+      ]
+     },
+     {
+      "configuration": "LAST_RISER_ONTO_NEXT_LEVEL",
+      "flight": "MS1-T",
+      "goings": 5,
+      "risers": 6,
+      "run_change_mm_at_280_300": null
+     },
+     {
+      "configuration": "LAST_RISER_ONTO_NEXT_LEVEL",
+      "flight": "MS1-U",
+      "goings": 11,
+      "risers": 12,
+      "run_change_mm_at_280_300": [
+       -220.0,
+       0.0
+      ]
+     }
+    ],
+    "last_structural_riser_mm": 146.667,
+    "lines": [
+     {
+      "component": "CONCRETE",
+      "part": "flight MS1-L",
+      "quantity": null,
+      "status": "HELD",
+      "unit": "m3"
+     },
+     {
+      "component": "CONCRETE",
+      "part": "flight MS1-T",
+      "quantity": null,
+      "status": "HELD",
+      "unit": "m3"
+     },
+     {
+      "component": "CONCRETE",
+      "part": "flight MS1-U",
+      "quantity": 1.054812,
+      "status": "MEASURED",
+      "unit": "m3"
+     },
+     {
+      "component": "CONCRETE",
+      "part": "landing MS1-LD",
+      "quantity": 0.2304,
+      "status": "MEASURED",
+      "unit": "m3"
+     },
+     {
+      "component": "MARBLE_LANDING",
+      "part": "MS1-LD",
+      "quantity": 1.44,
+      "status": "MEASURED",
+      "unit": "m2"
+     },
+     {
+      "component": "HANDRAIL",
+      "part": "flight MS1-L",
+      "quantity": null,
+      "status": "HELD",
+      "unit": "m"
+     },
+     {
+      "component": "HANDRAIL",
+      "part": "flight MS1-T",
+      "quantity": null,
+      "status": "UNSUPPORTED",
+      "unit": "m"
+     },
+     {
+      "component": "HANDRAIL",
+      "part": "flight MS1-U",
+      "quantity": null,
+      "status": "HELD",
+      "unit": "m"
+     },
+     {
+      "component": "BARS",
+      "part": "all",
+      "quantity": null,
+      "status": "HELD",
+      "unit": "kg"
+     }
+    ],
+    "marble_tread_held": [
+     "L1",
+     "L2",
+     "L3",
+     "L4",
+     "L5",
+     "L6",
+     "L7",
+     "L8",
+     "L9",
+     "W1",
+     "W2",
+     "W3",
+     "W4",
+     "W5"
+    ],
+    "marble_tread_m2_measured": 3.96,
+    "risers": 27
+   }
+  }
+ },
+ "schema": "T267_ALSENAN_ST01_SUMMARY_V1"
+}
