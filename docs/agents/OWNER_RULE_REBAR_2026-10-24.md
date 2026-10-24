@@ -76,3 +76,18 @@ conventions, every continuous_beams._with_laps call recorded in memory and recom
   procurement only, never in the net. T-273 must not add a second column lap or starter.
 Conclusion: a latent defect (wrong for any run between 12 m and the first correct lap boundary, e.g. 23.8 / 24 / 35 m),
 no effect on current Alsenan quantities; correction belongs in T-273 as a new method version, not an urgent fix.
+
+## 6. Final T-273 acceptance clarifications (owner, main chat, 2026-10-24 18:38; queue position unchanged)
+
+1. Separate detailing categories: anchorage / development length (طول التثبيت), lap splice (التشريك), starter bars
+   (الأشاير), hooks / bends, mechanical couplers. Alsenan note 9 (starter-bar anchorage / development) is NOT a general
+   lap-splice rule without supporting drawing evidence.
+2. The 54 existing column lap components stay PROVISIONAL; reconcile them and their starter-bar relationships before
+   any new lap quantity is added. The 0.640990 t (640.99 kg) 70 D vs 40 D difference is a SCENARIO, not an approved BOQ
+   addition.
+3. Splice-count boundary tests, 12 m stock, 1.2 m lap, permitted splice locations, simplified continuous-run model:
+   12.00 m -> 0, 12.01 m -> 1, 22.80 m -> 1, 22.81 m -> 2. (Main chat check: bbs_optimiser.split_run gives 0 / 1 / 1 / 2;
+   the frozen continuous_beams formula gives 0 / 1 / 1 / 1, so 22.81 m also catches D-T273-01; 22.80 m is the exact
+   boundary (12 + (12 - 1.2)) and the test must hold for inputs read from mm / decimal text, not only the float literal.)
+- Report after implementation: software verification, drawing-based quantity verification and unresolved structural
+  detailing, separately.
