@@ -14,15 +14,15 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `data/` | 19 | Registries (owner facts, project rules, trades) and trade rules. Large run data is gitignored. |
 | `docs/` | 72 | Design notes and the generated maps. |
 | `documents/` | 5 |  |
-| `engine/` | 655 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
+| `engine/` | 656 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 3187 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
-| `rules/` | 16 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
+| `research/` | 3191 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `rules/` | 17 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 1584 | pytest suites, one folder per round. |
+| `tests/` | 1589 | pytest suites, one folder per round. |
 | `tools/` | 113 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (254 modules)
@@ -387,7 +387,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `workbooks.py` | 242 | MEDIUM | 0 | REPORTING V3 - workbook layouts (generic over a BOQ_LINES model). |
 | `workbooks_v3b.py` | 308 | MEDIUM | 0 | REPORTING V3b - workbook layouts over the two-view line model (TECHNICAL_QTO / COMMERCIAL_BOQ). |
 
-## `engine/source/` (303 modules)
+## `engine/source/` (304 modules)
 
 | Module | Lines | Risk | Imp | Purpose |
 |---|---|---|---|---|
@@ -640,13 +640,14 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `source_roles.py` | 52 | MEDIUM | 1 | SOURCE ROLES (generic) - who may do what. |
 | `space_model.py` | 196 | MEDIUM | 3 | SPACE CONNECTIVITY MODEL (M9 Phase 2B-1, ARCH_TAKEOFF_V2.3 only) - every space a node with independently supported |
 | `special_column_components.py` | 245 | CRITICAL | 1 | SPECIAL COLUMN COMPONENTS - turned (twisted), dead and planted columns (generic). |
-| `stair_fit_checks.py` | 95 | CRITICAL | 1 | STAIR FIT CHECKS - whether a riser arrangement fits its plan and section: run ends, clearances to a beam band, |
+| `stair_finish_levels_v1.py` | 1012 | MEDIUM | 2 | STAIR FINISH LEVELS V1 - the owner's finish-level method for stairs (UP-STAIR-016, URBAN_RULES 1.7.0) as an |
+| `stair_fit_checks.py` | 95 | CRITICAL | 2 | STAIR FIT CHECKS - whether a riser arrangement fits its plan and section: run ends, clearances to a beam band, |
 | `stair_flight_once_v1.py` | 313 | MEDIUM | 1 | STAIR FLIGHT ONCE V1 - each stair flight is measured on ONE storey: a flight drawn again on the plan above is listed, |
 | `stair_floor_residue.py` | 371 | MEDIUM | 3 | STAIR FLOOR RESIDUE V1 - the floor finish of a room face that holds stair flights, a stair well or a stair opening. |
 | `stair_generic.py` | 65 | MEDIUM | 1 | STAIR (M2, generic, light) - one straight flight from a floor-to-floor rise and a COUNTED riser number: geometry, |
-| `stair_geometry.py` | 336 | CRITICAL | 8 | STAIR GEOMETRY - stair flights, landings and winders from drawn treads and stated levels (generic). |
+| `stair_geometry.py` | 336 | CRITICAL | 10 | STAIR GEOMETRY - stair flights, landings and winders from drawn treads and stated levels (generic). |
 | `stair_measure.py` | 119 | CRITICAL | 3 | STAIR MEASURE (M4) - structural stair quantities from the drawn treads of a stair zone (generic; stdlib + |
-| `stair_riser_schedule.py` | 155 | CRITICAL | 2 | STAIR RISER SCHEDULE - riser counts from drawn lines, uniform finished risers, finished and structural levels, |
+| `stair_riser_schedule.py` | 155 | CRITICAL | 3 | STAIR RISER SCHEDULE - riser counts from drawn lines, uniform finished risers, finished and structural levels, |
 | `stair_rule_calculator.py` | 290 | MEDIUM | 1 | STAIR RULE CALCULATOR - the owner stair rule UP-STAIR-015 (URBAN_RULES 1.6.0, owner 2026-10-21): riser / tread |
 | `stair_scenario_checks.py` | 215 | CRITICAL | 1 | STAIR SCENARIO CHECKS - what a proposed riser count implies against a printed level, how it is set out on site, |
 | `stair_steps_concrete.py` | 409 | MEDIUM | 1 | STAIR CONCRETE V1 - the concrete of a stair as SEPARATE lines: steps, sloping waist slab, intermediate landings, stair |
@@ -1153,6 +1154,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t262_opening_rooms/` | 3 |
 | `tests/t264_formwork_r4/` | 2 |
 | `tests/t265_gb_bar_population/` | 2 |
+| `tests/t267_stair_finish_levels/` | 3 |
 | `tests/t268_door_ruling/` | 2 |
 | `tests/t269_floor_blockers/` | 1 |
 | `tests/water_tank_s8_4/` | 3 |
@@ -1427,6 +1429,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t262/` | 14 |
 | `research/agents_t264/` | 7 |
 | `research/agents_t265/` | 5 |
+| `research/agents_t267/` | 4 |
 | `research/agents_t268/` | 5 |
 | `research/agents_t269/` | 4 |
 | `research/alsenan_arch_truth_05/` | 28 |
