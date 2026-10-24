@@ -398,3 +398,8 @@ From the 2026-10-17 BOQ engines study, which the owner supplied (see RESEARCH_LO
 29. (scout 2026-10-23, team, owner) SessionStart hook writes `export AGENT_SESSION_ID=<session_id>` to $CLAUDE_ENV_FILE so STARTED lines stop saying "run unknown" (documented hook input + env file).
 30. (scout 2026-10-23, team) Checker L4 suite as a background command with timeout up to 2 h (documented for unattended sessions), failure lines only in context.
 31. (scout 2026-10-23, R-12 supplement) Q-71 drawing facts: add the SRIA rule (edge bar at max(s/2, cover), N = ceil(full side / s); F8 bottom short bars 36) as a fourth column beside A / B / C; owner chooses.
+32. (scout 2026-10-24, team) Worker tasks state a hand-in point at 50 min (slot 60 min): 11 IDLE overlap runs on 24 Oct; the scheduler documents no skip-if-running, every IDLE run is paid usage.
+33. (scout 2026-10-24, team) L4 suite: existing wrapper `pytest` with several folders in chunks, or with run_in_background + timeout up to 2 h (documented, already allowed); sandbox pytest-xdist (MIT) later against a serial run.
+34. (scout 2026-10-24, team, owner) Wrapper `run` entry for one fixed research-script folder with the pytest path check; never a `Bash(<venv python> *)` allow rule (prefix rule approves any code).
+35. (scout 2026-10-24, T-281) Stair soffits: own m2 line per flight (NRM2 formwork item 25 'sloping', includes staircases), plan and sloping area plan x sqrt(1 + (r/g)^2), slope class, landings flat rows, stepped soffit linear; basis HELD for the owner.
+36. (scout 2026-10-24, team, owner) On the next INCOMPLETE / IDLE run, ask `/schedule why ...` from a local CLI (v2.1.227+): it reads the run's log incl. permission denials.

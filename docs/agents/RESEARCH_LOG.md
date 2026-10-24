@@ -5,6 +5,84 @@ Daily target (PLAN.md, owner 2026-10-18): at most 5 entries, at least one aimed 
 Each entry: date, what it is (link), licence, what it could improve in the engine or the workflow, risk, verdict
 (ADOPT idea / TRY in sandbox / WATCH / REJECT). Never install or run downloaded code from here; the lead decides.
 
+## FEEDBACK TO LEAD 2026-10-24 (scout run 23:55 UTC)
+
+No open research requests; all five items below come from RUN_LOG / LEAD_REPORT 22:15 / RUN_LEDGER. Nothing asks any agent
+to reprioritise.
+1. **Overlap IDLE runs (usage).** Problem: 11 IDLE lines on 24 Oct (Worker 1 x6, Worker 2 x5), each a whole cloud session
+   (setup hook, context) that delivers nothing; cause is a run longer than its 60-min slot (Worker 1 22:21 -> 23:32 = 71 min,
+   Worker 2 22:40 -> 23:48 = 68 min). Evidence: the scheduled-tasks docs document no skip-if-still-running behaviour and say
+   runs "draw down subscription usage the same way interactive sessions do", so the run lock is the only guard and each IDLE
+   run is paid. Change: every worker task row states a hand-in point at 50 min of run time (READY with what is done, the rest
+   as rN), and the Lead splits any task that ran > 55 min twice. Expected effect: IDLE lines towards 0, one more delivering
+   run per worker per overlap. Who: Lead (task rows); optionally owner (wrapper prints minutes since STARTED).
+2. **Full suite does not fit one 10-minute shell (Worker 1 22:00; LEAD REPORT need (2)).** This needs no owner change today:
+   the wrapper's `pytest` already accepts several `tests/<folder>` paths, and `.claude/settings.json` allows
+   `Bash(bash scripts/agent_env.sh *)`, so a worker can (a) run the suite in 3-4 folder chunks, each under 10 min, or (b) run
+   the same wrapper command with `run_in_background` and `timeout` up to 7,200,000 ms (documented 2-hour ceiling for cloud
+   sessions), reading only the failure lines at the end. Change: put the chunk list (from `codemap`) into the Checker's and
+   workers' L4 wording. Expected effect: L4 hand-ins without waiting for the Checker. Who: Lead. (Repeats idea 30 for workers;
+   still not used.)
+3. **Wrapper `run` allowlist (LEAD REPORT need (1)).** Docs: a Bash allow rule matches "everything before the first `*` as
+   written", so an owner rule like `Bash(.work/venv/bin/python *)` would approve ANY python code; keep the wrapper as the only
+   gate. Change: owner adds one `run` entry for a fixed folder, e.g. `tools/research/*.py` with the same path regex and
+   `..` refusal the `pytest` entry uses. Expected effect: research scripts run through the audited path. Who: owner.
+4. **Stair soffits, T-281 (new missing scope).** NRM2 formwork item 25 "Soffits of sloping work" (m2, "sloping one way" /
+   "two ways") "includes work to soffits of slabs, ramps, steps, staircases"; steps in soffits are a separate m item; plaster
+   to "stair undersides" is a separate category; ANZSMM classes soffits <= 15 deg / > 15 deg. No source read says plan or
+   slope area. Change: T-281 output per flight: plan area, true sloping area (plan x sqrt(1 + (riser / going)^2)), slope
+   class, landings as flat soffits in their own row, the plan / slope choice HELD for the owner. Who: Lead (acceptance);
+   owner (basis).
+5. **"run unknown" still appears** (Verifier 23:52, 22:51, 21:51): idea 29 (SessionStart hook writes the session id) is
+   still unapplied. Who: owner.
+
+## 2026-10-24 (scout run 23:55 UTC): 0 requests (none open), 6 findings
+
+Read: RESEARCH_REQUESTS (Open: none), LEAD_REPORT 22:15 / 20:15, RUN_LOG top 40 + today's IDLE lines, FEEDBACK top,
+RESEARCH_LOG top 2, RUN_LEDGER totals (55 / 55 SUCCESS, last audited block), OWNER_SESSION_CHANGES top 5. Drive not opened
+(not needed). Nothing installed or run; every page cited was opened.
+
+### Team finding: overlapping runs and their cost (scheduled-tasks documentation)
+
+| What (link) | Documented behaviour (quoted) | Gap it helps | Verdict |
+|---|---|---|---|
+| [Automate work with scheduled tasks](https://code.claude.com/docs/en/routines) | "Expressions that run more often than once per hour are rejected"; scheduled tasks "draw down subscription usage the same way interactive sessions do"; scheduled runs limited to "100 per hour" per account; "A green status in the run list means the session started and exited without an infrastructure error. It does not mean the work your prompt describes succeeded." No sentence describes skipping or queueing a run while the previous run of the same task is still active | 11 IDLE runs on 24 Oct, each a paid session that only writes a lock line; the team's run lock is the only overlap guard (correct, keep it) | ADOPT-IDEA: a 50-min hand-in point per worker task (the slot is 60 min), and split tasks that overrun twice |
+| same page, "Manage scheduled tasks from the CLI" | "ask about a scheduled task's run history, for example `/schedule why did my nightly review do nothing this morning?` ... It also reads a run's log to explain what happened, including tool errors, permission denials, and the final result. Requires Claude Code v2.1.227 or later"; inside a cloud session `/schedule` "isn't available in that environment" | RUN_LEDGER: "The auditor cannot read the transcripts of scheduled sessions"; the cause of an INCOMPLETE run is "NOT KNOWN" | TRY-IN-SANDBOX (owner, from a local CLI, on the next INCOMPLETE or IDLE run) |
+
+### Team finding: L4 suite inside the 10-minute shell (tools reference)
+
+| What (link) | Documented behaviour (quoted) | Gap it helps | Verdict |
+|---|---|---|---|
+| [Tools reference, Bash](https://code.claude.com/docs/en/tools-reference) | `BASH_MAX_TIMEOUT_MS` ceiling "ten minutes out of the box"; "In a session that runs unattended, such as ... a cloud session, background Bash and PowerShell commands have a time limit"; "A command that Claude starts in the background gets 30 minutes, or the `timeout` Claude passes with `run_in_background`, up to a maximum of 2 hours"; at the limit "Claude can start the command again with a longer `timeout`"; "The time limit requires Claude Code v2.1.285 or later" | Worker 1 T-277 full suite did not finish (22:00); Checker runs it before merge | ADOPT-IDEA: the existing wrapper command `bash scripts/agent_env.sh pytest --tree <T> tests/...` run with `run_in_background` (already allowed by `Bash(bash scripts/agent_env.sh *)`), or in folder chunks; no settings change needed |
+| [pytest-xdist](https://pypi.org/project/pytest-xdist/2.5.0/) | Licence "MIT"; "`-n auto` to use as many processes as your computer has CPU cores"; `--dist loadfile` keeps a file's tests in one worker; "`-s`/`--capture=no` ... does not work"; a session-scoped fixture "runs once per worker process" | Wall time of the L4 suite | TRY-IN-SANDBOX (owner / Lead: new pinned dependency; risk: the root `conftest.py` session guard on `data/` / `tests/` would run per worker; compare NEW / KNOWN counts with a serial run before trusting it) |
+
+### Team finding: the `run` allowlist and permission-rule prefixes (permissions documentation)
+
+| What (link) | Documented behaviour (quoted) | Gap it helps | Verdict |
+|---|---|---|---|
+| [Configure permissions](https://code.claude.com/docs/en/permissions) | "Claude Code matches everything before the first `*` as written, so those words are what limit the rule: `Bash(git log *)` allows only `git log` commands, and `Bash(git *)` allows every git command"; "a rule like `Bash(safe-cmd *)` won't give it permission to run the command `safe-cmd && other-cmd` ... A rule must match each subcommand independently"; a Bash rule "isn't a security boundary around the program" | LEAD REPORT need (1): research scripts run with the venv python outside the wrapper | ADOPT-IDEA (owner): add a wrapper `run` entry for one fixed folder with the `pytest` entry's path check; do NOT add a `Bash(<venv python> *)` allow rule (it approves any code) |
+
+### Practitioner method: stair soffits (T-281, missing scope found 22:15)
+
+| What (link) | Evidence class | Content (as read) | Gap it helps | Verdict |
+|---|---|---|---|---|
+| [NRM2 formwork extract (GCU teaching copy)](https://edshare.gcu.ac.uk/3911/2/pdf_download/NRM_2%20Formwork.pdf) | STANDARD (NRM2 table as reproduced for teaching) | Item 25 "Soffits of sloping work", m2, "Sloping one way" / "Sloping two ways", note: "This includes work to soffits of slabs, ramps, steps, staircases and the like"; item 30 "Steps in soffits", m, "<= 500 high: width stated"; strings and risers are m items with width stated | Stair soffit is its own m2 line, classified by slope, never folded into flat ceilings | ADOPT-IDEA |
+| [ASAQS Plastering FAQs](https://www.asaqs.co.za/page/PlasteringFAQs) | PRACTITIONER (QS association) | plaster to "soffits, beams, or stair undersides is treated as a separate category"; sloped surfaces "still measured by area" and described separately because stairwells "may require scaffolding" | Plaster / paint follow the same split | ADOPT-IDEA |
+| [ANZSMM formwork rules (CAUL OER)](https://oercollective.caul.edu.au/building-measurement-approaches/chapter/4-2-measurement-rules-for-formwork/) | PRACTITIONER (teaching text on ANZSMM s.7) | slab soffits classed "horizontal", "slope not exceeding 15 degrees", "slope exceeding 15 degrees"; "each class of formwork be measured separately" | Slope class for every flight | Information |
+
+None of the three says whether the area is taken on plan or on the slope. Next step for the Lead (T-281 acceptance): per
+flight write plan area, sloping area = plan x sqrt(1 + (riser / going)^2) from the drawn risers and goings (stair rule S-9:
+drawn goings, no generated winders), slope class, and landings as flat soffit rows; a stepped underside gives a linear
+"steps in soffits" row instead; the plan / slope basis stays HELD for the owner. Tests: straight flight (both areas),
+flight with landing, winder flight from drawn polygons, a stepped soffit.
+
+### Market: takeoff MCP servers (new this month)
+
+| What (link) | What it does / how | Licence | Maturity | Security | Gap it helps | Verdict |
+|---|---|---|---|---|---|---|
+| [OpenTakeoff](https://glama.ai/mcp/servers/Kentucky-ai/opentakeoff) | stdio MCP server (53 tools) + browser canvas for construction-plan PDFs / images: calibrate, measure, export CSV / JSON / xlsx / DXF; "Measuring an unscaled sheet refuses"; agent work lands as "dashed pencil proposals needing human review", only a human applies APPROVED; provenance per record | AGPL-3.0-only (Apache-2.0 up to commit 84c7f48e), CLA | "MCP 0.9.84", listed on the MCP registry; no star / release data read | installed by `npx -y opentakeoff-mcp` (runs a package); "Unconfigured builds make zero AI network calls"; trained adapters proprietary | PDF / scanned plans only (no DXF input); its scale gate and proposal / approval split match the engine's HELD / VERIFIED; copyleft rules out embedding | WATCH (design ideas only; do not install) |
+| [ODA MCP Servers FAQ](https://www.opendesign.com/blog/2026/august/oda-mcp-servers-faq.md) | self-hosted MCP access layer to DWG, STEP, IFC: read models, "pull quantities", compare revisions; volume, surface area, bounding box | commercial, ODA membership (Sustaining tier and up) | launch "September 2026" inside ODA viewers | local mode has "no outbound network path" | a second DWG reader beside LibreDWG (idea 14); DXF not listed | WATCH (cost; not needed while the DXF route works) |
+
 ## FEEDBACK TO LEAD 2026-10-23 (scout one-off run 17:55 UTC, owner fire: R-12, R-09, R-10 only)
 
 Nothing below asks any agent to reprioritise; it is evidence for rows already on the board.
