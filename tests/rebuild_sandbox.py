@@ -60,6 +60,38 @@ def _remap(arg, root: Path, copy: Path) -> str:
     return s
 
 
+def _git_dir(root: Path) -> Path:
+    """The git directory of `root`: `root/.git` when it is a directory (a normal checkout); when it is a FILE (a linked
+    git worktree or a submodule: `gitdir: <path>`), the directory that file names, relative paths taken from `root`
+    (T-210: pointing the copy at `root/.git` itself made git fail in a worktree, so a history-reading builder recorded
+    UNCOMMITTED instead of the commit)."""
+    dot = root / ".git"
+    if dot.is_file():
+        for line in dot.read_text(encoding="utf-8").splitlines():
+            if line.startswith("gitdir:"):
+                target = Path(line[len("gitdir:"):].strip())
+                return (target if target.is_absolute() else root / target).resolve()
+        raise ValueError(f"{dot} is a file without a 'gitdir:' line")
+    return dot.resolve()
+
+
+GIT_ABBREV = "7"  # git's own minimum abbreviation, the length every committed package stamp was written with
+
+
+def _git_env(base) -> dict:
+    """The environment of a history-reading builder (git=True): `base` plus core.abbrev pinned to GIT_ABBREV through
+    git's GIT_CONFIG_COUNT mechanism (git >= 2.31; existing GIT_CONFIG_* entries are kept). With the default
+    core.abbrev=auto the length of `%h` grows with the object count of the repository (7 -> 8 characters once it holds
+    enough objects), so a stamp that was right when it was built would differ on the same commit later (T-210). The
+    pin keeps `%h` at least 7 characters and longer only when 7 would be ambiguous, as git guarantees."""
+    env = dict(base)
+    n = int(env.get("GIT_CONFIG_COUNT") or 0)
+    env[f"GIT_CONFIG_KEY_{n}"] = "core.abbrev"
+    env[f"GIT_CONFIG_VALUE_{n}"] = GIT_ABBREV
+    env["GIT_CONFIG_COUNT"] = str(n + 1)
+    return env
+
+
 @contextmanager
 def rebuilt_package(root, builder, *args, git=False):
     """Run `builder` (absolute, or relative to `root`) in a temporary copy of `root`; yield the rebuilt package dir."""
@@ -70,10 +102,12 @@ def rebuilt_package(root, builder, *args, git=False):
     with tempfile.TemporaryDirectory(prefix="urban_rebuild_") as td:
         copy = Path(td) / root.name
         shutil.copytree(root, copy, symlinks=True, ignore=shutil.ignore_patterns(*SKIP))
+        env = None
         if git:
-            (copy / ".git").write_text(f"gitdir: {(root / '.git').resolve()}\n", encoding="utf-8")
+            (copy / ".git").write_text(f"gitdir: {_git_dir(root)}\n", encoding="utf-8")
+            env = _git_env(os.environ)
         cmd = [sys.executable, "-I", str(copy / rel), *(_remap(a, root, copy) for a in args)]
-        proc = subprocess.run(cmd, capture_output=True, cwd=copy)
+        proc = subprocess.run(cmd, capture_output=True, cwd=copy, env=env)
         changed = _changes(before, _tree_state(root))
         assert not changed, "rebuild wrote into the real tree:\n" + "\n".join(changed[:50])
         if proc.returncode:

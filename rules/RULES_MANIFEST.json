@@ -24,6 +24,14 @@
    "kind": "AUTHORED",
    "sha256": "e687302fe1dc2c4be337d475b3f76edb2969b2747e686ec0dd8118cf9f9509f0"
   },
+  "coverage/BOQ_FAMILY_MASTER_1.6.0.json": {
+   "kind": "AUTHORED",
+   "sha256": "6ab8a72a488f2b40baab01c3380224d2ecbe31703f9861e2eef6ba2e950defe6"
+  },
+  "coverage/BOQ_FAMILY_MASTER_1.7.0.json": {
+   "kind": "AUTHORED",
+   "sha256": "17422419ccbc3e88dd5487f62a5719521b5bc7544f5b20faeeb27298053c0fa7"
+  },
   "materials/URBAN_MATERIAL_SPECS_1.0.0.json": {
    "kind": "AUTHORED",
    "sha256": "a16ccec3c7e1ef0fc5734d533032bf6d405b30a54b5a1eca0462d8b28851d0c1"
