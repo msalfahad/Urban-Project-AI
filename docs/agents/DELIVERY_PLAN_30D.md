@@ -46,7 +46,15 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
-## Status (Lead, 2026-10-24 02:10; re-estimated each run from what merged and was verified)
+## Status (Lead, 2026-10-24 04:15; re-estimated each run from what merged and was verified)
+
+Lead 2026-10-24 04:15: since 02:10 the Checker merged 3 (T-232 Gate B V3.0.10 doors / windows pcs AND m2, T-249 drawn
+opening inventory, T-248 CONC.COLUMN whole-line ledger), rejected 0; READY 2 (T-251 gate-0 fix, T-252 CONC.BEAM r2).
+Verified whole lines still 0 / 13; new verified COMPONENT: 28 columns 18.3465 m3 (Checker own re-measure 28 / 28).
+P-03: V3.0.10 merged (doors / windows scoreable in the candidate; W18 / W03 already inside it, T-255 re-scoped to the
+deduction side). P-11: doors / windows as candidate lines DONE except W17 (Q-76), W02 (D-53) and 7 held doors. Lane I
+remains the bottleneck (T-239 in work, then T-254 with the column component). New T-256 narrows the 15 CONFLICT
+columns. Day-14 (3 Nov) on track; the 27 Oct day-7 target was met on 21 Oct; no milestone re-dated.
 
 Lead 2026-10-24 02:10: since 00:10 the Checker merged 2 (T-243 gate-0 fix, T-242 CONC.GROUND ledger), rejected 0; READY 3
 (T-232 Gate B doors / windows pcs + m2, T-249 drawn opening inventory, T-248 CONC.COLUMN whole line). Verified whole

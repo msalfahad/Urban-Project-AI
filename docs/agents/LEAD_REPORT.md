@@ -1,5 +1,59 @@
 # Lead reports to the owner's main chat (newest first, last 3 entries; older in archive/LEAD_REPORT_older.md)
 
+## LEAD REPORT 2026-10-24 04:15 UTC
+
+Repositories: attached Urban-Project-AI checkout (main eafbb0f6); `.work` prepared AUTOMATICALLY ("setup by auto",
+04:10). Working branch 9455a63d -> a0cd9bbc (T-232) -> 2a2d15af (T-249) -> 567dc972 (T-248), all Checker merges; no
+owner commit on the engine branch. Drive readable: nothing new in the Alsenan folder or the private-data root since
+00:00, no new images (no photo review task). Self-check: codemap PASS, pytest t061 PASS, freeze PASS (0).
+OWNER_SESSION_CHANGES: no entry since 21:29.
+
+PROGRESS (Alsenan, by trade and unit; released unchanged: concrete 92.77 vs freelancer 111.81 m3, -17.03 %, run A).
+WHOLE LINES VERIFIED: 0 in every trade (no change). PARTIALLY VERIFIED: CONC.FOOTING, CONC.BLINDING, CONC.BEAM,
+CONC.GROUND, CONC.COLUMN (new). SCOREABLE TRADES: concrete, floor area, and doors / windows in the candidate (new).
+- CONC.COLUMN (m3): ledger MERGED 567dc972. Checker own re-measure of all 28 closable columns (outline on 'ST7757 dxf.dxf'
+  AND the printed Schedule of Columns, ST p.9; mark identity by his own registration): 18.3465 m3 (GF 14.0625 + 1F
+  4.284), 0.0 % on 28 / 28 = VERIFIED AS A COMPONENT. Inside it: 2 planted 1F columns 1.008 m3 standing on the GF roof
+  slab, omitted by route G (released, frozen: unchanged) and over-held in V3.0.9 -> T-254 takes the component. Still
+  open: CONFLICT 15 = 8.034 .. 10.119 (D-16 / D-63 / D-64) -> new T-256; HELD 16 (D-39 roof datum, Q-54 B annex, D-44,
+  CB5 levels); UNKNOWN 5 (D-65); necks HELD >= 9.2568 (Q-21 C) vs freelancer 8.805 (his 1.50 m limit used as a length).
+- DOORS / WINDOWS (pcs, m2): V3.0.10 MERGED a0cd9bbc through Gate B. Windows 76.256 m2 DRAWING-CONFIRMED on 27 vs
+  freelancer 80.231 on the same 27: -3.975 m2 (-4.95 %), residual 0 (heights only). W03 28.251 = freelancer (AGREE),
+  W18 1.080 vs his 0.48 (+0.600 ENGINE_RIGHT on the printed 500 x 2160). HELD: W17 9.870 .. 11.515 (Q-76), W02 pcs 1 .. 2
+  (D-53), 7 doors; ALU doors 4.180 + 1.980 .. 8.800 HELD vs 12.000. Scoreboard rows 'unit refused' -> coverage 100, HELD.
+  CORRECTION of my 02:10 report: W18 / W03 are INSIDE the 27 of V3.0.10 (the +29.331 m2 'in no line' was true for
+  V3.0.8 only); T-255 now checks only that block and plaster / paint deduct them once.
+- CONC.BEAM (m3): Checker re-measured the 2 upstands (B20 / B23 0.120 each, AGREE): every CALCULATED run of the 140-run
+  ledger is now Checker-measured (110 within 1 %, 2 corrections). Ledger r2 READY: 66.0161 -> 66.3206 (+0.3045; Checker
+  +0.3049, the 0.0004 is the ring area 0.6664 vs 0.6668 m2, settled at Gate A); vs freelancer 65.966 +0.54 % (by mark:
+  CB4 / B4 through-support RULE_DIFFERENCE, B7 his 7.38 m row UNRESOLVED). HELD 4.128 .. 8.568, CONFLICT 5.145 .. 6.111.
+- FLOOR AREA (m2): unchanged 32 / 47 VERIFIED; Checker confirmed the 15 blocked pieces are all named in T-240 (15 / 15).
+- What got worse: nothing. The t130 guard is still red until T-251 merges (READY, no quantity affected).
+
+ENGINEERING QUESTIONS DEFINED THIS RUN (ERS s.5 Lead): T-256 which printed source supports which section / height for
+each of the 15 CONFLICT columns, whether a third source settles any, and absence proof for the 5 UNKNOWN lines; T-255
+re-scoped to 'is each window's wall area deducted once per trade, and which width (opening 4.473 vs glazing 6.57 for
+W03) each trade deducts'; T-254 extended with the verified column component. Cross-trade: GF B7 ring takes the slab's
+band-53 piece 0.0322 m3 with it (once); upstand parapets start at the upstand top (masonry, once). Lessons register +3
+(gap claims name the version measured; planted columns start on their slab; check modules read codes from the registry).
+Element register +6 (incl. the W18 / W03 correction).
+
+TEAM HEALTH. Since 02:10 every run that started wrote a final line except two still open: Worker 3 (STARTED 03:00,
+T-239 claimed 03:05, lock to 06:00) and the Checker (STARTED 03:51, T-251; 04:02 note written). Worker 1 02:20 ->
+SUCCESS 03:51 (T-252), 03:20 IDLE on the overlap lock; Worker 2 02:40 -> SUCCESS 03:46 (T-251), 03:39 IDLE on the lock;
+Checker 02:50 -> SUCCESS 03:21 (T-248 merged + 2 T-180 slots). The two IDLE slots are the run lock working as designed
+(previous runs over 60 min), not failures. Every self-check PASS; 0 refusals. Classified: T-232 WORKED, T-249 WORKED,
+T-248 WORKED (line PARTIAL by design: decisions T-254, T-256). READY 2 (T-251, T-252), delay cause CHECKER-RUNS; backlog
+rule off. Queue check: 49 actionable rows, 0 flagged, 0 stall checks. TODO 9: S 3 (T-253, T-256, T-170), A 3 (T-228,
+T-250, T-219), I 3 claimable (T-168, T-210, T-235 r2 after T-239) + T-239 CLAIMED + 11 QUEUED serial integration rows.
+Pilot ends 06:15 UTC; no schedule touched.
+
+OWNER PACKAGE: nothing new today. Q-76 (W17 height basis, section 6 format, sent 00:10) is still unanswered; W17 stays
+HELD 9.870 .. 11.515 m2, never the larger end. The column conflicts (D-16 / D-63 / D-64 / D-65) are designer items:
+T-256 narrows them to column ids before they go on the consultant list.
+
+NEEDS FIXING (owner only): none.
+
 ## LEAD REPORT 2026-10-24 02:10 UTC
 
 Repositories: attached Urban-Project-AI checkout (main eafbb0f6); `.work` prepared AUTOMATICALLY ("setup by auto",
@@ -164,75 +218,3 @@ is wall with a moulding, not aluminium and glass; A applies your own Q-32 A rule
 never the larger end. Next action: doors and windows go into the candidate now with W17 held.
 
 NEEDS FIXING: none only you can do. (The red t195 check is a team fix, T-243.)
-
-## LEAD REPORT 2026-10-23 22:10 UTC
-
-Repositories: attached Urban-Project-AI checkout (main eafbb0f6, the 21:29 lock-safety fix); `.work` prepared
-AUTOMATICALLY ("setup by auto", 22:11). Working branch head bebd1241 -> 63f4d90e (Checker merges T-227 r2 ebce3d97,
-T-221 63f4d90e; no owner commit on the engine branch). Drive readable: nothing created in the Alsenan folder or the
-private-data folder since 20:00 (no photos, no new drawings). Self-check: codemap PASS, pytest t061 PASS, freeze PASS (0).
-OWNER_SESSION_CHANGES 21:15 / 21:29 (lock-safety fix deployed, T-239 F10 CONFLICT row, T-235 behind T-232): applied, nothing
-undone or duplicated; T-239 sits in lane I after T-232 as written.
-
-PROGRESS (Alsenan, by trade and unit; released unchanged: concrete 92.77 vs freelancer 111.81 m3, -17.03 %, run A).
-WHOLE LINES VERIFIED: 0 in every trade (no change). PARTIALLY VERIFIED: CONC.FOOTING, CONC.BLINDING; FLOOR AREA 20 / 47
-pieces. SCOREABLE TRADES: concrete, floor area (no change); plaster and paint become scoreable if V3.0.9a passes Gate B.
-- CONC.SLAB (m3), first whole-line measure, READY (not yet verified): 62 panels 375.048 m2 = 60.2804 DRAWING-CONFIRMED,
-  CLOSABLE (convention C1: panel between beam faces, beam at full depth; thickness tag on 5, general note 18 on 57; 6
-  opening sets once; 6 sunken panels at full 0.16). Released A 61.5514 (+1.2710, +2.11 %) = NEW engine defect: the 2F
-  'T 18' tank tags spread to the 5 untagged panels of that sheet (+0.625) + 13 non-slab faces (+0.646), residual -0.0002.
-  Candidate V3.0.8 60.9192 (+0.6388 = the 13 faces only). Freelancer 59.8174 (+0.4630, +0.77 %): GF -0.0505 and 2F
-  -0.0431 rule difference, 1F dome corners +0.6156 engine right, 1F lump residual 0.059 UNRESOLVED (no breakdown in his
-  cell). Learned: an untagged panel takes the general note, never a neighbour's tag (R-SLAB-T-1 proposed). Missing: the
-  beam side of the partition (CB5 span-2 band 0.296 m3 in no line) -> T-241.
-- FLOOR AREA (m2), Checker own face-to-face re-measure: 20 / 47 pieces AGREE 0.0 % (138.767 of 385.634 m2 own-measured).
-  The released line cannot close as it stands: +2.970 1F dressing in no floor line (scope; freelancer right on the
-  bedroom row 19.46 = 16.340 + 2.970 + 0.150) and -0.550 sills carried as porcelain (class), net +2.420 (+0.63 %). The
-  curved east room 19.0165 is ENGINE_RIGHT (arc face R 2.135; the freelancer's extra 1.6835 is the straight wall line;
-  0.044 left for T-223 to name). Gate: M2 (gate 1).
-- PLASTER / PAINT (m2), candidate V3.0.9a READY (Gate B): paint 0 -> 166.88 released (2 rooms VERIFIED, 1 ASSUMED - OWNER-
-  APPROVED), 8 rooms HELD 529.47 .. 595.05 with named causes, 4 HELD without a figure (annex G2, 2F shaft, pantry class);
-  plaster the same + jamb lines. Freelancer 1,151 / 1,191 m2 NOT compared (the reference line stays HELD: comparing a
-  partial line would be meaningless).
-- OPENINGS / WINDOWS (m2), arched-opening census READY (68 openings): W15 / W16 window 4.650 each (Q-32 A, freelancer
-  right), finishes deduction 4.363 per face; W26 hole 1.875 (arch), not 1.20 x 1.70 = 2.040; windows on the 7 comparable
-  openings 45.101 vs freelancer 45.481 (-0.84 %, was +3.35 % on 8). W17 HELD 9.870 .. 11.515.
-- BLOCKWORK (m2): step 3 r2 MERGED (W15 / W16 deducted by the true arched outline 4.3629 each, Checker own walk; 1F-W00
-  net 12.863 SOURCE-SUPPORTED); GF-W10 ruled by the Checker (net 47.425 SOURCE-SUPPORTED + a HELD W.C.-stretch increment);
-  register v2 (T-228) now claimable. VERIFIED block net still 4.458 m2 (GF-W07).
-- ROOF / TERRACE build-up: +5.50 falls rise 0.190 .. 0.203 m Checker = worker; strip area HELD by layer (finish hatch
-  31.681 vs screed / membrane 32.721 m2, for the waterproofing task); +13.90 HELD (no outlet drawn); roof tank (D-44)
-  drawn on none of 8 sheets.
-What improved: one more concrete line measured whole and closable; the floor line's two blockers named to the m2; window
-like-for-like from +3.35 % to -0.84 % by reading arches on their opening line. What got worse: nothing measured got
-worse; the released slab carries a defect we did not know of (+2.1 %), reported, not changed (released default untouched).
-
-CLOSE THE LOOP (since 20:10): T-227 r2 WORKED; T-221 WORKED (zones HELD by design); T-017 PARTIAL (references were capture
-indices, not drawing handles: evidence first in worker 2's next run); T-211, T-234, T-238 READY. Decisions on the board:
-T-223 acceptance extended (enclosed-face typing rule, dressing, GF unlabelled 3.600 / 1.560, the three sills); new T-240
-(lane I: dressing in, sills out to ARCH.THRESHOLD HELD), T-241 (CONC.BEAM whole line + slab / beam partition), T-242
-(CONC.GROUND: interior runs closed, exterior on D-35 as a range); T-146 now carries the 13 non-slab faces after T-234;
-T-228 promoted. Element register +8 rows; lessons register +3 rows (dressing scope, slab tag spread, handles not capture
-ids).
-
-VERIFIER QUEUE (4 READY, one above target; backlog rule ON): next run Gate B T-211 + Gate A T-238 (gate 1 critical fix;
-W17 reading ruled by the Checker); following run T-234 (CONC.SLAB, rule whether D-41 still blocks); T-017 after its
-handles; T-180 slot continues floor area (GF batch). Delay causes: T-211 / T-234 / T-238 CHECKER-RUNS, T-017 EVIDENCE;
-none OVERSIZED.
-
-TEAM HEALTH (pilot hours 14-16): every run that ended since 20:10 wrote a final line (Worker 1 20:20 / 21:20, Worker 2
-20:40 / 21:41, Worker 3 21:00, Checker 20:52); all self-checks PASS, 0 refusals, 0 IDLE lock lines. The Checker run that
-STARTED 21:50 (session_01ERWb...) has no final line yet: active (its 22:05 floor note is on the board), within the
-110-minute cap; the next Lead run reports it INCOMPLETE if no final line appears. Rejections since 20:10: 0. Queue check:
-48 actionable rows, 0 flagged, 0 stall checks. Scout: no open request (all answered 17:45).
-
-OWNER PACKAGE: none today. Considered and NOT sent: W17 (the curved arched window over the pool). Worker 2 reads the
-printed '305' as the opening up to its arch and the '45' as a decorative archivolt above it, while the Q-39 question text
-(our own, 19 Oct) told you 3.05 + 0.45 = 3.50 m to the top of the arch, and your answer C (outer arc 3.29 m) repeated
-3.29 x 3.50 = 11.51 m2. Your width rule is not in question. If the Checker confirms the reading, the area by your own rules
-would be 3.29 x 3.00 .. 3.05 = 9.87 .. 10.03 m2 instead of 11.51; because your answer quoted the 3.50 figure, it comes to
-you once, in the section-6 format, after the Checker's ruling, never before. Until then W17 stays HELD 9.870 .. 11.515.
-
-NEEDS FIXING: none.
-
-

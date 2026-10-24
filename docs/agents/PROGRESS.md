@@ -1,16 +1,34 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
 Plain words, no task numbers. Measured numbers come from SCOREBOARD.md; anything not measured says so.
-Last update: 2026-10-24 02:10 UTC (Lead). Previous version: 2026-10-24 00:10 UTC. The released numbers did not change
+Last update: 2026-10-24 04:15 UTC (Lead). Previous version: 2026-10-24 02:10 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released default V2.9 + route G untouched). Your measure (17:50):
 whole BOQ lines independently verified, and trades that can be scored. Today: still 0 whole lines verified in any
-trade. PARTIALLY VERIFIED: footings, blinding, beams (now every calculated beam run re-measured by the checker except 3
-upstands), ground beams (new: 5 interior runs); floor area: the checker has now re-measured ALL 47 pieces himself, 32
-agree to 0.0 %, the other 15 are blocked by named classification items. Scored trades: concrete and floor area. Doors
-and windows are about to become scoreable in the candidate (waiting for the checker). One test on the working branch
-went red after a checked merge (no quantity depends on it): its fix is first for the architecture worker. No new
-question for you; the curved pool window question from 00:10 is still open.
-Since 00:10 (newest first):
+trade. PARTIALLY VERIFIED: footings, blinding, beams (every calculated beam run now re-measured by the checker), ground
+beams, columns (new: 28 of 59 columns, 18.35 m3, checked by the checker one by one). Floor area: all 47 pieces
+re-measured, 32 agree to 0.0 %. Scored trades: concrete, floor area, and now doors and windows in the candidate.
+The red family-register test has a fix waiting for the checker. No new question for you; the curved first-floor
+window question is still open.
+
+Since 02:10 (newest first):
+- Columns: the checker re-measured all 28 columns that close from the drawings himself (outline on the drawing AND the
+  printed column schedule): 18.35 m3, every one agrees (0.0 %). Two of them stand on the ground-floor roof slab with
+  nothing below (1.01 m3); the released structural route leaves them out and the candidate holds one of them: the
+  candidate fix takes them in. The other 31 columns stay a range or held (designer items, top-storey and annex roof
+  levels); a new task narrows the 15 conflicting columns column by column.
+- Doors and windows by pieces AND m2 are now in the candidate (checked and merged): windows 76.26 m2 on 27 windows
+  against the freelancer's 80.23 m2 on the same 27 (-3.98 m2, -4.95 %, every metre explained by window heights). The
+  two windows found missing earlier (the 28.25 m2 pool glass wall and a 1.08 m2 window) are already inside these 27:
+  the pool wall agrees with the freelancer exactly. Still held: the curved first-floor window (your question) and one
+  ground-floor window counted once or twice (designer). What remains for those two windows is checking that walls,
+  plaster and paint take them off once.
+- Window and door list from the drawings alone: checked and merged (29 windows, 27 doors, 1 gate, 2 arches).
+- Beams: the last two calculated pieces (two small upstands, 0.12 m3 each) agree; the correction of the ring beam
+  and the two slanted ends (+0.30 m3, 66.02 -> 66.32 m3) is handed in for the checker.
+- The fix for the family-register test is handed in (the check now reads item codes from the register, the test is
+  unchanged); no quantity moved.
+
+Earlier, since 00:10 (newest first):
 - Columns as a whole line (waiting for the checker): 59 columns and 36 necks, each once. 28 columns close from the
   drawings, 18.35 m3; 15 have a schedule vs drawing conflict (8.03 .. 10.12 m3, designer items); 16 are held (roof
   level of the top storey and the annex not printed). Necks are held at no less than 9.26 m3 on 32 of them, which is
@@ -480,19 +498,16 @@ Not measured, and paused by your order (Alsenan first).
   development lengths, so a steel ledger is not complete until it has read them.
 
 ## Being worked on now
-(Lead 2026-10-24 00:10)
-- Checker: nothing waits for it; it finishes the floor-area re-measure (21 pieces left, the first-floor living room
-  first), then re-measures the beams storey by storey and re-counts the columns; any fix or candidate step that is handed
-  in goes first.
-- Structural (worker 1): ground beams as a whole line (inside runs close from the drawings; outside runs held as a range
-  on the one designer item), then columns and necks as a whole line (59 + 36, every joint with footings, beams and slabs
-  once); excavation last (depth held until the existing ground level is known).
-- Architecture and finishes (worker 2): the red drawing-register check first; then the window and door list rebuilt from
-  the drawn tags (so completeness no longer leans on the engine); the block-wall resolution ledger; the room-face lengths
-  and the three held plaster items; foundation and pit waterproofing.
-- Integration (worker 3, one step every 2 h, now the bottleneck): doors and windows in pcs AND m2; the footing with two
-  tags as a conflict; one project identity so the export runs on the real candidate; the slab / beam split; the floor
-  fixes; plaster / paint narrowed by the face cross-check; skirting deductions listed.
+(Lead 2026-10-24 04:15)
+- Checker: the family-register test fix first, then the beam correction; then the next integration step; in between
+  it re-measures neck sections and the conflicting columns, and the remaining first-floor stair flights.
+- Structural (worker 1): the boundary ground beam and the court / annex ground beams from the drawings; then the 15
+  conflicting columns column by column; excavation last (depth held until the existing ground level is known).
+- Architecture and finishes (worker 2): the block-wall resolution ledger; room-face lengths for plaster / paint;
+  foundation and lift-pit waterproofing.
+- Integration (worker 3, one step every 2 h, the bottleneck): the footing with two tags as a conflict (in work); then
+  the candidate's unprinted ground-beam depths and column heights held and the 28 checked columns taken in; the
+  deductions for the two windows; one project identity for the export; the slab / beam split; the floor fixes.
 
 ## What is missing
 - Window heads: 3 of 29 windows still held (one count, two shuttered) and three leafless openings (being closed); every door but the main entrance (2.20 m by your Q-55 C, stated as assumed).

@@ -46,6 +46,17 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+### Lead 2026-10-24 04:15 (from T-232, T-249, T-248 MERGED; T-251, T-252 READY; Checker T-180 upstands 03:12, floor-area scope 03:26, column component 04:02; new T-256)
+
+| Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |
+|---|---|---|---|---|---|
+| Columns, closable component (28: GF 19, 1F 9) | column concrete, slab, beams, rebar, formwork | COLUMN owns its footprint base -> slab top (C1) | VERIFIED AS A COMPONENT 18.3465 m3 (GF 14.0625 + 1F 4.284; Checker own re-measure 28 / 28, 0.0 %; sections by outline AND the printed schedule ST p.9) | T-248 MERGED 567dc972 | line PARTIALLY VERIFIED until CONFLICT 15 / HELD 16 / UNKNOWN 5 / necks close; T-254 integrates |
+| Planted 1F columns PC-1F-A (0.70 x 0.20) and PC-1F-B (0.50 x 0.20) | column concrete, GF roof slab / beams below | COLUMN from the GF roof slab top +5.45 to +9.65; the slab below owns its own depth (no neck, no footing) | DRAWING-CONFIRMED 0.588 + 0.420 = 1.008 m3, inside the verified component | T-248; Checker 03:19 (no neck / column outline under them on the foundation plan) | route G omits both (released, frozen: not changed); V3.0.9 over-holds PC-1F-B -> T-254 |
+| CONFLICT columns (15) and UNKNOWN route G lines (5) | column concrete, rebar | COLUMN | CONFLICT 8.034 .. 10.119 m3 (D-16 / D-63 / D-64), UNKNOWN 5 (D-65); never the larger end, never 0 | T-248 | T-256 narrows to per-column evidence and consultant text |
+| Beam upstands GF B20 and 1F B23 (0.20 x 0.20 x 3.00 each) | beam concrete, parapet / block above, slab | BEAM (above the slab top: no slab overlap); a parapet or block course on top is MASONRY from the upstand top (element once) | AGREE 0.1200 m3 each (Checker 03:12, sections A-A / B-B) | T-241 ledger | none |
+| GF void ring B7 | beam concrete, slab concrete, soffit | BEAM between its own arcs; slab band-53 piece 0.0322 m3 leaves the slab line with the ring (once) | ledger r2 0.6664 m2 x 0.75 = 0.4998 m3 (READY) vs Checker 0.6668 m2 = 0.5001 m3: 0.0004 m2 to settle at Gate A | T-252 | T-252 Gate A, T-247 integration |
+| Windows W18 (1.080 m2) and W03 (28.251 m2): CORRECTION of the 02:10 row | windows, block deduction, plaster / paint deduction, facade | OPENINGS own count and size; block and finishes deduct once under their own rule | IN the V3.0.10 window line (Checker 02:44 re-derivation: GF 47.151 with W03, 1F 23.285 with W18); deductions not yet traced | T-232 MERGED a0cd9bbc; T-249 inventory | T-255 (re-scoped: deductions only); W03 room-side plaster with T-250 |
+
 ### Lead 2026-10-24 02:10 (from T-243, T-242 MERGED; T-232, T-249, T-248 READY; Checker T-180 beam batches 01:24 .. 02:12 and column re-count 01:29; new T-251 .. T-255)
 
 | Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |

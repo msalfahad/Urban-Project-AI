@@ -36,6 +36,16 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
    commit. Decision: board-only handoffs are verified as hand evidence (the verifier re-reads the cited notes), and the
    next task on the topic writes the files (T-117); a run with no line stays a NEEDS FIXING item for the owner's setting.
 
+## 2026-10-24 04:15 (lead run)
+
+| Task | Result | Evidence | Decision |
+|---|---|---|---|
+| T-232 doors / windows pcs + m2 (Gate B, V3.0.10) | WORKED | Gate B PASS a0cd9bbc (Verifier 02:44: windows 76.256 m2 on 27 re-derived by hand incl. W03 28.251 and W18 1.080, -3.975 m2 / -4.95 % vs freelancer, residual 0; doors / windows rows leave 'unit refused'; 3,539 lines byte-identical) | doors / windows now scoreable in the candidate (HELD: W17 Q-76, W02 D-53, 7 doors); T-255 RE-SCOPED to the deduction side (the window line already carries W18 / W03); lessons row: gap claims name the version they were measured on |
+| T-249 opening inventory from the drawings | WORKED | Gate A PASS 2a2d15af (Verifier 02:48: own leaf count 27 doors + 1 gate from swing arcs; W18 / W03 own reads) | none beyond T-255 |
+| T-248 CONC.COLUMN + necks whole line | WORKED (line PARTIAL by design) | Gate A PASS 567dc972 (Verifier 03:19: 6 own re-measures 0.0 %, 1B1B identity accepted; 04:02: closable component 28 / 28 own-measured = 18.3465 m3, sections confirmed by the printed schedule ST p.9) | candidate columns -> T-254 (closable 28 incl. 2 planted 1.008 m3; 2F / annex HELD); CONFLICT 15 + UNKNOWN 5 -> new T-256 (lane S); necks stay HELD on Q-21 C |
+| T-251 t130 gate-0 fix | pending | READY 03:46 (railing codes from the item master, +27 tests, t130 green unchanged, full suite NEW 0 / KNOWN 396) | Gate A first; residual (8 implemented-family literals) a follow-up only if a guard can trip on them |
+| T-252 CONC.BEAM ledger r2 | pending | READY 03:51 (66.0161 -> 66.3206 m3, +0.3045 vs Checker +0.3049) | Gate A settles the 0.0004 m3 ring difference; T-247 takes r2 with the slab band-53 piece 0.0322 leaving with the ring |
+
 ## 2026-10-24 02:10 (lead run)
 
 | Task | Result | Evidence | Decision |

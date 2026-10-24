@@ -1,3 +1,73 @@
+## LEAD REPORT 2026-10-23 22:10 UTC
+
+Repositories: attached Urban-Project-AI checkout (main eafbb0f6, the 21:29 lock-safety fix); `.work` prepared
+AUTOMATICALLY ("setup by auto", 22:11). Working branch head bebd1241 -> 63f4d90e (Checker merges T-227 r2 ebce3d97,
+T-221 63f4d90e; no owner commit on the engine branch). Drive readable: nothing created in the Alsenan folder or the
+private-data folder since 20:00 (no photos, no new drawings). Self-check: codemap PASS, pytest t061 PASS, freeze PASS (0).
+OWNER_SESSION_CHANGES 21:15 / 21:29 (lock-safety fix deployed, T-239 F10 CONFLICT row, T-235 behind T-232): applied, nothing
+undone or duplicated; T-239 sits in lane I after T-232 as written.
+
+PROGRESS (Alsenan, by trade and unit; released unchanged: concrete 92.77 vs freelancer 111.81 m3, -17.03 %, run A).
+WHOLE LINES VERIFIED: 0 in every trade (no change). PARTIALLY VERIFIED: CONC.FOOTING, CONC.BLINDING; FLOOR AREA 20 / 47
+pieces. SCOREABLE TRADES: concrete, floor area (no change); plaster and paint become scoreable if V3.0.9a passes Gate B.
+- CONC.SLAB (m3), first whole-line measure, READY (not yet verified): 62 panels 375.048 m2 = 60.2804 DRAWING-CONFIRMED,
+  CLOSABLE (convention C1: panel between beam faces, beam at full depth; thickness tag on 5, general note 18 on 57; 6
+  opening sets once; 6 sunken panels at full 0.16). Released A 61.5514 (+1.2710, +2.11 %) = NEW engine defect: the 2F
+  'T 18' tank tags spread to the 5 untagged panels of that sheet (+0.625) + 13 non-slab faces (+0.646), residual -0.0002.
+  Candidate V3.0.8 60.9192 (+0.6388 = the 13 faces only). Freelancer 59.8174 (+0.4630, +0.77 %): GF -0.0505 and 2F
+  -0.0431 rule difference, 1F dome corners +0.6156 engine right, 1F lump residual 0.059 UNRESOLVED (no breakdown in his
+  cell). Learned: an untagged panel takes the general note, never a neighbour's tag (R-SLAB-T-1 proposed). Missing: the
+  beam side of the partition (CB5 span-2 band 0.296 m3 in no line) -> T-241.
+- FLOOR AREA (m2), Checker own face-to-face re-measure: 20 / 47 pieces AGREE 0.0 % (138.767 of 385.634 m2 own-measured).
+  The released line cannot close as it stands: +2.970 1F dressing in no floor line (scope; freelancer right on the
+  bedroom row 19.46 = 16.340 + 2.970 + 0.150) and -0.550 sills carried as porcelain (class), net +2.420 (+0.63 %). The
+  curved east room 19.0165 is ENGINE_RIGHT (arc face R 2.135; the freelancer's extra 1.6835 is the straight wall line;
+  0.044 left for T-223 to name). Gate: M2 (gate 1).
+- PLASTER / PAINT (m2), candidate V3.0.9a READY (Gate B): paint 0 -> 166.88 released (2 rooms VERIFIED, 1 ASSUMED - OWNER-
+  APPROVED), 8 rooms HELD 529.47 .. 595.05 with named causes, 4 HELD without a figure (annex G2, 2F shaft, pantry class);
+  plaster the same + jamb lines. Freelancer 1,151 / 1,191 m2 NOT compared (the reference line stays HELD: comparing a
+  partial line would be meaningless).
+- OPENINGS / WINDOWS (m2), arched-opening census READY (68 openings): W15 / W16 window 4.650 each (Q-32 A, freelancer
+  right), finishes deduction 4.363 per face; W26 hole 1.875 (arch), not 1.20 x 1.70 = 2.040; windows on the 7 comparable
+  openings 45.101 vs freelancer 45.481 (-0.84 %, was +3.35 % on 8). W17 HELD 9.870 .. 11.515.
+- BLOCKWORK (m2): step 3 r2 MERGED (W15 / W16 deducted by the true arched outline 4.3629 each, Checker own walk; 1F-W00
+  net 12.863 SOURCE-SUPPORTED); GF-W10 ruled by the Checker (net 47.425 SOURCE-SUPPORTED + a HELD W.C.-stretch increment);
+  register v2 (T-228) now claimable. VERIFIED block net still 4.458 m2 (GF-W07).
+- ROOF / TERRACE build-up: +5.50 falls rise 0.190 .. 0.203 m Checker = worker; strip area HELD by layer (finish hatch
+  31.681 vs screed / membrane 32.721 m2, for the waterproofing task); +13.90 HELD (no outlet drawn); roof tank (D-44)
+  drawn on none of 8 sheets.
+What improved: one more concrete line measured whole and closable; the floor line's two blockers named to the m2; window
+like-for-like from +3.35 % to -0.84 % by reading arches on their opening line. What got worse: nothing measured got
+worse; the released slab carries a defect we did not know of (+2.1 %), reported, not changed (released default untouched).
+
+CLOSE THE LOOP (since 20:10): T-227 r2 WORKED; T-221 WORKED (zones HELD by design); T-017 PARTIAL (references were capture
+indices, not drawing handles: evidence first in worker 2's next run); T-211, T-234, T-238 READY. Decisions on the board:
+T-223 acceptance extended (enclosed-face typing rule, dressing, GF unlabelled 3.600 / 1.560, the three sills); new T-240
+(lane I: dressing in, sills out to ARCH.THRESHOLD HELD), T-241 (CONC.BEAM whole line + slab / beam partition), T-242
+(CONC.GROUND: interior runs closed, exterior on D-35 as a range); T-146 now carries the 13 non-slab faces after T-234;
+T-228 promoted. Element register +8 rows; lessons register +3 rows (dressing scope, slab tag spread, handles not capture
+ids).
+
+VERIFIER QUEUE (4 READY, one above target; backlog rule ON): next run Gate B T-211 + Gate A T-238 (gate 1 critical fix;
+W17 reading ruled by the Checker); following run T-234 (CONC.SLAB, rule whether D-41 still blocks); T-017 after its
+handles; T-180 slot continues floor area (GF batch). Delay causes: T-211 / T-234 / T-238 CHECKER-RUNS, T-017 EVIDENCE;
+none OVERSIZED.
+
+TEAM HEALTH (pilot hours 14-16): every run that ended since 20:10 wrote a final line (Worker 1 20:20 / 21:20, Worker 2
+20:40 / 21:41, Worker 3 21:00, Checker 20:52); all self-checks PASS, 0 refusals, 0 IDLE lock lines. The Checker run that
+STARTED 21:50 (session_01ERWb...) has no final line yet: active (its 22:05 floor note is on the board), within the
+110-minute cap; the next Lead run reports it INCOMPLETE if no final line appears. Rejections since 20:10: 0. Queue check:
+48 actionable rows, 0 flagged, 0 stall checks. Scout: no open request (all answered 17:45).
+
+OWNER PACKAGE: none today. Considered and NOT sent: W17 (the curved arched window over the pool). Worker 2 reads the
+printed '305' as the opening up to its arch and the '45' as a decorative archivolt above it, while the Q-39 question text
+(our own, 19 Oct) told you 3.05 + 0.45 = 3.50 m to the top of the arch, and your answer C (outer arc 3.29 m) repeated
+3.29 x 3.50 = 11.51 m2. Your width rule is not in question. If the Checker confirms the reading, the area by your own rules
+would be 3.29 x 3.00 .. 3.05 = 9.87 .. 10.03 m2 instead of 11.51; because your answer quoted the 3.50 figure, it comes to
+you once, in the section-6 format, after the Checker's ruling, never before. Until then W17 stays HELD 9.870 .. 11.515.
+
+NEEDS FIXING: none.
+
 ## LEAD REPORT 2026-10-23 20:10 UTC
 
 Repositories: attached Urban-Project-AI checkout (main ccbe7876); `.work` prepared AUTOMATICALLY ("setup by auto", 20:10).
