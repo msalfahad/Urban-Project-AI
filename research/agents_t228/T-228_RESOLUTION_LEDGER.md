@@ -7,6 +7,47 @@ unchanged (V2.9 + route G); nothing integrated into a candidate (a later lane I 
 `integrates:`). ERS: read; s.2 steps 1-6 (element, evidence, reconstruction, reconciliation in units, status), s.3
 (installed vs procurement, build before deduct, one element once), s.4 (rule + test), s.7 row below.
 
+## 0. Rework r2 (worker 2, 2026-10-24 10:45 UTC; Verifier 09:59 REJECTED gate e + h, narrow scope only)
+
+Physical element first: the ST-01 dog-leg stair rises in a 2.50 m shaft beside the lift, GF +1.00 -> landing +3.50 ->
+1F +5.50 -> landing about +7.6 -> 2F +9.70 (T-184). Its outer wall is ONE tall shaft wall on the GF-W10 / 1F-W10 / 2F-W02
+line; the storey floors +5.50 / +9.70 meet the shaft at its far end, not on this wall. The finding F1 (GF-W10 stair-foot
+piece HELD) therefore applies to the same 2.500 m piece on every storey of the line.
+
+Evidence, own read this run (ST7757 dxf, sha 9f9d1179, by handle): '(With Stair)' is printed exactly 3 times: 6B6 on the
+GFRS frame beside B3 6B7 (BM-GF-015), 6B8 on the FFRS frame beside B3 6B9 (BM-1F-001), 1826 on the GFRS frame beside B3
+1827 over CB3 span 2 (BM-GF-057, the round stair ST-02). SFRS prints a plain B3 (79D, BM-2F-001). BM-GF-015 / BM-1F-001 /
+BM-2F-001 and BM-GF-057 / BM-1F-023 span 2 sit at one plan position on every frame (T-110 x / y: one frame step for all
+pairs, within 0.01 m; tested). On SL-1 no floor-level member is printed on that span on any frame; section A-A cuts no
+slab at +5.50 / +9.70 on the stair-wall line (Verifier 09:59). On SL-2 the GFRS frame prints CB3 20x75 (the floor-level
+band) under span 2 beside the cranked 'B3 (With Stair)' stair beam (T-110, T-084), so the 1F floor exists there.
+
+Rule R-T228-3 (register_v2.stair_line_flags, any villa): a '(With Stair)' mark on ANY storey frame of a member line holds
+every wall piece under the line unless a floor at the piece's own basis is printed on that line at its storey (slab cut,
+or a floor-level member beside the stair mark), and also when the piece's top member is the stair member with no
+floor-level member printed with it. Findings may only hold (R-T228-2).
+
+| Wall | Piece on the stair line | Check | v2 r1 | v2 r2 |
+|---|---|---|---|---|
+| GF-W10 | B3 2.500 m (SL-1) | HELD (base +0.30 landing, top stair member) | net HELD, gross SS 50.845 | net HELD, gross HELD (figure 50.845 kept); eastern pieces as their own figure: CB2 3.470 x 4.00 + CB2 3.350 x 4.00 + B24 3.550 x 3.75 = 40.5925 - W05 / W06 / W07 1.440 = **39.1525 m2** on the +1.00 basis (Checker 09:59; r1 text said 39.155 with B24 3.540: the pieces close to 12.870 m only with 3.550) + W.C. 0 .. 0.945 HELD |
+| 1F-W10 | B3 2.500 m (SL-1) | HELD (base: no +5.50 floor; top: the stair member) | net 44.929 SOURCE-SUPPORTED | net HELD, gross HELD; CB9 pieces 10.370 m x 3.70 = **38.369 m2** (figure, not a quantity); B3 piece 9.500 m2 on the +5.50 basis HELD; W21 / W22 / W23 / W25 2.940 not assigned to pieces, so no net is formed |
+| 2F-W02 | B3 2.500 m (SL-1) | HELD (base: no +9.70 floor) | HELD (BM-2F-015 depth) | HELD, both causes named (F4) |
+| GF-W03 | 2.650 m under CB3 / B3 (SL-2) | HELD (GF base under the flight not printed) | HELD (D-03, Q-61 (2)) | HELD, F5 named |
+| 1F-W06 | CB11 span 2 2.64 m (SL-2) | not held: floor-level CB3 printed under the piece | 54.487 SS | unchanged (Q-61 (2) open: if the designer removes CB3 from span 2 the check re-runs) |
+| 1F-W22 | 0.14 m under CB11 (SL-2) | not held (same) | unchanged | unchanged |
+
+Effect (net installed blockwork, development villa): established net 494.189 -> **449.260 m2** (-44.929, 1F-W10 now
+HELD); SOURCE-SUPPORTED net 404.587 -> 359.658; VERIFIED 4.458 and PROJECT-SPECIFIC 85.144 unchanged; m3 established
+89.660 -> 80.674; walls net HELD 38 -> 39 of 76; gross HELD 329.209 -> 427.923 m2 (GF-W10 50.845 + 1F-W10 47.869 move
+from SOURCE-SUPPORTED, figures kept, never 0). 1F white 0.20 established net 148.896 -> 103.967 against the freelancer's
+1F external 165.621 (comparison only; not like for like: 1F-W04 and 1F-W10 held, his 41.25 projections). Length identity
+unchanged (no wall length moved). Register row identity kept (one row per v1 wall): the eastern GF-W10 figure is carried in
+the row's bounds text and in STAIR_LINE_CHECK.csv, not as a new row (a split row would be a worker number, R-T228-1).
+Everything else in v2 is re-used as is. Section 4 below is the r1 text (its 39.155 is superseded by 39.1525 here).
+
+Lessons row proposed (ERS s.7): "A finding about one piece of a multi-storey element (a stair shaft wall) is checked on
+every storey of the same plan line before hand-in; the check is a test (R-T228-3), not a reading."
+
 ## 1. What the register now says (net installed blockwork m2, development villa)
 
 Register v2 = register v1 (T-225) + 55 checker-merged changes + 1 hold from this run's own drawing finding

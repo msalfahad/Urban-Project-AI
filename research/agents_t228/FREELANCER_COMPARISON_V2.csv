@@ -2,7 +2,7 @@ floor,freelancer_section,freelancer_length_m,freelancer_gross_m2,freelancer_dedu
 GF,EXTERNAL,78.550,300.875,34.520,266.355,76.743,0.600,72.204,94.706,4.458,10,"NO (engine walls held: missing, not 0)",,comparison column only (programme s.5): never an input or a target
 GF,INTERNAL 0.15,47.530,181.720,13.920,167.800,39.599,1.525,83.658,84.872,0.000,6,"NO (engine walls held: missing, not 0)",FENCE (not a building wall) 74.400 m2,comparison column only (programme s.5): never an input or a target
 GF,INTERNAL 0.20,8.200,32.800,not split,not split,15.000,2.650,0.000,0.000,0.000,6,"NO (engine walls held: missing, not 0)",,comparison column only (programme s.5): never an input or a target
-1F,EXTERNAL,54.970,199.651,34.030,165.621,50.813,0.823,15.833,148.896,0.000,1,"NO (engine walls held: missing, not 0)",PROJECTION (no wall run) 41.250 m2,comparison column only (programme s.5): never an input or a target
+1F,EXTERNAL,54.970,199.651,34.030,165.621,50.813,0.823,15.833,103.967,0.000,2,"NO (engine walls held: missing, not 0)",PROJECTION (no wall run) 41.250 m2,comparison column only (programme s.5): never an input or a target
 1F,INTERNAL 0.15,57.140,211.418,16.320,195.098,56.813,10.339,89.039,89.039,0.000,7,"NO (engine walls held: missing, not 0)",PARAPET (ground-roof) 66.000 m2,comparison column only (programme s.5): never an input or a target
 1F,INTERNAL 0.20,8.200,30.340,not split,not split,9.620,0.000,23.900,23.900,0.000,1,"NO (engine walls held: missing, not 0)",,comparison column only (programme s.5): never an input or a target
 2F,EXTERNAL,27.900,96.255,9.680,86.575,26.850,4.451,21.476,21.476,0.000,3,"NO (engine walls held: missing, not 0)",,comparison column only (programme s.5): never an input or a target

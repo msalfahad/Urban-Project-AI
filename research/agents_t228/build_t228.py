@@ -215,17 +215,98 @@ def rulings():
 
 
 A10 = f"{DRIVE} / p7757_arch_sheet10.pdf (section A-A, 1:100)"
+V0959 = "Verifier 2026-10-24 09:59 UTC (T-228 REJECTED, gate e + h; narrow r2)"
+
+# R-T228-3 input: member lines that carry a '(With Stair)' mark on at least one storey frame (own read of ST7757 dxf
+# this run, by entity handle; members by the T-110 register, MERGED). Frames: GF = GROUND FLOOR ROOF SLAB (block GFRS),
+# 1F = FIRST FLOOR ROOF SLAB (FFRS), 2F = SECOND FLOOR ROOF SLAB (SFRS). A member of one line sits at the same plan
+# position on every frame (checked against the T-110 register by line_positions_ok()).
+STAIR_LINES = [
+    {"line_id": "SL-1 (ST-01 dog-leg shaft beside the lift, outer wall line)",
+     "members": {"GF": "BM-GF-015", "1F": "BM-1F-001", "2F": "BM-2F-001"},
+     "spans": {"GF": "BEAMS:GF:BAND0016.1", "1F": "BEAMS:1F:BAND0001.1", "2F": "BEAMS:2F:BAND0001.1"},
+     "with_stair": {"GF": f"{ST} GFRS frame: text 6B6 '(With Stair)' beside the B3 mark 6B7 (BM-GF-015)",
+                    "1F": f"{ST} FFRS frame: text 6B8 '(With Stair)' beside the B3 mark 6B9 (BM-1F-001)"},
+     "floor_level_mark": {},
+     "floor_at_basis": {},
+     "no_floor_evidence": (f"GFRS and FFRS print only 'B3 (With Stair)' on this span (no floor-level band mark; the next "
+                           f"marks are CB2 42A / CB9 6C6 on the next span); SFRS prints a plain B3 (79D). {A10}: no slab "
+                           f"cut at +5.50 or +9.70 on the stair-wall line; landing members at +3.50 printed and about "
+                           f"+7.6 ({V0959}); T-184 ST-01: GF +1.00 -> landing +3.50 -> 1F +5.50 -> landing +7.516 / "
+                           f"+7.684 -> 2F +9.70, the floor landings at the far end of the shaft; GF: the stair-foot "
+                           f"piece stands on the PRINTED +0.30 landing (F1), not the +1.00 basis")},
+    {"line_id": "SL-2 (ST-02 round stair, straight flight along CB3 span 2)",
+     "members": {"GF": "BM-GF-057", "1F": "BM-1F-023"},
+     "spans": {"GF": "BEAMS:GF:BAND0019.2", "1F": "BEAMS:1F:BAND0027.2"},
+     "other_spans_m": {"1F": [6.7083, 3.3]},     # BM-1F-023 spans 1 / 3 (T-110 BAND0027.1 / .3), not under the flight
+     "with_stair": {"GF": f"{ST} GFRS frame: text 1826 '(With Stair)' beside the B3 mark 1827 over CB3 span 2 "
+                          f"(BM-GF-057)"},
+     "floor_level_mark": {"GF": "CB3 20x75 printed under each of the band's 3 spans incl. span 2 (T-110 BM-GF-057; "
+                                "T-084: 'B3 (With Stair)' is the cranked stair beam of the TYPICAL DETAIL OF STAIR "
+                                "BEAM, a member of its own beside the floor-level CB3)"},
+     "floor_at_basis": {"1F": "the floor-level CB3 band printed on the GFRS frame under span 2 carries the 1F floor at "
+                              "this line (Q-61 (2) designer item on the B3 / CB3 count stays open: if the designer "
+                              "removes CB3 from span 2 this check re-runs)"},
+     "no_floor_evidence": "GF: the GF base of GF-W03 under the flight is not printed (GF-W03 already HELD)"},
+]
+FRAME_STEP_TOL, FRAME_Y_TOL = 0.01, 0.06
+
+
+def line_positions_ok():
+    """Every member of a stair line sits at the same plan position after the frame offset (T-110 x / y, m): one common
+    step between consecutive frames for all lines. Returns a list of problems (empty = consistent)."""
+    reg = {(r["member_id"], r["component"]): r for r in rd("research/agents_t110/BEAM_MEMBER_REGISTER.csv")}
+    steps, bad = [], []
+    for ln in STAIR_LINES:
+        fr = sorted(ln["members"], key=R.STOREYS.index)
+        for a, b in zip(fr, fr[1:]):
+            ra, rb = (reg[(ln["members"][a], ln["spans"][a])], reg[(ln["members"][b], ln["spans"][b])])
+            steps.append(f(ra["x"]) - f(rb["x"]))
+            if abs(f(ra["y"]) - f(rb["y"])) > FRAME_Y_TOL or abs(f(ra["length_m"]) - f(rb["length_m"])) > 0.02:
+                bad.append(f"{ln['line_id']}: {ln['members'][a]} / {ln['members'][b]} not at one plan position")
+    if steps and max(steps) - min(steps) > FRAME_STEP_TOL:
+        bad.append(f"frame steps differ: {min(steps):.3f} .. {max(steps):.3f} m")
+    return bad
+
+
+PIECE = __import__("re").compile(r"(\S+) (BM-(?:GF|1F|2F|3F|RF)-\d{3}) \(h [^)]*\): ([\d.]+) m -> h ([\d.]+|HELD)")
+EXTRA_PIECES = [  # pieces whose v1 evidence names the member by its marks only (no BM id in the piece text)
+    {"wall_id": "GF-W03", "storey": "GF", "member_top": "BM-GF-057", "length_m": "2.650", "height_m": "HELD",
+     "mark": "CB3 and B3 (With Stair)"}]
+
+
+def wall_pieces(rows):
+    """Pieces per wall from the first 'member above / height' list of its evidence (later '||' copies repeat it)."""
+    out = []
+    for r in rows:
+        ev = r["evidence"].split(" || ")[0]
+        if "member above / height:" not in ev:
+            continue
+        seg = ev.split("member above / height:", 1)[1].split("; storey heights", 1)[0]
+        for m in PIECE.finditer(seg):
+            out.append({"wall_id": r["wall_id"], "storey": r["floor"], "member_top": m.group(2), "length_m": m.group(3),
+                        "height_m": m.group(4), "mark": m.group(1)})
+    return out + EXTRA_PIECES
+
+
+def stair_check(rows):
+    return R.stair_line_flags(wall_pieces(rows), STAIR_LINES)
+
+
 FINDINGS = [
     {"wall_id": "GF-W10", "source": "T-228 FINDING F1 (pending Checker)",
-     "reference": "own read this run: P7757.dxf GF plan + section A-A",
+     "reference": "own read: P7757.dxf GF plan + section A-A; r2: Checker figures of the eastern pieces (" + V0959 + ")",
      "why": "the 2.500 m stair-foot piece of GF-W10 stands on a PRINTED +0.30 landing, not the +1.00 basis of the "
-            "47.425, and section A-A cuts a concrete member on the wall line over D-GF-09: its masonry top is not B3",
-     "set": {"net_class": "HELD", "owner_status_class": "HELD", "net_m2": "", "net_m3": "",
+            "47.425, and section A-A cuts a concrete member on the wall line over D-GF-09: its masonry top is not B3; "
+            "r2: R-T228-3 flags the piece (SL-1 base and top), so the wall gross is not established either",
+     "set": {"gross_class": "HELD", "net_class": "HELD", "owner_status_class": "HELD", "net_m2": "", "net_m3": "",
              "held_cause_class": "stair-foot datum and top (T-228 F1)",
-             "net_bounds_m2": "47.425 on the +1.00 basis (Checker 21:15) is NOT the net: of it, the three pieces east of "
-                              "the stair (CB2 3.470 + CB2 3.350 at 4.00, B24 3.540 at 3.75; W05-W07 1.440) give 39.155 "
-                              "on the +1.00 basis; the stair-foot piece (2.500 m, B3 4.10 basis 10.250 - D-GF-09 1.980 = "
-                              "8.270) is HELD; + W.C. stretch increment 0 .. 0.945",
+             "net_bounds_m2": "47.425 on the +1.00 basis (Checker 21:15) is NOT the net. Eastern pieces as their own "
+                              "figure (Checker 2026-10-24 09:59): CB2 3.470 x 4.00 + CB2 3.350 x 4.00 + B24 3.550 x 3.75 "
+                              "= 40.5925 - W05 / W06 / W07 1.440 = 39.1525 m2 on the +1.00 basis (SOURCE-SUPPORTED, "
+                              "the register keeps one row per v1 wall, so the figure is carried here and in "
+                              "STAIR_LINE_CHECK.csv) + W.C. stretch 0 .. 0.945 HELD; the stair-foot piece (2.500 m, "
+                              "B3 4.10 basis 10.250 - D-GF-09 1.980 = 8.270, not a quantity) is HELD (R-T228-3, F1)",
              "pending_findings_t228": "F1: stair-foot piece of GF-W10 (2.500 m between the column faces S-COL.BON 2F7E "
                                       "and the 213 / 21A column stub, inner face lines 26E / 2AB, door D-GF-09 jambs at "
                                       "the 0.900 m gap of the outer face 2B8): plan LEVEL insert 4AB / text 4AC '+0.30' "
@@ -242,7 +323,44 @@ FINDINGS = [
                                   "W.C. floor level not drawn; D-GF-09 height Q-55 C (A-A draws the opening under the "
                                   "member; not scaled here)",
              "next_package": "lane A / S: stair-shaft member on the GF-W10 line (ST stair detail); Checker: F1 / F2",
-             "smallest_held_quantity": "stair-foot piece 8.270 m2 on the +1.00 basis (not a quantity) + W.C. 0 .. 0.945"}},
+             "smallest_held_quantity": "stair-foot piece 8.270 m2 on the +1.00 basis (not a quantity) + W.C. 0 .. 0.945; "
+                                       "the eastern pieces 39.1525 m2 (Checker 09:59) wait only on the F1 ruling"}},
+    {"wall_id": "1F-W10", "source": "T-228 r2 FINDING F3 (R-T228-3; pending Checker)",
+     "reference": V0959 + "; own read of ST7757 dxf this run (texts 6B6 / 6B8)",
+     "why": "the package's own stair-foot finding F1 applies unchanged to the sibling piece one storey up: the B3 "
+            "piece 2.500 m of 1F-W10 lies on line SL-1, whose GFRS / FFRS frames print 'B3 (With Stair)' with no "
+            "floor-level member and A-A cuts no slab at +5.50 / +9.70 on that line: the +5.50 floor it was measured on "
+            "does not exist there, its top is the cranked stair beam",
+     "set": {"gross_class": "HELD", "net_class": "HELD", "owner_status_class": "HELD", "net_m2": "", "net_m3": "",
+             "held_cause_class": "stair-shaft piece (T-228 F3, R-T228-3)",
+             "net_bounds_m2": "gross 47.869 m2 is NOT established: the three CB9 pieces (3.470 + 3.350 + 3.550 = 10.370 "
+                              "m x 3.70) give 38.369 m2 on the +5.50 basis (figure, not a quantity); the B3 piece "
+                              "(2.500 m, 3.80 basis 9.500) is HELD; W21 / W22 / W23 / W25 2.940 are not assigned to "
+                              "pieces, so no net is formed",
+             "unresolved_reason": "B3 piece of SL-1 (ST-01 shaft): no floor at +5.50 on the stair-wall line (A-A), "
+                                  "masonry between the +3.50 / about +7.6 landing members and the cranked B3 (With "
+                                  "Stair); base / top / height not printed as a wall datum",
+             "next_package": "lane A / S: ST-01 shaft wall by landing member (ST stair detail, A-A); Checker: F3",
+             "smallest_held_quantity": "B3 piece 2.500 m (9.500 m2 on the +5.50 basis, not a quantity); the CB9 pieces "
+                                       "38.369 m2 wait only on the opening split",
+             "pending_findings_t228": "F3 (r2, R-T228-3): SL-1 member BM-1F-001 (FFRS 'B3 (With Stair)' text 6B8); base "
+                                      "frame GFRS prints 'B3 (With Stair)' text 6B6 at the same plan position "
+                                      "(BM-GF-015), no floor-level mark on that span; A-A no slab cut at +5.50; "
+                                      "Verifier 09:59 gate e + h"}},
+    {"wall_id": "2F-W02", "source": "T-228 r2 FINDING F4 (R-T228-3; already HELD)",
+     "reference": V0959,
+     "why": "the B3 piece 2.500 m of 2F-W02 (BM-2F-001) lies on SL-1: its base frame FFRS prints 'B3 (With Stair)' "
+            "(6B8), A-A cuts no slab at +9.70 on the line: HELD by R-T228-3 as well (the wall was already HELD: beam "
+            "depth BM-2F-015 / openings)",
+     "set": {"pending_findings_t228": "F4 (r2, R-T228-3): B3 piece 2.500 m (BM-2F-001, SFRS plain B3 79D) on SL-1; base "
+                                      "frame FFRS 'B3 (With Stair)' 6B8, no floor-level mark, A-A no slab at +9.70: "
+                                      "HELD (already HELD by the BM-2F-015 depth; both causes must clear)"}},
+    {"wall_id": "GF-W03", "source": "T-228 r2 FINDING F5 (R-T228-3; already HELD)",
+     "reference": "own read of ST7757 dxf this run (text 1826)",
+     "why": "GF-W03 (2.650 m under CB3 span 2 / 'B3 (With Stair)', SL-2): its GF basis under the round-stair flight is "
+            "not printed: HELD by R-T228-3 as well (already HELD: two marks D-03 / Q-61 (2))",
+     "set": {"pending_findings_t228": "F5 (r2, R-T228-3): SL-2 GFRS 'B3 (With Stair)' 1827 / 1826 over CB3 span 2; "
+                                      "base not printed: HELD (already HELD by D-03 / Q-61 (2))"}},
 ]
 
 
@@ -291,13 +409,28 @@ def finish(rows, changed):
             r["next_package"] = "designer D-39 (annex roof slab top / build-up); owner Q-54 B HOLD"
         if r["net_class"] in R.ESTABLISHED and r["net_class"] != R.HELD:
             r["held_cause_class"] = r["held_cause_class"] if r["held_increment_m2"] else ""
-        hl = f(r["held_length_m"])
-        net = f"net {r['net_m2']} m2" if r["net_class"] in R.ESTABLISHED else "net HELD"
-        inc = f"; + HELD increment {r['held_increment_m2'].split(' (')[0].split(':')[0]}" if r["held_increment_m2"] else ""
-        r["calculation"] = (f"({r['length_m']} - held {hl:.3f}) m x h_w {r['height_weighted_m'] or 'HELD'} m = gross "
-                            f"{r['gross_m2'] or 'HELD'} m2 ({r['gross_class']}); - deductions {r['deductions_m2'] or '0.000'}"
-                            f" m2 = {net}{inc}")
+        calc(r)
         r["source_ledgers"] = (r["source_ledgers"] + " + v2: " + r["v2_sources"]).strip(" +")
+
+
+def calc(r):
+    hl = f(r["held_length_m"])
+    net = f"net {r['net_m2']} m2" if r["net_class"] in R.ESTABLISHED else "net HELD"
+    inc = f"; + HELD increment {r['held_increment_m2'].split(' (')[0].split(':')[0]}" if r["held_increment_m2"] else ""
+    r["calculation"] = (f"({r['length_m']} - held {hl:.3f}) m x h_w {r['height_weighted_m'] or 'HELD'} m = gross "
+                        f"{r['gross_m2'] or 'HELD'} m2 ({r['gross_class']}); - deductions {r['deductions_m2'] or '0.000'}"
+                        f" m2 = {net}{inc}")
+
+
+def after_hold(rows, held_ids):
+    """Derived fields of a wall a finding held (r2): the calculation text and the T-176 product counts follow the
+    HELD net (a count on a held net is not carried)."""
+    for r in rows:
+        if r["wall_id"] in held_ids and r["net_class"] == R.HELD:
+            calc(r)
+            if r["t176_products"] and "HELD pcs" not in r["t176_products"]:
+                r["t176_products"] = "; ".join(f"{p.split(' ')[0]} HELD pcs (HELD)"
+                                               for p in r["t176_products"].split("; "))
 
 
 def build_register():
@@ -314,6 +447,7 @@ def build_register():
     rows, log = R.apply(base, ch, MERGED)
     finish(rows, set(srcs))
     rows, hlog = R.hold(rows, FINDINGS)
+    after_hold(rows, {h["wall_id"] for h in FINDINGS if "net_class" in h["set"]})
     log += hlog
     census_annotations(rows)
     for r in rows:
@@ -345,6 +479,12 @@ def coverage_table(v1rows, v2rows):
 
 
 DESIGNER = {
+    "stair-foot datum and top (T-228 F1)": "ST-01 shaft wall on the GF-W10 line: base +0.30 landing printed, top = "
+                                           "the stair landing member / cranked 'B3 (With Stair)' (size and soffit "
+                                           "from the ST stair detail); W.C. floor level not drawn",
+    "stair-shaft piece (T-228 F3, R-T228-3)": "ST-01 shaft wall piece on the 1F-W10 line: no floor at +5.50 (A-A); "
+                                              "base / top = the +3.50 and about +7.6 landing members and the cranked "
+                                              "B3 (ST stair detail); opening split W21 / W22 / W23 / W25 by piece",
     "annex datum (Q-54 B)": "annex roof slab top / build-up (designer D-39; owner Q-54 B HOLD until the datum is "
                             "verified); B-B puts +4.30 on a layer over the roof band (T-227)",
     "lift tie beam size (ST p.8 n.19)": "size b x h of the GF lift tie beam at +3.00 (ST p.8 note 19; consultant row 7 "
@@ -366,7 +506,10 @@ def blockers(v2rows):
             continue
         cause = r["held_cause_class"] or ("held increment" if r["held_increment_m2"] else "")
         if r["net_class"] == R.HELD:
-            if r["gross_class"] == R.HELD:
+            if r["gross_class"] == R.HELD and cause.startswith("stair-"):
+                kind = "gross and net HELD (stair-line piece, R-T228-3)"
+                smallest = r["smallest_held_quantity"]
+            elif r["gross_class"] == R.HELD:
                 kind = "gross and net HELD"
                 smallest = f"gross figure {r['gross_m2'] or '0.000'} m2 on the established pieces (not a quantity)"
                 if f(r["held_length_m"]):
@@ -483,10 +626,29 @@ def _v1class(v1rows, wid):
     return R.HELD
 
 
+STAIR_COLS = ("line_id", "wall_id", "storey", "member_top", "mark", "length_m", "height_m", "flagged", "reasons",
+              "wall_gross_class_v2", "wall_net_class_v2", "wall_figures", "line_evidence")
+
+
+def stair_table(v2rows):
+    by = {r["wall_id"]: r for r in v2rows}
+    ev = {ln["line_id"]: " | ".join(list(ln["with_stair"].values()) + list(ln["floor_level_mark"].values())
+                                    + [ln["no_floor_evidence"]]) for ln in STAIR_LINES}
+    out = []
+    for x in stair_check(v2rows):
+        r = by[x["wall_id"]]
+        out.append({**{k: x[k] for k in STAIR_COLS[:9]}, "flagged": "HELD" if x["flagged"] else "not held (floor printed)",
+                    "wall_gross_class_v2": r["gross_class"], "wall_net_class_v2": r["net_class"],
+                    "wall_figures": r["net_bounds_m2"] if x["flagged"] else f"net {r['net_m2']} m2 ({r['net_class']})",
+                    "line_evidence": ev[x["line_id"]]})
+    return out
+
+
 def outputs():
     a, b, log = build_register()
     cols = list(b[0].keys())
     return {
+        "STAIR_LINE_CHECK.csv": to_csv(stair_table(b), list(STAIR_COLS)),
         "BLOCKWORK_WALL_REGISTER_V2.csv": to_csv(b, cols),
         "CHANGE_LOG_V2.csv": to_csv(log),
         "AFTER_COVERAGE.csv": to_csv(coverage_table(a, b)),

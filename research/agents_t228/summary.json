@@ -13,20 +13,20 @@
   "walls_net_held": 44.0
  },
  "v2": {
-  "gross HELD": 329.209,
-  "gross SOURCE-SUPPORTED PENDING INDEPENDENT CHECK": 571.986,
+  "gross HELD": 427.923,
+  "gross SOURCE-SUPPORTED PENDING INDEPENDENT CHECK": 473.272,
   "gross VERIFIED": 101.236,
   "gross_figure": 1002.431,
   "held_length": 23.134,
   "length": 289.688,
   "net PROJECT-SPECIFIC": 85.144,
-  "net SOURCE-SUPPORTED PENDING INDEPENDENT CHECK": 404.587,
+  "net SOURCE-SUPPORTED PENDING INDEPENDENT CHECK": 359.658,
   "net VERIFIED": 4.458,
-  "net_m3 established": 89.66,
+  "net_m3 established": 80.674,
   "walls": 76.0,
-  "walls_net_held": 38.0
+  "walls_net_held": 39.0
  },
- "changes": 56,
+ "changes": 59,
  "changes_by_source": {
   "T-226": 5,
   "T-227": 32,
@@ -45,7 +45,6 @@
   "1F-W00",
   "1F-W05",
   "1F-W06",
-  "1F-W10",
   "1F-W00/W01 BAY-ENDS",
   "GF P-GF-05 ABOVE-LINTEL"
  ],
@@ -72,5 +71,5 @@
   "GF P-GF-05 ABOVE-LINTEL": 1.2
  },
  "length_identity_residual_m": 0.0,
- "blockers": 40
+ "blockers": 41
 }

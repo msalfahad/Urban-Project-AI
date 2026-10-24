@@ -245,3 +245,74 @@ def test_no_coordinates_in_outputs():
     pat = re.compile(r"-?\d{5,}\.\d+|\b\d{6}\b")
     for p in HERE.glob("*.csv"):
         assert not pat.search(p.read_text(encoding="utf-8")), p.name
+
+
+# ---------------------------------------------------------------- r2: R-T228-3 stair-line sibling check
+# Fixture villa S (NOT Alsenan): a 3-storey shaft stair beside a wall line L1 (member X on every frame); the plans print
+# '(With Stair)' on the GF and 1F frames, no floor-level mark; the 2F floor is printed (slab cut in the section).
+# A second line L2 prints '(With Stair)' on GF with a floor-level band beside it: the 1F floor exists there.
+def _lines_s():
+    return [{"line_id": "L1", "members": {"GF": "X-GF", "1F": "X-1F", "2F": "X-2F"},
+             "with_stair": {"GF": "text a", "1F": "text b"}, "floor_level_mark": {}, "floor_at_basis": {"2F": "cut"}},
+            {"line_id": "L2", "members": {"GF": "Y-GF", "1F": "Y-1F"}, "with_stair": {"GF": "text c"},
+             "floor_level_mark": {"GF": "band"}, "floor_at_basis": {"1F": "band"},
+             "other_spans_m": {"1F": [4.0]}}]
+
+
+def _p(wid, s, m, L="2.500"):
+    return {"wall_id": wid, "storey": s, "member_top": m, "length_m": L, "height_m": "3.00"}
+
+
+def test_stair_line_normal():
+    fl = {x["wall_id"]: x for x in R.stair_line_flags(
+        [_p("S-GF", "GF", "X-GF"), _p("S-1F", "1F", "X-1F"), _p("S-2F", "2F", "X-2F"), _p("T-1F", "1F", "Y-1F"),
+         _p("T-1F-other", "1F", "Y-1F", "4.000"), _p("U-1F", "1F", "Z-1F")], _lines_s())}
+    assert fl["S-GF"]["flagged"] and "top:" in fl["S-GF"]["reasons"] and "base:" in fl["S-GF"]["reasons"]
+    assert fl["S-1F"]["flagged"] and "base frame GF" in fl["S-1F"]["reasons"] and "top:" in fl["S-1F"]["reasons"]
+    assert not fl["S-2F"]["flagged"]                       # slab cut printed at the 2F basis, top is a plain member
+    assert not fl["T-1F"]["flagged"]                       # floor-level band printed beside the stair mark
+    assert "T-1F-other" not in fl and "U-1F" not in fl     # other span of the member / no stair line
+
+
+def test_stair_line_adverse():
+    lines = _lines_s()
+    # without the printed 2F slab cut the 2F piece is HELD too ('any storey frame' of the line)
+    lines[0]["floor_at_basis"] = {}
+    fl = {x["wall_id"]: x for x in R.stair_line_flags([_p("S-2F", "2F", "X-2F")], lines)}
+    assert fl["S-2F"]["flagged"] and "top:" not in fl["S-2F"]["reasons"]
+    # mirrored / rotated: frame order and piece order do not change the result
+    rev = [{**ln, "members": dict(reversed(list(ln["members"].items())))} for ln in reversed(_lines_s())]
+    ps = [_p("S-GF", "GF", "X-GF"), _p("S-1F", "1F", "X-1F"), _p("T-1F", "1F", "Y-1F")]
+    key = lambda out: sorted((x["wall_id"], x["flagged"]) for x in out)
+    assert key(R.stair_line_flags(ps, _lines_s())) == key(R.stair_line_flags(list(reversed(ps)), rev))
+    # millimetres: a piece that matches no other span stays on the line (conservative, checked, never dropped)
+    assert [x["wall_id"] for x in R.stair_line_flags([_p("T-mm", "1F", "Y-1F", "4000.0")], _lines_s())] == ["T-mm"]
+    for bad_lines, bad_p, code in (([{**_lines_s()[0], "with_stair": {}}], [], "NOT_A_STAIR_LINE"),
+                                   (_lines_s(), [_p("S-B1", "B1", "X-GF")], "UNKNOWN_STOREY")):
+        with pytest.raises(R.RegisterError) as e:
+            R.stair_line_flags(bad_p, bad_lines)
+        assert e.value.code == code
+    # a register that keeps an established net on a flagged wall is caught
+    rows = [w("S-1F", "0.2", "WHITE", "2.500", "3.000", "7.500", SS, "0.000", "7.500", SS, fl="1F")]
+    flags = R.stair_line_flags([_p("S-1F", "1F", "X-1F")], _lines_s())
+    assert R.stair_line_violations(rows, flags) == ["S-1F"]
+    rows[0].update(net_class=HELD, net_m2="")
+    assert R.stair_line_violations(rows, flags) == []
+
+
+def test_alsenan_stair_line_sibling_check(built):
+    _, v2, log = built
+    assert B.line_positions_ok() == []                     # one plan position per line on every frame (T-110 x / y)
+    fl = B.stair_check(v2)
+    assert {x["wall_id"] for x in fl if x["flagged"]} == {"GF-W10", "1F-W10", "2F-W02", "GF-W03"}
+    assert {x["wall_id"] for x in fl if not x["flagged"]} == {"1F-W06", "1F-W22"}
+    assert R.stair_line_violations(v2, fl) == []
+    r = {x["wall_id"]: x for x in v2}
+    w10 = r["1F-W10"]
+    assert w10["net_class"] == HELD and w10["gross_class"] == HELD and w10["net_m2"] == "" and w10["net_m3"] == ""
+    assert "38.369" in w10["net_bounds_m2"] and "44.929" not in w10["net_bounds_m2"]
+    assert "HELD pcs" in w10["t176_products"] and "net HELD" in w10["calculation"]
+    assert "39.1525" in r["GF-W10"]["net_bounds_m2"] and r["GF-W10"]["gross_class"] == HELD
+    assert "F4" in r["2F-W02"]["pending_findings_t228"] and r["2F-W02"]["net_class"] == HELD
+    assert any(c["op"] == "hold" and c["wall_id"] == "1F-W10" for c in log)
+    assert {b["wall_id"] for b in _csv("STAIR_LINE_CHECK.csv")} == {x["wall_id"] for x in fl}

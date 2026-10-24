@@ -15,6 +15,7 @@ s.1 / s.4 / s.5, ERS s.2.5 / s.2.6):
   4. A quantity resting on an owner-approved fallback (door height Q-55 C, white / black Q-60, Q-75 module) stays
      PROJECT-SPECIFIC even after a Checker re-measure (WORKFLOW_CONTROLS s.5: stays visible).
   5. A range between two readings is carried as its common part (established) + a HELD increment, never as either end.
+  (R-T228-3, the stair-line sibling check, is in stair_line_flags below.)
   6. After the changes every wall row satisfies R-T225-1 (established net = gross - deductions; a HELD net carries no
      figure; no established net on a HELD gross) and the coverage by class reconciles to the gross:
         gross figure = net VERIFIED + net SOURCE-SUPPORTED + net PROJECT-SPECIFIC
@@ -154,6 +155,61 @@ def gross_from_pieces(pieces, length_m, tol=0.001):
 
 
 MAX_LEN, MAX_H = 200.0, 30.0
+
+STOREYS = ("GF", "1F", "2F", "3F", "RF")       # frame S = the roof slab plan of storey S (top of S walls)
+SPAN_TOL = 0.05
+
+
+def stair_line_flags(pieces, lines):
+    """R-T228-3 (any villa; T-228 r2, Verifier 2026-10-24 09:59 gate e + h; ERS s.2.1 'one physical element, every
+    storey'): a stair that passes a member line on one storey can remove the floor on every storey of that line.
+    A '(With Stair)' mark printed on ANY storey frame of a member line makes every wall piece under that line HELD
+      (base) unless the drawings print a floor at the piece's own basis level on that line at its storey (a slab cut in
+             a section, or a floor-level member mark printed on the base frame beside the stair mark), and
+      (top)  when the piece's own top member is the '(With Stair)' member and no floor-level member is printed with it
+             on that span (the top is then the cranked stair beam, not a floor-level soffit).
+    `pieces`: [{wall_id, storey, member_top, length_m, height_m}]; `lines`: [{line_id, members: {frame: member_id},
+    with_stair: {frame: reference}, floor_level_mark: {frame: reference}, floor_at_basis: {storey: reference},
+    other_spans_m: {frame: [span lengths of the same member id that are NOT on the stair line]}}].
+    A piece joins a line by its top member; when that member id also has other spans, a piece whose length matches
+    one of those spans (within SPAN_TOL) is on that other span, not on the line; any other piece of the member is
+    kept on the line (conservative: span not identified). Returns one record per piece on a stair line: {...,
+    line_id, flagged (bool), reasons}. A piece whose top member is on no stair line is not returned. A storey not in
+    STOREYS is refused."""
+    by_member = {}
+    for ln in lines:
+        if not ln["with_stair"]:
+            raise RegisterError("NOT_A_STAIR_LINE", f"{ln['line_id']}: no '(With Stair)' mark on any frame")
+        for fr, m in ln["members"].items():
+            if fr not in STOREYS:
+                raise RegisterError("UNKNOWN_STOREY", f"{ln['line_id']}: frame {fr}")
+            by_member[(fr, m)] = ln
+    out = []
+    for p in pieces:
+        s = p["storey"]
+        if s not in STOREYS:
+            raise RegisterError("UNKNOWN_STOREY", f"{p['wall_id']}: storey {s}")
+        ln = by_member.get((s, p["member_top"]))
+        if ln is None:
+            continue
+        if any(abs(f(p["length_m"]) - o) <= SPAN_TOL for o in ln.get("other_spans_m", {}).get(s, ())):
+            continue
+        why = []
+        if s not in ln["floor_at_basis"]:
+            base = STOREYS[STOREYS.index(s) - 1] if s != STOREYS[0] else "ground"
+            why.append(f"base: '(With Stair)' printed on the {'/'.join(sorted(ln['with_stair'], key=STOREYS.index))} frame(s) of "
+                       f"{ln['line_id']}; no floor at the {s} basis printed on that line (base frame {base})")
+        if s in ln["with_stair"] and s not in ln["floor_level_mark"]:
+            why.append(f"top: the {s} top member {p['member_top']} is the '(With Stair)' member and no floor-level "
+                       f"member is printed with it on that span")
+        out.append({**p, "line_id": ln["line_id"], "flagged": bool(why), "reasons": "; ".join(why)})
+    return out
+
+
+def stair_line_violations(rows, flags):
+    """Walls holding a flagged piece whose net is still established (R-T228-3 says HELD). Empty = consistent."""
+    by = {r["wall_id"]: r for r in rows}
+    return sorted({x["wall_id"] for x in flags if x["flagged"] and by[x["wall_id"]]["net_class"] != HELD})
 
 
 def check_row(r) -> None:
