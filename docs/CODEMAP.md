@@ -14,15 +14,15 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `data/` | 19 | Registries (owner facts, project rules, trades) and trade rules. Large run data is gitignored. |
 | `docs/` | 72 | Design notes and the generated maps. |
 | `documents/` | 5 |  |
-| `engine/` | 657 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
+| `engine/` | 658 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 3227 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 3244 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 18 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 1605 | pytest suites, one folder per round. |
+| `tests/` | 1613 | pytest suites, one folder per round. |
 | `tools/` | 113 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (254 modules)
@@ -383,11 +383,11 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `book.py` | 218 | MEDIUM | 3 | REPORTING V3 - openpyxl workbook writer in the agreed mock-up style. |
 | `pdf.py` | 156 | MEDIUM | 0 | REPORTING V3 - PDF documents (HTML -> Chromium), same style family as Reporting V2. |
 | `readback.py` | 68 | MEDIUM | 0 | REPORTING V3 - readback: every engine value and formula is where the cell map says, and after a LibreOffice |
-| `units.py` | 233 | HIGH | 1 | REPORTING V3 - unit control: engine units -> final BOQ display units (reporting only, no quantity change). |
+| `units.py` | 233 | HIGH | 2 | REPORTING V3 - unit control: engine units -> final BOQ display units (reporting only, no quantity change). |
 | `workbooks.py` | 242 | MEDIUM | 0 | REPORTING V3 - workbook layouts (generic over a BOQ_LINES model). |
 | `workbooks_v3b.py` | 308 | MEDIUM | 0 | REPORTING V3b - workbook layouts over the two-view line model (TECHNICAL_QTO / COMMERCIAL_BOQ). |
 
-## `engine/source/` (305 modules)
+## `engine/source/` (306 modules)
 
 | Module | Lines | Risk | Imp | Purpose |
 |---|---|---|---|---|
@@ -423,7 +423,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `arch_walls.py` | 236 | HIGH | 5 | WALL RUNS AND THE ROOM GRAPH (M9 S3) - the walls of one floor plan by thickness, and which spaces each wall and |
 | `authority_decisions.py` | 206 | CRITICAL | 2 | AUTHORITY DECISIONS - owner authority rulings, provenance classes and facet-state errata (generic, stdlib only). |
 | `bar_shapes.py` | 67 | MEDIUM | 3 | BAR SHAPES (M2) - developed bar lengths by shape, diameter-aware bends and hooks (generic, stdlib). |
-| `bbs_optimiser.py` | 114 | MEDIUM | 3 | BBS OPTIMISER (V3b) - bar hooks / bends by a recorded code method and deterministic cutting on stock lengths. |
+| `bbs_optimiser.py` | 114 | MEDIUM | 5 | BBS OPTIMISER (V3b) - bar hooks / bends by a recorded code method and deterministic cutting on stock lengths. |
 | `beam_binding.py` | 509 | MEDIUM | 1 | BEAM TAG -> PLAN BAND BINDING (V2) - type identity from the tag, section from the tag's OWN schedule namespace, |
 | `beam_binding_v2.py` | 635 | MEDIUM | 3 | BEAM BINDING V2 (T-085) - three corrections to how slab-plan beam bands are cut, bound and completed, as a NEW |
 | `beam_occurrence_recovery.py` | 118 | MEDIUM | 1 | BEAM_OCCURRENCE_RECOVERY (generic): every beam tag and every structural face band gets a terminal record. |
@@ -433,7 +433,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `blocker_remediation.py` | 74 | MEDIUM | 1 | BLOCKER_REMEDIATION_ENGINE (generic). |
 | `boq_canonical.py` | 134 | MEDIUM | 2 | CANONICAL BOQ ITEM MODEL (RC1) - one payable identity per physical measurement item. |
 | `boq_evidence.py` | 43 | MEDIUM | 1 | BOQ EVIDENCE MAPPING (R8.20) - which release blockers can change a quantity. |
-| `boq_line.py` | 386 | HIGH | 66 | CANONICAL BOQ LINE (M9 S1) - one payable physical measurement per line, bilingual, traceable (generic; stdlib only). |
+| `boq_line.py` | 386 | HIGH | 67 | CANONICAL BOQ LINE (M9 S1) - one payable physical measurement per line, bilingual, traceable (generic; stdlib only). |
 | `boq_reconcile.py` | 172 | CRITICAL | 2 | GENERIC BOQ RECONCILIATION (M7) - a frozen engine run against a reference bill of quantities, by family and |
 | `boq_report.py` | 94 | HIGH | 5 | BOQ REPORT LAYER (R8.19) - a PRESENTATION layer over evidence rows. It calculates NOTHING. |
 | `cad_guards.py` | 188 | MEDIUM | 3 | CAD / SOURCE GUARDS learnt from blind donor runs (generic). |
@@ -586,11 +586,12 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `raster_evidence.py` | 118 | MEDIUM | 1 | RASTER EVIDENCE (V3b) - scale calibration, measurement grades and cross-sheet checks for raster drawings. |
 | `realised.py` | 130 | HIGH | 5 | Neutral REALISED geometry records — the physical output schema shared by K1 and K2. |
 | `rebar_boq_sections.py` | 67 | MEDIUM | 1 | Structural BOQ reinforcement presentation: two visibly separate sections (generic, report layer). |
+| `rebar_laps_v1.py` | 404 | MEDIUM | 3 | REBAR LAPS V1 (task T-273) - lap splices of reinforcement bar groups as their own rows, from the lap authority that |
 | `rebar_model.py` | 479 | CRITICAL | 7 | REBAR_MODEL_V1 - a generic, typed reinforcement model: source definition -> occurrence -> bar geometry -> count -> |
 | `rebar_provenance.py` | 143 | CRITICAL | 4 | Generic accurate-rebar provenance contract: one contract for every element family (no second system). |
 | `rebar_sanity_qa.py` | 34 | MEDIUM | 2 | kg/m3 QA helpers - sanity layer, not the accurate reinforcement implementation (generic). |
 | `rebar_sanity_variance.py` | 156 | MEDIUM | 3 | REBAR SANITY VARIANCE - report layer between ACCURATE_BOQ_REBAR and ROUGH_REBAR_SUMMARY (generic). |
-| `rebar_unit_mass.py` | 72 | CRITICAL | 12 | REBAR UNIT MASS - one project-wide method (generic). |
+| `rebar_unit_mass.py` | 72 | CRITICAL | 13 | REBAR UNIT MASS - one project-wide method (generic). |
 | `reconcile.py` | 394 | MEDIUM | 4 | Tolerance-aware reconciliation of two CAD routes (K1 vs K2, or D1 vs D1') — R8.2 §14-§16. |
 | `region_candidates.py` | 191 | MEDIUM | 1 | Deterministic model-space REGION CANDIDATES (R8.4 §19-§20). |
 | `region_membership.py` | 218 | MEDIUM | 4 | Exact region membership of a curve (R8.8): SEGMENT, ARC, CIRCLE, ELLIPTICAL_ARC against an axis-aligned region. |
@@ -743,7 +744,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `audit_cad_source.py` | 155 | MEDIUM | 2 | Representation audit of an authored CAD source. No measurement. |
 | `audit_dwf_source.py` | 175 | MEDIUM | 0 | Structural audit of a DWF package. Representation only, no geometry read. |
 | `audit_submission_set.py` | 133 | MEDIUM | 1 | Per-page representation census of a multi-sheet source. No measurement. |
-| `boq_export_v1.py` | 1183 | MEDIUM | 4 | BOQ EXPORT V1 (task T-235, hand-in r1) - ONE command that writes a candidate BOQ as BOQ.xlsx + BOQ.csv + |
+| `boq_export_v1.py` | 1285 | MEDIUM | 5 | BOQ EXPORT V1 (task T-235, hand-in r1) - ONE command that writes a candidate BOQ as BOQ.xlsx + BOQ.csv + |
 | `campaign.py` | 245 | MEDIUM | 1 | Run and review a project marketing campaign (A17 + E21). |
 | `codemap.py` | 937 | MEDIUM | 0 | CODE MAP - the navigation layer for Claude Code (and people): where code, rules, tests and known defects live. |
 | `compare_source_provenance.py` | 301 | MEDIUM | 1 | Did a transformation destroy vector information, or recompress a scan? |
@@ -1161,8 +1162,10 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t267_stair_finish_levels/` | 3 |
 | `tests/t268_door_ruling/` | 2 |
 | `tests/t269_floor_blockers/` | 1 |
+| `tests/t271_ceilings/` | 1 |
 | `tests/t272_stirrup_closure/` | 3 |
-| `tests/t276_buried_faces/` | 2 |
+| `tests/t273_rebar_laps/` | 4 |
+| `tests/t276_buried_faces/` | 3 |
 | `tests/water_tank_s8_4/` | 3 |
 | `tests/zz_freeze_integrity/` | 2 |
 
@@ -1441,7 +1444,9 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t267/` | 4 |
 | `research/agents_t268/` | 5 |
 | `research/agents_t269/` | 4 |
+| `research/agents_t271/` | 11 |
 | `research/agents_t272/` | 7 |
+| `research/agents_t273/` | 6 |
 | `research/agents_t276/` | 10 |
 | `research/alsenan_arch_truth_05/` | 28 |
 | `research/alsenan_column_rebar_s3/` | 17 |

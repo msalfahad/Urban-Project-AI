@@ -1,0 +1,4544 @@
+{
+ "chains": [
+  {
+   "chain_id": "COLPOS-X01-Y01-2138-7462",
+   "checks": [
+    {
+     "check": "lap_is_top_splice",
+     "detail": "SEG-COL-C-X01-Y01-FOUNDATION|LAP_TOP",
+     "ok": true
+    },
+    {
+     "check": "foundation_core_exists",
+     "detail": "FOUNDATION MAIN_CORE row for the starter chain",
+     "ok": true
+    },
+    {
+     "check": "same_bars_starter_core",
+     "detail": "starter 8 T16 vs core 8 T16",
+     "ok": true
+    },
+    {
+     "check": "core_starts_at_footing_top",
+     "detail": "core bottom -1200.0 mm vs footing top -1200.0 mm (core basis H 300.0, starter H 300.0)",
+     "ok": true
+    },
+    {
+     "check": "starter_length_is_rule",
+     "detail": "1170.0 = (300.0 - 70) + 300 + 40 x 16 = 1170.0",
+     "ok": true
+    },
+    {
+     "check": "footing_top_zone_counted_twice",
+     "detail": "layers 2, core inside the footing 0.0 mm",
+     "ok": true
+    },
+    {
+     "check": "core_above_exists",
+     "detail": "MAIN_CORE GF",
+     "ok": true
+    },
+    {
+     "check": "core_below_exists",
+     "detail": "MAIN_CORE FOUNDATION",
+     "ok": true
+    },
+    {
+     "check": "cores_meet_at_ffl",
+     "detail": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 300.0 mm (bound footing) | printed floor-to-floor 4.5 m (FFL basis)",
+     "ok": true
+    },
+    {
+     "check": "lap_bars_not_more_than_both",
+     "detail": "lap 8 vs below 8 / above 8",
+     "ok": true
+    },
+    {
+     "check": "lap_dia_is_upper_bar",
+     "detail": "lap T16 vs above T16",
+     "ok": true
+    },
+    {
+     "check": "one_starter",
+     "detail": "starter rows",
+     "ok": true
+    },
+    {
+     "check": "one_lap_per_joint",
+     "detail": "lap rows per floor",
+     "ok": true
+    }
+   ],
+   "zones": [
+    {
+     "bars": 8,
+     "core_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 300.0 mm (bound footing)",
+     "core_bottom_level_mm": -1200.0,
+     "core_if_formation_at_printed_limit_mm": 2030.0,
+     "core_inside_footing_mm": 0.0,
+     "core_interval_mm": 2200.0,
+     "core_kg_difference_if_formation_at_limit": -2.147,
+     "core_state": "LOWER_BOUND",
+     "dia_mm": 16,
+     "footing_depth_mm": 300.0,
+     "footing_ref": "FTG-F-1888-7312",
+     "footing_top_level_mm": -1200.0,
+     "lap_zone_kg_each_layer": 8.081,
+     "lap_zone_mm": 640,
+     "layers_in_lap_zone": 2,
+     "starter_state": "PROVISIONAL",
+     "zone": "FOOTING_TOP"
+    },
+    {
+     "bars": 8,
+     "dia_mm": 16,
+     "lap_kg": 8.081,
+     "lap_kg_at_70D": 14.142,
+     "lap_mm": 640,
+     "lap_part": "SEG-COL-C-X01-Y01-FOUNDATION|LAP_TOP",
+     "lap_state": "PROVISIONAL",
+     "layers_in_lap_zone": 2,
+     "zone": "JOINT_FOUNDATION->GF"
+    }
+   ]
+  },
+  {
+   "chain_id": "COLPOS-X01-Y05-2038-13762",
+   "checks": [
+    {
+     "check": "lap_is_top_splice",
+     "detail": "SEG-COL-C-X01-Y05-FOUNDATION|LAP_TOP",
+     "ok": true
+    },
+    {
+     "check": "foundation_core_exists",
+     "detail": "FOUNDATION MAIN_CORE row for the starter chain",
+     "ok": true
+    },
+    {
+     "check": "same_bars_starter_core",
+     "detail": "starter 8 T16 vs core 8 T16",
+     "ok": true
+    },
+    {
+     "check": "core_starts_at_footing_top",
+     "detail": "core bottom -1200.0 mm vs footing top -1200.0 mm (core basis H 300.0, starter H 300.0)",
+     "ok": true
+    },
+    {
+     "check": "starter_length_is_rule",
+     "detail": "1170.0 = (300.0 - 70) + 300 + 40 x 16 = 1170.0",
+     "ok": true
+    },
+    {
+     "check": "footing_top_zone_counted_twice",
+     "detail": "layers 2, core inside the footing 0.0 mm",
+     "ok": true
+    },
+    {
+     "check": "core_above_exists",
+     "detail": "MAIN_CORE GF",
+     "ok": true
+    },
+    {
+     "check": "core_below_exists",
+     "detail": "MAIN_CORE FOUNDATION",
+     "ok": true
+    },
+    {
+     "check": "cores_meet_at_ffl",
+     "detail": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 300.0 mm (bound footing) | printed floor-to-floor 4.5 m (FFL basis)",
+     "ok": true
+    },
+    {
+     "check": "lap_bars_not_more_than_both",
+     "detail": "lap 8 vs below 8 / above 8",
+     "ok": true
+    },
+    {
+     "check": "lap_dia_is_upper_bar",
+     "detail": "lap T16 vs above T16",
+     "ok": true
+    },
+    {
+     "check": "one_starter",
+     "detail": "starter rows",
+     "ok": true
+    },
+    {
+     "check": "one_lap_per_joint",
+     "detail": "lap rows per floor",
+     "ok": true
+    }
+   ],
+   "zones": [
+    {
+     "bars": 8,
+     "core_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 300.0 mm (bound footing)",
+     "core_bottom_level_mm": -1200.0,
+     "core_if_formation_at_printed_limit_mm": 2030.0,
+     "core_inside_footing_mm": 0.0,
+     "core_interval_mm": 2200.0,
+     "core_kg_difference_if_formation_at_limit": -2.147,
+     "core_state": "LOWER_BOUND",
+     "dia_mm": 16,
+     "footing_depth_mm": 300.0,
+     "footing_ref": "FTG-F-1888-13312",
+     "footing_top_level_mm": -1200.0,
+     "lap_zone_kg_each_layer": 8.081,
+     "lap_zone_mm": 640,
+     "layers_in_lap_zone": 2,
+     "starter_state": "PROVISIONAL",
+     "zone": "FOOTING_TOP"
+    },
+    {
+     "bars": 8,
+     "dia_mm": 16,
+     "lap_kg": 8.081,
+     "lap_kg_at_70D": 14.142,
+     "lap_mm": 640,
+     "lap_part": "SEG-COL-C-X01-Y05-FOUNDATION|LAP_TOP",
+     "lap_state": "PROVISIONAL",
+     "layers_in_lap_zone": 2,
+     "zone": "JOINT_FOUNDATION->GF"
+    }
+   ]
+  },
+  {
+   "chain_id": "COLPOS-X02-Y05-4738-13862",
+   "checks": [
+    {
+     "check": "lap_is_top_splice",
+     "detail": "SEG-COL-C-X02-Y05-FOUNDATION|LAP_TOP",
+     "ok": true
+    },
+    {
+     "check": "foundation_core_exists",
+     "detail": "FOUNDATION MAIN_CORE row for the starter chain",
+     "ok": true
+    },
+    {
+     "check": "same_bars_starter_core",
+     "detail": "starter 8 T16 vs core 8 T16",
+     "ok": true
+    },
+    {
+     "check": "core_starts_at_footing_top",
+     "detail": "core bottom -1200.0 mm vs footing top -1200.0 mm (core basis H 300.0, starter H 300.0)",
+     "ok": true
+    },
+    {
+     "check": "starter_length_is_rule",
+     "detail": "1170.0 = (300.0 - 70) + 300 + 40 x 16 = 1170.0",
+     "ok": true
+    },
+    {
+     "check": "footing_top_zone_counted_twice",
+     "detail": "layers 2, core inside the footing 0.0 mm",
+     "ok": true
+    },
+    {
+     "check": "core_above_exists",
+     "detail": "MAIN_CORE GF",
+     "ok": true
+    },
+    {
+     "check": "core_below_exists",
+     "detail": "MAIN_CORE FOUNDATION",
+     "ok": true
+    },
+    {
+     "check": "cores_meet_at_ffl",
+     "detail": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 300.0 mm (bound footing) | printed floor-to-floor 4.5 m (FFL basis)",
+     "ok": true
+    },
+    {
+     "check": "lap_bars_not_more_than_both",
+     "detail": "lap 8 vs below 8 / above 8",
+     "ok": true
+    },
+    {
+     "check": "lap_dia_is_upper_bar",
+     "detail": "lap T16 vs above T16",
+     "ok": true
+    },
+    {
+     "check": "one_starter",
+     "detail": "starter rows",
+     "ok": true
+    },
+    {
+     "check": "one_lap_per_joint",
+     "detail": "lap rows per floor",
+     "ok": true
+    }
+   ],
+   "zones": [
+    {
+     "bars": 8,
+     "core_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 300.0 mm (bound footing)",
+     "core_bottom_level_mm": -1200.0,
+     "core_if_formation_at_printed_limit_mm": 2030.0,
+     "core_inside_footing_mm": 0.0,
+     "core_interval_mm": 2200.0,
+     "core_kg_difference_if_formation_at_limit": -2.147,
+     "core_state": "LOWER_BOUND",
+     "dia_mm": 16,
+     "footing_depth_mm": 300.0,
+     "footing_ref": "FTG-F-4288-13462",
+     "footing_top_level_mm": -1200.0,
+     "lap_zone_kg_each_layer": 8.081,
+     "lap_zone_mm": 640,
+     "layers_in_lap_zone": 2,
+     "starter_state": "PROVISIONAL",
+     "zone": "FOOTING_TOP"
+    },
+    {
+     "bars": 8,
+     "dia_mm": 16,
+     "lap_kg": 8.081,
+     "lap_kg_at_70D": 14.142,
+     "lap_mm": 640,
+     "lap_part": "SEG-COL-C-X02-Y05-FOUNDATION|LAP_TOP",
+     "lap_state": "PROVISIONAL",
+     "layers_in_lap_zone": 2,
+     "zone": "JOINT_FOUNDATION->GF"
+    }
+   ]
+  },
+  {
+   "chain_id": "COLPOS-X03-Y04-6338-12062",
+   "checks": [
+    {
+     "check": "lap_is_top_splice",
+     "detail": "SEG-COL-C3-X03-Y04-FOUNDATION|LAP_TOP",
+     "ok": true
+    },
+    {
+     "check": "foundation_core_exists",
+     "detail": "FOUNDATION MAIN_CORE row for the starter chain",
+     "ok": true
+    },
+    {
+     "check": "same_bars_starter_core",
+     "detail": "starter 8 T16 vs core 8 T16",
+     "ok": true
+    },
+    {
+     "check": "core_starts_at_footing_top",
+     "detail": "core bottom -1200.0 mm vs footing top -1200.0 mm (core basis H 300.0, starter H 300.0)",
+     "ok": true
+    },
+    {
+     "check": "starter_length_is_rule",
+     "detail": "1170.0 = (300.0 - 70) + 300 + 40 x 16 = 1170.0",
+     "ok": true
+    },
+    {
+     "check": "footing_top_zone_counted_twice",
+     "detail": "layers 2, core inside the footing 0.0 mm",
+     "ok": true
+    },
+    {
+     "check": "core_above_exists",
+     "detail": "MAIN_CORE GF",
+     "ok": true
+    },
+    {
+     "check": "core_below_exists",
+     "detail": "MAIN_CORE FOUNDATION",
+     "ok": true
+    },
+    {
+     "check": "cores_meet_at_ffl",
+     "detail": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 300.0 mm (bound footing) | printed floor-to-floor 4.5 m (FFL basis)",
+     "ok": true
+    },
+    {
+     "check": "lap_bars_not_more_than_both",
+     "detail": "lap 8 vs below 8 / above 8",
+     "ok": true
+    },
+    {
+     "check": "lap_dia_is_upper_bar",
+     "detail": "lap T16 vs above T16",
+     "ok": true
+    },
+    {
+     "check": "one_starter",
+     "detail": "starter rows",
+     "ok": true
+    },
+    {
+     "check": "one_lap_per_joint",
+     "detail": "lap rows per floor",
+     "ok": true
+    }
+   ],
+   "zones": [
+    {
+     "bars": 8,
+     "core_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 300.0 mm (bound footing)",
+     "core_bottom_level_mm": -1200.0,
+     "core_if_formation_at_printed_limit_mm": 2030.0,
+     "core_inside_footing_mm": 0.0,
+     "core_interval_mm": 2200.0,
+     "core_kg_difference_if_formation_at_limit": -2.147,
+     "core_state": "LOWER_BOUND",
+     "dia_mm": 16,
+     "footing_depth_mm": 300.0,
+     "footing_ref": "FTG-F3-5538-11362",
+     "footing_top_level_mm": -1200.0,
+     "lap_zone_kg_each_layer": 8.081,
+     "lap_zone_mm": 640,
+     "layers_in_lap_zone": 2,
+     "starter_state": "PROVISIONAL",
+     "zone": "FOOTING_TOP"
+    },
+    {
+     "bars": 8,
+     "dia_mm": 16,
+     "lap_kg": 8.081,
+     "lap_kg_at_70D": 14.142,
+     "lap_mm": 640,
+     "lap_part": "SEG-COL-C3-X03-Y04-FOUNDATION|LAP_TOP",
+     "lap_state": "PROVISIONAL",
+     "layers_in_lap_zone": 2,
+     "zone": "JOINT_FOUNDATION->GF"
+    }
+   ]
+  },
+  {
+   "chain_id": "COLPOS-X04-Y01-7988-7462",
+   "checks": [
+    {
+     "check": "lap_is_top_splice",
+     "detail": "SEG-COL-C3-X04-Y01-FOUNDATION|LAP_TOP",
+     "ok": true
+    },
+    {
+     "check": "foundation_core_exists",
+     "detail": "FOUNDATION MAIN_CORE row for the starter chain",
+     "ok": true
+    },
+    {
+     "check": "same_bars_starter_core",
+     "detail": "starter 8 T16 vs core 8 T16",
+     "ok": true
+    },
+    {
+     "check": "core_starts_at_footing_top",
+     "detail": "core bottom -1100.0 mm vs footing top -1100.0 mm (core basis H 400.0, starter H 400.0)",
+     "ok": true
+    },
+    {
+     "check": "starter_length_is_rule",
+     "detail": "1270.0 = (400.0 - 70) + 300 + 40 x 16 = 1270.0",
+     "ok": true
+    },
+    {
+     "check": "footing_top_zone_counted_twice",
+     "detail": "layers 2, core inside the footing 0.0 mm",
+     "ok": true
+    },
+    {
+     "check": "core_above_exists",
+     "detail": "MAIN_CORE GF",
+     "ok": true
+    },
+    {
+     "check": "core_below_exists",
+     "detail": "MAIN_CORE FOUNDATION",
+     "ok": true
+    },
+    {
+     "check": "cores_meet_at_ffl",
+     "detail": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 400.0 mm (bound footing) | printed floor-to-floor 4.5 m (FFL basis)",
+     "ok": true
+    },
+    {
+     "check": "lap_bars_not_more_than_both",
+     "detail": "lap 8 vs below 8 / above 8",
+     "ok": true
+    },
+    {
+     "check": "lap_dia_is_upper_bar",
+     "detail": "lap T16 vs above T16",
+     "ok": true
+    },
+    {
+     "check": "one_starter",
+     "detail": "starter rows",
+     "ok": true
+    },
+    {
+     "check": "one_lap_per_joint",
+     "detail": "lap rows per floor",
+     "ok": true
+    }
+   ],
+   "zones": [
+    {
+     "bars": 8,
+     "core_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 400.0 mm (bound footing)",
+     "core_bottom_level_mm": -1100.0,
+     "core_if_formation_at_printed_limit_mm": 1930.0,
+     "core_inside_footing_mm": 0.0,
+     "core_interval_mm": 2100.0,
+     "core_kg_difference_if_formation_at_limit": -2.147,
+     "core_state": "LOWER_BOUND",
+     "dia_mm": 16,
+     "footing_depth_mm": 400.0,
+     "footing_ref": "FTG-F15-7088-7312",
+     "footing_top_level_mm": -1100.0,
+     "lap_zone_kg_each_layer": 8.081,
+     "lap_zone_mm": 640,
+     "layers_in_lap_zone": 2,
+     "starter_state": "LOWER_BOUND",
+     "zone": "FOOTING_TOP"
+    },
+    {
+     "bars": 8,
+     "dia_mm": 16,
+     "lap_kg": 8.081,
+     "lap_kg_at_70D": 14.142,
+     "lap_mm": 640,
+     "lap_part": "SEG-COL-C3-X04-Y01-FOUNDATION|LAP_TOP",
+     "lap_state": "LOWER_BOUND",
+     "layers_in_lap_zone": 2,
+     "zone": "JOINT_FOUNDATION->GF"
+    }
+   ]
+  },
+  {
+   "chain_id": "COLPOS-X05-Y02-12538-9062",
+   "checks": [
+    {
+     "check": "lap_is_top_splice",
+     "detail": "SEG-COL-C3-X05-Y02-FOUNDATION|LAP_TOP",
+     "ok": true
+    },
+    {
+     "check": "lap_is_top_splice",
+     "detail": "SEG-COL-C3-X05-Y02-GF|LAP_TOP",
+     "ok": true
+    },
+    {
+     "check": "foundation_core_exists",
+     "detail": "FOUNDATION MAIN_CORE row for the starter chain",
+     "ok": true
+    },
+    {
+     "check": "same_bars_starter_core",
+     "detail": "starter 8 T16 vs core 8 T16",
+     "ok": true
+    },
+    {
+     "check": "core_starts_at_footing_top",
+     "detail": "core bottom -1200.0 mm vs footing top -1200.0 mm (core basis H 300.0, starter H 300.0)",
+     "ok": true
+    },
+    {
+     "check": "starter_length_is_rule",
+     "detail": "1170.0 = (300.0 - 70) + 300 + 40 x 16 = 1170.0",
+     "ok": true
+    },
+    {
+     "check": "footing_top_zone_counted_twice",
+     "detail": "layers 2, core inside the footing 0.0 mm",
+     "ok": true
+    },
+    {
+     "check": "core_above_exists",
+     "detail": "MAIN_CORE GF",
+     "ok": true
+    },
+    {
+     "check": "core_below_exists",
+     "detail": "MAIN_CORE FOUNDATION",
+     "ok": true
+    },
+    {
+     "check": "cores_meet_at_ffl",
+     "detail": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 300.0 mm (bound footing) | printed floor-to-floor 4.5 m (FFL basis)",
+     "ok": true
+    },
+    {
+     "check": "lap_bars_not_more_than_both",
+     "detail": "lap 8 vs below 8 / above 8",
+     "ok": true
+    },
+    {
+     "check": "lap_dia_is_upper_bar",
+     "detail": "lap T16 vs above T16",
+     "ok": true
+    },
+    {
+     "check": "core_above_exists",
+     "detail": "MAIN_CORE 1F",
+     "ok": true
+    },
+    {
+     "check": "core_below_exists",
+     "detail": "MAIN_CORE GF",
+     "ok": true
+    },
+    {
+     "check": "cores_meet_at_ffl",
+     "detail": "printed floor-to-floor 4.5 m (FFL basis) | printed floor-to-floor 4.2 m (FFL basis)",
+     "ok": true
+    },
+    {
+     "check": "lap_bars_not_more_than_both",
+     "detail": "lap 6 vs below 8 / above 6",
+     "ok": true
+    },
+    {
+     "check": "lap_dia_is_upper_bar",
+     "detail": "lap T16 vs above T16",
+     "ok": true
+    },
+    {
+     "check": "one_starter",
+     "detail": "starter rows",
+     "ok": true
+    },
+    {
+     "check": "one_lap_per_joint",
+     "detail": "lap rows per floor",
+     "ok": true
+    }
+   ],
+   "zones": [
+    {
+     "bars": 8,
+     "core_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 300.0 mm (bound footing)",
+     "core_bottom_level_mm": -1200.0,
+     "core_if_formation_at_printed_limit_mm": 2030.0,
+     "core_inside_footing_mm": 0.0,
+     "core_interval_mm": 2200.0,
+     "core_kg_difference_if_formation_at_limit": -2.147,
+     "core_state": "LOWER_BOUND",
+     "dia_mm": 16,
+     "footing_depth_mm": 300.0,
+     "footing_ref": "FTG-F3-11838-8262",
+     "footing_top_level_mm": -1200.0,
+     "lap_zone_kg_each_layer": 8.081,
+     "lap_zone_mm": 640,
+     "layers_in_lap_zone": 2,
+     "starter_state": "PROVISIONAL",
+     "zone": "FOOTING_TOP"
+    },
+    {
+     "bars": 8,
+     "dia_mm": 16,
+     "lap_kg": 8.081,
+     "lap_kg_at_70D": 14.142,
+     "lap_mm": 640,
+     "lap_part": "SEG-COL-C3-X05-Y02-FOUNDATION|LAP_TOP",
+     "lap_state": "PROVISIONAL",
+     "layers_in_lap_zone": 2,
+     "zone": "JOINT_FOUNDATION->GF"
+    },
+    {
+     "bars": 6,
+     "dia_mm": 16,
+     "lap_kg": 6.061,
+     "lap_kg_at_70D": 10.606,
+     "lap_mm": 640,
+     "lap_part": "SEG-COL-C3-X05-Y02-GF|LAP_TOP",
+     "lap_state": "PROVISIONAL",
+     "layers_in_lap_zone": 2,
+     "zone": "JOINT_GF->1F"
+    }
+   ]
+  },
+  {
+   "chain_id": "COLPOS-X05-Y04-12538-11912",
+   "checks": [
+    {
+     "check": "lap_is_top_splice",
+     "detail": "SEG-COL-C5-X05-Y04-FOUNDATION|LAP_TOP",
+     "ok": true
+    },
+    {
+     "check": "lap_is_top_splice",
+     "detail": "SEG-COL-C5-X05-Y04-GF|LAP_TOP",
+     "ok": true
+    },
+    {
+     "check": "foundation_core_exists",
+     "detail": "FOUNDATION MAIN_CORE row for the starter chain",
+     "ok": true
+    },
+    {
+     "check": "same_bars_starter_core",
+     "detail": "starter 10 T16 vs core 10 T16",
+     "ok": true
+    },
+    {
+     "check": "core_starts_at_footing_top",
+     "detail": "core bottom -1000.0 mm vs footing top -1000.0 mm (core basis H 500.0, starter H 500.0)",
+     "ok": true
+    },
+    {
+     "check": "starter_length_is_rule",
+     "detail": "1370.0 = (500.0 - 70) + 300 + 40 x 16 = 1370.0",
+     "ok": true
+    },
+    {
+     "check": "footing_top_zone_counted_twice",
+     "detail": "layers 2, core inside the footing 0.0 mm",
+     "ok": true
+    },
+    {
+     "check": "core_above_exists",
+     "detail": "MAIN_CORE GF",
+     "ok": true
+    },
+    {
+     "check": "core_below_exists",
+     "detail": "MAIN_CORE FOUNDATION",
+     "ok": true
+    },
+    {
+     "check": "cores_meet_at_ffl",
+     "detail": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 500.0 mm (bound footing) | printed floor-to-floor 4.5 m (FFL basis)",
+     "ok": true
+    },
+    {
+     "check": "lap_bars_not_more_than_both",
+     "detail": "lap 10 vs below 10 / above 10",
+     "ok": true
+    },
+    {
+     "check": "lap_dia_is_upper_bar",
+     "detail": "lap T16 vs above T16",
+     "ok": true
+    },
+    {
+     "check": "core_above_exists",
+     "detail": "MAIN_CORE 1F",
+     "ok": true
+    },
+    {
+     "check": "core_below_exists",
+     "detail": "MAIN_CORE GF",
+     "ok": true
+    },
+    {
+     "check": "cores_meet_at_ffl",
+     "detail": "printed floor-to-floor 4.5 m (FFL basis) | printed floor-to-floor 4.2 m (FFL basis)",
+     "ok": true
+    },
+    {
+     "check": "lap_bars_not_more_than_both",
+     "detail": "lap 8 vs below 10 / above 8",
+     "ok": true
+    },
+    {
+     "check": "lap_dia_is_upper_bar",
+     "detail": "lap T16 vs above T16",
+     "ok": true
+    },
+    {
+     "check": "one_starter",
+     "detail": "starter rows",
+     "ok": true
+    },
+    {
+     "check": "one_lap_per_joint",
+     "detail": "lap rows per floor",
+     "ok": true
+    }
+   ],
+   "zones": [
+    {
+     "bars": 10,
+     "core_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 500.0 mm (bound footing)",
+     "core_bottom_level_mm": -1000.0,
+     "core_if_formation_at_printed_limit_mm": 1830.0,
+     "core_inside_footing_mm": 0.0,
+     "core_interval_mm": 2000.0,
+     "core_kg_difference_if_formation_at_limit": -2.683,
+     "core_state": "LOWER_BOUND",
+     "dia_mm": 16,
+     "footing_depth_mm": 500.0,
+     "footing_ref": "FTG-F13-11188-10712",
+     "footing_top_level_mm": -1000.0,
+     "lap_zone_kg_each_layer": 10.101,
+     "lap_zone_mm": 640,
+     "layers_in_lap_zone": 2,
+     "starter_state": "PROVISIONAL",
+     "zone": "FOOTING_TOP"
+    },
+    {
+     "bars": 10,
+     "dia_mm": 16,
+     "lap_kg": 10.101,
+     "lap_kg_at_70D": 17.677,
+     "lap_mm": 640,
+     "lap_part": "SEG-COL-C5-X05-Y04-FOUNDATION|LAP_TOP",
+     "lap_state": "PROVISIONAL",
+     "layers_in_lap_zone": 2,
+     "zone": "JOINT_FOUNDATION->GF"
+    },
+    {
+     "bars": 8,
+     "dia_mm": 16,
+     "lap_kg": 8.081,
+     "lap_kg_at_70D": 14.142,
+     "lap_mm": 640,
+     "lap_part": "SEG-COL-C5-X05-Y04-GF|LAP_TOP",
+     "lap_state": "PROVISIONAL",
+     "layers_in_lap_zone": 2,
+     "zone": "JOINT_GF->1F"
+    }
+   ]
+  },
+  {
+   "chain_id": "COLPOS-X06-Y01-14088-7462",
+   "checks": [
+    {
+     "check": "lap_is_top_splice",
+     "detail": "SEG-COL-C-X06-Y01-FOUNDATION|LAP_TOP",
+     "ok": true
+    },
+    {
+     "check": "foundation_core_exists",
+     "detail": "FOUNDATION MAIN_CORE row for the starter chain",
+     "ok": true
+    },
+    {
+     "check": "same_bars_starter_core",
+     "detail": "starter 8 T16 vs core 8 T16",
+     "ok": true
+    },
+    {
+     "check": "core_starts_at_footing_top",
+     "detail": "core bottom -1200.0 mm vs footing top -1200.0 mm (core basis H 300.0, starter H 300.0)",
+     "ok": true
+    },
+    {
+     "check": "starter_length_is_rule",
+     "detail": "1170.0 = (300.0 - 70) + 300 + 40 x 16 = 1170.0",
+     "ok": true
+    },
+    {
+     "check": "footing_top_zone_counted_twice",
+     "detail": "layers 2, core inside the footing 0.0 mm",
+     "ok": true
+    },
+    {
+     "check": "core_above_exists",
+     "detail": "MAIN_CORE GF",
+     "ok": true
+    },
+    {
+     "check": "core_below_exists",
+     "detail": "MAIN_CORE FOUNDATION",
+     "ok": true
+    },
+    {
+     "check": "cores_meet_at_ffl",
+     "detail": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 300.0 mm (bound footing) | printed floor-to-floor 4.5 m (FFL basis)",
+     "ok": true
+    },
+    {
+     "check": "lap_bars_not_more_than_both",
+     "detail": "lap 8 vs below 8 / above 8",
+     "ok": true
+    },
+    {
+     "check": "lap_dia_is_upper_bar",
+     "detail": "lap T16 vs above T16",
+     "ok": true
+    },
+    {
+     "check": "one_starter",
+     "detail": "starter rows",
+     "ok": true
+    },
+    {
+     "check": "one_lap_per_joint",
+     "detail": "lap rows per floor",
+     "ok": true
+    }
+   ],
+   "zones": [
+    {
+     "bars": 8,
+     "core_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 300.0 mm (bound footing)",
+     "core_bottom_level_mm": -1200.0,
+     "core_if_formation_at_printed_limit_mm": 2030.0,
+     "core_inside_footing_mm": 0.0,
+     "core_interval_mm": 2200.0,
+     "core_kg_difference_if_formation_at_limit": -2.147,
+     "core_state": "LOWER_BOUND",
+     "dia_mm": 16,
+     "footing_depth_mm": 300.0,
+     "footing_ref": "FTG-F-13638-7312",
+     "footing_top_level_mm": -1200.0,
+     "lap_zone_kg_each_layer": 8.081,
+     "lap_zone_mm": 640,
+     "layers_in_lap_zone": 2,
+     "starter_state": "PROVISIONAL",
+     "zone": "FOOTING_TOP"
+    },
+    {
+     "bars": 8,
+     "dia_mm": 16,
+     "lap_kg": 8.081,
+     "lap_kg_at_70D": 14.142,
+     "lap_mm": 640,
+     "lap_part": "SEG-COL-C-X06-Y01-FOUNDATION|LAP_TOP",
+     "lap_state": "PROVISIONAL",
+     "layers_in_lap_zone": 2,
+     "zone": "JOINT_FOUNDATION->GF"
+    }
+   ]
+  },
+  {
+   "chain_id": "COLPOS-X06-Y04-14438-12062",
+   "checks": [
+    {
+     "check": "lap_is_top_splice",
+     "detail": "SEG-COL-C11-X06-Y04-FOUNDATION|LAP_TOP",
+     "ok": true
+    },
+    {
+     "check": "foundation_core_exists",
+     "detail": "FOUNDATION MAIN_CORE row for the starter chain",
+     "ok": true
+    },
+    {
+     "check": "same_bars_starter_core",
+     "detail": "starter 14 T16 vs core 14 T16",
+     "ok": true
+    },
+    {
+     "check": "core_starts_at_footing_top",
+     "detail": "core bottom -1000.0 mm vs footing top -1000.0 mm (core basis H 500.0, starter H 500.0)",
+     "ok": true
+    },
+    {
+     "check": "starter_length_is_rule",
+     "detail": "1370.0 = (500.0 - 70) + 300 + 40 x 16 = 1370.0",
+     "ok": true
+    },
+    {
+     "check": "footing_top_zone_counted_twice",
+     "detail": "layers 2, core inside the footing 0.0 mm",
+     "ok": true
+    },
+    {
+     "check": "core_above_exists",
+     "detail": "MAIN_CORE GF",
+     "ok": true
+    },
+    {
+     "check": "core_below_exists",
+     "detail": "MAIN_CORE FOUNDATION",
+     "ok": true
+    },
+    {
+     "check": "cores_meet_at_ffl",
+     "detail": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 500.0 mm (bound footing) | printed floor-to-floor 4.5 m (FFL basis)",
+     "ok": true
+    },
+    {
+     "check": "lap_bars_not_more_than_both",
+     "detail": "lap 14 vs below 14 / above 14",
+     "ok": true
+    },
+    {
+     "check": "lap_dia_is_upper_bar",
+     "detail": "lap T16 vs above T16",
+     "ok": true
+    },
+    {
+     "check": "one_starter",
+     "detail": "starter rows",
+     "ok": true
+    },
+    {
+     "check": "one_lap_per_joint",
+     "detail": "lap rows per floor",
+     "ok": true
+    }
+   ],
+   "zones": [
+    {
+     "bars": 14,
+     "core_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 500.0 mm (bound footing)",
+     "core_bottom_level_mm": -1000.0,
+     "core_if_formation_at_printed_limit_mm": 1830.0,
+     "core_inside_footing_mm": 0.0,
+     "core_interval_mm": 2000.0,
+     "core_kg_difference_if_formation_at_limit": -3.756,
+     "core_state": "LOWER_BOUND",
+     "dia_mm": 16,
+     "footing_depth_mm": 500.0,
+     "footing_ref": "FTG-F13-11188-10712",
+     "footing_top_level_mm": -1000.0,
+     "lap_zone_kg_each_layer": 14.142,
+     "lap_zone_mm": 640,
+     "layers_in_lap_zone": 2,
+     "starter_state": "PROVISIONAL",
+     "zone": "FOOTING_TOP"
+    },
+    {
+     "bars": 14,
+     "dia_mm": 16,
+     "lap_kg": 14.142,
+     "lap_kg_at_70D": 24.748,
+     "lap_mm": 640,
+     "lap_part": "SEG-COL-C11-X06-Y04-FOUNDATION|LAP_TOP",
+     "lap_state": "PROVISIONAL",
+     "layers_in_lap_zone": 2,
+     "zone": "JOINT_FOUNDATION->GF"
+    }
+   ]
+  },
+  {
+   "chain_id": "COLPOS-X07-Y?-15888-16162",
+   "checks": [
+    {
+     "check": "lap_is_top_splice",
+     "detail": "SEG-COL-C7-X07-Y?@15888-16162-FOUNDATION|LAP_TOP",
+     "ok": true
+    },
+    {
+     "check": "lap_is_top_splice",
+     "detail": "SEG-COL-C7-X07-Y?@15888-16162-GF|LAP_TOP",
+     "ok": true
+    },
+    {
+     "check": "foundation_core_exists",
+     "detail": "FOUNDATION MAIN_CORE row for the starter chain",
+     "ok": true
+    },
+    {
+     "check": "same_bars_starter_core",
+     "detail": "starter 12 T16 vs core 12 T16",
+     "ok": true
+    },
+    {
+     "check": "core_starts_at_footing_top",
+     "detail": "core bottom -800.0 mm vs footing top -800.0 mm (core basis H 700.0, starter H 700.0)",
+     "ok": true
+    },
+    {
+     "check": "starter_length_is_rule",
+     "detail": "1570.0 = (700.0 - 70) + 300 + 40 x 16 = 1570.0",
+     "ok": true
+    },
+    {
+     "check": "footing_top_zone_counted_twice",
+     "detail": "layers 2, core inside the footing 0.0 mm",
+     "ok": true
+    },
+    {
+     "check": "core_above_exists",
+     "detail": "MAIN_CORE GF",
+     "ok": true
+    },
+    {
+     "check": "core_below_exists",
+     "detail": "MAIN_CORE FOUNDATION",
+     "ok": true
+    },
+    {
+     "check": "cores_meet_at_ffl",
+     "detail": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 700.0 mm (bound footing) | printed floor-to-floor 4.5 m (FFL basis)",
+     "ok": true
+    },
+    {
+     "check": "lap_bars_not_more_than_both",
+     "detail": "lap 12 vs below 12 / above 12",
+     "ok": true
+    },
+    {
+     "check": "lap_dia_is_upper_bar",
+     "detail": "lap T16 vs above T16",
+     "ok": true
+    },
+    {
+     "check": "core_above_exists",
+     "detail": "MAIN_CORE 1F",
+     "ok": true
+    },
+    {
+     "check": "core_below_exists",
+     "detail": "MAIN_CORE GF",
+     "ok": true
+    },
+    {
+     "check": "cores_meet_at_ffl",
+     "detail": "printed floor-to-floor 4.5 m (FFL basis) | printed floor-to-floor 4.2 m (FFL basis)",
+     "ok": true
+    },
+    {
+     "check": "lap_bars_not_more_than_both",
+     "detail": "lap 10 vs below 12 / above 10",
+     "ok": true
+    },
+    {
+     "check": "lap_dia_is_upper_bar",
+     "detail": "lap T16 vs above T16",
+     "ok": true
+    },
+    {
+     "check": "one_starter",
+     "detail": "starter rows",
+     "ok": true
+    },
+    {
+     "check": "one_lap_per_joint",
+     "detail": "lap rows per floor",
+     "ok": true
+    }
+   ],
+   "zones": [
+    {
+     "bars": 12,
+     "core_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 700.0 mm (bound footing)",
+     "core_bottom_level_mm": -800.0,
+     "core_if_formation_at_printed_limit_mm": 1630.0,
+     "core_inside_footing_mm": 0.0,
+     "core_interval_mm": 1800.0,
+     "core_kg_difference_if_formation_at_limit": -3.22,
+     "core_state": "LOWER_BOUND",
+     "dia_mm": 16,
+     "footing_depth_mm": 700.0,
+     "footing_ref": "FTG-F12-13688-14562",
+     "footing_top_level_mm": -800.0,
+     "lap_zone_kg_each_layer": 12.122,
+     "lap_zone_mm": 640,
+     "layers_in_lap_zone": 2,
+     "starter_state": "PROVISIONAL",
+     "zone": "FOOTING_TOP"
+    },
+    {
+     "bars": 12,
+     "dia_mm": 16,
+     "lap_kg": 12.122,
+     "lap_kg_at_70D": 21.213,
+     "lap_mm": 640,
+     "lap_part": "SEG-COL-C7-X07-Y?@15888-16162-FOUNDATION|LAP_TOP",
+     "lap_state": "PROVISIONAL",
+     "layers_in_lap_zone": 2,
+     "zone": "JOINT_FOUNDATION->GF"
+    },
+    {
+     "bars": 10,
+     "dia_mm": 16,
+     "lap_kg": 10.101,
+     "lap_kg_at_70D": 17.677,
+     "lap_mm": 640,
+     "lap_part": "SEG-COL-C7-X07-Y?@15888-16162-GF|LAP_TOP",
+     "lap_state": "PROVISIONAL",
+     "layers_in_lap_zone": 2,
+     "zone": "JOINT_GF->1F"
+    }
+   ]
+  },
+  {
+   "chain_id": "COLPOS-X08-Y02-16850-8912",
+   "checks": [
+    {
+     "check": "one_starter",
+     "detail": "starter rows",
+     "ok": true
+    },
+    {
+     "check": "one_lap_per_joint",
+     "detail": "lap rows per floor",
+     "ok": true
+    }
+   ],
+   "zones": []
+  },
+  {
+   "chain_id": "COLPOS-X08-Y04-17038-12362",
+   "checks": [
+    {
+     "check": "lap_is_top_splice",
+     "detail": "SEG-COL-C6-X08-Y04-FOUNDATION|LAP_TOP",
+     "ok": true
+    },
+    {
+     "check": "lap_is_top_splice",
+     "detail": "SEG-COL-C6-X08-Y04-GF|LAP_TOP",
+     "ok": true
+    },
+    {
+     "check": "foundation_core_exists",
+     "detail": "FOUNDATION MAIN_CORE row for the starter chain",
+     "ok": true
+    },
+    {
+     "check": "same_bars_starter_core",
+     "detail": "starter 10 T16 vs core 10 T16",
+     "ok": true
+    },
+    {
+     "check": "core_starts_at_footing_top",
+     "detail": "core bottom -1000.0 mm vs footing top -1000.0 mm (core basis H 500.0, starter H 500.0)",
+     "ok": true
+    },
+    {
+     "check": "starter_length_is_rule",
+     "detail": "1370.0 = (500.0 - 70) + 300 + 40 x 16 = 1370.0",
+     "ok": true
+    },
+    {
+     "check": "footing_top_zone_counted_twice",
+     "detail": "layers 2, core inside the footing 0.0 mm",
+     "ok": true
+    },
+    {
+     "check": "core_above_exists",
+     "detail": "MAIN_CORE GF",
+     "ok": true
+    },
+    {
+     "check": "core_below_exists",
+     "detail": "MAIN_CORE FOUNDATION",
+     "ok": true
+    },
+    {
+     "check": "cores_meet_at_ffl",
+     "detail": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 500.0 mm (bound footing) | printed floor-to-floor 4.5 m (FFL basis)",
+     "ok": true
+    },
+    {
+     "check": "lap_bars_not_more_than_both",
+     "detail": "lap 10 vs below 10 / above 10",
+     "ok": true
+    },
+    {
+     "check": "lap_dia_is_upper_bar",
+     "detail": "lap T16 vs above T16",
+     "ok": true
+    },
+    {
+     "check": "core_above_exists",
+     "detail": "MAIN_CORE 1F",
+     "ok": true
+    },
+    {
+     "check": "core_below_exists",
+     "detail": "MAIN_CORE GF",
+     "ok": true
+    },
+    {
+     "check": "cores_meet_at_ffl",
+     "detail": "printed floor-to-floor 4.5 m (FFL basis) | printed floor-to-floor 4.2 m (FFL basis)",
+     "ok": true
+    },
+    {
+     "check": "lap_bars_not_more_than_both",
+     "detail": "lap 8 vs below 10 / above 8",
+     "ok": true
+    },
+    {
+     "check": "lap_dia_is_upper_bar",
+     "detail": "lap T16 vs above T16",
+     "ok": true
+    },
+    {
+     "check": "one_starter",
+     "detail": "starter rows",
+     "ok": true
+    },
+    {
+     "check": "one_lap_per_joint",
+     "detail": "lap rows per floor",
+     "ok": true
+    }
+   ],
+   "zones": [
+    {
+     "bars": 10,
+     "core_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 500.0 mm (bound footing)",
+     "core_bottom_level_mm": -1000.0,
+     "core_if_formation_at_printed_limit_mm": 1830.0,
+     "core_inside_footing_mm": 0.0,
+     "core_interval_mm": 2000.0,
+     "core_kg_difference_if_formation_at_limit": -2.683,
+     "core_state": "LOWER_BOUND",
+     "dia_mm": 16,
+     "footing_depth_mm": 500.0,
+     "footing_ref": "FTG-F6-15938-11062",
+     "footing_top_level_mm": -1000.0,
+     "lap_zone_kg_each_layer": 10.101,
+     "lap_zone_mm": 640,
+     "layers_in_lap_zone": 2,
+     "starter_state": "PROVISIONAL",
+     "zone": "FOOTING_TOP"
+    },
+    {
+     "bars": 10,
+     "dia_mm": 16,
+     "lap_kg": 10.101,
+     "lap_kg_at_70D": 17.677,
+     "lap_mm": 640,
+     "lap_part": "SEG-COL-C6-X08-Y04-FOUNDATION|LAP_TOP",
+     "lap_state": "PROVISIONAL",
+     "layers_in_lap_zone": 2,
+     "zone": "JOINT_FOUNDATION->GF"
+    },
+    {
+     "bars": 8,
+     "dia_mm": 16,
+     "lap_kg": 8.081,
+     "lap_kg_at_70D": 14.142,
+     "lap_mm": 640,
+     "lap_part": "SEG-COL-C6-X08-Y04-GF|LAP_TOP",
+     "lap_state": "PROVISIONAL",
+     "layers_in_lap_zone": 2,
+     "zone": "JOINT_GF->1F"
+    }
+   ]
+  },
+  {
+   "chain_id": "COLPOS-X08-Y09-17038-17362",
+   "checks": [
+    {
+     "check": "lap_is_top_splice",
+     "detail": "SEG-COL-C3-X08-Y09-FOUNDATION|LAP_TOP",
+     "ok": true
+    },
+    {
+     "check": "lap_is_top_splice",
+     "detail": "SEG-COL-C3-X08-Y09-GF|LAP_TOP",
+     "ok": true
+    },
+    {
+     "check": "lap_is_top_splice",
+     "detail": "SEG-COL-C3-X08-Y09-1F|LAP_TOP",
+     "ok": true
+    },
+    {
+     "check": "foundation_core_exists",
+     "detail": "FOUNDATION MAIN_CORE row for the starter chain",
+     "ok": true
+    },
+    {
+     "check": "same_bars_starter_core",
+     "detail": "starter 8 T16 vs core 8 T16",
+     "ok": true
+    },
+    {
+     "check": "core_starts_at_footing_top",
+     "detail": "core bottom -800.0 mm vs footing top -800.0 mm (core basis H 700.0, starter H 700.0)",
+     "ok": true
+    },
+    {
+     "check": "starter_length_is_rule",
+     "detail": "1570.0 = (700.0 - 70) + 300 + 40 x 16 = 1570.0",
+     "ok": true
+    },
+    {
+     "check": "footing_top_zone_counted_twice",
+     "detail": "layers 2, core inside the footing 0.0 mm",
+     "ok": true
+    },
+    {
+     "check": "core_above_exists",
+     "detail": "MAIN_CORE GF",
+     "ok": true
+    },
+    {
+     "check": "core_below_exists",
+     "detail": "MAIN_CORE FOUNDATION",
+     "ok": true
+    },
+    {
+     "check": "cores_meet_at_ffl",
+     "detail": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 700.0 mm (bound footing) | printed floor-to-floor 4.5 m (FFL basis)",
+     "ok": true
+    },
+    {
+     "check": "lap_bars_not_more_than_both",
+     "detail": "lap 8 vs below 8 / above 8",
+     "ok": true
+    },
+    {
+     "check": "lap_dia_is_upper_bar",
+     "detail": "lap T16 vs above T16",
+     "ok": true
+    },
+    {
+     "check": "core_above_exists",
+     "detail": "MAIN_CORE 1F",
+     "ok": true
+    },
+    {
+     "check": "core_below_exists",
+     "detail": "MAIN_CORE GF",
+     "ok": true
+    },
+    {
+     "check": "cores_meet_at_ffl",
+     "detail": "printed floor-to-floor 4.5 m (FFL basis) | printed floor-to-floor 4.2 m (FFL basis)",
+     "ok": true
+    },
+    {
+     "check": "lap_bars_not_more_than_both",
+     "detail": "lap 6 vs below 8 / above 6",
+     "ok": true
+    },
+    {
+     "check": "lap_dia_is_upper_bar",
+     "detail": "lap T16 vs above T16",
+     "ok": true
+    },
+    {
+     "check": "core_above_exists",
+     "detail": "MAIN_CORE 2F",
+     "ok": true
+    },
+    {
+     "check": "core_below_exists",
+     "detail": "MAIN_CORE 1F",
+     "ok": true
+    },
+    {
+     "check": "cores_meet_at_ffl",
+     "detail": "printed floor-to-floor 4.2 m (FFL basis) | printed floor-to-floor 4.2 m (FFL basis)",
+     "ok": true
+    },
+    {
+     "check": "lap_bars_not_more_than_both",
+     "detail": "lap 6 vs below 6 / above 6",
+     "ok": true
+    },
+    {
+     "check": "lap_dia_is_upper_bar",
+     "detail": "lap T16 vs above T16",
+     "ok": true
+    },
+    {
+     "check": "one_starter",
+     "detail": "starter rows",
+     "ok": true
+    },
+    {
+     "check": "one_lap_per_joint",
+     "detail": "lap rows per floor",
+     "ok": true
+    }
+   ],
+   "zones": [
+    {
+     "bars": 8,
+     "core_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 700.0 mm (bound footing)",
+     "core_bottom_level_mm": -800.0,
+     "core_if_formation_at_printed_limit_mm": 1630.0,
+     "core_inside_footing_mm": 0.0,
+     "core_interval_mm": 1800.0,
+     "core_kg_difference_if_formation_at_limit": -2.147,
+     "core_state": "LOWER_BOUND",
+     "dia_mm": 16,
+     "footing_depth_mm": 700.0,
+     "footing_ref": "FTG-F12-13688-14562",
+     "footing_top_level_mm": -800.0,
+     "lap_zone_kg_each_layer": 8.081,
+     "lap_zone_mm": 640,
+     "layers_in_lap_zone": 2,
+     "starter_state": "PROVISIONAL",
+     "zone": "FOOTING_TOP"
+    },
+    {
+     "bars": 8,
+     "dia_mm": 16,
+     "lap_kg": 8.081,
+     "lap_kg_at_70D": 14.142,
+     "lap_mm": 640,
+     "lap_part": "SEG-COL-C3-X08-Y09-FOUNDATION|LAP_TOP",
+     "lap_state": "PROVISIONAL",
+     "layers_in_lap_zone": 2,
+     "zone": "JOINT_FOUNDATION->GF"
+    },
+    {
+     "bars": 6,
+     "dia_mm": 16,
+     "lap_kg": 6.061,
+     "lap_kg_at_70D": 10.606,
+     "lap_mm": 640,
+     "lap_part": "SEG-COL-C3-X08-Y09-GF|LAP_TOP",
+     "lap_state": "PROVISIONAL",
+     "layers_in_lap_zone": 2,
+     "zone": "JOINT_GF->1F"
+    },
+    {
+     "bars": 6,
+     "dia_mm": 16,
+     "lap_kg": 6.061,
+     "lap_kg_at_70D": 10.606,
+     "lap_mm": 640,
+     "lap_part": "SEG-COL-C3-X08-Y09-1F|LAP_TOP",
+     "lap_state": "PROVISIONAL",
+     "layers_in_lap_zone": 2,
+     "zone": "JOINT_1F->2F"
+    }
+   ]
+  },
+  {
+   "chain_id": "COLPOS-X08-Y10-17038-20562",
+   "checks": [
+    {
+     "check": "lap_is_top_splice",
+     "detail": "SEG-COL-C2-X08-Y10-FOUNDATION|LAP_TOP",
+     "ok": true
+    },
+    {
+     "check": "lap_is_top_splice",
+     "detail": "SEG-COL-C2-X08-Y10-GF|LAP_TOP",
+     "ok": true
+    },
+    {
+     "check": "lap_is_top_splice",
+     "detail": "SEG-COL-C2-X08-Y10-1F|LAP_TOP",
+     "ok": true
+    },
+    {
+     "check": "foundation_core_exists",
+     "detail": "FOUNDATION MAIN_CORE row for the starter chain",
+     "ok": true
+    },
+    {
+     "check": "same_bars_starter_core",
+     "detail": "starter 8 T16 vs core 8 T16",
+     "ok": true
+    },
+    {
+     "check": "core_starts_at_footing_top",
+     "detail": "core bottom -1150.0 mm vs footing top -1150.0 mm (core basis H 350.0, starter H 350.0)",
+     "ok": true
+    },
+    {
+     "check": "starter_length_is_rule",
+     "detail": "1220.0 = (350.0 - 70) + 300 + 40 x 16 = 1220.0",
+     "ok": true
+    },
+    {
+     "check": "footing_top_zone_counted_twice",
+     "detail": "layers 2, core inside the footing 0.0 mm",
+     "ok": true
+    },
+    {
+     "check": "core_above_exists",
+     "detail": "MAIN_CORE GF",
+     "ok": true
+    },
+    {
+     "check": "core_below_exists",
+     "detail": "MAIN_CORE FOUNDATION",
+     "ok": true
+    },
+    {
+     "check": "cores_meet_at_ffl",
+     "detail": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 350.0 mm (bound footing) | printed floor-to-floor 4.5 m (FFL basis)",
+     "ok": true
+    },
+    {
+     "check": "lap_bars_not_more_than_both",
+     "detail": "lap 8 vs below 8 / above 8",
+     "ok": true
+    },
+    {
+     "check": "lap_dia_is_upper_bar",
+     "detail": "lap T16 vs above T16",
+     "ok": true
+    },
+    {
+     "check": "core_above_exists",
+     "detail": "MAIN_CORE 1F",
+     "ok": true
+    },
+    {
+     "check": "core_below_exists",
+     "detail": "MAIN_CORE GF",
+     "ok": true
+    },
+    {
+     "check": "cores_meet_at_ffl",
+     "detail": "printed floor-to-floor 4.5 m (FFL basis) | printed floor-to-floor 4.2 m (FFL basis)",
+     "ok": true
+    },
+    {
+     "check": "lap_bars_not_more_than_both",
+     "detail": "lap 8 vs below 8 / above 8",
+     "ok": true
+    },
+    {
+     "check": "lap_dia_is_upper_bar",
+     "detail": "lap T16 vs above T16",
+     "ok": true
+    },
+    {
+     "check": "core_above_exists",
+     "detail": "MAIN_CORE 2F",
+     "ok": true
+    },
+    {
+     "check": "core_below_exists",
+     "detail": "MAIN_CORE 1F",
+     "ok": true
+    },
+    {
+     "check": "cores_meet_at_ffl",
+     "detail": "printed floor-to-floor 4.2 m (FFL basis) | printed floor-to-floor 4.2 m (FFL basis)",
+     "ok": true
+    },
+    {
+     "check": "lap_bars_not_more_than_both",
+     "detail": "lap 6 vs below 8 / above 6",
+     "ok": true
+    },
+    {
+     "check": "lap_dia_is_upper_bar",
+     "detail": "lap T16 vs above T16",
+     "ok": true
+    },
+    {
+     "check": "one_starter",
+     "detail": "starter rows",
+     "ok": true
+    },
+    {
+     "check": "one_lap_per_joint",
+     "detail": "lap rows per floor",
+     "ok": true
+    }
+   ],
+   "zones": [
+    {
+     "bars": 8,
+     "core_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 350.0 mm (bound footing)",
+     "core_bottom_level_mm": -1150.0,
+     "core_if_formation_at_printed_limit_mm": 1980.0,
+     "core_inside_footing_mm": 0.0,
+     "core_interval_mm": 2150.0,
+     "core_kg_difference_if_formation_at_limit": -2.147,
+     "core_state": "LOWER_BOUND",
+     "dia_mm": 16,
+     "footing_depth_mm": 350.0,
+     "footing_ref": "FTG-F2-16188-19612",
+     "footing_top_level_mm": -1150.0,
+     "lap_zone_kg_each_layer": 8.081,
+     "lap_zone_mm": 640,
+     "layers_in_lap_zone": 2,
+     "starter_state": "PROVISIONAL",
+     "zone": "FOOTING_TOP"
+    },
+    {
+     "bars": 8,
+     "dia_mm": 16,
+     "lap_kg": 8.081,
+     "lap_kg_at_70D": 14.142,
+     "lap_mm": 640,
+     "lap_part": "SEG-COL-C2-X08-Y10-FOUNDATION|LAP_TOP",
+     "lap_state": "PROVISIONAL",
+     "layers_in_lap_zone": 2,
+     "zone": "JOINT_FOUNDATION->GF"
+    },
+    {
+     "bars": 8,
+     "dia_mm": 16,
+     "lap_kg": 8.081,
+     "lap_kg_at_70D": 14.142,
+     "lap_mm": 640,
+     "lap_part": "SEG-COL-C2-X08-Y10-GF|LAP_TOP",
+     "lap_state": "PROVISIONAL",
+     "layers_in_lap_zone": 2,
+     "zone": "JOINT_GF->1F"
+    },
+    {
+     "bars": 6,
+     "dia_mm": 16,
+     "lap_kg": 6.061,
+     "lap_kg_at_70D": 10.606,
+     "lap_mm": 640,
+     "lap_part": "SEG-COL-C2-X08-Y10-1F|LAP_TOP",
+     "lap_state": "PROVISIONAL",
+     "layers_in_lap_zone": 2,
+     "zone": "JOINT_1F->2F"
+    }
+   ]
+  },
+  {
+   "chain_id": "COLPOS-X09-Y07-19688-15662",
+   "checks": [
+    {
+     "check": "lap_is_top_splice",
+     "detail": "SEG-COL-C2-X09-Y07-FOUNDATION|LAP_TOP",
+     "ok": true
+    },
+    {
+     "check": "lap_is_top_splice",
+     "detail": "SEG-COL-C2-X09-Y07-GF|LAP_TOP",
+     "ok": true
+    },
+    {
+     "check": "lap_is_top_splice",
+     "detail": "SEG-COL-C2-X09-Y07-1F|LAP_TOP",
+     "ok": true
+    },
+    {
+     "check": "foundation_core_exists",
+     "detail": "FOUNDATION MAIN_CORE row for the starter chain",
+     "ok": true
+    },
+    {
+     "check": "same_bars_starter_core",
+     "detail": "starter 8 T16 vs core 8 T16",
+     "ok": true
+    },
+    {
+     "check": "core_starts_at_footing_top",
+     "detail": "core bottom -950.0 mm vs footing top -950.0 mm (core basis H 550.0, starter H 550.0)",
+     "ok": true
+    },
+    {
+     "check": "starter_length_is_rule",
+     "detail": "1420.0 = (550.0 - 70) + 300 + 40 x 16 = 1420.0",
+     "ok": true
+    },
+    {
+     "check": "footing_top_zone_counted_twice",
+     "detail": "layers 2, core inside the footing 0.0 mm",
+     "ok": true
+    },
+    {
+     "check": "core_above_exists",
+     "detail": "MAIN_CORE GF",
+     "ok": true
+    },
+    {
+     "check": "core_below_exists",
+     "detail": "MAIN_CORE FOUNDATION",
+     "ok": true
+    },
+    {
+     "check": "cores_meet_at_ffl",
+     "detail": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 550.0 mm (bound footing) | printed floor-to-floor 4.5 m (FFL basis)",
+     "ok": true
+    },
+    {
+     "check": "lap_bars_not_more_than_both",
+     "detail": "lap 8 vs below 8 / above 8",
+     "ok": true
+    },
+    {
+     "check": "lap_dia_is_upper_bar",
+     "detail": "lap T16 vs above T16",
+     "ok": true
+    },
+    {
+     "check": "core_above_exists",
+     "detail": "MAIN_CORE 1F",
+     "ok": true
+    },
+    {
+     "check": "core_below_exists",
+     "detail": "MAIN_CORE GF",
+     "ok": true
+    },
+    {
+     "check": "cores_meet_at_ffl",
+     "detail": "printed floor-to-floor 4.5 m (FFL basis) | printed floor-to-floor 4.2 m (FFL basis)",
+     "ok": true
+    },
+    {
+     "check": "lap_bars_not_more_than_both",
+     "detail": "lap 8 vs below 8 / above 8",
+     "ok": true
+    },
+    {
+     "check": "lap_dia_is_upper_bar",
+     "detail": "lap T16 vs above T16",
+     "ok": true
+    },
+    {
+     "check": "core_above_exists",
+     "detail": "MAIN_CORE 2F",
+     "ok": true
+    },
+    {
+     "check": "core_below_exists",
+     "detail": "MAIN_CORE 1F",
+     "ok": true
+    },
+    {
+     "check": "cores_meet_at_ffl",
+     "detail": "printed floor-to-floor 4.2 m (FFL basis) | printed floor-to-floor 4.2 m (FFL basis)",
+     "ok": true
+    },
+    {
+     "check": "lap_bars_not_more_than_both",
+     "detail": "lap 6 vs below 8 / above 6",
+     "ok": true
+    },
+    {
+     "check": "lap_dia_is_upper_bar",
+     "detail": "lap T16 vs above T16",
+     "ok": true
+    },
+    {
+     "check": "one_starter",
+     "detail": "starter rows",
+     "ok": true
+    },
+    {
+     "check": "one_lap_per_joint",
+     "detail": "lap rows per floor",
+     "ok": true
+    }
+   ],
+   "zones": [
+    {
+     "bars": 8,
+     "core_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 550.0 mm (bound footing)",
+     "core_bottom_level_mm": -950.0,
+     "core_if_formation_at_printed_limit_mm": 1780.0,
+     "core_inside_footing_mm": 0.0,
+     "core_interval_mm": 1950.0,
+     "core_kg_difference_if_formation_at_limit": -2.147,
+     "core_state": "LOWER_BOUND",
+     "dia_mm": 16,
+     "footing_depth_mm": 550.0,
+     "footing_ref": "FTG-FF-18688-14112",
+     "footing_top_level_mm": -950.0,
+     "lap_zone_kg_each_layer": 8.081,
+     "lap_zone_mm": 640,
+     "layers_in_lap_zone": 2,
+     "starter_state": "PROVISIONAL",
+     "zone": "FOOTING_TOP"
+    },
+    {
+     "bars": 8,
+     "dia_mm": 16,
+     "lap_kg": 8.081,
+     "lap_kg_at_70D": 14.142,
+     "lap_mm": 640,
+     "lap_part": "SEG-COL-C2-X09-Y07-FOUNDATION|LAP_TOP",
+     "lap_state": "PROVISIONAL",
+     "layers_in_lap_zone": 2,
+     "zone": "JOINT_FOUNDATION->GF"
+    },
+    {
+     "bars": 8,
+     "dia_mm": 16,
+     "lap_kg": 8.081,
+     "lap_kg_at_70D": 14.142,
+     "lap_mm": 640,
+     "lap_part": "SEG-COL-C2-X09-Y07-GF|LAP_TOP",
+     "lap_state": "PROVISIONAL",
+     "layers_in_lap_zone": 2,
+     "zone": "JOINT_GF->1F"
+    },
+    {
+     "bars": 6,
+     "dia_mm": 16,
+     "lap_kg": 6.061,
+     "lap_kg_at_70D": 10.606,
+     "lap_mm": 640,
+     "lap_part": "SEG-COL-C2-X09-Y07-1F|LAP_TOP",
+     "lap_state": "PROVISIONAL",
+     "layers_in_lap_zone": 2,
+     "zone": "JOINT_1F->2F"
+    }
+   ]
+  },
+  {
+   "chain_id": "COLPOS-X09-Y09-19688-17362",
+   "checks": [
+    {
+     "check": "lap_is_top_splice",
+     "detail": "SEG-COL-C1-X09-Y09-FOUNDATION|LAP_TOP",
+     "ok": true
+    },
+    {
+     "check": "lap_is_top_splice",
+     "detail": "SEG-COL-C1-X09-Y09-GF|LAP_TOP",
+     "ok": true
+    },
+    {
+     "check": "lap_is_top_splice",
+     "detail": "SEG-COL-C1-X09-Y09-1F|LAP_TOP",
+     "ok": true
+    },
+    {
+     "check": "foundation_core_exists",
+     "detail": "FOUNDATION MAIN_CORE row for the starter chain",
+     "ok": true
+    },
+    {
+     "check": "same_bars_starter_core",
+     "detail": "starter 8 T16 vs core 8 T16",
+     "ok": true
+    },
+    {
+     "check": "core_starts_at_footing_top",
+     "detail": "core bottom -950.0 mm vs footing top -950.0 mm (core basis H 550.0, starter H 550.0)",
+     "ok": true
+    },
+    {
+     "check": "starter_length_is_rule",
+     "detail": "1420.0 = (550.0 - 70) + 300 + 40 x 16 = 1420.0",
+     "ok": true
+    },
+    {
+     "check": "footing_top_zone_counted_twice",
+     "detail": "layers 2, core inside the footing 0.0 mm",
+     "ok": true
+    },
+    {
+     "check": "core_above_exists",
+     "detail": "MAIN_CORE GF",
+     "ok": true
+    },
+    {
+     "check": "core_below_exists",
+     "detail": "MAIN_CORE FOUNDATION",
+     "ok": true
+    },
+    {
+     "check": "cores_meet_at_ffl",
+     "detail": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 550.0 mm (bound footing) | printed floor-to-floor 4.5 m (FFL basis)",
+     "ok": true
+    },
+    {
+     "check": "lap_bars_not_more_than_both",
+     "detail": "lap 8 vs below 8 / above 8",
+     "ok": true
+    },
+    {
+     "check": "lap_dia_is_upper_bar",
+     "detail": "lap T16 vs above T16",
+     "ok": true
+    },
+    {
+     "check": "core_above_exists",
+     "detail": "MAIN_CORE 1F",
+     "ok": true
+    },
+    {
+     "check": "core_below_exists",
+     "detail": "MAIN_CORE GF",
+     "ok": true
+    },
+    {
+     "check": "cores_meet_at_ffl",
+     "detail": "printed floor-to-floor 4.5 m (FFL basis) | printed floor-to-floor 4.2 m (FFL basis)",
+     "ok": true
+    },
+    {
+     "check": "lap_bars_not_more_than_both",
+     "detail": "lap 6 vs below 8 / above 6",
+     "ok": true
+    },
+    {
+     "check": "lap_dia_is_upper_bar",
+     "detail": "lap T16 vs above T16",
+     "ok": true
+    },
+    {
+     "check": "core_above_exists",
+     "detail": "MAIN_CORE 2F",
+     "ok": true
+    },
+    {
+     "check": "core_below_exists",
+     "detail": "MAIN_CORE 1F",
+     "ok": true
+    },
+    {
+     "check": "cores_meet_at_ffl",
+     "detail": "printed floor-to-floor 4.2 m (FFL basis) | printed floor-to-floor 4.2 m (FFL basis)",
+     "ok": true
+    },
+    {
+     "check": "lap_bars_not_more_than_both",
+     "detail": "lap 6 vs below 6 / above 6",
+     "ok": true
+    },
+    {
+     "check": "lap_dia_is_upper_bar",
+     "detail": "lap T16 vs above T16",
+     "ok": true
+    },
+    {
+     "check": "one_starter",
+     "detail": "starter rows",
+     "ok": true
+    },
+    {
+     "check": "one_lap_per_joint",
+     "detail": "lap rows per floor",
+     "ok": true
+    }
+   ],
+   "zones": [
+    {
+     "bars": 8,
+     "core_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 550.0 mm (bound footing)",
+     "core_bottom_level_mm": -950.0,
+     "core_if_formation_at_printed_limit_mm": 1780.0,
+     "core_inside_footing_mm": 0.0,
+     "core_interval_mm": 1950.0,
+     "core_kg_difference_if_formation_at_limit": -2.147,
+     "core_state": "LOWER_BOUND",
+     "dia_mm": 16,
+     "footing_depth_mm": 550.0,
+     "footing_ref": "FTG-FF-18688-14112",
+     "footing_top_level_mm": -950.0,
+     "lap_zone_kg_each_layer": 8.081,
+     "lap_zone_mm": 640,
+     "layers_in_lap_zone": 2,
+     "starter_state": "PROVISIONAL",
+     "zone": "FOOTING_TOP"
+    },
+    {
+     "bars": 8,
+     "dia_mm": 16,
+     "lap_kg": 8.081,
+     "lap_kg_at_70D": 14.142,
+     "lap_mm": 640,
+     "lap_part": "SEG-COL-C1-X09-Y09-FOUNDATION|LAP_TOP",
+     "lap_state": "PROVISIONAL",
+     "layers_in_lap_zone": 2,
+     "zone": "JOINT_FOUNDATION->GF"
+    },
+    {
+     "bars": 6,
+     "dia_mm": 16,
+     "lap_kg": 6.061,
+     "lap_kg_at_70D": 10.606,
+     "lap_mm": 640,
+     "lap_part": "SEG-COL-C1-X09-Y09-GF|LAP_TOP",
+     "lap_state": "PROVISIONAL",
+     "layers_in_lap_zone": 2,
+     "zone": "JOINT_GF->1F"
+    },
+    {
+     "bars": 6,
+     "dia_mm": 16,
+     "lap_kg": 6.061,
+     "lap_kg_at_70D": 10.606,
+     "lap_mm": 640,
+     "lap_part": "SEG-COL-C1-X09-Y09-1F|LAP_TOP",
+     "lap_state": "PROVISIONAL",
+     "layers_in_lap_zone": 2,
+     "zone": "JOINT_1F->2F"
+    }
+   ]
+  },
+  {
+   "chain_id": "COLPOS-X09-Y10-19738-20562",
+   "checks": [
+    {
+     "check": "lap_is_top_splice",
+     "detail": "SEG-COL-C2-X09-Y10-FOUNDATION|LAP_TOP",
+     "ok": true
+    },
+    {
+     "check": "lap_is_top_splice",
+     "detail": "SEG-COL-C2-X09-Y10-GF|LAP_TOP",
+     "ok": true
+    },
+    {
+     "check": "lap_is_top_splice",
+     "detail": "SEG-COL-C2-X09-Y10-1F|LAP_TOP",
+     "ok": true
+    },
+    {
+     "check": "foundation_core_exists",
+     "detail": "FOUNDATION MAIN_CORE row for the starter chain",
+     "ok": true
+    },
+    {
+     "check": "same_bars_starter_core",
+     "detail": "starter 8 T16 vs core 8 T16",
+     "ok": true
+    },
+    {
+     "check": "core_starts_at_footing_top",
+     "detail": "core bottom -1150.0 mm vs footing top -1150.0 mm (core basis H 350.0, starter H 350.0)",
+     "ok": true
+    },
+    {
+     "check": "starter_length_is_rule",
+     "detail": "1220.0 = (350.0 - 70) + 300 + 40 x 16 = 1220.0",
+     "ok": true
+    },
+    {
+     "check": "footing_top_zone_counted_twice",
+     "detail": "layers 2, core inside the footing 0.0 mm",
+     "ok": true
+    },
+    {
+     "check": "core_above_exists",
+     "detail": "MAIN_CORE GF",
+     "ok": true
+    },
+    {
+     "check": "core_below_exists",
+     "detail": "MAIN_CORE FOUNDATION",
+     "ok": true
+    },
+    {
+     "check": "cores_meet_at_ffl",
+     "detail": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 350.0 mm (bound footing) | printed floor-to-floor 4.5 m (FFL basis)",
+     "ok": true
+    },
+    {
+     "check": "lap_bars_not_more_than_both",
+     "detail": "lap 8 vs below 8 / above 8",
+     "ok": true
+    },
+    {
+     "check": "lap_dia_is_upper_bar",
+     "detail": "lap T16 vs above T16",
+     "ok": true
+    },
+    {
+     "check": "core_above_exists",
+     "detail": "MAIN_CORE 1F",
+     "ok": true
+    },
+    {
+     "check": "core_below_exists",
+     "detail": "MAIN_CORE GF",
+     "ok": true
+    },
+    {
+     "check": "cores_meet_at_ffl",
+     "detail": "printed floor-to-floor 4.5 m (FFL basis) | printed floor-to-floor 4.2 m (FFL basis)",
+     "ok": true
+    },
+    {
+     "check": "lap_bars_not_more_than_both",
+     "detail": "lap 8 vs below 8 / above 8",
+     "ok": true
+    },
+    {
+     "check": "lap_dia_is_upper_bar",
+     "detail": "lap T16 vs above T16",
+     "ok": true
+    },
+    {
+     "check": "core_above_exists",
+     "detail": "MAIN_CORE 2F",
+     "ok": true
+    },
+    {
+     "check": "core_below_exists",
+     "detail": "MAIN_CORE 1F",
+     "ok": true
+    },
+    {
+     "check": "cores_meet_at_ffl",
+     "detail": "printed floor-to-floor 4.2 m (FFL basis) | printed floor-to-floor 4.2 m (FFL basis)",
+     "ok": true
+    },
+    {
+     "check": "lap_bars_not_more_than_both",
+     "detail": "lap 6 vs below 8 / above 6",
+     "ok": true
+    },
+    {
+     "check": "lap_dia_is_upper_bar",
+     "detail": "lap T16 vs above T16",
+     "ok": true
+    },
+    {
+     "check": "one_starter",
+     "detail": "starter rows",
+     "ok": true
+    },
+    {
+     "check": "one_lap_per_joint",
+     "detail": "lap rows per floor",
+     "ok": true
+    }
+   ],
+   "zones": [
+    {
+     "bars": 8,
+     "core_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 350.0 mm (bound footing)",
+     "core_bottom_level_mm": -1150.0,
+     "core_if_formation_at_printed_limit_mm": 1980.0,
+     "core_inside_footing_mm": 0.0,
+     "core_interval_mm": 2150.0,
+     "core_kg_difference_if_formation_at_limit": -2.147,
+     "core_state": "LOWER_BOUND",
+     "dia_mm": 16,
+     "footing_depth_mm": 350.0,
+     "footing_ref": "FTG-F2-18888-19612",
+     "footing_top_level_mm": -1150.0,
+     "lap_zone_kg_each_layer": 8.081,
+     "lap_zone_mm": 640,
+     "layers_in_lap_zone": 2,
+     "starter_state": "PROVISIONAL",
+     "zone": "FOOTING_TOP"
+    },
+    {
+     "bars": 8,
+     "dia_mm": 16,
+     "lap_kg": 8.081,
+     "lap_kg_at_70D": 14.142,
+     "lap_mm": 640,
+     "lap_part": "SEG-COL-C2-X09-Y10-FOUNDATION|LAP_TOP",
+     "lap_state": "PROVISIONAL",
+     "layers_in_lap_zone": 2,
+     "zone": "JOINT_FOUNDATION->GF"
+    },
+    {
+     "bars": 8,
+     "dia_mm": 16,
+     "lap_kg": 8.081,
+     "lap_kg_at_70D": 14.142,
+     "lap_mm": 640,
+     "lap_part": "SEG-COL-C2-X09-Y10-GF|LAP_TOP",
+     "lap_state": "PROVISIONAL",
+     "layers_in_lap_zone": 2,
+     "zone": "JOINT_GF->1F"
+    },
+    {
+     "bars": 6,
+     "dia_mm": 16,
+     "lap_kg": 6.061,
+     "lap_kg_at_70D": 10.606,
+     "lap_mm": 640,
+     "lap_part": "SEG-COL-C2-X09-Y10-1F|LAP_TOP",
+     "lap_state": "PROVISIONAL",
+     "layers_in_lap_zone": 2,
+     "zone": "JOINT_1F->2F"
+    }
+   ]
+  },
+  {
+   "chain_id": "COLPOS-X10-Y07-21713-15912",
+   "checks": [
+    {
+     "check": "lap_is_top_splice",
+     "detail": "SEG-COL-C9-X10-Y07-FOUNDATION|LAP_TOP",
+     "ok": true
+    },
+    {
+     "check": "lap_is_top_splice",
+     "detail": "SEG-COL-C9-X10-Y07-GF|LAP_TOP",
+     "ok": true
+    },
+    {
+     "check": "lap_is_top_splice",
+     "detail": "SEG-COL-C9-X10-Y07-1F|LAP_TOP",
+     "ok": true
+    },
+    {
+     "check": "foundation_core_exists",
+     "detail": "FOUNDATION MAIN_CORE row for the starter chain",
+     "ok": true
+    },
+    {
+     "check": "same_bars_starter_core",
+     "detail": "starter 14 T16 vs core 14 T16",
+     "ok": true
+    },
+    {
+     "check": "core_starts_at_footing_top",
+     "detail": "core bottom -950.0 mm vs footing top -950.0 mm (core basis H 550.0, starter H 550.0)",
+     "ok": true
+    },
+    {
+     "check": "starter_length_is_rule",
+     "detail": "1420.0 = (550.0 - 70) + 300 + 40 x 16 = 1420.0",
+     "ok": true
+    },
+    {
+     "check": "footing_top_zone_counted_twice",
+     "detail": "layers 2, core inside the footing 0.0 mm",
+     "ok": true
+    },
+    {
+     "check": "core_above_exists",
+     "detail": "MAIN_CORE GF",
+     "ok": true
+    },
+    {
+     "check": "core_below_exists",
+     "detail": "MAIN_CORE FOUNDATION",
+     "ok": true
+    },
+    {
+     "check": "cores_meet_at_ffl",
+     "detail": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 550.0 mm (bound footing) | printed floor-to-floor 4.5 m (FFL basis)",
+     "ok": true
+    },
+    {
+     "check": "lap_bars_not_more_than_both",
+     "detail": "lap 14 vs below 14 / above 14",
+     "ok": true
+    },
+    {
+     "check": "lap_dia_is_upper_bar",
+     "detail": "lap T16 vs above T16",
+     "ok": true
+    },
+    {
+     "check": "core_above_exists",
+     "detail": "MAIN_CORE 1F",
+     "ok": true
+    },
+    {
+     "check": "core_below_exists",
+     "detail": "MAIN_CORE GF",
+     "ok": true
+    },
+    {
+     "check": "cores_meet_at_ffl",
+     "detail": "printed floor-to-floor 4.5 m (FFL basis) | printed floor-to-floor 4.2 m (FFL basis)",
+     "ok": true
+    },
+    {
+     "check": "lap_bars_not_more_than_both",
+     "detail": "lap 12 vs below 14 / above 12",
+     "ok": true
+    },
+    {
+     "check": "lap_dia_is_upper_bar",
+     "detail": "lap T16 vs above T16",
+     "ok": true
+    },
+    {
+     "check": "core_above_exists",
+     "detail": "MAIN_CORE 2F",
+     "ok": true
+    },
+    {
+     "check": "core_below_exists",
+     "detail": "MAIN_CORE 1F",
+     "ok": true
+    },
+    {
+     "check": "cores_meet_at_ffl",
+     "detail": "printed floor-to-floor 4.2 m (FFL basis) | printed floor-to-floor 4.2 m (FFL basis)",
+     "ok": true
+    },
+    {
+     "check": "lap_bars_not_more_than_both",
+     "detail": "lap 10 vs below 12 / above 10",
+     "ok": true
+    },
+    {
+     "check": "lap_dia_is_upper_bar",
+     "detail": "lap T16 vs above T16",
+     "ok": true
+    },
+    {
+     "check": "one_starter",
+     "detail": "starter rows",
+     "ok": true
+    },
+    {
+     "check": "one_lap_per_joint",
+     "detail": "lap rows per floor",
+     "ok": true
+    }
+   ],
+   "zones": [
+    {
+     "bars": 14,
+     "core_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 550.0 mm (bound footing)",
+     "core_bottom_level_mm": -950.0,
+     "core_if_formation_at_printed_limit_mm": 1780.0,
+     "core_inside_footing_mm": 0.0,
+     "core_interval_mm": 1950.0,
+     "core_kg_difference_if_formation_at_limit": -3.756,
+     "core_state": "LOWER_BOUND",
+     "dia_mm": 16,
+     "footing_depth_mm": 550.0,
+     "footing_ref": "FTG-FF-18688-14112",
+     "footing_top_level_mm": -950.0,
+     "lap_zone_kg_each_layer": 14.142,
+     "lap_zone_mm": 640,
+     "layers_in_lap_zone": 2,
+     "starter_state": "PROVISIONAL",
+     "zone": "FOOTING_TOP"
+    },
+    {
+     "bars": 14,
+     "dia_mm": 16,
+     "lap_kg": 14.142,
+     "lap_kg_at_70D": 24.748,
+     "lap_mm": 640,
+     "lap_part": "SEG-COL-C9-X10-Y07-FOUNDATION|LAP_TOP",
+     "lap_state": "PROVISIONAL",
+     "layers_in_lap_zone": 2,
+     "zone": "JOINT_FOUNDATION->GF"
+    },
+    {
+     "bars": 12,
+     "dia_mm": 16,
+     "lap_kg": 12.122,
+     "lap_kg_at_70D": 21.213,
+     "lap_mm": 640,
+     "lap_part": "SEG-COL-C9-X10-Y07-GF|LAP_TOP",
+     "lap_state": "PROVISIONAL",
+     "layers_in_lap_zone": 2,
+     "zone": "JOINT_GF->1F"
+    },
+    {
+     "bars": 10,
+     "dia_mm": 16,
+     "lap_kg": 10.101,
+     "lap_kg_at_70D": 17.677,
+     "lap_mm": 640,
+     "lap_part": "SEG-COL-C9-X10-Y07-1F|LAP_TOP",
+     "lap_state": "PROVISIONAL",
+     "layers_in_lap_zone": 2,
+     "zone": "JOINT_1F->2F"
+    }
+   ]
+  },
+  {
+   "chain_id": "COLPOS-X10-Y09-21688-17362",
+   "checks": [
+    {
+     "check": "lap_is_top_splice",
+     "detail": "SEG-COL-C2-X10-Y09-FOUNDATION|LAP_TOP",
+     "ok": true
+    },
+    {
+     "check": "lap_is_top_splice",
+     "detail": "SEG-COL-C2-X10-Y09-GF|LAP_TOP",
+     "ok": true
+    },
+    {
+     "check": "lap_is_top_splice",
+     "detail": "SEG-COL-C2-X10-Y09-1F|LAP_TOP",
+     "ok": true
+    },
+    {
+     "check": "foundation_core_exists",
+     "detail": "FOUNDATION MAIN_CORE row for the starter chain",
+     "ok": true
+    },
+    {
+     "check": "same_bars_starter_core",
+     "detail": "starter 8 T16 vs core 8 T16",
+     "ok": true
+    },
+    {
+     "check": "core_starts_at_footing_top",
+     "detail": "core bottom -950.0 mm vs footing top -950.0 mm (core basis H 550.0, starter H 550.0)",
+     "ok": true
+    },
+    {
+     "check": "starter_length_is_rule",
+     "detail": "1420.0 = (550.0 - 70) + 300 + 40 x 16 = 1420.0",
+     "ok": true
+    },
+    {
+     "check": "footing_top_zone_counted_twice",
+     "detail": "layers 2, core inside the footing 0.0 mm",
+     "ok": true
+    },
+    {
+     "check": "core_above_exists",
+     "detail": "MAIN_CORE GF",
+     "ok": true
+    },
+    {
+     "check": "core_below_exists",
+     "detail": "MAIN_CORE FOUNDATION",
+     "ok": true
+    },
+    {
+     "check": "cores_meet_at_ffl",
+     "detail": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 550.0 mm (bound footing) | printed floor-to-floor 4.5 m (FFL basis)",
+     "ok": true
+    },
+    {
+     "check": "lap_bars_not_more_than_both",
+     "detail": "lap 8 vs below 8 / above 8",
+     "ok": true
+    },
+    {
+     "check": "lap_dia_is_upper_bar",
+     "detail": "lap T16 vs above T16",
+     "ok": true
+    },
+    {
+     "check": "core_above_exists",
+     "detail": "MAIN_CORE 1F",
+     "ok": true
+    },
+    {
+     "check": "core_below_exists",
+     "detail": "MAIN_CORE GF",
+     "ok": true
+    },
+    {
+     "check": "cores_meet_at_ffl",
+     "detail": "printed floor-to-floor 4.5 m (FFL basis) | printed floor-to-floor 4.2 m (FFL basis)",
+     "ok": true
+    },
+    {
+     "check": "lap_bars_not_more_than_both",
+     "detail": "lap 8 vs below 8 / above 8",
+     "ok": true
+    },
+    {
+     "check": "lap_dia_is_upper_bar",
+     "detail": "lap T16 vs above T16",
+     "ok": true
+    },
+    {
+     "check": "core_above_exists",
+     "detail": "MAIN_CORE 2F",
+     "ok": true
+    },
+    {
+     "check": "core_below_exists",
+     "detail": "MAIN_CORE 1F",
+     "ok": true
+    },
+    {
+     "check": "cores_meet_at_ffl",
+     "detail": "printed floor-to-floor 4.2 m (FFL basis) | printed floor-to-floor 4.2 m (FFL basis)",
+     "ok": true
+    },
+    {
+     "check": "lap_bars_not_more_than_both",
+     "detail": "lap 6 vs below 8 / above 6",
+     "ok": true
+    },
+    {
+     "check": "lap_dia_is_upper_bar",
+     "detail": "lap T16 vs above T16",
+     "ok": true
+    },
+    {
+     "check": "one_starter",
+     "detail": "starter rows",
+     "ok": true
+    },
+    {
+     "check": "one_lap_per_joint",
+     "detail": "lap rows per floor",
+     "ok": true
+    }
+   ],
+   "zones": [
+    {
+     "bars": 8,
+     "core_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 550.0 mm (bound footing)",
+     "core_bottom_level_mm": -950.0,
+     "core_if_formation_at_printed_limit_mm": 1780.0,
+     "core_inside_footing_mm": 0.0,
+     "core_interval_mm": 1950.0,
+     "core_kg_difference_if_formation_at_limit": -2.147,
+     "core_state": "LOWER_BOUND",
+     "dia_mm": 16,
+     "footing_depth_mm": 550.0,
+     "footing_ref": "FTG-FF-18688-14112",
+     "footing_top_level_mm": -950.0,
+     "lap_zone_kg_each_layer": 8.081,
+     "lap_zone_mm": 640,
+     "layers_in_lap_zone": 2,
+     "starter_state": "PROVISIONAL",
+     "zone": "FOOTING_TOP"
+    },
+    {
+     "bars": 8,
+     "dia_mm": 16,
+     "lap_kg": 8.081,
+     "lap_kg_at_70D": 14.142,
+     "lap_mm": 640,
+     "lap_part": "SEG-COL-C2-X10-Y09-FOUNDATION|LAP_TOP",
+     "lap_state": "PROVISIONAL",
+     "layers_in_lap_zone": 2,
+     "zone": "JOINT_FOUNDATION->GF"
+    },
+    {
+     "bars": 8,
+     "dia_mm": 16,
+     "lap_kg": 8.081,
+     "lap_kg_at_70D": 14.142,
+     "lap_mm": 640,
+     "lap_part": "SEG-COL-C2-X10-Y09-GF|LAP_TOP",
+     "lap_state": "PROVISIONAL",
+     "layers_in_lap_zone": 2,
+     "zone": "JOINT_GF->1F"
+    },
+    {
+     "bars": 6,
+     "dia_mm": 16,
+     "lap_kg": 6.061,
+     "lap_kg_at_70D": 10.606,
+     "lap_mm": 640,
+     "lap_part": "SEG-COL-C2-X10-Y09-1F|LAP_TOP",
+     "lap_state": "PROVISIONAL",
+     "layers_in_lap_zone": 2,
+     "zone": "JOINT_1F->2F"
+    }
+   ]
+  },
+  {
+   "chain_id": "COLPOS-X11-Y10-23558-20662",
+   "checks": [
+    {
+     "check": "lap_is_top_splice",
+     "detail": "SEG-COL-C5-X11-Y10-FOUNDATION|LAP_TOP",
+     "ok": true
+    },
+    {
+     "check": "lap_is_top_splice",
+     "detail": "SEG-COL-C5-X11-Y10-GF|LAP_TOP",
+     "ok": true
+    },
+    {
+     "check": "lap_is_top_splice",
+     "detail": "SEG-COL-C5-X11-Y10-1F|LAP_TOP",
+     "ok": true
+    },
+    {
+     "check": "foundation_core_exists",
+     "detail": "FOUNDATION MAIN_CORE row for the starter chain",
+     "ok": true
+    },
+    {
+     "check": "same_bars_starter_core",
+     "detail": "starter 10 T16 vs core 10 T16",
+     "ok": true
+    },
+    {
+     "check": "core_starts_at_footing_top",
+     "detail": "core bottom -1100.0 mm vs footing top -1100.0 mm (core basis H 400.0, starter H 400.0)",
+     "ok": true
+    },
+    {
+     "check": "starter_length_is_rule",
+     "detail": "1270.0 = (400.0 - 70) + 300 + 40 x 16 = 1270.0",
+     "ok": true
+    },
+    {
+     "check": "footing_top_zone_counted_twice",
+     "detail": "layers 2, core inside the footing 0.0 mm",
+     "ok": true
+    },
+    {
+     "check": "core_above_exists",
+     "detail": "MAIN_CORE GF",
+     "ok": true
+    },
+    {
+     "check": "core_below_exists",
+     "detail": "MAIN_CORE FOUNDATION",
+     "ok": true
+    },
+    {
+     "check": "cores_meet_at_ffl",
+     "detail": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 400.0 mm (bound footing) | printed floor-to-floor 4.5 m (FFL basis)",
+     "ok": true
+    },
+    {
+     "check": "lap_bars_not_more_than_both",
+     "detail": "lap 10 vs below 10 / above 10",
+     "ok": true
+    },
+    {
+     "check": "lap_dia_is_upper_bar",
+     "detail": "lap T16 vs above T16",
+     "ok": true
+    },
+    {
+     "check": "core_above_exists",
+     "detail": "MAIN_CORE 1F",
+     "ok": true
+    },
+    {
+     "check": "core_below_exists",
+     "detail": "MAIN_CORE GF",
+     "ok": true
+    },
+    {
+     "check": "cores_meet_at_ffl",
+     "detail": "printed floor-to-floor 4.5 m (FFL basis) | printed floor-to-floor 4.2 m (FFL basis)",
+     "ok": true
+    },
+    {
+     "check": "lap_bars_not_more_than_both",
+     "detail": "lap 8 vs below 10 / above 8",
+     "ok": true
+    },
+    {
+     "check": "lap_dia_is_upper_bar",
+     "detail": "lap T16 vs above T16",
+     "ok": true
+    },
+    {
+     "check": "core_above_exists",
+     "detail": "MAIN_CORE 2F",
+     "ok": true
+    },
+    {
+     "check": "core_below_exists",
+     "detail": "MAIN_CORE 1F",
+     "ok": true
+    },
+    {
+     "check": "cores_meet_at_ffl",
+     "detail": "printed floor-to-floor 4.2 m (FFL basis) | printed floor-to-floor 4.2 m (FFL basis)",
+     "ok": true
+    },
+    {
+     "check": "lap_bars_not_more_than_both",
+     "detail": "lap 6 vs below 8 / above 6",
+     "ok": true
+    },
+    {
+     "check": "lap_dia_is_upper_bar",
+     "detail": "lap T16 vs above T16",
+     "ok": true
+    },
+    {
+     "check": "one_starter",
+     "detail": "starter rows",
+     "ok": true
+    },
+    {
+     "check": "one_lap_per_joint",
+     "detail": "lap rows per floor",
+     "ok": true
+    }
+   ],
+   "zones": [
+    {
+     "bars": 10,
+     "core_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 400.0 mm (bound footing)",
+     "core_bottom_level_mm": -1100.0,
+     "core_if_formation_at_printed_limit_mm": 1930.0,
+     "core_inside_footing_mm": 0.0,
+     "core_interval_mm": 2100.0,
+     "core_kg_difference_if_formation_at_limit": -2.683,
+     "core_state": "LOWER_BOUND",
+     "dia_mm": 16,
+     "footing_depth_mm": 400.0,
+     "footing_ref": "FTG-F5-22358-19612",
+     "footing_top_level_mm": -1100.0,
+     "lap_zone_kg_each_layer": 10.101,
+     "lap_zone_mm": 640,
+     "layers_in_lap_zone": 2,
+     "starter_state": "PROVISIONAL",
+     "zone": "FOOTING_TOP"
+    },
+    {
+     "bars": 10,
+     "dia_mm": 16,
+     "lap_kg": 10.101,
+     "lap_kg_at_70D": 17.677,
+     "lap_mm": 640,
+     "lap_part": "SEG-COL-C5-X11-Y10-FOUNDATION|LAP_TOP",
+     "lap_state": "PROVISIONAL",
+     "layers_in_lap_zone": 2,
+     "zone": "JOINT_FOUNDATION->GF"
+    },
+    {
+     "bars": 8,
+     "dia_mm": 16,
+     "lap_kg": 8.081,
+     "lap_kg_at_70D": 14.142,
+     "lap_mm": 640,
+     "lap_part": "SEG-COL-C5-X11-Y10-GF|LAP_TOP",
+     "lap_state": "PROVISIONAL",
+     "layers_in_lap_zone": 2,
+     "zone": "JOINT_GF->1F"
+    },
+    {
+     "bars": 6,
+     "dia_mm": 16,
+     "lap_kg": 6.061,
+     "lap_kg_at_70D": 10.606,
+     "lap_mm": 640,
+     "lap_part": "SEG-COL-C5-X11-Y10-1F|LAP_TOP",
+     "lap_state": "PROVISIONAL",
+     "layers_in_lap_zone": 2,
+     "zone": "JOINT_1F->2F"
+    }
+   ]
+  },
+  {
+   "chain_id": "COLPOS-X12-Y01-24458-7462",
+   "checks": [
+    {
+     "check": "lap_is_top_splice",
+     "detail": "SEG-COL-C3-X12-Y01-FOUNDATION|LAP_TOP",
+     "ok": true
+    },
+    {
+     "check": "foundation_core_exists",
+     "detail": "FOUNDATION MAIN_CORE row for the starter chain",
+     "ok": true
+    },
+    {
+     "check": "same_bars_starter_core",
+     "detail": "starter 8 T16 vs core 8 T16",
+     "ok": true
+    },
+    {
+     "check": "core_starts_at_footing_top",
+     "detail": "core bottom -1000.0 mm vs footing top -1000.0 mm (core basis H 500.0, starter H 500.0)",
+     "ok": true
+    },
+    {
+     "check": "starter_length_is_rule",
+     "detail": "1370.0 = (500.0 - 70) + 300 + 40 x 16 = 1370.0",
+     "ok": true
+    },
+    {
+     "check": "footing_top_zone_counted_twice",
+     "detail": "layers 2, core inside the footing 0.0 mm",
+     "ok": true
+    },
+    {
+     "check": "core_above_exists",
+     "detail": "MAIN_CORE GF",
+     "ok": true
+    },
+    {
+     "check": "core_below_exists",
+     "detail": "MAIN_CORE FOUNDATION",
+     "ok": true
+    },
+    {
+     "check": "cores_meet_at_ffl",
+     "detail": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 500.0 mm (bound footing) | printed floor-to-floor 4.5 m (FFL basis)",
+     "ok": true
+    },
+    {
+     "check": "lap_bars_not_more_than_both",
+     "detail": "lap 8 vs below 8 / above 8",
+     "ok": true
+    },
+    {
+     "check": "lap_dia_is_upper_bar",
+     "detail": "lap T16 vs above T16",
+     "ok": true
+    },
+    {
+     "check": "one_starter",
+     "detail": "starter rows",
+     "ok": true
+    },
+    {
+     "check": "one_lap_per_joint",
+     "detail": "lap rows per floor",
+     "ok": true
+    }
+   ],
+   "zones": [
+    {
+     "bars": 8,
+     "core_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 500.0 mm (bound footing)",
+     "core_bottom_level_mm": -1000.0,
+     "core_if_formation_at_printed_limit_mm": 1830.0,
+     "core_inside_footing_mm": 0.0,
+     "core_interval_mm": 2000.0,
+     "core_kg_difference_if_formation_at_limit": -2.147,
+     "core_state": "LOWER_BOUND",
+     "dia_mm": 16,
+     "footing_depth_mm": 500.0,
+     "footing_ref": "FTG-F14-22408-7312",
+     "footing_top_level_mm": -1000.0,
+     "lap_zone_kg_each_layer": 8.081,
+     "lap_zone_mm": 640,
+     "layers_in_lap_zone": 2,
+     "starter_state": "PROVISIONAL",
+     "zone": "FOOTING_TOP"
+    },
+    {
+     "bars": 8,
+     "dia_mm": 16,
+     "lap_kg": 8.081,
+     "lap_kg_at_70D": 14.142,
+     "lap_mm": 640,
+     "lap_part": "SEG-COL-C3-X12-Y01-FOUNDATION|LAP_TOP",
+     "lap_state": "PROVISIONAL",
+     "layers_in_lap_zone": 2,
+     "zone": "JOINT_FOUNDATION->GF"
+    }
+   ]
+  },
+  {
+   "chain_id": "COLPOS-X12-Y02-24308-8912",
+   "checks": [
+    {
+     "check": "lap_is_top_splice",
+     "detail": "SEG-COL-C8-X12-Y02-FOUNDATION|LAP_TOP",
+     "ok": true
+    },
+    {
+     "check": "lap_is_top_splice",
+     "detail": "SEG-COL-C8-X12-Y02-GF|LAP_TOP",
+     "ok": true
+    },
+    {
+     "check": "foundation_core_exists",
+     "detail": "FOUNDATION MAIN_CORE row for the starter chain",
+     "ok": true
+    },
+    {
+     "check": "same_bars_starter_core",
+     "detail": "starter 12 T16 vs core 12 T16",
+     "ok": true
+    },
+    {
+     "check": "core_starts_at_footing_top",
+     "detail": "core bottom -1000.0 mm vs footing top -1000.0 mm (core basis H 500.0, starter H 500.0)",
+     "ok": true
+    },
+    {
+     "check": "starter_length_is_rule",
+     "detail": "1370.0 = (500.0 - 70) + 300 + 40 x 16 = 1370.0",
+     "ok": true
+    },
+    {
+     "check": "footing_top_zone_counted_twice",
+     "detail": "layers 2, core inside the footing 0.0 mm",
+     "ok": true
+    },
+    {
+     "check": "core_above_exists",
+     "detail": "MAIN_CORE GF",
+     "ok": true
+    },
+    {
+     "check": "core_below_exists",
+     "detail": "MAIN_CORE FOUNDATION",
+     "ok": true
+    },
+    {
+     "check": "cores_meet_at_ffl",
+     "detail": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 500.0 mm (bound footing) | printed floor-to-floor 4.5 m (FFL basis)",
+     "ok": true
+    },
+    {
+     "check": "lap_bars_not_more_than_both",
+     "detail": "lap 12 vs below 12 / above 12",
+     "ok": true
+    },
+    {
+     "check": "lap_dia_is_upper_bar",
+     "detail": "lap T16 vs above T16",
+     "ok": true
+    },
+    {
+     "check": "core_above_exists",
+     "detail": "MAIN_CORE 1F",
+     "ok": true
+    },
+    {
+     "check": "core_below_exists",
+     "detail": "MAIN_CORE GF",
+     "ok": true
+    },
+    {
+     "check": "cores_meet_at_ffl",
+     "detail": "printed floor-to-floor 4.5 m (FFL basis) | printed floor-to-floor 4.2 m (FFL basis)",
+     "ok": true
+    },
+    {
+     "check": "lap_bars_not_more_than_both",
+     "detail": "lap 10 vs below 12 / above 10",
+     "ok": true
+    },
+    {
+     "check": "lap_dia_is_upper_bar",
+     "detail": "lap T16 vs above T16",
+     "ok": true
+    },
+    {
+     "check": "one_starter",
+     "detail": "starter rows",
+     "ok": true
+    },
+    {
+     "check": "one_lap_per_joint",
+     "detail": "lap rows per floor",
+     "ok": true
+    }
+   ],
+   "zones": [
+    {
+     "bars": 12,
+     "core_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 500.0 mm (bound footing)",
+     "core_bottom_level_mm": -1000.0,
+     "core_if_formation_at_printed_limit_mm": 1830.0,
+     "core_inside_footing_mm": 0.0,
+     "core_interval_mm": 2000.0,
+     "core_kg_difference_if_formation_at_limit": -3.22,
+     "core_state": "LOWER_BOUND",
+     "dia_mm": 16,
+     "footing_depth_mm": 500.0,
+     "footing_ref": "FTG-F14-22408-7312",
+     "footing_top_level_mm": -1000.0,
+     "lap_zone_kg_each_layer": 12.122,
+     "lap_zone_mm": 640,
+     "layers_in_lap_zone": 2,
+     "starter_state": "LOWER_BOUND",
+     "zone": "FOOTING_TOP"
+    },
+    {
+     "bars": 12,
+     "dia_mm": 16,
+     "lap_kg": 12.122,
+     "lap_kg_at_70D": 21.213,
+     "lap_mm": 640,
+     "lap_part": "SEG-COL-C8-X12-Y02-FOUNDATION|LAP_TOP",
+     "lap_state": "LOWER_BOUND",
+     "layers_in_lap_zone": 2,
+     "zone": "JOINT_FOUNDATION->GF"
+    },
+    {
+     "bars": 10,
+     "dia_mm": 16,
+     "lap_kg": 10.101,
+     "lap_kg_at_70D": 17.677,
+     "lap_mm": 640,
+     "lap_part": "SEG-COL-C8-X12-Y02-GF|LAP_TOP",
+     "lap_state": "PROVISIONAL",
+     "layers_in_lap_zone": 2,
+     "zone": "JOINT_GF->1F"
+    }
+   ]
+  },
+  {
+   "chain_id": "COLPOS-X13-Y08-27308-16612",
+   "checks": [
+    {
+     "check": "lap_is_top_splice",
+     "detail": "SEG-COL-C9-X13-Y08-FOUNDATION|LAP_TOP",
+     "ok": true
+    },
+    {
+     "check": "lap_is_top_splice",
+     "detail": "SEG-COL-C9-X13-Y08-GF|LAP_TOP",
+     "ok": true
+    },
+    {
+     "check": "foundation_core_exists",
+     "detail": "FOUNDATION MAIN_CORE row for the starter chain",
+     "ok": true
+    },
+    {
+     "check": "same_bars_starter_core",
+     "detail": "starter 14 T16 vs core 14 T16",
+     "ok": true
+    },
+    {
+     "check": "core_starts_at_footing_top",
+     "detail": "core bottom -950.0 mm vs footing top -950.0 mm (core basis H 550.0, starter H 550.0)",
+     "ok": true
+    },
+    {
+     "check": "starter_length_is_rule",
+     "detail": "1420.0 = (550.0 - 70) + 300 + 40 x 16 = 1420.0",
+     "ok": true
+    },
+    {
+     "check": "footing_top_zone_counted_twice",
+     "detail": "layers 2, core inside the footing 0.0 mm",
+     "ok": true
+    },
+    {
+     "check": "core_above_exists",
+     "detail": "MAIN_CORE GF",
+     "ok": true
+    },
+    {
+     "check": "core_below_exists",
+     "detail": "MAIN_CORE FOUNDATION",
+     "ok": true
+    },
+    {
+     "check": "cores_meet_at_ffl",
+     "detail": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 550.0 mm (bound footing) | printed floor-to-floor 4.5 m (FFL basis)",
+     "ok": true
+    },
+    {
+     "check": "lap_bars_not_more_than_both",
+     "detail": "lap 14 vs below 14 / above 14",
+     "ok": true
+    },
+    {
+     "check": "lap_dia_is_upper_bar",
+     "detail": "lap T16 vs above T16",
+     "ok": true
+    },
+    {
+     "check": "core_above_exists",
+     "detail": "MAIN_CORE 1F",
+     "ok": true
+    },
+    {
+     "check": "core_below_exists",
+     "detail": "MAIN_CORE GF",
+     "ok": true
+    },
+    {
+     "check": "cores_meet_at_ffl",
+     "detail": "printed floor-to-floor 4.5 m (FFL basis) | printed floor-to-floor 4.2 m (FFL basis)",
+     "ok": true
+    },
+    {
+     "check": "lap_bars_not_more_than_both",
+     "detail": "lap 12 vs below 14 / above 12",
+     "ok": true
+    },
+    {
+     "check": "lap_dia_is_upper_bar",
+     "detail": "lap T16 vs above T16",
+     "ok": true
+    },
+    {
+     "check": "one_starter",
+     "detail": "starter rows",
+     "ok": true
+    },
+    {
+     "check": "one_lap_per_joint",
+     "detail": "lap rows per floor",
+     "ok": true
+    }
+   ],
+   "zones": [
+    {
+     "bars": 14,
+     "core_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 550.0 mm (bound footing)",
+     "core_bottom_level_mm": -950.0,
+     "core_if_formation_at_printed_limit_mm": 1780.0,
+     "core_inside_footing_mm": 0.0,
+     "core_interval_mm": 1950.0,
+     "core_kg_difference_if_formation_at_limit": -3.756,
+     "core_state": "LOWER_BOUND",
+     "dia_mm": 16,
+     "footing_depth_mm": 550.0,
+     "footing_ref": "FTG-F9-25608-15262",
+     "footing_top_level_mm": -950.0,
+     "lap_zone_kg_each_layer": 14.142,
+     "lap_zone_mm": 640,
+     "layers_in_lap_zone": 2,
+     "starter_state": "PROVISIONAL",
+     "zone": "FOOTING_TOP"
+    },
+    {
+     "bars": 14,
+     "dia_mm": 16,
+     "lap_kg": 14.142,
+     "lap_kg_at_70D": 24.748,
+     "lap_mm": 640,
+     "lap_part": "SEG-COL-C9-X13-Y08-FOUNDATION|LAP_TOP",
+     "lap_state": "PROVISIONAL",
+     "layers_in_lap_zone": 2,
+     "zone": "JOINT_FOUNDATION->GF"
+    },
+    {
+     "bars": 12,
+     "dia_mm": 16,
+     "lap_kg": 12.122,
+     "lap_kg_at_70D": 21.213,
+     "lap_mm": 640,
+     "lap_part": "SEG-COL-C9-X13-Y08-GF|LAP_TOP",
+     "lap_state": "PROVISIONAL",
+     "layers_in_lap_zone": 2,
+     "zone": "JOINT_GF->1F"
+    }
+   ]
+  },
+  {
+   "chain_id": "COLPOS-X13-Y10-27458-20662",
+   "checks": [
+    {
+     "check": "lap_is_top_splice",
+     "detail": "SEG-COL-C4-X13-Y10-FOUNDATION|LAP_TOP",
+     "ok": true
+    },
+    {
+     "check": "lap_is_top_splice",
+     "detail": "SEG-COL-C4-X13-Y10-GF|LAP_TOP",
+     "ok": true
+    },
+    {
+     "check": "foundation_core_exists",
+     "detail": "FOUNDATION MAIN_CORE row for the starter chain",
+     "ok": true
+    },
+    {
+     "check": "same_bars_starter_core",
+     "detail": "starter 8 T16 vs core 8 T16",
+     "ok": true
+    },
+    {
+     "check": "core_starts_at_footing_top",
+     "detail": "core bottom -1100.0 mm vs footing top -1100.0 mm (core basis H 400.0, starter H 400.0)",
+     "ok": true
+    },
+    {
+     "check": "starter_length_is_rule",
+     "detail": "1270.0 = (400.0 - 70) + 300 + 40 x 16 = 1270.0",
+     "ok": true
+    },
+    {
+     "check": "footing_top_zone_counted_twice",
+     "detail": "layers 2, core inside the footing 0.0 mm",
+     "ok": true
+    },
+    {
+     "check": "core_above_exists",
+     "detail": "MAIN_CORE GF",
+     "ok": true
+    },
+    {
+     "check": "core_below_exists",
+     "detail": "MAIN_CORE FOUNDATION",
+     "ok": true
+    },
+    {
+     "check": "cores_meet_at_ffl",
+     "detail": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 400.0 mm (bound footing) | printed floor-to-floor 4.5 m (FFL basis)",
+     "ok": true
+    },
+    {
+     "check": "lap_bars_not_more_than_both",
+     "detail": "lap 8 vs below 8 / above 8",
+     "ok": true
+    },
+    {
+     "check": "lap_dia_is_upper_bar",
+     "detail": "lap T16 vs above T16",
+     "ok": true
+    },
+    {
+     "check": "core_above_exists",
+     "detail": "MAIN_CORE 1F",
+     "ok": true
+    },
+    {
+     "check": "core_below_exists",
+     "detail": "MAIN_CORE GF",
+     "ok": true
+    },
+    {
+     "check": "cores_meet_at_ffl",
+     "detail": "printed floor-to-floor 4.5 m (FFL basis) | printed floor-to-floor 4.2 m (FFL basis)",
+     "ok": true
+    },
+    {
+     "check": "lap_bars_not_more_than_both",
+     "detail": "lap 8 vs below 8 / above 8",
+     "ok": true
+    },
+    {
+     "check": "lap_dia_is_upper_bar",
+     "detail": "lap T16 vs above T16",
+     "ok": true
+    },
+    {
+     "check": "one_starter",
+     "detail": "starter rows",
+     "ok": true
+    },
+    {
+     "check": "one_lap_per_joint",
+     "detail": "lap rows per floor",
+     "ok": true
+    }
+   ],
+   "zones": [
+    {
+     "bars": 8,
+     "core_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 400.0 mm (bound footing)",
+     "core_bottom_level_mm": -1100.0,
+     "core_if_formation_at_printed_limit_mm": 1930.0,
+     "core_inside_footing_mm": 0.0,
+     "core_interval_mm": 2100.0,
+     "core_kg_difference_if_formation_at_limit": -2.147,
+     "core_state": "LOWER_BOUND",
+     "dia_mm": 16,
+     "footing_depth_mm": 400.0,
+     "footing_ref": "FTG-F4-26358-19662",
+     "footing_top_level_mm": -1100.0,
+     "lap_zone_kg_each_layer": 8.081,
+     "lap_zone_mm": 640,
+     "layers_in_lap_zone": 2,
+     "starter_state": "PROVISIONAL",
+     "zone": "FOOTING_TOP"
+    },
+    {
+     "bars": 8,
+     "dia_mm": 16,
+     "lap_kg": 8.081,
+     "lap_kg_at_70D": 14.142,
+     "lap_mm": 640,
+     "lap_part": "SEG-COL-C4-X13-Y10-FOUNDATION|LAP_TOP",
+     "lap_state": "PROVISIONAL",
+     "layers_in_lap_zone": 2,
+     "zone": "JOINT_FOUNDATION->GF"
+    },
+    {
+     "bars": 8,
+     "dia_mm": 16,
+     "lap_kg": 8.081,
+     "lap_kg_at_70D": 14.142,
+     "lap_mm": 640,
+     "lap_part": "SEG-COL-C4-X13-Y10-GF|LAP_TOP",
+     "lap_state": "PROVISIONAL",
+     "layers_in_lap_zone": 2,
+     "zone": "JOINT_GF->1F"
+    }
+   ]
+  },
+  {
+   "chain_id": "COLPOS-X14-Y02-27658-8962",
+   "checks": [
+    {
+     "check": "lap_is_top_splice",
+     "detail": "SEG-COL-C5-X14-Y02-FOUNDATION|LAP_TOP",
+     "ok": true
+    },
+    {
+     "check": "lap_is_top_splice",
+     "detail": "SEG-COL-C5-X14-Y02-GF|LAP_TOP",
+     "ok": true
+    },
+    {
+     "check": "foundation_core_exists",
+     "detail": "FOUNDATION MAIN_CORE row for the starter chain",
+     "ok": true
+    },
+    {
+     "check": "same_bars_starter_core",
+     "detail": "starter 10 T16 vs core 10 T16",
+     "ok": true
+    },
+    {
+     "check": "core_starts_at_footing_top",
+     "detail": "core bottom -1100.0 mm vs footing top -1100.0 mm (core basis H 400.0, starter H 400.0)",
+     "ok": true
+    },
+    {
+     "check": "starter_length_is_rule",
+     "detail": "1270.0 = (400.0 - 70) + 300 + 40 x 16 = 1270.0",
+     "ok": true
+    },
+    {
+     "check": "footing_top_zone_counted_twice",
+     "detail": "layers 2, core inside the footing 0.0 mm",
+     "ok": true
+    },
+    {
+     "check": "core_above_exists",
+     "detail": "MAIN_CORE GF",
+     "ok": true
+    },
+    {
+     "check": "core_below_exists",
+     "detail": "MAIN_CORE FOUNDATION",
+     "ok": true
+    },
+    {
+     "check": "cores_meet_at_ffl",
+     "detail": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 400.0 mm (bound footing) | printed floor-to-floor 4.5 m (FFL basis)",
+     "ok": true
+    },
+    {
+     "check": "lap_bars_not_more_than_both",
+     "detail": "lap 10 vs below 10 / above 10",
+     "ok": true
+    },
+    {
+     "check": "lap_dia_is_upper_bar",
+     "detail": "lap T16 vs above T16",
+     "ok": true
+    },
+    {
+     "check": "core_above_exists",
+     "detail": "MAIN_CORE 1F",
+     "ok": true
+    },
+    {
+     "check": "core_below_exists",
+     "detail": "MAIN_CORE GF",
+     "ok": true
+    },
+    {
+     "check": "cores_meet_at_ffl",
+     "detail": "printed floor-to-floor 4.5 m (FFL basis) | printed floor-to-floor 4.2 m (FFL basis)",
+     "ok": true
+    },
+    {
+     "check": "lap_bars_not_more_than_both",
+     "detail": "lap 8 vs below 10 / above 8",
+     "ok": true
+    },
+    {
+     "check": "lap_dia_is_upper_bar",
+     "detail": "lap T16 vs above T16",
+     "ok": true
+    },
+    {
+     "check": "one_starter",
+     "detail": "starter rows",
+     "ok": true
+    },
+    {
+     "check": "one_lap_per_joint",
+     "detail": "lap rows per floor",
+     "ok": true
+    }
+   ],
+   "zones": [
+    {
+     "bars": 10,
+     "core_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 400.0 mm (bound footing)",
+     "core_bottom_level_mm": -1100.0,
+     "core_if_formation_at_printed_limit_mm": 1930.0,
+     "core_inside_footing_mm": 0.0,
+     "core_interval_mm": 2100.0,
+     "core_kg_difference_if_formation_at_limit": -2.683,
+     "core_state": "LOWER_BOUND",
+     "dia_mm": 16,
+     "footing_depth_mm": 400.0,
+     "footing_ref": "FTG-F5-26458-7912",
+     "footing_top_level_mm": -1100.0,
+     "lap_zone_kg_each_layer": 10.101,
+     "lap_zone_mm": 640,
+     "layers_in_lap_zone": 2,
+     "starter_state": "PROVISIONAL",
+     "zone": "FOOTING_TOP"
+    },
+    {
+     "bars": 10,
+     "dia_mm": 16,
+     "lap_kg": 10.101,
+     "lap_kg_at_70D": 17.677,
+     "lap_mm": 640,
+     "lap_part": "SEG-COL-C5-X14-Y02-FOUNDATION|LAP_TOP",
+     "lap_state": "PROVISIONAL",
+     "layers_in_lap_zone": 2,
+     "zone": "JOINT_FOUNDATION->GF"
+    },
+    {
+     "bars": 8,
+     "dia_mm": 16,
+     "lap_kg": 8.081,
+     "lap_kg_at_70D": 14.142,
+     "lap_mm": 640,
+     "lap_part": "SEG-COL-C5-X14-Y02-GF|LAP_TOP",
+     "lap_state": "PROVISIONAL",
+     "layers_in_lap_zone": 2,
+     "zone": "JOINT_GF->1F"
+    }
+   ]
+  },
+  {
+   "chain_id": "COLPOS-X15-Y01-31408-7462",
+   "checks": [
+    {
+     "check": "lap_is_top_splice",
+     "detail": "SEG-COL-C10-X15-Y01-FOUNDATION|LAP_TOP",
+     "ok": true
+    },
+    {
+     "check": "foundation_core_exists",
+     "detail": "FOUNDATION MAIN_CORE row for the starter chain",
+     "ok": true
+    },
+    {
+     "check": "same_bars_starter_core",
+     "detail": "starter 10 T16 vs core 10 T16",
+     "ok": true
+    },
+    {
+     "check": "blocked_starter_has_no_length",
+     "detail": "starter length None, kg None",
+     "ok": true
+    },
+    {
+     "check": "core_above_exists",
+     "detail": "MAIN_CORE GF",
+     "ok": true
+    },
+    {
+     "check": "core_below_exists",
+     "detail": "MAIN_CORE FOUNDATION",
+     "ok": true
+    },
+    {
+     "check": "cores_meet_at_ffl",
+     "detail": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 500.0 mm (bound footing) | printed floor-to-floor 4.5 m (FFL basis)",
+     "ok": true
+    },
+    {
+     "check": "lap_bars_not_more_than_both",
+     "detail": "lap 10 vs below 10 / above 10",
+     "ok": true
+    },
+    {
+     "check": "lap_dia_is_upper_bar",
+     "detail": "lap T16 vs above T16",
+     "ok": true
+    },
+    {
+     "check": "one_starter",
+     "detail": "starter rows",
+     "ok": true
+    },
+    {
+     "check": "one_lap_per_joint",
+     "detail": "lap rows per floor",
+     "ok": true
+    }
+   ],
+   "zones": [
+    {
+     "bars": 10,
+     "core_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 500.0 mm (bound footing)",
+     "core_bottom_level_mm": -1000.0,
+     "core_interval_mm": 2000.0,
+     "core_state": "LOWER_BOUND",
+     "dia_mm": 16,
+     "footing_depth_mm": null,
+     "footing_ref": "FTG-CONFLICT_F_F10-30008-7312",
+     "footing_top_level_mm": null,
+     "lap_zone_mm": 640,
+     "layers_in_lap_zone": "HELD (footing depth not established: starter BLOCKED)",
+     "starter_state": "BLOCKED",
+     "zone": "FOOTING_TOP"
+    },
+    {
+     "bars": 10,
+     "dia_mm": 16,
+     "lap_kg": 10.101,
+     "lap_kg_at_70D": 17.677,
+     "lap_mm": 640,
+     "lap_part": "SEG-COL-C10-X15-Y01-FOUNDATION|LAP_TOP",
+     "lap_state": "PROVISIONAL",
+     "layers_in_lap_zone": 2,
+     "zone": "JOINT_FOUNDATION->GF"
+    }
+   ]
+  },
+  {
+   "chain_id": "COLPOS-X15-Y02-31508-8912",
+   "checks": [
+    {
+     "check": "one_starter",
+     "detail": "starter rows",
+     "ok": true
+    },
+    {
+     "check": "one_lap_per_joint",
+     "detail": "lap rows per floor",
+     "ok": true
+    }
+   ],
+   "zones": []
+  },
+  {
+   "chain_id": "COLPOS-X15-Y06-31508-15062",
+   "checks": [
+    {
+     "check": "lap_is_top_splice",
+     "detail": "SEG-COL-C8-X15-Y06-FOUNDATION|LAP_TOP",
+     "ok": true
+    },
+    {
+     "check": "lap_is_top_splice",
+     "detail": "SEG-COL-C8-X15-Y06-GF|LAP_TOP",
+     "ok": true
+    },
+    {
+     "check": "foundation_core_exists",
+     "detail": "FOUNDATION MAIN_CORE row for the starter chain",
+     "ok": true
+    },
+    {
+     "check": "same_bars_starter_core",
+     "detail": "starter 12 T16 vs core 12 T16",
+     "ok": true
+    },
+    {
+     "check": "core_starts_at_footing_top",
+     "detail": "core bottom -1000.0 mm vs footing top -1000.0 mm (core basis H 500.0, starter H 500.0)",
+     "ok": true
+    },
+    {
+     "check": "starter_length_is_rule",
+     "detail": "1370.0 = (500.0 - 70) + 300 + 40 x 16 = 1370.0",
+     "ok": true
+    },
+    {
+     "check": "footing_top_zone_counted_twice",
+     "detail": "layers 2, core inside the footing 0.0 mm",
+     "ok": true
+    },
+    {
+     "check": "core_above_exists",
+     "detail": "MAIN_CORE GF",
+     "ok": true
+    },
+    {
+     "check": "core_below_exists",
+     "detail": "MAIN_CORE FOUNDATION",
+     "ok": true
+    },
+    {
+     "check": "cores_meet_at_ffl",
+     "detail": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 500.0 mm (bound footing) | printed floor-to-floor 4.5 m (FFL basis)",
+     "ok": true
+    },
+    {
+     "check": "lap_bars_not_more_than_both",
+     "detail": "lap 12 vs below 12 / above 12",
+     "ok": true
+    },
+    {
+     "check": "lap_dia_is_upper_bar",
+     "detail": "lap T16 vs above T16",
+     "ok": true
+    },
+    {
+     "check": "core_above_exists",
+     "detail": "MAIN_CORE 1F",
+     "ok": true
+    },
+    {
+     "check": "core_below_exists",
+     "detail": "MAIN_CORE GF",
+     "ok": true
+    },
+    {
+     "check": "cores_meet_at_ffl",
+     "detail": "printed floor-to-floor 4.5 m (FFL basis) | printed floor-to-floor 4.2 m (FFL basis)",
+     "ok": true
+    },
+    {
+     "check": "lap_bars_not_more_than_both",
+     "detail": "lap 12 vs below 12 / above 12",
+     "ok": true
+    },
+    {
+     "check": "lap_dia_is_upper_bar",
+     "detail": "lap T16 vs above T16",
+     "ok": true
+    },
+    {
+     "check": "one_starter",
+     "detail": "starter rows",
+     "ok": true
+    },
+    {
+     "check": "one_lap_per_joint",
+     "detail": "lap rows per floor",
+     "ok": true
+    }
+   ],
+   "zones": [
+    {
+     "bars": 12,
+     "core_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 500.0 mm (bound footing)",
+     "core_bottom_level_mm": -1000.0,
+     "core_if_formation_at_printed_limit_mm": 1830.0,
+     "core_inside_footing_mm": 0.0,
+     "core_interval_mm": 2000.0,
+     "core_kg_difference_if_formation_at_limit": -3.22,
+     "core_state": "LOWER_BOUND",
+     "dia_mm": 16,
+     "footing_depth_mm": 500.0,
+     "footing_ref": "FTG-F8-29258-13262",
+     "footing_top_level_mm": -1000.0,
+     "lap_zone_kg_each_layer": 12.122,
+     "lap_zone_mm": 640,
+     "layers_in_lap_zone": 2,
+     "starter_state": "PROVISIONAL",
+     "zone": "FOOTING_TOP"
+    },
+    {
+     "bars": 12,
+     "dia_mm": 16,
+     "lap_kg": 12.122,
+     "lap_kg_at_70D": 21.213,
+     "lap_mm": 640,
+     "lap_part": "SEG-COL-C8-X15-Y06-FOUNDATION|LAP_TOP",
+     "lap_state": "PROVISIONAL",
+     "layers_in_lap_zone": 2,
+     "zone": "JOINT_FOUNDATION->GF"
+    },
+    {
+     "bars": 12,
+     "dia_mm": 16,
+     "lap_kg": 12.122,
+     "lap_kg_at_70D": 21.213,
+     "lap_mm": 640,
+     "lap_part": "SEG-COL-C8-X15-Y06-GF|LAP_TOP",
+     "lap_state": "PROVISIONAL",
+     "layers_in_lap_zone": 2,
+     "zone": "JOINT_GF->1F"
+    }
+   ]
+  },
+  {
+   "chain_id": "COLPOS-X15-Y10-31508-20687",
+   "checks": [
+    {
+     "check": "lap_is_top_splice",
+     "detail": "SEG-COL-C4-X15-Y10-FOUNDATION|LAP_TOP",
+     "ok": true
+    },
+    {
+     "check": "lap_is_top_splice",
+     "detail": "SEG-COL-C4-X15-Y10-GF|LAP_TOP",
+     "ok": true
+    },
+    {
+     "check": "foundation_core_exists",
+     "detail": "FOUNDATION MAIN_CORE row for the starter chain",
+     "ok": true
+    },
+    {
+     "check": "same_bars_starter_core",
+     "detail": "starter 8 T16 vs core 8 T16",
+     "ok": true
+    },
+    {
+     "check": "core_starts_at_footing_top",
+     "detail": "core bottom -1100.0 mm vs footing top -1100.0 mm (core basis H 400.0, starter H 400.0)",
+     "ok": true
+    },
+    {
+     "check": "starter_length_is_rule",
+     "detail": "1270.0 = (400.0 - 70) + 300 + 40 x 16 = 1270.0",
+     "ok": true
+    },
+    {
+     "check": "footing_top_zone_counted_twice",
+     "detail": "layers 2, core inside the footing 0.0 mm",
+     "ok": true
+    },
+    {
+     "check": "core_above_exists",
+     "detail": "MAIN_CORE GF",
+     "ok": true
+    },
+    {
+     "check": "core_below_exists",
+     "detail": "MAIN_CORE FOUNDATION",
+     "ok": true
+    },
+    {
+     "check": "cores_meet_at_ffl",
+     "detail": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 400.0 mm (bound footing) | printed floor-to-floor 4.5 m (FFL basis)",
+     "ok": true
+    },
+    {
+     "check": "lap_bars_not_more_than_both",
+     "detail": "lap 8 vs below 8 / above 8",
+     "ok": true
+    },
+    {
+     "check": "lap_dia_is_upper_bar",
+     "detail": "lap T16 vs above T16",
+     "ok": true
+    },
+    {
+     "check": "core_above_exists",
+     "detail": "MAIN_CORE 1F",
+     "ok": true
+    },
+    {
+     "check": "core_below_exists",
+     "detail": "MAIN_CORE GF",
+     "ok": true
+    },
+    {
+     "check": "cores_meet_at_ffl",
+     "detail": "printed floor-to-floor 4.5 m (FFL basis) | printed floor-to-floor 4.2 m (FFL basis)",
+     "ok": true
+    },
+    {
+     "check": "lap_bars_not_more_than_both",
+     "detail": "lap 8 vs below 8 / above 8",
+     "ok": true
+    },
+    {
+     "check": "lap_dia_is_upper_bar",
+     "detail": "lap T16 vs above T16",
+     "ok": true
+    },
+    {
+     "check": "one_starter",
+     "detail": "starter rows",
+     "ok": true
+    },
+    {
+     "check": "one_lap_per_joint",
+     "detail": "lap rows per floor",
+     "ok": true
+    }
+   ],
+   "zones": [
+    {
+     "bars": 8,
+     "core_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 400.0 mm (bound footing)",
+     "core_bottom_level_mm": -1100.0,
+     "core_if_formation_at_printed_limit_mm": 1930.0,
+     "core_inside_footing_mm": 0.0,
+     "core_interval_mm": 2100.0,
+     "core_kg_difference_if_formation_at_limit": -2.147,
+     "core_state": "LOWER_BOUND",
+     "dia_mm": 16,
+     "footing_depth_mm": 400.0,
+     "footing_ref": "FTG-F4-30408-19687",
+     "footing_top_level_mm": -1100.0,
+     "lap_zone_kg_each_layer": 8.081,
+     "lap_zone_mm": 640,
+     "layers_in_lap_zone": 2,
+     "starter_state": "PROVISIONAL",
+     "zone": "FOOTING_TOP"
+    },
+    {
+     "bars": 8,
+     "dia_mm": 16,
+     "lap_kg": 8.081,
+     "lap_kg_at_70D": 14.142,
+     "lap_mm": 640,
+     "lap_part": "SEG-COL-C4-X15-Y10-FOUNDATION|LAP_TOP",
+     "lap_state": "PROVISIONAL",
+     "layers_in_lap_zone": 2,
+     "zone": "JOINT_FOUNDATION->GF"
+    },
+    {
+     "bars": 8,
+     "dia_mm": 16,
+     "lap_kg": 8.081,
+     "lap_kg_at_70D": 14.142,
+     "lap_mm": 640,
+     "lap_part": "SEG-COL-C4-X15-Y10-GF|LAP_TOP",
+     "lap_state": "PROVISIONAL",
+     "layers_in_lap_zone": 2,
+     "zone": "JOINT_GF->1F"
+    }
+   ]
+  },
+  {
+   "chain_id": "COLPOS-X15-Y?-31208-15726",
+   "checks": [
+    {
+     "check": "foundation_core_exists",
+     "detail": "FOUNDATION MAIN_CORE row for the starter chain",
+     "ok": true
+    },
+    {
+     "check": "same_bars_starter_core",
+     "detail": "starter 4 T14 vs core 4 T14",
+     "ok": true
+    },
+    {
+     "check": "core_starts_at_footing_top",
+     "detail": "core bottom -1000.0 mm vs footing top -1000.0 mm (core basis H 500.0, starter H 500.0)",
+     "ok": true
+    },
+    {
+     "check": "starter_length_is_rule",
+     "detail": "1290.0 = (500.0 - 70) + 300 + 40 x 14 = 1290.0",
+     "ok": true
+    },
+    {
+     "check": "footing_top_zone_counted_twice",
+     "detail": "layers 2, core inside the footing 0.0 mm",
+     "ok": true
+    },
+    {
+     "check": "one_starter",
+     "detail": "starter rows",
+     "ok": true
+    },
+    {
+     "check": "one_lap_per_joint",
+     "detail": "lap rows per floor",
+     "ok": true
+    }
+   ],
+   "zones": [
+    {
+     "bars": 4,
+     "core_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 500.0 mm (bound footing)",
+     "core_bottom_level_mm": -1000.0,
+     "core_if_formation_at_printed_limit_mm": 1830.0,
+     "core_inside_footing_mm": 0.0,
+     "core_interval_mm": 2000.0,
+     "core_kg_difference_if_formation_at_limit": -0.822,
+     "core_state": "LOWER_BOUND",
+     "dia_mm": 14,
+     "footing_depth_mm": 500.0,
+     "footing_ref": "FTG-F8-29258-13262",
+     "footing_top_level_mm": -1000.0,
+     "lap_zone_kg_each_layer": 2.707,
+     "lap_zone_mm": 560,
+     "layers_in_lap_zone": 2,
+     "starter_state": "PROVISIONAL",
+     "zone": "FOOTING_TOP"
+    }
+   ]
+  },
+  {
+   "chain_id": "COLPOS-X16-Y01-33108-7562",
+   "checks": [
+    {
+     "check": "lap_is_top_splice",
+     "detail": "SEG-COL-C-X16-Y01-FOUNDATION|LAP_TOP",
+     "ok": true
+    },
+    {
+     "check": "foundation_core_exists",
+     "detail": "FOUNDATION MAIN_CORE row for the starter chain",
+     "ok": true
+    },
+    {
+     "check": "same_bars_starter_core",
+     "detail": "starter 8 T16 vs core 8 T16",
+     "ok": true
+    },
+    {
+     "check": "blocked_starter_has_no_length",
+     "detail": "starter length None, kg None",
+     "ok": true
+    },
+    {
+     "check": "core_above_exists",
+     "detail": "MAIN_CORE GF",
+     "ok": true
+    },
+    {
+     "check": "core_below_exists",
+     "detail": "MAIN_CORE FOUNDATION",
+     "ok": true
+    },
+    {
+     "check": "cores_meet_at_ffl",
+     "detail": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 500.0 mm (bound footing) | printed floor-to-floor 4.5 m (FFL basis)",
+     "ok": true
+    },
+    {
+     "check": "lap_bars_not_more_than_both",
+     "detail": "lap 8 vs below 8 / above 8",
+     "ok": true
+    },
+    {
+     "check": "lap_dia_is_upper_bar",
+     "detail": "lap T16 vs above T16",
+     "ok": true
+    },
+    {
+     "check": "one_starter",
+     "detail": "starter rows",
+     "ok": true
+    },
+    {
+     "check": "one_lap_per_joint",
+     "detail": "lap rows per floor",
+     "ok": true
+    }
+   ],
+   "zones": [
+    {
+     "bars": 8,
+     "core_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 500.0 mm (bound footing)",
+     "core_bottom_level_mm": -1000.0,
+     "core_interval_mm": 2000.0,
+     "core_state": "LOWER_BOUND",
+     "dia_mm": 16,
+     "footing_depth_mm": null,
+     "footing_ref": "FTG-CONFLICT_F_F10-30008-7312",
+     "footing_top_level_mm": null,
+     "lap_zone_mm": 640,
+     "layers_in_lap_zone": "HELD (footing depth not established: starter BLOCKED)",
+     "starter_state": "BLOCKED",
+     "zone": "FOOTING_TOP"
+    },
+    {
+     "bars": 8,
+     "dia_mm": 16,
+     "lap_kg": 8.081,
+     "lap_kg_at_70D": 14.142,
+     "lap_mm": 640,
+     "lap_part": "SEG-COL-C-X16-Y01-FOUNDATION|LAP_TOP",
+     "lap_state": "PROVISIONAL",
+     "layers_in_lap_zone": 2,
+     "zone": "JOINT_FOUNDATION->GF"
+    }
+   ]
+  },
+  {
+   "chain_id": "COLPOS-X16-Y03-33108-11312",
+   "checks": [
+    {
+     "check": "foundation_core_exists",
+     "detail": "FOUNDATION MAIN_CORE row for the starter chain",
+     "ok": true
+    },
+    {
+     "check": "same_bars_starter_core",
+     "detail": "starter 4 T14 vs core 4 T14",
+     "ok": true
+    },
+    {
+     "check": "blocked_starter_has_no_length",
+     "detail": "starter length None, kg None",
+     "ok": true
+    },
+    {
+     "check": "one_starter",
+     "detail": "starter rows",
+     "ok": true
+    },
+    {
+     "check": "one_lap_per_joint",
+     "detail": "lap rows per floor",
+     "ok": true
+    }
+   ],
+   "zones": [
+    {
+     "bars": 4,
+     "core_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 700.0 mm (deepest scheduled footing - unbound)",
+     "core_bottom_level_mm": -800.0,
+     "core_interval_mm": 1800.0,
+     "core_state": "BOUNDED",
+     "dia_mm": 14,
+     "footing_depth_mm": null,
+     "footing_ref": "FT:RB-93c296ab668f4cce",
+     "footing_top_level_mm": null,
+     "lap_zone_mm": 560,
+     "layers_in_lap_zone": "HELD (footing depth not established: starter BLOCKED)",
+     "starter_state": "BLOCKED",
+     "zone": "FOOTING_TOP"
+    }
+   ]
+  },
+  {
+   "chain_id": "COLPOS-X16-Y06-33108-14962",
+   "checks": [
+    {
+     "check": "lap_is_top_splice",
+     "detail": "SEG-COL-C3-X16-Y06-FOUNDATION|LAP_TOP",
+     "ok": true
+    },
+    {
+     "check": "foundation_core_exists",
+     "detail": "FOUNDATION MAIN_CORE row for the starter chain",
+     "ok": true
+    },
+    {
+     "check": "same_bars_starter_core",
+     "detail": "starter 8 T16 vs core 8 T16",
+     "ok": true
+    },
+    {
+     "check": "core_starts_at_footing_top",
+     "detail": "core bottom -1000.0 mm vs footing top -1000.0 mm (core basis H 500.0, starter H 500.0)",
+     "ok": true
+    },
+    {
+     "check": "starter_length_is_rule",
+     "detail": "1370.0 = (500.0 - 70) + 300 + 40 x 16 = 1370.0",
+     "ok": true
+    },
+    {
+     "check": "footing_top_zone_counted_twice",
+     "detail": "layers 2, core inside the footing 0.0 mm",
+     "ok": true
+    },
+    {
+     "check": "core_above_exists",
+     "detail": "MAIN_CORE GF",
+     "ok": true
+    },
+    {
+     "check": "core_below_exists",
+     "detail": "MAIN_CORE FOUNDATION",
+     "ok": true
+    },
+    {
+     "check": "cores_meet_at_ffl",
+     "detail": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 500.0 mm (bound footing) | printed floor-to-floor 4.5 m (FFL basis)",
+     "ok": true
+    },
+    {
+     "check": "lap_bars_not_more_than_both",
+     "detail": "lap 8 vs below 8 / above 8",
+     "ok": true
+    },
+    {
+     "check": "lap_dia_is_upper_bar",
+     "detail": "lap T16 vs above T16",
+     "ok": true
+    },
+    {
+     "check": "one_starter",
+     "detail": "starter rows",
+     "ok": true
+    },
+    {
+     "check": "one_lap_per_joint",
+     "detail": "lap rows per floor",
+     "ok": true
+    }
+   ],
+   "zones": [
+    {
+     "bars": 8,
+     "core_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 500.0 mm (bound footing)",
+     "core_bottom_level_mm": -1000.0,
+     "core_if_formation_at_printed_limit_mm": 1830.0,
+     "core_inside_footing_mm": 0.0,
+     "core_interval_mm": 2000.0,
+     "core_kg_difference_if_formation_at_limit": -2.147,
+     "core_state": "LOWER_BOUND",
+     "dia_mm": 16,
+     "footing_depth_mm": 500.0,
+     "footing_ref": "FTG-F8-29258-13262",
+     "footing_top_level_mm": -1000.0,
+     "lap_zone_kg_each_layer": 8.081,
+     "lap_zone_mm": 640,
+     "layers_in_lap_zone": 2,
+     "starter_state": "PROVISIONAL",
+     "zone": "FOOTING_TOP"
+    },
+    {
+     "bars": 8,
+     "dia_mm": 16,
+     "lap_kg": 8.081,
+     "lap_kg_at_70D": 14.142,
+     "lap_mm": 640,
+     "lap_part": "SEG-COL-C3-X16-Y06-FOUNDATION|LAP_TOP",
+     "lap_state": "PROVISIONAL",
+     "layers_in_lap_zone": 2,
+     "zone": "JOINT_FOUNDATION->GF"
+    }
+   ]
+  },
+  {
+   "chain_id": "COLPOS-X?-Y01-17913-7462",
+   "checks": [
+    {
+     "check": "lap_is_top_splice",
+     "detail": "SEG-COL-C11-X?-Y01@17913-7462-FOUNDATION|LAP_TOP",
+     "ok": true
+    },
+    {
+     "check": "foundation_core_exists",
+     "detail": "FOUNDATION MAIN_CORE row for the starter chain",
+     "ok": true
+    },
+    {
+     "check": "same_bars_starter_core",
+     "detail": "starter 14 T16 vs core 14 T16",
+     "ok": true
+    },
+    {
+     "check": "core_starts_at_footing_top",
+     "detail": "core bottom -1000.0 mm vs footing top -1000.0 mm (core basis H 500.0, starter H 500.0)",
+     "ok": true
+    },
+    {
+     "check": "starter_length_is_rule",
+     "detail": "1370.0 = (500.0 - 70) + 300 + 40 x 16 = 1370.0",
+     "ok": true
+    },
+    {
+     "check": "footing_top_zone_counted_twice",
+     "detail": "layers 2, core inside the footing 0.0 mm",
+     "ok": true
+    },
+    {
+     "check": "core_above_exists",
+     "detail": "MAIN_CORE GF",
+     "ok": true
+    },
+    {
+     "check": "core_below_exists",
+     "detail": "MAIN_CORE FOUNDATION",
+     "ok": true
+    },
+    {
+     "check": "cores_meet_at_ffl",
+     "detail": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 500.0 mm (bound footing) | printed floor-to-floor 4.5 m (FFL basis)",
+     "ok": true
+    },
+    {
+     "check": "lap_bars_not_more_than_both",
+     "detail": "lap 14 vs below 14 / above 14",
+     "ok": true
+    },
+    {
+     "check": "lap_dia_is_upper_bar",
+     "detail": "lap T16 vs above T16",
+     "ok": true
+    },
+    {
+     "check": "one_starter",
+     "detail": "starter rows",
+     "ok": true
+    },
+    {
+     "check": "one_lap_per_joint",
+     "detail": "lap rows per floor",
+     "ok": true
+    }
+   ],
+   "zones": [
+    {
+     "bars": 14,
+     "core_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 500.0 mm (bound footing)",
+     "core_bottom_level_mm": -1000.0,
+     "core_if_formation_at_printed_limit_mm": 1830.0,
+     "core_inside_footing_mm": 0.0,
+     "core_interval_mm": 2000.0,
+     "core_kg_difference_if_formation_at_limit": -3.756,
+     "core_state": "LOWER_BOUND",
+     "dia_mm": 16,
+     "footing_depth_mm": 500.0,
+     "footing_ref": "FTG-F11-16163-7312",
+     "footing_top_level_mm": -1000.0,
+     "lap_zone_kg_each_layer": 14.142,
+     "lap_zone_mm": 640,
+     "layers_in_lap_zone": 2,
+     "starter_state": "PROVISIONAL",
+     "zone": "FOOTING_TOP"
+    },
+    {
+     "bars": 14,
+     "dia_mm": 16,
+     "lap_kg": 14.142,
+     "lap_kg_at_70D": 24.748,
+     "lap_mm": 640,
+     "lap_part": "SEG-COL-C11-X?-Y01@17913-7462-FOUNDATION|LAP_TOP",
+     "lap_state": "PROVISIONAL",
+     "layers_in_lap_zone": 2,
+     "zone": "JOINT_FOUNDATION->GF"
+    }
+   ]
+  },
+  {
+   "chain_id": "COLPOS-X?-Y10-31108-20498",
+   "checks": [
+    {
+     "check": "foundation_core_exists",
+     "detail": "FOUNDATION MAIN_CORE row for the starter chain",
+     "ok": true
+    },
+    {
+     "check": "same_bars_starter_core",
+     "detail": "starter 4 T14 vs core 4 T14",
+     "ok": true
+    },
+    {
+     "check": "core_starts_at_footing_top",
+     "detail": "core bottom -1100.0 mm vs footing top -1100.0 mm (core basis H 400.0, starter H 400.0)",
+     "ok": true
+    },
+    {
+     "check": "starter_length_is_rule",
+     "detail": "1190.0 = (400.0 - 70) + 300 + 40 x 14 = 1190.0",
+     "ok": true
+    },
+    {
+     "check": "footing_top_zone_counted_twice",
+     "detail": "layers 2, core inside the footing 0.0 mm",
+     "ok": true
+    },
+    {
+     "check": "one_starter",
+     "detail": "starter rows",
+     "ok": true
+    },
+    {
+     "check": "one_lap_per_joint",
+     "detail": "lap rows per floor",
+     "ok": true
+    }
+   ],
+   "zones": [
+    {
+     "bars": 4,
+     "core_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 400.0 mm (bound footing)",
+     "core_bottom_level_mm": -1100.0,
+     "core_if_formation_at_printed_limit_mm": 1930.0,
+     "core_inside_footing_mm": 0.0,
+     "core_interval_mm": 2100.0,
+     "core_kg_difference_if_formation_at_limit": -0.822,
+     "core_state": "LOWER_BOUND",
+     "dia_mm": 14,
+     "footing_depth_mm": 400.0,
+     "footing_ref": "FTG-F4-30408-19687",
+     "footing_top_level_mm": -1100.0,
+     "lap_zone_kg_each_layer": 2.707,
+     "lap_zone_mm": 560,
+     "layers_in_lap_zone": 2,
+     "starter_state": "PROVISIONAL",
+     "zone": "FOOTING_TOP"
+    }
+   ]
+  },
+  {
+   "chain_id": "COLPOS-X?-Y?-24058-12787",
+   "checks": [
+    {
+     "check": "foundation_core_exists",
+     "detail": "FOUNDATION MAIN_CORE row for the starter chain",
+     "ok": true
+    },
+    {
+     "check": "same_bars_starter_core",
+     "detail": "starter 4 T14 vs core 4 T14",
+     "ok": true
+    },
+    {
+     "check": "blocked_starter_has_no_length",
+     "detail": "starter length None, kg None",
+     "ok": true
+    },
+    {
+     "check": "one_starter",
+     "detail": "starter rows",
+     "ok": true
+    },
+    {
+     "check": "one_lap_per_joint",
+     "detail": "lap rows per floor",
+     "ok": true
+    }
+   ],
+   "zones": [
+    {
+     "bars": 4,
+     "core_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 700.0 mm (deepest scheduled footing - unbound)",
+     "core_bottom_level_mm": -800.0,
+     "core_interval_mm": 1800.0,
+     "core_state": "BOUNDED",
+     "dia_mm": 14,
+     "footing_depth_mm": null,
+     "footing_ref": "FT:RB-d03ae1c0114c9c48",
+     "footing_top_level_mm": null,
+     "lap_zone_mm": 560,
+     "layers_in_lap_zone": "HELD (footing depth not established: starter BLOCKED)",
+     "starter_state": "BLOCKED",
+     "zone": "FOOTING_TOP"
+    }
+   ]
+  },
+  {
+   "chain_id": "COLPOS-X?-Y?-24888-15994",
+   "checks": [
+    {
+     "check": "one_starter",
+     "detail": "starter rows",
+     "ok": true
+    },
+    {
+     "check": "one_lap_per_joint",
+     "detail": "lap rows per floor",
+     "ok": true
+    }
+   ],
+   "zones": []
+  },
+  {
+   "chain_id": "COLPOS-X?-Y?-28583-12787",
+   "checks": [
+    {
+     "check": "foundation_core_exists",
+     "detail": "FOUNDATION MAIN_CORE row for the starter chain",
+     "ok": true
+    },
+    {
+     "check": "same_bars_starter_core",
+     "detail": "starter 4 T14 vs core 4 T14",
+     "ok": true
+    },
+    {
+     "check": "blocked_starter_has_no_length",
+     "detail": "starter length None, kg None",
+     "ok": true
+    },
+    {
+     "check": "one_starter",
+     "detail": "starter rows",
+     "ok": true
+    },
+    {
+     "check": "one_lap_per_joint",
+     "detail": "lap rows per floor",
+     "ok": true
+    }
+   ],
+   "zones": [
+    {
+     "bars": 4,
+     "core_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 700.0 mm (deepest scheduled footing - unbound)",
+     "core_bottom_level_mm": -800.0,
+     "core_interval_mm": 1800.0,
+     "core_state": "BOUNDED",
+     "dia_mm": 14,
+     "footing_depth_mm": null,
+     "footing_ref": "FT:RB-4f1fedf6f22d413e",
+     "footing_top_level_mm": null,
+     "lap_zone_mm": 560,
+     "layers_in_lap_zone": "HELD (footing depth not established: starter BLOCKED)",
+     "starter_state": "BLOCKED",
+     "zone": "FOOTING_TOP"
+    }
+   ]
+  },
+  {
+   "chain_id": "COLPOS-X?-Y?-29108-18112",
+   "checks": [
+    {
+     "check": "foundation_core_exists",
+     "detail": "FOUNDATION MAIN_CORE row for the starter chain",
+     "ok": true
+    },
+    {
+     "check": "same_bars_starter_core",
+     "detail": "starter 4 T14 vs core 4 T14",
+     "ok": true
+    },
+    {
+     "check": "core_starts_at_footing_top",
+     "detail": "core bottom -1200.0 mm vs footing top -1200.0 mm (core basis H 300.0, starter H 300.0)",
+     "ok": true
+    },
+    {
+     "check": "starter_length_is_rule",
+     "detail": "1090.0 = (300.0 - 70) + 300 + 40 x 14 = 1090.0",
+     "ok": true
+    },
+    {
+     "check": "footing_top_zone_counted_twice",
+     "detail": "layers 2, core inside the footing 0.0 mm",
+     "ok": true
+    },
+    {
+     "check": "one_starter",
+     "detail": "starter rows",
+     "ok": true
+    },
+    {
+     "check": "one_lap_per_joint",
+     "detail": "lap rows per floor",
+     "ok": true
+    }
+   ],
+   "zones": [
+    {
+     "bars": 4,
+     "core_basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 300.0 mm (bound footing)",
+     "core_bottom_level_mm": -1200.0,
+     "core_if_formation_at_printed_limit_mm": 2030.0,
+     "core_inside_footing_mm": 0.0,
+     "core_interval_mm": 2200.0,
+     "core_kg_difference_if_formation_at_limit": -0.822,
+     "core_state": "LOWER_BOUND",
+     "dia_mm": 14,
+     "footing_depth_mm": 300.0,
+     "footing_ref": "FTG-FN-28608-17612",
+     "footing_top_level_mm": -1200.0,
+     "lap_zone_kg_each_layer": 2.707,
+     "lap_zone_mm": 560,
+     "layers_in_lap_zone": 2,
+     "starter_state": "PROVISIONAL",
+     "zone": "FOOTING_TOP"
+    }
+   ]
+  }
+ ],
+ "chains_with_starter_and_foundation_lap": 30,
+ "component_counts": {
+  "ANCHORAGE|LOWER_BOUND": 10,
+  "ANCHORAGE|PROVISIONAL": 49,
+  "LAP|LOWER_BOUND": 2,
+  "LAP|PROVISIONAL": 54,
+  "STARTER|BLOCKED": 5,
+  "STARTER|LOWER_BOUND": 2,
+  "STARTER|PROVISIONAL": 29
+ },
+ "failures": [],
+ "finding_core_basis": {
+  "chains": 31,
+  "kg_if_formation_at_limit": -74.381,
+  "text": "FOUNDATION MAIN_CORE = GF FFL +1.00 minus a footing underside AT -1.50 (2.50 - H); T-206 r2 (MERGED) prints footing bottom = formation + 0.17 (5 screed + 2 membrane + 10 blinding) with the formation 'not less than 1.5 m below the existing plot level' (Q-21 C, a minimum, existing-ground datum HELD). The ledger's 2.50 - H therefore implies a formation at -1.67; with the formation at its printed limit relative to +-0.00 the core is 0.17 m SHORTER, so the 'LOWER_BOUND' label of the foundation cores is not a lower bound of the printed geometry: a labelled convention (no ledger edit here; the lap zones are unaffected because the core still starts at the footing top)."
+ },
+ "footing_top_zones_counted_twice": 31,
+ "foundation_lap_kg": 288.897,
+ "foundation_lap_rows": 30,
+ "lap_kg": 496.986,
+ "lap_rows": 56,
+ "lap_rows_by_state": {
+  "LOWER_BOUND": 2,
+  "PROVISIONAL": 54
+ },
+ "ledger": "research/alsenan_column_rebar_s3 (read only, not edited)",
+ "result": "NO DOUBLE COUNT: every lap zone is counted exactly twice",
+ "rules": {
+  "anchorage_rule": {
+   "alternatives_D": [
+    70
+   ],
+   "current_D": 40,
+   "rule_id": "P8-N09",
+   "state": "UNRESOLVED",
+   "why": "no top-anchorage / planted-column anchorage length printed; development length of the same note used provisionally"
+  },
+  "lap_rule": {
+   "alternatives_D": [
+    70
+   ],
+   "current_D": 40,
+   "rule_id": "P8-N09",
+   "state": "UNRESOLVED",
+   "why": "the printed note gives starter development 40D (compression) / 70D (tension); column splice laps take the compression value provisionally"
+  },
+  "starter_rule": {
+   "bottom_cover_mm": 70,
+   "bottom_cover_rule": "COVER_AGAINST_SOIL_70MM",
+   "foot_mm": 300,
+   "projection_D": 40,
+   "rule_id": "P13-FOOTING-TYP",
+   "state": "CANDIDATE"
+  }
+ },
+ "scenario_70D_flag_total_kg": 640.979,
+ "scenario_70D_minus_40D_anchorage_kg": 268.243,
+ "scenario_70D_minus_40D_lap_kg": 372.736,
+ "scenario_70D_note": "STR-COL-026's +640.99 kg = LAP + ANCHORAGE at 70 D (two s.6.1 categories in one figure); the STARTER projection (also 40 D, note 9 = starter development) is NOT in it",
+ "scenario_70D_starter_projection_kg": 209.127,
+ "scenario_70D_status": "SCENARIO (owner s.6.2): not an approved BOQ addition",
+ "starter_kg": 581.29,
+ "starter_projection_kg_total": 278.836,
+ "starter_rows": 36,
+ "starter_rows_by_state": {
+  "BLOCKED": 5,
+  "LOWER_BOUND": 2,
+  "PROVISIONAL": 29
+ },
+ "task": "T-273 r2 (owner s.6.2)"
+}

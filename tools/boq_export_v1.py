@@ -49,6 +49,13 @@ in the manifest (v2_verdicts) with its status, never dropped.
         --run-token T --routine Verifier) --verdict-commit SHA [--time ISO-UTC] --out VERDICTS_V2.json
     python3 -I tools/boq_export_v1.py verdict-validate VERDICTS_V2.json          exit 1 on any problem
 
+Contract units (T-273, opt-in --contract-units). Reinforcement is contracted in metric tons (owner 2026-10-24). The
+canonical rows stay in engine units (BOQ.csv / sheet BOQ, the unit every V2 verdict binds to, so no verdict is
+invalidated); the flag adds BOQ_CONTRACT_UNITS.csv + BOQ_CONTRACT_TOTALS.csv (schema URBAN_BOQ_CONTRACT_UNITS_V1) and
+the XLSX sheets "BOQ (contract units)" / "Contract totals", and raises the manifest to URBAN_BOQ_EXPORT_MANIFEST_V2.
+t = kg / 1000 once, here; 6 decimals; totals converted from the unrounded kg sums; kg and t rows of one BOQ line
+together are refused (mixed units). Without the flag every byte written is as before.
+
 Part (4) (completeness from T-236). --completeness takes the merged T-236 report (tools/trade_completeness.py
 TRADE_COMPLETENESS.json, schema URBAN_TRADE_COMPLETENESS_V1; its reference_line_rows() per trade). The report carries no
 project id, so it is bound by its line ids: a report naming any line id this BOQ does not carry is refused. Per BOQ
@@ -102,6 +109,16 @@ V1_VERDICTS_SCHEMA = "URBAN_SCOREBOARD_CHECKER_VERDICTS_V1"
 V2_VERDICT_SCHEMA = "URBAN_CHECKER_VERDICT_V2"
 COMPLETENESS_SCHEMA = "URBAN_LINE_COMPLETENESS_V1"
 V2_SET_SCHEMA = "URBAN_CHECKER_VERDICT_V2_SET"
+# T-273 (owner 2026-10-24 14:23 / 15:31): the contractual BOQ unit of reinforcement is the metric ton. The canonical rows
+# (BOQ.csv, kg, the unit every V2 verdict binds to) are unchanged; the CONTRACT-UNIT view is an explicit, opt-in
+# migration (--contract-units) with its own schema and a raised manifest schema: t = kg / 1000, applied ONCE here, at
+# 6 decimals; group totals are converted from the unrounded kg sums, never summed from rounded t rows.
+CONTRACT_SCHEMA = "URBAN_BOQ_CONTRACT_UNITS_V1"
+MANIFEST_SCHEMA_CONTRACT = "URBAN_BOQ_EXPORT_MANIFEST_V2"
+CONTRACT_UNIT = {"kg": ("t", 1000.0)}           # engine unit -> (contract unit, divisor)
+CONTRACT_QTY_COLUMNS = ("gross", "deductions_total", "net", "qty_verified", "qty_verified_zero",
+                        "qty_verified_component", "qty_measured_unverified", "open_range_low", "open_range_high",
+                        "held_low", "held_high", "checker_qty")
 V2_REQUIRED = ("schema", "verdict_id", "project_id", "revision_set_sha256", "candidate_version", "boq_lines_sha256",
                "line_ids", "element_scope", "unit", "engine_qty", "checker_qty", "evidence", "checker", "scope", "time")
 V2_SCOPES = ("WHOLE", "PARTIAL", "COMPONENT")
@@ -131,6 +148,11 @@ COLUMNS = ("line_id", "trade", "item_code", "item_en", "item_ar", "floor", "elem
            "unmeasured_reason", "excluded_reason", "evidence_state", "line_stated_evidence_status",
            "owner_status_class", "verdict_id", "verdict_commit", "checker_qty", "verdict_status", "source_sheets",
            "project_id", "revision_set_sha256", "candidate_version")
+CONTRACT_COLUMNS = COLUMNS[:COLUMNS.index("unit")] + ("unit", "engine_unit", "conversion") + \
+    COLUMNS[COLUMNS.index("unit") + 1:]
+CONTRACT_TOTAL_COLUMNS = ("trade", "item_code", "unit", "engine_unit", "line_status", "rows",
+                          "measured_unverified_engine_sum", "measured_unverified_sum", "verified_engine_sum",
+                          "verified_sum", "held_low", "held_high", "rows_without_quantity")
 SUMMARY_COLUMNS = ("trade", "item_code", "unit", "line_status", "rows", "verified_rows", "verified_subtotal",
                    "measured_unverified_sum", "measured_unverified_rows", "open_range_rows", "open_range_components",
                    "held_rows", "held_low", "held_high",
@@ -958,6 +980,67 @@ def _summary(rows, groups, whole_ok, completeness, ident, inv_elements, glines, 
     return out, trades
 
 
+# ---- contract units (T-273) -----------------------------------------------------------------------------------------
+
+def contract_view(rows):
+    """the canonical rows in contract units: every kg row becomes t (quantity columns / 1000, ONCE, full precision
+    kept until the writer's 6 decimals); every other row keeps its unit. -> (contract rows, contract totals). Refused:
+    a BOQ line (trade, item) carrying kg and t rows together (mixed units), a row already in a contract unit with an
+    engine-unit label (relabelled), a quantity column that is not a number."""
+    by_item = defaultdict(set)
+    for r in rows:
+        by_item[(str(r["trade"] or ""), str(r["item_code"] or ""))].add(r["unit"])
+    for k, us in sorted(by_item.items()):
+        for eu, (cu, _f) in CONTRACT_UNIT.items():
+            if eu in us and cu in us:
+                raise ExportError(f"{k[1] or k[0]}: rows in {eu} and {cu} in one BOQ line (mixed units, refused)")
+    out = []
+    for r in rows:
+        c = dict(r)
+        eu = r["unit"]
+        if eu in CONTRACT_UNIT:
+            cu, f = CONTRACT_UNIT[eu]
+            for col in CONTRACT_QTY_COLUMNS:
+                v = r.get(col)
+                if v is None:
+                    continue
+                if isinstance(v, bool) or not isinstance(v, (int, float)):
+                    raise ExportError(f"{r['line_id']}: {col} {v!r} is not a number (refused)")
+                c[col] = v / f
+            c["unit"], c["engine_unit"], c["conversion"] = cu, eu, f"{eu} / {f:g} (once, at export)"
+        else:
+            c["engine_unit"], c["conversion"] = eu, "none"
+        out.append(c)
+    totals = []
+    groups = defaultdict(list)
+    for r, c in zip(rows, out):
+        groups[group_key(r)].append((r, c))
+    for g in sorted(groups):
+        pairs = groups[g]
+        eu = g[2]
+        f = CONTRACT_UNIT.get(eu, (eu, 1.0))[1]
+
+        def ssum(col, states):
+            vals = [r[col] for r, _c in pairs if r["quantity_state"] in states and r.get(col) is not None]
+            return (sum(vals), len(vals)) if vals else (None, 0)
+        mu, _n = ssum("qty_measured_unverified", (MEASURED_UNVERIFIED,))
+        vq = [sum(x for x in (r.get("qty_verified"), r.get("qty_verified_zero"), r.get("qty_verified_component"))
+                  if x is not None) for r, _c in pairs if r["quantity_state"] in (VERIFIED, VERIFIED_ZERO,
+                                                                                  VERIFIED_COMPONENT)]
+        vs = sum(vq) if vq else None
+        hl, _a = ssum("held_low", (HELD,))
+        hh, _b = ssum("held_high", (HELD,))
+        st = [x for x in set(c["quantity_state"] for _r, c in pairs)]
+        totals.append({"trade": g[0], "item_code": g[1], "unit": CONTRACT_UNIT.get(eu, (eu, 1.0))[0],
+                       "engine_unit": eu, "line_status": "; ".join(sorted(st)), "rows": len(pairs),
+                       "measured_unverified_engine_sum": mu, "measured_unverified_sum": None if mu is None else mu / f,
+                       "verified_engine_sum": vs, "verified_sum": None if vs is None else vs / f,
+                       "held_low": None if hl is None else hl / f, "held_high": None if hh is None else hh / f,
+                       "rows_without_quantity": sum(1 for r, _c in pairs
+                                                    if r["quantity_state"] in (HELD, UNMEASURED, EXCLUDED))})
+    return out, totals
+
+
 # ---- writers --------------------------------------------------------------------------------------------------------
 
 def _cell_text(c, v):
@@ -979,7 +1062,7 @@ def csv_bytes(rows, columns=COLUMNS):
     return buf.getvalue().encode("utf-8")
 
 
-def xlsx_write(path, rows, summary, manifest_rows):
+def xlsx_write(path, rows, summary, manifest_rows, extra_sheets=()):
     from openpyxl import Workbook
 
     from engine.reporting_v3 import book as BK
@@ -987,7 +1070,7 @@ def xlsx_write(path, rows, summary, manifest_rows):
     wb.properties.creator = "Urban Projects"
     wb.properties.created = wb.properties.modified = BK.CREATED
     for title, cols, data in (("BOQ", COLUMNS, rows), ("Trade summary", SUMMARY_COLUMNS, summary),
-                              ("Manifest", ("key", "value"), manifest_rows)):
+                              *tuple(extra_sheets), ("Manifest", ("key", "value"), manifest_rows)):
         ws = wb.active if title == "BOQ" else wb.create_sheet(title)
         ws.title = title
         ws.append(list(cols))
@@ -1017,9 +1100,11 @@ def _code_commit(given):
 
 
 def export(lines, out_dir, *, candidate_version, boq_lines_sha256, input_sha256=None, code_commit="NOT_RECORDED",
-           **kw):
-    """build + write BOQ.csv, BOQ.xlsx, EXPORT_MANIFEST.json into out_dir; -> the manifest."""
+           contract_units=False, **kw):
+    """build + write BOQ.csv, BOQ.xlsx, EXPORT_MANIFEST.json into out_dir; -> the manifest. contract_units (T-273,
+    opt-in): also BOQ_CONTRACT_UNITS.csv + BOQ_CONTRACT_TOTALS.csv and two XLSX sheets, manifest schema V2."""
     res = build(lines, candidate_version=candidate_version, boq_lines_sha256=boq_lines_sha256, **kw)
+    crow, ctot = contract_view(res["rows"]) if contract_units else (None, None)
     out = Path(out_dir)
     out.mkdir(parents=True, exist_ok=True)
     cb = csv_bytes(res["rows"])
@@ -1036,15 +1121,29 @@ def export(lines, out_dir, *, candidate_version, boq_lines_sha256, input_sha256=
         mrows.append({"key": f"rows {k}", "value": str(res["counts"][k])})
     for s in res["v2_verdicts"]:
         mrows.append({"key": f"verdict {s['verdict_id']}", "value": s["status"]})
-    xlsx_write(out / "BOQ.xlsx", res["rows"], res["summary"], mrows)
-    manifest = {"schema": MANIFEST_SCHEMA, "export_schema": SCHEMA, "identity": ident, "code_commit": code_commit,
+    extra, outs = (), ["BOQ.csv", "BOQ.xlsx", "BOQ_TRADE_SUMMARY.csv"]
+    if contract_units:
+        (out / "BOQ_CONTRACT_UNITS.csv").write_bytes(csv_bytes(crow, CONTRACT_COLUMNS))
+        (out / "BOQ_CONTRACT_TOTALS.csv").write_bytes(csv_bytes(ctot, CONTRACT_TOTAL_COLUMNS))
+        mrows.append({"key": "contract_units", "value": f"{CONTRACT_SCHEMA}: kg -> t = kg / 1000 once at export; "
+                                                         "BOQ sheet / BOQ.csv stay in engine units (verdict binding)"})
+        extra = (("BOQ (contract units)", CONTRACT_COLUMNS, crow),
+                 ("Contract totals", CONTRACT_TOTAL_COLUMNS, ctot))
+        outs += ["BOQ_CONTRACT_UNITS.csv", "BOQ_CONTRACT_TOTALS.csv"]
+    xlsx_write(out / "BOQ.xlsx", res["rows"], res["summary"], mrows, extra)
+    manifest = {"schema": MANIFEST_SCHEMA_CONTRACT if contract_units else MANIFEST_SCHEMA, "export_schema": SCHEMA,
+                "identity": ident, "code_commit": code_commit,
                 "inputs_sha256": dict(sorted((input_sha256 or {}).items())),
-                "outputs": {f: sha256_bytes((out / f).read_bytes())
-                            for f in ("BOQ.csv", "BOQ.xlsx", "BOQ_TRADE_SUMMARY.csv")},
+                "outputs": {f: sha256_bytes((out / f).read_bytes()) for f in sorted(outs)},
                 "row_counts": res["counts"] | {"total": len(res["rows"])},
                 "trades": res["trades"], "completeness_input": res["completeness_input"],
                 "v2_verdicts": res["v2_verdicts"],
                 "semantic_sha256": semantic_sha256(res["rows"])}
+    if contract_units:
+        manifest["contract_units"] = {"schema": CONTRACT_SCHEMA, "conversion": {k: f"{k} / {v[1]:g} -> {v[0]}"
+                                                                                  for k, v in CONTRACT_UNIT.items()},
+                                      "decimals": DEC, "totals": "from unrounded engine-unit sums, converted once",
+                                      "verdict_binding": "engine unit (BOQ.csv); unchanged"}
     (out / "EXPORT_MANIFEST.json").write_text(json.dumps(manifest, indent=1, sort_keys=True, ensure_ascii=False) + "\n",
                                               encoding="utf-8")
     return manifest
@@ -1151,6 +1250,8 @@ def main(argv=None):
     ap.add_argument("--expect-project")
     ap.add_argument("--expect-revision-set")
     ap.add_argument("--code-commit")
+    ap.add_argument("--contract-units", action="store_true",
+                    help="also write the contract-unit view (reinforcement in t = kg / 1000; T-273)")
     a = ap.parse_args(argv)
     lines, lsha = _load_json(a.lines)
     if isinstance(lines, dict):
@@ -1168,7 +1269,8 @@ def main(argv=None):
             raise ExportError("--verdicts-v2: " + "; ".join(sp))
         v2 = docs["verdicts_v2"]["verdicts"]
     m = export(lines, a.out, candidate_version=a.candidate_version, boq_lines_sha256=lsha, input_sha256=shas,
-               code_commit=_code_commit(a.code_commit), v1_doc=docs.get("verdicts_v1"),
+               code_commit=_code_commit(a.code_commit), contract_units=a.contract_units,
+               v1_doc=docs.get("verdicts_v1"),
                key_map_doc=docs.get("key_map"), inventory_doc=docs.get("inventory"), v2_records=v2,
                completeness_report=docs.get("completeness"),
                expect_project=a.expect_project, expect_revision_set=a.expect_revision_set)
