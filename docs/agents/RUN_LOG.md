@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-24 21:53 UTC | Worker 3 | SUCCESS | T-270 READY (integration package, Gate B; agents/task-T-270 @ 3d327dc9) | ARCH_TAKEOFF_V3.0.15 adds the WATERPROOFING.FOUNDATION family (T-219 + T-263, missing in released A, V3.0.14 and the freelancer): footing membrane 109.850 m2 and screed 109.850 m2 / 5.4925 m3 VERIFIED, lift pit membrane 47.430 / board 26.730 / screed 20.700 m2 / 1.035 m3 VERIFIED, buried liquid 35.404 m2 DRAWING-CONFIRMED (partially verified), 11 held lines BLANK (readings only in the scenario file); 3,680 lines byte-identical + 19 added, blinding unchanged, guard findings unchanged; T-276 delta (+11.12 m2) open, not applied | self-check codemap PASS, pytest t061 PASS, freeze PASS; L3 486 passed / 4 skipped; problem: none
 - 2026-10-24T21:51Z | Verifier | STARTED | run unknown | repo-attached routine | task state: READY T-271 r2b (per run log) | self-check pending
 - 2026-10-24 21:40 UTC | Worker 2 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-24 21:21 UTC | Worker 1 | STARTED | run session_01SaQian7AivVta43UjyFL3T | repo-attached routine | task state: none yet | self-check pending
