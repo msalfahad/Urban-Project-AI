@@ -1,0 +1,9419 @@
+{
+"schema": "T241_PARTITION_INPUT_V1",
+"source_dxf_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+"faces": [
+{
+"storey": "GF",
+"id": "GF-000",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.05,
+"bands": [],
+"columns": [
+[
+"32C",
+"SOLID",
+0.05
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-001",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.05,
+"bands": [
+[
+"BAND0016.1",
+0.00014
+],
+[
+"BAND0020.2",
+0.0003
+]
+],
+"columns": [
+[
+"32C",
+"SOLID",
+0.05
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-002",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.5,
+"bands": [
+[
+"BAND0016.1",
+0.49258
+]
+],
+"columns": [],
+"uncovered_m2": 0.00742,
+"gaps": [
+[
+"BAND0016.1",
+0.00742
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-003",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.05,
+"bands": [],
+"columns": [
+[
+"32F",
+"SOLID",
+0.05
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-004",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.05,
+"bands": [
+[
+"BAND0024.1",
+0.00025
+],
+[
+"BAND0036.1",
+0.0001
+]
+],
+"columns": [
+[
+"32F",
+"SOLID",
+0.05
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-005",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.8675,
+"bands": [
+[
+"BAND0023.2",
+0.00035
+],
+[
+"BAND0036.1",
+0.8612
+]
+],
+"columns": [],
+"uncovered_m2": 0.00595,
+"gaps": [
+[
+"BAND0001",
+0.0024
+],
+[
+"BAND0023.2",
+0.00331
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-006",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.075,
+"bands": [
+[
+"BAND0001",
+0.00031
+]
+],
+"columns": [
+[
+"332",
+"SOLID",
+0.075
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-007",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.075,
+"bands": [
+[
+"BAND0036.2",
+0.00032
+]
+],
+"columns": [
+[
+"332",
+"SOLID",
+0.075
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-008",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.8375,
+"bands": [
+[
+"BAND0005",
+0.00027
+],
+[
+"BAND0036.2",
+0.83287
+]
+],
+"columns": [],
+"uncovered_m2": 0.00436,
+"gaps": [
+[
+"BAND0005",
+0.00205
+],
+[
+"BAND0005",
+0.00218
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-009",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.0625,
+"bands": [
+[
+"BAND0037.1",
+0.00034
+]
+],
+"columns": [
+[
+"377",
+"SOLID",
+0.0625
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-010",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.0625,
+"bands": [
+[
+"BAND0046.1",
+0.00062
+]
+],
+"columns": [
+[
+"377",
+"SOLID",
+0.0625
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-011",
+"cls": "BEAM",
+"area_m2": 2.7,
+"bands": [
+[
+"BAND0046.1",
+1.77423
+],
+[
+"BAND0046.2",
+0.75007
+]
+],
+"columns": [],
+"uncovered_m2": 0.17569,
+"gaps": [
+[
+"BAND0046.1",
+0.12577
+],
+[
+"BAND0046.1",
+0.04992
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-012",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.0625,
+"bands": [],
+"columns": [
+[
+"335",
+"SOLID",
+0.0625
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-013",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.0625,
+"bands": [
+[
+"BAND0046.2",
+7e-05
+]
+],
+"columns": [
+[
+"335",
+"SOLID",
+0.0625
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-014",
+"cls": "NOT_SLAB",
+"area_m2": 0.08663,
+"bands": [
+[
+"BAND0020.2",
+0.00043
+]
+],
+"columns": [],
+"uncovered_m2": 0.0862,
+"gaps": [
+[
+"BAND0020.2",
+0.0862
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-015",
+"cls": "SLAB",
+"area_m2": 2.5725,
+"bands": [
+[
+"BAND0001",
+0.00161
+]
+],
+"columns": [],
+"uncovered_m2": 2.57089,
+"gaps": [
+[
+"BAND0001",
+2.57089
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-016",
+"cls": "SLAB",
+"area_m2": 3.325,
+"bands": [
+[
+"BAND0005",
+0.00052
+]
+],
+"columns": [],
+"uncovered_m2": 3.32448,
+"gaps": [
+[
+"BAND0005",
+3.32448
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-017",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.35,
+"bands": [
+[
+"BAND0005",
+0.34931
+]
+],
+"columns": [],
+"uncovered_m2": 0.00069,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-018",
+"cls": "SLAB",
+"area_m2": 2.8875,
+"bands": [
+[
+"BAND0037.1",
+0.00075
+]
+],
+"columns": [],
+"uncovered_m2": 2.88675,
+"gaps": [
+[
+"BAND0037.1",
+2.88675
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-019",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.34,
+"bands": [
+[
+"BAND0003",
+0.00019
+],
+[
+"BAND0006",
+0.3385
+],
+[
+"BAND0041.2",
+0.00033
+]
+],
+"columns": [],
+"uncovered_m2": 0.001,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-020",
+"cls": "SLAB",
+"area_m2": 1.05343,
+"bands": [
+[
+"BAND0003",
+0.00058
+],
+[
+"BAND0041.2",
+0.00103
+],
+[
+"BAND0046.2",
+0.00022
+]
+],
+"columns": [],
+"uncovered_m2": 1.0516,
+"gaps": [
+[
+"BAND0003",
+1.0516
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-021",
+"cls": "DETAIL",
+"area_m2": 5.44,
+"bands": [],
+"columns": [],
+"uncovered_m2": 5.44,
+"gaps": [
+[
+null,
+5.44
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-022",
+"cls": "DETAIL",
+"area_m2": 3.91448,
+"bands": [],
+"columns": [],
+"uncovered_m2": 3.91448,
+"gaps": [
+[
+null,
+3.91448
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-023",
+"cls": "DETAIL",
+"area_m2": 4.03499,
+"bands": [],
+"columns": [],
+"uncovered_m2": 4.03499,
+"gaps": [
+[
+null,
+4.03499
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-024",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.54,
+"bands": [
+[
+"BAND0020.2",
+0.53823
+]
+],
+"columns": [],
+"uncovered_m2": 0.00177,
+"gaps": [
+[
+"BAND0020.2",
+0.00177
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-025",
+"cls": "STAIR",
+"area_m2": 10.725,
+"bands": [
+[
+"BAND0024.1",
+0.00053
+]
+],
+"columns": [],
+"uncovered_m2": 10.72447,
+"gaps": [
+[
+"BAND0024.1",
+10.72447
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-026",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.54,
+"bands": [
+[
+"BAND0024.1",
+0.5391
+]
+],
+"columns": [],
+"uncovered_m2": 0.0009,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-027",
+"cls": "SLAB",
+"area_m2": 5.31,
+"bands": [
+[
+"BAND0023.2",
+0.00352
+],
+[
+"BAND0026.1",
+0.0008
+]
+],
+"columns": [],
+"uncovered_m2": 5.30568,
+"gaps": [
+[
+"BAND0023.2",
+5.30568
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-028",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.59,
+"bands": [
+[
+"BAND0002",
+0.00026
+],
+[
+"BAND0023.2",
+0.58611
+]
+],
+"columns": [],
+"uncovered_m2": 0.00363,
+"gaps": [
+[
+"BAND0023.2",
+0.00234
+],
+[
+"BAND0023.2",
+0.0013
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-029",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.294,
+"bands": [
+[
+"BAND0001",
+0.00017
+],
+[
+"BAND0002",
+0.29353
+]
+],
+"columns": [],
+"uncovered_m2": 0.00031,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-030",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.75,
+"bands": [
+[
+"BAND0004",
+0.74786
+],
+[
+"BAND0005",
+0.00011
+],
+[
+"BAND0037.1",
+7e-05
+]
+],
+"columns": [],
+"uncovered_m2": 0.00197,
+"gaps": [
+[
+"BAND0004",
+0.00197
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-031",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 1.08,
+"bands": [
+[
+"BAND0037.1",
+1.07174
+]
+],
+"columns": [],
+"uncovered_m2": 0.00826,
+"gaps": [
+[
+"BAND0037.1",
+0.00826
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-032",
+"cls": "SLAB",
+"area_m2": 12.32049,
+"bands": [],
+"columns": [],
+"uncovered_m2": 12.32049,
+"gaps": [
+[
+"BAND0046.1",
+12.32049
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-033",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.70403,
+"bands": [
+[
+"BAND0003",
+0.69995
+]
+],
+"columns": [],
+"uncovered_m2": 0.00407,
+"gaps": [
+[
+"BAND0003",
+0.00407
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-034",
+"cls": "SLAB",
+"area_m2": 0.08748,
+"bands": [
+[
+"BAND0003",
+0.00052
+],
+[
+"BAND0006",
+0.00016
+],
+[
+"BAND0050",
+0.00038
+]
+],
+"columns": [],
+"uncovered_m2": 0.08642,
+"gaps": [
+[
+"BAND0003",
+0.08642
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-035",
+"cls": "BEAM",
+"area_m2": 0.14635,
+"bands": [
+[
+"BAND0006",
+0.00026
+],
+[
+"BAND0041.2",
+0.00061
+],
+[
+"BAND0053",
+0.08711
+]
+],
+"columns": [],
+"uncovered_m2": 0.05838,
+"gaps": [
+[
+"BAND0041.2",
+0.02873
+],
+[
+"BAND0006",
+0.02924
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-036",
+"cls": "SLAB",
+"area_m2": 0.04881,
+"bands": [
+[
+"BAND0006",
+0.00018
+],
+[
+"BAND0041.2",
+0.00053
+],
+[
+"BAND0053",
+2e-05
+]
+],
+"columns": [],
+"uncovered_m2": 0.04808,
+"gaps": [
+[
+"BAND0006",
+0.04808
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-037",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.36,
+"bands": [
+[
+"BAND0026.1",
+0.3588
+]
+],
+"columns": [],
+"uncovered_m2": 0.0012,
+"gaps": [
+[
+"BAND0026.1",
+0.0012
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-038",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.91502,
+"bands": [
+[
+"BAND0001",
+0.90645
+],
+[
+"BAND0004",
+0.00019
+]
+],
+"columns": [],
+"uncovered_m2": 0.00838,
+"gaps": [
+[
+"BAND0001",
+0.00178
+],
+[
+"BAND0001",
+0.0066
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-039",
+"cls": "SLAB",
+"area_m2": 8.30431,
+"bands": [
+[
+"BAND0004",
+0.00171
+],
+[
+"BAND0037.1",
+0.00051
+]
+],
+"columns": [],
+"uncovered_m2": 8.30209,
+"gaps": [
+[
+"BAND0004",
+8.30209
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-040",
+"cls": "OPENING+RING",
+"area_m2": 4.08141,
+"bands": [
+[
+"BAND0003",
+0.00187
+],
+[
+"BAND0006",
+0.00023
+],
+[
+"BAND0041.2",
+0.00203
+],
+[
+"BAND0050",
+0.12324
+],
+[
+"BAND0051",
+0.09483
+],
+[
+"BAND0052",
+0.0002
+],
+[
+"BAND0053",
+0.00047
+]
+],
+"columns": [],
+"uncovered_m2": 3.85853,
+"gaps": [
+[
+"BAND0003",
+3.85822
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-041",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.06,
+"bands": [],
+"columns": [
+[
+"36B",
+"SOLID",
+0.06
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-042",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.16,
+"bands": [
+[
+"BAND0020.1",
+0.15968
+]
+],
+"columns": [],
+"uncovered_m2": 0.00032,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-043",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.04,
+"bands": [
+[
+"BAND0020.1",
+0.00055
+]
+],
+"columns": [
+[
+"36B",
+"SOLID",
+0.04
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-044",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.0225,
+"bands": [],
+"columns": [
+[
+"36B",
+"SOLID",
+0.0225
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-045",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.05,
+"bands": [
+[
+"BAND0025.1",
+0.00049
+]
+],
+"columns": [
+[
+"341",
+"SOLID",
+0.05
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-046",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.24,
+"bands": [
+[
+"BAND0025.1",
+0.23988
+],
+[
+"BAND0043.2",
+2e-05
+]
+],
+"columns": [],
+"uncovered_m2": 0.0001,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-047",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.05,
+"bands": [
+[
+"BAND0026.1",
+3e-05
+]
+],
+"columns": [
+[
+"341",
+"SOLID",
+0.05
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-048",
+"cls": "OPENING",
+"area_m2": 3.24,
+"bands": [
+[
+"BAND0022.1",
+0.00224
+],
+[
+"BAND0023.1",
+0.0007
+]
+],
+"columns": [],
+"uncovered_m2": 3.23706,
+"gaps": [
+[
+"BAND0022.1",
+3.23706
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-049",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.05,
+"bands": [
+[
+"BAND0023.1",
+0.00045
+]
+],
+"columns": [
+[
+"33B",
+"SOLID",
+0.05
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-050",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.14,
+"bands": [
+[
+"BAND0023.1",
+0.13907
+]
+],
+"columns": [],
+"uncovered_m2": 0.00093,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-051",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.05,
+"bands": [],
+"columns": [
+[
+"33B",
+"SOLID",
+0.05
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-052",
+"cls": "SLAB",
+"area_m2": 4.07935,
+"bands": [
+[
+"BAND0001",
+0.00185
+],
+[
+"BAND0002",
+0.00023
+]
+],
+"columns": [],
+"uncovered_m2": 4.07728,
+"gaps": [
+[
+"BAND0001",
+4.07728
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-053",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.08,
+"bands": [],
+"columns": [
+[
+"37A",
+"SOLID",
+0.08
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-054",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.02,
+"bands": [],
+"columns": [
+[
+"37A",
+"SOLID",
+0.02
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-055",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.06094,
+"bands": [
+[
+"BAND0037.1",
+0.06094
+]
+],
+"columns": [
+[
+"322",
+"PATTERN",
+0.06094
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-056",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.02,
+"bands": [],
+"columns": [
+[
+"37A",
+"SOLID",
+0.02
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-057",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.08,
+"bands": [
+[
+"BAND0037.1",
+0.00016
+],
+[
+"BAND0044.1",
+0.00011
+]
+],
+"columns": [
+[
+"37A",
+"SOLID",
+0.08
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-058",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 2.35378,
+"bands": [
+[
+"BAND0003",
+0.00011
+],
+[
+"BAND0041.2",
+0.00063
+],
+[
+"BAND0042",
+0.00012
+],
+[
+"BAND0044.1",
+2.29208
+]
+],
+"columns": [],
+"uncovered_m2": 0.06084,
+"gaps": [
+[
+"BAND0044.1",
+0.03466
+],
+[
+"BAND0003",
+0.02511
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-059",
+"cls": "SLAB",
+"area_m2": 0.06646,
+"bands": [
+[
+"BAND0003",
+0.00055
+],
+[
+"BAND0051",
+0.0001
+]
+],
+"columns": [],
+"uncovered_m2": 0.06581,
+"gaps": [
+[
+"BAND0003",
+0.06581
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-060",
+"cls": "BEAM",
+"area_m2": 0.12875,
+"bands": [
+[
+"BAND0041.2",
+0.00056
+],
+[
+"BAND0052",
+0.06944
+]
+],
+"columns": [],
+"uncovered_m2": 0.05876,
+"gaps": [
+[
+"BAND0052",
+0.02968
+],
+[
+"BAND0052",
+0.02884
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-061",
+"cls": "SLAB",
+"area_m2": 0.03153,
+"bands": [
+[
+"BAND0041.2",
+0.00038
+],
+[
+"BAND0052",
+1e-05
+]
+],
+"columns": [],
+"uncovered_m2": 0.03113,
+"gaps": [
+[
+"BAND0052",
+0.03113
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-062",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.12784,
+"bands": [],
+"columns": [],
+"uncovered_m2": 0.12783,
+"gaps": [
+[
+"BAND0043.1",
+0.12783
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-063",
+"cls": "EDGE_HELD",
+"area_m2": 1.07212,
+"bands": [
+[
+"BAND0020.1",
+0.00024
+],
+[
+"BAND0020.2",
+0.00032
+],
+[
+"BAND0031.1",
+0.59994
+],
+[
+"BAND0031.2",
+0.10484
+],
+[
+"BAND0043.1",
+0.00065
+]
+],
+"columns": [],
+"uncovered_m2": 0.36613,
+"gaps": [
+[
+"BAND0020.1",
+0.2591
+],
+[
+"BAND0031.1",
+0.10703
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-064",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.1,
+"bands": [
+[
+"BAND0043.1",
+0.00013
+]
+],
+"columns": [
+[
+"368",
+"SOLID",
+0.1
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-065",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.1,
+"bands": [],
+"columns": [
+[
+"368",
+"SOLID",
+0.1
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-066",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 2.64,
+"bands": [
+[
+"BAND0020.1",
+7e-05
+],
+[
+"BAND0031.1",
+0.00012
+],
+[
+"BAND0031.2",
+0.00016
+],
+[
+"BAND0043.1",
+1.19951
+],
+[
+"BAND0043.2",
+1.31845
+]
+],
+"columns": [],
+"uncovered_m2": 0.1217,
+"gaps": [
+[
+"BAND0020.1",
+0.00126
+],
+[
+"BAND0031.2",
+0.11997
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-067",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.05,
+"bands": [
+[
+"BAND0025.1",
+9e-05
+]
+],
+"columns": [
+[
+"33E",
+"SOLID",
+0.05
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-068",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.05,
+"bands": [],
+"columns": [
+[
+"33E",
+"SOLID",
+0.05
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-069",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.36,
+"bands": [
+[
+"BAND0022.1",
+0.3574
+],
+[
+"BAND0045",
+0.00064
+]
+],
+"columns": [],
+"uncovered_m2": 0.00195,
+"gaps": [
+[
+"BAND0022.1",
+0.00195
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-070",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.12,
+"bands": [],
+"columns": [
+[
+"338",
+"SOLID",
+0.12
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-071",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.08,
+"bands": [],
+"columns": [
+[
+"338",
+"SOLID",
+0.08
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-072",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.045,
+"bands": [],
+"columns": [
+[
+"338",
+"SOLID",
+0.045
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-073",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 1.26971,
+"bands": [
+[
+"BAND0034.1",
+1.2525
+]
+],
+"columns": [],
+"uncovered_m2": 0.01721,
+"gaps": [
+[
+"BAND0034.1",
+0.00725
+],
+[
+"BAND0034.1",
+0.00942
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-074",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.06094,
+"bands": [
+[
+"BAND0042",
+0.05761
+]
+],
+"columns": [
+[
+"322",
+"PATTERN",
+0.06094
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-075",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.21747,
+"bands": [
+[
+"BAND0035.1",
+0.20076
+],
+[
+"BAND0044.1",
+0.00032
+]
+],
+"columns": [],
+"uncovered_m2": 0.01638,
+"gaps": [
+[
+"BAND0035.1",
+0.01637
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-076",
+"cls": "SLAB",
+"area_m2": 1.29934,
+"bands": [
+[
+"BAND0032",
+9e-05
+],
+[
+"BAND0035.1",
+8e-05
+],
+[
+"BAND0041.2",
+0.00151
+],
+[
+"BAND0044.1",
+0.00156
+]
+],
+"columns": [],
+"uncovered_m2": 1.29609,
+"gaps": [
+[
+"BAND0032",
+1.29609
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-077",
+"cls": "SLAB",
+"area_m2": 5.375,
+"bands": [
+[
+"BAND0007",
+0.00378
+],
+[
+"BAND0043.2",
+0.00076
+],
+[
+"BAND0045",
+0.00031
+]
+],
+"columns": [],
+"uncovered_m2": 5.37016,
+"gaps": [
+[
+"BAND0007",
+5.37016
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-078",
+"cls": "SLAB",
+"area_m2": 11.69999,
+"bands": [
+[
+"BAND0008",
+0.0033
+],
+[
+"BAND0034.1",
+0.00012
+],
+[
+"BAND0042",
+0.00243
+]
+],
+"columns": [],
+"uncovered_m2": 11.69414,
+"gaps": [
+[
+"BAND0008",
+11.69414
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-079",
+"cls": "SLAB",
+"area_m2": 2.81651,
+"bands": [
+[
+"BAND0010",
+1e-05
+],
+[
+"BAND0042",
+0.00163
+],
+[
+"BAND0044.1",
+0.00127
+]
+],
+"columns": [],
+"uncovered_m2": 2.8136,
+"gaps": [
+[
+"BAND0010",
+2.8136
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-080",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.39597,
+"bands": [
+[
+"BAND0011",
+0.39447
+],
+[
+"BAND0044.1",
+0.00021
+]
+],
+"columns": [],
+"uncovered_m2": 0.0013,
+"gaps": [
+[
+"BAND0011",
+0.0013
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-081",
+"cls": "SLAB",
+"area_m2": 4.11761,
+"bands": [
+[
+"BAND0011",
+0.0011
+],
+[
+"BAND0035.1",
+0.00052
+],
+[
+"BAND0044.1",
+0.00258
+],
+[
+"BAND0047.2",
+0.00022
+]
+],
+"columns": [],
+"uncovered_m2": 4.1132,
+"gaps": [
+[
+"BAND0011",
+4.1132
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-082",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.09028,
+"bands": [],
+"columns": [
+[
+"36E",
+"SOLID",
+0.09028
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-083",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.03472,
+"bands": [],
+"columns": [
+[
+"36E",
+"SOLID",
+0.03472
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-084",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.05326,
+"bands": [],
+"columns": [
+[
+"31B",
+"PATTERN",
+0.05326
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-085",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.05326,
+"bands": [],
+"columns": [
+[
+"31B",
+"PATTERN",
+0.05326
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-086",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.04444,
+"bands": [],
+"columns": [
+[
+"36E",
+"SOLID",
+0.04444
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-087",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.19,
+"bands": [
+[
+"BAND0032",
+0.18954
+]
+],
+"columns": [],
+"uncovered_m2": 0.00046,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-088",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.05,
+"bands": [],
+"columns": [
+[
+"344",
+"SOLID",
+0.05
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-089",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.05,
+"bands": [],
+"columns": [
+[
+"344",
+"SOLID",
+0.05
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-090",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.04,
+"bands": [
+[
+"BAND0028",
+0.01006
+]
+],
+"columns": [
+[
+"34A",
+"SOLID",
+0.04
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-091",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.04,
+"bands": [
+[
+"BAND0027",
+0.00051
+],
+[
+"BAND0028",
+0.02954
+]
+],
+"columns": [
+[
+"34A",
+"SOLID",
+0.04
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-092",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.5,
+"bands": [
+[
+"BAND0027",
+0.49896
+]
+],
+"columns": [],
+"uncovered_m2": 0.00104,
+"gaps": [
+[
+"BAND0027",
+0.00104
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-093",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.04,
+"bands": [
+[
+"BAND0027",
+0.03989
+]
+],
+"columns": [
+[
+"356",
+"SOLID",
+0.04
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-094",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.04,
+"bands": [
+[
+"BAND0027",
+0.03952
+],
+[
+"BAND0049",
+0.00048
+]
+],
+"columns": [
+[
+"356",
+"SOLID",
+0.04
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-095",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.37692,
+"bands": [
+[
+"BAND0049",
+0.37501
+]
+],
+"columns": [],
+"uncovered_m2": 0.00191,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-096",
+"cls": "EDGE_HELD",
+"area_m2": 0.48995,
+"bands": [],
+"columns": [],
+"uncovered_m2": 0.48995,
+"gaps": [
+[
+null,
+0.48995
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-097",
+"cls": "BEAM",
+"area_m2": 0.74,
+"bands": [],
+"columns": [],
+"uncovered_m2": 0.74,
+"gaps": [
+[
+"BAND0029.3",
+0.74
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-098",
+"cls": "SLAB",
+"area_m2": 15.54,
+"bands": [
+[
+"BAND0021.2",
+0.0003
+],
+[
+"BAND0029.3",
+1e-05
+],
+[
+"BAND0043.1",
+1e-05
+],
+[
+"BAND0043.2",
+6e-05
+]
+],
+"columns": [],
+"uncovered_m2": 15.53962,
+"gaps": [
+[
+"BAND0021.2",
+15.53962
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-099",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.64,
+"bands": [
+[
+"BAND0007",
+4e-05
+],
+[
+"BAND0021.2",
+0.63914
+],
+[
+"BAND0043.2",
+3e-05
+]
+],
+"columns": [],
+"uncovered_m2": 0.0008,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-100",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.66,
+"bands": [
+[
+"BAND0007",
+0.65586
+],
+[
+"BAND0045",
+4e-05
+]
+],
+"columns": [],
+"uncovered_m2": 0.00411,
+"gaps": [
+[
+"BAND0007",
+0.00411
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-101",
+"cls": "SLAB",
+"area_m2": 5.54439,
+"bands": [
+[
+"BAND0008",
+0.00285
+],
+[
+"BAND0009",
+0.00126
+]
+],
+"columns": [],
+"uncovered_m2": 5.54028,
+"gaps": [
+[
+"BAND0008",
+5.54028
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-102",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.51389,
+"bands": [
+[
+"BAND0008",
+0.00021
+],
+[
+"BAND0009",
+0.50812
+]
+],
+"columns": [],
+"uncovered_m2": 0.00556,
+"gaps": [
+[
+"BAND0008",
+0.00556
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-103",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.68585,
+"bands": [
+[
+"BAND0010",
+0.6821
+],
+[
+"BAND0011",
+1e-05
+],
+[
+"BAND0042",
+0.00013
+],
+[
+"BAND0047.2",
+0.00015
+]
+],
+"columns": [],
+"uncovered_m2": 0.00361,
+"gaps": [
+[
+"BAND0010",
+0.00316
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-104",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 4.37,
+"bands": [
+[
+"BAND0041.1",
+2.50949
+],
+[
+"BAND0041.2",
+1.7849
+],
+[
+"BAND0046.2",
+9e-05
+]
+],
+"columns": [],
+"uncovered_m2": 0.07553,
+"gaps": [
+[
+"BAND0041.1",
+0.07553
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-105",
+"cls": "SLAB",
+"area_m2": 6.14016,
+"bands": [
+[
+"BAND0029.1",
+0.00397
+],
+[
+"BAND0049",
+0.00056
+]
+],
+"columns": [],
+"uncovered_m2": 6.13563,
+"gaps": [
+[
+"BAND0029.1",
+6.13563
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-106",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.12365,
+"bands": [],
+"columns": [],
+"uncovered_m2": 0.12364,
+"gaps": [
+[
+"BAND0029.2",
+0.12364
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-107",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.084,
+"bands": [
+[
+"BAND0029.4",
+2e-05
+]
+],
+"columns": [
+[
+"362",
+"SOLID",
+0.084
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-108",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 1.35143,
+"bands": [
+[
+"BAND0008",
+1.34101
+],
+[
+"BAND0042",
+0.00018
+]
+],
+"columns": [],
+"uncovered_m2": 0.01024,
+"gaps": [
+[
+"BAND0008",
+0.01024
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-109",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 2.94257,
+"bands": [
+[
+"BAND0042",
+2.92403
+]
+],
+"columns": [],
+"uncovered_m2": 0.01855,
+"gaps": [
+[
+"BAND0042",
+0.01225
+],
+[
+"BAND0042",
+0.00557
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-110",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.8,
+"bands": [
+[
+"BAND0029.1",
+0.7956
+]
+],
+"columns": [],
+"uncovered_m2": 0.0044,
+"gaps": [
+[
+"BAND0029.1",
+0.0044
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-111",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.03,
+"bands": [],
+"columns": [
+[
+"353",
+"SOLID",
+0.03
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-112",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.1,
+"bands": [],
+"columns": [],
+"uncovered_m2": 0.1,
+"gaps": [
+[
+"BAND0029.1",
+0.1
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-113",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.05,
+"bands": [],
+"columns": [
+[
+"353",
+"SOLID",
+0.05
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-114",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 1.17,
+"bands": [
+[
+"BAND0012",
+9e-05
+],
+[
+"BAND0029.2",
+1.16696
+]
+],
+"columns": [],
+"uncovered_m2": 0.00295,
+"gaps": [
+[
+"BAND0012",
+0.00295
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-115",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.03167,
+"bands": [],
+"columns": [
+[
+"35F",
+"SOLID",
+0.03167
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-116",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.06367,
+"bands": [
+[
+"BAND0033.2",
+6e-05
+]
+],
+"columns": [
+[
+"35F",
+"SOLID",
+0.06367
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-117",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.24,
+"bands": [
+[
+"BAND0029.3",
+0.23956
+]
+],
+"columns": [],
+"uncovered_m2": 0.00044,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-118",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.088,
+"bands": [],
+"columns": [
+[
+"35C",
+"SOLID",
+0.088
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-119",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.0495,
+"bands": [],
+"columns": [
+[
+"35C",
+"SOLID",
+0.0495
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-120",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.132,
+"bands": [
+[
+"BAND0029.4",
+0.00012
+]
+],
+"columns": [
+[
+"35C",
+"SOLID",
+0.132
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-121",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.36524,
+"bands": [
+[
+"BAND0029.4",
+0.36456
+]
+],
+"columns": [],
+"uncovered_m2": 0.00068,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-122",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.056,
+"bands": [],
+"columns": [
+[
+"362",
+"SOLID",
+0.056
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-123",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.0315,
+"bands": [],
+"columns": [
+[
+"362",
+"SOLID",
+0.0315
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-124",
+"cls": "SLAB",
+"area_m2": 16.25359,
+"bands": [
+[
+"BAND0018",
+0.00172
+],
+[
+"BAND0021.1",
+0.00025
+],
+[
+"BAND0045",
+0.00022
+]
+],
+"columns": [],
+"uncovered_m2": 16.25141,
+"gaps": [
+[
+"BAND0018",
+16.25141
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-125",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 3.9,
+"bands": [
+[
+"BAND0008",
+0.00041
+],
+[
+"BAND0018",
+4e-05
+],
+[
+"BAND0019.1",
+0.00034
+],
+[
+"BAND0045",
+3.88462
+]
+],
+"columns": [],
+"uncovered_m2": 0.0146,
+"gaps": [
+[
+"BAND0045",
+0.00197
+],
+[
+"BAND0045",
+0.00474
+],
+[
+"BAND0008",
+0.00733
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-126",
+"cls": "SLAB",
+"area_m2": 15.10839,
+"bands": [
+[
+"BAND0010",
+0.00028
+],
+[
+"BAND0042",
+0.0014
+],
+[
+"BAND0047.2",
+0.00211
+]
+],
+"columns": [],
+"uncovered_m2": 15.1046,
+"gaps": [
+[
+"BAND0010",
+15.1046
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-127",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 1.22,
+"bands": [
+[
+"BAND0028",
+1.20548
+],
+[
+"BAND0029.1",
+0.0005
+]
+],
+"columns": [],
+"uncovered_m2": 0.01403,
+"gaps": [
+[
+"BAND0028",
+0.00353
+],
+[
+"BAND0014",
+0.01023
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-128",
+"cls": "SLAB",
+"area_m2": 2.08042,
+"bands": [
+[
+"BAND0029.4",
+0.00046
+],
+[
+"BAND0048.1",
+0.00074
+]
+],
+"columns": [],
+"uncovered_m2": 2.07922,
+"gaps": [
+[
+"BAND0029.4",
+2.07922
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-129",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.50198,
+"bands": [
+[
+"BAND0021.1",
+0.47458
+],
+[
+"BAND0048.1",
+0.00038
+]
+],
+"columns": [],
+"uncovered_m2": 0.02702,
+"gaps": [
+[
+"BAND0021.1",
+0.02646
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-130",
+"cls": "VOID+STAIR",
+"area_m2": 23.23712,
+"bands": [
+[
+"BAND0019.1",
+0.00059
+]
+],
+"columns": [],
+"uncovered_m2": 23.23654,
+"gaps": [
+[
+"BAND0019.1",
+23.23654
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-131",
+"cls": "STAIR",
+"area_m2": 0.3325,
+"bands": [],
+"columns": [],
+"uncovered_m2": 0.3325,
+"gaps": [
+[
+"BAND0008",
+0.3325
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-132",
+"cls": "STAIR",
+"area_m2": 1.85614,
+"bands": [
+[
+"BAND0042",
+0.00147
+]
+],
+"columns": [],
+"uncovered_m2": 1.85467,
+"gaps": [
+[
+"BAND0042",
+1.85467
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-133",
+"cls": "BEAM",
+"area_m2": 4.64685,
+"bands": [
+[
+"BAND0010",
+0.00048
+],
+[
+"BAND0047.1",
+0.80393
+],
+[
+"BAND0047.2",
+3.65272
+]
+],
+"columns": [],
+"uncovered_m2": 0.1902,
+"gaps": [
+[
+"BAND0047.1",
+0.00494
+],
+[
+"BAND0047.1",
+0.03697
+],
+[
+"BAND0047.2",
+0.148
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-134",
+"cls": "SLAB",
+"area_m2": 7.85548,
+"bands": [
+[
+"BAND0041.1",
+0.00685
+],
+[
+"BAND0047.1",
+0.00039
+],
+[
+"BAND0047.2",
+0.00167
+]
+],
+"columns": [],
+"uncovered_m2": 7.84657,
+"gaps": [
+[
+"BAND0041.1",
+7.84657
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-135",
+"cls": "SLAB",
+"area_m2": 18.0,
+"bands": [
+[
+"BAND0014",
+0.00449
+],
+[
+"BAND0030.1",
+0.0042
+]
+],
+"columns": [],
+"uncovered_m2": 17.9913,
+"gaps": [
+[
+"BAND0014",
+17.9913
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-136",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.89,
+"bands": [
+[
+"BAND0014",
+0.00018
+],
+[
+"BAND0030.1",
+0.88517
+]
+],
+"columns": [],
+"uncovered_m2": 0.00465,
+"gaps": [
+[
+"BAND0014",
+0.00465
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-137",
+"cls": "SLAB",
+"area_m2": 13.485,
+"bands": [
+[
+"BAND0014",
+0.00215
+]
+],
+"columns": [],
+"uncovered_m2": 13.48285,
+"gaps": [
+[
+"BAND0014",
+13.48285
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-138",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.9,
+"bands": [
+[
+"BAND0012",
+0.89627
+],
+[
+"BAND0014",
+0.00011
+]
+],
+"columns": [],
+"uncovered_m2": 0.00362,
+"gaps": [
+[
+"BAND0012",
+0.00362
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-139",
+"cls": "SLAB",
+"area_m2": 13.455,
+"bands": [
+[
+"BAND0012",
+0.00317
+],
+[
+"BAND0014",
+0.00109
+],
+[
+"BAND0033.1",
+0.00097
+],
+[
+"BAND0033.2",
+0.00206
+]
+],
+"columns": [],
+"uncovered_m2": 13.44771,
+"gaps": [
+[
+"BAND0012",
+13.44771
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-140",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.46,
+"bands": [
+[
+"BAND0033.2",
+0.45771
+]
+],
+"columns": [],
+"uncovered_m2": 0.00229,
+"gaps": [
+[
+"BAND0033.2",
+0.00229
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-141",
+"cls": "SLAB",
+"area_m2": 7.30091,
+"bands": [
+[
+"BAND0017",
+0.00388
+]
+],
+"columns": [],
+"uncovered_m2": 7.29702,
+"gaps": [
+[
+"BAND0017",
+7.29702
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-142",
+"cls": "BEAM",
+"area_m2": 4.79261,
+"bands": [
+[
+"BAND0029.4",
+2e-05
+],
+[
+"BAND0039",
+0.00363
+],
+[
+"BAND0048.1",
+2.93767
+],
+[
+"BAND0048.2",
+0.99239
+]
+],
+"columns": [],
+"uncovered_m2": 0.86227,
+"gaps": [
+[
+"BAND0029.4",
+0.00157
+],
+[
+"BAND0048.1",
+0.37918
+],
+[
+"BAND0039",
+0.26849
+],
+[
+"BAND0017",
+0.21136
+],
+[
+"BAND0029.4",
+0.00167
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-143",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.03,
+"bands": [
+[
+"BAND0038.1",
+0.02981
+]
+],
+"columns": [],
+"uncovered_m2": 0.00019,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-144",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.1725,
+"bands": [
+[
+"BAND0038.1",
+0.17127
+]
+],
+"columns": [],
+"uncovered_m2": 0.00123,
+"gaps": [
+[
+"BAND0038.1",
+0.00123
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-145",
+"cls": "STAIR",
+"area_m2": 0.2625,
+"bands": [],
+"columns": [],
+"uncovered_m2": 0.2625,
+"gaps": [
+[
+"BAND0038.1",
+0.2625
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-146",
+"cls": "SLAB",
+"area_m2": 0.45628,
+"bands": [
+[
+"BAND0042",
+0.00262
+]
+],
+"columns": [],
+"uncovered_m2": 0.45366,
+"gaps": [
+[
+"BAND0042",
+0.45366
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-147",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.0225,
+"bands": [],
+"columns": [
+[
+"365",
+"SOLID",
+0.0225
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-148",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.04,
+"bands": [
+[
+"BAND0033.2",
+0.0001
+]
+],
+"columns": [
+[
+"365",
+"SOLID",
+0.04
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-149",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.06,
+"bands": [
+[
+"BAND0017",
+0.00018
+],
+[
+"BAND0033.1",
+0.00027
+]
+],
+"columns": [
+[
+"365",
+"SOLID",
+0.06
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-150",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.72339,
+"bands": [
+[
+"BAND0017",
+0.70456
+]
+],
+"columns": [],
+"uncovered_m2": 0.01883,
+"gaps": [
+[
+"BAND0017",
+0.01883
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-151",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.07,
+"bands": [],
+"columns": [
+[
+"329",
+"PATTERN",
+0.07
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-152",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.07,
+"bands": [],
+"columns": [
+[
+"329",
+"PATTERN",
+0.07
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-153",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.59289,
+"bands": [
+[
+"BAND0018",
+0.57595
+],
+[
+"BAND0048.2",
+0.0002
+]
+],
+"columns": [],
+"uncovered_m2": 0.01674,
+"gaps": [
+[
+"BAND0018",
+0.01674
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-154",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.604,
+"bands": [
+[
+"BAND0019.1",
+0.60311
+]
+],
+"columns": [],
+"uncovered_m2": 0.00089,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-155",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.096,
+"bands": [
+[
+"BAND0019.1",
+9e-05
+]
+],
+"columns": [
+[
+"380",
+"SOLID",
+0.096
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-156",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.036,
+"bands": [
+[
+"BAND0038.1",
+0.00076
+]
+],
+"columns": [
+[
+"380",
+"SOLID",
+0.036
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-157",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.064,
+"bands": [],
+"columns": [
+[
+"380",
+"SOLID",
+0.064
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-158",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.1425,
+"bands": [
+[
+"BAND0038.1",
+0.1416
+]
+],
+"columns": [],
+"uncovered_m2": 0.0009,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-159",
+"cls": "BEAM_HELD",
+"area_m2": 1.37562,
+"bands": [],
+"columns": [],
+"uncovered_m2": 1.37562,
+"gaps": [
+[
+"BAND0019.2",
+1.37562
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-160",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.53,
+"bands": [
+[
+"BAND0019.2",
+0.52934
+]
+],
+"columns": [],
+"uncovered_m2": 0.00066,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-161",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.05125,
+"bands": [],
+"columns": [],
+"uncovered_m2": 0.05125,
+"gaps": [
+[
+"BAND0019.2",
+0.05125
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-162",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.072,
+"bands": [],
+"columns": [
+[
+"374",
+"SOLID",
+0.072
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-163",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.02437,
+"bands": [],
+"columns": [
+[
+"374",
+"SOLID",
+0.02437
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-164",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.048,
+"bands": [
+[
+"BAND0019.3",
+0.00016
+]
+],
+"columns": [
+[
+"374",
+"SOLID",
+0.048
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-165",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.63827,
+"bands": [
+[
+"BAND0019.3",
+0.63571
+]
+],
+"columns": [],
+"uncovered_m2": 0.00256,
+"gaps": [
+[
+"BAND0019.3",
+0.00243
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-166",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.05,
+"bands": [],
+"columns": [
+[
+"386",
+"PATTERN",
+0.05
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-167",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.05,
+"bands": [
+[
+"BAND0047.2",
+0.00017
+]
+],
+"columns": [
+[
+"386",
+"PATTERN",
+0.05
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-168",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.26,
+"bands": [
+[
+"BAND0014",
+4e-05
+],
+[
+"BAND0033.1",
+0.25886
+]
+],
+"columns": [],
+"uncovered_m2": 0.0011,
+"gaps": [
+[
+"BAND0033.1",
+0.0011
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-169",
+"cls": "SLAB",
+"area_m2": 5.08031,
+"bands": [
+[
+"BAND0014",
+0.00013
+],
+[
+"BAND0039",
+0.00014
+],
+[
+"BAND0048.2",
+0.00052
+]
+],
+"columns": [],
+"uncovered_m2": 5.07951,
+"gaps": [
+[
+"BAND0014",
+5.07951
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-170",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.95592,
+"bands": [
+[
+"BAND0039",
+0.94526
+],
+[
+"BAND0048.2",
+0.0001
+]
+],
+"columns": [],
+"uncovered_m2": 0.01066,
+"gaps": [
+[
+"BAND0039",
+0.00436
+],
+[
+"BAND0039",
+0.00625
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-171",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.13624,
+"bands": [],
+"columns": [
+[
+"37D",
+"SOLID",
+0.13624
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-172",
+"cls": "SLAB",
+"area_m2": 2.9374,
+"bands": [
+[
+"BAND0048.2",
+0.00055
+]
+],
+"columns": [],
+"uncovered_m2": 2.93685,
+"gaps": [
+[
+"BAND0048.2",
+2.93685
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-173",
+"cls": "SLAB",
+"area_m2": 7.764,
+"bands": [
+[
+"BAND0013",
+0.00053
+],
+[
+"BAND0019.2",
+0.00029
+]
+],
+"columns": [],
+"uncovered_m2": 7.76318,
+"gaps": [
+[
+"BAND0013",
+7.76318
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-174",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.0625,
+"bands": [],
+"columns": [
+[
+"383",
+"SOLID",
+0.0625
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-175",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.24,
+"bands": [
+[
+"BAND0013",
+0.2393
+]
+],
+"columns": [],
+"uncovered_m2": 0.0007,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-176",
+"cls": "SLAB",
+"area_m2": 4.28781,
+"bands": [
+[
+"BAND0019.3",
+0.00145
+],
+[
+"BAND0047.1",
+0.00072
+]
+],
+"columns": [],
+"uncovered_m2": 4.28563,
+"gaps": [
+[
+"BAND0019.3",
+4.28563
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-177",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.08694,
+"bands": [
+[
+"BAND0047.1",
+1e-05
+]
+],
+"columns": [
+[
+"371",
+"SOLID",
+0.08694
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-178",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.04,
+"bands": [
+[
+"BAND0041.1",
+0.04
+]
+],
+"columns": [
+[
+"347",
+"SOLID",
+0.04
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-179",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.04,
+"bands": [
+[
+"BAND0014",
+0.00992
+]
+],
+"columns": [
+[
+"34D",
+"SOLID",
+0.04
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-180",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.04,
+"bands": [
+[
+"BAND0014",
+0.03021
+]
+],
+"columns": [
+[
+"34D",
+"SOLID",
+0.04
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-181",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 1.09,
+"bands": [
+[
+"BAND0014",
+1.08389
+]
+],
+"columns": [],
+"uncovered_m2": 0.00611,
+"gaps": [
+[
+"BAND0014",
+0.00611
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-182",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.04,
+"bands": [
+[
+"BAND0014",
+0.03968
+]
+],
+"columns": [
+[
+"350",
+"SOLID",
+0.04
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-183",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.04,
+"bands": [
+[
+"BAND0014",
+0.04
+]
+],
+"columns": [
+[
+"350",
+"SOLID",
+0.04
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-184",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 1.15,
+"bands": [
+[
+"BAND0014",
+1.14707
+],
+[
+"BAND0039",
+0.00028
+]
+],
+"columns": [],
+"uncovered_m2": 0.00265,
+"gaps": [
+[
+"BAND0014",
+0.00265
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-185",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.04,
+"bands": [
+[
+"BAND0039",
+0.03995
+]
+],
+"columns": [
+[
+"359",
+"SOLID",
+0.04
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-186",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.04,
+"bands": [
+[
+"BAND0039",
+0.04
+]
+],
+"columns": [
+[
+"359",
+"SOLID",
+0.04
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-187",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.12728,
+"bands": [],
+"columns": [
+[
+"37D",
+"SOLID",
+0.12728
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-188",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.0625,
+"bands": [],
+"columns": [
+[
+"383",
+"SOLID",
+0.0625
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-189",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 3.65943,
+"bands": [
+[
+"BAND0013",
+0.00063
+],
+[
+"BAND0040.1",
+1.70845
+],
+[
+"BAND0040.2",
+1.88444
+],
+[
+"BAND0045",
+0.0012
+]
+],
+"columns": [],
+"uncovered_m2": 0.06471,
+"gaps": [
+[
+"BAND0013",
+0.0422
+],
+[
+"BAND0040.1",
+0.00773
+],
+[
+"BAND0013",
+0.01478
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-190",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.08746,
+"bands": [],
+"columns": [
+[
+"371",
+"SOLID",
+0.08746
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "GF",
+"id": "GF-191",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.22948,
+"bands": [
+[
+"BAND0015",
+0.22671
+],
+[
+"BAND0041.1",
+0.00014
+]
+],
+"columns": [],
+"uncovered_m2": 0.00264,
+"gaps": [
+[
+"BAND0015",
+0.00229
+]
+]
+},
+{
+"storey": "GF",
+"id": "GF-192",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.04,
+"bands": [
+[
+"BAND0041.1",
+0.04
+]
+],
+"columns": [
+[
+"347",
+"SOLID",
+0.04
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "1F",
+"id": "1F-000",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.05,
+"bands": [],
+"columns": [
+[
+"66D",
+"SOLID",
+0.05
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "1F",
+"id": "1F-001",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.05,
+"bands": [
+[
+"BAND0005.2",
+0.00013
+]
+],
+"columns": [
+[
+"66D",
+"SOLID",
+0.05
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "1F",
+"id": "1F-002",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.5,
+"bands": [
+[
+"BAND0001.1",
+0.49972
+]
+],
+"columns": [],
+"uncovered_m2": 0.00028,
+"gaps": []
+},
+{
+"storey": "1F",
+"id": "1F-003",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.032,
+"bands": [],
+"columns": [
+[
+"670",
+"SOLID",
+0.032
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "1F",
+"id": "1F-004",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.694,
+"bands": [
+[
+"BAND0001.2",
+0.69392
+]
+],
+"columns": [],
+"uncovered_m2": 8e-05,
+"gaps": []
+},
+{
+"storey": "1F",
+"id": "1F-005",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.048,
+"bands": [],
+"columns": [
+[
+"673",
+"SOLID",
+0.048
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "1F",
+"id": "1F-006",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.027,
+"bands": [],
+"columns": [
+[
+"673",
+"SOLID",
+0.027
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "1F",
+"id": "1F-007",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.072,
+"bands": [
+[
+"BAND0001.3",
+0.0003
+]
+],
+"columns": [
+[
+"673",
+"SOLID",
+0.072
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "1F",
+"id": "1F-008",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.67,
+"bands": [
+[
+"BAND0001.3",
+0.66984
+]
+],
+"columns": [],
+"uncovered_m2": 0.00016,
+"gaps": []
+},
+{
+"storey": "1F",
+"id": "1F-009",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.04,
+"bands": [],
+"columns": [
+[
+"697",
+"SOLID",
+0.04
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "1F",
+"id": "1F-010",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.0225,
+"bands": [],
+"columns": [
+[
+"697",
+"SOLID",
+0.0225
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "1F",
+"id": "1F-011",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.06,
+"bands": [
+[
+"BAND0001.4",
+0.00012
+]
+],
+"columns": [
+[
+"697",
+"SOLID",
+0.06
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "1F",
+"id": "1F-012",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.71,
+"bands": [
+[
+"BAND0001.4",
+0.70994
+]
+],
+"columns": [],
+"uncovered_m2": 6e-05,
+"gaps": []
+},
+{
+"storey": "1F",
+"id": "1F-013",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.05,
+"bands": [],
+"columns": [
+[
+"676",
+"SOLID",
+0.05
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "1F",
+"id": "1F-014",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.0625,
+"bands": [],
+"columns": [
+[
+"676",
+"SOLID",
+0.0625
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "1F",
+"id": "1F-015",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.042,
+"bands": [
+[
+"BAND0010.1",
+0.00013
+]
+],
+"columns": [
+[
+"670",
+"SOLID",
+0.042
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "1F",
+"id": "1F-016",
+"cls": "STAIR",
+"area_m2": 11.265,
+"bands": [
+[
+"BAND0001.1",
+0.00239
+],
+[
+"BAND0005.1",
+0.00057
+],
+[
+"BAND0005.2",
+0.54143
+],
+[
+"BAND0010.1",
+0.00226
+],
+[
+"BAND0011.1",
+0.0006
+]
+],
+"columns": [],
+"uncovered_m2": 10.71775,
+"gaps": [
+[
+"BAND0001.1",
+10.71775
+]
+]
+},
+{
+"storey": "1F",
+"id": "1F-017",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.54,
+"bands": [
+[
+"BAND0010.1",
+0.53657
+]
+],
+"columns": [],
+"uncovered_m2": 0.00343,
+"gaps": [
+[
+"BAND0010.1",
+0.00334
+]
+]
+},
+{
+"storey": "1F",
+"id": "1F-018",
+"cls": "SLAB",
+"area_m2": 5.4,
+"bands": [
+[
+"BAND0001.2",
+0.00177
+],
+[
+"BAND0007.2",
+0.00087
+],
+[
+"BAND0012.1",
+0.0008
+]
+],
+"columns": [],
+"uncovered_m2": 5.39657,
+"gaps": [
+[
+"BAND0007.2",
+5.39657
+]
+]
+},
+{
+"storey": "1F",
+"id": "1F-019",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.6,
+"bands": [
+[
+"BAND0001.2",
+0.0002
+],
+[
+"BAND0007.2",
+0.5978
+]
+],
+"columns": [],
+"uncovered_m2": 0.002,
+"gaps": [
+[
+"BAND0001.2",
+0.002
+]
+]
+},
+{
+"storey": "1F",
+"id": "1F-020",
+"cls": "SLAB",
+"area_m2": 9.50343,
+"bands": [
+[
+"BAND0001.3",
+0.00234
+],
+[
+"BAND0016",
+0.00239
+],
+[
+"BAND0030.1",
+0.0013
+]
+],
+"columns": [],
+"uncovered_m2": 9.49739,
+"gaps": [
+[
+"BAND0001.3",
+9.49739
+]
+]
+},
+{
+"storey": "1F",
+"id": "1F-021",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.695,
+"bands": [
+[
+"BAND0016",
+0.69132
+]
+],
+"columns": [],
+"uncovered_m2": 0.00368,
+"gaps": [
+[
+"BAND0016",
+0.00368
+]
+]
+},
+{
+"storey": "1F",
+"id": "1F-022",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.36,
+"bands": [
+[
+"BAND0012.1",
+0.35862
+]
+],
+"columns": [],
+"uncovered_m2": 0.00138,
+"gaps": [
+[
+"BAND0012.1",
+0.00138
+]
+]
+},
+{
+"storey": "1F",
+"id": "1F-023",
+"cls": "SLAB",
+"area_m2": 13.80406,
+"bands": [
+[
+"BAND0001.2",
+0.00152
+],
+[
+"BAND0001.3",
+0.00098
+],
+[
+"BAND0030.1",
+0.00212
+]
+],
+"columns": [],
+"uncovered_m2": 13.79944,
+"gaps": [
+[
+"BAND0001.2",
+13.79944
+]
+]
+},
+{
+"storey": "1F",
+"id": "1F-024",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.88362,
+"bands": [
+[
+"BAND0001.3",
+0.00021
+],
+[
+"BAND0009",
+0.88127
+],
+[
+"BAND0030.1",
+2e-05
+]
+],
+"columns": [],
+"uncovered_m2": 0.00213,
+"gaps": [
+[
+"BAND0001.3",
+0.00129
+]
+]
+},
+{
+"storey": "1F",
+"id": "1F-025",
+"cls": "SLAB",
+"area_m2": 17.705,
+"bands": [
+[
+"BAND0001.4",
+0.00375
+],
+[
+"BAND0015",
+0.00428
+],
+[
+"BAND0018.2",
+0.00515
+]
+],
+"columns": [],
+"uncovered_m2": 17.69183,
+"gaps": [
+[
+"BAND0001.4",
+17.69183
+]
+]
+},
+{
+"storey": "1F",
+"id": "1F-026",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 1.27927,
+"bands": [
+[
+"BAND0018.2",
+1.25608
+],
+[
+"BAND0020",
+5e-05
+],
+[
+"BAND0025",
+9e-05
+]
+],
+"columns": [],
+"uncovered_m2": 0.02306,
+"gaps": [
+[
+"BAND0018.2",
+0.02297
+]
+]
+},
+{
+"storey": "1F",
+"id": "1F-027",
+"cls": "EDGE_HELD",
+"area_m2": 1.41484,
+"bands": [
+[
+"BAND0018.2",
+0.00011
+],
+[
+"BAND0025",
+1.34489
+]
+],
+"columns": [],
+"uncovered_m2": 0.06984,
+"gaps": [
+[
+"BAND0025",
+0.0697
+]
+]
+},
+{
+"storey": "1F",
+"id": "1F-028",
+"cls": "EDGE_HELD",
+"area_m2": 0.20297,
+"bands": [
+[
+"BAND0025",
+0.0002
+]
+],
+"columns": [],
+"uncovered_m2": 0.20277,
+"gaps": [
+[
+"BAND0025",
+0.20277
+]
+]
+},
+{
+"storey": "1F",
+"id": "1F-029",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.06,
+"bands": [],
+"columns": [
+[
+"691",
+"SOLID",
+0.06
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "1F",
+"id": "1F-030",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.16,
+"bands": [
+[
+"BAND0005.1",
+0.16
+]
+],
+"columns": [],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "1F",
+"id": "1F-031",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.04,
+"bands": [
+[
+"BAND0005.1",
+5e-05
+]
+],
+"columns": [
+[
+"691",
+"SOLID",
+0.04
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "1F",
+"id": "1F-032",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.0225,
+"bands": [],
+"columns": [
+[
+"691",
+"SOLID",
+0.0225
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "1F",
+"id": "1F-033",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.05,
+"bands": [
+[
+"BAND0011.1",
+5e-05
+]
+],
+"columns": [
+[
+"682",
+"SOLID",
+0.05
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "1F",
+"id": "1F-034",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.24,
+"bands": [
+[
+"BAND0011.1",
+0.23855
+]
+],
+"columns": [],
+"uncovered_m2": 0.00145,
+"gaps": [
+[
+"BAND0011.1",
+0.00145
+]
+]
+},
+{
+"storey": "1F",
+"id": "1F-035",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.05,
+"bands": [
+[
+"BAND0012.1",
+0.00024
+]
+],
+"columns": [
+[
+"682",
+"SOLID",
+0.05
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "1F",
+"id": "1F-036",
+"cls": "OPENING",
+"area_m2": 3.24,
+"bands": [
+[
+"BAND0007.1",
+0.00013
+]
+],
+"columns": [],
+"uncovered_m2": 3.23987,
+"gaps": [
+[
+"BAND0007.1",
+3.23987
+]
+]
+},
+{
+"storey": "1F",
+"id": "1F-037",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.05,
+"bands": [
+[
+"BAND0007.1",
+5e-05
+]
+],
+"columns": [
+[
+"67C",
+"SOLID",
+0.05
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "1F",
+"id": "1F-038",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.14,
+"bands": [
+[
+"BAND0007.1",
+0.13948
+]
+],
+"columns": [],
+"uncovered_m2": 0.00052,
+"gaps": []
+},
+{
+"storey": "1F",
+"id": "1F-039",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.05,
+"bands": [],
+"columns": [
+[
+"67C",
+"SOLID",
+0.05
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "1F",
+"id": "1F-040",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.1,
+"bands": [
+[
+"BAND0016",
+9e-05
+],
+[
+"BAND0030.1",
+0.00538
+]
+],
+"columns": [
+[
+"667",
+"SOLID",
+0.1
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "1F",
+"id": "1F-041",
+"cls": "SLAB",
+"area_m2": 3.22046,
+"bands": [
+[
+"BAND0019",
+0.00378
+],
+[
+"BAND0024.2",
+0.00084
+]
+],
+"columns": [],
+"uncovered_m2": 3.21584,
+"gaps": [
+[
+"BAND0019",
+3.21584
+]
+]
+},
+{
+"storey": "1F",
+"id": "1F-042",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.1,
+"bands": [],
+"columns": [
+[
+"68E",
+"SOLID",
+0.1
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "1F",
+"id": "1F-043",
+"cls": "EDGE_HELD",
+"area_m2": 0.36601,
+"bands": [
+[
+"BAND0013.1",
+0.10051
+],
+[
+"BAND0013.2",
+0.10436
+]
+],
+"columns": [],
+"uncovered_m2": 0.16113,
+"gaps": [
+[
+"BAND0013.1",
+0.16113
+]
+]
+},
+{
+"storey": "1F",
+"id": "1F-044",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.1,
+"bands": [],
+"columns": [
+[
+"68E",
+"SOLID",
+0.1
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "1F",
+"id": "1F-045",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 2.995,
+"bands": [
+[
+"BAND0005.1",
+7e-05
+],
+[
+"BAND0011.1",
+0.00028
+],
+[
+"BAND0013.1",
+0.00107
+],
+[
+"BAND0013.2",
+0.00019
+],
+[
+"BAND0014",
+0.00032
+],
+[
+"BAND0024.2",
+0.00031
+],
+[
+"BAND0026.2",
+0.00031
+],
+[
+"BAND0031.1",
+1.34522
+],
+[
+"BAND0031.2",
+1.48002
+]
+],
+"columns": [],
+"uncovered_m2": 0.16721,
+"gaps": [
+[
+"BAND0005.1",
+0.00345
+],
+[
+"BAND0013.1",
+0.16374
+]
+]
+},
+{
+"storey": "1F",
+"id": "1F-046",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.05,
+"bands": [],
+"columns": [
+[
+"67F",
+"SOLID",
+0.05
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "1F",
+"id": "1F-047",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.05,
+"bands": [
+[
+"BAND0006.1",
+0.00022
+]
+],
+"columns": [
+[
+"67F",
+"SOLID",
+0.05
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "1F",
+"id": "1F-048",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.36,
+"bands": [
+[
+"BAND0006.1",
+0.35943
+],
+[
+"BAND0028",
+2e-05
+]
+],
+"columns": [],
+"uncovered_m2": 0.00054,
+"gaps": []
+},
+{
+"storey": "1F",
+"id": "1F-049",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.12,
+"bands": [],
+"columns": [
+[
+"679",
+"SOLID",
+0.12
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "1F",
+"id": "1F-050",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.08,
+"bands": [
+[
+"BAND0028",
+5e-05
+]
+],
+"columns": [
+[
+"679",
+"SOLID",
+0.08
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "1F",
+"id": "1F-051",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.02501,
+"bands": [],
+"columns": [
+[
+"679",
+"SOLID",
+0.02501
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "1F",
+"id": "1F-052",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 1.19106,
+"bands": [
+[
+"BAND0030.1",
+1.15027
+]
+],
+"columns": [],
+"uncovered_m2": 0.04079,
+"gaps": [
+[
+"BAND0030.1",
+0.04079
+]
+]
+},
+{
+"storey": "1F",
+"id": "1F-053",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.03813,
+"bands": [
+[
+"BAND0030.1",
+0.03813
+]
+],
+"columns": [
+[
+"77B",
+"PATTERN",
+0.03813
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "1F",
+"id": "1F-054",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.04,
+"bands": [
+[
+"BAND0030.1",
+0.04
+]
+],
+"columns": [
+[
+"77B",
+"PATTERN",
+0.04
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "1F",
+"id": "1F-055",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.89692,
+"bands": [
+[
+"BAND0030.1",
+0.89442
+]
+],
+"columns": [],
+"uncovered_m2": 0.0025,
+"gaps": [
+[
+"BAND0030.1",
+0.0025
+]
+]
+},
+{
+"storey": "1F",
+"id": "1F-056",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.1,
+"bands": [
+[
+"BAND0015",
+0.00019
+],
+[
+"BAND0030.1",
+0.00334
+]
+],
+"columns": [
+[
+"667",
+"SOLID",
+0.1
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "1F",
+"id": "1F-057",
+"cls": "SLAB",
+"area_m2": 4.41351,
+"bands": [
+[
+"BAND0015",
+0.0031
+],
+[
+"BAND0018.2",
+0.00061
+],
+[
+"BAND0020",
+0.00403
+],
+[
+"BAND0032",
+0.00074
+]
+],
+"columns": [],
+"uncovered_m2": 4.40503,
+"gaps": [
+[
+"BAND0015",
+4.40503
+]
+]
+},
+{
+"storey": "1F",
+"id": "1F-058",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.82,
+"bands": [
+[
+"BAND0015",
+0.81978
+],
+[
+"BAND0018.2",
+0.00022
+]
+],
+"columns": [],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "1F",
+"id": "1F-059",
+"cls": "EDGE_HELD",
+"area_m2": 0.62721,
+"bands": [
+[
+"BAND0014",
+0.61248
+]
+],
+"columns": [],
+"uncovered_m2": 0.01472,
+"gaps": [
+[
+"BAND0014",
+0.01472
+]
+]
+},
+{
+"storey": "1F",
+"id": "1F-060",
+"cls": "SLAB",
+"area_m2": 0.46738,
+"bands": [
+[
+"BAND0019",
+0.0002
+],
+[
+"BAND0034",
+0.00027
+]
+],
+"columns": [],
+"uncovered_m2": 0.46691,
+"gaps": [
+[
+"BAND0019",
+0.46691
+]
+]
+},
+{
+"storey": "1F",
+"id": "1F-061",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 1.025,
+"bands": [
+[
+"BAND0019",
+1.02475
+],
+[
+"BAND0024.2",
+0.00026
+]
+],
+"columns": [],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "1F",
+"id": "1F-062",
+"cls": "SLAB",
+"area_m2": 6.455,
+"bands": [
+[
+"BAND0003",
+0.00449
+],
+[
+"BAND0028",
+0.00121
+]
+],
+"columns": [],
+"uncovered_m2": 6.4493,
+"gaps": [
+[
+"BAND0003",
+6.4493
+]
+]
+},
+{
+"storey": "1F",
+"id": "1F-063",
+"cls": "SLAB",
+"area_m2": 4.21481,
+"bands": [
+[
+"BAND0004",
+0.00308
+]
+],
+"columns": [],
+"uncovered_m2": 4.21173,
+"gaps": [
+[
+"BAND0004",
+4.21173
+]
+]
+},
+{
+"storey": "1F",
+"id": "1F-064",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.32392,
+"bands": [
+[
+"BAND0004",
+0.00021
+],
+[
+"BAND0008",
+0.32046
+]
+],
+"columns": [],
+"uncovered_m2": 0.00326,
+"gaps": [
+[
+"BAND0004",
+0.00326
+]
+]
+},
+{
+"storey": "1F",
+"id": "1F-065",
+"cls": "SLAB",
+"area_m2": 2.7619,
+"bands": [
+[
+"BAND0004",
+0.00167
+],
+[
+"BAND0032",
+0.00158
+]
+],
+"columns": [],
+"uncovered_m2": 2.75865,
+"gaps": [
+[
+"BAND0004",
+2.75865
+]
+]
+},
+{
+"storey": "1F",
+"id": "1F-066",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 1.09305,
+"bands": [
+[
+"BAND0020",
+1.09285
+],
+[
+"BAND0032",
+0.00021
+]
+],
+"columns": [],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "1F",
+"id": "1F-067",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.09,
+"bands": [
+[
+"BAND0018.2",
+5e-05
+],
+[
+"BAND0020",
+0.00013
+]
+],
+"columns": [
+[
+"664",
+"SOLID",
+0.09
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "1F",
+"id": "1F-068",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.08988,
+"bands": [
+[
+"BAND0018.1",
+7e-05
+]
+],
+"columns": [
+[
+"664",
+"SOLID",
+0.08988
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "1F",
+"id": "1F-069",
+"cls": "EDGE_HELD",
+"area_m2": 0.38519,
+"bands": [
+[
+"BAND0018.1",
+2e-05
+]
+],
+"columns": [],
+"uncovered_m2": 0.38517,
+"gaps": [
+[
+"BAND0018.1",
+0.38517
+]
+]
+},
+{
+"storey": "1F",
+"id": "1F-070",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.86,
+"bands": [
+[
+"BAND0003",
+0.8598
+],
+[
+"BAND0028",
+0.00019
+]
+],
+"columns": [],
+"uncovered_m2": 1e-05,
+"gaps": []
+},
+{
+"storey": "1F",
+"id": "1F-071",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.94956,
+"bands": [
+[
+"BAND0004",
+0.9494
+],
+[
+"BAND0032",
+0.00016
+]
+],
+"columns": [],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "1F",
+"id": "1F-072",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 1.875,
+"bands": [
+[
+"BAND0014",
+0.0051
+],
+[
+"BAND0019",
+0.00022
+],
+[
+"BAND0022",
+0.00017
+],
+[
+"BAND0026.1",
+0.68641
+],
+[
+"BAND0026.2",
+1.08898
+]
+],
+"columns": [],
+"uncovered_m2": 0.09414,
+"gaps": [
+[
+"BAND0014",
+0.03056
+],
+[
+"BAND0019",
+0.06216
+]
+]
+},
+{
+"storey": "1F",
+"id": "1F-073",
+"cls": "DOME_OPENING+RING",
+"area_m2": 17.19618,
+"bands": [
+[
+"BAND0019",
+0.00052
+],
+[
+"BAND0022",
+0.0009
+],
+[
+"BAND0024.1",
+0.00139
+],
+[
+"BAND0024.2",
+0.00202
+],
+[
+"BAND0033",
+0.25852
+],
+[
+"BAND0034",
+0.30266
+],
+[
+"BAND0035",
+0.30307
+],
+[
+"BAND0036",
+0.25814
+]
+],
+"columns": [],
+"uncovered_m2": 16.06895,
+"gaps": [
+[
+"BAND0019",
+16.06739
+]
+]
+},
+{
+"storey": "1F",
+"id": "1F-074",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.0875,
+"bands": [],
+"columns": [
+[
+"688",
+"SOLID",
+0.0875
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "1F",
+"id": "1F-075",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 3.79978,
+"bands": [
+[
+"BAND0027.2",
+0.00024
+],
+[
+"BAND0032",
+3.7813
+]
+],
+"columns": [],
+"uncovered_m2": 0.01823,
+"gaps": [
+[
+"BAND0032",
+0.01823
+]
+]
+},
+{
+"storey": "1F",
+"id": "1F-076",
+"cls": "DOME_OPENING+RING",
+"area_m2": 2.9132,
+"bands": [
+[
+"BAND0018.1",
+0.00203
+],
+[
+"BAND0020",
+0.00121
+],
+[
+"BAND0021",
+0.00039
+],
+[
+"BAND0032",
+0.00287
+]
+],
+"columns": [],
+"uncovered_m2": 2.90668,
+"gaps": [
+[
+"BAND0021",
+0.43382
+],
+[
+"BAND0021",
+0.46899
+],
+[
+"BAND0018.1",
+0.95453
+],
+[
+"BAND0020",
+1.04934
+]
+]
+},
+{
+"storey": "1F",
+"id": "1F-077",
+"cls": "DOME_OPENING+RING",
+"area_m2": 15.31753,
+"bands": [
+[
+"BAND0018.1",
+0.00085
+],
+[
+"BAND0032",
+3e-05
+]
+],
+"columns": [],
+"uncovered_m2": 15.31664,
+"gaps": [
+[
+"BAND0018.1",
+15.31664
+]
+]
+},
+{
+"storey": "1F",
+"id": "1F-078",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.03052,
+"bands": [
+[
+"BAND0018.1",
+0.03052
+]
+],
+"columns": [],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "1F",
+"id": "1F-079",
+"cls": "EDGE_HELD",
+"area_m2": 0.54646,
+"bands": [
+[
+"BAND0014",
+0.54646
+]
+],
+"columns": [],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "1F",
+"id": "1F-080",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.06,
+"bands": [
+[
+"BAND0014",
+0.00053
+],
+[
+"BAND0026.2",
+1e-05
+]
+],
+"columns": [
+[
+"685",
+"SOLID",
+0.06
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "1F",
+"id": "1F-081",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.06,
+"bands": [
+[
+"BAND0026.1",
+0.00021
+]
+],
+"columns": [
+[
+"685",
+"SOLID",
+0.06
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "1F",
+"id": "1F-082",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 1.88,
+"bands": [
+[
+"BAND0003",
+0.0001
+],
+[
+"BAND0024.1",
+0.89915
+],
+[
+"BAND0024.2",
+0.9436
+]
+],
+"columns": [],
+"uncovered_m2": 0.03716,
+"gaps": [
+[
+"BAND0003",
+0.03637
+]
+]
+},
+{
+"storey": "1F",
+"id": "1F-083",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.0875,
+"bands": [
+[
+"BAND0024.1",
+9e-05
+]
+],
+"columns": [
+[
+"688",
+"SOLID",
+0.0875
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "1F",
+"id": "1F-084",
+"cls": "SLAB",
+"area_m2": 20.855,
+"bands": [
+[
+"BAND0003",
+0.00325
+],
+[
+"BAND0027.1",
+0.0019
+],
+[
+"BAND0028",
+0.0042
+]
+],
+"columns": [],
+"uncovered_m2": 20.84565,
+"gaps": [
+[
+"BAND0003",
+20.84565
+]
+]
+},
+{
+"storey": "1F",
+"id": "1F-085",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 2.205,
+"bands": [
+[
+"BAND0004",
+0.00022
+],
+[
+"BAND0027.1",
+0.00016
+],
+[
+"BAND0028",
+2.1983
+]
+],
+"columns": [],
+"uncovered_m2": 0.00632,
+"gaps": [
+[
+"BAND0004",
+0.00632
+]
+]
+},
+{
+"storey": "1F",
+"id": "1F-086",
+"cls": "SLAB",
+"area_m2": 11.02846,
+"bands": [
+[
+"BAND0004",
+0.00172
+],
+[
+"BAND0027.1",
+0.00092
+]
+],
+"columns": [],
+"uncovered_m2": 11.02582,
+"gaps": [
+[
+"BAND0004",
+11.02582
+]
+]
+},
+{
+"storey": "1F",
+"id": "1F-087",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.97,
+"bands": [
+[
+"BAND0004",
+0.00015
+],
+[
+"BAND0017",
+0.96781
+]
+],
+"columns": [],
+"uncovered_m2": 0.00204,
+"gaps": [
+[
+"BAND0004",
+0.00204
+]
+]
+},
+{
+"storey": "1F",
+"id": "1F-088",
+"cls": "SLAB",
+"area_m2": 11.02846,
+"bands": [
+[
+"BAND0004",
+0.00172
+],
+[
+"BAND0017",
+0.0005
+],
+[
+"BAND0027.2",
+0.00083
+],
+[
+"BAND0032",
+0.00345
+]
+],
+"columns": [],
+"uncovered_m2": 11.02195,
+"gaps": [
+[
+"BAND0004",
+11.02195
+]
+]
+},
+{
+"storey": "1F",
+"id": "1F-089",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 1.3852,
+"bands": [
+[
+"BAND0018.1",
+1.37574
+],
+[
+"BAND0020",
+1e-05
+]
+],
+"columns": [],
+"uncovered_m2": 0.00945,
+"gaps": [
+[
+"BAND0018.1",
+0.00945
+]
+]
+},
+{
+"storey": "1F",
+"id": "1F-090",
+"cls": "SLAB",
+"area_m2": 0.46738,
+"bands": [
+[
+"BAND0022",
+0.00035
+],
+[
+"BAND0035",
+9e-05
+]
+],
+"columns": [],
+"uncovered_m2": 0.46695,
+"gaps": [
+[
+"BAND0022",
+0.46694
+]
+]
+},
+{
+"storey": "1F",
+"id": "1F-091",
+"cls": "SLAB",
+"area_m2": 0.58181,
+"bands": [
+[
+"BAND0021",
+0.00026
+],
+[
+"BAND0032",
+0.00126
+]
+],
+"columns": [],
+"uncovered_m2": 0.58029,
+"gaps": [
+[
+"BAND0021",
+0.58029
+]
+]
+},
+{
+"storey": "1F",
+"id": "1F-092",
+"cls": "SLAB",
+"area_m2": 0.52206,
+"bands": [
+[
+"BAND0018.1",
+0.00098
+],
+[
+"BAND0021",
+0.00025
+]
+],
+"columns": [],
+"uncovered_m2": 0.52084,
+"gaps": [
+[
+"BAND0018.1",
+0.52084
+]
+]
+},
+{
+"storey": "1F",
+"id": "1F-093",
+"cls": "EDGE_HELD",
+"area_m2": 0.34098,
+"bands": [
+[
+"BAND0014",
+0.34098
+]
+],
+"columns": [],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "1F",
+"id": "1F-094",
+"cls": "SLAB",
+"area_m2": 4.68359,
+"bands": [
+[
+"BAND0024.1",
+0.00092
+]
+],
+"columns": [],
+"uncovered_m2": 4.68267,
+"gaps": [
+[
+"BAND0024.1",
+4.68267
+]
+]
+},
+{
+"storey": "1F",
+"id": "1F-095",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 1.025,
+"bands": [
+[
+"BAND0022",
+1.01945
+],
+[
+"BAND0024.1",
+0.00021
+]
+],
+"columns": [],
+"uncovered_m2": 0.00535,
+"gaps": [
+[
+"BAND0022",
+0.00535
+]
+]
+},
+{
+"storey": "1F",
+"id": "1F-096",
+"cls": "SLAB",
+"area_m2": 4.5573,
+"bands": [
+[
+"BAND0018.1",
+0.00085
+],
+[
+"BAND0027.2",
+0.0001
+],
+[
+"BAND0027.3",
+0.00147
+],
+[
+"BAND0032",
+0.00112
+]
+],
+"columns": [],
+"uncovered_m2": 4.55377,
+"gaps": [
+[
+"BAND0027.2",
+4.55377
+]
+]
+},
+{
+"storey": "1F",
+"id": "1F-097",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 1.09305,
+"bands": [
+[
+"BAND0018.1",
+0.00021
+],
+[
+"BAND0021",
+1.0871
+],
+[
+"BAND0032",
+0.00026
+]
+],
+"columns": [],
+"uncovered_m2": 0.00549,
+"gaps": [
+[
+"BAND0021",
+0.00549
+]
+]
+},
+{
+"storey": "1F",
+"id": "1F-098",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.05,
+"bands": [
+[
+"BAND0014",
+0.0005
+]
+],
+"columns": [
+[
+"68B",
+"SOLID",
+0.05
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "1F",
+"id": "1F-099",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.05,
+"bands": [],
+"columns": [
+[
+"68B",
+"SOLID",
+0.05
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "1F",
+"id": "1F-100",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.76235,
+"bands": [
+[
+"BAND0002.1",
+0.76028
+]
+],
+"columns": [],
+"uncovered_m2": 0.00206,
+"gaps": [
+[
+"BAND0002.1",
+0.00206
+]
+]
+},
+{
+"storey": "1F",
+"id": "1F-101",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.07,
+"bands": [],
+"columns": [
+[
+"66A",
+"SOLID",
+0.07
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "1F",
+"id": "1F-102",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.07,
+"bands": [
+[
+"BAND0024.1",
+0.00014
+]
+],
+"columns": [
+[
+"66A",
+"SOLID",
+0.07
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "1F",
+"id": "1F-103",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 3.89365,
+"bands": [
+[
+"BAND0018.1",
+8e-05
+],
+[
+"BAND0027.1",
+2.01224
+],
+[
+"BAND0027.2",
+0.79505
+],
+[
+"BAND0027.3",
+0.98972
+]
+],
+"columns": [],
+"uncovered_m2": 0.09656,
+"gaps": [
+[
+"BAND0027.1",
+0.00144
+],
+[
+"BAND0027.1",
+0.03992
+],
+[
+"BAND0027.2",
+0.0303
+],
+[
+"BAND0018.1",
+0.0249
+]
+]
+},
+{
+"storey": "1F",
+"id": "1F-104",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.1,
+"bands": [
+[
+"BAND0027.1",
+0.00013
+]
+],
+"columns": [
+[
+"69A",
+"SOLID",
+0.1
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "1F",
+"id": "1F-105",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.1,
+"bands": [
+[
+"BAND0027.2",
+0.00025
+]
+],
+"columns": [
+[
+"69A",
+"SOLID",
+0.1
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "1F",
+"id": "1F-106",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.075,
+"bands": [],
+"columns": [
+[
+"694",
+"SOLID",
+0.075
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "1F",
+"id": "1F-107",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.075,
+"bands": [],
+"columns": [
+[
+"694",
+"SOLID",
+0.075
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "1F",
+"id": "1F-108",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.05,
+"bands": [
+[
+"BAND0027.3",
+4e-05
+]
+],
+"columns": [
+[
+"69D",
+"SOLID",
+0.05
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "1F",
+"id": "1F-109",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.05,
+"bands": [
+[
+"BAND0018.1",
+0.00011
+]
+],
+"columns": [
+[
+"69D",
+"SOLID",
+0.05
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "2F",
+"id": "2F-000",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.05,
+"bands": [],
+"columns": [
+[
+"40F",
+"SOLID",
+0.05
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "2F",
+"id": "2F-001",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.05,
+"bands": [],
+"columns": [
+[
+"40F",
+"SOLID",
+0.05
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "2F",
+"id": "2F-002",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.5,
+"bands": [
+[
+"BAND0001.1",
+0.49984
+]
+],
+"columns": [],
+"uncovered_m2": 0.00016,
+"gaps": []
+},
+{
+"storey": "2F",
+"id": "2F-003",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.032,
+"bands": [],
+"columns": [
+[
+"412",
+"SOLID",
+0.032
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "2F",
+"id": "2F-004",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.694,
+"bands": [
+[
+"BAND0001.2",
+0.69394
+]
+],
+"columns": [],
+"uncovered_m2": 6e-05,
+"gaps": []
+},
+{
+"storey": "2F",
+"id": "2F-005",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.06,
+"bands": [],
+"columns": [
+[
+"415",
+"SOLID",
+0.06
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "2F",
+"id": "2F-006",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.06,
+"bands": [],
+"columns": [
+[
+"415",
+"SOLID",
+0.06
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "2F",
+"id": "2F-007",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.226,
+"bands": [
+[
+"BAND0001.3",
+0.22593
+]
+],
+"columns": [],
+"uncovered_m2": 7e-05,
+"gaps": []
+},
+{
+"storey": "2F",
+"id": "2F-008",
+"cls": "NOT_SLAB",
+"area_m2": 0.08663,
+"bands": [],
+"columns": [],
+"uncovered_m2": 0.08663,
+"gaps": [
+[
+"BAND0006.2",
+0.08663
+]
+]
+},
+{
+"storey": "2F",
+"id": "2F-009",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.042,
+"bands": [],
+"columns": [
+[
+"412",
+"SOLID",
+0.042
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "2F",
+"id": "2F-010",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.54,
+"bands": [
+[
+"BAND0006.2",
+0.53942
+]
+],
+"columns": [],
+"uncovered_m2": 0.00058,
+"gaps": []
+},
+{
+"storey": "2F",
+"id": "2F-011",
+"cls": "SLAB",
+"area_m2": 8.235,
+"bands": [
+[
+"BAND0001.1",
+0.00101
+],
+[
+"BAND0006.2",
+0.00153
+],
+[
+"BAND0010.1",
+9e-05
+]
+],
+"columns": [],
+"uncovered_m2": 8.23236,
+"gaps": [
+[
+"BAND0001.1",
+8.23236
+]
+]
+},
+{
+"storey": "2F",
+"id": "2F-012",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.54,
+"bands": [
+[
+"BAND0010.1",
+0.53988
+]
+],
+"columns": [],
+"uncovered_m2": 0.00012,
+"gaps": []
+},
+{
+"storey": "2F",
+"id": "2F-013",
+"cls": "SLAB",
+"area_m2": 5.4,
+"bands": [
+[
+"BAND0001.2",
+0.00059
+],
+[
+"BAND0010.1",
+0.00099
+]
+],
+"columns": [],
+"uncovered_m2": 5.39841,
+"gaps": [
+[
+"BAND0001.2",
+5.39841
+]
+]
+},
+{
+"storey": "2F",
+"id": "2F-014",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.6,
+"bands": [
+[
+"BAND0001.2",
+6e-05
+],
+[
+"BAND0008.3",
+0.59825
+]
+],
+"columns": [],
+"uncovered_m2": 0.0017,
+"gaps": [
+[
+"BAND0001.2",
+0.0017
+]
+]
+},
+{
+"storey": "2F",
+"id": "2F-015",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.36,
+"bands": [
+[
+"BAND0012.1",
+0.35911
+]
+],
+"columns": [],
+"uncovered_m2": 0.00089,
+"gaps": []
+},
+{
+"storey": "2F",
+"id": "2F-016",
+"cls": "SLAB",
+"area_m2": 15.0,
+"bands": [
+[
+"BAND0001.2",
+0.00041
+],
+[
+"BAND0001.3",
+0.00014
+],
+[
+"BAND0007.2",
+0.00058
+],
+[
+"BAND0008.2",
+0.00017
+],
+[
+"BAND0008.3",
+0.0002
+]
+],
+"columns": [],
+"uncovered_m2": 14.9985,
+"gaps": [
+[
+"BAND0001.2",
+14.9985
+]
+]
+},
+{
+"storey": "2F",
+"id": "2F-017",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.88365,
+"bands": [
+[
+"BAND0001.3",
+3e-05
+],
+[
+"BAND0009",
+0.8831
+]
+],
+"columns": [],
+"uncovered_m2": 0.00052,
+"gaps": []
+},
+{
+"storey": "2F",
+"id": "2F-018",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.06,
+"bands": [
+[
+"BAND0006.2",
+7e-05
+]
+],
+"columns": [
+[
+"424",
+"SOLID",
+0.06
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "2F",
+"id": "2F-019",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.04,
+"bands": [],
+"columns": [
+[
+"424",
+"SOLID",
+0.04
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "2F",
+"id": "2F-020",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.0225,
+"bands": [],
+"columns": [
+[
+"424",
+"SOLID",
+0.0225
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "2F",
+"id": "2F-021",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.49,
+"bands": [
+[
+"BAND0002.1",
+0.48873
+]
+],
+"columns": [],
+"uncovered_m2": 0.00127,
+"gaps": [
+[
+"BAND0002.1",
+0.00124
+]
+]
+},
+{
+"storey": "2F",
+"id": "2F-022",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.05,
+"bands": [],
+"columns": [
+[
+"421",
+"SOLID",
+0.05
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "2F",
+"id": "2F-023",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.24,
+"bands": [
+[
+"BAND0011.2",
+0.23987
+]
+],
+"columns": [],
+"uncovered_m2": 0.00013,
+"gaps": []
+},
+{
+"storey": "2F",
+"id": "2F-024",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.05,
+"bands": [
+[
+"BAND0010.1",
+5e-05
+]
+],
+"columns": [
+[
+"421",
+"SOLID",
+0.05
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "2F",
+"id": "2F-025",
+"cls": "SLAB",
+"area_m2": 3.24,
+"bands": [
+[
+"BAND0007.1",
+0.00017
+],
+[
+"BAND0011.2",
+0.00056
+]
+],
+"columns": [],
+"uncovered_m2": 3.23927,
+"gaps": [
+[
+"BAND0007.1",
+3.23927
+]
+]
+},
+{
+"storey": "2F",
+"id": "2F-026",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.05,
+"bands": [
+[
+"BAND0008.2",
+3e-05
+],
+[
+"BAND0012.1",
+0.00012
+]
+],
+"columns": [
+[
+"41B",
+"SOLID",
+0.05
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "2F",
+"id": "2F-027",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.2,
+"bands": [
+[
+"BAND0008.2",
+0.19938
+]
+],
+"columns": [],
+"uncovered_m2": 0.00062,
+"gaps": []
+},
+{
+"storey": "2F",
+"id": "2F-028",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.05,
+"bands": [
+[
+"BAND0008.3",
+3e-05
+]
+],
+"columns": [
+[
+"41B",
+"SOLID",
+0.05
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "2F",
+"id": "2F-029",
+"cls": "NOT_THIS_SLAB",
+"area_m2": 0.51364,
+"bands": [],
+"columns": [],
+"uncovered_m2": 0.51364,
+"gaps": [
+[
+null,
+0.51364
+]
+]
+},
+{
+"storey": "2F",
+"id": "2F-030",
+"cls": "NOT_THIS_SLAB",
+"area_m2": 0.36601,
+"bands": [],
+"columns": [],
+"uncovered_m2": 0.36601,
+"gaps": [
+[
+null,
+0.36601
+]
+]
+},
+{
+"storey": "2F",
+"id": "2F-031",
+"cls": "EDGE_HELD",
+"area_m2": 0.27176,
+"bands": [],
+"columns": [],
+"uncovered_m2": 0.27176,
+"gaps": [
+[
+"BAND0006.2",
+0.27176
+]
+]
+},
+{
+"storey": "2F",
+"id": "2F-032",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.62,
+"bands": [
+[
+"BAND0006.1",
+0.61911
+]
+],
+"columns": [],
+"uncovered_m2": 0.00089,
+"gaps": []
+},
+{
+"storey": "2F",
+"id": "2F-033",
+"cls": "SLAB",
+"area_m2": 7.25,
+"bands": [
+[
+"BAND0002.1",
+4e-05
+],
+[
+"BAND0006.1",
+0.00193
+]
+],
+"columns": [],
+"uncovered_m2": 7.24804,
+"gaps": [
+[
+"BAND0002.1",
+7.24804
+]
+]
+},
+{
+"storey": "2F",
+"id": "2F-034",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.05,
+"bands": [],
+"columns": [
+[
+"41E",
+"SOLID",
+0.05
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "2F",
+"id": "2F-035",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.05,
+"bands": [],
+"columns": [
+[
+"41E",
+"SOLID",
+0.05
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "2F",
+"id": "2F-036",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.36,
+"bands": [
+[
+"BAND0007.1",
+0.3599
+]
+],
+"columns": [],
+"uncovered_m2": 0.0001,
+"gaps": []
+},
+{
+"storey": "2F",
+"id": "2F-037",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.06429,
+"bands": [
+[
+"BAND0008.2",
+3e-05
+]
+],
+"columns": [
+[
+"418",
+"SOLID",
+0.06429
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "2F",
+"id": "2F-038",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.03429,
+"bands": [],
+"columns": [
+[
+"418",
+"SOLID",
+0.03429
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "2F",
+"id": "2F-039",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.03571,
+"bands": [],
+"columns": [
+[
+"418",
+"SOLID",
+0.03571
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "2F",
+"id": "2F-040",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.6,
+"bands": [
+[
+"BAND0007.2",
+0.59996
+]
+],
+"columns": [],
+"uncovered_m2": 4e-05,
+"gaps": []
+},
+{
+"storey": "2F",
+"id": "2F-041",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.04,
+"bands": [
+[
+"BAND0009",
+0.03991
+]
+],
+"columns": [
+[
+"778",
+"SOLID",
+0.04
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "2F",
+"id": "2F-042",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.04,
+"bands": [
+[
+"BAND0009",
+0.04
+]
+],
+"columns": [
+[
+"778",
+"SOLID",
+0.04
+]
+],
+"uncovered_m2": 0.0,
+"gaps": []
+},
+{
+"storey": "2F",
+"id": "2F-043",
+"cls": "NOT_THIS_SLAB",
+"area_m2": 0.62721,
+"bands": [],
+"columns": [],
+"uncovered_m2": 0.62721,
+"gaps": [
+[
+null,
+0.62721
+]
+]
+},
+{
+"storey": "2F",
+"id": "2F-044",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.28,
+"bands": [
+[
+"BAND0003",
+2e-05
+],
+[
+"BAND0011.1",
+0.2797
+]
+],
+"columns": [],
+"uncovered_m2": 0.00028,
+"gaps": []
+},
+{
+"storey": "2F",
+"id": "2F-045",
+"cls": "SLAB",
+"area_m2": 2.16,
+"bands": [
+[
+"BAND0007.1",
+0.00055
+],
+[
+"BAND0011.1",
+0.00062
+]
+],
+"columns": [],
+"uncovered_m2": 2.15883,
+"gaps": [
+[
+"BAND0007.1",
+2.15883
+]
+]
+},
+{
+"storey": "2F",
+"id": "2F-046",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.28,
+"bands": [
+[
+"BAND0004",
+0.00014
+],
+[
+"BAND0008.1",
+0.27886
+]
+],
+"columns": [],
+"uncovered_m2": 0.001,
+"gaps": []
+},
+{
+"storey": "2F",
+"id": "2F-047",
+"cls": "SLAB",
+"area_m2": 3.6,
+"bands": [
+[
+"BAND0005",
+3e-05
+],
+[
+"BAND0007.2",
+0.00062
+],
+[
+"BAND0008.1",
+0.00031
+]
+],
+"columns": [],
+"uncovered_m2": 3.59904,
+"gaps": [
+[
+"BAND0007.2",
+3.59904
+]
+]
+},
+{
+"storey": "2F",
+"id": "2F-048",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.35635,
+"bands": [
+[
+"BAND0005",
+6e-05
+],
+[
+"BAND0007.2",
+4e-05
+],
+[
+"BAND0009",
+0.35574
+]
+],
+"columns": [],
+"uncovered_m2": 0.0005,
+"gaps": []
+},
+{
+"storey": "2F",
+"id": "2F-049",
+"cls": "NOT_THIS_SLAB",
+"area_m2": 0.76741,
+"bands": [],
+"columns": [],
+"uncovered_m2": 0.76741,
+"gaps": [
+[
+null,
+0.76741
+]
+]
+},
+{
+"storey": "2F",
+"id": "2F-050",
+"cls": "NOT_THIS_SLAB",
+"area_m2": 0.76741,
+"bands": [],
+"columns": [],
+"uncovered_m2": 0.76741,
+"gaps": [
+[
+null,
+0.76741
+]
+]
+},
+{
+"storey": "2F",
+"id": "2F-051",
+"cls": "NOT_THIS_SLAB",
+"area_m2": 0.76739,
+"bands": [],
+"columns": [],
+"uncovered_m2": 0.76739,
+"gaps": [
+[
+null,
+0.76739
+]
+]
+},
+{
+"storey": "2F",
+"id": "2F-052",
+"cls": "NOT_THIS_SLAB",
+"area_m2": 0.76739,
+"bands": [],
+"columns": [],
+"uncovered_m2": 0.76739,
+"gaps": [
+[
+null,
+0.76739
+]
+]
+},
+{
+"storey": "2F",
+"id": "2F-053",
+"cls": "NOT_THIS_SLAB",
+"area_m2": 0.76741,
+"bands": [],
+"columns": [],
+"uncovered_m2": 0.76741,
+"gaps": [
+[
+null,
+0.76741
+]
+]
+},
+{
+"storey": "2F",
+"id": "2F-054",
+"cls": "NOT_THIS_SLAB",
+"area_m2": 0.76741,
+"bands": [],
+"columns": [],
+"uncovered_m2": 0.76741,
+"gaps": [
+[
+null,
+0.76741
+]
+]
+},
+{
+"storey": "2F",
+"id": "2F-055",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.5,
+"bands": [
+[
+"BAND0003",
+0.49861
+],
+[
+"BAND0006.1",
+0.00014
+]
+],
+"columns": [],
+"uncovered_m2": 0.00125,
+"gaps": []
+},
+{
+"storey": "2F",
+"id": "2F-056",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.36,
+"bands": [
+[
+"BAND0004",
+0.359
+],
+[
+"BAND0011.1",
+0.0001
+]
+],
+"columns": [],
+"uncovered_m2": 0.0009,
+"gaps": []
+},
+{
+"storey": "2F",
+"id": "2F-057",
+"cls": "BEAM_OR_COLUMN",
+"area_m2": 0.6,
+"bands": [
+[
+"BAND0005",
+0.59842
+],
+[
+"BAND0008.1",
+6e-05
+]
+],
+"columns": [],
+"uncovered_m2": 0.00153,
+"gaps": [
+[
+"BAND0005",
+0.00148
+]
+]
+},
+{
+"storey": "2F",
+"id": "2F-058",
+"cls": "NOT_THIS_SLAB",
+"area_m2": 128.38451,
+"bands": [
+[
+"BAND0001.3",
+8e-05
+],
+[
+"BAND0009",
+0.00374
+]
+],
+"columns": [],
+"uncovered_m2": 128.38068,
+"gaps": [
+[
+"BAND0001.3",
+128.38068
+]
+]
+},
+{
+"storey": "2F",
+"id": "2F-059",
+"cls": "NOT_THIS_SLAB",
+"area_m2": 0.76741,
+"bands": [],
+"columns": [],
+"uncovered_m2": 0.76741,
+"gaps": [
+[
+null,
+0.76741
+]
+]
+},
+{
+"storey": "2F",
+"id": "2F-060",
+"cls": "NOT_THIS_SLAB",
+"area_m2": 0.76741,
+"bands": [],
+"columns": [],
+"uncovered_m2": 0.76741,
+"gaps": [
+[
+null,
+0.76741
+]
+]
+},
+{
+"storey": "2F",
+"id": "2F-061",
+"cls": "NOT_THIS_SLAB",
+"area_m2": 0.76739,
+"bands": [],
+"columns": [],
+"uncovered_m2": 0.76739,
+"gaps": [
+[
+null,
+0.76739
+]
+]
+},
+{
+"storey": "2F",
+"id": "2F-062",
+"cls": "NOT_THIS_SLAB",
+"area_m2": 0.76739,
+"bands": [],
+"columns": [],
+"uncovered_m2": 0.76739,
+"gaps": [
+[
+null,
+0.76739
+]
+]
+},
+{
+"storey": "2F",
+"id": "2F-063",
+"cls": "NOT_THIS_SLAB",
+"area_m2": 0.76741,
+"bands": [],
+"columns": [],
+"uncovered_m2": 0.76741,
+"gaps": [
+[
+null,
+0.76741
+]
+]
+},
+{
+"storey": "2F",
+"id": "2F-064",
+"cls": "NOT_THIS_SLAB",
+"area_m2": 0.76741,
+"bands": [],
+"columns": [],
+"uncovered_m2": 0.76741,
+"gaps": [
+[
+null,
+0.76741
+]
+]
+},
+{
+"storey": "2F",
+"id": "2F-065",
+"cls": "NOT_THIS_SLAB",
+"area_m2": 0.76739,
+"bands": [],
+"columns": [],
+"uncovered_m2": 0.76739,
+"gaps": [
+[
+null,
+0.76739
+]
+]
+},
+{
+"storey": "2F",
+"id": "2F-066",
+"cls": "NOT_THIS_SLAB",
+"area_m2": 0.76741,
+"bands": [],
+"columns": [],
+"uncovered_m2": 0.76741,
+"gaps": [
+[
+null,
+0.76741
+]
+]
+},
+{
+"storey": "2F",
+"id": "2F-067",
+"cls": "NOT_THIS_SLAB",
+"area_m2": 0.76741,
+"bands": [],
+"columns": [],
+"uncovered_m2": 0.76741,
+"gaps": [
+[
+null,
+0.76741
+]
+]
+},
+{
+"storey": "2F",
+"id": "2F-068",
+"cls": "NOT_THIS_SLAB",
+"area_m2": 0.76739,
+"bands": [],
+"columns": [],
+"uncovered_m2": 0.76739,
+"gaps": [
+[
+null,
+0.76739
+]
+]
+},
+{
+"storey": "2F",
+"id": "2F-069",
+"cls": "NOT_THIS_SLAB",
+"area_m2": 0.76739,
+"bands": [],
+"columns": [],
+"uncovered_m2": 0.76739,
+"gaps": [
+[
+null,
+0.76739
+]
+]
+},
+{
+"storey": "2F",
+"id": "2F-070",
+"cls": "NOT_THIS_SLAB",
+"area_m2": 0.76741,
+"bands": [],
+"columns": [],
+"uncovered_m2": 0.76741,
+"gaps": [
+[
+null,
+0.76741
+]
+]
+},
+{
+"storey": "2F",
+"id": "2F-071",
+"cls": "NOT_THIS_SLAB",
+"area_m2": 0.76741,
+"bands": [],
+"columns": [],
+"uncovered_m2": 0.76741,
+"gaps": [
+[
+null,
+0.76741
+]
+]
+},
+{
+"storey": "2F",
+"id": "2F-072",
+"cls": "NOT_THIS_SLAB",
+"area_m2": 0.76739,
+"bands": [],
+"columns": [],
+"uncovered_m2": 0.76739,
+"gaps": [
+[
+null,
+0.76739
+]
+]
+},
+{
+"storey": "2F",
+"id": "2F-073",
+"cls": "NOT_THIS_SLAB",
+"area_m2": 0.54646,
+"bands": [],
+"columns": [],
+"uncovered_m2": 0.54646,
+"gaps": [
+[
+null,
+0.54646
+]
+]
+},
+{
+"storey": "2F",
+"id": "2F-074",
+"cls": "NOT_THIS_SLAB",
+"area_m2": 0.76739,
+"bands": [],
+"columns": [],
+"uncovered_m2": 0.76739,
+"gaps": [
+[
+null,
+0.76739
+]
+]
+},
+{
+"storey": "2F",
+"id": "2F-075",
+"cls": "NOT_THIS_SLAB",
+"area_m2": 0.76741,
+"bands": [],
+"columns": [],
+"uncovered_m2": 0.76741,
+"gaps": [
+[
+null,
+0.76741
+]
+]
+},
+{
+"storey": "2F",
+"id": "2F-076",
+"cls": "NOT_THIS_SLAB",
+"area_m2": 0.76741,
+"bands": [],
+"columns": [],
+"uncovered_m2": 0.76741,
+"gaps": [
+[
+null,
+0.76741
+]
+]
+},
+{
+"storey": "2F",
+"id": "2F-077",
+"cls": "NOT_THIS_SLAB",
+"area_m2": 0.76741,
+"bands": [],
+"columns": [],
+"uncovered_m2": 0.76741,
+"gaps": [
+[
+null,
+0.76741
+]
+]
+},
+{
+"storey": "2F",
+"id": "2F-078",
+"cls": "NOT_THIS_SLAB",
+"area_m2": 0.76741,
+"bands": [],
+"columns": [],
+"uncovered_m2": 0.76741,
+"gaps": [
+[
+null,
+0.76741
+]
+]
+},
+{
+"storey": "2F",
+"id": "2F-079",
+"cls": "NOT_THIS_SLAB",
+"area_m2": 0.76739,
+"bands": [],
+"columns": [],
+"uncovered_m2": 0.76739,
+"gaps": [
+[
+null,
+0.76739
+]
+]
+},
+{
+"storey": "2F",
+"id": "2F-080",
+"cls": "NOT_THIS_SLAB",
+"area_m2": 0.76739,
+"bands": [],
+"columns": [],
+"uncovered_m2": 0.76739,
+"gaps": [
+[
+null,
+0.76739
+]
+]
+},
+{
+"storey": "2F",
+"id": "2F-081",
+"cls": "NOT_THIS_SLAB",
+"area_m2": 0.76741,
+"bands": [],
+"columns": [],
+"uncovered_m2": 0.76741,
+"gaps": [
+[
+null,
+0.76741
+]
+]
+},
+{
+"storey": "2F",
+"id": "2F-082",
+"cls": "NOT_THIS_SLAB",
+"area_m2": 0.76741,
+"bands": [],
+"columns": [],
+"uncovered_m2": 0.76741,
+"gaps": [
+[
+null,
+0.76741
+]
+]
+},
+{
+"storey": "2F",
+"id": "2F-083",
+"cls": "NOT_THIS_SLAB",
+"area_m2": 0.76741,
+"bands": [],
+"columns": [],
+"uncovered_m2": 0.76741,
+"gaps": [
+[
+null,
+0.76741
+]
+]
+},
+{
+"storey": "2F",
+"id": "2F-084",
+"cls": "NOT_THIS_SLAB",
+"area_m2": 0.76741,
+"bands": [],
+"columns": [],
+"uncovered_m2": 0.76741,
+"gaps": [
+[
+null,
+0.76741
+]
+]
+},
+{
+"storey": "2F",
+"id": "2F-085",
+"cls": "NOT_THIS_SLAB",
+"area_m2": 0.76739,
+"bands": [],
+"columns": [],
+"uncovered_m2": 0.76739,
+"gaps": [
+[
+null,
+0.76739
+]
+]
+},
+{
+"storey": "2F",
+"id": "2F-086",
+"cls": "NOT_THIS_SLAB",
+"area_m2": 0.76741,
+"bands": [],
+"columns": [],
+"uncovered_m2": 0.76741,
+"gaps": [
+[
+null,
+0.76741
+]
+]
+},
+{
+"storey": "2F",
+"id": "2F-087",
+"cls": "NOT_THIS_SLAB",
+"area_m2": 0.76739,
+"bands": [],
+"columns": [],
+"uncovered_m2": 0.76739,
+"gaps": [
+[
+null,
+0.76739
+]
+]
+},
+{
+"storey": "2F",
+"id": "2F-088",
+"cls": "NOT_THIS_SLAB",
+"area_m2": 0.76739,
+"bands": [],
+"columns": [],
+"uncovered_m2": 0.76739,
+"gaps": [
+[
+null,
+0.76739
+]
+]
+},
+{
+"storey": "2F",
+"id": "2F-089",
+"cls": "NOT_THIS_SLAB",
+"area_m2": 0.76741,
+"bands": [],
+"columns": [],
+"uncovered_m2": 0.76741,
+"gaps": [
+[
+null,
+0.76741
+]
+]
+},
+{
+"storey": "2F",
+"id": "2F-090",
+"cls": "NOT_THIS_SLAB",
+"area_m2": 0.76741,
+"bands": [],
+"columns": [],
+"uncovered_m2": 0.76741,
+"gaps": [
+[
+null,
+0.76741
+]
+]
+},
+{
+"storey": "2F",
+"id": "2F-091",
+"cls": "NOT_THIS_SLAB",
+"area_m2": 0.76739,
+"bands": [],
+"columns": [],
+"uncovered_m2": 0.76739,
+"gaps": [
+[
+null,
+0.76739
+]
+]
+},
+{
+"storey": "2F",
+"id": "2F-092",
+"cls": "NOT_THIS_SLAB",
+"area_m2": 0.76739,
+"bands": [],
+"columns": [],
+"uncovered_m2": 0.76739,
+"gaps": [
+[
+null,
+0.76739
+]
+]
+},
+{
+"storey": "2F",
+"id": "2F-093",
+"cls": "NOT_THIS_SLAB",
+"area_m2": 0.76741,
+"bands": [],
+"columns": [],
+"uncovered_m2": 0.76741,
+"gaps": [
+[
+null,
+0.76741
+]
+]
+},
+{
+"storey": "2F",
+"id": "2F-094",
+"cls": "NOT_THIS_SLAB",
+"area_m2": 0.34098,
+"bands": [],
+"columns": [],
+"uncovered_m2": 0.34098,
+"gaps": [
+[
+null,
+0.34098
+]
+]
+}
+],
+"bands": [
+{
+"storey": "GF",
+"band": "BAND0001",
+"title": "B11 BOUND",
+"area_m2": 0.91037
+},
+{
+"storey": "GF",
+"band": "BAND0002",
+"title": "B1 BOUND",
+"area_m2": 0.29402
+},
+{
+"storey": "GF",
+"band": "BAND0003",
+"title": "B8 BOUND",
+"area_m2": 0.70378
+},
+{
+"storey": "GF",
+"band": "BAND0004",
+"title": "B4 BOUND",
+"area_m2": 0.74975
+},
+{
+"storey": "GF",
+"band": "BAND0005",
+"title": "B1 BOUND",
+"area_m2": 0.3502
+},
+{
+"storey": "GF",
+"band": "BAND0006",
+"title": "UNBOUND",
+"area_m2": 0.33933
+},
+{
+"storey": "GF",
+"band": "BAND0007",
+"title": "B3 BOUND",
+"area_m2": 0.65967
+},
+{
+"storey": "GF",
+"band": "BAND0008",
+"title": "B29 BOUND",
+"area_m2": 1.34779
+},
+{
+"storey": "GF",
+"band": "BAND0009",
+"title": "B1 BOUND",
+"area_m2": 0.50939
+},
+{
+"storey": "GF",
+"band": "BAND0010",
+"title": "B4 BOUND",
+"area_m2": 0.68287
+},
+{
+"storey": "GF",
+"band": "BAND0011",
+"title": "B4 BOUND",
+"area_m2": 0.39558
+},
+{
+"storey": "GF",
+"band": "BAND0012",
+"title": "B4 BOUND",
+"area_m2": 0.89953
+},
+{
+"storey": "GF",
+"band": "BAND0013",
+"title": "B1 BOUND",
+"area_m2": 0.24046
+},
+{
+"storey": "GF",
+"band": "BAND0014",
+"title": "CB7 BOUND",
+"area_m2": 2.35896
+},
+{
+"storey": "GF",
+"band": "BAND0015",
+"title": "B1 BOUND",
+"area_m2": 0.22891
+},
+{
+"storey": "GF",
+"band": "BAND0016.1",
+"title": "B3 BOUND",
+"area_m2": 0.49983
+},
+{
+"storey": "GF",
+"band": "BAND0017",
+"title": "B5 BOUND",
+"area_m2": 0.70861
+},
+{
+"storey": "GF",
+"band": "BAND0018",
+"title": "B4 BOUND",
+"area_m2": 0.57771
+},
+{
+"storey": "GF",
+"band": "BAND0019.1",
+"title": "CB3 BOUND",
+"area_m2": 0.60413
+},
+{
+"storey": "GF",
+"band": "BAND0019.2",
+"title": "MULTIPLE_MARKS",
+"area_m2": 0.52963
+},
+{
+"storey": "GF",
+"band": "BAND0019.3",
+"title": "CB3 BOUND",
+"area_m2": 0.63732
+},
+{
+"storey": "GF",
+"band": "BAND0020.1",
+"title": "B1 BOUND",
+"area_m2": 0.16054
+},
+{
+"storey": "GF",
+"band": "BAND0020.2",
+"title": "B2 BOUND",
+"area_m2": 0.53986
+},
+{
+"storey": "GF",
+"band": "BAND0021.1",
+"title": "CB4 BOUND",
+"area_m2": 0.47483
+},
+{
+"storey": "GF",
+"band": "BAND0021.2",
+"title": "CB4 BOUND",
+"area_m2": 0.63944
+},
+{
+"storey": "GF",
+"band": "BAND0022.1",
+"title": "B14 BOUND",
+"area_m2": 0.35964
+},
+{
+"storey": "GF",
+"band": "BAND0023.1",
+"title": "B1 BOUND",
+"area_m2": 0.14021
+},
+{
+"storey": "GF",
+"band": "BAND0023.2",
+"title": "B3 BOUND",
+"area_m2": 0.58998
+},
+{
+"storey": "GF",
+"band": "BAND0024.1",
+"title": "B2 BOUND",
+"area_m2": 0.53987
+},
+{
+"storey": "GF",
+"band": "BAND0025.1",
+"title": "B7 BOUND",
+"area_m2": 0.24046
+},
+{
+"storey": "GF",
+"band": "BAND0026.1",
+"title": "B1 BOUND",
+"area_m2": 0.35963
+},
+{
+"storey": "GF",
+"band": "BAND0027",
+"title": "B2 BOUND",
+"area_m2": 0.58961
+},
+{
+"storey": "GF",
+"band": "BAND0028",
+"title": "B9 BOUND",
+"area_m2": 1.25922
+},
+{
+"storey": "GF",
+"band": "BAND0029.1",
+"title": "CB6 BOUND",
+"area_m2": 0.80007
+},
+{
+"storey": "GF",
+"band": "BAND0029.2",
+"title": "CB6 BOUND",
+"area_m2": 1.16927
+},
+{
+"storey": "GF",
+"band": "BAND0029.3",
+"title": "B1 BOUND",
+"area_m2": 0.23981
+},
+{
+"storey": "GF",
+"band": "BAND0029.4",
+"title": "B1 BOUND",
+"area_m2": 0.37995
+},
+{
+"storey": "GF",
+"band": "BAND0030.1",
+"title": "B4 BOUND",
+"area_m2": 0.88938
+},
+{
+"storey": "GF",
+"band": "BAND0031.1",
+"title": "UNBOUND",
+"area_m2": 0.60007
+},
+{
+"storey": "GF",
+"band": "BAND0031.2",
+"title": "UNBOUND",
+"area_m2": 0.105
+},
+{
+"storey": "GF",
+"band": "BAND0032",
+"title": "B1 BOUND",
+"area_m2": 0.18963
+},
+{
+"storey": "GF",
+"band": "BAND0033.1",
+"title": "B1 BOUND",
+"area_m2": 0.2601
+},
+{
+"storey": "GF",
+"band": "BAND0033.2",
+"title": "CB5 BOUND",
+"area_m2": 0.45993
+},
+{
+"storey": "GF",
+"band": "BAND0034.1",
+"title": "B13 BOUND",
+"area_m2": 1.25263
+},
+{
+"storey": "GF",
+"band": "BAND0035.1",
+"title": "B28 BOUND",
+"area_m2": 0.20136
+},
+{
+"storey": "GF",
+"band": "BAND0036.1",
+"title": "CB2 BOUND",
+"area_m2": 0.87013
+},
+{
+"storey": "GF",
+"band": "BAND0036.2",
+"title": "CB2 BOUND",
+"area_m2": 0.84005
+},
+{
+"storey": "GF",
+"band": "BAND0037.1",
+"title": "B16 BOUND",
+"area_m2": 1.14889
+},
+{
+"storey": "GF",
+"band": "BAND0038.1",
+"title": "CA BOUND",
+"area_m2": 0.34344
+},
+{
+"storey": "GF",
+"band": "BAND0039",
+"title": "CB8 BOUND",
+"area_m2": 1.02954
+},
+{
+"storey": "GF",
+"band": "BAND0040.1",
+"title": "CB8 BOUND",
+"area_m2": 1.71222
+},
+{
+"storey": "GF",
+"band": "BAND0040.2",
+"title": "CB8 BOUND",
+"area_m2": 1.89336
+},
+{
+"storey": "GF",
+"band": "BAND0041.1",
+"title": "CB1 BOUND",
+"area_m2": 2.60757
+},
+{
+"storey": "GF",
+"band": "BAND0041.2",
+"title": "CB1 BOUND",
+"area_m2": 1.79713
+},
+{
+"storey": "GF",
+"band": "BAND0042",
+"title": "B21 BOUND",
+"area_m2": 3.00267
+},
+{
+"storey": "GF",
+"band": "BAND0043.1",
+"title": "B20 BOUND",
+"area_m2": 1.20031
+},
+{
+"storey": "GF",
+"band": "BAND0043.2",
+"title": "B20 BOUND",
+"area_m2": 1.31932
+},
+{
+"storey": "GF",
+"band": "BAND0044.1",
+"title": "B17 BOUND",
+"area_m2": 2.29814
+},
+{
+"storey": "GF",
+"band": "BAND0045",
+"title": "B22 BOUND",
+"area_m2": 3.88702
+},
+{
+"storey": "GF",
+"band": "BAND0046.1",
+"title": "B24 BOUND",
+"area_m2": 1.7807
+},
+{
+"storey": "GF",
+"band": "BAND0046.2",
+"title": "B24 BOUND",
+"area_m2": 0.75273
+},
+{
+"storey": "GF",
+"band": "BAND0047.1",
+"title": "B26 BOUND",
+"area_m2": 0.80506
+},
+{
+"storey": "GF",
+"band": "BAND0047.2",
+"title": "B26 BOUND",
+"area_m2": 3.65704
+},
+{
+"storey": "GF",
+"band": "BAND0048.1",
+"title": "B27 BOUND",
+"area_m2": 2.94024
+},
+{
+"storey": "GF",
+"band": "BAND0048.2",
+"title": "B27 BOUND",
+"area_m2": 0.99376
+},
+{
+"storey": "GF",
+"band": "BAND0049",
+"title": "B7 BOUND",
+"area_m2": 0.37738
+},
+{
+"storey": "GF",
+"band": "BAND0050",
+"title": "B7 BOUND",
+"area_m2": 0.12362
+},
+{
+"storey": "GF",
+"band": "BAND0051",
+"title": "B7 BOUND",
+"area_m2": 0.09494
+},
+{
+"storey": "GF",
+"band": "BAND0052",
+"title": "B7 BOUND",
+"area_m2": 0.06965
+},
+{
+"storey": "GF",
+"band": "BAND0053",
+"title": "UNBOUND",
+"area_m2": 0.08759
+},
+{
+"storey": "1F",
+"band": "BAND0001.1",
+"title": "B3 BOUND",
+"area_m2": 0.50397
+},
+{
+"storey": "1F",
+"band": "BAND0001.2",
+"title": "CB9 BOUND",
+"area_m2": 0.70025
+},
+{
+"storey": "1F",
+"band": "BAND0001.3",
+"title": "CB9 BOUND",
+"area_m2": 0.67617
+},
+{
+"storey": "1F",
+"band": "BAND0001.4",
+"title": "CB9 BOUND",
+"area_m2": 0.71645
+},
+{
+"storey": "1F",
+"band": "BAND0002.1",
+"title": "B4 BOUND",
+"area_m2": 0.7605
+},
+{
+"storey": "1F",
+"band": "BAND0003",
+"title": "B4 BOUND",
+"area_m2": 0.86764
+},
+{
+"storey": "1F",
+"band": "BAND0004",
+"title": "B11 BOUND",
+"area_m2": 0.95817
+},
+{
+"storey": "1F",
+"band": "BAND0005.1",
+"title": "B2 BOUND",
+"area_m2": 0.16156
+},
+{
+"storey": "1F",
+"band": "BAND0005.2",
+"title": "B2 BOUND",
+"area_m2": 0.54477
+},
+{
+"storey": "1F",
+"band": "BAND0006.1",
+"title": "B7 BOUND",
+"area_m2": 0.35965
+},
+{
+"storey": "1F",
+"band": "BAND0007.1",
+"title": "B1 BOUND",
+"area_m2": 0.13966
+},
+{
+"storey": "1F",
+"band": "BAND0007.2",
+"title": "B2 BOUND",
+"area_m2": 0.59867
+},
+{
+"storey": "1F",
+"band": "BAND0008",
+"title": "B1 BOUND",
+"area_m2": 0.32046
+},
+{
+"storey": "1F",
+"band": "BAND0009",
+"title": "B6 BOUND",
+"area_m2": 0.88127
+},
+{
+"storey": "1F",
+"band": "BAND0010.1",
+"title": "B2 BOUND",
+"area_m2": 0.53896
+},
+{
+"storey": "1F",
+"band": "BAND0011.1",
+"title": "B7 BOUND",
+"area_m2": 0.23948
+},
+{
+"storey": "1F",
+"band": "BAND0012.1",
+"title": "B1 BOUND",
+"area_m2": 0.35966
+},
+{
+"storey": "1F",
+"band": "BAND0013.1",
+"title": "UNBOUND",
+"area_m2": 0.59854
+},
+{
+"storey": "1F",
+"band": "BAND0013.2",
+"title": "UNBOUND",
+"area_m2": 0.10455
+},
+{
+"storey": "1F",
+"band": "BAND0014",
+"title": "UNBOUND",
+"area_m2": 1.51344
+},
+{
+"storey": "1F",
+"band": "BAND0015",
+"title": "B4 BOUND",
+"area_m2": 0.82735
+},
+{
+"storey": "1F",
+"band": "BAND0016",
+"title": "B5 BOUND",
+"area_m2": 0.6938
+},
+{
+"storey": "1F",
+"band": "BAND0017",
+"title": "B5 BOUND",
+"area_m2": 0.96831
+},
+{
+"storey": "1F",
+"band": "BAND0018.1",
+"title": "CB12 BOUND",
+"area_m2": 1.41292
+},
+{
+"storey": "1F",
+"band": "BAND0018.2",
+"title": "CB12 BOUND",
+"area_m2": 1.26225
+},
+{
+"storey": "1F",
+"band": "BAND0019",
+"title": "B6 BOUND",
+"area_m2": 1.02948
+},
+{
+"storey": "1F",
+"band": "BAND0020",
+"title": "B6 BOUND",
+"area_m2": 1.11078
+},
+{
+"storey": "1F",
+"band": "BAND0021",
+"title": "B6 BOUND",
+"area_m2": 1.088
+},
+{
+"storey": "1F",
+"band": "BAND0022",
+"title": "B6 BOUND",
+"area_m2": 1.02088
+},
+{
+"storey": "1F",
+"band": "BAND0023",
+"title": "UNBOUND",
+"area_m2": 0.27027
+},
+{
+"storey": "1F",
+"band": "BAND0024.1",
+"title": "CB13 BOUND",
+"area_m2": 0.90189
+},
+{
+"storey": "1F",
+"band": "BAND0024.2",
+"title": "CB13 BOUND",
+"area_m2": 0.94703
+},
+{
+"storey": "1F",
+"band": "BAND0025",
+"title": "UNBOUND",
+"area_m2": 1.34524
+},
+{
+"storey": "1F",
+"band": "BAND0026.1",
+"title": "UNBOUND",
+"area_m2": 0.68662
+},
+{
+"storey": "1F",
+"band": "BAND0026.2",
+"title": "UNBOUND",
+"area_m2": 1.08931
+},
+{
+"storey": "1F",
+"band": "BAND0027.1",
+"title": "CB11 BOUND",
+"area_m2": 2.01572
+},
+{
+"storey": "1F",
+"band": "BAND0027.2",
+"title": "CB11 BOUND",
+"area_m2": 0.79663
+},
+{
+"storey": "1F",
+"band": "BAND0027.3",
+"title": "CB11 BOUND",
+"area_m2": 0.99141
+},
+{
+"storey": "1F",
+"band": "BAND0028",
+"title": "B18 BOUND",
+"area_m2": 2.20399
+},
+{
+"storey": "1F",
+"band": "BAND0030.1",
+"title": "B19 BOUND",
+"area_m2": 2.13512
+},
+{
+"storey": "1F",
+"band": "BAND0031.1",
+"title": "B23 BOUND",
+"area_m2": 1.34522
+},
+{
+"storey": "1F",
+"band": "BAND0031.2",
+"title": "B23 BOUND",
+"area_m2": 1.48002
+},
+{
+"storey": "1F",
+"band": "BAND0032",
+"title": "B25 BOUND",
+"area_m2": 3.79299
+},
+{
+"storey": "1F",
+"band": "BAND0033",
+"title": "B4 BOUND",
+"area_m2": 0.25852
+},
+{
+"storey": "1F",
+"band": "BAND0034",
+"title": "B4 BOUND",
+"area_m2": 0.30293
+},
+{
+"storey": "1F",
+"band": "BAND0035",
+"title": "UNBOUND",
+"area_m2": 0.30316
+},
+{
+"storey": "1F",
+"band": "BAND0036",
+"title": "UNBOUND",
+"area_m2": 0.25814
+},
+{
+"storey": "2F",
+"band": "BAND0001.1",
+"title": "B3 BOUND",
+"area_m2": 0.50088
+},
+{
+"storey": "2F",
+"band": "BAND0001.2",
+"title": "B8 BOUND",
+"area_m2": 0.6955
+},
+{
+"storey": "2F",
+"band": "BAND0001.3",
+"title": "B8 BOUND",
+"area_m2": 0.22646
+},
+{
+"storey": "2F",
+"band": "BAND0002.1",
+"title": "B3 BOUND",
+"area_m2": 0.48877
+},
+{
+"storey": "2F",
+"band": "BAND0003",
+"title": "B2 BOUND",
+"area_m2": 0.49863
+},
+{
+"storey": "2F",
+"band": "BAND0004",
+"title": "B1 BOUND",
+"area_m2": 0.35914
+},
+{
+"storey": "2F",
+"band": "BAND0005",
+"title": "B2 BOUND",
+"area_m2": 0.59851
+},
+{
+"storey": "2F",
+"band": "BAND0006.1",
+"title": "B15 BOUND",
+"area_m2": 0.62118
+},
+{
+"storey": "2F",
+"band": "BAND0006.2",
+"title": "B15 BOUND",
+"area_m2": 0.54102
+},
+{
+"storey": "2F",
+"band": "BAND0007.1",
+"title": "B2 BOUND",
+"area_m2": 0.36076
+},
+{
+"storey": "2F",
+"band": "BAND0007.2",
+"title": "B2 BOUND",
+"area_m2": 0.6012
+},
+{
+"storey": "2F",
+"band": "BAND0008.1",
+"title": "B1 BOUND",
+"area_m2": 0.27923
+},
+{
+"storey": "2F",
+"band": "BAND0008.2",
+"title": "B1 BOUND",
+"area_m2": 0.19961
+},
+{
+"storey": "2F",
+"band": "BAND0008.3",
+"title": "B3 BOUND",
+"area_m2": 0.59848
+},
+{
+"storey": "2F",
+"band": "BAND0009",
+"title": "B7 BOUND",
+"area_m2": 1.3225
+},
+{
+"storey": "2F",
+"band": "BAND0010.1",
+"title": "B3 BOUND",
+"area_m2": 0.54102
+},
+{
+"storey": "2F",
+"band": "BAND0011.1",
+"title": "B1 BOUND",
+"area_m2": 0.28042
+},
+{
+"storey": "2F",
+"band": "BAND0011.2",
+"title": "B1 BOUND",
+"area_m2": 0.24044
+},
+{
+"storey": "2F",
+"band": "BAND0012.1",
+"title": "B1 BOUND",
+"area_m2": 0.35923
+}
+],
+"columns": [
+{
+"storey": "GF",
+"h": "31B",
+"hatch": "PATTERN",
+"area_m2": 0.18
+},
+{
+"storey": "GF",
+"h": "322",
+"hatch": "PATTERN",
+"area_m2": 0.2
+},
+{
+"storey": "GF",
+"h": "329",
+"hatch": "PATTERN",
+"area_m2": 0.14
+},
+{
+"storey": "GF",
+"h": "32C",
+"hatch": "SOLID",
+"area_m2": 0.1
+},
+{
+"storey": "GF",
+"h": "32F",
+"hatch": "SOLID",
+"area_m2": 0.1
+},
+{
+"storey": "GF",
+"h": "332",
+"hatch": "SOLID",
+"area_m2": 0.15
+},
+{
+"storey": "GF",
+"h": "335",
+"hatch": "SOLID",
+"area_m2": 0.125
+},
+{
+"storey": "GF",
+"h": "338",
+"hatch": "SOLID",
+"area_m2": 0.25
+},
+{
+"storey": "GF",
+"h": "33B",
+"hatch": "SOLID",
+"area_m2": 0.1
+},
+{
+"storey": "GF",
+"h": "33E",
+"hatch": "SOLID",
+"area_m2": 0.1
+},
+{
+"storey": "GF",
+"h": "341",
+"hatch": "SOLID",
+"area_m2": 0.1
+},
+{
+"storey": "GF",
+"h": "344",
+"hatch": "SOLID",
+"area_m2": 0.1
+},
+{
+"storey": "GF",
+"h": "347",
+"hatch": "SOLID",
+"area_m2": 0.08
+},
+{
+"storey": "GF",
+"h": "34A",
+"hatch": "SOLID",
+"area_m2": 0.08
+},
+{
+"storey": "GF",
+"h": "34D",
+"hatch": "SOLID",
+"area_m2": 0.08
+},
+{
+"storey": "GF",
+"h": "350",
+"hatch": "SOLID",
+"area_m2": 0.08
+},
+{
+"storey": "GF",
+"h": "353",
+"hatch": "SOLID",
+"area_m2": 0.125
+},
+{
+"storey": "GF",
+"h": "356",
+"hatch": "SOLID",
+"area_m2": 0.08
+},
+{
+"storey": "GF",
+"h": "359",
+"hatch": "SOLID",
+"area_m2": 0.08
+},
+{
+"storey": "GF",
+"h": "35C",
+"hatch": "SOLID",
+"area_m2": 0.275
+},
+{
+"storey": "GF",
+"h": "35F",
+"hatch": "SOLID",
+"area_m2": 0.15
+},
+{
+"storey": "GF",
+"h": "362",
+"hatch": "SOLID",
+"area_m2": 0.175
+},
+{
+"storey": "GF",
+"h": "365",
+"hatch": "SOLID",
+"area_m2": 0.125
+},
+{
+"storey": "GF",
+"h": "368",
+"hatch": "SOLID",
+"area_m2": 0.2
+},
+{
+"storey": "GF",
+"h": "36B",
+"hatch": "SOLID",
+"area_m2": 0.125
+},
+{
+"storey": "GF",
+"h": "36E",
+"hatch": "SOLID",
+"area_m2": 0.225
+},
+{
+"storey": "GF",
+"h": "371",
+"hatch": "SOLID",
+"area_m2": 0.175
+},
+{
+"storey": "GF",
+"h": "374",
+"hatch": "SOLID",
+"area_m2": 0.15
+},
+{
+"storey": "GF",
+"h": "377",
+"hatch": "SOLID",
+"area_m2": 0.125
+},
+{
+"storey": "GF",
+"h": "37A",
+"hatch": "SOLID",
+"area_m2": 0.25
+},
+{
+"storey": "GF",
+"h": "37D",
+"hatch": "SOLID",
+"area_m2": 0.275
+},
+{
+"storey": "GF",
+"h": "380",
+"hatch": "SOLID",
+"area_m2": 0.2
+},
+{
+"storey": "GF",
+"h": "383",
+"hatch": "SOLID",
+"area_m2": 0.125
+},
+{
+"storey": "GF",
+"h": "386",
+"hatch": "PATTERN",
+"area_m2": 0.1
+},
+{
+"storey": "1F",
+"h": "664",
+"hatch": "SOLID",
+"area_m2": 0.18
+},
+{
+"storey": "1F",
+"h": "667",
+"hatch": "SOLID",
+"area_m2": 0.2
+},
+{
+"storey": "1F",
+"h": "66A",
+"hatch": "SOLID",
+"area_m2": 0.14
+},
+{
+"storey": "1F",
+"h": "66D",
+"hatch": "SOLID",
+"area_m2": 0.1
+},
+{
+"storey": "1F",
+"h": "670",
+"hatch": "SOLID",
+"area_m2": 0.1
+},
+{
+"storey": "1F",
+"h": "673",
+"hatch": "SOLID",
+"area_m2": 0.15
+},
+{
+"storey": "1F",
+"h": "676",
+"hatch": "SOLID",
+"area_m2": 0.125
+},
+{
+"storey": "1F",
+"h": "679",
+"hatch": "SOLID",
+"area_m2": 0.25
+},
+{
+"storey": "1F",
+"h": "67C",
+"hatch": "SOLID",
+"area_m2": 0.1
+},
+{
+"storey": "1F",
+"h": "67F",
+"hatch": "SOLID",
+"area_m2": 0.1
+},
+{
+"storey": "1F",
+"h": "682",
+"hatch": "SOLID",
+"area_m2": 0.1
+},
+{
+"storey": "1F",
+"h": "685",
+"hatch": "SOLID",
+"area_m2": 0.12
+},
+{
+"storey": "1F",
+"h": "688",
+"hatch": "SOLID",
+"area_m2": 0.175
+},
+{
+"storey": "1F",
+"h": "68B",
+"hatch": "SOLID",
+"area_m2": 0.1
+},
+{
+"storey": "1F",
+"h": "68E",
+"hatch": "SOLID",
+"area_m2": 0.2
+},
+{
+"storey": "1F",
+"h": "691",
+"hatch": "SOLID",
+"area_m2": 0.125
+},
+{
+"storey": "1F",
+"h": "694",
+"hatch": "SOLID",
+"area_m2": 0.15
+},
+{
+"storey": "1F",
+"h": "697",
+"hatch": "SOLID",
+"area_m2": 0.125
+},
+{
+"storey": "1F",
+"h": "69A",
+"hatch": "SOLID",
+"area_m2": 0.2
+},
+{
+"storey": "1F",
+"h": "69D",
+"hatch": "SOLID",
+"area_m2": 0.1
+},
+{
+"storey": "1F",
+"h": "77B",
+"hatch": "PATTERN",
+"area_m2": 0.08
+},
+{
+"storey": "2F",
+"h": "40F",
+"hatch": "SOLID",
+"area_m2": 0.1
+},
+{
+"storey": "2F",
+"h": "412",
+"hatch": "SOLID",
+"area_m2": 0.1
+},
+{
+"storey": "2F",
+"h": "415",
+"hatch": "SOLID",
+"area_m2": 0.12
+},
+{
+"storey": "2F",
+"h": "418",
+"hatch": "SOLID",
+"area_m2": 0.14
+},
+{
+"storey": "2F",
+"h": "41B",
+"hatch": "SOLID",
+"area_m2": 0.1
+},
+{
+"storey": "2F",
+"h": "41E",
+"hatch": "SOLID",
+"area_m2": 0.1
+},
+{
+"storey": "2F",
+"h": "421",
+"hatch": "SOLID",
+"area_m2": 0.1
+},
+{
+"storey": "2F",
+"h": "424",
+"hatch": "SOLID",
+"area_m2": 0.125
+},
+{
+"storey": "2F",
+"h": "778",
+"hatch": "SOLID",
+"area_m2": 0.08
+}
+]
+}

@@ -1,0 +1,499 @@
+{
+ "schema": "T241_BEAM_LINE_V1",
+ "module": "BEAM_LINE_V1",
+ "convention": "C1_PANEL_BETWEEN_BEAM_FACES",
+ "source_dxf_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+ "runs": 140,
+ "by_storey": {
+  "GF": {
+   "n": 72,
+   "measured_m3": 39.026985,
+   "conflict_low": 3.958479,
+   "conflict_high": 4.66528,
+   "conflict_n": 4,
+   "held_n": 7,
+   "held_low": 0.944,
+   "held_high": 2.031,
+   "held_no_value": [
+    "BM-GF-061"
+   ]
+  },
+  "1F": {
+   "n": 48,
+   "measured_m3": 22.690573,
+   "conflict_low": 1.18635,
+   "conflict_high": 1.44573,
+   "conflict_n": 3,
+   "held_n": 9,
+   "held_low": 2.6567,
+   "held_high": 4.9552,
+   "held_no_value": [
+    "BM-1F-037",
+    "BM-1F-038"
+   ]
+  },
+  "2F": {
+   "n": 20,
+   "measured_m3": 4.2985,
+   "conflict_low": 0.0,
+   "conflict_high": 0.0,
+   "conflict_n": 0,
+   "held_n": 5,
+   "held_low": 0.562,
+   "held_high": 1.687,
+   "held_no_value": [
+    "BM-2F-019#2F-031"
+   ]
+  }
+ },
+ "measured_m3": 66.016058,
+ "conflict": [
+  5.144829,
+  6.11101
+ ],
+ "held": [
+  4.1627,
+  8.6732
+ ],
+ "held_no_value": [
+  "BM-GF-061",
+  "BM-1F-037",
+  "BM-1F-038",
+  "BM-2F-019#2F-031"
+ ],
+ "t229_leftovers": {
+  "short": [],
+  "double": []
+ },
+ "partition": {
+  "GF": {
+   "faces": 149,
+   "pattern_outline_unbanded_m2": 0.3497,
+   "t229_short_plan_m2": 1.9046,
+   "face_m2": 71.1637,
+   "band_m2": 61.8477,
+   "column_m2": 4.5275,
+   "uncovered_m2": 5.3174,
+   "named_uncovered": {
+    "GF-035": [
+     "GF void ring B7 arc piece: route G arc band short of the drawn ring face (not cut-checked)",
+     0.0584
+    ],
+    "GF-060": [
+     "GF void ring B7 arc piece: route G arc band short of the drawn ring face (not cut-checked)",
+     0.0588
+    ],
+    "GF-062": [
+     "BM-GF-061 outer west strip (D-26 HELD)",
+     0.1278
+    ],
+    "GF-096": [
+     "BM-GF-061 outer west strip (D-26 HELD)",
+     0.4899
+    ],
+    "GF-097": [
+     "BM-GF-035.2 CB5 span 2 (new run)",
+     0.74
+    ],
+    "GF-106": [
+     "BM-GF-061 outer west strip (D-26 HELD)",
+     0.1236
+    ],
+    "GF-112": [
+     "BM-GF-062 (new HELD run)",
+     0.1
+    ],
+    "GF-159": [
+     "BM-GF-057 'B3 (With Stair)' (D-03 HELD)",
+     1.3756
+    ],
+    "GF-161": [
+     "BM-GF-057 'B3 (With Stair)' strip (D-03 HELD)",
+     0.0512
+    ]
+   },
+   "held_edge_uncovered_m2": 0.3661,
+   "beam_end_and_beside_uncovered_m2": 1.8159,
+   "beam_end_faces": 45,
+   "end_residual_m2": 0.261,
+   "double_solid_column": [
+    [
+     "GF-090",
+     "34A",
+     "SOLID",
+     0.01006,
+     [
+      "BAND0028"
+     ]
+    ],
+    [
+     "GF-091",
+     "34A",
+     "SOLID",
+     0.03005,
+     [
+      "BAND0028"
+     ]
+    ],
+    [
+     "GF-093",
+     "356",
+     "SOLID",
+     0.03989,
+     [
+      "BAND0027"
+     ]
+    ],
+    [
+     "GF-094",
+     "356",
+     "SOLID",
+     0.04,
+     [
+      "BAND0027"
+     ]
+    ],
+    [
+     "GF-178",
+     "347",
+     "SOLID",
+     0.04,
+     [
+      "BAND0041.1"
+     ]
+    ],
+    [
+     "GF-179",
+     "34D",
+     "SOLID",
+     0.00992,
+     [
+      "BAND0014"
+     ]
+    ],
+    [
+     "GF-180",
+     "34D",
+     "SOLID",
+     0.03021,
+     [
+      "BAND0014"
+     ]
+    ],
+    [
+     "GF-182",
+     "350",
+     "SOLID",
+     0.03968,
+     [
+      "BAND0014"
+     ]
+    ],
+    [
+     "GF-183",
+     "350",
+     "SOLID",
+     0.04,
+     [
+      "BAND0014"
+     ]
+    ],
+    [
+     "GF-185",
+     "359",
+     "SOLID",
+     0.03995,
+     [
+      "BAND0039"
+     ]
+    ],
+    [
+     "GF-186",
+     "359",
+     "SOLID",
+     0.04,
+     [
+      "BAND0039"
+     ]
+    ],
+    [
+     "GF-192",
+     "347",
+     "SOLID",
+     0.04,
+     [
+      "BAND0041.1"
+     ]
+    ]
+   ],
+   "carried_member_under_beam": [
+    [
+     "GF-055",
+     "322",
+     "PATTERN",
+     0.06094,
+     [
+      "BAND0037.1"
+     ]
+    ],
+    [
+     "GF-074",
+     "322",
+     "PATTERN",
+     0.05761,
+     [
+      "BAND0042"
+     ]
+    ]
+   ],
+   "slab_x_band_m2": 0.0915,
+   "slab_faces_touching_bands": 32
+  },
+  "1F": {
+   "faces": 87,
+   "pattern_outline_unbanded_m2": 0.0,
+   "t229_short_plan_m2": 0.3606,
+   "face_m2": 43.6361,
+   "band_m2": 39.5174,
+   "column_m2": 2.8465,
+   "uncovered_m2": 1.363,
+   "named_uncovered": {
+    "1F-028": [
+     "BM-1F-036 strip outside CB12 (D-05 HELD)",
+     0.2028
+    ],
+    "1F-069": [
+     "BM-1F-037 SE box (D-26 HELD)",
+     0.3852
+    ],
+    "1F-072": [
+     "CB10 beside its support (T-229, HELD D-02 width CONFLICT)",
+     0.0941
+    ]
+   },
+   "held_edge_uncovered_m2": 0.2457,
+   "beam_end_and_beside_uncovered_m2": 0.4335,
+   "beam_end_faces": 20,
+   "end_residual_m2": 0.073,
+   "double_solid_column": [
+    [
+     "1F-040",
+     "667",
+     "SOLID",
+     0.00547,
+     [
+      "BAND0030.1"
+     ]
+    ],
+    [
+     "1F-056",
+     "667",
+     "SOLID",
+     0.00353,
+     [
+      "BAND0030.1"
+     ]
+    ]
+   ],
+   "carried_member_under_beam": [
+    [
+     "1F-053",
+     "77B",
+     "PATTERN",
+     0.03813,
+     [
+      "BAND0030.1"
+     ]
+    ],
+    [
+     "1F-054",
+     "77B",
+     "PATTERN",
+     0.04,
+     [
+      "BAND0030.1"
+     ]
+    ]
+   ],
+   "slab_x_band_m2": 0.079,
+   "slab_faces_touching_bands": 18
+  },
+  "2F": {
+   "faces": 41,
+   "pattern_outline_unbanded_m2": 0,
+   "t229_short_plan_m2": 0.0,
+   "face_m2": 10.4325,
+   "band_m2": 9.2976,
+   "column_m2": 0.9308,
+   "uncovered_m2": 0.2844,
+   "named_uncovered": {
+    "2F-031": [
+     "BM-2F-019 (new HELD run)",
+     0.2718
+    ]
+   },
+   "held_edge_uncovered_m2": 0,
+   "beam_end_and_beside_uncovered_m2": 0.0057,
+   "beam_end_faces": 4,
+   "end_residual_m2": 0.0057,
+   "double_solid_column": [
+    [
+     "2F-041",
+     "778",
+     "SOLID",
+     0.03991,
+     [
+      "BAND0009"
+     ]
+    ],
+    [
+     "2F-042",
+     "778",
+     "SOLID",
+     0.04,
+     [
+      "BAND0009"
+     ]
+    ]
+   ],
+   "carried_member_under_beam": [],
+   "slab_x_band_m2": 0.0105,
+   "slab_faces_touching_bands": 7
+  }
+ },
+ "released": {
+  "per_floor": {
+   "GF": {
+    "measured": 39.138,
+    "n": 61,
+    "bounded": [
+     3.7554,
+     5.2934
+    ],
+    "nb": 9
+   },
+   "1F": {
+    "measured": 21.3831,
+    "n": 36,
+    "bounded": [
+     4.1313,
+     7.453
+    ],
+    "nb": 11
+   },
+   "2F": {
+    "measured": 4.2985,
+    "n": 15,
+    "bounded": [
+     0.5624,
+     1.6872
+    ],
+    "nb": 4
+   }
+  },
+  "measured": 64.8196,
+  "reconcile": {
+   "GF": {
+    "diff": -0.111015,
+    "explained": -0.111043,
+    "residual": 2.8e-05,
+    "closed": true,
+    "components": [
+     [
+      "B26 / B27 continuous under the carried P.C (route G held pieces + cut at carried; T-229)",
+      2.669992
+     ],
+     [
+      "CB5 span 2 in no beam line (T-145; released bills its band 0.1184 as slab)",
+      0.296
+     ],
+     [
+      "T-110 re-derivation of a released route G piece",
+      -6.8e-05
+     ],
+     [
+      "T-229 strips no line bills (oblique / carried ends, beside narrower supports) net of the column joints billed twice",
+      0.118585
+     ],
+     [
+      "released at the schedule width, now CONFLICT (D-02 / D-27; range kept apart)",
+      -4.470552
+     ],
+     [
+      "route G HELD / no-band pieces measured from printed sections and schedule (B20 / B23 west spans, B7 strip, B20 / B23 upstands; T-110)",
+      1.275
+     ]
+    ]
+   },
+   "1F": {
+    "diff": 1.307473,
+    "explained": 1.307506,
+    "residual": -3.3e-05,
+    "closed": true,
+    "components": [
+     [
+      "1F west dome ring B4 0.7553 replaces the route G arc bands (T-110 / T-160)",
+      0.474203
+     ],
+     [
+      "T-110 re-derivation of a released route G piece",
+      0.000148
+     ],
+     [
+      "T-229 strips no line bills (oblique / carried ends, beside narrower supports) net of the column joints billed twice",
+      0.252573
+     ],
+     [
+      "released at the schedule width, now CONFLICT (D-02 / D-27; range kept apart)",
+      -0.551918
+     ],
+     [
+      "route G HELD / no-band pieces measured from printed sections and schedule (B20 / B23 west spans, B7 strip, B20 / B23 upstands; T-110)",
+      1.1325
+     ]
+    ]
+   },
+   "2F": {
+    "diff": 0.0,
+    "explained": 0,
+    "residual": 0.0,
+    "closed": true,
+    "components": []
+   }
+  }
+ },
+ "candidate": {
+  "measured": 65.2937,
+  "held": [
+   8.224,
+   13.759
+  ],
+  "blocked": 1,
+  "change": "1F west dome ring B4 in-bay 0.7552 (VERIFIED T-160 / T-179) replaces route G arc bands 0.2811"
+ },
+ "freelancer": {
+  "per_floor": {
+   "GF": 42.882875,
+   "1F": 17.027,
+   "2F": 6.056000000000001
+  },
+  "total": 65.965875,
+  "f1_page_cell": 17.155,
+  "slip": "I82 = SUM(I60:I78) leaves out row 59 (1F B1 0.20 x 0.40 x 1.60 = 0.128) that his own page sum I79 = SUM(I59:I78) = 17.155 carries; his total I100 uses I82",
+  "rows": 67,
+  "by_class": {
+   "BOTH": {
+    "marks": 47,
+    "mine_low": 61.2784,
+    "mine_high": 62.2446,
+    "his_m3": 66.0938
+   },
+   "DRAWN_NOT_IN_HIS_SHEET_UNDER_THIS_MARK": {
+    "marks": 6,
+    "mine_low": 9.8825,
+    "mine_high": 9.8825,
+    "his_m3": 0.0
+   }
+  }
+ }
+}
