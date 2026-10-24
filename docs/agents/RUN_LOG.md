@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-24T12:39Z | Worker 2 | IDLE | none (run lock held by run 20261024T114005-448-25484 since 2026-10-24T11:40Z) | overlap lock: another Worker 2 run is active; no claim, no change, no quantity | lock
 - 2026-10-24T12:20Z | Worker 1 | IDLE | none (run lock held by run 20261024T112015-460-686 since 2026-10-24T11:20Z) | overlap lock: another Worker 1 run is active; no claim, no change, no quantity | lock
 - 2026-10-24 12:17 UTC | Lead | SUCCESS | board | Since 10:15: 5 merges, 0 rejections (T-219 WORKED: footing WP membrane 109.85 m2 + screed 5.4925 m3 Checker own, line PARTIALLY VERIFIED; T-250 WORKED; T-260 WORKED: doors ALU 12.760 m2 / 6 pcs vs freelancer +6.33 % explained; T-228 r2 WORKED: blockwork established net 494.189 -> 449.260 m2; T-235 r2 WORKED tooling); T-180 CONC.GROUND exterior 16/17 (+0.06 %) -> T-254 acceptance; READY 0; T-268 PROMOTED first in lane I (Doors ALU can close whole), T-261 PROMOTED, new T-270 (foundation WP into candidate, HELD BLANK per owner 10:56); worker 1 WIP limit (T-258/T-264/T-265 to hand in first); register +6, lessons +3 (1 closed); Drive read OK, no new files or photos; no owner decision (Q-76 open), no notification; ERS: read, s.5 Lead + s.7 applied; queue check: 49 actionable rows, 0 flagged, 0 stall checks | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-10-24 12:10 UTC | Lead | STARTED | run unknown | repo-attached routine | task state: board | report pending
