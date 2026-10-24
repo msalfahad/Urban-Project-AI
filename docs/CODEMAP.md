@@ -18,7 +18,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 3087 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 3089 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 14 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
@@ -642,7 +642,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `stair_flight_once_v1.py` | 313 | MEDIUM | 1 | STAIR FLIGHT ONCE V1 - each stair flight is measured on ONE storey: a flight drawn again on the plan above is listed, |
 | `stair_floor_residue.py` | 371 | MEDIUM | 3 | STAIR FLOOR RESIDUE V1 - the floor finish of a room face that holds stair flights, a stair well or a stair opening. |
 | `stair_generic.py` | 65 | MEDIUM | 1 | STAIR (M2, generic, light) - one straight flight from a floor-to-floor rise and a COUNTED riser number: geometry, |
-| `stair_geometry.py` | 336 | CRITICAL | 7 | STAIR GEOMETRY - stair flights, landings and winders from drawn treads and stated levels (generic). |
+| `stair_geometry.py` | 336 | CRITICAL | 8 | STAIR GEOMETRY - stair flights, landings and winders from drawn treads and stated levels (generic). |
 | `stair_measure.py` | 119 | CRITICAL | 3 | STAIR MEASURE (M4) - structural stair quantities from the drawn treads of a stair zone (generic; stdlib + |
 | `stair_riser_schedule.py` | 155 | CRITICAL | 2 | STAIR RISER SCHEDULE - riser counts from drawn lines, uniform finished risers, finished and structural levels, |
 | `stair_rule_calculator.py` | 290 | MEDIUM | 1 | STAIR RULE CALCULATOR - the owner stair rule UP-STAIR-015 (URBAN_RULES 1.6.0, owner 2026-10-21): riser / tread |
@@ -1397,7 +1397,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t248/` | 11 |
 | `research/agents_t249/` | 7 |
 | `research/agents_t252/` | 8 |
-| `research/agents_t258/` | 6 |
+| `research/agents_t258/` | 8 |
 | `research/alsenan_arch_truth_05/` | 28 |
 | `research/alsenan_column_rebar_s3/` | 17 |
 | `research/alsenan_column_rebar_s3_1/` | 15 |
