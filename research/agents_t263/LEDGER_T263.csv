@@ -1,0 +1,248 @@
+element,member,face,unit,qty,status,basis,readings,held_why
+107+7CE#1,GROUND_BEAM,side A (OUTSIDE),m2,,EXCLUDED,soffit +0.00 at or above the natural ground +0.00: no earth against this face (a plinth / finish face),"{""face_m2"": 0.345705}",
+107+7CE#1,GROUND_BEAM,side B (PANEL: FILL),m2,0.309315,DRAWING-CONFIRMED,L 0.3639 x (D 0.95 - slab 0.10) = 0.3093,{},
+107+7CE#1,GROUND_BEAM,soffit,m2,,EXCLUDED,"b 0.30 x L 0.3639 cast on the printed blinding: not in contact with earth, not coatable","{""face_m2"": 0.10917}",
+109+7CB#1,GROUND_BEAM,side A (PANEL: FILL),m2,1.32,DRAWING-CONFIRMED,L 4.4000 x (D 0.40 - slab 0.10) = 1.3200,{},
+109+7CB#1,GROUND_BEAM,side B (PANEL: FILL),m2,1.32,DRAWING-CONFIRMED,L 4.4000 x (D 0.40 - slab 0.10) = 1.3200,{},
+109+7CB#1,GROUND_BEAM,soffit,m2,,EXCLUDED,"b 0.30 x L 4.4000 cast on the printed blinding: not in contact with earth, not coatable","{""face_m2"": 1.32}",
+109+7CB#2,GROUND_BEAM,side A (PANEL: SPLIT_LEVEL),m2,,HELD,L 4.4000 m x buried height (held),{},PANEL_SPLIT_LEVEL: the panel carries two slab levels; the slab underside beside this face is not traced
+109+7CB#2,GROUND_BEAM,side B (PANEL: HELD),m2,,HELD,L 4.4000 m x buried height (held),{},PANEL_HELD: the panel on this side is not established as a slab on fill (open or floored not printed)
+109+7CB#2,GROUND_BEAM,soffit,m2,,EXCLUDED,"b 0.30 x L 4.4000 cast on the printed blinding: not in contact with earth, not coatable","{""face_m2"": 1.32}",
+109+7CB#3,GROUND_BEAM,side A (PANEL: SPLIT_LEVEL),m2,,HELD,L 2.7000 m x buried height (held),{},PANEL_SPLIT_LEVEL: the panel carries two slab levels; the slab underside beside this face is not traced
+109+7CB#3,GROUND_BEAM,side B (OUTSIDE),m2,,EXCLUDED,soffit +0.00 at or above the natural ground +0.00: no earth against this face (a plinth / finish face),"{""face_m2"": 2.565}",
+109+7CB#3,GROUND_BEAM,soffit,m2,,EXCLUDED,"b 0.30 x L 2.7000 cast on the printed blinding: not in contact with earth, not coatable","{""face_m2"": 0.81}",
+10A+7C9#1,GROUND_BEAM,side A (PANEL: FILL),m2,3.655,DRAWING-CONFIRMED,L 4.3000 x (D 0.95 - slab 0.10) = 3.6550,{},
+10A+7C9#1,GROUND_BEAM,side B (OUTSIDE),m2,,EXCLUDED,soffit +0.00 at or above the natural ground +0.00: no earth against this face (a plinth / finish face),"{""face_m2"": 4.085}",
+10A+7C9#1,GROUND_BEAM,soffit,m2,,EXCLUDED,"b 0.30 x L 4.3000 cast on the printed blinding: not in contact with earth, not coatable","{""face_m2"": 1.29}",
+10B+7D1#1,GROUND_BEAM,side A (OUTSIDE),m2,,HELD,L 1.2000 m x buried height (held),{},DEPTH_HELD: the beam depth (soffit) is not established
+10B+7D1#1,GROUND_BEAM,side B (PANEL: FILL),m2,,HELD,L 1.2000 m x buried height (held),{},DEPTH_HELD: the beam depth is not established (designer item)
+10B+7D1#1,GROUND_BEAM,soffit,m2,,EXCLUDED,"b 0.30 x L 1.2000 cast on the printed blinding: not in contact with earth, not coatable","{""face_m2"": 0.36}",
+10B+7D1#2,GROUND_BEAM,side A (OUTSIDE),m2,,HELD,L 2.3000 m x buried height (held),{},DEPTH_HELD: the beam depth (soffit) is not established
+10B+7D1#2,GROUND_BEAM,side B (PANEL: FILL),m2,,HELD,L 2.3000 m x buried height (held),{},DEPTH_HELD: the beam depth is not established (designer item)
+10B+7D1#2,GROUND_BEAM,soffit,m2,,EXCLUDED,"b 0.30 x L 2.3000 cast on the printed blinding: not in contact with earth, not coatable","{""face_m2"": 0.69}",
+114+115+7DF#1,GROUND_BEAM,side A (PANEL: FILL),m2,,HELD,L 2.3250 m x buried height (held),"{""candidate_high"": 0.6975, ""candidate_low"": 0.465}",DEPTH_HELD: the beam depth is not established (designer item)
+114+115+7DF#1,GROUND_BEAM,side B (PANEL: FILL),m2,,HELD,L 2.3250 m x buried height (held),"{""candidate_high"": 0.6975, ""candidate_low"": 0.465}",DEPTH_HELD: the beam depth is not established (designer item)
+114+115+7DF#1,GROUND_BEAM,soffit,m2,,EXCLUDED,"b 0.30 x L 2.3250 cast on the printed blinding: not in contact with earth, not coatable","{""face_m2"": 0.6975}",
+114+115+7DF#2,GROUND_BEAM,side A (PANEL: FILL),m2,0.85,DRAWING-CONFIRMED,L 1.0000 x (D 0.95 - slab 0.10) = 0.8500,{},
+114+115+7DF#2,GROUND_BEAM,side B (OUTSIDE),m2,,EXCLUDED,soffit +0.00 at or above the natural ground +0.00: no earth against this face (a plinth / finish face),"{""face_m2"": 0.95}",
+114+115+7DF#2,GROUND_BEAM,soffit,m2,,EXCLUDED,"b 0.30 x L 1.0000 cast on the printed blinding: not in contact with earth, not coatable","{""face_m2"": 0.3}",
+136+7D5#1,GROUND_BEAM,side A (PANEL: FILL),m2,,HELD,L 6.0000 m x buried height (held),{},DEPTH_HELD: the beam depth is not established (designer item)
+136+7D5#1,GROUND_BEAM,side B (OUTSIDE),m2,,HELD,L 6.0000 m x buried height (held),{},DEPTH_HELD: the beam depth (soffit) is not established
+136+7D5#1,GROUND_BEAM,soffit,m2,,EXCLUDED,"b 0.30 x L 6.0000 cast on the printed blinding: not in contact with earth, not coatable","{""face_m2"": 1.8}",
+137+138#1,GROUND_BEAM,side A (PANEL: FILL),m2,,HELD,L 2.4000 m x buried height (held),{},DEPTH_HELD: the beam depth is not established (designer item)
+137+138#1,GROUND_BEAM,side B (OUTSIDE),m2,,HELD,L 2.4000 m x buried height (held),{},DEPTH_HELD: the beam depth (soffit) is not established
+137+138#1,GROUND_BEAM,soffit,m2,,EXCLUDED,"b 0.30 x L 2.4000 cast on the printed blinding: not in contact with earth, not coatable","{""face_m2"": 0.72}",
+13C+7D9#1,GROUND_BEAM,side A (PANEL: FILL),m2,,HELD,L 1.4500 m x buried height (held),"{""candidate_high"": 0.435, ""candidate_low"": 0.29}",DEPTH_HELD: the beam depth is not established (designer item)
+13C+7D9#1,GROUND_BEAM,side B (PANEL: FILL),m2,,HELD,L 1.4500 m x buried height (held),"{""candidate_high"": 0.435, ""candidate_low"": 0.29}",DEPTH_HELD: the beam depth is not established (designer item)
+13C+7D9#1,GROUND_BEAM,soffit,m2,,EXCLUDED,"b 0.30 x L 1.4500 cast on the printed blinding: not in contact with earth, not coatable","{""face_m2"": 0.435}",
+13D+7D2#1,GROUND_BEAM,side A (PANEL: FILL),m2,,HELD,L 5.8000 m x buried height (held),{},DEPTH_HELD: the beam depth is not established (designer item)
+13D+7D2#1,GROUND_BEAM,side B (OUTSIDE),m2,,HELD,L 5.8000 m x buried height (held),{},DEPTH_HELD: the beam depth (soffit) is not established
+13D+7D2#1,GROUND_BEAM,soffit,m2,,EXCLUDED,"b 0.30 x L 5.8000 cast on the printed blinding: not in contact with earth, not coatable","{""face_m2"": 1.74}",
+13E+7D6#1,GROUND_BEAM,side A (PANEL: FILL),m2,,HELD,L 4.3000 m x buried height (held),"{""candidate_high"": 1.29, ""candidate_low"": 1.29}",DEPTH_HELD: the beam depth is not established (designer item)
+13E+7D6#1,GROUND_BEAM,side B (PANEL: FILL),m2,,HELD,L 4.3000 m x buried height (held),"{""candidate_high"": 1.29, ""candidate_low"": 1.29}",DEPTH_HELD: the beam depth is not established (designer item)
+13E+7D6#1,GROUND_BEAM,soffit,m2,,EXCLUDED,"b 0.30 x L 4.3000 cast on the printed blinding: not in contact with earth, not coatable","{""face_m2"": 1.29}",
+13E+7D6#2,GROUND_BEAM,side A (OUTSIDE),m2,,HELD,L 0.5000 m x buried height (held),{},DEPTH_HELD: the beam depth (soffit) is not established
+13E+7D6#2,GROUND_BEAM,side B (PANEL: FILL),m2,,HELD,L 0.5000 m x buried height (held),{},DEPTH_HELD: the beam depth is not established (designer item)
+13E+7D6#2,GROUND_BEAM,soffit,m2,,EXCLUDED,"b 0.30 x L 0.5000 cast on the printed blinding: not in contact with earth, not coatable","{""face_m2"": 0.15}",
+13F+7D3#1,GROUND_BEAM,side A (PANEL: FILL),m2,,HELD,L 4.3000 m x buried height (held),"{""candidate_high"": 1.29, ""candidate_low"": 1.29}",DEPTH_HELD: the beam depth is not established (designer item)
+13F+7D3#1,GROUND_BEAM,side B (PANEL: FILL),m2,,HELD,L 4.3000 m x buried height (held),"{""candidate_high"": 1.29, ""candidate_low"": 1.29}",DEPTH_HELD: the beam depth is not established (designer item)
+13F+7D3#1,GROUND_BEAM,soffit,m2,,EXCLUDED,"b 0.30 x L 4.3000 cast on the printed blinding: not in contact with earth, not coatable","{""face_m2"": 1.29}",
+140+7D7#1,GROUND_BEAM,side A (PANEL: FILL),m2,,HELD,L 4.3000 m x buried height (held),"{""candidate_high"": 1.29, ""candidate_low"": 1.29}",DEPTH_HELD: the beam depth is not established (designer item)
+140+7D7#1,GROUND_BEAM,side B (PANEL: FILL),m2,,HELD,L 4.3000 m x buried height (held),"{""candidate_high"": 1.29, ""candidate_low"": 1.29}",DEPTH_HELD: the beam depth is not established (designer item)
+140+7D7#1,GROUND_BEAM,soffit,m2,,EXCLUDED,"b 0.30 x L 4.3000 cast on the printed blinding: not in contact with earth, not coatable","{""face_m2"": 1.29}",
+141+7DA#1,GROUND_BEAM,side A (PANEL: FILL),m2,,HELD,L 1.2000 m x buried height (held),"{""candidate_high"": 0.36, ""candidate_low"": 0.24}",DEPTH_HELD: the beam depth is not established (designer item)
+141+7DA#1,GROUND_BEAM,side B (PANEL: FILL),m2,,HELD,L 1.2000 m x buried height (held),"{""candidate_high"": 0.36, ""candidate_low"": 0.24}",DEPTH_HELD: the beam depth is not established (designer item)
+141+7DA#1,GROUND_BEAM,soffit,m2,,EXCLUDED,"b 0.30 x L 1.2000 cast on the printed blinding: not in contact with earth, not coatable","{""face_m2"": 0.36}",
+142+7D8#1,GROUND_BEAM,side A (PANEL: FILL),m2,,HELD,L 2.4500 m x buried height (held),"{""candidate_high"": 0.735, ""candidate_low"": 0.49}",DEPTH_HELD: the beam depth is not established (designer item)
+142+7D8#1,GROUND_BEAM,side B (PANEL: FILL),m2,,HELD,L 2.4500 m x buried height (held),"{""candidate_high"": 0.735, ""candidate_low"": 0.49}",DEPTH_HELD: the beam depth is not established (designer item)
+142+7D8#1,GROUND_BEAM,soffit,m2,,EXCLUDED,"b 0.30 x L 2.4500 cast on the printed blinding: not in contact with earth, not coatable","{""face_m2"": 0.735}",
+145+7CA#1,GROUND_BEAM,side A (PANEL: FILL),m2,1.615,DRAWING-CONFIRMED,L 1.9000 x (D 0.95 - slab 0.10) = 1.6150,{},
+145+7CA#1,GROUND_BEAM,side B (PANEL: HELD),m2,,HELD,L 1.9000 m x buried height (held),{},PANEL_HELD: the panel on this side is not established as a slab on fill (open or floored not printed)
+145+7CA#1,GROUND_BEAM,soffit,m2,,EXCLUDED,"b 0.30 x L 1.9000 cast on the printed blinding: not in contact with earth, not coatable","{""face_m2"": 0.57}",
+15C+7CC#1,GROUND_BEAM,side A (PANEL: FILL),m2,,HELD,L 2.4000 m x buried height (held),"{""candidate_high"": 0.72, ""candidate_low"": 0.48}",DEPTH_HELD: the beam depth is not established (designer item)
+15C+7CC#1,GROUND_BEAM,side B (PANEL: SPLIT_LEVEL),m2,,HELD,L 2.4000 m x buried height (held),{},PANEL_SPLIT_LEVEL: the panel carries two slab levels; the slab underside beside this face is not traced
+15C+7CC#1,GROUND_BEAM,soffit,m2,,EXCLUDED,"b 0.30 x L 2.4000 cast on the printed blinding: not in contact with earth, not coatable","{""face_m2"": 0.72}",
+15D+7C8#1,GROUND_BEAM,side A (PANEL: FILL),m2,,HELD,L 2.9000 m x buried height (held),"{""candidate_high"": 0.87, ""candidate_low"": 0.87}",DEPTH_HELD: the beam depth is not established (designer item)
+15D+7C8#1,GROUND_BEAM,side B (PANEL: FILL),m2,,HELD,L 2.9000 m x buried height (held),"{""candidate_high"": 0.87, ""candidate_low"": 0.87}",DEPTH_HELD: the beam depth is not established (designer item)
+15D+7C8#1,GROUND_BEAM,soffit,m2,,EXCLUDED,"b 0.30 x L 2.9000 cast on the printed blinding: not in contact with earth, not coatable","{""face_m2"": 0.87}",
+15E+15F#1,GROUND_BEAM,side A (PANEL: FILL),m2,,HELD,L 2.7000 m x buried height (held),"{""candidate_high"": 0.81, ""candidate_low"": 0.81}",DEPTH_HELD: the beam depth is not established (designer item)
+15E+15F#1,GROUND_BEAM,side B (PANEL: SPLIT_LEVEL),m2,,HELD,L 2.7000 m x buried height (held),{},PANEL_SPLIT_LEVEL: the panel carries two slab levels; the slab underside beside this face is not traced
+15E+15F#1,GROUND_BEAM,soffit,m2,,EXCLUDED,"b 0.30 x L 2.7000 cast on the printed blinding: not in contact with earth, not coatable","{""face_m2"": 0.81}",
+16F+7FF#1,GROUND_BEAM,side A (PANEL: FILL),m2,,HELD,L 1.2500 m x buried height (held),"{""candidate_high"": 0.375, ""candidate_low"": 0.25}",DEPTH_HELD: the beam depth is not established (designer item)
+16F+7FF#1,GROUND_BEAM,side B (PANEL: FILL),m2,,HELD,L 1.2500 m x buried height (held),"{""candidate_high"": 0.375, ""candidate_low"": 0.25}",DEPTH_HELD: the beam depth is not established (designer item)
+16F+7FF#1,GROUND_BEAM,soffit,m2,,EXCLUDED,"b 0.30 x L 1.2500 cast on the printed blinding: not in contact with earth, not coatable","{""face_m2"": 0.375}",
+170+7C3#1,GROUND_BEAM,side A (PANEL: SPLIT_LEVEL),m2,,HELD,L 2.4000 m x buried height (held),{},PANEL_SPLIT_LEVEL: the panel carries two slab levels; the slab underside beside this face is not traced
+170+7C3#1,GROUND_BEAM,side B (OUTSIDE),m2,,EXCLUDED,soffit +0.00 at or above the natural ground +0.00: no earth against this face (a plinth / finish face),"{""face_m2"": 2.28}",
+170+7C3#1,GROUND_BEAM,soffit,m2,,EXCLUDED,"b 0.30 x L 2.4000 cast on the printed blinding: not in contact with earth, not coatable","{""face_m2"": 0.72}",
+170+7C3#2,GROUND_BEAM,side A (PANEL: FILL),m2,2.8645,DRAWING-CONFIRMED,L 3.3700 x (D 0.95 - slab 0.10) = 2.8645,{},
+170+7C3#2,GROUND_BEAM,side B (OUTSIDE),m2,,EXCLUDED,soffit +0.00 at or above the natural ground +0.00: no earth against this face (a plinth / finish face),"{""face_m2"": 3.2015}",
+170+7C3#2,GROUND_BEAM,soffit,m2,,EXCLUDED,"b 0.30 x L 3.3700 cast on the printed blinding: not in contact with earth, not coatable","{""face_m2"": 1.011}",
+170+7C3#3,GROUND_BEAM,side A (PANEL: FILL),m2,2.8475,DRAWING-CONFIRMED,L 3.3500 x (D 0.95 - slab 0.10) = 2.8475,{},
+170+7C3#3,GROUND_BEAM,side B (OUTSIDE),m2,,EXCLUDED,soffit +0.00 at or above the natural ground +0.00: no earth against this face (a plinth / finish face),"{""face_m2"": 3.1825}",
+170+7C3#3,GROUND_BEAM,soffit,m2,,EXCLUDED,"b 0.30 x L 3.3500 cast on the printed blinding: not in contact with earth, not coatable","{""face_m2"": 1.005}",
+170+7C3#4,GROUND_BEAM,side A (PANEL: FILL),m2,2.7625,DRAWING-CONFIRMED,L 3.2500 x (D 0.95 - slab 0.10) = 2.7625,{},
+170+7C3#4,GROUND_BEAM,side B (OUTSIDE),m2,,EXCLUDED,soffit +0.00 at or above the natural ground +0.00: no earth against this face (a plinth / finish face),"{""face_m2"": 3.0875}",
+170+7C3#4,GROUND_BEAM,soffit,m2,,EXCLUDED,"b 0.30 x L 3.2500 cast on the printed blinding: not in contact with earth, not coatable","{""face_m2"": 0.975}",
+175+7DE#1,GROUND_BEAM,side A (PANEL: FILL),m2,,HELD,L 3.7500 m x buried height (held),"{""candidate_high"": 1.125, ""candidate_low"": 1.125}",DEPTH_HELD: the beam depth is not established (designer item)
+175+7DE#1,GROUND_BEAM,side B (PANEL: FILL),m2,,HELD,L 3.7500 m x buried height (held),"{""candidate_high"": 1.125, ""candidate_low"": 1.125}",DEPTH_HELD: the beam depth is not established (designer item)
+175+7DE#1,GROUND_BEAM,soffit,m2,,EXCLUDED,"b 0.30 x L 3.7500 cast on the printed blinding: not in contact with earth, not coatable","{""face_m2"": 1.125}",
+176+7E6#1,GROUND_BEAM,side A (PANEL: FILL),m2,,HELD,L 3.7500 m x buried height (held),"{""candidate_high"": 1.125, ""candidate_low"": 1.125}",DEPTH_HELD: the beam depth is not established (designer item)
+176+7E6#1,GROUND_BEAM,side B (PANEL: FILL),m2,,HELD,L 3.7500 m x buried height (held),"{""candidate_high"": 1.125, ""candidate_low"": 1.125}",DEPTH_HELD: the beam depth is not established (designer item)
+176+7E6#1,GROUND_BEAM,soffit,m2,,EXCLUDED,"b 0.30 x L 3.7500 cast on the printed blinding: not in contact with earth, not coatable","{""face_m2"": 1.125}",
+177+7CD#1,GROUND_BEAM,side A (PANEL: FILL),m2,,HELD,L 5.0200 m x buried height (held),"{""candidate_high"": 2.51, ""candidate_low"": 2.51}",DEPTH_HELD: the beam depth is not established (designer item)
+177+7CD#1,GROUND_BEAM,side B (PANEL: FILL),m2,,HELD,L 5.0200 m x buried height (held),"{""candidate_high"": 2.51, ""candidate_low"": 2.51}",DEPTH_HELD: the beam depth is not established (designer item)
+177+7CD#1,GROUND_BEAM,soffit,m2,,EXCLUDED,"b 0.30 x L 5.0200 cast on the printed blinding: not in contact with earth, not coatable","{""face_m2"": 1.506}",
+177+7CD#2,GROUND_BEAM,side A (PANEL: FILL),m2,,HELD,L 1.5367 m x buried height (held),"{""candidate_high"": 0.46101, ""candidate_low"": 0.30734}",DEPTH_HELD: the beam depth is not established (designer item)
+177+7CD#2,GROUND_BEAM,side B (PANEL: FILL),m2,,HELD,L 1.5367 m x buried height (held),"{""candidate_high"": 0.46101, ""candidate_low"": 0.30734}",DEPTH_HELD: the beam depth is not established (designer item)
+177+7CD#2,GROUND_BEAM,soffit,m2,,EXCLUDED,"b 0.30 x L 1.5367 cast on the printed blinding: not in contact with earth, not coatable","{""face_m2"": 0.46101}",
+178+7DB#1,GROUND_BEAM,side A (PANEL: HELD),m2,,HELD,L 3.8000 m x buried height (held),{},PANEL_HELD: the panel on this side is not established as a slab on fill (open or floored not printed)
+178+7DB#1,GROUND_BEAM,side B (OUTSIDE),m2,,HELD,L 3.8000 m x buried height (held),{},DEPTH_HELD: the beam depth (soffit) is not established
+178+7DB#1,GROUND_BEAM,soffit,m2,,EXCLUDED,"b 0.30 x L 3.8000 cast on the printed blinding: not in contact with earth, not coatable","{""face_m2"": 1.14}",
+17B+7E5#1,GROUND_BEAM,side A (PANEL: FILL),m2,,HELD,L 1.2000 m x buried height (held),"{""candidate_high"": 0.36, ""candidate_low"": 0.24}",DEPTH_HELD: the beam depth is not established (designer item)
+17B+7E5#1,GROUND_BEAM,side B (PANEL: HELD),m2,,HELD,L 1.2000 m x buried height (held),{},PANEL_HELD: the panel on this side is not established as a slab on fill (open or floored not printed)
+17B+7E5#1,GROUND_BEAM,soffit,m2,,EXCLUDED,"b 0.30 x L 1.2000 cast on the printed blinding: not in contact with earth, not coatable","{""face_m2"": 0.36}",
+17C+7E3#1,GROUND_BEAM,side A (PANEL: FILL),m2,0.9684,DRAWING-CONFIRMED,L 3.2280 x (D 0.40 - slab 0.10) = 0.9684,{},
+17C+7E3#1,GROUND_BEAM,side B (PANEL: FILL),m2,0.9684,DRAWING-CONFIRMED,L 3.2280 x (D 0.40 - slab 0.10) = 0.9684,{},
+17C+7E3#1,GROUND_BEAM,soffit,m2,,EXCLUDED,"b 0.30 x L 3.2280 cast on the printed blinding: not in contact with earth, not coatable","{""face_m2"": 0.9684}",
+17D+7E4#1,GROUND_BEAM,side A (PANEL: FILL),m2,,HELD,L 4.2723 m x buried height (held),"{""candidate_high"": 1.28169, ""candidate_low"": 1.28169}",DEPTH_HELD: the beam depth is not established (designer item)
+17D+7E4#1,GROUND_BEAM,side B (PANEL: FILL),m2,,HELD,L 4.2723 m x buried height (held),"{""candidate_high"": 1.28169, ""candidate_low"": 1.28169}",DEPTH_HELD: the beam depth is not established (designer item)
+17D+7E4#1,GROUND_BEAM,soffit,m2,,EXCLUDED,"b 0.30 x L 4.2723 cast on the printed blinding: not in contact with earth, not coatable","{""face_m2"": 1.28169}",
+17E+17F#1,GROUND_BEAM,side A (PANEL: FILL),m2,,HELD,L 2.4269 m x buried height (held),"{""candidate_high"": 0.72807, ""candidate_low"": 0.48538}",DEPTH_HELD: the beam depth is not established (designer item)
+17E+17F#1,GROUND_BEAM,side B (PANEL: FILL),m2,,HELD,L 2.4269 m x buried height (held),"{""candidate_high"": 0.72807, ""candidate_low"": 0.48538}",DEPTH_HELD: the beam depth is not established (designer item)
+17E+17F#1,GROUND_BEAM,soffit,m2,,EXCLUDED,"b 0.30 x L 2.4269 cast on the printed blinding: not in contact with earth, not coatable","{""face_m2"": 0.72807}",
+180+181#1,GROUND_BEAM,side A (PANEL: FILL),m2,,HELD,L 0.7890 m x buried height (held),"{""candidate_high"": 0.2367, ""candidate_low"": 0.1578}",DEPTH_HELD: the beam depth is not established (designer item)
+180+181#1,GROUND_BEAM,side B (PANEL: FILL),m2,,HELD,L 0.7890 m x buried height (held),"{""candidate_high"": 0.2367, ""candidate_low"": 0.1578}",DEPTH_HELD: the beam depth is not established (designer item)
+180+181#1,GROUND_BEAM,soffit,m2,,EXCLUDED,"b 0.30 x L 0.7890 cast on the printed blinding: not in contact with earth, not coatable","{""face_m2"": 0.2367}",
+180D+180E#1,GROUND_BEAM,side A (PANEL: FILL),m2,,HELD,L 2.1000 m x buried height (held),"{""candidate_high"": 0.63, ""candidate_low"": 0.42}",DEPTH_HELD: the beam depth is not established (designer item)
+180D+180E#1,GROUND_BEAM,side B (PANEL: FILL),m2,,HELD,L 2.1000 m x buried height (held),"{""candidate_high"": 0.63, ""candidate_low"": 0.42}",DEPTH_HELD: the beam depth is not established (designer item)
+180D+180E#1,GROUND_BEAM,soffit,m2,,EXCLUDED,"b 0.30 x L 2.1000 cast on the printed blinding: not in contact with earth, not coatable","{""face_m2"": 0.63}",
+1811+1812#1,GROUND_BEAM,side A (OUTSIDE),m2,,HELD,L 1.3000 m x buried height (held),{},DEPTH_HELD: the beam depth (soffit) is not established
+1811+1812#1,GROUND_BEAM,side B (OUTSIDE),m2,,HELD,L 1.3000 m x buried height (held),{},DEPTH_HELD: the beam depth (soffit) is not established
+1811+1812#1,GROUND_BEAM,soffit,m2,,EXCLUDED,"b 0.30 x L 1.3000 cast on the printed blinding: not in contact with earth, not coatable","{""face_m2"": 0.39}",
+182+183#1,GROUND_BEAM,side A (PANEL: FILL),m2,,HELD,L 2.0732 m x buried height (held),"{""candidate_high"": 0.62196, ""candidate_low"": 0.41464}",DEPTH_HELD: the beam depth is not established (designer item)
+182+183#1,GROUND_BEAM,side B (PANEL: FILL),m2,,HELD,L 2.0732 m x buried height (held),"{""candidate_high"": 0.62196, ""candidate_low"": 0.41464}",DEPTH_HELD: the beam depth is not established (designer item)
+182+183#1,GROUND_BEAM,soffit,m2,,EXCLUDED,"b 0.30 x L 2.0732 cast on the printed blinding: not in contact with earth, not coatable","{""face_m2"": 0.62196}",
+184+7CF#1,GROUND_BEAM,side A (PANEL: HELD),m2,,HELD,L 3.0200 m x buried height (held),{},PANEL_HELD: the panel on this side is not established as a slab on fill (open or floored not printed)
+184+7CF#1,GROUND_BEAM,side B (PANEL: FILL),m2,,HELD,L 3.0200 m x buried height (held),"{""candidate_high"": 0.906, ""candidate_low"": 0.906}",DEPTH_HELD: the beam depth is not established (designer item)
+184+7CF#1,GROUND_BEAM,soffit,m2,,EXCLUDED,"b 0.30 x L 3.0200 cast on the printed blinding: not in contact with earth, not coatable","{""face_m2"": 0.906}",
+184+7CF#2,GROUND_BEAM,side A (PANEL: HELD),m2,,HELD,L 2.6500 m x buried height (held),{},PANEL_HELD: the panel on this side is not established as a slab on fill (open or floored not printed)
+184+7CF#2,GROUND_BEAM,side B (PANEL: FILL),m2,,HELD,L 2.6500 m x buried height (held),"{""candidate_high"": 0.795, ""candidate_low"": 0.795}",DEPTH_HELD: the beam depth is not established (designer item)
+184+7CF#2,GROUND_BEAM,soffit,m2,,EXCLUDED,"b 0.30 x L 2.6500 cast on the printed blinding: not in contact with earth, not coatable","{""face_m2"": 0.795}",
+184+7CF#3,GROUND_BEAM,side A (PANEL: FILL),m2,,HELD,L 5.0000 m x buried height (held),"{""candidate_high"": 2.5, ""candidate_low"": 1.5}",DEPTH_HELD: the beam depth is not established (designer item)
+184+7CF#3,GROUND_BEAM,side B (PANEL: FILL),m2,,HELD,L 5.0000 m x buried height (held),"{""candidate_high"": 2.5, ""candidate_low"": 1.5}",DEPTH_HELD: the beam depth is not established (designer item)
+184+7CF#3,GROUND_BEAM,soffit,m2,,EXCLUDED,"b 0.30 x L 5.0000 cast on the printed blinding: not in contact with earth, not coatable","{""face_m2"": 1.5}",
+185+7C7#1,GROUND_BEAM,side A (PANEL: HELD),m2,,HELD,L 0.6000 m x buried height (held),{},PANEL_HELD: the panel on this side is not established as a slab on fill (open or floored not printed)
+185+7C7#1,GROUND_BEAM,side B (OUTSIDE),m2,,HELD,L 0.6000 m x buried height (held),{},DEPTH_HELD: the beam depth (soffit) is not established
+185+7C7#1,GROUND_BEAM,soffit,m2,,EXCLUDED,"b 0.30 x L 0.6000 cast on the printed blinding: not in contact with earth, not coatable","{""face_m2"": 0.18}",
+7D0+FC#1,GROUND_BEAM,side A (OUTSIDE),m2,,EXCLUDED,soffit +0.00 at or above the natural ground +0.00: no earth against this face (a plinth / finish face),"{""face_m2"": 2.82625}",
+7D0+FC#1,GROUND_BEAM,side B (PANEL: FILL),m2,2.52875,DRAWING-CONFIRMED,L 2.9750 x (D 0.95 - slab 0.10) = 2.5288,{},
+7D0+FC#1,GROUND_BEAM,soffit,m2,,EXCLUDED,"b 0.30 x L 2.9750 cast on the printed blinding: not in contact with earth, not coatable","{""face_m2"": 0.8925}",
+7D0+FC#2,GROUND_BEAM,side A (OUTSIDE),m2,,EXCLUDED,soffit +0.00 at or above the natural ground +0.00: no earth against this face (a plinth / finish face),"{""face_m2"": 5.45775}",
+7D0+FC#2,GROUND_BEAM,side B (PANEL: HELD),m2,,HELD,L 5.7450 m x buried height (held),{},PANEL_HELD: the panel on this side is not established as a slab on fill (open or floored not printed)
+7D0+FC#2,GROUND_BEAM,soffit,m2,,EXCLUDED,"b 0.30 x L 5.7450 cast on the printed blinding: not in contact with earth, not coatable","{""face_m2"": 1.7235}",
+7D0+FC#3,GROUND_BEAM,side A (OUTSIDE),m2,,EXCLUDED,soffit +0.00 at or above the natural ground +0.00: no earth against this face (a plinth / finish face),"{""face_m2"": 6.0325}",
+7D0+FC#3,GROUND_BEAM,side B (PANEL: HELD),m2,,HELD,L 6.3500 m x buried height (held),{},PANEL_HELD: the panel on this side is not established as a slab on fill (open or floored not printed)
+7D0+FC#3,GROUND_BEAM,soffit,m2,,EXCLUDED,"b 0.30 x L 6.3500 cast on the printed blinding: not in contact with earth, not coatable","{""face_m2"": 1.905}",
+7D0+FC#4,GROUND_BEAM,side A (OUTSIDE),m2,,EXCLUDED,soffit +0.00 at or above the natural ground +0.00: no earth against this face (a plinth / finish face),"{""face_m2"": 1.14}",
+7D0+FC#4,GROUND_BEAM,side B (PANEL: FILL),m2,1.02,DRAWING-CONFIRMED,L 1.2000 x (D 0.95 - slab 0.10) = 1.0200,{},
+7D0+FC#4,GROUND_BEAM,soffit,m2,,EXCLUDED,"b 0.30 x L 1.2000 cast on the printed blinding: not in contact with earth, not coatable","{""face_m2"": 0.36}",
+7D4+F8#1,GROUND_BEAM,side A (OUTSIDE),m2,,HELD,L 5.4500 m x buried height (held),{},DEPTH_HELD: the beam depth (soffit) is not established
+7D4+F8#1,GROUND_BEAM,side B (PANEL: FILL),m2,,HELD,L 5.4500 m x buried height (held),{},DEPTH_HELD: the beam depth is not established (designer item)
+7D4+F8#1,GROUND_BEAM,soffit,m2,,EXCLUDED,"b 0.30 x L 5.4500 cast on the printed blinding: not in contact with earth, not coatable","{""face_m2"": 1.635}",
+7D4+F8#2,GROUND_BEAM,side A (OUTSIDE),m2,,HELD,L 4.2500 m x buried height (held),{},DEPTH_HELD: the beam depth (soffit) is not established
+7D4+F8#2,GROUND_BEAM,side B (PANEL: FILL),m2,,HELD,L 4.2500 m x buried height (held),{},DEPTH_HELD: the beam depth is not established (designer item)
+7D4+F8#2,GROUND_BEAM,soffit,m2,,EXCLUDED,"b 0.30 x L 4.2500 cast on the printed blinding: not in contact with earth, not coatable","{""face_m2"": 1.275}",
+7DC+7DD#1,GROUND_BEAM,side A (PANEL: FILL),m2,,HELD,L 3.5250 m x buried height (held),"{""candidate_high"": 1.0575, ""candidate_low"": 1.0575}",DEPTH_HELD: the beam depth is not established (designer item)
+7DC+7DD#1,GROUND_BEAM,side B (PANEL: FILL),m2,,HELD,L 3.5250 m x buried height (held),"{""candidate_high"": 1.0575, ""candidate_low"": 1.0575}",DEPTH_HELD: the beam depth is not established (designer item)
+7DC+7DD#1,GROUND_BEAM,soffit,m2,,EXCLUDED,"b 0.30 x L 3.5250 cast on the printed blinding: not in contact with earth, not coatable","{""face_m2"": 1.0575}",
+7DC+7DD#2,GROUND_BEAM,side A (PANEL: FILL),m2,1.0575,DRAWING-CONFIRMED,L 3.5250 x (D 0.40 - slab 0.10) = 1.0575,{},
+7DC+7DD#2,GROUND_BEAM,side B (PANEL: FILL),m2,1.0575,DRAWING-CONFIRMED,L 3.5250 x (D 0.40 - slab 0.10) = 1.0575,{},
+7DC+7DD#2,GROUND_BEAM,soffit,m2,,EXCLUDED,"b 0.30 x L 3.5250 cast on the printed blinding: not in contact with earth, not coatable","{""face_m2"": 1.0575}",
+7E0+FD#1,GROUND_BEAM,side A (OUTSIDE),m2,,EXCLUDED,soffit +0.00 at or above the natural ground +0.00: no earth against this face (a plinth / finish face),"{""face_m2"": 3.1825}",
+7E0+FD#1,GROUND_BEAM,side B (PANEL: FILL),m2,2.8475,DRAWING-CONFIRMED,L 3.3500 x (D 0.95 - slab 0.10) = 2.8475,{},
+7E0+FD#1,GROUND_BEAM,soffit,m2,,EXCLUDED,"b 0.30 x L 3.3500 cast on the printed blinding: not in contact with earth, not coatable","{""face_m2"": 1.005}",
+7E0+FD#2,GROUND_BEAM,side A (OUTSIDE),m2,,EXCLUDED,soffit +0.00 at or above the natural ground +0.00: no earth against this face (a plinth / finish face),"{""face_m2"": 3.0875}",
+7E0+FD#2,GROUND_BEAM,side B (PANEL: FILL),m2,2.7625,DRAWING-CONFIRMED,L 3.2500 x (D 0.95 - slab 0.10) = 2.7625,{},
+7E0+FD#2,GROUND_BEAM,soffit,m2,,EXCLUDED,"b 0.30 x L 3.2500 cast on the printed blinding: not in contact with earth, not coatable","{""face_m2"": 0.975}",
+7E1+7E2#1,GROUND_BEAM,side A (PANEL: FILL),m2,,HELD,L 6.7200 m x buried height (held),"{""candidate_high"": 3.36, ""candidate_low"": 3.36}",DEPTH_HELD: the beam depth is not established (designer item)
+7E1+7E2#1,GROUND_BEAM,side B (PANEL: FILL),m2,,HELD,L 6.7200 m x buried height (held),"{""candidate_high"": 3.36, ""candidate_low"": 3.36}",DEPTH_HELD: the beam depth is not established (designer item)
+7E1+7E2#1,GROUND_BEAM,soffit,m2,,EXCLUDED,"b 0.30 x L 6.7200 cast on the printed blinding: not in contact with earth, not coatable","{""face_m2"": 2.016}",
+7E7+7E8#1,GROUND_BEAM,side A (PANEL: FILL),m2,1.0575,DRAWING-CONFIRMED,L 3.5250 x (D 0.40 - slab 0.10) = 1.0575,{},
+7E7+7E8#1,GROUND_BEAM,side B (PANEL: FILL),m2,1.0575,DRAWING-CONFIRMED,L 3.5250 x (D 0.40 - slab 0.10) = 1.0575,{},
+7E7+7E8#1,GROUND_BEAM,soffit,m2,,EXCLUDED,"b 0.30 x L 3.5250 cast on the printed blinding: not in contact with earth, not coatable","{""face_m2"": 1.0575}",
+7E7+7E8#2,GROUND_BEAM,side A (PANEL: FILL),m2,,HELD,L 3.5250 m x buried height (held),"{""candidate_high"": 1.0575, ""candidate_low"": 1.0575}",DEPTH_HELD: the beam depth is not established (designer item)
+7E7+7E8#2,GROUND_BEAM,side B (PANEL: FILL),m2,,HELD,L 3.5250 m x buried height (held),"{""candidate_high"": 1.0575, ""candidate_low"": 1.0575}",DEPTH_HELD: the beam depth is not established (designer item)
+7E7+7E8#2,GROUND_BEAM,soffit,m2,,EXCLUDED,"b 0.30 x L 3.5250 cast on the printed blinding: not in contact with earth, not coatable","{""face_m2"": 1.0575}",
+7E9+7EA#1,GROUND_BEAM,side A (PANEL: FILL),m2,1.2675,DRAWING-CONFIRMED,L 4.2250 x (D 0.40 - slab 0.10) = 1.2675,{},
+7E9+7EA#1,GROUND_BEAM,side B (PANEL: FILL),m2,1.2675,DRAWING-CONFIRMED,L 4.2250 x (D 0.40 - slab 0.10) = 1.2675,{},
+7E9+7EA#1,GROUND_BEAM,soffit,m2,,EXCLUDED,"b 0.30 x L 4.2250 cast on the printed blinding: not in contact with earth, not coatable","{""face_m2"": 1.2675}",
+ARC:139+13A,GROUND_BEAM,building-side face (curved),m2,,HELD,"net axis 1.8063 m, faces 1.5707 (r 1.0) / 2.0419 (r 1.3)",{},"ANNEX_DEPTH_CONFLICT (D-35 annex, T-253): no depth, no face height"
+ARC:157+158,GROUND_BEAM,building-side face (curved),m2,,HELD,"net axis 6.0873 m, faces 5.7069 (r 2.25) / 6.4678 (r 2.55)","{""building_on_concave_face"": 4.850844, ""building_on_convex_face"": 5.497623}",ARC_SIDE_NOT_TRACED: S1 prints no level on either side of the ring; which face looks into the slab panels (GS-10 / GS-23) is not traced on the plan; the outside face is above the natural ground (0)
+FTG:165C,FOOTING,top outside the necks,m2,,HELD,F2 outline 3.2300 - necks [C2 1084 0.1500],"{""SINGLE"": 3.08}","DETAIL_NOT_SELECTED: the selecting level (formation vs ground-beam top, 2.5 m) is not printed; reading SINGLE shown, reading DOUBLE has no value (the lower ground beam on the top is not drawn)"
+FTG:1663,FOOTING,top outside the necks,m2,,HELD,F2 outline 3.2300 - necks [C2 1087 0.1500],"{""SINGLE"": 3.08}","DETAIL_NOT_SELECTED: the selecting level (formation vs ground-beam top, 2.5 m) is not printed; reading SINGLE shown, reading DOUBLE has no value (the lower ground beam on the top is not drawn)"
+FTG:1664,FOOTING,top outside the necks,m2,,HELD,F5 outline 5.0400 - necks [C5 108A 0.1800],"{""SINGLE"": 4.86}","DETAIL_NOT_SELECTED: the selecting level (formation vs ground-beam top, 2.5 m) is not printed; reading SINGLE shown, reading DOUBLE has no value (the lower ground beam on the top is not drawn)"
+FTG:1665,FOOTING,top outside the necks,m2,,HELD,F4 outline 4.4000 - necks [C4 10D7 0.1500],"{""SINGLE"": 4.25}","DETAIL_NOT_SELECTED: the selecting level (formation vs ground-beam top, 2.5 m) is not printed; reading SINGLE shown, reading DOUBLE has no value (the lower ground beam on the top is not drawn)"
+FTG:1666,FOOTING,top outside the necks,m2,,HELD,F4 outline 4.4000 - necks [C4 108D 0.1500; CN 17C8 0.0900],"{""SINGLE"": 4.16}","DETAIL_NOT_SELECTED: the selecting level (formation vs ground-beam top, 2.5 m) is not printed; reading SINGLE shown, reading DOUBLE has no value (the lower ground beam on the top is not drawn)"
+FTG:1667,FOOTING,top outside the necks,m2,,HELD,F outline 0.7200 - necks [C 10B4 0.1500],"{""SINGLE"": 0.57}","DETAIL_NOT_SELECTED: the selecting level (formation vs ground-beam top, 2.5 m) is not printed; reading SINGLE shown, reading DOUBLE has no value (the lower ground beam on the top is not drawn)"
+FTG:1668,FOOTING,top outside the necks,m2,,HELD,F outline 0.7200 - necks [C 10A8 0.1500],"{""SINGLE"": 0.57}","DETAIL_NOT_SELECTED: the selecting level (formation vs ground-beam top, 2.5 m) is not printed; reading SINGLE shown, reading DOUBLE has no value (the lower ground beam on the top is not drawn)"
+FTG:1669,FOOTING,top outside the necks,m2,,HELD,F outline 0.7200 - necks [C 10AB 0.1500],"{""SINGLE"": 0.57}","DETAIL_NOT_SELECTED: the selecting level (formation vs ground-beam top, 2.5 m) is not printed; reading SINGLE shown, reading DOUBLE has no value (the lower ground beam on the top is not drawn)"
+FTG:166A,FOOTING,top outside the necks,m2,,HELD,F outline 0.7200 - necks [C 10B7 0.1500],"{""SINGLE"": 0.57}","DETAIL_NOT_SELECTED: the selecting level (formation vs ground-beam top, 2.5 m) is not printed; reading SINGLE shown, reading DOUBLE has no value (the lower ground beam on the top is not drawn)"
+FTG:166B,FOOTING,top outside the necks,m2,,HELD,F3 outline 2.2400 - necks [C3 10B1 0.1500],"{""SINGLE"": 2.09}","DETAIL_NOT_SELECTED: the selecting level (formation vs ground-beam top, 2.5 m) is not printed; reading SINGLE shown, reading DOUBLE has no value (the lower ground beam on the top is not drawn)"
+FTG:166C,FOOTING,top outside the necks,m2,,HELD,F3 outline 2.2400 - necks [C3 10C5 0.1500],"{""SINGLE"": 2.09}","DETAIL_NOT_SELECTED: the selecting level (formation vs ground-beam top, 2.5 m) is not printed; reading SINGLE shown, reading DOUBLE has no value (the lower ground beam on the top is not drawn)"
+FTG:166D,FOOTING,top outside the necks,m2,,HELD,F5 outline 5.0400 - necks [C5 10D3 0.1800],"{""SINGLE"": 4.86}","DETAIL_NOT_SELECTED: the selecting level (formation vs ground-beam top, 2.5 m) is not printed; reading SINGLE shown, reading DOUBLE has no value (the lower ground beam on the top is not drawn)"
+FTG:180C,FOOTING,top outside the necks,m2,,HELD,FN outline 0.8600 - necks [CN 180A 0.0900],"{""SINGLE"": 0.77}","DETAIL_NOT_SELECTED: the selecting level (formation vs ground-beam top, 2.5 m) is not printed; reading SINGLE shown, reading DOUBLE has no value (the lower ground beam on the top is not drawn)"
+FTG:180F,FOOTING,top outside the necks,m2,,HELD,F9 outline 9.1800 - necks [C9 10DA 0.3000],"{""SINGLE"": 8.88}","DETAIL_NOT_SELECTED: the selecting level (formation vs ground-beam top, 2.5 m) is not printed; reading SINGLE shown, reading DOUBLE has no value (the lower ground beam on the top is not drawn)"
+FTG:1ABF,FOOTING,top outside the necks,m2,,HELD,F12 outline 14.0800 - necks [C3 10CC 0.1500; C7 10C8 0.2400],"{""SINGLE"": 13.69}","DETAIL_NOT_SELECTED: the selecting level (formation vs ground-beam top, 2.5 m) is not printed; reading SINGLE shown, reading DOUBLE has no value (the lower ground beam on the top is not drawn)"
+FTG:1ADB,FOOTING,top outside the necks,m2,,HELD,F13 outline 10.3200 - necks [C11 10BA 0.3300; C5 10BD 0.1800],"{""SINGLE"": 9.81}","DETAIL_NOT_SELECTED: the selecting level (formation vs ground-beam top, 2.5 m) is not printed; reading SINGLE shown, reading DOUBLE has no value (the lower ground beam on the top is not drawn)"
+FTG:1B07,FOOTING,top outside the necks,m2,,HELD,F11 outline 5.2500 - necks [C11 10DD 0.3300],"{""SINGLE"": 4.92}","DETAIL_NOT_SELECTED: the selecting level (formation vs ground-beam top, 2.5 m) is not printed; reading SINGLE shown, reading DOUBLE has no value (the lower ground beam on the top is not drawn)"
+FTG:1B19,FOOTING,top outside the necks,m2,,HELD,F6 outline 5.7200 - necks [C6 10C2 0.2100],"{""SINGLE"": 5.51}","DETAIL_NOT_SELECTED: the selecting level (formation vs ground-beam top, 2.5 m) is not printed; reading SINGLE shown, reading DOUBLE has no value (the lower ground beam on the top is not drawn)"
+FTG:1B1A,FOOTING,top outside the necks,m2,,HELD,F14 outline 12.5400 - necks [C3 10E4 0.1500; C8 10E0 0.2700 (0.2400..0.2700)],"{""SINGLE_high"": 12.15, ""SINGLE_low"": 12.12}","DETAIL_NOT_SELECTED: the selecting level (formation vs ground-beam top, 2.5 m) is not printed; reading SINGLE shown, reading DOUBLE has no value (the lower ground beam on the top is not drawn)"
+FTG:1B1B,FOOTING,top outside the necks,m2,,HELD,"F+F10: one outline, two tags F+F10 (T-233 / T-239 CONFLICT, Q-31 C)",{},OUTLINE_HELD
+FTG:1B24,FOOTING,top outside the necks,m2,,HELD,F8 outline 14.4000 - necks [C3 10A0 0.1500; C8 10D0 0.2700; CN 17C5 0.0900],"{""SINGLE"": 13.89}","DETAIL_NOT_SELECTED: the selecting level (formation vs ground-beam top, 2.5 m) is not printed; reading SINGLE shown, reading DOUBLE has no value (the lower ground beam on the top is not drawn)"
+FTG:1B2A,FOOTING,top outside the necks,m2,,HELD,F15 outline 1.8000 - necks [C3 10AE 0.1500],"{""SINGLE"": 1.65}","DETAIL_NOT_SELECTED: the selecting level (formation vs ground-beam top, 2.5 m) is not printed; reading SINGLE shown, reading DOUBLE has no value (the lower ground beam on the top is not drawn)"
+FTG:1B2B,FOOTING,top outside the necks,m2,,EXCLUDED,lift footing FF: base top outside the pit is under the p.14 sheet membrane (T-219 WP.LIFT_PIT 15.810 m2): owned there,"{""outline_m2"": 20.7}",
+FTG:10F0,FOOTING,top outside the necks,m2,,HELD,FN outline 1.0000 - necks [CN 10F6 (FN one-to-one) 0.0900],"{""SINGLE"": 0.91}","DETAIL_NOT_SELECTED: the selecting level (formation vs ground-beam top, 2.5 m) is not printed; reading SINGLE shown, reading DOUBLE has no value (the lower ground beam on the top is not drawn)"
+FTG:10F8,FOOTING,top outside the necks,m2,,HELD,FN outline 1.0000 - necks [CN 10EE (FN one-to-one) 0.0900],"{""SINGLE"": 0.91}","DETAIL_NOT_SELECTED: the selecting level (formation vs ground-beam top, 2.5 m) is not printed; reading SINGLE shown, reading DOUBLE has no value (the lower ground beam on the top is not drawn)"
+FTG:1100,FOOTING,top outside the necks,m2,,HELD,FN outline 1.0000 - necks [CN 10FE (FN one-to-one) 0.0900],"{""SINGLE"": 0.91}","DETAIL_NOT_SELECTED: the selecting level (formation vs ground-beam top, 2.5 m) is not printed; reading SINGLE shown, reading DOUBLE has no value (the lower ground beam on the top is not drawn)"
+NECK:C11 10BA,NECK,4 sides,m2,,HELD,C11 perimeter 2 x (0.30 + 1.10) = 2.80 m x neck height,"{""m2_per_m_height"": 2.8}",NECK_HEIGHT_HELD
+NECK:C5 10BD,NECK,4 sides,m2,,HELD,C5 perimeter 2 x (0.30 + 0.60) = 1.80 m x neck height,"{""m2_per_m_height"": 1.8}",NECK_HEIGHT_HELD
+NECK:C11 10DD,NECK,4 sides,m2,,HELD,C11 perimeter 2 x (0.30 + 1.10) = 2.80 m x neck height,"{""m2_per_m_height"": 2.8}",NECK_HEIGHT_HELD
+NECK:C1 1099,NECK,4 sides,m2,,EXCLUDED,"lift column inside the pit walls / FF: the p.14 lift detail (sheet membrane + board, T-219) owns its earth faces",{},
+NECK:C2 1096,NECK,4 sides,m2,,EXCLUDED,"lift column inside the pit walls / FF: the p.14 lift detail (sheet membrane + board, T-219) owns its earth faces",{},
+NECK:C2 1093,NECK,4 sides,m2,,EXCLUDED,"lift column inside the pit walls / FF: the p.14 lift detail (sheet membrane + board, T-219) owns its earth faces",{},
+NECK:C9 1090,NECK,4 sides,m2,,EXCLUDED,"lift column inside the pit walls / FF: the p.14 lift detail (sheet membrane + board, T-219) owns its earth faces",{},
+NECK:C2 1084,NECK,4 sides,m2,,HELD,C2 perimeter 2 x (0.30 + 0.50) = 1.60 m x neck height,"{""m2_per_m_height"": 1.6}",NECK_HEIGHT_HELD
+NECK:C2 1087,NECK,4 sides,m2,,HELD,C2 perimeter 2 x (0.30 + 0.50) = 1.60 m x neck height,"{""m2_per_m_height"": 1.6}",NECK_HEIGHT_HELD
+NECK:C3 10B1,NECK,4 sides,m2,,HELD,C3 perimeter 2 x (0.30 + 0.50) = 1.60 m x neck height,"{""m2_per_m_height"": 1.6}",NECK_HEIGHT_HELD
+NECK:C3 10AE,NECK,4 sides,m2,,HELD,C3 perimeter 2 x (0.30 + 0.50) = 1.60 m x neck height,"{""m2_per_m_height"": 1.6}",NECK_HEIGHT_HELD
+NECK:C3 10C5,NECK,4 sides,m2,,HELD,C3 perimeter 2 x (0.30 + 0.50) = 1.60 m x neck height,"{""m2_per_m_height"": 1.6}",NECK_HEIGHT_HELD
+NECK:C3 10CC,NECK,4 sides,m2,,HELD,C3 perimeter 2 x (0.30 + 0.50) = 1.60 m x neck height,"{""m2_per_m_height"": 1.6}",NECK_HEIGHT_HELD
+NECK:C7 10C8,NECK,4 sides,m2,,HELD,C7 perimeter 2 x (0.30 + 0.80) = 2.20 m x neck height,"{""m2_per_m_height"": 2.2}",NECK_HEIGHT_HELD
+NECK:C3 10E4,NECK,4 sides,m2,,HELD,C3 perimeter 2 x (0.30 + 0.50) = 1.60 m x neck height,"{""m2_per_m_height"": 1.6}",NECK_HEIGHT_HELD
+NECK:C8 10E0,NECK,4 sides,m2,,HELD,C8 perimeter 2 x (0.30 + 0.90) = 2.40 m x neck height,"{""m2_per_m_height_high"": 2.4, ""m2_per_m_height_low"": 2.2}",NECK_HEIGHT_HELD | SECTION_CONFLICT (T-217)
+NECK:C3 10A0,NECK,4 sides,m2,,HELD,C3 perimeter 2 x (0.30 + 0.50) = 1.60 m x neck height,"{""m2_per_m_height"": 1.6}",NECK_HEIGHT_HELD
+NECK:C8 10D0,NECK,4 sides,m2,,HELD,C8 perimeter 2 x (0.30 + 0.90) = 2.40 m x neck height,"{""m2_per_m_height"": 2.4}",NECK_HEIGHT_HELD
+NECK:CN 17C5,NECK,4 sides,m2,,HELD,CN perimeter 2 x (0.30 + 0.30) = 1.20 m x neck height,"{""m2_per_m_height"": 1.2}",NECK_HEIGHT_HELD
+NECK:C4 10D7,NECK,4 sides,m2,,HELD,C4 perimeter 2 x (0.30 + 0.50) = 1.60 m x neck height,"{""m2_per_m_height"": 1.6}",NECK_HEIGHT_HELD
+NECK:C4 108D,NECK,4 sides,m2,,HELD,C4 perimeter 2 x (0.30 + 0.50) = 1.60 m x neck height,"{""m2_per_m_height"": 1.6}",NECK_HEIGHT_HELD
+NECK:CN 17C8,NECK,4 sides,m2,,HELD,CN perimeter 2 x (0.30 + 0.30) = 1.20 m x neck height,"{""m2_per_m_height"": 1.2}",NECK_HEIGHT_HELD
+NECK:C5 108A,NECK,4 sides,m2,,HELD,C5 perimeter 2 x (0.30 + 0.60) = 1.80 m x neck height,"{""m2_per_m_height"": 1.8}",NECK_HEIGHT_HELD
+NECK:C5 10D3,NECK,4 sides,m2,,HELD,C5 perimeter 2 x (0.30 + 0.60) = 1.80 m x neck height,"{""m2_per_m_height"": 1.8}",NECK_HEIGHT_HELD
+NECK:C6 10C2,NECK,4 sides,m2,,HELD,C6 perimeter 2 x (0.30 + 0.70) = 2.00 m x neck height,"{""m2_per_m_height"": 2.0}",NECK_HEIGHT_HELD
+NECK:C9 10DA,NECK,4 sides,m2,,HELD,C9 perimeter 2 x (0.30 + 1.00) = 2.60 m x neck height,"{""m2_per_m_height"": 2.6}",NECK_HEIGHT_HELD
+NECK:C 10A8,NECK,4 sides,m2,,HELD,C perimeter 2 x (0.30 + 0.50) = 1.60 m x neck height,"{""m2_per_m_height"": 1.6}",NECK_HEIGHT_HELD
+NECK:C 10AB,NECK,4 sides,m2,,HELD,C perimeter 2 x (0.30 + 0.50) = 1.60 m x neck height,"{""m2_per_m_height"": 1.6}",NECK_HEIGHT_HELD
+NECK:C 10B4,NECK,4 sides,m2,,HELD,C perimeter 2 x (0.30 + 0.50) = 1.60 m x neck height,"{""m2_per_m_height"": 1.6}",NECK_HEIGHT_HELD
+NECK:C 10B7,NECK,4 sides,m2,,HELD,C perimeter 2 x (0.30 + 0.50) = 1.60 m x neck height,"{""m2_per_m_height"": 1.6}",NECK_HEIGHT_HELD
+NECK:C10 10E8,NECK,4 sides,m2,,HELD,C10 perimeter 2 x (0.30 + 0.70) = 2.00 m x neck height,"{""m2_per_m_height"": 2.0}",NECK_HEIGHT_HELD
+NECK:C 10A4,NECK,4 sides,m2,,HELD,C perimeter 2 x (0.30 + 0.50) = 1.60 m x neck height,"{""m2_per_m_height"": 1.6}",NECK_HEIGHT_HELD
+NECK:CN 180A,NECK,4 sides,m2,,HELD,CN perimeter 2 x (0.30 + 0.30) = 1.20 m x neck height,"{""m2_per_m_height"": 1.2}",NECK_HEIGHT_HELD
+NECK:CN 10F6 (FN one-to-one),NECK,4 sides,m2,,HELD,CN perimeter 2 x (0.30 + 0.30) = 1.20 m x neck height,"{""m2_per_m_height"": 1.2}",NECK_HEIGHT_HELD
+NECK:CN 10EE (FN one-to-one),NECK,4 sides,m2,,HELD,CN perimeter 2 x (0.30 + 0.30) = 1.20 m x neck height,"{""m2_per_m_height"": 1.2}",NECK_HEIGHT_HELD
+NECK:CN 10FE (FN one-to-one),NECK,4 sides,m2,,HELD,CN perimeter 2 x (0.30 + 0.30) = 1.20 m x neck height,"{""m2_per_m_height"": 1.2}",NECK_HEIGHT_HELD
+BOUNDARY-GB (S-BOUN 7FE / 7FC / 810),BOUNDARY_GB,2 sides x 0.40 below N.G.,m2,,HELD,"band 44.07 m x 2 faces x 0.40 (top at N.G., p.14 A-A) = 35.2560 gross (20 x 30 columns through it not deducted: count not printed, M4)","{""gross_m2"": 35.256}",NOTE_SCOPE: the p.14 boundary-wall detail prints no coating; the p.13 note is printed in the isolated-footing details (ERS s.3: not carried to another element without its own evidence)
+BOUNDARY lower G.B + 80 x 30 base,BOUNDARY_GB,all earth faces,m2,,HELD,"p.14 A-A: lower G.B depth not written, wall 'as per excavation depth below N.G.'",{},NOTE_SCOPE + DEPTH_NOT_PRINTED
+STRAPS SB1 / SB2 / SB3,STRAP,2 sides + top,m2,,HELD,strap sections and lengths T-174; ends on footing faces T-219,{},LEVEL_NOT_PRINTED (T-230) + NOTE_SCOPE: straps are not drawn in the p.13 detail
+LIFT-01 pit walls,LIFT_PIT,outer wall faces,m2,,EXCLUDED,"p.14 lift detail: sheet membrane + protection board on the outer faces (T-219 WP.LIFT_PIT, walls HELD on the pit depth); no liquid coat printed there: owned by that line, never twice",{},
+GROUND SLAB (29 panels),GROUND_SLAB,soffit on fill,m2,,EXCLUDED,"slab on grade cast on the compacted fill: a soffit cast on earth cannot be liquid-coated; no damp-proof sheet is printed under it (p.14 'Slab on grade.' draws none): a named exclusion, designer item",{},
+LIQUID WP (all faces),PROCUREMENT,liquid coating material,litres / kg,,HELD,UP-WP-MAT-001 BY_SPEC,{},"PRODUCT_NOT_PRINTED: product, coats and coverage not printed"

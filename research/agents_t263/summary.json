@@ -1,0 +1,86 @@
+{
+ "footing_tops": {
+  "outlines_held_detail": 24,
+  "single_reading_conflict": {
+   "FTG:1B1A": {
+    "SINGLE_high": 12.15,
+    "SINGLE_low": 12.12
+   }
+  },
+  "single_reading_m2_exact": 92.6,
+  "two_tag_held": [
+   "FTG:1B1B"
+  ]
+ },
+ "gb_faces_drawing_confirmed": {
+  "by_class": {
+   "EXTERIOR MAIN": [
+    11,
+    24.062565
+   ],
+   "INTERIOR MAIN": [
+    10,
+    11.3418
+   ]
+  },
+  "faces": 21,
+  "m2": 35.404365
+ },
+ "gb_faces_excluded_above_ground": 14,
+ "gb_faces_held": 85,
+ "gb_soffits_excluded_m2": 55.002,
+ "measured_total_m2": 35.404365,
+ "method": "BURIED_WP_V1",
+ "necks": {
+  "excluded_lift": 4,
+  "held": 32,
+  "m2_per_m_height": [
+   55.6,
+   55.8
+  ]
+ },
+ "runs": 59,
+ "sources": {
+  "structural_sha_prefix": "9f9d1179",
+  "t205": "5f40dfdb",
+  "t233": "2ecb5bf0",
+  "t242": "9455a63d",
+  "t253": "dff9cb79"
+ },
+ "totals": {
+  "BOUNDARY_GB|HELD": {
+   "rows": 2
+  },
+  "FOOTING|EXCLUDED": {
+   "rows": 1
+  },
+  "FOOTING|HELD": {
+   "rows": 25
+  },
+  "GROUND_BEAM|DRAWING-CONFIRMED": 35.404365,
+  "GROUND_BEAM|EXCLUDED": {
+   "rows": 73
+  },
+  "GROUND_BEAM|HELD": {
+   "rows": 85
+  },
+  "GROUND_SLAB|EXCLUDED": {
+   "rows": 1
+  },
+  "LIFT_PIT|EXCLUDED": {
+   "rows": 1
+  },
+  "NECK|EXCLUDED": {
+   "rows": 4
+  },
+  "NECK|HELD": {
+   "rows": 32
+  },
+  "PROCUREMENT|HELD": {
+   "rows": 1
+  },
+  "STRAP|HELD": {
+   "rows": 1
+  }
+ }
+}
