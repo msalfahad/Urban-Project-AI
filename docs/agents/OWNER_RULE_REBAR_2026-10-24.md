@@ -38,3 +38,41 @@ schedule change. Agents do not start work on it until the owner approves a task.
 - Units: engine and boq_line STR.REBAR are kg; tools/boq_export_v1 writes the engine unit (kg, 6 decimals);
   engine/reporting_v3/units.py already converts kg -> t at display with 3 decimals (hides 0.001280 t as 0.001) and has a
   UNIT_CONTROL gate refusing kg rebar in the final BOQ; tools/urban_structural_boq.py prints kg.
+
+## 4. Owner decisions (main chat, 2026-10-24 15:31; essentials in the owner's words)
+
+1. T-273 approved as a controlled task through Lead / Worker / Checker, behind the critical export, completeness and
+   regression work; no change to released V2.9, frozen modules or verified quantities without an approved new method
+   version and independent regression evidence.
+2. Metric tons in T-235 r2: conditionally approved "if the change is small, isolated and does not delay its completion";
+   t is the contractual unit; kg kept in audit data with Checker provenance; convert exactly once; up to six decimals
+   where needed; sum unrounded before converting / rounding totals; no silent schema change, no invalidated verdict;
+   "If the change creates material delay or risk, defer it to T-273."
+3. Alsenan laps: "Do not treat 40d-70d as a universally verified lap range." Each drawing note only for the bar groups
+   it governs: note 9 for the starter-bar situations it names (tension and compression distinguished), the slab
+   temperature-bar 40 d detail where it applies, every other lap HELD until its detailing is established; "at least
+   70d" is a minimum, not an exact value or a maximum; the owner 40 d / 60 d convention is never applied where it
+   conflicts with the drawings or unresolved structural requirements; no duplicate laps, starters, anchorage or
+   already-included BBS lengths.
+4. continuous_beams._with_laps: a CONFIRMED formula defect under the continuous-run model; read-only impact assessment
+   first; never edited in place; a prioritised isolated correction if it affects active quantities.
+- Installed reinforcement, lap allowances and stock-bar procurement / cutting waste stay separate. Total installed =
+  net + separately measured additional laps + other non-duplicated components; the lap tonnage is a review breakdown,
+  never added twice.
+
+## 5. Impact assessment of D-T273-01 (main chat, 15:31; read-only, in-memory instrumentation, engine head 768ff1d)
+
+Method: route G (tools/urban_boq_m2.py, route "G") run on the Alsenan structural DXF with the V5 and V6 generic
+conventions, every continuous_beams._with_laps call recorded in memory and recomputed with the lap-aware count
+(bbs_optimiser.split_run model); no file in the repository written. Result:
+- The defective function IS on the active route G path: 3,564 calls, 11 continuous-beam marks, 38 bar groups,
+  lap factors 40 / 50 / 60 d (the convention triple).
+- The longest bar run is 8.708 m (CB11 bottom bars, high reading); NO run exceeds the 12 m stock, so both formulas give
+  0 laps everywhere: quantity difference 0.000 kg = 0.000000 t on Alsenan (V5 and V6 identical).
+- It is the only copy of this formula in engine/ and tools/ (rebar_model.lap_parts and the column engine use split_run).
+- Route G Alsenan reinforcement is PROVISIONAL only (VERIFIED 0 kg); the released frozen-replay route is not affected.
+- Existing lap content: columns already carry LAP (54 provisional components, base 40 D; 70 D alternative +640.99 kg,
+  flag STR-COL-026) and STARTER components (research/alsenan_column_rebar_s3); slab and pool laps are HELD /
+  procurement only, never in the net. T-273 must not add a second column lap or starter.
+Conclusion: a latent defect (wrong for any run between 12 m and the first correct lap boundary, e.g. 23.8 / 24 / 35 m),
+no effect on current Alsenan quantities; correction belongs in T-273 as a new method version, not an urgent fix.

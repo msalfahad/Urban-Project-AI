@@ -7,6 +7,7 @@ conflicts with something you planned, say so in your report to the main chat ins
 
 | UTC time | What changed | Where | Why |
 |---|---|---|---|
+| 2026-10-24 15:31 | OWNER: T-273 approved (row added QUEUED); t in T-235 r2 conditional; Alsenan lap notes per bar group; D-T273-01 confirmed, impact 0.000 t on Alsenan | OWNER_RULE_REBAR_2026-10-24.md s.4-5, BOARD.md (note, T-273) | Owner's words in the main chat |
 | 2026-10-24 14:23 | OWNER: reinforcement BOQ unit = metric ton (decision); 40 d / 60 d lap method proposed (under assessment, no task yet) | OWNER_RULE_REBAR_2026-10-24.md, BOARD.md note | Owner's words in the main chat |
 | 2026-10-24 13:53 | OWNER: T-267 final clarifications: three separate statuses (software / quantity / code), RUN_TYPE_UNKNOWN (test A12b), tests are not project accuracy, workflow preserved | OWNER_RULE_STAIRS_2026-10-24.md s.6, BOARD.md (note, T-267) | Owner's words in the main chat |
 | 2026-10-24 13:50 | OWNER: S-9 (no generated winders, no walking-line offset), five corrections (drawn goings, landing polygons, fixed vs maximum run, per-quantity release, scenario separation); Universal Design Code s.4 scope registered (private houses excluded) | OWNER_RULE_STAIRS_2026-10-24.md s.4, BOARD.md (note, T-267) | Owner's words in the main chat |
