@@ -319,7 +319,7 @@ Risk **CRITICAL** (recommended validation L4). Ask about: stair, railing, riser,
 
 **Open first:**
 
-- `engine/source/stair_geometry.py` (336 lines, CRITICAL, frozen; imported by 7 directly, 180 transitively)
+- `engine/source/stair_geometry.py` (336 lines, CRITICAL, frozen; imported by 8 directly, 181 transitively)
 - `engine/source/stair_measure.py` (119 lines, CRITICAL, frozen; imported by 3 directly, 114 transitively)
 - `engine/source/arch_measure.py` (1165 lines, HIGH; imported by 20 directly, 89 transitively, SHARED)
 
