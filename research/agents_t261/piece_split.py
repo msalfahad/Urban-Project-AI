@@ -1,0 +1,154 @@
+"""T-261: blockwork register v2 blockers, wall by wall: the piece split of a wall with a held piece (any villa).
+
+Research module, imported by nothing in engine/; it moves no BOQ line and edits no register (register v2, T-228, is read
+only). It answers one question per held-net wall: which part of the wall's net is established by printed evidence and
+which part stays HELD, and with which openings.
+
+Rule R-T261-1 (piece split, any villa; provenance: R-T228-1 point 5 'a range is carried as its common part + a HELD
+increment', BLOCKWORK_RESOLUTION_PROGRAMME.md s.2 / s.5, ERS s.3 'build before deduct', WORKFLOW_CONTROLS s.5):
+  1. A wall is cut into height pieces between drawn faces (column faces, band edges). A piece is ESTABLISHED when its
+     base is the storey basis and its top is a member whose depth is printed (or a printed slab underside), so its
+     height comes from the member; every other piece is HELD with the missing item named. Allowed height sources:
+     'member' (printed depth under Q-60 A), 'slab' (printed slab thickness), 'checker' (a Checker's own figure).
+     A finish height, a freelancer height, a default or a storey height with no member is refused (BAD_SOURCE).
+  2. A piece whose base is not the storey basis (a stair-foot landing, a sunken floor) or whose top is a stair member
+     with no floor-level member printed with it (R-T228-3) is HELD, whatever its top member says.
+  3. Each opening is assigned to the ONE piece its two jambs lie in, by drawn geometry (jamb offsets measured from that
+     piece's start face). An opening whose jambs straddle a piece boundary cannot be split without its head geometry:
+     the wall gets no established part (STRADDLE), it stays wholly HELD.
+  4. Established part = sum(length x height of established pieces) - sum(openings inside them). HELD increment = the
+     held pieces with the openings inside them; it is reported as a figure ('not a quantity') or a bound, never 0 and
+     never added to an established total. Wall net = established part + HELD increment.
+  5. The pieces close to the wall's census length (gross_from_pieces lesson, Checker 2026-10-23 18:01): a residual
+     length between the pieces and the census is itself a HELD piece with its cause named, never spread over the pieces.
+  6. Lengths are metres; a value above 100 m on a villa wall is a millimetre slip and is refused (UNITS).
+"""
+from __future__ import annotations
+
+from dataclasses import dataclass, field
+
+ALLOWED_SOURCES = ("member", "slab", "checker")
+REFUSED_SOURCES = ("finish", "freelancer", "default", "storey", "convention")
+TOL = 0.0015
+
+
+class SplitError(ValueError):
+    def __init__(self, code: str, msg: str):
+        super().__init__(f"{code}: {msg}")
+        self.code = code
+
+
+@dataclass
+class Piece:
+    pid: str
+    length_m: float
+    height_m: float | None = None          # None = no established height
+    source: str = ""                        # member / slab / checker (rule 1)
+    base_is_storey_basis: bool = True       # rule 2
+    top_is_stair_member: bool = False       # rule 2 (R-T228-3)
+    floor_member_with_stair: bool = False   # a floor-level member printed beside the stair mark
+    held_item: str = ""                     # the exact missing item when the piece is HELD
+    held_figure_m2: str = ""                # text figure / bound for a HELD piece ('not a quantity')
+
+
+@dataclass
+class Opening:
+    oid: str
+    piece: str
+    jamb_a_m: float     # offsets from the piece's start face
+    jamb_b_m: float
+    area_m2: float
+
+
+@dataclass
+class Split:
+    wall_id: str
+    established_m2: float | None
+    established_gross_m2: float
+    established_deductions_m2: float
+    held_pieces: list = field(default_factory=list)
+    held_openings: list = field(default_factory=list)
+    status: str = ""
+    why: str = ""
+
+
+def _check_len(v: float, what: str):
+    if v is None or v < 0:
+        raise SplitError("NEGATIVE", f"{what} {v}")
+    if v > 100.0:
+        raise SplitError("UNITS", f"{what} {v} m on a villa wall: a millimetre value, refused")
+
+
+def piece_established(p: Piece) -> tuple[bool, str]:
+    """Rule 1 / 2: is this piece's height established, and if not, why."""
+    if p.source in REFUSED_SOURCES:
+        raise SplitError("BAD_SOURCE", f"{p.pid}: height source '{p.source}' never sets a block height (Q-60 A)")
+    if p.height_m is None:
+        return False, p.held_item or "no member with a printed depth above the piece (Q-60 A has nothing to stop at)"
+    if p.source not in ALLOWED_SOURCES:
+        raise SplitError("BAD_SOURCE", f"{p.pid}: height {p.height_m} with no named source")
+    if not p.base_is_storey_basis:
+        return False, p.held_item or "piece stands on a printed level other than the storey basis (base not established)"
+    if p.top_is_stair_member and not p.floor_member_with_stair:
+        return False, p.held_item or "top member is a stair member with no floor-level member printed (R-T228-3)"
+    if p.height_m <= 0:
+        raise SplitError("NEGATIVE", f"{p.pid}: height {p.height_m}")
+    return True, ""
+
+
+def split_wall(wall_id: str, pieces: list[Piece], openings: list[Opening], census_length_m: float) -> Split:
+    """Rule R-T261-1. Returns the established part, the deductions inside it and the HELD increment."""
+    _check_len(census_length_m, "census length")
+    ids = [p.pid for p in pieces]
+    if len(ids) != len(set(ids)):
+        raise SplitError("DUPLICATE_PIECE", f"{wall_id}: {ids}")
+    for p in pieces:
+        _check_len(p.length_m, f"{p.pid} length")
+    total = sum(p.length_m for p in pieces)
+    if abs(total - census_length_m) > TOL:
+        raise SplitError("NOT_CLOSED", f"{wall_id}: pieces {total:.4f} m vs census {census_length_m:.4f} m; a residual "
+                                       "is its own HELD piece with its cause (rule 5)")
+    by_id = {p.pid: p for p in pieces}
+    est = {}
+    reasons = {}
+    for p in pieces:
+        ok, why = piece_established(p)
+        est[p.pid] = ok
+        if not ok:
+            reasons[p.pid] = why
+    for o in openings:
+        if o.piece not in by_id:
+            raise SplitError("UNKNOWN_PIECE", f"{o.oid} -> {o.piece}")
+        p = by_id[o.piece]
+        a, b = sorted((o.jamb_a_m, o.jamb_b_m))
+        _check_len(b, f"{o.oid} jamb")
+        if o.area_m2 <= 0:
+            raise SplitError("NEGATIVE", f"{o.oid} area {o.area_m2}")
+        if a < -TOL or b > p.length_m + TOL:
+            return Split(wall_id, None, 0.0, 0.0, [p.pid for p in pieces if not est[p.pid]], [o.oid], "STRADDLE",
+                         f"{o.oid} jambs {a:.3f} .. {b:.3f} m leave piece {p.pid} (0 .. {p.length_m:.3f}): no split "
+                         "without the head geometry; the wall stays wholly HELD")
+    held = [p for p in pieces if not est[p.pid]]
+    gross = sum(p.length_m * p.height_m for p in pieces if est[p.pid])
+    ded = sum(o.area_m2 for o in openings if est[by_id[o.piece].pid])
+    held_ops = [o.oid for o in openings if not est[o.piece]]
+    if not any(est.values()):
+        return Split(wall_id, None, 0.0, 0.0, [p.pid for p in held], held_ops, "HELD",
+                     "no piece has an established height")
+    if ded - gross > TOL:
+        raise SplitError("NEGATIVE", f"{wall_id}: deductions {ded:.3f} exceed the established gross {gross:.3f}")
+    status = "SPLIT" if held else "ESTABLISHED"
+    why = "; ".join(f"{k}: {v}" for k, v in reasons.items())
+    return Split(wall_id, round(gross - ded, 4), round(gross, 4), round(ded, 4), [p.pid for p in held], held_ops,
+                 status, why)
+
+
+def wall_total_text(s: Split, held_figure: str) -> str:
+    """Rule 4: the wall net is never a single number while a piece is HELD; the held part is never 0."""
+    if s.status == "ESTABLISHED":
+        return f"{s.established_m2:.4f}"
+    if s.established_m2 is None:
+        return f"HELD (figure {held_figure}, not a quantity)"
+    if not held_figure or held_figure.strip() in ("0", "0.0", "0.000"):
+        raise SplitError("HELD_AS_ZERO", f"{s.wall_id}: the HELD increment needs its figure or bound, never 0")
+    return f"{s.established_m2:.4f} established + HELD increment ({held_figure}, not a quantity)"
