@@ -1,0 +1,128 @@
+{
+ "oblique_runs": {
+  "BM-GF-017#BAND0018": {
+   "La_m": 2.89066,
+   "Lb_m": 3.03827,
+   "b_drawn_m": 0.2,
+   "b_schedule": 0.2,
+   "carrier_face": "325",
+   "depth_m": 0.5,
+   "edges": [
+    "27D",
+    "282"
+   ],
+   "end_triangle_m2": 0.014761,
+   "mark": "B4",
+   "plan_m2": 0.592893,
+   "start_face": "460"
+  },
+  "BM-GF-021#BAND0021.1": {
+   "La_m": 2.37438,
+   "Lb_m": 2.64537,
+   "b_drawn_m": 0.2,
+   "b_schedule": 0.2,
+   "carrier_face": "325",
+   "depth_m": 0.5,
+   "edges": [
+    "288",
+    "285"
+   ],
+   "end_triangle_m2": 0.027099,
+   "mark": "CB4",
+   "plan_m2": 0.501975,
+   "start_face": "362"
+  }
+ },
+ "schema": "T252_R2_INPUT",
+ "source_dxf_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+ "units": "m",
+ "void_ring": {
+  "area_m2": 0.666406,
+  "column_outlines_in_ring": [],
+  "marks": [
+   "46E",
+   "46F",
+   "470",
+   "471"
+  ],
+  "max_gap_m": 0.0,
+  "outer_handles": [
+   "2EE",
+   "46D",
+   "2EF",
+   "42D",
+   "312",
+   "2A9",
+   "313",
+   "437"
+  ],
+  "outer_m2": 4.356522,
+  "parts_m2": [
+   0.12873,
+   0.14633,
+   0.39135
+  ],
+  "polygon_check_m2": 0.666408,
+  "replaced_bands": [
+   "BAND0050@GF",
+   "BAND0051@GF",
+   "BAND0052@GF",
+   "BAND0053@GF"
+  ],
+  "route_g_bands_in_ring": {
+   "BAND0003@GF": {
+    "band_m2": 0.70378,
+    "in_ring_m2": 0.00178,
+    "title": "B8 BOUND"
+   },
+   "BAND0006@GF": {
+    "band_m2": 0.33933,
+    "in_ring_m2": 0.00047,
+    "title": "UNBOUND"
+   },
+   "BAND0041.2@GF": {
+    "band_m2": 1.79713,
+    "in_ring_m2": 0.00117,
+    "title": "CB1 BOUND"
+   },
+   "BAND0050@GF": {
+    "band_m2": 0.12362,
+    "in_ring_m2": 0.12295,
+    "title": "B7 BOUND"
+   },
+   "BAND0051@GF": {
+    "band_m2": 0.09494,
+    "in_ring_m2": 0.0948,
+    "title": "B7 BOUND"
+   },
+   "BAND0052@GF": {
+    "band_m2": 0.06965,
+    "in_ring_m2": 0.06943,
+    "title": "B7 BOUND"
+   },
+   "BAND0053@GF": {
+    "band_m2": 0.08759,
+    "in_ring_m2": 0.0871,
+    "title": "UNBOUND"
+   }
+  },
+  "t139_faces_in_ring_m2": {
+   "GF-035": 0.14633,
+   "GF-040": 0.39134,
+   "GF-060": 0.12873
+  },
+  "void_handles": [
+   "2F0",
+   "318",
+   "310",
+   "2A9",
+   "311",
+   "317"
+  ],
+  "void_m2": 3.690116,
+  "widths_m": [
+   0.2,
+   0.2
+  ]
+ }
+}
