@@ -1,0 +1,36 @@
+item,component,L_m,b_m,d_m,status,value_m3,low_m3,high_m3,basis
+7FC#1,BOUNDARY-GB at N.G.,1.15,0.2,0.4,DRAWING-CONFIRMED (CALCULATED),0.092,,,"Y run, 0 corner square(s) owned; ends: COLUMN 1FC -> CALCULATED; POOL_WALL 7C6 -> CALCULATED"
+7FE#1,BOUNDARY-GB at N.G.,31.37,0.2,0.4,DRAWING-CONFIRMED (CALCULATED),2.5096,,,"X run, 2 corner square(s) owned; ends: corner (continues into the next run) -> CALCULATED; corner (continues into the next run) -> CALCULATED"
+7FE#2,BOUNDARY-GB at N.G.,8.1,0.2,0.4,DRAWING-CONFIRMED (CALCULATED),0.648,,,"Y run, 0 corner square(s) owned; ends: COLUMN+GROUND_BEAM_FACE 137/204 -> CALCULATED; corner (continues into the next run) -> CALCULATED"
+7FE#3,BOUNDARY-GB at N.G.,2.25,0.2,0.4,DRAWING-CONFIRMED (CALCULATED),0.18,,,"Y run, 0 corner square(s) owned; ends: POOL_WALL 7C6 -> CALCULATED; corner (continues into the next run) -> CALCULATED"
+810#1,BOUNDARY-GB at N.G.,1.2,0.2,0.4,DRAWING-CONFIRMED (CALCULATED),0.096,,,"X run, 0 corner square(s) owned; ends: ground-beam face 10B (annex exterior 10B+7D1) -> HELD; COLUMN+GROUND_BEAM_FACE 10A/218 -> CALCULATED"
+BOUNDARY columns 20x30 inside the beam,BOUNDARY-GB column share,,,0.4,HELD,,,,"0.024 m3 per column; boundary column count / positions not printed ('SEE ARCH PLAN', none drawn)"
+107+7CE#1,GB-EXTERIOR MAIN at the N.G. datum,0.3639,0.3,0.95,DRAWING-CONFIRMED (proposal; T-242 HELD D-35),0.1062,0.0894,0.1062,plan 0.1118 m2 x (top +0.95 - N.G. +-0.00); T-242 range 0.0894 .. 0.1062
+109+7CB#2,GB-EXTERIOR MAIN at the N.G. datum,4.4,0.3,0.95,DRAWING-CONFIRMED (proposal; T-242 HELD D-35),1.254,1.0560,1.2540,plan 1.3200 m2 x (top +0.95 - N.G. +-0.00); T-242 range 1.0560 .. 1.2540
+109+7CB#3,GB-EXTERIOR MAIN at the N.G. datum,2.7,0.3,0.95,DRAWING-CONFIRMED (proposal; T-242 HELD D-35),0.7695,0.6480,0.7695,plan 0.8100 m2 x (top +0.95 - N.G. +-0.00); T-242 range 0.6480 .. 0.7695
+10A+7C9#1,GB-EXTERIOR MAIN at the N.G. datum,4.3,0.3,0.95,DRAWING-CONFIRMED (proposal; T-242 HELD D-35),1.2255,1.0320,1.2255,plan 1.2900 m2 x (top +0.95 - N.G. +-0.00); T-242 range 1.0320 .. 1.2255
+114+115+7DF#2,GB-EXTERIOR MAIN at the N.G. datum,1.0,0.3,0.95,DRAWING-CONFIRMED (proposal; T-242 HELD D-35),0.285,0.2400,0.2850,plan 0.3000 m2 x (top +0.95 - N.G. +-0.00); T-242 range 0.2400 .. 0.2850
+145+7CA#1,GB-EXTERIOR MAIN at the N.G. datum,1.9,0.3,0.95,DRAWING-CONFIRMED (proposal; T-242 HELD D-35),0.5415,0.4560,0.5415,plan 0.5700 m2 x (top +0.95 - N.G. +-0.00); T-242 range 0.4560 .. 0.5415
+170+7C3#1,GB-EXTERIOR MAIN at the N.G. datum,2.4,0.3,0.95,DRAWING-CONFIRMED (proposal; T-242 HELD D-35),0.684,0.5760,0.6840,plan 0.7200 m2 x (top +0.95 - N.G. +-0.00); T-242 range 0.5760 .. 0.6840
+170+7C3#2,GB-EXTERIOR MAIN at the N.G. datum,3.37,0.3,0.95,DRAWING-CONFIRMED (proposal; T-242 HELD D-35),0.9605,0.8088,0.9605,plan 1.0110 m2 x (top +0.95 - N.G. +-0.00); T-242 range 0.8088 .. 0.9605
+170+7C3#3,GB-EXTERIOR MAIN at the N.G. datum,3.35,0.3,0.95,DRAWING-CONFIRMED (proposal; T-242 HELD D-35),0.9547,0.8040,0.9547,plan 1.0050 m2 x (top +0.95 - N.G. +-0.00); T-242 range 0.8040 .. 0.9547
+170+7C3#4,GB-EXTERIOR MAIN at the N.G. datum,3.25,0.3,0.95,DRAWING-CONFIRMED (proposal; T-242 HELD D-35),0.9263,0.7800,0.9263,plan 0.9750 m2 x (top +0.95 - N.G. +-0.00); T-242 range 0.7800 .. 0.9263
+7D0+FC#1,GB-EXTERIOR MAIN at the N.G. datum,2.975,0.3,0.95,DRAWING-CONFIRMED (proposal; T-242 HELD D-35),0.8479,0.7140,0.8479,plan 0.8925 m2 x (top +0.95 - N.G. +-0.00); T-242 range 0.7140 .. 0.8479
+7D0+FC#2,GB-EXTERIOR MAIN at the N.G. datum,5.745,0.3,0.95,DRAWING-CONFIRMED (proposal; T-242 HELD D-35),1.6373,1.3788,1.6373,plan 1.7235 m2 x (top +0.95 - N.G. +-0.00); T-242 range 1.3788 .. 1.6373
+7D0+FC#3,GB-EXTERIOR MAIN at the N.G. datum,6.35,0.3,0.95,DRAWING-CONFIRMED (proposal; T-242 HELD D-35),1.8097,1.5240,1.8097,plan 1.9050 m2 x (top +0.95 - N.G. +-0.00); T-242 range 1.5240 .. 1.8097
+7D0+FC#4,GB-EXTERIOR MAIN at the N.G. datum,1.2,0.3,0.95,DRAWING-CONFIRMED (proposal; T-242 HELD D-35),0.342,0.2880,0.3420,plan 0.3600 m2 x (top +0.95 - N.G. +-0.00); T-242 range 0.2880 .. 0.3420
+7E0+FD#1,GB-EXTERIOR MAIN at the N.G. datum,3.35,0.3,0.95,DRAWING-CONFIRMED (proposal; T-242 HELD D-35),0.9547,0.8040,0.9547,plan 1.0050 m2 x (top +0.95 - N.G. +-0.00); T-242 range 0.8040 .. 0.9547
+7E0+FD#2,GB-EXTERIOR MAIN at the N.G. datum,3.25,0.3,0.95,DRAWING-CONFIRMED (proposal; T-242 HELD D-35),0.9263,0.7800,0.9263,plan 0.9750 m2 x (top +0.95 - N.G. +-0.00); T-242 range 0.7800 .. 0.9263
+ARC:157+158,GB-EXTERIOR MAIN at the N.G. datum,6.0873,0.3,0.95,DRAWING-CONFIRMED (proposal; T-242 HELD D-35),1.7349,1.4610,1.7349,plan 1.8262 m2 x (top +0.95 - N.G. +-0.00); T-242 range 1.4610 .. 1.7349
+10B+7D1#1,GB-EXTERIOR ANNEX (CONFLICT),1.2,0.3,,CONFLICT,,0.09,,literal reading 0.25 m = 0.0900 m3; section reading: no printed depth (no value); T-242 literal 0.10 .. 0.25 narrowed to 0.25 by the datum
+10B+7D1#2,GB-EXTERIOR ANNEX (CONFLICT),2.3,0.3,,CONFLICT,,0.1725,,literal reading 0.25 m = 0.1725 m3; section reading: no printed depth (no value); T-242 literal 0.10 .. 0.25 narrowed to 0.25 by the datum
+136+7D5#1,GB-EXTERIOR ANNEX (CONFLICT),6.0,0.3,,CONFLICT,,0.4425,,literal reading 0.25 m = 0.4425 m3; section reading: no printed depth (no value); T-242 literal 0.10 .. 0.25 narrowed to 0.25 by the datum
+137+138#1,GB-EXTERIOR ANNEX (CONFLICT),2.4,0.3,,CONFLICT,,0.1725,,literal reading 0.25 m = 0.1725 m3; section reading: no printed depth (no value); T-242 literal 0.10 .. 0.25 narrowed to 0.25 by the datum
+13D+7D2#1,GB-EXTERIOR ANNEX (CONFLICT),5.8,0.3,,CONFLICT,,0.4425,,literal reading 0.25 m = 0.4425 m3; section reading: no printed depth (no value); T-242 literal 0.10 .. 0.25 narrowed to 0.25 by the datum
+13E+7D6#2,GB-EXTERIOR ANNEX (CONFLICT),0.5,0.3,,CONFLICT,,0.0375,,literal reading 0.25 m = 0.0375 m3; section reading: no printed depth (no value); T-242 literal 0.10 .. 0.25 narrowed to 0.25 by the datum
+7D4+F8#1,GB-EXTERIOR ANNEX (CONFLICT),5.45,0.3,,CONFLICT,,0.4012,,literal reading 0.25 m = 0.4012 m3; section reading: no printed depth (no value); T-242 literal 0.10 .. 0.25 narrowed to 0.25 by the datum
+7D4+F8#2,GB-EXTERIOR ANNEX (CONFLICT),4.25,0.3,,CONFLICT,,0.3337,,literal reading 0.25 m = 0.3337 m3; section reading: no printed depth (no value); T-242 literal 0.10 .. 0.25 narrowed to 0.25 by the datum
+ARC:139+13A,GB-EXTERIOR ANNEX (CONFLICT),1.8063,0.3,,CONFLICT,,0.1355,,literal reading 0.25 m = 0.1355 m3; section reading: no printed depth (no value); T-242 literal 0.10 .. 0.25 narrowed to 0.25 by the datum
+178+7DB#1,GB-COURT,3.8,0.3,,HELD,,0.456,1.083,"candidates [0.4, 0.95]; BEAM_JUNCTION 145+7CA -> COLUMN COL:230"
+185+7C7#1,GB-COURT,0.6,0.3,,HELD,,0.054,0.171,"candidates [0.3, 0.4, 0.95]; COLUMN COL:230 -> BEAM_JUNCTION 109+7CB"
+1811+1812#1,GB-COURT,1.3,0.3,,HELD,,0.117,0.156,"candidates [0.3, 0.4]; ends on the boundary band face (7FE, band continuous across the run's 0.30 width): plan length closed; 3-D support with the section (HELD)"
