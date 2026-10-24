@@ -42,7 +42,7 @@ beside a partial-width column); a drawn line stopping short of its named carrier
 
 ## 2. Result: r4 vs the drawn faces (m of face, m2 = m x the r4 depth of that run)
 
-106 of 126 span-sides AGREE with r4 within 2.5 mm (both methods). 20 rows change:
+106 of the 118 span-sides (59 spans x A / B) AGREE with r4 within 2.5 mm (both methods); 12 side rows and 8 end-face rows change:
 
 | Run, side | r4 L | W | T' | delta m | r4 depth basis | delta m2 | status | cause |
 |---|---|---|---|---|---|---|---|---|
