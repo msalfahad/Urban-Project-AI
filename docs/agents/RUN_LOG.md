@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-24 21:01 UTC | Worker 3 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-24T20:50Z | Verifier | STARTED | run unknown | repo-attached routine | task state: READY T-273 r2, T-276 (per run log) | self-check pending
 - 2026-10-24 20:44 UTC | Worker 1 | SUCCESS | T-273 r2 READY (agents/task-T-273 @ 404f34d3) | s.6.3 boundaries 12.00/12.01/22.80/22.81 m -> 0/1/1/2 at 1.2 m lap in 4 input forms (exact rational count; frozen 22.81 -> 1); s.6.2 column ledger: 56 LAP (54 PROV + 2 LB, 496.986 kg) + 36 STARTER reconciled, every lap zone counted exactly twice (footing top: starter projection + core from footing top, 31 chains; joints 56), no double count; 70 D +640.99 kg = LAP 372.736 + ANCHORAGE 268.243 SCENARIO; finding F-T273R2-01 foundation cores' LOWER_BOUND ignores T-206 0.17 m underlay (-74.381 kg if formation at limit); s.6.1 five categories + coupler rows; nothing released | ERS: read, s.3 (reconcile in units to the physical cause) applied | self-check codemap PASS, pytest t061 PASS, freeze PASS; L3 tests PASS, full suite not rerun (time); problem: none
 - 2026-10-24 20:40 UTC | Worker 2 | STARTED | run session_012G3Hyfc6z1WjwwRZ7rmx6u | repo-attached routine | task state: none yet | self-check pending
