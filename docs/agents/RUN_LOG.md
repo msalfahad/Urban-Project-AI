@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-24T09:20Z | Worker 1 | STARTED | run session_01BqG9J4pPmq4Nd5MUKx8juH | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-24T09:14Z | Worker 3 | SUCCESS | T-235 r2 + part (4) READY (agents/task-T-235 @ 73bf8b3e) | Export tool now takes Checker V2 verdicts (new schema URBAN_CHECKER_VERDICT_V2, validator, verdict-add helper filling the binding from the candidate lines) and the merged T-236 completeness report; a BOQ line reads VERIFIED only with a COUNTED WHOLE V2 record + a passing completeness record (synthetic footings 4.000 m3, checker 4.010 +0.25 % -> VERIFIED; MISSING / DUPLICATED / foreign-line report / trade spanning two lines / stale / 12 broken bindings -> not verified or refused). No engine quantity changed; real export still refused by probe 10 until T-245; residual: T-236 report has no identity fields (proposal in handoff). | self-check PASS codemap / PASS pytest t061 / PASS freeze; L2 0 failed, known_failures NEW 0; problem: none
 - 2026-10-24T09:00Z | Worker 3 | STARTED | run session_013DHWVLoyvCwuoko1rwTcRk | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-24T08:51Z | Verifier | STARTED | run unknown | repo-attached routine | task state: READY T-228, T-250, T-219, T-146+T-247 (Gate B) | self-check pending
