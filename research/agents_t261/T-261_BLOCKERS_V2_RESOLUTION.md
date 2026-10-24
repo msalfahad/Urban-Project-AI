@@ -10,6 +10,54 @@ ERS: read; s.2.1 (each piece is its own physical element), s.2.2 evidence hierar
 schedule / frames, Checker figures), s.3 build before deduct (an opening is deducted only from the piece it physically
 pierces), s.4 rule + test, s.7 row below.
 
+## 00. r3: 1F-W18 and 1F-W24 from drawn member extents (rule R-T261-1 point 8)
+
+Worker 2, claim 2026-10-24 17:41 UTC, after the Checker's 17:00 rejection (gate e / f / h: both walls carried register
+v2's weighted gross onto a length that is not a drawn member extent; the package's own point 7 was bypassed by
+`drawn_extent_m = V2_EXT`). Physical element first (ERS s.2.1): what slab or beam soffit stands over each metre of the
+wall centreline. Own re-measure on 'ST7757 dxf.dxf' (Drive copy decoded this run, 3,153,037 bytes), 1F roof slab; wall
+centrelines from the arch faces of P7757.dxf (P7757_DXF_COMPRESSED.zip), frame by the common column 2FDB = ST 667;
+depths from the SBT schedule attributes read this run (1E8E B4 20x50, 1E99 B5 20x50, 1EA4 B6 25x50, 1F33 B19 40x75);
+storey 4.20 and slab 0.16 (ST p.8 note 18) on the merged register basis; block to the soffit above (Q-60 A).
+
+| Wall | Piece (south -> north or as drawn) | Length m | Source (handles) | h m | m2 |
+|---|---|---|---|---|---|
+| 1F-W18 (0.15 black, faces AFF / B0B-B0D) | B5 band | 3.475 | 6C2 / 6C3, label 6C4; column 697 S face -> 667 N face | 4.20 - 0.50 = 3.70 | 12.8575 |
+| | B19 sliver | 0.01515 | diagonal band 6B1 / 6B2 (label 6CF, rot 6.91); 6B1 crosses the centreline 0.01515 m below the 667 S face | 4.20 - 0.75 = 3.45 | 0.0523 |
+| | slab 1F-057 | 0.99533 | T-234 panel 1F-057, 6B1 -> B6 face 6D3 | 4.04 | 4.0211 |
+| | B6 band | 0.250 | 6D2 / 6D3, label 6D4 | 3.70 | 0.9250 |
+| | slab corner 1F-076/c0 | 0.46452 | T-234 corner outside the ring: 6D2 -> through-wall face B1B, at r 2.704 .. 3.025 from the opening centre (circle 649 r 2.211, ring outer arc 64A r 2.411); slab on the centreline 0.9646 m to the arc | 4.04 | 1.8767 |
+| | **whole wall** | **5.200** (= census) | no opening (T-175 / T-249) | | **19.7326** (2.960 m3), nothing held |
+| 1F-W24 (0.15 black, faces C22 / C23) | slab 1F-094 | 1.14234 | B4 band face 5C4 -> B6 face 6E0 | 4.04 | 4.6151 |
+| | B6 band | 0.250 | 6E0 / 6DF, label 76C | 3.70 | 0.9250 |
+| | dome opening 1F-073 | 1.05766 | 6DF -> north wall face, inside arc 5FF r 2.211 (S-OPENING 604 .. 617) | not drawn | HELD (1.05766 m), never 0 |
+| | **established** | 1.39234 of 2.450 | no opening | | **5.5401** + HELD increment |
+
+Why r2 differed: register v2's pieces for these walls came from T-143, sampled on the old 5.275 m run (pieces summing
+5.21 m, weighted height 3.767 applied to the census): 1F-W18 17.934 on 4.761 m (+0.078 m2 over the drawn 17.856 on
+4.7355 m), 1F-W24 5.651 on 1.426 m (+0.111 m2, +2.0 %). The 'dome opening' piece of 1F-W18 (r2 0.439 m HELD) is not in
+the opening: it lies in the flat slab corner of the dome square outside the ring, so the block runs to that slab's
+underside; no reason was found why a cast corner slab would not close a partition top (it is the same slab type as
+1F-057). Both agree with the Checker's 17:00 own figures (19.733 whole / 5.540 + HELD 1.0577).
+
+Effect (proposed, nothing applied): split / settled established 153.1125 (r2) -> 154.8007 m2 on 9 walls (8 split +
+1F-W18 settled whole), m3 28.149 -> 28.402; established net 449.260 -> 604.061 m2 proposed. The 7 walls the Checker
+agreed are unchanged.
+
+Rule R-T261-1 point 8 (any villa): rule 7 holds for every established member / slab piece of a split, inherited or new;
+an extent taken from an earlier register (gross or weighted height carried onto a length), a census remainder or any
+extent not re-derived on the drawing is refused (EXTENT_UNNAMED, markers in piece_split.INHERITED_EXTENT_MARKERS).
+Tests: villa N8 (slab panel + band + slab corner outside a ring + dome opening HELD, mirrored, whole-wall case);
+adverse: V2_EXT / register gross / census remainder / weighted / closed-to-census extents refused, slab corner at the
+storey height refused (BAD_SOURCE); the r2 test that compared these walls' gross with register v2 encoded the defect and
+is replaced by a test that no established piece carries an inherited extent plus the drawn-extent hand truth.
+
+Lessons row (ERS s.7, proposed): "Blockwork split 1F-W18 / 1F-W24 (T-261 r2, Checker 17:00) | established pieces carried
+from an earlier register as gross / weighted height on a non-drawn length | the drawn-extent rule was applied only to
+the pieces the reviewer named | every established piece, inherited or new, names its member's drawn extent and handles;
+a dome-square corner outside the ring is slab (block to its soffit) | tests/t261_blocker_split r3 (adverse: inherited
+extent refused) | REJECTED -> r3".
+
 ## 0. r2: the three re-measured walls (rule R-T261-1 point 7)
 
 Cause of the rejection (own reading, agrees with the Checker): r1 took the established length of 1F-W04, 2F-W07 and

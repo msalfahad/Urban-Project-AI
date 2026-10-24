@@ -227,30 +227,57 @@ WALLS = {
     "1F-W18": dict(
         census=5.200,
         pieces=[
-            P.Piece("E B5 + slab 1F-057 + B6 (register gross 17.934)", 4.761, round(17.934 / 4.761, 6), "member",
-                    drawn_extent_m=4.761, extent_source=V2_EXT),
-            P.Piece("H dome opening 1F-076", 0.439, None,
-                    held_item="under the open dome ring (T-139 face 1F-076): top of wall not drawn; DETAIL OF DOME "
-                              "(1A18, '(N.I.S)' 1A19) prints ring bars only (3%%c16 1A47, 3%%c18 1A4B, 8%%c8/m 1A29)",
-                    held_figure_m2="0.439 m, height not drawn"),
+            P.Piece("E B5 band", 3.475, 3.70, "member", drawn_extent_m=3.475,
+                    extent_source="ST B5 band 6C2 / 6C3 (label 6C4 rot 90) from the column 697 south face to the column "
+                                  "667 north face; SBT 1E99 B5 20x50; 1F 4.20 - 0.50"),
+            P.Piece("E B19 sliver", 0.01515, 3.45, "member", drawn_extent_m=0.01515,
+                    extent_source="ST diagonal B19 band 6B1 / 6B2 (label 6CF rot 6.91): face 6B1 crosses the wall "
+                                  "centreline 0.01515 m south of the column 667 south face; SBT 1F33 B19 40x75; "
+                                  "1F 4.20 - 0.75"),
+            P.Piece("E slab 1F-057", 0.99533, 4.04, "slab", drawn_extent_m=0.99533,
+                    extent_source="T-234 slab panel 1F-057 (DRAWING-CONFIRMED, Checker-verified ledger) on the "
+                                  "centreline from B19 face 6B1 to B6 face 6D3; t 0.16 ST p.8 note 18; 1F 4.20 - 0.16"),
+            P.Piece("E B6 band", 0.250, 3.70, "member", drawn_extent_m=0.250,
+                    extent_source="ST B6 band 6D2 / 6D3 (label 6D4), 0.250 m across the wall; SBT 1EA4 B6 25x50; "
+                                  "1F 4.20 - 0.50"),
+            P.Piece("E slab corner 1F-076/c0", 0.46452, 4.04, "slab", drawn_extent_m=0.9646,
+                    extent_source="T-234 slab panel 1F-076/c0 (dome square corner outside the ring, DRAWING-CONFIRMED): "
+                                  "on the centreline from B6 face 6D2 to the ring outer arc 64A (r 2.411, centre of "
+                                  "opening circle 649) 0.9646 m; the wall piece (6D2 -> through-wall face B1B) lies at "
+                                  "r 2.704 .. 3.025, outside the ring; t 0.16; 1F 4.20 - 0.16"),
         ],
         openings=[],
         extra_held="",
-        handles="no opening in the run (T-175 hosts, T-249 inventory 29 / 29 windows)",
+        handles=(f"{ARCH}: faces AFF / B0B-B0D (0.15), column 2FDB (= ST 667) in the run, through-wall face B1B at the "
+                 "south end; no opening in the run (T-175 hosts, T-249 inventory 29 / 29 windows); "
+                 f"{ST}: 1F roof slab, frame = arch columns (2FDB = 667); census 5.200 = 697 south face -> 667 north "
+                 "face 3.475 + 667 south face -> B1B 1.725"),
+        settled=("r3: every piece from the drawn member / slab extent over the wall centreline (rule 8; register v2's "
+                 "gross 17.934 on 4.761 m withdrawn, it was T-143's pieces sampled on the old 5.275 run); the r2 'dome "
+                 "opening' piece 0.439 m is slab corner 1F-076/c0 outside the ring (0.46452 m, block to the slab "
+                 "underside, Q-60 A): the wall is established whole"),
         class_="SS"),
     "1F-W24": dict(
         census=2.450,
         pieces=[
-            P.Piece("E slab 1F-094 + B6 (register gross 5.651)", 1.426, round(5.651 / 1.426, 6), "member",
-                    drawn_extent_m=1.426, extent_source=V2_EXT),
-            P.Piece("H dome opening 1F-073", 1.024, None,
-                    held_item="under the open dome ring (T-139 face 1F-073): top of wall not drawn; dome detail N.I.S. "
-                              "prints no ring depth",
-                    held_figure_m2="1.024 m, height not drawn"),
+            P.Piece("E slab 1F-094", 1.14234, 4.04, "slab", drawn_extent_m=1.14234,
+                    extent_source="T-234 slab panel 1F-094 (DRAWING-CONFIRMED) on the centreline from B4 band face 5C4 "
+                                  "to B6 face 6E0; t 0.16 ST p.8 note 18; 1F 4.20 - 0.16"),
+            P.Piece("E B6 band", 0.250, 3.70, "member", drawn_extent_m=0.250,
+                    extent_source="ST B6 band 6E0 / 6DF (label 76C), 0.250 m across the wall; SBT 1EA4 B6 25x50; "
+                                  "1F 4.20 - 0.50"),
+            P.Piece("H dome opening 1F-073", 1.05766, None,
+                    held_item="from B6 face 6DF to the north wall face the centreline is inside the west dome opening "
+                              "(arc 5FF r 2.211, S-OPENING 604 .. 617; T-139 face 1F-073): the top of the wall is not "
+                              "drawn; DETAIL OF DOME (1A18, '(N.I.S)') prints ring bars only",
+                    held_figure_m2="1.05766 m, height not drawn"),
         ],
         openings=[],
         extra_held="",
-        handles="no opening in the run (T-175 hosts, T-249 inventory)",
+        handles=(f"{ARCH}: faces C22 / C23 (0.15); no opening in the run (T-175 hosts, T-249 inventory); {ST}: 1F roof "
+                 "slab; census 2.450 = B4 band face 5C4 -> north wall face (1.14234 + 0.250 + 1.05766)"),
+        settled=("r3: pieces from the drawn slab / band extents over the centreline (rule 8; register v2's gross 5.651 "
+                 "on 1.426 m withdrawn); the dome-opening piece is 1.05766 m (r2 1.024)"),
         class_="SS"),
 }
 
@@ -266,6 +293,12 @@ SEARCHED = {
     "no wall band or member bound (glazed line / held strip)": "material / base / top printed nowhere (T-227 c)",
     "held increment": "CB2 width CONFLICT schedule 0.20 vs drawn 0.25 (Q-61 C(1)), designer",
 }
+
+
+def _len(v):
+    """Length text: 3 decimals, up to 5 where the drawn extent needs them (r3 slivers), never rounded away."""
+    t = f"{v:.5f}".rstrip("0")
+    return t if len(t.split(".")[1]) >= 3 else f"{v:.3f}"
 
 
 def read(p):
@@ -288,7 +321,7 @@ def build():
             ok, why = P.piece_established(pc)
             ops = [o for o in d["openings"] if o.piece == pc.pid]
             split_rows.append(dict(
-                wall_id=wid, piece=pc.pid, length_m=f"{pc.length_m:.3f}",
+                wall_id=wid, piece=pc.pid, length_m=_len(pc.length_m),
                 height_m="" if (pc.height_m is None or not ok) else f"{pc.height_m:.4f}",
                 piece_status=SS if ok else "HELD",
                 gross_m2=f"{pc.length_m * pc.height_m:.4f}" if ok else "",
@@ -309,7 +342,8 @@ def build():
             hf = "; ".join(p.held_figure_m2 for p in d["pieces"] if p.pid in s.held_pieces)
             if d["extra_held"]:
                 hf += "; " + d["extra_held"]
-            row.update(t261_verdict="SPLIT: part established, rest STILL-HELD",
+            row.update(t261_verdict=("SETTLED: wall established whole (no piece held)" if s.status == "ESTABLISHED"
+                                     else "SPLIT: part established, rest STILL-HELD"),
                        settled_item=d.get("settled") or ("opening-to-piece assignment from the drawn jambs and the "
                                                         "drawn column / band faces (R-T261-1); the established pieces' "
                                                         "heights are those already in register v2 / the Checker's own "
@@ -318,7 +352,8 @@ def build():
                        established_deductions_m2=f"{s.established_deductions_m2:.4f}",
                        established_net_m2=f"{s.established_m2:.4f}", established_class=d["class_"],
                        established_m3=f"{s.established_m2 * f(b['t_m']):.4f}",
-                       still_held=f"pieces {', '.join(s.held_pieces)}; openings {', '.join(s.held_openings) or 'none'}",
+                       still_held=(f"pieces {', '.join(s.held_pieces)}; openings {', '.join(s.held_openings) or 'none'}"
+                                   if s.held_pieces else "none"),
                        held_figure_not_a_quantity=hf,
                        wall_net_text=P.wall_total_text(s, hf),
                        searched_this_run="plan geometry by handle (T261_SPLIT.csv); " + d["handles"])
@@ -394,6 +429,7 @@ def outputs():
     summ = dict(
         task="T-261", base_register="research/agents_t228 (T-228 r2, MERGED bf4dd2a9)",
         blockers=len(out), split=sum(1 for r in out if r["t261_verdict"].startswith("SPLIT")),
+        settled_whole=sum(1 for r in out if r["t261_verdict"].startswith("SETTLED")),
         still_held=sum(1 for r in out if r["t261_verdict"] == "STILL-HELD"),
         established_net_v2_m2=round(tot_v2, 3), split_established_added_m2=round(add, 4),
         established_net_proposed_m2=round(tot_v2 + add, 3), split_established_added_m3=round(m3, 4),

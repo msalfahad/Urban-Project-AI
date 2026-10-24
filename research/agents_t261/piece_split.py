@@ -28,6 +28,10 @@ increment', BLOCKWORK_RESOLUTION_PROGRAMME.md s.2 / s.5, ERS s.3 'build before d
      drawn faces (a corner or junction overlap of a centreline census) is its own piece under whatever member actually
      spans it there: established only when that member's depth is printed, otherwise HELD; never stretched onto a
      neighbouring member to close the census.
+  8. (r3, after the Checker's 2026-10-24 17:00 rejection) Rule 7 holds for EVERY established member / slab piece of a
+     split, inherited or new: an extent taken from an earlier register (its gross or weighted height carried onto a
+     length), a census remainder or any extent that is not re-derived on the drawing is not a drawn extent and is
+     refused (EXTENT_UNNAMED, markers in INHERITED_EXTENT_MARKERS). A piece's extent names its band / slab handles.
 """
 from __future__ import annotations
 
@@ -36,6 +40,9 @@ from dataclasses import dataclass, field
 ALLOWED_SOURCES = ("member", "slab", "checker")
 REFUSED_SOURCES = ("finish", "freelancer", "default", "storey", "convention")
 TOL = 0.0015
+# rule 8: wording that marks an extent as inherited / closed, not drawn (case-insensitive)
+INHERITED_EXTENT_MARKERS = ("register", "not re-derived", "census remainder", "remainder of the census",
+                            "closed to census", "weighted", "carried")
 
 
 class SplitError(ValueError):
@@ -105,6 +112,11 @@ def piece_established(p: Piece) -> tuple[bool, str]:
         if p.drawn_extent_m is None or not p.extent_source:
             raise SplitError("EXTENT_UNNAMED", f"{p.pid}: an established {p.source} piece names the drawn extent of "
                                                "its member and its source (rule 7)")
+        low = p.extent_source.lower()
+        hit = [m for m in INHERITED_EXTENT_MARKERS if m in low]
+        if hit:
+            raise SplitError("EXTENT_UNNAMED", f"{p.pid}: extent source '{p.extent_source[:60]}' is inherited / closed "
+                                               f"({', '.join(hit)}), not a drawn member extent (rule 8)")
         _check_len(p.drawn_extent_m, f"{p.pid} drawn extent")
         if p.length_m > p.drawn_extent_m + TOL:
             raise SplitError("OVER_MEMBER", f"{p.pid}: {p.length_m:.3f} m under a member drawn {p.drawn_extent_m:.3f} m "

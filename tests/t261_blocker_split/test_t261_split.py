@@ -17,6 +17,15 @@ Fixture villa N (NOT Alsenan), storey basis +0.00, slab top +4.00 above every pi
      window 1.00 x 1.20 = 1.200 in D -> established 17.500 + 0.975 - 1.200 = 17.275
      adverse: D stretched to 5.300 'closed to census' under BD drawn 5.000 -> OVER_MEMBER; D with no drawn extent ->
      EXTENT_UNNAMED; E under an unlabelled band (depth not printed) -> E HELD, established 16.300, never 0.
+  N8 (rule 8, r3): 0.15 partition, census 3.000 m = band face -> wall face, slab 0.16 at +4.00:
+     F 1.200 m under a slab panel drawn 1.200 m on the centreline -> h 4.00 - 0.16 = 3.84 -> 4.608
+     G 0.300 m across a 30x50 band -> h 3.50 -> 1.050
+     K 0.500 m under a slab corner outside a dome ring (drawn 0.800 m to the ring) -> 3.84 -> 1.920
+     L 1.000 m inside the dome opening -> HELD (top not drawn), never 0
+     established 4.608 + 1.050 + 1.920 = 7.578; without L (opening drawn elsewhere) the wall is whole 7.578 on 2.000
+     adverse: F carried from an earlier register as gross / weighted height ('register v2 ... not re-derived', the
+     rejected r2 pattern) -> EXTENT_UNNAMED; a census-remainder extent -> EXTENT_UNNAMED; K at the storey height 4.00
+     ('storey') -> BAD_SOURCE.
 """
 from __future__ import annotations
 
@@ -190,7 +199,7 @@ def test_alsenan_split_values_and_totals():
     assert s["established_net_v2_m2"] == pytest.approx(449.260, abs=1e-3)
     assert s["established_net_proposed_m2"] == pytest.approx(449.260 + sum(bw.values()), abs=2e-3)
     assert s["applied_to_register"] is False
-    assert s["blockers"] == 41 and s["split"] + s["still_held"] == 41
+    assert s["blockers"] == 41 and s["split"] + s["settled_whole"] + s["still_held"] == 41
 
 
 def test_alsenan_stair_line_pieces_stay_held_with_their_openings():
@@ -203,12 +212,14 @@ def test_alsenan_stair_line_pieces_stay_held_with_their_openings():
         assert r["gross_m2"] == "" and r["held_figure_not_a_quantity"] not in ("", "0", "0.000")
 
 
-def test_alsenan_split_gross_matches_register_v2_where_v2_pieces_are_used():
+def test_alsenan_deductions_match_register_v2_and_no_inherited_gross():
     v2 = {r["wall_id"]: r for r in csv.DictReader(open(ROOT / "research/agents_t228/BLOCKWORK_WALL_REGISTER_V2.csv",
                                                        newline="", encoding="utf-8"))}
     bl = {r["wall_id"]: r for r in rows("T261_BLOCKERS.csv")}
-    for w in ("1F-W18", "1F-W24"):        # established pieces taken from register v2 as merged
-        assert float(bl[w]["established_gross_m2"]) == pytest.approx(float(v2[w]["gross_m2"]), abs=0.003)
+    for w in B.WALLS:                     # r3: no established piece of any wall carries an inherited extent
+        for pc in B.WALLS[w]["pieces"]:
+            low = pc.extent_source.lower()
+            assert not any(m in low for m in P.INHERITED_EXTENT_MARKERS), (w, pc.pid)
     for w in ("1F-W04", "2F-W03", "2F-W07"):
         assert float(bl[w]["established_deductions_m2"]) == pytest.approx(float(v2[w]["deductions_m2"]), abs=1e-4)
 
@@ -247,3 +258,66 @@ def test_alsenan_every_still_held_blocker_names_its_item_and_no_coordinates():
     text = "".join((HERE / n).read_text(encoding="utf-8") for n in ("T261_BLOCKERS.csv", "T261_SPLIT.csv"))
     import re
     assert not re.search(r"-?\d{5,}\.\d", text), "no drawing coordinates in the outputs"
+
+
+# ---------------- r3 (Checker 2026-10-24 17:00): rule 8, every established piece from a drawn extent ----------------
+
+def n8(f_src="N8 slab panel P1 on the centreline, band face -> band face", with_l=True):
+    ps = [P.Piece("F", 1.200, 3.84, "slab", drawn_extent_m=1.200, extent_source=f_src),
+          P.Piece("G", 0.300, 3.50, "member", drawn_extent_m=0.300, extent_source="N8 band faces, 30x50 printed"),
+          P.Piece("K", 0.500, 3.84, "slab", drawn_extent_m=0.800,
+                  extent_source="N8 slab corner outside the ring, band face -> ring outer arc")]
+    if with_l:
+        ps.append(P.Piece("L", 1.000, None, held_item="inside the dome opening: top of wall not drawn",
+                          held_figure_m2="1.000 m, height not drawn"))
+    return ps
+
+
+@pytest.mark.parametrize("mirror", [False, True])
+def test_villa_n8_slab_band_corner_and_dome_opening(mirror):
+    ps = n8()
+    s = P.split_wall("N8", list(reversed(ps)) if mirror else ps, [], 3.000)
+    assert s.status == "SPLIT" and s.held_pieces == ["L"]
+    assert s.established_m2 == pytest.approx(1.200 * 3.84 + 0.300 * 3.50 + 0.500 * 3.84, abs=1e-4)   # 7.578
+    assert "HELD increment" in P.wall_total_text(s, "1.000 m, height not drawn")
+    w = P.split_wall("N8b", n8(with_l=False), [], 2.000)
+    assert w.status == "ESTABLISHED" and P.wall_total_text(w, "") == "7.5780"
+
+
+@pytest.mark.parametrize("src", [B.V2_EXT, "register v2 gross 17.934 over 4.761 m",
+                                 "census remainder after the held piece", "weighted height of the earlier pieces",
+                                 "Closed To Census"])
+def test_adverse_inherited_extent_refused(src):
+    """The rejected r2 pattern: an earlier register's gross / weighted height carried onto a length that is not a drawn
+    member extent (1F-W18 17.934 on 4.761 m, 1F-W24 5.651 on 1.426 m) is refused, whatever the length says."""
+    with pytest.raises(P.SplitError) as e:
+        P.split_wall("N8", n8(f_src=src), [], 3.000)
+    assert e.value.code == "EXTENT_UNNAMED"
+
+
+def test_adverse_slab_corner_at_storey_height_refused():
+    ps = n8()
+    ps[2] = P.Piece("K", 0.500, 4.00, "storey")
+    with pytest.raises(P.SplitError) as e:
+        P.split_wall("N8", ps, [], 3.000)
+    assert e.value.code == "BAD_SOURCE"
+
+
+def test_alsenan_r3_1f_w18_and_1f_w24_from_drawn_extents():
+    """Own re-measure on 'ST7757 dxf.dxf' (1F roof slab), wall centrelines from the arch faces (frame by the common
+    column 2FDB = 667). Hand truth (m2):
+    1F-W18: B5 3.475 x 3.70 (SBT B5 20x50) + B19 0.01515 x 3.45 (40x75) + slab 1F-057 0.99533 x 4.04
+            + B6 0.250 x 3.70 (25x50) + slab corner 1F-076/c0 0.46452 x 4.04 = 19.7326 on 5.200, nothing held.
+    1F-W24: slab 1F-094 1.14234 x 4.04 + B6 0.250 x 3.70 = 5.5401; dome opening 1.05766 HELD."""
+    bw = json.loads((HERE / "summary.json").read_text(encoding="utf-8"))["by_wall"]
+    assert bw["1F-W18"] == pytest.approx(3.475 * 3.70 + 0.01515 * 3.45 + 0.99533 * 4.04 + 0.250 * 3.70
+                                         + 0.46452 * 4.04, abs=1e-4)
+    assert bw["1F-W24"] == pytest.approx(1.14234 * 4.04 + 0.250 * 3.70, abs=1e-4)
+    sp = rows("T261_SPLIT.csv")
+    for w, census in (("1F-W18", 5.200), ("1F-W24", 2.450)):
+        assert sum(float(r["length_m"]) for r in sp if r["wall_id"] == w) == pytest.approx(census, abs=1e-3)
+    assert not any(r["piece_status"] == "HELD" for r in sp if r["wall_id"] == "1F-W18")
+    held = [r for r in sp if r["wall_id"] == "1F-W24" and r["piece_status"] == "HELD"]
+    assert len(held) == 1 and held[0]["gross_m2"] == "" and held[0]["held_figure_not_a_quantity"]
+    bl = {r["wall_id"]: r for r in rows("T261_BLOCKERS.csv")}
+    assert bl["1F-W18"]["t261_verdict"].startswith("SETTLED") and bl["1F-W18"]["wall_net_text"] == "19.7326"
