@@ -46,6 +46,17 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+### Lead 2026-10-24 22:15 (from T-267 r2 / T-272 r2 / T-273 r2 / T-271 r2b MERGED; T-276 REJECTED narrow; T-270 / T-277 READY; Checker T-180 slot 1F-W00 21:05 - 22:03; new T-280 .. T-284)
+
+| Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |
+|---|---|---|---|---|---|
+| GF stair zone under the 1F slab outline (upper flights + quarter landing seen from GF: 7.402 m2 of face GF-130, incl. round-flight part 2.378 and south-band stair part 4.333 less pocket) | FIN.CEILING (NOT decor ceiling), stair soffit finish, plaster / paint, CONC.STAIR | STAIRS own the soffit geometry (waist / landing undersides); FIN.CEILING excludes it; the finish line takes it once from the stair geometry | HELD (stair soffit), never 0 | Verifier 21:58 (T-271 r2b MERGED 789ebbb4) | T-281 (soffit geometry per flight) then T-283 (ceiling ledger classification) |
+| Shaft pocket beside the light well (X 54B / 54C, 1.552 m2) | FIN.CEILING (no ceiling), CONC.SLAB (opening) | CONC.SLAB marks the opening; no ceiling | DRAWING-CONFIRMED no ceiling | Verifier 21:58 | none (released engine and freelancer ceil it: ENGINE_WRONG / FREELANCER_WRONG, 1.318 m2 outside the outline) |
+| Ring / band junction on the ground-beam plan (band 177 + 7CD framing into ring ARC 158 at 211.97 / 220.32 deg, 0.3708 m of arc) | WP.BURIED (no earth face there), formwork (no side form there), CONC.GROUND (junction volume once) | CONC.GROUND owns the junction; every face-tracing trade closes each member on its carrier's drawn face on each of its own edges | ring building face 5.9055 m x 0.85 = 5.0197 m2 Checker own; worker 5.3030 HELD | Verifier 20:59 (T-276 REJECTED narrow) | T-276 r2 (in work); T-282 (the same square-cut check on formwork side faces) |
+| Column COL:255 inside band 7D0+FC (outline 0.052 mm from the band edges) | WP.BURIED, formwork, neck lines | the column face belongs to the NECK line (HELD with the neck height, Q-21 C); a sub-mm sliver is not a member | 0.5948 m2 removed from the beam line (HELD in the neck line) | Verifier 20:59 | T-276 r2 snap tolerance + adverse test; T-282 |
+| 1F-W00 W18 window (0.500 wide; south jamb 0.0327 m inside column 2FD8) | blockwork (deduction), plaster / paint (deduction), window line (0.50 x 2.16 pcs / m2) | BLOCKWORK deducts only the part inside the counted masonry (0.4673 m); the WINDOW line keeps 0.500 | 1F-W00 own net 12.935 m2 vs register 12.863 (-0.071, double-removed overlap 0.0706); length ruled 6.571 m (1F-W00 owns the 0.021 m strip) | Verifier 21:05 / 22:03 (T-180 slot) | T-274 (deduction by the opening part inside the run; normal + adverse) then T-279 |
+| Column cores from footing top (31 starter chains of the S3 column ledger) | REBAR (column bars, laps, starters), CONC.COLUMN / necks (heights) | REBAR, on the level chain of T-206: footing top = formation + 0.17 (underlay VERIFIED) + H | lower bound ignores the 0.17 m underlay (F-T273R2-01, -74.381 kg if formation at its limit); all laps HELD / PROVISIONAL, 0 released | T-273 r2 MERGED 42e32cf3 | T-280 |
+
 ### Lead 2026-10-24 20:15 (from T-240 / T-261 r3 MERGED; T-271 REJECTED narrow; T-272 r2 Gate A PASS; T-267 r2 / T-276 in work; new T-278)
 
 | Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |
