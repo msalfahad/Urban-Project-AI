@@ -36,6 +36,17 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
    commit. Decision: board-only handoffs are verified as hand evidence (the verifier re-reads the cited notes), and the
    next task on the topic writes the files (T-117); a run with no line stays a NEEDS FIXING item for the owner's setting.
 
+## 2026-10-24 06:15 (lead run)
+
+| Task | Result | Evidence | Decision |
+|---|---|---|---|
+| T-251 gate-0 fix (t130 guard red since T-236) | WORKED | MERGED fee98d9a (Verifier 04:19): railing codes read from the item master, t130 green unchanged, full suite NEW 0 / KNOWN 396 | gate break closed; the full-suite rule on every hand-in stays; residual 8 implemented-family literals harmless to every guard (no follow-up) |
+| T-252 CONC.BEAM ledger r2 | WORKED | MERGED b37be82d (Verifier 05:37): own re-measure = r2 66.3206 m3; ring 0.666406 m2 exact, the Checker's 0.66676 withdrawn (not averaged) | integrate with T-146 in one package, now first in lane I |
+| T-239 V3.0.11 footing two-tag outline | WORKED | MERGED 3c9b1484 (Verifier 06:12, Gate B): 2 lines changed, 3,608 identical; HELD 2.176 .. 2.275 / blinding 0.552 .. 0.590; released-in-candidate footing 64.304 = 25 verified | line stays PARTIALLY VERIFIED (Q-31 C designer, D-14 clip): no new task; D-14 clip stays named on the line |
+| T-253 boundary / exterior ground beams | READY (not yet classified) | handoff 05:13: boundary G.B 3.5256 m3 DRAWING-CONFIRMED proposal; D-35 main house read as N.G. (15.960 m3) | first in the Checker queue; T-254 takes it if merged |
+| T-228 blockwork register v2 | READY (not yet classified) | handoff 05:04: net 494.189 m2, 38 held walls with items; GF-W10 stair-foot finding | Checker queue 2nd; follow-up T-261 queued after it |
+| T-210 guard follow-ups | READY (not yet classified) | handoff 06:04: sandbox fixed (2 causes), K1 record 24 / 24, pymupdf not registered (AGPL) | K1 assertion NOT re-scoped (weakening); declarations -> T-257 after merge |
+
 ## 2026-10-24 04:15 (lead run)
 
 | Task | Result | Evidence | Decision |

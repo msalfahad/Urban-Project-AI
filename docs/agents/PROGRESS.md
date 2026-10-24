@@ -1,16 +1,32 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
 Plain words, no task numbers. Measured numbers come from SCOREBOARD.md; anything not measured says so.
-Last update: 2026-10-24 04:15 UTC (Lead). Previous version: 2026-10-24 02:10 UTC. The released numbers did not change
+Last update: 2026-10-24 06:15 UTC (Lead). Previous version: 2026-10-24 04:15 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released default V2.9 + route G untouched). Your measure (17:50):
 whole BOQ lines independently verified, and trades that can be scored. Today: still 0 whole lines verified in any
-trade. PARTIALLY VERIFIED: footings, blinding, beams (every calculated beam run now re-measured by the checker), ground
-beams, columns (new: 28 of 59 columns, 18.35 m3, checked by the checker one by one). Floor area: all 47 pieces
-re-measured, 32 agree to 0.0 %. Scored trades: concrete, floor area, and now doors and windows in the candidate.
-The red family-register test has a fix waiting for the checker. No new question for you; the curved first-floor
-window question is still open.
+trade. PARTIALLY VERIFIED: footings, blinding, beams, ground beams, columns. Closest to a first whole verified line:
+the slabs (the checker measured all 62 panels himself, 60.28 m3; the candidate is 0.64 m3 higher because of 13 pieces
+that belong to beams and edges): that move is now the next integration step. The red family-register test is fixed
+and green. No new question for you; the curved first-floor window question is still open.
 
-Since 02:10 (newest first):
+Since 04:15 (newest first):
+- Footings in the candidate: one footing drawn as a single outline but labelled with two schedule types is now held as
+  a range of both drawing readings (2.18 .. 2.28 m3) instead of one label's value; the freelancer's 1.96 m3 sits below
+  both (designer question already open). The candidate's released footings are now exactly the 25 footings the checker
+  verified one by one, 64.30 m3 (was 66.26 m3 with the unclear one inside). Checked and merged.
+- Beams: the ring beam around the ground-floor void and two slanted beam ends corrected; the checker measured the ring
+  himself from its arcs (0.666 m2 x 0.75 m deep = 0.50 m3). Beam ledger 66.02 -> 66.32 m3 against the freelancer's
+  65.97 (+0.54 %, not yet agreement: his two beams run through a column, and one of his rows has no location). Merged.
+- Family-register test fixed and green; nothing in the quantities moved. Merged.
+- Waiting for the checker: the boundary ground beam (3.53 m3, missing in both runs today; the freelancer's 7.56 m3 used
+  a bigger section) and a reading that settles the exterior ground-beam depth for the main house (15.96 m3 proposed);
+  the block-wall register (established net walls 337 -> 494 m2, one wall fully verified, 38 still held with the
+  missing item named); and test-infrastructure follow-ups (no quantity).
+- Next work: the slab / beam move into the candidate (to close the slab line), the stairs and domes split into what
+  closes now and what waits for the designer, evidence for the four held aluminium doors, and the block walls whose
+  missing heights another drawing prints.
+
+Earlier, since 02:10 (newest first):
 - Columns: the checker re-measured all 28 columns that close from the drawings himself (outline on the drawing AND the
   printed column schedule): 18.35 m3, every one agrees (0.0 %). Two of them stand on the ground-floor roof slab with
   nothing below (1.01 m3); the released structural route leaves them out and the candidate holds one of them: the

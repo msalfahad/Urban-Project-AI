@@ -46,7 +46,16 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
-## Status (Lead, 2026-10-24 04:15; re-estimated each run from what merged and was verified)
+## Status (Lead, 2026-10-24 06:15; re-estimated each run from what merged and was verified)
+
+Lead 2026-10-24 06:15: since 04:15 the Checker merged 3 (T-251 gate-0 fix, T-252 CONC.BEAM r2, T-239 Gate B V3.0.11
+footing two-tag CONFLICT), rejected 0; READY 3 (T-253 boundary / exterior ground beams, T-228 blockwork register v2,
+T-210 guard follow-ups). Verified whole lines still 0 / 13. P-03: V3.0.11 merged (released-in-candidate footing 64.304 =
+the 25 verified footings). DECISION: the slab / beam partition (T-146 + T-247) moves to the head of lane I because
+CONC.SLAB is the only line that can become a whole verified line now (Checker 60.2804 m3 on 62 panels); this is also
+the Week-1 target 'one verified improvement through the integrated pipeline' (27 Oct, 3 days): on track if that package
+passes Gate B by 26 Oct (lane I ships about one package per 2 h of worker 3 time). T-254 / T-255 follow. No milestone
+re-dated.
 
 Lead 2026-10-24 04:15: since 02:10 the Checker merged 3 (T-232 Gate B V3.0.10 doors / windows pcs AND m2, T-249 drawn
 opening inventory, T-248 CONC.COLUMN whole-line ledger), rejected 0; READY 2 (T-251 gate-0 fix, T-252 CONC.BEAM r2).

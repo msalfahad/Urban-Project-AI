@@ -46,6 +46,18 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+### Lead 2026-10-24 06:15 (from T-252, T-239 MERGED; T-253, T-228, T-210 READY; new T-258, T-260, T-261)
+
+| Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |
+|---|---|---|---|---|---|
+| GF void ring beam B7 (labels 46E / 46F / 470 / 471, 20 x 75) | concrete beam, concrete slab (band 53), formwork, plaster / paint of the void | CONC.BEAM (whole ring area 0.666406 m2 x 0.75 = 0.499805 m3, once); the slab drops band 53 (released A 0.0322 m3) | VERIFIED AS A COMPONENT (Checker 05:37 own arcs + segments) | T-252 MERGED b37be82d | route bands 3 / 6 / 41.2 overlap 0.00342 m2 (0.0026 m3): removed once in the T-146 + T-247 package |
+| B4 BM-GF-017 and CB4 span 1 BM-GF-021 ends on the oblique B27 east face (S-BEAM 325) | concrete beam, formwork | CONC.BEAM (each drawn edge to the carrier face: 0.296446 / 0.250988 m3); B27 owns the joint | VERIFIED AS A COMPONENT | T-252 | freelancer CB4 / B4 through-support: RULE_DIFFERENCE |
+| Footing outline 1B1B (open LWPOLYLINE, tags F10 + F + neck C10) | concrete footing, blinding, strap SB1, footing rebar | CONC.FOOTING (one drawn solid; both readings kept) | HELD CONFLICT 2.176 .. 2.275 m3; blinding HELD 0.552 .. 0.590; SB1 0 .. 0.385; rebar BLOCKED | T-239 MERGED 3c9b1484 (V3.0.11) | Q-31 C designer; D-14 plot-line clip of the blinding not yet applied |
+| Boundary ground beam G.B at N.G. (p.14, 20 x 40), 5 runs 44.07 m | concrete ground beam, court wall / fence footing, blockwork above, formwork | CONC.GROUND (until a drawing shows it shared) | DRAWING-CONFIRMED proposed 3.5256 m3 (Checker Gate A pending) | T-253 READY | M4 0.024 m3 / column; candidate integration T-254 |
+| Main-house exterior ground beams (16 runs + ring at 0.95) | concrete ground beam, blockwork, external plaster plinth | CONC.GROUND | PROPOSED 15.960 m3 on D-35 read as 'outer ground = natural +-0.00' (5 readings) | T-253 READY | Checker confirms each reading; annex CONFLICT (literal 0.25 m) stays |
+| GF-W10 stair-foot piece 2.500 m on the printed +0.30 landing (LEVEL 4AB, section A-A) | blockwork, stair concrete (landing), plaster / paint | BLOCKWORK for the wall above the landing; the landing itself CONC.STAIR (T-192 ownership) | HELD for the Checker's T-228 ruling | T-228 READY | W.C. stretch 1.350 m (0 .. 0.945 m2) not drawn |
+| 4 held aluminium doors D-GF-01, D-GF-06 (class), D-GF-05 (Q-67 A / D-48), D-GF-09 (width) | doors, blockwork deduction, plaster / paint deduction | DOORS (class and width once; deductions read the same width) | HELD 1.980 .. 8.800 m2 | T-232 MERGED; evidence T-260 | D-GF-09 width 0.90 is used by GF-W10 net 47.425: a change re-opens that wall |
+
 ### Lead 2026-10-24 04:15 (from T-232, T-249, T-248 MERGED; T-251, T-252 READY; Checker T-180 upstands 03:12, floor-area scope 03:26, column component 04:02; new T-256)
 
 | Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |
