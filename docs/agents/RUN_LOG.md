@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-24T09:00Z | Worker 3 | STARTED | run session_013DHWVLoyvCwuoko1rwTcRk | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-24T08:51Z | Verifier | STARTED | run unknown | repo-attached routine | task state: READY T-228, T-250, T-219, T-146+T-247 (Gate B) | self-check pending
 - 2026-10-24 08:41 UTC | Worker 2 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-24 08:36 UTC | Worker 1 | SUCCESS | T-260 (aluminium doors; agents/task-T-260 @ 3caf0285, evidence complete, hand-in WAITS on READY > 3 and behind T-258) + T-258 re-validated on working head 74c966b1 (@ 21024776, still waiting) | 4 held aluminium doors settled by drawing evidence for the Checker: D-GF-01 / -05 / -06 class ALUMINIUM (court; side-passage mouth open on the DXF + sheet03 + SW elevation p.7 = Q-67 A condition met; outdoor-steps landing), D-GF-09 width 0.90 on both wall faces (1.00 = block frame); line 4.180 released + 1.980..8.800 held -> 12.760 m2 / 6 pcs if ruled vs freelancer 12.000 (+0.760, +6.33 %: heights -1.000 Q-55 C, widths -0.440, count +2.200 his 4 GF vs 5 drawn; residual 0); PVC GF held -> 4.554..5.280, main entrance -> 5.000; widths = census, no deduction change | self-check codemap PASS, pytest t061 PASS, freeze PASS; full suites NEW 0 / KNOWN 395 on both heads; Drive read OK; ERS: read (s.2, s.3, s.4, s.7); problem: none
