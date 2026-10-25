@@ -36,6 +36,18 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
    commit. Decision: board-only handoffs are verified as hand evidence (the verifier re-reads the cited notes), and the
    next task on the topic writes the files (T-117); a run with no line stays a NEEDS FIXING item for the owner's setting.
 
+## 2026-10-25 04:15 (lead run; covers 00:15 - 04:15, including the 02:15 run's classifications)
+
+| Task | Result | Evidence | Decision |
+|---|---|---|---|
+| T-270 r2 WP foundation into V3.0.15 (Gate B) | WORKED | MERGED 04d34378 (Verifier 03:46): 3,680 lines byte-identical, 19 added (7 VERIFIED, 1 DC, 11 HELD BLANK); BURIED_LIQUID 45.4682 m2 = own sum of the 32 T-276 DC faces, 4 more faces own -0.004 %; T-263 35.404 refused by adverse test; full suite NEW 0 | candidate of record V3.0.15 (not released); lessons row closed; json sha not reproducible run to run -> T-245 acceptance (canonical hash binding), new lessons row OPEN |
+| T-278 floor-area scoring key | WORKED | MERGED 6366b754 (Verifier 01:28): own re-key 380.3641 m2 on 40 lines, -7.13 % vs freelancer 409.58; landing owned once | scoreboard runs on T001C; landing marble line gap -> T-266 acceptance |
+| T-285 blockwork register v3 | WORKED on scope, PARTIAL as T-279 input | MERGED e418c5e0 (Verifier 01:41): established 449.5934 m2; Verifier 02:00: 7.913 m of GF wall under six sunken panels at the normal soffit (overstated 7.913 d m2, D-41) | NEW T-288 (register v4, CLAIMED 03:41); T-279 after T-288 |
+| T-282 r2 formwork end faces | PARTIAL | REJECTED narrow 01:31 (1811+1812#1 start runs into open outline 1AA) | r3 handed in 02:38 (READY, root cause wider: ring 7C2 ends withdrawn too); Gate A queued |
+| T-283 ceilings r3 | handed in (READY 02:50) | decor 363.173 -> 361.229 m2 (-10.40 % vs released 403.163); 1.944 m2 hidden flight moved to stair zone HELD; bulkheads 27.935 m2 | batched with T-281 at Gate A; Lead challenge: one owner per piece vs T-281's 1.808 / 0.777 / 0.063 m2 |
+| T-257 K1 boundary declarations | handed in (READY 03:35) | 18 modules declared by_design from T-210 records; 6 undeclarable stay red with fix proposals; 2 real-tree T-210 tests re-pointed | Gate A; Lead challenge: re-pointed tests must assert the same property over the same set, else weakened |
+| T-281 stair soffits | complete, held back (READY limit) | ST-01 17.070 plan / 17.198 .. 17.243 true, MS1-L CONFLICT 3.215 .. 3.935; ST-02 8.479 plan, curved true HELD; GF stair zone 9.854 = 9.014 + 0.777 + 0.063 | hand-in authorised to the Checker when READY < 3; cross-check vs formwork r3 stair soffit faces |
+
 ## 2026-10-25 00:15 (lead run; covers 22:15 - 00:15)
 
 | Task | Result | Evidence | Decision |
@@ -311,29 +323,3 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
 - **Recurring cause 7 RECURRED** (new module trips a whole-repo guard test the task's own tests do not run): this time the
   test passed on the task head and failed only on the merged head. Decision above; the Checker's own gate b is part of
   the fix, not only the worker's.
-
-## 2026-10-23 08:20 (lead run)
-
-- **Checker 05:51 -> 06:28**: T-187 (Gate B, V3.0.6) MERGED 8a6d604a -> **WORKED** (own reproduction of three runs,
-  3,527 lines identical + 7 changed + 6 added, all 13 by hand within 0.0 %; MS2-U now VERIFIED 1.0014 m3; the 4.451 m3
-  'winder' confirmed a dome, held MISREAD; 2 evidence findings G-T187-1 / -2 carried into T-193). T-197 MERGED 97cd747e
-  -> **WORKED** (4 curved-geometry cases from DXF handles; no quantity moved). T-191 r2 MERGED bc0ab0cb -> **WORKED** (base
-  mats A .. B, R1 824.89 .. 883.59 kg, R2 572.45 .. 617.96 kg, counts = checker 0.000 kg; line HELD on D-57). T-196 r2
-  MERGED f933ef8a -> **WORKED** (one element per physical column: GF C2 12 -> 4; elements 834 -> 656).
-- **Worker 2 05:40 -> 06:15**: T-201 MERGED 5dade783 -> **WORKED** (window heads 8 -> 26 / 29 from the never-opened
-  vector DWF; checker 0 mm on W09 / W10 / W24; windows on the 18 new 22.730 vs his 26.950 m2, -15.66 %, his flat 2.00 m
-  height). The 3 still HELD -> T-207.
-- **Worker 1 06:21 -> 06:42**: T-200 MERGED d699b650 -> **WORKED** (level chain; arch and structural one datum; every
-  structural level and the foundation chain HELD; 4 known errors re-found). Run 2 not done and the necks UNRESOLVED ->
-  T-205 (necks), T-206 (ST PDF levels, per-footing chains); T-170 now after T-206.
-- **Worker 2 06:40 -> 06:57**: T-108 REJECTED 07:13 -> **FAILED as handed in** (gates e + h: the hand run used where the
-  physical T-stem run governs). Decision: rework r2, done in 43 min, READY 07:56 (established net 337.412 m2, -5.8 %;
-  hand run kept as comparison), first in the 08:49 checker run.
-- **Worker 3 07:00 -> 07:42**: T-202 MERGED 210ce4f0 -> **WORKED** (48 merges swept; firewall registry complete; ledger
-  explains all 396 failing ids, none from the window). Follow-ups K1 decision record, pymupdf registration, worktree gitdir
-  -> T-210; 'known_failures check: NEW 0' now required in every READY gate b.
-- **Worker 1 07:21 -> 07:39**: T-188 MERGED fb3a4623 -> **WORKED** (element inventory + storey continuity; 4 known cases
-  reproduced; NEW: lift walls / pit and the roof tank have no structural line in any state). Decision: T-204 first in
-  lane S; register rulings LIFT-01 / TANK-01.
-- Recurring cause 8 (stale map) did not recur in this window (every handoff regenerated the map last). New process gap:
-  pilot_metrics.py counts 0 merges in a window with 8 (auditor to fix; Lead edits no dashboard code).

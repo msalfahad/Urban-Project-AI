@@ -46,9 +46,21 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
-## Status (Lead, 2026-10-25 02:15; re-estimated each run from what merged and was verified)
+## Status (Lead, 2026-10-25 04:15; re-estimated each run from what merged and was verified)
 
-Lead 2026-10-25 02:15: since 00:15 the Checker merged 2 (T-278 floor-area scoring key T001C, FLOOR.INTERNAL keyed 380.3641
+Lead 2026-10-25 04:15: since 02:15 the Checker merged 1 Gate B package: T-270 r2, WATERPROOFING.FOUNDATION into candidate
+ARCH_TAKEOFF_V3.0.15 (04d34378): 3,680 lines byte-identical, 19 added (7 VERIFIED, buried liquid 45.4682 m2 DRAWING-CONFIRMED /
+PARTIALLY VERIFIED, 11 HELD BLANK); a scope missing in released A and in the freelancer BOQ, now in the integrated pipeline.
+WEEK-1 TARGET (one verified improvement through the integrated pipeline by 27 Oct): MET (CONC.SLAB earlier; now also the
+foundation waterproofing family, verification -> integration about 17 h for T-219's lines). Handed in: T-282 r3, T-283,
+T-257 (READY 3 = target), T-281 complete and held back. Next in lane I: T-245 (one project identity, first real export,
+canonical-hash binding of V2 verdict records; unblocked now), then T-254 -> T-266 -> T-255, T-279 (after T-288), T-284 (after
+T-283 / T-281). Verified whole lines unchanged: candidate 1 / 13, released 0 / 13. Week 2 (3 Nov, measurable verified
+coverage): depends on T-245 (export with every line's status), T-288 -> T-279 (blockwork into the candidate: 297.847 m2
+already Checker-verified on 18 walls) and T-283 + T-281 -> T-284 (ceilings). Risk unchanged: lane I is serial (one package
+per Worker 3 run, every 2 h); six packages queued before T-279.
+
+(superseded) Lead 2026-10-25 02:15: since 00:15 the Checker merged 2 (T-278 floor-area scoring key T001C, FLOOR.INTERNAL keyed 380.3641
 m2 on 40 lines, -7.13 % vs freelancer; T-285 blockwork register v3, established 449.5934 m2) and rejected 1 narrow (T-282 r2,
 one END row). T-180 slot: blockwork VERIFIED share 105.004 -> 297.847 m2 on 18 walls; NEW FINDING: 7.913 m of GF wall under
 six sunken panels booked at the normal soffit (established net overstated by 7.913 d m2, d HELD on D-41; GF-W12 VERIFIED

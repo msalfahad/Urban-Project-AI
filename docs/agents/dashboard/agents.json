@@ -5,53 +5,53 @@
 "cadence": "daily 07:31 Kuwait (04:31 UTC)",
 "last_run": "2026-10-24T04:31:23Z",
 "result": "ok",
-"working_on": "Main chat recorded your decisions 23:49 / 23:53 / 23:57; next daily update 2026-10-25 04:31 UTC (a check-in on the foundation waterproofing / export results is set for 04:11 UTC)",
-"as_of": "2026-10-25T02:20:00Z"
+"working_on": "Next daily update 2026-10-25 04:31 UTC",
+"as_of": "2026-10-25T04:20:00Z"
 },
 {
 "agent": "1 LEAD – plans & assigns work",
 "role": "Plans the work, keeps the board, milestones and element register, writes your report",
 "cadence": "every 2 h at :09 (pilot cadence still set)",
-"last_run": "2026-10-25T02:10:11Z",
+"last_run": "2026-10-25T04:10:36Z",
 "result": "running",
-"working_on": "Sunken-panel wall-height finding routed (new wall-register revision before the walls go into the candidate); designer list rows S13 / P-4 corrected; landing marble line added to the stairs step",
-"as_of": "2026-10-25T02:20:00Z"
+"working_on": "Checker queue set (ceilings checked together with stair soffits, formwork fix, module declarations); first real export unblocked with a stable-hash rule for verified-line records",
+"as_of": "2026-10-25T04:20:00Z"
 },
 {
 "agent": "2 WORKER 1 – Structural",
 "role": "Structural lane: concrete, rebar by bar population, formwork",
 "cadence": "hourly at :19 (pilot cadence still set)",
-"last_run": "2026-10-25T01:19:56Z",
+"last_run": "2026-10-25T03:20:24Z",
 "result": "ok",
-"working_on": "01:20 run IDLE (previous run still working); 00:20 run handed in the formwork end-face fix at 01:23, sent back narrow on one row; next run 02:19: that row, then the missing designer rows",
-"as_of": "2026-10-25T02:20:00Z"
+"working_on": "Formwork end-face fix handed in 02:38; stair soffits finished 03:56 and held back (3 already waiting for the checker); next: the missing designer-list rows",
+"as_of": "2026-10-25T04:20:00Z"
 },
 {
 "agent": "3 WORKER 2 – Architectural & finishes",
 "role": "Architecture and finishes lane: floors, walls, plaster, paint, tiles, ceilings, openings, waterproofing",
 "cadence": "hourly at :39 (pilot cadence still set)",
-"last_run": "2026-10-25T01:39:36Z",
+"last_run": "2026-10-25T03:40:39Z",
 "result": "running",
-"working_on": "Wall register applied in one revision (merged 01:41); now: ceilings made ready for the candidate (claimed 01:41); next: the sunken-panel wall-height correction",
-"as_of": "2026-10-25T02:20:00Z"
+"working_on": "Ceilings revision 3 handed in 02:50; now: wall register revision 4 for the walls under the sunken panels (claimed 03:41)",
+"as_of": "2026-10-25T04:20:00Z"
 },
 {
 "agent": "4 WORKER 3 – Integration into V3.0",
 "role": "Integration lane: wires checker-verified pieces into the one opt-in candidate",
 "cadence": "every 2 h at :59 (even hours UTC)",
-"last_run": "2026-10-25T00:59:59Z",
-"result": "running",
-"working_on": "Floor-area scoring key merged 01:28; now: foundation waterproofing into the candidate, second hand-in (claimed 01:01); next: one project identity and the first real export",
-"as_of": "2026-10-25T02:20:00Z"
+"last_run": "2026-10-25T03:00:00Z",
+"result": "ok",
+"working_on": "Foundation waterproofing merged into the candidate 03:46; module declarations handed in 03:35; next run 04:59: one project identity and the first real export",
+"as_of": "2026-10-25T04:20:00Z"
 },
 {
 "agent": "5 CHECKER – verifies & merges",
 "role": "Checks finished tasks by re-measuring, merges or rejects, keeps the scoreboard",
 "cadence": "hourly at :49 (pilot cadence still set)",
-"last_run": "2026-10-25T01:49:31Z",
+"last_run": "2026-10-25T03:49:57Z",
 "result": "ok",
-"working_on": "00:51 run merged the scoring key and the wall register, sent back the formwork fix; 01:51 run verified 6 walls itself (verified wall area 297.85 m2) and found the sunken-panel wall-height error",
-"as_of": "2026-10-25T02:20:00Z"
+"working_on": "02:51 run merged foundation waterproofing into the candidate (03:46) and refreshed the scoreboard, still open; 03:49 run stood down (overlap guard)",
+"as_of": "2026-10-25T04:20:00Z"
 },
 {
 "agent": "6 SCOUT – research & feedback to Lead",
@@ -59,8 +59,8 @@
 "cadence": "Sun + Wed 02:50 Kuwait (23:50 UTC)",
 "last_run": "2026-10-24T23:50:57Z",
 "result": "ok",
-"working_on": "No open research request; reduced priority (owner 23:53); next run Sun + Wed 02:50 Kuwait",
-"as_of": "2026-10-25T02:20:00Z"
+"working_on": "No open research request; reduced priority (owner 23:53)",
+"as_of": "2026-10-25T04:20:00Z"
 },
 {
 "agent": "7 DASHBOARD – refreshes your page",
@@ -69,6 +69,6 @@
 "last_run": "2026-10-25T00:54:48Z",
 "result": "ok",
 "working_on": "Refreshed 00:56; next 2026-10-25 04:54 UTC",
-"as_of": "2026-10-25T02:20:00Z"
+"as_of": "2026-10-25T04:20:00Z"
 }
 ]

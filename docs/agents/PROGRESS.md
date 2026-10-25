@@ -1,11 +1,33 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
 Plain words, no task numbers. Measured numbers come from SCOREBOARD.md; anything not measured says so.
-Last update: 2026-10-25 02:15 UTC (Lead). Previous version: 2026-10-25 00:15 UTC. The released numbers did not change
+Last update: 2026-10-25 04:15 UTC (Lead). Previous version: 2026-10-25 02:15 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released default V2.9 + route G untouched). Your measure: whole BOQ
 lines independently verified, and trades that can be scored. Still 1 whole line verified in the candidate (the concrete
-slab, 60.28 m3), 0 released. No decision for you; the designer list is still being finished before you send it (see
-"Waiting for the owner").
+slab, 60.28 m3), 0 released. No decision for you; the designer list is still being finished before you send it.
+
+Since 02:15 (newest first; one integration step checked and merged, three pieces handed in, one finished and waiting):
+- Foundation waterproofing is now in the candidate: checked line by line and merged. The candidate gains its own
+  foundation waterproofing family: footing membrane 109.85 m2, its protection screed 109.85 m2 (5.49 m3), lift-pit
+  membrane 47.43 m2, board 26.73 m2 and screed 20.70 m2 (1.04 m3), all verified by the checker himself; the buried
+  ground-beam coat 45.47 m2 (32 faces, the newer face-by-face trace; 9 of the 32 faces checked by hand so far, so the line
+  is partly verified); 11 lines whose depths the drawings do not print stay blank, never zero. Every one of the other
+  3,680 candidate lines is unchanged. Neither the released engine nor the freelancer has these lines (his waterproofing
+  covers wet areas and roofs only). Not released.
+- The checker found that the candidate's json output changes slightly from run to run although every quantity column is
+  identical. Harmless for the numbers, but a verified-line record tied to that file would look "changed" after a re-run;
+  the first real export (next in the integration lane) must tie verification records to the quantities themselves.
+- Handed in, waiting for the checker: ceilings revision 3 (flat decorative ceiling 361.23 m2, -10.4 % against the released
+  403.16 m2 and -11.8 % against the freelancer's 409.58 m2; 1.94 m2 of stair flight hidden behind beams moved to the stair
+  zone, held); the formwork end-face fix, third hand-in (the beam that runs into the open outline has no end face there,
+  and the same cause removed ends on the lift-pit ring); a code-hygiene declaration of which modules may use the CAD and
+  geometry libraries.
+- Stair soffits measured flight by flight for the first time (neither the engine nor the freelancer has this line): main
+  stair about 17.1 m2 on plan, 17.2 m2 true sloped area, one flight with a drawing conflict (3.2 to 3.9 m2) and the
+  winder turn held; second stair 8.5 m2 on plan, its curved part held. Finished but held back because three pieces are
+  already waiting for the checker; it will be checked together with the ceilings, since both share the stair zone (the
+  two pieces must give every square metre under the stairs to exactly one line).
+- Nothing new on Drive since the last report; no new photos.
 
 Since 00:15 (newest first; two pieces checked and merged, one sent back narrow, a large block-wall check by the checker):
 - Block walls, checked wall by wall by the checker himself: Checker-verified wall area rose from 105.00 to 297.85 m2 on

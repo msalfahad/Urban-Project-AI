@@ -650,3 +650,28 @@ Every hand check must come from printed dimensions or a separate reading (checke
   WORKFLOW_CONTROLS section 10 file ownership respected (the standard's lessons register is the main chat's file now: the
   Lead proposes rows in its report instead of editing it).
 
+## 2026-10-23 08:20 (lead run)
+
+- **Checker 05:51 -> 06:28**: T-187 (Gate B, V3.0.6) MERGED 8a6d604a -> **WORKED** (own reproduction of three runs,
+  3,527 lines identical + 7 changed + 6 added, all 13 by hand within 0.0 %; MS2-U now VERIFIED 1.0014 m3; the 4.451 m3
+  'winder' confirmed a dome, held MISREAD; 2 evidence findings G-T187-1 / -2 carried into T-193). T-197 MERGED 97cd747e
+  -> **WORKED** (4 curved-geometry cases from DXF handles; no quantity moved). T-191 r2 MERGED bc0ab0cb -> **WORKED** (base
+  mats A .. B, R1 824.89 .. 883.59 kg, R2 572.45 .. 617.96 kg, counts = checker 0.000 kg; line HELD on D-57). T-196 r2
+  MERGED f933ef8a -> **WORKED** (one element per physical column: GF C2 12 -> 4; elements 834 -> 656).
+- **Worker 2 05:40 -> 06:15**: T-201 MERGED 5dade783 -> **WORKED** (window heads 8 -> 26 / 29 from the never-opened
+  vector DWF; checker 0 mm on W09 / W10 / W24; windows on the 18 new 22.730 vs his 26.950 m2, -15.66 %, his flat 2.00 m
+  height). The 3 still HELD -> T-207.
+- **Worker 1 06:21 -> 06:42**: T-200 MERGED d699b650 -> **WORKED** (level chain; arch and structural one datum; every
+  structural level and the foundation chain HELD; 4 known errors re-found). Run 2 not done and the necks UNRESOLVED ->
+  T-205 (necks), T-206 (ST PDF levels, per-footing chains); T-170 now after T-206.
+- **Worker 2 06:40 -> 06:57**: T-108 REJECTED 07:13 -> **FAILED as handed in** (gates e + h: the hand run used where the
+  physical T-stem run governs). Decision: rework r2, done in 43 min, READY 07:56 (established net 337.412 m2, -5.8 %;
+  hand run kept as comparison), first in the 08:49 checker run.
+- **Worker 3 07:00 -> 07:42**: T-202 MERGED 210ce4f0 -> **WORKED** (48 merges swept; firewall registry complete; ledger
+  explains all 396 failing ids, none from the window). Follow-ups K1 decision record, pymupdf registration, worktree gitdir
+  -> T-210; 'known_failures check: NEW 0' now required in every READY gate b.
+- **Worker 1 07:21 -> 07:39**: T-188 MERGED fb3a4623 -> **WORKED** (element inventory + storey continuity; 4 known cases
+  reproduced; NEW: lift walls / pit and the roof tank have no structural line in any state). Decision: T-204 first in
+  lane S; register rulings LIFT-01 / TANK-01.
+- Recurring cause 8 (stale map) did not recur in this window (every handoff regenerated the map last). New process gap:
+  pilot_metrics.py counts 0 merges in a window with 8 (auditor to fix; Lead edits no dashboard code).
