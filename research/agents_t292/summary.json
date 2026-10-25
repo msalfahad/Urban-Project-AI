@@ -1,0 +1,174 @@
+{
+ "task": "T-292",
+ "rule": "R-T292-1",
+ "candidate": {
+  "source": "own V3.0.15 run (research/agents_t270/v3015_run.py) on Drive 'Alsenan chalet project' P7757_DXF_COMPRESSED.zip -> P7757.dxf (ab54dd55) and 'ST7757 dxf.dxf' (9f9d1179)",
+  "csv_sha256_8": "a4dc01dd",
+  "lines_total": 3699
+ },
+ "candidate_wall_finish_lines": 132,
+ "face_pieces": 218,
+ "face_rows": 436,
+ "rooms": 32,
+ "room_length_residual_max_m": 0.0,
+ "owner_totals_by_item_status": {
+  "FIN.PAINT | ASSUMED — OWNER-APPROVED": {
+   "rows": 50,
+   "lo": 462.3356,
+   "hi": 462.3356
+  },
+  "FIN.PAINT | HELD": {
+   "rows": 29,
+   "lo": 0.0,
+   "hi": 0.0
+  },
+  "FIN.PAINT | HELD (BOUNDED)": {
+   "rows": 6,
+   "lo": 34.5016,
+   "hi": 81.3301
+  },
+  "FIN.PAINT | VERIFIED": {
+   "rows": 18,
+   "lo": 115.4641,
+   "hi": 115.4641
+  },
+  "FIN.PLASTER | ASSUMED — OWNER-APPROVED": {
+   "rows": 50,
+   "lo": 462.3356,
+   "hi": 462.3356
+  },
+  "FIN.PLASTER | HELD": {
+   "rows": 144,
+   "lo": 0.0,
+   "hi": 0.0
+  },
+  "FIN.PLASTER | HELD (BOUNDED)": {
+   "rows": 6,
+   "lo": 34.5016,
+   "hi": 81.3301
+  },
+  "FIN.PLASTER | VERIFIED": {
+   "rows": 18,
+   "lo": 115.4641,
+   "hi": 115.4641
+  },
+  "FIN.WALL.TILE | ASSUMED — OWNER-APPROVED": {
+   "rows": 73,
+   "lo": 340.3038,
+   "hi": 340.3038
+  },
+  "FIN.WALL.TILE | HELD": {
+   "rows": 42,
+   "lo": 0.0,
+   "hi": 0.0
+  }
+ },
+ "drawing_status_rows": {
+  "FIN.PAINT | HELD": 91,
+  "FIN.PAINT | HELD (BOUNDED)": 12,
+  "FIN.PLASTER | HELD": 169,
+  "FIN.PLASTER | HELD (BOUNDED)": 49,
+  "FIN.WALL.TILE | HELD": 78,
+  "FIN.WALL.TILE | HELD (BOUNDED)": 37
+ },
+ "roof_datum_face_rows": [
+  "1F-01|1F-W05",
+  "1F-01|1F-W23",
+  "1F-02|1F-W06",
+  "1F-03|1F-W06",
+  "1F-04|1F-W06",
+  "1F-04|1F-W12",
+  "1F-04|1F-W23",
+  "1F-12|1F-W00",
+  "2F-01|2F-W00",
+  "2F-02|2F-W08",
+  "2F-03|2F-W08",
+  "GF-01|GF-W18",
+  "GF-01|GF-W26",
+  "GF-02|GF-W26",
+  "GF-04|GF-W04",
+  "GF-06|GF-W04"
+ ],
+ "lines": {
+  "room_face_bound": 63,
+  "unmatched": 69
+ },
+ "unmatched_faces": [
+  {
+   "face_id": "GF-07|GF-W01",
+   "item_code": "FIN.WALL.TILE",
+   "room": "GF-07",
+   "reason": "no candidate line of this code in the face's room"
+  },
+  {
+   "face_id": "GF-07|GF-W05",
+   "item_code": "FIN.WALL.TILE",
+   "room": "GF-07",
+   "reason": "no candidate line of this code in the face's room"
+  },
+  {
+   "face_id": "GF-07|GF-W16",
+   "item_code": "FIN.WALL.TILE",
+   "room": "GF-07",
+   "reason": "no candidate line of this code in the face's room"
+  },
+  {
+   "face_id": "GF-07|OFF:COLUMN",
+   "item_code": "FIN.WALL.TILE",
+   "room": "GF-07",
+   "reason": "no candidate line of this code in the face's room"
+  },
+  {
+   "face_id": "GF-07|OFF:WALL",
+   "item_code": "FIN.WALL.TILE",
+   "room": "GF-07",
+   "reason": "no candidate line of this code in the face's room"
+  },
+  {
+   "face_id": "GF-07|WALK-CLASS-RESIDUAL",
+   "item_code": "FIN.WALL.TILE",
+   "room": "GF-07",
+   "reason": "no candidate line of this code in the face's room"
+  }
+ ],
+ "t237_room_reproduction": {
+  "rooms": 21,
+  "ok": 21,
+  "differs": []
+ },
+ "line_residual_max_abs_m2": 0.0002,
+ "line_residual_note": "the candidate states room nets to 4 dp; the ledger sums per-face figures rounded to 4 dp: |residual| <= 0.0005 m2 is that rounding, anything larger is refused (UNEXPLAINED)",
+ "closure_faces_vs_lines": {
+  "FIN.PLASTER": {
+   "faces_lo": 612.3013,
+   "faces_hi": 659.1298,
+   "lines_lo": 612.3013,
+   "lines_hi": 659.1298,
+   "residual_lo": 0.0,
+   "residual_hi": 0.0
+  },
+  "FIN.PAINT": {
+   "faces_lo": 612.3013,
+   "faces_hi": 659.1298,
+   "lines_lo": 612.3013,
+   "lines_hi": 659.1298,
+   "residual_lo": 0.0,
+   "residual_hi": 0.0
+  },
+  "FIN.WALL.TILE": {
+   "faces_lo": 307.9616,
+   "faces_hi": 307.9616,
+   "lines_lo": 307.9616,
+   "lines_hi": 307.9616,
+   "residual_lo": 0.0,
+   "residual_hi": 0.0
+  }
+ },
+ "w03_rule_difference": {
+  "room_side_deducted_m": 6.731,
+  "window_line_m": 6.5675,
+  "difference_m": 0.1635,
+  "owner_method_m2": 0.5968,
+  "note": "finishes deduct W03 on the room-side glass line (T-128 6.731; drawing 6.7291, Checker 6.7294); the window line keeps Q-38 A 6.5675: RULE_DIFFERENCE between trades, outside every total (head 4.30 > owner 3.65)"
+ }
+}

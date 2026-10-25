@@ -1,0 +1,69 @@
+line_id,item_code,room,opening_id,t128_name,line_ded,ledger_ded,d_lo_m2,d_hi_m2,cause
+L-8cecb1d010d5aafbf25d,FIN.PLASTER,GF-08,D-GF-08,D120 to stair hall,2.2000,2.2000,0.0,0.0,unchanged
+L-8cecb1d010d5aafbf25d,FIN.PLASTER,GF-08,L-GF-01,lift landing door,0.0000 .. 3.6500,0 .. 3.6500 (HELD),0.0,0.0,unchanged
+L-8cecb1d010d5aafbf25d,FIN.PLASTER,GF-08,D-GF-13,D115 to master bed,2.2000,2.2000,0.0,0.0,unchanged
+L-8cecb1d010d5aafbf25d,FIN.PLASTER,GF-08,W03,W03 pool glazing band (open-room part),5.9313,5.9312,-0.0,-0.0,unchanged
+L-8cecb1d010d5aafbf25d,FIN.PLASTER,GF-08,W02,W02 saloon glazing,0.0000 .. 23.1045,0 .. 23.1045 (HELD),-0.0,0.0,unchanged
+L-8cecb1d010d5aafbf25d,FIN.PLASTER,GF-08,D-GF-07,D01 main entrance,5.0000,5.0000,0.0,0.0,unchanged
+L-0d93f2209cd9bb827c0a,FIN.PLASTER,GF-15,D-GF-14,bath door (loose arc),1.7600,1.7600,0.0,0.0,unchanged
+L-0d93f2209cd9bb827c0a,FIN.PLASTER,GF-15,W03,W03 pool glazing band (bed-room part),18.6369,18.6369,0.0,0.0,unchanged
+L-0d93f2209cd9bb827c0a,FIN.PLASTER,GF-15,D-GF-13,D115,2.2000,2.2000,0.0,0.0,unchanged
+L-af9621f43bc316a871ea,FIN.PLASTER,1F-01,D-1F-02,D115 (landing),2.2000,2.2000,0.0,0.0,unchanged
+L-af9621f43bc316a871ea,FIN.PLASTER,1F-01,D-1F-01,D315 to bath,1.7600,1.7600,0.0,0.0,unchanged
+L-af9621f43bc316a871ea,FIN.PLASTER,1F-01,W14,W14,3.9200,3.9200,0.0,0.0,unchanged
+L-971f0bdaf68d7fd0966c,FIN.PLASTER,1F-04,D-1F-03,D115,2.2000,2.2000,0.0,0.0,unchanged
+L-971f0bdaf68d7fd0966c,FIN.PLASTER,1F-04,W24,W24,0.0000 .. 5.1925,2.3250,-2.8675,2.325,merged size: T-201 heads
+L-971f0bdaf68d7fd0966c,FIN.PLASTER,1F-04,D-1F-04,D315 to bath,1.7600,1.7600,0.0,0.0,unchanged
+L-2ba8077ba9bb2e1ff0f6,FIN.PLASTER,1F-10,D-1F-08,D215,1.9800,1.9800,0.0,0.0,unchanged
+L-2ba8077ba9bb2e1ff0f6,FIN.PLASTER,1F-10,A-1F-01,arch120 to the dressing passage,0.0000 .. 3.3500,0 .. 3.3500 (HELD),0.0,0.0,unchanged
+L-31db3c83552682d92ca3,FIN.PLASTER,1F-11,W17,W17,11.0081,0 .. 10.0240 (HELD),-0.9841,-11.0081,merged size: T-238 delta (upper bound 10.024)
+L-31db3c83552682d92ca3,FIN.PLASTER,1F-11,D-1F-10,D315 to bath,1.7600,1.7600,0.0,0.0,unchanged
+L-31db3c83552682d92ca3,FIN.PLASTER,1F-11,D-1F-09,D215,1.9800,1.9800,0.0,0.0,unchanged
+L-9b4a7bab033d677e2017,FIN.PLASTER,1F-13,L-1F-01,lift landing door,0.0000 .. 3.3500,0 .. 3.3500 (HELD),0.0,0.0,unchanged
+L-9b4a7bab033d677e2017,FIN.PLASTER,1F-13,D-1F-05,d220 laundry,1.9800,1.9800,0.0,0.0,unchanged
+L-9b4a7bab033d677e2017,FIN.PLASTER,1F-13,D-1F-08,D215 bed 380 x 430,1.9800,1.9800,0.0,0.0,unchanged
+L-9b4a7bab033d677e2017,FIN.PLASTER,1F-13,D-1F-09,D215 bed east,1.9800,1.9800,0.0,0.0,unchanged
+L-9b4a7bab033d677e2017,FIN.PLASTER,1F-13,W15,W15,4.3629 .. 4.8050,4.3630,-0.442,0.0001,merged size: T-238 delta (arched outline)
+L-9b4a7bab033d677e2017,FIN.PLASTER,1F-13,W16,W16 (twin of W15),4.3629 .. 4.8050,4.3630,-0.442,0.0001,merged size: T-238 delta (arched outline)
+L-9b4a7bab033d677e2017,FIN.PLASTER,1F-13,D-1F-03,D115 bed 500 x 365,2.2000,2.2000,0.0,0.0,unchanged
+L-9b4a7bab033d677e2017,FIN.PLASTER,1F-13,D-1F-02,D115 bed west (landing part),0.9240,0.9240,0.0,0.0,unchanged
+L-4ce74fc37a08d4bdf0d8,FIN.PLASTER,2F-03,D-2F-02,d220,1.9800,1.9800,0.0,0.0,unchanged
+L-4ce74fc37a08d4bdf0d8,FIN.PLASTER,2F-03,D-2F-03,D315 to W.C.,1.7600,1.7600,0.0,0.0,unchanged
+L-4ce74fc37a08d4bdf0d8,FIN.PLASTER,2F-03,W29,W29,0.0000 .. 4.0200,1.8000,-2.22,1.8,merged size: T-201 heads
+L-ae0cdd794cc5fdbe0c29,FIN.PLASTER,2F-01,L-2F-01,lift landing door,0.0000 .. 3.3500,0 .. 3.3500 (HELD),0.0,0.0,unchanged
+L-ae0cdd794cc5fdbe0c29,FIN.PLASTER,2F-01,D-2F-02,d220 maid,1.9800,1.9800,0.0,0.0,unchanged
+L-ae0cdd794cc5fdbe0c29,FIN.PLASTER,2F-01,D-2F-01,D26 roof door,2.2000,2.2000,0.0,0.0,unchanged
+L-c0ac22c964a42e7d71b1,FIN.PAINT,GF-08,D-GF-08,D120 to stair hall,2.2000,2.2000,0.0,0.0,unchanged
+L-c0ac22c964a42e7d71b1,FIN.PAINT,GF-08,L-GF-01,lift landing door,0.0000 .. 3.6500,0 .. 3.6500 (HELD),0.0,0.0,unchanged
+L-c0ac22c964a42e7d71b1,FIN.PAINT,GF-08,D-GF-13,D115 to master bed,2.2000,2.2000,0.0,0.0,unchanged
+L-c0ac22c964a42e7d71b1,FIN.PAINT,GF-08,W03,W03 pool glazing band (open-room part),5.9313,5.9312,-0.0,-0.0,unchanged
+L-c0ac22c964a42e7d71b1,FIN.PAINT,GF-08,W02,W02 saloon glazing,0.0000 .. 23.1045,0 .. 23.1045 (HELD),-0.0,0.0,unchanged
+L-c0ac22c964a42e7d71b1,FIN.PAINT,GF-08,D-GF-07,D01 main entrance,5.0000,5.0000,0.0,0.0,unchanged
+L-7f083d3e2c2702d14356,FIN.PAINT,GF-15,D-GF-14,bath door (loose arc),1.7600,1.7600,0.0,0.0,unchanged
+L-7f083d3e2c2702d14356,FIN.PAINT,GF-15,W03,W03 pool glazing band (bed-room part),18.6369,18.6369,0.0,0.0,unchanged
+L-7f083d3e2c2702d14356,FIN.PAINT,GF-15,D-GF-13,D115,2.2000,2.2000,0.0,0.0,unchanged
+L-ade6f0567f690a869499,FIN.PAINT,1F-01,D-1F-02,D115 (landing),2.2000,2.2000,0.0,0.0,unchanged
+L-ade6f0567f690a869499,FIN.PAINT,1F-01,D-1F-01,D315 to bath,1.7600,1.7600,0.0,0.0,unchanged
+L-ade6f0567f690a869499,FIN.PAINT,1F-01,W14,W14,3.9200,3.9200,0.0,0.0,unchanged
+L-d9f4ecdb6ef9a42d0220,FIN.PAINT,1F-04,D-1F-03,D115,2.2000,2.2000,0.0,0.0,unchanged
+L-d9f4ecdb6ef9a42d0220,FIN.PAINT,1F-04,W24,W24,0.0000 .. 5.1925,2.3250,-2.8675,2.325,merged size: T-201 heads
+L-d9f4ecdb6ef9a42d0220,FIN.PAINT,1F-04,D-1F-04,D315 to bath,1.7600,1.7600,0.0,0.0,unchanged
+L-f53c1329983ad689b7ae,FIN.PAINT,1F-10,D-1F-08,D215,1.9800,1.9800,0.0,0.0,unchanged
+L-f53c1329983ad689b7ae,FIN.PAINT,1F-10,A-1F-01,arch120 to the dressing passage,0.0000 .. 3.3500,0 .. 3.3500 (HELD),0.0,0.0,unchanged
+L-349db74a70e1eecda2d2,FIN.PAINT,1F-11,W17,W17,11.0081,0 .. 10.0240 (HELD),-0.9841,-11.0081,merged size: T-238 delta (upper bound 10.024)
+L-349db74a70e1eecda2d2,FIN.PAINT,1F-11,D-1F-10,D315 to bath,1.7600,1.7600,0.0,0.0,unchanged
+L-349db74a70e1eecda2d2,FIN.PAINT,1F-11,D-1F-09,D215,1.9800,1.9800,0.0,0.0,unchanged
+L-be48ea84285be20645af,FIN.PAINT,1F-13,L-1F-01,lift landing door,0.0000 .. 3.3500,0 .. 3.3500 (HELD),0.0,0.0,unchanged
+L-be48ea84285be20645af,FIN.PAINT,1F-13,D-1F-05,d220 laundry,1.9800,1.9800,0.0,0.0,unchanged
+L-be48ea84285be20645af,FIN.PAINT,1F-13,D-1F-08,D215 bed 380 x 430,1.9800,1.9800,0.0,0.0,unchanged
+L-be48ea84285be20645af,FIN.PAINT,1F-13,D-1F-09,D215 bed east,1.9800,1.9800,0.0,0.0,unchanged
+L-be48ea84285be20645af,FIN.PAINT,1F-13,W15,W15,4.3629 .. 4.8050,4.3630,-0.442,0.0001,merged size: T-238 delta (arched outline)
+L-be48ea84285be20645af,FIN.PAINT,1F-13,W16,W16 (twin of W15),4.3629 .. 4.8050,4.3630,-0.442,0.0001,merged size: T-238 delta (arched outline)
+L-be48ea84285be20645af,FIN.PAINT,1F-13,D-1F-03,D115 bed 500 x 365,2.2000,2.2000,0.0,0.0,unchanged
+L-be48ea84285be20645af,FIN.PAINT,1F-13,D-1F-02,D115 bed west (landing part),0.9240,0.9240,0.0,0.0,unchanged
+L-5410f9045c80dd5933f0,FIN.PAINT,2F-03,D-2F-02,d220,1.9800,1.9800,0.0,0.0,unchanged
+L-5410f9045c80dd5933f0,FIN.PAINT,2F-03,D-2F-03,D315 to W.C.,1.7600,1.7600,0.0,0.0,unchanged
+L-5410f9045c80dd5933f0,FIN.PAINT,2F-03,W29,W29,0.0000 .. 4.0200,1.8000,-2.22,1.8,merged size: T-201 heads
+L-c74cfb4e07bcc47bc5d6,FIN.PAINT,2F-01,L-2F-01,lift landing door,0.0000 .. 3.3500,0 .. 3.3500 (HELD),0.0,0.0,unchanged
+L-c74cfb4e07bcc47bc5d6,FIN.PAINT,2F-01,D-2F-02,d220 maid,1.9800,1.9800,0.0,0.0,unchanged
+L-c74cfb4e07bcc47bc5d6,FIN.PAINT,2F-01,D-2F-01,D26 roof door,2.2000,2.2000,0.0,0.0,unchanged
