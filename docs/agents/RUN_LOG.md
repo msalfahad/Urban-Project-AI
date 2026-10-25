@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-25 09:35 UTC | Worker 3 | SUCCESS | T-245 r2 READY (agents/task-T-245 @ cace6fc7, Gate B integration package) | merged working head 86fdc315; F-T245-01 fixed: a downgrade record now leaves EXCLUDED (not-applicable) rows EXCLUDED (the 14-id 2F column group keeps EXCLUDED 774, only measured rows go HELD) + adverse test; maps by the tool as LAST commit (stale none); full suite on cace6fc7 to the end NEW 0 / KNOWN 395; no quantity moved | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-10-25T09:19Z | Worker 1 | IDLE | none (run lock held by run 20261025T082022-442-19595 since 2026-10-25T08:20Z) | overlap lock: another Worker 1 run is active; no claim, no change, no quantity | lock
 - 2026-10-25 09:00 UTC | Worker 3 | STARTED | run session_01FZzjH8Q2mJsn8aPvvaUFrn | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-25T08:50Z | Verifier | STARTED | run session_01NUVbnYxKPUpDq762dcXyCB | repo-attached routine | task state: READY T-289, T-275 r2, T-286 (per Lead 08:18) | self-check pending
