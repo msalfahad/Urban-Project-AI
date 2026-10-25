@@ -7,6 +7,7 @@ conflicts with something you planned, say so in your report to the main chat ins
 
 | UTC time | What changed | Where | Why |
 |---|---|---|---|
+| 2026-10-25 12:36 | OWNER: Q-71 also governs footing reinforcement (F8 / F12 / F13 / F14 / FF), applied separately from stirrups (10 points); no quantity change because of it; downgrade total checked; T-298 continues | BOARD.md note, OWNER_QUESTIONS.md Q-71 | Owner's words in the main chat |
 | 2026-10-25 11:51 | OWNER: reinforcement Stage B: export completion first (tonnes + completeness join, T-298); read-only ledger reconciliation START NOW (T-299, first in lane S); completeness safeguard approved as Stage C for the safeguard only (T-300, lane S after T-299 -> T-297); Q-71 answered for link / stirrup counting (footing scope asked back); no duplicate tasks | BOARD.md (note, T-298 .. T-300), OWNER_QUESTIONS.md Q-71, DECISION_REGISTER.md | Owner's words in the main chat |
 | 2026-10-25 10:33 | OWNER: reinforcement Stage A reviewed; no rebar code until approval; 16.39 t = provisional subtotal (not a bound); no adding ledgers before reconciliation; Checker CB11 review; RFI S19-S22 added | BOARD.md note, CLARIFICATIONS_CONSULTANT_2026-10-24.md | Owner's words in the main chat |
 | 2026-10-25 04:38 | OWNER: hourly cadence kept provisionally (review in 24-48 h); packages under ~50 min without cutting verification; deterministic BOQ_LINES required before T-245 acceptance (cause named, invalidation tests); one whole-line definition; RFIs continue unsent | BOARD.md (note, T-245) | Owner's words in the main chat |
