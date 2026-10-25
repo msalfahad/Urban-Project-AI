@@ -46,7 +46,15 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
-## Status (Lead, 2026-10-25 08:15; re-estimated each run from what merged and was verified)
+## Status (Lead, 2026-10-25 10:15; re-estimated each run from what merged and was verified)
+
+Lead 2026-10-25 10:15: since 08:15 the Checker merged 3 Gate A pieces (T-289 455c93c4 structural basis ledger with his own
+re-derive, T-275 r2 6c4c9700, T-286 e861e390); T-245 r2 (first real export) is in Gate B in the 08:50 Checker run, about
+2 h later than the 06:15 estimate. The week-2 target 'measurable increase in verified coverage' (3 Nov) now has its
+largest single input ready: the blockwork ledger (T-291) shows the candidate carries no blockwork quantity, so T-279 adds
+422.5 m2 determinate (297.8 m2 VERIFIED) to blank lines once T-291 passes Gate A; it sits behind T-254 / T-266 / T-255 in
+the owner's lane I order, one package at a time (about 2 - 4 h each including Gate B), so it lands about 26 - 27 Oct if
+each Gate B passes first time. Risk unchanged: verdict records bind to the whole candidate (T-294 after T-255).
 
 Lead 2026-10-25 08:15: since 06:15 the Checker merged 2 Gate A pieces (T-287 542b64c7: CB5 columns VERIFIED 1.430 m3 as a
 component; T-280 86fdc315: column-core rebar LOWER bounds) and rejected T-245 Gate B NARROW on stale maps only; every

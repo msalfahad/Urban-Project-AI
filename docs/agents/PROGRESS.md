@@ -1,10 +1,35 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
 Plain words, no task numbers. Measured numbers come from SCOREBOARD.md; anything not measured says so.
-Last update: 2026-10-25 08:15 UTC (Lead). Previous version: 2026-10-25 06:15 UTC. The released numbers did not change
+Last update: 2026-10-25 10:15 UTC (Lead). Previous version: 2026-10-25 08:15 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released default V2.9 + route G untouched). Your measure: whole BOQ
 lines independently verified, and trades that can be scored. Still 1 whole line verified in the candidate (the concrete
-slab, 60.28 m3), 0 released. No decision for you; the designer list is still being finished before you send it.
+slab, 60.28 m3), 0 released. No decision for you.
+
+Since 08:15 (newest first; three pieces checked and merged, the first real export back with the checker):
+- First real export of the candidate BOQ: the small fix is done (code map last, an out-of-scope row stays out of scope,
+  full test suite run to the end with no new failure) and it is back with the checker, who is checking it now.
+- Concrete, exterior ground beams: the checker confirmed the finding from the drawings himself. On the drawn runs at the
+  printed 0.95 m depth the main-house exterior ground beams are 15.96 m3, against 8.16 m3 in the engine (+7.80 m3,
+  +95.5 %); three of them were carried as interior beams. Verified as a basis, not yet in the candidate (next
+  integration after the export). The second-floor column question is settled: 8 lines carry the 3.53 m3 to be held.
+- Block walls (a material gap found): the candidate BOQ today carries NO block-wall quantity at all; every one of its 21
+  block-wall lines is blank, waiting on wall heights. The wall-by-wall ledger now ties all 76 walls to those lines:
+  422.53 m2 determinate (297.85 m2 checker-verified on 18 walls, 48.47 m2 confirmed from the drawings, 76.22 m2 on your
+  approved rules), more on 10 partly held walls, 28 walls held, and the walls under the sunken roof panels carried as a
+  term in the held drop (7.91 m2 per metre), never guessed. Waiting for the checker; then it goes into the candidate.
+  Freelancer comparison: he uses one height per floor, no per-wall figure, so not compared wall by wall.
+- Stairs and domes: every stair and dome line of the candidate is now tied to its pieces. The candidate releases 8.06 m3;
+  on the verified basis it is 7.59 m3 (-5.9 %: one flight built on assumed riser and waist values comes out, one landing
+  confirmed from the drawings goes in). 2.86 m3 of verified or owner-approved parts sit inside held lines and can be
+  released by splitting those lines. Found: the two dome drums are in no line at all (they will be shown as held, the
+  drawings do not give them). Waiting for the checker.
+- Floor area: the pantry zone (1.10 m2 wet) is checked and merged (candidate floor 380.36 -> 381.46 m2, +0.29 %, once
+  integrated with the stairs package).
+- Scoring guard against sealed files: fixed, checked and merged.
+- Team: two worker runs stood down because the previous run of the same worker was still working (the pieces took
+  85 - 100 minutes, more than the 50 I sized them for); every new piece now names where to stop.
+- Nothing new on Drive; no new photos.
 
 Since 06:15 (newest first; two pieces checked and merged, the first real export sent back for a small fix):
 - First real export of the candidate BOQ: the checker ran everything himself on the real drawings and it passed, except
