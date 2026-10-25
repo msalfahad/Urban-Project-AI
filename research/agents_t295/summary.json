@@ -1,0 +1,185 @@
+{
+ "schema": "T295_CEILING_FACE_TO_LINE_LEDGER_V1",
+ "rule": "R-T295-1",
+ "candidate": "ARCH_TAKEOFF_V3.0.15",
+ "candidate_lines_csv_sha256": "a4dc01dd5a309bb38b6bff54b486e9090b6d571a0044101197ec650f1cf3d00a",
+ "candidate_lines_json_sha256": "53450a1f8a1cb475fbac34776367fb97d9e7140e69b1e5ec32b572d403cdf347",
+ "lines_total": 3699,
+ "ceiling_lines": 36,
+ "listed_other_lines": {
+  "FIN.STAIR.FLIGHT": 14,
+  "STR.CONC.STAIR": 9,
+  "STR.CONC.DOME": 5
+ },
+ "inputs_sha256": {
+  "T-283 export": "fc8873cf2af6fef861cb12de93b04756939bb2906900672452a4dae820103149",
+  "T-281 ledger": "bc8c29a7e70fd42c47cd6acfc2c80cfe8aee332e26e5e6cc65e27243019eb059",
+  "T-281 summary": "8cce8bfc55b4c1a0ce878712073f2ed1c73b74b6ad4f2439e8b30299deca9c6d"
+ },
+ "faces": 79,
+ "edges_and_counts": 55,
+ "alternatives": 25,
+ "unmatched_lines": {
+  "L-80bc93761800e7ba1968": {
+   "element_id": "SOFFIT:1F:PL-04",
+   "state": "SOURCE_DERIVED",
+   "m2": 4.374,
+   "reason": "exterior soffit over outside air, typed record (T-121 / T-127 PLACES.csv; finish HELD Q-68 C): outside every interior floor piece of T-271 / T-283; owned by the exterior-soffit line, not the room ceilings"
+  },
+  "L-7cd2cd75128f101a208c": {
+   "element_id": "SOFFIT:1F:PL-05",
+   "state": "SOURCE_DERIVED",
+   "m2": 2.417,
+   "reason": "exterior soffit over outside air, typed record (T-121 / T-127 PLACES.csv; finish HELD Q-68 C): outside every interior floor piece of T-271 / T-283; owned by the exterior-soffit line, not the room ceilings"
+  },
+  "L-c041069e7b1c0dffcd8c": {
+   "element_id": "SOFFIT:GF:PL-01",
+   "state": "SOURCE_DERIVED",
+   "m2": 19.181,
+   "reason": "exterior soffit over outside air, typed record (T-121 / T-127 PLACES.csv; finish HELD Q-68 C): outside every interior floor piece of T-271 / T-283; owned by the exterior-soffit line, not the room ceilings; POSSIBLE OVERLAP: T-271 s.2: the HELD-class GF garden band 9.101 + merged band 4.885 (GF-R9A05AA, GF-RFD4E1D) 'may be one of the T-127 candidate soffits: not added, no double count'; both are HELD blank here, so nothing is counted twice today; the class decision (P-2) must be checked against PL-01 / PL-02 / PL-03 before either is carried"
+  },
+  "L-10404364d725471e3213": {
+   "element_id": "SOFFIT:GF:PL-02",
+   "state": "SOURCE_DERIVED",
+   "m2": 5.64,
+   "reason": "exterior soffit over outside air, typed record (T-121 / T-127 PLACES.csv; finish HELD Q-68 C): outside every interior floor piece of T-271 / T-283; owned by the exterior-soffit line, not the room ceilings; POSSIBLE OVERLAP: T-271 s.2: the HELD-class GF garden band 9.101 + merged band 4.885 (GF-R9A05AA, GF-RFD4E1D) 'may be one of the T-127 candidate soffits: not added, no double count'; both are HELD blank here, so nothing is counted twice today; the class decision (P-2) must be checked against PL-01 / PL-02 / PL-03 before either is carried"
+  },
+  "L-23072352a28aeca7b051": {
+   "element_id": "SOFFIT:GF:PL-03",
+   "state": "SOURCE_DERIVED",
+   "m2": 12.834,
+   "reason": "exterior soffit over outside air, typed record (T-121 / T-127 PLACES.csv; finish HELD Q-68 C): outside every interior floor piece of T-271 / T-283; owned by the exterior-soffit line, not the room ceilings; POSSIBLE OVERLAP: T-271 s.2: the HELD-class GF garden band 9.101 + merged band 4.885 (GF-R9A05AA, GF-RFD4E1D) 'may be one of the T-127 candidate soffits: not added, no double count'; both are HELD blank here, so nothing is counted twice today; the class decision (P-2) must be checked against PL-01 / PL-02 / PL-03 before either is carried"
+  }
+ },
+ "no_line_faces": {
+  "GF-RC99C2A/open|st02-soffit": "L-eb3be58fc760b39f0e38",
+  "GF-RC99C2A/open|beyond": "L-eb3be58fc760b39f0e38",
+  "GF-R9A05AA|class-held": null,
+  "GF-RFD4E1D|class-held": null,
+  "GF-RF002DC|class-held": null,
+  "GF-R7B7A5D|class-held": null,
+  "ST01-MS2-L": "L-35341ff2e6a848b9436b + L-fc116bb666b184740090",
+  "ST01-MS2-U": "L-35341ff2e6a848b9436b + L-fc116bb666b184740090",
+  "ST01-MS2-LD-W": "L-35341ff2e6a848b9436b + L-fc116bb666b184740090",
+  "ST01-MS2-LD-E": "L-35341ff2e6a848b9436b + L-fc116bb666b184740090",
+  "ST01-MS2-TR": "L-35341ff2e6a848b9436b + L-fc116bb666b184740090",
+  "1F-RFFE7AF|decor": null,
+  "2F-R2BDCEE|top": null
+ },
+ "by_owner_status": {
+  "BULKHEAD / ASSUMED — OWNER-APPROVED": {
+   "faces": 14,
+   "plan_m2": 27.9345,
+   "carried_m2": 27.9345
+  },
+  "DECOR / DRAWING-CONFIRMED": {
+   "faces": 32,
+   "plan_m2": 362.006092,
+   "carried_m2": 362.006092
+  },
+  "DOME / HELD": {
+   "faces": 8,
+   "plan_m2": 30.7181,
+   "carried_m2": null
+  },
+  "HELD_CEILING / HELD": {
+   "faces": 6,
+   "plan_m2": 32.2927,
+   "carried_m2": null
+  },
+  "STAIR_SOFFIT / DRAWING-CONFIRMED": {
+   "faces": 3,
+   "plan_m2": 6.635,
+   "carried_m2": 7.183695
+  },
+  "STAIR_SOFFIT / HELD": {
+   "faces": 8,
+   "plan_m2": 24.975681,
+   "carried_m2": null
+  },
+  "STAIR_TOP / HELD": {
+   "faces": 2,
+   "plan_m2": 4.99,
+   "carried_m2": null
+  },
+  "VOID / DRAWING-CONFIRMED": {
+   "faces": 6,
+   "plan_m2": 22.110906,
+   "carried_m2": 22.110906
+  }
+ },
+ "piece_closure_residual_m2": {
+  "GF-R7512EA": 0.0001
+ },
+ "named_piece_residuals_m2": {
+  "1F-R3CFCFD": [
+   0.0021,
+   "T-271 overlay chord residual (RECONCILE_T271.csv), kept in the ceiling"
+  ],
+  "GF-R7512EA": [
+   -0.0011,
+   "T-271 overlay chord residual (RECONCILE_T271.csv), kept in the ceiling"
+  ],
+  "GF-R75FBAE": [
+   0.0033,
+   "T-271 overlay chord residual (RECONCILE_T271.csv), kept in the ceiling"
+  ],
+  "GF-RC99C2A/open": [
+   -7.9e-05,
+   "T-281 arc residual -0.000061 + T-283 rounding of the stair zone -0.000018"
+  ]
+ },
+ "source_closure": {
+  "decor = T-283 horizontal 361.2287 + slab north of riser 315 (Checker)": {
+   "ledger": 362.006092,
+   "source": 362.006092,
+   "residual": 0.0
+  },
+  "owner bulkheads = T-283 27.9345": {
+   "ledger": 27.9345,
+   "source": 27.9345,
+   "residual": 0.0
+  },
+  "no ceiling = T-283 'no ceiling' + T-281 wells GF 0.315 / 1F 0.310 + light-well strip": {
+   "ledger": 22.110906,
+   "source": 22.110906,
+   "residual": 0.0
+  },
+  "domes = two open discs (DOMES_T283.csv)": {
+   "ledger": 30.7181,
+   "source": 30.718,
+   "residual": 0.0001
+  },
+  "stair zones = T-283 GF 9.8536 + 1F 10.725 + GF stair soffit 10.725 + beyond GF 1.7719 (soffit + wells + decor slab + strip, residual named)": {
+   "ledger": 33.0755,
+   "source": 33.0755,
+   "residual": -0.0
+  }
+ },
+ "villa_reconciliation_m2": {
+  "engine_FIN_CEILING_with_quantity": 403.162928,
+  "lines_with_quantity": 29,
+  "decor_carried_in_them": 353.410292,
+  "other_faces_booked_in_them_by_owner_status": {
+   "DOME / HELD": 29.0695,
+   "HELD_CEILING / HELD": 0.1725,
+   "STAIR_SOFFIT / DRAWING-CONFIRMED": 5.195,
+   "STAIR_SOFFIT / HELD": 16.005681,
+   "VOID / DRAWING-CONFIRMED": 15.315906
+  },
+  "engine_deductions_not_remeasured": 16.005,
+  "remainder_chord_rounding": -0.000951,
+  "identity_residual": 0.0,
+  "decor_in_BLOCKED_lines (engine BLANK)": 5.6258,
+  "BLOCKED_lines": [
+   "L-2175a965bb7c48a50e6c",
+   "L-dd6930fd19ca1b908c56"
+  ],
+  "decor_in_no_candidate_line": 2.97,
+  "decor_total": 362.006092,
+  "engine_minus_decor_total": 41.156836
+ },
+ "max_abs_line_remainder_m2": 0.000983,
+ "released": false,
+ "statement": "research ledger; NOT RELEASED; no candidate or released line changed; HELD faces carried blank with the plan area shown; ranges never summed"
+}

@@ -1,0 +1,223 @@
+{
+ "schema": "T297_LINE_BASIS_SUMMARY_V1",
+ "candidate": {
+  "candidate": "ARCH_TAKEOFF_V3.0.16",
+  "candidate_lines_csv_sha256": "a4dc01dd5a309bb38b6bff54b486e9090b6d571a0044101197ec650f1cf3d00a",
+  "candidate_lines_json_sha256": "3181cf12995c410d4c81c89b3e9d2c4c110f730215f9e70cecd20af205aacbcc",
+  "project": {
+   "project_id": "development-villa-t131",
+   "revision_set_sha256": "5e3690754db90b5fa2d878d4fc29b2e84ce9d1d91e4c1e68a62019d1b34bbc22",
+   "route": {
+    "project_id": "ST7757 villa (structural set)",
+    "revision_set_sha256": "297e913da9d98da10c40b1e93af0ccc66b0d7825b7700e0a2e3b9b5a54240b18"
+   }
+  },
+  "lines_in_candidate": 3699,
+  "rebar_lines": 2505
+ },
+ "rows": 2505,
+ "totals_by_family_status": {
+  "BEAMS|BOUND": {
+   "lines": 457,
+   "low_kg": 4637.53,
+   "low_t": 4.63753,
+   "high_kg": null,
+   "high_t": null,
+   "high_open_lines": 51
+  },
+  "BEAMS|DRAWING_CONFIRMED": {
+   "lines": 230,
+   "kg": 5171.031,
+   "t": 5.171031
+  },
+  "BEAMS|HELD": {
+   "lines": 76
+  },
+  "BEAMS|NOT_APPLICABLE": {
+   "lines": 366
+  },
+  "COLUMNS|BOUND": {
+   "lines": 113,
+   "low_kg": 1280.992,
+   "low_t": 1.280992,
+   "high_kg": 2119.349,
+   "high_t": 2.119349,
+   "high_open_lines": 0
+  },
+  "COLUMNS|DRAWING_CONFIRMED": {
+   "lines": 32,
+   "kg": 1887.128,
+   "t": 1.887128
+  },
+  "COLUMNS|HELD": {
+   "lines": 238
+  },
+  "COLUMNS|NOT_APPLICABLE": {
+   "lines": 122
+  },
+  "FOOTINGS|BOUND": {
+   "lines": 20,
+   "low_kg": 2742.506174,
+   "low_t": 2.742506,
+   "high_kg": 2836.4,
+   "high_t": 2.8364,
+   "high_open_lines": 0
+  },
+  "FOOTINGS|CONVENTION": {
+   "lines": 38,
+   "kg": 874.862227,
+   "t": 0.874862
+  },
+  "FOOTINGS|HELD": {
+   "lines": 27
+  },
+  "GROUND_BEAMS|BOUND": {
+   "lines": 62,
+   "low_kg": 1297.139314,
+   "low_t": 1.297139,
+   "high_kg": 2269.556938,
+   "high_t": 2.269557,
+   "high_open_lines": 0
+  },
+  "GROUND_BEAMS|DRAWING_CONFIRMED": {
+   "lines": 88,
+   "kg": 1252.907,
+   "t": 1.252907
+  },
+  "GROUND_BEAMS|HELD": {
+   "lines": 131
+  },
+  "GROUND_BEAMS|NOT_APPLICABLE": {
+   "lines": 9
+  },
+  "GROUND_SLAB|CONVENTION": {
+   "lines": 24,
+   "kg": 1064.239762,
+   "t": 1.06424
+  },
+  "POOL|HELD": {
+   "lines": 20
+  },
+  "SLABS|BOUND": {
+   "lines": 294,
+   "low_kg": 4643.766,
+   "low_t": 4.643766,
+   "high_kg": 6832.326,
+   "high_t": 6.832326,
+   "high_open_lines": 0
+  },
+  "SLABS|HELD": {
+   "lines": 18
+  },
+  "SLABS|NOT_APPLICABLE": {
+   "lines": 72
+  },
+  "STAIRS|BOUND": {
+   "lines": 50,
+   "low_kg": 1039.16,
+   "low_t": 1.03916,
+   "high_kg": 1443.671,
+   "high_t": 1.443671,
+   "high_open_lines": 0
+  },
+  "STAIRS|HELD": {
+   "lines": 17
+  },
+  "WATER_TANK|HELD": {
+   "lines": 1
+  }
+ },
+ "residuals_vs_candidate_kg": {
+  "BEAMS|low": 0.0,
+  "BEAMS|qty": 0.0,
+  "COLUMNS|low": 0.0,
+  "COLUMNS|qty": 0.0,
+  "FOOTINGS|low": 0.0,
+  "FOOTINGS|qty": 0.0,
+  "GROUND_BEAMS|low": 0.0,
+  "GROUND_BEAMS|qty": 0.0,
+  "GROUND_SLAB|qty": 0.0,
+  "SLABS|low": 0.0,
+  "STAIRS|low": 0.0
+ },
+ "residuals_vs_sources_kg": {
+  "research/agents_t148/T148_COLUMNS.csv": {
+   "rows_kg": 1887.128,
+   "named_kg": 1887.131,
+   "residual_kg": -0.003,
+   "tolerance_kg": 0.017,
+   "rows": 32
+  },
+  "research/agents_t149/T149_BEAMS.csv": {
+   "rows_kg": 5171.031,
+   "named_kg": 5171.03,
+   "residual_kg": 0.001,
+   "tolerance_kg": 0.12,
+   "rows": 230
+  }
+ },
+ "lines_by_source_and_status": {
+  "FOOTING_REBAR_POPULATION_V1 (candidate method)": {
+   "BOUND": 20,
+   "CONVENTION": 38,
+   "HELD": 23
+  },
+  "FOOTING_TOP_END_CITATION_V1 (candidate method)": {
+   "HELD": 4
+  },
+  "research/agents_t138/T138_MEMBERS.csv": {
+   "BOUND": 62,
+   "DRAWING_CONFIRMED": 88,
+   "HELD": 131
+  },
+  "research/agents_t148/T148_COLUMNS.csv": {
+   "BOUND": 113,
+   "DRAWING_CONFIRMED": 32,
+   "HELD": 182
+  },
+  "research/agents_t149/T149_BEAMS.csv": {
+   "BOUND": 457,
+   "DRAWING_CONFIRMED": 230,
+   "HELD": 76
+  },
+  "research/agents_t152/T152_SLAB_STEEL.csv": {
+   "BOUND": 294,
+   "HELD": 18
+  },
+  "research/agents_t166/T166_STEEL.csv": {
+   "BOUND": 50,
+   "HELD": 38
+  },
+  "route: URBAN_M8_GENERIC_CONVENTIONS_V6+ST7757_M4": {
+   "CONVENTION": 24,
+   "HELD": 56,
+   "NOT_APPLICABLE": 569
+  }
+ },
+ "flags": {
+  "COMPONENT_ENDS_HELD": 265,
+  "LOWER_BOUND_ZERO_OPEN": 3,
+  "MIN_COVER_AS_EXACT": 58
+ },
+ "coverage_findings": [
+  {
+   "finding": "F-T297-01 column foundation storey: the candidate's only column lines on the FOUNDATION floor are route G neck lines, all without quantity; the T-280 cores (26 LOWER bounds 734.781 kg on the printed level chain, 10 HELD; MERGED 86fdc315) sit in no candidate line: a later lane I row carries them as BOUND lines with their datum, never as measured kg",
+   "foundation_column_lines_by_bar_group": {
+    "MAIN": {
+     "BLOCKED_RFI -> HELD": 28
+    },
+    "TIES": {
+     "BLOCKED_RFI -> HELD": 28
+    }
+   }
+  },
+  {
+   "finding": "F-T297-02 ground-beam steel: the candidate's released ground-beam lines rest on T-138 r2 (DRAWING_CONFIRMED components); T-265 (MERGED) restates 13 axis pairs of T-138 (T-299 READY: 572.500 kg -> T-265 released rows, 320.440 kg -> HELD); the candidate lines are not yet re-based (lane I), so their DRAWING_CONFIRMED label stands for T-138 only",
+   "t138_drawing_confirmed_kg_in_candidate": 1252.907
+  },
+  {
+   "finding": "F-T297-03 footings: the 38 released footing lines (FOOTING_REBAR_POPULATION_V1) take the straight bar as side - 2 x 70 mm where note 22 prints cover 'not less than 7 cm' (a minimum) and derive no bend: basis CONVENTION, never DRAWING_CONFIRMED (owner 13:16 F2 - F5; T-299 part F)",
+   "lines": 38
+  }
+ ]
+}
