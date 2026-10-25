@@ -5,7 +5,7 @@ in engine/ imports it. General: no project name, item code or element id is writ
 
     python3 -I tools/boq_export_v1.py --lines V3_0_x_BOQ_LINES.json --candidate-version ARCH_TAKEOFF_V3.0.x
         --out OUT_DIR [--verdicts-v1 CHECKER_VERDICTS.json --key-map KEY_MAP.json] [--inventory INVENTORY.json]
-        [--expect-project ID] [--expect-revision-set SHA256] [--code-commit SHA]
+        [--expect-project ID] [--expect-revision-set SHA256] [--code-commit SHA] [--identity V3_0_16_IDENTITY.json]
 
 Rows and order. One row per canonical line, plus one UNMEASURED row per inventory element that no line carries; rows
 sorted by (trade, item code, floor, element id, line id), so producer order never changes a byte (probe 11). Nothing is
@@ -55,6 +55,24 @@ invalidated); the flag adds BOQ_CONTRACT_UNITS.csv + BOQ_CONTRACT_TOTALS.csv (sc
 the XLSX sheets "BOQ (contract units)" / "Contract totals", and raises the manifest to URBAN_BOQ_EXPORT_MANIFEST_V2.
 t = kg / 1000 once, here; 6 decimals; totals converted from the unrounded kg sums; kg and t rows of one BOQ line
 together are refused (mixed units). Without the flag every byte written is as before.
+
+Identity (T-245). The verdict binding boq_lines_sha256 is the sha256 of the CANONICAL line content (lines_sha256:
+engine/source/boq_line.dumps, sorted keys), never the raw file bytes (the raw sha256 stays in inputs_sha256 as
+provenance). A candidate of ARCH_TAKEOFF_V3.0.16 or later carries one project id and one revision set over every
+drawing; --identity takes its V3_0_16_IDENTITY.json (URBAN_BOQ_PROJECT_IDENTITY_V1), refused unless it is the lines'
+own project and its documents give the lines' revision set (one revision per sheet), and states each drawing's
+revision state, the disclosures (an UNCONFIRMED revision with why) and the INTERNAL REVIEW CANDIDATE label in the
+manifest (project_identity) and the XLSX Manifest sheet. Probe 10 is unchanged: lines of two project ids or two
+revision sets are refused.
+
+Downgrade-only records (T-245 (f), owner 2026-10-24 23:53 / 23:57). --downgrades takes a URBAN_CHECKER_DOWNGRADE_V1_SET
+('downgrade-add' fills the binding from the lines; Checker routines only). A record binds project, revision set, line
+ids, unit and the candidate quantity it downgrades (engine_qty); it carries no quantity of its own. A VALID unresolved
+record moves each of its lines to HELD (reason "HELD: ..." or "CONFLICT: ...", its basis label) even when a V2 verdict
+made the line VERIFIED (the verdict is shown OVERRIDDEN); the candidate quantity appears only in
+BOQ_AUDIT_UNSUPPORTED_BASIS.csv / the XLSX sheet "Audit (unsupported basis)"; the candidate lines are not changed.
+A record of another project, on a missing line, or whose lines' quantity changed binds nothing and is listed (STALE ...).
+Without --downgrades every byte written is as before.
 
 Part (4) (completeness from T-236). --completeness takes the merged T-236 report (tools/trade_completeness.py
 TRADE_COMPLETENESS.json, schema URBAN_TRADE_COMPLETENESS_V1; its reference_line_rows() per trade). The report carries no
@@ -109,6 +127,17 @@ V1_VERDICTS_SCHEMA = "URBAN_SCOREBOARD_CHECKER_VERDICTS_V1"
 V2_VERDICT_SCHEMA = "URBAN_CHECKER_VERDICT_V2"
 COMPLETENESS_SCHEMA = "URBAN_LINE_COMPLETENESS_V1"
 V2_SET_SCHEMA = "URBAN_CHECKER_VERDICT_V2_SET"
+IDENTITY_SCHEMA = "URBAN_BOQ_PROJECT_IDENTITY_V1"   # T-245: engine/source/arch_v3016 V3_0_16_IDENTITY.json
+# T-245 (f) (owner 2026-10-24 23:53 / 23:57 (1), (2)): a Checker-issued, line-bound DOWNGRADE-ONLY record; it can
+# only move an exported line to HELD / CONFLICT, never promote one, and carries no Checker measurement
+DOWNGRADE_SCHEMA = "URBAN_CHECKER_DOWNGRADE_V1"
+DOWNGRADE_SET_SCHEMA = "URBAN_CHECKER_DOWNGRADE_V1_SET"
+DOWNGRADE_REQUIRED = ("schema", "downgrade_id", "project_id", "revision_set_sha256", "candidate_version", "line_ids",
+                      "unit", "engine_qty", "state", "basis_label", "reason", "evidence", "checker", "time")
+DOWNGRADE_STATES = ("HELD", "CONFLICT")
+AUDIT_COLUMNS = ("line_id", "trade", "item_code", "floor", "element_id", "unit", "candidate_qty", "basis_label",
+                 "downgrade_state", "downgrade_id", "reason", "verdict_overridden")
+REVIEW_LABEL = "INTERNAL REVIEW CANDIDATE (not released; released default ARCH_TAKEOFF_V2.9 + route G)"
 # T-273 (owner 2026-10-24 14:23 / 15:31): the contractual BOQ unit of reinforcement is the metric ton. The canonical rows
 # (BOQ.csv, kg, the unit every V2 verdict binds to) are unchanged; the CONTRACT-UNIT view is an explicit, opt-in
 # migration (--contract-units) with its own schema and a raised manifest schema: t = kg / 1000, applied ONCE here, at
@@ -486,6 +515,128 @@ def verdict_add(lines, *, candidate_version, boq_lines_sha256, line_ids, scope, 
     return dict(sorted(rec.items()))
 
 
+def validate_downgrade(d):
+    """-> [problem text] for one URBAN_CHECKER_DOWNGRADE_V1 record's form (binding is apply_downgrades' job)."""
+    if not isinstance(d, dict):
+        return ["record: not an object"]
+    p = []
+    if d.get("schema") != DOWNGRADE_SCHEMA:
+        p.append(f"schema: {d.get('schema')!r} is not {DOWNGRADE_SCHEMA}")
+    for k in DOWNGRADE_REQUIRED:
+        if d.get(k) in (None, "", [], {}):
+            p.append(f"{k}: required")
+    for k in ("checker_qty", "qty", "measured_net", "corrected_qty"):
+        if k in d:
+            p.append(f"{k}: a downgrade carries no quantity of its own (never a Checker measurement; downgrade only)")
+    if d.get("state") not in (None, "") and d["state"] not in DOWNGRADE_STATES:
+        p.append(f"state: {d['state']!r} is not one of {DOWNGRADE_STATES} (a record can only downgrade)")
+    if d.get("revision_set_sha256") not in (None, "") and not (isinstance(d["revision_set_sha256"], str)
+                                                               and _SHA_RE.match(d["revision_set_sha256"])):
+        p.append("revision_set_sha256: 64 lower-case hex characters")
+    ids = d.get("line_ids")
+    if ids not in (None, []) and (not isinstance(ids, list) or not all(isinstance(x, str) and x for x in ids)
+                                  or len(set(ids)) != len(ids)):
+        p.append("line_ids: a list of distinct line id texts")
+    if d.get("unit") not in (None, "") and d["unit"] not in BL.UNITS:
+        p.append(f"unit: {d['unit']!r}")
+    if "engine_qty" in d and d["engine_qty"] is not None and not _isnum(d["engine_qty"]):
+        p.append("engine_qty: a number (the candidate quantity the record downgrades)")
+    v2like = {"evidence": d.get("evidence"), "checker": d.get("checker"), "time": d.get("time")}
+    p += [x for x in validate_v2(dict(v2like, schema=V2_VERDICT_SCHEMA))
+          if x.split(":")[0] in ("evidence", "checker", "checker.routine", "checker.verdict_commit", "time")
+          and not x.endswith(": required")]
+    if "resolved" in d and not isinstance(d["resolved"], bool):
+        p.append("resolved: true or false")
+    return p
+
+
+def downgrade_add(lines, *, candidate_version, line_ids, state, basis_label, reason, evidence, run_token, routine,
+                  verdict_commit, time, downgrade_id=None):
+    """-> one URBAN_CHECKER_DOWNGRADE_V1 record, binding (project, revision set, unit, engine qty) filled from the
+    candidate lines; the Checker types the line ids, state, basis label, reason, evidence and its run identity."""
+    for ln in lines:
+        BL.validate(ln)
+    pid, rev = identity(lines)
+    by_id = {ln["line_id"]: ln for ln in lines}
+    ids = sorted(line_ids)
+    if not ids or len(set(ids)) != len(ids):
+        raise ExportError("a downgrade names at least one line, each once")
+    unknown = sorted(set(ids) - set(by_id))
+    if unknown:
+        raise ExportError(f"unknown line id(s) {unknown[:3]}: not in this candidate")
+    sel = [by_id[i] for i in ids]
+    units = sorted({ln["unit"] for ln in sel})
+    if len(units) != 1:
+        raise ExportError(f"lines of more than one unit {units}: one record, one unit")
+    rec = {"schema": DOWNGRADE_SCHEMA, "project_id": pid, "revision_set_sha256": rev,
+           "candidate_version": candidate_version, "line_ids": ids, "unit": units[0],
+           "engine_qty": _num(sum(float(ln["measured_net"] or 0.0) for ln in sel)), "state": state,
+           "basis_label": basis_label, "reason": reason, "evidence": [dict(sorted(e.items())) for e in evidence],
+           "checker": {"run_token": run_token, "routine": routine, "verdict_commit": verdict_commit}, "time": time,
+           "resolved": False}
+    rec["downgrade_id"] = downgrade_id or "DG-" + sha256_bytes(json.dumps(rec, sort_keys=True, ensure_ascii=False)
+                                                               .encode("utf-8"))[:16]
+    probs = validate_downgrade(rec)
+    if probs:
+        raise ExportError("; ".join(probs))
+    return dict(sorted(rec.items()))
+
+
+def apply_downgrades(records, by_line, pid, rev):
+    """T-245 (f) / (f2): apply each VALID downgrade to its rows: HELD (or CONFLICT) with the reason, the candidate
+    quantity moved to the audit rows (labelled with the record's basis label), a VERIFIED / COMPONENT verdict on the
+    line overridden while the record is unresolved. Never promotes: a row is only ever cleared to HELD. -> (statuses,
+    audit rows). A record of another project / revision set, a missing line, another unit or a changed engine
+    quantity binds nothing (listed with its status for the Checker; the line keeps its own state)."""
+    status, audit = [], []
+    for d in sorted(records or (), key=lambda x: str(x.get("downgrade_id"))):
+        did = str(d.get("downgrade_id"))
+        probs = validate_downgrade(d)
+        if probs:
+            status.append({"downgrade_id": did, "status": "INVALID: " + "; ".join(probs)})
+            continue
+        if (d["project_id"], d["revision_set_sha256"]) != (pid, rev):
+            status.append({"downgrade_id": did, "status": "OTHER_PROJECT_OR_REVISION_SET"})
+            continue
+        if d.get("resolved") is True:
+            status.append({"downgrade_id": did, "status": "RESOLVED (not applied)"})
+            continue
+        sel = [by_line.get(i) for i in d["line_ids"]]
+        if any(x is None for x in sel):
+            status.append({"downgrade_id": did, "status": "NO_LINE_IN_THIS_EXPORT"})
+            continue
+        lns = [x[1] for x in sel]
+        eq = sum(float(ln["measured_net"] or 0.0) for ln in lns)
+        if any(ln["unit"] != d["unit"] for ln in lns) or abs(eq - float(d["engine_qty"])) > QTY_MATCH_TOL:
+            status.append({"downgrade_id": did, "status": "STALE (the lines' unit or quantity changed: Checker to "
+                                                         "review; not applied)"})
+            continue
+        # F-T245-01 (Verifier 2026-10-25 07:58): an EXCLUDED (not-applicable / excluded with reason) row is not a
+        # quantity of the BOQ at all; a downgrade never turns it into HELD (that would put a not-applicable element
+        # into the held list). It stays EXCLUDED with its own reason, and the status names how many were left.
+        kept = [(row, ln) for row, ln in sel if row["quantity_state"] == EXCLUDED]
+        sel = [(row, ln) for row, ln in sel if row["quantity_state"] != EXCLUDED]
+        for row, ln in sel:
+            was = row["quantity_state"]
+            over = was in (VERIFIED, VERIFIED_ZERO, VERIFIED_COMPONENT)
+            audit.append({"line_id": row["line_id"], "trade": row["trade"], "item_code": row["item_code"],
+                          "floor": row["floor"], "element_id": row["element_id"], "unit": row["unit"],
+                          "candidate_qty": _num(ln.get("measured_net")), "basis_label": d["basis_label"],
+                          "downgrade_state": d["state"], "downgrade_id": did, "reason": d["reason"],
+                          "verdict_overridden": f"{was} {row['verdict_id']}".strip() if over else ""})
+            prior = f" | was {was}: {row['held_reason']}" if was == HELD and row["held_reason"] else ""
+            for c in ("net", "qty_verified", "qty_verified_zero", "qty_verified_component", "qty_measured_unverified",
+                      "open_range_low", "open_range_high"):
+                row[c] = None
+            row["quantity_state"], row["owner_status_class"] = HELD, CLS_HELD
+            row["held_reason"] = f"{d['state']}: {d['reason']} ({d['basis_label']}; downgrade {did}){prior}"
+            if over or row["verdict_id"]:
+                row["verdict_status"] = f"{row['verdict_status']} | OVERRIDDEN BY DOWNGRADE {did} (unresolved)"
+        left = f"; {len(kept)} EXCLUDED row(s) left EXCLUDED" if kept else ""
+        status.append({"downgrade_id": did, "status": f"APPLIED ({d['state']}, {len(sel)} line(s){left})"})
+    return status, audit
+
+
 def _dump_set(doc):
     return json.dumps(doc, indent=1, sort_keys=True, ensure_ascii=False) + "\n"
 
@@ -763,7 +914,8 @@ def _state_row(row, ln):
 
 
 def build(lines, *, candidate_version, boq_lines_sha256, v1_doc=None, key_map_doc=None, inventory_doc=None,
-          v2_records=(), completeness=None, completeness_report=None, expect_project=None, expect_revision_set=None):
+          v2_records=(), completeness=None, completeness_report=None, expect_project=None, expect_revision_set=None,
+          downgrades=None):
     """-> {"rows": [...canonical order], "summary": [...], "trades": [...], "identity": {...}, "counts": {...},
     "v2_verdicts": [{verdict_id, status}]}. completeness: {group: URBAN_LINE_COMPLETENESS_V1 record};
     completeness_report: the T-236 report (part (4)), from which those records and the UNMEASURED rows are derived."""
@@ -909,6 +1061,7 @@ def build(lines, *, candidate_version, boq_lines_sha256, v1_doc=None, key_map_do
                 r["checker_qty"] = _num(v["checker_qty"])
                 r["verdict_status"] = "COUNTED (WHOLE)"
 
+    dg_status, audit = apply_downgrades(downgrades, by_line, pid, rev) if downgrades is not None else ([], [])
     rows.sort(key=sort_key)
     if len(rows) != len(lines) + sum(1 for r in rows if r["quantity_state"] == UNMEASURED):
         raise ExportError("row count differs from lines + unmeasured elements: a row was dropped (refused)")
@@ -921,7 +1074,9 @@ def build(lines, *, candidate_version, boq_lines_sha256, v1_doc=None, key_map_do
     return {"schema": SCHEMA, "rows": rows, "summary": summary, "trades": trades, "counts": counts,
             "identity": {"project_id": pid, "revision_set_sha256": rev, "candidate_version": candidate_version,
                          "boq_lines_sha256": boq_lines_sha256},
-            "v2_verdicts": v2_status,
+            "v2_verdicts": v2_status, "downgrades": dg_status if downgrades is not None else None,
+            "audit_rows": sorted(audit, key=lambda r: (str(r["item_code"]), str(r["floor"]), str(r["element_id"]),
+                                                      str(r["line_id"]))),
             "completeness_input": ("T-236 report (URBAN_TRADE_COMPLETENESS_V1)" if completeness_report is not None
                                    else "records given" if completeness
                                    else "none given: no line can read VERIFIED")}
@@ -1099,8 +1254,37 @@ def _code_commit(given):
         return "UNKNOWN"
 
 
+def project_identity(doc, ident):
+    """T-245: check a URBAN_BOQ_PROJECT_IDENTITY_V1 record against the exported lines' identity; -> the rows the
+    manifest and the XLSX Manifest sheet state (revision set, each drawing's revision state, the disclosures)."""
+    if doc.get("schema") != IDENTITY_SCHEMA:
+        raise ExportError(f"--identity schema {doc.get('schema')!r} is not {IDENTITY_SCHEMA}")
+    if doc.get("project_id") != ident["project_id"]:
+        raise ExportError(f"--identity project {doc.get('project_id')!r} is not the lines' {ident['project_id']!r}")
+    docs = doc.get("documents") or []
+    shas = [d.get("sha256") for d in docs]
+    if not docs or len(set(shas)) != len(shas) or any(not isinstance(x, str) or len(x) != 64 for x in shas):
+        raise ExportError("--identity: documents missing, repeated or without a sha256")
+    sheets = [(d.get("discipline"), d.get("sheet")) for d in docs]
+    if len(set(sheets)) != len(sheets):
+        raise ExportError("--identity: two revisions of one sheet (refused)")
+    rev = hashlib.sha256("|".join(sorted(shas)).encode("utf-8")).hexdigest()
+    if rev != doc.get("revision_set_sha256") or rev != ident["revision_set_sha256"]:
+        raise ExportError("--identity: its documents do not give the lines' revision set sha256 (refused)")
+    rows = [("identity_schema", IDENTITY_SCHEMA), ("review_label", REVIEW_LABEL)]
+    for d in sorted(docs, key=lambda d: (str(d.get("discipline")), str(d.get("sheet")))):
+        st = d.get("revision_state")
+        rows.append((f"document {d.get('discipline')} {d.get('sheet')}",
+                     f"{d.get('title')} | revision {d.get('revision')} ({st}"
+                     + (f": {d.get('reason')}" if st == "UNCONFIRMED" else "") + f") | sha256 {d.get('sha256')}"))
+    for i, t in enumerate(doc.get("disclosures") or []):
+        rows.append((f"disclosure {i + 1}", t))
+    rows.append(("provenance", "a file sha256 proves the file used, not that it is the latest approved revision"))
+    return rows
+
+
 def export(lines, out_dir, *, candidate_version, boq_lines_sha256, input_sha256=None, code_commit="NOT_RECORDED",
-           contract_units=False, **kw):
+           contract_units=False, identity_doc=None, **kw):
     """build + write BOQ.csv, BOQ.xlsx, EXPORT_MANIFEST.json into out_dir; -> the manifest. contract_units (T-273,
     opt-in): also BOQ_CONTRACT_UNITS.csv + BOQ_CONTRACT_TOTALS.csv and two XLSX sheets, manifest schema V2."""
     res = build(lines, candidate_version=candidate_version, boq_lines_sha256=boq_lines_sha256, **kw)
@@ -1117,18 +1301,27 @@ def export(lines, out_dir, *, candidate_version, boq_lines_sha256, input_sha256=
         ("code_commit", code_commit), ("rows", len(res["rows"])),
         ("completeness_input", res["completeness_input"]),
         ("verified_rule", "VERIFIED only from a bound V2 verdict + passing completeness record; V1 never"))]
+    id_rows = project_identity(identity_doc, ident) if identity_doc is not None else None
+    for k, v in id_rows or ():
+        mrows.append({"key": k, "value": str(v)})
     for k in sorted(res["counts"]):
         mrows.append({"key": f"rows {k}", "value": str(res["counts"][k])})
     for s in res["v2_verdicts"]:
         mrows.append({"key": f"verdict {s['verdict_id']}", "value": s["status"]})
     extra, outs = (), ["BOQ.csv", "BOQ.xlsx", "BOQ_TRADE_SUMMARY.csv"]
+    if res["downgrades"] is not None:
+        (out / "BOQ_AUDIT_UNSUPPORTED_BASIS.csv").write_bytes(csv_bytes(res["audit_rows"], AUDIT_COLUMNS))
+        for s in res["downgrades"]:
+            mrows.append({"key": f"downgrade {s['downgrade_id']}", "value": s["status"]})
+        extra = extra + (("Audit (unsupported basis)", AUDIT_COLUMNS, res["audit_rows"]),)
+        outs += ["BOQ_AUDIT_UNSUPPORTED_BASIS.csv"]
     if contract_units:
         (out / "BOQ_CONTRACT_UNITS.csv").write_bytes(csv_bytes(crow, CONTRACT_COLUMNS))
         (out / "BOQ_CONTRACT_TOTALS.csv").write_bytes(csv_bytes(ctot, CONTRACT_TOTAL_COLUMNS))
         mrows.append({"key": "contract_units", "value": f"{CONTRACT_SCHEMA}: kg -> t = kg / 1000 once at export; "
                                                          "BOQ sheet / BOQ.csv stay in engine units (verdict binding)"})
-        extra = (("BOQ (contract units)", CONTRACT_COLUMNS, crow),
-                 ("Contract totals", CONTRACT_TOTAL_COLUMNS, ctot))
+        extra = extra + (("BOQ (contract units)", CONTRACT_COLUMNS, crow),
+                         ("Contract totals", CONTRACT_TOTAL_COLUMNS, ctot))
         outs += ["BOQ_CONTRACT_UNITS.csv", "BOQ_CONTRACT_TOTALS.csv"]
     xlsx_write(out / "BOQ.xlsx", res["rows"], res["summary"], mrows, extra)
     manifest = {"schema": MANIFEST_SCHEMA_CONTRACT if contract_units else MANIFEST_SCHEMA, "export_schema": SCHEMA,
@@ -1139,6 +1332,20 @@ def export(lines, out_dir, *, candidate_version, boq_lines_sha256, input_sha256=
                 "trades": res["trades"], "completeness_input": res["completeness_input"],
                 "v2_verdicts": res["v2_verdicts"],
                 "semantic_sha256": semantic_sha256(res["rows"])}
+    if res["downgrades"] is not None:
+        manifest["downgrades"] = {"schema": DOWNGRADE_SCHEMA, "records": res["downgrades"],
+                                  "rule": "downgrade only: a valid unresolved record moves its lines to HELD / "
+                                          "CONFLICT (a VERIFIED verdict included); never promotes; the candidate "
+                                          "quantity is shown only in BOQ_AUDIT_UNSUPPORTED_BASIS.csv"}
+    if identity_doc is not None:
+        manifest["project_identity"] = {"review_label": REVIEW_LABEL,
+                                        "documents": sorted(identity_doc.get("documents") or [],
+                                                            key=lambda d: (str(d.get("discipline")),
+                                                                           str(d.get("sheet")))),
+                                        "disclosures": list(identity_doc.get("disclosures") or []),
+                                        "routes": identity_doc.get("routes") or [],
+                                        "boq_lines_binding": "sha256 of the canonical line content "
+                                                             "(engine/source/boq_line.dumps), not the raw file bytes"}
     if contract_units:
         manifest["contract_units"] = {"schema": CONTRACT_SCHEMA, "conversion": {k: f"{k} / {v[1]:g} -> {v[0]}"
                                                                                   for k, v in CONTRACT_UNIT.items()},
@@ -1199,9 +1406,10 @@ def main_verdict_add(argv):
     ap.add_argument("--notes")
     ap.add_argument("--out", required=True, help="the URBAN_CHECKER_VERDICT_V2_SET file to append to")
     a = ap.parse_args(argv)
-    lines, lsha = _load_json(a.lines)
+    lines, _raw = _load_json(a.lines)
     if isinstance(lines, dict):
         raise ExportError("--lines must be a list of canonical lines (V3_0_x_BOQ_LINES.json)")
+    lsha = lines_sha256(lines)          # T-245: the canonical line content, never the raw file bytes
     if a.line_ids:
         ids = [x.strip() for x in a.line_ids.split(",") if x.strip()]
     else:
@@ -1216,6 +1424,49 @@ def main_verdict_add(argv):
                       time=a.time or datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
                       verdict_id=a.verdict_id, notes=a.notes)
     verdict_set_append(a.out, rec)
+    print(json.dumps(rec, indent=1, sort_keys=True, ensure_ascii=False))
+    return 0
+
+
+def main_downgrade_add(argv):
+    ap = argparse.ArgumentParser(prog="boq_export_v1.py downgrade-add",
+                                 description="add one URBAN_CHECKER_DOWNGRADE_V1 record (Checker only; downgrade only)")
+    ap.add_argument("--lines", required=True)
+    ap.add_argument("--candidate-version", required=True)
+    ap.add_argument("--line-ids", required=True, help="comma-separated line ids")
+    ap.add_argument("--state", required=True, choices=DOWNGRADE_STATES)
+    ap.add_argument("--basis-label", default="UNSUPPORTED BASIS")
+    ap.add_argument("--reason", required=True)
+    ap.add_argument("--evidence", action="append", required=True, help="SHEET=PRINTED VALUE (repeat)")
+    ap.add_argument("--lock-file")
+    ap.add_argument("--run-token")
+    ap.add_argument("--routine")
+    ap.add_argument("--verdict-commit", required=True)
+    ap.add_argument("--time")
+    ap.add_argument("--downgrade-id")
+    ap.add_argument("--out", required=True, help="the URBAN_CHECKER_DOWNGRADE_V1_SET file to append to")
+    a = ap.parse_args(argv)
+    lines, _raw = _load_json(a.lines)
+    if isinstance(lines, dict):
+        raise ExportError("--lines must be a list of canonical lines (V3_0_x_BOQ_LINES.json)")
+    token, routine = a.run_token, a.routine
+    if a.lock_file:
+        lk, _s = _load_json(a.lock_file)
+        token, routine = token or lk.get("token"), routine or lk.get("agent")
+    rec = downgrade_add(lines, candidate_version=a.candidate_version,
+                        line_ids=[x.strip() for x in a.line_ids.split(",") if x.strip()], state=a.state,
+                        basis_label=a.basis_label, reason=a.reason, evidence=_parse_evidence(a.evidence),
+                        run_token=token or "", routine=routine or "", verdict_commit=a.verdict_commit,
+                        time=a.time or datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+                        downgrade_id=a.downgrade_id)
+    p = Path(a.out)
+    doc = _load_json(p)[0] if p.exists() else {"schema": DOWNGRADE_SET_SCHEMA, "downgrades": []}
+    if doc.get("schema") != DOWNGRADE_SET_SCHEMA:
+        raise ExportError(f"{p.name}: schema is not {DOWNGRADE_SET_SCHEMA}")
+    if any(x.get("downgrade_id") == rec["downgrade_id"] for x in doc["downgrades"]):
+        raise ExportError(f"downgrade id {rec['downgrade_id']} is already in {p.name}")
+    doc["downgrades"] = sorted(doc["downgrades"] + [rec], key=lambda x: str(x.get("downgrade_id")))
+    p.write_text(_dump_set(doc), encoding="utf-8")
     print(json.dumps(rec, indent=1, sort_keys=True, ensure_ascii=False))
     return 0
 
@@ -1238,6 +1489,8 @@ def main(argv=None):
         return main_verdict_add(argv[1:])
     if argv and argv[0] == "verdict-validate":
         return main_verdict_validate(argv[1:])
+    if argv and argv[0] == "downgrade-add":
+        return main_downgrade_add(argv[1:])
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     ap.add_argument("--lines", required=True)
     ap.add_argument("--candidate-version", required=True)
@@ -1250,16 +1503,23 @@ def main(argv=None):
     ap.add_argument("--expect-project")
     ap.add_argument("--expect-revision-set")
     ap.add_argument("--code-commit")
+    ap.add_argument("--downgrades", help="a URBAN_CHECKER_DOWNGRADE_V1_SET file (T-245 (f)): Checker-issued records "
+                                         "that can only move lines to HELD / CONFLICT")
+    ap.add_argument("--identity", help="the candidate's V3_0_16_IDENTITY.json (URBAN_BOQ_PROJECT_IDENTITY_V1, T-245): "
+                                       "project id, revision set and each drawing's revision state, stated in the "
+                                       "manifest and the XLSX Manifest sheet; it must be the lines' own identity")
     ap.add_argument("--contract-units", action="store_true",
                     help="also write the contract-unit view (reinforcement in t = kg / 1000; T-273)")
     a = ap.parse_args(argv)
-    lines, lsha = _load_json(a.lines)
+    lines, raw = _load_json(a.lines)
     if isinstance(lines, dict):
         raise ExportError("--lines must be a list of canonical lines (V3_0_x_BOQ_LINES.json)")
-    shas = {"lines": lsha}
+    lsha = lines_sha256(lines)          # T-245: verdicts bind the canonical line content, never the raw file bytes
+    shas = {"lines": raw}
     docs = {}
     for k, p in (("verdicts_v1", a.verdicts_v1), ("key_map", a.key_map), ("inventory", a.inventory),
-                 ("verdicts_v2", a.verdicts_v2), ("completeness", a.completeness)):
+                 ("verdicts_v2", a.verdicts_v2), ("completeness", a.completeness), ("identity", a.identity),
+                 ("downgrades", a.downgrades)):
         if p:
             docs[k], shas[k] = _load_json(p)
     v2 = ()
@@ -1268,9 +1528,15 @@ def main(argv=None):
         if sp:
             raise ExportError("--verdicts-v2: " + "; ".join(sp))
         v2 = docs["verdicts_v2"]["verdicts"]
+    dg = None
+    if "downgrades" in docs:
+        if docs["downgrades"].get("schema") != DOWNGRADE_SET_SCHEMA or not isinstance(
+                docs["downgrades"].get("downgrades"), list):
+            raise ExportError(f"--downgrades: schema must be {DOWNGRADE_SET_SCHEMA} with a downgrades list")
+        dg = docs["downgrades"]["downgrades"]
     m = export(lines, a.out, candidate_version=a.candidate_version, boq_lines_sha256=lsha, input_sha256=shas,
                code_commit=_code_commit(a.code_commit), contract_units=a.contract_units,
-               v1_doc=docs.get("verdicts_v1"),
+               identity_doc=docs.get("identity"), downgrades=dg, v1_doc=docs.get("verdicts_v1"),
                key_map_doc=docs.get("key_map"), inventory_doc=docs.get("inventory"), v2_records=v2,
                completeness_report=docs.get("completeness"),
                expect_project=a.expect_project, expect_revision_set=a.expect_revision_set)

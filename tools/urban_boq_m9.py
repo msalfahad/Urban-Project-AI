@@ -2979,6 +2979,13 @@ CANDIDATE_EXTENSIONS_V3014 = (V3014,)  # its own tuple: the V3.0 .. V3.0.13 meth
 # every line outside its rows byte-identical to V3.0.14. Opt-in, not the released default; rollback = run V2.9.
 V3015 = "ARCH_TAKEOFF_V3.0.15"
 CANDIDATE_EXTENSIONS_V3015 = (V3015,)  # its own tuple: the V3.0 .. V3.0.14 method lists stay as they were
+# T-245: ARCH_TAKEOFF_V3.0.16 = the SAME candidate (engine.source.arch_v3016): a V3.0.15 run (its V3_0_* ..
+# V3_0_15_* files unchanged) + ONE project identity and ONE revision set (URBAN_V3016_INPUTS_V1: the project id, every
+# drawing file with its own revision, each route identity) stamped on every line, the declared document title in place
+# of the local file name; a genuine mix (another project, two revisions of one sheet) refused; every other field of
+# every line byte-identical to V3.0.15, in V3_0_16_* files. Opt-in, not the released default; rollback = run V2.9.
+V3016 = "ARCH_TAKEOFF_V3.0.16"
+CANDIDATE_EXTENSIONS_V3016 = (V3016,)  # its own tuple: the V3.0 .. V3.0.15 method lists stay as they were
 
 
 def _v304_inputs(path, project_id):
@@ -3013,22 +3020,23 @@ def _v304_inputs(path, project_id):
 def cmd_arch(a):
     from engine.source import discovery as DS
     facts = json.loads(Path(a.facts).read_text(encoding="utf-8")) if a.facts else None
-    v3015 = a.method == V3015                 # T-270: the V3.0.14 run, then its V3.0.15 extension
-    v3014 = a.method in (V3014, V3015)                 # T-240: the V3.0.13 run, then its V3.0.14 extension
-    v3013 = a.method in (V3013, V3014, V3015)          # T-268: the V3.0.12 run, then its V3.0.13 extension
-    v3012 = a.method in (V3012, V3013, V3014, V3015)          # T-146 + T-247: the V3.0.11 run, then its V3.0.12 extension
-    v3011 = a.method in (V3011, V3012, V3013, V3014, V3015)        # T-239: the V3.0.10 run, then its V3.0.11 extension
-    v3010 = a.method in (V3010, V3011, V3012, V3013, V3014, V3015)        # T-232: the V3.0.9 run, then its V3.0.10 extension
-    v309 = a.method in (V309, V3010, V3011, V3012, V3013, V3014, V3015)          # T-211: the V3.0.8 run, then its V3.0.9 extension
-    v308 = a.method in (V308, V309, V3010, V3011, V3012, V3013, V3014, V3015)    # T-231: the V3.0.7 run, then its V3.0.8 extension
-    v307 = a.method in (V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015)  # T-193: the V3.0.6 run, then its V3.0.7 extension
-    v306 = a.method in (V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015)  # T-187: the V3.0.5 run, then its V3.0.6 extension
-    v305 = a.method in (V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015)  # T-179: the V3.0.4 run, then its V3.0.5 extension
-    v304 = a.method in (V304, V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015)  # T-167: the V3.0.3 run, then V3.0.4
-    v303 = a.method in (V303, V304, V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015)  # T-151: the V3.0.2 run, then V3.0.3
-    v302 = a.method in (V302, V303, V304, V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015)  # T-142: V3.0.1 run, then V3.0.2
-    v301 = a.method in (V301, V302, V303, V304, V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015)  # T-133: V3.0, then V3.0.1
-    v30 = a.method in (V30, V301, V302, V303, V304, V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015)  # T-131: runs V2.13
+    v3016 = a.method == V3016                 # T-245: the V3.0.15 run, then its V3.0.16 identity step
+    v3015 = a.method in (V3015, V3016)        # T-270: the V3.0.14 run, then its V3.0.15 extension
+    v3014 = a.method in (V3014, V3015, V3016)                 # T-240: the V3.0.13 run, then its V3.0.14 extension
+    v3013 = a.method in (V3013, V3014, V3015, V3016)          # T-268: the V3.0.12 run, then its V3.0.13 extension
+    v3012 = a.method in (V3012, V3013, V3014, V3015, V3016)          # T-146 + T-247: the V3.0.11 run, then its V3.0.12 extension
+    v3011 = a.method in (V3011, V3012, V3013, V3014, V3015, V3016)        # T-239: the V3.0.10 run, then its V3.0.11 extension
+    v3010 = a.method in (V3010, V3011, V3012, V3013, V3014, V3015, V3016)        # T-232: the V3.0.9 run, then its V3.0.10 extension
+    v309 = a.method in (V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016)          # T-211: the V3.0.8 run, then its V3.0.9 extension
+    v308 = a.method in (V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016)    # T-231: the V3.0.7 run, then its V3.0.8 extension
+    v307 = a.method in (V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016)  # T-193: the V3.0.6 run, then its V3.0.7 extension
+    v306 = a.method in (V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016)  # T-187: the V3.0.5 run, then its V3.0.6 extension
+    v305 = a.method in (V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016)  # T-179: the V3.0.4 run, then its V3.0.5 extension
+    v304 = a.method in (V304, V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016)  # T-167: the V3.0.3 run, then V3.0.4
+    v303 = a.method in (V303, V304, V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016)  # T-151: the V3.0.2 run, then V3.0.3
+    v302 = a.method in (V302, V303, V304, V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016)  # T-142: V3.0.1 run, then V3.0.2
+    v301 = a.method in (V301, V302, V303, V304, V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016)  # T-133: V3.0, then V3.0.1
+    v30 = a.method in (V30, V301, V302, V303, V304, V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016)  # T-131: runs V2.13
     if getattr(a, "v302_inputs", None) and not v302:
         raise SystemExit("--v302-inputs needs --method ARCH_TAKEOFF_V3.0.2")
     if getattr(a, "v303_inputs", None) and not v303:
@@ -3056,7 +3064,11 @@ def cmd_arch(a):
     if getattr(a, "v3014_inputs", None) and not v3014:
         raise SystemExit("--v3014-inputs needs --method ARCH_TAKEOFF_V3.0.14 or later")
     if getattr(a, "v3015_inputs", None) and not v3015:
-        raise SystemExit("--v3015-inputs needs --method ARCH_TAKEOFF_V3.0.15")
+        raise SystemExit("--v3015-inputs needs --method ARCH_TAKEOFF_V3.0.15 or later")
+    if getattr(a, "v3016_inputs", None) and not v3016:
+        raise SystemExit("--v3016-inputs needs --method ARCH_TAKEOFF_V3.0.16")
+    if v3016 and not getattr(a, "v3016_inputs", None):
+        raise SystemExit("ARCH_TAKEOFF_V3.0.16 needs --v3016-inputs (the project identity and revision set)")
     if v30:
         a.method = V213
     elif getattr(a, "v30_decisions", None) or getattr(a, "v30_released", None) or getattr(a, "v30_history", None):
@@ -3496,6 +3508,18 @@ def cmd_arch(a):
                                                             svgs += names15
                                                             v30rec = dict(v30rec, method=V3015, extends=V3014,
                                                                           identity=ident15, v3_0_14_identity=ident14)
+                                                            if v3016:
+                                                                # T-245: ARCH_TAKEOFF_V3.0.16 beside the V3_0_15_*
+                                                                from engine.source import arch_v3016 as A3016
+                                                                inp16 = A3016.load_inputs(json.loads(Path(
+                                                                    a.v3016_inputs).read_text(encoding="utf-8")))
+                                                                l3015 = A3015.integrate(l3014, ch_v15)[0]
+                                                                names16, ident16 = A3016.write(out, l3015, inp16,
+                                                                                               released)
+                                                                svgs += names16
+                                                                v30rec = dict(v30rec, method=V3016, extends=V3015,
+                                                                              identity=ident16,
+                                                                              v3_0_15_identity=ident15)
     ev = Counter(ln["evidence_state"] for ln in room["lines"])
     print(json.dumps({"method": a.method, "regions": [{"floor": r["floor"], "state": r["stage_state"],
                                                         "rooms": r.get("space_counts"), "lines": r.get("lines"),
@@ -3634,7 +3658,8 @@ def main(argv=None):
                    CANDIDATE_EXTENSIONS_V306 + CANDIDATE_EXTENSIONS_V307 + CANDIDATE_EXTENSIONS_V308 +
                    CANDIDATE_EXTENSIONS_V309 + CANDIDATE_EXTENSIONS_V3010 +
                    CANDIDATE_EXTENSIONS_V3011 + CANDIDATE_EXTENSIONS_V3012 + CANDIDATE_EXTENSIONS_V3013 +
-                   CANDIDATE_EXTENSIONS_V3014 + CANDIDATE_EXTENSIONS_V3015,
+                   CANDIDATE_EXTENSIONS_V3014 + CANDIDATE_EXTENSIONS_V3015 +
+                   CANDIDATE_EXTENSIONS_V3016,
                    help="the versioned architectural takeoff method (no default: the route is opt-in until validated); "
                         "ARCH_TAKEOFF_V2 (S6) adds the drawing admission, unit-relative tolerances, empty-band plan "
                         "regions and the completeness gates (exit 2: admission blocked, 3: completeness failed)")
@@ -3691,6 +3716,9 @@ def main(argv=None):
     p.add_argument("--v3010-inputs", help="ARCH_TAKEOFF_V3.0.10 (URBAN_V3010_INPUTS_V1): checker-merged opening "
                                           "records (doors / windows: pcs AND m2 from one opening list) with the "
                                           "candidate door / window lines they supersede, and the guard inputs")
+    p.add_argument("--v3016-inputs", help="ARCH_TAKEOFF_V3.0.16 (URBAN_V3016_INPUTS_V1): the ONE project id, every "
+                                          "drawing file of the run with its discipline, sheet, revision (PRINTED or "
+                                          "UNCONFIRMED with why) and sha256, and each route identity it unifies")
     p.add_argument("--v3015-inputs", help="ARCH_TAKEOFF_V3.0.15 (URBAN_V3015_INPUTS_V1): the checker-merged foundation "
                                           "waterproofing ledgers (footing underlay membrane / screed on the footing "
                                           "outline, lift-pit membrane / board / screed, buried-face liquid coating; "
