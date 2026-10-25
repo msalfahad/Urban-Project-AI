@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-25T06:52Z | Verifier | STARTED | run session_01PVVTyToQzpmFMZaBweC1C7 | repo-attached routine | task state: READY T-245 (Gate B package), T-280 (per run log) | self-check pending
 - 2026-10-25 06:40 UTC | Worker 2 | STARTED | run session_012wC72NN3inDZGWaPA3kK6R | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-25T06:25Z | Worker 2 | SUCCESS | T-286 (COMPLETE @ 8dd21102, hand-in waits: READY 3) | G4 settled from the drawing, no RFI: the GF pantry 'doorway zone' 1.100 m2 is floor under the drawn east counter (edges A6 / B3 / counter B4-AA-B2 + 0.5 m on an undrawn band line that stops 3.8 m east) inside the printed 450 x 300 box -> WET (Q-37 A); candidate floor 380.364 -> 381.464 m2 (+0.29 %) when integrated, box closes -0.0001 m2. W03 / W06 were already settled by T-250 (stale scoreboard citation); own W03 room side 6.7291 m (Checker 6.7294), no plaster / paint m2 moves; only DCR-6 (D-39) remains. Rules R-T286-1..3 + 29 tests (villa S); ERS: read, s.2 / s.3 / s.4 | self-check codemap PASS, pytest t061 PASS, freeze PASS; full suite NEW 0 / KNOWN 395; problem: none
 - 2026-10-25 06:20 UTC | Worker 1 | STARTED | run session_01MUK5qLSecwWiqUoJ5KMGKL | repo-attached routine | task state: none yet | self-check pending
