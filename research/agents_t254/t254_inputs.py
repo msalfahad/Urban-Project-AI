@@ -27,6 +27,22 @@ LEDGER = ROOT / "research/agents_t289/BASIS_LEDGER_T289.csv"
 CAND = ROOT / "research/agents_t289/CANDIDATE_V3015_BASIS_LINES.json"
 T253 = ROOT / "research/agents_t253/LEDGER_T253.csv"
 T287 = ROOT / "research/agents_t287/T-287_DESIGNER_GAP_SEARCH.md"
+T248 = ROOT / "research/agents_t248/LEDGER_T248.csv"
+T256 = ROOT / "research/agents_t256/ALSENAN_T256_EVIDENCE.json"
+# the one modal frame translation between the T-248 register and the candidate's element ids (T-289 s.2: dx 75 968,
+# dy 14 448 mm, 29 votes, every binding within 2 mm); a NOT_DRAWN stack binds to the candidate column line of the same
+# mark and storey at the translated position, within 2 mm, or the build stops
+FRAME = (75968.0, 14448.0)
+BIND_TOL_MM = 2.0
+# the five stacks as V3.0.16 carries them (asserted by the module against each line: a stale state refuses the run)
+NOT_DRAWN_BEFORE = {"evidence_state": "BLOCKED_RFI", "measured_net": None}
+# the candidate column lines the binding gives on the V3.0.16 run (v3017_direct.py re-binds them against every candidate
+# column line and stops if the set differs)
+NOT_DRAWN_IDS = {"L-7d98b1c0ac80787d0b51": "P-C:COL:SH12:C5@243102,55481|2F",
+                 "L-eb3bd5ba496a207f04f7": "P-C:COL:SH12:C3@243004,52949|2F",
+                 "L-73e82692ffb24059d95b": "P-C:COL:SH12:C8@256160,53630|2F",
+                 "L-99e7e45631f6ddf3c7e2": "P-C:COL:SH12:C3@254464,51322|1F",
+                 "L-2bf336912a62859834b3": "P-C:COL:SH12:C3@254464,51322|2F"}
 
 GB, COL = "STR.CONC.GROUND_BEAM", "STR.CONC.COLUMN"
 CB5 = {"L-7d70692d03102a2dc306": "C3 (365)", "L-84bf7fb482a98fdbe482": "C5 (35F)"}
@@ -64,6 +80,10 @@ def sources():
              "merge_commit": "542b64c7cd6f924fa0435677af59e484bd8aa598",
              "checker_run": "Verifier 2026-10-25 07:58 UTC (Gate A PASS; 07:59 restatement: own 1.430 m3 "
                             "DRAWING-DERIVED for C5 / C3)"},
+            {"file": "research/agents_t256/ALSENAN_T256_EVIDENCE.json", "sha256": sha(T256), "task": "T-256",
+             "merge_commit": "74c966b1955a55ae2ad81322fdb60ab85c9a35bc",
+             "checker_run": "Verifier 2026-10-24 07:52 UTC (Gate A PASS; 5 upper column lines NOT_PRESENT, "
+                            "DRAWING-CONFIRMED absence)"},
             {"file": "research/agents_t253/LEDGER_T253.csv", "sha256": sha(T253), "task": "T-253",
              "merge_commit": "dff9cb798da523510b5aece3b40c95887bdd01d7",
              "checker_run": "Verifier 2026-10-24 07:20 UTC (Gate A PASS; own 8.8140 m2 x 0.40)"}]
@@ -153,7 +173,39 @@ def boundary_add(rows):
             "downstream": ["boundary G.B bars (2 d14 + 3 d16, d8/20 p.14), formwork and excavation: other tasks"]}
 
 
-def build():
+def _xy(eid):
+    # 'P-C:COL:SH12:C5@167134,41033|2F' -> ('C5', 167134.0, 41033.0, '2F')
+    head, storey = eid.split("|")
+    mark, pos = head.split(":")[-1].split("@")
+    x, y = pos.split(",")
+    return mark, float(x), float(y), storey
+
+
+def not_present(candidate_ids):
+    """the T-256 NOT_PRESENT stacks bound to candidate column element ids (T-248 route G line + the T-289 frame)."""
+    ev = {x["line"]: x for x in json.loads(T256.read_text(encoding="utf-8"))["not_drawn_lines"]}
+    rows = [r for r in csv.DictReader(T248.open(encoding="utf-8")) if r["member"].startswith("NOT_DRAWN:")]
+    out = []
+    for r in rows:
+        mark, x, y, storey = _xy(r["route_g_line"])
+        hits = []
+        for lid, eid in candidate_ids.items():
+            m2, x2, y2, s2 = _xy(eid)
+            if m2 == mark and s2 == storey and abs(x2 - x - FRAME[0]) <= BIND_TOL_MM and abs(y2 - y - FRAME[1]) <= BIND_TOL_MM:
+                hits.append((lid, eid))
+        if len(hits) != 1:
+            raise SystemExit(f"{r['member']}: {len(hits)} candidate lines bind (one required)")
+        e = ev[r["member"]]
+        out.append({"line_id": hits[0][0], "item_code": COL, "element_id": hits[0][1], "group": "COL_NOT_PRESENT",
+                    "task": "T-256", "physical_element": f"COLUMN {mark} {storey} on neck {r['fp_neck']} (type-table band only)", "before": dict(NOT_DRAWN_BEFORE), "action": "NOT_PRESENT",
+                    "engine_basis": f"route G / released A {r['route_g_m3']} m3 on a type-table band (D-65)",
+                    "absence_evidence": "; ".join(f"{k}: {v}" for k, v in sorted(e["searched"].items()))
+                    + f"; texts within 0.6 m: 0; start / stop symbol on the plan below: none (T-256 s.4)",
+                    "sheets_searched": ", ".join(sorted(e["searched"]))})
+    return out
+
+
+def build(candidate_ids=None):
     cand = json.loads(CAND.read_text(encoding="utf-8"))
     before = _before(cand)
     rows = list(csv.DictReader(LEDGER.open(encoding="utf-8")))
@@ -164,6 +216,7 @@ def build():
                                                            "T-289 row is its input); byte-identical here"})
             continue
         recs.append(record(row, before))
+    recs += not_present(candidate_ids or NOT_DRAWN_IDS)
     groups = {}
     for r in recs:
         d = groups.setdefault(r["group"], {"lines": 0, "before": 0.0, "released_after": 0.0, "held_lines": 0})
