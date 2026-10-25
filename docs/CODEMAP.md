@@ -18,11 +18,11 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 3294 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 3325 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 19 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 1629 | pytest suites, one folder per round. |
+| `tests/` | 1636 | pytest suites, one folder per round. |
 | `tools/` | 114 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (254 modules)
@@ -466,7 +466,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `cover_authority.py` | 232 | CRITICAL | 5 | COVER AUTHORITY - what a concrete-cover rule lets a bar length, count or mass claim (generic, stdlib only). |
 | `coverage_anomaly.py` | 53 | MEDIUM | 1 | Expected physical scope checks (generic internal completeness QA - no reference quantity is read). |
 | `coverage_census.py` | 140 | MEDIUM | 6 | COVERAGE CENSUS (M9 S1) - one terminal state for every BOQ family of the family master, per run (generic; stdlib). |
-| `coverage_census_v2.py` | 325 | MEDIUM | 2 | COVERAGE CENSUS V2 (T-140) - one terminal state per BOQ family of BOQ_FAMILY_MASTER 1.1.0, with the line count and |
+| `coverage_census_v2.py` | 325 | MEDIUM | 3 | COVERAGE CENSUS V2 (T-140) - one terminal state per BOQ family of BOQ_FAMILY_MASTER 1.1.0, with the line count and |
 | `coverage_metrics.py` | 49 | MEDIUM | 1 | Coverage metrics per trade (generic) - explain WHY a quantity is low, not only how low. |
 | `curved_geometry_check_v1.py` | 647 | MEDIUM | 1 | CURVED_GEOMETRY_CHECK_V1 (T-197, residential review R4): curved and partial geometry completeness. |
 | `curved_member_geometry.py` | 346 | CRITICAL | 3 | CURVED MEMBER GEOMETRY - circular arcs, rings and spherical shells measured exactly (generic, stdlib). |
@@ -813,7 +813,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `run_round6e.py` | 548 | MEDIUM | 1 | Round 6E on P7757: stable identity, stair completeness, one truth. |
 | `run_supervised_benchmark.py` | 300 | MEDIUM | 0 | Run P7757 as a supervised development set and report the geometry effect. |
 | `scan_vertical_evidence.py` | 259 | MEDIUM | 1 | §14. Search the architectural source set for what a plan cannot say. |
-| `scoreboard_guarded.py` | 407 | MEDIUM | 1 | SCOREBOARD / CENSUS SEALED-INPUT GUARD (T-275): the scoreboard (tools/scoreboard_v2.py), the scoreboard key map |
+| `scoreboard_guarded.py` | 424 | MEDIUM | 1 | SCOREBOARD / CENSUS SEALED-INPUT GUARD (T-275): the scoreboard (tools/scoreboard_v2.py), the scoreboard key map |
 | `scoreboard_v2.py` | 545 | MEDIUM | 6 | SCOREBOARD V2 (task T-177) - the SCOREBOARD v2 table (owner session 2026-10-22 07:30, T-132) computed by script |
 | `split_submission_set.py` | 139 | MEDIUM | 0 | Split a submission set into DRAWINGS the engine may read and a SEALED part. |
 | `struct_n10.py` | 73 | MEDIUM | 0 | STRUCTURAL N10 (Phase N10) - formwork faces, excavation footprints and the reinforcement audit for a route G run. |
@@ -1154,6 +1154,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t252_beam_ledger_r2/` | 2 |
 | `tests/t253_boundary_court/` | 2 |
 | `tests/t256_column_evidence/` | 2 |
+| `tests/t257_k1_declarations/` | 1 |
 | `tests/t258_stair_dome_line/` | 2 |
 | `tests/t260_alu_door_evidence/` | 3 |
 | `tests/t261_blocker_split/` | 1 |
@@ -1173,8 +1174,11 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t276_buried_faces/` | 3 |
 | `tests/t277_beam_width_census/` | 2 |
 | `tests/t278_keymap_typed_lines/` | 1 |
+| `tests/t281_stair_soffit/` | 2 |
 | `tests/t282_formwork_edges/` | 2 |
+| `tests/t283_ceilings_r3/` | 1 |
 | `tests/t285_register_v3/` | 1 |
+| `tests/t288_register_v4/` | 1 |
 | `tests/water_tank_s8_4/` | 3 |
 | `tests/zz_freeze_integrity/` | 2 |
 
@@ -1443,6 +1447,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t252/` | 8 |
 | `research/agents_t253/` | 7 |
 | `research/agents_t256/` | 7 |
+| `research/agents_t257/` | 2 |
 | `research/agents_t258/` | 8 |
 | `research/agents_t260/` | 7 |
 | `research/agents_t261/` | 7 |
@@ -1462,8 +1467,11 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t276/` | 10 |
 | `research/agents_t277/` | 11 |
 | `research/agents_t278/` | 1 |
+| `research/agents_t281/` | 7 |
 | `research/agents_t282/` | 7 |
+| `research/agents_t283/` | 10 |
 | `research/agents_t285/` | 10 |
+| `research/agents_t288/` | 12 |
 | `research/alsenan_arch_truth_05/` | 28 |
 | `research/alsenan_column_rebar_s3/` | 17 |
 | `research/alsenan_column_rebar_s3_1/` | 15 |

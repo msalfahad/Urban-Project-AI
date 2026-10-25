@@ -1,0 +1,19 @@
+wall_id,net_m2,checker_run,what_was_remeasured,source
+GF-W07,4.458,Checker 2026-10-24 15:27 (T-180 slot; register v2 ruling),"length 1.100, heights 4.10 / 3.75 by the drawn band edges, no opening",SCOREBOARD.md BLOCKWORK row restated 2026-10-25 00:06; BOARD T-228 r2 verdict
+2F-W04,21.476,Checker 2026-10-24 15:27 (T-180 slot),"whole wall: length, height pieces (B7 + corner rule 6), no opening",SCOREBOARD.md BLOCKWORK row restated 2026-10-25 00:06
+1F-W03,14.400,Checker 2026-10-24 16:03 (T-180 slot),"whole wall: length, height, openings",SCOREBOARD.md BLOCKWORK row restated 2026-10-25 00:06
+2F-W06,14.820,Checker 2026-10-24 16:03 (T-180 slot),"whole wall: length, height, openings",SCOREBOARD.md BLOCKWORK row restated 2026-10-25 00:06
+1F-W08,12.420,Checker 2026-10-24 16:04 (T-180 slot),"whole wall: B23 2.900 + 0.700, column 0.80 out",SCOREBOARD.md BLOCKWORK row restated 2026-10-25 00:06
+2F-W01,6.840,Checker 2026-10-24 17:07 (T-180 slot),"whole wall: length, height, openings",SCOREBOARD.md BLOCKWORK row restated 2026-10-25 00:06
+1F-W09,6.840,Checker 2026-10-24 17:07 (T-180 slot),"whole wall: length, height, openings",SCOREBOARD.md BLOCKWORK row restated 2026-10-25 00:06
+1F-W21,7.410,Checker 2026-10-24 17:07 (T-180 slot),"whole wall: length, height, openings",SCOREBOARD.md BLOCKWORK row restated 2026-10-25 00:06
+1F-W02,2.660,Checker 2026-10-24 18:04 (T-180 slot),"0.700 x (4.20 - 0.40), band B1, no opening",SCOREBOARD.md BLOCKWORK row restated 2026-10-25 00:06; BOARD T-180 slot 18:04
+GF-W21,4.309,Checker 2026-10-24 18:04 (T-180 slot),"mean face length 0.9929 x 4.34, slab only, no opening",SCOREBOARD.md BLOCKWORK row restated 2026-10-25 00:06; BOARD T-180 slot 18:04
+GF-W33,5.586,Checker 2026-10-25 00:06 (T-180 slot),"whole wall, every piece own, no opening in the run",SCOREBOARD.md BLOCKWORK row restated 2026-10-25 00:06
+1F-W01,2.832,Checker 2026-10-25 00:06 (T-180 slot),"whole wall, every piece own, no opening in the run",SCOREBOARD.md BLOCKWORK row restated 2026-10-25 00:06
+1F-W22,20.401,Checker 2026-10-25 01:43 (T-180 slot),"whole wall: faces AF8 / AF7, CB11 0.1005 + slab 1F-084 4.8500 + B4 0.1245, no opening",BOARD.md Verifier T-180 slot verdict of the same time (agents/control)
+1F-W20,24.507,Checker 2026-10-25 02:00 (T-180 slot),"whole wall: slab 1F-023 4.4159 + B19 0.4029 + slab 1F-063 1.3062, no opening, no sunken hatch",BOARD.md Verifier T-180 slot verdict of the same time (agents/control)
+1F-W00,12.935,Checker 2026-10-25 02:01 (T-180 slot),"whole wall, W18 by its part inside the masonry",BOARD.md Verifier T-180 slot verdict of the same time (agents/control)
+1F-W06,54.486,Checker 2026-10-25 02:03 (T-180 slot),"whole wall: 16.4700 m in 4 clear pieces, B4 / CB11, W19 / W20 / W24 (W24 at the drawn jamb 1.5523)",BOARD.md Verifier T-180 slot verdict of the same time (agents/control)
+1F-W05,19.303,Checker 2026-10-25 02:06 (T-180 slot),"whole wall: CB10 2.3000 + 3.6500, B23 0.3500, W14 2.4498 x 1.60",BOARD.md Verifier T-180 slot verdict of the same time (agents/control)
+GF-W01,62.164,Checker 2026-10-25 02:09 (T-180 slot),"whole wall: CB8 15.170, B1 1.1474, CB1 0.150, the 0.0026 m sliver inside B26's outline at 3.65",BOARD.md Verifier T-180 slot verdict of the same time (agents/control)
