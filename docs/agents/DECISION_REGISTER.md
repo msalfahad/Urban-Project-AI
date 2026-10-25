@@ -53,3 +53,12 @@ unless stated.
 Result: owner action needed on Q-76 only (a confirmation). Designer / consultant RFIs: ceiling levels (Q-48 / Q-52), founding
 level (Q-21), boundary band section and levels (Q-28), round-stair section (Q-50), W02 (D-53). Agent work: Q-60 (T-274),
 Q-50 straight flights (T-266).
+
+## Reinforcement Stage B (owner, main chat 2026-10-25 11:51)
+
+| Item | Decision | Where it is carried |
+|---|---|---|
+| Export completion | Immediate priority before any reinforcement package changes the candidate: records, re-run, four quantities, V2.9 done; tonnes and the slab completeness join open | T-298 |
+| Ledger reconciliation | Approved, start now, read only; replace / independent / overlap / held; never add alternative ledgers; T-280 replaces 26 S3 rows | T-299 |
+| Completeness safeguard | Approved (Stage C for this safeguard only); missing groups HELD blank; no invented tonnage; no frozen / V2.9 change | T-300 |
+| Q-71 link counting | Drawing spacing, first-link offset, support faces, zones; N = n x L + 1 not universal; ambiguity PROVISIONAL / HELD; not a design standard. Footing '/m' scope asked back to the owner | OWNER_QUESTIONS.md Q-71 |
