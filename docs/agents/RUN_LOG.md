@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-25 03:34 UTC | Worker 3 | SUCCESS | T-257 READY (agents/task-T-257 @ 43df7381) | K1 boundary test: 18 shapely/numpy modules declared by_design from their T-210 ALLOWED_OUTSIDE_K1 records, checked entry by entry by a new V2 tool (problems 0); the K1 id stays red on only the 6 undeclarable modules (5 ezdxf OUTSIDE_K2_GATE, 1 pymupdf), fix proposals written; scope deviation: 2 real-tree T-210 tests re-pointed (else 2 NEW), Checker to rule; no quantity changed; full suite NEW 0 / KNOWN 395 | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-10-25 03:20 UTC | Worker 1 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-25 03:01 UTC | Worker 3 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-25T02:50Z | Worker 2 | SUCCESS | T-283 READY (agents/task-T-283 @ c92a24cb) | Ceilings r3: decor ceiling 363.173 -> 361.229 m2 (released 403.163 -10.40 %, freelancer 409.58 -11.81 %); the hidden-stair-beyond-face defect is real: 1.944 m2 of flight under GF bands B3 'with stair' / CA and 1F B23 moved to stair zone HELD (T-281); owner bulkheads 29.237 -> 27.935 m2 and held edges 58.290 -> 45.573 m (beam edges on light well / stair / dome were bulkhead AND opening edge); lane-I export of 39 pieces + 2 domes; ERS: read (s.2.1, 2.4, 3, 7) | self-check codemap PASS, pytest t061 PASS, freeze PASS; full suite NEW 0 (KNOWN 395); problem: none
