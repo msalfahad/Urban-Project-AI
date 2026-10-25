@@ -328,7 +328,57 @@ def test_development_villa_inputs_pinned_to_the_checker_figures():
     assert sides["scenario"]["readings"] == {"single_liquid_P_x_H": 80.037171,
                                              "double_sheet_P_x_H_plus_0_07": 93.033788}
     bur = [r for r in pc["records"] if r["id"] == "BURIED-GB"][0]
-    assert bur["verified_by"] is None and bur["partial_check"]["m2_or_unit"] == 5.3825 and len(bur["components"]) == 21
+    # r2 (Verifier 22:58): the buried ground-beam faces are the T-276 trace (32 faces 45.4682 m2 DC), never the T-263
+    # run-face total 35.404365; Checker own-checked 5 faces 8.876475 m2 (22:54 ring + GS-25, 17:59 7E9+7EA#1)
+    assert bur["task"] == "T-276" and bur["verified_by"] is None and len(bur["components"]) == 32
+    assert bur["value"] == pytest.approx(45.4682, abs=1e-6) and bur["value"] != pytest.approx(T.T263_SUPERSEDED_M2)
+    assert bur["partial_check"]["m2_or_unit"] == pytest.approx(8.876475, abs=1e-9)
+    assert sum(c["length_m"] for c in bur["components"]) == pytest.approx(77.805, abs=5e-4)
+    held = {r["id"]: r for r in pc["records"] if r["item_code"] == "WP.FOUNDATION.BURIED_LIQUID" and r["state"] == "HELD"}
+    assert sorted(held) == ["BURIED-BOUNDARY", "BURIED-GB-HELD", "BURIED-NECKS", "BURIED-TOPS"]
+    assert all(h.get("value") is None and h.get("components") is None for h in held.values())
+    assert held["BURIED-GB-HELD"]["scenario"]["readings"] == {"held_traced_length_m": 244.2827}
+    assert "118 traced ground-beam faces" in held["BURIED-GB-HELD"]["reasons"][0]
+    nr = held["BURIED-NECKS"]["scenario"]["readings"]
+    assert nr["neck_faces_in_beam_zone_m"] == 33.3488 and nr["necks_dc_deduction_m2"] == 16.560385
+    assert "DC deduction" in held["BURIED-NECKS"]["reasons"][0]
+    assert pc["superseded"][0]["task"] == "T-263" and pc["superseded"][0]["by_task"] == "T-276"
+    assert "BURIED_FACES_TRACED" not in A.WAITING
+
+
+def test_adverse_development_villa_t263_total_offered_as_dc_is_refused():
+    """the T-263 run-face total 35.404365 m2 (holds non-earth faces, omits traced ones: Verifier 22:58) offered as the
+    DRAWING-CONFIRMED buried line is refused, also with the declared totals adjusted to it."""
+    sys.path.insert(0, str(ROOT / "research" / "agents_t270"))
+    import csv
+    import t270_inputs as T
+    doc = T.inputs("DEV")
+    pc = doc["pieces"][0]
+    with open(ROOT / T.L263, encoding="utf-8", newline="") as fh:
+        old = [{"id": f"{x['element']} {x['face'].split(' (')[0]}", "value": float(x["qty"])}
+               for x in csv.DictReader(fh) if x["status"] == "DRAWING-CONFIRMED" and x["unit"] == "m2"]
+    bur = [r for r in pc["records"] if r["id"] == "BURIED-GB"][0]
+    bur.update(task="T-263", components=old, value=round(sum(c["value"] for c in old), 6), partial_check=None)
+    assert bur["value"] == pytest.approx(T.T263_SUPERSEDED_M2, abs=1e-6)
+    pc["declared_totals"]["WP.FOUNDATION.BURIED_LIQUID m2"]["released"] = bur["value"]
+    with pytest.raises(A.InputsError, match="SUPERSEDED by T-276"):
+        A.load_inputs(doc, "DEV")
+
+
+def test_adverse_a_superseded_ledger_is_refused_and_the_entry_must_name_a_merged_successor():
+    sup = [{"item_code": BUR, "unit": "m2", "task": "T-FXB", "by_task": "T-FXW", "why": "re-traced"}]
+    with pytest.raises(A.InputsError, match="SUPERSEDED by T-FXW"):
+        A.load_inputs(inputs(superseded=sup), PID)
+    for bad in ({"item_code": BUR, "unit": "m2", "task": "T-FXB", "by_task": "T-NOT-MERGED", "why": "x"},
+                {"item_code": BUR, "unit": "m2", "task": "T-FXB", "by_task": "T-FXB", "why": "x"},
+                {"item_code": BUR, "unit": "m2", "task": "T-FXB", "by_task": "T-FXW"}):
+        with pytest.raises(A.InputsError, match="superseded entry"):
+            A.load_inputs(inputs(superseded=[bad]), PID)
+    # normal: a superseded older ledger that only carries HELD records stays (its held items are still named)
+    recs = [r for r in records() if r["id"] != "B"]
+    dec = dict(DECLARED, **{f"{BUR} m2": {"released": 0.0, "held_lines": 1}})
+    _l, _ch, _logs, out, _i = run(inputs(recs, dec, superseded=sup))
+    assert _one(out, BUR, "m2", "BLOCKED_RFI")["measured_net"] is None
 
 
 def test_every_added_line_carries_its_guard_element():

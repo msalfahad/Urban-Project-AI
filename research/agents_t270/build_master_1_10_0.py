@@ -31,7 +31,7 @@ NEW = ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.10.0.json"
 TASK_COMMIT = sys.argv[sys.argv.index("--task-commit") + 1] if "--task-commit" in sys.argv else None
 PENDING = {
     "task": "T-270", "method_version": "ARCH_TAKEOFF_V3.0.15", "module": "engine/source/arch_v3015.py",
-    "status": FMC.PENDING_STATUS, "integrates": ["T-219", "T-263"],
+    "status": FMC.PENDING_STATUS, "integrates": ["T-219", "T-263", "T-276"],
     "tests": ["tests/t270_foundation_wp_lines"],
     "changes_families_by_item_code": ["WP.FOUNDATION.FOOTING_MEMBRANE", "WP.FOUNDATION.FOOTING_SCREED",
                                       "WP.FOUNDATION.FOOTING_SIDES", "WP.FOUNDATION.LIFT_PIT_MEMBRANE",
@@ -41,7 +41,8 @@ PENDING = {
             "family B8-08 foundations / below-grade, NOT_IMPLEMENTED in 1.9.0; screed lines B3-05, "
             "IMPLEMENTED_NOT_INTEGRATED in 1.9.0): footing underlay "
             "membrane and protection screed on the footing outline (T-219, never the blinding), lift-pit membrane / "
-            "board / screed (T-219), liquid coating of buried ground-beam faces (T-263); released parts as merged, "
+            "board / screed (T-219), liquid coating of buried ground-beam faces (T-276 trace; T-263 "
+            "tops / boundary held, its run-face total superseded); released parts as merged, "
             "held parts blank; the Gate B integration package; names no family until merged",
 }
 

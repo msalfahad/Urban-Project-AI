@@ -5504,7 +5504,8 @@
    "status": "READY_FOR_GATE_B",
    "integrates": [
     "T-219",
-    "T-263"
+    "T-263",
+    "T-276"
    ],
    "tests": [
     "tests/t270_foundation_wp_lines"
@@ -5519,7 +5520,7 @@
     "WP.FOUNDATION.BURIED_LIQUID",
     "WP.FOUNDATION.PROCUREMENT"
    ],
-   "note": "T-270 (research/agents_t270/T-270_FOUNDATION_WP.md): a new line family WATERPROOFING.FOUNDATION (BOQ family B8-08 foundations / below-grade, NOT_IMPLEMENTED in 1.9.0; screed lines B3-05, IMPLEMENTED_NOT_INTEGRATED in 1.9.0): footing underlay membrane and protection screed on the footing outline (T-219, never the blinding), lift-pit membrane / board / screed (T-219), liquid coating of buried ground-beam faces (T-263); released parts as merged, held parts blank; the Gate B integration package; names no family until merged",
+   "note": "T-270 (research/agents_t270/T-270_FOUNDATION_WP.md): a new line family WATERPROOFING.FOUNDATION (BOQ family B8-08 foundations / below-grade, NOT_IMPLEMENTED in 1.9.0; screed lines B3-05, IMPLEMENTED_NOT_INTEGRATED in 1.9.0): footing underlay membrane and protection screed on the footing outline (T-219, never the blinding), lift-pit membrane / board / screed (T-219), liquid coating of buried ground-beam faces (T-276 trace; T-263 tops / boundary held, its run-face total superseded); released parts as merged, held parts blank; the Gate B integration package; names no family until merged",
    "task_commit": "55c75c642b1ec091d55f367f41a88c63cf013c30"
   }
  ]

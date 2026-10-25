@@ -28,7 +28,9 @@ How it is built (tools/urban_boq_m9.py `arch --method ARCH_TAKEOFF_V3.0.15`):
      the footing outline: its m2 equals the outline area and differs from the blinding outline area; a screed m3 is the
      outline area x the printed screed thickness; a component appears once per item code and unit; a released record
      with no component, a held record with a figure (0 included), or a record of an item code the candidate already
-     carries is refused;
+     carries is refused; a released record taken from a ledger that a later merged trace SUPERSEDES for its item code
+     and unit (piece "superseded": the older total is known to hold faces that are not the element, or to omit faces)
+     is refused: the superseding ledger is carried, never the older total;
   3. no candidate line is replaced: the family is ADDED; every blinding / concrete line stays byte-identical (asserted);
   4. GUARD RE-CHECK (piece DEFAULT_GUARD): the merged guard runs again over the V3.0.15 lines with the guard inputs of
      V3.0.7 (arch_v307.guard_changes);
@@ -123,9 +125,6 @@ PIECES = {
 }
 WAITING = dict(A3014.WAITING)
 WAITING.update({
-    "BURIED_FACES_TRACED": "T-276 (REJECTED narrow r2 at 2026-10-24 20:59): traced buried ground-beam faces (a delta "
-                           "against the T-263 run faces carried here); joins the WP.FOUNDATION.BURIED_LIQUID line as a "
-                           "delta after its Gate A, never estimated now",
     "FOOTING_DETAIL_SELECTION": "footing side faces, footing tops and necks: HELD until the founding level selects the "
                                 "footing detail (Q-21 C; designer); readings in V3_0_15_SCENARIOS.json only",
     "LIFT_PIT_DEPTH": "lift pit wall membrane / board: HELD on the pit depth (lift maker, designer D-43)",
@@ -243,6 +242,8 @@ def load_inputs(doc, project_id=None):
                                   components: [{id, value, extent, outline_m2, blinding_m2, ...}], verified_by,
                                   verified_components, partial_check, reasons, scenario, excluded, owner_trade_note,
                                   printed}],
+                     "superseded": [{item_code, unit, task, by_task, why}] (optional: an older ledger a merged
+                                    trace replaced for that item code / unit; its released records are refused),
                      "declared_totals": {"<item code> <unit>": {"released": x, "held_lines": n}}}],
          "guard": as URBAN_V307_INPUTS_V1 "guard"}"""
     if doc is None:
@@ -277,6 +278,20 @@ def load_inputs(doc, project_id=None):
             if r.get("task") not in tasks:
                 raise InputsError(f"record {r['id']}: task {r.get('task')!r} is not one of the merged sources "
                                   f"{sorted(tasks)}")
+        sup = {}
+        for x in pc.get("superseded") or ():
+            k = (x.get("item_code"), x.get("unit"), x.get("task"))
+            if not (k[0] in ITEMS and k[1] and k[2] and x.get("by_task") in tasks and x["by_task"] != k[2]
+                    and x.get("why")):
+                raise InputsError(f"piece {p}: a superseded entry names item_code, unit, the older task, the "
+                                  f"superseding merged task (one of {sorted(tasks)}) and why: {x!r}")
+            sup[k] = x
+        for r in recs:
+            x = sup.get((r.get("item_code"), r.get("unit"), r.get("task")))
+            if x is not None and r.get("state") == "RELEASED":
+                raise InputsError(f"record {r['id']}: {r['item_code']} {r['unit']} from {r['task']} is SUPERSEDED by "
+                                  f"{x['by_task']} ({x['why']}): the superseding ledger is carried, never the older "
+                                  "total")
         if not pc.get("declared_totals"):
             raise InputsError(f"piece {p}: declared_totals per item code and unit are required")
     g = doc.get("guard")
@@ -584,7 +599,7 @@ def write(out, l3014, v3015_changes, logs, inputs, released_lines=None):
            "rollback": ROLLBACK, "identity": ident, "pieces": PIECES, "items": {k: list(v) for k, v in ITEMS.items()},
            "piece_logs": logs,
            "inputs": {"pieces": [{k: pc.get(k) for k in ("piece", "source", "sources", "chain", "blinding",
-                                                         "declared_totals")}
+                                                         "superseded", "declared_totals")}
                                  for pc in (inputs or {}).get("pieces") or ()],
                       "guard": {k: g.get(k) for k in ("source", "evidence_file", "evidence_sha256", "conventions_file",
                                                       "conventions_sha256", "holding_checks", "recorded_checks",
