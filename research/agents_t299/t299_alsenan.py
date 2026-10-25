@@ -181,6 +181,16 @@ def columns(rg_rows):
 
 # --------------------------------------------------------------------------------------------------- ground beams ----
 
+_Q71_RESTATED = ("count by the owner's Q-71 method (answered 2026-10-25 11:51 links / 12:36 footings): no first-link "
+                 "offset printed for the ground-beam / strap detail, so the count stays HELD on designer S21 (hooks, "
+                 "bends, bar ends) / S20 (inner legs not dimensioned), not on an open Q-71")
+
+
+def _restate_q71(status_text):
+    """F-T299-01 (Verifier 14:00): a T-138 hold that still says 'Q-71' is restated by name (Q-71 is ANSWERED)."""
+    return status_text.replace("Q-71", _Q71_RESTATED) if "Q-71" in status_text else status_text
+
+
 def pair_of(member):
     m = re.match(r"GS[A-Z]?-(?:A-)?(.+)-(\d+)$", member)
     if m:
@@ -285,7 +295,8 @@ def ground_beams(rg_rows):
             else:
                 rep_by = replaced_t138.get(pair)
                 rows.append(Row(status="HELD", relation="HELD",
-                                reason=f"T-138 {st[:160]}" + (f"; pair now in T-265 ({rep_by})" if rep_by else ""),
+                                reason=f"T-138 {_restate_q71(st)[:520]}" + (f"; pair now in T-265 ({rep_by})"
+                                                                           if rep_by else ""),
                                 **base))
     # straps: T-138 vs route G GROUND_BEAMS (SH10)
     rg_strap = defaultdict(list)
@@ -307,7 +318,7 @@ def ground_beams(rg_rows):
                   "(BEAM_BAR_ANCHORAGE_D) which T-138 holds as bar ends 40 d .. 70 d (note 9, S9)") if g else ""
         rows.append(Row(status="LOWER_BOUND" if released else "HELD", relation="OVERLAPS" if g else "HELD",
                         quantity_kg=base["source_kg"] if released else None, counted=released, overlap_group=g,
-                        shared_part=shared, reason=f"T-138 {r['status'][:160]}" + (f"; {r['held_kg']} kg held"
+                        shared_part=shared, reason=f"T-138 {_restate_q71(r['status'])[:520]}" + (f"; {r['held_kg']} kg held"
                                                                                   if r["held_kg"] else ""), **base))
     for (mark, comp), its in rg_strap.items():
         for it in its:
