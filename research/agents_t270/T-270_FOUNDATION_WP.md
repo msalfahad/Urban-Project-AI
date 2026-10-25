@@ -1,5 +1,38 @@
 # T-270 Integration package (Gate B): foundation and lift-pit waterproofing as their own line family
 
+## 0. r2 (narrow rework of the Verifier 2026-10-24 22:58 Gate B rejection; this section governs)
+
+Cause (Verifier 22:58): the WP.FOUNDATION.BURIED_LIQUID sub-line 'BURIED-GB' carried the T-263 run-face total
+35.404365 m2 as DRAWING-CONFIRMED; T-276 r2 (MERGED 4d88681b, Verifier 22:54 Gate A PASS, own re-measure) traces the
+same physical faces once each and shows the 35.404 holds faces that are not earth faces (tees, pool-court side, span
+overlaps) and omits traced ones. A total known to contain non-element faces is not DRAWING-CONFIRMED as a total.
+
+r2 change (only this sub-line; every other line byte-for-byte r1):
+- BURIED-GB = the 32 GROUND_BEAM DRAWING-CONFIRMED faces of `research/agents_t276/LEDGER_T276.csv` = **45.4682 m2**
+  (77.805 m traced; ARC 2 / 5.017465, EXTERIOR MAIN 18 / 29.178205, INTERIOR 10 / 10.49256, PIECE 2 / 0.77997), line
+  PARTIALLY VERIFIED. Checker own-checked 5 faces 8.876475 m2: 22:54 ring ARC 158 GS-10 3.6091 + GS-23 1.408365
+  (own 5.9055 vs 5.9029 m, -0.04 %) and 170+7C3#2 side A GS-25 1.32413 (own 1.3247, -0.05 %); 17:59 7E9+7EA#1 GS-03 +
+  GS-04 2 x 1.26744 (own 2.535, -0.005 %). Not VERIFIED (27 faces not re-measured).
+- Delta against r1: **+10.063835 m2** (35.404365 -> 45.4682; +28.4 % on the sub-line), not estimated: the r1 figure
+  is replaced by the merged trace, never adjusted.
+- HELD BLANK by name, never 0, never a range in the BOQ: BURIED-GB-HELD = 118 traced faces 244.2827 m (DEPTH_HELD 103,
+  PANEL_HELD 10 on GS-12 / GS-16, PANEL_SPLIT_LEVEL 5 on GS-08); BURIED-NECKS = 66 neck faces 33.3488 m on the neck
+  height (Q-21 C) together with the necks DC deduction 16.560385 m2 on 13 necks (19 held, 4 lift necks T-219's);
+  BURIED-TOPS and BURIED-BOUNDARY unchanged (T-263). Readings (lengths, the deduction) only in V3_0_15_SCENARIOS.json.
+- EXCLUDED by name on the line: 17 ground-beam faces 51.771 m above natural ground (no earth), 8 lift-ring faces
+  14.9997 m (WP.FOUNDATION.LIFT_PIT_*, T-219: one face once), soffits on blinding 55.002 m2 (T-263).
+- The T-263 ledger is SUPERSEDED for this item code / unit (`superseded` in the piece inputs); the engine refuses any
+  released WP.FOUNDATION.BURIED_LIQUID record taken from it (arch_v3015.load_inputs), tested on the development villa
+  (the 35.404365 total with matching declared totals is refused) and on villa P-270. The WAITING note
+  BURIED_FACES_TRACED is removed.
+- Rule (any villa, lane I): a merged re-trace that supersedes an older ledger for one item code / unit is carried in
+  place of it, and the older total is refused at load, never netted, never kept as a second reading in the BOQ.
+- Lessons row (proposed, ERS s.7): 2026-10-25 | an integration carried a merged total its successor trace had shown
+  to hold non-earth faces | the superseded ledger stayed a valid source | declare `superseded` per item code / unit and
+  refuse its released records at load | tests/t270_foundation_wp_lines (development villa T-263 total refused, P-270
+  successor rules) | PROPOSED.
+- BOQ_FAMILY_MASTER 1.10.0 rebuilt by its builder (integrates T-219, T-263, T-276), rules manifest by the tool.
+
 Worker 3 (lane I), 2026-10-24. ARCH_TAKEOFF_V3.0.15 = the V3.0.14 candidate + ONE new line family
 WATERPROOFING.FOUNDATION (`engine/source/arch_v3015.py`). Opt-in candidate, NOT the released default (released stays
 ARCH_TAKEOFF_V2.9 + route G); nothing released; rollback = run V2.9. Integrates T-219 (MERGED de7c1c4c) and T-263
@@ -36,16 +69,16 @@ only). Evidence status per WORKFLOW_CONTROLS s.5; release status NOT RELEASED on
 | WP.FOUNDATION.LIFT_PIT_BOARD | m2 | **26.730** (10.920 + 15.810) | VERIFIED (walls HELD) | T-219 |
 | WP.FOUNDATION.LIFT_PIT_BOARD | m2 | BLANK (pit walls) | HELD | D-43 |
 | WP.FOUNDATION.LIFT_PIT_SCREED | m2 / m3 | **20.700 / 1.035** | VERIFIED | T-219 |
-| WP.FOUNDATION.BURIED_LIQUID | m2 | **35.404365** (21 faces) | DRAWING-CONFIRMED (line PARTIALLY VERIFIED: 5.3825 own-checked, 2 runs / 3 faces) | T-263, Verifier 17:59 |
-| WP.FOUNDATION.BURIED_LIQUID | m2 | BLANK x 4 (85 held faces; footing tops; necks; boundary G.B / straps) | HELD | Q-21 C, D-33 / D-34, note scope |
+| WP.FOUNDATION.BURIED_LIQUID | m2 | **45.4682** (32 traced faces; r1 35.404365 superseded) | DRAWING-CONFIRMED (line PARTIALLY VERIFIED: 8.876475 own-checked on 5 faces) | T-276, Verifier 22:54 (+ 17:59) |
+| WP.FOUNDATION.BURIED_LIQUID | m2 | BLANK x 4 (118 held faces 244.283 m; footing tops; necks 33.349 m + necks DC deduction; boundary G.B / straps) | HELD | depth / panels (T-276), Q-21 C, note scope |
 | WP.FOUNDATION.PROCUREMENT | item | BLANK | HELD | UP-WP-MAT-001 |
 
 Totals by evidence status: VERIFIED 109.85 m2 membrane + 109.85 m2 / 5.4925 m3 screed + 47.43 / 26.73 m2 pit +
-20.70 m2 / 1.035 m3 pit screed; DRAWING-CONFIRMED 35.404365 m2 liquid; HELD 11 lines, all blank (never 0). The held
+20.70 m2 / 1.035 m3 pit screed; DRAWING-CONFIRMED 45.4682 m2 liquid (r2); HELD 11 lines, all blank (never 0). The held
 readings are only in `V3_0_15_SCENARIOS.json` (owner 2026-10-24 10:56): 1B1B 4.55 / 4.64 m2 (screed 0.2275 / 0.232 m3),
 footing sides 80.037171 (liquid) / 93.033788 (sheet) m2, pit walls 8.9 m2 per m, footing tops 104.72 .. 104.75 m2
 (single detail), necks 55.6 .. 55.8 m2 per m. Engine vs freelancer: -109.85 m2 membrane, -5.4925 m3 screed, -47.43 m2
-pit membrane, -26.73 m2 board, -35.404 m2 liquid: drawn scope missing from BOTH released A and the freelancer
+pit membrane, -26.73 m2 board, -45.468 m2 liquid (r2): drawn scope missing from BOTH released A and the freelancer
 (FREELANCER_WRONG on scope, per the Checker's T-219 / T-263 verdicts); no % (his figure is 0).
 
 ## 3. Run on the development villa
@@ -77,9 +110,7 @@ the quantity columns (not traced here; no V3.0.14 line is touched by this packag
   LEDGER_T263.csv. No line is outside the mandatory set, so the 2 random lines rule has L = 0 remaining lines.
 - Cross-trade: one face once. Footing sides / underlay / lift are T-219's; T-263 refuses them; the T-263 tops / necks
   are HELD apart from the T-219 sides; the blinding is CONCRETE and untouched.
-- Known open delta: T-276 (REJECTED narrow r2 at 20:59) traces the buried faces and moves the 35.404 m2 by +11.1165
-  (incl. -1.5158 of faces it reads as not-earth). Not applied here, never estimated; the line stays PARTIALLY VERIFIED
-  and joins T-276 as a delta after its Gate A (WAITING `BURIED_FACES_TRACED`).
+- r1 text: T-276 was then open; r2 (section 0) carries its merged trace in place of the T-263 total.
 
 ## 5. Rule, tests, lessons
 
