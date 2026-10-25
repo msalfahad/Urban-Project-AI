@@ -1,0 +1,14 @@
+wall_id,net_m2,checker_run,what_was_remeasured,source
+GF-W07,4.458,Checker 2026-10-24 15:27 (T-180 slot; register v2 ruling),"length 1.100, heights 4.10 / 3.75 by the drawn band edges, no opening",SCOREBOARD.md BLOCKWORK row restated 2026-10-25 00:06; BOARD T-228 r2 verdict
+2F-W04,21.476,Checker 2026-10-24 15:27 (T-180 slot),"whole wall: length, height pieces (B7 + corner rule 6), no opening",SCOREBOARD.md BLOCKWORK row restated 2026-10-25 00:06
+1F-W03,14.400,Checker 2026-10-24 16:03 (T-180 slot),"whole wall: length, height, openings",SCOREBOARD.md BLOCKWORK row restated 2026-10-25 00:06
+2F-W06,14.820,Checker 2026-10-24 16:03 (T-180 slot),"whole wall: length, height, openings",SCOREBOARD.md BLOCKWORK row restated 2026-10-25 00:06
+1F-W08,12.420,Checker 2026-10-24 16:04 (T-180 slot),"whole wall: B23 2.900 + 0.700, column 0.80 out",SCOREBOARD.md BLOCKWORK row restated 2026-10-25 00:06
+2F-W01,6.840,Checker 2026-10-24 17:07 (T-180 slot),"whole wall: length, height, openings",SCOREBOARD.md BLOCKWORK row restated 2026-10-25 00:06
+1F-W09,6.840,Checker 2026-10-24 17:07 (T-180 slot),"whole wall: length, height, openings",SCOREBOARD.md BLOCKWORK row restated 2026-10-25 00:06
+1F-W21,7.410,Checker 2026-10-24 17:07 (T-180 slot),"whole wall: length, height, openings",SCOREBOARD.md BLOCKWORK row restated 2026-10-25 00:06
+1F-W02,2.660,Checker 2026-10-24 18:04 (T-180 slot),"0.700 x (4.20 - 0.40), band B1, no opening",SCOREBOARD.md BLOCKWORK row restated 2026-10-25 00:06; BOARD T-180 slot 18:04
+GF-W21,4.309,Checker 2026-10-24 18:04 (T-180 slot),"mean face length 0.9929 x 4.34, slab only, no opening",SCOREBOARD.md BLOCKWORK row restated 2026-10-25 00:06; BOARD T-180 slot 18:04
+GF-W33,5.586,Checker 2026-10-25 00:06 (T-180 slot),"whole wall, every piece own, no opening in the run",SCOREBOARD.md BLOCKWORK row restated 2026-10-25 00:06
+1F-W01,2.832,Checker 2026-10-25 00:06 (T-180 slot),"whole wall, every piece own, no opening in the run",SCOREBOARD.md BLOCKWORK row restated 2026-10-25 00:06
+GF-W12,1.953,Checker 2026-10-25 00:06 (T-180 slot),"whole wall, every piece own, no opening in the run",SCOREBOARD.md BLOCKWORK row restated 2026-10-25 00:06
