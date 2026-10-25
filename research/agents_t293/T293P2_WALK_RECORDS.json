@@ -1,0 +1,10096 @@
+{
+ "r3_checks": 12,
+ "records": [
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-002",
+   "floor": "GF",
+   "m2": 0.5,
+   "owner": "BM-GF-015",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-002"
+   ],
+   "plan_long_m": 2.5,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-005",
+   "floor": "GF",
+   "m2": 0.867254859,
+   "owner": "BM-GF-055",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-005"
+   ],
+   "run": "BM-GF-055#BAND0036.1"
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-005",
+   "floor": "GF",
+   "m2": 0.000245141,
+   "owner": "BM-GF-055",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-005"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-008",
+   "floor": "GF",
+   "m2": 0.837379997,
+   "owner": "BM-GF-055",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-008"
+   ],
+   "run": "BM-GF-055#BAND0036.2"
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-008",
+   "floor": "GF",
+   "m2": 0.000120003,
+   "owner": "BM-GF-055",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-008"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-011",
+   "floor": "GF",
+   "m2": 2.7,
+   "owner": "BM-GF-046",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-011"
+   ],
+   "plan_long_m": 5.75,
+   "plan_short_m": 0.5
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-017",
+   "floor": "GF",
+   "m2": 0.35,
+   "owner": "BM-GF-005",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-017"
+   ],
+   "plan_long_m": 1.75,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-019",
+   "floor": "GF",
+   "m2": 0.339999906,
+   "owner": "BM-GF-006",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-019"
+   ],
+   "plan_long_m": 1.7,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-024",
+   "floor": "GF",
+   "m2": 0.54,
+   "owner": "BM-GF-020",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-024"
+   ],
+   "plan_long_m": 2.7,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-026",
+   "floor": "GF",
+   "m2": 0.54,
+   "owner": "BM-GF-025",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-026"
+   ],
+   "plan_long_m": 2.7,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-028",
+   "floor": "GF",
+   "m2": 0.59,
+   "owner": "BM-GF-024",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-028"
+   ],
+   "plan_long_m": 2.95,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-029",
+   "floor": "GF",
+   "m2": 0.294,
+   "owner": "BM-GF-002",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-029"
+   ],
+   "plan_long_m": 1.47,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-030",
+   "floor": "GF",
+   "m2": 0.75,
+   "owner": "BM-GF-004",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-030"
+   ],
+   "plan_long_m": 3.75,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-031",
+   "floor": "GF",
+   "m2": 1.08,
+   "owner": "BM-GF-038",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-031"
+   ],
+   "plan_long_m": 3.85,
+   "plan_short_m": 0.3
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-033",
+   "floor": "GF",
+   "m2": 0.704028,
+   "owner": "BM-GF-003",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-033"
+   ],
+   "plan_long_m": 3.5201,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-035",
+   "floor": "GF",
+   "m2": 0.146347971,
+   "owner": "BM-GF-049",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-035"
+   ],
+   "plan_long_m": 1.0949,
+   "plan_short_m": 0.3319
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-037",
+   "floor": "GF",
+   "m2": 0.36,
+   "owner": "BM-GF-027",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-037"
+   ],
+   "plan_long_m": 1.8,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-038",
+   "floor": "GF",
+   "m2": 0.915016403,
+   "owner": "BM-GF-001",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-038"
+   ],
+   "plan_long_m": 4.5961,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-042",
+   "floor": "GF",
+   "m2": 0.16,
+   "owner": "BM-GF-019",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-042"
+   ],
+   "plan_long_m": 0.8,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-046",
+   "floor": "GF",
+   "m2": 0.24,
+   "owner": "BM-GF-026",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-046"
+   ],
+   "plan_long_m": 1.2,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-050",
+   "floor": "GF",
+   "m2": 0.14,
+   "owner": "BM-GF-023",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-050"
+   ],
+   "plan_long_m": 0.7,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-053",
+   "floor": "GF",
+   "m2": 0.08,
+   "owner": "BM-GF-036",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-053",
+    "GF-054",
+    "GF-073"
+   ],
+   "plan_long_m": 0.4,
+   "plan_short_m": 0.25
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-054",
+   "floor": "GF",
+   "m2": 0.02,
+   "owner": "BM-GF-036",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-054"
+   ],
+   "plan_long_m": 0.4,
+   "plan_short_m": 0.1
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-056",
+   "floor": "GF",
+   "m2": 0.02,
+   "owner": "BM-GF-044",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-056",
+    "GF-057",
+    "GF-058"
+   ],
+   "plan_long_m": 0.4,
+   "plan_short_m": 0.1
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-057",
+   "floor": "GF",
+   "m2": 0.08,
+   "owner": "BM-GF-044",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-057"
+   ],
+   "plan_long_m": 0.4,
+   "plan_short_m": 0.25
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-058",
+   "floor": "GF",
+   "m2": 2.353779972,
+   "owner": "BM-GF-044",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-058"
+   ],
+   "plan_long_m": 5.4,
+   "plan_short_m": 0.45
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-060",
+   "floor": "GF",
+   "m2": 0.128754952,
+   "owner": "BM-GF-049",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-060"
+   ],
+   "plan_long_m": 1.0381,
+   "plan_short_m": 0.3497
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-062",
+   "floor": "GF",
+   "m2": 0.127841126,
+   "owner": "BM-GF-061",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-062"
+   ],
+   "plan_long_m": 0.6392,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-066",
+   "floor": "GF",
+   "m2": 1.200076906,
+   "owner": "BM-GF-043",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-066"
+   ],
+   "run": "BM-GF-043#BAND0043.1"
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-066",
+   "floor": "GF",
+   "m2": 1.319967603,
+   "owner": "BM-GF-043",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-066"
+   ],
+   "run": "BM-GF-043#BAND0043.2"
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-066",
+   "floor": "GF",
+   "m2": 0.119955491,
+   "owner": "BM-GF-043",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-066"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-069",
+   "floor": "GF",
+   "m2": 0.36,
+   "owner": "BM-GF-022",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-069"
+   ],
+   "plan_long_m": 1.8,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-073",
+   "floor": "GF",
+   "m2": 1.26971491,
+   "owner": "BM-GF-036",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-073"
+   ],
+   "plan_long_m": 5.1311,
+   "plan_short_m": 0.25
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-075",
+   "floor": "GF",
+   "m2": 0.217465,
+   "owner": "BM-GF-037",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-075",
+    "GF-084"
+   ],
+   "plan_long_m": 1.1299,
+   "plan_short_m": 0.25
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-080",
+   "floor": "GF",
+   "m2": 0.395972,
+   "owner": "BM-GF-010",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-080"
+   ],
+   "plan_long_m": 1.9799,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-084",
+   "floor": "GF",
+   "m2": 0.053263889,
+   "owner": "BM-GF-037",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-084"
+   ],
+   "plan_long_m": 0.325,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-085",
+   "floor": "GF",
+   "m2": 0.053263889,
+   "owner": "BM-GF-033",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-085"
+   ],
+   "plan_long_m": 0.325,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-087",
+   "floor": "GF",
+   "m2": 0.19,
+   "owner": "BM-GF-033",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-087"
+   ],
+   "plan_long_m": 0.95,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-092",
+   "floor": "GF",
+   "m2": 0.5,
+   "owner": "BM-GF-028",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-092"
+   ],
+   "plan_long_m": 2.5,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "UNMATCHED_PLAN",
+   "face": "GF-095",
+   "floor": "GF",
+   "m2": 0.376923834,
+   "owner": null,
+   "owner_kind": "UNMATCHED",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-095"
+   ]
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-097",
+   "floor": "GF",
+   "m2": 0.74,
+   "owner": "BM-GF-035.2",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-097"
+   ],
+   "plan_long_m": 3.7,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-099",
+   "floor": "GF",
+   "m2": 0.639762502,
+   "owner": "BM-GF-021",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-099"
+   ],
+   "run": "BM-GF-021#BAND0021.2"
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-099",
+   "floor": "GF",
+   "m2": 0.000237498,
+   "owner": "BM-GF-021",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-099"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-100",
+   "floor": "GF",
+   "m2": 0.66,
+   "owner": "BM-GF-007",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-100"
+   ],
+   "plan_long_m": 3.3,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-102",
+   "floor": "GF",
+   "m2": 0.513891285,
+   "owner": "BM-GF-008",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-102"
+   ],
+   "plan_long_m": 2.5905,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-103",
+   "floor": "GF",
+   "m2": 0.685854472,
+   "owner": "BM-GF-009",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-103"
+   ],
+   "plan_long_m": 3.4478,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-104",
+   "floor": "GF",
+   "m2": 2.509494624,
+   "owner": "BM-GF-042",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-104"
+   ],
+   "run": "BM-GF-042#BAND0041.1"
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-104",
+   "floor": "GF",
+   "m2": 1.784904685,
+   "owner": "BM-GF-042",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-104"
+   ],
+   "run": "BM-GF-042#BAND0041.2"
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-104",
+   "floor": "GF",
+   "m2": 0.07560069,
+   "owner": "BM-GF-042",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-104"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-106",
+   "floor": "GF",
+   "m2": 0.123648218,
+   "owner": "BM-GF-061",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-106"
+   ],
+   "plan_long_m": 0.6182,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-108",
+   "floor": "GF",
+   "m2": 1.351431384,
+   "owner": "BM-GF-054",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-108"
+   ],
+   "plan_long_m": 6.7731,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-109",
+   "floor": "GF",
+   "m2": 2.942573543,
+   "owner": "BM-GF-056",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-109"
+   ],
+   "plan_long_m": 7.6077,
+   "plan_short_m": 0.4
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-110",
+   "floor": "GF",
+   "m2": 0.799783023,
+   "owner": "BM-GF-030",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-110"
+   ],
+   "run": "BM-GF-030#BAND0029.1"
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-110",
+   "floor": "GF",
+   "m2": 0.000216977,
+   "owner": "BM-GF-030",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-110"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "UNMATCHED_PLAN",
+   "face": "GF-112",
+   "floor": "GF",
+   "m2": 0.1,
+   "owner": null,
+   "owner_kind": "UNMATCHED",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-112"
+   ]
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-114",
+   "floor": "GF",
+   "m2": 1.169564116,
+   "owner": "BM-GF-030",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-114"
+   ],
+   "run": "BM-GF-030#BAND0029.2"
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-114",
+   "floor": "GF",
+   "m2": 0.000435884,
+   "owner": "BM-GF-030",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-114"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-117",
+   "floor": "GF",
+   "m2": 0.239642709,
+   "owner": "BM-GF-031",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-117"
+   ],
+   "run": "BM-GF-031#BAND0029.3"
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-117",
+   "floor": "GF",
+   "m2": 0.000357291,
+   "owner": "BM-GF-031",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-117"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-121",
+   "floor": "GF",
+   "m2": 0.36523918,
+   "owner": "BM-GF-031",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-121"
+   ],
+   "run": "BM-GF-031#BAND0029.4"
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-125",
+   "floor": "GF",
+   "m2": 3.9,
+   "owner": "BM-GF-045",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-125"
+   ],
+   "plan_long_m": 7.8,
+   "plan_short_m": 0.5
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-127",
+   "floor": "GF",
+   "m2": 1.22,
+   "owner": "BM-GF-029",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-127"
+   ],
+   "plan_long_m": 6.1,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-129",
+   "floor": "GF",
+   "m2": 0.475082657,
+   "owner": "BM-GF-021",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-129"
+   ],
+   "run": "BM-GF-021#BAND0021.1.r2"
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-129",
+   "floor": "GF",
+   "m2": 0.026892643,
+   "owner": "BM-GF-021",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-129"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-133",
+   "floor": "GF",
+   "m2": 4.64684671,
+   "owner": "BM-GF-047",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-133"
+   ],
+   "plan_long_m": 7.4526,
+   "plan_short_m": 0.65
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-136",
+   "floor": "GF",
+   "m2": 0.89,
+   "owner": "BM-GF-032",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-136"
+   ],
+   "plan_long_m": 4.45,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-138",
+   "floor": "GF",
+   "m2": 0.9,
+   "owner": "BM-GF-011",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-138"
+   ],
+   "plan_long_m": 4.5,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-140",
+   "floor": "GF",
+   "m2": 0.46,
+   "owner": "BM-GF-035",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-140"
+   ],
+   "plan_long_m": 2.3,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-142",
+   "floor": "GF",
+   "m2": 4.792611994,
+   "owner": "BM-GF-048",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-142"
+   ],
+   "plan_long_m": 6.1328,
+   "plan_short_m": 0.9
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-143",
+   "floor": "GF",
+   "m2": 0.03,
+   "owner": "BM-GF-057",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-143"
+   ],
+   "plan_long_m": 0.3,
+   "plan_short_m": 0.1
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-144",
+   "floor": "GF",
+   "m2": 0.1725,
+   "owner": "BM-GF-039",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-144"
+   ],
+   "plan_long_m": 0.575,
+   "plan_short_m": 0.3
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-150",
+   "floor": "GF",
+   "m2": 0.723392012,
+   "owner": "BM-GF-016",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-150"
+   ],
+   "plan_long_m": 3.6908,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "UNMATCHED_PLAN",
+   "face": "GF-151",
+   "floor": "GF",
+   "m2": 0.07,
+   "owner": null,
+   "owner_kind": "UNMATCHED",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-151"
+   ]
+  },
+  {
+   "category": "UNMATCHED_PLAN",
+   "face": "GF-152",
+   "floor": "GF",
+   "m2": 0.07,
+   "owner": null,
+   "owner_kind": "UNMATCHED",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-152"
+   ]
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-153",
+   "floor": "GF",
+   "m2": 0.59289293,
+   "owner": "BM-GF-017",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-153"
+   ],
+   "plan_long_m": 3.0383,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-154",
+   "floor": "GF",
+   "m2": 0.604,
+   "owner": "BM-GF-018",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-154"
+   ],
+   "run": "BM-GF-018#BAND0019.1"
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-158",
+   "floor": "GF",
+   "m2": 0.1425,
+   "owner": "BM-GF-039",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-158"
+   ],
+   "plan_long_m": 0.475,
+   "plan_short_m": 0.3
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-159",
+   "floor": "GF",
+   "m2": 1.375625,
+   "owner": "BM-GF-057",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-159",
+    "GF-160"
+   ],
+   "plan_long_m": 2.625,
+   "plan_short_m": 0.525
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-160",
+   "floor": "GF",
+   "m2": 0.53,
+   "owner": "BM-GF-057",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-160"
+   ],
+   "plan_long_m": 2.65,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "UNMATCHED_PLAN",
+   "face": "GF-161",
+   "floor": "GF",
+   "m2": 0.05125,
+   "owner": null,
+   "owner_kind": "UNMATCHED",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-161"
+   ]
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-165",
+   "floor": "GF",
+   "m2": 0.637483566,
+   "owner": "BM-GF-018",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-165"
+   ],
+   "run": "BM-GF-018#BAND0019.3"
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-165",
+   "floor": "GF",
+   "m2": 0.00078728,
+   "owner": "BM-GF-018",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-165"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-166",
+   "floor": "GF",
+   "m2": 0.05,
+   "owner": "BM-GF-018",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-166"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "UNMATCHED_PLAN",
+   "face": "GF-167",
+   "floor": "GF",
+   "m2": 0.05,
+   "owner": null,
+   "owner_kind": "UNMATCHED",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-167"
+   ]
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-168",
+   "floor": "GF",
+   "m2": 0.26,
+   "owner": "BM-GF-034",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-168"
+   ],
+   "plan_long_m": 1.3,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-170",
+   "floor": "GF",
+   "m2": 0.95591546,
+   "owner": "BM-GF-040",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-170"
+   ],
+   "plan_long_m": 3.475,
+   "plan_short_m": 0.3
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-175",
+   "floor": "GF",
+   "m2": 0.24,
+   "owner": "BM-GF-012",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-175"
+   ],
+   "plan_long_m": 1.2,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-181",
+   "floor": "GF",
+   "m2": 1.09,
+   "owner": "BM-GF-013",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-181"
+   ],
+   "plan_long_m": 5.45,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-184",
+   "floor": "GF",
+   "m2": 1.15,
+   "owner": "BM-GF-013",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-184"
+   ],
+   "plan_long_m": 5.75,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-189",
+   "floor": "GF",
+   "m2": 1.722849365,
+   "owner": "BM-GF-041",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-189"
+   ],
+   "run": "BM-GF-041#BAND0040.1"
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-189",
+   "floor": "GF",
+   "m2": 1.904829886,
+   "owner": "BM-GF-041",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-189"
+   ],
+   "run": "BM-GF-041#BAND0040.2"
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-189",
+   "floor": "GF",
+   "m2": 0.031748636,
+   "owner": "BM-GF-041",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-189"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "GF-191",
+   "floor": "GF",
+   "m2": 0.229480189,
+   "owner": "BM-GF-014",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-191"
+   ],
+   "plan_long_m": 1.15,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-002",
+   "floor": "GF",
+   "m2": 0.6,
+   "owner": "BM-GF-015",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-002"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-005",
+   "floor": "GF",
+   "m2": 2.310933217,
+   "owner": "BM-GF-055",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-005"
+   ],
+   "run": "BM-GF-055#BAND0036.1"
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-005",
+   "floor": "GF",
+   "m2": 0.000681799,
+   "owner": "BM-GF-055",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-005"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-008",
+   "floor": "GF",
+   "m2": 2.229688609,
+   "owner": "BM-GF-055",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-008"
+   ],
+   "run": "BM-GF-055#BAND0036.2"
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-008",
+   "floor": "GF",
+   "m2": 0.000341424,
+   "owner": "BM-GF-055",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-008"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-011",
+   "floor": "GF",
+   "m2": 6.343044032,
+   "owner": "BM-GF-046",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-011"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-017",
+   "floor": "GF",
+   "m2": 0.84,
+   "owner": "BM-GF-005",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-017"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-019",
+   "floor": "GF",
+   "m2": 1.415197126,
+   "owner": "BM-GF-006",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-019"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-024",
+   "floor": "GF",
+   "m2": 0.288094751,
+   "owner": "BM-GF-020",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-024"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-026",
+   "floor": "GF",
+   "m2": 0.648189502,
+   "owner": "BM-GF-025",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-026"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-028",
+   "floor": "GF",
+   "m2": 1.368094751,
+   "owner": "BM-GF-024",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-028"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-029",
+   "floor": "GF",
+   "m2": 0.7056,
+   "owner": "BM-GF-002",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-029"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-030",
+   "floor": "GF",
+   "m2": 2.502,
+   "owner": "BM-GF-004",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-030"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-031",
+   "floor": "GF",
+   "m2": 4.059365529,
+   "owner": "BM-GF-038",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-031"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-033",
+   "floor": "GF",
+   "m2": 3.020074168,
+   "owner": "BM-GF-003",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-033"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-035",
+   "floor": "GF",
+   "m2": 0.270841977,
+   "owner": "BM-GF-049",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-035"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-037",
+   "floor": "GF",
+   "m2": 0.86390527,
+   "owner": "BM-GF-027",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-037"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-038",
+   "floor": "GF",
+   "m2": 5.282348781,
+   "owner": "BM-GF-001",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-038"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-046",
+   "floor": "GF",
+   "m2": 0.70846586,
+   "owner": "BM-GF-026",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-046"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-050",
+   "floor": "GF",
+   "m2": 0.336084152,
+   "owner": "BM-GF-023",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-050"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-053",
+   "floor": "GF",
+   "m2": 6.233770894,
+   "owner": "BM-GF-036",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-053",
+    "GF-054",
+    "GF-073"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-056",
+   "floor": "GF",
+   "m2": 5.358402675,
+   "owner": "BM-GF-044",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-056",
+    "GF-057",
+    "GF-058"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-060",
+   "floor": "GF",
+   "m2": 0.215133485,
+   "owner": "BM-GF-049",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-060"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-066",
+   "floor": "GF",
+   "m2": 1.722324131,
+   "owner": "BM-GF-043",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-066"
+   ],
+   "run": "BM-GF-043#BAND0043.1"
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-066",
+   "floor": "GF",
+   "m2": 1.948733625,
+   "owner": "BM-GF-043",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-066"
+   ],
+   "run": "BM-GF-043#BAND0043.2"
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-066",
+   "floor": "GF",
+   "m2": 0.471994396,
+   "owner": "BM-GF-043",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-066"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-069",
+   "floor": "GF",
+   "m2": 1.828819236,
+   "owner": "BM-GF-022",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-069"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-075",
+   "floor": "GF",
+   "m2": 1.146768746,
+   "owner": "BM-GF-037",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-075",
+    "GF-084"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-080",
+   "floor": "GF",
+   "m2": 1.346304801,
+   "owner": "BM-GF-010",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-080"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-087",
+   "floor": "GF",
+   "m2": 0.456,
+   "owner": "BM-GF-033",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-087"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-092",
+   "floor": "GF",
+   "m2": 1.2000106,
+   "owner": "BM-GF-028",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-092"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-097",
+   "floor": "GF",
+   "m2": 0.888094751,
+   "owner": "BM-GF-035.2",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-097"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-099",
+   "floor": "GF",
+   "m2": 2.12717816,
+   "owner": "BM-GF-021",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-099"
+   ],
+   "run": "BM-GF-021#BAND0021.2"
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-099",
+   "floor": "GF",
+   "m2": 0.000807487,
+   "owner": "BM-GF-021",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-099"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-100",
+   "floor": "GF",
+   "m2": 1.584,
+   "owner": "BM-GF-007",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-100"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-102",
+   "floor": "GF",
+   "m2": 1.233238203,
+   "owner": "BM-GF-008",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-102"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-103",
+   "floor": "GF",
+   "m2": 2.263779219,
+   "owner": "BM-GF-009",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-103"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-104",
+   "floor": "GF",
+   "m2": 8.535055149,
+   "owner": "BM-GF-042",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-104"
+   ],
+   "run": "BM-GF-042#BAND0041.1"
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-104",
+   "floor": "GF",
+   "m2": 4.392048201,
+   "owner": "BM-GF-042",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-104"
+   ],
+   "run": "BM-GF-042#BAND0041.2"
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-104",
+   "floor": "GF",
+   "m2": 0.249517102,
+   "owner": "BM-GF-042",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-104"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-108",
+   "floor": "GF",
+   "m2": 3.92913598,
+   "owner": "BM-GF-054",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-108"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-109",
+   "floor": "GF",
+   "m2": 7.708003556,
+   "owner": "BM-GF-056",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-109"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-110",
+   "floor": "GF",
+   "m2": 4.718486993,
+   "owner": "BM-GF-030",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-110"
+   ],
+   "run": "BM-GF-030#BAND0029.1"
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-110",
+   "floor": "GF",
+   "m2": 0.0012801,
+   "owner": "BM-GF-030",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-110"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-114",
+   "floor": "GF",
+   "m2": 6.744801369,
+   "owner": "BM-GF-030",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-114"
+   ],
+   "run": "BM-GF-030#BAND0029.2"
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-114",
+   "floor": "GF",
+   "m2": 0.001465732,
+   "owner": "BM-GF-030",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-114"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-117",
+   "floor": "GF",
+   "m2": 0.575047924,
+   "owner": "BM-GF-031",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-117"
+   ],
+   "run": "BM-GF-031#BAND0029.3"
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-117",
+   "floor": "GF",
+   "m2": 0.000857356,
+   "owner": "BM-GF-031",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-117"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-121",
+   "floor": "GF",
+   "m2": 0.87613564,
+   "owner": "BM-GF-031",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-121"
+   ],
+   "run": "BM-GF-031#BAND0029.4"
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-125",
+   "floor": "GF",
+   "m2": 6.5215,
+   "owner": "BM-GF-045",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-125"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-127",
+   "floor": "GF",
+   "m2": 7.080206873,
+   "owner": "BM-GF-029",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-127"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-129",
+   "floor": "GF",
+   "m2": 1.613889492,
+   "owner": "BM-GF-021",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-129"
+   ],
+   "run": "BM-GF-021#BAND0021.1.r2"
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-129",
+   "floor": "GF",
+   "m2": 0.091905168,
+   "owner": "BM-GF-021",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-129"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-133",
+   "floor": "GF",
+   "m2": 10.348648807,
+   "owner": "BM-GF-047",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-133"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-136",
+   "floor": "GF",
+   "m2": 3.026,
+   "owner": "BM-GF-032",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-136"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-138",
+   "floor": "GF",
+   "m2": 3.06,
+   "owner": "BM-GF-011",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-138"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-140",
+   "floor": "GF",
+   "m2": 1.104178903,
+   "owner": "BM-GF-035",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-140"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-142",
+   "floor": "GF",
+   "m2": 7.243663869,
+   "owner": "BM-GF-048",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-142"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-150",
+   "floor": "GF",
+   "m2": 2.45904599,
+   "owner": "BM-GF-016",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-150"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-153",
+   "floor": "GF",
+   "m2": 2.015334094,
+   "owner": "BM-GF-017",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-153"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-154",
+   "floor": "GF",
+   "m2": 1.781826057,
+   "owner": "BM-GF-018",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-154"
+   ],
+   "run": "BM-GF-018#BAND0019.1"
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-159",
+   "floor": "GF",
+   "m2": 0.0,
+   "owner": "BM-GF-057",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-159",
+    "GF-160"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-165",
+   "floor": "GF",
+   "m2": 3.522203476,
+   "owner": "BM-GF-018",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-165"
+   ],
+   "run": "BM-GF-018#BAND0019.3"
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-165",
+   "floor": "GF",
+   "m2": 0.004614305,
+   "owner": "BM-GF-018",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-165"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-168",
+   "floor": "GF",
+   "m2": 0.624094751,
+   "owner": "BM-GF-034",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-168"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-170",
+   "floor": "GF",
+   "m2": 3.864748051,
+   "owner": "BM-GF-040",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-170"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-175",
+   "floor": "GF",
+   "m2": 0.576,
+   "owner": "BM-GF-012",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-175"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-181",
+   "floor": "GF",
+   "m2": 6.363052115,
+   "owner": "BM-GF-013",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-181"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-184",
+   "floor": "GF",
+   "m2": 6.669052115,
+   "owner": "BM-GF-013",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-184"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-189",
+   "floor": "GF",
+   "m2": 6.481540838,
+   "owner": "BM-GF-041",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-189"
+   ],
+   "run": "BM-GF-041#BAND0040.1"
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-189",
+   "floor": "GF",
+   "m2": 7.444330885,
+   "owner": "BM-GF-041",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-189"
+   ],
+   "run": "BM-GF-041#BAND0040.2"
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-189",
+   "floor": "GF",
+   "m2": 0.379982139,
+   "owner": "BM-GF-041",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-189"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "GF-191",
+   "floor": "GF",
+   "m2": 0.583928228,
+   "owner": "BM-GF-014",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-191"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN",
+   "face": "GF-062",
+   "floor": "GF",
+   "m2": 0.639205632,
+   "owner": "BM-GF-061",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-062"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN",
+   "face": "GF-106",
+   "floor": "GF",
+   "m2": 0.618241088,
+   "owner": "BM-GF-061",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-106"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN",
+   "face": "GF-159",
+   "floor": "GF",
+   "m2": 2.650483127,
+   "owner": "BM-GF-057",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-159",
+    "GF-160"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN:DRAFT",
+   "face": "GF-024",
+   "floor": "GF",
+   "m2": 0.75,
+   "owner": "BM-GF-020",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-024"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN:HELD_EDGE",
+   "face": "GF-024",
+   "floor": "GF",
+   "m2": 0.75,
+   "owner": "BM-GF-020",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-024"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN:HELD_EDGE",
+   "face": "GF-042",
+   "floor": "GF",
+   "m2": 0.8,
+   "owner": "BM-GF-019",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-042"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN:HELD_EDGE",
+   "face": "GF-062",
+   "floor": "GF",
+   "m2": 0.4,
+   "owner": "BM-GF-061",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-062"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN:HELD_EDGE",
+   "face": "GF-066",
+   "floor": "GF",
+   "m2": 3.3927792,
+   "owner": "BM-GF-043",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-066"
+   ],
+   "run": "BM-GF-043#BAND0043.1"
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN:HELD_EDGE",
+   "face": "GF-066",
+   "floor": "GF",
+   "m2": 0.599894765,
+   "owner": "BM-GF-043",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-066"
+   ],
+   "run": "BM-GF-043#BAND0043.2"
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN:HELD_EDGE",
+   "face": "GF-066",
+   "floor": "GF",
+   "m2": 0.000105235,
+   "owner": "BM-GF-043",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-066"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN:HELD_EDGE",
+   "face": "GF-097",
+   "floor": "GF",
+   "m2": 2.44977408,
+   "owner": "BM-GF-035.2",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-097"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN:HELD_EDGE",
+   "face": "GF-106",
+   "floor": "GF",
+   "m2": 0.2,
+   "owner": "BM-GF-061",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-106"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN:RING_MIX",
+   "face": "GF-019",
+   "floor": "GF",
+   "m2": 0.53771046,
+   "owner": "BM-GF-006",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-019"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN:RING_MIX",
+   "face": "GF-033",
+   "floor": "GF",
+   "m2": 1.72151022,
+   "owner": "BM-GF-003",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-033"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN:RING_MIX",
+   "face": "GF-035",
+   "floor": "GF",
+   "m2": 1.143165702,
+   "owner": "BM-GF-049",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-035"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN:RING_MIX",
+   "face": "GF-056",
+   "floor": "GF",
+   "m2": 0.626226621,
+   "owner": "BM-GF-044",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-056",
+    "GF-057",
+    "GF-058"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN:RING_MIX",
+   "face": "GF-060",
+   "floor": "GF",
+   "m2": 1.095646008,
+   "owner": "BM-GF-049",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-060"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN:RING_MIX",
+   "face": "GF-104",
+   "floor": "GF",
+   "m2": 1.338720265,
+   "owner": "BM-GF-042",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-104"
+   ],
+   "run": "BM-GF-042#BAND0041.2"
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN:STAIR",
+   "face": "GF-002",
+   "floor": "GF",
+   "m2": 2.499605266,
+   "owner": "BM-GF-015",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-002"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN:STAIR",
+   "face": "GF-024",
+   "floor": "GF",
+   "m2": 2.699955836,
+   "owner": "BM-GF-020",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-024"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN:STAIR",
+   "face": "GF-026",
+   "floor": "GF",
+   "m2": 2.7,
+   "owner": "BM-GF-025",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-026"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN:STAIR",
+   "face": "GF-042",
+   "floor": "GF",
+   "m2": 0.8,
+   "owner": "BM-GF-019",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-042"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN:STAIR",
+   "face": "GF-046",
+   "floor": "GF",
+   "m2": 0.8,
+   "owner": "BM-GF-026",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-046"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN:STAIR",
+   "face": "GF-066",
+   "floor": "GF",
+   "m2": 2.5,
+   "owner": "BM-GF-043",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-066"
+   ],
+   "run": "BM-GF-043#BAND0043.2"
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN:STAIR",
+   "face": "GF-108",
+   "floor": "GF",
+   "m2": 6.773086806,
+   "owner": "BM-GF-054",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-108"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN:STAIR",
+   "face": "GF-109",
+   "floor": "GF",
+   "m2": 1.582416903,
+   "owner": "BM-GF-056",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-109"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN:STAIR",
+   "face": "GF-125",
+   "floor": "GF",
+   "m2": 3.95,
+   "owner": "BM-GF-045",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-125"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN:STAIR",
+   "face": "GF-143",
+   "floor": "GF",
+   "m2": 0.2,
+   "owner": "BM-GF-057",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-143"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN:STAIR",
+   "face": "GF-144",
+   "floor": "GF",
+   "m2": 1.45,
+   "owner": "BM-GF-039",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-144"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN:STAIR",
+   "face": "GF-154",
+   "floor": "GF",
+   "m2": 3.019605255,
+   "owner": "BM-GF-018",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-154"
+   ],
+   "run": "BM-GF-018#BAND0019.1"
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN:STAIR",
+   "face": "GF-158",
+   "floor": "GF",
+   "m2": 0.474955839,
+   "owner": "BM-GF-039",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-158"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN:STAIR",
+   "face": "GF-159",
+   "floor": "GF",
+   "m2": 2.625,
+   "owner": "BM-GF-057",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-159",
+    "GF-160"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN:UNMATCHED",
+   "face": "GF-133",
+   "floor": "GF",
+   "m2": 0.7,
+   "owner": "BM-GF-047",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-133"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN:UNMATCHED",
+   "face": "GF-142",
+   "floor": "GF",
+   "m2": 1.8,
+   "owner": "BM-GF-048",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-142"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN:UNMATCHED",
+   "face": "GF-159",
+   "floor": "GF",
+   "m2": 0.599607271,
+   "owner": "BM-GF-057",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-159",
+    "GF-160"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN:UNMATCHED",
+   "face": "GF-166",
+   "floor": "GF",
+   "m2": 0.532716481,
+   "owner": "BM-GF-018",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-166"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "BEAM_SIDE_HELD_M2:DRAFT",
+   "face": "GF-024",
+   "floor": "GF",
+   "m2": 0.18,
+   "owner": "BM-GF-020",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-024"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_M2:HELD_EDGE",
+   "face": "GF-024",
+   "floor": "GF",
+   "m2": 0.18,
+   "owner": "BM-GF-020",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-024"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_M2:HELD_EDGE",
+   "face": "GF-042",
+   "floor": "GF",
+   "m2": 0.192,
+   "owner": "BM-GF-019",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-042"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_M2:HELD_EDGE",
+   "face": "GF-066",
+   "floor": "GF",
+   "m2": 2.001739728,
+   "owner": "BM-GF-043",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-066"
+   ],
+   "run": "BM-GF-043#BAND0043.1"
+  },
+  {
+   "category": "BEAM_SIDE_HELD_M2:HELD_EDGE",
+   "face": "GF-066",
+   "floor": "GF",
+   "m2": 0.353937912,
+   "owner": "BM-GF-043",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-066"
+   ],
+   "run": "BM-GF-043#BAND0043.2"
+  },
+  {
+   "category": "BEAM_SIDE_HELD_M2:HELD_EDGE",
+   "face": "GF-066",
+   "floor": "GF",
+   "m2": 6.2088e-05,
+   "owner": "BM-GF-043",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-066"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "BEAM_SIDE_HELD_M2:HELD_EDGE",
+   "face": "GF-097",
+   "floor": "GF",
+   "m2": 0.587945779,
+   "owner": "BM-GF-035.2",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-097"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_M2:RING_MIX",
+   "face": "GF-019",
+   "floor": "GF",
+   "m2": 0.317249172,
+   "owner": "BM-GF-006",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-019"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_M2:RING_MIX",
+   "face": "GF-033",
+   "floor": "GF",
+   "m2": 1.01569103,
+   "owner": "BM-GF-003",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-033"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_M2:RING_MIX",
+   "face": "GF-035",
+   "floor": "GF",
+   "m2": 0.674467764,
+   "owner": "BM-GF-049",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-035"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_M2:RING_MIX",
+   "face": "GF-056",
+   "floor": "GF",
+   "m2": 0.369473707,
+   "owner": "BM-GF-044",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-056",
+    "GF-057",
+    "GF-058"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_M2:RING_MIX",
+   "face": "GF-060",
+   "floor": "GF",
+   "m2": 0.646431145,
+   "owner": "BM-GF-049",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-060"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_M2:RING_MIX",
+   "face": "GF-104",
+   "floor": "GF",
+   "m2": 0.789844956,
+   "owner": "BM-GF-042",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-104"
+   ],
+   "run": "BM-GF-042#BAND0041.2"
+  },
+  {
+   "category": "BEAM_SIDE_HELD_M2:STAIR",
+   "face": "GF-002",
+   "floor": "GF",
+   "m2": 0.599905264,
+   "owner": "BM-GF-015",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-002"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_M2:STAIR",
+   "face": "GF-024",
+   "floor": "GF",
+   "m2": 0.647989401,
+   "owner": "BM-GF-020",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-024"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_M2:STAIR",
+   "face": "GF-026",
+   "floor": "GF",
+   "m2": 0.648,
+   "owner": "BM-GF-025",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-026"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_M2:STAIR",
+   "face": "GF-042",
+   "floor": "GF",
+   "m2": 0.192,
+   "owner": "BM-GF-019",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-042"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_M2:STAIR",
+   "face": "GF-046",
+   "floor": "GF",
+   "m2": 0.472,
+   "owner": "BM-GF-026",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-046"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_M2:STAIR",
+   "face": "GF-066",
+   "floor": "GF",
+   "m2": 1.475,
+   "owner": "BM-GF-043",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-066"
+   ],
+   "run": "BM-GF-043#BAND0043.2"
+  },
+  {
+   "category": "BEAM_SIDE_HELD_M2:STAIR",
+   "face": "GF-108",
+   "floor": "GF",
+   "m2": 3.996121215,
+   "owner": "BM-GF-054",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-108"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_M2:STAIR",
+   "face": "GF-109",
+   "floor": "GF",
+   "m2": 0.933625973,
+   "owner": "BM-GF-056",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-109"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_M2:STAIR",
+   "face": "GF-125",
+   "floor": "GF",
+   "m2": 2.3305,
+   "owner": "BM-GF-045",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-125"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_M2:STAIR",
+   "face": "GF-144",
+   "floor": "GF",
+   "m2": 0.493,
+   "owner": "BM-GF-039",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-144"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_M2:STAIR",
+   "face": "GF-154",
+   "floor": "GF",
+   "m2": 1.781567101,
+   "owner": "BM-GF-018",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-154"
+   ],
+   "run": "BM-GF-018#BAND0019.1"
+  },
+  {
+   "category": "BEAM_SIDE_HELD_M2:STAIR",
+   "face": "GF-158",
+   "floor": "GF",
+   "m2": 0.161484985,
+   "owner": "BM-GF-039",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-158"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_M2:UNMATCHED",
+   "face": "GF-133",
+   "floor": "GF",
+   "m2": 0.483,
+   "owner": "BM-GF-047",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-133"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_M2:UNMATCHED",
+   "face": "GF-142",
+   "floor": "GF",
+   "m2": 1.242,
+   "owner": "BM-GF-048",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-142"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_M2:UNMATCHED",
+   "face": "GF-166",
+   "floor": "GF",
+   "m2": 0.314302724,
+   "owner": "BM-GF-018",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-166"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-000",
+   "floor": "GF",
+   "m2": 0.032014133,
+   "owner": "COL-GF-04",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-000",
+    "GF-001"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-002",
+   "floor": "GF",
+   "m2": 0.4,
+   "owner": "BM-GF-015",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-002"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-003",
+   "floor": "GF",
+   "m2": 0.032014133,
+   "owner": "COL-GF-05",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-003",
+    "GF-004"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-005",
+   "floor": "GF",
+   "m2": 0.555045416,
+   "owner": "BM-GF-055",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-005"
+   ],
+   "run": "BM-GF-055#BAND0036.1"
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-005",
+   "floor": "GF",
+   "m2": 0.000161651,
+   "owner": "BM-GF-055",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-005"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-006",
+   "floor": "GF",
+   "m2": 0.096014133,
+   "owner": "COL-GF-02",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-006",
+    "GF-007"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-008",
+   "floor": "GF",
+   "m2": 0.535932652,
+   "owner": "BM-GF-055",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-008"
+   ],
+   "run": "BM-GF-055#BAND0036.2"
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-008",
+   "floor": "GF",
+   "m2": 8.1481e-05,
+   "owner": "BM-GF-055",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-008"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-009",
+   "floor": "GF",
+   "m2": 0.080014133,
+   "owner": "COL-GF-03",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-009",
+    "GF-010"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-011",
+   "floor": "GF",
+   "m2": 0.888147534,
+   "owner": "BM-GF-046",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-011"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-012",
+   "floor": "GF",
+   "m2": 0.080014133,
+   "owner": "COL-GF-01",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-012",
+    "GF-013"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-016",
+   "floor": "GF",
+   "m2": 6.3167e-05,
+   "owner": "GF-016",
+   "owner_kind": "SLAB",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-016"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-024",
+   "floor": "GF",
+   "m2": 0.192063167,
+   "owner": "BM-GF-020",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-024"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-026",
+   "floor": "GF",
+   "m2": 0.000126335,
+   "owner": "BM-GF-025",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-026"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-027",
+   "floor": "GF",
+   "m2": 7.066e-06,
+   "owner": "GF-027",
+   "owner_kind": "SLAB",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-027"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-028",
+   "floor": "GF",
+   "m2": 6.3167e-05,
+   "owner": "BM-GF-024",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-028"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-031",
+   "floor": "GF",
+   "m2": 6.3167e-05,
+   "owner": "BM-GF-038",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-031"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-037",
+   "floor": "GF",
+   "m2": 0.287936846,
+   "owner": "BM-GF-027",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-037"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-045",
+   "floor": "GF",
+   "m2": 0.047992934,
+   "owner": "COL-GF-07",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-045",
+    "GF-047"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-046",
+   "floor": "GF",
+   "m2": 0.192126335,
+   "owner": "BM-GF-026",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-046"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-049",
+   "floor": "GF",
+   "m2": 0.048056101,
+   "owner": "COL-GF-08",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-049",
+    "GF-051"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-050",
+   "floor": "GF",
+   "m2": 0.112063167,
+   "owner": "BM-GF-023",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-050"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-052",
+   "floor": "GF",
+   "m2": 7.0234e-05,
+   "owner": "GF-052",
+   "owner_kind": "SLAB",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-052"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-053",
+   "floor": "GF",
+   "m2": 7.1614e-05,
+   "owner": "BM-GF-036",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-053",
+    "GF-054",
+    "GF-073"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-062",
+   "floor": "GF",
+   "m2": 0.102272901,
+   "owner": "BM-GF-061",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-062"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-066",
+   "floor": "GF",
+   "m2": 7.066e-06,
+   "owner": "BM-GF-043",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-066"
+   ],
+   "run": "BM-GF-043#BAND0043.1"
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-066",
+   "floor": "GF",
+   "m2": 7.0234e-05,
+   "owner": "BM-GF-043",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-066"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-067",
+   "floor": "GF",
+   "m2": 0.048007066,
+   "owner": "COL-GF-12",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-067",
+    "GF-068"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-069",
+   "floor": "GF",
+   "m2": 0.287950979,
+   "owner": "BM-GF-022",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-069"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-070",
+   "floor": "GF",
+   "m2": 0.128070234,
+   "owner": "COL-GF-11",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-070",
+    "GF-071",
+    "GF-072"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-076",
+   "floor": "GF",
+   "m2": 6.3167e-05,
+   "owner": "GF-076",
+   "owner_kind": "SLAB",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-076"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-077",
+   "floor": "GF",
+   "m2": 7.0234e-05,
+   "owner": "GF-077",
+   "owner_kind": "SLAB",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-077"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-081",
+   "floor": "GF",
+   "m2": 7.066e-06,
+   "owner": "GF-081",
+   "owner_kind": "SLAB",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-081"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-088",
+   "floor": "GF",
+   "m2": 0.08,
+   "owner": "COL-GF-14",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-088",
+    "GF-089"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-090",
+   "floor": "GF",
+   "m2": 0.096070234,
+   "owner": "COL-GF-16",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-090",
+    "GF-091"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-092",
+   "floor": "GF",
+   "m2": 0.400007066,
+   "owner": "BM-GF-028",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-092"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-093",
+   "floor": "GF",
+   "m2": 0.064018336,
+   "owner": "COL-GF-15",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-093",
+    "GF-094"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-097",
+   "floor": "GF",
+   "m2": 6.3167e-05,
+   "owner": "BM-GF-035.2",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-097"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-098",
+   "floor": "GF",
+   "m2": 0.000236173,
+   "owner": "GF-098",
+   "owner_kind": "SLAB",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-098"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-101",
+   "floor": "GF",
+   "m2": 0.000127715,
+   "owner": "GF-101",
+   "owner_kind": "SLAB",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-101"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-104",
+   "floor": "GF",
+   "m2": 1.143841097,
+   "owner": "BM-GF-042",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-104"
+   ],
+   "run": "BM-GF-042#BAND0041.1"
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-104",
+   "floor": "GF",
+   "m2": 0.815956428,
+   "owner": "BM-GF-042",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-104"
+   ],
+   "run": "BM-GF-042#BAND0041.2"
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-104",
+   "floor": "GF",
+   "m2": 0.000406111,
+   "owner": "BM-GF-042",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-104"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-105",
+   "floor": "GF",
+   "m2": 7.0234e-05,
+   "owner": "GF-105",
+   "owner_kind": "SLAB",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-105"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-106",
+   "floor": "GF",
+   "m2": 0.098918574,
+   "owner": "BM-GF-061",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-106"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-109",
+   "floor": "GF",
+   "m2": 7.73e-05,
+   "owner": "BM-GF-056",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-109"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-111",
+   "floor": "GF",
+   "m2": 0.047943899,
+   "owner": "COL-GF-18",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-111",
+    "GF-113"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-114",
+   "floor": "GF",
+   "m2": 0.91195118,
+   "owner": "BM-GF-030",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-114"
+   ],
+   "run": "BM-GF-030#BAND0029.2"
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-114",
+   "floor": "GF",
+   "m2": 4.882e-05,
+   "owner": "BM-GF-030",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-114"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-121",
+   "floor": "GF",
+   "m2": 7.066e-06,
+   "owner": "BM-GF-031",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-121"
+   ],
+   "run": "BM-GF-031#BAND0029.4"
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-124",
+   "floor": "GF",
+   "m2": 0.000133401,
+   "owner": "GF-124",
+   "owner_kind": "SLAB",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-124"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-127",
+   "floor": "GF",
+   "m2": 0.976063167,
+   "owner": "BM-GF-029",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-127"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-133",
+   "floor": "GF",
+   "m2": 0.000964466,
+   "owner": "BM-GF-047",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-133"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-134",
+   "floor": "GF",
+   "m2": 7.7303e-05,
+   "owner": "GF-134",
+   "owner_kind": "SLAB",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-134"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-135",
+   "floor": "GF",
+   "m2": 7.0234e-05,
+   "owner": "GF-135",
+   "owner_kind": "SLAB",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-135"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-137",
+   "floor": "GF",
+   "m2": 0.000133401,
+   "owner": "GF-137",
+   "owner_kind": "SLAB",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-137"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-139",
+   "floor": "GF",
+   "m2": 1.4133e-05,
+   "owner": "GF-139",
+   "owner_kind": "SLAB",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-139"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-140",
+   "floor": "GF",
+   "m2": 0.000126335,
+   "owner": "BM-GF-035",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-140"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-141",
+   "floor": "GF",
+   "m2": 2.2915e-05,
+   "owner": "GF-141",
+   "owner_kind": "SLAB",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-141"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-142",
+   "floor": "GF",
+   "m2": 7.0234e-05,
+   "owner": "BM-GF-048",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-142"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-146",
+   "floor": "GF",
+   "m2": 6.3167e-05,
+   "owner": "GF-146",
+   "owner_kind": "SLAB",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-146"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-150",
+   "floor": "GF",
+   "m2": 7.066e-06,
+   "owner": "BM-GF-016",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-150"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-154",
+   "floor": "GF",
+   "m2": 7.066e-06,
+   "owner": "BM-GF-018",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-154"
+   ],
+   "run": "BM-GF-018#BAND0019.1"
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-159",
+   "floor": "GF",
+   "m2": 7.73e-05,
+   "owner": "BM-GF-057",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-159",
+    "GF-160"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-165",
+   "floor": "GF",
+   "m2": 7.066e-06,
+   "owner": "BM-GF-018",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-165"
+   ],
+   "run": "BM-GF-018#BAND0019.3"
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-168",
+   "floor": "GF",
+   "m2": 6.3167e-05,
+   "owner": "BM-GF-034",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-168"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-170",
+   "floor": "GF",
+   "m2": 0.4920773,
+   "owner": "BM-GF-040",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-170"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-171",
+   "floor": "GF",
+   "m2": 0.176,
+   "owner": "COL-GF-25",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-171",
+    "GF-187"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-173",
+   "floor": "GF",
+   "m2": 6.3167e-05,
+   "owner": "GF-173",
+   "owner_kind": "SLAB",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-173"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-174",
+   "floor": "GF",
+   "m2": 0.08,
+   "owner": "COL-GF-26",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-174",
+    "GF-188"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-176",
+   "floor": "GF",
+   "m2": 6.3167e-05,
+   "owner": "GF-176",
+   "owner_kind": "SLAB",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-176"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-177",
+   "floor": "GF",
+   "m2": 0.134122191,
+   "owner": "COL-GF-27",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-177",
+    "GF-190"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-178",
+   "floor": "GF",
+   "m2": 0.096,
+   "owner": "COL-GF-24",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-178",
+    "GF-192"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-179",
+   "floor": "GF",
+   "m2": 0.096063167,
+   "owner": "COL-GF-28",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-179",
+    "GF-180"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-181",
+   "floor": "GF",
+   "m2": 0.872014133,
+   "owner": "BM-GF-013",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-181"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-182",
+   "floor": "GF",
+   "m2": 0.064,
+   "owner": "COL-GF-29",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-182",
+    "GF-183"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-184",
+   "floor": "GF",
+   "m2": 0.920014133,
+   "owner": "BM-GF-013",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-184"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-185",
+   "floor": "GF",
+   "m2": 0.064,
+   "owner": "COL-GF-30",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-185",
+    "GF-186"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-189",
+   "floor": "GF",
+   "m2": 0.918852995,
+   "owner": "BM-GF-041",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-189"
+   ],
+   "run": "BM-GF-041#BAND0040.1"
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-189",
+   "floor": "GF",
+   "m2": 1.015909273,
+   "owner": "BM-GF-041",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-189"
+   ],
+   "run": "BM-GF-041#BAND0040.2"
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-189",
+   "floor": "GF",
+   "m2": 0.000592333,
+   "owner": "BM-GF-041",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-189"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "GF-191",
+   "floor": "GF",
+   "m2": 0.206125227,
+   "owner": "BM-GF-014",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-191"
+   ]
+  },
+  {
+   "category": "EDGE_HELD_LEN:RING_MIX",
+   "face": "GF-034",
+   "floor": "GF",
+   "m2": 0.649372955,
+   "owner": "GF-034",
+   "owner_kind": "SLAB",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-034"
+   ]
+  },
+  {
+   "category": "EDGE_HELD_LEN:RING_MIX",
+   "face": "GF-059",
+   "floor": "GF",
+   "m2": 0.565315155,
+   "owner": "GF-059",
+   "owner_kind": "SLAB",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-059"
+   ]
+  },
+  {
+   "category": "EDGE_HELD_LEN:STAIR",
+   "face": "GF-146",
+   "floor": "GF",
+   "m2": 2.349955836,
+   "owner": "GF-146",
+   "owner_kind": "SLAB",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-146"
+   ]
+  },
+  {
+   "category": "EDGE_HELD_M2:RING_MIX",
+   "face": "GF-034",
+   "floor": "GF",
+   "m2": 0.103899673,
+   "owner": "GF-034",
+   "owner_kind": "SLAB",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-034"
+   ]
+  },
+  {
+   "category": "EDGE_HELD_M2:RING_MIX",
+   "face": "GF-059",
+   "floor": "GF",
+   "m2": 0.090450425,
+   "owner": "GF-059",
+   "owner_kind": "SLAB",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-059"
+   ]
+  },
+  {
+   "category": "EDGE_HELD_M2:STAIR",
+   "face": "GF-146",
+   "floor": "GF",
+   "m2": 0.375992934,
+   "owner": "GF-146",
+   "owner_kind": "SLAB",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-146"
+   ]
+  },
+  {
+   "category": "JOINT_FACE",
+   "face": "GF-000",
+   "floor": "GF",
+   "m2": 0.048021199,
+   "owner": "COL-GF-04",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-000",
+    "GF-001"
+   ]
+  },
+  {
+   "category": "JOINT_FACE",
+   "face": "GF-003",
+   "floor": "GF",
+   "m2": 0.192975536,
+   "owner": "COL-GF-05",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-003",
+    "GF-004"
+   ]
+  },
+  {
+   "category": "JOINT_FACE",
+   "face": "GF-006",
+   "floor": "GF",
+   "m2": 0.715030032,
+   "owner": "COL-GF-02",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-006",
+    "GF-007"
+   ]
+  },
+  {
+   "category": "JOINT_FACE",
+   "face": "GF-009",
+   "floor": "GF",
+   "m2": 0.357774003,
+   "owner": "COL-GF-03",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-009",
+    "GF-010"
+   ]
+  },
+  {
+   "category": "JOINT_FACE",
+   "face": "GF-012",
+   "floor": "GF",
+   "m2": 0.295052115,
+   "owner": "COL-GF-01",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-012",
+    "GF-013"
+   ]
+  },
+  {
+   "category": "JOINT_FACE",
+   "face": "GF-041",
+   "floor": "GF",
+   "m2": 0.0,
+   "owner": "COL-GF-06",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-041",
+    "GF-043",
+    "GF-044"
+   ]
+  },
+  {
+   "category": "JOINT_FACE",
+   "face": "GF-045",
+   "floor": "GF",
+   "m2": 0.316861821,
+   "owner": "COL-GF-07",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-045",
+    "GF-047"
+   ]
+  },
+  {
+   "category": "JOINT_FACE",
+   "face": "GF-049",
+   "floor": "GF",
+   "m2": 0.192189502,
+   "owner": "COL-GF-08",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-049",
+    "GF-051"
+   ]
+  },
+  {
+   "category": "JOINT_FACE",
+   "face": "GF-055",
+   "floor": "GF",
+   "m2": 0.221508987,
+   "owner": "COL-GF-09",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-055",
+    "GF-074"
+   ]
+  },
+  {
+   "category": "JOINT_FACE",
+   "face": "GF-064",
+   "floor": "GF",
+   "m2": 0.0,
+   "owner": "COL-GF-10",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-064",
+    "GF-065"
+   ]
+  },
+  {
+   "category": "JOINT_FACE",
+   "face": "GF-067",
+   "floor": "GF",
+   "m2": 0.59,
+   "owner": "COL-GF-12",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-067",
+    "GF-068"
+   ]
+  },
+  {
+   "category": "JOINT_FACE",
+   "face": "GF-070",
+   "floor": "GF",
+   "m2": 1.158303738,
+   "owner": "COL-GF-11",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-070",
+    "GF-071",
+    "GF-072"
+   ]
+  },
+  {
+   "category": "JOINT_FACE",
+   "face": "GF-082",
+   "floor": "GF",
+   "m2": 0.993376968,
+   "owner": "COL-GF-13",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-082",
+    "GF-083",
+    "GF-086"
+   ]
+  },
+  {
+   "category": "JOINT_FACE",
+   "face": "GF-088",
+   "floor": "GF",
+   "m2": 0.295,
+   "owner": "COL-GF-14",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-088",
+    "GF-089"
+   ]
+  },
+  {
+   "category": "JOINT_FACE",
+   "face": "GF-090",
+   "floor": "GF",
+   "m2": 0.54223293,
+   "owner": "COL-GF-16",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-090",
+    "GF-091"
+   ]
+  },
+  {
+   "category": "JOINT_FACE",
+   "face": "GF-093",
+   "floor": "GF",
+   "m2": 0.542052155,
+   "owner": "COL-GF-15",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-093",
+    "GF-094"
+   ]
+  },
+  {
+   "category": "JOINT_FACE",
+   "face": "GF-107",
+   "floor": "GF",
+   "m2": 0.4620106,
+   "owner": "COL-GF-17",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-107",
+    "GF-122",
+    "GF-123"
+   ]
+  },
+  {
+   "category": "JOINT_FACE",
+   "face": "GF-111",
+   "floor": "GF",
+   "m2": 0.463,
+   "owner": "COL-GF-18",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-111",
+    "GF-113"
+   ]
+  },
+  {
+   "category": "JOINT_FACE",
+   "face": "GF-115",
+   "floor": "GF",
+   "m2": 0.711430515,
+   "owner": "COL-GF-20",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-115",
+    "GF-116"
+   ]
+  },
+  {
+   "category": "JOINT_FACE",
+   "face": "GF-118",
+   "floor": "GF",
+   "m2": 1.000272743,
+   "owner": "COL-GF-19",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-118",
+    "GF-119",
+    "GF-120"
+   ]
+  },
+  {
+   "category": "JOINT_FACE",
+   "face": "GF-147",
+   "floor": "GF",
+   "m2": 0.346204518,
+   "owner": "COL-GF-21",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-147",
+    "GF-148",
+    "GF-149"
+   ]
+  },
+  {
+   "category": "JOINT_FACE",
+   "face": "GF-155",
+   "floor": "GF",
+   "m2": 0.547,
+   "owner": "COL-GF-23",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-155",
+    "GF-156",
+    "GF-157"
+   ]
+  },
+  {
+   "category": "JOINT_FACE",
+   "face": "GF-162",
+   "floor": "GF",
+   "m2": 0.364793128,
+   "owner": "COL-GF-22",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-162",
+    "GF-163",
+    "GF-164"
+   ]
+  },
+  {
+   "category": "JOINT_FACE",
+   "face": "GF-171",
+   "floor": "GF",
+   "m2": 0.805384502,
+   "owner": "COL-GF-25",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-171",
+    "GF-187"
+   ]
+  },
+  {
+   "category": "JOINT_FACE",
+   "face": "GF-174",
+   "floor": "GF",
+   "m2": 0.295,
+   "owner": "COL-GF-26",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-174",
+    "GF-188"
+   ]
+  },
+  {
+   "category": "JOINT_FACE",
+   "face": "GF-177",
+   "floor": "GF",
+   "m2": 0.636837161,
+   "owner": "COL-GF-27",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-177",
+    "GF-190"
+   ]
+  },
+  {
+   "category": "JOINT_FACE",
+   "face": "GF-178",
+   "floor": "GF",
+   "m2": 0.354,
+   "owner": "COL-GF-24",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-178",
+    "GF-192"
+   ]
+  },
+  {
+   "category": "JOINT_FACE",
+   "face": "GF-179",
+   "floor": "GF",
+   "m2": 0.472026057,
+   "owner": "COL-GF-28",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-179",
+    "GF-180"
+   ]
+  },
+  {
+   "category": "JOINT_FACE",
+   "face": "GF-182",
+   "floor": "GF",
+   "m2": 0.472052115,
+   "owner": "COL-GF-29",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-182",
+    "GF-183"
+   ]
+  },
+  {
+   "category": "JOINT_FACE",
+   "face": "GF-185",
+   "floor": "GF",
+   "m2": 0.236258987,
+   "owner": "COL-GF-30",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-185",
+    "GF-186"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_LEN",
+   "face": "GF-115",
+   "floor": "GF",
+   "m2": 0.050438962,
+   "owner": "COL-GF-20",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-115",
+    "GF-116"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_LEN",
+   "face": "GF-155",
+   "floor": "GF",
+   "m2": 0.299605204,
+   "owner": "COL-GF-23",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-155",
+    "GF-156",
+    "GF-157"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_LEN",
+   "face": "GF-162",
+   "floor": "GF",
+   "m2": 0.199955835,
+   "owner": "COL-GF-22",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-162",
+    "GF-163",
+    "GF-164"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_LEN:DRAFT",
+   "face": "GF-000",
+   "floor": "GF",
+   "m2": 0.500350631,
+   "owner": "COL-GF-04",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-000",
+    "GF-001"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_LEN:HELD_EDGE",
+   "face": "GF-041",
+   "floor": "GF",
+   "m2": 0.500789593,
+   "owner": "COL-GF-06",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-041",
+    "GF-043",
+    "GF-044"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_LEN:HELD_EDGE",
+   "face": "GF-064",
+   "floor": "GF",
+   "m2": 0.80008833,
+   "owner": "COL-GF-10",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-064",
+    "GF-065"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_LEN:STAIR",
+   "face": "GF-000",
+   "floor": "GF",
+   "m2": 0.299955835,
+   "owner": "COL-GF-04",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-000",
+    "GF-001"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_LEN:STAIR",
+   "face": "GF-003",
+   "floor": "GF",
+   "m2": 0.300350631,
+   "owner": "COL-GF-05",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-003",
+    "GF-004"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_LEN:STAIR",
+   "face": "GF-041",
+   "floor": "GF",
+   "m2": 0.599210407,
+   "owner": "COL-GF-06",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-041",
+    "GF-043",
+    "GF-044"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_LEN:STAIR",
+   "face": "GF-045",
+   "floor": "GF",
+   "m2": 0.500789593,
+   "owner": "COL-GF-07",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-045",
+    "GF-047"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_LEN:STAIR",
+   "face": "GF-155",
+   "floor": "GF",
+   "m2": 0.500438962,
+   "owner": "COL-GF-23",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-155",
+    "GF-156",
+    "GF-157"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_LEN:STAIR",
+   "face": "GF-162",
+   "floor": "GF",
+   "m2": 0.525,
+   "owner": "COL-GF-22",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-162",
+    "GF-163",
+    "GF-164"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_LEN:UNMATCHED",
+   "face": "GF-093",
+   "floor": "GF",
+   "m2": 0.199929567,
+   "owner": "COL-GF-15",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-093",
+    "GF-094"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_LEN:UNMATCHED",
+   "face": "GF-111",
+   "floor": "GF",
+   "m2": 0.2,
+   "owner": "COL-GF-18",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-111",
+    "GF-113"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_LEN:UNMATCHED",
+   "face": "GF-162",
+   "floor": "GF",
+   "m2": 0.075438962,
+   "owner": "COL-GF-22",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-162",
+    "GF-163",
+    "GF-164"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_M2",
+   "face": "GF-115",
+   "floor": "GF",
+   "m2": 0.029758987,
+   "owner": "COL-GF-20",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-115",
+    "GF-116"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_M2",
+   "face": "GF-155",
+   "floor": "GF",
+   "m2": 0.17676707,
+   "owner": "COL-GF-23",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-155",
+    "GF-156",
+    "GF-157"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_M2",
+   "face": "GF-162",
+   "floor": "GF",
+   "m2": 0.117973943,
+   "owner": "COL-GF-22",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-162",
+    "GF-163",
+    "GF-164"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_M2:DRAFT",
+   "face": "GF-000",
+   "floor": "GF",
+   "m2": 0.120084152,
+   "owner": "COL-GF-04",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-000",
+    "GF-001"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_M2:HELD_EDGE",
+   "face": "GF-041",
+   "floor": "GF",
+   "m2": 0.120189502,
+   "owner": "COL-GF-06",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-041",
+    "GF-043",
+    "GF-044"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_M2:HELD_EDGE",
+   "face": "GF-064",
+   "floor": "GF",
+   "m2": 0.472052115,
+   "owner": "COL-GF-10",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-064",
+    "GF-065"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_M2:STAIR",
+   "face": "GF-000",
+   "floor": "GF",
+   "m2": 0.0719894,
+   "owner": "COL-GF-04",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-000",
+    "GF-001"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_M2:STAIR",
+   "face": "GF-003",
+   "floor": "GF",
+   "m2": 0.102119215,
+   "owner": "COL-GF-05",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-003",
+    "GF-004"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_M2:STAIR",
+   "face": "GF-041",
+   "floor": "GF",
+   "m2": 0.143810498,
+   "owner": "COL-GF-06",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-041",
+    "GF-043",
+    "GF-044"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_M2:STAIR",
+   "face": "GF-045",
+   "floor": "GF",
+   "m2": 0.29546586,
+   "owner": "COL-GF-07",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-045",
+    "GF-047"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_M2:STAIR",
+   "face": "GF-155",
+   "floor": "GF",
+   "m2": 0.295258987,
+   "owner": "COL-GF-23",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-155",
+    "GF-156",
+    "GF-157"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_M2:STAIR",
+   "face": "GF-162",
+   "floor": "GF",
+   "m2": 0.30975,
+   "owner": "COL-GF-22",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-162",
+    "GF-163",
+    "GF-164"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_M2:UNMATCHED",
+   "face": "GF-093",
+   "floor": "GF",
+   "m2": 0.117958445,
+   "owner": "COL-GF-15",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-093",
+    "GF-094"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_M2:UNMATCHED",
+   "face": "GF-111",
+   "floor": "GF",
+   "m2": 0.118,
+   "owner": "COL-GF-18",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-111",
+    "GF-113"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_M2:UNMATCHED",
+   "face": "GF-162",
+   "floor": "GF",
+   "m2": 0.044508987,
+   "owner": "COL-GF-22",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-162",
+    "GF-163",
+    "GF-164"
+   ]
+  },
+  {
+   "category": "JUNCTION_HELD_LEN",
+   "face": "GF-062",
+   "floor": "GF",
+   "m2": 0.639205632,
+   "owner": "BM-GF-061",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-062"
+   ]
+  },
+  {
+   "category": "JUNCTION_HELD_LEN",
+   "face": "GF-066",
+   "floor": "GF",
+   "m2": 0.0072208,
+   "owner": "BM-GF-043",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-066"
+   ],
+   "run": "BM-GF-043#BAND0043.1"
+  },
+  {
+   "category": "JUNCTION_HELD_LEN",
+   "face": "GF-097",
+   "floor": "GF",
+   "m2": 1.250181758,
+   "owner": "BM-GF-035.2",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-097"
+   ]
+  },
+  {
+   "category": "JUNCTION_HELD_LEN",
+   "face": "GF-106",
+   "floor": "GF",
+   "m2": 0.767803166,
+   "owner": "BM-GF-061",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-106"
+   ]
+  },
+  {
+   "category": "JUNCTION_HELD_LEN",
+   "face": "GF-114",
+   "floor": "GF",
+   "m2": 0.148125709,
+   "owner": "BM-GF-030",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-114"
+   ],
+   "run": "BM-GF-030#BAND0029.2"
+  },
+  {
+   "category": "JUNCTION_HELD_LEN",
+   "face": "GF-114",
+   "floor": "GF",
+   "m2": 0.001874291,
+   "owner": "BM-GF-030",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-114"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "JUNCTION_HELD_LEN",
+   "face": "GF-143",
+   "floor": "GF",
+   "m2": 0.6,
+   "owner": "BM-GF-057",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-143"
+   ]
+  },
+  {
+   "category": "JUNCTION_HELD_LEN",
+   "face": "GF-144",
+   "floor": "GF",
+   "m2": 0.3,
+   "owner": "BM-GF-039",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-144"
+   ]
+  },
+  {
+   "category": "JUNCTION_HELD_LEN",
+   "face": "GF-158",
+   "floor": "GF",
+   "m2": 0.774955839,
+   "owner": "BM-GF-039",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-158"
+   ]
+  },
+  {
+   "category": "JUNCTION_HELD_LEN",
+   "face": "GF-159",
+   "floor": "GF",
+   "m2": 0.474955839,
+   "owner": "BM-GF-057",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-159",
+    "GF-160"
+   ]
+  },
+  {
+   "category": "JUNCTION_HELD_M2",
+   "face": "GF-066",
+   "floor": "GF",
+   "m2": 0.004260272,
+   "owner": "BM-GF-043",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-066"
+   ],
+   "run": "BM-GF-043#BAND0043.1"
+  },
+  {
+   "category": "JUNCTION_HELD_M2",
+   "face": "GF-097",
+   "floor": "GF",
+   "m2": 0.300043622,
+   "owner": "BM-GF-035.2",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-097"
+   ]
+  },
+  {
+   "category": "JUNCTION_HELD_M2",
+   "face": "GF-114",
+   "floor": "GF",
+   "m2": 0.087394169,
+   "owner": "BM-GF-030",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-114"
+   ],
+   "run": "BM-GF-030#BAND0029.2"
+  },
+  {
+   "category": "JUNCTION_HELD_M2",
+   "face": "GF-114",
+   "floor": "GF",
+   "m2": 0.001105831,
+   "owner": "BM-GF-030",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-114"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "JUNCTION_HELD_M2",
+   "face": "GF-144",
+   "floor": "GF",
+   "m2": 0.102,
+   "owner": "BM-GF-039",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-144"
+   ]
+  },
+  {
+   "category": "JUNCTION_HELD_M2",
+   "face": "GF-158",
+   "floor": "GF",
+   "m2": 0.263484985,
+   "owner": "BM-GF-039",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-158"
+   ]
+  },
+  {
+   "category": "UNMATCHED_LEN",
+   "face": "GF-095",
+   "floor": "GF",
+   "m2": 3.769787132,
+   "owner": null,
+   "owner_kind": "UNMATCHED",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-095"
+   ]
+  },
+  {
+   "category": "UNMATCHED_LEN",
+   "face": "GF-112",
+   "floor": "GF",
+   "m2": 0.999988563,
+   "owner": null,
+   "owner_kind": "UNMATCHED",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-112"
+   ]
+  },
+  {
+   "category": "UNMATCHED_LEN",
+   "face": "GF-161",
+   "floor": "GF",
+   "m2": 0.1,
+   "owner": null,
+   "owner_kind": "UNMATCHED",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-161"
+   ]
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "1F-002",
+   "floor": "1F",
+   "m2": 0.5,
+   "owner": "BM-1F-001",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-002"
+   ],
+   "plan_long_m": 2.7,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "1F-004",
+   "floor": "1F",
+   "m2": 0.693922262,
+   "owner": "BM-1F-002",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-004"
+   ],
+   "run": "BM-1F-002#BAND0001.2"
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "1F-004",
+   "floor": "1F",
+   "m2": 7.7738e-05,
+   "owner": "BM-1F-002",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-004"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "1F-008",
+   "floor": "1F",
+   "m2": 0.669842262,
+   "owner": "BM-1F-002",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-008"
+   ],
+   "run": "BM-1F-002#BAND0001.3"
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "1F-008",
+   "floor": "1F",
+   "m2": 0.000157738,
+   "owner": "BM-1F-002",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-008"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "1F-012",
+   "floor": "1F",
+   "m2": 0.709942262,
+   "owner": "BM-1F-002",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-012"
+   ],
+   "run": "BM-1F-002#BAND0001.4"
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "1F-012",
+   "floor": "1F",
+   "m2": 5.7738e-05,
+   "owner": "BM-1F-002",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-012"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "1F-017",
+   "floor": "1F",
+   "m2": 0.54,
+   "owner": "BM-1F-011",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-017"
+   ],
+   "plan_long_m": 2.7,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "1F-019",
+   "floor": "1F",
+   "m2": 0.6,
+   "owner": "BM-1F-009",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-019"
+   ],
+   "plan_long_m": 3.0,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "1F-021",
+   "floor": "1F",
+   "m2": 0.695,
+   "owner": "BM-1F-015",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-021"
+   ],
+   "plan_long_m": 3.475,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "1F-022",
+   "floor": "1F",
+   "m2": 0.36,
+   "owner": "BM-1F-013",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-022"
+   ],
+   "plan_long_m": 1.8,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "1F-024",
+   "floor": "1F",
+   "m2": 0.883618166,
+   "owner": "BM-1F-030",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "1F-024"
+   ],
+   "plan_long_m": 4.4396,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "1F-026",
+   "floor": "1F",
+   "m2": 1.256175538,
+   "owner": "BM-1F-017",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-026"
+   ],
+   "run": "BM-1F-017#BAND0018.2"
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "1F-026",
+   "floor": "1F",
+   "m2": 0.023098382,
+   "owner": "BM-1F-017",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-026"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "1F-030",
+   "floor": "1F",
+   "m2": 0.16,
+   "owner": "BM-1F-032",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "1F-030"
+   ],
+   "plan_long_m": 0.8,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "1F-034",
+   "floor": "1F",
+   "m2": 0.24,
+   "owner": "BM-1F-012",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-034"
+   ],
+   "plan_long_m": 1.2,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "1F-038",
+   "floor": "1F",
+   "m2": 0.14,
+   "owner": "BM-1F-008",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-038"
+   ],
+   "plan_long_m": 0.7,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "1F-045",
+   "floor": "1F",
+   "m2": 1.349415,
+   "owner": "BM-1F-026",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-045"
+   ],
+   "run": "BM-1F-026#BAND0031.1"
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "1F-045",
+   "floor": "1F",
+   "m2": 1.484685,
+   "owner": "BM-1F-026",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-045"
+   ],
+   "run": "BM-1F-026#BAND0031.2"
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "1F-045",
+   "floor": "1F",
+   "m2": 0.1609,
+   "owner": "BM-1F-026",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-045"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "1F-048",
+   "floor": "1F",
+   "m2": 0.36,
+   "owner": "BM-1F-007",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-048"
+   ],
+   "plan_long_m": 1.8,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "1F-052",
+   "floor": "1F",
+   "m2": 1.191056731,
+   "owner": "BM-1F-025",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-052",
+    "1F-054",
+    "1F-055"
+   ],
+   "plan_long_m": 3.173,
+   "plan_short_m": 0.4
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "1F-053",
+   "floor": "1F",
+   "m2": 0.038126257,
+   "owner": "BM-1F-010",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-053"
+   ],
+   "plan_long_m": 0.4472,
+   "plan_short_m": 0.1694
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "1F-054",
+   "floor": "1F",
+   "m2": 0.04,
+   "owner": "BM-1F-025",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-054"
+   ],
+   "plan_long_m": 0.4,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "1F-055",
+   "floor": "1F",
+   "m2": 0.896918142,
+   "owner": "BM-1F-025",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-055"
+   ],
+   "plan_long_m": 2.4377,
+   "plan_short_m": 0.4
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "1F-058",
+   "floor": "1F",
+   "m2": 0.82,
+   "owner": "BM-1F-014",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-058"
+   ],
+   "plan_long_m": 4.1,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "1F-061",
+   "floor": "1F",
+   "m2": 1.025,
+   "owner": "BM-1F-018",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-061"
+   ],
+   "plan_long_m": 4.1,
+   "plan_short_m": 0.25
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "1F-064",
+   "floor": "1F",
+   "m2": 0.323922801,
+   "owner": "BM-1F-010",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-064"
+   ],
+   "plan_long_m": 1.6317,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "1F-066",
+   "floor": "1F",
+   "m2": 1.093045762,
+   "owner": "BM-1F-019",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-066"
+   ],
+   "plan_long_m": 4.3722,
+   "plan_short_m": 0.25
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "1F-070",
+   "floor": "1F",
+   "m2": 0.86,
+   "owner": "BM-1F-004",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-070"
+   ],
+   "plan_long_m": 4.3,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "1F-071",
+   "floor": "1F",
+   "m2": 0.949563391,
+   "owner": "BM-1F-005",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-071"
+   ],
+   "plan_long_m": 4.7478,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "1F-072",
+   "floor": "1F",
+   "m2": 0.690094197,
+   "owner": "BM-1F-031",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "1F-072"
+   ],
+   "run": "BM-1F-031#BAND0026.1"
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "1F-072",
+   "floor": "1F",
+   "m2": 1.095005718,
+   "owner": "BM-1F-031",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "1F-072"
+   ],
+   "run": "BM-1F-031#BAND0026.2"
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "1F-072",
+   "floor": "1F",
+   "m2": 0.089900084,
+   "owner": "BM-1F-031",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "1F-072"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "1F-075",
+   "floor": "1F",
+   "m2": 3.799779317,
+   "owner": "BM-1F-027",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-075"
+   ],
+   "plan_long_m": 6.942,
+   "plan_short_m": 0.55
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "1F-078",
+   "floor": "1F",
+   "m2": 0.030522806,
+   "owner": "BM-1F-017",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-078"
+   ],
+   "run": "BM-1F-017#BAND0018.1"
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "1F-082",
+   "floor": "1F",
+   "m2": 0.900017668,
+   "owner": "BM-1F-022",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-082"
+   ],
+   "run": "BM-1F-022#BAND0024.1"
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "1F-082",
+   "floor": "1F",
+   "m2": 0.944988175,
+   "owner": "BM-1F-022",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-082"
+   ],
+   "run": "BM-1F-022#BAND0024.2"
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "1F-082",
+   "floor": "1F",
+   "m2": 0.034994157,
+   "owner": "BM-1F-022",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-082"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "1F-085",
+   "floor": "1F",
+   "m2": 2.205,
+   "owner": "BM-1F-024",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-085"
+   ],
+   "plan_long_m": 6.3,
+   "plan_short_m": 0.35
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "1F-087",
+   "floor": "1F",
+   "m2": 0.97,
+   "owner": "BM-1F-016",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-087"
+   ],
+   "plan_long_m": 4.85,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "1F-089",
+   "floor": "1F",
+   "m2": 1.375744449,
+   "owner": "BM-1F-017",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-089"
+   ],
+   "run": "BM-1F-017#BAND0018.1"
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "1F-089",
+   "floor": "1F",
+   "m2": 0.009458826,
+   "owner": "BM-1F-017",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-089"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "1F-095",
+   "floor": "1F",
+   "m2": 1.025,
+   "owner": "BM-1F-021",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-095"
+   ],
+   "plan_long_m": 4.1,
+   "plan_short_m": 0.25
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "1F-097",
+   "floor": "1F",
+   "m2": 1.093045762,
+   "owner": "BM-1F-020",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-097"
+   ],
+   "plan_long_m": 4.3722,
+   "plan_short_m": 0.25
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "1F-100",
+   "floor": "1F",
+   "m2": 0.76234625,
+   "owner": "BM-1F-003",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-100"
+   ],
+   "plan_long_m": 3.8117,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "1F-103",
+   "floor": "1F",
+   "m2": 2.012242172,
+   "owner": "BM-1F-023",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-103"
+   ],
+   "run": "BM-1F-023#BAND0027.1"
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "1F-103",
+   "floor": "1F",
+   "m2": 0.79505,
+   "owner": "BM-1F-023",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-103"
+   ],
+   "run": "BM-1F-023#BAND0027.2"
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "1F-103",
+   "floor": "1F",
+   "m2": 0.989717738,
+   "owner": "BM-1F-023",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-103"
+   ],
+   "run": "BM-1F-023#BAND0027.3"
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "1F-103",
+   "floor": "1F",
+   "m2": 0.096643841,
+   "owner": "BM-1F-023",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-103"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "1F-002",
+   "floor": "1F",
+   "m2": 0.648002715,
+   "owner": "BM-1F-001",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-002"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "1F-004",
+   "floor": "1F",
+   "m2": 2.311332003,
+   "owner": "BM-1F-002",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-004"
+   ],
+   "run": "BM-1F-002#BAND0001.2"
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "1F-004",
+   "floor": "1F",
+   "m2": 0.000264307,
+   "owner": "BM-1F-002",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-004"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "1F-008",
+   "floor": "1F",
+   "m2": 2.209966231,
+   "owner": "BM-1F-002",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-008",
+    "1F-012"
+   ],
+   "run": "BM-1F-002#BAND0001.3"
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "1F-008",
+   "floor": "1F",
+   "m2": 2.414,
+   "owner": "BM-1F-002",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-008",
+    "1F-012"
+   ],
+   "run": "BM-1F-002#BAND0001.4"
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "1F-008",
+   "floor": "1F",
+   "m2": 0.217962913,
+   "owner": "BM-1F-002",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-008",
+    "1F-012"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "1F-017",
+   "floor": "1F",
+   "m2": 0.64800543,
+   "owner": "BM-1F-011",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-017"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "1F-019",
+   "floor": "1F",
+   "m2": 1.440002715,
+   "owner": "BM-1F-009",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-019"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "1F-021",
+   "floor": "1F",
+   "m2": 2.363007692,
+   "owner": "BM-1F-015",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-021"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "1F-022",
+   "floor": "1F",
+   "m2": 0.863997285,
+   "owner": "BM-1F-013",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-022"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "1F-024",
+   "floor": "1F",
+   "m2": 3.016574412,
+   "owner": "BM-1F-030",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "1F-024"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "1F-026",
+   "floor": "1F",
+   "m2": 3.172411737,
+   "owner": "BM-1F-017",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-026"
+   ],
+   "run": "BM-1F-017#BAND0018.2"
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "1F-026",
+   "floor": "1F",
+   "m2": 0.271735343,
+   "owner": "BM-1F-017",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-026"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "1F-034",
+   "floor": "1F",
+   "m2": 0.708013349,
+   "owner": "BM-1F-012",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-034"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "1F-038",
+   "floor": "1F",
+   "m2": 0.335994831,
+   "owner": "BM-1F-008",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-038"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "1F-045",
+   "floor": "1F",
+   "m2": 3.06424736,
+   "owner": "BM-1F-026",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-045"
+   ],
+   "run": "BM-1F-026#BAND0031.1"
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "1F-045",
+   "floor": "1F",
+   "m2": 1.888837,
+   "owner": "BM-1F-026",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-045"
+   ],
+   "run": "BM-1F-026#BAND0031.2"
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "1F-045",
+   "floor": "1F",
+   "m2": 0.473245463,
+   "owner": "BM-1F-026",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-045"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "1F-048",
+   "floor": "1F",
+   "m2": 2.065045441,
+   "owner": "BM-1F-007",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-048"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "1F-052",
+   "floor": "1F",
+   "m2": 6.299548824,
+   "owner": "BM-1F-025",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-052",
+    "1F-054",
+    "1F-055"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "1F-053",
+   "floor": "1F",
+   "m2": 0.001951124,
+   "owner": "BM-1F-010",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-053"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "1F-058",
+   "floor": "1F",
+   "m2": 2.78801117,
+   "owner": "BM-1F-014",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-058"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "1F-061",
+   "floor": "1F",
+   "m2": 1.783334191,
+   "owner": "BM-1F-018",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-061"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "1F-064",
+   "floor": "1F",
+   "m2": 0.777356553,
+   "owner": "BM-1F-010",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-064"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "1F-066",
+   "floor": "1F",
+   "m2": 1.486542236,
+   "owner": "BM-1F-019",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-066"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "1F-070",
+   "floor": "1F",
+   "m2": 2.924,
+   "owner": "BM-1F-004",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-070"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "1F-071",
+   "floor": "1F",
+   "m2": 5.486424004,
+   "owner": "BM-1F-005",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-071"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "1F-072",
+   "floor": "1F",
+   "m2": 0.0,
+   "owner": "BM-1F-031",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "1F-072"
+   ],
+   "run": "BM-1F-031#BAND0026.1"
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "1F-072",
+   "floor": "1F",
+   "m2": 0.0,
+   "owner": "BM-1F-031",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "1F-072"
+   ],
+   "run": "BM-1F-031#BAND0026.2"
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "1F-072",
+   "floor": "1F",
+   "m2": 0.0,
+   "owner": "BM-1F-031",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "1F-072"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "1F-075",
+   "floor": "1F",
+   "m2": 5.989639169,
+   "owner": "BM-1F-027",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-075"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "1F-078",
+   "floor": "1F",
+   "m2": 4.586292587,
+   "owner": "BM-1F-017",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-078",
+    "1F-089"
+   ],
+   "run": "BM-1F-017#BAND0018.1"
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "1F-082",
+   "floor": "1F",
+   "m2": 1.374519385,
+   "owner": "BM-1F-022",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-082"
+   ],
+   "run": "BM-1F-022#BAND0024.1"
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "1F-082",
+   "floor": "1F",
+   "m2": 1.270047631,
+   "owner": "BM-1F-022",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-082"
+   ],
+   "run": "BM-1F-022#BAND0024.2"
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "1F-082",
+   "floor": "1F",
+   "m2": 0.237898441,
+   "owner": "BM-1F-022",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-082"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "1F-085",
+   "floor": "1F",
+   "m2": 7.248006674,
+   "owner": "BM-1F-024",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-085"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "1F-087",
+   "floor": "1F",
+   "m2": 3.298,
+   "owner": "BM-1F-016",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-087"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "1F-095",
+   "floor": "1F",
+   "m2": 1.783334191,
+   "owner": "BM-1F-021",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-095"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "1F-097",
+   "floor": "1F",
+   "m2": 2.316216598,
+   "owner": "BM-1F-020",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-097"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "1F-100",
+   "floor": "1F",
+   "m2": 2.558007281,
+   "owner": "BM-1F-003",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-100"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "1F-103",
+   "floor": "1F",
+   "m2": 7.708861406,
+   "owner": "BM-1F-023",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-103"
+   ],
+   "run": "BM-1F-023#BAND0027.1"
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "1F-103",
+   "floor": "1F",
+   "m2": 2.803745463,
+   "owner": "BM-1F-023",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-103"
+   ],
+   "run": "BM-1F-023#BAND0027.2"
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "1F-103",
+   "floor": "1F",
+   "m2": 3.892964057,
+   "owner": "BM-1F-023",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-103"
+   ],
+   "run": "BM-1F-023#BAND0027.3"
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "1F-103",
+   "floor": "1F",
+   "m2": 1.763786316,
+   "owner": "BM-1F-023",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-103"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN",
+   "face": "1F-030",
+   "floor": "1F",
+   "m2": 0.800011312,
+   "owner": "BM-1F-032",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "1F-030"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN",
+   "face": "1F-072",
+   "floor": "1F",
+   "m2": 1.885119009,
+   "owner": "BM-1F-031",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "1F-072"
+   ],
+   "run": "BM-1F-031#BAND0026.1"
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN",
+   "face": "1F-072",
+   "floor": "1F",
+   "m2": 1.828258852,
+   "owner": "BM-1F-031",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "1F-072"
+   ],
+   "run": "BM-1F-031#BAND0026.2"
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN",
+   "face": "1F-072",
+   "floor": "1F",
+   "m2": 0.300055503,
+   "owner": "BM-1F-031",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "1F-072"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN:HELD_EDGE",
+   "face": "1F-026",
+   "floor": "1F",
+   "m2": 4.557352202,
+   "owner": "BM-1F-017",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-026"
+   ],
+   "run": "BM-1F-017#BAND0018.2"
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN:HELD_EDGE",
+   "face": "1F-026",
+   "floor": "1F",
+   "m2": 0.000345833,
+   "owner": "BM-1F-017",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-026"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN:HELD_EDGE",
+   "face": "1F-045",
+   "floor": "1F",
+   "m2": 0.504471719,
+   "owner": "BM-1F-026",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-045"
+   ],
+   "run": "BM-1F-026#BAND0031.1"
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN:HELD_EDGE",
+   "face": "1F-045",
+   "floor": "1F",
+   "m2": 0.524988688,
+   "owner": "BM-1F-026",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-045"
+   ],
+   "run": "BM-1F-026#BAND0031.2"
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN:HELD_EDGE",
+   "face": "1F-045",
+   "floor": "1F",
+   "m2": 1.2506,
+   "owner": "BM-1F-026",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-045"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN:HELD_EDGE",
+   "face": "1F-072",
+   "floor": "1F",
+   "m2": 2.299968847,
+   "owner": "BM-1F-031",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "1F-072"
+   ],
+   "run": "BM-1F-031#BAND0026.1"
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN:HELD_EDGE",
+   "face": "1F-072",
+   "floor": "1F",
+   "m2": 3.65,
+   "owner": "BM-1F-031",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "1F-072"
+   ],
+   "run": "BM-1F-031#BAND0026.2"
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN:HELD_EDGE",
+   "face": "1F-072",
+   "floor": "1F",
+   "m2": 3.1153e-05,
+   "owner": "BM-1F-031",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "1F-072"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN:HELD_EDGE",
+   "face": "1F-078",
+   "floor": "1F",
+   "m2": 0.137920476,
+   "owner": "BM-1F-017",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-078",
+    "1F-089"
+   ],
+   "run": "BM-1F-017#BAND0018.1"
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN:RING_MIX",
+   "face": "1F-061",
+   "floor": "1F",
+   "m2": 2.954899438,
+   "owner": "BM-1F-018",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-061"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN:RING_MIX",
+   "face": "1F-066",
+   "floor": "1F",
+   "m2": 4.372183047,
+   "owner": "BM-1F-019",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-066"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN:RING_MIX",
+   "face": "1F-072",
+   "floor": "1F",
+   "m2": 0.165949441,
+   "owner": "BM-1F-031",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "1F-072"
+   ],
+   "run": "BM-1F-031#BAND0026.1"
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN:RING_MIX",
+   "face": "1F-072",
+   "floor": "1F",
+   "m2": 1.571808274,
+   "owner": "BM-1F-031",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "1F-072"
+   ],
+   "run": "BM-1F-031#BAND0026.2"
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN:RING_MIX",
+   "face": "1F-072",
+   "floor": "1F",
+   "m2": 0.598887023,
+   "owner": "BM-1F-031",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "1F-072"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN:RING_MIX",
+   "face": "1F-075",
+   "floor": "1F",
+   "m2": 3.177070575,
+   "owner": "BM-1F-027",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-075"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN:RING_MIX",
+   "face": "1F-078",
+   "floor": "1F",
+   "m2": 3.094993264,
+   "owner": "BM-1F-017",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-078",
+    "1F-089"
+   ],
+   "run": "BM-1F-017#BAND0018.1"
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN:RING_MIX",
+   "face": "1F-078",
+   "floor": "1F",
+   "m2": 0.189175978,
+   "owner": "BM-1F-017",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-078",
+    "1F-089"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN:RING_MIX",
+   "face": "1F-082",
+   "floor": "1F",
+   "m2": 1.607661432,
+   "owner": "BM-1F-022",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-082"
+   ],
+   "run": "BM-1F-022#BAND0024.1"
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN:RING_MIX",
+   "face": "1F-082",
+   "floor": "1F",
+   "m2": 2.114486958,
+   "owner": "BM-1F-022",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-082"
+   ],
+   "run": "BM-1F-022#BAND0024.2"
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN:RING_MIX",
+   "face": "1F-082",
+   "floor": "1F",
+   "m2": 3.4657e-05,
+   "owner": "BM-1F-022",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-082"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN:RING_MIX",
+   "face": "1F-095",
+   "floor": "1F",
+   "m2": 2.954899438,
+   "owner": "BM-1F-021",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-095"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN:RING_MIX",
+   "face": "1F-097",
+   "floor": "1F",
+   "m2": 1.931964335,
+   "owner": "BM-1F-020",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-097"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN:STAIR",
+   "face": "1F-002",
+   "floor": "1F",
+   "m2": 2.499988688,
+   "owner": "BM-1F-001",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-002"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN:STAIR",
+   "face": "1F-017",
+   "floor": "1F",
+   "m2": 2.7,
+   "owner": "BM-1F-011",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-017"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN:STAIR",
+   "face": "1F-030",
+   "floor": "1F",
+   "m2": 0.8,
+   "owner": "BM-1F-032",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "1F-030"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN:STAIR",
+   "face": "1F-034",
+   "floor": "1F",
+   "m2": 0.8,
+   "owner": "BM-1F-012",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-034"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN:STAIR",
+   "face": "1F-045",
+   "floor": "1F",
+   "m2": 2.499311312,
+   "owner": "BM-1F-026",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-045"
+   ],
+   "run": "BM-1F-026#BAND0031.2"
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN:STAIR",
+   "face": "1F-045",
+   "floor": "1F",
+   "m2": 0.000688688,
+   "owner": "BM-1F-026",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-045"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "BEAM_SIDE_HELD_M2:HELD_EDGE",
+   "face": "1F-026",
+   "floor": "1F",
+   "m2": 2.688837799,
+   "owner": "BM-1F-017",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-026"
+   ],
+   "run": "BM-1F-017#BAND0018.2"
+  },
+  {
+   "category": "BEAM_SIDE_HELD_M2:HELD_EDGE",
+   "face": "1F-026",
+   "floor": "1F",
+   "m2": 0.000204042,
+   "owner": "BM-1F-017",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-026"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "BEAM_SIDE_HELD_M2:HELD_EDGE",
+   "face": "1F-045",
+   "floor": "1F",
+   "m2": 0.297638314,
+   "owner": "BM-1F-026",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-045"
+   ],
+   "run": "BM-1F-026#BAND0031.1"
+  },
+  {
+   "category": "BEAM_SIDE_HELD_M2:HELD_EDGE",
+   "face": "1F-045",
+   "floor": "1F",
+   "m2": 0.309743326,
+   "owner": "BM-1F-026",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-045"
+   ],
+   "run": "BM-1F-026#BAND0031.2"
+  },
+  {
+   "category": "BEAM_SIDE_HELD_M2:HELD_EDGE",
+   "face": "1F-045",
+   "floor": "1F",
+   "m2": 0.737854,
+   "owner": "BM-1F-026",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-045"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "BEAM_SIDE_HELD_M2:HELD_EDGE",
+   "face": "1F-078",
+   "floor": "1F",
+   "m2": 0.081373081,
+   "owner": "BM-1F-017",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-078",
+    "1F-089"
+   ],
+   "run": "BM-1F-017#BAND0018.1"
+  },
+  {
+   "category": "BEAM_SIDE_HELD_M2:RING_MIX",
+   "face": "1F-061",
+   "floor": "1F",
+   "m2": 1.004665809,
+   "owner": "BM-1F-018",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-061"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_M2:RING_MIX",
+   "face": "1F-066",
+   "floor": "1F",
+   "m2": 1.486542236,
+   "owner": "BM-1F-019",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-066"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_M2:RING_MIX",
+   "face": "1F-075",
+   "floor": "1F",
+   "m2": 1.874471639,
+   "owner": "BM-1F-027",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-075"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_M2:RING_MIX",
+   "face": "1F-078",
+   "floor": "1F",
+   "m2": 1.826046026,
+   "owner": "BM-1F-017",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-078",
+    "1F-089"
+   ],
+   "run": "BM-1F-017#BAND0018.1"
+  },
+  {
+   "category": "BEAM_SIDE_HELD_M2:RING_MIX",
+   "face": "1F-078",
+   "floor": "1F",
+   "m2": 0.111613827,
+   "owner": "BM-1F-017",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-078",
+    "1F-089"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "BEAM_SIDE_HELD_M2:RING_MIX",
+   "face": "1F-082",
+   "floor": "1F",
+   "m2": 0.546604887,
+   "owner": "BM-1F-022",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-082"
+   ],
+   "run": "BM-1F-022#BAND0024.1"
+  },
+  {
+   "category": "BEAM_SIDE_HELD_M2:RING_MIX",
+   "face": "1F-082",
+   "floor": "1F",
+   "m2": 0.718925566,
+   "owner": "BM-1F-022",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-082"
+   ],
+   "run": "BM-1F-022#BAND0024.2"
+  },
+  {
+   "category": "BEAM_SIDE_HELD_M2:RING_MIX",
+   "face": "1F-082",
+   "floor": "1F",
+   "m2": 1.1783e-05,
+   "owner": "BM-1F-022",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-082"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "BEAM_SIDE_HELD_M2:RING_MIX",
+   "face": "1F-095",
+   "floor": "1F",
+   "m2": 1.004665809,
+   "owner": "BM-1F-021",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-095"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_M2:RING_MIX",
+   "face": "1F-097",
+   "floor": "1F",
+   "m2": 0.656867874,
+   "owner": "BM-1F-020",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-097"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_M2:STAIR",
+   "face": "1F-002",
+   "floor": "1F",
+   "m2": 0.599997285,
+   "owner": "BM-1F-001",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-002"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_M2:STAIR",
+   "face": "1F-017",
+   "floor": "1F",
+   "m2": 0.648,
+   "owner": "BM-1F-011",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-017"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_M2:STAIR",
+   "face": "1F-034",
+   "floor": "1F",
+   "m2": 0.472,
+   "owner": "BM-1F-012",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-034"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_M2:STAIR",
+   "face": "1F-045",
+   "floor": "1F",
+   "m2": 1.474593674,
+   "owner": "BM-1F-026",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-045"
+   ],
+   "run": "BM-1F-026#BAND0031.2"
+  },
+  {
+   "category": "BEAM_SIDE_HELD_M2:STAIR",
+   "face": "1F-045",
+   "floor": "1F",
+   "m2": 0.000406326,
+   "owner": "BM-1F-026",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-045"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "1F-000",
+   "floor": "1F",
+   "m2": 0.112007066,
+   "owner": "COL-1F-34",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-000",
+    "1F-001"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "1F-002",
+   "floor": "1F",
+   "m2": 0.43200181,
+   "owner": "BM-1F-001",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-002"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "1F-003",
+   "floor": "1F",
+   "m2": 0.032014133,
+   "owner": "COL-1F-35",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-003",
+    "1F-015"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "1F-004",
+   "floor": "1F",
+   "m2": 0.55513781,
+   "owner": "BM-1F-002",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-004"
+   ],
+   "run": "BM-1F-002#BAND0001.2"
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "1F-004",
+   "floor": "1F",
+   "m2": 6.219e-05,
+   "owner": "BM-1F-002",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-004"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "1F-005",
+   "floor": "1F",
+   "m2": 0.096014133,
+   "owner": "COL-1F-32",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-005",
+    "1F-006",
+    "1F-007"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "1F-008",
+   "floor": "1F",
+   "m2": 0.536112,
+   "owner": "BM-1F-002",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-008",
+    "1F-012"
+   ],
+   "run": "BM-1F-002#BAND0001.3"
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "1F-008",
+   "floor": "1F",
+   "m2": 0.568048,
+   "owner": "BM-1F-002",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-008",
+    "1F-012"
+   ],
+   "run": "BM-1F-002#BAND0001.4"
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "1F-008",
+   "floor": "1F",
+   "m2": 0.102398403,
+   "owner": "BM-1F-002",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-008",
+    "1F-012"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "1F-009",
+   "floor": "1F",
+   "m2": 0.080014133,
+   "owner": "COL-1F-33",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-009",
+    "1F-010",
+    "1F-011"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "1F-013",
+   "floor": "1F",
+   "m2": 0.080019399,
+   "owner": "COL-1F-31",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-013",
+    "1F-014"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "1F-017",
+   "floor": "1F",
+   "m2": 3.62e-06,
+   "owner": "BM-1F-011",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-017"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "1F-018",
+   "floor": "1F",
+   "m2": 7.066e-06,
+   "owner": "1F-018",
+   "owner_kind": "SLAB",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-018"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "1F-019",
+   "floor": "1F",
+   "m2": 1.81e-06,
+   "owner": "BM-1F-009",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-019"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "1F-020",
+   "floor": "1F",
+   "m2": 4.8329e-05,
+   "owner": "1F-020",
+   "owner_kind": "SLAB",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-020"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "1F-021",
+   "floor": "1F",
+   "m2": 3.62e-06,
+   "owner": "BM-1F-015",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-021"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "1F-022",
+   "floor": "1F",
+   "m2": 0.28799819,
+   "owner": "BM-1F-013",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-022"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "1F-023",
+   "floor": "1F",
+   "m2": 2.3009e-05,
+   "owner": "1F-023",
+   "owner_kind": "SLAB",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-023"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "1F-024",
+   "floor": "1F",
+   "m2": 0.001251459,
+   "owner": "BM-1F-030",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "1F-024"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "1F-025",
+   "floor": "1F",
+   "m2": 1.5943e-05,
+   "owner": "1F-025",
+   "owner_kind": "SLAB",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-025"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "1F-026",
+   "floor": "1F",
+   "m2": 0.074770124,
+   "owner": "BM-1F-017",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-026"
+   ],
+   "run": "BM-1F-017#BAND0018.2"
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "1F-029",
+   "floor": "1F",
+   "m2": 0.08,
+   "owner": "COL-1F-36",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "1F-029",
+    "1F-031",
+    "1F-032"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "1F-030",
+   "floor": "1F",
+   "m2": 0.12800181,
+   "owner": "BM-1F-032",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "1F-030"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "1F-033",
+   "floor": "1F",
+   "m2": 0.047994744,
+   "owner": "COL-1F-37",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-033",
+    "1F-035"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "1F-034",
+   "floor": "1F",
+   "m2": 0.19200362,
+   "owner": "BM-1F-012",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-034"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "1F-037",
+   "floor": "1F",
+   "m2": 0.047992934,
+   "owner": "COL-1F-38",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-037",
+    "1F-039"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "1F-038",
+   "floor": "1F",
+   "m2": 0.11200362,
+   "owner": "BM-1F-008",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-038"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "1F-045",
+   "floor": "1F",
+   "m2": 0.399076525,
+   "owner": "BM-1F-026",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-045"
+   ],
+   "run": "BM-1F-026#BAND0031.1"
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "1F-045",
+   "floor": "1F",
+   "m2": 0.012,
+   "owner": "BM-1F-026",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-045"
+   ],
+   "run": "BM-1F-026#BAND0031.2"
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "1F-045",
+   "floor": "1F",
+   "m2": 0.000131563,
+   "owner": "BM-1F-026",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-045"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "1F-046",
+   "floor": "1F",
+   "m2": 0.048008876,
+   "owner": "COL-1F-42",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-046",
+    "1F-047"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "1F-048",
+   "floor": "1F",
+   "m2": 0.288012323,
+   "owner": "BM-1F-007",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-048"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "1F-049",
+   "floor": "1F",
+   "m2": 0.128007066,
+   "owner": "COL-1F-41",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-049",
+    "1F-050",
+    "1F-051"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "1F-052",
+   "floor": "1F",
+   "m2": 0.001801608,
+   "owner": "BM-1F-025",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-052",
+    "1F-054",
+    "1F-055"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "1F-053",
+   "floor": "1F",
+   "m2": 0.001223191,
+   "owner": "BM-1F-010",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-053"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "1F-057",
+   "floor": "1F",
+   "m2": 5.8738e-05,
+   "owner": "1F-057",
+   "owner_kind": "SLAB",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-057"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "1F-058",
+   "floor": "1F",
+   "m2": 7.066e-06,
+   "owner": "BM-1F-014",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-058"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "1F-062",
+   "floor": "1F",
+   "m2": 8.876e-06,
+   "owner": "1F-062",
+   "owner_kind": "SLAB",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-062"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "1F-067",
+   "floor": "1F",
+   "m2": 0.005240562,
+   "owner": "COL-1F-43",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "1F-067",
+    "1F-068"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "1F-072",
+   "floor": "1F",
+   "m2": 8.876e-06,
+   "owner": "BM-1F-031",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "1F-072"
+   ],
+   "run": "BM-1F-031#BAND0026.1"
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "1F-072",
+   "floor": "1F",
+   "m2": 1.81e-06,
+   "owner": "BM-1F-031",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "1F-072"
+   ],
+   "run": "BM-1F-031#BAND0026.2"
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "1F-072",
+   "floor": "1F",
+   "m2": 1.81e-06,
+   "owner": "BM-1F-031",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "1F-072"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "1F-078",
+   "floor": "1F",
+   "m2": 0.8779416,
+   "owner": "BM-1F-017",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-078",
+    "1F-089"
+   ],
+   "run": "BM-1F-017#BAND0018.1"
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "1F-082",
+   "floor": "1F",
+   "m2": 8.876e-06,
+   "owner": "BM-1F-022",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-082"
+   ],
+   "run": "BM-1F-022#BAND0024.1"
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "1F-082",
+   "floor": "1F",
+   "m2": 1.81e-06,
+   "owner": "BM-1F-022",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-082"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "1F-085",
+   "floor": "1F",
+   "m2": 1.81e-06,
+   "owner": "BM-1F-024",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-085"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "1F-094",
+   "floor": "1F",
+   "m2": 4.481e-05,
+   "owner": "1F-094",
+   "owner_kind": "SLAB",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-094"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "1F-098",
+   "floor": "1F",
+   "m2": 0.032,
+   "owner": "COL-1F-46",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "1F-098",
+    "1F-099"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "1F-100",
+   "floor": "1F",
+   "m2": 0.609891133,
+   "owner": "BM-1F-003",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-100"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "1F-101",
+   "floor": "1F",
+   "m2": 0.112,
+   "owner": "COL-1F-57",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "1F-101",
+    "1F-102"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "1F-103",
+   "floor": "1F",
+   "m2": 1.073274686,
+   "owner": "BM-1F-023",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-103"
+   ],
+   "run": "BM-1F-023#BAND0027.1"
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "1F-103",
+   "floor": "1F",
+   "m2": 0.424177753,
+   "owner": "BM-1F-023",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-103"
+   ],
+   "run": "BM-1F-023#BAND0027.2"
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "1F-103",
+   "floor": "1F",
+   "m2": 0.527847066,
+   "owner": "BM-1F-023",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-103"
+   ],
+   "run": "BM-1F-023#BAND0027.3"
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "1F-103",
+   "floor": "1F",
+   "m2": 0.224074943,
+   "owner": "BM-1F-023",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-103"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "1F-104",
+   "floor": "1F",
+   "m2": 0.128,
+   "owner": "COL-1F-48",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "1F-104",
+    "1F-105"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "1F-106",
+   "floor": "1F",
+   "m2": 0.096,
+   "owner": "COL-1F-47",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-106",
+    "1F-107"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "1F-108",
+   "floor": "1F",
+   "m2": 0.11200181,
+   "owner": "COL-1F-58",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "1F-108",
+    "1F-109"
+   ]
+  },
+  {
+   "category": "EDGE_HELD_LEN:RING_MIX",
+   "face": "1F-060",
+   "floor": "1F",
+   "m2": 1.58274211,
+   "owner": "1F-060",
+   "owner_kind": "SLAB",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-060"
+   ]
+  },
+  {
+   "category": "EDGE_HELD_LEN:RING_MIX",
+   "face": "1F-090",
+   "floor": "1F",
+   "m2": 1.58274211,
+   "owner": "1F-090",
+   "owner_kind": "SLAB",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-090"
+   ]
+  },
+  {
+   "category": "EDGE_HELD_LEN:RING_MIX",
+   "face": "1F-091",
+   "floor": "1F",
+   "m2": 1.809363837,
+   "owner": "1F-091",
+   "owner_kind": "SLAB",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-091"
+   ]
+  },
+  {
+   "category": "EDGE_HELD_LEN:RING_MIX",
+   "face": "1F-092",
+   "floor": "1F",
+   "m2": 1.690653885,
+   "owner": "1F-092",
+   "owner_kind": "SLAB",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-092"
+   ]
+  },
+  {
+   "category": "EDGE_HELD_M2:RING_MIX",
+   "face": "1F-060",
+   "floor": "1F",
+   "m2": 0.253238738,
+   "owner": "1F-060",
+   "owner_kind": "SLAB",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-060"
+   ]
+  },
+  {
+   "category": "EDGE_HELD_M2:RING_MIX",
+   "face": "1F-090",
+   "floor": "1F",
+   "m2": 0.253238738,
+   "owner": "1F-090",
+   "owner_kind": "SLAB",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-090"
+   ]
+  },
+  {
+   "category": "EDGE_HELD_M2:RING_MIX",
+   "face": "1F-091",
+   "floor": "1F",
+   "m2": 0.289498214,
+   "owner": "1F-091",
+   "owner_kind": "SLAB",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-091"
+   ]
+  },
+  {
+   "category": "EDGE_HELD_M2:RING_MIX",
+   "face": "1F-092",
+   "floor": "1F",
+   "m2": 0.270504622,
+   "owner": "1F-092",
+   "owner_kind": "SLAB",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-092"
+   ]
+  },
+  {
+   "category": "JOINT_FACE",
+   "face": "1F-000",
+   "floor": "1F",
+   "m2": 0.1680106,
+   "owner": "COL-1F-34",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-000",
+    "1F-001"
+   ]
+  },
+  {
+   "category": "JOINT_FACE",
+   "face": "1F-003",
+   "floor": "1F",
+   "m2": 0.210017731,
+   "owner": "COL-1F-35",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-003",
+    "1F-015"
+   ]
+  },
+  {
+   "category": "JOINT_FACE",
+   "face": "1F-005",
+   "floor": "1F",
+   "m2": 0.442,
+   "owner": "COL-1F-32",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-005",
+    "1F-006",
+    "1F-007"
+   ]
+  },
+  {
+   "category": "JOINT_FACE",
+   "face": "1F-009",
+   "floor": "1F",
+   "m2": 0.306003846,
+   "owner": "COL-1F-33",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-009",
+    "1F-010",
+    "1F-011"
+   ]
+  },
+  {
+   "category": "JOINT_FACE",
+   "face": "1F-013",
+   "floor": "1F",
+   "m2": 0.522038802,
+   "owner": "COL-1F-31",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-013",
+    "1F-014"
+   ]
+  },
+  {
+   "category": "JOINT_FACE",
+   "face": "1F-029",
+   "floor": "1F",
+   "m2": 0.12,
+   "owner": "COL-1F-36",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "1F-029",
+    "1F-031",
+    "1F-032"
+   ]
+  },
+  {
+   "category": "JOINT_FACE",
+   "face": "1F-033",
+   "floor": "1F",
+   "m2": 0.317009389,
+   "owner": "COL-1F-37",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-033",
+    "1F-035"
+   ]
+  },
+  {
+   "category": "JOINT_FACE",
+   "face": "1F-037",
+   "floor": "1F",
+   "m2": 0.19200543,
+   "owner": "COL-1F-38",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-037",
+    "1F-039"
+   ]
+  },
+  {
+   "category": "JOINT_FACE",
+   "face": "1F-040",
+   "floor": "1F",
+   "m2": 0.948289161,
+   "owner": "COL-1F-39",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-040",
+    "1F-056"
+   ]
+  },
+  {
+   "category": "JOINT_FACE",
+   "face": "1F-042",
+   "floor": "1F",
+   "m2": 0.0,
+   "owner": "COL-1F-40",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "1F-042",
+    "1F-044"
+   ]
+  },
+  {
+   "category": "JOINT_FACE",
+   "face": "1F-046",
+   "floor": "1F",
+   "m2": 0.560506674,
+   "owner": "COL-1F-42",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-046",
+    "1F-047"
+   ]
+  },
+  {
+   "category": "JOINT_FACE",
+   "face": "1F-049",
+   "floor": "1F",
+   "m2": 0.92380884,
+   "owner": "COL-1F-41",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-049",
+    "1F-050",
+    "1F-051"
+   ]
+  },
+  {
+   "category": "JOINT_FACE",
+   "face": "1F-067",
+   "floor": "1F",
+   "m2": 0.019324572,
+   "owner": "COL-1F-43",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "1F-067",
+    "1F-068"
+   ]
+  },
+  {
+   "category": "JOINT_FACE",
+   "face": "1F-074",
+   "floor": "1F",
+   "m2": 0.0,
+   "owner": "COL-1F-44",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-074",
+    "1F-083"
+   ]
+  },
+  {
+   "category": "JOINT_FACE",
+   "face": "1F-098",
+   "floor": "1F",
+   "m2": 0.068,
+   "owner": "COL-1F-46",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "1F-098",
+    "1F-099"
+   ]
+  },
+  {
+   "category": "JOINT_FACE",
+   "face": "1F-101",
+   "floor": "1F",
+   "m2": 0.766928342,
+   "owner": "COL-1F-57",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "1F-101",
+    "1F-102"
+   ]
+  },
+  {
+   "category": "JOINT_FACE",
+   "face": "1F-104",
+   "floor": "1F",
+   "m2": 0.472,
+   "owner": "COL-1F-48",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "1F-104",
+    "1F-105"
+   ]
+  },
+  {
+   "category": "JOINT_FACE",
+   "face": "1F-106",
+   "floor": "1F",
+   "m2": 0.354,
+   "owner": "COL-1F-47",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-106",
+    "1F-107"
+   ]
+  },
+  {
+   "category": "JOINT_FACE",
+   "face": "1F-108",
+   "floor": "1F",
+   "m2": 0.413006674,
+   "owner": "COL-1F-58",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "1F-108",
+    "1F-109"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_LEN",
+   "face": "1F-029",
+   "floor": "1F",
+   "m2": 0.199988688,
+   "owner": "COL-1F-36",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "1F-029",
+    "1F-031",
+    "1F-032"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_LEN",
+   "face": "1F-080",
+   "floor": "1F",
+   "m2": 1.0,
+   "owner": "COL-1F-45",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "1F-080",
+    "1F-081"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_LEN",
+   "face": "1F-098",
+   "floor": "1F",
+   "m2": 0.500044165,
+   "owner": "COL-1F-46",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "1F-098",
+    "1F-099"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_LEN:HELD_EDGE",
+   "face": "1F-013",
+   "floor": "1F",
+   "m2": 0.249934234,
+   "owner": "COL-1F-31",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-013",
+    "1F-014"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_LEN:HELD_EDGE",
+   "face": "1F-042",
+   "floor": "1F",
+   "m2": 0.80008833,
+   "owner": "COL-1F-40",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "1F-042",
+    "1F-044"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_LEN:HELD_EDGE",
+   "face": "1F-067",
+   "floor": "1F",
+   "m2": 0.867269112,
+   "owner": "COL-1F-43",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "1F-067",
+    "1F-068"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_LEN:HELD_EDGE",
+   "face": "1F-080",
+   "floor": "1F",
+   "m2": 0.6,
+   "owner": "COL-1F-45",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "1F-080",
+    "1F-081"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_LEN:HELD_EDGE",
+   "face": "1F-098",
+   "floor": "1F",
+   "m2": 0.5,
+   "owner": "COL-1F-46",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "1F-098",
+    "1F-099"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_LEN:RING_MIX",
+   "face": "1F-074",
+   "floor": "1F",
+   "m2": 0.7,
+   "owner": "COL-1F-44",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-074",
+    "1F-083"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_LEN:STAIR",
+   "face": "1F-000",
+   "floor": "1F",
+   "m2": 0.499955835,
+   "owner": "COL-1F-34",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-000",
+    "1F-001"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_LEN:STAIR",
+   "face": "1F-003",
+   "floor": "1F",
+   "m2": 0.299955835,
+   "owner": "COL-1F-35",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-003",
+    "1F-015"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_LEN:STAIR",
+   "face": "1F-029",
+   "floor": "1F",
+   "m2": 0.800011312,
+   "owner": "COL-1F-36",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "1F-029",
+    "1F-031",
+    "1F-032"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_LEN:STAIR",
+   "face": "1F-033",
+   "floor": "1F",
+   "m2": 0.5,
+   "owner": "COL-1F-37",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-033",
+    "1F-035"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_M2",
+   "face": "1F-029",
+   "floor": "1F",
+   "m2": 0.047997285,
+   "owner": "COL-1F-36",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "1F-029",
+    "1F-031",
+    "1F-032"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_M2",
+   "face": "1F-080",
+   "floor": "1F",
+   "m2": 0.34,
+   "owner": "COL-1F-45",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "1F-080",
+    "1F-081"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_M2",
+   "face": "1F-098",
+   "floor": "1F",
+   "m2": 0.170015016,
+   "owner": "COL-1F-46",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "1F-098",
+    "1F-099"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_M2:HELD_EDGE",
+   "face": "1F-013",
+   "floor": "1F",
+   "m2": 0.147461198,
+   "owner": "COL-1F-31",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-013",
+    "1F-014"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_M2:HELD_EDGE",
+   "face": "1F-042",
+   "floor": "1F",
+   "m2": 0.472052115,
+   "owner": "COL-1F-40",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "1F-042",
+    "1F-044"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_M2:HELD_EDGE",
+   "face": "1F-067",
+   "floor": "1F",
+   "m2": 0.511688776,
+   "owner": "COL-1F-43",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "1F-067",
+    "1F-068"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_M2:HELD_EDGE",
+   "face": "1F-080",
+   "floor": "1F",
+   "m2": 0.204,
+   "owner": "COL-1F-45",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "1F-080",
+    "1F-081"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_M2:HELD_EDGE",
+   "face": "1F-098",
+   "floor": "1F",
+   "m2": 0.17,
+   "owner": "COL-1F-46",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "1F-098",
+    "1F-099"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_M2:RING_MIX",
+   "face": "1F-074",
+   "floor": "1F",
+   "m2": 0.238,
+   "owner": "COL-1F-44",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-074",
+    "1F-083"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_M2:STAIR",
+   "face": "1F-000",
+   "floor": "1F",
+   "m2": 0.1199894,
+   "owner": "COL-1F-34",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-000",
+    "1F-001"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_M2:STAIR",
+   "face": "1F-003",
+   "floor": "1F",
+   "m2": 0.101984984,
+   "owner": "COL-1F-35",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-003",
+    "1F-015"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_M2:STAIR",
+   "face": "1F-029",
+   "floor": "1F",
+   "m2": 0.192002715,
+   "owner": "COL-1F-36",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "1F-029",
+    "1F-031",
+    "1F-032"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_M2:STAIR",
+   "face": "1F-033",
+   "floor": "1F",
+   "m2": 0.295,
+   "owner": "COL-1F-37",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-033",
+    "1F-035"
+   ]
+  },
+  {
+   "category": "JUNCTION_HELD_LEN",
+   "face": "1F-030",
+   "floor": "1F",
+   "m2": 0.2,
+   "owner": "BM-1F-032",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "1F-030"
+   ]
+  },
+  {
+   "category": "JUNCTION_HELD_LEN",
+   "face": "1F-045",
+   "floor": "1F",
+   "m2": 0.299288688,
+   "owner": "BM-1F-026",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-045"
+   ],
+   "run": "BM-1F-026#BAND0031.1"
+  },
+  {
+   "category": "JUNCTION_HELD_LEN",
+   "face": "1F-045",
+   "floor": "1F",
+   "m2": 0.2,
+   "owner": "BM-1F-026",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-045"
+   ],
+   "run": "BM-1F-026#BAND0031.2"
+  },
+  {
+   "category": "JUNCTION_HELD_LEN",
+   "face": "1F-045",
+   "floor": "1F",
+   "m2": 0.000711312,
+   "owner": "BM-1F-026",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-045"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "JUNCTION_HELD_LEN",
+   "face": "1F-061",
+   "floor": "1F",
+   "m2": 0.25,
+   "owner": "BM-1F-018",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-061"
+   ]
+  },
+  {
+   "category": "JUNCTION_HELD_LEN",
+   "face": "1F-072",
+   "floor": "1F",
+   "m2": 0.25,
+   "owner": "BM-1F-031",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "1F-072"
+   ],
+   "run": "BM-1F-031#BAND0026.1"
+  },
+  {
+   "category": "JUNCTION_HELD_LEN",
+   "face": "1F-072",
+   "floor": "1F",
+   "m2": 0.55,
+   "owner": "BM-1F-031",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "1F-072"
+   ],
+   "run": "BM-1F-031#BAND0026.2"
+  },
+  {
+   "category": "JUNCTION_HELD_LEN",
+   "face": "1F-072",
+   "floor": "1F",
+   "m2": 0.099988689,
+   "owner": "BM-1F-031",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "1F-072"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "JUNCTION_HELD_LEN",
+   "face": "1F-095",
+   "floor": "1F",
+   "m2": 0.25,
+   "owner": "BM-1F-021",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-095"
+   ]
+  },
+  {
+   "category": "JUNCTION_HELD_LEN",
+   "face": "1F-100",
+   "floor": "1F",
+   "m2": 0.099988689,
+   "owner": "BM-1F-003",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-100"
+   ]
+  },
+  {
+   "category": "JUNCTION_HELD_M2",
+   "face": "1F-045",
+   "floor": "1F",
+   "m2": 0.176580326,
+   "owner": "BM-1F-026",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-045"
+   ],
+   "run": "BM-1F-026#BAND0031.1"
+  },
+  {
+   "category": "JUNCTION_HELD_M2",
+   "face": "1F-045",
+   "floor": "1F",
+   "m2": 0.118,
+   "owner": "BM-1F-026",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-045"
+   ],
+   "run": "BM-1F-026#BAND0031.2"
+  },
+  {
+   "category": "JUNCTION_HELD_M2",
+   "face": "1F-045",
+   "floor": "1F",
+   "m2": 0.000419674,
+   "owner": "BM-1F-026",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-045"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "JUNCTION_HELD_M2",
+   "face": "1F-061",
+   "floor": "1F",
+   "m2": 0.085,
+   "owner": "BM-1F-018",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-061"
+   ]
+  },
+  {
+   "category": "JUNCTION_HELD_M2",
+   "face": "1F-095",
+   "floor": "1F",
+   "m2": 0.085,
+   "owner": "BM-1F-021",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-095"
+   ]
+  },
+  {
+   "category": "JUNCTION_HELD_M2",
+   "face": "1F-100",
+   "floor": "1F",
+   "m2": 0.033996154,
+   "owner": "BM-1F-003",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "1F-100"
+   ]
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "2F-002",
+   "floor": "2F",
+   "m2": 0.5,
+   "owner": "BM-2F-001",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-002"
+   ],
+   "plan_long_m": 2.5,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "2F-004",
+   "floor": "2F",
+   "m2": 0.694,
+   "owner": "BM-2F-002",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-004"
+   ],
+   "plan_long_m": 3.47,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "2F-007",
+   "floor": "2F",
+   "m2": 0.226,
+   "owner": "BM-2F-015",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "2F-007"
+   ],
+   "plan_long_m": 1.13,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "2F-010",
+   "floor": "2F",
+   "m2": 0.54,
+   "owner": "BM-2F-007",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-010"
+   ],
+   "plan_long_m": 2.7,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "2F-012",
+   "floor": "2F",
+   "m2": 0.54,
+   "owner": "BM-2F-012",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-012"
+   ],
+   "plan_long_m": 2.7,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "2F-014",
+   "floor": "2F",
+   "m2": 0.6,
+   "owner": "BM-2F-010",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-014"
+   ],
+   "plan_long_m": 3.0,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "2F-015",
+   "floor": "2F",
+   "m2": 0.36,
+   "owner": "BM-2F-014",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-015"
+   ],
+   "plan_long_m": 1.8,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "2F-017",
+   "floor": "2F",
+   "m2": 0.883653501,
+   "owner": "BM-2F-011",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-017"
+   ],
+   "plan_long_m": 4.4183,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "2F-021",
+   "floor": "2F",
+   "m2": 0.49,
+   "owner": "BM-2F-003",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-021"
+   ],
+   "plan_long_m": 2.45,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "2F-023",
+   "floor": "2F",
+   "m2": 0.24,
+   "owner": "BM-2F-013",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-023"
+   ],
+   "plan_long_m": 1.2,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "2F-027",
+   "floor": "2F",
+   "m2": 0.2,
+   "owner": "BM-2F-009",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-027"
+   ],
+   "plan_long_m": 1.0,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "2F-032",
+   "floor": "2F",
+   "m2": 0.62,
+   "owner": "BM-2F-016",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "2F-032"
+   ],
+   "plan_long_m": 3.1,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "2F-036",
+   "floor": "2F",
+   "m2": 0.359897631,
+   "owner": "BM-2F-008",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-036"
+   ],
+   "run": "BM-2F-008#BAND0007.1"
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "2F-036",
+   "floor": "2F",
+   "m2": 0.000102369,
+   "owner": "BM-2F-008",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-036"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "2F-040",
+   "floor": "2F",
+   "m2": 0.599957184,
+   "owner": "BM-2F-008",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-040"
+   ],
+   "run": "BM-2F-008#BAND0007.2"
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "2F-040",
+   "floor": "2F",
+   "m2": 4.2816e-05,
+   "owner": "BM-2F-008",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-040"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "2F-044",
+   "floor": "2F",
+   "m2": 0.28,
+   "owner": "BM-2F-018",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "2F-044"
+   ],
+   "plan_long_m": 1.4,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "2F-046",
+   "floor": "2F",
+   "m2": 0.28,
+   "owner": "BM-2F-017",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "2F-046"
+   ],
+   "plan_long_m": 1.4,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "2F-048",
+   "floor": "2F",
+   "m2": 0.356346499,
+   "owner": "BM-2F-011",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-048"
+   ],
+   "plan_long_m": 1.7817,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "2F-055",
+   "floor": "2F",
+   "m2": 0.5,
+   "owner": "BM-2F-004",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-055"
+   ],
+   "plan_long_m": 2.5,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "2F-056",
+   "floor": "2F",
+   "m2": 0.36,
+   "owner": "BM-2F-005",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-056"
+   ],
+   "plan_long_m": 1.8,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SOFFIT",
+   "face": "2F-057",
+   "floor": "2F",
+   "m2": 0.6,
+   "owner": "BM-2F-006",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-057"
+   ],
+   "plan_long_m": 3.0,
+   "plan_short_m": 0.2
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "2F-002",
+   "floor": "2F",
+   "m2": 1.099908183,
+   "owner": "BM-2F-001",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-002"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "2F-004",
+   "floor": "2F",
+   "m2": 3.940988183,
+   "owner": "BM-2F-002",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-004"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "2F-007",
+   "floor": "2F",
+   "m2": 0.0,
+   "owner": "BM-2F-015",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "2F-007"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "2F-010",
+   "floor": "2F",
+   "m2": 3.978806491,
+   "owner": "BM-2F-007",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-010"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "2F-012",
+   "floor": "2F",
+   "m2": 1.188183665,
+   "owner": "BM-2F-012",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-012"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "2F-014",
+   "floor": "2F",
+   "m2": 1.380091833,
+   "owner": "BM-2F-010",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-014"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "2F-015",
+   "floor": "2F",
+   "m2": 0.827899842,
+   "owner": "BM-2F-014",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-015"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "2F-017",
+   "floor": "2F",
+   "m2": 5.213801934,
+   "owner": "BM-2F-011",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-017"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "2F-021",
+   "floor": "2F",
+   "m2": 1.126929382,
+   "owner": "BM-2F-003",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-021"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "2F-023",
+   "floor": "2F",
+   "m2": 0.576200362,
+   "owner": "BM-2F-013",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-023"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "2F-027",
+   "floor": "2F",
+   "m2": 0.480200362,
+   "owner": "BM-2F-009",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-027"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "2F-032",
+   "floor": "2F",
+   "m2": 0.0,
+   "owner": "BM-2F-016",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "2F-032"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "2F-036",
+   "floor": "2F",
+   "m2": 0.863664784,
+   "owner": "BM-2F-008",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-036"
+   ],
+   "run": "BM-2F-008#BAND0007.1"
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "2F-036",
+   "floor": "2F",
+   "m2": 0.000256258,
+   "owner": "BM-2F-008",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-036"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "2F-040",
+   "floor": "2F",
+   "m2": 1.439797082,
+   "owner": "BM-2F-008",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-040"
+   ],
+   "run": "BM-2F-008#BAND0007.2"
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "2F-040",
+   "floor": "2F",
+   "m2": 0.000113351,
+   "owner": "BM-2F-008",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-040"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "2F-044",
+   "floor": "2F",
+   "m2": 0.0,
+   "owner": "BM-2F-018",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "2F-044"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "2F-046",
+   "floor": "2F",
+   "m2": 0.0,
+   "owner": "BM-2F-017",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "2F-046"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "2F-048",
+   "floor": "2F",
+   "m2": 2.124690623,
+   "owner": "BM-2F-011",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-048"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "2F-055",
+   "floor": "2F",
+   "m2": 1.2,
+   "owner": "BM-2F-004",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-055"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "2F-056",
+   "floor": "2F",
+   "m2": 0.864,
+   "owner": "BM-2F-005",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-056"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE",
+   "face": "2F-057",
+   "floor": "2F",
+   "m2": 1.44,
+   "owner": "BM-2F-006",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-057"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN",
+   "face": "2F-007",
+   "floor": "2F",
+   "m2": 2.260044165,
+   "owner": "BM-2F-015",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "2F-007"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN",
+   "face": "2F-032",
+   "floor": "2F",
+   "m2": 3.100417421,
+   "owner": "BM-2F-016",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "2F-032"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN",
+   "face": "2F-044",
+   "floor": "2F",
+   "m2": 2.600417421,
+   "owner": "BM-2F-018",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "2F-044"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN",
+   "face": "2F-046",
+   "floor": "2F",
+   "m2": 2.600417421,
+   "owner": "BM-2F-017",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "2F-046"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN:DRAFT",
+   "face": "2F-010",
+   "floor": "2F",
+   "m2": 0.75,
+   "owner": "BM-2F-007",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-010"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN:HELD_EDGE",
+   "face": "2F-010",
+   "floor": "2F",
+   "m2": 0.75,
+   "owner": "BM-2F-007",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-010"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_LEN:HELD_EDGE",
+   "face": "2F-032",
+   "floor": "2F",
+   "m2": 3.1,
+   "owner": "BM-2F-016",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "2F-032"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_M2:DRAFT",
+   "face": "2F-010",
+   "floor": "2F",
+   "m2": 0.765,
+   "owner": "BM-2F-007",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-010"
+   ]
+  },
+  {
+   "category": "BEAM_SIDE_HELD_M2:HELD_EDGE",
+   "face": "2F-010",
+   "floor": "2F",
+   "m2": 0.765,
+   "owner": "BM-2F-007",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-010"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "2F-000",
+   "floor": "2F",
+   "m2": 0.036015899,
+   "owner": "COL-2F-50",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "2F-000",
+    "2F-001"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "2F-002",
+   "floor": "2F",
+   "m2": 0.45,
+   "owner": "BM-2F-001",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-002"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "2F-003",
+   "floor": "2F",
+   "m2": 0.036015899,
+   "owner": "COL-2F-51",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-003",
+    "2F-009"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "2F-004",
+   "floor": "2F",
+   "m2": 0.624607066,
+   "owner": "BM-2F-002",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-004"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "2F-005",
+   "floor": "2F",
+   "m2": 0.096014133,
+   "owner": "COL-2F-49",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "2F-005",
+    "2F-006"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "2F-007",
+   "floor": "2F",
+   "m2": 0.212807066,
+   "owner": "BM-2F-015",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "2F-007"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "2F-010",
+   "floor": "2F",
+   "m2": 0.216150272,
+   "owner": "BM-2F-007",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-010"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "2F-011",
+   "floor": "2F",
+   "m2": 1.5899e-05,
+   "owner": "2F-011",
+   "owner_kind": "SLAB",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-011"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "2F-012",
+   "floor": "2F",
+   "m2": 0.000150272,
+   "owner": "BM-2F-012",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-012"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "2F-013",
+   "floor": "2F",
+   "m2": 7.95e-06,
+   "owner": "2F-013",
+   "owner_kind": "SLAB",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-013"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "2F-014",
+   "floor": "2F",
+   "m2": 7.5136e-05,
+   "owner": "BM-2F-010",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-014"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "2F-016",
+   "floor": "2F",
+   "m2": 0.000123721,
+   "owner": "2F-016",
+   "owner_kind": "SLAB",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-016"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "2F-017",
+   "floor": "2F",
+   "m2": 0.706989588,
+   "owner": "BM-2F-011",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-017"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "2F-021",
+   "floor": "2F",
+   "m2": 1.4133e-05,
+   "owner": "BM-2F-003",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-021"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "2F-023",
+   "floor": "2F",
+   "m2": 0.000133575,
+   "owner": "BM-2F-013",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-023"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "2F-025",
+   "floor": "2F",
+   "m2": 1.4133e-05,
+   "owner": "2F-025",
+   "owner_kind": "SLAB",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-025"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "2F-027",
+   "floor": "2F",
+   "m2": 0.000133575,
+   "owner": "BM-2F-009",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-027"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "2F-032",
+   "floor": "2F",
+   "m2": 0.032066787,
+   "owner": "BM-2F-016",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "2F-032"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "2F-033",
+   "floor": "2F",
+   "m2": 7.066e-06,
+   "owner": "2F-033",
+   "owner_kind": "SLAB",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-033"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "2F-036",
+   "floor": "2F",
+   "m2": 7.066e-06,
+   "owner": "BM-2F-008",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-036"
+   ],
+   "run": "BM-2F-008#BAND0007.1"
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "2F-036",
+   "floor": "2F",
+   "m2": 7.066e-06,
+   "owner": "BM-2F-008",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-036"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "2F-040",
+   "floor": "2F",
+   "m2": 7.066e-06,
+   "owner": "BM-2F-008",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-040"
+   ],
+   "run": "REST"
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "2F-041",
+   "floor": "2F",
+   "m2": 0.064133575,
+   "owner": "COL-2F-59",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "2F-041",
+    "2F-042"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "2F-044",
+   "floor": "2F",
+   "m2": 0.032066787,
+   "owner": "BM-2F-018",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "2F-044"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "2F-046",
+   "floor": "2F",
+   "m2": 0.032066787,
+   "owner": "BM-2F-017",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "2F-046"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "2F-048",
+   "floor": "2F",
+   "m2": 0.317143987,
+   "owner": "BM-2F-011",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-048"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "2F-055",
+   "floor": "2F",
+   "m2": 0.4,
+   "owner": "BM-2F-004",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-055"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "2F-056",
+   "floor": "2F",
+   "m2": 0.288,
+   "owner": "BM-2F-005",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-056"
+   ]
+  },
+  {
+   "category": "EDGE_BAND",
+   "face": "2F-057",
+   "floor": "2F",
+   "m2": 0.48,
+   "owner": "BM-2F-006",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-057"
+   ]
+  },
+  {
+   "category": "JOINT_FACE",
+   "face": "2F-000",
+   "floor": "2F",
+   "m2": 0.670470818,
+   "owner": "COL-2F-50",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "2F-000",
+    "2F-001"
+   ]
+  },
+  {
+   "category": "JOINT_FACE",
+   "face": "2F-003",
+   "floor": "2F",
+   "m2": 0.596091833,
+   "owner": "COL-2F-51",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-003",
+    "2F-009"
+   ]
+  },
+  {
+   "category": "JOINT_FACE",
+   "face": "2F-005",
+   "floor": "2F",
+   "m2": 0.708052115,
+   "owner": "COL-2F-49",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "2F-005",
+    "2F-006"
+   ]
+  },
+  {
+   "category": "JOINT_FACE",
+   "face": "2F-018",
+   "floor": "2F",
+   "m2": 0.569869604,
+   "owner": "COL-2F-52",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "2F-018",
+    "2F-019",
+    "2F-020"
+   ]
+  },
+  {
+   "category": "JOINT_FACE",
+   "face": "2F-022",
+   "floor": "2F",
+   "m2": 0.138200847,
+   "owner": "COL-2F-53",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-022",
+    "2F-024"
+   ]
+  },
+  {
+   "category": "JOINT_FACE",
+   "face": "2F-026",
+   "floor": "2F",
+   "m2": 0.192199479,
+   "owner": "COL-2F-54",
+   "owner_kind": "COLUMN",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-026",
+    "2F-028"
+   ]
+  },
+  {
+   "category": "JOINT_FACE",
+   "face": "2F-034",
+   "floor": "2F",
+   "m2": 0.192210962,
+   "owner": "COL-2F-56",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "2F-034",
+    "2F-035"
+   ]
+  },
+  {
+   "category": "JOINT_FACE",
+   "face": "2F-037",
+   "floor": "2F",
+   "m2": 0.240221561,
+   "owner": "COL-2F-55",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "2F-037",
+    "2F-038",
+    "2F-039"
+   ]
+  },
+  {
+   "category": "JOINT_FACE",
+   "face": "2F-041",
+   "floor": "2F",
+   "m2": 0.472492557,
+   "owner": "COL-2F-59",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "2F-041",
+    "2F-042"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_LEN",
+   "face": "2F-005",
+   "floor": "2F",
+   "m2": 0.199955835,
+   "owner": "COL-2F-49",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "2F-005",
+    "2F-006"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_LEN",
+   "face": "2F-018",
+   "floor": "2F",
+   "m2": 0.199582579,
+   "owner": "COL-2F-52",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "2F-018",
+    "2F-019",
+    "2F-020"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_LEN",
+   "face": "2F-034",
+   "floor": "2F",
+   "m2": 0.199582579,
+   "owner": "COL-2F-56",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "2F-034",
+    "2F-035"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_LEN",
+   "face": "2F-037",
+   "floor": "2F",
+   "m2": 0.199582579,
+   "owner": "COL-2F-55",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "2F-037",
+    "2F-038",
+    "2F-039"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_LEN:DRAFT",
+   "face": "2F-000",
+   "floor": "2F",
+   "m2": 0.499955835,
+   "owner": "COL-2F-50",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "2F-000",
+    "2F-001"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_LEN:HELD_EDGE",
+   "face": "2F-018",
+   "floor": "2F",
+   "m2": 0.5,
+   "owner": "COL-2F-52",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "2F-018",
+    "2F-019",
+    "2F-020"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_M2",
+   "face": "2F-005",
+   "floor": "2F",
+   "m2": 0.117973943,
+   "owner": "COL-2F-49",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "2F-005",
+    "2F-006"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_M2",
+   "face": "2F-018",
+   "floor": "2F",
+   "m2": 0.207565882,
+   "owner": "COL-2F-52",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "2F-018",
+    "2F-019",
+    "2F-020"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_M2",
+   "face": "2F-034",
+   "floor": "2F",
+   "m2": 0.047899819,
+   "owner": "COL-2F-56",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "2F-034",
+    "2F-035"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_M2",
+   "face": "2F-037",
+   "floor": "2F",
+   "m2": 0.047899819,
+   "owner": "COL-2F-55",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "2F-037",
+    "2F-038",
+    "2F-039"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_M2:DRAFT",
+   "face": "2F-000",
+   "floor": "2F",
+   "m2": 0.509954952,
+   "owner": "COL-2F-50",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "2F-000",
+    "2F-001"
+   ]
+  },
+  {
+   "category": "JOINT_HELD_M2:HELD_EDGE",
+   "face": "2F-018",
+   "floor": "2F",
+   "m2": 0.52,
+   "owner": "COL-2F-52",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "2F-018",
+    "2F-019",
+    "2F-020"
+   ]
+  },
+  {
+   "category": "JUNCTION_HELD_LEN",
+   "face": "2F-007",
+   "floor": "2F",
+   "m2": 0.2,
+   "owner": "BM-2F-015",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "2F-007"
+   ]
+  },
+  {
+   "category": "JUNCTION_HELD_LEN",
+   "face": "2F-017",
+   "floor": "2F",
+   "m2": 0.2,
+   "owner": "BM-2F-011",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-017"
+   ]
+  },
+  {
+   "category": "JUNCTION_HELD_LEN",
+   "face": "2F-032",
+   "floor": "2F",
+   "m2": 0.2,
+   "owner": "BM-2F-016",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "2F-032"
+   ]
+  },
+  {
+   "category": "JUNCTION_HELD_LEN",
+   "face": "2F-044",
+   "floor": "2F",
+   "m2": 0.4,
+   "owner": "BM-2F-018",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "2F-044"
+   ]
+  },
+  {
+   "category": "JUNCTION_HELD_LEN",
+   "face": "2F-046",
+   "floor": "2F",
+   "m2": 0.4,
+   "owner": "BM-2F-017",
+   "owner_kind": "BEAM",
+   "owner_status": "HELD",
+   "pieces": [
+    "2F-046"
+   ]
+  },
+  {
+   "category": "JUNCTION_HELD_LEN",
+   "face": "2F-055",
+   "floor": "2F",
+   "m2": 0.4,
+   "owner": "BM-2F-004",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-055"
+   ]
+  },
+  {
+   "category": "JUNCTION_HELD_LEN",
+   "face": "2F-056",
+   "floor": "2F",
+   "m2": 0.4,
+   "owner": "BM-2F-005",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-056"
+   ]
+  },
+  {
+   "category": "JUNCTION_HELD_LEN",
+   "face": "2F-057",
+   "floor": "2F",
+   "m2": 0.2,
+   "owner": "BM-2F-006",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-057"
+   ]
+  },
+  {
+   "category": "JUNCTION_HELD_M2",
+   "face": "2F-017",
+   "floor": "2F",
+   "m2": 0.118,
+   "owner": "BM-2F-011",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-017"
+   ]
+  },
+  {
+   "category": "JUNCTION_HELD_M2",
+   "face": "2F-055",
+   "floor": "2F",
+   "m2": 0.096,
+   "owner": "BM-2F-004",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-055"
+   ]
+  },
+  {
+   "category": "JUNCTION_HELD_M2",
+   "face": "2F-056",
+   "floor": "2F",
+   "m2": 0.096,
+   "owner": "BM-2F-005",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-056"
+   ]
+  },
+  {
+   "category": "JUNCTION_HELD_M2",
+   "face": "2F-057",
+   "floor": "2F",
+   "m2": 0.048,
+   "owner": "BM-2F-006",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "2F-057"
+   ]
+  }
+ ],
+ "schema": "T293P2_WALK_RECORDS_V1",
+ "source": "formwork r3 walk (T-163 MERGED 659f889f) on the T-139 faces"
+}

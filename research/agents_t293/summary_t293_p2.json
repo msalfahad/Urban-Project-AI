@@ -1,0 +1,409 @@
+{
+ "by_tie": {
+  "DUPLICATE_IN_SOURCE": 2,
+  "INFO_NOT_A_QUANTITY": 3,
+  "NAMED_NOT_TIED": 4,
+  "NO_CANDIDATE_LINE": 5,
+  "SPLIT_UNRESOLVED": 68,
+  "TIED": 846
+ },
+ "closure": [
+  {
+   "alternative": "",
+   "by_tie": {
+    "DUPLICATE_IN_SOURCE": 2,
+    "TIED": 220
+   },
+   "hi": 0.0,
+   "lo": 0.0,
+   "m2": 425.20942,
+   "method": "E",
+   "residual_hi": 0.0,
+   "residual_lo": 0.0,
+   "residual_m2": -0.0,
+   "rows": 6,
+   "status": "CALCULATED"
+  },
+  {
+   "alternative": "",
+   "by_tie": {
+    "TIED": 64
+   },
+   "hi": 0.0,
+   "lo": 0.0,
+   "m2": 377.4481,
+   "method": "E=G",
+   "residual_hi": 0.0,
+   "residual_lo": 0.0,
+   "residual_m2": -0.0,
+   "rows": 5,
+   "status": "CALCULATED"
+  },
+  {
+   "alternative": "",
+   "by_tie": {
+    "SPLIT_UNRESOLVED": 53,
+    "TIED": 402
+   },
+   "hi": 0.0,
+   "lo": 0.0,
+   "m2": 428.220812,
+   "method": "G",
+   "residual_hi": 0.0,
+   "residual_lo": 0.0,
+   "residual_m2": -0.0,
+   "rows": 12,
+   "status": "CALCULATED"
+  },
+  {
+   "alternative": "",
+   "by_tie": {
+    "NAMED_NOT_TIED": 2,
+    "NO_CANDIDATE_LINE": 5,
+    "SPLIT_UNRESOLVED": 15,
+    "TIED": 160
+   },
+   "hi": 98.765308,
+   "lo": 50.466131,
+   "m2": 0.0,
+   "method": "G",
+   "residual_hi": 0.0,
+   "residual_lo": 0.0,
+   "residual_m2": 0.0,
+   "rows": 37,
+   "status": "HELD"
+  },
+  {
+   "alternative": "",
+   "by_tie": {
+    "INFO_NOT_A_QUANTITY": 3
+   },
+   "hi": 0.0,
+   "lo": 0.0,
+   "m2": 13.254,
+   "method": "G-DRAWN",
+   "residual_hi": 0.0,
+   "residual_lo": 0.0,
+   "residual_m2": 0.0,
+   "rows": 3,
+   "status": "INFO"
+  },
+  {
+   "alternative": "",
+   "by_tie": {
+    "NAMED_NOT_TIED": 2
+   },
+   "hi": 0.0,
+   "lo": 0.0,
+   "m2": 0.0,
+   "method": "G",
+   "residual_hi": 0.0,
+   "residual_lo": 0.0,
+   "residual_m2": 0.0,
+   "rows": 2,
+   "status": "OWNED_BY_OTHER_LINE"
+  }
+ ],
+ "inputs_sha256": {
+  "research/agents_t139/PANELS.csv": "13d5d9ad",
+  "research/agents_t146/V3012_BEAM_RUNS.csv": "94291a9d",
+  "research/agents_t163/JOINT_BY_COLUMN.csv": "2a83d041",
+  "research/agents_t241/LEDGER_T241.csv": "6dd4c01c",
+  "research/agents_t264/FORMWORK_LINES_R4.csv": "86819487",
+  "research/agents_t293/CANDIDATE_V3016_CONCRETE_LINES.json": "53e7a99c",
+  "research/agents_t293/T293P2_WALK_RECORDS.json": "93d5d5fc",
+  "research/agents_t298/SLAB_PANEL_JOIN_V3016.csv": "4b0bcedc"
+ },
+ "lines_with_faces": {
+  "STR.CONC.BEAM": 125,
+  "STR.CONC.COLUMN": 59,
+  "STR.CONC.SLAB": 62
+ },
+ "live_lines_without_faces": {
+  "STR.CONC.BEAM": [
+   "L-17c4238c0ef76656d06e",
+   "L-331d4bbef719a7f0bbca",
+   "L-377cb988b2271c2e2e4d",
+   "L-48b7d139bff681199543",
+   "L-54e397fe7b1485b2e8fe",
+   "L-56d278bedc8dda2837a9",
+   "L-634cefe5e8a7fb458e16",
+   "L-67f3d325019e618328eb",
+   "L-a9d5e7dc22013e24d691",
+   "L-ab37afa17f2ac5b0efd1",
+   "L-bb49e831f053bd30a6ce",
+   "L-fbb65dfd2a66a16714ac"
+  ],
+  "STR.CONC.SLAB": []
+ },
+ "na_lines_with_faces": [],
+ "pieces": 928,
+ "schema": "T293_P2_SUMMARY_V1",
+ "source_rows": 65,
+ "totals_by_tie": {
+  "DUPLICATE_IN_SOURCE": {
+   "BEAM|GF|CALCULATED|E": [
+    2.516,
+    0.0,
+    0.0,
+    2
+   ]
+  },
+  "INFO_NOT_A_QUANTITY": {
+   "JOINT|1F|INFO|G-DRAWN": [
+    4.944,
+    0.0,
+    0.0,
+    1
+   ],
+   "JOINT|2F|INFO|G-DRAWN": [
+    0.926,
+    0.0,
+    0.0,
+    1
+   ],
+   "JOINT|GF|INFO|G-DRAWN": [
+    7.384,
+    0.0,
+    0.0,
+    1
+   ]
+  },
+  "NAMED_NOT_TIED": {
+   "SLAB_EDGE|1F|OWNED_BY_OTHER_LINE|G": [
+    0.0,
+    0.0,
+    0.0,
+    1
+   ],
+   "SLAB_EDGE|GF|OWNED_BY_OTHER_LINE|G": [
+    0.0,
+    0.0,
+    0.0,
+    1
+   ],
+   "SLAB|GF+1F|HELD|G": [
+    0.0,
+    0.0,
+    0.0,
+    1
+   ],
+   "SLAB|GF|HELD|G": [
+    0.0,
+    1.44,
+    1.562,
+    1
+   ]
+  },
+  "NO_CANDIDATE_LINE": {
+   "BEAM|GF|HELD|G": [
+    0.0,
+    0.618174,
+    0.618174,
+    5
+   ]
+  },
+  "SPLIT_UNRESOLVED": {
+   "BEAM|1F|CALCULATED|G": [
+    3.290281,
+    0.0,
+    0.0,
+    14
+   ],
+   "BEAM|1F|HELD|G": [
+    0.0,
+    0.0899,
+    0.94041,
+    8
+   ],
+   "BEAM|2F|CALCULATED|G": [
+    0.000515,
+    0.0,
+    0.0,
+    4
+   ],
+   "BEAM|GF|CALCULATED|G": [
+    2.2936,
+    0.0,
+    0.0,
+    20
+   ],
+   "BEAM|GF|HELD|G": [
+    0.0,
+    0.001388,
+    0.316859,
+    7
+   ],
+   "SLAB_EDGE|1F|CALCULATED|G": [
+    0.326671,
+    0.0,
+    0.0,
+    6
+   ],
+   "SLAB_EDGE|2F|CALCULATED|G": [
+    1.4e-05,
+    0.0,
+    0.0,
+    2
+   ],
+   "SLAB_EDGE|GF|CALCULATED|G": [
+    0.214227,
+    0.0,
+    0.0,
+    7
+   ]
+  },
+  "TIED": {
+   "BEAM|1F|CALCULATED|E": [
+    144.126228,
+    0.0,
+    0.0,
+    68
+   ],
+   "BEAM|1F|CALCULATED|E=G": [
+    1.2,
+    0.0,
+    0.0,
+    1
+   ],
+   "BEAM|1F|CALCULATED|G": [
+    124.249736,
+    0.0,
+    0.0,
+    71
+   ],
+   "BEAM|1F|HELD|G": [
+    0.0,
+    5.845292,
+    22.034842,
+    28
+   ],
+   "BEAM|2F|CALCULATED|E": [
+    38.2426,
+    0.0,
+    0.0,
+    30
+   ],
+   "BEAM|2F|CALCULATED|G": [
+    35.569018,
+    0.0,
+    0.0,
+    32
+   ],
+   "BEAM|2F|HELD|G": [
+    0.0,
+    1.406,
+    3.294,
+    14
+   ],
+   "BEAM|GF|CALCULATED|E": [
+    240.324592,
+    0.0,
+    0.0,
+    122
+   ],
+   "BEAM|GF|CALCULATED|E=G": [
+    1.2,
+    0.0,
+    0.0,
+    1
+   ],
+   "BEAM|GF|CALCULATED|G": [
+    225.431621,
+    0.0,
+    0.0,
+    123
+   ],
+   "BEAM|GF|HELD|G": [
+    0.0,
+    26.985195,
+    46.694196,
+    42
+   ],
+   "JOINT|1F|CALCULATED|G": [
+    2.214428,
+    0.0,
+    0.0,
+    6
+   ],
+   "JOINT|1F|HELD|G": [
+    0.0,
+    4.098431,
+    7.598623,
+    26
+   ],
+   "JOINT|2F|CALCULATED|G": [
+    0.9265,
+    0.0,
+    0.0,
+    3
+   ],
+   "JOINT|2F|HELD|G": [
+    0.0,
+    2.853318,
+    4.304612,
+    12
+   ],
+   "JOINT|GF|CALCULATED|G": [
+    6.4983,
+    0.0,
+    0.0,
+    12
+   ],
+   "JOINT|GF|HELD|G": [
+    0.0,
+    7.128432,
+    9.959119,
+    33
+   ],
+   "SLAB_EDGE|1F|CALCULATED|G": [
+    8.340133,
+    0.0,
+    0.0,
+    51
+   ],
+   "SLAB_EDGE|1F|HELD|G": [
+    0.0,
+    0.0,
+    1.06648,
+    4
+   ],
+   "SLAB_EDGE|2F|CALCULATED|G": [
+    4.02476,
+    0.0,
+    0.0,
+    27
+   ],
+   "SLAB_EDGE|GF|CALCULATED|G": [
+    14.841008,
+    0.0,
+    0.0,
+    77
+   ],
+   "SLAB_EDGE|GF|HELD|G": [
+    0.0,
+    0.0,
+    0.375993,
+    1
+   ],
+   "SLAB|1F|CALCULATED|E=G": [
+    123.4786,
+    0.0,
+    0.0,
+    22
+   ],
+   "SLAB|2F|CALCULATED|E=G": [
+    44.885,
+    0.0,
+    0.0,
+    7
+   ],
+   "SLAB|GF|CALCULATED|E=G": [
+    206.6845,
+    0.0,
+    0.0,
+    33
+   ]
+  }
+ }
+}
