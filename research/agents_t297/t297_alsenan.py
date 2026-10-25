@@ -25,6 +25,13 @@ Basis per line (rules LB-1 .. LB-8, every villa; Alsenan only supplies the data)
        general notes is a CONVENTION (the minimum is not a dimension; bends not derived); per-metre footings BOUND.
   LB-8 a research bound that sits in NO candidate line (e.g. the T-280 column foundation cores) is listed as a
        coverage finding, never added to a line.
+  LB-10 (r2, Checker F-T297-04) one member, one datum status across trades: a main-bar or link line whose length is
+       the member's interval / concrete height takes the datum status the candidate's own concrete line of that member
+       carries (t297_datum_join.py: V3.0.17 actions x the T-293 member tie, checked by mark, storey and stack). Concrete
+       HELD on a datum -> the bar figure is HELD (its kg kept as audit, flag BAR_LENGTH_ON_HELD_DATUM) or a BOUND that
+       names the datum; concrete RE-BASED on a new printed height -> a figure on the old height is HELD
+       (BAR_HEIGHT_SUPERSEDED); member NOT_PRESENT -> its bar lines are NOT_APPLICABLE. The candidate's own released kg
+       on such lines is reported as 'candidate releases, ledger holds', never dropped from the closure.
 """
 from __future__ import annotations
 
@@ -40,12 +47,15 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
 sys.path.insert(0, str(HERE))
+import t297_datum_join as J  # noqa: E402
 import t297_ledger as L  # noqa: E402
 
 CAND_FILE = HERE / "CANDIDATE_V3016_REBAR_LINES.json"
 OUT_CSV = HERE / "LINE_BASIS_T297.csv"
 OUT_SUM = HERE / "LINE_BASIS_SUMMARY_T297.json"
 OUT_CONS = HERE / "LINE_BASIS_CONSUMER_T297.json"
+OUT_JOIN = HERE / "DATUM_JOIN_T297.json"
+LEDGER_HELD_FLAGS = ("BAR_LENGTH_ON_HELD_DATUM", "BAR_HEIGHT_SUPERSEDED")
 
 LAP_WORDS = re.compile(r"\blap", re.I)
 NOTE9 = re.compile(r"note 9|40\s*d\s*\.\.\s*70\s*d|40d\.\.70d", re.I)
@@ -160,6 +170,44 @@ def classify(l):
 L_QTY = ("MEASURED", "SOURCE_DERIVED", "PROVISIONAL")
 
 
+def _sheet_key(eid):
+    """'P-S:COL:SH12:C5@243102,55481|2F:TIES:D8' / 'P-C:COL:SH12:C5@243102,55481|2F' -> ('C5@243102,55481', '2F')"""
+    m = re.search(r":COL:SH12:(C[\w.]*@\d+,\d+)\|(\w+)", eid or "")
+    return (m.group(1), m.group(2)) if m else None
+
+
+def apply_datum(row, line, join_rows):
+    """LB-10: one member, one datum status across trades (see the module docstring); returns the row to keep"""
+    eff = J.effect_of(join_rows)
+    absent = {_sheet_key(j["element_id"]) for j in join_rows if j["length_datum_status"] == "NOT_PRESENT"}
+    key = _sheet_key(line.get("element_id"))
+    if key and key in absent:
+        row.length_datum, row.length_datum_status = "NOT_PRESENT (T-256; V3.0.17 concrete line NOT_APPLICABLE)", \
+            "NOT_PRESENT"
+        return row
+    if row.family != "COLUMNS" or not J.length_on_height(row.bar_group) or row.members[0] not in eff:
+        return row
+    datum, dst = eff[row.members[0]]
+    row.length_datum, row.length_datum_status = datum, dst
+    if row.status in ("VERIFIED", "DRAWING_CONFIRMED", "ASSUMED_OWNER_APPROVED", "CONVENTION"):
+        flag = "BAR_LENGTH_ON_HELD_DATUM" if dst == "HELD" else "BAR_HEIGHT_SUPERSEDED"
+        return L.Row(**{**row.__dict__, "status": "HELD", "quantity_kg": None, "flags": row.flags + (flag,),
+                        "reason": (f"LB-10: the bar length rests on the member's datum, which the candidate's concrete "
+                                   f"holds: {datum}; was {row.status} {row.quantity_kg:.6f} kg on the hand ledger "
+                                   f"(line_kg kept as audit, never a quantity)")[:400]})
+    if row.status == "BOUND" and dst == "SUPERSEDED":
+        return L.Row(**{**row.__dict__, "status": "HELD", "bound_low_kg": None, "bound_high_kg": None,
+                        "flags": row.flags + ("BAR_HEIGHT_SUPERSEDED",),
+                        "reason": (f"LB-10: bound {row.bound_low_kg} .. {row.bound_high_kg} kg on a superseded "
+                                   f"height; {datum}; re-derive on the re-based height")[:400]})
+    if row.status == "BOUND":
+        row.datum = (row.datum + " | length datum: " + datum)
+        row.datum_status = "HELD"
+    elif row.status == "HELD":
+        row.reason = (row.reason + " | length datum: " + datum)[:600]
+    return row
+
+
 def candidate_named_totals(lines, rows):
     """the candidate's own sums by (family, line evidence state), to be closed by the row sums"""
     fam = {r.line_id: r.family for r in rows}
@@ -180,6 +228,8 @@ def residuals_vs_candidate(lines, rows):
             got[(r.family, "qty")] += r.quantity_kg
         elif r.status == "BOUND" and r.line_state == "BOUNDED_EXPOSURE":
             got[(r.family, "low")] += r.bound_low_kg or 0.0
+        elif set(r.flags) & set(LEDGER_HELD_FLAGS):       # LB-10: candidate releases / bounds, the ledger holds
+            got[(r.family, "qty" if r.line_state in L_QTY else "low")] += r.line_kg or 0.0
     keys = sorted(set(named) | set(got))
     return {f"{k[0]}|{k[1]}": round(got[k] - named[k], 6) for k in keys}
 
@@ -201,6 +251,9 @@ def residuals_vs_sources(rows):
         if r.status in ("VERIFIED", "DRAWING_CONFIRMED") and r.sources:
             got[r.sources[0]] += r.quantity_kg
             n[r.sources[0]] += 1
+        elif "BAR_LENGTH_ON_HELD_DATUM" in r.flags and r.line_state in L_QTY and r.sources:
+            got[r.sources[0]] += r.line_kg          # the source ledger released it; this ledger holds it (LB-10)
+            n[r.sources[0]] += 1
     out = {}
     for src, (kg, tol) in named.items():
         if src in got:
@@ -214,7 +267,8 @@ def residuals_vs_sources(rows):
 def build():
     cand = json.loads(CAND_FILE.read_text(encoding="utf-8"))
     lines = cand["lines"]
-    rows = [classify(l) for l in lines]
+    join_rows = J.build_join()
+    rows = [apply_datum(classify(l), l, join_rows) for l in lines]
     s = L.build(rows, [l["line_id"] for l in lines])
     res_c = residuals_vs_candidate(lines, rows)
     res_s = residuals_vs_sources(rows)
@@ -233,8 +287,43 @@ def build():
                "residuals_vs_candidate_kg": res_c, "residuals_vs_sources_kg": res_s,
                "lines_by_source_and_status": {k: dict(sorted(v.items())) for k, v in sorted(by_src.items())},
                "flags": dict(sorted(flags.items())),
-               "coverage_findings": coverage_findings(lines, rows)}
-    return cand, rows, summary
+               "coverage_findings": coverage_findings(lines, rows),
+               "datum_join": datum_join_summary(join_rows, rows)}
+    return cand, rows, summary, join_rows
+
+
+def datum_join_summary(join_rows, rows):
+    """LB-10 / F-T297-04 and F-T297-05: what the member datum join changed, line by line and in kg (never one figure
+    over statuses)"""
+    held = [r for r in rows if "BAR_LENGTH_ON_HELD_DATUM" in r.flags]
+    sup = [r for r in rows if "BAR_HEIGHT_SUPERSEDED" in r.flags]
+    named = [r for r in rows if r.length_datum_status == "HELD" and r.status == "BOUND"]
+    absent = [r for r in rows if r.length_datum_status == "NOT_PRESENT"]
+    return {
+        "candidate": "ARCH_TAKEOFF_V3.0.17 concrete actions (research/agents_t254/t254_inputs.py build(), T-254 MERGED "
+                     "7c49e890) x the T-293 member tie; reinforcement lines of V3.0.16 = V3.0.17 (REBAR_EQUIVALENCE)",
+        "joined_concrete_lines": len(join_rows),
+        "by_group": {g: sum(1 for j in join_rows if j["group"] == g) for g in sorted({j["group"] for j in join_rows})},
+        "storey_shift_m": join_rows[0]["storey_shift_m"] if join_rows else None,
+        "storey_shift_votes": join_rows[0]["storey_shift_votes"] if join_rows else None,
+        "F-T297-04 candidate releases, ledger holds (bar length on a held datum)": {
+            "lines": sorted(r.line_id for r in held), "members": sorted({r.members[0] for r in held}),
+            "candidate_kg": round(sum(r.line_kg for r in held), 6),
+            "candidate_t": L.kg_to_t(sum(r.line_kg for r in held))},
+        "F-T297-05 bound on a superseded concrete height -> HELD": {
+            "lines": sorted(r.line_id for r in sup), "members": sorted({r.members[0] for r in sup}),
+            "bound_low_kg_withdrawn": round(sum(r.line_kg or 0.0 for r in sup), 6)},
+        "bounds that now name the member's held datum": {"lines": len(named),
+                                                         "low_kg": round(sum(r.bound_low_kg or 0 for r in named), 6)},
+        "bar lines of NOT_PRESENT members (NOT_APPLICABLE)": len(absent),
+        "held_rows_naming_the_datum": sum(1 for r in rows if r.length_datum_status == "HELD" and r.status == "HELD"),
+    }
+
+
+def join_text(join_rows):
+    doc = {"schema": "T297_DATUM_JOIN_V1", "rule": "LB-10 one member, one datum status across trades",
+           "rows": join_rows}
+    return json.dumps(doc, indent=1, ensure_ascii=False) + "\n"
 
 
 def coverage_findings(lines, rows):
@@ -266,7 +355,7 @@ def coverage_findings(lines, rows):
 
 CSV_COLS = ("line_id", "family", "members", "bar_group", "basis_status", "quantity_kg", "quantity_t",
             "bound_low_kg", "bound_high_kg", "datum", "datum_status", "lap_basis", "line_state", "line_kg",
-            "sources", "flags", "evidence", "reason")
+            "sources", "flags", "evidence", "reason", "length_datum", "length_datum_status")
 
 
 def _f(x):
@@ -281,7 +370,8 @@ def csv_text(rows):
         w.writerow([r.line_id, r.family, ";".join(r.members), r.bar_group, r.status, _f(r.quantity_kg),
                     "" if r.quantity_kg is None else f"{L.kg_to_t(r.quantity_kg):.6f}", _f(r.bound_low_kg),
                     _f(r.bound_high_kg), r.datum, r.datum_status, r.lap_basis, r.line_state, _f(r.line_kg),
-                    ";".join(r.sources), ";".join(r.flags), r.evidence, r.reason])
+                    ";".join(r.sources), ";".join(r.flags), r.evidence, r.reason, r.length_datum,
+                    r.length_datum_status])
     return b.getvalue()
 
 
@@ -301,16 +391,17 @@ def main(argv=None):
     g.add_argument("--write", action="store_true")
     g.add_argument("--check", action="store_true")
     a = ap.parse_args(argv)
-    cand, rows, summary = build()
+    cand, rows, summary, join_rows = build()
     txt, js = csv_text(rows), json.dumps(summary, indent=1, ensure_ascii=False) + "\n"
-    cons = consumer_text(cand, rows)
+    cons, jn = consumer_text(cand, rows), join_text(join_rows)
     if a.write:
         OUT_CSV.write_text(txt, encoding="utf-8")
         OUT_SUM.write_text(js, encoding="utf-8")
         OUT_CONS.write_text(cons, encoding="utf-8")
+        OUT_JOIN.write_text(jn, encoding="utf-8")
     else:
         ok = (OUT_CSV.read_text(encoding="utf-8") == txt and OUT_SUM.read_text(encoding="utf-8") == js
-              and OUT_CONS.read_text(encoding="utf-8") == cons)
+              and OUT_CONS.read_text(encoding="utf-8") == cons and OUT_JOIN.read_text(encoding="utf-8") == jn)
         print("check", "OK" if ok else "DIFFERS")
         return 0 if ok else 1
     print(json.dumps(summary["totals_by_family_status"], indent=1))

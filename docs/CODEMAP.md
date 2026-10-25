@@ -18,11 +18,11 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 3434 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 3436 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 21 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 1684 | pytest suites, one folder per round. |
+| `tests/` | 1685 | pytest suites, one folder per round. |
 | `tools/` | 114 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (254 modules)
@@ -1196,7 +1196,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t293_formwork_face_line/` | 2 |
 | `tests/t295_ceiling_line_ledger/` | 2 |
 | `tests/t296_skirting_ledger/` | 2 |
-| `tests/t297_rebar_line_basis/` | 2 |
+| `tests/t297_rebar_line_basis/` | 3 |
 | `tests/t298_export_completion/` | 3 |
 | `tests/t299_ledger/` | 1 |
 | `tests/water_tank_s8_4/` | 3 |
@@ -1505,7 +1505,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t293/` | 10 |
 | `research/agents_t295/` | 8 |
 | `research/agents_t296/` | 11 |
-| `research/agents_t297/` | 9 |
+| `research/agents_t297/` | 11 |
 | `research/agents_t298/` | 2 |
 | `research/agents_t299/` | 8 |
 | `research/alsenan_arch_truth_05/` | 28 |
