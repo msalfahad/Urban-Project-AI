@@ -1,10 +1,39 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
 Plain words, no task numbers. Measured numbers come from SCOREBOARD.md; anything not measured says so.
-Last update: 2026-10-25 06:15 UTC (Lead). Previous version: 2026-10-25 04:15 UTC. The released numbers did not change
+Last update: 2026-10-25 08:15 UTC (Lead). Previous version: 2026-10-25 06:15 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released default V2.9 + route G untouched). Your measure: whole BOQ
 lines independently verified, and trades that can be scored. Still 1 whole line verified in the candidate (the concrete
 slab, 60.28 m3), 0 released. No decision for you; the designer list is still being finished before you send it.
+
+Since 06:15 (newest first; two pieces checked and merged, the first real export sent back for a small fix):
+- First real export of the candidate BOQ: the checker ran everything himself on the real drawings and it passed, except
+  one housekeeping check (the code map was regenerated before the last report file was added). Sent back for that fix
+  only (about 10 minutes), plus one small correction he found: a "hold this line" record must never turn a row that is
+  out of scope into a held row. It goes first in the checker's queue as soon as it is back. One limit to know: today a
+  verification record is tied to the whole candidate, so every later integration step makes every record "changed" and
+  the checker has to re-issue them; a follow-up ties each record to its own lines only, queued behind the integrations
+  you ordered.
+- Concrete, two annex-edge columns: checked and merged; the checker confirmed from the drawings that they start at
+  +0.25, so their concrete is 1.43 m3 where the candidate carries 1.24 m3 (-13.5 %). Verified as a piece, not yet in the
+  candidate.
+- Column rebar inside the foundations: checked and merged as a lower bound only (26 cores at least 734.8 kg, -8.3 %
+  against the old figure; 10 cores held). Freelancer comparison: not measured for this item.
+- Concrete, exterior ground beams, handed in, waiting for the checker (a material finding): three main-house exterior
+  beams are carried in the candidate as interior beams, at the shallower interior depth. On the drawn runs at the
+  printed 0.95 m depth the main-house exterior ground beams are 15.96 m3, against 8.16 m3 in the engine (+7.80 m3,
+  +95.5 %). The annex beams (4.97 m3) stay blank: both their depth and their drawn length conflict; the three courtyard
+  beams stay held. Second-floor columns stay held (carried to the finished roof level, not to the structure).
+- Floor area: the small pantry zone by the kitchen counter (1.10 m2) is settled from the drawings as a wet floor, no
+  designer question needed (candidate floor 380.36 -> 381.46 m2, +0.29 %, once checked and integrated). Waiting for the
+  checker.
+- Excavation and backfill (missing from both the engine's and the freelancer's BOQ): 26 footings matched; pit plan areas
+  129.23 m2 and the footing footprint 109.85 m2 (= the checker's earlier figure); every volume held, because the drawings
+  print only "not less than 1.5 m" for the formation. Finished, waiting for a checker slot.
+- Team: two worker runs found nothing to claim (my planning gap: every open row was in the integration lane). Four new
+  preparation pieces now feed the integration lane (stairs and domes, block walls, plaster and paint, formwork), so the
+  workers stay busy without new research.
+- Nothing new on Drive; no new photos.
 
 Since 04:15 (newest first; four pieces checked and merged, one sent back narrow, the first real export handed in):
 - The first real export of the candidate BOQ is handed in for the checker: one project identity and one drawing revision

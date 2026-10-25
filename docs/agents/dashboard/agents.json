@@ -6,52 +6,52 @@
 "last_run": "2026-10-25T04:32:12Z",
 "result": "ok",
 "working_on": "Daily update sent 04:32; next 2026-10-26 04:31 UTC",
-"as_of": "2026-10-25T06:25:00Z"
+"as_of": "2026-10-25T08:20:00Z"
 },
 {
 "agent": "1 LEAD – plans & assigns work",
 "role": "Plans the work, keeps the board, milestones and element register, writes your report",
 "cadence": "every 2 h at :09 (pilot cadence still set)",
-"last_run": "2026-10-25T06:10:10Z",
+"last_run": "2026-10-25T08:10:51Z",
 "result": "running",
-"working_on": "Checker queue: the first real export package goes first; structural basis ledger for the four unsupported-basis quantities given to worker 1; excavation ledger promoted",
-"as_of": "2026-10-25T06:25:00Z"
+"working_on": "Checker queue: structural basis ledger first (material exterior ground-beam finding), first real export back first after its small fix; four preparation ledgers for the integration lane added so the workers have work",
+"as_of": "2026-10-25T08:20:00Z"
 },
 {
 "agent": "2 WORKER 1 – Structural",
 "role": "Structural lane: concrete, rebar by bar population, formwork",
 "cadence": "hourly at :19 (pilot cadence still set)",
-"last_run": "2026-10-25T05:20:00Z",
+"last_run": "2026-10-25T07:20:17Z",
 "result": "ok",
-"working_on": "Designer-list gaps and column-core rebar restatement handed in 05:59; next: structural basis ledger for the held depths and heights",
-"as_of": "2026-10-25T06:25:00Z"
+"working_on": "07:20 run found nothing to claim (Lead planning gap, fixed 08:15); basis ledger handed in 07:10; next: stairs and domes basis ledger",
+"as_of": "2026-10-25T08:20:00Z"
 },
 {
 "agent": "3 WORKER 2 – Architectural & finishes",
 "role": "Architecture and finishes lane: floors, walls, plaster, paint, tiles, ceilings, openings, waterproofing",
 "cadence": "hourly at :39 (pilot cadence still set)",
-"last_run": "2026-10-25T05:39:20Z",
-"result": "running",
-"working_on": "Plaster / paint blockers (curved window room-side face, wedge room) and the pantry doorway floor gap, claimed 05:40",
-"as_of": "2026-10-25T06:25:00Z"
+"last_run": "2026-10-25T07:40:10Z",
+"result": "ok",
+"working_on": "07:40 run found nothing to claim (Lead planning gap, fixed 08:15); scoring-guard fix handed in 07:10; next: block-wall wall-to-line ledger",
+"as_of": "2026-10-25T08:20:00Z"
 },
 {
 "agent": "4 WORKER 3 – Integration into V3.0",
 "role": "Integration lane: wires checker-verified pieces into the one opt-in candidate",
 "cadence": "every 2 h at :59 (even hours UTC)",
-"last_run": "2026-10-25T04:59:17Z",
+"last_run": "2026-10-25T07:00:26Z",
 "result": "ok",
-"working_on": "One project identity + first real export handed in 06:13 for the Checker (full test suite not yet run); next run 06:59",
-"as_of": "2026-10-25T06:25:00Z"
+"working_on": "Excavation ledger finished 07:45 (waits for a checker slot); next run 08:59: first real export, small fix after the checker's narrow rejection",
+"as_of": "2026-10-25T08:20:00Z"
 },
 {
 "agent": "5 CHECKER – verifies & merges",
 "role": "Checks finished tasks by re-measuring, merges or rejects, keeps the scoreboard",
 "cadence": "hourly at :49 (pilot cadence still set)",
-"last_run": "2026-10-25T05:50:09Z",
+"last_run": "2026-10-25T06:52:00Z",
 "result": "ok",
-"working_on": "05:50 run: scoring-guard fix sent back (one gap), buried ground-beam waterproofing faces 32 of 32 re-measured; next run 06:49: first real export, then designer-list gaps",
-"as_of": "2026-10-25T06:25:00Z"
+"working_on": "06:52 run: first real export sent back narrow (stale code map), two annex columns and foundation-core rebar merged; next run 08:51: structural basis ledger, scoring-guard fix, pantry floor zone",
+"as_of": "2026-10-25T08:20:00Z"
 },
 {
 "agent": "6 SCOUT – research & feedback to Lead",
@@ -60,7 +60,7 @@
 "last_run": "2026-10-24T23:50:57Z",
 "result": "ok",
 "working_on": "No open research request; reduced priority (owner 23:53)",
-"as_of": "2026-10-25T06:25:00Z"
+"as_of": "2026-10-25T08:20:00Z"
 },
 {
 "agent": "7 DASHBOARD – refreshes your page",
@@ -69,6 +69,6 @@
 "last_run": "2026-10-25T04:54:32Z",
 "result": "ok",
 "working_on": "Refreshed 04:56; next 2026-10-25 08:54 UTC",
-"as_of": "2026-10-25T06:25:00Z"
+"as_of": "2026-10-25T08:20:00Z"
 }
 ]

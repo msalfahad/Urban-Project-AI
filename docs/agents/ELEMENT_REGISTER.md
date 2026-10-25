@@ -46,6 +46,17 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+### Lead 2026-10-25 08:15 (from T-287 / T-280 MERGED; T-245 REJECTED narrow; T-289 / T-275 r2 / T-286 READY; new T-290 .. T-294)
+
+| Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |
+|---|---|---|---|---|---|
+| GF columns 35F / 365 on the CB5 line (supersedes the 06:15 row) | CONC.COLUMN, CONC.NECK, column rebar, formwork | CONC.COLUMN from base +0.25 to the soffit; the neck below that base (unchanged ruling) | VERIFIED AS A COMPONENT 1.430 m3 (Checker own 07:58: C5 / C3 stand on the CB5 ground beam beside the +0.30 annex and a +0.15 passage, no +1.00 slab); candidate still 1.2375 (not integrated) | T-287 MERGED 542b64c7 | T-254 carries 1.4300 m3 |
+| Main-house exterior ground beams, incl. 3 runs in interior-typed lines (109+7CB#2, 145+7CA#1, ring ARC:157+158; L-27d104ca, L-26fcfbbb, L-7076482d) | CONC.GROUND_BEAM, formwork sides (no line yet), GB rebar (no ground-storey line yet), buried liquid WP (reads D 0.95) | CONC.GROUND_BEAM owns the volume on D 0.95 face to face; formwork and rebar take the same depth and length when their lines are built (T-293 / T-199); WP owns the buried faces only | 16 runs 15.9600 m3 DRAWING-CONFIRMED (T-289 READY; engine 8.1642, +95.5 %), the 3 interior-typed lines pending the Checker's own re-derive | T-242 runs, T-253 D 0.95, T-289 | Checker T-289 challenge (b); T-245 r2 downgrade record if confirmed |
+| 2F columns (STR.CONC.COLUMN, 2F) | CONC.COLUMN, column rebar, formwork | CONC.COLUMN; height to the structural roof soffit, never the finished +13.90 | HELD BLANK on D-39 (<= 2.805 m3 on 6, tank columns 40F / 424 open, D-44); LINE-ID SET IN CONFLICT: 8 ids (T-289) vs 14 ids (Checker 07:58 probe) for 3.528 m3 | T-289, D-39 | Checker T-289 challenge (a): one id set for the downgrade record |
+| Annex ground beams (8 lines, 4.9740 m3) | CONC.GROUND_BEAM, formwork | CONC.GROUND_BEAM | CONFLICT BLANK on two separate items: depth (D-35 annex) AND length (4 bands drawn through supports 1.5 / 6.4 / 3.1 / 10.125 vs face to face 1.2 / 6.0 / 2.4 / 9.70) | T-289 | both named in T-254; the length conflict may be drawing-settleable (faces drawn), the depth is the designer's |
+| Stopping CN columns (3) in the foundation-core ledger | column rebar (cores), CONC.COLUMN / NECK | rebar owns the kg; the top datum is the concrete trade's T-214 slab top of the zone (GF main +0.95, annex +0.25), F-T280-01 | HELD (CN stub question STR-COL-001), not 'unprinted' | T-280 MERGED 86fdc315, T-214 | when the CN rows are taken up |
+| Stair and dome concrete lines of the candidate (all) | CONC.STAIR / DOME, stair soffit, formwork stair soffit, finishes (treads, landings, 1F landing marble) | CONC.STAIR / DOME owns the volume per piece; soffit and formwork list the piece, no volume; ST-03 is T-289's row (cited, never booked twice) | to be ledgered line id by line id (T-290, TODO) | T-258 r2, RECONCILIATION s.7, T-287 G2 / G3 | T-290 -> T-266 |
+
 ### Lead 2026-10-25 06:15 (from T-257 / T-283 / T-281 / T-288 MERGED; T-245 / T-287 / T-280 READY; new T-289)
 
 | Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |

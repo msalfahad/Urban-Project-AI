@@ -46,7 +46,18 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
-## Status (Lead, 2026-10-25 06:15; re-estimated each run from what merged and was verified)
+## Status (Lead, 2026-10-25 08:15; re-estimated each run from what merged and was verified)
+
+Lead 2026-10-25 08:15: since 06:15 the Checker merged 2 Gate A pieces (T-287 542b64c7: CB5 columns VERIFIED 1.430 m3 as a
+component; T-280 86fdc315: column-core rebar LOWER bounds) and rejected T-245 Gate B NARROW on stale maps only; every
+other Gate B check passed on the real candidate. Week-1 target 'one verified improvement through the integrated
+pipeline' (2026-10-27): evidence so far is V3.0.15 (7 Checker-VERIFIED foundation WP lines integrated, not released);
+the week-2 entry 'first real export' now depends on T-245 r2
+(worker 3 08:59, about 10 min) and its Gate B at 09:51, about 1.5 h later than the 06:15 estimate. Next integration
+T-254 (exterior ground beams, a material +7.80 m3 / +95.5 % correction on the main house if the Checker confirms T-289)
+can be handed in the same day T-245 merges. Risk named: verdict records bind to the whole candidate, so each lane I step
+costs a full re-issue by the Checker (T-294 queued after T-255). Workers 1 / 2 now prepare the line-id ledgers for
+T-266, T-279, T-244 and T-199 (T-290 .. T-293) so those packages are mechanical when their turn comes.
 
 Lead 2026-10-25 06:15: since 04:15 the Checker merged 4 Gate A pieces (T-257 6a8eea78, T-283 6e141df6, T-281 40518c58,
 T-288 643b310b; research ledgers, no candidate line moved), rejected T-275 narrow, and verified the buried ground-beam WP
