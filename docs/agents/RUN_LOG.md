@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-25T05:51Z | Verifier | STARTED | run session_01CRSmFHaGWN8e3faMpJDeuz | repo-attached routine | task state: READY T-275 (per run log) | self-check pending
 - 2026-10-25T05:39Z | Worker 2 | STARTED | run session_015oCFpQBhWByKKNvm4iz8nr | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-25T05:32Z | Verifier | SUCCESS | T-257, T-283, T-281, T-288: Gate A PASS, MERGED 6a8eea78 / 6e141df6 / 40518c58 / 643b310b (published 643b310b, engine push) | K1 declarations not a weakened test (same T-210 rules over the same 24-module base, exact snapshot); ceilings r3 + stair soffits batched: own MS1-U 3.720 / 4.2555 m2, MS2-LD-W 1.495, B23 strip 0.1725, dome disc 15.359, formwork = finished soffit on 4 flights; one owner per piece set (1.771875 once, GF-156 0.036 column head, 0.777 north of 315 -> decor, 1F 0.1725 = B23 underside over the stair foot, HELD); register v4 449.6007 - 7.9131 d m2, own GF-W16 2.9500 m / B5 0.2000; full suite on merged head NEW 0 / KNOWN 395; no released or candidate quantity moved; T-180 slot not used (batch took the run) | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-10-25 05:20 UTC | Worker 1 | STARTED | run session_011BWQjmZC3TX1VvFW1TQ4s2 | repo-attached routine | task state: none yet | self-check pending
