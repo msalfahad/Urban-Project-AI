@@ -1,0 +1,33 @@
+{
+ "downgrades": [
+  {
+   "basis_label": "UNSUPPORTED BASIS",
+   "candidate_version": "ARCH_TAKEOFF_V3.0.17",
+   "checker": {
+    "routine": "Verifier",
+    "run_token": "20261025T125120-455-5091",
+    "verdict_commit": "455c93c4"
+   },
+   "downgrade_id": "DG-5678660edb059395",
+   "engine_qty": 0.948267,
+   "evidence": [
+    {
+     "printed_value": "5 risers, sloping waist on ground, no thickness (Checker read 2026-10-25 11:00); ARCH GF plan=5 riser lines 2800",
+     "sheet": "Architectural sheet 11 SECTION B-B"
+    }
+   ],
+   "line_ids": [
+    "L-061e18cf35a4b6b33d68"
+   ],
+   "project_id": "development-villa-t131",
+   "reason": "UNSUPPORTED BASIS: ST-03 on a convention riser 0.165 and waist 0.175; drawn riser 0.170 (5 over 0.85), waist thickness not printed (S-9 / G2-w); steps 0.355017 m3 DRAWING-CONFIRMED component (T-258 r2) (re-issued on V3.0.17; line byte-identical, left to T-266)",
+   "resolved": false,
+   "revision_set_sha256": "5e3690754db90b5fa2d878d4fc29b2e84ce9d1d91e4c1e68a62019d1b34bbc22",
+   "schema": "URBAN_CHECKER_DOWNGRADE_V1",
+   "state": "HELD",
+   "time": "2026-10-25T13:55:28Z",
+   "unit": "m3"
+  }
+ ],
+ "schema": "URBAN_CHECKER_DOWNGRADE_V1_SET"
+}
