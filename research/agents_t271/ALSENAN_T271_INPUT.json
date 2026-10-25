@@ -1,0 +1,2864 @@
+{
+ "inputs": {
+  "v29_faces": 38,
+  "pieces": 39
+ },
+ "pantry_split": {
+  "face": "GF-RC99C2A",
+  "lines": [
+   "B3",
+   "AD"
+  ]
+ },
+ "basis": "ARCH_TAKEOFF_V2.9 floor faces x T-139 roof-slab faces (translation fit)",
+ "align_m": {
+  "GF": [
+   202.3333,
+   841.6415
+  ],
+  "1F": [
+   208.4615,
+   841.6415
+  ],
+  "2F": [
+   214.5897,
+   841.6415
+  ]
+ },
+ "void_split_r2b": {
+  "face": "GF-130",
+  "face_m2": 23.237125,
+  "lw_outline_m2": 16.005,
+  "lw_outline_size_m": [
+   5.82,
+   2.75
+  ],
+  "arc_r_m": [
+   1.5305,
+   2.7805
+  ],
+  "flight_top_above_2D0_m": 1.2,
+  "handles": {
+   "top": "2CE",
+   "east": "2CF",
+   "bottom": "2D0",
+   "west": "28A",
+   "south": "283",
+   "x1": "2D1",
+   "x2": "2D2",
+   "tag": "2D3",
+   "arc_out": "2DD",
+   "arc_in": "2DE",
+   "px1": "54B",
+   "px2": "54C",
+   "south_last": "2C4",
+   "east_first": "2C8",
+   "east_top": "315",
+   "east_edge": "289"
+  },
+  "parts": [
+   {
+    "part": "stair zone (treads drawn under the slab)",
+    "cls": "STAIR",
+    "m2": 7.402476,
+    "in_lw_outline_m2": 2.379112,
+    "in_south_band_m2": 4.333364,
+    "in_east_strip_m2": 0.69,
+    "id": "GF-130/STAIR"
+   },
+   {
+    "part": "pocket between the walls and the stair's outer arc (S-OPENING X 54B / 54C)",
+    "cls": "OPENING",
+    "m2": 1.550919,
+    "in_lw_outline_m2": 0.233408,
+    "in_south_band_m2": 1.317511,
+    "in_east_strip_m2": 0.0,
+    "id": "GF-130/POCKET"
+   },
+   {
+    "part": "light well (S-OPENING outline 2CE / 2CF / 2D0 / 28A, X 2D1 / 2D2, VOID tag 2D3)",
+    "cls": "OPENING",
+    "m2": 13.39248,
+    "in_lw_outline_m2": 13.39248,
+    "in_south_band_m2": 0.0,
+    "in_east_strip_m2": 0.0,
+    "id": "GF-130/LW"
+   },
+   {
+    "part": "slab drawn (no opening outline, no stair): ceiling candidate by what is below",
+    "cls": "SLAB",
+    "m2": 0.891251,
+    "in_lw_outline_m2": 0.0,
+    "in_south_band_m2": 1e-06,
+    "in_east_strip_m2": 0.89125,
+    "id": "GF-130/SLAB"
+   }
+  ]
+ },
+ "faces": [
+  {
+   "area_m2": 8.955001,
+   "perimeter_m": 12.0,
+   "above": {
+    "SLAB": 5.19212,
+    "BEAM_OR_COLUMN": 0.501975,
+    "BEAM": 3.260905
+   },
+   "beams": [
+    {
+     "slab_face": "GF-129",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.501975,
+     "w": 0.2,
+     "l": 2.6454,
+     "free_edge_m": 2.7112,
+     "member": "BM-GF-021",
+     "mark": "CB4",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.5",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.5"
+    },
+    {
+     "slab_face": "GF-142",
+     "cls": "BEAM",
+     "piece_m2": 3.260905,
+     "w": 0.9,
+     "l": 4.155,
+     "free_edge_m": 6.8969,
+     "member": "BM-GF-048",
+     "mark": "B27",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.85",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.85"
+    }
+   ],
+   "openings": [],
+   "covered_m2": 8.955,
+   "face": "GF-RC99C2A/pantry",
+   "floor": "GF",
+   "kind": "DRY",
+   "name": "Dining + Living / saloon + Pantry + Reception",
+   "part": "pantry part (west of B3 / AD)",
+   "engine_face_area_m2": 126.927696,
+   "engine_fin_ceiling": null
+  },
+  {
+   "area_m2": 117.973637,
+   "perimeter_m": 54.205904,
+   "above": {
+    "BEAM_OR_COLUMN": 13.926071,
+    "SLAB": 73.145871,
+    "STAIR": 9.853618,
+    "OPENING": 14.943399,
+    "BEAM": 4.693256,
+    "BEAM_HELD": 1.375625
+   },
+   "beams": [
+    {
+     "slab_face": "GF-038",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.095016,
+     "w": 0.2,
+     "l": 0.4961,
+     "free_edge_m": 1.1545,
+     "member": "BM-GF-001",
+     "mark": "B11",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.75",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.75"
+    },
+    {
+     "slab_face": "GF-058",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.268732,
+     "w": 0.1201,
+     "l": 2.3066,
+     "free_edge_m": 2.4091,
+     "member": "BM-GF-044",
+     "mark": "B17",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.75",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.75"
+    },
+    {
+     "slab_face": "GF-073",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 1.121025,
+     "w": 0.25,
+     "l": 5.1051,
+     "free_edge_m": 8.9682,
+     "member": "BM-GF-036",
+     "mark": "B13",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.75",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.75"
+    },
+    {
+     "slab_face": "GF-074",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.060937,
+     "w": 0.2,
+     "l": 0.375,
+     "free_edge_m": 0.9574,
+     "member": null,
+     "mark": null,
+     "r2_status": "NO_REGISTER_ROW",
+     "r2_depth": ""
+    },
+    {
+     "slab_face": "GF-080",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.395972,
+     "w": 0.2,
+     "l": 1.9799,
+     "free_edge_m": 4.3597,
+     "member": "BM-GF-010",
+     "mark": "B4",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.5",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.5"
+    },
+    {
+     "slab_face": "GF-085",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.053264,
+     "w": 0.2,
+     "l": 0.325,
+     "free_edge_m": 0.8579,
+     "member": null,
+     "mark": null,
+     "r2_status": "NO_REGISTER_ROW",
+     "r2_depth": ""
+    },
+    {
+     "slab_face": "GF-100",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.66,
+     "w": 0.2,
+     "l": 3.3,
+     "free_edge_m": 6.8,
+     "member": "BM-GF-007",
+     "mark": "B3",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.4",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.4"
+    },
+    {
+     "slab_face": "GF-102",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.513891,
+     "w": 0.2,
+     "l": 2.5905,
+     "free_edge_m": 5.5433,
+     "member": "BM-GF-008",
+     "mark": "B1",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.4",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.4"
+    },
+    {
+     "slab_face": "GF-103",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.685854,
+     "w": 0.2,
+     "l": 3.4478,
+     "free_edge_m": 7.2611,
+     "member": "BM-GF-009",
+     "mark": "B4",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.5",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.5"
+    },
+    {
+     "slab_face": "GF-104",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 1.125004,
+     "w": 0.15,
+     "l": 7.5,
+     "free_edge_m": 7.5,
+     "member": "BM-GF-042",
+     "mark": "CB1",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.75",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.75"
+    },
+    {
+     "slab_face": "GF-108",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 1.351431,
+     "w": 0.2,
+     "l": 6.7731,
+     "free_edge_m": 13.9168,
+     "member": "BM-GF-054",
+     "mark": "B29",
+     "t110_status": "CONFLICT",
+     "t110_depth": "0.75",
+     "r2_status": "CONFLICT",
+     "r2_depth": "0.75"
+    },
+    {
+     "slab_face": "GF-109",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 2.942574,
+     "w": 0.4,
+     "l": 7.6077,
+     "free_edge_m": 16.4429,
+     "member": "BM-GF-056",
+     "mark": "B21",
+     "t110_status": "CONFLICT",
+     "t110_depth": "0.75",
+     "r2_status": "CONFLICT",
+     "r2_depth": "0.75"
+    },
+    {
+     "slab_face": "GF-125",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 3.2,
+     "w": 0.5,
+     "l": 6.4,
+     "free_edge_m": 12.8,
+     "member": "BM-GF-045",
+     "mark": "B22",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.75",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.75"
+    },
+    {
+     "slab_face": "GF-133",
+     "cls": "BEAM",
+     "piece_m2": 4.646847,
+     "w": 0.65,
+     "l": 7.4526,
+     "free_edge_m": 17.1051,
+     "member": "BM-GF-047",
+     "mark": "B26",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.85",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.85"
+    },
+    {
+     "slab_face": "GF-142",
+     "cls": "BEAM",
+     "piece_m2": 0.046409,
+     "w": 0.2106,
+     "l": 3.8162,
+     "free_edge_m": 0.4408,
+     "member": "BM-GF-048",
+     "mark": "B27",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.85",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.85"
+    },
+    {
+     "slab_face": "GF-143",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.03,
+     "w": 0.1,
+     "l": 0.3,
+     "free_edge_m": 0.8,
+     "member": "BM-GF-039",
+     "mark": "CA",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.5",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.5"
+    },
+    {
+     "slab_face": "GF-144",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.1725,
+     "w": 0.3,
+     "l": 0.575,
+     "free_edge_m": 1.75,
+     "member": "BM-GF-039",
+     "mark": "CA",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.5",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.5"
+    },
+    {
+     "slab_face": "GF-158",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.1425,
+     "w": 0.3,
+     "l": 0.475,
+     "free_edge_m": 1.25,
+     "member": "BM-GF-039",
+     "mark": "CA",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.5",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.5"
+    },
+    {
+     "slab_face": "GF-159",
+     "cls": "BEAM_HELD",
+     "piece_m2": 1.375625,
+     "w": 0.525,
+     "l": 2.625,
+     "free_edge_m": 3.625,
+     "member": null,
+     "mark": null,
+     "r2_status": "NO_REGISTER_ROW",
+     "r2_depth": ""
+    },
+    {
+     "slab_face": "GF-161",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.05125,
+     "w": 0.1,
+     "l": 0.525,
+     "free_edge_m": 1.1,
+     "member": null,
+     "mark": null,
+     "r2_status": "NO_REGISTER_ROW",
+     "r2_depth": ""
+    },
+    {
+     "slab_face": "GF-165",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.638271,
+     "w": 0.2,
+     "l": 3.194,
+     "free_edge_m": 6.5828,
+     "member": "BM-GF-018",
+     "mark": "CB3",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.75",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.75"
+    },
+    {
+     "slab_face": "GF-166",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.05,
+     "w": 0.1857,
+     "l": 0.5385,
+     "free_edge_m": 1.2385,
+     "member": null,
+     "mark": null,
+     "r2_status": "NO_REGISTER_ROW",
+     "r2_depth": ""
+    },
+    {
+     "slab_face": "GF-167",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.05,
+     "w": 0.1857,
+     "l": 0.5385,
+     "free_edge_m": 1.2385,
+     "member": null,
+     "mark": null,
+     "r2_status": "NO_REGISTER_ROW",
+     "r2_depth": ""
+    },
+    {
+     "slab_face": "GF-189",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.31785,
+     "w": 0.1,
+     "l": 3.2076,
+     "free_edge_m": 3.2577,
+     "member": "BM-GF-041",
+     "mark": "CB8",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.75",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.75"
+    }
+   ],
+   "openings": [
+    {
+     "slab_face": "GF-130/STAIR",
+     "cls": "STAIR",
+     "m2": 7.402476,
+     "edge_in_room_m": 18.9707
+    },
+    {
+     "slab_face": "GF-130/POCKET",
+     "cls": "OPENING",
+     "m2": 1.550919,
+     "edge_in_room_m": 6.5144
+    },
+    {
+     "slab_face": "GF-130/LW",
+     "cls": "OPENING",
+     "m2": 13.39248,
+     "edge_in_room_m": 16.7861
+    },
+    {
+     "slab_face": "GF-131",
+     "cls": "STAIR",
+     "m2": 0.3325,
+     "edge_in_room_m": 6.85
+    },
+    {
+     "slab_face": "GF-132",
+     "cls": "STAIR",
+     "m2": 1.856142,
+     "edge_in_room_m": 8.0976
+    },
+    {
+     "slab_face": "GF-145",
+     "cls": "STAIR",
+     "m2": 0.2625,
+     "edge_in_room_m": 5.45
+    }
+   ],
+   "covered_m2": 117.93784,
+   "face": "GF-RC99C2A/open",
+   "floor": "GF",
+   "kind": "DRY",
+   "name": "Dining + Living / saloon + Pantry + Reception",
+   "part": "open room part (east of B3 / AD)",
+   "engine_face_area_m2": 126.927696,
+   "engine_fin_ceiling": {
+    "m2": 110.922696,
+    "lines": 1,
+    "blocked": 0
+   }
+  },
+  {
+   "area_m2": 24.93925,
+   "perimeter_m": 20.127384,
+   "above": {
+    "SLAB": 24.139244,
+    "BEAM_OR_COLUMN": 0.8
+   },
+   "beams": [
+    {
+     "slab_face": "GF-110",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.8,
+     "w": 0.2,
+     "l": 4.0,
+     "free_edge_m": 8.0,
+     "member": "BM-GF-030",
+     "mark": "CB6",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.75",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.75"
+    }
+   ],
+   "openings": [],
+   "covered_m2": 24.939244,
+   "face": "GF-R7512EA",
+   "floor": "GF",
+   "kind": "DRY",
+   "name": "Majlis / diwaniya",
+   "part": "",
+   "engine_face_area_m2": 24.940332,
+   "engine_fin_ceiling": {
+    "m2": 24.940332,
+    "lines": 1,
+    "blocked": 0
+   }
+  },
+  {
+   "area_m2": 16.552941,
+   "perimeter_m": 21.53378,
+   "above": {
+    "BEAM_OR_COLUMN": 1.736638,
+    "BEAM": 0.980098,
+    "SLAB": 13.822141
+   },
+   "beams": [
+    {
+     "slab_face": "GF-008",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.0485,
+     "w": 0.05,
+     "l": 0.97,
+     "free_edge_m": 0.97,
+     "member": "BM-GF-055",
+     "mark": "CB2",
+     "t110_status": "CONFLICT",
+     "t110_depth": "0.5",
+     "r2_status": "CONFLICT",
+     "r2_depth": "0.5"
+    },
+    {
+     "slab_face": "GF-011",
+     "cls": "BEAM",
+     "piece_m2": 0.980098,
+     "w": 0.3,
+     "l": 3.55,
+     "free_edge_m": 3.1734,
+     "member": "BM-GF-046",
+     "mark": "B24",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.75",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.75"
+    },
+    {
+     "slab_face": "GF-030",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.194,
+     "w": 0.2,
+     "l": 0.97,
+     "free_edge_m": 2.14,
+     "member": "BM-GF-004",
+     "mark": "B4",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.5",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.5"
+    },
+    {
+     "slab_face": "GF-031",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 1.08,
+     "w": 0.3,
+     "l": 3.85,
+     "free_edge_m": 7.9,
+     "member": "BM-GF-038",
+     "mark": "B16",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.75",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.75"
+    },
+    {
+     "slab_face": "GF-055",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.060937,
+     "w": 0.2,
+     "l": 0.375,
+     "free_edge_m": 0.9574,
+     "member": null,
+     "mark": null,
+     "r2_status": "NO_REGISTER_ROW",
+     "r2_depth": ""
+    },
+    {
+     "slab_face": "GF-058",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.329411,
+     "w": 0.1799,
+     "l": 2.0629,
+     "free_edge_m": 2.0171,
+     "member": "BM-GF-044",
+     "mark": "B17",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.75",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.75"
+    },
+    {
+     "slab_face": "GF-073",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.02379,
+     "w": 0.0979,
+     "l": 0.4862,
+     "free_edge_m": 0.4862,
+     "member": "BM-GF-036",
+     "mark": "B13",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.75",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.75"
+    }
+   ],
+   "openings": [],
+   "covered_m2": 16.538877,
+   "face": "GF-R75FBAE",
+   "floor": "GF",
+   "kind": "DRY",
+   "name": "Master bedroom",
+   "part": "",
+   "engine_face_area_m2": 16.54964,
+   "engine_fin_ceiling": {
+    "m2": 16.54964,
+    "lines": 1,
+    "blocked": 0
+   }
+  },
+  {
+   "area_m2": 12.475,
+   "perimeter_m": 15.1,
+   "above": {
+    "STAIR": 10.725,
+    "BEAM_OR_COLUMN": 1.0,
+    "SLAB": 0.75
+   },
+   "beams": [
+    {
+     "slab_face": "GF-066",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 1.0,
+     "w": 0.4,
+     "l": 2.5,
+     "free_edge_m": 5.0,
+     "member": "BM-GF-043",
+     "mark": "B20",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.75",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.75"
+    }
+   ],
+   "openings": [
+    {
+     "slab_face": "GF-025",
+     "cls": "STAIR",
+     "m2": 10.725,
+     "edge_in_room_m": 2.5
+    }
+   ],
+   "covered_m2": 12.475,
+   "face": "GF-R31F8AE",
+   "floor": "GF",
+   "kind": "STAIR",
+   "name": "Stair",
+   "part": "",
+   "engine_face_area_m2": 12.475,
+   "engine_fin_ceiling": {
+    "m2": 0.0,
+    "lines": 1,
+    "blocked": 1
+   }
+  },
+  {
+   "area_m2": 9.630001,
+   "perimeter_m": 14.5,
+   "above": {
+    "SLAB": 9.63
+   },
+   "beams": [],
+   "openings": [],
+   "covered_m2": 9.63,
+   "face": "GF-RA3AD49",
+   "floor": "GF",
+   "kind": "SERVICE",
+   "name": "Kitchen",
+   "part": "",
+   "engine_face_area_m2": 9.630001,
+   "engine_fin_ceiling": {
+    "m2": 9.630001,
+    "lines": 1,
+    "blocked": 0
+   }
+  },
+  {
+   "area_m2": 9.101,
+   "perimeter_m": 16.74,
+   "above": {
+    "SLAB": 8.184,
+    "BEAM_OR_COLUMN": 0.917
+   },
+   "beams": [
+    {
+     "slab_face": "GF-175",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.24,
+     "w": 0.2,
+     "l": 1.2,
+     "free_edge_m": 2.6,
+     "member": "BM-GF-012",
+     "mark": "B1",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.4",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.4"
+    },
+    {
+     "slab_face": "GF-189",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.677,
+     "w": 0.1,
+     "l": 7.02,
+     "free_edge_m": 7.02,
+     "member": "BM-GF-041",
+     "mark": "CB8",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.75",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.75"
+    }
+   ],
+   "openings": [],
+   "covered_m2": 9.101,
+   "face": "GF-R9A05AA",
+   "floor": "GF",
+   "kind": "EXTERIOR",
+   "name": "Garden / yard / court",
+   "part": "",
+   "engine_face_area_m2": 9.101,
+   "engine_fin_ceiling": null
+  },
+  {
+   "area_m2": 7.875,
+   "perimeter_m": 12.5,
+   "above": {
+    "SLAB": 6.975,
+    "BEAM_OR_COLUMN": 0.9
+   },
+   "beams": [
+    {
+     "slab_face": "GF-138",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.9,
+     "w": 0.2,
+     "l": 4.5,
+     "free_edge_m": 9.0,
+     "member": "BM-GF-011",
+     "mark": "B4",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.5",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.5"
+    }
+   ],
+   "openings": [],
+   "covered_m2": 7.875,
+   "face": "GF-R51E127",
+   "floor": "GF",
+   "kind": "DRY",
+   "name": "Driver room",
+   "part": "",
+   "engine_face_area_m2": 7.875,
+   "engine_fin_ceiling": {
+    "m2": 7.875,
+    "lines": 1,
+    "blocked": 0
+   }
+  },
+  {
+   "area_m2": 4.885,
+   "perimeter_m": 10.3,
+   "above": {
+    "BEAM_OR_COLUMN": 0.86691,
+    "BEAM": 1.059603,
+    "SLAB": 2.958487
+   },
+   "beams": [
+    {
+     "slab_face": "GF-125",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.6,
+     "w": 0.5,
+     "l": 1.2,
+     "free_edge_m": 1.7,
+     "member": "BM-GF-045",
+     "mark": "B22",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.75",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.75"
+    },
+    {
+     "slab_face": "GF-142",
+     "cls": "BEAM",
+     "piece_m2": 1.059603,
+     "w": 0.9,
+     "l": 1.7967,
+     "free_edge_m": 1.9749,
+     "member": "BM-GF-048",
+     "mark": "B27",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.85",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.85"
+    },
+    {
+     "slab_face": "GF-170",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.021332,
+     "w": 0.1,
+     "l": 0.2502,
+     "free_edge_m": 0.3007,
+     "member": "BM-GF-040",
+     "mark": "CB8",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.75",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.75"
+    },
+    {
+     "slab_face": "GF-189",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.245578,
+     "w": 0.1,
+     "l": 2.505,
+     "free_edge_m": 2.5672,
+     "member": "BM-GF-041",
+     "mark": "CB8",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.75",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.75"
+    }
+   ],
+   "openings": [],
+   "covered_m2": 4.885,
+   "face": "GF-RFD4E1D",
+   "floor": "GF",
+   "kind": null,
+   "name": "Dining + Garden / yard / court + Living / saloon + Pantry + Reception",
+   "part": "",
+   "engine_face_area_m2": 4.885,
+   "engine_fin_ceiling": null
+  },
+  {
+   "area_m2": 4.730695,
+   "perimeter_m": 9.498855,
+   "above": {
+    "SLAB": 3.964962,
+    "BEAM_OR_COLUMN": 0.765733
+   },
+   "beams": [
+    {
+     "slab_face": "GF-029",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.042864,
+     "w": 0.2,
+     "l": 0.3143,
+     "free_edge_m": 0.6286,
+     "member": "BM-GF-002",
+     "mark": "B1",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.4",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.4"
+    },
+    {
+     "slab_face": "GF-030",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.240005,
+     "w": 0.2,
+     "l": 1.3,
+     "free_edge_m": 2.6001,
+     "member": "BM-GF-004",
+     "mark": "B4",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.5",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.5"
+    },
+    {
+     "slab_face": "GF-038",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.482864,
+     "w": 0.2,
+     "l": 2.5143,
+     "free_edge_m": 4.8286,
+     "member": "BM-GF-001",
+     "mark": "B11",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.75",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.75"
+    }
+   ],
+   "openings": [],
+   "covered_m2": 4.730695,
+   "face": "GF-RDBD4F9",
+   "floor": "GF",
+   "kind": null,
+   "name": "Unnamed space",
+   "part": "",
+   "engine_face_area_m2": 4.730695,
+   "engine_fin_ceiling": {
+    "m2": 4.730695,
+    "lines": 1,
+    "blocked": 0
+   }
+  },
+  {
+   "area_m2": 3.717683,
+   "perimeter_m": 7.624665,
+   "above": {
+    "BEAM_OR_COLUMN": 0.698568,
+    "SLAB": 3.019115
+   },
+   "beams": [
+    {
+     "slab_face": "GF-008",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.105,
+     "w": 0.05,
+     "l": 2.1,
+     "free_edge_m": 2.1,
+     "member": "BM-GF-055",
+     "mark": "CB2",
+     "t110_status": "CONFLICT",
+     "t110_depth": "0.5",
+     "r2_status": "CONFLICT",
+     "r2_depth": "0.5"
+    },
+    {
+     "slab_face": "GF-017",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.35,
+     "w": 0.2,
+     "l": 1.75,
+     "free_edge_m": 3.9,
+     "member": "BM-GF-005",
+     "mark": "B1",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.4",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.4"
+    },
+    {
+     "slab_face": "GF-030",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.243568,
+     "w": 0.2,
+     "l": 1.3178,
+     "free_edge_m": 1.3178,
+     "member": "BM-GF-004",
+     "mark": "B4",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.5",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.5"
+    }
+   ],
+   "openings": [],
+   "covered_m2": 3.717683,
+   "face": "GF-RD6F891",
+   "floor": "GF",
+   "kind": "WET",
+   "name": "Bathroom / W.C.",
+   "part": "",
+   "engine_face_area_m2": 3.717683,
+   "engine_fin_ceiling": {
+    "m2": 3.717683,
+    "lines": 1,
+    "blocked": 0
+   }
+  },
+  {
+   "area_m2": 3.6,
+   "perimeter_m": 8.4,
+   "above": {
+    "SLAB": 3.6
+   },
+   "beams": [],
+   "openings": [],
+   "covered_m2": 3.6,
+   "face": "GF-RF002DC",
+   "floor": "GF",
+   "kind": null,
+   "name": "Unnamed space",
+   "part": "",
+   "engine_face_area_m2": 3.6,
+   "engine_fin_ceiling": null
+  },
+  {
+   "area_m2": 3.375,
+   "perimeter_m": 7.5,
+   "above": {
+    "BEAM_OR_COLUMN": 0.1125,
+    "SLAB": 3.2625
+   },
+   "beams": [
+    {
+     "slab_face": "GF-136",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.1125,
+     "w": 0.05,
+     "l": 2.25,
+     "free_edge_m": 2.25,
+     "member": "BM-GF-032",
+     "mark": "B4",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.5",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.5"
+    }
+   ],
+   "openings": [],
+   "covered_m2": 3.375,
+   "face": "GF-RB62B55",
+   "floor": "GF",
+   "kind": "WET",
+   "name": "Bathroom / W.C.",
+   "part": "",
+   "engine_face_area_m2": 3.375,
+   "engine_fin_ceiling": {
+    "m2": 3.375,
+    "lines": 1,
+    "blocked": 0
+   }
+  },
+  {
+   "area_m2": 3.24,
+   "perimeter_m": 7.2,
+   "above": {
+    "OPENING": 3.24
+   },
+   "beams": [],
+   "openings": [
+    {
+     "slab_face": "GF-048",
+     "cls": "OPENING",
+     "m2": 3.24,
+     "edge_in_room_m": 0.0
+    }
+   ],
+   "covered_m2": 3.24,
+   "face": "GF-R89E756",
+   "floor": "GF",
+   "kind": "SHAFT",
+   "name": "Shaft / duct",
+   "part": "",
+   "engine_face_area_m2": 3.24,
+   "engine_fin_ceiling": null
+  },
+  {
+   "area_m2": 3.1325,
+   "perimeter_m": 7.2,
+   "above": {
+    "BEAM_OR_COLUMN": 0.1025,
+    "SLAB": 3.03
+   },
+   "beams": [
+    {
+     "slab_face": "GF-136",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.1025,
+     "w": 0.05,
+     "l": 2.05,
+     "free_edge_m": 2.05,
+     "member": "BM-GF-032",
+     "mark": "B4",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.5",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.5"
+    }
+   ],
+   "openings": [],
+   "covered_m2": 3.1325,
+   "face": "GF-R8496F0",
+   "floor": "GF",
+   "kind": null,
+   "name": "Unnamed space",
+   "part": "",
+   "engine_face_area_m2": 3.1325,
+   "engine_fin_ceiling": {
+    "m2": 3.1325,
+    "lines": 1,
+    "blocked": 0
+   }
+  },
+  {
+   "area_m2": 2.800001,
+   "perimeter_m": 7.6,
+   "above": {
+    "BEAM": 0.029659,
+    "SLAB": 2.610341,
+    "BEAM_OR_COLUMN": 0.16
+   },
+   "beams": [
+    {
+     "slab_face": "GF-142",
+     "cls": "BEAM",
+     "piece_m2": 0.029659,
+     "w": 0.1684,
+     "l": 0.3524,
+     "free_edge_m": 0.3524,
+     "member": "BM-GF-048",
+     "mark": "B27",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.85",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.85"
+    },
+    {
+     "slab_face": "GF-170",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.16,
+     "w": 0.1,
+     "l": 1.6,
+     "free_edge_m": 1.6,
+     "member": "BM-GF-040",
+     "mark": "CB8",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.75",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.75"
+    }
+   ],
+   "openings": [],
+   "covered_m2": 2.8,
+   "face": "GF-RC06FED",
+   "floor": "GF",
+   "kind": "DRY",
+   "name": "Dining + Living / saloon + Pantry + Reception",
+   "part": "",
+   "engine_face_area_m2": 2.800001,
+   "engine_fin_ceiling": {
+    "m2": 2.800001,
+    "lines": 1,
+    "blocked": 0
+   }
+  },
+  {
+   "area_m2": 2.675221,
+   "perimeter_m": 7.414038,
+   "above": {
+    "SLAB": 1.970651,
+    "BEAM_OR_COLUMN": 0.70457
+   },
+   "beams": [
+    {
+     "slab_face": "GF-028",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.495861,
+     "w": 0.2,
+     "l": 2.5873,
+     "free_edge_m": 4.9181,
+     "member": "BM-GF-024",
+     "mark": "B3",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.4",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.4"
+    },
+    {
+     "slab_face": "GF-029",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.208709,
+     "w": 0.2,
+     "l": 1.1435,
+     "free_edge_m": 2.2871,
+     "member": "BM-GF-002",
+     "mark": "B1",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.4",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.4"
+    }
+   ],
+   "openings": [],
+   "covered_m2": 2.675221,
+   "face": "GF-RF38DAF",
+   "floor": "GF",
+   "kind": "WET",
+   "name": "Bathroom / W.C.",
+   "part": "",
+   "engine_face_area_m2": 2.675221,
+   "engine_fin_ceiling": {
+    "m2": 2.675221,
+    "lines": 1,
+    "blocked": 0
+   }
+  },
+  {
+   "area_m2": 2.36761,
+   "perimeter_m": 6.809808,
+   "above": {
+    "BEAM_OR_COLUMN": 0.407108,
+    "SLAB": 1.960502
+   },
+   "beams": [
+    {
+     "slab_face": "GF-005",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.09228,
+     "w": 0.05,
+     "l": 1.8706,
+     "free_edge_m": 1.8206,
+     "member": "BM-GF-055",
+     "mark": "CB2",
+     "t110_status": "CONFLICT",
+     "t110_depth": "0.5",
+     "r2_status": "CONFLICT",
+     "r2_depth": "0.5"
+    },
+    {
+     "slab_face": "GF-028",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.050119,
+     "w": 0.2,
+     "l": 0.3506,
+     "free_edge_m": 0.7012,
+     "member": "BM-GF-024",
+     "mark": "B3",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.4",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.4"
+    },
+    {
+     "slab_face": "GF-038",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.264709,
+     "w": 0.2,
+     "l": 1.4235,
+     "free_edge_m": 2.6471,
+     "member": "BM-GF-001",
+     "mark": "B11",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.75",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.75"
+    }
+   ],
+   "openings": [],
+   "covered_m2": 2.36761,
+   "face": "GF-RB28769",
+   "floor": "GF",
+   "kind": "WET",
+   "name": "Bathroom / W.C.",
+   "part": "",
+   "engine_face_area_m2": 2.36761,
+   "engine_fin_ceiling": {
+    "m2": 2.36761,
+    "lines": 1,
+    "blocked": 0
+   }
+  },
+  {
+   "area_m2": 2.3625,
+   "perimeter_m": 6.2,
+   "above": {
+    "BEAM_OR_COLUMN": 0.0675,
+    "SLAB": 2.295
+   },
+   "beams": [
+    {
+     "slab_face": "GF-005",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.0675,
+     "w": 0.05,
+     "l": 1.35,
+     "free_edge_m": 1.35,
+     "member": "BM-GF-055",
+     "mark": "CB2",
+     "t110_status": "CONFLICT",
+     "t110_depth": "0.5",
+     "r2_status": "CONFLICT",
+     "r2_depth": "0.5"
+    }
+   ],
+   "openings": [],
+   "covered_m2": 2.3625,
+   "face": "GF-RDF7D28",
+   "floor": "GF",
+   "kind": "WET",
+   "name": "Bathroom / W.C.",
+   "part": "",
+   "engine_face_area_m2": 2.3625,
+   "engine_fin_ceiling": {
+    "m2": 2.3625,
+    "lines": 1,
+    "blocked": 0
+   }
+  },
+  {
+   "area_m2": 1.95,
+   "perimeter_m": 5.6,
+   "above": {
+    "SLAB": 1.95
+   },
+   "beams": [],
+   "openings": [],
+   "covered_m2": 1.95,
+   "face": "GF-RFAD3C4",
+   "floor": "GF",
+   "kind": "WET",
+   "name": "Bathroom / W.C.",
+   "part": "",
+   "engine_face_area_m2": 1.95,
+   "engine_fin_ceiling": {
+    "m2": 1.95,
+    "lines": 1,
+    "blocked": 0
+   }
+  },
+  {
+   "area_m2": 1.56,
+   "perimeter_m": 5.0,
+   "above": {
+    "SLAB": 1.56
+   },
+   "beams": [],
+   "openings": [],
+   "covered_m2": 1.56,
+   "face": "GF-R7B7A5D",
+   "floor": "GF",
+   "kind": null,
+   "name": "Unnamed space",
+   "part": "",
+   "engine_face_area_m2": 1.56,
+   "engine_fin_ceiling": null
+  },
+  {
+   "area_m2": 1.485,
+   "perimeter_m": 4.9,
+   "above": {
+    "SLAB": 1.485
+   },
+   "beams": [],
+   "openings": [],
+   "covered_m2": 1.485,
+   "face": "GF-RD36087",
+   "floor": "GF",
+   "kind": null,
+   "name": "Unnamed space",
+   "part": "",
+   "engine_face_area_m2": 1.485,
+   "engine_fin_ceiling": {
+    "m2": 1.485,
+    "lines": 1,
+    "blocked": 0
+   }
+  },
+  {
+   "area_m2": 75.983002,
+   "perimeter_m": 52.44,
+   "above": {
+    "STAIR": 10.725,
+    "BEAM_OR_COLUMN": 10.699611,
+    "SLAB": 39.014469,
+    "DOME_OPENING+RING": 15.543922
+   },
+   "beams": [
+    {
+     "slab_face": "1F-045",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 1.125,
+     "w": 0.45,
+     "l": 2.5,
+     "free_edge_m": 5.0,
+     "member": "BM-1F-026",
+     "mark": "B23",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.75",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.75"
+    },
+    {
+     "slab_face": "1F-064",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.01,
+     "w": 0.05,
+     "l": 0.2,
+     "free_edge_m": 0.3,
+     "member": "BM-1F-010",
+     "mark": "B1",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.4",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.4"
+    },
+    {
+     "slab_face": "1F-070",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.12,
+     "w": 0.2,
+     "l": 4.3,
+     "free_edge_m": 5.1,
+     "member": "BM-1F-004",
+     "mark": "B4",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.5",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.5"
+    },
+    {
+     "slab_face": "1F-071",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.949563,
+     "w": 0.2,
+     "l": 4.7478,
+     "free_edge_m": 9.8956,
+     "member": "BM-1F-005",
+     "mark": "B11",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.75",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.75"
+    },
+    {
+     "slab_face": "1F-075",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 2.805,
+     "w": 0.55,
+     "l": 5.1,
+     "free_edge_m": 10.75,
+     "member": "BM-1F-027",
+     "mark": "B25",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.75",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.75"
+    },
+    {
+     "slab_face": "1F-078",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.030523,
+     "w": 0.05,
+     "l": 0.9272,
+     "free_edge_m": 1.5721,
+     "member": "BM-1F-017",
+     "mark": "CB12",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.75",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.75"
+    },
+    {
+     "slab_face": "1F-082",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.17,
+     "w": 0.1,
+     "l": 1.7,
+     "free_edge_m": 1.8,
+     "member": "BM-1F-022",
+     "mark": "CB13",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.5",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.5"
+    },
+    {
+     "slab_face": "1F-085",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 2.205,
+     "w": 0.35,
+     "l": 6.3,
+     "free_edge_m": 12.95,
+     "member": "BM-1F-024",
+     "mark": "B18",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.75",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.75"
+    },
+    {
+     "slab_face": "1F-087",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.97,
+     "w": 0.2,
+     "l": 4.85,
+     "free_edge_m": 10.1,
+     "member": "BM-1F-016",
+     "mark": "B5",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.5",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.5"
+    },
+    {
+     "slab_face": "1F-089",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.229479,
+     "w": 0.05,
+     "l": 5.2,
+     "free_edge_m": 4.9178,
+     "member": "BM-1F-017",
+     "mark": "CB12",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.75",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.75"
+    },
+    {
+     "slab_face": "1F-097",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 1.093046,
+     "w": 0.25,
+     "l": 4.3722,
+     "free_edge_m": 9.2444,
+     "member": "BM-1F-020",
+     "mark": "B6",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.5",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.5"
+    },
+    {
+     "slab_face": "1F-103",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.992,
+     "w": 0.1,
+     "l": 10.62,
+     "free_edge_m": 10.72,
+     "member": "BM-1F-023",
+     "mark": "CB11",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.75",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.75"
+    }
+   ],
+   "openings": [
+    {
+     "slab_face": "1F-016",
+     "cls": "STAIR",
+     "m2": 10.725,
+     "edge_in_room_m": 2.5
+    },
+    {
+     "slab_face": "1F-076",
+     "cls": "DOME_OPENING+RING",
+     "m2": 1.516636,
+     "edge_in_room_m": 19.2997,
+     "open_m2": 0.008669,
+     "ring_m2": 1.507967,
+     "open_edge_in_room_m": 0.0
+    },
+    {
+     "slab_face": "1F-077",
+     "cls": "DOME_OPENING+RING",
+     "m2": 14.027286,
+     "edge_in_room_m": 10.5073,
+     "open_m2": 14.027256,
+     "ring_m2": 2.9e-05,
+     "open_edge_in_room_m": 10.5072
+    }
+   ],
+   "covered_m2": 75.983002,
+   "face": "1F-R78C367",
+   "floor": "1F",
+   "kind": "DRY",
+   "name": "Living / saloon",
+   "part": "",
+   "engine_face_area_m2": 75.983002,
+   "engine_fin_ceiling": {
+    "m2": 75.983002,
+    "lines": 2,
+    "blocked": 0
+   }
+  },
+  {
+   "area_m2": 19.05,
+   "perimeter_m": 17.7,
+   "above": {
+    "SLAB": 3.687846,
+    "BEAM_OR_COLUMN": 2.65,
+    "DOME_OPENING+RING": 12.712154
+   },
+   "beams": [
+    {
+     "slab_face": "1F-045",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 1.0225,
+     "w": 0.25,
+     "l": 4.25,
+     "free_edge_m": 4.25,
+     "member": "BM-1F-026",
+     "mark": "B23",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.75",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.75"
+    },
+    {
+     "slab_face": "1F-061",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 1.025,
+     "w": 0.25,
+     "l": 4.1,
+     "free_edge_m": 8.7,
+     "member": "BM-1F-018",
+     "mark": "B6",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.5",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.5"
+    },
+    {
+     "slab_face": "1F-072",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.425,
+     "w": 0.1,
+     "l": 4.25,
+     "free_edge_m": 4.35,
+     "member": "BM-1F-031",
+     "mark": "CB10",
+     "t110_status": "CONFLICT",
+     "t110_depth": "see candidates",
+     "r2_status": "CONFLICT",
+     "r2_depth": ""
+    },
+    {
+     "slab_face": "1F-082",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.1775,
+     "w": 0.05,
+     "l": 4.25,
+     "free_edge_m": 3.6,
+     "member": "BM-1F-022",
+     "mark": "CB13",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.5",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.5"
+    }
+   ],
+   "openings": [
+    {
+     "slab_face": "1F-073",
+     "cls": "DOME_OPENING+RING",
+     "m2": 12.712154,
+     "edge_in_room_m": 9.2158,
+     "open_m2": 11.580752,
+     "ring_m2": 1.131402,
+     "open_edge_in_room_m": 8.221
+    }
+   ],
+   "covered_m2": 19.05,
+   "face": "1F-RB72F22",
+   "floor": "1F",
+   "kind": "DRY",
+   "name": "Master bedroom",
+   "part": "",
+   "engine_face_area_m2": 19.05,
+   "engine_fin_ceiling": {
+    "m2": 19.05,
+    "lines": 1,
+    "blocked": 0
+   }
+  },
+  {
+   "area_m2": 19.018654,
+   "perimeter_m": 22.150176,
+   "above": {
+    "BEAM_OR_COLUMN": 1.016121,
+    "SLAB": 17.166244,
+    "DOME_OPENING+RING": 0.836139
+   },
+   "beams": [
+    {
+     "slab_face": "1F-021",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.17375,
+     "w": 0.05,
+     "l": 3.475,
+     "free_edge_m": 3.475,
+     "member": "BM-1F-015",
+     "mark": "B5",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.5",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.5"
+    },
+    {
+     "slab_face": "1F-026",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.042371,
+     "w": 0.05,
+     "l": 0.8696,
+     "free_edge_m": 0.8696,
+     "member": "BM-1F-017",
+     "mark": "CB12",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.75",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.75"
+    },
+    {
+     "slab_face": "1F-058",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.35,
+     "w": 0.2,
+     "l": 1.75,
+     "free_edge_m": 3.5,
+     "member": "BM-1F-014",
+     "mark": "B4",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.5",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.5"
+    },
+    {
+     "slab_face": "1F-066",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.45,
+     "w": 0.25,
+     "l": 1.8,
+     "free_edge_m": 3.6,
+     "member": "BM-1F-019",
+     "mark": "B6",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.5",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.5"
+    }
+   ],
+   "openings": [
+    {
+     "slab_face": "1F-076",
+     "cls": "DOME_OPENING+RING",
+     "m2": 0.494798,
+     "edge_in_room_m": 3.0577,
+     "open_m2": 0.000553,
+     "ring_m2": 0.494244,
+     "open_edge_in_room_m": 0.0
+    },
+    {
+     "slab_face": "1F-077",
+     "cls": "DOME_OPENING+RING",
+     "m2": 0.341341,
+     "edge_in_room_m": 1.2577,
+     "open_m2": 0.341297,
+     "ring_m2": 4.4e-05,
+     "open_edge_in_room_m": 1.2623
+    }
+   ],
+   "covered_m2": 19.018504,
+   "face": "1F-R3CFCFD",
+   "floor": "1F",
+   "kind": "DRY",
+   "name": "Master bedroom",
+   "part": "",
+   "engine_face_area_m2": 19.016545,
+   "engine_fin_ceiling": {
+    "m2": 19.016545,
+    "lines": 1,
+    "blocked": 0
+   }
+  },
+  {
+   "area_m2": 18.215001,
+   "perimeter_m": 17.4,
+   "above": {
+    "BEAM_OR_COLUMN": 0.997501,
+    "SLAB": 17.2175
+   },
+   "beams": [
+    {
+     "slab_face": "1F-070",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.1775,
+     "w": 0.05,
+     "l": 3.55,
+     "free_edge_m": 3.6,
+     "member": "BM-1F-004",
+     "mark": "B4",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.5",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.5"
+    },
+    {
+     "slab_face": "1F-082",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.465,
+     "w": 0.1,
+     "l": 5.0,
+     "free_edge_m": 5.0,
+     "member": "BM-1F-022",
+     "mark": "CB13",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.5",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.5"
+    },
+    {
+     "slab_face": "1F-103",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.355001,
+     "w": 0.1,
+     "l": 3.55,
+     "free_edge_m": 3.65,
+     "member": "BM-1F-023",
+     "mark": "CB11",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.75",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.75"
+    }
+   ],
+   "openings": [],
+   "covered_m2": 18.215001,
+   "face": "1F-RED0D19",
+   "floor": "1F",
+   "kind": "DRY",
+   "name": "Master bedroom",
+   "part": "",
+   "engine_face_area_m2": 18.215001,
+   "engine_fin_ceiling": {
+    "m2": 18.215001,
+    "lines": 1,
+    "blocked": 0
+   }
+  },
+  {
+   "area_m2": 16.34,
+   "perimeter_m": 16.2,
+   "above": {
+    "SLAB": 13.065609,
+    "BEAM_OR_COLUMN": 3.238948,
+    "DOME_OPENING+RING": 0.033531
+   },
+   "beams": [
+    {
+     "slab_face": "1F-024",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.493618,
+     "w": 0.2,
+     "l": 2.4896,
+     "free_edge_m": 5.1764,
+     "member": "BM-1F-030",
+     "mark": "B6",
+     "t110_status": "CONFLICT",
+     "t110_depth": "0.5",
+     "r2_status": "CONFLICT",
+     "r2_depth": "0.5"
+    },
+    {
+     "slab_face": "1F-052",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.558462,
+     "w": 0.4,
+     "l": 1.5916,
+     "free_edge_m": 3.5603,
+     "member": "BM-1F-025",
+     "mark": "B19",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.75",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.75"
+    },
+    {
+     "slab_face": "1F-053",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.038126,
+     "w": 0.1694,
+     "l": 0.4472,
+     "free_edge_m": 1.0272,
+     "member": null,
+     "mark": null,
+     "r2_status": "NO_REGISTER_ROW",
+     "r2_depth": ""
+    },
+    {
+     "slab_face": "1F-054",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.04,
+     "w": 0.2,
+     "l": 0.4,
+     "free_edge_m": 1.0472,
+     "member": "BM-1F-010",
+     "mark": "B1",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.4",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.4"
+    },
+    {
+     "slab_face": "1F-055",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.894494,
+     "w": 0.4,
+     "l": 2.2847,
+     "free_edge_m": 4.8744,
+     "member": "BM-1F-025",
+     "mark": "B19",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.75",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.75"
+    },
+    {
+     "slab_face": "1F-064",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.283923,
+     "w": 0.2,
+     "l": 1.4317,
+     "free_edge_m": 3.0407,
+     "member": "BM-1F-010",
+     "mark": "B1",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.4",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.4"
+    },
+    {
+     "slab_face": "1F-066",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.018046,
+     "w": 0.0722,
+     "l": 0.25,
+     "free_edge_m": 0.3944,
+     "member": "BM-1F-019",
+     "mark": "B6",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.5",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.5"
+    },
+    {
+     "slab_face": "1F-075",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.912279,
+     "w": 0.55,
+     "l": 1.692,
+     "free_edge_m": 3.8714,
+     "member": "BM-1F-027",
+     "mark": "B25",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.75",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.75"
+    }
+   ],
+   "openings": [
+    {
+     "slab_face": "1F-076",
+     "cls": "DOME_OPENING+RING",
+     "m2": 0.033531,
+     "edge_in_room_m": 0.5367,
+     "open_m2": 0.0,
+     "ring_m2": 0.033531,
+     "open_edge_in_room_m": 0.0
+    }
+   ],
+   "covered_m2": 16.338088,
+   "face": "1F-R0E919A",
+   "floor": "1F",
+   "kind": "DRY",
+   "name": "Master bedroom",
+   "part": "",
+   "engine_face_area_m2": 16.34,
+   "engine_fin_ceiling": {
+    "m2": 16.34,
+    "lines": 1,
+    "blocked": 0
+   }
+  },
+  {
+   "area_m2": 10.151,
+   "perimeter_m": 16.94,
+   "above": {
+    "SLAB": 9.433166,
+    "BEAM_OR_COLUMN": 0.717834
+   },
+   "beams": [
+    {
+     "slab_face": "1F-019",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.3075,
+     "w": 0.2,
+     "l": 3.0,
+     "free_edge_m": 4.05,
+     "member": "BM-1F-009",
+     "mark": "B2",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.4",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.4"
+    },
+    {
+     "slab_face": "1F-052",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.410334,
+     "w": 0.375,
+     "l": 1.42,
+     "free_edge_m": 1.4304,
+     "member": "BM-1F-025",
+     "mark": "B19",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.75",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.75"
+    }
+   ],
+   "openings": [],
+   "covered_m2": 10.151,
+   "face": "1F-R26FA0D",
+   "floor": "1F",
+   "kind": "WET",
+   "name": "Laundry",
+   "part": "",
+   "engine_face_area_m2": 10.151,
+   "engine_fin_ceiling": {
+    "m2": 10.151,
+    "lines": 1,
+    "blocked": 0
+   }
+  },
+  {
+   "area_m2": 5.0225,
+   "perimeter_m": 9.0,
+   "above": {
+    "DOME_OPENING+RING": 2.115323,
+    "BEAM_OR_COLUMN": 0.6225,
+    "SLAB": 2.284677
+   },
+   "beams": [
+    {
+     "slab_face": "1F-082",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.1225,
+     "w": 0.05,
+     "l": 2.45,
+     "free_edge_m": 2.45,
+     "member": "BM-1F-022",
+     "mark": "CB13",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.5",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.5"
+    },
+    {
+     "slab_face": "1F-095",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.5,
+     "w": 0.25,
+     "l": 2.0,
+     "free_edge_m": 4.25,
+     "member": "BM-1F-021",
+     "mark": "B6",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.5",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.5"
+    }
+   ],
+   "openings": [
+    {
+     "slab_face": "1F-073",
+     "cls": "DOME_OPENING+RING",
+     "m2": 2.115323,
+     "edge_in_room_m": 3.0577,
+     "open_m2": 1.422702,
+     "ring_m2": 0.692621,
+     "open_edge_in_room_m": 2.2632
+    }
+   ],
+   "covered_m2": 5.0225,
+   "face": "1F-R8BDA49",
+   "floor": "1F",
+   "kind": "WET",
+   "name": "Bathroom / W.C.",
+   "part": "",
+   "engine_face_area_m2": 5.0225,
+   "engine_fin_ceiling": {
+    "m2": 5.0225,
+    "lines": 1,
+    "blocked": 0
+   }
+  },
+  {
+   "area_m2": 5.0225,
+   "perimeter_m": 9.0,
+   "above": {
+    "BEAM_OR_COLUMN": 0.7325,
+    "DOME_OPENING+RING": 1.595055,
+    "SLAB": 2.694945
+   },
+   "beams": [
+    {
+     "slab_face": "1F-072",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.245,
+     "w": 0.1,
+     "l": 2.45,
+     "free_edge_m": 2.4387,
+     "member": "BM-1F-031",
+     "mark": "CB10",
+     "t110_status": "CONFLICT",
+     "t110_depth": "see candidates",
+     "r2_status": "CONFLICT",
+     "r2_depth": ""
+    },
+    {
+     "slab_face": "1F-095",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.4875,
+     "w": 0.25,
+     "l": 1.95,
+     "free_edge_m": 4.15,
+     "member": "BM-1F-021",
+     "mark": "B6",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.5",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.5"
+    }
+   ],
+   "openings": [
+    {
+     "slab_face": "1F-073",
+     "cls": "DOME_OPENING+RING",
+     "m2": 1.595055,
+     "edge_in_room_m": 2.3831,
+     "open_m2": 1.241024,
+     "ring_m2": 0.354032,
+     "open_edge_in_room_m": 2.0893
+    }
+   ],
+   "covered_m2": 5.0225,
+   "face": "1F-R48AA46",
+   "floor": "1F",
+   "kind": "WET",
+   "name": "Bathroom / W.C.",
+   "part": "",
+   "engine_face_area_m2": 5.0225,
+   "engine_fin_ceiling": {
+    "m2": 5.0225,
+    "lines": 1,
+    "blocked": 0
+   }
+  },
+  {
+   "area_m2": 4.725,
+   "perimeter_m": 8.7,
+   "above": {
+    "SLAB": 2.608052,
+    "BEAM_OR_COLUMN": 1.0825,
+    "DOME_OPENING+RING": 1.021948
+   },
+   "beams": [
+    {
+     "slab_face": "1F-026",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.069274,
+     "w": 0.05,
+     "l": 1.3855,
+     "free_edge_m": 1.4355,
+     "member": "BM-1F-017",
+     "mark": "CB12",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.75",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.75"
+    },
+    {
+     "slab_face": "1F-058",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.44,
+     "w": 0.2,
+     "l": 2.2,
+     "free_edge_m": 4.6,
+     "member": "BM-1F-014",
+     "mark": "B4",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.5",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.5"
+    },
+    {
+     "slab_face": "1F-066",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.55,
+     "w": 0.25,
+     "l": 2.2,
+     "free_edge_m": 4.65,
+     "member": "BM-1F-019",
+     "mark": "B6",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.5",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.5"
+    },
+    {
+     "slab_face": "1F-089",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.023226,
+     "w": 0.05,
+     "l": 0.4645,
+     "free_edge_m": 0.5145,
+     "member": "BM-1F-017",
+     "mark": "CB12",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.75",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.75"
+    }
+   ],
+   "openings": [
+    {
+     "slab_face": "1F-076",
+     "cls": "DOME_OPENING+RING",
+     "m2": 0.575454,
+     "edge_in_room_m": 4.1503,
+     "open_m2": 0.000714,
+     "ring_m2": 0.57474,
+     "open_edge_in_room_m": 0.0
+    },
+    {
+     "slab_face": "1F-077",
+     "cls": "DOME_OPENING+RING",
+     "m2": 0.446494,
+     "edge_in_room_m": 1.4858,
+     "open_m2": 0.446456,
+     "ring_m2": 3.8e-05,
+     "open_edge_in_room_m": 1.4905
+    }
+   ],
+   "covered_m2": 4.7125,
+   "face": "1F-R48CDA5",
+   "floor": "1F",
+   "kind": "WET",
+   "name": "Bathroom / W.C.",
+   "part": "",
+   "engine_face_area_m2": 4.725,
+   "engine_fin_ceiling": {
+    "m2": 4.725,
+    "lines": 1,
+    "blocked": 0
+   }
+  },
+  {
+   "area_m2": 3.5775,
+   "perimeter_m": 7.6,
+   "above": {
+    "SLAB": 3.2175,
+    "BEAM_OR_COLUMN": 0.36
+   },
+   "beams": [
+    {
+     "slab_face": "1F-024",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.36,
+     "w": 0.2,
+     "l": 1.8,
+     "free_edge_m": 3.6,
+     "member": "BM-1F-030",
+     "mark": "B6",
+     "t110_status": "CONFLICT",
+     "t110_depth": "0.5",
+     "r2_status": "CONFLICT",
+     "r2_depth": "0.5"
+    }
+   ],
+   "openings": [],
+   "covered_m2": 3.5775,
+   "face": "1F-RED23B8",
+   "floor": "1F",
+   "kind": "WET",
+   "name": "Bathroom / W.C.",
+   "part": "",
+   "engine_face_area_m2": 3.5775,
+   "engine_fin_ceiling": {
+    "m2": 3.5775,
+    "lines": 1,
+    "blocked": 0
+   }
+  },
+  {
+   "area_m2": 3.24,
+   "perimeter_m": 7.2,
+   "above": {
+    "OPENING": 3.24
+   },
+   "beams": [],
+   "openings": [
+    {
+     "slab_face": "1F-036",
+     "cls": "OPENING",
+     "m2": 3.24,
+     "edge_in_room_m": 0.0
+    }
+   ],
+   "covered_m2": 3.24,
+   "face": "1F-RCCB686",
+   "floor": "1F",
+   "kind": "SHAFT",
+   "name": "Shaft / duct",
+   "part": "",
+   "engine_face_area_m2": 3.24,
+   "engine_fin_ceiling": null
+  },
+  {
+   "area_m2": 2.97,
+   "perimeter_m": 6.9,
+   "above": {
+    "SLAB": 2.97
+   },
+   "beams": [],
+   "openings": [],
+   "covered_m2": 2.97,
+   "face": "1F-RFFE7AF",
+   "floor": "1F",
+   "kind": null,
+   "name": "Unnamed space",
+   "part": "",
+   "engine_face_area_m2": 2.97,
+   "engine_fin_ceiling": null
+  },
+  {
+   "area_m2": 2.646,
+   "perimeter_m": 6.54,
+   "above": {
+    "SLAB": 2.646
+   },
+   "beams": [],
+   "openings": [],
+   "covered_m2": 2.646,
+   "face": "1F-R52AC05",
+   "floor": "1F",
+   "kind": "WET",
+   "name": "Bathroom / W.C.",
+   "part": "",
+   "engine_face_area_m2": 2.646,
+   "engine_fin_ceiling": {
+    "m2": 2.646,
+    "lines": 1,
+    "blocked": 0
+   }
+  },
+  {
+   "area_m2": 19.350001,
+   "perimeter_m": 18.9,
+   "above": {
+    "SLAB": 18.6,
+    "BEAM_OR_COLUMN": 0.75
+   },
+   "beams": [
+    {
+     "slab_face": "2F-040",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.6,
+     "w": 0.2,
+     "l": 3.0,
+     "free_edge_m": 6.0,
+     "member": "BM-2F-008",
+     "mark": "B2",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.4",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.4"
+    },
+    {
+     "slab_face": "2F-057",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.15,
+     "w": 0.05,
+     "l": 3.0,
+     "free_edge_m": 3.0,
+     "member": "BM-2F-006",
+     "mark": "B2",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.4",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.4"
+    }
+   ],
+   "openings": [],
+   "covered_m2": 19.35,
+   "face": "2F-R1DB2D2",
+   "floor": "2F",
+   "kind": "DRY",
+   "name": "Maid room",
+   "part": "",
+   "engine_face_area_m2": 19.350001,
+   "engine_fin_ceiling": {
+    "m2": 19.350001,
+    "lines": 1,
+    "blocked": 0
+   }
+  },
+  {
+   "area_m2": 18.600001,
+   "perimeter_m": 22.0,
+   "above": {
+    "SLAB": 17.645,
+    "BEAM_OR_COLUMN": 0.955
+   },
+   "beams": [
+    {
+     "slab_face": "2F-021",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.49,
+     "w": 0.2,
+     "l": 2.45,
+     "free_edge_m": 4.9,
+     "member": "BM-2F-003",
+     "mark": "B3",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.4",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.4"
+    },
+    {
+     "slab_face": "2F-044",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.25,
+     "w": 0.2,
+     "l": 1.25,
+     "free_edge_m": 2.5,
+     "member": "BM-2F-018",
+     "mark": "(none)",
+     "t110_status": "HELD",
+     "t110_depth": "see candidates",
+     "r2_status": "HELD",
+     "r2_depth": ""
+    },
+    {
+     "slab_face": "2F-055",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.125,
+     "w": 0.05,
+     "l": 2.5,
+     "free_edge_m": 2.55,
+     "member": "BM-2F-004",
+     "mark": "B2",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.4",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.4"
+    },
+    {
+     "slab_face": "2F-056",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.09,
+     "w": 0.05,
+     "l": 1.8,
+     "free_edge_m": 1.85,
+     "member": "BM-2F-005",
+     "mark": "B1",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.4",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.4"
+    }
+   ],
+   "openings": [],
+   "covered_m2": 18.6,
+   "face": "2F-R4D1B62",
+   "floor": "2F",
+   "kind": "STAIR",
+   "name": "Stair",
+   "part": "",
+   "engine_face_area_m2": 18.600001,
+   "engine_fin_ceiling": {
+    "m2": 0.0,
+    "lines": 1,
+    "blocked": 1
+   }
+  },
+  {
+   "area_m2": 5.55,
+   "perimeter_m": 9.7,
+   "above": {
+    "SLAB": 5.4,
+    "BEAM_OR_COLUMN": 0.15
+   },
+   "beams": [
+    {
+     "slab_face": "2F-014",
+     "cls": "BEAM_OR_COLUMN",
+     "piece_m2": 0.15,
+     "w": 0.05,
+     "l": 3.0,
+     "free_edge_m": 3.0,
+     "member": "BM-2F-010",
+     "mark": "B3",
+     "t110_status": "CALCULATED",
+     "t110_depth": "0.4",
+     "r2_status": "CALCULATED",
+     "r2_depth": "0.4"
+    }
+   ],
+   "openings": [],
+   "covered_m2": 5.55,
+   "face": "2F-RE83BED",
+   "floor": "2F",
+   "kind": "WET",
+   "name": "Bathroom / W.C.",
+   "part": "",
+   "engine_face_area_m2": 5.55,
+   "engine_fin_ceiling": {
+    "m2": 5.55,
+    "lines": 1,
+    "blocked": 0
+   }
+  },
+  {
+   "area_m2": 3.24,
+   "perimeter_m": 7.2,
+   "above": {
+    "SLAB": 3.24
+   },
+   "beams": [],
+   "openings": [],
+   "covered_m2": 3.24,
+   "face": "2F-R2BDCEE",
+   "floor": "2F",
+   "kind": "SHAFT",
+   "name": "Shaft / duct",
+   "part": "",
+   "engine_face_area_m2": 3.24,
+   "engine_fin_ceiling": null
+  }
+ ],
+ "strips": [
+  {
+   "strip": "GF-STRIP-OP-001",
+   "floor": "GF",
+   "item": "FIN.FLOOR.PORCELAIN",
+   "opening": "OP-001",
+   "kind": "PASSAGE",
+   "m2": 0.28,
+   "sides": "Unnamed space"
+  },
+  {
+   "strip": "GF-STRIP-OP-003",
+   "floor": "GF",
+   "item": "FIN.FLOOR.PORCELAIN",
+   "opening": "OP-003",
+   "kind": "PASSAGE",
+   "m2": 2.244,
+   "sides": "Dining + Living / saloon + Pantry + Reception | Garden / yard / court | Dining + Garden / yard / court + Living / saloon + Pantry + Reception | Unnamed space | Dining + Living / saloon + Pantry + Reception | Unnamed space"
+  },
+  {
+   "strip": "GF-STRIP-OP-005",
+   "floor": "GF",
+   "item": "FIN.FLOOR.PORCELAIN",
+   "opening": "OP-005",
+   "kind": "DOOR",
+   "m2": 0.18,
+   "sides": "Driver room"
+  },
+  {
+   "strip": "GF-STRIP-OP-007",
+   "floor": "GF",
+   "item": "FIN.FLOOR.PORCELAIN",
+   "opening": "OP-007",
+   "kind": "PASSAGE",
+   "m2": 0.24,
+   "sides": "Unnamed space"
+  },
+  {
+   "strip": "GF-STRIP-OP-008",
+   "floor": "GF",
+   "item": "FIN.FLOOR.PORCELAIN",
+   "opening": "OP-008",
+   "kind": "DOOR",
+   "m2": 0.2,
+   "sides": "Dining + Living / saloon + Pantry + Reception"
+  },
+  {
+   "strip": "GF-STRIP-OP-009",
+   "floor": "GF",
+   "item": "FIN.FLOOR.PORCELAIN",
+   "opening": "OP-009",
+   "kind": "DOOR",
+   "m2": 0.2,
+   "sides": "Majlis / diwaniya"
+  },
+  {
+   "strip": "GF-STRIP-OP-010",
+   "floor": "GF",
+   "item": "FIN.FLOOR.PORCELAIN",
+   "opening": "OP-010",
+   "kind": "DOOR",
+   "m2": 0.2,
+   "sides": "Dining + Living / saloon + Pantry + Reception | Stair"
+  },
+  {
+   "strip": "GF-STRIP-OP-011",
+   "floor": "GF",
+   "item": "FIN.FLOOR.PORCELAIN",
+   "opening": "OP-011",
+   "kind": "PASSAGE",
+   "m2": 0.2,
+   "sides": "Dining + Living / saloon + Pantry + Reception | Shaft / duct"
+  },
+  {
+   "strip": "GF-STRIP-OP-012",
+   "floor": "GF",
+   "item": "FIN.FLOOR.PORCELAIN",
+   "opening": "OP-012",
+   "kind": "DOOR",
+   "m2": 0.15,
+   "sides": "Dining + Living / saloon + Pantry + Reception | Master bedroom"
+  },
+  {
+   "strip": "GF-STRIP-OP-013",
+   "floor": "GF",
+   "item": "FIN.FLOOR.PORCELAIN",
+   "opening": "OP-013",
+   "kind": "DOOR",
+   "m2": 0.18,
+   "sides": "Stair"
+  },
+  {
+   "strip": "GF-STRIP-OP-017",
+   "floor": "GF",
+   "item": "FIN.MARBLE.THRESHOLD",
+   "opening": "OP-017",
+   "kind": "DOOR",
+   "m2": 0.12,
+   "sides": "Unnamed space | Bathroom / W.C."
+  },
+  {
+   "strip": "GF-STRIP-OP-018",
+   "floor": "GF",
+   "item": "FIN.MARBLE.THRESHOLD",
+   "opening": "OP-018",
+   "kind": "DOOR",
+   "m2": 0.12,
+   "sides": "Unnamed space | Bathroom / W.C."
+  },
+  {
+   "strip": "GF-STRIP-OP-021",
+   "floor": "GF",
+   "item": "FIN.FLOOR.PORCELAIN",
+   "opening": "OP-021",
+   "kind": "DOOR",
+   "m2": 0.4,
+   "sides": "Dining + Living / saloon + Pantry + Reception"
+  },
+  {
+   "strip": "GF-STRIP-OP-025",
+   "floor": "GF",
+   "item": "FIN.MARBLE.THRESHOLD",
+   "opening": "OP-025",
+   "kind": "DOOR",
+   "m2": 0.2,
+   "sides": "Kitchen | Unnamed space"
+  },
+  {
+   "strip": "GF-STRIP-OP-026",
+   "floor": "GF",
+   "item": "FIN.MARBLE.THRESHOLD",
+   "opening": "OP-026",
+   "kind": "DOOR",
+   "m2": 0.12,
+   "sides": "Driver room | Bathroom / W.C."
+  },
+  {
+   "strip": "1F-STRIP-OP-004",
+   "floor": "1F",
+   "item": "FIN.MARBLE.THRESHOLD",
+   "opening": "OP-004",
+   "kind": "DOOR",
+   "m2": 0.12,
+   "sides": "Master bedroom | Bathroom / W.C."
+  },
+  {
+   "strip": "1F-STRIP-OP-005",
+   "floor": "1F",
+   "item": "FIN.FLOOR.PORCELAIN",
+   "opening": "OP-005",
+   "kind": "DOOR",
+   "m2": 0.135,
+   "sides": "Living / saloon | Master bedroom"
+  },
+  {
+   "strip": "1F-STRIP-OP-006",
+   "floor": "1F",
+   "item": "FIN.FLOOR.PORCELAIN",
+   "opening": "OP-006",
+   "kind": "DOOR",
+   "m2": 0.135,
+   "sides": "Living / saloon | Master bedroom"
+  },
+  {
+   "strip": "1F-STRIP-OP-007",
+   "floor": "1F",
+   "item": "FIN.FLOOR.PORCELAIN",
+   "opening": "OP-007",
+   "kind": "PASSAGE",
+   "m2": 0.2,
+   "sides": "Living / saloon | Shaft / duct"
+  },
+  {
+   "strip": "1F-STRIP-OP-008",
+   "floor": "1F",
+   "item": "FIN.MARBLE.THRESHOLD",
+   "opening": "OP-008",
+   "kind": "DOOR",
+   "m2": 0.18,
+   "sides": "Living / saloon | Laundry"
+  },
+  {
+   "strip": "1F-STRIP-OP-010",
+   "floor": "1F",
+   "item": "FIN.MARBLE.THRESHOLD",
+   "opening": "OP-010",
+   "kind": "DOOR",
+   "m2": 0.12,
+   "sides": "Laundry | Bathroom / W.C."
+  },
+  {
+   "strip": "1F-STRIP-OP-011",
+   "floor": "1F",
+   "item": "FIN.FLOOR.PORCELAIN",
+   "opening": "OP-011",
+   "kind": "PASSAGE",
+   "m2": 0.15,
+   "sides": "Master bedroom | Unnamed space"
+  },
+  {
+   "strip": "1F-STRIP-OP-018",
+   "floor": "1F",
+   "item": "FIN.MARBLE.THRESHOLD",
+   "opening": "OP-018",
+   "kind": "DOOR",
+   "m2": 0.12,
+   "sides": "Master bedroom | Bathroom / W.C."
+  },
+  {
+   "strip": "1F-STRIP-OP-019",
+   "floor": "1F",
+   "item": "FIN.MARBLE.THRESHOLD",
+   "opening": "OP-019",
+   "kind": "DOOR",
+   "m2": 0.12,
+   "sides": "Bathroom / W.C. | Unnamed space"
+  },
+  {
+   "strip": "1F-STRIP-OP-020",
+   "floor": "1F",
+   "item": "FIN.FLOOR.PORCELAIN",
+   "opening": "OP-020",
+   "kind": "DOOR",
+   "m2": 0.15,
+   "sides": "Living / saloon | Master bedroom"
+  },
+  {
+   "strip": "2F-STRIP-OP-001",
+   "floor": "2F",
+   "item": "FIN.FLOOR.PORCELAIN",
+   "opening": "OP-001",
+   "kind": "DOOR",
+   "m2": 0.15,
+   "sides": "Stair"
+  },
+  {
+   "strip": "2F-STRIP-OP-002",
+   "floor": "2F",
+   "item": "FIN.FLOOR.PORCELAIN",
+   "opening": "OP-002",
+   "kind": "PASSAGE",
+   "m2": 0.2,
+   "sides": "Stair | Shaft / duct"
+  },
+  {
+   "strip": "2F-STRIP-OP-006",
+   "floor": "2F",
+   "item": "FIN.MARBLE.THRESHOLD",
+   "opening": "OP-006",
+   "kind": "DOOR",
+   "m2": 0.12,
+   "sides": "Maid room | Bathroom / W.C."
+  },
+  {
+   "strip": "2F-STRIP-OP-007",
+   "floor": "2F",
+   "item": "FIN.FLOOR.PORCELAIN",
+   "opening": "OP-007",
+   "kind": "DOOR",
+   "m2": 0.18,
+   "sides": "Maid room | Stair"
+  }
+ ]
+}

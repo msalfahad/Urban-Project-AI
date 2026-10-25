@@ -1,0 +1,17 @@
+{
+ "GF": {
+  "columns_matched": 30,
+  "arch_columns": 30,
+  "max_residual_m": 0.0
+ },
+ "1F": {
+  "columns_matched": 20,
+  "arch_columns": 20,
+  "max_residual_m": 0.0
+ },
+ "2F": {
+  "columns_matched": 9,
+  "arch_columns": 9,
+  "max_residual_m": 0.0
+ }
+}
