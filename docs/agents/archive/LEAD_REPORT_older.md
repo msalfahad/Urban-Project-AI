@@ -68,6 +68,73 @@ stand-down this cycle); a 90-minute worker cadence or accepting the IDLE runs is
 research-script entry and a chunked full-suite entry in the wrapper; (3) sha256 of the P7757 printed take-off and of the
 Qortuba seal / PA08 take-off; (4) a site level survey, if one exists.
 
+## LEAD REPORT 2026-10-25 06:15 UTC
+
+Repositories: attached Urban-Project-AI checkout (main eafbb0f6); `.work` prepared AUTOMATICALLY ("setup by auto",
+06:10). Working branch 04d34378 -> 643b310b (four Checker merges via 'engine push': T-257, T-283, T-281, T-288); no owner
+commit on the engine branch. Drive readable: nothing created or modified on Drive since 04:00, no new images (no photo
+review task). Self-check: codemap PASS, pytest t061 PASS, freeze PASS (0). OWNER_SESSION_CHANGES: one entry since my last
+run (04:38: hourly cadence kept provisionally, packages about 50 min without cutting verification, deterministic
+BOQ_LINES before T-245 acceptance, one whole-line definition, RFIs unsent): applied, nothing undone or duplicated.
+
+PROGRESS (Alsenan, by trade and unit; released unchanged: concrete 92.77 vs freelancer 111.81 m3, -17.03 %, run A).
+WHOLE LINES VERIFIED (owner 04:38 definition): candidate 1 / 13 (CONC.SLAB 60.2804 m3), released 0 / 13; no change.
+- FIRST REAL EXPORT (all trades): T-245 READY 06:13 as a Gate B package, ARCH_TAKEOFF_V3.0.16: one project id and one
+  revision set over 3,120 structural + 579 architectural lines; line ids and every quantity byte-identical to V3.0.15
+  (0 totals moved); export in one command, 3,699 rows (VERIFIED 0 until the Checker writes the V2 records, HELD 1,878
+  BLANK, MEASURED UNVERIFIED 1,047, EXCLUDED 774), two runs byte-identical. CAUSE of the run-to-run json hash NAMED: the
+  local file name of the structural drawing copy in source.documents[].file (all four recorded hashes reproduced by
+  renaming only it). Gaps: full suite and m9 L3 folders NOT run by the worker; metric-ton default (part d) not done.
+- WATERPROOFING, FOUNDATION (m2): buried ground-beam coat 45.4682 m2 -> VERIFIED COMPONENT (Checker own 32 / 32 faces,
+  45.4717 m2, +0.008 %; was 9 / 32); the BURIED_LIQUID line stays PARTIALLY VERIFIED (4 HELD element lines BLANK, no
+  completeness record yet). Freelancer: no row (scope only, not scored).
+- CEILINGS (m2), MERGED as research (6e141df6): decor 361.229 m2 (released 403.163: -10.40 %; freelancer 409.58:
+  -11.81 %); bulkheads 27.935 m2; ground under the round stair given to one line per piece by the Checker.
+- STAIR SOFFITS (m2), MERGED as research (40518c58): ST-01 17.198 (owner region) .. 17.243 m2 true, MS1-L CONFLICT 3.215 ..
+  3.935, winder HELD; ST-02 8.479 m2 plan, curved part HELD; formed soffit = finished soffit on 4 flights (Checker). Neither
+  the engine nor the freelancer has this line.
+- BLOCKWORK (m2), register v4 MERGED (643b310b): 449.6007 - 7.9131 x d m2 (d HELD, D-41; 449.6007 is an upper bound,
+  never a quantity); VERIFIED 297.847 m2 on 18 walls (66 % of the d = 0 bound); determinate 402.7988 m2 on 31 walls.
+- REBAR column cores (kg), READY: 26 cores 801.321 -> 734.781 kg (-66.548 kg, -8.3 %) as a LOWER BOUND on the printed chain
+  (the old bound omitted the verified 0.17 m underlay); 10 cores 173.510 kg HELD. Freelancer: not measured for this item.
+- CONCRETE COLUMN (m3), READY: T-287 G1 settles two CB5 columns from the drawings at base +0.25: 1.4300 m3 (candidate
+  1.2375, -0.1925 m3 / -13.5 %); G2 stair winder / waists and G3 tower dome are designer-package rows (not asked yet).
+- Missing (unchanged): lap lengths (no print), excavation depths (survey / formation), designer answers; ceilings,
+  blockwork and stair soffits are measured and verified in parts but not yet integrated (lane I chain).
+- Learned (lessons register: 1 closed, 2 new OPEN, 1 OPEN): CLOSED 'a level ruling on one trade did not reach the trade
+  under it' (T-288 merged). NEW 'guard the reader, not only the comparison' (T-275). NEW 'a bound is only as good as its
+  datum; a convention-labelled bound is still a convention' (T-280). OPEN json-hash binding: cause now named, closes at
+  T-245 Gate B.
+
+ENGINEERING DECISIONS THIS RUN (ERS s.5 Lead). (1) Classified: T-288, T-283, T-281, T-257 WORKED; T-275 PARTIAL ->
+narrow rework r2. (2) VERIFIER QUEUE: T-245 Gate B FIRST (06:49), with T-287; T-280 within 2 Checker runs; six Lead
+challenges on T-245 (complete suite to the end, run metadata kept apart and auditable, invalidation tests, VERIFIED only
+from populated V2 records, genuine mixes still refused, the Checker issues the four downgrade records himself). (3) NEW
+T-289 (lane S, gate 1): the structural basis ledger, line id by line id, for the four unsupported-basis quantities and
+T-287 G1, the input T-254 and the T-245 (f) records need; an integration dependency, not new research. (4) T-170
+excavation PROMOTED (missing BOQ category; depth HELD BLANK, never the 1.50 minimum). (5) CROSS-TRADE challenges: T-287 G1
+(is +0.25 the top of the member under the column?), T-280 (a quantity restated from a HELD datum is a bound, labelled so).
+(6) Element register +4 rows (CB5 columns, foundation cores, the four unsupported-basis quantities, ground under the
+round stair).
+
+TEAM HEALTH. Since 04:15: Worker 1 04:20 -> (T-287 complete 05:05), 05:20 -> 05:59 SUCCESS (T-280 READY, T-287 set
+READY); Worker 2 04:23 SUCCESS (T-288), 04:39 -> 05:18 SUCCESS (T-275), 05:39 open (T-286, 36 min); Worker 3 05:00 ->
+06:13 SUCCESS (T-245; it reports the session's Bash safety check gave no verdict for about 10 calls; this Lead run saw the
+same twice, transient); Verifier 04:51 -> 05:32 SUCCESS (4 merges, full suite NEW 0 / KNOWN 395), 05:51 -> 06:04 SUCCESS
+(T-275 rejected, buried WP 32 / 32). Every closed run self-check PASS; no refusal by the repository; no unclosed run.
+Throughput: 4 Gate A merged + 1 narrow reject in 2 h; READY 3 = target (T-245 0.0 h, T-287 / T-280 0.3 h, all
+CHECKER-RUNS). Queue check: 42 actionable rows, 0 flagged, 0 stall checks. TODO 2 (T-289, T-170) + T-275 rework, under the
+8 - 12 band by design (owner 23:49 integration first; the lane I chain shares one set of files, so its rows stay QUEUED
+one at a time).
+
+OWNER PACKAGE: none. No decision is genuinely open (ERS s.2.7); the designer list (RFIs) stays unsent until it is ready for
+your review (owner 04:38 (4)); T-287 adds two rows (stair winder / waists, tower dome) once verified.
+
+NEEDS FIXING (owner only): (1) the session Bash safety check returned no verdict intermittently this cycle (Worker 3 about
+10 calls, Lead 2); no command was refused, but a worker could not run the full suite because of it; (2) unchanged: overlap
+runs are paid sessions; a research-script entry and a chunked full-suite entry in the wrapper; sha256 of the P7757 printed
+take-off and of the Qortuba seal / PA08 take-off; a site level survey, if one exists.
+
 ## LEAD REPORT 2026-10-25 02:15 UTC
 
 Repositories: attached Urban-Project-AI checkout (main eafbb0f6); `.work` prepared AUTOMATICALLY ("setup by auto",

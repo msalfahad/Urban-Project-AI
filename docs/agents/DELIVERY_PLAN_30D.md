@@ -46,7 +46,19 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
-## Status (Lead, 2026-10-25 10:15; re-estimated each run from what merged and was verified)
+## Status (Lead, 2026-10-25 12:15; re-estimated each run from what merged and was verified)
+
+Lead 2026-10-25 12:15: since 10:15 the Checker merged T-290 891dbd4d, T-291 0c6b2ba5 and T-170 2991be3d and issued the
+V3.0.16 records (8 V2 verdicts, 7 downgrades; 21.953969 m3 moved to HELD / CONFLICT). Week 1 target (27 Oct, 'one verified
+improvement through the integrated pipeline'): the first real export is merged with records, but it still counts 0 whole
+verified lines because the completeness join reads an old slab grain (T-298, owner immediate priority, worker 2 12:39;
+about 1 - 2 h + Gate A) and no waterproofing inventory exists (T-301). With T-298 merged the slab line (60.2804 m3) can be
+the first whole verified line through the pipeline, estimate late 25 Oct: on track for 27 Oct. Exterior ground beams
+(T-254, +7.80 m3 drawn) are in work for worker 3 (Gate B after). Week 2 (3 Nov): blockwork 422.5 m2 via T-279 behind
+T-266 / T-255 in the owner's order, estimate 26 - 27 Oct, unchanged. Reinforcement: Stage B (tonnes, reconciliation) runs
+now; no rebar quantity moves until the owner approves an implementation stage.
+
+### Earlier status (Lead, 2026-10-25 10:15)
 
 Lead 2026-10-25 10:15: since 08:15 the Checker merged 3 Gate A pieces (T-289 455c93c4 structural basis ledger with his own
 re-derive, T-275 r2 6c4c9700, T-286 e861e390); T-245 r2 (first real export) is in Gate B in the 08:50 Checker run, about

@@ -36,6 +36,15 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
    commit. Decision: board-only handoffs are verified as hand evidence (the verifier re-reads the cited notes), and the
    next task on the topic writes the files (T-117); a run with no line stays a NEEDS FIXING item for the owner's setting.
 
+## 2026-10-25 12:15 (lead run; covers 10:15 - 12:15)
+
+- T-290 stairs / domes basis ledger: WORKED (MERGED 891dbd4d, Verifier 11:05; D1 wedge 0.025714 and MS2-LD 0.4696 m3 agreed; E1 waist: section B-B draws it on ground, so soffit formwork NOT_APPLICABLE and concrete HELD both stand, not a conflict). Decision: T-266 consumes it unchanged.
+- T-291 blockwork wall-to-line ledger: WORKED (MERGED 0c6b2ba5, Verifier 11:30; bindings / totals from register v4 agree, 422.5314 m2 determinate). Decision: T-279 consumes it after T-255 in the owner's lane I order.
+- T-170 excavation / backfill ledger: WORKED (MERGED 2991be3d, Verifier 11:31, minor F-T170-01). Every volume stays HELD BLANK (formation bound only). Decision: no new row; the finding rides the next excavation row.
+- V3.0.16 Checker records (8 V2 verdicts, 7 downgrades over 43 lines, 21.953969 m3 to HELD / CONFLICT): WORKED as records, PARTIAL in effect: 0 whole lines countable in the export (F-REC-01 slab completeness join on the V3.0.8 grain; F-REC-02 no waterproofing inventory). Decision: T-298 (owner row) FIRST for worker 2 cross-lane; NEW T-301 (WP inventory).
+- T-292 (plaster / paint face-to-line) and T-293 (formwork face-to-member part 1): READY, classified at their verdicts; both hand-ins left the full suite unfinished (lock window). Decision: the Checker runs the suite to the end; new rows sized about 35 min + suite.
+- Team: Worker 1 11:20 / Worker 2 11:40 IDLE on their own run locks (previous runs about 80 min). Recurring cause 'package + full suite longer than the cadence': lessons row OPEN, monitored 24 h.
+
 ## 2026-10-25 10:15 (lead run; covers 08:15 - 10:15)
 
 | Task | Result | Evidence | Decision |
@@ -271,34 +280,3 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
 | T-203 r2 (registry 1.2.0) | WORKED | MERGED 40de7c7f; own re-derivation pool / domes / stair retirement, adverse refused | none |
 | T-220 (planted columns) | WORKED | MERGED 579e613d; PC-1F-A 0.588 m3 Checker 0.0 %; 5 lines NOT_DRAWN agreed | integrate (T-231); B27 / B26 route G cuts -> T-229; PC-2F double joint -> T-229 |
 | T-225 (blockwork 1/4) | WORKED | MERGED 48e6f08a; Checker re-added 74 walls 0.000 m2, both gaps reproduced to cause | T-226 / T-227 promoted (owner order); follow-up evidence 96500525 feeds T-017, not merged separately |
-
-## 2026-10-23 14:20 (lead run)
-
-- **Worker 1 11:25 -> 11:42 / Checker 12:51 -> 13:11**: T-213 MERGED 0ec8c496 -> **WORKED** (one set of 6 sunken panels
-  under two storey conventions, residual 298 -0.0100 m2; slab concrete 3.9658 m3 unchanged; checker own hatch re-measure
-  0.0 %; drop HELD under D-41). Decision: the M8 SLAB_STEP bound becomes T-224 (lane I, new method version, queued).
-- **Worker 2 11:41 -> 12:02 / Checker 13:11**: T-209 MERGED 949c2312 -> **WORKED** (wet-wall tiles 340.41 m2 owner method on
-  12 rooms, 6 HELD; like for like +4.28 % decomposed to 0). Decision: into the finishes package T-211 (V3.0.9).
-- **Worker 2 10:41 -> 11:17 / Checker 13:11**: T-212 r1 REJECTED -> **PARTIAL** (property right, validated on d5df7d1f; on
-  the head merged with V3.0.7 the new property caught arch_v307.py unclassified). Worker 3 13:01 -> 13:56: r2 READY
-  (GUARD_HOST + new P4 import property) -> first at 14:49, on the head merged with 0a622a86.
-- **Worker 3 11:00 -> 11:30 / Checker 13:11**: T-203 r1 REJECTED -> **PARTIAL** (registry right as_of V3.0.6, but V3.0.7
-  merged first and changes B10-09 / B10-10 by the file's own definitions). Decision: narrow r2 first in lane I.
-- **Worker 1 12:27 -> 12:44 / Checker 13:53 -> 14:07**: T-214 MERGED b29060c2 -> **WORKED** (0.05 m drawn layer under every
-  dry FFL, DRAWING-CONFIRMED by the checker on DWF geometry + a 400 dpi scan; wet / sunken / roof HELD). Decision: the
-  held zones become T-221 (lane S).
-- **Worker 1 13:23 -> 13:46 / Checker 14:07**: T-217 MERGED 65fef8fa -> **WORKED** (26 CONFLICT member-storeys, C8 0.900 ..
-  1.0125 m3 GF, lift necks 0.55 .. 0.75 m3/m; 6 drafting notes ENGINE_RIGHT; 3 planted columns no line; 5 released upper
-  lines UNKNOWN). Decision: planted columns + the 5 lines = T-220, first in lane S (they block the column line together
-  with D-16 / D-63, which stay with the designer; D-16 / D-63 rows updated).
-- **Worker 2 12:41 -> 13:07 / Checker 14:07**: T-218 MERGED 0a622a86 -> **WORKED** (kitchen 9.630 m2 WET by Q-30 A: wet
-  62.49 -> 72.12 vs 72.01 m2, +0.15 %; bedrooms re-paired; floor like for like +2.464 m2 closed to named parts). Decision:
-  the kitchen re-code joins T-211; the curved 1F room +1.727 m2 UNRESOLVED + dressing / strip = T-223, first in lane A.
-- **Worker 2 13:42 -> 14:08**: T-215 part 1 READY -> pending (GF ends + G-T108-1 closed from drawn faces, +1.214 .. +1.241
-  m2 gross). Decision: part 2 (1F bay, P-1F-01, P-GF-05) = T-222 after T-215 merges; P-1F-01 plan / section conflict =
-  designer item D-64 (new).
-- **Process**: 7 / 7 slots since 12:20 STARTED + final SUCCESS; 5 merged, 2 rejected (both narrow, both because the hand-in
-  was validated on a head older than the latest merge). Decision: every hand-in now merges the CURRENT head just before
-  the push and lists the merges since the claim (board note 14:20). Checker row / scoreboard stamps ran 5 - 28 min ahead
-  of its commit times: told to stamp with `date -u`.
-

@@ -1,10 +1,41 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
 Plain words, no task numbers. Measured numbers come from SCOREBOARD.md; anything not measured says so.
-Last update: 2026-10-25 10:15 UTC (Lead). Previous version: 2026-10-25 08:15 UTC. The released numbers did not change
+Last update: 2026-10-25 12:15 UTC (Lead). Previous version: 2026-10-25 10:15 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released default V2.9 + route G untouched). Your measure: whole BOQ
-lines independently verified, and trades that can be scored. Still 1 whole line verified in the candidate (the concrete
-slab, 60.28 m3), 0 released. No decision for you.
+lines independently verified, and trades that can be scored. The checker has measured one candidate line whole (the
+concrete slab, 60.28 m3 against the engine's 60.28), but the real export cannot yet count it as a verified whole line:
+its completeness check still reads an older split of the slab lines, and waterproofing has no completeness list at all.
+So the export shows 0 whole verified lines today, 0 released. Fixing that is now first (your 11:51 decision). No
+decision for you.
+
+Since 10:15 (newest first; three pieces checked and merged, the checker's records written into the export):
+- Real export of the candidate BOQ: the checker wrote his verified-line and "hold" records and re-ran the export on the
+  real drawings. 21.95 m3 of concrete that rested on depths or heights the drawings do not print is now shown as held or
+  in conflict instead of released (exterior ground beams, second-floor and annex columns, one stair flight). Rows: 5
+  verified as components, 999 measured but not yet verified, 1,921 held (blank, never zero), 54 not measured, 774 out
+  of scope. Still missing: reinforcement in tonnes (the export still writes kg by default) and the completeness join;
+  both are the next piece of work (starts 12:39).
+- Stairs and domes: checked and merged; the checker agreed every figure he re-derived (released 8.06 -> 7.59 m3 on the
+  verified basis; 2.86 m3 of verified or owner-approved parts to be released by splitting held lines; dome drums in no
+  line, to be shown held).
+- Block walls: checked and merged. 422.53 m2 determinate is ready to replace the blank block-wall lines in the candidate
+  (297.85 m2 of it checker-verified on 18 walls); it goes in after the stairs and the two windows, in your order.
+- Excavation and backfill (missing from both the engine and the freelancer): checked and merged as a ledger; every volume
+  stays held because the drawings give only "not less than 1.5 m" for the formation level.
+- Plaster and paint: every wall face of the 32 rooms is now tied to the candidate's plaster and paint lines (residual
+  0.0000). Plaster = paint 703.30 .. 768.81 m2 (a range, not a midpoint). One room line that the candidate releases
+  (59.45 m2 on the first floor) becomes held, because the curved pool-side window's deduction is not settled for plaster.
+  Waiting for the checker.
+- Formwork (missing from the candidate): first part of the face-by-face ledger: 414 faces tied to their concrete lines,
+  residual 0.000 m2. Found: the boundary ground beam has formwork faces (35.26 m2) but no concrete line in the candidate
+  at all; 16 exterior ground-beam lines still sit at the interior depth (being corrected now). Waiting for the checker.
+- Reinforcement (your 11:51 Stage B): the read-only reconciliation of the different steel ledgers starts at 12:19 (what
+  replaces what, what overlaps, nothing added twice, in tonnes); the completeness safeguard follows it. No steel quantity
+  moves.
+- Team: two worker runs stood down again because the previous run of the same worker was still working (about 80
+  minutes, and the full test suite did not fit); new pieces are sized smaller so the suite fits the hour.
+- Nothing new on Drive; no new photos.
 
 Since 08:15 (newest first; three pieces checked and merged, the first real export back with the checker):
 - First real export of the candidate BOQ: CHECKED AND MERGED (10:17). One project identity over every line, every
