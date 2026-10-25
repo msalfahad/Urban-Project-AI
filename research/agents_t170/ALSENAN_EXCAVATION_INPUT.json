@@ -1,0 +1,1215 @@
+{
+ "schema": "T-170 excavation input: values, Drive file titles, DXF handles and DXF coordinates (mm) only",
+ "source_files": {
+  "ST7757 dxf.dxf": "sha256 9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079 (Drive 'Alsenan chalet project'; = the route G input)",
+  "ST7757.pdf": "Drive 'Alsenan chalet project', p.9 footing schedule + boxed notes, p.13 typical footing / ground-beam details, p.14 lift footing detail"
+ },
+ "units": {
+  "x0_mm": "mm",
+  "y0_mm": "mm",
+  "dx_mm": "mm",
+  "dy_mm": "mm",
+  "schedule_L_W_H_m": "m",
+  "width_m": "m",
+  "length_m": "m",
+  "depth_m": "m"
+ },
+ "outline_source": "FOUNDATION PLAN frame of 'ST7757 dxf.dxf' (x 119 000 .. 152 000 mm): S-FOOTINGS LWPOLYLINE / 4 LINEs and INSERT 'F' (layer S-DIM) block outlines; min corner + size. The 1.00 x 1.00 S-FOOTINGS square at x 111 187.8 (handles 80B..80E, tag 'CN/FN' 808) is the FN at 149 912.2 repeated on the ground-beam plan sheet (offset +38 724.4 mm, the column-plan translation of T-205), not a 27th footing.",
+ "register": "research/urban_engine_m4_correctness/st7757_route_g/PROVISIONAL_REGISTER.csv (CONCRETE rows, FOOTINGS 26 + GROUND_BEAMS 61)",
+ "details": {
+  "ISOLATED_P13": {
+   "blinding_m": 0.1,
+   "underlay_m": 0.07,
+   "projection_m": 0.1,
+   "ref": "ST7757.pdf p.13 'TYP. DETAIL OF ISOLATED FOOTING.' (right): '10cm Plain con.' with '10 | L x W | 10' (blinding projects 0.10 each side); underlay '5cm Screed' + 2 cm membrane = 0.07 (T-206 VERIFIED, Checker 09:59)"
+  },
+  "FF_LIFT": {
+   "blinding_m": 0.1,
+   "underlay_m": null,
+   "projection_m": null,
+   "ref": "ST7757.pdf p.14 'DETAIL OF LIFT WITH ISOLATED FOOTING': '10cm Plain con.', '5cm Screed', 'Water proofing membrane' (no thickness), blinding drawn wider than the footing with no dimension, pit depth 'As Per Lift Manufactures recommendations' (T-204)"
+  },
+  "GB_TYPICAL_P13": {
+   "blinding_m": 0.1,
+   "projection_m": 0.1,
+   "ref": "ST7757.pdf p.13 the four 'Ground Beams' sections: 10 cm blinding under each, '10 | 30 | 10'"
+  },
+  "STRAP": {
+   "blinding_m": null,
+   "projection_m": null,
+   "ref": "no strap-beam section on p.13 / p.14 (SB1 / SB2 / SB3 only on the foundation plan): blinding and projection not printed for straps"
+  }
+ },
+ "levels": {
+  "existing_ground": {
+   "value": 0.0,
+   "status": "DRAWING-CONFIRMED",
+   "ref": "P7757 LEVEL '+-0.00' (block LEL, plot boundary, 6 marks); ST7757 SH08 the same 6; SECTION A-A both ends (T-200 MERGED). A plot datum printed at the boundary; no level survey inside the plot (T-195)"
+  },
+  "formation": {
+   "value": null,
+   "bound": "AT_MOST",
+   "limit": -1.5,
+   "status": "HELD",
+   "ref": "ST7757 p.9 boxed note 1: excavation level not less than 1.5 m below the existing plot level (a minimum depth); p.8 note 12: founding level fixed on site after the soil check; owner Q-21 C; RFI S1 / P-4"
+  },
+  "working_space_m": null,
+  "working_space_why": "not printed in either set and no owner rule (UP-EXC-001 REQUIRES_CONFIRMATION; OQ-13 open, catalogued B_MISSING_DRAWING_EVIDENCE: specification / method fact)",
+  "gb_top": null,
+  "gb_top_why": "p.13 exterior beam: top 'Ground Floor slab level' (a name); GF structural slab top not printed (FFL +1.00 minus build-up b, T-200 / T-206)"
+ },
+ "backfill_material": {
+  "text": "Well graded clean compacted fill from excavation material.",
+  "status": "DRAWING-CONFIRMED",
+  "ref": "ST7757.pdf p.13 both typical footing details and p.14 lift detail; p.13 right detail 'COMPACTED SOIL' under the ground beam"
+ },
+ "footings": [
+  {
+   "id": "FTG:SH10:F11@133817,36348:e37220",
+   "type": "F11",
+   "outline": "1B07",
+   "x0_mm": 133817.2,
+   "y0_mm": 36348.0,
+   "dx_mm": 3500.0,
+   "dy_mm": 1500.0,
+   "outline_closed": false,
+   "schedule_L_W_H_m": [
+    3.5,
+    1.5,
+    0.5
+   ],
+   "detail": "ISOLATED_P13"
+  },
+  {
+   "id": "FTG:SH10:F12@131342,43598:67454a",
+   "type": "F12",
+   "outline": "1ABF",
+   "x0_mm": 131342.2,
+   "y0_mm": 43598.0,
+   "dx_mm": 4400.0,
+   "dy_mm": 3200.0,
+   "outline_closed": true,
+   "schedule_L_W_H_m": [
+    4.4,
+    3.2,
+    0.7000000000000001
+   ],
+   "detail": "ISOLATED_P13"
+  },
+  {
+   "id": "FTG:SH10:F13@128842,39748:6b1a4d",
+   "type": "F13",
+   "outline": "1ADB",
+   "x0_mm": 128842.0,
+   "y0_mm": 39748.0,
+   "dx_mm": 4300.0,
+   "dy_mm": 2400.0,
+   "outline_closed": true,
+   "schedule_L_W_H_m": [
+    4.3,
+    2.4,
+    0.5
+   ],
+   "detail": "ISOLATED_P13"
+  },
+  {
+   "id": "FTG:SH10:F14@140062,36348:73a8e9",
+   "type": "F14",
+   "outline": "1B1A",
+   "x0_mm": 140062.2,
+   "y0_mm": 36348.0,
+   "dx_mm": 3800.0,
+   "dy_mm": 3300.0,
+   "outline_closed": true,
+   "schedule_L_W_H_m": [
+    3.8000000000000003,
+    3.3000000000000003,
+    0.5
+   ],
+   "detail": "ISOLATED_P13"
+  },
+  {
+   "id": "FTG:SH10:F15@124742,36348:932498",
+   "type": "F15",
+   "outline": "1B2A",
+   "x0_mm": 124742.2,
+   "y0_mm": 36348.0,
+   "dx_mm": 1800.0,
+   "dy_mm": 1000.0,
+   "outline_closed": true,
+   "schedule_L_W_H_m": [
+    1.8,
+    1.0,
+    0.4
+   ],
+   "detail": "ISOLATED_P13"
+  },
+  {
+   "id": "FTG:SH10:F2@133842,48648:3919bf",
+   "type": "F2",
+   "outline": "INSERT 165C F layer S-DIM",
+   "x0_mm": 133842.2,
+   "y0_mm": 48648.0,
+   "dx_mm": 1700.0,
+   "dy_mm": 1900.0,
+   "outline_closed": true,
+   "schedule_L_W_H_m": [
+    1.9000000000000001,
+    1.7,
+    0.35000000000000003
+   ],
+   "detail": "ISOLATED_P13"
+  },
+  {
+   "id": "FTG:SH10:F2@136542,48648:277c2f",
+   "type": "F2",
+   "outline": "INSERT 1663 F layer S-DIM",
+   "x0_mm": 136542.2,
+   "y0_mm": 48648.0,
+   "dx_mm": 1700.0,
+   "dy_mm": 1900.0,
+   "outline_closed": true,
+   "schedule_L_W_H_m": [
+    1.9000000000000001,
+    1.7,
+    0.35000000000000003
+   ],
+   "detail": "ISOLATED_P13"
+  },
+  {
+   "id": "FTG:SH10:F3@123192,40398:b6c1c9",
+   "type": "F3",
+   "outline": "INSERT 166B F layer S-DIM",
+   "x0_mm": 123192.2,
+   "y0_mm": 40398.0,
+   "dx_mm": 1600.0,
+   "dy_mm": 1400.0,
+   "outline_closed": true,
+   "schedule_L_W_H_m": [
+    1.6,
+    1.4000000000000001,
+    0.3
+   ],
+   "detail": "ISOLATED_P13"
+  },
+  {
+   "id": "FTG:SH10:F3@129492,37298:38c592",
+   "type": "F3",
+   "outline": "INSERT 166C F layer S-DIM",
+   "x0_mm": 129492.2,
+   "y0_mm": 37298.0,
+   "dx_mm": 1400.0,
+   "dy_mm": 1600.0,
+   "outline_closed": true,
+   "schedule_L_W_H_m": [
+    1.6,
+    1.4000000000000001,
+    0.3
+   ],
+   "detail": "ISOLATED_P13"
+  },
+  {
+   "id": "FTG:SH10:F4@144012,48698:142c12",
+   "type": "F4",
+   "outline": "INSERT 1665 F layer S-DIM",
+   "x0_mm": 144012.2,
+   "y0_mm": 48698.0,
+   "dx_mm": 2200.0,
+   "dy_mm": 2000.0,
+   "outline_closed": true,
+   "schedule_L_W_H_m": [
+    2.2,
+    2.0,
+    0.4
+   ],
+   "detail": "ISOLATED_P13"
+  },
+  {
+   "id": "FTG:SH10:F4@148062,48723:ab0b66",
+   "type": "F4",
+   "outline": "INSERT 1666 F layer S-DIM",
+   "x0_mm": 148062.2,
+   "y0_mm": 48723.0,
+   "dx_mm": 2200.0,
+   "dy_mm": 2000.0,
+   "outline_closed": true,
+   "schedule_L_W_H_m": [
+    2.2,
+    2.0,
+    0.4
+   ],
+   "detail": "ISOLATED_P13"
+  },
+  {
+   "id": "FTG:SH10:F5@140012,48648:f1403e",
+   "type": "F5",
+   "outline": "INSERT 1664 F layer S-DIM",
+   "x0_mm": 140012.2,
+   "y0_mm": 48648.0,
+   "dx_mm": 2400.0,
+   "dy_mm": 2100.0,
+   "outline_closed": true,
+   "schedule_L_W_H_m": [
+    2.4,
+    2.1,
+    0.4
+   ],
+   "detail": "ISOLATED_P13"
+  },
+  {
+   "id": "FTG:SH10:F5@144112,36948:04f491",
+   "type": "F5",
+   "outline": "INSERT 166D F layer S-DIM",
+   "x0_mm": 144112.2,
+   "y0_mm": 36948.0,
+   "dx_mm": 2400.0,
+   "dy_mm": 2100.0,
+   "outline_closed": true,
+   "schedule_L_W_H_m": [
+    2.4,
+    2.1,
+    0.4
+   ],
+   "detail": "ISOLATED_P13"
+  },
+  {
+   "id": "FTG:SH10:F6@133592,40098:33adbb",
+   "type": "F6",
+   "outline": "1B19",
+   "x0_mm": 133592.2,
+   "y0_mm": 40098.0,
+   "dx_mm": 2200.0,
+   "dy_mm": 2600.0,
+   "outline_closed": false,
+   "schedule_L_W_H_m": [
+    2.6,
+    2.2,
+    0.5
+   ],
+   "detail": "ISOLATED_P13"
+  },
+  {
+   "id": "FTG:SH10:F8@146912,42298:624706",
+   "type": "F8",
+   "outline": "1B24",
+   "x0_mm": 146912.2,
+   "y0_mm": 42298.0,
+   "dx_mm": 4000.0,
+   "dy_mm": 3600.0,
+   "outline_closed": true,
+   "schedule_L_W_H_m": [
+    4.0,
+    3.6,
+    0.5
+   ],
+   "detail": "ISOLATED_P13"
+  },
+  {
+   "id": "FTG:SH10:F9@143262,44298:3192fb",
+   "type": "F9",
+   "outline": "180F",
+   "x0_mm": 143262.2,
+   "y0_mm": 44298.0,
+   "dx_mm": 3400.0,
+   "dy_mm": 2700.0,
+   "outline_closed": true,
+   "schedule_L_W_H_m": [
+    3.4,
+    2.7,
+    0.55
+   ],
+   "detail": "ISOLATED_P13"
+  },
+  {
+   "id": "FTG:SH10:F@119542,36348:88b429",
+   "type": "F",
+   "outline": "INSERT 1669 F layer S-DIM",
+   "x0_mm": 119542.2,
+   "y0_mm": 36348.0,
+   "dx_mm": 900.0,
+   "dy_mm": 800.0,
+   "outline_closed": true,
+   "schedule_L_W_H_m": [
+    0.9,
+    0.8,
+    0.3
+   ],
+   "detail": "ISOLATED_P13"
+  },
+  {
+   "id": "FTG:SH10:F@119542,42348:878832",
+   "type": "F",
+   "outline": "INSERT 1668 F layer S-DIM",
+   "x0_mm": 119542.2,
+   "y0_mm": 42348.0,
+   "dx_mm": 800.0,
+   "dy_mm": 900.0,
+   "outline_closed": true,
+   "schedule_L_W_H_m": [
+    0.9,
+    0.8,
+    0.3
+   ],
+   "detail": "ISOLATED_P13"
+  },
+  {
+   "id": "FTG:SH10:F@121942,42498:0ce993",
+   "type": "F",
+   "outline": "INSERT 1667 F layer S-DIM",
+   "x0_mm": 121942.2,
+   "y0_mm": 42498.0,
+   "dx_mm": 900.0,
+   "dy_mm": 800.0,
+   "outline_closed": true,
+   "schedule_L_W_H_m": [
+    0.9,
+    0.8,
+    0.3
+   ],
+   "detail": "ISOLATED_P13"
+  },
+  {
+   "id": "FTG:SH10:F@131292,36348:767bc7",
+   "type": "F",
+   "outline": "INSERT 166A F layer S-DIM",
+   "x0_mm": 131292.2,
+   "y0_mm": 36348.0,
+   "dx_mm": 900.0,
+   "dy_mm": 800.0,
+   "outline_closed": true,
+   "schedule_L_W_H_m": [
+    0.9,
+    0.8,
+    0.3
+   ],
+   "detail": "ISOLATED_P13"
+  },
+  {
+   "id": "FTG:SH10:FF@136342,43148:8e679c",
+   "type": "FF",
+   "outline": "1B2B",
+   "x0_mm": 136342.0,
+   "y0_mm": 43148.0,
+   "dx_mm": 4600.0,
+   "dy_mm": 4500.0,
+   "outline_closed": true,
+   "schedule_L_W_H_m": [
+    4.6000000000000005,
+    4.5,
+    0.55
+   ],
+   "detail": "FF_LIFT"
+  },
+  {
+   "id": "FTG:SH10:FN@141212,41323:8f5b19",
+   "type": "FN",
+   "outline": "4 LINEs 10F8",
+   "x0_mm": 141212.2,
+   "y0_mm": 41323.0,
+   "dx_mm": 1000.0,
+   "dy_mm": 1000.0,
+   "outline_closed": true,
+   "schedule_L_W_H_m": [
+    1.0,
+    1.0,
+    0.3
+   ],
+   "detail": "ISOLATED_P13"
+  },
+  {
+   "id": "FTG:SH10:FN@145737,41323:b61882",
+   "type": "FN",
+   "outline": "4 LINEs 10F0",
+   "x0_mm": 145737.2,
+   "y0_mm": 41323.0,
+   "dx_mm": 1000.0,
+   "dy_mm": 1000.0,
+   "outline_closed": true,
+   "schedule_L_W_H_m": [
+    1.0,
+    1.0,
+    0.3
+   ],
+   "detail": "ISOLATED_P13"
+  },
+  {
+   "id": "FTG:SH10:FN@146262,46648:0e0098",
+   "type": "FN",
+   "outline": "180C",
+   "x0_mm": 146262.2,
+   "y0_mm": 46648.0,
+   "dx_mm": 1000.0,
+   "dy_mm": 1000.0,
+   "outline_closed": true,
+   "schedule_L_W_H_m": [
+    1.0,
+    1.0,
+    0.3
+   ],
+   "detail": "ISOLATED_P13"
+  },
+  {
+   "id": "FTG:SH10:FN@149912,39848:cf72aa",
+   "type": "FN",
+   "outline": "4 LINEs 1100",
+   "x0_mm": 149912.2,
+   "y0_mm": 39848.0,
+   "dx_mm": 1000.0,
+   "dy_mm": 1000.0,
+   "outline_closed": true,
+   "schedule_L_W_H_m": [
+    1.0,
+    1.0,
+    0.3
+   ],
+   "detail": "ISOLATED_P13"
+  },
+  {
+   "id": "FTG:SH10:T652:10A5",
+   "type": "F10/F",
+   "outline": "1B1B (open LWPOLYLINE 3250 x 1400 at 147662.2, 36348.0; tags F10 + F)",
+   "x0_mm": 147662.2,
+   "y0_mm": 36348.0,
+   "dx_mm": 3250.0,
+   "dy_mm": 1400.0,
+   "outline_closed": false,
+   "schedule_L_W_H_m": null,
+   "detail": "ISOLATED_P13",
+   "conflict": "one open outline carries two footing tags F10 and F (Q-31 C designer item; element register 1B1B)"
+  }
+ ],
+ "beams": [
+  {
+   "id": "GROUND_BEAMS:FOUNDATION:BAND0002",
+   "band": "FOUNDATION",
+   "mark": "SB3",
+   "width_m": 0.5,
+   "length_m": 3.272,
+   "length_basis": "clear_length_m",
+   "depth_m": 0.4,
+   "arch_class": null,
+   "binding": "BOUND",
+   "detail": "STRAP"
+  },
+  {
+   "id": "GROUND_BEAMS:FOUNDATION:BAND0003",
+   "band": "FOUNDATION",
+   "mark": "SB1",
+   "width_m": 0.7,
+   "length_m": 5.7001,
+   "length_basis": "clear_length_m",
+   "depth_m": 0.5,
+   "arch_class": null,
+   "binding": "BOUND",
+   "detail": "STRAP"
+  },
+  {
+   "id": "GROUND_BEAMS:FOUNDATION:BAND0019",
+   "band": "FOUNDATION",
+   "mark": "SB2",
+   "width_m": 1.0,
+   "length_m": 2.2631,
+   "length_basis": "clear_length_m",
+   "depth_m": 0.5,
+   "arch_class": null,
+   "binding": "BOUND_ROW_BY_DRAWN_WIDTH",
+   "detail": "STRAP"
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0001.1",
+   "band": "GROUND",
+   "mark": null,
+   "width_m": 0.3,
+   "length_m": 2.4,
+   "length_basis": "length_m",
+   "depth_m": null,
+   "arch_class": "EXTERIOR_WALL",
+   "binding": "BOUND_TYPICAL_CLASS",
+   "detail": "GB_TYPICAL_P13"
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0001.2",
+   "band": "GROUND",
+   "mark": null,
+   "width_m": 0.3,
+   "length_m": 3.37,
+   "length_basis": "length_m",
+   "depth_m": null,
+   "arch_class": "EXTERIOR_WALL",
+   "binding": "BOUND_TYPICAL_CLASS",
+   "detail": "GB_TYPICAL_P13"
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0001.3",
+   "band": "GROUND",
+   "mark": null,
+   "width_m": 0.3,
+   "length_m": 3.35,
+   "length_basis": "length_m",
+   "depth_m": null,
+   "arch_class": "EXTERIOR_WALL",
+   "binding": "BOUND_TYPICAL_CLASS",
+   "detail": "GB_TYPICAL_P13"
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0001.4",
+   "band": "GROUND",
+   "mark": null,
+   "width_m": 0.3,
+   "length_m": 3.25,
+   "length_basis": "length_m",
+   "depth_m": null,
+   "arch_class": "EXTERIOR_WALL",
+   "binding": "BOUND_TYPICAL_CLASS",
+   "detail": "GB_TYPICAL_P13"
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0002.1",
+   "band": "GROUND",
+   "mark": null,
+   "width_m": 0.3,
+   "length_m": 0.6,
+   "length_basis": "length_m",
+   "depth_m": null,
+   "arch_class": "EXTERIOR_WALL",
+   "binding": "BOUND_TYPICAL_CLASS",
+   "detail": "GB_TYPICAL_P13"
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0003",
+   "band": "GROUND",
+   "mark": null,
+   "width_m": 0.3,
+   "length_m": 2.9,
+   "length_basis": "length_m",
+   "depth_m": null,
+   "arch_class": null,
+   "binding": "BOUND_TYPICAL_CLASS",
+   "detail": "GB_TYPICAL_P13"
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0004.1",
+   "band": "GROUND",
+   "mark": null,
+   "width_m": 0.3,
+   "length_m": 4.3,
+   "length_basis": "length_m",
+   "depth_m": null,
+   "arch_class": "EXTERIOR_WALL",
+   "binding": "BOUND_TYPICAL_CLASS",
+   "detail": "GB_TYPICAL_P13"
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0005.1",
+   "band": "GROUND",
+   "mark": null,
+   "width_m": 0.3,
+   "length_m": 1.9,
+   "length_basis": "length_m",
+   "depth_m": null,
+   "arch_class": null,
+   "binding": "BOUND_TYPICAL_CLASS",
+   "detail": "GB_TYPICAL_P13"
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0006.1",
+   "band": "GROUND",
+   "mark": null,
+   "width_m": 0.3,
+   "length_m": 4.4,
+   "length_basis": "length_m",
+   "depth_m": null,
+   "arch_class": null,
+   "binding": "BOUND_TYPICAL_CLASS",
+   "detail": "GB_TYPICAL_P13"
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0006.2",
+   "band": "GROUND",
+   "mark": null,
+   "width_m": 0.3,
+   "length_m": 4.4,
+   "length_basis": "length_m",
+   "depth_m": null,
+   "arch_class": null,
+   "binding": "BOUND_TYPICAL_CLASS",
+   "detail": "GB_TYPICAL_P13"
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0006.3",
+   "band": "GROUND",
+   "mark": null,
+   "width_m": 0.3,
+   "length_m": 2.7,
+   "length_basis": "length_m",
+   "depth_m": null,
+   "arch_class": "EXTERIOR_WALL",
+   "binding": "BOUND_TYPICAL_CLASS",
+   "detail": "GB_TYPICAL_P13"
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0007.1",
+   "band": "GROUND",
+   "mark": null,
+   "width_m": 0.3,
+   "length_m": 2.4,
+   "length_basis": "length_m",
+   "depth_m": null,
+   "arch_class": null,
+   "binding": "BOUND_TYPICAL_CLASS",
+   "detail": "GB_TYPICAL_P13"
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0008.1",
+   "band": "GROUND",
+   "mark": null,
+   "width_m": 0.3,
+   "length_m": 5.02,
+   "length_basis": "length_m",
+   "depth_m": null,
+   "arch_class": null,
+   "binding": "BOUND_TYPICAL_CLASS",
+   "detail": "GB_TYPICAL_P13"
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0008.2",
+   "band": "GROUND",
+   "mark": null,
+   "width_m": 0.3,
+   "length_m": 1.5367,
+   "length_basis": "length_m",
+   "depth_m": null,
+   "arch_class": null,
+   "binding": "BOUND_TYPICAL_CLASS",
+   "detail": "GB_TYPICAL_P13"
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0009.1",
+   "band": "GROUND",
+   "mark": null,
+   "width_m": 0.3,
+   "length_m": 0.39,
+   "length_basis": "length_m",
+   "depth_m": null,
+   "arch_class": "EXTERIOR_WALL",
+   "binding": "BOUND_TYPICAL_CLASS",
+   "detail": "GB_TYPICAL_P13"
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0010.1",
+   "band": "GROUND",
+   "mark": null,
+   "width_m": 0.3,
+   "length_m": 3.02,
+   "length_basis": "length_m",
+   "depth_m": null,
+   "arch_class": null,
+   "binding": "BOUND_TYPICAL_CLASS",
+   "detail": "GB_TYPICAL_P13"
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0010.2",
+   "band": "GROUND",
+   "mark": null,
+   "width_m": 0.3,
+   "length_m": 2.65,
+   "length_basis": "length_m",
+   "depth_m": null,
+   "arch_class": null,
+   "binding": "BOUND_TYPICAL_CLASS",
+   "detail": "GB_TYPICAL_P13"
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0010.3",
+   "band": "GROUND",
+   "mark": null,
+   "width_m": 0.3,
+   "length_m": 5.0,
+   "length_basis": "length_m",
+   "depth_m": null,
+   "arch_class": null,
+   "binding": "BOUND_TYPICAL_CLASS",
+   "detail": "GB_TYPICAL_P13"
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0011.1",
+   "band": "GROUND",
+   "mark": null,
+   "width_m": 0.3,
+   "length_m": 2.975,
+   "length_basis": "length_m",
+   "depth_m": null,
+   "arch_class": "EXTERIOR_WALL",
+   "binding": "BOUND_TYPICAL_CLASS",
+   "detail": "GB_TYPICAL_P13"
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0011.2",
+   "band": "GROUND",
+   "mark": null,
+   "width_m": 0.3,
+   "length_m": 5.745,
+   "length_basis": "length_m",
+   "depth_m": null,
+   "arch_class": "EXTERIOR_WALL",
+   "binding": "BOUND_TYPICAL_CLASS",
+   "detail": "GB_TYPICAL_P13"
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0011.3",
+   "band": "GROUND",
+   "mark": null,
+   "width_m": 0.3,
+   "length_m": 6.35,
+   "length_basis": "length_m",
+   "depth_m": null,
+   "arch_class": "EXTERIOR_WALL",
+   "binding": "BOUND_TYPICAL_CLASS",
+   "detail": "GB_TYPICAL_P13"
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0011.4",
+   "band": "GROUND",
+   "mark": null,
+   "width_m": 0.3,
+   "length_m": 1.2,
+   "length_basis": "length_m",
+   "depth_m": null,
+   "arch_class": "EXTERIOR_WALL",
+   "binding": "BOUND_TYPICAL_CLASS",
+   "detail": "GB_TYPICAL_P13"
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0012.1",
+   "band": "GROUND",
+   "mark": null,
+   "width_m": 0.3,
+   "length_m": 1.5,
+   "length_basis": "length_m",
+   "depth_m": null,
+   "arch_class": "EXTERIOR_WALL",
+   "binding": "BOUND_TYPICAL_CLASS",
+   "detail": "GB_TYPICAL_P13"
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0012.2",
+   "band": "GROUND",
+   "mark": null,
+   "width_m": 0.3,
+   "length_m": 2.3,
+   "length_basis": "length_m",
+   "depth_m": null,
+   "arch_class": "EXTERIOR_WALL",
+   "binding": "BOUND_TYPICAL_CLASS",
+   "detail": "GB_TYPICAL_P13"
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0013.1",
+   "band": "GROUND",
+   "mark": null,
+   "width_m": 0.3,
+   "length_m": 0.1,
+   "length_basis": "length_m",
+   "depth_m": null,
+   "arch_class": null,
+   "binding": "BOUND_TYPICAL_CLASS",
+   "detail": "GB_TYPICAL_P13"
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0013.2",
+   "band": "GROUND",
+   "mark": null,
+   "width_m": 0.3,
+   "length_m": 5.8,
+   "length_basis": "length_m",
+   "depth_m": null,
+   "arch_class": "EXTERIOR_WALL",
+   "binding": "BOUND_TYPICAL_CLASS",
+   "detail": "GB_TYPICAL_P13"
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0014",
+   "band": "GROUND",
+   "mark": null,
+   "width_m": 0.3,
+   "length_m": 4.3,
+   "length_basis": "length_m",
+   "depth_m": null,
+   "arch_class": null,
+   "binding": "BOUND_TYPICAL_CLASS",
+   "detail": "GB_TYPICAL_P13"
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0015",
+   "band": "GROUND",
+   "mark": null,
+   "width_m": 0.3,
+   "length_m": 10.13,
+   "length_basis": "length_m",
+   "depth_m": null,
+   "arch_class": "EXTERIOR_WALL",
+   "binding": "BOUND_TYPICAL_CLASS",
+   "detail": "GB_TYPICAL_P13"
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0016",
+   "band": "GROUND",
+   "mark": null,
+   "width_m": 0.3,
+   "length_m": 6.4,
+   "length_basis": "length_m",
+   "depth_m": null,
+   "arch_class": "EXTERIOR_WALL",
+   "binding": "BOUND_TYPICAL_CLASS",
+   "detail": "GB_TYPICAL_P13"
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0017.1",
+   "band": "GROUND",
+   "mark": null,
+   "width_m": 0.3,
+   "length_m": 4.3,
+   "length_basis": "length_m",
+   "depth_m": null,
+   "arch_class": null,
+   "binding": "BOUND_TYPICAL_CLASS",
+   "detail": "GB_TYPICAL_P13"
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0017.2",
+   "band": "GROUND",
+   "mark": null,
+   "width_m": 0.3,
+   "length_m": 0.5,
+   "length_basis": "length_m",
+   "depth_m": null,
+   "arch_class": "EXTERIOR_WALL",
+   "binding": "BOUND_TYPICAL_CLASS",
+   "detail": "GB_TYPICAL_P13"
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0018",
+   "band": "GROUND",
+   "mark": null,
+   "width_m": 0.3,
+   "length_m": 4.3,
+   "length_basis": "length_m",
+   "depth_m": null,
+   "arch_class": null,
+   "binding": "BOUND_TYPICAL_CLASS",
+   "detail": "GB_TYPICAL_P13"
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0019.1",
+   "band": "GROUND",
+   "mark": null,
+   "width_m": 0.3,
+   "length_m": 2.45,
+   "length_basis": "length_m",
+   "depth_m": null,
+   "arch_class": null,
+   "binding": "BOUND_TYPICAL_CLASS",
+   "detail": "GB_TYPICAL_P13"
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0020",
+   "band": "GROUND",
+   "mark": null,
+   "width_m": 0.3,
+   "length_m": 1.45,
+   "length_basis": "length_m",
+   "depth_m": null,
+   "arch_class": null,
+   "binding": "BOUND_TYPICAL_CLASS",
+   "detail": "GB_TYPICAL_P13"
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0021",
+   "band": "GROUND",
+   "mark": null,
+   "width_m": 0.3,
+   "length_m": 1.2,
+   "length_basis": "length_m",
+   "depth_m": null,
+   "arch_class": null,
+   "binding": "BOUND_TYPICAL_CLASS",
+   "detail": "GB_TYPICAL_P13"
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0022",
+   "band": "GROUND",
+   "mark": null,
+   "width_m": 0.3,
+   "length_m": 3.8,
+   "length_basis": "length_m",
+   "depth_m": null,
+   "arch_class": "EXTERIOR_WALL",
+   "binding": "BOUND_TYPICAL_CLASS",
+   "detail": "GB_TYPICAL_P13"
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0023.1",
+   "band": "GROUND",
+   "mark": null,
+   "width_m": 0.3,
+   "length_m": 7.35,
+   "length_basis": "length_m",
+   "depth_m": null,
+   "arch_class": null,
+   "binding": "BOUND_TYPICAL_CLASS",
+   "detail": "GB_TYPICAL_P13"
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0024",
+   "band": "GROUND",
+   "mark": null,
+   "width_m": 0.3,
+   "length_m": 3.75,
+   "length_basis": "length_m",
+   "depth_m": null,
+   "arch_class": null,
+   "binding": "BOUND_TYPICAL_CLASS",
+   "detail": "GB_TYPICAL_P13"
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0025.1",
+   "band": "GROUND",
+   "mark": null,
+   "width_m": 0.3,
+   "length_m": 2.325,
+   "length_basis": "length_m",
+   "depth_m": null,
+   "arch_class": null,
+   "binding": "BOUND_TYPICAL_CLASS",
+   "detail": "GB_TYPICAL_P13"
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0025.2",
+   "band": "GROUND",
+   "mark": null,
+   "width_m": 0.3,
+   "length_m": 1.0,
+   "length_basis": "length_m",
+   "depth_m": null,
+   "arch_class": "EXTERIOR_WALL",
+   "binding": "BOUND_TYPICAL_CLASS",
+   "detail": "GB_TYPICAL_P13"
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0026.1",
+   "band": "GROUND",
+   "mark": null,
+   "width_m": 0.3,
+   "length_m": 6.9,
+   "length_basis": "length_m",
+   "depth_m": null,
+   "arch_class": "EXTERIOR_WALL",
+   "binding": "BOUND_TYPICAL_CLASS",
+   "detail": "GB_TYPICAL_P13"
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0027",
+   "band": "GROUND",
+   "mark": null,
+   "width_m": 0.3,
+   "length_m": 6.72,
+   "length_basis": "length_m",
+   "depth_m": null,
+   "arch_class": null,
+   "binding": "BOUND_TYPICAL_CLASS",
+   "detail": "GB_TYPICAL_P13"
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0028",
+   "band": "GROUND",
+   "mark": null,
+   "width_m": 0.3,
+   "length_m": 3.2277,
+   "length_basis": "length_m",
+   "depth_m": null,
+   "arch_class": null,
+   "binding": "BOUND_TYPICAL_CLASS",
+   "detail": "GB_TYPICAL_P13"
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0029",
+   "band": "GROUND",
+   "mark": null,
+   "width_m": 0.3,
+   "length_m": 4.2723,
+   "length_basis": "length_m",
+   "depth_m": null,
+   "arch_class": null,
+   "binding": "BOUND_TYPICAL_CLASS",
+   "detail": "GB_TYPICAL_P13"
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0030",
+   "band": "GROUND",
+   "mark": null,
+   "width_m": 0.3,
+   "length_m": 1.2,
+   "length_basis": "length_m",
+   "depth_m": null,
+   "arch_class": null,
+   "binding": "BOUND_TYPICAL_CLASS",
+   "detail": "GB_TYPICAL_P13"
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0031",
+   "band": "GROUND",
+   "mark": null,
+   "width_m": 0.3,
+   "length_m": 3.75,
+   "length_basis": "length_m",
+   "depth_m": null,
+   "arch_class": null,
+   "binding": "BOUND_TYPICAL_CLASS",
+   "detail": "GB_TYPICAL_P13"
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0032",
+   "band": "GROUND",
+   "mark": null,
+   "width_m": 0.3,
+   "length_m": 7.35,
+   "length_basis": "length_m",
+   "depth_m": null,
+   "arch_class": null,
+   "binding": "BOUND_TYPICAL_CLASS",
+   "detail": "GB_TYPICAL_P13"
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0033",
+   "band": "GROUND",
+   "mark": null,
+   "width_m": 0.3,
+   "length_m": 4.225,
+   "length_basis": "length_m",
+   "depth_m": null,
+   "arch_class": null,
+   "binding": "BOUND_TYPICAL_CLASS",
+   "detail": "GB_TYPICAL_P13"
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0034",
+   "band": "GROUND",
+   "mark": null,
+   "width_m": 0.3,
+   "length_m": 1.25,
+   "length_basis": "length_m",
+   "depth_m": null,
+   "arch_class": null,
+   "binding": "BOUND_TYPICAL_CLASS",
+   "detail": "GB_TYPICAL_P13"
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0035",
+   "band": "GROUND",
+   "mark": null,
+   "width_m": 0.3,
+   "length_m": 3.1,
+   "length_basis": "length_m",
+   "depth_m": null,
+   "arch_class": "EXTERIOR_WALL",
+   "binding": "BOUND_TYPICAL_CLASS",
+   "detail": "GB_TYPICAL_P13"
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0036.1",
+   "band": "GROUND",
+   "mark": null,
+   "width_m": 0.3,
+   "length_m": 2.7,
+   "length_basis": "length_m",
+   "depth_m": null,
+   "arch_class": null,
+   "binding": "BOUND_TYPICAL_CLASS",
+   "detail": "GB_TYPICAL_P13"
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0037.1",
+   "band": "GROUND",
+   "mark": null,
+   "width_m": 0.3,
+   "length_m": 2.4269,
+   "length_basis": "length_m",
+   "depth_m": null,
+   "arch_class": null,
+   "binding": "BOUND_TYPICAL_CLASS",
+   "detail": "GB_TYPICAL_P13"
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0038",
+   "band": "GROUND",
+   "mark": null,
+   "width_m": 0.3,
+   "length_m": 0.789,
+   "length_basis": "length_m",
+   "depth_m": null,
+   "arch_class": null,
+   "binding": "BOUND_TYPICAL_CLASS",
+   "detail": "GB_TYPICAL_P13"
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0039",
+   "band": "GROUND",
+   "mark": null,
+   "width_m": 0.3,
+   "length_m": 2.0732,
+   "length_basis": "length_m",
+   "depth_m": null,
+   "arch_class": null,
+   "binding": "BOUND_TYPICAL_CLASS",
+   "detail": "GB_TYPICAL_P13"
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0040",
+   "band": "GROUND",
+   "mark": null,
+   "width_m": 0.3,
+   "length_m": 2.1,
+   "length_basis": "length_m",
+   "depth_m": null,
+   "arch_class": null,
+   "binding": "BOUND_TYPICAL_CLASS",
+   "detail": "GB_TYPICAL_P13"
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0041",
+   "band": "GROUND",
+   "mark": null,
+   "width_m": 0.3,
+   "length_m": 1.3,
+   "length_basis": "length_m",
+   "depth_m": null,
+   "arch_class": "EXTERIOR_WALL",
+   "binding": "BOUND_TYPICAL_CLASS",
+   "detail": "GB_TYPICAL_P13"
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0042",
+   "band": "GROUND",
+   "mark": null,
+   "width_m": 0.3,
+   "length_m": 1.8064,
+   "length_basis": "length_m",
+   "depth_m": null,
+   "arch_class": "PERIMETER_NO_WALL",
+   "binding": "BOUND_TYPICAL_CLASS",
+   "detail": "GB_TYPICAL_P13"
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0043",
+   "band": "GROUND",
+   "mark": null,
+   "width_m": 0.3,
+   "length_m": 6.2868,
+   "length_basis": "length_m",
+   "depth_m": null,
+   "arch_class": null,
+   "binding": "BOUND_TYPICAL_CLASS",
+   "detail": "GB_TYPICAL_P13"
+  }
+ ]
+}
