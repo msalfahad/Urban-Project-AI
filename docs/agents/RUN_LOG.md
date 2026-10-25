@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-25T07:41Z | Worker 2 | SUCCESS | none | No claimable TODO row on the board (lane A queue per Lead 06:15: T-286 CLAIMED-COMPLETE @ 8dd21102 waiting for a READY slot, T-275 r2 READY @ 893f6af8; T-170 CLAIMED by worker 3); READY = 5 (T-245, T-275, T-280, T-287, T-289) > 3, so no new standalone piece per WORKFLOW_CONTROLS s.3; no quantity changed | self-check codemap PASS, pytest t061 PASS, freeze PASS (0 differing); problem: none
 - 2026-10-25T07:40Z | Worker 2 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-25T07:21Z | Worker 1 | SUCCESS | none | No claimable TODO row on the board (board @ 5b695ed1: 0 TODO; 36 QUEUED, 5 READY incl. this worker's T-280 / T-287 / T-289, 2 CLAIMED T-286 / T-170); READY 5 > 3 so no new standalone piece (WORKFLOW_CONTROLS s.3); no quantity changed. ERS: read (s.2.7 not triggered) | self-check codemap PASS, pytest t061 PASS, freeze PASS (0 differing); problem: none
 - 2026-10-25T07:20Z | Worker 1 | STARTED | run session_01JBsRwktwtbAFUS2BBfiagx | repo-attached routine | task state: none yet | self-check pending
