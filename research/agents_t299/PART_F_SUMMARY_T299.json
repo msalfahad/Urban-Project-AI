@@ -1,0 +1,577 @@
+{
+ "audit_scenario": {
+  "high_kg": 2829.8261728395064,
+  "high_t": 2.829826172839506,
+  "low_kg": 2718.2414814814815,
+  "low_t": 2.7182414814814817,
+  "status": "AUDIT_SCENARIO"
+ },
+ "count_held": 19,
+ "count_invariant": 1,
+ "length_held": 20,
+ "measured_total_kg": null,
+ "populations": 20,
+ "rows": [
+  {
+   "achieved_spacing_mm_e0": 109.88571428571429,
+   "component": "SHORT",
+   "count_high": 36,
+   "count_low": 35,
+   "count_status": "HELD",
+   "diameter_mm": 14,
+   "diameter_status": "PRINTED",
+   "held_reason": "count depends on the meaning of 'n \u00f8 d/m' (max spacing 36 vs density in zone 35): not stated in the drawing set, designer RFI; cover printed as a MINIMUM: counts are at the minimum cover (project basis); a larger actual cover can only lower them, no upper cover printed; bar ends / legs not drawn or not dimensioned (NOT_DRAWN (p.13 is a single-layer detail)); straight run stops inside an enclosing bar of unprinted diameter; side - 2 x minimum cover is the LONGEST straight run the note allows, not a length",
+   "kg_audit_scenario": [
+    145.160987654321,
+    150.70222222222222
+   ],
+   "layer": "BOT",
+   "length_status": "HELD",
+   "mark": "F8",
+   "printed_max_spacing_mm": 111.11111111111111,
+   "readings": {
+    "DENSITY_IN_ZONE": 35,
+    "MAX_SPACING_e0": 36,
+    "MAX_SPACING_e10": 36,
+    "MAX_SPACING_e12": 36,
+    "MAX_SPACING_e14": 36,
+    "MAX_SPACING_e16": 36,
+    "MAX_SPACING_e8": 36
+   },
+   "weight_status": "HELD"
+  },
+  {
+   "achieved_spacing_mm_e0": 107.6875,
+   "component": "LONG",
+   "count_high": 33,
+   "count_low": 32,
+   "count_status": "HELD",
+   "diameter_mm": 14,
+   "diameter_status": "PRINTED",
+   "held_reason": "count depends on the unprinted enclosing-bar diameter (NOT_PRINTED_NO_REMARK); count depends on the meaning of 'n \u00f8 d/m' (max spacing 33 vs density in zone 32): not stated in the drawing set, designer RFI; cover printed as a MINIMUM: counts are at the minimum cover (project basis); a larger actual cover can only lower them, no upper cover printed; bar ends / legs not drawn or not dimensioned (NOT_DRAWN (p.13 is a single-layer detail)); straight run stops inside an enclosing bar of unprinted diameter; side - 2 x minimum cover is the LONGEST straight run the note allows, not a length",
+   "kg_audit_scenario": [
+    148.20503703703704,
+    154.11407407407407
+   ],
+   "layer": "BOT",
+   "length_status": "HELD",
+   "mark": "F8",
+   "printed_max_spacing_mm": 111.11111111111111,
+   "readings": {
+    "DENSITY_IN_ZONE": 32,
+    "MAX_SPACING_e0": 33,
+    "MAX_SPACING_e10": 32,
+    "MAX_SPACING_e12": 32,
+    "MAX_SPACING_e14": 32,
+    "MAX_SPACING_e16": 32,
+    "MAX_SPACING_e8": 32
+   },
+   "weight_status": "HELD"
+  },
+  {
+   "achieved_spacing_mm_e0": 160.25,
+   "component": "SHORT",
+   "count_high": 25,
+   "count_low": 24,
+   "count_status": "HELD",
+   "diameter_mm": 14,
+   "diameter_status": "PRINTED",
+   "held_reason": "count depends on the unprinted enclosing-bar diameter (NOT_PRINTED_NO_REMARK); count depends on the meaning of 'n \u00f8 d/m' (max spacing 25 vs density in zone 24): not stated in the drawing set, designer RFI; cover printed as a MINIMUM: counts are at the minimum cover (project basis); a larger actual cover can only lower them, no upper cover printed; bar ends / legs not drawn or not dimensioned (NOT_DRAWN); straight run stops inside an enclosing bar of unprinted diameter; side - 2 x minimum cover is the LONGEST straight run the note allows, not a length",
+   "kg_audit_scenario": [
+    99.53896296296297,
+    104.65432098765432
+   ],
+   "layer": "TOP",
+   "length_status": "HELD",
+   "mark": "F8",
+   "printed_max_spacing_mm": 166.66666666666666,
+   "readings": {
+    "DENSITY_IN_ZONE": 24,
+    "MAX_SPACING_e0": 25,
+    "MAX_SPACING_e10": 24,
+    "MAX_SPACING_e12": 24,
+    "MAX_SPACING_e14": 24,
+    "MAX_SPACING_e16": 24,
+    "MAX_SPACING_e8": 24
+   },
+   "weight_status": "HELD"
+  },
+  {
+   "achieved_spacing_mm_e0": 164.0952380952381,
+   "component": "LONG",
+   "count_high": 22,
+   "count_low": 21,
+   "count_status": "HELD",
+   "diameter_mm": 14,
+   "diameter_status": "PRINTED",
+   "held_reason": "count depends on the meaning of 'n \u00f8 d/m' (max spacing 22 vs density in zone 21): not stated in the drawing set, designer RFI; cover printed as a MINIMUM: counts are at the minimum cover (project basis); a larger actual cover can only lower them, no upper cover printed; bar ends / legs not drawn or not dimensioned (NOT_DRAWN); straight run stops inside an enclosing bar of unprinted diameter; side - 2 x minimum cover is the LONGEST straight run the note allows, not a length",
+   "kg_audit_scenario": [
+    97.25955555555555,
+    102.74271604938272
+   ],
+   "layer": "TOP",
+   "length_status": "HELD",
+   "mark": "F8",
+   "printed_max_spacing_mm": 166.66666666666666,
+   "readings": {
+    "DENSITY_IN_ZONE": 21,
+    "MAX_SPACING_e0": 22,
+    "MAX_SPACING_e10": 22,
+    "MAX_SPACING_e12": 22,
+    "MAX_SPACING_e14": 22,
+    "MAX_SPACING_e16": 22,
+    "MAX_SPACING_e8": 22
+   },
+   "weight_status": "HELD"
+  },
+  {
+   "achieved_spacing_mm_e0": 108.82051282051282,
+   "component": "SHORT",
+   "count_high": 40,
+   "count_low": 39,
+   "count_status": "HELD",
+   "diameter_mm": 16,
+   "diameter_status": "PRINTED",
+   "held_reason": "count depends on the unprinted enclosing-bar diameter (CAGE_SYMBOL_NO_SECTION); count depends on the meaning of 'n \u00f8 d/m' (max spacing 40 vs density in zone 39): not stated in the drawing set, designer RFI; cover printed as a MINIMUM: counts are at the minimum cover (project basis); a larger actual cover can only lower them, no upper cover printed; bar ends / legs not drawn or not dimensioned (NOT_DRAWN (p.9 cage symbol, no section)); straight run stops inside an enclosing bar of unprinted diameter; side - 2 x minimum cover is the LONGEST straight run the note allows, not a length",
+   "kg_audit_scenario": [
+    186.6145185185185,
+    193.42222222222222
+   ],
+   "layer": "BOT",
+   "length_status": "HELD",
+   "mark": "F12",
+   "printed_max_spacing_mm": 111.11111111111111,
+   "readings": {
+    "DENSITY_IN_ZONE": 39,
+    "MAX_SPACING_e0": 40,
+    "MAX_SPACING_e10": 40,
+    "MAX_SPACING_e12": 39,
+    "MAX_SPACING_e14": 39,
+    "MAX_SPACING_e16": 39,
+    "MAX_SPACING_e8": 40
+   },
+   "weight_status": "HELD"
+  },
+  {
+   "achieved_spacing_mm_e0": 108.71428571428571,
+   "component": "LONG",
+   "count_high": 29,
+   "count_low": 28,
+   "count_status": "HELD",
+   "diameter_mm": 16,
+   "diameter_status": "PRINTED",
+   "held_reason": "count depends on the meaning of 'n \u00f8 d/m' (max spacing 29 vs density in zone 28): not stated in the drawing set, designer RFI; cover printed as a MINIMUM: counts are at the minimum cover (project basis); a larger actual cover can only lower them, no upper cover printed; bar ends / legs not drawn or not dimensioned (NOT_DRAWN (p.9 cage symbol, no section)); straight run stops inside an enclosing bar of unprinted diameter; side - 2 x minimum cover is the LONGEST straight run the note allows, not a length",
+   "kg_audit_scenario": [
+    187.07595061728395,
+    195.2237037037037
+   ],
+   "layer": "BOT",
+   "length_status": "HELD",
+   "mark": "F12",
+   "printed_max_spacing_mm": 111.11111111111111,
+   "readings": {
+    "DENSITY_IN_ZONE": 28,
+    "MAX_SPACING_e0": 29,
+    "MAX_SPACING_e10": 29,
+    "MAX_SPACING_e12": 29,
+    "MAX_SPACING_e14": 29,
+    "MAX_SPACING_e16": 29,
+    "MAX_SPACING_e8": 29
+   },
+   "weight_status": "HELD"
+  },
+  {
+   "achieved_spacing_mm_e0": 98.74418604651163,
+   "component": "SHORT",
+   "count_high": 44,
+   "count_low": 43,
+   "count_status": "HELD",
+   "diameter_mm": 14,
+   "diameter_status": "PRINTED",
+   "held_reason": "count depends on the meaning of 'n \u00f8 d/m' (max spacing 44 vs density in zone 43): not stated in the drawing set, designer RFI; cover printed as a MINIMUM: counts are at the minimum cover (project basis); a larger actual cover can only lower them, no upper cover printed; bar ends / legs not drawn or not dimensioned (NOT_DRAWN (p.9 cage symbol, no section)); straight run stops inside an enclosing bar of unprinted diameter; side - 2 x minimum cover is the LONGEST straight run the note allows, not a length",
+   "kg_audit_scenario": [
+    157.53076543209878,
+    162.89777777777778
+   ],
+   "layer": "TOP",
+   "length_status": "HELD",
+   "mark": "F12",
+   "printed_max_spacing_mm": 100.0,
+   "readings": {
+    "DENSITY_IN_ZONE": 43,
+    "MAX_SPACING_e0": 44,
+    "MAX_SPACING_e10": 44,
+    "MAX_SPACING_e12": 44,
+    "MAX_SPACING_e14": 44,
+    "MAX_SPACING_e16": 44,
+    "MAX_SPACING_e8": 44
+   },
+   "weight_status": "HELD"
+  },
+  {
+   "achieved_spacing_mm_e0": 98.25806451612904,
+   "component": "LONG",
+   "count_high": 32,
+   "count_low": 31,
+   "count_status": "HELD",
+   "diameter_mm": 14,
+   "diameter_status": "PRINTED",
+   "held_reason": "count depends on the meaning of 'n \u00f8 d/m' (max spacing 32 vs density in zone 31): not stated in the drawing set, designer RFI; cover printed as a MINIMUM: counts are at the minimum cover (project basis); a larger actual cover can only lower them, no upper cover printed; bar ends / legs not drawn or not dimensioned (NOT_DRAWN (p.9 cage symbol, no section)); straight run stops inside an enclosing bar of unprinted diameter; side - 2 x minimum cover is the LONGEST straight run the note allows, not a length",
+   "kg_audit_scenario": [
+    158.5760987654321,
+    164.93037037037038
+   ],
+   "layer": "TOP",
+   "length_status": "HELD",
+   "mark": "F12",
+   "printed_max_spacing_mm": 100.0,
+   "readings": {
+    "DENSITY_IN_ZONE": 31,
+    "MAX_SPACING_e0": 32,
+    "MAX_SPACING_e10": 32,
+    "MAX_SPACING_e12": 32,
+    "MAX_SPACING_e14": 32,
+    "MAX_SPACING_e16": 32,
+    "MAX_SPACING_e8": 32
+   },
+   "weight_status": "HELD"
+  },
+  {
+   "achieved_spacing_mm_e0": 121.88235294117646,
+   "component": "SHORT",
+   "count_high": 35,
+   "count_low": 34,
+   "count_status": "HELD",
+   "diameter_mm": 16,
+   "diameter_status": "PRINTED",
+   "held_reason": "count depends on the unprinted enclosing-bar diameter (CAGE_SYMBOL_NO_SECTION); count depends on the meaning of 'n \u00f8 d/m' (max spacing 35 vs density in zone 34): not stated in the drawing set, designer RFI; cover printed as a MINIMUM: counts are at the minimum cover (project basis); a larger actual cover can only lower them, no upper cover printed; bar ends / legs not drawn or not dimensioned (NOT_DRAWN (p.9 cage symbol, no section)); straight run stops inside an enclosing bar of unprinted diameter; side - 2 x minimum cover is the LONGEST straight run the note allows, not a length",
+   "kg_audit_scenario": [
+    119.70686419753086,
+    124.99753086419753
+   ],
+   "layer": "BOT",
+   "length_status": "HELD",
+   "mark": "F13",
+   "printed_max_spacing_mm": 125.0,
+   "readings": {
+    "DENSITY_IN_ZONE": 34,
+    "MAX_SPACING_e0": 35,
+    "MAX_SPACING_e10": 34,
+    "MAX_SPACING_e12": 34,
+    "MAX_SPACING_e14": 34,
+    "MAX_SPACING_e16": 34,
+    "MAX_SPACING_e8": 35
+   },
+   "weight_status": "HELD"
+  },
+  {
+   "achieved_spacing_mm_e0": 124.66666666666667,
+   "component": "LONG",
+   "count_high": 19,
+   "count_low": 19,
+   "count_status": "INVARIANT_AT_MIN_COVER",
+   "diameter_mm": 16,
+   "diameter_status": "PRINTED",
+   "held_reason": "cover printed as a MINIMUM: counts are at the minimum cover (project basis); a larger actual cover can only lower them, no upper cover printed; bar ends / legs not drawn or not dimensioned (NOT_DRAWN (p.9 cage symbol, no section)); straight run stops inside an enclosing bar of unprinted diameter; side - 2 x minimum cover is the LONGEST straight run the note allows, not a length",
+   "kg_audit_scenario": [
+    123.94192592592593,
+    124.90271604938272
+   ],
+   "layer": "BOT",
+   "length_status": "HELD",
+   "mark": "F13",
+   "printed_max_spacing_mm": 125.0,
+   "readings": {
+    "DENSITY_IN_ZONE": 19,
+    "MAX_SPACING_e0": 19,
+    "MAX_SPACING_e10": 19,
+    "MAX_SPACING_e12": 19,
+    "MAX_SPACING_e14": 19,
+    "MAX_SPACING_e16": 19,
+    "MAX_SPACING_e8": 19
+   },
+   "weight_status": "HELD"
+  },
+  {
+   "achieved_spacing_mm_e0": 138.2,
+   "component": "SHORT",
+   "count_high": 31,
+   "count_low": 30,
+   "count_status": "HELD",
+   "diameter_mm": 14,
+   "diameter_status": "PRINTED",
+   "held_reason": "count depends on the unprinted enclosing-bar diameter (CAGE_SYMBOL_NO_SECTION); count depends on the meaning of 'n \u00f8 d/m' (max spacing 31 vs density in zone 30): not stated in the drawing set, designer RFI; cover printed as a MINIMUM: counts are at the minimum cover (project basis); a larger actual cover can only lower them, no upper cover printed; bar ends / legs not drawn or not dimensioned (NOT_DRAWN (p.9 cage symbol, no section)); straight run stops inside an enclosing bar of unprinted diameter; side - 2 x minimum cover is the LONGEST straight run the note allows, not a length",
+   "kg_audit_scenario": [
+    80.86814814814815,
+    84.76395061728395
+   ],
+   "layer": "TOP",
+   "length_status": "HELD",
+   "mark": "F13",
+   "printed_max_spacing_mm": 142.85714285714286,
+   "readings": {
+    "DENSITY_IN_ZONE": 30,
+    "MAX_SPACING_e0": 31,
+    "MAX_SPACING_e10": 30,
+    "MAX_SPACING_e12": 30,
+    "MAX_SPACING_e14": 30,
+    "MAX_SPACING_e16": 30,
+    "MAX_SPACING_e8": 30
+   },
+   "weight_status": "HELD"
+  },
+  {
+   "achieved_spacing_mm_e0": 140.375,
+   "component": "LONG",
+   "count_high": 17,
+   "count_low": 16,
+   "count_status": "HELD",
+   "diameter_mm": 14,
+   "diameter_status": "PRINTED",
+   "held_reason": "count depends on the meaning of 'n \u00f8 d/m' (max spacing 17 vs density in zone 16): not stated in the drawing set, designer RFI; cover printed as a MINIMUM: counts are at the minimum cover (project basis); a larger actual cover can only lower them, no upper cover printed; bar ends / legs not drawn or not dimensioned (NOT_DRAWN (p.9 cage symbol, no section)); straight run stops inside an enclosing bar of unprinted diameter; side - 2 x minimum cover is the LONGEST straight run the note allows, not a length",
+   "kg_audit_scenario": [
+    79.90992592592593,
+    85.56246913580247
+   ],
+   "layer": "TOP",
+   "length_status": "HELD",
+   "mark": "F13",
+   "printed_max_spacing_mm": 142.85714285714286,
+   "readings": {
+    "DENSITY_IN_ZONE": 16,
+    "MAX_SPACING_e0": 17,
+    "MAX_SPACING_e10": 17,
+    "MAX_SPACING_e12": 17,
+    "MAX_SPACING_e14": 17,
+    "MAX_SPACING_e16": 17,
+    "MAX_SPACING_e8": 17
+   },
+   "weight_status": "HELD"
+  },
+  {
+   "achieved_spacing_mm_e0": 110.48484848484848,
+   "component": "SHORT",
+   "count_high": 34,
+   "count_low": 33,
+   "count_status": "HELD",
+   "diameter_mm": 14,
+   "diameter_status": "PRINTED",
+   "held_reason": "count depends on the meaning of 'n \u00f8 d/m' (max spacing 34 vs density in zone 33): not stated in the drawing set, designer RFI; cover printed as a MINIMUM: counts are at the minimum cover (project basis); a larger actual cover can only lower them, no upper cover printed; bar ends / legs not drawn or not dimensioned (NOT_DRAWN (p.9 cage symbol, no section)); straight run stops inside an enclosing bar of unprinted diameter; side - 2 x minimum cover is the LONGEST straight run the note allows, not a length",
+   "kg_audit_scenario": [
+    124.88829629629629,
+    129.98913580246915
+   ],
+   "layer": "BOT",
+   "length_status": "HELD",
+   "mark": "F14",
+   "printed_max_spacing_mm": 111.11111111111111,
+   "readings": {
+    "DENSITY_IN_ZONE": 33,
+    "MAX_SPACING_e0": 34,
+    "MAX_SPACING_e10": 34,
+    "MAX_SPACING_e12": 34,
+    "MAX_SPACING_e14": 34,
+    "MAX_SPACING_e16": 34,
+    "MAX_SPACING_e8": 34
+   },
+   "weight_status": "HELD"
+  },
+  {
+   "achieved_spacing_mm_e0": 108.48275862068965,
+   "component": "LONG",
+   "count_high": 30,
+   "count_low": 29,
+   "count_status": "HELD",
+   "diameter_mm": 14,
+   "diameter_status": "PRINTED",
+   "held_reason": "count depends on the meaning of 'n \u00f8 d/m' (max spacing 30 vs density in zone 29): not stated in the drawing set, designer RFI; cover printed as a MINIMUM: counts are at the minimum cover (project basis); a larger actual cover can only lower them, no upper cover printed; bar ends / legs not drawn or not dimensioned (NOT_DRAWN (p.9 cage symbol, no section)); straight run stops inside an enclosing bar of unprinted diameter; side - 2 x minimum cover is the LONGEST straight run the note allows, not a length",
+   "kg_audit_scenario": [
+    127.29353086419754,
+    132.84444444444443
+   ],
+   "layer": "BOT",
+   "length_status": "HELD",
+   "mark": "F14",
+   "printed_max_spacing_mm": 111.11111111111111,
+   "readings": {
+    "DENSITY_IN_ZONE": 29,
+    "MAX_SPACING_e0": 30,
+    "MAX_SPACING_e10": 30,
+    "MAX_SPACING_e12": 30,
+    "MAX_SPACING_e14": 30,
+    "MAX_SPACING_e16": 30,
+    "MAX_SPACING_e8": 30
+   },
+   "weight_status": "HELD"
+  },
+  {
+   "achieved_spacing_mm_e0": 165.72727272727272,
+   "component": "SHORT",
+   "count_high": 23,
+   "count_low": 22,
+   "count_status": "HELD",
+   "diameter_mm": 14,
+   "diameter_status": "PRINTED",
+   "held_reason": "count depends on the meaning of 'n \u00f8 d/m' (max spacing 23 vs density in zone 22): not stated in the drawing set, designer RFI; cover printed as a MINIMUM: counts are at the minimum cover (project basis); a larger actual cover can only lower them, no upper cover printed; bar ends / legs not drawn or not dimensioned (NOT_DRAWN (p.9 cage symbol, no section)); straight run stops inside an enclosing bar of unprinted diameter; side - 2 x minimum cover is the LONGEST straight run the note allows, not a length",
+   "kg_audit_scenario": [
+    83.25886419753087,
+    87.93382716049383
+   ],
+   "layer": "TOP",
+   "length_status": "HELD",
+   "mark": "F14",
+   "printed_max_spacing_mm": 166.66666666666666,
+   "readings": {
+    "DENSITY_IN_ZONE": 22,
+    "MAX_SPACING_e0": 23,
+    "MAX_SPACING_e10": 23,
+    "MAX_SPACING_e12": 23,
+    "MAX_SPACING_e14": 23,
+    "MAX_SPACING_e16": 23,
+    "MAX_SPACING_e8": 23
+   },
+   "weight_status": "HELD"
+  },
+  {
+   "achieved_spacing_mm_e0": 165.57894736842104,
+   "component": "LONG",
+   "count_high": 20,
+   "count_low": 19,
+   "count_status": "HELD",
+   "diameter_mm": 14,
+   "diameter_status": "PRINTED",
+   "held_reason": "count depends on the meaning of 'n \u00f8 d/m' (max spacing 20 vs density in zone 19): not stated in the drawing set, designer RFI; cover printed as a MINIMUM: counts are at the minimum cover (project basis); a larger actual cover can only lower them, no upper cover printed; bar ends / legs not drawn or not dimensioned (NOT_DRAWN (p.9 cage symbol, no section)); straight run stops inside an enclosing bar of unprinted diameter; side - 2 x minimum cover is the LONGEST straight run the note allows, not a length",
+   "kg_audit_scenario": [
+    83.39920987654321,
+    88.56296296296296
+   ],
+   "layer": "TOP",
+   "length_status": "HELD",
+   "mark": "F14",
+   "printed_max_spacing_mm": 166.66666666666666,
+   "readings": {
+    "DENSITY_IN_ZONE": 19,
+    "MAX_SPACING_e0": 20,
+    "MAX_SPACING_e10": 20,
+    "MAX_SPACING_e12": 20,
+    "MAX_SPACING_e14": 20,
+    "MAX_SPACING_e16": 20,
+    "MAX_SPACING_e8": 20
+   },
+   "weight_status": "HELD"
+  },
+  {
+   "achieved_spacing_mm_e0": 108.4390243902439,
+   "component": "SHORT",
+   "count_high": 42,
+   "count_low": 41,
+   "count_status": "HELD",
+   "diameter_mm": 14,
+   "diameter_status": "PRINTED",
+   "held_reason": "count depends on the unprinted enclosing-bar diameter (CLOSED_CAGE_P14_LEGS_UNDIMENSIONED); count depends on the meaning of 'n \u00f8 d/m' (max spacing 42 vs density in zone 41): not stated in the drawing set, designer RFI; cover printed as a MINIMUM: counts are at the minimum cover (project basis); a larger actual cover can only lower them, no upper cover printed; bar ends / legs not drawn or not dimensioned (CAGE_LEGS_UNDIMENSIONED (p.14)); straight run stops inside an enclosing bar of unprinted diameter; side - 2 x minimum cover is the LONGEST straight run the note allows, not a length",
+   "kg_audit_scenario": [
+    214.69017283950618,
+    221.5525925925926
+   ],
+   "layer": "BOT",
+   "length_status": "HELD",
+   "mark": "FF",
+   "printed_max_spacing_mm": 111.11111111111111,
+   "readings": {
+    "DENSITY_IN_ZONE": 41,
+    "MAX_SPACING_e0": 42,
+    "MAX_SPACING_e10": 41,
+    "MAX_SPACING_e12": 41,
+    "MAX_SPACING_e14": 41,
+    "MAX_SPACING_e16": 41,
+    "MAX_SPACING_e8": 41
+   },
+   "weight_status": "HELD"
+  },
+  {
+   "achieved_spacing_mm_e0": 108.65,
+   "component": "LONG",
+   "count_high": 41,
+   "count_low": 40,
+   "count_status": "HELD",
+   "diameter_mm": 14,
+   "diameter_status": "PRINTED",
+   "held_reason": "count depends on the unprinted enclosing-bar diameter (CLOSED_CAGE_P14_LEGS_UNDIMENSIONED); count depends on the meaning of 'n \u00f8 d/m' (max spacing 41 vs density in zone 40): not stated in the drawing set, designer RFI; cover printed as a MINIMUM: counts are at the minimum cover (project basis); a larger actual cover can only lower them, no upper cover printed; bar ends / legs not drawn or not dimensioned (CAGE_LEGS_UNDIMENSIONED (p.14)); straight run stops inside an enclosing bar of unprinted diameter; side - 2 x minimum cover is the LONGEST straight run the note allows, not a length",
+   "kg_audit_scenario": [
+    214.29333333333332,
+    221.23802469135802
+   ],
+   "layer": "BOT",
+   "length_status": "HELD",
+   "mark": "FF",
+   "printed_max_spacing_mm": 111.11111111111111,
+   "readings": {
+    "DENSITY_IN_ZONE": 40,
+    "MAX_SPACING_e0": 41,
+    "MAX_SPACING_e10": 40,
+    "MAX_SPACING_e12": 40,
+    "MAX_SPACING_e14": 40,
+    "MAX_SPACING_e16": 40,
+    "MAX_SPACING_e8": 40
+   },
+   "weight_status": "HELD"
+  },
+  {
+   "achieved_spacing_mm_e0": 164.66666666666666,
+   "component": "SHORT",
+   "count_high": 28,
+   "count_low": 27,
+   "count_status": "HELD",
+   "diameter_mm": 14,
+   "diameter_status": "PRINTED",
+   "held_reason": "count depends on the meaning of 'n \u00f8 d/m' (max spacing 28 vs density in zone 27): not stated in the drawing set, designer RFI; cover printed as a MINIMUM: counts are at the minimum cover (project basis); a larger actual cover can only lower them, no upper cover printed; bar ends / legs not drawn or not dimensioned (CAGE_LEGS_UNDIMENSIONED (p.14)); straight run stops inside an enclosing bar of unprinted diameter; side - 2 x minimum cover is the LONGEST straight run the note allows, not a length",
+   "kg_audit_scenario": [
+    141.38133333333334,
+    147.70172839506174
+   ],
+   "layer": "TOP",
+   "length_status": "HELD",
+   "mark": "FF",
+   "printed_max_spacing_mm": 166.66666666666666,
+   "readings": {
+    "DENSITY_IN_ZONE": 27,
+    "MAX_SPACING_e0": 28,
+    "MAX_SPACING_e10": 28,
+    "MAX_SPACING_e12": 28,
+    "MAX_SPACING_e14": 28,
+    "MAX_SPACING_e16": 28,
+    "MAX_SPACING_e8": 28
+   },
+   "weight_status": "HELD"
+  },
+  {
+   "achieved_spacing_mm_e0": 160.96296296296296,
+   "component": "LONG",
+   "count_high": 28,
+   "count_low": 27,
+   "count_status": "HELD",
+   "diameter_mm": 14,
+   "diameter_status": "PRINTED",
+   "held_reason": "count depends on the unprinted enclosing-bar diameter (CLOSED_CAGE_P14_LEGS_UNDIMENSIONED); count depends on the meaning of 'n \u00f8 d/m' (max spacing 28 vs density in zone 27): not stated in the drawing set, designer RFI; cover printed as a MINIMUM: counts are at the minimum cover (project basis); a larger actual cover can only lower them, no upper cover printed; bar ends / legs not drawn or not dimensioned (CAGE_LEGS_UNDIMENSIONED (p.14)); straight run stops inside an enclosing bar of unprinted diameter; side - 2 x minimum cover is the LONGEST straight run the note allows, not a length",
+   "kg_audit_scenario": [
+    144.648,
+    151.08938271604939
+   ],
+   "layer": "TOP",
+   "length_status": "HELD",
+   "mark": "FF",
+   "printed_max_spacing_mm": 166.66666666666666,
+   "readings": {
+    "DENSITY_IN_ZONE": 27,
+    "MAX_SPACING_e0": 28,
+    "MAX_SPACING_e10": 27,
+    "MAX_SPACING_e12": 27,
+    "MAX_SPACING_e14": 27,
+    "MAX_SPACING_e16": 27,
+    "MAX_SPACING_e8": 27
+   },
+   "weight_status": "HELD"
+  }
+ ],
+ "weight_held": 20
+}
