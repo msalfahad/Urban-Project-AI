@@ -1,0 +1,2182 @@
+{
+ "schema": "T289_CANDIDATE_V3015_BASIS_LINES",
+ "candidate": "ARCH_TAKEOFF_V3.0.15",
+ "candidate_lines_csv_sha256": "a4dc01dd5a309bb38b6bff54b486e9090b6d571a0044101197ec650f1cf3d00a",
+ "project": {
+  "project_id": "ST7757 villa (structural set)",
+  "revision_set_sha256": "297e913da9d98da10c40b1e93af0ccc66b0d7825b7700e0a2e3b9b5a54240b18"
+ },
+ "lines_in_candidate": 3699,
+ "annex_column_element_ids": {
+  "by_element_id": {
+   "P-C:COL:SH12:C@233893,56561|GF": "GFRS:34A",
+   "P-C:COL:SH12:C@238150,57853|GF": "GFRS:356",
+   "P-C:COL:SH12:C3@238374,54773|GF": "GFRS:353",
+   "P-C:COL:SH12:C@235241,51296|GF": "GFRS:34D",
+   "P-C:COL:SH12:C3@241094,51256|GF": "GFRS:350",
+   "P-C:COL:SH12:C3@243004,52949|GF": "GFRS:365",
+   "P-C:COL:SH12:C5@243102,55481|GF": "GFRS:35F"
+  },
+  "frame_offset": {
+   "dx": 75968,
+   "dy": 14448,
+   "votes": 29
+  }
+ },
+ "groups": {
+  "GB_EXTERIOR_24": [
+   {
+    "line_id": "L-00465df980165c529476",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "trade": "CONCRETE",
+    "floor": "GROUND",
+    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0035",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 0.3360000000007664,
+    "bounded_low": 0.3360000000007664,
+    "bounded_high": 0.840000000001916,
+    "formula": "perimeter band, no architectural wall evidence: the typical class section is the base; the printed exterior detail (floor level - build-up - outer ground) is the high alternative",
+    "notes": "clear 3.10 m -> H 0.4; c/c ~3.40 m -> H 0.4; exterior depth 0.90 m (0.65 - 1.00)",
+    "dimensions": {
+     "length_m": 3.1,
+     "width_m": 0.3,
+     "net_plan_m2": 0.84,
+     "depth_m": null,
+     "sides": [
+      "OUTSIDE",
+      "FACE:PANEL"
+     ]
+    }
+   },
+   {
+    "line_id": "L-1146bdecd41491ce9382",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "trade": "CONCRETE",
+    "floor": "GROUND",
+    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0001.3",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 0.40199999999996855,
+    "bounded_low": 0.40199999999996855,
+    "bounded_high": 1.0049999999999213,
+    "formula": "perimeter band, no architectural wall evidence: the typical class section is the base; the printed exterior detail (floor level - build-up - outer ground) is the high alternative",
+    "notes": "clear 3.35 m -> H 0.4; c/c ~3.65 m -> H 0.4; exterior depth 0.90 m (0.65 - 1.00)",
+    "dimensions": {
+     "length_m": 3.35,
+     "width_m": 0.3,
+     "net_plan_m2": 1.005,
+     "depth_m": null,
+     "sides": [
+      "OUTSIDE",
+      "FACE:PANEL"
+     ]
+    }
+   },
+   {
+    "line_id": "L-21795b350fbd09150c43",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "trade": "CONCRETE",
+    "floor": "GROUND",
+    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0022",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 0.4559999999999703,
+    "bounded_low": 0.4559999999999703,
+    "bounded_high": 1.1399999999999257,
+    "formula": "perimeter band, no architectural wall evidence: the typical class section is the base; the printed exterior detail (floor level - build-up - outer ground) is the high alternative",
+    "notes": "clear 3.80 m -> H 0.4; c/c ~4.10 m -> H 0.4; exterior depth 0.90 m (0.65 - 1.00)",
+    "dimensions": {
+     "length_m": 3.8,
+     "width_m": 0.3,
+     "net_plan_m2": 1.14,
+     "depth_m": null,
+     "sides": [
+      "OUTSIDE",
+      "FACE:PANEL"
+     ]
+    }
+   },
+   {
+    "line_id": "L-3284f44000c02179ace7",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "trade": "CONCRETE",
+    "floor": "GROUND",
+    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0012.2",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 0.276,
+    "bounded_low": 0.20700000000000002,
+    "bounded_high": 0.6900000000000001,
+    "formula": "perimeter band, no architectural wall evidence: the typical class section is the base; the printed exterior detail (floor level - build-up - outer ground) is the high alternative",
+    "notes": "clear 2.30 m -> H 0.3; c/c ~2.60 m -> H 0.4; exterior depth 0.90 m (0.65 - 1.00)",
+    "dimensions": {
+     "length_m": 2.3,
+     "width_m": 0.3,
+     "net_plan_m2": 0.69,
+     "depth_m": null,
+     "sides": [
+      "FACE:PANEL",
+      "OUTSIDE"
+     ]
+    }
+   },
+   {
+    "line_id": "L-402dbe61d1c924144a3c",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "trade": "CONCRETE",
+    "floor": "GROUND",
+    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0015",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 1.8234,
+    "bounded_low": 1.8234,
+    "bounded_high": 3.039,
+    "formula": "perimeter band, no architectural wall evidence: the typical class section is the base; the printed exterior detail (floor level - build-up - outer ground) is the high alternative",
+    "notes": "clear 10.13 m -> H 0.6; c/c ~10.43 m -> H 0.6; exterior depth 0.90 m (0.65 - 1.00)",
+    "dimensions": {
+     "length_m": 10.13,
+     "width_m": 0.3,
+     "net_plan_m2": 3.039,
+     "depth_m": null,
+     "sides": [
+      "FACE:PANEL",
+      "OUTSIDE"
+     ]
+    }
+   },
+   {
+    "line_id": "L-46f25f72b44e8bc3e2e0",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "trade": "CONCRETE",
+    "floor": "GROUND",
+    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0006.3",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 0.32400000000000007,
+    "bounded_low": 0.32400000000000007,
+    "bounded_high": 0.81,
+    "formula": "perimeter band, no architectural wall evidence: the typical class section is the base; the printed exterior detail (floor level - build-up - outer ground) is the high alternative",
+    "notes": "clear 2.70 m -> H 0.4; c/c ~3.00 m -> H 0.4; exterior depth 0.90 m (0.65 - 1.00)",
+    "dimensions": {
+     "length_m": 2.7,
+     "width_m": 0.3,
+     "net_plan_m2": 0.81,
+     "depth_m": null,
+     "sides": [
+      "OUTSIDE",
+      "FACE:PANEL"
+     ]
+    }
+   },
+   {
+    "line_id": "L-4783c6e18002c3a8a37e",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "trade": "CONCRETE",
+    "floor": "GROUND",
+    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0016",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 1.1519999999999972,
+    "bounded_low": 1.1519999999999972,
+    "bounded_high": 1.9199999999999955,
+    "formula": "perimeter band, no architectural wall evidence: the typical class section is the base; the printed exterior detail (floor level - build-up - outer ground) is the high alternative",
+    "notes": "clear 6.40 m -> H 0.6; c/c ~6.70 m -> H 0.6; exterior depth 0.90 m (0.65 - 1.00)",
+    "dimensions": {
+     "length_m": 6.4,
+     "width_m": 0.3,
+     "net_plan_m2": 1.92,
+     "depth_m": null,
+     "sides": [
+      "OUTSIDE",
+      "FACE:PANEL"
+     ]
+    }
+   },
+   {
+    "line_id": "L-62243c74c430d383be86",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "trade": "CONCRETE",
+    "floor": "GROUND",
+    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0002.1",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 0.05400000003724185,
+    "bounded_low": 0.05400000003724185,
+    "bounded_high": 0.1800000001241395,
+    "formula": "perimeter band, no architectural wall evidence: the typical class section is the base; the printed exterior detail (floor level - build-up - outer ground) is the high alternative",
+    "notes": "clear 0.60 m -> H 0.3; c/c ~0.90 m -> H 0.3; exterior depth 0.90 m (0.65 - 1.00)",
+    "dimensions": {
+     "length_m": 0.6,
+     "width_m": 0.3,
+     "net_plan_m2": 0.18,
+     "depth_m": null,
+     "sides": [
+      "OUTSIDE",
+      "FACE:PANEL"
+     ]
+    }
+   },
+   {
+    "line_id": "L-62f712462a36d4ad1b32",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "trade": "CONCRETE",
+    "floor": "GROUND",
+    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0004.1",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 0.515999999947717,
+    "bounded_low": 0.515999999947717,
+    "bounded_high": 1.2899999998692924,
+    "formula": "perimeter band, no architectural wall evidence: the typical class section is the base; the printed exterior detail (floor level - build-up - outer ground) is the high alternative",
+    "notes": "clear 4.30 m -> H 0.4; c/c ~4.60 m -> H 0.4; exterior depth 0.90 m (0.65 - 1.00)",
+    "dimensions": {
+     "length_m": 4.3,
+     "width_m": 0.3,
+     "net_plan_m2": 1.29,
+     "depth_m": null,
+     "sides": [
+      "OUTSIDE",
+      "FACE:PANEL"
+     ]
+    }
+   },
+   {
+    "line_id": "L-6bf14711798e5af93594",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "trade": "CONCRETE",
+    "floor": "GROUND",
+    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0012.1",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 0.13499999996079037,
+    "bounded_low": 0.13499999996079037,
+    "bounded_high": 0.4499999998693013,
+    "formula": "perimeter band, no architectural wall evidence: the typical class section is the base; the printed exterior detail (floor level - build-up - outer ground) is the high alternative",
+    "notes": "clear 1.50 m -> H 0.3; c/c ~1.80 m -> H 0.3; exterior depth 0.90 m (0.65 - 1.00)",
+    "dimensions": {
+     "length_m": 1.5,
+     "width_m": 0.3,
+     "net_plan_m2": 0.45,
+     "depth_m": null,
+     "sides": [
+      "FACE:PANEL",
+      "OUTSIDE"
+     ]
+    }
+   },
+   {
+    "line_id": "L-9e28c7012784a8dc33c8",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "trade": "CONCRETE",
+    "floor": "GROUND",
+    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0026.1",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 1.2419999999999998,
+    "bounded_low": 1.2419999999999998,
+    "bounded_high": 2.07,
+    "formula": "perimeter band, no architectural wall evidence: the typical class section is the base; the printed exterior detail (floor level - build-up - outer ground) is the high alternative",
+    "notes": "clear 6.90 m -> H 0.6; c/c ~7.20 m -> H 0.6; exterior depth 0.90 m (0.65 - 1.00)",
+    "dimensions": {
+     "length_m": 6.9,
+     "width_m": 0.3,
+     "net_plan_m2": 2.07,
+     "depth_m": null,
+     "sides": [
+      "FACE:PANEL",
+      "OUTSIDE"
+     ]
+    }
+   },
+   {
+    "line_id": "L-a55bfa01b726ef11650c",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "trade": "CONCRETE",
+    "floor": "GROUND",
+    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0041",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 0.11699999999997117,
+    "bounded_low": 0.11699999999997117,
+    "bounded_high": 0.3899999999999039,
+    "formula": "perimeter band, no architectural wall evidence: the typical class section is the base; the printed exterior detail (floor level - build-up - outer ground) is the high alternative",
+    "notes": "clear 1.30 m -> H 0.3; c/c ~1.60 m -> H 0.3; exterior depth 0.90 m (0.65 - 1.00)",
+    "dimensions": {
+     "length_m": 1.3,
+     "width_m": 0.3,
+     "net_plan_m2": 0.39,
+     "depth_m": null,
+     "sides": [
+      "OUTSIDE",
+      "OUTSIDE"
+     ]
+    }
+   },
+   {
+    "line_id": "L-b4a13a43967ee4765662",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "trade": "CONCRETE",
+    "floor": "GROUND",
+    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0017.2",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 0.04500000003921093,
+    "bounded_low": 0.04500000003921093,
+    "bounded_high": 0.1500000001307031,
+    "formula": "perimeter band, no architectural wall evidence: the typical class section is the base; the printed exterior detail (floor level - build-up - outer ground) is the high alternative",
+    "notes": "clear 0.50 m -> H 0.3; c/c ~0.80 m -> H 0.3; exterior depth 0.90 m (0.65 - 1.00)",
+    "dimensions": {
+     "length_m": 0.5,
+     "width_m": 0.3,
+     "net_plan_m2": 0.15,
+     "depth_m": null,
+     "sides": [
+      "FACE:PANEL",
+      "OUTSIDE"
+     ]
+    }
+   },
+   {
+    "line_id": "L-bde0257c24588948167f",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "trade": "CONCRETE",
+    "floor": "GROUND",
+    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0001.1",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 0.28799999995031283,
+    "bounded_low": 0.21599999996273458,
+    "bounded_high": 0.719999999875782,
+    "formula": "perimeter band, no architectural wall evidence: the typical class section is the base; the printed exterior detail (floor level - build-up - outer ground) is the high alternative",
+    "notes": "clear 2.40 m -> H 0.3; c/c ~2.70 m -> H 0.4; exterior depth 0.90 m (0.65 - 1.00)",
+    "dimensions": {
+     "length_m": 2.4,
+     "width_m": 0.3,
+     "net_plan_m2": 0.72,
+     "depth_m": null,
+     "sides": [
+      "OUTSIDE",
+      "FACE:PANEL"
+     ]
+    }
+   },
+   {
+    "line_id": "L-c9bb2eca50a2a2c8b569",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "trade": "CONCRETE",
+    "floor": "GROUND",
+    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0011.4",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 0.108,
+    "bounded_low": 0.108,
+    "bounded_high": 0.36,
+    "formula": "perimeter band, no architectural wall evidence: the typical class section is the base; the printed exterior detail (floor level - build-up - outer ground) is the high alternative",
+    "notes": "clear 1.20 m -> H 0.3; c/c ~1.50 m -> H 0.3; exterior depth 0.90 m (0.65 - 1.00)",
+    "dimensions": {
+     "length_m": 1.2,
+     "width_m": 0.3,
+     "net_plan_m2": 0.36,
+     "depth_m": null,
+     "sides": [
+      "FACE:PANEL",
+      "OUTSIDE"
+     ]
+    }
+   },
+   {
+    "line_id": "L-cc6aaa99e1892f34b92f",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "trade": "CONCRETE",
+    "floor": "GROUND",
+    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0011.1",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 0.3569999999503337,
+    "bounded_low": 0.3569999999503337,
+    "bounded_high": 0.8924999998758343,
+    "formula": "perimeter band, no architectural wall evidence: the typical class section is the base; the printed exterior detail (floor level - build-up - outer ground) is the high alternative",
+    "notes": "clear 2.97 m -> H 0.4; c/c ~3.27 m -> H 0.4; exterior depth 0.90 m (0.65 - 1.00)",
+    "dimensions": {
+     "length_m": 2.975,
+     "width_m": 0.3,
+     "net_plan_m2": 0.8925,
+     "depth_m": null,
+     "sides": [
+      "FACE:PANEL",
+      "OUTSIDE"
+     ]
+    }
+   },
+   {
+    "line_id": "L-d08e7a9d809a56733ff9",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "trade": "CONCRETE",
+    "floor": "GROUND",
+    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0025.2",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 0.09000000003724708,
+    "bounded_low": 0.09000000003724708,
+    "bounded_high": 0.30000000012415695,
+    "formula": "perimeter band, no architectural wall evidence: the typical class section is the base; the printed exterior detail (floor level - build-up - outer ground) is the high alternative",
+    "notes": "clear 1.00 m -> H 0.3; c/c ~1.30 m -> H 0.3; exterior depth 0.90 m (0.65 - 1.00)",
+    "dimensions": {
+     "length_m": 1.0,
+     "width_m": 0.3,
+     "net_plan_m2": 0.3,
+     "depth_m": null,
+     "sides": [
+      "OUTSIDE",
+      "FACE:PANEL"
+     ]
+    }
+   },
+   {
+    "line_id": "L-d8b98b143e293d30833b",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "trade": "CONCRETE",
+    "floor": "GROUND",
+    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0013.2",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 1.0440000000745047,
+    "bounded_low": 1.0440000000745047,
+    "bounded_high": 1.7400000001241744,
+    "formula": "perimeter band, no architectural wall evidence: the typical class section is the base; the printed exterior detail (floor level - build-up - outer ground) is the high alternative",
+    "notes": "clear 5.80 m -> H 0.6; c/c ~6.10 m -> H 0.6; exterior depth 0.90 m (0.65 - 1.00)",
+    "dimensions": {
+     "length_m": 5.8,
+     "width_m": 0.3,
+     "net_plan_m2": 1.74,
+     "depth_m": null,
+     "sides": [
+      "OUTSIDE",
+      "FACE:PANEL"
+     ]
+    }
+   },
+   {
+    "line_id": "L-dac43ee18f55433b57e7",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "trade": "CONCRETE",
+    "floor": "GROUND",
+    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0001.4",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 0.3900000000148045,
+    "bounded_low": 0.3900000000148045,
+    "bounded_high": 0.9750000000370113,
+    "formula": "perimeter band, no architectural wall evidence: the typical class section is the base; the printed exterior detail (floor level - build-up - outer ground) is the high alternative",
+    "notes": "clear 3.25 m -> H 0.4; c/c ~3.55 m -> H 0.4; exterior depth 0.90 m (0.65 - 1.00)",
+    "dimensions": {
+     "length_m": 3.25,
+     "width_m": 0.3,
+     "net_plan_m2": 0.975,
+     "depth_m": null,
+     "sides": [
+      "OUTSIDE",
+      "FACE:PANEL"
+     ]
+    }
+   },
+   {
+    "line_id": "L-e16c98075f69532a3dc7",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "trade": "CONCRETE",
+    "floor": "GROUND",
+    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0042",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 0.16257741982327176,
+    "bounded_low": 0.16257741982327176,
+    "bounded_high": 0.5419247327442392,
+    "formula": "perimeter band, no architectural wall evidence: the typical class section is the base; the printed exterior detail (floor level - build-up - outer ground) is the high alternative",
+    "notes": "clear 1.81 m -> H 0.3; c/c ~2.11 m -> H 0.3; exterior depth 0.90 m (0.65 - 1.00)",
+    "dimensions": {
+     "length_m": 1.8064,
+     "width_m": 0.3,
+     "net_plan_m2": 0.54192,
+     "depth_m": null,
+     "sides": [
+      "OUTSIDE",
+      "ENCLOSED_GAP"
+     ]
+    }
+   },
+   {
+    "line_id": "L-e8536bc4f2699a24e2ab",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "trade": "CONCRETE",
+    "floor": "GROUND",
+    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0011.2",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 1.0341,
+    "bounded_low": 1.0341,
+    "bounded_high": 1.7235,
+    "formula": "perimeter band, no architectural wall evidence: the typical class section is the base; the printed exterior detail (floor level - build-up - outer ground) is the high alternative",
+    "notes": "clear 5.75 m -> H 0.6; c/c ~6.04 m -> H 0.6; exterior depth 0.90 m (0.65 - 1.00)",
+    "dimensions": {
+     "length_m": 5.745,
+     "width_m": 0.3,
+     "net_plan_m2": 1.7235,
+     "depth_m": null,
+     "sides": [
+      "FACE:PANEL",
+      "OUTSIDE"
+     ]
+    }
+   },
+   {
+    "line_id": "L-e9a885323ad6ec3ea32b",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "trade": "CONCRETE",
+    "floor": "GROUND",
+    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0011.3",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 1.143,
+    "bounded_low": 1.143,
+    "bounded_high": 1.905,
+    "formula": "perimeter band, no architectural wall evidence: the typical class section is the base; the printed exterior detail (floor level - build-up - outer ground) is the high alternative",
+    "notes": "clear 6.35 m -> H 0.6; c/c ~6.65 m -> H 0.6; exterior depth 0.90 m (0.65 - 1.00)",
+    "dimensions": {
+     "length_m": 6.35,
+     "width_m": 0.3,
+     "net_plan_m2": 1.905,
+     "depth_m": null,
+     "sides": [
+      "FACE:BEAM",
+      "OUTSIDE"
+     ]
+    }
+   },
+   {
+    "line_id": "L-efbed17455bb224e126e",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "trade": "CONCRETE",
+    "floor": "GROUND",
+    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0001.2",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 0.40439999999994414,
+    "bounded_low": 0.40439999999994414,
+    "bounded_high": 1.0109999999998602,
+    "formula": "perimeter band, no architectural wall evidence: the typical class section is the base; the printed exterior detail (floor level - build-up - outer ground) is the high alternative",
+    "notes": "clear 3.37 m -> H 0.4; c/c ~3.67 m -> H 0.4; exterior depth 0.90 m (0.65 - 1.00)",
+    "dimensions": {
+     "length_m": 3.37,
+     "width_m": 0.3,
+     "net_plan_m2": 1.011,
+     "depth_m": null,
+     "sides": [
+      "OUTSIDE",
+      "FACE:BEAM"
+     ]
+    }
+   },
+   {
+    "line_id": "L-ff727b2a52e39509a659",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "trade": "CONCRETE",
+    "floor": "GROUND",
+    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0009",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 0.03510179283579389,
+    "bounded_low": 0.03510179283579389,
+    "bounded_high": 0.11700597611931297,
+    "formula": "perimeter band, no architectural wall evidence: the typical class section is the base; the printed exterior detail (floor level - build-up - outer ground) is the high alternative",
+    "notes": "clear 0.39 m -> H 0.3; c/c ~0.69 m -> H 0.3; exterior depth 0.90 m (0.65 - 1.00)",
+    "dimensions": {
+     "length_m": 0.39,
+     "width_m": 0.3,
+     "net_plan_m2": 0.11701,
+     "depth_m": null,
+     "sides": [
+      "FACE:PANEL",
+      "OUTSIDE"
+     ]
+    }
+   }
+  ],
+  "COL_2F": [
+   {
+    "line_id": "L-0ede77cfd0badc4c7d62",
+    "item_code": "STR.CONC.COLUMN",
+    "trade": "CONCRETE",
+    "floor": "2F",
+    "element_id": "P-C:COL:SH12:C2@247685,64087|2F",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 0.42000000000000004,
+    "bounded_low": 0.42000000000000004,
+    "bounded_high": 0.42000000000000004,
+    "formula": "B x H (schedule) x storey height (profile)",
+    "notes": "",
+    "dimensions": {
+     "height_m": 4.2
+    }
+   },
+   {
+    "line_id": "L-26f6b6f2365c72e42291",
+    "item_code": "STR.CONC.COLUMN",
+    "trade": "CONCRETE",
+    "floor": "2F",
+    "element_id": "P-C:COL:SH12:C2@254644,61274|2F",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 0.42000000000000004,
+    "bounded_low": 0.42000000000000004,
+    "bounded_high": 0.42000000000000004,
+    "formula": "B x H (schedule) x storey height (profile)",
+    "notes": "",
+    "dimensions": {
+     "height_m": 4.2
+    }
+   },
+   {
+    "line_id": "L-33a9b7728781fcba12e2",
+    "item_code": "STR.CONC.COLUMN",
+    "trade": "CONCRETE",
+    "floor": "2F",
+    "element_id": "P-C:COL:SH12:C2@251723,58368|2F",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 0.42000000000000004,
+    "bounded_low": 0.42000000000000004,
+    "bounded_high": 0.42000000000000004,
+    "formula": "B x H (schedule) x storey height (profile)",
+    "notes": "",
+    "dimensions": {
+     "height_m": 4.2
+    }
+   },
+   {
+    "line_id": "L-53f223b06db14ac41d47",
+    "item_code": "STR.CONC.COLUMN",
+    "trade": "CONCRETE",
+    "floor": "2F",
+    "element_id": "P-C:COL:SH12:C9@254644,59429|2F",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 0.5880000000000001,
+    "bounded_low": 0.5880000000000001,
+    "bounded_high": 0.5880000000000001,
+    "formula": "B x H (schedule) x storey height (profile)",
+    "notes": "",
+    "dimensions": {
+     "height_m": 4.2
+    }
+   },
+   {
+    "line_id": "L-919a5749ef79759e01ca",
+    "item_code": "STR.CONC.COLUMN",
+    "trade": "CONCRETE",
+    "floor": "2F",
+    "element_id": "P-C:COL:SH12:C2@252679,64225|2F",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 0.42000000000000004,
+    "bounded_low": 0.42000000000000004,
+    "bounded_high": 0.42000000000000004,
+    "formula": "B x H (schedule) x storey height (profile)",
+    "notes": "",
+    "dimensions": {
+     "height_m": 4.2
+    }
+   },
+   {
+    "line_id": "L-bc01297b1c4a4c45a15f",
+    "item_code": "STR.CONC.COLUMN",
+    "trade": "CONCRETE",
+    "floor": "2F",
+    "element_id": "P-C:COL:SH12:C5@255627,63526|2F",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 0.42000000000000004,
+    "bounded_low": 0.42000000000000004,
+    "bounded_high": 0.42000000000000004,
+    "formula": "B x H (schedule) x storey height (profile)",
+    "notes": "",
+    "dimensions": {
+     "height_m": 4.2
+    }
+   },
+   {
+    "line_id": "L-c10e2945d582b5a03126",
+    "item_code": "STR.CONC.COLUMN",
+    "trade": "CONCRETE",
+    "floor": "2F",
+    "element_id": "P-C:COL:SH12:C3@247476,61310|2F",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 0.42000000000000004,
+    "bounded_low": 0.42000000000000004,
+    "bounded_high": 0.42000000000000004,
+    "formula": "B x H (schedule) x storey height (profile)",
+    "notes": "",
+    "dimensions": {
+     "height_m": 4.2
+    }
+   },
+   {
+    "line_id": "L-d79d17d14f39d5148cb8",
+    "item_code": "STR.CONC.COLUMN",
+    "trade": "CONCRETE",
+    "floor": "2F",
+    "element_id": "P-C:COL:SH12:C1@251701,62344|2F",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 0.42000000000000004,
+    "bounded_low": 0.42000000000000004,
+    "bounded_high": 0.42000000000000004,
+    "formula": "B x H (schedule) x storey height (profile)",
+    "notes": "",
+    "dimensions": {
+     "height_m": 4.2
+    }
+   }
+  ],
+  "COL_ANNEX_7": [
+   {
+    "line_id": "L-694a75c84dd6e4bb4491",
+    "item_code": "STR.CONC.COLUMN",
+    "trade": "CONCRETE",
+    "floor": "GF",
+    "element_id": "P-C:COL:SH12:C3@241094,51256|GF",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 0.5625,
+    "bounded_low": 0.5625,
+    "bounded_high": 0.5625,
+    "formula": "B x H (schedule) x storey height (profile)",
+    "notes": "",
+    "dimensions": {
+     "height_m": 4.5
+    }
+   },
+   {
+    "line_id": "L-7d70692d03102a2dc306",
+    "item_code": "STR.CONC.COLUMN",
+    "trade": "CONCRETE",
+    "floor": "GF",
+    "element_id": "P-C:COL:SH12:C3@243004,52949|GF",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 0.5625,
+    "bounded_low": 0.5625,
+    "bounded_high": 0.5625,
+    "formula": "B x H (schedule) x storey height (profile)",
+    "notes": "",
+    "dimensions": {
+     "height_m": 4.5
+    }
+   },
+   {
+    "line_id": "L-84bf7fb482a98fdbe482",
+    "item_code": "STR.CONC.COLUMN",
+    "trade": "CONCRETE",
+    "floor": "GF",
+    "element_id": "P-C:COL:SH12:C5@243102,55481|GF",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 0.6749999999999999,
+    "bounded_low": 0.6749999999999999,
+    "bounded_high": 0.6749999999999999,
+    "formula": "B x H (schedule) x storey height (profile)",
+    "notes": "",
+    "dimensions": {
+     "height_m": 4.5
+    }
+   },
+   {
+    "line_id": "L-9f5a647014bbf83359f9",
+    "item_code": "STR.CONC.COLUMN",
+    "trade": "CONCRETE",
+    "floor": "GF",
+    "element_id": "P-C:COL:SH12:C@238150,57853|GF",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 0.45,
+    "bounded_low": 0.45,
+    "bounded_high": 0.45,
+    "formula": "B x H (schedule) x storey height (profile)",
+    "notes": "",
+    "dimensions": {
+     "height_m": 4.5
+    }
+   },
+   {
+    "line_id": "L-c0b3340a906c2c7650f8",
+    "item_code": "STR.CONC.COLUMN",
+    "trade": "CONCRETE",
+    "floor": "GF",
+    "element_id": "P-C:COL:SH12:C@233893,56561|GF",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 0.45,
+    "bounded_low": 0.45,
+    "bounded_high": 0.45,
+    "formula": "B x H (schedule) x storey height (profile)",
+    "notes": "",
+    "dimensions": {
+     "height_m": 4.5
+    }
+   },
+   {
+    "line_id": "L-e6c1c9a7feec10f64975",
+    "item_code": "STR.CONC.COLUMN",
+    "trade": "CONCRETE",
+    "floor": "GF",
+    "element_id": "P-C:COL:SH12:C@235241,51296|GF",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 0.45,
+    "bounded_low": 0.45,
+    "bounded_high": 0.45,
+    "formula": "B x H (schedule) x storey height (profile)",
+    "notes": "",
+    "dimensions": {
+     "height_m": 4.5
+    }
+   },
+   {
+    "line_id": "L-fad18af6e7139a5e99d1",
+    "item_code": "STR.CONC.COLUMN",
+    "trade": "CONCRETE",
+    "floor": "GF",
+    "element_id": "P-C:COL:SH12:C3@238374,54773|GF",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 0.5625,
+    "bounded_low": 0.5625,
+    "bounded_high": 0.5625,
+    "formula": "B x H (schedule) x storey height (profile)",
+    "notes": "",
+    "dimensions": {
+     "height_m": 4.5
+    }
+   }
+  ],
+  "ST03": [
+   {
+    "line_id": "L-061e18cf35a4b6b33d68",
+    "item_code": "STR.CONC.STAIR",
+    "trade": "CONCRETE",
+    "floor": "GROUND",
+    "element_id": "P-C:SCOPE:STAIRS:GROUND:CC-5ab1872c70:FLIGHTS",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 0.9482674779781379,
+    "bounded_low": 0.6116168477474295,
+    "bounded_high": 1.0860799346671572,
+    "formula": "per run: stair_measure (straight: stair_geometry.straight_flight; winder: plan x (waist / cos + R / 2)); risers by the riser rule, both readings in the range",
+    "notes": "",
+    "dimensions": {}
+   }
+  ],
+  "GB_OTHER_RELEASED": [
+   {
+    "line_id": "L-0bb78accf8c0a0fbdbaf",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "trade": "CONCRETE",
+    "floor": "GROUND",
+    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0037.1",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 0.2912309462399071,
+    "bounded_low": 0.21842320967993029,
+    "bounded_high": 0.2912309462399071,
+    "formula": "net plan x class depth (typical section by support-to-support span; the class at the other length basis gives the range)",
+    "notes": "clear 2.43 m -> H 0.3; c/c ~2.73 m -> H 0.4",
+    "dimensions": {
+     "length_m": 2.4269,
+     "width_m": 0.3,
+     "net_plan_m2": 0.72808,
+     "depth_m": null,
+     "sides": [
+      "FACE:PANEL",
+      "FACE:PANEL"
+     ]
+    }
+   },
+   {
+    "line_id": "L-0c5ede7fd2c9e425aa8d",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "trade": "CONCRETE",
+    "floor": "GROUND",
+    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0034",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 0.1124999999999869,
+    "bounded_low": 0.1124999999999869,
+    "bounded_high": 0.1124999999999869,
+    "formula": "net plan x class depth (typical section by support-to-support span; the class at the other length basis gives the range)",
+    "notes": "clear 1.25 m -> H 0.3; c/c ~1.55 m -> H 0.3",
+    "dimensions": {
+     "length_m": 1.25,
+     "width_m": 0.3,
+     "net_plan_m2": 0.375,
+     "depth_m": null,
+     "sides": [
+      "FACE:PANEL",
+      "FACE:PANEL"
+     ]
+    }
+   },
+   {
+    "line_id": "L-0e30aadba2eebc6c3ede",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "trade": "CONCRETE",
+    "floor": "GROUND",
+    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0032",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 1.3230000000000157,
+    "bounded_low": 1.3230000000000157,
+    "bounded_high": 1.3230000000000157,
+    "formula": "net plan x class depth (typical section by support-to-support span; the class at the other length basis gives the range)",
+    "notes": "clear 7.35 m -> H 0.6; c/c ~7.65 m -> H 0.6",
+    "dimensions": {
+     "length_m": 7.35,
+     "width_m": 0.3,
+     "net_plan_m2": 2.205,
+     "depth_m": null,
+     "sides": [
+      "FACE:BEAM",
+      "FACE:PANEL"
+     ]
+    }
+   },
+   {
+    "line_id": "L-0e852cca42fb8b765c58",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "trade": "CONCRETE",
+    "floor": "GROUND",
+    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0007",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 0.28800000000002446,
+    "bounded_low": 0.21600000000001834,
+    "bounded_high": 0.28800000000002446,
+    "formula": "net plan x class depth (typical section by support-to-support span; the class at the other length basis gives the range)",
+    "notes": "clear 2.40 m -> H 0.3; c/c ~2.70 m -> H 0.4",
+    "dimensions": {
+     "length_m": 2.4,
+     "width_m": 0.3,
+     "net_plan_m2": 0.72,
+     "depth_m": null,
+     "sides": [
+      "FACE:PANEL",
+      "FACE:PANEL"
+     ]
+    }
+   },
+   {
+    "line_id": "L-131df76e442a8b7cc2e9",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "trade": "CONCRETE",
+    "floor": "GROUND",
+    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0010.2",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 0.3179999999999965,
+    "bounded_low": 0.3179999999999965,
+    "bounded_high": 0.3179999999999965,
+    "formula": "net plan x class depth (typical section by support-to-support span; the class at the other length basis gives the range)",
+    "notes": "clear 2.65 m -> H 0.4; c/c ~2.95 m -> H 0.4",
+    "dimensions": {
+     "length_m": 2.65,
+     "width_m": 0.3,
+     "net_plan_m2": 0.795,
+     "depth_m": null,
+     "sides": [
+      "FACE:PANEL",
+      "FACE:PANEL"
+     ]
+    }
+   },
+   {
+    "line_id": "L-1487bdda099006e0c4ba",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "trade": "CONCRETE",
+    "floor": "GROUND",
+    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0019",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 0.2940000000000035,
+    "bounded_low": 0.22050000000000258,
+    "bounded_high": 0.2940000000000035,
+    "formula": "net plan x class depth (typical section by support-to-support span; the class at the other length basis gives the range)",
+    "notes": "clear 2.45 m -> H 0.3; c/c ~2.75 m -> H 0.4",
+    "dimensions": {
+     "length_m": 2.45,
+     "width_m": 0.3,
+     "net_plan_m2": 0.735,
+     "depth_m": null,
+     "sides": [
+      "FACE:PANEL",
+      "FACE:BEAM"
+     ]
+    }
+   },
+   {
+    "line_id": "L-151a282bcf2d5324a618",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "trade": "CONCRETE",
+    "floor": "GROUND",
+    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0031",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 0.45000000000080675,
+    "bounded_low": 0.45000000000080675,
+    "bounded_high": 0.45000000000080675,
+    "formula": "net plan x class depth (typical section by support-to-support span; the class at the other length basis gives the range)",
+    "notes": "clear 3.75 m -> H 0.4; c/c ~4.05 m -> H 0.4",
+    "dimensions": {
+     "length_m": 3.75,
+     "width_m": 0.3,
+     "net_plan_m2": 1.125,
+     "depth_m": null,
+     "sides": [
+      "FACE:PANEL",
+      "FACE:PANEL"
+     ]
+    }
+   },
+   {
+    "line_id": "L-26fcfbbb143269e7bb58",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "trade": "CONCRETE",
+    "floor": "GROUND",
+    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0005.1",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 0.1710000000372497,
+    "bounded_low": 0.1710000000372497,
+    "bounded_high": 0.1710000000372497,
+    "formula": "net plan x class depth (typical section by support-to-support span; the class at the other length basis gives the range)",
+    "notes": "clear 1.90 m -> H 0.3; c/c ~2.20 m -> H 0.3",
+    "dimensions": {
+     "length_m": 1.9,
+     "width_m": 0.3,
+     "net_plan_m2": 0.57,
+     "depth_m": null,
+     "sides": [
+      "FACE:PANEL",
+      "FACE:PANEL"
+     ]
+    }
+   },
+   {
+    "line_id": "L-27d104ca6fc3556d16e6",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "trade": "CONCRETE",
+    "floor": "GROUND",
+    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0006.2",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 0.528,
+    "bounded_low": 0.528,
+    "bounded_high": 0.528,
+    "formula": "net plan x class depth (typical section by support-to-support span; the class at the other length basis gives the range)",
+    "notes": "clear 4.40 m -> H 0.4; c/c ~4.70 m -> H 0.4",
+    "dimensions": {
+     "length_m": 4.4,
+     "width_m": 0.3,
+     "net_plan_m2": 1.32,
+     "depth_m": null,
+     "sides": [
+      "FACE:PANEL",
+      "FACE:PANEL"
+     ]
+    }
+   },
+   {
+    "line_id": "L-361f5e913c566c4fe2b5",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "trade": "CONCRETE",
+    "floor": "GROUND",
+    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0036.1",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 0.32399999994771267,
+    "bounded_low": 0.32399999994771267,
+    "bounded_high": 0.32399999994771267,
+    "formula": "net plan x class depth (typical section by support-to-support span; the class at the other length basis gives the range)",
+    "notes": "clear 2.70 m -> H 0.4; c/c ~3.00 m -> H 0.4",
+    "dimensions": {
+     "length_m": 2.7,
+     "width_m": 0.3,
+     "net_plan_m2": 0.81,
+     "depth_m": null,
+     "sides": [
+      "FACE:PANEL",
+      "FACE:PANEL"
+     ]
+    }
+   },
+   {
+    "line_id": "L-3e7ea87496653eb75704",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "trade": "CONCRETE",
+    "floor": "GROUND",
+    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0018",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 0.5160000000000106,
+    "bounded_low": 0.5160000000000106,
+    "bounded_high": 0.5160000000000106,
+    "formula": "net plan x class depth (typical section by support-to-support span; the class at the other length basis gives the range)",
+    "notes": "clear 4.30 m -> H 0.4; c/c ~4.60 m -> H 0.4",
+    "dimensions": {
+     "length_m": 4.3,
+     "width_m": 0.3,
+     "net_plan_m2": 1.29,
+     "depth_m": null,
+     "sides": [
+      "FACE:PANEL",
+      "FACE:PANEL"
+     ]
+    }
+   },
+   {
+    "line_id": "L-4129e781d6133b963bf7",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "trade": "CONCRETE",
+    "floor": "GROUND",
+    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0024",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 0.45000000000054485,
+    "bounded_low": 0.45000000000054485,
+    "bounded_high": 0.45000000000054485,
+    "formula": "net plan x class depth (typical section by support-to-support span; the class at the other length basis gives the range)",
+    "notes": "clear 3.75 m -> H 0.4; c/c ~4.05 m -> H 0.4",
+    "dimensions": {
+     "length_m": 3.75,
+     "width_m": 0.3,
+     "net_plan_m2": 1.125,
+     "depth_m": null,
+     "sides": [
+      "FACE:PANEL",
+      "FACE:PANEL"
+     ]
+    }
+   },
+   {
+    "line_id": "L-43d1d1031b3d3ddd1cc4",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "trade": "CONCRETE",
+    "floor": "GROUND",
+    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0003",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 0.3480000000012853,
+    "bounded_low": 0.3480000000012853,
+    "bounded_high": 0.3480000000012853,
+    "formula": "net plan x class depth (typical section by support-to-support span; the class at the other length basis gives the range)",
+    "notes": "clear 2.90 m -> H 0.4; c/c ~3.20 m -> H 0.4",
+    "dimensions": {
+     "length_m": 2.9,
+     "width_m": 0.3,
+     "net_plan_m2": 0.87,
+     "depth_m": null,
+     "sides": [
+      "FACE:PANEL",
+      "FACE:PANEL"
+     ]
+    }
+   },
+   {
+    "line_id": "L-56ebab0b7b448d0abeb1",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "trade": "CONCRETE",
+    "floor": "GROUND",
+    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0033",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 0.5069999999999791,
+    "bounded_low": 0.5069999999999791,
+    "bounded_high": 0.5069999999999791,
+    "formula": "net plan x class depth (typical section by support-to-support span; the class at the other length basis gives the range)",
+    "notes": "clear 4.22 m -> H 0.4; c/c ~4.52 m -> H 0.4",
+    "dimensions": {
+     "length_m": 4.225,
+     "width_m": 0.3,
+     "net_plan_m2": 1.2675,
+     "depth_m": null,
+     "sides": [
+      "FACE:PANEL",
+      "FACE:PANEL"
+     ]
+    }
+   },
+   {
+    "line_id": "L-5af89b9f1e5b90daf8f5",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "trade": "CONCRETE",
+    "floor": "GROUND",
+    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0010.3",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 0.9000000000744888,
+    "bounded_low": 0.9000000000744888,
+    "bounded_high": 0.9000000000744888,
+    "formula": "net plan x class depth (typical section by support-to-support span; the class at the other length basis gives the range)",
+    "notes": "clear 5.00 m -> H 0.6; c/c ~5.30 m -> H 0.6",
+    "dimensions": {
+     "length_m": 5.0,
+     "width_m": 0.3,
+     "net_plan_m2": 1.5,
+     "depth_m": null,
+     "sides": [
+      "FACE:PANEL",
+      "FACE:PANEL"
+     ]
+    }
+   },
+   {
+    "line_id": "L-7076482d75ca42691468",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "trade": "CONCRETE",
+    "floor": "GROUND",
+    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0043",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 1.1316231928086378,
+    "bounded_low": 1.1316231928086378,
+    "bounded_high": 1.1316231928086378,
+    "formula": "net plan x class depth (typical section by support-to-support span; the class at the other length basis gives the range)",
+    "notes": "clear 6.29 m -> H 0.6; c/c ~6.59 m -> H 0.6",
+    "dimensions": {
+     "length_m": 6.2868,
+     "width_m": 0.3,
+     "net_plan_m2": 1.88604,
+     "depth_m": null,
+     "sides": [
+      "FACE:PANEL",
+      "FACE:BEAM"
+     ]
+    }
+   },
+   {
+    "line_id": "L-760f6c369aa655adc84d",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "trade": "CONCRETE",
+    "floor": "GROUND",
+    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0014",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 0.515999999999972,
+    "bounded_low": 0.515999999999972,
+    "bounded_high": 0.515999999999972,
+    "formula": "net plan x class depth (typical section by support-to-support span; the class at the other length basis gives the range)",
+    "notes": "clear 4.30 m -> H 0.4; c/c ~4.60 m -> H 0.4",
+    "dimensions": {
+     "length_m": 4.3,
+     "width_m": 0.3,
+     "net_plan_m2": 1.29,
+     "depth_m": null,
+     "sides": [
+      "FACE:BEAM",
+      "FACE:PANEL"
+     ]
+    }
+   },
+   {
+    "line_id": "L-7afad512258c1bad8519",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "trade": "CONCRETE",
+    "floor": "GROUND",
+    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0027",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 1.2096000000000733,
+    "bounded_low": 1.2096000000000733,
+    "bounded_high": 1.2096000000000733,
+    "formula": "net plan x class depth (typical section by support-to-support span; the class at the other length basis gives the range)",
+    "notes": "clear 6.72 m -> H 0.6; c/c ~7.02 m -> H 0.6",
+    "dimensions": {
+     "length_m": 6.72,
+     "width_m": 0.3,
+     "net_plan_m2": 2.016,
+     "depth_m": null,
+     "sides": [
+      "FACE:PANEL",
+      "FACE:PANEL"
+     ]
+    }
+   },
+   {
+    "line_id": "L-81444e222487437e257e",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "trade": "CONCRETE",
+    "floor": "GROUND",
+    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0020",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 0.13050000000000261,
+    "bounded_low": 0.13050000000000261,
+    "bounded_high": 0.13050000000000261,
+    "formula": "net plan x class depth (typical section by support-to-support span; the class at the other length basis gives the range)",
+    "notes": "clear 1.45 m -> H 0.3; c/c ~1.75 m -> H 0.3",
+    "dimensions": {
+     "length_m": 1.45,
+     "width_m": 0.3,
+     "net_plan_m2": 0.435,
+     "depth_m": null,
+     "sides": [
+      "FACE:PANEL",
+      "FACE:PANEL"
+     ]
+    }
+   },
+   {
+    "line_id": "L-970bac563cbcd69e2a30",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "trade": "CONCRETE",
+    "floor": "GROUND",
+    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0038",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 0.07100828936235978,
+    "bounded_low": 0.07100828936235978,
+    "bounded_high": 0.07100828936235978,
+    "formula": "net plan x class depth (typical section by support-to-support span; the class at the other length basis gives the range)",
+    "notes": "clear 0.79 m -> H 0.3; c/c ~1.09 m -> H 0.3",
+    "dimensions": {
+     "length_m": 0.789,
+     "width_m": 0.3,
+     "net_plan_m2": 0.23669,
+     "depth_m": null,
+     "sides": [
+      "FACE:PANEL",
+      "FACE:PANEL"
+     ]
+    }
+   },
+   {
+    "line_id": "L-9f49f5fafcb9322c90b5",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "trade": "CONCRETE",
+    "floor": "GROUND",
+    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0010.1",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 0.3623999999503268,
+    "bounded_low": 0.3623999999503268,
+    "bounded_high": 0.3623999999503268,
+    "formula": "net plan x class depth (typical section by support-to-support span; the class at the other length basis gives the range)",
+    "notes": "clear 3.02 m -> H 0.4; c/c ~3.32 m -> H 0.4",
+    "dimensions": {
+     "length_m": 3.02,
+     "width_m": 0.3,
+     "net_plan_m2": 0.906,
+     "depth_m": null,
+     "sides": [
+      "FACE:PANEL",
+      "FACE:PANEL"
+     ]
+    }
+   },
+   {
+    "line_id": "L-a8c5c32c7a785c1e3f05",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "trade": "CONCRETE",
+    "floor": "GROUND",
+    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0040",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 0.18899999999999215,
+    "bounded_low": 0.18899999999999215,
+    "bounded_high": 0.18899999999999215,
+    "formula": "net plan x class depth (typical section by support-to-support span; the class at the other length basis gives the range)",
+    "notes": "clear 2.10 m -> H 0.3; c/c ~2.40 m -> H 0.3",
+    "dimensions": {
+     "length_m": 2.1,
+     "width_m": 0.3,
+     "net_plan_m2": 0.63,
+     "depth_m": null,
+     "sides": [
+      "FACE:PANEL",
+      "FACE:PANEL"
+     ]
+    }
+   },
+   {
+    "line_id": "L-be6708e07b40efa02779",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "trade": "CONCRETE",
+    "floor": "GROUND",
+    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0013.1",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 0.008999999962745059,
+    "bounded_low": 0.008999999962745059,
+    "bounded_high": 0.008999999962745059,
+    "formula": "net plan x class depth (typical section by support-to-support span; the class at the other length basis gives the range)",
+    "notes": "clear 0.10 m -> H 0.3; c/c ~0.40 m -> H 0.3",
+    "dimensions": {
+     "length_m": 0.1,
+     "width_m": 0.3,
+     "net_plan_m2": 0.03,
+     "depth_m": null,
+     "sides": [
+      "FACE:PANEL",
+      "FACE:COLUMN"
+     ]
+    }
+   },
+   {
+    "line_id": "L-bf5eb56348883cb2776d",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "trade": "CONCRETE",
+    "floor": "GROUND",
+    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0029",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 0.5126752197023472,
+    "bounded_low": 0.5126752197023472,
+    "bounded_high": 0.5126752197023472,
+    "formula": "net plan x class depth (typical section by support-to-support span; the class at the other length basis gives the range)",
+    "notes": "clear 4.27 m -> H 0.4; c/c ~4.57 m -> H 0.4",
+    "dimensions": {
+     "length_m": 4.2723,
+     "width_m": 0.3,
+     "net_plan_m2": 1.28169,
+     "depth_m": null,
+     "sides": [
+      "FACE:PANEL",
+      "FACE:PANEL"
+     ]
+    }
+   },
+   {
+    "line_id": "L-c0b7102a36344a0349f5",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "trade": "CONCRETE",
+    "floor": "GROUND",
+    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0025.1",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 0.27899999995029184,
+    "bounded_low": 0.20924999996271884,
+    "bounded_high": 0.27899999995029184,
+    "formula": "net plan x class depth (typical section by support-to-support span; the class at the other length basis gives the range)",
+    "notes": "clear 2.32 m -> H 0.3; c/c ~2.62 m -> H 0.4",
+    "dimensions": {
+     "length_m": 2.325,
+     "width_m": 0.3,
+     "net_plan_m2": 0.6975,
+     "depth_m": null,
+     "sides": [
+      "FACE:PANEL",
+      "FACE:PANEL"
+     ]
+    }
+   },
+   {
+    "line_id": "L-c5902fd02c58b85a5df1",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "trade": "CONCRETE",
+    "floor": "GROUND",
+    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0028",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 0.38732478029765105,
+    "bounded_low": 0.38732478029765105,
+    "bounded_high": 0.38732478029765105,
+    "formula": "net plan x class depth (typical section by support-to-support span; the class at the other length basis gives the range)",
+    "notes": "clear 3.23 m -> H 0.4; c/c ~3.53 m -> H 0.4",
+    "dimensions": {
+     "length_m": 3.2277,
+     "width_m": 0.3,
+     "net_plan_m2": 0.96831,
+     "depth_m": null,
+     "sides": [
+      "FACE:PANEL",
+      "FACE:PANEL"
+     ]
+    }
+   },
+   {
+    "line_id": "L-d53e5eb08e2c6c668254",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "trade": "CONCRETE",
+    "floor": "GROUND",
+    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0008.2",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 0.13830023116220166,
+    "bounded_low": 0.13830023116220166,
+    "bounded_high": 0.13830023116220166,
+    "formula": "net plan x class depth (typical section by support-to-support span; the class at the other length basis gives the range)",
+    "notes": "clear 1.54 m -> H 0.3; c/c ~1.84 m -> H 0.3",
+    "dimensions": {
+     "length_m": 1.5367,
+     "width_m": 0.3,
+     "net_plan_m2": 0.461,
+     "depth_m": null,
+     "sides": [
+      "FACE:PANEL",
+      "FACE:BEAM"
+     ]
+    }
+   },
+   {
+    "line_id": "L-e2134034441cb7db7bd7",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "trade": "CONCRETE",
+    "floor": "GROUND",
+    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0021",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 0.1079999999999987,
+    "bounded_low": 0.1079999999999987,
+    "bounded_high": 0.1079999999999987,
+    "formula": "net plan x class depth (typical section by support-to-support span; the class at the other length basis gives the range)",
+    "notes": "clear 1.20 m -> H 0.3; c/c ~1.50 m -> H 0.3",
+    "dimensions": {
+     "length_m": 1.2,
+     "width_m": 0.3,
+     "net_plan_m2": 0.36,
+     "depth_m": null,
+     "sides": [
+      "FACE:PANEL",
+      "FACE:PANEL"
+     ]
+    }
+   },
+   {
+    "line_id": "L-e24946df436cbc25fca6",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "trade": "CONCRETE",
+    "floor": "GROUND",
+    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0008.1",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 0.9035999999255058,
+    "bounded_low": 0.9035999999255058,
+    "bounded_high": 0.9035999999255058,
+    "formula": "net plan x class depth (typical section by support-to-support span; the class at the other length basis gives the range)",
+    "notes": "clear 5.02 m -> H 0.6; c/c ~5.32 m -> H 0.6",
+    "dimensions": {
+     "length_m": 5.02,
+     "width_m": 0.3,
+     "net_plan_m2": 1.506,
+     "depth_m": null,
+     "sides": [
+      "FACE:PANEL",
+      "FACE:PANEL"
+     ]
+    }
+   },
+   {
+    "line_id": "L-f0e25ad2cf73bf2a35ea",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "trade": "CONCRETE",
+    "floor": "GROUND",
+    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0030",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 0.10800000000005239,
+    "bounded_low": 0.10800000000005239,
+    "bounded_high": 0.10800000000005239,
+    "formula": "net plan x class depth (typical section by support-to-support span; the class at the other length basis gives the range)",
+    "notes": "clear 1.20 m -> H 0.3; c/c ~1.50 m -> H 0.3",
+    "dimensions": {
+     "length_m": 1.2,
+     "width_m": 0.3,
+     "net_plan_m2": 0.36,
+     "depth_m": null,
+     "sides": [
+      "FACE:PANEL",
+      "FACE:PANEL"
+     ]
+    }
+   },
+   {
+    "line_id": "L-f24cf117a9ce1e875785",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "trade": "CONCRETE",
+    "floor": "GROUND",
+    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0039",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 0.1865919889758626,
+    "bounded_low": 0.1865919889758626,
+    "bounded_high": 0.1865919889758626,
+    "formula": "net plan x class depth (typical section by support-to-support span; the class at the other length basis gives the range)",
+    "notes": "clear 2.07 m -> H 0.3; c/c ~2.37 m -> H 0.3",
+    "dimensions": {
+     "length_m": 2.0732,
+     "width_m": 0.3,
+     "net_plan_m2": 0.62197,
+     "depth_m": null,
+     "sides": [
+      "FACE:PANEL",
+      "FACE:PANEL"
+     ]
+    }
+   },
+   {
+    "line_id": "L-fadb548a6843001d45b0",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "trade": "CONCRETE",
+    "floor": "GROUND",
+    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0006.1",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 0.5279999999477171,
+    "bounded_low": 0.5279999999477171,
+    "bounded_high": 0.5279999999477171,
+    "formula": "net plan x class depth (typical section by support-to-support span; the class at the other length basis gives the range)",
+    "notes": "clear 4.40 m -> H 0.4; c/c ~4.70 m -> H 0.4",
+    "dimensions": {
+     "length_m": 4.4,
+     "width_m": 0.3,
+     "net_plan_m2": 1.32,
+     "depth_m": null,
+     "sides": [
+      "FACE:PANEL",
+      "FACE:PANEL"
+     ]
+    }
+   },
+   {
+    "line_id": "L-fb53ac7edf5914afd6f5",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "trade": "CONCRETE",
+    "floor": "GROUND",
+    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0017.1",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 0.515999999947717,
+    "bounded_low": 0.515999999947717,
+    "bounded_high": 0.515999999947717,
+    "formula": "net plan x class depth (typical section by support-to-support span; the class at the other length basis gives the range)",
+    "notes": "clear 4.30 m -> H 0.4; c/c ~4.60 m -> H 0.4",
+    "dimensions": {
+     "length_m": 4.3,
+     "width_m": 0.3,
+     "net_plan_m2": 1.29,
+     "depth_m": null,
+     "sides": [
+      "FACE:PANEL",
+      "FACE:PANEL"
+     ]
+    }
+   },
+   {
+    "line_id": "L-fe78ae283abfb6256358",
+    "item_code": "STR.CONC.GROUND_BEAM",
+    "trade": "CONCRETE",
+    "floor": "GROUND",
+    "element_id": "P-C:GROUND_BEAMS:GROUND:BAND0023",
+    "unit": "m3",
+    "evidence_state": "PROVISIONAL",
+    "measured_net": 1.3229999999999134,
+    "bounded_low": 1.3229999999999134,
+    "bounded_high": 1.3229999999999134,
+    "formula": "net plan x class depth (typical section by support-to-support span; the class at the other length basis gives the range)",
+    "notes": "clear 7.35 m -> H 0.6; c/c ~7.65 m -> H 0.6",
+    "dimensions": {
+     "length_m": 7.35,
+     "width_m": 0.3,
+     "net_plan_m2": 2.205,
+     "depth_m": null,
+     "sides": [
+      "FACE:PANEL",
+      "FACE:BEAM"
+     ]
+    }
+   }
+  ]
+ },
+ "cross_trade": [
+  {
+   "line_id": "L-1f663573754f769b321f",
+   "item_code": "STR.REBAR",
+   "trade": "REINFORCEMENT",
+   "floor": "2F",
+   "element_id": "P-S:COL:SH12:C2@247685,64087|2F:TIES:D8",
+   "unit": "kg",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_low": null,
+   "bounded_high": null,
+   "formula": "n/m x height x closed link (code bends and 135 hooks) x d^2/162",
+   "notes": "ARCH_TAKEOFF_V3.0.3: SUPERSEDED - route G provisional steel (12.045343 kg) is replaced by the T-148 (column steel by bar population) hand ledger lines of COLUMNS 2F (MERGED 8a22eec)",
+   "dimensions": {}
+  },
+  {
+   "line_id": "L-239342da7e0a92a57dda",
+   "item_code": "STR.REBAR",
+   "trade": "REINFORCEMENT",
+   "floor": "GF",
+   "element_id": "P-S:COL:SH12:C@233893,56561|GF:TIES:D8",
+   "unit": "kg",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_low": null,
+   "bounded_high": null,
+   "formula": "n/m x height x closed link (code bends and 135 hooks) x d^2/162",
+   "notes": "ARCH_TAKEOFF_V3.0.3: SUPERSEDED - route G provisional steel (12.905725 kg) is replaced by the T-148 (column steel by bar population) hand ledger lines of COLUMNS GF (MERGED 8a22eec)",
+   "dimensions": {}
+  },
+  {
+   "line_id": "L-29528251023773e9b37e",
+   "item_code": "STR.REBAR",
+   "trade": "REINFORCEMENT",
+   "floor": "2F",
+   "element_id": "P-S:COL:SH12:C2@252679,64225|2F:MAIN:D16",
+   "unit": "kg",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_low": null,
+   "bounded_high": null,
+   "formula": "count x (storey height + lap) x d^2/162",
+   "notes": "ARCH_TAKEOFF_V3.0.3: SUPERSEDED - route G provisional steel (47.407407 kg) is replaced by the T-148 (column steel by bar population) hand ledger lines of COLUMNS 2F (MERGED 8a22eec)",
+   "dimensions": {}
+  },
+  {
+   "line_id": "L-2c92efa2f925a3bd3d9e",
+   "item_code": "STR.REBAR",
+   "trade": "REINFORCEMENT",
+   "floor": "2F",
+   "element_id": "P-S:COL:SH12:C9@254644,59429|2F:MAIN:D16",
+   "unit": "kg",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_low": null,
+   "bounded_high": null,
+   "formula": "count x (storey height + lap) x d^2/162",
+   "notes": "ARCH_TAKEOFF_V3.0.3: SUPERSEDED - route G provisional steel (79.012346 kg) is replaced by the T-148 (column steel by bar population) hand ledger lines of COLUMNS 2F (MERGED 8a22eec)",
+   "dimensions": {}
+  },
+  {
+   "line_id": "L-2d636cc9b0926c1b6f04",
+   "item_code": "STR.REBAR",
+   "trade": "REINFORCEMENT",
+   "floor": "GF",
+   "element_id": "P-S:COL:SH12:C@238150,57853|GF:MAIN:D16",
+   "unit": "kg",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_low": null,
+   "bounded_high": null,
+   "formula": "count x (storey height + lap) x d^2/162",
+   "notes": "ARCH_TAKEOFF_V3.0.3: SUPERSEDED - route G provisional steel (67.002469 kg) is replaced by the T-148 (column steel by bar population) hand ledger lines of COLUMNS GF (MERGED 8a22eec)",
+   "dimensions": {}
+  },
+  {
+   "line_id": "L-307cf545d2e80e7f5c3a",
+   "item_code": "STR.REBAR",
+   "trade": "REINFORCEMENT",
+   "floor": "GF",
+   "element_id": "P-S:COL:SH12:C5@243102,55481|GF:TIES:D8",
+   "unit": "kg",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_low": null,
+   "bounded_high": null,
+   "formula": "n/m x height x closed link (code bends and 135 hooks) x d^2/162",
+   "notes": "ARCH_TAKEOFF_V3.0.3: SUPERSEDED - route G provisional steel (16.105725 kg) is replaced by the T-148 (column steel by bar population) hand ledger lines of COLUMNS GF (MERGED 8a22eec)",
+   "dimensions": {}
+  },
+  {
+   "line_id": "L-3f850a04a93dda41cac7",
+   "item_code": "STR.REBAR",
+   "trade": "REINFORCEMENT",
+   "floor": "GF",
+   "element_id": "P-S:COL:SH12:C3@238374,54773|GF:TIES:D8",
+   "unit": "kg",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_low": null,
+   "bounded_high": null,
+   "formula": "n/m x height x closed link (code bends and 135 hooks) x d^2/162",
+   "notes": "ARCH_TAKEOFF_V3.0.3: SUPERSEDED - route G provisional steel (13.972392 kg) is replaced by the T-148 (column steel by bar population) hand ledger lines of COLUMNS GF (MERGED 8a22eec)",
+   "dimensions": {}
+  },
+  {
+   "line_id": "L-4e739c3cc904862cc9cc",
+   "item_code": "STR.REBAR",
+   "trade": "REINFORCEMENT",
+   "floor": "2F",
+   "element_id": "P-S:COL:SH12:C2@247685,64087|2F:MAIN:D16",
+   "unit": "kg",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_low": null,
+   "bounded_high": null,
+   "formula": "count x (storey height + lap) x d^2/162",
+   "notes": "ARCH_TAKEOFF_V3.0.3: SUPERSEDED - route G provisional steel (47.407407 kg) is replaced by the T-148 (column steel by bar population) hand ledger lines of COLUMNS 2F (MERGED 8a22eec)",
+   "dimensions": {}
+  },
+  {
+   "line_id": "L-68d0ca3c8022991c0e87",
+   "item_code": "STR.REBAR",
+   "trade": "REINFORCEMENT",
+   "floor": "GF",
+   "element_id": "P-S:COL:SH12:C3@238374,54773|GF:MAIN:D16",
+   "unit": "kg",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_low": null,
+   "bounded_high": null,
+   "formula": "count x (storey height + lap) x d^2/162",
+   "notes": "ARCH_TAKEOFF_V3.0.3: SUPERSEDED - route G provisional steel (67.002469 kg) is replaced by the T-148 (column steel by bar population) hand ledger lines of COLUMNS GF (MERGED 8a22eec)",
+   "dimensions": {}
+  },
+  {
+   "line_id": "L-6e51fd047db565d76456",
+   "item_code": "STR.REBAR",
+   "trade": "REINFORCEMENT",
+   "floor": "GF",
+   "element_id": "P-S:COL:SH12:C@235241,51296|GF:TIES:D8",
+   "unit": "kg",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_low": null,
+   "bounded_high": null,
+   "formula": "n/m x height x closed link (code bends and 135 hooks) x d^2/162",
+   "notes": "ARCH_TAKEOFF_V3.0.3: SUPERSEDED - route G provisional steel (12.905725 kg) is replaced by the T-148 (column steel by bar population) hand ledger lines of COLUMNS GF (MERGED 8a22eec)",
+   "dimensions": {}
+  },
+  {
+   "line_id": "L-71b2f425a27205ad5938",
+   "item_code": "STR.REBAR",
+   "trade": "REINFORCEMENT",
+   "floor": "2F",
+   "element_id": "P-S:COL:SH12:C2@251723,58368|2F:TIES:D8",
+   "unit": "kg",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_low": null,
+   "bounded_high": null,
+   "formula": "n/m x height x closed link (code bends and 135 hooks) x d^2/162",
+   "notes": "ARCH_TAKEOFF_V3.0.3: SUPERSEDED - route G provisional steel (12.045343 kg) is replaced by the T-148 (column steel by bar population) hand ledger lines of COLUMNS 2F (MERGED 8a22eec)",
+   "dimensions": {}
+  },
+  {
+   "line_id": "L-71bfc4edeaf681f2572d",
+   "item_code": "STR.REBAR",
+   "trade": "REINFORCEMENT",
+   "floor": "2F",
+   "element_id": "P-S:COL:SH12:C5@255627,63526|2F:MAIN:D16",
+   "unit": "kg",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_low": null,
+   "bounded_high": null,
+   "formula": "count x (storey height + lap) x d^2/162",
+   "notes": "ARCH_TAKEOFF_V3.0.3: SUPERSEDED - route G provisional steel (47.407407 kg) is replaced by the T-148 (column steel by bar population) hand ledger lines of COLUMNS 2F (MERGED 8a22eec)",
+   "dimensions": {}
+  },
+  {
+   "line_id": "L-74d59b8ec26c77b10d87",
+   "item_code": "STR.REBAR",
+   "trade": "REINFORCEMENT",
+   "floor": "2F",
+   "element_id": "P-S:COL:SH12:C9@254644,59429|2F:TIES:D8",
+   "unit": "kg",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_low": null,
+   "bounded_high": null,
+   "formula": "n/m x height x closed link (code bends and 135 hooks) x d^2/162",
+   "notes": "ARCH_TAKEOFF_V3.0.3: SUPERSEDED - route G provisional steel (16.027565 kg) is replaced by the T-148 (column steel by bar population) hand ledger lines of COLUMNS 2F (MERGED 8a22eec)",
+   "dimensions": {}
+  },
+  {
+   "line_id": "L-8629b957be644698474a",
+   "item_code": "STR.REBAR",
+   "trade": "REINFORCEMENT",
+   "floor": "GF",
+   "element_id": "P-S:COL:SH12:C@235241,51296|GF:MAIN:D16",
+   "unit": "kg",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_low": null,
+   "bounded_high": null,
+   "formula": "count x (storey height + lap) x d^2/162",
+   "notes": "ARCH_TAKEOFF_V3.0.3: SUPERSEDED - route G provisional steel (67.002469 kg) is replaced by the T-148 (column steel by bar population) hand ledger lines of COLUMNS GF (MERGED 8a22eec)",
+   "dimensions": {}
+  },
+  {
+   "line_id": "L-8a3c318c960e271efee1",
+   "item_code": "WP.FOUNDATION.BURIED_LIQUID",
+   "trade": "WATERPROOFING",
+   "floor": "FOUNDATION",
+   "element_id": "WPF:BURIED_GROUND_BEAM_FACES",
+   "unit": "m2",
+   "evidence_state": "SOURCE_DERIVED",
+   "measured_net": 45.4682,
+   "bounded_low": null,
+   "bounded_high": null,
+   "formula": "per traced buried ground-beam face with earth against it: traced length x (D - 0.10 slab on fill); 32 faces (R-WP-BURIED-1.1 r2)",
+   "notes": "ARCH_TAKEOFF_V3.0.15: WATERPROOFING.FOUNDATION (T-276, MERGED 4d88681b, Verifier 2026-10-24 22:54 UTC (Gate A PASS r2))",
+   "dimensions": {}
+  },
+  {
+   "line_id": "L-9761ae508da17304e363",
+   "item_code": "STR.REBAR",
+   "trade": "REINFORCEMENT",
+   "floor": "2F",
+   "element_id": "P-S:COL:SH12:C3@247476,61310|2F:TIES:D8",
+   "unit": "kg",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_low": null,
+   "bounded_high": null,
+   "formula": "n/m x height x closed link (code bends and 135 hooks) x d^2/162",
+   "notes": "ARCH_TAKEOFF_V3.0.3: SUPERSEDED - route G provisional steel (12.045343 kg) is replaced by the T-148 (column steel by bar population) hand ledger lines of COLUMNS 2F (MERGED 8a22eec)",
+   "dimensions": {}
+  },
+  {
+   "line_id": "L-97d96786e3e71225f99d",
+   "item_code": "STR.REBAR",
+   "trade": "REINFORCEMENT",
+   "floor": "GF",
+   "element_id": "P-S:COL:SH12:C3@243004,52949|GF:TIES:D8",
+   "unit": "kg",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_low": null,
+   "bounded_high": null,
+   "formula": "n/m x height x closed link (code bends and 135 hooks) x d^2/162",
+   "notes": "ARCH_TAKEOFF_V3.0.3: SUPERSEDED - route G provisional steel (13.972392 kg) is replaced by the T-148 (column steel by bar population) hand ledger lines of COLUMNS GF (MERGED 8a22eec)",
+   "dimensions": {}
+  },
+  {
+   "line_id": "L-9c87c028daf1e867be53",
+   "item_code": "STR.REBAR",
+   "trade": "REINFORCEMENT",
+   "floor": "2F",
+   "element_id": "P-S:COL:SH12:C2@251723,58368|2F:MAIN:D16",
+   "unit": "kg",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_low": null,
+   "bounded_high": null,
+   "formula": "count x (storey height + lap) x d^2/162",
+   "notes": "ARCH_TAKEOFF_V3.0.3: SUPERSEDED - route G provisional steel (47.407407 kg) is replaced by the T-148 (column steel by bar population) hand ledger lines of COLUMNS 2F (MERGED 8a22eec)",
+   "dimensions": {}
+  },
+  {
+   "line_id": "L-a64d0d1b04eb4c91f15a",
+   "item_code": "STR.REBAR",
+   "trade": "REINFORCEMENT",
+   "floor": "2F",
+   "element_id": "P-S:COL:SH12:C2@254644,61274|2F:MAIN:D16",
+   "unit": "kg",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_low": null,
+   "bounded_high": null,
+   "formula": "count x (storey height + lap) x d^2/162",
+   "notes": "ARCH_TAKEOFF_V3.0.3: SUPERSEDED - route G provisional steel (47.407407 kg) is replaced by the T-148 (column steel by bar population) hand ledger lines of COLUMNS 2F (MERGED 8a22eec)",
+   "dimensions": {}
+  },
+  {
+   "line_id": "L-a928aab1eaf6cc8bce05",
+   "item_code": "STR.REBAR",
+   "trade": "REINFORCEMENT",
+   "floor": "2F",
+   "element_id": "P-S:COL:SH12:C5@255627,63526|2F:TIES:D8",
+   "unit": "kg",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_low": null,
+   "bounded_high": null,
+   "formula": "n/m x height x closed link (code bends and 135 hooks) x d^2/162",
+   "notes": "ARCH_TAKEOFF_V3.0.3: SUPERSEDED - route G provisional steel (12.045343 kg) is replaced by the T-148 (column steel by bar population) hand ledger lines of COLUMNS 2F (MERGED 8a22eec)",
+   "dimensions": {}
+  },
+  {
+   "line_id": "L-c0d532c48793ae549172",
+   "item_code": "STR.REBAR",
+   "trade": "REINFORCEMENT",
+   "floor": "2F",
+   "element_id": "P-S:COL:SH12:C3@247476,61310|2F:MAIN:D16",
+   "unit": "kg",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_low": null,
+   "bounded_high": null,
+   "formula": "count x (storey height + lap) x d^2/162",
+   "notes": "ARCH_TAKEOFF_V3.0.3: SUPERSEDED - route G provisional steel (47.407407 kg) is replaced by the T-148 (column steel by bar population) hand ledger lines of COLUMNS 2F (MERGED 8a22eec)",
+   "dimensions": {}
+  },
+  {
+   "line_id": "L-c3bc5dfb9cb1ecc91161",
+   "item_code": "STR.REBAR",
+   "trade": "REINFORCEMENT",
+   "floor": "GF",
+   "element_id": "P-S:COL:SH12:C3@241094,51256|GF:TIES:D8",
+   "unit": "kg",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_low": null,
+   "bounded_high": null,
+   "formula": "n/m x height x closed link (code bends and 135 hooks) x d^2/162",
+   "notes": "ARCH_TAKEOFF_V3.0.3: SUPERSEDED - route G provisional steel (13.972392 kg) is replaced by the T-148 (column steel by bar population) hand ledger lines of COLUMNS GF (MERGED 8a22eec)",
+   "dimensions": {}
+  },
+  {
+   "line_id": "L-cac080298f6953fd917b",
+   "item_code": "STR.REBAR",
+   "trade": "REINFORCEMENT",
+   "floor": "GF",
+   "element_id": "P-S:COL:SH12:C@233893,56561|GF:MAIN:D16",
+   "unit": "kg",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_low": null,
+   "bounded_high": null,
+   "formula": "count x (storey height + lap) x d^2/162",
+   "notes": "ARCH_TAKEOFF_V3.0.3: SUPERSEDED - route G provisional steel (67.002469 kg) is replaced by the T-148 (column steel by bar population) hand ledger lines of COLUMNS GF (MERGED 8a22eec)",
+   "dimensions": {}
+  },
+  {
+   "line_id": "L-cb3ea9cc5333ac6b0ab5",
+   "item_code": "STR.REBAR",
+   "trade": "REINFORCEMENT",
+   "floor": "GF",
+   "element_id": "P-S:COL:SH12:C3@241094,51256|GF:MAIN:D16",
+   "unit": "kg",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_low": null,
+   "bounded_high": null,
+   "formula": "count x (storey height + lap) x d^2/162",
+   "notes": "ARCH_TAKEOFF_V3.0.3: SUPERSEDED - route G provisional steel (67.002469 kg) is replaced by the T-148 (column steel by bar population) hand ledger lines of COLUMNS GF (MERGED 8a22eec)",
+   "dimensions": {}
+  },
+  {
+   "line_id": "L-d515b2676aa9e7dd59e5",
+   "item_code": "STR.REBAR",
+   "trade": "REINFORCEMENT",
+   "floor": "2F",
+   "element_id": "P-S:COL:SH12:C1@251701,62344|2F:MAIN:D16",
+   "unit": "kg",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_low": null,
+   "bounded_high": null,
+   "formula": "count x (storey height + lap) x d^2/162",
+   "notes": "ARCH_TAKEOFF_V3.0.3: SUPERSEDED - route G provisional steel (47.407407 kg) is replaced by the T-148 (column steel by bar population) hand ledger lines of COLUMNS 2F (MERGED 8a22eec)",
+   "dimensions": {}
+  },
+  {
+   "line_id": "L-d84638c00cbe4f990289",
+   "item_code": "STR.REBAR",
+   "trade": "REINFORCEMENT",
+   "floor": "2F",
+   "element_id": "P-S:COL:SH12:C2@254644,61274|2F:TIES:D8",
+   "unit": "kg",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_low": null,
+   "bounded_high": null,
+   "formula": "n/m x height x closed link (code bends and 135 hooks) x d^2/162",
+   "notes": "ARCH_TAKEOFF_V3.0.3: SUPERSEDED - route G provisional steel (12.045343 kg) is replaced by the T-148 (column steel by bar population) hand ledger lines of COLUMNS 2F (MERGED 8a22eec)",
+   "dimensions": {}
+  },
+  {
+   "line_id": "L-eba4599c26b0d24de873",
+   "item_code": "WP.FOUNDATION.BURIED_LIQUID",
+   "trade": "WATERPROOFING",
+   "floor": "FOUNDATION",
+   "element_id": "WPF:BURIED_GROUND_BEAM_FACES_HELD",
+   "unit": "m2",
+   "evidence_state": "BLOCKED_RFI",
+   "measured_net": null,
+   "bounded_low": null,
+   "bounded_high": null,
+   "formula": "HELD (blank in the BOQ): 118 traced ground-beam faces, 244.2827 m, HELD by name in LEDGER_T276.csv (DEPTH_HELD 103, PANEL_HELD 10, PANEL_SPLIT_LEVEL 5): DEPTH_HELD the beam depth is not established (designer item), PANEL_HELD GS-12 / GS-16 not established as slab on fill, PANEL_SPLIT_LEVEL GS-08 two slab levels; never 0, never estimated",
+   "notes": "ARCH_TAKEOFF_V3.0.15: WATERPROOFING.FOUNDATION (T-276, MERGED 4d88681b, Verifier 2026-10-24 22:54 UTC (Gate A PASS r2)); HELD: blank in the BOQ, never 0",
+   "dimensions": {}
+  },
+  {
+   "line_id": "L-ecd7b49e9df8270e3f31",
+   "item_code": "STR.REBAR",
+   "trade": "REINFORCEMENT",
+   "floor": "2F",
+   "element_id": "P-S:COL:SH12:C1@251701,62344|2F:TIES:D8",
+   "unit": "kg",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_low": null,
+   "bounded_high": null,
+   "formula": "n/m x height x closed link (code bends and 135 hooks) x d^2/162",
+   "notes": "ARCH_TAKEOFF_V3.0.3: SUPERSEDED - route G provisional steel (12.045343 kg) is replaced by the T-148 (column steel by bar population) hand ledger lines of COLUMNS 2F (MERGED 8a22eec)",
+   "dimensions": {}
+  },
+  {
+   "line_id": "L-eed1883780af348d7c61",
+   "item_code": "STR.REBAR",
+   "trade": "REINFORCEMENT",
+   "floor": "GF",
+   "element_id": "P-S:COL:SH12:C3@243004,52949|GF:MAIN:D16",
+   "unit": "kg",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_low": null,
+   "bounded_high": null,
+   "formula": "count x (storey height + lap) x d^2/162",
+   "notes": "ARCH_TAKEOFF_V3.0.3: SUPERSEDED - route G provisional steel (67.002469 kg) is replaced by the T-148 (column steel by bar population) hand ledger lines of COLUMNS GF (MERGED 8a22eec)",
+   "dimensions": {}
+  },
+  {
+   "line_id": "L-f6f89d65780c5318fedf",
+   "item_code": "STR.REBAR",
+   "trade": "REINFORCEMENT",
+   "floor": "GF",
+   "element_id": "P-S:COL:SH12:C@238150,57853|GF:TIES:D8",
+   "unit": "kg",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_low": null,
+   "bounded_high": null,
+   "formula": "n/m x height x closed link (code bends and 135 hooks) x d^2/162",
+   "notes": "ARCH_TAKEOFF_V3.0.3: SUPERSEDED - route G provisional steel (12.905725 kg) is replaced by the T-148 (column steel by bar population) hand ledger lines of COLUMNS GF (MERGED 8a22eec)",
+   "dimensions": {}
+  },
+  {
+   "line_id": "L-f7b7957c7b797f7ea623",
+   "item_code": "STR.REBAR",
+   "trade": "REINFORCEMENT",
+   "floor": "2F",
+   "element_id": "P-S:COL:SH12:C2@252679,64225|2F:TIES:D8",
+   "unit": "kg",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_low": null,
+   "bounded_high": null,
+   "formula": "n/m x height x closed link (code bends and 135 hooks) x d^2/162",
+   "notes": "ARCH_TAKEOFF_V3.0.3: SUPERSEDED - route G provisional steel (12.045343 kg) is replaced by the T-148 (column steel by bar population) hand ledger lines of COLUMNS 2F (MERGED 8a22eec)",
+   "dimensions": {}
+  },
+  {
+   "line_id": "L-fda79372428ad3a531b2",
+   "item_code": "STR.REBAR",
+   "trade": "REINFORCEMENT",
+   "floor": "GF",
+   "element_id": "P-S:COL:SH12:C5@243102,55481|GF:MAIN:D16",
+   "unit": "kg",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_low": null,
+   "bounded_high": null,
+   "formula": "count x (storey height + lap) x d^2/162",
+   "notes": "ARCH_TAKEOFF_V3.0.3: SUPERSEDED - route G provisional steel (83.753086 kg) is replaced by the T-148 (column steel by bar population) hand ledger lines of COLUMNS GF (MERGED 8a22eec)",
+   "dimensions": {}
+  }
+ ]
+}
