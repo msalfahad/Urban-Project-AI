@@ -279,15 +279,19 @@ def face_r3(face, r2_rows, deltas):
                                   opening["STAIR_ZONE"], "m", ST_H, "height and finish with the stair zone (T-281)"))
         rec["held"].append("beam edge at a stair zone")
     inside = round(sum(v for k, v in opening.items() if k != "STAIR_ZONE"), 4)
-    for pre in ("ceiling edge at an opening", "cove / cornice run", "ceiling board type"):
+    for pre in ("ceiling edge at an opening", "cove / cornice run", "ceiling board type",
+                "bulkhead vertical faces, drawing-derived candidate", "beam / column junction pieces"):
         for r in r2_rows:
             if r["SURFACE"].startswith(pre):
                 basis = r["BASIS"]
                 if pre == "ceiling edge at an opening" and inside:
                     basis += (f"; of which {inside:.4f} m run along beam pieces (R-CEIL-R3-2: counted here once, "
                               "no longer also as a bulkhead)")
+                if pre.startswith("bulkhead vertical faces, drawing-derived"):
+                    basis += "; carried from R2 unchanged (not re-split by R-CEIL-R3-2): a HELD candidate, never a total"
                 rec["surfaces"].append(_s(r["SURFACE"], r["QTY"], r["UNIT"], r["STATUS"], basis))
-                rec["held"].append(r["SURFACE"].split(" (")[0])
+                if r["STATUS"] in (ST_H, ST_U):
+                    rec["held"].append(r["SURFACE"].split(" (")[0])
     if inside and not any(r["SURFACE"].startswith("ceiling edge at an opening") for r in r2_rows):
         raise LedgerError(f"{face['face']}: {inside} m of beam edge borders an opening that R2 lists no edge for")
     paint = round(horiz + own, 4)

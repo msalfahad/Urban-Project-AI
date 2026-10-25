@@ -4,6 +4,7 @@
   "beam edge at a stair zone [m]": 8.0773,
   "bulkhead edges of beam pieces over this held piece [m]": 16.1628,
   "bulkhead edges on CONFLICT / HELD / unregistered beams [m]": 45.5734,
+  "bulkhead vertical faces, drawing-derived candidate [m2]": 160.1479,
   "ceiling edge at an opening [m]": 49.134,
   "cove / cornice run at the wall [m]": 288.6399,
   "held part of the ceiling [m2]": 12.9742,
@@ -15,7 +16,7 @@
   "stair zone beyond the stair face [m2]": 1.9444,
   "under an open dome position [m2]": 29.0695
  },
- "ledger_csv_sha256": "5068517027b403d6e59235b866bd4c2b8f90b64803d4f877d1c3eb74496efb39",
+ "ledger_csv_sha256": "10214b3dbffcf57a5327130edd65794646864c60cb11abb090e1f1906d30d522",
  "pieces": 39,
  "r2_horizontal_m2": 363.1732,
  "r2_owner_bulkhead_m2": 29.2367,

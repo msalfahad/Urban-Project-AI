@@ -24,7 +24,7 @@
  "integrates": {
   "T-271 r2b": "789ebbb4"
  },
- "ledger_csv_sha256": "5068517027b403d6e59235b866bd4c2b8f90b64803d4f877d1c3eb74496efb39",
+ "ledger_csv_sha256": "10214b3dbffcf57a5327130edd65794646864c60cb11abb090e1f1906d30d522",
  "records": [
   {
    "class": "WET",
@@ -33,6 +33,7 @@
    "floor_piece_m2": 8.955,
    "floor_piece_status": "RE-MEASURED, NOT VERIFIED (class; Verifier 2026-10-24 01:12; T-269 8.955)",
    "held": [
+    "bulkhead vertical faces, drawing-derived candidate",
     "ceiling board type",
     "cove / cornice run at the wall"
    ],
@@ -78,6 +79,13 @@
      "unit": "m2"
     },
     {
+     "basis": "no ceiling level printed (designer D-40); candidate, never in a total; carried from R2 unchanged (not re-split by R-CEIL-R3-2): a HELD candidate, never a total",
+     "qty": 5.6807,
+     "status": "HELD",
+     "surface": "bulkhead vertical faces, drawing-derived candidate (ceiling 0.15 under the slab soffit)",
+     "unit": "m2"
+    },
+    {
      "basis": "Q-57 A mod (6)",
      "qty": 10.6792,
      "status": "ASSUMED - OWNER-APPROVED",
@@ -102,6 +110,7 @@
    "held": [
     "beam edge at a stair zone",
     "bulkhead edges (beam status)",
+    "bulkhead vertical faces, drawing-derived candidate",
     "ceiling edge at an opening",
     "cove / cornice run at the wall",
     "stair zone (stair face of the slab plan)",
@@ -184,6 +193,20 @@
      "unit": "m"
     },
     {
+     "basis": "no ceiling level printed (designer D-40); candidate, never in a total; carried from R2 unchanged (not re-split by R-CEIL-R3-2): a HELD candidate, never a total",
+     "qty": 45.4888,
+     "status": "HELD",
+     "surface": "bulkhead vertical faces, drawing-derived candidate (ceiling 0.15 under the slab soffit)",
+     "unit": "m2"
+    },
+    {
+     "basis": "listed only: no free edge of their own",
+     "qty": 5.0,
+     "status": "DRAWING-CONFIRMED",
+     "surface": "beam / column junction pieces without a register row (< 0.10 m2)",
+     "unit": "nr"
+    },
+    {
      "basis": "Q-57 A mod (6)",
      "qty": 101.5994,
      "status": "ASSUMED - OWNER-APPROVED",
@@ -206,6 +229,7 @@
    "floor_piece_m2": 24.9393,
    "floor_piece_status": "VERIFIED (Verifier 2026-10-24 01:01)",
    "held": [
+    "bulkhead vertical faces, drawing-derived candidate",
     "cove / cornice run at the wall"
    ],
    "horizontal_decor_m2": 24.9403,
@@ -243,6 +267,13 @@
      "unit": "m"
     },
     {
+     "basis": "no ceiling level printed (designer D-40); candidate, never in a total; carried from R2 unchanged (not re-split by R-CEIL-R3-2): a HELD candidate, never a total",
+     "qty": 4.72,
+     "status": "HELD",
+     "surface": "bulkhead vertical faces, drawing-derived candidate (ceiling 0.15 under the slab soffit)",
+     "unit": "m2"
+    },
+    {
      "basis": "Q-57 A mod (6)",
      "qty": 26.1403,
      "status": "ASSUMED - OWNER-APPROVED",
@@ -266,6 +297,7 @@
    "floor_piece_status": "VERIFIED (Verifier 2026-10-24 01:01)",
    "held": [
     "bulkhead edges (beam status)",
+    "bulkhead vertical faces, drawing-derived candidate",
     "cove / cornice run at the wall"
    ],
    "horizontal_decor_m2": 16.5496,
@@ -308,6 +340,20 @@
      "status": "HELD",
      "surface": "cove / cornice run at the wall (only if a detail is approved)",
      "unit": "m"
+    },
+    {
+     "basis": "no ceiling level printed (designer D-40); candidate, never in a total; carried from R2 unchanged (not re-split by R-CEIL-R3-2): a HELD candidate, never a total",
+     "qty": 8.7379,
+     "status": "HELD",
+     "surface": "bulkhead vertical faces, drawing-derived candidate (ceiling 0.15 under the slab soffit)",
+     "unit": "m2"
+    },
+    {
+     "basis": "listed only: no free edge of their own",
+     "qty": 1.0,
+     "status": "DRAWING-CONFIRMED",
+     "surface": "beam / column junction pieces without a register row (< 0.10 m2)",
+     "unit": "nr"
     },
     {
      "basis": "Q-57 A mod (6)",
@@ -470,6 +516,7 @@
    "floor_piece_m2": 7.875,
    "floor_piece_status": "VERIFIED (Verifier 2026-10-23 23:28)",
    "held": [
+    "bulkhead vertical faces, drawing-derived candidate",
     "cove / cornice run at the wall"
    ],
    "horizontal_decor_m2": 7.875,
@@ -498,6 +545,13 @@
      "status": "HELD",
      "surface": "cove / cornice run at the wall (only if a detail is approved)",
      "unit": "m"
+    },
+    {
+     "basis": "no ceiling level printed (designer D-40); candidate, never in a total; carried from R2 unchanged (not re-split by R-CEIL-R3-2): a HELD candidate, never a total",
+     "qty": 3.06,
+     "status": "HELD",
+     "surface": "bulkhead vertical faces, drawing-derived candidate (ceiling 0.15 under the slab soffit)",
+     "unit": "m2"
     },
     {
      "basis": "Q-57 A mod (6)",
@@ -561,6 +615,7 @@
    "floor_piece_m2": 4.7307,
    "floor_piece_status": "geometry own-checked (Verifier 2026-10-23 20:14)",
    "held": [
+    "bulkhead vertical faces, drawing-derived candidate",
     "ceiling board type",
     "cove / cornice run at the wall"
    ],
@@ -606,6 +661,13 @@
      "unit": "m2"
     },
     {
+     "basis": "no ceiling level printed (designer D-40); candidate, never in a total; carried from R2 unchanged (not re-split by R-CEIL-R3-2): a HELD candidate, never a total",
+     "qty": 3.8838,
+     "status": "HELD",
+     "surface": "bulkhead vertical faces, drawing-derived candidate (ceiling 0.15 under the slab soffit)",
+     "unit": "m2"
+    },
+    {
      "basis": "Q-57 A mod (6)",
      "qty": 5.455,
      "status": "ASSUMED - OWNER-APPROVED",
@@ -629,6 +691,7 @@
    "floor_piece_status": "VERIFIED (Verifier 2026-10-23 23:28)",
    "held": [
     "bulkhead edges (beam status)",
+    "bulkhead vertical faces, drawing-derived candidate",
     "ceiling board type",
     "cove / cornice run at the wall"
    ],
@@ -671,6 +734,13 @@
      "qty": null,
      "status": "HELD",
      "surface": "ceiling board type (wet room)",
+     "unit": "m2"
+    },
+    {
+     "basis": "no ceiling level printed (designer D-40); candidate, never in a total; carried from R2 unchanged (not re-split by R-CEIL-R3-2): a HELD candidate, never a total",
+     "qty": 1.3841,
+     "status": "HELD",
+     "surface": "bulkhead vertical faces, drawing-derived candidate (ceiling 0.15 under the slab soffit)",
      "unit": "m2"
     },
     {
@@ -727,6 +797,7 @@
    "floor_piece_m2": 3.375,
    "floor_piece_status": "VERIFIED (Verifier 2026-10-23 23:28)",
    "held": [
+    "bulkhead vertical faces, drawing-derived candidate",
     "ceiling board type",
     "cove / cornice run at the wall"
    ],
@@ -762,6 +833,13 @@
      "qty": null,
      "status": "HELD",
      "surface": "ceiling board type (wet room)",
+     "unit": "m2"
+    },
+    {
+     "basis": "no ceiling level printed (designer D-40); candidate, never in a total; carried from R2 unchanged (not re-split by R-CEIL-R3-2): a HELD candidate, never a total",
+     "qty": 0.765,
+     "status": "HELD",
+     "surface": "bulkhead vertical faces, drawing-derived candidate (ceiling 0.15 under the slab soffit)",
      "unit": "m2"
     },
     {
@@ -816,6 +894,7 @@
    "floor_piece_m2": 3.1325,
    "floor_piece_status": "VERIFIED (Verifier 2026-10-23 23:28)",
    "held": [
+    "bulkhead vertical faces, drawing-derived candidate",
     "ceiling board type",
     "cove / cornice run at the wall"
    ],
@@ -854,6 +933,13 @@
      "unit": "m2"
     },
     {
+     "basis": "no ceiling level printed (designer D-40); candidate, never in a total; carried from R2 unchanged (not re-split by R-CEIL-R3-2): a HELD candidate, never a total",
+     "qty": 0.697,
+     "status": "HELD",
+     "surface": "bulkhead vertical faces, drawing-derived candidate (ceiling 0.15 under the slab soffit)",
+     "unit": "m2"
+    },
+    {
      "basis": "Q-57 A mod (6)",
      "qty": 3.1325,
      "status": "DRAWING-CONFIRMED",
@@ -876,6 +962,7 @@
    "floor_piece_m2": 2.8,
    "floor_piece_status": "RE-MEASURED, NOT VERIFIED (class; Verifier 2026-10-24 01:12)",
    "held": [
+    "bulkhead vertical faces, drawing-derived candidate",
     "ceiling board type",
     "cove / cornice run at the wall"
    ],
@@ -921,6 +1008,13 @@
      "unit": "m2"
     },
     {
+     "basis": "no ceiling level printed (designer D-40); candidate, never in a total; carried from R2 unchanged (not re-split by R-CEIL-R3-2): a HELD candidate, never a total",
+     "qty": 1.1872,
+     "status": "HELD",
+     "surface": "bulkhead vertical faces, drawing-derived candidate (ceiling 0.15 under the slab soffit)",
+     "unit": "m2"
+    },
+    {
      "basis": "Q-57 A mod (6)",
      "qty": 3.1281,
      "status": "ASSUMED - OWNER-APPROVED",
@@ -943,6 +1037,7 @@
    "floor_piece_m2": 2.6752,
    "floor_piece_status": "VERIFIED (Verifier 2026-10-24 01:01)",
    "held": [
+    "bulkhead vertical faces, drawing-derived candidate",
     "ceiling board type",
     "cove / cornice run at the wall"
    ],
@@ -981,6 +1076,13 @@
      "unit": "m2"
     },
     {
+     "basis": "no ceiling level printed (designer D-40); candidate, never in a total; carried from R2 unchanged (not re-split by R-CEIL-R3-2): a HELD candidate, never a total",
+     "qty": 1.7292,
+     "status": "HELD",
+     "surface": "bulkhead vertical faces, drawing-derived candidate (ceiling 0.15 under the slab soffit)",
+     "unit": "m2"
+    },
+    {
      "basis": "Q-57 A mod (6)",
      "qty": 2.6752,
      "status": "DRAWING-CONFIRMED",
@@ -1004,6 +1106,7 @@
    "floor_piece_status": "VERIFIED (Verifier 2026-10-24 01:01)",
    "held": [
     "bulkhead edges (beam status)",
+    "bulkhead vertical faces, drawing-derived candidate",
     "ceiling board type",
     "cove / cornice run at the wall"
    ],
@@ -1053,6 +1156,13 @@
      "qty": null,
      "status": "HELD",
      "surface": "ceiling board type (wet room)",
+     "unit": "m2"
+    },
+    {
+     "basis": "no ceiling level printed (designer D-40); candidate, never in a total; carried from R2 unchanged (not re-split by R-CEIL-R3-2): a HELD candidate, never a total",
+     "qty": 1.7301,
+     "status": "HELD",
+     "surface": "bulkhead vertical faces, drawing-derived candidate (ceiling 0.15 under the slab soffit)",
      "unit": "m2"
     },
     {
@@ -1298,6 +1408,7 @@
    "floor_piece_status": "floor piece 38.6335 own-VERIFIED (T-269, Verifier 13:03) inside this 75.983 face",
    "held": [
     "beam edge at a stair zone",
+    "bulkhead vertical faces, drawing-derived candidate",
     "ceiling edge at an opening",
     "cove / cornice run at the wall",
     "stair zone (stair face of the slab plan)",
@@ -1374,6 +1485,13 @@
      "unit": "m"
     },
     {
+     "basis": "no ceiling level printed (designer D-40); candidate, never in a total; carried from R2 unchanged (not re-split by R-CEIL-R3-2): a HELD candidate, never a total",
+     "qty": 41.9203,
+     "status": "HELD",
+     "surface": "bulkhead vertical faces, drawing-derived candidate (ceiling 0.15 under the slab soffit)",
+     "unit": "m2"
+    },
+    {
      "basis": "Q-57 A mod (6)",
      "qty": 58.7108,
      "status": "ASSUMED - OWNER-APPROVED",
@@ -1397,6 +1515,7 @@
    "floor_piece_status": "VERIFIED (Verifier 2026-10-23 22:05)",
    "held": [
     "bulkhead edges (beam status)",
+    "bulkhead vertical faces, drawing-derived candidate",
     "ceiling edge at an opening",
     "cove / cornice run at the wall",
     "under an open dome position (Q-44 A; DCR-4)"
@@ -1457,6 +1576,13 @@
      "unit": "m"
     },
     {
+     "basis": "no ceiling level printed (designer D-40); candidate, never in a total; carried from R2 unchanged (not re-split by R-CEIL-R3-2): a HELD candidate, never a total",
+     "qty": 6.6895,
+     "status": "HELD",
+     "surface": "bulkhead vertical faces, drawing-derived candidate (ceiling 0.15 under the slab soffit)",
+     "unit": "m2"
+    },
+    {
      "basis": "Q-57 A mod (6)",
      "qty": 8.1067,
      "status": "ASSUMED - OWNER-APPROVED",
@@ -1479,6 +1605,7 @@
    "floor_piece_m2": 19.0187,
    "floor_piece_status": "re-measured (Verifier 2026-10-23 23:13; curved edge, T-223)",
    "held": [
+    "bulkhead vertical faces, drawing-derived candidate",
     "ceiling edge at an opening",
     "cove / cornice run at the wall",
     "under an open dome position (Q-44 A; DCR-4)"
@@ -1532,6 +1659,13 @@
      "unit": "m"
     },
     {
+     "basis": "no ceiling level printed (designer D-40); candidate, never in a total; carried from R2 unchanged (not re-split by R-CEIL-R3-2): a HELD candidate, never a total",
+     "qty": 4.1086,
+     "status": "HELD",
+     "surface": "bulkhead vertical faces, drawing-derived candidate (ceiling 0.15 under the slab soffit)",
+     "unit": "m2"
+    },
+    {
      "basis": "Q-57 A mod (6)",
      "qty": 18.8051,
      "status": "ASSUMED - OWNER-APPROVED",
@@ -1554,6 +1688,7 @@
    "floor_piece_m2": 18.215,
    "floor_piece_status": "VERIFIED (Verifier 2026-10-23 22:05)",
    "held": [
+    "bulkhead vertical faces, drawing-derived candidate",
     "cove / cornice run at the wall"
    ],
    "horizontal_decor_m2": 18.215,
@@ -1591,6 +1726,13 @@
      "unit": "m"
     },
     {
+     "basis": "no ceiling level printed (designer D-40); candidate, never in a total; carried from R2 unchanged (not re-split by R-CEIL-R3-2): a HELD candidate, never a total",
+     "qty": 5.0775,
+     "status": "HELD",
+     "surface": "bulkhead vertical faces, drawing-derived candidate (ceiling 0.15 under the slab soffit)",
+     "unit": "m2"
+    },
+    {
      "basis": "Q-57 A mod (6)",
      "qty": 18.7625,
      "status": "ASSUMED - OWNER-APPROVED",
@@ -1614,6 +1756,7 @@
    "floor_piece_status": "VERIFIED (Verifier 2026-10-23 22:05)",
    "held": [
     "bulkhead edges (beam status)",
+    "bulkhead vertical faces, drawing-derived candidate",
     "cove / cornice run at the wall"
    ],
    "horizontal_decor_m2": 16.34,
@@ -1658,6 +1801,20 @@
      "unit": "m"
     },
     {
+     "basis": "no ceiling level printed (designer D-40); candidate, never in a total; carried from R2 unchanged (not re-split by R-CEIL-R3-2): a HELD candidate, never a total",
+     "qty": 8.3758,
+     "status": "HELD",
+     "surface": "bulkhead vertical faces, drawing-derived candidate (ceiling 0.15 under the slab soffit)",
+     "unit": "m2"
+    },
+    {
+     "basis": "listed only: no free edge of their own",
+     "qty": 1.0,
+     "status": "DRAWING-CONFIRMED",
+     "surface": "beam / column junction pieces without a register row (< 0.10 m2)",
+     "unit": "nr"
+    },
+    {
      "basis": "Q-57 A mod (6)",
      "qty": 18.1859,
      "status": "ASSUMED - OWNER-APPROVED",
@@ -1680,6 +1837,7 @@
    "floor_piece_m2": 10.151,
    "floor_piece_status": "VERIFIED (Verifier 2026-10-23 22:05)",
    "held": [
+    "bulkhead vertical faces, drawing-derived candidate",
     "ceiling board type",
     "cove / cornice run at the wall"
    ],
@@ -1725,6 +1883,13 @@
      "unit": "m2"
     },
     {
+     "basis": "no ceiling level printed (designer D-40); candidate, never in a total; carried from R2 unchanged (not re-split by R-CEIL-R3-2): a HELD candidate, never a total",
+     "qty": 1.8159,
+     "status": "HELD",
+     "surface": "bulkhead vertical faces, drawing-derived candidate (ceiling 0.15 under the slab soffit)",
+     "unit": "m2"
+    },
+    {
      "basis": "Q-57 A mod (6)",
      "qty": 10.3656,
      "status": "ASSUMED - OWNER-APPROVED",
@@ -1747,6 +1912,7 @@
    "floor_piece_m2": 5.0225,
    "floor_piece_status": "VERIFIED (T-180 batch, 1F baths)",
    "held": [
+    "bulkhead vertical faces, drawing-derived candidate",
     "ceiling board type",
     "ceiling edge at an opening",
     "cove / cornice run at the wall",
@@ -1801,6 +1967,13 @@
      "unit": "m2"
     },
     {
+     "basis": "no ceiling level printed (designer D-40); candidate, never in a total; carried from R2 unchanged (not re-split by R-CEIL-R3-2): a HELD candidate, never a total",
+     "qty": 2.278,
+     "status": "HELD",
+     "surface": "bulkhead vertical faces, drawing-derived candidate (ceiling 0.15 under the slab soffit)",
+     "unit": "m2"
+    },
+    {
      "basis": "Q-57 A mod (6)",
      "qty": 3.5998,
      "status": "DRAWING-CONFIRMED",
@@ -1824,6 +1997,7 @@
    "floor_piece_status": "VERIFIED (T-180 batch, 1F baths)",
    "held": [
     "bulkhead edges (beam status)",
+    "bulkhead vertical faces, drawing-derived candidate",
     "ceiling board type",
     "ceiling edge at an opening",
     "cove / cornice run at the wall",
@@ -1885,6 +2059,13 @@
      "unit": "m2"
     },
     {
+     "basis": "no ceiling level printed (designer D-40); candidate, never in a total; carried from R2 unchanged (not re-split by R-CEIL-R3-2): a HELD candidate, never a total",
+     "qty": 1.411,
+     "status": "HELD",
+     "surface": "bulkhead vertical faces, drawing-derived candidate (ceiling 0.15 under the slab soffit)",
+     "unit": "m2"
+    },
+    {
      "basis": "Q-57 A mod (6)",
      "qty": 3.7815,
      "status": "DRAWING-CONFIRMED",
@@ -1907,6 +2088,7 @@
    "floor_piece_m2": 4.725,
    "floor_piece_status": "VERIFIED (T-180 batch, 1F baths)",
    "held": [
+    "bulkhead vertical faces, drawing-derived candidate",
     "ceiling board type",
     "ceiling edge at an opening",
     "cove / cornice run at the wall",
@@ -1965,6 +2147,13 @@
      "qty": null,
      "status": "HELD",
      "surface": "ceiling board type (wet room)",
+     "unit": "m2"
+    },
+    {
+     "basis": "no ceiling level printed (designer D-40); candidate, never in a total; carried from R2 unchanged (not re-split by R-CEIL-R3-2): a HELD candidate, never a total",
+     "qty": 4.2955,
+     "status": "HELD",
+     "surface": "bulkhead vertical faces, drawing-derived candidate (ceiling 0.15 under the slab soffit)",
      "unit": "m2"
     },
     {
@@ -2199,6 +2388,7 @@
    "floor_piece_m2": 19.35,
    "floor_piece_status": "VERIFIED (T-180 batch, 2F)",
    "held": [
+    "bulkhead vertical faces, drawing-derived candidate",
     "cove / cornice run at the wall"
    ],
    "horizontal_decor_m2": 19.35,
@@ -2229,6 +2419,13 @@
      "unit": "m"
     },
     {
+     "basis": "no ceiling level printed (designer D-40); candidate, never in a total; carried from R2 unchanged (not re-split by R-CEIL-R3-2): a HELD candidate, never a total",
+     "qty": 2.16,
+     "status": "HELD",
+     "surface": "bulkhead vertical faces, drawing-derived candidate (ceiling 0.15 under the slab soffit)",
+     "unit": "m2"
+    },
+    {
      "basis": "Q-57 A mod (6)",
      "qty": 19.35,
      "status": "DRAWING-CONFIRMED",
@@ -2252,6 +2449,7 @@
    "floor_piece_status": "DRAWING-CONFIRMED (floor piece not yet Checker-verified)",
    "held": [
     "bulkhead edges (beam status)",
+    "bulkhead vertical faces, drawing-derived candidate",
     "cove / cornice run at the wall",
     "held part of the ceiling"
    ],
@@ -2297,6 +2495,13 @@
      "unit": "m"
     },
     {
+     "basis": "no ceiling level printed (designer D-40); candidate, never in a total; carried from R2 unchanged (not re-split by R-CEIL-R3-2): a HELD candidate, never a total",
+     "qty": 2.232,
+     "status": "HELD",
+     "surface": "bulkhead vertical faces, drawing-derived candidate (ceiling 0.15 under the slab soffit)",
+     "unit": "m2"
+    },
+    {
      "basis": "Q-57 A mod (6)",
      "qty": 5.6258,
      "status": "DRAWING-CONFIRMED",
@@ -2319,6 +2524,7 @@
    "floor_piece_m2": 5.55,
    "floor_piece_status": "VERIFIED (T-180 batch, 2F)",
    "held": [
+    "bulkhead vertical faces, drawing-derived candidate",
     "ceiling board type",
     "cove / cornice run at the wall"
    ],
@@ -2354,6 +2560,13 @@
      "qty": null,
      "status": "HELD",
      "surface": "ceiling board type (wet room)",
+     "unit": "m2"
+    },
+    {
+     "basis": "no ceiling level printed (designer D-40); candidate, never in a total; carried from R2 unchanged (not re-split by R-CEIL-R3-2): a HELD candidate, never a total",
+     "qty": 0.72,
+     "status": "HELD",
+     "surface": "bulkhead vertical faces, drawing-derived candidate (ceiling 0.15 under the slab soffit)",
      "unit": "m2"
     },
     {

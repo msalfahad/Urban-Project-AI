@@ -3,6 +3,7 @@ GF-RC99C2A/pantry,GF,Dining + Living / saloon + Pantry + Reception,WET,"horizont
 GF-RC99C2A/pantry,GF,Dining + Living / saloon + Pantry + Reception,WET,"bulkhead vertical faces, owner method (decor side only, R-CEIL-R3-2)",1.7242,m2,ASSUMED - OWNER-APPROVED,"Q-48 A + Q-43; beam ledger r2 CALCULATED, D > 0.60"
 GF-RC99C2A/pantry,GF,Dining + Living / saloon + Pantry + Reception,WET,cove / cornice run at the wall (only if a detail is approved),,m,HELD,no cove or cornice detail drawn; never a 0.10 m strip by convention
 GF-RC99C2A/pantry,GF,Dining + Living / saloon + Pantry + Reception,WET,ceiling board type (wet room),,m2,HELD,Q-57 A mod (2): moisture-resistant board only where specified
+GF-RC99C2A/pantry,GF,Dining + Living / saloon + Pantry + Reception,WET,"bulkhead vertical faces, drawing-derived candidate (ceiling 0.15 under the slab soffit)",5.6807,m2,HELD,"no ceiling level printed (designer D-40); candidate, never in a total; carried from R2 unchanged (not re-split by R-CEIL-R3-2): a HELD candidate, never a total"
 GF-RC99C2A/pantry,GF,Dining + Living / saloon + Pantry + Reception,WET,"paintable gypsum, owner method (horizontal + owner bulkhead faces)",10.6792,m2,ASSUMED - OWNER-APPROVED,Q-57 A mod (6)
 GF-RC99C2A/pantry,GF,Dining + Living / saloon + Pantry + Reception,WET,concrete ceiling plaster,,m2,NOT SPECIFIED,Q-57 A mod (7)
 GF-RC99C2A/open,GF,Dining + Living / saloon + Pantry + Reception,DRY,"horizontal decor ceiling (gypsum), incl. bulkhead undersides",91.4047,m2,DRAWING-CONFIRMED,R2 less the R-CEIL-R3-1 stair parts beyond the stair face
@@ -14,17 +15,22 @@ GF-RC99C2A/open,GF,Dining + Living / saloon + Pantry + Reception,DRY,bulkhead ed
 GF-RC99C2A/open,GF,Dining + Living / saloon + Pantry + Reception,DRY,"beam edge at a stair zone: stair-well face, not a bulkhead (R-CEIL-R3-2)",5.5773,m,HELD,height and finish with the stair zone (T-281)
 GF-RC99C2A/open,GF,Dining + Living / saloon + Pantry + Reception,DRY,ceiling edge at an opening (drop / return),23.3005,m,HELD,"Q-57 A mod (5): no edge detail printed; of which 9.7715 m run along beam pieces (R-CEIL-R3-2: counted here once, no longer also as a bulkhead)"
 GF-RC99C2A/open,GF,Dining + Living / saloon + Pantry + Reception,DRY,cove / cornice run at the wall (only if a detail is approved),,m,HELD,no cove or cornice detail drawn; never a 0.10 m strip by convention
+GF-RC99C2A/open,GF,Dining + Living / saloon + Pantry + Reception,DRY,"bulkhead vertical faces, drawing-derived candidate (ceiling 0.15 under the slab soffit)",45.4888,m2,HELD,"no ceiling level printed (designer D-40); candidate, never in a total; carried from R2 unchanged (not re-split by R-CEIL-R3-2): a HELD candidate, never a total"
+GF-RC99C2A/open,GF,Dining + Living / saloon + Pantry + Reception,DRY,beam / column junction pieces without a register row (< 0.10 m2),5.0000,nr,DRAWING-CONFIRMED,listed only: no free edge of their own
 GF-RC99C2A/open,GF,Dining + Living / saloon + Pantry + Reception,DRY,"paintable gypsum, owner method (horizontal + owner bulkhead faces)",101.5994,m2,ASSUMED - OWNER-APPROVED,Q-57 A mod (6)
 GF-RC99C2A/open,GF,Dining + Living / saloon + Pantry + Reception,DRY,concrete ceiling plaster,,m2,NOT SPECIFIED,Q-57 A mod (7)
 GF-R7512EA,GF,Majlis / diwaniya,DRY,"horizontal decor ceiling (gypsum), incl. bulkhead undersides",24.9403,m2,DRAWING-CONFIRMED,R2
 GF-R7512EA,GF,Majlis / diwaniya,DRY,"bulkhead vertical faces, owner method (decor side only, R-CEIL-R3-2)",1.2000,m2,ASSUMED - OWNER-APPROVED,"Q-48 A + Q-43; beam ledger r2 CALCULATED, D > 0.60"
 GF-R7512EA,GF,Majlis / diwaniya,DRY,cove / cornice run at the wall (only if a detail is approved),20.1274,m,HELD,no cove or cornice detail drawn; never a 0.10 m strip by convention
+GF-R7512EA,GF,Majlis / diwaniya,DRY,"bulkhead vertical faces, drawing-derived candidate (ceiling 0.15 under the slab soffit)",4.7200,m2,HELD,"no ceiling level printed (designer D-40); candidate, never in a total; carried from R2 unchanged (not re-split by R-CEIL-R3-2): a HELD candidate, never a total"
 GF-R7512EA,GF,Majlis / diwaniya,DRY,"paintable gypsum, owner method (horizontal + owner bulkhead faces)",26.1403,m2,ASSUMED - OWNER-APPROVED,Q-57 A mod (6)
 GF-R7512EA,GF,Majlis / diwaniya,DRY,concrete ceiling plaster,,m2,NOT SPECIFIED,Q-57 A mod (7)
 GF-R75FBAE,GF,Master bedroom,DRY,"horizontal decor ceiling (gypsum), incl. bulkhead undersides",16.5496,m2,DRAWING-CONFIRMED,R2
 GF-R75FBAE,GF,Master bedroom,DRY,"bulkhead vertical faces, owner method (decor side only, R-CEIL-R3-2)",2.0365,m2,ASSUMED - OWNER-APPROVED,"Q-48 A + Q-43; beam ledger r2 CALCULATED, D > 0.60"
 GF-R75FBAE,GF,Master bedroom,DRY,bulkhead edges on CONFLICT / HELD / unregistered beams (decor side),0.9700,m,HELD,Q-61 C
 GF-R75FBAE,GF,Master bedroom,DRY,cove / cornice run at the wall (only if a detail is approved),21.5338,m,HELD,no cove or cornice detail drawn; never a 0.10 m strip by convention
+GF-R75FBAE,GF,Master bedroom,DRY,"bulkhead vertical faces, drawing-derived candidate (ceiling 0.15 under the slab soffit)",8.7379,m2,HELD,"no ceiling level printed (designer D-40); candidate, never in a total; carried from R2 unchanged (not re-split by R-CEIL-R3-2): a HELD candidate, never a total"
+GF-R75FBAE,GF,Master bedroom,DRY,beam / column junction pieces without a register row (< 0.10 m2),1.0000,nr,DRAWING-CONFIRMED,listed only: no free edge of their own
 GF-R75FBAE,GF,Master bedroom,DRY,"paintable gypsum, owner method (horizontal + owner bulkhead faces)",18.5861,m2,ASSUMED - OWNER-APPROVED,Q-57 A mod (6)
 GF-R75FBAE,GF,Master bedroom,DRY,concrete ceiling plaster,,m2,NOT SPECIFIED,Q-57 A mod (7)
 GF-R31F8AE,GF,Stair,STAIR,"stair soffit over the flights (stair finish, not a decor ceiling)",10.7250,m2,HELD,slab plan STAIR zone above; no soffit finish printed
@@ -38,6 +44,7 @@ GF-R9A05AA,GF,Garden / yard / court,HELD_CLASS,"plan area under the slab, ceilin
 GF-R9A05AA,GF,Garden / yard / court,HELD_CLASS,bulkhead edges of beam pieces over this held piece,9.6200,m,HELD,class HELD: no bulkhead face is decided where the ceiling type is not
 GF-R51E127,GF,Driver room,DRY,"horizontal decor ceiling (gypsum), incl. bulkhead undersides",7.8750,m2,DRAWING-CONFIRMED,R2
 GF-R51E127,GF,Driver room,DRY,cove / cornice run at the wall (only if a detail is approved),12.5000,m,HELD,no cove or cornice detail drawn; never a 0.10 m strip by convention
+GF-R51E127,GF,Driver room,DRY,"bulkhead vertical faces, drawing-derived candidate (ceiling 0.15 under the slab soffit)",3.0600,m2,HELD,"no ceiling level printed (designer D-40); candidate, never in a total; carried from R2 unchanged (not re-split by R-CEIL-R3-2): a HELD candidate, never a total"
 GF-R51E127,GF,Driver room,DRY,"paintable gypsum, owner method (horizontal + owner bulkhead faces)",7.8750,m2,DRAWING-CONFIRMED,Q-57 A mod (6)
 GF-R51E127,GF,Driver room,DRY,concrete ceiling plaster,,m2,NOT SPECIFIED,Q-57 A mod (7)
 GF-RFD4E1D,GF,Dining + Garden / yard / court + Living / saloon + Pantry + Reception,HELD_CLASS,"plan area under the slab, ceiling type not decidable (class HELD: see basis)",4.8850,m2,HELD,"merged band cell of the same 1.30 m band: HELD (P-2, Checker 01:12); class HELD"
@@ -46,35 +53,41 @@ GF-RDBD4F9,GF,Unnamed space,WET,"horizontal decor ceiling (gypsum), incl. bulkhe
 GF-RDBD4F9,GF,Unnamed space,WET,"bulkhead vertical faces, owner method (decor side only, R-CEIL-R3-2)",0.7243,m2,ASSUMED - OWNER-APPROVED,"Q-48 A + Q-43; beam ledger r2 CALCULATED, D > 0.60"
 GF-RDBD4F9,GF,Unnamed space,WET,cove / cornice run at the wall (only if a detail is approved),,m,HELD,no cove or cornice detail drawn; never a 0.10 m strip by convention
 GF-RDBD4F9,GF,Unnamed space,WET,ceiling board type (wet room),,m2,HELD,Q-57 A mod (2): moisture-resistant board only where specified
+GF-RDBD4F9,GF,Unnamed space,WET,"bulkhead vertical faces, drawing-derived candidate (ceiling 0.15 under the slab soffit)",3.8838,m2,HELD,"no ceiling level printed (designer D-40); candidate, never in a total; carried from R2 unchanged (not re-split by R-CEIL-R3-2): a HELD candidate, never a total"
 GF-RDBD4F9,GF,Unnamed space,WET,"paintable gypsum, owner method (horizontal + owner bulkhead faces)",5.4550,m2,ASSUMED - OWNER-APPROVED,Q-57 A mod (6)
 GF-RDBD4F9,GF,Unnamed space,WET,concrete ceiling plaster,,m2,NOT SPECIFIED,Q-57 A mod (7)
 GF-RD6F891,GF,Bathroom / W.C.,WET,"horizontal decor ceiling (gypsum), incl. bulkhead undersides",3.7177,m2,DRAWING-CONFIRMED,R2
 GF-RD6F891,GF,Bathroom / W.C.,WET,bulkhead edges on CONFLICT / HELD / unregistered beams (decor side),2.1000,m,HELD,Q-61 C
 GF-RD6F891,GF,Bathroom / W.C.,WET,cove / cornice run at the wall (only if a detail is approved),7.6247,m,HELD,no cove or cornice detail drawn; never a 0.10 m strip by convention
 GF-RD6F891,GF,Bathroom / W.C.,WET,ceiling board type (wet room),,m2,HELD,Q-57 A mod (2): moisture-resistant board only where specified
+GF-RD6F891,GF,Bathroom / W.C.,WET,"bulkhead vertical faces, drawing-derived candidate (ceiling 0.15 under the slab soffit)",1.3841,m2,HELD,"no ceiling level printed (designer D-40); candidate, never in a total; carried from R2 unchanged (not re-split by R-CEIL-R3-2): a HELD candidate, never a total"
 GF-RD6F891,GF,Bathroom / W.C.,WET,"paintable gypsum, owner method (horizontal + owner bulkhead faces)",3.7177,m2,DRAWING-CONFIRMED,Q-57 A mod (6)
 GF-RD6F891,GF,Bathroom / W.C.,WET,concrete ceiling plaster,,m2,NOT SPECIFIED,Q-57 A mod (7)
 GF-RF002DC,GF,Unnamed space,HELD_CLASS,"plan area under the slab, ceiling type not decidable (class HELD: see basis)",3.6000,m2,HELD,"unlabelled space 1.20 x 3.00 (no room word, passages OP-003 / OP-007): not identified; class HELD"
 GF-RB62B55,GF,Bathroom / W.C.,WET,"horizontal decor ceiling (gypsum), incl. bulkhead undersides",3.3750,m2,DRAWING-CONFIRMED,R2
 GF-RB62B55,GF,Bathroom / W.C.,WET,cove / cornice run at the wall (only if a detail is approved),7.5000,m,HELD,no cove or cornice detail drawn; never a 0.10 m strip by convention
 GF-RB62B55,GF,Bathroom / W.C.,WET,ceiling board type (wet room),,m2,HELD,Q-57 A mod (2): moisture-resistant board only where specified
+GF-RB62B55,GF,Bathroom / W.C.,WET,"bulkhead vertical faces, drawing-derived candidate (ceiling 0.15 under the slab soffit)",0.7650,m2,HELD,"no ceiling level printed (designer D-40); candidate, never in a total; carried from R2 unchanged (not re-split by R-CEIL-R3-2): a HELD candidate, never a total"
 GF-RB62B55,GF,Bathroom / W.C.,WET,"paintable gypsum, owner method (horizontal + owner bulkhead faces)",3.3750,m2,DRAWING-CONFIRMED,Q-57 A mod (6)
 GF-RB62B55,GF,Bathroom / W.C.,WET,concrete ceiling plaster,,m2,NOT SPECIFIED,Q-57 A mod (7)
 GF-R89E756,GF,Shaft / duct,SHAFT,"no ceiling: slab opening above (lift / shaft X box, light well)",3.2400,m2,DRAWING-CONFIRMED,slab plan OPENING above
 GF-R8496F0,GF,Unnamed space,WET,"horizontal decor ceiling (gypsum), incl. bulkhead undersides",3.1325,m2,DRAWING-CONFIRMED,R2
 GF-R8496F0,GF,Unnamed space,WET,cove / cornice run at the wall (only if a detail is approved),7.2000,m,HELD,no cove or cornice detail drawn; never a 0.10 m strip by convention
 GF-R8496F0,GF,Unnamed space,WET,ceiling board type (wet room),,m2,HELD,Q-57 A mod (2): moisture-resistant board only where specified
+GF-R8496F0,GF,Unnamed space,WET,"bulkhead vertical faces, drawing-derived candidate (ceiling 0.15 under the slab soffit)",0.6970,m2,HELD,"no ceiling level printed (designer D-40); candidate, never in a total; carried from R2 unchanged (not re-split by R-CEIL-R3-2): a HELD candidate, never a total"
 GF-R8496F0,GF,Unnamed space,WET,"paintable gypsum, owner method (horizontal + owner bulkhead faces)",3.1325,m2,DRAWING-CONFIRMED,Q-57 A mod (6)
 GF-R8496F0,GF,Unnamed space,WET,concrete ceiling plaster,,m2,NOT SPECIFIED,Q-57 A mod (7)
 GF-RC06FED,GF,Dining + Living / saloon + Pantry + Reception,WET,"horizontal decor ceiling (gypsum), incl. bulkhead undersides",2.8000,m2,DRAWING-CONFIRMED,R2
 GF-RC06FED,GF,Dining + Living / saloon + Pantry + Reception,WET,"bulkhead vertical faces, owner method (decor side only, R-CEIL-R3-2)",0.3281,m2,ASSUMED - OWNER-APPROVED,"Q-48 A + Q-43; beam ledger r2 CALCULATED, D > 0.60"
 GF-RC06FED,GF,Dining + Living / saloon + Pantry + Reception,WET,cove / cornice run at the wall (only if a detail is approved),,m,HELD,no cove or cornice detail drawn; never a 0.10 m strip by convention
 GF-RC06FED,GF,Dining + Living / saloon + Pantry + Reception,WET,ceiling board type (wet room),,m2,HELD,Q-57 A mod (2): moisture-resistant board only where specified
+GF-RC06FED,GF,Dining + Living / saloon + Pantry + Reception,WET,"bulkhead vertical faces, drawing-derived candidate (ceiling 0.15 under the slab soffit)",1.1872,m2,HELD,"no ceiling level printed (designer D-40); candidate, never in a total; carried from R2 unchanged (not re-split by R-CEIL-R3-2): a HELD candidate, never a total"
 GF-RC06FED,GF,Dining + Living / saloon + Pantry + Reception,WET,"paintable gypsum, owner method (horizontal + owner bulkhead faces)",3.1281,m2,ASSUMED - OWNER-APPROVED,Q-57 A mod (6)
 GF-RC06FED,GF,Dining + Living / saloon + Pantry + Reception,WET,concrete ceiling plaster,,m2,NOT SPECIFIED,Q-57 A mod (7)
 GF-RF38DAF,GF,Bathroom / W.C.,WET,"horizontal decor ceiling (gypsum), incl. bulkhead undersides",2.6752,m2,DRAWING-CONFIRMED,R2
 GF-RF38DAF,GF,Bathroom / W.C.,WET,cove / cornice run at the wall (only if a detail is approved),7.4140,m,HELD,no cove or cornice detail drawn; never a 0.10 m strip by convention
 GF-RF38DAF,GF,Bathroom / W.C.,WET,ceiling board type (wet room),,m2,HELD,Q-57 A mod (2): moisture-resistant board only where specified
+GF-RF38DAF,GF,Bathroom / W.C.,WET,"bulkhead vertical faces, drawing-derived candidate (ceiling 0.15 under the slab soffit)",1.7292,m2,HELD,"no ceiling level printed (designer D-40); candidate, never in a total; carried from R2 unchanged (not re-split by R-CEIL-R3-2): a HELD candidate, never a total"
 GF-RF38DAF,GF,Bathroom / W.C.,WET,"paintable gypsum, owner method (horizontal + owner bulkhead faces)",2.6752,m2,DRAWING-CONFIRMED,Q-57 A mod (6)
 GF-RF38DAF,GF,Bathroom / W.C.,WET,concrete ceiling plaster,,m2,NOT SPECIFIED,Q-57 A mod (7)
 GF-RB28769,GF,Bathroom / W.C.,WET,"horizontal decor ceiling (gypsum), incl. bulkhead undersides",2.3676,m2,DRAWING-CONFIRMED,R2
@@ -82,6 +95,7 @@ GF-RB28769,GF,Bathroom / W.C.,WET,"bulkhead vertical faces, owner method (decor 
 GF-RB28769,GF,Bathroom / W.C.,WET,bulkhead edges on CONFLICT / HELD / unregistered beams (decor side),1.8206,m,HELD,Q-61 C
 GF-RB28769,GF,Bathroom / W.C.,WET,cove / cornice run at the wall (only if a detail is approved),6.8098,m,HELD,no cove or cornice detail drawn; never a 0.10 m strip by convention
 GF-RB28769,GF,Bathroom / W.C.,WET,ceiling board type (wet room),,m2,HELD,Q-57 A mod (2): moisture-resistant board only where specified
+GF-RB28769,GF,Bathroom / W.C.,WET,"bulkhead vertical faces, drawing-derived candidate (ceiling 0.15 under the slab soffit)",1.7301,m2,HELD,"no ceiling level printed (designer D-40); candidate, never in a total; carried from R2 unchanged (not re-split by R-CEIL-R3-2): a HELD candidate, never a total"
 GF-RB28769,GF,Bathroom / W.C.,WET,"paintable gypsum, owner method (horizontal + owner bulkhead faces)",2.7647,m2,ASSUMED - OWNER-APPROVED,Q-57 A mod (6)
 GF-RB28769,GF,Bathroom / W.C.,WET,concrete ceiling plaster,,m2,NOT SPECIFIED,Q-57 A mod (7)
 GF-RDF7D28,GF,Bathroom / W.C.,WET,"horizontal decor ceiling (gypsum), incl. bulkhead undersides",2.3625,m2,DRAWING-CONFIRMED,R2
@@ -109,6 +123,7 @@ GF-RD36087,GF,Unnamed space,WET,concrete ceiling plaster,,m2,NOT SPECIFIED,Q-57 
 1F-R78C367,1F,Living / saloon,DRY,"beam edge at a stair zone: stair-well face, not a bulkhead (R-CEIL-R3-2)",2.5000,m,HELD,height and finish with the stair zone (T-281)
 1F-R78C367,1F,Living / saloon,DRY,ceiling edge at an opening (drop / return),10.5072,m,HELD,"Q-57 A mod (5): no edge detail printed; of which 2.2307 m run along beam pieces (R-CEIL-R3-2: counted here once, no longer also as a bulkhead)"
 1F-R78C367,1F,Living / saloon,DRY,cove / cornice run at the wall (only if a detail is approved),,m,HELD,no cove or cornice detail drawn; never a 0.10 m strip by convention
+1F-R78C367,1F,Living / saloon,DRY,"bulkhead vertical faces, drawing-derived candidate (ceiling 0.15 under the slab soffit)",41.9203,m2,HELD,"no ceiling level printed (designer D-40); candidate, never in a total; carried from R2 unchanged (not re-split by R-CEIL-R3-2): a HELD candidate, never a total"
 1F-R78C367,1F,Living / saloon,DRY,"paintable gypsum, owner method (horizontal + owner bulkhead faces)",58.7108,m2,ASSUMED - OWNER-APPROVED,Q-57 A mod (6)
 1F-R78C367,1F,Living / saloon,DRY,concrete ceiling plaster,,m2,NOT SPECIFIED,Q-57 A mod (7)
 1F-RB72F22,1F,Master bedroom,DRY,"horizontal decor ceiling (gypsum), incl. bulkhead undersides",7.4692,m2,DRAWING-CONFIRMED,R2
@@ -117,6 +132,7 @@ GF-RD36087,GF,Unnamed space,WET,concrete ceiling plaster,,m2,NOT SPECIFIED,Q-57 
 1F-RB72F22,1F,Master bedroom,DRY,bulkhead edges on CONFLICT / HELD / unregistered beams (decor side),3.0313,m,HELD,Q-61 C
 1F-RB72F22,1F,Master bedroom,DRY,ceiling edge at an opening (drop / return),8.2210,m,HELD,"Q-57 A mod (5): no edge detail printed; of which 1.3187 m run along beam pieces (R-CEIL-R3-2: counted here once, no longer also as a bulkhead)"
 1F-RB72F22,1F,Master bedroom,DRY,cove / cornice run at the wall (only if a detail is approved),17.7000,m,HELD,no cove or cornice detail drawn; never a 0.10 m strip by convention
+1F-RB72F22,1F,Master bedroom,DRY,"bulkhead vertical faces, drawing-derived candidate (ceiling 0.15 under the slab soffit)",6.6895,m2,HELD,"no ceiling level printed (designer D-40); candidate, never in a total; carried from R2 unchanged (not re-split by R-CEIL-R3-2): a HELD candidate, never a total"
 1F-RB72F22,1F,Master bedroom,DRY,"paintable gypsum, owner method (horizontal + owner bulkhead faces)",8.1067,m2,ASSUMED - OWNER-APPROVED,Q-57 A mod (6)
 1F-RB72F22,1F,Master bedroom,DRY,concrete ceiling plaster,,m2,NOT SPECIFIED,Q-57 A mod (7)
 1F-R3CFCFD,1F,Master bedroom,DRY,"horizontal decor ceiling (gypsum), incl. bulkhead undersides",18.6747,m2,DRAWING-CONFIRMED,R2
@@ -124,23 +140,28 @@ GF-RD36087,GF,Unnamed space,WET,concrete ceiling plaster,,m2,NOT SPECIFIED,Q-57 
 1F-R3CFCFD,1F,Master bedroom,DRY,"bulkhead vertical faces, owner method (decor side only, R-CEIL-R3-2)",0.1304,m2,ASSUMED - OWNER-APPROVED,"Q-48 A + Q-43; beam ledger r2 CALCULATED, D > 0.60"
 1F-R3CFCFD,1F,Master bedroom,DRY,ceiling edge at an opening (drop / return),1.2623,m,HELD,Q-57 A mod (5): no edge detail printed
 1F-R3CFCFD,1F,Master bedroom,DRY,cove / cornice run at the wall (only if a detail is approved),22.1502,m,HELD,no cove or cornice detail drawn; never a 0.10 m strip by convention
+1F-R3CFCFD,1F,Master bedroom,DRY,"bulkhead vertical faces, drawing-derived candidate (ceiling 0.15 under the slab soffit)",4.1086,m2,HELD,"no ceiling level printed (designer D-40); candidate, never in a total; carried from R2 unchanged (not re-split by R-CEIL-R3-2): a HELD candidate, never a total"
 1F-R3CFCFD,1F,Master bedroom,DRY,"paintable gypsum, owner method (horizontal + owner bulkhead faces)",18.8051,m2,ASSUMED - OWNER-APPROVED,Q-57 A mod (6)
 1F-R3CFCFD,1F,Master bedroom,DRY,concrete ceiling plaster,,m2,NOT SPECIFIED,Q-57 A mod (7)
 1F-RED0D19,1F,Master bedroom,DRY,"horizontal decor ceiling (gypsum), incl. bulkhead undersides",18.2150,m2,DRAWING-CONFIRMED,R2
 1F-RED0D19,1F,Master bedroom,DRY,"bulkhead vertical faces, owner method (decor side only, R-CEIL-R3-2)",0.5475,m2,ASSUMED - OWNER-APPROVED,"Q-48 A + Q-43; beam ledger r2 CALCULATED, D > 0.60"
 1F-RED0D19,1F,Master bedroom,DRY,cove / cornice run at the wall (only if a detail is approved),17.4000,m,HELD,no cove or cornice detail drawn; never a 0.10 m strip by convention
+1F-RED0D19,1F,Master bedroom,DRY,"bulkhead vertical faces, drawing-derived candidate (ceiling 0.15 under the slab soffit)",5.0775,m2,HELD,"no ceiling level printed (designer D-40); candidate, never in a total; carried from R2 unchanged (not re-split by R-CEIL-R3-2): a HELD candidate, never a total"
 1F-RED0D19,1F,Master bedroom,DRY,"paintable gypsum, owner method (horizontal + owner bulkhead faces)",18.7625,m2,ASSUMED - OWNER-APPROVED,Q-57 A mod (6)
 1F-RED0D19,1F,Master bedroom,DRY,concrete ceiling plaster,,m2,NOT SPECIFIED,Q-57 A mod (7)
 1F-R0E919A,1F,Master bedroom,DRY,"horizontal decor ceiling (gypsum), incl. bulkhead undersides",16.3400,m2,DRAWING-CONFIRMED,R2
 1F-R0E919A,1F,Master bedroom,DRY,"bulkhead vertical faces, owner method (decor side only, R-CEIL-R3-2)",1.8459,m2,ASSUMED - OWNER-APPROVED,"Q-48 A + Q-43; beam ledger r2 CALCULATED, D > 0.60"
 1F-R0E919A,1F,Master bedroom,DRY,bulkhead edges on CONFLICT / HELD / unregistered beams (decor side),5.1764,m,HELD,Q-61 C
 1F-R0E919A,1F,Master bedroom,DRY,cove / cornice run at the wall (only if a detail is approved),16.2000,m,HELD,no cove or cornice detail drawn; never a 0.10 m strip by convention
+1F-R0E919A,1F,Master bedroom,DRY,"bulkhead vertical faces, drawing-derived candidate (ceiling 0.15 under the slab soffit)",8.3758,m2,HELD,"no ceiling level printed (designer D-40); candidate, never in a total; carried from R2 unchanged (not re-split by R-CEIL-R3-2): a HELD candidate, never a total"
+1F-R0E919A,1F,Master bedroom,DRY,beam / column junction pieces without a register row (< 0.10 m2),1.0000,nr,DRAWING-CONFIRMED,listed only: no free edge of their own
 1F-R0E919A,1F,Master bedroom,DRY,"paintable gypsum, owner method (horizontal + owner bulkhead faces)",18.1859,m2,ASSUMED - OWNER-APPROVED,Q-57 A mod (6)
 1F-R0E919A,1F,Master bedroom,DRY,concrete ceiling plaster,,m2,NOT SPECIFIED,Q-57 A mod (7)
 1F-R26FA0D,1F,Laundry,WET,"horizontal decor ceiling (gypsum), incl. bulkhead undersides",10.1510,m2,DRAWING-CONFIRMED,R2
 1F-R26FA0D,1F,Laundry,WET,"bulkhead vertical faces, owner method (decor side only, R-CEIL-R3-2)",0.2146,m2,ASSUMED - OWNER-APPROVED,"Q-48 A + Q-43; beam ledger r2 CALCULATED, D > 0.60"
 1F-R26FA0D,1F,Laundry,WET,cove / cornice run at the wall (only if a detail is approved),16.9400,m,HELD,no cove or cornice detail drawn; never a 0.10 m strip by convention
 1F-R26FA0D,1F,Laundry,WET,ceiling board type (wet room),,m2,HELD,Q-57 A mod (2): moisture-resistant board only where specified
+1F-R26FA0D,1F,Laundry,WET,"bulkhead vertical faces, drawing-derived candidate (ceiling 0.15 under the slab soffit)",1.8159,m2,HELD,"no ceiling level printed (designer D-40); candidate, never in a total; carried from R2 unchanged (not re-split by R-CEIL-R3-2): a HELD candidate, never a total"
 1F-R26FA0D,1F,Laundry,WET,"paintable gypsum, owner method (horizontal + owner bulkhead faces)",10.3656,m2,ASSUMED - OWNER-APPROVED,Q-57 A mod (6)
 1F-R26FA0D,1F,Laundry,WET,concrete ceiling plaster,,m2,NOT SPECIFIED,Q-57 A mod (7)
 1F-R8BDA49,1F,Bathroom / W.C.,WET,"horizontal decor ceiling (gypsum), incl. bulkhead undersides",3.5998,m2,DRAWING-CONFIRMED,R2
@@ -148,6 +169,7 @@ GF-RD36087,GF,Unnamed space,WET,concrete ceiling plaster,,m2,NOT SPECIFIED,Q-57 
 1F-R8BDA49,1F,Bathroom / W.C.,WET,ceiling edge at an opening (drop / return),2.2632,m,HELD,Q-57 A mod (5): no edge detail printed
 1F-R8BDA49,1F,Bathroom / W.C.,WET,cove / cornice run at the wall (only if a detail is approved),9.0000,m,HELD,no cove or cornice detail drawn; never a 0.10 m strip by convention
 1F-R8BDA49,1F,Bathroom / W.C.,WET,ceiling board type (wet room),,m2,HELD,Q-57 A mod (2): moisture-resistant board only where specified
+1F-R8BDA49,1F,Bathroom / W.C.,WET,"bulkhead vertical faces, drawing-derived candidate (ceiling 0.15 under the slab soffit)",2.2780,m2,HELD,"no ceiling level printed (designer D-40); candidate, never in a total; carried from R2 unchanged (not re-split by R-CEIL-R3-2): a HELD candidate, never a total"
 1F-R8BDA49,1F,Bathroom / W.C.,WET,"paintable gypsum, owner method (horizontal + owner bulkhead faces)",3.5998,m2,DRAWING-CONFIRMED,Q-57 A mod (6)
 1F-R8BDA49,1F,Bathroom / W.C.,WET,concrete ceiling plaster,,m2,NOT SPECIFIED,Q-57 A mod (7)
 1F-R48AA46,1F,Bathroom / W.C.,WET,"horizontal decor ceiling (gypsum), incl. bulkhead undersides",3.7815,m2,DRAWING-CONFIRMED,R2
@@ -156,6 +178,7 @@ GF-RD36087,GF,Unnamed space,WET,concrete ceiling plaster,,m2,NOT SPECIFIED,Q-57 
 1F-R48AA46,1F,Bathroom / W.C.,WET,ceiling edge at an opening (drop / return),2.0893,m,HELD,Q-57 A mod (5): no edge detail printed
 1F-R48AA46,1F,Bathroom / W.C.,WET,cove / cornice run at the wall (only if a detail is approved),9.0000,m,HELD,no cove or cornice detail drawn; never a 0.10 m strip by convention
 1F-R48AA46,1F,Bathroom / W.C.,WET,ceiling board type (wet room),,m2,HELD,Q-57 A mod (2): moisture-resistant board only where specified
+1F-R48AA46,1F,Bathroom / W.C.,WET,"bulkhead vertical faces, drawing-derived candidate (ceiling 0.15 under the slab soffit)",1.4110,m2,HELD,"no ceiling level printed (designer D-40); candidate, never in a total; carried from R2 unchanged (not re-split by R-CEIL-R3-2): a HELD candidate, never a total"
 1F-R48AA46,1F,Bathroom / W.C.,WET,"paintable gypsum, owner method (horizontal + owner bulkhead faces)",3.7815,m2,DRAWING-CONFIRMED,Q-57 A mod (6)
 1F-R48AA46,1F,Bathroom / W.C.,WET,concrete ceiling plaster,,m2,NOT SPECIFIED,Q-57 A mod (7)
 1F-R48CDA5,1F,Bathroom / W.C.,WET,"horizontal decor ceiling (gypsum), incl. bulkhead undersides",4.2778,m2,DRAWING-CONFIRMED,R2
@@ -164,6 +187,7 @@ GF-RD36087,GF,Unnamed space,WET,concrete ceiling plaster,,m2,NOT SPECIFIED,Q-57 
 1F-R48CDA5,1F,Bathroom / W.C.,WET,ceiling edge at an opening (drop / return),1.4905,m,HELD,Q-57 A mod (5): no edge detail printed
 1F-R48CDA5,1F,Bathroom / W.C.,WET,cove / cornice run at the wall (only if a detail is approved),8.7000,m,HELD,no cove or cornice detail drawn; never a 0.10 m strip by convention
 1F-R48CDA5,1F,Bathroom / W.C.,WET,ceiling board type (wet room),,m2,HELD,Q-57 A mod (2): moisture-resistant board only where specified
+1F-R48CDA5,1F,Bathroom / W.C.,WET,"bulkhead vertical faces, drawing-derived candidate (ceiling 0.15 under the slab soffit)",4.2955,m2,HELD,"no ceiling level printed (designer D-40); candidate, never in a total; carried from R2 unchanged (not re-split by R-CEIL-R3-2): a HELD candidate, never a total"
 1F-R48CDA5,1F,Bathroom / W.C.,WET,"paintable gypsum, owner method (horizontal + owner bulkhead faces)",4.5703,m2,ASSUMED - OWNER-APPROVED,Q-57 A mod (6)
 1F-R48CDA5,1F,Bathroom / W.C.,WET,concrete ceiling plaster,,m2,NOT SPECIFIED,Q-57 A mod (7)
 1F-RED23B8,1F,Bathroom / W.C.,WET,"horizontal decor ceiling (gypsum), incl. bulkhead undersides",3.5775,m2,DRAWING-CONFIRMED,R2
@@ -184,17 +208,20 @@ GF-RD36087,GF,Unnamed space,WET,concrete ceiling plaster,,m2,NOT SPECIFIED,Q-57 
 1F-R52AC05,1F,Bathroom / W.C.,WET,concrete ceiling plaster,,m2,NOT SPECIFIED,Q-57 A mod (7)
 2F-R1DB2D2,2F,Maid room,DRY,"horizontal decor ceiling (gypsum), incl. bulkhead undersides",19.3500,m2,DRAWING-CONFIRMED,R2
 2F-R1DB2D2,2F,Maid room,DRY,cove / cornice run at the wall (only if a detail is approved),18.9000,m,HELD,no cove or cornice detail drawn; never a 0.10 m strip by convention
+2F-R1DB2D2,2F,Maid room,DRY,"bulkhead vertical faces, drawing-derived candidate (ceiling 0.15 under the slab soffit)",2.1600,m2,HELD,"no ceiling level printed (designer D-40); candidate, never in a total; carried from R2 unchanged (not re-split by R-CEIL-R3-2): a HELD candidate, never a total"
 2F-R1DB2D2,2F,Maid room,DRY,"paintable gypsum, owner method (horizontal + owner bulkhead faces)",19.3500,m2,DRAWING-CONFIRMED,Q-57 A mod (6)
 2F-R1DB2D2,2F,Maid room,DRY,concrete ceiling plaster,,m2,NOT SPECIFIED,Q-57 A mod (7)
 2F-R4D1B62,2F,Stair,DRY,"horizontal decor ceiling (gypsum), incl. bulkhead undersides",5.6258,m2,DRAWING-CONFIRMED,R2
 2F-R4D1B62,2F,Stair,DRY,held part of the ceiling,12.9742,m2,HELD,R2
 2F-R4D1B62,2F,Stair,DRY,bulkhead edges on CONFLICT / HELD / unregistered beams (decor side),2.5000,m,HELD,Q-61 C
 2F-R4D1B62,2F,Stair,DRY,cove / cornice run at the wall (only if a detail is approved),,m,HELD,no cove or cornice detail drawn; never a 0.10 m strip by convention
+2F-R4D1B62,2F,Stair,DRY,"bulkhead vertical faces, drawing-derived candidate (ceiling 0.15 under the slab soffit)",2.2320,m2,HELD,"no ceiling level printed (designer D-40); candidate, never in a total; carried from R2 unchanged (not re-split by R-CEIL-R3-2): a HELD candidate, never a total"
 2F-R4D1B62,2F,Stair,DRY,"paintable gypsum, owner method (horizontal + owner bulkhead faces)",5.6258,m2,DRAWING-CONFIRMED,Q-57 A mod (6)
 2F-R4D1B62,2F,Stair,DRY,concrete ceiling plaster,,m2,NOT SPECIFIED,Q-57 A mod (7)
 2F-RE83BED,2F,Bathroom / W.C.,WET,"horizontal decor ceiling (gypsum), incl. bulkhead undersides",5.5500,m2,DRAWING-CONFIRMED,R2
 2F-RE83BED,2F,Bathroom / W.C.,WET,cove / cornice run at the wall (only if a detail is approved),9.7000,m,HELD,no cove or cornice detail drawn; never a 0.10 m strip by convention
 2F-RE83BED,2F,Bathroom / W.C.,WET,ceiling board type (wet room),,m2,HELD,Q-57 A mod (2): moisture-resistant board only where specified
+2F-RE83BED,2F,Bathroom / W.C.,WET,"bulkhead vertical faces, drawing-derived candidate (ceiling 0.15 under the slab soffit)",0.7200,m2,HELD,"no ceiling level printed (designer D-40); candidate, never in a total; carried from R2 unchanged (not re-split by R-CEIL-R3-2): a HELD candidate, never a total"
 2F-RE83BED,2F,Bathroom / W.C.,WET,"paintable gypsum, owner method (horizontal + owner bulkhead faces)",5.5500,m2,DRAWING-CONFIRMED,Q-57 A mod (6)
 2F-RE83BED,2F,Bathroom / W.C.,WET,concrete ceiling plaster,,m2,NOT SPECIFIED,Q-57 A mod (7)
 2F-R2BDCEE,2F,Shaft / duct,SHAFT,"shaft top under the slab (landing / shaft top, not a room ceiling)",3.2400,m2,HELD,no finish printed for a shaft / stair top
