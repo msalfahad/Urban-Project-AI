@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-25 22:11 UTC | Lead | STARTED | run unknown | repo-attached routine | task state: board | report pending | stale run lock of run 20261025T181106-435-3824 since 2026-10-25T18:11Z recovered
 - 2026-10-25T21:51Z | Verifier | STARTED | run unknown | repo-attached routine | task state: T-266 Gate B READY, T-297 r2 READY, T-301 READY, T-293 part 2 READY (17:52 Verifier run left no final line) | self-check pending | stale run lock of run 20261025T175103-456-5771 since 2026-10-25T17:51Z recovered
 - 2026-10-25T21:41Z | Worker 2 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-25T18:11Z | Lead | STARTED | run session_01M61Zt1bzP3cTHiVzBqVi8d | repo-attached routine | task state: board | report pending
