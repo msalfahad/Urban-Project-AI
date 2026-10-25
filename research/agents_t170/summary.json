@@ -1,0 +1,2136 @@
+{
+ "method": "EXCAVATION_LEDGER_V1",
+ "footings": 26,
+ "beams": 61,
+ "neat_pits_confirmed": 24,
+ "neat_pit_plan_m2": 129.57,
+ "footprint_m2_confirmed_pits": 109.99,
+ "held_pits": {
+  "FTG:SH10:FF@136342,43148:8e679c": [
+   "UNDERLAY_NOT_PRINTED",
+   "BLINDING_PROJECTION_NOT_PRINTED"
+  ],
+  "FTG:SH10:T652:10A5": [
+   "FOOTING_SIZE_NOT_PRINTED",
+   "FOOTING_CONFLICT: one open outline carries two footing tags F10 and F (Q-31 C designer item; element register 1B1B)"
+  ]
+ },
+ "buried_confirmed_m3": {
+  "blinding_m3": 12.957,
+  "underlay_m3": 7.6993,
+  "footing_m3": 52.961
+ },
+ "trench_neat_plan_m2": 97.1445,
+ "trenches_confirmed": 58,
+ "straps_footprint_m2": 7.88917,
+ "overlaps": [
+  {
+   "a": "FTG:SH10:F8@146912,42298:624706",
+   "b": "FTG:SH10:FN@145737,41323:b61882",
+   "neat_overlap_m2": 0.005625,
+   "w_star_m": 0.0,
+   "footing_overlap_m2": 0.0
+  },
+  {
+   "a": "FTG:SH10:F9@143262,44298:3192fb",
+   "b": "FTG:SH10:FN@146262,46648:0e0098",
+   "neat_overlap_m2": 0.33,
+   "w_star_m": 0.0,
+   "footing_overlap_m2": 0.14
+  },
+  {
+   "a": "FTG:SH10:F14@140062,36348:73a8e9",
+   "b": "FTG:SH10:F5@144112,36948:04f491",
+   "neat_overlap_m2": 0.0,
+   "w_star_m": 0.025,
+   "footing_overlap_m2": 0.0
+  },
+  {
+   "a": "FTG:SH10:F8@146912,42298:624706",
+   "b": "FTG:SH10:F9@143262,44298:3192fb",
+   "neat_overlap_m2": 0.0,
+   "w_star_m": 0.025,
+   "footing_overlap_m2": 0.0
+  },
+  {
+   "a": "FTG:SH10:F3@129492,37298:38c592",
+   "b": "FTG:SH10:F@131292,36348:767bc7",
+   "neat_overlap_m2": 0.0,
+   "w_star_m": 0.1,
+   "footing_overlap_m2": 0.0
+  },
+  {
+   "a": "FTG:SH10:F13@128842,39748:6b1a4d",
+   "b": "FTG:SH10:F6@133592,40098:33adbb",
+   "neat_overlap_m2": 0.0,
+   "w_star_m": 0.1251,
+   "footing_overlap_m2": 0.0
+  },
+  {
+   "a": "FTG:SH10:F3@123192,40398:b6c1c9",
+   "b": "FTG:SH10:F@121942,42498:0ce993",
+   "neat_overlap_m2": 0.0,
+   "w_star_m": 0.25,
+   "footing_overlap_m2": 0.0
+  },
+  {
+   "a": "FTG:SH10:F8@146912,42298:624706",
+   "b": "FTG:SH10:FN@146262,46648:0e0098",
+   "neat_overlap_m2": 0.0,
+   "w_star_m": 0.275,
+   "footing_overlap_m2": 0.0
+  },
+  {
+   "a": "FTG:SH10:F13@128842,39748:6b1a4d",
+   "b": "FTG:SH10:F3@129492,37298:38c592",
+   "neat_overlap_m2": 0.0,
+   "w_star_m": 0.325,
+   "footing_overlap_m2": 0.0
+  },
+  {
+   "a": "FTG:SH10:F12@131342,43598:67454a",
+   "b": "FTG:SH10:F6@133592,40098:33adbb",
+   "neat_overlap_m2": 0.0,
+   "w_star_m": 0.35,
+   "footing_overlap_m2": 0.0
+  },
+  {
+   "a": "FTG:SH10:F2@133842,48648:3919bf",
+   "b": "FTG:SH10:F2@136542,48648:277c2f",
+   "neat_overlap_m2": 0.0,
+   "w_star_m": 0.4,
+   "footing_overlap_m2": 0.0
+  },
+  {
+   "a": "FTG:SH10:F4@144012,48698:142c12",
+   "b": "FTG:SH10:FN@146262,46648:0e0098",
+   "neat_overlap_m2": 0.0,
+   "w_star_m": 0.425,
+   "footing_overlap_m2": 0.0
+  },
+  {
+   "a": "FTG:SH10:F4@148062,48723:ab0b66",
+   "b": "FTG:SH10:FN@146262,46648:0e0098",
+   "neat_overlap_m2": 0.0,
+   "w_star_m": 0.4375,
+   "footing_overlap_m2": 0.0
+  },
+  {
+   "a": "FTG:SH10:F12@131342,43598:67454a",
+   "b": "FTG:SH10:F13@128842,39748:6b1a4d",
+   "neat_overlap_m2": 0.0,
+   "w_star_m": 0.625,
+   "footing_overlap_m2": 0.0
+  },
+  {
+   "a": "FTG:SH10:F8@146912,42298:624706",
+   "b": "FTG:SH10:FN@149912,39848:cf72aa",
+   "neat_overlap_m2": 0.0,
+   "w_star_m": 0.625,
+   "footing_overlap_m2": 0.0
+  },
+  {
+   "a": "FTG:SH10:F4@144012,48698:142c12",
+   "b": "FTG:SH10:F5@140012,48648:f1403e",
+   "neat_overlap_m2": 0.0,
+   "w_star_m": 0.7,
+   "footing_overlap_m2": 0.0
+  },
+  {
+   "a": "FTG:SH10:F@119542,42348:878832",
+   "b": "FTG:SH10:F@121942,42498:0ce993",
+   "neat_overlap_m2": 0.0,
+   "w_star_m": 0.7,
+   "footing_overlap_m2": 0.0
+  },
+  {
+   "a": "FTG:SH10:F11@133817,36348:e37220",
+   "b": "FTG:SH10:F@131292,36348:767bc7",
+   "neat_overlap_m2": 0.0,
+   "w_star_m": 0.7125,
+   "footing_overlap_m2": 0.0
+  },
+  {
+   "a": "FTG:SH10:F5@140012,48648:f1403e",
+   "b": "FTG:SH10:F9@143262,44298:3192fb",
+   "neat_overlap_m2": 0.0,
+   "w_star_m": 0.725,
+   "footing_overlap_m2": 0.0
+  },
+  {
+   "a": "FTG:SH10:F14@140062,36348:73a8e9",
+   "b": "FTG:SH10:FN@141212,41323:8f5b19",
+   "neat_overlap_m2": 0.0,
+   "w_star_m": 0.7375,
+   "footing_overlap_m2": 0.0
+  },
+  {
+   "a": "FTG:SH10:F4@144012,48698:142c12",
+   "b": "FTG:SH10:F9@143262,44298:3192fb",
+   "neat_overlap_m2": 0.0,
+   "w_star_m": 0.75,
+   "footing_overlap_m2": 0.0
+  },
+  {
+   "a": "FTG:SH10:F4@148062,48723:ab0b66",
+   "b": "FTG:SH10:F9@143262,44298:3192fb",
+   "neat_overlap_m2": 0.0,
+   "w_star_m": 0.7625,
+   "footing_overlap_m2": 0.0
+  },
+  {
+   "a": "FTG:SH10:F2@136542,48648:277c2f",
+   "b": "FTG:SH10:F5@140012,48648:f1403e",
+   "neat_overlap_m2": 0.0,
+   "w_star_m": 0.785,
+   "footing_overlap_m2": 0.0
+  },
+  {
+   "a": "FTG:SH10:F12@131342,43598:67454a",
+   "b": "FTG:SH10:F2@133842,48648:3919bf",
+   "neat_overlap_m2": 0.0,
+   "w_star_m": 0.825,
+   "footing_overlap_m2": 0.0
+  },
+  {
+   "a": "FTG:SH10:F12@131342,43598:67454a",
+   "b": "FTG:SH10:F2@136542,48648:277c2f",
+   "neat_overlap_m2": 0.0,
+   "w_star_m": 0.825,
+   "footing_overlap_m2": 0.0
+  },
+  {
+   "a": "FTG:SH10:F4@144012,48698:142c12",
+   "b": "FTG:SH10:F4@148062,48723:ab0b66",
+   "neat_overlap_m2": 0.0,
+   "w_star_m": 0.825,
+   "footing_overlap_m2": 0.0
+  },
+  {
+   "a": "FTG:SH10:F14@140062,36348:73a8e9",
+   "b": "FTG:SH10:FN@145737,41323:b61882",
+   "neat_overlap_m2": 0.0,
+   "w_star_m": 0.8375,
+   "footing_overlap_m2": 0.0
+  },
+  {
+   "a": "FTG:SH10:F11@133817,36348:e37220",
+   "b": "FTG:SH10:F13@128842,39748:6b1a4d",
+   "neat_overlap_m2": 0.0,
+   "w_star_m": 0.85,
+   "footing_overlap_m2": 0.0
+  },
+  {
+   "a": "FTG:SH10:F9@143262,44298:3192fb",
+   "b": "FTG:SH10:FN@141212,41323:8f5b19",
+   "neat_overlap_m2": 0.0,
+   "w_star_m": 0.8875,
+   "footing_overlap_m2": 0.0
+  },
+  {
+   "a": "FTG:SH10:F9@143262,44298:3192fb",
+   "b": "FTG:SH10:FN@145737,41323:b61882",
+   "neat_overlap_m2": 0.0,
+   "w_star_m": 0.8875,
+   "footing_overlap_m2": 0.0
+  }
+ ],
+ "excavation_m3": {
+  "DRAWING-CONFIRMED": null,
+  "lines": 0,
+  "HELD_lines": 87
+ },
+ "backfill_m3": {
+  "DRAWING-CONFIRMED": null,
+  "lines": 0,
+  "HELD_lines": 87
+ },
+ "per_type_chain": {
+  "F11": {
+   "blinding_top": 0.1,
+   "footing_bottom": 0.17,
+   "footing_top": 0.67
+  },
+  "F12": {
+   "blinding_top": 0.1,
+   "footing_bottom": 0.17,
+   "footing_top": 0.87
+  },
+  "F13": {
+   "blinding_top": 0.1,
+   "footing_bottom": 0.17,
+   "footing_top": 0.67
+  },
+  "F14": {
+   "blinding_top": 0.1,
+   "footing_bottom": 0.17,
+   "footing_top": 0.67
+  },
+  "F15": {
+   "blinding_top": 0.1,
+   "footing_bottom": 0.17,
+   "footing_top": 0.57
+  },
+  "F2": {
+   "blinding_top": 0.1,
+   "footing_bottom": 0.17,
+   "footing_top": 0.52
+  },
+  "F3": {
+   "blinding_top": 0.1,
+   "footing_bottom": 0.17,
+   "footing_top": 0.47
+  },
+  "F4": {
+   "blinding_top": 0.1,
+   "footing_bottom": 0.17,
+   "footing_top": 0.57
+  },
+  "F5": {
+   "blinding_top": 0.1,
+   "footing_bottom": 0.17,
+   "footing_top": 0.57
+  },
+  "F6": {
+   "blinding_top": 0.1,
+   "footing_bottom": 0.17,
+   "footing_top": 0.67
+  },
+  "F8": {
+   "blinding_top": 0.1,
+   "footing_bottom": 0.17,
+   "footing_top": 0.67
+  },
+  "F9": {
+   "blinding_top": 0.1,
+   "footing_bottom": 0.17,
+   "footing_top": 0.72
+  },
+  "F": {
+   "blinding_top": 0.1,
+   "footing_bottom": 0.17,
+   "footing_top": 0.47
+  },
+  "FF": {
+   "blinding_top": 0.1,
+   "footing_bottom": null,
+   "footing_top": null
+  },
+  "FN": {
+   "blinding_top": 0.1,
+   "footing_bottom": 0.17,
+   "footing_top": 0.47
+  },
+  "F10/F": {
+   "blinding_top": 0.1,
+   "footing_bottom": 0.17,
+   "footing_top": null
+  }
+ },
+ "pits": [
+  {
+   "id": "FTG:SH10:F11@133817,36348:e37220",
+   "kind": "PIT",
+   "type": "F11",
+   "outline": "1B07",
+   "footprint_m2": 5.25,
+   "neat_plan_m2": 6.29,
+   "neat_status": "DRAWING-CONFIRMED",
+   "working_space_plan_m2": null,
+   "above_formation_m": {
+    "blinding_top": 0.1,
+    "footing_bottom": 0.17,
+    "footing_top": 0.67
+   },
+   "absolute_m": {
+    "blinding_top": null,
+    "footing_bottom": null,
+    "footing_top": null
+   },
+   "depth_m": null,
+   "existing_ground_mean_m": 0.0,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "WORKING_SPACE_M_NOT_PRINTED; FORMATION_ONLY_A_BOUND (AT_MOST -1.5)",
+   "m3_per_m_depth_neat": 6.29,
+   "buried": {
+    "blinding_m3": 0.629,
+    "underlay_m3": 0.3675,
+    "footing_m3": 2.625,
+    "neck_m3": null
+   },
+   "backfill_m3": null,
+   "backfill_status": "HELD",
+   "backfill_why": "WORKING_SPACE_M_NOT_PRINTED; FORMATION_ONLY_A_BOUND (AT_MOST -1.5); NECK_VOLUME_HELD (neck ends: T-205 R-NECK-ENDS-1); GROUND_BEAM_PART_IN_PIT_HELD",
+   "held": []
+  },
+  {
+   "id": "FTG:SH10:F12@131342,43598:67454a",
+   "kind": "PIT",
+   "type": "F12",
+   "outline": "1ABF",
+   "footprint_m2": 14.08,
+   "neat_plan_m2": 15.64,
+   "neat_status": "DRAWING-CONFIRMED",
+   "working_space_plan_m2": null,
+   "above_formation_m": {
+    "blinding_top": 0.1,
+    "footing_bottom": 0.17,
+    "footing_top": 0.87
+   },
+   "absolute_m": {
+    "blinding_top": null,
+    "footing_bottom": null,
+    "footing_top": null
+   },
+   "depth_m": null,
+   "existing_ground_mean_m": 0.0,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "WORKING_SPACE_M_NOT_PRINTED; FORMATION_ONLY_A_BOUND (AT_MOST -1.5)",
+   "m3_per_m_depth_neat": 15.64,
+   "buried": {
+    "blinding_m3": 1.564,
+    "underlay_m3": 0.9856,
+    "footing_m3": 9.856,
+    "neck_m3": null
+   },
+   "backfill_m3": null,
+   "backfill_status": "HELD",
+   "backfill_why": "WORKING_SPACE_M_NOT_PRINTED; FORMATION_ONLY_A_BOUND (AT_MOST -1.5); NECK_VOLUME_HELD (neck ends: T-205 R-NECK-ENDS-1); GROUND_BEAM_PART_IN_PIT_HELD",
+   "held": []
+  },
+  {
+   "id": "FTG:SH10:F13@128842,39748:6b1a4d",
+   "kind": "PIT",
+   "type": "F13",
+   "outline": "1ADB",
+   "footprint_m2": 10.32,
+   "neat_plan_m2": 11.7,
+   "neat_status": "DRAWING-CONFIRMED",
+   "working_space_plan_m2": null,
+   "above_formation_m": {
+    "blinding_top": 0.1,
+    "footing_bottom": 0.17,
+    "footing_top": 0.67
+   },
+   "absolute_m": {
+    "blinding_top": null,
+    "footing_bottom": null,
+    "footing_top": null
+   },
+   "depth_m": null,
+   "existing_ground_mean_m": 0.0,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "WORKING_SPACE_M_NOT_PRINTED; FORMATION_ONLY_A_BOUND (AT_MOST -1.5)",
+   "m3_per_m_depth_neat": 11.7,
+   "buried": {
+    "blinding_m3": 1.17,
+    "underlay_m3": 0.7224,
+    "footing_m3": 5.16,
+    "neck_m3": null
+   },
+   "backfill_m3": null,
+   "backfill_status": "HELD",
+   "backfill_why": "WORKING_SPACE_M_NOT_PRINTED; FORMATION_ONLY_A_BOUND (AT_MOST -1.5); NECK_VOLUME_HELD (neck ends: T-205 R-NECK-ENDS-1); GROUND_BEAM_PART_IN_PIT_HELD",
+   "held": []
+  },
+  {
+   "id": "FTG:SH10:F14@140062,36348:73a8e9",
+   "kind": "PIT",
+   "type": "F14",
+   "outline": "1B1A",
+   "footprint_m2": 12.54,
+   "neat_plan_m2": 14.0,
+   "neat_status": "DRAWING-CONFIRMED",
+   "working_space_plan_m2": null,
+   "above_formation_m": {
+    "blinding_top": 0.1,
+    "footing_bottom": 0.17,
+    "footing_top": 0.67
+   },
+   "absolute_m": {
+    "blinding_top": null,
+    "footing_bottom": null,
+    "footing_top": null
+   },
+   "depth_m": null,
+   "existing_ground_mean_m": 0.0,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "WORKING_SPACE_M_NOT_PRINTED; FORMATION_ONLY_A_BOUND (AT_MOST -1.5)",
+   "m3_per_m_depth_neat": 14.0,
+   "buried": {
+    "blinding_m3": 1.4,
+    "underlay_m3": 0.8778,
+    "footing_m3": 6.27,
+    "neck_m3": null
+   },
+   "backfill_m3": null,
+   "backfill_status": "HELD",
+   "backfill_why": "WORKING_SPACE_M_NOT_PRINTED; FORMATION_ONLY_A_BOUND (AT_MOST -1.5); NECK_VOLUME_HELD (neck ends: T-205 R-NECK-ENDS-1); GROUND_BEAM_PART_IN_PIT_HELD",
+   "held": []
+  },
+  {
+   "id": "FTG:SH10:F15@124742,36348:932498",
+   "kind": "PIT",
+   "type": "F15",
+   "outline": "1B2A",
+   "footprint_m2": 1.8,
+   "neat_plan_m2": 2.4,
+   "neat_status": "DRAWING-CONFIRMED",
+   "working_space_plan_m2": null,
+   "above_formation_m": {
+    "blinding_top": 0.1,
+    "footing_bottom": 0.17,
+    "footing_top": 0.57
+   },
+   "absolute_m": {
+    "blinding_top": null,
+    "footing_bottom": null,
+    "footing_top": null
+   },
+   "depth_m": null,
+   "existing_ground_mean_m": 0.0,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "WORKING_SPACE_M_NOT_PRINTED; FORMATION_ONLY_A_BOUND (AT_MOST -1.5)",
+   "m3_per_m_depth_neat": 2.4,
+   "buried": {
+    "blinding_m3": 0.24,
+    "underlay_m3": 0.126,
+    "footing_m3": 0.72,
+    "neck_m3": null
+   },
+   "backfill_m3": null,
+   "backfill_status": "HELD",
+   "backfill_why": "WORKING_SPACE_M_NOT_PRINTED; FORMATION_ONLY_A_BOUND (AT_MOST -1.5); NECK_VOLUME_HELD (neck ends: T-205 R-NECK-ENDS-1); GROUND_BEAM_PART_IN_PIT_HELD",
+   "held": []
+  },
+  {
+   "id": "FTG:SH10:F2@133842,48648:3919bf",
+   "kind": "PIT",
+   "type": "F2",
+   "outline": "INSERT 165C F layer S-DIM",
+   "footprint_m2": 3.23,
+   "neat_plan_m2": 3.99,
+   "neat_status": "DRAWING-CONFIRMED",
+   "working_space_plan_m2": null,
+   "above_formation_m": {
+    "blinding_top": 0.1,
+    "footing_bottom": 0.17,
+    "footing_top": 0.52
+   },
+   "absolute_m": {
+    "blinding_top": null,
+    "footing_bottom": null,
+    "footing_top": null
+   },
+   "depth_m": null,
+   "existing_ground_mean_m": 0.0,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "WORKING_SPACE_M_NOT_PRINTED; FORMATION_ONLY_A_BOUND (AT_MOST -1.5)",
+   "m3_per_m_depth_neat": 3.99,
+   "buried": {
+    "blinding_m3": 0.399,
+    "underlay_m3": 0.2261,
+    "footing_m3": 1.1305,
+    "neck_m3": null
+   },
+   "backfill_m3": null,
+   "backfill_status": "HELD",
+   "backfill_why": "WORKING_SPACE_M_NOT_PRINTED; FORMATION_ONLY_A_BOUND (AT_MOST -1.5); NECK_VOLUME_HELD (neck ends: T-205 R-NECK-ENDS-1); GROUND_BEAM_PART_IN_PIT_HELD",
+   "held": []
+  },
+  {
+   "id": "FTG:SH10:F2@136542,48648:277c2f",
+   "kind": "PIT",
+   "type": "F2",
+   "outline": "INSERT 1663 F layer S-DIM",
+   "footprint_m2": 3.23,
+   "neat_plan_m2": 3.99,
+   "neat_status": "DRAWING-CONFIRMED",
+   "working_space_plan_m2": null,
+   "above_formation_m": {
+    "blinding_top": 0.1,
+    "footing_bottom": 0.17,
+    "footing_top": 0.52
+   },
+   "absolute_m": {
+    "blinding_top": null,
+    "footing_bottom": null,
+    "footing_top": null
+   },
+   "depth_m": null,
+   "existing_ground_mean_m": 0.0,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "WORKING_SPACE_M_NOT_PRINTED; FORMATION_ONLY_A_BOUND (AT_MOST -1.5)",
+   "m3_per_m_depth_neat": 3.99,
+   "buried": {
+    "blinding_m3": 0.399,
+    "underlay_m3": 0.2261,
+    "footing_m3": 1.1305,
+    "neck_m3": null
+   },
+   "backfill_m3": null,
+   "backfill_status": "HELD",
+   "backfill_why": "WORKING_SPACE_M_NOT_PRINTED; FORMATION_ONLY_A_BOUND (AT_MOST -1.5); NECK_VOLUME_HELD (neck ends: T-205 R-NECK-ENDS-1); GROUND_BEAM_PART_IN_PIT_HELD",
+   "held": []
+  },
+  {
+   "id": "FTG:SH10:F3@123192,40398:b6c1c9",
+   "kind": "PIT",
+   "type": "F3",
+   "outline": "INSERT 166B F layer S-DIM",
+   "footprint_m2": 2.24,
+   "neat_plan_m2": 2.88,
+   "neat_status": "DRAWING-CONFIRMED",
+   "working_space_plan_m2": null,
+   "above_formation_m": {
+    "blinding_top": 0.1,
+    "footing_bottom": 0.17,
+    "footing_top": 0.47
+   },
+   "absolute_m": {
+    "blinding_top": null,
+    "footing_bottom": null,
+    "footing_top": null
+   },
+   "depth_m": null,
+   "existing_ground_mean_m": 0.0,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "WORKING_SPACE_M_NOT_PRINTED; FORMATION_ONLY_A_BOUND (AT_MOST -1.5)",
+   "m3_per_m_depth_neat": 2.88,
+   "buried": {
+    "blinding_m3": 0.288,
+    "underlay_m3": 0.1568,
+    "footing_m3": 0.672,
+    "neck_m3": null
+   },
+   "backfill_m3": null,
+   "backfill_status": "HELD",
+   "backfill_why": "WORKING_SPACE_M_NOT_PRINTED; FORMATION_ONLY_A_BOUND (AT_MOST -1.5); NECK_VOLUME_HELD (neck ends: T-205 R-NECK-ENDS-1); GROUND_BEAM_PART_IN_PIT_HELD",
+   "held": []
+  },
+  {
+   "id": "FTG:SH10:F3@129492,37298:38c592",
+   "kind": "PIT",
+   "type": "F3",
+   "outline": "INSERT 166C F layer S-DIM",
+   "footprint_m2": 2.24,
+   "neat_plan_m2": 2.88,
+   "neat_status": "DRAWING-CONFIRMED",
+   "working_space_plan_m2": null,
+   "above_formation_m": {
+    "blinding_top": 0.1,
+    "footing_bottom": 0.17,
+    "footing_top": 0.47
+   },
+   "absolute_m": {
+    "blinding_top": null,
+    "footing_bottom": null,
+    "footing_top": null
+   },
+   "depth_m": null,
+   "existing_ground_mean_m": 0.0,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "WORKING_SPACE_M_NOT_PRINTED; FORMATION_ONLY_A_BOUND (AT_MOST -1.5)",
+   "m3_per_m_depth_neat": 2.88,
+   "buried": {
+    "blinding_m3": 0.288,
+    "underlay_m3": 0.1568,
+    "footing_m3": 0.672,
+    "neck_m3": null
+   },
+   "backfill_m3": null,
+   "backfill_status": "HELD",
+   "backfill_why": "WORKING_SPACE_M_NOT_PRINTED; FORMATION_ONLY_A_BOUND (AT_MOST -1.5); NECK_VOLUME_HELD (neck ends: T-205 R-NECK-ENDS-1); GROUND_BEAM_PART_IN_PIT_HELD",
+   "held": []
+  },
+  {
+   "id": "FTG:SH10:F4@144012,48698:142c12",
+   "kind": "PIT",
+   "type": "F4",
+   "outline": "INSERT 1665 F layer S-DIM",
+   "footprint_m2": 4.4,
+   "neat_plan_m2": 5.28,
+   "neat_status": "DRAWING-CONFIRMED",
+   "working_space_plan_m2": null,
+   "above_formation_m": {
+    "blinding_top": 0.1,
+    "footing_bottom": 0.17,
+    "footing_top": 0.57
+   },
+   "absolute_m": {
+    "blinding_top": null,
+    "footing_bottom": null,
+    "footing_top": null
+   },
+   "depth_m": null,
+   "existing_ground_mean_m": 0.0,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "WORKING_SPACE_M_NOT_PRINTED; FORMATION_ONLY_A_BOUND (AT_MOST -1.5)",
+   "m3_per_m_depth_neat": 5.28,
+   "buried": {
+    "blinding_m3": 0.528,
+    "underlay_m3": 0.308,
+    "footing_m3": 1.76,
+    "neck_m3": null
+   },
+   "backfill_m3": null,
+   "backfill_status": "HELD",
+   "backfill_why": "WORKING_SPACE_M_NOT_PRINTED; FORMATION_ONLY_A_BOUND (AT_MOST -1.5); NECK_VOLUME_HELD (neck ends: T-205 R-NECK-ENDS-1); GROUND_BEAM_PART_IN_PIT_HELD",
+   "held": []
+  },
+  {
+   "id": "FTG:SH10:F4@148062,48723:ab0b66",
+   "kind": "PIT",
+   "type": "F4",
+   "outline": "INSERT 1666 F layer S-DIM",
+   "footprint_m2": 4.4,
+   "neat_plan_m2": 5.28,
+   "neat_status": "DRAWING-CONFIRMED",
+   "working_space_plan_m2": null,
+   "above_formation_m": {
+    "blinding_top": 0.1,
+    "footing_bottom": 0.17,
+    "footing_top": 0.57
+   },
+   "absolute_m": {
+    "blinding_top": null,
+    "footing_bottom": null,
+    "footing_top": null
+   },
+   "depth_m": null,
+   "existing_ground_mean_m": 0.0,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "WORKING_SPACE_M_NOT_PRINTED; FORMATION_ONLY_A_BOUND (AT_MOST -1.5)",
+   "m3_per_m_depth_neat": 5.28,
+   "buried": {
+    "blinding_m3": 0.528,
+    "underlay_m3": 0.308,
+    "footing_m3": 1.76,
+    "neck_m3": null
+   },
+   "backfill_m3": null,
+   "backfill_status": "HELD",
+   "backfill_why": "WORKING_SPACE_M_NOT_PRINTED; FORMATION_ONLY_A_BOUND (AT_MOST -1.5); NECK_VOLUME_HELD (neck ends: T-205 R-NECK-ENDS-1); GROUND_BEAM_PART_IN_PIT_HELD",
+   "held": []
+  },
+  {
+   "id": "FTG:SH10:F5@140012,48648:f1403e",
+   "kind": "PIT",
+   "type": "F5",
+   "outline": "INSERT 1664 F layer S-DIM",
+   "footprint_m2": 5.04,
+   "neat_plan_m2": 5.98,
+   "neat_status": "DRAWING-CONFIRMED",
+   "working_space_plan_m2": null,
+   "above_formation_m": {
+    "blinding_top": 0.1,
+    "footing_bottom": 0.17,
+    "footing_top": 0.57
+   },
+   "absolute_m": {
+    "blinding_top": null,
+    "footing_bottom": null,
+    "footing_top": null
+   },
+   "depth_m": null,
+   "existing_ground_mean_m": 0.0,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "WORKING_SPACE_M_NOT_PRINTED; FORMATION_ONLY_A_BOUND (AT_MOST -1.5)",
+   "m3_per_m_depth_neat": 5.98,
+   "buried": {
+    "blinding_m3": 0.598,
+    "underlay_m3": 0.3528,
+    "footing_m3": 2.016,
+    "neck_m3": null
+   },
+   "backfill_m3": null,
+   "backfill_status": "HELD",
+   "backfill_why": "WORKING_SPACE_M_NOT_PRINTED; FORMATION_ONLY_A_BOUND (AT_MOST -1.5); NECK_VOLUME_HELD (neck ends: T-205 R-NECK-ENDS-1); GROUND_BEAM_PART_IN_PIT_HELD",
+   "held": []
+  },
+  {
+   "id": "FTG:SH10:F5@144112,36948:04f491",
+   "kind": "PIT",
+   "type": "F5",
+   "outline": "INSERT 166D F layer S-DIM",
+   "footprint_m2": 5.04,
+   "neat_plan_m2": 5.98,
+   "neat_status": "DRAWING-CONFIRMED",
+   "working_space_plan_m2": null,
+   "above_formation_m": {
+    "blinding_top": 0.1,
+    "footing_bottom": 0.17,
+    "footing_top": 0.57
+   },
+   "absolute_m": {
+    "blinding_top": null,
+    "footing_bottom": null,
+    "footing_top": null
+   },
+   "depth_m": null,
+   "existing_ground_mean_m": 0.0,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "WORKING_SPACE_M_NOT_PRINTED; FORMATION_ONLY_A_BOUND (AT_MOST -1.5)",
+   "m3_per_m_depth_neat": 5.98,
+   "buried": {
+    "blinding_m3": 0.598,
+    "underlay_m3": 0.3528,
+    "footing_m3": 2.016,
+    "neck_m3": null
+   },
+   "backfill_m3": null,
+   "backfill_status": "HELD",
+   "backfill_why": "WORKING_SPACE_M_NOT_PRINTED; FORMATION_ONLY_A_BOUND (AT_MOST -1.5); NECK_VOLUME_HELD (neck ends: T-205 R-NECK-ENDS-1); GROUND_BEAM_PART_IN_PIT_HELD",
+   "held": []
+  },
+  {
+   "id": "FTG:SH10:F6@133592,40098:33adbb",
+   "kind": "PIT",
+   "type": "F6",
+   "outline": "1B19",
+   "footprint_m2": 5.72,
+   "neat_plan_m2": 6.72,
+   "neat_status": "DRAWING-CONFIRMED",
+   "working_space_plan_m2": null,
+   "above_formation_m": {
+    "blinding_top": 0.1,
+    "footing_bottom": 0.17,
+    "footing_top": 0.67
+   },
+   "absolute_m": {
+    "blinding_top": null,
+    "footing_bottom": null,
+    "footing_top": null
+   },
+   "depth_m": null,
+   "existing_ground_mean_m": 0.0,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "WORKING_SPACE_M_NOT_PRINTED; FORMATION_ONLY_A_BOUND (AT_MOST -1.5)",
+   "m3_per_m_depth_neat": 6.72,
+   "buried": {
+    "blinding_m3": 0.672,
+    "underlay_m3": 0.4004,
+    "footing_m3": 2.86,
+    "neck_m3": null
+   },
+   "backfill_m3": null,
+   "backfill_status": "HELD",
+   "backfill_why": "WORKING_SPACE_M_NOT_PRINTED; FORMATION_ONLY_A_BOUND (AT_MOST -1.5); NECK_VOLUME_HELD (neck ends: T-205 R-NECK-ENDS-1); GROUND_BEAM_PART_IN_PIT_HELD",
+   "held": []
+  },
+  {
+   "id": "FTG:SH10:F8@146912,42298:624706",
+   "kind": "PIT",
+   "type": "F8",
+   "outline": "1B24",
+   "footprint_m2": 14.4,
+   "neat_plan_m2": 15.96,
+   "neat_status": "DRAWING-CONFIRMED",
+   "working_space_plan_m2": null,
+   "above_formation_m": {
+    "blinding_top": 0.1,
+    "footing_bottom": 0.17,
+    "footing_top": 0.67
+   },
+   "absolute_m": {
+    "blinding_top": null,
+    "footing_bottom": null,
+    "footing_top": null
+   },
+   "depth_m": null,
+   "existing_ground_mean_m": 0.0,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "WORKING_SPACE_M_NOT_PRINTED; FORMATION_ONLY_A_BOUND (AT_MOST -1.5)",
+   "m3_per_m_depth_neat": 15.96,
+   "buried": {
+    "blinding_m3": 1.596,
+    "underlay_m3": 1.008,
+    "footing_m3": 7.2,
+    "neck_m3": null
+   },
+   "backfill_m3": null,
+   "backfill_status": "HELD",
+   "backfill_why": "WORKING_SPACE_M_NOT_PRINTED; FORMATION_ONLY_A_BOUND (AT_MOST -1.5); NECK_VOLUME_HELD (neck ends: T-205 R-NECK-ENDS-1); GROUND_BEAM_PART_IN_PIT_HELD",
+   "held": []
+  },
+  {
+   "id": "FTG:SH10:F9@143262,44298:3192fb",
+   "kind": "PIT",
+   "type": "F9",
+   "outline": "180F",
+   "footprint_m2": 9.18,
+   "neat_plan_m2": 10.44,
+   "neat_status": "DRAWING-CONFIRMED",
+   "working_space_plan_m2": null,
+   "above_formation_m": {
+    "blinding_top": 0.1,
+    "footing_bottom": 0.17,
+    "footing_top": 0.72
+   },
+   "absolute_m": {
+    "blinding_top": null,
+    "footing_bottom": null,
+    "footing_top": null
+   },
+   "depth_m": null,
+   "existing_ground_mean_m": 0.0,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "WORKING_SPACE_M_NOT_PRINTED; FORMATION_ONLY_A_BOUND (AT_MOST -1.5)",
+   "m3_per_m_depth_neat": 10.44,
+   "buried": {
+    "blinding_m3": 1.044,
+    "underlay_m3": 0.6426,
+    "footing_m3": 5.049,
+    "neck_m3": null
+   },
+   "backfill_m3": null,
+   "backfill_status": "HELD",
+   "backfill_why": "WORKING_SPACE_M_NOT_PRINTED; FORMATION_ONLY_A_BOUND (AT_MOST -1.5); NECK_VOLUME_HELD (neck ends: T-205 R-NECK-ENDS-1); GROUND_BEAM_PART_IN_PIT_HELD",
+   "held": []
+  },
+  {
+   "id": "FTG:SH10:F@119542,36348:88b429",
+   "kind": "PIT",
+   "type": "F",
+   "outline": "INSERT 1669 F layer S-DIM",
+   "footprint_m2": 0.72,
+   "neat_plan_m2": 1.1,
+   "neat_status": "DRAWING-CONFIRMED",
+   "working_space_plan_m2": null,
+   "above_formation_m": {
+    "blinding_top": 0.1,
+    "footing_bottom": 0.17,
+    "footing_top": 0.47
+   },
+   "absolute_m": {
+    "blinding_top": null,
+    "footing_bottom": null,
+    "footing_top": null
+   },
+   "depth_m": null,
+   "existing_ground_mean_m": 0.0,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "WORKING_SPACE_M_NOT_PRINTED; FORMATION_ONLY_A_BOUND (AT_MOST -1.5)",
+   "m3_per_m_depth_neat": 1.1,
+   "buried": {
+    "blinding_m3": 0.11,
+    "underlay_m3": 0.0504,
+    "footing_m3": 0.216,
+    "neck_m3": null
+   },
+   "backfill_m3": null,
+   "backfill_status": "HELD",
+   "backfill_why": "WORKING_SPACE_M_NOT_PRINTED; FORMATION_ONLY_A_BOUND (AT_MOST -1.5); NECK_VOLUME_HELD (neck ends: T-205 R-NECK-ENDS-1); GROUND_BEAM_PART_IN_PIT_HELD",
+   "held": []
+  },
+  {
+   "id": "FTG:SH10:F@119542,42348:878832",
+   "kind": "PIT",
+   "type": "F",
+   "outline": "INSERT 1668 F layer S-DIM",
+   "footprint_m2": 0.72,
+   "neat_plan_m2": 1.1,
+   "neat_status": "DRAWING-CONFIRMED",
+   "working_space_plan_m2": null,
+   "above_formation_m": {
+    "blinding_top": 0.1,
+    "footing_bottom": 0.17,
+    "footing_top": 0.47
+   },
+   "absolute_m": {
+    "blinding_top": null,
+    "footing_bottom": null,
+    "footing_top": null
+   },
+   "depth_m": null,
+   "existing_ground_mean_m": 0.0,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "WORKING_SPACE_M_NOT_PRINTED; FORMATION_ONLY_A_BOUND (AT_MOST -1.5)",
+   "m3_per_m_depth_neat": 1.1,
+   "buried": {
+    "blinding_m3": 0.11,
+    "underlay_m3": 0.0504,
+    "footing_m3": 0.216,
+    "neck_m3": null
+   },
+   "backfill_m3": null,
+   "backfill_status": "HELD",
+   "backfill_why": "WORKING_SPACE_M_NOT_PRINTED; FORMATION_ONLY_A_BOUND (AT_MOST -1.5); NECK_VOLUME_HELD (neck ends: T-205 R-NECK-ENDS-1); GROUND_BEAM_PART_IN_PIT_HELD",
+   "held": []
+  },
+  {
+   "id": "FTG:SH10:F@121942,42498:0ce993",
+   "kind": "PIT",
+   "type": "F",
+   "outline": "INSERT 1667 F layer S-DIM",
+   "footprint_m2": 0.72,
+   "neat_plan_m2": 1.1,
+   "neat_status": "DRAWING-CONFIRMED",
+   "working_space_plan_m2": null,
+   "above_formation_m": {
+    "blinding_top": 0.1,
+    "footing_bottom": 0.17,
+    "footing_top": 0.47
+   },
+   "absolute_m": {
+    "blinding_top": null,
+    "footing_bottom": null,
+    "footing_top": null
+   },
+   "depth_m": null,
+   "existing_ground_mean_m": 0.0,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "WORKING_SPACE_M_NOT_PRINTED; FORMATION_ONLY_A_BOUND (AT_MOST -1.5)",
+   "m3_per_m_depth_neat": 1.1,
+   "buried": {
+    "blinding_m3": 0.11,
+    "underlay_m3": 0.0504,
+    "footing_m3": 0.216,
+    "neck_m3": null
+   },
+   "backfill_m3": null,
+   "backfill_status": "HELD",
+   "backfill_why": "WORKING_SPACE_M_NOT_PRINTED; FORMATION_ONLY_A_BOUND (AT_MOST -1.5); NECK_VOLUME_HELD (neck ends: T-205 R-NECK-ENDS-1); GROUND_BEAM_PART_IN_PIT_HELD",
+   "held": []
+  },
+  {
+   "id": "FTG:SH10:F@131292,36348:767bc7",
+   "kind": "PIT",
+   "type": "F",
+   "outline": "INSERT 166A F layer S-DIM",
+   "footprint_m2": 0.72,
+   "neat_plan_m2": 1.1,
+   "neat_status": "DRAWING-CONFIRMED",
+   "working_space_plan_m2": null,
+   "above_formation_m": {
+    "blinding_top": 0.1,
+    "footing_bottom": 0.17,
+    "footing_top": 0.47
+   },
+   "absolute_m": {
+    "blinding_top": null,
+    "footing_bottom": null,
+    "footing_top": null
+   },
+   "depth_m": null,
+   "existing_ground_mean_m": 0.0,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "WORKING_SPACE_M_NOT_PRINTED; FORMATION_ONLY_A_BOUND (AT_MOST -1.5)",
+   "m3_per_m_depth_neat": 1.1,
+   "buried": {
+    "blinding_m3": 0.11,
+    "underlay_m3": 0.0504,
+    "footing_m3": 0.216,
+    "neck_m3": null
+   },
+   "backfill_m3": null,
+   "backfill_status": "HELD",
+   "backfill_why": "WORKING_SPACE_M_NOT_PRINTED; FORMATION_ONLY_A_BOUND (AT_MOST -1.5); NECK_VOLUME_HELD (neck ends: T-205 R-NECK-ENDS-1); GROUND_BEAM_PART_IN_PIT_HELD",
+   "held": []
+  },
+  {
+   "id": "FTG:SH10:FF@136342,43148:8e679c",
+   "kind": "PIT",
+   "type": "FF",
+   "outline": "1B2B",
+   "footprint_m2": 20.7,
+   "neat_plan_m2": null,
+   "neat_status": "HELD",
+   "working_space_plan_m2": null,
+   "above_formation_m": {
+    "blinding_top": 0.1,
+    "footing_bottom": null,
+    "footing_top": null
+   },
+   "absolute_m": {
+    "blinding_top": null,
+    "footing_bottom": null,
+    "footing_top": null
+   },
+   "depth_m": null,
+   "existing_ground_mean_m": 0.0,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "NEAT_PLAN_HELD; WORKING_SPACE_M_NOT_PRINTED; FORMATION_ONLY_A_BOUND (AT_MOST -1.5)",
+   "m3_per_m_depth_neat": null,
+   "buried": {
+    "blinding_m3": null,
+    "underlay_m3": null,
+    "footing_m3": 11.385,
+    "neck_m3": null
+   },
+   "backfill_m3": null,
+   "backfill_status": "HELD",
+   "backfill_why": "NEAT_PLAN_HELD; WORKING_SPACE_M_NOT_PRINTED; FORMATION_ONLY_A_BOUND (AT_MOST -1.5); NECK_VOLUME_HELD (neck ends: T-205 R-NECK-ENDS-1); GROUND_BEAM_PART_IN_PIT_HELD",
+   "held": [
+    "UNDERLAY_NOT_PRINTED",
+    "BLINDING_PROJECTION_NOT_PRINTED"
+   ]
+  },
+  {
+   "id": "FTG:SH10:FN@141212,41323:8f5b19",
+   "kind": "PIT",
+   "type": "FN",
+   "outline": "4 LINEs 10F8",
+   "footprint_m2": 1.0,
+   "neat_plan_m2": 1.44,
+   "neat_status": "DRAWING-CONFIRMED",
+   "working_space_plan_m2": null,
+   "above_formation_m": {
+    "blinding_top": 0.1,
+    "footing_bottom": 0.17,
+    "footing_top": 0.47
+   },
+   "absolute_m": {
+    "blinding_top": null,
+    "footing_bottom": null,
+    "footing_top": null
+   },
+   "depth_m": null,
+   "existing_ground_mean_m": 0.0,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "WORKING_SPACE_M_NOT_PRINTED; FORMATION_ONLY_A_BOUND (AT_MOST -1.5)",
+   "m3_per_m_depth_neat": 1.44,
+   "buried": {
+    "blinding_m3": 0.144,
+    "underlay_m3": 0.07,
+    "footing_m3": 0.3,
+    "neck_m3": null
+   },
+   "backfill_m3": null,
+   "backfill_status": "HELD",
+   "backfill_why": "WORKING_SPACE_M_NOT_PRINTED; FORMATION_ONLY_A_BOUND (AT_MOST -1.5); NECK_VOLUME_HELD (neck ends: T-205 R-NECK-ENDS-1); GROUND_BEAM_PART_IN_PIT_HELD",
+   "held": []
+  },
+  {
+   "id": "FTG:SH10:FN@145737,41323:b61882",
+   "kind": "PIT",
+   "type": "FN",
+   "outline": "4 LINEs 10F0",
+   "footprint_m2": 1.0,
+   "neat_plan_m2": 1.44,
+   "neat_status": "DRAWING-CONFIRMED",
+   "working_space_plan_m2": null,
+   "above_formation_m": {
+    "blinding_top": 0.1,
+    "footing_bottom": 0.17,
+    "footing_top": 0.47
+   },
+   "absolute_m": {
+    "blinding_top": null,
+    "footing_bottom": null,
+    "footing_top": null
+   },
+   "depth_m": null,
+   "existing_ground_mean_m": 0.0,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "WORKING_SPACE_M_NOT_PRINTED; FORMATION_ONLY_A_BOUND (AT_MOST -1.5)",
+   "m3_per_m_depth_neat": 1.44,
+   "buried": {
+    "blinding_m3": 0.144,
+    "underlay_m3": 0.07,
+    "footing_m3": 0.3,
+    "neck_m3": null
+   },
+   "backfill_m3": null,
+   "backfill_status": "HELD",
+   "backfill_why": "WORKING_SPACE_M_NOT_PRINTED; FORMATION_ONLY_A_BOUND (AT_MOST -1.5); NECK_VOLUME_HELD (neck ends: T-205 R-NECK-ENDS-1); GROUND_BEAM_PART_IN_PIT_HELD",
+   "held": []
+  },
+  {
+   "id": "FTG:SH10:FN@146262,46648:0e0098",
+   "kind": "PIT",
+   "type": "FN",
+   "outline": "180C",
+   "footprint_m2": 1.0,
+   "neat_plan_m2": 1.44,
+   "neat_status": "DRAWING-CONFIRMED",
+   "working_space_plan_m2": null,
+   "above_formation_m": {
+    "blinding_top": 0.1,
+    "footing_bottom": 0.17,
+    "footing_top": 0.47
+   },
+   "absolute_m": {
+    "blinding_top": null,
+    "footing_bottom": null,
+    "footing_top": null
+   },
+   "depth_m": null,
+   "existing_ground_mean_m": 0.0,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "WORKING_SPACE_M_NOT_PRINTED; FORMATION_ONLY_A_BOUND (AT_MOST -1.5)",
+   "m3_per_m_depth_neat": 1.44,
+   "buried": {
+    "blinding_m3": 0.144,
+    "underlay_m3": 0.07,
+    "footing_m3": 0.3,
+    "neck_m3": null
+   },
+   "backfill_m3": null,
+   "backfill_status": "HELD",
+   "backfill_why": "WORKING_SPACE_M_NOT_PRINTED; FORMATION_ONLY_A_BOUND (AT_MOST -1.5); NECK_VOLUME_HELD (neck ends: T-205 R-NECK-ENDS-1); GROUND_BEAM_PART_IN_PIT_HELD",
+   "held": []
+  },
+  {
+   "id": "FTG:SH10:FN@149912,39848:cf72aa",
+   "kind": "PIT",
+   "type": "FN",
+   "outline": "4 LINEs 1100",
+   "footprint_m2": 1.0,
+   "neat_plan_m2": 1.44,
+   "neat_status": "DRAWING-CONFIRMED",
+   "working_space_plan_m2": null,
+   "above_formation_m": {
+    "blinding_top": 0.1,
+    "footing_bottom": 0.17,
+    "footing_top": 0.47
+   },
+   "absolute_m": {
+    "blinding_top": null,
+    "footing_bottom": null,
+    "footing_top": null
+   },
+   "depth_m": null,
+   "existing_ground_mean_m": 0.0,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "WORKING_SPACE_M_NOT_PRINTED; FORMATION_ONLY_A_BOUND (AT_MOST -1.5)",
+   "m3_per_m_depth_neat": 1.44,
+   "buried": {
+    "blinding_m3": 0.144,
+    "underlay_m3": 0.07,
+    "footing_m3": 0.3,
+    "neck_m3": null
+   },
+   "backfill_m3": null,
+   "backfill_status": "HELD",
+   "backfill_why": "WORKING_SPACE_M_NOT_PRINTED; FORMATION_ONLY_A_BOUND (AT_MOST -1.5); NECK_VOLUME_HELD (neck ends: T-205 R-NECK-ENDS-1); GROUND_BEAM_PART_IN_PIT_HELD",
+   "held": []
+  },
+  {
+   "id": "FTG:SH10:T652:10A5",
+   "kind": "PIT",
+   "type": "F10/F",
+   "outline": "1B1B (open LWPOLYLINE 3250 x 1400 at 147662.2, 36348.0; tags F10 + F)",
+   "footprint_m2": null,
+   "neat_plan_m2": null,
+   "neat_status": "HELD",
+   "working_space_plan_m2": null,
+   "above_formation_m": {
+    "blinding_top": 0.1,
+    "footing_bottom": 0.17,
+    "footing_top": null
+   },
+   "absolute_m": {
+    "blinding_top": null,
+    "footing_bottom": null,
+    "footing_top": null
+   },
+   "depth_m": null,
+   "existing_ground_mean_m": 0.0,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "NEAT_PLAN_HELD; WORKING_SPACE_M_NOT_PRINTED; FORMATION_ONLY_A_BOUND (AT_MOST -1.5)",
+   "m3_per_m_depth_neat": null,
+   "buried": {
+    "blinding_m3": null,
+    "underlay_m3": null,
+    "footing_m3": null,
+    "neck_m3": null
+   },
+   "backfill_m3": null,
+   "backfill_status": "HELD",
+   "backfill_why": "NEAT_PLAN_HELD; WORKING_SPACE_M_NOT_PRINTED; FORMATION_ONLY_A_BOUND (AT_MOST -1.5); NECK_VOLUME_HELD (neck ends: T-205 R-NECK-ENDS-1); GROUND_BEAM_PART_IN_PIT_HELD",
+   "held": [
+    "FOOTING_SIZE_NOT_PRINTED",
+    "FOOTING_CONFLICT: one open outline carries two footing tags F10 and F (Q-31 C designer item; element register 1B1B)"
+   ]
+  }
+ ],
+ "trenches": [
+  {
+   "id": "GROUND_BEAMS:FOUNDATION:BAND0002",
+   "kind": "STRAP",
+   "mark": "SB3",
+   "length_m": 3.272,
+   "width_m": 0.5,
+   "neat_plan_m2": null,
+   "neat_status": "HELD",
+   "depth_m": null,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "GB_TOP_NOT_PRINTED (FFL +1.00 minus an unprinted build-up; T-200 / T-206); BLINDING_THICKNESS_NOT_PRINTED; BLINDING_PROJECTION_NOT_PRINTED",
+   "held": [
+    "BLINDING_PROJECTION_NOT_PRINTED"
+   ]
+  },
+  {
+   "id": "GROUND_BEAMS:FOUNDATION:BAND0003",
+   "kind": "STRAP",
+   "mark": "SB1",
+   "length_m": 5.7001,
+   "width_m": 0.7,
+   "neat_plan_m2": null,
+   "neat_status": "HELD",
+   "depth_m": null,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "GB_TOP_NOT_PRINTED (FFL +1.00 minus an unprinted build-up; T-200 / T-206); BLINDING_THICKNESS_NOT_PRINTED; BLINDING_PROJECTION_NOT_PRINTED",
+   "held": [
+    "BLINDING_PROJECTION_NOT_PRINTED"
+   ]
+  },
+  {
+   "id": "GROUND_BEAMS:FOUNDATION:BAND0019",
+   "kind": "STRAP",
+   "mark": "SB2",
+   "length_m": 2.2631,
+   "width_m": 1.0,
+   "neat_plan_m2": null,
+   "neat_status": "HELD",
+   "depth_m": null,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "GB_TOP_NOT_PRINTED (FFL +1.00 minus an unprinted build-up; T-200 / T-206); BLINDING_THICKNESS_NOT_PRINTED; BLINDING_PROJECTION_NOT_PRINTED",
+   "held": [
+    "BLINDING_PROJECTION_NOT_PRINTED"
+   ]
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0001.1",
+   "kind": "TRENCH",
+   "mark": null,
+   "length_m": 2.4,
+   "width_m": 0.3,
+   "neat_plan_m2": 1.2,
+   "neat_status": "DRAWING-CONFIRMED",
+   "depth_m": null,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "GB_TOP_NOT_PRINTED (FFL +1.00 minus an unprinted build-up; T-200 / T-206); GB_DEPTH_NOT_ESTABLISHED (exterior-wall beam: depth 'FOLLOW ARCH.' (p.13), underside 'Outer Normal ground level' (a name))",
+   "held": []
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0001.2",
+   "kind": "TRENCH",
+   "mark": null,
+   "length_m": 3.37,
+   "width_m": 0.3,
+   "neat_plan_m2": 1.685,
+   "neat_status": "DRAWING-CONFIRMED",
+   "depth_m": null,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "GB_TOP_NOT_PRINTED (FFL +1.00 minus an unprinted build-up; T-200 / T-206); GB_DEPTH_NOT_ESTABLISHED (exterior-wall beam: depth 'FOLLOW ARCH.' (p.13), underside 'Outer Normal ground level' (a name))",
+   "held": []
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0001.3",
+   "kind": "TRENCH",
+   "mark": null,
+   "length_m": 3.35,
+   "width_m": 0.3,
+   "neat_plan_m2": 1.675,
+   "neat_status": "DRAWING-CONFIRMED",
+   "depth_m": null,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "GB_TOP_NOT_PRINTED (FFL +1.00 minus an unprinted build-up; T-200 / T-206); GB_DEPTH_NOT_ESTABLISHED (exterior-wall beam: depth 'FOLLOW ARCH.' (p.13), underside 'Outer Normal ground level' (a name))",
+   "held": []
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0001.4",
+   "kind": "TRENCH",
+   "mark": null,
+   "length_m": 3.25,
+   "width_m": 0.3,
+   "neat_plan_m2": 1.625,
+   "neat_status": "DRAWING-CONFIRMED",
+   "depth_m": null,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "GB_TOP_NOT_PRINTED (FFL +1.00 minus an unprinted build-up; T-200 / T-206); GB_DEPTH_NOT_ESTABLISHED (exterior-wall beam: depth 'FOLLOW ARCH.' (p.13), underside 'Outer Normal ground level' (a name))",
+   "held": []
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0002.1",
+   "kind": "TRENCH",
+   "mark": null,
+   "length_m": 0.6,
+   "width_m": 0.3,
+   "neat_plan_m2": 0.3,
+   "neat_status": "DRAWING-CONFIRMED",
+   "depth_m": null,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "GB_TOP_NOT_PRINTED (FFL +1.00 minus an unprinted build-up; T-200 / T-206); GB_DEPTH_NOT_ESTABLISHED (exterior-wall beam: depth 'FOLLOW ARCH.' (p.13), underside 'Outer Normal ground level' (a name))",
+   "held": []
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0003",
+   "kind": "TRENCH",
+   "mark": null,
+   "length_m": 2.9,
+   "width_m": 0.3,
+   "neat_plan_m2": 1.45,
+   "neat_status": "DRAWING-CONFIRMED",
+   "depth_m": null,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "GB_TOP_NOT_PRINTED (FFL +1.00 minus an unprinted build-up; T-200 / T-206); GB_DEPTH_NOT_ESTABLISHED (interior beam: p.13 class by span (0.60 over 5 m, 0.40 under 5 m, 0.30 under 2.5 m); the span of the whole beam this piece belongs to is not in the input)",
+   "held": []
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0004.1",
+   "kind": "TRENCH",
+   "mark": null,
+   "length_m": 4.3,
+   "width_m": 0.3,
+   "neat_plan_m2": 2.15,
+   "neat_status": "DRAWING-CONFIRMED",
+   "depth_m": null,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "GB_TOP_NOT_PRINTED (FFL +1.00 minus an unprinted build-up; T-200 / T-206); GB_DEPTH_NOT_ESTABLISHED (exterior-wall beam: depth 'FOLLOW ARCH.' (p.13), underside 'Outer Normal ground level' (a name))",
+   "held": []
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0005.1",
+   "kind": "TRENCH",
+   "mark": null,
+   "length_m": 1.9,
+   "width_m": 0.3,
+   "neat_plan_m2": 0.95,
+   "neat_status": "DRAWING-CONFIRMED",
+   "depth_m": null,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "GB_TOP_NOT_PRINTED (FFL +1.00 minus an unprinted build-up; T-200 / T-206); GB_DEPTH_NOT_ESTABLISHED (interior beam: p.13 class by span (0.60 over 5 m, 0.40 under 5 m, 0.30 under 2.5 m); the span of the whole beam this piece belongs to is not in the input)",
+   "held": []
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0006.1",
+   "kind": "TRENCH",
+   "mark": null,
+   "length_m": 4.4,
+   "width_m": 0.3,
+   "neat_plan_m2": 2.2,
+   "neat_status": "DRAWING-CONFIRMED",
+   "depth_m": null,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "GB_TOP_NOT_PRINTED (FFL +1.00 minus an unprinted build-up; T-200 / T-206); GB_DEPTH_NOT_ESTABLISHED (interior beam: p.13 class by span (0.60 over 5 m, 0.40 under 5 m, 0.30 under 2.5 m); the span of the whole beam this piece belongs to is not in the input)",
+   "held": []
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0006.2",
+   "kind": "TRENCH",
+   "mark": null,
+   "length_m": 4.4,
+   "width_m": 0.3,
+   "neat_plan_m2": 2.2,
+   "neat_status": "DRAWING-CONFIRMED",
+   "depth_m": null,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "GB_TOP_NOT_PRINTED (FFL +1.00 minus an unprinted build-up; T-200 / T-206); GB_DEPTH_NOT_ESTABLISHED (interior beam: p.13 class by span (0.60 over 5 m, 0.40 under 5 m, 0.30 under 2.5 m); the span of the whole beam this piece belongs to is not in the input)",
+   "held": []
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0006.3",
+   "kind": "TRENCH",
+   "mark": null,
+   "length_m": 2.7,
+   "width_m": 0.3,
+   "neat_plan_m2": 1.35,
+   "neat_status": "DRAWING-CONFIRMED",
+   "depth_m": null,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "GB_TOP_NOT_PRINTED (FFL +1.00 minus an unprinted build-up; T-200 / T-206); GB_DEPTH_NOT_ESTABLISHED (exterior-wall beam: depth 'FOLLOW ARCH.' (p.13), underside 'Outer Normal ground level' (a name))",
+   "held": []
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0007.1",
+   "kind": "TRENCH",
+   "mark": null,
+   "length_m": 2.4,
+   "width_m": 0.3,
+   "neat_plan_m2": 1.2,
+   "neat_status": "DRAWING-CONFIRMED",
+   "depth_m": null,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "GB_TOP_NOT_PRINTED (FFL +1.00 minus an unprinted build-up; T-200 / T-206); GB_DEPTH_NOT_ESTABLISHED (interior beam: p.13 class by span (0.60 over 5 m, 0.40 under 5 m, 0.30 under 2.5 m); the span of the whole beam this piece belongs to is not in the input)",
+   "held": []
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0008.1",
+   "kind": "TRENCH",
+   "mark": null,
+   "length_m": 5.02,
+   "width_m": 0.3,
+   "neat_plan_m2": 2.51,
+   "neat_status": "DRAWING-CONFIRMED",
+   "depth_m": null,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "GB_TOP_NOT_PRINTED (FFL +1.00 minus an unprinted build-up; T-200 / T-206); GB_DEPTH_NOT_ESTABLISHED (interior beam: p.13 class by span (0.60 over 5 m, 0.40 under 5 m, 0.30 under 2.5 m); the span of the whole beam this piece belongs to is not in the input)",
+   "held": []
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0008.2",
+   "kind": "TRENCH",
+   "mark": null,
+   "length_m": 1.5367,
+   "width_m": 0.3,
+   "neat_plan_m2": 0.76835,
+   "neat_status": "DRAWING-CONFIRMED",
+   "depth_m": null,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "GB_TOP_NOT_PRINTED (FFL +1.00 minus an unprinted build-up; T-200 / T-206); GB_DEPTH_NOT_ESTABLISHED (interior beam: p.13 class by span (0.60 over 5 m, 0.40 under 5 m, 0.30 under 2.5 m); the span of the whole beam this piece belongs to is not in the input)",
+   "held": []
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0009.1",
+   "kind": "TRENCH",
+   "mark": null,
+   "length_m": 0.39,
+   "width_m": 0.3,
+   "neat_plan_m2": 0.195,
+   "neat_status": "DRAWING-CONFIRMED",
+   "depth_m": null,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "GB_TOP_NOT_PRINTED (FFL +1.00 minus an unprinted build-up; T-200 / T-206); GB_DEPTH_NOT_ESTABLISHED (exterior-wall beam: depth 'FOLLOW ARCH.' (p.13), underside 'Outer Normal ground level' (a name))",
+   "held": []
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0010.1",
+   "kind": "TRENCH",
+   "mark": null,
+   "length_m": 3.02,
+   "width_m": 0.3,
+   "neat_plan_m2": 1.51,
+   "neat_status": "DRAWING-CONFIRMED",
+   "depth_m": null,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "GB_TOP_NOT_PRINTED (FFL +1.00 minus an unprinted build-up; T-200 / T-206); GB_DEPTH_NOT_ESTABLISHED (interior beam: p.13 class by span (0.60 over 5 m, 0.40 under 5 m, 0.30 under 2.5 m); the span of the whole beam this piece belongs to is not in the input)",
+   "held": []
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0010.2",
+   "kind": "TRENCH",
+   "mark": null,
+   "length_m": 2.65,
+   "width_m": 0.3,
+   "neat_plan_m2": 1.325,
+   "neat_status": "DRAWING-CONFIRMED",
+   "depth_m": null,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "GB_TOP_NOT_PRINTED (FFL +1.00 minus an unprinted build-up; T-200 / T-206); GB_DEPTH_NOT_ESTABLISHED (interior beam: p.13 class by span (0.60 over 5 m, 0.40 under 5 m, 0.30 under 2.5 m); the span of the whole beam this piece belongs to is not in the input)",
+   "held": []
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0010.3",
+   "kind": "TRENCH",
+   "mark": null,
+   "length_m": 5.0,
+   "width_m": 0.3,
+   "neat_plan_m2": 2.5,
+   "neat_status": "DRAWING-CONFIRMED",
+   "depth_m": null,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "GB_TOP_NOT_PRINTED (FFL +1.00 minus an unprinted build-up; T-200 / T-206); GB_DEPTH_NOT_ESTABLISHED (interior beam: p.13 class by span (0.60 over 5 m, 0.40 under 5 m, 0.30 under 2.5 m); the span of the whole beam this piece belongs to is not in the input)",
+   "held": []
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0011.1",
+   "kind": "TRENCH",
+   "mark": null,
+   "length_m": 2.975,
+   "width_m": 0.3,
+   "neat_plan_m2": 1.4875,
+   "neat_status": "DRAWING-CONFIRMED",
+   "depth_m": null,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "GB_TOP_NOT_PRINTED (FFL +1.00 minus an unprinted build-up; T-200 / T-206); GB_DEPTH_NOT_ESTABLISHED (exterior-wall beam: depth 'FOLLOW ARCH.' (p.13), underside 'Outer Normal ground level' (a name))",
+   "held": []
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0011.2",
+   "kind": "TRENCH",
+   "mark": null,
+   "length_m": 5.745,
+   "width_m": 0.3,
+   "neat_plan_m2": 2.8725,
+   "neat_status": "DRAWING-CONFIRMED",
+   "depth_m": null,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "GB_TOP_NOT_PRINTED (FFL +1.00 minus an unprinted build-up; T-200 / T-206); GB_DEPTH_NOT_ESTABLISHED (exterior-wall beam: depth 'FOLLOW ARCH.' (p.13), underside 'Outer Normal ground level' (a name))",
+   "held": []
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0011.3",
+   "kind": "TRENCH",
+   "mark": null,
+   "length_m": 6.35,
+   "width_m": 0.3,
+   "neat_plan_m2": 3.175,
+   "neat_status": "DRAWING-CONFIRMED",
+   "depth_m": null,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "GB_TOP_NOT_PRINTED (FFL +1.00 minus an unprinted build-up; T-200 / T-206); GB_DEPTH_NOT_ESTABLISHED (exterior-wall beam: depth 'FOLLOW ARCH.' (p.13), underside 'Outer Normal ground level' (a name))",
+   "held": []
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0011.4",
+   "kind": "TRENCH",
+   "mark": null,
+   "length_m": 1.2,
+   "width_m": 0.3,
+   "neat_plan_m2": 0.6,
+   "neat_status": "DRAWING-CONFIRMED",
+   "depth_m": null,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "GB_TOP_NOT_PRINTED (FFL +1.00 minus an unprinted build-up; T-200 / T-206); GB_DEPTH_NOT_ESTABLISHED (exterior-wall beam: depth 'FOLLOW ARCH.' (p.13), underside 'Outer Normal ground level' (a name))",
+   "held": []
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0012.1",
+   "kind": "TRENCH",
+   "mark": null,
+   "length_m": 1.5,
+   "width_m": 0.3,
+   "neat_plan_m2": 0.75,
+   "neat_status": "DRAWING-CONFIRMED",
+   "depth_m": null,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "GB_TOP_NOT_PRINTED (FFL +1.00 minus an unprinted build-up; T-200 / T-206); GB_DEPTH_NOT_ESTABLISHED (exterior-wall beam: depth 'FOLLOW ARCH.' (p.13), underside 'Outer Normal ground level' (a name))",
+   "held": []
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0012.2",
+   "kind": "TRENCH",
+   "mark": null,
+   "length_m": 2.3,
+   "width_m": 0.3,
+   "neat_plan_m2": 1.15,
+   "neat_status": "DRAWING-CONFIRMED",
+   "depth_m": null,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "GB_TOP_NOT_PRINTED (FFL +1.00 minus an unprinted build-up; T-200 / T-206); GB_DEPTH_NOT_ESTABLISHED (exterior-wall beam: depth 'FOLLOW ARCH.' (p.13), underside 'Outer Normal ground level' (a name))",
+   "held": []
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0013.1",
+   "kind": "TRENCH",
+   "mark": null,
+   "length_m": 0.1,
+   "width_m": 0.3,
+   "neat_plan_m2": 0.05,
+   "neat_status": "DRAWING-CONFIRMED",
+   "depth_m": null,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "GB_TOP_NOT_PRINTED (FFL +1.00 minus an unprinted build-up; T-200 / T-206); GB_DEPTH_NOT_ESTABLISHED (interior beam: p.13 class by span (0.60 over 5 m, 0.40 under 5 m, 0.30 under 2.5 m); the span of the whole beam this piece belongs to is not in the input)",
+   "held": []
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0013.2",
+   "kind": "TRENCH",
+   "mark": null,
+   "length_m": 5.8,
+   "width_m": 0.3,
+   "neat_plan_m2": 2.9,
+   "neat_status": "DRAWING-CONFIRMED",
+   "depth_m": null,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "GB_TOP_NOT_PRINTED (FFL +1.00 minus an unprinted build-up; T-200 / T-206); GB_DEPTH_NOT_ESTABLISHED (exterior-wall beam: depth 'FOLLOW ARCH.' (p.13), underside 'Outer Normal ground level' (a name))",
+   "held": []
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0014",
+   "kind": "TRENCH",
+   "mark": null,
+   "length_m": 4.3,
+   "width_m": 0.3,
+   "neat_plan_m2": 2.15,
+   "neat_status": "DRAWING-CONFIRMED",
+   "depth_m": null,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "GB_TOP_NOT_PRINTED (FFL +1.00 minus an unprinted build-up; T-200 / T-206); GB_DEPTH_NOT_ESTABLISHED (interior beam: p.13 class by span (0.60 over 5 m, 0.40 under 5 m, 0.30 under 2.5 m); the span of the whole beam this piece belongs to is not in the input)",
+   "held": []
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0015",
+   "kind": "TRENCH",
+   "mark": null,
+   "length_m": 10.13,
+   "width_m": 0.3,
+   "neat_plan_m2": 5.065,
+   "neat_status": "DRAWING-CONFIRMED",
+   "depth_m": null,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "GB_TOP_NOT_PRINTED (FFL +1.00 minus an unprinted build-up; T-200 / T-206); GB_DEPTH_NOT_ESTABLISHED (exterior-wall beam: depth 'FOLLOW ARCH.' (p.13), underside 'Outer Normal ground level' (a name))",
+   "held": []
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0016",
+   "kind": "TRENCH",
+   "mark": null,
+   "length_m": 6.4,
+   "width_m": 0.3,
+   "neat_plan_m2": 3.2,
+   "neat_status": "DRAWING-CONFIRMED",
+   "depth_m": null,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "GB_TOP_NOT_PRINTED (FFL +1.00 minus an unprinted build-up; T-200 / T-206); GB_DEPTH_NOT_ESTABLISHED (exterior-wall beam: depth 'FOLLOW ARCH.' (p.13), underside 'Outer Normal ground level' (a name))",
+   "held": []
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0017.1",
+   "kind": "TRENCH",
+   "mark": null,
+   "length_m": 4.3,
+   "width_m": 0.3,
+   "neat_plan_m2": 2.15,
+   "neat_status": "DRAWING-CONFIRMED",
+   "depth_m": null,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "GB_TOP_NOT_PRINTED (FFL +1.00 minus an unprinted build-up; T-200 / T-206); GB_DEPTH_NOT_ESTABLISHED (interior beam: p.13 class by span (0.60 over 5 m, 0.40 under 5 m, 0.30 under 2.5 m); the span of the whole beam this piece belongs to is not in the input)",
+   "held": []
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0017.2",
+   "kind": "TRENCH",
+   "mark": null,
+   "length_m": 0.5,
+   "width_m": 0.3,
+   "neat_plan_m2": 0.25,
+   "neat_status": "DRAWING-CONFIRMED",
+   "depth_m": null,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "GB_TOP_NOT_PRINTED (FFL +1.00 minus an unprinted build-up; T-200 / T-206); GB_DEPTH_NOT_ESTABLISHED (exterior-wall beam: depth 'FOLLOW ARCH.' (p.13), underside 'Outer Normal ground level' (a name))",
+   "held": []
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0018",
+   "kind": "TRENCH",
+   "mark": null,
+   "length_m": 4.3,
+   "width_m": 0.3,
+   "neat_plan_m2": 2.15,
+   "neat_status": "DRAWING-CONFIRMED",
+   "depth_m": null,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "GB_TOP_NOT_PRINTED (FFL +1.00 minus an unprinted build-up; T-200 / T-206); GB_DEPTH_NOT_ESTABLISHED (interior beam: p.13 class by span (0.60 over 5 m, 0.40 under 5 m, 0.30 under 2.5 m); the span of the whole beam this piece belongs to is not in the input)",
+   "held": []
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0019.1",
+   "kind": "TRENCH",
+   "mark": null,
+   "length_m": 2.45,
+   "width_m": 0.3,
+   "neat_plan_m2": 1.225,
+   "neat_status": "DRAWING-CONFIRMED",
+   "depth_m": null,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "GB_TOP_NOT_PRINTED (FFL +1.00 minus an unprinted build-up; T-200 / T-206); GB_DEPTH_NOT_ESTABLISHED (interior beam: p.13 class by span (0.60 over 5 m, 0.40 under 5 m, 0.30 under 2.5 m); the span of the whole beam this piece belongs to is not in the input)",
+   "held": []
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0020",
+   "kind": "TRENCH",
+   "mark": null,
+   "length_m": 1.45,
+   "width_m": 0.3,
+   "neat_plan_m2": 0.725,
+   "neat_status": "DRAWING-CONFIRMED",
+   "depth_m": null,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "GB_TOP_NOT_PRINTED (FFL +1.00 minus an unprinted build-up; T-200 / T-206); GB_DEPTH_NOT_ESTABLISHED (interior beam: p.13 class by span (0.60 over 5 m, 0.40 under 5 m, 0.30 under 2.5 m); the span of the whole beam this piece belongs to is not in the input)",
+   "held": []
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0021",
+   "kind": "TRENCH",
+   "mark": null,
+   "length_m": 1.2,
+   "width_m": 0.3,
+   "neat_plan_m2": 0.6,
+   "neat_status": "DRAWING-CONFIRMED",
+   "depth_m": null,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "GB_TOP_NOT_PRINTED (FFL +1.00 minus an unprinted build-up; T-200 / T-206); GB_DEPTH_NOT_ESTABLISHED (interior beam: p.13 class by span (0.60 over 5 m, 0.40 under 5 m, 0.30 under 2.5 m); the span of the whole beam this piece belongs to is not in the input)",
+   "held": []
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0022",
+   "kind": "TRENCH",
+   "mark": null,
+   "length_m": 3.8,
+   "width_m": 0.3,
+   "neat_plan_m2": 1.9,
+   "neat_status": "DRAWING-CONFIRMED",
+   "depth_m": null,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "GB_TOP_NOT_PRINTED (FFL +1.00 minus an unprinted build-up; T-200 / T-206); GB_DEPTH_NOT_ESTABLISHED (exterior-wall beam: depth 'FOLLOW ARCH.' (p.13), underside 'Outer Normal ground level' (a name))",
+   "held": []
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0023.1",
+   "kind": "TRENCH",
+   "mark": null,
+   "length_m": 7.35,
+   "width_m": 0.3,
+   "neat_plan_m2": 3.675,
+   "neat_status": "DRAWING-CONFIRMED",
+   "depth_m": null,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "GB_TOP_NOT_PRINTED (FFL +1.00 minus an unprinted build-up; T-200 / T-206); GB_DEPTH_NOT_ESTABLISHED (interior beam: p.13 class by span (0.60 over 5 m, 0.40 under 5 m, 0.30 under 2.5 m); the span of the whole beam this piece belongs to is not in the input)",
+   "held": []
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0024",
+   "kind": "TRENCH",
+   "mark": null,
+   "length_m": 3.75,
+   "width_m": 0.3,
+   "neat_plan_m2": 1.875,
+   "neat_status": "DRAWING-CONFIRMED",
+   "depth_m": null,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "GB_TOP_NOT_PRINTED (FFL +1.00 minus an unprinted build-up; T-200 / T-206); GB_DEPTH_NOT_ESTABLISHED (interior beam: p.13 class by span (0.60 over 5 m, 0.40 under 5 m, 0.30 under 2.5 m); the span of the whole beam this piece belongs to is not in the input)",
+   "held": []
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0025.1",
+   "kind": "TRENCH",
+   "mark": null,
+   "length_m": 2.325,
+   "width_m": 0.3,
+   "neat_plan_m2": 1.1625,
+   "neat_status": "DRAWING-CONFIRMED",
+   "depth_m": null,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "GB_TOP_NOT_PRINTED (FFL +1.00 minus an unprinted build-up; T-200 / T-206); GB_DEPTH_NOT_ESTABLISHED (interior beam: p.13 class by span (0.60 over 5 m, 0.40 under 5 m, 0.30 under 2.5 m); the span of the whole beam this piece belongs to is not in the input)",
+   "held": []
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0025.2",
+   "kind": "TRENCH",
+   "mark": null,
+   "length_m": 1.0,
+   "width_m": 0.3,
+   "neat_plan_m2": 0.5,
+   "neat_status": "DRAWING-CONFIRMED",
+   "depth_m": null,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "GB_TOP_NOT_PRINTED (FFL +1.00 minus an unprinted build-up; T-200 / T-206); GB_DEPTH_NOT_ESTABLISHED (exterior-wall beam: depth 'FOLLOW ARCH.' (p.13), underside 'Outer Normal ground level' (a name))",
+   "held": []
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0026.1",
+   "kind": "TRENCH",
+   "mark": null,
+   "length_m": 6.9,
+   "width_m": 0.3,
+   "neat_plan_m2": 3.45,
+   "neat_status": "DRAWING-CONFIRMED",
+   "depth_m": null,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "GB_TOP_NOT_PRINTED (FFL +1.00 minus an unprinted build-up; T-200 / T-206); GB_DEPTH_NOT_ESTABLISHED (exterior-wall beam: depth 'FOLLOW ARCH.' (p.13), underside 'Outer Normal ground level' (a name))",
+   "held": []
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0027",
+   "kind": "TRENCH",
+   "mark": null,
+   "length_m": 6.72,
+   "width_m": 0.3,
+   "neat_plan_m2": 3.36,
+   "neat_status": "DRAWING-CONFIRMED",
+   "depth_m": null,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "GB_TOP_NOT_PRINTED (FFL +1.00 minus an unprinted build-up; T-200 / T-206); GB_DEPTH_NOT_ESTABLISHED (interior beam: p.13 class by span (0.60 over 5 m, 0.40 under 5 m, 0.30 under 2.5 m); the span of the whole beam this piece belongs to is not in the input)",
+   "held": []
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0028",
+   "kind": "TRENCH",
+   "mark": null,
+   "length_m": 3.2277,
+   "width_m": 0.3,
+   "neat_plan_m2": 1.61385,
+   "neat_status": "DRAWING-CONFIRMED",
+   "depth_m": null,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "GB_TOP_NOT_PRINTED (FFL +1.00 minus an unprinted build-up; T-200 / T-206); GB_DEPTH_NOT_ESTABLISHED (interior beam: p.13 class by span (0.60 over 5 m, 0.40 under 5 m, 0.30 under 2.5 m); the span of the whole beam this piece belongs to is not in the input)",
+   "held": []
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0029",
+   "kind": "TRENCH",
+   "mark": null,
+   "length_m": 4.2723,
+   "width_m": 0.3,
+   "neat_plan_m2": 2.13615,
+   "neat_status": "DRAWING-CONFIRMED",
+   "depth_m": null,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "GB_TOP_NOT_PRINTED (FFL +1.00 minus an unprinted build-up; T-200 / T-206); GB_DEPTH_NOT_ESTABLISHED (interior beam: p.13 class by span (0.60 over 5 m, 0.40 under 5 m, 0.30 under 2.5 m); the span of the whole beam this piece belongs to is not in the input)",
+   "held": []
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0030",
+   "kind": "TRENCH",
+   "mark": null,
+   "length_m": 1.2,
+   "width_m": 0.3,
+   "neat_plan_m2": 0.6,
+   "neat_status": "DRAWING-CONFIRMED",
+   "depth_m": null,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "GB_TOP_NOT_PRINTED (FFL +1.00 minus an unprinted build-up; T-200 / T-206); GB_DEPTH_NOT_ESTABLISHED (interior beam: p.13 class by span (0.60 over 5 m, 0.40 under 5 m, 0.30 under 2.5 m); the span of the whole beam this piece belongs to is not in the input)",
+   "held": []
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0031",
+   "kind": "TRENCH",
+   "mark": null,
+   "length_m": 3.75,
+   "width_m": 0.3,
+   "neat_plan_m2": 1.875,
+   "neat_status": "DRAWING-CONFIRMED",
+   "depth_m": null,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "GB_TOP_NOT_PRINTED (FFL +1.00 minus an unprinted build-up; T-200 / T-206); GB_DEPTH_NOT_ESTABLISHED (interior beam: p.13 class by span (0.60 over 5 m, 0.40 under 5 m, 0.30 under 2.5 m); the span of the whole beam this piece belongs to is not in the input)",
+   "held": []
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0032",
+   "kind": "TRENCH",
+   "mark": null,
+   "length_m": 7.35,
+   "width_m": 0.3,
+   "neat_plan_m2": 3.675,
+   "neat_status": "DRAWING-CONFIRMED",
+   "depth_m": null,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "GB_TOP_NOT_PRINTED (FFL +1.00 minus an unprinted build-up; T-200 / T-206); GB_DEPTH_NOT_ESTABLISHED (interior beam: p.13 class by span (0.60 over 5 m, 0.40 under 5 m, 0.30 under 2.5 m); the span of the whole beam this piece belongs to is not in the input)",
+   "held": []
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0033",
+   "kind": "TRENCH",
+   "mark": null,
+   "length_m": 4.225,
+   "width_m": 0.3,
+   "neat_plan_m2": 2.1125,
+   "neat_status": "DRAWING-CONFIRMED",
+   "depth_m": null,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "GB_TOP_NOT_PRINTED (FFL +1.00 minus an unprinted build-up; T-200 / T-206); GB_DEPTH_NOT_ESTABLISHED (interior beam: p.13 class by span (0.60 over 5 m, 0.40 under 5 m, 0.30 under 2.5 m); the span of the whole beam this piece belongs to is not in the input)",
+   "held": []
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0034",
+   "kind": "TRENCH",
+   "mark": null,
+   "length_m": 1.25,
+   "width_m": 0.3,
+   "neat_plan_m2": 0.625,
+   "neat_status": "DRAWING-CONFIRMED",
+   "depth_m": null,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "GB_TOP_NOT_PRINTED (FFL +1.00 minus an unprinted build-up; T-200 / T-206); GB_DEPTH_NOT_ESTABLISHED (interior beam: p.13 class by span (0.60 over 5 m, 0.40 under 5 m, 0.30 under 2.5 m); the span of the whole beam this piece belongs to is not in the input)",
+   "held": []
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0035",
+   "kind": "TRENCH",
+   "mark": null,
+   "length_m": 3.1,
+   "width_m": 0.3,
+   "neat_plan_m2": 1.55,
+   "neat_status": "DRAWING-CONFIRMED",
+   "depth_m": null,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "GB_TOP_NOT_PRINTED (FFL +1.00 minus an unprinted build-up; T-200 / T-206); GB_DEPTH_NOT_ESTABLISHED (exterior-wall beam: depth 'FOLLOW ARCH.' (p.13), underside 'Outer Normal ground level' (a name))",
+   "held": []
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0036.1",
+   "kind": "TRENCH",
+   "mark": null,
+   "length_m": 2.7,
+   "width_m": 0.3,
+   "neat_plan_m2": 1.35,
+   "neat_status": "DRAWING-CONFIRMED",
+   "depth_m": null,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "GB_TOP_NOT_PRINTED (FFL +1.00 minus an unprinted build-up; T-200 / T-206); GB_DEPTH_NOT_ESTABLISHED (interior beam: p.13 class by span (0.60 over 5 m, 0.40 under 5 m, 0.30 under 2.5 m); the span of the whole beam this piece belongs to is not in the input)",
+   "held": []
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0037.1",
+   "kind": "TRENCH",
+   "mark": null,
+   "length_m": 2.4269,
+   "width_m": 0.3,
+   "neat_plan_m2": 1.21345,
+   "neat_status": "DRAWING-CONFIRMED",
+   "depth_m": null,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "GB_TOP_NOT_PRINTED (FFL +1.00 minus an unprinted build-up; T-200 / T-206); GB_DEPTH_NOT_ESTABLISHED (interior beam: p.13 class by span (0.60 over 5 m, 0.40 under 5 m, 0.30 under 2.5 m); the span of the whole beam this piece belongs to is not in the input)",
+   "held": []
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0038",
+   "kind": "TRENCH",
+   "mark": null,
+   "length_m": 0.789,
+   "width_m": 0.3,
+   "neat_plan_m2": 0.3945,
+   "neat_status": "DRAWING-CONFIRMED",
+   "depth_m": null,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "GB_TOP_NOT_PRINTED (FFL +1.00 minus an unprinted build-up; T-200 / T-206); GB_DEPTH_NOT_ESTABLISHED (interior beam: p.13 class by span (0.60 over 5 m, 0.40 under 5 m, 0.30 under 2.5 m); the span of the whole beam this piece belongs to is not in the input)",
+   "held": []
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0039",
+   "kind": "TRENCH",
+   "mark": null,
+   "length_m": 2.0732,
+   "width_m": 0.3,
+   "neat_plan_m2": 1.0366,
+   "neat_status": "DRAWING-CONFIRMED",
+   "depth_m": null,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "GB_TOP_NOT_PRINTED (FFL +1.00 minus an unprinted build-up; T-200 / T-206); GB_DEPTH_NOT_ESTABLISHED (interior beam: p.13 class by span (0.60 over 5 m, 0.40 under 5 m, 0.30 under 2.5 m); the span of the whole beam this piece belongs to is not in the input)",
+   "held": []
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0040",
+   "kind": "TRENCH",
+   "mark": null,
+   "length_m": 2.1,
+   "width_m": 0.3,
+   "neat_plan_m2": 1.05,
+   "neat_status": "DRAWING-CONFIRMED",
+   "depth_m": null,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "GB_TOP_NOT_PRINTED (FFL +1.00 minus an unprinted build-up; T-200 / T-206); GB_DEPTH_NOT_ESTABLISHED (interior beam: p.13 class by span (0.60 over 5 m, 0.40 under 5 m, 0.30 under 2.5 m); the span of the whole beam this piece belongs to is not in the input)",
+   "held": []
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0041",
+   "kind": "TRENCH",
+   "mark": null,
+   "length_m": 1.3,
+   "width_m": 0.3,
+   "neat_plan_m2": 0.65,
+   "neat_status": "DRAWING-CONFIRMED",
+   "depth_m": null,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "GB_TOP_NOT_PRINTED (FFL +1.00 minus an unprinted build-up; T-200 / T-206); GB_DEPTH_NOT_ESTABLISHED (exterior-wall beam: depth 'FOLLOW ARCH.' (p.13), underside 'Outer Normal ground level' (a name))",
+   "held": []
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0042",
+   "kind": "TRENCH",
+   "mark": null,
+   "length_m": 1.8064,
+   "width_m": 0.3,
+   "neat_plan_m2": 0.9032,
+   "neat_status": "DRAWING-CONFIRMED",
+   "depth_m": null,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "GB_TOP_NOT_PRINTED (FFL +1.00 minus an unprinted build-up; T-200 / T-206); GB_DEPTH_NOT_ESTABLISHED (interior beam: p.13 class by span (0.60 over 5 m, 0.40 under 5 m, 0.30 under 2.5 m); the span of the whole beam this piece belongs to is not in the input)",
+   "held": []
+  },
+  {
+   "id": "GROUND_BEAMS:GROUND:BAND0043",
+   "kind": "TRENCH",
+   "mark": null,
+   "length_m": 6.2868,
+   "width_m": 0.3,
+   "neat_plan_m2": 3.1434,
+   "neat_status": "DRAWING-CONFIRMED",
+   "depth_m": null,
+   "excavation_m3": null,
+   "excavation_status": "HELD",
+   "excavation_why": "GB_TOP_NOT_PRINTED (FFL +1.00 minus an unprinted build-up; T-200 / T-206); GB_DEPTH_NOT_ESTABLISHED (interior beam: p.13 class by span (0.60 over 5 m, 0.40 under 5 m, 0.30 under 2.5 m); the span of the whole beam this piece belongs to is not in the input)",
+   "held": []
+  }
+ ]
+}

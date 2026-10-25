@@ -1,0 +1,248 @@
+{
+ "schema": "T290_CANDIDATE_V3015_STAIR_DOME_LINES",
+ "candidate": "ARCH_TAKEOFF_V3.0.15",
+ "candidate_lines_csv_sha256": "a4dc01dd5a309bb38b6bff54b486e9090b6d571a0044101197ec650f1cf3d00a",
+ "project": {
+  "project_id": "ST7757 villa (structural set)",
+  "revision_set_sha256": "297e913da9d98da10c40b1e93af0ccc66b0d7825b7700e0a2e3b9b5a54240b18"
+ },
+ "lines_in_candidate": 3699,
+ "lines": [
+  {
+   "line_id": "L-004e8e9fd032cb0aeb72",
+   "item_code": "STR.CONC.DOME",
+   "floor": "2F",
+   "element_id": "P-C:SCOPE:DOMES:2F:CC-a0729cfebc:SHELL",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_low": null,
+   "bounded_high": null,
+   "guard_element": {
+    "element_id": "DOME-2",
+    "element_kind": "DOME",
+    "part": "SHELL"
+   },
+   "info_qty_v3_0_5": 3.685858,
+   "support": "CONVENTION_ONLY",
+   "formula": "spherical cap pi (r^2 + h^2) x shell thickness"
+  },
+  {
+   "line_id": "L-061e18cf35a4b6b33d68",
+   "item_code": "STR.CONC.STAIR",
+   "floor": "GROUND",
+   "element_id": "P-C:SCOPE:STAIRS:GROUND:CC-5ab1872c70:FLIGHTS",
+   "evidence_state": "PROVISIONAL",
+   "measured_net": 0.9482674779781379,
+   "bounded_low": 0.6116168477474295,
+   "bounded_high": 1.0860799346671572,
+   "guard_element": null,
+   "info_qty_v3_0_5": null,
+   "support": "CONVENTION_ONLY",
+   "formula": "per run: stair_measure (straight: stair_geometry.straight_flight; winder: plan x (waist / cos + R / 2)); risers by the riser rule, both readings in the range"
+  },
+  {
+   "line_id": "L-14f885e95132fa0cedec",
+   "item_code": "STR.CONC.STAIR",
+   "floor": "1F",
+   "element_id": "P-C:STAIRS:1F:SITE-b845e1e78b1f74a8",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_low": null,
+   "bounded_high": null,
+   "guard_element": null,
+   "info_qty_v3_0_5": 4.450745,
+   "support": "CONVENTION_ONLY",
+   "formula": "winder approximation: plan area x (waist / cos(pitch) + R / 2); landings x waist"
+  },
+  {
+   "line_id": "L-2416e65f053a14199cfc",
+   "item_code": "STR.CONC.STAIR",
+   "floor": "1F",
+   "element_id": "HL:STAIR_CONCRETE:ST-01:MS2_LD",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "measured_net": null,
+   "bounded_low": 0.4696,
+   "bounded_high": 0.48,
+   "guard_element": {
+    "element_id": "ST-01",
+    "part": null
+   },
+   "info_qty_v3_0_5": null,
+   "support": null,
+   "formula": "held: MS2-LD PARTLY VERIFIED: ledger 0.480 (Checker 17:18 east 0.240 verified, west 0.2304 .. 0.240 not verified) vs drawn west 1.30 x 1.15 incl. the 0.10 well strip (Verifier 01:57) 0.2392 + east 1.20 x 1.20 0.2304 = 0.4696; well strip assignment Q-51 cond"
+  },
+  {
+   "line_id": "L-33769fb181e11dca13cc",
+   "item_code": "STR.CONC.DOME",
+   "floor": "2F",
+   "element_id": "P-C:SCOPE:DOMES:2F:CC-6e7b8c8d1f:SHELL",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "measured_net": null,
+   "bounded_low": null,
+   "bounded_high": null,
+   "guard_element": {
+    "element_id": "DOME-1",
+    "element_kind": "DOME",
+    "part": "SHELL"
+   },
+   "info_qty_v3_0_5": 3.685858,
+   "support": "CONVENTION_ONLY",
+   "formula": "spherical cap pi (r^2 + h^2) x shell thickness"
+  },
+  {
+   "line_id": "L-659243ed9fc2831c3ae8",
+   "item_code": "STR.CONC.STAIR",
+   "floor": "1F",
+   "element_id": "HL:STAIR_CONCRETE:ST-01:MS2_TR",
+   "evidence_state": "BLOCKED_RFI",
+   "measured_net": null,
+   "bounded_low": null,
+   "bounded_high": null,
+   "guard_element": {
+    "element_id": "ST-01",
+    "part": null
+   },
+   "info_qty_v3_0_5": null,
+   "support": null,
+   "formula": "held: landing levels scaled, not printed"
+  },
+  {
+   "line_id": "L-67e4b0485135f84acc46",
+   "item_code": "STR.CONC.STAIR",
+   "floor": "1F",
+   "element_id": "HL:STAIR_CONCRETE:ST-01:MS2_L",
+   "evidence_state": "SOURCE_DERIVED",
+   "measured_net": 1.033445,
+   "bounded_low": null,
+   "bounded_high": null,
+   "guard_element": {
+    "element_id": "ST-01",
+    "part": null
+   },
+   "info_qty_v3_0_5": null,
+   "support": null,
+   "formula": "owner Q-19 steps + Q-47 A waist (T 16 / cos) between the first and last riser line - Q-62 A wedge 0.030171 - waist below the 1F floor inside B20 0.025448"
+  },
+  {
+   "line_id": "L-7863355dfcb68a681d2d",
+   "item_code": "STR.CONC.STAIR",
+   "floor": "GF",
+   "element_id": "P-C:SCOPE:STAIRS:GF:CC-7390ea1139:FLIGHTS",
+   "evidence_state": "BLOCKED_RFI",
+   "measured_net": null,
+   "bounded_low": null,
+   "bounded_high": null,
+   "guard_element": {
+    "element_id": "ST-01",
+    "element_kind": "STAIR",
+    "part": "GF-1F"
+   },
+   "info_qty_v3_0_5": 2.785981,
+   "support": "CONVENTION_ONLY",
+   "formula": "per run: stair_measure (straight: stair_geometry.straight_flight; winder: plan x (waist / cos + R / 2)); risers by the riser rule, both readings in the range"
+  },
+  {
+   "line_id": "L-821032bc04a0b0d02133",
+   "item_code": "STR.CONC.STAIR",
+   "floor": "GROUND",
+   "element_id": "DG5:ST-01:LOBBY",
+   "evidence_state": "BLOCKED_RFI",
+   "measured_net": null,
+   "bounded_low": null,
+   "bounded_high": null,
+   "guard_element": {
+    "element_id": "ST-01",
+    "part": "LOBBY"
+   },
+   "info_qty_v3_0_5": null,
+   "support": null,
+   "formula": "held: drawn element part carried by no candidate line (default guard DG-5)"
+  },
+  {
+   "line_id": "L-8ea34765d16b54898140",
+   "item_code": "STR.CONC.DOME",
+   "floor": "2F",
+   "element_id": "HL:DOME_SHELL:DOME-A:SHELL",
+   "evidence_state": "SOURCE_DERIVED",
+   "measured_net": 2.540681,
+   "bounded_low": null,
+   "bounded_high": null,
+   "guard_element": {
+    "element_id": "DOME-A",
+    "part": null
+   },
+   "info_qty_v3_0_5": null,
+   "support": null,
+   "formula": "pi/3 [h^2 (3 R_o - h) - h_i^2 (3 R_i - h_i)], c 4.42, h 1.90, t 0.10: R_o = (2.21^2 + 1.90^2) / 3.80 = 2.235289, R_i 2.135289, h_i 1.80 (shell above the springing; the ring and the drum are their own items)"
+  },
+  {
+   "line_id": "L-b6b0354b7842f0ed6e41",
+   "item_code": "STR.CONC.STAIR",
+   "floor": "GROUND",
+   "element_id": "P-C:STAIRS:GROUND:SITE-4df8fcd99d130701",
+   "evidence_state": "BLOCKED_RFI",
+   "measured_net": null,
+   "bounded_low": null,
+   "bounded_high": null,
+   "guard_element": {
+    "element_id": "ST-02",
+    "element_kind": "STAIR",
+    "part": "WHOLE"
+   },
+   "info_qty_v3_0_5": 1.769462,
+   "support": "CONVENTION_ONLY",
+   "formula": "winder approximation: plan area x (waist / cos(pitch) + R / 2); landings x waist"
+  },
+  {
+   "line_id": "L-bb0e57b1948175a3d5b8",
+   "item_code": "STR.CONC.STAIR",
+   "floor": "1F",
+   "element_id": "HL:STAIR_CONCRETE:ST-01:MS2_U",
+   "evidence_state": "SOURCE_DERIVED",
+   "measured_net": 1.001373,
+   "bounded_low": null,
+   "bounded_high": null,
+   "guard_element": {
+    "element_id": "ST-01",
+    "part": null
+   },
+   "info_qty_v3_0_5": null,
+   "support": null,
+   "formula": "owner Q-19 steps + Q-47 A waist - Q-62 A wedge 0.03024 - head inside B23 0.057451 (owned by B23)"
+  },
+  {
+   "line_id": "L-d5401fa8986900c66c37",
+   "item_code": "STR.CONC.DOME",
+   "floor": "2F",
+   "element_id": "DG5:DOME-3:SHELL",
+   "evidence_state": "BLOCKED_RFI",
+   "measured_net": null,
+   "bounded_low": null,
+   "bounded_high": null,
+   "guard_element": {
+    "element_id": "DOME-3",
+    "part": "SHELL"
+   },
+   "info_qty_v3_0_5": null,
+   "support": null,
+   "formula": "held: drawn element part carried by no candidate line (default guard DG-5)"
+  },
+  {
+   "line_id": "L-fffa895ed96b9d6a682c",
+   "item_code": "STR.CONC.DOME",
+   "floor": "2F",
+   "element_id": "HL:DOME_SHELL:DOME-B:SHELL",
+   "evidence_state": "SOURCE_DERIVED",
+   "measured_net": 2.540681,
+   "bounded_low": null,
+   "bounded_high": null,
+   "guard_element": {
+    "element_id": "DOME-B",
+    "part": null
+   },
+   "info_qty_v3_0_5": null,
+   "support": null,
+   "formula": "pi/3 [h^2 (3 R_o - h) - h_i^2 (3 R_i - h_i)], c 4.42, h 1.90, t 0.10: R_o = (2.21^2 + 1.90^2) / 3.80 = 2.235289, R_i 2.135289, h_i 1.80 (shell above the springing; the ring and the drum are their own items)"
+  }
+ ]
+}

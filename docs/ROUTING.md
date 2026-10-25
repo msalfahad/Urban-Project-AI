@@ -463,9 +463,9 @@ Risk **MEDIUM** (recommended validation L2). Ask about: excavation, excavate, ba
 
 **BOQ capability** (exact registry statuses): NOT_IMPLEMENTED 2. Only INTEGRATED_AND_TESTED counts as supported; a module or a synthetic test is not real-villa validation.
 
-**Validation:** L1 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_n10`
-L2 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_n10`
-L3 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_n10` + freeze check
+**Validation:** L1 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/t170_excavation_ledger`
+L2 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/t170_excavation_ledger tests/m9_n10`
+L3 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/t170_excavation_ledger tests/m9_n10` + freeze check
 L4 full suite + freeze check (see above)
 
 **Known defects** (2 unresolved of 3):

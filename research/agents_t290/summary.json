@@ -1,0 +1,235 @@
+{
+ "schema": "T290_SUMMARY",
+ "rule": "T290_STAIR_DOME_BASIS_LEDGER_V1",
+ "candidate": "ARCH_TAKEOFF_V3.0.15",
+ "candidate_lines_csv_sha256": "a4dc01dd5a309bb38b6bff54b486e9090b6d571a0044101197ec650f1cf3d00a",
+ "project": {
+  "project_id": "ST7757 villa (structural set)",
+  "revision_set_sha256": "297e913da9d98da10c40b1e93af0ccc66b0d7825b7700e0a2e3b9b5a54240b18"
+ },
+ "lines": 14,
+ "pieces_in_inventory": 41,
+ "residual_m3": {
+  "STAIR": 0.0,
+  "DOME": 0.0
+ },
+ "lines_by_status": {
+  "DRAWING-CONFIRMED": [
+   "L-2416e65f053a14199cfc"
+  ],
+  "HELD": [
+   "L-061e18cf35a4b6b33d68",
+   "L-659243ed9fc2831c3ae8",
+   "L-7863355dfcb68a681d2d",
+   "L-821032bc04a0b0d02133",
+   "L-b6b0354b7842f0ed6e41",
+   "L-d5401fa8986900c66c37"
+  ],
+  "NOT_APPLICABLE": [
+   "L-004e8e9fd032cb0aeb72",
+   "L-14f885e95132fa0cedec",
+   "L-33769fb181e11dca13cc"
+  ],
+  "VERIFIED": [
+   "L-67e4b0485135f84acc46",
+   "L-8ea34765d16b54898140",
+   "L-bb0e57b1948175a3d5b8",
+   "L-fffa895ed96b9d6a682c"
+  ]
+ },
+ "engine_released_m3": 8.064447,
+ "ledger_quantity_m3_on_closable_lines": 7.585779,
+ "held_closable_parts": [
+  {
+   "piece": "ST01-MS1-LD",
+   "line_id": "L-7863355dfcb68a681d2d",
+   "status": "VERIFIED",
+   "m3": 0.2304,
+   "evidence": "Checker 2026-10-22 17:18 (T-180 slot); T-258 Gate A r2 b1b72a50"
+  },
+  {
+   "piece": "ST01-MS1-U",
+   "line_id": "L-7863355dfcb68a681d2d",
+   "status": "VERIFIED",
+   "m3": 0.997552,
+   "evidence": "Checker own 0.9976, D-CHK-T180-1 (rev2); T-258 Gate A r2 b1b72a50"
+  },
+  {
+   "piece": "ST02-RS-S",
+   "line_id": "L-b6b0354b7842f0ed6e41",
+   "status": "ASSUMED — OWNER-APPROVED",
+   "m3": 0.942732,
+   "evidence": "Q-50 A cond (round-stair riser 4.50 / 28); waist 'T 16' printed (T-287 G2-w); geometry Checker own 13:10"
+  },
+  {
+   "piece": "ST02-RS-LD",
+   "line_id": "L-b6b0354b7842f0ed6e41",
+   "status": "ASSUMED — OWNER-APPROVED",
+   "m3": 0.2164,
+   "evidence": "Q-50 A cond (round-stair riser 4.50 / 28); waist 'T 16' printed (T-287 G2-w); geometry Checker own 13:10"
+  },
+  {
+   "piece": "ST02-RS-A",
+   "line_id": "L-b6b0354b7842f0ed6e41",
+   "status": "ASSUMED — OWNER-APPROVED",
+   "m3": 0.377093,
+   "evidence": "Q-50 A cond (round-stair riser 4.50 / 28); waist 'T 16' printed (T-287 G2-w); geometry Checker own 13:10"
+  },
+  {
+   "piece": "ST01b-D1-STEPS",
+   "line_id": "L-821032bc04a0b0d02133",
+   "status": "DRAWING-CONFIRMED",
+   "m3": 0.100286,
+   "evidence": "drawing (T-258 r2 own read)"
+  }
+ ],
+ "held_closable_parts_m3": 2.864463,
+ "t266_label_m3": 2.915089,
+ "t266_label_minus_ledger_m3": 0.050626,
+ "unbound_pieces": [
+  "DOME-A-DRUM",
+  "DOME-B-DRUM"
+ ],
+ "rows": [
+  {
+   "line_id": "L-004e8e9fd032cb0aeb72",
+   "status": "NOT_APPLICABLE",
+   "engine_qty_m3": null,
+   "drawing_qty_m3": null,
+   "drawing_low_m3": null,
+   "drawing_high_m3": null,
+   "closable_component_m3": null,
+   "ledger_owner": "T-290"
+  },
+  {
+   "line_id": "L-061e18cf35a4b6b33d68",
+   "status": "HELD",
+   "engine_qty_m3": 0.9482674779781379,
+   "drawing_qty_m3": null,
+   "drawing_low_m3": null,
+   "drawing_high_m3": null,
+   "closable_component_m3": 0.355017,
+   "ledger_owner": "T-289 BASIS_LEDGER_T289.csv (row ST03)"
+  },
+  {
+   "line_id": "L-14f885e95132fa0cedec",
+   "status": "NOT_APPLICABLE",
+   "engine_qty_m3": null,
+   "drawing_qty_m3": null,
+   "drawing_low_m3": null,
+   "drawing_high_m3": null,
+   "closable_component_m3": null,
+   "ledger_owner": "T-290"
+  },
+  {
+   "line_id": "L-2416e65f053a14199cfc",
+   "status": "DRAWING-CONFIRMED",
+   "engine_qty_m3": null,
+   "drawing_qty_m3": 0.4696,
+   "drawing_low_m3": null,
+   "drawing_high_m3": null,
+   "closable_component_m3": 0.4696,
+   "ledger_owner": "T-290"
+  },
+  {
+   "line_id": "L-33769fb181e11dca13cc",
+   "status": "NOT_APPLICABLE",
+   "engine_qty_m3": null,
+   "drawing_qty_m3": null,
+   "drawing_low_m3": null,
+   "drawing_high_m3": null,
+   "closable_component_m3": null,
+   "ledger_owner": "T-290"
+  },
+  {
+   "line_id": "L-659243ed9fc2831c3ae8",
+   "status": "HELD",
+   "engine_qty_m3": null,
+   "drawing_qty_m3": null,
+   "drawing_low_m3": null,
+   "drawing_high_m3": null,
+   "closable_component_m3": null,
+   "ledger_owner": "T-290"
+  },
+  {
+   "line_id": "L-67e4b0485135f84acc46",
+   "status": "VERIFIED",
+   "engine_qty_m3": 1.033445,
+   "drawing_qty_m3": 1.033444,
+   "drawing_low_m3": null,
+   "drawing_high_m3": null,
+   "closable_component_m3": 1.033444,
+   "ledger_owner": "T-290"
+  },
+  {
+   "line_id": "L-7863355dfcb68a681d2d",
+   "status": "HELD",
+   "engine_qty_m3": null,
+   "drawing_qty_m3": null,
+   "drawing_low_m3": 2.441381,
+   "drawing_high_m3": 2.662365,
+   "closable_component_m3": 1.227952,
+   "ledger_owner": "T-290"
+  },
+  {
+   "line_id": "L-821032bc04a0b0d02133",
+   "status": "HELD",
+   "engine_qty_m3": null,
+   "drawing_qty_m3": null,
+   "drawing_low_m3": null,
+   "drawing_high_m3": null,
+   "closable_component_m3": 0.100286,
+   "ledger_owner": "T-290"
+  },
+  {
+   "line_id": "L-8ea34765d16b54898140",
+   "status": "VERIFIED",
+   "engine_qty_m3": 2.540681,
+   "drawing_qty_m3": 2.540681,
+   "drawing_low_m3": null,
+   "drawing_high_m3": null,
+   "closable_component_m3": 2.540681,
+   "ledger_owner": "T-290"
+  },
+  {
+   "line_id": "L-b6b0354b7842f0ed6e41",
+   "status": "HELD",
+   "engine_qty_m3": null,
+   "drawing_qty_m3": null,
+   "drawing_low_m3": null,
+   "drawing_high_m3": null,
+   "closable_component_m3": 1.536225,
+   "ledger_owner": "T-290"
+  },
+  {
+   "line_id": "L-bb0e57b1948175a3d5b8",
+   "status": "VERIFIED",
+   "engine_qty_m3": 1.001373,
+   "drawing_qty_m3": 1.001373,
+   "drawing_low_m3": null,
+   "drawing_high_m3": null,
+   "closable_component_m3": 1.001373,
+   "ledger_owner": "T-290"
+  },
+  {
+   "line_id": "L-d5401fa8986900c66c37",
+   "status": "HELD",
+   "engine_qty_m3": null,
+   "drawing_qty_m3": null,
+   "drawing_low_m3": null,
+   "drawing_high_m3": null,
+   "closable_component_m3": null,
+   "ledger_owner": "T-290"
+  },
+  {
+   "line_id": "L-fffa895ed96b9d6a682c",
+   "status": "VERIFIED",
+   "engine_qty_m3": 2.540681,
+   "drawing_qty_m3": 2.540681,
+   "drawing_low_m3": null,
+   "drawing_high_m3": null,
+   "closable_component_m3": 2.540681,
+   "ledger_owner": "T-290"
+  }
+ ]
+}
