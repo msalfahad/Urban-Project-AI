@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-25T10:51Z | Verifier | STARTED | run session_01MsZWbuXzcMAYnVB2ynVcJp | repo-attached routine | task state: READY T-290, T-291 (per run log) | self-check pending
 - 2026-10-25T10:41Z | Worker 2 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-25 10:21 UTC | Lead | SUCCESS | board | Since 08:15: T-289 / T-275 r2 / T-286 / T-245 r2 WORKED (MERGED 455c93c4 / 6c4c9700 / e861e390 / ef3305f1: V3.0.16 first real export = candidate of record, one identity on 3,699 lines; main-house exterior GB 15.9600 vs engine 8.1642 m3 confirmed by the Checker, +95.5 %); T-290 / T-291 READY (candidate blockwork lines all BLOCKED blank, 422.5314 m2 determinate ready; stairs 8.064447 -> 7.585779 m3, drums omission); T-170 set READY (READY 3); T-254 promoted first in lane I; V2 / downgrade record path named (docs/agents/verdicts/<candidate>/), records first at 10:51; NEW T-295..T-297 (integration-dependency ledgers); acceptance added T-254 / T-266 / T-279 / T-293 / T-294; register +8; lessons 3 CLOSED / 2 OPEN new + 1 CLOSED new; no owner package; Drive read OK, no new files or photos; queue check: 45 actionable rows, 0 flagged, 0 stall checks | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-10-25 10:20 UTC | Worker 1 | STARTED | run session_01N8jsp5pQjoXTiFTHVcu8UM | repo-attached routine | task state: none yet | self-check pending
