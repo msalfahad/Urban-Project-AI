@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-25T00:51Z | Verifier | STARTED | run unknown | repo-attached routine | task state: READY T-278 (per run log) | self-check pending
 - 2026-10-25T00:40Z | Worker 2 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-25 00:24 UTC | Lead | SUCCESS | board | Since 22:15: T-276 r2 (buried faces 45.4682 m2 DC), T-277 (beam widths 7/137 CONFLICT = D-02 + D-27, drawn 5.4421 vs scheduled 5.7665 m3) and T-274 (height pieces close every census run; register 449.260 -> 449.565 m2 proposed) WORKED; T-270 r1 Gate B and T-282 r1 PARTIAL (narrow r2 first in lanes I / S); T-278 READY (scoring key 380.364 m2, -7.13 %); owner 23:49/23:53/23:57 applied (lane I T-270 -> T-245 -> T-254 -> T-266 -> T-255; integration first; T-170 QUEUED); RFI package verified: 30 rows, 0 removed, 9 PRIORITY (6 ready), 4 missing rows G1-G4 -> NEW T-287, T-286; NEW T-285 (wall register v3 before T-279); register +8, lessons +4; READY 1; Drive read OK, no new files or photos; no owner decision, no notification; queue check: 49 actionable rows, 0 flagged, 0 stall checks | self-check codemap PASS, pytest t061 PASS, freeze PASS; ERS: read, s.2 / s.5 / s.7 applied; problem: none
 - 2026-10-25T00:20Z | Worker 1 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
