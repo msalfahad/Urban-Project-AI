@@ -1,0 +1,91 @@
+{
+ "task": "T-285",
+ "rule": "R-T285-1",
+ "walls": 76,
+ "register_v2_net_m2": 449.26,
+ "basis_A": {
+  "net_m2": 449.5934,
+  "net_m3": 80.7296,
+  "by_class_m2": {
+   "PROJECT-SPECIFIC": 85.3481,
+   "SOURCE-SUPPORTED PENDING INDEPENDENT CHECK": 258.2413,
+   "VERIFIED": 106.004
+  },
+  "walls": 37
+ },
+ "basis_B": {
+  "net_m2": 625.8957,
+  "net_m3": 112.3571,
+  "by_class_m2": {
+   "PROJECT-SPECIFIC": 85.3481,
+   "SOURCE-SUPPORTED PENDING INDEPENDENT CHECK": 434.5436,
+   "VERIFIED": 106.004
+  },
+  "walls": 48
+ },
+ "residual_A_m2": 0.0,
+ "residual_B_m2": 0.0,
+ "changed_walls_A": 15,
+ "established_parts_B": 11,
+ "verified_walls": [
+  "1F-W01",
+  "1F-W02",
+  "1F-W03",
+  "1F-W08",
+  "1F-W09",
+  "1F-W21",
+  "2F-W01",
+  "2F-W04",
+  "2F-W06",
+  "GF-W07",
+  "GF-W12",
+  "GF-W21",
+  "GF-W33"
+ ],
+ "verified_net_m2": 106.004,
+ "conflict_walls": [
+  "1F-W11",
+  "1F-W16",
+  "GF-W19",
+  "GF-W20",
+  "GF-W22",
+  "GF-W34"
+ ],
+ "conflict_increment_established_walls_m2": 0.0607,
+ "walls_held_v3": 28,
+ "walls_part_plus_held_v3": 10,
+ "differences_listed": [
+  {
+   "wall_id": "GF-W01",
+   "what": "T-274 exact pieces gross 62.1541 + HELD 0.0026 m NONE: nothing with a printed soffit  vs kept 62.1550 (-0.0009); kept: VERIFIED gross (T-143)"
+  },
+  {
+   "wall_id": "GF-W07",
+   "what": "T-274 exact pieces gross 4.4575 vs kept 4.4580 (-0.0005); kept: VERIFIED net"
+  },
+  {
+   "wall_id": "GF-W21",
+   "what": "T-274 exact pieces gross 4.3092 vs kept 4.3090 (+0.0002); kept: VERIFIED net"
+  },
+  {
+   "wall_id": "1F-W01",
+   "what": "T-274 exact pieces gross 2.8316 vs kept 2.8320 (-0.0004); kept: VERIFIED net"
+  },
+  {
+   "wall_id": "1F-W05",
+   "what": "T-274 exact pieces gross 23.2228 vs kept 23.2230 (-0.0002); kept: VERIFIED gross (T-143)"
+  },
+  {
+   "wall_id": "2F-W04",
+   "what": "T-274 exact pieces gross 21.4763 vs kept 21.4760 (+0.0003); kept: VERIFIED net"
+  }
+ ],
+ "register_sha256": "5c1a5a601507ed49838b3d633e97ac967f85dbadaba1663a0875a44ce1d6b17a",
+ "integrates": {
+  "T-228 r2": "bf4dd2a9",
+  "T-261 r3": "164b189f",
+  "T-274": "aba9399a",
+  "T-277": "9446dfcb"
+ },
+ "applied": "register v3 (research); no BOQ line moved; released default V2.9 + route G unchanged"
+}

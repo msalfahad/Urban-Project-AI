@@ -1,0 +1,29 @@
+step,wall_id,cause,delta_m2
+A: register v2 + T-274 piece closure (walls established in v2),GF-W11,R-T274-1 rule 1-2: exact closing height pieces,-0.0010
+A: register v2 + T-274 piece closure (walls established in v2),GF-W16,R-T274-1 rule 1-2: exact closing height pieces,0.0316
+A: register v2 + T-274 piece closure (walls established in v2),GF-W19,R-T274-1 rule 1-2: exact closing height pieces,-0.0100
+A: register v2 + T-274 piece closure (walls established in v2),GF-W20,R-T274-1 rule 1-2: exact closing height pieces,-0.0162
+A: register v2 + T-274 piece closure (walls established in v2),GF-W22,"R-T274-1 rule 1-3: exact closing pieces (register v2 figure was the sampled base + the T-215 junction minimum, below every CB2 reading); CB2 increment stays CONFLICT",0.0101
+A: register v2 + T-274 piece closure (walls established in v2),GF-W28,R-T274-1 rule 1-2: exact closing height pieces,0.1224
+A: register v2 + T-274 piece closure (walls established in v2),GF-W31,R-T274-1 rule 1-2: exact closing height pieces,0.0115
+A: register v2 + T-274 piece closure (walls established in v2),GF-W32,R-T274-1 rule 1-2: exact closing height pieces,0.0634
+A: register v2 + T-274 piece closure (walls established in v2),GF-W34,"R-T274-1 rule 1-3: exact closing pieces (register v2 figure was the sampled base + the T-215 junction minimum, below every CB2 reading); CB2 increment stays CONFLICT",0.0182
+A: register v2 + T-274 piece closure (walls established in v2),1F-W00,"R-T274-1 rule 5: W18 deducted by its 0.4673 m inside the masonry, not 0.500",0.0706
+A: register v2 + T-274 piece closure (walls established in v2),1F-W06,R-T274-1 rule 1-2: exact closing height pieces,0.0027
+A: register v2 + T-274 piece closure (walls established in v2),1F-W12,R-T274-1 rule 1-2: exact closing height pieces,-0.0005
+A: register v2 + T-274 piece closure (walls established in v2),1F-W20,R-T274-1 rule 1-2: exact closing height pieces,0.0298
+A: register v2 + T-274 piece closure (walls established in v2),1F-W22,R-T274-1 rule 1-2: exact closing height pieces,-0.0180
+A: register v2 + T-274 piece closure (walls established in v2),1F-W23,R-T274-1 rule 1-2: exact closing height pieces,0.0188
+B: A + T-261 r3 established parts of 11 v2-HELD walls,GF-W10,R-T261-1: T-261 r3 established part (drawn member extents),39.1525
+B: A + T-261 r3 established parts of 11 v2-HELD walls,1F-W04,R-T261-1: T-261 r3 established part (drawn member extents),7.8450
+B: A + T-261 r3 established parts of 11 v2-HELD walls,1F-W10,R-T261-1: T-261 r3 established part (drawn member extents),36.9290
+B: A + T-261 r3 established parts of 11 v2-HELD walls,1F-W13,R-T261-1: T-261 r3 established part (drawn member extents),16.8073
+B: A + T-261 r3 established parts of 11 v2-HELD walls,1F-W17,R-T261-1: T-261 r3 established part (drawn member extents),4.6943
+B: A + T-261 r3 established parts of 11 v2-HELD walls,1F-W18,R-T261-1: T-261 r3 established part (drawn member extents),19.7326
+B: A + T-261 r3 established parts of 11 v2-HELD walls,1F-W24,R-T261-1: T-261 r3 established part (drawn member extents),5.5401
+B: A + T-261 r3 established parts of 11 v2-HELD walls,2F-W02,R-T261-1: T-261 r3 established part (drawn member extents),9.6915
+B: A + T-261 r3 established parts of 11 v2-HELD walls,2F-W03,R-T261-1: T-261 r3 established part (drawn member extents),25.8850
+B: A + T-261 r3 established parts of 11 v2-HELD walls,2F-W05,R-T261-1: T-261 r3 established part (drawn member extents),3.8000
+B: A + T-261 r3 established parts of 11 v2-HELD walls,2F-W07,R-T261-1: T-261 r3 established part (drawn member extents),6.2250
+TOTAL A,,v2 449.2600 -> 449.5934; residual 0.0000,0.3334
+TOTAL B,,A 449.5934 -> 625.8957; residual 0.0000,176.3023
