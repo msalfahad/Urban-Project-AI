@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-25 22:18 UTC | Lead | SUCCESS | board | Since 16:15: T-299 PART F WORKED (MERGED 5cb1e7e8, footing 874.862 kg -> HELD by downgrade; audit-band 0.051 t cause asked of the Checker); usage-limit outage 18:11-21:40 (Dashboard/W3/W1 FAILED USAGE_LIMIT_REACHED; Lead 18:11, W1 17:21, Verifier 17:52 INCOMPLETE) reported to the owner; T-300 back to TODO (no branch); VERIFIER QUEUE: T-266 Gate B first (6 h READY), T-297 r2, T-301, T-293 p2 (READY 4, CHECKER-RUNS); NEW T-303 (WP wet/roof/pool inventories); T-199 acceptance from T-293 p2 (CB5 span 2 +2.516 m2); register +5, lessons +1; Drive no new files or images; queue check: 42 actionable rows, 0 flagged, 0 stall checks | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-10-25 22:11 UTC | Lead | STARTED | run unknown | repo-attached routine | task state: board | report pending | stale run lock of run 20261025T181106-435-3824 since 2026-10-25T18:11Z recovered
 - 2026-10-25T21:51Z | Verifier | STARTED | run unknown | repo-attached routine | task state: T-266 Gate B READY, T-297 r2 READY, T-301 READY, T-293 part 2 READY (17:52 Verifier run left no final line) | self-check pending | stale run lock of run 20261025T175103-456-5771 since 2026-10-25T17:51Z recovered
 - 2026-10-25T21:41Z | Worker 2 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
