@@ -18,12 +18,12 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 3339 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 3340 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 19 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 1643 | pytest suites, one folder per round. |
-| `tools/` | 113 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
+| `tests/` | 1645 | pytest suites, one folder per round. |
+| `tools/` | 114 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (254 modules)
 
@@ -434,7 +434,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `blocker_remediation.py` | 74 | MEDIUM | 1 | BLOCKER_REMEDIATION_ENGINE (generic). |
 | `boq_canonical.py` | 134 | MEDIUM | 2 | CANONICAL BOQ ITEM MODEL (RC1) - one payable identity per physical measurement item. |
 | `boq_evidence.py` | 43 | MEDIUM | 1 | BOQ EVIDENCE MAPPING (R8.20) - which release blockers can change a quantity. |
-| `boq_line.py` | 386 | HIGH | 69 | CANONICAL BOQ LINE (M9 S1) - one payable physical measurement per line, bilingual, traceable (generic; stdlib only). |
+| `boq_line.py` | 386 | HIGH | 70 | CANONICAL BOQ LINE (M9 S1) - one payable physical measurement per line, bilingual, traceable (generic; stdlib only). |
 | `boq_reconcile.py` | 172 | CRITICAL | 2 | GENERIC BOQ RECONCILIATION (M7) - a frozen engine run against a reference bill of quantities, by family and |
 | `boq_report.py` | 94 | HIGH | 5 | BOQ REPORT LAYER (R8.19) - a PRESENTATION layer over evidence rows. It calculates NOTHING. |
 | `cad_guards.py` | 188 | MEDIUM | 3 | CAD / SOURCE GUARDS learnt from blind donor runs (generic). |
@@ -466,7 +466,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `cover_authority.py` | 232 | CRITICAL | 5 | COVER AUTHORITY - what a concrete-cover rule lets a bar length, count or mass claim (generic, stdlib only). |
 | `coverage_anomaly.py` | 53 | MEDIUM | 1 | Expected physical scope checks (generic internal completeness QA - no reference quantity is read). |
 | `coverage_census.py` | 140 | MEDIUM | 6 | COVERAGE CENSUS (M9 S1) - one terminal state for every BOQ family of the family master, per run (generic; stdlib). |
-| `coverage_census_v2.py` | 325 | MEDIUM | 1 | COVERAGE CENSUS V2 (T-140) - one terminal state per BOQ family of BOQ_FAMILY_MASTER 1.1.0, with the line count and |
+| `coverage_census_v2.py` | 325 | MEDIUM | 3 | COVERAGE CENSUS V2 (T-140) - one terminal state per BOQ family of BOQ_FAMILY_MASTER 1.1.0, with the line count and |
 | `coverage_metrics.py` | 49 | MEDIUM | 1 | Coverage metrics per trade (generic) - explain WHY a quantity is low, not only how low. |
 | `curved_geometry_check_v1.py` | 647 | MEDIUM | 1 | CURVED_GEOMETRY_CHECK_V1 (T-197, residential review R4): curved and partial geometry completeness. |
 | `curved_member_geometry.py` | 346 | CRITICAL | 3 | CURVED MEMBER GEOMETRY - circular arcs, rings and spherical shells measured exactly (generic, stdlib). |
@@ -718,7 +718,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `shx_arabic.py` | 359 | HIGH | 1 | SHX ARABIC TEXT INTAKE - Arabic notes and labels drawn with legacy SHX fonts (TEXT, MTEXT, ATTRIB). |
 | `unit_evidence.py` | 139 | HIGH | 2 | Deterministic unit / scale EVIDENCE from a D1 (LibreDWG JSON) decode — R8.3 §16. |
 
-## `tools/` (106 modules)
+## `tools/` (107 modules)
 
 | Module | Lines | Risk | Imp | Purpose |
 |---|---|---|---|---|
@@ -732,7 +732,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `a18_review_package.py` | 378 | MEDIUM | 0 | Package a frozen blind run for external review. Packaging only. |
 | `a18_zone_register.py` | 127 | MEDIUM | 0 | The visual zone register, transcribed from a frozen pass, and drawn. |
 | `align_sanitary.py` | 205 | MEDIUM | 0 | Register the sanitary set, align it to the plan, and ask the pantry. |
-| `alsenan_keymap.py` | 891 | MEDIUM | 7 | ALSENAN KEY MAP (task T-001b) - turns one engine run (canonical BOQ_LINES.json + BOQ_RELEASE_REPORT.json) and the |
+| `alsenan_keymap.py` | 891 | MEDIUM | 9 | ALSENAN KEY MAP (task T-001b) - turns one engine run (canonical BOQ_LINES.json + BOQ_RELEASE_REPORT.json) and the |
 | `alsenan_scoreboard.py` | 339 | MEDIUM | 5 | ALSENAN SCOREBOARD (task T-001a) - engine BOQ rows vs reference (freelancer) rows, scored per trade and unit as |
 | `arch_change_verify.py` | 710 | MEDIUM | 0 | BOQ CHANGE ATTRIBUTION WITH INDEPENDENT VERIFICATION (Phase 2B-8) - every BOQ total that differs between two runs of |
 | `arch_dimensions.py` | 70 | MEDIUM | 2 | ARCH DIMENSIONS (M9 Phase 2A P2-09a) - the DIMENSION entities of a plan DXF as plain records for the read-only |
@@ -813,7 +813,8 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `run_round6e.py` | 548 | MEDIUM | 1 | Round 6E on P7757: stable identity, stair completeness, one truth. |
 | `run_supervised_benchmark.py` | 300 | MEDIUM | 0 | Run P7757 as a supervised development set and report the geometry effect. |
 | `scan_vertical_evidence.py` | 259 | MEDIUM | 1 | §14. Search the architectural source set for what a plan cannot say. |
-| `scoreboard_v2.py` | 545 | MEDIUM | 4 | SCOREBOARD V2 (task T-177) - the SCOREBOARD v2 table (owner session 2026-10-22 07:30, T-132) computed by script |
+| `scoreboard_guarded.py` | 424 | MEDIUM | 1 | SCOREBOARD / CENSUS SEALED-INPUT GUARD (T-275): the scoreboard (tools/scoreboard_v2.py), the scoreboard key map |
+| `scoreboard_v2.py` | 545 | MEDIUM | 6 | SCOREBOARD V2 (task T-177) - the SCOREBOARD v2 table (owner session 2026-10-22 07:30, T-132) computed by script |
 | `split_submission_set.py` | 139 | MEDIUM | 0 | Split a submission set into DRAWINGS the engine may read and a SEALED part. |
 | `struct_n10.py` | 73 | MEDIUM | 0 | STRUCTURAL N10 (Phase N10) - formwork faces, excavation footprints and the reinforcement audit for a route G run. |
 | `synthetic_villa.py` | 603 | CRITICAL | 11 | SYNTHETIC VILLA (M2) - structural DXF drawings generated from a design spec, with ground truth from the SPEC. |
@@ -826,7 +827,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `urban_project_run.py` | 321 | CRITICAL | 1 | URBAN PROJECT RUN (M7) - one manifest per project; the blind protocol enforced by the tool, not remembered. |
 | `urban_structural_boq.py` | 602 | CRITICAL | 3 | URBAN STRUCTURAL BOQ (M1) - one command from a drawing set to a planning BOQ, an exception report, Excel and PDF. |
 | `v30_gate_b.py` | 408 | MEDIUM | 3 | V3.0 GATE B AUTOMATED CHECKS (T-156) for the Checker: a line-by-line before / after BOQ diff with the hand-check |
-| `v30_gate_b_v2.py` | 1022 | MEDIUM | 2 | V3.0 GATE B v2 (T-168): the Gate B diff of tools/v30_gate_b.py (T-156, kept unchanged and still usable) run against |
+| `v30_gate_b_v2.py` | 1022 | MEDIUM | 4 | V3.0 GATE B v2 (T-168): the Gate B diff of tools/v30_gate_b.py (T-156, kept unchanged and still usable) run against |
 | `wall_v2_diagnostic.py` | 231 | MEDIUM | 1 | Wall extraction V2 — measure the representation, then rebuild the graph. |
 
 `tools/run_e1_2.py` symbols: def layer_roles (L120-146), def prepare (L149-155), def ground_floor (L158-168), class IntervalPrim (L173-206), def interval_prims (L209-221), def boundary_role_of (L224-231), def interpret (L236-278), def build_candidates (L302-344), def build_sandbox (L349-413), def code_hashes (L416-423), def source_crops (L494-515), def candidate_overlays (L518-573), def phase_geometry (L607-777), def phase_v2_inputs (L982-1027), def release_decision (L1054-1132), def phase_finalize (L1137-1479), def main (L1605-1630)
@@ -1169,6 +1170,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t272_stirrup_closure/` | 3 |
 | `tests/t273_rebar_laps/` | 4 |
 | `tests/t274_piece_close/` | 1 |
+| `tests/t275_scoreboard_guard/` | 1 |
 | `tests/t276_buried_faces/` | 3 |
 | `tests/t277_beam_width_census/` | 2 |
 | `tests/t278_keymap_typed_lines/` | 1 |
@@ -1464,6 +1466,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t272/` | 7 |
 | `research/agents_t273/` | 6 |
 | `research/agents_t274/` | 15 |
+| `research/agents_t275/` | 1 |
 | `research/agents_t276/` | 10 |
 | `research/agents_t277/` | 11 |
 | `research/agents_t278/` | 1 |
