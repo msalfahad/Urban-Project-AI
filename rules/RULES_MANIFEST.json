@@ -16,6 +16,10 @@
    "kind": "AUTHORED",
    "sha256": "6767f78f4699b9dc0ef39ddc390053815a4ac6089bab80b4ca39547a7691ce95"
   },
+  "coverage/BOQ_FAMILY_MASTER_1.12.0.json": {
+   "kind": "AUTHORED",
+   "sha256": "e462b857ed5871b7e5ba57e3730e18382a321f44adb7f1fb471dd52595454aff"
+  },
   "coverage/BOQ_FAMILY_MASTER_1.2.0.json": {
    "kind": "AUTHORED",
    "sha256": "1dbad47b5cf809991c420ead37322e87c55b14a6f85b7898e93dd288a23586aa"
