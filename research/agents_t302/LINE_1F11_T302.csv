@@ -1,0 +1,3 @@
+item_code,room,verified_faces,verified_m2,w17_piece_gross_m2,t292_piece_m2,t292_reproduced_residual_m2,t302_hole_room_m2,t302_piece_m2,t302_line_m2,t292_line_m2,released_candidate_m2,status,held_item
+FIN.PAINT,1F-11,8,59.4510,11.0081,1.1501 .. 6.5720,0.0000,8.7414 .. 8.9965,2.0116 .. 2.2667,61.4626 .. 61.7177,60.6011 .. 66.0230,59.4511,HELD (BOUNDED),head soffit through the wall thickness not drawn (RADIAL vs PRISMATIC)
+FIN.PLASTER,1F-11,8,59.4510,11.0081,1.1501 .. 6.5720,0.0000,8.7414 .. 8.9965,2.0116 .. 2.2667,61.4626 .. 61.7177,60.6011 .. 66.0230,59.4511,HELD (BOUNDED),head soffit through the wall thickness not drawn (RADIAL vs PRISMATIC)
