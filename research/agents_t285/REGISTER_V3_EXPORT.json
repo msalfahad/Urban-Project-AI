@@ -1,0 +1,1283 @@
+{
+ "schema": "URBAN_BLOCKWORK_REGISTER_V3_EXPORT_V1",
+ "rule": "R-T285-1",
+ "register_sha256": "5c1a5a601507ed49838b3d633e97ac967f85dbadaba1663a0875a44ce1d6b17a",
+ "unit": "m2 (net installed block area; m3 = net x thickness)",
+ "integrates": {
+  "T-228 r2": "bf4dd2a9",
+  "T-261 r3": "164b189f",
+  "T-274": "aba9399a",
+  "T-277": "9446dfcb"
+ },
+ "status_note": "research register; NOT RELEASED; procurement (block units, mortar) is not here (T-176)",
+ "records": [
+  {
+   "wall_id": "GF-W00",
+   "floor": "GF",
+   "block_type": "BLACK",
+   "t_m": 0.2,
+   "state": "HELD",
+   "owner_class": "HELD",
+   "evidence_status": "HELD",
+   "basis": null,
+   "net_m2": null,
+   "net_m3": null,
+   "held": [
+    "annex datum (Q-54 B)"
+   ],
+   "conflict": null,
+   "verified_by": null
+  },
+  {
+   "wall_id": "GF-W01",
+   "floor": "GF",
+   "block_type": "BLACK",
+   "t_m": 0.2,
+   "state": "ESTABLISHED",
+   "owner_class": "SOURCE-SUPPORTED PENDING INDEPENDENT CHECK",
+   "evidence_status": "DRAWING-CONFIRMED",
+   "basis": "A",
+   "net_m2": 62.155,
+   "net_m3": 12.431,
+   "held": [],
+   "conflict": null,
+   "verified_by": null
+  },
+  {
+   "wall_id": "GF-W02",
+   "floor": "GF",
+   "block_type": "BLACK",
+   "t_m": 0.2,
+   "state": "HELD",
+   "owner_class": "HELD",
+   "evidence_status": "HELD",
+   "basis": null,
+   "net_m2": null,
+   "net_m3": null,
+   "held": [
+    "annex datum (Q-54 B)"
+   ],
+   "conflict": null,
+   "verified_by": null
+  },
+  {
+   "wall_id": "GF-W03",
+   "floor": "GF",
+   "block_type": "BLACK",
+   "t_m": 0.2,
+   "state": "HELD",
+   "owner_class": "HELD",
+   "evidence_status": "HELD",
+   "basis": null,
+   "net_m2": null,
+   "net_m3": null,
+   "held": [
+    "beam depth / register conflict",
+    "T-274 held piece(s): HELD 2.6500 m CB3 and B3 (With Stair) BM-GF-057: depth not printed (HELD)"
+   ],
+   "conflict": null,
+   "verified_by": null
+  },
+  {
+   "wall_id": "GF-W04",
+   "floor": "GF",
+   "block_type": "WHITE",
+   "t_m": 0.2,
+   "state": "HELD",
+   "owner_class": "HELD",
+   "evidence_status": "HELD",
+   "basis": null,
+   "net_m2": null,
+   "net_m3": null,
+   "held": [
+    "annex datum (Q-54 B)"
+   ],
+   "conflict": null,
+   "verified_by": null
+  },
+  {
+   "wall_id": "GF-W05",
+   "floor": "GF",
+   "block_type": "WHITE",
+   "t_m": 0.2,
+   "state": "ESTABLISHED",
+   "owner_class": "PROJECT-SPECIFIC",
+   "evidence_status": "ASSUMED — OWNER-APPROVED",
+   "basis": "A",
+   "net_m2": 5.59,
+   "net_m3": 1.118,
+   "held": [],
+   "conflict": null,
+   "verified_by": null
+  },
+  {
+   "wall_id": "GF-W06",
+   "floor": "GF",
+   "block_type": "WHITE",
+   "t_m": 0.2,
+   "state": "HELD",
+   "owner_class": "HELD",
+   "evidence_status": "HELD",
+   "basis": null,
+   "net_m2": null,
+   "net_m3": null,
+   "held": [
+    "annex datum (Q-54 B)"
+   ],
+   "conflict": null,
+   "verified_by": null
+  },
+  {
+   "wall_id": "GF-W07",
+   "floor": "GF",
+   "block_type": "WHITE",
+   "t_m": 0.2,
+   "state": "ESTABLISHED",
+   "owner_class": "VERIFIED",
+   "evidence_status": "VERIFIED",
+   "basis": "A",
+   "net_m2": 4.458,
+   "net_m3": 0.8916,
+   "held": [],
+   "conflict": null,
+   "verified_by": "Checker 2026-10-24 15:27 (T-180 slot; register v2 ruling): length 1.100, heights 4.10 / 3.75 by the drawn band edges, no opening"
+  },
+  {
+   "wall_id": "GF-W08",
+   "floor": "GF",
+   "block_type": "BLACK",
+   "t_m": 0.2,
+   "state": "HELD",
+   "owner_class": "HELD",
+   "evidence_status": "HELD",
+   "basis": null,
+   "net_m2": null,
+   "net_m3": null,
+   "held": [
+    "lift tie beam size (ST p.8 n.19)"
+   ],
+   "conflict": null,
+   "verified_by": null
+  },
+  {
+   "wall_id": "GF-W09",
+   "floor": "GF",
+   "block_type": "BLACK",
+   "t_m": 0.2,
+   "state": "HELD",
+   "owner_class": "HELD",
+   "evidence_status": "HELD",
+   "basis": null,
+   "net_m2": null,
+   "net_m3": null,
+   "held": [
+    "lift tie beam size (ST p.8 n.19)"
+   ],
+   "conflict": null,
+   "verified_by": null
+  },
+  {
+   "wall_id": "GF-W10",
+   "floor": "GF",
+   "block_type": "WHITE",
+   "t_m": 0.2,
+   "state": "ESTABLISHED_PART_PLUS_HELD",
+   "owner_class": "SOURCE-SUPPORTED PENDING INDEPENDENT CHECK",
+   "evidence_status": "DRAWING-CONFIRMED",
+   "basis": "B",
+   "net_m2": 39.1525,
+   "net_m3": 7.8305,
+   "held": [
+    "SF B3 (With Stair) stair-foot 2.500 m: base +0.30 stair-foot landing (plan LEVEL 4AB / 4AC; section A-A sheet10), top = the stair landing member / cranked 'B3 (With Stair)' (6B6), size and soffit not printed (T-228 F1, R-T228-3) [figure, not a quantity: 2.500 x 4.10 = 10.250 - D-GF-09 1.980 = 8.270 on the +1.00 / B3 basis]"
+   ],
+   "conflict": null,
+   "verified_by": null
+  },
+  {
+   "wall_id": "GF-W11",
+   "floor": "GF",
+   "block_type": "WHITE",
+   "t_m": 0.2,
+   "state": "ESTABLISHED",
+   "owner_class": "SOURCE-SUPPORTED PENDING INDEPENDENT CHECK",
+   "evidence_status": "DRAWING-CONFIRMED",
+   "basis": "A",
+   "net_m2": 2.505,
+   "net_m3": 0.501,
+   "held": [],
+   "conflict": null,
+   "verified_by": null
+  },
+  {
+   "wall_id": "GF-W12",
+   "floor": "GF",
+   "block_type": "WHITE",
+   "t_m": 0.2,
+   "state": "ESTABLISHED",
+   "owner_class": "VERIFIED",
+   "evidence_status": "VERIFIED",
+   "basis": "A",
+   "net_m2": 1.953,
+   "net_m3": 0.3906,
+   "held": [],
+   "conflict": null,
+   "verified_by": "Checker 2026-10-25 00:06 (T-180 slot): whole wall, every piece own, no opening in the run"
+  },
+  {
+   "wall_id": "GF-W13",
+   "floor": "GF",
+   "block_type": "BLACK",
+   "t_m": 0.2,
+   "state": "HELD",
+   "owner_class": "HELD",
+   "evidence_status": "HELD",
+   "basis": null,
+   "net_m2": null,
+   "net_m3": null,
+   "held": [
+    "lift tie beam size (ST p.8 n.19)"
+   ],
+   "conflict": null,
+   "verified_by": null
+  },
+  {
+   "wall_id": "GF-W14",
+   "floor": "GF",
+   "block_type": "BLACK",
+   "t_m": 0.2,
+   "state": "HELD",
+   "owner_class": "HELD",
+   "evidence_status": "HELD",
+   "basis": null,
+   "net_m2": null,
+   "net_m3": null,
+   "held": [
+    "lift tie beam size (ST p.8 n.19)"
+   ],
+   "conflict": null,
+   "verified_by": null
+  },
+  {
+   "wall_id": "GF-W15",
+   "floor": "GF",
+   "block_type": "WHITE",
+   "t_m": 0.2,
+   "state": "HELD",
+   "owner_class": "HELD",
+   "evidence_status": "HELD",
+   "basis": null,
+   "net_m2": null,
+   "net_m3": null,
+   "held": [
+    "held opening"
+   ],
+   "conflict": null,
+   "verified_by": null
+  },
+  {
+   "wall_id": "GF-W16",
+   "floor": "GF",
+   "block_type": "WHITE",
+   "t_m": 0.2,
+   "state": "ESTABLISHED",
+   "owner_class": "SOURCE-SUPPORTED PENDING INDEPENDENT CHECK",
+   "evidence_status": "DRAWING-CONFIRMED",
+   "basis": "A",
+   "net_m2": 15.4356,
+   "net_m3": 3.0871,
+   "held": [],
+   "conflict": null,
+   "verified_by": null
+  },
+  {
+   "wall_id": "GF-W17",
+   "floor": "GF",
+   "block_type": "WHITE",
+   "t_m": 0.2,
+   "state": "HELD",
+   "owner_class": "HELD",
+   "evidence_status": "HELD",
+   "basis": null,
+   "net_m2": null,
+   "net_m3": null,
+   "held": [
+    "annex datum (Q-54 B)"
+   ],
+   "conflict": null,
+   "verified_by": null
+  },
+  {
+   "wall_id": "GF-W18",
+   "floor": "GF",
+   "block_type": "WHITE",
+   "t_m": 0.2,
+   "state": "HELD",
+   "owner_class": "HELD",
+   "evidence_status": "HELD",
+   "basis": null,
+   "net_m2": null,
+   "net_m3": null,
+   "held": [
+    "annex datum (Q-54 B)"
+   ],
+   "conflict": null,
+   "verified_by": null
+  },
+  {
+   "wall_id": "GF-W19",
+   "floor": "GF",
+   "block_type": "BLACK",
+   "t_m": 0.15,
+   "state": "ESTABLISHED",
+   "owner_class": "SOURCE-SUPPORTED PENDING INDEPENDENT CHECK",
+   "evidence_status": "DRAWING-CONFIRMED",
+   "basis": "A",
+   "net_m2": 8.595,
+   "net_m3": 1.2893,
+   "held": [],
+   "conflict": {
+    "text": "CB2 BM-GF-055 (C-BEAM2 28C7 W 20 H 50) width CONFLICT (D-27): net readings drawn width 0.250 8.5950; schedule width 0.200 (face kept) 8.5950; schedule width 0.200 (face moved) 8.6120; established = part in every reading 8.5950, CONFLICT increment 0.0170 m2 by name (never added, never 0, none chosen)",
+    "increment_m2": 0.017
+   },
+   "verified_by": null
+  },
+  {
+   "wall_id": "GF-W20",
+   "floor": "GF",
+   "block_type": "BLACK",
+   "t_m": 0.15,
+   "state": "ESTABLISHED",
+   "owner_class": "SOURCE-SUPPORTED PENDING INDEPENDENT CHECK",
+   "evidence_status": "DRAWING-CONFIRMED",
+   "basis": "A",
+   "net_m2": 4.2398,
+   "net_m3": 0.636,
+   "held": [],
+   "conflict": {
+    "text": "CB2 BM-GF-055 (C-BEAM2 28C7 W 20 H 50) width CONFLICT (D-27): net readings drawn width 0.250 4.2398; schedule width 0.200 (face kept) 4.2398; schedule width 0.200 (face moved) 4.2568; established = part in every reading 4.2398, CONFLICT increment 0.0170 m2 by name (never added, never 0, none chosen)",
+    "increment_m2": 0.017
+   },
+   "verified_by": null
+  },
+  {
+   "wall_id": "GF-W21",
+   "floor": "GF",
+   "block_type": "BLACK",
+   "t_m": 0.15,
+   "state": "ESTABLISHED",
+   "owner_class": "VERIFIED",
+   "evidence_status": "VERIFIED",
+   "basis": "A",
+   "net_m2": 4.309,
+   "net_m3": 0.6463,
+   "held": [],
+   "conflict": null,
+   "verified_by": "Checker 2026-10-24 18:04 (T-180 slot): mean face length 0.9929 x 4.34, slab only, no opening"
+  },
+  {
+   "wall_id": "GF-W22",
+   "floor": "GF",
+   "block_type": "BLACK",
+   "t_m": 0.15,
+   "state": "ESTABLISHED",
+   "owner_class": "SOURCE-SUPPORTED PENDING INDEPENDENT CHECK",
+   "evidence_status": "DRAWING-CONFIRMED",
+   "basis": "A",
+   "net_m2": 12.9311,
+   "net_m3": 1.9397,
+   "held": [],
+   "conflict": {
+    "text": "CB2 BM-GF-055 (C-BEAM2 28C7 W 20 H 50) width CONFLICT (D-27): net readings drawn width 0.250 12.9311; schedule width 0.200 12.9439; established = part in every reading 12.9311, CONFLICT increment 0.0128 m2 by name (never added, never 0, none chosen)",
+    "increment_m2": 0.0128
+   },
+   "verified_by": null
+  },
+  {
+   "wall_id": "GF-W23",
+   "floor": "GF",
+   "block_type": "BLACK",
+   "t_m": 0.15,
+   "state": "HELD",
+   "owner_class": "HELD",
+   "evidence_status": "HELD",
+   "basis": null,
+   "net_m2": null,
+   "net_m3": null,
+   "held": [
+    "annex datum (Q-54 B)"
+   ],
+   "conflict": null,
+   "verified_by": null
+  },
+  {
+   "wall_id": "GF-W24",
+   "floor": "GF",
+   "block_type": "BLACK",
+   "t_m": 0.15,
+   "state": "HELD",
+   "owner_class": "HELD",
+   "evidence_status": "HELD",
+   "basis": null,
+   "net_m2": null,
+   "net_m3": null,
+   "held": [
+    "annex datum (Q-54 B)"
+   ],
+   "conflict": null,
+   "verified_by": null
+  },
+  {
+   "wall_id": "GF-W25",
+   "floor": "GF",
+   "block_type": "BLACK",
+   "t_m": 0.15,
+   "state": "HELD",
+   "owner_class": "HELD",
+   "evidence_status": "HELD",
+   "basis": null,
+   "net_m2": null,
+   "net_m3": null,
+   "held": [
+    "annex datum (Q-54 B)"
+   ],
+   "conflict": null,
+   "verified_by": null
+  },
+  {
+   "wall_id": "GF-W26",
+   "floor": "GF",
+   "block_type": "BLACK",
+   "t_m": 0.15,
+   "state": "HELD",
+   "owner_class": "HELD",
+   "evidence_status": "HELD",
+   "basis": null,
+   "net_m2": null,
+   "net_m3": null,
+   "held": [
+    "held opening"
+   ],
+   "conflict": null,
+   "verified_by": null
+  },
+  {
+   "wall_id": "GF-W27",
+   "floor": "GF",
+   "block_type": "BLACK",
+   "t_m": 0.15,
+   "state": "HELD",
+   "owner_class": "HELD",
+   "evidence_status": "HELD",
+   "basis": null,
+   "net_m2": null,
+   "net_m3": null,
+   "held": [
+    "annex datum (Q-54 B)"
+   ],
+   "conflict": null,
+   "verified_by": null
+  },
+  {
+   "wall_id": "GF-W28",
+   "floor": "GF",
+   "block_type": "BLACK",
+   "t_m": 0.15,
+   "state": "ESTABLISHED",
+   "owner_class": "PROJECT-SPECIFIC",
+   "evidence_status": "ASSUMED — OWNER-APPROVED",
+   "basis": "A",
+   "net_m2": 20.1384,
+   "net_m3": 3.0208,
+   "held": [],
+   "conflict": null,
+   "verified_by": null
+  },
+  {
+   "wall_id": "GF-W29",
+   "floor": "GF",
+   "block_type": "BLACK",
+   "t_m": 0.15,
+   "state": "ESTABLISHED",
+   "owner_class": "PROJECT-SPECIFIC",
+   "evidence_status": "ASSUMED — OWNER-APPROVED",
+   "basis": "A",
+   "net_m2": 4.099,
+   "net_m3": 0.6149,
+   "held": [],
+   "conflict": null,
+   "verified_by": null
+  },
+  {
+   "wall_id": "GF-W30",
+   "floor": "GF",
+   "block_type": "BLACK",
+   "t_m": 0.15,
+   "state": "HELD",
+   "owner_class": "HELD",
+   "evidence_status": "HELD",
+   "basis": null,
+   "net_m2": null,
+   "net_m3": null,
+   "held": [
+    "held opening"
+   ],
+   "conflict": null,
+   "verified_by": null
+  },
+  {
+   "wall_id": "GF-W31",
+   "floor": "GF",
+   "block_type": "BLACK",
+   "t_m": 0.15,
+   "state": "ESTABLISHED",
+   "owner_class": "SOURCE-SUPPORTED PENDING INDEPENDENT CHECK",
+   "evidence_status": "DRAWING-CONFIRMED",
+   "basis": "A",
+   "net_m2": 5.6455,
+   "net_m3": 0.8468,
+   "held": [],
+   "conflict": null,
+   "verified_by": null
+  },
+  {
+   "wall_id": "GF-W32",
+   "floor": "GF",
+   "block_type": "BLACK",
+   "t_m": 0.15,
+   "state": "ESTABLISHED",
+   "owner_class": "PROJECT-SPECIFIC",
+   "evidence_status": "ASSUMED — OWNER-APPROVED",
+   "basis": "A",
+   "net_m2": 9.1294,
+   "net_m3": 1.3694,
+   "held": [],
+   "conflict": null,
+   "verified_by": null
+  },
+  {
+   "wall_id": "GF-W33",
+   "floor": "GF",
+   "block_type": "BLACK",
+   "t_m": 0.15,
+   "state": "ESTABLISHED",
+   "owner_class": "VERIFIED",
+   "evidence_status": "VERIFIED",
+   "basis": "A",
+   "net_m2": 5.586,
+   "net_m3": 0.8379,
+   "held": [],
+   "conflict": null,
+   "verified_by": "Checker 2026-10-25 00:06 (T-180 slot): whole wall, every piece own, no opening in the run"
+  },
+  {
+   "wall_id": "GF-W34",
+   "floor": "GF",
+   "block_type": "BLACK",
+   "t_m": 0.15,
+   "state": "ESTABLISHED",
+   "owner_class": "SOURCE-SUPPORTED PENDING INDEPENDENT CHECK",
+   "evidence_status": "DRAWING-CONFIRMED",
+   "basis": "A",
+   "net_m2": 10.3982,
+   "net_m3": 1.5597,
+   "held": [],
+   "conflict": {
+    "text": "CB2 BM-GF-055 (C-BEAM2 28C7 W 20 H 50) width CONFLICT (D-27): net readings drawn width 0.250 10.3982; schedule width 0.200 10.4121; established = part in every reading 10.3982, CONFLICT increment 0.0139 m2 by name (never added, never 0, none chosen)",
+    "increment_m2": 0.0139
+   },
+   "verified_by": null
+  },
+  {
+   "wall_id": "1F-W00",
+   "floor": "1F",
+   "block_type": "WHITE",
+   "t_m": 0.2,
+   "state": "ESTABLISHED",
+   "owner_class": "SOURCE-SUPPORTED PENDING INDEPENDENT CHECK",
+   "evidence_status": "DRAWING-CONFIRMED",
+   "basis": "A",
+   "net_m2": 12.9336,
+   "net_m3": 2.5867,
+   "held": [],
+   "conflict": null,
+   "verified_by": null
+  },
+  {
+   "wall_id": "1F-W01",
+   "floor": "1F",
+   "block_type": "WHITE",
+   "t_m": 0.2,
+   "state": "ESTABLISHED",
+   "owner_class": "VERIFIED",
+   "evidence_status": "VERIFIED",
+   "basis": "A",
+   "net_m2": 2.832,
+   "net_m3": 0.5664,
+   "held": [],
+   "conflict": null,
+   "verified_by": "Checker 2026-10-25 00:06 (T-180 slot): whole wall, every piece own, no opening in the run"
+  },
+  {
+   "wall_id": "1F-W02",
+   "floor": "1F",
+   "block_type": "BLACK",
+   "t_m": 0.2,
+   "state": "ESTABLISHED",
+   "owner_class": "VERIFIED",
+   "evidence_status": "VERIFIED",
+   "basis": "A",
+   "net_m2": 2.66,
+   "net_m3": 0.532,
+   "held": [],
+   "conflict": null,
+   "verified_by": "Checker 2026-10-24 18:04 (T-180 slot): 0.700 x (4.20 - 0.40), band B1, no opening"
+  },
+  {
+   "wall_id": "1F-W03",
+   "floor": "1F",
+   "block_type": "BLACK",
+   "t_m": 0.2,
+   "state": "ESTABLISHED",
+   "owner_class": "VERIFIED",
+   "evidence_status": "VERIFIED",
+   "basis": "A",
+   "net_m2": 14.4,
+   "net_m3": 2.88,
+   "held": [],
+   "conflict": null,
+   "verified_by": "Checker 2026-10-24 16:03 (T-180 slot): whole wall: length, height, openings"
+  },
+  {
+   "wall_id": "1F-W04",
+   "floor": "1F",
+   "block_type": "WHITE",
+   "t_m": 0.2,
+   "state": "ESTABLISHED_PART_PLUS_HELD",
+   "owner_class": "SOURCE-SUPPORTED PENDING INDEPENDENT CHECK",
+   "evidence_status": "DRAWING-CONFIRMED",
+   "basis": "B",
+   "net_m2": 7.845,
+   "net_m3": 1.569,
+   "held": [
+    "H BM-1F-032 0.800 m: unlabelled span from the B23 band face to the column (T-110 BM-1F-032, D-04): depth not printed (Q-61 C(4)) [figure, not a quantity: 0.800 x 3.80 = 3.040 at the only candidate B2 H40 (T-226 bound), not a quantity]"
+   ],
+   "conflict": null,
+   "verified_by": null
+  },
+  {
+   "wall_id": "1F-W05",
+   "floor": "1F",
+   "block_type": "WHITE",
+   "t_m": 0.2,
+   "state": "ESTABLISHED",
+   "owner_class": "SOURCE-SUPPORTED PENDING INDEPENDENT CHECK",
+   "evidence_status": "DRAWING-CONFIRMED",
+   "basis": "A",
+   "net_m2": 19.303,
+   "net_m3": 3.8606,
+   "held": [],
+   "conflict": null,
+   "verified_by": null
+  },
+  {
+   "wall_id": "1F-W06",
+   "floor": "1F",
+   "block_type": "WHITE",
+   "t_m": 0.2,
+   "state": "ESTABLISHED",
+   "owner_class": "SOURCE-SUPPORTED PENDING INDEPENDENT CHECK",
+   "evidence_status": "DRAWING-CONFIRMED",
+   "basis": "A",
+   "net_m2": 54.4897,
+   "net_m3": 10.8979,
+   "held": [],
+   "conflict": null,
+   "verified_by": null
+  },
+  {
+   "wall_id": "1F-W07",
+   "floor": "1F",
+   "block_type": "BLACK",
+   "t_m": 0.2,
+   "state": "HELD",
+   "owner_class": "HELD",
+   "evidence_status": "HELD",
+   "basis": null,
+   "net_m2": null,
+   "net_m3": null,
+   "held": [
+    "held opening"
+   ],
+   "conflict": null,
+   "verified_by": null
+  },
+  {
+   "wall_id": "1F-W08",
+   "floor": "1F",
+   "block_type": "WHITE",
+   "t_m": 0.2,
+   "state": "ESTABLISHED",
+   "owner_class": "VERIFIED",
+   "evidence_status": "VERIFIED",
+   "basis": "A",
+   "net_m2": 12.42,
+   "net_m3": 2.484,
+   "held": [],
+   "conflict": null,
+   "verified_by": "Checker 2026-10-24 16:04 (T-180 slot): whole wall: B23 2.900 + 0.700, column 0.80 out"
+  },
+  {
+   "wall_id": "1F-W09",
+   "floor": "1F",
+   "block_type": "BLACK",
+   "t_m": 0.2,
+   "state": "ESTABLISHED",
+   "owner_class": "VERIFIED",
+   "evidence_status": "VERIFIED",
+   "basis": "A",
+   "net_m2": 6.84,
+   "net_m3": 1.368,
+   "held": [],
+   "conflict": null,
+   "verified_by": "Checker 2026-10-24 17:07 (T-180 slot): whole wall: length, height, openings"
+  },
+  {
+   "wall_id": "1F-W10",
+   "floor": "1F",
+   "block_type": "WHITE",
+   "t_m": 0.2,
+   "state": "ESTABLISHED_PART_PLUS_HELD",
+   "owner_class": "SOURCE-SUPPORTED PENDING INDEPENDENT CHECK",
+   "evidence_status": "DRAWING-CONFIRMED",
+   "basis": "B",
+   "net_m2": 36.929,
+   "net_m3": 7.3858,
+   "held": [
+    "SF B3 (With Stair) 2.500 m: no floor at +5.50 on the shaft line (A-A sheet10); top = 'B3 (With Stair)' 6B8 with no floor-level member printed; base / top = the +3.50 and about +7.6 landing members (R-T228-3, F3) [figure, not a quantity: 2.500 x 3.80 = 9.500 - W25 1.500 = 8.000 on the +5.50 basis]"
+   ],
+   "conflict": null,
+   "verified_by": null
+  },
+  {
+   "wall_id": "1F-W11",
+   "floor": "1F",
+   "block_type": "BLACK",
+   "t_m": 0.15,
+   "state": "HELD",
+   "owner_class": "HELD",
+   "evidence_status": "HELD",
+   "basis": null,
+   "net_m2": null,
+   "net_m3": null,
+   "held": [
+    "no member drawn above",
+    "T-274 held piece(s): HELD 0.1579 m DOME_OPENING+RING 1F-073: nothing with a printed soffit is drawn over this length; 3.9182 m DOME_OPENING+RING 1F-073: nothing with a printed soffit is drawn over this length"
+   ],
+   "conflict": {
+    "text": "CB10 BM-1F-031 (C-BEAM2 23F0 W 25 H 50) width CONFLICT (D-02): established-part figure readings drawn width 0.300|0.200 0.6432; schedule width 0.250 (face kept) 0.6432; schedule width 0.250 (face moved) 0.6602; established = part in every reading 0.6432, CONFLICT increment 0.0170 m2 by name (never added, never 0, none chosen)",
+    "increment_m2": 0.017
+   },
+   "verified_by": null
+  },
+  {
+   "wall_id": "1F-W12",
+   "floor": "1F",
+   "block_type": "BLACK",
+   "t_m": 0.15,
+   "state": "ESTABLISHED",
+   "owner_class": "PROJECT-SPECIFIC",
+   "evidence_status": "ASSUMED — OWNER-APPROVED",
+   "basis": "A",
+   "net_m2": 11.5815,
+   "net_m3": 1.7372,
+   "held": [],
+   "conflict": null,
+   "verified_by": null
+  },
+  {
+   "wall_id": "1F-W13",
+   "floor": "1F",
+   "block_type": "BLACK",
+   "t_m": 0.15,
+   "state": "ESTABLISHED_PART_PLUS_HELD",
+   "owner_class": "SOURCE-SUPPORTED PENDING INDEPENDENT CHECK",
+   "evidence_status": "DRAWING-CONFIRMED",
+   "basis": "B",
+   "net_m2": 16.8073,
+   "net_m3": 2.5211,
+   "held": [
+    "H east ring west crossing 0.29026 m: ring band between arcs 64A (r 2.411) and 649 (r 2.211) of the east dome: no B4 label on the east circle (B4 1828 / 1829 label the west ring only); its size rests on Q-44 A (owner: B4 0.20 x 0.50 round each opening), an approved fallback for lane I / the Checker to apply as ASSUMED - OWNER-APPROVED, not a printed depth [figure, not a quantity: 0.29026 x 3.70 = 1.0740 at Q-44 A B4, not a quantity]",
+    "H east dome opening 1F-077 2.89466 m: inside the east dome opening (circle 649 r 2.211, S-OPENING 656 .. 65A): the top of the wall is not drawn (T-227: designer); D-1F-09 lies wholly here [figure, not a quantity: 2.89466 m, height not drawn; D-1F-09 1.980 inside]",
+    "H east ring east crossing 0.29025 m: ring band between arcs 649 and 64D (r 2.411): no B4 label on the east circle (Q-44 A as above) [figure, not a quantity: 0.29025 x 3.70 = 1.0739 at Q-44 A B4, not a quantity]"
+   ],
+   "conflict": null,
+   "verified_by": null
+  },
+  {
+   "wall_id": "1F-W14 + 1F-W15",
+   "floor": "1F",
+   "block_type": "BLACK",
+   "t_m": 0.15,
+   "state": "HELD",
+   "owner_class": "HELD",
+   "evidence_status": "HELD",
+   "basis": null,
+   "net_m2": null,
+   "net_m3": null,
+   "held": [
+    "held opening"
+   ],
+   "conflict": null,
+   "verified_by": null
+  },
+  {
+   "wall_id": "1F-W16",
+   "floor": "1F",
+   "block_type": "BLACK",
+   "t_m": 0.15,
+   "state": "HELD",
+   "owner_class": "HELD",
+   "evidence_status": "HELD",
+   "basis": null,
+   "net_m2": null,
+   "net_m3": null,
+   "held": [
+    "held opening"
+   ],
+   "conflict": {
+    "text": "B6 BM-1F-030 (SBT 1EA4 B6 25 x 50) width CONFLICT (D-27): gross figure readings drawn width 0.200 21.8288; schedule width 0.250 21.8118; established = part in every reading 21.8118, CONFLICT increment 0.0170 m2 by name (never added, never 0, none chosen)",
+    "increment_m2": 0.017
+   },
+   "verified_by": null
+  },
+  {
+   "wall_id": "1F-W17",
+   "floor": "1F",
+   "block_type": "BLACK",
+   "t_m": 0.15,
+   "state": "ESTABLISHED_PART_PLUS_HELD",
+   "owner_class": "SOURCE-SUPPORTED PENDING INDEPENDENT CHECK",
+   "evidence_status": "DRAWING-CONFIRMED",
+   "basis": "B",
+   "net_m2": 4.6943,
+   "net_m3": 0.7041,
+   "held": [
+    "H east dome opening 1F-077 0.46158 m: from the 1F-W13 north face to circle 649 (r 2.211) the centreline is inside the east dome opening: top of wall not drawn (T-227: designer) [figure, not a quantity: 0.46158 m, height not drawn]",
+    "H east ring sliver 0.00294 m: 0.00294 m between circle 649 and B6 face 6D2: east ring band, no B4 label (Q-44 A) [figure, not a quantity: 0.00294 x 3.70 = 0.0109 at Q-44 A B4, not a quantity]"
+   ],
+   "conflict": null,
+   "verified_by": null
+  },
+  {
+   "wall_id": "1F-W18",
+   "floor": "1F",
+   "block_type": "BLACK",
+   "t_m": 0.15,
+   "state": "ESTABLISHED",
+   "owner_class": "SOURCE-SUPPORTED PENDING INDEPENDENT CHECK",
+   "evidence_status": "DRAWING-CONFIRMED",
+   "basis": "B",
+   "net_m2": 19.7326,
+   "net_m3": 2.9599,
+   "held": [],
+   "conflict": null,
+   "verified_by": null
+  },
+  {
+   "wall_id": "1F-W19",
+   "floor": "1F",
+   "block_type": "BLACK",
+   "t_m": 0.15,
+   "state": "ESTABLISHED",
+   "owner_class": "PROJECT-SPECIFIC",
+   "evidence_status": "ASSUMED — OWNER-APPROVED",
+   "basis": "A",
+   "net_m2": 5.512,
+   "net_m3": 0.8268,
+   "held": [],
+   "conflict": null,
+   "verified_by": null
+  },
+  {
+   "wall_id": "1F-W20",
+   "floor": "1F",
+   "block_type": "BLACK",
+   "t_m": 0.15,
+   "state": "ESTABLISHED",
+   "owner_class": "SOURCE-SUPPORTED PENDING INDEPENDENT CHECK",
+   "evidence_status": "DRAWING-CONFIRMED",
+   "basis": "A",
+   "net_m2": 24.5068,
+   "net_m3": 3.676,
+   "held": [],
+   "conflict": null,
+   "verified_by": null
+  },
+  {
+   "wall_id": "1F-W21",
+   "floor": "1F",
+   "block_type": "BLACK",
+   "t_m": 0.15,
+   "state": "ESTABLISHED",
+   "owner_class": "VERIFIED",
+   "evidence_status": "VERIFIED",
+   "basis": "A",
+   "net_m2": 7.41,
+   "net_m3": 1.1115,
+   "held": [],
+   "conflict": null,
+   "verified_by": "Checker 2026-10-24 17:07 (T-180 slot): whole wall: length, height, openings"
+  },
+  {
+   "wall_id": "1F-W22",
+   "floor": "1F",
+   "block_type": "BLACK",
+   "t_m": 0.15,
+   "state": "ESTABLISHED",
+   "owner_class": "SOURCE-SUPPORTED PENDING INDEPENDENT CHECK",
+   "evidence_status": "DRAWING-CONFIRMED",
+   "basis": "A",
+   "net_m2": 20.401,
+   "net_m3": 3.0601,
+   "held": [],
+   "conflict": null,
+   "verified_by": null
+  },
+  {
+   "wall_id": "1F-W23",
+   "floor": "1F",
+   "block_type": "BLACK",
+   "t_m": 0.15,
+   "state": "ESTABLISHED",
+   "owner_class": "PROJECT-SPECIFIC",
+   "evidence_status": "ASSUMED — OWNER-APPROVED",
+   "basis": "A",
+   "net_m2": 19.6578,
+   "net_m3": 2.9487,
+   "held": [],
+   "conflict": null,
+   "verified_by": null
+  },
+  {
+   "wall_id": "1F-W24",
+   "floor": "1F",
+   "block_type": "BLACK",
+   "t_m": 0.15,
+   "state": "ESTABLISHED_PART_PLUS_HELD",
+   "owner_class": "SOURCE-SUPPORTED PENDING INDEPENDENT CHECK",
+   "evidence_status": "DRAWING-CONFIRMED",
+   "basis": "B",
+   "net_m2": 5.5401,
+   "net_m3": 0.831,
+   "held": [
+    "H dome opening 1F-073 1.05766 m: from B6 face 6DF to the north wall face the centreline is inside the west dome opening (arc 5FF r 2.211, S-OPENING 604 .. 617; T-139 face 1F-073): the top of the wall is not drawn; DETAIL OF DOME (1A18, '(N.I.S)') prints ring bars only [figure, not a quantity: 1.05766 m, height not drawn]"
+   ],
+   "conflict": null,
+   "verified_by": null
+  },
+  {
+   "wall_id": "2F-W00",
+   "floor": "2F",
+   "block_type": "BLACK",
+   "t_m": 0.2,
+   "state": "HELD",
+   "owner_class": "HELD",
+   "evidence_status": "HELD",
+   "basis": null,
+   "net_m2": null,
+   "net_m3": null,
+   "held": [
+    "held opening"
+   ],
+   "conflict": null,
+   "verified_by": null
+  },
+  {
+   "wall_id": "2F-W01",
+   "floor": "2F",
+   "block_type": "BLACK",
+   "t_m": 0.2,
+   "state": "ESTABLISHED",
+   "owner_class": "VERIFIED",
+   "evidence_status": "VERIFIED",
+   "basis": "A",
+   "net_m2": 6.84,
+   "net_m3": 1.368,
+   "held": [],
+   "conflict": null,
+   "verified_by": "Checker 2026-10-24 17:07 (T-180 slot): whole wall: length, height, openings"
+  },
+  {
+   "wall_id": "2F-W02",
+   "floor": "2F",
+   "block_type": "WHITE",
+   "t_m": 0.2,
+   "state": "ESTABLISHED_PART_PLUS_HELD",
+   "owner_class": "SOURCE-SUPPORTED PENDING INDEPENDENT CHECK",
+   "evidence_status": "DRAWING-CONFIRMED",
+   "basis": "B",
+   "net_m2": 9.6915,
+   "net_m3": 1.9383,
+   "held": [
+    "SF B3 2.500 m: SL-1 shaft piece: no floor at +9.70 on the stair-wall line (A-A sheet10; R-T228-3, F4) [figure, not a quantity: 2.500 x 3.80 = 9.500 - W27 1.500 = 8.000]",
+    "R length residual 0.097 m: 0.097 m between the drawn faces (2.500 + 3.470) and the ledger pieces (B3 2.500 + B8 3.567); location not established (T-017 census AGREE 7.000) [figure, not a quantity: 0.097 x 3.45 = 0.335]",
+    "H BM-2F-015 0.933 m: unlabelled east end span past the column (T-110 BM-2F-015, D-04): depth not printed, candidates B8 H75 / B3 H40 (Q-61 C(4): a bound, never a value) [figure, not a quantity: 0.933 x 3.45 .. 3.80 = 3.219 .. 3.545]"
+   ],
+   "conflict": null,
+   "verified_by": null
+  },
+  {
+   "wall_id": "2F-W03",
+   "floor": "2F",
+   "block_type": "WHITE",
+   "t_m": 0.15,
+   "state": "ESTABLISHED_PART_PLUS_HELD",
+   "owner_class": "SOURCE-SUPPORTED PENDING INDEPENDENT CHECK",
+   "evidence_status": "DRAWING-CONFIRMED",
+   "basis": "B",
+   "net_m2": 25.885,
+   "net_m3": 3.8828,
+   "held": [
+    "H west corner in the BM-2F-016 band 0.100 m: 0.100 m of the census inside the west band (BM-2F-016, unlabelled, D-04): depth not printed (Q-61 C(4)) [figure, not a quantity: 0.100 x 3.00 .. 3.80 = 0.300 .. 0.380 (B15 H120 / 20x40 candidates), not a quantity]",
+    "H junction BM-2F-018 0.200 m: 0.200 m where the unlabelled BM-2F-018 frames into the band (D-04): the soffit is the deeper of B2 / B1 (0.40) and a member whose depth is not printed [figure, not a quantity: 0.200 x 3.80 = 0.760 at most (band 0.40 printed), not a quantity]",
+    "H junction BM-2F-017 0.200 m: 0.200 m where the unlabelled BM-2F-017 frames into the band (D-04): the soffit is the deeper of B1 / B2 (0.40) and a member whose depth is not printed [figure, not a quantity: 0.200 x 3.80 = 0.760 at most (band 0.40 printed), not a quantity]"
+   ],
+   "conflict": null,
+   "verified_by": null
+  },
+  {
+   "wall_id": "2F-W04",
+   "floor": "2F",
+   "block_type": "WHITE",
+   "t_m": 0.2,
+   "state": "ESTABLISHED",
+   "owner_class": "VERIFIED",
+   "evidence_status": "VERIFIED",
+   "basis": "A",
+   "net_m2": 21.476,
+   "net_m3": 4.2952,
+   "held": [],
+   "conflict": null,
+   "verified_by": "Checker 2026-10-24 15:27 (T-180 slot): whole wall: length, height pieces (B7 + corner rule 6), no opening"
+  },
+  {
+   "wall_id": "2F-W05",
+   "floor": "2F",
+   "block_type": "BLACK",
+   "t_m": 0.2,
+   "state": "ESTABLISHED_PART_PLUS_HELD",
+   "owner_class": "SOURCE-SUPPORTED PENDING INDEPENDENT CHECK",
+   "evidence_status": "DRAWING-CONFIRMED",
+   "basis": "B",
+   "net_m2": 3.8,
+   "net_m3": 0.76,
+   "held": [
+    "H BM-2F-017 1.200 m: unlabelled vertical piece from column 418 to the top band inner face 393 (T-110 BM-2F-017, D-04): depth not printed (Q-61 C(4)) [figure, not a quantity: 1.200 x 3.00 .. 3.80 = 3.600 .. 4.560 less D-2F-02 1.980, not a quantity]",
+    "H junction in the top band 0.050 m: 0.050 m from the top band inner face to the inner face of 2F-W03, where BM-2F-017 frames into the band: soffit the deeper of B1 / B2 (0.40) and BM-2F-017 (not printed) [figure, not a quantity: 0.050 x 3.80 = 0.190 at most, not a quantity]"
+   ],
+   "conflict": null,
+   "verified_by": null
+  },
+  {
+   "wall_id": "2F-W06",
+   "floor": "2F",
+   "block_type": "BLACK",
+   "t_m": 0.2,
+   "state": "ESTABLISHED",
+   "owner_class": "VERIFIED",
+   "evidence_status": "VERIFIED",
+   "basis": "A",
+   "net_m2": 14.82,
+   "net_m3": 2.964,
+   "held": [],
+   "conflict": null,
+   "verified_by": "Checker 2026-10-24 16:03 (T-180 slot): whole wall: length, height, openings"
+  },
+  {
+   "wall_id": "2F-W07",
+   "floor": "2F",
+   "block_type": "WHITE",
+   "t_m": 0.2,
+   "state": "ESTABLISHED_PART_PLUS_HELD",
+   "owner_class": "SOURCE-SUPPORTED PENDING INDEPENDENT CHECK",
+   "evidence_status": "DRAWING-CONFIRMED",
+   "basis": "B",
+   "net_m2": 6.225,
+   "net_m3": 1.245,
+   "held": [
+    "H BM-2F-016 2.900 m: west band south span (T-110 BM-2F-016, D-04): B15 printed on the north span only; depth not printed (candidates B15 H120 or a 20x40 type, Q-61 C(4)) [figure, not a quantity: 2.900 x 3.00 .. 3.80 = 8.700 .. 11.020, not a quantity]",
+    "H south corner in the BM-2F-016 band 0.125 m: 0.125 m of the census in the corner where BM-2F-016 meets the top band: soffit the deeper of B2 (0.40) and BM-2F-016 (depth not printed) [figure, not a quantity: 0.125 x 3.00 .. 3.80 = 0.375 .. 0.475, not a quantity]"
+   ],
+   "conflict": null,
+   "verified_by": null
+  },
+  {
+   "wall_id": "2F-W08",
+   "floor": "2F",
+   "block_type": "BLACK",
+   "t_m": 0.15,
+   "state": "ESTABLISHED",
+   "owner_class": "PROJECT-SPECIFIC",
+   "evidence_status": "ASSUMED — OWNER-APPROVED",
+   "basis": "A",
+   "net_m2": 9.64,
+   "net_m3": 1.446,
+   "held": [],
+   "conflict": null,
+   "verified_by": null
+  },
+  {
+   "wall_id": "GF-W35",
+   "floor": "GF",
+   "block_type": "WHITE",
+   "t_m": 0.2,
+   "state": "HELD",
+   "owner_class": "HELD",
+   "evidence_status": "HELD",
+   "basis": null,
+   "net_m2": null,
+   "net_m3": null,
+   "held": [
+    "annex datum (Q-54 B)"
+   ],
+   "conflict": null,
+   "verified_by": null
+  },
+  {
+   "wall_id": "GF-W36",
+   "floor": "GF",
+   "block_type": "WHITE",
+   "t_m": 0.2,
+   "state": "HELD",
+   "owner_class": "HELD",
+   "evidence_status": "HELD",
+   "basis": null,
+   "net_m2": null,
+   "net_m3": null,
+   "held": [
+    "no member drawn above",
+    "T-274 held piece(s): HELD 0.5000 m face GF-112 between drawn edges, no member identified"
+   ],
+   "conflict": null,
+   "verified_by": null
+  },
+  {
+   "wall_id": "GF-W37",
+   "floor": "GF",
+   "block_type": "WHITE",
+   "t_m": 0.2,
+   "state": "HELD",
+   "owner_class": "HELD",
+   "evidence_status": "HELD",
+   "basis": null,
+   "net_m2": null,
+   "net_m3": null,
+   "held": [
+    "no wall band or member bound (glazed line / held strip)"
+   ],
+   "conflict": null,
+   "verified_by": null
+  },
+  {
+   "wall_id": "GF-H01",
+   "floor": "GF",
+   "block_type": "-",
+   "t_m": 0.4,
+   "state": "HELD",
+   "owner_class": "HELD",
+   "evidence_status": "HELD",
+   "basis": null,
+   "net_m2": null,
+   "net_m3": null,
+   "held": [
+    "no wall band or member bound (glazed line / held strip)"
+   ],
+   "conflict": null,
+   "verified_by": null
+  },
+  {
+   "wall_id": "GF-H02",
+   "floor": "GF",
+   "block_type": "-",
+   "t_m": 0.2,
+   "state": "HELD",
+   "owner_class": "HELD",
+   "evidence_status": "HELD",
+   "basis": null,
+   "net_m2": null,
+   "net_m3": null,
+   "held": [
+    "no wall band or member bound (glazed line / held strip)"
+   ],
+   "conflict": null,
+   "verified_by": null
+  },
+  {
+   "wall_id": "1F-W25",
+   "floor": "1F",
+   "block_type": "WHITE",
+   "t_m": 0.2,
+   "state": "ESTABLISHED",
+   "owner_class": "SOURCE-SUPPORTED PENDING INDEPENDENT CHECK",
+   "evidence_status": "DRAWING-CONFIRMED",
+   "basis": "A",
+   "net_m2": 1.49,
+   "net_m3": 0.298,
+   "held": [],
+   "conflict": null,
+   "verified_by": null
+  },
+  {
+   "wall_id": "1F-W00/W01 BAY-ENDS",
+   "floor": "1F",
+   "block_type": "WHITE",
+   "t_m": 0.2,
+   "state": "ESTABLISHED",
+   "owner_class": "SOURCE-SUPPORTED PENDING INDEPENDENT CHECK",
+   "evidence_status": "DRAWING-CONFIRMED",
+   "basis": "A",
+   "net_m2": 0.572,
+   "net_m3": 0.1144,
+   "held": [],
+   "conflict": null,
+   "verified_by": null
+  },
+  {
+   "wall_id": "GF P-GF-05 ABOVE-LINTEL",
+   "floor": "GF",
+   "block_type": "WHITE",
+   "t_m": 0.2,
+   "state": "ESTABLISHED",
+   "owner_class": "SOURCE-SUPPORTED PENDING INDEPENDENT CHECK",
+   "evidence_status": "DRAWING-CONFIRMED",
+   "basis": "A",
+   "net_m2": 2.64,
+   "net_m3": 0.528,
+   "held": [],
+   "conflict": null,
+   "verified_by": null
+  }
+ ],
+ "declared_totals": {
+  "basis_A": {
+   "net_m2": 449.5934,
+   "net_m3": 80.7296,
+   "by_class_m2": {
+    "PROJECT-SPECIFIC": 85.3481,
+    "SOURCE-SUPPORTED PENDING INDEPENDENT CHECK": 258.2413,
+    "VERIFIED": 106.004
+   },
+   "walls": 37
+  },
+  "basis_B": {
+   "net_m2": 625.8957,
+   "net_m3": 112.3571,
+   "by_class_m2": {
+    "PROJECT-SPECIFIC": 85.3481,
+    "SOURCE-SUPPORTED PENDING INDEPENDENT CHECK": 434.5436,
+    "VERIFIED": 106.004
+   },
+   "walls": 48
+  }
+ }
+}

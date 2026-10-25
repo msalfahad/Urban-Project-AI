@@ -15,6 +15,8 @@ tools/urban_boq_m9.py `_release_report`):
 Key map (URBAN_ALSENAN_KEY_MAP_V1, tests/alsenan/T001B_KEY_MAP.json): keys -> {trade, reference_id, item_codes,
 conditional_items?, reference_unit?}. An item code in two keys, a key without its reference row, or a reference id
 used twice is an error. Lines whose item code no key names stay UNMAPPED (listed, never false positives).
+T-278: a key map V2 (URBAN_ALSENAN_KEY_MAP_V2, tests/alsenan/T001C_KEY_MAP.json) also keys typed lines by their type
+record (typed_lines selectors) and adds adapter["coverage"]; see "T-278: typed lines" below. V1 maps are unchanged.
 
 CLI: python3 -I tools/alsenan_keymap.py --run RUN_DIR --reference BENCHMARK_NORMALISED.json --key-map KEY_MAP.json
      --out OUT.json [--markdown OUT.md] [--set-bindings SET_BINDINGS.json (T-216 opt-in, see below)]
@@ -68,14 +70,116 @@ def line_status(ln):
     return "HELD", None
 
 
+# ---- T-278: typed lines (URBAN_ALSENAN_KEY_MAP_V2) -------------------------------------------------------------------
+#
+# A key map V2 (tests/alsenan/T001C_KEY_MAP.json) keys a line by what it IS, not only by its item code: a key may also
+# name `typed_lines` selectors {item_code, field, equals}, matched against the type record the engine wrote on the line
+# (calculation.inputs[<record>][field], the records the map lists under `typed_records`; e.g. an ARCH.SPACE line that
+# V3.0.14 typed floor_key FLOOR.INTERNAL is an internal floor BOQ line, while an untyped ARCH.SPACE line stays a
+# geometry record and is never keyed). Rules (each is a test in tests/t278_keymap_typed_lines):
+# - a selector's item code is never also a plain item code of a key (refused at load: every such line would be keyed
+#   twice); a line that two keys claim is refused (never scored twice, never dropped silently);
+# - a line whose records disagree on the typed field is refused; a typed line that no selector names stays UNMAPPED and
+#   is listed in the coverage report with its typed value;
+# - every key-map V1 document (T001B) takes none of this path: its outputs stay byte-identical.
+
+KEY_MAP_V2_SCHEMA = "URBAN_ALSENAN_KEY_MAP_V2"
+
+
+def load_typed_selectors(doc, by_item):
+    """[(key entry, selector)] of a V2 key map and its typed records, or ([], ()) for any other key map."""
+    if doc.get("SCHEMA") != KEY_MAP_V2_SCHEMA:
+        return [], ()
+    records = tuple(doc.get("typed_records") or ())
+    if not records or any(not str(r or "").strip() for r in records):
+        raise ValueError("a V2 key map names the typed records it reads (typed_records)")
+    sels, seen = [], set()
+    for k in doc["keys"]:
+        for s in k.get("typed_lines") or ():
+            code, field, val = s.get("item_code"), s.get("field"), s.get("equals")
+            if not all(str(x or "").strip() for x in (code, field, val)):
+                raise ValueError(f"key {k['key']!r}: a typed selector needs item_code, field and equals")
+            if code in by_item:
+                raise ValueError(f"key {k['key']!r}: typed item code {code!r} is also a plain item code of key "
+                                 f"{by_item[code]['key']!r} (every such line would answer two keys)")
+            if (code, field, val) in seen:
+                raise ValueError(f"typed selector {code} {field}={val} answers two keys")
+            if not str(s.get("source") or "").strip():
+                raise ValueError(f"key {k['key']!r}: typed selector {code} {field}={val} needs its source")
+            seen.add((code, field, val))
+            sels.append((k, {"item_code": code, "field": field, "equals": val}))
+    return sels, records
+
+
+def typed_value(ln, field, records):
+    """The line's typed `field` from its type records (None when untyped); records that disagree are refused."""
+    inputs = (ln.get("calculation") or {}).get("inputs") or {}
+    got = set()
+    for r in records:
+        rec = inputs.get(r)
+        if isinstance(rec, dict) and rec.get(field) is not None:
+            got.add(rec[field])
+    if len(got) > 1:
+        raise ValueError(f"line {ln.get('line_id')}: its type records disagree on {field} ({sorted(map(str, got))})")
+    return next(iter(got)) if got else None
+
+
+def key_of_line(ln, by_item, sels, records):
+    """(key entry or None, typed value or None) of one line; a line that two keys claim is refused."""
+    hits = []
+    k = by_item.get(ln["item_code"])
+    if k is not None:
+        hits.append(k)
+    tv = None
+    fields = sorted({s["field"] for _, s in sels if s["item_code"] == ln["item_code"]})
+    for f in fields:
+        v = typed_value(ln, f, records)
+        if v is None:
+            continue
+        tv = v if tv is None else tv
+        hits += [kk for kk, s in sels if s["item_code"] == ln["item_code"] and s["field"] == f and s["equals"] == v]
+    if len({h["key"] for h in hits}) > 1:
+        raise ValueError(f"line {ln.get('line_id')} ({ln['item_code']}) answers two keys "
+                         f"{sorted(h['key'] for h in hits)}: refused, never scored twice")
+    return (hits[0] if hits else None), tv
+
+
+def coverage_report(lines, by_item, sels, records):
+    """Per item code and unit, over EVERY line (exclusions included, counted under "excluded"): lines keyed (by key,
+    plain / typed), unkeyed (by typed value), double-keyed (always 0: a double key is refused before any row is
+    built)."""
+    typed_codes = {s["item_code"] for _, s in sels}
+    fam = {}
+    for ln in lines:
+        k, tv = key_of_line(ln, by_item, sels, records)
+        e = fam.setdefault((ln["item_code"], ln["unit"]), {"item_code": ln["item_code"], "unit": ln["unit"],
+                                                            "lines": 0, "excluded": 0, "keyed": {}, "unkeyed": 0,
+                                                            "unkeyed_by_typed_value": {}, "double_keyed": 0})
+        e["lines"] += 1
+        e["excluded"] += ln.get("evidence_state") in EXCLUDED_STATES
+        if k is not None:
+            how = "typed" if ln["item_code"] in typed_codes else "item_code"
+            e["keyed"][f"{k['key']} ({how})"] = e["keyed"].get(f"{k['key']} ({how})", 0) + 1
+        else:
+            e["unkeyed"] += 1
+            if ln["item_code"] in typed_codes:
+                t = "untyped" if tv is None else str(tv)
+                e["unkeyed_by_typed_value"][t] = e["unkeyed_by_typed_value"].get(t, 0) + 1
+    return {"schema": KEY_MAP_V2_SCHEMA, "typed_records": list(records),
+            "selectors": [dict(s, key=k["key"]) for k, s in sels],
+            "families": [fam[x] for x in sorted(fam, key=lambda t: (str(t[0]), str(t[1])))],
+            "double_keyed_lines": 0}
+
+
 def engine_rows(lines, release_report, key_map_doc):
     """Scorer engine rows + an adapter report (excluded / unmapped counts per item code)."""
     by_item, by_key = load_key_map(key_map_doc)
+    sels, records = load_typed_selectors(key_map_doc, by_item)   # T-278: [] for a V1 key map (unchanged path)
     sb = load_set_bindings(key_map_doc.get("set_bindings"))     # T-216 opt-in; None keeps every output unchanged
     rows, excluded, unmapped = [], {}, {}
     for ln in lines:
         code = ln["item_code"]
-        k = by_item.get(code)
+        k = key_of_line(ln, by_item, sels, records)[0] if sels else by_item.get(code)
         st = line_status(ln)
         if st is None:
             if k is not None:
@@ -100,7 +204,11 @@ def engine_rows(lines, release_report, key_map_doc):
                 row = {"id": f"COND:{s['set_id']}:{key}", "trade": k["trade"], "unit": unit, "qty": None,
                        "status": "HELD", "key": key, "surface": f"COND:{s['set_id']}"}
                 if sb is not None:
-                    row = bound_set_row(row, s, key, items, sb, subject_key_lines(lines, k, s.get("subject")))
+                    own = subject_key_lines(lines, k, s.get("subject"))
+                    if sels and s.get("subject"):    # T-278: a typed line of the key in the subject space is its own
+                        own = [ln for ln in lines if (ln.get("location") or {}).get("room_id") == s.get("subject")
+                               and (key_of_line(ln, by_item, sels, records)[0] or {}).get("key") == key]
+                    row = bound_set_row(row, s, key, items, sb, own)
                     if row is None:              # decided by the subject's own line in these lines: answered once
                         continue
                 rows.append(row)
@@ -109,6 +217,8 @@ def engine_rows(lines, release_report, key_map_doc):
               "unmapped_by_item": [{"item_code": c, "unit": u, "lines": n} for (c, u), n in sorted(unmapped.items())]}
     if sb is not None:
         report["set_bindings"] = set_binding_report(rows, sb)
+    if sels:
+        report["coverage"] = coverage_report(lines, by_item, sels, records)
     return rows, report
 
 
