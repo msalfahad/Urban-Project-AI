@@ -171,7 +171,7 @@ def build():
         d["before"] += r["before"]["measured_net"] or 0.0
         if r["action"] == "REBASE":
             d["released_after"] += r["value"]
-        else:
+        elif r["action"] in ("HOLD", "CONFLICT"):
             d["held_lines"] += 1
     groups = {g: {k: (round(v, 6) if isinstance(v, float) else v) for k, v in d.items()} for g, d in groups.items()}
     t253 = list(csv.DictReader(T253.open(encoding="utf-8")))

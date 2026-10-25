@@ -15,7 +15,10 @@ becomes, in place (same line id, so a verdict or a downgrade record bound to it 
             a rebase must name the printed support for THIS element and the sheets, never a borrowed class depth;
   HOLD      BLOCKED_RFI, BLANK (no figure, no range in the BOQ: owner 2026-10-24 10:56) with the named item that holds
             it; drawing readings go to V3_0_17_SCENARIOS.json only, never summed, never 0;
-  CONFLICT  as HOLD, naming both readings (a numeric reading, if any, only in the scenario file, never adopted).
+  CONFLICT  as HOLD, naming both readings (a numeric reading, if any, only in the scenario file, never adopted);
+  NOT_PRESENT  a line on a member NO sheet draws (a DRAWING-CONFIRMED absence from a merged evidence ledger: absent on
+            the storey's plan, its plot and the architectural plan, no start / stop symbol below): NOT_APPLICABLE_WITH_
+            EVIDENCE with the sheets searched, never a 0 line, never deleted.
 
 A missing line can be ADDED only HELD (a drawn element the candidate omits whose quantity is not yet closable), with
 its named item; the figure it would carry stays in the scenario file.
@@ -60,7 +63,7 @@ POLICY_ID = "URBAN_BOQ_T254_ARCH_V3_0_17"
 INPUTS_SCHEMA = "URBAN_V3017_INPUTS_V1"
 LEDGER_SCHEMA = "URBAN_V3017_INTEGRATION_LEDGER_V1"
 ROLLBACK = A30.ROLLBACK
-ACTIONS = ("REBASE", "HOLD", "CONFLICT")
+ACTIONS = ("REBASE", "HOLD", "CONFLICT", "NOT_PRESENT")
 DC, VER = "DRAWING-CONFIRMED", "VERIFIED"
 SUPPORT_KINDS = ("OWN_PRINT", "TWO_PRINTED_LEVELS", "PRINTED_LEVELS_AND_FLOOR_CONTINUITY")
 REFUSED_SUPPORT = ("BORROWED_CLASS_DEPTH", "FINISHED_LEVEL", "PROFILE_DEFAULT", "PENDING")
@@ -171,6 +174,13 @@ def _check_record(r, tasks, seen):
     act = r.get("action")
     if act not in ACTIONS:
         raise InputsError(f"record {lid}: action {act!r} not one of {ACTIONS}")
+    if act == "NOT_PRESENT":
+        for k in ("value", "low", "high", "runs", "scenario"):
+            if r.get(k) is not None:
+                raise InputsError(f"record {lid}: a NOT_PRESENT record carries no figure ({k})")
+        if not r.get("absence_evidence") or not r.get("sheets_searched"):
+            raise InputsError(f"record {lid}: NOT_PRESENT names the absence evidence and every sheet searched")
+        return
     if act == "REBASE":
         v = r.get("value")
         if not (_num(v) and v > 0):
@@ -288,7 +298,7 @@ def load_inputs(doc, project_id=None):
         asum = sum(r["value"] for r in rs if r["action"] == "REBASE")
         if abs(asum - d.get("released_after", -1)) > TOL_RUNS:
             raise InputsError(f"group {g}: released after {_r(asum)}, declared {d.get('released_after')}")
-        if d.get("held_lines") != sum(1 for r in rs if r["action"] != "REBASE"):
+        if d.get("held_lines") != sum(1 for r in rs if r["action"] in ("HOLD", "CONFLICT")):
             raise InputsError(f"group {g}: held lines differ from the declared {d.get('held_lines')}")
     bd = doc.get("binding")
     if bd is not None:
@@ -318,7 +328,16 @@ def corrected_line(before, r, src):
            "before": {"evidence_state": before["evidence_state"], "measured_net": before.get("measured_net"),
                       "bounded_range": before.get("bounded_range"), "formula": before["calculation"]["formula"]},
            "engine_basis": r.get("engine_basis")}
-    if r["action"] == "REBASE":
+    if r["action"] == "NOT_PRESENT":
+        rec.update(absence_evidence=r["absence_evidence"], sheets_searched=r["sheets_searched"])
+        ln["evidence_state"] = "NOT_APPLICABLE_WITH_EVIDENCE"
+        ln["measured_net"] = None
+        ln["bounded_range"] = None
+        ln["rfi"] = None
+        ln["calculation"]["formula"] = f"NOT_PRESENT (no sheet draws this member): {r['absence_evidence']}"[:400]
+        A305._note(ln, f"{METHOD}: NOT_PRESENT, a DRAWING-CONFIRMED absence ({src['task']} MERGED {src['merge_commit']}, "
+                       f"{src['checker_run']}); no quantity, never 0")
+    elif r["action"] == "REBASE":
         rec.update(value=_r(r["value"]), runs=r.get("runs"), support=r["support"], status=r["status"],
                    verified_by=r.get("verified_by"), own_check=r.get("own_check"))
         ln["evidence_state"] = "SOURCE_DERIVED"
@@ -396,11 +415,12 @@ def changes_for(doc, l3016):
         src = _src_of(doc, r["task"])
         after = corrected_line(b, r, src)
         held = []
-        if r["action"] != "REBASE":
+        if r["action"] in ("HOLD", "CONFLICT"):
             held = [{"what": f"{r['item_code']} {r['element_id']}", "why": f"{r['held_item']}: " +
                      "; ".join(r["reasons"]), "range": None,
                      "scenario": ("V3_0_17_SCENARIOS.json#" + r["line_id"]) if r.get("scenario") else None}]
-        evs = r["status"] if r["action"] == "REBASE" else ("CONFLICT" if r["action"] == "CONFLICT" else "HELD")
+        evs = {"REBASE": r.get("status"), "CONFLICT": "CONFLICT", "HOLD": "HELD",
+               "NOT_PRESENT": "DRAWING-CONFIRMED (absence)"}[r["action"]]
         changes.append(A305._change("BASIS_CORRECTION", "REPLACE", b, after,
                                     drawing_reference=(r.get("support") or {}).get("sheets") or r.get("held_item"),
                                     held=held, downstream=list(r.get("downstream") or ()),
@@ -434,7 +454,7 @@ def changes_for(doc, l3016):
         d["before"] += c["before"].get("measured_net") or 0.0
         if c["after"]["evidence_state"] == "SOURCE_DERIVED":
             d["released_after"] += c["after"]["measured_net"]
-        else:
+        elif c["after"]["evidence_state"] == "BLOCKED_RFI":
             d["held_lines"] += 1
     for g, d in gt.items():
         dec = doc["groups"][g]
@@ -451,7 +471,7 @@ def scenarios(doc):
     out = []
     for r in list((doc or {}).get("records") or ()) + list((doc or {}).get("adds") or ()):
         sc = r.get("scenario")
-        if sc and r.get("action", "HOLD") != "REBASE":
+        if sc and r.get("action", "HOLD") in ("HOLD", "CONFLICT"):
             out.append({"id": r.get("line_id") or r.get("id"), "item_code": r["item_code"], "group": r.get("group"),
                         "held_item": r.get("held_item"), "readings": sc["readings"], "basis": sc.get("basis"),
                         "readings_named": r.get("readings_named"),

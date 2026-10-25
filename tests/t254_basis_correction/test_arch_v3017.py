@@ -53,9 +53,18 @@ GB = "STR.CONC.GROUND_BEAM"
 COL = "STR.CONC.COLUMN"
 
 
+def blocked(eid, code, floor):
+    ln = BL.make_line(project_id=PID, revision_set_sha256=REV, item_code=code, unit="m3", evidence_state="BLOCKED_RFI",
+                      element_id=eid, floor=floor, physical_element="COLUMN", formula="held", documents=DOCS,
+                      rule_id="R-ENG", rule_version="1", rfi={"question": "member not drawn", "unlocks": eid},
+                      item_en="x", item_ar="x", trade="CONCRETE")
+    ln["project"] = {"project_id": PID, "revision_set_sha256": REV, "route": dict(ROUTE)}
+    return BL.validate(ln)
+
+
 def candidate():
     return [line("K:GB:E1", GB, 0.648), line("K:GB:I2", GB, 0.2025), line("K:GB:I3", GB, 0.48),
-            line("K:GB:C4", GB, 0.36), line("K:COL:2F:C1", COL, 0.378, "2F")]
+            line("K:GB:C4", GB, 0.36), line("K:COL:2F:C1", COL, 0.378, "2F"), blocked("K:COL:2F:X9", COL, "2F")]
 
 
 def ids():
@@ -113,7 +122,7 @@ def test_rebase_and_hold_by_hand():
     assert t["released"] == pytest.approx(2.5455, abs=1e-9)
     assert t["blocked_lines"] == 1
     assert log["groups"]["GB_EXT"]["released_after"] == pytest.approx(2.0655)
-    assert ident["replaced"] == 4 and ident["outside_rows"] == 1
+    assert ident["replaced"] == 4 and ident["outside_rows"] == 2
 
 
 def test_line_ids_and_everything_else_kept():
@@ -270,7 +279,7 @@ def test_write_files(tmp_path):
     names, ident, led = A.write(tmp_path, cand, ch, log, doc)
     assert "V3_0_17_DIFF.csv" in names and led["integration_package"] is True
     diff = (tmp_path / "V3_0_17_DIFF.csv").read_text().splitlines()
-    assert sum(1 for r in diff if ",CHANGED," in r) == 4 and sum(1 for r in diff if ",SAME," in r) == 1
+    assert sum(1 for r in diff if ",CHANGED," in r) == 4 and sum(1 for r in diff if ",SAME," in r) == 2
     run_doc = json.loads((tmp_path / "V3_0_17_RUN.json").read_text())
     assert run_doc["released_default"] is False
     moved = run_doc["totals_moved_by_code"]
@@ -280,3 +289,32 @@ def test_write_files(tmp_path):
     A.write(again, cand, ch, log, doc)
     for n in names:
         assert (again / n).read_bytes() == (tmp_path / n).read_bytes()
+
+
+# ------------------------------------------------------------------------------------------------ NOT_PRESENT
+def _np(d):
+    d["records"].append({"line_id": ids()["K:COL:2F:X9"], "item_code": COL, "element_id": "K:COL:2F:X9",
+                         "group": "COL_NP", "task": "T-K1", "physical_element": "COLUMN 2F (type table only)",
+                         "before": {"evidence_state": "BLOCKED_RFI", "measured_net": None}, "action": "NOT_PRESENT",
+                         "absence_evidence": "no plan, plot or architectural plan draws it; no start symbol below",
+                         "sheets_searched": "K254 ST p.4, p.5; arch 2F"})
+    d["groups"]["COL_NP"] = {"lines": 1, "before": 0.0, "released_after": 0.0, "held_lines": 0}
+    return d
+
+
+def test_not_present_is_not_applicable_with_evidence_never_0():
+    (out, ident), ch, log = run(_np(inputs()))
+    x = [ln for ln in out if ln["location"]["element_id"] == "K:COL:2F:X9"][0]
+    assert x["evidence_state"] == "NOT_APPLICABLE_WITH_EVIDENCE" and x["measured_net"] is None
+    assert "NOT_PRESENT" in x["calculation"]["formula"] and x["notes"]
+    assert ident["replaced"] == 5
+    assert A304.code_totals(out)[f"{COL}|m3"]["lines"] == 1      # the absent member leaves the totals, never as 0
+
+
+@pytest.mark.parametrize("k, v, msg", [("value", 0.0, "no figure"), ("absence_evidence", None, "absence evidence"),
+                                       ("sheets_searched", None, "every sheet searched")])
+def test_adverse_not_present_refused(k, v, msg):
+    d = _np(inputs())
+    d["records"][-1][k] = v
+    with pytest.raises(A.InputsError, match=msg):
+        run(d)
