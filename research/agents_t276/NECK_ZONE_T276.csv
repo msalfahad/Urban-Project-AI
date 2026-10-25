@@ -1,0 +1,37 @@
+column,neck,gb_plan_m2,neck_section_m2,gb_plan_perimeter_m,gb_plan_differs_from_section,deduction_m2,basis,status,why
+COL:17BA,CN 180A,0.09,"(0.09, 0.09)",1.2,False,0.87735,ARC:157+158 0.8550 x 0.95 + panel GS-10 0.3090 x slab 0.10 + outside 0.0360 x 0.95,DRAWING-CONFIRMED,
+COL:17BD,CN 17C5,0.09,"(0.09, 0.09)",1.2,False,1.1009,ARC:157+158 0.5500 x 0.95 + panel GS-23 0.0460 x slab 0.10 + outside 0.3040 x 0.95 + 107+7CE#1 0.3000 x 0.95,DRAWING-CONFIRMED,
+COL:17C0,CN 17C8,0.09,"(0.09, 0.09)",1.2,False,,ARC:157+158 0.3770 x 0.95 + outside 0.2490 x 0.95 + 170+7C3#4 0.4370 x 0.95,HELD,DEDUCTION_HELD: COLUMN COL:1E8; 1811+1812#1 depth held
+COL:1DC,C2 1084,0.15,"(0.15, 0.15)",1.6,False,1.350085,panel GS-08 0.1999 x slab 0.10 + outside 0.8005 x 0.95 + 109+7CB#3 0.2998 x 0.95 + 170+7C3#1 0.2998 x 0.95,DRAWING-CONFIRMED,
+COL:1E0,C2 1087,0.15,"(0.15, 0.15)",1.6,False,,panel GS-08 0.1999 x slab 0.10 + panel GS-24 0.1999 x slab 0.10 + outside 0.3008 x 0.95 + 170+7C3#1 0.2998 x 0.95 + 170+7C3#2 0.2998 x 0.95,HELD,DEDUCTION_HELD: 15E+15F#1 depth held
+COL:1E4,C5 108A,0.18,"(0.18, 0.18)",1.8,False,,panel GS-25 0.4288 x slab 0.10 + outside 0.6007 x 0.95 + 170+7C3#2 0.2998 x 0.95 + 170+7C3#3 0.2998 x 0.95,HELD,DEDUCTION_HELD: 176+7E6#1 depth held
+COL:1E8,C4 108D,0.125,"(0.15, 0.15)",1.5,True,,outside 0.4997 x 0.95 + 170+7C3#4 0.1639 x 0.95,HELD,DEDUCTION_HELD: COLUMN COL:17C0; 1811+1812#1 depth held
+COL:1EC,C9 1090,,,,,,,EXCLUDED,lift neck inside the p.14 sheet system (T-219)
+COL:1EF,C2 1093,,,,,,,EXCLUDED,lift neck inside the p.14 sheet system (T-219)
+COL:1F2,C2 1096,,,,,,,EXCLUDED,lift neck inside the p.14 sheet system (T-219)
+COL:1F5,C1 1099,,,,,,,EXCLUDED,lift neck inside the p.14 sheet system (T-219)
+COL:1FC,C3 10A0,0.15,"(0.15, 0.15)",1.6,False,1.35,panel GS-01 0.2000 x slab 0.10 + outside 0.8000 x 0.95 + 114+115+7DF#2 0.3000 x 0.95 + 7E0+FD#2 0.3000 x 0.95,DRAWING-CONFIRMED,
+COL:200,C 10A4,0.15,"(0.15, 0.15)",1.6,False,1.350935,panel GS-15 0.1989 x slab 0.10 + outside 0.8005 x 0.95 + 7D0+FC#4 0.3008 x 0.95 + 7E0+FD#1 0.2998 x 0.95,DRAWING-CONFIRMED,
+COL:204,C 10A8,0.12,"(0.15, 0.15)",1.4,True,,,HELD,ANNEX_DEPTH_CONFLICT (D-35): beam-zone depths held
+COL:207,C 10AB,0.12,"(0.15, 0.15)",1.4,True,,,HELD,ANNEX_DEPTH_CONFLICT (D-35): beam-zone depths held
+COL:20B,C3 10AE,0.12,"(0.15, 0.15)",1.4,True,,,HELD,ANNEX_DEPTH_CONFLICT (D-35): beam-zone depths held
+COL:211,C3 10B1,0.15,"(0.15, 0.15)",1.6,False,,,HELD,ANNEX_DEPTH_CONFLICT (D-35): beam-zone depths held
+COL:214,C 10B4,0.12,"(0.15, 0.15)",1.4,True,,,HELD,ANNEX_DEPTH_CONFLICT (D-35): beam-zone depths held
+COL:218,C 10B7,0.15,"(0.15, 0.15)",1.6,False,1.35,panel GS-07 0.2000 x slab 0.10 + outside 0.8000 x 0.95 + 10A+7C9#1 0.3000 x 0.95 + 7D0+FC#1 0.3000 x 0.95,DRAWING-CONFIRMED,
+COL:220,C11 10BA,0.33,"(0.33, 0.33)",2.8,False,1.98085,panel GS-07 0.7990 x slab 0.10 + outside 1.4000 x 0.95 + 10A+7C9#1 0.3010 x 0.95 + 145+7CA#1 0.3000 x 0.95,DRAWING-CONFIRMED,
+COL:223,C5 10BD,0.18,"(0.18, 0.18)",1.8,False,,,HELD,ANNEX_DEPTH_CONFLICT (D-35): beam-zone depths held
+COL:228,C6 10C2,0.21,"(0.21, 0.21)",2.0,False,,panel GS-09 0.5277 x slab 0.10 + panel GS-16 0.4988 x slab 0.10 + 109+7CB#1 0.2999 x 0.40 + 109+7CB#2 0.2999 x 0.95 + 145+7CA#1 0.2009 x 0.95,HELD,DEDUCTION_HELD: 7E1+7E2#1 depth held
+COL:22C,C3 10C5,0.15,"(0.15, 0.15)",1.6,False,,,HELD,ANNEX_DEPTH_CONFLICT (D-35): beam-zone depths held
+COL:230,C7 10C8,0.24,"(0.24, 0.24)",2.2,False,,panel GS-16 0.4998 x slab 0.10 + outside 1.1005 x 0.95,HELD,DEDUCTION_HELD: 178+7DB#1 depth held; 185+7C7#1 depth held
+COL:234,C3 10CC,0.15,"(0.15, 0.15)",1.6,False,1.094405,panel GS-08 0.5007 x slab 0.10 + outside 0.4997 x 0.95 + 109+7CB#2 0.2998 x 0.95 + 109+7CB#3 0.2998 x 0.95,DRAWING-CONFIRMED,
+COL:238,C8 10D0,0.27,"(0.27, 0.27)",2.4,False,,panel GS-01 0.8996 x slab 0.10 + outside 0.6997 x 0.95 + 107+7CE#1 0.2009 x 0.95 + 114+115+7DF#2 0.2999 x 0.95,HELD,DEDUCTION_HELD: 114+115+7DF#1 depth held
+COL:23C,C5 10D3,0.18,"(0.18, 0.18)",1.8,False,,panel GS-04 0.6000 x slab 0.10 + panel GS-12 0.2990 x slab 0.10,HELD,DEDUCTION_HELD: 17B+7E5#1 depth held; 184+7CF#2 depth held; 184+7CF#3 depth held
+COL:241,C4 10D7,0.15,"(0.15, 0.15)",1.6,False,1.095255,panel GS-10 0.4997 x slab 0.10 + outside 0.5007 x 0.95 + 170+7C3#3 0.2998 x 0.95 + 170+7C3#4 0.2998 x 0.95,DRAWING-CONFIRMED,
+COL:245,C9 10DA,0.3,"(0.3, 0.3)",2.6,False,,panel GS-03 1.0006 x slab 0.10 + panel GS-10 0.9996 x slab 0.10,HELD,DEDUCTION_HELD: 177+7CD#1 depth held; 177+7CD#2 depth held
+COL:249,C11 10DD,0.33,"(0.33, 0.33)",2.8,False,1.725,panel GS-05 1.1000 x slab 0.10 + outside 1.1000 x 0.95 + 7D0+FC#1 0.3000 x 0.95 + 7D0+FC#2 0.3000 x 0.95,DRAWING-CONFIRMED,
+COL:24D,C8 10E0,0.24,"(0.24, 0.27)",2.2,False,,panel GS-04 0.4988 x slab 0.10 + panel GS-12 0.8006 x slab 0.10,HELD,DEDUCTION_HELD: 184+7CF#1 depth held; 184+7CF#2 depth held; 7DC+7DD#1 depth held
+COL:251,C3 10E4,0.15,"(0.15, 0.15)",1.6,False,1.095255,panel GS-12 0.4997 x slab 0.10 + outside 0.5007 x 0.95 + 7D0+FC#2 0.2998 x 0.95 + 7D0+FC#3 0.2998 x 0.95,DRAWING-CONFIRMED,
+COL:255,C10 10E8,0.21,"(0.21, 0.21)",2.0,False,1.30535,panel GS-15 0.6997 x slab 0.10 + outside 0.7006 x 0.95 + 7D0+FC#3 0.2999 x 0.95 + 7D0+FC#4 0.2999 x 0.95,DRAWING-CONFIRMED,
+COL:7ED,CN 10EE,0.09,"(0.09, 0.09)",1.2,False,,panel GS-01 0.3000 x slab 0.10 + 7E7+7E8#1 0.3000 x 0.40 + 7E9+7EA#1 0.3000 x 0.40,HELD,DEDUCTION_HELD: 7E7+7E8#2 depth held
+COL:7F5,CN 10F6,0.09,"(0.09, 0.09)",1.2,False,,panel GS-06 0.3000 x slab 0.10 + 7DC+7DD#2 0.3000 x 0.40 + 7E9+7EA#1 0.3000 x 0.40,HELD,DEDUCTION_HELD: 7DC+7DD#1 depth held
+COL:809,CN 10FE,0.09,"(0.09, 0.09)",1.2,False,0.885,panel GS-01 0.3000 x slab 0.10 + outside 0.3000 x 0.95 + 7E0+FD#1 0.3000 x 0.95 + 7E0+FD#2 0.3000 x 0.95,DRAWING-CONFIRMED,
