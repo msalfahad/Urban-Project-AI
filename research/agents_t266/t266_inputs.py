@@ -169,9 +169,61 @@ def stair_records(l290=None, pc=None):
     return recs
 
 
+LANDING_1F = "L-428b44ee2f5f1c1c118f"      # ARCH.SPACE 1F arrival landing 4.9225 m2 (T-240 WP3 / T-269, Checker own)
+LANDING_EID = "HL:FLOOR_SCOPE:SPLIT_OUT:1F:1F-LIVING-SETTLED:landing"
+Q66B = ("owner Q-66 B (2026-10-20, OWNER_QUESTIONS_ANSWERED.md): the first-floor main-stair arrival landing is marble "
+        "with the stair, once, as its own element; never also porcelain floor")
+PANTRY_SIB = "L-83b9e52902ffa5681c28"       # FIN.FLOOR.WET_TILE GF pantry part of GF-RC99C2A (8.954867, Q-37 A)
+Q37A = ("owner Q-37 A (2026-10-19 16:40, OWNER_QUESTIONS_ANSWERED.md): the pantry is waterproofed within its printed "
+        "4.50 x 3.00 like a kitchen: wet floor")
+
+
+def marble_record():
+    """T-278 verdict: the landing is owned once by ARCH.SPACE L-428b44ee (floor AREA); its marble (Q-66 B) is a
+    MATERIAL line of the same element at the element's area, ASSUMED - OWNER-APPROVED (the material by Q-66 B; the area
+    VERIFIED by the Checker, T-269 / T-180), never VERIFIED as a material line."""
+    return {"kind": "MATERIAL", "group": "LANDING_MARBLE", "id": "1F-LANDING-MARBLE", "line_id": LANDING_1F,
+            "material_of": LANDING_1F, "item_code": "FIN.MARBLE.LANDING", "element_id": LANDING_EID, "unit": "m2",
+            "floor": "1F", "task": "T-278", "physical_element": "1F main-stair arrival landing: marble (Q-66 B)",
+            "status": OA, "owner_source": Q66B, "value": 4.9225,
+            "item_en": "Stair landing marble", "item_ar": "رخام استراح"
+                                                          "ة / بسطة",
+            "trade": "STAIR_FINISH",
+            "formula": "= the landing's floor area 4.9225 m2 (printed 2.50 x 1.95 = 4.875 - well end 0.20 x 0.05 + "
+                       "nosing band 1.15 x 0.05; area VERIFIED: T-269 Gate A 2026-10-24 13:03, T-278 own re-sum): "
+                       "marble by Q-66 B; the area stays on ARCH.SPACE L-428b44ee (FLOOR.INTERNAL), the 1F living "
+                       "porcelain keeps deducting it",
+            "printed": "P7757.dxf DIMENSION 2500 x 1950 (T-278 verdict: presence)",
+            "downstream": ["printed 4.875 vs drawn 4.9225 m2: RULE_DIFFERENCE 0.0475 (T-122 / T-269), the drawn area "
+                           "is the element's VERIFIED area"]}
+
+
+def pantry_record():
+    s = json.loads(T286.read_text(encoding="utf-8"))
+    rc = s["pantry"]["doorway_zone"]["reclass"]
+    if rc["disposition"] != "TO_ROOM_FLOOR_WET" or rc["status"] != "DRAWING-CONFIRMED" or rc["area_m2"] != 1.1:
+        raise SystemExit(f"T-286 reclass {rc} is not the merged DRAWING-CONFIRMED 1.100 wet piece")
+    if not s["pantry"]["closure"]["closes"]:
+        raise SystemExit("T-286 box closure does not close")
+    return {"kind": "PIECE_LINE", "group": "PANTRY_PIECE", "id": "GF-PANTRY-DOORWAY-ZONE", "line_id": PANTRY_SIB,
+            "like_line_id": PANTRY_SIB, "item_code": "FIN.FLOOR.WET_TILE",
+            "element_id": f"HL:FLOOR_SCOPE:WET:GF:{rc['id']}", "unit": "m2", "floor": "GF", "task": "T-286",
+            "physical_element": "GF pantry floor under the east counter (engine doorway zone)",
+            "status": OA, "class_status": OA, "owner_source": Q37A, "value": rc["area_m2"], "floor_key": "FLOOR.INTERNAL",
+            "piece": {"id": rc["id"], "value": rc["area_m2"], "status": rc["status"], "class": "WET",
+                      "class_source": "owner Q-37 A"},
+            "formula": "1.40 x 0.50 + 0.50 x 0.80 = 1.100 m2 (south wall face A6, pantry east edge B3, counter outline "
+                       "B4 / AA / B2, one 0.50 undrawn engine zone line; inside the printed 450 x 300 box; T-286 box "
+                       "closure 13.500 - 0.045 - 2.800001 - 8.955 - 0.600 - 1.100 = -0.0001): WET by Q-37 A",
+            "printed": "P7757.dxf DIMENSION 5E1 4500 / 5D5 3000 (T-286)",
+            "downstream": ["pantry membrane FIN.WP.FLOOR 13.50 m2 already the whole box (unchanged)",
+                           "the V2.9 ARCH.THRESHOLD twin of OP-003 retired in T-240 (NOT_APPLICABLE): no other line "
+                           "books the piece"]}
+
+
 def build(extra=()):
     return {"schema": "URBAN_V3018_INPUTS_V1", "project": None, "sources": sources(),
-            "records": stair_records() + list(extra)}
+            "records": stair_records() + [marble_record(), pantry_record()] + list(extra)}
 
 
 if __name__ == "__main__":

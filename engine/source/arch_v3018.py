@@ -20,8 +20,10 @@ statuses are per quantity, WORKFLOW_CONTROLS s.5). Four record kinds:
   MATERIAL  a finish MATERIAL line for an element another line already measures as floor AREA (one element, one material
             line of a code): value = that element line's quantity, at that element line's own evidence status (never
             VERIFIED unless the record names the checker run), the area line unchanged;
-  PIECE_IN  a drawing-confirmed floor piece entering a measured line (class by an answered owner decision): the line's
-            value + the piece, in place; a piece another candidate line already books with a quantity is refused.
+  PIECE_LINE  a drawing-confirmed piece no candidate line carries (an engine strip held on a misread boundary that the
+            merged ledger settles): its OWN line beside its sibling (same item, unit, identity and documents), at the
+            weakest of its geometry and class statuses; a piece another candidate line books with a quantity is
+            refused (one owner per piece).
 
 Refused (InputsError / ValueError, nothing written): a record whose line the candidate does not carry, or whose stated
 'before' is not the line's (stale ledger); a line named twice; a part / rebase value <= 0, or not the sum of its pieces;
@@ -29,7 +31,7 @@ a piece in two parts or lines; a part whose pieces carry another status than the
 convention piece (CONVENTION / HELD / CONFLICT / UNKNOWN) in a released part; a split of a parent that carries a figure
 (a closable part released while also inside its held parent); a VERIFIED part / rebase with no checker run; an
 owner-approved part with no answered-decision source; a HOLD with a figure or no item; a second MATERIAL line of one code
-on one element; a material value that is not the element line's; a PIECE_IN piece another line books. Everything outside
+on one element; a material value that is not the element line's; a PIECE_LINE piece another line books. Everything outside
 the records is byte-identical to V3.0.17 (asserted), including the project identity block.
 
 Files: V3_0_18_BOQ_LINES.json / .csv, V3_0_18_INTEGRATION_LEDGER.json / .csv (per line: before V3.0.17, after, released
@@ -63,7 +65,7 @@ POLICY_ID = "URBAN_BOQ_T266_ARCH_V3_0_18"
 INPUTS_SCHEMA = "URBAN_V3018_INPUTS_V1"
 LEDGER_SCHEMA = "URBAN_V3018_INTEGRATION_LEDGER_V1"
 ROLLBACK = A30.ROLLBACK
-KINDS = ("SPLIT", "REBASE", "HOLD", "MATERIAL", "PIECE_IN")
+KINDS = ("SPLIT", "REBASE", "HOLD", "MATERIAL", "PIECE_LINE")
 VER, DC, OA = "VERIFIED", "DRAWING-CONFIRMED", "ASSUMED - OWNER-APPROVED"
 STATUSES = (VER, DC, OA)
 STATE_OF = {VER: "SOURCE_DERIVED", DC: "SOURCE_DERIVED", OA: "PROVISIONAL"}   # V3.0.10 / V3.0.13 convention
@@ -170,7 +172,7 @@ def _check_record(r, tasks, seen, seen_pieces):
     lid = r.get("line_id")
     if not lid:
         raise InputsError(f"{kind}: every record names its candidate line id")
-    if kind != "MATERIAL":
+    if kind not in ("MATERIAL", "PIECE_LINE"):
         if lid in seen:
             raise InputsError(f"line {lid} named twice (one record per line)")
         seen.add(lid)
@@ -179,7 +181,7 @@ def _check_record(r, tasks, seen, seen_pieces):
             raise InputsError(f"record {lid}: {k} required")
     if r["task"] not in tasks:
         raise InputsError(f"record {lid}: task {r['task']!r} is not one of the merged sources {sorted(tasks)}")
-    if kind != "MATERIAL":
+    if kind not in ("MATERIAL", "PIECE_LINE"):
         _check_before(r, f"record {lid}")
     if kind == "SPLIT":
         b = r["before"]
@@ -224,26 +226,33 @@ def _check_record(r, tasks, seen, seen_pieces):
         if r["status"] == VER:
             raise InputsError(f"material {r['id']}: a new material line is never VERIFIED here (the Checker verifies "
                               "the line it sees, not the area line it is taken from)")
-    else:  # PIECE_IN
+    else:  # PIECE_LINE
+        for k in ("id", "unit", "floor", "like_line_id"):
+            if not r.get(k):
+                raise InputsError(f"piece line {r.get('id')}: {k} required")
+        if r["id"] in seen:
+            raise InputsError(f"piece line {r['id']}: an id, once")
+        seen.add(r["id"])
         pc = r.get("piece") or {}
         for k in ("id", "value", "status", "class", "class_source"):
             if pc.get(k) in (None, ""):
-                raise InputsError(f"record {lid}: the piece names {k}")
-        if not (_num(pc["value"]) and pc["value"] > 0):
-            raise InputsError(f"record {lid}: piece value > 0")
+                raise InputsError(f"piece line {r['id']}: the piece names {k}")
         if pc["status"] not in (DC, VER):
-            raise InputsError(f"record {lid}: a piece entering a measured line is DRAWING-CONFIRMED or VERIFIED geometry")
+            raise InputsError(f"piece line {r['id']}: the piece geometry is DRAWING-CONFIRMED or VERIFIED")
         if pc["id"] in seen_pieces:
-            raise InputsError(f"record {lid}: piece {pc['id']} in two records")
+            raise InputsError(f"piece line {r['id']}: piece {pc['id']} in two records")
         seen_pieces.add(pc["id"])
-        if not _num(r.get("after")) or abs(r["after"] - ((r["before"]["measured_net"] or 0) + pc["value"])) > TOL_SUM:
-            raise InputsError(f"record {lid}: after must be before + the piece")
+        _check_status(r, f"piece line {r['id']}")
+        if WEAK[r["status"]] > WEAK[pc["status"]] or (r.get("class_status") == OA and r["status"] != OA):
+            raise InputsError(f"piece line {r['id']}: the line takes the WEAKEST of its geometry and class statuses")
+        if abs(r["value"] - pc["value"]) > TOL:
+            raise InputsError(f"piece line {r['id']}: value {r['value']} is not the piece's {pc['value']}")
 
 
 def load_inputs(doc, project_id=None):
     """URBAN_V3018_INPUTS_V1 or None:
         {"schema", "project", "sources": [{file, sha256, task, merge_commit, checker_run}],
-         "records": [{kind SPLIT | REBASE | HOLD | MATERIAL | PIECE_IN, line_id, item_code, element_id, task,
+         "records": [{kind SPLIT | REBASE | HOLD | MATERIAL | PIECE_LINE, line_id, item_code, element_id, task,
                       physical_element, before: {evidence_state, measured_net},
                       SPLIT: still_held [{piece, item}], parts [{part, status, value, pieces [{id, value, status}],
                              verified_by, owner_source, formula}];
@@ -251,7 +260,8 @@ def load_inputs(doc, project_id=None):
                       HOLD: held_item, reasons, cited_from, closable_named;
                       MATERIAL: id, unit, floor, item_en, item_ar, trade, material_of (element line id), status, value,
                                 owner_source, formula, like_line_id;
-                      PIECE_IN: piece {id, value, status, class, class_source}, after, formula}],
+                      PIECE_LINE: id, unit, floor, like_line_id, status, class_status, owner_source, value,
+                                  piece {id, value, status, class, class_source}, formula}],
          "declared": {"released_m3_added", ...} (optional totals asserted on the run)}"""
     if doc is None:
         return None
@@ -440,24 +450,41 @@ def material_line(lines, r, src):
     return BL.validate(ln)
 
 
-def piece_in_line(before, r, src, lines):
+def piece_line(lines, r, src):
+    """a confirmed piece no line carries, as its own line beside its sibling (identity / documents / item of the
+    sibling); a piece another line books with a quantity is refused."""
     from engine.source import boq_line as BL
+    by = {ln["line_id"]: ln for ln in lines}
+    sib = by.get(r["like_line_id"])
+    if sib is None or sib["item_code"] != r["item_code"] or sib["unit"] != r["unit"]:
+        raise InputsError(f"piece line {r['id']}: like_line_id is not a candidate line of the same item / unit")
     pc = r["piece"]
     for ln in lines:      # a piece another line books with a quantity is a double count
-        if ln["line_id"] == before["line_id"]:
-            continue
         blob = json.dumps(ln.get("calculation") or {}, sort_keys=True, default=str)
         if pc["id"] in blob and ln["evidence_state"] in BL.QUANTITY_STATES and (ln.get("measured_net") or 0) > 0:
-            raise InputsError(f"record {r['line_id']}: piece {pc['id']} is already booked with a quantity on "
+            raise InputsError(f"piece line {r['id']}: piece {pc['id']} is already booked with a quantity on "
                               f"{ln['line_id']} ({ln['item_code']}): one owner per piece")
-    ln = copy.deepcopy(before)
-    ln["measured_net"] = _r(r["after"])
-    ln["calculation"]["formula"] = (f"{before['calculation']['formula']} + {pc['id']} {_r(pc['value'])} "
-                                    f"({pc['class']}, {pc['class_source']})")[:600]
-    ln["calculation"]["inputs"] = dict(ln["calculation"].get("inputs") or {}, component_closure_v3018=_rec(
-        r, src, action="PIECE_IN", before=_before_rec(before), piece=copy.deepcopy(pc), after=_r(r["after"])))
-    A305._note(ln, f"{METHOD}: piece {pc['id']} {_r(pc['value'])} {ln['unit']} in ({src['task']} MERGED "
-                   f"{src['merge_commit']}, {src['checker_run']}): {pc['status']} geometry, class {pc['class_source']}")
+    pr = sib["project"]
+    st = r["status"]
+    rec = _rec(r, src, action="PIECE_LINE", like_line_id=sib["line_id"], piece=copy.deepcopy(pc), status=st,
+               evidence_status=st, value=_r(r["value"]), owner_source=r.get("owner_source"),
+               floor_key=r.get("floor_key"))
+    ln = BL.make_line(project_id=pr["project_id"], revision_set_sha256=pr["revision_set_sha256"],
+                      item_code=r["item_code"], unit=r["unit"], evidence_state=STATE_OF[st],
+                      measured_net=_r(r["value"]), element_id=r["element_id"], floor=r["floor"],
+                      room_id=sib["location"].get("room_id"), physical_element=sib.get("physical_element"),
+                      formula=(r.get("formula") or f"piece {pc['id']} {_r(pc['value'])} {r['unit']} ({pc['class']}, "
+                                                   f"{pc['class_source']})")[:600],
+                      inputs={"component_closure_v3018": rec}, documents=copy.deepcopy(sib["source"]["documents"]),
+                      geometry_source=sib["source"]["geometry_source"],
+                      geometry_confidence="TOLERANCE_CERTIFIED" if pc["status"] in (VER, DC) else "INFERRED_CANDIDATE",
+                      rule_id=RULE_ID, rule_version=RULE_VERSION, material_state=sib["material_state"],
+                      notes=f"{METHOD}: piece {pc['id']} no line carried ({src['task']} MERGED {src['merge_commit']}, "
+                            f"{src['checker_run']}): geometry {pc['status']}, class {pc['class']} by "
+                            f"{pc['class_source']}; line {st}",
+                      subtrade=sib.get("subtrade"), item_en=sib.get("item_en"), item_ar=sib.get("item_ar"),
+                      trade=sib.get("trade"))
+    ln["project"] = copy.deepcopy(pr)
     return BL.validate(ln)
 
 
@@ -485,17 +512,17 @@ def changes_for(doc, l3017):
         src = _src_of(doc, r["task"])
         ver = {"task": src["task"], "merge_commit": src["merge_commit"], "verifier_run": src["checker_run"],
                "ledger": src["file"], "ledger_sha256": src["sha256"]}
-        if r["kind"] == "MATERIAL":
-            ln = material_line(work, r, src)
+        if r["kind"] in ("MATERIAL", "PIECE_LINE"):
+            ln = material_line(work, r, src) if r["kind"] == "MATERIAL" else piece_line(work, r, src)
             if ln["line_id"] in by:
-                raise ValueError(f"{METHOD}: material line {r['id']} repeats a candidate line id")
+                raise ValueError(f"{METHOD}: added line {r['id']} repeats a candidate line id")
             work.append(ln)
             changes.append(A305._change("COMPONENT_CLOSURE", "ADD", None, ln, drawing_reference=r.get("printed"),
                                         held=[], downstream=list(r.get("downstream") or ()),
                                         verification=dict(ver, record_status=r["status"],
                                                           owner_source=r.get("owner_source")),
-                                        evidence_status=r["status"], codes=["COMPONENT_CLOSURE", "MATERIAL"],
-                                        group=r.get("group") or "MATERIAL"))
+                                        evidence_status=r["status"], codes=["COMPONENT_CLOSURE", r["kind"]],
+                                        group=r.get("group") or r["kind"]))
             continue
         b = by.get(r["line_id"])
         _assert_before(b, r)
@@ -540,13 +567,6 @@ def changes_for(doc, l3017):
                                                "scenario": None}],
                                         downstream=list(r.get("downstream") or ()), verification=ver,
                                         evidence_status="HELD", codes=["COMPONENT_CLOSURE", "HOLD"], group=grp))
-        else:
-            after = piece_in_line(b, r, src, work)
-            changes.append(A305._change("COMPONENT_CLOSURE", "REPLACE", b, after, drawing_reference=r.get("printed"),
-                                        held=[], downstream=list(r.get("downstream") or ()),
-                                        verification=ver, evidence_status=f"{r['piece']['status']} (piece); class "
-                                                                          f"{r['piece']['class_source']}",
-                                        codes=["COMPONENT_CLOSURE", "PIECE_IN"], group=grp))
     groups = {}
     for c in changes:
         g = groups.setdefault(c["group"], {"rows": 0, "before_released": 0.0, "after_released": 0.0, "held_lines": 0})
@@ -767,5 +787,5 @@ def policy_record():
 
 
 __all__ = ["METHOD", "PIECES", "WAITING", "DEFAULT_GUARD_CLASS", "INPUTS_SCHEMA", "load_inputs", "part_line",
-           "split_parent", "rebased_line", "held_line", "material_line", "piece_in_line", "changes_for",
+           "split_parent", "rebased_line", "held_line", "material_line", "piece_line", "changes_for",
            "check_splits", "integrate", "ledger_rows", "diff_rows", "write", "InputsError"]

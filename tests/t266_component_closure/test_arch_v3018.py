@@ -8,7 +8,8 @@ Villa K266 (hand calculation, m / m3):
   landing line BOUNDED 0.300 .. 0.320: plates 2.00 x 1.00 x 0.15 = 0.300000 DRAWING-CONFIRMED (0.320 retired);
   entrance flight PROVISIONAL 0.600 on a convention waist -> HELD blank;
   1F arrival landing ARCH.SPACE 2.00 x 2.00 = 4.0000 m2 -> its marble material line 4.0000 m2;
-  pantry wet floor 10.0000 m2 + a confirmed piece 0.50 x 2.50 = 1.2500 m2 -> 11.2500 m2.
+  pantry wet floor 10.0000 m2 (unchanged) + a confirmed piece no line carries 0.50 x 2.50 = 1.2500 m2 on its own wet
+      line (geometry DRAWING-CONFIRMED, class by an owner answer -> ASSUMED - OWNER-APPROVED): pantry wet 11.2500 m2.
 """
 from __future__ import annotations
 
@@ -81,11 +82,12 @@ def doc(ls=None):
          "item_code": "FIN.MARBLE.LANDING", "element_id": "K:SPACE:LAND1F", "unit": "m2", "floor": "1F", "task": "T-K",
          "physical_element": "1F arrival landing marble", "status": "DRAWING-CONFIRMED", "value": 4.0,
          "item_en": "Stair landing marble", "item_ar": "رخام", "trade": "STAIR_FINISH", "owner_source": "Q-K B"},
-        {"kind": "PIECE_IN", "line_id": i["K:PANTRY"], "item_code": "FIN.FLOOR.WET_TILE", "element_id": "K:PANTRY",
-         "task": "T-K", "physical_element": "pantry floor", "before": {"evidence_state": "SOURCE_DERIVED",
-                                                                       "measured_net": 10.0},
+        {"kind": "PIECE_LINE", "id": "K-PANTRY-STRIP", "line_id": i["K:PANTRY"], "like_line_id": i["K:PANTRY"],
+         "item_code": "FIN.FLOOR.WET_TILE", "element_id": "K:PANTRY:STRIP-9", "unit": "m2", "floor": "GF",
+         "task": "T-K", "physical_element": "pantry floor under the counter", "status": OA, "class_status": OA,
+         "owner_source": "owner Q-K C", "value": 1.25,
          "piece": {"id": "K-STRIP-9", "value": 1.25, "status": "DRAWING-CONFIRMED", "class": "WET",
-                   "class_source": "owner Q-K C"}, "after": 11.25}]}
+                   "class_source": "owner Q-K C"}}]}
 
 
 def run(d=None, ls=None):
@@ -116,9 +118,13 @@ def test_normal_split_rebase_hold_material_piece():
     m = by["K:SPACE:LAND1F#MATERIAL:FIN_MARBLE_LANDING"]
     assert m["item_code"] == "FIN.MARBLE.LANDING" and m["measured_net"] == 4.0 and m["unit"] == "m2"
     assert by["K:SPACE:LAND1F"]["measured_net"] == 4.0                 # the area line unchanged
-    assert by["K:PANTRY"]["measured_net"] == 11.25
-    assert ident["replaced"] == 5 and ident["added"] == 3 and ident["split_parts"] == 2
-    assert ident["outside_rows"] == 2                                  # living porcelain + the area line, byte-identical
+    assert by["K:PANTRY"]["measured_net"] == 10.0                      # the sibling unchanged
+    pl = by["K:PANTRY:STRIP-9"]
+    assert pl["item_code"] == "FIN.FLOOR.WET_TILE" and pl["measured_net"] == 1.25 and pl["evidence_state"] == "PROVISIONAL"
+    wet = sum(ln["measured_net"] for ln in out if ln["item_code"] == "FIN.FLOOR.WET_TILE")
+    assert round(wet, 6) == 11.25
+    assert ident["replaced"] == 4 and ident["added"] == 4 and ident["split_parts"] == 2
+    assert ident["outside_rows"] == 3                                  # living, area line, pantry: byte-identical
     assert by["K:LIVING"] == ls[-1]
     # released concrete on stair lines: 0.6 before -> 1.047451 + 0.5 + 0.3 after
     rel = sum(ln["measured_net"] for ln in out if ln["item_code"] == "STR.CONC.STAIR" and ln["measured_net"])
@@ -139,9 +145,9 @@ def test_write_files(tmp_path):
     ls, ch, log, out, ident = run()
     names, ident2, led = A.write(tmp_path, ls, ch, log, doc(ls))
     assert "V3_0_18_BOQ_LINES.json" in names and (tmp_path / "V3_0_18_DIFF.csv").exists()
-    assert ident2["diff"]["vs_v3_0_17"] == {"SAME": 2, "CHANGED": 5, "ADDED": 3}
+    assert ident2["diff"]["vs_v3_0_17"] == {"SAME": 3, "CHANGED": 4, "ADDED": 4}
     kinds = sorted(r["kind"] for r in led["rows"])
-    assert kinds == ["HOLD", "MATERIAL", "PIECE_IN", "REBASE", "SPLIT_PARENT", "SPLIT_PARENT", "SPLIT_PART",
+    assert kinds == ["HOLD", "MATERIAL", "PIECE_LINE", "REBASE", "SPLIT_PARENT", "SPLIT_PARENT", "SPLIT_PART",
                      "SPLIT_PART"]
 
 
@@ -239,6 +245,16 @@ def test_adverse_piece_already_booked_elsewhere():
                 "SOURCE_DERIVED", net=1.25, formula="opening strip K-STRIP-9")
         ls.append(x)
     _bad(m, "already booked")
+
+
+def test_adverse_piece_line_stronger_than_its_class_or_not_the_piece():
+    def m(d, ls):
+        d["records"][5]["status"] = "DRAWING-CONFIRMED"
+    _bad(m, "WEAKEST")
+
+    def m2(d, ls):
+        d["records"][5]["value"] = 1.3
+    _bad(m2, "not the piece")
 
 
 def test_adverse_stale_before_and_unknown_line():
