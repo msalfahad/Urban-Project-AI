@@ -23,7 +23,7 @@ Restatement 2026-10-24 20:26 UTC (Verifier run session_01X75qj8eyC7AUBM5HFe4YBE)
 | 7 | CONC.BEAM | m3 | as 14:02 | as 14:02 | as 14:02 |
 | 8 | CONC.FOOTING | m3 | as 07:30 | as 07:30 | as 07:30 |
 | 9 | CONC.GROUND | m3 | as 14:02 | as 14:02 | as 14:02 |
-| 10 | CONC.BLINDING | m3 | as 07:30 | as 07:30 | as 07:30 |
+| 10 | CONC.BLINDING | m3 | as 07:30 | as 07:30 + (Checker 2026-10-25 01:34) the boundary-wall base blinding, UNMEASURED (Q-28 A, T-065 C3; owner 2026-10-23 21:15 (3)), is a component of this line and waits on S2 (Q-28: which boundary-wall base / pads, p.14): blockers D-14, D-15, Q-21 C, F10 + F Q-31 C AND Q-28 / S2 | as 07:30 |
 | 11 | CONC.COLUMN | m3 | as 07:30 (07:52 note) | as 07:30 | as 07:30 |
 | 12 | CONC.POOL | m3 | as 22:55 | as 22:55 | as 22:55 |
 | 13 | CONC.STAIR_DOME | m3 | as 14:02 | as 14:02 | as 14:02 |
