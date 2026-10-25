@@ -1,0 +1,3 @@
+DOME,OPEN_DISC_M2,OVER_FLOOR_PIECES_M2,OVER_WALLS_OR_OUTSIDE_M2,ROOMS,STATUS,S0_SHELL_INTRADOS_M2,IN_FIN_CEILING
+west,15.359,14.2445,1.1145,1F-R48AA46 1.2410; 1F-R8BDA49 1.4227; 1F-RB72F22 11.5808,HELD (designer DCR-4: what closes the opening; Q-44 A),"24.150 (T-185 S0, CALCULATED, dome finish line, scenario report only)",no (plan area HELD apart; the shell soffit is not a decor ceiling)
+east,15.359,14.8249,0.5341,1F-R3CFCFD 0.3418; 1F-R48CDA5 0.4472; 1F-R78C367 14.0359,HELD (designer DCR-4: what closes the opening; Q-44 A),"24.150 (T-185 S0, CALCULATED, dome finish line, scenario report only)",no (plan area HELD apart; the shell soffit is not a decor ceiling)
