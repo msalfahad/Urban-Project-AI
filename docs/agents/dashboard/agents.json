@@ -41,7 +41,7 @@
 "cadence": "every 2 h at :59 (even hours UTC)",
 "last_run": "2026-10-25T08:59:31Z",
 "result": "ok",
-"working_on": "First real export fixed and handed in 09:35 (with the checker); next run 10:59: ceiling face-to-line ledger",
+"working_on": "First real export merged 10:17; next run 10:59: exterior ground-beam correction into the candidate",
 "as_of": "2026-10-25T10:20:00Z"
 },
 {
@@ -49,8 +49,8 @@
 "role": "Checks finished tasks by re-measuring, merges or rejects, keeps the scoreboard",
 "cadence": "hourly at :49 (pilot cadence still set)",
 "last_run": "2026-10-25T08:50:00Z",
-"result": "running",
-"working_on": "08:50 run merged the structural basis ledger, the scoring-guard fix and the pantry floor zone; checking the first real export now (09:51 run stood down: overlap guard)",
+"result": "ok",
+"working_on": "08:50 run (closed 10:19) merged the first real export, the structural basis ledger, the scoring-guard fix and the pantry floor zone; next run 10:51: verified-line and hold records, then the stairs/domes ledger",
 "as_of": "2026-10-25T10:20:00Z"
 },
 {

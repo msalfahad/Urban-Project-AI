@@ -7,8 +7,10 @@ lines independently verified, and trades that can be scored. Still 1 whole line 
 slab, 60.28 m3), 0 released. No decision for you.
 
 Since 08:15 (newest first; three pieces checked and merged, the first real export back with the checker):
-- First real export of the candidate BOQ: the small fix is done (code map last, an out-of-scope row stays out of scope,
-  full test suite run to the end with no new failure) and it is back with the checker, who is checking it now.
+- First real export of the candidate BOQ: CHECKED AND MERGED (10:17). One project identity over every line, every
+  quantity unchanged, one command gives the spreadsheet and csv. The verified-line records (the slab line, the
+  foundation waterproofing lines) and the "hold" records for the unsupported depths are written by the checker in his
+  next run (10:51); until then the export shows 0 verified rows. Next: the exterior ground-beam correction goes in.
 - Concrete, exterior ground beams: the checker confirmed the finding from the drawings himself. On the drawn runs at the
   printed 0.95 m depth the main-house exterior ground beams are 15.96 m3, against 8.16 m3 in the engine (+7.80 m3,
   +95.5 %); three of them were carried as interior beams. Verified as a basis, not yet in the candidate (next

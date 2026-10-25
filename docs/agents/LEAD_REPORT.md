@@ -2,6 +2,14 @@
 
 ## LEAD REPORT 2026-10-25 10:15 UTC
 
+ADDENDUM 10:22: the 08:50 Checker run closed 10:19: T-245 r2 Gate B PASS, MERGED ef3305f1. The first real export is on the
+working branch: V3.0.16 is the candidate of record, one project identity and one revision set on all 3,699 lines (every
+quantity byte-identical to V3.0.15; full suite NEW 0 / KNOWN 395; export rows VERIFIED 0 / MEASURED UNVERIFIED 1,047 /
+HELD 1,878 / EXCLUDED 774 until the Checker's records are written). T-245 WORKED. The V2 verdict and downgrade records
+were NOT issued (lock margin); I named their path (docs/agents/verdicts/V3.0.16/ on the board, Checker-only) and put
+them FIRST in the 10:51 Checker run. T-254 (exterior ground beams, +7.80 m3 drawn) PROMOTED to first in lane I for
+worker 3 at 10:59; T-170 set READY (READY 3). Your 10:31 check-in will find the merge; the records follow at 10:51.
+
 Repositories: attached Urban-Project-AI checkout (main eafbb0f6); `.work` prepared AUTOMATICALLY ("setup by auto",
 10:10). Working branch 86fdc315 -> e861e390 (three Checker merges via 'engine push': T-289 455c93c4, T-275 r2 6c4c9700,
 T-286 e861e390); no owner commit on the engine branch. Drive readable: nothing created or modified on Drive since 08:00,
