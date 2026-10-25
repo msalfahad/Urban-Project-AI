@@ -1,0 +1,15 @@
+line_id,floor,engine_room,opening_id,census_id,rooms_geo,edge_lm,f17_credit_lm,sill,reading,status,why
+L-71e2e002a3af624097f0,GF,GF-RC99C2A,OP-019,W02,GF-08,6.331578,3.165789,,HELD,HELD,sill not established (HELD (T-175 hosts))
+L-71e2e002a3af624097f0,GF,GF-RC99C2A,OP-024,W09,GF-07,1.500000,0.750000,1.00,NOT_SKIRTED,ASSUMED - OWNER-APPROVED,window of a wet room (GF-07): full-height wall porcelain owns the base (Q-37 A / Q-48 A)
+L-d32414916cfbd04c27be,GF,GF-R7512EA,OP-028,W11,GF-01,1.954920,0.977460,,HELD,HELD,sill not established (HELD (sill: datum not printed) (T-207 closure (h 2.20 DRAWING-CONFIRMED; sill HELD)))
+L-d32414916cfbd04c27be,GF,GF-R7512EA,OP-029,W12,GF-01,1.954920,0.977460,,HELD,HELD,sill not established (HELD (sill: datum not printed) (T-207 closure (h 2.20 DRAWING-CONFIRMED; sill HELD)))
+L-bb0ea96508a0dc69603c,GF,GF-R51E127,OP-004,W04,GF-04,0.600000,0.300000,1.70,SKIRTED,DRAWING-CONFIRMED,sill 1.70 m above the floor (DRAWING-CONFIRMED (T-201 heads)): the wall base continues under the window
+L-af6fb2d3474c5fbdb80a,GF,GF-RC06FED,OP-023,W10,GF-07,1.000000,0.500000,1.00,NOT_SKIRTED,ASSUMED - OWNER-APPROVED,window of a wet room (GF-07): full-height wall porcelain owns the base (Q-37 A / Q-48 A)
+L-ba3599ec2dc82c221617,1F,1F-R78C367,OP-012,W25,ST-1F,1.000000,0.500000,0.00,HELD,HELD,window of the stair shaft: no owner rule for skirting along a stair (stringer / landing): HELD
+L-ba3599ec2dc82c221617,1F,1F-R78C367,OP-016,W15,1F-13,1.552320,0.776160,0.00,NOT_SKIRTED,DRAWING-CONFIRMED,sill 0.00 m: floor-level glazing (DRAWING-CONFIRMED (T-238 delta (arched outline)))
+L-ba3599ec2dc82c221617,1F,1F-R78C367,OP-017,W16,1F-13,1.552320,0.776160,0.00,NOT_SKIRTED,DRAWING-CONFIRMED,sill 0.00 m: floor-level glazing (DRAWING-CONFIRMED (T-238 delta (arched outline)))
+L-ba3599ec2dc82c221617,1F,1F-R78C367,OP-021,W13,ST-1F,1.200000,0.600000,1.00,HELD,HELD,window of the stair shaft: no owner rule for skirting along a stair (stringer / landing): HELD
+L-c021ae79a3740089c3fe,1F,1F-RB72F22,OP-022,W14,1F-01,2.449774,1.224887,1.40,SKIRTED,DRAWING-CONFIRMED,sill 1.40 m above the floor (PRINTED (T-175 hosts)): the wall base continues under the window
+L-309f118f6fce78b6c28e,1F,1F-R3CFCFD,COP-001,W17,1F-11,3.289498,1.644749,,HELD,HELD,"sill not established (HELD (T-238: archivolt, developed outline) (T-238 delta (upper bound 10.024)))"
+L-2f58111e59f0f5213c58,1F,1F-RED0D19,OP-003,W24,1F-04,1.552320,0.776160,1.00,SKIRTED,DRAWING-CONFIRMED,sill 1.00 m above the floor (DRAWING-CONFIRMED (T-201 heads)): the wall base continues under the window
+L-d057b5b05b9eaf131b59,2F,2F-R1DB2D2,OP-005,W29,2F-03,1.200000,0.600000,1.00,SKIRTED,DRAWING-CONFIRMED,sill 1.00 m above the floor (DRAWING-CONFIRMED (T-201 heads)): the wall base continues under the window

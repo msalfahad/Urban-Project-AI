@@ -1,0 +1,64 @@
+line_id,opening_id,census_id,kind,length_m,listed,listed_as,source,cause,sill_state,sill_m,rooms_geo
+L-71e2e002a3af624097f0,OP-008,D-GF-06,DOOR,1.000000,True,door / passage openings,ARCH_OPENINGS width_m (band opening),,,,
+L-71e2e002a3af624097f0,OP-010,D-GF-08,DOOR,1.000000,True,door / passage openings,ARCH_OPENINGS width_m (band opening),,,,
+L-71e2e002a3af624097f0,OP-012,D-GF-13,DOOR,1.000000,True,door / passage openings,ARCH_OPENINGS width_m (band opening),,,,
+L-71e2e002a3af624097f0,OP-021,D-GF-07,DOOR,2.000000,True,door / passage openings,ARCH_OPENINGS width_m (band opening),,,,
+L-71e2e002a3af624097f0,OP-003,,PASSAGE,11.220000,True,door / passage openings,ARCH_OPENINGS width_m (band opening),engine opening with no T-249 census id,,,
+L-71e2e002a3af624097f0,OP-011,,PASSAGE,1.000000,True,door / passage openings,ARCH_OPENINGS width_m (band opening),engine opening with no T-249 census id,,,
+L-71e2e002a3af624097f0,,,PASSAGE_RUN_RESIDUAL,-1.400000,True,door / passage openings,engine runs passage 10.820000 - the openings listed,a band passage longer than its stretch on this room's boundary (shared zone line),,,
+L-71e2e002a3af624097f0,OP-019#glazing-half,W02,WINDOW_EDGE_HALF,3.165789,True,glazing edge (floor-level window line),ARCH_ROOMS skirting_windows_v28 OP-019 WINDOW_SILL_NOT_ESTABLISHED 6.331578 m (range line holds it whole),,HELD,,GF-08
+L-71e2e002a3af624097f0,OP-019#threshold-half,W02,WINDOW_EDGE_HALF,3.165789,False,,ARCH_ROOMS skirting_windows_v28 OP-019 WINDOW_SILL_NOT_ESTABLISHED 6.331578 m (range line holds it whole),"F-17 equal-split credit (release_safety.skirting), not listed",HELD,,GF-08
+L-71e2e002a3af624097f0,OP-024#glazing-half,W09,WINDOW_EDGE_HALF,0.750000,True,glazing edge (floor-level window line),ARCH_ROOMS skirting_windows_v28 OP-024 WINDOW_SILL_NOT_ESTABLISHED 1.500000 m (range line holds it whole),,ESTABLISHED,1.000000,GF-07
+L-71e2e002a3af624097f0,OP-024#threshold-half,W09,WINDOW_EDGE_HALF,0.750000,False,,ARCH_ROOMS skirting_windows_v28 OP-024 WINDOW_SILL_NOT_ESTABLISHED 1.500000 m (range line holds it whole),"F-17 equal-split credit (release_safety.skirting), not listed",ESTABLISHED,1.000000,GF-07
+L-71e2e002a3af624097f0,,,GLAZING_ONLY_EDGE,1.627277,True,glazing edge (floor-level window line),glazing edge - the window halves,a WINDOW-only edge (no threshold role),,,
+L-71e2e002a3af624097f0,,,OTHER_BOUNDARY,2.555652,True,boundary that is not a wall / column face,engine runs 'other',zone line / open side,,,
+L-d32414916cfbd04c27be,OP-009,D-GF-01,DOOR,1.000000,True,door / passage openings,ARCH_OPENINGS width_m (band opening),,,,
+L-d32414916cfbd04c27be,OP-027,A-GF-01,PASSAGE,1.000000,True,door / passage openings,ARCH_OPENINGS width_m (band opening),,,,
+L-d32414916cfbd04c27be,OP-028#glazing-half,W11,WINDOW_EDGE_HALF,0.977460,True,glazing edge (floor-level window line),ARCH_ROOMS skirting_windows_v28 OP-028 WINDOW_SILL_NOT_ESTABLISHED 1.954920 m (range line holds it whole),,HELD,,GF-01
+L-d32414916cfbd04c27be,OP-028#threshold-half,W11,WINDOW_EDGE_HALF,0.977460,False,,ARCH_ROOMS skirting_windows_v28 OP-028 WINDOW_SILL_NOT_ESTABLISHED 1.954920 m (range line holds it whole),"F-17 equal-split credit (release_safety.skirting), not listed",HELD,,GF-01
+L-d32414916cfbd04c27be,OP-029#glazing-half,W12,WINDOW_EDGE_HALF,0.977460,True,glazing edge (floor-level window line),ARCH_ROOMS skirting_windows_v28 OP-029 WINDOW_SILL_NOT_ESTABLISHED 1.954920 m (range line holds it whole),,HELD,,GF-01
+L-d32414916cfbd04c27be,OP-029#threshold-half,W12,WINDOW_EDGE_HALF,0.977460,False,,ARCH_ROOMS skirting_windows_v28 OP-029 WINDOW_SILL_NOT_ESTABLISHED 1.954920 m (range line holds it whole),"F-17 equal-split credit (release_safety.skirting), not listed",HELD,,GF-01
+L-c47fc614ebc3ccde1091,OP-012,D-GF-13,DOOR,1.000000,True,door / passage openings,ARCH_OPENINGS width_m (band opening),,,,
+L-c47fc614ebc3ccde1091,D-GF-14,D-GF-14,DOOR,0.800000,True,door / passage openings,census door block with no band opening (engine DOOR_CLOSURE role); T-237 merged width,,,,
+L-c47fc614ebc3ccde1091,,,GLAZING_ONLY_EDGE,5.101860,True,glazing edge (floor-level window line),glazing edge - the window halves,a WINDOW-only edge (no threshold role),,,
+L-bb0ea96508a0dc69603c,OP-005,D-GF-03,DOOR,0.900000,True,door / passage openings,ARCH_OPENINGS width_m (band opening),,,,
+L-bb0ea96508a0dc69603c,OP-026,D-GF-04,DOOR,0.800000,True,door / passage openings,ARCH_OPENINGS width_m (band opening),,,,
+L-bb0ea96508a0dc69603c,OP-004#glazing-half,W04,WINDOW_EDGE_HALF,0.300000,True,glazing edge (floor-level window line),ARCH_ROOMS skirting_windows_v28 OP-004 WINDOW_SILL_NOT_ESTABLISHED 0.600000 m (range line holds it whole),,ESTABLISHED,1.700000,GF-04
+L-bb0ea96508a0dc69603c,OP-004#threshold-half,W04,WINDOW_EDGE_HALF,0.300000,False,,ARCH_ROOMS skirting_windows_v28 OP-004 WINDOW_SILL_NOT_ESTABLISHED 0.600000 m (range line holds it whole),"F-17 equal-split credit (release_safety.skirting), not listed",ESTABLISHED,1.700000,GF-04
+L-af6fb2d3474c5fbdb80a,OP-003,,PASSAGE,11.220000,True,door / passage openings,ARCH_OPENINGS width_m (band opening),engine opening with no T-249 census id,,,
+L-af6fb2d3474c5fbdb80a,,,PASSAGE_RUN_RESIDUAL,-8.720000,True,door / passage openings,engine runs passage 2.500000 - the openings listed,a band passage longer than its stretch on this room's boundary (shared zone line),,,
+L-af6fb2d3474c5fbdb80a,OP-023#glazing-half,W10,WINDOW_EDGE_HALF,0.500000,True,glazing edge (floor-level window line),ARCH_ROOMS skirting_windows_v28 OP-023 WINDOW_SILL_NOT_ESTABLISHED 1.000000 m (range line holds it whole),,ESTABLISHED,1.000000,GF-07
+L-af6fb2d3474c5fbdb80a,OP-023#threshold-half,W10,WINDOW_EDGE_HALF,0.500000,False,,ARCH_ROOMS skirting_windows_v28 OP-023 WINDOW_SILL_NOT_ESTABLISHED 1.000000 m (range line holds it whole),"F-17 equal-split credit (release_safety.skirting), not listed",ESTABLISHED,1.000000,GF-07
+L-af6fb2d3474c5fbdb80a,,,OTHER_BOUNDARY,2.200000,True,boundary that is not a wall / column face,engine runs 'other',zone line / open side,,,
+L-ba3599ec2dc82c221617,OP-005,D-1F-08,DOOR,0.900000,True,door / passage openings,ARCH_OPENINGS width_m (band opening),,,,
+L-ba3599ec2dc82c221617,OP-006,D-1F-09,DOOR,0.900000,True,door / passage openings,ARCH_OPENINGS width_m (band opening),,,,
+L-ba3599ec2dc82c221617,OP-008,D-1F-05,DOOR,0.900000,True,door / passage openings,ARCH_OPENINGS width_m (band opening),,,,
+L-ba3599ec2dc82c221617,OP-020,D-1F-02,DOOR,1.000000,True,door / passage openings,ARCH_OPENINGS width_m (band opening),,,,
+L-ba3599ec2dc82c221617,D-1F-03,D-1F-03,DOOR,1.000000,True,door / passage openings,census door block with no band opening (engine DOOR_CLOSURE role); T-237 merged width,,,,
+L-ba3599ec2dc82c221617,OP-007,,PASSAGE,1.000000,True,door / passage openings,ARCH_OPENINGS width_m (band opening),engine opening with no T-249 census id,,,
+L-ba3599ec2dc82c221617,OP-012#glazing-half,W25,WINDOW_EDGE_HALF,0.500000,True,glazing edge (floor-level window line),ARCH_ROOMS skirting_windows_v28 OP-012 WINDOW_SILL_NOT_ESTABLISHED 1.000000 m (range line holds it whole),,ESTABLISHED,0.000000,ST-1F
+L-ba3599ec2dc82c221617,OP-012#threshold-half,W25,WINDOW_EDGE_HALF,0.500000,False,,ARCH_ROOMS skirting_windows_v28 OP-012 WINDOW_SILL_NOT_ESTABLISHED 1.000000 m (range line holds it whole),"F-17 equal-split credit (release_safety.skirting), not listed",ESTABLISHED,0.000000,ST-1F
+L-ba3599ec2dc82c221617,OP-016#glazing-half,W15,WINDOW_EDGE_HALF,0.776160,True,glazing edge (floor-level window line),ARCH_ROOMS skirting_windows_v28 OP-016 WINDOW_SILL_NOT_ESTABLISHED 1.552320 m (range line holds it whole),,ESTABLISHED,0.000000,1F-13
+L-ba3599ec2dc82c221617,OP-016#threshold-half,W15,WINDOW_EDGE_HALF,0.776160,False,,ARCH_ROOMS skirting_windows_v28 OP-016 WINDOW_SILL_NOT_ESTABLISHED 1.552320 m (range line holds it whole),"F-17 equal-split credit (release_safety.skirting), not listed",ESTABLISHED,0.000000,1F-13
+L-ba3599ec2dc82c221617,OP-017#glazing-half,W16,WINDOW_EDGE_HALF,0.776160,True,glazing edge (floor-level window line),ARCH_ROOMS skirting_windows_v28 OP-017 WINDOW_SILL_NOT_ESTABLISHED 1.552320 m (range line holds it whole),,ESTABLISHED,0.000000,1F-13
+L-ba3599ec2dc82c221617,OP-017#threshold-half,W16,WINDOW_EDGE_HALF,0.776160,False,,ARCH_ROOMS skirting_windows_v28 OP-017 WINDOW_SILL_NOT_ESTABLISHED 1.552320 m (range line holds it whole),"F-17 equal-split credit (release_safety.skirting), not listed",ESTABLISHED,0.000000,1F-13
+L-ba3599ec2dc82c221617,OP-021#glazing-half,W13,WINDOW_EDGE_HALF,0.600000,True,glazing edge (floor-level window line),ARCH_ROOMS skirting_windows_v28 OP-021 WINDOW_SILL_NOT_ESTABLISHED 1.200000 m (range line holds it whole),,ESTABLISHED,1.000000,ST-1F
+L-ba3599ec2dc82c221617,OP-021#threshold-half,W13,WINDOW_EDGE_HALF,0.600000,False,,ARCH_ROOMS skirting_windows_v28 OP-021 WINDOW_SILL_NOT_ESTABLISHED 1.200000 m (range line holds it whole),"F-17 equal-split credit (release_safety.skirting), not listed",ESTABLISHED,1.000000,ST-1F
+L-c021ae79a3740089c3fe,OP-004,D-1F-01,DOOR,0.800000,True,door / passage openings,ARCH_OPENINGS width_m (band opening),,,,
+L-c021ae79a3740089c3fe,OP-020,D-1F-02,DOOR,1.000000,True,door / passage openings,ARCH_OPENINGS width_m (band opening),,,,
+L-c021ae79a3740089c3fe,OP-022#glazing-half,W14,WINDOW_EDGE_HALF,1.224887,True,glazing edge (floor-level window line),ARCH_ROOMS skirting_windows_v28 OP-022 WINDOW_SILL_NOT_ESTABLISHED 2.449774 m (range line holds it whole),,ESTABLISHED,1.400000,1F-01
+L-c021ae79a3740089c3fe,OP-022#threshold-half,W14,WINDOW_EDGE_HALF,1.224887,False,,ARCH_ROOMS skirting_windows_v28 OP-022 WINDOW_SILL_NOT_ESTABLISHED 2.449774 m (range line holds it whole),"F-17 equal-split credit (release_safety.skirting), not listed",ESTABLISHED,1.400000,1F-01
+L-309f118f6fce78b6c28e,OP-006,D-1F-09,DOOR,0.900000,True,door / passage openings,ARCH_OPENINGS width_m (band opening),,,,
+L-309f118f6fce78b6c28e,OP-018,D-1F-10,DOOR,0.800000,True,door / passage openings,ARCH_OPENINGS width_m (band opening),,,,
+L-309f118f6fce78b6c28e,COP-001#glazing-half,W17,WINDOW_EDGE_HALF,1.644749,True,glazing edge (floor-level window line),ARCH_ROOMS skirting_windows_v28 COP-001 WINDOW_SILL_NOT_ESTABLISHED 3.289498 m (range line holds it whole),,HELD,,1F-11
+L-309f118f6fce78b6c28e,COP-001#threshold-half,W17,WINDOW_EDGE_HALF,1.644749,False,,ARCH_ROOMS skirting_windows_v28 COP-001 WINDOW_SILL_NOT_ESTABLISHED 3.289498 m (range line holds it whole),"F-17 equal-split credit (release_safety.skirting), not listed",HELD,,1F-11
+L-2f58111e59f0f5213c58,D-1F-03,D-1F-03,DOOR,1.000000,True,door / passage openings,census door block with no band opening (engine DOOR_CLOSURE role); T-237 merged width,,,,
+L-2f58111e59f0f5213c58,D-1F-04,D-1F-04,DOOR,0.800000,True,door / passage openings,census door block with no band opening (engine DOOR_CLOSURE role); T-237 merged width,,,,
+L-2f58111e59f0f5213c58,OP-003#glazing-half,W24,WINDOW_EDGE_HALF,0.776160,True,glazing edge (floor-level window line),ARCH_ROOMS skirting_windows_v28 OP-003 WINDOW_SILL_NOT_ESTABLISHED 1.552320 m (range line holds it whole),,ESTABLISHED,1.000000,1F-04
+L-2f58111e59f0f5213c58,OP-003#threshold-half,W24,WINDOW_EDGE_HALF,0.776160,False,,ARCH_ROOMS skirting_windows_v28 OP-003 WINDOW_SILL_NOT_ESTABLISHED 1.552320 m (range line holds it whole),"F-17 equal-split credit (release_safety.skirting), not listed",ESTABLISHED,1.000000,1F-04
+L-a8aea28451168e4032b6,OP-005,D-1F-08,DOOR,0.900000,True,door / passage openings,ARCH_OPENINGS width_m (band opening),,,,
+L-a8aea28451168e4032b6,OP-011,A-1F-01,PASSAGE,1.000000,True,door / passage openings,ARCH_OPENINGS width_m (band opening),,,,
+L-d057b5b05b9eaf131b59,OP-006,D-2F-03,DOOR,0.800000,True,door / passage openings,ARCH_OPENINGS width_m (band opening),,,,
+L-d057b5b05b9eaf131b59,OP-007,D-2F-02,DOOR,0.900000,True,door / passage openings,ARCH_OPENINGS width_m (band opening),,,,
+L-d057b5b05b9eaf131b59,OP-005#glazing-half,W29,WINDOW_EDGE_HALF,0.600000,True,glazing edge (floor-level window line),ARCH_ROOMS skirting_windows_v28 OP-005 WINDOW_SILL_NOT_ESTABLISHED 1.200000 m (range line holds it whole),,ESTABLISHED,1.000000,2F-03
+L-d057b5b05b9eaf131b59,OP-005#threshold-half,W29,WINDOW_EDGE_HALF,0.600000,False,,ARCH_ROOMS skirting_windows_v28 OP-005 WINDOW_SILL_NOT_ESTABLISHED 1.200000 m (range line holds it whole),"F-17 equal-split credit (release_safety.skirting), not listed",ESTABLISHED,1.000000,2F-03

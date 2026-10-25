@@ -1,0 +1,52 @@
+{
+ "candidate": {
+  "by_state": {
+   "BLOCKED_RFI": 2,
+   "BOUNDED_EXPOSURE": 9,
+   "NOT_APPLICABLE_WITH_EVIDENCE": 17,
+   "SOURCE_DERIVED": 11
+  },
+  "lines_sha256_8": "366be2f8",
+  "lines_total": 3700,
+  "skirting_lines": 39
+ },
+ "ledger": {
+  "by_status": {
+   "DRAWING-CONFIRMED": 6,
+   "HELD": 4,
+   "NOT_APPLICABLE": 1
+  },
+  "cand_net_lm": 185.516658,
+  "cand_range_hi_sum_lm": 27.137649,
+  "ledger_hi_lm": 205.149668,
+  "ledger_lo_lm": 179.186752,
+  "lines_not_applicable": [
+   "L-af6fb2d3474c5fbdb80a"
+  ]
+ },
+ "policy": "T296_SKIRTING_OPENING_LEDGER_V1",
+ "rooms": {
+  "engine_rooms_outside_t128": 6,
+  "t128_rooms": 32
+ },
+ "rules": [
+  "UP-SKIRT-001",
+  "UP-CER-002",
+  "UP-CER-003",
+  "UP-CER-004",
+  "UP-QTY-STATUS-001"
+ ],
+ "trail": {
+  "lines_with_unlisted": 9,
+  "max_abs_residual_lm": 1e-06,
+  "quantity_lines": 11,
+  "readds_as_listed": 2,
+  "readds_with_named": 11,
+  "unlisted_lm": 13.568825
+ },
+ "window_readings": {
+  "HELD": 15.730916,
+  "NOT_SKIRTED": 5.60464,
+  "SKIRTED": 5.802094
+ }
+}
