@@ -159,3 +159,27 @@ def test_cli_roundtrip_and_no_flag_bytes_unchanged(tmp_path):
     a = {r["element_id"]: r for r in X.read_csv(tmp_path / "o1" / "BOQ.csv")}
     b = {r["element_id"]: r for r in X.read_csv(tmp_path / "o2" / "BOQ.csv")}
     assert {e for e in a if a[e] != b[e]} == {"GB-E1"}
+
+
+def test_an_excluded_row_named_by_a_downgrade_stays_excluded(tmp_path):
+    """F-T245-01 (Verifier 2026-10-25 07:58): the real (STR.CONC.COLUMN, 2F) group is 14 line ids, some of them
+    NOT_APPLICABLE (EXCLUDED rows); a record over the whole group moved one EXCLUDED row to HELD (774 -> 773).
+    Synthetic 2F group by hand: C-2F-A 0.30 x 0.30 x 4.00 = 0.360 m3, C-2F-B 0.30 x 0.60 x 4.00 = 0.720 m3 (both
+    measured on the wrong basis), C-2F-X NOT_APPLICABLE (counted in its parent, no quantity). Normal: the two measured
+    rows go HELD, the excluded row stays EXCLUDED with its own reason, the EXCLUDED count does not move."""
+    lines = [ln("STR.CONC.COLUMN", "C-2F-A", 0.36, floor="2F"), ln("STR.CONC.COLUMN", "C-2F-B", 0.72, floor="2F"),
+             ln("STR.CONC.COLUMN", "C-2F-X", ev="NOT_APPLICABLE_WITH_EVIDENCE", floor="2F",
+                notes="counted in its parent column"),
+             ln("STR.CONC.FOOTING", "F-1", 0.72)]
+    m0, r0 = rows_of(tmp_path, lines, "e0")
+    assert r0["C-2F-X"]["quantity_state"] == "EXCLUDED"
+    rec = dg(lines, ["C-2F-A", "C-2F-B", "C-2F-X"], reason="carried to the finished roof +13.90 (D-39)")
+    assert rec["engine_qty"] == "1.080000" or float(rec["engine_qty"]) == pytest.approx(1.08)
+    m, r = rows_of(tmp_path, lines, "e1", downgrades=[rec])
+    assert r["C-2F-X"] == r0["C-2F-X"]                                        # adverse: untouched, still EXCLUDED
+    assert m["row_counts"]["EXCLUDED"] == m0["row_counts"]["EXCLUDED"] == 1
+    assert r["C-2F-A"]["quantity_state"] == r["C-2F-B"]["quantity_state"] == "HELD"
+    assert m["row_counts"]["HELD"] == m0["row_counts"]["HELD"] + 2
+    assert m["downgrades"]["records"][0]["status"] == "APPLIED (HELD, 2 line(s); 1 EXCLUDED row(s) left EXCLUDED)"
+    audit = {a["element_id"] for a in X.read_csv(tmp_path / "e1" / "BOQ_AUDIT_UNSUPPORTED_BASIS.csv")}
+    assert audit == {"C-2F-A", "C-2F-B"}                                      # no audit quantity for an excluded row

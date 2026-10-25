@@ -611,6 +611,11 @@ def apply_downgrades(records, by_line, pid, rev):
             status.append({"downgrade_id": did, "status": "STALE (the lines' unit or quantity changed: Checker to "
                                                          "review; not applied)"})
             continue
+        # F-T245-01 (Verifier 2026-10-25 07:58): an EXCLUDED (not-applicable / excluded with reason) row is not a
+        # quantity of the BOQ at all; a downgrade never turns it into HELD (that would put a not-applicable element
+        # into the held list). It stays EXCLUDED with its own reason, and the status names how many were left.
+        kept = [(row, ln) for row, ln in sel if row["quantity_state"] == EXCLUDED]
+        sel = [(row, ln) for row, ln in sel if row["quantity_state"] != EXCLUDED]
         for row, ln in sel:
             was = row["quantity_state"]
             over = was in (VERIFIED, VERIFIED_ZERO, VERIFIED_COMPONENT)
@@ -627,7 +632,8 @@ def apply_downgrades(records, by_line, pid, rev):
             row["held_reason"] = f"{d['state']}: {d['reason']} ({d['basis_label']}; downgrade {did}){prior}"
             if over or row["verdict_id"]:
                 row["verdict_status"] = f"{row['verdict_status']} | OVERRIDDEN BY DOWNGRADE {did} (unresolved)"
-        status.append({"downgrade_id": did, "status": f"APPLIED ({d['state']}, {len(sel)} line(s))"})
+        left = f"; {len(kept)} EXCLUDED row(s) left EXCLUDED" if kept else ""
+        status.append({"downgrade_id": did, "status": f"APPLIED ({d['state']}, {len(sel)} line(s){left})"})
     return status, audit
 
 
