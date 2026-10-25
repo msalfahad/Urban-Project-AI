@@ -5,7 +5,7 @@ in engine/ imports it. General: no project name, item code or element id is writ
 
     python3 -I tools/boq_export_v1.py --lines V3_0_x_BOQ_LINES.json --candidate-version ARCH_TAKEOFF_V3.0.x
         --out OUT_DIR [--verdicts-v1 CHECKER_VERDICTS.json --key-map KEY_MAP.json] [--inventory INVENTORY.json]
-        [--expect-project ID] [--expect-revision-set SHA256] [--code-commit SHA]
+        [--expect-project ID] [--expect-revision-set SHA256] [--code-commit SHA] [--identity V3_0_16_IDENTITY.json]
 
 Rows and order. One row per canonical line, plus one UNMEASURED row per inventory element that no line carries; rows
 sorted by (trade, item code, floor, element id, line id), so producer order never changes a byte (probe 11). Nothing is
@@ -55,6 +55,15 @@ invalidated); the flag adds BOQ_CONTRACT_UNITS.csv + BOQ_CONTRACT_TOTALS.csv (sc
 the XLSX sheets "BOQ (contract units)" / "Contract totals", and raises the manifest to URBAN_BOQ_EXPORT_MANIFEST_V2.
 t = kg / 1000 once, here; 6 decimals; totals converted from the unrounded kg sums; kg and t rows of one BOQ line
 together are refused (mixed units). Without the flag every byte written is as before.
+
+Identity (T-245). The verdict binding boq_lines_sha256 is the sha256 of the CANONICAL line content (lines_sha256:
+engine/source/boq_line.dumps, sorted keys), never the raw file bytes (the raw sha256 stays in inputs_sha256 as
+provenance). A candidate of ARCH_TAKEOFF_V3.0.16 or later carries one project id and one revision set over every
+drawing; --identity takes its V3_0_16_IDENTITY.json (URBAN_BOQ_PROJECT_IDENTITY_V1), refused unless it is the lines'
+own project and its documents give the lines' revision set (one revision per sheet), and states each drawing's
+revision state, the disclosures (an UNCONFIRMED revision with why) and the INTERNAL REVIEW CANDIDATE label in the
+manifest (project_identity) and the XLSX Manifest sheet. Probe 10 is unchanged: lines of two project ids or two
+revision sets are refused.
 
 Part (4) (completeness from T-236). --completeness takes the merged T-236 report (tools/trade_completeness.py
 TRADE_COMPLETENESS.json, schema URBAN_TRADE_COMPLETENESS_V1; its reference_line_rows() per trade). The report carries no
@@ -109,6 +118,8 @@ V1_VERDICTS_SCHEMA = "URBAN_SCOREBOARD_CHECKER_VERDICTS_V1"
 V2_VERDICT_SCHEMA = "URBAN_CHECKER_VERDICT_V2"
 COMPLETENESS_SCHEMA = "URBAN_LINE_COMPLETENESS_V1"
 V2_SET_SCHEMA = "URBAN_CHECKER_VERDICT_V2_SET"
+IDENTITY_SCHEMA = "URBAN_BOQ_PROJECT_IDENTITY_V1"   # T-245: engine/source/arch_v3016 V3_0_16_IDENTITY.json
+REVIEW_LABEL = "INTERNAL REVIEW CANDIDATE (not released; released default ARCH_TAKEOFF_V2.9 + route G)"
 # T-273 (owner 2026-10-24 14:23 / 15:31): the contractual BOQ unit of reinforcement is the metric ton. The canonical rows
 # (BOQ.csv, kg, the unit every V2 verdict binds to) are unchanged; the CONTRACT-UNIT view is an explicit, opt-in
 # migration (--contract-units) with its own schema and a raised manifest schema: t = kg / 1000, applied ONCE here, at
@@ -1099,8 +1110,37 @@ def _code_commit(given):
         return "UNKNOWN"
 
 
+def project_identity(doc, ident):
+    """T-245: check a URBAN_BOQ_PROJECT_IDENTITY_V1 record against the exported lines' identity; -> the rows the
+    manifest and the XLSX Manifest sheet state (revision set, each drawing's revision state, the disclosures)."""
+    if doc.get("schema") != IDENTITY_SCHEMA:
+        raise ExportError(f"--identity schema {doc.get('schema')!r} is not {IDENTITY_SCHEMA}")
+    if doc.get("project_id") != ident["project_id"]:
+        raise ExportError(f"--identity project {doc.get('project_id')!r} is not the lines' {ident['project_id']!r}")
+    docs = doc.get("documents") or []
+    shas = [d.get("sha256") for d in docs]
+    if not docs or len(set(shas)) != len(shas) or any(not isinstance(x, str) or len(x) != 64 for x in shas):
+        raise ExportError("--identity: documents missing, repeated or without a sha256")
+    sheets = [(d.get("discipline"), d.get("sheet")) for d in docs]
+    if len(set(sheets)) != len(sheets):
+        raise ExportError("--identity: two revisions of one sheet (refused)")
+    rev = hashlib.sha256("|".join(sorted(shas)).encode("utf-8")).hexdigest()
+    if rev != doc.get("revision_set_sha256") or rev != ident["revision_set_sha256"]:
+        raise ExportError("--identity: its documents do not give the lines' revision set sha256 (refused)")
+    rows = [("identity_schema", IDENTITY_SCHEMA), ("review_label", REVIEW_LABEL)]
+    for d in sorted(docs, key=lambda d: (str(d.get("discipline")), str(d.get("sheet")))):
+        st = d.get("revision_state")
+        rows.append((f"document {d.get('discipline')} {d.get('sheet')}",
+                     f"{d.get('title')} | revision {d.get('revision')} ({st}"
+                     + (f": {d.get('reason')}" if st == "UNCONFIRMED" else "") + f") | sha256 {d.get('sha256')}"))
+    for i, t in enumerate(doc.get("disclosures") or []):
+        rows.append((f"disclosure {i + 1}", t))
+    rows.append(("provenance", "a file sha256 proves the file used, not that it is the latest approved revision"))
+    return rows
+
+
 def export(lines, out_dir, *, candidate_version, boq_lines_sha256, input_sha256=None, code_commit="NOT_RECORDED",
-           contract_units=False, **kw):
+           contract_units=False, identity_doc=None, **kw):
     """build + write BOQ.csv, BOQ.xlsx, EXPORT_MANIFEST.json into out_dir; -> the manifest. contract_units (T-273,
     opt-in): also BOQ_CONTRACT_UNITS.csv + BOQ_CONTRACT_TOTALS.csv and two XLSX sheets, manifest schema V2."""
     res = build(lines, candidate_version=candidate_version, boq_lines_sha256=boq_lines_sha256, **kw)
@@ -1117,6 +1157,9 @@ def export(lines, out_dir, *, candidate_version, boq_lines_sha256, input_sha256=
         ("code_commit", code_commit), ("rows", len(res["rows"])),
         ("completeness_input", res["completeness_input"]),
         ("verified_rule", "VERIFIED only from a bound V2 verdict + passing completeness record; V1 never"))]
+    id_rows = project_identity(identity_doc, ident) if identity_doc is not None else None
+    for k, v in id_rows or ():
+        mrows.append({"key": k, "value": str(v)})
     for k in sorted(res["counts"]):
         mrows.append({"key": f"rows {k}", "value": str(res["counts"][k])})
     for s in res["v2_verdicts"]:
@@ -1139,6 +1182,15 @@ def export(lines, out_dir, *, candidate_version, boq_lines_sha256, input_sha256=
                 "trades": res["trades"], "completeness_input": res["completeness_input"],
                 "v2_verdicts": res["v2_verdicts"],
                 "semantic_sha256": semantic_sha256(res["rows"])}
+    if identity_doc is not None:
+        manifest["project_identity"] = {"review_label": REVIEW_LABEL,
+                                        "documents": sorted(identity_doc.get("documents") or [],
+                                                            key=lambda d: (str(d.get("discipline")),
+                                                                           str(d.get("sheet")))),
+                                        "disclosures": list(identity_doc.get("disclosures") or []),
+                                        "routes": identity_doc.get("routes") or [],
+                                        "boq_lines_binding": "sha256 of the canonical line content "
+                                                             "(engine/source/boq_line.dumps), not the raw file bytes"}
     if contract_units:
         manifest["contract_units"] = {"schema": CONTRACT_SCHEMA, "conversion": {k: f"{k} / {v[1]:g} -> {v[0]}"
                                                                                   for k, v in CONTRACT_UNIT.items()},
@@ -1199,9 +1251,10 @@ def main_verdict_add(argv):
     ap.add_argument("--notes")
     ap.add_argument("--out", required=True, help="the URBAN_CHECKER_VERDICT_V2_SET file to append to")
     a = ap.parse_args(argv)
-    lines, lsha = _load_json(a.lines)
+    lines, _raw = _load_json(a.lines)
     if isinstance(lines, dict):
         raise ExportError("--lines must be a list of canonical lines (V3_0_x_BOQ_LINES.json)")
+    lsha = lines_sha256(lines)          # T-245: the canonical line content, never the raw file bytes
     if a.line_ids:
         ids = [x.strip() for x in a.line_ids.split(",") if x.strip()]
     else:
@@ -1250,16 +1303,20 @@ def main(argv=None):
     ap.add_argument("--expect-project")
     ap.add_argument("--expect-revision-set")
     ap.add_argument("--code-commit")
+    ap.add_argument("--identity", help="the candidate's V3_0_16_IDENTITY.json (URBAN_BOQ_PROJECT_IDENTITY_V1, T-245): "
+                                       "project id, revision set and each drawing's revision state, stated in the "
+                                       "manifest and the XLSX Manifest sheet; it must be the lines' own identity")
     ap.add_argument("--contract-units", action="store_true",
                     help="also write the contract-unit view (reinforcement in t = kg / 1000; T-273)")
     a = ap.parse_args(argv)
-    lines, lsha = _load_json(a.lines)
+    lines, raw = _load_json(a.lines)
     if isinstance(lines, dict):
         raise ExportError("--lines must be a list of canonical lines (V3_0_x_BOQ_LINES.json)")
-    shas = {"lines": lsha}
+    lsha = lines_sha256(lines)          # T-245: verdicts bind the canonical line content, never the raw file bytes
+    shas = {"lines": raw}
     docs = {}
     for k, p in (("verdicts_v1", a.verdicts_v1), ("key_map", a.key_map), ("inventory", a.inventory),
-                 ("verdicts_v2", a.verdicts_v2), ("completeness", a.completeness)):
+                 ("verdicts_v2", a.verdicts_v2), ("completeness", a.completeness), ("identity", a.identity)):
         if p:
             docs[k], shas[k] = _load_json(p)
     v2 = ()
@@ -1270,7 +1327,7 @@ def main(argv=None):
         v2 = docs["verdicts_v2"]["verdicts"]
     m = export(lines, a.out, candidate_version=a.candidate_version, boq_lines_sha256=lsha, input_sha256=shas,
                code_commit=_code_commit(a.code_commit), contract_units=a.contract_units,
-               v1_doc=docs.get("verdicts_v1"),
+               identity_doc=docs.get("identity"), v1_doc=docs.get("verdicts_v1"),
                key_map_doc=docs.get("key_map"), inventory_doc=docs.get("inventory"), v2_records=v2,
                completeness_report=docs.get("completeness"),
                expect_project=a.expect_project, expect_revision_set=a.expect_revision_set)
