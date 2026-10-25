@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-25 07:10 UTC | Worker 2 | SUCCESS | T-275 r2 READY (agents/task-T-275 @ 893f6af8) | Rework of the Checker's narrow rejection: census now sealed-checks every file it reads that no manifest hashes (run FAMILY_COVERAGE.csv; candidate-side MATERIAL_RESULTS.json + FAMILY_COVERAGE.csv) through guard_inputs before anything is read or written; +4 tests (1 normal, 3 adverse: each sealed sha256 refused exit 2, --out not created), reproduced failing on 6fef94bf, 21 pass; full suite on 739b574c NEW 0 / KNOWN 395. No BOQ quantity moves (tooling only). T-286 still COMPLETE, hand-in waits for READY <= 3 | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: auto-mode safety check gave no verdict twice on one Bash call (transient, later calls OK)
 - 2026-10-25T07:00Z | Worker 3 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-25T06:52Z | Verifier | STARTED | run session_01PVVTyToQzpmFMZaBweC1C7 | repo-attached routine | task state: READY T-245 (Gate B package), T-280 (per run log) | self-check pending
 - 2026-10-25 06:40 UTC | Worker 2 | STARTED | run session_012wC72NN3inDZGWaPA3kK6R | repo-attached routine | task state: none yet | self-check pending
