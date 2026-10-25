@@ -1,0 +1,8 @@
+line_id,floor,family,engine_run_lm,engine_walls,register_walls,register_census_lm,difference_lm
+L-ac7c90ccdf5d88bbc3ce,1F,0.15,44.259677,13,13,56.813,-12.5533
+L-d48c81598860135326b1,1F,0.2,44.032495,11,13,60.433,-16.4005
+L-c264d4945a1acceea2cd,2F,0.15,8.7,2,2,10.9,-2.2
+L-398c6524bf38218ef946,2F,0.2,22.3,7,7,28.7,-6.4
+L-b5b4b55f919e85de3fd8,GF,0.15,30.334754,14,16,39.599,-9.2642
+L-683374ca04c7f06f82b6,GF,0.2,66.704135,18,24,92.643,-25.9389
+L-ed4acba0b5bdac60df1e,GF,0.4,0.6,1,1,0.6,0.0
