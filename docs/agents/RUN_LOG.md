@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-25T15:35Z | Verifier | SUCCESS | T-292 r2 Gate A PASS MERGED a9754a67; T-295 Gate A PASS MERGED 964c5ebe; T-297 MERGED 5408da97 then gate (f) defect F-T297-04 -> r2 narrow (maps 44e4f06e, engine push) | Own V3.0.17 run reproduced (429008af / 366be2f8); ceiling 36 / wall-finish 132 / rebar 2,505 lines identical to V3.0.16. Own re-measures: W17 springing 1.350 / crown 3.000, hole 4.4361 .. 9.858 (tighter 8.1239 by projection, F-T292-02; my 12:48 9.870-deduction ask withdrawn, Q-76 text); 1F dressing 2.970 m2 agrees, no ceiling line (omission for T-284); 38 footing rebar lines 874.862 kg agree, CONVENTION (note 22: >= 7 cm against soil, 5 cm generic below it; no verdict record on any footing line, no downgrade due). Defect: 4 2F column main-bar lines 0.159288 t DRAWING_CONFIRMED on the D-39 datum V3.0.17 holds. No quantity change, no owner question; push sent | self-check codemap PASS, pytest t061 PASS (after setup re-run: first try 'No module named pytest'), freeze PASS; problem: none
 - 2026-10-25 15:21 UTC | Worker 1 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-25T15:00Z | Worker 3 | STARTED | run session_01SpTFTZhva37HmL1jJWFgWz | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-25T14:52Z | Verifier | STARTED | run unknown | repo-attached routine | task state: READY T-295, T-292 r2, T-297 (per Lead queue) | self-check pending
