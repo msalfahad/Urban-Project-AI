@@ -1,0 +1,259 @@
+{
+ "counts": {
+  "IN_LINE": 320,
+  "MISSING": 0,
+  "NOT_APPLICABLE": 96
+ },
+ "crosschecks": {
+  "footings": {
+   "T-219 outlines": 26,
+   "T-233 outlines": 26,
+   "agree": true
+  },
+  "necks": {
+   "T-217 census DRAWN": 36,
+   "T-263 ledger": 36,
+   "agree": true
+  }
+ },
+ "families": [
+  {
+   "complete": true,
+   "elements": 301,
+   "family": "WP.FOUNDATION",
+   "held_lines": [
+    "L-12aca7f853626262bd07",
+    "L-4f4e4c930e33ed6dafa3",
+    "L-84a874dedb35cbe2bafb",
+    "L-eba4599c26b0d24de873"
+   ],
+   "in_line": 210,
+   "in_line_held": 178,
+   "in_line_quantity": 32,
+   "inventory_qty_in_line": 45.4682,
+   "item_code": "WP.FOUNDATION.BURIED_LIQUID",
+   "line_qty": 45.4682,
+   "missing": 0,
+   "not_applicable": 91,
+   "quantity_lines": [
+    "L-8a3c318c960e271efee1"
+   ],
+   "residual": 0.0,
+   "unit": "m2",
+   "whole_line_countable": false
+  },
+  {
+   "complete": true,
+   "elements": 26,
+   "family": "WP.FOUNDATION",
+   "held_lines": [
+    "L-f7da4df288b4e006c0e7"
+   ],
+   "in_line": 25,
+   "in_line_held": 1,
+   "in_line_quantity": 24,
+   "inventory_qty_in_line": 109.85,
+   "item_code": "WP.FOUNDATION.FOOTING_MEMBRANE",
+   "line_qty": 109.85,
+   "missing": 0,
+   "not_applicable": 1,
+   "quantity_lines": [
+    "L-69e6e6d74707afe3ac5b"
+   ],
+   "residual": 0.0,
+   "unit": "m2",
+   "whole_line_countable": false
+  },
+  {
+   "complete": true,
+   "elements": 26,
+   "family": "WP.FOUNDATION",
+   "held_lines": [
+    "L-46cee803214ff2d964fa"
+   ],
+   "in_line": 25,
+   "in_line_held": 1,
+   "in_line_quantity": 24,
+   "inventory_qty_in_line": 109.85,
+   "item_code": "WP.FOUNDATION.FOOTING_SCREED",
+   "line_qty": 109.85,
+   "missing": 0,
+   "not_applicable": 1,
+   "quantity_lines": [
+    "L-e6280a91646613667b62"
+   ],
+   "residual": 0.0,
+   "unit": "m2",
+   "whole_line_countable": false
+  },
+  {
+   "complete": true,
+   "elements": 26,
+   "family": "WP.FOUNDATION",
+   "held_lines": [
+    "L-79bc828150bbfe63ce8e"
+   ],
+   "in_line": 25,
+   "in_line_held": 1,
+   "in_line_quantity": 24,
+   "inventory_qty_in_line": 5.4925,
+   "item_code": "WP.FOUNDATION.FOOTING_SCREED",
+   "line_qty": 5.4925,
+   "missing": 0,
+   "not_applicable": 1,
+   "quantity_lines": [
+    "L-4ec54f9922da7281573a"
+   ],
+   "residual": 0.0,
+   "unit": "m3",
+   "whole_line_countable": false
+  },
+  {
+   "complete": true,
+   "elements": 26,
+   "family": "WP.FOUNDATION",
+   "held_lines": [
+    "L-13b1d3c202bc08fb65c2"
+   ],
+   "in_line": 25,
+   "in_line_held": 25,
+   "in_line_quantity": 0,
+   "inventory_qty_in_line": null,
+   "item_code": "WP.FOUNDATION.FOOTING_SIDES",
+   "line_qty": null,
+   "missing": 0,
+   "not_applicable": 1,
+   "quantity_lines": [],
+   "residual": null,
+   "unit": "m2",
+   "whole_line_countable": false
+  },
+  {
+   "complete": true,
+   "elements": 4,
+   "family": "WP.FOUNDATION",
+   "held_lines": [
+    "L-f0aadf70513eb21d5671"
+   ],
+   "in_line": 3,
+   "in_line_held": 1,
+   "in_line_quantity": 2,
+   "inventory_qty_in_line": 26.73,
+   "item_code": "WP.FOUNDATION.LIFT_PIT_BOARD",
+   "line_qty": 26.73,
+   "missing": 0,
+   "not_applicable": 1,
+   "quantity_lines": [
+    "L-1f3aaafcc460173462d9"
+   ],
+   "residual": 0.0,
+   "unit": "m2",
+   "whole_line_countable": false
+  },
+  {
+   "complete": true,
+   "elements": 4,
+   "family": "WP.FOUNDATION",
+   "held_lines": [
+    "L-302b401eff698289c54e"
+   ],
+   "in_line": 4,
+   "in_line_held": 1,
+   "in_line_quantity": 3,
+   "inventory_qty_in_line": 47.43,
+   "item_code": "WP.FOUNDATION.LIFT_PIT_MEMBRANE",
+   "line_qty": 47.43,
+   "missing": 0,
+   "not_applicable": 0,
+   "quantity_lines": [
+    "L-d3ec19448415e0a0f083"
+   ],
+   "residual": 0.0,
+   "unit": "m2",
+   "whole_line_countable": false
+  },
+  {
+   "complete": true,
+   "elements": 1,
+   "family": "WP.FOUNDATION",
+   "held_lines": [],
+   "in_line": 1,
+   "in_line_held": 0,
+   "in_line_quantity": 1,
+   "inventory_qty_in_line": 20.7,
+   "item_code": "WP.FOUNDATION.LIFT_PIT_SCREED",
+   "line_qty": 20.7,
+   "missing": 0,
+   "not_applicable": 0,
+   "quantity_lines": [
+    "L-e11f17bb076058bf172d"
+   ],
+   "residual": 0.0,
+   "unit": "m2",
+   "whole_line_countable": true
+  },
+  {
+   "complete": true,
+   "elements": 1,
+   "family": "WP.FOUNDATION",
+   "held_lines": [],
+   "in_line": 1,
+   "in_line_held": 0,
+   "in_line_quantity": 1,
+   "inventory_qty_in_line": 1.035,
+   "item_code": "WP.FOUNDATION.LIFT_PIT_SCREED",
+   "line_qty": 1.035,
+   "missing": 0,
+   "not_applicable": 0,
+   "quantity_lines": [
+    "L-e4789d76efedbc351bd4"
+   ],
+   "residual": 0.0,
+   "unit": "m3",
+   "whole_line_countable": true
+  },
+  {
+   "complete": true,
+   "elements": 1,
+   "family": "WP.FOUNDATION",
+   "held_lines": [
+    "L-d2488bbb7103c8cd2980"
+   ],
+   "in_line": 1,
+   "in_line_held": 1,
+   "in_line_quantity": 0,
+   "inventory_qty_in_line": null,
+   "item_code": "WP.FOUNDATION.PROCUREMENT",
+   "line_qty": null,
+   "missing": 0,
+   "not_applicable": 0,
+   "quantity_lines": [],
+   "residual": null,
+   "unit": "item",
+   "whole_line_countable": false
+  }
+ ],
+ "other_wp_lines": {
+  "FIN.WP.DOORWAY m2 SOURCE_DERIVED": 14,
+  "FIN.WP.DOORWAY_TRANSITION m2 BOUNDED_EXPOSURE": 13,
+  "FIN.WP.DOORWAY_TRANSITION_NR pcs SOURCE_DERIVED": 14,
+  "FIN.WP.FLOOR m2 PROVISIONAL": 3,
+  "FIN.WP.FLOOR m2 SOURCE_DERIVED": 15,
+  "FIN.WP.MEMBRANE_ROLLS pcs BLOCKED_RFI": 1,
+  "FIN.WP.MEMBRANE_ROLLS pcs SOURCE_DERIVED": 21,
+  "FIN.WP.PENETRATION pcs BLOCKED_RFI": 17,
+  "FIN.WP.ROOF m2 BLOCKED_RFI": 1,
+  "FIN.WP.ROOF m2 SOURCE_DERIVED": 3,
+  "FIN.WP.ROOF_UPTURN lm BLOCKED_RFI": 1,
+  "FIN.WP.ROOF_UPTURN lm SOURCE_DERIVED": 3,
+  "FIN.WP.TERMINATION lm BOUNDED_EXPOSURE": 7,
+  "FIN.WP.WALL_UPTURN m2 BLOCKED_RFI": 1,
+  "FIN.WP.WALL_UPTURN m2 PROVISIONAL": 3,
+  "FIN.WP.WALL_UPTURN m2 SOURCE_DERIVED": 14
+ },
+ "register_only": [],
+ "rule_id": "R-T301-WP-INVENTORY-1",
+ "schema": "URBAN_WP_SCOPE_INVENTORY_V1",
+ "unlinked_lines": [],
+ "unread_lines": []
+}
