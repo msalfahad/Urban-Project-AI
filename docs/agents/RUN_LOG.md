@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-25T17:52Z | Verifier | STARTED | run unknown | repo-attached routine | task state: T-297 r2 READY (Worker 1 17:11), T-301 READY (Worker 2 17:42); queue to be read | self-check pending
 - 2026-10-25T17:42Z | Worker 2 | SUCCESS | T-301 READY (agents/task-T-301 @ cbf0e5e4) | WP.FOUNDATION scope inventory on V3.0.17 (366be2f8 reproduced): 416 drawn faces -> IN_LINE 320 / NOT_APPLICABLE 96 with evidence / MISSING 0; residual 0.000 on every released item (membrane 109.850 m2 vs 24 T-233 areas, screed 109.850 m2 / 5.4925 m3, pit 47.430 / 26.730 / 20.700 m2 / 1.035 m3, buried 45.4682 m2); whole-countable = LIFT_PIT_SCREED m2 / m3 only, agreeing with all 7 Verifier V2 records; no quantity moved. Missing: wet-area, roof and pool / tank inventories (named, not built). | self-check codemap PASS, pytest t061 PASS, freeze PASS; full suite to the end 395 known failures, 0 new; problem: none
 - 2026-10-25T17:40Z | Worker 2 | IDLE | none (run lock held by run 20261025T164025-441-701 since 2026-10-25T16:40Z) | overlap lock: another Worker 2 run is active; no claim, no change, no quantity | lock
 - 2026-10-25 17:21 UTC | Worker 1 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
