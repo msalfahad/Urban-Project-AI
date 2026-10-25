@@ -46,9 +46,17 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
-## Status (Lead, 2026-10-25 00:15; re-estimated each run from what merged and was verified)
+## Status (Lead, 2026-10-25 02:15; re-estimated each run from what merged and was verified)
 
-Lead 2026-10-25 00:15: since 22:15 the Checker merged 3 (T-276 r2 buried faces 45.4682 m2 DC on 32 faces; T-277 beam
+Lead 2026-10-25 02:15: since 00:15 the Checker merged 2 (T-278 floor-area scoring key T001C, FLOOR.INTERNAL keyed 380.3641
+m2 on 40 lines, -7.13 % vs freelancer; T-285 blockwork register v3, established 449.5934 m2) and rejected 1 narrow (T-282 r2,
+one END row). T-180 slot: blockwork VERIFIED share 105.004 -> 297.847 m2 on 18 walls; NEW FINDING: 7.913 m of GF wall under
+six sunken panels booked at the normal soffit (established net overstated by 7.913 d m2, d HELD on D-41; GF-W12 VERIFIED
+withdrawn) -> NEW T-288 (register v4) before T-279. Verified whole lines unchanged: candidate 1 / 13, released 0 / 13. Week-1
+target (one verified improvement through the integrated pipeline by 27 Oct): T-270 r2 (Gate B, in work) is the next
+integrated verified step; T-245 (first real export) follows. On track if T-270 r2 passes Gate B in the next 2 Checker runs.
+
+(superseded) Lead 2026-10-25 00:15: since 22:15 the Checker merged 3 (T-276 r2 buried faces 45.4682 m2 DC on 32 faces; T-277 beam
 width census, both readings kept; T-274 blockwork height pieces close every census run, register proposal 449.260 ->
 449.565 m2 not applied) and rejected 2 narrow (T-270 Gate B on the buried sub-line only; T-282 formwork END faces on hull
 diagonals). Handed in: T-278 (floor-area scoring key). Blockwork verified share 95.633 -> 105.004 m2. Verified whole lines

@@ -1,11 +1,32 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
 Plain words, no task numbers. Measured numbers come from SCOREBOARD.md; anything not measured says so.
-Last update: 2026-10-25 00:15 UTC (Lead). Previous version: 2026-10-24 22:15 UTC. The released numbers did not change
+Last update: 2026-10-25 02:15 UTC (Lead). Previous version: 2026-10-25 00:15 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released default V2.9 + route G untouched). Your measure: whole BOQ
 lines independently verified, and trades that can be scored. Still 1 whole line verified in the candidate (the concrete
-slab, 60.28 m3), 0 released. No decision for you; the designer list is being finished before you send it (see
+slab, 60.28 m3), 0 released. No decision for you; the designer list is still being finished before you send it (see
 "Waiting for the owner").
+
+Since 00:15 (newest first; two pieces checked and merged, one sent back narrow, a large block-wall check by the checker):
+- Block walls, checked wall by wall by the checker himself: Checker-verified wall area rose from 105.00 to 297.85 m2 on
+  18 walls (of 449.59 m2 settled), including the largest wall (62.16 m2) and four first-floor walls to within 0.01 m2.
+  It also found a real error: six ground-floor roof panels are sunk (lowered by a depth the drawings do not print), and
+  7.91 m of ground-floor wall under them was measured up to the normal ceiling height. Those pieces are held by that
+  unknown depth (7.91 m2 less for every metre of drop; the drop itself is held, not guessed); one wall that was already marked
+  verified was taken back. The slab concrete is not affected. The register gets one more revision before the walls go
+  into the candidate, and the drop is now listed against walls, beam tops, formwork, fill and waterproofing on the
+  designer list.
+- Block-wall register: the closed height pieces were applied as one revision: settled net 449.26 -> 449.59 m2. Checked
+  and merged.
+- Floor-area scoring key: checked and merged. The scoreboard now scores the candidate's internal floor at 380.36 m2
+  (-7.1 % against the freelancer's 409.58 m2). The checker confirmed the first-floor landing is counted once; he also
+  found that the landing's marble (your earlier decision: landing in marble) has no material line in the candidate:
+  added to the stairs step into the candidate.
+- Formwork end faces: sent back narrow a second time on one row (a beam that runs on into an open outline was taken as
+  a free end); everything else agrees.
+- Designer list: two rows corrected from the checker's reading (the sunken-panel row now names what the drop really
+  moves; the blinding request closes only together with the footing request). Still not ready to send.
+- Nothing new on Drive since the last report; no new photos.
 
 Since 22:15 (newest first; three pieces checked and merged, two sent back for narrow fixes, one handed in):
 - Block walls: every wall's height pieces now add up exactly to its length (the old register sampled the band every
@@ -718,7 +739,19 @@ Not measured, and paused by your order (Alsenan first).
   development lengths, so a steel ledger is not complete until it has read them.
 
 ## Being worked on now
-(Lead 2026-10-24 22:15)
+(Lead 2026-10-25 02:15)
+- Checker: foundation waterproofing into the candidate (second hand-in, in work now), the formwork end-face fix and the
+  ceilings readiness check as they arrive; in between, the remaining block walls not under a sunken panel, largest first.
+- Structural (worker 1): the formwork end-face fix (one row); then the sheet search for the three missing designer
+  rows (column level where two ground slabs meet, main-stair winder turn and waists, tower dome); stair soffits; the
+  column-core datum; excavation last.
+- Architecture and finishes (worker 2): ceilings made ready for the candidate (in work); then the wall register's
+  sunken-panel correction; then the plaster / paint blockers and the pantry doorway row.
+- Integration (worker 3): foundation waterproofing into the candidate (in work); then one project identity for the
+  export (the first real export, for internal review), then the held depths, stairs / domes (with the landing marble)
+  and windows; then the settled block walls and the ceilings.
+
+(Lead 2026-10-24 22:15, superseded)
 - Checker: foundation waterproofing into the candidate first (with a challenge: part of the 35.40 m2 buried-coat
   figure it carries includes faces that are not against earth), then the drawn-vs-scheduled beam census, then the
   buried-faces fix when it arrives; in between, block walls and first-floor ceilings.
@@ -780,7 +813,8 @@ Not measured, and paused by your order (Alsenan first).
 - Stair soffits (underside of flights and landings, 7.40 m2 seen from the ground floor alone) in no line yet (being measured).
 - Slab under the main-stair winders (0.23 .. 0.25 m3) in no line yet; 16 beam pieces the drawings contradict or leave unmarked (designer list).
 - Roof levels and roof build-up (rooms under a roof), decor-ceiling levels and floor build-up, sunken-slab drops: three new
-  designer requests (D-39, D-40, D-41).
+  designer requests (D-39, D-40, D-41). The sunken-slab drop now also holds 7.91 m of ground-floor block-wall height.
+- Marble on the first-floor stair landing (4.92 m2): no material line in the candidate yet (being added).
 - Columns by the deepest-beam rule (table on the board); the engine's 5 undrawn columns removed when the ledger is rewired.
 - Blockwork: the code on Alsenan, the walls that hold columns, block m2 / m3; parapet and street-fence block type (asked).
 - Tile sizes per room (none printed), ceiling layout, annex roof datum, round-stair section (designer list).
@@ -797,7 +831,7 @@ Not measured, and paused by your order (Alsenan first).
   complete; three (columns, stairs and domes, floor area) still lack a row for an item the checker names but nobody
   filed (the column level where two ground-slab levels meet, the main stair's winder turn and the stair waist
   thicknesses, the tower dome, and a doorway strip in the pantry). Two tasks write those rows with their sheet search;
-  then the list is ready for you.
+  then the list is ready for you. (02:15: two rows corrected from the checker's reading; still not ready.)
 - One small action, no decision: the two sealed reference take-offs (the Alsenan printed take-off and the second
   sealed benchmark) are protected only by file name, because the agents may not open sealed files to fingerprint them.
   If you record their SHA-256 fingerprints on the board (or tell the main chat), the checker's tool protects them by
