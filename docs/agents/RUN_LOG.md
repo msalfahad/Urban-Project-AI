@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-25T21:41Z | Worker 2 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-25T18:11Z | Lead | STARTED | run session_01M61Zt1bzP3cTHiVzBqVi8d | repo-attached routine | task state: board | report pending
 - 2026-10-25 18:00 UTC | Worker 3 | SUCCESS | T-293 part 2 READY (cross-lane, agents/task-T-293 @ d50a143b) | Formwork slab-level rows tied to candidate lines: 65 r4 rows -> 928 pieces, closure 0.000 m2; slab soffits 375.048 m2 on 62/62 slab lines; beam faces E 422.693 / G 385.250 m2 tied (G split 5.584, was 126.6 before positional run attribution); free-edge bands 27.206 m2 are edge-member faces (beams 24.144, columns 3.060, slabs 0.002). Findings: formwork r3/r4 E method counts CB5 span 2 twice (+0.740 soffit, +1.776 sides m2, GF); BAND0049 line has no drawing face (UNRESOLVED). Missing: stairs / domes / tank (part 3). | self-check codemap PASS, pytest t061 PASS, freeze PASS; full suite to the end: 364 failed all identical on base 5cb1e7e8 except 1 load flake that passes alone; problem: none
 - 2026-10-25T17:52Z | Verifier | STARTED | run unknown | repo-attached routine | task state: T-297 r2 READY (Worker 1 17:11), T-301 READY (Worker 2 17:42); queue to be read | self-check pending
