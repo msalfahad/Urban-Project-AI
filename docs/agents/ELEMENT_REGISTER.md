@@ -46,6 +46,16 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+### Lead 2026-10-25 02:15 (from T-278 / T-285 MERGED; T-282 r2 REJECTED narrow; Checker S13 / D-41 ruling 01:34 and T-180 blockwork slot 01:43 - 02:09; new T-288)
+
+| Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |
+|---|---|---|---|---|---|
+| Six sunken slab panels (GF roof GF-015, GF-016, GF-081, GF-128, GF-141 = 19.3964 m2; 1F roof 1F-018 5.400 m2), lowered at full thickness by d | CONC.SLAB, CONC.BEAM (2 shared beams), formwork (risers / beam sides), fill / screed, waterproofing upturn, ceilings, blockwork heights | CONC.SLAB owns the panel volume A x t (independent of d, inside the VERIFIED 60.2804 m3); step-edge concrete 0.000 (every edge is a beam or column face); CONC.BEAM owns the shared beams' tops (3.006 .. 3.036 x d m3 HELD); each other trade carries its own d term HELD, never 0 | slab VERIFIED; d-dependent items HELD (D-41) | Verifier 01:34 (S13 ruling), T-213 MERGED d5df7d1f | RFI S13 (restated 02:15) |
+| GF wall pieces under the sunken panels: GF-W12 0.450, GF-W16 2.950, GF-W20 0.9678, GF-W31 1.0311, GF-W32 0.3105 + 0.4806, GF-W34 1.7231 m (7.913 m) | blockwork, plaster / paint heights on the same faces, ceilings | BLOCKWORK owns the wall area; each piece at 4.34 - d, d HELD; plaster / paint read the same height piece (one height per wall face, T-237); GF-W12 out of the VERIFIED share | HELD (D-41); established register v3 overstated by 7.913 d m2 | Verifier 02:00 (own clips of the six hatches, 20 mm shrink) | T-288 (register v4), then T-279 |
+| GF-W01 0.0026 m junction sliver between column 371 and line 387 | blockwork, CONC.BEAM (B26 outline) | B26's drawn outline governs: the piece sits under B26 at 3.65 m; no gap | DRAWING-CONFIRMED (Checker own); GF-W01 VERIFIED 62.164 m2 | Verifier 02:09 | T-288 applies it |
+| 1F-W06 window W24: label 1.550 vs drawn jambs 1.5523 m | blockwork deduction, plaster reveals, aluminium windows (m2) | the deduction uses the drawn jamb width inside the masonry (as W15 / W16); the window m2 line keeps its own basis (opening census), named apart | notation residual -0.0035 m2, below threshold, named | Verifier 02:03 | T-288 (deduction), no window-line change |
+| 1F arrival landing (ARCH.SPACE L-428b44ee, 4.9225 m2) | FLOOR.INTERNAL (area), 1F living porcelain (deducts it), landing marble (Q-66 B) | FLOOR.INTERNAL is the floor-AREA measure, keyed once (T001C); the marble trade owns ONE material line of the same element, which V3.0.14 lacks; never a second area count | keyed (T-278 MERGED); marble material line MISSING | Verifier 01:28 (T-278 Gate A, gap named) | T-266 acceptance (02:15) |
+
 ### Lead 2026-10-25 00:15 (from T-276 r2 / T-277 / T-274 MERGED; T-270 Gate B and T-282 REJECTED narrow; T-278 READY; Checker jamb scan 23:00 and blockwork slot 00:06; RFI package verification; new T-285 .. T-287)
 
 | Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |
