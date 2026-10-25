@@ -46,6 +46,15 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+### Lead 2026-10-25 12:15 (from T-290 / T-291 / T-170 MERGED, V3.0.16 records issued; T-292 / T-293 READY; owner 11:51 T-298 .. T-300; new T-301)
+
+| Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |
+|---|---|---|---|---|---|
+| Boundary ground beam G.B at N.G. (p.14, 20 x 40), 5 runs 44.07 m (supersedes nothing; adds the formwork side) | CONC.GROUND_BEAM (no candidate line yet), formwork sides 35.256 m2 (T-293, UNTIED), rebar | CONC.GROUND_BEAM owns the volume; formwork ties its 35.256 m2 to that line once T-254 adds it, never to another GB line | formwork faces measured (T-293 READY), concrete line ABSENT from the candidate (an omission, not a zero) | T-253, T-293 | T-254 adds the line (or one HELD line naming T-253); T-293 faces re-tied after |
+| Exterior ground beams: 16 lines at the interior depth vs formwork faces on D 0.95 | CONC.GROUND_BEAM, formwork sides | CONC.GROUND_BEAM (D 0.95, T-289); formwork follows the same depth | CONFLICT inside the candidate until T-254 integrates: line depth 0.40 vs faces 0.95 (T-293 names all 16) | T-289, T-293 | T-254; Checker T-293 confirms faces use 0.95 |
+| 1F-11 wall faces at W17 (plaster / paint, owner method) | plaster, paint, MAS.BLOCK deduction, WINDOW W17 | plaster / paint own the face m2; W17's opening area is the WINDOW line's (Q-76 A 9.870 m2 opening) | released 59.45 m2 -> HELD 60.44 .. 70.46 (T-292: T-238 holds W17's deduction); a released line becoming HELD is a material downgrade | T-238, T-292, Q-76 A | Checker T-292: is the W17 deduction still HELD after Q-76 A (9.870 m2 answered 23:53)? |
+| Waterproofing lines (WP.FOUNDATION and the other WP families) vs a completeness inventory | WP.FOUNDATION, buried liquid WP, wet-area WP, roof WP | each WP family owns its faces; completeness needs an inventory per family | NO inventory exists (F-REC-02): 7 WP.FOUNDATION lines carry V2 VERIFIED records but no whole WP line can be counted | Verifier 11:28 records | T-301 (new) builds the inventory; T-298 join reads it |
+
 ### Lead 2026-10-25 10:15 (from T-289 / T-275 r2 / T-286 MERGED; T-245 r2 / T-290 / T-291 READY; new T-295 .. T-297)
 
 | Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |
