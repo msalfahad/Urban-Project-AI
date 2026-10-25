@@ -1,0 +1,120 @@
+{
+ "schema": "T281_ALSENAN_STAIR_SOFFIT_INPUT",
+ "project": "development villa (Drive 'Alsenan chalet project'); drawings named by Drive title, entities by DXF handle; printed values, lengths and areas only (no coordinates); every value re-read by research/agents_t281/t281_extract.py",
+ "drawings": {
+  "ST": "'ST7757 dxf.dxf' sha256 9f9d1179... (= manifest): p.3 ground-beam plan, p.4 GF roof slab plan, p.5 1F roof slab plan",
+  "ARCH": "'P7757_DXF_COMPRESSED.zip' -> P7757.dxf sha256 ab54dd55... (= manifest): GF plan of the ST-01 shaft (riser lines, lobby flight, levels +0.30 / +1.00) read for the space below; section A-A (riser counts, T-184 / T-258)"
+ },
+ "unit": "m",
+ "risers": {
+  "ST01-GF": {"rise": 4.50, "count": 27, "source": "PRINTED", "src": "section A-A GF +1.00 -> 1F +5.50, 27 risers (Q-46 A, T-184)"},
+  "ST01-1F": {"rise": 4.20, "count": 25, "source": "PRINTED", "src": "section A-A 1F +5.50 -> 2F +9.70, 25 risers = 12 + turn riser + 12 (T-258 s.3)"},
+  "ST02": {"rise": 4.50, "count": 28, "source": "ASSUMED — OWNER-APPROVED", "src": "plan count 12 curved + 11 straight + 5 short; no section through ST-02 (Q-50 A cond, T-184 / T-258)"}
+ },
+ "waist": {"t": 0.16, "source": "PRINTED T 16 (Q-47 A)", "src": "'T 16' stair panels with 8 d16/m on ST p.4 / p.5 (T-139 faces GF-025, 1F-016, GF-130)"},
+ "flights": [
+  {"id": "ST01-MS1-U", "stair": "ST-01", "riser": "ST01-GF", "n": 12, "g": 0.30, "w": 1.20,
+   "foot": {"type": "plate", "t": 0.16, "of": "ST01-MS1-LD"},
+   "head": {"type": "beam_face", "offset_before_last": 0.20, "depth": 0.75, "of": "B20 (0.40 x 0.75)"},
+   "subs": [], "status": "DRAWING-CONFIRMED",
+   "below": "GF stair room (V2.9 face GF-R31F8AE, slab-plan face GF-025), east lane: the court-door lobby +0.30, the lobby flight D1 (ST-01b) and the hall floor +1.00 (ARCH GF plan, ST p.3 '+0.30' / '+1.00')",
+   "src": "ST p.4 east lane 2F3 -> 296 1.200; riser lines 25B (s 0) .. 459 (s 3.300) at 0.300; B20 stair-side face 2C6 0.200 before 459; landing MS1-LD +3.50"},
+  {"id": "ST01-MS2-L", "stair": "ST-01", "riser": "ST01-1F", "n": 12, "g": 0.30, "w": 1.20,
+   "foot": {"type": "beam_face", "offset": 0.15, "depth": 0.75, "of": "B20 (1F level)"},
+   "head": {"type": "plate", "t": 0.16, "of": "ST01-MS2-LD-W", "room": 1.15},
+   "subs": [["column 691 exposure", "COLUMN_HELD", [0.95, 1.45, 0.0, 0.05]]], "status": "DRAWING-CONFIRMED",
+   "below": "ST-01 shaft void over MS1-L / MS1-T (no 1F floor in the shaft north of B20; V2.9 carries the shaft inside 1F face 1F-R78C367; slab-plan face 1F-016)",
+   "src": "ST p.5 west lane 5E3 -> 1.200 (well 62D / 62E beside it); riser lines 646 (s 0) .. 632 (s 3.300); first line 0.150 inside the B20 band (stair-side face 2C6 on p.4); column 691 0.050 into the lane over s 0.95 .. 1.45 (T-248 D-16 CONFLICT: exposure HELD)"},
+  {"id": "ST01-MS2-U", "stair": "ST-01", "riser": "ST01-1F", "n": 12, "g": 0.30, "w": 1.20,
+   "foot": {"type": "plate", "t": 0.16, "of": "ST01-MS2-LD-E"},
+   "head": {"type": "beam_face", "offset_before_last": 0.20, "depth": 0.75, "of": "B23 (0.45 x 0.75)"},
+   "subs": [], "status": "DRAWING-CONFIRMED",
+   "below": "ST-01 shaft void over MS1-U / MS1-LD (as MS2-L)",
+   "src": "ST p.5 east lane 5E2 -> 5D4 1.200; riser lines 62F (s 0) .. 644 (s 3.000) + the arrival line (s 3.300, p.4 459 / section); B23 face 5E1 0.200 before it"},
+  {"id": "ST02-RS-S", "stair": "ST-02", "riser": "ST02", "n": 11, "g": 0.30, "w": 1.20,
+   "foot": {"type": "continues", "of": "ST02-RS-C (helicoid junction HELD in RS-C)"},
+   "head": {"type": "plate", "t": 0.16, "of": "ST02-RS-LD", "room": 1.15},
+   "subs": [["column 380 exposure", "COLUMN_HELD", [0.15, 0.95, 0.0, 0.05]],
+            ["B3 'With Stair' band underside", "BEAM_HELD", [0.90, 3.00, 0.0, 0.525]],
+            ["CA member underside", "BEAM_HELD", [0.60, 0.90, 0.05, 1.20]],
+            ["hidden pair 535 / 536", "UNKNOWN", [0.0, 3.00, 0.525, 0.625]]],
+   "status": "ASSUMED — OWNER-APPROVED",
+   "below": "GF reception (V2.9 face GF-RC99C2A/open)",
+   "src": "ST p.4 south band 283 -> 2D0 1.200; riser lines 2BA (s 0) .. 2C4 (s 3.000); column 380 (T-248 D-16 CONFLICT) 0.050 into the lane; 'B3' 1827 / '(With Stair)' 1826 band = T-139 GF-159 (Q-61 C HELD); CA 54E (0.300 x 1.150, level not stated, T-258 'CA junction'); hidden pair 535 / 536 (layer 5, no mark)"},
+  {"id": "ST02-RS-A", "stair": "ST-02", "riser": "ST02", "n": 5, "g": 0.30, "w": 1.20,
+   "foot": {"type": "plate", "t": 0.16, "of": "ST02-RS-LD"},
+   "head": {"type": "plate", "t": 0.16, "of": "plate C-T1 (1F floor +5.50, slab)", "room": 1.55},
+   "subs": [["hidden pair 2CC / 2CD", "UNKNOWN", [0.0, 1.20, 0.575, 0.675]]],
+   "status": "ASSUMED — OWNER-APPROVED",
+   "below": "GF reception (V2.9 face GF-RC99C2A/open)",
+   "src": "ST p.4 lane S-OPENING 2CF -> slab edge 289 1.200 (R-STAIR-LANE-1); riser lines 2C8 (s 0) .. 315 (s 1.200); hidden pair 2CC / 2CD (layer 5, no mark) along the lane; arrival plate C-T1 'T 0.16' north of 315 to 2CE (1.550)"}
+ ],
+ "landings": [
+  {"id": "ST01-MS1-LD", "stair": "ST-01", "length": 1.20, "width": 1.20, "subs": [], "status": "DRAWING-CONFIRMED",
+   "below": "GF stair room (GF-R31F8AE / GF-025), east lane over the court-door lobby +0.30",
+   "src": "ST p.4 25B -> 279 1.200 x 2F3 -> 296 1.200, 'T 16', +3.50 (section A-A)"},
+  {"id": "ST01-MS2-LD-W", "stair": "ST-01", "length": 1.15, "width": 1.30, "subs": [], "status": "DRAWING-CONFIRMED",
+   "below": "ST-01 shaft void over MS1-T (1F-016)",
+   "src": "ST p.5 632 -> 5C0 1.150 x 5E3 -> 5E2 1.300 (incl. the 0.100 well width), +7.516 (T-258 s.3)"},
+  {"id": "ST01-MS2-LD-E", "stair": "ST-01", "length": 1.20, "width": 1.20, "subs": [], "status": "DRAWING-CONFIRMED",
+   "below": "ST-01 shaft void over MS1-LD (1F-016)",
+   "src": "ST p.5 62F -> 5C0 1.200 x 5E2 -> 5D4 1.200, +7.684"},
+  {"id": "ST02-RS-LD", "stair": "ST-02", "length": 1.15, "width": 1.20,
+   "subs": [["column 374", "NO_SOFFIT", [0.60, 1.15, 0.0, 0.05]],
+            ["B3 'With Stair' band underside", "BEAM_HELD", [0.0, 0.525, 0.0, 0.525]],
+            ["hidden pair 2CC / 2CD", "UNKNOWN", [0.525, 0.625, 0.0, 1.20]],
+            ["hidden pair 535 / 536", "UNKNOWN", [0.0, 0.977312, 0.525, 0.625]]],
+   "status": "ASSUMED — OWNER-APPROVED",
+   "below": "GF reception (GF-RC99C2A/open)",
+   "src": "ST p.4 2C4 -> 289 1.150 x 283 -> 2C8 1.200 less column 374 (0.550 x 0.050, T-258 / Checker 13:10), +4.696 (Q-50 A cond level)"}
+ ],
+ "kinks": [
+  {"flight": "ST01-MS2-L", "into": "ST01-MS2-LD-W", "u_offset": 0.0},
+  {"flight": "ST02-RS-S", "into": "ST02-RS-LD", "u_offset": 0.0},
+  {"flight": "ST02-RS-A", "into": "C-T1", "u_offset": 0.0, "plate": {"length": 1.55, "width": 1.20,
+   "subs": [["hidden pair 2CC / 2CD", "UNKNOWN", [0.0, 1.55, 0.575, 0.675]]]}}
+ ],
+ "conflict": {
+  "id": "ST01-MS1-L", "stair": "ST-01", "riser": "ST01-GF", "g": 0.30, "w": 1.20,
+  "blocker": "C-ST-4 (designer): structural p.4 12 straight riser lines 45A .. 25E vs architectural GF plan 10 straight from DE (0.600 later) + section A-A; owner 2026-10-22 18:00 (4): HELD (T-258 MS1-L CONFLICT)",
+  "readings": {
+   "B_structural": {"n": 12, "s_first": 0.0},
+   "A_architectural": {"n": 10, "s_first": 0.60, "note": "the architectural lines are not evenly spaced (0.250 once); the pitch is the printed 4.50 / 27 over 0.300"}
+  },
+  "s_head": 3.30, "column_36B": [0.95, 1.45, 0.0, 0.05], "beam_face_from_45A": 0.15,
+  "below": "GF stair room (GF-R31F8AE / GF-025), west lane over the hall floor +1.00 (the flight bears on ground slab GS-08 at its foot)",
+  "src": "ST p.4 west lane 284 -> 1.200; head = winder start 25E (s 3.300 from 45A), junction HELD in MS1-T; column 36B 0.050 into the lane (no soffit over it)"
+ },
+ "held": [
+  {"id": "ST02-RS-C", "piece": "curved flight underside (helicoid)", "plan": 4.443156, "status": "DRAWING-CONFIRMED",
+   "why": "helicoid soffit not drawn (Q-51 step 5, C-ST-3, S-9: no walking line, no generated geometry); riser Q-50 A cond",
+   "below": "GF reception (GF-RC99C2A/open); 2.379 m2 of it inside the light-well outline (T-271 r2b)",
+   "src": "ST p.4 between the S-OPENING arcs 2DE r 1.530511 / 2DD r 2.780511 (one centre), from the first curved riser 2EA (177.0 .. 177.8 deg) to the first straight riser 2BA, clipped by wall 283 (2048-segment arcs); 0.006740 of it under the hidden pair 535 / 536 (UNKNOWN)"},
+  {"id": "ST01-MS1-T", "piece": "winder turn underside", "plan": 1.495, "status": "DRAWING-CONFIRMED",
+   "why": "warped winder soffit not drawn (C-ST-3, S-9)",
+   "below": "GF stair room (GF-025), north-west corner over the hall floor",
+   "src": "ST p.4 284 -> 2F3 1.300 x 25E -> 279 1.150 (winder lines 2F6 / 2F4 / 2F5)"},
+  {"id": "ST01-MS2-TR", "piece": "turn-riser soffit step between the plates +7.516 / +7.684 and the well end 0.100 x 0.050", "plan": 0.005, "status": "DRAWING-CONFIRMED",
+   "why": "junction of two plates 0.168 apart not drawn (C-ST-3, T-258 MS2-TR)",
+   "below": "ST-01 shaft void (1F-016)",
+   "src": "ST p.5 step line 5E2 (1.150), well end 62D / 62E x 633 -> 632 0.050"}
+ ],
+ "open": [
+  {"id": "ST01-WELL-GF", "piece": "well between the GF -> 1F lanes (open: no soffit)", "plan": 0.315, "src": "p.4 lanes 1.200 + 0.100 + 1.200 = 2.500 (284 / 2F3 / 296), from the B20 face 2C6 to 25E (3.150)"},
+  {"id": "ST01-WELL-1F", "piece": "well between the 1F -> 2F lanes (S-OPENING 62D / 62E, open: no soffit)", "plan": 0.31, "src": "p.5 62D -> 62E 0.100 x 5E1 -> 633 3.100"}
+ ],
+ "zones": {
+  "GF-025": {"face_m2": 10.725, "src": "T-139 face GF-025 (2.500 x 4.300 less the column 36B notch 0.025), T-271 kept apart (GF stair 12.475)"},
+  "1F-016": {"face_m2": 10.725, "src": "T-139 face 1F-016 inside the shaft 5E3 / 5D4 / 5E1 / 5C0 (11.265 less the 0.540 wall strip west of 5E3), T-271 '1F stair zone 10.725' HELD"},
+  "T271-GF": {"held_m2": 9.853618, "faces": {"GF-130/STAIR": 7.402476, "GF-131": 0.3325, "GF-132": 1.856142, "GF-145": 0.2625},
+   "inside_pieces": {"GF-130/STAIR": 7.340031, "GF-131": 0.1775, "GF-132": 1.23375, "GF-145": 0.2625},
+   "bottom_step_strip": 0.062506,
+   "north_of_315": {"GF-131": 0.155, "GF-132": 0.622392},
+   "src": "T-271 r2b CEILINGS_T271.csv GF-RC99C2A/open 'stair soffit above' 9.8536 (summary 9.853618); intersections by t281_extract.py (T-139 faces x the ST-02 pieces)"},
+  "ST02-beam-pieces": {"in_decor_ceiling": {"GF-159": 1.375625, "GF-143": 0.03, "GF-144": 0.1725, "GF-158": 0.1425, "GF-156": 0.036, "GF-161": 0.05125},
+   "outside_every_face": {"RS-S": 0.004, "RS-LD": 0.01},
+   "src": "T-139 faces under the ST-02 lanes that T-271 classes BEAMISH and keeps in its horizontal decor ceiling 93.1766 (GF-RC99C2A/open)"},
+  "T271-GF-ceiling": {"horizontal_m2": 93.1766, "no_ceiling_m2": 14.9434, "stair_soffit_held_m2": 9.8536}
+ },
+ "freelancer": {"line": "none", "note": "the freelancer's workbooks carry no stair-soffit row; his ceiling rows ceil the GF stair zone (T-271 s.4: 'his row ceils them')"}
+}

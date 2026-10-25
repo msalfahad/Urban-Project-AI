@@ -1,0 +1,144 @@
+{
+ "schema": "T281_SUMMARY",
+ "method": "STAIR_SOFFIT_V1",
+ "rows": 29,
+ "by_class": {
+  "BEAM_HELD": 3,
+  "COLUMN_HELD": 2,
+  "NO_SOFFIT": 3,
+  "STAIR_SOFFIT": 16,
+  "UNKNOWN": 5
+ },
+ "totals": {
+  "ST-01": {
+   "plan_O": 17.07,
+   "plan_D": 17.07,
+   "true_O_measured": 17.197803,
+   "true_D_measured": 17.243246,
+   "true_O_held_rows": 2,
+   "true_D_held_rows": 2,
+   "held_plan_m2": 1.5
+  },
+  "ST-02": {
+   "plan_O": 8.47855,
+   "plan_D": 8.852723,
+   "true_O_measured": 4.460946,
+   "true_D_measured": 4.905788,
+   "true_O_held_rows": 1,
+   "true_D_held_rows": 1,
+   "held_plan_m2": 4.443156
+  }
+ },
+ "MS1-L CONFLICT": {
+  "B_structural": {
+   "plan_O": 3.935,
+   "true_O": 4.501478,
+   "plan_D": 3.539648,
+   "true_D": 4.049212,
+   "slab_borne_D": 0.395352,
+   "column": 0.025,
+   "open_in_GF025": 0.0,
+   "under_B20_band": 0.18
+  },
+  "A_architectural": {
+   "plan_O": 3.215,
+   "true_O": 3.677828,
+   "plan_D": 2.819648,
+   "true_D": 3.225561,
+   "slab_borne_D": 0.395352,
+   "column": 0.025,
+   "open_in_GF025": 0.54,
+   "under_B20_band": 0.0
+  }
+ },
+ "pitch": {
+  "ST01-MS1-U": 1.143959,
+  "ST01-MS2-L": 1.146124,
+  "ST01-MS2-U": 1.146124,
+  "ST02-RS-A": 1.134456,
+  "ST02-RS-S": 1.134456
+ },
+ "kinks_m": {
+  "ST01-MS1-U": {
+   "foot": 0.04146,
+   "head": 0.0
+  },
+  "ST01-MS2-L": {
+   "foot": 0.0,
+   "head": 0.34175
+  },
+  "ST01-MS2-U": {
+   "foot": 0.04175,
+   "head": 0.0
+  },
+  "ST02-RS-A": {
+   "foot": 0.040157,
+   "head": 0.340157
+  },
+  "ST02-RS-S": {
+   "foot": 0.0,
+   "head": 0.340157
+  }
+ },
+ "reconciliation": {
+  "GF-025": {
+   "face_m2": 10.725,
+   "parts": {
+    "MS1-L lane in the face (B20 face -> 25E, less column 36B)": 3.755,
+    "column 36B (no soffit)": 0.025,
+    "well GF": 0.315,
+    "MS1-T": 1.495,
+    "MS1-LD": 1.44,
+    "MS1-U": 3.72
+   },
+   "residual": 0.0,
+   "MS1-L lane split by reading": {
+    "B_structural": {
+     "soffit (O)": 3.935,
+     "open to the shaft above": 0.0,
+     "under the B20 band in plan (outside the face)": 0.18
+    },
+    "A_architectural": {
+     "soffit (O)": 3.215,
+     "open to the shaft above": 0.54,
+     "under the B20 band in plan (outside the face)": 0.0
+    }
+   }
+  },
+  "1F-016": {
+   "face_m2": 10.725,
+   "parts": {
+    "MS2-L waist": 3.755,
+    "well 1F": 0.31,
+    "MS2-TR well end": 0.005,
+    "MS2-LD-W": 1.495,
+    "MS2-LD-E": 1.44,
+    "MS2-U": 3.72
+   },
+   "column 691 (outside the face, exposure HELD)": 0.025,
+   "residual": 0.0
+  },
+  "T271-GF": {
+   "held_m2": 9.853618,
+   "ST-02 pieces inside the T-271 stair faces": 9.013781,
+   "bottom-step strip inside the light-well outline (no soffit: no ceiling)": 0.062506,
+   "slab north of the top riser 315 (GF-131 / GF-132 parts; plate C-T1)": 0.777392,
+   "residual (named)": -6.1e-05,
+   "ST-02 plan, all rows less column 374 (method O)": 10.835656,
+   "ST-02 plan under T-139 beam / column pieces kept in the T-271 decor ceiling": 1.807875,
+   "ST-02 plan inside column outlines, in no face": 0.014,
+   "closure ST-02 plan = inside + beam pieces + slivers": 0.0
+  },
+  "T271-GF-effect": {
+   "horizontal decor ceiling, T-271": 93.1766,
+   "less the beam / CA / column-edge pieces under the ST-02 lanes": -1.807875,
+   "plus the slab north of 315 (method O: slab, not stair)": 0.777392,
+   "horizontal decor ceiling, method O": 92.146117,
+   "method D: the RS-A head kink under plate C-T1 also leaves the ceiling": -0.408189,
+   "horizontal decor ceiling, method D": 91.737928,
+   "no ceiling, T-271 + bottom-step strip": 15.005906
+  }
+ },
+ "released": false,
+ "statement": "no quantity released; every true area of a curved, winder or junction piece is HELD (None), never 0"
+}

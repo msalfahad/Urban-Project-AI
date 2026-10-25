@@ -1,0 +1,93 @@
+{
+ "task": "T-288",
+ "rule": "R-T288-1",
+ "walls": 76,
+ "basis_A": {
+  "v3_net_m2": 449.5934,
+  "v4_at_d0_upper_bound_m2": 449.6007,
+  "drop_term_m": 7.9131,
+  "v4_expression": "449.6007 - 7.9131 x d m2 (d HELD, D-41)",
+  "determinate_net_m2": 402.7988,
+  "determinate_net_m3": 72.8414,
+  "determinate_walls": 31,
+  "held_on_drop_walls": 6,
+  "held_on_drop_upper_m2": 46.8019,
+  "by_class_determinate_m2": {
+   "VERIFIED": 297.847,
+   "PROJECT-SPECIFIC": 76.2187,
+   "SOURCE-SUPPORTED PENDING INDEPENDENT CHECK": 28.7331
+  },
+  "walls_with_figure": 37
+ },
+ "basis_B": {
+  "v3_net_m2": 625.8957,
+  "v4_at_d0_upper_bound_m2": 625.903,
+  "drop_term_m": 7.9131,
+  "v4_expression": "625.9030 - 7.9131 x d m2 (d HELD, D-41)",
+  "determinate_net_m2": 579.1011,
+  "determinate_net_m3": 104.4689,
+  "determinate_walls": 42,
+  "held_on_drop_walls": 6,
+  "held_on_drop_upper_m2": 46.8019,
+  "by_class_determinate_m2": {
+   "VERIFIED": 297.847,
+   "PROJECT-SPECIFIC": 76.2187,
+   "SOURCE-SUPPORTED PENDING INDEPENDENT CHECK": 205.0354
+  },
+  "walls_with_figure": 48
+ },
+ "residual_A_m2": 0.0,
+ "residual_B_m2": 0.0,
+ "held_on_drop_walls": [
+  "GF-W12",
+  "GF-W16",
+  "GF-W20",
+  "GF-W31",
+  "GF-W32",
+  "GF-W34"
+ ],
+ "sunken_pieces_m": 7.9131,
+ "verified_walls": [
+  "1F-W00",
+  "1F-W01",
+  "1F-W02",
+  "1F-W03",
+  "1F-W05",
+  "1F-W06",
+  "1F-W08",
+  "1F-W09",
+  "1F-W20",
+  "1F-W21",
+  "1F-W22",
+  "2F-W01",
+  "2F-W04",
+  "2F-W06",
+  "GF-W01",
+  "GF-W07",
+  "GF-W21",
+  "GF-W33"
+ ],
+ "verified_net_m2": 297.847,
+ "clip_frames": {
+  "1F": {
+   "arch_columns_in_window": 20,
+   "columns_matched": 20,
+   "max_residual_mm": 0.0
+  },
+  "GF": {
+   "arch_columns_in_window": 30,
+   "columns_matched": 30,
+   "max_residual_mm": 0.0
+  }
+ },
+ "faces_on_panel_edges": [
+  "A2",
+  "158",
+  "159",
+  "ADB",
+  "ADC",
+  "B12",
+  "B14"
+ ],
+ "register_v4_csv_sha256": "281865d32679f07769a8f148bbcd4db8a7f0eac5fbfb9e7436510d57245b272e"
+}

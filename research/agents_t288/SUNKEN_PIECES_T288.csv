@@ -1,0 +1,8 @@
+wall_id,panel_face,piece_m,booked_h_v3_m,height_v4,held,clip_axis_under_m,clip_hatch_to_column_gap_m,clip_faces_in_hatch_m,clip_vs_piece_m,agreement
+GF-W12,GF-081,0.4500,4.34,4.34 - d,drop d of the sunken panel (D-41),0.4500,0.0500,0.4000 / 0.6500,0.0000,AGREE (<= 1 mm)
+GF-W16,GF-141,2.9500,4.34,4.34 - d,drop d of the sunken panel (D-41),2.9500,0.0000,1.4500 / 1.4038,0.0000,AGREE (<= 1 mm)
+GF-W20,GF-016,0.9678,4.34,4.34 - d,drop d of the sunken panel (D-41),0.9678,0.0000,0.8435 / 0.9678,0.0000,AGREE (<= 1 mm)
+GF-W31,GF-016,1.0311,4.34,4.34 - d,drop d of the sunken panel (D-41),1.0751,0.0000,1.0001 / 1.1061,0.0440,JUNCTION: the face-span axis runs on through the 3-way 45-degree junction of GF-W20 / GF-W31 / GF-W32 under GF-016; the census run stops at the T-215 junction bound and books the junction once (T-274 piece kept; open for the Checker's re-clip)
+GF-W32,GF-015,0.3105,4.34,4.34 - d,drop d of the sunken panel (D-41),0.3117,0.0000,0.0585 / 0.0585,0.0012,"BAND EDGE (<= 2 mm): T-274's route-G band edge vs the drawn hatch edge at the beam between 275 / 276; census piece kept, difference listed for the Checker (d coefficient only)"
+GF-W32,GF-016,0.4806,4.34,4.34 - d,drop d of the sunken panel (D-41),0.6210,0.0000,0.2734 / 0.1416,0.1404,JUNCTION: the face-span axis runs on through the 3-way 45-degree junction of GF-W20 / GF-W31 / GF-W32 under GF-016; the census run stops at the T-215 junction bound and books the junction once (T-274 piece kept; open for the Checker's re-clip)
+GF-W34,GF-015,1.7231,4.34,4.34 - d,drop d of the sunken panel (D-41),1.7231,0.0000,1.6849 / 1.7981,0.0000,AGREE (<= 1 mm)
