@@ -1,3 +1,66 @@
+## LEAD REPORT 2026-10-24 18:15 UTC
+
+Repositories: attached Urban-Project-AI checkout (main eafbb0f6); `.work` prepared AUTOMATICALLY ("setup by auto",
+18:10). Working branch 969e0ae5 -> c0ab564d (one Checker merge via 'engine push', T-263); no owner commit on the engine
+branch. Drive readable: nothing created or modified in the project folders since 16:00, no new images (no photo review
+task). Self-check: codemap PASS, pytest t061 PASS, freeze PASS (0). OWNER_SESSION_CHANGES: no entry since 15:31; nothing
+undone or duplicated.
+
+PROGRESS (Alsenan, by trade and unit; released unchanged: concrete 92.77 vs freelancer 111.81 m3, -17.03 %, run A).
+WHOLE LINES VERIFIED: candidate 1 / 13 (CONC.SLAB), released 0 / 13; no change. Nothing got worse.
+- WATERPROOFING, buried concrete (m2; T-263 MERGED c0ab564d): NEW SCOPE. p.13 note 'two layers liquid water proofing to
+  all surface in contact with earth' read as a per-face condition: ground-beam buried faces 35.404 m2 DRAWING-CONFIRMED
+  (interior 18.903 m x 0.60 = 11.342 both faces; main exterior inner faces 28.309 m x 0.85 = 24.063). Outer faces of the
+  14 main exterior runs EXCLUDED (soffit at natural ground, plinth faces); soffits on 10 cm plain concrete excluded.
+  Checker own: 7E9+7EA#1 2.535, 7E0+FD#1 2.8475 (inner; outer 0), F12 top 13.690 single reading: all agree. Footing tops
+  104.72 .. 104.75 m2 and necks HELD (formation Q-21 C), boundary G.B / straps HELD (note scope). Engine 0 / freelancer
+  no row: FREELANCER_WRONG (omission) and engine omission; no %. Line PARTIALLY VERIFIED (2 / 21 runs own). Procurement
+  HELD (product, coats not printed).
+- BLOCKWORK (m2; Checker light runs 17:07 / 18:04): established net 449.260 m2 unchanged; VERIFIED 67.574 -> 95.633 m2
+  (+2F-W01 6.840, 1F-W09 6.840, 1F-W21 7.410, 1F-W02 2.660, GF-W21 4.309); own-corrected 1F-W20 24.507, 1F-W22 20.402,
+  GF-W16 15.436 (register to correct); net walls own-measured 9 -> 16 / 37; line NOT VERIFIED (39 / 76 walls held-net).
+  NEW CONFLICT: CB2 drawn 0.25 m vs schedule W 20: GF-W19 8.595 .. 8.612 m2 PARTIALLY VERIFIED (register 8.605 inside but
+  its pieces match neither reading). Split proposal (T-261 r2): 9 walls, split total 153.1125 m2, established net
+  449.260 -> 602.3725 m2 proposed, nothing applied; 7 / 9 walls agree own; 1F-W18 own 17.856 (19.733 whole) vs 17.934,
+  1F-W24 own 5.540 vs 5.651 (register gross on non-drawn extents): REJECTED narrow, r3 in work.
+- REBAR ground-beam stirrups (T-272 r1 REJECTED narrow): shape agrees (closed 2-leg link, hook pair drawn, angle / tails /
+  bend radius unprinted -> cut length HELD; boundary link drawn with no closure = new designer item). Fault: the count
+  envelope 361 .. 400 assumed links run through crossing beams and spaced the ring as one arc (Checker own ring 40 .. 45
+  on drawn faces 6.2675 / 6.380 m split at column 17BA). Count and mass HELD, never 0; QA reading ~0.45 t, not a bound.
+  Freelancer kg / m3 lump (44.19 t total): RULE_DIFFERENCE, no %.
+- FLOOR AREA (m2; T-240 READY 17:52, Gate B): candidate V3.0.14 internal line 340.765 -> 380.364 m2 vs released A
+  385.634 (-1.37 %), freelancer comparison unchanged in kind; 1F living 38.6335 VERIFIED piece in, arrival landing 4.9225
+  once (Q-66 B), GF treads 2.070 floor + 6.124 HELD, 6 thresholds HELD 1.360 m2; 3,643 / 3,680 lines byte-identical.
+  The +39.6 m2 step is the Checker's first reconciliation item. Line still NOT VERIFIED (held pieces named).
+- Missing: windows line (Q-76 yours, D-53 designer), ceilings (T-271), stirrups (T-272 r2), laps + t (T-273 in work),
+  excavation depths (survey), buried-face remainder (T-276).
+- Learned (lessons register +3): a 'contact with earth' note is a per-face condition; a link count is per drawn clear
+  span, never through a crossing member; a rework the Lead orders is labelled TODO, or the claim rule cannot see it.
+
+ENGINEERING DECISIONS THIS RUN (ERS s.5 Lead). (1) Classified: T-263 WORKED, T-261 r2 PARTIAL (r3 with exact fault),
+T-272 r1 PARTIAL (narrow r2), T-267 r1 still PARTIAL (not reclaimed), T-240 handed in. (2) CAUSE FIXED: worker 1 took
+T-273 while T-267 r2 and T-272 r2 were first in lane S because the worker prompt claims TODO rows only and both carried
+REJECTED; both rows now TODO r2, and T-267 r2 is also first in lane I so worker 3 can take it at 18:59 (it unblocks
+T-273's rule manifest). (3) T-270 extended: the buried-faces component becomes the WP.BURIED_LIQUID sub-line of the
+waterproofing family, after T-240 MERGED. (4) NEW T-276 (lane A): the remaining buried faces so the line can close.
+(5) NEW T-277 (lane S): drawn-vs-scheduled beam width census over the three slab plans, every conflict with its m3 / m2
+per trade; no quantity changed. (6) CB2 width conflict added to the consultant list. (7) Gate B T-240 first, then T-261
+r3, T-267 r2, T-272 r2.
+
+TEAM HEALTH. Since 16:15: Checker 2 runs (16:51 -> 17:08 SUCCESS: 2 rejected narrow, 4 walls; 17:50 open: T-263 merged
+17:59, slot note 18:04); Worker 1 16:20 -> 16:34 SUCCESS (T-272 hand-in), 17:21 open (T-273); Worker 2 16:20 -> 16:33
+SUCCESS (T-261 r2), 16:41 -> 17:15 SUCCESS (T-263), 17:39 open (T-261 r3); Worker 3 17:01 -> 17:53 SUCCESS (T-240). Every
+closed run has a self-check PASS line; no refusal, no IDLE, no unclosed run. Throughput: 1 merged / 2 rejected (narrow)
+in 2 h; READY 1. Queue check: 48 actionable rows, 0 flagged, 0 stall checks.
+
+OWNER PACKAGE: none new. Open with you: Q-76 (curved first-floor window height, A 9.87 / B 11.51 m2; recommendation A).
+
+NEEDS FIXING (owner only): (1) Unchanged, an action not a decision: the sha256 of the P7757 printed take-off and of the
+Qortuba seal / PA08 take-off (agents may not open sealed files; the Gate B v2 guard protects them by name only).
+(2) Consultant / designer list, now with CB2 drawn 0.25 vs scheduled W 20 (GF slab plan) and the boundary ground-beam link
+drawn without closure, besides D-33 / D-34 / D-35, D-16, D-53, D-66, C-ST-3 / C-ST-4, ST-02; and a site level survey if
+it exists.
+
 ## LEAD REPORT 2026-10-24 16:15 UTC
 
 Repositories: attached Urban-Project-AI checkout (main eafbb0f6); `.work` prepared AUTOMATICALLY ("setup by auto",

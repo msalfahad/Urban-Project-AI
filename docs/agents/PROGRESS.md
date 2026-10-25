@@ -1,11 +1,30 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
 Plain words, no task numbers. Measured numbers come from SCOREBOARD.md; anything not measured says so.
-Last update: 2026-10-24 22:15 UTC (Lead). Previous version: 2026-10-24 20:15 UTC. The released numbers did not change
+Last update: 2026-10-25 00:15 UTC (Lead). Previous version: 2026-10-24 22:15 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released default V2.9 + route G untouched). Your measure: whole BOQ
 lines independently verified, and trades that can be scored. Still 1 whole line verified in the candidate (the concrete
-slab, 60.28 m3), 0 released. No new question for you; the curved first-floor window question is still open, and the
-fingerprints of two sealed reference files are still yours to record (see "Waiting for the owner").
+slab, 60.28 m3), 0 released. No decision for you; the designer list is being finished before you send it (see
+"Waiting for the owner").
+
+Since 22:15 (newest first; three pieces checked and merged, two sent back for narrow fixes, one handed in):
+- Block walls: every wall's height pieces now add up exactly to its length (the old register sampled the band every
+  2 cm and averaged, so 40 of 73 walls did not close). Checked and merged. The settled wall area would move from 449.26
+  to 449.57 m2; nothing applied yet: the register is applied in one revision next, then the walls go into the
+  candidate. Checker-verified wall area rose from 95.63 to 105.00 m2 (13 walls). The one window that sat 3 cm inside a
+  column is the only such case in the 78-opening census.
+- Buried-concrete waterproofing, second hand-in: checked and merged. 32 buried ground-beam faces, 45.47 m2, every beam
+  end now stops on the face of what it frames into. Neither the released engine nor the freelancer has this line.
+- Foundation waterproofing into the candidate: sent back narrow on one sub-line only. The checker confirmed the footing
+  membrane 109.85 m2, its screed 5.49 m3 and the lift-pit layers himself; but the buried-beam figure carried (35.40 m2)
+  came from the older trace that contained non-earth faces. Being redone with the 45.47 m2 trace.
+- Beams drawn wider or narrower than their schedule: checked and merged. 7 of 137 runs conflict, exactly the ones on the
+  designer list; beam concrete on them 5.44 m3 as drawn vs 5.77 m3 as scheduled, both kept until the designer answers.
+- Formwork faces where beams end on columns or curves: sent back narrow. Side faces agree with the checker, but end
+  faces were invented on lines joining two unequal beam-edge ends (0.22 m2 of a 0.34 m2 alternative was not real).
+- Floor-area scoring key: fixed and handed in. The scoreboard will score the candidate's internal floor area at
+  380.36 m2 (-7.1 % against the freelancer's 409.58 m2) instead of 372.47 m2; a scoring fix, no quantity changed.
+- Nothing new on Drive since the last report; no new photos.
 
 Since 20:15 (newest first; four pieces checked and merged, one sent back for a narrow fix, two handed in):
 - Ceilings, ground-floor light well: fixed and merged. The checker split the 23.24 m2 face himself and agrees to
@@ -769,17 +788,16 @@ Not measured, and paused by your order (Alsenan first).
 - The Kuwait specification chapters on waterproofing, floors, wall tiles and paint (file too big: parts needed).
 
 ## Waiting for the owner
-- ONE decision today (question Q-76 in the owner questions): the curved first-floor window over the pool. Your earlier
-  answer took the width on the outer curve (3.29 m, not in question) and repeated our question's height 3.50 m. On the
-  drawing the 3.05 m ends at the top of the window's own arch (the glass stops at 3.00 m) and the 0.45 m above it is a
-  separate decorative band on the wall. A: 3.29 x 3.00 = 9.87 m2 (the same rule as the other arched windows; our
-  recommendation); B: keep 3.29 x 3.50 = 11.51 m2. Difference 1.64 m2 of window; walls, plaster and paint are not
-  affected. Until you answer it stays held at 9.87 .. 11.51 m2.
-- Nothing else found since 22:10 meets the standard's conditions for asking you: the beam widths and depths, the
-  outside ground-beam depth and the column items are designer items already on the designer list.
-- Consultant list (draft): rows 1, 3, 4, 5, 6, 10, 11, 12 are ready for you to send; hold rows 2 (tank beam), 7 (lift
-  tie beam), 8 (annex roof) and 9 (two openings) until the searches named in the list finish (expected within the next
-  checker and worker runs).
+- No decision for you today. You answered the curved window (9.87 m2 opening area) at 23:53; it is applied.
+- The designer / consultant list: NOT ready to send yet (your 23:57 instruction). I checked all 30 rows against the
+  merged, checked work: none is answered by the drawings, so none was removed; two "search still open" notes are now
+  closed (the lift tie beam is a designer question, the lift pit depth goes to the lift supplier instead). I split the
+  list into 9 priority requests, each unlocking one complete BOQ line (windows, pool concrete, footings, blinding,
+  ground beams, beams, columns, stairs and domes, floor area) and the remaining questions. Six priority requests are
+  complete; three (columns, stairs and domes, floor area) still lack a row for an item the checker names but nobody
+  filed (the column level where two ground-slab levels meet, the main stair's winder turn and the stair waist
+  thicknesses, the tower dome, and a doorway strip in the pantry). Two tasks write those rows with their sheet search;
+  then the list is ready for you.
 - One small action, no decision: the two sealed reference take-offs (the Alsenan printed take-off and the second
   sealed benchmark) are protected only by file name, because the agents may not open sealed files to fingerprint them.
   If you record their SHA-256 fingerprints on the board (or tell the main chat), the checker's tool protects them by

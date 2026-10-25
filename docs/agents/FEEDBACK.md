@@ -36,6 +36,19 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
    commit. Decision: board-only handoffs are verified as hand evidence (the verifier re-reads the cited notes), and the
    next task on the topic writes the files (T-117); a run with no line stays a NEEDS FIXING item for the owner's setting.
 
+## 2026-10-25 00:15 (lead run; covers 22:15 - 00:15)
+
+| Task | Result | Evidence | Decision |
+|---|---|---|---|
+| T-276 r2 buried faces traced | WORKED | MERGED 4d88681b (Verifier 22:54): own DXF 182+183 band end quadrilateral 0.03175 m2, 7C3#2 1.5585 m (-0.05 %), 17E+17F 0.4243 m; 32 DC faces 45.4682 m2; COL:255 neck face HELD | lessons row closed (prior); T-270 r2 takes LEDGER_T276 |
+| T-277 beam width census | WORKED | MERGED 9446dfcb (Verifier 22:59): own band widths CB2 0.250 vs W20, B21 0.400 vs W45, CB10 0.20 / 0.30 vs W25 CONFLICT; B27, B7 AGREE; both readings carried | RFI S5 search closed; T-285 carries the four walls' crossing strips both ways |
+| T-274 blockwork height pieces | WORKED | MERGED aba9399a (Verifier 00:06): own GF-W28 22.3386 vs 22.3384, 1F-W07 11.4599 = worker; register proposal 449.260 -> 449.565 m2 NOT applied | NEW T-285 (apply as register v3); T-279 after T-285; lessons row closed |
+| T-270 r1 WP foundation into V3.0.15 (Gate B) | PARTIAL | REJECTED narrow r2 22:58 on WP.BURIED_LIQUID only (35.404 from T-263 run faces vs 45.4682 traced, -22.1 %, contains non-earth faces); every other figure own-verified byte-for-byte | r2 first in lane I (owner order 23:49); lessons row (integration takes the newest verified ledger) |
+| T-282 r1 formwork faces at oblique / curved carriers | PARTIAL | REJECTED narrow r2 00:04: END faces booked on convex-hull diagonals joining unequal edge ends (170+7C3#4 0.2318 m = +0.2202 m2 FORMED; 1811+1812#1 0.0972 m); side faces agree | r2 first in lane S; lessons row (end face only on a drawn end or free section); element register row |
+| T-278 floor-area scoring key | handed in (READY 23:50, Gate A) | T001C keys FLOOR.INTERNAL 380.364 m2 on 40 lines (was 372.472 on 38), -7.13 % vs freelancer; T001B outputs byte-identical | Gate A next; Lead challenge: 1F landing 4.9225 m2 not also in a marble / stair finish line |
+| Checker T-180 slots 23:00 / 00:06 | findings | jamb scan: exactly one jamb inside a column (OP-1F-026, 32.7 mm, two routes); blockwork VERIFIED 95.633 -> 105.004 of 449.260 m2 (GF-W33 5.586, 1F-W01 2.832, GF-W12 1.953) | into T-285 (register v3 carries the VERIFIED values) |
+| RFI package (owner 23:57) | Lead verification | 30 rows, 0 removed, 2 search notes closed, 4 missing rows G1-G4, 9 PRIORITY RFIs (6 ready) | NEW T-287 (G1-G3), T-286 (G4 + plaster blockers); not to be sent until both return |
+
 ## 2026-10-24 22:15 (lead run; covers 20:15 - 22:15)
 
 | Task | Result | Evidence | Decision |
@@ -324,37 +337,3 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
   lane S; register rulings LIFT-01 / TANK-01.
 - Recurring cause 8 (stale map) did not recur in this window (every handoff regenerated the map last). New process gap:
   pilot_metrics.py counts 0 merges in a window with 8 (auditor to fix; Lead edits no dashboard code).
-
-## 2026-10-23 04:20 (lead run)
-
-- **Checker 23:51 -> 01:15**: T-179 r2 (Gate B V3.0.5) MERGED 90d0b769 -> **WORKED** (22 stair / strip highs on count B,
-  each re-derived 0.00 kg; released rebar 10,250.17 kg and beams 65.294 m3 unchanged; NOT RELEASED); T-163 r3, T-194,
-  T-195 MERGED -> **WORKED** (classified 00:20).
-- **Main chat 00:32 / checker 01:52**: T-190 MERGED 465e0015 -> **PARTIAL**: the gate fix WORKED (firewall green on the
-  working head again after 9 h red), but parts 2-3 (sweep list, KNOWN_FAILURES ledger) not delivered. Decision: T-202
-  (lane I, gate 1).
-- **Worker 1 00:20 -> 00:46**: T-192 MERGED 86fd5f42 (01:57) -> **WORKED** (MS2-L 1.0589 -> 1.0334 m3 VERIFIED by the
-  checker's own riser / B20 face read, 0.0 %; system 6.6479 m3 PARTIALLY VERIFIED). Board slip: the row stayed READY
-  after the merge; the Lead restored it from the merge commit and the checker's RUN_LOG line.
-- **Worker 3 01:00 -> 01:52**: T-196 REJECTED 02:08 -> **PARTIAL**: the crosswalk is right on footings (F4 2 x 1.76 =
-  3.52, 0.0 %) but counts ~3 register elements per physical column (GF C2 12 vs 4 drawn): element identity, not the
-  crosswalk logic. Decision: r2 first in lane I (collapse to one element per column per storey + adverse tests); register
-  ruling 04:20.
-- **Worker 2 01:40 -> 02:02**: T-198 MERGED 57bb0411 (03:56) -> **WORKED** (checker own DXF: W01 1.00 / 3.00, W03 0.00 /
-  4.30 above FFL; deltas re-derived). Follow-up for the 21 headless windows and the three new openings' heads: T-201.
-- **Worker 1 02:20 -> 02:35**: T-191 REJECTED 03:58 -> **PARTIAL** (walls, hoops and outline re-measure 0.0 %; base mats
-  counted only at max spacing + 1, an interpretation proven for footings carried to a mesh without its own evidence (ERS
-  s.3), low end about -14.45 kg R1 / -10.63 kg R2; codemap stale). Decision: r2 first in lane S, narrow.
-- **Worker 3 03:00 -> 03:55**: T-187 (V3.0.6) READY -> pending Gate B (first at 05:49). Lead review: found that the
-  candidate's 1F 'winder stair' 4.451 m3 is a dome outline: a misread element in the released-route lineage; HELD here,
-  retired in T-193 (register ruling).
-- **Worker 2 03:40 -> 04:02**: T-197 READY -> pending Gate A (second at 05:49).
-- **Checker T-180 slot**: columns 8 / 59 re-measured own, all 0.0 % (COL-GF-10 0.750, COL-1F-44 0.444, COL-1F-36
-  0.380, COL-GF-11 0.9375, COL-GF-17 0.700, COL-2F-54 0.380 m3 this cycle).
-- **Recurring cause 8 (new name): stale docs/CODEMAP.md at handoff** (D-T179-2 at 21:04, D-T191-1 at 03:58; the workers'
-  self-gate said 'c PASS' both times): the map is built, then a file is added or the working branch merged after it.
-  Decision: every row now says "regenerate docs/CODEMAP.md as the LAST commit and run `codemap check` on the pushed
-  head"; the queue note repeats it. If it repeats again, the Lead asks the main chat for a pre-push check in the wrapper.
-- **Recurring cause 9 (new): worker clock stamps in rows** (T-197 '04:40' written at 04:02, T-187 '04:10' at 03:55):
-  harmless today, but the dashboard's READY-age measure reads them. Decision: queue note asks for `date -u` stamps.
-

@@ -1,5 +1,38 @@
 # Older Lead feedback entries (moved from FEEDBACK.md to keep the last 20; newest first)
 
+## 2026-10-23 04:20 (lead run)
+
+- **Checker 23:51 -> 01:15**: T-179 r2 (Gate B V3.0.5) MERGED 90d0b769 -> **WORKED** (22 stair / strip highs on count B,
+  each re-derived 0.00 kg; released rebar 10,250.17 kg and beams 65.294 m3 unchanged; NOT RELEASED); T-163 r3, T-194,
+  T-195 MERGED -> **WORKED** (classified 00:20).
+- **Main chat 00:32 / checker 01:52**: T-190 MERGED 465e0015 -> **PARTIAL**: the gate fix WORKED (firewall green on the
+  working head again after 9 h red), but parts 2-3 (sweep list, KNOWN_FAILURES ledger) not delivered. Decision: T-202
+  (lane I, gate 1).
+- **Worker 1 00:20 -> 00:46**: T-192 MERGED 86fd5f42 (01:57) -> **WORKED** (MS2-L 1.0589 -> 1.0334 m3 VERIFIED by the
+  checker's own riser / B20 face read, 0.0 %; system 6.6479 m3 PARTIALLY VERIFIED). Board slip: the row stayed READY
+  after the merge; the Lead restored it from the merge commit and the checker's RUN_LOG line.
+- **Worker 3 01:00 -> 01:52**: T-196 REJECTED 02:08 -> **PARTIAL**: the crosswalk is right on footings (F4 2 x 1.76 =
+  3.52, 0.0 %) but counts ~3 register elements per physical column (GF C2 12 vs 4 drawn): element identity, not the
+  crosswalk logic. Decision: r2 first in lane I (collapse to one element per column per storey + adverse tests); register
+  ruling 04:20.
+- **Worker 2 01:40 -> 02:02**: T-198 MERGED 57bb0411 (03:56) -> **WORKED** (checker own DXF: W01 1.00 / 3.00, W03 0.00 /
+  4.30 above FFL; deltas re-derived). Follow-up for the 21 headless windows and the three new openings' heads: T-201.
+- **Worker 1 02:20 -> 02:35**: T-191 REJECTED 03:58 -> **PARTIAL** (walls, hoops and outline re-measure 0.0 %; base mats
+  counted only at max spacing + 1, an interpretation proven for footings carried to a mesh without its own evidence (ERS
+  s.3), low end about -14.45 kg R1 / -10.63 kg R2; codemap stale). Decision: r2 first in lane S, narrow.
+- **Worker 3 03:00 -> 03:55**: T-187 (V3.0.6) READY -> pending Gate B (first at 05:49). Lead review: found that the
+  candidate's 1F 'winder stair' 4.451 m3 is a dome outline: a misread element in the released-route lineage; HELD here,
+  retired in T-193 (register ruling).
+- **Worker 2 03:40 -> 04:02**: T-197 READY -> pending Gate A (second at 05:49).
+- **Checker T-180 slot**: columns 8 / 59 re-measured own, all 0.0 % (COL-GF-10 0.750, COL-1F-44 0.444, COL-1F-36
+  0.380, COL-GF-11 0.9375, COL-GF-17 0.700, COL-2F-54 0.380 m3 this cycle).
+- **Recurring cause 8 (new name): stale docs/CODEMAP.md at handoff** (D-T179-2 at 21:04, D-T191-1 at 03:58; the workers'
+  self-gate said 'c PASS' both times): the map is built, then a file is added or the working branch merged after it.
+  Decision: every row now says "regenerate docs/CODEMAP.md as the LAST commit and run `codemap check` on the pushed
+  head"; the queue note repeats it. If it repeats again, the Lead asks the main chat for a pre-push check in the wrapper.
+- **Recurring cause 9 (new): worker clock stamps in rows** (T-197 '04:40' written at 04:02, T-187 '04:10' at 03:55):
+  harmless today, but the dashboard's READY-age measure reads them. Decision: queue note asks for `date -u` stamps.
+
 ## 2026-10-23 00:20 (lead run)
 
 - **Checker 19:51 SUCCESS (21:04)**: T-164 MERGED -> **WORKED** (RL-02 4.921 / RL-03 7.967 m own DXF, 0.0 %; RL-04 kept

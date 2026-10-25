@@ -46,9 +46,20 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
-## Status (Lead, 2026-10-24 22:15; re-estimated each run from what merged and was verified)
+## Status (Lead, 2026-10-25 00:15; re-estimated each run from what merged and was verified)
 
-Lead 2026-10-24 22:15: since 20:15 the Checker merged 4 (T-267 r2 rule store 1.7.0; T-272 r2 ground-beam links, count /
+Lead 2026-10-25 00:15: since 22:15 the Checker merged 3 (T-276 r2 buried faces 45.4682 m2 DC on 32 faces; T-277 beam
+width census, both readings kept; T-274 blockwork height pieces close every census run, register proposal 449.260 ->
+449.565 m2 not applied) and rejected 2 narrow (T-270 Gate B on the buried sub-line only; T-282 formwork END faces on hull
+diagonals). Handed in: T-278 (floor-area scoring key). Blockwork verified share 95.633 -> 105.004 m2. Verified whole lines
+unchanged: candidate 1 / 13, released 0 / 13. OWNER 23:49 integration-first cycle applied: lane I T-270 r2 -> T-245 (first
+real export, internal review candidate) -> T-254 -> T-266 -> T-255, then T-279 (after T-285 applies the wall register) and
+T-284 (after T-283). Week 1 (27 Oct) met by CONC.SLAB. Week 2 (3 Nov, measurable verified coverage): depends on T-270 r2
+Gate B (waterproofing family into the candidate), T-245 (the first real export with every line's status and the
+structural revision UNCONFIRMED) and T-285 -> T-279. Risk: lane I is serial and now carries six packages in a fixed order
+(about 2 h each, about 12 h of Worker 3 runs before T-279); the designer RFI package waits on T-286 / T-287 (G rows).
+
+(previous) Lead 2026-10-24 22:15: since 20:15 the Checker merged 4 (T-267 r2 rule store 1.7.0; T-272 r2 ground-beam links, count /
 mass HELD; T-273 r2 laps + t with the owner's s.6 acceptance, every lap HELD, 0.000 t on Alsenan; T-271 r2b ceilings, GF
 light well split to 0.0014 m2, R2 decor 363.173 m2 DRAWING-CONFIRMED, not verified as a whole) and rejected 1 narrow
 (T-276 r1 buried faces: square cut at a curved carrier + sub-mm sliver, total HELD <= 45.611 m2). Handed in: T-270

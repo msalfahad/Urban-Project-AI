@@ -1,5 +1,82 @@
 # Lead reports to the owner's main chat (newest first, last 3 entries; older in archive/LEAD_REPORT_older.md)
 
+## LEAD REPORT 2026-10-25 00:15 UTC
+
+Repositories: attached Urban-Project-AI checkout (main eafbb0f6); `.work` prepared AUTOMATICALLY ("setup by auto",
+00:10). Working branch 789ebbb4 -> aba9399a (three Checker merges via 'engine push': T-276 r2 4d88681b, T-277 9446dfcb,
+T-274 aba9399a); no owner commit on the engine branch. Drive readable: nothing created or modified in the project folders
+since 22:00, no new images (no photo review task). Self-check: codemap PASS, pytest t061 PASS, freeze PASS (0).
+OWNER_SESSION_CHANGES: three entries since my last run (23:49, 23:53, 23:57), all applied below; nothing undone or
+duplicated.
+
+PROGRESS (Alsenan, by trade and unit; released unchanged: concrete 92.77 vs freelancer 111.81 m3, -17.03 %, run A).
+WHOLE LINES VERIFIED: candidate 1 / 13 (CONC.SLAB), released 0 / 13; no change. Nothing got worse.
+- BLOCKWORK (m2; T-274 MERGED aba9399a): every census run's height pieces now close its length exactly (54 closed,
+  11 by T-261, 4 with HELD pieces by name, 0 unclosed; the register v2 sampled every 2 cm with a 3 cm halo and averaged,
+  40 of 73 walls did not close). Established net 449.260 -> 449.565 m2 PROPOSED, not applied (1F-W00 W18 part-in-masonry
+  -0.0706, 1F-W20 +0.030, 1F-W22 -0.018 (B4 strip 0.126 m) among the causes). Checker VERIFIED share 95.633 -> 105.004 m2
+  (13 walls). Jamb scan: exactly one jamb inside a column in the 78-opening census (OP-1F-026, 32.7 mm). -> T-285 applies
+  the register as v3, then T-279 integrates it.
+- WATERPROOFING, buried concrete (m2; T-276 r2 MERGED 4d88681b): 32 traced ground-beam faces 45.4682 m2 DRAWING-CONFIRMED
+  (r1 46.521, -1.053; the T-263 run faces 35.404 superseded); engine and freelancer both have no line (omission, -45.468
+  m2 each); HELD pieces 244.283 m and the neck faces by name.
+- WATERPROOFING foundation family into the candidate (T-270 Gate B REJECTED narrow 22:58, one sub-line): footing
+  membrane 109.850 m2, screed 109.850 m2 / 5.4925 m3, lift pit membrane 47.430 / board 26.730 / screed 20.700 m2 all
+  Checker-own byte-for-byte; the buried sub-line carried 35.404 (contains non-earth faces; hand vs engine -22.1 %). Lead
+  challenge upheld. r2 = LEDGER_T276 45.4682 m2 PARTIALLY VERIFIED. First in lane I.
+- CONC.BEAM width (m3; T-277 MERGED 9446dfcb): 137 runs 105 AGREE / 7 CONFLICT = D-02 + D-27 exactly; drawn 5.4421 vs
+  scheduled 5.7665 m3 (-0.3244, -5.6 %), soffit 8.7140 vs 9.0072 m2; both kept; CB10's label stands beside the 0.20 strip.
+- FORMWORK faces (m2; T-282 REJECTED narrow 00:04): side faces agree with the Checker (106 / 118 span-sides; +3.189 m side,
+  ring outer face 5.9056 vs 5.9055 m); END faces booked on hull diagonals between unequal edge ends: 0.2202 of the
+  +0.340 m2 FORMED alternative (65 %) is spurious; r2 first in lane S.
+- FLOOR AREA scoring (T-278 READY): key T001C scores the candidate internal floor at 380.364 m2 on 40 lines (was 372.472
+  on 38) = the engine line; vs freelancer 409.58: -9.06 % -> -7.13 % (-29.216 m2). Scoring fix only, no quantity moved.
+- WINDOWS (m2): owner Q-76 A applied (W17 9.870 m2 opening area); line 76.256 DRAWING-CONFIRMED on 27 + 9.870; the only
+  remaining blocker is D-53 (W02) = PRIORITY RFI P-1.
+- Missing: stair soffits (T-281), lap lengths (no print), excavation depths (survey / formation), the designer answers.
+- Learned (lessons register +4): an end face exists only on a drawn end or a free cross-section; height pieces are an
+  exact cut of the census length; an integration package takes the newest verified ledger (a total known to contain a
+  component of another kind is not DRAWING-CONFIRMED); a scoring key selects by type record, not code prefix.
+
+ENGINEERING DECISIONS THIS RUN (ERS s.5 Lead). (1) Classified: T-276 r2, T-277, T-274 WORKED; T-270 r1, T-282 r1
+PARTIAL (narrow r2, first in their lanes); T-278 handed in. (2) RFI PACKAGE VERIFIED (owner 23:57 (3);
+CLARIFICATIONS_CONSULTANT_2026-10-24.md s.0): 30 rows checked against the merged, Checker-verified evidence of the sheets
+each cites; 0 removed (none answered by the sources); S14 search closed (T-204 p.14: pit depth 'as per lift manufacturer'
+-> LIFT SUPPLIER; T-227: tie-beam section and the 3.00 m datum printed nowhere -> designer); S5 closed (T-277); 4 MISSING
+rows (G1 CB5 column / neck boundary between the +0.25 and +0.95 ground slabs, 1.2375 .. 1.4300 m3 HELD; G2 C-ST-3 winder
+turn MS1-T + unprinted waists; G3 tower dome / rings / drums; G4 GF pantry doorway zone 1.100 m2). 9 PRIORITY RFIs, each
+unlocking one complete line: P-1 windows (D-53), P-2 CONC.POOL (pool access), P-3 CONC.FOOTING (F10+F, band C1 section /
+level, SB3 strap soffit), P-4 CONC.BLINDING (D-14, D-15, F10+F, formation), P-5 CONC.GROUND (D-33 / D-34 / D-35, band /
+M4), P-6 CONC.BEAM (D-02, D-27, D-03 / 04 / 05 / 28, D-26) READY; P-7 CONC.COLUMN, P-8 CONC.STAIR_DOME, P-9 floor area wait
+on G1-G4. REMAINING: rebar (S9 / S10 / S11 bars / S12; laps unprinted too), blockwork (S14, S16, S17, A4, A5, A7, A10),
+finishes / soffits (A1, A2, A5, A7, A8, A12 + D-10), document control S18, A3 main door / SX-01, A11, A9 D-55. Limit: I
+checked the search record, not the sheets themselves. (3) NEW T-285 (lane A, register v3), T-286 (lane A, plaster
+blockers W03 room-side line / W06 wedge + G4), T-287 (lane S, G1-G3 sheet search): each resolves a demonstrated blocker
+(owner 23:49 integration first); T-170 to QUEUED. (4) Lane I in the owner's order T-270 r2 -> T-245 -> T-254 -> T-266 ->
+T-255, then T-279, T-284. (5) Checker queue: owner item (populated V2 verdict records for CONC.SLAB and every verified
+component, before T-245 Gate B) first in light runs; Lead challenge on T-278: the 1F landing 4.9225 m2 must have one
+finish line (not also the landing marble). (6) Register +8 elements.
+
+TEAM HEALTH. Since 22:15 every run closed: Verifier 22:51 -> 23:20 SUCCESS (T-276 r2, T-277 merged; T-270 rejected),
+23:52 -> 00:06 SUCCESS (T-274 merged; T-282 rejected); Worker 1 22:21 -> 23:32 SUCCESS (T-282); Worker 2 22:40 -> 23:48
+SUCCESS (T-274); Worker 3 23:00 -> 00:12 SUCCESS (T-278); Scout 23:56 SUCCESS; Worker 1 23:20 and Worker 2 23:39 IDLE
+(the run lock refusing a second run while the first was still working: both runs took about 70 minutes on an hourly
+cadence). Every closed run self-check PASS; no refusal, no unclosed run. Worker 1's own full-suite run stopped at 63 %
+(its 25-minute timeout); the Checker runs its own complete suite. Throughput: 3 merged, 2 rejected narrow in 2 h; READY 1.
+Queue check: 49 actionable rows, 0 flagged, 0 stall checks.
+
+OWNER PACKAGE: none. Q-76 answered (applied). The designer list is NOT ready to send: 6 of 9 priority requests are complete,
+three wait for the missing rows (T-286 / T-287).
+
+NEEDS FIXING (owner only): (1) OVERLAP RUNS COST MONEY (Scout 23:56): 11 IDLE runs on 24 Oct were paid sessions (the
+scheduler has no skip-if-running); worker runs now take about 70 minutes on an hourly cadence. Options for the main chat:
+a 90-minute cadence for workers 1 and 2, or keep hourly and accept the IDLE runs; I change no schedule. (2) Unchanged: the
+wrapper's 'run' command allows only tools/alsenan_scoreboard.py and tools/alsenan_keymap.py; research scripts run with the
+venv python directly; add a research-script entry on main or confirm the current practice. (3) The full suite: the Scout
+found it fits through the wrapper's pytest in folder chunks; workers are told to do that; a single chunked full-suite
+entry in the wrapper would make it one command. (4) Unchanged: sha256 of the P7757 printed take-off and of the Qortuba
+seal / PA08 take-off. (5) A site level survey, if one exists (excavation depths stay held without it).
+
 ## LEAD REPORT 2026-10-24 22:15 UTC
 
 Repositories: attached Urban-Project-AI checkout (main eafbb0f6); `.work` prepared AUTOMATICALLY ("setup by auto",
@@ -128,67 +205,3 @@ research-script entry to scripts/agent_env.sh on main or confirm that direct ven
 (2) Unchanged, an action: the sha256 of the P7757 printed take-off and of the Qortuba seal / PA08 take-off (agents may
 not open sealed files). (3) Consultant / designer list: CB2 drawn 0.25 vs scheduled W 20, the boundary ground-beam link
 drawn without closure, D-33 / D-34 / D-35, D-16, D-53, D-66, C-ST-3 / C-ST-4, ST-02; a site level survey if it exists.
-
-## LEAD REPORT 2026-10-24 18:15 UTC
-
-Repositories: attached Urban-Project-AI checkout (main eafbb0f6); `.work` prepared AUTOMATICALLY ("setup by auto",
-18:10). Working branch 969e0ae5 -> c0ab564d (one Checker merge via 'engine push', T-263); no owner commit on the engine
-branch. Drive readable: nothing created or modified in the project folders since 16:00, no new images (no photo review
-task). Self-check: codemap PASS, pytest t061 PASS, freeze PASS (0). OWNER_SESSION_CHANGES: no entry since 15:31; nothing
-undone or duplicated.
-
-PROGRESS (Alsenan, by trade and unit; released unchanged: concrete 92.77 vs freelancer 111.81 m3, -17.03 %, run A).
-WHOLE LINES VERIFIED: candidate 1 / 13 (CONC.SLAB), released 0 / 13; no change. Nothing got worse.
-- WATERPROOFING, buried concrete (m2; T-263 MERGED c0ab564d): NEW SCOPE. p.13 note 'two layers liquid water proofing to
-  all surface in contact with earth' read as a per-face condition: ground-beam buried faces 35.404 m2 DRAWING-CONFIRMED
-  (interior 18.903 m x 0.60 = 11.342 both faces; main exterior inner faces 28.309 m x 0.85 = 24.063). Outer faces of the
-  14 main exterior runs EXCLUDED (soffit at natural ground, plinth faces); soffits on 10 cm plain concrete excluded.
-  Checker own: 7E9+7EA#1 2.535, 7E0+FD#1 2.8475 (inner; outer 0), F12 top 13.690 single reading: all agree. Footing tops
-  104.72 .. 104.75 m2 and necks HELD (formation Q-21 C), boundary G.B / straps HELD (note scope). Engine 0 / freelancer
-  no row: FREELANCER_WRONG (omission) and engine omission; no %. Line PARTIALLY VERIFIED (2 / 21 runs own). Procurement
-  HELD (product, coats not printed).
-- BLOCKWORK (m2; Checker light runs 17:07 / 18:04): established net 449.260 m2 unchanged; VERIFIED 67.574 -> 95.633 m2
-  (+2F-W01 6.840, 1F-W09 6.840, 1F-W21 7.410, 1F-W02 2.660, GF-W21 4.309); own-corrected 1F-W20 24.507, 1F-W22 20.402,
-  GF-W16 15.436 (register to correct); net walls own-measured 9 -> 16 / 37; line NOT VERIFIED (39 / 76 walls held-net).
-  NEW CONFLICT: CB2 drawn 0.25 m vs schedule W 20: GF-W19 8.595 .. 8.612 m2 PARTIALLY VERIFIED (register 8.605 inside but
-  its pieces match neither reading). Split proposal (T-261 r2): 9 walls, split total 153.1125 m2, established net
-  449.260 -> 602.3725 m2 proposed, nothing applied; 7 / 9 walls agree own; 1F-W18 own 17.856 (19.733 whole) vs 17.934,
-  1F-W24 own 5.540 vs 5.651 (register gross on non-drawn extents): REJECTED narrow, r3 in work.
-- REBAR ground-beam stirrups (T-272 r1 REJECTED narrow): shape agrees (closed 2-leg link, hook pair drawn, angle / tails /
-  bend radius unprinted -> cut length HELD; boundary link drawn with no closure = new designer item). Fault: the count
-  envelope 361 .. 400 assumed links run through crossing beams and spaced the ring as one arc (Checker own ring 40 .. 45
-  on drawn faces 6.2675 / 6.380 m split at column 17BA). Count and mass HELD, never 0; QA reading ~0.45 t, not a bound.
-  Freelancer kg / m3 lump (44.19 t total): RULE_DIFFERENCE, no %.
-- FLOOR AREA (m2; T-240 READY 17:52, Gate B): candidate V3.0.14 internal line 340.765 -> 380.364 m2 vs released A
-  385.634 (-1.37 %), freelancer comparison unchanged in kind; 1F living 38.6335 VERIFIED piece in, arrival landing 4.9225
-  once (Q-66 B), GF treads 2.070 floor + 6.124 HELD, 6 thresholds HELD 1.360 m2; 3,643 / 3,680 lines byte-identical.
-  The +39.6 m2 step is the Checker's first reconciliation item. Line still NOT VERIFIED (held pieces named).
-- Missing: windows line (Q-76 yours, D-53 designer), ceilings (T-271), stirrups (T-272 r2), laps + t (T-273 in work),
-  excavation depths (survey), buried-face remainder (T-276).
-- Learned (lessons register +3): a 'contact with earth' note is a per-face condition; a link count is per drawn clear
-  span, never through a crossing member; a rework the Lead orders is labelled TODO, or the claim rule cannot see it.
-
-ENGINEERING DECISIONS THIS RUN (ERS s.5 Lead). (1) Classified: T-263 WORKED, T-261 r2 PARTIAL (r3 with exact fault),
-T-272 r1 PARTIAL (narrow r2), T-267 r1 still PARTIAL (not reclaimed), T-240 handed in. (2) CAUSE FIXED: worker 1 took
-T-273 while T-267 r2 and T-272 r2 were first in lane S because the worker prompt claims TODO rows only and both carried
-REJECTED; both rows now TODO r2, and T-267 r2 is also first in lane I so worker 3 can take it at 18:59 (it unblocks
-T-273's rule manifest). (3) T-270 extended: the buried-faces component becomes the WP.BURIED_LIQUID sub-line of the
-waterproofing family, after T-240 MERGED. (4) NEW T-276 (lane A): the remaining buried faces so the line can close.
-(5) NEW T-277 (lane S): drawn-vs-scheduled beam width census over the three slab plans, every conflict with its m3 / m2
-per trade; no quantity changed. (6) CB2 width conflict added to the consultant list. (7) Gate B T-240 first, then T-261
-r3, T-267 r2, T-272 r2.
-
-TEAM HEALTH. Since 16:15: Checker 2 runs (16:51 -> 17:08 SUCCESS: 2 rejected narrow, 4 walls; 17:50 open: T-263 merged
-17:59, slot note 18:04); Worker 1 16:20 -> 16:34 SUCCESS (T-272 hand-in), 17:21 open (T-273); Worker 2 16:20 -> 16:33
-SUCCESS (T-261 r2), 16:41 -> 17:15 SUCCESS (T-263), 17:39 open (T-261 r3); Worker 3 17:01 -> 17:53 SUCCESS (T-240). Every
-closed run has a self-check PASS line; no refusal, no IDLE, no unclosed run. Throughput: 1 merged / 2 rejected (narrow)
-in 2 h; READY 1. Queue check: 48 actionable rows, 0 flagged, 0 stall checks.
-
-OWNER PACKAGE: none new. Open with you: Q-76 (curved first-floor window height, A 9.87 / B 11.51 m2; recommendation A).
-
-NEEDS FIXING (owner only): (1) Unchanged, an action not a decision: the sha256 of the P7757 printed take-off and of the
-Qortuba seal / PA08 take-off (agents may not open sealed files; the Gate B v2 guard protects them by name only).
-(2) Consultant / designer list, now with CB2 drawn 0.25 vs scheduled W 20 (GF slab plan) and the boundary ground-beam link
-drawn without closure, besides D-33 / D-34 / D-35, D-16, D-53, D-66, C-ST-3 / C-ST-4, ST-02; and a site level survey if
-it exists.
-
