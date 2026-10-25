@@ -32,6 +32,19 @@ r2 change (only this sub-line; every other line byte-for-byte r1):
   refuse its released records at load | tests/t270_foundation_wp_lines (development villa T-263 total refused, P-270
   successor rules) | PROPOSED.
 - BOQ_FAMILY_MASTER 1.10.0 rebuilt by its builder (integrates T-219, T-263, T-276), rules manifest by the tool.
+- RUN r2 (2026-10-25, Python 3.11.17, Drive P7757.dxf `ab54dd55`, 'ST7757 dxf.dxf' `9f9d1179`): V3.0.4 csv `d86de34a`,
+  V3.0.12 `8f80cf5d`, V3.0.13 `6be1bd4e`, V3.0.14 csv `ad893df9` / json `48d7d54b` REPRODUCED; V3.0.15 runner = direct
+  step byte-identical (BOQ json `e54cae74`, csv `a4dc01dd`, diff `58c6c52f`, ledger csv `0192ca35`, scenarios
+  `a79b865d`); 3,680 -> 3,699 lines, 0 replaced, 19 added, 3,680 byte-identical to V3.0.14 (outside-rows sha256
+  de3abfcf..., as r1), 4 blinding lines identical; evidence VERIFIED 7 / DRAWING-CONFIRMED 1 / HELD 11; guard
+  held_live_new []; totals moved only on the 10 WP.FOUNDATION keys. r1 code re-run on the same V3.0.14 gives r1's
+  json `863bd18e` / csv `2a1757fa`; line by line r1 -> r2: 3,696 byte-identical, 3 changed, all WP.FOUNDATION.BURIED_LIQUID:
+  BURIED_GROUND_BEAM_FACES 35.404365 -> 45.4682 m2, BURIED_GROUND_BEAM_FACES_HELD and NECK_FACES text only (still
+  BLANK, BLOCKED_RFI).
+- FULL SUITE on ea8a9ff9 (5 folder chunks through the wrapper, to the end): 13,013 passed, 363 failed, 34 errors, 218
+  skipped, 105 xfailed; the 395 failing / erroring ids are exactly the ones that fail on the working head aba9399a
+  (same files re-run there: 395, 0 new, 0 gone; rebuild-from-private-input, dependency-register and pa09 fixture
+  tests, none touching this package).
 
 Worker 3 (lane I), 2026-10-24. ARCH_TAKEOFF_V3.0.15 = the V3.0.14 candidate + ONE new line family
 WATERPROOFING.FOUNDATION (`engine/source/arch_v3015.py`). Opt-in candidate, NOT the released default (released stays
