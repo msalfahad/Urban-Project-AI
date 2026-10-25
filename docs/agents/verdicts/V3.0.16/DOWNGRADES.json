@@ -1,0 +1,237 @@
+{
+ "downgrades": [
+  {
+   "basis_label": "UNSUPPORTED BASIS",
+   "candidate_version": "ARCH_TAKEOFF_V3.0.16",
+   "checker": {
+    "routine": "Verifier",
+    "run_token": "20261025T105053-459-8331",
+    "verdict_commit": "455c93c4"
+   },
+   "downgrade_id": "DG-1033b87f21613d24",
+   "engine_qty": 3.7125,
+   "evidence": [
+    {
+     "printed_value": "annex base +0.25 (T-214); only the finished annex roof level printed",
+     "sheet": "ST GF plan / sections"
+    }
+   ],
+   "line_ids": [
+    "L-694a75c84dd6e4bb4491",
+    "L-7d70692d03102a2dc306",
+    "L-84bf7fb482a98fdbe482",
+    "L-9f5a647014bbf83359f9",
+    "L-c0b3340a906c2c7650f8",
+    "L-e6c1c9a7feec10f64975",
+    "L-fad18af6e7139a5e99d1"
+   ],
+   "project_id": "development-villa-t131",
+   "reason": "UNSUPPORTED BASIS: annex columns at storey height 4.50 (Q-54 B annex roof datum, D-39; two ground-slab levels, T-287 G1 base +0.25 h 5.20 for C5 / C3 pending)",
+   "resolved": false,
+   "revision_set_sha256": "5e3690754db90b5fa2d878d4fc29b2e84ce9d1d91e4c1e68a62019d1b34bbc22",
+   "schema": "URBAN_CHECKER_DOWNGRADE_V1",
+   "state": "HELD",
+   "time": "2026-10-25T11:31:00Z",
+   "unit": "m3"
+  },
+  {
+   "basis_label": "UNSUPPORTED BASIS",
+   "candidate_version": "ARCH_TAKEOFF_V3.0.16",
+   "checker": {
+    "routine": "Verifier",
+    "run_token": "20261025T105053-459-8331",
+    "verdict_commit": "455c93c4"
+   },
+   "downgrade_id": "DG-18415374f925db5c",
+   "engine_qty": 6.333602,
+   "evidence": [
+    {
+     "printed_value": "top Ground Floor slab level, underside Outer Normal ground level, depth FOLLOW ARCH. (no figure); main structural top +0.95, outer ground +-0.00 (T-214 / T-253)",
+     "sheet": "ST p.13 'Ground Beams for exterior walls'"
+    }
+   ],
+   "line_ids": [
+    "L-1146bdecd41491ce9382",
+    "L-46f25f72b44e8bc3e2e0",
+    "L-62f712462a36d4ad1b32",
+    "L-9e28c7012784a8dc33c8",
+    "L-bde0257c24588948167f",
+    "L-c9bb2eca50a2a2c8b569",
+    "L-cc6aaa99e1892f34b92f",
+    "L-d08e7a9d809a56733ff9",
+    "L-dac43ee18f55433b57e7",
+    "L-e8536bc4f2699a24e2ab",
+    "L-e9a885323ad6ec3ea32b",
+    "L-efbed17455bb224e126e",
+    "L-ff727b2a52e39509a659"
+   ],
+   "project_id": "development-villa-t131",
+   "reason": "UNSUPPORTED BASIS: exterior (perimeter) ground beams measured at an interior class depth 0.40 (CONVENTION_ONLY); the exterior section gives top +0.95 to outer ground +-0.00 = 0.95 m (main house); drawing basis 15.9600 m3 on the T-289 ledger (Checker own L-e9a885 6.350 x 0.300 x 0.95 = 1.80975 m3); correction is T-254's",
+   "resolved": false,
+   "revision_set_sha256": "5e3690754db90b5fa2d878d4fc29b2e84ce9d1d91e4c1e68a62019d1b34bbc22",
+   "schema": "URBAN_CHECKER_DOWNGRADE_V1",
+   "state": "HELD",
+   "time": "2026-10-25T11:31:00Z",
+   "unit": "m3"
+  },
+  {
+   "basis_label": "UNSUPPORTED BASIS",
+   "candidate_version": "ARCH_TAKEOFF_V3.0.16",
+   "checker": {
+    "routine": "Verifier",
+    "run_token": "20261025T105053-459-8331",
+    "verdict_commit": "455c93c4"
+   },
+   "downgrade_id": "DG-22dcad3cff1fab91",
+   "engine_qty": 3.528,
+   "evidence": [
+    {
+     "printed_value": "only the finished roof level +13.90 is printed; C2 base +9.65 (T-214)",
+     "sheet": "ST roof plan / sections"
+    }
+   ],
+   "line_ids": [
+    "L-0ede77cfd0badc4c7d62",
+    "L-26f6b6f2365c72e42291",
+    "L-33a9b7728781fcba12e2",
+    "L-53f223b06db14ac41d47",
+    "L-919a5749ef79759e01ca",
+    "L-bc01297b1c4a4c45a15f",
+    "L-c10e2945d582b5a03126",
+    "L-d79d17d14f39d5148cb8"
+   ],
+   "project_id": "development-villa-t131",
+   "reason": "UNSUPPORTED BASIS: 2F columns carried to the finished roof +13.90 (no structural roof level, no build-up printed: D-39; B15 upstand / downstand D-44); 8 measured ids only, the 2F group's EXCLUDED / BLOCKED rows untouched",
+   "resolved": false,
+   "revision_set_sha256": "5e3690754db90b5fa2d878d4fc29b2e84ce9d1d91e4c1e68a62019d1b34bbc22",
+   "schema": "URBAN_CHECKER_DOWNGRADE_V1",
+   "state": "HELD",
+   "time": "2026-10-25T11:31:00Z",
+   "unit": "m3"
+  },
+  {
+   "basis_label": "UNSUPPORTED BASIS",
+   "candidate_version": "ARCH_TAKEOFF_V3.0.16",
+   "checker": {
+    "routine": "Verifier",
+    "run_token": "20261025T105053-459-8331",
+    "verdict_commit": "455c93c4"
+   },
+   "downgrade_id": "DG-289e6c603a301f87",
+   "engine_qty": 4.973977,
+   "evidence": [
+    {
+     "printed_value": "top Ground Floor slab level, underside Outer Normal ground level, depth FOLLOW ARCH. (no figure); main structural top +0.95, outer ground +-0.00 (T-214 / T-253); annex structural top +0.25 (T-214)",
+     "sheet": "ST p.13 'Ground Beams for exterior walls'"
+    }
+   ],
+   "line_ids": [
+    "L-00465df980165c529476",
+    "L-3284f44000c02179ace7",
+    "L-402dbe61d1c924144a3c",
+    "L-4783c6e18002c3a8a37e",
+    "L-6bf14711798e5af93594",
+    "L-b4a13a43967ee4765662",
+    "L-d8b98b143e293d30833b",
+    "L-e16c98075f69532a3dc7"
+   ],
+   "project_id": "development-villa-t131",
+   "reason": "UNSUPPORTED BASIS: annex exterior ground beams at an interior class depth; D-35 annex: literal top +0.25 vs the printed exterior section (two readings, neither adopted)",
+   "resolved": false,
+   "revision_set_sha256": "5e3690754db90b5fa2d878d4fc29b2e84ce9d1d91e4c1e68a62019d1b34bbc22",
+   "schema": "URBAN_CHECKER_DOWNGRADE_V1",
+   "state": "CONFLICT",
+   "time": "2026-10-25T11:31:00Z",
+   "unit": "m3"
+  },
+  {
+   "basis_label": "UNSUPPORTED BASIS",
+   "candidate_version": "ARCH_TAKEOFF_V3.0.16",
+   "checker": {
+    "routine": "Verifier",
+    "run_token": "20261025T105053-459-8331",
+    "verdict_commit": "455c93c4"
+   },
+   "downgrade_id": "DG-357cd4619619c4a5",
+   "engine_qty": 1.830623,
+   "evidence": [
+    {
+     "printed_value": "top Ground Floor slab level, underside Outer Normal ground level, depth FOLLOW ARCH. (no figure); main structural top +0.95, outer ground +-0.00 (T-214 / T-253)",
+     "sheet": "ST p.13 'Ground Beams for exterior walls'"
+    }
+   ],
+   "line_ids": [
+    "L-26fcfbbb143269e7bb58",
+    "L-27d104ca6fc3556d16e6",
+    "L-7076482d75ca42691468"
+   ],
+   "project_id": "development-villa-t131",
+   "reason": "UNSUPPORTED BASIS: main-house exterior ground beams typed interior (depth 0.30 / 0.40 class); exterior section depth 0.95 applies (Checker own L-27d104ca 4.400 x 0.300 x 0.95 = 1.2540 m3, engine 0.528); correction is T-254's",
+   "resolved": false,
+   "revision_set_sha256": "5e3690754db90b5fa2d878d4fc29b2e84ce9d1d91e4c1e68a62019d1b34bbc22",
+   "schema": "URBAN_CHECKER_DOWNGRADE_V1",
+   "state": "HELD",
+   "time": "2026-10-25T11:31:00Z",
+   "unit": "m3"
+  },
+  {
+   "basis_label": "UNSUPPORTED BASIS",
+   "candidate_version": "ARCH_TAKEOFF_V3.0.16",
+   "checker": {
+    "routine": "Verifier",
+    "run_token": "20261025T105053-459-8331",
+    "verdict_commit": "455c93c4"
+   },
+   "downgrade_id": "DG-38971e0d1d5de81c",
+   "engine_qty": 0.627,
+   "evidence": [
+    {
+     "printed_value": "top Ground Floor slab level, underside Outer Normal ground level, depth FOLLOW ARCH. (no figure); main structural top +0.95, outer ground +-0.00 (T-214 / T-253); court section=not printed",
+     "sheet": "ST p.13 'Ground Beams for exterior walls'"
+    }
+   ],
+   "line_ids": [
+    "L-21795b350fbd09150c43",
+    "L-62243c74c430d383be86",
+    "L-a55bfa01b726ef11650c"
+   ],
+   "project_id": "development-villa-t131",
+   "reason": "UNSUPPORTED BASIS: court exterior ground beams at an interior class depth; the court section is not printed (T-242 / T-253 s.4, GS-16 architect item)",
+   "resolved": false,
+   "revision_set_sha256": "5e3690754db90b5fa2d878d4fc29b2e84ce9d1d91e4c1e68a62019d1b34bbc22",
+   "schema": "URBAN_CHECKER_DOWNGRADE_V1",
+   "state": "HELD",
+   "time": "2026-10-25T11:31:00Z",
+   "unit": "m3"
+  },
+  {
+   "basis_label": "UNSUPPORTED BASIS",
+   "candidate_version": "ARCH_TAKEOFF_V3.0.16",
+   "checker": {
+    "routine": "Verifier",
+    "run_token": "20261025T105053-459-8331",
+    "verdict_commit": "455c93c4"
+   },
+   "downgrade_id": "DG-a023ad233e3746cf",
+   "engine_qty": 0.948267,
+   "evidence": [
+    {
+     "printed_value": "5 risers, sloping waist on ground, no thickness (Checker read 2026-10-25 11:00); ARCH GF plan=5 riser lines 2800",
+     "sheet": "Architectural sheet 11 SECTION B-B"
+    }
+   ],
+   "line_ids": [
+    "L-061e18cf35a4b6b33d68"
+   ],
+   "project_id": "development-villa-t131",
+   "reason": "UNSUPPORTED BASIS: ST-03 on a convention riser 0.165 and waist 0.175; drawn riser 0.170 (5 over 0.85), waist thickness not printed (S-9 / G2-w); steps 0.355017 m3 DRAWING-CONFIRMED component (T-258 r2)",
+   "resolved": false,
+   "revision_set_sha256": "5e3690754db90b5fa2d878d4fc29b2e84ce9d1d91e4c1e68a62019d1b34bbc22",
+   "schema": "URBAN_CHECKER_DOWNGRADE_V1",
+   "state": "HELD",
+   "time": "2026-10-25T11:31:00Z",
+   "unit": "m3"
+  }
+ ],
+ "schema": "URBAN_CHECKER_DOWNGRADE_V1_SET"
+}
