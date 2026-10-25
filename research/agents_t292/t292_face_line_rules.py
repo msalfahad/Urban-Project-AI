@@ -197,7 +197,8 @@ def room_closure(face_lengths, walked_finish_m):
 def face_net(length_m, h_lo, h_hi, openings):
     """one face (or one room) net as (gross_lo, gross_hi, ded_lo, ded_hi, net_lo, net_hi, held_ids) with the T-128 /
     T-237 convention: an opening with a known band deducts w x (min(head, H) - sill); a merged outline deducts its
-    fixed m2; a HELD opening deducts [min(w x H, cap), 0] (net lo takes the full deduction, net hi none)."""
+    fixed m2; a HELD opening deducts [min(w x H, cap), 0] (net lo takes the full deduction, net hi none), or its established
+    range ded_range_m2 = (lo, hi) as [hi, lo] (r2)."""
     if h_lo is None or h_hi is None:
         return None
     g_lo, g_hi = length_m * h_lo, length_m * h_hi
@@ -209,6 +210,14 @@ def face_net(length_m, h_lo, h_hi, openings):
         if o.get("sill") is None or o.get("head") is None:
             held.append(o["id"])
             full = o["w"] * h_lo
+            if o.get("ded_range_m2") is not None:
+                # r2: a held outline with established bounds [lo, hi] (e.g. an arched opening curved on plan: the
+                # developed hole lies between w x springing and w x crown); net lo takes hi, net hi takes lo
+                d_lo, d_hi = o["ded_range_m2"]
+                if not (0.0 <= d_lo <= d_hi):
+                    raise LedgerError(f"BAD_RANGE: {o['id']} deduction range {d_lo!r} .. {d_hi!r}")
+                k_lo += min(full, d_hi); k_hi += min(o["w"] * h_hi, d_lo)
+                continue
             k_lo += min(full, o["cap_m2"]) if o.get("cap_m2") is not None else full
             continue
         k_lo += o["w"] * max(0.0, min(o["head"], h_lo) - max(o["sill"], 0.0))

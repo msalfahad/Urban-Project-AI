@@ -18,7 +18,7 @@ room,opening_id,t128_name,kind,host_wall,face_id,assignment,join_fixed_by_geomet
 1F-09,D-1F-07,D315,door,1F-W19,1F-09|1F-W19,host wall face,,w 0.8 sill 0.0 head 2.2,census frame width (T-237 rule d),w 0.75 sill 0.0 head 2.2,3.35,1.7600,1.6500,
 1F-10,D-1F-08,D215,door,1F-W13,1F-10|1F-W13,host wall face,,w 0.9 sill 0.0 head 2.2,T-128 r3 face (Q-55 C door head),w 0.9 sill 0.0 head 2.2,3.35,1.9800,1.9800,
 1F-10,A-1F-01,arch120 to the dressing passage,arch,1F-W16,1F-10|1F-W16,host wall face,,w 1.0 h HELD,T-175 hosts,w 1.0 h HELD,3.35,0 .. 3.3500 (HELD),0 .. 3.3500 (HELD),yes
-1F-11,W17,W17,window,1F-W25,1F-11|OFF:GLAZING,curved glazing off the straight bands (T-250 room-side line),,w 3.286 h HELD (cap 10.024 m2),T-238 delta (upper bound 10.024),w 3.286 sill 0.0 head 3.5,3.35,0 .. 10.0240 (HELD),11.0081,yes
+1F-11,W17,W17,window,1F-W25,1F-11|OFF:GLAZING,curved glazing off the straight bands (T-250 room-side line),,"w 3.286 arched outline HELD, deduction 4.4361 .. 9.858 m2",Q-76 A crown 3.00 (owner 2026-10-24 23:53) + UP-OPEN-ARCH-001 v1.1 true outline (T-238 A2 / A5): developed hole HELD between w x springing 1.350 (P7757.dxf NW 2784 / 2565) and w x crown 3.000,w 3.286 sill 0.0 head 3.5,3.35,4.4361 .. 9.8580 (HELD),11.0081,yes
 1F-11,D-1F-10,D315 to bath,door,1F-W17,1F-11|1F-W17,host wall face,,w 0.8 sill 0.0 head 2.2,T-128 r3 face (Q-55 C door head),w 0.8 sill 0.0 head 2.2,3.35,1.7600,1.7600,
 1F-11,D-1F-09,D215,door,1F-W13,1F-11|1F-W13,host wall face,,w 0.9 sill 0.0 head 2.2,T-128 r3 face (Q-55 C door head),w 0.9 sill 0.0 head 2.2,3.35,1.9800,1.9800,
 1F-12,W18,W18,window,1F-W00,1F-12|1F-W00,host wall face,,w 0.5 sill 0.84 head 3.0,T-175 hosts,w 0.5 sill 0.84 head 3.0,3.35,1.0800,1.0800,

@@ -16,7 +16,7 @@ L-971f0bdaf68d7fd0966c,FIN.PLASTER,1F-04,W24,W24,0.0000 .. 5.1925,2.3250,-2.8675
 L-971f0bdaf68d7fd0966c,FIN.PLASTER,1F-04,D-1F-04,D315 to bath,1.7600,1.7600,0.0,0.0,unchanged
 L-2ba8077ba9bb2e1ff0f6,FIN.PLASTER,1F-10,D-1F-08,D215,1.9800,1.9800,0.0,0.0,unchanged
 L-2ba8077ba9bb2e1ff0f6,FIN.PLASTER,1F-10,A-1F-01,arch120 to the dressing passage,0.0000 .. 3.3500,0 .. 3.3500 (HELD),0.0,0.0,unchanged
-L-31db3c83552682d92ca3,FIN.PLASTER,1F-11,W17,W17,11.0081,0 .. 10.0240 (HELD),-0.9841,-11.0081,merged size: T-238 delta (upper bound 10.024)
+L-31db3c83552682d92ca3,FIN.PLASTER,1F-11,W17,W17,11.0081,4.4361 .. 9.8580 (HELD),-1.1501,-6.572,merged size: Q-76 A crown 3.00 (owner 2026-10-24 23:53) + UP-OPEN-ARCH-001 v1.1 true outline (T-238 A2 / A5): developed hole HELD between w x springing 1.350 (P7757.dxf NW 2784 / 2565) and w x crown 3.000
 L-31db3c83552682d92ca3,FIN.PLASTER,1F-11,D-1F-10,D315 to bath,1.7600,1.7600,0.0,0.0,unchanged
 L-31db3c83552682d92ca3,FIN.PLASTER,1F-11,D-1F-09,D215,1.9800,1.9800,0.0,0.0,unchanged
 L-9b4a7bab033d677e2017,FIN.PLASTER,1F-13,L-1F-01,lift landing door,0.0000 .. 3.3500,0 .. 3.3500 (HELD),0.0,0.0,unchanged
@@ -50,7 +50,7 @@ L-d9f4ecdb6ef9a42d0220,FIN.PAINT,1F-04,W24,W24,0.0000 .. 5.1925,2.3250,-2.8675,2
 L-d9f4ecdb6ef9a42d0220,FIN.PAINT,1F-04,D-1F-04,D315 to bath,1.7600,1.7600,0.0,0.0,unchanged
 L-f53c1329983ad689b7ae,FIN.PAINT,1F-10,D-1F-08,D215,1.9800,1.9800,0.0,0.0,unchanged
 L-f53c1329983ad689b7ae,FIN.PAINT,1F-10,A-1F-01,arch120 to the dressing passage,0.0000 .. 3.3500,0 .. 3.3500 (HELD),0.0,0.0,unchanged
-L-349db74a70e1eecda2d2,FIN.PAINT,1F-11,W17,W17,11.0081,0 .. 10.0240 (HELD),-0.9841,-11.0081,merged size: T-238 delta (upper bound 10.024)
+L-349db74a70e1eecda2d2,FIN.PAINT,1F-11,W17,W17,11.0081,4.4361 .. 9.8580 (HELD),-1.1501,-6.572,merged size: Q-76 A crown 3.00 (owner 2026-10-24 23:53) + UP-OPEN-ARCH-001 v1.1 true outline (T-238 A2 / A5): developed hole HELD between w x springing 1.350 (P7757.dxf NW 2784 / 2565) and w x crown 3.000
 L-349db74a70e1eecda2d2,FIN.PAINT,1F-11,D-1F-10,D315 to bath,1.7600,1.7600,0.0,0.0,unchanged
 L-349db74a70e1eecda2d2,FIN.PAINT,1F-11,D-1F-09,D215,1.9800,1.9800,0.0,0.0,unchanged
 L-be48ea84285be20645af,FIN.PAINT,1F-13,L-1F-01,lift landing door,0.0000 .. 3.3500,0 .. 3.3500 (HELD),0.0,0.0,unchanged

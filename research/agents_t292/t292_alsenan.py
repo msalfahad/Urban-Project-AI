@@ -1,4 +1,4 @@
-"""T-292 development villa (Alsenan): the PLASTER / PAINT FACE-TO-LINE LEDGER (rule R-T292-1, face_line_ledger.py).
+"""T-292 development villa (Alsenan): the PLASTER / PAINT FACE-TO-LINE LEDGER (rule R-T292-1, t292_face_line_rules.py).
 
 READ ONLY on merged research ledgers + the candidate's own lines (extracted from an own V3.0.15 run on the Drive copies):
 
@@ -27,7 +27,7 @@ HERE = Path(__file__).resolve().parent
 RES = HERE.parent
 sys.path.insert(0, str(HERE))
 sys.path.insert(0, str(RES / "agents_t237"))
-import face_line_ledger as L      # noqa: E402
+import t292_face_line_rules as L      # noqa: E402
 import alsenan_t237 as T237       # noqa: E402
 
 CAND = HERE / "CANDIDATE_V3015_WALL_FINISH_LINES.json"
@@ -99,6 +99,32 @@ def line_value(ln):
 
 
 # ------------------------------------------------------------------------------------------------- openings
+# r2 (Verifier F-T292-01, 2026-10-25): W17 under the ANSWERED Q-76 A (owner 2026-10-24 23:53): the opening crown is
+# 3.00 above +5.50 (the 0.45 band above is wall). Q-76 A sets the WINDOW line (3.29 x 3.00 = 9.870 m2 of opening area);
+# for plaster / paint the merged rule UP-OPEN-ARCH-001 v1.1 (T-238 arch_rules.check_masonry_deduction, A2) deducts the
+# TRUE arched outline and refuses width x crown (RECTANGLE_FOR_MASONRY), and Q-76 itself says "blockwork, plaster and
+# paint deduct the true arched hole whichever you choose". The developed outline on the curved glass line is not drawn
+# (T-238 A5), so the deduction is bounded, not fixed, on the room-side length w (T-250 3.286):
+#   upper  w x crown 3.000 (Q-76 A)                       = 9.858 m2 (the hole lies inside its enclosing rectangle)
+#   lower  w x springing 1.350 (P7757.dxf NW frame, layer 1 opening jambs 2784 / 2565 from +5.50 to +6.85, where
+#          the arch chain 2738 / 2741 starts)                = 4.4361 m2 (the full width is open at least to springing)
+# INFORMATION, not a quantity: the elevation (projected) hole is 8.1338 m2 (jambs 3.0594 apart); stretched uniformly
+# to the developed width it is 8.7362 m2; the projection-to-arc mapping needs the plan / elevation registration.
+W17_SPRING_M, W17_CROWN_M = 1.350, 3.000
+W17_Q76A_SRC = ("Q-76 A crown 3.00 (owner 2026-10-24 23:53) + UP-OPEN-ARCH-001 v1.1 true outline (T-238 A2 / A5): "
+                "developed hole HELD between w x springing 1.350 (P7757.dxf NW 2784 / 2565) and w x crown 3.000")
+
+
+R2_NAMED_T237_DIFF = {"1F-11": ("W17 only (r2, Q-76 A): T-237 part 4 holds the deduction 0 .. 10.024 (T-238 cap on the "
+                                 "outer crown line 3.0505); the ledger holds 4.4361 .. 9.858 (springing 1.350 .. crown "
+                                 "3.000 on w 3.286): lo +0.1660, hi -4.4361")}
+
+
+def w17_q76a(w):
+    return dict(w=w, sill=None, head=None, cap_m2=round(w * W17_CROWN_M, 4),
+                ded_range_m2=(round(w * W17_SPRING_M, 4), round(w * W17_CROWN_M, 4)))
+
+
 def openings():
     """per T-128 room: its opening deductions with the T-237 part-4 (merged) size and the T-128 r3 size, the census id
     corrected by geometry (T-262 JOIN_WRONG) and the host wall."""
@@ -137,6 +163,8 @@ def openings():
             new = dict(w=w, sill=z["sill"], head=z["head"]); src = z.get("src")
         else:
             new = dict(w=w, sill=None, head=None, cap_m2=z.get("cap_m2")); src = z.get("src")
+        if cid == "W17" and new.get("sill") is None:
+            new, src = w17_q76a(w), W17_Q76A_SRC
         geo_cid = corr.get((rid, cid), cid) if cid else None
         host = hosts[geo_cid]["HOST_ROW"] if geo_cid and geo_cid in hosts else ""
         oid = geo_cid or f"T-128:{r['OPENING']}"
@@ -212,6 +240,8 @@ def _dedm2(o, H_lo, H_hi):
         return o["fixed_m2"], o["fixed_m2"], False
     if o.get("sill") is None or o.get("head") is None:
         full = o["w"] * H_lo
+        if o.get("ded_range_m2") is not None:
+            return min(full, o["ded_range_m2"][1]), min(o["w"] * H_hi, o["ded_range_m2"][0]), True
         return (min(full, o["cap_m2"]) if o.get("cap_m2") is not None else full), 0.0, True
     a = o["w"] * max(0.0, min(o["head"], H_lo) - max(o["sill"], 0.0))
     b = o["w"] * max(0.0, min(o["head"], H_hi) - max(o["sill"], 0.0))
@@ -309,7 +339,9 @@ def build():
                 g, _g, k_lo, k_hi, n_lo, n_hi, held = L.face_net(p["length_m"], H_own, H_own, fops)
                 if held:
                     o_st, o_lo, o_hi = L.BOUNDED, round(n_lo, 4), round(n_hi, 4)
-                    o_item = "opening head / sill not printed: " + ", ".join(held)
+                    o_item = "opening head / sill not printed: " + ", ".join(
+                        (i + " (arched outline on the curved glass line not drawn developed, T-238 A5; crown 3.00 "
+                         "Q-76 A; hole w x 1.350 .. w x 3.000)") if i == "W17" else i for i in held)
                 else:
                     o_st = L.VERIFIED if rid in VERIFIED_BY else L.AOA
                     o_lo = o_hi = round(n_lo, 4); o_item = ""
@@ -362,6 +394,8 @@ def _size_text(o):
     if o.get("fixed_m2") is not None:
         return f"outline {o['fixed_m2']} m2"
     if o.get("sill") is None or o.get("head") is None:
+        if o.get("ded_range_m2") is not None:
+            return f"w {o['w']} arched outline HELD, deduction {o['ded_range_m2'][0]} .. {o['ded_range_m2'][1]} m2"
         return f"w {o['w']} h HELD" + (f" (cap {o['cap_m2']} m2)" if o.get("cap_m2") is not None else "")
     return f"w {o['w']} sill {o['sill']} head {o['head']}"
 
@@ -370,7 +404,7 @@ def _rng_text(a, b, held):
     if a is None:
         return "HELD (room)"
     if held:
-        return f"0 .. {a:.4f} (HELD)"
+        return (f"{b:.4f} .. {a:.4f} (HELD)" if b else f"0 .. {a:.4f} (HELD)")
     return f"{a:.4f}"
 
 
@@ -656,8 +690,9 @@ def summary(B, lines_out, causes, unmatched_faces, clos):
         if c["ledger_owner_net"].startswith("HELD") or t in ("", "HELD"):
             continue
         a = T237.rng(c["ledger_owner_net"]); b = T237.rng(t)
-        repro.append(dict(room=c["room"], ledger=c["ledger_owner_net"], t237=t,
-                          ok=abs(a[0] - b[0]) <= L.TOL_M2 and abs(a[1] - b[1]) <= L.TOL_M2))
+        ok = abs(a[0] - b[0]) <= L.TOL_M2 and abs(a[1] - b[1]) <= L.TOL_M2
+        repro.append(dict(room=c["room"], ledger=c["ledger_owner_net"], t237=t, ok=ok)
+                     | ({} if ok else {"named_cause": R2_NAMED_T237_DIFF.get(c["room"], "")}))
     return {
         "task": "T-292", "rule": L.RULE_ID,
         "candidate": {k: B["cand"][k] for k in ("source", "csv_sha256_8", "lines_total")},
@@ -672,7 +707,8 @@ def summary(B, lines_out, causes, unmatched_faces, clos):
                   "unmatched": sum(1 for x in lines_out if x["ledger_state"].startswith("UNMATCHED"))},
         "unmatched_faces": unmatched_faces,
         "t237_room_reproduction": {"rooms": len(repro), "ok": sum(1 for r in repro if r["ok"]),
-                                   "differs": [r for r in repro if not r["ok"]]},
+                                   "differs": [r for r in repro if not r["ok"]],
+                                   "differs_unexplained": sum(1 for r in repro if not r["ok"] and not r["named_cause"])},
         "line_residual_max_abs_m2": max([abs(float(x[k])) for x in lines_out for k in ("residual_lo_m2", "residual_hi_m2")
                                          if x[k] != ""] or [0.0]),
         "line_residual_note": "the candidate states room nets to 4 dp; the ledger sums per-face figures rounded to 4 dp: "

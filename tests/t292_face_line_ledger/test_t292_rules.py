@@ -14,7 +14,7 @@ from pathlib import Path
 import pytest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "research" / "agents_t292"))
-import face_line_ledger as L  # noqa: E402
+import t292_face_line_rules as L  # noqa: E402
 
 H = 3.00
 
@@ -67,6 +67,25 @@ def test_held_window_is_bounded_never_zero():
     assert L.check_row(dict(face_id="S", status=L.BOUNDED, net_lo=8.40, net_hi=12.00, held_item="W1 head"))
     with pytest.raises(L.LedgerError, match="HELD_AS_ZERO"):
         L.check_row(dict(face_id="S", status=L.BOUNDED, net_lo=0.0, net_hi=12.00, held_item="W1 head"))
+
+
+def test_arched_opening_on_a_curved_face_bounded_between_springing_and_crown():
+    """r2 (W17 class, villa P hand values): a curved face 2.00 m (developed) x 3.00 m; an arched opening from the
+    floor, springing 1.20, crown 2.40, developed outline not drawn: hole 2.00 x 1.20 = 2.40 .. 2.00 x 2.40 = 4.80;
+    net 6.00 - 4.80 = 1.20 .. 6.00 - 2.40 = 3.60 (never the w x crown window area as a fixed deduction)."""
+    op = dict(id="WA", w=2.00, sill=None, head=None, ded_range_m2=(2.00 * 1.20, 2.00 * 2.40))
+    g_lo, g_hi, k_lo, k_hi, n_lo, n_hi, held = L.face_net(2.00, 3.00, 3.00, [op])
+    assert (round(k_lo, 4), round(k_hi, 4)) == (4.80, 2.40)
+    assert (round(n_lo, 4), round(n_hi, 4)) == (1.20, 3.60) and held == ["WA"]
+    # the bound is capped by the face itself: a lower face height cannot deduct more than w x H
+    r = L.face_net(2.00, 2.00, 2.00, [op])
+    assert (round(r[4], 4), round(r[5], 4)) == (0.0, 1.60)
+
+
+@pytest.mark.parametrize("rng", [(4.80, 2.40), (-0.10, 2.40)])
+def test_arched_opening_bad_range_refused(rng):
+    with pytest.raises(L.LedgerError, match="BAD_RANGE"):
+        L.face_net(2.00, 3.00, 3.00, [dict(id="WA", w=2.00, sill=None, head=None, ded_range_m2=rng)])
 
 
 def test_bind_normal_and_order_invariant():

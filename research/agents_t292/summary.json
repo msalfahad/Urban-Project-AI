@@ -24,8 +24,8 @@
   },
   "FIN.PAINT | HELD (BOUNDED)": {
    "rows": 6,
-   "lo": 34.5016,
-   "hi": 81.3301
+   "lo": 34.6676,
+   "hi": 76.894
   },
   "FIN.PAINT | VERIFIED": {
    "rows": 18,
@@ -44,8 +44,8 @@
   },
   "FIN.PLASTER | HELD (BOUNDED)": {
    "rows": 6,
-   "lo": 34.5016,
-   "hi": 81.3301
+   "lo": 34.6676,
+   "hi": 76.894
   },
   "FIN.PLASTER | VERIFIED": {
    "rows": 18,
@@ -133,25 +133,34 @@
  ],
  "t237_room_reproduction": {
   "rooms": 21,
-  "ok": 21,
-  "differs": []
+  "ok": 20,
+  "differs": [
+   {
+    "room": "1F-11",
+    "ledger": "60.60 .. 66.02",
+    "t237": "60.44 .. 70.46",
+    "ok": false,
+    "named_cause": "W17 only (r2, Q-76 A): T-237 part 4 holds the deduction 0 .. 10.024 (T-238 cap on the outer crown line 3.0505); the ledger holds 4.4361 .. 9.858 (springing 1.350 .. crown 3.000 on w 3.286): lo +0.1660, hi -4.4361"
+   }
+  ],
+  "differs_unexplained": 0
  },
  "line_residual_max_abs_m2": 0.0002,
  "line_residual_note": "the candidate states room nets to 4 dp; the ledger sums per-face figures rounded to 4 dp: |residual| <= 0.0005 m2 is that rounding, anything larger is refused (UNEXPLAINED)",
  "closure_faces_vs_lines": {
   "FIN.PLASTER": {
-   "faces_lo": 612.3013,
-   "faces_hi": 659.1298,
-   "lines_lo": 612.3013,
-   "lines_hi": 659.1298,
+   "faces_lo": 612.4673,
+   "faces_hi": 654.6937,
+   "lines_lo": 612.4673,
+   "lines_hi": 654.6937,
    "residual_lo": 0.0,
    "residual_hi": 0.0
   },
   "FIN.PAINT": {
-   "faces_lo": 612.3013,
-   "faces_hi": 659.1298,
-   "lines_lo": 612.3013,
-   "lines_hi": 659.1298,
+   "faces_lo": 612.4673,
+   "faces_hi": 654.6937,
+   "lines_lo": 612.4673,
+   "lines_hi": 654.6937,
    "residual_lo": 0.0,
    "residual_hi": 0.0
   },

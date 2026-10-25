@@ -1,6 +1,6 @@
 # T-292: plaster / paint FACE-TO-LINE LEDGER, every wall face against the candidate's plaster, paint and wall-tile line ids (development villa; every villa by R-T292-1)
 
-Worker 2 (lane A), claim 2026-10-25 10:41 UTC. Integration dependency of T-244 (lane I, plaster / paint whole line).
+Worker 2 (lane A), claim 2026-10-25 10:41 UTC; r2 claim 13:44 UTC (s.8). Integration dependency of T-244 (lane I, plaster / paint whole line).
 Research only: no engine module, rule or knowledge file, candidate line or released line changed; released default stays
 V2.9 + route G; nothing here is released. ERS read and applied: s.2.1 (physical element first), s.2.2 (owner manual
 method and drawing-derived method side by side), s.2.4 (reconcile in m2 to named causes, never a plug), s.3 (one element,
@@ -67,7 +67,7 @@ the per-face figures).
 | L-971f0bdaf68d / L-d9f4ecdb6ef9 1F-RED0D19 <- 1F-04 | 49.1375 .. 54.33 HELD | **52.0051** | W24 head DRAWING-CONFIRMED (T-201): HELD 0 .. 5.1925 -> 2.3250 | ASSUMED - OWNER-APPROVED |
 | L-4ce74fc37a08 / L-5410f9045c80 2F-R1DB2D2 <- 2F-03 | 55.555 .. 59.575 | **57.775** | W29 head (T-201): 0 .. 4.02 -> 1.80 | ASSUMED - OWNER-APPROVED |
 | L-9b4a7bab033d / L-be48ea84285b 1F-R78C367 <- 1F-13 | 110.1335 .. 114.3677 | **111.0175 .. 114.3675** | W15 / W16 4.3629 .. 4.805 -> 4.363 each (T-238 outline) | HELD (lift door) |
-| L-31db3c835526 / L-349db74a70e1 1F-R3CFCFD <- 1F-11 | **59.4511 RELEASED (VERIFIED)** | **60.4351 .. 70.4591** | W17 3.286 x 3.35 = 11.008 -> HELD, cap 10.024 (T-238: 3.50 is the archivolt) | **HELD (BOUNDED)**: 8 faces stay VERIFIED, the W17 piece is held |
+| L-31db3c835526 / L-349db74a70e1 1F-R3CFCFD <- 1F-11 | **59.4511 RELEASED (VERIFIED)** | **60.6011 .. 66.0230** (r2; r1 60.4351 .. 70.4591) | W17 3.286 x 3.35 = 11.008 -> HELD 4.4361 .. 9.858 (r2: Q-76 A crown 3.00, true arched outline between springing 1.350 and crown, s.8) | **HELD (BOUNDED)**: 8 faces stay VERIFIED 59.4510, the W17 piece 1.1501 .. 6.5720 |
 | L-ae0cdd794cc5 / L-c74cfb4e07bc 2F-R4D1B62 <- 2F-01 | 22.6502 .. 26.0002 | 22.6500 .. 26.0000 | rounding only | HELD (lift door) |
 | GF-15, 1F-01, GF-08, 1F-10 | 56.0131 / 51.415 / 152.0505 .. 178.805 / 48.94 .. 52.29 | unchanged | none | as before |
 | shaft GF / 1F (2 lines x 2 codes) | T-173 48.52 .. 62.01 / 42.48 .. 47.67 | CITED T-173 (reproduced) | owner method HELD (Q-72) | HELD |
@@ -75,8 +75,8 @@ the per-face figures).
 | 6 wet tile lines (annex GF-02 / 03 / 05 / 06; GF-10 / 11) + 4 annex dry lines + 17 wet plaster lines + ST-2F + pantry | blank | blank | G2 / Q-54 B, T-088, plaster-under-tile, D-T173-1 | HELD |
 
 Totals per code (plaster = paint; lines with a figure): candidate **166.8792 determinate + 8 HELD 529.4667 .. 595.0479**
-(= T-211) -> ledger **217.2082 determinate + 7 HELD 486.0931 .. 551.6016**; together 696.35 .. 761.93 -> **703.30 ..
-768.81 m2** (+6.96 lo / +6.88 hi). Wall tile: 0 -> 307.96 m2 on 11 of 17 lines. The 1F-09 tile figure is 23.22 against
+(= T-211) -> ledger **217.2082 determinate + 7 HELD 486.2591 .. 547.1655** (r2; r1 486.0931 .. 551.6016); together 696.35 ..
+761.93 -> **703.47 .. 764.37 m2** (+7.12 lo / +2.44 hi; r1 703.30 .. 768.81). Wall tile: 0 -> 307.96 m2 on 11 of 17 lines. The 1F-09 tile figure is 23.22 against
 T-209's 23.33: D-1F-07 at the census frame width 0.80 (T-237 rule d) instead of the 0.75 rebate face, -0.110 m2, named.
 
 **Drawing-derived method, beside (dwg columns):** the 18 DCR-6 faces of T-237 are carried by face, HELD BLANK on D-39
@@ -105,7 +105,7 @@ designer / owner item: D-39, Q-54 B, Q-72, T-088, plaster-under-tile).
 The freelancer prices internal plaster 1,151.14 m2 net (1,209.39 gross) and paint 1,191.13 m2 net with one height per
 storey and half deductions (T-211 s.3). Not compared as a whole: the candidate's plaster / paint lines still carry 7
 HELD ranges and 25 blanks (whole-line rule). What the ledger changes for the comparison: 4 room lines move by named
-openings, the 1F-11 line can no longer be released at 59.45 while T-238 holds W17, and the wall-tile item goes from 17
+openings, the 1F-11 line can no longer be released at 59.45 (it is at least 1.15 m2, 1.9 %, low: s.8), and the wall-tile item goes from 17
 blanks to 307.96 m2 on 11 rooms (his wet-wall figures per room are in T-209 RECONCILIATION: height 3.00 vs Q-48 A
 3.65 / 3.35 and no opening deductions, RULE_DIFFERENCE). Verdict proposals: 1F-04 / 2F-03 / 1F-13 ENGINE (candidate)
 WRONG on a stale held head, ledger right by the merged T-201 / T-238 heads; 1F-11 ENGINE WRONG to release (T-238 holds
@@ -117,13 +117,14 @@ T-244 takes FACE_TO_LINE_LEDGER_T292.csv (face x item: line id via engine room, 
 status and net, held item, rule difference) and LINE_SUMMARY_T292.csv (per line: candidate figure, ledger figure, causes,
 residual) with LINE_CAUSES_T292.csv (per opening, line deduction vs ledger deduction). Re-measure: (1) 1F-04 W24 and 2F-03
 W29 heads on T-201's sheets (sill / head) and the two nets 52.0051 / 57.775; (2) 1F-11: the W17 piece (3.286 m off-line
-glazing, cap 10.024 from T-238) and that the other 8 faces keep 59.4511 + 11.008 - 10.024 .. 11.008 arithmetic; (3) one
+glazing; r2: springing 1.350 on P7757.dxf NW jambs 2784 / 2565, crown 3.000 Q-76 A) and that the other 8 faces keep
+59.4510 + 11.0081 - 9.858 .. 11.0081 - 4.4361 = 60.6011 .. 66.0230; (3) one
 wet room by hand (GF-12: 7.414 x 3.65 - D 0.80 x 2.20 - W 0.60 band = 25.3011); (4) random face rows from the csv
 against T-250 FACE_LENGTH.
 
 ## 7. Rule, test, lesson
 
-- R-T292-1 (face_line_ledger.py, any villa): drawn face lengths only; one finish owner per face and layer; a face binds
+- R-T292-1 (t292_face_line_rules.py, any villa): drawn face lengths only; one finish owner per face and layer; a face binds
   once per item code to its room's line (declared shares or refused); statuses with held items, never 0; one opening once
   per room side; closures per room (m), per line (m2) and faces vs lines; the line - ledger difference split into
   named opening causes only.
@@ -137,3 +138,50 @@ against T-250 FACE_LENGTH.
   ledger (T-238) holds | the room line was built before the opening ledger changed and no one re-bound the opening to
   the line | bind each opening deduction to its face and line by id, so a merged change to one opening re-opens exactly
   the lines that carry it | tests/t292_face_line_ledger | OPEN until T-244 integrates".
+
+## 8. r2 (Verifier 2026-10-25 12:48: REJECTED narrow)
+
+**(1) Module name.** `face_line_ledger.py` collided with T-293's merged `research/agents_t293/face_line_ledger.py`
+(both test folders import it by bare name). Renamed to `research/agents_t292/t292_face_line_rules.py`; imports in
+`t292_alsenan.py` and `tests/t292_face_line_ledger/*` follow; T-293's files untouched. `tests/t292_face_line_ledger` and
+`tests/t293_formwork_face_line` pass in ONE session (53 passed).
+
+**(2) F-T292-01, 1F-11 W17 under the answered Q-76 A.** Physical element first: the curved room side of 1F-11 is the
+outer glass arc BD2 (r 2.135, 3.2895 developed; T-250 room-side line 3.286). On it stands ONE arched opening (W17)
+with wall around it: the spandrels between the arch and the jambs' enclosing rectangle, and the 0.35 m band from the
+crown (3.00) to the owner face height 3.35 (the archivolt and the 0.45 band above the crown are wall, Q-76 A).
+- What Q-76 A settles: the opening crown is 3.00 above +5.50 (inner arch line, crown 273C / 273D; the 3.0505 outer line
+  is a 0.05 edge, as on W26), and the WINDOW line is 3.29 x 3.00 = 9.870 m2 of opening area. The owner also wrote
+  "preserve the distinction between opening area, aluminium assembly area and net glass area".
+- What it does not settle: the plaster / paint deduction. The merged rule UP-OPEN-ARCH-001 v1.1 (T-238, A2) deducts
+  the TRUE arched outline from masonry and finishes and refuses width x crown (`RECTANGLE_FOR_MASONRY`), and Q-76's
+  own quantity-impact text says "blockwork, plaster and paint deduct the true arched hole whichever you choose". So
+  the Verifier's arithmetic 11.0081 - 9.870 = 1.1381 (or 9.858 on the room-side length) takes the window rectangle as
+  the hole: it is the LOWER end of the piece, not its value.
+- Drawing evidence (own read, P7757.dxf `ab54dd55`, NW frame, layer 1): jambs 2784 / 2565 rise from the +5.50 floor to
+  +6.85 (springing **1.350**), where the arch chain 2738 / 2739 / 273A / 27CC / 273B / 273C | 273D / 273E / 27CD / 273F /
+  2740 / 2741 (12 straight chords) climbs to the crown at +8.50 (3.000). Elevation width between the jambs 3.0594 (a
+  projection of the curved opening; the developed width is the owner's Q-39 C 3.29 outer / 3.286 room side). The
+  developed outline on the curved glass line is not drawn (T-238 A5).
+- Bounds, with no assumption: the opening is open over its full developed width at least up to the springing, and lies
+  inside its enclosing rectangle up to the crown: hole **3.286 x 1.350 = 4.4361 .. 3.286 x 3.000 = 9.858 m2**; the
+  W17 piece nets **11.0081 - 9.858 = 1.1501 .. 11.0081 - 4.4361 = 6.5720 m2**; 1F-11 = 8 VERIFIED faces 59.4510 + piece =
+  **60.6011 .. 66.0230 m2** per code (r1 60.4351 .. 70.4591). Status HELD (BOUNDED), owner height G1, crown ASSUMED -
+  OWNER-APPROVED (Q-76 A).
+- INFORMATION, not a quantity: the elevation (projected) hole is 8.1338 m2; stretched uniformly to the developed width
+  it is 8.7362 m2 (piece about 2.27 m2). The projection is not uniform on a curve (the edges are foreshortened most):
+  turning it into the developed hole needs the plan arc registered to the elevation (the jamb x 1.5297 from the axis
+  does not equal 2.135 x sin(half angle) = 1.487 for a symmetric BD2 arc, so the elevation jambs are not simply the
+  BD2 ends). That is a drawing-geometry task (A5), not an owner question.
+- The finding stands, stronger: the candidate's released 59.4511 deducts W17 at 3.286 x 3.35 (more than the whole
+  rectangle to the crown); it is at least 1.1500 m2 (1.9 %) low and must not stay released.
+- Rule (R-T292-1 r2, research module, not a rule version file): a held opening may carry an established deduction range
+  `ded_range_m2 = (lo, hi)`; net lo takes hi, net hi takes lo, each capped at w x H; a range with lo > hi or lo < 0 is
+  refused (`BAD_RANGE`). Tests: `test_arched_opening_on_a_curved_face_bounded_between_springing_and_crown` (villa P,
+  hand: face 2.00 x 3.00, springing 1.20, crown 2.40 -> net 1.20 .. 3.60; capped case 0.00 .. 1.60),
+  `test_arched_opening_bad_range_refused` (two adverse ranges); Alsenan pins: 1F-11 60.6011 .. 66.0230 on both lines,
+  piece 1.1501 .. 6.5720, and the piece's deduction is never the Q-76 A window area 9.870.
+- T-237 part-4 reproduction: 20 / 21 rooms equal; 1F-11 differs by W17 only, named in summary.json (lo +0.1660 = cap
+  10.024 -> 9.858, hi -4.4361 = deduction 0 -> springing bound). Totals per code (plaster = paint): HELD ranges
+  486.2591 .. 547.1655; with the determinate 217.2082 -> 703.47 .. 764.37 m2. Residuals faces vs lines 0.0000.
+
