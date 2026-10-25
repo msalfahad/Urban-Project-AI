@@ -1,10 +1,35 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
 Plain words, no task numbers. Measured numbers come from SCOREBOARD.md; anything not measured says so.
-Last update: 2026-10-25 04:15 UTC (Lead). Previous version: 2026-10-25 02:15 UTC. The released numbers did not change
+Last update: 2026-10-25 06:15 UTC (Lead). Previous version: 2026-10-25 04:15 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released default V2.9 + route G untouched). Your measure: whole BOQ
 lines independently verified, and trades that can be scored. Still 1 whole line verified in the candidate (the concrete
 slab, 60.28 m3), 0 released. No decision for you; the designer list is still being finished before you send it.
+
+Since 04:15 (newest first; four pieces checked and merged, one sent back narrow, the first real export handed in):
+- The first real export of the candidate BOQ is handed in for the checker: one project identity and one drawing revision
+  set over the structural and architectural drawings, every quantity unchanged, one command gives the spreadsheet and csv
+  (3,699 rows; 1,878 held rows blank, never zero). The cause of the run-to-run file difference is found: the local file
+  name of the structural drawing copy was written into the output; verification records now bind to the quantities
+  themselves, so a harmless re-run no longer looks like a change. The checker must still run the full test suite (the
+  worker could not), write the verified-line records and show the four lines with an unsupported depth or height as held.
+  Metric tons as the default unit is not in this hand-in (allowed to follow).
+- Merged: ceilings revision 3 (flat decorative ceiling 361.23 m2, -10.4 % against the released 403.16 m2 and -11.8 %
+  against the freelancer's 409.58 m2), checked together with the new stair soffits so that every square metre under the
+  stairs belongs to exactly one line; stair soffits (main stair about 17.2 m2 true area, second stair 8.5 m2 on plan,
+  winder and curved parts held); block-wall register revision 4 (449.60 m2 minus 7.91 m2 for every metre the sunken roof
+  panels drop; the drop is held, not guessed; 297.85 m2 on 18 walls checker-verified); a code-hygiene declaration.
+- Buried ground-beam waterproofing coat: the checker re-measured all 32 faces himself (45.47 m2 against 45.47 m2,
+  +0.008 %). That part is verified; the line as a whole stays partly verified because the faces whose depths the drawings
+  do not print stay blank.
+- Column rebar inside the foundations restated on the printed level chain: 26 cores fall from 801.3 to 734.8 kg
+  (-66.5 kg, -8.3 %) as a lower bound, because the old figure left out the 17 cm under the footing; 10 cores (173.5 kg)
+  stay held. Waiting for the checker. Freelancer comparison: not measured for this item.
+- Designer list: of three open gaps, one is settled from the drawings (two columns at the annex edge start at +0.25, so
+  their concrete is 1.43 m3 where the candidate carries 1.24 m3, -13.5 %); the stair winder and the tower dome stay on the list. Waiting for
+  the checker.
+- Sent back narrow: the scoring guard against sealed files missed two side files the census reads; a small fix.
+- Nothing new on Drive; no new photos.
 
 Since 02:15 (newest first; one integration step checked and merged, three pieces handed in, one finished and waiting):
 - Foundation waterproofing is now in the candidate: checked line by line and merged. The candidate gains its own

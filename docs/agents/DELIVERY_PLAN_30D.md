@@ -46,7 +46,15 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
-## Status (Lead, 2026-10-25 04:15; re-estimated each run from what merged and was verified)
+## Status (Lead, 2026-10-25 06:15; re-estimated each run from what merged and was verified)
+
+Lead 2026-10-25 06:15: since 04:15 the Checker merged 4 Gate A pieces (T-257 6a8eea78, T-283 6e141df6, T-281 40518c58,
+T-288 643b310b; research ledgers, no candidate line moved), rejected T-275 narrow, and verified the buried ground-beam WP
+component (32 / 32 faces own, +0.008 %). T-245 (ARCH_TAKEOFF_V3.0.16, one project identity, first real export, json-hash
+cause named) is READY for Gate B 06:13: the week-2 entry condition 'first real export' depends on its Gate B in the 06:49 /
+07:49 Checker runs (full suite still to run). Verified-share gains this week wait on the lane I chain (T-245 -> T-254 ->
+T-266 -> T-255 -> T-279 blockwork -> T-284 ceilings), whose inputs are now all merged; that chain is the critical path for
+the 3 Nov target. Lane S now prepares T-254's input (T-289) so that package needs no new measuring. WEEK-1 TARGET: MET.
 
 Lead 2026-10-25 04:15: since 02:15 the Checker merged 1 Gate B package: T-270 r2, WATERPROOFING.FOUNDATION into candidate
 ARCH_TAKEOFF_V3.0.15 (04d34378): 3,680 lines byte-identical, 19 added (7 VERIFIED, buried liquid 45.4682 m2 DRAWING-CONFIRMED /

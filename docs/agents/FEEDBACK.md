@@ -36,7 +36,18 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
    commit. Decision: board-only handoffs are verified as hand evidence (the verifier re-reads the cited notes), and the
    next task on the topic writes the files (T-117); a run with no line stays a NEEDS FIXING item for the owner's setting.
 
-## 2026-10-25 04:15 (lead run; covers 00:15 - 04:15, including the 02:15 run's classifications)
+## 2026-10-25 06:15 (lead run; covers 04:15 - 06:15)
+
+| Task | Result | Evidence | Decision |
+|---|---|---|---|
+| T-288 | WORKED | MERGED 643b310b (Verifier 05:35, own GF-W16 re-clip 2.9500 m, register v4 449.6007 - 7.9131 d) | T-279 unblocked on research; waits only on the lane I chain; lessons row CLOSED |
+| T-283 | WORKED | MERGED 6e141df6 (batched with T-281; one owner per piece under the round stair) | T-284 unblocked on research; lane I after T-279 |
+| T-281 | WORKED | MERGED 40518c58 (own MS1-U 3.720 / 4.2555 m2, MS2-LD-W 1.495; formwork = finished soffit on 4 flights) | stair soffit line HELD BLANK in T-284 until verified whole |
+| T-257 | WORKED | MERGED 6a8eea78 (re-pointed T-210 tests judged not weakened: same rules, same 24-module base) | none; 6 undeclarable modules stay red with fix proposals |
+| T-275 | PARTIAL | REJECTED narrow 05:55: census side files outside guard_inputs; sealed-sha probe exit 0 | rework r2 (worker 2 after T-286, or worker 3 06:59 while T-245 is unmerged); lessons row OPEN |
+| T-245 | (READY 06:13, not classified) | V3.0.16, json-hash cause named (local file name in source.documents[].file), export one command; full suite NOT run by the worker | Gate B first in the 06:49 Checker run with 6 Lead challenges |
+| T-287, T-280 | (READY 05:59, not classified) | G1 settled from drawings (1.4300 m3); 26 cores -66.548 kg as a lower bound, 10 HELD | Gate A after T-245; T-280 within 2 Checker runs |
+
 
 | Task | Result | Evidence | Decision |
 |---|---|---|---|

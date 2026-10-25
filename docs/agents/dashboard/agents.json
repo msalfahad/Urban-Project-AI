@@ -3,55 +3,55 @@
 "agent": "0 MAIN – daily update to you",
 "role": "Your single contact: one daily update with results, problems, ideas and decisions; pilot auditor",
 "cadence": "daily 07:31 Kuwait (04:31 UTC)",
-"last_run": "2026-10-24T04:31:23Z",
+"last_run": "2026-10-25T04:32:12Z",
 "result": "ok",
-"working_on": "Next daily update 2026-10-25 04:31 UTC",
-"as_of": "2026-10-25T04:20:00Z"
+"working_on": "Daily update sent 04:32; next 2026-10-26 04:31 UTC",
+"as_of": "2026-10-25T06:25:00Z"
 },
 {
 "agent": "1 LEAD – plans & assigns work",
 "role": "Plans the work, keeps the board, milestones and element register, writes your report",
 "cadence": "every 2 h at :09 (pilot cadence still set)",
-"last_run": "2026-10-25T04:10:36Z",
+"last_run": "2026-10-25T06:10:10Z",
 "result": "running",
-"working_on": "Checker queue set (ceilings checked together with stair soffits, formwork fix, module declarations); first real export unblocked with a stable-hash rule for verified-line records",
-"as_of": "2026-10-25T04:20:00Z"
+"working_on": "Checker queue: the first real export package goes first; structural basis ledger for the four unsupported-basis quantities given to worker 1; excavation ledger promoted",
+"as_of": "2026-10-25T06:25:00Z"
 },
 {
 "agent": "2 WORKER 1 – Structural",
 "role": "Structural lane: concrete, rebar by bar population, formwork",
 "cadence": "hourly at :19 (pilot cadence still set)",
-"last_run": "2026-10-25T03:20:24Z",
+"last_run": "2026-10-25T05:20:00Z",
 "result": "ok",
-"working_on": "Formwork end-face fix handed in 02:38; stair soffits finished 03:56 and held back (3 already waiting for the checker); next: the missing designer-list rows",
-"as_of": "2026-10-25T04:20:00Z"
+"working_on": "Designer-list gaps and column-core rebar restatement handed in 05:59; next: structural basis ledger for the held depths and heights",
+"as_of": "2026-10-25T06:25:00Z"
 },
 {
 "agent": "3 WORKER 2 – Architectural & finishes",
 "role": "Architecture and finishes lane: floors, walls, plaster, paint, tiles, ceilings, openings, waterproofing",
 "cadence": "hourly at :39 (pilot cadence still set)",
-"last_run": "2026-10-25T03:40:39Z",
+"last_run": "2026-10-25T05:39:20Z",
 "result": "running",
-"working_on": "Ceilings revision 3 handed in 02:50; now: wall register revision 4 for the walls under the sunken panels (claimed 03:41)",
-"as_of": "2026-10-25T04:20:00Z"
+"working_on": "Plaster / paint blockers (curved window room-side face, wedge room) and the pantry doorway floor gap, claimed 05:40",
+"as_of": "2026-10-25T06:25:00Z"
 },
 {
 "agent": "4 WORKER 3 – Integration into V3.0",
 "role": "Integration lane: wires checker-verified pieces into the one opt-in candidate",
 "cadence": "every 2 h at :59 (even hours UTC)",
-"last_run": "2026-10-25T03:00:00Z",
+"last_run": "2026-10-25T04:59:17Z",
 "result": "ok",
-"working_on": "Foundation waterproofing merged into the candidate 03:46; module declarations handed in 03:35; next run 04:59: one project identity and the first real export",
-"as_of": "2026-10-25T04:20:00Z"
+"working_on": "One project identity + first real export handed in 06:13 for the Checker (full test suite not yet run); next run 06:59",
+"as_of": "2026-10-25T06:25:00Z"
 },
 {
 "agent": "5 CHECKER – verifies & merges",
 "role": "Checks finished tasks by re-measuring, merges or rejects, keeps the scoreboard",
 "cadence": "hourly at :49 (pilot cadence still set)",
-"last_run": "2026-10-25T03:49:57Z",
+"last_run": "2026-10-25T05:50:09Z",
 "result": "ok",
-"working_on": "02:51 run merged foundation waterproofing into the candidate and the formwork end-face fix (closed 04:16); next run 04:49: ceilings with stair soffits, then module declarations",
-"as_of": "2026-10-25T04:20:00Z"
+"working_on": "05:50 run: scoring-guard fix sent back (one gap), buried ground-beam waterproofing faces 32 of 32 re-measured; next run 06:49: first real export, then designer-list gaps",
+"as_of": "2026-10-25T06:25:00Z"
 },
 {
 "agent": "6 SCOUT – research & feedback to Lead",
@@ -60,15 +60,15 @@
 "last_run": "2026-10-24T23:50:57Z",
 "result": "ok",
 "working_on": "No open research request; reduced priority (owner 23:53)",
-"as_of": "2026-10-25T04:20:00Z"
+"as_of": "2026-10-25T06:25:00Z"
 },
 {
 "agent": "7 DASHBOARD – refreshes your page",
 "role": "Rewrites the dashboard data from the board",
 "cadence": "every 4 h at :54",
-"last_run": "2026-10-25T00:54:48Z",
+"last_run": "2026-10-25T04:54:32Z",
 "result": "ok",
-"working_on": "Refreshed 00:56; next 2026-10-25 04:54 UTC",
-"as_of": "2026-10-25T04:20:00Z"
+"working_on": "Refreshed 04:56; next 2026-10-25 08:54 UTC",
+"as_of": "2026-10-25T06:25:00Z"
 }
 ]
