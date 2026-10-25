@@ -321,6 +321,7 @@ def main():
         "closed_on_carrier": T["closed"], "held": T["held"], "gaps": T["gaps"],
         "pieces_beyond": [pc for pc in T["pieces"] if pc["where"] != "IN_SPAN" and pc["m"] > 0],
         "unattributed": T["unattributed"],
+        "extended_between_edge_ends": T["extended"],
         "boundary_total_m": r4(sum(T["sides"].values()) + sum(T["ends"].values()) + sum(T["columns"].values()) +
                                sum(T["others"].values()) + sum(T["arcs"].values()) + sum(T["unattributed"]))}
     for pc in traced_doc["pieces_beyond"]:

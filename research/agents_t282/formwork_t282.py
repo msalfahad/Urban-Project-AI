@@ -49,7 +49,18 @@ def check():
         x 11000 .. 11300, free end at y 5000) framing into it from outside: G3's edges end ON the arc at r = 2300 (two stations:
         y = sqrt(2300^2 - 1000^2) = 2071.232 and sqrt(2300^2 - 1300^2) = 1897.367); the arc between the hits
         = 2300 x (asin(1300/2300) - asin(1000/2300)) = 2300 x (0.600697 - 0.449797) = 0.347070 m is the tee cover on
-        the ring (not 0.300); the ring's outer face = 2300 x pi/2 - 0.347070 = 3.265762 m; no earth pocket."""
+        the ring (not 0.300); the ring's outer face = 2300 x pi/2 - 0.347070 = 3.265762 m; no earth pocket.
+    (5) r2, R-FACE-END-2 (the Verifier's 00:04 case, mirrored on villa Q): G1 ends beside a PARTIAL column P
+        (x 4000..4600, y -50..150) that reaches edge A only; edge A stops on P's face (x 4000), edge B runs on 0.300 to
+        column Q (x 4300..4700, y 150..400). The strip between P's top face (y 150), edge B and Q's west face is beam:
+        END 0.000 (the hull diagonal (4000, 0) -> (4300, 300) would book its part outside P, 0.150 x sqrt2 = 0.2121 m,
+        as an end face). A 3.600, B 3.900; P's exposed faces 1.600 - top 0.600 - west 0.150 = 0.850 m, Q's 1.300 -
+        bottom 0.300 - west 0.150 = 0.850 m.
+    (6) normal: both edges end square at x 4000 beside P alone: the drawn end above P (y 150 .. 300) is a real end
+        face, END 0.150 kept; A = B = 3.600.
+    (7) adverse: edges end at x 4000 / 4300 with nothing drawn there (a drawn oblique free end): the zone between the
+        stations is not closed by any outline, so the drawn end line stands: FREE_END 0.300 x sqrt2 = 0.4243 m, never a
+        rectangle invented beyond it."""
     def close(a, b, tol=1e-4):
         assert abs(a - b) <= tol, (a, b)
 
@@ -119,8 +130,28 @@ def check():
     close(t5["ends"][("K", "ARC_END")], 0.6, 1e-4)                    # the ring's two radial ends (0.300 each)
     close(t5["ends"][("G3#1", "FREE_END")], 0.3, 1e-4)                # G3's own free end (y 5000), a real face
     close(FT.tee_width_on_carrier(0.30, 45.0), 0.424264, 1e-6)
+    # (5) - (7) R-FACE-END-2: unequal edge ends beside a partial column; square end; drawn oblique free end
+    P = [(4000, -50), (4600, -50), (4600, 150), (4000, 150)]
+    Q = [(4300, 150), (4700, 150), (4700, 400), (4300, 400)]
+
+    def g1e(b_end, kind, car):
+        return dict(g1, edges={"A": ((400, 0), (4000, 0)), "B": ((400, 300), (b_end, 300))},
+                    ends={"start": {"kind": "COLUMN", "carriers": ["C1"]}, "end": {"kind": kind, "carriers": car}})
+    t6 = FT.trace({"G1": g1e(4300, "COLUMN", ["P", "Q"])}, dict(col, P=P, Q=Q))
+    close(t6["sides"][("G1#1", "A")], 3.6)
+    close(t6["sides"][("G1#1", "B")], 3.9)
+    assert not t6["ends"], t6["ends"]                                  # no end face on an undrawn diagonal
+    close(t6["columns"]["P"], 0.85)
+    close(t6["columns"]["Q"], 0.85)
+    assert [(e["end"], e["m"]) for e in t6["extended"]] == [("end", 0.3)], t6["extended"]
+    t7 = FT.trace({"G1": g1e(4000, "COLUMN", ["P"])}, dict(col, P=P))
+    assert t7["ends"] == {("G1#1", "COLUMN"): 0.15}, t7["ends"]          # square end beside a partial column: kept
+    close(t7["sides"][("G1#1", "B")], 3.6)
+    t8 = FT.trace({"G1": g1e(4300, "FREE_END", [])}, col)
+    close(t8["ends"][("G1#1", "FREE_END")], 0.3 * math.sqrt(2.0))        # drawn oblique end stands
+    assert not t8["extended"], t8["extended"]
     print("formwork_t282 --check: villa Q OK (oblique carrier per edge, short line closed, held beyond cap, "
-          "0.05 mm column face, band into a ring at two stations, free end)")
+          "0.05 mm column face, band into a ring at two stations, free end, unequal edge ends beside a partial column)")
     return True
 
 

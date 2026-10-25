@@ -78,3 +78,18 @@ def test_no_client_text_or_coordinates_in_the_committed_input():
         for e in sp["edges"].values():
             assert -1.0 <= e["drawn_from_m"] <= 60.0 and e["drawn_to_m"] <= 60.0    # stations from the band start
     assert "Alsenan chalet project" in d["source"]["drive"]
+
+
+def test_r2_no_end_face_on_a_hull_diagonal():
+    # Verifier 2026-10-25 00:04: 170+7C3#4 END 0.2318 and 1811+1812#1 END 0.0972 were hull diagonals: withdrawn
+    ends = {(e["span_id"], e["end_kind"]): e["length_m"] for e in INP["traced"]["ends"]}
+    assert ("170+7C3#4", "COLUMN") not in ends and ("1811+1812#1", "COLUMN") not in ends
+    assert ends[("15E+15F#1", "COLUMN")] == pytest.approx(0.100, abs=1e-4)      # square end beside COL:1F5: kept
+    assert ends[("1811+1812#1", "FREE_END")] == pytest.approx(0.300, abs=1e-4)
+    cols = {c["column"]: c["length_m"] for c in INP["traced"]["columns"]}
+    assert cols["COL:17C0"] == pytest.approx(0.2475, abs=1e-4) and cols["COL:1E8"] == pytest.approx(0.5, abs=1e-4)
+    # side B of 170+7C3#4 is unchanged (Verifier own +0.300 m, CALC +0.285 m2)
+    assert BY[("170+7C3#4", "B")]["delta_m"] == pytest.approx(0.300, abs=1e-4)
+    assert BY[("170+7C3#4", "B")]["delta_m2_lo"] == pytest.approx(0.285, abs=1e-4)
+    formed = FW.totals(ROWS)["delta_m2"]["DRAWING-CONFIRMED FORMED"]
+    assert formed[0] == pytest.approx(0.120, abs=1e-4)                          # r1 0.340 carried 0.2202 spurious

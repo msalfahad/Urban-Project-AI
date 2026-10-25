@@ -114,3 +114,47 @@ def test_oblique_tee_width_on_carrier():
     assert FT.tee_width_on_carrier(0.30, 45.0) == pytest.approx(0.424264, abs=1e-6)
     with pytest.raises(FT.Refused):
         FT.tee_width_on_carrier(0.30, 0.0)
+
+
+# r2, R-FACE-END-2 (Verifier 2026-10-25 00:04): an end face only on a drawn end line or a free cross-section
+P_PART = [(4000, -50), (4600, -50), (4600, 150), (4000, 150)]     # partial column: reaches edge A only
+Q_NEXT = [(4300, 150), (4700, 150), (4700, 400), (4300, 400)]     # the column edge B runs on to
+
+
+def _g1_end(b_end, kind, carriers):
+    g = _g1(b_end)
+    g["ends"] = {"start": {"kind": "COLUMN", "carriers": ["C1"]}, "end": {"kind": kind, "carriers": carriers}}
+    return g
+
+
+def test_normal_square_end_beside_partial_column_kept():
+    t = FT.trace({"G1": _g1_end(4000, "COLUMN", ["P"])}, dict(COL, P=P_PART))
+    assert t["ends"] == {("G1#1", "COLUMN"): pytest.approx(0.15, abs=1e-4)}
+    assert t["sides"][("G1#1", "A")] == pytest.approx(3.6, abs=1e-4)
+    assert t["sides"][("G1#1", "B")] == pytest.approx(3.6, abs=1e-4)
+
+
+def test_adverse_unequal_edge_ends_beside_partial_column_no_end_face():
+    t = FT.trace({"G1": _g1_end(4300, "COLUMN", ["P", "Q"])}, dict(COL, P=P_PART, Q=Q_NEXT))
+    assert not t["ends"]                                          # r1 hull: 0.2121 m on an undrawn diagonal
+    assert t["sides"][("G1#1", "B")] == pytest.approx(3.9, abs=1e-4)
+    assert t["columns"]["P"] == pytest.approx(0.85, abs=1e-4)      # top 0.600 and west 0.150 are contacts
+    assert t["columns"]["Q"] == pytest.approx(0.85, abs=1e-4)
+
+
+@pytest.mark.parametrize("name,f", [
+    ("rot30", lambda x, y: (x * math.cos(math.radians(30)) - y * math.sin(math.radians(30)),
+                            x * math.sin(math.radians(30)) + y * math.cos(math.radians(30)))),
+    ("mirror", lambda x, y: (-x, y)),
+])
+def test_adverse_partial_column_rotated_mirrored(name, f):
+    mem, cols = _xf({"G1": _g1_end(4300, "COLUMN", ["P", "Q"])}, dict(COL, P=P_PART, Q=Q_NEXT), f)
+    t = FT.trace(mem, cols)
+    assert not t["ends"], name
+    assert t["sides"][("G1#1", "B")] == pytest.approx(3.9, abs=2e-4), name
+
+
+def test_adverse_drawn_oblique_free_end_is_not_squared_off():
+    t = FT.trace({"G1": _g1_end(4300, "FREE_END", [])}, COL)
+    assert t["ends"][("G1#1", "FREE_END")] == pytest.approx(0.3 * math.sqrt(2.0), abs=1e-4)
+    assert not t["extended"]

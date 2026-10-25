@@ -4833,7 +4833,7 @@
     "length_m": 5.9056
    }
   ],
-  "boundary_total_m": 423.5484,
+  "boundary_total_m": 422.7582,
   "closed_on_carrier": [
    {
     "closed_m": 0.1104,
@@ -4859,7 +4859,7 @@
    },
    {
     "column": "COL:17C0",
-    "length_m": 0.4614
+    "length_m": 0.2475
    },
    {
     "column": "COL:1DC",
@@ -4875,7 +4875,7 @@
    },
    {
     "column": "COL:1E8",
-    "length_m": 0.7473
+    "length_m": 0.5
    },
    {
     "column": "COL:1EC",
@@ -5017,11 +5017,6 @@
     "span_id": "15E+15F#1"
    },
    {
-    "end_kind": "COLUMN",
-    "length_m": 0.2318,
-    "span_id": "170+7C3#4"
-   },
-   {
     "end_kind": "GAP_TO_COLUMN",
     "length_m": 0.3,
     "span_id": "177+7CD#1"
@@ -5030,11 +5025,6 @@
     "end_kind": "FOOTING_FACE",
     "length_m": 0.3,
     "span_id": "17C+7E3#1"
-   },
-   {
-    "end_kind": "COLUMN",
-    "length_m": 0.0972,
-    "span_id": "1811+1812#1"
    },
    {
     "end_kind": "FREE_END",
@@ -5050,6 +5040,48 @@
     "end_kind": "ARC_END",
     "length_m": 0.3226,
     "span_id": "ARC:157+158/2"
+   }
+  ],
+  "extended_between_edge_ends": [
+   {
+    "end": "end",
+    "m": 0.3,
+    "member": "170+7C3"
+   },
+   {
+    "end": "end",
+    "m": 0.2191,
+    "member": "177+7CD"
+   },
+   {
+    "end": "start",
+    "m": 0.2202,
+    "member": "17E+17F"
+   },
+   {
+    "end": "end",
+    "m": 0.3,
+    "member": "17E+17F"
+   },
+   {
+    "end": "start",
+    "m": 0.3,
+    "member": "180+181"
+   },
+   {
+    "end": "end",
+    "m": 0.3,
+    "member": "180+181"
+   },
+   {
+    "end": "start",
+    "m": 0.5,
+    "member": "1811+1812"
+   },
+   {
+    "end": "start",
+    "m": 0.3,
+    "member": "182+183"
    }
   ],
   "gaps": [
@@ -5268,13 +5300,13 @@
   ],
   "pieces_beyond": [
    {
-    "m": 0.2995,
+    "m": 0.2997,
     "side": "B",
     "span_id": "170+7C3#4",
     "where": "BEYOND_SQUARE"
    },
    {
-    "m": 0.0005,
+    "m": 0.0003,
     "side": "B",
     "span_id": "170+7C3#4",
     "where": "BEYOND_SQUARE"
@@ -5316,7 +5348,13 @@
     "where": "BEYOND_SQUARE"
    },
    {
-    "m": 0.2601,
+    "m": 0.0399,
+    "side": "A",
+    "span_id": "17E+17F#1",
+    "where": "BEYOND_SQUARE"
+   },
+   {
+    "m": 0.2202,
     "side": "A",
     "span_id": "17E+17F#1",
     "where": "BEYOND_SQUARE"

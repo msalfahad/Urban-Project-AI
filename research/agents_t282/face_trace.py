@@ -18,6 +18,11 @@ villa; every face-tracing trade: formwork, waterproofing, plaster):
   R-FACE-END-1    An end face exists only where a member stops with nothing against it (free end, gap to a column,
                   end on a footing below); an end piece left by a drawn line that stops short of a named carrier is
                   closed onto the carrier (up to CLOSE_CAP x the member width) and is never an end face.
+  R-FACE-END-2    (r2, Verifier 2026-10-25 00:04) An end face lies only on a drawn end line or on the band's cross-
+                  section at a station where neither the band, a column nor another member continues; never on a line
+                  joining unequal edge ends. Where the two edges end at different stations, the zone between them is
+                  the band less every other drawn outline; a piece joined to the body and closed by outlines is beam
+                  (beside a partial-width column: END 0.000); an unclosed piece keeps the drawn end line.
 
 Inputs are plain geometry (mm), so the same function runs on a synthetic villa and on the development villa's DXF
 (t282_extract.py). Output lengths in m."""
@@ -173,6 +178,47 @@ def trace(members, columns, arcs=None, others=None, snap=SNAP_MM, close_cap=CLOS
             hull_pts += [P0, P1]
         edges_c[mid]["region"] = MultiPoint(hull_pts).convex_hull
 
+    # R-FACE-END-2 (r2): where a member's two closed edges end at different stations, the hull of the edge end points
+    # joins them with an UNDRAWN line. The band is concrete across its full width until something stops it, so the
+    # zone between the two stations is taken as the band cross-section less every other drawn outline (columns,
+    # carriers, arcs, other owners); a piece of that zone that is joined to the member's body and closed on every side
+    # by the band edges or by those outlines is BEAM (no end face exists there). A piece that is not closed (e.g. a
+    # drawn oblique free end) keeps the hull: its end line is the drawn one.
+    raw_hull = {mid: MultiPoint([q for s_ in ("A", "B") for q in m["edges"][s_]]).convex_hull
+                for mid, m in members.items()}
+    ext_kept = []
+    for mid, m in members.items():
+        u, n, oA, oB = frame[mid]
+        lo_o, hi_o = sorted((oA, oB))
+        st = {s: sorted((_dot(edges_c[mid][s][0], u), _dot(edges_c[mid][s][1], u))) for s in ("A", "B")}
+        obst = [local(mid, P) for P in list(col.values()) + list(arc_poly.values()) + list(oth.values())] + \
+            [local(mid, raw_hull[k]) for k in members if k != mid]
+        O = unary_union(obst) if obst else None
+        for k_end in (0, 1):
+            ta, tb = st["A"][k_end], st["B"][k_end]
+            if abs(ta - tb) <= snap or O is None:
+                continue
+            t_short = max(ta, tb) if k_end == 0 else min(ta, tb)
+            t_long = min(ta, tb) if k_end == 0 else max(ta, tb)
+            E = box(min(t_short, t_long), lo_o, max(t_short, t_long), hi_o)
+            R_ = E.difference(O)
+            cut = LineString([(t_short, lo_o), (t_short, hi_o)])
+            bands = unary_union([LineString([(min(t_short, t_long), o), (max(t_short, t_long), o)]).buffer(
+                snap, cap_style=2) for o in (lo_o, hi_o)] + [cut.buffer(snap, cap_style=2)])
+            Ob = O.buffer(snap)
+            for g in getattr(R_, "geoms", [R_]):
+                if g.geom_type != "Polygon" or g.area <= snap * snap:
+                    continue
+                if g.boundary.intersection(cut.buffer(snap / 2.0, cap_style=2)).length <= snap:
+                    continue                                   # not joined to the member's body
+                free = g.boundary.difference(bands).difference(Ob)
+                if free.length > snap:
+                    continue                                   # not closed: the drawn end line stands (hull kept)
+                u_, n_ = u, n
+                ext_kept.append(dict(member=mid, end=("start", "end")[k_end], m=round(abs(t_long - t_short) / 1000.0, 4)))
+                wg = Polygon([(x * u_[0] + y * n_[0], x * u_[1] + y * n_[1]) for x, y in g.exterior.coords]).buffer(0)
+                edges_c[mid]["region"] = unary_union([edges_c[mid]["region"], wg])
+
     regions = {mid: edges_c[mid]["region"] for mid in members}
     U = unary_union(list(regions.values()) + list(arc_poly.values()) + list(col.values()) + list(oth.values()))
     # R-FACE-SNAP-1 between members: a slit or hole thinner than the snap between two outlines drawn a hair apart is
@@ -226,7 +272,7 @@ def trace(members, columns, arcs=None, others=None, snap=SNAP_MM, close_cap=CLOS
                 for b0, b1, sid, kind in bounds if min(c_m, b1) - max(a_m, b0) > 1e-7]
 
     out = dict(sides={}, ends={}, columns={}, others={}, arcs={}, closed=closed, held=held, pieces=[],
-               gaps=[], unattributed=[])
+               gaps=[], unattributed=[], extended=ext_kept)
     arc_iv = {}
     for p, q in segs:
         if math.hypot(q[0] - p[0], q[1] - p[1]) < 1e-6:
@@ -270,7 +316,7 @@ def trace(members, columns, arcs=None, others=None, snap=SNAP_MM, close_cap=CLOS
             M = Point(((ls.coords[0][0] + ls.coords[-1][0]) / 2.0, (ls.coords[0][1] + ls.coords[-1][1]) / 2.0))
             hit = None
             for mid, P in regions.items():
-                if P.exterior.distance(M) <= snap:
+                if P.boundary.distance(M) <= snap:
                     u = frame[mid][0]
                     t = _dot((M.x, M.y), u) / 1000.0
                     iv = sorted(members[mid]["spans"])

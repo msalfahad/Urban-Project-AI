@@ -51,12 +51,6 @@
    "DRAWING-CONFIRMED"
   ],
   [
-   "170+7C3#4",
-   "END",
-   0.2318,
-   "DRAWING-CONFIRMED"
-  ],
-  [
    "177+7CD#1",
    "END",
    0.3,
@@ -96,12 +90,6 @@
    "1811+1812#1",
    "A",
    0.5,
-   "DRAWING-CONFIRMED"
-  ],
-  [
-   "1811+1812#1",
-   "END",
-   0.0972,
    "DRAWING-CONFIRMED"
   ],
   [
@@ -148,7 +136,7 @@
   "outer_traced_plus_framing_m": 6.2771,
   "ring_end_piece": 0.3226
  },
- "rows": 126,
+ "rows": 124,
  "schema": "T282_FORMWORK_EDGE_DELTA",
  "slivers": [
   {
@@ -230,12 +218,12 @@
     0.285
    ],
    "DRAWING-CONFIRMED FORMED": [
-    0.3402,
-    0.3402
+    0.12,
+    0.12
    ],
    "DRAWING-CONFIRMED HELD": [
-    1.1159,
-    1.3545
+    1.0867,
+    1.3156
    ],
    "DRAWING-CONFIRMED no depth (annex CONFLICT): m only": 0.75,
    "HELD HELD": [
@@ -246,7 +234,7 @@
   },
   "delta_m_by_status": {
    "DRAWING-CONFIRMED": 3.189,
-   "DRAWING-CONFIRMED_END": 1.629,
+   "DRAWING-CONFIRMED_END": 1.3,
    "HELD": -0.0501,
    "HELD_END": 0.0017
   }

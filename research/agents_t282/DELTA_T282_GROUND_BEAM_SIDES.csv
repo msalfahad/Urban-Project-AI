@@ -58,7 +58,6 @@ span_id,side,r4_L_m,walk_m,traced_m,gaps_m,traced_plus_gaps_m,delta_m,r4_kind,D_
 170+7C3#3,B,3.35,3.35,3.35,0,3.35,0.0,CALC,0.95,0.95,0.0,0.0,AGREES,both methods = the r4 length
 170+7C3#4,A,3.25,3.25,3.25,0,3.25,0.0,FORMED,0.95,0.95,0.0,0.0,AGREES,both methods = the r4 length
 170+7C3#4,B,3.25,,3.55,0,3.55,0.3,CALC,0.95,0.95,0.285,0.285,DRAWING-CONFIRMED,the carrier V2 names (COL:17C0) does not reach this edge (partial-width support); the edge runs on beside it to COL:1E8
-170+7C3#4,END,0.0,,0.2318,0.0,0.2318,0.2318,FORMED,0.95,0.95,0.2202,0.2202,DRAWING-CONFIRMED,end beside a partial-width column: the part of the band's drawn end the column does not cover; in no r4 row
 175+7DE#1,A,3.75,3.75,3.75,0,3.75,0.0,HELD,0.4,0.4,0.0,0.0,AGREES,both methods = the r4 length
 175+7DE#1,B,3.75,3.75,3.45,0.3,3.75,0.0,HELD,0.4,0.4,0.0,0.0,AGREES,both methods = the r4 length
 176+7E6#1,A,3.75,,3.0257,0.7243,3.75,0.0,HELD,0.4,0.4,0.0,0.0,AGREES,both methods = the r4 length
@@ -85,7 +84,6 @@ span_id,side,r4_L_m,walk_m,traced_m,gaps_m,traced_plus_gaps_m,delta_m,r4_kind,D_
 180D+180E#1,B,2.1,2.1,1.6757,0.4243,2.1,0.0,HELD,0.3,0.4,0.0,0.0,AGREES,both methods = the r4 length
 1811+1812#1,A,1.3,,1.8,0,1.8,0.5,HELD,0.3,0.4,0.15,0.2,DRAWING-CONFIRMED,the carrier V2 names (COL:1E8) does not reach this edge (partial-width support); the edge runs on beside it to COL:17C0
 1811+1812#1,B,1.3,1.3,1.3,0,1.3,0.0,HELD,0.3,0.4,0.0,0.0,AGREES,both methods = the r4 length
-1811+1812#1,END,0.0,,0.0972,0.0,0.0972,0.0972,HELD,0.3,0.4,0.0292,0.0389,DRAWING-CONFIRMED,end beside a partial-width column: the part of the band's drawn end the column does not cover; in no r4 row
 1811+1812#1,END,0.0,,0.3,0.0,0.3,0.3,HELD,0.3,0.4,0.09,0.12,DRAWING-CONFIRMED,free end face (FREE_END end): the band stops with nothing drawn against it; in no r4 row
 182+183#1,A,2.0732,2.3722,2.1431,0,2.1431,0.0699,HELD,0.3,0.4,0.021,0.028,DRAWING-CONFIRMED,the edge meets another drawn member 0.2291 m before the carrier V2 names (walk 2.3722): no face there (traced); drawn line stops 0.2301 m short of the carrier: closed on it (R-FACE-END-1)
 182+183#1,B,2.0732,2.0722,2.0732,0,2.0732,0.0,HELD,0.3,0.4,0.0,0.0,AGREES,both methods = the r4 length
