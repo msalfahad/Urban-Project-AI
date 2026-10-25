@@ -26,7 +26,7 @@ WHOLE LINES VERIFIED: candidate 1 / 13 (CONC.SLAB 60.2804 m3), released 0 / 13; 
   curved part 4.443 true HELD (Q-50 A cond riser). GF stair zone 9.854 = 9.014 stair + 0.777 slab north of the top riser +
   0.063 light-well floor (residual 0.000); the T-271 GF decor 93.177 contains 1.808 m2 of member faces under the round
   stair. Neither the engine nor the freelancer has a stair soffit line.
-- FORMWORK end faces (m2), handed in r3: 1AA end 0.000 (contact with band 7FE); the trace knew only the pool as an owner,
+- FORMWORK end faces (m2), r3 MERGED aa3a7bb4 at 04:15 (Checker own: five END contacts 0.000, 10B+7D1#1 A 1.300 m agree): 1AA end 0.000 (contact with band 7FE); the trace knew only the pool as an owner,
   so lift-pit ring ends were booked too: END +1.300 -> 0.000 m on 5 ends, OQ-10 FORMED alt +0.120 -> 0, HELD +0.657 ..
   +0.856 m2; no BOQ line changed (freelancer has no formwork row).
 - BLOCKWORK (m2): unchanged since 02:15 (established 449.5934, overstated by 7.913 d m2 on D-41; VERIFIED 297.847 on
@@ -40,7 +40,7 @@ WHOLE LINES VERIFIED: candidate 1 / 13 (CONC.SLAB 60.2804 m3), released 0 / 13; 
   line, run-varying fields named and excluded), never raw file bytes; test in T-245 (two runs identical; one changed line
   -> VERIFIED_CHANGED).
 
-ENGINEERING DECISIONS THIS RUN (ERS s.5 Lead). (1) Classified: T-270 r2 WORKED. (FEEDBACK also carries the 02:15 run's
+ENGINEERING DECISIONS THIS RUN (ERS s.5 Lead). (1) Classified: T-270 r2 WORKED; T-282 r3 WORKED (merged 04:15). (FEEDBACK also carries the 02:15 run's
 classifications, which that run left out: T-278 WORKED, T-285 WORKED / PARTIAL as T-279 input, T-282 r2 PARTIAL.)
 (2) T-245 UNBLOCKED, first in lane I (worker 3, 04:59), acceptance extended: name the varying json field, bind V2 records
 and the export to the csv sha or a canonical per-line hash, two-run identity test + adverse changed-line test.
@@ -55,10 +55,10 @@ CONFLICT of two ledgers).
 
 TEAM HEALTH. Since 02:15: Worker 1 02:20 -> 02:38 SUCCESS (T-282 r3), 03:20 -> 03:56 SUCCESS (T-281 complete, held back
 as WORKFLOW_CONTROLS s.3 asks); Worker 2 01:40 -> 02:50 SUCCESS (T-283), 02:39 IDLE (lock), 03:41 open (T-288, 34 min);
-Worker 3 01:01 -> 02:23 SUCCESS (T-270 r2), 03:01 -> 03:34 SUCCESS (T-257); Verifier 02:51 open (T-270 merged 03:46,
-scoreboard 03:48; lock to 04:49; becomes an unclosed run only if no final line appears), 03:51 overlap guard SUCCESS.
-Every closed run self-check PASS; no refusal; no unclosed run. Throughput: 1 Gate B merged in 2 h; READY 3 = target
-(T-282 r3 1.6 h, T-283 1.4 h, T-257 0.7 h; all CHECKER-RUNS); T-281 complete and waiting. Queue check: 47 actionable
+Worker 3 01:01 -> 02:23 SUCCESS (T-270 r2), 03:01 -> 03:34 SUCCESS (T-257); Verifier 02:51 -> 04:16 SUCCESS (T-270 r2 and
+T-282 r3 merged), 03:51 overlap guard SUCCESS.
+Every closed run self-check PASS; no refusal; no unclosed run. Throughput: 1 Gate B + 1 Gate A merged in 2 h; READY 3 = target
+(T-283 1.5 h, T-257 0.7 h, T-281 set READY by the Lead at 04:18 when READY fell to 2; all CHECKER-RUNS). Queue check: 47 actionable
 rows, 0 flagged, 0 stall checks. TODO count is 5 (T-245, T-275, T-280, T-286, T-287) + T-288 CLAIMED, under the 8 - 12
 band by design: the owner's 23:49 integration-first cycle bars new research that resolves no demonstrated blocker, and the
 lane I chain shares one set of files, so its next rows stay QUEUED one at a time.
