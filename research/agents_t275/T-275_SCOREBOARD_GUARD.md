@@ -90,3 +90,24 @@ test (no other engine / tools file names the runner) still passes: this wrapper 
 that reads a run folder by path scores a drifted, foreign or sealed file as readily as the pinned one; the guard
 hashes every input, binds each side to its manifest, refuses before the scorer runs, and lists every file it could
 not pin." General, lane I tooling; provenance T-168 gap (Checker 15:30), T-275; tests tests/t275_scoreboard_guard.
+
+## Rework r2 (Checker rejection 2026-10-25 05:55, narrow)
+
+Gap the Checker proved: the census read three files that no manifest hashes (the run's structural/FAMILY_COVERAGE.csv;
+MATERIAL_RESULTS.json and structural/FAMILY_COVERAGE.csv beside candidate lines). They were listed NOT PINNED with their
+sha256 but never compared with the sealed registry, so a sealed take-off saved under one of those names reached the
+census (probe: exit 0, census written).
+
+Fix: `census_extra_files()` in tools/scoreboard_guarded.py lists every file `census_rows` opens that no manifest hashes
+(only files that exist, as `census_rows` reads only those); `guard()` puts each into `G.guard_inputs` (sealed sha256
+under any name, sealed name unopened) before any side is pinned, scored or written, and the same list feeds `not_pinned`
+(NOT PINNED stays for the manifest-hash gap only). Reader sweep of the other two paths (no change needed): the
+scoreboard and key-map paths open the run's BOQ_LINES.json and BOQ_RELEASE_REPORT.json, the reference, key map, set
+bindings and verdicts, all already in `guard_inputs`; scoreboard_v2 only hashes a candidate's sibling .csv for its
+provenance text, it does not read figures from it.
+
+Tests (+4, tests/t275_scoreboard_guard, 21 in all): normal, the three extra files present: hashed in `inputs`, listed in
+`not_pinned` with the same sha256, two calls give byte-identical GUARD_RECORD.json, candidate footings 2.000 + 1.280 =
+3.280 m3 by hand; adverse: a registered sealed sha256 as candidate-side MATERIAL_RESULTS.json, as run-side
+FAMILY_COVERAGE.csv and as candidate-side FAMILY_COVERAGE.csv each refused SEALED (exit 2), the census never called,
+--out not created. The four fail on the rejected head 6fef94bf and pass on the rework. No quantity: tooling only.
