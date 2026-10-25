@@ -6,6 +6,7 @@ in engine/ imports it. General: no project name, item code or element id is writ
     python3 -I tools/boq_export_v1.py --lines V3_0_x_BOQ_LINES.json --candidate-version ARCH_TAKEOFF_V3.0.x
         --out OUT_DIR [--verdicts-v1 CHECKER_VERDICTS.json --key-map KEY_MAP.json] [--inventory INVENTORY.json]
         [--expect-project ID] [--expect-revision-set SHA256] [--code-commit SHA] [--identity V3_0_16_IDENTITY.json]
+        [--engine-units | --contract-units]          (default: the contractual export, reinforcement in t; T-298)
 
 Rows and order. One row per canonical line, plus one UNMEASURED row per inventory element that no line carries; rows
 sorted by (trade, item code, floor, element id, line id), so producer order never changes a byte (probe 11). Nothing is
@@ -55,6 +56,16 @@ invalidated); the flag adds BOQ_CONTRACT_UNITS.csv + BOQ_CONTRACT_TOTALS.csv (sc
 the XLSX sheets "BOQ (contract units)" / "Contract totals", and raises the manifest to URBAN_BOQ_EXPORT_MANIFEST_V2.
 t = kg / 1000 once, here; 6 decimals; totals converted from the unrounded kg sums; kg and t rows of one BOQ line
 together are refused (mixed units). Without the flag every byte written is as before.
+
+Contractual default (T-298, owner 2026-10-25 11:51 (0) 'correct tonne reporting'). The COMMAND LINE now writes the
+contractual export by default (schema URBAN_BOQ_EXPORT_V2, manifest URBAN_BOQ_EXPORT_MANIFEST_V3): BOQ.csv, sheet BOQ,
+BOQ_TRADE_SUMMARY.csv and sheet Trade summary carry reinforcement in t (contract_view: kg / 1000 once, 6 decimals,
+totals from the unrounded kg sums), with unit / engine_unit / conversion and the audit columns engine_<quantity column>
+(the kg value beside the t value); BOQ_ENGINE_UNITS.csv and BOQ_TRADE_SUMMARY_ENGINE_UNITS.csv are the engine-unit V1
+files byte for byte (the rows V2 verdicts bind to; semantic_sha256 is theirs, so no verdict moves with the unit).
+Refused: kg and t rows in one BOQ line (mixed), a row converted twice, a t row of an item registered in kg
+(pre-converted or relabelled). --engine-units is the opt-out (V1 bytes); --contract-units keeps the T-273 layout.
+export() itself keeps its V1 default (contractual=False) for library callers.
 
 Identity (T-245). The verdict binding boq_lines_sha256 is the sha256 of the CANONICAL line content (lines_sha256:
 engine/source/boq_line.dumps, sorted keys), never the raw file bytes (the raw sha256 stays in inputs_sha256 as
@@ -187,6 +198,16 @@ SUMMARY_COLUMNS = ("trade", "item_code", "unit", "line_status", "rows", "verifie
                    "held_rows", "held_low", "held_high",
                    "unmeasured_rows", "excluded_rows", "rows_without_quantity", "held_components",
                    "unmeasured_components", "trade_status", "trade_verified_whole_lines", "completeness")
+# T-298 (owner 2026-10-25 11:51 (0), 'correct tonne reporting'): the CONTRACTUAL export is the DEFAULT of the command
+# line (--engine-units is the opt-out that writes the V1 bytes): BOQ.csv / sheet BOQ / the trade summary carry
+# reinforcement in t (kg / 1000, once, contract_view); the engine-unit value of every quantity column stays beside it in
+# the audit columns engine_<column>, and BOQ_ENGINE_UNITS.csv / BOQ_TRADE_SUMMARY_ENGINE_UNITS.csv are the V1 rows
+# byte for byte (the rows every V2 verdict binds to: binding and semantic_sha256 unchanged).
+CONTRACTUAL_SCHEMA = "URBAN_BOQ_EXPORT_V2"
+MANIFEST_SCHEMA_CONTRACTUAL = "URBAN_BOQ_EXPORT_MANIFEST_V3"
+ENGINE_AUDIT_COLUMNS = tuple(f"engine_{c}" for c in CONTRACT_QTY_COLUMNS)
+CONTRACTUAL_COLUMNS = CONTRACT_COLUMNS + ENGINE_AUDIT_COLUMNS
+CONTRACTUAL_SUMMARY_COLUMNS = SUMMARY_COLUMNS[:3] + ("engine_unit",) + SUMMARY_COLUMNS[3:]
 
 
 class ExportError(ValueError):
@@ -709,6 +730,34 @@ def bind_verdict(v, ident, group_lines, group_elements):
     return "COUNTED"
 
 
+NA_STATE = "NOT_APPLICABLE_WITH_EVIDENCE"
+
+
+def na_has_evidence(ln):
+    """T-298: a NOT_APPLICABLE line carries its evidence when it names WHY (notes) AND the document it was read on
+    (at least one source document); a line with a reason but no document is a claim, not evidence."""
+    return bool(str(ln.get("notes") or "").strip()) and bool((ln.get("source") or {}).get("documents"))
+
+
+def scope_split(glines_g, elements):
+    """T-298 (F-REC-01): the completeness scope of one BOQ line group. An element whose every line of the group is
+    NOT_APPLICABLE with evidence is not an element of this line (a face the drawing classes as something else, a
+    retired duplicate): it leaves the scope count, listed. One NA line without evidence keeps its element in the
+    scope and is a blocker. -> (scope elements, NA-with-evidence elements, NA-without-evidence elements,
+    NA-with-evidence line ids)."""
+    by_el = defaultdict(list)
+    for ln in glines_g:
+        by_el[str(ln["location"].get("element_id"))].append(ln)
+    na_ev, na_bad, na_lines = set(), set(), set()
+    for e, ls in by_el.items():
+        if any(ln["evidence_state"] == NA_STATE and not na_has_evidence(ln) for ln in ls):
+            na_bad.add(e)
+        elif ls and all(ln["evidence_state"] == NA_STATE for ln in ls):
+            na_ev.add(e)
+            na_lines |= {ln["line_id"] for ln in ls}
+    return sorted(set(elements) - na_ev), sorted(na_ev), sorted(na_bad), na_lines
+
+
 def completeness_passes(rec, ident, gkey, group_elements):
     """a T-236 completeness record for one group: same project / revision set, inventory = element scope, MISSING 0,
     DUPLICATED 0, HELD 0."""
@@ -821,10 +870,15 @@ def completeness_from_report(report, lines, groups_lines, group_elements, ident)
             continue
         trs = sorted({TC.line_trade(ln) for ln in ls})
         blockers = []
+        sc, na_ev, na_bad, na_lines = scope_split(ls, group_elements.get(g, ()))
         rec = {"schema": COMPLETENESS_SCHEMA, "source": TC.SCHEMA, "project_id": pid, "revision_set_sha256": rev,
                "trade": g[0], "item_code": g[1], "unit": g[2], "principal_trade": ";".join(trs),
-               "element_scope_count": len(group_elements.get(g, ())), "inventory_count": None,
+               "element_scope_count": len(sc), "inventory_count": None,
                "missing": None, "duplicated": None, "held": None}
+        if na_ev:
+            rec["not_applicable_out_of_scope"] = len(na_ev)    # T-298: listed, never silently dropped
+        if na_bad:
+            blockers.append(f"NOT_APPLICABLE WITHOUT EVIDENCE {len(na_bad)}")
         if len(trs) != 1:
             blockers.append(f"LINE MAPS TO {len(trs)} PRINCIPAL TRADES {trs}")
         else:
@@ -835,10 +889,10 @@ def completeness_from_report(report, lines, groups_lines, group_elements, ident)
             else:
                 if len(gt[tr]) > 1:
                     blockers.append(f"TRADE {tr} SPANS {len(gt[tr])} BOQ LINES: its completeness is not this line's")
-                gone = sorted(lt[tr] - in_report)
+                gone = sorted(lt[tr] - in_report - na_lines)
                 if gone:
                     blockers.append(f"LINES NOT IN THE REPORT {len(gone)}")
-                unl = (report.get("unlinked_lines") or {}).get(tr) or []
+                unl = [x for x in (report.get("unlinked_lines") or {}).get(tr) or [] if x not in na_lines]
                 if unl:
                     blockers.append(f"UNLINKED LINES {len(unl)}")
                 for k in REPORT_BLOCKERS:
@@ -849,7 +903,9 @@ def completeness_from_report(report, lines, groups_lines, group_elements, ident)
                 bad = sorted(lid for lid in lt[tr] if lid in refused)
                 if bad:
                     blockers.append(f"DEDUCTION REFUSED {len(bad)}")
-                n_inv = sum(1 for e in els_by_trade[tr] if e.get("sources"))     # found + excluded with sources
+                n_inv = sum(1 for e in els_by_trade[tr] if e.get("sources")      # found + excluded with sources,
+                            and not (e.get("status") == "EXCLUDED" and e.get("lines")  # less an inventory element
+                                     and set(e["lines"]) <= na_lines))             # only NA-with-evidence lines carry
                 rec.update(inventory_count=n_inv, missing=row.get("missing"), duplicated=row.get("duplicated"),
                            held=row.get("held"))
                 if n_inv != rec["element_scope_count"]:
@@ -989,6 +1045,7 @@ def build(lines, *, candidate_version, boq_lines_sha256, v1_doc=None, key_map_do
     glines = {g: [by_line[r["line_id"]][1] for r in rs if r["line_id"]] for g, rs in groups.items()}
     g_elements = {g: sorted({str(ln["location"]["element_id"]) for ln in glines[g]} | inv_elements.get(g, set()))
                   for g in groups}
+    g_scope = {g: scope_split(glines[g], g_elements[g])[0] for g in groups}   # T-298: completeness scope
     if completeness_report is not None:
         completeness = completeness_from_report(completeness_report, lines, glines, g_elements, ident)
 
@@ -1038,7 +1095,7 @@ def build(lines, *, candidate_version, boq_lines_sha256, v1_doc=None, key_map_do
             whole_ok[g] = v
 
     for g, v in whole_ok.items():
-        if not completeness_passes((completeness or {}).get(g), ident, g, g_elements[g]):
+        if not completeness_passes((completeness or {}).get(g), ident, g, g_scope[g]):
             for r in groups[g]:
                 if r["line_id"] in set(v["line_ids"]):
                     r["verdict_status"] = "COUNTED (WHOLE; completeness record missing or failing: not VERIFIED)"
@@ -1068,7 +1125,7 @@ def build(lines, *, candidate_version, boq_lines_sha256, v1_doc=None, key_map_do
     comp_text = {}
     for g in groups:
         rec = (completeness or {}).get(g)
-        comp_text[g] = completeness_text(rec, completeness_passes(rec, ident, g, g_elements[g]))
+        comp_text[g] = completeness_text(rec, completeness_passes(rec, ident, g, g_scope[g]))
     summary, trades = _summary(rows, groups, whole_ok, completeness, ident, inv_elements, glines, comp_text)
     counts = {s: sum(1 for r in rows if r["quantity_state"] == s) for s in QSTATES}
     return {"schema": SCHEMA, "rows": rows, "summary": summary, "trades": trades, "counts": counts,
@@ -1144,11 +1201,20 @@ def contract_view(rows):
     engine-unit label (relabelled), a quantity column that is not a number."""
     by_item = defaultdict(set)
     for r in rows:
+        if "engine_unit" in r or "conversion" in r:      # T-298: a row of a contract view converted again
+            raise ExportError(f"{r.get('line_id') or r.get('element_id')}: row already in contract units "
+                              "(double conversion, refused)")
         by_item[(str(r["trade"] or ""), str(r["item_code"] or ""))].add(r["unit"])
     for k, us in sorted(by_item.items()):
         for eu, (cu, _f) in CONTRACT_UNIT.items():
             if eu in us and cu in us:
                 raise ExportError(f"{k[1] or k[0]}: rows in {eu} and {cu} in one BOQ line (mixed units, refused)")
+    for r in rows:
+        reg = BL.ITEMS.get(r["item_code"] or "")
+        if reg and reg[3] in CONTRACT_UNIT and r["unit"] == CONTRACT_UNIT[reg[3]][0]:
+            # T-298: the item is registered in kg; a t row is pre-converted or relabelled kg (refused: once, here)
+            raise ExportError(f"{r.get('line_id') or r.get('element_id')}: {r['item_code']} is registered in {reg[3]} "
+                              f"but the row is in {r['unit']} (pre-converted or relabelled, refused)")
     out = []
     for r in rows:
         c = dict(r)
@@ -1196,6 +1262,44 @@ def contract_view(rows):
     return out, totals
 
 
+def contractual_rows(rows):
+    """T-298: the contractual BOQ rows (the default export): contract_view() rows (kg -> t once) plus the audit columns
+    engine_<quantity column>, the same row's value in the engine unit (kg kept beside t; the unit verdicts bind to).
+    -> (rows, contract totals)."""
+    crow, ctot = contract_view(rows)
+    out = []
+    for r, c in zip(rows, crow):
+        out.append(c | {f"engine_{col}": r.get(col) for col in CONTRACT_QTY_COLUMNS})
+    return out, ctot
+
+
+def contract_summary(summary, crow):
+    """T-298: the trade summary in contract units: a kg group's sums are its unrounded kg sums / 1000 (once), its
+    component texts are re-read from the contract rows; every other group is unchanged. Adds engine_unit."""
+    by_g = defaultdict(list)
+    for c in crow:
+        by_g[(str(c["trade"] or ""), str(c["item_code"] or ""), str(c["engine_unit"] or ""))].append(c)
+    out = []
+    for s in summary:
+        s2 = dict(s, engine_unit=s["unit"])
+        if s["unit"] in CONTRACT_UNIT:
+            cu, f = CONTRACT_UNIT[s["unit"]]
+            for col in ("verified_subtotal", "measured_unverified_sum", "held_low", "held_high"):
+                if s.get(col) is not None:
+                    s2[col] = s[col] / f
+            rs = sorted(by_g[(str(s["trade"]), str(s["item_code"]), str(s["unit"]))], key=sort_key)
+            s2["open_range_components"] = "; ".join(
+                f"{r['element_id']} [{_fx(r['open_range_low'])} .. {_fx(r['open_range_high'])}, net {_fx(r['net'])}]"
+                for r in rs if r.get("open_range_low") is not None)
+            s2["held_components"] = "; ".join(
+                f"{r['element_id']}" + (f" [{_fx(r['held_low'])} .. {_fx(r['held_high'])}]"
+                                        if r["held_low"] is not None else " [no range]")
+                for r in rs if r["quantity_state"] == HELD)
+            s2["unit"] = cu
+        out.append(s2)
+    return out
+
+
 # ---- writers --------------------------------------------------------------------------------------------------------
 
 def _cell_text(c, v):
@@ -1217,14 +1321,15 @@ def csv_bytes(rows, columns=COLUMNS):
     return buf.getvalue().encode("utf-8")
 
 
-def xlsx_write(path, rows, summary, manifest_rows, extra_sheets=()):
+def xlsx_write(path, rows, summary, manifest_rows, extra_sheets=(), boq_columns=COLUMNS,
+               summary_columns=SUMMARY_COLUMNS):
     from openpyxl import Workbook
 
     from engine.reporting_v3 import book as BK
     wb = Workbook()
     wb.properties.creator = "Urban Projects"
     wb.properties.created = wb.properties.modified = BK.CREATED
-    for title, cols, data in (("BOQ", COLUMNS, rows), ("Trade summary", SUMMARY_COLUMNS, summary),
+    for title, cols, data in (("BOQ", boq_columns, rows), ("Trade summary", summary_columns, summary),
                               *tuple(extra_sheets), ("Manifest", ("key", "value"), manifest_rows)):
         ws = wb.active if title == "BOQ" else wb.create_sheet(title)
         ws.title = title
@@ -1284,16 +1389,34 @@ def project_identity(doc, ident):
 
 
 def export(lines, out_dir, *, candidate_version, boq_lines_sha256, input_sha256=None, code_commit="NOT_RECORDED",
-           contract_units=False, identity_doc=None, **kw):
+           contract_units=False, identity_doc=None, contractual=False, **kw):
     """build + write BOQ.csv, BOQ.xlsx, EXPORT_MANIFEST.json into out_dir; -> the manifest. contract_units (T-273,
-    opt-in): also BOQ_CONTRACT_UNITS.csv + BOQ_CONTRACT_TOTALS.csv and two XLSX sheets, manifest schema V2."""
+    opt-in): also BOQ_CONTRACT_UNITS.csv + BOQ_CONTRACT_TOTALS.csv and two XLSX sheets, manifest schema V2.
+    contractual (T-298; the command line's default): BOQ.csv / BOQ_TRADE_SUMMARY.csv / sheets BOQ and Trade summary
+    in contract units (reinforcement t, engine_<column> audit columns in kg), BOQ_ENGINE_UNITS.csv +
+    BOQ_TRADE_SUMMARY_ENGINE_UNITS.csv (the engine-unit rows, byte for byte the V1 files) and BOQ_CONTRACT_TOTALS.csv,
+    manifest schema V3; it excludes contract_units (one contract view per export)."""
+    if contractual and contract_units:
+        raise ExportError("the contractual export already is the contract-unit view; --contract-units is the V1 "
+                          "opt-in (with --engine-units) (refused)")
     res = build(lines, candidate_version=candidate_version, boq_lines_sha256=boq_lines_sha256, **kw)
     crow, ctot = contract_view(res["rows"]) if contract_units else (None, None)
+    if contractual:                                   # refused before anything is written
+        krow, ctot = contractual_rows(res["rows"])
+        ksum = contract_summary(res["summary"], krow)
     out = Path(out_dir)
     out.mkdir(parents=True, exist_ok=True)
     cb = csv_bytes(res["rows"])
-    (out / "BOQ.csv").write_bytes(cb)
-    (out / "BOQ_TRADE_SUMMARY.csv").write_bytes(csv_bytes(res["summary"], SUMMARY_COLUMNS))
+    sb = csv_bytes(res["summary"], SUMMARY_COLUMNS)
+    if contractual:
+        (out / "BOQ_ENGINE_UNITS.csv").write_bytes(cb)
+        (out / "BOQ_TRADE_SUMMARY_ENGINE_UNITS.csv").write_bytes(sb)
+        (out / "BOQ_CONTRACT_TOTALS.csv").write_bytes(csv_bytes(ctot, CONTRACT_TOTAL_COLUMNS))
+        (out / "BOQ.csv").write_bytes(csv_bytes(krow, CONTRACTUAL_COLUMNS))
+        (out / "BOQ_TRADE_SUMMARY.csv").write_bytes(csv_bytes(ksum, CONTRACTUAL_SUMMARY_COLUMNS))
+    else:
+        (out / "BOQ.csv").write_bytes(cb)
+        (out / "BOQ_TRADE_SUMMARY.csv").write_bytes(sb)
     ident = res["identity"]
     mrows = [{"key": k, "value": str(v)} for k, v in (
         ("schema", SCHEMA), ("candidate_version", ident["candidate_version"]), ("project_id", ident["project_id"]),
@@ -1323,8 +1446,21 @@ def export(lines, out_dir, *, candidate_version, boq_lines_sha256, input_sha256=
         extra = extra + (("BOQ (contract units)", CONTRACT_COLUMNS, crow),
                          ("Contract totals", CONTRACT_TOTAL_COLUMNS, ctot))
         outs += ["BOQ_CONTRACT_UNITS.csv", "BOQ_CONTRACT_TOTALS.csv"]
-    xlsx_write(out / "BOQ.xlsx", res["rows"], res["summary"], mrows, extra)
-    manifest = {"schema": MANIFEST_SCHEMA_CONTRACT if contract_units else MANIFEST_SCHEMA, "export_schema": SCHEMA,
+    if contractual:
+        mrows.append({"key": "contractual_units", "value": f"{CONTRACTUAL_SCHEMA}: BOQ / Trade summary in contract "
+                                                           "units (kg -> t = kg / 1000 once at export); engine-unit "
+                                                           "values in the engine_* columns and the sheet 'BOQ (engine "
+                                                           "units)' (verdict binding)"})
+        extra = extra + (("Contract totals", CONTRACT_TOTAL_COLUMNS, ctot),
+                         ("BOQ (engine units)", COLUMNS, res["rows"]),
+                         ("Trade summary (engine units)", SUMMARY_COLUMNS, res["summary"]))
+        outs += ["BOQ_ENGINE_UNITS.csv", "BOQ_TRADE_SUMMARY_ENGINE_UNITS.csv", "BOQ_CONTRACT_TOTALS.csv"]
+        xlsx_write(out / "BOQ.xlsx", krow, ksum, mrows, extra, CONTRACTUAL_COLUMNS, CONTRACTUAL_SUMMARY_COLUMNS)
+    else:
+        xlsx_write(out / "BOQ.xlsx", res["rows"], res["summary"], mrows, extra)
+    schema = MANIFEST_SCHEMA_CONTRACTUAL if contractual else MANIFEST_SCHEMA_CONTRACT if contract_units \
+        else MANIFEST_SCHEMA
+    manifest = {"schema": schema, "export_schema": CONTRACTUAL_SCHEMA if contractual else SCHEMA,
                 "identity": ident, "code_commit": code_commit,
                 "inputs_sha256": dict(sorted((input_sha256 or {}).items())),
                 "outputs": {f: sha256_bytes((out / f).read_bytes()) for f in sorted(outs)},
@@ -1351,6 +1487,18 @@ def export(lines, out_dir, *, candidate_version, boq_lines_sha256, input_sha256=
                                                                                   for k, v in CONTRACT_UNIT.items()},
                                       "decimals": DEC, "totals": "from unrounded engine-unit sums, converted once",
                                       "verdict_binding": "engine unit (BOQ.csv); unchanged"}
+    if contractual:
+        manifest["contractual_units"] = {
+            "schema": CONTRACTUAL_SCHEMA, "conversion": {k: f"{k} / {v[1]:g} -> {v[0]}" for k, v in CONTRACT_UNIT.items()},
+            "decimals": DEC, "totals": "from unrounded engine-unit sums, converted once",
+            "audit_columns": list(ENGINE_AUDIT_COLUMNS),
+            "engine_unit_files": ["BOQ_ENGINE_UNITS.csv", "BOQ_TRADE_SUMMARY_ENGINE_UNITS.csv"],
+            "verdict_binding": "the canonical line content in the engine unit (boq_lines_sha256); semantic_sha256 is "
+                               "of the engine-unit rows; a unit change never invalidates a verdict",
+            "semantic_sha256_contract": sha256_bytes(json.dumps(
+                [[r.get(c) if not isinstance(r.get(c), float) else _fx(r.get(c)) for c in CONTRACTUAL_COLUMNS]
+                 for r in krow], ensure_ascii=False).encode("utf-8")),
+            "rows_converted": sum(1 for r in krow if r["unit"] != r["engine_unit"])}
     (out / "EXPORT_MANIFEST.json").write_text(json.dumps(manifest, indent=1, sort_keys=True, ensure_ascii=False) + "\n",
                                               encoding="utf-8")
     return manifest
@@ -1509,8 +1657,13 @@ def main(argv=None):
                                        "project id, revision set and each drawing's revision state, stated in the "
                                        "manifest and the XLSX Manifest sheet; it must be the lines' own identity")
     ap.add_argument("--contract-units", action="store_true",
-                    help="also write the contract-unit view (reinforcement in t = kg / 1000; T-273)")
+                    help="T-273 layout: the V1 engine-unit files plus a separate contract-unit view "
+                         "(BOQ_CONTRACT_UNITS.csv); implies --engine-units for BOQ.csv")
+    ap.add_argument("--engine-units", action="store_true",
+                    help="opt out of the contractual default (T-298): BOQ.csv / BOQ.xlsx in engine units (kg), "
+                         "the V1 bytes")
     a = ap.parse_args(argv)
+    contractual = not (a.engine_units or a.contract_units)
     lines, raw = _load_json(a.lines)
     if isinstance(lines, dict):
         raise ExportError("--lines must be a list of canonical lines (V3_0_x_BOQ_LINES.json)")
@@ -1535,7 +1688,7 @@ def main(argv=None):
             raise ExportError(f"--downgrades: schema must be {DOWNGRADE_SET_SCHEMA} with a downgrades list")
         dg = docs["downgrades"]["downgrades"]
     m = export(lines, a.out, candidate_version=a.candidate_version, boq_lines_sha256=lsha, input_sha256=shas,
-               code_commit=_code_commit(a.code_commit), contract_units=a.contract_units,
+               code_commit=_code_commit(a.code_commit), contract_units=a.contract_units, contractual=contractual,
                identity_doc=docs.get("identity"), downgrades=dg, v1_doc=docs.get("verdicts_v1"),
                key_map_doc=docs.get("key_map"), inventory_doc=docs.get("inventory"), v2_records=v2,
                completeness_report=docs.get("completeness"),
