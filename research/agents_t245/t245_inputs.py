@@ -9,7 +9,8 @@ Project id: the architectural route's id, under which every V3.0.x project input
 known-drawing entry (tools/urban_structural_boq.py), the SAME file sha256 -> both are routes of this one project.
 Evidence: the owner's project folder (one Drive subfolder per project, owner 2026-10-18) holds both files; both file
 titles carry the same drawing number; merged ledgers measure one building on both sets (column outlines of the
-two frames agree to 0.001 m, T-261 r2 hand-in). Revision: the structural set's issue is UNCONFIRMED (D-61, owner 2026-10-24 23:57 (4));
+two frames agree to 0.001 m, T-261 r2 hand-in). Revision: the structural set's issue is UNCONFIRMED (D-61, owner
+2026-10-24 23:57 (4));
 the architectural DXF prints no revision mark or issue date as model-space text (this run's search for REV / DATE /
 ISSUE: none), so its revision is UNCONFIRMED too: never an invented revision, never "approved set".
 """
