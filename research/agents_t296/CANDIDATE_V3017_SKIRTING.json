@@ -1,0 +1,3415 @@
+{
+ "engine_rooms": {
+  "1F-R0E919A": {
+   "class": "ROOM",
+   "codes": [
+    "MASTER_BEDROOM"
+   ],
+   "doors": [
+    "OP-005"
+   ],
+   "finish_scope": "DRY",
+   "floor": "1F",
+   "kind": "DRY",
+   "passages": [
+    "OP-011"
+   ],
+   "runs_lm": {
+    "boundary": 16.2,
+    "column": 0.5,
+    "door": 0.9,
+    "glazing_edge": 0.0,
+    "other": 0.0,
+    "passage": 1.0,
+    "perimeter": 16.2,
+    "wall": 13.8,
+    "window_threshold": 0.0
+   },
+   "windows": []
+  },
+  "1F-R26FA0D": {
+   "class": "ROOM",
+   "codes": [
+    "LAUNDRY"
+   ],
+   "doors": [
+    "OP-008",
+    "OP-010"
+   ],
+   "finish_scope": "WET",
+   "floor": "1F",
+   "kind": "WET",
+   "passages": [],
+   "runs_lm": {
+    "boundary": 16.94,
+    "column": 1.35,
+    "door": 1.7,
+    "glazing_edge": 0.3,
+    "other": 0.0,
+    "passage": 0.0,
+    "perimeter": 16.94,
+    "wall": 13.29,
+    "window_threshold": 0.3
+   },
+   "windows": [
+    "OP-013"
+   ]
+  },
+  "1F-R3CFCFD": {
+   "class": "ROOM",
+   "codes": [
+    "MASTER_BEDROOM"
+   ],
+   "doors": [
+    "OP-006",
+    "OP-018"
+   ],
+   "finish_scope": "DRY",
+   "floor": "1F",
+   "kind": "DRY",
+   "passages": [],
+   "runs_lm": {
+    "boundary": 22.15067,
+    "column": 1.7,
+    "door": 1.7,
+    "glazing_edge": 1.644749,
+    "other": 0.0,
+    "passage": 0.0,
+    "perimeter": 22.15067,
+    "wall": 15.461172,
+    "window_threshold": 1.644749
+   },
+   "windows": [
+    "COP-001"
+   ]
+  },
+  "1F-R48AA46": {
+   "class": "ROOM",
+   "codes": [
+    "BATHROOM"
+   ],
+   "doors": [
+    "OP-004"
+   ],
+   "finish_scope": "WET",
+   "floor": "1F",
+   "kind": "WET",
+   "passages": [],
+   "runs_lm": {
+    "boundary": 9.0,
+    "column": 0.15,
+    "door": 0.8,
+    "glazing_edge": 0.3,
+    "other": 0.0,
+    "passage": 0.0,
+    "perimeter": 9.0,
+    "wall": 7.45,
+    "window_threshold": 0.3
+   },
+   "windows": [
+    "OP-001"
+   ]
+  },
+  "1F-R48CDA5": {
+   "class": "ROOM",
+   "codes": [
+    "BATHROOM"
+   ],
+   "doors": [
+    "OP-018"
+   ],
+   "finish_scope": "WET",
+   "floor": "1F",
+   "kind": "WET",
+   "passages": [],
+   "runs_lm": {
+    "boundary": 8.7,
+    "column": 0.45,
+    "door": 0.8,
+    "glazing_edge": 0.483651,
+    "other": 0.0,
+    "passage": 0.0,
+    "perimeter": 8.7,
+    "wall": 6.966349,
+    "window_threshold": 0.0
+   },
+   "windows": []
+  },
+  "1F-R52AC05": {
+   "class": "ROOM",
+   "codes": [
+    "BATHROOM"
+   ],
+   "doors": [
+    "OP-010"
+   ],
+   "finish_scope": "WET",
+   "floor": "1F",
+   "kind": "WET",
+   "passages": [],
+   "runs_lm": {
+    "boundary": 6.54,
+    "column": 0.025,
+    "door": 0.8,
+    "glazing_edge": 0.3,
+    "other": 0.0,
+    "passage": 0.0,
+    "perimeter": 6.54,
+    "wall": 5.115,
+    "window_threshold": 0.3
+   },
+   "windows": [
+    "OP-014"
+   ]
+  },
+  "1F-R78C367": {
+   "class": "ROOM",
+   "codes": [
+    "LIVING"
+   ],
+   "doors": [
+    "OP-005",
+    "OP-006",
+    "OP-008",
+    "OP-020"
+   ],
+   "finish_scope": "DRY",
+   "floor": "1F",
+   "kind": "DRY",
+   "passages": [
+    "OP-007"
+   ],
+   "runs_lm": {
+    "boundary": 52.44,
+    "column": 3.375,
+    "door": 4.7,
+    "glazing_edge": 2.65232,
+    "other": 0.0,
+    "passage": 1.0,
+    "perimeter": 52.44,
+    "wall": 38.06036,
+    "window_threshold": 2.65232
+   },
+   "windows": [
+    "OP-012",
+    "OP-016",
+    "OP-017",
+    "OP-021"
+   ]
+  },
+  "1F-R8BDA49": {
+   "class": "ROOM",
+   "codes": [
+    "BATHROOM"
+   ],
+   "doors": [],
+   "finish_scope": "WET",
+   "floor": "1F",
+   "kind": "WET",
+   "passages": [],
+   "runs_lm": {
+    "boundary": 9.0,
+    "column": 0.219134,
+    "door": 0.8,
+    "glazing_edge": 0.3,
+    "other": 0.0,
+    "passage": 0.0,
+    "perimeter": 9.0,
+    "wall": 7.380866,
+    "window_threshold": 0.3
+   },
+   "windows": [
+    "OP-002"
+   ]
+  },
+  "1F-RB72F22": {
+   "class": "ROOM",
+   "codes": [
+    "MASTER_BEDROOM"
+   ],
+   "doors": [
+    "OP-004",
+    "OP-020"
+   ],
+   "finish_scope": "DRY",
+   "floor": "1F",
+   "kind": "DRY",
+   "passages": [],
+   "runs_lm": {
+    "boundary": 17.7,
+    "column": 2.0,
+    "door": 1.8,
+    "glazing_edge": 1.224887,
+    "other": 0.0,
+    "passage": 0.0,
+    "perimeter": 17.7,
+    "wall": 11.450226,
+    "window_threshold": 1.224887
+   },
+   "windows": [
+    "OP-022"
+   ]
+  },
+  "1F-RCCB686": {
+   "class": "ROOM",
+   "codes": [
+    "SHAFT"
+   ],
+   "doors": [],
+   "finish_scope": null,
+   "floor": "1F",
+   "kind": "SHAFT",
+   "passages": [
+    "OP-007"
+   ],
+   "runs_lm": {
+    "boundary": 7.2,
+    "column": 0.85,
+    "door": 0.0,
+    "glazing_edge": 0.0,
+    "other": 0.0,
+    "passage": 1.0,
+    "perimeter": 7.2,
+    "wall": 5.35,
+    "window_threshold": 0.0
+   },
+   "windows": []
+  },
+  "1F-RED0D19": {
+   "class": "ROOM",
+   "codes": [
+    "MASTER_BEDROOM"
+   ],
+   "doors": [],
+   "finish_scope": "DRY",
+   "floor": "1F",
+   "kind": "DRY",
+   "passages": [],
+   "runs_lm": {
+    "boundary": 17.4,
+    "column": 0.855866,
+    "door": 1.8,
+    "glazing_edge": 0.77616,
+    "other": 0.0,
+    "passage": 0.0,
+    "perimeter": 17.4,
+    "wall": 13.191814,
+    "window_threshold": 0.77616
+   },
+   "windows": [
+    "OP-003"
+   ]
+  },
+  "1F-RED23B8": {
+   "class": "ROOM",
+   "codes": [
+    "BATHROOM"
+   ],
+   "doors": [
+    "OP-019"
+   ],
+   "finish_scope": "WET",
+   "floor": "1F",
+   "kind": "WET",
+   "passages": [],
+   "runs_lm": {
+    "boundary": 7.6,
+    "column": 0.5,
+    "door": 0.8,
+    "glazing_edge": 0.3,
+    "other": 0.0,
+    "passage": 0.0,
+    "perimeter": 7.6,
+    "wall": 5.7,
+    "window_threshold": 0.3
+   },
+   "windows": [
+    "OP-015"
+   ]
+  },
+  "1F-RFFE7AF": {
+   "class": "UNLABELLED",
+   "codes": [],
+   "doors": [
+    "OP-019"
+   ],
+   "finish_scope": null,
+   "floor": "1F",
+   "kind": null,
+   "passages": [
+    "OP-011"
+   ],
+   "runs_lm": {
+    "boundary": 6.9,
+    "column": 0.025,
+    "door": 0.8,
+    "glazing_edge": 0.0,
+    "other": 0.0,
+    "passage": 1.0,
+    "perimeter": 6.9,
+    "wall": 5.075,
+    "window_threshold": 0.0
+   },
+   "windows": []
+  },
+  "2F-R1DB2D2": {
+   "class": "ROOM",
+   "codes": [
+    "MAID"
+   ],
+   "doors": [
+    "OP-006",
+    "OP-007"
+   ],
+   "finish_scope": "DRY",
+   "floor": "2F",
+   "kind": "DRY",
+   "passages": [],
+   "runs_lm": {
+    "boundary": 18.9,
+    "column": 1.1,
+    "door": 1.7,
+    "glazing_edge": 0.6,
+    "other": 0.0,
+    "passage": 0.0,
+    "perimeter": 18.9,
+    "wall": 14.9,
+    "window_threshold": 0.6
+   },
+   "windows": [
+    "OP-005"
+   ]
+  },
+  "2F-R2BDCEE": {
+   "class": "ROOM",
+   "codes": [
+    "SHAFT"
+   ],
+   "doors": [],
+   "finish_scope": null,
+   "floor": "2F",
+   "kind": "SHAFT",
+   "passages": [
+    "OP-002"
+   ],
+   "runs_lm": {
+    "boundary": 7.2,
+    "column": 0.7,
+    "door": 0.0,
+    "glazing_edge": 0.0,
+    "other": 0.0,
+    "passage": 1.0,
+    "perimeter": 7.2,
+    "wall": 5.5,
+    "window_threshold": 0.0
+   },
+   "windows": []
+  },
+  "2F-R4D1B62": {
+   "class": "ROOM",
+   "codes": [
+    "STAIR"
+   ],
+   "doors": [
+    "OP-001",
+    "OP-007"
+   ],
+   "finish_scope": null,
+   "floor": "2F",
+   "kind": "STAIR",
+   "passages": [
+    "OP-002"
+   ],
+   "runs_lm": {
+    "boundary": 22.0,
+    "column": 1.5,
+    "door": 1.9,
+    "glazing_edge": 1.1,
+    "other": 0.0,
+    "passage": 1.0,
+    "perimeter": 22.0,
+    "wall": 15.4,
+    "window_threshold": 1.1
+   },
+   "windows": [
+    "OP-003",
+    "OP-008"
+   ]
+  },
+  "2F-RE83BED": {
+   "class": "ROOM",
+   "codes": [
+    "BATHROOM"
+   ],
+   "doors": [
+    "OP-006"
+   ],
+   "finish_scope": "WET",
+   "floor": "2F",
+   "kind": "WET",
+   "passages": [],
+   "runs_lm": {
+    "boundary": 9.7,
+    "column": 0.175,
+    "door": 0.8,
+    "glazing_edge": 0.3,
+    "other": 0.0,
+    "passage": 0.0,
+    "perimeter": 9.7,
+    "wall": 8.125,
+    "window_threshold": 0.3
+   },
+   "windows": [
+    "OP-004"
+   ]
+  },
+  "GF-R31F8AE": {
+   "class": "ROOM",
+   "codes": [
+    "STAIR"
+   ],
+   "doors": [
+    "OP-010",
+    "OP-013"
+   ],
+   "finish_scope": null,
+   "floor": "GF",
+   "kind": "STAIR",
+   "passages": [
+    "OP-020"
+   ],
+   "runs_lm": {
+    "boundary": 15.1,
+    "column": 1.3,
+    "door": 1.9,
+    "glazing_edge": 0.6,
+    "other": 0.0,
+    "passage": 0.9,
+    "perimeter": 15.1,
+    "wall": 9.8,
+    "window_threshold": 0.6
+   },
+   "windows": [
+    "OP-022"
+   ]
+  },
+  "GF-R51E127": {
+   "class": "ROOM",
+   "codes": [
+    "DRIVER"
+   ],
+   "doors": [
+    "OP-005",
+    "OP-026"
+   ],
+   "finish_scope": "DRY",
+   "floor": "GF",
+   "kind": "DRY",
+   "passages": [],
+   "runs_lm": {
+    "boundary": 12.5,
+    "column": 0.125,
+    "door": 1.7,
+    "glazing_edge": 0.3,
+    "other": 0.0,
+    "passage": 0.0,
+    "perimeter": 12.5,
+    "wall": 10.075,
+    "window_threshold": 0.3
+   },
+   "windows": [
+    "OP-004"
+   ]
+  },
+  "GF-R7512EA": {
+   "class": "ROOM",
+   "codes": [
+    "MAJLIS"
+   ],
+   "doors": [
+    "OP-009"
+   ],
+   "finish_scope": "DRY",
+   "floor": "GF",
+   "kind": "DRY",
+   "passages": [
+    "OP-027"
+   ],
+   "runs_lm": {
+    "boundary": 20.127876,
+    "column": 0.525,
+    "door": 1.0,
+    "glazing_edge": 1.95492,
+    "other": 0.0,
+    "passage": 1.0,
+    "perimeter": 20.127876,
+    "wall": 13.693037,
+    "window_threshold": 1.95492
+   },
+   "windows": [
+    "OP-028",
+    "OP-029"
+   ]
+  },
+  "GF-R75FBAE": {
+   "class": "ROOM",
+   "codes": [
+    "MASTER_BEDROOM"
+   ],
+   "doors": [
+    "OP-012"
+   ],
+   "finish_scope": "DRY",
+   "floor": "GF",
+   "kind": "DRY",
+   "passages": [],
+   "runs_lm": {
+    "boundary": 21.534453,
+    "column": 1.8,
+    "door": 1.8,
+    "glazing_edge": 5.10186,
+    "other": 0.0,
+    "passage": 0.0,
+    "perimeter": 21.534453,
+    "wall": 12.832594,
+    "window_threshold": 0.0
+   },
+   "windows": []
+  },
+  "GF-R7B7A5D": {
+   "class": "UNLABELLED",
+   "codes": [],
+   "doors": [
+    "OP-025"
+   ],
+   "finish_scope": null,
+   "floor": "GF",
+   "kind": null,
+   "passages": [
+    "OP-001",
+    "OP-003"
+   ],
+   "runs_lm": {
+    "boundary": 5.0,
+    "column": 0.0,
+    "door": 1.0,
+    "glazing_edge": 0.0,
+    "other": 0.0,
+    "passage": 2.4,
+    "perimeter": 5.0,
+    "wall": 0.6,
+    "window_threshold": 1.0
+   },
+   "windows": [
+    "OP-023"
+   ]
+  },
+  "GF-R8496F0": {
+   "class": "UNLABELLED",
+   "codes": [],
+   "doors": [],
+   "finish_scope": null,
+   "floor": "GF",
+   "kind": null,
+   "passages": [
+    "OP-027"
+   ],
+   "runs_lm": {
+    "boundary": 7.2,
+    "column": 0.4,
+    "door": 0.8,
+    "glazing_edge": 0.0,
+    "other": 0.0,
+    "passage": 1.0,
+    "perimeter": 7.2,
+    "wall": 5.0,
+    "window_threshold": 0.0
+   },
+   "windows": []
+  },
+  "GF-R89E756": {
+   "class": "ROOM",
+   "codes": [
+    "SHAFT"
+   ],
+   "doors": [],
+   "finish_scope": null,
+   "floor": "GF",
+   "kind": "SHAFT",
+   "passages": [
+    "OP-011"
+   ],
+   "runs_lm": {
+    "boundary": 7.2,
+    "column": 0.85,
+    "door": 0.0,
+    "glazing_edge": 0.0,
+    "other": 0.0,
+    "passage": 1.0,
+    "perimeter": 7.2,
+    "wall": 5.35,
+    "window_threshold": 0.0
+   },
+   "windows": []
+  },
+  "GF-R9A05AA": {
+   "class": "ROOM",
+   "codes": [
+    "GARDEN"
+   ],
+   "doors": [],
+   "finish_scope": null,
+   "floor": "GF",
+   "kind": "EXTERIOR",
+   "passages": [
+    "OP-003"
+   ],
+   "runs_lm": {
+    "boundary": 16.74,
+    "column": 1.675,
+    "door": 0.0,
+    "glazing_edge": 0.0,
+    "other": 2.6,
+    "passage": 3.02,
+    "perimeter": 16.74,
+    "wall": 9.445,
+    "window_threshold": 0.0
+   },
+   "windows": []
+  },
+  "GF-RA3AD49": {
+   "class": "ROOM",
+   "codes": [
+    "KITCHEN"
+   ],
+   "doors": [
+    "OP-025"
+   ],
+   "finish_scope": "WET",
+   "floor": "GF",
+   "kind": "SERVICE",
+   "passages": [],
+   "runs_lm": {
+    "boundary": 14.5,
+    "column": 1.05,
+    "door": 1.0,
+    "glazing_edge": 0.75,
+    "other": 0.0,
+    "passage": 0.0,
+    "perimeter": 14.5,
+    "wall": 10.95,
+    "window_threshold": 0.75
+   },
+   "windows": [
+    "OP-006"
+   ]
+  },
+  "GF-RB28769": {
+   "class": "ROOM",
+   "codes": [
+    "BATHROOM"
+   ],
+   "doors": [
+    "OP-018"
+   ],
+   "finish_scope": "WET",
+   "floor": "GF",
+   "kind": "WET",
+   "passages": [],
+   "runs_lm": {
+    "boundary": 6.809808,
+    "column": 0.63,
+    "door": 0.8,
+    "glazing_edge": 0.3,
+    "other": 0.0,
+    "passage": 0.0,
+    "perimeter": 6.809808,
+    "wall": 4.779808,
+    "window_threshold": 0.3
+   },
+   "windows": [
+    "OP-015"
+   ]
+  },
+  "GF-RB62B55": {
+   "class": "ROOM",
+   "codes": [
+    "BATHROOM"
+   ],
+   "doors": [],
+   "finish_scope": "WET",
+   "floor": "GF",
+   "kind": "WET",
+   "passages": [],
+   "runs_lm": {
+    "boundary": 7.5,
+    "column": 0.0,
+    "door": 0.8,
+    "glazing_edge": 0.0,
+    "other": 0.0,
+    "passage": 0.0,
+    "perimeter": 7.5,
+    "wall": 6.7,
+    "window_threshold": 0.0
+   },
+   "windows": []
+  },
+  "GF-RC06FED": {
+   "class": "MIXED",
+   "codes": [
+    "DINING",
+    "LIVING",
+    "PANTRY",
+    "RECEPTION"
+   ],
+   "doors": [],
+   "finish_scope": "REVIEW",
+   "floor": "GF",
+   "kind": "DRY",
+   "passages": [
+    "OP-003"
+   ],
+   "runs_lm": {
+    "boundary": 7.6,
+    "column": 0.1,
+    "door": 0.0,
+    "glazing_edge": 0.5,
+    "other": 2.2,
+    "passage": 2.5,
+    "perimeter": 7.6,
+    "wall": 1.8,
+    "window_threshold": 0.5
+   },
+   "windows": [
+    "OP-023"
+   ]
+  },
+  "GF-RC99C2A": {
+   "class": "MIXED",
+   "codes": [
+    "DINING",
+    "LIVING",
+    "PANTRY",
+    "RECEPTION"
+   ],
+   "doors": [
+    "OP-008",
+    "OP-010",
+    "OP-012",
+    "OP-021"
+   ],
+   "finish_scope": "REVIEW",
+   "floor": "GF",
+   "kind": "DRY",
+   "passages": [
+    "OP-003",
+    "OP-011"
+   ],
+   "runs_lm": {
+    "boundary": 56.006096,
+    "column": 7.624896,
+    "door": 5.0,
+    "glazing_edge": 5.543066,
+    "other": 2.555652,
+    "passage": 10.82,
+    "perimeter": 56.006096,
+    "wall": 20.546693,
+    "window_threshold": 3.915789
+   },
+   "windows": [
+    "OP-019",
+    "OP-024"
+   ]
+  },
+  "GF-RD36087": {
+   "class": "UNLABELLED",
+   "codes": [],
+   "doors": [],
+   "finish_scope": null,
+   "floor": "GF",
+   "kind": null,
+   "passages": [
+    "OP-020"
+   ],
+   "runs_lm": {
+    "boundary": 4.9,
+    "column": 0.0,
+    "door": 0.797039,
+    "glazing_edge": 0.0,
+    "other": 0.0,
+    "passage": 0.9,
+    "perimeter": 4.9,
+    "wall": 3.202961,
+    "window_threshold": 0.0
+   },
+   "windows": []
+  },
+  "GF-RD6F891": {
+   "class": "ROOM",
+   "codes": [
+    "BATHROOM"
+   ],
+   "doors": [],
+   "finish_scope": "WET",
+   "floor": "GF",
+   "kind": "WET",
+   "passages": [],
+   "runs_lm": {
+    "boundary": 7.624665,
+    "column": 0.0,
+    "door": 0.8,
+    "glazing_edge": 0.3,
+    "other": 0.0,
+    "passage": 0.0,
+    "perimeter": 7.624665,
+    "wall": 6.224665,
+    "window_threshold": 0.3
+   },
+   "windows": [
+    "OP-016"
+   ]
+  },
+  "GF-RDBD4F9": {
+   "class": "UNLABELLED",
+   "codes": [],
+   "doors": [
+    "OP-017",
+    "OP-018"
+   ],
+   "finish_scope": null,
+   "floor": "GF",
+   "kind": null,
+   "passages": [],
+   "runs_lm": {
+    "boundary": 9.498855,
+    "column": 0.172161,
+    "door": 1.6,
+    "glazing_edge": 0.0,
+    "other": 1.255652,
+    "passage": 0.0,
+    "perimeter": 9.498855,
+    "wall": 6.471042,
+    "window_threshold": 0.0
+   },
+   "windows": []
+  },
+  "GF-RDF7D28": {
+   "class": "ROOM",
+   "codes": [
+    "BATHROOM"
+   ],
+   "doors": [],
+   "finish_scope": "WET",
+   "floor": "GF",
+   "kind": "WET",
+   "passages": [],
+   "runs_lm": {
+    "boundary": 6.2,
+    "column": 0.15,
+    "door": 0.797039,
+    "glazing_edge": 0.3,
+    "other": 0.0,
+    "passage": 0.0,
+    "perimeter": 6.2,
+    "wall": 4.652961,
+    "window_threshold": 0.3
+   },
+   "windows": [
+    "OP-014"
+   ]
+  },
+  "GF-RF002DC": {
+   "class": "UNLABELLED",
+   "codes": [],
+   "doors": [],
+   "finish_scope": null,
+   "floor": "GF",
+   "kind": null,
+   "passages": [
+    "OP-003",
+    "OP-007"
+   ],
+   "runs_lm": {
+    "boundary": 8.4,
+    "column": 0.375,
+    "door": 0.0,
+    "glazing_edge": 0.0,
+    "other": 0.0,
+    "passage": 2.4,
+    "perimeter": 8.4,
+    "wall": 4.125,
+    "window_threshold": 1.5
+   },
+   "windows": [
+    "OP-024"
+   ]
+  },
+  "GF-RF38DAF": {
+   "class": "ROOM",
+   "codes": [
+    "BATHROOM"
+   ],
+   "doors": [
+    "OP-017"
+   ],
+   "finish_scope": "WET",
+   "floor": "GF",
+   "kind": "WET",
+   "passages": [],
+   "runs_lm": {
+    "boundary": 7.414038,
+    "column": 0.071773,
+    "door": 0.8,
+    "glazing_edge": 0.0,
+    "other": 0.0,
+    "passage": 0.0,
+    "perimeter": 7.414038,
+    "wall": 6.542264,
+    "window_threshold": 0.0
+   },
+   "windows": []
+  },
+  "GF-RFAD3C4": {
+   "class": "ROOM",
+   "codes": [
+    "BATHROOM"
+   ],
+   "doors": [
+    "OP-026"
+   ],
+   "finish_scope": "WET",
+   "floor": "GF",
+   "kind": "WET",
+   "passages": [],
+   "runs_lm": {
+    "boundary": 5.6,
+    "column": 0.0,
+    "door": 0.8,
+    "glazing_edge": 0.0,
+    "other": 0.0,
+    "passage": 0.0,
+    "perimeter": 5.6,
+    "wall": 4.8,
+    "window_threshold": 0.0
+   },
+   "windows": []
+  },
+  "GF-RFD4E1D": {
+   "class": "MERGED",
+   "codes": [
+    "DINING",
+    "GARDEN",
+    "LIVING",
+    "PANTRY",
+    "RECEPTION"
+   ],
+   "doors": [],
+   "finish_scope": null,
+   "floor": "GF",
+   "kind": null,
+   "passages": [
+    "OP-003"
+   ],
+   "runs_lm": {
+    "boundary": 10.3,
+    "column": 1.2,
+    "door": 0.0,
+    "glazing_edge": 0.0,
+    "other": 2.6,
+    "passage": 3.8,
+    "perimeter": 10.3,
+    "wall": 2.7,
+    "window_threshold": 0.0
+   },
+   "windows": []
+  }
+ },
+ "line_rooms": {
+  "1F-R0E919A": {
+   "class": "ROOM",
+   "codes": [
+    "MASTER_BEDROOM"
+   ],
+   "doors": [
+    "OP-005"
+   ],
+   "finish_scope": "DRY",
+   "floor": "1F",
+   "kind": "DRY",
+   "passages": [
+    "OP-011"
+   ],
+   "runs_lm": {
+    "boundary": 16.2,
+    "column": 0.5,
+    "door": 0.9,
+    "glazing_edge": 0.0,
+    "other": 0.0,
+    "passage": 1.0,
+    "perimeter": 16.2,
+    "wall": 13.8,
+    "window_threshold": 0.0
+   },
+   "skirting_windows_v28": null,
+   "windows": []
+  },
+  "1F-R26FA0D": {
+   "class": "ROOM",
+   "codes": [
+    "LAUNDRY"
+   ],
+   "doors": [
+    "OP-008",
+    "OP-010"
+   ],
+   "finish_scope": "WET",
+   "floor": "1F",
+   "kind": "WET",
+   "passages": [],
+   "runs_lm": {
+    "boundary": 16.94,
+    "column": 1.35,
+    "door": 1.7,
+    "glazing_edge": 0.3,
+    "other": 0.0,
+    "passage": 0.0,
+    "perimeter": 16.94,
+    "wall": 13.29,
+    "window_threshold": 0.3
+   },
+   "skirting_windows_v28": {
+    "by_window": {
+     "OP-013": {
+      "class": "WINDOW_SILL_NOT_ESTABLISHED",
+      "lm": 0.6
+     }
+    },
+    "floor_glazing_lm": 0.0,
+    "floor_glazing_range_lm": 0.0,
+    "range_out_by_roles": {},
+    "range_out_credit_lm": 0.0,
+    "to_range_by": {},
+    "to_range_lm": 0
+   },
+   "windows": [
+    "OP-013"
+   ]
+  },
+  "1F-R3CFCFD": {
+   "class": "ROOM",
+   "codes": [
+    "MASTER_BEDROOM"
+   ],
+   "doors": [
+    "OP-006",
+    "OP-018"
+   ],
+   "finish_scope": "DRY",
+   "floor": "1F",
+   "kind": "DRY",
+   "passages": [],
+   "runs_lm": {
+    "boundary": 22.15067,
+    "column": 1.7,
+    "door": 1.7,
+    "glazing_edge": 1.644749,
+    "other": 0.0,
+    "passage": 0.0,
+    "perimeter": 22.15067,
+    "wall": 15.461172,
+    "window_threshold": 1.644749
+   },
+   "skirting_windows_v28": {
+    "by_window": {
+     "COP-001": {
+      "class": "WINDOW_SILL_NOT_ESTABLISHED",
+      "lm": 3.289498
+     }
+    },
+    "floor_glazing_lm": 0.0,
+    "floor_glazing_range_lm": 0.0,
+    "range_out_by_roles": {},
+    "range_out_credit_lm": 0.0,
+    "to_range_by": {},
+    "to_range_lm": 0
+   },
+   "windows": [
+    "COP-001"
+   ]
+  },
+  "1F-R48AA46": {
+   "class": "ROOM",
+   "codes": [
+    "BATHROOM"
+   ],
+   "doors": [
+    "OP-004"
+   ],
+   "finish_scope": "WET",
+   "floor": "1F",
+   "kind": "WET",
+   "passages": [],
+   "runs_lm": {
+    "boundary": 9.0,
+    "column": 0.15,
+    "door": 0.8,
+    "glazing_edge": 0.3,
+    "other": 0.0,
+    "passage": 0.0,
+    "perimeter": 9.0,
+    "wall": 7.45,
+    "window_threshold": 0.3
+   },
+   "skirting_windows_v28": {
+    "by_window": {
+     "OP-001": {
+      "class": "WINDOW_SILL_NOT_ESTABLISHED",
+      "lm": 0.6
+     }
+    },
+    "floor_glazing_lm": 0.0,
+    "floor_glazing_range_lm": 0.0,
+    "range_out_by_roles": {},
+    "range_out_credit_lm": 0.0,
+    "to_range_by": {},
+    "to_range_lm": 0
+   },
+   "windows": [
+    "OP-001"
+   ]
+  },
+  "1F-R48CDA5": {
+   "class": "ROOM",
+   "codes": [
+    "BATHROOM"
+   ],
+   "doors": [
+    "OP-018"
+   ],
+   "finish_scope": "WET",
+   "floor": "1F",
+   "kind": "WET",
+   "passages": [],
+   "runs_lm": {
+    "boundary": 8.7,
+    "column": 0.45,
+    "door": 0.8,
+    "glazing_edge": 0.483651,
+    "other": 0.0,
+    "passage": 0.0,
+    "perimeter": 8.7,
+    "wall": 6.966349,
+    "window_threshold": 0.0
+   },
+   "skirting_windows_v28": null,
+   "windows": []
+  },
+  "1F-R52AC05": {
+   "class": "ROOM",
+   "codes": [
+    "BATHROOM"
+   ],
+   "doors": [
+    "OP-010"
+   ],
+   "finish_scope": "WET",
+   "floor": "1F",
+   "kind": "WET",
+   "passages": [],
+   "runs_lm": {
+    "boundary": 6.54,
+    "column": 0.025,
+    "door": 0.8,
+    "glazing_edge": 0.3,
+    "other": 0.0,
+    "passage": 0.0,
+    "perimeter": 6.54,
+    "wall": 5.115,
+    "window_threshold": 0.3
+   },
+   "skirting_windows_v28": {
+    "by_window": {
+     "OP-014": {
+      "class": "WINDOW_SILL_NOT_ESTABLISHED",
+      "lm": 0.6
+     }
+    },
+    "floor_glazing_lm": 0.0,
+    "floor_glazing_range_lm": 0.0,
+    "range_out_by_roles": {},
+    "range_out_credit_lm": 0.0,
+    "to_range_by": {},
+    "to_range_lm": 0
+   },
+   "windows": [
+    "OP-014"
+   ]
+  },
+  "1F-R78C367": {
+   "class": "ROOM",
+   "codes": [
+    "LIVING"
+   ],
+   "doors": [
+    "OP-005",
+    "OP-006",
+    "OP-008",
+    "OP-020"
+   ],
+   "finish_scope": "DRY",
+   "floor": "1F",
+   "kind": "DRY",
+   "passages": [
+    "OP-007"
+   ],
+   "runs_lm": {
+    "boundary": 52.44,
+    "column": 3.375,
+    "door": 4.7,
+    "glazing_edge": 2.65232,
+    "other": 0.0,
+    "passage": 1.0,
+    "perimeter": 52.44,
+    "wall": 38.06036,
+    "window_threshold": 2.65232
+   },
+   "skirting_windows_v28": {
+    "by_window": {
+     "OP-012": {
+      "class": "WINDOW_SILL_NOT_ESTABLISHED",
+      "lm": 1.0
+     },
+     "OP-016": {
+      "class": "WINDOW_SILL_NOT_ESTABLISHED",
+      "lm": 1.55232
+     },
+     "OP-017": {
+      "class": "WINDOW_SILL_NOT_ESTABLISHED",
+      "lm": 1.55232
+     },
+     "OP-021": {
+      "class": "WINDOW_SILL_NOT_ESTABLISHED",
+      "lm": 1.2
+     }
+    },
+    "floor_glazing_lm": 0.0,
+    "floor_glazing_range_lm": 0.0,
+    "range_out_by_roles": {},
+    "range_out_credit_lm": 0.0,
+    "to_range_by": {},
+    "to_range_lm": 0
+   },
+   "windows": [
+    "OP-012",
+    "OP-016",
+    "OP-017",
+    "OP-021"
+   ]
+  },
+  "1F-R8BDA49": {
+   "class": "ROOM",
+   "codes": [
+    "BATHROOM"
+   ],
+   "doors": [],
+   "finish_scope": "WET",
+   "floor": "1F",
+   "kind": "WET",
+   "passages": [],
+   "runs_lm": {
+    "boundary": 9.0,
+    "column": 0.219134,
+    "door": 0.8,
+    "glazing_edge": 0.3,
+    "other": 0.0,
+    "passage": 0.0,
+    "perimeter": 9.0,
+    "wall": 7.380866,
+    "window_threshold": 0.3
+   },
+   "skirting_windows_v28": {
+    "by_window": {
+     "OP-002": {
+      "class": "WINDOW_SILL_NOT_ESTABLISHED",
+      "lm": 0.6
+     }
+    },
+    "floor_glazing_lm": 0.0,
+    "floor_glazing_range_lm": 0.0,
+    "range_out_by_roles": {},
+    "range_out_credit_lm": 0.0,
+    "to_range_by": {},
+    "to_range_lm": 0
+   },
+   "windows": [
+    "OP-002"
+   ]
+  },
+  "1F-RB72F22": {
+   "class": "ROOM",
+   "codes": [
+    "MASTER_BEDROOM"
+   ],
+   "doors": [
+    "OP-004",
+    "OP-020"
+   ],
+   "finish_scope": "DRY",
+   "floor": "1F",
+   "kind": "DRY",
+   "passages": [],
+   "runs_lm": {
+    "boundary": 17.7,
+    "column": 2.0,
+    "door": 1.8,
+    "glazing_edge": 1.224887,
+    "other": 0.0,
+    "passage": 0.0,
+    "perimeter": 17.7,
+    "wall": 11.450226,
+    "window_threshold": 1.224887
+   },
+   "skirting_windows_v28": {
+    "by_window": {
+     "OP-022": {
+      "class": "WINDOW_SILL_NOT_ESTABLISHED",
+      "lm": 2.449774
+     }
+    },
+    "floor_glazing_lm": 0.0,
+    "floor_glazing_range_lm": 0.0,
+    "range_out_by_roles": {},
+    "range_out_credit_lm": 0.0,
+    "to_range_by": {},
+    "to_range_lm": 0
+   },
+   "windows": [
+    "OP-022"
+   ]
+  },
+  "1F-RED0D19": {
+   "class": "ROOM",
+   "codes": [
+    "MASTER_BEDROOM"
+   ],
+   "doors": [],
+   "finish_scope": "DRY",
+   "floor": "1F",
+   "kind": "DRY",
+   "passages": [],
+   "runs_lm": {
+    "boundary": 17.4,
+    "column": 0.855866,
+    "door": 1.8,
+    "glazing_edge": 0.77616,
+    "other": 0.0,
+    "passage": 0.0,
+    "perimeter": 17.4,
+    "wall": 13.191814,
+    "window_threshold": 0.77616
+   },
+   "skirting_windows_v28": {
+    "by_window": {
+     "OP-003": {
+      "class": "WINDOW_SILL_NOT_ESTABLISHED",
+      "lm": 1.55232
+     }
+    },
+    "floor_glazing_lm": 0.0,
+    "floor_glazing_range_lm": 0.0,
+    "range_out_by_roles": {},
+    "range_out_credit_lm": 0.0,
+    "to_range_by": {},
+    "to_range_lm": 0
+   },
+   "windows": [
+    "OP-003"
+   ]
+  },
+  "1F-RED23B8": {
+   "class": "ROOM",
+   "codes": [
+    "BATHROOM"
+   ],
+   "doors": [
+    "OP-019"
+   ],
+   "finish_scope": "WET",
+   "floor": "1F",
+   "kind": "WET",
+   "passages": [],
+   "runs_lm": {
+    "boundary": 7.6,
+    "column": 0.5,
+    "door": 0.8,
+    "glazing_edge": 0.3,
+    "other": 0.0,
+    "passage": 0.0,
+    "perimeter": 7.6,
+    "wall": 5.7,
+    "window_threshold": 0.3
+   },
+   "skirting_windows_v28": {
+    "by_window": {
+     "OP-015": {
+      "class": "WINDOW_SILL_NOT_ESTABLISHED",
+      "lm": 0.6
+     }
+    },
+    "floor_glazing_lm": 0.0,
+    "floor_glazing_range_lm": 0.0,
+    "range_out_by_roles": {},
+    "range_out_credit_lm": 0.0,
+    "to_range_by": {},
+    "to_range_lm": 0
+   },
+   "windows": [
+    "OP-015"
+   ]
+  },
+  "2F-R1DB2D2": {
+   "class": "ROOM",
+   "codes": [
+    "MAID"
+   ],
+   "doors": [
+    "OP-006",
+    "OP-007"
+   ],
+   "finish_scope": "DRY",
+   "floor": "2F",
+   "kind": "DRY",
+   "passages": [],
+   "runs_lm": {
+    "boundary": 18.9,
+    "column": 1.1,
+    "door": 1.7,
+    "glazing_edge": 0.6,
+    "other": 0.0,
+    "passage": 0.0,
+    "perimeter": 18.9,
+    "wall": 14.9,
+    "window_threshold": 0.6
+   },
+   "skirting_windows_v28": {
+    "by_window": {
+     "OP-005": {
+      "class": "WINDOW_SILL_NOT_ESTABLISHED",
+      "lm": 1.2
+     }
+    },
+    "floor_glazing_lm": 0.0,
+    "floor_glazing_range_lm": 0.0,
+    "range_out_by_roles": {},
+    "range_out_credit_lm": 0.0,
+    "to_range_by": {},
+    "to_range_lm": 0
+   },
+   "windows": [
+    "OP-005"
+   ]
+  },
+  "2F-R4D1B62": {
+   "class": "ROOM",
+   "codes": [
+    "STAIR"
+   ],
+   "doors": [
+    "OP-001",
+    "OP-007"
+   ],
+   "finish_scope": null,
+   "floor": "2F",
+   "kind": "STAIR",
+   "passages": [
+    "OP-002"
+   ],
+   "runs_lm": {
+    "boundary": 22.0,
+    "column": 1.5,
+    "door": 1.9,
+    "glazing_edge": 1.1,
+    "other": 0.0,
+    "passage": 1.0,
+    "perimeter": 22.0,
+    "wall": 15.4,
+    "window_threshold": 1.1
+   },
+   "skirting_windows_v28": null,
+   "windows": [
+    "OP-003",
+    "OP-008"
+   ]
+  },
+  "2F-RE83BED": {
+   "class": "ROOM",
+   "codes": [
+    "BATHROOM"
+   ],
+   "doors": [
+    "OP-006"
+   ],
+   "finish_scope": "WET",
+   "floor": "2F",
+   "kind": "WET",
+   "passages": [],
+   "runs_lm": {
+    "boundary": 9.7,
+    "column": 0.175,
+    "door": 0.8,
+    "glazing_edge": 0.3,
+    "other": 0.0,
+    "passage": 0.0,
+    "perimeter": 9.7,
+    "wall": 8.125,
+    "window_threshold": 0.3
+   },
+   "skirting_windows_v28": {
+    "by_window": {
+     "OP-004": {
+      "class": "WINDOW_SILL_NOT_ESTABLISHED",
+      "lm": 0.6
+     }
+    },
+    "floor_glazing_lm": 0.0,
+    "floor_glazing_range_lm": 0.0,
+    "range_out_by_roles": {},
+    "range_out_credit_lm": 0.0,
+    "to_range_by": {},
+    "to_range_lm": 0
+   },
+   "windows": [
+    "OP-004"
+   ]
+  },
+  "GF-R31F8AE": {
+   "class": "ROOM",
+   "codes": [
+    "STAIR"
+   ],
+   "doors": [
+    "OP-010",
+    "OP-013"
+   ],
+   "finish_scope": null,
+   "floor": "GF",
+   "kind": "STAIR",
+   "passages": [
+    "OP-020"
+   ],
+   "runs_lm": {
+    "boundary": 15.1,
+    "column": 1.3,
+    "door": 1.9,
+    "glazing_edge": 0.6,
+    "other": 0.0,
+    "passage": 0.9,
+    "perimeter": 15.1,
+    "wall": 9.8,
+    "window_threshold": 0.6
+   },
+   "skirting_windows_v28": null,
+   "windows": [
+    "OP-022"
+   ]
+  },
+  "GF-R51E127": {
+   "class": "ROOM",
+   "codes": [
+    "DRIVER"
+   ],
+   "doors": [
+    "OP-005",
+    "OP-026"
+   ],
+   "finish_scope": "DRY",
+   "floor": "GF",
+   "kind": "DRY",
+   "passages": [],
+   "runs_lm": {
+    "boundary": 12.5,
+    "column": 0.125,
+    "door": 1.7,
+    "glazing_edge": 0.3,
+    "other": 0.0,
+    "passage": 0.0,
+    "perimeter": 12.5,
+    "wall": 10.075,
+    "window_threshold": 0.3
+   },
+   "skirting_windows_v28": {
+    "by_window": {
+     "OP-004": {
+      "class": "WINDOW_SILL_NOT_ESTABLISHED",
+      "lm": 0.6
+     }
+    },
+    "floor_glazing_lm": 0.0,
+    "floor_glazing_range_lm": 0.0,
+    "range_out_by_roles": {},
+    "range_out_credit_lm": 0.0,
+    "to_range_by": {},
+    "to_range_lm": 0
+   },
+   "windows": [
+    "OP-004"
+   ]
+  },
+  "GF-R7512EA": {
+   "class": "ROOM",
+   "codes": [
+    "MAJLIS"
+   ],
+   "doors": [
+    "OP-009"
+   ],
+   "finish_scope": "DRY",
+   "floor": "GF",
+   "kind": "DRY",
+   "passages": [
+    "OP-027"
+   ],
+   "runs_lm": {
+    "boundary": 20.127876,
+    "column": 0.525,
+    "door": 1.0,
+    "glazing_edge": 1.95492,
+    "other": 0.0,
+    "passage": 1.0,
+    "perimeter": 20.127876,
+    "wall": 13.693037,
+    "window_threshold": 1.95492
+   },
+   "skirting_windows_v28": {
+    "by_window": {
+     "OP-028": {
+      "class": "WINDOW_SILL_NOT_ESTABLISHED",
+      "lm": 1.95492
+     },
+     "OP-029": {
+      "class": "WINDOW_SILL_NOT_ESTABLISHED",
+      "lm": 1.95492
+     }
+    },
+    "floor_glazing_lm": 0.0,
+    "floor_glazing_range_lm": 0.0,
+    "range_out_by_roles": {},
+    "range_out_credit_lm": 0.0,
+    "to_range_by": {},
+    "to_range_lm": 0
+   },
+   "windows": [
+    "OP-028",
+    "OP-029"
+   ]
+  },
+  "GF-R75FBAE": {
+   "class": "ROOM",
+   "codes": [
+    "MASTER_BEDROOM"
+   ],
+   "doors": [
+    "OP-012"
+   ],
+   "finish_scope": "DRY",
+   "floor": "GF",
+   "kind": "DRY",
+   "passages": [],
+   "runs_lm": {
+    "boundary": 21.534453,
+    "column": 1.8,
+    "door": 1.8,
+    "glazing_edge": 5.10186,
+    "other": 0.0,
+    "passage": 0.0,
+    "perimeter": 21.534453,
+    "wall": 12.832594,
+    "window_threshold": 0.0
+   },
+   "skirting_windows_v28": null,
+   "windows": []
+  },
+  "GF-R8496F0": {
+   "class": "UNLABELLED",
+   "codes": [],
+   "doors": [],
+   "finish_scope": null,
+   "floor": "GF",
+   "kind": null,
+   "passages": [
+    "OP-027"
+   ],
+   "runs_lm": {
+    "boundary": 7.2,
+    "column": 0.4,
+    "door": 0.8,
+    "glazing_edge": 0.0,
+    "other": 0.0,
+    "passage": 1.0,
+    "perimeter": 7.2,
+    "wall": 5.0,
+    "window_threshold": 0.0
+   },
+   "skirting_windows_v28": null,
+   "windows": []
+  },
+  "GF-RA3AD49": {
+   "class": "ROOM",
+   "codes": [
+    "KITCHEN"
+   ],
+   "doors": [
+    "OP-025"
+   ],
+   "finish_scope": "WET",
+   "floor": "GF",
+   "kind": "SERVICE",
+   "passages": [],
+   "runs_lm": {
+    "boundary": 14.5,
+    "column": 1.05,
+    "door": 1.0,
+    "glazing_edge": 0.75,
+    "other": 0.0,
+    "passage": 0.0,
+    "perimeter": 14.5,
+    "wall": 10.95,
+    "window_threshold": 0.75
+   },
+   "skirting_windows_v28": {
+    "by_window": {
+     "OP-006": {
+      "class": "WINDOW_SILL_NOT_ESTABLISHED",
+      "lm": 1.5
+     }
+    },
+    "floor_glazing_lm": 0.0,
+    "floor_glazing_range_lm": 0.0,
+    "range_out_by_roles": {},
+    "range_out_credit_lm": 0.0,
+    "to_range_by": {},
+    "to_range_lm": 0
+   },
+   "windows": [
+    "OP-006"
+   ]
+  },
+  "GF-RB28769": {
+   "class": "ROOM",
+   "codes": [
+    "BATHROOM"
+   ],
+   "doors": [
+    "OP-018"
+   ],
+   "finish_scope": "WET",
+   "floor": "GF",
+   "kind": "WET",
+   "passages": [],
+   "runs_lm": {
+    "boundary": 6.809808,
+    "column": 0.63,
+    "door": 0.8,
+    "glazing_edge": 0.3,
+    "other": 0.0,
+    "passage": 0.0,
+    "perimeter": 6.809808,
+    "wall": 4.779808,
+    "window_threshold": 0.3
+   },
+   "skirting_windows_v28": {
+    "by_window": {
+     "OP-015": {
+      "class": "WINDOW_SILL_NOT_ESTABLISHED",
+      "lm": 0.6
+     }
+    },
+    "floor_glazing_lm": 0.0,
+    "floor_glazing_range_lm": 0.0,
+    "range_out_by_roles": {},
+    "range_out_credit_lm": 0.0,
+    "to_range_by": {},
+    "to_range_lm": 0
+   },
+   "windows": [
+    "OP-015"
+   ]
+  },
+  "GF-RB62B55": {
+   "class": "ROOM",
+   "codes": [
+    "BATHROOM"
+   ],
+   "doors": [],
+   "finish_scope": "WET",
+   "floor": "GF",
+   "kind": "WET",
+   "passages": [],
+   "runs_lm": {
+    "boundary": 7.5,
+    "column": 0.0,
+    "door": 0.8,
+    "glazing_edge": 0.0,
+    "other": 0.0,
+    "passage": 0.0,
+    "perimeter": 7.5,
+    "wall": 6.7,
+    "window_threshold": 0.0
+   },
+   "skirting_windows_v28": null,
+   "windows": []
+  },
+  "GF-RC06FED": {
+   "class": "MIXED",
+   "codes": [
+    "DINING",
+    "LIVING",
+    "PANTRY",
+    "RECEPTION"
+   ],
+   "doors": [],
+   "finish_scope": "REVIEW",
+   "floor": "GF",
+   "kind": "DRY",
+   "passages": [
+    "OP-003"
+   ],
+   "runs_lm": {
+    "boundary": 7.6,
+    "column": 0.1,
+    "door": 0.0,
+    "glazing_edge": 0.5,
+    "other": 2.2,
+    "passage": 2.5,
+    "perimeter": 7.6,
+    "wall": 1.8,
+    "window_threshold": 0.5
+   },
+   "skirting_windows_v28": {
+    "by_window": {
+     "OP-023": {
+      "class": "WINDOW_SILL_NOT_ESTABLISHED",
+      "lm": 1.0
+     }
+    },
+    "floor_glazing_lm": 0.0,
+    "floor_glazing_range_lm": 0.0,
+    "range_out_by_roles": {},
+    "range_out_credit_lm": 0.0,
+    "to_range_by": {},
+    "to_range_lm": 0
+   },
+   "windows": [
+    "OP-023"
+   ]
+  },
+  "GF-RC99C2A": {
+   "class": "MIXED",
+   "codes": [
+    "DINING",
+    "LIVING",
+    "PANTRY",
+    "RECEPTION"
+   ],
+   "doors": [
+    "OP-008",
+    "OP-010",
+    "OP-012",
+    "OP-021"
+   ],
+   "finish_scope": "REVIEW",
+   "floor": "GF",
+   "kind": "DRY",
+   "passages": [
+    "OP-003",
+    "OP-011"
+   ],
+   "runs_lm": {
+    "boundary": 56.006096,
+    "column": 7.624896,
+    "door": 5.0,
+    "glazing_edge": 5.543066,
+    "other": 2.555652,
+    "passage": 10.82,
+    "perimeter": 56.006096,
+    "wall": 20.546693,
+    "window_threshold": 3.915789
+   },
+   "skirting_windows_v28": {
+    "by_window": {
+     "OP-019": {
+      "class": "WINDOW_SILL_NOT_ESTABLISHED",
+      "lm": 6.331578
+     },
+     "OP-024": {
+      "class": "WINDOW_SILL_NOT_ESTABLISHED",
+      "lm": 1.5
+     }
+    },
+    "floor_glazing_lm": 0.0,
+    "floor_glazing_range_lm": 0.0,
+    "range_out_by_roles": {},
+    "range_out_credit_lm": 0.0,
+    "to_range_by": {},
+    "to_range_lm": 0
+   },
+   "windows": [
+    "OP-019",
+    "OP-024"
+   ]
+  },
+  "GF-RD36087": {
+   "class": "UNLABELLED",
+   "codes": [],
+   "doors": [],
+   "finish_scope": null,
+   "floor": "GF",
+   "kind": null,
+   "passages": [
+    "OP-020"
+   ],
+   "runs_lm": {
+    "boundary": 4.9,
+    "column": 0.0,
+    "door": 0.797039,
+    "glazing_edge": 0.0,
+    "other": 0.0,
+    "passage": 0.9,
+    "perimeter": 4.9,
+    "wall": 3.202961,
+    "window_threshold": 0.0
+   },
+   "skirting_windows_v28": null,
+   "windows": []
+  },
+  "GF-RD6F891": {
+   "class": "ROOM",
+   "codes": [
+    "BATHROOM"
+   ],
+   "doors": [],
+   "finish_scope": "WET",
+   "floor": "GF",
+   "kind": "WET",
+   "passages": [],
+   "runs_lm": {
+    "boundary": 7.624665,
+    "column": 0.0,
+    "door": 0.8,
+    "glazing_edge": 0.3,
+    "other": 0.0,
+    "passage": 0.0,
+    "perimeter": 7.624665,
+    "wall": 6.224665,
+    "window_threshold": 0.3
+   },
+   "skirting_windows_v28": {
+    "by_window": {
+     "OP-016": {
+      "class": "WINDOW_SILL_NOT_ESTABLISHED",
+      "lm": 0.6
+     }
+    },
+    "floor_glazing_lm": 0.0,
+    "floor_glazing_range_lm": 0.0,
+    "range_out_by_roles": {},
+    "range_out_credit_lm": 0.0,
+    "to_range_by": {},
+    "to_range_lm": 0
+   },
+   "windows": [
+    "OP-016"
+   ]
+  },
+  "GF-RDBD4F9": {
+   "class": "UNLABELLED",
+   "codes": [],
+   "doors": [
+    "OP-017",
+    "OP-018"
+   ],
+   "finish_scope": null,
+   "floor": "GF",
+   "kind": null,
+   "passages": [],
+   "runs_lm": {
+    "boundary": 9.498855,
+    "column": 0.172161,
+    "door": 1.6,
+    "glazing_edge": 0.0,
+    "other": 1.255652,
+    "passage": 0.0,
+    "perimeter": 9.498855,
+    "wall": 6.471042,
+    "window_threshold": 0.0
+   },
+   "skirting_windows_v28": null,
+   "windows": []
+  },
+  "GF-RDF7D28": {
+   "class": "ROOM",
+   "codes": [
+    "BATHROOM"
+   ],
+   "doors": [],
+   "finish_scope": "WET",
+   "floor": "GF",
+   "kind": "WET",
+   "passages": [],
+   "runs_lm": {
+    "boundary": 6.2,
+    "column": 0.15,
+    "door": 0.797039,
+    "glazing_edge": 0.3,
+    "other": 0.0,
+    "passage": 0.0,
+    "perimeter": 6.2,
+    "wall": 4.652961,
+    "window_threshold": 0.3
+   },
+   "skirting_windows_v28": {
+    "by_window": {
+     "OP-014": {
+      "class": "WINDOW_SILL_NOT_ESTABLISHED",
+      "lm": 0.6
+     }
+    },
+    "floor_glazing_lm": 0.0,
+    "floor_glazing_range_lm": 0.0,
+    "range_out_by_roles": {},
+    "range_out_credit_lm": 0.0,
+    "to_range_by": {},
+    "to_range_lm": 0
+   },
+   "windows": [
+    "OP-014"
+   ]
+  },
+  "GF-RF38DAF": {
+   "class": "ROOM",
+   "codes": [
+    "BATHROOM"
+   ],
+   "doors": [
+    "OP-017"
+   ],
+   "finish_scope": "WET",
+   "floor": "GF",
+   "kind": "WET",
+   "passages": [],
+   "runs_lm": {
+    "boundary": 7.414038,
+    "column": 0.071773,
+    "door": 0.8,
+    "glazing_edge": 0.0,
+    "other": 0.0,
+    "passage": 0.0,
+    "perimeter": 7.414038,
+    "wall": 6.542264,
+    "window_threshold": 0.0
+   },
+   "skirting_windows_v28": null,
+   "windows": []
+  },
+  "GF-RFAD3C4": {
+   "class": "ROOM",
+   "codes": [
+    "BATHROOM"
+   ],
+   "doors": [
+    "OP-026"
+   ],
+   "finish_scope": "WET",
+   "floor": "GF",
+   "kind": "WET",
+   "passages": [],
+   "runs_lm": {
+    "boundary": 5.6,
+    "column": 0.0,
+    "door": 0.8,
+    "glazing_edge": 0.0,
+    "other": 0.0,
+    "passage": 0.0,
+    "perimeter": 5.6,
+    "wall": 4.8,
+    "window_threshold": 0.0
+   },
+   "skirting_windows_v28": null,
+   "windows": []
+  }
+ },
+ "lines_sha256_8": "366be2f8",
+ "lines_total": 3700,
+ "opening_widths": {
+  "1F:COP-001": {
+   "kind": "WINDOW",
+   "width_m": 3.2895
+  },
+  "1F:OP-001": {
+   "kind": "WINDOW",
+   "width_m": 0.6
+  },
+  "1F:OP-002": {
+   "kind": "WINDOW",
+   "width_m": 0.6
+  },
+  "1F:OP-003": {
+   "kind": "WINDOW",
+   "width_m": 1.5523
+  },
+  "1F:OP-004": {
+   "kind": "DOOR",
+   "width_m": 0.8
+  },
+  "1F:OP-005": {
+   "kind": "DOOR",
+   "width_m": 0.9
+  },
+  "1F:OP-006": {
+   "kind": "DOOR",
+   "width_m": 0.9
+  },
+  "1F:OP-007": {
+   "kind": "PASSAGE",
+   "width_m": 1.0
+  },
+  "1F:OP-008": {
+   "kind": "DOOR",
+   "width_m": 0.9
+  },
+  "1F:OP-009": {
+   "kind": "PASSAGE",
+   "width_m": 1.3
+  },
+  "1F:OP-010": {
+   "kind": "DOOR",
+   "width_m": 0.8
+  },
+  "1F:OP-011": {
+   "kind": "PASSAGE",
+   "width_m": 1.0
+  },
+  "1F:OP-012": {
+   "kind": "WINDOW",
+   "width_m": 1.0
+  },
+  "1F:OP-013": {
+   "kind": "WINDOW",
+   "width_m": 0.6
+  },
+  "1F:OP-014": {
+   "kind": "WINDOW",
+   "width_m": 0.6
+  },
+  "1F:OP-015": {
+   "kind": "WINDOW",
+   "width_m": 0.6
+  },
+  "1F:OP-016": {
+   "kind": "WINDOW",
+   "width_m": 1.5523
+  },
+  "1F:OP-017": {
+   "kind": "WINDOW",
+   "width_m": 1.5523
+  },
+  "1F:OP-018": {
+   "kind": "DOOR",
+   "width_m": 0.8
+  },
+  "1F:OP-019": {
+   "kind": "DOOR",
+   "width_m": 0.8
+  },
+  "1F:OP-020": {
+   "kind": "DOOR",
+   "width_m": 1.0
+  },
+  "1F:OP-021": {
+   "kind": "WINDOW",
+   "width_m": 1.2
+  },
+  "1F:OP-022": {
+   "kind": "WINDOW",
+   "width_m": 2.4498
+  },
+  "2F:OP-001": {
+   "kind": "DOOR",
+   "width_m": 1.0
+  },
+  "2F:OP-002": {
+   "kind": "PASSAGE",
+   "width_m": 1.0
+  },
+  "2F:OP-003": {
+   "kind": "WINDOW",
+   "width_m": 1.0
+  },
+  "2F:OP-004": {
+   "kind": "WINDOW",
+   "width_m": 0.6
+  },
+  "2F:OP-005": {
+   "kind": "WINDOW",
+   "width_m": 1.2
+  },
+  "2F:OP-006": {
+   "kind": "DOOR",
+   "width_m": 0.8
+  },
+  "2F:OP-007": {
+   "kind": "DOOR",
+   "width_m": 0.9
+  },
+  "2F:OP-008": {
+   "kind": "WINDOW",
+   "width_m": 1.2
+  },
+  "GF:OP-001": {
+   "kind": "PASSAGE",
+   "width_m": 1.4
+  },
+  "GF:OP-002": {
+   "kind": "PASSAGE",
+   "width_m": 1.0
+  },
+  "GF:OP-003": {
+   "kind": "PASSAGE",
+   "width_m": 11.22
+  },
+  "GF:OP-004": {
+   "kind": "WINDOW",
+   "width_m": 0.6
+  },
+  "GF:OP-005": {
+   "kind": "DOOR",
+   "width_m": 0.9
+  },
+  "GF:OP-006": {
+   "kind": "WINDOW",
+   "width_m": 1.5
+  },
+  "GF:OP-007": {
+   "kind": "PASSAGE",
+   "width_m": 1.2
+  },
+  "GF:OP-008": {
+   "kind": "DOOR",
+   "width_m": 1.0
+  },
+  "GF:OP-009": {
+   "kind": "DOOR",
+   "width_m": 1.0
+  },
+  "GF:OP-010": {
+   "kind": "DOOR",
+   "width_m": 1.0
+  },
+  "GF:OP-011": {
+   "kind": "PASSAGE",
+   "width_m": 1.0
+  },
+  "GF:OP-012": {
+   "kind": "DOOR",
+   "width_m": 1.0
+  },
+  "GF:OP-013": {
+   "kind": "DOOR",
+   "width_m": 0.9
+  },
+  "GF:OP-014": {
+   "kind": "WINDOW",
+   "width_m": 0.6
+  },
+  "GF:OP-015": {
+   "kind": "WINDOW",
+   "width_m": 0.6
+  },
+  "GF:OP-016": {
+   "kind": "WINDOW",
+   "width_m": 0.6
+  },
+  "GF:OP-017": {
+   "kind": "DOOR",
+   "width_m": 0.8
+  },
+  "GF:OP-018": {
+   "kind": "DOOR",
+   "width_m": 0.8
+  },
+  "GF:OP-019": {
+   "kind": "WINDOW",
+   "width_m": 6.3316
+  },
+  "GF:OP-020": {
+   "kind": "PASSAGE",
+   "width_m": 0.9
+  },
+  "GF:OP-021": {
+   "kind": "DOOR",
+   "width_m": 2.0
+  },
+  "GF:OP-022": {
+   "kind": "WINDOW",
+   "width_m": 1.2
+  },
+  "GF:OP-023": {
+   "kind": "WINDOW",
+   "width_m": 1.0
+  },
+  "GF:OP-024": {
+   "kind": "WINDOW",
+   "width_m": 1.5
+  },
+  "GF:OP-025": {
+   "kind": "DOOR",
+   "width_m": 1.0
+  },
+  "GF:OP-026": {
+   "kind": "DOOR",
+   "width_m": 0.8
+  },
+  "GF:OP-027": {
+   "kind": "PASSAGE",
+   "width_m": 1.0
+  },
+  "GF:OP-028": {
+   "kind": "WINDOW",
+   "width_m": 1.9549
+  },
+  "GF:OP-029": {
+   "kind": "WINDOW",
+   "width_m": 1.9549
+  }
+ },
+ "skirting_lines": [
+  {
+   "additions": [],
+   "approval_state": "MACHINE_ONLY",
+   "deductions": [
+    {
+     "lm": 15.82,
+     "what": "door / passage openings"
+    },
+    {
+     "lm": 5.543066,
+     "what": "glazing edge (floor-level window line)"
+    },
+    {
+     "lm": 2.555652,
+     "what": "boundary that is not a wall / column face"
+    }
+   ],
+   "element": "skirting",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "gross": 56.006096,
+   "line_id": "L-71e2e002a3af624097f0",
+   "net": 28.171589,
+   "range": null,
+   "range_inputs": null,
+   "rfi": "",
+   "room_id": "GF-RC99C2A",
+   "rule": "UP-CER-003",
+   "runs_lm": {
+    "boundary": 56.006096,
+    "column": 7.624896,
+    "door": 5.0,
+    "glazing_edge": 5.543066,
+    "other": 2.555652,
+    "passage": 10.82,
+    "perimeter": 56.006096,
+    "wall": 20.546693,
+    "window_threshold": 3.915789
+   }
+  },
+  {
+   "additions": [],
+   "approval_state": "MACHINE_ONLY",
+   "deductions": [],
+   "element": "skirting, boundary role unresolved",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "GF",
+   "gross": null,
+   "line_id": "L-e7dcdc69e1a2b24f8616",
+   "net": null,
+   "range": [
+    0.0,
+    7.831578
+   ],
+   "range_inputs": {
+    "unresolved_by_roles": {
+     "WINDOW+WINDOW_THRESHOLD": 7.831578
+    },
+    "v1_equal_split_credit_lm": 3.915789
+   },
+   "rfi": "F-17: 7.83 m of this room's boundary is skirted under one reading and not under the other (WINDOW+WINDOW_THRESHOLD 7.83 m) - e.g. a window frame drawn on the room face: floor-level glazing -> no skirt",
+   "room_id": "GF-RC99C2A",
+   "rule": "UP-CER-003",
+   "runs_lm": null
+  },
+  {
+   "additions": [],
+   "approval_state": "MACHINE_ONLY",
+   "deductions": [
+    {
+     "lm": 2.0,
+     "what": "door / passage openings"
+    },
+    {
+     "lm": 1.95492,
+     "what": "glazing edge (floor-level window line)"
+    }
+   ],
+   "element": "skirting",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "gross": 20.127876,
+   "line_id": "L-d32414916cfbd04c27be",
+   "net": 14.218037,
+   "range": null,
+   "range_inputs": null,
+   "rfi": "",
+   "room_id": "GF-R7512EA",
+   "rule": "UP-CER-003",
+   "runs_lm": {
+    "boundary": 20.127876,
+    "column": 0.525,
+    "door": 1.0,
+    "glazing_edge": 1.95492,
+    "other": 0.0,
+    "passage": 1.0,
+    "perimeter": 20.127876,
+    "wall": 13.693037,
+    "window_threshold": 1.95492
+   }
+  },
+  {
+   "additions": [],
+   "approval_state": "MACHINE_ONLY",
+   "deductions": [],
+   "element": "skirting, boundary role unresolved",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "GF",
+   "gross": null,
+   "line_id": "L-836720153cd9a3578f63",
+   "net": null,
+   "range": [
+    0.0,
+    3.909839
+   ],
+   "range_inputs": {
+    "unresolved_by_roles": {
+     "WINDOW+WINDOW_THRESHOLD": 3.909839
+    },
+    "v1_equal_split_credit_lm": 1.95492
+   },
+   "rfi": "F-17: 3.91 m of this room's boundary is skirted under one reading and not under the other (WINDOW+WINDOW_THRESHOLD 3.91 m) - e.g. a window frame drawn on the room face: floor-level glazing -> no skirt",
+   "room_id": "GF-R7512EA",
+   "rule": "UP-CER-003",
+   "runs_lm": null
+  },
+  {
+   "additions": [],
+   "approval_state": "MACHINE_ONLY",
+   "deductions": [
+    {
+     "lm": 1.8,
+     "what": "door / passage openings"
+    },
+    {
+     "lm": 5.10186,
+     "what": "glazing edge (floor-level window line)"
+    }
+   ],
+   "element": "skirting",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "gross": 21.534453,
+   "line_id": "L-c47fc614ebc3ccde1091",
+   "net": 14.632594,
+   "range": null,
+   "range_inputs": null,
+   "rfi": "",
+   "room_id": "GF-R75FBAE",
+   "rule": "UP-CER-003",
+   "runs_lm": {
+    "boundary": 21.534453,
+    "column": 1.8,
+    "door": 1.8,
+    "glazing_edge": 5.10186,
+    "other": 0.0,
+    "passage": 0.0,
+    "perimeter": 21.534453,
+    "wall": 12.832594,
+    "window_threshold": 0.0
+   }
+  },
+  {
+   "additions": [],
+   "approval_state": "MACHINE_ONLY",
+   "deductions": [],
+   "element": "skirting",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "floor": "GF",
+   "gross": null,
+   "line_id": "L-40a9ccd14900d5e3cd7a",
+   "net": null,
+   "range": null,
+   "range_inputs": null,
+   "rfi": "",
+   "room_id": "GF-RA3AD49",
+   "rule": "UP-CER-004",
+   "runs_lm": {
+    "run_lm": 12.0,
+    "wall_tile_governing": null
+   }
+  },
+  {
+   "additions": [],
+   "approval_state": "MACHINE_ONLY",
+   "deductions": [
+    {
+     "lm": 1.7,
+     "what": "door / passage openings"
+    },
+    {
+     "lm": 0.3,
+     "what": "glazing edge (floor-level window line)"
+    }
+   ],
+   "element": "skirting",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "gross": 12.5,
+   "line_id": "L-bb0ea96508a0dc69603c",
+   "net": 10.2,
+   "range": null,
+   "range_inputs": null,
+   "rfi": "",
+   "room_id": "GF-R51E127",
+   "rule": "UP-CER-003",
+   "runs_lm": {
+    "boundary": 12.5,
+    "column": 0.125,
+    "door": 1.7,
+    "glazing_edge": 0.3,
+    "other": 0.0,
+    "passage": 0.0,
+    "perimeter": 12.5,
+    "wall": 10.075,
+    "window_threshold": 0.3
+   }
+  },
+  {
+   "additions": [],
+   "approval_state": "MACHINE_ONLY",
+   "deductions": [],
+   "element": "skirting, boundary role unresolved",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "GF",
+   "gross": null,
+   "line_id": "L-9b43782b7324e9de5a72",
+   "net": null,
+   "range": [
+    0.0,
+    0.6
+   ],
+   "range_inputs": {
+    "unresolved_by_roles": {
+     "WINDOW+WINDOW_THRESHOLD": 0.6
+    },
+    "v1_equal_split_credit_lm": 0.3
+   },
+   "rfi": "F-17: 0.60 m of this room's boundary is skirted under one reading and not under the other (WINDOW+WINDOW_THRESHOLD 0.60 m) - e.g. a window frame drawn on the room face: floor-level glazing -> no skirt",
+   "room_id": "GF-R51E127",
+   "rule": "UP-CER-003",
+   "runs_lm": null
+  },
+  {
+   "additions": [],
+   "approval_state": "MACHINE_ONLY",
+   "deductions": [],
+   "element": "skirting",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "floor": "GF",
+   "gross": null,
+   "line_id": "L-4bd8a3fd8391d26a6f4a",
+   "net": null,
+   "range": null,
+   "range_inputs": null,
+   "rfi": "",
+   "room_id": "GF-RD6F891",
+   "rule": "UP-CER-004",
+   "runs_lm": {
+    "run_lm": 6.224665,
+    "wall_tile_governing": null
+   }
+  },
+  {
+   "additions": [],
+   "approval_state": "MACHINE_ONLY",
+   "deductions": [],
+   "element": "skirting",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "floor": "GF",
+   "gross": null,
+   "line_id": "L-5158beec5e1254901b9d",
+   "net": null,
+   "range": null,
+   "range_inputs": null,
+   "rfi": "",
+   "room_id": "GF-RB62B55",
+   "rule": "UP-CER-004",
+   "runs_lm": {
+    "run_lm": 6.7,
+    "wall_tile_governing": null
+   }
+  },
+  {
+   "additions": [],
+   "approval_state": "MACHINE_ONLY",
+   "deductions": [
+    {
+     "lm": 2.5,
+     "what": "door / passage openings"
+    },
+    {
+     "lm": 0.5,
+     "what": "glazing edge (floor-level window line)"
+    },
+    {
+     "lm": 2.2,
+     "what": "boundary that is not a wall / column face"
+    }
+   ],
+   "element": "skirting",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "gross": 7.6,
+   "line_id": "L-af6fb2d3474c5fbdb80a",
+   "net": 1.9,
+   "range": null,
+   "range_inputs": null,
+   "rfi": "",
+   "room_id": "GF-RC06FED",
+   "rule": "UP-CER-003",
+   "runs_lm": {
+    "boundary": 7.6,
+    "column": 0.1,
+    "door": 0.0,
+    "glazing_edge": 0.5,
+    "other": 2.2,
+    "passage": 2.5,
+    "perimeter": 7.6,
+    "wall": 1.8,
+    "window_threshold": 0.5
+   }
+  },
+  {
+   "additions": [],
+   "approval_state": "MACHINE_ONLY",
+   "deductions": [],
+   "element": "skirting, boundary role unresolved",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "GF",
+   "gross": null,
+   "line_id": "L-73ff85e30e3a8c639e20",
+   "net": null,
+   "range": [
+    0.0,
+    1.0
+   ],
+   "range_inputs": {
+    "unresolved_by_roles": {
+     "WINDOW+WINDOW_THRESHOLD": 1.0
+    },
+    "v1_equal_split_credit_lm": 0.5
+   },
+   "rfi": "F-17: 1.00 m of this room's boundary is skirted under one reading and not under the other (WINDOW+WINDOW_THRESHOLD 1.00 m) - e.g. a window frame drawn on the room face: floor-level glazing -> no skirt",
+   "room_id": "GF-RC06FED",
+   "rule": "UP-CER-003",
+   "runs_lm": null
+  },
+  {
+   "additions": [],
+   "approval_state": "MACHINE_ONLY",
+   "deductions": [],
+   "element": "skirting",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "floor": "GF",
+   "gross": null,
+   "line_id": "L-776915ceb69c07eba654",
+   "net": null,
+   "range": null,
+   "range_inputs": null,
+   "rfi": "",
+   "room_id": "GF-RF38DAF",
+   "rule": "UP-CER-004",
+   "runs_lm": {
+    "run_lm": 6.614038,
+    "wall_tile_governing": null
+   }
+  },
+  {
+   "additions": [],
+   "approval_state": "MACHINE_ONLY",
+   "deductions": [],
+   "element": "skirting",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "floor": "GF",
+   "gross": null,
+   "line_id": "L-8a815b997b2d23aed791",
+   "net": null,
+   "range": null,
+   "range_inputs": null,
+   "rfi": "",
+   "room_id": "GF-RB28769",
+   "rule": "UP-CER-004",
+   "runs_lm": {
+    "run_lm": 5.409808,
+    "wall_tile_governing": null
+   }
+  },
+  {
+   "additions": [],
+   "approval_state": "MACHINE_ONLY",
+   "deductions": [],
+   "element": "skirting",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "floor": "GF",
+   "gross": null,
+   "line_id": "L-54341b36ecb8a09f513f",
+   "net": null,
+   "range": null,
+   "range_inputs": null,
+   "rfi": "",
+   "room_id": "GF-RDF7D28",
+   "rule": "UP-CER-004",
+   "runs_lm": {
+    "run_lm": 4.802961,
+    "wall_tile_governing": null
+   }
+  },
+  {
+   "additions": [],
+   "approval_state": "MACHINE_ONLY",
+   "deductions": [],
+   "element": "skirting",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "floor": "GF",
+   "gross": null,
+   "line_id": "L-e1b907410070277d9a7b",
+   "net": null,
+   "range": null,
+   "range_inputs": null,
+   "rfi": "",
+   "room_id": "GF-RFAD3C4",
+   "rule": "UP-CER-004",
+   "runs_lm": {
+    "run_lm": 4.8,
+    "wall_tile_governing": null
+   }
+  },
+  {
+   "additions": [],
+   "approval_state": "MACHINE_ONLY",
+   "deductions": [],
+   "element": "skirting",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "floor": "GF",
+   "gross": null,
+   "line_id": "L-dfe7bd2454b32f408e0c",
+   "net": null,
+   "range": null,
+   "range_inputs": null,
+   "rfi": "",
+   "room_id": "GF-RDBD4F9",
+   "rule": "UP-CER-004",
+   "runs_lm": {
+    "run_lm": 6.643202,
+    "wall_tile_governing": null
+   }
+  },
+  {
+   "additions": [],
+   "approval_state": "MACHINE_ONLY",
+   "deductions": [],
+   "element": "skirting",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "floor": "GF",
+   "gross": null,
+   "line_id": "L-3d97ac5b2acd90f1c0f5",
+   "net": null,
+   "range": null,
+   "range_inputs": null,
+   "rfi": "",
+   "room_id": "GF-R8496F0",
+   "rule": "UP-CER-004",
+   "runs_lm": {
+    "run_lm": 5.4,
+    "wall_tile_governing": null
+   }
+  },
+  {
+   "additions": [],
+   "approval_state": "MACHINE_ONLY",
+   "deductions": [],
+   "element": "skirting",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "floor": "GF",
+   "gross": null,
+   "line_id": "L-1cf6c336250d34f0a200",
+   "net": null,
+   "range": null,
+   "range_inputs": null,
+   "rfi": "",
+   "room_id": "GF-RD36087",
+   "rule": "UP-CER-004",
+   "runs_lm": {
+    "run_lm": 3.202961,
+    "wall_tile_governing": null
+   }
+  },
+  {
+   "additions": [],
+   "approval_state": "MACHINE_ONLY",
+   "deductions": [],
+   "element": "stair hall skirting",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "GF",
+   "gross": null,
+   "line_id": "L-47fa825d197d32754240",
+   "net": null,
+   "range": null,
+   "range_inputs": null,
+   "rfi": "STAIR_HALL_FINISH_NOT_ESTABLISHED (Q-S6-4): the stair enclosure's walls (skirting) carry no rule in the architectural scope; measured wall run shown, no finish assumed",
+   "room_id": "GF-R31F8AE",
+   "rule": "ARCH_MEASURE_V3",
+   "runs_lm": {
+    "perimeter_lm": 15.1,
+    "runs_lm": {
+     "boundary": 15.1,
+     "column": 1.3,
+     "door": 1.9,
+     "glazing_edge": 0.6,
+     "other": 0.0,
+     "passage": 0.9,
+     "perimeter": 15.1,
+     "wall": 9.8,
+     "window_threshold": 0.6
+    },
+    "wall_lm": 9.8
+   }
+  },
+  {
+   "additions": [],
+   "approval_state": "MACHINE_ONLY",
+   "deductions": [
+    {
+     "lm": 5.7,
+     "what": "door / passage openings"
+    },
+    {
+     "lm": 2.65232,
+     "what": "glazing edge (floor-level window line)"
+    }
+   ],
+   "element": "skirting",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "gross": 52.44,
+   "line_id": "L-ba3599ec2dc82c221617",
+   "net": 41.43536,
+   "range": null,
+   "range_inputs": null,
+   "rfi": "",
+   "room_id": "1F-R78C367",
+   "rule": "UP-CER-003",
+   "runs_lm": {
+    "boundary": 52.44,
+    "column": 3.375,
+    "door": 4.7,
+    "glazing_edge": 2.65232,
+    "other": 0.0,
+    "passage": 1.0,
+    "perimeter": 52.44,
+    "wall": 38.06036,
+    "window_threshold": 2.65232
+   }
+  },
+  {
+   "additions": [],
+   "approval_state": "MACHINE_ONLY",
+   "deductions": [],
+   "element": "skirting, boundary role unresolved",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "1F",
+   "gross": null,
+   "line_id": "L-079bc7669b2c68d5d11b",
+   "net": null,
+   "range": [
+    0.0,
+    5.30464
+   ],
+   "range_inputs": {
+    "unresolved_by_roles": {
+     "WINDOW+WINDOW_THRESHOLD": 5.30464
+    },
+    "v1_equal_split_credit_lm": 2.65232
+   },
+   "rfi": "F-17: 5.30 m of this room's boundary is skirted under one reading and not under the other (WINDOW+WINDOW_THRESHOLD 5.30 m) - e.g. a window frame drawn on the room face: floor-level glazing -> no skirt",
+   "room_id": "1F-R78C367",
+   "rule": "UP-CER-003",
+   "runs_lm": null
+  },
+  {
+   "additions": [],
+   "approval_state": "MACHINE_ONLY",
+   "deductions": [
+    {
+     "lm": 1.8,
+     "what": "door / passage openings"
+    },
+    {
+     "lm": 1.224887,
+     "what": "glazing edge (floor-level window line)"
+    }
+   ],
+   "element": "skirting",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "gross": 17.7,
+   "line_id": "L-c021ae79a3740089c3fe",
+   "net": 13.450226,
+   "range": null,
+   "range_inputs": null,
+   "rfi": "",
+   "room_id": "1F-RB72F22",
+   "rule": "UP-CER-003",
+   "runs_lm": {
+    "boundary": 17.7,
+    "column": 2.0,
+    "door": 1.8,
+    "glazing_edge": 1.224887,
+    "other": 0.0,
+    "passage": 0.0,
+    "perimeter": 17.7,
+    "wall": 11.450226,
+    "window_threshold": 1.224887
+   }
+  },
+  {
+   "additions": [],
+   "approval_state": "MACHINE_ONLY",
+   "deductions": [],
+   "element": "skirting, boundary role unresolved",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "1F",
+   "gross": null,
+   "line_id": "L-049dd2e6697b0fa9dba1",
+   "net": null,
+   "range": [
+    0.0,
+    2.449774
+   ],
+   "range_inputs": {
+    "unresolved_by_roles": {
+     "WINDOW+WINDOW_THRESHOLD": 2.449774
+    },
+    "v1_equal_split_credit_lm": 1.224887
+   },
+   "rfi": "F-17: 2.45 m of this room's boundary is skirted under one reading and not under the other (WINDOW+WINDOW_THRESHOLD 2.45 m) - e.g. a window frame drawn on the room face: floor-level glazing -> no skirt",
+   "room_id": "1F-RB72F22",
+   "rule": "UP-CER-003",
+   "runs_lm": null
+  },
+  {
+   "additions": [],
+   "approval_state": "MACHINE_ONLY",
+   "deductions": [
+    {
+     "lm": 1.7,
+     "what": "door / passage openings"
+    },
+    {
+     "lm": 1.644749,
+     "what": "glazing edge (floor-level window line)"
+    }
+   ],
+   "element": "skirting",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "gross": 22.15067,
+   "line_id": "L-309f118f6fce78b6c28e",
+   "net": 17.161172,
+   "range": null,
+   "range_inputs": null,
+   "rfi": "",
+   "room_id": "1F-R3CFCFD",
+   "rule": "UP-CER-003",
+   "runs_lm": {
+    "boundary": 22.15067,
+    "column": 1.7,
+    "door": 1.7,
+    "glazing_edge": 1.644749,
+    "other": 0.0,
+    "passage": 0.0,
+    "perimeter": 22.15067,
+    "wall": 15.461172,
+    "window_threshold": 1.644749
+   }
+  },
+  {
+   "additions": [],
+   "approval_state": "MACHINE_ONLY",
+   "deductions": [],
+   "element": "skirting, boundary role unresolved",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "1F",
+   "gross": null,
+   "line_id": "L-fbba0e0db25f6b481eaa",
+   "net": null,
+   "range": [
+    0.0,
+    3.289498
+   ],
+   "range_inputs": {
+    "unresolved_by_roles": {
+     "WINDOW+WINDOW_THRESHOLD": 3.289498
+    },
+    "v1_equal_split_credit_lm": 1.644749
+   },
+   "rfi": "F-17: 3.29 m of this room's boundary is skirted under one reading and not under the other (WINDOW+WINDOW_THRESHOLD 3.29 m) - e.g. a window frame drawn on the room face: floor-level glazing -> no skirt",
+   "room_id": "1F-R3CFCFD",
+   "rule": "UP-CER-003",
+   "runs_lm": null
+  },
+  {
+   "additions": [],
+   "approval_state": "MACHINE_ONLY",
+   "deductions": [
+    {
+     "lm": 1.8,
+     "what": "door / passage openings"
+    },
+    {
+     "lm": 0.77616,
+     "what": "glazing edge (floor-level window line)"
+    }
+   ],
+   "element": "skirting",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "gross": 17.4,
+   "line_id": "L-2f58111e59f0f5213c58",
+   "net": 14.04768,
+   "range": null,
+   "range_inputs": null,
+   "rfi": "",
+   "room_id": "1F-RED0D19",
+   "rule": "UP-CER-003",
+   "runs_lm": {
+    "boundary": 17.4,
+    "column": 0.855866,
+    "door": 1.8,
+    "glazing_edge": 0.77616,
+    "other": 0.0,
+    "passage": 0.0,
+    "perimeter": 17.4,
+    "wall": 13.191814,
+    "window_threshold": 0.77616
+   }
+  },
+  {
+   "additions": [],
+   "approval_state": "MACHINE_ONLY",
+   "deductions": [],
+   "element": "skirting, boundary role unresolved",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "1F",
+   "gross": null,
+   "line_id": "L-5438f973929f2a38004d",
+   "net": null,
+   "range": [
+    0.0,
+    1.55232
+   ],
+   "range_inputs": {
+    "unresolved_by_roles": {
+     "WINDOW+WINDOW_THRESHOLD": 1.55232
+    },
+    "v1_equal_split_credit_lm": 0.77616
+   },
+   "rfi": "F-17: 1.55 m of this room's boundary is skirted under one reading and not under the other (WINDOW+WINDOW_THRESHOLD 1.55 m) - e.g. a window frame drawn on the room face: floor-level glazing -> no skirt",
+   "room_id": "1F-RED0D19",
+   "rule": "UP-CER-003",
+   "runs_lm": null
+  },
+  {
+   "additions": [],
+   "approval_state": "MACHINE_ONLY",
+   "deductions": [
+    {
+     "lm": 1.9,
+     "what": "door / passage openings"
+    }
+   ],
+   "element": "skirting",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "gross": 16.2,
+   "line_id": "L-a8aea28451168e4032b6",
+   "net": 14.3,
+   "range": null,
+   "range_inputs": null,
+   "rfi": "",
+   "room_id": "1F-R0E919A",
+   "rule": "UP-CER-003",
+   "runs_lm": {
+    "boundary": 16.2,
+    "column": 0.5,
+    "door": 0.9,
+    "glazing_edge": 0.0,
+    "other": 0.0,
+    "passage": 1.0,
+    "perimeter": 16.2,
+    "wall": 13.8,
+    "window_threshold": 0.0
+   }
+  },
+  {
+   "additions": [],
+   "approval_state": "MACHINE_ONLY",
+   "deductions": [],
+   "element": "skirting",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "floor": "1F",
+   "gross": null,
+   "line_id": "L-313c694e63cb06d1047d",
+   "net": null,
+   "range": null,
+   "range_inputs": null,
+   "rfi": "",
+   "room_id": "1F-R26FA0D",
+   "rule": "UP-CER-004",
+   "runs_lm": {
+    "run_lm": 14.64,
+    "wall_tile_governing": null
+   }
+  },
+  {
+   "additions": [],
+   "approval_state": "MACHINE_ONLY",
+   "deductions": [],
+   "element": "skirting",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "floor": "1F",
+   "gross": null,
+   "line_id": "L-bf03318de6b28e36f342",
+   "net": null,
+   "range": null,
+   "range_inputs": null,
+   "rfi": "",
+   "room_id": "1F-R8BDA49",
+   "rule": "UP-CER-004",
+   "runs_lm": {
+    "run_lm": 7.6,
+    "wall_tile_governing": null
+   }
+  },
+  {
+   "additions": [],
+   "approval_state": "MACHINE_ONLY",
+   "deductions": [],
+   "element": "skirting",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "floor": "1F",
+   "gross": null,
+   "line_id": "L-e360b90359c5e3f3ac04",
+   "net": null,
+   "range": null,
+   "range_inputs": null,
+   "rfi": "",
+   "room_id": "1F-R48AA46",
+   "rule": "UP-CER-004",
+   "runs_lm": {
+    "run_lm": 7.6,
+    "wall_tile_governing": null
+   }
+  },
+  {
+   "additions": [],
+   "approval_state": "MACHINE_ONLY",
+   "deductions": [],
+   "element": "skirting",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "floor": "1F",
+   "gross": null,
+   "line_id": "L-1bac527d23d892c59f73",
+   "net": null,
+   "range": null,
+   "range_inputs": null,
+   "rfi": "",
+   "room_id": "1F-R48CDA5",
+   "rule": "UP-CER-004",
+   "runs_lm": {
+    "run_lm": 7.4,
+    "wall_tile_governing": null
+   }
+  },
+  {
+   "additions": [],
+   "approval_state": "MACHINE_ONLY",
+   "deductions": [],
+   "element": "skirting",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "floor": "1F",
+   "gross": null,
+   "line_id": "L-b05808c426812b6d6eea",
+   "net": null,
+   "range": null,
+   "range_inputs": null,
+   "rfi": "",
+   "room_id": "1F-RED23B8",
+   "rule": "UP-CER-004",
+   "runs_lm": {
+    "run_lm": 6.2,
+    "wall_tile_governing": null
+   }
+  },
+  {
+   "additions": [],
+   "approval_state": "MACHINE_ONLY",
+   "deductions": [],
+   "element": "skirting",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "floor": "1F",
+   "gross": null,
+   "line_id": "L-09f96f5435f19f8b15ff",
+   "net": null,
+   "range": null,
+   "range_inputs": null,
+   "rfi": "",
+   "room_id": "1F-R52AC05",
+   "rule": "UP-CER-004",
+   "runs_lm": {
+    "run_lm": 5.14,
+    "wall_tile_governing": null
+   }
+  },
+  {
+   "additions": [],
+   "approval_state": "MACHINE_ONLY",
+   "deductions": [
+    {
+     "lm": 1.7,
+     "what": "door / passage openings"
+    },
+    {
+     "lm": 0.6,
+     "what": "glazing edge (floor-level window line)"
+    }
+   ],
+   "element": "skirting",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "2F",
+   "gross": 18.9,
+   "line_id": "L-d057b5b05b9eaf131b59",
+   "net": 16.0,
+   "range": null,
+   "range_inputs": null,
+   "rfi": "",
+   "room_id": "2F-R1DB2D2",
+   "rule": "UP-CER-003",
+   "runs_lm": {
+    "boundary": 18.9,
+    "column": 1.1,
+    "door": 1.7,
+    "glazing_edge": 0.6,
+    "other": 0.0,
+    "passage": 0.0,
+    "perimeter": 18.9,
+    "wall": 14.9,
+    "window_threshold": 0.6
+   }
+  },
+  {
+   "additions": [],
+   "approval_state": "MACHINE_ONLY",
+   "deductions": [],
+   "element": "skirting, boundary role unresolved",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "2F",
+   "gross": null,
+   "line_id": "L-b557f2847c62d90e1aa4",
+   "net": null,
+   "range": [
+    0.0,
+    1.2
+   ],
+   "range_inputs": {
+    "unresolved_by_roles": {
+     "WINDOW+WINDOW_THRESHOLD": 1.2
+    },
+    "v1_equal_split_credit_lm": 0.6
+   },
+   "rfi": "F-17: 1.20 m of this room's boundary is skirted under one reading and not under the other (WINDOW+WINDOW_THRESHOLD 1.20 m) - e.g. a window frame drawn on the room face: floor-level glazing -> no skirt",
+   "room_id": "2F-R1DB2D2",
+   "rule": "UP-CER-003",
+   "runs_lm": null
+  },
+  {
+   "additions": [],
+   "approval_state": "MACHINE_ONLY",
+   "deductions": [],
+   "element": "skirting",
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "floor": "2F",
+   "gross": null,
+   "line_id": "L-2811d56ed05e19d634b3",
+   "net": null,
+   "range": null,
+   "range_inputs": null,
+   "rfi": "",
+   "room_id": "2F-RE83BED",
+   "rule": "UP-CER-004",
+   "runs_lm": {
+    "run_lm": 8.3,
+    "wall_tile_governing": null
+   }
+  },
+  {
+   "additions": [],
+   "approval_state": "MACHINE_ONLY",
+   "deductions": [],
+   "element": "stair hall skirting",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "2F",
+   "gross": null,
+   "line_id": "L-b8d4a7f04277deb1b0b0",
+   "net": null,
+   "range": null,
+   "range_inputs": null,
+   "rfi": "STAIR_HALL_FINISH_NOT_ESTABLISHED (Q-S6-4): the stair enclosure's walls (skirting) carry no rule in the architectural scope; measured wall run shown, no finish assumed",
+   "room_id": "2F-R4D1B62",
+   "rule": "ARCH_MEASURE_V3",
+   "runs_lm": {
+    "perimeter_lm": 22.0,
+    "runs_lm": {
+     "boundary": 22.0,
+     "column": 1.5,
+     "door": 1.9,
+     "glazing_edge": 1.1,
+     "other": 0.0,
+     "passage": 1.0,
+     "perimeter": 22.0,
+     "wall": 15.4,
+     "window_threshold": 1.1
+    },
+    "wall_lm": 15.4
+   }
+  }
+ ],
+ "source": "own V3.0.17 run (research/agents_t254/v3017_run.py on research/agents_t167/v304_run.py) on Drive 'Alsenan chalet project' P7757_DXF_COMPRESSED.zip -> P7757.dxf (ab54dd55) and 'ST7757 dxf.dxf' (9f9d1179); room records from the same run's v29 ARCH_ROOMS.json"
+}
