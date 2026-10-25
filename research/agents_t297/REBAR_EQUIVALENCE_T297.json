@@ -1,0 +1,21 @@
+{
+ "schema": "T297_REBAR_EQUIVALENCE",
+ "base": "ARCH_TAKEOFF_V3.0.16",
+ "base_csv_sha256": "a4dc01dd5a309bb38b6bff54b486e9090b6d571a0044101197ec650f1cf3d00a",
+ "later_file": "V3_0_17_BOQ_LINES.json",
+ "later_csv_sha256": "429008af128b40180f3471100effb27a3775fdbd8d13e4becf80b8e0fa654b97",
+ "later_json_sha256": "366be2f8ac8b2fc1adab82824484cbeb12108073f537f3f440fa91c6174dc2b1",
+ "later_lines": 3700,
+ "rebar_lines_base": 2505,
+ "rebar_lines_later": 2505,
+ "same_line_ids": true,
+ "lines_differing_on": [
+  "evidence_state",
+  "measured_net",
+  "bounded_range",
+  "location",
+  "physical_element",
+  "unit"
+ ],
+ "differing": []
+}

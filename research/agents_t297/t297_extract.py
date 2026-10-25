@@ -54,6 +54,8 @@ def main(argv=None):
     ap = argparse.ArgumentParser()
     ap.add_argument("run", help="the V3.0.16 output directory (holding V3_0_16_BOQ_LINES.json)")
     ap.add_argument("--out", required=True)
+    ap.add_argument("--also", help="a later candidate run dir (e.g. <run>/v3017 holding V3_0_17_BOQ_LINES.json): "
+                                   "writes REBAR_EQUIVALENCE_T297.json (are its reinforcement lines the same?)")
     a = ap.parse_args(argv)
     run = Path(a.run)
     jp, cp = run / "V3_0_16_BOQ_LINES.json", run / "V3_0_16_BOQ_LINES.csv"
@@ -69,6 +71,22 @@ def main(argv=None):
     body = ",\n".join(json.dumps(x, ensure_ascii=False, separators=(",", ":")) for x in out["lines"])
     (o / "CANDIDATE_V3016_REBAR_LINES.json").write_text(head + ', "lines": [\n' + body + "\n]}\n", encoding="utf-8")
     print("lines", len(L), "rebar", len(reb), "csv", out["candidate_lines_csv_sha256"])
+    if a.also:
+        later = Path(a.also)
+        jp2 = sorted(later.glob("V3_0_*_BOQ_LINES.json"))[-1]
+        L2 = _lines(jp2)
+        reb2 = {l["line_id"]: l for l in L2 if is_rebar(l)}
+        key = ("evidence_state", "measured_net", "bounded_range", "location", "physical_element", "unit")
+        diff = sorted(k for k, l in ((l["line_id"], l) for l in reb)
+                      if k not in reb2 or any(l.get(x) != reb2[k].get(x) for x in key))
+        eq = {"schema": "T297_REBAR_EQUIVALENCE", "base": out["candidate"],
+              "base_csv_sha256": out["candidate_lines_csv_sha256"], "later_file": jp2.name,
+              "later_csv_sha256": _sha(jp2.with_suffix(".csv")), "later_json_sha256": _sha(jp2),
+              "later_lines": len(L2), "rebar_lines_base": len(reb), "rebar_lines_later": len(reb2),
+              "same_line_ids": set(reb2) == {l["line_id"] for l in reb}, "lines_differing_on": list(key),
+              "differing": diff}
+        (o / "REBAR_EQUIVALENCE_T297.json").write_text(json.dumps(eq, indent=1) + "\n", encoding="utf-8")
+        print("later", jp2.name, "rebar", len(reb2), "differing", len(diff))
     return 0
 
 

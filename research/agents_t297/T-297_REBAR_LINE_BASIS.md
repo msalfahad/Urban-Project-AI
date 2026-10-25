@@ -12,7 +12,10 @@ P7757_DXF_COMPRESSED.zip (`ab54dd55`): `research/agents_t167/v304_run.py` then `
 (ARCH_TAKEOFF_V3.0.16, 3,699 lines; lines csv **`a4dc01dd`** = the candidate of record, reproduced). Extract:
 `python3 -I research/agents_t297/t297_extract.py <run>/v3016 --out research/agents_t297` ->
 `CANDIDATE_V3016_REBAR_LINES.json` (every line of item STR.REBAR / trade REINFORCEMENT: **2,505 lines**; ids, states,
-quantities, ledger keys, printed readings; long texts cut at 240 characters). Ledger:
+quantities, ledger keys, printed readings; long texts cut at 240 characters). **V3.0.17** (T-254, merged during this
+task) was built on the same run with `research/agents_t254/v3017_direct.py` (csv `429008af`, json `366be2f8` = T-254's
+own): its 2,505 reinforcement lines equal V3.0.16's line by line (ids, states, quantities, ranges, locations;
+`--also` -> `REBAR_EQUIVALENCE_T297.json`, differing 0), so the ledger applies to V3.0.17 unchanged. Ledger:
 `python3 -I research/agents_t297/t297_alsenan.py --write | --check` -> `LINE_BASIS_T297.csv` (one row per line),
 `LINE_BASIS_SUMMARY_T297.json`, `LINE_BASIS_CONSUMER_T297.json` (the lane I shape). Rules: `t297_ledger.py`
 (LINE_BASIS_LEDGER_V1, stdlib). Tests: `tests/t297_rebar_line_basis` (villa K297 hand fixture + Alsenan rebuild).

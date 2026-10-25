@@ -86,3 +86,11 @@ def test_alsenan_pins(built):
     assert by["L-03062228b230a7fff3bd"].quantity_kg == 53.096     # COL-1F-35 C2: 8 x 4.20 x 256 / 162
     assert round(by["L-00fbbdf4ad454311231c"].quantity_kg, 6) == 40.177778 and \
         by["L-00fbbdf4ad454311231c"].status == "CONVENTION"      # F5 bottom long: 20 x 2.26 x 0.888889
+
+
+def test_the_ledger_holds_for_the_v3017_candidate_too():
+    """T-254 (V3.0.17, csv 429008af) merged during this task: its 2,505 reinforcement lines equal V3.0.16's line by
+    line (ids, states, quantities, ranges, locations), so every row of this ledger applies to V3.0.17 unchanged"""
+    eq = json.loads((HERE / "REBAR_EQUIVALENCE_T297.json").read_text(encoding="utf-8"))
+    assert eq["later_csv_sha256"].startswith("429008af") and eq["later_json_sha256"].startswith("366be2f8")
+    assert eq["same_line_ids"] and eq["differing"] == [] and eq["rebar_lines_later"] == eq["rebar_lines_base"] == 2505
