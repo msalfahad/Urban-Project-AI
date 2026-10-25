@@ -30,6 +30,18 @@ T287 = ROOT / "research/agents_t287/T-287_DESIGNER_GAP_SEARCH.md"
 
 GB, COL = "STR.CONC.GROUND_BEAM", "STR.CONC.COLUMN"
 CB5 = {"L-7d70692d03102a2dc306": "C3 (365)", "L-84bf7fb482a98fdbe482": "C5 (35F)"}
+# T-254 (i): run 107+7CE#1 (line BAND0009). The merged T-242 / T-253 plan 0.1118 m2 carries a 'beam strip beside neck
+# COL:17BD' of 0.0026 m2. By entity handle: the neck outline 17BD spans BOTH face lines (107 and 7CE) across the full
+# 0.300 m width and 0.300 m along the run; the run's face lines end inside it (7CE 0.0261 m, 107 0.2911 m past the neck
+# face) and neither reaches past its far face, so no part of the strip lies outside the neck: it is neck concrete
+# (counted once, in the neck), never beam. Dropped: 0.3639 x 0.30 = 0.10917 m2 x D 0.95 = 0.1037115 m3, as the
+# Checker's own T-180 slot found (Verifier 2026-10-24 12:10: 'the neck covers the full 0.30 width').
+STUB = {"L-ff727b2a52e39509a659": {
+    "ledger": 0.1062, "value": 0.103712,
+    "own_check": "Verifier 2026-10-24 12:10 (T-180 slot): the neck covers the full 0.30 width; T-254 (i) by handle: "
+                 "neck 17BD spans face lines 107 / 7CE over 0.300 x 0.300, the strip lies inside it",
+    "formula": "run 107+7CE#1 face to face 0.3639 m x 0.30 x D 0.95 (top +0.95, N.G. +-0.00) = 0.103712 m3; the "
+               "0.0026 m2 strip beside neck 17BD lies inside the neck (dropped, T-254 (i))"}}
 ANNEX_READINGS = ("literal 'FOLLOW ARCH.' from the annex +0.25 to N.G. +-0.00 = 0.25 m (shown, never adopted)",
                   "the printed exterior section 'Ground Beams for exterior walls' (three bar zones) cannot be built in "
                   "0.25 m: depth not printed (designer D-35 annex)")
@@ -91,6 +103,13 @@ def record(row, before):
                     status="DRAWING-CONFIRMED",
                     own_check="Verifier 2026-10-25 07:59 own C5 + C3 = 1.430 m3 DRAWING-DERIVED (not VERIFIED)",
                     formula=f"section x 5.20 m (base +0.25 to the 1F structure) = {v:.4f} m3 (T-287 G1)")
+    if lid in STUB:
+        x = STUB[lid]
+        assert abs(_f(row["drawing_qty_m3"]) - x["ledger"]) < 1e-9, "the ledger moved: re-read the stub"
+        return dict(base, action="REBASE", value=x["value"],
+                    support={"kind": "TWO_PRINTED_LEVELS", "printed": row["printed_support"][:600],
+                             "sheets": row["sheets_searched"]},
+                    status="DRAWING-CONFIRMED", own_check=x["own_check"], formula=x["formula"])
     if st == "DRAWING-CONFIRMED":
         v = _f(row["drawing_qty_m3"])
         return dict(base, action="REBASE", value=v,
