@@ -1,0 +1,37 @@
+{
+ "schema": "T293_OBLIQUE_BAND_PAIRING",
+ "structural_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+ "overlay_sha256": "771351ad4034f516b77302124d652b06d46bcbd62713fa8070d976f918426df0",
+ "registration": {
+  "k_px_per_mm": 0.02953,
+  "x0_mm": 79570.0,
+  "y1_mm": 51100.0,
+  "votes": 133
+ },
+ "rule": "nearest run by the band centroid vs the mean midpoint of the run's face lines; refused if two bands take one run",
+ "bands": {
+  "BAND0037.1": {
+   "run": "17E+17F#1",
+   "centroid_distance_mm": 3.9,
+   "next_run": "182+183#1",
+   "next_distance_mm": 1356.8
+  },
+  "BAND0038": {
+   "run": "180+181#1",
+   "centroid_distance_mm": 25.5,
+   "next_run": "17E+17F#1",
+   "next_distance_mm": 1752.0
+  },
+  "BAND0039": {
+   "run": "182+183#1",
+   "centroid_distance_mm": 17.2,
+   "next_run": "17E+17F#1",
+   "next_distance_mm": 1339.8
+  }
+ },
+ "unpaired_runs_before": [
+  "17E+17F#1",
+  "180+181#1",
+  "182+183#1"
+ ]
+}
