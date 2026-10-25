@@ -359,6 +359,97 @@ def test_census_refuses_a_drifted_material_file_and_writes_nothing(v, capsys):
     assert not out.exists()
 
 
+# T-275 r2 (Checker 2026-10-25 05:55): guard the READER. Every file census_rows opens that no manifest hashes (the run's
+# structural/FAMILY_COVERAGE.csv; MATERIAL_RESULTS.json and structural/FAMILY_COVERAGE.csv beside candidate lines) is
+# refused by sealed sha256 or sealed name before the census runs; nothing is written.
+FC_TEXT = "FAMILY,STATUS\nSG_NOT_A_FAMILY,MEASURED\n"          # a family the census ignores: no quantity changes
+
+
+def candidate_in_folder(v, folder="cand"):
+    (v["dir"] / folder).mkdir()
+    return make_candidate(v, name=f"{folder}/SG1C_BOQ_LINES.json")
+
+
+def sealed_reg(tmp_path, data, name="REG_R2.json"):
+    return wj(tmp_path / name, {"schema": G.SEALED_SCHEMA, "entries": [
+        {"kind": "SEALED_FILE", "project_id": "SG-SEALED", "label": "a sealed test take-off", "sha256": h(data),
+         "names": ["sealed_takeoff.json"]}]})
+
+
+@pytest.fixture()
+def no_census(monkeypatch):
+    from engine.source import coverage_census_v2 as CS2
+    monkeypatch.setattr(CS2, "census", lambda *a, **k: (_ for _ in ()).throw(AssertionError("census ran")))
+
+
+def test_census_extra_files_guarded_listed_not_pinned_and_hand_values_unchanged(v, capsys, tmp_path):
+    run = make_run(v)
+    (run / "structural").mkdir()
+    (run / "structural" / "FAMILY_COVERAGE.csv").write_text(FC_TEXT, encoding="utf-8")
+    cl, cm = candidate_in_folder(v)
+    wj(cl.parent / "MATERIAL_RESULTS.json", {"results": []})
+    (cl.parent / "structural").mkdir()
+    (cl.parent / "structural" / "FAMILY_COVERAGE.csv").write_text(FC_TEXT, encoding="utf-8")
+    reg = sealed_reg(tmp_path, b"some other sealed bytes")                       # registry that matches nothing
+    outs = []
+    for n in ("c1", "c2"):
+        out = v["dir"] / n
+        assert SG.main(["census", "--released", str(run), "--candidate", str(cl), str(cm), "--out", str(out),
+                        "--sealed-registry", str(reg)]) == 0
+        outs.append(out)
+    capsys.readouterr()
+    rec = json.loads((outs[0] / "GUARD_RECORD.json").read_text(encoding="utf-8"))
+    fc_sha = h(FC_TEXT.encode())
+    want = {"released:run:structural/FAMILY_COVERAGE.csv": fc_sha,
+            "candidate:SG1C_BOQ_LINES:structural/FAMILY_COVERAGE.csv": fc_sha,
+            "candidate:SG1C_BOQ_LINES:MATERIAL_RESULTS.json": h((cl.parent / "MATERIAL_RESULTS.json").read_bytes())}
+    inputs = {i["role"]: i["sha256"] for i in rec["inputs"]}
+    assert {k: inputs.get(k) for k in want} == want                              # hashed through guard_inputs
+    assert {x["role"]: x["sha256"] for x in rec["not_pinned"]} == want           # and still declared NOT PINNED
+    assert (outs[0] / "GUARD_RECORD.json").read_bytes() == (outs[1] / "GUARD_RECORD.json").read_bytes()
+    c = json.loads((outs[0] / "SG1C_BOQ_LINES_CENSUS_V2.json").read_text(encoding="utf-8"))
+    foot = next(x for x in c["rows"] if "STR.CONC.FOOTING" in (x.get("item_codes") or []))
+    assert abs(foot["by_unit"]["m3"]["found_qty"] - 3.28) < 1e-9               # 2.000 + 1.280 m3, by hand
+
+
+def test_sealed_sha256_as_candidate_side_material_results_refused(v, capsys, no_census, tmp_path):
+    run = make_run(v)
+    cl, cm = candidate_in_folder(v)
+    mat = wj(cl.parent / "MATERIAL_RESULTS.json", {"results": [{"sealed": "take-off figures"}]})
+    reg = sealed_reg(tmp_path, mat.read_bytes())
+    out = v["dir"] / "census"
+    err = refused(capsys, ["census", "--released", str(run), "--candidate", str(cl), str(cm), "--out", str(out),
+                           "--sealed-registry", str(reg)], "SEALED")
+    assert "candidate:SG1C_BOQ_LINES:MATERIAL_RESULTS.json" in err and "whatever its name" in err
+    assert not out.exists()                                                      # --out not created
+
+
+def test_sealed_sha256_as_run_side_family_coverage_refused(v, capsys, no_census, tmp_path):
+    run = make_run(v)
+    (run / "structural").mkdir()
+    fc = run / "structural" / "FAMILY_COVERAGE.csv"
+    fc.write_text("FAMILY,STATUS\nSEALED_TAKEOFF,MEASURED\n", encoding="utf-8")
+    reg = sealed_reg(tmp_path, fc.read_bytes())
+    out = v["dir"] / "census"
+    err = refused(capsys, ["census", "--released", str(run), "--out", str(out), "--sealed-registry", str(reg)],
+                  "SEALED")
+    assert "released:run:structural/FAMILY_COVERAGE.csv" in err
+    assert not out.exists()
+
+
+def test_sealed_sha256_as_candidate_side_family_coverage_refused(v, capsys, no_census, tmp_path):
+    run = make_run(v)
+    cl, cm = candidate_in_folder(v)
+    (cl.parent / "structural").mkdir()
+    fc = cl.parent / "structural" / "FAMILY_COVERAGE.csv"
+    fc.write_text("FAMILY,STATUS\nSEALED_TAKEOFF,MEASURED\n", encoding="utf-8")
+    reg = sealed_reg(tmp_path, fc.read_bytes())
+    out = v["dir"] / "census"
+    refused(capsys, ["census", "--released", str(run), "--candidate", str(cl), str(cm), "--out", str(out),
+                     "--sealed-registry", str(reg)], "SEALED")
+    assert not out.exists()
+
+
 # ------------------------------------------------------------------------------------------------------ hygiene
 def test_wrapper_is_unwired_and_names_no_project():
     src = (ROOT / "tools" / "scoreboard_guarded.py").read_text(encoding="utf-8")

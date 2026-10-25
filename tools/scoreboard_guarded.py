@@ -20,9 +20,11 @@ Rules (each is a test in tests/t275_scoreboard_guard/; refusal = exit 2, every r
   (URBAN_BASELINE_MANIFEST_V1, T-165) with status REPRODUCED or RUN_NO_EXPECTED_FIGURES and at least one pinned
   drawing (MANIFEST_MISSING / MANIFEST_INVALID). Every run output the call reads that the manifest hashes
   (BOQ_LINES.json always; MATERIAL_RESULTS.json and COVERAGE.json for the census) must have the manifest's sha256
-  (MANIFEST_MISMATCH: a drifted or foreign run). Run files the manifest does not hash (BOQ_RELEASE_REPORT.json,
-  structural/FAMILY_COVERAGE.csv) are read as the run wrote them and listed in the guard record as NOT PINNED with
-  their sha256 (research/agents_t275: the runner should hash them; a written proposal, that runner is not touched).
+  (MANIFEST_MISMATCH: a drifted or foreign run). Files no manifest hashes (BOQ_RELEASE_REPORT.json and
+  structural/FAMILY_COVERAGE.csv of a run; MATERIAL_RESULTS.json and structural/FAMILY_COVERAGE.csv beside candidate
+  lines, read by the census) still pass the sealed check of rule 5 before anything is read or written (T-275 r2:
+  guard the reader, not only the comparison); they are listed in the guard record as NOT PINNED with their sha256
+  (research/agents_t275: the runner should hash them; a written proposal, that runner is not touched).
 2 PINNED CANDIDATE. Candidate lines need their candidate manifest (URBAN_CANDIDATE_MANIFEST_V1 from
   tools/v30_gate_b_v2.py `manifest`): lines sha256 and line count are the manifest's (MANIFEST_MISMATCH).
 3 IDENTITY BY DRAWING sha256, NEVER BY LABEL (tools/v30_gate_b_v2.py check_side, unchanged): every line's revision
@@ -178,6 +180,27 @@ def one_project(pinned, reg):
         raise Refused(problems)
 
 
+def census_extra_files(runs, candidates):
+    """[(role, path, reason)] of every file census_rows opens that no manifest hashes: the run's
+    structural/FAMILY_COVERAGE.csv, and MATERIAL_RESULTS.json + structural/FAMILY_COVERAGE.csv beside candidate lines.
+    Only files that exist (census_rows reads only those); each goes through G.guard_inputs (sealed sha256 or name)
+    before anything is read or written, and is listed NOT PINNED in the guard record (T-275 r2)."""
+    out = []
+    for side, d in runs:
+        p = Path(d) / FAMILY_COVERAGE
+        if p.is_file():
+            out.append((f"{side}:{FAMILY_COVERAGE.as_posix()}", p,
+                        "read from the pinned run folder; the baseline manifest does not hash it"))
+    for side, lines, _ in candidates:
+        d = Path(lines).parent
+        for rel in ("MATERIAL_RESULTS.json", FAMILY_COVERAGE.as_posix()):
+            p = d / rel
+            if p.is_file():
+                out.append((f"{side}:{rel}", p,
+                            "read beside the candidate lines; the candidate manifest does not hash it"))
+    return out
+
+
 def guard(*, runs=(), candidates=(), files=None, registry=None, census=False):
     """every check before anything is scored or written. runs = [(side, dir)], candidates = [(side, lines, manifest)],
     files = {role: path} of every other input. -> the guard record (section 6)."""
@@ -191,6 +214,8 @@ def guard(*, runs=(), candidates=(), files=None, registry=None, census=False):
     for side, lines, man in candidates:
         roles[f"{side}:lines"] = lines
         roles[f"{side}:manifest"] = man
+    for role, p, _ in census_extra_files(runs, candidates) if census else ():
+        roles[role] = p              # T-275 r2: every file census_rows opens is sealed-checked before anything runs
     shas = G.guard_inputs({k: v for k, v in roles.items() if v is not None}, reg)
     pinned = []
     problems = []
@@ -208,21 +233,13 @@ def guard(*, runs=(), candidates=(), files=None, registry=None, census=False):
         raise Refused(problems)
     one_project(pinned, reg)
     unpinned = []
-    for side, d in runs:
-        d = Path(d)
-        extra = [FAMILY_COVERAGE] if census else [Path(RELEASE_REPORT)]
-        for rel in extra:
-            p = d / rel
-            if p.is_file():
-                unpinned.append({"role": f"{side}:{rel.as_posix()}", "file": p.name, "sha256": G.sha256_file(p),
-                                 "reason": "read from the pinned run folder; the baseline manifest does not hash it"})
-    for side, lines, _ in candidates if census else ():
-        d = Path(lines).parent
-        for rel in ("MATERIAL_RESULTS.json", FAMILY_COVERAGE.as_posix()):
-            p = d / rel
-            if p.is_file():
-                unpinned.append({"role": f"{side}:{rel}", "file": p.name, "sha256": G.sha256_file(p),
-                                 "reason": "read beside the candidate lines; the candidate manifest does not hash it"})
+    for side, d in runs if not census else ():
+        p = Path(d) / RELEASE_REPORT
+        if p.is_file():
+            unpinned.append({"role": f"{side}:{RELEASE_REPORT}", "file": p.name, "sha256": G.sha256_file(p),
+                             "reason": "read from the pinned run folder; the baseline manifest does not hash it"})
+    for role, p, reason in census_extra_files(runs, candidates) if census else ():
+        unpinned.append({"role": role, "file": p.name, "sha256": shas[role], "reason": reason})
     reg_path = Path(registry) if registry else G.DEFAULT_SEALED_REGISTRY
     return {"schema": RECORD_SCHEMA, "sealed_registry": {"file": reg_path.name,
                                                          "sha256": G.sha256_file(reg_path)} if not isinstance(
