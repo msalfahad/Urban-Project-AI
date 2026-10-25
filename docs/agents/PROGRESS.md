@@ -1,13 +1,35 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
 Plain words, no task numbers. Measured numbers come from SCOREBOARD.md; anything not measured says so.
-Last update: 2026-10-25 12:15 UTC (Lead). Previous version: 2026-10-25 10:15 UTC. The released numbers did not change
+Last update: 2026-10-25 14:15 UTC (Lead). Previous version: 2026-10-25 12:15 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released default V2.9 + route G untouched). Your measure: whole BOQ
-lines independently verified, and trades that can be scored. The checker has measured one candidate line whole (the
-concrete slab, 60.28 m3 against the engine's 60.28), but the real export cannot yet count it as a verified whole line:
-its completeness check still reads an older split of the slab lines, and waterproofing has no completeness list at all.
-So the export shows 0 whole verified lines today, 0 released. Fixing that is now first (your 11:51 decision). No
+lines independently verified. The real export of the candidate now counts its FIRST whole verified line: the concrete
+slab, 60.28 m3, checked panel by panel (62 of 62). Released: still 0 (nothing is released until you switch the
+default). Waterproofing still cannot count as a whole line (no completeness list yet; that piece is queued). No
 decision for you.
+
+Since 12:15 (newest first; four pieces checked and merged, a new candidate of record):
+- Concrete, exterior ground beams (main house): CHECKED AND MERGED into the candidate (13:35). The checker re-measured
+  all 16 corrected lines on the drawing himself and agrees: 8.16 -> 15.96 m3 at the printed 0.95 m depth (+95.5 %).
+  Ground beams in the candidate 27.36 -> 29.56 m3 with 12 lines held blank (annex and courtyard depths not printed).
+  Columns 33.61 -> 28.22 m3: the second-floor and annex columns are now held (their heights are not printed), five
+  members that are not on the drawings are removed with evidence, and the boundary ground beam now has a held line
+  instead of no line. One curved beam stays "drawing-confirmed" only until its end detail is settled.
+- Real export: reinforcement is now reported in tonnes (measured 10.25 t; held 15.25 .. 21.62 t, a range, not a
+  figure), and the slab completeness check now matches panels by id, so the slab counts as a verified whole line.
+- Reinforcement reconciliation (read-only): checked and merged. No ledger is counted twice (734 overlap groups, none
+  double); the 16.39 t from the drawing extractor has no column steel and no steel for one ground-beam family, and
+  its beam steel overlaps the checked beam ledger, so it is never added. No steel quantity moved. Next: your footing
+  requirements (counts, lengths, the 5 cm cover question, the 874.86 kg footing line) as the next part of the same work;
+  footing steel stays held.
+- Formwork (missing from the candidate): part 1 merged (foundations, ground beams, columns; ground beams 47.95 m2
+  measured, 74.36 m2 kept only as an alternative, never added). Part 2 (slabs, stairs, domes, tank) is queued.
+- Plaster and paint: sent back for a narrow fix (a test-file name clashed with the formwork one; the curved pool-side
+  window's deduction to be re-read with your 9.870 m2 answer). Being redone now.
+- Ceilings: every ceiling face tied to the candidate's ceiling lines (79 faces, 36 lines). Engine 403.16 vs drawing
+  362.01 m2 (-10.2 %), every m2 of the gap named (domes, stair soffits, areas with no ceiling). Found: one first-floor
+  dressing room ceiling (2.97 m2) has no line at all. Waiting for the checker.
+- Team: no worker run stood down since 11:40 (the smaller pieces fit the hour). Nothing new on Drive; no new photos.
 
 Since 10:15 (newest first; three pieces checked and merged, the checker's records written into the export):
 - Real export of the candidate BOQ: the checker wrote his verified-line and "hold" records and re-ran the export on the

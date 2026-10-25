@@ -36,6 +36,16 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
    commit. Decision: board-only handoffs are verified as hand evidence (the verifier re-reads the cited notes), and the
    next task on the topic writes the files (T-117); a run with no line stays a NEEDS FIXING item for the owner's setting.
 
+## 2026-10-25 14:15 (lead run; covers 12:15 - 14:15)
+
+- T-254 exterior ground-beam basis correction (integration package, V3.0.17): WORKED (Gate B PASS, MERGED 7c49e890, Verifier 13:35; own DXF re-measure of all 16 rebased lines agrees, main-house exterior GB 8.1642 -> 15.9575 m3 DRAWING-CONFIRMED, +95.5 %; 2F / annex columns and annex GB HELD blank, 5 members NOT_PRESENT, boundary G.B line added HELD). Open: F-T254-01 ring end rule, F-T254-02 PC-1F-B watch. Decision: both in ELEMENT_REGISTER; T-266 now TODO on V3.0.17.
+- T-298 export completion (tonnes + slab join by panel id): WORKED (MERGED 274885e6, Verifier 13:54; own independent join 62 / 62). First WHOLE verified line in the real export (CONC.SLAB 60.280155 m3); reinforcement in t. Decision: WP part of the completeness gap stays with T-301.
+- T-299 r1 read-only reinforcement reconciliation: WORKED (MERGED 05ad6d02, Verifier 14:00; 0 double counts, SB1 4.550 m own re-measure). Minor F-T299-01 (stale 'Q-71 open' hold wording). Decision: PART F (owner 13:16 / 13:25 footing requirements) TODO for worker 1 after T-297, carrying F-T299-01.
+- T-293 formwork ledger part 1: WORKED (MERGED 294da634, 12:19). Decision: part 2 (slabs / stairs / domes / tank + boundary G.B tie) TODO after T-299 PART F.
+- T-292 plaster / paint face-to-line ledger: PARTIAL (REJECTED narrow 12:48: test module name collides with T-293's on the merged head; 1F-11 W17 under Q-76 A). Decision: r2 with the exact fault (CLAIMED 13:44); new lessons row (task-prefixed module names, joint merged-head test run).
+- T-295 ceiling face-to-line ledger: READY 14:12, classified at its verdict (first in the Checker queue).
+- Team: every run since 12:15 has a final line except the open Worker 1 13:21 (T-297) and Worker 2 13:40 (T-292 r2) runs; no IDLE run since 11:40 (the 35-minute sizing is holding; lessons row stays OPEN for 24 h).
+
 ## 2026-10-25 12:15 (lead run; covers 10:15 - 12:15)
 
 - T-290 stairs / domes basis ledger: WORKED (MERGED 891dbd4d, Verifier 11:05; D1 wedge 0.025714 and MS2-LD 0.4696 m3 agreed; E1 waist: section B-B draws it on ground, so soffit formwork NOT_APPLICABLE and concrete HELD both stand, not a conflict). Decision: T-266 consumes it unchanged.
@@ -165,118 +175,3 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
 | T-240 WP1 floor area | progress (not a hand-in) | worker 3 11:48: V3.0.13 @ 5e12fa50, internal floor 340.7645 -> 342.6645 m2 (+0.56 %); GF OP-003 carried twice found | WP2 after T-268; twin strip in the element register |
 | Worker 1 WIP | team health | T-258, T-264, T-265 all evidence complete, none READY (head moved twice: re-merge cost each time) | WIP limit: no new claim by worker 1 until the three are handed in (T-258 at 12:19) |
 
-## 2026-10-24 10:15 (lead run)
-
-| Task | Result | Evidence | Decision |
-|---|---|---|---|
-| T-146 + T-247 slab / beam partition (Gate B, V3.0.12) | WORKED | MERGED 768ff1d6 (Verifier 09:37): candidate CONC.SLAB 60.2801 = Checker 62 panels 60.2804 m3 (-0.0005 %) -> first WHOLE LINE VERIFIED in the candidate (not released); vs freelancer 59.8174 +0.77 % (1F dome corners ENGINE_RIGHT, GF / 2F RULE_DIFFERENCE); CONC.BEAM r2 in, measured 66.3179 + CONFLICT 5.1448 .. 6.1110 + HELD 3.228 .. 7.6685 + 5 runs no value | release of the slab line is the owner's (released A 61.5514 stays a DISCREPANCY +2.11 %); lane I now goes to the next closable line: floor area (T-240 split WP1-WP4), then doors (T-268) |
-| T-228 blockwork register v2 | FAILED (REJECTED, gate e + h) | Verifier 09:59: 1F-W10's B3 piece 2.500 m sits under a member printed 'B3 (With Stair)' on the FFRS frame (= GF-W10's stair-foot piece the package itself HELD as F1); v2 carried it in an established net 44.929 on a floor that does not exist on that line | narrow r2 (TODO r2, worker 2 first): 1F-W10 HELD by R-T228-2 (CB9 pieces 38.369 m2 gross in the bounds text), 2F-W02 B3 confirmed HELD, GF-W10 eastern pieces 39.1525 + W.C. 0 .. 0.945 HELD; plus a sibling test over every '(With Stair)' member on every storey frame |
-| T-235 r2 + part (4) V2 verdict schema / export | READY (not yet classified) | handoff 09:14 / row 09:58: a line reads VERIFIED only with a COUNTED WHOLE V2 record + a passing completeness record; 12 broken bindings refused | Gate A 6th (backlog-permitted infrastructure) |
-| T-262 opening-to-room by geometry | evidence complete, not handed in (suite unfinished, READY at target) | worker 2 09:31: 59 openings, 118 / 118 sides; 5 WRONG labels (W06 in GF-13; W19 + D-1F-01 in 1F-03, W20 + D-1F-04 in 1F-02); 0.000 m2 change (equal pairs) | after T-228 r2: full suite on 768ff1d6, READY when READY <= 2 |
-| T-260 aluminium doors evidence | evidence complete, not handed in | worker 1 08:36: D-GF-01 / -05 / -06 class ALUMINIUM, D-GF-09 0.90 on both faces; 12.760 m2 / 6 pcs if ruled | hand in NOW as worker 1's one whole-line closure (owner 10:02 (c)); integration T-268 |
-| T-258 stairs / domes closable split | evidence complete, not handed in | re-validated 08:34 on 74c966b1; head moved to 768ff1d6 | not a whole-line closure: normal rule, hand in at READY <= 2 after a re-merge |
-
-## 2026-10-24 08:15 (lead run)
-
-| Task | Result | Evidence | Decision |
-|---|---|---|---|
-| T-253 boundary / exterior ground beams | WORKED | MERGED dff9cb79 (Verifier 07:20): own 8.8140 m2 x 0.40 = 3.5256 m3 (0.0 %); five D-35 readings re-read; 6 / 17 main runs own-measured 0.000 m; 15.960 DRAWING-CONFIRMED proposal | T-254 scope fixed (boundary line added; main house DRAWING-CONFIRMED, not VERIFIED); remaining 11 runs to the T-180 slot; formwork T-264, rebar T-265, coat T-263 |
-| T-210 guard follow-ups | WORKED | MERGED dadf8446 (Verifier 07:28): own AST 28 - 4 by_design = 24 records; christiannp id closed; KNOWN 396 -> 395 | T-257 promoted to TODO |
-| T-256 15 CONFLICT columns + 5 not-drawn lines | WORKED (research; line PARTIAL by design) | MERGED 74c966b1 (Verifier 07:52): 15 / 15 outlines own, 0 / 15 third prints, 5 / 5 positions empty | NOT_PRESENT removal in T-254; D-65 confirmation only; NEW D-66 for the 13-column band question (T-217's 'D-64' label retired) |
-| T-250 plaster / paint face crosswalk | READY (not yet classified) | handoff 06:48: 465.385 m on 32 / 32 rooms; W03 room-side 6.726 .. 6.738 (T-128 right); W06 / W19 / W20 / west-bath doors on the wrong room; GF-16 over two wall strips | Gate A 4th; the room-label defect -> T-262 (gate 1, lane A first) |
-| T-219 foundation / pit waterproofing | READY (not yet classified) | handoff 07:54: underlay 109.85 m2 + 5.4925 m3 DRAWING-CONFIRMED proposal; pit layers; footing sides HELD by detail; buried-concrete coat found | Gate A 5th; buried-concrete coat -> T-263 |
-| T-258 stairs / domes closable split | evidence complete, not handed in (READY at target) | worker 1 07:15: closable 10.856 m3; ST-02 2.089 UNRESOLVED; ST-03 released on a convention in V3.0.11 | hand-in at READY <= 2; candidate fix T-266 after it merges |
-
-## 2026-10-24 06:15 (lead run)
-
-| Task | Result | Evidence | Decision |
-|---|---|---|---|
-| T-251 gate-0 fix (t130 guard red since T-236) | WORKED | MERGED fee98d9a (Verifier 04:19): railing codes read from the item master, t130 green unchanged, full suite NEW 0 / KNOWN 396 | gate break closed; the full-suite rule on every hand-in stays; residual 8 implemented-family literals harmless to every guard (no follow-up) |
-| T-252 CONC.BEAM ledger r2 | WORKED | MERGED b37be82d (Verifier 05:37): own re-measure = r2 66.3206 m3; ring 0.666406 m2 exact, the Checker's 0.66676 withdrawn (not averaged) | integrate with T-146 in one package, now first in lane I |
-| T-239 V3.0.11 footing two-tag outline | WORKED | MERGED 3c9b1484 (Verifier 06:12, Gate B): 2 lines changed, 3,608 identical; HELD 2.176 .. 2.275 / blinding 0.552 .. 0.590; released-in-candidate footing 64.304 = 25 verified | line stays PARTIALLY VERIFIED (Q-31 C designer, D-14 clip): no new task; D-14 clip stays named on the line |
-| T-253 boundary / exterior ground beams | READY (not yet classified) | handoff 05:13: boundary G.B 3.5256 m3 DRAWING-CONFIRMED proposal; D-35 main house read as N.G. (15.960 m3) | first in the Checker queue; T-254 takes it if merged |
-| T-228 blockwork register v2 | READY (not yet classified) | handoff 05:04: net 494.189 m2, 38 held walls with items; GF-W10 stair-foot finding | Checker queue 2nd; follow-up T-261 queued after it |
-| T-210 guard follow-ups | READY (not yet classified) | handoff 06:04: sandbox fixed (2 causes), K1 record 24 / 24, pymupdf not registered (AGPL) | K1 assertion NOT re-scoped (weakening); declarations -> T-257 after merge |
-
-## 2026-10-24 04:15 (lead run)
-
-| Task | Result | Evidence | Decision |
-|---|---|---|---|
-| T-232 doors / windows pcs + m2 (Gate B, V3.0.10) | WORKED | Gate B PASS a0cd9bbc (Verifier 02:44: windows 76.256 m2 on 27 re-derived by hand incl. W03 28.251 and W18 1.080, -3.975 m2 / -4.95 % vs freelancer, residual 0; doors / windows rows leave 'unit refused'; 3,539 lines byte-identical) | doors / windows now scoreable in the candidate (HELD: W17 Q-76, W02 D-53, 7 doors); T-255 RE-SCOPED to the deduction side (the window line already carries W18 / W03); lessons row: gap claims name the version they were measured on |
-| T-249 opening inventory from the drawings | WORKED | Gate A PASS 2a2d15af (Verifier 02:48: own leaf count 27 doors + 1 gate from swing arcs; W18 / W03 own reads) | none beyond T-255 |
-| T-248 CONC.COLUMN + necks whole line | WORKED (line PARTIAL by design) | Gate A PASS 567dc972 (Verifier 03:19: 6 own re-measures 0.0 %, 1B1B identity accepted; 04:02: closable component 28 / 28 own-measured = 18.3465 m3, sections confirmed by the printed schedule ST p.9) | candidate columns -> T-254 (closable 28 incl. 2 planted 1.008 m3; 2F / annex HELD); CONFLICT 15 + UNKNOWN 5 -> new T-256 (lane S); necks stay HELD on Q-21 C |
-| T-251 t130 gate-0 fix | pending | READY 03:46 (railing codes from the item master, +27 tests, t130 green unchanged, full suite NEW 0 / KNOWN 396) | Gate A first; residual (8 implemented-family literals) a follow-up only if a guard can trip on them |
-| T-252 CONC.BEAM ledger r2 | pending | READY 03:51 (66.0161 -> 66.3206 m3, +0.3045 vs Checker +0.3049) | Gate A settles the 0.0004 m3 ring difference; T-247 takes r2 with the slab band-53 piece 0.0322 leaving with the ring |
-
-## 2026-10-24 02:10 (lead run)
-
-| Task | Result | Evidence | Decision |
-|---|---|---|---|
-| T-243 t195 gate-0 fix | WORKED | Gate A PASS cebb269b (Verifier 01:15: root cause re-derived, inputs pinned by sha256 + git blob, 203 files; t195 28 / 28) | none; lessons row adopted (a snapshot test names its inputs by content) |
-| T-242 CONC.GROUND whole line | PARTIAL | Gate A PASS 9455a63d (Verifier 01:21: interior 5 runs 2.2683 m3 re-measured face to face = ledger; line BLOCKED BY CONSULTANT D-33 / D-34 / D-35 / M4) | the drawing-settleable rest (boundary G.B at N.G. <= 3.5256 m3 in no line, court runs, annex CONFLICT, consultant rows narrowed to runs) -> T-253 (lane S); the candidate releasing 24 exterior beams 11.93 m3 at the interior depth -> T-254 (lane I, gate 1) |
-| T-236 trade completeness (merged 00:10) | FAILED (gate, after merge) | t130_family_master red on 1cc1a153 and 9455a63d (Verifier 01:15 / 02:14): FIN.HANDRAIL literal at trade_completeness_v1.py:165 | gate-0 fix T-251 FIRST in lane A; RECURRING CAUSE 7 again (a new engine/source module trips a whole-repo guard its own tests do not run): every hand-in now runs the FULL suite on the merged head, and the Checker's Gate A includes every guard folder that scans engine/source (t130, t186, t202, t212) |
-| T-232 doors / windows pcs + m2 (Gate B) | pending | READY 02:00 | Checker next (Gate B); W18 / W03 carried by T-255 |
-| T-249 opening inventory from the drawings | pending | READY 01:59 (row stamp 02:55 typo) | Gate A next; W18 / W03 +29.331 m2 -> T-255 |
-| T-248 CONC.COLUMN + necks whole line | pending | READY 02:13 | Gate A the run after; candidate columns on unprinted heights (2F to finished roof, annex at 4.50) -> T-254 |
-
-## 2026-10-24 00:10 (lead run)
-
-| Task | Result | Evidence | Decision |
-|---|---|---|---|
-| T-211 V3.0.9a plaster / paint | WORKED | Gate B PASS 55fc11ec (Verifier 22:42: L4 to the end, NEW 1 = t195 pre-existing; 6 released lines by hand 0.0 %) | integrated; part 4 deltas next as T-244 (after T-250 evidence) |
-| T-238 arched-opening fix | WORKED | Gate A PASS 242e50b2 (W26 1.8745, W17 reading confirmed) | DELTA_T238 wired by T-232; W17 -> owner Q-76 (ERS 2.7, section 6) |
-| T-234 CONC.SLAB whole line | WORKED | MERGED 3224f68a; Checker own 62 panels 60.2804 m3 = worker 0.000 %; D-41 does not block the solid | engine side closes with T-146 (+ T-247 one package) |
-| T-017 masonry census | WORKED | MERGED 345f408b after the handle evidence (hex lookup reproduces both corner conventions) | corner rule UP-MAS-CORNER-001 + oblique junctions go into T-228 |
-| T-223 floor typing | WORKED | MERGED 48d1d846; curved room 19.0165 own = engine; side passage 5.640 exterior | T-240 carries dressing, sills, side passage, 0.280 strip |
-| T-236 trade completeness | PARTIAL | MERGED 54ae8b5f; footing 1B1B identity UNRESOLVED; window inventory seeded from the engine (named limit); W18 / W03 29.331 m2 in no line; skirting 13.569 lm unlisted | T-248 (d) footing identity; T-249 tag inventory; T-232 W18 / W03; T-246 skirting listing |
-| T-235 r1 BOQ export | PARTIAL | MERGED d7d232b9 (tool right on synthetic and adverse cases); real candidate export refused: two identities | T-245 identity fix; r2 + part (4) stays TODO |
-| T-241 CONC.BEAM whole line | PARTIAL | MERGED f0250164; Checker own B25 / B22 / CB5 span 2 0.0 %; CONFLICT and HELD items are designer items D-02 / D-27 / D-26 | T-247 integration; Checker beam batch per storey (T-180 slot); consultant rows unchanged |
-| T-237 wall-face crosswalk | PARTIAL | MERGED 1cc1a153; W03 room-side line, W06 wedge, 18 roof-datum faces HELD; face length per wall missing | T-250 evidence; T-244 integration |
-| t195 document-register check | FAILED (on the working branch) | red since at least 63f4d90e (Verifier 22:42); Lead re-run 00:13 on 1cc1a153: 1 failed / 21 passed | T-243 gate 0 fix, first in lane A |
-
-## 2026-10-23 22:10 (lead run)
-
-| Task | Result | Evidence | Decision |
-|---|---|---|---|
-| T-227 r2 (blockwork 3/4) | WORKED | MERGED ebce3d97 (Checker 21:05): own walk W15 / W16 4.3629 m2 each (crown 3.00), W18 1.080; 1F-W00 net 12.863 SOURCE-SUPPORTED | T-228 PROMOTED (claimable now); W15 / W16 window area stays 4.650 by Q-32 A |
-| T-221 (roof / wet structural tops) | WORKED (zones HELD by design) | MERGED 63f4d90e: +5.50 falls rise 0.190 .. 0.203 m own = worker; its strip area 32.387 NOT verified (Checker own 31.681 finish hatch / 32.721 screed-membrane, HELD by layer); D-44 drawn on no sheet (8 searched) | the layer split goes to T-219 (waterproofing); consultant row 2 (D-44) send-ready; no new task |
-| T-017 (masonry census) | PARTIAL (evidence) | NOT CHECKED 21:05: its D2:nnn references are capture indices, not P7757.dxf handles (gate e) | delay cause EVIDENCE; first in worker 2's next run (handles only); process lesson: every re-measure reference is a handle the Checker can open |
-| T-211 (V3.0.9a plaster / paint, Gate B) | READY | paint 0 -> 166.88 m2 released (2 rooms VERIFIED, 1 ASSUMED - OWNER-APPROVED), 8 HELD ranges 529.47 .. 595.05 m2 + 4 HELD without a figure; 3,527 lines byte-identical | Gate B first in the next Checker run; 9b waits (same files); worker 3 takes T-235 parts (1)-(3) |
-| T-234 (CONC.SLAB whole line) | READY | 60.2804 m3 DRAWING-CONFIRMED, CLOSABLE; released A +1.2710 (NEW defect: 2F 'T 18' tag spread +0.625, 13 non-slab faces +0.646); candidate +0.6388 (the faces); freelancer +0.4630 (+0.77 %) named, 1F lump residual 0.059 UNRESOLVED | second Gate A slot (23:49 at the latest); T-146 now carries the 13 faces after T-234 MERGED; new T-241 CONC.BEAM closure (CB5 band 0.296 m3 in no line); R-SLAB-T-1 lessons row proposed |
-| T-238 (arched-opening fix) | READY | 68 openings censused: W15 / W16 window 4.650 (FREELANCER_RIGHT), finishes 4.363 per face; W26 1.875 (arch, not 1.20 x 1.70); W17 HELD 9.870 .. 11.515 (45 = archivolt?); windows 45.101 vs his 45.481 on 7 (-0.84 %) | gate 1 critical, with T-211 in the next Checker run; W17: the Checker rules the 305 / 45 reading first, owner item only after that (the Q-39 answer quoted a height the question text supplied) |
-| T-180 floor area (Checker) | PARTIAL (line findings) | 20 / 47 pieces VERIFIED 0.0 %; dressing 2.970 m2 in no floor line (scope), sills 0.550 m2 carried as porcelain (class); curved room ENGINE_RIGHT on geometry | T-223 acceptance extended; new T-240 (lane I wiring of both findings) |
-
-## 2026-10-23 20:10 (lead run)
-
-| Task | Result | Evidence | Decision |
-|---|---|---|---|
-| T-231 (V3.0.8 Gate B) | WORKED | MERGED 3b042470 (Checker 17:52 run, verdict 19:04): L4 suite to the end NEW 0, 21 lines by hand, straps 3.3905 vs freelancer 3.3925 m3 (-0.06 %), columns 34.446 -> 33.606 | T-211 promoted to TODO, first in lane I; the SB3 / F3 held bound in V3.0.8 is stale (T-230 range) -> carried in T-199 as named |
-| T-233 (CONC.FOOTING + BLINDING whole lines) | WORKED (lines PARTIALLY VERIFIED by design) | MERGED 2ecb5bf0; Checker own 26 outlines, 25 footings 64.304 m3 and blinding 15.179 m3 0.0 %; D-32 ruled from the drawing; two PARTIAL REMEASURE records in the verdict file (owner 19:00 (3) met) | footing line waits on Q-31 C (F10 + F), Q-28 A band C1 and D-15 strap level; blinding on D-14, D-15, Q-21 C: all consultant / designer items on record, no new task; D-32 closed in DESIGNER_CLARIFICATIONS; T-235 part (4) may proceed on PARTIAL records only (no VERIFIED claim) |
-| T-216 (floor-area line scored) | WORKED | MERGED bebd1241; A COMPARED 385.634 vs 409.58 m2; scorer byte-identical without the flag; candidates rightly HELD (0 .. 0.520 m2, D-13 / D-23) | T-180 slot moved to the FLOOR AREA whole line on run A (Checker 19:05 reading); T-223 (curved room +1.727 UNRESOLVED) first new lane A row |
-| T-222 (block HELD bounds part 2) | PARTIAL | MERGED 769cad40; P-GF-05 2.640 m2 Checker 0.0 %; bay basis (+1.481 m2), 1F-W14+W15 junction (+0.302 m2) and the B-B occlusion for P-1F-01 not re-measured (SOURCE-SUPPORTED) | D-60 removed (drawings answer it); D-64 conflict withdrawn by the Lead on two independent readings (B-B occlusion + T-017 census head lines), consultant row 9 narrowed to the P-1F-01 head level, send-ready; T-228 lists the junction piece |
-| T-227 (blockwork 3/4) | FAILED on one wall (narrow) | REJECTED 20:14: W16 deducted 4.805 (surround-band crown) vs true arched opening 4.362 m2 (+0.443, 1F-W00 net +3.7 %); 3 other walls AGREE | rework r2 FIRST in lane A (exact fault named in the row); the same misreading sits in merged T-150 / T-175 / T-201: new fix T-238 (gate 1, census of every arched / banded opening, delta ledger, UP-OPEN-ARCH-001); T-211 / T-232 hold W15 / W16 as 4.362 .. 4.805 / 4.650 .. 4.805 until T-238 merges; rows 7 / 8 and the GF-W10 ruling NOT given (3rd run): first items of the 20:49 Checker run |
-| T-017 (independent masonry census) | WORKED (held by the backlog rule, correctly) | 59 / 75 walls within 0.05 m, thickness 71 / 71; 9 corner-square RULE_DIFFERENCE; residual 0.000 m per floor x thickness after named items | hand in at worker 2's 20:39 run (READY now 0); UP-MAS-CORNER-001 input to T-228 |
-| Process | PARTIAL | two same-agent overlaps (Checker 17:52 run 73 min -> 18:50 stand-down; Worker 1 18:21 run 80 min -> 19:19 IDLE): runs longer than the hourly slot; guard worked, no concurrent work | no schedule change (owner 19:00 / 19:45 Checker exception); reported in team health |
-
-## 2026-10-23 18:20 (lead run)
-
-| Task | Result | Evidence | Decision |
-|---|---|---|---|
-| T-229 (beam runs at planted columns) | WORKED | MERGED 3803684e; Checker own B27 4.1927 vs 4.1918 m3 (+0.02 %), B26 +0.13 %; census 1.818 m3 unbilled, 0.278 m3 billed twice | R-BEAM-CONT-1 PROPOSED; wiring is a later lane I package (after T-231 / T-211 / T-232 / T-199, owner order); slab / beam ownership carried into T-234 |
-| T-226 (blockwork 2/4) | PARTIAL (by the owner's rule, not a fault) | MERGED a04f8e21; GF-W07 4.458 m2 VERIFIED (first VERIFIED block net; worker 4.468, -0.23 %, cause: sampled piece boundary), 1F-W05 gross 23.223 VERIFIED (worker -0.13 %, cause: last 0.10 m under B23 spread at mean height), net 19.303 SOURCE-SUPPORTED; GF-W10 2 / 4 pieces; D-12 census and column-cut audit not re-measured; the owner's 18:00 GF-W10 ruling (T-201 heads -> 47.425) not given | GF-W10 ruling queued for the 18:49 Checker run with T-227; T-228 carries 4.458 (not 4.468) and 19.303; lesson row (3) accepted (sampled height piece) |
-| T-230 (strap / GB ends) | WORKED | MERGED 17ed6f92; Checker own lift-ring ends 2.900 / 3.228 / 5.020 m 0.0 %, SB3 / F3 0.0295 .. 0.2683 m3 HELD (D-15 narrowed), drafting double 0.030 m2 = worker; board text quoted raw coordinates | standing BOARD TEXT rule written (handles and printed values only); ground-beam end corrections wait for a lane I package; T-233 takes the footing side of these intersections as ruled |
-| T-227 (blockwork 3/4) | READY | 4 nets newly SOURCE-SUPPORTED (+126.8 m2 with a figure), annex 13 rows HELD on Q-54 B test, lift tie beam HELD | Checker 18:49 (second, after T-231); decides consultant rows 7 / 8 |
-| T-231 (V3.0.8 Gate B) | READY | straps 3.3905 m3, columns released 34.446 -> 33.606, planted columns already carried by route G (superseded, not added) | Checker 18:49 FIRST; then T-211 |
-| Scout R-09 / R-10 / R-12 (owner one-off) | WORKED | answers + supplements in RESEARCH_LOG 17:50 / 17:55; all PRACTITIONER level | R-12: slab / stair '/m' keeps the A..B range until a project note decides (no task: no project evidence to read); R-10 splice formula (idea 27) used by the next steel procurement task, not now (concrete whole lines first, owner 17:50); R-09 grid reader (idea 26) stays an idea; idea 29 (session id hook) and idea 30 (L4 suite in the background, up to 2 h) need the owner's main chat: NEEDS FIXING (idea 30 is how the complete-suite rule can be met in one Checker run) |
-
-## 2026-10-23 16:20 (lead run)
-
-| Task | Result | Evidence | Decision |
-|---|---|---|---|
-| T-212 r2 (gate 0 fix) | WORKED | MERGED b5716930; t202 unedited + t212 + firewall pass on the merged head, own adverse P4 refused; red guard closed after ~14 h | none; hand-in rule (validate on the CURRENT head) kept, 0 rejections since |
-| T-215 part 1 (block ends) | WORKED | MERGED 8a9b4b48; Checker own J-A 0.023237 m2 (+0.08 %), Y node 0.0 %; heights not re-measured (DRAWING-CONFIRMED) | part 2 = T-222 now claimable; heights re-measured in T-226 |
-| T-174 (straps, Q-74) | WORKED | MERGED 984ebbe1; SB2 / SB3 Checker 0.0 %, strap 3.3905 vs freelancer 3.3925 m3 | integrate (T-231); SB3-in-F3 overlap and all strap ends -> T-230 |
-| T-176 (black block units, Q-75) | PARTIAL (by design) | MERGED 41847bff; units / mortar PROVISIONAL; waste, cement, sand HELD (no rule) | stays PROVISIONAL until supplier face + joint are on record (owner 14:20); no new task |
-| T-203 r2 (registry 1.2.0) | WORKED | MERGED 40de7c7f; own re-derivation pool / domes / stair retirement, adverse refused | none |
-| T-220 (planted columns) | WORKED | MERGED 579e613d; PC-1F-A 0.588 m3 Checker 0.0 %; 5 lines NOT_DRAWN agreed | integrate (T-231); B27 / B26 route G cuts -> T-229; PC-2F double joint -> T-229 |
-| T-225 (blockwork 1/4) | WORKED | MERGED 48e6f08a; Checker re-added 74 walls 0.000 m2, both gaps reproduced to cause | T-226 / T-227 promoted (owner order); follow-up evidence 96500525 feeds T-017, not merged separately |

@@ -46,6 +46,18 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+### Lead 2026-10-25 14:15 (from T-254 Gate B / T-298 / T-299 r1 MERGED, V3.0.17 = candidate of record; T-295 READY)
+
+| Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |
+|---|---|---|---|---|---|
+| Boundary ground beam G.B at N.G. (p.14, 20 x 40) | CONC.GROUND_BEAM, formwork sides 35.256 m2, rebar | CONC.GROUND_BEAM owns the volume (line ADDED in V3.0.17, BLOCKED_RFI blank on M4: net = band less undrawn 20 x 30 columns); formwork ties its faces to THAT line as HELD | concrete HELD blank (an omission closed as a line, not a zero); formwork faces measured, tie pending | T-253, T-254 (Gate B 13:35), T-293 | T-293 part 2 ties the faces; M4 (designer) for the net |
+| Exterior ground beams, main house (16 lines) | CONC.GROUND_BEAM, formwork sides, buried WP | CONC.GROUND_BEAM at the printed D 0.95; formwork and WP follow the same depth | CONFLICT CLOSED: 15 lines own-re-measured by the Checker; 8.1642 -> 15.9575 m3 DRAWING-CONFIRMED (+95.5 %); buried WP already at D 0.95 | T-289, T-254 | none for 15; the ring line below |
+| Ring ground beam BAND0043 (ARC 157 / 158) | CONC.GROUND_BEAM, formwork | CONC.GROUND_BEAM | DRAWING-CONFIRMED 1.7349 m3 on the chord-closed end reading; never VERIFIED until the end rule closes (1.6755 .. 1.7613 m3 on the two arc-span readings) | T-254, Verifier 13:35 F-T254-01 | Checker T-180 slot if the end detail is drawn; otherwise a named designer item |
+| Planted 1F column PC-1F-B (0.20 x 0.50 x 4.20 = 0.420 m3) vs the D-26 projection bands at CB11 / CB12 | CONC.COLUMN, CONC.BEAM (P-6 bands, blank today) | CONC.COLUMN owns the intersection (<= 0.075 m3) unless the owner rules otherwise; the beam lines net it when P-6 releases them | no double count today (bands blank) | T-248, T-254, F-T254-02 (watch) | when P-6 releases: beam lines net the column intersection (one owner) |
+| 2F columns (8) and annex columns (5) | CONC.COLUMN, rebar, formwork | CONC.COLUMN | HELD blank in V3.0.17 (finished +13.90 and the 4.50 m profile were unsupported bases; 3.528 + 2.475 m3 before); rebar on these members must carry the same basis | T-245 downgrades, T-254 | D-39 / D-44 / Q-54 B (designer list); T-297 carries the basis |
+| 1F dressing ceiling 2.970 m2 | FIN.CEILING | FIN.CEILING | NO candidate ceiling line (an omission, never absorbed by a neighbour) | T-295 READY | T-284 adds the line after the Checker's T-295 verdict |
+| Exterior soffits (5 lines, 44.446 m2) vs GF P-2 held-class bands | FIN.CEILING exterior soffit, exterior plaster / Sigma | open: one owner per face to be named at the T-295 verdict | both HELD, nothing double counted today | T-295 READY | Checker T-295 (e); ruling after |
+
 ### Lead 2026-10-25 12:15 (from T-290 / T-291 / T-170 MERGED, V3.0.16 records issued; T-292 / T-293 READY; owner 11:51 T-298 .. T-300; new T-301)
 
 | Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |

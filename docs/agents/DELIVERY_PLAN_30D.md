@@ -46,7 +46,20 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
-## Status (Lead, 2026-10-25 12:15; re-estimated each run from what merged and was verified)
+## Status (Lead, 2026-10-25 14:15; re-estimated each run from what merged and was verified)
+
+Lead 2026-10-25 14:15: WEEK 1 TARGET MET (27 Oct target, met 25 Oct 13:54): one verified improvement went through the
+integrated pipeline: T-298 MERGED 274885e6 makes CONC.SLAB (60.280155 m3) the first WHOLE verified line in the real export
+(completeness 62 = 62, Checker's own independent join), and T-254 MERGED 7c49e890 (Gate B) put the exterior ground-beam
+correction into the candidate (V3.0.17, main-house exterior 8.1642 -> 15.9575 m3 DRAWING-CONFIRMED). Not released: the
+default stays V2.9 + route G (owner only). Week 2 (3 Nov, measurable increase in verified coverage): lane I chain
+T-266 (stairs, next for worker 3 at 14:59, about 1 h + Gate B) -> T-255 (windows) -> T-279 (blockwork 422.5 m2, 297.8
+VERIFIED) -> T-294; estimate T-279 integrated 26 - 27 Oct if each Gate B passes first time (unchanged). Second whole
+line candidate: WP.FOUNDATION once T-301 builds the inventory (worker 2, after T-292 r2 / T-296; estimate 26 Oct).
+Reinforcement: no rebar quantity moves; footing PART F (owner 13:16) and the line-to-member ledger (T-297) are research.
+Risk: each lane I step needs a full Checker record re-issue until T-294 lands.
+
+### Earlier status (Lead, 2026-10-25 12:15)
 
 Lead 2026-10-25 12:15: since 10:15 the Checker merged T-290 891dbd4d, T-291 0c6b2ba5 and T-170 2991be3d and issued the
 V3.0.16 records (8 V2 verdicts, 7 downgrades; 21.953969 m3 moved to HELD / CONFLICT). Week 1 target (27 Oct, 'one verified
