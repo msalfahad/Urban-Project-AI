@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-25T05:05Z | Worker 1 | SUCCESS | T-287 (COMPLETE @ a153985c, hand-in waits: 4 READY) | Designer RFI gaps searched on every sheet (ST p.1-p.7 DXF 4,461 ent., arch plans 2,198 + sections/elevations 3,765, PDF p.7/p.8/p.13-p.16 by hand): G1 SETTLED, not asked: CB5 columns 35F/365 sit between the annex +0.30 and a +0.15 exterior passage, no +1.00 reaches them -> base +0.25, CONC.COLUMN 1.2375..1.4300 -> 1.4300 m3 DRAWING-DERIVED (candidate -0.1925, -13.5 %); G2 'T 16' printed on all ST-01 flights/turn and ST-02 straight part, MS1-T/MS2-TR geometry and D1/E1/RS-C waists MISSING -> package row; G3 tower dome/drums MISSING -> package row (contains A7 D-21); no owner question | self-check PASS (codemap PASS, pytest t061 PASS, freeze PASS); t287 22 pass, freeze 0, codemap stale none; full suite in chunks: only known base failures (data absent, T-257 K1); problem: none
 - 2026-10-25T05:00Z | Worker 3 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-25T04:51Z | Verifier | STARTED | run session_01GfxzQEADkKAYhzqGtSarUT | repo-attached routine | task state: READY T-281, T-283, T-288, T-257 (per run log) | self-check pending
 - 2026-10-25T04:39Z | Worker 2 | STARTED | run session_01Fz79WTpF5QTkr4nsrexK3Z | repo-attached routine | task state: none yet | self-check pending
