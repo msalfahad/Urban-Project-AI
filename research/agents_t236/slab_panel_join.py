@@ -22,7 +22,7 @@ Rule R-T298-SLAB-JOIN-1 (PROJECT-INDEPENDENT; provenance T-236 / T-234 / Verifie
      face the independent inventory does not find is a disagreement, never silently a panel). A panel no line takes
      is MISSING.
   TOL_M3 = 0.0002 m3: the panel ledger rounds areas to 4 dp (<= 0.00001 m3 at t <= 0.20 m) and curved panels
-  (circle sectors) differ between the ledger's arc and the engine's polygon by up to 0.000128 m3 per piece on the
+  (circle sectors) differ between the ledger's arc and the engine's polygon by up to 0.000093 m3 per piece on the
   development villa (named in the T-298 report); two panels of one storey closer than TOL_M3 that do not carry equal
   line volumes stay AMBIGUOUS (never picked).
 """
