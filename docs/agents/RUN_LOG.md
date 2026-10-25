@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-25T03:51Z | Verifier | SUCCESS | none (overlap guard: run unknown active since 2026-10-25T02:51Z) | no check, no merge, no quantity change | self-check not run
 - 2026-10-25T03:41Z | Worker 2 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-25 03:34 UTC | Worker 3 | SUCCESS | T-257 READY (agents/task-T-257 @ 43df7381) | K1 boundary test: 18 shapely/numpy modules declared by_design from their T-210 ALLOWED_OUTSIDE_K1 records, checked entry by entry by a new V2 tool (problems 0); the K1 id stays red on only the 6 undeclarable modules (5 ezdxf OUTSIDE_K2_GATE, 1 pymupdf), fix proposals written; scope deviation: 2 real-tree T-210 tests re-pointed (else 2 NEW), Checker to rule; no quantity changed; full suite NEW 0 / KNOWN 395 | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-10-25 03:20 UTC | Worker 1 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
