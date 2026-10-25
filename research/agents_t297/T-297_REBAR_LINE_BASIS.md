@@ -5,6 +5,64 @@ nothing wired, no candidate or released line changed, no method version, no quan
 candidate. Integration dependency of the rebar line (lane I) and of the metric-ton export (T-298). Development villa,
 not an accuracy claim. Drawings named by Drive folder and title only. ERS s.2.1 - 2.6, s.3, s.4 applied.
 
+## R2 (worker 1, 2026-10-25 16:21 .. UTC, run session_01TeAPmvgVr3xjFJPerLSak6): Checker F-T297-04, one member one datum
+
+**Defect (Checker 15:34).** r1 labelled 4 2F column main-bar lines DRAWING_CONFIRMED, 4 x 6 x 4.20 x 256 / 162 = 4 x
+39.822 = **159.288 kg (0.159288 t)**: L-5fca13cebe2e259988bc COL-2F-50, L-4247172eb6f60bb0b98b COL-2F-51,
+L-930151c44e50a06944a6 COL-2F-53, L-57836098c8dc67817e1d COL-2F-54 (ST p.9 C1 / C2 2F '6 ø 16'). Physical element: the
+6 vertical bars of a top-storey column, running from the 2F slab top through the roof joint. Their length 4.20 = height
++ controlling depth = the 2F storey interval to the **roof slab top**, i.e. the D-39 roof datum: only the finished roof
+level +13.90 is printed, no structural roof level and no build-up (T-248 s.2, T-289), and V3.0.17 (T-254) holds the
+same members' concrete blank on it. One datum cannot be unsupported for the concrete and printed for the bars; the
+schedule prints the COUNT, not the length. Status: the count is DRAWING_CONFIRMED, the length is HELD -> the line is HELD.
+
+**Rule LB-10 (general, every villa; research rule in t297_alsenan.py / t297_ledger.py, no rule-file version).** A
+column main-bar or link line whose length is the member's interval / concrete height takes the datum status of the
+candidate's own concrete line of that member: concrete HELD on a datum -> the bar figure is HELD (kg kept as audit,
+flag BAR_LENGTH_ON_HELD_DATUM) or a BOUND whose datum names the held datum (datum status HELD); concrete RE-BASED on a
+newly printed height -> a figure on the old height is HELD (BAR_HEIGHT_SUPERSEDED); member NOT_PRESENT -> its bar lines
+NOT_APPLICABLE. Laps at the storey bottom (note 9), joint links and bar ends do not take their length from the member top
+and are unchanged. `t297_ledger.check_row` refuses a measured / CONVENTION row on a HELD, SUPERSEDED or NOT_PRESENT length
+datum, a bound on a held datum that does not name it, a bound on a superseded height.
+
+**The join (t297_datum_join.py -> DATUM_JOIN_T297.json; 21 concrete lines).** V3.0.17 per-line concrete actions from
+`research/agents_t254/t254_inputs.py build()` (the merged T-254 inputs, so no Drive re-run was needed: the 2,505
+reinforcement lines of V3.0.16 = V3.0.17, REBAR_EQUIVALENCE_T297.json) x the member -> line tie of T-293 part 1
+(FORMWORK_FACE_TO_LINE_T293.csv), checked three ways: (1) printed mark and storey of the T-148 member = the candidate
+element id's; (2) one member <-> one line; (3) STACK CHECK: the candidate column id carries one schedule-sheet position
+per stack, the hand ledger one plan panel per storey shifted 38.724 m in x (modal, 22 of 26 storey steps; the other 4
+within 0.15 m, section changes); every member tied to one position must sit at one plan position once the shift is
+removed (tolerance 0.30 m; the closest two columns of one storey are > 0.90 m apart, asserted).
+
+| V3.0.17 concrete (T-254) | lines | T-148 members | bar lines changed |
+|---|---|---|---|
+| 2F columns HELD D-39 (D-44 on 2, section conflict on 2) | 8 | COL-2F-49 .. 56 (stacks GF-02/04/05/06/07/08/11/12 -> 1F-32 .. 42 -> 2F) | MAIN 4 DC -> **HELD** (159.288 kg); MAIN 4 already HELD now name D-39; LINKS 8 BOUND name D-39 |
+| Annex columns 34A / 34D / 356 / 350 / 353 HELD Q-54 B + D-39 | 5 | COL-GF-16 / 28 / 15 / 29 / 18 | MAIN 5 already HELD, now name the datum; LINKS 5 BOUND name it |
+| CB5 columns C5 (35F) / C3 (365) RE-BASED DRAWING-CONFIRMED h 5.20 (T-287) | 2 | COL-GF-20 / COL-GF-21 | **F-T297-05**: LINKS 2 BOUND 16.462 .. 27.838 / 12.023 .. 12.523 kg were on zone 3.75 / 4.00 m -> **HELD** (28.485 kg of bound low withdrawn); MAIN 2 already HELD |
+| Planted 2F P.C 20x50 (BLOCKED_RFI; T-248 D-39 via formwork r4) | 1 | COL-2F-59 | MAIN HELD names D-39; LINKS BOUND name it |
+| Upper columns no sheet draws (10BD / 10C5 / 10E0 @2F, 10E4 @1F / 2F) NOT_PRESENT | 5 | none tied (asserted) | their 10 route lines (MAIN + TIES) NOT_APPLICABLE (unchanged, now joined) |
+
+**Restated (t, never summed across statuses).** Columns DRAWING_CONFIRMED **1.887128 -> 1.727840 t** (32 -> 28 lines);
+the DRAWING_CONFIRMED components headline (columns + beams + ground beams) **8.311066 -> 8.151778 t**; columns BOUND
+low 1.280992 -> 1.252507 t (113 -> 111 lines; high 2.119349 -> 2.078988 t); columns HELD 238 -> 244. Every other family
+unchanged. Closure: the candidate still RELEASES the 4 lines (159.288 kg) and BOUNDS the 2 CB5 link lines; the residual
+against the candidate stays **0.000 kg** per family because those rows are carried as 'candidate releases / bounds,
+ledger holds' (summary `datum_join`), never dropped; T-148 named 1,887.131 vs rows 1,887.128 kg (-0.003, tol 0.017).
+
+**Lane I.** A rebar row consumes the HELD rows as HELD (quantity_t null; `length_datum` {datum, status} in the consumer
+record) and must not release the 4 lines or the 2 CB5 link bounds while V3.0.17 holds / re-bases the concrete. When
+D-39 is settled by a printed structural roof level, all 13 members' bar lengths re-derive from it in one step.
+
+**Verdict proposals.** The 4 lines: ENGINE_WRONG in basis (the candidate releases 0.159288 t on a length the drawings do
+not print; the count is right). CB5 links: UNRESOLVED (re-derive on h 5.20 with the Q-71 readings; not done here: this
+is a narrow r2). Freelancer: not compared (basis ledger; released rebar -40.6 % T-009 unchanged).
+
+**Lessons-register row (proposed, ERS s.7).** 2026-10-25 | a bar line released DRAWING_CONFIRMED on a length whose datum
+the concrete holds | the basis was read per line from the schedule text alone | one member, one datum status across
+trades: join every bar line to its member's concrete line and take its datum status (LB-10) | tests/t297_rebar_line_basis
+test_r2_datum_join (normal C7 / C8, adverse: measured on a held datum, unnamed datum, superseded bound, absent member,
+crossed tie, too-close columns, mark mismatch) + test_alsenan_ledger r2 pins | CLOSED when T-297 r2 merges.
+
 ## 0. Run, identity, sources
 
 Own run, Python 3.11.17, Drive copies "Alsenan chalet project" / 'ST7757 dxf.dxf' (`9f9d1179`) and P7757.dxf from
@@ -49,7 +107,7 @@ quantity.**
 
 | Family | DRAWING_CONFIRMED | CONVENTION | BOUND low .. high | HELD (lines) | NOT_APPLICABLE (lines) |
 |---|---|---|---|---|---|
-| Columns (T-148, GF / 1F / 2F) | 32 lines **1.887128 t** | - | 113 lines 1.280992 .. 2.119349 t (links Q-71, laps note 9) | 238 (182 T-148 defined / unquantified + 56 route neck lines) | 122 (route G superseded) |
+| Columns (T-148, GF / 1F / 2F) | 32 lines **1.887128 t** (r1; r2: 28 lines 1.727840 t, section R2) | - | 113 lines 1.280992 .. 2.119349 t (links Q-71, laps note 9) | 238 (182 T-148 defined / unquantified + 56 route neck lines) | 122 (route G superseded) |
 | Beams (T-149) | 230 lines **5.171031 t** (face to face) | - | 457 lines 4.637530 .. OPEN t (51 lines with an open upper end) | 76 | 366 |
 | Ground beams + straps (T-138 r2) | 88 lines **1.252907 t** (face to face) | - | 62 lines 1.297139 .. 2.269557 t | 131 | 9 |
 | Footings | - | 38 lines **0.874862 t** (count printed, min cover as exact) | 20 lines 2.742506 .. 2.836400 t (per-metre F8 / F12 / F13 / F14 / FF) | 27 | - |
@@ -66,7 +124,7 @@ reinforcement line cites its own Checker re-measure) and no ASSUMED — OWNER-AP
 convention is a proposal, not an approved rule: OWNER_RULE_REBAR s.2, s.4 (3)).
 
 What may be read as one figure: only within one (family, status) cell. The candidate's "released" reinforcement (lines
-in a quantity state) is **8.311066 t DRAWING_CONFIRMED components** (columns 1.887128 + beams 5.171031 + ground beams
+in a quantity state) is **8.311066 t DRAWING_CONFIRMED components** (r1; r2: 8.151778 t, section R2) (columns 1.887128 + beams 5.171031 + ground beams
 1.252907) **plus 1.939102 t CONVENTION** (footings 0.874862 + ground slab 1.064240), two different bases that are
 reported side by side and never as one 10.250168 t total.
 

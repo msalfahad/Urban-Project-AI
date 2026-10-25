@@ -57,6 +57,13 @@ class Row:
     line_kg: float | None = None      # the line's own number in the candidate (audit: measured_net or bound end)
     sources: tuple[str, ...] = ()     # research ledger rows the basis rests on
     flags: tuple[str, ...] = field(default_factory=tuple)
+    # LB-10 (r2): the datum the BAR LENGTH rests on as the member's own concrete carries it in the candidate (one member,
+    # one datum status across trades); "" = not joined (no length-on-height group, or the member's datum is not held)
+    length_datum: str = ""
+    length_datum_status: str = ""     # "" / HELD / SUPERSEDED / NOT_PRESENT
+
+
+LENGTH_DATUM_STATUSES = ("", "HELD", "SUPERSEDED", "NOT_PRESENT")
 
 
 def kg_to_t(kg):
@@ -97,6 +104,21 @@ def check_row(r: Row) -> Row:
             raise LedgerError(f"{r.line_id}: a {r.status} row is not a bound")
         if r.status in ("VERIFIED", "DRAWING_CONFIRMED", "ASSUMED_OWNER_APPROVED") and not r.evidence:
             raise LedgerError(f"{r.line_id}: a {r.status} row cites its evidence")
+    if r.length_datum_status not in LENGTH_DATUM_STATUSES:
+        raise LedgerError(f"{r.line_id}: length datum status {r.length_datum_status!r}")
+    if r.length_datum_status and not r.length_datum:
+        raise LedgerError(f"{r.line_id}: a joined length datum is named")
+    if r.length_datum_status in ("HELD", "SUPERSEDED", "NOT_PRESENT") and r.status not in ("BOUND", "HELD",
+                                                                                         "NOT_APPLICABLE"):
+        raise LedgerError(f"{r.line_id}: a bar length on a datum the candidate holds / re-bases / finds absent "
+                          f"({r.length_datum_status}: {r.length_datum[:60]}) cannot be {r.status}")
+    if r.length_datum_status == "NOT_PRESENT" and r.status != "NOT_APPLICABLE":
+        raise LedgerError(f"{r.line_id}: a bar line of a member no sheet draws is NOT_APPLICABLE, never {r.status}")
+    if r.length_datum_status == "SUPERSEDED" and r.status == "BOUND":
+        raise LedgerError(f"{r.line_id}: a bound on a superseded height is no bound (HELD until re-derived)")
+    if r.length_datum_status == "HELD" and r.status == "BOUND" and (r.datum_status != "HELD"
+                                                                    or r.length_datum not in r.datum):
+        raise LedgerError(f"{r.line_id}: a bound whose length rests on a held datum names it and has a HELD datum")
     if r.lap_basis in NOT_MEASURED_LAP and r.status not in ("CONVENTION", "HELD", "NOT_APPLICABLE", "BOUND"):
         raise LedgerError(f"{r.line_id}: a lap from a default factor / another category's note is a CONVENTION, "
                           f"BOUND or HELD, never {r.status}")
@@ -181,5 +203,7 @@ def consumer(rows):
                         "high": None if r.bound_high_kg is None else kg_to_t(r.bound_high_kg),
                         "datum": r.datum, "datum_status": r.datum_status},
                     "held_reason": r.reason if r.status in NO_QUANTITY else "",
+                    "length_datum": None if not r.length_datum_status else {
+                        "datum": r.length_datum, "status": r.length_datum_status},
                     "evidence": r.evidence, "sources": list(r.sources), "flags": list(r.flags)})
     return out

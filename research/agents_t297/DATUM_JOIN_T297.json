@@ -1,0 +1,364 @@
+{
+ "schema": "T297_DATUM_JOIN_V1",
+ "rule": "LB-10 one member, one datum status across trades",
+ "rows": [
+  {
+   "line_id": "L-bc01297b1c4a4c45a15f",
+   "element_id": "P-C:COL:SH12:C5@255627,63526|2F",
+   "group": "COL_2F",
+   "action": "HOLD",
+   "member": "COL-2F-49",
+   "mark": "C5",
+   "storey": "2F",
+   "interval_m": "4.2",
+   "height_m": "3.45",
+   "length_datum": "D-39_ROOF_DATUM; SECTION_CONFLICT (V3.0.17 concrete line L-bc01297b1c4a4c45a15f HELD)",
+   "length_datum_status": "HELD",
+   "stack_members": [
+    "COL-1F-32",
+    "COL-2F-49",
+    "COL-GF-02"
+   ],
+   "storey_shift_m": 38.724,
+   "storey_shift_votes": "22 / 26"
+  },
+  {
+   "line_id": "L-0ede77cfd0badc4c7d62",
+   "element_id": "P-C:COL:SH12:C2@247685,64087|2F",
+   "group": "COL_2F",
+   "action": "HOLD",
+   "member": "COL-2F-50",
+   "mark": "C2",
+   "storey": "2F",
+   "interval_m": "4.2",
+   "height_m": "3.00",
+   "length_datum": "D-39_ROOF_DATUM; D-44_B15_UPSTAND_DOWNSTAND (V3.0.17 concrete line L-0ede77cfd0badc4c7d62 HELD)",
+   "length_datum_status": "HELD",
+   "stack_members": [
+    "COL-1F-34",
+    "COL-2F-50",
+    "COL-GF-04"
+   ],
+   "storey_shift_m": 38.724,
+   "storey_shift_votes": "22 / 26"
+  },
+  {
+   "line_id": "L-919a5749ef79759e01ca",
+   "element_id": "P-C:COL:SH12:C2@252679,64225|2F",
+   "group": "COL_2F",
+   "action": "HOLD",
+   "member": "COL-2F-51",
+   "mark": "C2",
+   "storey": "2F",
+   "interval_m": "4.2",
+   "height_m": "3.45",
+   "length_datum": "D-39_ROOF_DATUM (V3.0.17 concrete line L-919a5749ef79759e01ca HELD)",
+   "length_datum_status": "HELD",
+   "stack_members": [
+    "COL-1F-35",
+    "COL-2F-51",
+    "COL-GF-05"
+   ],
+   "storey_shift_m": 38.724,
+   "storey_shift_votes": "22 / 26"
+  },
+  {
+   "line_id": "L-c10e2945d582b5a03126",
+   "element_id": "P-C:COL:SH12:C3@247476,61310|2F",
+   "group": "COL_2F",
+   "action": "HOLD",
+   "member": "COL-2F-52",
+   "mark": "C3",
+   "storey": "2F",
+   "interval_m": "4.2",
+   "height_m": "3.00",
+   "length_datum": "D-39_ROOF_DATUM; D-44_B15_UPSTAND_DOWNSTAND; SECTION_CONFLICT (V3.0.17 concrete line L-c10e2945d582b5a03126 HELD)",
+   "length_datum_status": "HELD",
+   "stack_members": [
+    "COL-1F-36",
+    "COL-2F-52",
+    "COL-GF-06"
+   ],
+   "storey_shift_m": 38.724,
+   "storey_shift_votes": "22 / 26"
+  },
+  {
+   "line_id": "L-d79d17d14f39d5148cb8",
+   "element_id": "P-C:COL:SH12:C1@251701,62344|2F",
+   "group": "COL_2F",
+   "action": "HOLD",
+   "member": "COL-2F-53",
+   "mark": "C1",
+   "storey": "2F",
+   "interval_m": "4.2",
+   "height_m": "3.80",
+   "length_datum": "D-39_ROOF_DATUM (V3.0.17 concrete line L-d79d17d14f39d5148cb8 HELD)",
+   "length_datum_status": "HELD",
+   "stack_members": [
+    "COL-1F-37",
+    "COL-2F-53",
+    "COL-GF-07"
+   ],
+   "storey_shift_m": 38.724,
+   "storey_shift_votes": "22 / 26"
+  },
+  {
+   "line_id": "L-26f6b6f2365c72e42291",
+   "element_id": "P-C:COL:SH12:C2@254644,61274|2F",
+   "group": "COL_2F",
+   "action": "HOLD",
+   "member": "COL-2F-54",
+   "mark": "C2",
+   "storey": "2F",
+   "interval_m": "4.2",
+   "height_m": "3.80",
+   "length_datum": "D-39_ROOF_DATUM (V3.0.17 concrete line L-26f6b6f2365c72e42291 HELD)",
+   "length_datum_status": "HELD",
+   "stack_members": [
+    "COL-1F-38",
+    "COL-2F-54",
+    "COL-GF-08"
+   ],
+   "storey_shift_m": 38.724,
+   "storey_shift_votes": "22 / 26"
+  },
+  {
+   "line_id": "L-53f223b06db14ac41d47",
+   "element_id": "P-C:COL:SH12:C9@254644,59429|2F",
+   "group": "COL_2F",
+   "action": "HOLD",
+   "member": "COL-2F-55",
+   "mark": "C9",
+   "storey": "2F",
+   "interval_m": "4.2",
+   "height_m": "3.80",
+   "length_datum": "D-39_ROOF_DATUM (V3.0.17 concrete line L-53f223b06db14ac41d47 HELD)",
+   "length_datum_status": "HELD",
+   "stack_members": [
+    "COL-1F-41",
+    "COL-2F-55",
+    "COL-GF-11"
+   ],
+   "storey_shift_m": 38.724,
+   "storey_shift_votes": "22 / 26"
+  },
+  {
+   "line_id": "L-33a9b7728781fcba12e2",
+   "element_id": "P-C:COL:SH12:C2@251723,58368|2F",
+   "group": "COL_2F",
+   "action": "HOLD",
+   "member": "COL-2F-56",
+   "mark": "C2",
+   "storey": "2F",
+   "interval_m": "4.2",
+   "height_m": "3.80",
+   "length_datum": "D-39_ROOF_DATUM (V3.0.17 concrete line L-33a9b7728781fcba12e2 HELD)",
+   "length_datum_status": "HELD",
+   "stack_members": [
+    "COL-1F-42",
+    "COL-2F-56",
+    "COL-GF-12"
+   ],
+   "storey_shift_m": 38.724,
+   "storey_shift_votes": "22 / 26"
+  },
+  {
+   "line_id": "L-9f5a647014bbf83359f9",
+   "element_id": "P-C:COL:SH12:C@238150,57853|GF",
+   "group": "COL_ANNEX_7",
+   "action": "HOLD",
+   "member": "COL-GF-15",
+   "mark": "C",
+   "storey": "GF",
+   "interval_m": "4.5",
+   "height_m": "3.75",
+   "length_datum": "Q-54B_ANNEX_ROOF_DATUM; D-39_ROOF_DATUM; SECTION_CONFLICT (V3.0.17 concrete line L-9f5a647014bbf83359f9 HELD)",
+   "length_datum_status": "HELD",
+   "stack_members": [
+    "COL-GF-15"
+   ],
+   "storey_shift_m": 38.724,
+   "storey_shift_votes": "22 / 26"
+  },
+  {
+   "line_id": "L-c0b3340a906c2c7650f8",
+   "element_id": "P-C:COL:SH12:C@233893,56561|GF",
+   "group": "COL_ANNEX_7",
+   "action": "HOLD",
+   "member": "COL-GF-16",
+   "mark": "C",
+   "storey": "GF",
+   "interval_m": "4.5",
+   "height_m": "3.75",
+   "length_datum": "Q-54B_ANNEX_ROOF_DATUM; D-39_ROOF_DATUM; SECTION_CONFLICT (V3.0.17 concrete line L-c0b3340a906c2c7650f8 HELD)",
+   "length_datum_status": "HELD",
+   "stack_members": [
+    "COL-GF-16"
+   ],
+   "storey_shift_m": 38.724,
+   "storey_shift_votes": "22 / 26"
+  },
+  {
+   "line_id": "L-fad18af6e7139a5e99d1",
+   "element_id": "P-C:COL:SH12:C3@238374,54773|GF",
+   "group": "COL_ANNEX_7",
+   "action": "HOLD",
+   "member": "COL-GF-18",
+   "mark": "C3",
+   "storey": "GF",
+   "interval_m": "4.5",
+   "height_m": "3.75",
+   "length_datum": "Q-54B_ANNEX_ROOF_DATUM; D-39_ROOF_DATUM (V3.0.17 concrete line L-fad18af6e7139a5e99d1 HELD)",
+   "length_datum_status": "HELD",
+   "stack_members": [
+    "COL-GF-18"
+   ],
+   "storey_shift_m": 38.724,
+   "storey_shift_votes": "22 / 26"
+  },
+  {
+   "line_id": "L-84bf7fb482a98fdbe482",
+   "element_id": "P-C:COL:SH12:C5@243102,55481|GF",
+   "group": "COL_ANNEX_7",
+   "action": "REBASE",
+   "member": "COL-GF-20",
+   "mark": "C5",
+   "storey": "GF",
+   "interval_m": "4.5",
+   "height_m": "3.75",
+   "length_datum": "concrete re-based in V3.0.17 (DRAWING-CONFIRMED, T-287: base +0.25, h 5.20) on line L-84bf7fb482a98fdbe482; the bar figure's height 3.75 / interval 4.5 is superseded",
+   "length_datum_status": "SUPERSEDED",
+   "stack_members": [
+    "COL-1F-45",
+    "COL-GF-20"
+   ],
+   "storey_shift_m": 38.724,
+   "storey_shift_votes": "22 / 26"
+  },
+  {
+   "line_id": "L-7d70692d03102a2dc306",
+   "element_id": "P-C:COL:SH12:C3@243004,52949|GF",
+   "group": "COL_ANNEX_7",
+   "action": "REBASE",
+   "member": "COL-GF-21",
+   "mark": "C3",
+   "storey": "GF",
+   "interval_m": "4.5",
+   "height_m": "4.00",
+   "length_datum": "concrete re-based in V3.0.17 (DRAWING-CONFIRMED, T-287: base +0.25, h 5.20) on line L-7d70692d03102a2dc306; the bar figure's height 4.00 / interval 4.5 is superseded",
+   "length_datum_status": "SUPERSEDED",
+   "stack_members": [
+    "COL-1F-46",
+    "COL-GF-21"
+   ],
+   "storey_shift_m": 38.724,
+   "storey_shift_votes": "22 / 26"
+  },
+  {
+   "line_id": "L-e6c1c9a7feec10f64975",
+   "element_id": "P-C:COL:SH12:C@235241,51296|GF",
+   "group": "COL_ANNEX_7",
+   "action": "HOLD",
+   "member": "COL-GF-28",
+   "mark": "C",
+   "storey": "GF",
+   "interval_m": "4.5",
+   "height_m": "3.75",
+   "length_datum": "Q-54B_ANNEX_ROOF_DATUM; D-39_ROOF_DATUM; SECTION_CONFLICT (V3.0.17 concrete line L-e6c1c9a7feec10f64975 HELD)",
+   "length_datum_status": "HELD",
+   "stack_members": [
+    "COL-GF-28"
+   ],
+   "storey_shift_m": 38.724,
+   "storey_shift_votes": "22 / 26"
+  },
+  {
+   "line_id": "L-694a75c84dd6e4bb4491",
+   "element_id": "P-C:COL:SH12:C3@241094,51256|GF",
+   "group": "COL_ANNEX_7",
+   "action": "HOLD",
+   "member": "COL-GF-29",
+   "mark": "C3",
+   "storey": "GF",
+   "interval_m": "4.5",
+   "height_m": "3.75",
+   "length_datum": "Q-54B_ANNEX_ROOF_DATUM; D-39_ROOF_DATUM; SECTION_CONFLICT (V3.0.17 concrete line L-694a75c84dd6e4bb4491 HELD)",
+   "length_datum_status": "HELD",
+   "stack_members": [
+    "COL-GF-29"
+   ],
+   "storey_shift_m": 38.724,
+   "storey_shift_votes": "22 / 26"
+  },
+  {
+   "line_id": "L-2bf336912a62859834b3",
+   "element_id": "P-C:COL:SH12:C3@254464,51322|2F",
+   "group": "COL_NOT_PRESENT",
+   "action": "NOT_PRESENT",
+   "member": null,
+   "length_datum": "NOT_PRESENT (T-256: no sheet draws the member)",
+   "length_datum_status": "NOT_PRESENT",
+   "storey_shift_m": 38.724,
+   "storey_shift_votes": "22 / 26"
+  },
+  {
+   "line_id": "L-73e82692ffb24059d95b",
+   "element_id": "P-C:COL:SH12:C8@256160,53630|2F",
+   "group": "COL_NOT_PRESENT",
+   "action": "NOT_PRESENT",
+   "member": null,
+   "length_datum": "NOT_PRESENT (T-256: no sheet draws the member)",
+   "length_datum_status": "NOT_PRESENT",
+   "storey_shift_m": 38.724,
+   "storey_shift_votes": "22 / 26"
+  },
+  {
+   "line_id": "L-7d98b1c0ac80787d0b51",
+   "element_id": "P-C:COL:SH12:C5@243102,55481|2F",
+   "group": "COL_NOT_PRESENT",
+   "action": "NOT_PRESENT",
+   "member": null,
+   "length_datum": "NOT_PRESENT (T-256: no sheet draws the member)",
+   "length_datum_status": "NOT_PRESENT",
+   "storey_shift_m": 38.724,
+   "storey_shift_votes": "22 / 26"
+  },
+  {
+   "line_id": "L-99e7e45631f6ddf3c7e2",
+   "element_id": "P-C:COL:SH12:C3@254464,51322|1F",
+   "group": "COL_NOT_PRESENT",
+   "action": "NOT_PRESENT",
+   "member": null,
+   "length_datum": "NOT_PRESENT (T-256: no sheet draws the member)",
+   "length_datum_status": "NOT_PRESENT",
+   "storey_shift_m": 38.724,
+   "storey_shift_votes": "22 / 26"
+  },
+  {
+   "line_id": "L-eb3bd5ba496a207f04f7",
+   "element_id": "P-C:COL:SH12:C3@243004,52949|2F",
+   "group": "COL_NOT_PRESENT",
+   "action": "NOT_PRESENT",
+   "member": null,
+   "length_datum": "NOT_PRESENT (T-256: no sheet draws the member)",
+   "length_datum_status": "NOT_PRESENT",
+   "storey_shift_m": 38.724,
+   "storey_shift_votes": "22 / 26"
+  },
+  {
+   "line_id": "L-541c7e565bb93ecdb78b",
+   "element_id": "HL:PLANTED_COLUMN:PC-2F:CONCRETE",
+   "group": "COL_PLANTED_2F",
+   "action": "HOLD",
+   "member": "COL-2F-59",
+   "mark": "P.C 20x50",
+   "storey": "2F",
+   "interval_m": "4.2",
+   "height_m": "3.45",
+   "length_datum": "D-39_ROOF_DATUM (T-248 via FORMWORK_R4 row 248; candidate line BLOCKED_RFI, planted column) (V3.0.17 concrete line L-541c7e565bb93ecdb78b HELD)",
+   "length_datum_status": "HELD",
+   "storey_shift_m": 38.724,
+   "storey_shift_votes": "22 / 26"
+  }
+ ]
+}

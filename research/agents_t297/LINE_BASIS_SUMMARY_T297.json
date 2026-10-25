@@ -37,20 +37,20 @@
    "lines": 366
   },
   "COLUMNS|BOUND": {
-   "lines": 113,
-   "low_kg": 1280.992,
-   "low_t": 1.280992,
-   "high_kg": 2119.349,
-   "high_t": 2.119349,
+   "lines": 111,
+   "low_kg": 1252.507,
+   "low_t": 1.252507,
+   "high_kg": 2078.988,
+   "high_t": 2.078988,
    "high_open_lines": 0
   },
   "COLUMNS|DRAWING_CONFIRMED": {
-   "lines": 32,
-   "kg": 1887.128,
-   "t": 1.887128
+   "lines": 28,
+   "kg": 1727.84,
+   "t": 1.72784
   },
   "COLUMNS|HELD": {
-   "lines": 238
+   "lines": 244
   },
   "COLUMNS|NOT_APPLICABLE": {
    "lines": 122
@@ -171,9 +171,9 @@
    "HELD": 131
   },
   "research/agents_t148/T148_COLUMNS.csv": {
-   "BOUND": 113,
-   "DRAWING_CONFIRMED": 32,
-   "HELD": 182
+   "BOUND": 111,
+   "DRAWING_CONFIRMED": 28,
+   "HELD": 188
   },
   "research/agents_t149/T149_BEAMS.csv": {
    "BOUND": 457,
@@ -195,6 +195,8 @@
   }
  },
  "flags": {
+  "BAR_HEIGHT_SUPERSEDED": 2,
+  "BAR_LENGTH_ON_HELD_DATUM": 4,
   "COMPONENT_ENDS_HELD": 265,
   "LOWER_BOUND_ZERO_OPEN": 3,
   "MIN_COVER_AS_EXACT": 58
@@ -219,5 +221,50 @@
    "finding": "F-T297-03 footings: the 38 released footing lines (FOOTING_REBAR_POPULATION_V1) take the straight bar as side - 2 x 70 mm where note 22 prints cover 'not less than 7 cm' (a minimum) and derive no bend: basis CONVENTION, never DRAWING_CONFIRMED (owner 13:16 F2 - F5; T-299 part F)",
    "lines": 38
   }
- ]
+ ],
+ "datum_join": {
+  "candidate": "ARCH_TAKEOFF_V3.0.17 concrete actions (research/agents_t254/t254_inputs.py build(), T-254 MERGED 7c49e890) x the T-293 member tie; reinforcement lines of V3.0.16 = V3.0.17 (REBAR_EQUIVALENCE)",
+  "joined_concrete_lines": 21,
+  "by_group": {
+   "COL_2F": 8,
+   "COL_ANNEX_7": 7,
+   "COL_NOT_PRESENT": 5,
+   "COL_PLANTED_2F": 1
+  },
+  "storey_shift_m": 38.724,
+  "storey_shift_votes": "22 / 26",
+  "F-T297-04 candidate releases, ledger holds (bar length on a held datum)": {
+   "lines": [
+    "L-4247172eb6f60bb0b98b",
+    "L-57836098c8dc67817e1d",
+    "L-5fca13cebe2e259988bc",
+    "L-930151c44e50a06944a6"
+   ],
+   "members": [
+    "COL-2F-50",
+    "COL-2F-51",
+    "COL-2F-53",
+    "COL-2F-54"
+   ],
+   "candidate_kg": 159.288,
+   "candidate_t": 0.159288
+  },
+  "F-T297-05 bound on a superseded concrete height -> HELD": {
+   "lines": [
+    "L-5362ed53f6c3eb7fce70",
+    "L-e7f153842ddd7a9de45b"
+   ],
+   "members": [
+    "COL-GF-20",
+    "COL-GF-21"
+   ],
+   "bound_low_kg_withdrawn": 28.485
+  },
+  "bounds that now name the member's held datum": {
+   "lines": 14,
+   "low_kg": 147.201
+  },
+  "bar lines of NOT_PRESENT members (NOT_APPLICABLE)": 10,
+  "held_rows_naming_the_datum": 14
+ }
 }
