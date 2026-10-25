@@ -53,6 +53,9 @@ sys.path.insert(0, str(ROOT))
 from engine.source import trade_completeness_v1 as TC  # noqa: E402
 from tools import trade_completeness as R  # noqa: E402
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import slab_panel_join as SPJ  # noqa: E402  (T-298: the slab join by panel id)
+
 STOREY = {"FOUNDATION": "FDN", "GF": "GF", "1F": "1F", "2F": "2F"}
 NEXT_SOURCE = {
     "CONCRETE.BEAM": "T-241 beam table per storey (T-229 CENSUS.csv binds route G bands: engine-derived, not used)",
@@ -97,13 +100,15 @@ def _parse(eid):
     return (m["kind"], m["sheet"], m["mark"], int(m["x"]), int(m["y"]), m["st"])
 
 
-def slab_inventory():
+def slab_inventory(join="panel"):
+    """T-234 panels; join 'panel' (T-298, default): labelled by panel id; 'count' (T-236 as merged): SLAB#k."""
     rows = _csv("research/agents_t234/LEDGER_T234.csv")
     n = Counter()
     els = []
     for r in sorted(rows, key=lambda r: (r["storey"], r["panel"])):
         n[r["storey"]] += 1
-        els.append({"floor": r["storey"], "label": f"SLAB#{n[r['storey']]}", "ref": f"panel {r['panel']}"})
+        lab = r["panel"] if join == "panel" else f"SLAB#{n[r['storey']]}"
+        els.append({"floor": r["storey"], "label": lab, "ref": f"panel {r['panel']}"})
     return {"source": "T-234 slab panels between beam faces (LEDGER_T234.csv, MERGED 3224f68a)", "basis": "CENSUS",
             "trade": "CONCRETE.SLAB", "floors": sorted(n), "elements": els}
 
@@ -237,9 +242,19 @@ def door_register(path, tokens):
     return out
 
 
-def build_input(lines, door_schedule=None):
+def slab_panels():
+    return [{"floor": r["storey"], "panel": r["panel"], "m3": float(r["m3"])}
+            for r in _csv("research/agents_t234/LEDGER_T234.csv")]
+
+
+def build_input(lines, door_schedule=None, slab_join="panel"):
+    """slab_join 'panel' (T-298 R-T298-SLAB-JOIN-1, default): slab lines join the T-234 panels by panel id
+    (slab_panel_join.join); 'count': the T-236 count join as merged (reproduces SUMMARY_V29 / SUMMARY_V308)."""
+    if slab_join not in ("panel", "count"):
+        raise ValueError(f"slab join {slab_join!r}: panel or count")
     finv = footing_inventory()
-    sinv = slab_inventory()
+    sinv = slab_inventory(slab_join)
+    slab_live = []
     cinv, named = column_inventories()
     offsets, offset_log = solve_offsets(named, [ln["location"]["element_id"] for ln in lines])
     oinv, tokens, census_ids = opening_inventories()
@@ -272,6 +287,16 @@ def build_input(lines, door_schedule=None):
                 links[ln["line_id"]] = hit
                 exact[tr] += 1
                 continue
+        if tr == "CONCRETE.SLAB" and slab_join == "panel":
+            if ln["evidence_state"] == "NOT_APPLICABLE_WITH_EVIDENCE":
+                links[ln["line_id"]] = [f"{st}:NOT_SLAB:{ln['line_id'][-8:]}"]    # its own EXCLUDED key, no panel
+                unbound["CONCRETE.SLAB retired face (NOT_APPLICABLE, own key)"] += 1
+            elif ln["evidence_state"] in SPJ.QUANTITY_STATES:
+                slab_live.append({"line_id": ln["line_id"], "floor": st, "m3": float(ln["measured_net"])})
+            else:
+                links[ln["line_id"]] = [f"{st}:HELD:{ln['line_id'][-8:]}"]        # held: no volume to join by
+                unbound["CONCRETE.SLAB held line (no volume: not joined to a panel)"] += 1
+            continue
         if tr == "CONCRETE.SLAB":                          # COUNT per storey: how many faces, never which
             n[(tr, st)] += 1
             links[ln["line_id"]] = [f"{st}:SLAB#{n[(tr, st)]}"]
@@ -300,9 +325,19 @@ def build_input(lines, door_schedule=None):
                 k = f"{st}:?{ln['line_id'][-8:]}"            # no census row names this engine element
         if k:
             links[ln["line_id"]] = [k]
+    slab = None
+    if slab_join == "panel":
+        slab = SPJ.join(slab_panels(), slab_live)
+        for x in slab["pairs"]:
+            links[x["line_id"]] = [f"{x['floor']}:{x['panel']}"]
+            exact[f"CONCRETE.SLAB {x['join']}"] += 1
+        for x in slab["unmatched_lines"]:
+            links[x["line_id"]] = [f"{x['floor']}:UNMATCHED:{x['line_id'][-8:]}"]   # REGISTER_ONLY, never a panel
+            unbound["CONCRETE.SLAB live line with no panel"] += 1
     return {"inventories": [finv, sinv] + cinv + oinv, "lines": lines, "line_links": links,
             "register": door_register(door_schedule, tokens), "opening_census": census_ids,
-            "levels": storey_levels()}, {"unbound": dict(unbound), "exact_join": dict(exact), "offsets": offset_log}
+            "levels": storey_levels()}, {"unbound": dict(unbound), "exact_join": dict(exact), "offsets": offset_log,
+                                         "slab_join": slab_join, "slab": slab}
 
 
 def main(argv=None):
@@ -311,10 +346,13 @@ def main(argv=None):
     ap.add_argument("--label", required=True)
     ap.add_argument("--out")
     ap.add_argument("--door-schedule", help="the run's DOOR_SCHEDULE.json (engine holds outside the BOQ)")
+    ap.add_argument("--slab-join", choices=("panel", "count"), default="panel",
+                    help="panel (T-298, default): by T-234 panel id; count: the T-236 count join as merged")
     a = ap.parse_args(argv)
     raw = json.loads(Path(a.lines).read_text(encoding="utf-8"))
     lines = raw["lines"] if isinstance(raw, dict) else raw
-    inp, unbound = build_input(lines, a.door_schedule)
+    inp, unbound = build_input(lines, a.door_schedule, a.slab_join)
+    slab = unbound.pop("slab")
     rep = R.run(inp)
     rows = list(R.trade_rows(rep))
     print(f"== {a.label}: {len(lines)} lines; join: {unbound}")
@@ -334,6 +372,13 @@ def main(argv=None):
         out = Path(a.out)
         out.mkdir(parents=True, exist_ok=True)
         R.write(rep, out)
+        if slab is not None:
+            (out / "SLAB_PANEL_JOIN.json").write_text(json.dumps(
+                {"rule": "R-T298-SLAB-JOIN-1 (research/agents_t236/slab_panel_join.py)", "join": slab,
+                 "floors": SPJ.floor_residuals(slab, slab_panels(),
+                                               [{"floor": x["floor"], "m3": x["line_m3"]}
+                                                for x in slab["pairs"] + slab["unmatched_lines"]])},
+                indent=1, sort_keys=True), encoding="utf-8")
         summ = {"label": a.label, "lines": len(lines), "unbound_engine_elements": unbound,
                 "trades": rows, "deductions": dict(ded), "levels": rep["levels"],
                 "refused_deductions": [d for d in rep["deductions"] if d["status"] == "REFUSED"],
