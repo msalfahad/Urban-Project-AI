@@ -65,7 +65,30 @@ def test_k1_is_stdlib_only_in_r8_1():
     Every other engine/source module, the TS01 topology authority included, stays stdlib-only.)"""
     std = set(sys.stdlib_module_names) | {"__future__"}
     by_design = {"kernel_ezdxf.py": None, "topology_crosscheck.py": {"shapely"}, "ground_slab_recovery.py": {"shapely"},
-                 "region_recovery.py": {"shapely"}}
+                 "region_recovery.py": {"shapely"},
+                 # T-257 declarations: one per module whose record in research/agents_t210/K1_DECISIONS.json is
+                 # ALLOWED_OUTSIDE_K1 (Checker T-210 verdict, merge dadf8446): not K1, no K1 core module reaches it,
+                 # the package is in the B-5 register and pinned in requirements.txt (shapely==2.2.0,
+                 # numpy==2.4.6). Checked entry by entry by research/agents_t257/k1_declarations.py (T-257).
+                 # The OUTSIDE_K2_GATE (ezdxf) and NOT_REGISTERED_HOLD (pymupdf) modules are NOT declared.
+                 "arch_v213.py": {"shapely"},                       # record: engine/source/arch_v213.py
+                 "beam_binding_v2.py": {"shapely"},                 # record: engine/source/beam_binding_v2.py
+                 "concrete_overlap_ownership.py": {"numpy"},        # record: engine/source/concrete_overlap_ownership.py
+                 "element_register_v0.py": {"shapely"},             # record: engine/source/element_register_v0.py
+                 "exterior_spaces.py": {"shapely"},                 # record: engine/source/exterior_spaces.py
+                 "facade_passage_walls.py": {"shapely"},            # record: engine/source/facade_passage_walls.py
+                 "masonry_centreline.py": {"shapely"},              # record: engine/source/masonry_centreline.py
+                 "masonry_centreline_v2.py": {"shapely"},           # record: engine/source/masonry_centreline_v2.py
+                 "membrane_coverage_proof_v1.py": {"shapely"},      # record: engine/source/membrane_coverage_proof_v1.py
+                 "membrane_cutting_plan.py": {"shapely"},           # record: engine/source/membrane_cutting_plan.py
+                 "membrane_fold_v2.py": {"shapely"},                # record: engine/source/membrane_fold_v2.py
+                 "membrane_fold_v3.py": {"shapely"},                # record: engine/source/membrane_fold_v3.py
+                 "membrane_fold_v4.py": {"shapely"},                # record: engine/source/membrane_fold_v4.py
+                 "membrane_fold_v5.py": {"shapely"},                # record: engine/source/membrane_fold_v5.py
+                 "room_census_guard.py": {"shapely"},               # record: engine/source/room_census_guard.py
+                 "room_label_guard.py": {"shapely"},                # record: engine/source/room_label_guard.py
+                 "stair_flight_once_v1.py": {"shapely"},            # record: engine/source/stair_flight_once_v1.py
+                 "stair_floor_residue.py": {"shapely"}}             # record: engine/source/stair_floor_residue.py
     for p in _files(SOURCE):
         if p.name in by_design and by_design[p.name] is None:
             continue

@@ -1,0 +1,56 @@
+{
+ "freelancer_decor_m2": 409.58,
+ "held_by_surface": {
+  "beam edge at a stair zone [m]": 8.0773,
+  "bulkhead edges of beam pieces over this held piece [m]": 16.1628,
+  "bulkhead edges on CONFLICT / HELD / unregistered beams [m]": 45.5734,
+  "bulkhead vertical faces, drawing-derived candidate [m2]": 160.1479,
+  "ceiling edge at an opening [m]": 49.134,
+  "cove / cornice run at the wall [m]": 288.6399,
+  "held part of the ceiling [m2]": 12.9742,
+  "plan area under the slab, ceiling type not decidable [m2]": 19.146,
+  "shaft top under the slab [m2]": 3.24,
+  "stair soffit over the flights [m2]": 10.725,
+  "stair top under the slab [m2]": 1.75,
+  "stair zone [m2]": 20.5786,
+  "stair zone beyond the stair face [m2]": 1.9444,
+  "under an open dome position [m2]": 29.0695
+ },
+ "ledger_csv_sha256": "10214b3dbffcf57a5327130edd65794646864c60cb11abb090e1f1906d30d522",
+ "pieces": 39,
+ "r2_horizontal_m2": 363.1732,
+ "r2_owner_bulkhead_m2": 29.2367,
+ "r3_vs_freelancer_m2": -48.3513,
+ "r3_vs_freelancer_pct": -11.81,
+ "r3_vs_r2_m2": -1.9445,
+ "r3_vs_released_m2": -41.9341,
+ "r3_vs_released_pct": -10.4,
+ "released_fin_ceiling_m2": 403.1628,
+ "reproduction_notes": [
+  "1F-R78C367 1F-070 (B4, D 0.5): re-run free edge 1.4 m vs T-271 5.1 m; no owner face and no held edge either way (D <= 0.60), not used"
+ ],
+ "totals": {
+  "horizontal_by_class_m2": {
+   "DRY": 280.4639,
+   "WET": 80.7648
+  },
+  "horizontal_m2": {
+   "1F": 142.7521,
+   "2F": 30.5258,
+   "GF": 187.9508,
+   "villa": 361.2287
+  },
+  "owner_bulkhead_m2": {
+   "1F": 11.3296,
+   "2F": 0.0,
+   "GF": 16.6049,
+   "villa": 27.9345
+  },
+  "paint_owner_m2": {
+   "1F": 154.0817,
+   "2F": 30.5258,
+   "GF": 204.5557,
+   "villa": 389.1632
+  }
+ }
+}

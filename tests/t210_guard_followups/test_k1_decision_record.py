@@ -19,7 +19,11 @@ ROOT = Path(__file__).resolve().parents[2]
 # ------------------------------------------------------------------------------------------------ real tree
 
 def test_record_covers_every_offender_on_the_tree():
-    problems, f = K.check(ROOT, K.load_record())
+    # T-257: the K1 test's by_design now declares the 18 ALLOWED_OUTSIDE_K1 modules, so the real-tree check runs through
+    # research/agents_t257/k1_declarations.py: the same T-210 rules on the offenders under the four R8-era exceptions
+    # (a declaration never makes its record STALE), plus one check per declaration against this record.
+    from research.agents_t257 import k1_declarations as K2
+    problems, f = K2.check(ROOT, K.load_record())
     assert problems == [], problems
     assert len(f["offenders"]) >= 24          # never fewer records than the 24 of the T-202 sweep without a STALE
 
@@ -32,8 +36,12 @@ def test_k1_core_reaches_no_offender_and_released_v29_neither():
 
 def test_by_design_is_read_from_the_k1_test_itself():
     by_design, core = K.k1_test_facts(ROOT)
-    assert by_design == {"kernel_ezdxf.py": None, "topology_crosscheck.py": {"shapely"},
-                         "ground_slab_recovery.py": {"shapely"}, "region_recovery.py": {"shapely"}}
+    r8_era = {"kernel_ezdxf.py": None, "topology_crosscheck.py": {"shapely"},
+              "ground_slab_recovery.py": {"shapely"}, "region_recovery.py": {"shapely"}}
+    declared = {r["module"].rsplit("/", 1)[1]: set(r["packages"]) for r in K.load_record()["records"]
+                if r["decision"] == "ALLOWED_OUTSIDE_K1"}               # T-257: one entry per ALLOWED record, exactly
+    assert len(declared) == 18
+    assert by_design == {**r8_era, **declared}
     assert "engine/source/cad/kernel.py" in core and "engine/source/cad/kernel_ocs.py" in core
 
 

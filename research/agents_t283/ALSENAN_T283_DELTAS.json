@@ -1,0 +1,1623 @@
+{
+ "pieces": [
+  {
+   "beams": {
+    "GF-129": {
+     "borders": {
+      "decor": 2.7112
+     },
+     "depth": 0.5,
+     "free_edge_m": 2.7112,
+     "mark": "CB4",
+     "member": "BM-GF-021",
+     "piece_m2": 0.501975,
+     "status": "CALCULATED"
+    },
+    "GF-142": {
+     "borders": {
+      "decor": 6.8968
+     },
+     "depth": 0.85,
+     "free_edge_m": 6.8968,
+     "mark": "B27",
+     "member": "BM-GF-048",
+     "piece_m2": 3.260914,
+     "status": "CALCULATED"
+    }
+   },
+   "face": "GF-RC99C2A/pantry",
+   "floor": "GF",
+   "stair_beyond": []
+  },
+  {
+   "beams": {
+    "GF-038": {
+     "borders": {
+      "decor": 1.1545
+     },
+     "depth": 0.75,
+     "free_edge_m": 1.1545,
+     "mark": "B11",
+     "member": "BM-GF-001",
+     "piece_m2": 0.095017,
+     "status": "CALCULATED"
+    },
+    "GF-058": {
+     "borders": {
+      "decor": 2.4092
+     },
+     "depth": 0.75,
+     "free_edge_m": 2.4092,
+     "mark": "B17",
+     "member": "BM-GF-044",
+     "piece_m2": 0.268746,
+     "status": "CALCULATED"
+    },
+    "GF-073": {
+     "borders": {
+      "decor": 8.9681
+     },
+     "depth": 0.75,
+     "free_edge_m": 8.9681,
+     "mark": "B13",
+     "member": "BM-GF-036",
+     "piece_m2": 1.121017,
+     "status": "CALCULATED"
+    },
+    "GF-074": {
+     "borders": {
+      "decor": 0.9574
+     },
+     "depth": null,
+     "free_edge_m": 0.9574,
+     "mark": null,
+     "member": null,
+     "piece_m2": 0.060937,
+     "status": "NO_REGISTER_ROW"
+    },
+    "GF-080": {
+     "borders": {
+      "decor": 4.3597
+     },
+     "depth": 0.5,
+     "free_edge_m": 4.3597,
+     "mark": "B4",
+     "member": "BM-GF-010",
+     "piece_m2": 0.395972,
+     "status": "CALCULATED"
+    },
+    "GF-085": {
+     "borders": {
+      "decor": 0.8579
+     },
+     "depth": null,
+     "free_edge_m": 0.8579,
+     "mark": null,
+     "member": null,
+     "piece_m2": 0.053264,
+     "status": "NO_REGISTER_ROW"
+    },
+    "GF-100": {
+     "borders": {
+      "decor": 6.7999
+     },
+     "depth": 0.4,
+     "free_edge_m": 6.7999,
+     "mark": "B3",
+     "member": "BM-GF-007",
+     "piece_m2": 0.65999,
+     "status": "CALCULATED"
+    },
+    "GF-102": {
+     "borders": {
+      "decor": 5.5433
+     },
+     "depth": 0.4,
+     "free_edge_m": 5.5433,
+     "mark": "B1",
+     "member": "BM-GF-008",
+     "piece_m2": 0.513891,
+     "status": "CALCULATED"
+    },
+    "GF-103": {
+     "borders": {
+      "decor": 7.2611
+     },
+     "depth": 0.5,
+     "free_edge_m": 7.2611,
+     "mark": "B4",
+     "member": "BM-GF-009",
+     "piece_m2": 0.685854,
+     "status": "CALCULATED"
+    },
+    "GF-104": {
+     "borders": {
+      "decor": 7.5
+     },
+     "depth": 0.75,
+     "free_edge_m": 7.5,
+     "mark": "CB1",
+     "member": "BM-GF-042",
+     "piece_m2": 1.125351,
+     "status": "CALCULATED"
+    },
+    "GF-108": {
+     "borders": {
+      "NO_CEILING": 5.821,
+      "STAIR_ZONE": 0.3791,
+      "decor": 7.7167
+     },
+     "depth": 0.75,
+     "free_edge_m": 13.9168,
+     "mark": "B29",
+     "member": "BM-GF-054",
+     "piece_m2": 1.351431,
+     "status": "CONFLICT"
+    },
+    "GF-109": {
+     "borders": {
+      "STAIR_ZONE": 1.5732,
+      "decor": 14.8697
+     },
+     "depth": 0.75,
+     "free_edge_m": 16.4429,
+     "mark": "B21",
+     "member": "BM-GF-056",
+     "piece_m2": 2.942574,
+     "status": "CONFLICT"
+    },
+    "GF-125": {
+     "borders": {
+      "NO_CEILING": 3.9505,
+      "decor": 8.8495
+     },
+     "depth": 0.75,
+     "free_edge_m": 12.8,
+     "mark": "B22",
+     "member": "BM-GF-045",
+     "piece_m2": 3.199998,
+     "status": "CALCULATED"
+    },
+    "GF-133": {
+     "borders": {
+      "decor": 17.1051
+     },
+     "depth": 0.85,
+     "free_edge_m": 17.1051,
+     "mark": "B26",
+     "member": "BM-GF-047",
+     "piece_m2": 4.646842,
+     "status": "CALCULATED"
+    },
+    "GF-142": {
+     "borders": {
+      "decor": 0.4407
+     },
+     "depth": 0.85,
+     "free_edge_m": 0.4407,
+     "mark": "B27",
+     "member": "BM-GF-048",
+     "piece_m2": 0.04639,
+     "status": "CALCULATED"
+    },
+    "GF-143": {
+     "borders": {
+      "STAIR_ZONE": 0.8,
+      "decor": 0.0
+     },
+     "depth": 0.5,
+     "free_edge_m": 0.8,
+     "mark": "CA",
+     "member": "BM-GF-039",
+     "piece_m2": 0.03,
+     "status": "CALCULATED"
+    },
+    "GF-144": {
+     "borders": {
+      "NO_CEILING": 0.301,
+      "STAIR_ZONE": 1.444,
+      "decor": 0.005
+     },
+     "depth": 0.5,
+     "free_edge_m": 1.75,
+     "mark": "CA",
+     "member": "BM-GF-039",
+     "piece_m2": 0.1725,
+     "status": "CALCULATED"
+    },
+    "GF-158": {
+     "borders": {
+      "STAIR_ZONE": 1.25,
+      "decor": 0.0
+     },
+     "depth": 0.5,
+     "free_edge_m": 1.25,
+     "mark": "CA",
+     "member": "BM-GF-039",
+     "piece_m2": 0.142499,
+     "status": "CALCULATED"
+    },
+    "GF-159": {
+     "borders": {
+      "STAIR_ZONE": 3.625,
+      "decor": 0.0
+     },
+     "depth": null,
+     "free_edge_m": 3.625,
+     "mark": null,
+     "member": null,
+     "piece_m2": 1.375612,
+     "status": "NO_REGISTER_ROW"
+    },
+    "GF-161": {
+     "borders": {
+      "STAIR_ZONE": 1.1,
+      "decor": 0.0
+     },
+     "depth": null,
+     "free_edge_m": 1.1,
+     "mark": null,
+     "member": null,
+     "piece_m2": 0.05125,
+     "status": "NO_REGISTER_ROW"
+    },
+    "GF-165": {
+     "borders": {
+      "decor": 6.5827
+     },
+     "depth": 0.75,
+     "free_edge_m": 6.5827,
+     "mark": "CB3",
+     "member": "BM-GF-018",
+     "piece_m2": 0.638261,
+     "status": "CALCULATED"
+    },
+    "GF-166": {
+     "borders": {
+      "decor": 1.2385
+     },
+     "depth": null,
+     "free_edge_m": 1.2385,
+     "mark": null,
+     "member": null,
+     "piece_m2": 0.05,
+     "status": "NO_REGISTER_ROW"
+    },
+    "GF-167": {
+     "borders": {
+      "decor": 1.2385
+     },
+     "depth": null,
+     "free_edge_m": 1.2385,
+     "mark": null,
+     "member": null,
+     "piece_m2": 0.05,
+     "status": "NO_REGISTER_ROW"
+    },
+    "GF-189": {
+     "borders": {
+      "decor": 3.2576
+     },
+     "depth": 0.75,
+     "free_edge_m": 3.2576,
+     "mark": "CB8",
+     "member": "BM-GF-041",
+     "piece_m2": 0.317832,
+     "status": "CALCULATED"
+    }
+   },
+   "face": "GF-RC99C2A/open",
+   "floor": "GF",
+   "stair_beyond": [
+    [
+     "GF-143",
+     0.03
+    ],
+    [
+     "GF-144",
+     0.1725
+    ],
+    [
+     "GF-158",
+     0.142499
+    ],
+    [
+     "GF-159",
+     1.375612
+    ],
+    [
+     "GF-161",
+     0.05125
+    ]
+   ]
+  },
+  {
+   "beams": {
+    "GF-110": {
+     "borders": {
+      "decor": 7.9999
+     },
+     "depth": 0.75,
+     "free_edge_m": 7.9999,
+     "mark": "CB6",
+     "member": "BM-GF-030",
+     "piece_m2": 0.79999,
+     "status": "CALCULATED"
+    }
+   },
+   "face": "GF-R7512EA",
+   "floor": "GF",
+   "stair_beyond": []
+  },
+  {
+   "beams": {
+    "GF-008": {
+     "borders": {
+      "decor": 0.97
+     },
+     "depth": 0.5,
+     "free_edge_m": 0.97,
+     "mark": "CB2",
+     "member": "BM-GF-055",
+     "piece_m2": 0.048501,
+     "status": "CONFLICT"
+    },
+    "GF-011": {
+     "borders": {
+      "decor": 3.1735
+     },
+     "depth": 0.75,
+     "free_edge_m": 3.1735,
+     "mark": "B24",
+     "member": "BM-GF-046",
+     "piece_m2": 0.980122,
+     "status": "CALCULATED"
+    },
+    "GF-030": {
+     "borders": {
+      "decor": 2.1399
+     },
+     "depth": 0.5,
+     "free_edge_m": 2.1399,
+     "mark": "B4",
+     "member": "BM-GF-004",
+     "piece_m2": 0.19399,
+     "status": "CALCULATED"
+    },
+    "GF-031": {
+     "borders": {
+      "decor": 7.9
+     },
+     "depth": 0.75,
+     "free_edge_m": 7.9,
+     "mark": "B16",
+     "member": "BM-GF-038",
+     "piece_m2": 1.08,
+     "status": "CALCULATED"
+    },
+    "GF-055": {
+     "borders": {
+      "decor": 0.9574
+     },
+     "depth": null,
+     "free_edge_m": 0.9574,
+     "mark": null,
+     "member": null,
+     "piece_m2": 0.060937,
+     "status": "NO_REGISTER_ROW"
+    },
+    "GF-058": {
+     "borders": {
+      "decor": 2.0171
+     },
+     "depth": 0.75,
+     "free_edge_m": 2.0171,
+     "mark": "B17",
+     "member": "BM-GF-044",
+     "piece_m2": 0.329407,
+     "status": "CALCULATED"
+    },
+    "GF-073": {
+     "borders": {
+      "decor": 0.4862
+     },
+     "depth": 0.75,
+     "free_edge_m": 0.4862,
+     "mark": "B13",
+     "member": "BM-GF-036",
+     "piece_m2": 0.023788,
+     "status": "CALCULATED"
+    }
+   },
+   "face": "GF-R75FBAE",
+   "floor": "GF",
+   "stair_beyond": []
+  },
+  {
+   "beams": {
+    "GF-066": {
+     "borders": {
+      "STAIR_ZONE": 2.5,
+      "decor": 2.5
+     },
+     "depth": 0.75,
+     "free_edge_m": 4.9999,
+     "mark": "B20",
+     "member": "BM-GF-043",
+     "piece_m2": 0.99998,
+     "status": "CALCULATED"
+    }
+   },
+   "face": "GF-R31F8AE",
+   "floor": "GF",
+   "stair_beyond": [
+    [
+     "GF-066",
+     0.402493
+    ]
+   ]
+  },
+  {
+   "beams": {},
+   "face": "GF-RA3AD49",
+   "floor": "GF",
+   "stair_beyond": []
+  },
+  {
+   "beams": {
+    "GF-175": {
+     "borders": {
+      "decor": 2.6
+     },
+     "depth": 0.4,
+     "free_edge_m": 2.6,
+     "mark": "B1",
+     "member": "BM-GF-012",
+     "piece_m2": 0.24,
+     "status": "CALCULATED"
+    },
+    "GF-189": {
+     "borders": {
+      "decor": 7.02
+     },
+     "depth": 0.75,
+     "free_edge_m": 7.02,
+     "mark": "CB8",
+     "member": "BM-GF-041",
+     "piece_m2": 0.676969,
+     "status": "CALCULATED"
+    }
+   },
+   "face": "GF-R9A05AA",
+   "floor": "GF",
+   "stair_beyond": []
+  },
+  {
+   "beams": {
+    "GF-138": {
+     "borders": {
+      "decor": 9.0
+     },
+     "depth": 0.5,
+     "free_edge_m": 9.0,
+     "mark": "B4",
+     "member": "BM-GF-011",
+     "piece_m2": 0.899999,
+     "status": "CALCULATED"
+    }
+   },
+   "face": "GF-R51E127",
+   "floor": "GF",
+   "stair_beyond": []
+  },
+  {
+   "beams": {
+    "GF-125": {
+     "borders": {
+      "decor": 1.7
+     },
+     "depth": 0.75,
+     "free_edge_m": 1.7,
+     "mark": "B22",
+     "member": "BM-GF-045",
+     "piece_m2": 0.600002,
+     "status": "CALCULATED"
+    },
+    "GF-142": {
+     "borders": {
+      "decor": 1.9748
+     },
+     "depth": 0.85,
+     "free_edge_m": 1.9748,
+     "mark": "B27",
+     "member": "BM-GF-048",
+     "piece_m2": 1.059552,
+     "status": "CALCULATED"
+    },
+    "GF-170": {
+     "borders": {
+      "decor": 0.3006
+     },
+     "depth": 0.75,
+     "free_edge_m": 0.3006,
+     "mark": "CB8",
+     "member": "BM-GF-040",
+     "piece_m2": 0.021326,
+     "status": "CALCULATED"
+    },
+    "GF-189": {
+     "borders": {
+      "decor": 2.5671
+     },
+     "depth": 0.75,
+     "free_edge_m": 2.5671,
+     "mark": "CB8",
+     "member": "BM-GF-041",
+     "piece_m2": 0.24557,
+     "status": "CALCULATED"
+    }
+   },
+   "face": "GF-RFD4E1D",
+   "floor": "GF",
+   "stair_beyond": []
+  },
+  {
+   "beams": {
+    "GF-029": {
+     "borders": {
+      "decor": 0.6286
+     },
+     "depth": 0.4,
+     "free_edge_m": 0.6286,
+     "mark": "B1",
+     "member": "BM-GF-002",
+     "piece_m2": 0.042855,
+     "status": "CALCULATED"
+    },
+    "GF-030": {
+     "borders": {
+      "decor": 2.6002
+     },
+     "depth": 0.5,
+     "free_edge_m": 2.6002,
+     "mark": "B4",
+     "member": "BM-GF-004",
+     "piece_m2": 0.240016,
+     "status": "CALCULATED"
+    },
+    "GF-038": {
+     "borders": {
+      "decor": 4.8285
+     },
+     "depth": 0.75,
+     "free_edge_m": 4.8285,
+     "mark": "B11",
+     "member": "BM-GF-001",
+     "piece_m2": 0.482854,
+     "status": "CALCULATED"
+    }
+   },
+   "face": "GF-RDBD4F9",
+   "floor": "GF",
+   "stair_beyond": []
+  },
+  {
+   "beams": {
+    "GF-008": {
+     "borders": {
+      "decor": 2.1
+     },
+     "depth": 0.5,
+     "free_edge_m": 2.1,
+     "mark": "CB2",
+     "member": "BM-GF-055",
+     "piece_m2": 0.105009,
+     "status": "CONFLICT"
+    },
+    "GF-017": {
+     "borders": {
+      "decor": 3.9
+     },
+     "depth": 0.4,
+     "free_edge_m": 3.9,
+     "mark": "B1",
+     "member": "BM-GF-005",
+     "piece_m2": 0.35,
+     "status": "CALCULATED"
+    },
+    "GF-030": {
+     "borders": {
+      "decor": 1.3178
+     },
+     "depth": 0.5,
+     "free_edge_m": 1.3178,
+     "mark": "B4",
+     "member": "BM-GF-004",
+     "piece_m2": 0.243563,
+     "status": "CALCULATED"
+    }
+   },
+   "face": "GF-RD6F891",
+   "floor": "GF",
+   "stair_beyond": []
+  },
+  {
+   "beams": {},
+   "face": "GF-RF002DC",
+   "floor": "GF",
+   "stair_beyond": []
+  },
+  {
+   "beams": {
+    "GF-136": {
+     "borders": {
+      "decor": 2.25
+     },
+     "depth": 0.5,
+     "free_edge_m": 2.25,
+     "mark": "B4",
+     "member": "BM-GF-032",
+     "piece_m2": 0.112388,
+     "status": "CALCULATED"
+    }
+   },
+   "face": "GF-RB62B55",
+   "floor": "GF",
+   "stair_beyond": []
+  },
+  {
+   "beams": {},
+   "face": "GF-R89E756",
+   "floor": "GF",
+   "stair_beyond": []
+  },
+  {
+   "beams": {
+    "GF-136": {
+     "borders": {
+      "decor": 2.05
+     },
+     "depth": 0.5,
+     "free_edge_m": 2.05,
+     "mark": "B4",
+     "member": "BM-GF-032",
+     "piece_m2": 0.102398,
+     "status": "CALCULATED"
+    }
+   },
+   "face": "GF-R8496F0",
+   "floor": "GF",
+   "stair_beyond": []
+  },
+  {
+   "beams": {
+    "GF-142": {
+     "borders": {
+      "decor": 0.3524
+     },
+     "depth": 0.85,
+     "free_edge_m": 0.3524,
+     "mark": "B27",
+     "member": "BM-GF-048",
+     "piece_m2": 0.029674,
+     "status": "CALCULATED"
+    },
+    "GF-170": {
+     "borders": {
+      "decor": 1.6
+     },
+     "depth": 0.75,
+     "free_edge_m": 1.6,
+     "mark": "CB8",
+     "member": "BM-GF-040",
+     "piece_m2": 0.159993,
+     "status": "CALCULATED"
+    }
+   },
+   "face": "GF-RC06FED",
+   "floor": "GF",
+   "stair_beyond": []
+  },
+  {
+   "beams": {
+    "GF-028": {
+     "borders": {
+      "decor": 4.9182
+     },
+     "depth": 0.4,
+     "free_edge_m": 4.9182,
+     "mark": "B3",
+     "member": "BM-GF-024",
+     "piece_m2": 0.495874,
+     "status": "CALCULATED"
+    },
+    "GF-029": {
+     "borders": {
+      "decor": 2.2872
+     },
+     "depth": 0.4,
+     "free_edge_m": 2.2872,
+     "mark": "B1",
+     "member": "BM-GF-002",
+     "piece_m2": 0.208718,
+     "status": "CALCULATED"
+    }
+   },
+   "face": "GF-RF38DAF",
+   "floor": "GF",
+   "stair_beyond": []
+  },
+  {
+   "beams": {
+    "GF-005": {
+     "borders": {
+      "decor": 1.8205
+     },
+     "depth": 0.5,
+     "free_edge_m": 1.8205,
+     "mark": "CB2",
+     "member": "BM-GF-055",
+     "piece_m2": 0.092285,
+     "status": "CONFLICT"
+    },
+    "GF-028": {
+     "borders": {
+      "decor": 0.7011
+     },
+     "depth": 0.4,
+     "free_edge_m": 0.7011,
+     "mark": "B3",
+     "member": "BM-GF-024",
+     "piece_m2": 0.050108,
+     "status": "CALCULATED"
+    },
+    "GF-038": {
+     "borders": {
+      "decor": 2.6472
+     },
+     "depth": 0.75,
+     "free_edge_m": 2.6472,
+     "mark": "B11",
+     "member": "BM-GF-001",
+     "piece_m2": 0.264718,
+     "status": "CALCULATED"
+    }
+   },
+   "face": "GF-RB28769",
+   "floor": "GF",
+   "stair_beyond": []
+  },
+  {
+   "beams": {
+    "GF-005": {
+     "borders": {
+      "decor": 1.35
+     },
+     "depth": 0.5,
+     "free_edge_m": 1.35,
+     "mark": "CB2",
+     "member": "BM-GF-055",
+     "piece_m2": 0.067506,
+     "status": "CONFLICT"
+    }
+   },
+   "face": "GF-RDF7D28",
+   "floor": "GF",
+   "stair_beyond": []
+  },
+  {
+   "beams": {},
+   "face": "GF-RFAD3C4",
+   "floor": "GF",
+   "stair_beyond": []
+  },
+  {
+   "beams": {},
+   "face": "GF-R7B7A5D",
+   "floor": "GF",
+   "stair_beyond": []
+  },
+  {
+   "beams": {},
+   "face": "GF-RD36087",
+   "floor": "GF",
+   "stair_beyond": []
+  },
+  {
+   "beams": {
+    "1F-045": {
+     "borders": {
+      "STAIR_ZONE": 2.5,
+      "decor": 2.5
+     },
+     "depth": 0.75,
+     "free_edge_m": 5.0,
+     "mark": "B23",
+     "member": "BM-1F-026",
+     "piece_m2": 1.125,
+     "status": "CALCULATED"
+    },
+    "1F-064": {
+     "borders": {
+      "decor": 0.3
+     },
+     "depth": 0.4,
+     "free_edge_m": 0.3,
+     "mark": "B1",
+     "member": "BM-1F-010",
+     "piece_m2": 0.010001,
+     "status": "CALCULATED"
+    },
+    "1F-070": {
+     "borders": {
+      "decor": 1.4
+     },
+     "depth": 0.5,
+     "free_edge_m": 1.4,
+     "mark": "B4",
+     "member": "BM-1F-004",
+     "piece_m2": 0.12,
+     "status": "CALCULATED"
+    },
+    "1F-071": {
+     "borders": {
+      "decor": 9.8956
+     },
+     "depth": 0.75,
+     "free_edge_m": 9.8956,
+     "mark": "B11",
+     "member": "BM-1F-005",
+     "piece_m2": 0.949563,
+     "status": "CALCULATED"
+    },
+    "1F-075": {
+     "borders": {
+      "decor": 10.75
+     },
+     "depth": 0.75,
+     "free_edge_m": 10.75,
+     "mark": "B25",
+     "member": "BM-1F-027",
+     "piece_m2": 2.805002,
+     "status": "CALCULATED"
+    },
+    "1F-078": {
+     "borders": {
+      "DOME_OPEN": 1.5721,
+      "decor": 0.0
+     },
+     "depth": 0.75,
+     "free_edge_m": 1.5721,
+     "mark": "CB12",
+     "member": "BM-1F-017",
+     "piece_m2": 0.030523,
+     "status": "CALCULATED"
+    },
+    "1F-082": {
+     "borders": {
+      "decor": 1.8
+     },
+     "depth": 0.5,
+     "free_edge_m": 1.8,
+     "mark": "CB13",
+     "member": "BM-1F-022",
+     "piece_m2": 0.169998,
+     "status": "CALCULATED"
+    },
+    "1F-085": {
+     "borders": {
+      "decor": 12.95
+     },
+     "depth": 0.75,
+     "free_edge_m": 12.95,
+     "mark": "B18",
+     "member": "BM-1F-024",
+     "piece_m2": 2.205,
+     "status": "CALCULATED"
+    },
+    "1F-087": {
+     "borders": {
+      "decor": 10.1
+     },
+     "depth": 0.5,
+     "free_edge_m": 10.1,
+     "mark": "B5",
+     "member": "BM-1F-016",
+     "piece_m2": 0.97,
+     "status": "CALCULATED"
+    },
+    "1F-089": {
+     "borders": {
+      "DOME_OPEN": 0.6586,
+      "decor": 4.2592
+     },
+     "depth": 0.75,
+     "free_edge_m": 4.9178,
+     "mark": "CB12",
+     "member": "BM-1F-017",
+     "piece_m2": 0.229483,
+     "status": "CALCULATED"
+    },
+    "1F-097": {
+     "borders": {
+      "decor": 9.2444
+     },
+     "depth": 0.5,
+     "free_edge_m": 9.2444,
+     "mark": "B6",
+     "member": "BM-1F-020",
+     "piece_m2": 1.093046,
+     "status": "CALCULATED"
+    },
+    "1F-103": {
+     "borders": {
+      "decor": 10.72
+     },
+     "depth": 0.75,
+     "free_edge_m": 10.72,
+     "mark": "CB11",
+     "member": "BM-1F-023",
+     "piece_m2": 0.991956,
+     "status": "CALCULATED"
+    }
+   },
+   "face": "1F-R78C367",
+   "floor": "1F",
+   "stair_beyond": [
+    [
+     "1F-045",
+     0.1725
+    ]
+   ]
+  },
+  {
+   "beams": {
+    "1F-045": {
+     "borders": {
+      "decor": 4.25
+     },
+     "depth": 0.75,
+     "free_edge_m": 4.25,
+     "mark": "B23",
+     "member": "BM-1F-026",
+     "piece_m2": 1.022514,
+     "status": "CALCULATED"
+    },
+    "1F-061": {
+     "borders": {
+      "decor": 8.7
+     },
+     "depth": 0.5,
+     "free_edge_m": 8.7,
+     "mark": "B6",
+     "member": "BM-1F-018",
+     "piece_m2": 1.025,
+     "status": "CALCULATED"
+    },
+    "1F-072": {
+     "borders": {
+      "DOME_OPEN": 1.3187,
+      "decor": 3.0313
+     },
+     "depth": null,
+     "free_edge_m": 4.35,
+     "mark": "CB10",
+     "member": "BM-1F-031",
+     "piece_m2": 0.424997,
+     "status": "CONFLICT"
+    },
+    "1F-082": {
+     "borders": {
+      "DOME_OPEN": 1.234,
+      "decor": 2.366
+     },
+     "depth": 0.5,
+     "free_edge_m": 3.6,
+     "mark": "CB13",
+     "member": "BM-1F-022",
+     "piece_m2": 0.177502,
+     "status": "CALCULATED"
+    }
+   },
+   "face": "1F-RB72F22",
+   "floor": "1F",
+   "stair_beyond": []
+  },
+  {
+   "beams": {
+    "1F-021": {
+     "borders": {
+      "decor": 3.475
+     },
+     "depth": 0.5,
+     "free_edge_m": 3.475,
+     "mark": "B5",
+     "member": "BM-1F-015",
+     "piece_m2": 0.173747,
+     "status": "CALCULATED"
+    },
+    "1F-026": {
+     "borders": {
+      "decor": 0.8696
+     },
+     "depth": 0.75,
+     "free_edge_m": 0.8696,
+     "mark": "CB12",
+     "member": "BM-1F-017",
+     "piece_m2": 0.042371,
+     "status": "CALCULATED"
+    },
+    "1F-058": {
+     "borders": {
+      "decor": 3.5
+     },
+     "depth": 0.5,
+     "free_edge_m": 3.5,
+     "mark": "B4",
+     "member": "BM-1F-014",
+     "piece_m2": 0.35,
+     "status": "CALCULATED"
+    },
+    "1F-066": {
+     "borders": {
+      "decor": 3.6
+     },
+     "depth": 0.5,
+     "free_edge_m": 3.6,
+     "mark": "B6",
+     "member": "BM-1F-019",
+     "piece_m2": 0.45,
+     "status": "CALCULATED"
+    }
+   },
+   "face": "1F-R3CFCFD",
+   "floor": "1F",
+   "stair_beyond": []
+  },
+  {
+   "beams": {
+    "1F-070": {
+     "borders": {
+      "decor": 3.6
+     },
+     "depth": 0.5,
+     "free_edge_m": 3.6,
+     "mark": "B4",
+     "member": "BM-1F-004",
+     "piece_m2": 0.177515,
+     "status": "CALCULATED"
+    },
+    "1F-082": {
+     "borders": {
+      "decor": 5.0
+     },
+     "depth": 0.5,
+     "free_edge_m": 5.0,
+     "mark": "CB13",
+     "member": "BM-1F-022",
+     "piece_m2": 0.464996,
+     "status": "CALCULATED"
+    },
+    "1F-103": {
+     "borders": {
+      "decor": 3.65
+     },
+     "depth": 0.75,
+     "free_edge_m": 3.65,
+     "mark": "CB11",
+     "member": "BM-1F-023",
+     "piece_m2": 0.354986,
+     "status": "CALCULATED"
+    }
+   },
+   "face": "1F-RED0D19",
+   "floor": "1F",
+   "stair_beyond": []
+  },
+  {
+   "beams": {
+    "1F-024": {
+     "borders": {
+      "decor": 5.1764
+     },
+     "depth": 0.5,
+     "free_edge_m": 5.1764,
+     "mark": "B6",
+     "member": "BM-1F-030",
+     "piece_m2": 0.493619,
+     "status": "CONFLICT"
+    },
+    "1F-052": {
+     "borders": {
+      "decor": 3.5603
+     },
+     "depth": 0.75,
+     "free_edge_m": 3.5603,
+     "mark": "B19",
+     "member": "BM-1F-025",
+     "piece_m2": 0.558462,
+     "status": "CALCULATED"
+    },
+    "1F-053": {
+     "borders": {
+      "decor": 1.0272
+     },
+     "depth": null,
+     "free_edge_m": 1.0272,
+     "mark": null,
+     "member": null,
+     "piece_m2": 0.038126,
+     "status": "NO_REGISTER_ROW"
+    },
+    "1F-054": {
+     "borders": {
+      "decor": 1.0472
+     },
+     "depth": 0.4,
+     "free_edge_m": 1.0472,
+     "mark": "B1",
+     "member": "BM-1F-010",
+     "piece_m2": 0.04,
+     "status": "CALCULATED"
+    },
+    "1F-055": {
+     "borders": {
+      "decor": 4.8744
+     },
+     "depth": 0.75,
+     "free_edge_m": 4.8744,
+     "mark": "B19",
+     "member": "BM-1F-025",
+     "piece_m2": 0.894494,
+     "status": "CALCULATED"
+    },
+    "1F-064": {
+     "borders": {
+      "decor": 3.0407
+     },
+     "depth": 0.4,
+     "free_edge_m": 3.0407,
+     "mark": "B1",
+     "member": "BM-1F-010",
+     "piece_m2": 0.283922,
+     "status": "CALCULATED"
+    },
+    "1F-066": {
+     "borders": {
+      "decor": 0.3944
+     },
+     "depth": 0.5,
+     "free_edge_m": 0.3944,
+     "mark": "B6",
+     "member": "BM-1F-019",
+     "piece_m2": 0.018046,
+     "status": "CALCULATED"
+    },
+    "1F-075": {
+     "borders": {
+      "decor": 3.8714
+     },
+     "depth": 0.75,
+     "free_edge_m": 3.8714,
+     "mark": "B25",
+     "member": "BM-1F-027",
+     "piece_m2": 0.912277,
+     "status": "CALCULATED"
+    }
+   },
+   "face": "1F-R0E919A",
+   "floor": "1F",
+   "stair_beyond": []
+  },
+  {
+   "beams": {
+    "1F-019": {
+     "borders": {
+      "decor": 4.05
+     },
+     "depth": 0.4,
+     "free_edge_m": 4.05,
+     "mark": "B2",
+     "member": "BM-1F-009",
+     "piece_m2": 0.307501,
+     "status": "CALCULATED"
+    },
+    "1F-052": {
+     "borders": {
+      "decor": 1.4304
+     },
+     "depth": 0.75,
+     "free_edge_m": 1.4304,
+     "mark": "B19",
+     "member": "BM-1F-025",
+     "piece_m2": 0.410329,
+     "status": "CALCULATED"
+    }
+   },
+   "face": "1F-R26FA0D",
+   "floor": "1F",
+   "stair_beyond": []
+  },
+  {
+   "beams": {
+    "1F-082": {
+     "borders": {
+      "decor": 2.45
+     },
+     "depth": 0.5,
+     "free_edge_m": 2.45,
+     "mark": "CB13",
+     "member": "BM-1F-022",
+     "piece_m2": 0.122502,
+     "status": "CALCULATED"
+    },
+    "1F-095": {
+     "borders": {
+      "decor": 4.25
+     },
+     "depth": 0.5,
+     "free_edge_m": 4.25,
+     "mark": "B6",
+     "member": "BM-1F-021",
+     "piece_m2": 0.5,
+     "status": "CALCULATED"
+    }
+   },
+   "face": "1F-R8BDA49",
+   "floor": "1F",
+   "stair_beyond": []
+  },
+  {
+   "beams": {
+    "1F-072": {
+     "borders": {
+      "decor": 2.4387
+     },
+     "depth": null,
+     "free_edge_m": 2.4387,
+     "mark": "CB10",
+     "member": "BM-1F-031",
+     "piece_m2": 0.244998,
+     "status": "CONFLICT"
+    },
+    "1F-095": {
+     "borders": {
+      "decor": 4.15
+     },
+     "depth": 0.5,
+     "free_edge_m": 4.15,
+     "mark": "B6",
+     "member": "BM-1F-021",
+     "piece_m2": 0.4875,
+     "status": "CALCULATED"
+    }
+   },
+   "face": "1F-R48AA46",
+   "floor": "1F",
+   "stair_beyond": []
+  },
+  {
+   "beams": {
+    "1F-026": {
+     "borders": {
+      "decor": 1.4355
+     },
+     "depth": 0.75,
+     "free_edge_m": 1.4355,
+     "mark": "CB12",
+     "member": "BM-1F-017",
+     "piece_m2": 0.069275,
+     "status": "CALCULATED"
+    },
+    "1F-058": {
+     "borders": {
+      "decor": 4.6
+     },
+     "depth": 0.5,
+     "free_edge_m": 4.6,
+     "mark": "B4",
+     "member": "BM-1F-014",
+     "piece_m2": 0.44,
+     "status": "CALCULATED"
+    },
+    "1F-066": {
+     "borders": {
+      "decor": 4.65
+     },
+     "depth": 0.5,
+     "free_edge_m": 4.65,
+     "mark": "B6",
+     "member": "BM-1F-019",
+     "piece_m2": 0.55,
+     "status": "CALCULATED"
+    },
+    "1F-089": {
+     "borders": {
+      "decor": 0.5145
+     },
+     "depth": 0.75,
+     "free_edge_m": 0.5145,
+     "mark": "CB12",
+     "member": "BM-1F-017",
+     "piece_m2": 0.023226,
+     "status": "CALCULATED"
+    }
+   },
+   "face": "1F-R48CDA5",
+   "floor": "1F",
+   "stair_beyond": []
+  },
+  {
+   "beams": {
+    "1F-024": {
+     "borders": {
+      "decor": 3.6
+     },
+     "depth": 0.5,
+     "free_edge_m": 3.6,
+     "mark": "B6",
+     "member": "BM-1F-030",
+     "piece_m2": 0.359999,
+     "status": "CONFLICT"
+    }
+   },
+   "face": "1F-RED23B8",
+   "floor": "1F",
+   "stair_beyond": []
+  },
+  {
+   "beams": {},
+   "face": "1F-RCCB686",
+   "floor": "1F",
+   "stair_beyond": []
+  },
+  {
+   "beams": {},
+   "face": "1F-RFFE7AF",
+   "floor": "1F",
+   "stair_beyond": []
+  },
+  {
+   "beams": {},
+   "face": "1F-R52AC05",
+   "floor": "1F",
+   "stair_beyond": []
+  },
+  {
+   "beams": {
+    "2F-040": {
+     "borders": {
+      "decor": 5.9999
+     },
+     "depth": 0.4,
+     "free_edge_m": 5.9999,
+     "mark": "B2",
+     "member": "BM-2F-008",
+     "piece_m2": 0.59999,
+     "status": "CALCULATED"
+    },
+    "2F-057": {
+     "borders": {
+      "decor": 3.0
+     },
+     "depth": 0.4,
+     "free_edge_m": 3.0,
+     "mark": "B2",
+     "member": "BM-2F-006",
+     "piece_m2": 0.149985,
+     "status": "CALCULATED"
+    }
+   },
+   "face": "2F-R1DB2D2",
+   "floor": "2F",
+   "stair_beyond": []
+  },
+  {
+   "beams": {
+    "2F-021": {
+     "borders": {
+      "decor": 4.8999
+     },
+     "depth": 0.4,
+     "free_edge_m": 4.8999,
+     "mark": "B3",
+     "member": "BM-2F-003",
+     "piece_m2": 0.48999,
+     "status": "CALCULATED"
+    },
+    "2F-044": {
+     "borders": {
+      "decor": 2.5
+     },
+     "depth": null,
+     "free_edge_m": 2.5,
+     "mark": "(none)",
+     "member": "BM-2F-018",
+     "piece_m2": 0.249999,
+     "status": "HELD"
+    },
+    "2F-055": {
+     "borders": {
+      "decor": 2.55
+     },
+     "depth": 0.4,
+     "free_edge_m": 2.55,
+     "mark": "B2",
+     "member": "BM-2F-004",
+     "piece_m2": 0.12499,
+     "status": "CALCULATED"
+    },
+    "2F-056": {
+     "borders": {
+      "decor": 1.8499
+     },
+     "depth": 0.4,
+     "free_edge_m": 1.8499,
+     "mark": "B1",
+     "member": "BM-2F-005",
+     "piece_m2": 0.08999,
+     "status": "CALCULATED"
+    }
+   },
+   "face": "2F-R4D1B62",
+   "floor": "2F",
+   "stair_beyond": []
+  },
+  {
+   "beams": {
+    "2F-014": {
+     "borders": {
+      "decor": 3.0
+     },
+     "depth": 0.4,
+     "free_edge_m": 3.0,
+     "mark": "B3",
+     "member": "BM-2F-010",
+     "piece_m2": 0.149855,
+     "status": "CALCULATED"
+    }
+   },
+   "face": "2F-RE83BED",
+   "floor": "2F",
+   "stair_beyond": []
+  },
+  {
+   "beams": {},
+   "face": "2F-R2BDCEE",
+   "floor": "2F",
+   "stair_beyond": []
+  }
+ ],
+ "stair_footprints": {
+  "1F": {
+   "flights": [
+    {
+     "first": "644",
+     "last": "62F",
+     "m2": 3.45,
+     "treads": 11
+    },
+    {
+     "first": "646",
+     "last": "632",
+     "m2": 3.795,
+     "treads": 12
+    }
+   ],
+   "footprint_m2": 7.245,
+   "loose_lines": 3,
+   "outside_every_face_m2": 0.0025,
+   "parts": {
+    "1F-016": {
+     "cls": "STAIR",
+     "m2": 7.0475
+    },
+    "1F-032": {
+     "cls": "BEAM_OR_COLUMN",
+     "m2": 0.0225
+    },
+    "1F-045": {
+     "cls": "BEAM_OR_COLUMN",
+     "m2": 0.1725
+    }
+   }
+  },
+  "2F": {
+   "flights": [],
+   "loose_lines": 0
+  },
+  "GF": {
+   "flights": [
+    {
+     "first": "459",
+     "last": "25B",
+     "m2": 3.795,
+     "treads": 12
+    },
+    {
+     "first": "45A",
+     "last": "25E",
+     "m2": 3.795,
+     "treads": 12
+    },
+    {
+     "first": "2C4",
+     "last": "2BA",
+     "m2": 3.45,
+     "treads": 11
+    },
+    {
+     "first": "2C8",
+     "last": "315",
+     "m2": 1.38,
+     "treads": 5
+    }
+   ],
+   "footprint_m2": 18.5332,
+   "loose_lines": 17,
+   "outside_every_face_m2": 0.01963,
+   "parts": {
+    "GF-025": {
+     "cls": "STAIR",
+     "m2": 7.1625
+    },
+    "GF-044": {
+     "cls": "BEAM_OR_COLUMN",
+     "m2": 0.0225
+    },
+    "GF-066": {
+     "cls": "BEAM_OR_COLUMN",
+     "m2": 0.4025
+    },
+    "GF-130/STAIR": {
+     "cls": "STAIR",
+     "m2": 7.4025
+    },
+    "GF-131": {
+     "cls": "STAIR",
+     "m2": 0.1775
+    },
+    "GF-132": {
+     "cls": "STAIR",
+     "m2": 1.2337
+    },
+    "GF-143": {
+     "cls": "BEAM_OR_COLUMN",
+     "m2": 0.03
+    },
+    "GF-144": {
+     "cls": "BEAM_OR_COLUMN",
+     "m2": 0.1725
+    },
+    "GF-145": {
+     "cls": "STAIR",
+     "m2": 0.2625
+    },
+    "GF-154": {
+     "cls": "BEAM_OR_COLUMN",
+     "m2": 0.0176
+    },
+    "GF-156": {
+     "cls": "BEAM_OR_COLUMN",
+     "m2": 0.036
+    },
+    "GF-158": {
+     "cls": "BEAM_OR_COLUMN",
+     "m2": 0.1425
+    },
+    "GF-159": {
+     "cls": "BEAM_HELD",
+     "m2": 1.3756
+    },
+    "GF-161": {
+     "cls": "BEAM_OR_COLUMN",
+     "m2": 0.0512
+    },
+    "GF-163": {
+     "cls": "BEAM_OR_COLUMN",
+     "m2": 0.0244
+    }
+   }
+  }
+ }
+}

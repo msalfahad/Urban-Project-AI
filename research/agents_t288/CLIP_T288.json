@@ -1,0 +1,459 @@
+{
+ "faces": [
+  {
+   "clip_full_m": 0.8435,
+   "clip_hatch_exterior_m": 0.8435,
+   "clip_shrunk_m": 0.8235,
+   "face_id": "GF-016",
+   "handle": "BD",
+   "line_m": 0.8935,
+   "panel": "275"
+  },
+  {
+   "clip_full_m": 0.9678,
+   "clip_hatch_exterior_m": 0.9678,
+   "clip_shrunk_m": 0.9478,
+   "face_id": "GF-016",
+   "handle": "2DF",
+   "line_m": 1.0178,
+   "panel": "275"
+  },
+  {
+   "clip_full_m": 0.1416,
+   "clip_hatch_exterior_m": 0.1416,
+   "clip_shrunk_m": 0.1416,
+   "face_id": "GF-016",
+   "handle": "317",
+   "line_m": 0.1416,
+   "panel": "275"
+  },
+  {
+   "clip_full_m": 0.2734,
+   "clip_hatch_exterior_m": 0.2734,
+   "clip_shrunk_m": 0.2734,
+   "face_id": "GF-016",
+   "handle": "31C",
+   "line_m": 0.2734,
+   "panel": "275"
+  },
+  {
+   "clip_full_m": 1.0001,
+   "clip_hatch_exterior_m": 1.0001,
+   "clip_shrunk_m": 0.9718,
+   "face_id": "GF-016",
+   "handle": "324",
+   "line_m": 1.3225,
+   "panel": "275"
+  },
+  {
+   "clip_full_m": 1.1061,
+   "clip_hatch_exterior_m": 1.1061,
+   "clip_shrunk_m": 1.0779,
+   "face_id": "GF-016",
+   "handle": "325",
+   "line_m": 1.389,
+   "panel": "275"
+  },
+  {
+   "clip_full_m": 0.0585,
+   "clip_hatch_exterior_m": 0.0585,
+   "clip_shrunk_m": 0.0302,
+   "face_id": "GF-015",
+   "handle": "31A",
+   "line_m": 0.2383,
+   "panel": "276"
+  },
+  {
+   "clip_full_m": 0.0276,
+   "clip_hatch_exterior_m": 0.0276,
+   "clip_shrunk_m": 0.0276,
+   "face_id": "GF-015",
+   "handle": "31D",
+   "line_m": 0.0276,
+   "panel": "276"
+  },
+  {
+   "clip_full_m": 0.0309,
+   "clip_hatch_exterior_m": 0.0309,
+   "clip_shrunk_m": 0.0026,
+   "face_id": "GF-015",
+   "handle": "31E",
+   "line_m": 0.0607,
+   "panel": "276"
+  },
+  {
+   "clip_full_m": 1.6849,
+   "clip_hatch_exterior_m": 1.6481,
+   "clip_shrunk_m": 1.6567,
+   "face_id": "GF-015",
+   "handle": "326",
+   "line_m": 2.3552,
+   "panel": "276"
+  },
+  {
+   "clip_full_m": 1.7981,
+   "clip_hatch_exterior_m": 1.7981,
+   "clip_shrunk_m": 1.7699,
+   "face_id": "GF-015",
+   "handle": "327",
+   "line_m": 2.3647,
+   "panel": "276"
+  },
+  {
+   "clip_full_m": 0.8,
+   "clip_hatch_exterior_m": 0.8,
+   "clip_shrunk_m": 0.78,
+   "face_id": "GF-141",
+   "handle": "9F",
+   "line_m": 1.05,
+   "panel": "280"
+  },
+  {
+   "clip_full_m": 0.65,
+   "clip_hatch_exterior_m": 0.65,
+   "clip_shrunk_m": 0.63,
+   "face_id": "GF-141",
+   "handle": "A0",
+   "line_m": 1.05,
+   "panel": "280"
+  },
+  {
+   "clip_full_m": 0.7538,
+   "clip_hatch_exterior_m": 0.7538,
+   "clip_shrunk_m": 0.7202,
+   "face_id": "GF-141",
+   "handle": "AE",
+   "line_m": 0.85,
+   "panel": "280"
+  },
+  {
+   "clip_full_m": 0.65,
+   "clip_hatch_exterior_m": 0.65,
+   "clip_shrunk_m": 0.63,
+   "face_id": "GF-141",
+   "handle": "AF",
+   "line_m": 1.05,
+   "panel": "280"
+  },
+  {
+   "clip_full_m": 0.2,
+   "clip_hatch_exterior_m": 0.2,
+   "clip_shrunk_m": 0.2,
+   "face_id": "GF-141",
+   "handle": "3C4",
+   "line_m": 0.2,
+   "opening_line_of": "GF-W16 window W10 jamb line",
+   "panel": "280"
+  },
+  {
+   "clip_full_m": 0.2,
+   "clip_hatch_exterior_m": 0.2,
+   "clip_shrunk_m": 0.2,
+   "face_id": "GF-141",
+   "handle": "3C8",
+   "line_m": 0.2,
+   "opening_line_of": "GF-W16 window W09 jamb line",
+   "panel": "280"
+  },
+  {
+   "clip_full_m": 0.4,
+   "clip_hatch_exterior_m": 0.4,
+   "clip_shrunk_m": 0.38,
+   "face_id": "GF-081",
+   "handle": "94",
+   "line_m": 0.45,
+   "panel": "298"
+  },
+  {
+   "clip_full_m": 0.65,
+   "clip_hatch_exterior_m": 0.65,
+   "clip_shrunk_m": 0.38,
+   "face_id": "GF-081",
+   "handle": "97",
+   "line_m": 0.65,
+   "panel": "298"
+  },
+  {
+   "clip_full_m": 0.2,
+   "clip_hatch_exterior_m": 0.2,
+   "clip_shrunk_m": 0.2,
+   "face_id": "GF-081",
+   "handle": "26C",
+   "line_m": 0.2,
+   "opening_line_of": "GF-W12 glazing cap (wall end)",
+   "panel": "298"
+  }
+ ],
+ "frames": {
+  "1F": {
+   "arch_columns_in_window": 20,
+   "columns_matched": 20,
+   "max_residual_mm": 0.0
+  },
+  "GF": {
+   "arch_columns_in_window": 30,
+   "columns_matched": 30,
+   "max_residual_mm": 0.0
+  }
+ },
+ "on_edge": [
+  {
+   "clip_full_m": 3.0,
+   "face_id": "GF-141",
+   "handle": "A2",
+   "max_inside_mm": 0.0,
+   "panel": "280"
+  },
+  {
+   "clip_full_m": 0.6115,
+   "face_id": "GF-128",
+   "handle": "158",
+   "max_inside_mm": 0.0,
+   "panel": "287"
+  },
+  {
+   "clip_full_m": 0.1409,
+   "face_id": "GF-128",
+   "handle": "159",
+   "max_inside_mm": 0.0,
+   "panel": "287"
+  },
+  {
+   "clip_full_m": 0.825,
+   "face_id": "1F-018",
+   "handle": "ADB",
+   "max_inside_mm": 0.0,
+   "panel": "5BF"
+  },
+  {
+   "clip_full_m": 0.375,
+   "face_id": "1F-018",
+   "handle": "ADC",
+   "max_inside_mm": 0.0,
+   "panel": "5BF"
+  },
+  {
+   "clip_full_m": 3.0,
+   "face_id": "1F-018",
+   "handle": "B12",
+   "max_inside_mm": 0.0,
+   "panel": "5BF"
+  },
+  {
+   "clip_full_m": 0.4065,
+   "face_id": "1F-018",
+   "handle": "B14",
+   "max_inside_mm": 0.0,
+   "panel": "5BF"
+  }
+ ],
+ "panels": {
+  "275": {
+   "area_m2": 3.325,
+   "area_with_annotation_islands_m2": 3.3316,
+   "face_id": "GF-016",
+   "face_lines_inside": 6,
+   "sheet": "GF"
+  },
+  "276": {
+   "area_m2": 2.5725,
+   "area_with_annotation_islands_m2": 2.6048,
+   "face_id": "GF-015",
+   "face_lines_inside": 5,
+   "sheet": "GF"
+  },
+  "280": {
+   "area_m2": 7.3009,
+   "area_with_annotation_islands_m2": 7.3009,
+   "face_id": "GF-141",
+   "face_lines_inside": 6,
+   "sheet": "GF"
+  },
+  "287": {
+   "area_m2": 2.0804,
+   "area_with_annotation_islands_m2": 2.1456,
+   "face_id": "GF-128",
+   "face_lines_inside": 0,
+   "sheet": "GF"
+  },
+  "298": {
+   "area_m2": 4.1076,
+   "area_with_annotation_islands_m2": 4.1076,
+   "face_id": "GF-081",
+   "face_lines_inside": 3,
+   "sheet": "GF"
+  },
+  "5BF": {
+   "area_m2": 5.4,
+   "area_with_annotation_islands_m2": 5.4,
+   "face_id": "1F-018",
+   "face_lines_inside": 0,
+   "sheet": "1F"
+  }
+ },
+ "unclaimed": [],
+ "walls": {
+  "GF-W12": {
+   "axis_span_m": 0.65,
+   "faces": [
+    [
+     "94"
+    ],
+    [
+     "97"
+    ]
+   ],
+   "under": {
+    "GF-081": {
+     "axis_in_hatch_m": 0.4,
+     "axis_under_panel_m": 0.45,
+     "exclusive_under_panel_m": 0.45,
+     "faces_in_hatch_m": [
+      0.4,
+      0.65
+     ],
+     "hatch_to_column_gap_m": 0.05,
+     "in_other_wall_bodies_m": 0.0
+    }
+   }
+  },
+  "GF-W16": {
+   "axis_span_m": 4.9,
+   "faces": [
+    [
+     "9F",
+     "A0",
+     "A1"
+    ],
+    [
+     "AE",
+     "AF",
+     "B0"
+    ]
+   ],
+   "under": {
+    "GF-141": {
+     "axis_in_hatch_m": 2.95,
+     "axis_under_panel_m": 2.95,
+     "exclusive_under_panel_m": 2.95,
+     "faces_in_hatch_m": [
+      1.45,
+      1.4038
+     ],
+     "hatch_to_column_gap_m": 0.0,
+     "in_other_wall_bodies_m": 0.0
+    }
+   }
+  },
+  "GF-W20": {
+   "axis_span_m": 1.0178,
+   "faces": [
+    [
+     "BD"
+    ],
+    [
+     "2DF"
+    ]
+   ],
+   "under": {
+    "GF-016": {
+     "axis_in_hatch_m": 0.9678,
+     "axis_under_panel_m": 0.9678,
+     "exclusive_under_panel_m": 0.9185,
+     "faces_in_hatch_m": [
+      0.8435,
+      0.9678
+     ],
+     "hatch_to_column_gap_m": 0.0,
+     "in_other_wall_bodies_m": 0.0493
+    }
+   }
+  },
+  "GF-W31": {
+   "axis_span_m": 1.4329,
+   "faces": [
+    [
+     "324"
+    ],
+    [
+     "325"
+    ]
+   ],
+   "under": {
+    "GF-016": {
+     "axis_in_hatch_m": 1.0751,
+     "axis_under_panel_m": 1.0751,
+     "exclusive_under_panel_m": 1.0751,
+     "faces_in_hatch_m": [
+      1.0001,
+      1.1061
+     ],
+     "hatch_to_column_gap_m": 0.0,
+     "in_other_wall_bodies_m": 0.0
+    }
+   }
+  },
+  "GF-W32": {
+   "axis_span_m": 1.3117,
+   "faces": [
+    [
+     "31C",
+     "31D",
+     "31E"
+    ],
+    [
+     "317",
+     "31A"
+    ]
+   ],
+   "under": {
+    "GF-015": {
+     "axis_in_hatch_m": 0.3117,
+     "axis_under_panel_m": 0.3117,
+     "exclusive_under_panel_m": 0.3117,
+     "faces_in_hatch_m": [
+      0.0585,
+      0.0585
+     ],
+     "hatch_to_column_gap_m": 0.0,
+     "in_other_wall_bodies_m": -0.0
+    },
+    "GF-016": {
+     "axis_in_hatch_m": 0.621,
+     "axis_under_panel_m": 0.621,
+     "exclusive_under_panel_m": 0.546,
+     "faces_in_hatch_m": [
+      0.2734,
+      0.1416
+     ],
+     "hatch_to_column_gap_m": 0.0,
+     "in_other_wall_bodies_m": 0.075
+    }
+   }
+  },
+  "GF-W34": {
+   "axis_span_m": 2.3647,
+   "faces": [
+    [
+     "326"
+    ],
+    [
+     "327"
+    ]
+   ],
+   "under": {
+    "GF-015": {
+     "axis_in_hatch_m": 1.7231,
+     "axis_under_panel_m": 1.7231,
+     "exclusive_under_panel_m": 1.7231,
+     "faces_in_hatch_m": [
+      1.6849,
+      1.7981
+     ],
+     "hatch_to_column_gap_m": 0.0,
+     "in_other_wall_bodies_m": 0.0
+    }
+   }
+  }
+ }
+}
