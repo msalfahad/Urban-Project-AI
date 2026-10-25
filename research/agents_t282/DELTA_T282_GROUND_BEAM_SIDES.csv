@@ -9,7 +9,7 @@ span_id,side,r4_L_m,walk_m,traced_m,gaps_m,traced_plus_gaps_m,delta_m,r4_kind,D_
 109+7CB#3,B,2.7,2.7,2.7,0,2.7,0.0,CALC,0.95,0.95,0.0,0.0,AGREES,both methods = the r4 length
 10A+7C9#1,A,4.3,4.3,4.3,0,4.3,0.0,FORMED,0.95,0.95,0.0,0.0,AGREES,both methods = the r4 length
 10A+7C9#1,B,4.3,4.3,4.3,0,4.3,0.0,CALC,0.95,0.95,0.0,0.0,AGREES,both methods = the r4 length
-10B+7D1#1,A,1.2,1.499,1.5,0,1.5,0.3,CONFLICT,,,,,DRAWING-CONFIRMED,both methods: the edge closes on its carrier's drawn face +0.3000 m from the r4 station (the r4 span is cut square at one station)
+10B+7D1#1,A,1.2,1.499,1.3,0,1.3,0.1,CONFLICT,,,,,DRAWING-CONFIRMED,the edge meets another drawn member 0.1990 m before the carrier V2 names (walk 1.4990): no face there (traced)
 10B+7D1#1,B,1.2,1.2,1.2,0,1.2,0.0,CONFLICT,,,,,AGREES,both methods = the r4 length
 10B+7D1#2,A,2.3,2.3,2.3,0,2.3,0.0,CONFLICT,,,,,AGREES,both methods = the r4 length
 10B+7D1#2,B,2.3,2.3,2.3,0,2.3,0.0,CONFLICT,,,,,AGREES,both methods = the r4 length
@@ -19,6 +19,7 @@ span_id,side,r4_L_m,walk_m,traced_m,gaps_m,traced_plus_gaps_m,delta_m,r4_kind,D_
 114+115+7DF#2,B,1.0,1.0,1.0,0,1.0,0.0,CALC,0.95,0.95,0.0,0.0,AGREES,both methods = the r4 length
 136+7D5#1,A,6.0,6.0,6.0,0,6.0,0.0,CONFLICT,,,,,AGREES,both methods = the r4 length
 136+7D5#1,B,6.0,6.0,6.0,0,6.0,0.0,CONFLICT,,,,,AGREES,both methods = the r4 length
+136+7D5#1,END,0.0,,0.0,0.0,0.0,0.0,CONFLICT,,,,,DRAWING-CONFIRMED,"end on the drawn face of BOUNDARY_GB:7FE over 0.2010 of 0.3000 m (V2 end kind COLUMN): contact, no end face (R-FACE-END-3); the rest on the column"
 137+138#1,A,2.4,2.4,2.4,0,2.4,0.0,CONFLICT,,,,,AGREES,both methods = the r4 length
 137+138#1,B,2.4,2.4,2.4,0,2.4,0.0,CONFLICT,,,,,AGREES,both methods = the r4 length
 13C+7D9#1,A,1.45,1.45,1.45,0,1.45,0.0,HELD,0.3,0.4,0.0,0.0,AGREES,both methods = the r4 length
@@ -42,12 +43,13 @@ span_id,side,r4_L_m,walk_m,traced_m,gaps_m,traced_plus_gaps_m,delta_m,r4_kind,D_
 145+7CA#1,B,1.9,1.9,1.6,0.3,1.9,0.0,FORMED,0.95,0.95,0.0,0.0,AGREES,both methods = the r4 length
 15C+7CC#1,A,2.4,2.4,2.4,0,2.4,0.0,HELD,0.3,0.4,0.0,0.0,AGREES,both methods = the r4 length
 15C+7CC#1,B,2.4,2.4,2.4,0,2.4,0.0,HELD,0.3,0.4,0.0,0.0,AGREES,both methods = the r4 length
+15C+7CC#1,END,0.0,,0.0,0.0,0.0,0.0,HELD,0.3,0.4,0.0,0.0,DRAWING-CONFIRMED,"end on the drawn face of RC_WALL:7C2 over 0.3000 of 0.3000 m (V2 end kind COLUMN): contact, no end face (R-FACE-END-3)"
 15D+7C8#1,A,2.9,1.8999,2.7373,0.1628,2.9001,0.0001,HELD,0.4,0.4,0.0,0.0,AGREES,both methods = the r4 length
 15D+7C8#1,B,2.9,1.8999,2.6,0.2499,2.8499,-0.0501,HELD,0.4,0.4,-0.02,-0.02,HELD,walk 1.8999 vs traced 2.8499 differ: not settled by the drawing reading
-15D+7C8#1,END,0.0,,0.3,0.0,0.3,0.3,HELD,0.4,0.4,0.12,0.12,DRAWING-CONFIRMED,free end face (FOOTING_FACE end): the band stops with nothing drawn against it; in no r4 row
+15D+7C8#1,END,0.0,,0.0,0.0,0.0,0.0,HELD,0.4,0.4,0.0,0.0,DRAWING-CONFIRMED,"end on the drawn face of RC_WALL:7C2 over 0.3000 of 0.3000 m (V2 end kind FOOTING_FACE): contact, no end face (R-FACE-END-3)"
 15E+15F#1,A,2.7,,2.4,0.3,2.7,0.0,HELD,0.4,0.4,0.0,0.0,AGREES,both methods = the r4 length
 15E+15F#1,B,2.7,2.7,2.7,0,2.7,0.0,HELD,0.4,0.4,0.0,0.0,AGREES,both methods = the r4 length
-15E+15F#1,END,0.0,,0.1,0.0,0.1,0.1,HELD,0.4,0.4,0.04,0.04,DRAWING-CONFIRMED,end beside a partial-width column: the part of the band's drawn end the column does not cover; in no r4 row
+15E+15F#1,END,0.0,,0.0,0.0,0.0,0.0,HELD,0.4,0.4,0.0,0.0,DRAWING-CONFIRMED,"end on the drawn face of RC_WALL:7C2 over 0.3000 of 0.3000 m (V2 end kind COLUMN): contact, no end face (R-FACE-END-3)"
 16F+7FF#1,A,1.25,1.25,1.25,0,1.25,0.0,HELD,0.3,0.4,0.0,0.0,AGREES,both methods = the r4 length
 16F+7FF#1,B,1.25,1.25,1.25,0,1.25,0.0,HELD,0.3,0.4,0.0,0.0,AGREES,both methods = the r4 length
 170+7C3#1,A,2.4,2.4,2.4,0,2.4,0.0,FORMED,0.95,0.95,0.0,0.0,AGREES,both methods = the r4 length
@@ -64,7 +66,7 @@ span_id,side,r4_L_m,walk_m,traced_m,gaps_m,traced_plus_gaps_m,delta_m,r4_kind,D_
 176+7E6#1,B,3.75,3.75,3.3257,0.4243,3.75,0.0,HELD,0.4,0.4,0.0,0.0,AGREES,both methods = the r4 length
 177+7CD#1,A,5.02,5.02,4.72,0.3,5.02,0.0,HELD,0.6,0.6,0.0,0.0,AGREES,both methods = the r4 length
 177+7CD#1,B,5.02,5.02,4.42,0.6,5.02,0.0,HELD,0.6,0.6,0.0,0.0,AGREES,both methods = the r4 length
-177+7CD#1,END,0.0,,0.3,0.0,0.3,0.3,HELD,0.6,0.6,0.18,0.18,DRAWING-CONFIRMED,free end face (GAP_TO_COLUMN end): the band stops with nothing drawn against it; in no r4 row
+177+7CD#1,END,0.0,,0.0,0.0,0.0,0.0,HELD,0.6,0.6,0.0,0.0,DRAWING-CONFIRMED,"end on the drawn face of RC_WALL:7C2 over 0.3000 of 0.3000 m (V2 end kind GAP_TO_COLUMN): contact, no end face (R-FACE-END-3)"
 177+7CD#2,A,1.5367,1.7557,1.4558,0.3,1.7558,0.2191,HELD,0.3,0.4,0.0657,0.0876,DRAWING-CONFIRMED,both methods: the edge closes on its carrier's drawn face +0.2191 m from the r4 station (the r4 span is cut square at one station)
 177+7CD#2,B,1.5367,1.5372,1.5367,0,1.5367,0.0,HELD,0.3,0.4,0.0,0.0,AGREES,both methods = the r4 length
 178+7DB#1,A,3.8,3.8,3.8,0,3.8,0.0,HELD,0.4,0.95,0.0,0.0,AGREES,both methods = the r4 length
@@ -73,7 +75,7 @@ span_id,side,r4_L_m,walk_m,traced_m,gaps_m,traced_plus_gaps_m,delta_m,r4_kind,D_
 17B+7E5#1,B,1.2,1.2,1.2,0,1.2,0.0,HELD,0.3,0.4,0.0,0.0,AGREES,both methods = the r4 length
 17C+7E3#1,A,3.228,1.9279,3.2277,0,3.2277,-0.0003,FORMED,0.4,0.4,-0.0001,-0.0001,AGREES,both methods = the r4 length
 17C+7E3#1,B,3.228,1.9279,3.2277,0,3.2277,-0.0003,FORMED,0.4,0.4,-0.0001,-0.0001,AGREES,both methods = the r4 length
-17C+7E3#1,END,0.0,,0.3,0.0,0.3,0.3,FORMED,0.4,0.4,0.12,0.12,DRAWING-CONFIRMED,free end face (FOOTING_FACE end): the band stops with nothing drawn against it; in no r4 row
+17C+7E3#1,END,0.0,,0.0,0.0,0.0,0.0,FORMED,0.4,0.4,0.0,0.0,DRAWING-CONFIRMED,"end on the drawn face of RC_WALL:7C2 over 0.3000 of 0.3000 m (V2 end kind FOOTING_FACE): contact, no end face (R-FACE-END-3)"
 17D+7E4#1,A,4.2723,4.2723,3.9723,0.3,4.2723,0.0,HELD,0.4,0.4,0.0,0.0,AGREES,both methods = the r4 length
 17D+7E4#1,B,4.2723,4.2723,4.2723,0,4.2723,0.0,HELD,0.4,0.4,0.0,0.0,AGREES,both methods = the r4 length
 17E+17F#1,A,2.4269,2.685,2.687,0,2.687,0.2601,HELD,0.3,0.4,0.078,0.104,DRAWING-CONFIRMED,both methods: the edge closes on its carrier's drawn face +0.2601 m from the r4 station (the r4 span is cut square at one station)
@@ -84,7 +86,7 @@ span_id,side,r4_L_m,walk_m,traced_m,gaps_m,traced_plus_gaps_m,delta_m,r4_kind,D_
 180D+180E#1,B,2.1,2.1,1.6757,0.4243,2.1,0.0,HELD,0.3,0.4,0.0,0.0,AGREES,both methods = the r4 length
 1811+1812#1,A,1.3,,1.8,0,1.8,0.5,HELD,0.3,0.4,0.15,0.2,DRAWING-CONFIRMED,the carrier V2 names (COL:1E8) does not reach this edge (partial-width support); the edge runs on beside it to COL:17C0
 1811+1812#1,B,1.3,1.3,1.3,0,1.3,0.0,HELD,0.3,0.4,0.0,0.0,AGREES,both methods = the r4 length
-1811+1812#1,END,0.0,,0.3,0.0,0.3,0.3,HELD,0.3,0.4,0.09,0.12,DRAWING-CONFIRMED,free end face (FREE_END end): the band stops with nothing drawn against it; in no r4 row
+1811+1812#1,END,0.0,,0.0,0.0,0.0,0.0,HELD,0.3,0.4,0.0,0.0,DRAWING-CONFIRMED,"end on the drawn face of BOUNDARY_GB:7FE over 0.3000 of 0.3000 m (V2 end kind FREE_END): contact, no end face (R-FACE-END-3)"
 182+183#1,A,2.0732,2.3722,2.1431,0,2.1431,0.0699,HELD,0.3,0.4,0.021,0.028,DRAWING-CONFIRMED,the edge meets another drawn member 0.2291 m before the carrier V2 names (walk 2.3722): no face there (traced); drawn line stops 0.2301 m short of the carrier: closed on it (R-FACE-END-1)
 182+183#1,B,2.0732,2.0722,2.0732,0,2.0732,0.0,HELD,0.3,0.4,0.0,0.0,AGREES,both methods = the r4 length
 184+7CF#1,A,3.02,3.02,3.02,0,3.02,0.0,HELD,0.4066,0.4177,0.0,0.0,AGREES,both methods = the r4 length
@@ -115,6 +117,7 @@ span_id,side,r4_L_m,walk_m,traced_m,gaps_m,traced_plus_gaps_m,delta_m,r4_kind,D_
 7E0+FD#1,B,3.35,3.35,3.05,0.3,3.35,0.0,FORMED,0.95,0.95,0.0,0.0,AGREES,both methods = the r4 length
 7E0+FD#2,A,3.25,3.25,3.25,0,3.25,0.0,CALC,0.95,0.95,0.0,0.0,AGREES,both methods = the r4 length
 7E0+FD#2,B,3.25,3.25,3.25,0,3.25,0.0,FORMED,0.95,0.95,0.0,0.0,AGREES,both methods = the r4 length
+7E0+FD#2,END,0.0,,0.0,0.0,0.0,0.0,CALC,0.95,0.95,0.0,0.0,DRAWING-CONFIRMED,"end on the drawn face of BOUNDARY_GB:7FC over 0.2010 of 0.3000 m (V2 end kind COLUMN): contact, no end face (R-FACE-END-3); the rest on the column"
 7E1+7E2#1,A,6.72,,6.42,0.3,6.72,0.0,HELD,0.6,0.6,0.0,0.0,AGREES,both methods = the r4 length
 7E1+7E2#1,B,6.72,6.72,6.42,0.3,6.72,0.0,HELD,0.6,0.6,0.0,0.0,AGREES,both methods = the r4 length
 7E7+7E8#1,A,3.525,3.525,3.525,0,3.525,0.0,FORMED,0.4,0.4,0.0,0.0,AGREES,both methods = the r4 length

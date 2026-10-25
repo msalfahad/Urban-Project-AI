@@ -165,8 +165,32 @@ def check():
     t8 = FT.trace({"G1": g1e(4300, "FREE_END", [])}, col)
     close(t8["ends"][("G1#1", "FREE_END")], 0.3 * math.sqrt(2.0))        # drawn oblique end stands
     assert not t8["extended"], t8["extended"]
+    # (8) - (10) r3, R-FACE-END-3 (the Verifier's 01:31 case, on villa Q): G1 stops square at x 4000 (kind FREE_END
+    # from the splitter). (8) a boundary band W (x 4000..4200, y -1000..1000, 0.200 wide, concrete) is drawn there:
+    # the end's cross-section y 0..300 lies on W's west face over 0.300 of 0.300 -> CONTACT, END 0.000; W's exposed
+    # perimeter = 2 x (0.200 + 2.000) - 0.300 = 4.100 m. Same with the splitter's kind FOOTING_FACE (a pit wall).
+    # (9) adverse: W absent; an OPEN outline O (4000,100) -> (4000,-150) -> (4200,-150) -> (4200,300) -> (4000,300)
+    # (the Alsenan 1AA shape) covers the end piece only from y 0 to 100 (+ the 1 mm snap at the corner (4000,300)):
+    # the band runs into something drawn: OPEN_OUTLINE, HELD 0 .. 0.300, never FREE_END. (10) normal: an open line
+    # drawn across the whole end (4000,-50) -> (4000,350) is the drawn end line: FREE_END 0.300 stands.
+    W = [(4000, -1000), (4200, -1000), (4200, 1000), (4000, 1000)]
+    for kind in ("FREE_END", "FOOTING_FACE"):
+        mem = {"G1": g1e(4000, kind, [])}
+        t9 = FT.trace(mem, col, None, {"W": W})
+        assert not t9["ends"], t9["ends"]
+        close(t9["others"]["W"], 4.1)
+        c9 = FT.end_contacts(mem, {"W": W}, col)
+        assert [(c["end"], c["status"], c["owner"], c["covered_m"]) for c in c9] == [("end", "CONTACT", "W", 0.3)], c9
+    t10 = FT.trace({"G1": g1e(4000, "FREE_END", [])}, col,
+                   open_outlines={"O": [(4000, 100), (4000, -150), (4200, -150), (4200, 300), (4000, 300)]})
+    assert list(t10["ends"]) == [("G1#1", "OPEN_OUTLINE")], t10["ends"]
+    close(t10["ends"][("G1#1", "OPEN_OUTLINE")], 0.3)
+    close(t10["open_outline_ends"][0]["covered_m"], 0.101, 2e-3)
+    t11 = FT.trace({"G1": g1e(4000, "FREE_END", [])}, col, open_outlines={"L": [(4000, -50), (4000, 350)]})
+    assert t11["ends"] == {("G1#1", "FREE_END"): 0.3} and not t11["open_outline_ends"], t11["ends"]
     print("formwork_t282 --check: villa Q OK (oblique carrier per edge, short line closed, held beyond cap, "
-          "0.05 mm column face, band into a ring at two stations, free end, unequal edge ends beside a partial column)")
+          "0.05 mm column face, band into a ring at two stations, free end, unequal edge ends beside a partial column, "
+          "end on a concrete outline, band into an open outline)")
     return True
 
 
@@ -276,8 +300,32 @@ def build():
                              D_hi=None if Dhi is None else round(Dhi, 4),
                              delta_m2_lo=None if dm2 is None else dm2[0], delta_m2_hi=None if dm2 is None else dm2[1],
                              status=st, cause=cause))
+        for c in [x for x in tr.get("end_contacts", []) if x["span_id"] == sid and x["status"] == "CONTACT"]:
+            # R-FACE-END-3 (r3): the end's cross-section lies on another concrete outline's drawn face: no end face
+            kind, Dlo, Dhi = depth_of(d, "A")
+            rows.append(dict(span_id=sid, side="END", r4_L_m=0.0, walk_m=None, traced_m=0.0, gaps_m=0.0,
+                             traced_plus_gaps_m=0.0, delta_m=0.0, r4_kind=kind,
+                             D_lo=None if Dlo is None else round(Dlo, 4), D_hi=None if Dhi is None else round(Dhi, 4),
+                             delta_m2_lo=None if Dlo is None else 0.0, delta_m2_hi=None if Dhi is None else 0.0,
+                             status="DRAWING-CONFIRMED",
+                             cause="end on the drawn face of %s over %.4f of %.4f m (V2 end kind %s): contact, no end "
+                                   "face (R-FACE-END-3)%s" % (c["owner"], c["covered_m"], c["width_m"], c["kind"],
+                                                "; the rest on the column" if c["covered_all_m"] > c["covered_m"] else "")))
         for e in [x for x in tr["ends"] if x["span_id"] == sid]:
             kind, Dlo, Dhi = depth_of(d, "A")
+            if e["end_kind"] == "OPEN_OUTLINE":
+                oo = next(o for o in tr["open_outline_ends"] if o["span_id"] == sid)
+                rows.append(dict(span_id=sid, side="END", r4_L_m=0.0, walk_m=None, traced_m=e["length_m"], gaps_m=0.0,
+                                 traced_plus_gaps_m=e["length_m"], delta_m=e["length_m"], r4_kind=kind,
+                                 D_lo=None if Dlo is None else round(Dlo, 4),
+                                 D_hi=None if Dhi is None else round(Dhi, 4),
+                                 delta_m2_lo=None if Dlo is None else 0.0,
+                                 delta_m2_hi=None if Dhi is None else round(e["length_m"] * Dhi, 4),
+                                 status="HELD",
+                                 cause="the band runs into the open outline %s (covers %.4f of %.4f m): not a free end, "
+                                       "HELD 0 .. %.4f m (R-FACE-END-3)" % (oo["outline"], oo["covered_m"],
+                                                                         oo["piece_m"], e["length_m"])))
+                continue
             real = e["end_kind"] in ("FOOTING_FACE", "GAP_TO_COLUMN", "FREE_END")
             beside_col = e["end_kind"] == "COLUMN"
             rows.append(dict(span_id=sid, side="END", r4_L_m=0.0, walk_m=None, traced_m=e["length_m"], gaps_m=0.0,

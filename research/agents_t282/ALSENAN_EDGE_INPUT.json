@@ -4833,7 +4833,7 @@
     "length_m": 5.9056
    }
   ],
-  "boundary_total_m": 422.7582,
+  "boundary_total_m": 509.2982,
   "closed_on_carrier": [
    {
     "closed_m": 0.1104,
@@ -4879,23 +4879,23 @@
    },
    {
     "column": "COL:1EC",
-    "length_m": 2.5
+    "length_m": 1.3
    },
    {
     "column": "COL:1EF",
-    "length_m": 0.9757
+    "length_m": 0.2757
    },
    {
     "column": "COL:1F2",
-    "length_m": 1.1
+    "length_m": 0.4
    },
    {
     "column": "COL:1F5",
-    "length_m": 1.2
+    "length_m": 0.5
    },
    {
     "column": "COL:1FC",
-    "length_m": 1.0
+    "length_m": 0.8
    },
    {
     "column": "COL:200",
@@ -4903,7 +4903,7 @@
    },
    {
     "column": "COL:204",
-    "length_m": 0.8
+    "length_m": 0.6
    },
    {
     "column": "COL:207",
@@ -4923,7 +4923,7 @@
    },
    {
     "column": "COL:218",
-    "length_m": 1.0
+    "length_m": 0.8
    },
    {
     "column": "COL:220",
@@ -4995,41 +4995,114 @@
    }
   ],
   "end_artefacts_m": [
-   0.000104,
-   0.000104,
    0.0,
+   0.000104,
+   0.000104,
    0.0
+  ],
+  "end_contacts": [
+   {
+    "covered_all_m": 0.3,
+    "covered_m": 0.201,
+    "end": "end",
+    "kind": "COLUMN",
+    "member": "136+7D5",
+    "owner": "BOUNDARY_GB:7FE",
+    "span_id": "136+7D5#1",
+    "station_diff_m": 0.0,
+    "status": "CONTACT",
+    "width_m": 0.3
+   },
+   {
+    "covered_all_m": 0.3,
+    "covered_m": 0.3,
+    "end": "end",
+    "kind": "COLUMN",
+    "member": "15C+7CC",
+    "owner": "RC_WALL:7C2",
+    "span_id": "15C+7CC#1",
+    "station_diff_m": 0.0,
+    "status": "CONTACT",
+    "width_m": 0.3
+   },
+   {
+    "covered_all_m": 0.3,
+    "covered_m": 0.3,
+    "end": "start",
+    "kind": "FOOTING_FACE",
+    "member": "15D+7C8",
+    "owner": "RC_WALL:7C2",
+    "span_id": "15D+7C8#1",
+    "station_diff_m": 0.0,
+    "status": "CONTACT",
+    "width_m": 0.3
+   },
+   {
+    "covered_all_m": 0.3,
+    "covered_m": 0.3,
+    "end": "start",
+    "kind": "COLUMN",
+    "member": "15E+15F",
+    "owner": "RC_WALL:7C2",
+    "span_id": "15E+15F#1",
+    "station_diff_m": 0.0,
+    "status": "CONTACT",
+    "width_m": 0.3
+   },
+   {
+    "covered_all_m": 0.3,
+    "covered_m": 0.3,
+    "end": "start",
+    "kind": "GAP_TO_COLUMN",
+    "member": "177+7CD",
+    "owner": "RC_WALL:7C2",
+    "span_id": "177+7CD#1",
+    "station_diff_m": 0.0,
+    "status": "CONTACT",
+    "width_m": 0.3
+   },
+   {
+    "covered_all_m": 0.3,
+    "covered_m": 0.3,
+    "end": "end",
+    "kind": "FOOTING_FACE",
+    "member": "17C+7E3",
+    "owner": "RC_WALL:7C2",
+    "span_id": "17C+7E3#1",
+    "station_diff_m": 0.0,
+    "status": "CONTACT",
+    "width_m": 0.3
+   },
+   {
+    "covered_all_m": 0.3,
+    "covered_m": 0.3,
+    "end": "end",
+    "kind": "FREE_END",
+    "member": "1811+1812",
+    "owner": "BOUNDARY_GB:7FE",
+    "span_id": "1811+1812#1",
+    "station_diff_m": 0.0,
+    "status": "CONTACT",
+    "width_m": 0.3
+   },
+   {
+    "covered_all_m": 0.3,
+    "covered_m": 0.201,
+    "end": "end",
+    "kind": "COLUMN",
+    "member": "7E0+FD",
+    "owner": "BOUNDARY_GB:7FC",
+    "span_id": "7E0+FD#2",
+    "station_diff_m": 0.0,
+    "status": "CONTACT",
+    "width_m": 0.3
+   }
   ],
   "ends": [
    {
     "end_kind": "BEAM_JUNCTION",
     "length_m": 0.0017,
     "span_id": "13E+7D6#2"
-   },
-   {
-    "end_kind": "FOOTING_FACE",
-    "length_m": 0.3,
-    "span_id": "15D+7C8#1"
-   },
-   {
-    "end_kind": "COLUMN",
-    "length_m": 0.1,
-    "span_id": "15E+15F#1"
-   },
-   {
-    "end_kind": "GAP_TO_COLUMN",
-    "length_m": 0.3,
-    "span_id": "177+7CD#1"
-   },
-   {
-    "end_kind": "FOOTING_FACE",
-    "length_m": 0.3,
-    "span_id": "17C+7E3#1"
-   },
-   {
-    "end_kind": "FREE_END",
-    "length_m": 0.3,
-    "span_id": "1811+1812#1"
    },
    {
     "end_kind": "ARC_END",
@@ -5292,13 +5365,42 @@
    }
   ],
   "held": [],
+  "open_outline_ends": [],
   "others": [
    {
-    "length_m": 10.5,
-    "owner": "LIFT:7C6"
+    "length_m": 2.3,
+    "owner": "BOUNDARY_GB:7FC"
+   },
+   {
+    "length_m": 83.14,
+    "owner": "BOUNDARY_GB:7FE"
+   },
+   {
+    "length_m": 2.4,
+    "owner": "BOUNDARY_GB:810"
+   },
+   {
+    "length_m": 4.5,
+    "owner": "RC_WALL:7C2"
+   },
+   {
+    "length_m": 10.1,
+    "owner": "RC_WALL:7C6"
    }
   ],
   "pieces_beyond": [
+   {
+    "m": 0.3,
+    "side": "A",
+    "span_id": "7D4+F8#2",
+    "where": "BEYOND_SQUARE"
+   },
+   {
+    "m": 0.1,
+    "side": "A",
+    "span_id": "10B+7D1#1",
+    "where": "BEYOND_SQUARE"
+   },
    {
     "m": 0.2997,
     "side": "B",
@@ -5337,14 +5439,14 @@
    },
    {
     "m": 1.2999,
-    "side": "B",
+    "side": "A",
     "span_id": "17C+7E3#1",
     "where": "BEYOND_SQUARE"
    },
    {
-    "m": 1.2999,
+    "m": 0.2202,
     "side": "A",
-    "span_id": "17C+7E3#1",
+    "span_id": "17E+17F#1",
     "where": "BEYOND_SQUARE"
    },
    {
@@ -5354,8 +5456,8 @@
     "where": "BEYOND_SQUARE"
    },
    {
-    "m": 0.2202,
-    "side": "A",
+    "m": 0.3,
+    "side": "B",
     "span_id": "17E+17F#1",
     "where": "BEYOND_SQUARE"
    },
@@ -5384,21 +5486,9 @@
     "where": "BEYOND_SQUARE"
    },
    {
-    "m": 0.3,
+    "m": 1.2999,
     "side": "B",
-    "span_id": "17E+17F#1",
-    "where": "BEYOND_SQUARE"
-   },
-   {
-    "m": 0.3,
-    "side": "A",
-    "span_id": "10B+7D1#1",
-    "where": "BEYOND_SQUARE"
-   },
-   {
-    "m": 0.3,
-    "side": "A",
-    "span_id": "7D4+F8#2",
+    "span_id": "17C+7E3#1",
     "where": "BEYOND_SQUARE"
    },
    {
@@ -5466,7 +5556,7 @@
     "span_id": "10A+7C9#1"
    },
    {
-    "length_m": 1.5,
+    "length_m": 1.3,
     "side": "A",
     "span_id": "10B+7D1#1"
    },
@@ -6006,6 +6096,188 @@
     "span_id": "7E9+7EA#1"
    }
   ],
-  "unattributed": []
+  "unattributed": [],
+  "unequal_station_ends": [
+   {
+    "end": "end",
+    "kind": "COLUMN",
+    "member": "107+7CE",
+    "resolution": "COVERED_BY_OUTLINES",
+    "span_id": "107+7CE#1",
+    "station_diff_m": 0.265,
+    "uncovered_m2": 0.0,
+    "zone_m2": 0.079496
+   },
+   {
+    "end": "end",
+    "kind": "COLUMN",
+    "member": "109+7CB",
+    "resolution": "COVERED_BY_OUTLINES",
+    "span_id": "109+7CB#3",
+    "station_diff_m": 0.3,
+    "uncovered_m2": 0.0,
+    "zone_m2": 0.09
+   },
+   {
+    "end": "start",
+    "kind": "COLUMN",
+    "member": "10A+7C9",
+    "resolution": "COVERED_BY_OUTLINES",
+    "span_id": "10A+7C9#1",
+    "station_diff_m": 0.3,
+    "uncovered_m2": 0.0,
+    "zone_m2": 0.09
+   },
+   {
+    "end": "end",
+    "kind": "COLUMN",
+    "member": "10B+7D1",
+    "resolution": "COVERED_BY_OUTLINES",
+    "span_id": "10B+7D1#2",
+    "station_diff_m": 0.3,
+    "uncovered_m2": 0.0,
+    "zone_m2": 0.09
+   },
+   {
+    "end": "start",
+    "kind": "COLUMN",
+    "member": "136+7D5",
+    "resolution": "COVERED_BY_OUTLINES",
+    "span_id": "136+7D5#1",
+    "station_diff_m": 0.3,
+    "uncovered_m2": 0.0,
+    "zone_m2": 0.09
+   },
+   {
+    "end": "end",
+    "kind": "COLUMN",
+    "member": "13D+7D2",
+    "resolution": "COVERED_BY_OUTLINES",
+    "span_id": "13D+7D2#1",
+    "station_diff_m": 0.3,
+    "uncovered_m2": 0.0,
+    "zone_m2": 0.09
+   },
+   {
+    "end": "end",
+    "kind": "COLUMN",
+    "member": "170+7C3",
+    "resolution": "CLOSED_AS_BEAM",
+    "span_id": "170+7C3#4",
+    "station_diff_m": 0.3,
+    "uncovered_m2": 0.04918,
+    "zone_m2": 0.09
+   },
+   {
+    "end": "start",
+    "kind": "COLUMN",
+    "member": "170+7C3",
+    "resolution": "COVERED_BY_OUTLINES",
+    "span_id": "170+7C3#1",
+    "station_diff_m": 0.3,
+    "uncovered_m2": 0.0,
+    "zone_m2": 0.09
+   },
+   {
+    "end": "end",
+    "kind": "BEAM_JUNCTION",
+    "member": "177+7CD",
+    "resolution": "CLOSED_AS_BEAM",
+    "span_id": "177+7CD#2",
+    "station_diff_m": 0.2191,
+    "uncovered_m2": 0.031219,
+    "zone_m2": 0.065733
+   },
+   {
+    "end": "end",
+    "kind": "BEAM_JUNCTION",
+    "member": "17E+17F",
+    "resolution": "CLOSED_AS_BEAM",
+    "span_id": "17E+17F#1",
+    "station_diff_m": 0.3,
+    "uncovered_m2": 0.045,
+    "zone_m2": 0.09
+   },
+   {
+    "end": "start",
+    "kind": "COLUMN",
+    "member": "17E+17F",
+    "resolution": "CLOSED_AS_BEAM",
+    "span_id": "17E+17F#1",
+    "station_diff_m": 0.2202,
+    "uncovered_m2": 0.024236,
+    "zone_m2": 0.066049
+   },
+   {
+    "end": "end",
+    "kind": "BEAM_JUNCTION",
+    "member": "180+181",
+    "resolution": "CLOSED_AS_BEAM",
+    "span_id": "180+181#1",
+    "station_diff_m": 0.3,
+    "uncovered_m2": 0.045,
+    "zone_m2": 0.09
+   },
+   {
+    "end": "start",
+    "kind": "BEAM_JUNCTION",
+    "member": "180+181",
+    "resolution": "CLOSED_AS_BEAM",
+    "span_id": "180+181#1",
+    "station_diff_m": 0.3,
+    "uncovered_m2": 0.045,
+    "zone_m2": 0.09
+   },
+   {
+    "end": "start",
+    "kind": "COLUMN",
+    "member": "1811+1812",
+    "resolution": "CLOSED_AS_BEAM",
+    "span_id": "1811+1812#1",
+    "station_diff_m": 0.5,
+    "uncovered_m2": 0.025,
+    "zone_m2": 0.15
+   },
+   {
+    "end": "start",
+    "kind": "BEAM_JUNCTION",
+    "member": "182+183",
+    "resolution": "CLOSED_AS_BEAM",
+    "span_id": "182+183#1",
+    "station_diff_m": 0.3,
+    "uncovered_m2": 0.03176,
+    "zone_m2": 0.09
+   },
+   {
+    "end": "start",
+    "kind": "COLUMN",
+    "member": "7D0+FC",
+    "resolution": "COVERED_BY_OUTLINES",
+    "span_id": "7D0+FC#1",
+    "station_diff_m": 0.2,
+    "uncovered_m2": 0.0,
+    "zone_m2": 0.06
+   },
+   {
+    "end": "end",
+    "kind": "BEAM_JUNCTION",
+    "member": "7D4+F8",
+    "resolution": "COVERED_BY_OUTLINES",
+    "span_id": "7D4+F8#2",
+    "station_diff_m": 0.3,
+    "uncovered_m2": 0.0,
+    "zone_m2": 0.09
+   },
+   {
+    "end": "start",
+    "kind": "COLUMN",
+    "member": "7D4+F8",
+    "resolution": "COVERED_BY_OUTLINES",
+    "span_id": "7D4+F8#1",
+    "station_diff_m": 0.07,
+    "uncovered_m2": 0.0,
+    "zone_m2": 0.021
+   }
+  ]
  }
 }

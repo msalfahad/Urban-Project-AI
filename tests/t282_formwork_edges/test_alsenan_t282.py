@@ -84,12 +84,42 @@ def test_r2_no_end_face_on_a_hull_diagonal():
     # Verifier 2026-10-25 00:04: 170+7C3#4 END 0.2318 and 1811+1812#1 END 0.0972 were hull diagonals: withdrawn
     ends = {(e["span_id"], e["end_kind"]): e["length_m"] for e in INP["traced"]["ends"]}
     assert ("170+7C3#4", "COLUMN") not in ends and ("1811+1812#1", "COLUMN") not in ends
-    assert ends[("15E+15F#1", "COLUMN")] == pytest.approx(0.100, abs=1e-4)      # square end beside COL:1F5: kept
-    assert ends[("1811+1812#1", "FREE_END")] == pytest.approx(0.300, abs=1e-4)
+    # r3: 15E+15F#1's 0.100 beside COL:1F5 and 1811+1812#1's 0.300 lie on drawn concrete faces (R-FACE-END-3)
+    assert ("15E+15F#1", "COLUMN") not in ends and ("1811+1812#1", "FREE_END") not in ends
     cols = {c["column"]: c["length_m"] for c in INP["traced"]["columns"]}
     assert cols["COL:17C0"] == pytest.approx(0.2475, abs=1e-4) and cols["COL:1E8"] == pytest.approx(0.5, abs=1e-4)
     # side B of 170+7C3#4 is unchanged (Verifier own +0.300 m, CALC +0.285 m2)
     assert BY[("170+7C3#4", "B")]["delta_m"] == pytest.approx(0.300, abs=1e-4)
     assert BY[("170+7C3#4", "B")]["delta_m2_lo"] == pytest.approx(0.285, abs=1e-4)
     formed = FW.totals(ROWS)["delta_m2"]["DRAWING-CONFIRMED FORMED"]
-    assert formed[0] == pytest.approx(0.120, abs=1e-4)                          # r1 0.340 carried 0.2202 spurious
+    assert formed[0] == pytest.approx(0.0, abs=1e-4)      # r1 0.340, r2 0.120 (17C+7E3#1 on the lift ring: r3 contact)
+
+
+def test_r3_ends_on_concrete_outlines_are_contacts():
+    # Verifier 2026-10-25 01:31 + own re-measure: the lift pit ring S-BW 7C2 (T-204 / T-230) and the boundary G.B
+    # bands S-BOUN 7FE / 7FC / 810 (T-253) are owners; r1 / r2 passed only the pool outline 7C6 (labelled 'LIFT')
+    t = INP["traced"]
+    assert sorted(o["owner"] for o in t["others"]) == ["BOUNDARY_GB:7FC", "BOUNDARY_GB:7FE", "BOUNDARY_GB:810",
+                                                       "RC_WALL:7C2", "RC_WALL:7C6"]
+    con = {(c["span_id"], c["owner"]): c for c in t["end_contacts"] if c["status"] == "CONTACT"}
+    for sid, owner, kind in (("1811+1812#1", "BOUNDARY_GB:7FE", "FREE_END"),
+                             ("15D+7C8#1", "RC_WALL:7C2", "FOOTING_FACE"),
+                             ("17C+7E3#1", "RC_WALL:7C2", "FOOTING_FACE"),
+                             ("177+7CD#1", "RC_WALL:7C2", "GAP_TO_COLUMN"),
+                             ("15E+15F#1", "RC_WALL:7C2", "COLUMN")):
+        c = con[(sid, owner)]
+        assert c["kind"] == kind and c["covered_m"] == pytest.approx(0.3, abs=1e-4), sid
+        r = [x for x in ROWS if x["span_id"] == sid and x["side"] == "END"]
+        assert len(r) == 1 and r[0]["traced_m"] == 0.0 and r[0]["status"] == "DRAWING-CONFIRMED", sid
+    ends = {(e["span_id"], e["end_kind"]) for e in t["ends"]}
+    assert ends == {("13E+7D6#2", "BEAM_JUNCTION"), ("ARC:139+13A/1", "ARC_END"), ("ARC:157+158/2", "ARC_END")}
+    assert not t["open_outline_ends"] and not [c for c in t["end_contacts"] if c["status"] in ("NONE", "PARTIAL")]
+    # every end whose two edges stop at different stations is accounted for (none left silent)
+    res = {(u["span_id"], u["end"]): u["resolution"] for u in t["unequal_station_ends"]}
+    assert len(res) == 18 and set(res.values()) == {"COVERED_BY_OUTLINES", "CLOSED_AS_BEAM"}
+    assert res[("177+7CD#2", "end")] == "CLOSED_AS_BEAM"                       # the ring end (T-276 +0.2191 m)
+    # 10B+7D1#1 side A: boundary band 810 frames into the annex beam face over 0.200 m (plan; annex CONFLICT, m only)
+    assert BY[("10B+7D1#1", "A")]["traced_m"] == pytest.approx(1.3, abs=1e-4)
+    tot = FW.totals(ROWS)
+    assert tot["delta_m_by_status"]["DRAWING-CONFIRMED_END"] == pytest.approx(0.0, abs=1e-4)
+    assert tot["delta_m2"]["DRAWING-CONFIRMED HELD"] == pytest.approx((0.6567, 0.8556), abs=1e-4)

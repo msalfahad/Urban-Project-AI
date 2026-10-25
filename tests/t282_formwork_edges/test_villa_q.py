@@ -158,3 +158,47 @@ def test_adverse_drawn_oblique_free_end_is_not_squared_off():
     t = FT.trace({"G1": _g1_end(4300, "FREE_END", [])}, COL)
     assert t["ends"][("G1#1", "FREE_END")] == pytest.approx(0.3 * math.sqrt(2.0), abs=1e-4)
     assert not t["extended"]
+
+
+# r3, R-FACE-END-3 (Verifier 2026-10-25 01:31): an end on another concrete outline's face is a contact; a band that
+# runs into an open outline is not a free end
+W_BAND = [(4000, -1000), (4200, -1000), (4200, 1000), (4000, 1000)]
+O_1AA = [(4000, 100), (4000, -150), (4200, -150), (4200, 300), (4000, 300)]
+
+
+@pytest.mark.parametrize("kind", ["FREE_END", "FOOTING_FACE", "GAP_TO_COLUMN"])
+def test_normal_end_on_a_concrete_outline_is_a_contact(kind):
+    mem = {"G1": _g1_end(4000, kind, [])}
+    t = FT.trace(mem, COL, None, {"W": W_BAND})
+    assert not t["ends"]                                           # r2 booked 0.300 m of 'free end'
+    assert t["others"]["W"] == pytest.approx(4.1, abs=1e-4)
+    c = FT.end_contacts(mem, {"W": W_BAND}, COL)
+    assert [(x["status"], x["owner"], x["covered_m"]) for x in c] == [("CONTACT", "W", 0.3)]
+
+
+@pytest.mark.parametrize("name,f", [
+    ("rot30", lambda x, y: (x * math.cos(math.radians(30)) - y * math.sin(math.radians(30)),
+                            x * math.sin(math.radians(30)) + y * math.cos(math.radians(30)))),
+    ("mirror", lambda x, y: (-x, y)),
+])
+def test_contact_and_open_outline_rotated_mirrored(name, f):
+    mem, cols = _xf({"G1": _g1_end(4000, "FREE_END", [])}, COL, f)
+    w = [f(*p) for p in W_BAND]
+    assert not FT.trace(mem, cols, None, {"W": w})["ends"], name
+    assert FT.end_contacts(mem, {"W": w}, cols)[0]["status"] == "CONTACT", name
+    t = FT.trace(mem, cols, open_outlines={"O": [f(*p) for p in O_1AA]})
+    assert list(t["ends"]) == [("G1#1", "OPEN_OUTLINE")], name
+
+
+def test_adverse_band_running_into_an_open_outline_is_held_not_free():
+    t = FT.trace({"G1": _g1_end(4000, "FREE_END", [])}, COL, open_outlines={"O": O_1AA})
+    assert t["ends"] == {("G1#1", "OPEN_OUTLINE"): pytest.approx(0.3, abs=1e-4)}
+    assert t["open_outline_ends"][0]["kind_was"] == "FREE_END"
+    assert t["open_outline_ends"][0]["covered_m"] == pytest.approx(0.101, abs=2e-3)
+
+
+def test_normal_drawn_end_line_keeps_the_free_end():
+    t = FT.trace({"G1": _g1_end(4000, "FREE_END", [])}, COL, open_outlines={"L": [(4000, -50), (4000, 350)]})
+    assert t["ends"] == {("G1#1", "FREE_END"): pytest.approx(0.3, abs=1e-4)}
+    assert not t["open_outline_ends"]
+    assert FT.end_contacts({"G1": _g1_end(4000, "FREE_END", [])}, {}, COL)[0]["status"] == "NONE"

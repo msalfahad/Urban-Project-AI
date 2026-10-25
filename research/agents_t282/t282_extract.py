@@ -279,12 +279,30 @@ def main():
     fspec = importlib.util.spec_from_file_location("t282_face_trace", os.path.join(HERE, "face_trace.py"))
     FT = importlib.util.module_from_spec(fspec)
     fspec.loader.exec_module(FT)
-    ring_polys = []
+    # r3 (R-FACE-END-3): every concrete outline on the plan that is not a ground-beam member is an owner a beam can
+    # end against: the OUTER S-BW wall outlines (lift pit ring 7C2, T-204 / T-230; pool outer wall 7C6, T-253; an S-BW
+    # outline inside another is that wall's inner face) and the S-BOUN boundary ground-beam bands (0.20 x 0.40 at N.G.,
+    # T-253). r1 / r2 passed only the largest S-BW outline (the pool, mislabelled 'LIFT'), so the three beams drawn to
+    # the lift ring's outer face booked 0.300 m end faces each. Open LWPOLYLINEs (not member outlines) are passed for
+    # the open-outline test.
+    sbw = []
     for e in msp.query("LWPOLYLINE[layer=='S-BW']"):
         pts = [tuple(p[:2]) for p in e.get_points()]
-        if R.inb(*pts[0], GBP):
-            ring_polys.append((e.dxf.handle, Polygon(pts).buffer(0)))
-    lift = max(ring_polys, key=lambda t: t[1].area)
+        if R.inb(*pts[0], GBP) and e.closed:
+            sbw.append((e.dxf.handle, Polygon(pts).buffer(0)))
+    others_in = {}
+    for h, P in sbw:
+        if not any(k != h and Q.buffer(SNAP_MM).contains(P) for k, Q in sbw):
+            others_in["RC_WALL:" + h] = list(P.exterior.coords)
+    for e in msp.query("LWPOLYLINE[layer=='S-BOUN']"):
+        pts = [tuple(p[:2]) for p in e.get_points()]
+        if R.inb(*pts[0], GBP) and e.closed:
+            others_in["BOUNDARY_GB:" + e.dxf.handle] = list(Polygon(pts).buffer(0).exterior.coords)
+    open_in = {}
+    for e in msp.query("LWPOLYLINE"):
+        pts = [tuple(p[:2]) for p in e.get_points()]
+        if R.inb(*pts[0], GBP) and not e.closed and len(pts) >= 2:
+            open_in["OPEN:%s/%s" % (e.dxf.layer, e.dxf.handle)] = pts
     members = {}
     by_band = {}
     for s_ in out["spans"]:
@@ -310,8 +328,18 @@ def main():
                                  "end": {"kind": sps[-1]["end"]["kind"], "carriers": sps[-1]["end"]["refs"]}}}
     arcs_in = {bid: {"cx": ab["cx"], "cy": ab["cy"], "radii": ab["radii"], "ranges": ab["ranges"]}
                for bid, ab in arc_bands.items()}
-    T = FT.trace(members, {k: list(v.exterior.coords) for k, v in col_poly.items()}, arcs_in,
-                 {"LIFT:" + lift[0]: list(lift[1].exterior.coords)})
+    T = FT.trace(members, {k: list(v.exterior.coords) for k, v in col_poly.items()}, arcs_in, others_in,
+                 open_outlines=open_in)
+    contacts = FT.end_contacts(members, others_in, {k: list(v.exterior.coords) for k, v in col_poly.items()})
+    # what the end stations of every member touch (any end kind): the census the Verifier asked for (r3)
+    span_of = {}
+    for bid, m in members.items():
+        span_of[(bid, "start")] = m["spans"][0][2]
+        span_of[(bid, "end")] = m["spans"][-1][2]
+    for c in contacts:
+        c["span_id"] = span_of[(c["member"], c["end"])]
+        sa, sb = c.pop("stations_m")
+        c["station_diff_m"] = round(abs(sa - sb), 4)            # no absolute stations (they are coordinates)
     traced_doc = {
         "sides": [{"span_id": k[0], "side": k[1], "length_m": v} for k, v in sorted(T["sides"].items())],
         "ends": [{"span_id": k[0], "end_kind": k[1], "length_m": v} for k, v in sorted(T["ends"].items())],
@@ -324,6 +352,15 @@ def main():
         "pieces_beyond": [pc for pc in T["pieces"] if pc["where"] != "IN_SPAN" and pc["m"] > 0],
         "unattributed": T["unattributed"],
         "extended_between_edge_ends": T["extended"],
+        "end_contacts": contacts,
+        "open_outline_ends": T["open_outline_ends"],
+        "unequal_station_ends": sorted([
+            dict(x, span_id=span_of[(x["member"], x["end"])], kind=members[x["member"]]["ends"][x["end"]]["kind"],
+                 resolution=("CLOSED_AS_BEAM" if any(y["member"] == x["member"] and y["end"] == x["end"]
+                                                     for y in T["extended"]) else
+                             "COVERED_BY_OUTLINES" if x["uncovered_m2"] * 1e6 <= SNAP_MM * SNAP_MM else
+                             "DRAWN_END_KEPT"))
+            for x in T["unequal_ends"]], key=lambda z: (z["member"], z["end"])),
         "boundary_total_m": r4(sum(T["sides"].values()) + sum(T["ends"].values()) + sum(T["columns"].values()) +
                                sum(T["others"].values()) + sum(T["arcs"].values()) + sum(T["unattributed"]))}
     for pc in traced_doc["pieces_beyond"]:

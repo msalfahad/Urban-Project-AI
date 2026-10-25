@@ -3,11 +3,15 @@
 Worker 1, 2026-10-24 22:24 .. UTC, branch `agents/task-T-282`. Research only: nothing wired, no BOQ line changed, no
 method version. Development villa, not an accuracy claim. Delta ledger against the merged formwork r4 (T-264).
 
-Files: `face_trace.py` (rules R-FACE-CLOSE-1 / -SNAP-1 / -OWN-1 / -END-1 + the generic tracer), `t282_extract.py`
+r3 (worker 1, 2026-10-25 02:21 .. UTC): END faces re-tested against every drawn concrete outline (R-FACE-END-3,
+section 2b); this report's tables carry the r3 values.
+
+Files: `face_trace.py` (rules R-FACE-CLOSE-1 / -SNAP-1 / -OWN-1 / -END-1 / -END-2 / -END-3 + the generic tracer,
+`end_contacts`), `t282_extract.py`
 (private DXF -> `ALSENAN_EDGE_INPUT.json`: lengths, stations from each band's start, angles, handles; no coordinates, no
 client text), `formwork_t282.py` (villa Q `--check` + the Alsenan delta from committed inputs),
-`DELTA_T282_GROUND_BEAM_SIDES.csv` (126 rows: every span x side A / B + every end face), `summary_t282.json`. Tests:
-`tests/t282_formwork_edges` (14: villa Q normal + adverse, rotated 30 deg / mirrored / offset; Alsenan pinned; committed
+`DELTA_T282_GROUND_BEAM_SIDES.csv` (127 rows: every span x side A / B + every end face or end contact), `summary_t282.json`. Tests:
+`tests/t282_formwork_edges` (28: villa Q normal + adverse, rotated 30 deg / mirrored / offset; Alsenan pinned; committed
 outputs = a fresh build).
 
 Repeat: `python3 -I research/agents_t282/t282_extract.py <ST.dxf> --out research/agents_t282`, then
@@ -43,10 +47,15 @@ beside a partial-width column); a drawn line stopping short of its named carrier
 cross-section at a station where neither the band, a column nor another member continues, never on a line joining
 unequal edge ends: where the two edges end at different stations, the zone between them is the band less every other
 drawn outline; a piece joined to the body and closed by outlines is beam, an unclosed piece keeps the drawn end line.
+**R-FACE-END-3** (r3, from the Verifier's 01:31 rejection) an end whose cross-section lies on the drawn face of another
+concrete outline (pit / pool wall, boundary ground-beam band) is a contact, END 0.000, whatever kind the span splitter
+gave it; a free-end piece that an OPEN outline covers only in part is not a free end (OPEN_OUTLINE, HELD 0 .. its
+length by name); a piece an open outline covers over its whole length is a drawn end line and the end face stands.
 
 ## 2. Result: r4 vs the drawn faces (m of face, m2 = m x the r4 depth of that run)
 
-106 of the 118 span-sides (59 spans x A / B) AGREE with r4 within 2.5 mm (both methods); 12 side rows and 6 end-face rows change (r2: 8 in r1 less the two hull-diagonal pieces, section 2a):
+106 of the 118 span-sides (59 spans x A / B) AGREE with r4 within 2.5 mm (both methods); 12 side rows change; r3: no
+DRAWING-CONFIRMED end face remains (r1 8 rows, r2 6, r3 0; sections 2a / 2b), 1 end piece stays HELD:
 
 | Run, side | r4 L | W | T' | delta m | r4 depth basis | delta m2 | status | cause |
 |---|---|---|---|---|---|---|---|---|
@@ -57,17 +66,17 @@ drawn outline; a piece joined to the body and closed by outlines is beam, an unc
 | 170+7C3#4 B (exterior, above N.G.) | 3.25 | - | 3.55 | +0.300 | CALC 0.95 | **+0.285** | DRAWING-CONFIRMED | column 17C0 does not reach edge B; the face runs on beside it to 1E8 |
 | 1811+1812#1 A | 1.3 | - | 1.8 | +0.500 | HELD 0.30 / 0.40 | +0.150 .. +0.200 | DRAWING-CONFIRMED | column 1E8 partial width; face runs on to 17C0 |
 | 13E+7D6#1 B / #2 B | 4.3 / 0.5 | - | 4.45 / 0.65 | +0.15 / +0.15 | HELD 0.40 / annex CONFLICT | +0.060 / m only | DRAWING-CONFIRMED | column 211 partial width (beside-support halves) |
-| 10B+7D1#1 A, 7D4+F8#2 A (annex L corner) | 1.2 / 4.25 | 1.499 / 4.25 | 1.5 / 4.55 | +0.3 / +0.3 | annex CONFLICT | m only | DRAWING-CONFIRMED | the two outer faces of the corner square, in neither r4 run |
-| END 15D+7C8#1 (on footing), 17C+7E3#1 (on footing), 177+7CD#1 (gap to col 1EC), 1811+1812#1 (free) | 0 | - | 0.300 each | +1.200 | HELD / FORMED | +0.12 FORMED; +0.39 .. +0.42 HELD | DRAWING-CONFIRMED | free end faces, in no r4 row |
-| END beside a partial column: 15E+15F#1 0.100 (r2: 170+7C3#4 0.2318 and 1811+1812#1 0.0972 withdrawn, section 2a) | 0 | - | 0.100 | +0.100 | HELD 0.40 | +0.040 | DRAWING-CONFIRMED | the part of the drawn square end that COL:1F5 does not cover |
+| 10B+7D1#1 A, 7D4+F8#2 A (annex L corner) | 1.2 / 4.25 | 1.499 / 4.25 | 1.3 / 4.55 | +0.1 / +0.3 | annex CONFLICT | m only | DRAWING-CONFIRMED | the two outer faces of the corner square, in neither r4 run; r3: on 10B+7D1#1 A the boundary band 810 frames into the face over 0.200 (plan contact; r2 +0.300) |
+| END 15D+7C8#1, 17C+7E3#1, 177+7CD#1, 15E+15F#1 (lift pit ring 7C2), 1811+1812#1 (boundary band 7FE) | 0 | - | 0.000 each | 0.000 | - | 0.000 | DRAWING-CONFIRMED | r3: contacts with drawn concrete faces (section 2b); r2 booked 0.300 x 4 + 0.100 |
 | 15D+7C8#1 B | 2.9 | 1.8999 | 2.8499 | -0.0501 | HELD 0.40 | -0.020 | HELD | not settled (start on footing F 1B2B; the r4 L is the T-242 adjusted length) |
 | 13E+7D6#2 END | 0 | - | 0.0017 | +0.0017 | annex CONFLICT | m only | HELD | a 1.7 mm piece, above the snap |
 
-**Totals of the change (m2, never summed across statuses):** r4 CALCULATED (above N.G.) **+0.285** (one face);
-OQ-10 FORMED alternative **+0.120** (one end face, 17C+7E3#1; r1 +0.340 carried 0.2202 on a hull diagonal; EARTH_CAST
-alternative unchanged 0); HELD ranges **+1.087 .. +1.316** (r1 +1.116 .. +1.355 less 1811+1812#1 0.029 .. 0.039)
-(+ -0.020 HELD on 15D+7C8#1 B); annex CONFLICT runs **+0.750 m** of face (no depth: m only). Physical faces added:
-+3.189 m of side face, +1.300 m of end face (DRAWING-CONFIRMED; r1 1.629 less 0.3290 m). No change is applied to any BOQ line.
+**Totals of the change (m2, never summed across statuses), r3:** r4 CALCULATED (above N.G.) **+0.285** (one face);
+OQ-10 FORMED alternative **0.000** (r1 +0.340, r2 +0.120: 17C+7E3#1's end lies on the lift ring 7C2, no face; EARTH_CAST
+alternative unchanged 0); HELD ranges **+0.657 .. +0.856** (r2 +1.087 .. +1.316 less the four HELD-depth end faces
+15D+7C8#1 0.120, 15E+15F#1 0.040, 177+7CD#1 0.180, 1811+1812#1 0.090 .. 0.120) (+ -0.020 HELD on 15D+7C8#1 B); annex
+CONFLICT runs **+0.550 m** of face (r2 +0.750; no depth: m only). Physical faces added: +2.989 m of side face (r2
++3.189), end face **0.000 m** (r2 +1.300, r1 +1.629). No change is applied to any BOQ line.
 
 ### 2a. r2: end faces re-listed under R-FACE-END-2 (Verifier 2026-10-25 00:04)
 
@@ -82,10 +91,10 @@ on every run (byte-identical `sides`, `gaps`, `closed_on_carrier`, `arcs`).
 |---|---|---|---|
 | 170+7C3#4 (COLUMN) | 0.2318 | **0.000** | edge 7C3 stops on COL:17C0, edge 170 runs 0.300 on to COL:1E8: the strip between 17C0's top face, edge 170 and 1E8's west face is beam; 17C0 / 1E8 faces there are contacts (17C0 exposed 0.4614 -> 0.2475 m, 1E8 0.7473 -> 0.5000 m) |
 | 1811+1812#1 (COLUMN) | 0.0972 | **0.000** | the diagonal from 1812's start at 1E8's west face line to 1811's start at 1E8's east face: below 1E8 the strip is beam against 17C0's east face |
-| 15E+15F#1 (COLUMN) | 0.100 | 0.100 kept | both edges end square at one station; the drawn end beside COL:1F5 is a real end face |
-| 15D+7C8#1, 17C+7E3#1 (FOOTING_FACE) | 0.300 each | kept | the band's drawn end on the footing, nothing continues |
-| 177+7CD#1 (GAP_TO_COLUMN) | 0.300 | kept | drawn end with a gap to column 1EC |
-| 1811+1812#1 (FREE_END) | 0.300 | kept | drawn free end |
+| 15E+15F#1 (COLUMN) | 0.100 | 0.100 kept (r3: 0.000) | both edges end square at one station; r3: the 0.100 beside COL:1F5 lies on the lift ring 7C2's top face (2b) |
+| 15D+7C8#1, 17C+7E3#1 (FOOTING_FACE) | 0.300 each | kept (r3: 0.000) | r2 read the band's end as on the footing; r3: on the lift ring 7C2 (2b) |
+| 177+7CD#1 (GAP_TO_COLUMN) | 0.300 | kept (r3: 0.000) | r3: on the lift ring 7C2's east face (2b) |
+| 1811+1812#1 (FREE_END) | 0.300 | kept (r3: 0.000) | the r2 defect the Verifier found 01:31: on the boundary band 7FE's face (2b) |
 | 13E+7D6#2 (BEAM_JUNCTION) | 0.0017 | 0.0017 HELD | 1.7 mm piece, edges end at one station (not a hull diagonal); HELD by name |
 | ring ARC:157+158 west end | 0.3226 | 0.3226 HELD | radial ends of the ring (inner 96.382, outer 109.750 deg); not settled |
 
@@ -93,6 +102,59 @@ Eight ends had unequal edge stations (`extended_between_edge_ends`: 170+7C3 end,
 both, 1811+1812 start, 182+183 start); on the six carrier / arc ends the hull diagonal already lay inside the carrier,
 so nothing moved there; only the two partial-column ends above changed. Boundary total 423.5484 -> 422.7582 m
 (-0.7902 = 0.2318 + 0.0972 END + 0.2139 + 0.2473 column faces that are contacts).
+
+### 2b. r3: ends tested against every drawn concrete outline (R-FACE-END-3; Verifier 2026-10-25 01:31)
+
+**The Verifier's case, re-measured (own, 'ST7757 dxf.dxf' 9f9d1179, GROUND BEAMS PLAN, handles and lengths only).**
+Band 1811+1812 (0.300 wide) stops with both edge lines at one station. The S-BOUN boundary band 7FE (closed, 8 vertices,
+8.344 m2, 0.200 wide; T-253 MERGED c2d5b3cd: the upper boundary-wall ground beam 20 x 40 at N.G., concrete, DRAWING-
+CONFIRMED) has its sea-leg inner face on that station over a drawn length of 2.250 m, covering the band's whole cross-
+section (0.300 of 0.300). The open LWPOLYLINE 1AA (layer 'D', the only entity on that layer; 0.200 x 0.447, west segment
+missing over 0.200) lies **100 % inside 7FE** (0.0894 m2 of 7FE's 8.344 m2): it is drawn on the boundary band, not where
+the beam stops. Identification searched, sheet by sheet at the same position (frame pitch 38.724 m): FOUNDATION PLAN
+nothing (no footing, no column, only axis 12C1); COLUMN LAYOUT nothing (column C4 '30X50' beside it is 1E8); GF slab /
+sections frame: slab edge LINE 2A8 and hatch 273 only; no text, dimension or block names it. T-253 (merged) reads 1AA
+with LINE 102 (layer 2, 0.90 m, also inside 7FE) as opening symbols of the boundary wall above the band. Whatever 1AA is,
+it is not a member at ground-beam level and it is not what the beam ends on: the beam ends on 7FE. **END 1811+1812#1:
+0.300 FREE_END (r2) -> 0.000 CONTACT** (plan). 3-D: 7FE's top is N.G. and its depth 0.40 (p.14); the court run's own
+section is unprinted (T-253 s.4, HELD 0.30 / 0.40): if its top were above N.G., the part above would meet the boundary
+brick wall, not a free face; that height is not drawn, so nothing is booked for it (named, not a quantity).
+
+**The same defect elsewhere (found this run).** r1 / r2 passed ONE S-BW outline to the trace, the largest (7C6, the pool
+outer wall, labelled 'LIFT'); the lift pit ring 7C2 (outer 2.200 x 2.200, inner 7BE; T-204 / T-230 MERGED 3779bcdf: RC
+pit walls 0.20 on the lift footing, the ground beams drawn to the ring's outer face, no beam over it, the FF footing
+never touches a beam) and the three boundary bands were missing. r3 passes every OUTER closed S-BW outline (7C2, 7C6;
+an outline inside another is its inner face) and every closed S-BOUN band (7FE, 7FC, 810) as owners, and every open
+LWPOLYLINE for the open-outline test (1AA, the layer-2 outline, pool inner 7C5).
+
+| End (V2 kind) | r2 END m | r3 END m | drawn face it lies on (covered of width) | m2 effect (r4 depth basis) |
+|---|---|---|---|---|
+| 1811+1812#1 (FREE_END) | 0.300 | **0.000** | BOUNDARY_GB 7FE (0.300 of 0.300) | -0.090 .. -0.120 HELD |
+| 15D+7C8#1 (FOOTING_FACE) | 0.300 | **0.000** | lift ring 7C2 top face (0.300 of 0.300) | -0.120 HELD (0.40) |
+| 17C+7E3#1 (FOOTING_FACE) | 0.300 | **0.000** | lift ring 7C2 bottom face (0.300 of 0.300) | -0.120 OQ-10 FORMED alternative |
+| 177+7CD#1 (GAP_TO_COLUMN) | 0.300 | **0.000** | lift ring 7C2 east face (0.300 of 0.300); COL:1EC is 0.050 beside the band | -0.180 HELD (0.60) |
+| 15E+15F#1 (COLUMN 1F5 partial) | 0.100 | **0.000** | lift ring 7C2 top face (0.300 of 0.300; 1F5 sits in the ring's corner) | -0.040 HELD (0.40) |
+| 136+7D5#1, 7E0+FD#2, 15C+7CC#1 (COLUMN) | 0 | 0 | 7FE 0.201 / 7FC 0.201 / 7C2 0.300, the rest on the column | none (listed as contacts) |
+
+Side faces: one changes: **10B+7D1#1 A 1.500 -> 1.300 m** (the boundary band 810, 0.200 wide, frames into the annex
+beam face 10B; plan contact; whether they overlap in height depends on the annex depth, D-35 CONFLICT, so this row stays
+m only). Columns lose faces that are contacts with the new owners (1EC 2.5 -> 1.3, 1EF 0.9757 -> 0.2757, 1F2 1.1 -> 0.4,
+1F5 1.2 -> 0.5, 204 0.8 -> 0.6, 218 1.0 -> 0.8, 1FC 1.0 -> 0.8 m); pool 7C6 exposed 10.5 -> 10.1 m (7FE / 7FC end on
+it). Boundary 422.7582 -> 509.2982 m (+86.540 = owners' exposed faces 83.14 + 2.30 + 2.40 + 4.50 - pool 0.40 - columns
+3.90 - ends 1.30 - side 0.20). Spans, sides elsewhere, gaps, arcs, closures: byte-identical with r2.
+
+**177+7CD's other end (the Verifier's 'no END row' remark).** The band has two ends: the start, both edges at one
+station on the ring 7C2 east face (above); the end at the ring ARC 158, edges at unequal stations (0.2191 m apart),
+the zone between them (0.0657 m2) closed by the arc: beam (R-FACE-END-2, CLOSED_AS_BEAM), the side A +0.2191 m the
+Verifier verified in T-276. No third end exists. **Census of every end with unequal edge stations** (new field
+`unequal_station_ends`, 18 ends): 8 CLOSED_AS_BEAM (zone joined to the body and closed by outlines), 10
+COVERED_BY_OUTLINES (the zone between the stations lies inside a column, a carrier or an owner: 0.000 m2 uncovered),
+0 left open, 0 silent. No end is PARTIAL against an owner and no free-end piece runs into an open outline
+(`open_outline_ends` empty on this villa).
+
+**OQ-10 FORMED alternative withdrawn by evidence, not by preference:** the alternative asked whether 17C+7E3#1's end
+face is formed, depending on the footing top vs the beam soffit; T-230 (merged) shows the beam ends on the RC pit ring,
+not on the footing, so there is no end face to form. Nothing here is an owner question.
 
 **Ring ARC:157+158 (the Verifier's T-276 case):** inner face 157 = 6.5674 m (= r4; a tangent-point snap at column 17BA
 would have taken 0.0079 m, refused by R-FACE-SNAP-1); outer face 158 traced **5.9056 m** = 109.750 -> 176.628 (2.9765)
@@ -120,18 +182,21 @@ are below 1 micron (the same line). A closing of the union by 0.5 mm removes sli
 ## 3. Reconciliation (ERS s.2.4) and verdict proposals
 
 - r4 vs drawn faces: the whole difference is end treatment: (a) a square cut at the support's outermost station where a
-  carrier is oblique / curved or a column covers part of the width (+3.189 m); (b) free ends never billed (+1.300 m; r2);
+  carrier is oblique / curved or a column covers part of the width (+2.989 m, r3); (b) free ends: none exists (r3: every
+  end r1 / r2 booked lies on a drawn concrete face, 0.000 m; r2 +1.300 m withdrawn);
   (c) tee covers at 0.30 where the drawn zone is wider (oblique, arc) or where no cover row exists. Residual between W and
   T on rows where both exist: <= 2 mm (the walk reads a 45-degree face on a +-1 mm strip), except 182+183#1 A where W
   stops at the named carrier through another member (T right, W wrong) and 15D+7C8#1 B (HELD).
 - Freelancer: no formwork row in any workbook (r3 / r4): FREELANCER_NO_ROW; no %.
 - Verdict proposals: ring outer face and 177+7CD#2 A: HAND (traced) RIGHT, r4 tee cover width WRONG (0.30 vs 0.3715);
-  oblique / partial-width runs: HAND RIGHT, r4 square cut WRONG by the m above; free end faces: r4 OMISSION; COL:255
+  oblique / partial-width runs: HAND RIGHT, r4 square cut WRONG by the m above; end faces: r4 RIGHT to bill none (r3:
+  the r1 / r2 'free end' rows were WORKER WRONG, contacts with the lift ring 7C2 / boundary band 7FE); COL:255
   sliver: r4 RIGHT (unaffected), the rule protects the traced trades.
 
 ## 4. Held (never 0) and missing
 
-HELD: 15D+7C8#1 side B (-0.0501 m), the ring west end piece 0.3226 m, 13E+7D6#2 end 1.7 mm, every cover width change
+HELD: 15D+7C8#1 side B (-0.0501 m), the ring west end piece 0.3226 m, the court run 1811+1812's end above N.G. if its
+unprinted top lies above N.G. (meets the boundary brick wall; height not drawn, nothing booked), 13E+7D6#2 end 1.7 mm, every cover width change
 (depends on D_in), the carriers with no r4 cover row, every annex delta (depth CONFLICT, m only). Not done here: slab
 level beams (r3 / r4 G faces come from the T-139 drawing-face walk, which already ends both edges on the carrier, T-264
 row 2; a sliver census of the slab sheets is not measured), soffits (ground-beam soffits on blinding: no form), the
@@ -143,7 +208,9 @@ neck faces (neck line HELD on Q-21 C).
 5.9056 m), LINE 177 / 7CD end points on the arc (framing 0.3715 m), band 177+7CD#2 side A on LINE 177 from column
 COL:245's face to the arc = 1.7558 m less the 7E7+7E8 tee 0.300 = 1.4558 m traced; (b) one oblique run: 17E+17F#1, LINE
 17F (A) 2.687 m and LINE 17E (B) 2.7668 m between column 1EF's faces and band 176+7E6's 45-degree face (tee 182+183 0.300
-on B); (c) the sliver: COL:255 outline vs LINE FC / 7D0 offset 0.052 mm over 0.700 m.
+on B); (c) the sliver: COL:255 outline vs LINE FC / 7D0 offset 0.052 mm over 0.700 m; (d) r3: LINES 1811 / 1812 end
+points on S-BOUN 7FE's sea-leg inner face (0.300 of the face's 2.250 m), 1AA wholly inside 7FE (0.200 x 0.447, open
+west side); LINES 7CD / 177 start, 15D / 7C8 start, 17C / 7E3 end, 15E / 15F end on the S-BW ring 7C2's outer faces.
 
 ## 6. Lessons register row (proposed, ERS s.7)
 
@@ -161,3 +228,13 @@ drawn line or a section where nothing continues, never on a hull edge (any villa
 | tests/t282_formwork_edges (normal: square end beside a partial column 0.150 kept / Alsenan 15E+15F#1 0.100; adverse:
 unequal edge ends beside a partial column -> END 0.000, Alsenan 170+7C3#4 / 1811+1812#1; a drawn oblique free end is
 never squared off) | READY r2 (Gate A pending).
+
+2026-10-25 | four ground-beam ends booked as FREE / FOOTING / GAP ends (0.300 m each) and one 0.100 piece beside a
+partial column, all lying on drawn concrete faces (lift pit ring 7C2, boundary band 7FE) (r2 of this task) | the trace
+was given one S-BW outline (the largest, the pool) as the only non-member owner, and the end test trusted the span
+splitter's end kind | R-FACE-END-3: every closed concrete outline on the sheet (outer wall outlines, boundary bands) is
+an owner; an end on its face is a contact whatever the splitter's kind; a band running into an open outline is HELD,
+never a free end (any villa; formwork, waterproofing, plaster faces) | tests/t282_formwork_edges (normal: end on a
+concrete outline -> END 0 for FREE / FOOTING / GAP kinds, a drawn end line across the full end keeps 0.300; adverse:
+band into an open 1AA-shaped outline -> OPEN_OUTLINE HELD 0 .. 0.300; rotated / mirrored; Alsenan five contacts, 18
+unequal-station ends all accounted for) | READY r3 (Gate A pending).

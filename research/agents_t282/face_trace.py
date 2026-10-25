@@ -23,6 +23,13 @@ villa; every face-tracing trade: formwork, waterproofing, plaster):
                   joining unequal edge ends. Where the two edges end at different stations, the zone between them is
                   the band less every other drawn outline; a piece joined to the body and closed by outlines is beam
                   (beside a partial-width column: END 0.000); an unclosed piece keeps the drawn end line.
+  R-FACE-END-3    (r3, Verifier 2026-10-25 01:31) A member end whose cross-section lies on the drawn face of another
+                  concrete outline (a pit / pool wall, a boundary ground-beam band; passed as `others`) is a CONTACT:
+                  END 0.000, whatever the end kind the span splitter gave it (FREE_END / GAP_TO_COLUMN / FOOTING_FACE).
+                  A free-end piece that an OPEN outline (not closed, so not a member outline) covers only in part is
+                  not a free end: the band runs into something drawn but unidentified -> kind OPEN_OUTLINE, HELD
+                  0 .. piece length by name (never DRAWING-CONFIRMED, never 0 silently). A piece the open outline
+                  covers over its whole length is a drawn end line: the end face stands.
 
 Inputs are plain geometry (mm), so the same function runs on a synthetic villa and on the development villa's DXF
 (t282_extract.py). Output lengths in m."""
@@ -66,12 +73,69 @@ def square_cut_refused(La, Lb, billed_a, billed_b, tol=1e-4):
     return True
 
 
-def trace(members, columns, arcs=None, others=None, snap=SNAP_MM, close_cap=CLOSE_CAP):
+FREE_KINDS = ("FREE_END", "GAP_TO_COLUMN", "FOOTING_FACE")
+
+
+def end_contacts(members, others, columns=None, snap=SNAP_MM):
+    """R-FACE-END-3: for every member end of a free kind (FREE_KINDS), and every COLUMN end that an `others` outline
+    also touches, the drawn outline whose face the end's cross-section lies on. The cross-section is the segment
+    joining the two edges' end points when they end at one station (within snap); an end with unequal stations is
+    reported as such (R-FACE-END-2 governs it). Coverage counts the others' faces and, at a COLUMN end, the columns'.
+    -> [{member, end, kind, width_m, stations_m, owner, covered_m, status}] with status CONTACT (covered over the full
+    width within snap), PARTIAL (covered in part: named, not settled) or NONE (free kinds only)."""
+    from shapely.geometry import LineString, Polygon
+    from shapely.ops import unary_union
+
+    oth = {k: Polygon(v).buffer(0) for k, v in (others or {}).items()}
+    colz = [Polygon(v).buffer(0) for v in (columns or {}).values()]
+    out = []
+    for mid in sorted(members):
+        m = members[mid]
+        (a0, a1) = m["edges"]["A"]
+        L = math.hypot(a1[0] - a0[0], a1[1] - a0[1])
+        u = ((a1[0] - a0[0]) / L, (a1[1] - a0[1]) / L)
+        for end, k_ in (("start", 0), ("end", -1)):
+            kind = m["ends"][end]["kind"]
+            if kind not in FREE_KINDS + ("COLUMN",):
+                continue
+            pa = sorted(m["edges"]["A"], key=lambda p: _dot(p, u))[k_]
+            pb = sorted(m["edges"]["B"], key=lambda p: _dot(p, u))[k_]
+            ta, tb = _dot(pa, u), _dot(pb, u)
+            rec = dict(member=mid, end=end, kind=kind, width_m=round(math.hypot(pb[0] - pa[0], pb[1] - pa[1]) / 1000.0, 4),
+                       stations_m=(round(ta / 1000.0, 4), round(tb / 1000.0, 4)), owner=None, covered_m=0.0,
+                       status="NONE")
+            if abs(ta - tb) > snap:                        # R-FACE-END-2 governs (census: trace()['unequal_ends'])
+                if kind != "COLUMN":
+                    rec["status"] = "UNEQUAL_STATIONS"
+                    out.append(rec)
+                continue
+            seg = LineString([pa, pb])
+            best = (0.0, None)
+            for k, P in oth.items():
+                c = seg.intersection(P.boundary.buffer(snap, cap_style=2)).length
+                if c > best[0]:
+                    best = (c, k)
+            if kind == "COLUMN" and best[0] <= snap:
+                continue                                   # an ordinary column end: not this rule's business
+            if best[1] is not None:
+                parts_ = [P.boundary.buffer(snap, cap_style=2) for P in oth.values()]
+                if kind == "COLUMN":
+                    parts_ += [C.buffer(snap, cap_style=2) for C in colz]
+                cov = seg.intersection(unary_union(parts_)).length
+                rec.update(owner=best[1], covered_m=round(best[0] / 1000.0, 4), covered_all_m=round(cov / 1000.0, 4),
+                           status="CONTACT" if cov >= seg.length - snap else "PARTIAL")
+            out.append(rec)
+    return out
+
+
+def trace(members, columns, arcs=None, others=None, snap=SNAP_MM, close_cap=CLOSE_CAP, open_outlines=None):
     """members: {id: {"edges": {"A": (p0, p1), "B": (p0, p1)}, "width": mm,
                       "spans": [(s0_m, s1_m, span_id)]  (face-to-face stations along u, m; one span = whole member),
                       "ends": {"start": {"kind": KIND, "carriers": [ids]}, "end": {...}}}}
          KIND in COLUMN / BEAM_JUNCTION / FREE_END / FOOTING_FACE / GAP_TO_COLUMN; "start" is the low-station end.
-       columns / others: {id: [(x, y), ...]} outlines; arcs: {id: {"cx", "cy", "radii": {h: R}, "ranges": {h: (a0, a1)}}}
+       columns / others: {id: [(x, y), ...]} outlines (others: concrete outlines that are not ground-beam members,
+         e.g. a pit or pool wall, a boundary band); open_outlines: {id: [(x, y), ...]} open polylines (R-FACE-END-3);
+         arcs: {id: {"cx", "cy", "radii": {h: R}, "ranges": {h: (a0, a1)}}}
     -> dict(sides={(span_id, side): m}, ends={(span_id, end kind): m}, columns={id: m},
             others={id: m}, arcs={(arc_id, h): m}, closed=[...], held=[...], pieces=[...], gaps=[...])."""
     from shapely.geometry import LineString, MultiPoint, Point, Polygon, box
@@ -187,6 +251,7 @@ def trace(members, columns, arcs=None, others=None, snap=SNAP_MM, close_cap=CLOS
     raw_hull = {mid: MultiPoint([q for s_ in ("A", "B") for q in m["edges"][s_]]).convex_hull
                 for mid, m in members.items()}
     ext_kept = []
+    uneq = []
     for mid, m in members.items():
         u, n, oA, oB = frame[mid]
         lo_o, hi_o = sorted((oA, oB))
@@ -202,6 +267,9 @@ def trace(members, columns, arcs=None, others=None, snap=SNAP_MM, close_cap=CLOS
             t_long = min(ta, tb) if k_end == 0 else max(ta, tb)
             E = box(min(t_short, t_long), lo_o, max(t_short, t_long), hi_o)
             R_ = E.difference(O)
+            # r3 census: every end with unequal edge stations, how much of the zone between them no drawn outline covers
+            uneq.append(dict(member=mid, end=("start", "end")[k_end], station_diff_m=round(abs(ta - tb) / 1000.0, 4),
+                             zone_m2=round(E.area / 1e6, 6), uncovered_m2=round(R_.area / 1e6, 6)))
             cut = LineString([(t_short, lo_o), (t_short, hi_o)])
             bands = unary_union([LineString([(min(t_short, t_long), o), (max(t_short, t_long), o)]).buffer(
                 snap, cap_style=2) for o in (lo_o, hi_o)] + [cut.buffer(snap, cap_style=2)])
@@ -272,7 +340,8 @@ def trace(members, columns, arcs=None, others=None, snap=SNAP_MM, close_cap=CLOS
                 for b0, b1, sid, kind in bounds if min(c_m, b1) - max(a_m, b0) > 1e-7]
 
     out = dict(sides={}, ends={}, columns={}, others={}, arcs={}, closed=closed, held=held, pieces=[],
-               gaps=[], unattributed=[], extended=ext_kept)
+               gaps=[], unattributed=[], extended=ext_kept, open_outline_ends=[], unequal_ends=uneq)
+    opn = {k: LineString(v) for k, v in (open_outlines or {}).items()}
     arc_iv = {}
     for p, q in segs:
         if math.hypot(q[0] - p[0], q[1] - p[1]) < 1e-6:
@@ -342,6 +411,18 @@ def trace(members, columns, arcs=None, others=None, snap=SNAP_MM, close_cap=CLOS
             if ls.length < snap:
                 out.setdefault("end_artefacts_m", []).append(round(ls.length / 1000.0, 6))   # < snap: not a face
                 continue
+            if end_kind in FREE_KINDS and opn:
+                # R-FACE-END-3: a free-end piece covered only in part by an open outline is not a free end
+                cov, oid = 0.0, None
+                for k, OL in opn.items():
+                    c = ls.intersection(OL.buffer(snap, cap_style=2)).length
+                    if c > cov:
+                        cov, oid = c, k
+                if oid is not None and snap < cov < ls.length - snap:
+                    out["open_outline_ends"].append(dict(span_id=hit, kind_was=end_kind, outline=oid,
+                                                         piece_m=round(ls.length / 1000.0, 4),
+                                                         covered_m=round(cov / 1000.0, 4)))
+                    end_kind = "OPEN_OUTLINE"
             out["ends"][(hit, end_kind)] = out["ends"].get((hit, end_kind), 0.0) + ls.length / 1000.0
     for (aid, h), ivs in arc_iv.items():
         ivs.sort()
