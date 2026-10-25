@@ -28,7 +28,22 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 RES = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
-import face_trace as FT  # noqa: E402
+
+
+def _load_face_trace():
+    """this folder's face_trace.py by path under its own module name: another research folder's face_trace
+    (agents_t276) may already sit in sys.modules as 'face_trace' in a full-suite session."""
+    import importlib.util
+    name = "t282_face_trace"
+    if name not in sys.modules:
+        spec = importlib.util.spec_from_file_location(name, os.path.join(HERE, "face_trace.py"))
+        mod = importlib.util.module_from_spec(spec)
+        sys.modules[name] = mod
+        spec.loader.exec_module(mod)
+    return sys.modules[name]
+
+
+FT = _load_face_trace()
 
 TOL_AGREE_M = 0.0025      # W and T' agree within 2.5 mm: the walk reads a 45-degree carrier on a +-1 mm strip
 #                           (<= 1 mm per end), the trace exactly; 0.5 mm rounding

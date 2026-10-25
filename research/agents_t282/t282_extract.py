@@ -276,7 +276,9 @@ def main():
     # (straight bands between their own edge lines, each edge closed on its named carrier; curved bands between their
     # own arcs), the columns and the lift ring, each boundary piece given to one owner (R-FACE-OWN-1, R-FACE-SNAP-1).
     sys.path.insert(0, HERE)
-    import face_trace as FT
+    fspec = importlib.util.spec_from_file_location("t282_face_trace", os.path.join(HERE, "face_trace.py"))
+    FT = importlib.util.module_from_spec(fspec)
+    fspec.loader.exec_module(FT)
     ring_polys = []
     for e in msp.query("LWPOLYLINE[layer=='S-BW']"):
         pts = [tuple(p[:2]) for p in e.get_points()]

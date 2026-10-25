@@ -23,8 +23,8 @@ def _load(name):
     return m
 
 
-FT = _load("face_trace")
 FW = _load("formwork_t282")
+FT = FW.FT                                   # this folder's face_trace (never another folder's)
 
 COL = {"C1": [(0, -50), (400, -50), (400, 350), (0, 350)]}
 
