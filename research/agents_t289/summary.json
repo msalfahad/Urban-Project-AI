@@ -1,0 +1,708 @@
+{
+ "schema": "T289_SUMMARY",
+ "candidate": "ARCH_TAKEOFF_V3.0.15",
+ "candidate_lines_csv_sha256": "a4dc01dd5a309bb38b6bff54b486e9090b6d571a0044101197ec650f1cf3d00a",
+ "project": {
+  "project_id": "ST7757 villa (structural set)",
+  "revision_set_sha256": "297e913da9d98da10c40b1e93af0ccc66b0d7825b7700e0a2e3b9b5a54240b18"
+ },
+ "named_totals_m3": {
+  "GB_EXTERIOR_24": 11.9346,
+  "COL_2F": 3.528,
+  "COL_ANNEX_7": 3.7125,
+  "ST03": 0.948267,
+  "GB_MAIN_EXTERIOR_IN_INTERIOR_LINES": 1.830623
+ },
+ "residuals_m3": {
+  "GB_EXTERIOR_24": -2.1e-05,
+  "COL_2F": 0.0,
+  "COL_ANNEX_7": 0.0,
+  "ST03": 0.0,
+  "GB_MAIN_EXTERIOR_IN_INTERIOR_LINES": 0.0
+ },
+ "totals": {
+  "GB_EXTERIOR_24": {
+   "lines": 24,
+   "engine_m3": 11.934579,
+   "by_status": {
+    "CONFLICT": [
+     8,
+     0.0
+    ],
+    "DRAWING-CONFIRMED": [
+     13,
+     12.4296
+    ],
+    "HELD": [
+     3,
+     0.0
+    ]
+   }
+  },
+  "GB_MAIN_EXTERIOR_IN_INTERIOR_LINES": {
+   "lines": 3,
+   "engine_m3": 1.830623,
+   "by_status": {
+    "DRAWING-CONFIRMED": [
+     3,
+     3.5304
+    ]
+   }
+  },
+  "COL_2F": {
+   "lines": 8,
+   "engine_m3": 3.528,
+   "by_status": {
+    "HELD": [
+     8,
+     0.0
+    ]
+   }
+  },
+  "COL_ANNEX_7": {
+   "lines": 7,
+   "engine_m3": 3.7125,
+   "by_status": {
+    "HELD": [
+     5,
+     0.0
+    ],
+    "PENDING-VERIFICATION": [
+     2,
+     0.0
+    ]
+   }
+  },
+  "ST03": {
+   "lines": 1,
+   "engine_m3": 0.948267,
+   "by_status": {
+    "HELD": [
+     1,
+     0.0
+    ]
+   }
+  }
+ },
+ "gb_pairing": [
+  {
+   "line_id": "L-00465df980165c529476",
+   "band": "BAND0035",
+   "band_length_m": 3.1,
+   "face_to_face_m": 2.4,
+   "runs": [
+    "137+138#1"
+   ],
+   "classes": [
+    "EXTERIOR_ANNEX"
+   ]
+  },
+  {
+   "line_id": "L-1146bdecd41491ce9382",
+   "band": "BAND0001.3",
+   "band_length_m": 3.35,
+   "face_to_face_m": 3.35,
+   "runs": [
+    "170+7C3#3"
+   ],
+   "classes": [
+    "EXTERIOR_MAIN"
+   ]
+  },
+  {
+   "line_id": "L-21795b350fbd09150c43",
+   "band": "BAND0022",
+   "band_length_m": 3.8,
+   "face_to_face_m": 3.8,
+   "runs": [
+    "178+7DB#1"
+   ],
+   "classes": [
+    "COURT"
+   ]
+  },
+  {
+   "line_id": "L-3284f44000c02179ace7",
+   "band": "BAND0012.2",
+   "band_length_m": 2.3,
+   "face_to_face_m": 2.3,
+   "runs": [
+    "10B+7D1#2"
+   ],
+   "classes": [
+    "EXTERIOR_ANNEX"
+   ]
+  },
+  {
+   "line_id": "L-402dbe61d1c924144a3c",
+   "band": "BAND0015",
+   "band_length_m": 10.13,
+   "face_to_face_m": 9.7,
+   "runs": [
+    "7D4+F8#1",
+    "7D4+F8#2"
+   ],
+   "classes": [
+    "EXTERIOR_ANNEX"
+   ]
+  },
+  {
+   "line_id": "L-46f25f72b44e8bc3e2e0",
+   "band": "BAND0006.3",
+   "band_length_m": 2.7,
+   "face_to_face_m": 2.7,
+   "runs": [
+    "109+7CB#3"
+   ],
+   "classes": [
+    "EXTERIOR_MAIN"
+   ]
+  },
+  {
+   "line_id": "L-4783c6e18002c3a8a37e",
+   "band": "BAND0016",
+   "band_length_m": 6.4,
+   "face_to_face_m": 6.0,
+   "runs": [
+    "136+7D5#1"
+   ],
+   "classes": [
+    "EXTERIOR_ANNEX"
+   ]
+  },
+  {
+   "line_id": "L-62243c74c430d383be86",
+   "band": "BAND0002.1",
+   "band_length_m": 0.6,
+   "face_to_face_m": 0.6,
+   "runs": [
+    "185+7C7#1"
+   ],
+   "classes": [
+    "COURT"
+   ]
+  },
+  {
+   "line_id": "L-62f712462a36d4ad1b32",
+   "band": "BAND0004.1",
+   "band_length_m": 4.3,
+   "face_to_face_m": 4.3,
+   "runs": [
+    "10A+7C9#1"
+   ],
+   "classes": [
+    "EXTERIOR_MAIN"
+   ]
+  },
+  {
+   "line_id": "L-6bf14711798e5af93594",
+   "band": "BAND0012.1",
+   "band_length_m": 1.5,
+   "face_to_face_m": 1.2,
+   "runs": [
+    "10B+7D1#1"
+   ],
+   "classes": [
+    "EXTERIOR_ANNEX"
+   ]
+  },
+  {
+   "line_id": "L-9e28c7012784a8dc33c8",
+   "band": "BAND0026.1",
+   "band_length_m": 6.9,
+   "face_to_face_m": 6.6,
+   "runs": [
+    "7E0+FD#1",
+    "7E0+FD#2"
+   ],
+   "classes": [
+    "EXTERIOR_MAIN"
+   ]
+  },
+  {
+   "line_id": "L-a55bfa01b726ef11650c",
+   "band": "BAND0041",
+   "band_length_m": 1.3,
+   "face_to_face_m": 1.3,
+   "runs": [
+    "1811+1812#1"
+   ],
+   "classes": [
+    "COURT"
+   ]
+  },
+  {
+   "line_id": "L-b4a13a43967ee4765662",
+   "band": "BAND0017.2",
+   "band_length_m": 0.5,
+   "face_to_face_m": 0.5,
+   "runs": [
+    "13E+7D6#2"
+   ],
+   "classes": [
+    "EXTERIOR_ANNEX"
+   ]
+  },
+  {
+   "line_id": "L-bde0257c24588948167f",
+   "band": "BAND0001.1",
+   "band_length_m": 2.4,
+   "face_to_face_m": 2.4,
+   "runs": [
+    "170+7C3#1"
+   ],
+   "classes": [
+    "EXTERIOR_MAIN"
+   ]
+  },
+  {
+   "line_id": "L-c9bb2eca50a2a2c8b569",
+   "band": "BAND0011.4",
+   "band_length_m": 1.2,
+   "face_to_face_m": 1.2,
+   "runs": [
+    "7D0+FC#4"
+   ],
+   "classes": [
+    "EXTERIOR_MAIN"
+   ]
+  },
+  {
+   "line_id": "L-cc6aaa99e1892f34b92f",
+   "band": "BAND0011.1",
+   "band_length_m": 2.975,
+   "face_to_face_m": 2.975,
+   "runs": [
+    "7D0+FC#1"
+   ],
+   "classes": [
+    "EXTERIOR_MAIN"
+   ]
+  },
+  {
+   "line_id": "L-d08e7a9d809a56733ff9",
+   "band": "BAND0025.2",
+   "band_length_m": 1.0,
+   "face_to_face_m": 1.0,
+   "runs": [
+    "114+115+7DF#2"
+   ],
+   "classes": [
+    "EXTERIOR_MAIN"
+   ]
+  },
+  {
+   "line_id": "L-d8b98b143e293d30833b",
+   "band": "BAND0013.2",
+   "band_length_m": 5.8,
+   "face_to_face_m": 5.8,
+   "runs": [
+    "13D+7D2#1"
+   ],
+   "classes": [
+    "EXTERIOR_ANNEX"
+   ]
+  },
+  {
+   "line_id": "L-dac43ee18f55433b57e7",
+   "band": "BAND0001.4",
+   "band_length_m": 3.25,
+   "face_to_face_m": 3.25,
+   "runs": [
+    "170+7C3#4"
+   ],
+   "classes": [
+    "EXTERIOR_MAIN"
+   ]
+  },
+  {
+   "line_id": "L-e16c98075f69532a3dc7",
+   "band": "BAND0042",
+   "band_length_m": 1.8064,
+   "face_to_face_m": 1.8063,
+   "runs": [
+    "ARC:139+13A"
+   ],
+   "classes": [
+    "EXTERIOR_ANNEX"
+   ]
+  },
+  {
+   "line_id": "L-e8536bc4f2699a24e2ab",
+   "band": "BAND0011.2",
+   "band_length_m": 5.745,
+   "face_to_face_m": 5.745,
+   "runs": [
+    "7D0+FC#2"
+   ],
+   "classes": [
+    "EXTERIOR_MAIN"
+   ]
+  },
+  {
+   "line_id": "L-e9a885323ad6ec3ea32b",
+   "band": "BAND0011.3",
+   "band_length_m": 6.35,
+   "face_to_face_m": 6.35,
+   "runs": [
+    "7D0+FC#3"
+   ],
+   "classes": [
+    "EXTERIOR_MAIN"
+   ]
+  },
+  {
+   "line_id": "L-efbed17455bb224e126e",
+   "band": "BAND0001.2",
+   "band_length_m": 3.37,
+   "face_to_face_m": 3.37,
+   "runs": [
+    "170+7C3#2"
+   ],
+   "classes": [
+    "EXTERIOR_MAIN"
+   ]
+  },
+  {
+   "line_id": "L-ff727b2a52e39509a659",
+   "band": "BAND0009",
+   "band_length_m": 0.39,
+   "face_to_face_m": 0.3639,
+   "runs": [
+    "107+7CE#1"
+   ],
+   "classes": [
+    "EXTERIOR_MAIN"
+   ]
+  },
+  {
+   "line_id": "L-26fcfbbb143269e7bb58",
+   "band": "BAND0005.1",
+   "band_length_m": 1.9,
+   "face_to_face_m": 1.9,
+   "runs": [
+    "145+7CA#1"
+   ],
+   "classes": [
+    "EXTERIOR_MAIN"
+   ],
+   "group": "GB_MAIN_EXTERIOR_IN_INTERIOR_LINES"
+  },
+  {
+   "line_id": "L-27d104ca6fc3556d16e6",
+   "band": "BAND0006.2",
+   "band_length_m": 4.4,
+   "face_to_face_m": 4.4,
+   "runs": [
+    "109+7CB#2"
+   ],
+   "classes": [
+    "EXTERIOR_MAIN"
+   ],
+   "group": "GB_MAIN_EXTERIOR_IN_INTERIOR_LINES"
+  },
+  {
+   "line_id": "L-7076482d75ca42691468",
+   "band": "BAND0043",
+   "band_length_m": 6.2868,
+   "face_to_face_m": 6.0873,
+   "runs": [
+    "ARC:157+158"
+   ],
+   "classes": [
+    "EXTERIOR_MAIN"
+   ],
+   "group": "GB_MAIN_EXTERIOR_IN_INTERIOR_LINES"
+  }
+ ],
+ "cross_trade_lines": [
+  {
+   "line_id": "L-1f663573754f769b321f",
+   "trade": "REINFORCEMENT",
+   "item_code": "STR.REBAR",
+   "element_id": "P-S:COL:SH12:C2@247685,64087|2F:TIES:D8",
+   "unit": "kg",
+   "measured_net": null,
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE"
+  },
+  {
+   "line_id": "L-239342da7e0a92a57dda",
+   "trade": "REINFORCEMENT",
+   "item_code": "STR.REBAR",
+   "element_id": "P-S:COL:SH12:C@233893,56561|GF:TIES:D8",
+   "unit": "kg",
+   "measured_net": null,
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE"
+  },
+  {
+   "line_id": "L-29528251023773e9b37e",
+   "trade": "REINFORCEMENT",
+   "item_code": "STR.REBAR",
+   "element_id": "P-S:COL:SH12:C2@252679,64225|2F:MAIN:D16",
+   "unit": "kg",
+   "measured_net": null,
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE"
+  },
+  {
+   "line_id": "L-2c92efa2f925a3bd3d9e",
+   "trade": "REINFORCEMENT",
+   "item_code": "STR.REBAR",
+   "element_id": "P-S:COL:SH12:C9@254644,59429|2F:MAIN:D16",
+   "unit": "kg",
+   "measured_net": null,
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE"
+  },
+  {
+   "line_id": "L-2d636cc9b0926c1b6f04",
+   "trade": "REINFORCEMENT",
+   "item_code": "STR.REBAR",
+   "element_id": "P-S:COL:SH12:C@238150,57853|GF:MAIN:D16",
+   "unit": "kg",
+   "measured_net": null,
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE"
+  },
+  {
+   "line_id": "L-307cf545d2e80e7f5c3a",
+   "trade": "REINFORCEMENT",
+   "item_code": "STR.REBAR",
+   "element_id": "P-S:COL:SH12:C5@243102,55481|GF:TIES:D8",
+   "unit": "kg",
+   "measured_net": null,
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE"
+  },
+  {
+   "line_id": "L-3f850a04a93dda41cac7",
+   "trade": "REINFORCEMENT",
+   "item_code": "STR.REBAR",
+   "element_id": "P-S:COL:SH12:C3@238374,54773|GF:TIES:D8",
+   "unit": "kg",
+   "measured_net": null,
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE"
+  },
+  {
+   "line_id": "L-4e739c3cc904862cc9cc",
+   "trade": "REINFORCEMENT",
+   "item_code": "STR.REBAR",
+   "element_id": "P-S:COL:SH12:C2@247685,64087|2F:MAIN:D16",
+   "unit": "kg",
+   "measured_net": null,
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE"
+  },
+  {
+   "line_id": "L-68d0ca3c8022991c0e87",
+   "trade": "REINFORCEMENT",
+   "item_code": "STR.REBAR",
+   "element_id": "P-S:COL:SH12:C3@238374,54773|GF:MAIN:D16",
+   "unit": "kg",
+   "measured_net": null,
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE"
+  },
+  {
+   "line_id": "L-6e51fd047db565d76456",
+   "trade": "REINFORCEMENT",
+   "item_code": "STR.REBAR",
+   "element_id": "P-S:COL:SH12:C@235241,51296|GF:TIES:D8",
+   "unit": "kg",
+   "measured_net": null,
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE"
+  },
+  {
+   "line_id": "L-71b2f425a27205ad5938",
+   "trade": "REINFORCEMENT",
+   "item_code": "STR.REBAR",
+   "element_id": "P-S:COL:SH12:C2@251723,58368|2F:TIES:D8",
+   "unit": "kg",
+   "measured_net": null,
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE"
+  },
+  {
+   "line_id": "L-71bfc4edeaf681f2572d",
+   "trade": "REINFORCEMENT",
+   "item_code": "STR.REBAR",
+   "element_id": "P-S:COL:SH12:C5@255627,63526|2F:MAIN:D16",
+   "unit": "kg",
+   "measured_net": null,
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE"
+  },
+  {
+   "line_id": "L-74d59b8ec26c77b10d87",
+   "trade": "REINFORCEMENT",
+   "item_code": "STR.REBAR",
+   "element_id": "P-S:COL:SH12:C9@254644,59429|2F:TIES:D8",
+   "unit": "kg",
+   "measured_net": null,
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE"
+  },
+  {
+   "line_id": "L-8629b957be644698474a",
+   "trade": "REINFORCEMENT",
+   "item_code": "STR.REBAR",
+   "element_id": "P-S:COL:SH12:C@235241,51296|GF:MAIN:D16",
+   "unit": "kg",
+   "measured_net": null,
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE"
+  },
+  {
+   "line_id": "L-8a3c318c960e271efee1",
+   "trade": "WATERPROOFING",
+   "item_code": "WP.FOUNDATION.BURIED_LIQUID",
+   "element_id": "WPF:BURIED_GROUND_BEAM_FACES",
+   "unit": "m2",
+   "measured_net": 45.4682,
+   "evidence_state": "SOURCE_DERIVED"
+  },
+  {
+   "line_id": "L-9761ae508da17304e363",
+   "trade": "REINFORCEMENT",
+   "item_code": "STR.REBAR",
+   "element_id": "P-S:COL:SH12:C3@247476,61310|2F:TIES:D8",
+   "unit": "kg",
+   "measured_net": null,
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE"
+  },
+  {
+   "line_id": "L-97d96786e3e71225f99d",
+   "trade": "REINFORCEMENT",
+   "item_code": "STR.REBAR",
+   "element_id": "P-S:COL:SH12:C3@243004,52949|GF:TIES:D8",
+   "unit": "kg",
+   "measured_net": null,
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE"
+  },
+  {
+   "line_id": "L-9c87c028daf1e867be53",
+   "trade": "REINFORCEMENT",
+   "item_code": "STR.REBAR",
+   "element_id": "P-S:COL:SH12:C2@251723,58368|2F:MAIN:D16",
+   "unit": "kg",
+   "measured_net": null,
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE"
+  },
+  {
+   "line_id": "L-a64d0d1b04eb4c91f15a",
+   "trade": "REINFORCEMENT",
+   "item_code": "STR.REBAR",
+   "element_id": "P-S:COL:SH12:C2@254644,61274|2F:MAIN:D16",
+   "unit": "kg",
+   "measured_net": null,
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE"
+  },
+  {
+   "line_id": "L-a928aab1eaf6cc8bce05",
+   "trade": "REINFORCEMENT",
+   "item_code": "STR.REBAR",
+   "element_id": "P-S:COL:SH12:C5@255627,63526|2F:TIES:D8",
+   "unit": "kg",
+   "measured_net": null,
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE"
+  },
+  {
+   "line_id": "L-c0d532c48793ae549172",
+   "trade": "REINFORCEMENT",
+   "item_code": "STR.REBAR",
+   "element_id": "P-S:COL:SH12:C3@247476,61310|2F:MAIN:D16",
+   "unit": "kg",
+   "measured_net": null,
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE"
+  },
+  {
+   "line_id": "L-c3bc5dfb9cb1ecc91161",
+   "trade": "REINFORCEMENT",
+   "item_code": "STR.REBAR",
+   "element_id": "P-S:COL:SH12:C3@241094,51256|GF:TIES:D8",
+   "unit": "kg",
+   "measured_net": null,
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE"
+  },
+  {
+   "line_id": "L-cac080298f6953fd917b",
+   "trade": "REINFORCEMENT",
+   "item_code": "STR.REBAR",
+   "element_id": "P-S:COL:SH12:C@233893,56561|GF:MAIN:D16",
+   "unit": "kg",
+   "measured_net": null,
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE"
+  },
+  {
+   "line_id": "L-cb3ea9cc5333ac6b0ab5",
+   "trade": "REINFORCEMENT",
+   "item_code": "STR.REBAR",
+   "element_id": "P-S:COL:SH12:C3@241094,51256|GF:MAIN:D16",
+   "unit": "kg",
+   "measured_net": null,
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE"
+  },
+  {
+   "line_id": "L-d515b2676aa9e7dd59e5",
+   "trade": "REINFORCEMENT",
+   "item_code": "STR.REBAR",
+   "element_id": "P-S:COL:SH12:C1@251701,62344|2F:MAIN:D16",
+   "unit": "kg",
+   "measured_net": null,
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE"
+  },
+  {
+   "line_id": "L-d84638c00cbe4f990289",
+   "trade": "REINFORCEMENT",
+   "item_code": "STR.REBAR",
+   "element_id": "P-S:COL:SH12:C2@254644,61274|2F:TIES:D8",
+   "unit": "kg",
+   "measured_net": null,
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE"
+  },
+  {
+   "line_id": "L-eba4599c26b0d24de873",
+   "trade": "WATERPROOFING",
+   "item_code": "WP.FOUNDATION.BURIED_LIQUID",
+   "element_id": "WPF:BURIED_GROUND_BEAM_FACES_HELD",
+   "unit": "m2",
+   "measured_net": null,
+   "evidence_state": "BLOCKED_RFI"
+  },
+  {
+   "line_id": "L-ecd7b49e9df8270e3f31",
+   "trade": "REINFORCEMENT",
+   "item_code": "STR.REBAR",
+   "element_id": "P-S:COL:SH12:C1@251701,62344|2F:TIES:D8",
+   "unit": "kg",
+   "measured_net": null,
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE"
+  },
+  {
+   "line_id": "L-eed1883780af348d7c61",
+   "trade": "REINFORCEMENT",
+   "item_code": "STR.REBAR",
+   "element_id": "P-S:COL:SH12:C3@243004,52949|GF:MAIN:D16",
+   "unit": "kg",
+   "measured_net": null,
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE"
+  },
+  {
+   "line_id": "L-f6f89d65780c5318fedf",
+   "trade": "REINFORCEMENT",
+   "item_code": "STR.REBAR",
+   "element_id": "P-S:COL:SH12:C@238150,57853|GF:TIES:D8",
+   "unit": "kg",
+   "measured_net": null,
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE"
+  },
+  {
+   "line_id": "L-f7b7957c7b797f7ea623",
+   "trade": "REINFORCEMENT",
+   "item_code": "STR.REBAR",
+   "element_id": "P-S:COL:SH12:C2@252679,64225|2F:TIES:D8",
+   "unit": "kg",
+   "measured_net": null,
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE"
+  },
+  {
+   "line_id": "L-fda79372428ad3a531b2",
+   "trade": "REINFORCEMENT",
+   "item_code": "STR.REBAR",
+   "element_id": "P-S:COL:SH12:C5@243102,55481|GF:MAIN:D16",
+   "unit": "kg",
+   "measured_net": null,
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE"
+  }
+ ]
+}
