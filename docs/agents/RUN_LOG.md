@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-25T08:40Z | Worker 2 | STARTED | run session_01WjouVeSSK1Kz4CRHpPD7aN | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-25 08:20 UTC | Worker 1 | STARTED | run session_01YNUDkNaSyZFhKQ2xrkgzGg | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-25 08:18 UTC | Lead | SUCCESS | board | Since 06:15: T-287 WORKED (CB5 columns VERIFIED 1.430 m3 component, MERGED 542b64c7), T-280 WORKED (core rebar LOWER bounds 734.779 kg, MERGED 86fdc315), T-245 PARTIAL (Gate B REJECTED narrow, stale maps only) -> TODO r2 + F-T245-01; T-286 set READY (READY 3); VERIFIER QUEUE: T-289 first 08:51 (material: main-house exterior GB 8.1642 -> 15.9600 m3, +95.5 %; 2F column ids 8 vs 14), T-245 r2 Gate B first at 09:51; workers 1/2 idled 07:20/07:41 (Lead planning gap) -> NEW T-290..T-293 integration-dependency ledgers, T-294 verdict per-line binding QUEUED after T-255; T-254 acceptance extended; lessons 1 CLOSED / 1 OPEN; register +6; no owner package; Drive read OK, no new files or photos; queue check: 46 actionable rows, 0 flagged, 0 stall checks | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-10-25 08:11 UTC | Lead | STARTED | run unknown | repo-attached routine | task state: board | report pending
