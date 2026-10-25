@@ -1,12 +1,34 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
 Plain words, no task numbers. Measured numbers come from SCOREBOARD.md; anything not measured says so.
-Last update: 2026-10-25 16:15 UTC (Lead). Previous version: 2026-10-25 14:15 UTC. The released numbers did not change
+Last update: 2026-10-25 22:15 UTC (Lead). Previous version: 2026-10-25 16:15 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released default V2.9 + route G untouched). Your measure: whole BOQ
 lines independently verified. The real export of the candidate still counts ONE whole verified line (the concrete slab,
-60.28 m3, 62 of 62 panels). Released: still 0 (nothing is released until you switch the default). No candidate
-quantity moved in these two hours: four checking ledgers were merged and they tell the next integrations exactly what
-to change. No decision for you.
+60.28 m3, 62 of 62 panels). Released: still 0. No candidate quantity moved in these six hours. One thing for you: the
+team stopped for about 3.5 hours on the account's usage limit (see Team below); no engineering decision for you.
+
+Since 16:15 (newest first; one piece checked and merged, four handed in and waiting for the checker):
+- Team: no agent ran between about 18:15 and 21:40. The scheduler shows three runs refused with "usage limit reached",
+  and three runs that had started were cut off without finishing (one checker run, one structural run, one Lead run).
+  Work resumed at 21:40. Nothing was lost on the drawings or the code; one claimed piece (the steel completeness
+  safeguard) had not started and is back in the queue. Four handed-in pieces now wait for the checker (target 3).
+- Reinforcement, footings: CHECKED AND MERGED. The checker recounted all 20 footing bar groups himself and agrees.
+  Counts stand as ranges of one bar (the drawing's spacing and density notes differ by one bar), lengths and weights
+  stay held because the bars end inside boxed bars whose size is not printed. The 874.86 kg footing line is now held in
+  the contractual view (not deleted; the engine figure is kept for the record). The audit range you saw (2.769 - 2.830 t)
+  reads 2.718 - 2.830 t in the merged work; the checker is asked to name the cause of the 0.05 t difference. It is an
+  audit range only, never a BOQ quantity.
+- Stairs: handed in for checking as the next candidate: stair concrete in the candidate rises from 2.98 to 5.37 m3
+  (1.23 verified, 1.54 on your approved method, 0.57 read from the drawing); one stair (0.95 m3) leaves a provisional
+  line and becomes held. Stairs and domes together 10.45 vs freelancer 21.83 m3 (-52 %, was -63 %): the rest is held,
+  not wrong. The 1F landing marble (4.92 m2) and the GF pantry as wet (1.10 m2) ride with it.
+- Waterproofing under the building: every drawn face (416) is either in a line or excluded with evidence, nothing
+  missing, every released figure closes exactly. Wet rooms, roofs and the pool / tank are next.
+- Formwork, slabs and beams: tied face by face (closure exact; slab soffits 375.05 m2). It found one continuous ground
+  floor beam span counted twice by the formwork method (+2.52 m2 too much) and one band with no drawn face; both will
+  be corrected when formwork enters the candidate.
+- Steel column check (four second-floor bar lines 0.16 t moved to held on the held roof level): handed in.
+- Nothing new on Drive; no new photos.
 
 Since 14:15 (newest first; four ledgers checked and merged, one beam end settled from the drawing):
 - Concrete, the curved exterior ground beam: the checker read on the drawing how its two ends close (on the straight

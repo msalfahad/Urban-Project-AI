@@ -1,3 +1,65 @@
+## LEAD REPORT 2026-10-25 12:15 UTC
+
+Repositories: attached Urban-Project-AI checkout (main eafbb0f6); `.work` prepared AUTOMATICALLY ("setup by auto",
+12:13). Working branch e861e390 -> 2991be3d (Checker merges via 'engine push': T-290 891dbd4d, T-291 0c6b2ba5, T-170
+2991be3d); no owner commit on the engine branch. Drive readable: nothing created or modified since 10:00, no new images
+(no photo review task). Self-check: codemap PASS, pytest t061 PASS, freeze PASS (0). OWNER_SESSION_CHANGES: 10:33 and
+11:51 entries applied; nothing undone or duplicated (T-298 / T-299 / T-300 rows used as written, only placed).
+
+PROGRESS (Alsenan, by trade and unit; released unchanged: concrete 92.77 vs freelancer 111.81 m3, -17.03 %, run A).
+WHOLE LINES (owner 04:38 definition): measured whole by the Checker 1 / 13 (CONC.SLAB 60.2804 vs engine 60.280158 m3);
+COUNTED as a verified whole line in the real export 0 (completeness record FAILS: F-REC-01 slab join on the V3.0.8 grain,
+50 of 62 panel lines; F-REC-02 no waterproofing inventory). The two counts are reported separately, never merged.
+- EXPORT V3.0.16 with the Checker's records (11:28, export reproduced 3181cf12): VERIFIED 0 / COMPONENT 5 / MEASURED
+  999 / HELD 1,921 / UNMEASURED 54 / EXCLUDED 774 rows. Concrete moved from released to HELD / CONFLICT on unsupported
+  bases: 21.953969 m3 (exterior GB 11.934579 + interior-typed exterior 1.830623, 2F columns 3.528, annex columns 3.7125,
+  ST-03 0.948267). No quantity, state or line id changed in V2.9. Still missing: tonnes (export writes kg by default).
+- STAIRS / DOMES (m3): MERGED; the Checker re-derived D1 wedge 0.025714 and MS2-LD 0.4696 and agreed; released 8.064447
+  -> basis 7.585779 (-5.9 %); E1 waist settled as NOT a conflict (B-B draws it on ground). Freelancer not re-scored.
+- BLOCKWORK (m2): MERGED; 422.5314 m2 determinate (297.847 VERIFIED) to replace 21 BLANK candidate lines (T-279, in the
+  owner's lane I order after T-266 / T-255). Freelancer: one height per storey, not compared wall by wall.
+- EXCAVATION / BACKFILL (m3): MERGED ledger; every volume HELD BLANK (formation 'not less than 1.5 m' only, Q-21 C);
+  footprint 109.85 m2 = verified T-219. Missing from both BOQs (freelancer has no row).
+- PLASTER / PAINT (m2), READY: 218 faces / 132 lines, residual 0.0000; plaster = paint 696.35 .. 761.93 -> 703.30 ..
+  768.81 m2 (+1.0 % / +0.9 %, named openings only); 1F-11 59.45 m2 RELEASED -> HELD 60.44 .. 70.46 (W17 deduction
+  held by T-238): I asked the Checker whether Q-76 A (23:53) now closes it. Wet tile 307.96 m2 on 11 rooms (= T-209).
+- FORMWORK (m2), READY, part 1: 414 faces on V3.0.16 concrete lines, residual 0.000; ground beams CALC 47.948 / FORMED
+  alternative 74.360 (never summed), columns 117.461; boundary G.B 35.256 m2 untied (no concrete line: an omission).
+  Freelancer: no formwork row.
+- REINFORCEMENT (t): no quantity moved. Route G 16.39 t is a provisional subtotal (owner 10:33). CB11 review PARTIAL:
+  count / diameter 12 / 12 agree, lengths 0 / 12 closed; link counts under the now-answered Q-71 sent back to the Checker
+  (his 12:06 note still called Q-71 open). Note 21's width-indexed wording added to RFI S19 as he asked.
+- Missing (unchanged): designer answers (lap / bar-end / side-bar RFIs S19 - S22, D-35 / D-39 / D-41 / D-53), excavation
+  formation, dome drum geometry.
+
+GATES: lowest open gate 1 (integration of verified bases: T-254 in work, T-266 / T-255 next). Gate 2: T-292 / T-293
+READY, T-298 / T-301 next. Gate 3: T-299 (reconciliation) next, T-297 / T-300 after.
+
+CLOSE THE LOOP since 10:15: T-290 WORKED, T-291 WORKED, T-170 WORKED (minor F-T170-01), V3.0.16 records WORKED / PARTIAL
+in effect (0 whole lines countable) -> T-298 (owner) + NEW T-301 (WP inventory). T-292 / T-293 classified at verdict.
+
+VERIFIER QUEUE (READY 2, under target): T-132 slot record; Gate A T-293 (in the 11:51 run); Gate A T-292 next (within 2
+runs); T-254 Gate B first when READY; CB11 continued after. Lead challenges are on the board (12:15 note).
+
+LANES (queue check: 46 actionable rows, 0 flagged, 0 stall checks): S worker 1: T-299, T-297, T-300; A worker 2: T-298
+(cross-lane, owner's immediate priority, files disjoint from T-254), T-296, T-301; I worker 3: T-254 (CLAIMED), T-295,
+T-266, T-255, T-294, T-279, T-284, T-244, T-246, T-199, T-224. TODO 6 (below 8: the owner asked for no duplicate rows and
+no research programme; every lane has its next item).
+
+ELEMENT REGISTER +4 (boundary G.B formwork vs missing concrete line; exterior GB depth conflict lines vs faces; 1F-11 /
+W17 plaster hold; WP families without an inventory). LESSONS register: +2 OPEN (completeness join on an old grain /
+family without an inventory; package + full suite longer than the cadence), 2 CLOSED (T-290, T-291 rows).
+
+TEAM HEALTH: every run since 10:15 has a final line except the open ones (Worker 3 11:01, T-254 claimed 11:05, about 75
+min; Verifier 11:51; this Lead run). Worker 1 11:20 and Worker 2 11:40 IDLE on their own locks: the 10:20 / 10:41 runs
+took about 80 minutes and their full suites did not finish; not a failure, a sizing problem: new rows are sized about 35
+min + suite with stop points, monitored 24 h. All runs that executed code report self-check PASS.
+
+OWNER PACKAGE: none today (no question meets ERS s.2.7; Q-71 footing scope asked back by the main chat is open with the
+owner, T-171 unchanged).
+
+NEEDS FIXING (only the owner): nothing new. Designer RFIs S19 - S22 stay unsent until you decide to send the package.
+
 ## LEAD REPORT 2026-10-25 10:15 UTC
 
 ADDENDUM 10:22: the 08:50 Checker run closed 10:19: T-245 r2 Gate B PASS, MERGED ef3305f1. The first real export is on the

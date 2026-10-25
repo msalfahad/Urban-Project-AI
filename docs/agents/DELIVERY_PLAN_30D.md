@@ -46,7 +46,15 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
-## Status (Lead, 2026-10-25 16:15; re-estimated each run from what merged and was verified)
+## Status (Lead, 2026-10-25 22:15; re-estimated each run from what merged and was verified)
+
+Lead 2026-10-25 22:15: since 16:15 one ledger MERGED (footing reinforcement PART F + a downgrade-only record on the
+874.862 kg footing line) and four pieces handed in (stairs V3.0.18 Gate B, rebar basis r2, WP foundation inventory,
+formwork slab-level ledger); no candidate line moved, whole verified lines in the export stay 1. About 3.5 h lost to a
+usage-limit outage (18:11 - 21:40; one Checker run without a verdict). Week 1 (27 Oct): the verified-improvement target
+is met by CONC.SLAB (since 14:15); week 2 (3 Nov): T-266 Gate B now -> T-255 (windows + ring correction) -> T-294 ->
+T-279 / T-284 / T-244 / T-246 -> T-199 (formwork with the CB5 span fix); risk: Checker capacity (READY 4) and the
+usage limit, not engineering. New T-303 (WP wet / roof inventories) is the path to a second WHOLE WP line.
 
 Lead 2026-10-25 16:15: since 14:15 four research ledgers MERGED (plaster / paint r2, ceilings, rebar basis r1, skirting)
 and the ring GB end rule was closed from the drawing; no candidate line moved, whole verified lines in the export stay
