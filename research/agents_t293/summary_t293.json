@@ -1,0 +1,397 @@
+{
+ "schema": "T293_FORMWORK_FACE_TO_LINE_V1",
+ "candidate": "ARCH_TAKEOFF_V3.0.16",
+ "project": {
+  "project_id": "development-villa-t131",
+  "revision_set_sha256": "5e3690754db90b5fa2d878d4fc29b2e84ce9d1d91e4c1e68a62019d1b34bbc22",
+  "route": {
+   "project_id": "ST7757 villa (structural set)",
+   "revision_set_sha256": "297e913da9d98da10c40b1e93af0ccc66b0d7825b7700e0a2e3b9b5a54240b18"
+  }
+ },
+ "candidate_lines_csv_sha256": "a4dc01dd5a309bb38b6bff54b486e9090b6d571a0044101197ec650f1cf3d00a",
+ "faces": 414,
+ "by_tie": {
+  "INFO_NOT_A_QUANTITY": 7,
+  "NAMED_NOT_TIED": 101,
+  "NO_CANDIDATE_LINE": 13,
+  "SCENARIO_NOT_IN_CANDIDATE": 7,
+  "SPLIT_UNRESOLVED": 1,
+  "TIED": 285
+ },
+ "by_element": {
+  "BEAM": {
+   "NAMED_NOT_TIED": 30
+  },
+  "BOUNDARY": {
+   "INFO_NOT_A_QUANTITY": 1,
+   "NO_CANDIDATE_LINE": 12,
+   "TIED": 1
+  },
+  "COLUMN": {
+   "INFO_NOT_A_QUANTITY": 3,
+   "TIED": 59
+  },
+  "DOME": {
+   "NAMED_NOT_TIED": 11,
+   "SCENARIO_NOT_IN_CANDIDATE": 7
+  },
+  "FOOTING": {
+   "NAMED_NOT_TIED": 1,
+   "TIED": 59
+  },
+  "GROUND_BEAM": {
+   "SPLIT_UNRESOLVED": 1,
+   "TIED": 155
+  },
+  "JOINT": {
+   "INFO_NOT_A_QUANTITY": 3,
+   "NAMED_NOT_TIED": 20
+  },
+  "LIFT": {
+   "NO_CANDIDATE_LINE": 1
+  },
+  "NECK": {
+   "NAMED_NOT_TIED": 1
+  },
+  "POOL": {
+   "TIED": 2
+  },
+  "SLAB": {
+   "NAMED_NOT_TIED": 5
+  },
+  "SLAB_EDGE": {
+   "NAMED_NOT_TIED": 7
+  },
+  "STAIR": {
+   "NAMED_NOT_TIED": 25
+  },
+  "STRAP": {
+   "TIED": 9
+  },
+  "TANK": {
+   "NAMED_NOT_TIED": 1
+  }
+ },
+ "concrete_lines_with_faces": 147,
+ "members_without_line": [
+  "BOUNDARY_GB:7FC#1",
+  "BOUNDARY_GB:7FE#1",
+  "BOUNDARY_GB:7FE#2",
+  "BOUNDARY_GB:7FE#3",
+  "BOUNDARY_GB:810#1",
+  "BOUNDARY_PADS",
+  "LIFT"
+ ],
+ "closure": [
+  {
+   "status": "ALTERNATIVE",
+   "alternative": "OQ10_EARTH_CAST",
+   "method": "E=G",
+   "rows": 38,
+   "m2": 0.0,
+   "lo": 0.0,
+   "hi": 0.0,
+   "residual_m2": 0.0,
+   "residual_lo": 0.0,
+   "residual_hi": 0.0,
+   "by_tie": {
+    "NO_CANDIDATE_LINE": 5,
+    "TIED": 47
+   }
+  },
+  {
+   "status": "ALTERNATIVE",
+   "alternative": "OQ10_EARTH_CAST",
+   "method": "G",
+   "rows": 1,
+   "m2": 0.0,
+   "lo": 0.0,
+   "hi": 0.0,
+   "residual_m2": 0.0,
+   "residual_lo": 0.0,
+   "residual_hi": 0.0,
+   "by_tie": {
+    "TIED": 1
+   }
+  },
+  {
+   "status": "ALTERNATIVE",
+   "alternative": "OQ10_FORMED",
+   "method": "E=G",
+   "rows": 42,
+   "m2": 205.461205,
+   "lo": 0.0,
+   "hi": 0.0,
+   "residual_m2": -0.0,
+   "residual_lo": 0.0,
+   "residual_hi": 0.0,
+   "by_tie": {
+    "NO_CANDIDATE_LINE": 5,
+    "TIED": 51
+   }
+  },
+  {
+   "status": "ALTERNATIVE",
+   "alternative": "OQ10_FORMED",
+   "method": "G",
+   "rows": 9,
+   "m2": 3.650857,
+   "lo": 0.0,
+   "hi": 0.0,
+   "residual_m2": 0.0,
+   "residual_lo": 0.0,
+   "residual_hi": 0.0,
+   "by_tie": {
+    "TIED": 10
+   }
+  },
+  {
+   "status": "CALCULATED",
+   "alternative": "",
+   "method": "E",
+   "rows": 6,
+   "m2": 425.21,
+   "lo": 0.0,
+   "hi": 0.0,
+   "residual_m2": 0.0,
+   "residual_lo": 0.0,
+   "residual_hi": 0.0,
+   "by_tie": {
+    "NAMED_NOT_TIED": 6
+   }
+  },
+  {
+   "status": "CALCULATED",
+   "alternative": "",
+   "method": "E=G",
+   "rows": 19,
+   "m2": 418.871705,
+   "lo": 0.0,
+   "hi": 0.0,
+   "residual_m2": 0.0,
+   "residual_lo": 0.0,
+   "residual_hi": 0.0,
+   "by_tie": {
+    "NAMED_NOT_TIED": 5,
+    "TIED": 14
+   }
+  },
+  {
+   "status": "CALCULATED",
+   "alternative": "",
+   "method": "G",
+   "rows": 54,
+   "m2": 644.934256,
+   "lo": 0.0,
+   "hi": 0.0,
+   "residual_m2": 0.0,
+   "residual_lo": 0.0,
+   "residual_hi": 0.0,
+   "by_tie": {
+    "NAMED_NOT_TIED": 33,
+    "TIED": 21
+   }
+  },
+  {
+   "status": "HELD",
+   "alternative": "",
+   "method": "E=G",
+   "rows": 14,
+   "m2": 0.0,
+   "lo": 0.0,
+   "hi": 0.0,
+   "residual_m2": 0.0,
+   "residual_lo": 0.0,
+   "residual_hi": 0.0,
+   "by_tie": {
+    "NAMED_NOT_TIED": 2,
+    "NO_CANDIDATE_LINE": 2,
+    "SPLIT_UNRESOLVED": 1,
+    "TIED": 10
+   }
+  },
+  {
+   "status": "HELD",
+   "alternative": "",
+   "method": "G",
+   "rows": 98,
+   "m2": 0.0,
+   "lo": 270.036027,
+   "hi": 348.623472,
+   "residual_m2": 0.0,
+   "residual_lo": 0.0,
+   "residual_hi": 0.0,
+   "by_tie": {
+    "NAMED_NOT_TIED": 51,
+    "NO_CANDIDATE_LINE": 1,
+    "TIED": 46
+   }
+  },
+  {
+   "status": "HELD",
+   "alternative": "OQ10_EARTH_CAST",
+   "method": "E=G",
+   "rows": 4,
+   "m2": 0.0,
+   "lo": 0.0,
+   "hi": 17.47525,
+   "residual_m2": 0.0,
+   "residual_lo": 0.0,
+   "residual_hi": 0.0,
+   "by_tie": {
+    "TIED": 4
+   }
+  },
+  {
+   "status": "HELD",
+   "alternative": "OQ10_FORMED",
+   "method": "E=G",
+   "rows": 32,
+   "m2": 0.0,
+   "lo": 130.397653,
+   "hi": 196.497147,
+   "residual_m2": 0.0,
+   "residual_lo": 0.0,
+   "residual_hi": 0.0,
+   "by_tie": {
+    "TIED": 32
+   }
+  },
+  {
+   "status": "HELD",
+   "alternative": "OQ10_FORMED",
+   "method": "G",
+   "rows": 46,
+   "m2": 0.0,
+   "lo": -3.9433,
+   "hi": -2.6744,
+   "residual_m2": 0.0,
+   "residual_lo": 0.0,
+   "residual_hi": 0.0,
+   "by_tie": {
+    "TIED": 46
+   }
+  },
+  {
+   "status": "HELD",
+   "alternative": "OQ10_SOFFIT",
+   "method": "E=G",
+   "rows": 3,
+   "m2": 0.0,
+   "lo": 0.0,
+   "hi": 7.1067,
+   "residual_m2": 0.0,
+   "residual_lo": 0.0,
+   "residual_hi": 0.0,
+   "by_tie": {
+    "TIED": 3
+   }
+  },
+  {
+   "status": "INFO",
+   "alternative": "",
+   "method": "E-UB",
+   "rows": 3,
+   "m2": 208.858,
+   "lo": 0.0,
+   "hi": 0.0,
+   "residual_m2": 0.0,
+   "residual_lo": 0.0,
+   "residual_hi": 0.0,
+   "by_tie": {
+    "INFO_NOT_A_QUANTITY": 3
+   }
+  },
+  {
+   "status": "INFO",
+   "alternative": "",
+   "method": "G",
+   "rows": 1,
+   "m2": 0.0,
+   "lo": 0.0,
+   "hi": 0.0,
+   "residual_m2": 0.0,
+   "residual_lo": 0.0,
+   "residual_hi": 0.0,
+   "by_tie": {
+    "INFO_NOT_A_QUANTITY": 1
+   }
+  },
+  {
+   "status": "INFO",
+   "alternative": "",
+   "method": "G-DRAWN",
+   "rows": 3,
+   "m2": 13.254,
+   "lo": 0.0,
+   "hi": 0.0,
+   "residual_m2": 0.0,
+   "residual_lo": 0.0,
+   "residual_hi": 0.0,
+   "by_tie": {
+    "INFO_NOT_A_QUANTITY": 3
+   }
+  },
+  {
+   "status": "NOT_APPLICABLE",
+   "alternative": "",
+   "method": "E=G",
+   "rows": 1,
+   "m2": 0.0,
+   "lo": 0.0,
+   "hi": 0.0,
+   "residual_m2": 0.0,
+   "residual_lo": 0.0,
+   "residual_hi": 0.0,
+   "by_tie": {
+    "NAMED_NOT_TIED": 1
+   }
+  },
+  {
+   "status": "NOT_APPLICABLE",
+   "alternative": "",
+   "method": "G",
+   "rows": 1,
+   "m2": 0.0,
+   "lo": 0.0,
+   "hi": 0.0,
+   "residual_m2": 0.0,
+   "residual_lo": 0.0,
+   "residual_hi": 0.0,
+   "by_tie": {
+    "NAMED_NOT_TIED": 1
+   }
+  },
+  {
+   "status": "OWNED_BY_OTHER_LINE",
+   "alternative": "",
+   "method": "G",
+   "rows": 2,
+   "m2": 0.0,
+   "lo": 0.0,
+   "hi": 0.0,
+   "residual_m2": 0.0,
+   "residual_lo": 0.0,
+   "residual_hi": 0.0,
+   "by_tie": {
+    "NAMED_NOT_TIED": 2
+   }
+  },
+  {
+   "status": "S1_NOT_RELEASED",
+   "alternative": "",
+   "method": "G",
+   "rows": 7,
+   "m2": 8.783,
+   "lo": 0.0,
+   "hi": 0.0,
+   "residual_m2": 0.0,
+   "residual_lo": 0.0,
+   "residual_hi": 0.0,
+   "by_tie": {
+    "SCENARIO_NOT_IN_CANDIDATE": 7
+   }
+  }
+ ]
+}
