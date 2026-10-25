@@ -18,11 +18,11 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 3444 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 3450 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 22 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 1690 | pytest suites, one folder per round. |
+| `tests/` | 1693 | pytest suites, one folder per round. |
 | `tools/` | 114 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (254 modules)
@@ -681,7 +681,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `topology_digest.py` | 79 | HIGH | 1 | TOPOLOGY RESULT DIGEST (RC1 final) - one sha256 over the certified topology OUTPUT of a run. |
 | `topology_policy.py` | 159 | HIGH | 9 | TOPOLOGY_TOLERANCE_POLICY (R8.8) - frozen BEFORE any room total of any project was looked at. |
 | `traceability.py` | 124 | MEDIUM | 2 | BOQ TRACEABILITY (M9 Phase 2B-3, ARCH_TAKEOFF_V2.5 only) - one chain per BOQ line: |
-| `trade_completeness_v1.py` | 544 | MEDIUM | 7 | TRADE COMPLETENESS V1 (T-236; owner 2026-10-23 19:00 trade completeness rules 1-6, acceptance 19:45): for every |
+| `trade_completeness_v1.py` | 544 | MEDIUM | 9 | TRADE COMPLETENESS V1 (T-236; owner 2026-10-23 19:00 trade completeness rules 1-6, acceptance 19:45): for every |
 | `trade_dependency.py` | 132 | MEDIUM | 2 | TRADE_DEPENDENCY_MATRIX - which evidence a trade quantity needs, and how a physical space that holds several |
 | `trade_regions.py` | 234 | MEDIUM | 5 | TRADE TREATMENT ASSIGNMENT AND TRADE MATERIALITY (R8.10). |
 | `trade_strips.py` | 163 | MEDIUM | 8 | STRIP ALLOCATION AUDIT (R8.13) - a door threshold or an open-passage strip is never silently absorbed into, or |
@@ -1202,6 +1202,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t298_export_completion/` | 3 |
 | `tests/t299_ledger/` | 1 |
 | `tests/t299_part_f/` | 1 |
+| `tests/t301_wp_inventory/` | 2 |
 | `tests/water_tank_s8_4/` | 3 |
 | `tests/zz_freeze_integrity/` | 2 |
 
@@ -1512,6 +1513,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t297/` | 11 |
 | `research/agents_t298/` | 2 |
 | `research/agents_t299/` | 11 |
+| `research/agents_t301/` | 6 |
 | `research/alsenan_arch_truth_05/` | 28 |
 | `research/alsenan_column_rebar_s3/` | 17 |
 | `research/alsenan_column_rebar_s3_1/` | 15 |
