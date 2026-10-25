@@ -1,0 +1,11 @@
+step,wall_id,cause,delta_m2
+"v3 (T-285 basis A, 449.5934) -> v4 at d = 0",GF-W01,0.0026 m sliver inside B26's drawn outline at 3.65 (was HELD): +0.0026 x 3.65,+0.0095
+"v3 (T-285 basis A, 449.5934) -> v4 at d = 0",GF-W01,v3 kept the T-143 VERIFIED gross 62.1550 over T-274's exact 62.1541,-0.0009
+"v3 (T-285 basis A, 449.5934) -> v4 at d = 0",GF-W01,Checker own value 62.1638 reported 62.164 (own pieces CB8 15.170 / B1 1.1474 / CB1 0.150),+0.0004
+"v3 (T-285 basis A, 449.5934) -> v4 at d = 0",GF-W16,pieces re-cut on the drawn B5 band: B5 0.2000 m h 4.00 + slab GF-141 2.9500 m h 4.34 (drawn B5 band = hatch 280 edge),+0.0004
+"v3 (T-285 basis A, 449.5934) -> v4 at d = 0",1F-W00,Checker own value 12.935: census 6.571 vs run 6.5708 and rounding (Checker 02:01),+0.0014
+"v3 (T-285 basis A, 449.5934) -> v4 at d = 0",1F-W05,B23 piece 0.3500 (not 0.349) and CB10 3.6500 (not 3.651): 0.001 x (3.45 - 3.70),-0.0003
+"v3 (T-285 basis A, 449.5934) -> v4 at d = 0",1F-W05,Checker own W14 jamb 2.4498 vs 2.450 and rounding of 19.3028 to 19.303,+0.0003
+"v3 (T-285 basis A, 449.5934) -> v4 at d = 0",1F-W06,W24 deducted at its drawn jamb width 1.5523 (not the label 1.550): -0.0023 x 1.500,-0.0035
+"v3 (T-285 basis A, 449.5934) -> v4 at d = 0",1F-W06,Checker own gross 57.7744 vs T-274 57.7747 and rounding of 54.4859 to 54.486,-0.0002
+"v3 (T-285 basis A, 449.5934) -> v4 at d = 0",1F-W20,Checker own value 24.5073 reported 24.507 (v3 exact 24.5068),+0.0002
