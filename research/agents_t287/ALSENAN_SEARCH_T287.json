@@ -1,0 +1,800 @@
+{
+ "arch_registration": {
+  "1F": {
+   "basis": "equal pitch between GF and 2F, checked",
+   "plus_5_50_marks_inside": 5
+  },
+  "2F": {
+   "basis": "level marks ST p.6 = arch 2F, same row as GF",
+   "votes": 2
+  },
+  "GF": {
+   "basis": "level marks ST p.3 = arch GF",
+   "votes": 14
+  }
+ },
+ "entities_read": {
+  "ARCH 1F plan": 841,
+  "ARCH 2F plan": 410,
+  "ARCH GF plan": 947,
+  "ARCH other": 3765,
+  "ST p.1": 578,
+  "ST p.2": 521,
+  "ST p.3": 555,
+  "ST p.4": 1092,
+  "ST p.5": 1125,
+  "ST p.6": 241,
+  "ST p.7": 349
+ },
+ "g1_adjoining": {
+  "35F": {
+   "bay_reading_ST_p3": {
+    "adjoining": [
+     [
+      "1B6",
+      0.15,
+      0.786,
+      -3.246
+     ],
+     [
+      "1B8",
+      0.15,
+      0.933,
+      2.172
+     ]
+    ],
+    "settled": {
+     "base": null,
+     "exterior": [
+      0.15
+     ],
+     "reason": "no building floor level printed beside the column",
+     "status": "MISSING"
+    }
+   },
+   "space_reading_ARCH_GF": {
+    "by_probe": [
+     [
+      "407",
+      0.15,
+      "E"
+     ],
+     [
+      "409",
+      0.15,
+      "E"
+     ],
+     [
+      "407",
+      0.15,
+      "NE"
+     ],
+     [
+      "409",
+      0.15,
+      "NE"
+     ],
+     [
+      "407",
+      0.15,
+      "SE"
+     ],
+     [
+      "409",
+      0.15,
+      "SE"
+     ],
+     [
+      "405",
+      0.3,
+      "SW"
+     ]
+    ],
+    "settled": {
+     "base": 0.25,
+     "exterior": [
+      0.15
+     ],
+     "indoor_ffl": 0.3,
+     "status": "SETTLED"
+    }
+   }
+  },
+  "365": {
+   "bay_reading_ST_p3": {
+    "adjoining": [
+     [
+      "1B4",
+      0.3,
+      -0.395,
+      -0.912
+     ],
+     [
+      "1B6",
+      0.15,
+      0.786,
+      -0.396
+     ]
+    ],
+    "settled": {
+     "base": 0.25,
+     "exterior": [
+      0.15
+     ],
+     "indoor_ffl": 0.3,
+     "status": "SETTLED"
+    }
+   },
+   "space_reading_ARCH_GF": {
+    "by_probe": [
+     [
+      "407",
+      0.15,
+      "E"
+     ],
+     [
+      "407",
+      0.15,
+      "NE"
+     ],
+     [
+      "409",
+      0.15,
+      "NE"
+     ],
+     [
+      "405",
+      0.3,
+      "NW"
+     ],
+     [
+      "405",
+      0.3,
+      "S"
+     ],
+     [
+      "407",
+      0.15,
+      "SE"
+     ],
+     [
+      "405",
+      0.3,
+      "SW"
+     ],
+     [
+      "405",
+      0.3,
+      "W"
+     ]
+    ],
+    "settled": {
+     "base": 0.25,
+     "exterior": [
+      0.15
+     ],
+     "indoor_ffl": 0.3,
+     "status": "SETTLED"
+    }
+   }
+  }
+ },
+ "global": {
+  "dome_ring_drum_words": [
+   [
+    "ST p.7",
+    "1A18",
+    "TEXT",
+    "%%uDETAIL OF DOME"
+   ]
+  ],
+  "structural_level_or_neck_words": [],
+  "thickness_or_waist": [
+   [
+    "ST p.4",
+    "580",
+    "TAG",
+    "T 16"
+   ],
+   [
+    "ST p.4",
+    "5B6",
+    "TAG",
+    "T 16"
+   ],
+   [
+    "ST p.4",
+    "6AD",
+    "TAG",
+    "T 16"
+   ],
+   [
+    "ST p.4",
+    "6AE",
+    "TAG",
+    "T 16"
+   ],
+   [
+    "ST p.5",
+    "74A",
+    "TAG",
+    "T 16"
+   ],
+   [
+    "ST p.3",
+    "1690",
+    "TAG",
+    "T=10cm 5%%c10/m E.W."
+   ],
+   [
+    "ST p.3",
+    "169D",
+    "TAG",
+    "T=10cm 5%%c10/m E.W."
+   ],
+   [
+    "ST p.1",
+    "1BF0",
+    "TEXT",
+    "*  T  =   THICKNESS OF COLUMN"
+   ]
+  ],
+  "winder_turn_landing_words": []
+ },
+ "inputs": {
+  "P7757.dxf": "sha256 ab54dd554c31fe4a...",
+  "ST7757 dxf.dxf": "sha256 9f9d1179a5d2a663..."
+ },
+ "manual_pages": {
+  "ST p.13 (DETAILS: isolated footing, lintel, ground beams)": {
+   "G1": "exterior ground beam: top = 'Ground Floor slab level', outside 'Outer normal ground level', depth 'FOLLOW ARCH'; no detail of a column between two different floor levels; no neck-end level",
+   "G2": "nothing on stairs",
+   "G3": "nothing on domes"
+  },
+  "ST p.14 (DETAILS: lift pit, boundary wall, parapets)": {
+   "G1": "nothing on the CB5 line or a two-level ground slab",
+   "G2": "nothing on stairs",
+   "G3": "nothing on domes"
+  },
+  "ST p.15 (DETAILS: twisted column, slab on beams, planted column)": {
+   "G1": "nothing on a neck end",
+   "G2": "nothing on stairs",
+   "G3": "nothing on domes"
+  },
+  "ST p.16 (DETAILS: stair beam, typical stair steel layout, opening in beam, ribs)": {
+   "G1": "nothing",
+   "G2": "TYPICAL STEEL LAYOUT - STAIR SECTION (N.I.S): two straight flights and a landing (S.S.L +2.00), waist marked 'THICK.' with no value; no winder, no turn, no curved flight; typical, not tied to ST-01 / ST-02 (T-184: no printed level fits any Alsenan stair)",
+   "G3": "nothing on domes"
+  },
+  "ST p.7 (DETAIL OF DOME, N.I.S)": {
+   "G3": "one generic detail: chord 442, rise 190, shell 10, d12 / 15 cm both faces, ring 20 wide, ring depth 'AS PER ARCH', no title naming the dome it serves, no drum"
+  },
+  "ST p.8 (RECOMMENDATIONS, raster)": {
+   "G1": "no level, neck or ground-slab note; note 12: the contractor confirms the founding level from the architectural and structural drawings with the supervising engineer",
+   "G2": "note 18: ordinary roof slabs 16 cm unless stated otherwise (a slab rule; no stair, waist or winder note)",
+   "G3": "note 4: every opening on the architectural drawings must exist on the structural drawings, refer to the structural engineer for any detail; no dome, ring or drum note"
+  }
+ },
+ "questions": {
+  "G1-a": {
+   "asks": "a structural level, neck end or section cut printed at the two CB5-line GF columns",
+   "context": [
+    [
+     "ST p.3",
+     "1B4",
+     "TEXT",
+     "+0.30"
+    ],
+    [
+     "ST p.3",
+     "1B6",
+     "TEXT",
+     "+0.15"
+    ],
+    [
+     "ARCH GF plan",
+     "405",
+     "TEXT",
+     "+0.30"
+    ],
+    [
+     "ARCH GF plan",
+     "407",
+     "TEXT",
+     "+0.15"
+    ]
+   ],
+   "hits": [],
+   "sheets_searched": [
+    [
+     "ST p.1",
+     41
+    ],
+    [
+     "ST p.2",
+     32
+    ],
+    [
+     "ST p.3",
+     40
+    ],
+    [
+     "ST p.4",
+     52
+    ],
+    [
+     "ST p.5",
+     35
+    ],
+    [
+     "ST p.6",
+     16
+    ],
+    [
+     "ARCH GF plan",
+     103
+    ]
+   ],
+   "verdict": "MISSING"
+  },
+  "G2-a": {
+   "asks": "the ST-01 winder turn MS1-T: an outline, level, dimension or soffit of the turn",
+   "context": [
+    [
+     "ST p.4",
+     "580",
+     "TAG",
+     "T 16"
+    ],
+    [
+     "ST p.5",
+     "74A",
+     "TAG",
+     "T 16"
+    ],
+    [
+     "ARCH GF plan",
+     "6E9",
+     "DIMENSION passing through",
+     5.0
+    ],
+    [
+     "ARCH GF plan",
+     "732",
+     "DIMENSION passing through",
+     2.5
+    ],
+    [
+     "ARCH GF plan",
+     "A5A",
+     "DIMENSION passing through",
+     0.2
+    ],
+    [
+     "ARCH GF plan",
+     "1B21",
+     "DIMENSION passing through",
+     0.075
+    ],
+    [
+     "ARCH 1F plan",
+     "D25",
+     "DIMENSION passing through",
+     2.5
+    ],
+    [
+     "ARCH 1F plan",
+     "D49",
+     "DIMENSION passing through",
+     0.2
+    ],
+    [
+     "ARCH 1F plan",
+     "10C3",
+     "DIMENSION passing through",
+     1.2
+    ],
+    [
+     "ARCH 1F plan",
+     "10D1",
+     "DIMENSION passing through",
+     3.3
+    ],
+    [
+     "ARCH 1F plan",
+     "1B10",
+     "DIMENSION passing through",
+     0.075
+    ]
+   ],
+   "hits": [],
+   "sheets_searched": [
+    [
+     "ST p.3",
+     13
+    ],
+    [
+     "ST p.4",
+     16
+    ],
+    [
+     "ST p.5",
+     19
+    ],
+    [
+     "ARCH GF plan",
+     40
+    ],
+    [
+     "ARCH 1F plan",
+     36
+    ]
+   ],
+   "verdict": "MISSING"
+  },
+  "G2-c": {
+   "asks": "the ST-01 1F turn riser MS2-TR between the two half landings: a level or dimension",
+   "context": [
+    [
+     "ST p.4",
+     "580",
+     "TAG",
+     "T 16"
+    ],
+    [
+     "ST p.5",
+     "74A",
+     "TAG",
+     "T 16"
+    ],
+    [
+     "ARCH 1F plan",
+     "D25",
+     "DIMENSION passing through",
+     2.5
+    ],
+    [
+     "ARCH 2F plan",
+     "138E",
+     "DIMENSION passing through",
+     2.5
+    ]
+   ],
+   "hits": [],
+   "sheets_searched": [
+    [
+     "ST p.4",
+     15
+    ],
+    [
+     "ST p.5",
+     11
+    ],
+    [
+     "ST p.6",
+     7
+    ],
+    [
+     "ARCH 1F plan",
+     24
+    ],
+    [
+     "ARCH 2F plan",
+     20
+    ]
+   ],
+   "verdict": "MISSING"
+  },
+  "G2-w:D1": {
+   "asks": "waist / slab thickness printed on D1",
+   "context": [],
+   "hits": [],
+   "nearest_thickness_print_within_3m": [],
+   "sheets_searched": [
+    [
+     "ST p.3",
+     9
+    ]
+   ],
+   "verdict": "MISSING"
+  },
+  "G2-w:E1": {
+   "asks": "waist / slab thickness printed on E1",
+   "context": [],
+   "hits": [],
+   "nearest_thickness_print_within_3m": [],
+   "sheets_searched": [
+    [
+     "ST p.3",
+     15
+    ]
+   ],
+   "verdict": "MISSING"
+  },
+  "G2-w:MS1-L": {
+   "asks": "waist / slab thickness printed on MS1-L",
+   "context": [],
+   "hits": [
+    [
+     "ST p.4",
+     "580",
+     "TAG",
+     "T 16"
+    ]
+   ],
+   "sheets_searched": [
+    [
+     "ST p.4",
+     28
+    ]
+   ],
+   "verdict": "FOUND"
+  },
+  "G2-w:MS1-LD": {
+   "asks": "waist / slab thickness printed on MS1-LD",
+   "context": [],
+   "hits": [
+    [
+     "ST p.4",
+     "580",
+     "TAG",
+     "T 16"
+    ]
+   ],
+   "sheets_searched": [
+    [
+     "ST p.4",
+     19
+    ]
+   ],
+   "verdict": "FOUND"
+  },
+  "G2-w:MS1-T": {
+   "asks": "waist / slab thickness printed on MS1-T",
+   "context": [],
+   "hits": [
+    [
+     "ST p.4",
+     "580",
+     "TAG",
+     "T 16"
+    ]
+   ],
+   "sheets_searched": [
+    [
+     "ST p.4",
+     16
+    ]
+   ],
+   "verdict": "FOUND"
+  },
+  "G2-w:MS1-U": {
+   "asks": "waist / slab thickness printed on MS1-U",
+   "context": [],
+   "hits": [
+    [
+     "ST p.4",
+     "580",
+     "TAG",
+     "T 16"
+    ]
+   ],
+   "sheets_searched": [
+    [
+     "ST p.4",
+     25
+    ]
+   ],
+   "verdict": "FOUND"
+  },
+  "G2-w:MS2-L": {
+   "asks": "waist / slab thickness printed on MS2-L",
+   "context": [],
+   "hits": [
+    [
+     "ST p.5",
+     "74A",
+     "TAG",
+     "T 16"
+    ]
+   ],
+   "sheets_searched": [
+    [
+     "ST p.5",
+     23
+    ]
+   ],
+   "verdict": "FOUND"
+  },
+  "G2-w:MS2-LD": {
+   "asks": "waist / slab thickness printed on MS2-LD",
+   "context": [],
+   "hits": [
+    [
+     "ST p.5",
+     "74A",
+     "TAG",
+     "T 16"
+    ]
+   ],
+   "sheets_searched": [
+    [
+     "ST p.5",
+     22
+    ]
+   ],
+   "verdict": "FOUND"
+  },
+  "G2-w:MS2-TR": {
+   "asks": "waist / slab thickness printed on MS2-TR",
+   "context": [],
+   "hits": [
+    [
+     "ST p.5",
+     "74A",
+     "TAG",
+     "T 16"
+    ]
+   ],
+   "sheets_searched": [
+    [
+     "ST p.5",
+     11
+    ]
+   ],
+   "verdict": "FOUND"
+  },
+  "G2-w:MS2-U": {
+   "asks": "waist / slab thickness printed on MS2-U",
+   "context": [],
+   "hits": [
+    [
+     "ST p.5",
+     "74A",
+     "TAG",
+     "T 16"
+    ]
+   ],
+   "sheets_searched": [
+    [
+     "ST p.5",
+     25
+    ]
+   ],
+   "verdict": "FOUND"
+  },
+  "G2-w:RS-A": {
+   "asks": "waist / slab thickness printed on RS-A",
+   "context": [],
+   "hits": [
+    [
+     "ST p.4",
+     "5B6",
+     "TAG",
+     "T 16"
+    ]
+   ],
+   "sheets_searched": [
+    [
+     "ST p.4",
+     16
+    ]
+   ],
+   "verdict": "FOUND"
+  },
+  "G2-w:RS-C": {
+   "asks": "waist / slab thickness printed on RS-C",
+   "context": [],
+   "hits": [],
+   "nearest_thickness_print_within_3m": [
+    [
+     2.574,
+     "5B6",
+     "T 16"
+    ],
+    [
+     2.656,
+     "6AD",
+     "T 16"
+    ]
+   ],
+   "sheets_searched": [
+    [
+     "ST p.4",
+     28
+    ]
+   ],
+   "verdict": "MISSING"
+  },
+  "G2-w:RS-LD": {
+   "asks": "waist / slab thickness printed on RS-LD",
+   "context": [],
+   "hits": [
+    [
+     "ST p.4",
+     "5B6",
+     "TAG",
+     "T 16"
+    ]
+   ],
+   "sheets_searched": [
+    [
+     "ST p.4",
+     18
+    ]
+   ],
+   "verdict": "FOUND"
+  },
+  "G2-w:RS-S": {
+   "asks": "waist / slab thickness printed on RS-S",
+   "context": [],
+   "hits": [
+    [
+     "ST p.4",
+     "5B6",
+     "TAG",
+     "T 16"
+    ]
+   ],
+   "sheets_searched": [
+    [
+     "ST p.4",
+     30
+    ]
+   ],
+   "verdict": "FOUND"
+  },
+  "G3-a": {
+   "asks": "a structural opening, ring, drum or dome at the tower dome over the 2F maid room",
+   "context": [],
+   "hits": [],
+   "sheets_searched": [
+    [
+     "ST p.5",
+     50
+    ],
+    [
+     "ST p.6",
+     52
+    ],
+    [
+     "ARCH 2F plan",
+     52
+    ]
+   ],
+   "verdict": "MISSING"
+  },
+  "G3-b": {
+   "asks": "drum material / thickness at the two terrace domes (+9.70 -> +11.00)",
+   "context": [
+    [
+     "ARCH 1F plan",
+     "B7A",
+     "TAG",
+     "MN‘— VOID"
+    ]
+   ],
+   "hits": [],
+   "sheets_searched": [
+    [
+     "ST p.5",
+     165
+    ],
+    [
+     "ST p.6",
+     81
+    ],
+    [
+     "ARCH 1F plan",
+     250
+    ],
+    [
+     "ARCH 2F plan",
+     104
+    ]
+   ],
+   "verdict": "MISSING"
+  }
+ },
+ "schema": "T287_DESIGNER_GAP_SEARCH_V1"
+}
