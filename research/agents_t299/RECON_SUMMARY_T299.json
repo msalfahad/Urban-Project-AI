@@ -1,0 +1,2702 @@
+{
+ "checks": {
+  "q71_links": [
+   {
+    "clear_m": 4.5541,
+    "count_status": "HELD",
+    "floor": "GF",
+    "kind": "simple",
+    "mark": "B11",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|004|R001|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "28",
+     "29",
+     "27.325"
+    ]
+   },
+   {
+    "clear_m": 1.47,
+    "count_status": "HELD",
+    "floor": "GF",
+    "kind": "simple",
+    "mark": "B1",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|010|R002|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "9",
+     "10",
+     "8.82"
+    ]
+   },
+   {
+    "clear_m": 3.5201,
+    "count_status": "HELD",
+    "floor": "GF",
+    "kind": "simple",
+    "mark": "B8",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|015|R003|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "22",
+     "23",
+     "21.121"
+    ]
+   },
+   {
+    "clear_m": 3.75,
+    "count_status": "HELD",
+    "floor": "GF",
+    "kind": "simple",
+    "mark": "B4",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|021|R004|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "23",
+     "24",
+     "22.5"
+    ]
+   },
+   {
+    "clear_m": 1.75,
+    "count_status": "HELD",
+    "floor": "GF",
+    "kind": "simple",
+    "mark": "B1",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|026|R005|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "11",
+     "12",
+     "10.5"
+    ]
+   },
+   {
+    "clear_m": 1.7,
+    "count_status": "HELD",
+    "floor": "GF",
+    "kind": "simple",
+    "mark": "B7",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|031|R006|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "11",
+     "12",
+     "10.2"
+    ]
+   },
+   {
+    "clear_m": 3.3,
+    "count_status": "HELD",
+    "floor": "GF",
+    "kind": "simple",
+    "mark": "B3",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|037|R007|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "20",
+     "21",
+     "19.8"
+    ]
+   },
+   {
+    "clear_m": 2.5484,
+    "count_status": "HELD",
+    "floor": "GF",
+    "kind": "simple",
+    "mark": "B1",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|042|R008|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "16",
+     "17",
+     "15.29"
+    ]
+   },
+   {
+    "clear_m": 3.4159,
+    "count_status": "HELD",
+    "floor": "GF",
+    "kind": "simple",
+    "mark": "B4",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|047|R009|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "21",
+     "22",
+     "20.495"
+    ]
+   },
+   {
+    "clear_m": 1.9799,
+    "count_status": "HELD",
+    "floor": "GF",
+    "kind": "simple",
+    "mark": "B4",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|052|R010|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "12",
+     "13",
+     "11.879"
+    ]
+   },
+   {
+    "clear_m": 4.5,
+    "count_status": "HELD",
+    "floor": "GF",
+    "kind": "simple",
+    "mark": "B4",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|057|R011|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "27",
+     "28",
+     "27.0"
+    ]
+   },
+   {
+    "clear_m": 1.2,
+    "count_status": "HELD",
+    "floor": "GF",
+    "kind": "simple",
+    "mark": "B1",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|062|R012|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "8",
+     "9",
+     "7.2"
+    ]
+   },
+   {
+    "clear_m": 1.1448,
+    "count_status": "HELD",
+    "floor": "GF",
+    "kind": "simple",
+    "mark": "B1",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|067|R014|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "7",
+     "8",
+     "6.869"
+    ]
+   },
+   {
+    "clear_m": 2.5,
+    "count_status": "HELD",
+    "floor": "GF",
+    "kind": "simple",
+    "mark": "B3",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|072|R015|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "15",
+     "16",
+     "15.0"
+    ]
+   },
+   {
+    "clear_m": 3.5432,
+    "count_status": "HELD",
+    "floor": "GF",
+    "kind": "simple",
+    "mark": "B5",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|077|R016|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "22",
+     "23",
+     "21.259"
+    ]
+   },
+   {
+    "clear_m": 2.8907,
+    "count_status": "HELD",
+    "floor": "GF",
+    "kind": "simple",
+    "mark": "B4",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|082|R017|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "18",
+     "19",
+     "17.344"
+    ]
+   },
+   {
+    "clear_m": 0.8,
+    "count_status": "HELD",
+    "floor": "GF",
+    "kind": "simple",
+    "mark": "B1",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|087|R020|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "5",
+     "6",
+     "4.8"
+    ]
+   },
+   {
+    "clear_m": 2.7,
+    "count_status": "HELD",
+    "floor": "GF",
+    "kind": "simple",
+    "mark": "B2",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|092|R021|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "17",
+     "18",
+     "16.2"
+    ]
+   },
+   {
+    "clear_m": 1.8,
+    "count_status": "HELD",
+    "floor": "GF",
+    "kind": "simple",
+    "mark": "B14",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 7,
+    "row": "T149|097|R024|links 7 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "13",
+     "14",
+     "12.6"
+    ]
+   },
+   {
+    "clear_m": 0.7,
+    "count_status": "HELD",
+    "floor": "GF",
+    "kind": "simple",
+    "mark": "B1",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|103|R025|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "5",
+     "6",
+     "4.2"
+    ]
+   },
+   {
+    "clear_m": 2.95,
+    "count_status": "HELD",
+    "floor": "GF",
+    "kind": "simple",
+    "mark": "B3",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|108|R026|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "18",
+     "19",
+     "17.7"
+    ]
+   },
+   {
+    "clear_m": 2.7,
+    "count_status": "HELD",
+    "floor": "GF",
+    "kind": "simple",
+    "mark": "B2",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|113|R027|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "17",
+     "18",
+     "16.2"
+    ]
+   },
+   {
+    "clear_m": 1.2,
+    "count_status": "HELD",
+    "floor": "GF",
+    "kind": "simple",
+    "mark": "B7",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|118|R028|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "8",
+     "9",
+     "7.2"
+    ]
+   },
+   {
+    "clear_m": 1.8,
+    "count_status": "HELD",
+    "floor": "GF",
+    "kind": "simple",
+    "mark": "B1",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|124|R029|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "11",
+     "12",
+     "10.8"
+    ]
+   },
+   {
+    "clear_m": 2.5024,
+    "count_status": "HELD",
+    "floor": "GF",
+    "kind": "simple",
+    "mark": "B2",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|131|R030|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "16",
+     "17",
+     "15.014"
+    ]
+   },
+   {
+    "clear_m": 6.3,
+    "count_status": "HELD",
+    "floor": "GF",
+    "kind": "simple",
+    "mark": "B9",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|136|R031|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "38",
+     "39",
+     "37.8"
+    ]
+   },
+   {
+    "clear_m": 1.2,
+    "count_status": "HELD",
+    "floor": "GF",
+    "kind": "simple",
+    "mark": "B1",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|142|R034|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "8",
+     "9",
+     "7.2"
+    ]
+   },
+   {
+    "clear_m": 1.9,
+    "count_status": "HELD",
+    "floor": "GF",
+    "kind": "simple",
+    "mark": "B1",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|147|R035|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "12",
+     "13",
+     "11.4"
+    ]
+   },
+   {
+    "clear_m": 4.45,
+    "count_status": "HELD",
+    "floor": "GF",
+    "kind": "simple",
+    "mark": "B4",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|152|R036|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "27",
+     "28",
+     "26.7"
+    ]
+   },
+   {
+    "clear_m": 0.95,
+    "count_status": "HELD",
+    "floor": "GF",
+    "kind": "simple",
+    "mark": "B1",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|157|R037|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "6",
+     "7",
+     "5.7"
+    ]
+   },
+   {
+    "clear_m": 1.3,
+    "count_status": "HELD",
+    "floor": "GF",
+    "kind": "simple",
+    "mark": "B1",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|162|R038|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "8",
+     "9",
+     "7.8"
+    ]
+   },
+   {
+    "clear_m": 5.0272,
+    "count_status": "HELD",
+    "floor": "GF",
+    "kind": "simple",
+    "mark": "B13",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 7,
+    "row": "T149|167|R040|links 7 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "36",
+     "37",
+     "35.19"
+    ]
+   },
+   {
+    "clear_m": 0.8049,
+    "count_status": "HELD",
+    "floor": "GF",
+    "kind": "simple",
+    "mark": "B28",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 10,
+    "row": "T149|173|R041|links 10 ø10/m (Q-71)",
+    "t149_A_B_C": [
+     "9",
+     "10",
+     "8.049"
+    ]
+   },
+   {
+    "clear_m": 3.475,
+    "count_status": "HELD",
+    "floor": "GF",
+    "kind": "simple",
+    "mark": "B16",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 10,
+    "row": "T149|181|R042|links 10 ø10/m (Q-71)",
+    "t149_A_B_C": [
+     "35",
+     "36",
+     "34.75"
+    ]
+   },
+   {
+    "clear_m": 1.15,
+    "count_status": "HELD",
+    "floor": "GF",
+    "kind": "simple",
+    "mark": "CA",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 8,
+    "row": "T149|187|R043|links 8 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "10",
+     "11",
+     "9.2"
+    ]
+   },
+   {
+    "clear_m": 3.0,
+    "count_status": "HELD",
+    "floor": "GF",
+    "kind": "simple",
+    "mark": "B20",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 10,
+    "row": "T149|192|R049|links 10 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "30",
+     "31",
+     "30.0"
+    ]
+   },
+   {
+    "clear_m": 3.3,
+    "count_status": "HELD",
+    "floor": "GF",
+    "kind": "simple",
+    "mark": "B20",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 10,
+    "row": "T149|198|R050|links 10 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "33",
+     "34",
+     "33.0"
+    ]
+   },
+   {
+    "clear_m": 5.1,
+    "count_status": "HELD",
+    "floor": "GF",
+    "kind": "simple",
+    "mark": "B17",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|204|R051|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "31",
+     "32",
+     "30.6"
+    ]
+   },
+   {
+    "clear_m": 7.8,
+    "count_status": "HELD",
+    "floor": "GF",
+    "kind": "simple",
+    "mark": "B22",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 5,
+    "row": "T149|210|R052|links 5 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "39",
+     "40",
+     "39.0"
+    ]
+   },
+   {
+    "clear_m": 3.55,
+    "count_status": "HELD",
+    "floor": "GF",
+    "kind": "simple",
+    "mark": "B24",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 5,
+    "row": "T149|216|R053|links 5 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "18",
+     "19",
+     "17.75"
+    ]
+   },
+   {
+    "clear_m": 7.0675,
+    "count_status": "HELD",
+    "floor": "GF",
+    "kind": "simple",
+    "mark": "B26",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 10,
+    "row": "T149|222|R054|links 10 ø10/m (Q-71)",
+    "t149_A_B_C": [
+     "71",
+     "72",
+     "70.675"
+    ]
+   },
+   {
+    "clear_m": 4.9505,
+    "count_status": "HELD",
+    "floor": "GF",
+    "kind": "simple",
+    "mark": "B27",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 10,
+    "row": "T149|229|R055|links 10 ø10/m (Q-71)",
+    "t149_A_B_C": [
+     "50",
+     "51",
+     "49.505"
+    ]
+   },
+   {
+    "clear_m": 1.885,
+    "count_status": "HELD",
+    "floor": "GF",
+    "kind": "simple",
+    "mark": "B7",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|236|R056|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "12",
+     "13",
+     "11.31"
+    ]
+   },
+   {
+    "clear_m": 0.6158,
+    "count_status": "HELD",
+    "floor": "GF",
+    "kind": "simple",
+    "mark": "B7",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|242|R057|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "4",
+     "5",
+     "3.695"
+    ]
+   },
+   {
+    "clear_m": 0.4765,
+    "count_status": "HELD",
+    "floor": "GF",
+    "kind": "simple",
+    "mark": "B7",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|248|R058|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "3",
+     "4",
+     "2.859"
+    ]
+   },
+   {
+    "clear_m": 0.3485,
+    "count_status": "HELD",
+    "floor": "GF",
+    "kind": "simple",
+    "mark": "B7",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|254|R059|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "3",
+     "4",
+     "2.091"
+    ]
+   },
+   {
+    "clear_m": 6.7412,
+    "count_status": "HELD",
+    "floor": "GF",
+    "kind": "simple",
+    "mark": "B29",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 5,
+    "row": "T149|261|R061|links 5 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "34",
+     "35",
+     "33.706"
+    ]
+   },
+   {
+    "clear_m": 7.4802,
+    "count_status": "HELD",
+    "floor": "GF",
+    "kind": "simple",
+    "mark": "B21",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 10,
+    "row": "T149|267|R064|links 10 ø10/m (Q-71)",
+    "t149_A_B_C": [
+     "75",
+     "76",
+     "74.802"
+    ]
+   },
+   {
+    "clear_m": 1.501,
+    "count_status": "HELD",
+    "floor": "GF",
+    "kind": "simple",
+    "mark": "B24",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 5,
+    "row": "T149|275|R068|links 5 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "8",
+     "9",
+     "7.505"
+    ]
+   },
+   {
+    "clear_m": 0.2333,
+    "count_status": "HELD",
+    "floor": "GF",
+    "kind": "simple",
+    "mark": "B7",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|281|R069|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "2",
+     "3",
+     "1.4"
+    ]
+   },
+   {
+    "clear_m": 2.5,
+    "count_status": "HELD",
+    "floor": "1F",
+    "kind": "simple",
+    "mark": "B3",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|288|R071|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "15",
+     "16",
+     "15.0"
+    ]
+   },
+   {
+    "clear_m": 3.8117,
+    "count_status": "HELD",
+    "floor": "1F",
+    "kind": "simple",
+    "mark": "B4",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|293|R075|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "23",
+     "24",
+     "22.87"
+    ]
+   },
+   {
+    "clear_m": 4.3,
+    "count_status": "HELD",
+    "floor": "1F",
+    "kind": "simple",
+    "mark": "B4",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|298|R076|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "26",
+     "27",
+     "25.8"
+    ]
+   },
+   {
+    "clear_m": 4.7478,
+    "count_status": "HELD",
+    "floor": "1F",
+    "kind": "simple",
+    "mark": "B11",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|303|R077|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "29",
+     "30",
+     "28.487"
+    ]
+   },
+   {
+    "clear_m": 2.7,
+    "count_status": "HELD",
+    "floor": "1F",
+    "kind": "simple",
+    "mark": "B2",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|309|R078|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "17",
+     "18",
+     "16.2"
+    ]
+   },
+   {
+    "clear_m": 1.8,
+    "count_status": "HELD",
+    "floor": "1F",
+    "kind": "simple",
+    "mark": "B7",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|314|R079|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "11",
+     "12",
+     "10.8"
+    ]
+   },
+   {
+    "clear_m": 0.7,
+    "count_status": "HELD",
+    "floor": "1F",
+    "kind": "simple",
+    "mark": "B1",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|320|R080|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "5",
+     "6",
+     "4.2"
+    ]
+   },
+   {
+    "clear_m": 3.0,
+    "count_status": "HELD",
+    "floor": "1F",
+    "kind": "simple",
+    "mark": "B2",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|325|R081|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "18",
+     "19",
+     "18.0"
+    ]
+   },
+   {
+    "clear_m": 1.6075,
+    "count_status": "HELD",
+    "floor": "1F",
+    "kind": "simple",
+    "mark": "B1",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|330|R082|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "10",
+     "11",
+     "9.645"
+    ]
+   },
+   {
+    "clear_m": 2.7,
+    "count_status": "HELD",
+    "floor": "1F",
+    "kind": "simple",
+    "mark": "B2",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|335|R083|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "17",
+     "18",
+     "16.2"
+    ]
+   },
+   {
+    "clear_m": 1.2,
+    "count_status": "HELD",
+    "floor": "1F",
+    "kind": "simple",
+    "mark": "B7",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|340|R084|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "8",
+     "9",
+     "7.2"
+    ]
+   },
+   {
+    "clear_m": 1.8,
+    "count_status": "HELD",
+    "floor": "1F",
+    "kind": "simple",
+    "mark": "B1",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|346|R085|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "11",
+     "12",
+     "10.8"
+    ]
+   },
+   {
+    "clear_m": 4.1,
+    "count_status": "HELD",
+    "floor": "1F",
+    "kind": "simple",
+    "mark": "B4",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|351|R086|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "25",
+     "26",
+     "24.6"
+    ]
+   },
+   {
+    "clear_m": 3.475,
+    "count_status": "HELD",
+    "floor": "1F",
+    "kind": "simple",
+    "mark": "B5",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|356|R087|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "21",
+     "22",
+     "20.85"
+    ]
+   },
+   {
+    "clear_m": 4.85,
+    "count_status": "HELD",
+    "floor": "1F",
+    "kind": "simple",
+    "mark": "B5",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|361|R088|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "30",
+     "31",
+     "29.1"
+    ]
+   },
+   {
+    "clear_m": 4.1,
+    "count_status": "HELD",
+    "floor": "1F",
+    "kind": "simple",
+    "mark": "B6",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|366|R091|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "25",
+     "26",
+     "24.6"
+    ]
+   },
+   {
+    "clear_m": 4.4222,
+    "count_status": "HELD",
+    "floor": "1F",
+    "kind": "simple",
+    "mark": "B6",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|371|R092|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "27",
+     "28",
+     "26.533"
+    ]
+   },
+   {
+    "clear_m": 4.3722,
+    "count_status": "HELD",
+    "floor": "1F",
+    "kind": "simple",
+    "mark": "B6",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|376|R093|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "27",
+     "28",
+     "26.233"
+    ]
+   },
+   {
+    "clear_m": 4.1,
+    "count_status": "HELD",
+    "floor": "1F",
+    "kind": "simple",
+    "mark": "B6",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|381|R094|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "25",
+     "26",
+     "24.6"
+    ]
+   },
+   {
+    "clear_m": 6.3,
+    "count_status": "HELD",
+    "floor": "1F",
+    "kind": "simple",
+    "mark": "B18",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 5,
+    "row": "T149|386|R100|links 5 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "32",
+     "33",
+     "31.5"
+    ]
+   },
+   {
+    "clear_m": 5.3375,
+    "count_status": "HELD",
+    "floor": "1F",
+    "kind": "simple",
+    "mark": "B19",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 10,
+    "row": "T149|392|R101|links 10 ø10/m (Q-71)",
+    "t149_A_B_C": [
+     "54",
+     "55",
+     "53.375"
+    ]
+   },
+   {
+    "clear_m": 3.0,
+    "count_status": "HELD",
+    "floor": "1F",
+    "kind": "simple",
+    "mark": "B23",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 10,
+    "row": "T149|398|R102|links 10 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "30",
+     "31",
+     "30.0"
+    ]
+   },
+   {
+    "clear_m": 3.3,
+    "count_status": "HELD",
+    "floor": "1F",
+    "kind": "simple",
+    "mark": "B23",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 10,
+    "row": "T149|404|R103|links 10 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "33",
+     "34",
+     "33.0"
+    ]
+   },
+   {
+    "clear_m": 6.8754,
+    "count_status": "HELD",
+    "floor": "1F",
+    "kind": "simple",
+    "mark": "B25",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|410|R104|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "42",
+     "43",
+     "41.252"
+    ]
+   },
+   {
+    "clear_m": 7.553,
+    "count_status": "HELD",
+    "floor": "1F",
+    "kind": "simple",
+    "mark": "B4",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|416|R105|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "46",
+     "47",
+     "45.318"
+    ]
+   },
+   {
+    "clear_m": 4.4153,
+    "count_status": "HELD",
+    "floor": "1F",
+    "kind": "simple",
+    "mark": "B6",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|422|R107|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "27",
+     "28",
+     "26.492"
+    ]
+   },
+   {
+    "clear_m": 0.801,
+    "count_status": "HELD",
+    "floor": "1F",
+    "kind": "simple",
+    "mark": "B2",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|427|R110|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "5",
+     "6",
+     "4.806"
+    ]
+   },
+   {
+    "clear_m": 8.997,
+    "count_status": "HELD",
+    "floor": "1F",
+    "kind": "simple",
+    "mark": "B4",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|439|R118|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "54",
+     "55",
+     "53.982"
+    ]
+   },
+   {
+    "clear_m": 2.5,
+    "count_status": "HELD",
+    "floor": "2F",
+    "kind": "simple",
+    "mark": "B3",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|444|R119|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "15",
+     "16",
+     "15.0"
+    ]
+   },
+   {
+    "clear_m": 3.47,
+    "count_status": "HELD",
+    "floor": "2F",
+    "kind": "simple",
+    "mark": "B8",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|449|R120|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "21",
+     "22",
+     "20.82"
+    ]
+   },
+   {
+    "clear_m": 2.45,
+    "count_status": "HELD",
+    "floor": "2F",
+    "kind": "simple",
+    "mark": "B3",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|455|R121|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "15",
+     "16",
+     "14.7"
+    ]
+   },
+   {
+    "clear_m": 2.5,
+    "count_status": "HELD",
+    "floor": "2F",
+    "kind": "simple",
+    "mark": "B2",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|460|R122|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "15",
+     "16",
+     "15.0"
+    ]
+   },
+   {
+    "clear_m": 1.8,
+    "count_status": "HELD",
+    "floor": "2F",
+    "kind": "simple",
+    "mark": "B1",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|465|R123|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "11",
+     "12",
+     "10.8"
+    ]
+   },
+   {
+    "clear_m": 3.0,
+    "count_status": "HELD",
+    "floor": "2F",
+    "kind": "simple",
+    "mark": "B2",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|470|R124|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "18",
+     "19",
+     "18.0"
+    ]
+   },
+   {
+    "clear_m": 2.7,
+    "count_status": "HELD",
+    "floor": "2F",
+    "kind": "simple",
+    "mark": "B15",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 10,
+    "row": "T149|475|R125|links 10 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "27",
+     "28",
+     "27.0"
+    ]
+   },
+   {
+    "clear_m": 1.8,
+    "count_status": "HELD",
+    "floor": "2F",
+    "kind": "simple",
+    "mark": "B2",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|481|R126|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "11",
+     "12",
+     "10.8"
+    ]
+   },
+   {
+    "clear_m": 3.0,
+    "count_status": "HELD",
+    "floor": "2F",
+    "kind": "simple",
+    "mark": "B2",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|486|R127|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "18",
+     "19",
+     "18.0"
+    ]
+   },
+   {
+    "clear_m": 1.0,
+    "count_status": "HELD",
+    "floor": "2F",
+    "kind": "simple",
+    "mark": "B1",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|491|R128|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "6",
+     "7",
+     "6.0"
+    ]
+   },
+   {
+    "clear_m": 3.0,
+    "count_status": "HELD",
+    "floor": "2F",
+    "kind": "simple",
+    "mark": "B3",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|496|R129|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "18",
+     "19",
+     "18.0"
+    ]
+   },
+   {
+    "clear_m": 6.6,
+    "count_status": "HELD",
+    "floor": "2F",
+    "kind": "simple",
+    "mark": "B7",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|501|R130|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "40",
+     "41",
+     "39.6"
+    ]
+   },
+   {
+    "clear_m": 2.7,
+    "count_status": "HELD",
+    "floor": "2F",
+    "kind": "simple",
+    "mark": "B3",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|507|R131|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "17",
+     "18",
+     "16.2"
+    ]
+   },
+   {
+    "clear_m": 1.2,
+    "count_status": "HELD",
+    "floor": "2F",
+    "kind": "simple",
+    "mark": "B1",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|512|R132|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "8",
+     "9",
+     "7.2"
+    ]
+   },
+   {
+    "clear_m": 1.8,
+    "count_status": "HELD",
+    "floor": "2F",
+    "kind": "simple",
+    "mark": "B1",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|517|R133|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "11",
+     "12",
+     "10.8"
+    ]
+   },
+   {
+    "clear_m": 1.13,
+    "count_status": "HELD",
+    "floor": "2F",
+    "kind": "simple",
+    "mark": "B8",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|522|R134|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "7",
+     "8",
+     "6.78"
+    ]
+   },
+   {
+    "clear_m": 1.13,
+    "count_status": "HELD",
+    "floor": "2F",
+    "kind": "simple",
+    "mark": "B3",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|528|R134|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "7",
+     "8",
+     "6.78"
+    ]
+   },
+   {
+    "clear_m": 3.1,
+    "count_status": "HELD",
+    "floor": "2F",
+    "kind": "simple",
+    "mark": "B15",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 10,
+    "row": "T149|533|R135|links 10 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "31",
+     "32",
+     "31.0"
+    ]
+   },
+   {
+    "clear_m": 3.1,
+    "count_status": "HELD",
+    "floor": "2F",
+    "kind": "simple",
+    "mark": "B1",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|539|R135|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "19",
+     "20",
+     "18.6"
+    ]
+   },
+   {
+    "clear_m": 3.1,
+    "count_status": "HELD",
+    "floor": "2F",
+    "kind": "simple",
+    "mark": "B2",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|544|R135|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "19",
+     "20",
+     "18.6"
+    ]
+   },
+   {
+    "clear_m": 3.1,
+    "count_status": "HELD",
+    "floor": "2F",
+    "kind": "simple",
+    "mark": "B3",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|549|R135|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "19",
+     "20",
+     "18.6"
+    ]
+   },
+   {
+    "clear_m": 1.399,
+    "count_status": "HELD",
+    "floor": "2F",
+    "kind": "simple",
+    "mark": "B1",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|554|R136|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "9",
+     "10",
+     "8.394"
+    ]
+   },
+   {
+    "clear_m": 1.399,
+    "count_status": "HELD",
+    "floor": "2F",
+    "kind": "simple",
+    "mark": "B1",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|559|R137|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "9",
+     "10",
+     "8.394"
+    ]
+   },
+   {
+    "clear_m": 2.301,
+    "count_status": "PROVISIONAL (junctions / zones not re-checked)",
+    "floor": "1F",
+    "kind": "continuous",
+    "mark": "CB10",
+    "q71_basis": "1 + floor((L - 2a) / s)",
+    "q71_count": 13,
+    "rate_count_ceil_n_x_zone": 13,
+    "rate_per_m": 6,
+    "row": "T149|564|R108|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "13",
+     "14",
+     "13.806"
+    ]
+   },
+   {
+    "clear_m": 3.651,
+    "count_status": "PROVISIONAL (junctions / zones not re-checked)",
+    "floor": "1F",
+    "kind": "continuous",
+    "mark": "CB10",
+    "q71_basis": "1 + floor((L - 2a) / s)",
+    "q71_count": 22,
+    "rate_count_ceil_n_x_zone": 22,
+    "rate_per_m": 6,
+    "row": "T149|569|R109|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "22",
+     "23",
+     "21.906"
+    ]
+   },
+   {
+    "clear_m": 6.7083,
+    "count_status": "PROVISIONAL (junctions / zones not re-checked)",
+    "floor": "1F",
+    "kind": "continuous",
+    "mark": "CB11",
+    "q71_basis": "1 + floor((L - 2a) / s)",
+    "q71_count": 66,
+    "rate_count_ceil_n_x_zone": 66,
+    "rate_per_m": 10,
+    "row": "T149|575|R097|links 10 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "66",
+     "67",
+     "67.083"
+    ]
+   },
+   {
+    "clear_m": 2.65,
+    "count_status": "PROVISIONAL (junctions / zones not re-checked)",
+    "floor": "1F",
+    "kind": "continuous",
+    "mark": "CB11",
+    "q71_basis": "1 + floor((L - 2a) / s)",
+    "q71_count": 16,
+    "rate_count_ceil_n_x_zone": 15,
+    "rate_per_m": 6,
+    "row": "T149|581|R098|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "15",
+     "16",
+     "15.9"
+    ]
+   },
+   {
+    "clear_m": 3.3,
+    "count_status": "PROVISIONAL (junctions / zones not re-checked)",
+    "floor": "1F",
+    "kind": "continuous",
+    "mark": "CB11",
+    "q71_basis": "1 + floor((L - 2a) / s)",
+    "q71_count": 16,
+    "rate_count_ceil_n_x_zone": 16,
+    "rate_per_m": 5,
+    "row": "T149|587|R099|links 5 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "16",
+     "17",
+     "16.5"
+    ]
+   },
+   {
+    "clear_m": 5.625,
+    "count_status": "PROVISIONAL (junctions / zones not re-checked)",
+    "floor": "1F",
+    "kind": "continuous",
+    "mark": "CB12",
+    "q71_basis": "1 + floor((L - 2a) / s)",
+    "q71_count": 50,
+    "rate_count_ceil_n_x_zone": 50,
+    "rate_per_m": 9,
+    "row": "T149|595|R089|links 9 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "50",
+     "51",
+     "50.625"
+    ]
+   },
+   {
+    "clear_m": 5.025,
+    "count_status": "PROVISIONAL (junctions / zones not re-checked)",
+    "floor": "1F",
+    "kind": "continuous",
+    "mark": "CB12",
+    "q71_basis": "1 + floor((L - 2a) / s)",
+    "q71_count": 35,
+    "rate_count_ceil_n_x_zone": 35,
+    "rate_per_m": 7,
+    "row": "T149|601|R090|links 7 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "35",
+     "36",
+     "35.175"
+    ]
+   },
+   {
+    "clear_m": 3.0,
+    "count_status": "PROVISIONAL (junctions / zones not re-checked)",
+    "floor": "1F",
+    "kind": "continuous",
+    "mark": "CB13",
+    "q71_basis": "1 + floor((L - 2a) / s)",
+    "q71_count": 20,
+    "rate_count_ceil_n_x_zone": 20,
+    "rate_per_m": 7,
+    "row": "T149|608|R095|links 7 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "20",
+     "21",
+     "21.0"
+    ]
+   },
+   {
+    "clear_m": 3.15,
+    "count_status": "PROVISIONAL (junctions / zones not re-checked)",
+    "floor": "1F",
+    "kind": "continuous",
+    "mark": "CB13",
+    "q71_basis": "1 + floor((L - 2a) / s)",
+    "q71_count": 22,
+    "rate_count_ceil_n_x_zone": 21,
+    "rate_per_m": 7,
+    "row": "T149|613|R096|links 7 ø10/m (Q-71)",
+    "t149_A_B_C": [
+     "21",
+     "22",
+     "22.05"
+    ]
+   },
+   {
+    "clear_m": 3.47,
+    "count_status": "PROVISIONAL (junctions / zones not re-checked)",
+    "floor": "1F",
+    "kind": "continuous",
+    "mark": "CB9",
+    "q71_basis": "1 + floor((L - 2a) / s)",
+    "q71_count": 24,
+    "rate_count_ceil_n_x_zone": 24,
+    "rate_per_m": 7,
+    "row": "T149|619|R072|links 7 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "24",
+     "25",
+     "24.29"
+    ]
+   },
+   {
+    "clear_m": 3.35,
+    "count_status": "PROVISIONAL (junctions / zones not re-checked)",
+    "floor": "1F",
+    "kind": "continuous",
+    "mark": "CB9",
+    "q71_basis": "1 + floor((L - 2a) / s)",
+    "q71_count": 33,
+    "rate_count_ceil_n_x_zone": 32,
+    "rate_per_m": 10,
+    "row": "T149|624|R073|links 10 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "32",
+     "33",
+     "33.5"
+    ]
+   },
+   {
+    "clear_m": 3.55,
+    "count_status": "PROVISIONAL (junctions / zones not re-checked)",
+    "floor": "1F",
+    "kind": "continuous",
+    "mark": "CB9",
+    "q71_basis": "1 + floor((L - 2a) / s)",
+    "q71_count": 21,
+    "rate_count_ceil_n_x_zone": 21,
+    "rate_per_m": 6,
+    "row": "T149|629|R074|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "21",
+     "22",
+     "21.3"
+    ]
+   },
+   {
+    "clear_m": 6.998,
+    "count_status": "PROVISIONAL (junctions / zones not re-checked)",
+    "floor": "GF",
+    "kind": "continuous",
+    "mark": "CB1",
+    "q71_basis": "1 + floor((L - 2a) / s)",
+    "q71_count": 35,
+    "rate_count_ceil_n_x_zone": 35,
+    "rate_per_m": 5,
+    "row": "T149|638|R047|links 5 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "35",
+     "36",
+     "34.99"
+    ]
+   },
+   {
+    "clear_m": 5.1,
+    "count_status": "PROVISIONAL (junctions / zones not re-checked)",
+    "floor": "GF",
+    "kind": "continuous",
+    "mark": "CB1",
+    "q71_basis": "1 + floor((L - 2a) / s)",
+    "q71_count": 45,
+    "rate_count_ceil_n_x_zone": 45,
+    "rate_per_m": 9,
+    "row": "T149|644|R048|links 9 ø10/m (Q-71)",
+    "t149_A_B_C": [
+     "45",
+     "46",
+     "45.9"
+    ]
+   },
+   {
+    "clear_m": 3.47,
+    "count_status": "PROVISIONAL (junctions / zones not re-checked)",
+    "floor": "GF",
+    "kind": "continuous",
+    "mark": "CB2",
+    "q71_basis": "1 + floor((L - 2a) / s)",
+    "q71_count": 20,
+    "rate_count_ceil_n_x_zone": 20,
+    "rate_per_m": 6,
+    "row": "T149|651|R062|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "20",
+     "21",
+     "20.82"
+    ]
+   },
+   {
+    "clear_m": 3.35,
+    "count_status": "PROVISIONAL (junctions / zones not re-checked)",
+    "floor": "GF",
+    "kind": "continuous",
+    "mark": "CB2",
+    "q71_basis": "1 + floor((L - 2a) / s)",
+    "q71_count": 20,
+    "rate_count_ceil_n_x_zone": 20,
+    "rate_per_m": 6,
+    "row": "T149|656|R063|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "20",
+     "21",
+     "20.1"
+    ]
+   },
+   {
+    "clear_m": 2.65,
+    "count_status": "HELD",
+    "floor": "GF",
+    "kind": "simple",
+    "mark": "B3",
+    "q71_basis": "first-link offset not printed for this detail (Q-71: never borrowed from another detail)",
+    "q71_count": null,
+    "rate_count_ceil_n_x_zone": null,
+    "rate_per_m": 6,
+    "row": "T149|662|R065|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "16",
+     "17",
+     "15.9"
+    ]
+   },
+   {
+    "clear_m": 3.02,
+    "count_status": "PROVISIONAL (junctions / zones not re-checked)",
+    "floor": "GF",
+    "kind": "continuous",
+    "mark": "CB3",
+    "q71_basis": "1 + floor((L - 2a) / s)",
+    "q71_count": 15,
+    "rate_count_ceil_n_x_zone": 15,
+    "rate_per_m": 5,
+    "row": "T149|667|R018|links 5 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "15",
+     "16",
+     "15.1"
+    ]
+   },
+   {
+    "clear_m": 2.65,
+    "count_status": "PROVISIONAL (junctions / zones not re-checked)",
+    "floor": "GF",
+    "kind": "continuous",
+    "mark": "CB3",
+    "q71_basis": "1 + floor((L - 2a) / s)",
+    "q71_count": 13,
+    "rate_count_ceil_n_x_zone": 13,
+    "rate_per_m": 5,
+    "row": "T149|671|R065|links 5 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "13",
+     "14",
+     "13.25"
+    ]
+   },
+   {
+    "clear_m": 3.1888,
+    "count_status": "PROVISIONAL (junctions / zones not re-checked)",
+    "floor": "GF",
+    "kind": "continuous",
+    "mark": "CB3",
+    "q71_basis": "1 + floor((L - 2a) / s)",
+    "q71_count": 28,
+    "rate_count_ceil_n_x_zone": 28,
+    "rate_per_m": 9,
+    "row": "T149|678|R019|links 9 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "28",
+     "29",
+     "28.699"
+    ]
+   },
+   {
+    "clear_m": 2.3744,
+    "count_status": "PROVISIONAL (junctions / zones not re-checked)",
+    "floor": "GF",
+    "kind": "continuous",
+    "mark": "CB4",
+    "q71_basis": "1 + floor((L - 2a) / s)",
+    "q71_count": 14,
+    "rate_count_ceil_n_x_zone": 14,
+    "rate_per_m": 6,
+    "row": "T149|687|R022|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "14",
+     "15",
+     "14.246"
+    ]
+   },
+   {
+    "clear_m": 3.2,
+    "count_status": "PROVISIONAL (junctions / zones not re-checked)",
+    "floor": "GF",
+    "kind": "continuous",
+    "mark": "CB4",
+    "q71_basis": "1 + floor((L - 2a) / s)",
+    "q71_count": 25,
+    "rate_count_ceil_n_x_zone": 25,
+    "rate_per_m": 8,
+    "row": "T149|692|R023|links 8 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "25",
+     "26",
+     "25.6"
+    ]
+   },
+   {
+    "clear_m": 2.3,
+    "count_status": "PROVISIONAL (junctions / zones not re-checked)",
+    "floor": "GF",
+    "kind": "continuous",
+    "mark": "CB5",
+    "q71_basis": "1 + floor((L - 2a) / s)",
+    "q71_count": 16,
+    "rate_count_ceil_n_x_zone": 16,
+    "rate_per_m": 7,
+    "row": "T149|699|R039|links 7 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "16",
+     "17",
+     "16.1"
+    ]
+   },
+   {
+    "clear_m": 3.7,
+    "count_status": "PROVISIONAL (junctions / zones not re-checked)",
+    "floor": "GF",
+    "kind": "continuous",
+    "mark": "CB5",
+    "q71_basis": "1 + floor((L - 2a) / s)",
+    "q71_count": 25,
+    "rate_count_ceil_n_x_zone": 25,
+    "rate_per_m": 7,
+    "row": "T149|704|R138|links 7 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "25",
+     "26",
+     "25.9"
+    ]
+   },
+   {
+    "clear_m": 4.0,
+    "count_status": "PROVISIONAL (junctions / zones not re-checked)",
+    "floor": "GF",
+    "kind": "continuous",
+    "mark": "CB6",
+    "q71_basis": "1 + floor((L - 2a) / s)",
+    "q71_count": 20,
+    "rate_count_ceil_n_x_zone": 20,
+    "rate_per_m": 5,
+    "row": "T149|710|R032|links 5 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "20",
+     "21",
+     "20.0"
+    ]
+   },
+   {
+    "clear_m": 5.85,
+    "count_status": "PROVISIONAL (junctions / zones not re-checked)",
+    "floor": "GF",
+    "kind": "continuous",
+    "mark": "CB6",
+    "q71_basis": "1 + floor((L - 2a) / s)",
+    "q71_count": 35,
+    "rate_count_ceil_n_x_zone": 35,
+    "rate_per_m": 6,
+    "row": "T149|716|R033|links 6 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "35",
+     "36",
+     "35.1"
+    ]
+   },
+   {
+    "clear_m": 5.45,
+    "count_status": "PROVISIONAL (junctions / zones not re-checked)",
+    "floor": "GF",
+    "kind": "continuous",
+    "mark": "CB7",
+    "q71_basis": "1 + floor((L - 2a) / s)",
+    "q71_count": 38,
+    "rate_count_ceil_n_x_zone": 38,
+    "rate_per_m": 7,
+    "row": "T149|723|R013a|links 7 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "38",
+     "39",
+     "38.15"
+    ]
+   },
+   {
+    "clear_m": 5.7486,
+    "count_status": "PROVISIONAL (junctions / zones not re-checked)",
+    "floor": "GF",
+    "kind": "continuous",
+    "mark": "CB7",
+    "q71_basis": "1 + floor((L - 2a) / s)",
+    "q71_count": 40,
+    "rate_count_ceil_n_x_zone": 40,
+    "rate_per_m": 7,
+    "row": "T149|729|R013b|links 7 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "40",
+     "41",
+     "40.24"
+    ]
+   },
+   {
+    "clear_m": 3.0497,
+    "count_status": "PROVISIONAL (junctions / zones not re-checked)",
+    "floor": "GF",
+    "kind": "continuous",
+    "mark": "CB8",
+    "q71_basis": "1 + floor((L - 2a) / s)",
+    "q71_count": 15,
+    "rate_count_ceil_n_x_zone": 15,
+    "rate_per_m": 5,
+    "row": "T149|735|R044|links 5 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "15",
+     "16",
+     "15.248"
+    ]
+   },
+   {
+    "clear_m": 5.745,
+    "count_status": "PROVISIONAL (junctions / zones not re-checked)",
+    "floor": "GF",
+    "kind": "continuous",
+    "mark": "CB8",
+    "q71_basis": "1 + floor((L - 2a) / s)",
+    "q71_count": 45,
+    "rate_count_ceil_n_x_zone": 45,
+    "rate_per_m": 8,
+    "row": "T149|741|R045|links 8 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "45",
+     "46",
+     "45.96"
+    ]
+   },
+   {
+    "clear_m": 6.35,
+    "count_status": "PROVISIONAL (junctions / zones not re-checked)",
+    "floor": "GF",
+    "kind": "continuous",
+    "mark": "CB8",
+    "q71_basis": "1 + floor((L - 2a) / s)",
+    "q71_count": 32,
+    "rate_count_ceil_n_x_zone": 31,
+    "rate_per_m": 5,
+    "row": "T149|747|R046|links 5 ø8/m (Q-71)",
+    "t149_A_B_C": [
+     "31",
+     "32",
+     "31.75"
+    ]
+   }
+  ],
+  "route_g_items_vs_summary_kg": 0.0,
+  "t273_chain_restatement": [
+   {
+    "residual_kg": 0.001,
+    "row": "T273|GB-CHAIN-7D0/FC TOP|NET",
+    "t138_through": [
+     "T138|285|through column 249 (7D0-FC)|TOP",
+     "T138|287|through column 251 (7D0-FC)|TOP",
+     "T138|289|through column 255 (7D0-FC)|TOP"
+    ],
+    "t265_runs": [
+     "T265|7D0+FC#1|TOP",
+     "T265|7D0+FC#2|TOP",
+     "T265|7D0+FC#3|TOP",
+     "T265|7D0+FC#4|TOP"
+    ],
+    "t265_runs_plus_t138_through_kg": 88.037,
+    "t273_net_kg": 88.035556
+   },
+   {
+    "residual_kg": 0.001,
+    "row": "T273|GB-CHAIN-7D0/FC BOTTOM_ROW_1|NET",
+    "t138_through": [
+     "T138|286|through column 249 (7D0-FC)|BOTTOM",
+     "T138|288|through column 251 (7D0-FC)|BOTTOM",
+     "T138|290|through column 255 (7D0-FC)|BOTTOM"
+    ],
+    "t265_runs": [
+     "T265|7D0+FC#1|BOTTOM_ROW_1",
+     "T265|7D0+FC#2|BOTTOM_ROW_1",
+     "T265|7D0+FC#3|BOTTOM_ROW_1",
+     "T265|7D0+FC#4|BOTTOM_ROW_1"
+    ],
+    "t265_runs_plus_t138_through_kg": 88.037,
+    "t273_net_kg": 88.035556
+   },
+   {
+    "residual_kg": 0.001,
+    "row": "T273|GB-CHAIN-7D0/FC BOTTOM_ROW_2|NET",
+    "t138_through": [
+     "T138|286|through column 249 (7D0-FC)|BOTTOM",
+     "T138|288|through column 251 (7D0-FC)|BOTTOM",
+     "T138|290|through column 255 (7D0-FC)|BOTTOM"
+    ],
+    "t265_runs": [
+     "T265|7D0+FC#1|BOTTOM_ROW_2",
+     "T265|7D0+FC#2|BOTTOM_ROW_2",
+     "T265|7D0+FC#3|BOTTOM_ROW_2",
+     "T265|7D0+FC#4|BOTTOM_ROW_2"
+    ],
+    "t265_runs_plus_t138_through_kg": 88.037,
+    "t273_net_kg": 88.035556
+   },
+   {
+    "residual_kg": -0.002,
+    "row": "T273|GB-CHAIN-170/7C3 TOP|NET",
+    "t138_through": [
+     "T138|291|through column 1E0 (170-7C3)|TOP",
+     "T138|293|through column 1E4 (170-7C3)|TOP",
+     "T138|295|through column 241 (170-7C3)|TOP"
+    ],
+    "t265_runs": [
+     "T265|170+7C3#1|TOP",
+     "T265|170+7C3#2|TOP",
+     "T265|170+7C3#3|TOP",
+     "T265|170+7C3#4|TOP"
+    ],
+    "t265_runs_plus_t138_through_kg": 65.278,
+    "t273_net_kg": 65.28
+   },
+   {
+    "residual_kg": -0.001,
+    "row": "T273|GB-CHAIN-170/7C3 BOTTOM_ROW_1|NET",
+    "t138_through": [
+     "T138|292|through column 1E0 (170-7C3)|BOTTOM",
+     "T138|294|through column 1E4 (170-7C3)|BOTTOM",
+     "T138|296|through column 241 (170-7C3)|BOTTOM"
+    ],
+    "t265_runs": [
+     "T265|170+7C3#1|BOTTOM_ROW_1",
+     "T265|170+7C3#2|BOTTOM_ROW_1",
+     "T265|170+7C3#3|BOTTOM_ROW_1",
+     "T265|170+7C3#4|BOTTOM_ROW_1"
+    ],
+    "t265_runs_plus_t138_through_kg": 65.279,
+    "t273_net_kg": 65.28
+   },
+   {
+    "residual_kg": -0.001,
+    "row": "T273|GB-CHAIN-170/7C3 BOTTOM_ROW_2|NET",
+    "t138_through": [
+     "T138|292|through column 1E0 (170-7C3)|BOTTOM",
+     "T138|294|through column 1E4 (170-7C3)|BOTTOM",
+     "T138|296|through column 241 (170-7C3)|BOTTOM"
+    ],
+    "t265_runs": [
+     "T265|170+7C3#1|BOTTOM_ROW_2",
+     "T265|170+7C3#2|BOTTOM_ROW_2",
+     "T265|170+7C3#3|BOTTOM_ROW_2",
+     "T265|170+7C3#4|BOTTOM_ROW_2"
+    ],
+    "t265_runs_plus_t138_through_kg": 65.279,
+    "t273_net_kg": 65.28
+   }
+  ],
+  "t273_column_restatement": [
+   {
+    "residual_kg": 0.0,
+    "row": "T273|COLUMNS|ANCHORAGE|LOWER_BOUND",
+    "s3_rows_kg": 86.871,
+    "t273_kg": 86.871
+   },
+   {
+    "residual_kg": 0.0,
+    "row": "T273|COLUMNS|ANCHORAGE|PROVISIONAL",
+    "s3_rows_kg": 270.791,
+    "t273_kg": 270.791
+   },
+   {
+    "residual_kg": 0.0,
+    "row": "T273|COLUMNS|LAP|LOWER_BOUND",
+    "s3_rows_kg": 20.203,
+    "t273_kg": 20.203
+   },
+   {
+    "residual_kg": 0.0,
+    "row": "T273|COLUMNS|LAP|PROVISIONAL",
+    "s3_rows_kg": 476.783,
+    "t273_kg": 476.783
+   },
+   {
+    "residual_kg": 0.0,
+    "row": "T273|COLUMNS|STARTER|BLOCKED",
+    "s3_rows_kg": 0,
+    "t273_kg": 0.0
+   },
+   {
+    "residual_kg": 0.0,
+    "row": "T273|COLUMNS|STARTER|LOWER_BOUND",
+    "s3_rows_kg": 41.984,
+    "t273_kg": 41.984
+   },
+   {
+    "residual_kg": 0.0,
+    "row": "T273|COLUMNS|STARTER|PROVISIONAL",
+    "s3_rows_kg": 539.306,
+    "t273_kg": 539.306
+   }
+  ]
+ },
+ "counted_totals_by_family_and_class": {
+  "BEAMS": {
+   "BOUND": {
+    "kg": 5171.031,
+    "rows": 230,
+    "t": 5.171031
+   }
+  },
+  "COLUMNS": {
+   "BOUND": {
+    "kg": 2266.844,
+    "rows": 332,
+    "t": 2.266844
+   },
+   "PROVISIONAL": {
+    "kg": 1353.17,
+    "rows": 133,
+    "t": 1.35317
+   },
+   "SOURCE_LABEL": {
+    "kg": 3360.903,
+    "rows": 56,
+    "t": 3.360903
+   }
+  },
+  "GROUND_BEAMS": {
+   "BOUND": {
+    "kg": 1670.927,
+    "rows": 128,
+    "t": 1.670927
+   }
+  },
+  "GROUND_BEAMS:STRAPS": {
+   "BOUND": {
+    "kg": 226.953,
+    "rows": 4,
+    "t": 0.226953
+   }
+  }
+ },
+ "duplicate_groups": {
+  "count": 805,
+  "overlap": 734,
+  "replace": 71
+ },
+ "held_source_kg_not_quantities": {
+  "BEAMS|T-149": 5521.109,
+  "COLUMNS|S3": 258.197,
+  "COLUMNS|S3.1": 258.509
+ },
+ "never_summed": "class totals are never added across classes; alternative ledgers (S3.1, route G, T-273 nets, T-138 replaced rows) are never counted",
+ "proximity_flagged_rows": {
+  "count": 23,
+  "rows": [
+   "RG|P-S:BEAMS:1F:BAND0009:BOT:D18",
+   "RG|P-S:BEAMS:1F:BAND0009:TOP:D12",
+   "RG|P-S:BEAMS:1F:BAND0009:STI:D8",
+   "RG|P-S:BEAMS:GF:BAND0008:BOT:D18",
+   "RG|P-S:BEAMS:GF:BAND0008:TOP:D14",
+   "RG|P-S:BEAMS:GF:BAND0008:STI:D8",
+   "RG|U-S:BEAMS:GF:BAND0019.2:CB_BOTTOM:D16",
+   "RG|U-S:BEAMS:GF:BAND0019.2:CB_STIRRUP:D8",
+   "RG|P-S:BEAMS:GF:BAND0036.1:CB_BOTTOM:D16",
+   "RG|P-S:BEAMS:GF:BAND0036.2:CB_BOTTOM:D14",
+   "RG|P-S:BEAMS:GF:BAND0036.1:CB_STIRRUP:D8",
+   "RG|P-S:BEAMS:GF:BAND0036.2:CB_STIRRUP:D8",
+   "RG|P-S:BEAMS:GF:BAND0036.1:CB_SUPPORT_TOP:D16",
+   "RG|P-S:BEAMS:GF:BAND0036.2:CB_SUPPORT_TOP:D16",
+   "RG|U-S:BEAMS:GF:BAND0036.1:CB_TOP_THROUGH",
+   "RG|U-S:BEAMS:GF:BAND0036.2:CB_TOP_THROUGH",
+   "RG|P-S:BEAMS:GF:BAND0039:CB_BOTTOM:D14",
+   "RG|P-S:BEAMS:GF:BAND0039:CB_STIRRUP:D8",
+   "RG|U-S:BEAMS:GF:BAND0039:CB_SUPPORT_TOP1",
+   "RG|U-S:BEAMS:GF:BAND0039:CB_TOP_THROUGH",
+   "RG|P-S:BEAMS:GF:BAND0042:BOT:D18",
+   "RG|P-S:BEAMS:GF:BAND0042:TOP:D14",
+   "RG|P-S:BEAMS:GF:BAND0042:STI:D10"
+  ]
+ },
+ "relations_by_family_source": {
+  "BEAMS|ROUTE_G": {
+   "HELD": 6,
+   "OVERLAPS": 360
+  },
+  "BEAMS|T-149": {
+   "HELD": 349,
+   "INDEPENDENT": 5,
+   "OVERLAPS": 398
+  },
+  "COLUMNS|ROUTE_G": {
+   "HELD": 118
+  },
+  "COLUMNS|S3": {
+   "HELD": 36,
+   "OVERLAPS": 495,
+   "REPLACED_BY": 36
+  },
+  "COLUMNS|S3.1": {
+   "HELD": 80,
+   "OVERLAPS": 495,
+   "REPLACED_BY": 36
+  },
+  "COLUMNS|T-273": {
+   "OVERLAPS": 7
+  },
+  "COLUMNS|T-280": {
+   "REPLACES": 36
+  },
+  "GROUND_BEAMS:STRAPS|ROUTE_G": {
+   "OVERLAPS": 9
+  },
+  "GROUND_BEAMS:STRAPS|T-138": {
+   "HELD": 6,
+   "OVERLAPS": 9
+  },
+  "GROUND_BEAMS|ROUTE_G": {
+   "HELD": 59
+  },
+  "GROUND_BEAMS|T-138": {
+   "HELD": 213,
+   "INDEPENDENT": 50,
+   "REPLACED_BY": 38
+  },
+  "GROUND_BEAMS|T-265": {
+   "HELD": 36,
+   "INDEPENDENT": 24,
+   "OVERLAPS": 54,
+   "REPLACED_BY": 22
+  },
+  "GROUND_BEAMS|T-272": {
+   "REPLACES": 22
+  },
+  "GROUND_BEAMS|T-273": {
+   "HELD": 60,
+   "OVERLAPS": 60
+  },
+  "OUT_OF_SCOPE:FOOTINGS|ROUTE_G": {
+   "INDEPENDENT": 27
+  },
+  "OUT_OF_SCOPE:GROUND_SLAB|ROUTE_G": {
+   "INDEPENDENT": 23
+  },
+  "OUT_OF_SCOPE:SLABS|ROUTE_G": {
+   "INDEPENDENT": 72
+  },
+  "SLABS|T-273": {
+   "HELD": 3
+  }
+ },
+ "route_g": {
+  "kg_items_base_kg": 16392.64717,
+  "label": "PROVISIONAL SUBTOTAL (owner 2026-10-25 10:33 (2)): never a total or a bound",
+  "t": 16.392647
+ },
+ "rows": 3244,
+ "source_residuals": {
+  "ROUTE_G": {
+   "named_kg": 16392.647170067125,
+   "residual_kg": -0.0,
+   "residual_t": -0.0,
+   "rounding_tolerance_kg": 0.0,
+   "rows": 467,
+   "rows_kg": 16392.64717
+  },
+  "S3": {
+   "named_kg": 7479.151,
+   "residual_kg": 0.013,
+   "residual_t": 1.3e-05,
+   "rounding_tolerance_kg": 0.2805,
+   "rows": 560,
+   "rows_kg": 7479.164
+  },
+  "S3.1": {
+   "named_kg": 7488.205,
+   "residual_kg": -0.021,
+   "residual_t": -2.1e-05,
+   "rounding_tolerance_kg": 0.2805,
+   "rows": 560,
+   "rows_kg": 7488.184
+  },
+  "T-138": {
+   "named_kg": 1479.86,
+   "residual_kg": 0.0,
+   "residual_t": 0.0,
+   "rounding_tolerance_kg": 0.051,
+   "rows": 92,
+   "rows_kg": 1479.86
+  },
+  "T-149:HELD_DEFINED:HELD_DEFINED:BARS": {
+   "named_kg": 536.3,
+   "residual_kg": 0.0,
+   "residual_t": 0.0,
+   "rounding_tolerance_kg": 0.015,
+   "rows": 20,
+   "rows_kg": 536.3
+  },
+  "T-149:HELD_RANGE:HELD_DEFINED:ENDS": {
+   "named_kg": 133.1,
+   "residual_kg": 0.002,
+   "residual_t": 2e-06,
+   "rounding_tolerance_kg": 0.014,
+   "rows": 18,
+   "rows_kg": 133.102
+  },
+  "T-149:HELD_RANGE:HELD_DEFINED:LINKS": {
+   "named_kg": 253.5,
+   "residual_kg": 0.002,
+   "residual_t": 2e-06,
+   "rounding_tolerance_kg": 0.0095,
+   "rows": 9,
+   "rows_kg": 253.502
+  },
+  "T-149:HELD_RANGE:HELD_DEFINED:SIDE": {
+   "named_kg": 25.28,
+   "residual_kg": 0.002,
+   "residual_t": 2e-06,
+   "rounding_tolerance_kg": 0.006,
+   "rows": 2,
+   "rows_kg": 25.282
+  },
+  "T-149:HELD_RANGE:RELEASED:ENDS": {
+   "named_kg": 1610.85,
+   "residual_kg": 0.003,
+   "residual_t": 3e-06,
+   "rounding_tolerance_kg": 0.114,
+   "rows": 218,
+   "rows_kg": 1610.853
+  },
+  "T-149:HELD_RANGE:RELEASED:END_COLUMN": {
+   "named_kg": 13.83,
+   "residual_kg": 0.002,
+   "residual_t": 2e-06,
+   "rounding_tolerance_kg": 0.0085,
+   "rows": 7,
+   "rows_kg": 13.832
+  },
+  "T-149:HELD_RANGE:RELEASED:LINKS": {
+   "named_kg": 1963.12,
+   "residual_kg": -0.003,
+   "residual_t": -3e-06,
+   "rounding_tolerance_kg": 0.0595,
+   "rows": 109,
+   "rows_kg": 1963.117
+  },
+  "T-149:HELD_RANGE:RELEASED:SIDE": {
+   "named_kg": 361.94,
+   "residual_kg": 0.002,
+   "residual_t": 2e-06,
+   "rounding_tolerance_kg": 0.0285,
+   "rows": 47,
+   "rows_kg": 361.942
+  },
+  "T-149:RELEASED:RELEASED:BARS": {
+   "named_kg": 5171.03,
+   "residual_kg": 0.001,
+   "residual_t": 1e-06,
+   "rounding_tolerance_kg": 0.12,
+   "rows": 230,
+   "rows_kg": 5171.031
+  },
+  "T-265": {
+   "named_kg": 1310.96,
+   "residual_kg": 0.0,
+   "residual_t": 0.0,
+   "rounding_tolerance_kg": 0.0395,
+   "rows": 78,
+   "rows_kg": 1310.96
+  },
+  "T-273:COLUMN_RESTATEMENT": {
+   "named_kg": 1435.938,
+   "residual_kg": 0.0,
+   "residual_t": 0.0,
+   "rounding_tolerance_kg": 4e-06,
+   "rows": 7,
+   "rows_kg": 1435.938
+  },
+  "T-273:NET:HELD": {
+   "named_kg": 1019.337185,
+   "residual_kg": 1e-06,
+   "residual_t": 0.0,
+   "rounding_tolerance_kg": 1.7e-05,
+   "rows": 32,
+   "rows_kg": 1019.337186
+  },
+  "T-273:NET:NOT_REQUIRED": {
+   "named_kg": 344.247111,
+   "residual_kg": -1e-06,
+   "residual_t": -0.0,
+   "rounding_tolerance_kg": 1.5e-05,
+   "rows": 28,
+   "rows_kg": 344.24711
+  },
+  "T-280": {
+   "named_kg": 734.781,
+   "residual_kg": -0.0,
+   "residual_t": -0.0,
+   "rounding_tolerance_kg": 0.0135,
+   "rows": 26,
+   "rows_kg": 734.781
+  }
+ },
+ "task": "T-299 read-only reinforcement ledger reconciliation (lane S); RECON_LEDGER_V1",
+ "unit_rule": "kg internally at full precision; t = kg / 1000 once, 6 decimals (OWNER_RULE_REBAR_2026-10-24 s.1)"
+}

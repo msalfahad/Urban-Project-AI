@@ -1,0 +1,18 @@
+{
+ "dxf_sha256_8": "9f9d1179",
+ "kg_items": 497,
+ "rebar_completeness": {
+  "EXPLICIT_NONE": 1,
+  "MISSING_DATA": 232,
+  "OUTSIDE_SCOPE": 1,
+  "PARTIAL_MISSING": 24,
+  "PROVISIONAL_MODEL": 187
+ },
+ "rows": 677,
+ "summary_steel_t": {
+  "PLANNING_BASE": "16.392647170067125",
+  "PLANNING_HIGH": "17.85194620500226",
+  "PLANNING_LOW": "14.480316100432304",
+  "VERIFIED": "0.0"
+ }
+}
