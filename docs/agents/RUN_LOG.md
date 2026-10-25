@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-25T23:20Z | Worker 1 | IDLE | none (run lock held by run 20261025T222043-449-17310 since 2026-10-25T22:20Z) | overlap lock: another Worker 1 run is active; no claim, no change, no quantity | lock
 - 2026-10-25T23:03Z | Verifier | SUCCESS | T-301 Gate A PASS MERGED ac811414; T-293 part 2 Gate A PASS MERGED a1e0c43a; T-302 Gate A PASS MERGED 5c00a0f8 (one engine push) | Research only, no released or candidate V3.0.18 quantity moved. Own re-measures: all 24 footing-membrane outlines 109.850 m2 + LIFT-01 47.430 / 26.730 / 20.700 m2 / 1.035 m3 agree (LIFT_PIT_SCREED whole-countable once the export join reads the inventory); CB5 span 2 formwork double count confirmed on drawing + code (+0.740 / +1.776 m2, r5 via T-199), BAND0049 UNRESOLVED; W17 hole exterior 8.1434 DC, room 8.7414 .. 8.9965 HELD, 1F-11 released 59.4511 LOW by 2.0115 .. 2.2666 m2 (ENGINE_WRONG, T-244). T-299 audit band -0.051 t = density reading in 11 populations (report wording '19 rows' corrected). READY 0; no owner question; ERS: read, s.3 applied | self-check codemap PASS / pytest t061 PASS / freeze PASS; Drive read OK; problem: none
 - 2026-10-25 23:01 UTC | Worker 3 | STARTED | run session_01GjHp5dbg4NtMGhMyHTE2Qw | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-25T22:51Z | Verifier | STARTED | run unknown | repo-attached routine | task state: T-301 READY, T-293 part 2 READY, T-302 READY | self-check pending
