@@ -1,12 +1,35 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
 Plain words, no task numbers. Measured numbers come from SCOREBOARD.md; anything not measured says so.
-Last update: 2026-10-25 14:15 UTC (Lead). Previous version: 2026-10-25 12:15 UTC. The released numbers did not change
+Last update: 2026-10-25 16:15 UTC (Lead). Previous version: 2026-10-25 14:15 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released default V2.9 + route G untouched). Your measure: whole BOQ
-lines independently verified. The real export of the candidate now counts its FIRST whole verified line: the concrete
-slab, 60.28 m3, checked panel by panel (62 of 62). Released: still 0 (nothing is released until you switch the
-default). Waterproofing still cannot count as a whole line (no completeness list yet; that piece is queued). No
-decision for you.
+lines independently verified. The real export of the candidate still counts ONE whole verified line (the concrete slab,
+60.28 m3, 62 of 62 panels). Released: still 0 (nothing is released until you switch the default). No candidate
+quantity moved in these two hours: four checking ledgers were merged and they tell the next integrations exactly what
+to change. No decision for you.
+
+Since 14:15 (newest first; four ledgers checked and merged, one beam end settled from the drawing):
+- Concrete, the curved exterior ground beam: the checker read on the drawing how its two ends close (on the straight
+  beam face and on the columns), so neither earlier reading applies. It is 1.747 m3, the candidate carries 1.735 m3
+  (0.012 m3 short, -0.7 %). Stays "drawing-confirmed" until the next integration carries the correction with its test.
+- Skirting: every skirting line tied to its door and window openings (39 lines). The checker re-measured one first-floor
+  room himself: 15.90 m, agrees exactly. Found: four windows whose sills stand above the floor wrongly stop the skirting
+  (+5.80 m to add), two floor-to-floor glass fronts wrongly kept in the range, a dry skirting line in the wet pantry
+  (the wall tile already covers that base), and no skirting line for the first-floor dressing room. Nothing changed yet;
+  the skirting integration will carry these.
+- Plaster and paint: checked and merged. The curved pool-side window: your 9.870 m2 answer is the WINDOW's measure; the
+  hole it leaves in the curved wall is larger than a straight elevation shows and at most 9.86 m2. The first-floor room
+  line the candidate releases at 59.45 m2 is at least 1.15 m2 too low and becomes held at 60.60 .. 62.34 m2 (a range,
+  not a midpoint). A new piece measures the hole on the curved wall itself so the line can close.
+- Ceilings: checked and merged. The dressing room ceiling (2.97 m2) has no line; the ceiling integration adds it.
+- Reinforcement: the line-by-line basis ledger is merged (measured on printed bars 8.31 t of the 10.25 t; 1.94 t on a
+  convention; slabs a range), but the checker sent back one point: four second-floor column bar lines (0.16 t) were
+  called "drawing-confirmed" although their length uses the roof level that is held for the same columns' concrete.
+  Being corrected (about 15 minutes of work). Your footing steel requirements (counts, lengths, the 5 cm / 7 cm cover,
+  the 874.86 kg footing line) are handed in and first in the checker's queue; footing steel stays held.
+- Stairs: being put into the candidate now (the 2.86 m3 of verified or owner-approved parts as their own lines).
+- Team: every run closed properly; one worker run stood down correctly because the previous one was still working.
+  Nothing new on Drive; no new photos.
 
 Since 12:15 (newest first; four pieces checked and merged, a new candidate of record):
 - Concrete, exterior ground beams (main house): CHECKED AND MERGED into the candidate (13:35). The checker re-measured

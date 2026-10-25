@@ -46,6 +46,17 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+### Lead 2026-10-25 16:15 (from T-292 r2 / T-295 / T-297 r1 / T-296 MERGED, F-T254-01 closed by the Checker; T-299 PART F READY; T-302 new)
+
+| Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |
+|---|---|---|---|---|---|
+| W17 hole in the curved 1F-11 wall (supersedes the 12:15 row's 60.44 .. 70.46 range) | plaster, paint (room side + exterior), MAS.BLOCK deduction; WINDOW W17 keeps its own measure | each wall trade deducts the TRUE arched hole on its own face; the WINDOW line alone carries Q-76 A 9.870 m2 (window measure, never the hole) | hole 8.1239 .. 9.858 m2 (elevation projection .. rectangle over the jambs); 1F-11 HELD BOUNDED 60.6011 .. 62.3352 m2 per code; released 59.4511 ENGINE_WRONG to release | T-292 r2 MERGED a9754a67, Checker 15:32 F-T292-02, Q-76 text, UP-OPEN-ARCH-001 A2 | T-302 (developed hole per face) -> T-244 carries it; blockwork deduction on the centreline from T-302 |
+| 2F column main bars (COL-2F-50 / 51 / 53 / 54, 4 lines 0.159288 t) | rebar, CONC.COLUMN (HELD blank) | rebar follows the member's datum status: D-39 roof datum HELD for the concrete -> bar length BOUND / HELD with D-39 named | r1 labelled DRAWING_CONFIRMED (wrong): r2 re-classes | T-297 r1 MERGED 5408da97, Checker 15:34 F-T297-04 | T-297 r2; lane I does not consume column basis rows until r2 merges |
+| 1F dressing (1F-RFFE7AF, 2.970 m2) across finishes | FIN.CEILING, FIN.SKIRTING, floor, paint | one line per surface: ceiling MISSING (T-284 adds), skirting MISSING (T-246 adds), floor area already in FLOOR.INTERNAL | both omissions confirmed by the Checker (T-295 15:33, T-296 16:08), never 0 | T-295, T-296 MERGED | T-284 / T-246 |
+| Wet-pantry wall base (skirting line L-af6fb2d3) | FIN.SKIRTING, FIN.WALL.TILE | WALL TILE owns the wall base (Q-30 / Q-37 A pantry wet + Q-48 A wet walls fully tiled): skirting NOT_APPLICABLE | proposal accepted by the Checker 16:08 (no line changed yet) | T-296 MERGED 57c31ae4 | T-246 removes / marks the dry skirting line NOT_APPLICABLE |
+| Sill windows above the floor W04 / W14 / W24 / W29 vs skirting thresholds | FIN.SKIRTING, WINDOW | skirting runs under a window whose sill is above the floor (no threshold credit); floor glazing W15 / W16 deduct their width | ENGINE_WRONG +5.802 lm determinate (Checker own W14 1F-01 15.900 lm); W15 / W16 -3.105 lm of range | T-296 MERGED, Checker 16:08 | T-246 |
+| Ring ground beam BAND0043 (update of the 14:15 row) | CONC.GROUND_BEAM, formwork | CONC.GROUND_BEAM; columns 17C0 / 17BD / 17BA deducted as CONC.COLUMN; the north triangle (chord .. beam face 7C3 .. 17C0 west face) belongs to the ring | DRAWING-CONFIRMED at 1.7349 carried; own 1.746943 m3 (+0.012043) | Checker 16:00 | T-255 package carries the correction + regression pair |
+
 ### Lead 2026-10-25 14:15 (from T-254 Gate B / T-298 / T-299 r1 MERGED, V3.0.17 = candidate of record; T-295 READY)
 
 | Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |

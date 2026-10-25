@@ -46,7 +46,15 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
-## Status (Lead, 2026-10-25 14:15; re-estimated each run from what merged and was verified)
+## Status (Lead, 2026-10-25 16:15; re-estimated each run from what merged and was verified)
+
+Lead 2026-10-25 16:15: since 14:15 four research ledgers MERGED (plaster / paint r2, ceilings, rebar basis r1, skirting)
+and the ring GB end rule was closed from the drawing; no candidate line moved, whole verified lines in the export stay
+1. Week 2 (3 Nov): T-266 stairs CLAIMED 15:05 (V3.0.18, Gate B next) -> T-255 (windows + the ring correction) -> T-279
+(blockwork 422.5 m2) -> T-294; estimate T-279 integrated 26 - 27 Oct (unchanged). Second whole line: WP.FOUNDATION
+after T-301 (worker 2 next, 16:39; estimate 26 Oct). Plaster / paint whole line now needs T-302 (W17 developed hole)
+before T-244. Rebar: footing PART F READY, T-297 r2 narrow, T-300 safeguard after it; no steel quantity moves.
+Risk unchanged: each lane I step needs a full Checker record re-issue until T-294 lands.
 
 Lead 2026-10-25 14:15: WEEK 1 TARGET MET (27 Oct target, met 25 Oct 13:54): one verified improvement went through the
 integrated pipeline: T-298 MERGED 274885e6 makes CONC.SLAB (60.280155 m3) the first WHOLE verified line in the real export
