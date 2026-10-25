@@ -1,0 +1,2367 @@
+{
+ "by_support_family": {
+  "LIFT_PIT_FF": 4,
+  "P13_CONFLICT": 2,
+  "P13_ISOLATED": 27,
+  "UNBOUND": 3
+ },
+ "chain": {
+  "egl_m": {
+   "source": "T-200 level table: existing plot level +-0.00 (P7757 LEL x6; ST SH08; SECTION A-A)",
+   "status": "DRAWING-CONFIRMED",
+   "value": 0.0
+  },
+  "gf_ffl_m": {
+   "source": "T-200 / T-206 r2 s.2.1 (GF FFL +1.00)",
+   "status": "DRAWING-CONFIRMED",
+   "value": 1.0
+  },
+  "min_excavation_m": {
+   "source": "ST7757.pdf p.9 boxed note 1; Q-21 C (a limit, never a founding value)",
+   "status": "DRAWING-CONFIRMED (a minimum)",
+   "value": 1.5
+  },
+  "schedule_h_m": {
+   "F": 0.3,
+   "F10": 0.5,
+   "F11": 0.5,
+   "F12": 0.7,
+   "F13": 0.5,
+   "F14": 0.5,
+   "F15": 0.4,
+   "F2": 0.35,
+   "F3": 0.3,
+   "F4": 0.4,
+   "F5": 0.4,
+   "F6": 0.5,
+   "F7": 0.5,
+   "F8": 0.5,
+   "F9": 0.55,
+   "FF": 0.55,
+   "FN": 0.3
+  },
+  "underlay_m": {
+   "LIFT_PIT_FF": {
+    "source": "T-206 r2 s.2.2: p.14 lift detail prints the membrane with no thickness; pit depth to the lift maker (T-204, D-43)",
+    "status": "HELD",
+    "value": null
+   },
+   "P13_CONFLICT": {
+    "source": "T-206 r2 s.2.2 (F and F10 are both p.13 isolated types)",
+    "status": "DRAWING-CONFIRMED",
+    "value": 0.17
+   },
+   "P13_ISOLATED": {
+    "source": "T-206 r2 s.2.2: p.13 both typical details 5 cm screed + 2 cm membrane + 10 cm blinding",
+    "status": "DRAWING-CONFIRMED",
+    "value": 0.17
+   },
+   "UNBOUND": {
+    "source": "support not bound to a footing (S3, STR-COL-001)",
+    "status": "HELD",
+    "value": null
+   }
+  }
+ },
+ "delta_kg_by_family": {
+  "P13_CONFLICT": -4.83,
+  "P13_ISOLATED": -61.718
+ },
+ "delta_kg_restated_rows": -66.548,
+ "findings": [],
+ "foundation_core_rows": 36,
+ "held_by_reason": {
+  "PIT_DEPTH_NOT_PRINTED": 4,
+  "SUPPORT_NOT_BOUND": 3,
+  "TOP_DATUM_NOT_PRINTED": 3
+ },
+ "held_rows": 10,
+ "lap_checks": [
+  {
+   "chain_id": "COLPOS-X01-Y01-2138-7462",
+   "datum": "STOREY JOINT (FFL above the segment)",
+   "delta_kg": 0.0,
+   "floor": "FOUNDATION",
+   "ok": true,
+   "part_id": "SEG-COL-C-X01-Y01-FOUNDATION|LAP_TOP"
+  },
+  {
+   "chain_id": "COLPOS-X01-Y05-2038-13762",
+   "datum": "STOREY JOINT (FFL above the segment)",
+   "delta_kg": 0.0,
+   "floor": "FOUNDATION",
+   "ok": true,
+   "part_id": "SEG-COL-C-X01-Y05-FOUNDATION|LAP_TOP"
+  },
+  {
+   "chain_id": "COLPOS-X02-Y05-4738-13862",
+   "datum": "STOREY JOINT (FFL above the segment)",
+   "delta_kg": 0.0,
+   "floor": "FOUNDATION",
+   "ok": true,
+   "part_id": "SEG-COL-C-X02-Y05-FOUNDATION|LAP_TOP"
+  },
+  {
+   "chain_id": "COLPOS-X06-Y01-14088-7462",
+   "datum": "STOREY JOINT (FFL above the segment)",
+   "delta_kg": 0.0,
+   "floor": "FOUNDATION",
+   "ok": true,
+   "part_id": "SEG-COL-C-X06-Y01-FOUNDATION|LAP_TOP"
+  },
+  {
+   "chain_id": "COLPOS-X16-Y01-33108-7562",
+   "datum": "STOREY JOINT (FFL above the segment)",
+   "delta_kg": 0.0,
+   "floor": "FOUNDATION",
+   "ok": true,
+   "part_id": "SEG-COL-C-X16-Y01-FOUNDATION|LAP_TOP"
+  },
+  {
+   "chain_id": "COLPOS-X09-Y09-19688-17362",
+   "datum": "STOREY JOINT (FFL above the segment)",
+   "delta_kg": 0.0,
+   "floor": "FOUNDATION",
+   "ok": true,
+   "part_id": "SEG-COL-C1-X09-Y09-FOUNDATION|LAP_TOP"
+  },
+  {
+   "chain_id": "COLPOS-X15-Y01-31408-7462",
+   "datum": "STOREY JOINT (FFL above the segment)",
+   "delta_kg": 0.0,
+   "floor": "FOUNDATION",
+   "ok": true,
+   "part_id": "SEG-COL-C10-X15-Y01-FOUNDATION|LAP_TOP"
+  },
+  {
+   "chain_id": "COLPOS-X06-Y04-14438-12062",
+   "datum": "STOREY JOINT (FFL above the segment)",
+   "delta_kg": 0.0,
+   "floor": "FOUNDATION",
+   "ok": true,
+   "part_id": "SEG-COL-C11-X06-Y04-FOUNDATION|LAP_TOP"
+  },
+  {
+   "chain_id": "COLPOS-X?-Y01-17913-7462",
+   "datum": "STOREY JOINT (FFL above the segment)",
+   "delta_kg": 0.0,
+   "floor": "FOUNDATION",
+   "ok": true,
+   "part_id": "SEG-COL-C11-X?-Y01@17913-7462-FOUNDATION|LAP_TOP"
+  },
+  {
+   "chain_id": "COLPOS-X08-Y10-17038-20562",
+   "datum": "STOREY JOINT (FFL above the segment)",
+   "delta_kg": 0.0,
+   "floor": "FOUNDATION",
+   "ok": true,
+   "part_id": "SEG-COL-C2-X08-Y10-FOUNDATION|LAP_TOP"
+  },
+  {
+   "chain_id": "COLPOS-X09-Y07-19688-15662",
+   "datum": "STOREY JOINT (FFL above the segment)",
+   "delta_kg": 0.0,
+   "floor": "FOUNDATION",
+   "ok": true,
+   "part_id": "SEG-COL-C2-X09-Y07-FOUNDATION|LAP_TOP"
+  },
+  {
+   "chain_id": "COLPOS-X09-Y10-19738-20562",
+   "datum": "STOREY JOINT (FFL above the segment)",
+   "delta_kg": 0.0,
+   "floor": "FOUNDATION",
+   "ok": true,
+   "part_id": "SEG-COL-C2-X09-Y10-FOUNDATION|LAP_TOP"
+  },
+  {
+   "chain_id": "COLPOS-X10-Y09-21688-17362",
+   "datum": "STOREY JOINT (FFL above the segment)",
+   "delta_kg": 0.0,
+   "floor": "FOUNDATION",
+   "ok": true,
+   "part_id": "SEG-COL-C2-X10-Y09-FOUNDATION|LAP_TOP"
+  },
+  {
+   "chain_id": "COLPOS-X03-Y04-6338-12062",
+   "datum": "STOREY JOINT (FFL above the segment)",
+   "delta_kg": 0.0,
+   "floor": "FOUNDATION",
+   "ok": true,
+   "part_id": "SEG-COL-C3-X03-Y04-FOUNDATION|LAP_TOP"
+  },
+  {
+   "chain_id": "COLPOS-X04-Y01-7988-7462",
+   "datum": "STOREY JOINT (FFL above the segment)",
+   "delta_kg": 0.0,
+   "floor": "FOUNDATION",
+   "ok": true,
+   "part_id": "SEG-COL-C3-X04-Y01-FOUNDATION|LAP_TOP"
+  },
+  {
+   "chain_id": "COLPOS-X05-Y02-12538-9062",
+   "datum": "STOREY JOINT (FFL above the segment)",
+   "delta_kg": 0.0,
+   "floor": "FOUNDATION",
+   "ok": true,
+   "part_id": "SEG-COL-C3-X05-Y02-FOUNDATION|LAP_TOP"
+  },
+  {
+   "chain_id": "COLPOS-X08-Y09-17038-17362",
+   "datum": "STOREY JOINT (FFL above the segment)",
+   "delta_kg": 0.0,
+   "floor": "FOUNDATION",
+   "ok": true,
+   "part_id": "SEG-COL-C3-X08-Y09-FOUNDATION|LAP_TOP"
+  },
+  {
+   "chain_id": "COLPOS-X12-Y01-24458-7462",
+   "datum": "STOREY JOINT (FFL above the segment)",
+   "delta_kg": 0.0,
+   "floor": "FOUNDATION",
+   "ok": true,
+   "part_id": "SEG-COL-C3-X12-Y01-FOUNDATION|LAP_TOP"
+  },
+  {
+   "chain_id": "COLPOS-X16-Y06-33108-14962",
+   "datum": "STOREY JOINT (FFL above the segment)",
+   "delta_kg": 0.0,
+   "floor": "FOUNDATION",
+   "ok": true,
+   "part_id": "SEG-COL-C3-X16-Y06-FOUNDATION|LAP_TOP"
+  },
+  {
+   "chain_id": "COLPOS-X13-Y10-27458-20662",
+   "datum": "STOREY JOINT (FFL above the segment)",
+   "delta_kg": 0.0,
+   "floor": "FOUNDATION",
+   "ok": true,
+   "part_id": "SEG-COL-C4-X13-Y10-FOUNDATION|LAP_TOP"
+  },
+  {
+   "chain_id": "COLPOS-X15-Y10-31508-20687",
+   "datum": "STOREY JOINT (FFL above the segment)",
+   "delta_kg": 0.0,
+   "floor": "FOUNDATION",
+   "ok": true,
+   "part_id": "SEG-COL-C4-X15-Y10-FOUNDATION|LAP_TOP"
+  },
+  {
+   "chain_id": "COLPOS-X05-Y04-12538-11912",
+   "datum": "STOREY JOINT (FFL above the segment)",
+   "delta_kg": 0.0,
+   "floor": "FOUNDATION",
+   "ok": true,
+   "part_id": "SEG-COL-C5-X05-Y04-FOUNDATION|LAP_TOP"
+  },
+  {
+   "chain_id": "COLPOS-X11-Y10-23558-20662",
+   "datum": "STOREY JOINT (FFL above the segment)",
+   "delta_kg": 0.0,
+   "floor": "FOUNDATION",
+   "ok": true,
+   "part_id": "SEG-COL-C5-X11-Y10-FOUNDATION|LAP_TOP"
+  },
+  {
+   "chain_id": "COLPOS-X14-Y02-27658-8962",
+   "datum": "STOREY JOINT (FFL above the segment)",
+   "delta_kg": 0.0,
+   "floor": "FOUNDATION",
+   "ok": true,
+   "part_id": "SEG-COL-C5-X14-Y02-FOUNDATION|LAP_TOP"
+  },
+  {
+   "chain_id": "COLPOS-X08-Y04-17038-12362",
+   "datum": "STOREY JOINT (FFL above the segment)",
+   "delta_kg": 0.0,
+   "floor": "FOUNDATION",
+   "ok": true,
+   "part_id": "SEG-COL-C6-X08-Y04-FOUNDATION|LAP_TOP"
+  },
+  {
+   "chain_id": "COLPOS-X07-Y?-15888-16162",
+   "datum": "STOREY JOINT (FFL above the segment)",
+   "delta_kg": 0.0,
+   "floor": "FOUNDATION",
+   "ok": true,
+   "part_id": "SEG-COL-C7-X07-Y?@15888-16162-FOUNDATION|LAP_TOP"
+  },
+  {
+   "chain_id": "COLPOS-X12-Y02-24308-8912",
+   "datum": "STOREY JOINT (FFL above the segment)",
+   "delta_kg": 0.0,
+   "floor": "FOUNDATION",
+   "ok": true,
+   "part_id": "SEG-COL-C8-X12-Y02-FOUNDATION|LAP_TOP"
+  },
+  {
+   "chain_id": "COLPOS-X15-Y06-31508-15062",
+   "datum": "STOREY JOINT (FFL above the segment)",
+   "delta_kg": 0.0,
+   "floor": "FOUNDATION",
+   "ok": true,
+   "part_id": "SEG-COL-C8-X15-Y06-FOUNDATION|LAP_TOP"
+  },
+  {
+   "chain_id": "COLPOS-X10-Y07-21713-15912",
+   "datum": "STOREY JOINT (FFL above the segment)",
+   "delta_kg": 0.0,
+   "floor": "FOUNDATION",
+   "ok": true,
+   "part_id": "SEG-COL-C9-X10-Y07-FOUNDATION|LAP_TOP"
+  },
+  {
+   "chain_id": "COLPOS-X13-Y08-27308-16612",
+   "datum": "STOREY JOINT (FFL above the segment)",
+   "delta_kg": 0.0,
+   "floor": "FOUNDATION",
+   "ok": true,
+   "part_id": "SEG-COL-C9-X13-Y08-FOUNDATION|LAP_TOP"
+  },
+  {
+   "chain_id": "COLPOS-X09-Y09-19688-17362",
+   "datum": "STOREY JOINT (FFL above the segment)",
+   "delta_kg": 0.0,
+   "floor": "GF",
+   "ok": true,
+   "part_id": "SEG-COL-C1-X09-Y09-GF|LAP_TOP"
+  },
+  {
+   "chain_id": "COLPOS-X08-Y10-17038-20562",
+   "datum": "STOREY JOINT (FFL above the segment)",
+   "delta_kg": 0.0,
+   "floor": "GF",
+   "ok": true,
+   "part_id": "SEG-COL-C2-X08-Y10-GF|LAP_TOP"
+  },
+  {
+   "chain_id": "COLPOS-X09-Y07-19688-15662",
+   "datum": "STOREY JOINT (FFL above the segment)",
+   "delta_kg": 0.0,
+   "floor": "GF",
+   "ok": true,
+   "part_id": "SEG-COL-C2-X09-Y07-GF|LAP_TOP"
+  },
+  {
+   "chain_id": "COLPOS-X09-Y10-19738-20562",
+   "datum": "STOREY JOINT (FFL above the segment)",
+   "delta_kg": 0.0,
+   "floor": "GF",
+   "ok": true,
+   "part_id": "SEG-COL-C2-X09-Y10-GF|LAP_TOP"
+  },
+  {
+   "chain_id": "COLPOS-X10-Y09-21688-17362",
+   "datum": "STOREY JOINT (FFL above the segment)",
+   "delta_kg": 0.0,
+   "floor": "GF",
+   "ok": true,
+   "part_id": "SEG-COL-C2-X10-Y09-GF|LAP_TOP"
+  },
+  {
+   "chain_id": "COLPOS-X05-Y02-12538-9062",
+   "datum": "STOREY JOINT (FFL above the segment)",
+   "delta_kg": 0.0,
+   "floor": "GF",
+   "ok": true,
+   "part_id": "SEG-COL-C3-X05-Y02-GF|LAP_TOP"
+  },
+  {
+   "chain_id": "COLPOS-X08-Y09-17038-17362",
+   "datum": "STOREY JOINT (FFL above the segment)",
+   "delta_kg": 0.0,
+   "floor": "GF",
+   "ok": true,
+   "part_id": "SEG-COL-C3-X08-Y09-GF|LAP_TOP"
+  },
+  {
+   "chain_id": "COLPOS-X13-Y10-27458-20662",
+   "datum": "STOREY JOINT (FFL above the segment)",
+   "delta_kg": 0.0,
+   "floor": "GF",
+   "ok": true,
+   "part_id": "SEG-COL-C4-X13-Y10-GF|LAP_TOP"
+  },
+  {
+   "chain_id": "COLPOS-X15-Y10-31508-20687",
+   "datum": "STOREY JOINT (FFL above the segment)",
+   "delta_kg": 0.0,
+   "floor": "GF",
+   "ok": true,
+   "part_id": "SEG-COL-C4-X15-Y10-GF|LAP_TOP"
+  },
+  {
+   "chain_id": "COLPOS-X05-Y04-12538-11912",
+   "datum": "STOREY JOINT (FFL above the segment)",
+   "delta_kg": 0.0,
+   "floor": "GF",
+   "ok": true,
+   "part_id": "SEG-COL-C5-X05-Y04-GF|LAP_TOP"
+  },
+  {
+   "chain_id": "COLPOS-X11-Y10-23558-20662",
+   "datum": "STOREY JOINT (FFL above the segment)",
+   "delta_kg": 0.0,
+   "floor": "GF",
+   "ok": true,
+   "part_id": "SEG-COL-C5-X11-Y10-GF|LAP_TOP"
+  },
+  {
+   "chain_id": "COLPOS-X14-Y02-27658-8962",
+   "datum": "STOREY JOINT (FFL above the segment)",
+   "delta_kg": 0.0,
+   "floor": "GF",
+   "ok": true,
+   "part_id": "SEG-COL-C5-X14-Y02-GF|LAP_TOP"
+  },
+  {
+   "chain_id": "COLPOS-X08-Y04-17038-12362",
+   "datum": "STOREY JOINT (FFL above the segment)",
+   "delta_kg": 0.0,
+   "floor": "GF",
+   "ok": true,
+   "part_id": "SEG-COL-C6-X08-Y04-GF|LAP_TOP"
+  },
+  {
+   "chain_id": "COLPOS-X07-Y?-15888-16162",
+   "datum": "STOREY JOINT (FFL above the segment)",
+   "delta_kg": 0.0,
+   "floor": "GF",
+   "ok": true,
+   "part_id": "SEG-COL-C7-X07-Y?@15888-16162-GF|LAP_TOP"
+  },
+  {
+   "chain_id": "COLPOS-X12-Y02-24308-8912",
+   "datum": "STOREY JOINT (FFL above the segment)",
+   "delta_kg": 0.0,
+   "floor": "GF",
+   "ok": true,
+   "part_id": "SEG-COL-C8-X12-Y02-GF|LAP_TOP"
+  },
+  {
+   "chain_id": "COLPOS-X15-Y06-31508-15062",
+   "datum": "STOREY JOINT (FFL above the segment)",
+   "delta_kg": 0.0,
+   "floor": "GF",
+   "ok": true,
+   "part_id": "SEG-COL-C8-X15-Y06-GF|LAP_TOP"
+  },
+  {
+   "chain_id": "COLPOS-X10-Y07-21713-15912",
+   "datum": "STOREY JOINT (FFL above the segment)",
+   "delta_kg": 0.0,
+   "floor": "GF",
+   "ok": true,
+   "part_id": "SEG-COL-C9-X10-Y07-GF|LAP_TOP"
+  },
+  {
+   "chain_id": "COLPOS-X13-Y08-27308-16612",
+   "datum": "STOREY JOINT (FFL above the segment)",
+   "delta_kg": 0.0,
+   "floor": "GF",
+   "ok": true,
+   "part_id": "SEG-COL-C9-X13-Y08-GF|LAP_TOP"
+  },
+  {
+   "chain_id": "COLPOS-X09-Y09-19688-17362",
+   "datum": "STOREY JOINT (FFL above the segment)",
+   "delta_kg": 0.0,
+   "floor": "1F",
+   "ok": true,
+   "part_id": "SEG-COL-C1-X09-Y09-1F|LAP_TOP"
+  },
+  {
+   "chain_id": "COLPOS-X08-Y10-17038-20562",
+   "datum": "STOREY JOINT (FFL above the segment)",
+   "delta_kg": 0.0,
+   "floor": "1F",
+   "ok": true,
+   "part_id": "SEG-COL-C2-X08-Y10-1F|LAP_TOP"
+  },
+  {
+   "chain_id": "COLPOS-X09-Y07-19688-15662",
+   "datum": "STOREY JOINT (FFL above the segment)",
+   "delta_kg": 0.0,
+   "floor": "1F",
+   "ok": true,
+   "part_id": "SEG-COL-C2-X09-Y07-1F|LAP_TOP"
+  },
+  {
+   "chain_id": "COLPOS-X09-Y10-19738-20562",
+   "datum": "STOREY JOINT (FFL above the segment)",
+   "delta_kg": 0.0,
+   "floor": "1F",
+   "ok": true,
+   "part_id": "SEG-COL-C2-X09-Y10-1F|LAP_TOP"
+  },
+  {
+   "chain_id": "COLPOS-X10-Y09-21688-17362",
+   "datum": "STOREY JOINT (FFL above the segment)",
+   "delta_kg": 0.0,
+   "floor": "1F",
+   "ok": true,
+   "part_id": "SEG-COL-C2-X10-Y09-1F|LAP_TOP"
+  },
+  {
+   "chain_id": "COLPOS-X08-Y09-17038-17362",
+   "datum": "STOREY JOINT (FFL above the segment)",
+   "delta_kg": 0.0,
+   "floor": "1F",
+   "ok": true,
+   "part_id": "SEG-COL-C3-X08-Y09-1F|LAP_TOP"
+  },
+  {
+   "chain_id": "COLPOS-X11-Y10-23558-20662",
+   "datum": "STOREY JOINT (FFL above the segment)",
+   "delta_kg": 0.0,
+   "floor": "1F",
+   "ok": true,
+   "part_id": "SEG-COL-C5-X11-Y10-1F|LAP_TOP"
+  },
+  {
+   "chain_id": "COLPOS-X10-Y07-21713-15912",
+   "datum": "STOREY JOINT (FFL above the segment)",
+   "delta_kg": 0.0,
+   "floor": "1F",
+   "ok": true,
+   "part_id": "SEG-COL-C9-X10-Y07-1F|LAP_TOP"
+  }
+ ],
+ "laps_checked": 56,
+ "laps_ok": 56,
+ "ledger": "research/alsenan_column_rebar_s3 (read only, not edited)",
+ "ledger_kg_all": 974.831,
+ "ledger_kg_held_rows": 173.51,
+ "ledger_kg_restated_rows": 801.321,
+ "lower_kg_restated_rows": 734.781,
+ "lower_t_restated_rows": 0.734781,
+ "restated_rows": 26,
+ "rows": [
+  {
+   "bars": 8,
+   "chain_id": "COLPOS-X01-Y01-2138-7462",
+   "delta_cause": "ledger footing underside at -1.50 (formation -1.67); printed chain: footing bottom = formation + 0.17 with formation <= -1.50 -> core 0.17 m shorter at least",
+   "delta_kg_vs_ledger": -2.147,
+   "dia_mm": 16,
+   "footing_ref": "FTG-F-1888-7312",
+   "footing_types": [
+    "F"
+   ],
+   "h_m": [
+    0.3
+   ],
+   "kg_per_m": 1.578336,
+   "ledger": {
+    "basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 300.0 mm (bound footing)",
+    "implied_formation_m": -1.67,
+    "kg": 27.779,
+    "label": "LOWER_BOUND",
+    "label_restated": "CONVENTION_NOT_A_BOUND",
+    "length_m": 2.2
+   },
+   "lower": {
+    "footing_top_max_m": -1.03,
+    "lower_m": 2.03,
+    "reason": "formation at its printed limit -1.50 + underlay 0.17 + H 0.30 -> footing top <= -1.030",
+    "status": "LOWER_BOUND_RESTATED",
+    "upper": "OPEN (no printed lowest formation: p.8 note 12, Q-21 C)"
+   },
+   "lower_kg": 25.632,
+   "lower_length_m": 2.03,
+   "lower_t": 0.025632,
+   "starter": {
+    "length_mm": 1170.0,
+    "state": "PROVISIONAL"
+   },
+   "status": "LOWER_BOUND_RESTATED",
+   "support_family": "P13_ISOLATED",
+   "type": "C",
+   "upper": "OPEN (no printed lowest formation: p.8 note 12, Q-21 C)"
+  },
+  {
+   "bars": 8,
+   "chain_id": "COLPOS-X01-Y05-2038-13762",
+   "delta_cause": "ledger footing underside at -1.50 (formation -1.67); printed chain: footing bottom = formation + 0.17 with formation <= -1.50 -> core 0.17 m shorter at least",
+   "delta_kg_vs_ledger": -2.147,
+   "dia_mm": 16,
+   "footing_ref": "FTG-F-1888-13312",
+   "footing_types": [
+    "F"
+   ],
+   "h_m": [
+    0.3
+   ],
+   "kg_per_m": 1.578336,
+   "ledger": {
+    "basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 300.0 mm (bound footing)",
+    "implied_formation_m": -1.67,
+    "kg": 27.779,
+    "label": "LOWER_BOUND",
+    "label_restated": "CONVENTION_NOT_A_BOUND",
+    "length_m": 2.2
+   },
+   "lower": {
+    "footing_top_max_m": -1.03,
+    "lower_m": 2.03,
+    "reason": "formation at its printed limit -1.50 + underlay 0.17 + H 0.30 -> footing top <= -1.030",
+    "status": "LOWER_BOUND_RESTATED",
+    "upper": "OPEN (no printed lowest formation: p.8 note 12, Q-21 C)"
+   },
+   "lower_kg": 25.632,
+   "lower_length_m": 2.03,
+   "lower_t": 0.025632,
+   "starter": {
+    "length_mm": 1170.0,
+    "state": "PROVISIONAL"
+   },
+   "status": "LOWER_BOUND_RESTATED",
+   "support_family": "P13_ISOLATED",
+   "type": "C",
+   "upper": "OPEN (no printed lowest formation: p.8 note 12, Q-21 C)"
+  },
+  {
+   "bars": 8,
+   "chain_id": "COLPOS-X02-Y05-4738-13862",
+   "delta_cause": "ledger footing underside at -1.50 (formation -1.67); printed chain: footing bottom = formation + 0.17 with formation <= -1.50 -> core 0.17 m shorter at least",
+   "delta_kg_vs_ledger": -2.147,
+   "dia_mm": 16,
+   "footing_ref": "FTG-F-4288-13462",
+   "footing_types": [
+    "F"
+   ],
+   "h_m": [
+    0.3
+   ],
+   "kg_per_m": 1.578336,
+   "ledger": {
+    "basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 300.0 mm (bound footing)",
+    "implied_formation_m": -1.67,
+    "kg": 27.779,
+    "label": "LOWER_BOUND",
+    "label_restated": "CONVENTION_NOT_A_BOUND",
+    "length_m": 2.2
+   },
+   "lower": {
+    "footing_top_max_m": -1.03,
+    "lower_m": 2.03,
+    "reason": "formation at its printed limit -1.50 + underlay 0.17 + H 0.30 -> footing top <= -1.030",
+    "status": "LOWER_BOUND_RESTATED",
+    "upper": "OPEN (no printed lowest formation: p.8 note 12, Q-21 C)"
+   },
+   "lower_kg": 25.632,
+   "lower_length_m": 2.03,
+   "lower_t": 0.025632,
+   "starter": {
+    "length_mm": 1170.0,
+    "state": "PROVISIONAL"
+   },
+   "status": "LOWER_BOUND_RESTATED",
+   "support_family": "P13_ISOLATED",
+   "type": "C",
+   "upper": "OPEN (no printed lowest formation: p.8 note 12, Q-21 C)"
+  },
+  {
+   "bars": 8,
+   "chain_id": "COLPOS-X03-Y04-6338-12062",
+   "delta_cause": "ledger footing underside at -1.50 (formation -1.67); printed chain: footing bottom = formation + 0.17 with formation <= -1.50 -> core 0.17 m shorter at least",
+   "delta_kg_vs_ledger": -2.147,
+   "dia_mm": 16,
+   "footing_ref": "FTG-F3-5538-11362",
+   "footing_types": [
+    "F3"
+   ],
+   "h_m": [
+    0.3
+   ],
+   "kg_per_m": 1.578336,
+   "ledger": {
+    "basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 300.0 mm (bound footing)",
+    "implied_formation_m": -1.67,
+    "kg": 27.779,
+    "label": "LOWER_BOUND",
+    "label_restated": "CONVENTION_NOT_A_BOUND",
+    "length_m": 2.2
+   },
+   "lower": {
+    "footing_top_max_m": -1.03,
+    "lower_m": 2.03,
+    "reason": "formation at its printed limit -1.50 + underlay 0.17 + H 0.30 -> footing top <= -1.030",
+    "status": "LOWER_BOUND_RESTATED",
+    "upper": "OPEN (no printed lowest formation: p.8 note 12, Q-21 C)"
+   },
+   "lower_kg": 25.632,
+   "lower_length_m": 2.03,
+   "lower_t": 0.025632,
+   "starter": {
+    "length_mm": 1170.0,
+    "state": "PROVISIONAL"
+   },
+   "status": "LOWER_BOUND_RESTATED",
+   "support_family": "P13_ISOLATED",
+   "type": "C3",
+   "upper": "OPEN (no printed lowest formation: p.8 note 12, Q-21 C)"
+  },
+  {
+   "bars": 8,
+   "chain_id": "COLPOS-X04-Y01-7988-7462",
+   "delta_cause": "ledger footing underside at -1.50 (formation -1.67); printed chain: footing bottom = formation + 0.17 with formation <= -1.50 -> core 0.17 m shorter at least",
+   "delta_kg_vs_ledger": -2.147,
+   "dia_mm": 16,
+   "footing_ref": "FTG-F15-7088-7312",
+   "footing_types": [
+    "F15"
+   ],
+   "h_m": [
+    0.4
+   ],
+   "kg_per_m": 1.578336,
+   "ledger": {
+    "basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 400.0 mm (bound footing)",
+    "implied_formation_m": -1.67,
+    "kg": 26.516,
+    "label": "LOWER_BOUND",
+    "label_restated": "CONVENTION_NOT_A_BOUND",
+    "length_m": 2.1
+   },
+   "lower": {
+    "footing_top_max_m": -0.93,
+    "lower_m": 1.93,
+    "reason": "formation at its printed limit -1.50 + underlay 0.17 + H 0.40 -> footing top <= -0.930",
+    "status": "LOWER_BOUND_RESTATED",
+    "upper": "OPEN (no printed lowest formation: p.8 note 12, Q-21 C)"
+   },
+   "lower_kg": 24.37,
+   "lower_length_m": 1.93,
+   "lower_t": 0.02437,
+   "starter": {
+    "length_mm": 1270.0,
+    "state": "LOWER_BOUND"
+   },
+   "status": "LOWER_BOUND_RESTATED",
+   "support_family": "P13_ISOLATED",
+   "type": "C3",
+   "upper": "OPEN (no printed lowest formation: p.8 note 12, Q-21 C)"
+  },
+  {
+   "bars": 8,
+   "chain_id": "COLPOS-X05-Y02-12538-9062",
+   "delta_cause": "ledger footing underside at -1.50 (formation -1.67); printed chain: footing bottom = formation + 0.17 with formation <= -1.50 -> core 0.17 m shorter at least",
+   "delta_kg_vs_ledger": -2.147,
+   "dia_mm": 16,
+   "footing_ref": "FTG-F3-11838-8262",
+   "footing_types": [
+    "F3"
+   ],
+   "h_m": [
+    0.3
+   ],
+   "kg_per_m": 1.578336,
+   "ledger": {
+    "basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 300.0 mm (bound footing)",
+    "implied_formation_m": -1.67,
+    "kg": 27.779,
+    "label": "LOWER_BOUND",
+    "label_restated": "CONVENTION_NOT_A_BOUND",
+    "length_m": 2.2
+   },
+   "lower": {
+    "footing_top_max_m": -1.03,
+    "lower_m": 2.03,
+    "reason": "formation at its printed limit -1.50 + underlay 0.17 + H 0.30 -> footing top <= -1.030",
+    "status": "LOWER_BOUND_RESTATED",
+    "upper": "OPEN (no printed lowest formation: p.8 note 12, Q-21 C)"
+   },
+   "lower_kg": 25.632,
+   "lower_length_m": 2.03,
+   "lower_t": 0.025632,
+   "starter": {
+    "length_mm": 1170.0,
+    "state": "PROVISIONAL"
+   },
+   "status": "LOWER_BOUND_RESTATED",
+   "support_family": "P13_ISOLATED",
+   "type": "C3",
+   "upper": "OPEN (no printed lowest formation: p.8 note 12, Q-21 C)"
+  },
+  {
+   "bars": 10,
+   "chain_id": "COLPOS-X05-Y04-12538-11912",
+   "delta_cause": "ledger footing underside at -1.50 (formation -1.67); printed chain: footing bottom = formation + 0.17 with formation <= -1.50 -> core 0.17 m shorter at least",
+   "delta_kg_vs_ledger": -2.683,
+   "dia_mm": 16,
+   "footing_ref": "FTG-F13-11188-10712",
+   "footing_types": [
+    "F13"
+   ],
+   "h_m": [
+    0.5
+   ],
+   "kg_per_m": 1.578336,
+   "ledger": {
+    "basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 500.0 mm (bound footing)",
+    "implied_formation_m": -1.67,
+    "kg": 31.567,
+    "label": "LOWER_BOUND",
+    "label_restated": "CONVENTION_NOT_A_BOUND",
+    "length_m": 2.0
+   },
+   "lower": {
+    "footing_top_max_m": -0.83,
+    "lower_m": 1.83,
+    "reason": "formation at its printed limit -1.50 + underlay 0.17 + H 0.50 -> footing top <= -0.830",
+    "status": "LOWER_BOUND_RESTATED",
+    "upper": "OPEN (no printed lowest formation: p.8 note 12, Q-21 C)"
+   },
+   "lower_kg": 28.884,
+   "lower_length_m": 1.83,
+   "lower_t": 0.028884,
+   "starter": {
+    "length_mm": 1370.0,
+    "state": "PROVISIONAL"
+   },
+   "status": "LOWER_BOUND_RESTATED",
+   "support_family": "P13_ISOLATED",
+   "type": "C5",
+   "upper": "OPEN (no printed lowest formation: p.8 note 12, Q-21 C)"
+  },
+  {
+   "bars": 8,
+   "chain_id": "COLPOS-X06-Y01-14088-7462",
+   "delta_cause": "ledger footing underside at -1.50 (formation -1.67); printed chain: footing bottom = formation + 0.17 with formation <= -1.50 -> core 0.17 m shorter at least",
+   "delta_kg_vs_ledger": -2.147,
+   "dia_mm": 16,
+   "footing_ref": "FTG-F-13638-7312",
+   "footing_types": [
+    "F"
+   ],
+   "h_m": [
+    0.3
+   ],
+   "kg_per_m": 1.578336,
+   "ledger": {
+    "basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 300.0 mm (bound footing)",
+    "implied_formation_m": -1.67,
+    "kg": 27.779,
+    "label": "LOWER_BOUND",
+    "label_restated": "CONVENTION_NOT_A_BOUND",
+    "length_m": 2.2
+   },
+   "lower": {
+    "footing_top_max_m": -1.03,
+    "lower_m": 2.03,
+    "reason": "formation at its printed limit -1.50 + underlay 0.17 + H 0.30 -> footing top <= -1.030",
+    "status": "LOWER_BOUND_RESTATED",
+    "upper": "OPEN (no printed lowest formation: p.8 note 12, Q-21 C)"
+   },
+   "lower_kg": 25.632,
+   "lower_length_m": 2.03,
+   "lower_t": 0.025632,
+   "starter": {
+    "length_mm": 1170.0,
+    "state": "PROVISIONAL"
+   },
+   "status": "LOWER_BOUND_RESTATED",
+   "support_family": "P13_ISOLATED",
+   "type": "C",
+   "upper": "OPEN (no printed lowest formation: p.8 note 12, Q-21 C)"
+  },
+  {
+   "bars": 14,
+   "chain_id": "COLPOS-X06-Y04-14438-12062",
+   "delta_cause": "ledger footing underside at -1.50 (formation -1.67); printed chain: footing bottom = formation + 0.17 with formation <= -1.50 -> core 0.17 m shorter at least",
+   "delta_kg_vs_ledger": -3.756,
+   "dia_mm": 16,
+   "footing_ref": "FTG-F13-11188-10712",
+   "footing_types": [
+    "F13"
+   ],
+   "h_m": [
+    0.5
+   ],
+   "kg_per_m": 1.578336,
+   "ledger": {
+    "basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 500.0 mm (bound footing)",
+    "implied_formation_m": -1.67,
+    "kg": 44.193,
+    "label": "LOWER_BOUND",
+    "label_restated": "CONVENTION_NOT_A_BOUND",
+    "length_m": 2.0
+   },
+   "lower": {
+    "footing_top_max_m": -0.83,
+    "lower_m": 1.83,
+    "reason": "formation at its printed limit -1.50 + underlay 0.17 + H 0.50 -> footing top <= -0.830",
+    "status": "LOWER_BOUND_RESTATED",
+    "upper": "OPEN (no printed lowest formation: p.8 note 12, Q-21 C)"
+   },
+   "lower_kg": 40.437,
+   "lower_length_m": 1.83,
+   "lower_t": 0.040437,
+   "starter": {
+    "length_mm": 1370.0,
+    "state": "PROVISIONAL"
+   },
+   "status": "LOWER_BOUND_RESTATED",
+   "support_family": "P13_ISOLATED",
+   "type": "C11",
+   "upper": "OPEN (no printed lowest formation: p.8 note 12, Q-21 C)"
+  },
+  {
+   "bars": 12,
+   "chain_id": "COLPOS-X07-Y?-15888-16162",
+   "delta_cause": "ledger footing underside at -1.50 (formation -1.67); printed chain: footing bottom = formation + 0.17 with formation <= -1.50 -> core 0.17 m shorter at least",
+   "delta_kg_vs_ledger": -3.22,
+   "dia_mm": 16,
+   "footing_ref": "FTG-F12-13688-14562",
+   "footing_types": [
+    "F12"
+   ],
+   "h_m": [
+    0.7
+   ],
+   "kg_per_m": 1.578336,
+   "ledger": {
+    "basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 700.0 mm (bound footing)",
+    "implied_formation_m": -1.67,
+    "kg": 34.092,
+    "label": "LOWER_BOUND",
+    "label_restated": "CONVENTION_NOT_A_BOUND",
+    "length_m": 1.8
+   },
+   "lower": {
+    "footing_top_max_m": -0.63,
+    "lower_m": 1.63,
+    "reason": "formation at its printed limit -1.50 + underlay 0.17 + H 0.70 -> footing top <= -0.630",
+    "status": "LOWER_BOUND_RESTATED",
+    "upper": "OPEN (no printed lowest formation: p.8 note 12, Q-21 C)"
+   },
+   "lower_kg": 30.872,
+   "lower_length_m": 1.63,
+   "lower_t": 0.030872,
+   "starter": {
+    "length_mm": 1570.0,
+    "state": "PROVISIONAL"
+   },
+   "status": "LOWER_BOUND_RESTATED",
+   "support_family": "P13_ISOLATED",
+   "type": "C7",
+   "upper": "OPEN (no printed lowest formation: p.8 note 12, Q-21 C)"
+  },
+  {
+   "bars": 10,
+   "chain_id": "COLPOS-X08-Y04-17038-12362",
+   "delta_cause": "ledger footing underside at -1.50 (formation -1.67); printed chain: footing bottom = formation + 0.17 with formation <= -1.50 -> core 0.17 m shorter at least",
+   "delta_kg_vs_ledger": -2.683,
+   "dia_mm": 16,
+   "footing_ref": "FTG-F6-15938-11062",
+   "footing_types": [
+    "F6"
+   ],
+   "h_m": [
+    0.5
+   ],
+   "kg_per_m": 1.578336,
+   "ledger": {
+    "basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 500.0 mm (bound footing)",
+    "implied_formation_m": -1.67,
+    "kg": 31.567,
+    "label": "LOWER_BOUND",
+    "label_restated": "CONVENTION_NOT_A_BOUND",
+    "length_m": 2.0
+   },
+   "lower": {
+    "footing_top_max_m": -0.83,
+    "lower_m": 1.83,
+    "reason": "formation at its printed limit -1.50 + underlay 0.17 + H 0.50 -> footing top <= -0.830",
+    "status": "LOWER_BOUND_RESTATED",
+    "upper": "OPEN (no printed lowest formation: p.8 note 12, Q-21 C)"
+   },
+   "lower_kg": 28.884,
+   "lower_length_m": 1.83,
+   "lower_t": 0.028884,
+   "starter": {
+    "length_mm": 1370.0,
+    "state": "PROVISIONAL"
+   },
+   "status": "LOWER_BOUND_RESTATED",
+   "support_family": "P13_ISOLATED",
+   "type": "C6",
+   "upper": "OPEN (no printed lowest formation: p.8 note 12, Q-21 C)"
+  },
+  {
+   "bars": 8,
+   "chain_id": "COLPOS-X08-Y09-17038-17362",
+   "delta_cause": "ledger footing underside at -1.50 (formation -1.67); printed chain: footing bottom = formation + 0.17 with formation <= -1.50 -> core 0.17 m shorter at least",
+   "delta_kg_vs_ledger": -2.147,
+   "dia_mm": 16,
+   "footing_ref": "FTG-F12-13688-14562",
+   "footing_types": [
+    "F12"
+   ],
+   "h_m": [
+    0.7
+   ],
+   "kg_per_m": 1.578336,
+   "ledger": {
+    "basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 700.0 mm (bound footing)",
+    "implied_formation_m": -1.67,
+    "kg": 22.728,
+    "label": "LOWER_BOUND",
+    "label_restated": "CONVENTION_NOT_A_BOUND",
+    "length_m": 1.8
+   },
+   "lower": {
+    "footing_top_max_m": -0.63,
+    "lower_m": 1.63,
+    "reason": "formation at its printed limit -1.50 + underlay 0.17 + H 0.70 -> footing top <= -0.630",
+    "status": "LOWER_BOUND_RESTATED",
+    "upper": "OPEN (no printed lowest formation: p.8 note 12, Q-21 C)"
+   },
+   "lower_kg": 20.582,
+   "lower_length_m": 1.63,
+   "lower_t": 0.020582,
+   "starter": {
+    "length_mm": 1570.0,
+    "state": "PROVISIONAL"
+   },
+   "status": "LOWER_BOUND_RESTATED",
+   "support_family": "P13_ISOLATED",
+   "type": "C3",
+   "upper": "OPEN (no printed lowest formation: p.8 note 12, Q-21 C)"
+  },
+  {
+   "bars": 8,
+   "chain_id": "COLPOS-X08-Y10-17038-20562",
+   "delta_cause": "ledger footing underside at -1.50 (formation -1.67); printed chain: footing bottom = formation + 0.17 with formation <= -1.50 -> core 0.17 m shorter at least",
+   "delta_kg_vs_ledger": -2.147,
+   "dia_mm": 16,
+   "footing_ref": "FTG-F2-16188-19612",
+   "footing_types": [
+    "F2"
+   ],
+   "h_m": [
+    0.35
+   ],
+   "kg_per_m": 1.578336,
+   "ledger": {
+    "basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 350.0 mm (bound footing)",
+    "implied_formation_m": -1.67,
+    "kg": 27.147,
+    "label": "LOWER_BOUND",
+    "label_restated": "CONVENTION_NOT_A_BOUND",
+    "length_m": 2.15
+   },
+   "lower": {
+    "footing_top_max_m": -0.98,
+    "lower_m": 1.98,
+    "reason": "formation at its printed limit -1.50 + underlay 0.17 + H 0.35 -> footing top <= -0.980",
+    "status": "LOWER_BOUND_RESTATED",
+    "upper": "OPEN (no printed lowest formation: p.8 note 12, Q-21 C)"
+   },
+   "lower_kg": 25.001,
+   "lower_length_m": 1.98,
+   "lower_t": 0.025001,
+   "starter": {
+    "length_mm": 1220.0,
+    "state": "PROVISIONAL"
+   },
+   "status": "LOWER_BOUND_RESTATED",
+   "support_family": "P13_ISOLATED",
+   "type": "C2",
+   "upper": "OPEN (no printed lowest formation: p.8 note 12, Q-21 C)"
+  },
+  {
+   "bars": 8,
+   "chain_id": "COLPOS-X09-Y07-19688-15662",
+   "delta_cause": "PIT_DEPTH_NOT_PRINTED: core = GF FFL - pit floor (= FF top, p.14); pit depth to the lift maker (D-43); FF underlay membrane thickness not printed",
+   "delta_kg_vs_ledger": null,
+   "dia_mm": 16,
+   "footing_ref": "FTG-FF-18688-14112",
+   "footing_types": [
+    "FF"
+   ],
+   "h_m": [
+    0.55
+   ],
+   "kg_per_m": 1.578336,
+   "ledger": {
+    "basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 550.0 mm (bound footing)",
+    "implied_formation_m": null,
+    "kg": 24.622,
+    "label": "LOWER_BOUND",
+    "label_restated": "CONVENTION_NOT_A_BOUND",
+    "length_m": 1.95
+   },
+   "lower": {
+    "lower_m": null,
+    "reason": "PIT_DEPTH_NOT_PRINTED: core = GF FFL - pit floor (= FF top, p.14); pit depth to the lift maker (D-43); FF underlay membrane thickness not printed",
+    "status": "HELD",
+    "upper": "HELD"
+   },
+   "lower_kg": null,
+   "lower_length_m": null,
+   "lower_t": null,
+   "starter": {
+    "length_mm": 1420.0,
+    "state": "PROVISIONAL"
+   },
+   "status": "HELD",
+   "support_family": "LIFT_PIT_FF",
+   "type": "C2",
+   "upper": "HELD"
+  },
+  {
+   "bars": 8,
+   "chain_id": "COLPOS-X09-Y09-19688-17362",
+   "delta_cause": "PIT_DEPTH_NOT_PRINTED: core = GF FFL - pit floor (= FF top, p.14); pit depth to the lift maker (D-43); FF underlay membrane thickness not printed",
+   "delta_kg_vs_ledger": null,
+   "dia_mm": 16,
+   "footing_ref": "FTG-FF-18688-14112",
+   "footing_types": [
+    "FF"
+   ],
+   "h_m": [
+    0.55
+   ],
+   "kg_per_m": 1.578336,
+   "ledger": {
+    "basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 550.0 mm (bound footing)",
+    "implied_formation_m": null,
+    "kg": 24.622,
+    "label": "LOWER_BOUND",
+    "label_restated": "CONVENTION_NOT_A_BOUND",
+    "length_m": 1.95
+   },
+   "lower": {
+    "lower_m": null,
+    "reason": "PIT_DEPTH_NOT_PRINTED: core = GF FFL - pit floor (= FF top, p.14); pit depth to the lift maker (D-43); FF underlay membrane thickness not printed",
+    "status": "HELD",
+    "upper": "HELD"
+   },
+   "lower_kg": null,
+   "lower_length_m": null,
+   "lower_t": null,
+   "starter": {
+    "length_mm": 1420.0,
+    "state": "PROVISIONAL"
+   },
+   "status": "HELD",
+   "support_family": "LIFT_PIT_FF",
+   "type": "C1",
+   "upper": "HELD"
+  },
+  {
+   "bars": 8,
+   "chain_id": "COLPOS-X09-Y10-19738-20562",
+   "delta_cause": "ledger footing underside at -1.50 (formation -1.67); printed chain: footing bottom = formation + 0.17 with formation <= -1.50 -> core 0.17 m shorter at least",
+   "delta_kg_vs_ledger": -2.147,
+   "dia_mm": 16,
+   "footing_ref": "FTG-F2-18888-19612",
+   "footing_types": [
+    "F2"
+   ],
+   "h_m": [
+    0.35
+   ],
+   "kg_per_m": 1.578336,
+   "ledger": {
+    "basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 350.0 mm (bound footing)",
+    "implied_formation_m": -1.67,
+    "kg": 27.147,
+    "label": "LOWER_BOUND",
+    "label_restated": "CONVENTION_NOT_A_BOUND",
+    "length_m": 2.15
+   },
+   "lower": {
+    "footing_top_max_m": -0.98,
+    "lower_m": 1.98,
+    "reason": "formation at its printed limit -1.50 + underlay 0.17 + H 0.35 -> footing top <= -0.980",
+    "status": "LOWER_BOUND_RESTATED",
+    "upper": "OPEN (no printed lowest formation: p.8 note 12, Q-21 C)"
+   },
+   "lower_kg": 25.001,
+   "lower_length_m": 1.98,
+   "lower_t": 0.025001,
+   "starter": {
+    "length_mm": 1220.0,
+    "state": "PROVISIONAL"
+   },
+   "status": "LOWER_BOUND_RESTATED",
+   "support_family": "P13_ISOLATED",
+   "type": "C2",
+   "upper": "OPEN (no printed lowest formation: p.8 note 12, Q-21 C)"
+  },
+  {
+   "bars": 14,
+   "chain_id": "COLPOS-X10-Y07-21713-15912",
+   "delta_cause": "PIT_DEPTH_NOT_PRINTED: core = GF FFL - pit floor (= FF top, p.14); pit depth to the lift maker (D-43); FF underlay membrane thickness not printed",
+   "delta_kg_vs_ledger": null,
+   "dia_mm": 16,
+   "footing_ref": "FTG-FF-18688-14112",
+   "footing_types": [
+    "FF"
+   ],
+   "h_m": [
+    0.55
+   ],
+   "kg_per_m": 1.578336,
+   "ledger": {
+    "basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 550.0 mm (bound footing)",
+    "implied_formation_m": null,
+    "kg": 43.089,
+    "label": "LOWER_BOUND",
+    "label_restated": "CONVENTION_NOT_A_BOUND",
+    "length_m": 1.95
+   },
+   "lower": {
+    "lower_m": null,
+    "reason": "PIT_DEPTH_NOT_PRINTED: core = GF FFL - pit floor (= FF top, p.14); pit depth to the lift maker (D-43); FF underlay membrane thickness not printed",
+    "status": "HELD",
+    "upper": "HELD"
+   },
+   "lower_kg": null,
+   "lower_length_m": null,
+   "lower_t": null,
+   "starter": {
+    "length_mm": 1420.0,
+    "state": "PROVISIONAL"
+   },
+   "status": "HELD",
+   "support_family": "LIFT_PIT_FF",
+   "type": "C9",
+   "upper": "HELD"
+  },
+  {
+   "bars": 8,
+   "chain_id": "COLPOS-X10-Y09-21688-17362",
+   "delta_cause": "PIT_DEPTH_NOT_PRINTED: core = GF FFL - pit floor (= FF top, p.14); pit depth to the lift maker (D-43); FF underlay membrane thickness not printed",
+   "delta_kg_vs_ledger": null,
+   "dia_mm": 16,
+   "footing_ref": "FTG-FF-18688-14112",
+   "footing_types": [
+    "FF"
+   ],
+   "h_m": [
+    0.55
+   ],
+   "kg_per_m": 1.578336,
+   "ledger": {
+    "basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 550.0 mm (bound footing)",
+    "implied_formation_m": null,
+    "kg": 24.622,
+    "label": "LOWER_BOUND",
+    "label_restated": "CONVENTION_NOT_A_BOUND",
+    "length_m": 1.95
+   },
+   "lower": {
+    "lower_m": null,
+    "reason": "PIT_DEPTH_NOT_PRINTED: core = GF FFL - pit floor (= FF top, p.14); pit depth to the lift maker (D-43); FF underlay membrane thickness not printed",
+    "status": "HELD",
+    "upper": "HELD"
+   },
+   "lower_kg": null,
+   "lower_length_m": null,
+   "lower_t": null,
+   "starter": {
+    "length_mm": 1420.0,
+    "state": "PROVISIONAL"
+   },
+   "status": "HELD",
+   "support_family": "LIFT_PIT_FF",
+   "type": "C2",
+   "upper": "HELD"
+  },
+  {
+   "bars": 10,
+   "chain_id": "COLPOS-X11-Y10-23558-20662",
+   "delta_cause": "ledger footing underside at -1.50 (formation -1.67); printed chain: footing bottom = formation + 0.17 with formation <= -1.50 -> core 0.17 m shorter at least",
+   "delta_kg_vs_ledger": -2.683,
+   "dia_mm": 16,
+   "footing_ref": "FTG-F5-22358-19612",
+   "footing_types": [
+    "F5"
+   ],
+   "h_m": [
+    0.4
+   ],
+   "kg_per_m": 1.578336,
+   "ledger": {
+    "basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 400.0 mm (bound footing)",
+    "implied_formation_m": -1.67,
+    "kg": 33.145,
+    "label": "LOWER_BOUND",
+    "label_restated": "CONVENTION_NOT_A_BOUND",
+    "length_m": 2.1
+   },
+   "lower": {
+    "footing_top_max_m": -0.93,
+    "lower_m": 1.93,
+    "reason": "formation at its printed limit -1.50 + underlay 0.17 + H 0.40 -> footing top <= -0.930",
+    "status": "LOWER_BOUND_RESTATED",
+    "upper": "OPEN (no printed lowest formation: p.8 note 12, Q-21 C)"
+   },
+   "lower_kg": 30.462,
+   "lower_length_m": 1.93,
+   "lower_t": 0.030462,
+   "starter": {
+    "length_mm": 1270.0,
+    "state": "PROVISIONAL"
+   },
+   "status": "LOWER_BOUND_RESTATED",
+   "support_family": "P13_ISOLATED",
+   "type": "C5",
+   "upper": "OPEN (no printed lowest formation: p.8 note 12, Q-21 C)"
+  },
+  {
+   "bars": 8,
+   "chain_id": "COLPOS-X12-Y01-24458-7462",
+   "delta_cause": "ledger footing underside at -1.50 (formation -1.67); printed chain: footing bottom = formation + 0.17 with formation <= -1.50 -> core 0.17 m shorter at least",
+   "delta_kg_vs_ledger": -2.147,
+   "dia_mm": 16,
+   "footing_ref": "FTG-F14-22408-7312",
+   "footing_types": [
+    "F14"
+   ],
+   "h_m": [
+    0.5
+   ],
+   "kg_per_m": 1.578336,
+   "ledger": {
+    "basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 500.0 mm (bound footing)",
+    "implied_formation_m": -1.67,
+    "kg": 25.253,
+    "label": "LOWER_BOUND",
+    "label_restated": "CONVENTION_NOT_A_BOUND",
+    "length_m": 2.0
+   },
+   "lower": {
+    "footing_top_max_m": -0.83,
+    "lower_m": 1.83,
+    "reason": "formation at its printed limit -1.50 + underlay 0.17 + H 0.50 -> footing top <= -0.830",
+    "status": "LOWER_BOUND_RESTATED",
+    "upper": "OPEN (no printed lowest formation: p.8 note 12, Q-21 C)"
+   },
+   "lower_kg": 23.107,
+   "lower_length_m": 1.83,
+   "lower_t": 0.023107,
+   "starter": {
+    "length_mm": 1370.0,
+    "state": "PROVISIONAL"
+   },
+   "status": "LOWER_BOUND_RESTATED",
+   "support_family": "P13_ISOLATED",
+   "type": "C3",
+   "upper": "OPEN (no printed lowest formation: p.8 note 12, Q-21 C)"
+  },
+  {
+   "bars": 12,
+   "chain_id": "COLPOS-X12-Y02-24308-8912",
+   "delta_cause": "ledger footing underside at -1.50 (formation -1.67); printed chain: footing bottom = formation + 0.17 with formation <= -1.50 -> core 0.17 m shorter at least",
+   "delta_kg_vs_ledger": -3.22,
+   "dia_mm": 16,
+   "footing_ref": "FTG-F14-22408-7312",
+   "footing_types": [
+    "F14"
+   ],
+   "h_m": [
+    0.5
+   ],
+   "kg_per_m": 1.578336,
+   "ledger": {
+    "basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 500.0 mm (bound footing)",
+    "implied_formation_m": -1.67,
+    "kg": 37.88,
+    "label": "LOWER_BOUND",
+    "label_restated": "CONVENTION_NOT_A_BOUND",
+    "length_m": 2.0
+   },
+   "lower": {
+    "footing_top_max_m": -0.83,
+    "lower_m": 1.83,
+    "reason": "formation at its printed limit -1.50 + underlay 0.17 + H 0.50 -> footing top <= -0.830",
+    "status": "LOWER_BOUND_RESTATED",
+    "upper": "OPEN (no printed lowest formation: p.8 note 12, Q-21 C)"
+   },
+   "lower_kg": 34.66,
+   "lower_length_m": 1.83,
+   "lower_t": 0.03466,
+   "starter": {
+    "length_mm": 1370.0,
+    "state": "LOWER_BOUND"
+   },
+   "status": "LOWER_BOUND_RESTATED",
+   "support_family": "P13_ISOLATED",
+   "type": "C8",
+   "upper": "OPEN (no printed lowest formation: p.8 note 12, Q-21 C)"
+  },
+  {
+   "bars": 14,
+   "chain_id": "COLPOS-X13-Y08-27308-16612",
+   "delta_cause": "ledger footing underside at -1.50 (formation -1.67); printed chain: footing bottom = formation + 0.17 with formation <= -1.50 -> core 0.17 m shorter at least",
+   "delta_kg_vs_ledger": -3.756,
+   "dia_mm": 16,
+   "footing_ref": "FTG-F9-25608-15262",
+   "footing_types": [
+    "F9"
+   ],
+   "h_m": [
+    0.55
+   ],
+   "kg_per_m": 1.578336,
+   "ledger": {
+    "basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 550.0 mm (bound footing)",
+    "implied_formation_m": -1.67,
+    "kg": 43.089,
+    "label": "LOWER_BOUND",
+    "label_restated": "CONVENTION_NOT_A_BOUND",
+    "length_m": 1.95
+   },
+   "lower": {
+    "footing_top_max_m": -0.78,
+    "lower_m": 1.78,
+    "reason": "formation at its printed limit -1.50 + underlay 0.17 + H 0.55 -> footing top <= -0.780",
+    "status": "LOWER_BOUND_RESTATED",
+    "upper": "OPEN (no printed lowest formation: p.8 note 12, Q-21 C)"
+   },
+   "lower_kg": 39.332,
+   "lower_length_m": 1.78,
+   "lower_t": 0.039332,
+   "starter": {
+    "length_mm": 1420.0,
+    "state": "PROVISIONAL"
+   },
+   "status": "LOWER_BOUND_RESTATED",
+   "support_family": "P13_ISOLATED",
+   "type": "C9",
+   "upper": "OPEN (no printed lowest formation: p.8 note 12, Q-21 C)"
+  },
+  {
+   "bars": 8,
+   "chain_id": "COLPOS-X13-Y10-27458-20662",
+   "delta_cause": "ledger footing underside at -1.50 (formation -1.67); printed chain: footing bottom = formation + 0.17 with formation <= -1.50 -> core 0.17 m shorter at least",
+   "delta_kg_vs_ledger": -2.147,
+   "dia_mm": 16,
+   "footing_ref": "FTG-F4-26358-19662",
+   "footing_types": [
+    "F4"
+   ],
+   "h_m": [
+    0.4
+   ],
+   "kg_per_m": 1.578336,
+   "ledger": {
+    "basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 400.0 mm (bound footing)",
+    "implied_formation_m": -1.67,
+    "kg": 26.516,
+    "label": "LOWER_BOUND",
+    "label_restated": "CONVENTION_NOT_A_BOUND",
+    "length_m": 2.1
+   },
+   "lower": {
+    "footing_top_max_m": -0.93,
+    "lower_m": 1.93,
+    "reason": "formation at its printed limit -1.50 + underlay 0.17 + H 0.40 -> footing top <= -0.930",
+    "status": "LOWER_BOUND_RESTATED",
+    "upper": "OPEN (no printed lowest formation: p.8 note 12, Q-21 C)"
+   },
+   "lower_kg": 24.37,
+   "lower_length_m": 1.93,
+   "lower_t": 0.02437,
+   "starter": {
+    "length_mm": 1270.0,
+    "state": "PROVISIONAL"
+   },
+   "status": "LOWER_BOUND_RESTATED",
+   "support_family": "P13_ISOLATED",
+   "type": "C4",
+   "upper": "OPEN (no printed lowest formation: p.8 note 12, Q-21 C)"
+  },
+  {
+   "bars": 10,
+   "chain_id": "COLPOS-X14-Y02-27658-8962",
+   "delta_cause": "ledger footing underside at -1.50 (formation -1.67); printed chain: footing bottom = formation + 0.17 with formation <= -1.50 -> core 0.17 m shorter at least",
+   "delta_kg_vs_ledger": -2.683,
+   "dia_mm": 16,
+   "footing_ref": "FTG-F5-26458-7912",
+   "footing_types": [
+    "F5"
+   ],
+   "h_m": [
+    0.4
+   ],
+   "kg_per_m": 1.578336,
+   "ledger": {
+    "basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 400.0 mm (bound footing)",
+    "implied_formation_m": -1.67,
+    "kg": 33.145,
+    "label": "LOWER_BOUND",
+    "label_restated": "CONVENTION_NOT_A_BOUND",
+    "length_m": 2.1
+   },
+   "lower": {
+    "footing_top_max_m": -0.93,
+    "lower_m": 1.93,
+    "reason": "formation at its printed limit -1.50 + underlay 0.17 + H 0.40 -> footing top <= -0.930",
+    "status": "LOWER_BOUND_RESTATED",
+    "upper": "OPEN (no printed lowest formation: p.8 note 12, Q-21 C)"
+   },
+   "lower_kg": 30.462,
+   "lower_length_m": 1.93,
+   "lower_t": 0.030462,
+   "starter": {
+    "length_mm": 1270.0,
+    "state": "PROVISIONAL"
+   },
+   "status": "LOWER_BOUND_RESTATED",
+   "support_family": "P13_ISOLATED",
+   "type": "C5",
+   "upper": "OPEN (no printed lowest formation: p.8 note 12, Q-21 C)"
+  },
+  {
+   "bars": 10,
+   "chain_id": "COLPOS-X15-Y01-31408-7462",
+   "delta_cause": "ledger footing underside at -1.50 (formation -1.67); printed chain: footing bottom = formation + 0.17 with formation <= -1.50 -> core 0.17 m shorter at least",
+   "delta_kg_vs_ledger": -2.683,
+   "dia_mm": 16,
+   "footing_ref": "FTG-CONFLICT_F_F10-30008-7312",
+   "footing_types": [
+    "F",
+    "F10"
+   ],
+   "h_m": [
+    0.3,
+    0.5
+   ],
+   "kg_per_m": 1.578336,
+   "ledger": {
+    "basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 500.0 mm (bound footing)",
+    "implied_formation_m": -1.67,
+    "kg": 31.567,
+    "label": "LOWER_BOUND",
+    "label_restated": "CONVENTION_NOT_A_BOUND",
+    "length_m": 2.0
+   },
+   "lower": {
+    "footing_top_max_m": -0.83,
+    "lower_m": 1.83,
+    "reason": "formation at its printed limit -1.50 + underlay 0.17 + H 0.50 -> footing top <= -0.830",
+    "status": "LOWER_BOUND_RESTATED",
+    "upper": "OPEN (no printed lowest formation: p.8 note 12, Q-21 C)"
+   },
+   "lower_kg": 28.884,
+   "lower_length_m": 1.83,
+   "lower_t": 0.028884,
+   "starter": {
+    "length_mm": null,
+    "state": "BLOCKED"
+   },
+   "status": "LOWER_BOUND_RESTATED",
+   "support_family": "P13_CONFLICT",
+   "type": "C10",
+   "upper": "OPEN (no printed lowest formation: p.8 note 12, Q-21 C)"
+  },
+  {
+   "bars": 12,
+   "chain_id": "COLPOS-X15-Y06-31508-15062",
+   "delta_cause": "ledger footing underside at -1.50 (formation -1.67); printed chain: footing bottom = formation + 0.17 with formation <= -1.50 -> core 0.17 m shorter at least",
+   "delta_kg_vs_ledger": -3.22,
+   "dia_mm": 16,
+   "footing_ref": "FTG-F8-29258-13262",
+   "footing_types": [
+    "F8"
+   ],
+   "h_m": [
+    0.5
+   ],
+   "kg_per_m": 1.578336,
+   "ledger": {
+    "basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 500.0 mm (bound footing)",
+    "implied_formation_m": -1.67,
+    "kg": 37.88,
+    "label": "LOWER_BOUND",
+    "label_restated": "CONVENTION_NOT_A_BOUND",
+    "length_m": 2.0
+   },
+   "lower": {
+    "footing_top_max_m": -0.83,
+    "lower_m": 1.83,
+    "reason": "formation at its printed limit -1.50 + underlay 0.17 + H 0.50 -> footing top <= -0.830",
+    "status": "LOWER_BOUND_RESTATED",
+    "upper": "OPEN (no printed lowest formation: p.8 note 12, Q-21 C)"
+   },
+   "lower_kg": 34.66,
+   "lower_length_m": 1.83,
+   "lower_t": 0.03466,
+   "starter": {
+    "length_mm": 1370.0,
+    "state": "PROVISIONAL"
+   },
+   "status": "LOWER_BOUND_RESTATED",
+   "support_family": "P13_ISOLATED",
+   "type": "C8",
+   "upper": "OPEN (no printed lowest formation: p.8 note 12, Q-21 C)"
+  },
+  {
+   "bars": 8,
+   "chain_id": "COLPOS-X15-Y10-31508-20687",
+   "delta_cause": "ledger footing underside at -1.50 (formation -1.67); printed chain: footing bottom = formation + 0.17 with formation <= -1.50 -> core 0.17 m shorter at least",
+   "delta_kg_vs_ledger": -2.147,
+   "dia_mm": 16,
+   "footing_ref": "FTG-F4-30408-19687",
+   "footing_types": [
+    "F4"
+   ],
+   "h_m": [
+    0.4
+   ],
+   "kg_per_m": 1.578336,
+   "ledger": {
+    "basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 400.0 mm (bound footing)",
+    "implied_formation_m": -1.67,
+    "kg": 26.516,
+    "label": "LOWER_BOUND",
+    "label_restated": "CONVENTION_NOT_A_BOUND",
+    "length_m": 2.1
+   },
+   "lower": {
+    "footing_top_max_m": -0.93,
+    "lower_m": 1.93,
+    "reason": "formation at its printed limit -1.50 + underlay 0.17 + H 0.40 -> footing top <= -0.930",
+    "status": "LOWER_BOUND_RESTATED",
+    "upper": "OPEN (no printed lowest formation: p.8 note 12, Q-21 C)"
+   },
+   "lower_kg": 24.37,
+   "lower_length_m": 1.93,
+   "lower_t": 0.02437,
+   "starter": {
+    "length_mm": 1270.0,
+    "state": "PROVISIONAL"
+   },
+   "status": "LOWER_BOUND_RESTATED",
+   "support_family": "P13_ISOLATED",
+   "type": "C4",
+   "upper": "OPEN (no printed lowest formation: p.8 note 12, Q-21 C)"
+  },
+  {
+   "bars": 4,
+   "chain_id": "COLPOS-X15-Y?-31208-15726",
+   "delta_cause": "TOP_DATUM_NOT_PRINTED: the column stops in the foundation storey; its bars end in the closing ground beam / slab, whose structural top (GF FFL minus an unprinted build-up) is not printed; the ledger runs the core up to GF FFL, through the floor build-up, and then adds 40 D of ANCHORAGE_TOP. Bottom end restated (footing top) as information only, never summed",
+   "delta_kg_vs_ledger": null,
+   "dia_mm": 14,
+   "footing_ref": "FTG-F8-29258-13262",
+   "footing_types": [
+    "F8"
+   ],
+   "h_m": [
+    0.5
+   ],
+   "kg_per_m": 1.208414,
+   "ledger": {
+    "basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 500.0 mm (bound footing)",
+    "implied_formation_m": -1.67,
+    "kg": 9.667,
+    "label": "LOWER_BOUND",
+    "label_restated": "CONVENTION_NOT_A_BOUND",
+    "length_m": 2.0
+   },
+   "lower": {
+    "core_to_gf_ffl_if_top_were_ffl_m": 1.83,
+    "footing_top_max_m": -0.83,
+    "lower_m": null,
+    "reason": "TOP_DATUM_NOT_PRINTED: the column stops in the foundation storey; its bars end in the closing ground beam / slab, whose structural top (GF FFL minus an unprinted build-up) is not printed; the ledger runs the core up to GF FFL, through the floor build-up, and then adds 40 D of ANCHORAGE_TOP. Bottom end restated (footing top) as information only, never summed",
+    "status": "HELD",
+    "upper": "HELD"
+   },
+   "lower_kg": null,
+   "lower_length_m": null,
+   "lower_t": null,
+   "starter": {
+    "length_mm": 1290.0,
+    "state": "PROVISIONAL"
+   },
+   "status": "HELD",
+   "support_family": "P13_ISOLATED",
+   "type": "CN",
+   "upper": "HELD"
+  },
+  {
+   "bars": 8,
+   "chain_id": "COLPOS-X16-Y01-33108-7562",
+   "delta_cause": "ledger footing underside at -1.50 (formation -1.67); printed chain: footing bottom = formation + 0.17 with formation <= -1.50 -> core 0.17 m shorter at least",
+   "delta_kg_vs_ledger": -2.147,
+   "dia_mm": 16,
+   "footing_ref": "FTG-CONFLICT_F_F10-30008-7312",
+   "footing_types": [
+    "F",
+    "F10"
+   ],
+   "h_m": [
+    0.3,
+    0.5
+   ],
+   "kg_per_m": 1.578336,
+   "ledger": {
+    "basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 500.0 mm (bound footing)",
+    "implied_formation_m": -1.67,
+    "kg": 25.253,
+    "label": "LOWER_BOUND",
+    "label_restated": "CONVENTION_NOT_A_BOUND",
+    "length_m": 2.0
+   },
+   "lower": {
+    "footing_top_max_m": -0.83,
+    "lower_m": 1.83,
+    "reason": "formation at its printed limit -1.50 + underlay 0.17 + H 0.50 -> footing top <= -0.830",
+    "status": "LOWER_BOUND_RESTATED",
+    "upper": "OPEN (no printed lowest formation: p.8 note 12, Q-21 C)"
+   },
+   "lower_kg": 23.107,
+   "lower_length_m": 1.83,
+   "lower_t": 0.023107,
+   "starter": {
+    "length_mm": null,
+    "state": "BLOCKED"
+   },
+   "status": "LOWER_BOUND_RESTATED",
+   "support_family": "P13_CONFLICT",
+   "type": "C",
+   "upper": "OPEN (no printed lowest formation: p.8 note 12, Q-21 C)"
+  },
+  {
+   "bars": 4,
+   "chain_id": "COLPOS-X16-Y03-33108-11312",
+   "conditional_lower_if_p13_footing": {
+    "h_m": 0.7,
+    "kg": 7.879,
+    "length_m": 1.63,
+    "status": "CONDITIONAL (not used)"
+   },
+   "delta_cause": "SUPPORT_NOT_BOUND: no footing bound to the column (stub / pedestal question open)",
+   "delta_kg_vs_ledger": null,
+   "dia_mm": 14,
+   "footing_ref": "FT:RB-93c296ab668f4cce",
+   "footing_types": [],
+   "h_m": null,
+   "kg_per_m": 1.208414,
+   "ledger": {
+    "basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 700.0 mm (deepest scheduled footing - unbound)",
+    "implied_formation_m": null,
+    "kg": 8.701,
+    "label": "BOUNDED",
+    "label_restated": "CONVENTION_NOT_A_BOUND",
+    "length_m": 1.8
+   },
+   "lower": {
+    "lower_m": null,
+    "reason": "SUPPORT_NOT_BOUND: no footing bound to the column (stub / pedestal question open)",
+    "status": "HELD",
+    "upper": "HELD"
+   },
+   "lower_kg": null,
+   "lower_length_m": null,
+   "lower_t": null,
+   "starter": {
+    "length_mm": null,
+    "state": "BLOCKED"
+   },
+   "status": "HELD",
+   "support_family": "UNBOUND",
+   "type": "CN",
+   "upper": "HELD"
+  },
+  {
+   "bars": 8,
+   "chain_id": "COLPOS-X16-Y06-33108-14962",
+   "delta_cause": "ledger footing underside at -1.50 (formation -1.67); printed chain: footing bottom = formation + 0.17 with formation <= -1.50 -> core 0.17 m shorter at least",
+   "delta_kg_vs_ledger": -2.147,
+   "dia_mm": 16,
+   "footing_ref": "FTG-F8-29258-13262",
+   "footing_types": [
+    "F8"
+   ],
+   "h_m": [
+    0.5
+   ],
+   "kg_per_m": 1.578336,
+   "ledger": {
+    "basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 500.0 mm (bound footing)",
+    "implied_formation_m": -1.67,
+    "kg": 25.253,
+    "label": "LOWER_BOUND",
+    "label_restated": "CONVENTION_NOT_A_BOUND",
+    "length_m": 2.0
+   },
+   "lower": {
+    "footing_top_max_m": -0.83,
+    "lower_m": 1.83,
+    "reason": "formation at its printed limit -1.50 + underlay 0.17 + H 0.50 -> footing top <= -0.830",
+    "status": "LOWER_BOUND_RESTATED",
+    "upper": "OPEN (no printed lowest formation: p.8 note 12, Q-21 C)"
+   },
+   "lower_kg": 23.107,
+   "lower_length_m": 1.83,
+   "lower_t": 0.023107,
+   "starter": {
+    "length_mm": 1370.0,
+    "state": "PROVISIONAL"
+   },
+   "status": "LOWER_BOUND_RESTATED",
+   "support_family": "P13_ISOLATED",
+   "type": "C3",
+   "upper": "OPEN (no printed lowest formation: p.8 note 12, Q-21 C)"
+  },
+  {
+   "bars": 14,
+   "chain_id": "COLPOS-X?-Y01-17913-7462",
+   "delta_cause": "ledger footing underside at -1.50 (formation -1.67); printed chain: footing bottom = formation + 0.17 with formation <= -1.50 -> core 0.17 m shorter at least",
+   "delta_kg_vs_ledger": -3.756,
+   "dia_mm": 16,
+   "footing_ref": "FTG-F11-16163-7312",
+   "footing_types": [
+    "F11"
+   ],
+   "h_m": [
+    0.5
+   ],
+   "kg_per_m": 1.578336,
+   "ledger": {
+    "basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 500.0 mm (bound footing)",
+    "implied_formation_m": -1.67,
+    "kg": 44.193,
+    "label": "LOWER_BOUND",
+    "label_restated": "CONVENTION_NOT_A_BOUND",
+    "length_m": 2.0
+   },
+   "lower": {
+    "footing_top_max_m": -0.83,
+    "lower_m": 1.83,
+    "reason": "formation at its printed limit -1.50 + underlay 0.17 + H 0.50 -> footing top <= -0.830",
+    "status": "LOWER_BOUND_RESTATED",
+    "upper": "OPEN (no printed lowest formation: p.8 note 12, Q-21 C)"
+   },
+   "lower_kg": 40.437,
+   "lower_length_m": 1.83,
+   "lower_t": 0.040437,
+   "starter": {
+    "length_mm": 1370.0,
+    "state": "PROVISIONAL"
+   },
+   "status": "LOWER_BOUND_RESTATED",
+   "support_family": "P13_ISOLATED",
+   "type": "C11",
+   "upper": "OPEN (no printed lowest formation: p.8 note 12, Q-21 C)"
+  },
+  {
+   "bars": 4,
+   "chain_id": "COLPOS-X?-Y10-31108-20498",
+   "delta_cause": "TOP_DATUM_NOT_PRINTED: the column stops in the foundation storey; its bars end in the closing ground beam / slab, whose structural top (GF FFL minus an unprinted build-up) is not printed; the ledger runs the core up to GF FFL, through the floor build-up, and then adds 40 D of ANCHORAGE_TOP. Bottom end restated (footing top) as information only, never summed",
+   "delta_kg_vs_ledger": null,
+   "dia_mm": 14,
+   "footing_ref": "FTG-F4-30408-19687",
+   "footing_types": [
+    "F4"
+   ],
+   "h_m": [
+    0.4
+   ],
+   "kg_per_m": 1.208414,
+   "ledger": {
+    "basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 400.0 mm (bound footing)",
+    "implied_formation_m": -1.67,
+    "kg": 10.151,
+    "label": "LOWER_BOUND",
+    "label_restated": "CONVENTION_NOT_A_BOUND",
+    "length_m": 2.1
+   },
+   "lower": {
+    "core_to_gf_ffl_if_top_were_ffl_m": 1.93,
+    "footing_top_max_m": -0.93,
+    "lower_m": null,
+    "reason": "TOP_DATUM_NOT_PRINTED: the column stops in the foundation storey; its bars end in the closing ground beam / slab, whose structural top (GF FFL minus an unprinted build-up) is not printed; the ledger runs the core up to GF FFL, through the floor build-up, and then adds 40 D of ANCHORAGE_TOP. Bottom end restated (footing top) as information only, never summed",
+    "status": "HELD",
+    "upper": "HELD"
+   },
+   "lower_kg": null,
+   "lower_length_m": null,
+   "lower_t": null,
+   "starter": {
+    "length_mm": 1190.0,
+    "state": "PROVISIONAL"
+   },
+   "status": "HELD",
+   "support_family": "P13_ISOLATED",
+   "type": "CN",
+   "upper": "HELD"
+  },
+  {
+   "bars": 4,
+   "chain_id": "COLPOS-X?-Y?-24058-12787",
+   "conditional_lower_if_p13_footing": {
+    "h_m": 0.7,
+    "kg": 7.879,
+    "length_m": 1.63,
+    "status": "CONDITIONAL (not used)"
+   },
+   "delta_cause": "SUPPORT_NOT_BOUND: no footing bound to the column (stub / pedestal question open)",
+   "delta_kg_vs_ledger": null,
+   "dia_mm": 14,
+   "footing_ref": "FT:RB-d03ae1c0114c9c48",
+   "footing_types": [],
+   "h_m": null,
+   "kg_per_m": 1.208414,
+   "ledger": {
+    "basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 700.0 mm (deepest scheduled footing - unbound)",
+    "implied_formation_m": null,
+    "kg": 8.701,
+    "label": "BOUNDED",
+    "label_restated": "CONVENTION_NOT_A_BOUND",
+    "length_m": 1.8
+   },
+   "lower": {
+    "lower_m": null,
+    "reason": "SUPPORT_NOT_BOUND: no footing bound to the column (stub / pedestal question open)",
+    "status": "HELD",
+    "upper": "HELD"
+   },
+   "lower_kg": null,
+   "lower_length_m": null,
+   "lower_t": null,
+   "starter": {
+    "length_mm": null,
+    "state": "BLOCKED"
+   },
+   "status": "HELD",
+   "support_family": "UNBOUND",
+   "type": "CN",
+   "upper": "HELD"
+  },
+  {
+   "bars": 4,
+   "chain_id": "COLPOS-X?-Y?-28583-12787",
+   "conditional_lower_if_p13_footing": {
+    "h_m": 0.7,
+    "kg": 7.879,
+    "length_m": 1.63,
+    "status": "CONDITIONAL (not used)"
+   },
+   "delta_cause": "SUPPORT_NOT_BOUND: no footing bound to the column (stub / pedestal question open)",
+   "delta_kg_vs_ledger": null,
+   "dia_mm": 14,
+   "footing_ref": "FT:RB-4f1fedf6f22d413e",
+   "footing_types": [],
+   "h_m": null,
+   "kg_per_m": 1.208414,
+   "ledger": {
+    "basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 700.0 mm (deepest scheduled footing - unbound)",
+    "implied_formation_m": null,
+    "kg": 8.701,
+    "label": "BOUNDED",
+    "label_restated": "CONVENTION_NOT_A_BOUND",
+    "length_m": 1.8
+   },
+   "lower": {
+    "lower_m": null,
+    "reason": "SUPPORT_NOT_BOUND: no footing bound to the column (stub / pedestal question open)",
+    "status": "HELD",
+    "upper": "HELD"
+   },
+   "lower_kg": null,
+   "lower_length_m": null,
+   "lower_t": null,
+   "starter": {
+    "length_mm": null,
+    "state": "BLOCKED"
+   },
+   "status": "HELD",
+   "support_family": "UNBOUND",
+   "type": "CN",
+   "upper": "HELD"
+  },
+  {
+   "bars": 4,
+   "chain_id": "COLPOS-X?-Y?-29108-18112",
+   "delta_cause": "TOP_DATUM_NOT_PRINTED: the column stops in the foundation storey; its bars end in the closing ground beam / slab, whose structural top (GF FFL minus an unprinted build-up) is not printed; the ledger runs the core up to GF FFL, through the floor build-up, and then adds 40 D of ANCHORAGE_TOP. Bottom end restated (footing top) as information only, never summed",
+   "delta_kg_vs_ledger": null,
+   "dia_mm": 14,
+   "footing_ref": "FTG-FN-28608-17612",
+   "footing_types": [
+    "FN"
+   ],
+   "h_m": [
+    0.3
+   ],
+   "kg_per_m": 1.208414,
+   "ledger": {
+    "basis": "GF FFL +1.00 m minus founding level <= -1.50 m minus footing depth 300.0 mm (bound footing)",
+    "implied_formation_m": -1.67,
+    "kg": 10.634,
+    "label": "LOWER_BOUND",
+    "label_restated": "CONVENTION_NOT_A_BOUND",
+    "length_m": 2.2
+   },
+   "lower": {
+    "core_to_gf_ffl_if_top_were_ffl_m": 2.03,
+    "footing_top_max_m": -1.03,
+    "lower_m": null,
+    "reason": "TOP_DATUM_NOT_PRINTED: the column stops in the foundation storey; its bars end in the closing ground beam / slab, whose structural top (GF FFL minus an unprinted build-up) is not printed; the ledger runs the core up to GF FFL, through the floor build-up, and then adds 40 D of ANCHORAGE_TOP. Bottom end restated (footing top) as information only, never summed",
+    "status": "HELD",
+    "upper": "HELD"
+   },
+   "lower_kg": null,
+   "lower_length_m": null,
+   "lower_t": null,
+   "starter": {
+    "length_mm": 1090.0,
+    "state": "PROVISIONAL"
+   },
+   "status": "HELD",
+   "support_family": "P13_ISOLATED",
+   "type": "CN",
+   "upper": "HELD"
+  }
+ ],
+ "rule": "R-COL-CORE-DATUM-1 (proposed): a column's foundation core starts at the footing top; footing top = formation + printed underlay + H; with the formation printed only as a limit the core has a LOWER bound (formation at the limit) and an OPEN upper bound; underlay not printed for the support -> HELD; never measured from the formation, never a ledger convention called a bound",
+ "starter_checks": [
+  {
+   "chain_id": "COLPOS-X01-Y01-2138-7462",
+   "datum": "FOOTING BODY (bottom cover from the footing underside, projection above the footing top); independent of the formation",
+   "delta_kg": 0.0,
+   "length_mm": 1170.0,
+   "ok": true,
+   "rule_length_mm": 1170.0,
+   "state": "PROVISIONAL"
+  },
+  {
+   "chain_id": "COLPOS-X01-Y05-2038-13762",
+   "datum": "FOOTING BODY (bottom cover from the footing underside, projection above the footing top); independent of the formation",
+   "delta_kg": 0.0,
+   "length_mm": 1170.0,
+   "ok": true,
+   "rule_length_mm": 1170.0,
+   "state": "PROVISIONAL"
+  },
+  {
+   "chain_id": "COLPOS-X02-Y05-4738-13862",
+   "datum": "FOOTING BODY (bottom cover from the footing underside, projection above the footing top); independent of the formation",
+   "delta_kg": 0.0,
+   "length_mm": 1170.0,
+   "ok": true,
+   "rule_length_mm": 1170.0,
+   "state": "PROVISIONAL"
+  },
+  {
+   "chain_id": "COLPOS-X06-Y01-14088-7462",
+   "datum": "FOOTING BODY (bottom cover from the footing underside, projection above the footing top); independent of the formation",
+   "delta_kg": 0.0,
+   "length_mm": 1170.0,
+   "ok": true,
+   "rule_length_mm": 1170.0,
+   "state": "PROVISIONAL"
+  },
+  {
+   "chain_id": "COLPOS-X16-Y01-33108-7562",
+   "datum": "FOOTING BODY (bottom cover from the footing underside, projection above the footing top); independent of the formation",
+   "delta_kg": 0.0,
+   "length_mm": null,
+   "ok": true,
+   "rule_length_mm": null,
+   "state": "BLOCKED"
+  },
+  {
+   "chain_id": "COLPOS-X09-Y09-19688-17362",
+   "datum": "FOOTING BODY (bottom cover from the footing underside, projection above the footing top); independent of the formation",
+   "delta_kg": 0.0,
+   "length_mm": 1420.0,
+   "ok": true,
+   "rule_length_mm": 1420.0,
+   "state": "PROVISIONAL"
+  },
+  {
+   "chain_id": "COLPOS-X15-Y01-31408-7462",
+   "datum": "FOOTING BODY (bottom cover from the footing underside, projection above the footing top); independent of the formation",
+   "delta_kg": 0.0,
+   "length_mm": null,
+   "ok": true,
+   "rule_length_mm": null,
+   "state": "BLOCKED"
+  },
+  {
+   "chain_id": "COLPOS-X06-Y04-14438-12062",
+   "datum": "FOOTING BODY (bottom cover from the footing underside, projection above the footing top); independent of the formation",
+   "delta_kg": 0.0,
+   "length_mm": 1370.0,
+   "ok": true,
+   "rule_length_mm": 1370.0,
+   "state": "PROVISIONAL"
+  },
+  {
+   "chain_id": "COLPOS-X?-Y01-17913-7462",
+   "datum": "FOOTING BODY (bottom cover from the footing underside, projection above the footing top); independent of the formation",
+   "delta_kg": 0.0,
+   "length_mm": 1370.0,
+   "ok": true,
+   "rule_length_mm": 1370.0,
+   "state": "PROVISIONAL"
+  },
+  {
+   "chain_id": "COLPOS-X08-Y10-17038-20562",
+   "datum": "FOOTING BODY (bottom cover from the footing underside, projection above the footing top); independent of the formation",
+   "delta_kg": 0.0,
+   "length_mm": 1220.0,
+   "ok": true,
+   "rule_length_mm": 1220.0,
+   "state": "PROVISIONAL"
+  },
+  {
+   "chain_id": "COLPOS-X09-Y07-19688-15662",
+   "datum": "FOOTING BODY (bottom cover from the footing underside, projection above the footing top); independent of the formation",
+   "delta_kg": 0.0,
+   "length_mm": 1420.0,
+   "ok": true,
+   "rule_length_mm": 1420.0,
+   "state": "PROVISIONAL"
+  },
+  {
+   "chain_id": "COLPOS-X09-Y10-19738-20562",
+   "datum": "FOOTING BODY (bottom cover from the footing underside, projection above the footing top); independent of the formation",
+   "delta_kg": 0.0,
+   "length_mm": 1220.0,
+   "ok": true,
+   "rule_length_mm": 1220.0,
+   "state": "PROVISIONAL"
+  },
+  {
+   "chain_id": "COLPOS-X10-Y09-21688-17362",
+   "datum": "FOOTING BODY (bottom cover from the footing underside, projection above the footing top); independent of the formation",
+   "delta_kg": 0.0,
+   "length_mm": 1420.0,
+   "ok": true,
+   "rule_length_mm": 1420.0,
+   "state": "PROVISIONAL"
+  },
+  {
+   "chain_id": "COLPOS-X03-Y04-6338-12062",
+   "datum": "FOOTING BODY (bottom cover from the footing underside, projection above the footing top); independent of the formation",
+   "delta_kg": 0.0,
+   "length_mm": 1170.0,
+   "ok": true,
+   "rule_length_mm": 1170.0,
+   "state": "PROVISIONAL"
+  },
+  {
+   "chain_id": "COLPOS-X04-Y01-7988-7462",
+   "datum": "FOOTING BODY (bottom cover from the footing underside, projection above the footing top); independent of the formation",
+   "delta_kg": 0.0,
+   "length_mm": 1270.0,
+   "ok": true,
+   "rule_length_mm": 1270.0,
+   "state": "LOWER_BOUND"
+  },
+  {
+   "chain_id": "COLPOS-X05-Y02-12538-9062",
+   "datum": "FOOTING BODY (bottom cover from the footing underside, projection above the footing top); independent of the formation",
+   "delta_kg": 0.0,
+   "length_mm": 1170.0,
+   "ok": true,
+   "rule_length_mm": 1170.0,
+   "state": "PROVISIONAL"
+  },
+  {
+   "chain_id": "COLPOS-X08-Y09-17038-17362",
+   "datum": "FOOTING BODY (bottom cover from the footing underside, projection above the footing top); independent of the formation",
+   "delta_kg": 0.0,
+   "length_mm": 1570.0,
+   "ok": true,
+   "rule_length_mm": 1570.0,
+   "state": "PROVISIONAL"
+  },
+  {
+   "chain_id": "COLPOS-X12-Y01-24458-7462",
+   "datum": "FOOTING BODY (bottom cover from the footing underside, projection above the footing top); independent of the formation",
+   "delta_kg": 0.0,
+   "length_mm": 1370.0,
+   "ok": true,
+   "rule_length_mm": 1370.0,
+   "state": "PROVISIONAL"
+  },
+  {
+   "chain_id": "COLPOS-X16-Y06-33108-14962",
+   "datum": "FOOTING BODY (bottom cover from the footing underside, projection above the footing top); independent of the formation",
+   "delta_kg": 0.0,
+   "length_mm": 1370.0,
+   "ok": true,
+   "rule_length_mm": 1370.0,
+   "state": "PROVISIONAL"
+  },
+  {
+   "chain_id": "COLPOS-X13-Y10-27458-20662",
+   "datum": "FOOTING BODY (bottom cover from the footing underside, projection above the footing top); independent of the formation",
+   "delta_kg": 0.0,
+   "length_mm": 1270.0,
+   "ok": true,
+   "rule_length_mm": 1270.0,
+   "state": "PROVISIONAL"
+  },
+  {
+   "chain_id": "COLPOS-X15-Y10-31508-20687",
+   "datum": "FOOTING BODY (bottom cover from the footing underside, projection above the footing top); independent of the formation",
+   "delta_kg": 0.0,
+   "length_mm": 1270.0,
+   "ok": true,
+   "rule_length_mm": 1270.0,
+   "state": "PROVISIONAL"
+  },
+  {
+   "chain_id": "COLPOS-X05-Y04-12538-11912",
+   "datum": "FOOTING BODY (bottom cover from the footing underside, projection above the footing top); independent of the formation",
+   "delta_kg": 0.0,
+   "length_mm": 1370.0,
+   "ok": true,
+   "rule_length_mm": 1370.0,
+   "state": "PROVISIONAL"
+  },
+  {
+   "chain_id": "COLPOS-X11-Y10-23558-20662",
+   "datum": "FOOTING BODY (bottom cover from the footing underside, projection above the footing top); independent of the formation",
+   "delta_kg": 0.0,
+   "length_mm": 1270.0,
+   "ok": true,
+   "rule_length_mm": 1270.0,
+   "state": "PROVISIONAL"
+  },
+  {
+   "chain_id": "COLPOS-X14-Y02-27658-8962",
+   "datum": "FOOTING BODY (bottom cover from the footing underside, projection above the footing top); independent of the formation",
+   "delta_kg": 0.0,
+   "length_mm": 1270.0,
+   "ok": true,
+   "rule_length_mm": 1270.0,
+   "state": "PROVISIONAL"
+  },
+  {
+   "chain_id": "COLPOS-X08-Y04-17038-12362",
+   "datum": "FOOTING BODY (bottom cover from the footing underside, projection above the footing top); independent of the formation",
+   "delta_kg": 0.0,
+   "length_mm": 1370.0,
+   "ok": true,
+   "rule_length_mm": 1370.0,
+   "state": "PROVISIONAL"
+  },
+  {
+   "chain_id": "COLPOS-X07-Y?-15888-16162",
+   "datum": "FOOTING BODY (bottom cover from the footing underside, projection above the footing top); independent of the formation",
+   "delta_kg": 0.0,
+   "length_mm": 1570.0,
+   "ok": true,
+   "rule_length_mm": 1570.0,
+   "state": "PROVISIONAL"
+  },
+  {
+   "chain_id": "COLPOS-X12-Y02-24308-8912",
+   "datum": "FOOTING BODY (bottom cover from the footing underside, projection above the footing top); independent of the formation",
+   "delta_kg": 0.0,
+   "length_mm": 1370.0,
+   "ok": true,
+   "rule_length_mm": 1370.0,
+   "state": "LOWER_BOUND"
+  },
+  {
+   "chain_id": "COLPOS-X15-Y06-31508-15062",
+   "datum": "FOOTING BODY (bottom cover from the footing underside, projection above the footing top); independent of the formation",
+   "delta_kg": 0.0,
+   "length_mm": 1370.0,
+   "ok": true,
+   "rule_length_mm": 1370.0,
+   "state": "PROVISIONAL"
+  },
+  {
+   "chain_id": "COLPOS-X10-Y07-21713-15912",
+   "datum": "FOOTING BODY (bottom cover from the footing underside, projection above the footing top); independent of the formation",
+   "delta_kg": 0.0,
+   "length_mm": 1420.0,
+   "ok": true,
+   "rule_length_mm": 1420.0,
+   "state": "PROVISIONAL"
+  },
+  {
+   "chain_id": "COLPOS-X13-Y08-27308-16612",
+   "datum": "FOOTING BODY (bottom cover from the footing underside, projection above the footing top); independent of the formation",
+   "delta_kg": 0.0,
+   "length_mm": 1420.0,
+   "ok": true,
+   "rule_length_mm": 1420.0,
+   "state": "PROVISIONAL"
+  },
+  {
+   "chain_id": "COLPOS-X15-Y?-31208-15726",
+   "datum": "FOOTING BODY (bottom cover from the footing underside, projection above the footing top); independent of the formation",
+   "delta_kg": 0.0,
+   "length_mm": 1290.0,
+   "ok": true,
+   "rule_length_mm": 1290.0,
+   "state": "PROVISIONAL"
+  },
+  {
+   "chain_id": "COLPOS-X16-Y03-33108-11312",
+   "datum": "FOOTING BODY (bottom cover from the footing underside, projection above the footing top); independent of the formation",
+   "delta_kg": 0.0,
+   "length_mm": null,
+   "ok": true,
+   "rule_length_mm": null,
+   "state": "BLOCKED"
+  },
+  {
+   "chain_id": "COLPOS-X?-Y10-31108-20498",
+   "datum": "FOOTING BODY (bottom cover from the footing underside, projection above the footing top); independent of the formation",
+   "delta_kg": 0.0,
+   "length_mm": 1190.0,
+   "ok": true,
+   "rule_length_mm": 1190.0,
+   "state": "PROVISIONAL"
+  },
+  {
+   "chain_id": "COLPOS-X?-Y?-24058-12787",
+   "datum": "FOOTING BODY (bottom cover from the footing underside, projection above the footing top); independent of the formation",
+   "delta_kg": 0.0,
+   "length_mm": null,
+   "ok": true,
+   "rule_length_mm": null,
+   "state": "BLOCKED"
+  },
+  {
+   "chain_id": "COLPOS-X?-Y?-28583-12787",
+   "datum": "FOOTING BODY (bottom cover from the footing underside, projection above the footing top); independent of the formation",
+   "delta_kg": 0.0,
+   "length_mm": null,
+   "ok": true,
+   "rule_length_mm": null,
+   "state": "BLOCKED"
+  },
+  {
+   "chain_id": "COLPOS-X?-Y?-29108-18112",
+   "datum": "FOOTING BODY (bottom cover from the footing underside, projection above the footing top); independent of the formation",
+   "delta_kg": 0.0,
+   "length_mm": 1090.0,
+   "ok": true,
+   "rule_length_mm": 1090.0,
+   "state": "PROVISIONAL"
+  }
+ ],
+ "starters_checked": 36,
+ "starters_ok": 36,
+ "t273_finding_reconciled": {
+  "note": "T-273 r2 applied the p.13 0.17 m underlay to all 31 chains with a known footing. Withdrawn here: the 4 lift chains on FF (p.14 prints the membrane with no thickness: FF underlay HELD, T-206 r2; footing top = pit floor, pit depth HELD, D-43) and the 3 CN columns on p.13 footings that stop in the foundation storey (top datum = closing member top, not printed). Added: the 2 F / F10 conflict chains it left out, restated on max H (valid for both readings).",
+  "of_which_lift_ff_withdrawn_kg": -10.196,
+  "of_which_restated_p13_continuing_kg": -61.713,
+  "of_which_stopping_cn_withdrawn_kg": -2.465,
+  "recomputed_same_formula_kg": -74.374,
+  "rounding_cause": "T-273 r2 took kg/m from the ledger's row kg (rounded to 3 decimals) / total length; here kg/m = pi/4 d^2 x 7850 unrounded (the ledger's own method)",
+  "rounding_residual_kg": -0.007,
+  "t273_chains": 31,
+  "t273_kg": -74.381
+ },
+ "task": "T-280 (lane S): foundation column cores on the verified level chain",
+ "unit_mass": {
+  "density_kg_m3": 7850,
+  "method": "EXACT_DENSITY"
+ }
+}
