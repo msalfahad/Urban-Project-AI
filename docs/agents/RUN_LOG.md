@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-25T04:51Z | Verifier | STARTED | run session_01GfxzQEADkKAYhzqGtSarUT | repo-attached routine | task state: READY T-281, T-283, T-288, T-257 (per run log) | self-check pending
 - 2026-10-25T04:39Z | Worker 2 | STARTED | run session_01Fz79WTpF5QTkr4nsrexK3Z | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-25T04:23Z | Worker 2 | SUCCESS | T-288 READY (agents/task-T-288 @ 901a071a) | Blockwork register v4: 7.9131 m of 6 GF walls under the sunken panels now HELD on the drop d (D-41): established basis A 449.5934 -> 449.6007 - 7.9131 x d m2 (d=0 upper bound; determinate 402.7988 m2 on 31 walls, VERIFIED 297.847 on 18, GF-W12 withdrawn); own clip agrees <=1 mm on 4 walls, GF-W16 B5 edge corrected (2.9489 -> 2.9500), GF-W31/W32 junction difference named; Checker corrections GF-W01 +0.0095, 1F-W06 -0.0035, 1F-W05 B23; residual 0; rule R-T288-1 + 16 tests; full suite NEW 0 (395 = baseline 04d34378); Drive read OK | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: none
 - 2026-10-25T04:20Z | Worker 1 | STARTED | run session_0171PkwPC8HmAmYCzQMahdJc | repo-attached routine | task state: none yet | self-check pending
