@@ -6,7 +6,9 @@ Pins (by hand from the merged ledgers):
   (DRAWING-CONFIRMED), before 8.164161 m3 at the interior depths (13 lines 6.333538 + 3 lines 1.830623);
   annex 8 CONFLICT + court 3 HELD blank; 2F columns 8 HELD blank (3.528 before); annex columns 5 HELD blank + CB5
   C3 0.650 + C5 0.780 = 1.430 rebased (T-287); 5 NOT_PRESENT upper columns (T-256, 2.268 m3 on route G, blocked in the
-  candidate); the boundary ground beam added HELD (band 3.5256 m3 only in the scenario); ST-03 left to T-266.
+  candidate); the planted 1F column PC-1F-B carried at its verified solid 0.20 x 0.50 x 4.20 = 0.420 m3 (T-248; the
+  candidate held it whole on D-26, which holds only the owner split); the boundary ground beam added HELD (band 3.5256
+  m3 only in the scenario); ST-03 left to T-266.
 """
 
 from __future__ import annotations
@@ -37,6 +39,13 @@ def test_inputs_load_and_groups(doc):
     assert g["COL_2F"] == {"lines": 8, "before": 3.528, "released_after": 0.0, "held_lines": 8}
     assert g["COL_ANNEX_7"] == {"lines": 7, "before": 3.7125, "released_after": 1.43, "held_lines": 5}
     assert g["COL_NOT_PRESENT"] == {"lines": 5, "before": 0.0, "released_after": 0.0, "held_lines": 0}
+    assert g["COL_PLANTED_1F"] == {"lines": 1, "before": 0.0, "released_after": 0.42, "held_lines": 0}
+
+
+def test_planted_pc_1f_b_carried_at_its_verified_solid(doc):
+    r = [x for x in doc["records"] if x["task"] == "T-248"][0]
+    assert (r["line_id"], r["value"], r["status"]) == ("L-31a0424bd0efcc93efba", 0.42, "VERIFIED")
+    assert r["verified_by"].startswith("Verifier 2026-10-24 03:19")
 
 
 def test_main_house_exterior_total(doc):
@@ -80,5 +89,5 @@ def test_st03_left_and_boundary_added_held(doc):
 
 
 def test_every_source_is_merged(doc):
-    assert {s["task"] for s in doc["sources"]} == {"T-289", "T-287", "T-256", "T-253"}
+    assert {s["task"] for s in doc["sources"]} == {"T-289", "T-287", "T-256", "T-248", "T-253"}
     assert all(len(s["merge_commit"]) == 40 for s in doc["sources"])

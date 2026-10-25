@@ -84,6 +84,9 @@ def sources():
              "merge_commit": "74c966b1955a55ae2ad81322fdb60ab85c9a35bc",
              "checker_run": "Verifier 2026-10-24 07:52 UTC (Gate A PASS; 5 upper column lines NOT_PRESENT, "
                             "DRAWING-CONFIRMED absence)"},
+            {"file": "research/agents_t248/LEDGER_T248.csv", "sha256": sha(T248), "task": "T-248",
+             "merge_commit": "567dc9725314063377f5a08cca8ec365d3576229",
+             "checker_run": "Verifier 2026-10-24 03:19 UTC (Gate A PASS; 28 / 28 closable columns re-measured)"},
             {"file": "research/agents_t253/LEDGER_T253.csv", "sha256": sha(T253), "task": "T-253",
              "merge_commit": "dff9cb798da523510b5aece3b40c95887bdd01d7",
              "checker_run": "Verifier 2026-10-24 07:20 UTC (Gate A PASS; own 8.8140 m2 x 0.40)"}]
@@ -205,6 +208,33 @@ def not_present(candidate_ids):
     return out
 
 
+# T-248 (MERGED 567dc972, Verifier 2026-10-24 03:19; SCOREBOARD CLOSABLE row 11: 28 / 28 closable columns re-measured by
+# the Checker): the planted 1F column PC-1F-B solid 0.20 x 0.50 x 4.20 = 0.420 m3 is DRAWING-CONFIRMED and verified as a
+# component; the candidate holds the whole line on D-26, which holds only the OWNER SPLIT (column <= 0.345 / joint >=
+# 0.059), not the solid: 'ENGINE over-holds' (T-248 s.6). PC-1F-A (0.588) is already carried at its verified volume.
+PLANTED = {"line_id": "L-31a0424bd0efcc93efba", "element_id": "HL:PLANTED_COLUMN:PC-1F-B:CONCRETE", "value": 0.42,
+           "before": {"evidence_state": "BLOCKED_RFI", "measured_net": None}}
+
+
+def planted():
+    rows = {r["member"]: r for r in csv.DictReader(T248.open(encoding="utf-8"))}
+    r = rows["FFRS:69D"]
+    assert (r["kind"], r["status"], float(r["m3_lo"]), float(r["m3_hi"])) == ("PLANTED", "DRAWING-CONFIRMED", 0.42, 0.42)
+    return {"line_id": PLANTED["line_id"], "item_code": COL, "element_id": PLANTED["element_id"],
+            "group": "COL_PLANTED_1F", "task": "T-248", "physical_element": "COLUMN planted 1F PC-1F-B (P.C 20x50 on B26)",
+            "before": dict(PLANTED["before"]), "engine_basis": "held whole on D-26 (the owner split, not the solid)",
+            "action": "REBASE", "value": PLANTED["value"],
+            "support": {"kind": "TWO_PRINTED_LEVELS",
+                        "printed": "GFRS 386 -> FFRS 69D 500 x 200, text 548 'P.C 20x50', on B26 65x85: carrying beam "
+                                   "top +5.45 to slab top +9.65 = 4.20 m (as PC-1F-A: the column owns the joint)",
+                        "sheets": "ST p.5 (FFRS), ST p.4 (GFRS), ST7757 dxf.dxf"},
+            "status": "VERIFIED",
+            "verified_by": "Verifier 2026-10-24 03:19 (T-248 Gate A PASS; SCOREBOARD CLOSABLE row 11: 28 / 28 closable "
+                           "columns re-measured by the Checker, 0.0 %)",
+            "formula": "0.20 x 0.50 = 0.10 m2 x (9.65 - 5.45 = 4.20) = 0.420 m3 solid; owner split column <= 0.345 / "
+                       "joint >= 0.059 stays HELD on D-26 (a view, not this line)"}
+
+
 def build(candidate_ids=None):
     cand = json.loads(CAND.read_text(encoding="utf-8"))
     before = _before(cand)
@@ -217,6 +247,7 @@ def build(candidate_ids=None):
             continue
         recs.append(record(row, before))
     recs += not_present(candidate_ids or NOT_DRAWN_IDS)
+    recs.append(planted())
     groups = {}
     for r in recs:
         d = groups.setdefault(r["group"], {"lines": 0, "before": 0.0, "released_after": 0.0, "held_lines": 0})
