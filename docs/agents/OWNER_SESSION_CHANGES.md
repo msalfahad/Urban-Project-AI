@@ -7,6 +7,7 @@ conflicts with something you planned, say so in your report to the main chat ins
 
 | UTC time | What changed | Where | Why |
 |---|---|---|---|
+| 2026-10-25 10:33 | OWNER: reinforcement Stage A reviewed; no rebar code until approval; 16.39 t = provisional subtotal (not a bound); no adding ledgers before reconciliation; Checker CB11 review; RFI S19-S22 added | BOARD.md note, CLARIFICATIONS_CONSULTANT_2026-10-24.md | Owner's words in the main chat |
 | 2026-10-25 04:38 | OWNER: hourly cadence kept provisionally (review in 24-48 h); packages under ~50 min without cutting verification; deterministic BOQ_LINES required before T-245 acceptance (cause named, invalidation tests); one whole-line definition; RFIs continue unsent | BOARD.md (note, T-245) | Owner's words in the main chat |
 | 2026-10-24 23:57 | OWNER: downgrade-only record rules; unsupported-basis rule on the four named quantities and future confirmed cases; RFI package held for Lead verification and priority split; structural revision UNCONFIRMED disclosure in T-245; order unchanged | BOARD.md (note, T-245), CLARIFICATIONS_CONSULTANT_2026-10-24.md | Owner's words in the main chat |
 | 2026-10-24 23:53 | OWNER: Q-76 answered A (9.870 m2 opening area; D-53 open); T-245 (f) wrong-basis lines HELD / CONFLICT in the contractual view; Scout reduced priority (no pause); consolidated RFI package | OWNER_QUESTIONS.md (Q-76), BOARD.md (note, T-245, T-255), CLARIFICATIONS_CONSULTANT_2026-10-24.md | Owner's words in the main chat |
