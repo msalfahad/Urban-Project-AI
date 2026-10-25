@@ -2,6 +2,96 @@
 
 OWNER 23:57: do not send. LEAD: verify every row against all drawings, schedules and sections, remove any the sources answer, and split into (1) PRIORITY RFIs that each unlock a complete BOQ line (name the line) and (2) REMAINING unresolved questions; keep each row's drawing reference, missing / conflicting information, affected quantity and the clarification required.
 
+## 0. LEAD VERIFICATION 2026-10-25 00:15-00:40 UTC (Lead run session_01M9dY6Pw5JtHHF5a4sbrrDw) — STILL NOT TO BE SENT
+
+STATUS: PACKAGE NOT READY TO SEND. 30 rows checked; 0 removed (no row is answered by the sources); 2 search notes closed
+(S14, S5); 4 missing rows found (G1-G4 below: blockers the Checker names on a closable line that this package does not
+carry); 9 PRIORITY RFIs formed, 3 of them complete only after their missing row is drafted (P-7, P-8, P-9). The owner
+sends nothing until T-287 / T-286 return the G rows with their sheet search.
+
+METHOD AND LIMIT. Each row was checked against the merged, Checker-verified evidence of the sheets it cites: the task
+ledgers on the working branch (research/agents_t*), the designer register (DESIGNER_CLARIFICATIONS.md), the element
+register and the Checker's CLOSABLE LINES table (SCOREBOARD v2), i.e. "was every relevant sheet read by a merged, Checker-
+verified task, and does the sheet print the answer". The Lead did NOT re-open the drawings himself; where a row's search
+rests on no merged task, it goes back to an investigation task (none of the 30 does; the G rows do). The unlock test for a
+PRIORITY RFI: the Checker's CLOSABLE LINES table names no blocker for that line other than the RFI's rows (internal
+agent work excepted and named).
+
+ROW CHECKS (search complete = every cited sheet read by a merged, Checker-verified task):
+- S1 Q-21: complete (T-206 MERGED d5df7d1f: 0.17 m build-up VERIFIED; ST p.1 note 1 fixes only a minimum excavation). Kept.
+- S2 Q-28: complete (T-233 MERGED 2ecb5bf0, T-253 MERGED dff9cb79: band C1 0.20 own 44.07 m / 3.5256 m3 on the measured
+  part; section and crossing level not printed). Kept.
+- S3 Q-31 F10+F: complete (T-233, T-239 MERGED 3c9b1484: one outline, two tags). Kept.
+- S4 D-16 / D-63 / D-66: complete (T-217 MERGED 65fef8fa, T-256 MERGED 74c966b1: no third member-specific print for any of
+  the 15). Kept. (SCOREBOARD row 11 cites "D-64" among the 15: a typo for D-66; D-64 is the P-1F-01 opening.)
+- S5 D-02 / D-27: search CLOSED by T-277 MERGED 9446dfcb (Checker 22:59 own band widths): 137 runs = 105 AGREE / 7 CONFLICT,
+  exactly D-02 + D-27, no new conflict; CB10 label stands beside the 0.20 outer strip, so D-02 also asks WHICH band is CB10;
+  CONC.BEAM on the 7 runs drawn 5.4421 vs scheduled 5.7665 m3 (-0.3244), beam soffit 8.7140 vs 9.0072 m2. Update the row's
+  quantity cell to these figures. Kept.
+- S6 D-03 / D-04 / D-05 / D-28: complete (T-110 MERGED 575df66, T-252 MERGED b37be82d). Kept.
+- S7 D-44: complete (T-119 r2 MERGED 0f32ff8: slab plan and schedule agree on 20 x 120; no section). Kept.
+- S8 D-35 / D-33 / D-34: complete (T-138 MERGED 0dec24c, T-242 MERGED 9455a63d, T-264). Carries the UNSUPPORTED-BASIS
+  quantity exterior ground beams 11.930 m3 (owner 23:57). Kept.
+- S9, S10, S12: complete (T-136, T-138, T-152, T-148 merged). Kept.
+- S11 D-57 + pool steps: complete (T-183 merged; no step / ladder on any sheet). Kept, split: steps -> P-2, bars -> remaining.
+- S13 D-41: complete (T-139 MERGED ea91168). Kept. Note for the Checker: CONC.SLAB is whole-line VERIFIED without the step
+  edges; confirm which line carries the step-edge concrete before this row names a line.
+- S14 D-43: SEARCH OPEN CLOSED. T-204 MERGED 4fbf7627 (ST p.14 'DETAIL OF LIFT WITH ISOLATED FOOTING': pit depth "As Per Lift
+  Manufactures recommendations") and T-227 MERGED ebce3d97 (Checker 21:05: tie beam required at GF, its section and the
+  3.00 m datum printed nowhere). Split: tie-beam section -> structural designer; pit depth -> LIFT SUPPLIER (not the
+  designer). Kept.
+- S15 D-14 / D-15: complete (T-100, T-233). Add to the row: the SB3 / F3 strap soffit level (T-230: HELD 0.0295 .. 0.2683 m3,
+  "D-15 narrowed") so the footing line can close. Kept.
+- S16 D-11: raised by T-107 (REJECTED) but the note is carried by the merged registers T-225 48e6f08a / T-228 bf4dd2a9
+  (black PROVISIONAL on those rows). Complete. Kept.
+- S17 D-12: complete (T-226 MERGED a04f8e21). Kept.
+- S18 D-61: complete (T-195 MERGED 06c2b045). No quantity; document control: the T-245 export states the structural
+  revision UNCONFIRMED (owner 23:57 (4)). Kept, remaining.
+- A1, A2, A4, A5, A7, A10, A12: complete (T-112, T-128, T-144, T-147, T-091, T-143, T-161, T-164, T-194, T-195, T-201, T-207,
+  T-222 merged). A2: door heights carry ASSUMED - OWNER-APPROVED Q-55 C in the closed doors line (12.760 m2 / 6 pcs): the
+  question stays for plaster / paint nets, it blocks no doors quantity. A5 carries two UNSUPPORTED-BASIS quantities: 2F
+  columns 3.528 m3 (finished roof +13.90) and annex columns 3.7125 m3 (4.50 m). A12: add D-10 (tile sizes / finishes schedule).
+- A3 D-53: complete (T-161, T-207, T-232 merged). Q-76 answered A 23:53 (W17 9.870 m2 opening area); D-53 is now the ONLY
+  blocker of the windows line. Split: W02 -> P-1; main door / SX-01 -> remaining.
+- A6 D-08 / C-ST-4: complete (T-111, T-184, T-189, T-192, T-258 merged). Carries UNSUPPORTED-BASIS ST-03 0.948 m3. Kept.
+- A8 D-24 / D-25 / D-26: raised by T-121 (REJECTED) but re-measured by T-127 MERGED 5315d48 and T-110 / T-145 merged.
+  Complete. Split: D-26 projection bands -> P-6 (a named CONC.BEAM blocker); soffits -> remaining.
+- A9 D-48 / D-55: complete (T-153, T-157 merged). D-48 -> P-9.
+- A11 D-01: complete (T-103 merged). Kept, remaining.
+
+MISSING ROWS (blockers the Checker names on a closable line; draft each with its sheet search before sending):
+- G1 (structural, CONC.COLUMN): CB5 line, GF C5 (35F) and C3 (365) and their necks where the annex ground slab (+0.25) meets
+  the main ground slab (+0.95): the column / neck boundary is not printed (T-248 MERGED 567dc972, Checker 03:19: 1.2375 ..
+  1.4300 m3 HELD, "designer item proposed", never filed). -> T-287.
+- G2 (structural, CONC.STAIR_DOME): C-ST-3 the ST-01 winder turn MS1-T (5 risers on section A-A, 4 wedges on the plans, no
+  winder outline or soffit) and the unprinted waist thickness per flight (ST-03 "thickness UNRESOLVED") (T-184, T-258). -> T-287.
+- G3 (structural, CONC.STAIR_DOME): tower dome, rings and drums: architectural only, no structural detail (DOME-3; T-185
+  MERGED 94e39ee6, element register DOME-B row). -> T-287.
+- G4 (architect, floor area): the GF pantry doorway zone about 1.100 m2, carried "RFI" in T-240 WP2 (MERGED d07af773) with no
+  question text on any register. -> T-286.
+
+### 0.1 PRIORITY RFIs (each unlocks one complete BOQ line; Alsenan)
+
+| P | Line unlocked (unit) | Rows to send together | Quantity now held / conflicting | Unlock evidence (Checker CLOSABLE LINES) | Ready |
+|---|---|---|---|---|---|
+| P-1 | Windows (aluminium), m2 and pcs | A3 part: D-53 W02 (one 6.33 m window or two with a pier) | W02 pcs 1 .. 2, no m2; line 76.256 m2 DRAWING-CONFIRMED on 27 + W17 9.870 (Q-76 A) | row 6: "Q-76, D-53"; Q-76 answered 23:53 | YES |
+| P-2 | CONC.POOL, m3 | S11 part: pool access (steps / bench / ladder: none drawn) | pool steps; base + walls VERIFIED components | row 12: "pool steps" only | YES |
+| P-3 | CONC.FOOTING, m3 | S3 (F10+F) + S2 (band C1 section and level where it crosses footings) + S15 part (SB3 / F3 strap soffit level) | F10+F 2.176 .. 2.275; SB3 0.0295 .. 0.2683; SB1 in F10+F 0 .. 0.385; 25 footings 64.304 VERIFIED | row 8: "F10 + F Q-31 C, band C1 Q-28 A, SB3 / SB1 ranges" (SB1 follows S3) | YES |
+| P-4 | CONC.BLINDING, m3 | S15 (D-14, D-15) + S3 + S1 (formation, for the ground-beam blinding) | D-14 0 .. 0.189; D-15 0 .. 0.913; F10+F 0.552 .. 0.590; footing blinding 14.990 measured | row 10: "D-14, D-15, Q-21 C, F10 + F" | YES (send with P-3) |
+| P-5 | CONC.GROUND, m3 | S8 (D-33, D-34, D-35) + S2 (boundary band, boundary-wall columns M4) | exterior 24 beams 11.930 UNSUPPORTED BASIS, HELD in the export; 17 tee runs, 13 title-basis runs, 9 annex runs | row 9: "D-33, D-34, D-35 annex, M4" | YES |
+| P-6 | CONC.BEAM, m3 | S5 (D-02, D-27) + S6 (D-03 / D-04 / D-05 / D-28 east 1F ring) + A8 part D-26 (projection bands) | CONFLICT 7 runs drawn 5.4421 / scheduled 5.7665; HELD 3.228 .. 7.6685 + 5 runs | row 7: "D-27, D-02, D-26, D-04, D-05, Q-61 C(3) east 1F ring" | YES |
+| P-7 | CONC.COLUMN, m3 (necks included) | S4 (D-16, D-63, D-66) + S7 (D-44) + A5 part D-39 (structural roof levels: 2F to +13.90, annex) + S1 (neck start) + G1 (CB5) | CONFLICT 15 = 8.034 .. 10.119; HELD 16 incl. 2F <= 3.155 and annex <= 2.2275; UNSUPPORTED BASIS 2F 3.528, annex 3.7125; necks >= 9.2568 | row 11 (D-65 not sent: drawing-confirmed absence) | NO: G1 row to draft |
+| P-8 | CONC.STAIR_DOME, m3 | A6 (D-08 round stair, C-ST-4 MS1-L) + A7 part D-21 (2F maid-room dome) + G2 (C-ST-3, waists) + G3 (tower dome) | ST-03 0.948 UNSUPPORTED BASIS; round stair 2.089 unresolved; closable component 10.805 settled | row 13: "C-ST-3 / C-ST-4, unprinted waists, DOME-3, ST-02 curved part" | NO: G2, G3 rows to draft |
+| P-9 | Floor area (internal), m2 | A9 part D-48 (garden band) + A6 part D-08 (ST-02 / under-stair F1 / F2) + G4 (pantry doorway zone) + A12 part D-10 (dressing finish) | under-stair 6.124; garden band 1.364; doorway zone 1.100 | row 2 | NO: G4 row to draft |
+
+### 0.2 REMAINING unresolved questions (real, kept; none unlocks a complete line on its own)
+
+Reinforcement (the rebar line also has internal blockers: lap lengths not printed, T-273; so no RFI alone closes it): S9, S10,
+S11 part D-57 (bar population), S12. Blockwork (internal held pieces remain, T-274 / T-279): S14 tie beam (+ pit depth to the
+LIFT SUPPLIER), S16, S17, A4, A5 annex datum part, A7 partitions part, A10. Ceilings / plaster / paint / soffits / finishes: A1,
+A2, A5 build-up part, A7 dome openings part, A8 soffits (D-24, D-25), A12. Other: S13 (line to confirm), S18 document control
+(stated UNCONFIRMED in the export), A3 main door / SX-01, A11 sea-side element, A9 D-55 level changes.
+
 Main chat, 2026-10-24 23:55 UTC. SUPERSEDES CLARIFICATIONS_CONSULTANT_2026-10-23.md (its 12 rows are carried here with
 their status). Source register: DESIGNER_CLARIFICATIONS.md (D-nn rows, each raised by a task that read the sheets named
 there) and the owner answers that leave a designer item (Q-21, Q-28, Q-31). Owner rules (2026-10-23 / 2026-10-24): only
