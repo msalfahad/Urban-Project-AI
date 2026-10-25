@@ -43,6 +43,7 @@ from engine.source import drawing_model as DM
 from engine.source import rebar_unit_mass as RUM
 from engine.source import schedule_reader as SR
 
+DEFAULT_GUARD_CLASS = "UNWIRED_PRODUCER"       # T-212: flags components, kg only from printed inputs, wired nowhere
 POLICY_ID = "BEAM_REBAR_COMPLETENESS_V1"
 METHOD_ID = "BEAM_REBAR_COMPLETENESS_SAFEGUARD_V1"
 DETECTED, NOT_REQUIRED, UNRESOLVED = "DETECTED", "NOT_REQUIRED", "UNRESOLVED"

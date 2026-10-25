@@ -430,7 +430,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `beam_binding.py` | 509 | MEDIUM | 1 | BEAM TAG -> PLAN BAND BINDING (V2) - type identity from the tag, section from the tag's OWN schedule namespace, |
 | `beam_binding_v2.py` | 635 | MEDIUM | 3 | BEAM BINDING V2 (T-085) - three corrections to how slab-plan beam bands are cut, bound and completed, as a NEW |
 | `beam_occurrence_recovery.py` | 118 | MEDIUM | 1 | BEAM_OCCURRENCE_RECOVERY (generic): every beam tag and every structural face band gets a terminal record. |
-| `beam_rebar_completeness.py` | 669 | MEDIUM | 1 | BEAM REBAR COMPLETENESS SAFEGUARD V1 (task T-300) - detects and flags the beam reinforcement components that the |
+| `beam_rebar_completeness.py` | 670 | MEDIUM | 1 | BEAM REBAR COMPLETENESS SAFEGUARD V1 (task T-300) - detects and flags the beam reinforcement components that the |
 | `beam_rebar_readiness.py` | 582 | MEDIUM | 3 | BEAM_REBAR_READINESS (pre-S6) - the safe occurrence / detail / component input layer for superstructure beam rebar |
 | `beam_section_cut_binding.py` | 429 | MEDIUM | 1 | BEAM SECTION CUT BINDING V1 (T-102): a printed beam section settles the ONE beam span its cut line crosses. |
 | `benchmark_firewall.py` | 149 | MEDIUM | 1 | BENCHMARK FIREWALL (V1) - prove what a measurement run did NOT read. |
