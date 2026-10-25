@@ -10848,16 +10848,15 @@
    "face_kind": "SOFFIT",
    "contact": "FORM",
    "method": "G",
-   "status": "PENDING-VERIFICATION",
+   "m2": 3.0,
+   "status": "CALCULATED",
    "status_in": "CALCULATED",
    "members": [
     "AGGREGATE:STAIR:1F-2F"
    ],
    "tie": "NAMED_NOT_TIED",
    "tie_reason": "part 2: stairs (flight / landing lines from the T-290 basis ledger)",
-   "basis_note": "T-290: the landing rests on the retired 0.480 reading (drawn 2.935 m2, -0.065)",
-   "held_reason": "basis from T-290 not merged (R-FW-LINE-4)",
-   "pending_from": 3.0
+   "basis_note": "re-based by T-290 MERGED 891dbd4d (Gate A PASS, 2026-10-25) delta row T290-MS2-LD: drawn plates 1.495 + 1.440 = 2.935 m2 (T-281) vs r4 3.000 on the retired 0.480 reading: -0.065 = 1.30 x 0.05, the MS2-L last going"
   },
   {
    "face_id": "R4-327",
@@ -10929,7 +10928,7 @@
    ],
    "tie": "NAMED_NOT_TIED",
    "tie_reason": "part 2: stairs (flight / landing lines from the T-290 basis ledger)",
-   "basis_note": "formwork NOT_APPLICABLE vs the concrete line HELD G2-w (T-290): CONFLICT until the Checker settles it"
+   "basis_note": "CONFLICT (T-290 s.5 (3)): formwork NOT_APPLICABLE vs the concrete waist HELD G2-w; HELD, never NA by default, until the Checker settles it"
   },
   {
    "face_id": "R4-331",
@@ -11035,7 +11034,8 @@
     "AGGREGATE:STAIR:GF-1F"
    ],
    "tie": "NAMED_NOT_TIED",
-   "tie_reason": "part 2: stairs (flight / landing lines from the T-290 basis ledger)"
+   "tie_reason": "part 2: stairs (flight / landing lines from the T-290 basis ledger)",
+   "basis_note": "rests on the pre-r2 0.2256 m3 reading (T-290 s.5 (2)); T-281 measures the soffit directly"
   },
   {
    "face_id": "R4-337",
@@ -11046,16 +11046,15 @@
    "face_kind": "RISER",
    "contact": "FORM",
    "method": "G",
-   "status": "PENDING-VERIFICATION",
+   "m2": 1.004,
+   "status": "CALCULATED",
    "status_in": "CALCULATED",
    "members": [
     "AGGREGATE:STAIR:GF-1F"
    ],
    "tie": "NAMED_NOT_TIED",
    "tie_reason": "part 2: stairs (flight / landing lines from the T-290 basis ledger)",
-   "basis_note": "T-290: 5 x 1.25 on a 1.25 m width (drawn lane 1.20: 1.004 -> 0.964 m2)",
-   "held_reason": "basis from T-290 not merged (R-FW-LINE-4)",
-   "pending_from": 1.004
+   "basis_note": "re-based by T-290 MERGED 891dbd4d (Gate A PASS, 2026-10-25) delta row T290-RS-A: structural lane 1.200: 5 x 1.20 x 0.1607 = 0.964 m2 vs r4 1.004 on the 1.25 width"
   },
   {
    "face_id": "R4-338",
@@ -11433,6 +11432,44 @@
    ],
    "tie": "SCENARIO_NOT_IN_CANDIDATE",
    "tie_reason": "client-request scenario S1: never a candidate face (ScenarioLeak guard)"
+  },
+  {
+   "face_id": "T290-MS2-LD",
+   "revision": "T-290 MERGED 891dbd4d (Gate A PASS, 2026-10-25) BASIS_LEDGER s.5",
+   "element": "STAIR",
+   "floor": "1F-2F",
+   "item": "delta MS2-LD landing soffit: drawn plates 1.495 + 1.440 = 2.935 m2 (T-281) vs r4 3.000 on the retired 0.480 reading: -0.065 = 1.30 x 0.05, the MS2-L last going",
+   "face_kind": "SOFFIT",
+   "contact": "FORM",
+   "method": "G",
+   "m2": -0.065,
+   "status": "CALCULATED",
+   "status_in": "CALCULATED",
+   "members": [
+    "AGGREGATE:STAIR:1F-2F"
+   ],
+   "tie": "NAMED_NOT_TIED",
+   "tie_reason": "part 2: stairs (T-290 drawn reading, delta on the r4 row)",
+   "basis_note": "drawn plates 1.495 + 1.440 = 2.935 m2 (T-281) vs r4 3.000 on the retired 0.480 reading: -0.065 = 1.30 x 0.05, the MS2-L last going"
+  },
+  {
+   "face_id": "T290-RS-A",
+   "revision": "T-290 MERGED 891dbd4d (Gate A PASS, 2026-10-25) BASIS_LEDGER s.5",
+   "element": "STAIR",
+   "floor": "GF-1F",
+   "item": "delta RS-A riser forms: structural lane 1.200: 5 x 1.20 x 0.1607 = 0.964 m2 vs r4 1.004 on the 1.25 width",
+   "face_kind": "RISER",
+   "contact": "FORM",
+   "method": "G",
+   "m2": -0.04,
+   "status": "CALCULATED",
+   "status_in": "CALCULATED",
+   "members": [
+    "AGGREGATE:STAIR:GF-1F"
+   ],
+   "tie": "NAMED_NOT_TIED",
+   "tie_reason": "part 2: stairs (T-290 drawn reading, delta on the r4 row)",
+   "basis_note": "structural lane 1.200: 5 x 1.20 x 0.1607 = 0.964 m2 vs r4 1.004 on the 1.25 width"
   }
  ]
 }

@@ -31,7 +31,7 @@ never summed, never chosen; a face above the outer N.G. (exterior ground beams, 
 level') has nothing to be cast against (R-FW-GB-EXPOSED-1, r4). Ground-beam soffits and footing bases sit on blinding:
 no form (no row). Buried faces for waterproofing are the WP ledger's (T-276), a different trade: no double count.
 
-## 2. Result: every face once, residual 0.000 m2 (382 source rows -> 412 face records)
+## 2. Result: every face once, residual 0.000 m2 (384 source rows -> 414 face records)
 
 | Element (part 1) | Faces tied | Candidate lines | Tied m2 by status (never summed across) |
 |---|---|---|---|
@@ -83,9 +83,11 @@ undrawn) own no face.
 
 **T-289 basis (acceptance 2):** applied only because T-289 is MERGED (455c93c4): the main-house exterior faces on D 0.95
 are DEPTH_PRINTED; annex CONFLICT and court HELD stay HELD; interior runs on the p.13 class depth (D-33 / D-34 named).
-**T-290 readings (acceptance, Lead 10:15):** T-290 is READY, not merged: 'MS2-LD landing soffit' 3.000 and 'RS-A riser
-forms' 1.004 are PENDING-VERIFICATION, blank (source value kept); 'E1 waist soffit' NOT_APPLICABLE vs concrete HELD G2-w
-stays CONFLICT (named). They are part-2 rows.
+**T-290 readings (acceptance, Lead 10:15):** T-290 MERGED 891dbd4d (Gate A PASS) during this run, so its drawn
+readings enter as delta rows on the r4 rows, the r4 rows kept: 'MS2-LD landing soffit' 3.000 -> **T290-MS2-LD -0.065**
+(drawn plates 1.495 + 1.440 = 2.935, T-281) and 'RS-A riser forms' 1.004 -> **T290-RS-A -0.040** (structural lane 1.200:
+0.964); 'E1 waist soffit' NOT_APPLICABLE vs concrete HELD G2-w is named CONFLICT (HELD, never NA by default) until the
+Checker settles it; 'RS-LD landing soffit' 1.41 named as resting on the pre-r2 reading. All are part-2 rows.
 
 ## 4. Part 2 (named, not tied in this run; every row listed with its quantity)
 
@@ -111,12 +113,12 @@ Rules R-FW-LINE-1 .. -6 (`face_line_ledger.py`, research scope, any villa; prove
 T-289): one face once on one line; a face booked to two members refused; a member in no line or in two lines listed,
 never dropped, divided or zeroed; an earth face booked FORMED refused (OQ-10 alternatives excepted); an unprinted depth
 -> HELD blank, an unmerged basis -> PENDING blank; closure per status / alternative / method to 0.000.
-Tests `tests/t293_formwork_face_line`: villa V293 by hand (NORMAL: beam side to its own line 1.600, tee cover -0.120 on
+Tests `tests/t293_formwork_face_line` (22): villa V293 by hand (NORMAL: beam side to its own line 1.600, tee cover -0.120 on
 the CARRIER's line, exterior face on a verified depth 4.750, column 3.600, footing 2.400; ADVERSE: unprinted depth ->
 HELD blank, face booked to two members refused, earth face as FORMED refused, duplicate / HELD-with-number / reversed
 range / m3 refused, member in no line or two lines listed, unmerged basis PENDING, dropped or altered row fails the
 closure, mirror + reorder invariant) and Alsenan pinned (source = r4, identity, closure, per-element ties, oblique bands,
-footing splits / handles, planted columns, named gaps, T-290 pending, committed outputs = fresh build).
+footing splits / handles, planted columns, named gaps, T-290 deltas, committed outputs = fresh build).
 
 Lessons row (proposed, ERS s.7): 2026-10-25 | Formwork r4 rows are keyed by run / type / slab level, the candidate by
 band / footing / column position; 3 oblique bands, 3 planted columns and the boundary ground beam fell outside a

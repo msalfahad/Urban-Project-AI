@@ -10,10 +10,10 @@
   }
  },
  "candidate_lines_csv_sha256": "a4dc01dd5a309bb38b6bff54b486e9090b6d571a0044101197ec650f1cf3d00a",
- "faces": 412,
+ "faces": 414,
  "by_tie": {
   "INFO_NOT_A_QUANTITY": 7,
-  "NAMED_NOT_TIED": 99,
+  "NAMED_NOT_TIED": 101,
   "NO_CANDIDATE_LINE": 13,
   "SCENARIO_NOT_IN_CANDIDATE": 7,
   "SPLIT_UNRESOLVED": 1,
@@ -64,7 +64,7 @@
    "NAMED_NOT_TIED": 7
   },
   "STAIR": {
-   "NAMED_NOT_TIED": 23
+   "NAMED_NOT_TIED": 25
   },
   "STRAP": {
    "TIED": 9
@@ -181,15 +181,15 @@
    "status": "CALCULATED",
    "alternative": "",
    "method": "G",
-   "rows": 52,
-   "m2": 645.039256,
+   "rows": 54,
+   "m2": 644.934256,
    "lo": 0.0,
    "hi": 0.0,
    "residual_m2": 0.0,
    "residual_lo": 0.0,
    "residual_hi": 0.0,
    "by_tie": {
-    "NAMED_NOT_TIED": 31,
+    "NAMED_NOT_TIED": 33,
     "TIED": 21
    }
   },
