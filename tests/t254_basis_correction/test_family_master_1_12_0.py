@@ -46,7 +46,7 @@ def test_1_12_0_checks_clean_and_v3017_is_pending_not_merged(docs):
     p = new["pending_packages"][-1]
     assert (p["task"], p["method_version"], p["module"], p["status"]) == (
         "T-254", "ARCH_TAKEOFF_V3.0.17", "engine/source/arch_v3017.py", "READY_FOR_GATE_B")
-    assert p["integrates"] == ["T-289", "T-287", "T-253", "T-245"] and p["changes_families_by_item_code"] == []
+    assert p["integrates"] == ["T-289", "T-287", "T-253", "T-256", "T-248", "T-245"] and p["changes_families_by_item_code"] == []
     assert "merge_commit" not in p and "verdict" not in p
     assert all("T-254" not in (f["candidate"].get("packages") or []) for f in new["families"])
 

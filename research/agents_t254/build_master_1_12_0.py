@@ -26,14 +26,15 @@ NEW = ROOT / "rules/coverage/BOQ_FAMILY_MASTER_1.12.0.json"
 TASK_COMMIT = sys.argv[sys.argv.index("--task-commit") + 1] if "--task-commit" in sys.argv else None
 PENDING = {
     "task": "T-254", "method_version": "ARCH_TAKEOFF_V3.0.17", "module": "engine/source/arch_v3017.py",
-    "status": FMC.PENDING_STATUS, "integrates": ["T-289", "T-287", "T-253", "T-245"],
+    "status": FMC.PENDING_STATUS, "integrates": ["T-289", "T-287", "T-253", "T-256", "T-248", "T-245"],
     "tests": ["tests/t254_basis_correction"],
     "changes_families_by_item_code": [],
     "note": "T-254 (research/agents_t254/T-254_BASIS_CORRECTION.md): 42 candidate lines on an unprinted depth / height "
             "corrected line id by line id from the merged T-289 basis ledger (main-house exterior ground beams 16 "
             "lines rebased to the printed 0.95 depth, annex 8 CONFLICT blank, court 3 HELD blank, 2F columns 8 HELD "
-            "blank, annex columns 5 HELD blank, CB5 C5 / C3 rebased to h 5.20 from T-287), the boundary ground beam "
-            "added HELD (T-253, M4); ST-03 left to T-266; the Gate B integration package; names no family until "
+            "blank, annex columns 5 HELD blank, CB5 C5 / C3 rebased to h 5.20 from T-287), 5 upper columns no sheet "
+            "draws NOT_PRESENT (T-256), the planted PC-1F-B at its verified solid 0.420 (T-248), the boundary ground "
+            "beam added HELD (T-253, M4); ST-03 left to T-266; the Gate B integration package; names no family until "
             "merged",
 }
 

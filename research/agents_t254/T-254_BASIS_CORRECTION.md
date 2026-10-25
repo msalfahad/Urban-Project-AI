@@ -19,19 +19,20 @@ file (T-289, T-287, T-253), line id by line id; (i) is the one geometric reading
 - `tools/urban_boq_m9.py`: V3017 registration, `--v3017-inputs`, innermost step after V3.0.16.
 - `research/agents_t254/`: `t254_inputs.py` (inputs from the merged files), `v3017_run.py` (the run), the 1.12.0
   builder, this report. `rules/coverage/BOQ_FAMILY_MASTER_1.12.0.json` (1.11.0 + pending V3.0.17, no family change) +
-  RULES_MANIFEST by its tool. `tests/t254_basis_correction` (villa K254 hand fixture + family master).
+  RULES_MANIFEST by its tool. `tests/t254_basis_correction` (villa K254 hand fixture, the binding pair, NOT_PRESENT,
+  development-villa input pins from merged files, family master).
 
 ## 2. Run (development villa, Drive copies 'ST7757 dxf.dxf' `9f9d1179` and P7757.dxf from P7757_DXF_COMPRESSED.zip `ab54dd55`, Python 3.11.17)
 
 `research/agents_t167/v304_run.py` (V3.0.4 csv `d86de34a` reproduced), then `research/agents_t254/v3017_run.py` (tools/
 urban_boq_m9.py `arch --method ARCH_TAKEOFF_V3.0.17`): V3_0_15 csv `a4dc01dd`, **V3_0_16 json `3181cf12` / csv `a4dc01dd`
-(= the T-245 r2 candidate of record)**, V3_0_17 json `5080ec21`, csv `7f7989d6`, DIFF `be3d232a`, INTEGRATION_LEDGER.csv
-`6884006d`, SCENARIOS `02f667f6`. 3,699 -> 3,700 lines: 47 CHANGED (in place, same line ids), 1 ADDED, 3,652 SAME
-(byte-identical, asserted; outside-rows sha `ae832526`). One project id and one revision set kept (`5e369075`).
+(= the T-245 r2 candidate of record)**, V3_0_17 json `366be2f8`, csv `429008af`, DIFF `5861cb3a`, INTEGRATION_LEDGER.csv
+`847dbf4d`, SCENARIOS `02f667f6` (the step alone, v3017_direct.py, gives the same json byte for byte). 3,699 -> 3,700
+lines: 48 CHANGED (in place, same line ids), 1 ADDED, 3,651 SAME (byte-identical, asserted; outside-rows sha `7c4284a9`). One project id and one revision set kept (`5e369075`).
 Export (`tools/boq_export_v1.py --lines V3_0_17_BOQ_LINES.json --candidate-version ARCH_TAKEOFF_V3.0.17 --identity
-V3_0_16_IDENTITY.json`): BOQ.csv `a1527b3e`, xlsx `4c35c516`, manifest `233a27b3`; 3,700 rows VERIFIED 0, MEASURED
-UNVERIFIED 1,023 (was 1,047: -24 to HELD), HELD 1,898 (was 1,878: +24 +1 added -5 NOT_PRESENT), EXCLUDED 779 (was 774:
-+5 NOT_PRESENT). Direct re-run of the step alone: `python3 -I research/agents_t254/v3017_direct.py <run>/v3017 --released
+V3_0_16_IDENTITY.json`): BOQ.csv `1f6736b0`, xlsx `6376dd7d`, manifest `633d157c` (code commit 9cffa596); 3,700 rows VERIFIED 0 (no
+promotion: verdicts are the Checker's), MEASURED UNVERIFIED 1,024 (was 1,047: -24 to HELD, +1 PC-1F-B), HELD 1,897 (was
+1,878: +24, +1 added, -5 NOT_PRESENT, -1 PC-1F-B), EXCLUDED 779 (was 774: +5 NOT_PRESENT). Direct re-run of the step alone: `python3 -I research/agents_t254/v3017_direct.py <run>/v3017 --released
 <t167>/v29/BOQ_LINES.json --out <dir>` (re-binds the five NOT_PRESENT lines against every candidate column line).
 
 ## 3. What the candidate now gives (m3), line group by line group
@@ -46,10 +47,12 @@ UNVERIFIED 1,023 (was 1,047: -24 to HELD), HELD 1,898 (was 1,878: +24 +1 added -
 | Annex columns 34A / 34D / 356 / 350 / 353 | 5 | 2.4750 | 2.4750 | blank | HELD (Q-54 B, D-39) | T-289 |
 | CB5 columns C3 (365) / C5 (35F) | 2 | 1.2375 | 1.2375 | **1.4300** | DRAWING-CONFIRMED (base +0.25, h 5.20; Checker own 1.430 at 07:59) | T-287 |
 | Upper columns no sheet draws (10BD / 10C5 / 10E0 @2F, 10E4 @1F / 2F) | 5 | 2.2680 | blocked | none | NOT_APPLICABLE_WITH_EVIDENCE (DRAWING-CONFIRMED absence) | T-256 |
+| Planted 1F column PC-1F-B (P.C 20x50 on B26) | 1 | absent | blocked (D-26) | **0.4200** | VERIFIED component (solid 0.20 x 0.50 x 4.20; Checker 28 / 28 at 03:19); owner split column / joint stays HELD on D-26 | T-248 |
 
 Totals: STR.CONC.GROUND_BEAM m3 released 27.3649 -> **29.5572** (+2.1923 m3, +8.0 %; 58 -> 59 lines, 12 blank);
-STR.CONC.COLUMN m3 released 33.6060 -> **27.7955** (-5.8105 m3, -17.3 %; 69 -> 64 counted lines, blocked 9 -> 17, the
-three bounded CONFLICT lines 1.134 .. 3.483 unchanged). Main house exterior: 8.1642 -> 15.9575 (+7.7933, +95.5 %); the
+STR.CONC.COLUMN m3 released 33.6060 -> **28.2155** (-5.3905 m3, -16.0 %; 69 -> 64 counted lines, blocked 9 -> 16, the
+three bounded CONFLICT lines 1.134 .. 3.483 unchanged; the 28 closable columns 18.3465 are all now carried at their
+verified volume: 25 + C8 turned matched line by line, PC-1F-A already, PC-1F-B here). Main house exterior: 8.1642 -> 15.9575 (+7.7933, +95.5 %); the
 merged T-253 figure 15.9600 less the 107+7CE stub 0.0025 (item (i), s.4). Freelancer: not re-scored in this run (the
 Checker scores at Gate B); released V2.9 carries the same 21.9540 m3 on these 43 lines as V3.0.16 plus 2.2680 on the
 five absent columns.
@@ -83,6 +86,7 @@ Per line (V2.9 / V3.0.16 / V3.0.17, m3; BLOCKED_RFI = blank, never 0):
 | L-7d98b1c0ac80787d0b51 | COLUMN | 2F | COL_NOT_PRESENT | 0.42 | BLOCKED_RFI | NOT_APPLICABLE_WITH_EVIDENCE | DRAWING-CONFIRMED (absence) | T-256 |
 | L-99e7e45631f6ddf3c7e2 | COLUMN | 1F | COL_NOT_PRESENT | 0.42 | BLOCKED_RFI | NOT_APPLICABLE_WITH_EVIDENCE | DRAWING-CONFIRMED (absence) | T-256 |
 | L-eb3bd5ba496a207f04f7 | COLUMN | 2F | COL_NOT_PRESENT | 0.42 | BLOCKED_RFI | NOT_APPLICABLE_WITH_EVIDENCE | DRAWING-CONFIRMED (absence) | T-256 |
+| L-31a0424bd0efcc93efba | COLUMN | 1F | COL_PLANTED_1F | NOT_IN_RELEASED | BLOCKED_RFI | 0.42 | VERIFIED | T-248 |
 | L-00465df980165c529476 | GROUND_BEAM | GROUND | GB_EXTERIOR_24 | 0.336 | 0.336 | BLOCKED_RFI | CONFLICT | T-289 |
 | L-1146bdecd41491ce9382 | GROUND_BEAM | GROUND | GB_EXTERIOR_24 | 0.402 | 0.402 | 0.9547 | DRAWING-CONFIRMED | T-289 |
 | L-21795b350fbd09150c43 | GROUND_BEAM | GROUND | GB_EXTERIOR_24 | 0.456 | 0.456 | BLOCKED_RFI | HELD | T-289 |
@@ -143,10 +147,10 @@ interior-typed line; adverse: the engine-flag list refused, an unmatched drawn r
   2.419 m from the arc centre) leave a 19 mm sliver against the inner arc. The ring line carries the merged 1.7349 m3;
   the rule + its tests stay a row for the Lead (ERS s.4).
 - ST-03 (L-061e18cf35a4b6b33d68, 0.948267 PROVISIONAL): left byte-identical for T-266 (Lead 08:15).
-- The 28 closable columns (18.3465 m3, VERIFIED as a component by the Checker 2026-10-24 03:19, T-248) and the 5
-  interior ground-beam runs (2.2683 m3, VERIFIED component, T-242): their candidate lines are not touched here
-  (byte-identical); this package writes no verdict on a line (a verdict is the Checker's V2 record). Not re-checked in
-  this run that every one of the 28 equals its verified figure (PC-1F-A / PC-1F-B included): left to the Gate B diff.
+- The 28 closable columns (18.3465 m3, T-248): checked line by line on the V3.0.17 lines (binding by mark, storey and
+  the T-289 frame within 2 mm): 25 columns 16.5825 + C8 turned 0.756 + PC-1F-A 0.588 equal their verified figures;
+  PC-1F-B was held whole and is rebased here (0.420). The 5 interior ground-beam runs (2.2683 m3, T-242) are untouched
+  (byte-identical); this package writes no verdict on a line (a verdict is the Checker's V2 record).
 - Cross-trade named, not changed (T-289 s.4): no formwork line and no ground-storey GB rebar line on these bands
   (T-293 / T-199); the 30 column rebar lines NOT_APPLICABLE take the same heights when built; buried WP 45.4682 m2 already
   reads D 0.95.
