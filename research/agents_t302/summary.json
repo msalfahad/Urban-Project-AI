@@ -1,0 +1,38 @@
+{
+  "centreline_hole_m2": [
+    8.4598,
+    8.5699
+  ],
+  "elevation_full_chain_projected_m2": 8.1338,
+  "exterior_hole_m2": 8.1434,
+  "exterior_projected_m2": 7.4223,
+  "exterior_status": "DRAWING-CONFIRMED",
+  "line_1f11": {
+    "FIN.PAINT": "61.4626 .. 61.7177",
+    "FIN.PLASTER": "61.4626 .. 61.7177"
+  },
+  "quantity_changed_in_candidate": false,
+  "registration": {
+    "ok": true,
+    "printed_chain_mm": {
+      "2D46": 165.995,
+      "2D53": 2691.494,
+      "2D61": 201.9227
+    },
+    "residual_mm": [
+      0.0,
+      0.0
+    ],
+    "tolerance_mm": 0.5
+  },
+  "room_hole_m2": [
+    8.7414,
+    8.9965
+  ],
+  "room_hole_radial_m2": 8.9965,
+  "room_status": "HELD (BOUNDED)",
+  "rule": "R-T302-1",
+  "source": "P7757_DXF_COMPRESSED.zip -> P7757.dxf (sha256 ab54dd55), own read 2026-10-25",
+  "task": "T-302",
+  "window_line_q76a_m2": 9.87
+}
