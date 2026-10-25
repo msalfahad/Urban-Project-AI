@@ -1,0 +1,77 @@
+{
+ "agreement_with_t149": {
+  "NESTED_LINKS|T-149": 13,
+  "NESTED_LINKS|YES": 30,
+  "SIDE_BARS|T-149": 2,
+  "SIDE_BARS|YES": 41,
+  "TOP_CORNER|YES": 60
+ },
+ "association_rules": [
+  "{\"boundary_tolerance\": \"max(item half height, 0.05 x band height / pitch)\", \"rule\": \"ROW_GRID_LINES\", \"table\": {\"mark_tag\": \"BEAM\", \"rows\": 33, \"sheet\": \"SH09\"}}",
+  "{\"boundary_tolerance\": \"max(item half height, 0.05 x band height / pitch)\", \"rule\": \"ROW_GRID_LINES\", \"table\": {\"mark_tag\": \"BEAM-NAME\", \"rows\": 4, \"sheet\": \"SH05\"}}",
+  "{\"boundary_tolerance\": \"max(item half height, 0.05 x band height / pitch)\", \"rule\": \"ROW_GRID_LINES\", \"table\": {\"mark_tag\": \"BEAM-NAME\", \"rows\": 4, \"sheet\": \"SH07\"}}",
+  "{\"boundary_tolerance\": \"max(item half height, 0.05 x band height / pitch)\", \"rule\": \"ROW_GRID_LINES\", \"table\": {\"mark_tag\": \"BEAM-NAME\", \"rows\": 5, \"sheet\": \"SH03\"}}"
+ ],
+ "dxf_sha256_8": "9f9d1179",
+ "evidence": [
+  {
+   "depth_gt_m": 0.6,
+   "kind": "SIDE_BAR_NOTE",
+   "source": "structural PDF p.8 general note 21: additional side bars (2 / 3 / 4 Ø12 by beam width) in beams deeper than 60 cm unless stated otherwise (width bands not printed)"
+  }
+ ],
+ "measured_digest": "9b45307fc1c62e8549dedca03d7b4d3afaac5a69719180d1bca6e6be29411ab1",
+ "route_g_byte_identical": true,
+ "route_g_items_sha256_after": "82d87796cbd0454d13c3603d3a36b93616c137ccf101e6cfaa82179fdfb35486",
+ "route_g_items_sha256_before": "82d87796cbd0454d13c3603d3a36b93616c137ccf101e6cfaa82179fdfb35486",
+ "route_g_kg_items_base_after": "16392.647170067125",
+ "route_g_kg_items_base_before": "16392.647170067125",
+ "route_g_steel_t": {
+  "PLANNING_BASE": "16.392647170067125",
+  "PLANNING_HIGH": "17.85194620500226",
+  "PLANNING_LOW": "14.480316100432304",
+  "VERIFIED": "0.0"
+ },
+ "summary": {
+  "NESTED_LINKS.DETECTED": 9,
+  "NESTED_LINKS.NOT_REQUIRED": 21,
+  "NESTED_LINKS.UNRESOLVED": 13,
+  "SIDE_BARS.DETECTED": 30,
+  "SIDE_BARS.NOT_REQUIRED": 13,
+  "SIDE_BARS.UNRESOLVED": 0,
+  "TOP_CORNER.DETECTED": 28,
+  "TOP_CORNER.NOT_REQUIRED": 30,
+  "TOP_CORNER.UNRESOLVED": 2,
+  "beams": 43,
+  "complete": 7,
+  "flags": 2,
+  "kg_measured": 0,
+  "unassigned_items": 3
+ },
+ "unassigned": [
+  {
+   "ids": [
+    "T1191"
+   ],
+   "kind": "LONE_GLYPH",
+   "state": "NO_MEMBER",
+   "text": "Ø"
+  },
+  {
+   "ids": [
+    "T1189"
+   ],
+   "kind": "LONE_GLYPH",
+   "state": "NO_MEMBER",
+   "text": "Ø"
+  },
+  {
+   "ids": [
+    "T1190"
+   ],
+   "kind": "LONE_GLYPH",
+   "state": "NO_MEMBER",
+   "text": "Ø"
+  }
+ ]
+}
