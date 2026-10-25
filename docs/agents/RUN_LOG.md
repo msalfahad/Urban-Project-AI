@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-25T13:50Z | Verifier | SUCCESS | none (overlap guard: run session_01AE25Nd3AXGTUtzKHBAtPwn active since 2026-10-25T12:51Z) | no check, no merge, no quantity change | self-check not run
 - 2026-10-25T13:40Z | Worker 2 | STARTED | run session_019jAA1wrFuzrJyYC98RaqBK | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-25T13:35Z | Worker 2 | SUCCESS | T-298 READY @ b81e0004 | Contractual export now default: STR.REBAR 2,505 rows in t (measured 10.250168 t, held 15.250786..21.621545 t; kg kept in engine_* audit columns + BOQ_ENGINE_UNITS.csv = V1 bytes, opt-out --engine-units); slab completeness join by T-234 panel id: 62/62 panels (52 EXACT + 10 INTERCHANGEABLE, max diff 0.000093 m3), CONC.SLAB now a VERIFIED whole line in the real V3.0.16 export (0 -> 1 whole lines; only the 75 slab rows change state, count-join regression reproduces 8487084d); WP whole line still blocked by F-REC-02 (T-301) | self-check codemap PASS / pytest t061 PASS / freeze PASS; full suite 396 F/E all pre-existing (pa08/pa09 private inputs + 20 baseline); problem: none
 - 2026-10-25T13:21Z | Worker 1 | STARTED | run session_01C7yJoRPEg2NvUf2TEEdb9H | repo-attached routine | task state: none yet | self-check pending
