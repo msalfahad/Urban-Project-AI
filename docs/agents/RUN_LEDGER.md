@@ -296,6 +296,220 @@ line; no IDLE (overlap) line, no takeover.
 
 Previous day: 82 % SUCCESS (61 slots with evidence); since 22 Oct 14:30 every slot has been STARTED + SUCCESS.
 
+## 2026-10-23 04:31 to 2026-10-24 04:31 UTC (owed from the missed 2026-10-24 daily update; written 2026-10-25 by the main chat)
+
+Cadence (pilot, owner 2026-10-23): workers 1 and 2 and the Checker hourly, worker 3 and the Lead every 2 h, Scout twice
+weekly (an owner one-off fire on 23 Oct). Rows generated from RUN_LOG.md: each STARTED line paired with that agent's next
+final line (IDLE lines skipped); an IDLE line is a run that found the run lock held and ended at once. Status INCOMPLETE on
+the 19:41 worker 2 row is the agent's own final word (READY withheld by the backlog rule), not a lost run. A "single line"
+row is a final line whose STARTED line could not be paired (overlap runs); the pairing is approximate for those.
+
+| Slot start (UTC) | Agent | Status | Evidence |
+|---|---|---|---|
+| 10-23 05:01 | Worker 3 | SUCCESS | STARTED 05:01, final 05:46; T-196 r2 READY (agents/task-T-196 @ 052607d2) / Cause of 3 COL elements per column found: register v0 keeps th |
+| 10-23 05:40 | Worker 2 | SUCCESS | STARTED 05:40, final 06:15; T-201 READY (agents/task-T-201 @ 45c0c5df) / Window heads 8/29 -> 26/29 DRAWING-CONFIRMED from the never-opene |
+| 10-23 05:51 | Verifier | SUCCESS | STARTED 05:51, final 06:28; T-187 Gate B MERGED 8a6d604a, T-197 MERGED 97cd747e, T-191 r2 MERGED bc0ab0cb, T-196 r2 MERGED f933ef8a, T-180 |
+| 10-23 06:21 | Worker 1 | SUCCESS | STARTED 06:21, final 06:42; T-200 READY (agents/task-T-200 @ e4700ca5) / Level chain check (unwired LEVEL_CHAIN_V1, 26 tests): on the deve |
+| 10-23 06:40 | Worker 2 | SUCCESS | STARTED 06:40, final 06:57; T-108 READY (agents/task-T-108 @ 8d705f3e) / Block walls, development villa: new unwired MASONRY_AREA_V1 recom |
+| 10-23 06:52 | Verifier | SUCCESS | STARTED 06:52, final 07:13; T-201 MERGED 5dade783, T-200 MERGED d699b650, T-108 REJECTED, T-180 slot CONC.COLUMN 3 columns / T-201: own re |
+| 10-23 07:00 | Worker 3 | SUCCESS | STARTED 07:00, final 07:42; T-202 READY (agents/task-T-202 @ e2ff76e1) / Guard sweep of 48 merges since 10-22 00:00 (22 engine/tools modul |
+| 10-23 07:21 | Worker 1 | SUCCESS | STARTED 07:21, final 07:39; T-188 READY agents/task-T-188 @ e565dc2a / element inventory across disciplines + storey continuity (unwired c |
+| 10-23 07:40 | Worker 2 | SUCCESS | STARTED 07:40, final 07:56; T-108 r2 READY (agents/task-T-108 @ 496cb6f2) / Block walls, development villa: rework of the 07:13 rejection; |
+| 10-23 07:51 | Verifier | SUCCESS | STARTED 07:51, final 07:59; T-202 MERGED 210ce4f0, T-188 MERGED fb3a4623, T-180 slot CONC.COLUMN 3 columns / T-202: own re-derivation of t |
+| 10-23 08:10 | Lead | SUCCESS | STARTED 08:10, final 08:19; board / run session_01MX87s9yLPsRi6e1i7hXiXV. Since 04:20: 11/11 slots STARTED + SUCCESS (pilot from 06:15, 0  |
+| 10-23 08:20 | Worker 1 | SUCCESS | STARTED 08:20, final 08:42; T-204 READY (agents/task-T-204 @ 0b79e917) / Lift pit is drawn and detailed (ST PDF p.14 typical, missed by th |
+| 10-23 08:40 | Worker 2 | SUCCESS | STARTED 08:40, final 09:02; T-207 READY @ 434de6dc / windows with a drawing-confirmed height 26 -> 28 / 29: W11 / W12 1.95 x 2.20 = 4.290  |
+| 10-23 08:51 | Verifier | SUCCESS | STARTED 08:51, final 09:11; T-108 r2 MERGED 01eeafd0, T-204 MERGED 4fbf7627, T-207 MERGED e081911c, T-180 slot CONC.COLUMN 3 columns / T-1 |
+| 10-23 09:01 | Worker 3 | SUCCESS | STARTED 09:01, final 10:05; T-193 READY (integration package V3.0.7, agents/task-T-193 @ f60d3234) / V3.0.7 = V3.0.6 + checker-VERIFIED po |
+| 10-23 09:20 | Worker 1 | SUCCESS | STARTED 09:20, final 09:42; T-206 READY @ 6dbcafb3 (level chain run 2) / Footing underlay read: the unread '2' under every isolated footin |
+| 10-23 09:40 | Worker 2 | SUCCESS | STARTED 09:40, final 10:02; T-208 READY a42d9974 / Floor-area line now scorable: the 3 released-run review sets are the GF basin-only hand |
+| 10-23 09:51 | Verifier | SUCCESS | STARTED 09:51, final 09:59; T-206 MERGED d5df7d1f, T-180 slot CONC.COLUMN 3 columns / T-206: own vector read of ST7757.pdf p.13 footing ch |
+| 10-23 10:13 | Lead | SUCCESS | STARTED 10:13, final 10:21; board / run unknown. Since 08:20: 7/7 slots STARTED + SUCCESS (pilot, 0 IDLE); classified T-204, T-207, T-206  |
+| 10-23 10:20 | Worker 1 | SUCCESS | STARTED 10:20, final 10:39; T-205 READY (agents/task-T-205 @ b8ce06ac) / Necks: released V2.9 10.855 m3 vs freelancer 8.805 m3 (+2.0505, + |
+| 10-23 10:53 | Verifier | SUCCESS | STARTED 10:53, final 11:50; none (overlap guard: run unknown active since 2026-10-23T10:53Z) / no check, no merge, no quantity change / se |
+| 10-23 11:00 | Worker 3 | SUCCESS | STARTED 11:00, final 11:30; T-203 READY (agents/task-T-203 @ 13a6a28e) / coverage registry BOQ_FAMILY_MASTER 1.2.0 (new file, 1.1.0 byte-i |
+| 10-23 11:25 | Worker 1 | SUCCESS | STARTED 11:25, final 11:42; T-213 READY (agents/task-T-213 @ f6f0050e) / Sunken wet slabs: ONE set of 6 panels under two storey convention |
+| 10-23 11:41 | Worker 2 | SUCCESS | STARTED 11:41, final 12:02; T-209 READY (ac2b6c83, agents/task-T-209) / Wet-wall tile owner method 340.41 m2 on 12 rooms (6 HELD, never 0) |
+| 10-23 11:52 | Verifier | SUCCESS | final 11:52 (single line); T-193 Gate B MERGED e866328a, T-208 MERGED 54cb4c42, T-205 MERGED 5f40dfdb, T-180 slot CONC.COLUMN 2 columns / |
+| 10-23 12:11 | Lead | SUCCESS | STARTED 12:11, final 12:19; board / run unknown. Since 10:20: 8/8 slots STARTED + final SUCCESS (+ checker overlap-guard 11:50, correct);  |
+| 10-23 12:27 | Worker 1 | SUCCESS | STARTED 12:27, final 12:44; T-214 READY (agents/task-T-214 @ f3345251) / Floor build-up FFL -> structural top: both architectural sections |
+| 10-23 12:41 | Worker 2 | SUCCESS | STARTED 12:41, final 13:07; T-218 READY fdc7e888 / GF kitchen: every line already wet except the floor item (FIN.FLOOR.PORCELAIN 9.630 ->  |
+| 10-23 12:51 | Verifier | SUCCESS | STARTED 12:51, final 13:11; T-213 MERGED 0ec8c496, T-209 MERGED 949c2312, T-212 REJECTED (r2 narrow), T-203 REJECTED (r2 narrow), T-180 sl |
+| 10-23 13:01 | Worker 3 | SUCCESS | STARTED 13:01, final 13:56; T-212 r2 READY (agents/task-T-212 @ ff54a353) / Red guard closed on the merged head: engine/source/arch_v307.p |
+| 10-23 13:23 | Worker 1 | SUCCESS | STARTED 13:23, final 13:46; T-217 READY (agents/task-T-217 @ 0347999c) / Column / neck sections per member x storey from schedule, CAP siz |
+| 10-23 13:42 | Worker 2 | SUCCESS | STARTED 13:42, final 14:08; T-215 READY (part 1) head 40251d91 / Alsenan GF block-wall ends held '0 .. max' at 45 deg / column junctions ( |
+| 10-23 13:53 | Verifier | SUCCESS | STARTED 13:53, final 14:07; T-214 MERGED b29060c2, T-217 MERGED 65fef8fa, T-218 MERGED 0a622a86; T-180 slot C8 at F14 / T-214: own DWF ban |
+| 10-23 14:19 | Lead | SUCCESS | STARTED 14:19, final 14:26; board / run session_01CGmMTbVLEDHwpyjtEJ7suH. Since 12:20: 7/7 slots STARTED + final SUCCESS; classified T-213 |
+| 10-23 14:24 | Worker 1 | SUCCESS | STARTED 14:24, final 14:44; T-174 READY (agents/task-T-174 @ 2bdbcc46) / Oblique straps at the axis length (Q-74): owner's 2.29 / 3.26 m V |
+| 10-23 14:40 | Worker 2 | SUCCESS | STARTED 14:40, final 14:54; T-176 READY (agents/task-T-176 @ 1891577d) / Black block procurement on MASONRY_AREA_V1 r2 net: 290.052 m2 est |
+| 10-23 14:52 | Verifier | SUCCESS | STARTED 14:52, final 15:10; T-212 r2 MERGED b5716930, T-215 part 1 MERGED 8a9b4b48, T-174 MERGED 984ebbe1, T-176 MERGED 41847bff (provisio |
+| 10-23 15:00 | Worker 3 | SUCCESS | STARTED 15:00, final 15:12; T-203 r2 READY (agents/task-T-203 @ 4e75d62c) / Coverage registry 1.2.0 re-derived on ARCH_TAKEOFF_V3.0.7 (T-1 |
+| 10-23 15:23 | Worker 1 | SUCCESS | STARTED 15:23, final 15:45; T-220 READY 211f88de / Planted columns: PC-1F-A 0.588 m3 DRAWING-CONFIRMED (= T-119 0.483 + joint 0.0826 + sla |
+| 10-23 15:42 | Worker 2 | SUCCESS | STARTED 15:42, final 16:04; T-225 (blockwork resolution 1/4; READY 15:58 at 30de729f, Checker MERGED 48e6f08a 16:03) / No quantity changed |
+| 10-23 15:52 | Verifier | SUCCESS | STARTED 15:52, final 16:07; T-203 r2 MERGED 40de7c7f, T-220 MERGED 579e613d, T-225 MERGED 48e6f08a; T-180 slot CONC.COLUMN 29 / 59 / T-203 |
+| 10-23 16:14 | Lead | SUCCESS | STARTED 16:14, final 16:19; board / run session_01H1fxFU1ffd71m3BsYsjkdK. Since 14:20: 7/7 slots STARTED + final SUCCESS; classified T-212 |
+| 10-23 16:21 | Worker 1 | SUCCESS | STARTED 16:21, final 16:47; T-229 READY 08d43f21 / Beams at planted / turned columns: GF B27 drawing-derived 4.192 m3 vs released 2.503 +  |
+| 10-23 16:40 | Worker 2 | SUCCESS | STARTED 16:40, final 17:06; T-226 READY (cc3a312e) / Blockwork heights: 7 held pieces closed on printed, uncontested depths (CB2, CB10, B6 |
+| 10-23 16:51 | Verifier | SUCCESS | STARTED 16:51, final 16:59; T-229 MERGED 3803684e; T-180 slot CONC.COLUMN 31 / 59 / T-229 Gate A pass: own ST DXF re-measure (hatch: 329 / |
+| 10-23 16:59 | Worker 3 | SUCCESS | STARTED 16:59, final 18:01; T-231 READY (integration package V3.0.8, head 9ee3fd40) / Straps at the axis length + planted columns + NOT_DR |
+| 10-23 17:20 | Worker 1 | SUCCESS | STARTED 17:20, final 17:50; T-230 READY (agents/task-T-230 @ 3779bcdf) / Strap / ground-beam ends, one owner per intersection: straps = ow |
+| 10-23 17:41 | Worker 2 | SUCCESS | STARTED 17:41, final 18:00; T-227 READY (agents/task-T-227 @ 4683985c) / 21 window heads already established by merged T-201 / T-207 appli |
+| 10-23 17:50 | Research scout | SUCCESS | final 17:50 (single line); R-09, R-10, R-12 answered / SessionStart hook input carries session_id and CLAUDE_ENV_FILE persists it, so STA |
+| 10-23 17:52 | Verifier | SUCCESS | STARTED 17:52, final 18:50; none (overlap guard: run unknown active since 2026-10-23 17:52 UTC) / no check, no merge, no quantity change / |
+| 10-23 17:53 | Research scout | SUCCESS | final 17:53 (single line); R-12, R-09, R-10 supplemented (owner one-off fire; answered 17:50) / SRIA Tech Note Oct 2025 s.2.4: edge bar a |
+| 10-23 18:11 | Lead | SUCCESS | STARTED 18:11, final 18:21; board / run session_01BGj5F7bQAAMX5vLHLaKRTW. Since 16:20: 6 slots closed SUCCESS + checker 17:52 still open a |
+| 10-23 18:21 | Worker 1 | SUCCESS | STARTED 18:21, final 19:41; T-233 READY (agents/task-T-233 a45a84b6) / 25 footings 64.304 m3 = released A = V3.0.7 = V3.0.8 (0.0 %), F10+F |
+| 10-23 18:40 | Worker 2 | SUCCESS | STARTED 18:40, final 19:19; T-222 READY (agents/task-T-222 @ 1381d693) / Block-wall HELD bounds part 2 closed from the drawings: 1F concav |
+| 10-23 19:00 | Worker 3 | SUCCESS | STARTED 19:00, final 19:43; T-216 READY (agents/task-T-216 @ 48a1f83a; integrates T-208) / Floor area now scoreable on the released state: |
+| 10-23 19:05 | Verifier | SUCCESS | final 19:05 (single line); T-226 MERGED a04f8e21, T-230 MERGED 17ed6f92, T-231 Gate B PASS MERGED 3b042470 (V3.0.8); T-227 READY not reac |
+| 10-23 19:19 | Worker 1 | IDLE | 19:19 run lock held by the previous run; IDLE line written, run ended |
+| 10-23 19:41 | Worker 2 | INCOMPLETE | STARTED 19:41, final 20:05; T-017 (work complete, READY withheld by the backlog rule: 4 READY > 3) / Independent masonry census from the r |
+| 10-23 19:51 | Verifier | SUCCESS | STARTED 19:51, final 20:24; T-227 REJECTED (r2), T-222 MERGED 769cad40, T-233 MERGED 2ecb5bf0, T-216 MERGED bebd1241; T-180 slot not reach |
+| 10-23 20:10 | Lead | SUCCESS | STARTED 20:10, final 20:19; board / Since 18:20: 4 merges (T-231 Gate B V3.0.8, T-233, T-216, T-222), 1 rejection (T-227 arched W16 4.805  |
+| 10-23 20:20 | Worker 1 | SUCCESS | STARTED 20:20, final 20:40; T-221 READY (agents/task-T-221 c1c7630c) / Drive read OK. Roof build-up = t0 + falls field + layers: from prin |
+| 10-23 20:40 | Worker 2 | SUCCESS | STARTED 20:40, final 20:49; T-227 r2 READY (agents/task-T-227 @ 3af773ad); T-017 handed in READY (ed7d2ce3, status only, working head merg |
+| 10-23 20:52 | Verifier | SUCCESS | STARTED 20:52, final 21:11; T-227 r2 MERGED ebce3d97, T-221 MERGED 63f4d90e, T-017 READY (reference request); GF-W10 ruled; T-180 floor ar |
+| 10-23 21:00 | Worker 3 | SUCCESS | STARTED 21:00, final 21:56; T-211 READY (integration package V3.0.9a, agents/task-T-211 @ f6aa08f4; integrates T-128, T-173, T-227) / Inte |
+| 10-23 21:20 | Worker 1 | SUCCESS | STARTED 21:20, final 22:07; T-234 READY (agents/task-T-234 @ 352925c3) / CONC.SLAB whole line: 62 panels 375.048 m2 = 60.2804 m3 DRAWING-C |
+| 10-23 21:41 | Worker 2 | SUCCESS | STARTED 21:41, final 22:07; T-238 READY (agents/task-T-238 @ cb3f1023) / Arched / banded openings re-read on their opening line (own reads |
+| 10-23 21:50 | Verifier | SUCCESS | STARTED 21:50, final 22:42; T-211 Gate B PASS MERGED 55fc11ec; T-238 Gate A PASS MERGED 242e50b2; T-180 floor area batch 2 (1F) / T-211 V3 |
+| 10-23 22:11 | Lead | SUCCESS | STARTED 22:11, final 22:18; board / Since 20:10: 2 merges (T-227 r2, T-221), 0 rejections; READY 4 (T-211 Gate B V3.0.9a plaster / paint,  |
+| 10-23 22:21 | Worker 1 | SUCCESS | STARTED 22:21, final 23:12; T-236 READY (agents/task-T-236 @ c649e173, merged 345f408b) / new check engine/source/trade_completeness_v1.py |
+| 10-23 22:41 | Worker 2 | SUCCESS | STARTED 22:41, final 23:03; T-223 READY (agents/task-T-223 @ 024e5c0f) + T-017 evidence / 1F curved room ENGINE_RIGHT on geometry 19.0167  |
+| 10-23 22:51 | Verifier | SUCCESS | STARTED 22:51, final 23:35; T-234 MERGED 3224f68a, T-017 MERGED 345f408b, T-223 MERGED 48d1d846; T-180 floor area batch 3 / T-234: own pol |
+| 10-23 23:00 | Worker 3 | SUCCESS | STARTED 23:00, final 23:36; T-235 r1 READY (agents/task-T-235 @ 7efa3765; export tool, VERIFIED 0 by construction) / One command now write |
+| 10-23 23:21 | Worker 1 | SUCCESS | STARTED 23:21, final 23:40; T-241 READY (agents/task-T-241 @ c11805a8) / CONC.BEAM every run once (140 runs, C1 stated): measured 66.016 m |
+| 10-23 23:43 | Worker 2 | SUCCESS | STARTED 23:43, final 23:56; T-237 READY (agents/task-T-237 @ 752483eb) / cross-trade wall-face crosswalk: 32/32 rooms, 83/85 opening faces |
+| 10-23 23:52 | Verifier | SUCCESS | STARTED 23:52, final 00:10; T-236 MERGED 54ae8b5f, T-235 r1 MERGED d7d232b9, T-241 MERGED f0250164, T-237 MERGED 1cc1a153; T-180 slot not  |
+| 10-24 00:10 | Lead | SUCCESS | STARTED 00:10, final 00:21; board / Since 22:10: 9 merges (T-211 Gate B V3.0.9a, T-238, T-234, T-017, T-223, T-236, T-235 r1, T-241, T-237 |
+| 10-24 00:20 | Worker 1 | SUCCESS | STARTED 00:20, final 01:00; T-242 READY 773a8a37 / CONC.GROUND whole line: interior NOT closable as assumed - 5 runs 2.2684 m3 CALCULATED, |
+| 10-24 00:40 | Worker 2 | SUCCESS | STARTED 00:40, final 01:12; T-243 READY (agents/task-T-243 a7669e78) / gate-0 fix: t195 snapshot pinned folders not content; T-233/T-234 a |
+| 10-24 00:51 | Verifier | SUCCESS | STARTED 00:51, final 01:29; T-243 MERGED cebb269b, T-242 MERGED 9455a63d; T-180 slot: floor area all 47 pieces, CONC.BEAM 2F storey + 7 jo |
+| 10-24 01:00 | Worker 3 | SUCCESS | STARTED 01:00, final 02:00; T-232 READY (integration package, agents/task-T-232 @ fd8b7c7a) / ARCH_TAKEOFF_V3.0.10: doors / windows pcs AN |
+| 10-24 01:20 | Worker 1 | SUCCESS | STARTED 01:20, final 02:13; T-248 READY agents/task-T-248 @ 1d78f6c9 / CONC.COLUMN whole line (C1, column owns its footprint to the slab t |
+| 10-24 01:40 | Worker 2 | SUCCESS | STARTED 01:40, final 01:59; T-249 READY @ 5f4053d2 / Opening inventory from the drawings alone (plan glazing / leaf symbols with handles + |
+| 10-24 01:51 | Verifier | SUCCESS | STARTED 01:51, final 02:47; T-232 Gate B PASS MERGED a0cd9bbc; T-249 Gate A PASS MERGED 2a2d15af; T-180 slot CONC.BEAM storey batches 1F / |
+| 10-24 02:11 | Lead | SUCCESS | STARTED 02:11, final 02:19; board / Since 00:10: 2 merges (T-243 WORKED, T-242 PARTIAL: CONC.GROUND blocked by D-33/34/35, interior 2.2683 |
+| 10-24 02:20 | Worker 1 | SUCCESS | STARTED 02:20, final 03:51; T-252 READY (agents/task-T-252 @ 49c014db, working head 2a2d15af merged) / CONC.BEAM ledger r2: measured 66.01 |
+| 10-24 02:40 | Worker 2 | SUCCESS | STARTED 02:40, final 03:46; T-251 READY (agents/task-T-251 @ 87a07906, on working head 2a2d15af) / gate-0 fix: t130 red because the CHECK  |
+| 10-24 02:50 | Verifier | SUCCESS | STARTED 02:50, final 03:21; T-248 Gate A PASS MERGED 567dc972; T-180 slot CONC.BEAM upstands + floor-area T-240 scope check / T-248 CONC.C |
+| 10-24 03:00 | Worker 3 | SUCCESS | STARTED 03:00, final 04:45; T-239 READY (integration package, Gate B; agents/task-T-239 @ 6ac300d3; integrates T-233) / ARCH_TAKEOFF_V3.0. |
+| 10-24 03:20 | Worker 1 | IDLE | 03:20 run lock held by the previous run; IDLE line written, run ended |
+| 10-24 03:39 | Worker 2 | IDLE | 03:39 run lock held by the previous run; IDLE line written, run ended |
+| 10-24 03:51 | Verifier | SUCCESS | STARTED 03:51, final 04:21; T-251 Gate A PASS MERGED fee98d9a; T-180 slot CONC.COLUMN closable component / T-251 (gate-0, tooling): trade  |
+| 10-24 04:11 | Lead | SUCCESS | STARTED 04:11, final 04:17; board / Since 02:10: 3 merges (T-232 Gate B V3.0.10 WORKED, T-249 WORKED, T-248 WORKED; line PARTIAL by design |
+| 10-24 04:20 | Worker 1 | SUCCESS | STARTED 04:20, final 05:13; T-253 READY c2d5b3cd / CONC.GROUND parts the drawings settle: boundary G.B at N.G. 5 runs 44.07 m x 0.20 x 0.4 |
+
+**Totals: 93 rows: SUCCESS 89 (95.7 %), IDLE (lock held, ended at once) 3, INCOMPLETE 1 (agent-reported), FAILED 0, BLOCKED 0.**
+
+## 2026-10-24 04:31 to 2026-10-25 04:31 UTC (daily audit 2026-10-25, written 04:4x)
+
+Same cadence and method as the section above. OPEN = still running at the window end (counted next day).
+
+| Slot start (UTC) | Agent | Status | Evidence |
+|---|---|---|---|
+| 10-24 04:40 | Worker 2 | SUCCESS | STARTED 04:40, final 05:04; T-228 READY (agents/task-T-228 @ 006136a1) / Blockwork wall register v2 = v1 + 55 checker-merged changes: esta |
+| 10-24 04:51 | Verifier | SUCCESS | STARTED 04:51, final 05:51; none (overlap guard: run session_019UA99nspeZXV7XudhqLAh3 active since 2026-10-24T04:51Z) / no check, no merge |
+| 10-24 05:01 | Worker 3 | SUCCESS | STARTED 05:01, final 06:04; T-210 READY (agents/task-T-210 @ f15e18d5, working head b37be82d merged) / Guard follow-ups, no BOQ quantity t |
+| 10-24 05:20 | Worker 1 | SUCCESS | STARTED 05:20, final 06:18; T-256 READY (agents/task-T-256 @ 4be9f539, working head b37be82d merged) / CONC.COLUMN 15 section CONFLICT col |
+| 10-24 05:40 | Worker 2 | SUCCESS | STARTED 05:40, final 06:48; T-250 READY (agents/task-T-250 @ 3f023a80, base = working head b37be82d) / Plaster/paint face crosswalk: every |
+| 10-24 06:11 | Lead | SUCCESS | STARTED 06:11, final 06:20; board / Since 04:15: 3 merges (T-251 gate-0 WORKED, T-252 beam r2 WORKED 66.3206 m3, T-239 Gate B V3.0.11 WORK |
+| 10-24 06:13 | Verifier | SUCCESS | final 06:13 (single line); T-252 Gate A PASS MERGED b37be82d; T-239 Gate B PASS MERGED 3c9b1484 / T-252: own re-measure B4 0.296446 / CB4 |
+| 10-24 06:20 | Worker 1 | SUCCESS | STARTED 06:20, final 07:15; T-258 (CONC.STAIR_DOME whole-line closure; branch agents/task-T-258 @ 82f9dc69, evidence complete, hand-in WAI |
+| 10-24 06:39 | Worker 2 | IDLE | 06:39 run lock held by the previous run; IDLE line written, run ended |
+| 10-24 06:51 | Verifier | SUCCESS | STARTED 06:51, final 07:50; T-253 Gate A PASS MERGED dff9cb79; T-210 Gate A PASS MERGED dadf8446; T-256 Gate A PASS MERGED 74c966b1 / T-25 |
+| 10-24 07:01 | Worker 3 | SUCCESS | STARTED 07:01, final 08:20; T-146 + T-247 READY (one Gate B integration package, ARCH_TAKEOFF_V3.0.12, agents/task-T-146 @ a13746ab) / can |
+| 10-24 07:20 | Worker 1 | SUCCESS | STARTED 07:20, final 08:36; T-260 (aluminium doors; agents/task-T-260 @ 3caf0285, evidence complete, hand-in WAITS on READY > 3 and behind |
+| 10-24 07:40 | Worker 2 | SUCCESS | STARTED 07:40, final 07:54; T-219 READY (agents/task-T-219 @ 7c8a8035) / Foundation waterproofing, drawn but in no BOQ line and no freelan |
+| 10-24 07:51 | Verifier | SUCCESS | final 07:51 (single line); none (overlap guard: run unknown active since 2026-10-24T06:51Z) / no check, no merge, no quantity change / se |
+| 10-24 08:11 | Lead | SUCCESS | STARTED 08:11, final 08:19; board / Since 06:15: 3 merges (T-253 WORKED: boundary G.B 3.5256 m3 DRAWING-CONFIRMED, engine omission in A an |
+| 10-24 08:20 | Worker 1 | IDLE | 08:20 run lock held by the previous run; IDLE line written, run ended |
+| 10-24 08:41 | Worker 2 | SUCCESS | STARTED 08:41, final 09:31; T-262 (opening-to-room by geometry; agents/task-T-262 @ bd8ea99a, evidence complete, hand-in WAITS on READY 6  |
+| 10-24 08:51 | Verifier | SUCCESS | STARTED 08:51, final 09:42; T-146 + T-247 Gate B PASS MERGED 768ff1d6; T-228 started (stays READY, CAPACITY) / ARCH_TAKEOFF_V3.0.12 is the |
+| 10-24 09:00 | Worker 3 | SUCCESS | STARTED 09:00, final 09:14; T-235 r2 + part (4) READY (agents/task-T-235 @ 73bf8b3e) / Export tool now takes Checker V2 verdicts (new sche |
+| 10-24 09:20 | Worker 1 | SUCCESS | STARTED 09:20, final 10:31; T-264 (formwork r4; agents/task-T-264 @ 62385a9b = working head 768ff1d6 merged, evidence complete, hand-in WA |
+| 10-24 09:41 | Worker 2 | INCOMPLETE | STARTED 09:41, no final line |
+| 10-24 09:50 | Verifier | SUCCESS | STARTED 09:50, final 10:51; none (overlap guard: run session_014fMZeeWT2awWEEU1TD22Bq active since 2026-10-24T09:50Z) / no check, no merge |
+| 10-24 10:11 | Lead | SUCCESS | STARTED 10:11, final 10:17; board / Since 08:15: T-146+T-247 Gate B MERGED 768ff1d6 WORKED (CONC.SLAB 60.2801 = Checker 60.2804 m3: FIRST  |
+| 10-24 10:20 | Worker 1 | IDLE | 10:20 run lock held by the previous run; IDLE line written, run ended |
+| 10-24 10:40 | Worker 2 | SUCCESS | STARTED 10:40, final 10:40; T-262 (still CLAIMED, evidence + full suite complete; agents/task-T-262 @ a25c5b37 = working head 768ff1d6 + T |
+| 10-24 11:01 | Verifier | SUCCESS | final 11:01 (single line); T-228 REJECTED; T-219 Gate A PASS MERGED de7c1c4c; T-250 Gate A PASS MERGED 47390c9b (engine push, head 47390c |
+| 10-24 11:01 | Worker 3 | SUCCESS | STARTED 11:01, final 11:48; T-240 WP1 (progress, not a hand-in; branch agents/task-T-240 @ 5e12fa50) / ARCH_TAKEOFF_V3.0.13 FLOOR_SCOPE wi |
+| 10-24 11:21 | Worker 1 | SUCCESS | STARTED 11:21, final 12:45; T-265 evidence complete (agents/task-T-265 @ c57444d0, hand-in waits: READY 3) + hand-ins T-260 (MERGED c6732e |
+| 10-24 11:28 | Worker 2 | SUCCESS | final 11:28 (single line); T-228 r2 READY (agents/task-T-228 @ c924ab2f; T-262 still CLAIMED, evidence complete, waits on READY <= 2) / S |
+| 10-24 11:40 | Worker 2 | SUCCESS | STARTED 11:40, final 13:04; T-269 READY 12:33 -> MERGED 991f85fa by the Verifier 13:03 (1F living own-VERIFIED); T-262 handed in READY 13: |
+| 10-24 11:51 | Verifier | SUCCESS | STARTED 11:51, final 12:08; T-260 Gate A PASS MERGED c6732efe; T-228 r2 Gate A PASS MERGED bf4dd2a9; T-235 r2 + part (4) Gate A PASS MERGE |
+| 10-24 12:10 | Lead | SUCCESS | STARTED 12:10, final 12:17; board / Since 10:15: 5 merges, 0 rejections (T-219 WORKED: footing WP membrane 109.85 m2 + screed 5.4925 m3 Ch |
+| 10-24 12:20 | Worker 1 | IDLE | 12:20 run lock held by the previous run; IDLE line written, run ended |
+| 10-24 12:39 | Worker 2 | IDLE | 12:39 run lock held by the previous run; IDLE line written, run ended |
+| 10-24 12:51 | Verifier | SUCCESS | STARTED 12:51, final 13:03; T-264 Gate A PASS MERGED 90203feb; T-269 Gate A PASS MERGED 991f85fa (engine push, head 991f85fa); T-258 REJEC |
+| 10-24 13:00 | Worker 3 | SUCCESS | STARTED 13:00, final 14:26; T-268 READY (integration package, Gate B; integrates T-260) / ARCH_TAKEOFF_V3.0.13 door-ruling piece @ agents/ |
+| 10-24 13:20 | Worker 1 | SUCCESS | STARTED 13:20, final 14:13; T-258 r2 (MERGED b1b72a50 by the Verifier 14:05) + T-265 hand-in (READY @ 4353552a) / T-258 r2: own read of ST |
+| 10-24 13:40 | Worker 2 | SUCCESS | STARTED 13:40, final 14:50; T-261 READY c7f596c9 / Blockwork register v2 blockers wall by wall: no missing item is printed on another shee |
+| 10-24 13:51 | Verifier | SUCCESS | STARTED 13:51, final 14:02; T-258 r2 Gate A PASS MERGED b1b72a50; T-262 Gate A PASS MERGED c8dba740 (engine push, head c8dba740); scoreboa |
+| 10-24 14:11 | Lead | SUCCESS | STARTED 14:11, final 14:18; board / Since 12:15: 4 merges (T-264 WORKED formwork r4; T-269 WORKED 1F living 38.6335 m2 own-VERIFIED, relea |
+| 10-24 14:20 | Worker 1 | SUCCESS | STARTED 14:20, final 15:03; T-168 READY @ 524ca636 (lane I row taken by Lead order 14:15 (d)) / Gate B v2 (tools/v30_gate_b_v2.py, T-156 t |
+| 10-24 14:39 | Worker 2 | IDLE | 14:39 run lock held by the previous run; IDLE line written, run ended |
+| 10-24 14:51 | Verifier | SUCCESS | STARTED 14:51, final 15:31; T-265 Gate A PASS MERGED dd08d6b2; T-268 Gate B PASS MERGED d1d09601; T-168 Gate A PASS MERGED 969e0ae5 (engin |
+| 10-24 15:01 | Worker 3 | SUCCESS | STARTED 15:01, final 16:14; T-240 WP2 + renumber (progress, not a hand-in; agents/task-T-240 @ 9a234a9e) / Floor-area candidate (now ARCH_ |
+| 10-24 15:20 | Worker 1 | SUCCESS | STARTED 15:20, final 16:05; T-267 READY (agents/task-T-267 @ f6e3f239) / New opt-in module stair_finish_levels_v1 (UP-STAIR-016, URBAN_RUL |
+| 10-24 15:41 | Worker 2 | SUCCESS | STARTED 15:41, final 16:33; T-261 r2 READY dcbc9d9d / Blockwork split walls re-measured face to face on both drawings: the V2 census runs  |
+| 10-24 15:51 | Verifier | SUCCESS | STARTED 15:51, final 16:08; T-267 Gate A REJECTED (narrow r2); T-180 slot blockwork 1F-W20, 1F-W22, 1F-W03, 2F-W06, 1F-W08 re-measured; no |
+| 10-24 16:11 | Lead | SUCCESS | STARTED 16:11, final 16:17; board / Since 14:15: 3 merges (T-265 WORKED ground-beam steel boundary 315.56 kg + exterior 995.40 kg VERIFIED |
+| 10-24 16:20 | Worker 1 | SUCCESS | STARTED 16:20, final 16:34; T-272 READY @ 7c3a766d / Ground-beam stirrups (22 merged T-265 runs): exterior count HELD inside 361 .. 400 li |
+| 10-24 16:41 | Worker 2 | SUCCESS | STARTED 16:41, final 17:15; T-263 READY @ 2d6ebfa9 (buried-concrete liquid waterproofing, per face) / Ground-beam buried faces 35.404 m2 D |
+| 10-24 16:51 | Verifier | SUCCESS | STARTED 16:51, final 17:08; T-261 r2 REJECTED (narrow r3); T-272 REJECTED (narrow r2); T-180 slot blockwork GF-W16, 2F-W01, 1F-W09, 1F-W21 |
+| 10-24 17:01 | Worker 3 | SUCCESS | STARTED 17:01, final 17:53; T-240 READY (integration package, Gate B; agents/task-T-240 @ 743b5b72) / Floor area candidate V3.0.14: intern |
+| 10-24 17:21 | Worker 1 | SUCCESS | STARTED 17:21, final 18:26; T-273 READY @ fb919417 / Lap splices now rows per bar group: owner count ceil((L-S)/(S-lap)) as new method ver |
+| 10-24 17:50 | Verifier | SUCCESS | STARTED 17:50, final 18:47; T-263 Gate A PASS MERGED c0ab564d; T-240 Gate B PASS MERGED d07af773 (engine head d07af773); T-180 slot blockw |
+| 10-24 18:11 | Lead | SUCCESS | STARTED 18:11, final 18:17; board / Since 16:15: 1 merge (T-263 WORKED: buried-concrete liquid WP, missing category, ground-beam faces 35. |
+| 10-24 18:20 | Worker 1 | IDLE | 18:20 run lock held by the previous run; IDLE line written, run ended |
+| 10-24 18:41 | Worker 2 | SUCCESS | STARTED 18:41, final 19:28; T-271 READY 20322d9e / Ceilings r2 on the verified floor pieces x ST roof-slab faces: horizontal decor ceiling |
+| 10-24 18:52 | Verifier | SUCCESS | STARTED 18:52, final 19:01; T-261 r3 Gate A PASS MERGED 164b189f (engine head 164b189f); T-273 Gate A REJECTED narrow r2 (owner s.6, row s |
+| 10-24 19:01 | Worker 3 | SUCCESS | STARTED 19:01, final 19:40; T-267 r2 READY (agents/task-T-267 @ d2135e30) / Stair finish-level rule file URBAN_RULES 1.7.0 (UP-STAIR-016)  |
+| 10-24 19:20 | Worker 1 | SUCCESS | STARTED 19:20, final 19:35; T-272 r2 READY @ 7478320b / Ground-beam links counted per drawn clear span between supporting faces (9 framing |
+| 10-24 19:40 | Worker 2 | SUCCESS | STARTED 19:40, final 20:25; T-276 READY @ 5f908756 (buried-concrete liquid WP r2, every buried face traced once) / Ground-beam buried face |
+| 10-24 19:51 | Verifier | SUCCESS | STARTED 19:51, final 20:23; T-267 r2 Gate A PASS MERGED e7eaee64; T-272 r2 Gate A PASS MERGED ba626832 (engine head ba626832); T-271 Gate  |
+| 10-24 20:10 | Lead | SUCCESS | STARTED 20:10, final 20:19; board / Since 18:15: 2 merges (T-240 WORKED Gate B V3.0.14 floor internal 380.364 vs released 385.634 m2 -1.37 |
+| 10-24 20:20 | Worker 1 | SUCCESS | STARTED 20:20, final 20:44; T-273 r2 READY (agents/task-T-273 @ 404f34d3) / s.6.3 boundaries 12.00/12.01/22.80/22.81 m -> 0/1/1/2 at 1.2 m |
+| 10-24 20:40 | Worker 2 | SUCCESS | STARTED 20:40, final 21:14; T-271 r2b READY @ 7884f4d8 / GF light well = the slab plan's S-OPENING outline: GF-130 23.237 m2 = light well  |
+| 10-24 20:50 | Verifier | SUCCESS | STARTED 20:50, final 21:05; T-273 r2 Gate A PASS MERGED 42e32cf3; T-276 Gate A REJECTED narrow r2; T-180 slot 1F-W00 PARTIAL / T-273: own  |
+| 10-24 21:01 | Worker 3 | SUCCESS | STARTED 21:01, final 21:53; T-270 READY (integration package, Gate B; agents/task-T-270 @ 3d327dc9) / ARCH_TAKEOFF_V3.0.15 adds the WATERP |
+| 10-24 21:21 | Worker 1 | SUCCESS | STARTED 21:21, final 22:00; T-277 READY (agents/task-T-277 @ c9348baf) / Beam width census, 3 roof-slab plans of 'ST7757 dxf.dxf': 119 lab |
+| 10-24 21:40 | Worker 2 | SUCCESS | STARTED 21:40, final 22:25; T-276 r2 READY @ 9931a9d0 (buried-concrete liquid WP, narrow rework of the Checker 20:59 rejection) / Root cau |
+| 10-24 21:51 | Verifier | SUCCESS | STARTED 21:51, final 22:04; T-271 r2b Gate A PASS MERGED 789ebbb4; T-180 slot 1F-W00 corner ruled / T-271: own polygonize of GF-130 23.237 |
+| 10-24 22:10 | Lead | SUCCESS | STARTED 22:10, final 22:17; board / Since 20:15: 4 merges WORKED (T-267 r2 rule store; T-272 r2 links HELD; T-273 r2 laps+t all HELD 0.000 |
+| 10-24 22:21 | Worker 1 | SUCCESS | STARTED 22:21, final 23:32; T-282 READY (agents/task-T-282 @ fe63822b) / formwork r4 vs ground-beam faces traced per drawn edge: 106/118 s |
+| 10-24 22:40 | Worker 2 | SUCCESS | STARTED 22:40, final 23:48; T-274 READY (agents/task-T-274 @ 9492bf0c) / Blockwork height pieces: register v2 piece lists fail to close 40 |
+| 10-24 22:51 | Verifier | SUCCESS | STARTED 22:51, final 23:20; T-276 r2 Gate A PASS MERGED 4d88681b; T-277 Gate A PASS MERGED 9446dfcb; T-270 Gate B REJECTED narrow r2; T-18 |
+| 10-24 23:00 | Worker 3 | SUCCESS | STARTED 23:00, final 00:12; T-278 READY (lane I tooling; agents/task-T-278 @ 722324d0) / Floor-area scoring key fixed: new key map T001C ( |
+| 10-24 23:20 | Worker 1 | IDLE | 23:20 run lock held by the previous run; IDLE line written, run ended |
+| 10-24 23:39 | Worker 2 | IDLE | 23:39 run lock held by the previous run; IDLE line written, run ended |
+| 10-24 23:52 | Verifier | SUCCESS | STARTED 23:52, final 00:06; T-274 Gate A PASS MERGED aba9399a; T-282 Gate A REJECTED narrow r2; T-180 slot blockwork 3 walls / T-274: own  |
+| 10-24 23:56 | Research scout | SUCCESS | final 23:56 (single line); none (no open requests) / 11 IDLE overlap runs on 24 Oct are paid sessions (scheduler documents no skip-if-run |
+| 10-25 00:11 | Lead | SUCCESS | STARTED 00:11, final 00:24; board / Since 22:15: T-276 r2 (buried faces 45.4682 m2 DC), T-277 (beam widths 7/137 CONFLICT = D-02 + D-27, d |
+| 10-25 00:20 | Worker 1 | SUCCESS | STARTED 00:20, final 01:23; T-282 r2 READY (agents/task-T-282 @ 4ab399a3, working head aba9399a merged) / Ground-beam formwork END faces r |
+| 10-25 00:40 | Worker 2 | SUCCESS | STARTED 00:40, final 01:36; T-285 READY (agents/task-T-285 @ d3b82dd8) / Blockwork register v3: net installed blockwork 449.260 -> 449.593 |
+| 10-25 00:51 | Verifier | SUCCESS | STARTED 00:51, final 01:43; T-278 Gate A PASS MERGED 6366b754; T-285 Gate A PASS MERGED e418c5e0; T-282 r2 Gate A REJECTED narrow r3; owne |
+| 10-25 01:01 | Worker 3 | SUCCESS | STARTED 01:01, final 02:23; T-270 r2 READY (Gate B integration package, agents/task-T-270 @ 2fc1ba44) / Buried-concrete liquid WP line now |
+| 10-25 01:20 | Worker 1 | IDLE | 01:20 run lock held by the previous run; IDLE line written, run ended |
+| 10-25 01:40 | Worker 2 | SUCCESS | STARTED 01:40, final 02:50; T-283 READY (agents/task-T-283 @ c92a24cb) / Ceilings r3: decor ceiling 363.173 -> 361.229 m2 (released 403.16 |
+| 10-25 01:51 | Verifier | SUCCESS | STARTED 01:51, final 02:10; none READY (T-270 r2 / T-283 CLAIMED); OS 23:49 (4) still waits on T-245's own candidate; T-180 slot blockwork |
+| 10-25 02:11 | Lead | SUCCESS | STARTED 02:11, final 02:16; board / Since 00:15: T-278 WORKED (key T001C, FLOOR.INTERNAL 380.3641 m2 / 40 lines, -7.13 % vs freelancer; ME |
+| 10-25 02:20 | Worker 1 | SUCCESS | STARTED 02:20, final 02:38; T-282 r3 READY (agents/task-T-282 @ f09bb49f) / Ground-beam formwork end faces: 1AA is an open outline wholly  |
+| 10-25 02:39 | Worker 2 | IDLE | 02:39 run lock held by the previous run; IDLE line written, run ended |
+| 10-25 02:51 | Verifier | SUCCESS | STARTED 02:51, final 03:51; none (overlap guard: run unknown active since 2026-10-25T02:51Z) / no check, no merge, no quantity change / se |
+| 10-25 03:01 | Worker 3 | SUCCESS | STARTED 03:01, final 03:34; T-257 READY (agents/task-T-257 @ 43df7381) / K1 boundary test: 18 shapely/numpy modules declared by_design fro |
+| 10-25 03:20 | Worker 1 | SUCCESS | STARTED 03:20, final 03:56; T-281 (complete on agents/task-T-281 @ 8abae292; hand-in waits: 3 READY, WORKFLOW_CONTROLS s.3) / Stair soffit |
+| 10-25 03:41 | Worker 2 | SUCCESS | STARTED 03:41, final 04:23; T-288 READY (agents/task-T-288 @ 901a071a) / Blockwork register v4: 7.9131 m of 6 GF walls under the sunken pa |
+| 10-25 04:11 | Lead | SUCCESS | STARTED 04:11, final 04:18; board / Since 02:15: T-270 r2 WORKED (Gate B MERGED 04d34378: candidate V3.0.15, WATERPROOFING.FOUNDATION 7 VE |
+| 10-25 04:16 | Verifier | SUCCESS | final 04:16 (single line); T-270 r2 Gate B PASS MERGED 04d34378; T-282 r3 Gate A PASS MERGED aa3a7bb4 / T-270: own V3.0.15 run (csv a4dc0 |
+| 10-25 04:20 | Worker 1 | OPEN | STARTED 04:20, still running at the window end |
+
+**Totals: 97 rows: SUCCESS 84 (86.6 %), IDLE 11 (worker 1: 6, worker 2: 5; runs longer than 60 min, each a paid session that
+did nothing), INCOMPLETE 1 (worker 2 09:41 STARTED, no final line, cause NOT KNOWN), OPEN 1, FAILED 0, BLOCKED 0. STARTED +
+final line: 84 / 85 closed runs = 98.8 % (target 90 %).**
+
 ## Refused commands (today, from RUN_LOG; exact refusal reasons)
 
 | Refusal reason | Command (as the agents report it) | Agents |
