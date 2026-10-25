@@ -46,6 +46,16 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+### Lead 2026-10-25 22:15 (from T-299 PART F MERGED + downgrade; T-266 / T-297 r2 / T-301 / T-293 part 2 READY; T-303 new)
+
+| Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |
+|---|---|---|---|---|---|
+| Isolated footings F8 / F12 / F13 / F14 / FF bottom mesh (38 lines, 874.862 kg) | rebar, CONC.FOOTING (cover), WP.FOUNDATION (membrane under, no quantity link) | rebar; count and diameter as printed, bar run / weight HELD (bar end inside a boxed leg of unprinted diameter, run measured at the 70 mm MINIMUM cover = an upper value) | HELD in the contractual export by downgrade DG-1b0eacce2d68f2a5; 1 / 20 counts invariant at the minimum (DRAWING-CONFIRMED, not VERIFIED), 19 one-bar ranges | T-299 PART F MERGED 5cb1e7e8, Checker 16:28 / 16:48 own recount 20 / 20 | designer items (boxed-bar diameter and leg, bar-end position, upper / exact cover; max spacing vs density) |
+| Continuous beam CB5 span 2 (GF) | formwork (soffit + sides), CONC.BEAM, rebar (CB5 links) | formwork: one face set per span by positional run attribution; rebar CB5 link bounds 28.485 kg HELD on the superseded zone (F-T297-05) | formwork double count +0.740 / +1.776 m2 proposed ENGINE_WRONG (not yet Checker-confirmed); concrete line unchanged | T-293 part 2 READY, T-297 r2 READY | Checker Gate A on both; T-199 package carries the formwork fix |
+| Free-edge band BAND0049 | formwork | formwork only if a drawn face exists; none found -> HELD with item, never measured | UNRESOLVED | T-293 part 2 READY | Checker Gate A (T-293 part 2) |
+| Stair system (ST-01 / ST-02 / ST-03, MS2 landing, 1F landing marble) | CONC.STAIR_DOME, formwork (soffits), FIN marble, rebar | CONC.STAIR_DOME for concrete; the 1F landing marble is ONE material line (Q-66 B); ST-03 HELD blank (convention riser / waist) | V3.0.18 hand-in: 5.368881 m3 in the candidate (1.227952 VERIFIED, 1.536225 OWNER-APPROVED Q-50 A, 0.100286 + 0.4696 DC); drums a named omission | T-266 READY (Gate B pending) | Checker Gate B; formwork stair soffits in T-293 part 3 must read the same stair ids |
+| Wet rooms, roofs, pool shell / tank (WP families) | WP.WET_AREA, WP.ROOF, WP.POOL_TANK, floor / wall tile, CONC.SLAB | one WP line per face; tiles never carry the membrane; pool / tank WP only if the drawings print a layer | no inventory yet (WP.FOUNDATION only, T-301 READY: 416 faces, MISSING 0) | T-301 handoff | T-303 (new) |
+
 ### Lead 2026-10-25 16:15 (from T-292 r2 / T-295 / T-297 r1 / T-296 MERGED, F-T254-01 closed by the Checker; T-299 PART F READY; T-302 new)
 
 | Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |
