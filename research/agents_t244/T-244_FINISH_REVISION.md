@@ -100,7 +100,7 @@ drawn levels), which is RULE_DIFFERENCE, kept visible, never merged.
   older method lists unchanged), `research/agents_t244/t244_inputs.py` (inputs: every value re-read from the merged
   ledgers and asserted), `v3020_run.py` / `v3020_direct.py`, `rules/coverage/BOQ_FAMILY_MASTER_1.15.0.json` (1.14.0 +
   pending V3.0.20, no family change; builder `build_master_1_15_0.py`; manifest by `tools/m9_rules_manifest.py`).
-- Tests `tests/t244_finish_revision` (36): villa K244 hand fixture (not Alsenan; values in the docstring: an arched
+- Tests `tests/t244_finish_revision` (34): villa K244 hand fixture (not Alsenan; values in the docstring: an arched
   window carried as its band rectangle in a released room -> BOUNDED 52.170 .. 52.320; a semicircular head 1.40 x 2.10 +
   pi 0.70^2 / 2 = 3.709690 closing a held range; a rebate-side door width 0.85 -> 0.90, released 40.130 -> 40.020; an
   annex line without a figure NOT_APPLIED; a carried window); normal (states, ranges, totals move only on the two codes,
