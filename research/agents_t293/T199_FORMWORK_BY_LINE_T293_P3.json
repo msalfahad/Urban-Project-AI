@@ -1,0 +1,1687 @@
+{
+ "candidate": "ARCH_TAKEOFF_V3.0.18 (stair lines split by T-266; dome / ring lines byte-identical to V3.0.16)",
+ "lines": [
+  {
+   "alternative_D_soffit_m2": null,
+   "concrete_line_id": "L-056402f98a6dbbcde0a0",
+   "concrete_state": "PROVISIONAL",
+   "element_id": "P-C:STAIRS:GROUND:SITE-4df8fcd99d130701#CLOSABLE:OWNER_APPROVED_RS_S___RS_LD___RS_A",
+   "faces": [
+    {
+     "contact": "FORM",
+     "element": "STAIR",
+     "face_id": "R4-334",
+     "face_kind": "RISER",
+     "floor": "GF-1F",
+     "item": "RS-S riser forms (11 x 1.20 x 0.1607)",
+     "line_id": "L-056402f98a6dbbcde0a0",
+     "m2": 2.121,
+     "members": [
+      "PIECE:ST02-RS-S"
+     ],
+     "method": "G",
+     "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 334",
+     "status": "CALCULATED",
+     "status_in": "CALCULATED",
+     "tie": "TIED"
+    },
+    {
+     "alt_D_m2": 2.31496,
+     "basis_note": "T-281 ST02-RS-S drawn soffit, method O: plan 1.845000 x sec 1.134456; method D 2.093071 + head kink 0.221889 (the sloped soffit runs on 0.195591 m2 plan under the next plate's edge, which method O books flat with that plate)",
+     "contact": "FORM",
+     "element": "STAIR",
+     "face_id": "R4-335.SOFFIT",
+     "face_kind": "SOFFIT",
+     "floor": "GF-1F",
+     "item": "RS-S waist soffit",
+     "line_id": "L-056402f98a6dbbcde0a0",
+     "m2": 2.093071,
+     "members": [
+      "PIECE:ST02-RS-S"
+     ],
+     "method": "G",
+     "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 335",
+     "split_of": "R4-335",
+     "status": "CALCULATED",
+     "status_in": "CALCULATED",
+     "tie": "TIED"
+    },
+    {
+     "basis_note": "T-281 ST02-RS-S/column 380 exposure 0.040000 plan x sec: column projects 0.050 into the lane (T-248 D-16 CONFLICT): column face or stair soffit not settled",
+     "contact": "FORM",
+     "element": "STAIR",
+     "face_id": "R4-335.COL380",
+     "face_kind": "SOFFIT",
+     "floor": "GF-1F",
+     "held_from": 0.045378,
+     "held_reason": "T-281 ST02-RS-S/column 380 exposure 0.040000 plan x sec: column projects 0.050 into the lane (T-248 D-16 CONFLICT): column face or stair soffit not settled",
+     "item": "RS-S waist soffit",
+     "line_id": "L-056402f98a6dbbcde0a0",
+     "members": [
+      "PIECE:ST02-RS-S"
+     ],
+     "method": "G",
+     "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 335",
+     "split_of": "R4-335",
+     "status": "HELD",
+     "status_in": "CALCULATED",
+     "tie": "TIED",
+     "tie_reason": "piece HELD on the line: T-281 ST02-RS-S/column 380 exposure 0.040000 plan x sec: column projects 0.050 into the lane (T-248 D-16 CONFLICT): column face or stair soffit not settled"
+    },
+    {
+     "alt_D_m2": 0.674803,
+     "basis_note": "T-281 ST02-RS-LD plate (method O; D 0.674803: the RS-S head kink runs sloped under its edge)",
+     "contact": "FORM",
+     "element": "STAIR",
+     "face_id": "R4-336.SOFFIT",
+     "face_kind": "SOFFIT",
+     "floor": "GF-1F",
+     "item": "RS-LD landing soffit",
+     "line_id": "L-056402f98a6dbbcde0a0",
+     "m2": 0.870394,
+     "members": [
+      "PIECE:ST02-RS-LD"
+     ],
+     "method": "G",
+     "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 336",
+     "split_of": "R4-336",
+     "status": "CALCULATED",
+     "status_in": "CALCULATED",
+     "tie": "TIED"
+    },
+    {
+     "basis_note": "5 x 1.200 (structural lane, T-258 r2) x 4.50 / 28",
+     "contact": "FORM",
+     "element": "STAIR",
+     "face_id": "R4-337.LANE",
+     "face_kind": "RISER",
+     "floor": "GF-1F",
+     "item": "RS-A riser forms (5 x 1.25 x 0.1607)",
+     "line_id": "L-056402f98a6dbbcde0a0",
+     "m2": 0.964286,
+     "members": [
+      "PIECE:ST02-RS-A"
+     ],
+     "method": "G",
+     "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 337",
+     "split_of": "R4-337",
+     "status": "CALCULATED",
+     "status_in": "CALCULATED",
+     "tie": "TIED"
+    },
+    {
+     "alt_D_m2": 1.916025,
+     "basis_note": "T-281 ST02-RS-A drawn soffit, method O: plan 1.320000 x sec 1.134456; method D 1.491542 + head kink 0.424483 (the sloped soffit runs on 0.374173 m2 plan under the next plate's edge, which method O books flat with that plate; here the plate is the 1F arrival slab C-T1, a slab panel of part 2)",
+     "contact": "FORM",
+     "element": "STAIR",
+     "face_id": "R4-338.SOFFIT",
+     "face_kind": "SOFFIT",
+     "floor": "GF-1F",
+     "item": "RS-A waist soffit",
+     "line_id": "L-056402f98a6dbbcde0a0",
+     "m2": 1.497482,
+     "members": [
+      "PIECE:ST02-RS-A"
+     ],
+     "method": "G",
+     "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 338",
+     "split_of": "R4-338",
+     "status": "CALCULATED",
+     "status_in": "CALCULATED",
+     "tie": "TIED"
+    }
+   ],
+   "floor": "GROUND",
+   "item_code": "STR.CONC.STAIR",
+   "totals": {
+    "CALCULATED||G": {
+     "faces": 5,
+     "hi": 0.0,
+     "lo": 0.0,
+     "m2": 7.546233
+    },
+    "HELD||G": {
+     "faces": 1,
+     "hi": 0.0,
+     "lo": 0.0,
+     "m2": 0.0
+    }
+   },
+   "v3018": "SPLIT_PART of L-b6b0354b7842f0ed6e41"
+  },
+  {
+   "alternative_D_soffit_m2": null,
+   "concrete_line_id": "L-061e18cf35a4b6b33d68",
+   "concrete_state": "BLOCKED_RFI",
+   "element_id": "P-C:SCOPE:STAIRS:GROUND:CC-5ab1872c70:FLIGHTS",
+   "faces": [
+    {
+     "contact": "FORM",
+     "element": "STAIR",
+     "face_id": "R4-329",
+     "face_kind": "RISER",
+     "floor": "GF",
+     "held_from": 2.38,
+     "held_reason": "R-FW-P3-1: the concrete of this piece is carried by no candidate quantity (held remainder / HOLD line); the face is held with it, its value kept",
+     "item": "E1 riser forms (5 x 2.80 x 0.170)",
+     "line_id": "L-061e18cf35a4b6b33d68",
+     "members": [
+      "PIECE:ST03-E1-STEPS"
+     ],
+     "method": "G",
+     "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 329",
+     "status": "HELD",
+     "status_in": "CALCULATED",
+     "tie": "TIED"
+    },
+    {
+     "basis_note": "Checker 2026-10-25 11:05 (T-266 s.4 (3)): concrete waist HELD (G2-w), soffit form NOT_APPLICABLE (section B-B draws the waist on fill); no CONFLICT remains",
+     "contact": "FORM",
+     "element": "STAIR",
+     "face_id": "R4-330",
+     "face_kind": "SOFFIT",
+     "floor": "GF",
+     "item": "E1 waist soffit",
+     "line_id": "L-061e18cf35a4b6b33d68",
+     "members": [
+      "PIECE:ST03-E1-WAIST"
+     ],
+     "method": "G",
+     "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 330",
+     "status": "NOT_APPLICABLE",
+     "status_in": "NOT_APPLICABLE",
+     "tie": "TIED"
+    }
+   ],
+   "floor": "GROUND",
+   "item_code": "STR.CONC.STAIR",
+   "totals": {
+    "HELD||G": {
+     "faces": 1,
+     "hi": 0.0,
+     "lo": 0.0,
+     "m2": 0.0
+    },
+    "NOT_APPLICABLE||G": {
+     "faces": 1,
+     "hi": 0.0,
+     "lo": 0.0,
+     "m2": 0.0
+    }
+   },
+   "v3018": "HOLD"
+  },
+  {
+   "alternative_D_soffit_m2": null,
+   "concrete_line_id": "L-2416e65f053a14199cfc",
+   "concrete_state": "SOURCE_DERIVED",
+   "element_id": "HL:STAIR_CONCRETE:ST-01:MS2_LD",
+   "faces": [
+    {
+     "alt_D_m2": 1.0849,
+     "basis_note": "T-281 ST01-MS2-LD-W plate 1.150 x 1.300 (method O; D 1.0849: the MS2-L head kink 0.4101 plan runs sloped under its edge)",
+     "contact": "FORM",
+     "element": "STAIR",
+     "face_id": "R4-326.W",
+     "face_kind": "SOFFIT",
+     "floor": "1F-2F",
+     "item": "MS2-LD landing soffit",
+     "line_id": "L-2416e65f053a14199cfc",
+     "m2": 1.495,
+     "members": [
+      "PIECE:ST01-MS2-LD"
+     ],
+     "method": "G",
+     "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 326",
+     "split_of": "R4-326",
+     "status": "CALCULATED",
+     "status_in": "CALCULATED",
+     "tie": "TIED"
+    },
+    {
+     "alt_D_m2": 1.44,
+     "basis_note": "T-281 ST01-MS2-LD-E plate 1.200 x 1.200",
+     "contact": "FORM",
+     "element": "STAIR",
+     "face_id": "R4-326.E",
+     "face_kind": "SOFFIT",
+     "floor": "1F-2F",
+     "item": "MS2-LD landing soffit",
+     "line_id": "L-2416e65f053a14199cfc",
+     "m2": 1.44,
+     "members": [
+      "PIECE:ST01-MS2-LD"
+     ],
+     "method": "G",
+     "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 326",
+     "split_of": "R4-326",
+     "status": "CALCULATED",
+     "status_in": "CALCULATED",
+     "tie": "TIED"
+    }
+   ],
+   "floor": "1F",
+   "item_code": "STR.CONC.STAIR",
+   "totals": {
+    "CALCULATED||G": {
+     "faces": 2,
+     "hi": 0.0,
+     "lo": 0.0,
+     "m2": 2.935
+    }
+   },
+   "v3018": "REBASE DRAWING-CONFIRMED"
+  },
+  {
+   "alternative_D_soffit_m2": null,
+   "concrete_line_id": "L-48b7d139bff681199543",
+   "concrete_state": "SOURCE_DERIVED",
+   "element_id": "HL:DOME_RING:DOME-1F-W:RING:RING_BEAM_B4_IN_BAY",
+   "faces": [
+    {
+     "contact": "FORM",
+     "element": "DOME",
+     "face_id": "R4-345",
+     "face_kind": "SOFFIT",
+     "floor": "roof",
+     "held_reason": "HELD in formwork r4 (no value)",
+     "item": "DOME-A S0 approved design: ring beam faces (inner face = the dome-opening face over the ring depth, outer downstand, soffit)",
+     "line_id": "L-48b7d139bff681199543",
+     "members": [
+      "RING:DOME-A"
+     ],
+     "method": "G",
+     "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 345",
+     "status": "HELD",
+     "status_in": "HELD",
+     "tie": "TIED"
+    }
+   ],
+   "floor": "1F",
+   "item_code": "STR.CONC.BEAM",
+   "totals": {
+    "HELD||G": {
+     "faces": 1,
+     "hi": 0.0,
+     "lo": 0.0,
+     "m2": 0.0
+    }
+   },
+   "v3018": "byte-identical to V3.0.16 / V3.0.17"
+  },
+  {
+   "alternative_D_soffit_m2": null,
+   "concrete_line_id": "L-659243ed9fc2831c3ae8",
+   "concrete_state": "BLOCKED_RFI",
+   "element_id": "HL:STAIR_CONCRETE:ST-01:MS2_TR",
+   "faces": [
+    {
+     "contact": "FORM",
+     "element": "STAIR",
+     "face_id": "R4-325",
+     "face_kind": "RISER",
+     "floor": "1F-2F",
+     "held_reason": "HELD in formwork r4 (no value)",
+     "item": "MS2-TR (closing riser quarter -> NE la) faces",
+     "line_id": "L-659243ed9fc2831c3ae8",
+     "members": [
+      "PIECE:ST01-MS2-TR"
+     ],
+     "method": "G",
+     "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 325",
+     "status": "HELD",
+     "status_in": "HELD",
+     "tie": "TIED"
+    }
+   ],
+   "floor": "1F",
+   "item_code": "STR.CONC.STAIR",
+   "totals": {
+    "HELD||G": {
+     "faces": 1,
+     "hi": 0.0,
+     "lo": 0.0,
+     "m2": 0.0
+    }
+   },
+   "v3018": "byte-identical to V3.0.16 / V3.0.17"
+  },
+  {
+   "alternative_D_soffit_m2": null,
+   "concrete_line_id": "L-67e4b0485135f84acc46",
+   "concrete_state": "SOURCE_DERIVED",
+   "element_id": "HL:STAIR_CONCRETE:ST-01:MS2_L",
+   "faces": [
+    {
+     "contact": "FORM",
+     "element": "STAIR",
+     "face_id": "R4-323",
+     "face_kind": "RISER",
+     "floor": "1F-2F",
+     "item": "MS2-L riser forms (12 x 1.20 x 0.1680)",
+     "line_id": "L-67e4b0485135f84acc46",
+     "m2": 2.419,
+     "members": [
+      "PIECE:ST01-MS2-L"
+     ],
+     "method": "G",
+     "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 323",
+     "status": "CALCULATED",
+     "status_in": "CALCULATED",
+     "tie": "TIED"
+    },
+    {
+     "alt_D_m2": 4.77372,
+     "basis_note": "T-281 ST01-MS2-L drawn soffit, method O: plan 3.755000 x sec 1.146124; method D 4.303695 + head kink 0.470025 (the sloped soffit runs on 0.410100 m2 plan under the next plate's edge, which method O books flat with that plate)",
+     "contact": "FORM",
+     "element": "STAIR",
+     "face_id": "R4-324.SOFFIT",
+     "face_kind": "SOFFIT",
+     "floor": "1F-2F",
+     "item": "MS2-L waist soffit",
+     "line_id": "L-67e4b0485135f84acc46",
+     "m2": 4.303695,
+     "members": [
+      "PIECE:ST01-MS2-L"
+     ],
+     "method": "G",
+     "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 324",
+     "split_of": "R4-324",
+     "status": "CALCULATED",
+     "status_in": "CALCULATED",
+     "tie": "TIED"
+    },
+    {
+     "basis_note": "T-281 ST01-MS2-L/column 691 exposure 0.025000 plan x sec: column projects 0.050 into the lane (T-248 D-16 CONFLICT): column face or stair soffit not settled",
+     "contact": "FORM",
+     "element": "STAIR",
+     "face_id": "R4-324.COL691",
+     "face_kind": "SOFFIT",
+     "floor": "1F-2F",
+     "held_from": 0.028653,
+     "held_reason": "T-281 ST01-MS2-L/column 691 exposure 0.025000 plan x sec: column projects 0.050 into the lane (T-248 D-16 CONFLICT): column face or stair soffit not settled",
+     "item": "MS2-L waist soffit",
+     "line_id": "L-67e4b0485135f84acc46",
+     "members": [
+      "PIECE:ST01-MS2-L"
+     ],
+     "method": "G",
+     "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 324",
+     "split_of": "R4-324",
+     "status": "HELD",
+     "status_in": "CALCULATED",
+     "tie": "TIED",
+     "tie_reason": "piece HELD on the line: T-281 ST01-MS2-L/column 691 exposure 0.025000 plan x sec: column projects 0.050 into the lane (T-248 D-16 CONFLICT): column face or stair soffit not settled"
+    }
+   ],
+   "floor": "1F",
+   "item_code": "STR.CONC.STAIR",
+   "totals": {
+    "CALCULATED||G": {
+     "faces": 2,
+     "hi": 0.0,
+     "lo": 0.0,
+     "m2": 6.722695
+    },
+    "HELD||G": {
+     "faces": 1,
+     "hi": 0.0,
+     "lo": 0.0,
+     "m2": 0.0
+    }
+   },
+   "v3018": "byte-identical to V3.0.16 / V3.0.17"
+  },
+  {
+   "alternative_D_soffit_m2": null,
+   "concrete_line_id": "L-7863355dfcb68a681d2d",
+   "concrete_state": "BLOCKED_RFI",
+   "element_id": "P-C:SCOPE:STAIRS:GF:CC-7390ea1139:FLIGHTS",
+   "faces": [
+    {
+     "basis_note": "slab under the MS1-T winders = T-258 piece ST01-MS1-T-SLAB (turn slab 0.2304 .. 0.2496 m3 / 0.16), held in the ST-01 GF parent (C-ST-3 / G2-a)",
+     "contact": "FORM",
+     "element": "SLAB",
+     "face_id": "R4-316",
+     "face_kind": "SOFFIT",
+     "floor": "GF",
+     "hi": 1.562,
+     "item": "slab under the main-stair winders (warped soffit)",
+     "line_id": "L-7863355dfcb68a681d2d",
+     "lo": 1.44,
+     "members": [
+      "PIECE:ST01-MS1-T-SLAB"
+     ],
+     "method": "G",
+     "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 316",
+     "status": "HELD",
+     "status_in": "HELD",
+     "tie": "TIED"
+    },
+    {
+     "contact": "FORM",
+     "element": "STAIR",
+     "face_id": "R4-317",
+     "face_kind": "RISER",
+     "floor": "GF-1F",
+     "held_from": 2.0,
+     "held_reason": "R-FW-P3-1: the concrete of this piece is carried by no candidate quantity (held remainder / HOLD line); the face is held with it, its value kept",
+     "item": "MS1-L riser forms (10 x 1.20 x 0.1667)",
+     "line_id": "L-7863355dfcb68a681d2d",
+     "members": [
+      "PIECE:ST01-MS1-L"
+     ],
+     "method": "G",
+     "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 317",
+     "status": "HELD",
+     "status_in": "CALCULATED",
+     "tie": "TIED"
+    },
+    {
+     "contact": "FORM",
+     "element": "STAIR",
+     "face_id": "R4-318",
+     "face_kind": "SOFFIT",
+     "floor": "GF-1F",
+     "held_from": 3.706,
+     "held_reason": "R-FW-P3-1: the concrete of this piece is carried by no candidate quantity (held remainder / HOLD line); the face is held with it, its value kept",
+     "item": "MS1-L waist soffit",
+     "line_id": "L-7863355dfcb68a681d2d",
+     "members": [
+      "PIECE:ST01-MS1-L"
+     ],
+     "method": "G",
+     "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 318",
+     "status": "HELD",
+     "status_in": "CALCULATED",
+     "tie": "TIED"
+    },
+    {
+     "contact": "FORM",
+     "element": "STAIR",
+     "face_id": "R4-319",
+     "face_kind": "SIDE",
+     "floor": "GF-1F",
+     "held_reason": "HELD in formwork r4 (no value)",
+     "item": "MS1-T (turn (winders)) faces",
+     "line_id": "L-7863355dfcb68a681d2d",
+     "members": [
+      "PIECE:ST01-MS1-T"
+     ],
+     "method": "G",
+     "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 319",
+     "status": "HELD",
+     "status_in": "HELD",
+     "tie": "TIED"
+    }
+   ],
+   "floor": "GF",
+   "item_code": "STR.CONC.STAIR",
+   "totals": {
+    "HELD||G": {
+     "faces": 4,
+     "hi": 1.562,
+     "lo": 1.44,
+     "m2": 0.0
+    }
+   },
+   "v3018": "SPLIT_PARENT (held remainder)"
+  },
+  {
+   "alternative_D_soffit_m2": null,
+   "concrete_line_id": "L-821032bc04a0b0d02133",
+   "concrete_state": "BLOCKED_RFI",
+   "element_id": "DG5:ST-01:LOBBY",
+   "faces": [
+    {
+     "contact": "FORM",
+     "element": "STAIR",
+     "face_id": "R4-332",
+     "face_kind": "SOFFIT",
+     "floor": "GF",
+     "held_reason": "HELD in formwork r4 (no value)",
+     "item": "D1 waist soffit",
+     "line_id": "L-821032bc04a0b0d02133",
+     "members": [
+      "PIECE:ST01b-D1-WAIST"
+     ],
+     "method": "G",
+     "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 332",
+     "status": "HELD",
+     "status_in": "HELD",
+     "tie": "TIED"
+    }
+   ],
+   "floor": "GROUND",
+   "item_code": "STR.CONC.STAIR",
+   "totals": {
+    "HELD||G": {
+     "faces": 1,
+     "hi": 0.0,
+     "lo": 0.0,
+     "m2": 0.0
+    }
+   },
+   "v3018": "SPLIT_PARENT (held remainder)"
+  },
+  {
+   "alternative_D_soffit_m2": null,
+   "concrete_line_id": "L-85f64587588af8537b4b",
+   "concrete_state": "SOURCE_DERIVED",
+   "element_id": "DG5:ST-01:LOBBY#CLOSABLE:DRAWING_CONFIRMED_D1_steps",
+   "faces": [
+    {
+     "contact": "FORM",
+     "element": "STAIR",
+     "face_id": "R4-331",
+     "face_kind": "RISER",
+     "floor": "GF",
+     "item": "D1 riser forms (4 x 1.20 x 0.175)",
+     "line_id": "L-85f64587588af8537b4b",
+     "m2": 0.84,
+     "members": [
+      "PIECE:ST01b-D1-STEPS"
+     ],
+     "method": "G",
+     "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 331",
+     "status": "CALCULATED",
+     "status_in": "CALCULATED",
+     "tie": "TIED"
+    }
+   ],
+   "floor": "GROUND",
+   "item_code": "STR.CONC.STAIR",
+   "totals": {
+    "CALCULATED||G": {
+     "faces": 1,
+     "hi": 0.0,
+     "lo": 0.0,
+     "m2": 0.84
+    }
+   },
+   "v3018": "SPLIT_PART of L-821032bc04a0b0d02133"
+  },
+  {
+   "alternative_D_soffit_m2": null,
+   "concrete_line_id": "L-8ea34765d16b54898140",
+   "concrete_state": "SOURCE_DERIVED",
+   "element_id": "HL:DOME_SHELL:DOME-A:SHELL",
+   "faces": [
+    {
+     "contact": "FORM",
+     "element": "DOME",
+     "face_id": "R4-343",
+     "face_kind": "SOFFIT",
+     "floor": "roof",
+     "item": "DOME-A S0 approved design: shell soffit form (intrados 2 pi R_i h_i)",
+     "line_id": "L-8ea34765d16b54898140",
+     "m2": 24.15,
+     "members": [
+      "SHELL:DOME-A"
+     ],
+     "method": "G",
+     "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 343",
+     "status": "CALCULATED",
+     "status_in": "CALCULATED",
+     "tie": "TIED"
+    },
+    {
+     "contact": "FORM",
+     "element": "DOME",
+     "face_id": "R4-344",
+     "face_kind": "SIDE",
+     "floor": "roof",
+     "held_reason": "HELD in formwork r4 (no value)",
+     "item": "DOME-A S0 approved design: shell top (extrados) form",
+     "line_id": "L-8ea34765d16b54898140",
+     "members": [
+      "SHELL:DOME-A"
+     ],
+     "method": "G",
+     "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 344",
+     "status": "HELD",
+     "status_in": "HELD",
+     "tie": "TIED"
+    }
+   ],
+   "floor": "2F",
+   "item_code": "STR.CONC.DOME",
+   "totals": {
+    "CALCULATED||G": {
+     "faces": 1,
+     "hi": 0.0,
+     "lo": 0.0,
+     "m2": 24.15
+    },
+    "HELD||G": {
+     "faces": 1,
+     "hi": 0.0,
+     "lo": 0.0,
+     "m2": 0.0
+    }
+   },
+   "v3018": "byte-identical to V3.0.16 / V3.0.17"
+  },
+  {
+   "alternative_D_soffit_m2": null,
+   "concrete_line_id": "L-ab37afa17f2ac5b0efd1",
+   "concrete_state": "BLOCKED_RFI",
+   "element_id": "HL:DOME_RING:DOME-1F-E:RING:RING_BEAM_IN_BAY",
+   "faces": [
+    {
+     "contact": "FORM",
+     "element": "DOME",
+     "face_id": "R4-352",
+     "face_kind": "SOFFIT",
+     "floor": "roof",
+     "held_reason": "HELD in formwork r4 (no value)",
+     "item": "DOME-B S0 approved design: ring beam faces (inner face = the dome-opening face over the ring depth, outer downstand, soffit)",
+     "line_id": "L-ab37afa17f2ac5b0efd1",
+     "members": [
+      "RING:DOME-B"
+     ],
+     "method": "G",
+     "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 352",
+     "status": "HELD",
+     "status_in": "HELD",
+     "tie": "TIED"
+    }
+   ],
+   "floor": "1F",
+   "item_code": "STR.CONC.BEAM",
+   "totals": {
+    "HELD||G": {
+     "faces": 1,
+     "hi": 0.0,
+     "lo": 0.0,
+     "m2": 0.0
+    }
+   },
+   "v3018": "byte-identical to V3.0.16 / V3.0.17"
+  },
+  {
+   "alternative_D_soffit_m2": null,
+   "concrete_line_id": "L-b6b0354b7842f0ed6e41",
+   "concrete_state": "BLOCKED_RFI",
+   "element_id": "P-C:STAIRS:GROUND:SITE-4df8fcd99d130701",
+   "faces": [
+    {
+     "contact": "FORM",
+     "element": "STAIR",
+     "face_id": "R4-333",
+     "face_kind": "SIDE",
+     "floor": "GF-1F",
+     "held_reason": "HELD in formwork r4 (no value)",
+     "item": "RS-C (curved (12 tapered treads)) faces",
+     "line_id": "L-b6b0354b7842f0ed6e41",
+     "members": [
+      "PIECE:ST02-RS-C"
+     ],
+     "method": "G",
+     "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 333",
+     "status": "HELD",
+     "status_in": "HELD",
+     "tie": "TIED"
+    }
+   ],
+   "floor": "GROUND",
+   "item_code": "STR.CONC.STAIR",
+   "totals": {
+    "HELD||G": {
+     "faces": 1,
+     "hi": 0.0,
+     "lo": 0.0,
+     "m2": 0.0
+    }
+   },
+   "v3018": "SPLIT_PARENT (held remainder)"
+  },
+  {
+   "alternative_D_soffit_m2": null,
+   "concrete_line_id": "L-bb0e57b1948175a3d5b8",
+   "concrete_state": "SOURCE_DERIVED",
+   "element_id": "HL:STAIR_CONCRETE:ST-01:MS2_U",
+   "faces": [
+    {
+     "contact": "FORM",
+     "element": "STAIR",
+     "face_id": "R4-327",
+     "face_kind": "RISER",
+     "floor": "1F-2F",
+     "item": "MS2-U riser forms (12 x 1.20 x 0.1680)",
+     "line_id": "L-bb0e57b1948175a3d5b8",
+     "m2": 2.419,
+     "members": [
+      "PIECE:ST01-MS2-U"
+     ],
+     "method": "G",
+     "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 327",
+     "status": "CALCULATED",
+     "status_in": "CALCULATED",
+     "tie": "TIED"
+    },
+    {
+     "alt_D_m2": 4.25626,
+     "basis_note": "T-281 ST01-MS2-U drawn soffit, method O: plan 3.720000 x sec 1.146124",
+     "contact": "FORM",
+     "element": "STAIR",
+     "face_id": "R4-328.SOFFIT",
+     "face_kind": "SOFFIT",
+     "floor": "1F-2F",
+     "item": "MS2-U waist soffit",
+     "line_id": "L-bb0e57b1948175a3d5b8",
+     "m2": 4.263581,
+     "members": [
+      "PIECE:ST01-MS2-U"
+     ],
+     "method": "G",
+     "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 328",
+     "split_of": "R4-328",
+     "status": "CALCULATED",
+     "status_in": "CALCULATED",
+     "tie": "TIED"
+    }
+   ],
+   "floor": "1F",
+   "item_code": "STR.CONC.STAIR",
+   "totals": {
+    "CALCULATED||G": {
+     "faces": 2,
+     "hi": 0.0,
+     "lo": 0.0,
+     "m2": 6.682581
+    }
+   },
+   "v3018": "byte-identical to V3.0.16 / V3.0.17"
+  },
+  {
+   "alternative_D_soffit_m2": null,
+   "concrete_line_id": "L-d5401fa8986900c66c37",
+   "concrete_state": "BLOCKED_RFI",
+   "element_id": "DG5:DOME-3:SHELL",
+   "faces": [
+    {
+     "contact": "FORM",
+     "element": "DOME",
+     "face_id": "R4-357",
+     "face_kind": "SOFFIT",
+     "floor": "roof",
+     "held_reason": "HELD in formwork r4 (no value)",
+     "item": "DOME-TOWER S0 approved design: shell soffit form",
+     "line_id": "L-d5401fa8986900c66c37",
+     "members": [
+      "SHELL:DOME-3"
+     ],
+     "method": "G",
+     "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 357",
+     "status": "HELD",
+     "status_in": "HELD",
+     "tie": "TIED"
+    },
+    {
+     "contact": "FORM",
+     "element": "DOME",
+     "face_id": "R4-358",
+     "face_kind": "SIDE",
+     "floor": "roof",
+     "held_reason": "HELD in formwork r4 (no value)",
+     "item": "DOME-TOWER S0 approved design: shell top (extrados) form",
+     "line_id": "L-d5401fa8986900c66c37",
+     "members": [
+      "SHELL:DOME-3"
+     ],
+     "method": "G",
+     "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 358",
+     "status": "HELD",
+     "status_in": "HELD",
+     "tie": "TIED"
+    },
+    {
+     "contact": "FORM",
+     "element": "DOME",
+     "face_id": "R4-359",
+     "face_kind": "SIDE",
+     "floor": "roof",
+     "held_reason": "HELD in formwork r4 (no value)",
+     "item": "DOME-TOWER S0 approved design: support faces",
+     "line_id": "L-d5401fa8986900c66c37",
+     "members": [
+      "SHELL:DOME-3"
+     ],
+     "method": "G",
+     "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 359",
+     "status": "HELD",
+     "status_in": "HELD",
+     "tie": "TIED"
+    }
+   ],
+   "floor": "2F",
+   "item_code": "STR.CONC.DOME",
+   "totals": {
+    "HELD||G": {
+     "faces": 3,
+     "hi": 0.0,
+     "lo": 0.0,
+     "m2": 0.0
+    }
+   },
+   "v3018": "byte-identical to V3.0.16 / V3.0.17"
+  },
+  {
+   "alternative_D_soffit_m2": null,
+   "concrete_line_id": "L-e37d81a8be8e0aa0010c",
+   "concrete_state": "SOURCE_DERIVED",
+   "element_id": "P-C:SCOPE:STAIRS:GF:CC-7390ea1139:FLIGHTS#CLOSABLE:VERIFIED_MS1_LD___MS1_U",
+   "faces": [
+    {
+     "contact": "FORM",
+     "element": "STAIR",
+     "face_id": "R4-320",
+     "face_kind": "SOFFIT",
+     "floor": "GF-1F",
+     "item": "MS1-LD landing soffit",
+     "line_id": "L-e37d81a8be8e0aa0010c",
+     "m2": 1.44,
+     "members": [
+      "PIECE:ST01-MS1-LD"
+     ],
+     "method": "G",
+     "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 320",
+     "status": "CALCULATED",
+     "status_in": "CALCULATED",
+     "tie": "TIED"
+    },
+    {
+     "contact": "FORM",
+     "element": "STAIR",
+     "face_id": "R4-321",
+     "face_kind": "RISER",
+     "floor": "GF-1F",
+     "item": "MS1-U riser forms (12 x 1.20 x 0.1667)",
+     "line_id": "L-e37d81a8be8e0aa0010c",
+     "m2": 2.4,
+     "members": [
+      "PIECE:ST01-MS1-U"
+     ],
+     "method": "G",
+     "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 321",
+     "status": "CALCULATED",
+     "status_in": "CALCULATED",
+     "tie": "TIED"
+    },
+    {
+     "alt_D_m2": 4.248365,
+     "basis_note": "T-281 ST01-MS1-U drawn soffit, method O: plan 3.720000 x sec 1.143959",
+     "contact": "FORM",
+     "element": "STAIR",
+     "face_id": "R4-322.SOFFIT",
+     "face_kind": "SOFFIT",
+     "floor": "GF-1F",
+     "item": "MS1-U waist soffit",
+     "line_id": "L-e37d81a8be8e0aa0010c",
+     "m2": 4.255527,
+     "members": [
+      "PIECE:ST01-MS1-U"
+     ],
+     "method": "G",
+     "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 322",
+     "split_of": "R4-322",
+     "status": "CALCULATED",
+     "status_in": "CALCULATED",
+     "tie": "TIED"
+    }
+   ],
+   "floor": "GF",
+   "item_code": "STR.CONC.STAIR",
+   "totals": {
+    "CALCULATED||G": {
+     "faces": 3,
+     "hi": 0.0,
+     "lo": 0.0,
+     "m2": 8.095527
+    }
+   },
+   "v3018": "SPLIT_PART of L-7863355dfcb68a681d2d"
+  },
+  {
+   "alternative_D_soffit_m2": null,
+   "concrete_line_id": "L-fffa895ed96b9d6a682c",
+   "concrete_state": "SOURCE_DERIVED",
+   "element_id": "HL:DOME_SHELL:DOME-B:SHELL",
+   "faces": [
+    {
+     "contact": "FORM",
+     "element": "DOME",
+     "face_id": "R4-350",
+     "face_kind": "SOFFIT",
+     "floor": "roof",
+     "item": "DOME-B S0 approved design: shell soffit form (intrados 2 pi R_i h_i)",
+     "line_id": "L-fffa895ed96b9d6a682c",
+     "m2": 24.15,
+     "members": [
+      "SHELL:DOME-B"
+     ],
+     "method": "G",
+     "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 350",
+     "status": "CALCULATED",
+     "status_in": "CALCULATED",
+     "tie": "TIED"
+    },
+    {
+     "contact": "FORM",
+     "element": "DOME",
+     "face_id": "R4-351",
+     "face_kind": "SIDE",
+     "floor": "roof",
+     "held_reason": "HELD in formwork r4 (no value)",
+     "item": "DOME-B S0 approved design: shell top (extrados) form",
+     "line_id": "L-fffa895ed96b9d6a682c",
+     "members": [
+      "SHELL:DOME-B"
+     ],
+     "method": "G",
+     "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 351",
+     "status": "HELD",
+     "status_in": "HELD",
+     "tie": "TIED"
+    }
+   ],
+   "floor": "2F",
+   "item_code": "STR.CONC.DOME",
+   "totals": {
+    "CALCULATED||G": {
+     "faces": 1,
+     "hi": 0.0,
+     "lo": 0.0,
+     "m2": 24.15
+    },
+    "HELD||G": {
+     "faces": 1,
+     "hi": 0.0,
+     "lo": 0.0,
+     "m2": 0.0
+    }
+   },
+   "v3018": "byte-identical to V3.0.16 / V3.0.17"
+  }
+ ],
+ "not_tied": [
+  {
+   "contact": "FORM",
+   "element": "SLAB_EDGE",
+   "face_id": "R4-313",
+   "face_kind": "EDGE_BAND",
+   "floor": "1F",
+   "item": "two dome openings, slab-thickness band at the opening (2 x 2 pi x 2.2111 x 0.16 = 4.446 m2): measured on the ring line, not here",
+   "members": [
+    "AGGREGATE:SLAB_EDGE:1F"
+   ],
+   "method": "G",
+   "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 313",
+   "status": "OWNED_BY_OTHER_LINE",
+   "status_in": "OWNED_BY_OTHER_LINE",
+   "tie": "POINTER_ROW",
+   "tie_reason": "dome-opening slab-thickness band: r4 OWNED_BY_OTHER_LINE, booked inside the ring rows R4-345 / R4-352 ('inner face = the dome-opening face over the ring depth')"
+  },
+  {
+   "basis_note": "0.200 x 1.200 x sec 1.143959: waist volume inside the B20 band P-C:BEAMS:GF:BAND0043.2 (L-d06033aa8d5f29aef490): last riser line 0.20 inside the band 458 / 2C6 (ST p.4; T-258 r2 ST01-MS1-U)",
+   "contact": "FORM",
+   "element": "STAIR",
+   "face_id": "R4-322.IN_BEAM",
+   "face_kind": "SOFFIT",
+   "floor": "GF-1F",
+   "item": "MS1-U waist soffit",
+   "m2": 0.27455,
+   "members": [
+    "PIECE:ST01-MS1-U"
+   ],
+   "method": "G",
+   "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 322",
+   "split_of": "R4-322",
+   "status": "CALCULATED",
+   "status_in": "CALCULATED",
+   "tie": "NO_FACE_INSIDE_MEMBER",
+   "tie_reason": "inside another member's outline: no surface exists there (R-FW-P3-2): 0.200 x 1.200 x sec 1.143959: waist volume inside the B20 band P-C:BEAMS:GF:BAND0043.2 (L-d06033aa8d5f29aef490): last riser line 0.20 inside the band 458 / 2C6 (ST p.4; T-258 r2 ST01-MS1-U)"
+  },
+  {
+   "basis_note": "the row prints 4.53 m2 (3 dp of a 4-dp volume / thickness): residual -7.7e-05",
+   "contact": "FORM",
+   "element": "STAIR",
+   "face_id": "R4-322.ROUNDING",
+   "face_kind": "SOFFIT",
+   "floor": "GF-1F",
+   "item": "MS1-U waist soffit",
+   "m2": -7.7e-05,
+   "members": [
+    "PIECE:ST01-MS1-U"
+   ],
+   "method": "G",
+   "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 322",
+   "split_of": "R4-322",
+   "status": "CALCULATED",
+   "status_in": "CALCULATED",
+   "tie": "PRINT_ROUNDING",
+   "tie_reason": "print rounding of the source row (<= 0.0005 m2), named so the row closes exactly"
+  },
+  {
+   "basis_note": "0.150 x 1.200 x sec 1.146124: waist volume inside the B20 band (stair-side face 2C6 on p.4): first riser line 0.150 inside the band (ST p.5; T-281 ST01-MS2-L)",
+   "contact": "FORM",
+   "element": "STAIR",
+   "face_id": "R4-324.IN_BEAM",
+   "face_kind": "SOFFIT",
+   "floor": "1F-2F",
+   "item": "MS2-L waist soffit",
+   "m2": 0.206302,
+   "members": [
+    "PIECE:ST01-MS2-L"
+   ],
+   "method": "G",
+   "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 324",
+   "split_of": "R4-324",
+   "status": "CALCULATED",
+   "status_in": "CALCULATED",
+   "tie": "NO_FACE_INSIDE_MEMBER",
+   "tie_reason": "inside another member's outline: no surface exists there (R-FW-P3-2): 0.150 x 1.200 x sec 1.146124: waist volume inside the B20 band (stair-side face 2C6 on p.4): first riser line 0.150 inside the band (ST p.5; T-281 ST01-MS2-L)"
+  },
+  {
+   "basis_note": "the row prints 4.539 m2 (3 dp of a 4-dp volume / thickness): residual 0.00035",
+   "contact": "FORM",
+   "element": "STAIR",
+   "face_id": "R4-324.ROUNDING",
+   "face_kind": "SOFFIT",
+   "floor": "1F-2F",
+   "item": "MS2-L waist soffit",
+   "m2": 0.00035,
+   "members": [
+    "PIECE:ST01-MS2-L"
+   ],
+   "method": "G",
+   "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 324",
+   "split_of": "R4-324",
+   "status": "CALCULATED",
+   "status_in": "CALCULATED",
+   "tie": "PRINT_ROUNDING",
+   "tie_reason": "print rounding of the source row (<= 0.0005 m2), named so the row closes exactly"
+  },
+  {
+   "basis_note": "the 0.480 / 0.16 reading T-258 s.3 retired as a double count: 1.30 x 0.05, the MS2-L last going (T-290 s.5 (1))",
+   "contact": "FORM",
+   "element": "STAIR",
+   "face_id": "R4-326.RETIRED_0480",
+   "face_kind": "SOFFIT",
+   "floor": "1F-2F",
+   "item": "MS2-LD landing soffit",
+   "m2": 0.065,
+   "members": [
+    "PIECE:ST01-MS2-LD"
+   ],
+   "method": "G",
+   "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 326",
+   "split_of": "R4-326",
+   "status": "CALCULATED",
+   "status_in": "CALCULATED",
+   "tie": "RETIRED_IN_SOURCE",
+   "tie_reason": "a reading the concrete ledger retired: not a physical face (R-FW-P3-2): the 0.480 / 0.16 reading T-258 s.3 retired as a double count: 1.30 x 0.05, the MS2-L last going (T-290 s.5 (1))"
+  },
+  {
+   "basis_note": "0.200 x 1.200 x sec 1.146124: waist volume inside the B23 band P-C:BEAMS:1F:BAND0031.2 (L-5ca0573b64ee1cb22e0e): last line 0.20 inside 5E4 / 5E1 (ST p.5; T-258 r2 ST01-MS2-U)",
+   "contact": "FORM",
+   "element": "STAIR",
+   "face_id": "R4-328.IN_BEAM",
+   "face_kind": "SOFFIT",
+   "floor": "1F-2F",
+   "item": "MS2-U waist soffit",
+   "m2": 0.27507,
+   "members": [
+    "PIECE:ST01-MS2-U"
+   ],
+   "method": "G",
+   "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 328",
+   "split_of": "R4-328",
+   "status": "CALCULATED",
+   "status_in": "CALCULATED",
+   "tie": "NO_FACE_INSIDE_MEMBER",
+   "tie_reason": "inside another member's outline: no surface exists there (R-FW-P3-2): 0.200 x 1.200 x sec 1.146124: waist volume inside the B23 band P-C:BEAMS:1F:BAND0031.2 (L-5ca0573b64ee1cb22e0e): last line 0.20 inside 5E4 / 5E1 (ST p.5; T-258 r2 ST01-MS2-U)"
+  },
+  {
+   "basis_note": "the row prints 4.539 m2 (3 dp of a 4-dp volume / thickness): residual 0.000349",
+   "contact": "FORM",
+   "element": "STAIR",
+   "face_id": "R4-328.ROUNDING",
+   "face_kind": "SOFFIT",
+   "floor": "1F-2F",
+   "item": "MS2-U waist soffit",
+   "m2": 0.000349,
+   "members": [
+    "PIECE:ST01-MS2-U"
+   ],
+   "method": "G",
+   "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 328",
+   "split_of": "R4-328",
+   "status": "CALCULATED",
+   "status_in": "CALCULATED",
+   "tie": "PRINT_ROUNDING",
+   "tie_reason": "print rounding of the source row (<= 0.0005 m2), named so the row closes exactly"
+  },
+  {
+   "basis_note": "T-281 1.100000 plan x sec 1.134456: the RS-S lane over the 'B3 (With Stair)' band T-139 GF-159, whose underside part 2 holds on BM-GF-057 (R4-258.GF-159, HELD 1.375625 m2, Q-61 C)",
+   "contact": "FORM",
+   "element": "STAIR",
+   "face_id": "R4-335.B3",
+   "face_kind": "SOFFIT",
+   "floor": "GF-1F",
+   "item": "RS-S waist soffit",
+   "m2": 1.247901,
+   "members": [
+    "PIECE:ST02-RS-S"
+   ],
+   "method": "G",
+   "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 335",
+   "split_of": "R4-335",
+   "status": "CALCULATED",
+   "status_in": "CALCULATED",
+   "tie": "DUPLICATE_IN_SOURCE",
+   "tie_reason": "under another member whose own rows already hold this face (one face once, D-T163-3): T-281 1.100000 plan x sec 1.134456: the RS-S lane over the 'B3 (With Stair)' band T-139 GF-159, whose underside part 2 holds on BM-GF-057 (R4-258.GF-159, HELD 1.375625 m2, Q-61 C)"
+  },
+  {
+   "basis_note": "T-281 0.345000 plan x sec 1.134456: the CA member 54E (T-139 GF-143 / 144 / 158) whose underside part 2 books on BM-GF-039 / BM-GF-057 (R4-254 GF-144 0.1725 + GF-158 0.1425 CALCULATED, R4-258 GF-143 0.03 HELD)",
+   "contact": "FORM",
+   "element": "STAIR",
+   "face_id": "R4-335.CA",
+   "face_kind": "SOFFIT",
+   "floor": "GF-1F",
+   "item": "RS-S waist soffit",
+   "m2": 0.391387,
+   "members": [
+    "PIECE:ST02-RS-S"
+   ],
+   "method": "G",
+   "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 335",
+   "split_of": "R4-335",
+   "status": "CALCULATED",
+   "status_in": "CALCULATED",
+   "tie": "DUPLICATE_IN_SOURCE",
+   "tie_reason": "under another member whose own rows already hold this face (one face once, D-T163-3): T-281 0.345000 plan x sec 1.134456: the CA member 54E (T-139 GF-143 / 144 / 158) whose underside part 2 books on BM-GF-039 / BM-GF-057 (R4-254 GF-144 0.1725 + GF-158 0.1425 CALCULATED, R4-258 GF-143 0.03 HELD)"
+  },
+  {
+   "basis_note": "T-281 ST02-RS-S/hidden pair 535 / 536 0.270000 plan x sec: unmarked layer-5 pair along the lane (F-T281-03, C-ST-3 designer row): what it is, is not drawn",
+   "contact": "FORM",
+   "element": "STAIR",
+   "face_id": "R4-335.HIDDEN_535_536",
+   "face_kind": "SOFFIT",
+   "floor": "GF-1F",
+   "held_from": 0.306303,
+   "held_reason": "T-281 ST02-RS-S/hidden pair 535 / 536 0.270000 plan x sec: unmarked layer-5 pair along the lane (F-T281-03, C-ST-3 designer row): what it is, is not drawn",
+   "item": "RS-S waist soffit",
+   "members": [
+    "UNKNOWN:HIDDEN_535_536"
+   ],
+   "method": "G",
+   "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 335",
+   "split_of": "R4-335",
+   "status": "HELD",
+   "status_in": "CALCULATED",
+   "tie": "NO_CANDIDATE_LINE",
+   "tie_reason": "unmarked layer-5 pair (F-T281-03): the member is not identified, no line"
+  },
+  {
+   "basis_note": "the row prints 4.084 m2 (3 dp of a 4-dp volume / thickness): residual -4.1e-05",
+   "contact": "FORM",
+   "element": "STAIR",
+   "face_id": "R4-335.ROUNDING",
+   "face_kind": "SOFFIT",
+   "floor": "GF-1F",
+   "item": "RS-S waist soffit",
+   "m2": -4.1e-05,
+   "members": [
+    "PIECE:ST02-RS-S"
+   ],
+   "method": "G",
+   "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 335",
+   "split_of": "R4-335",
+   "status": "CALCULATED",
+   "status_in": "CALCULATED",
+   "tie": "PRINT_ROUNDING",
+   "tie_reason": "print rounding of the source row (<= 0.0005 m2), named so the row closes exactly"
+  },
+  {
+   "basis_note": "column 374 0.550 x 0.050 inside the plate outline (T-258 / Checker 13:10)",
+   "contact": "FORM",
+   "element": "STAIR",
+   "face_id": "R4-336.COL374",
+   "face_kind": "SOFFIT",
+   "floor": "GF-1F",
+   "item": "RS-LD landing soffit",
+   "m2": 0.0275,
+   "members": [
+    "PIECE:ST02-RS-LD"
+   ],
+   "method": "G",
+   "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 336",
+   "split_of": "R4-336",
+   "status": "CALCULATED",
+   "status_in": "CALCULATED",
+   "tie": "NO_FACE_INSIDE_MEMBER",
+   "tie_reason": "inside another member's outline: no surface exists there (R-FW-P3-2): column 374 0.550 x 0.050 inside the plate outline (T-258 / Checker 13:10)"
+  },
+  {
+   "basis_note": "0.275625 m2 of the plate over the 'B3 (With Stair)' band GF-159 (part 2 R4-258.GF-159 on BM-GF-057)",
+   "contact": "FORM",
+   "element": "STAIR",
+   "face_id": "R4-336.B3",
+   "face_kind": "SOFFIT",
+   "floor": "GF-1F",
+   "item": "RS-LD landing soffit",
+   "m2": 0.275625,
+   "members": [
+    "PIECE:ST02-RS-LD"
+   ],
+   "method": "G",
+   "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 336",
+   "split_of": "R4-336",
+   "status": "CALCULATED",
+   "status_in": "CALCULATED",
+   "tie": "DUPLICATE_IN_SOURCE",
+   "tie_reason": "under another member whose own rows already hold this face (one face once, D-T163-3): 0.275625 m2 of the plate over the 'B3 (With Stair)' band GF-159 (part 2 R4-258.GF-159 on BM-GF-057)"
+  },
+  {
+   "basis_note": "T-281 unmarked pair 2CC / 2CD under the plate (F-T281-03)",
+   "contact": "FORM",
+   "element": "STAIR",
+   "face_id": "R4-336.HIDDEN_2CC_2CD",
+   "face_kind": "SOFFIT",
+   "floor": "GF-1F",
+   "held_from": 0.11875,
+   "held_reason": "T-281 unmarked pair 2CC / 2CD under the plate (F-T281-03)",
+   "item": "RS-LD landing soffit",
+   "members": [
+    "UNKNOWN:HIDDEN_2CC_2CD"
+   ],
+   "method": "G",
+   "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 336",
+   "split_of": "R4-336",
+   "status": "HELD",
+   "status_in": "CALCULATED",
+   "tie": "NO_CANDIDATE_LINE",
+   "tie_reason": "unmarked layer-5 pair (F-T281-03): the member is not identified, no line"
+  },
+  {
+   "basis_note": "T-281 unmarked pair 535 / 536 under the plate (F-T281-03)",
+   "contact": "FORM",
+   "element": "STAIR",
+   "face_id": "R4-336.HIDDEN_535_536",
+   "face_kind": "SOFFIT",
+   "floor": "GF-1F",
+   "held_from": 0.087731,
+   "held_reason": "T-281 unmarked pair 535 / 536 under the plate (F-T281-03)",
+   "item": "RS-LD landing soffit",
+   "members": [
+    "UNKNOWN:HIDDEN_535_536"
+   ],
+   "method": "G",
+   "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 336",
+   "split_of": "R4-336",
+   "status": "HELD",
+   "status_in": "CALCULATED",
+   "tie": "NO_CANDIDATE_LINE",
+   "tie_reason": "unmarked layer-5 pair (F-T281-03): the member is not identified, no line"
+  },
+  {
+   "basis_note": "the pre-r2 0.2256 m3 reading (T-290 s.5 (2)); the drawn plate gross is 1.380000 (1.150 x 1.200)",
+   "contact": "FORM",
+   "element": "STAIR",
+   "face_id": "R4-336.PRE_R2",
+   "face_kind": "SOFFIT",
+   "floor": "GF-1F",
+   "item": "RS-LD landing soffit",
+   "m2": 0.03,
+   "members": [
+    "PIECE:ST02-RS-LD"
+   ],
+   "method": "G",
+   "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 336",
+   "split_of": "R4-336",
+   "status": "CALCULATED",
+   "status_in": "CALCULATED",
+   "tie": "RETIRED_IN_SOURCE",
+   "tie_reason": "a reading the concrete ledger retired: not a physical face (R-FW-P3-2): the pre-r2 0.2256 m3 reading (T-290 s.5 (2)); the drawn plate gross is 1.380000 (1.150 x 1.200)"
+  },
+  {
+   "basis_note": "5 x 0.05 x 4.50 / 28: the architectural 1.25 width T-258 r2 replaced by the lane 1.200 (T-290 s.5 (2))",
+   "contact": "FORM",
+   "element": "STAIR",
+   "face_id": "R4-337.ARCH_WIDTH",
+   "face_kind": "RISER",
+   "floor": "GF-1F",
+   "item": "RS-A riser forms (5 x 1.25 x 0.1607)",
+   "m2": 0.040179,
+   "members": [
+    "PIECE:ST02-RS-A"
+   ],
+   "method": "G",
+   "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 337",
+   "split_of": "R4-337",
+   "status": "CALCULATED",
+   "status_in": "CALCULATED",
+   "tie": "RETIRED_IN_SOURCE",
+   "tie_reason": "a reading the concrete ledger retired: not a physical face (R-FW-P3-2): 5 x 0.05 x 4.50 / 28: the architectural 1.25 width T-258 r2 replaced by the lane 1.200 (T-290 s.5 (2))"
+  },
+  {
+   "basis_note": "the row prints 1.004 m2 (3 dp of a 4-dp volume / thickness): residual -0.000464",
+   "contact": "FORM",
+   "element": "STAIR",
+   "face_id": "R4-337.ROUNDING",
+   "face_kind": "RISER",
+   "floor": "GF-1F",
+   "item": "RS-A riser forms (5 x 1.25 x 0.1607)",
+   "m2": -0.000464,
+   "members": [
+    "PIECE:ST02-RS-A"
+   ],
+   "method": "G",
+   "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 337",
+   "split_of": "R4-337",
+   "status": "CALCULATED",
+   "status_in": "CALCULATED",
+   "tie": "PRINT_ROUNDING",
+   "tie_reason": "print rounding of the source row (<= 0.0005 m2), named so the row closes exactly"
+  },
+  {
+   "basis_note": "T-281 ST02-RS-A/hidden pair 2CC / 2CD 0.120000 plan x sec: unmarked layer-5 pair along the lane (F-T281-03, C-ST-3 designer row): what it is, is not drawn",
+   "contact": "FORM",
+   "element": "STAIR",
+   "face_id": "R4-338.HIDDEN_2CC_2CD",
+   "face_kind": "SOFFIT",
+   "floor": "GF-1F",
+   "held_from": 0.136135,
+   "held_reason": "T-281 ST02-RS-A/hidden pair 2CC / 2CD 0.120000 plan x sec: unmarked layer-5 pair along the lane (F-T281-03, C-ST-3 designer row): what it is, is not drawn",
+   "item": "RS-A waist soffit",
+   "members": [
+    "UNKNOWN:HIDDEN_2CC_2CD"
+   ],
+   "method": "G",
+   "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 338",
+   "split_of": "R4-338",
+   "status": "HELD",
+   "status_in": "CALCULATED",
+   "tie": "NO_CANDIDATE_LINE",
+   "tie_reason": "unmarked layer-5 pair (F-T281-03): the member is not identified, no line"
+  },
+  {
+   "basis_note": "0.05 x 1.200 run x sec: the architectural 1.25 width T-258 r2 replaced by the lane",
+   "contact": "FORM",
+   "element": "STAIR",
+   "face_id": "R4-338.ARCH_WIDTH",
+   "face_kind": "SOFFIT",
+   "floor": "GF-1F",
+   "item": "RS-A waist soffit",
+   "m2": 0.068067,
+   "members": [
+    "PIECE:ST02-RS-A"
+   ],
+   "method": "G",
+   "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 338",
+   "split_of": "R4-338",
+   "status": "CALCULATED",
+   "status_in": "CALCULATED",
+   "tie": "RETIRED_IN_SOURCE",
+   "tie_reason": "a reading the concrete ledger retired: not a physical face (R-FW-P3-2): 0.05 x 1.200 run x sec: the architectural 1.25 width T-258 r2 replaced by the lane"
+  },
+  {
+   "basis_note": "the row prints 1.702 m2 (3 dp of a 4-dp volume / thickness): residual 0.000316",
+   "contact": "FORM",
+   "element": "STAIR",
+   "face_id": "R4-338.ROUNDING",
+   "face_kind": "SOFFIT",
+   "floor": "GF-1F",
+   "item": "RS-A waist soffit",
+   "m2": 0.000316,
+   "members": [
+    "PIECE:ST02-RS-A"
+   ],
+   "method": "G",
+   "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 338",
+   "split_of": "R4-338",
+   "status": "CALCULATED",
+   "status_in": "CALCULATED",
+   "tie": "PRINT_ROUNDING",
+   "tie_reason": "print rounding of the source row (<= 0.0005 m2), named so the row closes exactly"
+  },
+  {
+   "contact": "FORM",
+   "element": "STAIR",
+   "face_id": "R4-339",
+   "face_kind": "SIDE",
+   "item": "flight and landing side faces (stringer profiles) at the walls and the well",
+   "members": [
+    "AGGREGATE:STAIR:"
+   ],
+   "method": "G",
+   "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 339",
+   "status": "HELD",
+   "status_in": "HELD",
+   "tie": "NAMED_NOT_TIED",
+   "tie_reason": "aggregate over every stair (stringer profiles at the walls and the well), no value: HELD; whether the flights are cast against the walls is not printed"
+  },
+  {
+   "contact": "FORM",
+   "element": "TANK",
+   "face_id": "R4-341",
+   "face_kind": "SIDE",
+   "floor": "2F",
+   "item": "water-tank walls (B15 20 x 120 up / down, D-44)",
+   "members": [
+    "TANK"
+   ],
+   "method": "E=G",
+   "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 341",
+   "status": "HELD",
+   "status_in": "HELD",
+   "tie": "DUPLICATE_VIEW",
+   "tie_reason": "the r4 'water-tank walls (B15 20 x 120)' are beam B15 = BM-2F-007 (T-149 R125, 0.20 x 1.20 x 2.70; candidate P-C:BEAMS:2F:BAND0006.2 L-713bc64aaa210610e7fe), whose faces part 2 ties (R4-298 .. R4-312); D-44 (up- or downstand) is carried against those faces (F-T293-P3-03); the rest of the tank is not drawn (D-44 / D-52)"
+  },
+  {
+   "contact": "FORM",
+   "element": "DOME",
+   "face_id": "R4-346",
+   "face_kind": "SIDE",
+   "floor": "roof",
+   "item": "DOME-A S0 approved design: drum faces (1.30 m)",
+   "members": [
+    "DRUM:DOME-A"
+   ],
+   "method": "G",
+   "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 346",
+   "status": "HELD",
+   "status_in": "HELD",
+   "tie": "NO_CANDIDATE_LINE",
+   "tie_reason": "drum: drawn (section B-B 1.30 m), material / thickness not printed (G3-b); the candidate has no line (Lead 14:15 named omission, T-266 s.4 (2)): no face, no value"
+  },
+  {
+   "contact": "FORM",
+   "element": "DOME",
+   "face_id": "R4-347",
+   "face_kind": "SOFFIT",
+   "floor": "roof",
+   "item": "DOME-A S1 client request (NOT RELEASED): shell intrados (soffit form / internal finish) removed",
+   "members": [
+    "AGGREGATE:DOME:roof"
+   ],
+   "method": "G",
+   "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 347",
+   "status": "S1_NOT_RELEASED",
+   "status_in": "S1_NOT_RELEASED",
+   "tie": "SCENARIO_NOT_IN_CANDIDATE",
+   "tie_reason": "client-request scenario S1: never a candidate face (ScenarioLeak guard)"
+  },
+  {
+   "contact": "FORM",
+   "element": "DOME",
+   "face_id": "R4-348",
+   "face_kind": "SIDE",
+   "floor": "roof",
+   "item": "DOME-A S1 client request (NOT RELEASED): shell top (extrados) formwork removed",
+   "members": [
+    "AGGREGATE:DOME:roof"
+   ],
+   "method": "G",
+   "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 348",
+   "status": "S1_NOT_RELEASED",
+   "status_in": "S1_NOT_RELEASED",
+   "tie": "SCENARIO_NOT_IN_CANDIDATE",
+   "tie_reason": "client-request scenario S1: never a candidate face (ScenarioLeak guard)"
+  },
+  {
+   "contact": "FORM",
+   "element": "DOME",
+   "face_id": "R4-349",
+   "face_kind": "SOFFIT",
+   "floor": "roof",
+   "item": "DOME-A S1 client request (NOT RELEASED): edge ring formwork (opening face 0.50, outer downstand 0.34, soffit 0.20)",
+   "m2": 8.783,
+   "members": [
+    "AGGREGATE:DOME:roof"
+   ],
+   "method": "G",
+   "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 349",
+   "status": "S1_NOT_RELEASED",
+   "status_in": "S1_NOT_RELEASED",
+   "tie": "SCENARIO_NOT_IN_CANDIDATE",
+   "tie_reason": "client-request scenario S1: never a candidate face (ScenarioLeak guard)"
+  },
+  {
+   "contact": "FORM",
+   "element": "DOME",
+   "face_id": "R4-353",
+   "face_kind": "SIDE",
+   "floor": "roof",
+   "item": "DOME-B S0 approved design: drum faces (1.30 m)",
+   "members": [
+    "DRUM:DOME-B"
+   ],
+   "method": "G",
+   "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 353",
+   "status": "HELD",
+   "status_in": "HELD",
+   "tie": "NO_CANDIDATE_LINE",
+   "tie_reason": "drum: drawn (section B-B 1.30 m), material / thickness not printed (G3-b); the candidate has no line (Lead 14:15 named omission, T-266 s.4 (2)): no face, no value"
+  },
+  {
+   "contact": "FORM",
+   "element": "DOME",
+   "face_id": "R4-354",
+   "face_kind": "SOFFIT",
+   "floor": "roof",
+   "item": "DOME-B S1 client request (NOT RELEASED): shell intrados (soffit form / internal finish) removed",
+   "members": [
+    "AGGREGATE:DOME:roof"
+   ],
+   "method": "G",
+   "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 354",
+   "status": "S1_NOT_RELEASED",
+   "status_in": "S1_NOT_RELEASED",
+   "tie": "SCENARIO_NOT_IN_CANDIDATE",
+   "tie_reason": "client-request scenario S1: never a candidate face (ScenarioLeak guard)"
+  },
+  {
+   "contact": "FORM",
+   "element": "DOME",
+   "face_id": "R4-355",
+   "face_kind": "SIDE",
+   "floor": "roof",
+   "item": "DOME-B S1 client request (NOT RELEASED): shell top (extrados) formwork removed",
+   "members": [
+    "AGGREGATE:DOME:roof"
+   ],
+   "method": "G",
+   "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 355",
+   "status": "S1_NOT_RELEASED",
+   "status_in": "S1_NOT_RELEASED",
+   "tie": "SCENARIO_NOT_IN_CANDIDATE",
+   "tie_reason": "client-request scenario S1: never a candidate face (ScenarioLeak guard)"
+  },
+  {
+   "contact": "FORM",
+   "element": "DOME",
+   "face_id": "R4-356",
+   "face_kind": "SIDE",
+   "floor": "roof",
+   "item": "DOME-B S1 client request (NOT RELEASED): edge ring faces",
+   "members": [
+    "AGGREGATE:DOME:roof"
+   ],
+   "method": "G",
+   "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 356",
+   "status": "S1_NOT_RELEASED",
+   "status_in": "S1_NOT_RELEASED",
+   "tie": "SCENARIO_NOT_IN_CANDIDATE",
+   "tie_reason": "client-request scenario S1: never a candidate face (ScenarioLeak guard)"
+  },
+  {
+   "contact": "FORM",
+   "element": "DOME",
+   "face_id": "R4-360",
+   "face_kind": "SIDE",
+   "floor": "roof",
+   "item": "DOME-TOWER S1 client request (NOT RELEASED): new opening in the flat +13.90 slab (trimming beams, slab pa",
+   "members": [
+    "AGGREGATE:DOME:roof"
+   ],
+   "method": "G",
+   "revision": "FORMWORK_R4 (T-264 MERGED 90203feb) FORMWORK_LINES_R4.csv row 360",
+   "status": "S1_NOT_RELEASED",
+   "status_in": "S1_NOT_RELEASED",
+   "tie": "SCENARIO_NOT_IN_CANDIDATE",
+   "tie_reason": "client-request scenario S1: never a candidate face (ScenarioLeak guard)"
+  },
+  {
+   "basis_note": "drawn plates 1.495 + 1.440 = 2.935 m2 (T-281) vs r4 3.000 on the retired 0.480 reading: -0.065 = 1.30 x 0.05, the MS2-L last going",
+   "contact": "FORM",
+   "element": "STAIR",
+   "face_id": "T290-MS2-LD",
+   "face_kind": "SOFFIT",
+   "floor": "1F-2F",
+   "item": "delta MS2-LD landing soffit: drawn plates 1.495 + 1.440 = 2.935 m2 (T-281) vs r4 3.000 on the retired 0.480 reading: -0.065 = 1.30 x 0.05, the MS2-L last going",
+   "m2": -0.065,
+   "members": [
+    "AGGREGATE:STAIR:1F-2F"
+   ],
+   "method": "G",
+   "revision": "T-290 MERGED 891dbd4d (Gate A PASS, 2026-10-25) BASIS_LEDGER s.5",
+   "status": "CALCULATED",
+   "status_in": "CALCULATED",
+   "tie": "POINTER_ROW",
+   "tie_reason": "the T-290 delta is booked as the RETIRED piece of its r4 row (R4-326.RETIRED_0480 / R4-337.ARCH_WIDTH); this row is its record, never a second correction"
+  },
+  {
+   "basis_note": "structural lane 1.200: 5 x 1.20 x 0.1607 = 0.964 m2 vs r4 1.004 on the 1.25 width",
+   "contact": "FORM",
+   "element": "STAIR",
+   "face_id": "T290-RS-A",
+   "face_kind": "RISER",
+   "floor": "GF-1F",
+   "item": "delta RS-A riser forms: structural lane 1.200: 5 x 1.20 x 0.1607 = 0.964 m2 vs r4 1.004 on the 1.25 width",
+   "m2": -0.04,
+   "members": [
+    "AGGREGATE:STAIR:GF-1F"
+   ],
+   "method": "G",
+   "revision": "T-290 MERGED 891dbd4d (Gate A PASS, 2026-10-25) BASIS_LEDGER s.5",
+   "status": "CALCULATED",
+   "status_in": "CALCULATED",
+   "tie": "POINTER_ROW",
+   "tie_reason": "the T-290 delta is booked as the RETIRED piece of its r4 row (R4-326.RETIRED_0480 / R4-337.ARCH_WIDTH); this row is its record, never a second correction"
+  }
+ ],
+ "part": "3 (stairs, domes, water tank); union with parts 1 and 2: the part-1 NAMED rows R4-317 .. R4-360, T290-MS2-LD / T290-RS-A and the part-2 NAMED rows R4-313 / R4-316 are replaced by the rows here",
+ "project": {
+  "project_id": "development-villa-t131",
+  "revision_set_sha256": "5e3690754db90b5fa2d878d4fc29b2e84ce9d1d91e4c1e68a62019d1b34bbc22",
+  "route": {
+   "project_id": "ST7757 villa (structural set)",
+   "revision_set_sha256": "297e913da9d98da10c40b1e93af0ccc66b0d7825b7700e0a2e3b9b5a54240b18"
+  }
+ },
+ "rule": "faces never summed across status / alternative / method; HELD and PENDING blank, range kept; scenario S1 rows are never candidate faces",
+ "schema": "T293_FORMWORK_BY_CONCRETE_LINE_V1"
+}
