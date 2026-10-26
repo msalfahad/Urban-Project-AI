@@ -1,0 +1,322 @@
+{
+ "candidate": {
+  "source": "own V3.0.18 run (research/agents_t266/v3018_run.py after research/agents_t167/v304_run.py) on Drive 'Alsenan chalet project' P7757_DXF_COMPRESSED.zip -> P7757.dxf (ab54dd55) and 'ST7757 dxf.dxf' (9f9d1179)",
+  "lines_json_sha256_8": "ec741004",
+  "lines_csv_sha256_8": "af577422",
+  "lines_total": 3705
+ },
+ "candidate_facade_lines": [
+  {
+   "line_id": "L-43527ae4e8ec75c56636",
+   "item_code": "ARCH.FACADE",
+   "floor": "1F",
+   "element": "facade",
+   "evidence_state": "BLOCKED_RFI",
+   "measured_net": null
+  },
+  {
+   "line_id": "L-c22a64296e7db7575c68",
+   "item_code": "ARCH.FACADE_RUN",
+   "floor": "1F",
+   "element": "facade",
+   "evidence_state": "PROVISIONAL",
+   "measured_net": 63.168865
+  },
+  {
+   "line_id": "L-472196bf3c74cdf83180",
+   "item_code": "ARCH.FACADE_RUN",
+   "floor": "1F",
+   "element": "facade outline 2",
+   "evidence_state": "BLOCKED_RFI",
+   "measured_net": null
+  },
+  {
+   "line_id": "L-8bb83e16cc7b104ab88b",
+   "item_code": "FIN.EXT.FINISH",
+   "floor": "1F",
+   "element": "facade",
+   "evidence_state": "BLOCKED_RFI",
+   "measured_net": null
+  },
+  {
+   "line_id": "L-348c4d8d32f3f6d35fe5",
+   "item_code": "ARCH.FACADE",
+   "floor": "2F",
+   "element": "facade",
+   "evidence_state": "BLOCKED_RFI",
+   "measured_net": null
+  },
+  {
+   "line_id": "L-75f85984c61774c0a8fc",
+   "item_code": "ARCH.FACADE_RUN",
+   "floor": "2F",
+   "element": "facade",
+   "evidence_state": "PROVISIONAL",
+   "measured_net": 29.8
+  },
+  {
+   "line_id": "L-0b729a1774ad4ce4efaf",
+   "item_code": "ARCH.FACADE_RUN",
+   "floor": "2F",
+   "element": "facade outline 2",
+   "evidence_state": "BLOCKED_RFI",
+   "measured_net": null
+  },
+  {
+   "line_id": "L-d52c4f763b19aedf8b8b",
+   "item_code": "FIN.EXT.FINISH",
+   "floor": "2F",
+   "element": "facade",
+   "evidence_state": "BLOCKED_RFI",
+   "measured_net": null
+  },
+  {
+   "line_id": "L-cc7dc0a51f3319a99482",
+   "item_code": "ARCH.FACADE",
+   "floor": "GF",
+   "element": "facade",
+   "evidence_state": "BLOCKED_RFI",
+   "measured_net": null
+  },
+  {
+   "line_id": "L-c0e9a4c62171de1f369b",
+   "item_code": "ARCH.FACADE",
+   "floor": "GF",
+   "element": "facade below F.F.L. (plinth)",
+   "evidence_state": "BLOCKED_RFI",
+   "measured_net": null
+  },
+  {
+   "line_id": "L-a1d2bc132f449743b329",
+   "item_code": "ARCH.FACADE_RUN",
+   "floor": "GF",
+   "element": "facade",
+   "evidence_state": "PROVISIONAL",
+   "measured_net": 105.886694
+  },
+  {
+   "line_id": "L-66bc23b0d25030222328",
+   "item_code": "ARCH.FACADE_RUN",
+   "floor": "GF",
+   "element": "facade outline 2",
+   "evidence_state": "BLOCKED_RFI",
+   "measured_net": null
+  },
+  {
+   "line_id": "L-b05f70c92405dbcfbe62",
+   "item_code": "FIN.EXT.FINISH",
+   "floor": "GF",
+   "element": "facade",
+   "evidence_state": "BLOCKED_RFI",
+   "measured_net": null
+  }
+ ],
+ "census_other_lines": {
+  "ARCH.EXTERIOR": 1,
+  "ARCH.FACADE": 4,
+  "ARCH.FACADE_RUN": 6,
+  "ARCH.PASSAGE": 2,
+  "DOOR.EXTERNAL.ALUMINIUM": 8,
+  "FIN.CEILING": 5,
+  "FIN.EXT.FINISH": 3,
+  "FIN.SKIRTING": 9,
+  "STR.CONC.BOUNDARY_WALL": 1,
+  "STR.CONC.GROUND_BEAM": 1,
+  "STR.REBAR": 4,
+  "WP.FOUNDATION.BURIED_LIQUID": 1
+ },
+ "faces": {
+  "bands": 98,
+  "measured_m2": 1022.5337,
+  "held_m2": [
+   6.822226,
+   13.261431
+  ],
+  "t159_measured_m2": 1022.534,
+  "t159_held_m2": [
+   6.822,
+   13.261
+  ],
+  "t159_csv_area_sum_m2": 1022.5337,
+  "residual_measured_vs_t159_csv_m2": 0.0,
+  "slab_edge_over_open_air_m": 13.0789,
+  "not_a_face_sides": [
+   "GF SW-4",
+   "GF NE-5"
+  ]
+ },
+ "by_ledger_state": {
+  "IN_LINE": {
+   "m2": 885.2895,
+   "held_lo": 0.0,
+   "held_hi": 0.0,
+   "rows": 45,
+   "slab_edge_m": 0.0
+  },
+  "NO_LINE": {
+   "m2": 137.2442,
+   "held_lo": 6.822226,
+   "held_hi": 13.261431,
+   "rows": 53,
+   "slab_edge_m": 13.0789
+  }
+ },
+ "by_state_and_line": [
+  {
+   "state": "IN_LINE",
+   "line_or_cause": "L-8bb83e16cc7b104ab88b",
+   "m2": 265.3093,
+   "held_lo": 0.0,
+   "held_hi": 0.0,
+   "rows": 12,
+   "slab_edge_m": 0.0
+  },
+  {
+   "state": "IN_LINE",
+   "line_or_cause": "L-b05f70c92405dbcfbe62",
+   "m2": 479.9202,
+   "held_lo": 0.0,
+   "held_hi": 0.0,
+   "rows": 29,
+   "slab_edge_m": 0.0
+  },
+  {
+   "state": "IN_LINE",
+   "line_or_cause": "L-d52c4f763b19aedf8b8b",
+   "m2": 140.06,
+   "held_lo": 0.0,
+   "held_hi": 0.0,
+   "rows": 4,
+   "slab_edge_m": 0.0
+  },
+  {
+   "state": "NO_LINE",
+   "line_or_cause": "a face standing on a lower roof, below its own floor's F.F.L",
+   "m2": 4.08,
+   "held_lo": 0.0,
+   "held_hi": 0.0,
+   "rows": 1,
+   "slab_edge_m": 0.0
+  },
+  {
+   "state": "NO_LINE",
+   "line_or_cause": "parapet outer face above the next F.F.L.",
+   "m2": 66.4279,
+   "held_lo": 1.869936,
+   "held_hi": 7.247936,
+   "rows": 14,
+   "slab_edge_m": 0.0
+  },
+  {
+   "state": "NO_LINE",
+   "line_or_cause": "plinth",
+   "m2": 66.7363,
+   "held_lo": 4.95229,
+   "held_hi": 6.013495,
+   "rows": 29,
+   "slab_edge_m": 0.0
+  },
+  {
+   "state": "NO_LINE",
+   "line_or_cause": "slab edge over open air",
+   "m2": 0.0,
+   "held_lo": 0.0,
+   "held_hi": 0.0,
+   "rows": 9,
+   "slab_edge_m": 13.0789
+  }
+ ],
+ "owner_manual_q07_m2": 955.7974,
+ "openings": {
+  "rows": 39,
+  "fixed_drawing_m2": 85.028801,
+  "assumed_doors_m2": 12.76,
+  "held_cap_m2": 33.485,
+  "held_ids": [
+   "W02",
+   "D-GF-07"
+  ]
+ },
+ "lines": [
+  {
+   "finish_line_id": "L-8bb83e16cc7b104ab88b",
+   "item_code": "FIN.EXT.FINISH",
+   "floor": "1F",
+   "candidate_state": "BLOCKED_RFI",
+   "candidate_quantity": null,
+   "geometry_line_id": "L-43527ae4e8ec75c56636",
+   "faces": 12,
+   "bands": 12,
+   "gross_m2": 265.3093,
+   "openings": 13,
+   "deduct_fixed_m2": 30.783772,
+   "of_which_assumed_m2": 0.0,
+   "deduct_held_cap_m2": 0.0,
+   "net_hi_m2": 234.525528,
+   "net_lo_m2": 234.525528,
+   "status": "DRAWING-CONFIRMED"
+  },
+  {
+   "finish_line_id": "L-b05f70c92405dbcfbe62",
+   "item_code": "FIN.EXT.FINISH",
+   "floor": "GF",
+   "candidate_state": "BLOCKED_RFI",
+   "candidate_quantity": null,
+   "geometry_line_id": "L-cc7dc0a51f3319a99482",
+   "faces": 27,
+   "bands": 29,
+   "gross_m2": 479.9202,
+   "openings": 20,
+   "deduct_fixed_m2": 59.150029,
+   "of_which_assumed_m2": 10.56,
+   "deduct_held_cap_m2": 33.485,
+   "net_hi_m2": 420.770171,
+   "net_lo_m2": 387.285171,
+   "status": "HELD (bounded: openings without an established hole)"
+  },
+  {
+   "finish_line_id": "L-d52c4f763b19aedf8b8b",
+   "item_code": "FIN.EXT.FINISH",
+   "floor": "2F",
+   "candidate_state": "BLOCKED_RFI",
+   "candidate_quantity": null,
+   "geometry_line_id": "L-348c4d8d32f3f6d35fe5",
+   "faces": 4,
+   "bands": 4,
+   "gross_m2": 140.06,
+   "openings": 5,
+   "deduct_fixed_m2": 7.855,
+   "of_which_assumed_m2": 2.2,
+   "deduct_held_cap_m2": 0.0,
+   "net_hi_m2": 132.205,
+   "net_lo_m2": 132.205,
+   "status": "ASSUMED — OWNER-APPROVED part (doors 2.20)"
+  }
+ ],
+ "formula_run_x_h": {
+  "GF": {
+   "run_m": 105.886694,
+   "printed_storey_h_m": 4.5,
+   "run_x_h_m2": 476.490123,
+   "in_line_faces_m2": 479.9202,
+   "difference_m2": 3.430077
+  },
+  "1F": {
+   "run_m": 63.168865,
+   "printed_storey_h_m": 4.2,
+   "run_x_h_m2": 265.309233,
+   "in_line_faces_m2": 265.3093,
+   "difference_m2": 6.7e-05
+  },
+  "2F": {
+   "run_m": 29.8,
+   "printed_storey_h_m": 4.7,
+   "run_x_h_m2": 140.06,
+   "in_line_faces_m2": 140.06,
+   "difference_m2": 0.0
+  }
+ },
+ "items": {
+  "rows": 25
+ }
+}

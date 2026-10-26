@@ -1,0 +1,4 @@
+finish_line_id,item_code,floor,candidate_state,candidate_quantity,geometry_line_id,faces,bands,gross_m2,openings,deduct_fixed_m2,of_which_assumed_m2,deduct_held_cap_m2,net_lo_m2,net_hi_m2,status
+L-8bb83e16cc7b104ab88b,FIN.EXT.FINISH,1F,BLOCKED_RFI,,L-43527ae4e8ec75c56636,12,12,265.309300,13,30.783772,0.000000,0.000000,234.525528,234.525528,DRAWING-CONFIRMED
+L-b05f70c92405dbcfbe62,FIN.EXT.FINISH,GF,BLOCKED_RFI,,L-cc7dc0a51f3319a99482,27,29,479.920200,20,59.150029,10.560000,33.485000,387.285171,420.770171,HELD (bounded: openings without an established hole)
+L-d52c4f763b19aedf8b8b,FIN.EXT.FINISH,2F,BLOCKED_RFI,,L-348c4d8d32f3f6d35fe5,4,4,140.060000,5,7.855000,2.200000,0.000000,132.205000,132.205000,ASSUMED — OWNER-APPROVED part (doors 2.20)
