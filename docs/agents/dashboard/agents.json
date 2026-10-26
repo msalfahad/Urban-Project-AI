@@ -40,8 +40,8 @@
 "role": "Integration lane: wires checker-verified pieces into the one opt-in candidate",
 "cadence": "every 2 h at :59 (even hours UTC)",
 "last_run": "2026-10-26T04:59:30Z",
-"result": "running",
-"working_on": "Plaster and paint into the candidate (V3.0.20), claimed 05:05",
+"result": "ok",
+"working_on": "04:59 run handed in plaster and paint into the candidate (V3.0.20) at 06:19, waiting for the checker. Next: lane I queue (wall tiles into the candidate after the checker)",
 "as_of": "2026-10-26T06:15:00Z"
 },
 {

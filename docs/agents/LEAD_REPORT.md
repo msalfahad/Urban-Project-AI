@@ -37,15 +37,19 @@ Checker with no cell moving (FLOOR_AREA 381.464 vs 409.58 m2 -6.86 %; CONCRETE 1
   opening ends, '50 % top extension where possible', S8.2), excavation formation, dome drums; spatter dash and
   block / concrete joint mesh now have a piece (T-317).
 
-GATES: lowest open gate 1 (lane I: T-244 CLAIMED 05:05, running). Gate 2: T-312 READY; T-311 / T-313 / T-317 / T-224
+GATES: lowest open gate 1 (lane I: T-244 READY 06:19, Gate B pending). Gate 2: T-312 READY; T-311 / T-313 / T-317 / T-224
 TODO; T-315 / T-314 / T-310 / T-199 QUEUED. Gate 3: T-316 TODO; T-318 BLOCKED-OWNER.
 
 CLOSE THE LOOP since 04:15: WORKED x4 (T-305, T-308, T-309, T-307); READY 1 (T-312); PARTIAL / FAILED none. Every
 finding routed: T-305 -> T-311 PROMOTED; T-308 -> T-199; T-309 -> T-310; T-307 -> T-316 + T-318; T-312 -> T-315.
 
-VERIFIER QUEUE (READY 1, CHECKER-RUNS): standing slot restated 06:00; Gate A T-312 first (re-measure a wet room with
-an opening in the tile band and the pantry yourself); Gate B T-244 first in its run when READY, with verdict-rebind
-of the V3.0.19 records; then T-311, T-313, T-316, T-317, T-224; light run T-180.
+VERIFIER QUEUE (READY 2 at 06:25, CHECKER-RUNS): standing slot restated 06:00; Gate B T-244 FIRST (READY 06:19,
+V3.0.20: interior plaster / paint at the merged opening outlines; 1F-11 59.4511 released -> 61.4626 .. 61.7177 m2 HELD
+(W17 band ENGINE_WRONG); 1F-13 W15 / W16; paint released 166.8792 -> 217.2081 m2, held 529.47 .. 595.05 -> 487.12 ..
+542.86 m2; 3,697 lines byte-identical; freelancer 1,191.13 m2 not compared while lines are held). Lead challenge: the
+1F-04 / 2F-03 changes (W24 / W29 heads) were not in the row's list: the Checker accepts them only on verified inputs
+within the acceptance, else they go back as their own package. Then Gate A T-312 (re-measure a wet room with an
+opening in the tile band and the pantry yourself); then T-311, T-313, T-316, T-317, T-224; light run T-180.
 
 LANES (queue check: 42 actionable rows, 0 flagged, 0 stall checks): S worker 1: T-311, T-316; A worker 2: T-313, T-317;
 I worker 3: T-244 (CLAIMED), T-224, T-315, T-318 (only after your approval), T-279, T-284, T-246, T-310, T-199, T-314.
@@ -55,8 +59,8 @@ S and A carry 2 each.
 ELEMENT REGISTER +6 (slab bottom-bar end classes, slab top-bar groups, pool membrane / screed, B7 corner band, pantry
 wall tile, exposed concrete faces + block / concrete joints).
 
-TEAM HEALTH: every run since 04:15 closed with a final line except the Worker 3 05:00 run (T-244, 75 min, scheduler
-PENDING: running, not yet INCOMPLETE) and this Lead run. Worker 1 05:20 and Worker 2 05:40 IDLE on the run lock were
+TEAM HEALTH: every run since 04:15 closed with a final line (Worker 3 05:00 closed 06:20 SUCCESS, T-244 READY) except
+this Lead run. Worker 1 05:20 and Worker 2 05:40 IDLE on the run lock were
 correct (their 04:21 / 04:40 runs were still working). All code runs report self-check PASS. Dashboard 04:54 SUCCEEDED,
 next 08:54. Main daily update fired 04:31 (SUCCEEDED).
 
