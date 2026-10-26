@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-26T04:51Z | Verifier | STARTED | run unknown | repo-attached routine | task state: T-305, T-308 READY (per last run) | self-check pending
 - 2026-10-26 04:40 UTC | Worker 2 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-26 04:20 UTC | Worker 2 | SUCCESS | T-309 READY @ c553f606 | Pool membrane / protection screed (MISSING category) booked face by face on the verified pool shell from the detail's own hatches (184E screed, 1851 membrane: base + both outer faces to the wall top, none on the water side): membrane 29.582 m2 DC + 0..1.350 m2 HELD (0.15 upstands above the +0.15 deck, termination C9), screed 1.525 m3 DC + 0..0.068 HELD, closure 55.151 m2 residual 0.000; T-183's 30.932 m2 / 1.591 m3 reconciled (upstand + square corners); freelancer has no row (RULE/SCOPE); function stays HELD (S8.2); no candidate quantity changed | self-check codemap PASS, pytest t061 PASS, freeze PASS; full suite NEW 0 / KNOWN 395 / ABSENT 1; problem: none
 - 2026-10-26 04:21 UTC | Worker 1 | STARTED | run session_01BGYEZKAWF24R2WVuU1ohpa | repo-attached routine | task state: none yet | self-check pending
