@@ -1,0 +1,31 @@
+{
+ "source": "P7757.dxf (ab54dd55) plan glazing entities by handle (T-249) against the T-159 sides (t159_extract rings); lengths only",
+ "W18": {
+  "face": "1F NW-4",
+  "face_len_m": 0.467302,
+  "symbol_width_m": 0.5,
+  "on_face_m": 0.467302,
+  "beyond_face_m": 0.032698
+ },
+ "W03": {
+  "glazing_end_lines": "26D / 275 (T-249 handles)",
+  "glazing_span_m": 4.86,
+  "pieces": {
+   "NW-3": {
+    "kind": "RETURN",
+    "len_m": 0.193487,
+    "glazed_m": 0.143487
+   },
+   "NW-4": {
+    "kind": "ARC",
+    "len_m": 6.657684,
+    "glazed_m": 6.657684
+   },
+   "NW-5": {
+    "kind": "RETURN",
+    "len_m": 0.143487,
+    "glazed_m": 0.103487
+   }
+  }
+ }
+}
