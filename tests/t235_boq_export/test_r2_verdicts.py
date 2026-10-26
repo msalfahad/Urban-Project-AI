@@ -250,6 +250,9 @@ def test_inventory_v1_and_report_together_refused(tmp_path):
 def test_stale_record_is_listed_never_dropped(tmp_path):
     lines = villa()
     rec = add(lines, foot_ids(lines), 4.01, candidate_version="ARCH_TAKEOFF_V3.0.OLD")
+    # T-294: a record bound to its own lines' content stays valid on another candidate version (tests/t294_*); a
+    # record issued under the T-245 whole-file binding (no binding field) is still STALE there, never migrated
+    rec = {k: v for k, v in rec.items() if k not in ("binding", "line_content_sha256")}
     m, rows = run(tmp_path, lines, v2_records=[rec], completeness_report=report(lines))
     assert m["row_counts"]["VERIFIED"] == 0
     assert {v["verdict_id"]: v["status"] for v in m["v2_verdicts"]}[rec["verdict_id"]].startswith("STALE")

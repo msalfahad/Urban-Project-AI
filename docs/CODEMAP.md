@@ -22,7 +22,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `rules/` | 22 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 1708 | pytest suites, one folder per round. |
+| `tests/` | 1710 | pytest suites, one folder per round. |
 | `tools/` | 114 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (254 modules)
@@ -186,7 +186,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `rebar_sanity_qa.py` | 29 | MEDIUM | 3 | kg/m3 QA helper - production-layer sanity check, not the reinforcement quantity. |
 | `recall_matrix.py` | 112 | MEDIUM | 2 | E100 — three recalls, two denominators, and no silent switch between them. |
 | `reconcile.py` | 214 | MEDIUM | 2 | E30 — Benchmark Reconciler. |
-| `reference_mapping.py` | 237 | HIGH | 19 | E72 — a reference may only be opened where it maps to ONE space. |
+| `reference_mapping.py` | 237 | HIGH | 20 | E72 — a reference may only be opened where it maps to ONE space. |
 | `region_boundary.py` | 272 | MEDIUM | 5 | E90 — turn a pixel region into an ordered rectilinear ring of runs. |
 | `release.py` | 161 | HIGH | 4 | E33 — Exception routing and release control. |
 | `release_blocker.py` | 174 | HIGH | 1 | E83 — when release recall stays at zero, WHICH dependency is holding it. |
@@ -438,7 +438,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `blocker_remediation.py` | 74 | MEDIUM | 1 | BLOCKER_REMEDIATION_ENGINE (generic). |
 | `boq_canonical.py` | 134 | MEDIUM | 2 | CANONICAL BOQ ITEM MODEL (RC1) - one payable identity per physical measurement item. |
 | `boq_evidence.py` | 43 | MEDIUM | 1 | BOQ EVIDENCE MAPPING (R8.20) - which release blockers can change a quantity. |
-| `boq_line.py` | 386 | HIGH | 79 | CANONICAL BOQ LINE (M9 S1) - one payable physical measurement per line, bilingual, traceable (generic; stdlib only). |
+| `boq_line.py` | 386 | HIGH | 80 | CANONICAL BOQ LINE (M9 S1) - one payable physical measurement per line, bilingual, traceable (generic; stdlib only). |
 | `boq_reconcile.py` | 172 | CRITICAL | 2 | GENERIC BOQ RECONCILIATION (M7) - a frozen engine run against a reference bill of quantities, by family and |
 | `boq_report.py` | 94 | HIGH | 5 | BOQ REPORT LAYER (R8.19) - a PRESENTATION layer over evidence rows. It calculates NOTHING. |
 | `cad_guards.py` | 188 | MEDIUM | 3 | CAD / SOURCE GUARDS learnt from blind donor runs (generic). |
@@ -749,7 +749,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `audit_cad_source.py` | 155 | MEDIUM | 2 | Representation audit of an authored CAD source. No measurement. |
 | `audit_dwf_source.py` | 175 | MEDIUM | 0 | Structural audit of a DWF package. Representation only, no geometry read. |
 | `audit_submission_set.py` | 133 | MEDIUM | 1 | Per-page representation census of a multi-sheet source. No measurement. |
-| `boq_export_v1.py` | 1704 | MEDIUM | 9 | BOQ EXPORT V1 (task T-235, hand-in r1) - ONE command that writes a candidate BOQ as BOQ.xlsx + BOQ.csv + |
+| `boq_export_v1.py` | 1914 | HIGH | 10 | BOQ EXPORT V1 (task T-235, hand-in r1) - ONE command that writes a candidate BOQ as BOQ.xlsx + BOQ.csv + |
 | `campaign.py` | 245 | MEDIUM | 1 | Run and review a project marketing campaign (A17 + E21). |
 | `codemap.py` | 937 | MEDIUM | 0 | CODE MAP - the navigation layer for Claude Code (and people): where code, rules, tests and known defects live. |
 | `compare_source_provenance.py` | 301 | MEDIUM | 1 | Did a transformation destroy vector information, or recompress a scan? |
@@ -831,10 +831,10 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `urban_project_run.py` | 321 | CRITICAL | 1 | URBAN PROJECT RUN (M7) - one manifest per project; the blind protocol enforced by the tool, not remembered. |
 | `urban_structural_boq.py` | 602 | CRITICAL | 3 | URBAN STRUCTURAL BOQ (M1) - one command from a drawing set to a planning BOQ, an exception report, Excel and PDF. |
 | `v30_gate_b.py` | 408 | MEDIUM | 3 | V3.0 GATE B AUTOMATED CHECKS (T-156) for the Checker: a line-by-line before / after BOQ diff with the hand-check |
-| `v30_gate_b_v2.py` | 1022 | MEDIUM | 4 | V3.0 GATE B v2 (T-168): the Gate B diff of tools/v30_gate_b.py (T-156, kept unchanged and still usable) run against |
+| `v30_gate_b_v2.py` | 1050 | MEDIUM | 5 | V3.0 GATE B v2 (T-168): the Gate B diff of tools/v30_gate_b.py (T-156, kept unchanged and still usable) run against |
 | `wall_v2_diagnostic.py` | 231 | MEDIUM | 1 | Wall extraction V2 — measure the representation, then rebuild the graph. |
 
-`tools/boq_export_v1.py` symbols: class ExportError (L213-214), def sha256_bytes (L219-220), def sort_key (L292-294), def group_key (L297-298), def identity (L303-320), def check_zero (L323-330), def v1_verdict_refs (L335-353), def schema_document (L356-398), def validate_v2 (L405-462), def validate_v2_set (L476-484), def lines_sha256 (L487-489), def verdict_add (L492-536), def validate_downgrade (L539-571), def downgrade_add (L574-603), def apply_downgrades (L606-658), def verdict_set_append (L665-683), def bind_verdict (L686-730), def na_has_evidence (L736-739), def scope_split (L742-758), def completeness_passes (L761-773), def report_check (L787-796), def report_unmeasured_rows (L799-846), def completeness_from_report (L849-915), def completeness_text (L918-928), def build (L972-1139), def contract_view (L1197-1262), def contractual_rows (L1265-1273), def contract_summary (L1276-1300), def csv_bytes (L1315-1321), def xlsx_write (L1324-1349), def project_identity (L1362-1388), def export (L1391-1504), def semantic_sha256 (L1507-1510), def read_csv (L1513-1516), def main_verdict_add (L1536-1576), def main_downgrade_add (L1579-1619), def main_verdict_validate (L1622-1631), def main (L1634-1699)
+`tools/boq_export_v1.py` symbols: class ExportError (L237-238), def sha256_bytes (L243-244), def sort_key (L316-318), def group_key (L321-322), def identity (L327-344), def check_zero (L347-354), def v1_verdict_refs (L359-377), def schema_document (L380-429), def validate_v2 (L436-496), def line_bound (L514-516), def validate_v2_set (L530-538), def lines_sha256 (L541-543), def line_content_sha256 (L546-553), def own_content_status (L556-564), def verdict_add (L567-611), def validate_downgrade (L614-647), def downgrade_add (L650-679), def apply_downgrades (L682-745), def verdict_set_append (L752-770), def verdict_rebind (L773-836), def copy_json (L839-840), def bind_verdict (L843-893), def na_has_evidence (L899-902), def scope_split (L905-921), def completeness_passes (L924-936), def report_check (L950-959), def report_unmeasured_rows (L962-1009), def completeness_from_report (L1012-1078), def completeness_text (L1081-1091), def build (L1135-1302), def contract_view (L1360-1425), def contractual_rows (L1428-1436), def contract_summary (L1439-1463), def csv_bytes (L1478-1484), def xlsx_write (L1487-1512), def project_identity (L1525-1551), def export (L1554-1667), def semantic_sha256 (L1670-1673), def read_csv (L1676-1679), def main_verdict_add (L1699-1739), def main_downgrade_add (L1742-1782), def main_verdict_rebind (L1785-1827), def main_verdict_validate (L1830-1839), def main (L1842-1909)
 
 `tools/run_e1_2.py` symbols: def layer_roles (L120-146), def prepare (L149-155), def ground_floor (L158-168), class IntervalPrim (L173-206), def interval_prims (L209-221), def boundary_role_of (L224-231), def interpret (L236-278), def build_candidates (L302-344), def build_sandbox (L349-413), def code_hashes (L416-423), def source_crops (L494-515), def candidate_overlays (L518-573), def phase_geometry (L607-777), def phase_v2_inputs (L982-1027), def release_decision (L1054-1132), def phase_finalize (L1137-1479), def main (L1605-1630)
 
@@ -1199,6 +1199,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t293_formwork_face_line/` | 2 |
 | `tests/t293p2_formwork_slab_line/` | 2 |
 | `tests/t293p3_formwork_stair_dome/` | 2 |
+| `tests/t294_line_binding/` | 1 |
 | `tests/t295_ceiling_line_ledger/` | 2 |
 | `tests/t296_skirting_ledger/` | 2 |
 | `tests/t297_rebar_line_basis/` | 3 |

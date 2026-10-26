@@ -70,6 +70,7 @@ import hashlib
 import io
 import itertools
 import json
+import os
 import re
 import sys
 from collections import Counter, defaultdict
@@ -160,6 +161,23 @@ def sealed_names(registry):
     return names
 
 
+def link_names(p, limit=40):
+    """T-294 (g) (Verifier O-T275-01): every name a path goes by: its own, each symbolic link it passes through (the
+    link itself, then its target, hop by hop) and the final real file's name, so a link named innocently that points
+    at a sealed-named file is caught by name too (the sha256 check stays the primary defence)."""
+    p = Path(p)
+    out = [p.name]
+    cur = p
+    for _ in range(limit):
+        if not cur.is_symlink():
+            break
+        tgt = Path(os.readlink(cur))
+        cur = tgt if tgt.is_absolute() else cur.parent / tgt
+        out.append(cur.name)
+    out.append(Path(os.path.realpath(p)).name)
+    return list(dict.fromkeys(x for x in out if x))
+
+
 def guard_inputs(paths, registry=None):
     """{role: path} -> {role: sha256}; refused (SEALED) when a file's sha256 is a sealed file's (any name) or its name
     is a sealed name. The bytes are hashed only, never parsed here."""
@@ -171,8 +189,10 @@ def guard_inputs(paths, registry=None):
         if p is None:
             continue
         p = Path(p)
-        if p.name in names:
-            problems.append(("SEALED", f"{role}: {p.name} is a sealed benchmark name (refused unopened)"))
+        hit = sorted(set(link_names(p)) & names)     # T-294 (g): the link chain's names and the target's, not p only
+        if hit:
+            via = "" if hit == [p.name] else f" (via a link to {hit[0]})"
+            problems.append(("SEALED", f"{role}: {p.name} is a sealed benchmark name{via} (refused unopened)"))
             continue
         if not p.is_file():
             problems.append(("INPUT_INVALID", f"{role}: {p.name} is not a file"))
@@ -331,12 +351,20 @@ def validate_verdicts(doc):
 
 
 def bind(v, lines_by_id, ident_pairs, spec_id, lines_sha):
-    """status of one V2 record against one side: COUNTED, or why not (the tools/boq_export_v1.py rules, any scope)."""
-    if (v["project_id"], v["revision_set_sha256"]) not in ident_pairs or v["candidate_version"] != spec_id or \
+    """status of one V2 record against one side: COUNTED, or why not (the tools/boq_export_v1.py rules, any scope).
+    T-294: a LINE_CONTENT_V1 record binds a side of its project / revision set whose own lines are byte-identical to
+    what it bound, whatever the side's candidate version or file; a T-245 record keeps its whole-file binding."""
+    from tools import boq_export_v1 as EX
+    if EX.line_bound(v):
+        if (v["project_id"], v["revision_set_sha256"]) not in ident_pairs:
+            return "NOT_THIS_SIDE"
+    elif (v["project_id"], v["revision_set_sha256"]) not in ident_pairs or v["candidate_version"] != spec_id or \
             v["boq_lines_sha256"] != lines_sha:
         return "NOT_THIS_SIDE"
     lines = [lines_by_id.get(i) for i in v["line_ids"]]
     if any(x is None for x in lines):
+        return "STALE"
+    if EX.line_bound(v) and EX.own_content_status(v, lines_by_id):
         return "STALE"
     if any(x["unit"] != v["unit"] for x in lines):
         return "STALE"
