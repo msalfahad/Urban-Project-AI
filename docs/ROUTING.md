@@ -74,8 +74,8 @@ Risk **HIGH** (recommended validation L3). Ask about: unit, insunits, millimet, 
 **Earlier generations and tools** (check which method uses them before reuse): `engine/ingest/units.py`, `engine/units.py`
 
 **Validation:** L1 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests`
-L2 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests tests/t104_wall_frames`
-L3 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests tests/t104_wall_frames tests/m9_s6 tests/m9_p2a tests/m9_p2b0 tests/r8_4 tests/r8_3 tests/alsenan` + freeze check
+L2 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests tests/t104_wall_frames tests/t304_keymap_unit_exclusion`
+L3 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests tests/t104_wall_frames tests/t304_keymap_unit_exclusion tests/m9_s6 tests/m9_p2a tests/m9_p2b0 tests/r8_4 tests/r8_3 tests/alsenan` + freeze check
 L4 full suite + freeze check (see above)
 
 **Known defects** (1 unresolved of 2):
