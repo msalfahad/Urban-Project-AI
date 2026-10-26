@@ -423,7 +423,9 @@ def changes_for(doc, l3019):
         ver = {"task": src["task"], "merge_commit": src["merge_commit"], "verifier_run": src["checker_run"],
                "ledger": src["file"], "ledger_sha256": src["sha256"], "record_verified_by": r.get("verified_by")}
         changes.append(A305._change("WALL_FINISH_REVISION", "REPLACE", b, after, drawing_reference=r.get("printed"),
-                                    held=list(r.get("reasons") or ()), downstream=list(r.get("downstream") or ()),
+                                    held=list(r.get("reasons") or ()),
+                                    downstream=[d if isinstance(d, dict) else {"item": d}   # Gate B tools read dicts
+                                                for d in r.get("downstream") or ()],
                                     verification=ver, evidence_status=r["evidence_status"],
                                     codes=["WALL_FINISH_REVISION", "STATE_CHANGE" if b["evidence_state"] !=
                                            after["evidence_state"] else "REBASE"],
