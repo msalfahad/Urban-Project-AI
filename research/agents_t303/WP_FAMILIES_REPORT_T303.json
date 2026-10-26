@@ -1,0 +1,317 @@
+{
+ "candidate": "ARCH_TAKEOFF_V3.0.17 = V3.0.18 for every WP line (T-266 changed / added no WP line)",
+ "families": {
+  "WP.POOL_TANK": {
+   "counts": {
+    "IN_LINE": 0,
+    "MISSING": 2,
+    "NOT_APPLICABLE": 1
+   },
+   "double_carried": [],
+   "elements": 3,
+   "items": [
+    {
+     "double_carried": 0,
+     "elements": 1,
+     "in_line": 0,
+     "in_line_held": 0,
+     "in_line_quantity": 0,
+     "inventory_qty_in_line": null,
+     "item_code": "WP.POOL_TANK.POOL_MEMBRANE",
+     "line_qty": null,
+     "missing": 1,
+     "not_applicable": 0,
+     "residual": null,
+     "unit": "m2"
+    },
+    {
+     "double_carried": 0,
+     "elements": 1,
+     "in_line": 0,
+     "in_line_held": 0,
+     "in_line_quantity": 0,
+     "inventory_qty_in_line": null,
+     "item_code": "WP.POOL_TANK.POOL_PROTECTION_SCREED",
+     "line_qty": null,
+     "missing": 1,
+     "not_applicable": 0,
+     "residual": null,
+     "unit": "m3"
+    },
+    {
+     "double_carried": 0,
+     "elements": 1,
+     "in_line": 0,
+     "in_line_held": 0,
+     "in_line_quantity": 0,
+     "inventory_qty_in_line": null,
+     "item_code": "WP.POOL_TANK.TANK_MEMBRANE",
+     "line_qty": null,
+     "missing": 0,
+     "not_applicable": 1,
+     "residual": null,
+     "unit": "m2"
+    }
+   ],
+   "line_countability": {},
+   "lines": 0,
+   "register_only": [],
+   "scope_unknown": 0,
+   "t236": null,
+   "unlinked_lines": []
+  },
+  "WP.ROOF": {
+   "counts": {
+    "IN_LINE": 13,
+    "MISSING": 3,
+    "NOT_APPLICABLE": 0
+   },
+   "double_carried": [],
+   "elements": 16,
+   "items": [
+    {
+     "double_carried": 0,
+     "elements": 4,
+     "in_line": 4,
+     "in_line_held": 1,
+     "in_line_quantity": 3,
+     "inventory_qty_in_line": null,
+     "item_code": "FIN.WP.MEMBRANE_ROLLS",
+     "line_qty": 31,
+     "missing": 0,
+     "not_applicable": 0,
+     "residual": null,
+     "unit": "pcs"
+    },
+    {
+     "double_carried": 0,
+     "elements": 6,
+     "in_line": 4,
+     "in_line_held": 1,
+     "in_line_quantity": 3,
+     "inventory_qty_in_line": 204.097849,
+     "item_code": "FIN.WP.ROOF",
+     "line_qty": 204.112,
+     "missing": 2,
+     "not_applicable": 0,
+     "residual": -0.014151,
+     "unit": "m2"
+    },
+    {
+     "double_carried": 0,
+     "elements": 6,
+     "in_line": 5,
+     "in_line_held": 1,
+     "in_line_quantity": 4,
+     "inventory_qty_in_line": 181.591245,
+     "item_code": "FIN.WP.ROOF_UPTURN",
+     "line_qty": 181.589,
+     "missing": 1,
+     "not_applicable": 0,
+     "residual": 0.002245,
+     "unit": "lm"
+    }
+   ],
+   "line_countability": {
+    "COMPONENT": 6,
+    "HELD": 3,
+    "WHOLE": 3
+   },
+   "lines": 12,
+   "register_only": [],
+   "scope_unknown": 3,
+   "t236": {
+    "excluded": 0,
+    "found": 16,
+    "held": 3,
+    "measured": 10,
+    "missing": 3,
+    "status": "GAPS"
+   },
+   "unlinked_lines": []
+  },
+  "WP.WET_AREA": {
+   "counts": {
+    "IN_LINE": 113,
+    "MISSING": 8,
+    "NOT_APPLICABLE": 0
+   },
+   "double_carried": [
+    {
+     "item": [
+      "FIN.WP.DOORWAY_TRANSITION",
+      "m2"
+     ],
+     "key": "FIN.WP.DOORWAY_TRANSITION[m2]/DOOR:D-GF-02/TRANSITION",
+     "lines": [
+      "L-1c36054a8cadc0726e65",
+      "L-b60811f60f8fdc9a4447"
+     ]
+    },
+    {
+     "item": [
+      "FIN.WP.DOORWAY_TRANSITION",
+      "m2"
+     ],
+     "key": "FIN.WP.DOORWAY_TRANSITION[m2]/DOOR:D-GF-10/TRANSITION",
+     "lines": [
+      "L-77a630d7e60ca6c404ba",
+      "L-e0c34550b13267b4e0f7"
+     ]
+    }
+   ],
+   "elements": 121,
+   "items": [
+    {
+     "double_carried": 0,
+     "elements": 15,
+     "in_line": 14,
+     "in_line_held": 0,
+     "in_line_quantity": 14,
+     "inventory_qty_in_line": 1.82,
+     "item_code": "FIN.WP.DOORWAY",
+     "line_qty": 1.930379,
+     "missing": 1,
+     "not_applicable": 0,
+     "residual": -0.110379,
+     "unit": "m2"
+    },
+    {
+     "double_carried": 2,
+     "elements": 15,
+     "in_line": 11,
+     "in_line_held": 11,
+     "in_line_quantity": 0,
+     "inventory_qty_in_line": null,
+     "item_code": "FIN.WP.DOORWAY_TRANSITION",
+     "line_qty": null,
+     "missing": 4,
+     "not_applicable": 0,
+     "residual": null,
+     "unit": "m2"
+    },
+    {
+     "double_carried": 0,
+     "elements": 15,
+     "in_line": 14,
+     "in_line_held": 0,
+     "in_line_quantity": 14,
+     "inventory_qty_in_line": 14.0,
+     "item_code": "FIN.WP.DOORWAY_TRANSITION_NR",
+     "line_qty": 14,
+     "missing": 1,
+     "not_applicable": 0,
+     "residual": 0.0,
+     "unit": "pcs"
+    },
+    {
+     "double_carried": 0,
+     "elements": 18,
+     "in_line": 18,
+     "in_line_held": 0,
+     "in_line_quantity": 18,
+     "inventory_qty_in_line": 85.6217,
+     "item_code": "FIN.WP.FLOOR",
+     "line_qty": 85.62071,
+     "missing": 0,
+     "not_applicable": 0,
+     "residual": 0.00099,
+     "unit": "m2"
+    },
+    {
+     "double_carried": 0,
+     "elements": 18,
+     "in_line": 18,
+     "in_line_held": 0,
+     "in_line_quantity": 18,
+     "inventory_qty_in_line": null,
+     "item_code": "FIN.WP.MEMBRANE_ROLLS",
+     "line_qty": 21,
+     "missing": 0,
+     "not_applicable": 0,
+     "residual": null,
+     "unit": "pcs"
+    },
+    {
+     "double_carried": 0,
+     "elements": 18,
+     "in_line": 17,
+     "in_line_held": 17,
+     "in_line_quantity": 0,
+     "inventory_qty_in_line": null,
+     "item_code": "FIN.WP.PENETRATION",
+     "line_qty": null,
+     "missing": 1,
+     "not_applicable": 0,
+     "residual": null,
+     "unit": "pcs"
+    },
+    {
+     "double_carried": 0,
+     "elements": 4,
+     "in_line": 3,
+     "in_line_held": 3,
+     "in_line_quantity": 0,
+     "inventory_qty_in_line": null,
+     "item_code": "FIN.WP.TERMINATION",
+     "line_qty": null,
+     "missing": 1,
+     "not_applicable": 0,
+     "residual": null,
+     "unit": "lm"
+    },
+    {
+     "double_carried": 0,
+     "elements": 18,
+     "in_line": 18,
+     "in_line_held": 1,
+     "in_line_quantity": 17,
+     "inventory_qty_in_line": 25.2137,
+     "item_code": "FIN.WP.WALL_UPTURN",
+     "line_qty": 25.114585,
+     "missing": 0,
+     "not_applicable": 0,
+     "residual": 0.099115,
+     "unit": "m2"
+    }
+   ],
+   "line_countability": {
+    "COMPONENT": 26,
+    "HELD": 38,
+    "WHOLE": 55
+   },
+   "lines": 119,
+   "register_only": [
+    {
+     "key": "FIN.WP.TERMINATION[lm]/?/1F-R48CDA5:termination glazing D2:3126:0",
+     "line_id": "L-0a7238edb9989d99d37a"
+    },
+    {
+     "key": "FIN.WP.TERMINATION[lm]/?/1F-R48CDA5:termination glazing D2:3123:0",
+     "line_id": "L-1ef59757a75524c397d7"
+    },
+    {
+     "key": "FIN.WP.TERMINATION[lm]/?/1F-R48CDA5:termination glazing D2:3133:0",
+     "line_id": "L-8fb80f626889e06f6f97"
+    },
+    {
+     "key": "FIN.WP.TERMINATION[lm]/?/GF-RB28769:termination other",
+     "line_id": "L-f78da96a7d31f7b72068"
+    }
+   ],
+   "scope_unknown": 0,
+   "t236": {
+    "excluded": 0,
+    "found": 121,
+    "held": 32,
+    "measured": 81,
+    "missing": 8,
+    "status": "GAPS"
+   },
+   "unlinked_lines": []
+  }
+ },
+ "rule_id": "R-T303-WP-FAMILIES-1",
+ "schema": "URBAN_WP_SCOPE_INVENTORY_V1",
+ "tol_m": 0.0005
+}
