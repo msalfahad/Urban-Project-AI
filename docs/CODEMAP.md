@@ -22,7 +22,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `rules/` | 23 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 1713 | pytest suites, one folder per round. |
+| `tests/` | 1715 | pytest suites, one folder per round. |
 | `tools/` | 114 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (254 modules)
@@ -737,8 +737,8 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `a18_review_package.py` | 378 | MEDIUM | 0 | Package a frozen blind run for external review. Packaging only. |
 | `a18_zone_register.py` | 127 | MEDIUM | 0 | The visual zone register, transcribed from a frozen pass, and drawn. |
 | `align_sanitary.py` | 205 | MEDIUM | 0 | Register the sanitary set, align it to the plan, and ask the pantry. |
-| `alsenan_keymap.py` | 891 | MEDIUM | 9 | ALSENAN KEY MAP (task T-001b) - turns one engine run (canonical BOQ_LINES.json + BOQ_RELEASE_REPORT.json) and the |
-| `alsenan_scoreboard.py` | 339 | MEDIUM | 5 | ALSENAN SCOREBOARD (task T-001a) - engine BOQ rows vs reference (freelancer) rows, scored per trade and unit as |
+| `alsenan_keymap.py` | 953 | HIGH | 10 | ALSENAN KEY MAP (task T-001b) - turns one engine run (canonical BOQ_LINES.json + BOQ_RELEASE_REPORT.json) and the |
+| `alsenan_scoreboard.py` | 339 | MEDIUM | 6 | ALSENAN SCOREBOARD (task T-001a) - engine BOQ rows vs reference (freelancer) rows, scored per trade and unit as |
 | `arch_change_verify.py` | 710 | MEDIUM | 0 | BOQ CHANGE ATTRIBUTION WITH INDEPENDENT VERIFICATION (Phase 2B-8) - every BOQ total that differs between two runs of |
 | `arch_dimensions.py` | 70 | MEDIUM | 2 | ARCH DIMENSIONS (M9 Phase 2A P2-09a) - the DIMENSION entities of a plan DXF as plain records for the read-only |
 | `arch_discovery.py` | 266 | MEDIUM | 5 | ARCHITECTURAL DRAWING DISCOVERY (M9 S6) - the ezdxf side of engine.source.discovery: a source census of the whole |
@@ -1211,6 +1211,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t301_wp_inventory/` | 2 |
 | `tests/t302_arched_hole/` | 2 |
 | `tests/t303_wp_families/` | 2 |
+| `tests/t304_keymap_unit_exclusion/` | 1 |
 | `tests/water_tank_s8_4/` | 3 |
 | `tests/zz_freeze_integrity/` | 2 |
 
