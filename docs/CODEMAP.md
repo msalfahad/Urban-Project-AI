@@ -1198,6 +1198,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t292_face_line_ledger/` | 2 |
 | `tests/t293_formwork_face_line/` | 2 |
 | `tests/t293p2_formwork_slab_line/` | 2 |
+| `tests/t293p3_formwork_stair_dome/` | 2 |
 | `tests/t295_ceiling_line_ledger/` | 2 |
 | `tests/t296_skirting_ledger/` | 2 |
 | `tests/t297_rebar_line_basis/` | 3 |
@@ -1512,7 +1513,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t290/` | 7 |
 | `research/agents_t291/` | 9 |
 | `research/agents_t292/` | 10 |
-| `research/agents_t293/` | 17 |
+| `research/agents_t293/` | 23 |
 | `research/agents_t295/` | 8 |
 | `research/agents_t296/` | 11 |
 | `research/agents_t297/` | 11 |
