@@ -14,15 +14,15 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `data/` | 19 | Registries (owner facts, project rules, trades) and trade rules. Large run data is gitignored. |
 | `docs/` | 72 | Design notes and the generated maps. |
 | `documents/` | 5 |  |
-| `engine/` | 662 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
+| `engine/` | 663 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 3469 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 3473 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 22 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 1702 | pytest suites, one folder per round. |
+| `tests/` | 1705 | pytest suites, one folder per round. |
 | `tools/` | 114 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (254 modules)
@@ -387,7 +387,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `workbooks.py` | 242 | MEDIUM | 0 | REPORTING V3 - workbook layouts (generic over a BOQ_LINES model). |
 | `workbooks_v3b.py` | 308 | MEDIUM | 0 | REPORTING V3b - workbook layouts over the two-view line model (TECHNICAL_QTO / COMMERCIAL_BOQ). |
 
-## `engine/source/` (310 modules)
+## `engine/source/` (311 modules)
 
 | Module | Lines | Risk | Imp | Purpose |
 |---|---|---|---|---|
@@ -431,6 +431,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `beam_binding.py` | 509 | MEDIUM | 1 | BEAM TAG -> PLAN BAND BINDING (V2) - type identity from the tag, section from the tag's OWN schedule namespace, |
 | `beam_binding_v2.py` | 635 | MEDIUM | 3 | BEAM BINDING V2 (T-085) - three corrections to how slab-plan beam bands are cut, bound and completed, as a NEW |
 | `beam_occurrence_recovery.py` | 118 | MEDIUM | 1 | BEAM_OCCURRENCE_RECOVERY (generic): every beam tag and every structural face band gets a terminal record. |
+| `beam_rebar_completeness.py` | 670 | MEDIUM | 1 | BEAM REBAR COMPLETENESS SAFEGUARD V1 (task T-300) - detects and flags the beam reinforcement components that the |
 | `beam_rebar_readiness.py` | 582 | MEDIUM | 3 | BEAM_REBAR_READINESS (pre-S6) - the safe occurrence / detail / component input layer for superstructure beam rebar |
 | `beam_section_cut_binding.py` | 429 | MEDIUM | 1 | BEAM SECTION CUT BINDING V1 (T-102): a printed beam section settles the ONE beam span its cut line crosses. |
 | `benchmark_firewall.py` | 149 | MEDIUM | 1 | BENCHMARK FIREWALL (V1) - prove what a measurement run did NOT read. |
@@ -488,7 +489,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `door_standards.py` | 671 | MEDIUM | 7 | DOOR STANDARDS AND SCENARIOS (M9 Phase 2B-1, ARCH_TAKEOFF_V2.3 only) - the owner door rules of the knowledge |
 | `door_transition.py` | 124 | MEDIUM | 4 | DOOR FINISH TRANSITION (R8.14) - where one floor finish meets another inside a door threshold, as a TRADE |
 | `drawing_inventory.py` | 280 | CRITICAL | 5 | DRAWING INVENTORY (M1) - what a DXF holds, before any quantity (generic). |
-| `drawing_model.py` | 309 | CRITICAL | 20 | DRAWING MODEL (M2) - a normalized, source-pointed model of one structural drawing set (generic, stdlib). |
+| `drawing_model.py` | 309 | CRITICAL | 21 | DRAWING MODEL (M2) - a normalized, source-pointed model of one structural drawing set (generic, stdlib). |
 | `element_continuity_v1.py` | 354 | MEDIUM | 1 | ELEMENT_CONTINUITY_V1 (T-188, residential review R2 + R3): element inventory across disciplines and storey continuity. |
 | `element_register_v0.py` | 607 | MEDIUM | 2 | ELEMENT REGISTER V0 (T-134; owner management decision 2026-10-20 §4; design docs/agents/ELEMENT_REGISTER.md). |
 | `elevation_binding.py` | 134 | CRITICAL | 2 | ELEVATION BINDING - which physical object a dimension printed on an elevation or section measures (generic). |
@@ -595,7 +596,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `rebar_provenance.py` | 143 | CRITICAL | 4 | Generic accurate-rebar provenance contract: one contract for every element family (no second system). |
 | `rebar_sanity_qa.py` | 34 | MEDIUM | 2 | kg/m3 QA helpers - sanity layer, not the accurate reinforcement implementation (generic). |
 | `rebar_sanity_variance.py` | 156 | MEDIUM | 3 | REBAR SANITY VARIANCE - report layer between ACCURATE_BOQ_REBAR and ROUGH_REBAR_SUMMARY (generic). |
-| `rebar_unit_mass.py` | 72 | CRITICAL | 13 | REBAR UNIT MASS - one project-wide method (generic). |
+| `rebar_unit_mass.py` | 72 | CRITICAL | 14 | REBAR UNIT MASS - one project-wide method (generic). |
 | `reconcile.py` | 394 | MEDIUM | 4 | Tolerance-aware reconciliation of two CAD routes (K1 vs K2, or D1 vs D1') — R8.2 §14-§16. |
 | `region_candidates.py` | 191 | MEDIUM | 1 | Deterministic model-space REGION CANDIDATES (R8.4 §19-§20). |
 | `region_membership.py` | 218 | MEDIUM | 4 | Exact region membership of a curve (R8.8): SEGMENT, ARC, CIRCLE, ELLIPTICAL_ARC against an axis-aligned region. |
@@ -622,7 +623,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `rule_store.py` | 124 | HIGH | 17 | RULE STORE (M9 S1) - one versioned place the new engines read rules from (generic; stdlib only). |
 | `run_manifest.py` | 180 | MEDIUM | 6 | QTO RUN MANIFEST (R8.11): every result names the exact inputs, claims, policies and method that produced it. |
 | `schedule_grammar.py` | 98 | CRITICAL | 7 | SCHEDULE_GRAMMAR - reinforcement text grammar and schedule-cell provenance for machine-readable (attributed) |
-| `schedule_reader.py` | 352 | CRITICAL | 5 | SCHEDULE READER (M2) - structural schedules from attribute rows or text tables, without a project profile (generic). |
+| `schedule_reader.py` | 352 | CRITICAL | 7 | SCHEDULE READER (M2) - structural schedules from attribute rows or text tables, without a project profile (generic). |
 | `schedule_table.py` | 181 | MEDIUM | 3 | SCHEDULE TABLE READER (V1) - a drawn schedule (grid lines + values) as rows and cells, fail closed. |
 | `scope_crosswalk_v1.py` | 397 | MEDIUM | 2 | SCOPE CROSSWALK V1 (T-196; residential review R7, PROJECT_UNDERSTANDING_ASSESSMENT s.6): BOQ scope against the |
 | `scope_quantities.py` | 1377 | CRITICAL | 4 | SCOPE QUANTITIES (M8) - the scope a completeness finding locates, measured from the drawn plan or bounded by a |
@@ -1203,6 +1204,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t298_export_completion/` | 3 |
 | `tests/t299_ledger/` | 1 |
 | `tests/t299_part_f/` | 1 |
+| `tests/t300_beam_rebar_completeness/` | 1 |
 | `tests/t301_wp_inventory/` | 2 |
 | `tests/t302_arched_hole/` | 2 |
 | `tests/t303_wp_families/` | 2 |
@@ -1516,6 +1518,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t297/` | 11 |
 | `research/agents_t298/` | 2 |
 | `research/agents_t299/` | 11 |
+| `research/agents_t300/` | 4 |
 | `research/agents_t301/` | 6 |
 | `research/agents_t302/` | 6 |
 | `research/agents_t303/` | 6 |

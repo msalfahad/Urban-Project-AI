@@ -201,9 +201,9 @@ Risk **CRITICAL** (recommended validation L4). Ask about: window, glazing, sill,
 
 **Open first:**
 
-- `engine/source/schedule_reader.py` (352 lines, CRITICAL, frozen; imported by 5 directly, 131 transitively)
+- `engine/source/schedule_reader.py` (352 lines, CRITICAL, frozen; imported by 7 directly, 134 transitively)
 - `engine/source/opening_census.py` (474 lines, CRITICAL, frozen; imported by 9 directly, 201 transitively)
-- `engine/source/schedule_grammar.py` (98 lines, CRITICAL, frozen; imported by 7 directly, 140 transitively)
+- `engine/source/schedule_grammar.py` (98 lines, CRITICAL, frozen; imported by 7 directly, 143 transitively)
 - `engine/source/arch_v28.py` (1028 lines, MEDIUM; imported by 9 directly, 150 transitively)
 
 **Depends on:** `engine/source/drawing_model.py`, `engine/source/release_safety.py`
@@ -357,7 +357,7 @@ Risk **CRITICAL** (recommended validation L4). Ask about: concrete, slab, beam, 
 
 **Depends on:** `engine/source/accurate_boq_rebar.py`, `engine/source/drawing_inventory.py`, `engine/source/drawing_model.py`, `engine/source/generic_route.py`, `engine/source/member_detection.py`, `engine/source/rebar_unit_mass.py`, `engine/source/schedule_grammar.py`, `engine/source/schedule_table.py`, `engine/source/slab_rebar_binding.py`, `engine/source/structural_population_discovery.py`
 
-**Other current modules:** `beam_binding.py`, `beam_occurrence_recovery.py`, `beam_rebar_readiness.py`, `beam_section_cut_binding.py`, `column_concrete_geometry.py`, `column_rebar.py`, `column_schedule_text_rows.py`, `concrete_curved_strips.py`, `concrete_model.py`, `concrete_overlap_ownership.py`, `concrete_strip_guard.py`, `continuous_beams.py`, `footing_rebar.py`, `ground_beam_network.py`, `ground_beam_recovery.py`, `ground_slab_qto.py`, `ground_slab_recovery.py`, `ground_system_provenance.py`, `ground_system_rebar.py`, `ground_system_resolution.py`, `slab_engine.py`, `slab_layered_mesh.py`, `slab_opening_reconciliation.py`, `slab_qto_authority.py`, `slab_rebar_binding.py`, `slab_rebar_readiness.py`, `slab_region.py`, `special_column_components.py`
+**Other current modules:** `beam_binding.py`, `beam_occurrence_recovery.py`, `beam_rebar_completeness.py`, `beam_rebar_readiness.py`, `beam_section_cut_binding.py`, `column_concrete_geometry.py`, `column_rebar.py`, `column_schedule_text_rows.py`, `concrete_curved_strips.py`, `concrete_model.py`, `concrete_overlap_ownership.py`, `concrete_strip_guard.py`, `continuous_beams.py`, `footing_rebar.py`, `ground_beam_network.py`, `ground_beam_recovery.py`, `ground_slab_qto.py`, `ground_slab_recovery.py`, `ground_system_provenance.py`, `ground_system_rebar.py`, `ground_system_resolution.py`, `slab_engine.py`, `slab_layered_mesh.py`, `slab_opening_reconciliation.py`, `slab_qto_authority.py`, `slab_rebar_binding.py`, `slab_rebar_readiness.py`, `slab_region.py`, `special_column_components.py`
 
 **Earlier generations and tools** (check which method uses them before reuse): `engine/structural_registration.py`
 
@@ -394,10 +394,10 @@ Risk **CRITICAL** (recommended validation L4). Ask about: rebar, reinforcement, 
 **Open first:**
 
 - `engine/source/accurate_boq_rebar.py` (256 lines, CRITICAL, frozen; imported by 17 directly, 21 transitively, SHARED)
-- `engine/source/rebar_unit_mass.py` (72 lines, CRITICAL, frozen; imported by 13 directly, 126 transitively, SHARED)
+- `engine/source/rebar_unit_mass.py` (72 lines, CRITICAL, frozen; imported by 14 directly, 128 transitively, SHARED)
 - `engine/source/slab_rebar_qto.py` (314 lines, CRITICAL, frozen; imported by 9 directly, 13 transitively)
 
-**Other current modules:** `bar_shapes.py`, `bbs_optimiser.py`, `beam_rebar_readiness.py`, `column_rebar.py`, `footing_rebar.py`, `footing_rebar_guard.py`, `ground_system_rebar.py`, `rebar_boq_sections.py`, `rebar_model.py`, `rebar_provenance.py`, `rebar_sanity_qa.py`, `rebar_sanity_variance.py`, `rough_rebar_sanity.py`, `slab_rebar_binding.py`, `slab_rebar_readiness.py`, `superstructure_beam_rebar.py`
+**Other current modules:** `bar_shapes.py`, `bbs_optimiser.py`, `beam_rebar_completeness.py`, `beam_rebar_readiness.py`, `column_rebar.py`, `footing_rebar.py`, `footing_rebar_guard.py`, `ground_system_rebar.py`, `rebar_boq_sections.py`, `rebar_model.py`, `rebar_provenance.py`, `rebar_sanity_qa.py`, `rebar_sanity_variance.py`, `rough_rebar_sanity.py`, `slab_rebar_binding.py`, `slab_rebar_readiness.py`, `superstructure_beam_rebar.py`
 
 **Earlier generations and tools** (check which method uses them before reuse): `engine/bbs_steel.py`
 
