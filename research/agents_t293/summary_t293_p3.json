@@ -1,0 +1,299 @@
+{
+ "by_tie": {
+  "DUPLICATE_IN_SOURCE": 3,
+  "DUPLICATE_VIEW": 1,
+  "NAMED_NOT_TIED": 1,
+  "NO_CANDIDATE_LINE": 6,
+  "NO_FACE_INSIDE_MEMBER": 4,
+  "POINTER_ROW": 3,
+  "PRINT_ROUNDING": 6,
+  "RETIRED_IN_SOURCE": 4,
+  "SCENARIO_NOT_IN_CANDIDATE": 7,
+  "TIED": 35
+ },
+ "closure": [
+  {
+   "alternative": "",
+   "by_tie": {
+    "DUPLICATE_IN_SOURCE": 3,
+    "NO_CANDIDATE_LINE": 4,
+    "NO_FACE_INSIDE_MEMBER": 4,
+    "POINTER_ROW": 2,
+    "PRINT_ROUNDING": 6,
+    "RETIRED_IN_SOURCE": 4,
+    "TIED": 22
+   },
+   "hi": 0.0,
+   "lo": 0.0,
+   "m2": 92.728,
+   "method": "G",
+   "residual_hi": 0.0,
+   "residual_lo": 0.0,
+   "residual_m2": 0.0,
+   "rows": 21,
+   "status": "CALCULATED"
+  },
+  {
+   "alternative": "",
+   "by_tie": {
+    "DUPLICATE_VIEW": 1
+   },
+   "hi": 0.0,
+   "lo": 0.0,
+   "m2": 0.0,
+   "method": "E=G",
+   "residual_hi": 0.0,
+   "residual_lo": 0.0,
+   "residual_m2": 0.0,
+   "rows": 1,
+   "status": "HELD"
+  },
+  {
+   "alternative": "",
+   "by_tie": {
+    "NAMED_NOT_TIED": 1,
+    "NO_CANDIDATE_LINE": 2,
+    "TIED": 12
+   },
+   "hi": 1.562,
+   "lo": 1.44,
+   "m2": 0.0,
+   "method": "G",
+   "residual_hi": 0.0,
+   "residual_lo": 0.0,
+   "residual_m2": 0.0,
+   "rows": 15,
+   "status": "HELD"
+  },
+  {
+   "alternative": "",
+   "by_tie": {
+    "TIED": 1
+   },
+   "hi": 0.0,
+   "lo": 0.0,
+   "m2": 0.0,
+   "method": "G",
+   "residual_hi": 0.0,
+   "residual_lo": 0.0,
+   "residual_m2": 0.0,
+   "rows": 1,
+   "status": "NOT_APPLICABLE"
+  },
+  {
+   "alternative": "",
+   "by_tie": {
+    "POINTER_ROW": 1
+   },
+   "hi": 0.0,
+   "lo": 0.0,
+   "m2": 0.0,
+   "method": "G",
+   "residual_hi": 0.0,
+   "residual_lo": 0.0,
+   "residual_m2": 0.0,
+   "rows": 1,
+   "status": "OWNED_BY_OTHER_LINE"
+  },
+  {
+   "alternative": "",
+   "by_tie": {
+    "SCENARIO_NOT_IN_CANDIDATE": 7
+   },
+   "hi": 0.0,
+   "lo": 0.0,
+   "m2": 8.783,
+   "method": "G",
+   "residual_hi": 0.0,
+   "residual_lo": 0.0,
+   "residual_m2": 0.0,
+   "rows": 7,
+   "status": "S1_NOT_RELEASED"
+  }
+ ],
+ "held_pieces": [
+  "PIECE:ST01-MS1-L",
+  "PIECE:ST01-MS1-T",
+  "PIECE:ST01-MS1-T-SLAB",
+  "PIECE:ST01-MS2-TR",
+  "PIECE:ST01b-D1-WAIST",
+  "PIECE:ST02-2CC",
+  "PIECE:ST02-CA",
+  "PIECE:ST02-RS-C",
+  "PIECE:ST02-RS-C-SOFFIT",
+  "PIECE:ST03-E1-STEPS",
+  "PIECE:ST03-E1-WAIST",
+  "RING:DOME-B",
+  "SHELL:DOME-3"
+ ],
+ "inputs_sha256": {
+  "research/agents_t258/LEDGER_T258.csv": "6b062b42",
+  "research/agents_t264/FORMWORK_LINES_R4.csv": "86819487",
+  "research/agents_t266/t266_inputs.py": "a7de8fb7",
+  "research/agents_t281/LEDGER_T281.csv": "bc8c29a7",
+  "research/agents_t293/CANDIDATE_V3016_CONCRETE_LINES.json": "53e7a99c",
+  "research/agents_t293/FORMWORK_FACE_TO_LINE_T293_P2.csv": "e05c71e9"
+ },
+ "live_lines_without_faces": [],
+ "pieces": 70,
+ "reconciliation": [
+  {
+   "by_kind": {
+    "NO_FACE_INSIDE_MEMBER": 0.27455,
+    "PRINT_ROUNDING": -7.7e-05,
+    "TIED": 4.255527
+   },
+   "item": "MS1-U waist soffit",
+   "line_id": "L-e37d81a8be8e0aa0010c",
+   "r4_m2": 4.53,
+   "row": "R4-322",
+   "tied_alt_D_m2": 4.248365
+  },
+  {
+   "by_kind": {
+    "NO_FACE_INSIDE_MEMBER": 0.206302,
+    "PRINT_ROUNDING": 0.00035,
+    "TIED": 4.303695,
+    "TIED_HELD": 0.028653
+   },
+   "item": "MS2-L waist soffit",
+   "line_id": "L-67e4b0485135f84acc46",
+   "r4_m2": 4.539,
+   "row": "R4-324",
+   "tied_alt_D_m2": 4.77372
+  },
+  {
+   "by_kind": {
+    "RETIRED_IN_SOURCE": 0.065,
+    "TIED": 2.935
+   },
+   "item": "MS2-LD landing soffit",
+   "line_id": "L-2416e65f053a14199cfc",
+   "r4_m2": 3.0,
+   "row": "R4-326",
+   "tied_alt_D_m2": 2.5249
+  },
+  {
+   "by_kind": {
+    "NO_FACE_INSIDE_MEMBER": 0.27507,
+    "PRINT_ROUNDING": 0.000349,
+    "TIED": 4.263581
+   },
+   "item": "MS2-U waist soffit",
+   "line_id": "L-bb0e57b1948175a3d5b8",
+   "r4_m2": 4.539,
+   "row": "R4-328",
+   "tied_alt_D_m2": 4.25626
+  },
+  {
+   "by_kind": {
+    "DUPLICATE_IN_SOURCE": 1.639288,
+    "NO_CANDIDATE_LINE": 0.306303,
+    "PRINT_ROUNDING": -4.1e-05,
+    "TIED": 2.093071,
+    "TIED_HELD": 0.045378
+   },
+   "item": "RS-S waist soffit",
+   "line_id": "L-056402f98a6dbbcde0a0",
+   "r4_m2": 4.083999,
+   "row": "R4-335",
+   "tied_alt_D_m2": 2.31496
+  },
+  {
+   "by_kind": {
+    "DUPLICATE_IN_SOURCE": 0.275625,
+    "NO_CANDIDATE_LINE": 0.206481,
+    "NO_FACE_INSIDE_MEMBER": 0.0275,
+    "RETIRED_IN_SOURCE": 0.03,
+    "TIED": 0.870394
+   },
+   "item": "RS-LD landing soffit",
+   "line_id": "L-056402f98a6dbbcde0a0",
+   "r4_m2": 1.41,
+   "row": "R4-336",
+   "tied_alt_D_m2": 0.674803
+  },
+  {
+   "by_kind": {
+    "PRINT_ROUNDING": -0.000464,
+    "RETIRED_IN_SOURCE": 0.040179,
+    "TIED": 0.964286
+   },
+   "item": "RS-A riser forms (5 x 1.25 x 0.1607)",
+   "line_id": "L-056402f98a6dbbcde0a0",
+   "r4_m2": 1.004001,
+   "row": "R4-337",
+   "tied_alt_D_m2": null
+  },
+  {
+   "by_kind": {
+    "NO_CANDIDATE_LINE": 0.136135,
+    "PRINT_ROUNDING": 0.000316,
+    "RETIRED_IN_SOURCE": 0.068067,
+    "TIED": 1.497482
+   },
+   "item": "RS-A waist soffit",
+   "line_id": "L-056402f98a6dbbcde0a0",
+   "r4_m2": 1.702,
+   "row": "R4-338",
+   "tied_alt_D_m2": 1.916025
+  }
+ ],
+ "schema": "T293_P3_SUMMARY_V1",
+ "source_rows": 46,
+ "tied_m2_by_line_status": {
+  "L-056402f98a6dbbcde0a0": {
+   "CALCULATED": 7.546233,
+   "HELD": 0.0
+  },
+  "L-061e18cf35a4b6b33d68": {
+   "HELD": 0.0,
+   "NOT_APPLICABLE": 0.0
+  },
+  "L-2416e65f053a14199cfc": {
+   "CALCULATED": 2.935
+  },
+  "L-48b7d139bff681199543": {
+   "HELD": 0.0
+  },
+  "L-659243ed9fc2831c3ae8": {
+   "HELD": 0.0
+  },
+  "L-67e4b0485135f84acc46": {
+   "CALCULATED": 6.722695,
+   "HELD": 0.0
+  },
+  "L-7863355dfcb68a681d2d": {
+   "HELD": 0.0
+  },
+  "L-821032bc04a0b0d02133": {
+   "HELD": 0.0
+  },
+  "L-85f64587588af8537b4b": {
+   "CALCULATED": 0.84
+  },
+  "L-8ea34765d16b54898140": {
+   "CALCULATED": 24.15,
+   "HELD": 0.0
+  },
+  "L-ab37afa17f2ac5b0efd1": {
+   "HELD": 0.0
+  },
+  "L-b6b0354b7842f0ed6e41": {
+   "HELD": 0.0
+  },
+  "L-bb0e57b1948175a3d5b8": {
+   "CALCULATED": 6.682581
+  },
+  "L-d5401fa8986900c66c37": {
+   "HELD": 0.0
+  },
+  "L-e37d81a8be8e0aa0010c": {
+   "CALCULATED": 8.095527
+  },
+  "L-fffa895ed96b9d6a682c": {
+   "CALCULATED": 24.15,
+   "HELD": 0.0
+  }
+ }
+}
