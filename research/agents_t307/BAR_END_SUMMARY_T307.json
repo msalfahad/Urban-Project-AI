@@ -1,0 +1,214 @@
+{
+ "dev_lines": 98,
+ "ends_by_class_A_B": {
+  "CONTINUOUS": [
+   1591,
+   1683
+  ],
+  "CONTINUOUS_WIDE_BEAM": [
+   0,
+   0
+  ],
+  "EDGE_BEAM": [
+   1004,
+   1044
+  ],
+  "STEP_EDGE": [
+   414,
+   437
+  ],
+  "OPENING_EDGE": [
+   4,
+   12
+  ],
+  "IRREGULAR_SUPPORT": [
+   259,
+   298
+  ]
+ },
+ "candidate_dev_kg": {
+  "low": 939.794,
+  "high": 1741.976
+ },
+ "candidate_dev_by_class_kg": {
+  "CONTINUOUS": [
+   468.304,
+   864.408
+  ],
+  "CONTINUOUS_WIDE_BEAM": [
+   0.0,
+   0.0
+  ],
+  "EDGE_BEAM": [
+   298.75,
+   541.472
+  ],
+  "STEP_EDGE": [
+   102.222,
+   188.827
+  ],
+  "OPENING_EDGE": [
+   0.988,
+   5.185
+  ],
+  "IRREGULAR_SUPPORT": [
+   70.031,
+   145.538
+  ]
+ },
+ "candidate_unbooked_kg": [
+  0.494,
+  3.457
+ ],
+ "closure_rounding_kg": [
+  0.006494,
+  -0.002667
+ ],
+ "dev_spread_candidate_basis_by_class_kg": {
+  "CONTINUOUS": 396.104,
+  "CONTINUOUS_WIDE_BEAM": 0.0,
+  "EDGE_BEAM": 242.722,
+  "STEP_EDGE": 86.605,
+  "OPENING_EDGE": 4.198,
+  "IRREGULAR_SUPPORT": 75.507
+ },
+ "dev_spread_on_t152_continuous_ends_kg": 471.104,
+ "new_dev_straight_kg": {
+  "low": 136.573,
+  "high": 150.696
+ },
+ "f02_tank_top_lines": [
+  {
+   "line": "L-158378a67c1ceb235a4b",
+   "low": 0.0,
+   "high": 19.526
+  },
+  {
+   "line": "L-25ad842e66bde039046b",
+   "low": 0.0,
+   "high": 19.846
+  },
+  {
+   "line": "L-495cc34aac1ce55bbef3",
+   "low": 0.0,
+   "high": 12.963
+  },
+  {
+   "line": "L-b232ee26b6507c42012e",
+   "low": 0.0,
+   "high": 18.271
+  }
+ ],
+ "f03_skew_top_line": [
+  {
+   "line": "L-b10f318a155d5ee1b289",
+   "low": 16.223,
+   "high": 34.821
+  }
+ ],
+ "f04_label_lines": [
+  {
+   "line": "L-4904e51cc3a619f88f05",
+   "element": "SLAB:GF-020",
+   "direction": "y",
+   "old_basis_low_corrected": 2.469,
+   "new_low": 0.0,
+   "new_high": 2.469
+  },
+  {
+   "line": "L-9d87049b1e39c5fc9d65",
+   "element": "SLAB:1F-041",
+   "direction": "y",
+   "old_basis_low_corrected": 2.469,
+   "new_low": 0.0,
+   "new_high": 5.852
+  },
+  {
+   "line": "L-e84970a3f2988bbe0c98",
+   "element": "SLAB:GF-076",
+   "direction": "x",
+   "old_basis_low_corrected": 2.469,
+   "new_low": 0.957,
+   "new_high": 1.34
+  }
+ ],
+ "slab_bound_t306_kg": {
+  "low": 4643.766,
+  "high": 6832.326
+ },
+ "slab_bound_restated_kg": {
+  "bottom": [
+   2922.577,
+   3088.002
+  ],
+  "top": [
+   752.471,
+   2002.626
+  ],
+  "development_valued": [
+   136.573,
+   150.696
+  ],
+  "low": 3811.621,
+  "high": 5241.324,
+  "spread": 1429.703,
+  "spread_change_vs_t306": -758.857
+ },
+ "proposed_status_counts": {
+  "DEVELOPMENT / ANCHORAGE": {
+   "HELD": 31,
+   "BOUND_PART_WITH_HELD": 59,
+   "NOT_APPLICABLE_WITH_EVIDENCE": 8
+  },
+  "TOP BARS OVER SUPPORTS": {
+   "BOUND": 93,
+   "BOUND_CORRECTED": 5
+  },
+  "BOTTOM MESH": {
+   "BOUND": 63,
+   "BOUND_FLAGGED": 35
+  }
+ },
+ "consumer_lines": 294,
+ "slab_beyond_wide_support_ends": {
+  "bottom": [
+   84,
+   93
+  ],
+  "top": [
+   79,
+   87
+  ]
+ },
+ "top_end_classes_A_B": {
+  "CONTINUOUS": [
+   1362,
+   1457
+  ],
+  "CONTINUOUS_WIDE_BEAM": [
+   0,
+   0
+  ],
+  "EDGE_BEAM": [
+   882,
+   919
+  ],
+  "STEP_EDGE": [
+   376,
+   401
+  ],
+  "OPENING_EDGE": [
+   2,
+   12
+  ],
+  "IRREGULAR_SUPPORT": [
+   234,
+   269
+  ]
+ },
+ "top_conditional_extension_ends": [
+  153,
+  163
+ ],
+ "t152_continuity_mismatches": 0
+}
