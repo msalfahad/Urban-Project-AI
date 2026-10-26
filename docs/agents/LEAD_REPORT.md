@@ -1,5 +1,75 @@
 # Lead reports to the owner's main chat (newest first, last 3 entries; older in archive/LEAD_REPORT_older.md)
 
+## LEAD REPORT 2026-10-26 02:15 UTC
+
+Drive readable: nothing created or modified in any Drive folder since 00:00, no new images (no photo review task).
+Repositories: attached Urban-Project-AI checkout (main eafbb0f6); `.work` prepared AUTOMATICALLY ("setup by auto",
+02:09). Working branch 196a7a0b -> dd6a6114 (Checker merges via 'engine push': T-303 1d3f69b0 01:04, T-293 part 3
+02f3e47e + maps dd6a6114 01:54); no owner commit. Self-check: codemap PASS, pytest t061 PASS, freeze PASS (0).
+OWNER_SESSION_CHANGES: no entry since 25 Oct 13:25.
+
+PROGRESS (Alsenan, by trade and unit; released unchanged: concrete 92.77 vs freelancer 111.81 m3, -17.03 %, run A).
+CANDIDATE OF RECORD: ARCH_TAKEOFF_V3.0.18 (NOT RELEASED). V3.0.18 record set ISSUED by the Checker 01:25 (8 V2 records
+re-issued on byte-identical lines, DG re-issued, ST-03 downgrade moot): WHOLE verified lines in the real export 1
+(CONC.SLAB 60.280155 m3), back from 0.
+- WATERPROOFING (m2): wet-area / roof / pool-tank inventory MERGED. Wet 121 elements: IN_LINE 113 / MISSING 8; floors
+  85.62 m2 close +0.001. Checker own re-measures: 1F east bath upturn 1.580 vs engine 1.48 (ENGINE_WRONG -0.100, -6.3 %;
+  window W18 sill 0.84 deducted from a 0.20 upturn); transitions: 2 doors in two lines, 3 doors in none (rule: one per
+  physical door, Q-35 C; all transition lines BOUNDED blank today); pool membrane 5 cm + screed 5 cm printed (detail
+  handles 1876 / 1874 / hatch 1851) and in NO line = MISSING, function WP vs insulation open (S8.2); tank NOT_APPLICABLE
+  with evidence; roof 3 of 12 lines WHOLE, 2F dome footprints SCOPE_UNKNOWN. Pantry 13.500 vs 13.455 (0.045 column)
+  open (O-T303-01). -> NEW T-310 (lane I fix), NEW T-309 (pool membrane / screed ledger).
+- FORMWORK (m2): stair / dome / tank part MERGED: 46 rows -> 70 pieces, closure 0.000; drawn faces on the six
+  closable stair lines 32.822 vs r4 36.447 (-3.625, -9.9 %: 0.783 inside B20 / B23 / column 374, 1.915 under the B3
+  'With Stair' band + CA already on the beam rows (1.639289 own-checked), 0.203 retired readings, 0.723 HELD); shells
+  24.150 x 2; TANK row = beam B15 view (not own-checked); drums no line. -> NEW T-308 (formwork r5 rows, every confirmed
+  correction once: CB5 span 2 -2.516, stairs -3.625, BAND0049, TANK) before T-199.
+- REINFORCEMENT (t): slab bound decomposition READY (Gate A pending): 4.643766 .. 6.832326 t, spread 2.188560 t split
+  with residual 0.000: top-bar extent note 2 wording 0.781385 + note 2 vs p.15 0.185612 + crossing 0.146686, slab
+  bar-end length 0.746560, mesh boundary-bar convention 0.318227, bare labels 0.010081; nothing DRAWING_CONFIRMED; Q-71
+  not extended to slabs (ERS 2.7 not met -> designer items). Worker's own p.15 re-read: no development drawn at
+  continuous supports, so 0.556205 .. 1.027310 t of the dev lines has no drawn bar (ENGINE_WRONG basis) -> NEW T-307
+  after Gate A. Freelancer 5.400 t lump: RULE_DIFFERENCE, no %.
+- SCORING: key map fix READY (Gate A pending): V3.0.14 table byte-identical old vs new; V3.0.18 now scores with 1 line
+  excluded by id (WP.FOUNDATION.PROCUREMENT 'item'); worker's dry run FLOOR_AREA 381.464 m2 on 41 lines vs freelancer
+  409.58 (-28.116, -6.86 %; was -7.13 % on V3.0.14); CONCRETE compared 1 / 8 unchanged. Not a scoreboard figure until
+  the Checker runs it.
+- Learned (lessons register +3): deduct an opening only where it physically interrupts the layer, one transition per
+  physical door; a formed face belongs to one member (stair soffit = plan remainder outside integral beams); classify a
+  bar end by its support on the typical detail before any length (PROPOSED).
+- Missing (unchanged): designer answers (S19 - S22, D-35 / D-39 / D-41 / D-44 / D-53, M4, footing boxed bars, B27
+  link, CB3 / CB8, now also slab top extent / bar ends / up-turn leg / boundary bars from T-306 after Gate A), pool
+  membrane function (S8.2), excavation formation, dome drums (no drum geometry drawn), exterior plaster untied (T-305).
+
+GATES: lowest open gate 1 (lane I: T-255 CLAIMED, T-294 TODO; T-304 READY). Gate 2: T-305 / T-308 / T-309 TODO, T-310
+QUEUED. Gate 3: T-306 READY, T-307 TODO (after T-306).
+
+CLOSE THE LOOP since 00:15: WORKED x3 (T-303, T-293 part 3, V3.0.18 record set); READY 2 (T-304, T-306); PARTIAL /
+FAILED none. Every finding routed: T-303 -> T-309 / T-310; T-293 p3 -> T-308 -> T-199; T-306 F-01 .. 04 -> T-307.
+
+VERIFIER QUEUE (READY 2, CHECKER-RUNS): standing slot = re-run the scoreboard with the new key map once T-304 merges and
+replace the 'V3.0.14 rows' header note; Gate A T-304 first; Gate A T-306 (re-read p.15, recompute 3 csv rows); Gate B
+T-255 first in its run when READY; then T-294, T-305, T-307, T-308, T-309 as they arrive; light run T-180.
+
+LANES (queue check: 42 actionable rows, 0 flagged, 0 stall checks): S worker 1: T-307 (after T-306 MERGED), T-308; A
+worker 2: T-305, T-309; I worker 3: T-255 (CLAIMED), T-294 (any idle worker), T-244, T-279, T-284, T-246, T-310, T-199,
+T-224. TODO 6 + 1 CLAIMED; lane I below 2 TODO because its rows share the integration files (one at a time).
+
+ELEMENT REGISTER +7 (east bath upturn / W18, wet-room doors, pantry column, pool membrane + screed, tank place, stair
+soffits under integral beams, suspended-slab bar ends).
+
+TEAM HEALTH: every run since 00:15 closed with a final line except the open Worker 3 01:01 run (T-255, 74 min) and
+this Lead run. Worker 2 01:39 IDLE on the run lock was correct. All code runs report self-check PASS. Dashboard 00:54
+SUCCEEDED (recovered from the 20:54 usage-limit failure). Main daily update next 04:31.
+
+OWNER PACKAGE: none today (no question meets ERS s.2.7; the slab-steel and pool-membrane open inputs are designer /
+consultant items, not owner decisions).
+
+NEEDS FIXING (only the owner): (1) the cadence review you set on 25 Oct 04:38 (hourly kept provisionally, review after
+24 - 48 h) is due; no usage-limit failure since 21:40; the Lead changed no schedule. (2) Designer / consultant RFIs
+(S19 - S22, B27 link, CB3 / CB8 supports, S8.2 pool membrane function; slab steel items to be added after T-306 Gate A)
+stay unsent until you decide to send the package.
+
 ## LEAD REPORT 2026-10-26 00:15 UTC
 
 Drive readable: nothing created or modified in the project folders since 22:00, no new images (no photo review task).
@@ -142,74 +212,3 @@ decision kept the hourly cadence provisionally for review in 24 - 48 h; this is 
 you can take: raise the plan's usage allowance, or slow the cadence (for example workers every 2 h, Checker hourly).
 Recommendation: keep the Checker hourly (the queue is 4 READY) and move Worker 1 / Worker 2 to every 2 h until READY is
 at most 3. The Lead changed no schedule. (2) Designer RFIs S19 - S22 stay unsent until you decide to send the package.
-
-## LEAD REPORT 2026-10-25 16:15 UTC
-
-Repositories: attached Urban-Project-AI checkout (main eafbb0f6); `.work` prepared AUTOMATICALLY ("setup by auto",
-16:11). Working branch 05ad6d02 -> 57c31ae4 (Checker merges via 'engine push': T-292 r2 a9754a67, T-295 964c5ebe, T-297
-r1 5408da97 at 15:28, maps 44e4f06e; T-296 57c31ae4 16:08); no owner commit on the engine branch. Drive readable: nothing
-created or modified in the project folders since 14:00, no new images (no photo review task). Self-check: codemap PASS,
-pytest t061 PASS, freeze PASS (0). OWNER_SESSION_CHANGES: no entry since 13:25; nothing undone or duplicated.
-
-PROGRESS (Alsenan, by trade and unit; released unchanged: concrete 92.77 vs freelancer 111.81 m3, -17.03 %, run A).
-WHOLE LINES: COUNTED as a verified whole line in the real export 1 (unchanged, CONC.SLAB 60.280155 m3). No candidate
-line moved since 14:15 (all four merges are research ledgers); candidate of record V3.0.17, V3.0.18 (stairs) in work.
-- CONCRETE (m3): ring ground beam BAND0043 end rule CLOSED by the Checker from the drawing: ends close on the drawn faces
-  (straight-beam face 7C3, neck columns 17C0 / 17BD; column 17BA deducted). Own 1.746943 vs carried 1.7349 (chord-closed):
-  ENGINE_WRONG -0.012043 m3 (-0.69 %), reconciled to the north triangle +0.01306 m2 x 0.95, 0 residual. Stays
-  DRAWING-CONFIRMED until the T-255 package carries it with its regression pair. Stairs: T-266 CLAIMED 15:05 (2.864463 m3
-  of verified / owner-approved parts to be split into their own lines).
-- REINFORCEMENT (t): basis ledger MERGED: 2,505 lines tied once, closure 0.000 kg; DRAWING_CONFIRMED components 8.311066 t
-  (columns 1.887128, beams 5.171031, GB 1.252907), CONVENTION 1.939102 t (footings 0.874862 on a minimum cover, ground
-  slab 1.064240), slabs BOUNDS 4.643766 .. 6.832326 t; VERIFIED 0. Defect F-T297-04: 4 2F column main-bar lines 0.159288 t
-  wrongly DRAWING_CONFIRMED on the held D-39 roof datum -> r2 narrow. Footing PART F READY: 20 populations, diameters 20
-  printed, counts 1 invariant + 19 HELD one-bar ranges (designer item: max spacing vs density), lengths / weights 0 / 20
-  (HELD); route G footing cover 50 mm below the 70 mm minimum on all 27 rows. No steel quantity moved; measured 10.250168 t,
-  held 15.250786 .. 21.621545 t unchanged.
-- PLASTER / PAINT (m2): r2 MERGED. W17 (curved pool-side window): Q-76 A 9.870 m2 is the WINDOW measure, not the hole;
-  hole 8.1239 (elevation projection, lower bound) .. 9.858 (rectangle over the jambs). 1F-11 HELD 60.6011 .. 62.3352 m2
-  per code; the released 59.4511 is at least 1.15 m2 (1.9 %) low. Totals 703.47 .. 764.37 m2 (was 703.30 .. 768.81).
-  New T-302 measures the developed hole on the curved wall.
-- SKIRTING (lm): ledger MERGED, Checker own 1F-01 15.900 lm agrees 0.000. The 13.569 lm unlisted = F-17 threshold halves
-  of 14 windows, every trail re-adds. ENGINE_WRONG: sill windows W04 / W14 / W24 / W29 +5.802 lm (sills above the floor),
-  W15 / W16 floor glazing -3.105 lm of range, a dry skirting line in the wet pantry (wall tile owns the base),
-  1F dressing MISSING. Freelancer 282.85 lm gross without door deduction: RULE_DIFFERENCE (UP-CER-003), not an accuracy
-  figure.
-- CEILINGS (m2): ledger MERGED (engine interior 403.163 vs decor 362.006, every m2 named); dressing 2.970 m2 omission
-  confirmed for T-284.
-- Learned: (1) an arc band's ends close on the drawn faces that meet it, never on a chord; (2) an answered window
-  measure is not a wall-finish deduction; (3) one member, one datum status across trades (concrete held -> bars held).
-  Three lessons rows added (ERS s.7), all OPEN until their regression tests merge.
-- Missing (unchanged): designer answers (S19 - S22, D-35 / D-39 / D-41 / D-44 / D-53, M4), excavation formation, dome
-  drum geometry, WP completeness inventory (T-301, next), W17 developed hole (T-302).
-
-GATES: lowest open gate 1 (lane I: T-266 stairs CLAIMED, then T-255 / T-294 / T-279). Gate 2: T-301, T-302 TODO, T-300
-TODO after T-297 r2. Gate 3: T-299 PART F READY, T-297 r2 TODO, T-293 part 2 TODO.
-
-CLOSE THE LOOP since 14:15: T-292 r2 WORKED; T-295 WORKED; T-297 PARTIAL (merged, then F-T297-04 -> r2 narrow); T-296
-WORKED; F-T254-01 closed (correction -> T-255). Lessons: +3 rows OPEN (ring end rule, window measure vs hole, datum
-status across trades); the 12:48 module-name row stays OPEN (T-296 used a generic name again, unique today; rename in
-T-246). Recurring cause noted: a challenge that changes acceptance goes into the task ROW, not only the queue note.
-
-VERIFIER QUEUE (READY 1): T-132 slot record (no cell moved; F-T254-01 as a candidate finding); Gate A T-299 PART F first
-(owner-session item; Lead challenges: downgrade proposal vs the Checker's 15:35 'no record, no downgrade due' -> one
-sentence on how the 874.86 kg line reads in the contractual export; audit band 2.718 .. 2.830 t vs the owner's
-2.769 .. 2.830 t: reconcile the 0.051 t lower-bound move; own F13 count and one route G cover row); Gate B T-266 when READY;
-Gate A T-297 r2 when READY.
-
-LANES (queue check: 42 actionable rows, 0 flagged, 0 stall checks): S worker 1: T-297 r2, T-293 part 2, T-300; A worker 2:
-T-301, T-302 (new); I worker 3: T-266 (CLAIMED), T-255, T-294, T-279, T-284, T-244, T-246, T-199, T-224. TODO 5 (below 8:
-lane I is one row at a time on shared files and the owner asked for no duplicate rows; every worker has its next two items).
-
-ELEMENT REGISTER +6 (W17 hole per trade, 2F column bars datum, 1F dressing across finishes, wet-pantry base, sill
-windows vs skirting, ring GB update).
-
-TEAM HEALTH: every run since 14:15 closed with a final line except the open Worker 3 15:00 (T-266, 75 min, 180-min lock)
-and Verifier 15:51 runs and this Lead run. Worker 2 15:40 IDLE on the run lock was correct (its 14:41 run took 61 min).
-All runs that executed code report self-check PASS; the Verifier's 14:52 first selfcheck hit 'No module named pytest'
-(venv cut by its own timed-out status) and passed after one setup re-run.
-
-OWNER PACKAGE: none today (no question meets ERS s.2.7; every finding this run was settled from the drawings or answered
-rules).
-
-NEEDS FIXING (only the owner): nothing new. Designer RFIs S19 - S22 stay unsent until you decide to send the package.
