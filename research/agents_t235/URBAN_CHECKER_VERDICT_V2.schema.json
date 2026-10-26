@@ -1,8 +1,20 @@
 {
  "$id": "urban-projects/URBAN_CHECKER_VERDICT_V2",
  "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "dependentRequired": {
+  "binding": [
+   "line_content_sha256"
+  ],
+  "line_content_sha256": [
+   "binding"
+  ]
+ },
  "description": "One Checker verdict bound to the exact exported BOQ line(s) it re-measured (owner 2026-10-23 19:45 (0)). The sole authority for VERIFIED in tools/boq_export_v1.py: a record whose binding differs from the exported line is STALE; checker vs engine above 1 % is a DISCREPANCY (the line is HELD); only scope WHOLE plus a passing completeness record makes a line VERIFIED; COMPONENT records never add up to a VERIFIED line. Records live in a URBAN_CHECKER_VERDICT_V2_SET file {schema, verdicts: [records sorted by verdict_id]}.",
  "properties": {
+  "binding": {
+   "const": "LINE_CONTENT_V1",
+   "description": "T-294: bound to the canonical content of its own lines (line_content_sha256); absent = a T-245 record bound to the whole candidate (boq_lines_sha256)"
+  },
   "boq_lines_sha256": {
    "pattern": "^[0-9a-f]{64}$",
    "type": "string"
@@ -111,6 +123,11 @@
    "minItems": 1,
    "type": "array"
   },
+  "line_content_sha256": {
+   "description": "sha256 of boq_line.dumps of the record's own lines, sorted by line id",
+   "pattern": "^[0-9a-f]{64}$",
+   "type": "string"
+  },
   "line_ids": {
    "items": {
     "minLength": 1,
@@ -124,6 +141,11 @@
    "type": "string"
   },
   "project_id": {
+   "minLength": 1,
+   "type": "string"
+  },
+  "rebound_from": {
+   "description": "the verdict id this record re-binds (verdict-rebind)",
    "minLength": 1,
    "type": "string"
   },

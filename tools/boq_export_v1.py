@@ -85,6 +85,24 @@ BOQ_AUDIT_UNSUPPORTED_BASIS.csv / the XLSX sheet "Audit (unsupported basis)"; th
 A record of another project, on a missing line, or whose lines' quantity changed binds nothing and is listed (STALE ...).
 Without --downgrades every byte written is as before.
 
+Per-line binding (T-294). 'verdict add' / 'downgrade add' now write binding "LINE_CONTENT_V1" and line_content_sha256:
+the sha256 of boq_line.dumps of exactly the record's own lines (sorted by line id: every field of each, so its quantity,
+rule version, evidence state, unit, element and source drawings). Such a record stays bound while those lines are
+byte-identical, whatever happens to any other line or to the candidate version (an integration that leaves its lines
+unchanged leaves it valid); a change of any own field, or an own line id that is absent, makes it STALE (a downgrade:
+listed STALE, not applied). candidate_version and boq_lines_sha256 remain as provenance. Records without the field
+(issued under the T-245 whole-file binding) keep that binding unchanged, never auto-migrated as valid:
+
+    python3 -I tools/boq_export_v1.py verdict-rebind --verdicts OLD_SET.json --old-lines OLD_LINES.json
+        --old-candidate-version V_OLD --lines NEW_LINES.json --candidate-version V_NEW (--lock-file .. | --run-token T
+        --routine Verifier) --verdict-commit SHA [--time ISO-UTC] --out NEW_SET.json
+
+re-issues (Checker routines only) each record whose own lines are byte-identical in the old and new candidate as a
+new LINE_CONTENT_V1 record (rebound_from = the old id, the Checker's quantity and evidence unchanged), after proving
+the old record's own binding on the old lines; every other record is reported STALE and nothing is written for it.
+A downgrade of an already-HELD row (BLOCKED_RFI, ...) keeps that row's own held reason, class and range and appends
+the record (T-294 (h)).
+
 Part (4) (completeness from T-236). --completeness takes the merged T-236 report (tools/trade_completeness.py
 TRADE_COMPLETENESS.json, schema URBAN_TRADE_COMPLETENESS_V1; its reference_line_rows() per trade). The report carries no
 project id, so it is bound by its line ids: a report naming any line id this BOQ does not carry is refused. Per BOQ
@@ -146,6 +164,12 @@ DOWNGRADE_SET_SCHEMA = "URBAN_CHECKER_DOWNGRADE_V1_SET"
 DOWNGRADE_REQUIRED = ("schema", "downgrade_id", "project_id", "revision_set_sha256", "candidate_version", "line_ids",
                       "unit", "engine_qty", "state", "basis_label", "reason", "evidence", "checker", "time")
 DOWNGRADE_STATES = ("HELD", "CONFLICT")
+# T-294 (Verifier 07:58 T-245 Gate B (d)): a record binds the canonical content of ITS OWN lines, not the whole file.
+# A record carrying binding LINE_CONTENT_V1 + line_content_sha256 is checked against its own lines only (project id,
+# revision set, presence, unit, content); candidate_version / boq_lines_sha256 stay as provenance (where it was
+# issued). A record without it is a T-245 record: its whole-file binding is kept as it was (valid only on the candidate
+# it was issued on, STALE elsewhere), never migrated: the Checker re-binds it with 'verdict-rebind' or re-verifies.
+LINE_BINDING = "LINE_CONTENT_V1"
 AUDIT_COLUMNS = ("line_id", "trade", "item_code", "floor", "element_id", "unit", "candidate_qty", "basis_label",
                  "downgrade_state", "downgrade_id", "reason", "verdict_overridden")
 REVIEW_LABEL = "INTERNAL REVIEW CANDIDATE (not released; released default ARCH_TAKEOFF_V2.9 + route G)"
@@ -395,7 +419,14 @@ def schema_document():
                                        "verdict_commit": {"type": "string", "pattern": _COMMIT_RE.pattern}}},
             "scope": {"enum": list(V2_SCOPES)},
             "time": {"type": "string", "pattern": _TIME_RE.pattern},
-            "notes": {"type": "string"}}}
+            "notes": {"type": "string"},
+            "binding": {"const": LINE_BINDING,
+                        "description": "T-294: bound to the canonical content of its own lines (line_content_sha256); "
+                                       "absent = a T-245 record bound to the whole candidate (boq_lines_sha256)"},
+            "line_content_sha256": sha | {"description": "sha256 of boq_line.dumps of the record's own lines, sorted "
+                                                         "by line id"},
+            "rebound_from": s | {"description": "the verdict id this record re-binds (verdict-rebind)"}},
+        "dependentRequired": {"binding": ["line_content_sha256"], "line_content_sha256": ["binding"]}}
 
 
 def _isnum(x):
@@ -459,7 +490,30 @@ def validate_v2(v):
         p.append(f"scope: {v['scope']!r} is not one of {V2_SCOPES}")
     if v.get("time") not in (None, "") and not (isinstance(v["time"], str) and _TIME_RE.match(v["time"])):
         p.append("time: ISO 8601 UTC, e.g. 2026-10-24T10:00:00Z")
+    p += _binding_problems(v)
+    if "rebound_from" in v and not (isinstance(v["rebound_from"], str) and v["rebound_from"].strip()):
+        p.append("rebound_from: a verdict id text")
     return p
+
+
+def _binding_problems(r):
+    """T-294: binding and line_content_sha256 come together, the binding is the one known kind, the sha well formed."""
+    has_b, has_s = "binding" in r, "line_content_sha256" in r
+    if not has_b and not has_s:
+        return []
+    p = []
+    if has_b != has_s:
+        p.append("binding: binding and line_content_sha256 are given together (a half binding binds nothing)")
+    if has_b and r["binding"] != LINE_BINDING:
+        p.append(f"binding: {r['binding']!r} is not {LINE_BINDING}")
+    if has_s and not (isinstance(r["line_content_sha256"], str) and _SHA_RE.match(r["line_content_sha256"])):
+        p.append("line_content_sha256: 64 lower-case hex characters")
+    return p
+
+
+def line_bound(r):
+    """True for a T-294 record (bound to its own lines' content); False for a T-245 whole-file record."""
+    return isinstance(r, dict) and r.get("binding") == LINE_BINDING
 
 
 def _set_problems(doc):
@@ -487,6 +541,27 @@ def validate_v2_set(doc):
 def lines_sha256(lines):
     """sha256 of the canonical bytes of a line list (engine/source/boq_line.dumps), as a candidate writes them."""
     return sha256_bytes(BL.dumps(lines).encode("utf-8"))
+
+
+def line_content_sha256(own_lines):
+    """T-294: sha256 of the canonical bytes (boq_line.dumps) of exactly a record's own lines, sorted by line id: every
+    field of each line (quantity, unit, rule version, evidence state, element, source drawings) is in it, no other
+    line and no candidate version is. Refused for an empty list or a line id given twice."""
+    ids = [ln["line_id"] for ln in own_lines]
+    if not ids or len(set(ids)) != len(ids):
+        raise ExportError("a line content binding needs at least one line, each once")
+    return lines_sha256(sorted(own_lines, key=lambda ln: ln["line_id"]))
+
+
+def own_content_status(r, by_id):
+    """T-294: None when a LINE_CONTENT_V1 record's own lines are all in by_id ({line_id: line}) and byte-identical to
+    what it bound; else the reason it is STALE (an absent line is STALE, never silently valid)."""
+    missing = sorted(i for i in r["line_ids"] if i not in by_id)
+    if missing:
+        return f"line(s) {missing[:3]} not in this candidate"
+    if line_content_sha256([by_id[i] for i in r["line_ids"]]) != r["line_content_sha256"]:
+        return "the content of its own line(s) changed"
+    return None
 
 
 def verdict_add(lines, *, candidate_version, boq_lines_sha256, line_ids, scope, checker_qty, evidence, run_token,
@@ -525,7 +600,7 @@ def verdict_add(lines, *, candidate_version, boq_lines_sha256, line_ids, scope, 
            "checker_qty": _num(checker_qty) if _isnum(checker_qty) else checker_qty,
            "evidence": [dict(sorted(e.items())) for e in evidence],
            "checker": {"run_token": run_token, "routine": routine, "verdict_commit": verdict_commit},
-           "scope": scope, "time": time}
+           "scope": scope, "time": time, "binding": LINE_BINDING, "line_content_sha256": line_content_sha256(sel)}
     if notes:
         rec["notes"] = notes
     rec["verdict_id"] = verdict_id or "V2-" + sha256_bytes(json.dumps(rec, sort_keys=True, ensure_ascii=False)
@@ -568,6 +643,7 @@ def validate_downgrade(d):
           and not x.endswith(": required")]
     if "resolved" in d and not isinstance(d["resolved"], bool):
         p.append("resolved: true or false")
+    p += _binding_problems(d)
     return p
 
 
@@ -594,7 +670,7 @@ def downgrade_add(lines, *, candidate_version, line_ids, state, basis_label, rea
            "engine_qty": _num(sum(float(ln["measured_net"] or 0.0) for ln in sel)), "state": state,
            "basis_label": basis_label, "reason": reason, "evidence": [dict(sorted(e.items())) for e in evidence],
            "checker": {"run_token": run_token, "routine": routine, "verdict_commit": verdict_commit}, "time": time,
-           "resolved": False}
+           "resolved": False, "binding": LINE_BINDING, "line_content_sha256": line_content_sha256(sel)}
     rec["downgrade_id"] = downgrade_id or "DG-" + sha256_bytes(json.dumps(rec, sort_keys=True, ensure_ascii=False)
                                                                .encode("utf-8"))[:16]
     probs = validate_downgrade(rec)
@@ -624,9 +700,14 @@ def apply_downgrades(records, by_line, pid, rev):
             continue
         sel = [by_line.get(i) for i in d["line_ids"]]
         if any(x is None for x in sel):
-            status.append({"downgrade_id": did, "status": "NO_LINE_IN_THIS_EXPORT"})
+            status.append({"downgrade_id": did, "status": "NO_LINE_IN_THIS_EXPORT" + (
+                " (STALE: a line of the record is absent: Checker to review; not applied)" if line_bound(d) else "")})
             continue
         lns = [x[1] for x in sel]
+        why = own_content_status(d, {ln["line_id"]: ln for ln in lns}) if line_bound(d) else None
+        if why:                                   # T-294: its own lines changed since it was issued
+            status.append({"downgrade_id": did, "status": f"STALE ({why}: Checker to review; not applied)"})
+            continue
         eq = sum(float(ln["measured_net"] or 0.0) for ln in lns)
         if any(ln["unit"] != d["unit"] for ln in lns) or abs(eq - float(d["engine_qty"])) > QTY_MATCH_TOL:
             status.append({"downgrade_id": did, "status": "STALE (the lines' unit or quantity changed: Checker to "
@@ -645,12 +726,18 @@ def apply_downgrades(records, by_line, pid, rev):
                           "candidate_qty": _num(ln.get("measured_net")), "basis_label": d["basis_label"],
                           "downgrade_state": d["state"], "downgrade_id": did, "reason": d["reason"],
                           "verdict_overridden": f"{was} {row['verdict_id']}".strip() if over else ""})
-            prior = f" | was {was}: {row['held_reason']}" if was == HELD and row["held_reason"] else ""
-            for c in ("net", "qty_verified", "qty_verified_zero", "qty_verified_component", "qty_measured_unverified",
-                      "open_range_low", "open_range_high"):
-                row[c] = None
-            row["quantity_state"], row["owner_status_class"] = HELD, CLS_HELD
-            row["held_reason"] = f"{d['state']}: {d['reason']} ({d['basis_label']}; downgrade {did}){prior}"
+            text = f"{d['state']}: {d['reason']} ({d['basis_label']}; downgrade {did})"
+            if was == HELD:
+                # T-294 (h) (Verifier O-T245-03): an already-HELD row (BLOCKED_RFI, a discrepancy, ...) keeps its own
+                # held reason, class and range; the record is appended, never written over it (no promotion either way)
+                own = row["held_reason"] or ""
+                row["held_reason"] = f"{own} | + {text}" if own else text
+            else:
+                for c in ("net", "qty_verified", "qty_verified_zero", "qty_verified_component",
+                          "qty_measured_unverified", "open_range_low", "open_range_high"):
+                    row[c] = None
+                row["quantity_state"], row["owner_status_class"] = HELD, CLS_HELD
+                row["held_reason"] = text
             if over or row["verdict_id"]:
                 row["verdict_status"] = f"{row['verdict_status']} | OVERRIDDEN BY DOWNGRADE {did} (unresolved)"
         left = f"; {len(kept)} EXCLUDED row(s) left EXCLUDED" if kept else ""
@@ -683,6 +770,76 @@ def verdict_set_append(path, rec):
     return doc
 
 
+def verdict_rebind(v, old_lines, new_lines, *, old_candidate_version, candidate_version, run_token, routine,
+                   verdict_commit, time):
+    """T-294: re-issue one V2 record on a new candidate as a LINE_CONTENT_V1 record, by the Checker, only when it is
+    proven unchanged: (1) the record is well formed and its own binding holds on old_lines (a T-245 record: project,
+    revision set, candidate version = old_candidate_version and boq_lines_sha256 = the old lines' canonical sha; a
+    LINE_CONTENT_V1 record: project, revision set and its own lines' content); its lines are there with its unit, element
+    scope and engine qty; (2) each of its lines is in new_lines byte-identical (same canonical content). The Checker's
+    quantity, scope and evidence are carried unchanged; the rebinding run's identity is the record's checker, the old id
+    is rebound_from. Refused (ExportError, nothing returned) otherwise: the reason is the record's STALE cause."""
+    vid = str(v.get("verdict_id") if isinstance(v, dict) else None)
+    probs = validate_v2(v) if isinstance(v, dict) else ["record: not an object"]
+    if probs:
+        raise ExportError(f"{vid}: not re-bindable: " + "; ".join(probs))
+    for ln in list(old_lines) + list(new_lines):
+        BL.validate(ln)
+    opid, orev = identity(old_lines)
+    npid, nrev = identity(new_lines)
+    if (v["project_id"], v["revision_set_sha256"]) != (opid, orev):
+        raise ExportError(f"{vid}: STALE: the old lines are another project or revision set than the record's")
+    if (opid, orev) != (npid, nrev):
+        raise ExportError(f"{vid}: STALE: the new candidate is another project or revision set (a new revision set is "
+                          "a re-measure, never a re-bind)")
+    oby = {ln["line_id"]: ln for ln in old_lines}
+    nby = {ln["line_id"]: ln for ln in new_lines}
+    if line_bound(v):
+        why = own_content_status(v, oby)
+        if why:
+            raise ExportError(f"{vid}: STALE on the old lines: {why}")
+    else:
+        if v["candidate_version"] != old_candidate_version:
+            raise ExportError(f"{vid}: STALE: issued on {v['candidate_version']}, not on {old_candidate_version}")
+        if v["boq_lines_sha256"] != lines_sha256(old_lines):
+            raise ExportError(f"{vid}: STALE: the old lines are not the candidate the record was issued on "
+                              "(boq_lines_sha256 differs)")
+    if any(i not in oby for i in v["line_ids"]):
+        raise ExportError(f"{vid}: STALE: a line of the record is not in the old lines")
+    own_old = [oby[i] for i in v["line_ids"]]
+    if any(ln["unit"] != v["unit"] for ln in own_old):
+        raise ExportError(f"{vid}: STALE: unit differs from the old lines")
+    if sorted(str(x) for x in v["element_scope"]["ids"]) != sorted(str(ln["location"]["element_id"]) for ln in own_old):
+        raise ExportError(f"{vid}: STALE: element scope differs from the old lines")
+    if abs(sum(float(ln["measured_net"] or 0.0) for ln in own_old) - float(v["engine_qty"])) > QTY_MATCH_TOL:
+        raise ExportError(f"{vid}: STALE: engine qty differs from the old lines")
+    missing = sorted(i for i in v["line_ids"] if i not in nby)
+    if missing:
+        raise ExportError(f"{vid}: STALE: line(s) {missing[:3]} not in the new candidate")
+    old_sha = line_content_sha256(own_old)
+    new_sha = line_content_sha256([nby[i] for i in v["line_ids"]])
+    if old_sha != new_sha:
+        raise ExportError(f"{vid}: STALE: the content of its own line(s) changed between the candidates "
+                          "(the Checker re-verifies; never re-bound)")
+    rec = {k: copy_json(v[k]) for k in ("schema", "project_id", "revision_set_sha256", "line_ids", "element_scope",
+                                         "unit", "engine_qty", "checker_qty", "evidence", "scope")}
+    rec.update({"candidate_version": candidate_version, "boq_lines_sha256": lines_sha256(new_lines),
+                "binding": LINE_BINDING, "line_content_sha256": new_sha, "rebound_from": vid,
+                "checker": {"run_token": run_token, "routine": routine, "verdict_commit": verdict_commit},
+                "time": time,
+                "notes": (f"re-bound from {vid} ({v['candidate_version']}): own lines byte-identical"
+                          + (f"; was: {v['notes']}" if v.get("notes") else ""))})
+    rec["verdict_id"] = "V2-" + sha256_bytes(json.dumps(rec, sort_keys=True, ensure_ascii=False).encode("utf-8"))[:16]
+    probs = validate_v2(rec)
+    if probs:
+        raise ExportError(f"{vid}: " + "; ".join(probs))
+    return dict(sorted(rec.items()))
+
+
+def copy_json(x):
+    return json.loads(json.dumps(x))
+
+
 def bind_verdict(v, ident, group_lines, group_elements):
     """status of one V2 record against the exported group: COUNTED, or why not (never raises for a stale record)."""
     pid, rev, cver, bsha = ident
@@ -693,12 +850,18 @@ def bind_verdict(v, ident, group_lines, group_elements):
     ch = v["checker"] or {}
     if not all(ch.get(k) for k in ("run_token", "routine", "verdict_commit")):
         return "BINDING_INCOMPLETE"
-    if (v["project_id"], v["revision_set_sha256"], v["candidate_version"], v["boq_lines_sha256"]) != (pid, rev, cver,
-                                                                                                      bsha):
-        return "STALE"
+    if line_bound(v):
+        # T-294: bound to its own lines' content; the candidate version and the whole file are provenance only
+        if (v["project_id"], v["revision_set_sha256"]) != (pid, rev):
+            return "STALE"
+    elif (v["project_id"], v["revision_set_sha256"], v["candidate_version"], v["boq_lines_sha256"]) != (pid, rev, cver,
+                                                                                                        bsha):
+        return "STALE"                            # a T-245 record: its whole-file binding, unchanged (never migrated)
     ids = set(v["line_ids"])
     lines = [ln for ln in group_lines if ln["line_id"] in ids]
     if len(lines) != len(ids):
+        return "STALE"
+    if line_bound(v) and own_content_status(v, {ln["line_id"]: ln for ln in lines}):
         return "STALE"
     if any(ln["unit"] != v["unit"] for ln in lines):
         return "STALE"
@@ -1619,6 +1782,51 @@ def main_downgrade_add(argv):
     return 0
 
 
+def main_verdict_rebind(argv):
+    ap = argparse.ArgumentParser(prog="boq_export_v1.py verdict-rebind",
+                                 description="T-294: re-issue unchanged V2 records on a new candidate (Checker only)")
+    ap.add_argument("--verdicts", required=True, help="the old URBAN_CHECKER_VERDICT_V2_SET file")
+    ap.add_argument("--old-lines", required=True, help="the candidate lines the old records were issued on")
+    ap.add_argument("--old-candidate-version", required=True)
+    ap.add_argument("--lines", required=True, help="the new candidate lines")
+    ap.add_argument("--candidate-version", required=True)
+    ap.add_argument("--lock-file")
+    ap.add_argument("--run-token")
+    ap.add_argument("--routine")
+    ap.add_argument("--verdict-commit", required=True)
+    ap.add_argument("--time")
+    ap.add_argument("--out", required=True, help="the new URBAN_CHECKER_VERDICT_V2_SET file to append to")
+    a = ap.parse_args(argv)
+    if Path(a.out).resolve() == Path(a.verdicts).resolve():
+        raise ExportError("--out is the old set: a re-bound record goes into the new candidate's set (refused)")
+    old, _s = _load_json(a.verdicts)
+    sp = _set_problems(old)
+    if sp:
+        raise ExportError("--verdicts: " + "; ".join(sp))
+    ol, _r1 = _load_json(a.old_lines)
+    nl, _r2 = _load_json(a.lines)
+    if isinstance(ol, dict) or isinstance(nl, dict):
+        raise ExportError("--old-lines / --lines must be lists of canonical lines (V3_0_x_BOQ_LINES.json)")
+    token, routine = a.run_token, a.routine
+    if a.lock_file:
+        lk, _s = _load_json(a.lock_file)
+        token, routine = token or lk.get("token"), routine or lk.get("agent")
+    when = a.time or datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    report = []
+    for v in sorted(old["verdicts"], key=lambda x: str(x.get("verdict_id"))):
+        try:
+            rec = verdict_rebind(v, ol, nl, old_candidate_version=a.old_candidate_version,
+                                 candidate_version=a.candidate_version, run_token=token or "", routine=routine or "",
+                                 verdict_commit=a.verdict_commit, time=when)
+        except ExportError as e:
+            report.append({"verdict_id": str(v.get("verdict_id")), "status": f"NOT RE-BOUND: {e}"})
+            continue
+        verdict_set_append(a.out, rec)
+        report.append({"verdict_id": str(v.get("verdict_id")), "status": f"RE-BOUND as {rec['verdict_id']}"})
+    print(json.dumps(report, indent=1, sort_keys=True, ensure_ascii=False))
+    return 0 if all(r["status"].startswith("RE-BOUND") for r in report) else 1
+
+
 def main_verdict_validate(argv):
     ap = argparse.ArgumentParser(prog="boq_export_v1.py verdict-validate")
     ap.add_argument("file")
@@ -1639,6 +1847,8 @@ def main(argv=None):
         return main_verdict_validate(argv[1:])
     if argv and argv[0] == "downgrade-add":
         return main_downgrade_add(argv[1:])
+    if argv and argv[0] == "verdict-rebind":
+        return main_verdict_rebind(argv[1:])
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     ap.add_argument("--lines", required=True)
     ap.add_argument("--candidate-version", required=True)

@@ -93,8 +93,9 @@ def test_a_verified_component_conflicting_with_a_downgrade_exports_held(tmp_path
 def test_a_held_line_stays_held_with_its_own_reason(tmp_path):
     lines = villa()
     _m, r = rows_of(tmp_path, lines, "h", downgrades=[dg(lines, ["S-1"])])
-    assert r["S-1"]["quantity_state"] == "HELD" and "was HELD: BLOCKED_RFI: slab depth not printed" in \
-        r["S-1"]["held_reason"]
+    # T-294 (h): the row's own reason stays first, unchanged; the record is appended, never written over it
+    assert r["S-1"]["quantity_state"] == "HELD" and r["S-1"]["held_reason"].startswith(
+        "BLOCKED_RFI: slab depth not printed | + HELD: ") and "UNSUPPORTED BASIS; downgrade DG-" in r["S-1"]["held_reason"]
 
 
 @pytest.mark.parametrize("change,needle", [
