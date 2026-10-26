@@ -46,7 +46,15 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
-## Status (Lead, 2026-10-25 22:15; re-estimated each run from what merged and was verified)
+## Status (Lead, 2026-10-26 00:15; re-estimated each run from what merged and was verified)
+
+Lead 2026-10-26 00:15: since 22:15 SIX MERGED (stairs V3.0.18 Gate B = candidate of record; rebar basis r2; WP
+foundation inventory; formwork slab-level ledger; W17 hole; beam rebar safeguard); READY 0. Whole verified lines in the
+export: 1, pending the Checker's V3.0.18 record set. Week 2 (3 Nov): T-255 (windows + ring correction, V3.0.19) is next
+in lane I, T-294 now runs in parallel (disjoint files) to cut the per-step record re-issue; then T-244 (plaster / paint
+with the W17 hole) -> T-279 -> T-284 -> T-246 -> T-199 (formwork r5). Second whole WP line: T-303 (worker 3, in work).
+Scoring of the candidate restarts after T-304. Risk: lane I is one row at a time; the usage limit (no failure since
+21:40).
 
 Lead 2026-10-25 22:15: since 16:15 one ledger MERGED (footing reinforcement PART F + a downgrade-only record on the
 874.862 kg footing line) and four pieces handed in (stairs V3.0.18 Gate B, rebar basis r2, WP foundation inventory,

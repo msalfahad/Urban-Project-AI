@@ -1,11 +1,39 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
 Plain words, no task numbers. Measured numbers come from SCOREBOARD.md; anything not measured says so.
-Last update: 2026-10-25 22:15 UTC (Lead). Previous version: 2026-10-25 16:15 UTC. The released numbers did not change
+Last update: 2026-10-26 00:15 UTC (Lead). Previous version: 2026-10-25 22:15 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released default V2.9 + route G untouched). Your measure: whole BOQ
-lines independently verified. The real export of the candidate still counts ONE whole verified line (the concrete slab,
-60.28 m3, 62 of 62 panels). Released: still 0. No candidate quantity moved in these six hours. One thing for you: the
-team stopped for about 3.5 hours on the account's usage limit (see Team below); no engineering decision for you.
+lines independently verified. The candidate of record is now the version with the stairs (checked and merged). Its
+whole verified lines in the real export: the concrete slab (60.28 m3) is still the one line, but the checker must
+re-issue his records on the new version before the export counts it again (first item in his queue). Released: 0.
+The team ran normally again after the outage; nothing needs your decision.
+
+Since 22:15 (newest first; six pieces checked and merged, nothing waiting for the checker):
+- Stairs: CHECKED AND MERGED into the candidate. Stair concrete in the candidate 2.98 -> 5.37 m3 (1.23 verified,
+  1.54 on your approved method, 0.57 read from the drawing); the one stair whose risers and waist are not drawn
+  (0.95 m3) is now held instead of provisional. Stairs and domes together 10.45 vs freelancer 21.83 m3 (-52 %): the
+  rest is held, not wrong. The first-floor landing marble (4.92 m2, one material) and the ground-floor pantry as a wet
+  floor (1.10 m2, taken off the dry floor exactly once) came with it. Every other line of the candidate is unchanged.
+- Curved pool-side window: CHECKED AND MERGED. The hole it leaves is 8.14 m2 on the outside face (read from the
+  drawing) and 8.74 .. 8.99 m2 on the room side (a range: the arch soffit is not drawn). The first-floor room's
+  plaster and paint therefore read 61.46 .. 61.72 m2 each; the released 59.45 m2 is 2.0 .. 2.3 m2 (3.4 .. 3.8 %) too
+  low. Your 9.870 m2 stays the window's own measure. The plaster / paint integration will carry this.
+- Waterproofing under the building: CHECKED AND MERGED (all 416 drawn faces accounted for, closure exact; the
+  checker re-measured all 24 footing membranes and the lift pit himself). Wet rooms, roofs and the pool / tank are
+  being inventoried now.
+- Formwork, slabs and beams: CHECKED AND MERGED. The checker confirmed on the drawing that the formwork method counts
+  one continuous ground-floor beam span twice (+2.52 m2 too much); it will be corrected when formwork enters the
+  candidate. Stairs, domes and the tank are the last formwork part (next for the structural worker).
+- Steel: two pieces CHECKED AND MERGED: the column bar lines on the held roof level (0.16 t) are held, and a new
+  safeguard flags beam steel that the schedule reader misses (side bars on 30 beams, inner links on 9, corner bars on
+  28 spans): every flagged group is held blank, no weight invented, no steel figure changed. The footing audit range
+  difference (0.05 t) is explained: two readings of the "per metre" note differ by one bar in 11 of the 20 groups.
+- Scoring: the scoring tool stopped scoring the candidate four versions ago because one waterproofing purchase line is
+  counted in "items"; a fix is next for the architectural worker, so the scoreboard can show the candidate again.
+- New work: the outside plaster (the freelancer's 1,502.8 m2 against 1,022.5 m2 of drawn facade, already reconciled
+  item by item) is tied to no candidate line yet; a piece now ties every facade face to a line. The suspended-slab
+  steel is still a range of 4.64 .. 6.83 t; a piece now names the cause of every kilogram of that range.
+- Nothing new on Drive; no new photos. Every run in these two hours closed properly.
 
 Since 16:15 (newest first; one piece checked and merged, four handed in and waiting for the checker):
 - Team: no agent ran between about 18:15 and 21:40. The scheduler shows three runs refused with "usage limit reached",

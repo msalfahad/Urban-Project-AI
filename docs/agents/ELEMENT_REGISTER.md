@@ -46,6 +46,18 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+### Lead 2026-10-26 00:15 (from T-266 Gate B / T-297 r2 / T-301 / T-293 part 2 / T-302 / T-300 MERGED, V3.0.18 = candidate of record; T-303 CLAIMED; new T-304 .. T-306)
+
+| Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |
+|---|---|---|---|---|---|
+| Continuous beam CB5 span 2 (GF) | formwork, CONC.BEAM, rebar | formwork: one face set per span (positional run attribution) | double count +0.740 soffit / +1.776 sides m2 CONFIRMED ENGINE_WRONG by the Checker (drawing + code); corrected as formwork r5 inside the T-199 package | T-293 part 2 MERGED a1e0c43a | T-199 regression pair |
+| Free-edge band BAND0049 | formwork | formwork only on a drawn face; none drawn | UNRESOLVED, HELD with item (never measured) | T-293 part 2 MERGED | T-199 carries it HELD |
+| Stair system (ST-01 / ST-02 / ST-03, MS1 / MS2 landings, D1 steps) | CONC.STAIR_DOME, formwork soffits, FIN marble, rebar | CONC.STAIR_DOME for concrete; formwork faces follow their concrete status (ST-03 HELD -> its faces HELD) | V3.0.18 MERGED: 5.368881 m3 in the candidate (1.227952 VERIFIED, 1.536225 Q-50 A, 0.100286 + 0.4696 DC); ST-03 0.948267 HELD blank; drums a named omission | T-266 Gate B ceeb5135 | T-293 part 3 (formed faces) |
+| W17 curved pool-side window hole (1F-11) | window line (9.870 m2 measure, Q-76 A), plaster / paint 1F-11, exterior plaster facade, masonry | window line owns the opening measure; each wall finish deducts its own developed hole per face | exterior 8.1434 m2 DRAWING-CONFIRMED; room side 8.7414 .. 8.9965 HELD (soffit undrawn); 1F-11 plaster / paint 61.4626 .. 61.7177 m2 HELD (released 59.4511 LOW, ENGINE_WRONG) | T-302 MERGED 5c00a0f8 | T-244 (interior), T-305 (exterior face) |
+| Beam side bars, nested links, CB top corner bars | rebar (beams) | rebar; a beam with a required component UNRESOLVED is never COMPLETE | 30 side-bar marks DETECTED / 13 NOT_REQUIRED, 9 nested-link marks, 28 / 30 CB corner spans; all kg HELD blank; CB3 3Ø16 / CB8 5Ø18 text groups flagged (designer item) | T-300 MERGED 196a7a0b | B27 single link (RFI S20), CB3 s2 / CB8 s1 corner callouts |
+| Exterior facade faces (FACADE-EXT: every elevation band, openings, corners, parapets, dome faces) | exterior plaster / Sigma, paint, windows (deduction), corners m.l, parapet items | exterior plaster (lane A); corners as m.l and parapets as physical items (T-162 r2); W17 exterior face at 8.1434 m2 | T-159 1,022.534 m2 drawn; freelancer 1,502.84 m2 reconciled term by term (T-162 r2); tied to NO candidate line yet | T-159 / T-162 r2 / T-172 MERGED | T-305 (new) |
+| Suspended-slab reinforcement (294 lines) | rebar (slabs), CONC.SLAB (whole line VERIFIED, no link of quantity) | rebar; a BOUND is never a quantity | BOUND 4.643766 .. 6.832326 t, 18 HELD, 0 DRAWING_CONFIRMED | T-297 r2 MERGED | T-306 (new) |
+
 ### Lead 2026-10-25 22:15 (from T-299 PART F MERGED + downgrade; T-266 / T-297 r2 / T-301 / T-293 part 2 READY; T-303 new)
 
 | Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |
