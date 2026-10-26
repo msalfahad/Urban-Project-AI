@@ -1,0 +1,134 @@
+{
+ "band": "BAND0049@GF",
+ "band_cover_of_face": 0.994923,
+ "changed": [
+  {
+   "after_m2": null,
+   "before_m2": 0.199929567,
+   "category": "JOINT_HELD_LEN:UNMATCHED",
+   "face": "GF-093",
+   "floor": "GF",
+   "owner": "COL-GF-15",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-093",
+    "GF-094"
+   ]
+  },
+  {
+   "after_m2": null,
+   "before_m2": 0.117958445,
+   "category": "JOINT_HELD_M2:UNMATCHED",
+   "face": "GF-093",
+   "floor": "GF",
+   "owner": "COL-GF-15",
+   "owner_kind": "COLUMN",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-093",
+    "GF-094"
+   ]
+  },
+  {
+   "after_m2": 2.224174408,
+   "before_m2": null,
+   "category": "BEAM_SIDE",
+   "face": "GF-095",
+   "floor": "GF",
+   "owner": "BM-GF-049",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-095"
+   ]
+  },
+  {
+   "after_m2": 0.2,
+   "before_m2": null,
+   "category": "BEAM_SIDE_HELD_LEN:UNMATCHED",
+   "face": "GF-095",
+   "floor": "GF",
+   "owner": "BM-GF-049",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-095"
+   ]
+  },
+  {
+   "after_m2": 0.118,
+   "before_m2": null,
+   "category": "BEAM_SIDE_HELD_M2:UNMATCHED",
+   "face": "GF-095",
+   "floor": "GF",
+   "owner": "BM-GF-049",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-095"
+   ]
+  },
+  {
+   "after_m2": 0.376923834,
+   "before_m2": null,
+   "category": "BEAM_SOFFIT",
+   "face": "GF-095",
+   "floor": "GF",
+   "owner": "BM-GF-049",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-095"
+   ]
+  },
+  {
+   "after_m2": 0.326718124,
+   "before_m2": null,
+   "category": "EDGE_BAND",
+   "face": "GF-095",
+   "floor": "GF",
+   "owner": "BM-GF-049",
+   "owner_kind": "BEAM",
+   "owner_status": "CALCULATED",
+   "pieces": [
+    "GF-095"
+   ]
+  },
+  {
+   "after_m2": null,
+   "before_m2": 3.769787132,
+   "category": "UNMATCHED_LEN",
+   "face": "GF-095",
+   "floor": "GF",
+   "owner": null,
+   "owner_kind": "UNMATCHED",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-095"
+   ]
+  },
+  {
+   "after_m2": null,
+   "before_m2": 0.376923834,
+   "category": "UNMATCHED_PLAN",
+   "face": "GF-095",
+   "floor": "GF",
+   "owner": null,
+   "owner_kind": "UNMATCHED",
+   "owner_status": "HELD",
+   "pieces": [
+    "GF-095"
+   ]
+  }
+ ],
+ "face": "GF-095",
+ "face_plan_m2": 0.376923834,
+ "member": "BM-GF-049",
+ "merged_records": 785,
+ "other_bands_on_face": {},
+ "rule": "R-T308-3",
+ "schema": "T308_WALK_DELTA_V1",
+ "source": "formwork r3 walk (T-163 MERGED 659f889f) via t293p2_walk (T-293 part 2 MERGED a1e0c43a) on the T-139 faces of 'ST7757 dxf.dxf' (sha 9f9d1179); one binding changed: GF-095 -> BM-GF-049",
+ "unchanged_records": 781
+}
