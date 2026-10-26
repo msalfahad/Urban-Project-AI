@@ -1,0 +1,173 @@
+{
+ "lines": 294,
+ "statuses": {
+  "BOUND": 294,
+  "HELD": 18,
+  "NOT_APPLICABLE": 72
+ },
+ "bound_low_kg": 4643.766,
+ "bound_high_kg": 6832.326,
+ "spread_kg": 2188.56,
+ "causes_kg": {
+  "ANCHORAGE_LENGTH": 746.56,
+  "COUNT_CONVENTION": 318.227,
+  "LABEL_MEANING": 10.081,
+  "STORAGE_ROUNDING": 0.009,
+  "TOP_CROSSING": 146.686,
+  "TOP_NOTE2_VS_P15": 185.612,
+  "TOP_NOTE2_WORDING": 781.385
+ },
+ "causes_sum_kg": 2188.56,
+ "residual_kg": 0.0,
+ "by_population": {
+  "BOTTOM MESH": {
+   "COUNT_CONVENTION": 155.344,
+   "LABEL_MEANING": 10.081,
+   "STORAGE_ROUNDING": 0.0
+  },
+  "DEVELOPMENT / ANCHORAGE": {
+   "ANCHORAGE_LENGTH": 746.56,
+   "COUNT_CONVENTION": 55.613,
+   "STORAGE_ROUNDING": 0.009
+  },
+  "TOP BARS OVER SUPPORTS": {
+   "COUNT_CONVENTION": 107.27,
+   "STORAGE_ROUNDING": 0.0,
+   "TOP_CROSSING": 146.686,
+   "TOP_NOTE2_VS_P15": 185.612,
+   "TOP_NOTE2_WORDING": 781.385
+  }
+ },
+ "skew_B_below_A": [
+  "L-4a2be75de3f9e0f69614"
+ ],
+ "readings_outside_bound": [
+  {
+   "line": "L-158378a67c1ceb235a4b",
+   "reading": "no_note2_bars_over_TB_mesh",
+   "kg": 0.0,
+   "low": 8.724,
+   "high": 19.526
+  },
+  {
+   "line": "L-25ad842e66bde039046b",
+   "reading": "no_note2_bars_over_TB_mesh",
+   "kg": 0.0,
+   "low": 8.827,
+   "high": 19.846
+  },
+  {
+   "line": "L-4904e51cc3a619f88f05",
+   "reading": "label_n_in_all_40d",
+   "kg": 2.469136,
+   "low": 4.444,
+   "high": 8.642
+  },
+  {
+   "line": "L-495cc34aac1ce55bbef3",
+   "reading": "no_note2_bars_over_TB_mesh",
+   "kg": 0.0,
+   "low": 5.556,
+   "high": 12.963
+  },
+  {
+   "line": "L-9d87049b1e39c5fc9d65",
+   "reading": "label_n_in_all_40d",
+   "kg": 2.469136,
+   "low": 10.37,
+   "high": 19.012
+  },
+  {
+   "line": "L-b10f318a155d5ee1b289",
+   "reading": "i_B",
+   "kg": 16.223,
+   "low": 16.484,
+   "high": 34.543
+  },
+  {
+   "line": "L-b10f318a155d5ee1b289",
+   "reading": "ii_A+cross",
+   "kg": 34.821,
+   "low": 16.484,
+   "high": 34.543
+  },
+  {
+   "line": "L-b232ee26b6507c42012e",
+   "reading": "no_note2_bars_over_TB_mesh",
+   "kg": 0.0,
+   "low": 5.556,
+   "high": 18.271
+  },
+  {
+   "line": "L-e84970a3f2988bbe0c98",
+   "reading": "label_n_in_all_40d",
+   "kg": 2.469136,
+   "low": 2.963,
+   "high": 6.049
+  }
+ ],
+ "dev_low_at_continuous_ends_kg": 555.79,
+ "tb_top_low_kg": 28.663,
+ "dev_end_census": {
+  "cont_low": 556.205,
+  "noncont_low": 384.089,
+  "cont_high": 1027.31,
+  "noncont_high": 718.12,
+  "model_low": 939.8,
+  "model_high": 1741.973,
+  "extra_segment_ends_A": 2,
+  "extra_segment_ends_B": 8,
+  "ends_A": 3272,
+  "cont_A": 1947,
+  "ends_B": 3474,
+  "cont_B": 2060,
+  "lines_with_opening_segment_ends": [
+   {
+    "line": "L-22558ab9e40654169034",
+    "element": "SLAB:GF-139",
+    "direction": "y",
+    "ends_A": 36,
+    "bars_A": 18,
+    "ends_B": 40,
+    "bars_B": 19
+   },
+   {
+    "line": "L-257069558b5db92408e9",
+    "element": "SLAB:GF-081",
+    "direction": "y",
+    "ends_A": 24,
+    "bars_A": 11,
+    "ends_B": 26,
+    "bars_B": 12
+   },
+   {
+    "line": "L-34546da7f195fac89e92",
+    "element": "SLAB:1F-023",
+    "direction": "x",
+    "ends_A": 68,
+    "bars_A": 34,
+    "ends_B": 72,
+    "bars_B": 35
+   },
+   {
+    "line": "L-592f9a728cea013d7403",
+    "element": "SLAB:GF-124",
+    "direction": "y",
+    "ends_A": 40,
+    "bars_A": 20,
+    "ends_B": 44,
+    "bars_B": 21
+   }
+  ]
+ },
+ "drawing_confirmed_components": 0,
+ "cause_text": {
+  "COUNT_CONVENTION": "boundary-bar positions of an 'n o d/m' mesh (first / last bar from the support face) are not printed: A = ceil(rate x W) centred vs B = A + 1 on both edges (Q-71 governs footings and links, owner 12:36; not extended to slabs, ERS s.3)",
+  "LABEL_MEANING": "a slab label printed without '/m' ('5 o 10'): 5 bars in all or 5 per metre is not printed",
+  "TOP_NOTE2_WORDING": "sheet note 2 'one third of the span': whole bar (L/6 each side, reading i) or each side (L/3 each side, reading ii) is not printed",
+  "TOP_NOTE2_VS_P15": "sheet note 2 and the p.15 typical detail (0.30 max(L1, L2) continuous, 0.25 L1 end) give different extents: two drawings of the set disagree (designer item)",
+  "TOP_CROSSING": "the part of the top bar over the beam band: exists only under the 'each side' readings, whose governing extent is the open item above",
+  "ANCHORAGE_LENGTH": "the bar-end length is not dimensioned for slab bars: note 9 (40 d .. 70 d) names the starter-bar situations (owner 2026-10-24 s.6 (1)); p.15 draws edge-beam anchorage to 40 mm of the far face, no length",
+  "STORAGE_ROUNDING": "3 dp storage of the ledger figures (not an engineering cause)"
+ }
+}
