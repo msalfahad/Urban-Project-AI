@@ -126,3 +126,20 @@ def test_adverse_column_in_the_band_left_in_refused():
 def test_adverse_missing_outline_refused():
     with pytest.raises(A.InputsError, match="valid closed outline"):
         A.arc_band_net([(0, 0), (1, 0)])
+
+
+def test_stdlib_clip_agrees_with_an_independent_geometry_library():
+    shapely = pytest.importorskip("shapely.geometry")
+    b = shapely.Polygon(band())
+    got = A.arc_band_net(band(), [C1, C2, C3], [BEAM])
+    assert got["gross_m2"] == pytest.approx(b.area, abs=1e-9)
+    assert got["columns_m2"]["C3"] == pytest.approx(b.intersection(shapely.Polygon(C3["ring"])).area, abs=1e-9)
+    tilted = {"id": "C4", "ring": [(-2.35, 0.55), (-2.0, 0.40), (-1.9, 0.65), (-2.25, 0.80)], "deducted": True}
+    part = A.arc_band_net(band(), [tilted])["columns_m2"]["C4"]          # a column across the outer arc, rotated
+    assert part == pytest.approx(b.intersection(shapely.Polygon(tilted["ring"])).area, abs=1e-6)
+
+
+def test_adverse_concave_neighbour_outline_refused():
+    ell = dict(BEAM, ring=[(-4.0, 2.2), (0.0, 2.2), (0.0, 2.5), (-2.0, 2.5), (-2.0, 3.5), (-4.0, 3.5)])
+    with pytest.raises(A.InputsError, match="not convex"):
+        A.arc_band_net(band(), [C1, C2, C3], [ell])

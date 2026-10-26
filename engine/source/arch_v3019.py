@@ -99,14 +99,62 @@ WAITING = dict(A3018.WAITING)
 
 
 # ================================================================================================ geometry (any villa)
+def _signed_area(ring):
+    return 0.5 * sum(ring[k][0] * ring[(k + 1) % len(ring)][1] - ring[(k + 1) % len(ring)][0] * ring[k][1]
+                     for k in range(len(ring)))
+
+
 def _poly(ring, where):
-    from shapely.geometry import Polygon
-    if not ring or len(ring) < 3:
-        raise InputsError(f"{where}: not a valid closed outline (fewer than 3 points)")
-    p = Polygon(ring)
-    if not p.is_valid or p.area <= 0:
-        raise InputsError(f"{where}: not a valid closed outline")
-    return p
+    """a closed outline as a list of (x, y) floats (standard library only: engine/source stays free of third-party
+    geometry, K1 boundary)."""
+    pts = [(float(p[0]), float(p[1])) for p in (ring or ())]
+    if len(pts) > 1 and pts[0] == pts[-1]:
+        pts = pts[:-1]
+    if len(pts) < 3 or abs(_signed_area(pts)) <= 0:
+        raise InputsError(f"{where}: not a valid closed outline (fewer than 3 points or no area)")
+    return pts
+
+
+def _convex(pts):
+    sgn = 0
+    n = len(pts)
+    for k in range(n):
+        (ax, ay), (bx, by), (cx, cy) = pts[k], pts[(k + 1) % n], pts[(k + 2) % n]
+        cr = (bx - ax) * (cy - by) - (by - ay) * (cx - bx)
+        if abs(cr) > 1e-12:
+            if sgn and (cr > 0) != (sgn > 0):
+                return False
+            sgn = cr
+    return True
+
+
+def _overlap(subject, clip, where):
+    """area of subject (any simple outline) inside clip (a CONVEX outline: a column or a straight beam band),
+    Sutherland-Hodgman; a concave clip is refused."""
+    if not _convex(clip):
+        raise InputsError(f"{where}: the outline is not convex (split it into convex parts)")
+    if _signed_area(clip) < 0:
+        clip = clip[::-1]
+    out = list(subject)
+    n = len(clip)
+    for k in range(n):
+        (ax, ay), (bx, by) = clip[k], clip[(k + 1) % n]
+        side = lambda p: (bx - ax) * (p[1] - ay) - (by - ay) * (p[0] - ax)  # noqa: E731  >= 0: inside
+        inp, out = out, []
+        if not inp:
+            break
+        for m in range(len(inp)):
+            p, q = inp[m - 1], inp[m]
+            sp, sq = side(p), side(q)
+            if sq >= 0:
+                if sp < 0:
+                    t = sp / (sp - sq)
+                    out.append((p[0] + t * (q[0] - p[0]), p[1] + t * (q[1] - p[1])))
+                out.append(q)
+            elif sp >= 0:
+                t = sp / (sp - sq)
+                out.append((p[0] + t * (q[0] - p[0]), p[1] + t * (q[1] - p[1])))
+    return abs(_signed_area(out)) if len(out) >= 3 else 0.0
 
 
 def check_end_reading(reading, closing_faces, where="end"):
@@ -133,8 +181,7 @@ def arc_band_net(boundary, columns=(), neighbours=(), tol_m2=1e-6):
     band = _poly(boundary, "arc band")
     cols = {}
     for c in columns:
-        cp = _poly(c["ring"], f"column {c.get('id')}")
-        ov = band.intersection(cp).area
+        ov = _overlap(band, _poly(c["ring"], f"column {c.get('id')}"), f"column {c.get('id')}")
         if ov <= tol_m2:
             continue
         if not c.get("deducted"):
@@ -142,11 +189,11 @@ def arc_band_net(boundary, columns=(), neighbours=(), tol_m2=1e-6):
                               "its own trade)")
         cols[c["id"]] = ov
     for n in neighbours:
-        ov = band.intersection(_poly(n["ring"], f"neighbour {n.get('line_id')}")).area
+        ov = _overlap(band, _poly(n["ring"], f"neighbour {n.get('line_id')}"), f"neighbour {n.get('line_id')}")
         if ov > tol_m2:
             raise InputsError(f"the band overlaps {n.get('line_id')} by {ov:.6f} m2: a closing piece booked on two "
                               "lines (one owner per piece)")
-    gross = band.area
+    gross = abs(_signed_area(band))
     return {"gross_m2": gross, "columns_m2": cols, "net_m2": gross - sum(cols.values())}
 
 
