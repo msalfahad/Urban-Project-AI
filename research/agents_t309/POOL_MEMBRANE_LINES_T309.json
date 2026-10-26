@@ -1,0 +1,30 @@
+[
+ {
+  "function": {
+   "label": null,
+   "source": null,
+   "status": "HELD"
+  },
+  "held_part_bound": [
+   0.0,
+   1.349668
+  ],
+  "key": "WP.POOL_TANK.POOL_MEMBRANE[m2]/POOL-1/BASE_AND_OUTER_WALLS",
+  "quantity": 29.582355,
+  "source": "Drive 'Alsenan chalet project' / 'ST7757 dxf.dxf' DETAIL OF SWIMMING POOL: TEXT 1874 / 1876, HATCH 184E (S-SECRH.D) and 1851 (S-INSU.D) to the wall-top line 186D / 1843 / 1930; shell T-183 r2 / T-193 (Checker-verified); levels: architectural NW elevation cut (T-183 r2 s.0), owner Q-26 A (flat floor)",
+  "status": "DRAWING-CONFIRMED",
+  "unit": "m2"
+ },
+ {
+  "face_m2": 29.582355,
+  "held_part_bound": [
+   0.0,
+   0.068072
+  ],
+  "key": "WP.POOL_TANK.POOL_PROTECTION_SCREED[m3]/POOL-1/BASE_AND_OUTER_WALLS",
+  "quantity": 1.524503,
+  "source": "Drive 'Alsenan chalet project' / 'ST7757 dxf.dxf' DETAIL OF SWIMMING POOL: TEXT 1874 / 1876, HATCH 184E (S-SECRH.D) and 1851 (S-INSU.D) to the wall-top line 186D / 1843 / 1930; shell T-183 r2 / T-193 (Checker-verified); levels: architectural NW elevation cut (T-183 r2 s.0), owner Q-26 A (flat floor)",
+  "status": "DRAWING-CONFIRMED",
+  "unit": "m3"
+ }
+]

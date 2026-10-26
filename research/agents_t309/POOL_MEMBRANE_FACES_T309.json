@@ -1,0 +1,176 @@
+{
+ "closure": {
+  "by_status_m2": {
+   "COVERED": 29.582355,
+   "NOT_COVERED": 24.218926,
+   "UNRESOLVED": 1.349668
+  },
+  "residual_m2": 0.0,
+  "shell_total_m2": 55.150949
+ },
+ "membrane": {
+  "family": "pool membrane",
+  "function": {
+   "label": null,
+   "source": null,
+   "status": "HELD"
+  },
+  "layer_surface_info": {
+   "basis": "membrane face against the screed: horizontal sheet to offset t_screed, vertical at offset t_screed from the underside of the horizontal screed to the drawn end, upstand included; INFORMATION (procurement side), never the measure",
+   "membrane_inner_surface_m2": 32.77991
+  },
+  "quantity": 29.582355,
+  "status": "DRAWING-CONFIRMED",
+  "thickness_m": 0.05,
+  "unit": "m2",
+  "unresolved_bound_m2": [
+   0.0,
+   1.349668
+  ]
+ },
+ "rows": [
+  {
+   "basis": "hatch under the whole base (ST7757 dxf.dxf HATCH 184E / 1851); screed sheet plan 11.569380 m2 runs to the outer face of the vertical screed",
+   "face": "base underside",
+   "face_id": "BASE-U",
+   "membrane_bound_m2": null,
+   "membrane_m2": 10.935564,
+   "screed_m3": 0.578469,
+   "shell_m2": 10.935564,
+   "status": "COVERED"
+  },
+  {
+   "basis": "hatch drawn to its end (ST7757 dxf.dxf HATCH 184E / 1851)",
+   "face": "outer face BACK -1.30 -> +0.30",
+   "face_id": "OUT-BACK-to-end",
+   "membrane_bound_m2": null,
+   "membrane_m2": 5.6,
+   "screed_m3": 0.288,
+   "shell_m2": 5.6,
+   "status": "COVERED"
+  },
+  {
+   "basis": "hatch drawn; face below the deck finish (ST7757 dxf.dxf HATCH 184E / 1851)",
+   "face": "outer face SIDE-1 -1.30 -> +0.15",
+   "face_id": "OUT-SIDE-1-below-deck",
+   "membrane_bound_m2": null,
+   "membrane_m2": 2.5375,
+   "screed_m3": 0.126875,
+   "shell_m2": 2.5375,
+   "status": "COVERED"
+  },
+  {
+   "basis": "upstand above the deck finish: the detail draws the layer to its end, the deck section leaves the face exposed; termination not detailed (blank, bound beside) (ST7757 dxf.dxf HATCH 184E / 1851)",
+   "face": "outer face SIDE-1 +0.15 -> +0.30",
+   "face_id": "OUT-SIDE-1-upstand",
+   "membrane_bound_m2": [
+    0.0,
+    0.2625
+   ],
+   "membrane_m2": null,
+   "screed_bound_m3": [
+    0.0,
+    0.013125
+   ],
+   "screed_m3": null,
+   "shell_m2": 0.2625,
+   "status": "UNRESOLVED"
+  },
+  {
+   "basis": "hatch drawn; face below the deck finish (ST7757 dxf.dxf HATCH 184E / 1851)",
+   "face": "outer face SIDE-2 -1.30 -> +0.15",
+   "face_id": "OUT-SIDE-2-below-deck",
+   "membrane_bound_m2": null,
+   "membrane_m2": 2.5375,
+   "screed_m3": 0.126875,
+   "shell_m2": 2.5375,
+   "status": "COVERED"
+  },
+  {
+   "basis": "upstand above the deck finish: the detail draws the layer to its end, the deck section leaves the face exposed; termination not detailed (blank, bound beside) (ST7757 dxf.dxf HATCH 184E / 1851)",
+   "face": "outer face SIDE-2 +0.15 -> +0.30",
+   "face_id": "OUT-SIDE-2-upstand",
+   "membrane_bound_m2": [
+    0.0,
+    0.2625
+   ],
+   "membrane_m2": null,
+   "screed_bound_m3": [
+    0.0,
+    0.013125
+   ],
+   "screed_m3": null,
+   "shell_m2": 0.2625,
+   "status": "UNRESOLVED"
+  },
+  {
+   "basis": "hatch drawn; face below the deck finish (ST7757 dxf.dxf HATCH 184E / 1851)",
+   "face": "outer face ARC -1.30 -> +0.15",
+   "face_id": "OUT-ARC-below-deck",
+   "membrane_bound_m2": null,
+   "membrane_m2": 7.971791,
+   "screed_m3": 0.404284,
+   "shell_m2": 7.971791,
+   "status": "COVERED"
+  },
+  {
+   "basis": "upstand above the deck finish: the detail draws the layer to its end, the deck section leaves the face exposed; termination not detailed (blank, bound beside) (ST7757 dxf.dxf HATCH 184E / 1851)",
+   "face": "outer face ARC +0.15 -> +0.30",
+   "face_id": "OUT-ARC-upstand",
+   "membrane_bound_m2": [
+    0.0,
+    0.824668
+   ],
+   "membrane_m2": null,
+   "screed_bound_m3": [
+    0.0,
+    0.041822
+   ],
+   "screed_m3": null,
+   "shell_m2": 0.824668,
+   "status": "UNRESOLVED"
+  },
+  {
+   "basis": "no hatch on the water side (ST7757 dxf.dxf HATCH 184E / 1851)",
+   "face": "water floor on the structural base top",
+   "face_id": "WATER-FLOOR",
+   "membrane_bound_m2": null,
+   "membrane_m2": null,
+   "screed_m3": null,
+   "shell_m2": 8.578838,
+   "status": "NOT_COVERED"
+  },
+  {
+   "basis": "no hatch on the water side (ST7757 dxf.dxf HATCH 184E / 1851)",
+   "face": "water wall faces, structural base top -> rim",
+   "face_id": "WATER-WALLS",
+   "membrane_bound_m2": null,
+   "membrane_m2": null,
+   "screed_m3": null,
+   "shell_m2": 13.283362,
+   "status": "NOT_COVERED"
+  },
+  {
+   "basis": "no hatch on the wall top (ST7757 dxf.dxf HATCH 184E / 1851)",
+   "face": "wall top (coping surface)",
+   "face_id": "WALL-TOP",
+   "membrane_bound_m2": null,
+   "membrane_m2": null,
+   "screed_m3": null,
+   "shell_m2": 2.356726,
+   "status": "NOT_COVERED"
+  }
+ ],
+ "screed": {
+  "face_m2": 29.582355,
+  "family": "pool protection screed",
+  "quantity": 1.524503,
+  "status": "DRAWING-CONFIRMED",
+  "thickness_m": 0.05,
+  "unit": "m3",
+  "unresolved_bound_m3": [
+   0.0,
+   0.068072
+  ]
+ }
+}
