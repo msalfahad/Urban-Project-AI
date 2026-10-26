@@ -43,6 +43,40 @@
     "routine": "Verifier",
     "verdict_commit": "01358449"
    },
+   "checker_qty": 1.746916,
+   "element_scope": {
+    "ids": [
+     "P-C:GROUND_BEAMS:GROUND:BAND0043"
+    ],
+    "count": 1
+   },
+   "engine_qty": 1.746943,
+   "evidence": [
+    {
+     "printed_value": "band closed on drawn faces: own polygon 1.928418 m2 gross - 17BA 0.089559 = 1.838859 m2 net x D 0.95 (T-254 Gate B, two printed levels) = 1.746916 m3; line 1.746943 (+0.0015 %, 2 mm gap sliver under 17BD)",
+     "sheet": "ST7757 dxf.dxf (9f9d1179) ARC 157 / 158, LINE 7C3, S-COL.BON 17C0 / 17BD / 17BA"
+    }
+   ],
+   "line_ids": [
+    "L-7076482d75ca42691468"
+   ],
+   "notes": "T-255 Gate B: ring ground beam BAND0043 whole engine line (COMPONENT of reference line CONC.GROUND) re-measured from the drawing by the Checker; agrees within 0.0015 %",
+   "project_id": "development-villa-t131",
+   "revision_set_sha256": "5e3690754db90b5fa2d878d4fc29b2e84ce9d1d91e4c1e68a62019d1b34bbc22",
+   "schema": "URBAN_CHECKER_VERDICT_V2",
+   "scope": "COMPONENT",
+   "time": "2026-10-26T03:46:19Z",
+   "unit": "m3",
+   "verdict_id": "V2-47f38a21cf8c228b"
+  },
+  {
+   "boq_lines_sha256": "b35475bf9168adfc792fdba858515e7b77d8cb7bf934ba256b94d4af6c512904",
+   "candidate_version": "ARCH_TAKEOFF_V3.0.19",
+   "checker": {
+    "run_token": "20261026T024949-459-15179",
+    "routine": "Verifier",
+    "verdict_commit": "01358449"
+   },
    "checker_qty": 109.85,
    "element_scope": {
     "ids": [
@@ -136,40 +170,6 @@
    "time": "2026-10-26T03:42:21Z",
    "unit": "m3",
    "verdict_id": "V2-8b1b43850b0b1b36"
-  },
-  {
-   "boq_lines_sha256": "b35475bf9168adfc792fdba858515e7b77d8cb7bf934ba256b94d4af6c512904",
-   "candidate_version": "ARCH_TAKEOFF_V3.0.19",
-   "checker": {
-    "run_token": "20261026T024949-459-15179",
-    "routine": "Verifier",
-    "verdict_commit": "01358449"
-   },
-   "checker_qty": 1.746916,
-   "element_scope": {
-    "ids": [
-     "P-C:GROUND_BEAMS:GROUND:BAND0043"
-    ],
-    "count": 1
-   },
-   "engine_qty": 1.746943,
-   "evidence": [
-    {
-     "printed_value": "band closed on drawn faces: own polygon 1.928418 m2 gross - 17BA 0.089559 = 1.838859 m2 net x D 0.95 (T-254 Gate B, two printed levels) = 1.746916 m3; line 1.746943 (+0.0015 %, 2 mm gap sliver under 17BD)",
-     "sheet": "ST7757 dxf.dxf (9f9d1179) ARC 157 / 158, LINE 7C3, S-COL.BON 17C0 / 17BD / 17BA"
-    }
-   ],
-   "line_ids": [
-    "L-7076482d75ca42691468"
-   ],
-   "notes": "T-255 Gate B: ring ground beam BAND0043 whole line re-measured from the drawing by the Checker; agrees within 0.0015 %",
-   "project_id": "development-villa-t131",
-   "revision_set_sha256": "5e3690754db90b5fa2d878d4fc29b2e84ce9d1d91e4c1e68a62019d1b34bbc22",
-   "schema": "URBAN_CHECKER_VERDICT_V2",
-   "scope": "WHOLE",
-   "time": "2026-10-26T03:42:40Z",
-   "unit": "m3",
-   "verdict_id": "V2-969048b33be28650"
   },
   {
    "boq_lines_sha256": "b35475bf9168adfc792fdba858515e7b77d8cb7bf934ba256b94d4af6c512904",
