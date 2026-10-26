@@ -36,6 +36,14 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
    commit. Decision: board-only handoffs are verified as hand evidence (the verifier re-reads the cited notes), and the
    next task on the topic writes the files (T-117); a run with no line stays a NEEDS FIXING item for the owner's setting.
 
+## 2026-10-26 02:15 (lead run; covers 00:15 - 02:15)
+
+- T-303 (WP wet-area / roof / pool-tank inventories): WORKED (MERGED 1d3f69b0; Checker own: 1F east bath upturn 1.580 vs engine 1.48 ENGINE_WRONG, 2 doors with two transition lines and 3 with none, pool membrane + screed printed and in no line = MISSING, tank NA with evidence). Decisions: T-310 (lane I fix), T-309 (pool membrane / screed ledger); O-T303-01 pantry 0.045 m2 carried in T-310.
+- T-293 part 3 (stair / dome / tank formwork faces): WORKED (MERGED 02f3e47e; stair rows over-measure 3.624964 m2, 1.639289 double booking Checker own-checked; F-05 R-FW-P3-1 accepted). Decision: T-308 formwork r5 rows before T-199.
+- V3.0.18 record set (Checker 01:25): WORKED (8 records + DG re-issued, ST-03 downgrade moot; whole verified lines 1).
+- T-304 (key map 'item'), T-306 (slab steel spread by cause): READY, Gate A pending. T-306's F-T306-01 (no development drawn at continuous supports, 556.205 .. 1,027.310 kg on the dev lines) -> T-307 after T-306 merges.
+- PARTIAL / FAILED: none. Team: Worker 2 01:39 IDLE on the run lock (correct); Dashboard 00:54 recovered after the 20:54 usage-limit failure.
+
 ## 2026-10-26 00:15 (lead run; covers 16:15 - 00:15; the 22:15 run recorded its loop in LEAD_REPORT only)
 
 - T-299 PART F: WORKED (MERGED 5cb1e7e8 + downgrade DG-1b0eacce2d68f2a5); the audit-band challenge closed 23:02 (0.051 t = density vs max-spacing reading in 11 populations; a report wording defect, no number wrong).

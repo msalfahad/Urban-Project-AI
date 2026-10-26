@@ -46,7 +46,15 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
-## Status (Lead, 2026-10-26 00:15; re-estimated each run from what merged and was verified)
+## Status (Lead, 2026-10-26 02:15; re-estimated each run from what merged and was verified)
+
+Lead 2026-10-26 02:15: since 00:15 TWO MERGED (WP wet-area / roof / pool-tank inventory; formwork part 3 stairs /
+domes / tank) and the V3.0.18 record set ISSUED (whole verified lines in the export: 1, CONC.SLAB); READY 2 (scoring
+key-map fix, slab steel range decomposition). Week 2 (3 Nov): T-255 (V3.0.19) in work in lane I; then T-244 -> T-279 ->
+T-284 -> T-246 -> T-310 (WP wet-area fixes from the merged inventory: one upturn +0.100 m2, transitions one per door)
+-> T-199 (formwork, now from the r5 rows T-308). New missing-category piece: pool membrane / screed (T-309). Steel: the
+slab bar-end classification (T-307) can remove about 0.47 t of the 2.19 t slab range once T-306 is verified. Scoring of
+the candidate restarts when T-304 merges (next Checker run). Risk unchanged: lane I one row at a time.
 
 Lead 2026-10-26 00:15: since 22:15 SIX MERGED (stairs V3.0.18 Gate B = candidate of record; rebar basis r2; WP
 foundation inventory; formwork slab-level ledger; W17 hole; beam rebar safeguard); READY 0. Whole verified lines in the

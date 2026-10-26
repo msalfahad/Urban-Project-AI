@@ -1,12 +1,33 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
 Plain words, no task numbers. Measured numbers come from SCOREBOARD.md; anything not measured says so.
-Last update: 2026-10-26 00:15 UTC (Lead). Previous version: 2026-10-25 22:15 UTC. The released numbers did not change
+Last update: 2026-10-26 02:15 UTC (Lead). Previous version: 2026-10-26 00:15 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released default V2.9 + route G untouched). Your measure: whole BOQ
-lines independently verified. The candidate of record is now the version with the stairs (checked and merged). Its
-whole verified lines in the real export: the concrete slab (60.28 m3) is still the one line, but the checker must
-re-issue his records on the new version before the export counts it again (first item in his queue). Released: 0.
-The team ran normally again after the outage; nothing needs your decision.
+lines independently verified. The candidate of record is the version with the stairs; the checker has now re-issued
+his records on it, so the export counts the concrete slab (60.28 m3) again as its one whole verified line. Released: 0.
+The team ran normally; nothing needs your decision.
+
+Since 00:15 (newest first; two pieces checked and merged, two handed in and waiting for the checker):
+- Waterproofing of wet rooms, roofs, pool and tank: CHECKED AND MERGED. The checker measured himself: the first-floor
+  east bathroom upturn is 1.58 m2, the engine has 1.48 (0.10 m2 short: a window 0.84 m above the floor was deducted
+  from a 0.20 m upturn it never interrupts). Two doors between wet rooms carry two threshold lines each and three
+  doors carry none. The pool detail prints a 5 cm membrane and a 5 cm screed that no line carries: a missing item; the
+  drawing does not say whether that membrane is waterproofing or insulation, so its function stays open. There is no
+  drawn water tank. Next: a piece that measures the pool membrane and screed, and an integration fix for the wet-room
+  lines (both new).
+- Formwork for stairs, domes and the tank: CHECKED AND MERGED. The old stair formwork rows over-measure by 3.62 m2
+  (9.9 %): part lies inside beams and a column, part is already counted on the beams that carry the flight. A new piece
+  applies every confirmed formwork correction once, so formwork can enter the candidate cleanly.
+- Steel in suspended slabs (handed in, waiting for the checker): the 4.64 .. 6.83 t range is split kilogram by
+  kilogram into its causes (how far top bars run, 0.78 t; how bar ends are anchored, 0.75 t; where the first and last
+  bar sit, 0.32 t; smaller items), nothing left over. Reading the typical slab detail again, the worker found that bars
+  over a continuous support have no anchorage drawn, so 0.56 .. 1.03 t of the current anchorage figure has no bar
+  behind it. A follow-up piece classifies every bar end once this is verified. None of these need you: the open
+  inputs are for the designer.
+- Scoring fix (handed in, waiting for the checker): the scoring tool now sets aside the one purchase line counted in
+  "items" instead of stopping. Its trial run on the current candidate gives internal floor area 381.46 m2 vs the
+  freelancer's 409.58 (-6.86 %); this becomes the scoreboard figure only after the checker runs it himself.
+- Nothing new on Drive; no new photos. Every run in these two hours closed properly (one integration run still open).
 
 Since 22:15 (newest first; six pieces checked and merged, nothing waiting for the checker):
 - Stairs: CHECKED AND MERGED into the candidate. Stair concrete in the candidate 2.98 -> 5.37 m3 (1.23 verified,
@@ -968,71 +989,15 @@ Not measured, and paused by your order (Alsenan first).
   development lengths, so a steel ledger is not complete until it has read them.
 
 ## Being worked on now
-(Lead 2026-10-25 02:15)
-- Checker: foundation waterproofing into the candidate (second hand-in, in work now), the formwork end-face fix and the
-  ceilings readiness check as they arrive; in between, the remaining block walls not under a sunken panel, largest first.
-- Structural (worker 1): the formwork end-face fix (one row); then the sheet search for the three missing designer
-  rows (column level where two ground slabs meet, main-stair winder turn and waists, tower dome); stair soffits; the
-  column-core datum; excavation last.
-- Architecture and finishes (worker 2): ceilings made ready for the candidate (in work); then the wall register's
-  sunken-panel correction; then the plaster / paint blockers and the pantry doorway row.
-- Integration (worker 3): foundation waterproofing into the candidate (in work); then one project identity for the
-  export (the first real export, for internal review), then the held depths, stairs / domes (with the landing marble)
-  and windows; then the settled block walls and the ceilings.
-
-(Lead 2026-10-24 22:15, superseded)
-- Checker: foundation waterproofing into the candidate first (with a challenge: part of the 35.40 m2 buried-coat
-  figure it carries includes faces that are not against earth), then the drawn-vs-scheduled beam census, then the
-  buried-faces fix when it arrives; in between, block walls and first-floor ceilings.
-- Structural (worker 1): formwork faces where beams end on curved or angled members; stair soffits flight by flight;
-  the column-core datum correction; excavation levels last.
-- Architecture and finishes (worker 2): the buried-faces fix (in work); the wall register (height pieces add up to the
-  length, windows deducted only where they sit in the wall); ceilings made ready for the candidate.
-- Integration (worker 3): the scoring key for the dressing room and landing; two small tooling tasks; then the settled
-  block walls and later the ceilings into the candidate.
-
-(Lead 2026-10-24 20:15, superseded)
-- Checker: merges the stair file registration and the stirrup count (both passed or in check now); then the laps / tons
-  rework, the ceilings fix and the remaining buried-concrete faces as they arrive; the foundation waterproofing step
-  into the candidate goes first when it is handed in.
-- Structural (worker 1): laps and tons with your acceptance points (next run); then beams drawn wider or narrower than
-  their schedule, every one; excavation levels last.
-- Architecture and finishes (worker 2): the remaining buried-concrete faces (in work); the ceilings fix over the light
-  well; then the wall-register check that every wall's height pieces add up to its length.
-- Integration (worker 3): foundation waterproofing and the buried-concrete coat into the candidate (now unblocked);
-  then the scoring key for the dressing room and landing; later the settled block walls into the candidate, once the
-  register check is merged.
-
-(Lead 2026-10-24 16:15, superseded)
-- Checker: the next floor-area step into the candidate, the block-wall blockers fix and the stair method fix as they
-  arrive; in between it keeps re-measuring the settled block walls, largest first.
-- Structural (worker 1): the one-line fix to the stair method; then ground-beam stirrups / side bars from the prints;
-  then laps and tons (your 14:23 / 15:31 decisions); excavation levels last.
-- Architecture and finishes (worker 2): block-wall blockers fix (in work); coating of all buried concrete; ceilings;
-  then the wall-register height check over all 76 walls.
-- Integration (worker 3): floor area step 2 (in work), then foundation waterproofing, then the ground-beam / column
-  corrections; a small tooling task (the fingerprint guard into the scoreboard) for an empty lane.
-
-(Lead 2026-10-24 12:15, superseded)
-- Checker: the aluminium doors step into the candidate first (it can close a whole line), then the stairs / domes
-  closable split, the opening-to-room check, the formwork update and the ground-beam bars as they arrive.
-- Structural (worker 1): hand in its three finished pieces one by one (stairs / domes, formwork, ground-beam bars)
-  before starting anything new; then your stair finish-level method.
-- Architecture and finishes (worker 2): hand in the opening-to-room check; the first-floor living and pantry floor
-  pieces; then the coating of all buried concrete and the remaining wall blockers.
-- Integration (worker 3): aluminium doors line, then floor area steps 2 - 4, then foundation waterproofing, then the
-  ground-beam / column corrections.
-
-(Lead 2026-10-24 04:15, superseded)
-- Checker: the family-register test fix first, then the beam correction; then the next integration step; in between
-  it re-measures neck sections and the conflicting columns, and the remaining first-floor stair flights.
-- Structural (worker 1): the boundary ground beam and the court / annex ground beams from the drawings; then the 15
-  conflicting columns column by column; excavation last (depth held until the existing ground level is known).
-- Architecture and finishes (worker 2): the block-wall resolution ledger; room-face lengths for plaster / paint;
-  foundation and lift-pit waterproofing.
-- Integration (worker 3, one step every 2 h, the bottleneck): the footing with two tags as a conflict (in work); then
-  the candidate's unprinted ground-beam depths and column heights held and the 28 checked columns taken in; the
-  deductions for the two windows; one project identity for the export; the slab / beam split; the floor fixes.
+(Lead 2026-10-26 02:15)
+- Checker: the scoring fix first (so the scoreboard shows the current candidate again), then the slab steel range;
+  the windows / curved ground beam integration when it is handed in.
+- Structural (worker 1): classify every slab bar end against the typical detail (after the checker verifies the slab
+  range); the consolidated formwork corrections for the candidate.
+- Architecture and finishes (worker 2): tie every outside plaster face to a candidate line; then the pool membrane and
+  screed.
+- Integration (worker 3): windows W18 / W03 and the curved ground beam correction into the candidate (in work); then
+  plaster / paint, blockwork, ceilings, skirting, the wet-room waterproofing fixes and formwork, one at a time.
 
 ## What is missing
 - Window heads: 3 of 29 windows still held (one count, two shuttered) and three leafless openings (being closed); every door but the main entrance (2.20 m by your Q-55 C, stated as assumed).

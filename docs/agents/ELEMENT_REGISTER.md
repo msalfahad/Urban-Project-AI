@@ -46,6 +46,18 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+### Lead 2026-10-26 02:15 (from T-303 / T-293 part 3 MERGED, V3.0.18 record set issued; T-304 / T-306 READY; T-255 CLAIMED; new T-307 .. T-310)
+
+| Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |
+|---|---|---|---|---|---|
+| 1F east bath upturn (0.20 m) and window W18 above it (sill 0.84) | WP.WET_AREA, windows, wall tile | WP owns the upturn; the window deducts nothing from a layer it does not interrupt | upturn 1.580 m2 (Checker own) vs engine L-60f10010 1.48: ENGINE_WRONG -0.100; 3 termination lines on W18 have no membrane edge | T-303 MERGED 1d3f69b0 | T-310 |
+| Doors between wet rooms (closures D2:495, D2:825; OP-017 / OP-018 / OP-010) | WP transitions, thresholds, floor finish | WP: one transition per PHYSICAL door, never per room side | 2 doors twice, 3 doors none (all transition m2 BOUNDED blank today) | T-303 MERGED | T-310 |
+| GF pantry floor (13.500 gross vs 13.455 net of a 0.045 column) | FIN.FLOOR (wet), WP.WET_AREA | floor finish = drawn wall-face outline; the column intrusion ruled from the drawing once for both trades | O-T303-01 open: line L-f32abcdb never WHOLE until ruled | T-286, T-303 | T-310 |
+| Swimming pool membrane + screed (5 cm each, printed in the pool detail) | pool membrane (function open: WP vs insulation, S8.2), screed, CONC pool shell | its own family 'pool membrane', function HELD; never inside the foundation WP family or the concrete line | printed, in NO candidate line = MISSING | T-303 (Checker handles 1864 / 1876 / 1874 / 1851) | T-309 then T-310 |
+| Water tank place (TEXT 'WATER TANK PLACE') | WP, concrete | none drawn | NOT_APPLICABLE with evidence (columns, slab text only); formwork TANK row = beam B15 view | T-303, T-293 part 3 F-03 | T-308 rules the formwork row |
+| Stair soffits under integral beams / bands (ST-02 RS-S, MS1-U in B20) | formwork, CONC.STAIR_DOME, CONC.BEAM | the beam row owns the face under the band / CA / column; the stair row only the drawn plan remainder (1.845 m2 on RS-S) | r4 stair rows +3.624964 m2 ENGINE_WRONG; 1.639289 double booking CONFIRMED | T-293 part 3 MERGED 02f3e47e | T-308 -> T-199 |
+| Suspended-slab bar ends (294 lines) | rebar (slabs), CONC.SLAB / beams (supports) | rebar; the support class read from ST p.15 + the plan, the edge-beam width from the verified beam census | dev lines on every end; continuous ends 556.205 .. 1,027.310 kg with no drawn bar; edge ends on the wrong basis; 4 lines with unbooked opening ends | T-306 READY (Gate A pending) | T-307 |
+
 ### Lead 2026-10-26 00:15 (from T-266 Gate B / T-297 r2 / T-301 / T-293 part 2 / T-302 / T-300 MERGED, V3.0.18 = candidate of record; T-303 CLAIMED; new T-304 .. T-306)
 
 | Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |
