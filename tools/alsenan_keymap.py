@@ -171,12 +171,42 @@ def coverage_report(lines, by_item, sels, records):
             "double_keyed_lines": 0}
 
 
+# ---- T-304: a line in a unit no reference line can use (UNIT_NOT_IN_REFERENCE) ----------------------------------------
+#
+# The scorer (tools/alsenan_scoreboard.py) folds aliases of its own units only and refuses any other unit, so one
+# engine line in such a unit (e.g. WP.FOUNDATION.PROCUREMENT in 'item', present in every candidate since V3.0.15)
+# stopped the WHOLE run (F-SCORE-01). A reference row in that unit would be refused the same way, so no reference line
+# of any trade uses it: the line cannot answer anything. Rules (each is a test in tests/t304_keymap_unit_exclusion):
+# - such a line (keyed or not, released or held) is EXCLUDED with reason UNIT_NOT_IN_REFERENCE and listed by line id,
+#   item code, unit, quantity, evidence state and key in adapter["excluded_unit_not_in_reference"]; it is never
+#   converted, never summed into another unit, never scored (a held line stays a held line in the list, qty as written);
+# - a keyed line excluded this way is a refused part of its key, like a line in another known unit (the scorer's
+#   refused_engine_ids): the same-unit lines of that key are scored as before; the key is named in
+#   adapter["keys_with_unit_excluded_lines"] so the exclusion is never silent;
+# - every line in a scorer unit takes the path above unchanged; with no such line the report and every output stay
+#   byte-identical (the two report fields are written only when not empty). kg and t stay different scorer units:
+#   this map never converts one into the other (a reference in t answered in kg is UNIT_MISMATCH); the kg -> t
+#   conversion belongs to the export boundary only (OWNER_RULE_REBAR_2026-10-24 s.4), never to scoring.
+
+UNIT_NOT_IN_REFERENCE = "UNIT_NOT_IN_REFERENCE"
+
+
+def scorer_unit_known(unit):
+    """True when the scorer can fold `unit` (an absent unit is the scorer's own '(missing)' bucket, so known)."""
+    try:
+        S.norm_unit(unit)
+    except ValueError:
+        return False
+    return True
+
+
 def engine_rows(lines, release_report, key_map_doc):
     """Scorer engine rows + an adapter report (excluded / unmapped counts per item code)."""
     by_item, by_key = load_key_map(key_map_doc)
     sels, records = load_typed_selectors(key_map_doc, by_item)   # T-278: [] for a V1 key map (unchanged path)
     sb = load_set_bindings(key_map_doc.get("set_bindings"))     # T-216 opt-in; None keeps every output unchanged
     rows, excluded, unmapped = [], {}, {}
+    unit_excluded = []                                           # T-304
     for ln in lines:
         code = ln["item_code"]
         k = key_of_line(ln, by_item, sels, records)[0] if sels else by_item.get(code)
@@ -186,6 +216,12 @@ def engine_rows(lines, release_report, key_map_doc):
                 excluded[k["key"]] = excluded.get(k["key"], 0) + 1
             continue
         status, qty = st
+        if not scorer_unit_known(ln.get("unit")):                 # T-304: excluded with its reason, never scored
+            unit_excluded.append({"line_id": ln["line_id"], "item_code": code, "unit": ln.get("unit"),
+                                  "measured_net": ln.get("measured_net"), "evidence_state": ln.get("evidence_state"),
+                                  "scorer_class": status, "key": k["key"] if k else None,
+                                  "reason": UNIT_NOT_IN_REFERENCE})
+            continue
         loc = ln.get("location") or {}
         rows.append({"id": ln["line_id"], "trade": k["trade"] if k else ln.get("trade"), "unit": ln["unit"],
                      "qty": qty, "status": status, "key": k["key"] if k else None,
@@ -215,6 +251,11 @@ def engine_rows(lines, release_report, key_map_doc):
                 conditional[key] = conditional.get(key, 0) + 1
     report = {"excluded_lines_by_key": excluded, "conditional_sets_by_key": conditional,
               "unmapped_by_item": [{"item_code": c, "unit": u, "lines": n} for (c, u), n in sorted(unmapped.items())]}
+    if unit_excluded:                                            # T-304: only when present (byte-identical otherwise)
+        report["excluded_unit_not_in_reference"] = sorted(unit_excluded, key=lambda x: str(x["line_id"]))
+        keyed = sorted({x["key"] for x in unit_excluded if x["key"] is not None})
+        if keyed:
+            report["keys_with_unit_excluded_lines"] = keyed
     if sb is not None:
         report["set_bindings"] = set_binding_report(rows, sb)
     if sels:
@@ -451,6 +492,21 @@ def set_bindings_markdown(sides):
                        f"{'; '.join(hs) or '-'} | {tot} |")
         if rep["unused_bindings"]:
             out.append(f"| {label} | unused bindings | {', '.join(rep['unused_bindings'])} | | | | |")
+    return "\n".join(out) + "\n"
+
+
+def unit_excluded_markdown(sides):
+    """T-304: [(side label, adapter dict)] -> the excluded-unit list, or '' when no side excluded a line."""
+    rows = [(label, x) for label, ad in sides for x in (ad or {}).get("excluded_unit_not_in_reference") or ()]
+    if not rows:
+        return ""
+    out = ["", f"### Lines excluded: {UNIT_NOT_IN_REFERENCE} (a unit no reference line can use; never converted, "
+               "never summed, never scored)", "",
+           "| Side | Line id | Item code | Unit | Quantity as written | Evidence state | Key |", "|---|---|---|---|---|---|---|"]
+    for label, x in rows:
+        q = "blank" if x["measured_net"] is None else f"{float(x['measured_net']):.6f}"
+        out.append(f"| {label} | {x['line_id']} | {x['item_code']} | {x['unit']} | {q} | {x['evidence_state']} | "
+                   f"{x['key'] or 'unmapped'} |")
     return "\n".join(out) + "\n"
 
 
@@ -866,6 +922,7 @@ def main(argv=None):
     md = S.markdown(result)
     if a.set_bindings:
         md += set_bindings_markdown([(Path(a.run).name, result["adapter"])])
+    md += unit_excluded_markdown([(Path(a.run).name, result["adapter"])])     # T-304: '' when nothing excluded
     if a.markdown:
         Path(a.markdown).write_text(md, encoding="utf-8")
     print(md, end="")
@@ -880,6 +937,11 @@ def main(argv=None):
         md2 = V2.write(res2, a.v2_out, a.v2_markdown, a.v2_heading)
         if a.set_bindings:
             md2 += set_bindings_markdown([(s["label"], s["adapter"]) for s in res2["sides"]])
+            if a.v2_markdown:
+                Path(a.v2_markdown).write_text(md2, encoding="utf-8")
+        ux = unit_excluded_markdown([(s["label"], s["adapter"]) for s in res2["sides"]])   # T-304
+        if ux:
+            md2 += ux
             if a.v2_markdown:
                 Path(a.v2_markdown).write_text(md2, encoding="utf-8")
         print(md2, end="")
