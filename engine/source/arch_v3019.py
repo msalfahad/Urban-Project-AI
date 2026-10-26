@@ -6,10 +6,11 @@ ARCH_TAKEOFF_V2.9.
 The physical questions (ERS 2026-10-22 s.2.1, s.3):
 
   END_CLOSURE   an ARC BAND (a curved beam between two drawn arcs) ends where the DRAWING closes it: on the faces that
-                meet it (the face of an adjoining beam, the faces of a column), never on a chord between its arc ends and
-                never on an arc span (rule R-ARC-BAND-END-1, T-255; provenance: Checker 2026-10-25 16:00 F-T254-01 read
-                + ERS s.2.1). A column standing in the band is deducted as its own trade. The concrete in the closed
-                boundary that the chord reading left out (a closing triangle) is owned by exactly ONE line: the band's.
+                meet it (the face of an adjoining beam, the faces of a column), never on a chord between its arc ends
+                and never on an arc span (rule R-ARC-BAND-END-1, T-255; provenance: Checker 2026-10-25 16:00
+                F-T254-01 read + ERS s.2.1). A column standing in the band is deducted as its own trade. The concrete
+                in the closed boundary that the chord reading left out (a closing triangle) is owned by exactly ONE
+                line: the band's.
                 A record REBASEs the band line in place to (net plan by drawn faces) x (printed depth), with the
                 reconciliation to the reading it retires carried on the line: drawn net = chord net + closing pieces.
   OPENING_TRACE every drawn opening is deducted ONCE per trade face (masonry, each finish side) and counted once in its
@@ -69,8 +70,10 @@ TOL = 1e-6
 TOL_M2 = 1e-4            # reconciliation identities on plan areas quoted to 5 decimals
 TOL_REL = 1e-5           # value vs net x depth
 END_READINGS = ("DRAWN_FACES", "CHORD", "ARC_SPAN")
-TRACE_STATES = ("CARRIED_ONCE", "NOT_APPLICABLE", "HELD")
-TRADES = ("WINDOW_SUPPLY", "MASONRY", "FINISH_ROOM_SIDE", "FINISH_EXTERNAL_SIDE")
+TRACE_STATES = ("CARRIED_ONCE", "NOT_APPLICABLE", "HELD", "NO_LINE")
+TRADES = ("WINDOW_SUPPLY_PCS", "WINDOW_SUPPLY_M2", "WINDOW_REVEAL", "MASONRY", "PLASTER_ROOM_SIDE", "PAINT_ROOM_SIDE",
+          "WALL_TILE_ROOM_SIDE", "EXTERNAL_FINISH")
+REQUIRED_TRADES = ("WINDOW_SUPPLY_PCS", "WINDOW_SUPPLY_M2", "MASONRY")
 RULE_END = ("R-ARC-BAND-END-1", "T-255")
 RULE_TRACE = ("R-OPENING-ONCE-1", "T-255")
 
@@ -81,15 +84,16 @@ PIECES = {
         "trace_rule_id": RULE_TRACE[0], "trace_rule_version": RULE_TRACE[1],
         "owner_rules": ["UP-QTY-STATUS-001 (held never 0)", "WORKFLOW_CONTROLS 2026-10-21 s.4 / s.5",
                         "R-CONC-OWN-1 (one owner per piece)", "owner 2026-10-24 23:57 (2): UNSUPPORTED BASIS",
-                        "Q-32 A (window m2 = width x height of the opening)", "Q-38 A (curved window width = the printed "
-                        "width)", "build before deduct (ERS s.3)"],
+                        "Q-32 A (window m2 = width x height of the opening)",
+                        "Q-38 A (curved window width = the printed width)", "build before deduct (ERS s.3)"],
         "owner_manual_method": "the owner measures a ground beam as plan area between its drawn faces x the printed "
-                               "depth, columns deducted as their own trade; a window once in its supply line (pcs and m2 "
-                               "by Q-32 A / Q-38 A) and its opening once from each wall face that is built around it",
+                               "depth, columns deducted as their own trade; a window once in its supply line (pcs "
+                               "and m2 by Q-32 A / Q-38 A) and its opening once from each wall face that is built "
+                               "around it",
         "drawing_method": "the band polygon closed on the drawn faces that meet the arcs (adjoining beam face, column "
-                          "faces), columns standing in the band deducted, x the printed depth; per opening and trade the "
-                          "candidate line that carries it, read from the line's own calculation, or the reason none "
-                          "does (nothing built there; the carrying line held)"},
+                          "faces), columns standing in the band deducted, x the printed depth; per opening and "
+                          "trade the candidate line that carries it, read from the line's own calculation, or the "
+                          "reason none does (nothing built there; the carrying line held)"},
 }
 WAITING = dict(A3018.WAITING)
 
@@ -140,14 +144,14 @@ def arc_band_net(boundary, columns=(), neighbours=(), tol_m2=1e-6):
     for n in neighbours:
         ov = band.intersection(_poly(n["ring"], f"neighbour {n.get('line_id')}")).area
         if ov > tol_m2:
-            raise InputsError(f"the band overlaps {n.get('line_id')} by {ov:.6f} m2: a closing piece booked on two lines "
-                              "(one owner per piece)")
+            raise InputsError(f"the band overlaps {n.get('line_id')} by {ov:.6f} m2: a closing piece booked on two "
+                              "lines (one owner per piece)")
     gross = band.area
     return {"gross_m2": gross, "columns_m2": cols, "net_m2": gross - sum(cols.values())}
 
 
 # ================================================================================================ inputs
-def _check_end_closure(r, where, other_line_ids):
+def _check_end_closure(r, where):
     A3018._check_before(r, where)
     A3018._check_status(r, where)
     ab = r.get("arc_band") or {}
@@ -178,8 +182,8 @@ def _check_end_closure(r, where, other_line_ids):
         if not c.get("deducted"):
             raise InputsError(f"{where}: column {c.get('id')} stands in the band and is not deducted (its own trade)")
     if abs(ab["retired_net_m2"] + add - sub - ab["drawn_net_m2"]) > TOL_M2:
-        raise InputsError(f"{where}: reconciliation does not close: retired {ab['retired_net_m2']} + closing {_r(add)} - "
-                          f"excluded {_r(sub)} != drawn {ab['drawn_net_m2']}")
+        raise InputsError(f"{where}: reconciliation does not close: retired {ab['retired_net_m2']} + closing "
+                          f"{_r(add)} - excluded {_r(sub)} != drawn {ab['drawn_net_m2']}")
     want = ab["drawn_net_m2"] * ab["depth_m"]
     if abs(r["value"] - want) > TOL_REL * max(1.0, want):
         raise InputsError(f"{where}: value {r['value']} is not drawn net {ab['drawn_net_m2']} x depth {ab['depth_m']} "
@@ -200,6 +204,33 @@ def _check_end_closure(r, where, other_line_ids):
             raise InputsError(f"{where}: retired_residual named where the carried value is the retired reading")
 
 
+def _check_entry(x, w):
+    st = x.get("state")
+    if st not in TRACE_STATES:
+        raise InputsError(f"{w}: state {st!r} not one of {TRACE_STATES}")
+    ids = x.get("line_ids") or []
+    if len(ids) != len(set(ids)):
+        raise InputsError(f"{w}: a line named twice")
+    if st == "CARRIED_ONCE":
+        if len(ids) != 1:
+            raise InputsError(f"{w}: CARRIED_ONCE names exactly one quantity line ({len(ids)} named: an opening "
+                              "deducted in two lines of one trade side is a double count; a split opening names its "
+                              "parts)")
+        if not x.get("evidence"):
+            raise InputsError(f"{w}: CARRIED_ONCE names what in the line carries it")
+    elif st == "NOT_APPLICABLE":
+        if ids or not x.get("why"):
+            raise InputsError(f"{w}: NOT_APPLICABLE names why (nothing built there) and no line")
+    elif st == "HELD":
+        if not x.get("held_item") or not x.get("named_task"):
+            raise InputsError(f"{w}: HELD names its item and the package / task that carries it (never 0)")
+    else:   # NO_LINE: a scope no candidate line carries for this opening: a finding, never a quantity
+        if ids or not x.get("finding"):
+            raise InputsError(f"{w}: NO_LINE names the finding (which scope has no line) and no line")
+    if x.get("value") is not None and not (_num(x["value"]) and x["value"] > 0):
+        raise InputsError(f"{w}: a traced value is > 0 (a missing value is HELD, never 0)")
+
+
 def _check_trace(t, where):
     for k in ("opening", "floor", "physical_element", "kind"):
         if not t.get(k):
@@ -207,28 +238,27 @@ def _check_trace(t, where):
     trades = t.get("trades") or {}
     if set(trades) - set(TRADES):
         raise InputsError(f"{where}: trades {sorted(set(trades) - set(TRADES))} not in {TRADES}")
-    if "WINDOW_SUPPLY" not in trades or "MASONRY" not in trades:
-        raise InputsError(f"{where}: an opening is traced at least in its supply line and its masonry")
+    if any(k not in trades for k in REQUIRED_TRADES):
+        raise InputsError(f"{where}: an opening is traced at least in {REQUIRED_TRADES}")
     for tr, x in trades.items():
         w = f"{where} {tr}"
-        st = x.get("state")
-        if st not in TRACE_STATES:
-            raise InputsError(f"{w}: state {st!r} not one of {TRACE_STATES}")
-        ids = x.get("line_ids") or []
-        if len(ids) != len(set(ids)):
-            raise InputsError(f"{w}: a line named twice")
-        if st == "CARRIED_ONCE":
-            if len(ids) != 1:
-                raise InputsError(f"{w}: CARRIED_ONCE names exactly one quantity line ({len(ids)} named: an opening "
-                                  "deducted in two lines of one trade side is a double count)")
-            if not x.get("evidence"):
-                raise InputsError(f"{w}: CARRIED_ONCE names what in the line carries it")
-        elif st == "NOT_APPLICABLE":
-            if ids or not x.get("why"):
-                raise InputsError(f"{w}: NOT_APPLICABLE names why (nothing built there) and no line")
-        else:   # HELD
-            if not x.get("held_item") or not x.get("named_task"):
-                raise InputsError(f"{w}: HELD names its item and the package / task that carries it (never 0)")
+        parts = x.get("parts")
+        if parts is None:
+            _check_entry(x, w)
+            continue
+        names = [p.get("part") for p in parts]
+        if len(parts) < 2 or not all(names) or len(set(names)) != len(names):
+            raise InputsError(f"{w}: a split side names two or more parts, each once")
+        lids = [lid for p in parts for lid in (p.get("line_ids") or ())]
+        if len(lids) != len(set(lids)):
+            raise InputsError(f"{w}: one line carries two parts of the opening (double count)")
+        for p in parts:
+            if p.get("value") is None:
+                raise InputsError(f"{w} part {p['part']}: a part names its value")
+            _check_entry(p, f"{w} part {p['part']}")
+        if not _num(x.get("value")) or abs(sum(p["value"] for p in parts) - x["value"]) > TOL_M2:
+            raise InputsError(f"{w}: the parts {_r(sum(p['value'] for p in parts))} do not close to the opening's "
+                              f"{x.get('value')} on this side (a part missing or counted twice)")
 
 
 def load_inputs(doc, project_id=None):
@@ -241,9 +271,13 @@ def load_inputs(doc, project_id=None):
                                 closing_pieces [{id, m2, owned_by}], excluded_pieces [{id, m2, why}],
                                 columns_in_band [{id, m2, deducted}]}}],
          "opening_trace": [{opening, floor, kind, physical_element, task,
-                            trades {WINDOW_SUPPLY | MASONRY | FINISH_ROOM_SIDE | FINISH_EXTERNAL_SIDE:
-                                    {state CARRIED_ONCE | NOT_APPLICABLE | HELD, line_ids, evidence, why, held_item,
-                                     named_task, value}}}]}"""
+                            trades {WINDOW_SUPPLY_PCS | WINDOW_SUPPLY_M2 | WINDOW_REVEAL | MASONRY | PLASTER_ROOM_SIDE |
+                                    PAINT_ROOM_SIDE | WALL_TILE_ROOM_SIDE | EXTERNAL_FINISH:
+                                    {state CARRIED_ONCE | NOT_APPLICABLE | HELD | NO_LINE, line_ids, evidence, token,
+                                     deduction_text, value, value_field, why, held_item, named_task, finding,
+                                     line_quantity_excludes_opening_area}
+                                    or {value, parts [{part, <the same entry>}]} (an opening split between lines:
+                                    the parts close to the side's value, one line per part)}}]}"""
     if doc is None:
         return None
     if doc.get("schema") != INPUTS_SCHEMA:
@@ -275,7 +309,7 @@ def load_inputs(doc, project_id=None):
         if r["task"] not in tasks:
             raise InputsError(f"record {lid}: task {r['task']!r} is not one of the sources {sorted(tasks)}")
         A3018._check_pieces(r.get("pieces"), r.get("status"), r.get("value"), f"record {lid}", seen_pieces)
-        _check_end_closure(r, f"record {lid}", seen)
+        _check_end_closure(r, f"record {lid}")
     ops = set()
     for t in trace:
         key = (t.get("opening"), t.get("floor"))
@@ -318,11 +352,56 @@ def _line_blob(ln):
                        "l": ln.get("location")}, sort_keys=True, default=str, ensure_ascii=False)
 
 
+def _deductions(obj, text):
+    """every {opening: ..., m2: ...} entry in a line record whose opening names `text`."""
+    out = []
+    if isinstance(obj, dict):
+        if isinstance(obj.get("opening"), str) and text in obj["opening"] and _num(obj.get("m2")):
+            out.append(obj["m2"])
+        for v in obj.values():
+            out += _deductions(v, text)
+    elif isinstance(obj, list):
+        for v in obj:
+            out += _deductions(v, text)
+    return out
+
+
+def _trace_entry(x, w, opening, by):
+    from engine.source import boq_line as BL
+    for lid in x.get("line_ids") or ():
+        ln = by.get(lid)
+        if ln is None:
+            raise InputsError(f"{w}: line {lid} is not a line of the run")
+        q = ln["evidence_state"] in BL.QUANTITY_STATES and (ln.get("measured_net") or 0) > 0
+        if x["state"] == "CARRIED_ONCE":
+            if not q:
+                raise InputsError(f"{w}: {lid} carries no quantity ({ln['evidence_state']}): the opening is then HELD "
+                                  "with it, not CARRIED_ONCE")
+            tok = x.get("token") or opening
+            if tok not in _line_blob(ln):
+                raise InputsError(f"{w}: {lid} does not name {tok} in its calculation (the trace reads the line's own "
+                                  "record, never a ledger's word)")
+        elif q and not x.get("line_quantity_excludes_opening_area"):
+            raise InputsError(f"{w}: {lid} carries a quantity while the deduction is HELD: state whether the line's "
+                              "quantity includes the opening area (line_quantity_excludes_opening_area)")
+        if x.get("deduction_text"):
+            got = _deductions(ln.get("calculation"), x["deduction_text"])
+            if len(got) != 1:
+                raise InputsError(f"{w}: {lid} names '{x['deduction_text']}' {len(got)} times (exactly once)")
+            if x.get("value") is not None and abs(got[0] - x["value"]) > TOL_M2:
+                raise InputsError(f"{w}: {lid} deducts {got[0]} for '{x['deduction_text']}', the trace {x['value']}")
+        if x.get("value_field") and x.get("value") is not None:
+            got = ((ln.get("calculation") or {}).get("inputs") or {})
+            for k in x["value_field"]:
+                got = got.get(k) if isinstance(got, dict) else None
+            if not _num(got) or abs(got - x["value"]) > TOL_M2:
+                raise InputsError(f"{w}: {lid} carries {got} at {x['value_field']}, the trace {x['value']}")
+
+
 def trace_rows(doc, lines):
-    """the opening trace asserted against the run's lines (no line changes). -> rows."""
+    """the opening trace asserted against the run's lines (no line changes). -> rows (one per opening, trade, part)."""
     if not doc:
         return []
-    from engine.source import boq_line as BL
     by = {ln["line_id"]: ln for ln in lines}
     rows = []
     for t in doc.get("opening_trace") or ():
@@ -330,51 +409,28 @@ def trace_rows(doc, lines):
             x = (t["trades"] or {}).get(tr)
             if x is None:
                 continue
-            w = f"opening {t['opening']} {tr}"
-            for lid in x.get("line_ids") or ():
-                ln = by.get(lid)
-                if ln is None:
-                    raise InputsError(f"{w}: line {lid} is not a line of the run")
-                if x["state"] == "CARRIED_ONCE":
-                    if ln["evidence_state"] not in BL.QUANTITY_STATES or not (ln.get("measured_net") or 0) > 0:
-                        raise InputsError(f"{w}: {lid} carries no quantity ({ln['evidence_state']}): the opening is "
-                                          "then HELD with it, not CARRIED_ONCE")
-                    tok = x.get("token") or t["opening"]
-                    if tok not in _line_blob(ln):
-                        raise InputsError(f"{w}: {lid} does not name {tok} in its calculation (the trace reads the "
-                                          "line's own record, never a ledger's word)")
-                    if _num(x.get("value")) and x.get("value_field"):
-                        got = (((ln.get("calculation") or {}).get("inputs") or {}).get(x["value_field"][0]) or {})
-                        for k in x["value_field"][1:]:
-                            got = got.get(k) if isinstance(got, dict) else None
-                        if not _num(got) or abs(got - x["value"]) > TOL_M2:
-                            raise InputsError(f"{w}: {lid} carries {got} at {x['value_field']}, the trace {x['value']}")
-            if x["state"] == "HELD":
-                for lid in x.get("line_ids") or ():
-                    ln = by[lid]
-                    if ln["evidence_state"] in BL.QUANTITY_STATES and (ln.get("measured_net") or 0) > 0 and \
-                            not x.get("line_quantity_excludes_opening_area"):
-                        raise InputsError(f"{w}: {lid} carries a quantity while the deduction is HELD: state whether "
-                                          "the line's quantity includes the opening area (line_quantity_excludes_"
-                                          "opening_area)")
-            rows.append({"opening": t["opening"], "floor": t["floor"], "kind": t["kind"], "trade": tr,
-                         "state": x["state"], "line_ids": list(x.get("line_ids") or ()),
-                         "evidence": x.get("evidence") or x.get("why") or x.get("held_item"),
-                         "named_task": x.get("named_task"), "value": x.get("value"), "unit": x.get("unit"),
-                         "task": t["task"]})
-    # one opening, one quantity line per trade side
-    seen = {}
+            for p in (x.get("parts") or [x]):
+                w = f"opening {t['opening']} {tr}" + (f" part {p['part']}" if p.get("part") else "")
+                _trace_entry(p, w, t["opening"], by)
+                rows.append({"opening": t["opening"], "floor": t["floor"], "kind": t["kind"], "trade": tr,
+                             "part": p.get("part") or "", "state": p["state"],
+                             "line_ids": list(p.get("line_ids") or ()),
+                             "evidence": p.get("evidence") or p.get("why") or p.get("held_item") or p.get("finding"),
+                             "named_task": p.get("named_task"), "value": p.get("value"), "unit": p.get("unit"),
+                             "side_value": x.get("value") if x.get("parts") else None, "task": t["task"]})
+    seen = {}       # one opening part, one quantity line per trade side
     for r in rows:
         if r["state"] != "CARRIED_ONCE":
             continue
-        k = (r["opening"], r["floor"], r["trade"])
+        k = (r["opening"], r["floor"], r["trade"], r["part"])
         if k in seen:
             raise InputsError(f"opening {r['opening']} {r['trade']}: carried on {seen[k]} and {r['line_ids']}")
         seen[k] = r["line_ids"]
     return rows
 
 
-TRACE_CSV = ("opening", "floor", "kind", "trade", "state", "line_ids", "value", "unit", "named_task", "evidence")
+TRACE_CSV = ("opening", "floor", "kind", "trade", "part", "state", "line_ids", "value", "unit", "side_value",
+             "named_task", "evidence")
 
 
 def changes_for(doc, l3018):
