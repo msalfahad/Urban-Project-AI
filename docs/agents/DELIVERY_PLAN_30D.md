@@ -46,7 +46,19 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
-## Status (Lead, 2026-10-26 02:15; re-estimated each run from what merged and was verified)
+## Status (Lead, 2026-10-26 04:15; re-estimated each run from what merged and was verified)
+
+Lead 2026-10-26 04:15: since 02:15 FOUR MERGED (V3.0.19 Gate B = candidate of record: ring ground beam closed on drawn
+faces, VERIFIED component 1.746943 m3; scoring key-map fix: the candidate is tool-scored again, floor area -6.86 %;
+slab steel spread by cause, F-T306-01 confirmed; records bound to their own lines, so re-issues shrink); whole verified
+lines in the export: 2 (Checker count). READY 2 (exterior plaster face ledger, formwork r5 rows). Week 2 (3 Nov):
+T-244 plaster / paint (V3.0.20, worker 3 next at 04:59) -> T-279 blockwork (422.5 m2, 297.8 VERIFIED) -> T-284 ->
+T-246 -> T-310 -> T-199 (formwork) -> T-314 (exterior plaster faces, new). Missing families now each have a piece:
+wall tile (T-312), reveals (T-313), parapets / plinth (T-311), pool membrane / screed (T-309, in work). Steel: T-307
+(slab bar ends) next for worker 1. Risk unchanged: lane I one row at a time (six integration rows queued); estimate
+T-279 integrated 27 Oct if T-244 passes Gate B first time.
+
+### Earlier status (Lead, 2026-10-26 02:15)
 
 Lead 2026-10-26 02:15: since 00:15 TWO MERGED (WP wet-area / roof / pool-tank inventory; formwork part 3 stairs /
 domes / tank) and the V3.0.18 record set ISSUED (whole verified lines in the export: 1, CONC.SLAB); READY 2 (scoring

@@ -36,6 +36,15 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
    commit. Decision: board-only handoffs are verified as hand evidence (the verifier re-reads the cited notes), and the
    next task on the topic writes the files (T-117); a run with no line stays a NEEDS FIXING item for the owner's setting.
 
+## 2026-10-26 04:15 (lead run; covers 02:15 - 04:15)
+
+- T-255 (Gate B, V3.0.19: ring BAND0043 end closure + W03 / W18 trace): WORKED (MERGED 01358449; ring ENGINE_WRONG chord -0.012043 m3 -> drawn faces, Checker -0.0015 %; 3,704 lines byte-identical). MISSING named: 27 reveal lines blank, no FIN.WALL.TILE row. Decisions: T-313 (reveal ledger), T-312 (wall tile ledger).
+- T-304 (key map unit exclusion): WORKED (MERGED 01358449; scoreboard tool-scored again on V3.0.19, F-SCORE-01 closed).
+- T-306 (slab steel spread by cause): WORKED (MERGED 01358449; F-T306-01 CONFIRMED on the Checker's own p.15 read; O-T306-01 'extend 50 % top reinf. where possible'). Decision: acceptance added to T-307 (now unblocked, worker 1 next).
+- T-294 (records bound to their own lines): WORKED (MERGED 1157b8f8). Decision: the next package (T-244) carries the V3.0.19 whole-file records by one verdict-rebind run (Checker queue item 3).
+- T-305 (exterior plaster face-to-line), T-308 (formwork r5 rows): READY, Gate A pending. T-305's finding (parapet / plinth / annex faces in no line) -> T-311 (lane S element definition) and T-314 (lane I face rows), both after T-305 merges.
+- PARTIAL / FAILED: none. Team: Verifier 03:51 stood down on the overlap guard (correct), Worker 1 03:20 IDLE on the run lock (correct); every closed run self-check PASS.
+
 ## 2026-10-26 02:15 (lead run; covers 00:15 - 02:15)
 
 - T-303 (WP wet-area / roof / pool-tank inventories): WORKED (MERGED 1d3f69b0; Checker own: 1F east bath upturn 1.580 vs engine 1.48 ENGINE_WRONG, 2 doors with two transition lines and 3 with none, pool membrane + screed printed and in no line = MISSING, tank NA with evidence). Decisions: T-310 (lane I fix), T-309 (pool membrane / screed ledger); O-T303-01 pantry 0.045 m2 carried in T-310.

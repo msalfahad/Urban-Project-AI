@@ -46,6 +46,16 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+### Lead 2026-10-26 04:15 (from T-255 Gate B / T-304 / T-306 / T-294 MERGED, V3.0.19 = candidate of record; T-305 / T-308 READY; T-309 CLAIMED; new T-311 .. T-314)
+
+| Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |
+|---|---|---|---|---|---|
+| Curved ring ground beam BAND0043 (r 2.00 / 2.30 class, ends on drawn beam faces) | concrete ground beam, formwork, waterproofing buried faces | CONC.GROUND (GROUND_BEAM family); the north triangle 0.01306 m2 belongs to the ring only; columns 17C0 / 17BD / 17BA stay STR.CONC.COLUMN (deducted from the ring) | VERIFIED component 1.746943 m3 (Checker 1.746916, -0.0015 %; record V2-47f38a21) | T-255 Gate B (V3.0.19) | none for the piece; the line stays HELD on its other members |
+| Openings W03 and W18 (each spans two rooms) | windows (pcs / m2), interior plaster / paint, wall tile, masonry, reveals | WINDOWS carry the product once (28.251 / 1.08 m2); each wall-finish trade deducts per SIDE part (W03 plaster / paint GF-15 18.6369 + GF-08 5.93125 = 24.56815, once) | DRAWING-CONFIRMED trace, 0 double / 0 missing on the carried trades | T-255 Gate B | wall tile side: T-312; reveals: T-313; masonry: T-279 |
+| Parapet runs (roof / terrace edges, all floors) and the plinth below the lowest F.F.L. | concrete (upstands), blockwork, interior + exterior plaster / Sigma, coping, WP turn-up, corners m.l | OPEN: material and build-up per run NOT YET DEFINED; the B20 / B23 upstands stay BEAM and anything above them MASONRY (row of 2026-10-22); faces are FACADE (row 552) | NO LINE today for parapet outer faces 66.428 m2, plinth 66.736 m2, annex band 4.080 m2, parapet items 121.2 .. 126.3 m2 (T-305, READY) | T-305 handoff | T-311 defines each component and its owner trade; T-314 integrates the faces |
+| Wet-room and pantry wall tile faces | wall tile, waterproofing upturn, plaster (none behind full-height tile), skirting (none: URBAN-NO-SKIRTING-FULL-TILE-WET) | WALL TILE (FIN.WALL.TILE family, not yet in the candidate) | MISSING family in V3.0.19 | T-255 Gate B MISSING list; Q-48 A heights (T-209) | T-312 |
+| Opening reveals (29 windows, 27 doors, gate, 2 arches; inside / outside) and sills | reveals (finish), facade faces, interior plaster, corners m.l (189.630 m.l exterior reveal edges) | REVEALS as their own family (27 lines in V3.0.19, all blank); the exterior reveal EDGE stays in the corners m.l line, the reveal SURFACE is not a facade face | blank | T-255 Gate B; UP-REVEAL-001 (owner-approved), UP-REF-REVEAL-001 reference only | T-313 |
+
 ### Lead 2026-10-26 02:15 (from T-303 / T-293 part 3 MERGED, V3.0.18 record set issued; T-304 / T-306 READY; T-255 CLAIMED; new T-307 .. T-310)
 
 | Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |

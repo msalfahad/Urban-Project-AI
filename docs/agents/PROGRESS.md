@@ -1,11 +1,35 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
 Plain words, no task numbers. Measured numbers come from SCOREBOARD.md; anything not measured says so.
-Last update: 2026-10-26 02:15 UTC (Lead). Previous version: 2026-10-26 00:15 UTC. The released numbers did not change
+Last update: 2026-10-26 04:15 UTC (Lead). Previous version: 2026-10-26 02:15 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released default V2.9 + route G untouched). Your measure: whole BOQ
-lines independently verified. The candidate of record is the version with the stairs; the checker has now re-issued
-his records on it, so the export counts the concrete slab (60.28 m3) again as its one whole verified line. Released: 0.
-The team ran normally; nothing needs your decision.
+lines independently verified. The candidate of record is now the version with the curved ground beam closed on its
+drawn faces; the checker's export on it counts 2 whole verified lines (the concrete slab 60.28 m3 is the one
+scoreboard reference line among them). Released: 0. The team ran normally; nothing needs your decision.
+
+Since 02:15 (newest first; four pieces checked and merged, two handed in and waiting for the checker):
+- Curved ground beam and the two windows that span two rooms: CHECKED AND MERGED INTO THE CANDIDATE. The curved
+  ground beam's ends now follow the drawn beam faces: 1.7349 -> 1.7469 m3 (+0.012 m3, +0.69 %); the checker measured
+  1.7469 himself (difference 0.0015 %). Ground beams in the candidate 29.557 -> 29.569 m3. Every other line of the
+  candidate is unchanged. The two windows that open into two rooms are deducted once per wall side, nothing twice and
+  nothing missed. The checker named two families the candidate still lacks: wall tiles and the window / door reveals
+  (27 reveal lines are blank). New pieces measure both.
+- Scoreboard: the scoring tool works again on the current candidate. Internal floor area 381.46 m2 vs the
+  freelancer's 409.58 m2 (-6.86 %, was -7.13 %); concrete still compared on 1 of 8 lines (slab +0.77 %), the rest held.
+- Steel in suspended slabs: CHECKED AND MERGED (research). The checker read the typical slab detail himself and
+  confirms no anchorage is drawn over continuous supports, so 0.56 .. 1.03 t of the current anchorage figure has no
+  bar behind it. The same detail says "extend 50 % of top bars into the adjacent slab where possible", which the next
+  piece (classifying every bar end) must read before any length. The slab steel range 4.64 .. 6.83 t is unchanged
+  until that piece is checked. Open inputs are for the designer, not you.
+- Checker records now stay valid when an integration does not touch their lines (CHECKED AND MERGED): fewer re-issues
+  after each candidate.
+- Handed in, waiting for the checker: (1) outside plaster: every drawn facade face (1,022.53 m2) tied to a candidate
+  line or reported as having none; the candidate's outside-plaster lines are all still blank (held, not 0) against the
+  freelancer's 1,469.97 m2; parapet faces (66.43 m2), the plinth (66.74 m2) and parapet items (121.2 .. 126.3 m2) have
+  no line at all. New pieces define what each parapet and the plinth are made of and which trade owns each part,
+  then carry the faces into the candidate. (2) formwork corrections applied once, ready for formwork to enter the
+  candidate (stair rows 36.45 -> 32.82 m2; one double-counted beam span -2.52 m2).
+- Nothing new on Drive; no new photos. Every run in these two hours closed properly (one waterproofing run still open).
 
 Since 00:15 (newest first; two pieces checked and merged, two handed in and waiting for the checker):
 - Waterproofing of wet rooms, roofs, pool and tank: CHECKED AND MERGED. The checker measured himself: the first-floor
@@ -28,33 +52,6 @@ Since 00:15 (newest first; two pieces checked and merged, two handed in and wait
   "items" instead of stopping. Its trial run on the current candidate gives internal floor area 381.46 m2 vs the
   freelancer's 409.58 (-6.86 %); this becomes the scoreboard figure only after the checker runs it himself.
 - Nothing new on Drive; no new photos. Every run in these two hours closed properly (one integration run still open).
-
-Since 22:15 (newest first; six pieces checked and merged, nothing waiting for the checker):
-- Stairs: CHECKED AND MERGED into the candidate. Stair concrete in the candidate 2.98 -> 5.37 m3 (1.23 verified,
-  1.54 on your approved method, 0.57 read from the drawing); the one stair whose risers and waist are not drawn
-  (0.95 m3) is now held instead of provisional. Stairs and domes together 10.45 vs freelancer 21.83 m3 (-52 %): the
-  rest is held, not wrong. The first-floor landing marble (4.92 m2, one material) and the ground-floor pantry as a wet
-  floor (1.10 m2, taken off the dry floor exactly once) came with it. Every other line of the candidate is unchanged.
-- Curved pool-side window: CHECKED AND MERGED. The hole it leaves is 8.14 m2 on the outside face (read from the
-  drawing) and 8.74 .. 8.99 m2 on the room side (a range: the arch soffit is not drawn). The first-floor room's
-  plaster and paint therefore read 61.46 .. 61.72 m2 each; the released 59.45 m2 is 2.0 .. 2.3 m2 (3.4 .. 3.8 %) too
-  low. Your 9.870 m2 stays the window's own measure. The plaster / paint integration will carry this.
-- Waterproofing under the building: CHECKED AND MERGED (all 416 drawn faces accounted for, closure exact; the
-  checker re-measured all 24 footing membranes and the lift pit himself). Wet rooms, roofs and the pool / tank are
-  being inventoried now.
-- Formwork, slabs and beams: CHECKED AND MERGED. The checker confirmed on the drawing that the formwork method counts
-  one continuous ground-floor beam span twice (+2.52 m2 too much); it will be corrected when formwork enters the
-  candidate. Stairs, domes and the tank are the last formwork part (next for the structural worker).
-- Steel: two pieces CHECKED AND MERGED: the column bar lines on the held roof level (0.16 t) are held, and a new
-  safeguard flags beam steel that the schedule reader misses (side bars on 30 beams, inner links on 9, corner bars on
-  28 spans): every flagged group is held blank, no weight invented, no steel figure changed. The footing audit range
-  difference (0.05 t) is explained: two readings of the "per metre" note differ by one bar in 11 of the 20 groups.
-- Scoring: the scoring tool stopped scoring the candidate four versions ago because one waterproofing purchase line is
-  counted in "items"; a fix is next for the architectural worker, so the scoreboard can show the candidate again.
-- New work: the outside plaster (the freelancer's 1,502.8 m2 against 1,022.5 m2 of drawn facade, already reconciled
-  item by item) is tied to no candidate line yet; a piece now ties every facade face to a line. The suspended-slab
-  steel is still a range of 4.64 .. 6.83 t; a piece now names the cause of every kilogram of that range.
-- Nothing new on Drive; no new photos. Every run in these two hours closed properly.
 
 Since 16:15 (newest first; one piece checked and merged, four handed in and waiting for the checker):
 - Team: no agent ran between about 18:15 and 21:40. The scheduler shows three runs refused with "usage limit reached",

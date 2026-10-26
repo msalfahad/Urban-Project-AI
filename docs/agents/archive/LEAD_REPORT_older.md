@@ -1,3 +1,75 @@
+## LEAD REPORT 2026-10-25 22:15 UTC
+
+Drive readable: nothing created or modified in the project folders since 14:00, no new images (no photo review task).
+Repositories: attached Urban-Project-AI checkout (main eafbb0f6); `.work` prepared AUTOMATICALLY ("setup by auto", 22:11).
+Working branch unchanged since 16:28 (5cb1e7e8, T-299 PART F merge); no owner commit on it. Self-check: codemap PASS,
+pytest t061 PASS, freeze PASS (0). OWNER_SESSION_CHANGES: no entry since 13:25; nothing undone or duplicated.
+
+TEAM HEALTH FIRST (the main event of these six hours): the team stopped for about 3.5 hours. No agent wrote a run-log
+line between 18:11 and 21:40. The scheduler records the Dashboard (20:54), Worker 3 (20:59) and Worker 1 (21:19) firings
+as FAILED with USAGE_LIMIT_REACHED; the Lead 18:11, Worker 1 17:21 and Checker 17:52 runs STARTED and never wrote a final
+line (INCOMPLETE; cause not shown in the log, consistent with the same limit). Effects: one Checker run lost with
+T-266 in its queue (no verdict), T-300 left CLAIMED with no branch (returned to TODO this run), READY rose to 4. Runs
+resumed 21:40 (Worker 2 T-302 CLAIMED, Checker 21:51 running). Every run that executed code before the stop reported
+self-check PASS.
+
+PROGRESS (Alsenan, by trade and unit; released unchanged: concrete 92.77 vs freelancer 111.81 m3, -17.03 %, run A).
+WHOLE LINES: COUNTED as a verified whole line in the real export 1 (unchanged, CONC.SLAB 60.280155 m3). No candidate
+line moved since 16:15; candidate of record V3.0.17; V3.0.18 (stairs) waits for Gate B.
+- REINFORCEMENT (t): footing mesh (F8 / F12 / F13 / F14 / FF) CHECKED AND MERGED: the Checker recounted all 20 bar
+  populations himself and agrees; diameters 20 / 20 printed; counts 1 invariant at the 70 mm minimum + 19 one-bar ranges;
+  lengths and weights HELD (bars end inside a boxed leg of unprinted diameter). The 874.862 kg footing line (38 lines)
+  is now HELD in the contractual export by a downgrade-only record (engine kg, candidate and V2.9 unchanged). Measured
+  10.250 t drops to 9.375 t in the export view once it is re-run with the record (874.862 kg moves to held; a view
+  change, not a new measurement); held 15.25 .. 21.62 t + 0.875 t. Column basis r2 handed in (4 2F lines 0.159 t to HELD
+  on the D-39 roof datum; columns DRAWING_CONFIRMED 1.887 -> 1.728 t) plus a new hold: CB5 link bounds 28.5 kg.
+  Open: the footing audit scenario's lower bound 2.718 t vs your 2.769 t is not yet reconciled to its cause (audit
+  scenario only; asked of the Checker).
+- STAIRS / DOMES (m3): V3.0.18 handed in: stair concrete in the candidate 2.983 -> 5.369 m3 (1.228 VERIFIED, 1.536
+  owner-approved Q-50 A, 0.570 drawing-confirmed); ST-03 0.948 m3 leaves a provisional line for HELD blank;
+  CONC.STAIR_DOME 10.450 vs freelancer 21.833 m3 (-52.1 %, was -63.1 %: held pieces, not an accuracy figure); drums a
+  named omission. Also carries the 1F landing marble 4.9225 m2 and the GF pantry 1.100 m2 as WET.
+- WATERPROOFING (m2): foundation family inventory handed in: 416 drawn faces, 320 in a line, 96 not applicable with
+  evidence, 0 missing; residual 0.000 on every released item (membrane 109.850, pit 47.430 / 26.730 / 20.700, buried
+  45.468 m2). Only the lift-pit screed lines can count WHOLE today. Wet areas, roofs, pool / tank have no inventory:
+  new piece added.
+- FORMWORK (m2): slab-level ledger handed in: 65 rows -> 928 pieces, closure 0.000; slab soffits 375.048 m2 on 62 / 62
+  slab lines; beam faces tied. Found: the formwork method counts continuous beam CB5 span 2 twice on GF (+2.516 m2,
+  ENGINE_WRONG pending the Checker) and one band line with no drawn face (UNRESOLVED). Both now in the formwork
+  integration's acceptance.
+- Learned: a continuous member's formed face belongs to one span only (positional attribution); a formwork line needs
+  a drawn face. Lessons row added (PROPOSED until the Checker confirms).
+- Missing (unchanged): designer answers (S19 - S22, D-35 / D-39 / D-41 / D-44 / D-53, M4, footing boxed bars and cover),
+  excavation formation, dome drum geometry, W17 developed hole (T-302 in work), WP wet / roof / pool inventories (T-303).
+
+GATES: lowest open gate 1 (lane I: T-266 READY for Gate B, then T-255 / T-294). Gate 2: T-301 / T-293 part 2 READY,
+T-300 / T-303 TODO, T-302 CLAIMED. Gate 3: T-297 r2 READY.
+
+CLOSE THE LOOP since 16:15: T-299 PART F WORKED (MERGED 5cb1e7e8 + downgrade; one challenge open as a light-run item);
+no other verdict (READY T-266, T-297 r2, T-301, T-293 part 2 wait on the Checker). T-300 PARTIAL-by-outage: claim lost,
+back to TODO, worker 1 next. Lessons +1 (formwork span attribution, PROPOSED).
+
+VERIFIER QUEUE (READY 4, delay cause CHECKER-RUNS on all four): T-132 slot (record the T-299 merge + downgrade);
+Gate B T-266 FIRST (6 h READY; challenges: ST-03 downgrade stated openly, one marble line, pantry 1.100 m2 not counted
+wet and dry, byte-identity, stale records); Gate A T-297 r2; Gate A T-301; Gate A T-293 part 2.
+
+LANES (queue check: 42 actionable rows, 0 flagged, 0 stall checks): S worker 1: T-300, T-297 (READY), T-293 part 3
+after part 2's verdict; A worker 2: T-302 (CLAIMED), T-303 (new), T-301 (READY); I worker 3: T-266 (READY), T-255,
+T-294, T-279, T-284, T-244, T-246, T-199, T-224. TODO 2: below 8 because READY is 4 (no standalone pieces) and lane I
+is one row at a time on shared files; every worker has its next item.
+
+ELEMENT REGISTER +5 (footing mesh, CB5 span 2, BAND0049, stair system, WP families).
+
+OWNER PACKAGE: none today (no question meets ERS s.2.7; every finding this run was settled from the drawings, answered
+rules or routed to the Checker).
+
+NEEDS FIXING (only the owner): (1) USAGE LIMIT: scheduled runs are failing with USAGE_LIMIT_REACHED (Dashboard 20:54,
+Worker 3 20:59, Worker 1 21:19) and the team was silent 18:11 - 21:40 with three runs cut off mid-work. Your 04:38
+decision kept the hourly cadence provisionally for review in 24 - 48 h; this is evidence for that review. Options only
+you can take: raise the plan's usage allowance, or slow the cadence (for example workers every 2 h, Checker hourly).
+Recommendation: keep the Checker hourly (the queue is 4 READY) and move Worker 1 / Worker 2 to every 2 h until READY is
+at most 3. The Lead changed no schedule. (2) Designer RFIs S19 - S22 stay unsent until you decide to send the package.
+
 ## LEAD REPORT 2026-10-25 16:15 UTC
 
 Repositories: attached Urban-Project-AI checkout (main eafbb0f6); `.work` prepared AUTOMATICALLY ("setup by auto",
