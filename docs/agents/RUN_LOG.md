@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-26T03:21Z | Worker 1 | SUCCESS | T-308 READY (agents/task-T-308 @ d5bf3fa5) | formwork r5 rows by candidate line for T-199: union of T-293 parts 1-3 reproduces all 384 source rows, r5 = ledgers + named rule deltas (residual 0); E CALC 425.209 -> 422.693 m2 (CB5 span 2 once), six closable stair lines 36.447 -> 32.822 m2 (-3.625 by four causes + rounding), BAND0049 ruled from the drawing = curved B7 corner GF-095 (+2.928 m2 G CALC, end 0..0.118 HELD), TANK row = B15 removed, 26 faces (3.257 m2) HELD with their held lines, boundary G.B 35.256 re-tied HELD; freelancer no formwork row; nothing wired, no owner question | self-check codemap PASS, pytest t061 PASS, freeze PASS; full suite to the end NEW 0 / KNOWN 395 / ABSENT 1; problem: none
 - 2026-10-26T03:20Z | Worker 1 | IDLE | none (run lock held by run 20261026T022025-442-23958 since 2026-10-26T02:20Z) | overlap lock: another Worker 1 run is active; no claim, no change, no quantity | lock
 - 2026-10-26 03:00 UTC | Worker 3 | STARTED | run session_016ZwBcnbQWLNsmtUqY4FbbC | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-26T02:51Z | Verifier | STARTED | run unknown | repo-attached routine | task state: T-304, T-306, T-255 (Gate B) READY | self-check pending
