@@ -36,6 +36,15 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
    commit. Decision: board-only handoffs are verified as hand evidence (the verifier re-reads the cited notes), and the
    next task on the topic writes the files (T-117); a run with no line stays a NEEDS FIXING item for the owner's setting.
 
+## 2026-10-26 06:15 (lead run; covers 04:15 - 06:15)
+
+- T-305 (exterior plaster face-to-line): WORKED (MERGED 9d71ef09; Checker own parapet outer faces 48.237 of 66.428 m2 agree 0.000, GF two-F.F.L. +3.430 m2 confirmed). Decision: T-311 PROMOTED TODO (worker 1 next); T-314 stays in lane I after T-199.
+- T-308 (formwork r5 rows): WORKED (MERGED efb38618; BAND0049 = curved B7 corner beam, Checker 2.927965 vs 2.927816 m2 ENGINE_RIGHT). Decision: T-199 consumes it (no change to its row).
+- T-309 (pool membrane / screed): WORKED (MERGED 834ada3e; 29.582355 m2 / 1.524503 m3 = Checker; upstand 1.350 m2 HELD; function S8.2 open). Decision: T-310 consumes it after T-246.
+- T-307 (slab bar-end census): WORKED (MERGED c48f7062; continuous 0 m and edge-beam straight 0.160 m = Checker on GF-135 x; Checker revised his own T-306 p.15 reading at 400 dpi). Decision: NEW T-316 (top-bar extent, 1,113.683 kg cause) and NEW T-318 (candidate split, BLOCKED-OWNER on the reinforcement implementation stage; OWNER PACKAGE item 1).
+- T-312 (wall tile face-to-line): READY, Gate A pending (pantry 32.3422 m2 NO_LINE). Decision: NEW T-315 (lane I wall tile integration with a per-face tile / paint / plaster cross-trade check), after T-312 MERGED and T-244.
+- PARTIAL / FAILED: none. Team: Worker 1 05:20 and Worker 2 05:40 IDLE on the run lock (correct); Worker 3 05:00 run open on T-244 (scheduler PENDING); every closed run self-check PASS.
+
 ## 2026-10-26 04:15 (lead run; covers 02:15 - 04:15)
 
 - T-255 (Gate B, V3.0.19: ring BAND0043 end closure + W03 / W18 trace): WORKED (MERGED 01358449; ring ENGINE_WRONG chord -0.012043 m3 -> drawn faces, Checker -0.0015 %; 3,704 lines byte-identical). MISSING named: 27 reveal lines blank, no FIN.WALL.TILE row. Decisions: T-313 (reveal ledger), T-312 (wall tile ledger).

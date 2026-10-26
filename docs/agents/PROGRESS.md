@@ -1,11 +1,44 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
 Plain words, no task numbers. Measured numbers come from SCOREBOARD.md; anything not measured says so.
-Last update: 2026-10-26 04:15 UTC (Lead). Previous version: 2026-10-26 02:15 UTC. The released numbers did not change
+Last update: 2026-10-26 06:15 UTC (Lead). Previous version: 2026-10-26 04:15 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released default V2.9 + route G untouched). Your measure: whole BOQ
-lines independently verified. The candidate of record is now the version with the curved ground beam closed on its
-drawn faces; the checker's export on it counts 2 whole verified lines (the concrete slab 60.28 m3 is the one
-scoreboard reference line among them). Released: 0. The team ran normally; nothing needs your decision.
+lines independently verified. The candidate of record is unchanged (the version with the curved ground beam closed);
+the checker's export on it counts 2 whole verified lines (the concrete slab 60.28 m3 is the one scoreboard reference
+line among them). Released: 0. ONE DECISION FOR YOU today: whether the corrected slab steel anchorage may now enter the
+candidate (see the Lead report, OWNER PACKAGE); nothing else needs you.
+
+Since 04:15 (newest first; four pieces checked and merged, one handed in and waiting for the checker):
+- Steel in suspended slabs, every bar end: CHECKED AND MERGED (research; no candidate or released steel moved). Every
+  bottom-bar end of the slab anchorage lines is now classified by what it meets on the typical slab detail: over a
+  continuous support no anchorage is drawn (0 m); at an edge beam the bar runs straight 0.16 m to the cover mark and one
+  bar of each pair turns up with an undimensioned leg (held); steps, irregular panels and openings held. The checker
+  measured one panel himself and agrees to the kilogram. The drawn straight parts weigh 0.137 .. 0.151 t where the
+  general note books 0.299 .. 0.541 t on the same ends. Restated slab steel range 3.81 .. 5.24 t (was 4.64 .. 6.83 t);
+  part of that drop is a move to "held", not a resolved total. Moving this into the candidate changes steel, which you
+  reserved for your approval (25 Oct): it waits on you. Next piece: how far the TOP bars run over each support (1.11 t
+  of the remaining range).
+- Outside plaster: CHECKED AND MERGED (research). Every drawn facade face once, 1,022.53 m2; the checker measured the
+  parapet outer faces himself (48.24 of 66.43 m2, exact agreement) and confirms that "facade length x storey height"
+  over-measures the ground floor by 3.43 m2 where it has two floor levels. The candidate's outside-plaster lines stay
+  blank (held, not 0) against the freelancer's 1,469.97 m2. Next: define each parapet and the plinth (now unblocked).
+- Formwork corrections: CHECKED AND MERGED (research). The disputed curved beam band is the quarter-circle corner beam
+  (checker 2.928 m2, same as the worker); stair rows 36.45 -> 32.82 m2; one beam span counted once (-2.52 m2). Ready
+  for formwork to enter the candidate.
+- Pool membrane and protection screed: CHECKED AND MERGED (research). Membrane 29.58 m2 and screed 1.52 m3, both
+  measured by the checker himself; the 0.15 m upstand above the deck (up to 1.35 m2) is held because the drawing does
+  not dimension its end; whether the layer is waterproofing or insulation stays open (designer item). The freelancer
+  has no line for it.
+- Wall tiles (handed in, waiting for the checker): every tiled wall face in the wet rooms and the pantry once. The
+  candidate's 17 wall-tile lines are all blank today; your height rule fills 11 of them with 307.96 m2, 6 stay held
+  (annex and two rooms whose floor level is open), and the pantry's 32.34 m2 has no line at all yet. On the 11 rooms
+  the freelancer has 295.44 m2 (engine +12.52 m2, +4.24 %: tile height by your rule vs his, and openings / lobby
+  length, to be confirmed by the checker).
+- Integration of plaster and paint into the candidate is in progress (started 05:05). New pieces queued: wall tiles
+  into the candidate with a face-by-face check that no tiled face is also painted; spatter dash and the mesh at
+  block / concrete joints (two items no route measures today).
+- Nothing new on Drive; no new photos. Every run in these two hours closed properly (the integration run is still
+  working).
 
 Since 02:15 (newest first; four pieces checked and merged, two handed in and waiting for the checker):
 - Curved ground beam and the two windows that span two rooms: CHECKED AND MERGED INTO THE CANDIDATE. The curved

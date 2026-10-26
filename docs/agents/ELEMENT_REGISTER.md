@@ -46,6 +46,17 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+### Lead 2026-10-26 06:15 (from T-305 / T-308 / T-309 / T-307 MERGED; T-312 READY; T-244 CLAIMED; new T-315 .. T-318)
+
+| Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |
+|---|---|---|---|---|---|
+| Slab bottom-bar END at its support (one per bar end: continuous / edge beam / step / irregular / opening) | reinforcement (slab development lines), beam reinforcement at the same support (no double: the slab bar end is the slab's) | REBAR slab line; length per class: continuous 0 m, edge beam drawn straight (w - 0.040), up-turn leg HELD, step / irregular / opening HELD | DRAWING-DERIVED straight part, BOUND count; legs HELD; candidate line unchanged (NOT VERIFIED) | T-307 MERGED c48f7062 (Checker own GF-135 x); p.15 typical detail | candidate split T-318 (owner stage approval); designer items 1-4 (leg, step, composite, opening) |
+| Slab TOP-bar group over a support (0.25 L1 each side; crossing direction) | reinforcement (slab top lines) | REBAR slab line | NOT YET CENSUSED; 1,113.683 kg of the bound spread by cause (T-306) | T-306 MERGED 01358449 | T-316; 'extend 50 % where possible' = designer item |
+| Pool membrane and protection screed (5 cm + 5 cm on base and outer faces, none on the water side) | waterproofing (membrane), concrete / screed, pool shell formwork (no overlap) | WATERPROOFING for the membrane; SCREED (protection) as its own line; function WP vs insulation HELD (S8.2) | DRAWING-CONFIRMED 29.582355 m2 / 1.524503 m3 (Checker = worker); upstand 0 .. 1.350 m2 HELD | T-309 MERGED 834ada3e | T-310 integration (after T-246); S8.2 designer |
+| Curved B7 corner beam band (BAND0049, GF-095) | formwork, concrete beam | FORMWORK beam faces (G CALC 2.928 m2), end 0 .. 0.118 HELD | ENGINE_RIGHT (Checker 2.927965 vs 2.927816 m2) | T-308 MERGED efb38618 | T-199 integration |
+| Pantry wall tile (counter-backed walls; open edge 4.490 m tiles nothing) | wall tile, paint (none on tiled faces), skirting (NOT_APPLICABLE, T-296) | WALL TILE: a NEW line of FIN.WALL.TILE (none in V3.0.19) | 32.3422 m2 ledger, READY (not verified) | T-312 (UP-PANTRY-003, Q-30 / Q-37 A, Q-48 A) | T-312 Gate A, then T-315 |
+| Exposed concrete faces that receive plaster (column faces, beam sides / soffits, slab edges, upstands) and block-to-concrete joints | plaster, spatter dash (B4-05), joint mesh (B9-03), paint, wall tile where tiled | SPATTER DASH / JOINT MESH as their own items (URBAN-FINISH-EXTRAS-SEPARATE-ITEMS@v1); the plaster face stays the plaster line's | NOT MEASURED (families NOT_IMPLEMENTED); scope per face to be searched in answered rules, else HELD | BOQ_FAMILY_MASTER 1.14.0 | T-317 |
+
 ### Lead 2026-10-26 04:15 (from T-255 Gate B / T-304 / T-306 / T-294 MERGED, V3.0.19 = candidate of record; T-305 / T-308 READY; T-309 CLAIMED; new T-311 .. T-314)
 
 | Element (Alsenan unless said) | Trades that touch it | Owner trade (ruling) | Status | Basis | Open item |

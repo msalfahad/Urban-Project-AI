@@ -46,7 +46,9 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
-## Status (Lead, 2026-10-26 04:15; re-estimated each run from what merged and was verified)
+## Status (Lead, 2026-10-26 06:15; re-estimated each run from what merged and was verified)
+
+Lead 2026-10-26 06:15: since 04:15 FOUR MERGED (research ledgers; no candidate or released quantity moved): exterior plaster face ledger 9d71ef09, formwork r5 rows efb38618, pool membrane / screed 834ada3e, slab bar-end census c48f7062; READY 1 (wall tile ledger). Candidate of record still V3.0.19 (whole verified lines 2); V3.0.20 (plaster / paint, T-244) in progress since 05:05. Week 1 target (one verified improvement through the integrated pipeline by 27 Oct) is MET since 25 Oct (CONC.SLAB whole line verified in the candidate); the 27 Oct milestone check is tomorrow. Week 2 (by 3 Nov, measurable increase in verified coverage): the next integrations in order are plaster / paint (T-244), wall tile (T-315), masonry (T-279), formwork (T-199), exterior face rows (T-314); the slab steel split (T-318) waits on the owner's reinforcement implementation stage. Risk: lane I is single-threaded on the integration files, so verified pieces queue behind it (this run's four merged ledgers all wait for lane I rows).
 
 Lead 2026-10-26 04:15: since 02:15 FOUR MERGED (V3.0.19 Gate B = candidate of record: ring ground beam closed on drawn
 faces, VERIFIED component 1.746943 m3; scoring key-map fix: the candidate is tool-scored again, floor area -6.86 %;
