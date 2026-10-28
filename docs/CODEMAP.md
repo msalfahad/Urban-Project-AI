@@ -18,11 +18,11 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 3537 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 3567 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 24 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 1741 | pytest suites, one folder per round. |
+| `tests/` | 1752 | pytest suites, one folder per round. |
 | `tools/` | 114 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (254 modules)
@@ -642,7 +642,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `slab_rebar_qto.py` | 314 | CRITICAL | 9 | S7 SLAB REBAR QTO - restricted project-basis slab reinforcement quantities over a frozen readiness register (generic). |
 | `slab_rebar_readiness.py` | 571 | CRITICAL | 5 | SLAB REBAR READINESS - what an elevated structural slab may release to an accurate rebar takeoff (generic, no kg). |
 | `slab_region.py` | 179 | MEDIUM | 1 | SLAB REGION ENGINE (V1) - slab plate, openings and thickness from the slab plan's own line work. Never fitted to |
-| `slab_step_v2.py` | 445 | MEDIUM | 1 | SLAB_STEP_V2 (T-224): the step at the edge of a SUNKEN slab panel, from the drawn panel outline and its framing |
+| `slab_step_v2.py` | 533 | MEDIUM | 1 | SLAB_STEP_V2 (T-224): the step at the edge of a SUNKEN slab panel, from the drawn panel outline and its framing |
 | `source_anchor.py` | 79 | MEDIUM | 1 | SOURCE ANCHOR - CONTROLLED EXPORT IDENTITY (R8.20). |
 | `source_exceptions.py` | 344 | MEDIUM | 1 | SOURCE EXCEPTIONS (R8.5 §10-§14) — resolve unrealised source objects by POSITIVE evidence, never by look. |
 | `source_identity.py` | 81 | CRITICAL | 2 | SOURCE IDENTITY - is a re-supplied file the same source as one registered earlier (generic). |
@@ -1222,7 +1222,11 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t307_slab_bar_ends/` | 2 |
 | `tests/t308_formwork_r5/` | 2 |
 | `tests/t309_pool_membrane/` | 2 |
+| `tests/t311_parapet_plinth/` | 2 |
 | `tests/t312_wall_tile_ledger/` | 2 |
+| `tests/t316_slab_top_bars/` | 2 |
+| `tests/t317_spatter_mesh/` | 2 |
+| `tests/t320_displacement_ledger/` | 2 |
 | `tests/water_tank_s8_4/` | 3 |
 | `tests/zz_freeze_integrity/` | 2 |
 
@@ -1544,7 +1548,11 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t307/` | 8 |
 | `research/agents_t308/` | 9 |
 | `research/agents_t309/` | 5 |
+| `research/agents_t311/` | 10 |
 | `research/agents_t312/` | 11 |
+| `research/agents_t316/` | 7 |
+| `research/agents_t317/` | 8 |
+| `research/agents_t320/` | 5 |
 | `research/alsenan_arch_truth_05/` | 28 |
 | `research/alsenan_column_rebar_s3/` | 17 |
 | `research/alsenan_column_rebar_s3_1/` | 15 |

@@ -1,0 +1,13 @@
+check,this_ledger_lo,this_ledger_hi,reference_lo,reference_hi,reference,residual_lo,residual_hi,cause
+parapet outer faces GF + 1F (NO_LINE),68.298451,73.676451,68.297836,73.675836,T-305 FACE_LINE_LEDGER parapet bands (66.428 + 1.870 .. 7.248),0.000615,0.000615,T-305 rows carry 4-decimal face areas (T-159 table); this ledger multiplies T-172 run x height unrounded
+annex parapet outer face inside the GF finish line (+4.30 -> +4.80 of the annex EDGE bands),14.671050,14.671050,14.671000,14.671000,"T-305 IN_LINE annex EDGE bands, their top 0.50 m",0.000050,0.000050,"T-172 run lengths carry 4 decimals (SW-3 6.2001, NE-6 10.8 / 10.4001) against T-305's 3-decimal bands"
+2F parapet outer face inside the 2F finish line (+13.90 -> +14.40),14.900000,14.900000,14.900000,14.900000,"T-305 IN_LINE 2F bands, their top 0.50 m",0.000000,0.000000,none
+plinth faces (all zones),71.688590,72.749795,71.688590,72.749795,T-305 plinth bands (66.736 + 4.952 .. 6.013),-0.000000,-0.000000,none
+plinth substrate closes: concrete face + wall course = face (house + annex),70.983590,72.044795,70.983590,72.044795,this ledger,0.000000,0.000000,none
+parapet inner faces,94.430974,99.534095,94.431000,99.534000,T-305 ITEMS (94.431 .. 99.534),-0.000026,0.000095,T-305 items carry 3 decimals
+parapet tops,26.801230,26.801230,26.801000,26.801000,T-305 ITEMS (26.801),0.000230,0.000230,T-305 items carry 3 decimals
+parapet top arrises outer + inner (m.l),271.962300,271.962300,271.963000,271.963000,T-305 ITEMS corners: parapet outer 138.481 + inner 133.482 m.l,-0.000700,-0.000700,T-305 rounds the inner run to 3 decimals
+upturn line L-5ce5ba49792e8f9d1f6f (2F-ROOF-AT379) contains the runs booked on it (m.l),48.783500,48.783500,92.922000,92.922000,candidate line (SOURCE_DERIVED),-44.138500,-44.138500,the line also carries the roof's other walls / gap closures / openings (not parapet)
+upturn line L-994b88140f2ea50f1b31 (1F-ROOF-AT216) contains the runs booked on it (m.l),27.969900,27.969900,52.940000,52.940000,candidate line (SOURCE_DERIVED),-24.970100,-24.970100,the line also carries the roof's other walls / gap closures / openings (not parapet)
+upturn line L-aac1f35e08f85b643692 (2F-ROOF-TOP) contains the runs booked on it (m.l),28.300000,28.300000,28.300000,28.300000,candidate line (BLOCKED_RFI),0.000000,0.000000,line BLOCKED_RFI (outline not drawn): no quantity to contain the run; the run stays HELD
+upturn line L-d4c73babd2a275c28929 (1F-ROOF-AT220) contains the runs booked on it (m.l),31.828100,31.828100,35.727000,35.727000,candidate line (SOURCE_DERIVED),-3.898900,-3.898900,the line also carries the roof's other walls / gap closures / openings (not parapet)
