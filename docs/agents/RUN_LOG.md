@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-28T22:09Z | Worker 3 | SUCCESS | T-224 READY (agents/task-T-224 @ 1641e4f3; unwired, no BOQ line moved) | SLAB_STEP_V2: sunken-panel step from the drawn outline classified per piece by its framing: step concrete 0 m3 on beam / column faces for any d (V1 bound 0 .. 4 sqrt(A) d t was ENGINE_WRONG there), L_free x d x t only on free slab edges; formwork +P_ext d / -P_ext d HELD on D-41 (Alsenan 41.451 d), shared / edge beams HELD on beam-top level; fixture 3.0 x 4.0: +14.0 d / -14.0 d, free edge 0.064 m3 at d 0.10; T-213 P_ext 5.550 / 4.690 / 9.600 m reproduced; legacy bound refused where the outline is drawn. Missing: d (D-41), wiring (later Gate B) | self-check codemap PASS, pytest t061 PASS, freeze PASS; full suite NEW 0 / KNOWN 395; problem: first commit imported shapely (K1 t210 / t257 UNRECORDED), fixed to stdlib before READY
 - 2026-10-28T21:51Z | Verifier | STARTED | run session_01E6cPncCQenrxTauX22dp7r | repo-attached routine | task state: T-311, T-313, T-316 READY (per run log) | self-check pending
 - 2026-10-28T21:42Z | Worker 2 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-28 21:23 UTC | Worker 1 | STARTED | run session_01E6cPnbaB4TFV1B12DcgfKx | repo-attached routine | task state: none yet | self-check pending
