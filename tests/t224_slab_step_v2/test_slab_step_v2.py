@@ -8,8 +8,12 @@ Beams 0.20 wide outside its four sides (S, N run x -0.20 .. 3.20; W, E run y 0 .
     step concrete = 0 m3 for any d (step = beam side); riser form = +14.0 d m2; beam-side form = -14.0 d m2 (HELD, D-41)
     with d = 0.10 printed (fixture only): +1.400 / -1.400 m2, net 0.
  F2 east beam removed (one free slab edge, 4.00 m): P_ext = 3.0 + 3.0 + 4.0 = 10.00 m, L_free = 4.00 m
-    step concrete = 4.00 x d x 0.16 (HELD); with d = 0.10: 4.00 x 0.10 x 0.16 = 0.0640 m3, on that edge only;
     riser free edge = soffit step = 4.00 x 0.10 = 0.400 m2; member riser = 10.0 x 0.10 = 1.000 m2, side -1.000 m2.
+    r2 (Checker 2026-10-28 23:01): the ADDED step concrete is HELD with its formula unless a step detail is printed
+    (L x d x t is a convention, refused as DRAWING-CONFIRMED). Fixture details (hand):
+      web b_w 0.20 printed over the drop, d = 0.10: 4.00 x 0.10 x 0.20 = 0.0800 m3
+      web b_w 0.20, height 0.25 printed:            4.00 x 0.25 x 0.20 = 0.2000 m3
+      slabs abut, no web printed, d 0.10 <= t 0.16: 0 m3 (they share 0.06 m of face); d 0.20 > t 0.16: refused.
  F3 second panel P2 x 3.20 .. 6.20 across the east beam (shared): P1 P_shared = 4.00, P_ext = 10.00; shared riser HELD
     on d AND on the shared beam top level even when d is printed.
  F4 slab extent = the beams' outer faces (x -0.20 .. 3.20, y -0.20 .. 4.20): every beam is a perimeter beam:
@@ -81,9 +85,12 @@ def test_f2_one_free_edge_step_concrete_on_that_edge_only():
     e, q = run(p1(), beams(east=False))
     assert math.isclose(e["EXTERNAL_MEMBER"], 10.0, abs_tol=1e-9)
     assert math.isclose(e["FREE_SLAB_EDGE"], 4.0, abs_tol=1e-9)
-    assert q["step_concrete_m3"]["value"] is None and "4.0000 x d x t" in q["step_concrete_m3"]["formula"]
+    assert q["step_concrete_m3"]["value"] is None and "4.0000 x h_web x b_w" in q["step_concrete_m3"]["formula"]
     _, q = run(p1(d_m=0.10, d_source="fixture section S-1"), beams(east=False))
-    assert q["step_concrete_m3"]["value"] == 0.064 and q["step_concrete_m3"]["status"] == V.DC
+    # r2: d and t printed but no step detail -> HELD with its formula, never L x d x t by convention
+    assert q["step_concrete_m3"]["value"] is None and q["step_concrete_m3"]["status"] == V.HELD
+    assert "4.0000 x h_web x b_w" in q["step_concrete_m3"]["formula"]
+    assert any("printed step detail" in m for m in q["step_concrete_m3"]["missing"])
     assert q["riser_form_free_edge_m2"]["value"] == 0.4
     assert q["soffit_step_form_free_edge_m2"]["value"] == 0.4
     assert q["riser_form_member_m2"]["value"] == 1.0
@@ -249,7 +256,8 @@ def test_module_declares_its_default_guard_class_and_is_unwired():
 def test_l_panel_member_on_part_of_a_side_only():
     """L panel (0,0) (3,0) (3,1.2) (1.5,1.2) (1.5,2.5) (0,2.5): A = 5.55, P = 11.00 m. Beam S (3.00 m), beam W (2.50 m),
     column 0.30 x 0.30 at the east side's foot (0.30 m of that side); the other 5.20 m are free slab edge.
-    d = 0.10, t = 0.16 printed (fixture): step concrete = 5.20 x 0.10 x 0.16 = 0.0832 m3; member riser 5.80 x 0.10."""
+    d = 0.10, t = 0.16 printed (fixture); r2: no step detail -> step concrete HELD; with a printed web b_w 0.16 over the
+    drop: 5.20 x 0.10 x 0.16 = 0.0832 m3; member riser 5.80 x 0.10."""
     L = V.SunkenPanel("L1", [(0, 0), (3, 0), (3, 1.2), (1.5, 1.2), (1.5, 2.5), (0, 2.5)], d_m=0.10,
                       d_source="fixture section S-2", **T)
     ms = [V.Member("BS", "BEAM", rect(-0.2, -0.2, 3.2, 0), 0.60, "fixture schedule"),
@@ -260,7 +268,11 @@ def test_l_panel_member_on_part_of_a_side_only():
     assert math.isclose(e["EXTERNAL_MEMBER"], 5.8, abs_tol=1e-9)
     assert math.isclose(e["FREE_SLAB_EDGE"], 5.2, abs_tol=1e-9)
     assert math.isclose(e["members"]["C1"], 0.3, abs_tol=1e-9)
-    assert q["step_concrete_m3"]["value"] == 0.0832
+    assert q["step_concrete_m3"]["value"] is None and "5.2000 x h_web x b_w" in q["step_concrete_m3"]["formula"]
+    web = V.StepDetail("fixture section S-2", b_w_m=0.16, b_w_source="S-2 web 160", h_is_drop=True,
+                       h_source="S-2 web over the drop")
+    q2 = V.step_quantities(L, e, ms, web)
+    assert q2["step_concrete_m3"]["value"] == 0.0832 and q2["step_concrete_m3"]["status"] == V.DC
     assert q["riser_form_member_m2"]["value"] == 0.58 and q["riser_form_free_edge_m2"]["value"] == 0.52
 
 
@@ -270,3 +282,89 @@ def test_touching_panels_are_not_an_overlap_identical_ones_are():
         pytest.approx(4.0)
     with pytest.raises(V.SlabStepError, match="overlap"):
         V.classify_outline(a, [], [V.SunkenPanel("B", rect(0, 0, 3, 4))], EXT)
+
+
+# ---------------------------------------------------------------- r2: free-edge step concrete from the drawn detail only
+D10 = dict(d_m=0.10, d_source="fixture section S-1")
+
+
+def free_edge(detail, **kw):
+    panel = p1(**{**D10, **kw})
+    e = V.classify_outline(panel, beams(east=False), (), EXT)
+    return V.step_quantities(panel, e, beams(east=False), detail)
+
+
+def test_r2_printed_web_over_the_drop_gives_L_d_bw():
+    q = free_edge(V.StepDetail("S-3", b_w_m=0.20, b_w_source="S-3 web 200", h_is_drop=True, h_source="S-3"))
+    assert q["step_concrete_m3"]["value"] == 0.08 and q["step_concrete_m3"]["status"] == V.DC
+    assert "4.0000 x 0.1 x 0.2" in q["step_concrete_m3"]["formula"] and "S-3" in q["step_concrete_m3"]["formula"]
+    # the riser and soffit-step faces are the same in every reading
+    assert q["riser_form_free_edge_m2"]["value"] == 0.4 and q["soffit_step_form_free_edge_m2"]["value"] == 0.4
+
+
+def test_r2_printed_web_height_used_not_d():
+    q = free_edge(V.StepDetail("S-4", b_w_m=0.20, b_w_source="S-4 web 200", h_m=0.25, h_source="S-4 web 250"))
+    assert q["step_concrete_m3"]["value"] == 0.2
+
+
+def test_r2_web_over_the_drop_with_drop_unprinted_held():
+    panel = p1()
+    e = V.classify_outline(panel, beams(east=False), (), EXT)
+    q = V.step_quantities(panel, e, beams(east=False),
+                          V.StepDetail("S-3", b_w_m=0.20, b_w_source="S-3", h_is_drop=True, h_source="S-3"))
+    assert q["step_concrete_m3"]["value"] is None and q["step_concrete_m3"]["missing"] == ["drop d (D-41)"]
+
+
+def test_r2_abutting_slabs_no_web_zero_only_when_d_le_t():
+    nw = V.StepDetail("S-5", no_web=True, no_web_source="S-5 cranked slab, no web")
+    q = free_edge(nw)
+    assert q["step_concrete_m3"]["value"] == 0.0 and q["step_concrete_m3"]["status"] == V.DC
+    with pytest.raises(V.SlabStepError, match="do not meet"):
+        free_edge(nw, d_m=0.20)
+    panel = p1()                                             # d unprinted: the d <= t condition cannot be shown
+    e = V.classify_outline(panel, beams(east=False), (), EXT)
+    assert V.step_quantities(panel, e, beams(east=False), nw)["step_concrete_m3"]["value"] is None
+
+
+@pytest.mark.parametrize("kw, msg", [
+    (dict(b_w_m=0.16, h_is_drop=True, h_source="x"), "convention"),           # b_w = t without a source (L x d x t)
+    (dict(b_w_m=0.16, b_w_source="x", h_is_drop=True), "convention"),         # h = d without a source
+    (dict(b_w_m=0.16, b_w_source="x", h_source="x"), "required"),             # no height at all
+    (dict(b_w_m=160, b_w_source="x", h_m=0.1, h_source="x"), "millimetres"),  # mm units
+    (dict(b_w_m=0.2, b_w_source="x", h_m=250, h_source="x"), "millimetres"),
+    (dict(b_w_m=0.0, b_w_source="x", h_m=0.1, h_source="x"), "never 0"),
+    (dict(no_web=True), "assumption"),
+    (dict(no_web=True, no_web_source="x", b_w_m=0.2, b_w_source="x"), "one reading"),
+    (dict(), "neither"),
+])
+def test_r2_detail_without_printed_values_refused(kw, msg):
+    with pytest.raises(V.SlabStepError, match=msg):
+        V.StepDetail("S-9", **kw)
+
+
+def test_r2_detail_needs_a_reference_and_a_free_edge():
+    with pytest.raises(V.SlabStepError, match="drawing reference"):
+        V.StepDetail("", b_w_m=0.2, b_w_source="x", h_m=0.1, h_source="x")
+    panel = p1(**D10)
+    e = V.classify_outline(panel, beams(), (), EXT)                       # fully framed: no free edge
+    with pytest.raises(V.SlabStepError, match="no free slab edge"):
+        V.step_quantities(panel, e, beams(), V.StepDetail("S-3", b_w_m=0.2, b_w_source="x", h_m=0.1, h_source="x"))
+
+
+def test_r2_L_d_t_convention_never_drawing_confirmed():
+    """adverse (Checker r2): d and t printed, no step detail: the old L x d x t = 0.0640 m3 must not appear as DC."""
+    q = free_edge(None)
+    assert q["step_concrete_m3"]["status"] == V.HELD and q["step_concrete_m3"]["value"] is None
+    assert "0.064" not in q["step_concrete_m3"]["formula"]
+    tot = V.totals([q])
+    assert tot["step_concrete_m3"]["complete"] is False and tot["L_free_m"] == 4.0
+
+
+def test_r2_mirror_with_detail_same_value():
+    def mir(p):
+        return (-p[0], p[1])
+    det = V.StepDetail("S-3", b_w_m=0.20, b_w_source="S-3", h_is_drop=True, h_source="S-3")
+    panel = p1(mir, **D10)
+    bs = beams(east=False, tf=mir)
+    e = V.classify_outline(panel, bs, (), [mir(p) for p in EXT])
+    assert V.step_quantities(panel, e, bs, det)["step_concrete_m3"]["value"] == 0.08

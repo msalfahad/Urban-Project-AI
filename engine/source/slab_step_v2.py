@@ -24,11 +24,17 @@ the drop creates depends on what lies along each piece of the outline (classifie
   SHARED_MEMBER     a beam with ANOTHER sunken panel across it. Whether a step exists depends on the beam-top level
                     (it may drop with both panels): riser + L x d / member side - L x d, both HELD on d AND on the beam
                     top level (never resolved by preference).
-  FREE_SLAB_EDGE    no framing member: the normal slab continues across a step in the slab itself. The step is a
-                    vertical web of the slab thickness t and height d on the panel side:
-                      step concrete            L x d x t
+  FREE_SLAB_EDGE    no framing member: the normal slab continues across a step in the slab itself. The two faces exist
+                    in every reading of the step:
                       riser form (top side)    + L x d   (stop-end above the sunken top)
                       soffit step form         + L x d   (vertical face, normal soffit down to the sunken soffit)
+                    The ADDED step concrete (beyond the two slabs' own A x t) is NOT a geometric fact (T-224 r2,
+                    Checker 2026-10-28 23:01): with d < t the two slabs abut and share t - d of face (no added
+                    concrete in that reading); with d > t they do not meet and a web is needed whose width / height /
+                    haunch only a drawn cranked-step section gives. So it is taken ONLY from a printed StepDetail:
+                      web printed (b_w, h)     L x h x b_w   (h printed, or printed as the drop: L x d x b_w)
+                      abutting, no web printed 0 m3          (refused when d > t: the slabs would not meet)
+                      no detail                HELD with its formula (never L x d x t by convention, never 0)
   PERIMETER_MEMBER  a beam with the OUTSIDE of the storey slab across it (an edge beam carrying only the sunken
                     panel): its top may be at the normal slab top or dropped with the panel; riser + L x d / member side
                     - L x d HELD on d AND on that beam-top level (unprinted), like SHARED_MEMBER.
@@ -60,7 +66,8 @@ SUPERSEDES = "SCOPE_QUANTITIES_V1 SLAB_STEP bound (4 sqrt(A) x SLAB_STEP_DROP_M 
 DEFAULT_GUARD_CLASS = "UNWIRED_PRODUCER"      # T-212 P1: unwired producer, no released / candidate importer
 RULES = ("T-213 (MERGED 0ec8c496): panel lowered at full thickness, step = beam side on framed edges",
          "D-41 (designer item, open): drop d HELD, never defaulted",
-         "WORKFLOW_CONTROLS_2026-10-21 s.5 statuses", "ENGINEERING_REASONING_STANDARD s.2 - s.4")
+         "WORKFLOW_CONTROLS_2026-10-21 s.5 statuses", "ENGINEERING_REASONING_STANDARD s.2 - s.4",
+         "T-224 r2 (Checker 2026-10-28 23:01): free-edge step concrete from the drawn step detail, else HELD")
 
 DC, AOA, VER, HELD, UNKNOWN = "DRAWING-CONFIRMED", "ASSUMED — OWNER-APPROVED", "VERIFIED", "HELD", "UNKNOWN"
 STATUSES = (VER, DC, AOA, HELD, UNKNOWN)
@@ -68,13 +75,14 @@ MEMBER_KINDS = ("BEAM", "COLUMN")
 EDGE_KINDS = ("EXTERNAL_MEMBER", "SHARED_MEMBER", "PERIMETER_MEMBER", "FREE_SLAB_EDGE", "ADJACENT_SUNKEN",
               "PERIMETER_EDGE")
 MAX_T_M, MAX_D_M, MAX_MEMBER_W_M, MAX_AREA_M2, MAX_SIDE_M = 0.6, 1.5, 2.0, 400.0, 60.0
+MAX_WEB_W_M, MAX_WEB_H_M = 1.0, MAX_D_M + MAX_T_M      # a printed step web wider / taller than this: millimetres?
 PROBE_M = 0.01          # first probe just outside the outline
 PIECE_M = 0.05          # outline split into pieces <= this, so a member along part of a side owns that part only
 TOUCH_M = 0.005         # a member face within this of the outline frames it
 EPS = 1e-9
 
 __all__ = ["METHOD", "SUPERSEDES", "DEFAULT_GUARD_CLASS", "RULES", "STATUSES", "EDGE_KINDS", "SlabStepError",
-           "Member", "SunkenPanel", "classify_outline", "step_quantities", "legacy_bound", "totals"]
+           "Member", "SunkenPanel", "StepDetail", "classify_outline", "step_quantities", "legacy_bound", "totals"]
 
 
 class SlabStepError(ValueError):
@@ -257,6 +265,50 @@ class SunkenPanel:
         return self.poly.length
 
 
+@dataclass
+class StepDetail:
+    """A PRINTED cranked-step section for the panel's free slab edges (T-224 r2). ref = the drawing / detail reference.
+    Exactly one reading:
+      web:      b_w_m (web width) with b_w_source, and its height either h_m with h_source or h_is_drop=True with
+                h_source (the section prints the web over the drop height) -> added concrete L x h x b_w;
+      abutting: no_web=True with no_web_source (the section prints the two slabs meeting with no web or haunch)
+                -> added concrete 0 m3, refused when the drop exceeds the thickness (d > t: the slabs do not meet).
+    Every value needs its printed source; a convention (b_w = t, h = d) without one is refused."""
+    ref: str
+    b_w_m: float | None = None
+    b_w_source: str | None = None
+    h_m: float | None = None
+    h_source: str | None = None
+    h_is_drop: bool = False
+    no_web: bool = False
+    no_web_source: str | None = None
+
+    def __post_init__(self):
+        if not self.ref:
+            raise SlabStepError("step detail: a detail without a drawing reference is not a printed detail (refused)")
+        web = self.b_w_m is not None or self.h_m is not None or self.h_is_drop
+        if self.no_web and web:
+            raise SlabStepError(f"step detail {self.ref}: 'no web' and a web are both given (one reading only)")
+        if self.no_web:
+            if not self.no_web_source:
+                raise SlabStepError(f"step detail {self.ref}: 'no web' without a printed source is an assumption "
+                                    "(refused)")
+            return
+        if not web:
+            raise SlabStepError(f"step detail {self.ref}: neither a web nor 'no web' is given")
+        _num(self.b_w_m, f"step detail {self.ref} web width", MAX_WEB_W_M)
+        if not self.b_w_source:
+            raise SlabStepError(f"step detail {self.ref}: a web width without a printed source is a convention "
+                                "(refused; never b_w = t by default)")
+        if self.h_is_drop and self.h_m is not None:
+            raise SlabStepError(f"step detail {self.ref}: web height given both as a value and as the drop")
+        if not self.h_is_drop:
+            _num(self.h_m, f"step detail {self.ref} web height", MAX_WEB_H_M)
+        if not self.h_source:
+            raise SlabStepError(f"step detail {self.ref}: a web height without a printed source is a convention "
+                                "(refused; never h = d by default)")
+
+
 def _side_lengths(p):
     return [math.dist(a, b) for a, b in p.edges]
 
@@ -343,10 +395,38 @@ def _area_status(edges):
     return DC if edges["UNKNOWN"] <= EPS else HELD
 
 
-def step_quantities(panel, edges, members=()):
+def _free_edge_concrete(F, d, t, detail, miss_d):
+    """Added step concrete on the free slab edges (L_free = F > 0) from the printed step detail only (T-224 r2)."""
+    readings = (f"d < t: slabs abut over t - d, no added concrete; d > t: a web whose width / height only a drawn "
+                f"cranked-step section gives")
+    if detail is None:
+        return _held(f"L_free x h_web x b_w = {F:.4f} x h_web x b_w from the drawn step detail ({readings})",
+                     ["printed step detail (web width, height) for %.4f m of free slab edge" % F])
+    if not isinstance(detail, StepDetail):
+        raise SlabStepError(f"step detail must be a StepDetail, got {type(detail).__name__}")
+    if detail.no_web:
+        if d is None or t is None:
+            return _held(f"0 if d <= t (detail {detail.ref}: slabs abut, no web printed); d > t contradicts the "
+                         "detail", miss_d + ([] if t is not None else ["slab thickness t"]))
+        if d - t > EPS:
+            raise SlabStepError(f"step detail {detail.ref}: 'no web' with d = {d:g} > t = {t:g}: the two slabs "
+                                "do not meet (a web is needed: read the section again)")
+        return _val(0.0, f"detail {detail.ref}: slabs abut, no web printed ({detail.no_web_source})", DC)
+    if detail.h_is_drop:
+        if d is None:
+            return _held(f"L_free x d x b_w = {F:.4f} x d x {detail.b_w_m:g} (detail {detail.ref}: web over the "
+                         "drop)", miss_d)
+        return _val(F * d * detail.b_w_m, f"L_free x d x b_w = {F:.4f} x {d:g} x {detail.b_w_m:g} (detail "
+                    f"{detail.ref}: web {detail.b_w_source}, height = drop {detail.h_source})", DC)
+    return _val(F * detail.h_m * detail.b_w_m, f"L_free x h_web x b_w = {F:.4f} x {detail.h_m:g} x "
+                f"{detail.b_w_m:g} (detail {detail.ref}: web {detail.b_w_source}, height {detail.h_source})", DC)
+
+
+def step_quantities(panel, edges, members=(), step_detail=None):
     """The step quantities of one panel from its classified outline (classify_outline). Every d-driven value is HELD
     (None) while d is unprinted; nothing is ever 0 by default. The panel's own slab concrete (A x t) and soffit form
-    (A) are reported for the record only (they belong to the slab line; independent of d)."""
+    (A) are reported for the record only (they belong to the slab line; independent of d). step_detail: the printed
+    StepDetail for the panel's free slab edges, or None (then the free-edge step concrete is HELD, T-224 r2)."""
     A, d, t = panel.area, panel.d_m, panel.t_m
     E, S, F = edges["EXTERNAL_MEMBER"], edges["SHARED_MEMBER"] + edges["PERIMETER_MEMBER"], edges["FREE_SLAB_EDGE"]
     J, U = edges["ADJACENT_SUNKEN"], edges["UNKNOWN"]
@@ -367,17 +447,25 @@ def step_quantities(panel, edges, members=()):
                                     f"sunken soffit (h - t - d = {m.h_m - t - d:.3f} m): BEAM DEPTH CONFLICT")
     miss_d = [] if d is not None else ["drop d (D-41)"]
     unknown = ["what lies across %.4f m of outline (slab extent not given)" % U] if U > EPS else []
-    # step concrete: 0 on member-framed pieces for any d; L x d x t on free slab edges
+    # step concrete: 0 on member-framed pieces for any d; on free slab edges ONLY from the printed step detail (r2)
+    if step_detail is not None and F <= EPS:
+        raise SlabStepError(f"panel {panel.pid}: a step detail is given but the outline has no free slab edge "
+                            "(a detail is never applied to member-framed pieces)")
     if F <= EPS and J <= EPS and U <= EPS:
         q["step_concrete_m3"] = _val(0.0, f"every piece is a member face (P_ext {E:.4f} + P_shared / perimeter "
                                           f"{S:.4f} m): the "
                                           "step is the member side, no slab concrete for any d", DC)
-    elif d is None or t is None or J > EPS or U > EPS:
-        q["step_concrete_m3"] = _held(f"L_free x d x t = {F:.4f} x d x t (member pieces 0)",
-                                      miss_d + ([] if t is not None else ["slab thickness t"]) + unknown +
-                                      (["relative drop over %.4f m of adjacent sunken edge" % J] if J > EPS else []))
     else:
-        q["step_concrete_m3"] = _val(F * d * t, f"L_free x d x t = {F:.4f} x {d:g} x {t:g} (member pieces 0)", DC)
+        fc = (_free_edge_concrete(F, d, t, step_detail, miss_d) if F > EPS
+              else _val(0.0, "no free slab edge", DC))
+        others = unknown + (["relative drop over %.4f m of adjacent sunken edge" % J] if J > EPS else [])
+        if others:
+            q["step_concrete_m3"] = _held(f"{fc['formula']} (member pieces 0) + adjacent / unclassified pieces",
+                                          fc["missing"] + others)
+        elif fc["value"] is None:
+            q["step_concrete_m3"] = _held(f"{fc['formula']} (member pieces 0)", fc["missing"])
+        else:
+            q["step_concrete_m3"] = _val(fc["value"], f"{fc['formula']} (member pieces 0)", DC)
     # formwork
     if d is None:
         q["riser_form_member_m2"] = _held(f"+ P_ext x d = + {E:.4f} x d", miss_d)
