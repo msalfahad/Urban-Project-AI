@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-28T20:22Z | Worker 1 | STARTED | run session_01E6cPncBLenopLXURF8pTSn | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-28 20:16 UTC | Lead | STARTED | run session_01E6cPndZ39npWKgErf1L9Nq | repo-attached routine | task state: board | report pending
 - 2026-10-28T20:09Z | Worker 1 | SUCCESS | T-311 READY (agents/task-T-311 @ 8bfa0359) | Parapets / plinth defined from ST p.14 + sections A-A / B-B (own V3.0.19 b35475bf): no detail keyed to a run, sections hatch parapets as RC, ST typical = brick on 0.30 RC upstand above the scheduled beam depth -> material HELD (Q-65 C), but parapet concrete 8.040 .. 20.081 m3 (+26.801 m3 per m of b_edge) is in NO candidate line and NO freelancer RC row (MISSING); blockwork 0 .. 60.596 m2 vs freelancer 172.93 m2; plinth 71.689 .. 72.750 m2 = ground-beam face 65.924 .. 66.985 (m3 stays CONC.GROUND) + wall course 5.059 (in MAS.BLOCK); 46 components, DOUBLE 0, closure 0.0007 named; full suite not completed (lock window) | self-check codemap PASS, pytest t061 PASS, freeze PASS; ERS: read; problem: decode wrapper expects base64 but the Drive connector now saves raw binary (worked around via scratch base64, deleted)
 - 2026-10-28T19:51Z | Verifier | STARTED | run session_01E6cPnf7RbZ6BEcf9myfarL | repo-attached routine | task state: T-244 (Gate B) and T-312 READY per Lead 2026-10-26 06:27 | self-check pending
