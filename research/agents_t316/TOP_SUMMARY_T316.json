@@ -1,0 +1,133 @@
+{
+ "across_edge_beam_kg": {
+  "A": [
+   122.574,
+   144.352
+  ],
+  "B": [
+   127.586,
+   150.278
+  ]
+ },
+ "by_class_kg": {
+  "COUNT_CONVENTION": {
+   "CONTINUOUS": 60.497,
+   "EDGE_BEAM": 19.56,
+   "IRREGULAR_SUPPORT": 10.565,
+   "OPENING_EDGE": 5.487,
+   "STEP_EDGE": 11.157
+  },
+  "TOP_CROSSING": {
+   "CONTINUOUS": 121.983,
+   "EDGE_BEAM": 0.0,
+   "IRREGULAR_SUPPORT": 0.0,
+   "OPENING_EDGE": 0.0,
+   "STEP_EDGE": 24.702
+  },
+  "TOP_NOTE2_VS_P15": {
+   "CONTINUOUS": 179.336,
+   "EDGE_BEAM": -13.71,
+   "IRREGULAR_SUPPORT": -5.009,
+   "STEP_EDGE": 24.996
+  },
+  "TOP_NOTE2_WORDING": {
+   "CONTINUOUS": 393.099,
+   "EDGE_BEAM": 246.371,
+   "IRREGULAR_SUPPORT": 58.328,
+   "OPENING_EDGE": 0.898,
+   "STEP_EDGE": 82.696
+  }
+ },
+ "candidate_on_valued_lines_kg": [
+  718.419,
+  1829.432
+ ],
+ "candidate_top_high_kg": 2002.348,
+ "candidate_top_low_kg": 781.395,
+ "ends_by_class_A_B": {
+  "CONTINUOUS": [
+   1362,
+   1457
+  ],
+  "EDGE_BEAM": [
+   882,
+   919
+  ],
+  "IRREGULAR_SUPPORT": [
+   234,
+   269
+  ],
+  "OPENING_EDGE": [
+   2,
+   12
+  ],
+  "STEP_EDGE": [
+   376,
+   401
+  ]
+ },
+ "ends_facing_TB_panel_A_B": [
+  37,
+  40
+ ],
+ "groups": 283,
+ "groups_one_sided": 209,
+ "groups_two_sided": 74,
+ "lines": 98,
+ "lines_high_reading_p15": 40,
+ "note2_on_valued_lines_kg": [
+  718.419,
+  1640.822
+ ],
+ "p15_valued_high_kg": 1546.858,
+ "p15_valued_lines": 86,
+ "p15_valued_low_kg": 1404.705,
+ "residual_kg": {
+  "COUNT_CONVENTION": 0.004671,
+  "TOP_CROSSING": 0.00066,
+  "TOP_NOTE2_VS_P15": -0.00174,
+  "TOP_NOTE2_WORDING": -0.005926
+ },
+ "span_overlap": {
+  "A": {
+   "bar_lines": 188.0,
+   "drawn_excess_m": 97.567,
+   "t152_bar_lines": 241.0,
+   "t152_p15_beyond_span_kg": 74.318
+  },
+  "B": {
+   "bar_lines": 198.0,
+   "drawn_excess_m": 108.506,
+   "t152_bar_lines": 252.0,
+   "t152_p15_beyond_span_kg": 82.486
+  }
+ },
+ "split_totals_kg": {
+  "COUNT_CONVENTION": 107.265,
+  "TOP_CROSSING": 146.685,
+  "TOP_NOTE2_VS_P15": 185.614,
+  "TOP_NOTE2_WORDING": 781.391
+ },
+ "statuses": {
+  "DRAWING_DERIVED_P15": 7,
+  "DRAWING_DERIVED_P15_PART_WITH_HELD": 68,
+  "DRAWING_DERIVED_P15_PART_WITH_HELD_LEGS": 11,
+  "HELD": 8,
+  "UNRESOLVED_TB_PANEL": 4
+ },
+ "t152_p15_beyond_span_in_candidate_high_kg": 81.746,
+ "t306_top_causes_kg": {
+  "COUNT_CONVENTION": 107.27,
+  "TOP_CROSSING": 146.686,
+  "TOP_NOTE2_VS_P15": 185.612,
+  "TOP_NOTE2_WORDING": 781.385
+ },
+ "the_1113_683_by_class_kg": {
+  "CONTINUOUS": 694.418,
+  "EDGE_BEAM": 232.661,
+  "IRREGULAR_SUPPORT": 53.319,
+  "OPENING_EDGE": 0.898,
+  "STEP_EDGE": 132.394
+ },
+ "the_1113_683_total_kg": 1113.69
+}
