@@ -1,0 +1,395 @@
+{
+ "faces_exterior": {
+  "1F": {
+   "blk": 95.6952,
+   "conc": 38.7532,
+   "face": 134.4484,
+   "held": 3,
+   "n": 4
+  },
+  "2F": {
+   "blk": 0.0,
+   "conc": 0.0,
+   "face": 0.0,
+   "held": 4,
+   "n": 0
+  },
+  "GF": {
+   "blk": 67.1476,
+   "conc": 29.1524,
+   "face": 96.3,
+   "held": 11,
+   "n": 4
+  }
+ },
+ "faces_owner_interior": {
+  "1F": {
+   "blk": 387.6719,
+   "conc": 39.6975,
+   "face": 427.3694,
+   "held": 13,
+   "n": 30
+  },
+  "2F": {
+   "blk": 70.35,
+   "conc": 9.38,
+   "face": 79.73,
+   "held": 6,
+   "n": 8
+  },
+  "GF": {
+   "blk": 197.4249,
+   "conc": 23.36,
+   "face": 220.7849,
+   "held": 39,
+   "n": 18
+  }
+ },
+ "freelancer": {
+  "dry_interior_line": "none (in his plaster rate)",
+  "exterior_line": "none",
+  "joint_mesh_line": "none",
+  "spatter_under_skirting_m2": 70.7125,
+  "spatter_wet_rooms_kitchens_m2": 433.83,
+  "under_skirting_basis": "282.85 m skirting run x 0.25 m (no formula in the cell: 282.85 / 4)"
+ },
+ "joints_drawing_interior": {
+  "H": {
+   "1F|AT_BAND_EDGE": [
+    44.3979,
+    18
+   ],
+   "1F|HELD": [
+    27.5981,
+    25
+   ],
+   "1F|INSIDE": [
+    110.947,
+    126
+   ],
+   "2F|HELD": [
+    9.6552,
+    13
+   ],
+   "2F|INSIDE": [
+    42.6948,
+    32
+   ],
+   "GF|AT_BAND_EDGE": [
+    26.859,
+    19
+   ],
+   "GF|HELD": [
+    97.0778,
+    75
+   ],
+   "GF|INSIDE": [
+    61.5302,
+    82
+   ]
+  },
+  "V": {
+   "1F|HELD": [
+    0.0,
+    20
+   ],
+   "1F|INSIDE": [
+    148.06,
+    42
+   ],
+   "2F|HELD": [
+    0.0,
+    14
+   ],
+   "2F|INSIDE": [
+    51.1,
+    14
+   ],
+   "GF|HELD": [
+    0.0,
+    42
+   ],
+   "GF|INSIDE": [
+    95.28,
+    25
+   ]
+  }
+ },
+ "joints_exterior": {
+  "H": {
+   "1F|HELD": [
+    9.251,
+    5
+   ],
+   "1F|INSIDE": [
+    40.9805,
+    22
+   ],
+   "2F|HELD": [
+    7.1552,
+    9
+   ],
+   "2F|INSIDE": [
+    19.6948,
+    8
+   ],
+   "GF|HELD": [
+    34.4515,
+    17
+   ],
+   "GF|INSIDE": [
+    45.4385,
+    35
+   ]
+  },
+  "V": {
+   "1F|HELD": [
+    0.0,
+    14
+   ],
+   "1F|INSIDE": [
+    48.8,
+    14
+   ],
+   "2F|HELD": [
+    0.0,
+    8
+   ],
+   "2F|INSIDE": [
+    6.9,
+    2
+   ],
+   "GF|HELD": [
+    0.0,
+    22
+   ],
+   "GF|INSIDE": [
+    66.1,
+    17
+   ]
+  }
+ },
+ "joints_owner_interior": {
+  "H": {
+   "1F|ABOVE_BAND": [
+    120.8593,
+    101
+   ],
+   "1F|AT_BAND_EDGE": [
+    34.4856,
+    43
+   ],
+   "1F|HELD": [
+    27.5981,
+    25
+   ],
+   "2F|ABOVE_BAND": [
+    30.2994,
+    23
+   ],
+   "2F|AT_BAND_EDGE": [
+    9.6954,
+    8
+   ],
+   "2F|HELD": [
+    9.6552,
+    13
+   ],
+   "2F|INSIDE": [
+    2.7,
+    1
+   ],
+   "GF|ABOVE_BAND": [
+    55.7064,
+    62
+   ],
+   "GF|AT_BAND_EDGE": [
+    32.6828,
+    39
+   ],
+   "GF|HELD": [
+    97.0778,
+    75
+   ]
+  },
+  "V": {
+   "1F|HELD": [
+    0.0,
+    20
+   ],
+   "1F|INSIDE": [
+    140.7,
+    42
+   ],
+   "2F|HELD": [
+    0.0,
+    14
+   ],
+   "2F|INSIDE": [
+    46.9,
+    14
+   ],
+   "GF|HELD": [
+    0.0,
+    42
+   ],
+   "GF|INSIDE": [
+    91.25,
+    25
+   ]
+  }
+ },
+ "scope": {
+  "B4-05": "OD-V3B-4 / OD-V3B-5 / OD-V3B-6 / OD-V3B-7 (owner 2026-10-04, Alsenan)",
+  "B9-03": "NOT ANSWERED: no owner rule, drawing note or specification (P7757 / ST7757 text census: no mesh / spatter / plaster note; no finishes specification issued)"
+ },
+ "spatter_totals": {
+  "CLADDING|HELD": {
+   "hi": 72.749795,
+   "lo": 71.68859,
+   "m2": 0.0,
+   "n": 1
+  },
+  "PLASTER|ASSUMED — OWNER-APPROVED": {
+   "hi": 0.0,
+   "lo": 0.0,
+   "m2": 234.9481,
+   "n": 24
+  },
+  "PLASTER|HELD": {
+   "hi": 545.46065,
+   "lo": 489.48105,
+   "m2": 0.0,
+   "n": 13
+  },
+  "SIGMA|ASSUMED — OWNER-APPROVED": {
+   "hi": 0.0,
+   "lo": 0.0,
+   "m2": 132.205,
+   "n": 1
+  },
+  "SIGMA|DRAWING-CONFIRMED": {
+   "hi": 0.0,
+   "lo": 0.0,
+   "m2": 238.605528,
+   "n": 2
+  },
+  "SIGMA|HELD": {
+   "hi": 494.446007,
+   "lo": 455.583007,
+   "m2": 0.0,
+   "n": 2
+  },
+  "TILE|ASSUMED — OWNER-APPROVED": {
+   "hi": 0.0,
+   "lo": 0.0,
+   "m2": 307.9616,
+   "n": 11
+  },
+  "TILE|HELD": {
+   "hi": 0.0,
+   "lo": 0.0,
+   "m2": 0.0,
+   "n": 6
+  }
+ },
+ "spatter_villa": {
+  "candidate_line": "NO LINE (B4-05 NOT_IMPLEMENTED in BOQ_FAMILY_MASTER 1.15.0)",
+  "carried_by_another_host": 18,
+  "determinate_m2": 913.7202,
+  "held_blank_hosts": 10,
+  "held_bounded_m2": [
+   1016.7526,
+   1112.6565
+  ],
+  "hosts": 60
+ },
+ "steps_drawing_interior": {
+  "1F|HELD": [
+   0.0,
+   9
+  ],
+  "1F|INSIDE": [
+   8.82,
+   22
+  ],
+  "2F|HELD": [
+   0.0,
+   1
+  ],
+  "2F|INSIDE": [
+   0.7,
+   2
+  ],
+  "GF|HELD": [
+   0.0,
+   23
+  ],
+  "GF|INSIDE": [
+   9.07,
+   24
+  ]
+ },
+ "steps_exterior": {
+  "1F|HELD": [
+   0.0,
+   1
+  ],
+  "2F|HELD": [
+   0.0,
+   1
+  ],
+  "GF|HELD": [
+   0.0,
+   3
+  ],
+  "GF|INSIDE": [
+   2.23,
+   6
+  ]
+ },
+ "steps_owner_interior": {
+  "1F|ABOVE_BAND": [
+   0.0,
+   22
+  ],
+  "1F|HELD": [
+   0.0,
+   9
+  ],
+  "2F|ABOVE_BAND": [
+   0.0,
+   2
+  ],
+  "2F|HELD": [
+   0.0,
+   1
+  ],
+  "GF|ABOVE_BAND": [
+   0.0,
+   24
+  ],
+  "GF|HELD": [
+   0.0,
+   23
+  ]
+ },
+ "v_joints_upper_bound_m_owner": {
+  "EXT|1F": 41.9,
+  "EXT|GF": 32.0,
+  "INT|1F": 80.4,
+  "INT|2F": 6.7,
+  "INT|GF": 58.4
+ },
+ "v_upper_bound_joints": 62,
+ "walls_in_runs": 69,
+ "walls_unknown": [
+  "GF-W30",
+  "GF-W37",
+  "GF-H01",
+  "GF-H02",
+  "1F-W25",
+  "1F-W00/W01 BAY-ENDS",
+  "GF P-GF-05 ABOVE-LINTEL"
+ ]
+}

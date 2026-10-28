@@ -1,0 +1,141 @@
+floor,wall_id,run,group,side,finish,state,face_m2,concrete_m2,block_m2,held
+GF,GF-W00,GF|WB-FL0001-FL0002#1,EXTERNAL,INT,PLASTER,HELD,,,,finished band not established
+GF,GF-W01,GF|WB-FL0001-FL0002#2,EXTERNAL,INT,PLASTER,HELD,,,,block top over NONE not established (0.0026 m)
+GF,GF-W02,GF|WB-FL0007-FL0008#1,INTERNAL,INT-A,PLASTER,HELD,,,,finished band not established
+GF,GF-W02,GF|WB-FL0007-FL0008#1,INTERNAL,INT-B,PLASTER,HELD,,,,finished band not established
+GF,GF-W03,GF|WB-FL0007-FL0008#2,INTERNAL,INT-A,PLASTER,HELD,,,,block top over BM-GF-057 not established (0.0001 m); block top over BM-GF-057 not established (2.6494 m); block top over BM-GF-057 not established (0.0005 m)
+GF,GF-W03,GF|WB-FL0007-FL0008#2,INTERNAL,INT-B,PLASTER,HELD,,,,block top over BM-GF-057 not established (0.0001 m); block top over BM-GF-057 not established (2.6494 m); block top over BM-GF-057 not established (0.0005 m)
+GF,GF-W04,GF|WB-FL0017-FL0018#1,EXTERNAL,INT,PLASTER,HELD,,,,finished band not established
+GF,GF-W05,GF|WB-FL0017-FL0018#2,EXTERNAL,INT,PLASTER,MEASURED,11.315000,4.380000,6.935000,
+GF,GF-W06,GF|WB-FL0020-FL0021,EXTERNAL,INT,PLASTER,HELD,,,,finished band not established
+GF,GF-W07,GF|WB-FL0023-FL0024,EXTERNAL,INT,PLASTER,MEASURED,7.300000,3.285000,4.015000,
+GF,GF-W08,GF|WB-FL0025-FL0026,INTERNAL,INT-A,PLASTER,HELD,,,,block top over GF-077 not established (2.5000 m); block top over BM-GF-022 not established (0.0000 m); block top over BM-GF-022 not established (1.7991 m); block top over BM-GF-022 not established (0.0009 m)
+GF,GF-W08,GF|WB-FL0025-FL0026,INTERNAL,INT-B,PLASTER,HELD,,,,block top over GF-077 not established (2.5000 m); block top over BM-GF-022 not established (0.0000 m); block top over BM-GF-022 not established (1.7991 m); block top over BM-GF-022 not established (0.0009 m)
+GF,GF-W09,GF|WB-FL0032-FL0033,INTERNAL,INT-A,PLASTER,HELD,,,,block top over BM-GF-027 not established (1.7989 m); block top over BM-GF-027 not established (0.0011 m)
+GF,GF-W09,GF|WB-FL0032-FL0033,INTERNAL,INT-B,PLASTER,HELD,,,,block top over BM-GF-027 not established (1.7989 m); block top over BM-GF-027 not established (0.0011 m)
+GF,GF-W10,GF|WB-FL0041-FL0042,EXTERNAL,INT,PLASTER,HELD,,,,block top over BM-GF-015 not established (2.4997 m); block top over BM-GF-015 not established (0.0003 m); block top over BM-GF-055 not established (3.4690 m); block top over BM-GF-055 not established (0.0010 m); block top over BM-GF-055 not established (3.3495 m); block top over BM-GF-055 not established (0.0005 m); block top over BM-GF-046 not established (3.5483 m); block top over GF-011 not established (0.0017 m)
+GF,GF-W11,GF|WB-FL0055-FL0056,EXTERNAL,INT,PLASTER,MEASURED,28.105000,2.555000,25.550000,
+GF,GF-W12,GF|WB-FL0057-FL0058,EXTERNAL,INT,PLASTER,HELD,,,,block top over GF-081 not established (0.4500 m)
+GF,GF-W13,GF|WB-FL0068-FL0069,INTERNAL,INT-A,PLASTER,HELD,,,,block top over BM-GF-023 not established (0.0008 m); block top over BM-GF-023 not established (0.6992 m)
+GF,GF-W13,GF|WB-FL0068-FL0069,INTERNAL,INT-B,PLASTER,HELD,,,,block top over BM-GF-023 not established (0.0008 m); block top over BM-GF-023 not established (0.6992 m)
+GF,GF-W14,GF|WB-FL0076-FL0077,INTERNAL,INT-A,PLASTER,HELD,,,,block top over BM-GF-026 not established (1.2000 m); block top over BM-GF-025 not established (0.0005 m); block top over BM-GF-025 not established (2.6995 m)
+GF,GF-W14,GF|WB-FL0076-FL0077,INTERNAL,INT-B,PLASTER,HELD,,,,block top over BM-GF-026 not established (1.2000 m); block top over BM-GF-025 not established (0.0005 m); block top over BM-GF-025 not established (2.6995 m)
+GF,GF-W15,GF|WB-FL0078-FL0079,EXTERNAL,INT,PLASTER,MEASURED,31.390000,5.475000,25.915000,
+GF,GF-W16,GF|WB-FL0081-FL0082,EXTERNAL,INT,PLASTER,HELD,,,,block top over GF-141 not established (2.9489 m)
+GF,GF-W17,GF|WB-FL0083-FL0084,EXTERNAL,INT,PLASTER,HELD,,,,finished band not established
+GF,GF-W18,GF|WB-FL0097-FL0098,EXTERNAL,INT,PLASTER,HELD,,,,finished band not established
+GF,GF-W19,GF|WB-FL0059-FL0060,INTERNAL,INT-A,PLASTER,MEASURED,7.300000,0.000000,7.300000,
+GF,GF-W19,GF|WB-FL0059-FL0060,INTERNAL,INT-B,PLASTER,MEASURED,7.300000,0.000000,7.300000,
+GF,GF-W20,GF|WB-FL0063-FL0064#2,INTERNAL,INT-A,PLASTER,HELD,,,,block top over GF-016 not established (0.9678 m)
+GF,GF-W20,GF|WB-FL0063-FL0064#2,INTERNAL,INT-B,PLASTER,HELD,,,,block top over GF-016 not established (0.9678 m)
+GF,GF-W21,GF|WB-FL0063-FL0064#1,INTERNAL,INT-A,PLASTER,MEASURED,3.737516,0.000000,3.737516,
+GF,GF-W21,GF|WB-FL0063-FL0064#1,INTERNAL,INT-B,PLASTER,MEASURED,3.737516,0.000000,3.737516,
+GF,GF-W22,GF|WB-FL0070-FL0072,INTERNAL,INT-A,PLASTER,MEASURED,10.538543,0.000000,10.538543,
+GF,GF-W22,GF|WB-FL0070-FL0072,INTERNAL,INT-B,PLASTER,MEASURED,10.538543,0.000000,10.538543,
+GF,GF-W23,GF|WB-FL0086-FL0087,INTERNAL,INT-A,PLASTER,HELD,,,,finished band not established
+GF,GF-W23,GF|WB-FL0086-FL0087,INTERNAL,INT-B,PLASTER,HELD,,,,finished band not established
+GF,GF-W24,GF|WB-FL0089-FL0090,INTERNAL,INT-A,PLASTER,HELD,,,,finished band not established
+GF,GF-W24,GF|WB-FL0089-FL0090,INTERNAL,INT-B,PLASTER,HELD,,,,finished band not established
+GF,GF-W25,GF|WB-FL0092-FL0093,INTERNAL,INT-A,PLASTER,HELD,,,,finished band not established
+GF,GF-W25,GF|WB-FL0092-FL0093,INTERNAL,INT-B,PLASTER,HELD,,,,finished band not established
+GF,GF-W26,GF|WB-FL0095-FL0096,INTERNAL,INT-A,PLASTER,MEASURED,16.425000,0.182500,16.242500,
+GF,GF-W26,GF|WB-FL0095-FL0096,INTERNAL,INT-B,PLASTER,MEASURED,16.425000,0.182500,16.242500,
+GF,GF-W27,GF|WB-FL0010-FL0011,INTERNAL,INT-A,PLASTER,HELD,,,,finished band not established
+GF,GF-W27,GF|WB-FL0010-FL0011,INTERNAL,INT-B,PLASTER,HELD,,,,finished band not established
+GF,GF-W28,GF|WB-FL0030-FL0031,INTERNAL,INT-A,PLASTER,MEASURED,23.824320,3.650000,20.174320,
+GF,GF-W28,GF|WB-FL0030-FL0031,INTERNAL,INT-B,PLASTER,MEASURED,23.824320,3.650000,20.174320,
+GF,GF-W29,GF|WB-FL0038-FL0039,INTERNAL,INT-A,PLASTER,MEASURED,4.927500,0.000000,4.927500,
+GF,GF-W29,GF|WB-FL0038-FL0039,INTERNAL,INT-B,PLASTER,MEASURED,4.927500,0.000000,4.927500,
+GF,GF-W31,GF|WB-FL0100-FL0101,INTERNAL,INT-A,PLASTER,HELD,,,,block top over GF-016 not established (1.0311 m)
+GF,GF-W31,GF|WB-FL0100-FL0101,INTERNAL,INT-B,PLASTER,HELD,,,,block top over GF-016 not established (1.0311 m)
+GF,GF-W32,GF|WB-FL0048-FL0049,INTERNAL,INT-A,PLASTER,HELD,,,,block top over GF-015 not established (0.3105 m); block top over GF-016 not established (0.4806 m)
+GF,GF-W32,GF|WB-FL0048-FL0049,INTERNAL,INT-B,PLASTER,HELD,,,,block top over GF-015 not established (0.3105 m); block top over GF-016 not established (0.4806 m)
+GF,GF-W33,GF|WB-FL0046-FL0047,INTERNAL,INT-A,PLASTER,MEASURED,4.584550,0.000000,4.584550,
+GF,GF-W33,GF|WB-FL0046-FL0047,INTERNAL,INT-B,PLASTER,MEASURED,4.584550,0.000000,4.584550,
+GF,GF-W34,GF|WB-FL0102-FL0103,INTERNAL,INT-A,PLASTER,HELD,,,,block top over GF-015 not established (1.7231 m)
+GF,GF-W34,GF|WB-FL0102-FL0103,INTERNAL,INT-B,PLASTER,HELD,,,,block top over GF-015 not established (1.7231 m)
+1F,1F-W00,1F|WB-FL0041-FL0042#1,EXTERNAL,INT,PLASTER,MEASURED,25.362069,3.350000,22.012069,
+1F,1F-W01,1F|WB-FL0041-FL0042#2,EXTERNAL,INT,PLASTER,MEASURED,3.252069,0.502500,2.749569,
+1F,1F-W02,1F|WB-FL0059-FL0061,INTERNAL,INT-A,PLASTER,MEASURED,6.365000,4.020000,2.345000,
+1F,1F-W02,1F|WB-FL0059-FL0061,INTERNAL,INT-B,PLASTER,MEASURED,6.365000,4.020000,2.345000,
+1F,1F-W03,1F|WB-FL0068-FL0070,INTERNAL,INT-A,PLASTER,MEASURED,17.085000,4.020000,13.065000,
+1F,1F-W03,1F|WB-FL0068-FL0070,INTERNAL,INT-B,PLASTER,MEASURED,17.085000,4.020000,13.065000,
+1F,1F-W04,1F|WB-FL0074-FL0076,EXTERNAL,INT,PLASTER,HELD,,,,block top over BM-1F-026 not established (0.0996 m); block top over BM-1F-032 not established (0.8004 m); block top over 1F-016 not established (0.0004 m); block top over BM-1F-006 not established (2.6996 m)
+1F,1F-W05,1F|WB-FL0082-FL0083,EXTERNAL,INT,PLASTER,HELD,,,,block top over BM-1F-031 not established (0.0000 m); block top over BM-1F-031 not established (2.3000 m); block top over BM-1F-031 not established (3.6510 m)
+1F,1F-W06,1F|WB-FL0002-FL0003,EXTERNAL,INT,PLASTER,MEASURED,63.884500,8.710000,55.174500,
+1F,1F-W07,1F|WB-FL0016-FL0018,INTERNAL,INT-A,PLASTER,MEASURED,11.959500,1.172500,10.787000,
+1F,1F-W07,1F|WB-FL0016-FL0018,INTERNAL,INT-B,PLASTER,MEASURED,11.959500,1.172500,10.787000,
+1F,1F-W08,1F|WB-FL0020-FL0021,EXTERNAL,INT,PLASTER,MEASURED,14.740000,2.680000,12.060000,
+1F,1F-W09,1F|WB-FL0024-FL0025,INTERNAL,INT-A,PLASTER,MEASURED,6.365000,0.335000,6.030000,
+1F,1F-W09,1F|WB-FL0024-FL0025,INTERNAL,INT-B,PLASTER,MEASURED,6.365000,0.335000,6.030000,
+1F,1F-W10,1F|WB-FL0030-FL0031,EXTERNAL,INT,PLASTER,HELD,,,,block top over BM-1F-001 not established (0.0005 m); block top over BM-1F-001 not established (2.4986 m); block top over BM-1F-001 not established (0.0009 m); block top over BM-1F-002 not established (3.4696 m); block top over BM-1F-002 not established (0.0004 m); block top over BM-1F-002 not established (3.3492 m); block top over BM-1F-002 not established (0.0008 m); block top over BM-1F-002 not established (3.5497 m); block top over BM-1F-002 not established (0.0003 m)
+1F,1F-W11,1F|WB-FL0006-FL0007,INTERNAL,INT-A,PLASTER,HELD,,,,block top over BM-1F-031 not established (0.0993 m); block top over BM-1F-031 not established (0.0007 m); block top over 1F-073 not established (0.1579 m); block top over 1F-073 not established (3.9182 m)
+1F,1F-W11,1F|WB-FL0006-FL0007,INTERNAL,INT-B,PLASTER,HELD,,,,block top over BM-1F-031 not established (0.0993 m); block top over BM-1F-031 not established (0.0007 m); block top over 1F-073 not established (0.1579 m); block top over 1F-073 not established (3.9182 m)
+1F,1F-W12,1F|WB-FL0011-FL0012,INTERNAL,INT-A,PLASTER,MEASURED,12.478750,0.000000,12.478750,
+1F,1F-W12,1F|WB-FL0011-FL0012,INTERNAL,INT-B,PLASTER,MEASURED,12.478750,0.000000,12.478750,
+1F,1F-W13,1F|WB-FL0013-FL0014,INTERNAL,INT-A,PLASTER,HELD,,,,block top over 1F-063 not established (1.4550 m); block top over BM-1F-010 not established (0.0004 m); block top over BM-1F-010 not established (0.1996 m); block top over 1F-065 not established (1.5970 m); block top over BM-1F-027 not established (0.5517 m); block top over 1F-076 not established (0.7635 m); block top over 1F-077 not established (2.8934 m); block top over 1F-076 not established (0.7134 m); block top over BM-1F-017 not established (0.0510 m)
+1F,1F-W13,1F|WB-FL0013-FL0014,INTERNAL,INT-B,PLASTER,HELD,,,,block top over 1F-063 not established (1.4550 m); block top over BM-1F-010 not established (0.0004 m); block top over BM-1F-010 not established (0.1996 m); block top over 1F-065 not established (1.5970 m); block top over BM-1F-027 not established (0.5517 m); block top over 1F-076 not established (0.7635 m); block top over 1F-077 not established (2.8934 m); block top over 1F-076 not established (0.7134 m); block top over BM-1F-017 not established (0.0510 m)
+1F,1F-W14 + 1F-W15,1F|WB-FL0022-FL0023,INTERNAL,INT-A,PLASTER,MEASURED,13.620149,0.167500,13.452649,
+1F,1F-W14 + 1F-W15,1F|WB-FL0022-FL0023,INTERNAL,INT-B,PLASTER,MEASURED,13.620149,0.167500,13.452649,
+1F,1F-W16,1F|WB-FL0027-FL0028#1,INTERNAL,INT-A,PLASTER,MEASURED,18.157000,0.000000,18.157000,
+1F,1F-W16,1F|WB-FL0027-FL0028#1,INTERNAL,INT-B,PLASTER,MEASURED,18.157000,0.000000,18.157000,
+1F,1F-W17,1F|WB-FL0043-FL0044,INTERNAL,INT-A,PLASTER,HELD,,,,block top over 1F-077 not established (0.4608 m); block top over 1F-076 not established (0.0035 m); block top over BM-1F-019 not established (0.2512 m); block top over 1F-057 not established (1.0088 m); block top over BM-1F-014 not established (0.2018 m); block top over 1F-025 not established (0.1740 m)
+1F,1F-W17,1F|WB-FL0043-FL0044,INTERNAL,INT-B,PLASTER,HELD,,,,block top over 1F-077 not established (0.4608 m); block top over 1F-076 not established (0.0035 m); block top over BM-1F-019 not established (0.2512 m); block top over 1F-057 not established (1.0088 m); block top over BM-1F-014 not established (0.2018 m); block top over 1F-025 not established (0.1740 m)
+1F,1F-W18,1F|WB-FL0046-FL0047,INTERNAL,INT-A,PLASTER,HELD,,,,block top over 1F-076 not established (0.4642 m); block top over BM-1F-019 not established (0.2512 m); block top over 1F-057 not established (0.9944 m); block top over BM-1F-025 not established (0.0151 m); block top over BM-1F-015 not established (3.4746 m); block top over BM-1F-015 not established (0.0004 m)
+1F,1F-W18,1F|WB-FL0046-FL0047,INTERNAL,INT-B,PLASTER,HELD,,,,block top over 1F-076 not established (0.4642 m); block top over BM-1F-019 not established (0.2512 m); block top over 1F-057 not established (0.9944 m); block top over BM-1F-025 not established (0.0151 m); block top over BM-1F-015 not established (3.4746 m); block top over BM-1F-015 not established (0.0004 m)
+1F,1F-W19,1F|WB-FL0050-FL0051,INTERNAL,INT-A,PLASTER,MEASURED,6.030000,0.000000,6.030000,
+1F,1F-W19,1F|WB-FL0050-FL0051,INTERNAL,INT-B,PLASTER,MEASURED,6.030000,0.000000,6.030000,
+1F,1F-W20,1F|WB-FL0054-FL0055#1,INTERNAL,INT-A,PLASTER,MEASURED,14.656250,0.000000,14.656250,
+1F,1F-W20,1F|WB-FL0054-FL0055#1,INTERNAL,INT-B,PLASTER,MEASURED,14.656250,0.000000,14.656250,
+1F,1F-W20,1F|WB-FL0054-FL0055#2,INTERNAL,INT-A,PLASTER,MEASURED,6.030000,0.167500,5.862500,
+1F,1F-W20,1F|WB-FL0054-FL0055#2,INTERNAL,INT-B,PLASTER,MEASURED,6.030000,0.167500,5.862500,
+1F,1F-W21,1F|WB-FL0059-FL0060,INTERNAL,INT-A,PLASTER,MEASURED,6.532500,0.000000,6.532500,
+1F,1F-W21,1F|WB-FL0059-FL0060,INTERNAL,INT-B,PLASTER,MEASURED,6.532500,0.000000,6.532500,
+1F,1F-W22,1F|WB-FL0063-FL0065,INTERNAL,INT-A,PLASTER,MEASURED,17.001250,0.000000,17.001250,
+1F,1F-W22,1F|WB-FL0063-FL0065,INTERNAL,INT-B,PLASTER,MEASURED,17.001250,0.000000,17.001250,
+1F,1F-W23,1F|WB-FL0074-FL0075,INTERNAL,INT-A,PLASTER,MEASURED,23.785000,2.345000,21.440000,
+1F,1F-W23,1F|WB-FL0074-FL0075,INTERNAL,INT-B,PLASTER,MEASURED,23.785000,2.345000,21.440000,
+1F,1F-W24,1F|WB-FL0078-FL0079,INTERNAL,INT-A,PLASTER,HELD,,,,block top over 1F-094 not established (1.1423 m); block top over BM-1F-021 not established (0.0013 m); block top over BM-1F-021 not established (0.2490 m); block top over 1F-073 not established (1.0574 m)
+1F,1F-W24,1F|WB-FL0078-FL0079,INTERNAL,INT-B,PLASTER,HELD,,,,block top over 1F-094 not established (1.1423 m); block top over BM-1F-021 not established (0.0013 m); block top over BM-1F-021 not established (0.2490 m); block top over 1F-073 not established (1.0574 m)
+2F,2F-W00,2F|WB-FL0004-FL0005,INTERNAL,INT-A,PLASTER,MEASURED,6.365000,0.335000,6.030000,
+2F,2F-W00,2F|WB-FL0004-FL0005,INTERNAL,INT-B,PLASTER,MEASURED,6.365000,0.335000,6.030000,
+2F,2F-W01,2F|WB-FL0006-FL0007,INTERNAL,INT-A,PLASTER,MEASURED,6.365000,0.335000,6.030000,
+2F,2F-W01,2F|WB-FL0006-FL0007,INTERNAL,INT-B,PLASTER,MEASURED,6.365000,0.335000,6.030000,
+2F,2F-W02,2F|WB-FL0010-FL0011,EXTERNAL,INT,PLASTER,HELD,,,,block top over BM-2F-001 not established (0.0005 m); block top over BM-2F-001 not established (2.4994 m); block top over BM-2F-001 not established (0.0001 m); block top over BM-2F-002 not established (0.0003 m); block top over BM-2F-002 not established (3.4697 m); block top over BM-2F-015 not established (0.0004 m); block top over BM-2F-015 not established (1.0296 m)
+2F,2F-W03,2F|WB-FL0002-FL0003,EXTERNAL,INT,PLASTER,HELD,,,,block top over BM-2F-016 not established (0.1007 m); block top over BM-2F-016 not established (0.0000 m); block top over BM-2F-004 not established (2.4994 m); block top over BM-2F-018 not established (0.2004 m); block top over BM-2F-005 not established (1.8002 m); block top over BM-2F-017 not established (0.1996 m); block top over BM-2F-017 not established (0.0000 m); block top over BM-2F-006 not established (3.0000 m); block top over BM-2F-011 not established (0.0000 m); block top over BM-2F-011 not established (0.0997 m)
+2F,2F-W04,2F|WB-FL0020-FL0021,EXTERNAL,INT,PLASTER,HELD,,,,block top over BM-2F-015 not established (0.1002 m)
+2F,2F-W05,2F|WB-FL0024-FL0026,INTERNAL,INT-A,PLASTER,HELD,,,,block top over BM-2F-017 not established (1.2497 m); block top over BM-2F-017 not established (0.0003 m); block top over BM-2F-009 not established (1.0000 m)
+2F,2F-W05,2F|WB-FL0024-FL0026,INTERNAL,INT-B,PLASTER,HELD,,,,block top over BM-2F-017 not established (1.2497 m); block top over BM-2F-017 not established (0.0003 m); block top over BM-2F-009 not established (1.0000 m)
+2F,2F-W06,2F|WB-FL0031-FL0032,INTERNAL,INT-A,PLASTER,MEASURED,17.085000,4.020000,13.065000,
+2F,2F-W06,2F|WB-FL0031-FL0032,INTERNAL,INT-B,PLASTER,MEASURED,17.085000,4.020000,13.065000,
+2F,2F-W07,2F|WB-FL0035-FL0036,EXTERNAL,INT,PLASTER,HELD,,,,block top over BM-2F-016 not established (3.0249 m); block top over BM-2F-016 not established (0.0001 m); block top over BM-2F-007 not established (2.6993 m); block top over BM-2F-007 not established (0.0007 m)
+2F,2F-W08,2F|WB-FL0024-FL0025,INTERNAL,INT-A,PLASTER,MEASURED,10.050000,0.000000,10.050000,
+2F,2F-W08,2F|WB-FL0024-FL0025,INTERNAL,INT-B,PLASTER,MEASURED,10.050000,0.000000,10.050000,
+GF,GF-W35,GF|ARCBAND|D2:269:0|D2:270:0,EXTERNAL,INT,PLASTER,HELD,,,,finished band not established
+GF,GF-W36,GF|WB-FL0094-FL0096,EXTERNAL,INT,PLASTER,HELD,,,,block top over GF-112 not established (0.5000 m)
+GF,GF-W00,GF|WB-FL0001-FL0002#1,EXTERNAL,EXT,SIGMA,HELD,,,,finished band not established
+GF,GF-W01,GF|WB-FL0001-FL0002#2,EXTERNAL,EXT,SIGMA,HELD,,,,block top over NONE not established (0.0026 m)
+GF,GF-W04,GF|WB-FL0017-FL0018#1,EXTERNAL,EXT,SIGMA,HELD,,,,finished band not established
+GF,GF-W05,GF|WB-FL0017-FL0018#2,EXTERNAL,EXT,SIGMA,MEASURED,13.950000,6.160000,7.790000,
+GF,GF-W06,GF|WB-FL0020-FL0021,EXTERNAL,EXT,SIGMA,HELD,,,,finished band not established
+GF,GF-W07,GF|WB-FL0023-FL0024,EXTERNAL,EXT,SIGMA,MEASURED,9.000000,4.542500,4.457500,
+GF,GF-W10,GF|WB-FL0041-FL0042,EXTERNAL,EXT,SIGMA,HELD,,,,block top over BM-GF-015 not established (2.4997 m); block top over BM-GF-015 not established (0.0003 m); block top over BM-GF-055 not established (3.4690 m); block top over BM-GF-055 not established (0.0010 m); block top over BM-GF-055 not established (3.3495 m); block top over BM-GF-055 not established (0.0005 m); block top over BM-GF-046 not established (3.5483 m); block top over GF-011 not established (0.0017 m)
+GF,GF-W11,GF|WB-FL0055-FL0056,EXTERNAL,EXT,SIGMA,MEASURED,34.650000,8.400000,26.250000,
+GF,GF-W12,GF|WB-FL0057-FL0058,EXTERNAL,EXT,SIGMA,HELD,,,,block top over GF-081 not established (0.4500 m)
+GF,GF-W15,GF|WB-FL0078-FL0079,EXTERNAL,EXT,SIGMA,MEASURED,38.700000,10.049920,28.650080,
+GF,GF-W16,GF|WB-FL0081-FL0082,EXTERNAL,EXT,SIGMA,HELD,,,,block top over GF-141 not established (2.9489 m)
+GF,GF-W17,GF|WB-FL0083-FL0084,EXTERNAL,EXT,SIGMA,HELD,,,,finished band not established
+GF,GF-W18,GF|WB-FL0097-FL0098,EXTERNAL,EXT,SIGMA,HELD,,,,finished band not established
+1F,1F-W00,1F|WB-FL0041-FL0042#1,EXTERNAL,EXT,SIGMA,MEASURED,31.797221,9.128075,22.669146,
+1F,1F-W01,1F|WB-FL0041-FL0042#2,EXTERNAL,EXT,SIGMA,MEASURED,4.077221,1.245575,2.831646,
+1F,1F-W04,1F|WB-FL0074-FL0076,EXTERNAL,EXT,SIGMA,HELD,,,,block top over BM-1F-026 not established (0.0996 m); block top over BM-1F-032 not established (0.8004 m); block top over 1F-016 not established (0.0004 m); block top over BM-1F-006 not established (2.6996 m)
+1F,1F-W05,1F|WB-FL0082-FL0083,EXTERNAL,EXT,SIGMA,HELD,,,,block top over BM-1F-031 not established (0.0000 m); block top over BM-1F-031 not established (2.3000 m); block top over BM-1F-031 not established (3.6510 m)
+1F,1F-W06,1F|WB-FL0002-FL0003,EXTERNAL,EXT,SIGMA,MEASURED,80.094000,22.319567,57.774433,
+1F,1F-W08,1F|WB-FL0020-FL0021,EXTERNAL,EXT,SIGMA,MEASURED,18.480000,6.060000,12.420000,
+1F,1F-W10,1F|WB-FL0030-FL0031,EXTERNAL,EXT,SIGMA,HELD,,,,block top over BM-1F-001 not established (0.0005 m); block top over BM-1F-001 not established (2.4986 m); block top over BM-1F-001 not established (0.0009 m); block top over BM-1F-002 not established (3.4696 m); block top over BM-1F-002 not established (0.0004 m); block top over BM-1F-002 not established (3.3492 m); block top over BM-1F-002 not established (0.0008 m); block top over BM-1F-002 not established (3.5497 m); block top over BM-1F-002 not established (0.0003 m)
+2F,2F-W02,2F|WB-FL0010-FL0011,EXTERNAL,EXT,SIGMA,HELD,,,,block top over BM-2F-001 not established (0.0005 m); block top over BM-2F-001 not established (2.4994 m); block top over BM-2F-001 not established (0.0001 m); block top over BM-2F-002 not established (0.0003 m); block top over BM-2F-002 not established (3.4697 m); block top over BM-2F-015 not established (0.0004 m); block top over BM-2F-015 not established (1.0296 m)
+2F,2F-W03,2F|WB-FL0002-FL0003,EXTERNAL,EXT,SIGMA,HELD,,,,block top over BM-2F-016 not established (0.1007 m); block top over BM-2F-016 not established (0.0000 m); block top over BM-2F-004 not established (2.4994 m); block top over BM-2F-018 not established (0.2004 m); block top over BM-2F-005 not established (1.8002 m); block top over BM-2F-017 not established (0.1996 m); block top over BM-2F-017 not established (0.0000 m); block top over BM-2F-006 not established (3.0000 m); block top over BM-2F-011 not established (0.0000 m); block top over BM-2F-011 not established (0.0997 m)
+2F,2F-W04,2F|WB-FL0020-FL0021,EXTERNAL,EXT,SIGMA,HELD,,,,block top over BM-2F-015 not established (0.1002 m)
+2F,2F-W07,2F|WB-FL0035-FL0036,EXTERNAL,EXT,SIGMA,HELD,,,,block top over BM-2F-016 not established (3.0249 m); block top over BM-2F-016 not established (0.0001 m); block top over BM-2F-007 not established (2.6993 m); block top over BM-2F-007 not established (0.0007 m)
+GF,GF-W35,GF|ARCBAND|D2:269:0|D2:270:0,EXTERNAL,EXT,SIGMA,HELD,,,,finished band not established
+GF,GF-W36,GF|WB-FL0094-FL0096,EXTERNAL,EXT,SIGMA,HELD,,,,block top over GF-112 not established (0.5000 m)
