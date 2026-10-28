@@ -97,3 +97,16 @@ def test_edge_reconciliation_to_t162_closes():
     no_sill = sum(float(p.split("-")[-1]) for r in rec for p in r["cause"].split("; ") if "no sill arris" in p)
     assert s["t162_known_part_same_openings_ml"] + jambs - no_sill == pytest.approx(s["t313_windows_measured_ml"],
                                                                                     abs=1e-6)
+
+
+def test_floor_level_window_thresholds_in_their_reveal_line_only():
+    fam = _rows("FAMILY_SEARCH_T313.csv")
+    led = _rows("REVEAL_LEDGER_T313.csv")
+    for w in ("W15", "W16", "W25", "W27"):
+        codes = {r["item_code"] for r in fam if r["opening"] == w}
+        assert not codes & {"ARCH.THRESHOLD", "FIN.MARBLE.THRESHOLD", "FIN.FLOOR.PORCELAIN"}
+        thr = [r for r in led if r["opening"] == w and r["component"] == "THRESHOLD"]
+        assert len(thr) == 1 and thr[0]["line_id"] in {r["line_id"] for r in fam
+                                                       if r["opening"] == w and r["item_code"] == "ARCH.WINDOW_REVEAL"}
+    # every non-bound hit is named as another physical element, never left without a role
+    assert all(r["role"].startswith(("BOUND", "OTHER ELEMENT")) for r in fam)

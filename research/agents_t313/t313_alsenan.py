@@ -127,10 +127,14 @@ DOOR_RE = re.compile(r"(DOOR-(?:GF|1F|2F)-[0-9a-f]{8})")
 
 
 def family_search(lines, inv):
-    """every candidate line of ANY item family tied to a census opening by its floor + engine OP id (room / element id)
-    or by the engine door ref; -> {census id: [hit]} (ids, codes, states and quantities only)."""
-    by_op, by_ref = {}, {}
+    """every candidate line of ANY item family tied to a census opening by its floor + engine OP id (room / element id),
+    by the engine door ref, or (strip lines without an opening id) by a source entity handle of the census symbol
+    (T-249 HANDLES); -> {census id: [hit]}
+    (ids, codes, states and quantities only)."""
+    by_op, by_ref, by_h = {}, {}, {}
     for r in inv:
+        for hd in r.get("HANDLES", "").split():
+            by_h[hd.upper()] = r["ID"]
         for tok in r["ENGINE_REF"].replace("/", " ").split():
             if OP_RE.fullmatch(tok):
                 by_op[(r["FLOOR"], tok)] = r["ID"]
@@ -142,6 +146,12 @@ def family_search(lines, inv):
         text = " ".join(str(loc.get(k) or "") for k in ("room_id", "element_id"))
         cids = {by_op[(loc.get("floor"), m)] for m in OP_RE.findall(text) if (loc.get("floor"), m) in by_op}
         cids |= {by_ref[m] for m in DOOR_RE.findall(text) if m in by_ref}
+        if "-STRIP-" in str(loc.get("room_id") or "") and not OP_RE.findall(text):
+            # an opening strip line with no engine opening id (door closure / unattributed strip): tie it by the
+            # census symbol handles among its source entities (room lines also list window handles as boundaries,
+            # so the handle tie is used for strip lines only)
+            ents = (((x.get("source") or {}).get("entities") or {}).get("entities") or [])
+            cids |= {by_h[str(e.get("handle", "")).upper()] for e in ents if str(e.get("handle", "")).upper() in by_h}
         br = x.get("bounded_range") or None
         calc = (x.get("calculation") or {})
         for cid in sorted(cids):

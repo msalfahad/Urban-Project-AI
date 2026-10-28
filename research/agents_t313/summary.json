@@ -2,8 +2,8 @@
  "identity": {
   "plan": "ab54dd55",
   "rooms": "06ac74eb",
-  "record": "dabb7c18",
-  "record_lines": 1696
+  "record": "097a80b6",
+  "record_lines": 3705
  },
  "openings": 59,
  "rows": 234,
@@ -328,7 +328,7 @@
  "missing_scope_m2": 13.637,
  "family_lines_on_openings": {
   "ARCH.PASSAGE": 2,
-  "ARCH.THRESHOLD": 1,
+  "ARCH.THRESHOLD": 8,
   "ARCH.WINDOW": 27,
   "ARCH.WINDOW_REVEAL": 27,
   "DOOR.EXTERNAL.ALUMINIUM": 2,

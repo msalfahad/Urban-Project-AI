@@ -10,7 +10,9 @@ Physical elements (ERS s.2.1), per opening and per SIDE of the wall, each measur
   depth x width, the external sill depth x width as its own row. Its EDGE (arris) length = 2 h + w (+ w sill), the
   quantity the facade corners line carries (T-162 r2 opening_reveal_ml); the reveal SURFACE is never a facade face.
 - DOOR / GATE (UP-FIN-PLASTER-001, OWNER_APPROVED): ONE reveal through the wall thickness: 2 x t x h + t x w (head);
-  a door has NO sill reveal (refused). It is owned once (never split into two room finishes).
+  a door has NO sill reveal (refused). It is owned once (never split into two room finishes). r2: the candidate
+  already carries it in FIN.PLASTER 'door jambs and head' where the engine has the opening: bind it there
+  (`bind_lines` + `reconcile_line`); `book_missing` refuses to count a component another family carries.
 - ARCH: jambs 2 x t x springing height + head t x DEVELOPED arc length (T-238); an undeveloped / undrawn arch is HELD.
 
 Depth source is MEASURED (wall face to frame line on the plan) or the opening row is UNRESOLVED blank; a default or
