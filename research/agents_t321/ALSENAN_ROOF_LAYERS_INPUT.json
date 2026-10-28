@@ -1,0 +1,554 @@
+{
+ "roofs": {
+  "ROOF-1390": {
+   "edges": {
+    "parapet_inner (2F wall inner faces)": [
+     "12B7",
+     "1292",
+     "1279",
+     "1283"
+    ],
+    "parapet_outer (2F wall outer faces)": [
+     "1288",
+     "1291",
+     "1274",
+     "1281"
+    ]
+   },
+   "face_dband": null,
+   "face_wall": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     7.7,
+     0.0
+    ],
+    [
+     7.7,
+     6.45
+    ],
+    [
+     0.0,
+     6.45
+    ]
+   ],
+   "finish_hatches": [],
+   "footprint_circles": {
+    "DOME-3": {
+     "centre": [
+      5.495,
+      3.3095
+     ],
+     "handle": "1300",
+     "layer": "2",
+     "r": 2.205018
+    }
+   },
+   "label": "main roof over the 2F block, printed +13.90 (no roof plan; outline from the 2F walls the parapet continues, T-172 / T-311 section A-A)",
+   "origin_handles": [
+    "12B7",
+    "1283"
+   ],
+   "outer_wall": [
+    [
+     -0.2,
+     -0.15
+    ],
+    [
+     7.9,
+     -0.15
+    ],
+    [
+     7.9,
+     6.65
+    ],
+    [
+     -0.2,
+     6.65
+    ]
+   ]
+  },
+  "ROOF-430": {
+   "edges": {
+    "building_wall": [
+     "B3A",
+     "ADF"
+    ],
+    "dband": [
+     "B3C",
+     "C40",
+     "C47"
+    ],
+    "divider": [
+     "CEC"
+    ],
+    "parapet": [
+     "B34",
+     "B37",
+     "B41",
+     "B2B",
+     "B38",
+     "B35"
+    ]
+   },
+   "face_dband": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     11.8,
+     0.0
+    ],
+    [
+     11.8,
+     1.3
+    ],
+    [
+     10.2,
+     1.3
+    ],
+    [
+     10.2,
+     4.5
+    ],
+    [
+     4.0,
+     4.5
+    ],
+    [
+     4.0,
+     5.2
+    ],
+    [
+     "ARC",
+     [
+      2.9,
+      5.2
+     ],
+     1.1,
+     0.0,
+     90.0,
+     "B2B"
+    ],
+    [
+     0.0,
+     6.3
+    ]
+   ],
+   "face_wall": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     11.8,
+     0.0
+    ],
+    [
+     11.8,
+     1.3
+    ],
+    [
+     10.4,
+     1.3
+    ],
+    [
+     10.4,
+     4.5
+    ],
+    [
+     4.0,
+     4.5
+    ],
+    [
+     4.0,
+     5.2
+    ],
+    [
+     "ARC",
+     [
+      2.9,
+      5.2
+     ],
+     1.1,
+     0.0,
+     90.0,
+     "B2B"
+    ],
+    [
+     0.0,
+     6.3
+    ]
+   ],
+   "finish_hatches": [
+    {
+     "handle": "D1F",
+     "islands": [
+      0.0707,
+      0.0088,
+      0.1958,
+      0.1509,
+      0.1127,
+      0.1576,
+      1.2587,
+      0.5566,
+      0.2363
+     ],
+     "layer": "3",
+     "outer_m2": 53.0217,
+     "outer_paths": 1,
+     "pattern": "LINE",
+     "symbol_box_paths": []
+    },
+    {
+     "handle": "B2A",
+     "islands": [],
+     "layer": "3",
+     "outer_m2": 1.8986,
+     "outer_paths": 1,
+     "pattern": "LINE",
+     "symbol_box_paths": []
+    }
+   ],
+   "footprint_circles": {},
+   "label": "annex roof, printed +4.30 (1F plan AT220; T-221 ROOF-430)",
+   "origin_handles": [
+    "B37",
+    "B34"
+   ]
+  },
+  "ROOF-970": {
+   "edges": {
+    "building_wall": [
+     "1288",
+     "1281",
+     "1291"
+    ],
+    "dband": [
+     "12E2",
+     "12E6"
+    ],
+    "parapet": [
+     "1285",
+     "12C9",
+     "12B9",
+     "12A7",
+     "1278"
+    ]
+   },
+   "face_dband": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     18.87,
+     0.0
+    ],
+    [
+     18.87,
+     11.6
+    ],
+    [
+     12.3,
+     11.6
+    ],
+    [
+     12.3,
+     5.0
+    ],
+    [
+     4.125,
+     5.0
+    ],
+    [
+     4.125,
+     7.1
+    ],
+    [
+     0.0,
+     7.1
+    ]
+   ],
+   "face_wall": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     18.87,
+     0.0
+    ],
+    [
+     18.87,
+     11.6
+    ],
+    [
+     12.3,
+     11.6
+    ],
+    [
+     12.3,
+     5.0
+    ],
+    [
+     4.2,
+     5.0
+    ],
+    [
+     4.2,
+     7.1
+    ],
+    [
+     0.0,
+     7.1
+    ]
+   ],
+   "finish_hatches": [
+    {
+     "handle": "2F21",
+     "islands": [
+      0.0707,
+      0.0088,
+      0.0707,
+      0.0088,
+      0.2363,
+      1.2587,
+      0.5566,
+      0.1127,
+      0.1554,
+      0.0,
+      0.2363
+     ],
+     "layer": "3",
+     "outer_m2": 114.9849,
+     "outer_paths": 5,
+     "pattern": "LINE",
+     "symbol_box_paths": []
+    }
+   ],
+   "footprint_circles": {
+    "DOME-E": {
+     "centre": [
+      16.6589,
+      3.6034
+     ],
+     "handle": "2F33",
+     "layer": "5",
+     "r": 2.211092
+    },
+    "DOME-W": {
+     "centre": [
+      2.2111,
+      3.6034
+     ],
+     "handle": "12EB",
+     "layer": "5",
+     "r": 2.211092
+    }
+   },
+   "hatch_vs_outline": [
+    {
+     "area_m2": 0.6221,
+     "centroid": [
+      5.254,
+      4.622
+     ]
+    },
+    {
+     "area_m2": 0.0224,
+     "centroid": [
+      18.839,
+      4.102
+     ]
+    },
+    {
+     "area_m2": 0.0224,
+     "centroid": [
+      0.031,
+      4.102
+     ]
+    },
+    {
+     "area_m2": 0.0005,
+     "centroid": [
+      4.262,
+      2.835
+     ]
+    },
+    {
+     "area_m2": 0.0005,
+     "centroid": [
+      2.98,
+      1.552
+     ]
+    },
+    {
+     "area_m2": 0.0005,
+     "centroid": [
+      1.442,
+      1.552
+     ]
+    },
+    {
+     "area_m2": 0.0005,
+     "centroid": [
+      0.16,
+      2.835
+     ]
+    },
+    {
+     "area_m2": 0.0005,
+     "centroid": [
+      18.71,
+      2.835
+     ]
+    },
+    {
+     "area_m2": 0.0005,
+     "centroid": [
+      17.428,
+      1.552
+     ]
+    },
+    {
+     "area_m2": 0.0005,
+     "centroid": [
+      15.89,
+      1.552
+     ]
+    },
+    {
+     "area_m2": 0.0005,
+     "centroid": [
+      14.608,
+      2.835
+     ]
+    }
+   ],
+   "label": "1F roof terraces round the 2F block, printed +9.70 (2F plan AT379 + AT385; T-221 ROOF-970)",
+   "origin_handles": [
+    "12C9",
+    "1285"
+   ]
+  },
+  "TERRACE-550": {
+   "edges": {
+    "building_wall": [
+     "AE3",
+     "B5D"
+    ],
+    "divider": [
+     "CED"
+    ],
+    "door_closure": [
+     "C9E"
+    ],
+    "gate_stub": [
+     "BDB"
+    ],
+    "parapet": [
+     "B25",
+     "B33"
+    ]
+   },
+   "face_dband": null,
+   "face_wall": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     18.97,
+     0.0
+    ],
+    [
+     18.97,
+     7.5
+    ],
+    [
+     17.67,
+     7.5
+    ],
+    [
+     17.67,
+     1.3
+    ],
+    [
+     0.0,
+     1.3
+    ]
+   ],
+   "finish_hatches": [
+    {
+     "handle": "AE0",
+     "islands": [],
+     "layer": "3",
+     "outer_m2": 6.4025,
+     "outer_paths": 1,
+     "pattern": "LINE",
+     "symbol_box_paths": []
+    },
+    {
+     "handle": "D1A",
+     "islands": [
+      0.0707,
+      0.0088,
+      0.0707,
+      0.0088,
+      0.1509,
+      0.1509,
+      0.1105,
+      0.1509,
+      0.1509,
+      0.1487,
+      0.8055,
+      0.3562,
+      0.2363
+     ],
+     "layer": "3",
+     "outer_m2": 23.2983,
+     "outer_paths": 1,
+     "pattern": "LINE",
+     "symbol_box_paths": [
+      {
+       "area_m2": 0.1127,
+       "outside_finish_paths_m2": 0.0352
+      },
+      {
+       "area_m2": 0.2363,
+       "outside_finish_paths_m2": 0.0127
+      }
+     ]
+    },
+    {
+     "handle": "1252",
+     "islands": [
+      0.1487
+     ],
+     "layer": "3",
+     "outer_m2": 1.9423,
+     "outer_paths": 1,
+     "pattern": "LINE",
+     "symbol_box_paths": [
+      {
+       "area_m2": 0.1374,
+       "outside_finish_paths_m2": 0.0653
+      }
+     ]
+    }
+   ],
+   "footprint_circles": {},
+   "label": "GF roof strips at +5.50 south and sea side of the 1F (1F plan AT216; T-221 TERRACE-550)",
+   "origin_handles": [
+    "CED",
+    "B25"
+   ]
+  }
+ },
+ "source": "Drive 'Alsenan chalet project' / P7757_DXF_COMPRESSED.zip -> P7757.dxf",
+ "units": "local m"
+}
