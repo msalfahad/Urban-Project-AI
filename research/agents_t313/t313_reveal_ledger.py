@@ -228,6 +228,54 @@ def bind_lines(rows, binding):
     return [dict(r, line_id=binding.get((r["opening"], r["side"], r["component"]), NO_LINE)) for r in rows]
 
 
+def book_missing(rows, carried):
+    """the MISSING-SCOPE total: MEASURED rows bound to NO_LINE. carried = {(opening, side, component): (family,
+    line_id)} found by searching EVERY item family of the candidate of record by physical element (r2, Verifier
+    2026-10-28: the door reveals live in FIN.PLASTER 'door jambs and head', not in ARCH.WINDOW_REVEAL). A row that
+    another family's line already carries but is booked NO_LINE is refused (that would be a second count at
+    integration). -> {(kind, side, component): {"m2", "ml", "openings"}}"""
+    out = {}
+    for r in rows:
+        k = (r["opening"], r["side"], r["component"])
+        if r.get("line_id", NO_LINE) != NO_LINE or r["state"] != "MEASURED":
+            continue
+        if k in carried:
+            fam, lid = carried[k]
+            raise LedgerError(f"{k[0]} {k[1]} {k[2]}: already carried in {fam} line {lid}; booking it as missing "
+                              "scope is a second count (refused)")
+        t = out.setdefault((r["kind"], r["side"], r["component"]), {"m2": 0.0, "ml": 0.0, "openings": []})
+        t["m2"] += r["m2"]
+        t["ml"] += r["ml"]
+        t["openings"].append(r["opening"])
+    for t in out.values():
+        t["m2"], t["ml"] = round(t["m2"], 6), round(t["ml"], 6)
+    return out
+
+
+def reconcile_line(rows, opening, components, line, tol=1e-6):
+    """one candidate line that carries several ledger components of ONE opening (e.g. FIN.PLASTER 'door jambs and
+    head' = 2 t h + t w). line: {"line_id", "family", "measured" (float or None), "range" ([lo, hi] or None)}.
+    -> {"ledger_m2", "line_m2" / "line_range", "residual_m2", "verdict"}: EQUAL (|residual| <= tol), WITHIN_BOUND
+    (ledger inside the line's range; the residuals to both ends named), DIFFERS (residual named), or LEDGER_OPEN
+    (a component not MEASURED: no comparison, never 0)."""
+    sel = [r for r in rows if r["opening"] == opening and r["component"] in components]
+    if {r["component"] for r in sel} != set(components):
+        raise LedgerError(f"{opening}: components {components} not all in the ledger")
+    rec = {"opening": opening, "line_id": line["line_id"], "family": line["family"],
+           "line_m2": line.get("measured"), "line_range": line.get("range")}
+    if any(r["state"] != "MEASURED" for r in sel):
+        return dict(rec, ledger_m2=None, residual_m2=None, verdict="LEDGER_OPEN")
+    led = round(sum(r["m2"] for r in sel), 6)
+    rec["ledger_m2"] = led
+    if line.get("measured") is not None:
+        res = round(led - float(line["measured"]), 6)
+        return dict(rec, residual_m2=res, verdict="EQUAL" if abs(res) <= tol else "DIFFERS")
+    lo, hi = (float(x) for x in line["range"])
+    if lo - tol <= led <= hi + tol:
+        return dict(rec, residual_m2=[round(led - lo, 6), round(led - hi, 6)], verdict="WITHIN_BOUND")
+    return dict(rec, residual_m2=[round(led - lo, 6), round(led - hi, 6)], verdict="DIFFERS")
+
+
 def refuse_facade_overlap(rows, facade_face_ids):
     """a reveal surface counted again as a facade face is refused (the EDGE stays in the corners m.l line)."""
     for r in rows:
@@ -273,4 +321,4 @@ def reconcile(value, parts, tol=1e-6):
 
 
 __all__ = ["LedgerError", "NO_LINE", "to_m", "depth_from_plan", "window_rows", "door_rows", "arch_rows", "ledger",
-           "bind_lines", "refuse_facade_overlap", "totals", "exterior_edge_ml", "reconcile", "math"]
+           "bind_lines", "book_missing", "reconcile_line", "refuse_facade_overlap", "totals", "exterior_edge_ml", "reconcile", "math"]

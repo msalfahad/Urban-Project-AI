@@ -26,15 +26,48 @@ def test_every_census_opening_once_and_each_component_once():
     assert max(c.values()) == 1
 
 
-def test_reveal_lines_each_one_window_and_all_27_bound():
+def test_lines_each_one_opening_27_window_and_22_door_lines_bound():
     led = _rows("REVEAL_LEDGER_T313.csv")
     by_line = {}
     for r in led:
         if r["line_id"] != "NO_LINE":
             by_line.setdefault(r["line_id"], set()).add(r["opening"])
-    assert len(by_line) == 27
     assert all(len(v) == 1 for v in by_line.values())
-    assert not any(r["line_id"] != "NO_LINE" for r in led if r["component"] in ("JAMBS", "HEAD"))
+    win = {r["line_id"] for r in led if r["kind"] in ("WINDOW", "FLOOR_GLAZING") and r["line_id"] != "NO_LINE"}
+    door = {r["line_id"] for r in led if r["kind"] == "DOOR" and r["line_id"] != "NO_LINE"}
+    assert len(win) == 27 and len(door) == 22 and not win & door
+    # window jambs / head: no line in any family; door jambs + head: both in the door's one FIN.PLASTER line
+    assert not any(r["line_id"] != "NO_LINE" for r in led
+                   if r["kind"] in ("WINDOW", "FLOOR_GLAZING") and r["component"] in ("JAMBS", "HEAD"))
+    for d in {r["opening"] for r in led if r["line_id"] in door}:
+        assert len({r["line_id"] for r in led if r["opening"] == d}) == 1
+
+
+def test_door_plaster_lines_reconciled_per_door():
+    rec = _rows("DOOR_PLASTER_RECONCILIATION_T313.csv")
+    assert len(rec) == 22 and len({r["line_id"] for r in rec}) == 22
+    fam = {r["line_id"]: r for r in _rows("FAMILY_SEARCH_T313.csv")}
+    for r in rec:
+        assert fam[r["line_id"]]["item_code"] == "FIN.PLASTER" and fam[r["line_id"]]["role"].startswith("BOUND")
+        if r["verdict"] == "EQUAL":
+            assert float(r["ledger_m2"]) == pytest.approx(float(r["line_m2"]), abs=1e-6)
+        else:       # bounded line: the ledger inside [low, high]
+            assert r["verdict"] == "WITHIN_BOUND"
+            assert float(r["line_low"]) - 1e-6 <= float(r["ledger_m2"]) <= float(r["line_high"]) + 1e-6
+
+
+def test_missing_scope_has_no_component_another_family_carries():
+    s = json.loads((D / "summary.json").read_text(encoding="utf-8"))
+    led = {(r["opening"], r["side"], r["component"]): r for r in _rows("REVEAL_LEDGER_T313.csv")}
+    carried = {r["opening"] for r in _rows("FAMILY_SEARCH_T313.csv") if r["role"].startswith("BOUND")}
+    total = 0.0
+    for key, v in s["missing_scope"].items():
+        kind, side, comp = key.split(":")
+        for o in v["openings"]:
+            assert led[(o, side, comp)]["line_id"] == "NO_LINE"
+            assert not (kind == "DOOR" and o in carried)
+        total += v["m2"]
+    assert total == pytest.approx(s["missing_scope_m2"], abs=1e-6)
 
 
 def test_held_and_unresolved_never_zero():

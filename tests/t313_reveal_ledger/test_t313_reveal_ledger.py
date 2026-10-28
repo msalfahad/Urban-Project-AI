@@ -183,6 +183,50 @@ def test_adverse_arch_at_chord_or_undeveloped():
     assert b[("A1", "THROUGH", "HEAD")]["state"] == "UNRESOLVED" and b[("A1", "THROUGH", "HEAD")]["m2"] is None
 
 
+# ------------------------------------------------------------------ r2: cross-family binding (door reveals in plaster)
+# Villa R313: the candidate carries D1's reveal in a plaster line 'door jambs and head' = 2 x 0.20 x 2.20 + 0.20 x 0.90
+# = 0.880 + 0.180 = 1.060 m2 (by hand); a second door D2 (0.80 in a 0.15 wall) has no line anywhere:
+# 2 x 0.15 x 2.20 + 0.15 x 0.80 = 0.660 + 0.120 = 0.780 m2 missing.
+D2 = {"id": "D2", "kind": "DOOR", "width_m": 0.80, "height_m": 2.20, "wall_t_m": 0.15}
+PL = {"line_id": "L-PL-D1", "family": "FIN.PLASTER", "measured": 1.06, "range": None}
+
+
+def test_normal_door_bound_to_its_plaster_line_and_reconciled():
+    rows = L.bind_lines(L.ledger([W1, D1, D2]), {("D1", "THROUGH", "JAMBS"): "L-PL-D1",
+                                                 ("D1", "THROUGH", "HEAD"): "L-PL-D1"})
+    rec = L.reconcile_line(rows, "D1", ("JAMBS", "HEAD"), PL)
+    assert rec["verdict"] == "EQUAL" and rec["ledger_m2"] == pytest.approx(1.060) and rec["residual_m2"] == 0.0
+    carried = {("D1", "THROUGH", "JAMBS"): ("FIN.PLASTER", "L-PL-D1"),
+               ("D1", "THROUGH", "HEAD"): ("FIN.PLASTER", "L-PL-D1")}
+    miss = L.book_missing(rows, carried)
+    assert miss[("DOOR", "THROUGH", "JAMBS")]["openings"] == ["D2"]
+    assert miss[("DOOR", "THROUGH", "JAMBS")]["m2"] + miss[("DOOR", "THROUGH", "HEAD")]["m2"] == pytest.approx(0.780)
+
+
+def test_normal_bounded_line_within_bound_names_both_residuals():
+    rows = L.ledger([dict(D1, height_m=2.50, width_m=2.00)])      # printed 2.50: 1.000 + 0.400 = 1.400 m2
+    rec = L.reconcile_line(rows, "D1", ("JAMBS", "HEAD"), dict(PL, measured=None, range=[1.28, 1.40]))
+    assert rec["verdict"] == "WITHIN_BOUND" and rec["residual_m2"] == pytest.approx([0.12, 0.0])
+    rec = L.reconcile_line(rows, "D1", ("JAMBS", "HEAD"), dict(PL, measured=1.28))
+    assert rec["verdict"] == "DIFFERS" and rec["residual_m2"] == pytest.approx(0.12)
+
+
+def test_adverse_door_reveal_already_in_a_plaster_line_booked_again_refused():
+    rows = L.ledger([D1])                                 # left NO_LINE although FIN.PLASTER carries it
+    with pytest.raises(L.LedgerError, match="second count"):
+        L.book_missing(rows, {("D1", "THROUGH", "JAMBS"): ("FIN.PLASTER", "L-PL-D1")})
+    with pytest.raises(L.LedgerError, match="two lines"):   # and bound to a reveal line beside its plaster line
+        L.bind_lines(rows, {("D1", "THROUGH", "JAMBS"): "L-PL-D1", ("D1", "THROUGH", "HEAD"): "L-REVEAL-9"})
+
+
+def test_adverse_held_component_never_reconciled_as_zero():
+    rows = L.ledger([dict(D1, height_m=None)])
+    rec = L.reconcile_line(rows, "D1", ("JAMBS", "HEAD"), PL)
+    assert rec["verdict"] == "LEDGER_OPEN" and rec["ledger_m2"] is None and rec["residual_m2"] is None
+    with pytest.raises(L.LedgerError, match="not all"):
+        L.reconcile_line(rows, "D1", ("JAMBS", "SILL"), PL)
+
+
 def test_adverse_reconciliation_names_the_residual():
     assert L.reconcile(189.630, {"r2": 137.110, "jambs counted twice in r1": 52.520}) == pytest.approx(0.0)
     with pytest.raises(L.LedgerError, match="residual"):

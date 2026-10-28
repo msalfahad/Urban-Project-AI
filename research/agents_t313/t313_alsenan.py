@@ -3,7 +3,13 @@ Every output goes to --out (outside the repository); the committed CSVs carry id
 coordinates, no names).
 
     python3 -I research/agents_t313/t313_alsenan.py <P7757.dxf> <ARCH_ROOMS.json of an engine run> \
-        <BOQ_LINES.csv of the candidate> --out <scratch>/t313
+        <V3_0_xx_BOQ_LINES.json of the candidate of record> --out <scratch>/t313
+
+r2 (Verifier 2026-10-28 rejection): the candidate RECORD (json, every item family) is searched by physical element for
+every census opening (floor + engine OP id from T-249, or the engine door ref) before a component is called NO_LINE:
+the door reveals live in FIN.PLASTER 'door jambs and head' (UP-FIN-PLASTER-001), bound and reconciled per door; the
+window sill / threshold rows in ARCH.WINDOW_REVEAL; every other line on an opening is listed with its physical role
+(FAMILY_SEARCH_T313.csv) so a lane I consumer sees what is already carried.
 
 Per window (census handles, T-249 MERGED) the reveal depths are MEASURED on the plan: the frame band = the extreme
 offsets across the wall of the census glazing lines parallel to the opening; the two wall faces = the nearest lines
@@ -22,6 +28,7 @@ import csv
 import hashlib
 import json
 import math
+import re
 import sys
 from pathlib import Path
 
@@ -115,6 +122,68 @@ def measure_window(handles, segs_by_handle, all_segs):
             "d_lo": f0 - s_lo, "d_hi": s_hi - f1}, None
 
 
+OP_RE = re.compile(r"(?<![A-Z])(C?OP-\d{3})")
+DOOR_RE = re.compile(r"(DOOR-(?:GF|1F|2F)-[0-9a-f]{8})")
+
+
+def family_search(lines, inv):
+    """every candidate line of ANY item family tied to a census opening by its floor + engine OP id (room / element id)
+    or by the engine door ref; -> {census id: [hit]} (ids, codes, states and quantities only)."""
+    by_op, by_ref = {}, {}
+    for r in inv:
+        for tok in r["ENGINE_REF"].replace("/", " ").split():
+            if OP_RE.fullmatch(tok):
+                by_op[(r["FLOOR"], tok)] = r["ID"]
+            elif DOOR_RE.fullmatch(tok):
+                by_ref[tok] = r["ID"]
+    out = {}
+    for x in lines:
+        loc = x.get("location") or {}
+        text = " ".join(str(loc.get(k) or "") for k in ("room_id", "element_id"))
+        cids = {by_op[(loc.get("floor"), m)] for m in OP_RE.findall(text) if (loc.get("floor"), m) in by_op}
+        cids |= {by_ref[m] for m in DOOR_RE.findall(text) if m in by_ref}
+        br = x.get("bounded_range") or None
+        calc = (x.get("calculation") or {})
+        for cid in sorted(cids):
+            ops = OP_RE.findall(text)
+            out.setdefault(cid, []).append({
+                "line_id": x["line_id"], "item_code": x["item_code"], "floor": loc.get("floor"),
+                "op": ops[0] if ops else None, "engine_ref": (ops or DOOR_RE.findall(text) or [None])[0],
+                "evidence_state": x.get("evidence_state"), "measured_net": x.get("measured_net"),
+                "range": [br["low"], br["high"]] if br else None, "range_basis": br.get("basis") if br else None,
+                "physical_element": x.get("physical_element"), "inputs": calc.get("inputs") or {}})
+    for v in out.values():          # one hit per line and opening (a line can name its OP twice)
+        seen, keep = set(), []
+        for h in v:
+            if h["line_id"] not in seen:
+                seen.add(h["line_id"])
+                keep.append(h)
+        v[:] = keep
+    return out
+
+
+ROLES = {
+    "ARCH.WINDOW": "the window unit (nr), not a surface",
+    "ARCH.PASSAGE": "the opening as a passage (nr), not a surface",
+    "ARCH.DOOR": "the door leaf / set (nr), not a surface",
+    "ARCH.WINDOW_REVEAL": "window strip line",
+    "ARCH.THRESHOLD": "floor-level strip across the opening (a floor / threshold element; a door or an arch has no "
+                      "sill reveal, so not a reveal component of this ledger)",
+    "FIN.MARBLE.THRESHOLD": "floor-level strip across the opening (threshold finish), not a reveal component",
+    "FIN.FLOOR.PORCELAIN": "floor finish through the opening (doorway strip), not a reveal component",
+    "FIN.CEILING": "soffit / ceiling surface, not a reveal component",
+}
+
+
+def role_of(h):
+    c = h["item_code"]
+    if c.startswith("DOOR."):
+        return "OTHER ELEMENT: the door set (nr), not a surface"
+    if c.startswith("FIN.WP."):
+        return "OTHER ELEMENT: waterproofing at the opening (WP family owns it), not a reveal surface"
+    return "OTHER ELEMENT: " + ROLES.get(c, "not a reveal component (checked: no jamb / head / sill surface)")
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser()
     ap.add_argument("plan")
@@ -141,9 +210,11 @@ def main(argv=None):
     t237r = {x["room"]: x for x in read_csv(RES / "agents_t237" / "ROOMS_T237.csv")}
     t238 = {x["ID"]: x for x in read_csv(RES / "agents_t238" / "CENSUS_T238.csv")}
     t201 = {x["ID"]: x for x in read_csv(RES / "agents_t201" / "HEADS_T201.csv")}
-    cand = read_csv(a.lines)
-    reveal_lines = {x["room_id"].split("-STRIP-")[1] + "@" + x["floor"]: x for x in cand
+    rec_doc = json.loads(Path(a.lines).read_text(encoding="utf-8"))
+    cand = rec_doc if isinstance(rec_doc, list) else rec_doc["lines"]
+    reveal_lines = {x["location"]["room_id"].split("-STRIP-")[1] + "@" + x["location"]["floor"]: x for x in cand
                     if x["item_code"] == "ARCH.WINDOW_REVEAL"}
+    search = family_search(cand, inv)
 
     def num(v):
         try:
@@ -234,7 +305,40 @@ def main(argv=None):
             openings.append({"id": oid, "kind": "ARCH", "width_m": w, "springing_m": 2.20 if oid == "A-GF-01" else None,
                              "developed_m": dev, "wall_t_m": t, "height_status": t238.get(oid, {}).get("STATUS"),
                              "jamb_state": "HELD", "head_state": "HELD", "room": ";".join(sz.get("rooms", []))})
+    # ---- doors: the reveal through the wall is carried by FIN.PLASTER 'door jambs and head' (r2)
+    door_lines, carried = {}, {}
+    for oid, hits in search.items():
+        pl = [h for h in hits if h["item_code"] == "FIN.PLASTER" and h["physical_element"] == "door jambs and head"]
+        if len(pl) > 1:
+            raise SystemExit(f"{oid}: two door plaster lines {[h['line_id'] for h in pl]}")
+        if pl:
+            door_lines[oid] = pl[0]
+            for comp in ("JAMBS", "HEAD"):
+                binding[(oid, "THROUGH", comp)] = pl[0]["line_id"]
+                carried[(oid, "THROUGH", comp)] = ("FIN.PLASTER", pl[0]["line_id"])
     rows = L.bind_lines(L.ledger(openings), binding)
+    door_rec = []
+    for oid, h in sorted(door_lines.items()):
+        r = L.reconcile_line(rows, oid, ("JAMBS", "HEAD"), {"line_id": h["line_id"], "family": "FIN.PLASTER",
+                                                          "measured": h["measured_net"], "range": h["range"]})
+        op = next(x for x in openings if x["id"] == oid)
+        inp = h["inputs"]
+        diff = []
+        for k_l, k_c in (("wall_t_m", "wall_t_m"), ("width_m", "width_m"), ("height_m", "height_m")):
+            if inp.get(k_c) is not None and op.get(k_l) is not None and abs(float(inp[k_c]) - float(op[k_l])) > 1e-6:
+                diff.append(f"{k_l} ledger {op[k_l]} vs line {inp[k_c]}")
+        cause = "; ".join(diff) or ("same t / w / h as the line" if r["verdict"] == "EQUAL" else
+                                     h.get("range_basis") or "")
+        door_rec.append({"opening": oid, "floor": h["floor"], "engine_op": h["op"], "line_id": h["line_id"],
+                         "line_state": h["evidence_state"], "line_m2": h["measured_net"],
+                         "line_low": h["range"][0] if h["range"] else None,
+                         "line_high": h["range"][1] if h["range"] else None,
+                         "line_t": inp.get("wall_t_m"), "line_w": inp.get("width_m"), "line_h": inp.get("height_m"),
+                         "line_h_state": inp.get("height_state"), "ledger_t": op.get("wall_t_m"),
+                         "ledger_w": op.get("width_m"), "ledger_h": op.get("height_m"),
+                         "ledger_m2": r["ledger_m2"], "residual_m2": r["residual_m2"], "verdict": r["verdict"],
+                         "cause": cause})
+    missing = L.book_missing(rows, carried)
     for r in rows:      # evidence status (WORKFLOW_CONTROLS s.5) beside the measurement state
         hs = (r.get("height_status") or "").upper()
         uses_h = r["component"] == "JAMBS" or (r["kind"] in ("DOOR", "GATE") and False)
@@ -249,11 +353,43 @@ def main(argv=None):
     lines_used = {r["line_id"] for r in rows if r["line_id"] != L.NO_LINE}
     unbound = sorted(k for k in reveal_lines if reveal_lines[k]["line_id"] not in lines_used)
     tot = L.totals(rows)
-    summary = {"identity": {"plan": sha8(a.plan), "rooms": sha8(a.rooms), "lines": sha8(a.lines)},
+    summary = {"identity": {"plan": sha8(a.plan), "rooms": sha8(a.rooms), "record": sha8(a.lines),
+                            "record_lines": len(cand)},
                "openings": len(openings), "rows": len(rows), "reveal_lines": len(reveal_lines),
                "lines_bound": len(lines_used), "lines_unbound": unbound,
                "totals": {f"{k[0]}:{k[1]}": v for k, v in sorted(tot.items())},
-               "exterior_edge_ml_measured": L.exterior_edge_ml(rows)}
+               "exterior_edge_ml_measured": L.exterior_edge_ml(rows),
+               "door_lines_bound": len(door_lines),
+               "door_reconciliation": {v: sum(1 for d in door_rec if d["verdict"] == v)
+                                       for v in sorted({d["verdict"] for d in door_rec})},
+               "door_ledger_m2_in_line": round(sum(d["ledger_m2"] for d in door_rec if d["ledger_m2"] is not None), 6),
+               "door_line_m2_provisional": round(sum(d["line_m2"] for d in door_rec if d["line_m2"] is not None), 6),
+               "missing_scope": {f"{k[0]}:{k[1]}:{k[2]}": v for k, v in sorted(missing.items())},
+               "missing_scope_m2": round(sum(v["m2"] for v in missing.values()), 6),
+               "family_lines_on_openings": {}}
+    for hits in search.values():
+        for h in hits:
+            fam = summary["family_lines_on_openings"]
+            fam[h["item_code"]] = fam.get(h["item_code"], 0) + 1
+    summary["family_lines_on_openings"] = dict(sorted(summary["family_lines_on_openings"].items()))
+    with open(out / "DOOR_PLASTER_RECONCILIATION_T313.csv", "w", newline="", encoding="utf-8") as f:
+        wr = csv.DictWriter(f, fieldnames=list(door_rec[0]))
+        wr.writeheader()
+        wr.writerows(door_rec)
+    bound_ids = {r["line_id"] for r in rows}
+    with open(out / "FAMILY_SEARCH_T313.csv", "w", newline="", encoding="utf-8") as f:
+        ks = ["opening", "floor", "engine_ref", "item_code", "line_id", "evidence_state", "measured_net", "low", "high",
+              "physical_element", "role"]
+        wr = csv.DictWriter(f, fieldnames=ks, extrasaction="ignore")
+        wr.writeheader()
+        for oid in [r["ID"] for r in inv]:
+            for h in search.get(oid, []):
+                wr.writerow(dict(h, opening=oid, low=h["range"][0] if h["range"] else None,
+                                 high=h["range"][1] if h["range"] else None,
+                                 role=("BOUND: " + ("door reveal jambs + head (UP-FIN-PLASTER-001)"
+                                                    if h["item_code"] == "FIN.PLASTER" else
+                                                    "window sill / threshold rows"))
+                                 if h["line_id"] in bound_ids else role_of(h)))
     with open(out / "REVEAL_LEDGER_T313.csv", "w", newline="", encoding="utf-8") as f:
         ks = ["opening", "kind", "side", "component", "depth_m", "m2", "ml", "state", "basis", "height_status", "evidence",
               "room", "line_id"]
