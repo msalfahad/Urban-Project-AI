@@ -1,0 +1,72 @@
+{
+ "about": "T-312 pantry installation hosts (UP-PANTRY-003) read on Drive 'Alsenan chalet project': P7757_DXF_COMPRESSED.zip -> P7757.dxf (ab54dd55), 'ST7757 dxf.dxf' (9f9d1179). Lengths in m only; no coordinate. A run's BACK is the edge it is fixed along; its END against a side wall hosts nothing.",
+ "box_m": [
+  3.0,
+  4.5
+ ],
+ "column_2FAE_notch_m": [
+  0.9,
+  0.05
+ ],
+ "dxf_sha256_8": "ab54dd55",
+ "faces": {
+  "GF-07|GF-W01": {
+   "by_run": {
+    "east_counter.south_leg": 1.4
+   },
+   "face_line_m": 3.0,
+   "host_m": 1.4
+  },
+  "GF-07|GF-W05": {
+   "by_run": {
+    "west_counter.north_leg": 0.5
+   },
+   "face_line_m": 2.1,
+   "host_m": 0.5
+  },
+  "GF-07|GF-W16": {
+   "by_run": {
+    "west_counter.west_leg": 3.0662
+   },
+   "face_line_m": 4.45,
+   "host_m": 3.0662
+  },
+  "GF-07|OFF:COLUMN": {
+   "by_run": {
+    "west_counter.north_leg": 0.9
+   },
+   "face_line_m": 0.9,
+   "host_m": 0.9
+  },
+  "OPEN|B3": {
+   "by_run": {
+    "east_counter.east_leg": 3.0
+   },
+   "face_line_m": 4.5,
+   "host_m": 3.0
+  }
+ },
+ "label": "INSERT 178 block PAN (room label PANTRY); no sink block in the pantry on P7757.dxf; floor drain on sanitary-7757.pdf (Q-37 problem text)",
+ "runs": {
+  "east_counter.east_leg": {
+   "back_m": 3.0,
+   "depth_m": 0.5,
+   "handles": "B4 (front) / 15D (end) / B3 (open edge)"
+  },
+  "east_counter.south_leg": {
+   "back_m": 1.4,
+   "depth_m": 0.5,
+   "handles": "B2 (end) / AA (front) / A6"
+  },
+  "west_counter.north_leg": {
+   "back_m": 1.45,
+   "depth_m": 0.45,
+   "handles": "15C (front) / 33F (end) / column 2FAE face + 158"
+  },
+  "west_counter.west_leg": {
+   "back_m": 3.0662,
+   "depth_m": 0.5,
+   "handles": "335 / B1 (front) / AE + AF + window W09 face"
+  }
+ }
+}

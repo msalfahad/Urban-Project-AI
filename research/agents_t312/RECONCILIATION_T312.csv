@@ -1,0 +1,19 @@
+room,fl_m2,own_m2,length_m2,height_m2,doors_m2,windows_m2,residual_m2,verdict
+1F-02,27.00,27.9101,0.0000,3.1500,-1.7600,-0.4800,0.0001,"height RULE_DIFFERENCE (Q-48 A vs his flat 3.00); openings ENGINE_RIGHT (UP-CER-005 / Q-73 A, he deducts none); length ENGINE_RIGHT (drawn faces vs his rounded lm)"
+1F-03,26.70,27.9100,0.3000,3.1500,-1.7600,-0.4800,0.0000,"height RULE_DIFFERENCE (Q-48 A vs his flat 3.00); openings ENGINE_RIGHT (UP-CER-005 / Q-73 A, he deducts none); length ENGINE_RIGHT (drawn faces vs his rounded lm)"
+1F-07,50.55,52.5290,0.2700,5.9290,-3.7400,-0.4800,0.0000,"height RULE_DIFFERENCE (Q-48 A vs his flat 3.00); openings ENGINE_RIGHT (UP-CER-005 / Q-73 A, he deducts none); length ENGINE_RIGHT (drawn faces vs his rounded lm)"
+1F-08,19.44,19.6691,0.1800,2.2890,-1.7600,-0.4800,0.0001,"height RULE_DIFFERENCE (Q-48 A vs his flat 3.00); openings ENGINE_RIGHT (UP-CER-005 / Q-73 A, he deducts none); length ENGINE_RIGHT (drawn faces vs his rounded lm)"
+1F-09,22.80,23.2201,0.0000,2.6600,-1.7600,-0.4800,0.0001,"height RULE_DIFFERENCE (Q-48 A vs his flat 3.00); openings ENGINE_RIGHT (UP-CER-005 / Q-73 A, he deducts none); length ENGINE_RIGHT (drawn faces vs his rounded lm)"
+1F-12,26.10,26.3051,0.0000,3.0450,-1.7600,-1.0800,0.0001,"height RULE_DIFFERENCE (Q-48 A vs his flat 3.00); openings ENGINE_RIGHT (UP-CER-005 / Q-73 A, he deducts none); length ENGINE_RIGHT (drawn faces vs his rounded lm)"
+2F-02,29.25,30.2550,-0.1500,3.3950,-1.7600,-0.4800,0.0000,"height RULE_DIFFERENCE (Q-48 A vs his flat 3.00); openings ENGINE_RIGHT (UP-CER-005 / Q-73 A, he deducts none); length ENGINE_RIGHT (drawn faces vs his rounded lm)"
+GF-02,21.60,,,,,,,"not compared: our room HELD (annex owner height not established (G2; Q-54 B HOLD, D-39): )"
+GF-03,22.50,,,,,,,"not compared: our room HELD (annex owner height not established (G2; Q-54 B HOLD, D-39): )"
+GF-05,16.74,,,,,,,"not compared: our room HELD (annex owner height not established (G2; Q-54 B HOLD, D-39): )"
+GF-06,43.05,,,,,,,"not compared: our room HELD (annex owner height not established (G2; Q-54 B HOLD, D-39): )"
+GF-07,,32.3422,,,,,,"SCOPE: he has no pantry row; our pantry tile = UP-PANTRY-003 host walls (all three walls host a counter run), Q-37 A wet"
+GF-10,18.60,,,,,,,not compared: our room HELD (room level not drawn (T-088): no owner storey)
+GF-11,15.90,,,,,,,not compared: our room HELD (room level not drawn (T-088): no owner storey)
+GF-12,22.20,25.3011,0.0420,4.8191,-1.7600,0.0000,0.0000,"height RULE_DIFFERENCE (Q-48 A vs his flat 3.00); openings ENGINE_RIGHT (UP-CER-005 / Q-73 A, he deducts none); length ENGINE_RIGHT (drawn faces vs his rounded lm)"
+GF-13,20.10,22.6165,0.3300,4.4265,-1.7600,-0.4800,0.0000,"height RULE_DIFFERENCE (Q-48 A vs his flat 3.00); openings ENGINE_RIGHT (UP-CER-005 / Q-73 A, he deducts none); length ENGINE_RIGHT (drawn faces vs his rounded lm)"
+GF-14,28.50,26.6544,-3.6990,5.3735,-3.5200,0.0000,-0.0001,"height RULE_DIFFERENCE (Q-48 A vs his flat 3.00); openings ENGINE_RIGHT (UP-CER-005 / Q-73 A, he deducts none); length ENGINE_RIGHT (drawn faces vs his rounded lm, open side not walled)"
+GF-16,22.80,25.5912,0.0750,4.9562,-1.7600,-0.4800,-0.0001,"height RULE_DIFFERENCE (Q-48 A vs his flat 3.00); openings ENGINE_RIGHT (UP-CER-005 / Q-73 A, he deducts none); length ENGINE_RIGHT (drawn faces vs his rounded lm)"

@@ -1,0 +1,82 @@
+{
+ "candidate": {
+  "csv_sha256_8": "ef63b73b",
+  "json_sha256_8": "b35475bf",
+  "lines_total": 3705,
+  "wall_tile_lines": 17
+ },
+ "closure_max_abs_residual_m": 0.0,
+ "dxf_sha256_8": "ab54dd55",
+ "faces": 115,
+ "freelancer": {
+  "compared_rooms": 11,
+  "diff_m2": 12.5216,
+  "diff_pct": 4.24,
+  "doors_m2": -23.1,
+  "fl_m2": 295.44,
+  "fl_total_m2": 433.83,
+  "height_m2": 43.1933,
+  "length_m2": -2.652,
+  "own_m2": 307.9616,
+  "residual_m2": 0.0002,
+  "windows_m2": -4.92
+ },
+ "lines": {
+  "bound": 17,
+  "determinate": 11,
+  "held": 6,
+  "no_line_faces": 6
+ },
+ "not_tiled_faces": 0,
+ "open_edges": 2,
+ "owner_method": {
+  "determinate_m2": 340.3038,
+  "determinate_rooms": 12,
+  "held_rooms": [
+   "GF-02",
+   "GF-03",
+   "GF-05",
+   "GF-06",
+   "GF-10",
+   "GF-11"
+  ],
+  "in_line_m2": 307.9616,
+  "no_line_m2": 32.3422,
+  "status": "ASSUMED — OWNER-APPROVED (G1 heights Q-43 / Q-48 A, door heads Q-55 C); faces DRAWING-CONFIRMED (T-250); windows DRAWING-CONFIRMED (T-201 / T-175)"
+ },
+ "pantry": {
+  "hosts": {
+   "GF-07|GF-W01": 1.4,
+   "GF-07|GF-W05": 0.5,
+   "GF-07|GF-W16": 3.0662,
+   "GF-07|OFF:COLUMN": 0.9,
+   "OPEN|B3": 3.0
+  },
+  "runs": {
+   "east_counter.east_leg": {
+    "back_m": 3.0,
+    "depth_m": 0.5,
+    "handles": "B4 (front) / 15D (end) / B3 (open edge)"
+   },
+   "east_counter.south_leg": {
+    "back_m": 1.4,
+    "depth_m": 0.5,
+    "handles": "B2 (end) / AA (front) / A6"
+   },
+   "west_counter.north_leg": {
+    "back_m": 1.45,
+    "depth_m": 0.45,
+    "handles": "15C (front) / 33F (end) / column 2FAE face + 158"
+   },
+   "west_counter.west_leg": {
+    "back_m": 3.0662,
+    "depth_m": 0.5,
+    "handles": "335 / B1 (front) / AE + AF + window W09 face"
+   }
+  }
+ },
+ "rooms": 18,
+ "rule": "R-T312-1..4",
+ "tiled_faces": 115,
+ "unresolved_faces": 0
+}
