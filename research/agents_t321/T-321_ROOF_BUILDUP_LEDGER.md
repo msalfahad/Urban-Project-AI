@@ -8,8 +8,8 @@ Drive title and entity handle; outlines in local metres (origin = each roof's in
 
 ## 1. Result in engineering terms
 
-**No roof layer is printed anywhere in the issued set.** Every text of the architectural DXF (109, the Arabic notes
-decoded: room names and title block only), every text of the structural DXF (374: excavation, soil, formwork notes and
+**No roof layer is printed anywhere in the issued set.** Every text of the architectural DXF (109 model-space texts,
+the room-label blocks and 3 plot stamps; the Arabic notes decoded: room names and title block only), every text of the structural DXF (374: excavation, soil, formwork notes and
 'CHECK ARCHITECTURAL DETAIL OF PARAPET, BEFORE CASTING'), the three sanitary drainage sheets (RWPs and 'SLOPE 1%' only)
 and the SECTION A-A roof bands (one constant 0.05 / 0.20 drafting band, refused as a build-up by T-214 / T-221) were
 searched: no insulation, protection, screed, membrane or tile callout and no thickness. The one 'INSULATION' print is the
@@ -109,8 +109,11 @@ ROOF-430's far point moves into the 1.6 x 1.3 strip: the parapet allowance T-221
 FALLS_SCREED 203.298 .. 204.095 m2 plan (ROOF-430 54.920 .. 55.560, TERRACE-550 32.721, ROOF-970 115.656 .. 115.814)
 ASSUMED - OWNER-APPROVED scope (Q-41), area DRAWING-CONFIRMED, volume HELD; INSULATION / PROTECTION UNKNOWN; FINISH
 202.220 m2 (54.920 + 31.643 + 115.656) DRAWING-CONFIRMED area, material HELD; ROOF-1390 every layer HELD (Q-34);
-oval-void area UNKNOWN. No candidate line carries a roof screed, insulation, protection or roof finish (V3.0.20 run
-checked: s.8). Nothing VERIFIED: Checker to re-measure.
+oval-void area UNKNOWN. No candidate line carries a roof screed, insulation, protection or roof finish: the coverage
+master 1.15.0 lists B13-01 NOT_IN_CANDIDATE and B3-05 'no BOQ line', and no family carries a roof walking finish; the
+roof WP lines are the only candidate lines on these elements (T-303 / T-311 extracts of V3.0.19; the V3.0.20 rerun was
+stopped in this run to give the full suite the CPU, T-244 changed plaster / paint only). Nothing VERIFIED: Checker to
+re-measure.
 
 ## 7. Rule and lessons row (proposed)
 
@@ -133,7 +136,8 @@ hatch); thickness only from a print (else HELD); upturns in lm on their own.
    -> 146.532 / 146.375; circles 12EB / 2F33; hatch 2F21 five paths 114.985; the door-swing gap at local (5.25, 4.62).
 3. ROOF-1390: 12B7 / 1292 / 1279 / 1283 (7.70 x 6.45), circle 1300.
 4. F-T321-02: B34 from the house SW wall line (x -194.493 drawing mm) to CEC: 1.400 m in no T-311 run.
-5. V3.0.20: no line on a roof element other than FIN.WP.ROOF / ROOF_UPTURN / MEMBRANE_ROLLS (s.8 below).
+5. Coverage master 1.15.0: B13-01 / B3-05 not in the candidate; the roof elements carry only FIN.WP.ROOF /
+   ROOF_UPTURN / MEMBRANE_ROLLS lines (T-303 inventory).
 
 ## 9. Not done / uncertain
 
