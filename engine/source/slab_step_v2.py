@@ -1,0 +1,363 @@
+"""SLAB_STEP_V2 (T-224): the step at the edge of a SUNKEN slab panel, from the drawn panel outline and its framing
+members (any villa). A NEW method version beside the opt-in M8 bound SLAB_STEP of SCOPE_QUANTITIES_V1
+(engine/source/scope_quantities.py, `_bound_of`, convention SLAB_STEP_DROP_M), which stays as it is (FROZEN) and stays
+selectable here, flagged, for a sunken outline with no drawn outline and no framing evidence (`legacy_bound`).
+
+NOT wired into any method version (ARCH_TAKEOFF_V2.9 + route G and every V3.0.x candidate are unchanged); a later
+Gate B integration package wires it. Standard library + shapely only; it imports no engine module.
+
+Why a new version (T-213, MERGED 0ec8c496): the V1 bound 0 .. 4 sqrt(A) x drop_high x t is wrong twice for a panel
+framed by beams: (a) the step concrete there is 0 by geometry and (b) 4 sqrt(A) is a square-equivalent perimeter, not
+the drawn one (Alsenan: 47.69 m summed over six panels vs the drawn step perimeter P_ext 41.451 m).
+
+Physical element (ENGINEERING_REASONING_STANDARD s.2 - s.3). A sunken panel is a floor-slab panel lowered by a drop d
+(top AND soffit lower by d) at its full printed thickness t, so the panel's own slab volume A x t, its soffit form A and
+its meshes do not depend on d (T-213 s.4: a thickness printed for the panel rules out the thinned-slab reading). What
+the drop creates depends on what lies along each piece of the outline (classified per piece, never per whole edge):
+
+  EXTERNAL_MEMBER   a beam or column face with normal slab (or the outside) across the member. The member top stays at
+                    the normal slab top (it carries that slab), so the step IS the member's side face:
+                      step concrete            0 m3 for any d (DRAWING-CONFIRMED by geometry)
+                      riser form (top side)    + L x d   (member face between the sunken top and the normal top)
+                      member-side form below   - L x d   (the member face under the slab is shorter by d)
+                    Net formed area 0 for any d; the two terms are different BOQ items and both stay HELD on d.
+  SHARED_MEMBER     a beam with ANOTHER sunken panel across it. Whether a step exists depends on the beam-top level
+                    (it may drop with both panels): riser + L x d / member side - L x d, both HELD on d AND on the beam
+                    top level (never resolved by preference).
+  FREE_SLAB_EDGE    no framing member: the normal slab continues across a step in the slab itself. The step is a
+                    vertical web of the slab thickness t and height d on the panel side:
+                      step concrete            L x d x t
+                      riser form (top side)    + L x d   (stop-end above the sunken top)
+                      soffit step form         + L x d   (vertical face, normal soffit down to the sunken soffit)
+  PERIMETER_MEMBER  a beam with the OUTSIDE of the storey slab across it (an edge beam carrying only the sunken
+                    panel): its top may be at the normal slab top or dropped with the panel; riser + L x d / member side
+                    - L x d HELD on d AND on that beam-top level (unprinted), like SHARED_MEMBER.
+  ADJACENT_SUNKEN   another sunken panel across with no member between: a step only if the two drops differ; HELD on
+                    the relative drop (never 0, never assumed equal).
+  PERIMETER_EDGE    outside the storey slab extent across the edge (no member): the panel edge is the slab's own edge;
+                    no step item (its edge form is the slab edge's, owned by the edge-form line, not this method).
+
+With d unprinted (Alsenan: designer item D-41) every d-driven quantity is HELD (value None, never 0) and carries its
+formula in metres; a drop or thickness without a printed source is an assumption and refused. Evidence statuses are
+those of WORKFLOW_CONTROLS_2026-10-21 s.5.
+
+Default-guard class (T-212 P1): UNWIRED_PRODUCER: it produces quantities and no released or candidate method imports it.
+
+Guards (SlabStepError): a drop / thickness without a source; d <= 0 (a missing drop is None); values in millimetres
+(t > 0.6 m, d > 1.5 m, a member width > 2.0 m, an outline larger than 400 m2 or a side above 60 m); a degenerate or
+self-intersecting outline; two sunken panels overlapping; edge pieces that do not close the drawn perimeter; a drop
+that leaves a bounding beam no projection below the sunken soffit (h - t - d <= 0: BEAM DEPTH CONFLICT, the beam
+cannot be the step); the legacy square-equivalent bound requested for a panel whose outline is drawn.
+"""
+
+from __future__ import annotations
+
+import math
+from dataclasses import dataclass, field
+
+from shapely.geometry import LineString, Point, Polygon
+from shapely.ops import unary_union
+
+METHOD = "SLAB_STEP_V2"
+SUPERSEDES = "SCOPE_QUANTITIES_V1 SLAB_STEP bound (4 sqrt(A) x SLAB_STEP_DROP_M x t), opt-in M8; kept as legacy_bound"
+DEFAULT_GUARD_CLASS = "UNWIRED_PRODUCER"      # T-212 P1: unwired producer, no released / candidate importer
+RULES = ("T-213 (MERGED 0ec8c496): panel lowered at full thickness, step = beam side on framed edges",
+         "D-41 (designer item, open): drop d HELD, never defaulted",
+         "WORKFLOW_CONTROLS_2026-10-21 s.5 statuses", "ENGINEERING_REASONING_STANDARD s.2 - s.4")
+
+DC, AOA, VER, HELD, UNKNOWN = "DRAWING-CONFIRMED", "ASSUMED — OWNER-APPROVED", "VERIFIED", "HELD", "UNKNOWN"
+STATUSES = (VER, DC, AOA, HELD, UNKNOWN)
+MEMBER_KINDS = ("BEAM", "COLUMN")
+EDGE_KINDS = ("EXTERNAL_MEMBER", "SHARED_MEMBER", "PERIMETER_MEMBER", "FREE_SLAB_EDGE", "ADJACENT_SUNKEN",
+              "PERIMETER_EDGE")
+MAX_T_M, MAX_D_M, MAX_MEMBER_W_M, MAX_AREA_M2, MAX_SIDE_M = 0.6, 1.5, 2.0, 400.0, 60.0
+PROBE_M = 0.01          # first probe just outside the outline
+PIECE_M = 0.05          # outline split into pieces <= this, so a member along part of a side owns that part only
+TOUCH_M = 0.005         # a member face within this of the outline frames it
+EPS = 1e-9
+
+__all__ = ["METHOD", "SUPERSEDES", "DEFAULT_GUARD_CLASS", "RULES", "STATUSES", "EDGE_KINDS", "SlabStepError",
+           "Member", "SunkenPanel", "classify_outline", "step_quantities", "legacy_bound", "totals"]
+
+
+class SlabStepError(ValueError):
+    pass
+
+
+def _num(v, what, cap, *, allow_none=False, positive=True):
+    if v is None:
+        if allow_none:
+            return None
+        raise SlabStepError(f"{what} is required")
+    if isinstance(v, bool) or not isinstance(v, (int, float)) or math.isnan(v) or math.isinf(v):
+        raise SlabStepError(f"{what} must be a number, got {v!r}")
+    if positive and v <= 0:
+        raise SlabStepError(f"{what} must be positive (a missing value is None, never 0), got {v!r}")
+    if v > cap:
+        raise SlabStepError(f"{what} = {v!r} m is above {cap} m: millimetres passed as metres?")
+    return float(v)
+
+
+def _poly(pts, what):
+    try:
+        p = Polygon(pts)
+    except Exception as e:  # noqa: BLE001 - shapely raises several types for bad input
+        raise SlabStepError(f"{what}: not a polygon ({e})") from e
+    if not p.is_empty and not p.is_valid:
+        raise SlabStepError(f"{what}: self-intersecting outline (never repaired silently)")
+    if p.is_empty or p.area <= 1e-6:
+        raise SlabStepError(f"{what}: degenerate outline")
+    return p
+
+
+@dataclass
+class Member:
+    """A framing member's plan footprint (metres). h_m = its printed depth (schedule), None when unprinted."""
+    mid: str
+    kind: str
+    footprint: list
+    h_m: float | None = None
+    h_source: str | None = None
+
+    def __post_init__(self):
+        if self.kind not in MEMBER_KINDS:
+            raise SlabStepError(f"member {self.mid}: kind {self.kind!r} not in {MEMBER_KINDS}")
+        self.poly = _poly(self.footprint, f"member {self.mid}")
+        w = min(_side_lengths(self.poly))
+        if w > MAX_MEMBER_W_M:
+            raise SlabStepError(f"member {self.mid}: narrow side {w:.3f} m above {MAX_MEMBER_W_M} m: millimetres?")
+        if self.h_m is not None:
+            _num(self.h_m, f"member {self.mid} depth", 3.0)
+            if not self.h_source:
+                raise SlabStepError(f"member {self.mid}: a depth without a printed source is an assumption (refused)")
+
+
+@dataclass
+class SunkenPanel:
+    """One sunken panel: its drawn outline (metres, from the hatch region / face polygon), its printed thickness and
+    drop (each with its source, or None = not printed)."""
+    pid: str
+    outline: list
+    t_m: float | None = None
+    t_source: str | None = None
+    d_m: float | None = None
+    d_source: str | None = None
+    notes: list = field(default_factory=list)
+
+    def __post_init__(self):
+        self.poly = _poly(self.outline, f"panel {self.pid}")
+        if self.poly.area > MAX_AREA_M2 or max(_side_lengths(self.poly)) > MAX_SIDE_M:
+            raise SlabStepError(f"panel {self.pid}: outline too large ({self.poly.area:.1f} m2): millimetres?")
+        if self.t_m is not None:
+            _num(self.t_m, f"panel {self.pid} thickness", MAX_T_M)
+            if not self.t_source:
+                raise SlabStepError(f"panel {self.pid}: a thickness without a printed source is an assumption "
+                                    "(refused)")
+        if self.d_m is not None:
+            _num(self.d_m, f"panel {self.pid} drop", MAX_D_M)
+            if not self.d_source:
+                raise SlabStepError(f"panel {self.pid}: a drop without a printed source is a default (refused; "
+                                    "HELD while D-41 is open)")
+        elif self.d_source:
+            raise SlabStepError(f"panel {self.pid}: a drop source without a drop")
+
+    @property
+    def area(self):
+        return self.poly.area
+
+    @property
+    def perimeter(self):
+        return self.poly.exterior.length
+
+
+def _side_lengths(p):
+    cs = list(p.exterior.coords)
+    return [math.dist(a, b) for a, b in zip(cs, cs[1:]) if math.dist(a, b) > EPS]
+
+
+def _pieces(p):
+    cs = list(p.exterior.coords)
+    ccw = p.exterior.is_ccw
+    for a, b in zip(cs, cs[1:]):
+        ln = math.dist(a, b)
+        if ln <= EPS:
+            continue
+        n = max(1, math.ceil(ln / PIECE_M - 1e-9))
+        dx, dy = (b[0] - a[0]) / ln, (b[1] - a[1]) / ln
+        nx, ny = (dy, -dx) if ccw else (-dy, dx)            # outward normal
+        for i in range(n):
+            s, e = i / n, (i + 1) / n
+            m = (a[0] + (b[0] - a[0]) * (s + e) / 2, a[1] + (b[1] - a[1]) * (s + e) / 2)
+            yield ln / n, m, (nx, ny)
+
+
+def classify_outline(panel, members, other_panels, slab_extent):
+    """Split the panel's drawn outline by what lies across each piece. members: [Member] footprints (members away
+    from the panel are ignored); other_panels: the other sunken panels of the same slab; slab_extent: the storey
+    slab's outer outline (metres) or None when it is not drawn / not read: then a piece whose far side is neither a
+    member nor another sunken panel is UNKNOWN (never guessed as normal slab or as the outside).
+    Returns {kind: length_m, 'UNKNOWN': m, 'members': {mid: m}, 'shared_with': {pid: m}, 'P': m}."""
+    ext = _poly(slab_extent, "slab extent") if slab_extent is not None else None
+    others = [o for o in other_panels if o.pid != panel.pid]
+    for o in others:
+        if o.poly.intersection(panel.poly).area > 1e-6:
+            raise SlabStepError(f"panels {panel.pid} and {o.pid} overlap: one element counted twice")
+    near = [m for m in members if m.poly.distance(panel.poly) <= TOUCH_M]
+    allm = unary_union([m.poly for m in near]).buffer(TOUCH_M) if near else None
+    near_b = [(m, m.poly.buffer(TOUCH_M)) for m in near]
+    others_b = [(o, o.poly.buffer(TOUCH_M)) for o in others]
+    ext_in = ext.buffer(-TOUCH_M) if ext is not None else None
+    out = {k: 0.0 for k in EDGE_KINDS}
+    out.update({"UNKNOWN": 0.0, "members": {}, "shared_with": {}, "P": panel.perimeter})
+    for ln, (mx, my), (nx, ny) in _pieces(panel.poly):
+        q = Point(mx + nx * PROBE_M, my + ny * PROBE_M)
+        hit = next((m for m, b in near_b if b.contains(q)), None)
+        if hit is not None:
+            # walk across the member(s) to see what is on the far side
+            k, far = 1, None
+            while k * PROBE_M <= MAX_MEMBER_W_M + PROBE_M:
+                r = Point(mx + nx * (PROBE_M + k * PROBE_M), my + ny * (PROBE_M + k * PROBE_M))
+                if not allm.contains(r):
+                    far = r
+                    break
+                k += 1
+            across = next((o for o, b in others_b if far is not None and b.contains(far)), None)
+            if across is not None:
+                out["SHARED_MEMBER"] += ln
+                out["shared_with"][across.pid] = out["shared_with"].get(across.pid, 0.0) + ln
+            elif far is None or ext is None:
+                out["UNKNOWN"] += ln
+            elif ext_in.contains(far):
+                out["EXTERNAL_MEMBER"] += ln
+            else:
+                out["PERIMETER_MEMBER"] += ln
+            out["members"][hit.mid] = out["members"].get(hit.mid, 0.0) + ln
+            continue
+        across = next((o for o, b in others_b if b.contains(q)), None)
+        if across is not None:
+            out["ADJACENT_SUNKEN"] += ln
+            out["shared_with"][across.pid] = out["shared_with"].get(across.pid, 0.0) + ln
+        elif ext is None:
+            out["UNKNOWN"] += ln
+        elif ext_in.contains(q):
+            out["FREE_SLAB_EDGE"] += ln
+        else:
+            out["PERIMETER_EDGE"] += ln
+    closure = sum(out[k] for k in EDGE_KINDS) + out["UNKNOWN"] - out["P"]
+    if abs(closure) > 1e-6:
+        raise SlabStepError(f"panel {panel.pid}: edge pieces do not close the perimeter (residual {closure:.6f} m)")
+    out["near_members"] = [m.mid for m in near]
+    return out
+
+
+def _held(formula, missing):
+    return {"value": None, "status": HELD, "formula": formula, "missing": list(missing)}
+
+
+def _val(v, formula, status, missing=()):
+    return {"value": round(v, 4), "status": status, "formula": formula, "missing": list(missing)}
+
+
+def _area_status(edges):
+    return DC if edges["UNKNOWN"] <= EPS else HELD
+
+
+def step_quantities(panel, edges, members=()):
+    """The step quantities of one panel from its classified outline (classify_outline). Every d-driven value is HELD
+    (None) while d is unprinted; nothing is ever 0 by default. The panel's own slab concrete (A x t) and soffit form
+    (A) are reported for the record only (they belong to the slab line; independent of d)."""
+    A, d, t = panel.area, panel.d_m, panel.t_m
+    E, S, F = edges["EXTERNAL_MEMBER"], edges["SHARED_MEMBER"] + edges["PERIMETER_MEMBER"], edges["FREE_SLAB_EDGE"]
+    J, U = edges["ADJACENT_SUNKEN"], edges["UNKNOWN"]
+    st = DC
+    q = {"pid": panel.pid, "method": METHOD, "area_m2": round(A, 4), "perimeter_m": round(panel.perimeter, 4),
+         "edges_m": {k: round(edges[k], 4) for k in EDGE_KINDS + ("UNKNOWN",)}}
+    # record-only slab terms (owned by the slab line)
+    q["panel_slab_concrete_m3_record"] = (_val(A * t, f"A x t = {A:.4f} x {t:g} (full-thickness drop; any d)", st)
+                                          if t is not None else _held("A x t", ["slab thickness t"]))
+    q["panel_soffit_form_m2_record"] = _val(A, "A (area unchanged; soffit lower by d)", st)
+    # beam depth conflict: a bounding member must still project below the sunken soffit
+    by_id = {m.mid: m for m in members}
+    for mid in edges.get("members", {}):
+        m = by_id.get(mid)
+        if m is not None and m.kind == "BEAM" and m.h_m is not None and d is not None and t is not None:
+            if m.h_m - t - d <= EPS:
+                raise SlabStepError(f"panel {panel.pid}: beam {mid} depth {m.h_m} leaves no projection below the "
+                                    f"sunken soffit (h - t - d = {m.h_m - t - d:.3f} m): BEAM DEPTH CONFLICT")
+    miss_d = [] if d is not None else ["drop d (D-41)"]
+    unknown = ["what lies across %.4f m of outline (slab extent not given)" % U] if U > EPS else []
+    # step concrete: 0 on member-framed pieces for any d; L x d x t on free slab edges
+    if F <= EPS and J <= EPS and U <= EPS:
+        q["step_concrete_m3"] = _val(0.0, f"every piece is a member face (P_ext {E:.4f} + P_shared / perimeter "
+                                          f"{S:.4f} m): the "
+                                          "step is the member side, no slab concrete for any d", DC)
+    elif d is None or t is None or J > EPS or U > EPS:
+        q["step_concrete_m3"] = _held(f"L_free x d x t = {F:.4f} x d x t (member pieces 0)",
+                                      miss_d + ([] if t is not None else ["slab thickness t"]) + unknown +
+                                      (["relative drop over %.4f m of adjacent sunken edge" % J] if J > EPS else []))
+    else:
+        q["step_concrete_m3"] = _val(F * d * t, f"L_free x d x t = {F:.4f} x {d:g} x {t:g} (member pieces 0)", DC)
+    # formwork
+    if d is None:
+        q["riser_form_member_m2"] = _held(f"+ P_ext x d = + {E:.4f} x d", miss_d)
+        q["member_side_form_adjust_m2"] = _held(f"- P_ext x d = - {E:.4f} x d", miss_d)
+        q["riser_form_free_edge_m2"] = (_held(f"+ L_free x d = + {F:.4f} x d", miss_d) if F > EPS
+                                        else _val(0.0, "no free slab edge", DC))
+        q["soffit_step_form_free_edge_m2"] = (_held(f"+ L_free x d = + {F:.4f} x d", miss_d) if F > EPS
+                                              else _val(0.0, "no free slab edge", DC))
+    else:
+        q["riser_form_member_m2"] = _val(E * d, f"+ P_ext x d = + {E:.4f} x {d:g}", st)
+        q["member_side_form_adjust_m2"] = _val(-E * d, f"- P_ext x d = - {E:.4f} x {d:g}", st)
+        q["riser_form_free_edge_m2"] = _val(F * d, f"+ L_free x d = + {F:.4f} x {d:g}", st)
+        q["soffit_step_form_free_edge_m2"] = _val(F * d, f"+ L_free x d = + {F:.4f} x {d:g}", st)
+    q["shared_member_riser_m2"] = (_held(f"+ P_shared x d = + {S:.4f} x d (only if the shared / perimeter beam top "
+                                         "stays at the normal slab top)", miss_d + ["shared beam top level"]) if S > EPS
+                                   else _val(0.0, "no shared member edge", DC))
+    q["shared_member_side_adjust_m2"] = (_held(f"- P_shared x d = - {S:.4f} x d (same condition)",
+                                               miss_d + ["shared beam top level"]) if S > EPS
+                                         else _val(0.0, "no shared member edge", DC))
+    q["adjacent_sunken_step"] = (_held(f"L_adj x |d - d_other| = {J:.4f} x |d - d_other|",
+                                       ["relative drop of the adjacent sunken panel"]) if J > EPS
+                                 else _val(0.0, "no adjacent sunken edge without a member", DC))
+    q["unknown_edge"] = (_held(f"{U:.4f} m of outline with nothing classified across", ["slab extent"])
+                         if U > EPS else _val(0.0, "every piece classified", DC))
+    q["net_member_form_change_m2"] = _val(0.0, "riser (+P_ext x d) + member side (-P_ext x d) = 0 for any d", DC)
+    q["area_status"] = _area_status(edges)
+    return q
+
+
+def legacy_bound(area_m2, drop_high_m, t_high_m, *, outline_drawn, framing_evidence):
+    """The V1 bound of SCOPE_QUANTITIES_V1 (SLAB_STEP), kept selectable ONLY for a sunken finding with no drawn
+    outline and no framing evidence: 0 .. 4 sqrt(A) x drop_high x t_high, flagged. Refused where the outline is
+    drawn (use classify_outline + step_quantities: the real perimeter) or where framing members are known."""
+    if outline_drawn:
+        raise SlabStepError("legacy 4 sqrt(A) bound refused: the panel outline is drawn (measure its real perimeter)")
+    if framing_evidence:
+        raise SlabStepError("legacy 4 sqrt(A) bound refused: framing members are known (classify the outline)")
+    a = _num(area_m2, "area", MAX_AREA_M2)
+    dh = _num(drop_high_m, "drop high (convention SLAB_STEP_DROP_M)", MAX_D_M)
+    th = _num(t_high_m, "slab thickness high", MAX_T_M)
+    hi = 4 * math.sqrt(a) * dh * th
+    return {"low": 0.0, "high": round(hi, 6), "status": HELD, "flag": "LEGACY_SQUARE_EQUIVALENT_BOUND",
+            "formula": f"0 .. 4 sqrt({a:.4f}) x {dh:g} x {th:g}", "method": "SCOPE_QUANTITIES_V1 SLAB_STEP"}
+
+
+def totals(results):
+    """Sum each quantity over panels by status; a HELD term is listed with its formula, never added as 0."""
+    keys = ("step_concrete_m3", "riser_form_member_m2", "member_side_form_adjust_m2", "riser_form_free_edge_m2",
+            "soffit_step_form_free_edge_m2", "shared_member_riser_m2", "shared_member_side_adjust_m2")
+    out = {}
+    for k in keys:
+        known, held = 0.0, []
+        for r in results:
+            v = r[k]
+            if v["value"] is None:
+                held.append((r["pid"], v["formula"]))
+            else:
+                known += v["value"]
+        out[k] = {"known": round(known, 4), "held": held, "complete": not held}
+    out["P_ext_m"] = round(sum(r["edges_m"]["EXTERNAL_MEMBER"] for r in results), 4)
+    out["P_shared_m"] = round(sum(r["edges_m"]["SHARED_MEMBER"] + r["edges_m"]["PERIMETER_MEMBER"]
+                                  for r in results), 4)
+    out["L_free_m"] = round(sum(r["edges_m"]["FREE_SLAB_EDGE"] for r in results), 4)
+    return out
