@@ -3009,6 +3009,12 @@ CANDIDATE_EXTENSIONS_V3018 = (V3018,)  # its own tuple: the V3.0 .. V3.0.17 meth
 # rollback = run V2.9.
 V3019 = "ARCH_TAKEOFF_V3.0.19"
 CANDIDATE_EXTENSIONS_V3019 = (V3019,)  # its own tuple: the V3.0 .. V3.0.18 method lists stay as they were
+# T-244: ARCH_TAKEOFF_V3.0.20 = the SAME candidate (engine.source.arch_v3020): a V3.0.19 run (its V3_0_* ..
+# V3_0_19_* files unchanged) + ONE piece (URBAN_V3020_INPUTS_V1): the internal plaster / paint room-face lines take the
+# opening outlines checker-merged ledgers settled (deduction by deduction, net recomputed, a held deduction BOUNDED);
+# every other line byte-identical to V3.0.19, in V3_0_20_* files. Opt-in, not the released default; rollback = run V2.9.
+V3020 = "ARCH_TAKEOFF_V3.0.20"
+CANDIDATE_EXTENSIONS_V3020 = (V3020,)  # its own tuple: the V3.0 .. V3.0.19 method lists stay as they were
 
 
 def _v304_inputs(path, project_id):
@@ -3043,26 +3049,27 @@ def _v304_inputs(path, project_id):
 def cmd_arch(a):
     from engine.source import discovery as DS
     facts = json.loads(Path(a.facts).read_text(encoding="utf-8")) if a.facts else None
-    v3019 = a.method == V3019                 # T-255: the V3.0.18 run, then its V3.0.19 end closure + opening trace
-    v3018 = a.method in (V3018, V3019)        # T-266: the V3.0.17 run, then its V3.0.18 component closure
-    v3017 = a.method in (V3017, V3018, V3019)        # T-254: the V3.0.16 run, then its V3.0.17 basis correction
-    v3016 = a.method in (V3016, V3017, V3018, V3019)        # T-245: the V3.0.15 run, then its V3.0.16 identity step
-    v3015 = a.method in (V3015, V3016, V3017, V3018, V3019)        # T-270: the V3.0.14 run, then its V3.0.15 extension
-    v3014 = a.method in (V3014, V3015, V3016, V3017, V3018, V3019)                 # T-240: the V3.0.13 run, then its V3.0.14 extension
-    v3013 = a.method in (V3013, V3014, V3015, V3016, V3017, V3018, V3019)          # T-268: the V3.0.12 run, then its V3.0.13 extension
-    v3012 = a.method in (V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019)          # T-146 + T-247: the V3.0.11 run, then its V3.0.12 extension
-    v3011 = a.method in (V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019)        # T-239: the V3.0.10 run, then its V3.0.11 extension
-    v3010 = a.method in (V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019)        # T-232: the V3.0.9 run, then its V3.0.10 extension
-    v309 = a.method in (V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019)          # T-211: the V3.0.8 run, then its V3.0.9 extension
-    v308 = a.method in (V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019)    # T-231: the V3.0.7 run, then its V3.0.8 extension
-    v307 = a.method in (V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019)  # T-193: the V3.0.6 run, then its V3.0.7 extension
-    v306 = a.method in (V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019)  # T-187: the V3.0.5 run, then its V3.0.6 extension
-    v305 = a.method in (V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019)  # T-179: the V3.0.4 run, then its V3.0.5 extension
-    v304 = a.method in (V304, V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019)  # T-167: the V3.0.3 run, then V3.0.4
-    v303 = a.method in (V303, V304, V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019)  # T-151: the V3.0.2 run, then V3.0.3
-    v302 = a.method in (V302, V303, V304, V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019)  # T-142: V3.0.1 run, then V3.0.2
-    v301 = a.method in (V301, V302, V303, V304, V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019)  # T-133: V3.0, then V3.0.1
-    v30 = a.method in (V30, V301, V302, V303, V304, V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019)  # T-131: runs V2.13
+    v3020 = a.method == V3020                 # T-244: the V3.0.19 run, then its V3.0.20 finish revision
+    v3019 = a.method in (V3019, V3020)                # T-255: the V3.0.18 run, then its V3.0.19 end closure + opening trace
+    v3018 = a.method in (V3018, V3019, V3020)        # T-266: the V3.0.17 run, then its V3.0.18 component closure
+    v3017 = a.method in (V3017, V3018, V3019, V3020)        # T-254: the V3.0.16 run, then its V3.0.17 basis correction
+    v3016 = a.method in (V3016, V3017, V3018, V3019, V3020)        # T-245: the V3.0.15 run, then its V3.0.16 identity step
+    v3015 = a.method in (V3015, V3016, V3017, V3018, V3019, V3020)        # T-270: the V3.0.14 run, then its V3.0.15 extension
+    v3014 = a.method in (V3014, V3015, V3016, V3017, V3018, V3019, V3020)                 # T-240: the V3.0.13 run, then its V3.0.14 extension
+    v3013 = a.method in (V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020)          # T-268: the V3.0.12 run, then its V3.0.13 extension
+    v3012 = a.method in (V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020)          # T-146 + T-247: the V3.0.11 run, then its V3.0.12 extension
+    v3011 = a.method in (V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020)        # T-239: the V3.0.10 run, then its V3.0.11 extension
+    v3010 = a.method in (V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020)        # T-232: the V3.0.9 run, then its V3.0.10 extension
+    v309 = a.method in (V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020)          # T-211: the V3.0.8 run, then its V3.0.9 extension
+    v308 = a.method in (V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020)    # T-231: the V3.0.7 run, then its V3.0.8 extension
+    v307 = a.method in (V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020)  # T-193: the V3.0.6 run, then its V3.0.7 extension
+    v306 = a.method in (V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020)  # T-187: the V3.0.5 run, then its V3.0.6 extension
+    v305 = a.method in (V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020)  # T-179: the V3.0.4 run, then its V3.0.5 extension
+    v304 = a.method in (V304, V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020)  # T-167: the V3.0.3 run, then V3.0.4
+    v303 = a.method in (V303, V304, V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020)  # T-151: the V3.0.2 run, then V3.0.3
+    v302 = a.method in (V302, V303, V304, V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020)  # T-142: V3.0.1 run, then V3.0.2
+    v301 = a.method in (V301, V302, V303, V304, V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020)  # T-133: V3.0, then V3.0.1
+    v30 = a.method in (V30, V301, V302, V303, V304, V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020)  # T-131: runs V2.13
     if getattr(a, "v302_inputs", None) and not v302:
         raise SystemExit("--v302-inputs needs --method ARCH_TAKEOFF_V3.0.2")
     if getattr(a, "v303_inputs", None) and not v303:
@@ -3099,8 +3106,12 @@ def cmd_arch(a):
         raise SystemExit("--v3017-inputs needs --method ARCH_TAKEOFF_V3.0.17 or later")
     if getattr(a, "v3018_inputs", None) and not v3018:
         raise SystemExit("--v3018-inputs needs --method ARCH_TAKEOFF_V3.0.18 or later")
+    if getattr(a, "v3020_inputs", None) and not v3020:
+        raise SystemExit("--v3020-inputs needs --method ARCH_TAKEOFF_V3.0.20")
+    if v3020 and not getattr(a, "v3020_inputs", None):
+        raise SystemExit("ARCH_TAKEOFF_V3.0.20 needs --v3020-inputs (the room-face finish opening revisions)")
     if getattr(a, "v3019_inputs", None) and not v3019:
-        raise SystemExit("--v3019-inputs needs --method ARCH_TAKEOFF_V3.0.19")
+        raise SystemExit("--v3019-inputs needs --method ARCH_TAKEOFF_V3.0.19 or later")
     if v3019 and not getattr(a, "v3019_inputs", None):
         raise SystemExit("ARCH_TAKEOFF_V3.0.19 needs --v3019-inputs (the arc-band end closure and the opening trace)")
     if v3018 and not getattr(a, "v3018_inputs", None):
@@ -3596,6 +3607,18 @@ def cmd_arch(a):
                                                                             svgs += names19
                                                                             v30rec = dict(v30rec, method=V3019, extends=V3018,
                                                                                           identity=ident19, v3_0_18_identity=ident18)
+                                                                            if v3020:
+                                                                                # T-244: ARCH_TAKEOFF_V3.0.20 beside the V3_0_19_*
+                                                                                from engine.source import arch_v3020 as A3020
+                                                                                inp20 = A3020.load_inputs(json.loads(Path(
+                                                                                    a.v3020_inputs).read_text(encoding="utf-8")))
+                                                                                l3019 = A3019.integrate(l3018, ch_v19)[0]
+                                                                                ch_v20, log_v20, dl_v20 = A3020.changes_for(inp20, l3019)
+                                                                                names20, ident20, _led20 = A3020.write(
+                                                                                    out, l3019, ch_v20, log_v20, dl_v20, inp20, released)
+                                                                                svgs += names20
+                                                                                v30rec = dict(v30rec, method=V3020, extends=V3019,
+                                                                                              identity=ident20, v3_0_19_identity=ident19)
     ev = Counter(ln["evidence_state"] for ln in room["lines"])
     print(json.dumps({"method": a.method, "regions": [{"floor": r["floor"], "state": r["stage_state"],
                                                         "rooms": r.get("space_counts"), "lines": r.get("lines"),
@@ -3736,7 +3759,7 @@ def main(argv=None):
                    CANDIDATE_EXTENSIONS_V3011 + CANDIDATE_EXTENSIONS_V3012 + CANDIDATE_EXTENSIONS_V3013 +
                    CANDIDATE_EXTENSIONS_V3014 + CANDIDATE_EXTENSIONS_V3015 +
                    CANDIDATE_EXTENSIONS_V3016 + CANDIDATE_EXTENSIONS_V3017 + CANDIDATE_EXTENSIONS_V3018 +
-                   CANDIDATE_EXTENSIONS_V3019,
+                   CANDIDATE_EXTENSIONS_V3019 + CANDIDATE_EXTENSIONS_V3020,
                    help="the versioned architectural takeoff method (no default: the route is opt-in until validated); "
                         "ARCH_TAKEOFF_V2 (S6) adds the drawing admission, unit-relative tolerances, empty-band plan "
                         "regions and the completeness gates (exit 2: admission blocked, 3: completeness failed)")
@@ -3793,6 +3816,10 @@ def main(argv=None):
     p.add_argument("--v3010-inputs", help="ARCH_TAKEOFF_V3.0.10 (URBAN_V3010_INPUTS_V1): checker-merged opening "
                                           "records (doors / windows: pcs AND m2 from one opening list) with the "
                                           "candidate door / window lines they supersede, and the guard inputs")
+    p.add_argument("--v3020-inputs", help="ARCH_TAKEOFF_V3.0.20 (URBAN_V3020_INPUTS_V1): the internal plaster / paint "
+                                          "room-face lines brought to the opening outlines checker-merged ledgers "
+                                          "settled (each deduction asserted before / after, net recomputed, a held "
+                                          "deduction BOUNDED), line id by line id")
     p.add_argument("--v3019-inputs", help="ARCH_TAKEOFF_V3.0.19 (URBAN_V3019_INPUTS_V1): an arc-band line closed on "
                                           "its drawn faces (columns in the band deducted, the retired reading "
                                           "reconciled) and the opening deduction trace (each opening once per trade "

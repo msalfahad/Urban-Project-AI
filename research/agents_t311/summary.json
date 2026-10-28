@@ -1,0 +1,78 @@
+{
+ "candidate": {
+  "lines_file": "V3_0_19_BOQ_LINES.json",
+  "source": "own V3.0.19 run (research/agents_t255/v3019_run.py after research/agents_t167/v304_run.py) on Drive 'Alsenan chalet project' P7757_DXF_COMPRESSED.zip -> P7757.dxf (ab54dd55) and 'ST7757 dxf.dxf' (9f9d1179)",
+  "lines_json_sha256_8": "b35475bf",
+  "lines_csv_sha256_8": "ef63b73b",
+  "lines_total": 3705
+ },
+ "parapet_runs": 24,
+ "plinth_segments": 29,
+ "components": 46,
+ "by_state": {
+  "IN_LINE": 7,
+  "NO_LINE": 35,
+  "OTHER_LINE": 4
+ },
+ "double": 0,
+ "parapet_concrete_m3": [
+  8.040369,
+  20.08066
+ ],
+ "parapet_concrete_held_increment_m3_per_m_b_edge": 26.80123,
+ "parapet_block_m2": [
+  0.0,
+  60.596453
+ ],
+ "parapet_formwork_m2": [
+  81.58869,
+  202.781594
+ ],
+ "parapet_outer_face_no_line_m2": [
+  68.298451,
+  73.676451
+ ],
+ "parapet_inner_face_m2": [
+  94.430974,
+  99.534095
+ ],
+ "parapet_top_m2": [
+  26.80123,
+  26.80123
+ ],
+ "parapet_arrises_ml": [
+  271.9623,
+  271.9623
+ ],
+ "wp_upturn_in_line_ml": [
+  136.8815,
+  136.8815
+ ],
+ "plinth_face_m2": [
+  71.68859,
+  72.749795
+ ],
+ "plinth_concrete_face_m2": [
+  65.924255,
+  66.98546
+ ],
+ "plinth_wall_course_m2": 5.059335,
+ "closure_max_abs_residual": 0.0007,
+ "freelancer_parapet_block_m2": 172.93,
+ "concrete_lines_naming_an_upstand_not_parapet": [
+  {
+   "line_id": "L-0ede77cfd0badc4c7d62",
+   "item_code": "STR.CONC.COLUMN",
+   "why": "water-tank column held on D-44 (B15 upstand / downstand) and D-39; blank, not a parapet carrier"
+  },
+  {
+   "line_id": "L-c10e2945d582b5a03126",
+   "item_code": "STR.CONC.COLUMN",
+   "why": "water-tank column held on D-44 (B15 upstand / downstand) and D-39; blank, not a parapet carrier"
+  }
+ ],
+ "rebar_lines_naming_an_upstand": [
+  "L-99dccb17e3be65d12ae5",
+  "L-af2245654efab6948741"
+ ]
+}
