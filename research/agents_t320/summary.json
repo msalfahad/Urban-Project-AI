@@ -1,0 +1,661 @@
+{
+ "backfill": [
+  null,
+  "HELD"
+ ],
+ "by_kind": {
+  "BLINDING": {
+   "held": 4,
+   "n": 58,
+   "value_m3": 15.75656
+  },
+  "FOOTING": {
+   "held": 2,
+   "n": 26,
+   "value_m3": 52.961
+  },
+  "GROUND_BEAM": {
+   "held": 33,
+   "n": 68,
+   "value_m3": 3.5256
+  },
+  "LIFT_PIT": {
+   "held": 1,
+   "n": 1,
+   "value_m3": 0.0
+  },
+  "NECK": {
+   "held": 7,
+   "n": 36,
+   "value_m3": 4.3278
+  },
+  "POOL_ENVELOPE": {
+   "held": 0,
+   "n": 1,
+   "value_m3": 18.325138
+  },
+  "STRAP": {
+   "held": 2,
+   "n": 5,
+   "value_m3": 3.3905
+  },
+  "UNDERLAY": {
+   "held": 2,
+   "n": 26,
+   "value_m3": 7.6993
+  },
+  "WALL_AND_PADS": {
+   "held": 1,
+   "n": 1,
+   "value_m3": 0.0
+  }
+ },
+ "components": 222,
+ "d14_beyond_plot_m3": 0.189,
+ "disposal": [
+  null,
+  "HELD"
+ ],
+ "eg_m": 0.0,
+ "excavated": {
+  "coefficient_24_neat_pits_m3_per_m": 129.234,
+  "held": [
+   "formation only a limit (Q-21 C / OQ-13)",
+   "working space not printed (UP-EXC-001)",
+   "pits vs bulk dig over the east block (OQ-13, T-170 w*)"
+  ],
+  "status": "HELD",
+  "value_m3": null
+ },
+ "f8_pool": {
+  "env_area_numeric_m2": 12.216727,
+  "footprint_in_env_m2": 1.615967,
+  "footprint_in_outer_m2": 1.296442,
+  "neat_in_env_m2": 1.99957
+ },
+ "formation_limit_m": -1.5,
+ "groups": {
+  "PIT:FTG:SH10:F11@133817,36348:e37220": {
+   "beyond_plot_held_m3": 0.037,
+   "held": 0,
+   "statuses": [
+    "DRAWING-CONFIRMED",
+    "HELD (AT_LEAST bound at the printed limit)"
+   ],
+   "value_inside_plot_m3": 3.8584,
+   "value_m3": 3.8954
+  },
+  "PIT:FTG:SH10:F12@131342,43598:67454a": {
+   "beyond_plot_held_m3": 0.0,
+   "held": 0,
+   "statuses": [
+    "DRAWING-CONFIRMED",
+    "HELD (AT_LEAST bound at the printed limit)"
+   ],
+   "value_inside_plot_m3": 12.6513,
+   "value_m3": 12.6513
+  },
+  "PIT:FTG:SH10:F13@128842,39748:6b1a4d": {
+   "beyond_plot_held_m3": 0.0,
+   "held": 0,
+   "statuses": [
+    "DRAWING-CONFIRMED",
+    "HELD (AT_LEAST bound at the printed limit)"
+   ],
+   "value_inside_plot_m3": 7.4757,
+   "value_m3": 7.4757
+  },
+  "PIT:FTG:SH10:F14@140062,36348:73a8e9": {
+   "beyond_plot_held_m3": 0.04,
+   "held": 1,
+   "statuses": [
+    "CONFLICT",
+    "DRAWING-CONFIRMED",
+    "HELD (AT_LEAST bound at the printed limit)"
+   ],
+   "value_inside_plot_m3": 8.6323,
+   "value_m3": 8.6723
+  },
+  "PIT:FTG:SH10:F15@124742,36348:932498": {
+   "beyond_plot_held_m3": 0.02,
+   "held": 0,
+   "statuses": [
+    "DRAWING-CONFIRMED",
+    "HELD (AT_LEAST bound at the printed limit)"
+   ],
+   "value_inside_plot_m3": 1.2055,
+   "value_m3": 1.2255
+  },
+  "PIT:FTG:SH10:F2@133842,48648:3919bf": {
+   "beyond_plot_held_m3": 0.0,
+   "held": 0,
+   "statuses": [
+    "DRAWING-CONFIRMED",
+    "HELD (AT_LEAST bound at the printed limit)"
+   ],
+   "value_inside_plot_m3": 1.9026,
+   "value_m3": 1.9026
+  },
+  "PIT:FTG:SH10:F2@136542,48648:277c2f": {
+   "beyond_plot_held_m3": 0.0,
+   "held": 0,
+   "statuses": [
+    "DRAWING-CONFIRMED",
+    "HELD (AT_LEAST bound at the printed limit)"
+   ],
+   "value_inside_plot_m3": 1.9026,
+   "value_m3": 1.9026
+  },
+  "PIT:FTG:SH10:F3@123192,40398:b6c1c9": {
+   "beyond_plot_held_m3": 0.0,
+   "held": 0,
+   "statuses": [
+    "DRAWING-CONFIRMED",
+    "HELD (AT_LEAST bound at the printed limit)"
+   ],
+   "value_inside_plot_m3": 1.2713,
+   "value_m3": 1.2713
+  },
+  "PIT:FTG:SH10:F3@129492,37298:38c592": {
+   "beyond_plot_held_m3": 0.0,
+   "held": 0,
+   "statuses": [
+    "DRAWING-CONFIRMED",
+    "HELD (AT_LEAST bound at the printed limit)"
+   ],
+   "value_inside_plot_m3": 1.2713,
+   "value_m3": 1.2713
+  },
+  "PIT:FTG:SH10:F4@144012,48698:142c12": {
+   "beyond_plot_held_m3": 0.0,
+   "held": 0,
+   "statuses": [
+    "DRAWING-CONFIRMED",
+    "HELD (AT_LEAST bound at the printed limit)"
+   ],
+   "value_inside_plot_m3": 2.7355,
+   "value_m3": 2.7355
+  },
+  "PIT:FTG:SH10:F4@148062,48723:ab0b66": {
+   "beyond_plot_held_m3": 0.0,
+   "held": 0,
+   "statuses": [
+    "DRAWING-CONFIRMED",
+    "HELD (AT_LEAST bound at the printed limit)"
+   ],
+   "value_inside_plot_m3": 2.8192,
+   "value_m3": 2.8192
+  },
+  "PIT:FTG:SH10:F5@140012,48648:f1403e": {
+   "beyond_plot_held_m3": 0.0,
+   "held": 0,
+   "statuses": [
+    "DRAWING-CONFIRMED",
+    "HELD (AT_LEAST bound at the printed limit)"
+   ],
+   "value_inside_plot_m3": 3.1342,
+   "value_m3": 3.1342
+  },
+  "PIT:FTG:SH10:F5@144112,36948:04f491": {
+   "beyond_plot_held_m3": 0.0,
+   "held": 0,
+   "statuses": [
+    "DRAWING-CONFIRMED",
+    "HELD (AT_LEAST bound at the printed limit)"
+   ],
+   "value_inside_plot_m3": 3.1342,
+   "value_m3": 3.1342
+  },
+  "PIT:FTG:SH10:F6@133592,40098:33adbb": {
+   "beyond_plot_held_m3": 0.0,
+   "held": 0,
+   "statuses": [
+    "DRAWING-CONFIRMED",
+    "HELD (AT_LEAST bound at the printed limit)"
+   ],
+   "value_inside_plot_m3": 4.1067,
+   "value_m3": 4.1067
+  },
+  "PIT:FTG:SH10:F8@146912,42298:624706": {
+   "beyond_plot_held_m3": 0.038,
+   "held": 0,
+   "statuses": [
+    "DRAWING-CONFIRMED",
+    "HELD (AT_LEAST bound at the printed limit)"
+   ],
+   "value_inside_plot_m3": 10.188738,
+   "value_m3": 10.226738
+  },
+  "PIT:FTG:SH10:F9@143262,44298:3192fb": {
+   "beyond_plot_held_m3": 0.0,
+   "held": 0,
+   "statuses": [
+    "DRAWING-CONFIRMED",
+    "HELD (AT_LEAST bound at the printed limit)"
+   ],
+   "value_inside_plot_m3": 6.8848,
+   "value_m3": 6.8848
+  },
+  "PIT:FTG:SH10:F@119542,36348:88b429": {
+   "beyond_plot_held_m3": 0.02,
+   "held": 0,
+   "statuses": [
+    "DRAWING-CONFIRMED",
+    "HELD (AT_LEAST bound at the printed limit)"
+   ],
+   "value_inside_plot_m3": 0.5109,
+   "value_m3": 0.5309
+  },
+  "PIT:FTG:SH10:F@119542,42348:878832": {
+   "beyond_plot_held_m3": 0.011,
+   "held": 0,
+   "statuses": [
+    "DRAWING-CONFIRMED",
+    "HELD (AT_LEAST bound at the printed limit)"
+   ],
+   "value_inside_plot_m3": 0.5199,
+   "value_m3": 0.5309
+  },
+  "PIT:FTG:SH10:F@121942,42498:0ce993": {
+   "beyond_plot_held_m3": 0.0,
+   "held": 0,
+   "statuses": [
+    "DRAWING-CONFIRMED",
+    "HELD (AT_LEAST bound at the printed limit)"
+   ],
+   "value_inside_plot_m3": 0.5309,
+   "value_m3": 0.5309
+  },
+  "PIT:FTG:SH10:F@131292,36348:767bc7": {
+   "beyond_plot_held_m3": 0.011,
+   "held": 0,
+   "statuses": [
+    "DRAWING-CONFIRMED",
+    "HELD (AT_LEAST bound at the printed limit)"
+   ],
+   "value_inside_plot_m3": 0.5199,
+   "value_m3": 0.5309
+  },
+  "PIT:FTG:SH10:FF@136342,43148:8e679c": {
+   "beyond_plot_held_m3": 0.0,
+   "held": 8,
+   "statuses": [
+    "HELD"
+   ],
+   "value_inside_plot_m3": 0.0,
+   "value_m3": 0.0
+  },
+  "PIT:FTG:SH10:FN@141212,41323:8f5b19": {
+   "beyond_plot_held_m3": 0.0,
+   "held": 0,
+   "statuses": [
+    "DRAWING-CONFIRMED",
+    "HELD (AT_LEAST bound at the printed limit)"
+   ],
+   "value_inside_plot_m3": 0.6067,
+   "value_m3": 0.6067
+  },
+  "PIT:FTG:SH10:FN@145737,41323:b61882": {
+   "beyond_plot_held_m3": 0.0,
+   "held": 0,
+   "statuses": [
+    "DRAWING-CONFIRMED",
+    "HELD (AT_LEAST bound at the printed limit)"
+   ],
+   "value_inside_plot_m3": 0.6067,
+   "value_m3": 0.6067
+  },
+  "PIT:FTG:SH10:FN@146262,46648:0e0098": {
+   "beyond_plot_held_m3": 0.0,
+   "held": 0,
+   "statuses": [
+    "DRAWING-CONFIRMED",
+    "HELD (AT_LEAST bound at the printed limit)"
+   ],
+   "value_inside_plot_m3": 0.6067,
+   "value_m3": 0.6067
+  },
+  "PIT:FTG:SH10:FN@149912,39848:cf72aa": {
+   "beyond_plot_held_m3": 0.012,
+   "held": 0,
+   "statuses": [
+    "DRAWING-CONFIRMED",
+    "HELD (AT_LEAST bound at the printed limit)"
+   ],
+   "value_inside_plot_m3": 0.5947,
+   "value_m3": 0.6067
+  },
+  "PIT:FTG:SH10:T652:10A5": {
+   "beyond_plot_held_m3": 0.0,
+   "held": 5,
+   "statuses": [
+    "HELD"
+   ],
+   "value_inside_plot_m3": 0.0,
+   "value_m3": 0.0
+  },
+  "PIT:POOL": {
+   "beyond_plot_held_m3": 0.548562,
+   "held": 1,
+   "statuses": [
+    "DRAWING-CONFIRMED",
+    "HELD"
+   ],
+   "value_inside_plot_m3": 17.776576,
+   "value_m3": 18.325138
+  },
+  "TRENCH:BOUNDARY": {
+   "beyond_plot_held_m3": 0.0,
+   "held": 2,
+   "statuses": [
+    "DRAWING-CONFIRMED",
+    "HELD"
+   ],
+   "value_inside_plot_m3": 3.5256,
+   "value_m3": 3.5256
+  },
+  "TRENCH:GB": {
+   "beyond_plot_held_m3": 0.0,
+   "held": 32,
+   "statuses": [
+    "CONFLICT",
+    "DRAWING-CONFIRMED",
+    "HELD",
+    "ZERO_BY_BOUND"
+   ],
+   "value_inside_plot_m3": 2.79956,
+   "value_m3": 2.79956
+  },
+  "TRENCH:STRAPS": {
+   "beyond_plot_held_m3": 0.0,
+   "held": 3,
+   "statuses": [
+    "DRAWING-CONFIRMED",
+    "HELD"
+   ],
+   "value_inside_plot_m3": 3.3905,
+   "value_m3": 3.3905
+  }
+ },
+ "method": "DISPLACEMENT_LEDGER_V1",
+ "necks": {
+  "at_least_m3": 4.3278,
+  "bounded": 29,
+  "coef_m3_per_m": 4.86,
+  "conflict_or_held": [
+   [
+    "NECK:SH10:C10@148899,36778",
+    "HELD"
+   ],
+   [
+    "NECK:SH10:C1@137485,46080",
+    "HELD"
+   ],
+   [
+    "NECK:SH10:C2@137427,44773",
+    "HELD"
+   ],
+   [
+    "NECK:SH10:C2@138612,46077",
+    "HELD"
+   ],
+   [
+    "NECK:SH10:C8@141489,38336",
+    "CONFLICT"
+   ],
+   [
+    "NECK:SH10:C9@138589,44775",
+    "HELD"
+   ],
+   [
+    "NECK:SH10:C@150972,36507",
+    "HELD"
+   ]
+  ],
+  "n": 36
+ },
+ "pits24_blinding_inside_plot_m3": 12.734438,
+ "pits24_net_m3": {
+  "BLINDING": 12.923438,
+  "FOOTING": 52.919,
+  "UNDERLAY": 7.6895
+ },
+ "pool_decomposition": {
+  "base": 4.374226,
+  "blinding_at_membrane_line": 1.221676,
+  "floor_buildup": 0.428942,
+  "membrane_under": 0.610838,
+  "membrane_up_walls_below_EG": 0.875409,
+  "screed_under_base": 0.578415,
+  "screed_up_walls_below_EG": 0.822566,
+  "walls_below_EG": 2.121053,
+  "water_space_below_EG": 7.292012
+ },
+ "pool_envelope_m3": 18.325138,
+ "pool_layers_beyond_plot_line_m3": 0.548562,
+ "pool_rc_check_m3": {
+  "base": 4.374226,
+  "walls_above_EG_excluded": 0.707018,
+  "walls_full_1_20": 2.828071
+ },
+ "shared": [
+  {
+   "a": "PIT:FTG:SH10:F8@146912,42298:624706:BLINDING",
+   "b": "PIT:FTG:SH10:FN@145737,41323:b61882:BLINDING",
+   "plan_m2": 0.005625,
+   "range_m3": null,
+   "status": "NETTED",
+   "value_m3": 0.000562
+  },
+  {
+   "a": "PIT:FTG:SH10:F9@143262,44298:3192fb:BLINDING",
+   "b": "PIT:FTG:SH10:FN@146262,46648:0e0098:BLINDING",
+   "plan_m2": 0.33,
+   "range_m3": null,
+   "status": "NETTED",
+   "value_m3": 0.033
+  },
+  {
+   "a": "PIT:FTG:SH10:F9@143262,44298:3192fb:UNDERLAY",
+   "b": "PIT:FTG:SH10:FN@146262,46648:0e0098:UNDERLAY",
+   "plan_m2": 0.14,
+   "range_m3": null,
+   "status": "NETTED",
+   "value_m3": 0.0098
+  },
+  {
+   "a": "PIT:FTG:SH10:F9@143262,44298:3192fb:FOOTING",
+   "b": "PIT:FTG:SH10:FN@146262,46648:0e0098:FOOTING",
+   "plan_m2": 0.14,
+   "range_m3": null,
+   "status": "NETTED",
+   "value_m3": 0.042
+  },
+  {
+   "a": "PIT:FTG:SH10:F8@146912,42298:624706:BLINDING",
+   "b": "POOL:ENVELOPE",
+   "plan_m2": 1.99957,
+   "range_m3": [
+    0.0,
+    0.199957
+   ],
+   "status": "CONFLICT",
+   "value_m3": null
+  },
+  {
+   "a": "PIT:FTG:SH10:F8@146912,42298:624706:UNDERLAY",
+   "b": "POOL:ENVELOPE",
+   "plan_m2": 1.615967,
+   "range_m3": [
+    0.0,
+    0.113118
+   ],
+   "status": "CONFLICT",
+   "value_m3": null
+  },
+  {
+   "a": "PIT:FTG:SH10:F8@146912,42298:624706:FOOTING",
+   "b": "POOL:ENVELOPE",
+   "plan_m2": 1.615967,
+   "range_m3": [
+    0.0,
+    0.807984
+   ],
+   "status": "CONFLICT",
+   "value_m3": null
+  },
+  {
+   "a": "GB:BOUNDARY-UPPER#0",
+   "b": "POOL:ENVELOPE",
+   "plan_m2": 0.02,
+   "range_m3": [
+    0.008,
+    0.008
+   ],
+   "status": "HELD",
+   "value_m3": null
+  },
+  {
+   "a": "GB:BOUNDARY-UPPER#3",
+   "b": "POOL:ENVELOPE",
+   "plan_m2": 0.02,
+   "range_m3": [
+    0.008,
+    0.008
+   ],
+   "status": "HELD",
+   "value_m3": null
+  },
+  {
+   "a": "BOUNDARY:LOWER_BAND",
+   "b": "POOL:ENVELOPE",
+   "plan_m2": 0.7,
+   "range_m3": null,
+   "status": "HELD",
+   "value_m3": null
+  }
+ ],
+ "t170_reference_net_m3": {
+  "BLINDING": 12.9234,
+  "FOOTING": 52.919,
+  "UNDERLAY": 7.6895
+ },
+ "t233_closure": {
+  "blinding_line_m3": 14.990438,
+  "footing_line_m3": 64.304,
+  "ours_24_inside_plot_plus_FF": 14.990438,
+  "ours_24_plus_FF": 64.304
+ },
+ "totals": {
+  "at_least": true,
+  "coef_m3_per_m": 4.86,
+  "established_m3": 105.900536,
+  "held_components": [
+   "PIT:FTG:SH10:T652:10A5:FOOTING",
+   "PIT:FTG:SH10:T652:10A5:BLINDING",
+   "PIT:FTG:SH10:T652:10A5:UNDERLAY",
+   "PIT:FTG:SH10:FF@136342,43148:8e679c:FOOTING",
+   "PIT:FTG:SH10:FF@136342,43148:8e679c:BLINDING",
+   "PIT:FTG:SH10:FF@136342,43148:8e679c:PIT_SHELL_AND_VOID",
+   "PIT:FTG:SH10:FF@136342,43148:8e679c:UNDERLAY",
+   "NECK:SH10:C1@137485,46080",
+   "NECK:SH10:C2@137427,44773",
+   "NECK:SH10:C2@138612,46077",
+   "NECK:SH10:C8@141489,38336",
+   "NECK:SH10:C9@138589,44775",
+   "NECK:SH10:C10@148899,36778",
+   "NECK:SH10:C@150972,36507",
+   "STRAP:SB3_IN_F3",
+   "STRAP:SB1_IN_F10F",
+   "STRAP:BLINDING",
+   "BOUNDARY:LOWER_BAND",
+   "BOUNDARY:BRICK_BELOW_NG_AND_PADS",
+   "GB:10B+7D1#1",
+   "GB:10B+7D1#2",
+   "GB:136+7D5#1",
+   "GB:137+138#1",
+   "GB:13C+7D9#1",
+   "GB:13D+7D2#1",
+   "GB:13E+7D6#1",
+   "GB:13E+7D6#2",
+   "GB:13F+7D3#1",
+   "GB:140+7D7#1",
+   "GB:141+7DA#1",
+   "GB:142+7D8#1",
+   "GB:15D+7C8#1",
+   "GB:15E+15F#1",
+   "GB:175+7DE#1",
+   "GB:176+7E6#1",
+   "GB:177+7CD#1",
+   "GB:177+7CD#2",
+   "GB:178+7DB#1",
+   "GB:17D+7E4#1",
+   "GB:17E+17F#1",
+   "GB:180D+180E#1",
+   "GB:1811+1812#1",
+   "GB:184+7CF#3",
+   "GB:185+7C7#1",
+   "GB:7D4+F8#1",
+   "GB:7D4+F8#2",
+   "GB:7DC+7DD#1",
+   "GB:7E1+7E2#1",
+   "GB:7E7+7E8#2",
+   "GB:ARC:139+13A",
+   "GB:LOWER_ROW_TWO_BEAM_DETAIL",
+   "POOL:BLINDING_BEYOND_MEMBRANE"
+  ],
+  "held_range_m3": [
+   9.33575,
+   null
+  ],
+  "netted_m3": 0.085362,
+  "open_shared": [
+   [
+    "PIT:FTG:SH10:F8@146912,42298:624706:BLINDING",
+    "POOL:ENVELOPE",
+    "CONFLICT"
+   ],
+   [
+    "PIT:FTG:SH10:F8@146912,42298:624706:UNDERLAY",
+    "POOL:ENVELOPE",
+    "CONFLICT"
+   ],
+   [
+    "PIT:FTG:SH10:F8@146912,42298:624706:FOOTING",
+    "POOL:ENVELOPE",
+    "CONFLICT"
+   ],
+   [
+    "GB:BOUNDARY-UPPER#0",
+    "POOL:ENVELOPE",
+    "HELD"
+   ],
+   [
+    "GB:BOUNDARY-UPPER#3",
+    "POOL:ENVELOPE",
+    "HELD"
+   ],
+   [
+    "BOUNDARY:LOWER_BAND",
+    "POOL:ENVELOPE",
+    "HELD"
+   ]
+  ],
+  "open_shared_range_m3": [
+   0.016,
+   1.137059
+  ]
+ },
+ "z1_by_family_m3": {
+  "footings (24)": 52.919,
+  "main-house exterior ground-beam blinding (17 runs)": 2.79956,
+  "necks below EG (29, AT_LEAST at d = 0)": 4.3278,
+  "pit blinding (24, inside the plot)": 12.734438,
+  "pit underlay (24)": 7.6895,
+  "pool envelope inside the plot (shell + layers + water space)": 17.776576,
+  "straps outside the footings (3)": 3.3905,
+  "upper boundary G.B at N.G. (5 runs)": 3.5256
+ },
+ "z1_by_family_sum_m3": 105.162974,
+ "z1_established_m3": 105.162974
+}
