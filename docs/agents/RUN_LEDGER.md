@@ -569,3 +569,14 @@ At the start of every run, before the self-check, each agent writes:
 
 At the end it replaces that line with the final one. A run that stops leaves a STARTED line with no end, and its
 last-written step shows how far it got.
+
+## 2026-10-25 04:31 to 2026-10-28 21:40 UTC (main chat catch-up, written 2026-10-28 21:4x; compact)
+
+The main chat's 26 / 27 / 28 Oct daily updates could not run on time (this session was down); this section is compact by
+the owner's instruction "continue the flow but make sure we do not hit limit" (28 Oct).
+
+| Window (UTC) | Result | Evidence |
+|---|---|---|
+| 25 Oct 04:31 - 26 Oct 04:31 | 97 slots: 79 with a final line (69 SUCCESS, 10 IDLE), 3 INCOMPLETE (W1 17:21, Verifier 17:52, Lead 18:11), 14 NO LINE (18:12 - 21:40, cause NOT KNOWN), 1 OPEN; 82 % vs 90 % | RUN_LOG lines, main-chat ledger script |
+| 26 Oct 06:41 - 28 Oct 19:19 | TEAM STOPPED about 60.5 h: no agent ran; scheduler FAILED / USAGE_LIMIT_REACHED (Scout 27 Oct 23:50, Dashboard 28 Oct 16:54, Worker 3 28 Oct 18:59); W1 06:24 / W2 06:40 26 Oct STARTED without a final line (INCOMPLETE) | Lead report 28 Oct 20:20 |
+| 28 Oct 19:19 - 21:40 | runs resumed; stale locks recovered (T-311, T-313 re-claimed, no double claim) | Lead report 28 Oct 20:20 |
