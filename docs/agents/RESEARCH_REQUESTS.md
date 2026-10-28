@@ -4,7 +4,16 @@ At most 3 open. Each: the problem in one sentence, the measured gap, what to loo
 
 ## Open
 
-(none; the Lead adds new requests here)
+### R-11 Keeping scheduled routines inside the account's usage budget (lead 2026-10-28 20:20)
+Problem: the whole team stopped for about 60.5 h (2026-10-26 06:41 to 2026-10-28 19:19 UTC): the scheduler records runs
+FAILED with USAGE_LIMIT_REACHED (Scout 27 Oct 23:50, Dashboard 16:54 and Worker 3 18:59 on 28 Oct) and two worker runs
+(26 Oct 06:24 / 06:40) ended with no final line. Gap: about 60 lost agent-hours, READY work aged 62 h, M2 missed on its
+date. Look for: the documented behaviour of usage limits for Claude Code routines / scheduled tasks (what counts, when the
+limit resets, whether a routine can see its remaining budget, what happens to a run cut mid-way), documented cost
+controls (model choice per routine, effort, context size, session start cost, prompt caching for long fixed prompts),
+and how other teams size cadence to a budget; quote and link the official documentation only. Unblocks: the owner's
+cadence review (owner 2026-10-25 04:38: hourly kept provisionally, review after 24 - 48 h) with a supported
+recommendation.
 
 ## Answered
 

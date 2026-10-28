@@ -36,6 +36,20 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
    commit. Decision: board-only handoffs are verified as hand evidence (the verifier re-reads the cited notes), and the
    next task on the topic writes the files (T-117); a run with no line stays a NEEDS FIXING item for the owner's setting.
 
+9. **Usage-limit outages stop the whole team** (new 2026-10-28 20:20): no agent ran from 26 Oct 06:41 to 28 Oct 19:19
+   (about 60.5 h); the scheduler records FAILED / USAGE_LIMIT_REACHED (Scout 27 Oct 23:50, Dashboard and Worker 3 28 Oct);
+   two worker runs (26 Oct 06:24 / 06:40) died without a final line. READY work aged 62 h. Decision: owner item in
+   NEEDS FIXING (cadence vs usage budget is his call: the hourly pilot was to be reviewed after 24 - 48 h on 25 Oct);
+   R-11 to the Scout (documented cost / usage controls for scheduled routines); the stale-lock recovery worked as designed.
+
+## 2026-10-28 20:20 (lead run; covers 2026-10-26 06:15 - 2026-10-28 20:15, of which about 60.5 h had no agent run)
+
+- T-311 (parapets / plinth as physical elements): READY 20:09, Gate A pending (classification next run). Handoff reviewed: element defined run by run, 46 components each to one trade, DOUBLE 0, parapet RC 8.040 .. 20.081 m3 MISSING from every line, material HELD (Q-65 C), heights as printed; nothing assumed, so nothing sent back; one gap: the worker's full suite was NOT completed (lock window) -> the Checker runs it to the end before any PASS. Decision: NEW T-319 (lane I parapet RC line), T-199 acceptance (parapet formwork 81.589 .. 202.782 m2), register rows.
+- T-244 (Gate B, V3.0.20) and T-312 (Gate A): still READY, 62 h, delay cause CHECKER-RUNS (outage). Decision: first and second in the VERIFIER QUEUE; Checker run 19:51 in progress.
+- T-313: re-claimed by worker 2 at 19:44 after the stale 26 Oct claim (no branch had been pushed). Decision: none needed.
+- New missing-category pieces: T-320 (backfill / disposal displacement ledger, NET of the T-170 overlaps), T-321 (roof build-up layer ledger incl. the unmeasured main roof outline).
+- PARTIAL / FAILED: none classified (nothing reached a verdict). UNCLOSED runs: Worker 1 2026-10-26 06:24 and Worker 2 06:40 = INCOMPLETE. Tool issue (Worker 1 20:09): the decode wrapper expects base64 but the Drive connector now saves raw binary; worked around via scratch base64 (deleted) -> NEEDS FIXING (agent_env.sh lives on main, owner-only).
+
 ## 2026-10-26 06:15 (lead run; covers 04:15 - 06:15)
 
 - T-305 (exterior plaster face-to-line): WORKED (MERGED 9d71ef09; Checker own parapet outer faces 48.237 of 66.428 m2 agree 0.000, GF two-F.F.L. +3.430 m2 confirmed). Decision: T-311 PROMOTED TODO (worker 1 next); T-314 stays in lane I after T-199.

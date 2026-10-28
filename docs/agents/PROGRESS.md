@@ -1,14 +1,34 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
 Plain words, no task numbers. Measured numbers come from SCOREBOARD.md; anything not measured says so.
-Last update: 2026-10-26 06:15 UTC (Lead). Previous version: 2026-10-26 04:15 UTC. The released numbers did not change
+Last update: 2026-10-28 20:20 UTC (Lead). Previous version: 2026-10-26 06:15 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released default V2.9 + route G untouched). Your measure: whole BOQ
-lines independently verified. The candidate of record is unchanged (the version with the curved ground beam closed);
-the checker's export on it counts 2 whole verified lines (the concrete slab 60.28 m3 is the one scoreboard reference
-line among them). Released: 0. ONE DECISION FOR YOU today: whether the corrected slab steel anchorage may now enter the
-candidate (see the Lead report, OWNER PACKAGE); nothing else needs you.
+lines independently verified: unchanged at 2 in the candidate's export (the concrete slab 60.28 m3 is the one scoreboard
+reference line among them); released: 0.
 
-Since 04:15 (newest first; four pieces checked and merged, one handed in and waiting for the checker):
+THE TEAM WAS STOPPED FOR ABOUT 60 HOURS. No agent ran from 26 Oct 06:41 to 28 Oct 19:19 UTC. The scheduler records the
+runs as failed because the account's usage limit was reached; two worker runs that had just started on 26 Oct ended
+without finishing (their work was picked up again tonight, nothing was lost or double-claimed). So nothing was checked or
+merged in that time, and the plaster / paint and wall-tile pieces have waited 62 hours for the checker. The 28 Oct
+milestone (no silent omissions of rooms and openings, wet vs dry correct) is therefore not confirmed on its date. How
+often the agents run against your usage budget is your call (see the Lead report, NEEDS FIXING). The one decision from
+26 Oct still waits on you: whether the corrected slab steel anchorage may enter the candidate (OWNER PACKAGE).
+
+Since 26 Oct 06:15 (newest first; one piece handed in, nothing checked):
+- Parapets and the plinth, as physical things: HANDED IN, waiting for the checker. Every roof and terrace parapet run and
+  every plinth segment is now defined from the structural details and sections, and each part is given to one trade.
+  Finding: whatever the parapet material turns out to be, every alternative on the structural sheet has at least a
+  0.30 m concrete upstand above the slab, so there is 8.04 .. 20.08 m3 of parapet concrete that no BOQ line carries,
+  neither ours nor the freelancer's (missing, not zero; the range depends on the edge-beam width the drawings do not
+  print). Parapet blockwork is 0 .. 60.60 m2 (held until the material is printed) against the freelancer's 172.93 m2,
+  who used parapet heights of 1.0 / 1.8 / 1.0 m where the drawings print 0.50 / 1.30 / 0.50 m plus the edge width.
+  The plinth (71.69 .. 72.75 m2 of face) is the outer face of the ground beam plus one block course already in the
+  blockwork line: a finish face only, no new concrete. Nothing was assumed; not yet verified.
+- New pieces on the board for missing BOQ items: the backfill and disposal side of the excavation (what the buried
+  structure displaces, measurable now even though the excavation depth waits on the designer), the roof build-up layer
+  by layer (including the main roof, whose outline has not been measured yet), and the parapet concrete as its own line.
+
+Earlier, 26 Oct 04:15 - 06:15 (newest first; four pieces checked and merged, one handed in and waiting for the checker):
 - Steel in suspended slabs, every bar end: CHECKED AND MERGED (research; no candidate or released steel moved). Every
   bottom-bar end of the slab anchorage lines is now classified by what it meets on the typical slab detail: over a
   continuous support no anchorage is drawn (0 m); at an edge beam the bar runs straight 0.16 m to the cover mark and one

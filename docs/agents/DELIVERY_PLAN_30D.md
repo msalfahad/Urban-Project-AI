@@ -46,7 +46,11 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
-## Status (Lead, 2026-10-26 06:15; re-estimated each run from what merged and was verified)
+## Status (Lead, 2026-10-28 20:20; re-estimated each run from what merged and was verified)
+
+Lead 2026-10-28 20:20: NO PROGRESS for about 60.5 h: no agent ran 26 Oct 06:41 - 28 Oct 19:19 UTC (scheduler FAILED / USAGE_LIMIT_REACHED); nothing merged since c48f7062. Week 1 target stays MET (since 25 Oct). Week 2 (by 3 Nov, measurable increase in verified coverage) has lost about 2.5 of its 8 days: the integration chain has not moved (plaster / paint V3.0.20 and the wall-tile ledger READY 62 h; parapets / plinth READY 20:09). Re-estimate: if the 20:49 / 21:49 Checker runs clear T-244 and T-312, lane I can still integrate wall tile (T-315) and one of masonry (T-279) / formwork (T-199) by 3 Nov, at the hourly cadence and with no further outage; any further outage pushes the second integration past 3 Nov. M2 (28 Oct) not confirmed on its date. New missing-category pieces: parapet RC line (T-319), backfill / disposal displacement (T-320), roof build-up layers (T-321). Risks: (1) usage budget vs cadence (owner); (2) lane I single-threaded on the integration files; (3) worker hand-ins with an incomplete full suite (T-311) cost a Checker run each.
+
+### Earlier status (Lead, 2026-10-26 06:15)
 
 Lead 2026-10-26 06:15: since 04:15 FOUR MERGED (research ledgers; no candidate or released quantity moved): exterior plaster face ledger 9d71ef09, formwork r5 rows efb38618, pool membrane / screed 834ada3e, slab bar-end census c48f7062; READY 1 (wall tile ledger). Candidate of record still V3.0.19 (whole verified lines 2); V3.0.20 (plaster / paint, T-244) in progress since 05:05. Week 1 target (one verified improvement through the integrated pipeline by 27 Oct) is MET since 25 Oct (CONC.SLAB whole line verified in the candidate); the 27 Oct milestone check is tomorrow. Week 2 (by 3 Nov, measurable increase in verified coverage): the next integrations in order are plaster / paint (T-244), wall tile (T-315), masonry (T-279), formwork (T-199), exterior face rows (T-314); the slab steel split (T-318) waits on the owner's reinforcement implementation stage. Risk: lane I is single-threaded on the integration files, so verified pieces queue behind it (this run's four merged ledgers all wait for lane I rows).
 
