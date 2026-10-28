@@ -244,3 +244,29 @@ def test_t213_three_rectangular_panels_reproduce_merged_edges():
 def test_module_declares_its_default_guard_class_and_is_unwired():
     assert V.DEFAULT_GUARD_CLASS == "UNWIRED_PRODUCER"
     assert V.METHOD == "SLAB_STEP_V2"
+
+
+def test_l_panel_member_on_part_of_a_side_only():
+    """L panel (0,0) (3,0) (3,1.2) (1.5,1.2) (1.5,2.5) (0,2.5): A = 5.55, P = 11.00 m. Beam S (3.00 m), beam W (2.50 m),
+    column 0.30 x 0.30 at the east side's foot (0.30 m of that side); the other 5.20 m are free slab edge.
+    d = 0.10, t = 0.16 printed (fixture): step concrete = 5.20 x 0.10 x 0.16 = 0.0832 m3; member riser 5.80 x 0.10."""
+    L = V.SunkenPanel("L1", [(0, 0), (3, 0), (3, 1.2), (1.5, 1.2), (1.5, 2.5), (0, 2.5)], d_m=0.10,
+                      d_source="fixture section S-2", **T)
+    ms = [V.Member("BS", "BEAM", rect(-0.2, -0.2, 3.2, 0), 0.60, "fixture schedule"),
+          V.Member("BW", "BEAM", rect(-0.2, 0, 0, 2.5), 0.60, "fixture schedule"),
+          V.Member("C1", "COLUMN", rect(3.0, 0, 3.3, 0.3))]
+    e, q = run(L, ms)
+    assert math.isclose(L.area, 5.55) and math.isclose(L.perimeter, 11.0)
+    assert math.isclose(e["EXTERNAL_MEMBER"], 5.8, abs_tol=1e-9)
+    assert math.isclose(e["FREE_SLAB_EDGE"], 5.2, abs_tol=1e-9)
+    assert math.isclose(e["members"]["C1"], 0.3, abs_tol=1e-9)
+    assert q["step_concrete_m3"]["value"] == 0.0832
+    assert q["riser_form_member_m2"]["value"] == 0.58 and q["riser_form_free_edge_m2"]["value"] == 0.52
+
+
+def test_touching_panels_are_not_an_overlap_identical_ones_are():
+    a = V.SunkenPanel("A", rect(0, 0, 3, 4))
+    assert V.classify_outline(a, [], [V.SunkenPanel("B", rect(3, 0, 6, 4))], EXT)["ADJACENT_SUNKEN"] == \
+        pytest.approx(4.0)
+    with pytest.raises(V.SlabStepError, match="overlap"):
+        V.classify_outline(a, [], [V.SunkenPanel("B", rect(0, 0, 3, 4))], EXT)

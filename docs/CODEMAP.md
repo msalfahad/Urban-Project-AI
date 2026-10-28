@@ -641,7 +641,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `slab_rebar_qto.py` | 314 | CRITICAL | 9 | S7 SLAB REBAR QTO - restricted project-basis slab reinforcement quantities over a frozen readiness register (generic). |
 | `slab_rebar_readiness.py` | 571 | CRITICAL | 5 | SLAB REBAR READINESS - what an elevated structural slab may release to an accurate rebar takeoff (generic, no kg). |
 | `slab_region.py` | 179 | MEDIUM | 1 | SLAB REGION ENGINE (V1) - slab plate, openings and thickness from the slab plan's own line work. Never fitted to |
-| `slab_step_v2.py` | 364 | MEDIUM | 1 | SLAB_STEP_V2 (T-224): the step at the edge of a SUNKEN slab panel, from the drawn panel outline and its framing |
+| `slab_step_v2.py` | 445 | MEDIUM | 1 | SLAB_STEP_V2 (T-224): the step at the edge of a SUNKEN slab panel, from the drawn panel outline and its framing |
 | `source_anchor.py` | 79 | MEDIUM | 1 | SOURCE ANCHOR - CONTROLLED EXPORT IDENTITY (R8.20). |
 | `source_exceptions.py` | 344 | MEDIUM | 1 | SOURCE EXCEPTIONS (R8.5 §10-§14) — resolve unrealised source objects by POSITIVE evidence, never by look. |
 | `source_identity.py` | 81 | CRITICAL | 2 | SOURCE IDENTITY - is a re-supplied file the same source as one registered earlier (generic). |

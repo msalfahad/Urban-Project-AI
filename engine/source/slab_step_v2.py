@@ -4,7 +4,7 @@ members (any villa). A NEW method version beside the opt-in M8 bound SLAB_STEP o
 selectable here, flagged, for a sunken outline with no drawn outline and no framing evidence (`legacy_bound`).
 
 NOT wired into any method version (ARCH_TAKEOFF_V2.9 + route G and every V3.0.x candidate are unchanged); a later
-Gate B integration package wires it. Standard library + shapely only; it imports no engine module.
+Gate B integration package wires it. Standard library only (K1: no shapely / ezdxf); it imports no engine module.
 
 Why a new version (T-213, MERGED 0ec8c496): the V1 bound 0 .. 4 sqrt(A) x drop_high x t is wrong twice for a panel
 framed by beams: (a) the step concrete there is 0 by geometry and (b) 4 sqrt(A) is a square-equivalent perimeter, not
@@ -55,9 +55,6 @@ from __future__ import annotations
 import math
 from dataclasses import dataclass, field
 
-from shapely.geometry import LineString, Point, Polygon
-from shapely.ops import unary_union
-
 METHOD = "SLAB_STEP_V2"
 SUPERSEDES = "SCOPE_QUANTITIES_V1 SLAB_STEP bound (4 sqrt(A) x SLAB_STEP_DROP_M x t), opt-in M8; kept as legacy_bound"
 DEFAULT_GUARD_CLASS = "UNWIRED_PRODUCER"      # T-212 P1: unwired producer, no released / candidate importer
@@ -98,16 +95,106 @@ def _num(v, what, cap, *, allow_none=False, positive=True):
     return float(v)
 
 
+def _seg_dist(p, a, b):
+    ax, ay, bx, by = a[0], a[1], b[0], b[1]
+    dx, dy = bx - ax, by - ay
+    L2 = dx * dx + dy * dy
+    u = 0.0 if L2 <= 0 else max(0.0, min(1.0, ((p[0] - ax) * dx + (p[1] - ay) * dy) / L2))
+    return math.hypot(p[0] - ax - u * dx, p[1] - ay - u * dy)
+
+
+def _orient(a, b, c):
+    v = (b[0] - a[0]) * (c[1] - a[1]) - (b[1] - a[1]) * (c[0] - a[0])
+    return 0 if abs(v) <= 1e-12 else (1 if v > 0 else -1)
+
+
+def _cross_proper(a, b, c, d):
+    """segments ab and cd cross at one interior point of both (no touching, no collinear overlap)."""
+    o1, o2, o3, o4 = _orient(a, b, c), _orient(a, b, d), _orient(c, d, a), _orient(c, d, b)
+    return o1 * o2 < 0 and o3 * o4 < 0
+
+
+def _segs_meet(a, b, c, d):
+    if _cross_proper(a, b, c, d):
+        return True
+    return min(_seg_dist(c, a, b), _seg_dist(d, a, b), _seg_dist(a, c, d), _seg_dist(b, c, d)) <= 1e-9
+
+
+class _Ring:
+    """A simple polygon (metres), standard library only: area, perimeter, orientation, point tests with a tolerance."""
+
+    def __init__(self, pts, what):
+        try:
+            pts = [(float(x), float(y)) for x, y in pts]
+        except (TypeError, ValueError) as e:
+            raise SlabStepError(f"{what}: not a polygon ({e})") from e
+        if len(pts) > 1 and math.dist(pts[0], pts[-1]) <= EPS:
+            pts = pts[:-1]
+        pts = [q for i, q in enumerate(pts) if math.dist(q, pts[i - 1]) > EPS] if len(pts) > 1 else pts
+        if len(pts) < 3:
+            raise SlabStepError(f"{what}: degenerate outline")
+        self.pts = pts
+        self.edges = [(pts[i], pts[(i + 1) % len(pts)]) for i in range(len(pts))]
+        n = len(self.edges)
+        for i in range(n):
+            for j in range(i + 1, n):
+                if j == i + 1 or (i == 0 and j == n - 1):
+                    continue                         # neighbours share a vertex
+                if _segs_meet(*self.edges[i], *self.edges[j]):
+                    raise SlabStepError(f"{what}: self-intersecting outline (never repaired silently)")
+        sa = sum(a[0] * b[1] - b[0] * a[1] for a, b in self.edges) / 2.0
+        if abs(sa) <= 1e-6:
+            raise SlabStepError(f"{what}: degenerate outline")
+        self.area, self.ccw = abs(sa), sa > 0
+        self.length = sum(math.dist(a, b) for a, b in self.edges)
+
+    def dist(self, p):
+        return min(_seg_dist(p, a, b) for a, b in self.edges)
+
+    def inside(self, p):
+        x, y, c = p[0], p[1], False
+        for a, b in self.edges:
+            if (a[1] > y) != (b[1] > y) and x < a[0] + (y - a[1]) * (b[0] - a[0]) / (b[1] - a[1]):
+                c = not c
+        return c
+
+    def covers(self, p, tol):
+        """inside or within tol of the boundary (the outline grown by tol)."""
+        return self.dist(p) <= tol or self.inside(p)
+
+    def strictly(self, p, tol):
+        """inside and more than tol from the boundary (the outline shrunk by tol)."""
+        return self.inside(p) and self.dist(p) > tol
+
+    def distance(self, other):
+        if any(self.inside(q) for q in other.pts) or any(other.inside(q) for q in self.pts):
+            return 0.0
+        best = math.inf
+        for a, b in self.edges:
+            for c, d in other.edges:
+                if _cross_proper(a, b, c, d):
+                    return 0.0
+                best = min(best, _seg_dist(c, a, b), _seg_dist(d, a, b), _seg_dist(a, c, d), _seg_dist(b, c, d))
+        return best
+
+    def overlaps(self, other, tol=1e-6):
+        """the two outlines share area: a crossing, or a vertex / edge midpoint / the centroid of one strictly inside
+        the other (touching along a side or at a corner is not an overlap)."""
+        for a, b in self.edges:
+            for c, d in other.edges:
+                if _cross_proper(a, b, c, d):
+                    return True
+
+        def probes(r):
+            mids = [((a[0] + b[0]) / 2, (a[1] + b[1]) / 2) for a, b in r.edges]
+            cx = sum(q[0] for q in r.pts) / len(r.pts)
+            cy = sum(q[1] for q in r.pts) / len(r.pts)
+            return r.pts + mids + ([(cx, cy)] if r.inside((cx, cy)) else [])
+        return any(other.strictly(q, tol) for q in probes(self)) or any(self.strictly(q, tol) for q in probes(other))
+
+
 def _poly(pts, what):
-    try:
-        p = Polygon(pts)
-    except Exception as e:  # noqa: BLE001 - shapely raises several types for bad input
-        raise SlabStepError(f"{what}: not a polygon ({e})") from e
-    if not p.is_empty and not p.is_valid:
-        raise SlabStepError(f"{what}: self-intersecting outline (never repaired silently)")
-    if p.is_empty or p.area <= 1e-6:
-        raise SlabStepError(f"{what}: degenerate outline")
-    return p
+    return _Ring(pts, what)
 
 
 @dataclass
@@ -167,18 +254,16 @@ class SunkenPanel:
 
     @property
     def perimeter(self):
-        return self.poly.exterior.length
+        return self.poly.length
 
 
 def _side_lengths(p):
-    cs = list(p.exterior.coords)
-    return [math.dist(a, b) for a, b in zip(cs, cs[1:]) if math.dist(a, b) > EPS]
+    return [math.dist(a, b) for a, b in p.edges]
 
 
 def _pieces(p):
-    cs = list(p.exterior.coords)
-    ccw = p.exterior.is_ccw
-    for a, b in zip(cs, cs[1:]):
+    ccw = p.ccw
+    for a, b in p.edges:
         ln = math.dist(a, b)
         if ln <= EPS:
             continue
@@ -200,46 +285,42 @@ def classify_outline(panel, members, other_panels, slab_extent):
     ext = _poly(slab_extent, "slab extent") if slab_extent is not None else None
     others = [o for o in other_panels if o.pid != panel.pid]
     for o in others:
-        if o.poly.intersection(panel.poly).area > 1e-6:
+        if o.poly.overlaps(panel.poly):
             raise SlabStepError(f"panels {panel.pid} and {o.pid} overlap: one element counted twice")
     near = [m for m in members if m.poly.distance(panel.poly) <= TOUCH_M]
-    allm = unary_union([m.poly for m in near]).buffer(TOUCH_M) if near else None
-    near_b = [(m, m.poly.buffer(TOUCH_M)) for m in near]
-    others_b = [(o, o.poly.buffer(TOUCH_M)) for o in others]
-    ext_in = ext.buffer(-TOUCH_M) if ext is not None else None
     out = {k: 0.0 for k in EDGE_KINDS}
     out.update({"UNKNOWN": 0.0, "members": {}, "shared_with": {}, "P": panel.perimeter})
     for ln, (mx, my), (nx, ny) in _pieces(panel.poly):
-        q = Point(mx + nx * PROBE_M, my + ny * PROBE_M)
-        hit = next((m for m, b in near_b if b.contains(q)), None)
+        q = (mx + nx * PROBE_M, my + ny * PROBE_M)
+        hit = next((m for m in near if m.poly.covers(q, TOUCH_M)), None)
         if hit is not None:
             # walk across the member(s) to see what is on the far side
             k, far = 1, None
             while k * PROBE_M <= MAX_MEMBER_W_M + PROBE_M:
-                r = Point(mx + nx * (PROBE_M + k * PROBE_M), my + ny * (PROBE_M + k * PROBE_M))
-                if not allm.contains(r):
+                r = (mx + nx * (PROBE_M + k * PROBE_M), my + ny * (PROBE_M + k * PROBE_M))
+                if not any(m.poly.covers(r, TOUCH_M) for m in near):
                     far = r
                     break
                 k += 1
-            across = next((o for o, b in others_b if far is not None and b.contains(far)), None)
+            across = next((o for o in others if far is not None and o.poly.covers(far, TOUCH_M)), None)
             if across is not None:
                 out["SHARED_MEMBER"] += ln
                 out["shared_with"][across.pid] = out["shared_with"].get(across.pid, 0.0) + ln
             elif far is None or ext is None:
                 out["UNKNOWN"] += ln
-            elif ext_in.contains(far):
+            elif ext.strictly(far, TOUCH_M):
                 out["EXTERNAL_MEMBER"] += ln
             else:
                 out["PERIMETER_MEMBER"] += ln
             out["members"][hit.mid] = out["members"].get(hit.mid, 0.0) + ln
             continue
-        across = next((o for o, b in others_b if b.contains(q)), None)
+        across = next((o for o in others if o.poly.covers(q, TOUCH_M)), None)
         if across is not None:
             out["ADJACENT_SUNKEN"] += ln
             out["shared_with"][across.pid] = out["shared_with"].get(across.pid, 0.0) + ln
         elif ext is None:
             out["UNKNOWN"] += ln
-        elif ext_in.contains(q):
+        elif ext.strictly(q, TOUCH_M):
             out["FREE_SLAB_EDGE"] += ln
         else:
             out["PERIMETER_EDGE"] += ln
