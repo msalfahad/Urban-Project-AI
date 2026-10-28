@@ -1,0 +1,490 @@
+{
+ "schema": "URBAN_CHECKER_VERDICT_V2_SET",
+ "verdicts": [
+  {
+   "binding": "LINE_CONTENT_V1",
+   "boq_lines_sha256": "097a80b6d22cf12cd5193541de3cc83f8afc4a0eb135eedf81294768e6c78949",
+   "candidate_version": "ARCH_TAKEOFF_V3.0.20",
+   "checker": {
+    "routine": "Verifier",
+    "run_token": "20261028T195035-394-19343",
+    "verdict_commit": "59dbfd0e"
+   },
+   "checker_qty": 47.43,
+   "element_scope": {
+    "count": 1,
+    "ids": [
+     "WPF:LIFT_PIT_MEMBRANE_FIXED"
+    ]
+   },
+   "engine_qty": 47.43,
+   "evidence": [
+    {
+     "printed_value": "4.600 x 4.500 = 20.700 m2 (own re-read 2026-10-25 11:28; Checker T-219 Gate A); ring 10EB 2.200 x 2.200 + C9 proud 0.050 -> envelope 4.890=membrane 20.700 + 10.920 + 15.810 = 47.430 m2 (T-219 Gate A)",
+     "sheet": "ST7757 dxf.dxf lift pit footing FF 1B2B"
+    }
+   ],
+   "line_content_sha256": "3a5547b1e9c89ad3c08dbd2160273583f657f6f3b65a1e52b44d04ceab359f1c",
+   "line_ids": [
+    "L-d3ec19448415e0a0f083"
+   ],
+   "notes": "re-bound from V2-dd2853ae8a5ddf24 (ARCH_TAKEOFF_V3.0.19): own lines byte-identical; was: re-issued on V3.0.19 (bound lines byte-identical to V3.0.18 ec741004; Verifier T-255 Gate B 2026-10-26T03:42:21Z); was V2-debcfd181d884ee3: fixed parts; pit walls HELD (D-43 depth) in the group's BLOCKED_RFI line",
+   "project_id": "development-villa-t131",
+   "rebound_from": "V2-dd2853ae8a5ddf24",
+   "revision_set_sha256": "5e3690754db90b5fa2d878d4fc29b2e84ce9d1d91e4c1e68a62019d1b34bbc22",
+   "schema": "URBAN_CHECKER_VERDICT_V2",
+   "scope": "COMPONENT",
+   "time": "2026-10-28T20:50:56Z",
+   "unit": "m2",
+   "verdict_id": "V2-095aed702d12897b"
+  },
+  {
+   "binding": "LINE_CONTENT_V1",
+   "boq_lines_sha256": "097a80b6d22cf12cd5193541de3cc83f8afc4a0eb135eedf81294768e6c78949",
+   "candidate_version": "ARCH_TAKEOFF_V3.0.20",
+   "checker": {
+    "routine": "Verifier",
+    "run_token": "20261028T195035-394-19343",
+    "verdict_commit": "59dbfd0e"
+   },
+   "checker_qty": 109.85,
+   "element_scope": {
+    "count": 1,
+    "ids": [
+     "WPF:FOOTING_UNDERLAY_MEMBRANE"
+    ]
+   },
+   "engine_qty": 109.85,
+   "evidence": [
+    {
+     "printed_value": "24 outlines 109.85 m2 (Checker T-219 Gate A; F10 / F pair 1B1B HELD in its own line)",
+     "sheet": "ST7757 dxf.dxf foundation plan S-FOOTINGS outlines + printed footing schedule"
+    }
+   ],
+   "line_content_sha256": "eabb80112a2dff63148bf47d097dea3b79191543626f141ed453b128c2af9e02",
+   "line_ids": [
+    "L-69e6e6d74707afe3ac5b"
+   ],
+   "notes": "re-bound from V2-bda4cb0e4a1482c3 (ARCH_TAKEOFF_V3.0.19): own lines byte-identical; was: re-issued on V3.0.19 (bound lines byte-identical to V3.0.18 ec741004; Verifier T-255 Gate B 2026-10-26T03:42:21Z); was V2-a4cd0d16dc40fe92: footing underlay membrane, 24 / 25 outlines; the group's BLOCKED_RFI line (F10 / F) stays HELD",
+   "project_id": "development-villa-t131",
+   "rebound_from": "V2-bda4cb0e4a1482c3",
+   "revision_set_sha256": "5e3690754db90b5fa2d878d4fc29b2e84ce9d1d91e4c1e68a62019d1b34bbc22",
+   "schema": "URBAN_CHECKER_VERDICT_V2",
+   "scope": "COMPONENT",
+   "time": "2026-10-28T20:50:56Z",
+   "unit": "m2",
+   "verdict_id": "V2-26847d11d447e575"
+  },
+  {
+   "binding": "LINE_CONTENT_V1",
+   "boq_lines_sha256": "097a80b6d22cf12cd5193541de3cc83f8afc4a0eb135eedf81294768e6c78949",
+   "candidate_version": "ARCH_TAKEOFF_V3.0.20",
+   "checker": {
+    "routine": "Verifier",
+    "run_token": "20261028T195035-394-19343",
+    "verdict_commit": "59dbfd0e"
+   },
+   "checker_qty": 109.85,
+   "element_scope": {
+    "count": 1,
+    "ids": [
+     "WPF:FOOTING_PROTECTION_SCREED"
+    ]
+   },
+   "engine_qty": 109.85,
+   "evidence": [
+    {
+     "printed_value": "24 outlines 109.85 m2 (Checker T-219 Gate A; F10 / F pair 1B1B HELD in its own line)",
+     "sheet": "ST7757 dxf.dxf foundation plan S-FOOTINGS outlines + printed footing schedule"
+    }
+   ],
+   "line_content_sha256": "71d7d57152b1c0b8230c9c4e2a308001d2dde17abe7ea71f7477ae354842c2dc",
+   "line_ids": [
+    "L-e6280a91646613667b62"
+   ],
+   "notes": "re-bound from V2-48ab3a4f283f2cb0 (ARCH_TAKEOFF_V3.0.19): own lines byte-identical; was: re-issued on V3.0.19 (bound lines byte-identical to V3.0.18 ec741004; Verifier T-255 Gate B 2026-10-26T03:42:21Z); was V2-4f63526990d86a6d: footing protection screed area, 24 outlines; F10 / F HELD line apart",
+   "project_id": "development-villa-t131",
+   "rebound_from": "V2-48ab3a4f283f2cb0",
+   "revision_set_sha256": "5e3690754db90b5fa2d878d4fc29b2e84ce9d1d91e4c1e68a62019d1b34bbc22",
+   "schema": "URBAN_CHECKER_VERDICT_V2",
+   "scope": "COMPONENT",
+   "time": "2026-10-28T20:50:56Z",
+   "unit": "m2",
+   "verdict_id": "V2-6574d434903d3fe7"
+  },
+  {
+   "binding": "LINE_CONTENT_V1",
+   "boq_lines_sha256": "097a80b6d22cf12cd5193541de3cc83f8afc4a0eb135eedf81294768e6c78949",
+   "candidate_version": "ARCH_TAKEOFF_V3.0.20",
+   "checker": {
+    "routine": "Verifier",
+    "run_token": "20261028T195035-394-19343",
+    "verdict_commit": "59dbfd0e"
+   },
+   "checker_qty": 5.4925,
+   "element_scope": {
+    "count": 1,
+    "ids": [
+     "WPF:FOOTING_PROTECTION_SCREED"
+    ]
+   },
+   "engine_qty": 5.4925,
+   "evidence": [
+    {
+     "printed_value": "24 outlines 109.85 m2 (Checker T-219 Gate A; F10 / F pair 1B1B HELD in its own line); screed 0.05 printed=109.85 x 0.05 = 5.4925 m3",
+     "sheet": "ST7757 dxf.dxf foundation plan S-FOOTINGS outlines + printed footing schedule"
+    }
+   ],
+   "line_content_sha256": "26f33b1cb794ddd5a5a9700db0e61b7132012bbaf60305dc791f391b70fb6a3b",
+   "line_ids": [
+    "L-4ec54f9922da7281573a"
+   ],
+   "notes": "re-bound from V2-8b1b43850b0b1b36 (ARCH_TAKEOFF_V3.0.19): own lines byte-identical; was: re-issued on V3.0.19 (bound lines byte-identical to V3.0.18 ec741004; Verifier T-255 Gate B 2026-10-26T03:42:21Z); was V2-c06cbff7b779a00c: footing protection screed volume; F10 / F HELD line apart",
+   "project_id": "development-villa-t131",
+   "rebound_from": "V2-8b1b43850b0b1b36",
+   "revision_set_sha256": "5e3690754db90b5fa2d878d4fc29b2e84ce9d1d91e4c1e68a62019d1b34bbc22",
+   "schema": "URBAN_CHECKER_VERDICT_V2",
+   "scope": "COMPONENT",
+   "time": "2026-10-28T20:50:56Z",
+   "unit": "m3",
+   "verdict_id": "V2-74894e6a699008af"
+  },
+  {
+   "binding": "LINE_CONTENT_V1",
+   "boq_lines_sha256": "097a80b6d22cf12cd5193541de3cc83f8afc4a0eb135eedf81294768e6c78949",
+   "candidate_version": "ARCH_TAKEOFF_V3.0.20",
+   "checker": {
+    "routine": "Verifier",
+    "run_token": "20261028T195035-394-19343",
+    "verdict_commit": "59dbfd0e"
+   },
+   "checker_qty": 60.2804,
+   "element_scope": {
+    "count": 75,
+    "ids": [
+     "P-C:SLABS:1F:SITE-099b3363738e8f6d",
+     "P-C:SLABS:1F:SITE-0a53f612664d3cf6",
+     "P-C:SLABS:1F:SITE-0e91aeecfe22e08b",
+     "P-C:SLABS:1F:SITE-0e9b0c4e2c51ecc2",
+     "P-C:SLABS:1F:SITE-1847ba557d0991ce",
+     "P-C:SLABS:1F:SITE-2e3a01f998f4e488",
+     "P-C:SLABS:1F:SITE-323e81ae12039d01",
+     "P-C:SLABS:1F:SITE-398ad7de9cd54a5a",
+     "P-C:SLABS:1F:SITE-4ac8f85d424b4f0f",
+     "P-C:SLABS:1F:SITE-516a3b7ae454a85c",
+     "P-C:SLABS:1F:SITE-5b33730ec36fa67a",
+     "P-C:SLABS:1F:SITE-765e648e6f1c5d22",
+     "P-C:SLABS:1F:SITE-7d0ae6284372b473",
+     "P-C:SLABS:1F:SITE-954c733066cf20e8",
+     "P-C:SLABS:1F:SITE-97f1b67f08f56f05",
+     "P-C:SLABS:1F:SITE-a0b63a7e47e5d9a3",
+     "P-C:SLABS:1F:SITE-b1fdbf122e7d8a5b",
+     "P-C:SLABS:1F:SITE-cab3f5a253608203",
+     "P-C:SLABS:1F:SITE-cdaabd40e66141bf",
+     "P-C:SLABS:1F:SITE-d0ed586d1bfd5d55",
+     "P-C:SLABS:1F:SITE-d4a3945595cf359e",
+     "P-C:SLABS:1F:SITE-d50e79d29e4c7ca8",
+     "P-C:SLABS:1F:SITE-db44cdd415cfe47b",
+     "P-C:SLABS:1F:SITE-e12037595b4a20b0",
+     "P-C:SLABS:1F:SITE-ec94bbd491600b92",
+     "P-C:SLABS:1F:SITE-fe6e4edfb9e9df0d",
+     "P-C:SLABS:2F:SITE-29936e52e9c9bb32",
+     "P-C:SLABS:2F:SITE-33c2a6eeca9700cc",
+     "P-C:SLABS:2F:SITE-3ddef6eb3b8c73b0",
+     "P-C:SLABS:2F:SITE-3ec9bc2fe28ad7a4",
+     "P-C:SLABS:2F:SITE-6d9a092e74ae2689",
+     "P-C:SLABS:2F:SITE-9020cd1f745a1792",
+     "P-C:SLABS:2F:SITE-d475d4d7db56ceb9",
+     "P-C:SLABS:2F:SITE-f9f3066dd0714584",
+     "P-C:SLABS:2F:SITE-fbb544778990fa6f",
+     "P-C:SLABS:GF:SITE-07449b4153668c8d",
+     "P-C:SLABS:GF:SITE-16f91341e0f732a4",
+     "P-C:SLABS:GF:SITE-26def7f328877275",
+     "P-C:SLABS:GF:SITE-27d346650efea44d",
+     "P-C:SLABS:GF:SITE-27f409e788c6f9b6",
+     "P-C:SLABS:GF:SITE-2dbba82c438ab0ce",
+     "P-C:SLABS:GF:SITE-31ad625352b355ef",
+     "P-C:SLABS:GF:SITE-42f76fb1678805bf",
+     "P-C:SLABS:GF:SITE-44af98e5eab04d7e",
+     "P-C:SLABS:GF:SITE-4726d126cc4122e8",
+     "P-C:SLABS:GF:SITE-49da859eb75708ae",
+     "P-C:SLABS:GF:SITE-4ae4d64b898754c1",
+     "P-C:SLABS:GF:SITE-4f47929de07c8d28",
+     "P-C:SLABS:GF:SITE-5870887b5dbc8980",
+     "P-C:SLABS:GF:SITE-589b71acf3c10a8d",
+     "P-C:SLABS:GF:SITE-5a8e4288eccd1c64",
+     "P-C:SLABS:GF:SITE-5a9ae654c8652281",
+     "P-C:SLABS:GF:SITE-616ccd770e57ec39",
+     "P-C:SLABS:GF:SITE-73b98c9a67697884",
+     "P-C:SLABS:GF:SITE-7854bfa9d31e5b60",
+     "P-C:SLABS:GF:SITE-7c4ce9d23b066d40",
+     "P-C:SLABS:GF:SITE-7f162a92f2b3b727",
+     "P-C:SLABS:GF:SITE-82e1ee2eac94000c",
+     "P-C:SLABS:GF:SITE-850b776ade14170d",
+     "P-C:SLABS:GF:SITE-85224b7aeee85ea1",
+     "P-C:SLABS:GF:SITE-8602708d92a6d40c",
+     "P-C:SLABS:GF:SITE-93dce4266079f867",
+     "P-C:SLABS:GF:SITE-9a417857220d140f",
+     "P-C:SLABS:GF:SITE-a04b447bba7d8bde",
+     "P-C:SLABS:GF:SITE-a4d30775bfa402a8",
+     "P-C:SLABS:GF:SITE-a7153521aaefd4d4",
+     "P-C:SLABS:GF:SITE-ab900a6b8b4408b3",
+     "P-C:SLABS:GF:SITE-c3f49750964868d6",
+     "P-C:SLABS:GF:SITE-cb5c64b64858ac02",
+     "P-C:SLABS:GF:SITE-d76005d1fd7fcc81",
+     "P-C:SLABS:GF:SITE-daa7c0ea8fafe84f",
+     "P-C:SLABS:GF:SITE-e11cc59fff811038",
+     "P-C:SLABS:GF:SITE-f3855bd4dd8297b3",
+     "P-C:SLABS:GF:SITE-f71c9ea78970474d",
+     "P-C:SLABS:GF:SITE-f945be5158a99f81"
+    ]
+   },
+   "engine_qty": 60.280158,
+   "evidence": [
+    {
+     "printed_value": "Checker own GF 33.0695 + 1F 19.7566 + 2F 7.4543 = 60.2804 m3 (Gate B T-146 + T-247, 2026-10-24 09:38)",
+     "sheet": "ST7757 dxf.dxf roof-slab plans GF / 1F / 2F, 62 panels between beam faces, printed slab tags"
+    },
+    {
+     "printed_value": "NOT_APPLICABLE_WITH_EVIDENCE (T-234 / T-247, no slab concrete)",
+     "sheet": "13 non-panel faces"
+    }
+   ],
+   "line_content_sha256": "4c5e3f6b66674612775242de740f58aa9f1db3fbf71271374932cfeeb3d7400d",
+   "line_ids": [
+    "L-00e79bf1cdb584521505",
+    "L-038456ade3eb09b43bb8",
+    "L-05a66015a9196923301d",
+    "L-07e302ec4efdfa48ed22",
+    "L-0a3620f1b2a632c613e1",
+    "L-0e36c1f66b2f8e455147",
+    "L-10667ae035e57e29d02c",
+    "L-10e7860e28bea5750c9e",
+    "L-154189764660999e4896",
+    "L-193eabb70dbbd7b9b798",
+    "L-1f5115950eb4d71fe32a",
+    "L-236a39c38ef9dfb7aecf",
+    "L-276e1da76e74e462c053",
+    "L-2f6e26eb87c794452551",
+    "L-3027c28d061657ae2100",
+    "L-326b2c83d8ec682ba992",
+    "L-336fd302a6c60a4cabd4",
+    "L-356bd4c1362c3e2be37d",
+    "L-378a77a134c2799f98f2",
+    "L-3b73c9e2ed0cbe3eb446",
+    "L-3c5c1927b90b042ab1c8",
+    "L-3d01af6227b13bc7c1f4",
+    "L-427f3499df72e84f700d",
+    "L-490d0916fbd4f1d22b0e",
+    "L-4baffcb95570ca418d0c",
+    "L-4ed1b164e5f54d3725b4",
+    "L-578ddf276a2e214a3945",
+    "L-5793c62a6b332f624288",
+    "L-5afc5b2e3ad6efb3f96f",
+    "L-60e491cb9ecfb81d545b",
+    "L-657e6e2cba5a0d0d9d95",
+    "L-683900f927474df70227",
+    "L-70830345ffdabc4cf7d5",
+    "L-7117723666e439340d84",
+    "L-7a83b8f273dea348e19e",
+    "L-7e132c398bac4f1ae67b",
+    "L-84ca57fea5c1db2a0076",
+    "L-8586e34ce4717efb4e36",
+    "L-8843faaf6b256bc4b840",
+    "L-8b2a9850c1641f342be7",
+    "L-8d583451399826560679",
+    "L-8e5c2f484172e9259455",
+    "L-8ffe95ad42d5967263a4",
+    "L-901bcd0b3b31e3e128d5",
+    "L-916cf0fe632402045078",
+    "L-91d531604bfe28a9fec1",
+    "L-9b80d99c11772f4b3024",
+    "L-a615e1aa2e180544ecbb",
+    "L-a90fa92da4bf33be57f0",
+    "L-a9a5b156266859be6bd7",
+    "L-abe0c36f94dba208300f",
+    "L-af41a42f8504dd178716",
+    "L-afcd1d5abea806226e06",
+    "L-b41477e3593134b8c4b0",
+    "L-bde4aa4648e5b6f0b67d",
+    "L-c1807dde80fa21936c24",
+    "L-c18e5714727c841ee613",
+    "L-c38321cc0db7733d0623",
+    "L-c544aa98e09609150e4d",
+    "L-c7239507b7c0210f8875",
+    "L-ca3b500d27b26dc43c8d",
+    "L-d340a7f437e25aa46a4e",
+    "L-d44c5050e83961c571db",
+    "L-d624ff4e772d75ebb20f",
+    "L-db44466cc89e4968448f",
+    "L-df7ef6ffd5da8e1e9418",
+    "L-e5c487323cb2095c291b",
+    "L-e798f0822848fd82b022",
+    "L-e79f12c2c021010426db",
+    "L-ecb42e3e295fb67fbc38",
+    "L-ee20c11a155ca588335f",
+    "L-f075f5f26155b3e6d2ed",
+    "L-f7d4ebb244caf3d1b1d9",
+    "L-fb9a2ac1d861b37db720",
+    "L-fddb4eda34df524271e6"
+   ],
+   "notes": "re-bound from V2-c5004423d32f2106 (ARCH_TAKEOFF_V3.0.19): own lines byte-identical; was: re-issued on V3.0.19 (bound lines byte-identical to V3.0.18 ec741004; Verifier T-255 Gate B 2026-10-26T03:42:21Z); was V2-696f64b8e4a69952: re-issued on V3.0.16 (canonical lines 3181cf12): candidate 60.280158 vs Checker 60.2804 (-0.0004 %); lines byte-identical to the Gate-B-verified V3.0.12 slab lines",
+   "project_id": "development-villa-t131",
+   "rebound_from": "V2-c5004423d32f2106",
+   "revision_set_sha256": "5e3690754db90b5fa2d878d4fc29b2e84ce9d1d91e4c1e68a62019d1b34bbc22",
+   "schema": "URBAN_CHECKER_VERDICT_V2",
+   "scope": "WHOLE",
+   "time": "2026-10-28T20:50:56Z",
+   "unit": "m3",
+   "verdict_id": "V2-87544a3f48dc29c6"
+  },
+  {
+   "binding": "LINE_CONTENT_V1",
+   "boq_lines_sha256": "097a80b6d22cf12cd5193541de3cc83f8afc4a0eb135eedf81294768e6c78949",
+   "candidate_version": "ARCH_TAKEOFF_V3.0.20",
+   "checker": {
+    "routine": "Verifier",
+    "run_token": "20261028T195035-394-19343",
+    "verdict_commit": "59dbfd0e"
+   },
+   "checker_qty": 26.73,
+   "element_scope": {
+    "count": 1,
+    "ids": [
+     "WPF:LIFT_PIT_BOARD_FIXED"
+    ]
+   },
+   "engine_qty": 26.73,
+   "evidence": [
+    {
+     "printed_value": "4.600 x 4.500 = 20.700 m2 (own re-read 2026-10-25 11:28; Checker T-219 Gate A)=board fixed parts 26.730 m2 (T-219 Gate A)",
+     "sheet": "ST7757 dxf.dxf lift pit footing FF 1B2B"
+    }
+   ],
+   "line_content_sha256": "24cbef85210e0fc57ea528c8d9ea600a783f5ede05945a472aa92f2104bd5f3b",
+   "line_ids": [
+    "L-1f3aaafcc460173462d9"
+   ],
+   "notes": "re-bound from V2-5562de475f22af28 (ARCH_TAKEOFF_V3.0.19): own lines byte-identical; was: re-issued on V3.0.19 (bound lines byte-identical to V3.0.18 ec741004; Verifier T-255 Gate B 2026-10-26T03:42:21Z); was V2-f6a23b937167f913: fixed parts; pit walls HELD (D-43) in the group's BLOCKED_RFI line",
+   "project_id": "development-villa-t131",
+   "rebound_from": "V2-5562de475f22af28",
+   "revision_set_sha256": "5e3690754db90b5fa2d878d4fc29b2e84ce9d1d91e4c1e68a62019d1b34bbc22",
+   "schema": "URBAN_CHECKER_VERDICT_V2",
+   "scope": "COMPONENT",
+   "time": "2026-10-28T20:50:56Z",
+   "unit": "m2",
+   "verdict_id": "V2-a03cf381cc9ac96f"
+  },
+  {
+   "binding": "LINE_CONTENT_V1",
+   "boq_lines_sha256": "097a80b6d22cf12cd5193541de3cc83f8afc4a0eb135eedf81294768e6c78949",
+   "candidate_version": "ARCH_TAKEOFF_V3.0.20",
+   "checker": {
+    "routine": "Verifier",
+    "run_token": "20261028T195035-394-19343",
+    "verdict_commit": "59dbfd0e"
+   },
+   "checker_qty": 1.746916,
+   "element_scope": {
+    "count": 1,
+    "ids": [
+     "P-C:GROUND_BEAMS:GROUND:BAND0043"
+    ]
+   },
+   "engine_qty": 1.746943,
+   "evidence": [
+    {
+     "printed_value": "band closed on drawn faces: own polygon 1.928418 m2 gross - 17BA 0.089559 = 1.838859 m2 net x D 0.95 (T-254 Gate B, two printed levels) = 1.746916 m3; line 1.746943 (+0.0015 %, 2 mm gap sliver under 17BD)",
+     "sheet": "ST7757 dxf.dxf (9f9d1179) ARC 157 / 158, LINE 7C3, S-COL.BON 17C0 / 17BD / 17BA"
+    }
+   ],
+   "line_content_sha256": "c7e2d755bf201163ed97994aa42b3f66e7679f9d872dbeff3575193d51512867",
+   "line_ids": [
+    "L-7076482d75ca42691468"
+   ],
+   "notes": "re-bound from V2-47f38a21cf8c228b (ARCH_TAKEOFF_V3.0.19): own lines byte-identical; was: T-255 Gate B: ring ground beam BAND0043 whole engine line (COMPONENT of reference line CONC.GROUND) re-measured from the drawing by the Checker; agrees within 0.0015 %",
+   "project_id": "development-villa-t131",
+   "rebound_from": "V2-47f38a21cf8c228b",
+   "revision_set_sha256": "5e3690754db90b5fa2d878d4fc29b2e84ce9d1d91e4c1e68a62019d1b34bbc22",
+   "schema": "URBAN_CHECKER_VERDICT_V2",
+   "scope": "COMPONENT",
+   "time": "2026-10-28T20:50:56Z",
+   "unit": "m3",
+   "verdict_id": "V2-d0d3ffd05e1d26a3"
+  },
+  {
+   "binding": "LINE_CONTENT_V1",
+   "boq_lines_sha256": "097a80b6d22cf12cd5193541de3cc83f8afc4a0eb135eedf81294768e6c78949",
+   "candidate_version": "ARCH_TAKEOFF_V3.0.20",
+   "checker": {
+    "routine": "Verifier",
+    "run_token": "20261028T195035-394-19343",
+    "verdict_commit": "59dbfd0e"
+   },
+   "checker_qty": 20.7,
+   "element_scope": {
+    "count": 1,
+    "ids": [
+     "WPF:LIFT_PIT_BASE_SCREED"
+    ]
+   },
+   "engine_qty": 20.7,
+   "evidence": [
+    {
+     "printed_value": "4.600 x 4.500 = 20.700 m2 (own re-read 2026-10-25 11:28; Checker T-219 Gate A)",
+     "sheet": "ST7757 dxf.dxf lift pit footing FF 1B2B"
+    }
+   ],
+   "line_content_sha256": "c9624f9c949a56af9b66e280131298a599c6d5b5821398e41b35e9b82171fb21",
+   "line_ids": [
+    "L-e11f17bb076058bf172d"
+   ],
+   "notes": "re-bound from V2-0dc84a7ed05fdc00 (ARCH_TAKEOFF_V3.0.19): own lines byte-identical; was: re-issued on V3.0.19 (bound lines byte-identical to V3.0.18 ec741004; Verifier T-255 Gate B 2026-10-26T03:42:21Z); was V2-8c030190dde093f5: the group's only line (no HELD element): WHOLE; base screed under the pit base",
+   "project_id": "development-villa-t131",
+   "rebound_from": "V2-0dc84a7ed05fdc00",
+   "revision_set_sha256": "5e3690754db90b5fa2d878d4fc29b2e84ce9d1d91e4c1e68a62019d1b34bbc22",
+   "schema": "URBAN_CHECKER_VERDICT_V2",
+   "scope": "WHOLE",
+   "time": "2026-10-28T20:50:56Z",
+   "unit": "m2",
+   "verdict_id": "V2-d64f9990fbe0fba3"
+  },
+  {
+   "binding": "LINE_CONTENT_V1",
+   "boq_lines_sha256": "097a80b6d22cf12cd5193541de3cc83f8afc4a0eb135eedf81294768e6c78949",
+   "candidate_version": "ARCH_TAKEOFF_V3.0.20",
+   "checker": {
+    "routine": "Verifier",
+    "run_token": "20261028T195035-394-19343",
+    "verdict_commit": "59dbfd0e"
+   },
+   "checker_qty": 1.035,
+   "element_scope": {
+    "count": 1,
+    "ids": [
+     "WPF:LIFT_PIT_BASE_SCREED"
+    ]
+   },
+   "engine_qty": 1.035,
+   "evidence": [
+    {
+     "printed_value": "4.600 x 4.500 = 20.700 m2 (own re-read 2026-10-25 11:28; Checker T-219 Gate A); screed 5 cm=20.700 x 0.05 = 1.035 m3",
+     "sheet": "ST7757 dxf.dxf lift pit footing FF 1B2B"
+    }
+   ],
+   "line_content_sha256": "60af79deb283dba7f60aacf9a0758663b1599a987f3216169c697f958ce29c8c",
+   "line_ids": [
+    "L-e4789d76efedbc351bd4"
+   ],
+   "notes": "re-bound from V2-b630f4d435fd0d69 (ARCH_TAKEOFF_V3.0.19): own lines byte-identical; was: re-issued on V3.0.19 (bound lines byte-identical to V3.0.18 ec741004; Verifier T-255 Gate B 2026-10-26T03:42:21Z); was V2-7fe39f6cc9402efb: the group's only line (no HELD element): WHOLE",
+   "project_id": "development-villa-t131",
+   "rebound_from": "V2-b630f4d435fd0d69",
+   "revision_set_sha256": "5e3690754db90b5fa2d878d4fc29b2e84ce9d1d91e4c1e68a62019d1b34bbc22",
+   "schema": "URBAN_CHECKER_VERDICT_V2",
+   "scope": "WHOLE",
+   "time": "2026-10-28T20:50:56Z",
+   "unit": "m3",
+   "verdict_id": "V2-fc91e981e0f142ef"
+  }
+ ]
+}
