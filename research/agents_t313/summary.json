@@ -1,13 +1,14 @@
 {
  "identity": {
   "plan": "ab54dd55",
-  "rooms": "0b48da21",
-  "lines": "f5744fd4"
+  "rooms": "06ac74eb",
+  "record": "dabb7c18",
+  "record_lines": 1696
  },
  "openings": 59,
  "rows": 234,
  "reveal_lines": 27,
- "lines_bound": 27,
+ "lines_bound": 49,
  "lines_unbound": [],
  "totals": {
   "IN:FLOOR_STRIP": {
@@ -209,6 +210,137 @@
   }
  },
  "exterior_edge_ml_measured": 141.88,
+ "door_lines_bound": 22,
+ "door_reconciliation": {
+  "EQUAL": 20,
+  "WITHIN_BOUND": 2
+ },
+ "door_ledger_m2_in_line": 20.22,
+ "door_line_m2_provisional": 17.74,
+ "missing_scope": {
+  "DOOR:THROUGH:HEAD": {
+   "m2": 0.63,
+   "ml": 4.2,
+   "openings": [
+    "D-GF-02",
+    "D-GF-10",
+    "D-GF-14",
+    "D-1F-03",
+    "D-1F-04"
+   ]
+  },
+  "DOOR:THROUGH:JAMBS": {
+   "m2": 3.3,
+   "ml": 22.0,
+   "openings": [
+    "D-GF-02",
+    "D-GF-10",
+    "D-GF-14",
+    "D-1F-03",
+    "D-1F-04"
+   ]
+  },
+  "FLOOR_GLAZING:OUT:HEAD": {
+   "m2": 0.408,
+   "ml": 5.1,
+   "openings": [
+    "W15",
+    "W16",
+    "W25",
+    "W27"
+   ]
+  },
+  "FLOOR_GLAZING:OUT:JAMBS": {
+   "m2": 1.472,
+   "ml": 18.4,
+   "openings": [
+    "W15",
+    "W16",
+    "W25",
+    "W27"
+   ]
+  },
+  "WINDOW:OUT:HEAD": {
+   "m2": 2.5614,
+   "ml": 29.53,
+   "openings": [
+    "W01",
+    "W02",
+    "W04",
+    "W05",
+    "W06",
+    "W07",
+    "W08",
+    "W09",
+    "W10",
+    "W11",
+    "W12",
+    "W13",
+    "W14",
+    "W18",
+    "W19",
+    "W20",
+    "W21",
+    "W22",
+    "W23",
+    "W24",
+    "W26",
+    "W28",
+    "W29"
+   ]
+  },
+  "WINDOW:OUT:JAMBS": {
+   "m2": 5.2256,
+   "ml": 59.32,
+   "openings": [
+    "W01",
+    "W04",
+    "W05",
+    "W06",
+    "W07",
+    "W08",
+    "W09",
+    "W10",
+    "W11",
+    "W12",
+    "W13",
+    "W14",
+    "W18",
+    "W19",
+    "W20",
+    "W21",
+    "W22",
+    "W23",
+    "W24",
+    "W26",
+    "W28",
+    "W29"
+   ]
+  },
+  "WINDOW:OUT:SILL": {
+   "m2": 0.04,
+   "ml": 0.5,
+   "openings": [
+    "W18"
+   ]
+  }
+ },
+ "missing_scope_m2": 13.637,
+ "family_lines_on_openings": {
+  "ARCH.PASSAGE": 2,
+  "ARCH.THRESHOLD": 1,
+  "ARCH.WINDOW": 27,
+  "ARCH.WINDOW_REVEAL": 27,
+  "DOOR.EXTERNAL.ALUMINIUM": 2,
+  "DOOR.INTERNAL.PVC": 15,
+  "FIN.FLOOR.PORCELAIN": 13,
+  "FIN.MARBLE.THRESHOLD": 10,
+  "FIN.PLASTER": 22,
+  "FIN.WP.DOORWAY": 10,
+  "FIN.WP.DOORWAY_TRANSITION": 7,
+  "FIN.WP.DOORWAY_TRANSITION_NR": 14,
+  "FIN.WP.TERMINATION": 1
+ },
  "edge_reconciliation": {
   "t162_r2_measured_ml": 137.11,
   "t162_r2_assumed_ml": 32.2,
