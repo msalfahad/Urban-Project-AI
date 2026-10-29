@@ -6,52 +6,52 @@
   "last_run": "2026-10-29T04:31:53Z",
   "result": "ok",
   "working_on": "Next daily update 2026-10-30 04:31 UTC",
-  "as_of": "2026-10-29T08:20:00Z"
+  "as_of": "2026-10-29T12:35:00Z"
  },
  {
   "agent": "1 LEAD – plans & assigns work",
   "role": "Plans the work, keeps the board, milestones and element register, writes your report",
   "cadence": "every 4 h at :11 (since 28 Oct 21:44)",
-  "last_run": "2026-10-29T08:18:00Z",
+  "last_run": "2026-10-29T12:25:00Z",
   "result": "running",
-  "working_on": "Board refilled after three idle worker runs: wet-room backing plaster into the candidate first; binding tables for blockwork, formwork, ceiling, wet-area waterproofing and exterior plaster; line-state export check",
-  "as_of": "2026-10-29T08:20:00Z"
+  "working_on": "Five pieces merged since 08:26 incl. the wet-room backing plaster in the candidate (V3.0.22); new: room-label census binding for the M2 exit, export text fix, three binding tables; parapet concrete line now open for integration",
+  "as_of": "2026-10-29T12:35:00Z"
  },
  {
   "agent": "2 WORKER 1 – Structural",
   "role": "Structural lane: concrete, rebar by bar population, formwork",
   "cadence": "every 2 h at :19 (odd hours UTC, since 28 Oct 21:44)",
-  "last_run": "2026-10-29T07:21:00Z",
+  "last_run": "2026-10-29T11:30:00Z",
   "result": "ok",
-  "working_on": "07:21 nothing claimable, ended at once; 06:35 export deductions check handed in (waits for the checker); next: blockwork binding table",
-  "as_of": "2026-10-29T08:20:00Z"
+  "working_on": "12:14 formwork binding table to the current concrete lines handed in (waits for the checker); 10:18 line-state export check merged 11:42; next: export deductions fill table",
+  "as_of": "2026-10-29T12:35:00Z"
  },
  {
   "agent": "3 WORKER 2 – Architectural & finishes",
   "role": "Architecture and finishes lane: floors, walls, plaster, paint, tiles, ceilings, openings, waterproofing",
   "cadence": "every 2 h at :39 (even hours UTC, since 28 Oct 21:44)",
-  "last_run": "2026-10-29T06:41:00Z",
+  "last_run": "2026-10-29T10:41:00Z",
   "result": "ok",
-  "working_on": "06:41 nothing claimable, ended at once; 04:54 wet-room backing plaster ledger (merged 07:48); next: ceiling binding table",
-  "as_of": "2026-10-29T08:20:00Z"
+  "working_on": "11:33 wet-area waterproofing binding merged 11:58; 09:56 ceiling binding merged 11:41; next: room-label census binding (M2 exit), then exterior plaster binding",
+  "as_of": "2026-10-29T12:35:00Z"
  },
  {
   "agent": "4 WORKER 3 – Integration into V3.0",
   "role": "Integration lane: wires checker-verified pieces into the one opt-in candidate",
   "cadence": "every 2 h at :59 (even hours UTC)",
-  "last_run": "2026-10-29T07:01:00Z",
+  "last_run": "2026-10-29T11:00:00Z",
   "result": "ok",
-  "working_on": "Wall-tile integration V3.0.21 merged 07:46 (second attempt); 07:01 nothing claimable; next: wet-room backing plaster into the candidate",
-  "as_of": "2026-10-29T08:20:00Z"
+  "working_on": "12:16 blockwork binding table handed in (waits for the checker); wet-room backing plaster integrated as V3.0.22 (passed 11:38 first time); next: parapet concrete line",
+  "as_of": "2026-10-29T12:35:00Z"
  },
  {
   "agent": "5 CHECKER – verifies & merges",
   "role": "Checks finished tasks by re-measuring, merges or rejects, keeps the scoreboard",
   "cadence": "hourly at :49",
-  "last_run": "2026-10-29T07:51:00Z",
+  "last_run": "2026-10-29T11:57:00Z",
   "result": "ok",
-  "working_on": "Since 04:15: 3 merged (sills / thresholds, wall-tile integration V3.0.21, backing plaster ledger), blinding downgrade record issued; next: carry verdicts to V3.0.21, export deductions check, M2 census statement",
-  "as_of": "2026-10-29T08:20:00Z"
+  "working_on": "Since 08:26: 5 merged (export deductions check, backing plaster integration V3.0.22, ceiling and waterproofing bindings, line-state check), verdicts carried to V3.0.22, M2 census written (not met on 8 room labels); next: blockwork and formwork binding tables",
+  "as_of": "2026-10-29T12:35:00Z"
  },
  {
   "agent": "6 SCOUT – research & feedback to Lead",
@@ -60,7 +60,7 @@
   "last_run": "2026-10-27T23:50:49Z",
   "result": "failed",
   "working_on": "Paused; its last run (27 Oct 23:50) failed on the usage limit; open request on usage budget not worked",
-  "as_of": "2026-10-29T08:20:00Z"
+  "as_of": "2026-10-29T12:35:00Z"
  },
  {
   "agent": "7 DASHBOARD – refreshes your page",
@@ -69,6 +69,6 @@
   "last_run": "2026-10-29T00:54:14Z",
   "result": "ok",
   "working_on": "Next refresh 2026-10-29 12:54 UTC",
-  "as_of": "2026-10-29T08:20:00Z"
+  "as_of": "2026-10-29T12:35:00Z"
  }
 ]

@@ -1,16 +1,38 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
 Plain words, no task numbers. Measured numbers come from SCOREBOARD.md; anything not measured says so.
-Last update: 2026-10-29 08:20 UTC (Lead). Previous version: 2026-10-29 04:15 UTC. The released numbers did not change
+Last update: 2026-10-29 12:30 UTC (Lead). Previous version: 2026-10-29 08:20 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released default V2.9 + route G untouched). Your measure: whole BOQ
 lines independently verified: 2 in the candidate's export (the concrete slab 60.28 m3 is the one scoreboard reference
-line among them); released: 0. The candidate under review is now V3.0.21 (not released).
+line among them); released: 0. The candidate under review is now V3.0.22 (not released).
 
-WALL TILES ARE IN THE CANDIDATE. The tiling integration passed the checker on its second attempt: 340.30 m2 of wall tile
-on 12 wet-room and pantry lines (6 lines still held, never shown as zero), and the open pantry's wall base is now priced
-once (as tile, not also as skirting). The plaster coat behind those tiles was measured and checked too (340.30 m2 at your
-tiling height) and is next in line for the candidate. No run failed; three workers found nothing to pick up this
-morning, so the board was refilled. Nothing new waits on you beyond the two decisions already in the Lead report.
+THE PLASTER BEHIND WALL TILES IS IN THE CANDIDATE, and it passed the checker first time: interior plaster in the
+candidate 234.95 -> 575.25 m2 (+340.30 m2 at your tiling height on 12 wet-room and pantry lines; 6 rooms still held,
+never zero; the band above the tile, 0 .. 23.10 m2, held beside every line because no drawing prints where it stops).
+Four more pieces were checked and merged, every worker run closed properly, and nothing new waits on you. The checker's
+room census found the ground floor bathroom label and seven other labels (pool, four garden areas, a void, a roof) that
+no candidate line refers to: openings are complete, rooms are not, so the 28 Oct milestone stays late until each of the
+eight is bound to a line, shown not applicable from the drawing, or listed as missing.
+
+Since 29 Oct 08:20 (newest first; five checked and merged, two handed in):
+- Blockwork wall-by-wall table for the candidate: HANDED IN. The candidate's 21 blockwork lines are all still blank;
+  the table fills them: 422.53 m2 of walls fully determined (297.85 m2 of it already hand-verified on 18 walls), more
+  walls with established parts, and 28 walls held by name. Freelancer 1,260.69 m2: no verdict on the total while walls
+  are held. The parapet could be block or concrete (not specified): its block alternative (up to 60.60 m2) is kept out
+  of every line and can never be added on top of the concrete alternative.
+- Formwork table for the candidate: HANDED IN. Re-measured from the structural drawing: total chain 1,078.27 ->
+  1,061.73 m2 with every step named (pool faces now measured: 13.28 m2 water side + 2.70 m2 above ground), parapet
+  formwork 81.6 .. 202.8 m2 held (material not specified).
+- Wet-area waterproofing table: CHECKED AND MERGED. Floors 85.62 -> 85.58 m2 (a pantry column, -0.33 %), door
+  thresholds 1.93 -> 2.02 m2 (two doors re-read from the jambs, the pantry door added); 10 up-turns under windows with
+  no drawn sill follow your method, the drawing-only reading (0 .. 1.38 m2) held beside them.
+- Ceilings table: CHECKED AND MERGED. No ceiling area is counted twice with wall plaster, paint or tile (0.000 m2);
+  decorative ceiling 362.01 m2 measured vs the candidate's 403.16 (-10.2 %) and the freelancer's 409.58 (-11.6 %): the
+  difference is named piece by piece and goes in with the ceiling integration.
+- Export checks: CHECKED AND MERGED (two). Some lines give the right net without listing the deductions, and 90.5 % of
+  the released reinforcement kilograms (8,311 of 9,186 kg) print a formula that starts with "held" although the figure is
+  correct (count x length x kg/m). Both are text faults, not quantity faults; the fixes are queued for the candidate
+  so a spreadsheet export can be written cleanly.
 
 Since 29 Oct 04:15 (newest first; three checked and merged, one handed in):
 - Plaster behind wall tiles: CHECKED AND MERGED (ledger). By your own approved finishing rule the cement-sand coat

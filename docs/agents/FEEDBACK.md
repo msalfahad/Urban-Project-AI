@@ -42,6 +42,17 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
    NEEDS FIXING (cadence vs usage budget is his call: the hourly pilot was to be reviewed after 24 - 48 h on 25 Oct);
    R-11 to the Scout (documented cost / usage controls for scheduled routines); the stale-lock recovery worked as designed.
 
+## 2026-10-29 12:30 (lead run; covers 08:20 - 12:30)
+
+- T-330 export canonical-deductions check: WORKED (Gate A PASS 09:48; Checker re-ran on V3.0.21: 41 FLAG / 0 REFUSED, hand check L-af9621f4 +15.33 % over-read with an empty list). Decision: FILL table NEW T-341 (lane S) for T-246.
+- T-331 wet-room backing fill: WORKED (Gate B PASS FIRST TIME 11:38, V3.0.22; 12 lines hand-checked <= 0.0002 m2, 1F-12 26.305 m2 0.000 %; L4 NEW 0). Decision: T-319 promoted to TODO on V3.0.22.
+- T-334 line-state check: WORKED (Gate A PASS 11:42; 350 rebar lines 'held:' text reproduced, quantities consistent). Decision: NEW T-338 (lane I, text / state fix, after T-319); lessons row PROPOSED.
+- T-335 ceiling binding: WORKED (Gate A PASS 11:41; kitchen ceiling own 9.630 m2 = decor). Feeds T-284 unchanged.
+- T-336 wet-area WP binding: WORKED (Gate A PASS 11:58; pantry floor 13.455, thresholds 0.120 / 0.200 by own handle read, 0.000 %). Feeds T-310; the 10 window up-turns ASSUMED-OA with the drawing reading HELD 0 .. 1.380 m2 stay as passed.
+- T-332 formwork binding / T-333 blockwork binding: READY 12:15 (CHECKER-RUNS). T-333 was taken by worker 3 (lane I had no claimable row): allowed by the cross-lane rule.
+- Checker M2 census statement: written 10:00, M2 NOT MET on 8 room labels. Decision: NEW T-342 (lane A, gate 1, AT19 first).
+- Recurring (every code agent, every run): Drive connector saves raw binary, `agent_env.sh decode` accepts only base64 and no spaces in names; worked round by hand; still in NEEDS FIXING. New this run: this Lead session's venv had no pytest after the automatic prepare (self-check t061 FAIL 'No module named pytest'), repaired by one `setup` (same as 28 Oct 20:20).
+
 ## 2026-10-29 08:20 (lead run; covers 04:15 - 08:20)
 
 - T-325 (sills / thresholds ledger) WORKED: Checker own re-measure of 2 doors by their decimal door-symbol handle, W18 sill 0.040 m2, W15 / W16 0.2484 m2 outside the TERRACE-550 outline (no double count); materials UNKNOWN kept. Decision: T-327 (lane I) stays queued after T-326.
@@ -248,15 +259,3 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
 | T-267 r1 stair finish-level module | PARTIAL (unchanged) | REJECTED 16:07 narrow (manifest); not reclaimed in two worker 1 runs | row set to TODO r2 (claim rule cause, see below), first in lanes S and I |
 | T-240 floor area V3.0.14 | handed in (READY 17:52, Gate B) | internal 340.765 -> 380.364 m2 vs released 385.634 (-1.37 %), 3,643 / 3,680 lines byte-identical | Gate B next; the +39.6 m2 step to be reconciled piece by piece |
 | Worker 1 lane order | process fault | claimed T-273 17:27 while two narrow reworks (status REJECTED) were first in lane S | rework rows now TODO rN (lessons row); T-273 continues |
-
-## 2026-10-24 14:15 (lead run)
-
-| Task | Result | Evidence | Decision |
-|---|---|---|---|
-| T-264 formwork r4 | WORKED | MERGED 90203feb (Verifier 13:00): own ring B7 arcs, boundary 7FE#2 6.480, exterior outer faces 47.663 m2 = Checker 12:10 run lengths; no quantity moved | none; formwork stays research until T-199 integrates it |
-| T-269 floor-area blockers | WORKED | MERGED 991f85fa (13:03): 1F living 38.6335 m2 own-VERIFIED (released A 44.8694 = +6.2359 ENGINE_WRONG; freelancer 38.96, -0.84 %); F3 + F4 2.070 floor, F1 + F2 6.1244 HELD (ST-02 undrawn) | T-240 WP2 / WP3 carry it; designer item for ST-02 stays with the stair consultant items; lessons row added |
-| T-258 stairs / domes closure | FAILED r1 -> WORKED r2 (54 min) | r1 REJECTED 13:03: D1 arrival wedge 0.0315 m3 into the +1.00 slab neither deducted nor listed (gate e / f); r2 MERGED b1b72a50 (13:57): 0.025714 slab / 0.005786 stair, closable component 10.805259 m3 | T-266 now waits only on T-254; lessons row added (arrival treatment once per flight) |
-| T-262 opening-to-room by geometry | WORKED | MERGED c8dba740 (14:00): W06 wedge 1.994 m2 with door 320, W19 + D-1F-01 west bath 4.658 m2, W20 + D-1F-04 east bath; name join swapped, 0.000 m2 every trade = ENGINE_RIGHT | no follow-up; geometric join is the rule (lessons row) |
-| T-265 ground-beam rebar | handed in (READY 14:13 @ 4353552a) | boundary G.B 315.56 kg lower bound, exterior top / bottom 796.32 kg, side bars 199.08 and stirrups HELD | Gate A next (structural); new T-272 closes stirrups / side bars / laps from prints only |
-| T-180 slot | nothing measurable left on CLOSABLE rows (Verifier 14:02) | every CLOSABLE row waits on lane I or consultant items | light runs go to the blockwork register v2 SS walls (verified share ahead of T-261) |
-| Overlap IDLE lines (worker 1 12:20, worker 2 12:39) | team health, not a failure | the 11:20 / 11:40 runs still held their locks; each run takes > 1 h | no action (cadence is the owner's); each IDLE line carried its reason |

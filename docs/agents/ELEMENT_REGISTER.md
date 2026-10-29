@@ -63,6 +63,18 @@ quantity.
   Integration T-327; reveal lines T-326 must not carry a sill a T-325 line carries.
 - FORMWORK FACE (every concrete element): owner trade FORMWORK, one face once, bound to its V3.0.21 concrete line by
   T-332 before T-199; ground-cast / blinding-cast faces not formed only by an answered rule, else HELD by name.
+- WET-ROOM BACKING PLASTER (Lead 2026-10-29 12:30): IN the candidate V3.0.22 (T-331 Gate B 11:38): 340.3038 m2 on 12
+  FIN.PLASTER lines = the tile faces face by face, canonical deductions by opening id; owner trade PLASTER; the band above
+  the tile 0 .. 23.0970 m2 HELD beside each line (Q-52 C), never 0; paint on backed rooms 0 BY RULE (UP-FIN-PAINT-001).
+- OPENING REVEAL IN A WET ROOM (OPEN, T-340): a deducted opening's reveal is NOT inside the backing / tile face; its
+  owner line (plaster jamb-and-head, reveal line or tile) is taken from the drawings or an answered rule, one owner per
+  reveal face; T-326 / T-327 wait for the T-340 cross-check.
+- ROOM LABELS WITHOUT A LINE (OPEN, T-342, M2): GF BATHROOM AT19, GF POOL AT20, GF GARDEN AT21 / AT22 / AT39 / AT40,
+  1F VOID AT225, 2F ROOF AT385: each bound to a line by source entities, NOT_APPLICABLE with drawing evidence or
+  MISSING; until then NAMED OMISSIONS, never 0 (Checker census 2026-10-29 10:00).
+- PARAPET MATERIAL ALTERNATIVES (Lead 2026-10-29 12:30): the parapet RC line family (T-319) and the parapet block
+  alternative 0 .. 60.5965 m2 (T-333) are exclusive readings of ONE element under Q-65 C; both carried HELD by name,
+  never summed; the formwork faces 81.589 .. 202.782 m2 (T-332) follow the RC reading only.
 - BLOCKWORK WALL vs PARAPET ABOVE THE UPSTAND: a parapet run is RC OR block above the 0.30 RC upstand, never both
   (T-319 RC line, T-333 binds the block alternative 0 .. 60.596 m2 exclusively); the upstand to the scheduled beam depth
   stays CONC.BEAM.
