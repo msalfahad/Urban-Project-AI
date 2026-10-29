@@ -1,0 +1,2407 @@
+{
+ "lines": [
+  {
+   "components": [],
+   "element_id": "1F-R8BDA49:doorway CLOSURE|D2:3118|D2:417@D2:3118:0",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "item_code": "FIN.WP.DOORWAY",
+   "line_id": "L-0627bac3a224d7fab8de",
+   "measured_net": 0.131977,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "GF-RD6F891:doorway CLOSURE|D2:820:0|D2:820:0",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "item_code": "FIN.WP.DOORWAY",
+   "line_id": "L-0f04f1a49d795b14d1af",
+   "measured_net": 0.218846,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "GF-RDF7D28:doorway CLOSURE|D2:825|D2:417@D2:825:0",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "item_code": "FIN.WP.DOORWAY",
+   "line_id": "L-3444beb08ce0719127ac",
+   "measured_net": 0.119556,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "1F-R48AA46:doorway OP-004",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "item_code": "FIN.WP.DOORWAY",
+   "line_id": "L-415228b01d9471c888e1",
+   "measured_net": 0.12,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "1F-RED23B8:doorway OP-019",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "item_code": "FIN.WP.DOORWAY",
+   "line_id": "L-925603593b80b629965f",
+   "measured_net": 0.12,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "GF-RB62B55:doorway CLOSURE|D2:495|D2:417@D2:495:0",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "item_code": "FIN.WP.DOORWAY",
+   "line_id": "L-936d4f0c4514923ad9c0",
+   "measured_net": 0.12,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "1F-R48CDA5:doorway OP-018",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "item_code": "FIN.WP.DOORWAY",
+   "line_id": "L-9c34349b61d8d9103bce",
+   "measured_net": 0.12,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "GF-RB28769:doorway OP-018",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "item_code": "FIN.WP.DOORWAY",
+   "line_id": "L-9cbc8b1b9ebf6e79df66",
+   "measured_net": 0.12,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "GF-RFAD3C4:doorway OP-026",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "item_code": "FIN.WP.DOORWAY",
+   "line_id": "L-a6dffed80be55d5adf1f",
+   "measured_net": 0.12,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "1F-R26FA0D:doorway OP-010",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "item_code": "FIN.WP.DOORWAY",
+   "line_id": "L-bdf48c327992229649ca",
+   "measured_net": 0.12,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "2F-RE83BED:doorway OP-006",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "2F",
+   "item_code": "FIN.WP.DOORWAY",
+   "line_id": "L-cc37f166bbea265ed2cf",
+   "measured_net": 0.12,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "1F-R26FA0D:doorway OP-008",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "item_code": "FIN.WP.DOORWAY",
+   "line_id": "L-e023ab45fd02c8531234",
+   "measured_net": 0.18,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "GF-RA3AD49:doorway OP-025",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "item_code": "FIN.WP.DOORWAY",
+   "line_id": "L-e18901e01bc3d7a3fbd4",
+   "measured_net": 0.2,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "GF-RF38DAF:doorway OP-017",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "item_code": "FIN.WP.DOORWAY",
+   "line_id": "L-e3ffb8005f85e89113cb",
+   "measured_net": 0.12,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "1F-R8BDA49:doorway transition CLOSURE|D2:3118|D2:417@D2:3118:0",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "1F",
+   "item_code": "FIN.WP.DOORWAY_TRANSITION",
+   "line_id": "L-07b084a5187a64634108",
+   "measured_net": null,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "1F-RED23B8:doorway transition OP-019",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "1F",
+   "item_code": "FIN.WP.DOORWAY_TRANSITION",
+   "line_id": "L-19f6405a5e60a99c29f7",
+   "measured_net": null,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "GF-RB62B55:doorway transition CLOSURE|D2:495|D2:417@D2:495:0",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "GF",
+   "item_code": "FIN.WP.DOORWAY_TRANSITION",
+   "line_id": "L-1c36054a8cadc0726e65",
+   "measured_net": null,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "GF-RD6F891:doorway transition CLOSURE|D2:820:0|D2:820:0",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "GF",
+   "item_code": "FIN.WP.DOORWAY_TRANSITION",
+   "line_id": "L-20400ca6dc38abb30c33",
+   "measured_net": null,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "1F-R26FA0D:doorway transition OP-008",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "1F",
+   "item_code": "FIN.WP.DOORWAY_TRANSITION",
+   "line_id": "L-689197a4778b786de143",
+   "measured_net": null,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "GF-RD36087:doorway transition CLOSURE|D2:825|D2:417@D2:825:0",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "GF",
+   "item_code": "FIN.WP.DOORWAY_TRANSITION",
+   "line_id": "L-77a630d7e60ca6c404ba",
+   "measured_net": null,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "1F-R48AA46:doorway transition OP-004",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "1F",
+   "item_code": "FIN.WP.DOORWAY_TRANSITION",
+   "line_id": "L-aed6f48195f99648c3f3",
+   "measured_net": null,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "GF-RA3AD49:doorway transition OP-025",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "GF",
+   "item_code": "FIN.WP.DOORWAY_TRANSITION",
+   "line_id": "L-b46013c737051e5441fe",
+   "measured_net": null,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "GF-RFAD3C4:doorway transition OP-026",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "GF",
+   "item_code": "FIN.WP.DOORWAY_TRANSITION",
+   "line_id": "L-b4a23dc5fc953bc5a163",
+   "measured_net": null,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "2F-RE83BED:doorway transition OP-006",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "2F",
+   "item_code": "FIN.WP.DOORWAY_TRANSITION",
+   "line_id": "L-b5a04e7c058346b6f734",
+   "measured_net": null,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "GF-R8496F0:doorway transition CLOSURE|D2:495|D2:417@D2:495:0",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "GF",
+   "item_code": "FIN.WP.DOORWAY_TRANSITION",
+   "line_id": "L-b60811f60f8fdc9a4447",
+   "measured_net": null,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "1F-R48CDA5:doorway transition OP-018",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "1F",
+   "item_code": "FIN.WP.DOORWAY_TRANSITION",
+   "line_id": "L-dfc4e74604047cb21407",
+   "measured_net": null,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "GF-RDF7D28:doorway transition CLOSURE|D2:825|D2:417@D2:825:0",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "GF",
+   "item_code": "FIN.WP.DOORWAY_TRANSITION",
+   "line_id": "L-e0c34550b13267b4e0f7",
+   "measured_net": null,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "1F-RED23B8:wp_door_transition:OP-019",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "item_code": "FIN.WP.DOORWAY_TRANSITION_NR",
+   "line_id": "L-066dbbae8a2695a0e405",
+   "measured_net": 1,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "pcs"
+  },
+  {
+   "components": [],
+   "element_id": "GF-RB28769:wp_door_transition:OP-018",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "item_code": "FIN.WP.DOORWAY_TRANSITION_NR",
+   "line_id": "L-0884ba473e168f7002fb",
+   "measured_net": 1,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "pcs"
+  },
+  {
+   "components": [],
+   "element_id": "2F-RE83BED:wp_door_transition:OP-006",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "2F",
+   "item_code": "FIN.WP.DOORWAY_TRANSITION_NR",
+   "line_id": "L-0b2c2c88e3ae80b345b3",
+   "measured_net": 1,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "pcs"
+  },
+  {
+   "components": [],
+   "element_id": "GF-RFAD3C4:wp_door_transition:OP-026",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "item_code": "FIN.WP.DOORWAY_TRANSITION_NR",
+   "line_id": "L-4ba8626fa078c17133ec",
+   "measured_net": 1,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "pcs"
+  },
+  {
+   "components": [],
+   "element_id": "GF-RDBD4F9:wp_door_transition:OP-017",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "item_code": "FIN.WP.DOORWAY_TRANSITION_NR",
+   "line_id": "L-4bf0adee5d140bed7a5a",
+   "measured_net": 1,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "pcs"
+  },
+  {
+   "components": [],
+   "element_id": "1F-R48CDA5:wp_door_transition:OP-018",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "item_code": "FIN.WP.DOORWAY_TRANSITION_NR",
+   "line_id": "L-4df996d13688a37d0ef7",
+   "measured_net": 1,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "pcs"
+  },
+  {
+   "components": [],
+   "element_id": "1F-R8BDA49:wp_door_transition:DOOR-1F-0c35dbd6",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "item_code": "FIN.WP.DOORWAY_TRANSITION_NR",
+   "line_id": "L-530e99c7e323bc4f2be4",
+   "measured_net": 1,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "pcs"
+  },
+  {
+   "components": [],
+   "element_id": "GF-RD6F891:wp_door_transition:DOOR-GF-e419ef5c",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "item_code": "FIN.WP.DOORWAY_TRANSITION_NR",
+   "line_id": "L-6f59a586f6703501e0ea",
+   "measured_net": 1,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "pcs"
+  },
+  {
+   "components": [],
+   "element_id": "GF-RA3AD49:wp_door_transition:OP-025",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "item_code": "FIN.WP.DOORWAY_TRANSITION_NR",
+   "line_id": "L-926a7a01b22bb6dba63e",
+   "measured_net": 1,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "pcs"
+  },
+  {
+   "components": [],
+   "element_id": "1F-R26FA0D:wp_door_transition:OP-008",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "item_code": "FIN.WP.DOORWAY_TRANSITION_NR",
+   "line_id": "L-94891a6fcb948fb080fe",
+   "measured_net": 1,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "pcs"
+  },
+  {
+   "components": [],
+   "element_id": "GF-R8496F0:wp_door_transition:DOOR-GF-ab2b06fc",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "item_code": "FIN.WP.DOORWAY_TRANSITION_NR",
+   "line_id": "L-9d525f70200a4d241c07",
+   "measured_net": 1,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "pcs"
+  },
+  {
+   "components": [],
+   "element_id": "1F-R26FA0D:wp_door_transition:OP-010",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "item_code": "FIN.WP.DOORWAY_TRANSITION_NR",
+   "line_id": "L-ad75db1b19e23beede53",
+   "measured_net": 1,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "pcs"
+  },
+  {
+   "components": [],
+   "element_id": "1F-R48AA46:wp_door_transition:OP-004",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "item_code": "FIN.WP.DOORWAY_TRANSITION_NR",
+   "line_id": "L-c9f50613bf7075e4ef79",
+   "measured_net": 1,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "pcs"
+  },
+  {
+   "components": [],
+   "element_id": "GF-RD36087:wp_door_transition:DOOR-GF-2001e93f",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "item_code": "FIN.WP.DOORWAY_TRANSITION_NR",
+   "line_id": "L-fd2a8ebde5a4dce8bf0e",
+   "measured_net": 1,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "pcs"
+  },
+  {
+   "components": [],
+   "element_id": "GF-R8496F0:wp_floor",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "FIN.WP.FLOOR",
+   "line_id": "L-0c6db650bad175d34abb",
+   "measured_net": 3.1325,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "GF-RA3AD49:wp_floor",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "item_code": "FIN.WP.FLOOR",
+   "line_id": "L-2c557dad8748a2c2848b",
+   "measured_net": 9.630001,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "GF-RDF7D28:wp_floor",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "item_code": "FIN.WP.FLOOR",
+   "line_id": "L-3e5759e5282160f313b6",
+   "measured_net": 2.3625,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "GF-RD36087:wp_floor",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "FIN.WP.FLOOR",
+   "line_id": "L-514c78e25600e261a37c",
+   "measured_net": 1.485,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "GF-RD6F891:wp_floor",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "item_code": "FIN.WP.FLOOR",
+   "line_id": "L-538c929be1d81708f09f",
+   "measured_net": 3.717683,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "1F-RED23B8:wp_floor",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "item_code": "FIN.WP.FLOOR",
+   "line_id": "L-6477c7ef451aae374ecc",
+   "measured_net": 3.5775,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "1F-R26FA0D:wp_floor",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "item_code": "FIN.WP.FLOOR",
+   "line_id": "L-66501a74bc489a80d283",
+   "measured_net": 10.151,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "1F-R52AC05:wp_floor",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "item_code": "FIN.WP.FLOOR",
+   "line_id": "L-75a5ef579ff6ffa1cf0a",
+   "measured_net": 2.646,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "1F-R48AA46:wp_floor",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "item_code": "FIN.WP.FLOOR",
+   "line_id": "L-790a3049c29eda7dad2a",
+   "measured_net": 5.0225,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "GF-RFAD3C4:wp_floor",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "item_code": "FIN.WP.FLOOR",
+   "line_id": "L-81e5c35fcaba34dd8e3e",
+   "measured_net": 1.95,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "GF-RB28769:wp_floor",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "item_code": "FIN.WP.FLOOR",
+   "line_id": "L-875de0625f00bf4128fc",
+   "measured_net": 2.36761,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "2F-RE83BED:wp_floor",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "2F",
+   "item_code": "FIN.WP.FLOOR",
+   "line_id": "L-bed47a63708c41b2b150",
+   "measured_net": 5.55,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "GF-RB62B55:wp_floor",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "item_code": "FIN.WP.FLOOR",
+   "line_id": "L-d7899629d78501dc3b66",
+   "measured_net": 3.375,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "GF-RDBD4F9:wp_floor",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "FIN.WP.FLOOR",
+   "line_id": "L-e37ce315bbb83a4630cf",
+   "measured_net": 4.730695,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "GF-RF38DAF:wp_floor",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "item_code": "FIN.WP.FLOOR",
+   "line_id": "L-ed8d62f6e695b361d8f6",
+   "measured_net": 2.675221,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "1F-R48CDA5:wp_floor",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "item_code": "FIN.WP.FLOOR",
+   "line_id": "L-ef429ae8e32c8b5cc641",
+   "measured_net": 4.725,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "1F-R8BDA49:wp_floor",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "item_code": "FIN.WP.FLOOR",
+   "line_id": "L-f15325df772daa7ceec0",
+   "measured_net": 5.0225,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "GF-RC99C2A:wp_floor:wet_zone",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "item_code": "FIN.WP.FLOOR",
+   "line_id": "L-f32abcdb3b4db6877c64",
+   "measured_net": 13.5,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "GF-RDBD4F9:wp_rolls_to_buy",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "item_code": "FIN.WP.MEMBRANE_ROLLS",
+   "line_id": "L-2157f60e3194363444e5",
+   "measured_net": 1,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "pcs"
+  },
+  {
+   "components": [],
+   "element_id": "GF-RD36087:wp_rolls_to_buy",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "item_code": "FIN.WP.MEMBRANE_ROLLS",
+   "line_id": "L-2d2eecc2ab37977715d2",
+   "measured_net": 1,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "pcs"
+  },
+  {
+   "components": [],
+   "element_id": "2F-ROOF-AT379:wp_rolls_to_buy",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "2F",
+   "item_code": "FIN.WP.MEMBRANE_ROLLS",
+   "line_id": "L-2ecffd1f396ede3b5eb4",
+   "measured_net": 17,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "pcs"
+  },
+  {
+   "components": [],
+   "element_id": "GF-RD6F891:wp_rolls_to_buy",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "item_code": "FIN.WP.MEMBRANE_ROLLS",
+   "line_id": "L-334001865d768f872428",
+   "measured_net": 1,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "pcs"
+  },
+  {
+   "components": [],
+   "element_id": "GF-R8496F0:wp_rolls_to_buy",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "item_code": "FIN.WP.MEMBRANE_ROLLS",
+   "line_id": "L-36cf60b44d4a566228fe",
+   "measured_net": 1,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "pcs"
+  },
+  {
+   "components": [],
+   "element_id": "1F-ROOF-AT220:wp_rolls_to_buy",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "item_code": "FIN.WP.MEMBRANE_ROLLS",
+   "line_id": "L-3d298fca6801ce3ad5f7",
+   "measured_net": 8,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "pcs"
+  },
+  {
+   "components": [],
+   "element_id": "1F-R26FA0D:wp_rolls_to_buy",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "item_code": "FIN.WP.MEMBRANE_ROLLS",
+   "line_id": "L-49fbf989820dae9684f8",
+   "measured_net": 2,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "pcs"
+  },
+  {
+   "components": [],
+   "element_id": "GF-RA3AD49:wp_rolls_to_buy",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "item_code": "FIN.WP.MEMBRANE_ROLLS",
+   "line_id": "L-5437fd8cd2acefface10",
+   "measured_net": 2,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "pcs"
+  },
+  {
+   "components": [],
+   "element_id": "1F-ROOF-AT216:wp_rolls_to_buy",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "item_code": "FIN.WP.MEMBRANE_ROLLS",
+   "line_id": "L-572962fdf58067ac4fa7",
+   "measured_net": 6,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "pcs"
+  },
+  {
+   "components": [],
+   "element_id": "GF-RC99C2A:wp_rolls_to_buy",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "item_code": "FIN.WP.MEMBRANE_ROLLS",
+   "line_id": "L-6b2919de2ecad8ae17ff",
+   "measured_net": 2,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "pcs"
+  },
+  {
+   "components": [],
+   "element_id": "GF-RDF7D28:wp_rolls_to_buy",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "item_code": "FIN.WP.MEMBRANE_ROLLS",
+   "line_id": "L-808c087890c1bbc3388f",
+   "measured_net": 1,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "pcs"
+  },
+  {
+   "components": [],
+   "element_id": "1F-R48AA46:wp_rolls_to_buy",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "item_code": "FIN.WP.MEMBRANE_ROLLS",
+   "line_id": "L-8befd0d92d63db11354e",
+   "measured_net": 1,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "pcs"
+  },
+  {
+   "components": [],
+   "element_id": "2F-ROOF-TOP:wp_rolls_to_buy",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "2F",
+   "item_code": "FIN.WP.MEMBRANE_ROLLS",
+   "line_id": "L-90b40877c8c3da54ba1b",
+   "measured_net": null,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "pcs"
+  },
+  {
+   "components": [],
+   "element_id": "1F-R48CDA5:wp_rolls_to_buy",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "item_code": "FIN.WP.MEMBRANE_ROLLS",
+   "line_id": "L-929f440b7488ecf77e3d",
+   "measured_net": 1,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "pcs"
+  },
+  {
+   "components": [],
+   "element_id": "2F-RE83BED:wp_rolls_to_buy",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "2F",
+   "item_code": "FIN.WP.MEMBRANE_ROLLS",
+   "line_id": "L-94ffd11fd1a66b1a24e1",
+   "measured_net": 1,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "pcs"
+  },
+  {
+   "components": [],
+   "element_id": "1F-R52AC05:wp_rolls_to_buy",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "item_code": "FIN.WP.MEMBRANE_ROLLS",
+   "line_id": "L-a22bfe01c012fde21a50",
+   "measured_net": 1,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "pcs"
+  },
+  {
+   "components": [],
+   "element_id": "1F-RED23B8:wp_rolls_to_buy",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "item_code": "FIN.WP.MEMBRANE_ROLLS",
+   "line_id": "L-a410707894c2b684614e",
+   "measured_net": 1,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "pcs"
+  },
+  {
+   "components": [],
+   "element_id": "1F-R8BDA49:wp_rolls_to_buy",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "item_code": "FIN.WP.MEMBRANE_ROLLS",
+   "line_id": "L-ab3b63c9e360a229344b",
+   "measured_net": 1,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "pcs"
+  },
+  {
+   "components": [],
+   "element_id": "GF-RB62B55:wp_rolls_to_buy",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "item_code": "FIN.WP.MEMBRANE_ROLLS",
+   "line_id": "L-c7cafa0d99e1dcf3bca3",
+   "measured_net": 1,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "pcs"
+  },
+  {
+   "components": [],
+   "element_id": "GF-RB28769:wp_rolls_to_buy",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "item_code": "FIN.WP.MEMBRANE_ROLLS",
+   "line_id": "L-ca07649b462c2fd3c5c8",
+   "measured_net": 1,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "pcs"
+  },
+  {
+   "components": [],
+   "element_id": "GF-RFAD3C4:wp_rolls_to_buy",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "item_code": "FIN.WP.MEMBRANE_ROLLS",
+   "line_id": "L-d5ff05cc3379e5bf5612",
+   "measured_net": 1,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "pcs"
+  },
+  {
+   "components": [],
+   "element_id": "GF-RF38DAF:wp_rolls_to_buy",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "item_code": "FIN.WP.MEMBRANE_ROLLS",
+   "line_id": "L-fdc4f988aa436989bee2",
+   "measured_net": 1,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "pcs"
+  },
+  {
+   "components": [],
+   "element_id": "GF-RDBD4F9:wp_penetrations",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "GF",
+   "item_code": "FIN.WP.PENETRATION",
+   "line_id": "L-0db07ac89503dd3f5980",
+   "measured_net": null,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "pcs"
+  },
+  {
+   "components": [],
+   "element_id": "GF-RD6F891:wp_penetrations",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "GF",
+   "item_code": "FIN.WP.PENETRATION",
+   "line_id": "L-20dfb3cd1232128b3cb6",
+   "measured_net": null,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "pcs"
+  },
+  {
+   "components": [],
+   "element_id": "1F-R8BDA49:wp_penetrations",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "1F",
+   "item_code": "FIN.WP.PENETRATION",
+   "line_id": "L-2253a7ed9e80ac00c728",
+   "measured_net": null,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "pcs"
+  },
+  {
+   "components": [],
+   "element_id": "GF-RA3AD49:wp_penetrations",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "GF",
+   "item_code": "FIN.WP.PENETRATION",
+   "line_id": "L-229e7bf9e837e1d838bd",
+   "measured_net": null,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "pcs"
+  },
+  {
+   "components": [],
+   "element_id": "1F-RED23B8:wp_penetrations",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "1F",
+   "item_code": "FIN.WP.PENETRATION",
+   "line_id": "L-2af93ddb70a431b92800",
+   "measured_net": null,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "pcs"
+  },
+  {
+   "components": [],
+   "element_id": "GF-RFAD3C4:wp_penetrations",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "GF",
+   "item_code": "FIN.WP.PENETRATION",
+   "line_id": "L-345e907e572a363fb615",
+   "measured_net": null,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "pcs"
+  },
+  {
+   "components": [],
+   "element_id": "1F-R48AA46:wp_penetrations",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "1F",
+   "item_code": "FIN.WP.PENETRATION",
+   "line_id": "L-3e6dbcb5614746978a87",
+   "measured_net": null,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "pcs"
+  },
+  {
+   "components": [],
+   "element_id": "GF-RF38DAF:wp_penetrations",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "GF",
+   "item_code": "FIN.WP.PENETRATION",
+   "line_id": "L-5f41701522d675c37b10",
+   "measured_net": null,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "pcs"
+  },
+  {
+   "components": [],
+   "element_id": "GF-R8496F0:wp_penetrations",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "GF",
+   "item_code": "FIN.WP.PENETRATION",
+   "line_id": "L-6375385673176b8b2c9c",
+   "measured_net": null,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "pcs"
+  },
+  {
+   "components": [],
+   "element_id": "GF-RDF7D28:wp_penetrations",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "GF",
+   "item_code": "FIN.WP.PENETRATION",
+   "line_id": "L-657bff4f4cc8e417bc6c",
+   "measured_net": null,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "pcs"
+  },
+  {
+   "components": [],
+   "element_id": "1F-R26FA0D:wp_penetrations",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "1F",
+   "item_code": "FIN.WP.PENETRATION",
+   "line_id": "L-9971bd68a5150abebe0a",
+   "measured_net": null,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "pcs"
+  },
+  {
+   "components": [],
+   "element_id": "GF-RD36087:wp_penetrations",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "GF",
+   "item_code": "FIN.WP.PENETRATION",
+   "line_id": "L-a4bbc2efdb8425554344",
+   "measured_net": null,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "pcs"
+  },
+  {
+   "components": [],
+   "element_id": "1F-R48CDA5:wp_penetrations",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "1F",
+   "item_code": "FIN.WP.PENETRATION",
+   "line_id": "L-a5f885a2f86ee05d5b8b",
+   "measured_net": null,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "pcs"
+  },
+  {
+   "components": [],
+   "element_id": "GF-RB28769:wp_penetrations",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "GF",
+   "item_code": "FIN.WP.PENETRATION",
+   "line_id": "L-bcda623f9ad89eba41db",
+   "measured_net": null,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "pcs"
+  },
+  {
+   "components": [],
+   "element_id": "GF-RB62B55:wp_penetrations",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "GF",
+   "item_code": "FIN.WP.PENETRATION",
+   "line_id": "L-f650522e7882dddccdfa",
+   "measured_net": null,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "pcs"
+  },
+  {
+   "components": [],
+   "element_id": "2F-RE83BED:wp_penetrations",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "2F",
+   "item_code": "FIN.WP.PENETRATION",
+   "line_id": "L-faa7232880f13c1e4a99",
+   "measured_net": null,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "pcs"
+  },
+  {
+   "components": [],
+   "element_id": "1F-R52AC05:wp_penetrations",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "1F",
+   "item_code": "FIN.WP.PENETRATION",
+   "line_id": "L-fb8f6c4b9b3044505557",
+   "measured_net": null,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "pcs"
+  },
+  {
+   "components": [],
+   "element_id": "1F-ROOF-AT216:wp_membrane",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "item_code": "FIN.WP.ROOF",
+   "line_id": "L-2f7502be6f501baf49b1",
+   "measured_net": 32.721,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "2F-ROOF-TOP:wp_membrane",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "2F",
+   "item_code": "FIN.WP.ROOF",
+   "line_id": "L-3e8fe55da71851816dd4",
+   "measured_net": null,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "2F-ROOF-AT379:wp_membrane",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "2F",
+   "item_code": "FIN.WP.ROOF",
+   "line_id": "L-636fd3ff1784a12e653b",
+   "measured_net": 115.832,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "1F-ROOF-AT220:wp_membrane",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "item_code": "FIN.WP.ROOF",
+   "line_id": "L-d57d2dc2fafac8bc72d8",
+   "measured_net": 55.559,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "2F-ROOF-AT379:wp_upturn",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "2F",
+   "item_code": "FIN.WP.ROOF_UPTURN",
+   "line_id": "L-5ce5ba49792e8f9d1f6f",
+   "measured_net": 92.922,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "lm"
+  },
+  {
+   "components": [],
+   "element_id": "1F-ROOF-AT216:wp_upturn",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "item_code": "FIN.WP.ROOF_UPTURN",
+   "line_id": "L-994b88140f2ea50f1b31",
+   "measured_net": 52.94,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "lm"
+  },
+  {
+   "components": [],
+   "element_id": "2F-ROOF-TOP:wp_upturn",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "2F",
+   "item_code": "FIN.WP.ROOF_UPTURN",
+   "line_id": "L-aac1f35e08f85b643692",
+   "measured_net": null,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "lm"
+  },
+  {
+   "components": [],
+   "element_id": "1F-ROOF-AT220:wp_upturn",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "item_code": "FIN.WP.ROOF_UPTURN",
+   "line_id": "L-d4c73babd2a275c28929",
+   "measured_net": 35.727,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "lm"
+  },
+  {
+   "components": [],
+   "element_id": "1F-R48CDA5:termination glazing D2:3126:0",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "1F",
+   "item_code": "FIN.WP.TERMINATION",
+   "line_id": "L-0a7238edb9989d99d37a",
+   "measured_net": null,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "lm"
+  },
+  {
+   "components": [],
+   "element_id": "1F-R48CDA5:termination glazing D2:3123:0",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "1F",
+   "item_code": "FIN.WP.TERMINATION",
+   "line_id": "L-1ef59757a75524c397d7",
+   "measured_net": null,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "lm"
+  },
+  {
+   "components": [],
+   "element_id": "1F-R48CDA5:termination glazing D2:3133:0",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "1F",
+   "item_code": "FIN.WP.TERMINATION",
+   "line_id": "L-8fb80f626889e06f6f97",
+   "measured_net": null,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "lm"
+  },
+  {
+   "components": [],
+   "element_id": "GF-R8496F0:termination passage OP-027",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "GF",
+   "item_code": "FIN.WP.TERMINATION",
+   "line_id": "L-9592048116294937ab6f",
+   "measured_net": null,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "lm"
+  },
+  {
+   "components": [],
+   "element_id": "GF-RDBD4F9:termination zone_line ZONE|D2:731:0|0",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "GF",
+   "item_code": "FIN.WP.TERMINATION",
+   "line_id": "L-a4df8fc50fbab4bef48f",
+   "measured_net": null,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "lm"
+  },
+  {
+   "components": [],
+   "element_id": "GF-RD36087:termination passage OP-020",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "GF",
+   "item_code": "FIN.WP.TERMINATION",
+   "line_id": "L-c57860d79f54a4c1c4b3",
+   "measured_net": null,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "lm"
+  },
+  {
+   "components": [],
+   "element_id": "GF-RB28769:termination other",
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "floor": "GF",
+   "item_code": "FIN.WP.TERMINATION",
+   "line_id": "L-f78da96a7d31f7b72068",
+   "measured_net": null,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "lm"
+  },
+  {
+   "components": [],
+   "element_id": "GF-RD36087:wp_wall_upturn",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "FIN.WP.WALL_UPTURN",
+   "line_id": "L-017f9184994017c8a62b",
+   "measured_net": 0.640592,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "GF-RF38DAF:wp_wall_upturn",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "item_code": "FIN.WP.WALL_UPTURN",
+   "line_id": "L-0226eb38b2c6469296df",
+   "measured_net": 1.322808,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "1F-R26FA0D:wp_wall_upturn",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "item_code": "FIN.WP.WALL_UPTURN",
+   "line_id": "L-2d478a44f042f938e4e7",
+   "measured_net": 3.048,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "GF-RFAD3C4:wp_wall_upturn",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "item_code": "FIN.WP.WALL_UPTURN",
+   "line_id": "L-31877d6c1cb33b74e5a7",
+   "measured_net": 0.96,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "GF-RDBD4F9:wp_wall_upturn",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "FIN.WP.WALL_UPTURN",
+   "line_id": "L-519ae15dd6ff755f4aa5",
+   "measured_net": 1.32864,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "GF-R8496F0:wp_wall_upturn",
+   "evidence_state": "PROVISIONAL",
+   "floor": "GF",
+   "item_code": "FIN.WP.WALL_UPTURN",
+   "line_id": "L-5362cff3511074da962a",
+   "measured_net": 1.08,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "GF-RB28769:wp_wall_upturn",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "item_code": "FIN.WP.WALL_UPTURN",
+   "line_id": "L-60d7c01f386770e2bf9c",
+   "measured_net": 1.20102,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "1F-R48CDA5:wp_wall_upturn",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "item_code": "FIN.WP.WALL_UPTURN",
+   "line_id": "L-60f100105399a9bdfb08",
+   "measured_net": 1.48,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "GF-RB62B55:wp_wall_upturn",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "item_code": "FIN.WP.WALL_UPTURN",
+   "line_id": "L-6c277fc130b921a7f83e",
+   "measured_net": 1.34,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "1F-R8BDA49:wp_wall_upturn",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "item_code": "FIN.WP.WALL_UPTURN",
+   "line_id": "L-6e6daedebef2db6a83bd",
+   "measured_net": 1.64,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "GF-RC99C2A:wp_wall_upturn:wet_zone",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "GF",
+   "item_code": "FIN.WP.WALL_UPTURN",
+   "line_id": "L-8090ff20f2b547d1bc96",
+   "measured_net": null,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "GF-RD6F891:wp_wall_upturn",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "item_code": "FIN.WP.WALL_UPTURN",
+   "line_id": "L-8b981cb63e87f18b13d4",
+   "measured_net": 1.364933,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "GF-RDF7D28:wp_wall_upturn",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "item_code": "FIN.WP.WALL_UPTURN",
+   "line_id": "L-8dd259ad89d2cd276ad2",
+   "measured_net": 1.080592,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "1F-RED23B8:wp_wall_upturn",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "item_code": "FIN.WP.WALL_UPTURN",
+   "line_id": "L-a93486d24647a9e14445",
+   "measured_net": 1.36,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "1F-R52AC05:wp_wall_upturn",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "item_code": "FIN.WP.WALL_UPTURN",
+   "line_id": "L-ace6533512ada47d1352",
+   "measured_net": 1.148,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "2F-RE83BED:wp_wall_upturn",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "2F",
+   "item_code": "FIN.WP.WALL_UPTURN",
+   "line_id": "L-b842beb71b67af783cd7",
+   "measured_net": 1.78,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "1F-R48AA46:wp_wall_upturn",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "1F",
+   "item_code": "FIN.WP.WALL_UPTURN",
+   "line_id": "L-ba15212ec9887e6d4f73",
+   "measured_net": 1.64,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "GF-RA3AD49:wp_wall_upturn",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "GF",
+   "item_code": "FIN.WP.WALL_UPTURN",
+   "line_id": "L-f77fe27244893dc1cc9b",
+   "measured_net": 2.7,
+   "record_element": null,
+   "subtrade": null,
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "WPF:FOOTING_TOPS_OUTSIDE_NECKS",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "FOUNDATION",
+   "item_code": "WP.FOUNDATION.BURIED_LIQUID",
+   "line_id": "L-12aca7f853626262bd07",
+   "measured_net": null,
+   "record_element": "FOOTING_TOPS_OUTSIDE_NECKS",
+   "subtrade": "WATERPROOFING.FOUNDATION",
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "WPF:BOUNDARY_GB_AND_STRAPS",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "FOUNDATION",
+   "item_code": "WP.FOUNDATION.BURIED_LIQUID",
+   "line_id": "L-4f4e4c930e33ed6dafa3",
+   "measured_net": null,
+   "record_element": "BOUNDARY_GB_AND_STRAPS",
+   "subtrade": "WATERPROOFING.FOUNDATION",
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "WPF:NECK_FACES",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "FOUNDATION",
+   "item_code": "WP.FOUNDATION.BURIED_LIQUID",
+   "line_id": "L-84a874dedb35cbe2bafb",
+   "measured_net": null,
+   "record_element": "NECK_FACES",
+   "subtrade": "WATERPROOFING.FOUNDATION",
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [
+    {
+     "id": "114+115+7DF#2 | GS-01 side A",
+     "value": 0.85
+    },
+    {
+     "id": "7E0+FD#1 | GS-01 side B",
+     "value": 1.742415
+    },
+    {
+     "id": "7E0+FD#2 | GS-01 side B",
+     "value": 2.763265
+    },
+    {
+     "id": "7E7+7E8#1 | GS-01 side A",
+     "value": 1.05744
+    },
+    {
+     "id": "7DC+7DD#2 | GS-03 side A",
+     "value": 1.05744
+    },
+    {
+     "id": "7E9+7EA#1 | GS-03 side B",
+     "value": 1.26744
+    },
+    {
+     "id": "7E7+7E8#1 | GS-04 side B",
+     "value": 1.05744
+    },
+    {
+     "id": "7E9+7EA#1 | GS-04 side A",
+     "value": 1.26744
+    },
+    {
+     "id": "109+7CB#1 | GS-05 side A",
+     "value": 1.28187
+    },
+    {
+     "id": "7D0+FC#1 | GS-05 side B",
+     "value": 0.1479
+    },
+    {
+     "id": "7D0+FC#2 | GS-05 side B",
+     "value": 1.80625
+    },
+    {
+     "id": "PIECE:17C+7E3@17C+7E3#1 | GS-06 junction / GAP piece face on panel FILL",
+     "value": 0.38997
+    },
+    {
+     "id": "17C+7E3#1 | GS-06 side A",
+     "value": 0.57807
+    },
+    {
+     "id": "7DC+7DD#2 | GS-06 side B",
+     "value": 1.05744
+    },
+    {
+     "id": "109+7CB#1 | GS-07 side B",
+     "value": 1.28991
+    },
+    {
+     "id": "10A+7C9#1 | GS-07 side A",
+     "value": 3.654745
+    },
+    {
+     "id": "145+7CA#1 | GS-07 side A",
+     "value": 1.614915
+    },
+    {
+     "id": "7D0+FC#1 | GS-07 side B",
+     "value": 2.12483
+    },
+    {
+     "id": "PIECE:17C+7E3@17C+7E3#1 | GS-09 junction / GAP piece face on panel FILL",
+     "value": 0.39
+    },
+    {
+     "id": "109+7CB#2 | GS-09 side A",
+     "value": 2.294915
+    },
+    {
+     "id": "17C+7E3#1 | GS-09 side B",
+     "value": 0.57807
+    },
+    {
+     "id": "ARC:157+158 | GS-10 convex face",
+     "value": 3.6091
+    },
+    {
+     "id": "170+7C3#3 | GS-10 side A",
+     "value": 0.697
+    },
+    {
+     "id": "170+7C3#4 | GS-10 side A",
+     "value": 2.4956
+    },
+    {
+     "id": "7D0+FC#3 | GS-15 side B",
+     "value": 2.63568
+    },
+    {
+     "id": "7D0+FC#4 | GS-15 side B",
+     "value": 1.020765
+    },
+    {
+     "id": "7E0+FD#1 | GS-15 side B",
+     "value": 0.849915
+    },
+    {
+     "id": "170+7C3#3 | GS-17 side A",
+     "value": 1.78415
+    },
+    {
+     "id": "ARC:157+158 | GS-23 convex face",
+     "value": 1.408365
+    },
+    {
+     "id": "107+7CE#1 | GS-23 side B",
+     "value": 0.3094
+    },
+    {
+     "id": "170+7C3#2 | GS-24 side A",
+     "value": 1.06233
+    },
+    {
+     "id": "170+7C3#2 | GS-25 side A",
+     "value": 1.32413
+    }
+   ],
+   "element_id": "WPF:BURIED_GROUND_BEAM_FACES",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "FOUNDATION",
+   "item_code": "WP.FOUNDATION.BURIED_LIQUID",
+   "line_id": "L-8a3c318c960e271efee1",
+   "measured_net": 45.4682,
+   "record_element": "BURIED_GROUND_BEAM_FACES",
+   "subtrade": "WATERPROOFING.FOUNDATION",
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "WPF:BURIED_GROUND_BEAM_FACES_HELD",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "FOUNDATION",
+   "item_code": "WP.FOUNDATION.BURIED_LIQUID",
+   "line_id": "L-eba4599c26b0d24de873",
+   "measured_net": null,
+   "record_element": "BURIED_GROUND_BEAM_FACES_HELD",
+   "subtrade": "WATERPROOFING.FOUNDATION",
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [
+    {
+     "id": "FTG:165C",
+     "value": 3.23
+    },
+    {
+     "id": "FTG:1663",
+     "value": 3.23
+    },
+    {
+     "id": "FTG:1664",
+     "value": 5.04
+    },
+    {
+     "id": "FTG:1665",
+     "value": 4.4
+    },
+    {
+     "id": "FTG:1666",
+     "value": 4.4
+    },
+    {
+     "id": "FTG:1667",
+     "value": 0.72
+    },
+    {
+     "id": "FTG:1668",
+     "value": 0.72
+    },
+    {
+     "id": "FTG:1669",
+     "value": 0.72
+    },
+    {
+     "id": "FTG:166A",
+     "value": 0.72
+    },
+    {
+     "id": "FTG:166B",
+     "value": 2.24
+    },
+    {
+     "id": "FTG:166C",
+     "value": 2.24
+    },
+    {
+     "id": "FTG:166D",
+     "value": 5.04
+    },
+    {
+     "id": "FTG:180C",
+     "value": 0.86
+    },
+    {
+     "id": "FTG:180F",
+     "value": 9.18
+    },
+    {
+     "id": "FTG:1ABF",
+     "value": 14.08
+    },
+    {
+     "id": "FTG:1ADB",
+     "value": 10.32
+    },
+    {
+     "id": "FTG:1B07",
+     "value": 5.25
+    },
+    {
+     "id": "FTG:1B19",
+     "value": 5.72
+    },
+    {
+     "id": "FTG:1B1A",
+     "value": 12.54
+    },
+    {
+     "id": "FTG:1B24",
+     "value": 14.4
+    },
+    {
+     "id": "FTG:1B2A",
+     "value": 1.8
+    },
+    {
+     "id": "FTG:10F0",
+     "value": 1.0
+    },
+    {
+     "id": "FTG:10F8",
+     "value": 1.0
+    },
+    {
+     "id": "FTG:1100",
+     "value": 1.0
+    }
+   ],
+   "element_id": "WPF:FOOTING_UNDERLAY_MEMBRANE",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "FOUNDATION",
+   "item_code": "WP.FOUNDATION.FOOTING_MEMBRANE",
+   "line_id": "L-69e6e6d74707afe3ac5b",
+   "measured_net": 109.85,
+   "record_element": "FOOTING_UNDERLAY_MEMBRANE",
+   "subtrade": "WATERPROOFING.FOUNDATION",
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "WPF:FOOTING_UNDERLAY_MEMBRANE_1B1B",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "FOUNDATION",
+   "item_code": "WP.FOUNDATION.FOOTING_MEMBRANE",
+   "line_id": "L-f7da4df288b4e006c0e7",
+   "measured_net": null,
+   "record_element": "FOOTING_UNDERLAY_MEMBRANE_1B1B",
+   "subtrade": "WATERPROOFING.FOUNDATION",
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "WPF:FOOTING_PROTECTION_SCREED_1B1B",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "FOUNDATION",
+   "item_code": "WP.FOUNDATION.FOOTING_SCREED",
+   "line_id": "L-46cee803214ff2d964fa",
+   "measured_net": null,
+   "record_element": "FOOTING_PROTECTION_SCREED_1B1B",
+   "subtrade": "WATERPROOFING.FOUNDATION",
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [
+    {
+     "id": "FTG:165C",
+     "value": 3.23
+    },
+    {
+     "id": "FTG:1663",
+     "value": 3.23
+    },
+    {
+     "id": "FTG:1664",
+     "value": 5.04
+    },
+    {
+     "id": "FTG:1665",
+     "value": 4.4
+    },
+    {
+     "id": "FTG:1666",
+     "value": 4.4
+    },
+    {
+     "id": "FTG:1667",
+     "value": 0.72
+    },
+    {
+     "id": "FTG:1668",
+     "value": 0.72
+    },
+    {
+     "id": "FTG:1669",
+     "value": 0.72
+    },
+    {
+     "id": "FTG:166A",
+     "value": 0.72
+    },
+    {
+     "id": "FTG:166B",
+     "value": 2.24
+    },
+    {
+     "id": "FTG:166C",
+     "value": 2.24
+    },
+    {
+     "id": "FTG:166D",
+     "value": 5.04
+    },
+    {
+     "id": "FTG:180C",
+     "value": 0.86
+    },
+    {
+     "id": "FTG:180F",
+     "value": 9.18
+    },
+    {
+     "id": "FTG:1ABF",
+     "value": 14.08
+    },
+    {
+     "id": "FTG:1ADB",
+     "value": 10.32
+    },
+    {
+     "id": "FTG:1B07",
+     "value": 5.25
+    },
+    {
+     "id": "FTG:1B19",
+     "value": 5.72
+    },
+    {
+     "id": "FTG:1B1A",
+     "value": 12.54
+    },
+    {
+     "id": "FTG:1B24",
+     "value": 14.4
+    },
+    {
+     "id": "FTG:1B2A",
+     "value": 1.8
+    },
+    {
+     "id": "FTG:10F0",
+     "value": 1.0
+    },
+    {
+     "id": "FTG:10F8",
+     "value": 1.0
+    },
+    {
+     "id": "FTG:1100",
+     "value": 1.0
+    }
+   ],
+   "element_id": "WPF:FOOTING_PROTECTION_SCREED",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "FOUNDATION",
+   "item_code": "WP.FOUNDATION.FOOTING_SCREED",
+   "line_id": "L-e6280a91646613667b62",
+   "measured_net": 109.85,
+   "record_element": "FOOTING_PROTECTION_SCREED",
+   "subtrade": "WATERPROOFING.FOUNDATION",
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [
+    {
+     "id": "FTG:165C",
+     "value": 0.1615
+    },
+    {
+     "id": "FTG:1663",
+     "value": 0.1615
+    },
+    {
+     "id": "FTG:1664",
+     "value": 0.252
+    },
+    {
+     "id": "FTG:1665",
+     "value": 0.22
+    },
+    {
+     "id": "FTG:1666",
+     "value": 0.22
+    },
+    {
+     "id": "FTG:1667",
+     "value": 0.036
+    },
+    {
+     "id": "FTG:1668",
+     "value": 0.036
+    },
+    {
+     "id": "FTG:1669",
+     "value": 0.036
+    },
+    {
+     "id": "FTG:166A",
+     "value": 0.036
+    },
+    {
+     "id": "FTG:166B",
+     "value": 0.112
+    },
+    {
+     "id": "FTG:166C",
+     "value": 0.112
+    },
+    {
+     "id": "FTG:166D",
+     "value": 0.252
+    },
+    {
+     "id": "FTG:180C",
+     "value": 0.043
+    },
+    {
+     "id": "FTG:180F",
+     "value": 0.459
+    },
+    {
+     "id": "FTG:1ABF",
+     "value": 0.704
+    },
+    {
+     "id": "FTG:1ADB",
+     "value": 0.516
+    },
+    {
+     "id": "FTG:1B07",
+     "value": 0.2625
+    },
+    {
+     "id": "FTG:1B19",
+     "value": 0.286
+    },
+    {
+     "id": "FTG:1B1A",
+     "value": 0.627
+    },
+    {
+     "id": "FTG:1B24",
+     "value": 0.72
+    },
+    {
+     "id": "FTG:1B2A",
+     "value": 0.09
+    },
+    {
+     "id": "FTG:10F0",
+     "value": 0.05
+    },
+    {
+     "id": "FTG:10F8",
+     "value": 0.05
+    },
+    {
+     "id": "FTG:1100",
+     "value": 0.05
+    }
+   ],
+   "element_id": "WPF:FOOTING_PROTECTION_SCREED",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "FOUNDATION",
+   "item_code": "WP.FOUNDATION.FOOTING_SCREED",
+   "line_id": "L-4ec54f9922da7281573a",
+   "measured_net": 5.4925,
+   "record_element": "FOOTING_PROTECTION_SCREED",
+   "subtrade": "WATERPROOFING.FOUNDATION",
+   "trade": "WATERPROOFING",
+   "unit": "m3"
+  },
+  {
+   "components": [],
+   "element_id": "WPF:FOOTING_PROTECTION_SCREED_1B1B",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "FOUNDATION",
+   "item_code": "WP.FOUNDATION.FOOTING_SCREED",
+   "line_id": "L-79bc828150bbfe63ce8e",
+   "measured_net": null,
+   "record_element": "FOOTING_PROTECTION_SCREED_1B1B",
+   "subtrade": "WATERPROOFING.FOUNDATION",
+   "trade": "WATERPROOFING",
+   "unit": "m3"
+  },
+  {
+   "components": [],
+   "element_id": "WPF:FOOTING_SIDE_FACES",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "FOUNDATION",
+   "item_code": "WP.FOUNDATION.FOOTING_SIDES",
+   "line_id": "L-13b1d3c202bc08fb65c2",
+   "measured_net": null,
+   "record_element": "FOOTING_SIDE_FACES",
+   "subtrade": "WATERPROOFING.FOUNDATION",
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [
+    {
+     "id": "LIFT-01 base + screed sides",
+     "value": 10.92
+    },
+    {
+     "id": "LIFT-01 base top outside the pit envelope",
+     "value": 15.81
+    }
+   ],
+   "element_id": "WPF:LIFT_PIT_BOARD_FIXED",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "FOUNDATION",
+   "item_code": "WP.FOUNDATION.LIFT_PIT_BOARD",
+   "line_id": "L-1f3aaafcc460173462d9",
+   "measured_net": 26.73,
+   "record_element": "LIFT_PIT_BOARD_FIXED",
+   "subtrade": "WATERPROOFING.FOUNDATION",
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "WPF:LIFT_PIT_BOARD_WALLS",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "FOUNDATION",
+   "item_code": "WP.FOUNDATION.LIFT_PIT_BOARD",
+   "line_id": "L-f0aadf70513eb21d5671",
+   "measured_net": null,
+   "record_element": "LIFT_PIT_BOARD_WALLS",
+   "subtrade": "WATERPROOFING.FOUNDATION",
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [],
+   "element_id": "WPF:LIFT_PIT_MEMBRANE_WALLS",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "FOUNDATION",
+   "item_code": "WP.FOUNDATION.LIFT_PIT_MEMBRANE",
+   "line_id": "L-302b401eff698289c54e",
+   "measured_net": null,
+   "record_element": "LIFT_PIT_MEMBRANE_WALLS",
+   "subtrade": "WATERPROOFING.FOUNDATION",
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [
+    {
+     "id": "LIFT-01 base soffit",
+     "value": 20.7
+    },
+    {
+     "id": "LIFT-01 base + screed sides",
+     "value": 10.92
+    },
+    {
+     "id": "LIFT-01 base top outside the pit envelope",
+     "value": 15.81
+    }
+   ],
+   "element_id": "WPF:LIFT_PIT_MEMBRANE_FIXED",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "FOUNDATION",
+   "item_code": "WP.FOUNDATION.LIFT_PIT_MEMBRANE",
+   "line_id": "L-d3ec19448415e0a0f083",
+   "measured_net": 47.43,
+   "record_element": "LIFT_PIT_MEMBRANE_FIXED",
+   "subtrade": "WATERPROOFING.FOUNDATION",
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [
+    {
+     "id": "LIFT-01 base",
+     "value": 20.7
+    }
+   ],
+   "element_id": "WPF:LIFT_PIT_BASE_SCREED",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "FOUNDATION",
+   "item_code": "WP.FOUNDATION.LIFT_PIT_SCREED",
+   "line_id": "L-e11f17bb076058bf172d",
+   "measured_net": 20.7,
+   "record_element": "LIFT_PIT_BASE_SCREED",
+   "subtrade": "WATERPROOFING.FOUNDATION",
+   "trade": "WATERPROOFING",
+   "unit": "m2"
+  },
+  {
+   "components": [
+    {
+     "id": "LIFT-01 base",
+     "value": 1.035
+    }
+   ],
+   "element_id": "WPF:LIFT_PIT_BASE_SCREED",
+   "evidence_state": "SOURCE_DERIVED",
+   "floor": "FOUNDATION",
+   "item_code": "WP.FOUNDATION.LIFT_PIT_SCREED",
+   "line_id": "L-e4789d76efedbc351bd4",
+   "measured_net": 1.035,
+   "record_element": "LIFT_PIT_BASE_SCREED",
+   "subtrade": "WATERPROOFING.FOUNDATION",
+   "trade": "WATERPROOFING",
+   "unit": "m3"
+  },
+  {
+   "components": [],
+   "element_id": "WPF:FOUNDATION_WP_PROCUREMENT",
+   "evidence_state": "BLOCKED_RFI",
+   "floor": "FOUNDATION",
+   "item_code": "WP.FOUNDATION.PROCUREMENT",
+   "line_id": "L-d2488bbb7103c8cd2980",
+   "measured_net": null,
+   "record_element": "FOUNDATION_WP_PROCUREMENT",
+   "subtrade": "WATERPROOFING.FOUNDATION",
+   "trade": "WATERPROOFING",
+   "unit": "item"
+  }
+ ],
+ "source": "V3_0_21_BOQ_LINES.json (ARCH_TAKEOFF_V3.0.21 run)"
+}
