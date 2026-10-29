@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-29 19:03 UTC | Worker 2 | SUCCESS | T-346 READY (agents/task-T-346 @ d8b5b127) | Freelancer exterior plaster rows 65/68/69 (93.150 m2, 'no face drawn') are NOT missing scope: 93.150 = 79.213 m2 of faces T-337 already binds once (68 = GF sea face NW-7 1.50 m band end, 9.000 exact; 69 = GF NW-7 6.40 + 1F NW-5 as one plane +1.00 -> printed wave peak +10.80, 63.258 drawn, +2.892 named; 65 half = P-2 1.30 m at the passage, 6.955 drawn, +2.045 named) + 9.000 DOUBLE COUNT (row 65's NW return = row 68) + 4.937 named band terms, residual 0; 0 new T-314 FILL rows; like-for-like walls now -3.1 .. +1.3 % (was -4.0 .. +0.3 %). Finding F-T346-1: rows 70/71/74 lose NW-5 (31.258) and need their own row (1F pool face, faces round 1F void AT225). ERS: read | self-check codemap PASS, pytest t061 PASS, freeze PASS; problem: Drive files arrive as raw binary, decode wrapper needs base64 (re-encoded in the scratchpad, then decoded into .work/private); first board push rejected (concurrent T-345 verdict), rebased and pushed 348458e0
 - 2026-10-29 19:00 UTC | Worker 3 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-29T18:51Z | Verifier | STARTED | run session_01E6cPndQ8P3psQLivrqh7iu | repo-attached routine | task state: T-338 READY (integration package, Gate B), T-345 READY | self-check pending
 - 2026-10-29 18:41 UTC | Worker 2 | STARTED | run unknown | repo-attached routine | task state: none yet | self-check pending
