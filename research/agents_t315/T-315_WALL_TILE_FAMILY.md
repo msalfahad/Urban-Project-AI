@@ -101,7 +101,7 @@ lines to 1e-4.
 | Paint on a tiled face | none: the 12 tiled rooms' and the 6 held rooms' paint lines carry NO figure (17 NOT_APPLICABLE_WITH_EVIDENCE 'paint above wall tile' + the pantry HL line BLOCKED_RFI); a figure would be refused |
 | Skirting on a full-height tiled face | none: the 17 wet rooms' skirting lines are NOT_APPLICABLE; a figure would be refused |
 | Plaster backing behind the tile | the 17 wet rooms' FIN.PLASTER lines are BLOCKED_RFI (UP-CER-009 height), the pantry HL plaster line BLOCKED_RFI; UP-FIN-PAINT-001 (owner rule, logic 'substrate') makes the backing its own line; no merged ledger measures it: HELD by name (WAITING WALL_TILE_BACKING) |
-| Shared engine room (GF-RC06FED = dining + living + pantry + reception) | its room-level lines that name no room (skirting 1.9 m SOURCE_DERIVED, skirting 0 .. 1.0 BOUNDED, plaster / paint NOT_APPLICABLE) are listed as NOT ATTRIBUTABLE to the pantry, never attributed; the two lines naming GF-07 (HL plaster / paint) carry no figure |
+| Pantry base / engine-room split (r2, section 11) | r1 called GF-RC06FED "shared" from its OPEN_PLAN note and left its skirting unattributed: REJECTED at Gate B (F-T315-C1 / C2). r2: the pantry lies in GF-RC06FED wholly and in GF-RC99C2A in part (merged T-262); every pantry wall base is carried by the wall tile once (T-296), by the lines' own source entities |
 
 ## 6. Missing, held, downstream
 
@@ -111,8 +111,8 @@ lines to 1e-4.
 - The pantry HL paint line (L-c3f7e68ce91a436802e2, BLOCKED_RFI) is now physically NOT APPLICABLE (every pantry wall
   tiled full height): it carries no figure, so no double count; its state is left byte-identical here (not this
   package's line), named for the Lead.
-- The GF-RC06FED skirting 1.9 m: not attributable to the pantry from the line; Checker to confirm it lies on dining /
-  living faces (no tiled pantry face).
+- The pantry base: settled in r2 (section 11): 1.9 + 1.0 lm NOT_APPLICABLE, 3.5 + 1.5 lm carried off the open-plan
+  lines, the open-plan rest kept; 1.6 lm of the pantry base lies on no engine room boundary (no line carries it).
 - Tile procurement (cartons, adhesive, grout, waste): HELD, no product / waste rule applied.
 - 1F-12 per-face split (T-250 walk 2.125 / 2.250 / 2.145 / 2.100 / 0.080 vs the Checker's rectangle): the room total
   8.700 m agrees 0.000 and one height carries every face, so the line figure does not depend on it (named on the
@@ -147,14 +147,15 @@ the tool). On the merged head f3421887 the full CLI run (v3021_run.py, one proce
 
 | Date | Problem | Root cause | General rule (scope) | Regression test | Status |
 |---|---|---|---|---|---|
-| 2026-10-29 | An open pantry inside a merged engine room (dining + living + pantry + reception) gets its own wall-tile line, and the engine room's room-level skirting / paint lines could be read as the pantry's (a 1.9 m skirting would then be "skirting under tile") | Finish lines are keyed by engine room; one engine room can hold several drawn rooms, and a line that names no ledger room cannot be attributed to one of them | Cross-trade checks attribute a finish line to a tiled room only when it names that room, or names none in an engine room that is the room's alone; in a shared engine room an unnamed line is listed NOT ATTRIBUTABLE and checked by face, never attributed or refused on the room's scope (every villa) | tests/t315_wall_tile_family (shared engine room not attributed; the same line in an unshared room refused as paint under tile) | PROPOSED |
+| 2026-10-29 | An integration ADD into an engine room called 'shared' from its OPEN_PLAN note double-counted the pantry base: 1.9 lm skirting released + 0 .. 1.0 lm bounded under full-height wall tile (Gate B F-T315-C1), and the open-plan line's pantry share was unchecked (F-T315-C2) | cross-trade attribution by room name / note instead of by the finish line's source entities and the merged room split | a finish line is attributed to a tiled room by its source entities lying on the tiled faces and by a merged room-split ledger (WHOLE / PART), never by an engine room's open-plan note; an engine room wholly inside the tiled room is the tiled room's; a PART room keeps a figure only with its tiled share carried off by source entity; one owner per base (every villa) | tests/t315_wall_tile_family/test_base_ownership.py (unnamed line of a WHOLE room refused; unnamed PART skirting / range / paint refused; the open-plan rest kept 12.00 lm; NOT_APPLICABLE on a line with a rest refused; SPLIT to 0 refused; foreign entity, stale figure, non-tiled face refused) | PROPOSED (Checker 03:45); ACCEPTED when r2 passes Gate B |
 
 ## 10. For the Checker (Gate B)
 
 Branch agents/task-T-315 (head in the board row). Re-measure: (1) the pantry new line 32.3422 m2 (6 faces, hosts,
 open edge 4.49 not tiled) and one more room by hand, e.g. GF-12 7.414 x 3.65 - 1.76 = 25.3011; (2) every line moved
 >= 5 % and every new scope = all 12 valued lines (each moved from blank) + the new pantry line; (3) the cross-trade
-table: no figure on a paint / skirting line of a tiled room, the GF-RC06FED skirting 1.9 m not on a pantry face; (4)
+table: no figure on a paint / skirting line of a tiled room; r2: the four base lines of section 11 (entities and
+lengths by hand on P7757.dxf; t315_base_split.py reproduces them); (4)
 the 6 HELD lines stay blank; (5) the scoreboard wall-tile row restated from these lines (not from this report);
 plus 2 random lines by the WORKFLOW_CONTROLS s.1 rule on the merge-candidate sha.
 
@@ -162,3 +163,61 @@ Files: engine/source/arch_v3021.py; tools/urban_boq_m9.py (V3021 wiring); resear
 v3021_run.py, v3021_direct.py, build_master_1_16_0.py; rules/coverage/BOQ_FAMILY_MASTER_1.16.0.json; rules/RULES_MANIFEST.json;
 tools/m9_rules_manifest.py; tests/t315_wall_tile_family; maps by the tool. Drive inputs read in the private folder
 only; nothing copied here.
+
+## 11. r2: one owner per wall base (Gate B 2026-10-29 03:45, F-T315-C1 / C2)
+
+**The physical element.** The open pantry GF-07 is tiled full height on every drawn wall (UP-PANTRY-003, Q-37 A /
+Q-48 A): its wall BASE is porcelain from 0 to 3.65 m, so it carries no skirting (one owner per base, T-296 MERGED
+57c31ae4: ROOMS_T296 GF-07 NOT_APPLICABLE, base 7.000 lm of wall + column). The engine's skirting lines are keyed by
+ENGINE room, and the pantry lies in two of them (T-262 MERGED c8dba740, ENGINE_ROOM_XWALK): GF-RC06FED (the counter
+cell, GF-07 = 0.209 / 1.000: WHOLLY inside) and GF-RC99C2A (the dining / living / reception open zone, GF-07 = 0.665 /
+0.070: in PART). r1 left both engine rooms' skirting as it was, so V3.0.21 r1 carried the pantry base twice.
+
+**Drawing-derived split (own walk, research/agents_t315/t315_base_split.py on P7757.dxf ab54dd55 + the run's v29
+ARCH_ROOMS.json).** Each boundary edge of the two engine rooms laid on the drawn entity it runs along (parallel,
+<= 5 mm), kept where it lies inside the pantry walls (west wall face to the open edge, south face A6 to north face
+158): handles and lengths only, no coordinate here.
+
+| Engine room | On the pantry's tiled faces (entity: lm, face) | Sum | Its line | Engine runs agree |
+|---|---|---|---|---|
+| GF-RC06FED | 2FAB 0.2 + A6 1.4 (south GF-W01; the column top face is collinear with A6's first 0.2 m), AF 0.2 + B0 0.1 (west GF-W16) | 1.9000 lm | L-af6fb2d3 SOURCE_DERIVED 1.9 lm | wall 1.8 + column 0.1 = 1.9 (the 0.2 m shared edge split in halves) |
+| GF-RC06FED | W10 frame 3C9 0.05 + 3CC 0.90 + 3D3 0.05 (GF-W16, OP-023, sill 1.0 m: tiled below) | 1.0000 lm | L-73ff85e3 BOUNDED 0 .. 1.0 | glazing 0.5 + threshold 0.5 = 1.0 |
+| GF-RC99C2A | 159 0.3409 + 158 0.7591 (north GF-W05, either side of door D-GF-06 1.0 m, no base), 2FAE 0.90 (NW column face, OFF:COLUMN) + 0.05 (its return, OFF:WALL), AE 0.80 + AF 0.65 (west GF-W16) | 3.5000 lm | L-71e2e002 SOURCE_DERIVED 28.171589 lm | all on wall / column entities (each in the net wall + column) |
+| GF-RC99C2A | W09 frame 3BC 0.05 + 3BF 1.40 + 3C6 0.05 (GF-W16, OP-024, sill 1.0 m) | 1.5000 lm | L-e7dcdc69 BOUNDED 0 .. 7.831578 (OP-019 6.331578 + OP-024 1.5) | by_window OP-024 1.5 |
+| none | A6 1.4 + AF 0.2 (counter cells on no engine room boundary) | 1.6000 lm | no line | - |
+
+Closure: 1.9 + 3.5 + 1.6 = 7.000 lm = T-296 GF-07 base_wc_m (0.0000). Every entity is a source entity of its line
+(asserted), every part lies on a face of the pantry's tile record (asserted), the edges past the open edge (column
+2FB4 / wall AC at the dining side) are not taken.
+
+**Lines (before V3.0.20 -> after V3.0.21 r2; every other line byte-identical to r1, the tile family unchanged).**
+
+| Line | Before | After | Evidence | Why |
+|---|---|---|---|---|
+| L-af6fb2d3474c5fbdb80a GF-RC06FED skirting | SOURCE_DERIVED 1.9 lm | NOT_APPLICABLE_WITH_EVIDENCE (no figure) | ASSUMED - OWNER-APPROVED (Q-37 A / Q-48 A), T-296 ruling | the whole line is the pantry base |
+| L-73ff85e30e3a8c639e20 GF-RC06FED skirting range | BOUNDED 0 .. 1.0 lm | NOT_APPLICABLE_WITH_EVIDENCE | same | the whole range is the base under W10 (tiled) |
+| L-71e2e002a3af624097f0 GF-RC99C2A skirting | SOURCE_DERIVED 28.171589 lm | SOURCE_DERIVED 24.671589 lm (-3.5, -12.42 %) | split DRAWING-CONFIRMED (own walk), rule OA | the pantry part off, the open-plan rest kept |
+| L-e7dcdc69e1a2b24f8616 GF-RC99C2A skirting range | BOUNDED 0 .. 7.831578 | BOUNDED 0 .. 6.331578 | same | W09 base off, OP-019 range kept |
+
+Family FIN.SKIRTING: released 185.516658 -> 180.116658 lm (-5.4, -2.91 %), bounded high 27.137649 -> 24.637649 lm
+(-2.5). FIN.WALL.TILE unchanged 340.3038 m2 (12 valued, 6 blank). The open zone's paint / plaster lines
+(L-c0ac22c9 / L-8cecb1d0 BOUNDED 152.05 .. 178.81 m2) name the T-128 room GF-08 (the dining faces, T-244): not the
+pantry's faces, kept; GF-07's own paint / plaster lines (L-c3f7e68c / L-721a0f14) carry no figure.
+
+**Freelancer.** His dry skirting row for the GF open plan (reception + dining + entrance hall, 58.16 + 14.76 lm gross
+perimeter, no door deduction; T-106, not re-read here) does not separate the pantry; the engine now carries no
+skirting on the pantry walls (wall tile owns them), which is the owner rule: RULE_DIFFERENCE where his row runs a
+skirting along the pantry, else no difference; not measured line by line.
+
+**Run (own, Python 3.11.18, Drive P7757.dxf ab54dd55 + ST7757 9f9d1179):** V3_0_19 json b35475bf / csv ef63b73b,
+V3_0_20 json 097a80b6 / csv ca90351b (= candidates of record); V3_0_21 r2 json be22a4e4 / csv 3548e39c (3,706
+lines): SAME 3,690, CHANGED 15 (11 tile + 4 skirting), ADDED 1, GONE 0; FACES 63081f77 (= r1), CROSS_TRADE 26c09eed,
+BASE 2ac58582, DIFF 4e697192.
+
+**Code.** engine/source/arch_v3021.py: split_rooms (WHOLE / PART; the 'shared' note refused), _check_base / base_line /
+base_changes (NOT_APPLICABLE or SPLIT by source entity; refused: stale figure, entity not in the line, part on a
+non-tiled face, NOT_APPLICABLE with a rest, SPLIT to 0, a line twice, an engine room outside the split), cross_trade
+by split (an unnamed figure of a WHOLE room of a fully tiled room refused; an unnamed skirting / paint figure of a PART
+room refused), integrate (the base piece replaces skirting / paint lines only; outside quantity, state, basis, notes
+and deductions nothing changes), V3_0_21_BASE.csv. research/agents_t315/t315_inputs.py: the split from T-262, the
+four base records under T-296 (pins asserted, closure 7.000), t315_base_split.py (the drawing measure, = the pins).

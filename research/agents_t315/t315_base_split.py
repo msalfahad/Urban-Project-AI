@@ -158,7 +158,7 @@ def main(argv=None):
     a = (argv or sys.argv[1:])
     got = measure(a[0], a[1])
     print(json.dumps(got, indent=1, sort_keys=True))
-    pins = L21.base_pins()
+    pins = dict(L21.base_pins(), NO_ENGINE_ROOM=dict(L21.NO_ENGINE_ROOM))
     bad = []
     for rid, ents in pins.items():
         for h, m in ents.items():
