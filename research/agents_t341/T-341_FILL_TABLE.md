@@ -22,7 +22,7 @@ longer than its stretch on the boundary) is an ADDITION (+1.400 lm on L-71e2e002
 
 | Family (unit) | Lines | Gross field | Net | Listed (ded - add) | Status |
 |---|---|---|---|---|---|
-| FIN.WALL.TILE (m2) | 12 | 374.274 | 340.304 | **33.970** (24 openings by id + face) | 12 RECONCILED |
+| FIN.WALL.TILE (m2) | 12 | 374.274 | 340.304 | **33.970** (25 opening rows by id + face) | 12 RECONCILED |
 | FIN.PLASTER (m2) | 4 | 259.510 | 217.208 | **42.302** (12 openings) | 4 RECONCILED |
 | FIN.PAINT (m2) | 4 | 259.510 | 217.208 | **42.302** (same 12 openings) | 4 RECONCILED |
 | FIN.SKIRTING (lm) | 10 | 254.959 | 180.117 | **74.842**, incl. the unlisted F-17 threshold halves **13.069** (8 lines) and the pantry base on the tiled faces 3.500 (6 faces) | 10 RECONCILED |
