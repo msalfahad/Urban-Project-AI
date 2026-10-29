@@ -1,0 +1,243 @@
+{
+ "F_T320_03": {
+  "at_least_m3": 2.07,
+  "cause": "INHERITED OFFSET: T-233 applied the p.13 TYPICAL isolated-footing projection 0.10 (projection_m 0.1 for all 26 outlines) to FF, whose governing detail is p.14 (lift with isolated footing): p.14 prints the blinding thickness ('10cm Plain con.') and draws the blinding beyond the side membrane + protection board, with NO projection dimension. T-170's HELD is the correct reading.",
+  "corrected_status": "HELD (AT_LEAST bound)",
+  "corrected_value": null,
+  "impact_between_readings_m3": 0.096,
+  "per_cm_projection_m3_first_order": 0.0182,
+  "readings_m3": {
+   "INHERITED": 2.256,
+   "SCALED_NOT_PRINTED": 2.352
+  },
+  "t170_ff_neat_status": [
+   "HELD / NEAT_PLAN_HELD; WORKING_SPACE_M_NOT_PRINTED; FORMATION_ONLY_A_BOUND (AT_MOST -1.5)"
+  ],
+  "t170_neat_plan_m2": {
+   "INHERITED": 22.56,
+   "SCALED_NOT_PRINTED": 23.52,
+   "at_least": 20.7,
+   "status": "HELD (same unprinted projection)"
+  },
+  "t233_ff_blinding_m3": 2.256,
+  "t320_ff_blinding_row": [
+   "0.0..2.256 HELD"
+  ]
+ },
+ "closure": {
+  "blinding_measured_after_T322_m3": 12.734438,
+  "blinding_residual_vs_t320_m3": 0.0,
+  "ledger_raft_m3": 11.385,
+  "ledger_raft_plan_m2": 20.7,
+  "ledger_ring_net_m2": 1.1,
+  "ledger_screed_m3": 1.035,
+  "raft_residual_m3": 0.0,
+  "ring_residual_m2": 0.0,
+  "screed_residual_m3": 0.0,
+  "t204_ring_net_m2": 1.1,
+  "t219_screed_area_m2": 20.7,
+  "t219_screed_m3": 1.035,
+  "t233_blinding_measured_m3": 14.990438,
+  "t233_footing_FF_m3": 11.385,
+  "t320_24_pits_inside_plot_m3": 12.734438,
+  "t320_z1_established_m3": 105.162974,
+  "z1_change_m3": 0.0,
+  "z1_note": "T-320 Z1 holds every FF component (below-EG share depends on the unprinted pit depth); this ledger moves no value into Z1: residual 0.000. Its FF blinding hold changes basis: 0 .. 2.256 (T-233 offset) -> HELD, AT_LEAST 2.070 if wholly below EG, upper end not printed."
+ },
+ "components": [
+  {
+   "component": "raft (lift footing)",
+   "held": [],
+   "high": null,
+   "id": "RAFT",
+   "low": null,
+   "note": "4.600 x 4.500 x 0.550",
+   "owner_line": "CONC.FOOTING",
+   "source": "1B2B (S-FOOTINGS, closed LWPOLYLINE), tag TEXT 1676 'FF'; DXF INSERT 2B1E (FTB: FO-TY FF, W 460, H 450, DEPHT 55) = ST p.9 Schedule of Footings row FF 460 / 450 / 55, remark 'lift base' (Arabic)",
+   "status": "DRAWING-CONFIRMED",
+   "unit": "m3",
+   "value": 11.385
+  },
+  {
+   "component": "pit floor = raft top",
+   "held": [],
+   "high": null,
+   "id": "PIT_FLOOR",
+   "low": null,
+   "note": "not a volume: the raft top; listed so it is never added twice",
+   "owner_line": "(none)",
+   "source": "governing detail ST p.14 'DETAIL OF LIFT WITH ISOLATED FOOTING (WITHOUT BASEMENT)'",
+   "status": "DRAWING-CONFIRMED",
+   "unit": "m3",
+   "value": 0.0
+  },
+  {
+   "component": "blinding",
+   "held": [
+    "BLINDING_PROJECTION_NOT_PRINTED_ON_GOVERNING_DETAIL"
+   ],
+   "high": null,
+   "id": "BLINDING",
+   "low": 2.07,
+   "note": "AT_LEAST raft plan x t (the underlay and raft stand on it); readings for the designer: p 0.100 m (INHERITED: ST p.13 typical isolated footing '10 | L x W | 10' (T-233 / T-170 own reads) (a typical detail of another element type; FF has its own governing detail)) -> 2.2560; p 0.150 m (SCALED_NOT_PRINTED: ST p.14 drawn edge, scale 1:20.0 proven by the printed '5cm Screed' and '10cm Plain con.' (not dimensioned)) -> 2.3520",
+   "owner_line": "CONC.BLINDING",
+   "readings": [
+    {
+     "basis": "ST p.13 typical isolated footing '10 | L x W | 10' (T-233 / T-170 own reads) (a typical detail of another element type; FF has its own governing detail)",
+     "kind": "INHERITED",
+     "p_m": 0.1,
+     "volume_m3": 2.256
+    },
+    {
+     "basis": "ST p.14 drawn edge, scale 1:20.0 proven by the printed '5cm Screed' and '10cm Plain con.' (not dimensioned)",
+     "kind": "SCALED_NOT_PRINTED",
+     "p_m": 0.15,
+     "volume_m3": 2.352
+    }
+   ],
+   "source": "governing detail ST p.14 'DETAIL OF LIFT WITH ISOLATED FOOTING (WITHOUT BASEMENT)'",
+   "status": "HELD (AT_LEAST bound)",
+   "unit": "m3",
+   "value": null
+  },
+  {
+   "component": "screed (area)",
+   "held": [],
+   "high": null,
+   "id": "UNDERLAY:screed:AREA",
+   "low": null,
+   "note": "",
+   "owner_line": "SCREED.LIFT_PIT_BASE (T-219)",
+   "source": "governing detail ST p.14 'DETAIL OF LIFT WITH ISOLATED FOOTING (WITHOUT BASEMENT)'",
+   "status": "DRAWING-CONFIRMED",
+   "unit": "m2",
+   "value": 20.7
+  },
+  {
+   "component": "screed (volume)",
+   "held": [],
+   "high": null,
+   "id": "UNDERLAY:screed:VOL",
+   "low": null,
+   "note": "20.7000 x 0.050",
+   "owner_line": "SCREED.LIFT_PIT_BASE (T-219)",
+   "source": "ST p.14 label '5cm Screed'",
+   "status": "DRAWING-CONFIRMED",
+   "unit": "m3",
+   "value": 1.035
+  },
+  {
+   "component": "membrane (area)",
+   "held": [],
+   "high": null,
+   "id": "UNDERLAY:membrane:AREA",
+   "low": null,
+   "note": "",
+   "owner_line": "WP.LIFT_PIT_MEMBRANE_FIXED (T-219)",
+   "source": "governing detail ST p.14 'DETAIL OF LIFT WITH ISOLATED FOOTING (WITHOUT BASEMENT)'",
+   "status": "DRAWING-CONFIRMED",
+   "unit": "m2",
+   "value": 20.7
+  },
+  {
+   "component": "membrane (volume)",
+   "held": [
+    "LAYER_THICKNESS_NOT_PRINTED_ON_GOVERNING_DETAIL"
+   ],
+   "high": null,
+   "id": "UNDERLAY:membrane:VOL",
+   "low": null,
+   "note": "",
+   "owner_line": "WP.LIFT_PIT_MEMBRANE_FIXED (T-219)",
+   "source": "",
+   "status": "HELD",
+   "unit": "m3",
+   "value": null
+  },
+  {
+   "component": "pit wall plan, net of columns",
+   "held": [],
+   "high": null,
+   "id": "PIT_WALL:PLAN",
+   "low": null,
+   "note": "gross 1.6000 - columns 0.5000",
+   "owner_line": "CONC.LIFT_PIT_WALL",
+   "source": "S-BW 10EB (outer) / 10EA (inner); p.14 wall '20'; S-COL.BON 1099 C1, 1093 C2, 1096 C2, 1090 C9 (C9 0.05 proud of the ring over 1.00 m)",
+   "status": "DRAWING-CONFIRMED",
+   "unit": "m2",
+   "value": 1.1
+  },
+  {
+   "component": "pit wall concrete",
+   "held": [
+    "PIT_HEIGHT_NOT_PRINTED"
+   ],
+   "high": null,
+   "id": "PIT_WALL:CONC",
+   "low": null,
+   "note": "1.1000 m3 per m of pit height",
+   "owner_line": "CONC.LIFT_PIT_WALL",
+   "source": "",
+   "status": "HELD",
+   "unit": "m3",
+   "value": null
+  },
+  {
+   "component": "membrane thickness on the raft sides",
+   "held": [
+    "THICKNESS_NOT_PRINTED_ON_GOVERNING_DETAIL"
+   ],
+   "high": null,
+   "id": "SIDE:membrane",
+   "low": null,
+   "note": "",
+   "owner_line": "WP.LIFT_PIT_MEMBRANE_FIXED (T-219)",
+   "source": "",
+   "status": "HELD",
+   "unit": "m",
+   "value": null
+  },
+  {
+   "component": "protection board thickness on the raft sides",
+   "held": [
+    "THICKNESS_NOT_PRINTED_ON_GOVERNING_DETAIL"
+   ],
+   "high": null,
+   "id": "SIDE:protection board",
+   "low": null,
+   "note": "",
+   "owner_line": "WP.LIFT_PIT_BOARD_FIXED (T-219)",
+   "source": "",
+   "status": "HELD",
+   "unit": "m",
+   "value": null
+  }
+ ],
+ "method": "LIFT_BASE_LEDGER_V1",
+ "p14_scale": {
+  "beyond_board_m": [
+   0.07966101694915254,
+   0.07966101694915254
+  ],
+  "beyond_footing_face_m": [
+   0.15,
+   0.15
+  ],
+  "board_m": [
+   0.05084745762711865,
+   0.05
+  ],
+  "membrane_under_screed_m": 0.020338983050847456,
+  "scale_pt_per_m": 141.6,
+  "scale_ratio_1_to": 20.01868410516482
+ },
+ "second_plan_check": "GROUND BEAMS plan: ring S-BW 7C2 2200 x 2200 / 7BE 1800 x 1800 + hatch 7BD at x 98517.8, y 44448.0 = the foundation-plan ring 10EB / 10EA (+ hatch 10E9) shifted by the plan translation -38724.4 mm (T-205), same size and y: AGREE. The DXF (model space + every layout) has no lift detail text (only TEXT 1877 '10cm PLAIN CONCRETE.' of the pool detail): p.14 exists only in the PDF (R-ABSENT-SHEET-1, T-204).",
+ "totals": {
+  "blinding_at_least_m3": 2.07,
+  "blinding_m3": null,
+  "established_m3": 12.42,
+  "raft_m3": 11.385,
+  "raft_plan_m2": 20.7,
+  "ring_net_m2": 1.1
+ }
+}
