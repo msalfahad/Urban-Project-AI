@@ -1,0 +1,139 @@
+{
+ "inputs": {
+  "plan_sha8": "ab54dd55",
+  "lines_sha8": "097a80b6",
+  "lines": 3705,
+  "floor_areas_sha8": "7ee4f297",
+  "rooms_sha8": "06ac74eb"
+ },
+ "family_lines": {
+  "ARCH.THRESHOLD": 23,
+  "FIN.MARBLE.THRESHOLD": 10,
+  "FIN.FLOOR.PORCELAIN": 19,
+  "ARCH.WINDOW_REVEAL": 27
+ },
+ "lines_not_in_census": [
+  "L-a16274386ece316167c4 FIN.FLOOR.PORCELAIN GF OP-001  NOT_APPLICABLE_WITH_EVIDENCE",
+  "L-be3ae55b5aec3eca8875 FIN.FLOOR.PORCELAIN GF OP-003  NOT_APPLICABLE_WITH_EVIDENCE",
+  "L-d4f6d6a2f6ef61468f55 FIN.FLOOR.PORCELAIN GF OP-007  NOT_APPLICABLE_WITH_EVIDENCE",
+  "L-2621372661b2eb15b748 FIN.FLOOR.PORCELAIN GF OP-011 LIFT_LANDING NOT_APPLICABLE_WITH_EVIDENCE",
+  "L-9bcc79e76f84667b244a ARCH.THRESHOLD GF OP-020  BLOCKED_RFI",
+  "L-d967928104c6e384865e ARCH.THRESHOLD GF OP-001  NOT_APPLICABLE_WITH_EVIDENCE",
+  "L-ac75e02c2ad9260223c4 ARCH.THRESHOLD GF OP-003  NOT_APPLICABLE_WITH_EVIDENCE",
+  "L-2991f35326b961a6d238 ARCH.THRESHOLD GF   BLOCKED_RFI",
+  "L-1c71cd45a5116bdc5260 ARCH.THRESHOLD GF   BLOCKED_RFI",
+  "L-f4cfd731c98468026078 ARCH.THRESHOLD GF   BLOCKED_RFI",
+  "L-bb09715ec8ccdd5d11a8 FIN.FLOOR.PORCELAIN 1F OP-007 LIFT_LANDING NOT_APPLICABLE_WITH_EVIDENCE",
+  "L-479acdcb1e5e01bf3957 ARCH.THRESHOLD 1F   BLOCKED_RFI",
+  "L-44b8dcf4b30e11a464f5 ARCH.THRESHOLD 1F   BLOCKED_RFI",
+  "L-17a56dfafc5504f41a28 FIN.FLOOR.PORCELAIN 2F OP-002 LIFT_LANDING NOT_APPLICABLE_WITH_EVIDENCE",
+  "L-084df97d3d41525a65c2 ARCH.THRESHOLD 1F OP-007 LIFT_LANDING BOUNDED_EXPOSURE",
+  "L-3c5a3be22e861d9d4cfb ARCH.THRESHOLD 2F OP-002 LIFT_LANDING BOUNDED_EXPOSURE",
+  "L-6f5806adbacba9118497 ARCH.THRESHOLD GF OP-011 LIFT_LANDING BOUNDED_EXPOSURE"
+ ],
+ "census_openings": 59,
+ "ledger_rows": 118,
+ "bound": 56,
+ "no_line": [
+  "D-GF-15 THRESHOLD UNRESOLVED None",
+  "W03 THRESHOLD_IN UNRESOLVED None",
+  "W03 THRESHOLD_OUT UNRESOLVED None",
+  "W17 SILL_IN UNRESOLVED None",
+  "W18 SILL_OUT MEASURED 0.04"
+ ],
+ "verdicts": {
+  "EQUAL": 17,
+  "DIFFERS": 0,
+  "WITHIN_BOUND": 6,
+  "OUTSIDE_BOUND": 0,
+  "LINE_BLANK": 32
+ },
+ "max_strip_floor_overlap_m2": 0.000394,
+ "freelancer": {
+  "door_step_rows": 6,
+  "door_step_length_sum_m": 7.7,
+  "threshold_or_sill_rows": 0
+ },
+ "totals": {
+  "FINISH_CHANGE_EDGE|MEASURED": {
+   "n": 29,
+   "m2": 0.0,
+   "edge_ml": 29.8
+  },
+  "FINISH_CHANGE_EDGE|UNRESOLVED": {
+   "n": 1,
+   "m2": 0.0,
+   "edge_ml": 0.0
+  },
+  "SILL_IN|-|NONE": {
+   "n": 23,
+   "m2": 0.0,
+   "edge_ml": 0.0
+  },
+  "SILL_IN|-|UNRESOLVED": {
+   "n": 1,
+   "m2": 0.0,
+   "edge_ml": 0.0
+  },
+  "SILL_OUT|-|UNRESOLVED": {
+   "n": 1,
+   "m2": 0.0,
+   "edge_ml": 0.0
+  },
+  "SILL_OUT|UNKNOWN|MEASURED": {
+   "n": 23,
+   "m2": 2.5614,
+   "edge_ml": 29.53
+  },
+  "THRESHOLD_IN|-|NONE": {
+   "n": 4,
+   "m2": 0.0,
+   "edge_ml": 0.0
+  },
+  "THRESHOLD_IN|-|UNRESOLVED": {
+   "n": 1,
+   "m2": 0.0,
+   "edge_ml": 0.0
+  },
+  "THRESHOLD_OUT|-|UNRESOLVED": {
+   "n": 1,
+   "m2": 0.0,
+   "edge_ml": 0.0
+  },
+  "THRESHOLD_OUT|UNKNOWN|MEASURED": {
+   "n": 2,
+   "m2": 0.16,
+   "edge_ml": 2.0
+  },
+  "THRESHOLD_OUT|the outdoor floor's finish|MEASURED": {
+   "n": 2,
+   "m2": 0.248,
+   "edge_ml": 3.1
+  },
+  "THRESHOLD|FLOOR PORCELAIN|MEASURED": {
+   "n": 7,
+   "m2": 1.1,
+   "edge_ml": 6.7
+  },
+  "THRESHOLD|FLOOR PORCELAIN|UNRESOLVED": {
+   "n": 1,
+   "m2": 0.0,
+   "edge_ml": 0.0
+  },
+  "THRESHOLD|HELD (exterior sill: by specification, none printed; marble rule not applicable to external entrances)|MEASURED": {
+   "n": 6,
+   "m2": 1.31,
+   "edge_ml": 6.8
+  },
+  "THRESHOLD|MARBLE|MEASURED": {
+   "n": 14,
+   "m2": 1.82,
+   "edge_ml": 11.5
+  },
+  "THRESHOLD|the floor finish continued|MEASURED": {
+   "n": 2,
+   "m2": 0.3,
+   "edge_ml": 2.0
+  }
+ }
+}

@@ -1,0 +1,8 @@
+file,sheet,row,B_count,C_length_m,H_area_col,H_formula
+FIN,marble + court,36,1,1.3,1.3,=C36*B36
+FIN,marble + court,37,1,2.5,2.5,=C37*B37
+FIN,marble + court,38,1,1,1,=C38*B38
+FIN,marble + court,39,1,1,1,=C39*B39
+FIN,marble + court,40,1,0.9,0.9,=C40*B40
+FIN,marble + court,41,1,1,1,=C41*B41
+FIN,all 885 rows,-,,,,rows naming a threshold / sill term: 0

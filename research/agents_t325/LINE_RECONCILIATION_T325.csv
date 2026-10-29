@@ -1,0 +1,57 @@
+opening,component,line_id,item_code,line_state,line_m2,line_low,line_high,ledger_m2,ledger_state,material,residual_m2,verdict
+D-GF-01,THRESHOLD,L-b3933a51bd95e9bc542b,ARCH.THRESHOLD,BOUNDED_EXPOSURE,,0.2,0.2,0.2,MEASURED,"HELD (exterior sill: by specification, none printed; marble rule not applicable to external entrances)",0.0 .. 0.0,WITHIN_BOUND
+D-GF-02,THRESHOLD,L-cb2fdcac375323371bdf,ARCH.THRESHOLD,BLOCKED_RFI,,,,0.12,MEASURED,MARBLE,-0.033542,"LINE_BLANK (no number; the line's own strip polygon 0.153542 m2, geometry_verified False, vs the ledger clear width x wall t)"
+D-GF-03,THRESHOLD,L-74cd61b430eec9933d15,ARCH.THRESHOLD,BOUNDED_EXPOSURE,,0.18,0.18,0.18,MEASURED,"HELD (exterior sill: by specification, none printed; marble rule not applicable to external entrances)",0.0 .. 0.0,WITHIN_BOUND
+D-GF-04,THRESHOLD,L-8901e416cbce62854fbe,FIN.MARBLE.THRESHOLD,SOURCE_DERIVED,0.12,,,0.12,MEASURED,MARBLE,0.0,EQUAL
+D-GF-05,THRESHOLD,L-c8b5c7f742b22388339e,FIN.MARBLE.THRESHOLD,SOURCE_DERIVED,0.2,,,0.2,MEASURED,MARBLE,0.0,EQUAL
+D-GF-06,THRESHOLD,L-9fa69ef1a11ef9987967,ARCH.THRESHOLD,BOUNDED_EXPOSURE,,0.2,0.2,0.2,MEASURED,"HELD (exterior sill: by specification, none printed; marble rule not applicable to external entrances)",0.0 .. 0.0,WITHIN_BOUND
+D-GF-07,THRESHOLD,L-ad41b065d825c0190b7d,ARCH.THRESHOLD,BOUNDED_EXPOSURE,,0.4,0.4,0.4,MEASURED,"HELD (exterior sill: by specification, none printed; marble rule not applicable to external entrances)",0.0 .. 0.0,WITHIN_BOUND
+D-GF-08,THRESHOLD,L-a3bbe40ac52ff6f2764b,FIN.FLOOR.PORCELAIN,SOURCE_DERIVED,0.2,,,0.2,MEASURED,FLOOR PORCELAIN,0.0,EQUAL
+D-GF-09,THRESHOLD,L-8111095f6db78f0e674b,ARCH.THRESHOLD,BOUNDED_EXPOSURE,,0.18,0.18,0.18,MEASURED,"HELD (exterior sill: by specification, none printed; marble rule not applicable to external entrances)",0.0 .. 0.0,WITHIN_BOUND
+D-GF-10,THRESHOLD,L-95bb76ee6c98edac0179,ARCH.THRESHOLD,BLOCKED_RFI,,,,0.12,MEASURED,MARBLE,-0.0375,"LINE_BLANK (no number; the line's own strip polygon 0.157500 m2, geometry_verified False, vs the ledger clear width x wall t)"
+D-GF-11,THRESHOLD,L-cbf11d0c1befb0519e98,FIN.MARBLE.THRESHOLD,SOURCE_DERIVED,0.12,,,0.12,MEASURED,MARBLE,0.0,EQUAL
+D-GF-12,THRESHOLD,L-07ce1d24164207cd06ca,FIN.MARBLE.THRESHOLD,SOURCE_DERIVED,0.12,,,0.12,MEASURED,MARBLE,0.0,EQUAL
+D-GF-13,THRESHOLD,L-25915d704e8aa6e868af,FIN.FLOOR.PORCELAIN,SOURCE_DERIVED,0.15,,,0.15,MEASURED,FLOOR PORCELAIN,0.0,EQUAL
+D-GF-14,THRESHOLD,L-8c2040d7c6ecce827316,ARCH.THRESHOLD,BLOCKED_RFI,,,,0.12,MEASURED,MARBLE,-0.098846,"LINE_BLANK (no number; the line's own strip polygon 0.218846 m2, geometry_verified False, vs the ledger clear width x wall t)"
+A-GF-01,THRESHOLD,L-868aee125705bb8d17f6,ARCH.THRESHOLD,BLOCKED_RFI,,,,0.15,MEASURED,the floor finish continued,0.0,"LINE_BLANK (no number; the line's own strip polygon 0.150000 m2, geometry_verified True, vs the ledger clear width x wall t)"
+W01,SILL_OUT,L-0de10f4db591a2467b82,ARCH.WINDOW_REVEAL,BLOCKED_RFI,,,,0.12,MEASURED,UNKNOWN,-0.06,"LINE_BLANK (no number; the line's own strip polygon 0.180000 m2, geometry_verified True, vs the ledger clear width x wall t)"
+W02,SILL_OUT,L-a430e89b6d52e1c994e0,ARCH.WINDOW_REVEAL,BLOCKED_RFI,,,,0.5064,MEASURED,UNKNOWN,-0.261386,"LINE_BLANK (no number; the line's own strip polygon 0.767786 m2, geometry_verified True, vs the ledger clear width x wall t)"
+W04,SILL_OUT,L-6add1d9c5ce0493a3e60,ARCH.WINDOW_REVEAL,BLOCKED_RFI,,,,0.048,MEASURED,UNKNOWN,-0.032,"LINE_BLANK (no number; the line's own strip polygon 0.080000 m2, geometry_verified True, vs the ledger clear width x wall t)"
+W05,SILL_OUT,L-bd633784436adfde4033,ARCH.WINDOW_REVEAL,BLOCKED_RFI,,,,0.048,MEASURED,UNKNOWN,-0.032,"LINE_BLANK (no number; the line's own strip polygon 0.080000 m2, geometry_verified True, vs the ledger clear width x wall t)"
+W06,SILL_OUT,L-eef0162ee1ce392fc7d5,ARCH.WINDOW_REVEAL,BLOCKED_RFI,,,,0.048,MEASURED,UNKNOWN,-0.032,"LINE_BLANK (no number; the line's own strip polygon 0.080000 m2, geometry_verified True, vs the ledger clear width x wall t)"
+W07,SILL_OUT,L-dec26399645ab26c13f9,ARCH.WINDOW_REVEAL,BLOCKED_RFI,,,,0.048,MEASURED,UNKNOWN,-0.032,"LINE_BLANK (no number; the line's own strip polygon 0.080000 m2, geometry_verified True, vs the ledger clear width x wall t)"
+W08,SILL_OUT,L-b6691e6f54bf47eb4f89,ARCH.WINDOW_REVEAL,BLOCKED_RFI,,,,0.12,MEASURED,UNKNOWN,-0.067999,"LINE_BLANK (no number; the line's own strip polygon 0.187999 m2, geometry_verified True, vs the ledger clear width x wall t)"
+W09,SILL_OUT,L-1bedabba8af5d2529e77,ARCH.WINDOW_REVEAL,BLOCKED_RFI,,,,0.12,MEASURED,UNKNOWN,-0.067999,"LINE_BLANK (no number; the line's own strip polygon 0.187999 m2, geometry_verified True, vs the ledger clear width x wall t)"
+W10,SILL_OUT,L-bea7d46e51c809fbe623,ARCH.WINDOW_REVEAL,BLOCKED_RFI,,,,0.08,MEASURED,UNKNOWN,-0.047999,"LINE_BLANK (no number; the line's own strip polygon 0.127999 m2, geometry_verified True, vs the ledger clear width x wall t)"
+W11,SILL_OUT,L-10af4bb68e88181775a7,ARCH.WINDOW_REVEAL,BLOCKED_RFI,,,,0.195,MEASURED,UNKNOWN,-0.098238,"LINE_BLANK (no number; the line's own strip polygon 0.293238 m2, geometry_verified True, vs the ledger clear width x wall t)"
+W12,SILL_OUT,L-36e2b88d45f02c84a404,ARCH.WINDOW_REVEAL,BLOCKED_RFI,,,,0.195,MEASURED,UNKNOWN,-0.098238,"LINE_BLANK (no number; the line's own strip polygon 0.293238 m2, geometry_verified True, vs the ledger clear width x wall t)"
+D-1F-01,THRESHOLD,L-709aba3ec07bb0f26319,FIN.MARBLE.THRESHOLD,SOURCE_DERIVED,0.12,,,0.12,MEASURED,MARBLE,0.0,EQUAL
+D-1F-02,THRESHOLD,L-47d54293f7a3856044e1,FIN.FLOOR.PORCELAIN,SOURCE_DERIVED,0.15,,,0.15,MEASURED,FLOOR PORCELAIN,0.0,EQUAL
+D-1F-03,THRESHOLD,L-a4c323cb1e402c9127d2,ARCH.THRESHOLD,BLOCKED_RFI,,,,0.15,MEASURED,FLOOR PORCELAIN,-0.035778,"LINE_BLANK (no number; the line's own strip polygon 0.185778 m2, geometry_verified False, vs the ledger clear width x wall t)"
+D-1F-04,THRESHOLD,L-63c15e31faff037fcdde,ARCH.THRESHOLD,BLOCKED_RFI,,,,0.12,MEASURED,MARBLE,-0.011977,"LINE_BLANK (no number; the line's own strip polygon 0.131977 m2, geometry_verified False, vs the ledger clear width x wall t)"
+D-1F-05,THRESHOLD,L-ccb1182ae9409b432968,FIN.MARBLE.THRESHOLD,SOURCE_DERIVED,0.18,,,0.18,MEASURED,MARBLE,0.0,EQUAL
+D-1F-06,THRESHOLD,L-92721c425ab3612bb035,FIN.MARBLE.THRESHOLD,SOURCE_DERIVED,0.12,,,0.12,MEASURED,MARBLE,0.0,EQUAL
+D-1F-07,THRESHOLD,L-f2d296f1fc5184419774,FIN.MARBLE.THRESHOLD,SOURCE_DERIVED,0.12,,,0.12,MEASURED,MARBLE,0.0,EQUAL
+D-1F-08,THRESHOLD,L-fcf9fbf8a5145fbd7bca,FIN.FLOOR.PORCELAIN,SOURCE_DERIVED,0.135,,,0.135,MEASURED,FLOOR PORCELAIN,0.0,EQUAL
+D-1F-09,THRESHOLD,L-05443e1e907e1a21c4a3,FIN.FLOOR.PORCELAIN,SOURCE_DERIVED,0.135,,,0.135,MEASURED,FLOOR PORCELAIN,0.0,EQUAL
+D-1F-10,THRESHOLD,L-a4909527ff598315be61,FIN.MARBLE.THRESHOLD,SOURCE_DERIVED,0.12,,,0.12,MEASURED,MARBLE,0.0,EQUAL
+A-1F-01,THRESHOLD,L-e2eb7cee560d74ae91e4,FIN.FLOOR.PORCELAIN,SOURCE_DERIVED,0.15,,,0.15,MEASURED,the floor finish continued,0.0,EQUAL
+W13,SILL_OUT,L-ec91f75c35edf30f9c65,ARCH.WINDOW_REVEAL,BLOCKED_RFI,,,,0.12,MEASURED,UNKNOWN,-0.06,"LINE_BLANK (no number; the line's own strip polygon 0.180000 m2, geometry_verified True, vs the ledger clear width x wall t)"
+W14,SILL_OUT,L-ea48300c45f8efa96ffe,ARCH.WINDOW_REVEAL,BLOCKED_RFI,,,,0.245,MEASURED,UNKNOWN,-0.122466,"LINE_BLANK (no number; the line's own strip polygon 0.367466 m2, geometry_verified True, vs the ledger clear width x wall t)"
+W15,THRESHOLD_OUT,L-0e2e7299371efb8338cc,ARCH.WINDOW_REVEAL,BLOCKED_RFI,,,,0.124,MEASURED,the outdoor floor's finish,-0.070278,"LINE_BLANK (no number; the line's own strip polygon 0.194278 m2, geometry_verified True, vs the ledger clear width x wall t)"
+W16,THRESHOLD_OUT,L-146170b53ca02c2456f9,ARCH.WINDOW_REVEAL,BLOCKED_RFI,,,,0.124,MEASURED,the outdoor floor's finish,-0.070278,"LINE_BLANK (no number; the line's own strip polygon 0.194278 m2, geometry_verified True, vs the ledger clear width x wall t)"
+W17,SILL_OUT,L-c90d5d6c06a671fc3b99,ARCH.WINDOW_REVEAL,BLOCKED_RFI,,,,,UNRESOLVED,-,,LEDGER_UNRESOLVED (no number on either side)
+W19,SILL_OUT,L-e709025cfb48633cc369,ARCH.WINDOW_REVEAL,BLOCKED_RFI,,,,0.048,MEASURED,UNKNOWN,-0.032,"LINE_BLANK (no number; the line's own strip polygon 0.080000 m2, geometry_verified True, vs the ledger clear width x wall t)"
+W20,SILL_OUT,L-e60b1ffc24c8bc76ec1a,ARCH.WINDOW_REVEAL,BLOCKED_RFI,,,,0.048,MEASURED,UNKNOWN,-0.032,"LINE_BLANK (no number; the line's own strip polygon 0.080000 m2, geometry_verified True, vs the ledger clear width x wall t)"
+W21,SILL_OUT,L-cdd13c017d2f5328032e,ARCH.WINDOW_REVEAL,BLOCKED_RFI,,,,0.048,MEASURED,UNKNOWN,-0.032,"LINE_BLANK (no number; the line's own strip polygon 0.080000 m2, geometry_verified True, vs the ledger clear width x wall t)"
+W22,SILL_OUT,L-dbec1a970ca591bebd43,ARCH.WINDOW_REVEAL,BLOCKED_RFI,,,,0.048,MEASURED,UNKNOWN,-0.032,"LINE_BLANK (no number; the line's own strip polygon 0.080000 m2, geometry_verified True, vs the ledger clear width x wall t)"
+W23,SILL_OUT,L-1b5962c15890ecb2f6da,ARCH.WINDOW_REVEAL,BLOCKED_RFI,,,,0.048,MEASURED,UNKNOWN,-0.032,"LINE_BLANK (no number; the line's own strip polygon 0.080000 m2, geometry_verified True, vs the ledger clear width x wall t)"
+W24,SILL_OUT,L-560e87c03e18569ae941,ARCH.WINDOW_REVEAL,BLOCKED_RFI,,,,0.124,MEASURED,UNKNOWN,-0.070278,"LINE_BLANK (no number; the line's own strip polygon 0.194278 m2, geometry_verified True, vs the ledger clear width x wall t)"
+W25,THRESHOLD_OUT,L-63087103666a3c4b177b,ARCH.WINDOW_REVEAL,BLOCKED_RFI,,,,0.08,MEASURED,UNKNOWN,-0.047999,"LINE_BLANK (no number; the line's own strip polygon 0.127999 m2, geometry_verified True, vs the ledger clear width x wall t)"
+D-2F-01,THRESHOLD,L-3e5c6b7af8dd06b2836c,ARCH.THRESHOLD,BOUNDED_EXPOSURE,,0.15,0.15,0.15,MEASURED,"HELD (exterior sill: by specification, none printed; marble rule not applicable to external entrances)",0.0 .. 0.0,WITHIN_BOUND
+D-2F-02,THRESHOLD,L-dc5434957e2f76cc794b,FIN.FLOOR.PORCELAIN,SOURCE_DERIVED,0.18,,,0.18,MEASURED,FLOOR PORCELAIN,0.0,EQUAL
+D-2F-03,THRESHOLD,L-0ca0f91144403e323c68,FIN.MARBLE.THRESHOLD,SOURCE_DERIVED,0.12,,,0.12,MEASURED,MARBLE,0.0,EQUAL
+W26,SILL_OUT,L-d91627a1feb6dc854723,ARCH.WINDOW_REVEAL,BLOCKED_RFI,,,,0.12,MEASURED,UNKNOWN,-0.06,"LINE_BLANK (no number; the line's own strip polygon 0.180000 m2, geometry_verified True, vs the ledger clear width x wall t)"
+W27,THRESHOLD_OUT,L-d540d2198577747bcf84,ARCH.WINDOW_REVEAL,BLOCKED_RFI,,,,0.08,MEASURED,UNKNOWN,-0.047999,"LINE_BLANK (no number; the line's own strip polygon 0.127999 m2, geometry_verified True, vs the ledger clear width x wall t)"
+W28,SILL_OUT,L-44f5f5c49b50d62b44f3,ARCH.WINDOW_REVEAL,BLOCKED_RFI,,,,0.048,MEASURED,UNKNOWN,-0.032,"LINE_BLANK (no number; the line's own strip polygon 0.080000 m2, geometry_verified True, vs the ledger clear width x wall t)"
+W29,SILL_OUT,L-a6565fe2cd9df42f77fd,ARCH.WINDOW_REVEAL,BLOCKED_RFI,,,,0.096,MEASURED,UNKNOWN,-0.055999,"LINE_BLANK (no number; the line's own strip polygon 0.151999 m2, geometry_verified True, vs the ledger clear width x wall t)"
