@@ -397,3 +397,5 @@ Every Answer below binds every agent. One line per question, newest first; grep 
 - **Q-04** Door minimum, D-16 — Answer: The minimum is the door opening: ordinary 1.00 m opening = 1.10 m wall to wall. These are minimums: when the plan
 - **Q-05** Second villa and independent QS — Answer: Yes. Other villas exist as AutoCAD and PDF, but without full concrete and rebar drawings. Use them as development
 
+
+OWNER FOLLOW-UP (main chat 2026-10-29): four method points answered; carried verbatim in essence in BOARD.md T-355.
