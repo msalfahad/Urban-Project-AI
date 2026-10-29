@@ -1,0 +1,166 @@
+{
+ "V3_0_20": {
+  "by_kind": {
+   "FORMULA_FIGURE_DISAGREES": 15,
+   "VALUED_WITH_HELD_TEXT": 350
+  },
+  "categories": {
+   "FORMULA_FIGURE_DISAGREES": 15,
+   "OK": 3340,
+   "VALUED_WITH_HELD_TEXT": 350
+  },
+  "flagged": 15,
+  "lines": 3705,
+  "notes": {
+   "NOTE_OPEN_RFI_ON_VALUED": 5
+  },
+  "refused": 350
+ },
+ "V3_0_21": {
+  "by_kind": {
+   "FORMULA_FIGURE_DISAGREES": 15,
+   "HELD_WITH_FIGURE": 1,
+   "VALUED_WITH_HELD_TEXT": 350
+  },
+  "categories": {
+   "FORMULA_FIGURE_DISAGREES": 15,
+   "HELD_WITH_FIGURE": 1,
+   "OK": 3340,
+   "VALUED_WITH_HELD_TEXT": 350
+  },
+  "flagged": 15,
+  "lines": 3706,
+  "notes": {
+   "NOTE_OPEN_RFI_ON_VALUED": 5
+  },
+  "refused": 351
+ },
+ "V3_0_21_families_with_findings": [
+  {
+   "by_issue": {
+    "FORMULA_FIGURE_DISAGREES": 1
+   },
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "findings_net": 0.0,
+   "findings_range_high": 1.364,
+   "findings_range_low": 1.364,
+   "flagged": 1,
+   "item_code": "ARCH.SPACE",
+   "lines": 2,
+   "notes_open_rfi_on_valued": 0,
+   "ok": 1,
+   "refused": 0,
+   "trade": "FLOOR_FINISH",
+   "unit": "m2"
+  },
+  {
+   "by_issue": {
+    "HELD_WITH_FIGURE": 1
+   },
+   "evidence_state": "NOT_APPLICABLE_WITH_EVIDENCE",
+   "findings_net": 0.0,
+   "findings_range_high": 0.0,
+   "findings_range_low": 0.0,
+   "flagged": 0,
+   "item_code": "FIN.SKIRTING",
+   "lines": 19,
+   "notes_open_rfi_on_valued": 0,
+   "ok": 18,
+   "refused": 1,
+   "trade": "FLOOR_FINISH",
+   "unit": "lm"
+  },
+  {
+   "by_issue": {
+    "FORMULA_FIGURE_DISAGREES": 5
+   },
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "findings_net": 0.0,
+   "findings_range_high": 433.1806,
+   "findings_range_low": 396.121,
+   "flagged": 5,
+   "item_code": "FIN.PAINT",
+   "lines": 7,
+   "notes_open_rfi_on_valued": 0,
+   "ok": 2,
+   "refused": 0,
+   "trade": "PAINT",
+   "unit": "m2"
+  },
+  {
+   "by_issue": {
+    "FORMULA_FIGURE_DISAGREES": 2
+   },
+   "evidence_state": "PROVISIONAL",
+   "findings_net": 107.4281,
+   "findings_range_high": 0.0,
+   "findings_range_low": 0.0,
+   "flagged": 2,
+   "item_code": "FIN.PAINT",
+   "lines": 4,
+   "notes_open_rfi_on_valued": 0,
+   "ok": 2,
+   "refused": 0,
+   "trade": "PAINT",
+   "unit": "m2"
+  },
+  {
+   "by_issue": {
+    "FORMULA_FIGURE_DISAGREES": 5
+   },
+   "evidence_state": "BOUNDED_EXPOSURE",
+   "findings_net": 0.0,
+   "findings_range_high": 433.1806,
+   "findings_range_low": 396.121,
+   "flagged": 5,
+   "item_code": "FIN.PLASTER",
+   "lines": 9,
+   "notes_open_rfi_on_valued": 0,
+   "ok": 4,
+   "refused": 0,
+   "trade": "PLASTER",
+   "unit": "m2"
+  },
+  {
+   "by_issue": {
+    "FORMULA_FIGURE_DISAGREES": 2
+   },
+   "evidence_state": "PROVISIONAL",
+   "findings_net": 107.4281,
+   "findings_range_high": 0.0,
+   "findings_range_low": 0.0,
+   "flagged": 2,
+   "item_code": "FIN.PLASTER",
+   "lines": 24,
+   "notes_open_rfi_on_valued": 0,
+   "ok": 22,
+   "refused": 0,
+   "trade": "PLASTER",
+   "unit": "m2"
+  },
+  {
+   "by_issue": {
+    "VALUED_WITH_HELD_TEXT": 350
+   },
+   "evidence_state": "SOURCE_DERIVED",
+   "findings_net": 8311.066,
+   "findings_range_high": 0.0,
+   "findings_range_low": 0.0,
+   "flagged": 0,
+   "item_code": "STR.REBAR",
+   "lines": 388,
+   "notes_open_rfi_on_valued": 0,
+   "ok": 38,
+   "refused": 350,
+   "trade": "REINFORCEMENT",
+   "unit": "kg"
+  }
+ ],
+ "inputs": {
+  "V3_0_20_BOQ_LINES.json": "097a80b6 (own run, candidate of record)",
+  "V3_0_21_BOQ_LINES.json": "be22a4e4 (own run, = T-315 r2 MERGED b0041dd2)",
+  "drawings": "Drive 'Alsenan chalet project': P7757.dxf ab54dd55 (P7757_DXF_COMPRESSED.zip), 'ST7757 dxf.dxf' 9f9d1179"
+ },
+ "schema": "URBAN_T334_SUMMARY_V1",
+ "tool": "tools/t334_line_state_check.py"
+}
