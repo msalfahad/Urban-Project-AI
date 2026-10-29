@@ -3045,6 +3045,14 @@ CANDIDATE_EXTENSIONS_V3023 = (V3023,)  # its own tuple: the V3.0 .. V3.0.22 meth
 # run V2.9.
 V3024 = "ARCH_TAKEOFF_V3.0.24"
 CANDIDATE_EXTENSIONS_V3024 = (V3024,)  # its own tuple: the V3.0 .. V3.0.23 method lists stay as they were
+# T-343: ARCH_TAKEOFF_V3.0.25 = the SAME candidate (engine.source.arch_v3025): a V3.0.24 run (its V3_0_* ..
+# V3_0_24_* files unchanged) + ONE piece (URBAN_V3025_INPUTS_V1): the outdoor floor surfaces of an open court that no
+# candidate line carried, one line per drawn piece (finish from the owner rule, or HELD with the drawn area kept as a
+# range), the pieces re-added to the court face less its holes by their exact outlines, and the pool water-face finish
+# HELD BLANK with its surface bound; the guard re-check; every V3.0.24 line byte-identical, in V3_0_25_* files.
+# Opt-in, not the released default; rollback = run V2.9.
+V3025 = "ARCH_TAKEOFF_V3.0.25"
+CANDIDATE_EXTENSIONS_V3025 = (V3025,)  # its own tuple: the V3.0 .. V3.0.24 method lists stay as they were
 
 
 def _v304_inputs(path, project_id):
@@ -3079,31 +3087,32 @@ def _v304_inputs(path, project_id):
 def cmd_arch(a):
     from engine.source import discovery as DS
     facts = json.loads(Path(a.facts).read_text(encoding="utf-8")) if a.facts else None
-    v3024 = a.method == V3024                 # T-338: the V3.0.23 run, then its V3.0.24 line-state text
-    v3023 = a.method in (V3023, V3024)                 # T-319: the V3.0.22 run, then its V3.0.23 parapet RC family
-    v3022 = a.method in (V3022, V3023, V3024)                 # T-331: the V3.0.21 run, then its V3.0.22 wet-room plaster backing
-    v3021 = a.method in (V3021, V3022, V3023, V3024)                 # T-315: the V3.0.20 run, then its V3.0.21 wall-tile family
-    v3020 = a.method in (V3020, V3021, V3022, V3023, V3024)                 # T-244: the V3.0.19 run, then its V3.0.20 finish revision
-    v3019 = a.method in (V3019, V3020, V3021, V3022, V3023, V3024)                # T-255: the V3.0.18 run, then its V3.0.19 end closure + opening trace
-    v3018 = a.method in (V3018, V3019, V3020, V3021, V3022, V3023, V3024)        # T-266: the V3.0.17 run, then its V3.0.18 component closure
-    v3017 = a.method in (V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024)        # T-254: the V3.0.16 run, then its V3.0.17 basis correction
-    v3016 = a.method in (V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024)        # T-245: the V3.0.15 run, then its V3.0.16 identity step
-    v3015 = a.method in (V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024)        # T-270: the V3.0.14 run, then its V3.0.15 extension
-    v3014 = a.method in (V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024)                 # T-240: the V3.0.13 run, then its V3.0.14 extension
-    v3013 = a.method in (V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024)          # T-268: the V3.0.12 run, then its V3.0.13 extension
-    v3012 = a.method in (V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024)          # T-146 + T-247: the V3.0.11 run, then its V3.0.12 extension
-    v3011 = a.method in (V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024)        # T-239: the V3.0.10 run, then its V3.0.11 extension
-    v3010 = a.method in (V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024)        # T-232: the V3.0.9 run, then its V3.0.10 extension
-    v309 = a.method in (V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024)          # T-211: the V3.0.8 run, then its V3.0.9 extension
-    v308 = a.method in (V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024)    # T-231: the V3.0.7 run, then its V3.0.8 extension
-    v307 = a.method in (V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024)  # T-193: the V3.0.6 run, then its V3.0.7 extension
-    v306 = a.method in (V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024)  # T-187: the V3.0.5 run, then its V3.0.6 extension
-    v305 = a.method in (V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024)  # T-179: the V3.0.4 run, then its V3.0.5 extension
-    v304 = a.method in (V304, V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024)  # T-167: the V3.0.3 run, then V3.0.4
-    v303 = a.method in (V303, V304, V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024)  # T-151: the V3.0.2 run, then V3.0.3
-    v302 = a.method in (V302, V303, V304, V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024)  # T-142: V3.0.1 run, then V3.0.2
-    v301 = a.method in (V301, V302, V303, V304, V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024)  # T-133: V3.0, then V3.0.1
-    v30 = a.method in (V30, V301, V302, V303, V304, V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024)  # T-131: runs V2.13
+    v3025 = a.method == V3025                 # T-343: the V3.0.24 run, then its V3.0.25 outdoor floor lines
+    v3024 = a.method in (V3024, V3025)                 # T-338: the V3.0.23 run, then its V3.0.24 line-state text
+    v3023 = a.method in (V3023, V3024, V3025)                 # T-319: the V3.0.22 run, then its V3.0.23 parapet RC family
+    v3022 = a.method in (V3022, V3023, V3024, V3025)                 # T-331: the V3.0.21 run, then its V3.0.22 wet-room plaster backing
+    v3021 = a.method in (V3021, V3022, V3023, V3024, V3025)                 # T-315: the V3.0.20 run, then its V3.0.21 wall-tile family
+    v3020 = a.method in (V3020, V3021, V3022, V3023, V3024, V3025)                 # T-244: the V3.0.19 run, then its V3.0.20 finish revision
+    v3019 = a.method in (V3019, V3020, V3021, V3022, V3023, V3024, V3025)                # T-255: the V3.0.18 run, then its V3.0.19 end closure + opening trace
+    v3018 = a.method in (V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025)        # T-266: the V3.0.17 run, then its V3.0.18 component closure
+    v3017 = a.method in (V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025)        # T-254: the V3.0.16 run, then its V3.0.17 basis correction
+    v3016 = a.method in (V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025)        # T-245: the V3.0.15 run, then its V3.0.16 identity step
+    v3015 = a.method in (V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025)        # T-270: the V3.0.14 run, then its V3.0.15 extension
+    v3014 = a.method in (V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025)                 # T-240: the V3.0.13 run, then its V3.0.14 extension
+    v3013 = a.method in (V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025)          # T-268: the V3.0.12 run, then its V3.0.13 extension
+    v3012 = a.method in (V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025)          # T-146 + T-247: the V3.0.11 run, then its V3.0.12 extension
+    v3011 = a.method in (V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025)        # T-239: the V3.0.10 run, then its V3.0.11 extension
+    v3010 = a.method in (V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025)        # T-232: the V3.0.9 run, then its V3.0.10 extension
+    v309 = a.method in (V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025)          # T-211: the V3.0.8 run, then its V3.0.9 extension
+    v308 = a.method in (V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025)    # T-231: the V3.0.7 run, then its V3.0.8 extension
+    v307 = a.method in (V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025)  # T-193: the V3.0.6 run, then its V3.0.7 extension
+    v306 = a.method in (V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025)  # T-187: the V3.0.5 run, then its V3.0.6 extension
+    v305 = a.method in (V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025)  # T-179: the V3.0.4 run, then its V3.0.5 extension
+    v304 = a.method in (V304, V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025)  # T-167: the V3.0.3 run, then V3.0.4
+    v303 = a.method in (V303, V304, V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025)  # T-151: the V3.0.2 run, then V3.0.3
+    v302 = a.method in (V302, V303, V304, V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025)  # T-142: V3.0.1 run, then V3.0.2
+    v301 = a.method in (V301, V302, V303, V304, V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025)  # T-133: V3.0, then V3.0.1
+    v30 = a.method in (V30, V301, V302, V303, V304, V305, V306, V307, V308, V309, V3010, V3011, V3012, V3013, V3014, V3015, V3016, V3017, V3018, V3019, V3020, V3021, V3022, V3023, V3024, V3025)  # T-131: runs V2.13
     if getattr(a, "v302_inputs", None) and not v302:
         raise SystemExit("--v302-inputs needs --method ARCH_TAKEOFF_V3.0.2")
     if getattr(a, "v303_inputs", None) and not v303:
@@ -3140,8 +3149,12 @@ def cmd_arch(a):
         raise SystemExit("--v3017-inputs needs --method ARCH_TAKEOFF_V3.0.17 or later")
     if getattr(a, "v3018_inputs", None) and not v3018:
         raise SystemExit("--v3018-inputs needs --method ARCH_TAKEOFF_V3.0.18 or later")
+    if getattr(a, "v3025_inputs", None) and not v3025:
+        raise SystemExit("--v3025-inputs needs --method ARCH_TAKEOFF_V3.0.25")
+    if v3025 and not getattr(a, "v3025_inputs", None):
+        raise SystemExit("ARCH_TAKEOFF_V3.0.25 needs --v3025-inputs (the outdoor floor pieces from the merged ledgers)")
     if getattr(a, "v3024_inputs", None) and not v3024:
-        raise SystemExit("--v3024-inputs needs --method ARCH_TAKEOFF_V3.0.24")
+        raise SystemExit("--v3024-inputs needs --method ARCH_TAKEOFF_V3.0.24 or later")
     if v3024 and not getattr(a, "v3024_inputs", None):
         raise SystemExit("ARCH_TAKEOFF_V3.0.24 needs --v3024-inputs (the line-state fixes from the merged check)")
     if getattr(a, "v3023_inputs", None) and not v3023:
@@ -3717,6 +3730,19 @@ def cmd_arch(a):
                                                                                                 svgs += names24
                                                                                                 v30rec = dict(v30rec, method=V3024, extends=V3023,
                                                                                                               identity=ident24, v3_0_23_identity=ident23)
+                                                                                                if v3025:
+                                                                                                    # T-343: ARCH_TAKEOFF_V3.0.25 beside the V3_0_24_*
+                                                                                                    from engine.source import arch_v3025 as A3025
+                                                                                                    inp25 = A3025.load_inputs(json.loads(Path(
+                                                                                                        a.v3025_inputs).read_text(encoding="utf-8")))
+                                                                                                    fl24 = [x["line_id"] for x in inp24.get("for_lead") or ()]
+                                                                                                    l3024 = A3024.integrate(l3023, ch_v24, inp24)[0]
+                                                                                                    ch_v25, log_v25, clo_v25 = A3025.changes_for(inp25, l3024)
+                                                                                                    names25, ident25, _led25 = A3025.write(
+                                                                                                        out, l3024, ch_v25, log_v25, clo_v25, inp25, released, fl24)
+                                                                                                    svgs += names25
+                                                                                                    v30rec = dict(v30rec, method=V3025, extends=V3024,
+                                                                                                                  identity=ident25, v3_0_24_identity=ident24)
     ev = Counter(ln["evidence_state"] for ln in room["lines"])
     print(json.dumps({"method": a.method, "regions": [{"floor": r["floor"], "state": r["stage_state"],
                                                         "rooms": r.get("space_counts"), "lines": r.get("lines"),
@@ -3859,7 +3885,7 @@ def main(argv=None):
                    CANDIDATE_EXTENSIONS_V3016 + CANDIDATE_EXTENSIONS_V3017 + CANDIDATE_EXTENSIONS_V3018 +
                    CANDIDATE_EXTENSIONS_V3019 + CANDIDATE_EXTENSIONS_V3020 +
                    CANDIDATE_EXTENSIONS_V3021 + CANDIDATE_EXTENSIONS_V3022 + CANDIDATE_EXTENSIONS_V3023 +
-                   CANDIDATE_EXTENSIONS_V3024,
+                   CANDIDATE_EXTENSIONS_V3024 + CANDIDATE_EXTENSIONS_V3025,
                    help="the versioned architectural takeoff method (no default: the route is opt-in until validated); "
                         "ARCH_TAKEOFF_V2 (S6) adds the drawing admission, unit-relative tolerances, empty-band plan "
                         "regions and the completeness gates (exit 2: admission blocked, 3: completeness failed)")
@@ -3916,6 +3942,10 @@ def main(argv=None):
     p.add_argument("--v3010-inputs", help="ARCH_TAKEOFF_V3.0.10 (URBAN_V3010_INPUTS_V1): checker-merged opening "
                                           "records (doors / windows: pcs AND m2 from one opening list) with the "
                                           "candidate door / window lines they supersede, and the guard inputs")
+    p.add_argument("--v3025-inputs", help="ARCH_TAKEOFF_V3.0.25 (URBAN_V3025_INPUTS_V1): the outdoor floor pieces of "
+                                          "an open court from checker-merged ledgers (one line per drawn piece, finish "
+                                          "by the owner rule or HELD with its area kept; the pool water-face finish "
+                                          "HELD BLANK with its surface bound); every V3.0.24 line byte-identical")
     p.add_argument("--v3024-inputs", help="ARCH_TAKEOFF_V3.0.24 (URBAN_V3024_INPUTS_V1): the merged T-334 line-state "
                                           "findings fixed in the lines' text only (released rebar arithmetic, no "
                                           "gross on a NOT_APPLICABLE line, a formula ending on the line's own "
