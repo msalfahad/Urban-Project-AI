@@ -46,7 +46,11 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
-## Status (Lead, 2026-10-29 16:30; re-estimated each run from what merged and was verified)
+## Status (Lead, 2026-10-29 20:30; re-estimated each run from what merged and was verified)
+
+Lead 2026-10-29 20:30: T-338 passed Gate B FIRST TIME at 20:14: candidate of record V3.0.24 (366 lines text / state only, no quantity moved; the guarded export now writes: 0 REFUSED, 0 FLAG). T-340, T-339, T-344, T-345 MERGED; T-333 r2 and T-346 READY; T-332 r2 lost 4 h unclaimed (status-word fault, fixed). Week 2 (by 3 Nov) re-estimate: T-343 outdoor floors 30 Oct; T-333 r2 Gate A 29-30 Oct then T-279 blockwork 30-31 Oct (the first verified-quantity increase of the week if it passes first time); T-326 / T-327 reveals / sills 31 Oct - 1 Nov; T-199 formwork by 3 Nov unlikely (T-332 r2 first, then five lane I rows ahead at about one lane I package every 2-4 h). NEW for weeks 3-4: the missing categories earthworks (T-347 -> T-350), spatter dash (T-349), kitchen tile zones (T-351), stair formwork (T-352), foundation WP (T-353), soil treatment evidence (T-354). Verified SHARE still at risk: new lines are owner-approved or held, not whole-line verified.
+
+### Earlier status (Lead, 2026-10-29 16:30)
 
 Lead 2026-10-29 16:30: T-319 passed Gate B FIRST TIME at 15:45: candidate of record V3.0.23 (4 STR.CONC.PARAPET m3 lines HELD BLANK with bound >= 8.050943 m3; every other line byte-identical). T-342 (M2 MET on rooms and openings for P7757), T-341 (deductions FILL, one line UNEXPLAINED) and T-337 (exterior plaster FILL for T-314) MERGED; T-332 / T-333 sent back narrow (one defect each); T-339 / T-340 READY. Week 2 (by 3 Nov) re-estimate: T-338 export text fix 30 Oct morning; T-333 r2 + T-279 blockwork 30-31 Oct (first verified-quantity increase of the week if it passes first time); T-343 outdoor floors (new, M2 follow-up) 31 Oct; T-326 / T-327 reveals / sills 1 Nov; T-199 formwork by 3 Nov now unlikely (six lane I rows ahead). Verified SHARE still at risk: the new lines are owner-approved or held, not whole-line verified.
 

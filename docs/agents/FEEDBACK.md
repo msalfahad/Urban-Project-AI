@@ -42,6 +42,18 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
    NEEDS FIXING (cadence vs usage budget is his call: the hourly pilot was to be reviewed after 24 - 48 h on 25 Oct);
    R-11 to the Scout (documented cost / usage controls for scheduled routines); the stale-lock recovery worked as designed.
 
+## 2026-10-29 20:30 (lead run; covers 16:30 - 20:30)
+
+- T-340 reveals / sills / thresholds FILL: WORKED (Gate A PASS 16:58; W02 head 6.331578 x 0.080 = 0.506526 vs 0.5064 own (0.025 %), D-1F-03 / D-1F-04 thresholds 0.000 %; D-GF-10 0.797 width proposal NOT ADOPTED: the wall line overruns the 0.800 frame by 2.961 mm). Decision: none; T-326 / T-327 consume it in lane I order.
+- T-339 roof build-up FILL: WORKED (Gate A PASS 17:01; 1F terrace zone 38.355 / footprint 5.553 / finish hatch 31.6433 m2 own; D band ranged). Decision: none; T-328 consumes it.
+- T-344 label census V2: WORKED (Gate A PASS 17:10; own run 41 = 28 / 1 / 1 / 11, SILENT_OMISSION 0, V1 byte-identical). Decision: none.
+- T-345 porcelain trace: WORKED (Gate A PASS 19:02; 5.890817 m2 traced to 0.000000: concave winder clipped convex +0.353736, F1 / F4 overlap deducted twice -0.057558, residue 2.034669 + footprint 3.559930; net 33.711036 unchanged). Decision: T-246 SCOPE ADDED (consume the trace rows; write a re-netted line's list with its net in the new candidate version file).
+- T-338 export line-state text (V3.0.24): WORKED (Gate B PASS FIRST TIME 20:14; 366 lines text / state only, quantities byte-identical; T-334 check 351 REFUSED + 15 FLAG -> 0; L4 NEW 0). Decision: T-343 TODO on V3.0.24, first in lane I; the 4 PROVISIONAL finish lines without canonical deductions go with T-246.
+- T-333 r2 / T-346: READY 19:05 / 19:01 (CHECKER-RUNS). T-346 found no missing face (93.150 = 79.213 drawn + 9.000 double count + 4.937 named, residual 0); F-T346-1 -> NEW T-348.
+- T-332 r2: NOT CLAIMED for 4 h. Cause: its status cell began 'REJECTED (rework r2 CLAIMABLE ...)'; Worker 1 at 19:21 read every row as non-claimable and idled. Decision: a CLAIMABLE rework now always begins with TODO (row fixed); worker 1 takes it first.
+- Missing categories (BOQ_FAMILY_MASTER 1.19.0: 18 NOT_IMPLEMENTED): NEW T-347 earthworks binding + T-350 lines, T-349 spatter dash binding, T-351 kitchen / laundry / pantry tile zones, T-352 stair formwork, T-353 foundation WP lines, T-354 soil treatment evidence.
+- Recurring (unchanged, every code agent): Drive raw binary vs base64-only decode (4 runs since 16:30 worked round by hand); the auto prepare left the venv without pytest once more (Worker 1 19:21, repaired by setup).
+
 ## 2026-10-29 16:30 (lead run; covers 12:30 - 16:30)
 
 - T-342 M2 label binding: WORKED (Gate A PASS 14:39; Checker own census 41 labels reproduced; AT19 = pool by position inside the water D; pool is a D not a circle, deck 7.9392 -> 7.1058 m2; M2 MET on rooms and openings for P7757 on this ledger). Decisions: NEW T-343 outdoor floor lines (lane I, after T-338), NEW T-344 census tool v2 (lane A) so the tool stops printing SILENT_OMISSION for bound labels; lessons row ADOPTED (research scope).
@@ -260,14 +272,3 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
 | T-267 r2 stair manifest | handed in (READY 19:38) | manifest +1 AUTHORED entry, full suite NEW 0 | in the Checker run 19:51 (critical dependency, never delayed > 2 runs) |
 | T-276 buried faces r2 | in work (CLAIMED 19:47) | worker 2 | Gate A when READY; feeds T-270 as a later delta |
 | Row stamps | process fault | T-272 READY stamp 20:05 written by 19:35-19:59; worker 3 run-log 19:40 committed 19:36 | lessons row (stamp = `date -u` at writing); watch |
-
-## 2026-10-24 18:15 (lead run; covers 16:15 - 18:15)
-
-| Task | Result | Evidence | Decision |
-|---|---|---|---|
-| T-263 buried-concrete liquid waterproofing | WORKED | MERGED c0ab564d (Verifier 17:59): 35.404 m2 DRAWING-CONFIRMED, own 7E9+7EA#1 2.535, 7E0+FD#1 2.8475, F12 top 13.690 agree; missing category in engine and freelancer | T-276 (remaining faces), T-270 scope extended (integration); lessons row |
-| T-261 r2 blockwork split | PARTIAL | REJECTED 17:00: 7 / 9 rising walls agree own; 1F-W18 / 1F-W24 carried register gross on non-drawn extents | r3 CLAIMED 17:41 with the exact fault |
-| T-272 ground-beam stirrups | PARTIAL | REJECTED 17:04: shape / hooks / cover agree; count envelope assumed links through crossing beams, ring as one run | TODO r2 narrow; lessons row |
-| T-267 r1 stair finish-level module | PARTIAL (unchanged) | REJECTED 16:07 narrow (manifest); not reclaimed in two worker 1 runs | row set to TODO r2 (claim rule cause, see below), first in lanes S and I |
-| T-240 floor area V3.0.14 | handed in (READY 17:52, Gate B) | internal 340.765 -> 380.364 m2 vs released 385.634 (-1.37 %), 3,643 / 3,680 lines byte-identical | Gate B next; the +39.6 m2 step to be reconciled piece by piece |
-| Worker 1 lane order | process fault | claimed T-273 17:27 while two narrow reworks (status REJECTED) were first in lane S | rework rows now TODO rN (lessons row); T-273 continues |

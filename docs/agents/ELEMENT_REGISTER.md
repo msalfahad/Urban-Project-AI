@@ -46,6 +46,30 @@ checker verifies it before any ruling below becomes a code check. Evidence statu
 names the OWNER TRADE (the one trade whose line takes the quantity); every other trade lists the element without a
 quantity.
 
+### Lead 2026-10-29 20:30 (from T-340 / T-339 / T-344 / T-345 MERGED, T-338 Gate B (V3.0.24); T-333 r2 / T-346 READY; new T-347 .. T-354)
+
+- STAIR FLOOR FACE WITH A RE-NETTING PIECE (1F +5.50 floor face round the two stairs and the void; every villa): the line's
+  NET belongs to the piece that sets it (STAIR_FLOOR_RESIDUE_V1: 33.711036 m2), and its DEDUCTION LIST must be restated
+  from the same geometry (T-345: winder F5 concave quads, F1 / F4 overlap once, VOID_RESIDUE, STAIR_FOOTPRINT); owner
+  trade FLOOR FINISH; the flights' own faces are STAIR FINISH, never on the floor line. Lane I writes it with T-246.
+- FREELANCER EXTERIOR ROWS 65 / 68 / 69 (93.150 m2): element NAMED by T-346 (READY, pending Gate A): all on faces T-337
+  binds once (GF sea face NW-7 1.500 end, the sea face as one plane from +1.00 up to the printed wave peak, P-2 at the
+  passage) + a 9.000 m2 double count in his sheet + 4.937 m2 named band terms; owner trade FACADE; no new face.
+- BOUNDARY WALL CLOSING THE GF PASSAGE (NE end, 1.200 x 0.200; T-346): kind EXT (site wall), owner trade BOUNDARY WORKS
+  (OTHER_TRADE, Q-65 C), never a house facade face; status DRAWING-CONFIRMED geometry, finish HELD with the boundary rows.
+- FACES ABOVE THE POOL AND ROUND THE 1F VOID AT225 (freelancer rows 70 / 71 / 74, 109.890 m2): element UNDEFINED until
+  T-348: candidate kinds exterior face open to air (FACADE, Q-67 A), interior face (INTERIOR PLASTER) or a face above a
+  roof (neither); each face once across exterior and interior plaster; heights from printed levels only.
+- BURIED STRUCTURE / EARTHWORKS (every villa): unchanged ruling (row 'Buried structure between formation and finished
+  ground'): DISPLACEMENT only, no quantity of its own; excavation / backfill / disposal = EARTHWORKS (B1-02 .. B1-04),
+  formation and working space HELD (Q-21 C, OQ-13); T-347 binds displacement to V3.0.24 line ids, T-350 wires the lines.
+- SPATTER DASH (every plastered villa): owner trade PLASTER (B4-05), one face under one plaster line, substrate concrete
+  / block named per face; joint mesh (B9-03) stays with OWNER PACKAGE item 2 (Q-77) (T-349).
+- KITCHEN / LAUNDRY / PANTRY TILE ZONES (B4-02): owner trade WALL TILE; never on a wet-room tile line, never with the
+  backing plaster line; band height from a printed source or HELD (T-351).
+- STAIR FORMWORK (B7-13): owner trade FORMWORK (the T-199 family), faces per flight and landing, never with the slab
+  soffit faces of T-332; winders only where drawn (S-9) (T-352).
+
 ### Lead 2026-10-29 16:30 (from T-342 / T-319 Gate B (V3.0.23) / T-341 / T-337 MERGED; T-332 / T-333 REJECTED narrow r2; T-339 / T-340 READY; new T-343 .. T-346)
 
 - PARAPET (kind WALL on ROOF / annex / GF terrace edges; every villa): ONE element per run, owner trade CONCRETE for the

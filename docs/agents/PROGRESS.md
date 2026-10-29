@@ -1,19 +1,33 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
 Plain words, no task numbers. Measured numbers come from SCOREBOARD.md; anything not measured says so.
-Last update: 2026-10-29 16:30 UTC (Lead). Previous version: 2026-10-29 12:30 UTC. The released numbers did not change
+Last update: 2026-10-29 20:30 UTC (Lead). Previous version: 2026-10-29 16:30 UTC. The released numbers did not change
 (released concrete 92.77 vs 111.81 m3, -17.03 %; released default V2.9 + route G untouched). Your measure: whole BOQ
 lines independently verified: 2 in the candidate's export (the concrete slab 60.28 m3 is the one scoreboard reference
-line among them); released: 0. The candidate under review is now V3.0.23 (not released).
+line among them); released: 0. The candidate under review is now V3.0.24 (not released).
 
-THE ROOM MILESTONE IS MET for the Alsenan drawings, one day late: the checker's own census now accounts for every one of
-the 41 room labels (28 measured, 1 held, 1 unsupported, 11 tied to a line, shown not applicable from the drawing, or
-listed as missing with their scope), so no room is silently left out. The "bathroom" it was chasing is the pool (the
-label sits inside the pool on the drawing), and the pool is drawn as a D-shape, not a circle, so the paved deck around it
-is 7.11 m2, not 7.94 m2. Two things remain, both additions, not omissions: the outdoor court (166.88 m2 in six pieces,
-interlock by your chalet rule) and the pool deck must become lines, and the census tool must learn to read the tie-ups.
-Parapet concrete is now its own set of lines in the candidate (held blank: at least 8.05 m3 whatever the roof build-up
-depth; the freelancer has no parapet concrete at all). Nothing new waits on you.
+THE CANDIDATE'S EXPORT NOW WRITES CLEANLY: the 350 released reinforcement lines (8,311 kg) print their own arithmetic
+(bars x length x kg/m) instead of starting with "held", a not-applicable skirting line no longer carries a length, and
+15 finish lines end on their own figure. Not one quantity moved (the checker compared all 3,710 lines). The unexplained
+5.89 m2 on a first-floor porcelain line is fully explained: the net was right, the deduction list was an older one
+(a curved winder clipped as a straight shape, two lower flights' overlap deducted twice). Three freelancer outside-plaster
+rows that seemed to have no face on the drawings are faces already counted, plus a 9.00 m2 strip he counted twice.
+Nothing new waits on you.
+
+Since 29 Oct 16:30 (newest first; five checked and merged, two handed in):
+- Export text fix: CHECKED AND MERGED into the candidate (V3.0.24, passed first time, no quantity change).
+- First-floor porcelain trace: CHECKED AND MERGED (5.89 m2 explained to 0.000; net 33.71 m2 unchanged, checker's own
+  geometry 0.000 %); the list fix goes in with the skirting / deductions integration.
+- Freelancer outside-plaster rows (93.15 m2): HANDED IN: 79.21 m2 are faces the drawings show and the table already
+  counts once, 9.00 m2 is a double count in his sheet, 4.94 m2 named band differences; his walls vs the drawing now
+  -3.1 .. +1.3 % (was -4.0 .. +0.3 %). His rows for the faces above the pool are next.
+- Blockwork table fix: HANDED IN (three walls with a door at your 2.20 m now say owner-approved; no m2 moved).
+- Reveals / sills / thresholds table and roof build-up table: CHECKED AND MERGED (checker's own re-measures 0.000 -
+  0.025 %).
+- Room census tool: CHECKED AND MERGED (no room label left silent on the Alsenan drawings).
+- Added to the plan, because the BOQ has no line for them yet: excavation / backfill / disposal, spatter dash, kitchen /
+  laundry / pantry wall tile zones, stair formwork, foundation waterproofing, and a check whether soil treatment is
+  specified at all.
 
 Since 29 Oct 12:30 (newest first; four checked and merged, two handed in, two sent back for one fix each):
 - Roof build-up table and window / door reveals, sills and thresholds table: HANDED IN (wait for the checker).

@@ -1,5 +1,16 @@
 # Older Lead feedback entries (moved from FEEDBACK.md to keep the last 20; newest first)
 
+## 2026-10-24 18:15 (lead run; covers 16:15 - 18:15)
+
+| Task | Result | Evidence | Decision |
+|---|---|---|---|
+| T-263 buried-concrete liquid waterproofing | WORKED | MERGED c0ab564d (Verifier 17:59): 35.404 m2 DRAWING-CONFIRMED, own 7E9+7EA#1 2.535, 7E0+FD#1 2.8475, F12 top 13.690 agree; missing category in engine and freelancer | T-276 (remaining faces), T-270 scope extended (integration); lessons row |
+| T-261 r2 blockwork split | PARTIAL | REJECTED 17:00: 7 / 9 rising walls agree own; 1F-W18 / 1F-W24 carried register gross on non-drawn extents | r3 CLAIMED 17:41 with the exact fault |
+| T-272 ground-beam stirrups | PARTIAL | REJECTED 17:04: shape / hooks / cover agree; count envelope assumed links through crossing beams, ring as one run | TODO r2 narrow; lessons row |
+| T-267 r1 stair finish-level module | PARTIAL (unchanged) | REJECTED 16:07 narrow (manifest); not reclaimed in two worker 1 runs | row set to TODO r2 (claim rule cause, see below), first in lanes S and I |
+| T-240 floor area V3.0.14 | handed in (READY 17:52, Gate B) | internal 340.765 -> 380.364 m2 vs released 385.634 (-1.37 %), 3,643 / 3,680 lines byte-identical | Gate B next; the +39.6 m2 step to be reconciled piece by piece |
+| Worker 1 lane order | process fault | claimed T-273 17:27 while two narrow reworks (status REJECTED) were first in lane S | rework rows now TODO rN (lessons row); T-273 continues |
+
 ## 2026-10-24 12:15 (lead run)
 
 | Task | Result | Evidence | Decision |
