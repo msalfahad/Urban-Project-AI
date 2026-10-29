@@ -164,4 +164,24 @@ a finished V3.0.21 run (same module functions, same files).
 
 ## 10. Final run and validation on the task head
 
-(filled in below by the final commit)
+- **Full CLI run (v3022_run.py, one process) on the merged head f3bc2779** (task commits + the working branch with T-330
+  MERGED 16fa5f72): V3_0_19 json `b35475bf`, V3_0_20 json `097a80b6`, V3_0_21 json `be22a4e4` / csv `3548e39c`
+  (= the candidate of record, reproduced), **V3_0_22_BOQ_LINES json `7199c8b6` / csv `924a60b4`**, DIFF `68e643b3`,
+  FACES `3fcc9791`, INTEGRATION_LEDGER csv `95ab68ed` / json `4ba9ff3a`, CROSS_TRADE `76878470`, RUN `63f3f92a`:
+  byte-identical to the run on the pre-merge head e24f5201 and to v3022_direct.py on the same V3.0.21 run.
+- **L4 full suite (every folder under tests/, one session) on 2f38cf9e**: 14,396 passed, 363 failed, 32 errors, 219
+  skipped, 105 xfailed; the 395 failing / error ids re-run on the base head 1c82807b (the working branch before this
+  package, .work/engine): all 395 fail there too, **NEW 0** (comm of the two id lists empty). They are the known
+  private-input and environment failures (Qortuba / Alrashed private-workpaper suites test_pa08_* / test_pa09_*, the
+  rebuild packages that need private drawings, the r8_* import-boundary checks, one control-plane gate) - the same
+  395 T-315 reported. The later commits (e24f5201: the note carries the full owner source, the V3.0.7 guard inputs,
+  the held band basis text; the merge of T-330; f3bc2779: report + one test) were validated at L3 on f3bc2779:
+  tests/t331_wet_backing_integration (32), t315, t329, t330, t212, t061, m9_s6, m9_s5, m9_s4, m9_kb, m9_s3, m9_p2b0,
+  m9_p2a, m9_p2b2, t240, t255, t244_finish_revision, t312: all pass.
+- Freeze 0 differing; codemap stale none (maps by the tool, last); rules manifest drift none; master 1.17.0 equals its
+  builder, FMC problems none.
+- self-gate: a c d f h PASS (a: only the integration module, runner wiring, registry version file, manifest, research
+  and tests/t331_*; no frozen / rule / knowledge file edited, no client data, no coordinate in tracked files; c:
+  freeze 0, maps by the tool; d: hand fixture W331 not Alsenan with adverse cases, missing never 0; f: every other
+  line byte-identical, held stays held; h: each layer one owner by face, paint 0 by rule, mortar not a second
+  quantity).

@@ -829,7 +829,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `synthetic_villa.py` | 603 | CRITICAL | 11 | SYNTHETIC VILLA (M2) - structural DXF drawings generated from a design spec, with ground truth from the SPEC. |
 | `synthetic_villa_m6.py` | 698 | CRITICAL | 5 | SYNTHETIC VILLA M6 - completeness cases drawn onto the M2 synthetic villa, with the truth of what was drawn. |
 | `synthetic_villa_m8.py` | 211 | CRITICAL | 6 | SYNTHETIC VILLA M8 - the M6 completeness villa with the DESIGN of every scope element it draws, so that the |
-| `t330_deductions_check.py` | 345 | MEDIUM | 1 | CANONICAL DEDUCTIONS CHECK (task T-330) - a read-only export-integrity check beside tools/boq_export_v1.py. It |
+| `t330_deductions_check.py` | 345 | MEDIUM | 2 | CANONICAL DEDUCTIONS CHECK (task T-330) - a read-only export-integrity check beside tools/boq_export_v1.py. It |
 | `trade_completeness.py` | 106 | MEDIUM | 2 | Trade completeness runner (T-236): engine/source/trade_completeness_v1.check() on one project's input file. |
 | `urban_boq_m2.py` | 603 | CRITICAL | 18 | URBAN BOQ M2 - the one-command BOQ with ROUTE G, the generic engine, on top of the frozen M1 pipeline. |
 | `urban_boq_m9.py` | 3937 | HIGH | 46 | URBAN BOQ M9 (S1) - canonical BOQ lines, room material plans and the room-by-room workbook, on top of route G. |
