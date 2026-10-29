@@ -283,3 +283,41 @@ def test_translation_of_ids_and_order_does_not_change_totals():
     _ls, _c, _l, _f, out, _i, _d = run(d=d, ls=ls)
     b1 = next(ln for ln in out if ln["location"]["room_id"] == "B1" and ln["item_code"] == A.TILE)
     assert b1["measured_net"] == pytest.approx(26.04, abs=1e-9)
+
+
+def test_skirting_figure_on_a_full_height_tiled_bath_refused():
+    ls = lines() + [_ln("FIN.SKIRTING", "B1", "SOURCE_DERIVED", 9.2)]
+    _bad(lambda d: None, ls=ls)
+
+
+def test_shared_engine_room_line_naming_no_room_is_not_attributed():
+    """an open zone (dining + pantry) in one engine room: a room-level paint line with a figure that names no room is
+    listed as not attributable to the pantry, never refused and never counted as the pantry's."""
+    ls = lines()
+    zone = _ln("FIN.PAINT", "P1", "PROVISIONAL", 55.0, floor="GF", el="W:FIN.PAINT:P1:ZONE")
+    zone["calculation"]["inputs"] = {}
+    ls.append(zone)
+    d = doc(ls)
+    d["records"][2]["engine_room_shared"] = True
+    d["records"][2]["contour"]["not_tiled_m"] = 3.0
+    _ls, _c, _l, faces, out, _i, dd = run(d=d, ls=ls)
+    rows = [r for r in A.cross_trade(out, dd, faces) if r["engine_room"] == "P1"]
+    assert all(zone["line_id"] in r["shared_engine_room_lines"] for r in rows)
+    assert all(zone["line_id"] not in r["paint_lines"] for r in rows)
+
+
+def test_same_zone_line_not_shared_is_attributed_and_checked():
+    """the same room-level line in an engine room that is the pantry's alone belongs to the pantry: with every pantry
+    wall tiled (no not-tiled face) its figure is paint under tile and refused."""
+    ls = lines()
+    zone = _ln("FIN.PAINT", "P1", "PROVISIONAL", 55.0, floor="GF", el="W:FIN.PAINT:P1:ZONE")
+    zone["calculation"]["inputs"] = {}
+    ls.append(zone)
+
+    def m(d):
+        r = d["records"][2]
+        r["faces"].append(_face("P1|S", 3.00, 3.65, 10.95, (), "Q-48 A owner height GF"))
+        r["contour"]["not_tiled_m"] = 0.0
+        r["value"] = 27.70
+        d["declared"]["ADD"]["m2"] = 27.70
+    _bad(m, ls=ls)

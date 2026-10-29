@@ -22,16 +22,18 @@ carries no paint (UP-FIN-PAINT-001); the plaster / render behind the tile is its
           ONE new FIN.WALL.TILE line of the same family in its engine room (refused when that room already has one).
 
 The whole family is integrated at once: every FIN.WALL.TILE line of the run is named by exactly one FILL or HELD
-record (a line left out is refused, never silently kept). CROSS-TRADE (per face): every paint line of a tiled room
-carries no figure (a figure on a FIN.PAINT line of a room whose faces are all tiled is refused: paint under tile); the
-plaster lines of the room are listed with what they carry (backing: its own line, reported, never derived here).
+record (a line left out is refused, never silently kept). CROSS-TRADE (per face, cross_trade): in a room whose faces
+are all in its tile record, a figure on a paint line (paint under tile) or a skirting line (full-height tile) is
+refused; a room with not-tiled faces gets its paint figure named for a per-face check; in a shared engine room a line
+naming no room is listed as not attributable; the plaster lines are listed with what they carry (backing: its own
+line, reported, never derived here).
 
 Refused (InputsError / ValueError, nothing written): a record whose line the run does not carry, or that is not a
 blank FIN.WALL.TILE line of its engine room (stale ledger); a line named twice; a face in two records; an opening twice
 in one room; a face net that is not length x height - its openings (> 1e-4 m2), a record value that is not the sum of
 its faces (> 0.006 m2), a height without its source, a height outside 1.0 .. 6.0 m (mm or a typo), a known value <= 0;
 a HELD record with a figure; a VERIFIED record without the checker run; an ADD into a room with a tile line; a candidate
-tile line no record names; a figure on a paint line of a tiled room. Inside a FILL line only quantity, state, rfi,
+tile line no record names; a figure on a paint or skirting line of a room whose faces are all tiled. Inside a FILL line only quantity, state, rfi,
 gross, geometry confidence, calculation and notes change; every other line is byte-identical to V3.0.20 (asserted),
 including the project identity block; the merged default guard runs again over the result (arch_v307.guard_changes)
 and may not flag a line this version adds or fills.
@@ -83,6 +85,7 @@ H_MIN, H_MAX = 1.0, 6.0                 # a tile height in metres (mm or a typo 
 TILE = "FIN.WALL.TILE"
 PAINT_CODES = ("FIN.PAINT",)
 PLASTER_CODES = ("FIN.PLASTER",)
+SKIRT_CODES = ("FIN.SKIRTING",)
 KINDS = ("FILL", "HELD", "ADD")
 QTY_STATUS = (VER, DC, OA)
 HELD_STATUS = ("HELD", "UNKNOWN")
@@ -421,53 +424,74 @@ def family_changes(doc, l3020):
     return changes, log, faces_out
 
 
+def _ledger_room(ln):
+    return ((ln.get("calculation") or {}).get("inputs") or {}).get("room")
+
+
 def cross_trade(lines, doc, faces):
-    """per face: the tile line, the paint lines of its room (each must carry NO figure: no paint under tile) and the
-    plaster lines of its room (the backing is its own line: listed with what they carry). -> rows"""
-    rooms = {}
-    for r in doc["records"]:
-        rooms[r["engine_room"]] = r
-    by_room = {}
+    """per face: the tile line, the paint / skirting lines of its room and the plaster lines of its room. -> rows
+
+    A finish line belongs to a tiled room when it lies in the record's engine room AND names the record's room, or names
+    no room while the engine room is the record's alone. In a SHARED engine room (one engine room holding several
+    drawn rooms, the record says engine_room_shared), a line naming no room is listed as not attributable, never
+    attributed. Every face of a room in its tile record (a wet room, or a pantry whose drawn walls all host): a paint
+    figure is refused (UP-FIN-PAINT-001: no paint under tile) and a skirting figure is refused
+    (URBAN-NO-SKIRTING-FULL-TILE-WET@v1). A room with not-tiled drawn faces: a paint figure is named for a per-face
+    check, never refused. Plaster lines are listed with what they carry: the backing behind the tile is its own line
+    (UP-FIN-PAINT-001 substrate), reported, never derived here."""
+    recs = {(r["engine_room"], r["room"]): r for r in doc["records"]}
+    by_er = {}
     for ln in lines:
-        if ln["item_code"] in PAINT_CODES + PLASTER_CODES:
-            by_room.setdefault(_room_id(ln), []).append(ln)
-    partial = {}     # rooms with drawn faces outside the tile scope: a paint figure there is named, never refused
-    for er in sorted(rooms):
-        r = rooms[er]
+        if ln["item_code"] in PAINT_CODES + PLASTER_CODES + SKIRT_CODES:
+            by_er.setdefault(_room_id(ln), []).append(ln)
+    own, unattributed, partial = {}, {}, {}
+    for (er, room), r in sorted(recs.items()):
+        shared = bool(r.get("engine_room_shared"))
+        mine, other = [], []
+        for ln in by_er.get(er, ()):
+            lr = _ledger_room(ln)
+            if lr == room or (lr is None and not shared):
+                mine.append(ln)
+            elif lr is None:
+                other.append(ln)
+        own[room], unattributed[room] = mine, other
         all_tiled = r["kind"] == "HELD" or not (r.get("contour") or {}).get("not_tiled_m")
-        for ln in by_room.get(er, ()):
-            if ln["item_code"] in PAINT_CODES and A309._carried(ln) != A309.NO_FIGURE:
-                if all_tiled:
-                    raise ValueError(f"{METHOD}: paint line {ln['line_id']} in tiled room {er} carries "
-                                     f"{A309._carried(ln)}: paint under wall tile (UP-FIN-PAINT-001); every face of "
-                                     "the room is in its tile record")
-                partial.setdefault(er, []).append(ln["line_id"])
+        for ln in mine:
+            fig = A309._carried(ln)
+            if fig == A309.NO_FIGURE or ln["item_code"] in PLASTER_CODES:
+                continue
+            if all_tiled:
+                why = ("paint under wall tile (UP-FIN-PAINT-001)" if ln["item_code"] in PAINT_CODES else
+                       "skirting on a full-height tiled face (URBAN-NO-SKIRTING-FULL-TILE-WET@v1)")
+                raise ValueError(f"{METHOD}: {ln['item_code']} line {ln['line_id']} of tiled room {room} ({er}) "
+                                 f"carries {fig}: {why}; every face of the room is in its tile record")
+            partial.setdefault(room, []).append(ln["line_id"])
 
-    def _desc(lns):
-        return "; ".join(f"{x['line_id']} {x['evidence_state']} {A309._carried(x)}" for x in lns)
+    def _desc(lns, codes):
+        return "; ".join(f"{x['line_id']} {x['evidence_state']} {A309._carried(x)}" for x in lns
+                         if x["item_code"] in codes)
 
-    def _pf(er):
-        if er not in partial:
-            return "NONE"
-        return ("FIGURE ON THE NOT-TILED FACES ONLY (the paint line must exclude the tiled faces: check by face): "
-                + " ".join(partial[er]))
+    def _row(face_id, room, er, tile_line, net, backing):
+        un = unattributed.get(room) or []
+        return {"face_id": face_id, "room": room, "engine_room": er, "tile_line": tile_line, "tile_net_m2": net,
+                "paint_lines": _desc(own.get(room) or (), PAINT_CODES),
+                "paint_figure": ("NONE" if room not in partial else
+                                 "FIGURE ON THE NOT-TILED FACES ONLY (the line must exclude the tiled faces: check by "
+                                 "face): " + " ".join(partial[room])),
+                "skirting_lines": _desc(own.get(room) or (), SKIRT_CODES),
+                "plaster_lines": _desc(own.get(room) or (), PLASTER_CODES),
+                "shared_engine_room_lines": ("NOT ATTRIBUTABLE to this room (shared engine room, the line names no "
+                                             "room): " + _desc(un, PAINT_CODES + PLASTER_CODES + SKIRT_CODES))
+                if un else "",
+                "backing": backing}
     rows = []
-    held_rooms = [r for r in doc["records"] if r["kind"] == "HELD"]
     for f in faces:
-        lns = by_room.get(f["engine_room"], ())
-        rows.append({"face_id": f["face_id"], "room": f["room"], "engine_room": f["engine_room"],
-                     "tile_line": f["line_id"], "tile_net_m2": f["net_m2"],
-                     "paint_lines": _desc([x for x in lns if x["item_code"] in PAINT_CODES]),
-                     "paint_figure": _pf(f["engine_room"]),
-                     "plaster_lines": _desc([x for x in lns if x["item_code"] in PLASTER_CODES]),
-                     "backing": "OWN LINE (UP-FIN-PAINT-001 substrate): not carried by a merged ledger; HELD by name"})
-    for r in held_rooms:
-        lns = by_room.get(r["engine_room"], ())
-        rows.append({"face_id": f"{r['room']} (all faces, HELD line)", "room": r["room"],
-                     "engine_room": r["engine_room"], "tile_line": r["line_id"], "tile_net_m2": "HELD",
-                     "paint_lines": _desc([x for x in lns if x["item_code"] in PAINT_CODES]), "paint_figure": "NONE",
-                     "plaster_lines": _desc([x for x in lns if x["item_code"] in PLASTER_CODES]),
-                     "backing": "OWN LINE: HELD with the tile height"})
+        rows.append(_row(f["face_id"], f["room"], f["engine_room"], f["line_id"], f["net_m2"],
+                         "OWN LINE (UP-FIN-PAINT-001 substrate): not carried by a merged ledger; HELD by name"))
+    for r in doc["records"]:
+        if r["kind"] == "HELD":
+            rows.append(_row(f"{r['room']} (all faces, HELD line)", r["room"], r["engine_room"], r["line_id"], "HELD",
+                             "OWN LINE: HELD with the tile height"))
     return rows
 
 
@@ -626,7 +650,7 @@ LEDGER_CSV = ("version", "action", "room", "line_id", "item_code", "floor", "uni
 FACES_CSV = ("face_id", "room", "engine_room", "floor", "line_id", "kind", "wall_id", "length_m", "height_m",
              "height_source", "openings", "net_m2", "correction", "evidence_status")
 CROSS_CSV = ("face_id", "room", "engine_room", "tile_line", "tile_net_m2", "paint_lines", "paint_figure",
-             "plaster_lines", "backing")
+             "skirting_lines", "plaster_lines", "shared_engine_room_lines", "backing")
 DIFF_CSV = ("line_id", "item_code", "floor", "element_id", "unit", "vs_v3_0_20", "vs_released_v2_9", "v2_9",
             "v3_0_20", "v3_0_21")
 

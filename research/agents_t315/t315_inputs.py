@@ -156,7 +156,9 @@ def build(project_id=None):
                             "not_tiled_m": float(cl["not_tiled_m"]),
                             "source": "T-312 ROOM_CLOSURE_T312.csv (T-074 / T-128 r3 walked contour)"})
         if s["line_id"] == "NO_LINE":
-            rec.update(kind="ADD", scope=PANTRY_SCOPE)
+            rec.update(kind="ADD", scope=PANTRY_SCOPE, engine_room_shared=True,
+                       engine_room_shared_basis="the engine room holds the open dining + living + pantry + reception "
+                                                "zone (T-128 / T-312): its room-level lines are not the pantry's")
             rec["assumption"] = ASSUMPTION + "; scope " + PANTRY_SCOPE
         else:
             rec.update(kind="FILL", line_id=s["line_id"])
