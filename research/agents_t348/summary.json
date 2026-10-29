@@ -1,0 +1,74 @@
+{
+ "task": "T-348",
+ "his_total_m2": 109.89,
+ "residual_m2": 0.0,
+ "his_rows_m2": {
+  "70": 28.215,
+  "71": 27.225,
+  "74": 54.45
+ },
+ "drawn_in_row70_band_m2": 27.40274,
+ "drawn_in_row71_band_m2": 27.66828,
+ "no_exterior_face_m2": 54.45,
+ "screen_hole_m2": [
+  8.134744,
+  8.525649
+ ],
+ "screen_storey_net_m2": [
+  4.323831,
+  4.714736
+ ],
+ "recess_soffit_segment_m2": 1.600884,
+ "nw2_arc_m": 3.528258,
+ "new_faces": [
+  "1F/NW-2/RECESS-SOFFIT/soffit",
+  "1F/NW-2/SCREEN-BACK/storey",
+  "1F/NW-2/SCREEN-FRONT/storey",
+  "1F/NW-2/SCREEN-INTRADOS/reveal",
+  "GF/AT225/RING-INNER/slab_edge",
+  "GF/POOL-COURT-FRONT/slab_edge"
+ ],
+ "re_measured_t337": [
+  "1F/NW-1/SLAB_EDGE_BELOW/slab_edge",
+  "1F/NW-2/PARAPET/parapet",
+  "1F/NW-2/SLAB_EDGE_BELOW/slab_edge",
+  "1F/NW-3/SLAB_EDGE_BELOW/slab_edge"
+ ],
+ "interior_cross_check": {
+  "lines": [
+   "L-31db3c83552682d92ca3",
+   "L-349db74a70e1eecda2d2"
+  ],
+  "room_face": "r 2.135 (BD2), 1F-11",
+  "shared_faces": 0,
+  "overlap_m2": 0.0
+ },
+ "not_in_rows_70_71_74": [
+  "1F/NW-4 (W18 strip, outside the pool-block width)",
+  "1F/NE-1",
+  "1F/SW-1"
+ ],
+ "levels": {
+  "C_SOFFIT": 5.3,
+  "F1": 5.5,
+  "F2": 9.7,
+  "TOP": 11.0
+ },
+ "t337_line_effects": {
+  "NEW FIN.EXT.FINISH PARAPET-OUTER 1F +9.70": {
+   "before": [
+    53.550644,
+    59.290836
+   ],
+   "after": [
+    53.304756,
+    58.682756
+   ],
+   "cause": "NW-2 parapet band on the screen chord 3.0594 (DC), not the arc 3.5283 (HELD 4.223 .. 4.585)"
+  },
+  "NEW FIN.EXT.FINISH SLAB-EDGE 1F": {
+   "before": "9 faces, all blank",
+   "after": "7 faces: NW-1 / NW-3 removed (NOT_A_FACE); NW-2 = void ring landward arc 2.675 m, HELD 0.535 .. 2.006 m2"
+  }
+ }
+}
