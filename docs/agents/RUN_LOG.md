@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-29 15:17 UTC | Worker 3 | STARTED | run session_01E6cPnc5tEiWTU2mQNU5hVH | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-29T15:06Z | Verifier | STARTED | run session_01E6cPndmUmLJU6w4zHpv24k | repo-attached routine | task state: T-341 READY, T-319 READY (integration package) | self-check pending
 - 2026-10-29T14:48Z | Worker 2 | STARTED | run session_01E6cPnbsXqrEguvnCdbtCSy | repo-attached routine | task state: none yet | self-check pending
 - 2026-10-29T14:45Z | Worker 1 | SUCCESS | T-341 READY (agents/task-T-341 @ 206cb90e) | V3.0.22 (7199c8b6, own run) T-330 check 41 FLAG / 0 REFUSED; fill table by opening id closes 40 of 41 lines within 0.0005 (tile 33.970 m2, plaster + paint 42.302 m2 each, skirting 74.842 lm incl. 13.069 lm unlisted threshold halves, wall run 120.918 lm + ceiling 32.010 m2 by element only, GF porcelain gross restated 109.778 -> 126.928 m2); applied in memory 41 -> 1 FLAG; UNEXPLAINED for the Lead: 1F porcelain L-b06400d4 5.891 m2 itemised nowhere (not filled). No quantity changed. | selfcheck codemap PASS, pytest t061 PASS, freeze PASS; problem: Drive blobs arrive as raw binary, agent_env decode needs base64 (re-encoded in scratch, then decoded via the wrapper)
